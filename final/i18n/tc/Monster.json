@@ -3470,6 +3470,20 @@
     ]
   },
   {
+    "id": 8500606,
+    "n": "西比爾",
+    "t": "Boss",
+    "atk": 10,
+    "def": 1500,
+    "hp": 6000,
+    "tn": 2000,
+    "icon": "Boss_00_Xibi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
     "id": 8501001,
     "n": "曆戰者",
     "t": "Boss",
@@ -3617,6 +3631,20 @@
     "def": 300,
     "hp": 6000,
     "tn": 8400,
+    "icon": "Boss_01_Saiqi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8502603,
+    "n": "羽化者",
+    "t": "Boss",
+    "atk": 24,
+    "def": 1500,
+    "hp": 6000,
+    "tn": 2000,
     "icon": "Boss_01_Saiqi",
     "tags": [
       "Mon.Boss",
@@ -4047,6 +4075,20 @@
     ]
   },
   {
+    "id": 8512607,
+    "n": "「雪國的野獸」",
+    "t": "Boss",
+    "atk": 24,
+    "def": 1500,
+    "hp": 6000,
+    "tn": 2000,
+    "icon": "Boss_Linen",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
     "id": 8513001,
     "n": "蒙恩的苦修士",
     "t": "Boss",
@@ -4245,6 +4287,20 @@
     ]
   },
   {
+    "id": 8514606,
+    "n": "蒙恩的審判官",
+    "t": "Boss",
+    "atk": 15,
+    "def": 300,
+    "hp": 12000,
+    "tn": 2000,
+    "icon": "Boss_Shenpan",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
     "id": 8514701,
     "n": "霹靂 蒙恩的審判官",
     "t": "Boss",
@@ -4411,6 +4467,20 @@
     "def": 300,
     "hp": 6000,
     "tn": 3000,
+    "icon": "Boss_Juque",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8518602,
+    "n": "巨闕",
+    "t": "Boss",
+    "atk": 20,
+    "def": 300,
+    "hp": 12000,
+    "tn": 2000,
     "icon": "Boss_Juque",
     "tags": [
       "Mon.Boss",
@@ -4649,6 +4719,20 @@
     "def": 300,
     "hp": 90000,
     "tn": 4500,
+    "icon": "HX_Tuisheng",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8522606,
+    "n": "蛻生者",
+    "t": "Boss",
+    "atk": 15,
+    "def": 300,
+    "hp": 12000,
+    "tn": 2000,
     "icon": "HX_Tuisheng",
     "tags": [
       "Mon.Boss",
@@ -5840,6 +5924,23 @@
     ]
   },
   {
+    "id": 10001062,
+    "n": "應天侍",
+    "f": 5,
+    "atk": 10,
+    "def": 130,
+    "es": 34,
+    "hp": 47,
+    "tn": 150,
+    "icon": "HX_Tianshi02",
+    "tags": [
+      "Mon.Hx",
+      "Mon.Melee",
+      "Mon.Reward.E",
+      "Mon.Corp"
+    ]
+  },
+  {
     "id": 10001301,
     "n": "霹靂·侵蝕·枯萎 應天侍",
     "t": "Elite_Monster",
@@ -6032,6 +6133,24 @@
       "Mon.Elite",
       "Mon.SoloTreasure.CPoint",
       "Mon.SoloTreasure.CContainer"
+    ]
+  },
+  {
+    "id": 10004062,
+    "n": "狴犴",
+    "t": "Elite_Monster",
+    "f": 5,
+    "atk": 20,
+    "def": 300,
+    "hp": 510,
+    "tn": 1000,
+    "icon": "HX_Bian02",
+    "tags": [
+      "Mon.Hx",
+      "Mon.Ranged",
+      "Mon.Reward.C",
+      "Mon.Elite",
+      "Mon.Corp"
     ]
   },
   {

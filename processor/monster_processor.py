@@ -81,6 +81,7 @@ class MonsterProcessor(BaseProcessor):
                 )
                 for monster_id in dungeon_init_guide_unit_id:
                     self.valid_monster_ids.add(monster_id)
+        self._add_weapon_verify_monster_ids(data_loader)
         self._add_solo_treasure_monster_ids(data_loader)
         self._add_solo_treasure_gameplay_monster_ids(data_loader)
         self._add_solo_treasure_gameplay_spawn_monster_ids(data_loader)
@@ -114,6 +115,16 @@ class MonsterProcessor(BaseProcessor):
 
         # 仅补充Dungeon.spawn.m/sm中会用到的怪物ID
         self._add_dungeon_spawn_monster_ids(data_loader, dungeon_data)
+
+    def _add_weapon_verify_monster_ids(self, data_loader):
+        """补充WeaponVerify关卡中展示的怪物ID。"""
+        weapon_verify_data = data_loader.load_json("WeaponVerify.json")
+        for weapon_verify_info in weapon_verify_data.values():
+            if not isinstance(weapon_verify_info, dict):
+                continue
+            for monster_id in weapon_verify_info.get("DungeonMonsters", []):
+                if monster_id:
+                    self.valid_monster_ids.add(monster_id)
 
     def process_item(self, monster_data, language):
         id = monster_data.get("UnitId", 0)
