@@ -1,0 +1,818 @@
+[
+  {
+    "id": 1001001,
+    "name": "듀엣 나이트 어비스 Duet Night Abyss Main Theme",
+    "desc": "황혼에 젖어, 끝없는 밤을 가로질러 함께 내일로 나아간다.",
+    "scoreId": 1001,
+    "rId": 31001001,
+    "music": "/bgm/cbt01/musicbox/0015_login"
+  },
+  {
+    "id": 1001002,
+    "name": "모래 바다를 건넌 그대 One from the Other Shore",
+    "desc": "운명은 먼지와 모래 뒤에 숨어 있다.",
+    "scoreId": 1001,
+    "rId": 31001002,
+    "music": "/bgm/cbt01/musicbox/0002_story_shahai"
+  },
+  {
+    "id": 1001003,
+    "name": "어젯날의 고요함 Tranquility of My Yesterdays",
+    "desc": "뒤돌아볼 수 없다.",
+    "scoreId": 1001,
+    "rId": 31001003,
+    "music": "/bgm/cbt01/musicbox/0003_story_cunzhuang"
+  },
+  {
+    "id": 1001004,
+    "name": "그 쓸쓸한 마을 The Deserted Village",
+    "desc": "그 작은 섬은 한때 평온의 안식처였지만, 이제 기억으로만 남았다.",
+    "scoreId": 1001,
+    "rId": 31001004,
+    "music": "/bgm/cbt01/musicbox/0004_atmos_huishou"
+  },
+  {
+    "id": 1001005,
+    "name": "아침 안개 Morning Mist",
+    "desc": "안개가 걷히기 시작할 무렵, 그대는 길을 떠나리라.",
+    "scoreId": 1001,
+    "rId": 31001005,
+    "music": "/bgm/cbt01/musicbox/0017_story_incave"
+  },
+  {
+    "id": 1001006,
+    "name": "긴 이별 A Long Farewell",
+    "desc": "우리가 다시 만날 때까지.",
+    "scoreId": 1001,
+    "rId": 31001006,
+    "music": "/bgm/cbt01/musicbox/0012_story_tiaoya"
+  },
+  {
+    "id": 1002001,
+    "name": "운명을 바라보는 그 눈빛 The Fategazer",
+    "desc": "운명의 여신이 지켜보는 게 복인지 불운인지, 아무도 알 수 없다.",
+    "scoreId": 1002,
+    "rId": 31002001,
+    "music": "/bgm/cbt01/musicbox/0005_story_nvshenxiang"
+  },
+  {
+    "id": 1002002,
+    "name": "운명의 노래 Ⅰ Our Sacred Destiny Ⅰ",
+    "desc": "운명이 우리에게 은총을 내리길 바라며.",
+    "scoreId": 1002,
+    "rId": 31002002,
+    "music": "/bgm/cbt01/musicbox/0006_atmos_shendianyiji"
+  },
+  {
+    "id": 1002003,
+    "name": "운명의 노래 Ⅱ Our Sacred Destiny Ⅱ",
+    "desc": "운명이 우리에게 은총을 내리길 바라거나... 혹은, 운명을 향해 검을 겨누거나.",
+    "scoreId": 1002,
+    "rId": 31002003,
+    "music": "/bgm/cbt01/musicbox/0029_atmos_shendianshangceng"
+  },
+  {
+    "id": 1003001,
+    "name": "위기일발 At Stake",
+    "desc": "가느다란 생존의 희망을 좇아 손을 잡고 도망친다.",
+    "scoreId": 1003,
+    "rId": 31003001,
+    "music": "/bgm/cbt01/musicbox/0004_atmos_huishou"
+  },
+  {
+    "id": 1003002,
+    "name": "외나무다리 The Wrong Way",
+    "desc": "과거라는 칼날 위를 걸으며.",
+    "scoreId": 1003,
+    "rId": 31003002,
+    "music": "/bgm/cbt01/musicbox/0007_story_zaoyudiguojun"
+  },
+  {
+    "id": 1003003,
+    "name": "생존, 또는 멸망 Ⅰ Fight, or Die Ⅰ",
+    "desc": "궁지에 몰린 짐승의 싸움.",
+    "scoreId": 1003,
+    "rId": 31003003,
+    "music": "/bgm/cbt01/musicbox/0009_combat_xibi_p1"
+  },
+  {
+    "id": 1003004,
+    "name": "생존, 또는 멸망 Ⅱ Fight, or Die Ⅱ",
+    "desc": "이 모든 걸 구원하기를 갈망한다면.",
+    "scoreId": 1003,
+    "rId": 31003004,
+    "music": "/bgm/cbt01/musicbox/0011_combat_xibi_p2"
+  },
+  {
+    "id": 1004001,
+    "name": "굳게 닫힌 문 The Closed Door",
+    "desc": "그 문은 낯선 방문자를 환영하지 않는다.",
+    "scoreId": 1004,
+    "rId": 31004001,
+    "music": "/bgm/cbt01/musicbox/0020_story_sanatorium"
+  },
+  {
+    "id": 1004002,
+    "name": "흑철 요새 The Iron Cage",
+    "desc": "끝없는 혹한과 눈보라가 그것의 가장 충실한 수호자이다.",
+    "scoreId": 1004,
+    "rId": 31004002,
+    "music": "/bgm/cbt01/musicbox/0019_scene_binghucheng"
+  },
+  {
+    "id": 1004003,
+    "name": "여행자의 자장가 Lullaby for a Voyager",
+    "desc": "종점에 닿기 전까지 이곳은 영원한 휴식처다.",
+    "scoreId": 1004,
+    "rId": 31004003,
+    "music": "/bgm/cbt01/musicbox/0016_judian"
+  },
+  {
+    "id": 1004004,
+    "name": "블랙 코미디 Bad Jokes",
+    "desc": "팽팽한 대치도 나쁘지 않은 시작이다.",
+    "scoreId": 1004,
+    "rId": 31004004,
+    "music": "/bgm/cbt01/musicbox/0033_story_humour"
+  },
+  {
+    "id": 1004005,
+    "name": "즐거운 시간 Joys of Life",
+    "desc": "행운의 월석 사냥꾼 1명을 랜덤으로 추첨해 피보다 진한 {性别:형제|자매}를 만나게 한다.",
+    "scoreId": 1004,
+    "rId": 31004005,
+    "music": "/bgm/cbt01/musicbox/0024_story_pub"
+  },
+  {
+    "id": 1004006,
+    "name": "아스포델 The Asphodel",
+    "desc": "술, 의뢰, 소문, 비밀… 사람들은 여기서 그들이 교환할 수 있는 모든 것을 거래한다.",
+    "scoreId": 1004,
+    "rId": 31004006,
+    "music": "/bgm/cbt01/musicbox/0023_scene_pub"
+  },
+  {
+    "id": 1004007,
+    "name": "히프노스의 집 The Hypnos' House",
+    "desc": "비밀을 숨긴 저택.",
+    "scoreId": 1004,
+    "rId": 31004007,
+    "music": "/bgm/cbt01/musicbox/0031_atmos_liaoyangyuan"
+  },
+  {
+    "id": 1004008,
+    "name": "집 My Sweet Little Home",
+    "desc": "집보다 더 달콤한 것은 없다.",
+    "scoreId": 1004,
+    "rId": 31004008,
+    "music": "/bgm/cbt01/musicbox/0034_atomos_feina_home"
+  },
+  {
+    "id": 1005001,
+    "name": "글로스터 폐광 Glevum Pit",
+    "desc": "초보 월석 사냥꾼의 첫 보수.",
+    "scoreId": 1005,
+    "rId": 31005001,
+    "music": "/bgm/cbt01/musicbox/0030_atmos_kuangkeng"
+  },
+  {
+    "id": 1005002,
+    "name": "얼어붙은 땅 위에서 Over the Frozen Land",
+    "desc": "긴 여정의 시작점.",
+    "scoreId": 1005,
+    "rId": 31005002,
+    "music": "/bgm/cbt01/musicbox/0018_scene_iceground"
+  },
+  {
+    "id": 1005003,
+    "name": "눈보라 Snowstorm",
+    "desc": "휘몰아치는 바람 속에서, 그대는 그녀에게 다가가는 걸음 하나하나를 세어간다.",
+    "scoreId": 1005,
+    "rId": 31005003,
+    "music": "/bgm/cbt02/musicbox/0042_story_find_saiqi"
+  },
+  {
+    "id": 1005004,
+    "name": "크리스탈 이터 The Crystal Devourer",
+    "desc": "그때를 다시 떠올릴 때, 그대는 그것이 용감한 이들의 이야기였음을 알리라.",
+    "scoreId": 1005,
+    "rId": 31005004,
+    "music": "/bgm/cbt01/musicbox/0032_combat_shijingzhe"
+  },
+  {
+    "id": 1005005,
+    "name": "잠복 The Lurkers",
+    "desc": "당신이 심연을 바라볼 때, 심연 또한 당신을 바라보고 있다.",
+    "scoreId": 1005,
+    "rId": 31005005,
+    "music": "/bgm/cbt02/musicbox/0043_story_empire"
+  },
+  {
+    "id": 1005006,
+    "name": "인간을 도마처럼 Under Arbitrary Authority",
+    "desc": "사람들은 늘 웃으면서 죽음을 이야기하고, 울면서 삶을 살아간다.",
+    "scoreId": 1005,
+    "rId": 31005006,
+    "music": "/bgm/cbt01/musicbox/0036_story_renweidaozu"
+  },
+  {
+    "id": 1005007,
+    "name": "비밀과 대가 The Awful Truth",
+    "desc": "그는 죽음, 또는 생을 가져온다.",
+    "scoreId": 1005,
+    "rId": 31005007,
+    "music": "/bgm/cbt02/musicbox/0040_story_enlike_death"
+  },
+  {
+    "id": 1005008,
+    "name": "영혼의 새 시련 Ⅰ Avian Spirit Trials Ⅰ",
+    "desc": "방황하는 여행자여, 그 꿈속으로 돌아가라. 영혼의 새는 떠난 적이 없으니.",
+    "scoreId": 1005,
+    "rId": 31005008,
+    "music": "/bgm/cbt02/musicbox/0053_level_lingniaoshilian_1"
+  },
+  {
+    "id": 1005009,
+    "name": "영혼의 새 시련 Ⅱ Avian Spirit Trials Ⅱ",
+    "desc": "방황하는 여행자여, 이 꿈을 떠나라. 영혼의 새는 이미 먼 여행을 떠났으니.",
+    "scoreId": 1005,
+    "rId": 31005009,
+    "music": "/bgm/cbt02/musicbox/0053_level_lingniaoshilian_2"
+  },
+  {
+    "id": 1005010,
+    "name": "리리코의 노래·흑철 요람 Lirico's Songs - A Cradle of Black Iron",
+    "desc": "그녀는 위대함과 고난을 낳아, 하얀 산 아래 흑철의 요람으로 흘려보내네.",
+    "scoreId": 1005,
+    "rId": 31005010,
+    "music": "/bgm/1_1/musicbox/0134_lili_song"
+  },
+  {
+    "id": 1006001,
+    "name": "첫 만남 First Met With Psyche",
+    "desc": "사람들은 아이스레이크 시티에 여름이 없다고들 하지만, 당신에게는 그렇지 않다.",
+    "scoreId": 1006,
+    "rId": 31006001,
+    "music": "/bgm/cbt02/musicbox/0044_story_first_meet_saiqi_loop"
+  },
+  {
+    "id": 1006002,
+    "name": "프시케: 하루살이의 꿈 Psyche - Daydream in a Chrysalis",
+    "desc": "하찮은 하루살이도 꿈을 꿀 권리가 있다.",
+    "scoreId": 1006,
+    "rId": 31006002,
+    "music": "/bgm/cbt02/musicbox/0064_story_saiqi_theme_fantasy"
+  },
+  {
+    "id": 1006003,
+    "name": "오지 않은 봄 Florescence Unmet",
+    "desc": "아직 제대로 피지 못한 꽃이다.",
+    "scoreId": 1006,
+    "rId": 31006003,
+    "music": "/bgm/cbt02/musicbox/0050_story_saiqi_grow_flower"
+  },
+  {
+    "id": 1006004,
+    "name": "기억의 필름 Memories that We Take",
+    "desc": "카메라는 뛰어난 사냥꾼이다. 오직 카메라만이 교활한 시간을 포착할 수 있다.",
+    "scoreId": 1006,
+    "rId": 31006004,
+    "music": "/bgm/cbt02/musicbox/0039_story_saiqi_see_flower"
+  },
+  {
+    "id": 1006005,
+    "name": "운명의 종착지 Destined End",
+    "desc": "모든 빛이 소멸을 향해 날아간다.",
+    "scoreId": 1006,
+    "rId": 31006005,
+    "music": "/bgm/cbt02/musicbox/0052_story_saiqi_transform"
+  },
+  {
+    "id": 1006006,
+    "name": "그녀가 갔었던 Footsteps of Her Lifetime",
+    "desc": "그녀의 일생이다.",
+    "scoreId": 1006,
+    "rId": 31006006,
+    "music": "/bgm/cbt02/musicbox/0049_combat_saiqi_memory"
+  },
+  {
+    "id": 1006007,
+    "name": "누에고치는 왜 짜여졌나 For What Dream Does Chrysalis Weave",
+    "desc": "'죽음'의 의미란?",
+    "scoreId": 1006,
+    "rId": 31006007,
+    "music": "/bgm/cbt02/musicbox/0047_combat_saiqi_p1"
+  },
+  {
+    "id": 1006008,
+    "name": "날개는 왜 생겨났나 On What Breeze Do Wings Rise",
+    "desc": "'삶'의 의미란?",
+    "scoreId": 1006,
+    "rId": 31006008,
+    "music": "/bgm/cbt02/musicbox/0048_combat_saiqi_p2"
+  },
+  {
+    "id": 1006009,
+    "name": "내가 이곳에 태어났으므로 Cause I Was Born Here",
+    "desc": "그녀의 대답이다.",
+    "scoreId": 1006,
+    "rId": 31006009,
+    "music": "/bgm/cbt02/musicbox/0054_combat_saiqi_p3"
+  },
+  {
+    "id": 1006010,
+    "name": "지지 않는 꽃 Amaranth",
+    "desc": "얼어붙은 땅 위에서 피어나리.",
+    "scoreId": 1006,
+    "rId": 31006010,
+    "music": "/bgm/cbt02/musicbox/0056_story_saiqi_fly_to_sun"
+  },
+  {
+    "id": 1007001,
+    "name": "전투 준비 Before the War",
+    "desc": "곧 시작될 격전을 위하여.",
+    "scoreId": 1007,
+    "rId": 31007001,
+    "music": "/bgm/cbt02/musicbox/0057_scene_ex01_prepare"
+  },
+  {
+    "id": 1007002,
+    "name": "긴급 작전 Emergency Action",
+    "desc": "강철 괴물의 뱃속에서 행진하라.",
+    "scoreId": 1007,
+    "rId": 31007002,
+    "music": "/bgm/cbt02/musicbox/0058_scene_ex01_action"
+  },
+  {
+    "id": 1007003,
+    "name": "동력의 심장 A Vibrant Heart",
+    "desc": "폭시코르라고 불리는 피가 휘페르보레아 제국의 모든 혈관에 흐른다.",
+    "scoreId": 1007,
+    "rId": 31007003,
+    "music": "/bgm/cbt02/musicbox/0059_scene_ex01_encounter"
+  },
+  {
+    "id": 1007004,
+    "name": "위험 직면 In Danger",
+    "desc": "다음 탄환이 어디서 날아올지 아는 사람은 아무도 없다.",
+    "scoreId": 1007,
+    "rId": 31007004,
+    "music": "/bgm/cbt02/musicbox/0060_boss_ex01_lizhanzhe_loop"
+  },
+  {
+    "id": 1007005,
+    "name": "도주 Escape",
+    "desc": "함께 살아가자.",
+    "scoreId": 1007,
+    "rId": 31007005,
+    "music": "/bgm/cbt02/musicbox/0061_scene_ex01_escape"
+  },
+  {
+    "id": 1007006,
+    "name": "카지아: 총포와 기생식물 Katya - Guns and Vines",
+    "desc": "가면이 벗겨지기 전에는 그 뒤에 있는 것이 천사인지, 악마인지 아무도 모른다.",
+    "scoreId": 1007,
+    "rId": 31007006,
+    "music": "/bgm/cbt02/musicbox/0062_story_kajia_jazz"
+  },
+  {
+    "id": 1007007,
+    "name": "다프네: 비 Daphne - It's Raining in Dismania",
+    "desc": "\"디즈마니아는 오늘 밤 비가 오겠습니다.\"",
+    "scoreId": 1007,
+    "rId": 31007007,
+    "music": "/bgm/cbt02/musicbox/0065_story_daphnis_theme"
+  },
+  {
+    "id": 1007008,
+    "name": "비 그친 후 After Rain",
+    "desc": "곧 맑게 갠 날이 올 것이다.",
+    "scoreId": 1007,
+    "rId": 31007008,
+    "music": "/bgm/cbt02/musicbox/0067_story_daphnis_theme_piano"
+  },
+  {
+    "id": 1007009,
+    "name": "심판자 감옥 Burning Abyss",
+    "desc": "심판자가 정의의 이름으로 불의 시련을 내린다.",
+    "scoreId": 1007,
+    "rId": 31007009,
+    "music": "/bgm/cbt02/musicbox/0055_combat_boss_haier"
+  },
+  {
+    "id": 1007010,
+    "name": "베르길리우스: 영광은 무엇으로 이루어지는가? Vergilius - What Is Glory Built Upon?",
+    "desc": "무엇이 휘페르보레아 제국의 영광을 만들었는가. 월석? 흑철? 전쟁? 아니면 다른 무엇인가?",
+    "scoreId": 1007,
+    "rId": 31007010,
+    "music": "/bgm/cbt03/musicbox/0073_story_virgil_theme"
+  },
+  {
+    "id": 1008001,
+    "name": "떠돌이 대장장이 루나 The Wandering Lunosmith",
+    "desc": "방랑하는 그녀의 발걸음이 아트라시아를 몇 바퀴나 돌았을까?",
+    "scoreId": 1008,
+    "rId": 31008001,
+    "music": "/bgm/cbt02/musicbox/0041_story_jiaojiao_tiejiang"
+  },
+  {
+    "id": 1008002,
+    "name": "종업원 루나의 단꿈 Lunotress's Sweetdream",
+    "desc": "잠꾸러기 종업원 루나는 꿈에서 루나 코인을 보게 될까?",
+    "scoreId": 1008,
+    "rId": 31008002,
+    "music": "/bgm/1_0/musicbox/0083_system_shop_normal"
+  },
+  {
+    "id": 1008003,
+    "name": "달걀 루나의 우정 Lunoeggy's Friendship",
+    "desc": "달걀 루나에게 당신은, 친구들 중 가장 성격을 알기 어려운 사람일 것이다.",
+    "scoreId": 1008,
+    "rId": 31008003,
+    "music": "/bgm/1_0/musicbox/0084_system_shop_danjiao"
+  },
+  {
+    "id": 1008004,
+    "name": "탐험가 루나의 대모험 Lunoxplorer's Adventure",
+    "desc": "탐험은 영원히 멈추지 않는다.",
+    "scoreId": 1008,
+    "rId": 31008004,
+    "music": "/bgm/1_0/musicbox/0089_system_shop_adventurer"
+  },
+  {
+    "id": 1009001,
+    "name": "논리의 그물 Web of Logic",
+    "desc": "논리를 그물로 진실의 일각을 엿보리라.",
+    "scoreId": 1009,
+    "rId": 31009001,
+    "music": "/bgm/cbt03/musicbox/0072_story_reasoning"
+  },
+  {
+    "id": 1009002,
+    "name": "페실: 순수의 시대 The Fischers - Our Bygone Days",
+    "desc": "젊고 뜨거운 심장이 찬란한 미래를 위하여 요동친다.",
+    "scoreId": 1009,
+    "rId": 31009002,
+    "music": "/bgm/cbt03/musicbox/0071_lise_secret"
+  },
+  {
+    "id": 1009003,
+    "name": "갈레아 극장 Galea Theatre",
+    "desc": "가장 좋은 연극 또한 인생의 축소판에 불과하다.",
+    "scoreId": 1009,
+    "rId": 31009003,
+    "music": "/bgm/cbt03/musicbox/0070_scene_opera_house"
+  },
+  {
+    "id": 1009004,
+    "name": "도랑 속의 별하늘 Stars Shining Over the Gutter",
+    "desc": "우리는 진창 속에서 살고 있지만, 여전히 누군가는 별하늘을 바라본다.",
+    "scoreId": 1009,
+    "rId": 31009004,
+    "music": "/bgm/cbt03/musicbox/0078_story_theater_in_drain"
+  },
+  {
+    "id": 1009005,
+    "name": "등대처럼 높이 걸린 A Light Like a Beacon",
+    "desc": "다시금 고개를 들었지만, 깨진 유리 조각에 비치는 환영만이 보인다.",
+    "scoreId": 1009,
+    "rId": 31009005,
+    "music": "/bgm/cbt03/musicbox/0081_scene_alchemyacademy"
+  },
+  {
+    "id": 1009006,
+    "name": "구원 Redemption",
+    "desc": "우리가 신의 버림을 받았다면, 구원은 어디에 있는 걸까?",
+    "scoreId": 1009,
+    "rId": 31009006,
+    "music": "/bgm/cbt03/musicbox/0079_story_escape_from_lab_cs"
+  },
+  {
+    "id": 1009007,
+    "name": "결백한 심장 Heart of Innocence",
+    "desc": "처음으로 마음을 열고 세상의 다정한 무관심을 포옹한다.",
+    "scoreId": 1009,
+    "rId": 31009007,
+    "music": "/bgm/cbt03/musicbox/0069_boss_devil_linen"
+  },
+  {
+    "id": 1009008,
+    "name": "이름 없는 아이에게 Requiem for the Nameless",
+    "desc": "흰 눈만이 기억하리라.",
+    "scoreId": 1009,
+    "rId": 31009008,
+    "music": "/bgm/cbt03/musicbox/0077_story_requiem_for_nobody"
+  },
+  {
+    "id": 1010001,
+    "name": "연진 나루터에 부는 바람",
+    "desc": "풍운의 노래, 화서의 새로운 이야기.",
+    "scoreId": 1010,
+    "rId": 31010001,
+    "music": "/bgm/1_1/musicbox/0135_login_theme"
+  },
+  {
+    "id": 1010002,
+    "name": "산과 바다의 저편",
+    "desc": "새로운 나라, 새로운 전설.",
+    "scoreId": 1010,
+    "rId": 31010002,
+    "music": "/bgm/1_1/musicbox/0096_cs_dongguo_opening"
+  },
+  {
+    "id": 1010003,
+    "name": "연진 나루터",
+    "desc": "향기로운 안개가 감도는 바람의 고향.",
+    "scoreId": 1010,
+    "rId": 31010003,
+    "music": "/bgm/1_1/musicbox/0104_scene_yanjindu"
+  },
+  {
+    "id": 1010004,
+    "name": "별빛 부두",
+    "desc": "배에 깃든 맑은 꿈, 밤하늘 은하수를 베고 잠이 드네.",
+    "scoreId": 1010,
+    "rId": 31010004,
+    "music": "/bgm/1_1/musicbox/0099_scene_port_01"
+  },
+  {
+    "id": 1010005,
+    "name": "맑은 물결의 노래",
+    "desc": "가벼운 배에 저녁 노래를 싣고, 길 떠난 이는 집으로 돌아오네.",
+    "scoreId": 1010,
+    "rId": 31010005,
+    "music": "/bgm/1_1/musicbox/0100_scene_port_02_round"
+  },
+  {
+    "id": 1010006,
+    "name": "알현",
+    "desc": "하늘의 뜻은 천 년을 쉬지 않고 흐르노라.",
+    "scoreId": 1010,
+    "rId": 31010006,
+    "music": "/bgm/1_1/musicbox/0102_story_dafengjiuzhang"
+  },
+  {
+    "id": 1010007,
+    "name": "평화의 노래",
+    "desc": "진주와 비단 속, 평화와 기쁨의 노래가 넘친다.",
+    "scoreId": 1010,
+    "rId": 31010007,
+    "music": "/bgm/1_1/musicbox/0105_scene_bainianchun"
+  },
+  {
+    "id": 1010008,
+    "name": "파도의 동굴",
+    "desc": "동굴 깊은 곳에서 파도의 소리를 들어라.",
+    "scoreId": 1010,
+    "rId": 31010008,
+    "music": "/bgm/1_1/musicbox/0106_scene_cave_near_sea"
+  },
+  {
+    "id": 1010009,
+    "name": "살구꽃의 그림자",
+    "desc": "마당에 심은 살구꽃이 이제는 숲을 이루었네.",
+    "scoreId": 1010,
+    "rId": 31010009,
+    "music": "/bgm/1_1/musicbox/0110_story_fushu_theme"
+  },
+  {
+    "id": 1010010,
+    "name": "백년의 꿈",
+    "desc": "꿈에서 깨어나니 어느덧 백 년이 흘렀네.",
+    "scoreId": 1010,
+    "rId": 31010010,
+    "music": "/bgm/1_1/musicbox/0113_scene_fushu_hospital"
+  },
+  {
+    "id": 1010011,
+    "name": "교활한 토끼",
+    "desc": "그물 사이를 스쳐가는 교활한 토끼의 그림자.",
+    "scoreId": 1010,
+    "rId": 31010011,
+    "music": "/bgm/1_1/musicbox/0108_scene_black_market"
+  },
+  {
+    "id": 1010012,
+    "name": "파멸의 재",
+    "desc": "잿더미가 파멸 속에 흩어지고, 산과 바다가 저물어가네.",
+    "scoreId": 1010,
+    "rId": 31010012,
+    "music": "/bgm/1_1/musicbox/0107_story_zhuyinzhizai_full"
+  },
+  {
+    "id": 1010013,
+    "name": "낙진의 바다",
+    "desc": "낙진의 깊은 곳에 검은 울음 소리 메아리치네.",
+    "scoreId": 1010,
+    "rId": 31010013,
+    "music": "/bgm/1_1/musicbox/0111_scene_wuhuizhidi"
+  },
+  {
+    "id": 1010014,
+    "name": "우곡의 빛",
+    "desc": "죽은 이는 떠나갔지만, 그리움은 사라지지 않네.",
+    "scoreId": 1010,
+    "rId": 31010014,
+    "music": "/bgm/1_1/musicbox/0114_scene_island_in_lake"
+  },
+  {
+    "id": 1010015,
+    "name": "망각의 강을 거슬러",
+    "desc": "흐름을 거슬러 올라가니 길은 험하고 멀기만 하네.",
+    "scoreId": 1010,
+    "rId": 31010015,
+    "music": "/bgm/1_1/musicbox/0115_scene_wangchuan"
+  },
+  {
+    "id": 1010016,
+    "name": "청아원",
+    "desc": "북소리 잦아들어 힘이 다하고, 화살은 동나고 활시위는 끊어지네.",
+    "scoreId": 1010,
+    "rId": 31010016,
+    "music": "/bgm/1_1/musicbox/0117_scene_tingyayuan"
+  },
+  {
+    "id": 1010017,
+    "name": "사냥 장치 법진",
+    "desc": "사냥 장치 법진은 그 누구도 빠져나갈 수 없다!",
+    "scoreId": 1010,
+    "rId": 31010017,
+    "music": "/bgm/1_1/musicbox/0097_scene_ancient_battlefield"
+  },
+  {
+    "id": 1010018,
+    "name": "깨어난 기계 꼭두각시",
+    "desc": "기계 꼭두각시가 깨어나고, 금지된 것들이 되살아난다.",
+    "scoreId": 1010,
+    "rId": 31010018,
+    "music": "/bgm/1_1/musicbox/0123_boss_juque"
+  },
+  {
+    "id": 1010019,
+    "name": "초조한 마음",
+    "desc": "초조한 나의 마음, 돌아갈 곳은 어디인가.",
+    "scoreId": 1010,
+    "rId": 31010019,
+    "music": "/bgm/1_1/musicbox/0129_boss_yuming"
+  },
+  {
+    "id": 1010020,
+    "name": "기울어진 하늘",
+    "desc": "기울어진 하늘, 더럽혀진 이름 아래, 촉룡이 피눈물을 흘리네.",
+    "scoreId": 1010,
+    "rId": 31010020,
+    "music": "/bgm/1_1/musicbox/0121_boss_heilong"
+  },
+  {
+    "id": 1011001,
+    "name": "이상한 나라의 나이팅게일 Ⅰ A Nightingale in Wonderland Ⅰ",
+    "desc": "순백의 새의 깃털은 왜 이렇게 여려서, 폭풍에 쉽게 꺾여버리고 마는 걸까?",
+    "scoreId": 1011,
+    "rId": 31011001,
+    "music": "/bgm/1_0/musicbox/0093_feina_activity_level_01"
+  },
+  {
+    "id": 1011002,
+    "name": "이상한 나라의 나이팅게일 Ⅱ A Nightingale in Wonderland Ⅱ",
+    "desc": "그녀는 비로소 깨달았다. 새의 날개가 그토록 부드러운 것은, 타인을 따스하게 품어주기 위함이었음을.",
+    "scoreId": 1011,
+    "rId": 31011002,
+    "music": "/bgm/1_0/musicbox/0094_feina_activity_level_02"
+  },
+  {
+    "id": 1011003,
+    "name": "단꿈의 밤 When Dreams Gild the Night",
+    "desc": "무도회는 한여름 밤에 바치는 인사.",
+    "scoreId": 1011,
+    "rId": 31011003,
+    "music": "/bgm/1_0/musicbox/0088_saiqi_skin"
+  },
+  {
+    "id": 1011004,
+    "name": "모래 바다 Into the Sandrealm",
+    "desc": "꿈과 현실의 틈.",
+    "scoreId": 1011,
+    "rId": 31011004,
+    "music": "/bgm/cbt02/musicbox/0046_level_xunlianchang"
+  },
+  {
+    "id": 1011005,
+    "name": "전속력으로 전진하라 Faster and Faster!",
+    "desc": "사냥감에겐 이미 도망칠 곳이 없다.",
+    "scoreId": 1011,
+    "rId": 31011005,
+    "music": "/bgm/cbt02/musicbox/0038_system_parkur"
+  },
+  {
+    "id": 1011006,
+    "name": "일촉즉발 Arrow on String",
+    "desc": "퍼펙트 골드.",
+    "scoreId": 1011,
+    "rId": 31011006,
+    "music": "/bgm/1_0/musicbox/0090_system_shooting"
+  },
+  {
+    "id": 1011007,
+    "name": "한적한 물가 Leisurely Angler",
+    "desc": "낚시의 의미는 낚시 그 자체에 있다.",
+    "scoreId": 1011,
+    "rId": 31011007,
+    "music": "/bgm/cbt03/musicbox/0082_system_fishing"
+  },
+  {
+    "id": 1012001,
+    "name": "Binary Fate",
+    "desc": "이 노래를 벗 삼아, 천하를 다시 바로잡으리.",
+    "scoreId": 1012,
+    "rId": 31012001,
+    "music": "/bgm/1_3/musicbox/0148_theme_song_hyb"
+  },
+  {
+    "id": 1013001,
+    "name": "번화한 거리",
+    "desc": "화려한 안장과 수레바퀴가 오가고, 거리에는 먼지가 피어오른다.",
+    "scoreId": 1013,
+    "rId": 31013001,
+    "music": "/bgm/1_3/musicbox/0158_scene_yuanjiao"
+  },
+  {
+    "id": 1013002,
+    "name": "호경의 일상",
+    "desc": "천 년의 도읍 호경에 사람 사는 냄새가 피어오른다.",
+    "scoreId": 1013,
+    "rId": 31013002,
+    "music": "/bgm/1_3/musicbox/0155_scene_haojing"
+  },
+  {
+    "id": 1013003,
+    "name": "초란의 옛 그림자·퉁소",
+    "desc": "산초향은 예전과 같건만, 퉁소 소리만 구슬피 흐느끼네.",
+    "scoreId": 1013,
+    "rId": 31013003,
+    "music": "/bgm/1_3/musicbox/0156_scene_jiaolancun"
+  },
+  {
+    "id": 1013004,
+    "name": "초란의 옛 그림자·피아노",
+    "desc": "산초향은 예전과 같건만, 현 소리만이 지난 세월을 읊조리네.",
+    "scoreId": 1013,
+    "rId": 31013004,
+    "music": "/bgm/1_3/musicbox/0152_story_jiaolancun_piano"
+  },
+  {
+    "id": 1013005,
+    "name": "산 밖의 산",
+    "desc": "겹겹이 솟은 산봉우리 속, 산 너머에 또 다른 하늘이 있네.",
+    "scoreId": 1013,
+    "rId": 31013005,
+    "music": "/bgm/1_3/musicbox/0157_scene_shanwaishan"
+  },
+  {
+    "id": 1013006,
+    "name": "흑백의 저울",
+    "desc": "하늘과 땅이 뒤집히고, 삼라만상이 허무로 돌아간다.",
+    "scoreId": 1013,
+    "rId": 31013006,
+    "music": "/bgm/1_3/musicbox/0147_boss_two_dragon"
+  },
+  {
+    "id": 1013007,
+    "name": "이유 없는 인연",
+    "desc": "인연은 까닭 없이, 찰나의 순간에 피어난다.",
+    "scoreId": 1013,
+    "rId": 31013007,
+    "music": "/bgm/1_3/musicbox/0160_scene_wuyousheng_village"
+  },
+  {
+    "id": 1013008,
+    "name": "기추가 있는 세상",
+    "desc": "정교한 기계 장치 너머에 숨겨진 또 다른 세상.",
+    "scoreId": 1013,
+    "rId": 31013008,
+    "music": "/bgm/1_3/musicbox/0150_scene_yanyingong"
+  },
+  {
+    "id": 1013009,
+    "name": "검은 계약",
+    "desc": "제단에서 그대의 혼을 애타게 부르노라.",
+    "scoreId": 1013,
+    "rId": 31013009,
+    "music": "/bgm/1_1/musicbox/0120_scene_zhuyinjitan"
+  },
+  {
+    "id": 1013010,
+    "name": "망각의 그늘",
+    "desc": "먼지 덮인 옛이야기를 두고, 세월은 묵묵히 침묵하네.",
+    "scoreId": 1013,
+    "rId": 31013010,
+    "music": "/bgm/1_3/musicbox/0142_story_zhiliu_memory"
+  },
+  {
+    "id": 1013011,
+    "name": "불에서 피어난 연꽃",
+    "desc": "업장을 지우고 도를 깨우치니, 찰나의 마음에 연꽃이 피어나네.",
+    "scoreId": 1013,
+    "rId": 31013011,
+    "music": "/bgm/1_3/musicbox/0143_story_zhiliu_kill_god"
+  }
+]

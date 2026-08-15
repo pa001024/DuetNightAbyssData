@@ -21,6 +21,8 @@ from processor.fish_processor import FishProcessor
 from processor.fishing_spot_processor import FishingSpotProcessor
 from processor.resource_processor import ResourceProcessor
 from processor.book_series_archive_processor import BookSeriesArchiveProcessor
+from processor.music_processor import MusicProcessor
+from processor.music_score_processor import MusicScoreProcessor
 from processor.dispatch_processor import DispatchProcessor
 from processor.dyn_quest_processor import DynQuestProcessor
 from processor.quest_chain_processor import QuestChainProcessor
@@ -332,6 +334,8 @@ class FinalProcessor:
             "FishingSpot": FishingSpotProcessor,
             "Resource": ResourceProcessor,
             "BookSeriesArchive": BookSeriesArchiveProcessor,
+            "Music": MusicProcessor,
+            "MusicScore": MusicScoreProcessor,
             "Dispatch": DispatchProcessor,
             "DynQuest": DynQuestProcessor,
             "QuestChain": QuestChainProcessor,
@@ -508,6 +512,8 @@ if __name__ == "__main__":
         "DynQuest",
         "Resource",
         "BookSeriesArchive",
+        "Music",
+        "MusicScore",
         "ForgeLevelQuest",
         "QuestChain",
         "QuestStory",

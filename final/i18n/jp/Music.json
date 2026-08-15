@@ -1,0 +1,818 @@
+[
+  {
+    "id": 1001001,
+    "name": "Duet Night Abyss Main Theme デュエットナイトアビス",
+    "desc": "黄昏に染まり、果てなき闇夜を駆け抜け、そして共に明日へ。",
+    "scoreId": 1001,
+    "rId": 31001001,
+    "music": "/bgm/cbt01/musicbox/0015_login"
+  },
+  {
+    "id": 1001002,
+    "name": "One from the Other Shore 果てなき砂の海を渡った君",
+    "desc": "運命はいつも砂塵の後ろに。",
+    "scoreId": 1001,
+    "rId": 31001002,
+    "music": "/bgm/cbt01/musicbox/0002_story_shahai"
+  },
+  {
+    "id": 1001003,
+    "name": "Tranquility of My Yesterdays 穏やかな昨日",
+    "desc": "もう後戻りはできない。",
+    "scoreId": 1001,
+    "rId": 31001003,
+    "music": "/bgm/cbt01/musicbox/0003_story_cunzhuang"
+  },
+  {
+    "id": 1001004,
+    "name": "The Deserted Village 廃村",
+    "desc": "思い出になるまで、あの島は穏やかで安らかな場所だった。",
+    "scoreId": 1001,
+    "rId": 31001004,
+    "music": "/bgm/cbt01/musicbox/0004_atmos_huishou"
+  },
+  {
+    "id": 1001005,
+    "name": "Morning Mist 朝霧",
+    "desc": "朝霧が立ちのぼるとき、君もまた新たな道へと踏み出すだろう。",
+    "scoreId": 1001,
+    "rId": 31001005,
+    "music": "/bgm/cbt01/musicbox/0017_story_incave"
+  },
+  {
+    "id": 1001006,
+    "name": "A Long Farewell 長い別れ",
+    "desc": "いつか再び、私たちは巡り会う。",
+    "scoreId": 1001,
+    "rId": 31001006,
+    "music": "/bgm/cbt01/musicbox/0012_story_tiaoya"
+  },
+  {
+    "id": 1002001,
+    "name": "The Fategazer 運命の操りし者",
+    "desc": "運命の女神に見つめられているのは幸運か不幸か誰にも知らない。",
+    "scoreId": 1002,
+    "rId": 31002001,
+    "music": "/bgm/cbt01/musicbox/0005_story_nvshenxiang"
+  },
+  {
+    "id": 1002002,
+    "name": "Our Sacred Destiny I 運命讃歌 I",
+    "desc": "願わくば、運命よ、我らに慈悲を。",
+    "scoreId": 1002,
+    "rId": 31002002,
+    "music": "/bgm/cbt01/musicbox/0006_atmos_shendianyiji"
+  },
+  {
+    "id": 1002003,
+    "name": "Our Sacred Destiny II 運命讃歌 II",
+    "desc": "願わくば、運命よ、我らに慈悲を。――あるいは、剣を抜き運命へと挑むか。",
+    "scoreId": 1002,
+    "rId": 31002003,
+    "music": "/bgm/cbt01/musicbox/0029_atmos_shendianshangceng"
+  },
+  {
+    "id": 1003001,
+    "name": "At Stake 命懸け",
+    "desc": "手を取り合い逃げ延びる、わずかな生の光を追いかけて。",
+    "scoreId": 1003,
+    "rId": 31003001,
+    "music": "/bgm/cbt01/musicbox/0004_atmos_huishou"
+  },
+  {
+    "id": 1003002,
+    "name": "The Wrong Way 狭き道にて",
+    "desc": "過ぎ去りし日の刃先を歩むように。",
+    "scoreId": 1003,
+    "rId": 31003002,
+    "music": "/bgm/cbt01/musicbox/0007_story_zaoyudiguojun"
+  },
+  {
+    "id": 1003003,
+    "name": "Fight, or Die I 生きるか、滅ぶか I",
+    "desc": "追われた獣たちの戦い。",
+    "scoreId": 1003,
+    "rId": 31003003,
+    "music": "/bgm/cbt01/musicbox/0009_combat_xibi_p1"
+  },
+  {
+    "id": 1003004,
+    "name": "Fight, or Die II 生きるか、滅ぶか II",
+    "desc": "もし君がすべてを救いたいと願うのなら。",
+    "scoreId": 1003,
+    "rId": 31003004,
+    "music": "/bgm/cbt01/musicbox/0011_combat_xibi_p2"
+  },
+  {
+    "id": 1004001,
+    "name": "The Closed Door 閉ざされた扉",
+    "desc": "その扉は、見知らぬ者を歓迎しない。",
+    "scoreId": 1004,
+    "rId": 31004001,
+    "music": "/bgm/cbt01/musicbox/0020_story_sanatorium"
+  },
+  {
+    "id": 1004002,
+    "name": "The Iron Cage 黒鉄の城塞",
+    "desc": "長き厳冬と吹雪こそが、最も忠実な番人である。",
+    "scoreId": 1004,
+    "rId": 31004002,
+    "music": "/bgm/cbt01/musicbox/0019_scene_binghucheng"
+  },
+  {
+    "id": 1004003,
+    "name": "Lullaby for a Voyager 旅人のまどろみ",
+    "desc": "終点に辿り着くまで、ここはいつも居場所。",
+    "scoreId": 1004,
+    "rId": 31004003,
+    "music": "/bgm/cbt01/musicbox/0016_judian"
+  },
+  {
+    "id": 1004004,
+    "name": "Bad Jokes 冷たいユーモア",
+    "desc": "刀を合わせることもまた、悪くない始まりかもしれない。",
+    "scoreId": 1004,
+    "rId": 31004004,
+    "music": "/bgm/cbt01/musicbox/0033_story_humour"
+  },
+  {
+    "id": 1004005,
+    "name": "Joys of Life 戯れの日々",
+    "desc": "月狩り人のひとりが選ばれ、思いがけず異母（父）{性别:兄弟|姉妹}と出会う。",
+    "scoreId": 1004,
+    "rId": 31004005,
+    "music": "/bgm/cbt01/musicbox/0024_story_pub"
+  },
+  {
+    "id": 1004006,
+    "name": "The Asphodel アスフォデロス",
+    "desc": "酒、依頼、風聞、秘密……人々はここで交換できるものすべてを取引する。",
+    "scoreId": 1004,
+    "rId": 31004006,
+    "music": "/bgm/cbt01/musicbox/0023_scene_pub"
+  },
+  {
+    "id": 1004007,
+    "name": "The Hypnos' House ヒュプノスの家",
+    "desc": "秘密が眠る館。",
+    "scoreId": 1004,
+    "rId": 31004007,
+    "music": "/bgm/cbt01/musicbox/0031_atmos_liaoyangyuan"
+  },
+  {
+    "id": 1004008,
+    "name": "My Sweet Little Home 家",
+    "desc": "家ほど甘美なものはない。",
+    "scoreId": 1004,
+    "rId": 31004008,
+    "music": "/bgm/cbt01/musicbox/0034_atomos_feina_home"
+  },
+  {
+    "id": 1005001,
+    "name": "Glevum Pit グルビューム廃坑",
+    "desc": "新米月狩り人が手にする最初の金。",
+    "scoreId": 1005,
+    "rId": 31005001,
+    "music": "/bgm/cbt01/musicbox/0030_atmos_kuangkeng"
+  },
+  {
+    "id": 1005002,
+    "name": "Over the Frozen Land 凍土の上で",
+    "desc": "長き旅路の始まり。",
+    "scoreId": 1005,
+    "rId": 31005002,
+    "music": "/bgm/cbt01/musicbox/0018_scene_iceground"
+  },
+  {
+    "id": 1005003,
+    "name": "Snowstorm 吹雪",
+    "desc": "吹き荒ぶ風の中、君は彼女に近づく一歩一歩を数えている。",
+    "scoreId": 1005,
+    "rId": 31005003,
+    "music": "/bgm/cbt02/musicbox/0042_story_find_saiqi"
+  },
+  {
+    "id": 1005004,
+    "name": "The Crystal Devourer 晶嗜獣",
+    "desc": "再び思い出すとき、それは勇者たちの物語だと知るだろう。",
+    "scoreId": 1005,
+    "rId": 31005004,
+    "music": "/bgm/cbt01/musicbox/0032_combat_shijingzhe"
+  },
+  {
+    "id": 1005005,
+    "name": "The Lurkers 潜伏",
+    "desc": "汝が深淵を見つめるとき、深淵もまた汝を見つめ返す。",
+    "scoreId": 1005,
+    "rId": 31005005,
+    "music": "/bgm/cbt02/musicbox/0043_story_empire"
+  },
+  {
+    "id": 1005006,
+    "name": "Under Arbitrary Authority 一枚下は地獄",
+    "desc": "人はいつも笑って死を語り、泣きながら生を歩む。",
+    "scoreId": 1005,
+    "rId": 31005006,
+    "music": "/bgm/cbt01/musicbox/0036_story_renweidaozu"
+  },
+  {
+    "id": 1005007,
+    "name": "The Awful Truth 秘密と代償",
+    "desc": "彼は死をもたらし、同時に生をもたらす。",
+    "scoreId": 1005,
+    "rId": 31005007,
+    "music": "/bgm/cbt02/musicbox/0040_story_enlike_death"
+  },
+  {
+    "id": 1005008,
+    "name": "Avian Spirit Trials I 霊鳥の試練I",
+    "desc": "迷える旅人よ、夢へと還れ。霊鳥は決して離れてはいない。",
+    "scoreId": 1005,
+    "rId": 31005008,
+    "music": "/bgm/cbt02/musicbox/0053_level_lingniaoshilian_1"
+  },
+  {
+    "id": 1005009,
+    "name": "Avian Spirit Trials II 霊鳥の試練II",
+    "desc": "迷える旅人よ、夢を去れ。霊鳥はすでに遠くへ飛び去った。",
+    "scoreId": 1005,
+    "rId": 31005009,
+    "music": "/bgm/cbt02/musicbox/0053_level_lingniaoshilian_2"
+  },
+  {
+    "id": 1005010,
+    "name": "Lirico's Songs - A Cradle of Black Iron リリコの歌謡・黒鉄のゆりかご",
+    "desc": "偉大と苦難をともに生み 白き山の麓の黒き揺り籠へと注がれん",
+    "scoreId": 1005,
+    "rId": 31005010,
+    "music": "/bgm/1_1/musicbox/0134_lili_song"
+  },
+  {
+    "id": 1006001,
+    "name": "First Met With Psyche 初めての出会い",
+    "desc": "人々は皆、アイスレイク城に夏はないと思っている――だが君は違う。",
+    "scoreId": 1006,
+    "rId": 31006001,
+    "music": "/bgm/cbt02/musicbox/0044_story_first_meet_saiqi_loop"
+  },
+  {
+    "id": 1006002,
+    "name": "Psyche - Daydream in a Chrysalis サイキ：カゲロウの夢",
+    "desc": "か弱きカゲロウにも、夢を見る権利がある。",
+    "scoreId": 1006,
+    "rId": 31006002,
+    "music": "/bgm/cbt02/musicbox/0064_story_saiqi_theme_fantasy"
+  },
+  {
+    "id": 1006003,
+    "name": "Florescence Unmet まだ来ぬ花の季節",
+    "desc": "あの花は、まだ咲ききってはいない。",
+    "scoreId": 1006,
+    "rId": 31006003,
+    "music": "/bgm/cbt02/musicbox/0050_story_saiqi_grow_flower"
+  },
+  {
+    "id": 1006004,
+    "name": "Memories that We Take 記憶のフィルム",
+    "desc": "カメラは最良の狩人――狡猾に逃げゆく時の瞬きを捉えられるのは、それだけだ。",
+    "scoreId": 1006,
+    "rId": 31006004,
+    "music": "/bgm/cbt02/musicbox/0039_story_saiqi_see_flower"
+  },
+  {
+    "id": 1006005,
+    "name": "Destined End 運命の終点",
+    "desc": "あらゆる光は、やがて消えゆく運命に向かって駆け抜けていく。",
+    "scoreId": 1006,
+    "rId": 31006005,
+    "music": "/bgm/cbt02/musicbox/0052_story_saiqi_transform"
+  },
+  {
+    "id": 1006006,
+    "name": "Footsteps of Her Lifetime 彼女の足跡",
+    "desc": "彼女の一生。",
+    "scoreId": 1006,
+    "rId": 31006006,
+    "music": "/bgm/cbt02/musicbox/0049_combat_saiqi_memory"
+  },
+  {
+    "id": 1006007,
+    "name": "For What Dream Does Chrysalis Weave 繭殻はいかに織られる？",
+    "desc": "「死」の意味とは？",
+    "scoreId": 1006,
+    "rId": 31006007,
+    "music": "/bgm/cbt02/musicbox/0047_combat_saiqi_p1"
+  },
+  {
+    "id": 1006008,
+    "name": "On What Breeze Do Wings Rise 双翼はなぜ生える？",
+    "desc": "「生」の意味とは？",
+    "scoreId": 1006,
+    "rId": 31006008,
+    "music": "/bgm/cbt02/musicbox/0048_combat_saiqi_p2"
+  },
+  {
+    "id": 1006009,
+    "name": "Cause I Was Born Here 我、ここに生まれ落ちて",
+    "desc": "彼女の答え。",
+    "scoreId": 1006,
+    "rId": 31006009,
+    "music": "/bgm/cbt02/musicbox/0054_combat_saiqi_p3"
+  },
+  {
+    "id": 1006010,
+    "name": "Amaranth 不凋の花",
+    "desc": "凍土に咲き誇る花。",
+    "scoreId": 1006,
+    "rId": 31006010,
+    "music": "/bgm/cbt02/musicbox/0056_story_saiqi_fly_to_sun"
+  },
+  {
+    "id": 1007001,
+    "name": "Before the War 戦の前の支度",
+    "desc": "迫り来る激戦のために。",
+    "scoreId": 1007,
+    "rId": 31007001,
+    "music": "/bgm/cbt02/musicbox/0057_scene_ex01_prepare"
+  },
+  {
+    "id": 1007002,
+    "name": "Emergency Action 緊急行動",
+    "desc": "鋼鉄の巨獣の腹の中を進む。",
+    "scoreId": 1007,
+    "rId": 31007002,
+    "music": "/bgm/cbt02/musicbox/0058_scene_ex01_action"
+  },
+  {
+    "id": 1007003,
+    "name": "A Vibrant Heart エネルギーの源",
+    "desc": "イコルと呼ばれる血は、ヒュペリアのすべての血管を流れている。",
+    "scoreId": 1007,
+    "rId": 31007003,
+    "music": "/bgm/cbt02/musicbox/0059_scene_ex01_encounter"
+  },
+  {
+    "id": 1007004,
+    "name": "In Danger 遭難",
+    "desc": "次の弾丸がどこから来るのか、誰にも分からない。",
+    "scoreId": 1007,
+    "rId": 31007004,
+    "music": "/bgm/cbt02/musicbox/0060_boss_ex01_lizhanzhe_loop"
+  },
+  {
+    "id": 1007005,
+    "name": "Escape 逃亡",
+    "desc": "共に生き延びよう。",
+    "scoreId": 1007,
+    "rId": 31007005,
+    "music": "/bgm/cbt02/musicbox/0061_scene_ex01_escape"
+  },
+  {
+    "id": 1007006,
+    "name": "Katya - Guns and Vines カーチャ：銃砲とツヅラフジ",
+    "desc": "仮面が剥がれるまで、その裏が天使か悪魔かを知る者はいない。",
+    "scoreId": 1007,
+    "rId": 31007006,
+    "music": "/bgm/cbt02/musicbox/0062_story_kajia_jazz"
+  },
+  {
+    "id": 1007007,
+    "name": "Daphne - It's Raining in Dismania ダフネ：雨",
+    "desc": "「ディズマニアの今夜は雨だ。」",
+    "scoreId": 1007,
+    "rId": 31007007,
+    "music": "/bgm/cbt02/musicbox/0065_story_daphnis_theme"
+  },
+  {
+    "id": 1007008,
+    "name": "After Rain 雨あがり",
+    "desc": "やがて晴れの日は訪れる。",
+    "scoreId": 1007,
+    "rId": 31007008,
+    "music": "/bgm/cbt02/musicbox/0067_story_daphnis_theme_piano"
+  },
+  {
+    "id": 1007009,
+    "name": "Burning Abyss 裁きの檻",
+    "desc": "正義の名のもとに、裁きの火が降り注ぐ。",
+    "scoreId": 1007,
+    "rId": 31007009,
+    "music": "/bgm/cbt02/musicbox/0055_combat_boss_haier"
+  },
+  {
+    "id": 1007010,
+    "name": "Vergilius - What Is Glory Built Upon? ヴァージル：栄光の礎とは何か？",
+    "desc": "何がヒュペリアの栄光を築いたのか――月ノ石か、黒鉄か、戦争か、それとも別の何かか？",
+    "scoreId": 1007,
+    "rId": 31007010,
+    "music": "/bgm/cbt03/musicbox/0073_story_virgil_theme"
+  },
+  {
+    "id": 1008001,
+    "name": "The Wandering Lunosmith 流浪のルーナ族鍛冶師",
+    "desc": "彼女の彷徨の足跡が、アトラシアを幾周できるかを知る者はいない。",
+    "scoreId": 1008,
+    "rId": 31008001,
+    "music": "/bgm/cbt02/musicbox/0041_story_jiaojiao_tiejiang"
+  },
+  {
+    "id": 1008002,
+    "name": "Lunotress's Sweetdream ルーナ族のバーテンダーに良い夢を",
+    "desc": "眠たがりのルーナ族のバーテンダーは、ルーナコインの夢を見るか？",
+    "scoreId": 1008,
+    "rId": 31008002,
+    "music": "/bgm/1_0/musicbox/0083_system_shop_normal"
+  },
+  {
+    "id": 1008003,
+    "name": "Lunoeggy's Friendship ルーナエッグの友情",
+    "desc": "ルーナエッグは、あなたを「いちばん性格の読めない友だち」だと思っている。",
+    "scoreId": 1008,
+    "rId": 31008003,
+    "music": "/bgm/1_0/musicbox/0084_system_shop_danjiao"
+  },
+  {
+    "id": 1008004,
+    "name": "Lunoxplorer's Adventure ルーナ族の探検家の大冒険",
+    "desc": "冒険は終わらない。",
+    "scoreId": 1008,
+    "rId": 31008004,
+    "music": "/bgm/1_0/musicbox/0089_system_shop_adventurer"
+  },
+  {
+    "id": 1009001,
+    "name": "Web of Logic 織り込まれた論理の網",
+    "desc": "論理の網を張り巡らせ、真実の一端を垣間見る。",
+    "scoreId": 1009,
+    "rId": 31009001,
+    "music": "/bgm/cbt03/musicbox/0072_story_reasoning"
+  },
+  {
+    "id": 1009002,
+    "name": "The Fischers - Our Bygone Days フィッシャー：純真の時代",
+    "desc": "若く熱き心臓は高鳴る、きらめく未来のために。",
+    "scoreId": 1009,
+    "rId": 31009002,
+    "music": "/bgm/cbt03/musicbox/0071_lise_secret"
+  },
+  {
+    "id": 1009003,
+    "name": "Galea Theatre ガレア劇場",
+    "desc": "最良の演劇でさえ、人生の縮図にすぎない。",
+    "scoreId": 1009,
+    "rId": 31009003,
+    "music": "/bgm/cbt03/musicbox/0070_scene_opera_house"
+  },
+  {
+    "id": 1009004,
+    "name": "Stars Shining Over the Gutter 溝に輝く星々",
+    "desc": "我らは溝の中に生きる――それでも、星空を仰ぎ見る者がいる。",
+    "scoreId": 1009,
+    "rId": 31009004,
+    "music": "/bgm/cbt03/musicbox/0078_story_theater_in_drain"
+  },
+  {
+    "id": 1009005,
+    "name": "A Light Like a Beacon 灯台のごとく高く",
+    "desc": "再び仰ぎ見れば、そこには砕けたガラスに映る幻影のみ。",
+    "scoreId": 1009,
+    "rId": 31009005,
+    "music": "/bgm/cbt03/musicbox/0081_scene_alchemyacademy"
+  },
+  {
+    "id": 1009006,
+    "name": "Redemption 救済",
+    "desc": "もし我らが神々に見捨てられし子なら、救済はいずこにあるのか。",
+    "scoreId": 1009,
+    "rId": 31009006,
+    "music": "/bgm/cbt03/musicbox/0079_story_escape_from_lab_cs"
+  },
+  {
+    "id": 1009007,
+    "name": "Heart of Innocence 無垢の心臓",
+    "desc": "初めて、心を開き、世界の優しき冷淡を抱きしめた。",
+    "scoreId": 1009,
+    "rId": 31009007,
+    "music": "/bgm/cbt03/musicbox/0069_boss_devil_linen"
+  },
+  {
+    "id": 1009008,
+    "name": "Requiem for the Nameless 無名の者へ捧ぐレクイエム",
+    "desc": "白雪だけが覚えている。",
+    "scoreId": 1009,
+    "rId": 31009008,
+    "music": "/bgm/cbt03/musicbox/0077_story_requiem_for_nobody"
+  },
+  {
+    "id": 1010001,
+    "name": "風立ちの煙津渡",
+    "desc": "大風の古き調べ、華胥の新たなる物語。",
+    "scoreId": 1010,
+    "rId": 31010001,
+    "music": "/bgm/1_1/musicbox/0135_login_theme"
+  },
+  {
+    "id": 1010002,
+    "name": "山と海の彼方へ",
+    "desc": "新しい国、新しい伝説。",
+    "scoreId": 1010,
+    "rId": 31010002,
+    "music": "/bgm/1_1/musicbox/0096_cs_dongguo_opening"
+  },
+  {
+    "id": 1010003,
+    "name": "煙津渡",
+    "desc": "香る霧がたなびく、大風の故郷。",
+    "scoreId": 1010,
+    "rId": 31010003,
+    "music": "/bgm/1_1/musicbox/0104_scene_yanjindu"
+  },
+  {
+    "id": 1010004,
+    "name": "浮星の埠",
+    "desc": "ひと舟の淡い夢、夜は星の川を枕に。",
+    "scoreId": 1010,
+    "rId": 31010004,
+    "music": "/bgm/1_1/musicbox/0099_scene_port_01"
+  },
+  {
+    "id": 1010005,
+    "name": "清波に暮色を歌う",
+    "desc": "小舟は夕べを歌い、旅人は家路へ。",
+    "scoreId": 1010,
+    "rId": 31010005,
+    "music": "/bgm/1_1/musicbox/0100_scene_port_02_round"
+  },
+  {
+    "id": 1010006,
+    "name": "神に謁す",
+    "desc": "天の理は巡り、千年絶えず。",
+    "scoreId": 1010,
+    "rId": 31010006,
+    "music": "/bgm/1_1/musicbox/0102_story_dafengjiuzhang"
+  },
+  {
+    "id": 1010007,
+    "name": "太平の願い",
+    "desc": "珠玉と絹衣、清らかに平穏で安らかに。",
+    "scoreId": 1010,
+    "rId": 31010007,
+    "music": "/bgm/1_1/musicbox/0105_scene_bainianchun"
+  },
+  {
+    "id": 1010008,
+    "name": "潮騒の洞窟",
+    "desc": "岩窟の奥深く、潮騒に耳を澄ませ。",
+    "scoreId": 1010,
+    "rId": 31010008,
+    "music": "/bgm/1_1/musicbox/0106_scene_cave_near_sea"
+  },
+  {
+    "id": 1010009,
+    "name": "杏花天影",
+    "desc": "庭には杏の花、今や森となる。",
+    "scoreId": 1010,
+    "rId": 31010009,
+    "music": "/bgm/1_1/musicbox/0110_story_fushu_theme"
+  },
+  {
+    "id": 1010010,
+    "name": "百年の枯栄",
+    "desc": "一夜の古い夢、振り返れば百年。",
+    "scoreId": 1010,
+    "rId": 31010010,
+    "music": "/bgm/1_1/musicbox/0113_scene_fushu_hospital"
+  },
+  {
+    "id": 1010011,
+    "name": "狡兎",
+    "desc": "天網のほころびを、狡兎が駆け抜ける。",
+    "scoreId": 1010,
+    "rId": 31010011,
+    "music": "/bgm/1_1/musicbox/0108_scene_black_market"
+  },
+  {
+    "id": 1010012,
+    "name": "劫灰",
+    "desc": "劫灰が舞い尽くし、山河は黄昏ゆく。",
+    "scoreId": 1010,
+    "rId": 31010012,
+    "music": "/bgm/1_1/musicbox/0107_story_zhuyinzhizai_full"
+  },
+  {
+    "id": 1010013,
+    "name": "塵砂の荒海",
+    "desc": "塵砂の深奥で、群れなす悪獣が咆哮する。",
+    "scoreId": 1010,
+    "rId": 31010013,
+    "music": "/bgm/1_1/musicbox/0111_scene_wuhuizhidi"
+  },
+  {
+    "id": 1010014,
+    "name": "幽明な虞淵",
+    "desc": "逝きし者は逝き、想いは消えぬ。",
+    "scoreId": 1010,
+    "rId": 31010014,
+    "music": "/bgm/1_1/musicbox/0114_scene_island_in_lake"
+  },
+  {
+    "id": 1010015,
+    "name": "三途川を渡り",
+    "desc": "遡って追えば、長い道は阻まれる。",
+    "scoreId": 1010,
+    "rId": 31010015,
+    "music": "/bgm/1_1/musicbox/0115_scene_wangchuan"
+  },
+  {
+    "id": 1010016,
+    "name": "鴉の孤原に耳を澄ます",
+    "desc": "太鼓は衰え力尽き、矢は尽き弦は切れる。",
+    "scoreId": 1010,
+    "rId": 31010016,
+    "music": "/bgm/1_1/musicbox/0117_scene_tingyayuan"
+  },
+  {
+    "id": 1010017,
+    "name": "千枢狩陣",
+    "desc": "千枢の狩り、劫からは逃れられぬ。",
+    "scoreId": 1010,
+    "rId": 31010017,
+    "music": "/bgm/1_1/musicbox/0097_scene_ancient_battlefield"
+  },
+  {
+    "id": 1010018,
+    "name": "からくり人形、目覚める",
+    "desc": "絡繰りが目覚め、禁忌が蘇る。",
+    "scoreId": 1010,
+    "rId": 31010018,
+    "music": "/bgm/1_1/musicbox/0123_boss_juque"
+  },
+  {
+    "id": 1010019,
+    "name": "心を燃やす",
+    "desc": "心の憂いよ、我が帰る場所はどこに。",
+    "scoreId": 1010,
+    "rId": 31010019,
+    "music": "/bgm/1_1/musicbox/0129_boss_yuming"
+  },
+  {
+    "id": 1010020,
+    "name": "天は傾く",
+    "desc": "燭陰は血の涙を流し、神を涜して天は傾く。",
+    "scoreId": 1010,
+    "rId": 31010020,
+    "music": "/bgm/1_1/musicbox/0121_boss_heilong"
+  },
+  {
+    "id": 1011001,
+    "name": "A Nightingale in Wonderland I 不思議の国のナイチンゲール I",
+    "desc": "あの純白の幼い羽は、なぜこれほど幼く脆いのか――暴風がたやすく折ってしまうほどに？",
+    "scoreId": 1011,
+    "rId": 31011001,
+    "music": "/bgm/1_0/musicbox/0093_feina_activity_level_01"
+  },
+  {
+    "id": 1011002,
+    "name": "A Nightingale in Wonderland II 不思議の国のナイチンゲール II",
+    "desc": "彼女はついに知った。鳥の翼が柔らかなのは、誰かを温かく抱きしめるためなのだと。",
+    "scoreId": 1011,
+    "rId": 31011002,
+    "music": "/bgm/1_0/musicbox/0094_feina_activity_level_02"
+  },
+  {
+    "id": 1011003,
+    "name": "When Dreams Gild the Night 夜に紛れ込む儚い夢",
+    "desc": "舞踏会は、真夏の夜へ捧げる挨拶。",
+    "scoreId": 1011,
+    "rId": 31011003,
+    "music": "/bgm/1_0/musicbox/0088_saiqi_skin"
+  },
+  {
+    "id": 1011004,
+    "name": "Into the Sandrealm 砂海の想い",
+    "desc": "夢と現実の狭間。",
+    "scoreId": 1011,
+    "rId": 31011004,
+    "music": "/bgm/cbt02/musicbox/0046_level_xunlianchang"
+  },
+  {
+    "id": 1011005,
+    "name": "Faster and Faster! 全速前進！",
+    "desc": "獲物はもう逃げ場がない。",
+    "scoreId": 1011,
+    "rId": 31011005,
+    "music": "/bgm/cbt02/musicbox/0038_system_parkur"
+  },
+  {
+    "id": 1011006,
+    "name": "Arrow on String 矢は弦上にあり",
+    "desc": "ど真ん中。",
+    "scoreId": 1011,
+    "rId": 31011006,
+    "music": "/bgm/1_0/musicbox/0090_system_shooting"
+  },
+  {
+    "id": 1011007,
+    "name": "Leisurely Angler 水辺でのんびり",
+    "desc": "釣りの意味は、釣ることそのものにある。",
+    "scoreId": 1011,
+    "rId": 31011007,
+    "music": "/bgm/cbt03/musicbox/0082_system_fishing"
+  },
+  {
+    "id": 1012001,
+    "name": "Binary Fate",
+    "desc": "この歌とともに、天地の均衡を鋳え直せ",
+    "scoreId": 1012,
+    "rId": 31012001,
+    "music": "/bgm/1_3/musicbox/0148_theme_song_hyb"
+  },
+  {
+    "id": 1013001,
+    "name": "砂埃舞う",
+    "desc": "砂ぼこりが舞い上がり、輦車が行き交う。",
+    "scoreId": 1013,
+    "rId": 31013001,
+    "music": "/bgm/1_3/musicbox/0158_scene_yuanjiao"
+  },
+  {
+    "id": 1013002,
+    "name": "皓京の喧騒",
+    "desc": "千年の皓京、賑わいに満ちた町。",
+    "scoreId": 1013,
+    "rId": 31013002,
+    "music": "/bgm/1_3/musicbox/0155_scene_haojing"
+  },
+  {
+    "id": 1013003,
+    "name": "椒蘭の故人・洞簫",
+    "desc": "あの香りは昔のまま、笛の音はむせび泣く。",
+    "scoreId": 1013,
+    "rId": 31013003,
+    "music": "/bgm/1_3/musicbox/0156_scene_jiaolancun"
+  },
+  {
+    "id": 1013004,
+    "name": "椒蘭の故人・ピアノ",
+    "desc": "あの香りは昔のまま、琴は流れる歳月を語る。",
+    "scoreId": 1013,
+    "rId": 31013004,
+    "music": "/bgm/1_3/musicbox/0152_story_jiaolancun_piano"
+  },
+  {
+    "id": 1013005,
+    "name": "山の外になお山あり",
+    "desc": "幾重にも連なる峰々、その山の外にもまた山がある。",
+    "scoreId": 1013,
+    "rId": 31013005,
+    "music": "/bgm/1_3/musicbox/0157_scene_shanwaishan"
+  },
+  {
+    "id": 1013006,
+    "name": "白と黒の天秤",
+    "desc": "天地は逆さに懸かり、万象は虚無へと帰す。",
+    "scoreId": 1013,
+    "rId": 31013006,
+    "music": "/bgm/1_3/musicbox/0147_boss_two_dragon"
+  },
+  {
+    "id": 1013007,
+    "name": "縁に理由なし",
+    "desc": "縁は何に始まり、刹那に生まれるのか。",
+    "scoreId": 1013,
+    "rId": 31013007,
+    "music": "/bgm/1_3/musicbox/0160_scene_wuyousheng_village"
+  },
+  {
+    "id": 1013008,
+    "name": "機枢の別天地",
+    "desc": "機枢の妙なるからくり、その内にはまた別天地がある。",
+    "scoreId": 1013,
+    "rId": 31013008,
+    "music": "/bgm/1_3/musicbox/0150_scene_yanyingong"
+  },
+  {
+    "id": 1013009,
+    "name": "黒の契約",
+    "desc": "祭壇の上にて、魂よ帰れ。",
+    "scoreId": 1013,
+    "rId": 31013009,
+    "music": "/bgm/1_1/musicbox/0120_scene_zhuyinjitan"
+  },
+  {
+    "id": 1013010,
+    "name": "忘却の暗がり",
+    "desc": "塵に埋もれた過去、歳月は静かに沈む。",
+    "scoreId": 1013,
+    "rId": 31013010,
+    "music": "/bgm/1_3/musicbox/0142_story_zhiliu_memory"
+  },
+  {
+    "id": 1013011,
+    "name": "火裏の蓮",
+    "desc": "業を滅して道を証し、一念にして蓮を生む。",
+    "scoreId": 1013,
+    "rId": 31013011,
+    "music": "/bgm/1_3/musicbox/0143_story_zhiliu_kill_god"
+  }
+]

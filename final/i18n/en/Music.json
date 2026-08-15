@@ -1,0 +1,818 @@
+[
+  {
+    "id": 1001001,
+    "name": "Duet Night Abyss Main Theme",
+    "desc": "Bathed in twilight, we sailed through the boundless dark — together, ever onward, toward the dawn.",
+    "scoreId": 1001,
+    "rId": 31001001,
+    "music": "/bgm/cbt01/musicbox/0015_login"
+  },
+  {
+    "id": 1001002,
+    "name": "One from the Other Shore",
+    "desc": "Destiny lurks behind the dust and sand.",
+    "scoreId": 1001,
+    "rId": 31001002,
+    "music": "/bgm/cbt01/musicbox/0002_story_shahai"
+  },
+  {
+    "id": 1001003,
+    "name": "Tranquility of My Yesterdays",
+    "desc": "Never look back.",
+    "scoreId": 1001,
+    "rId": 31001003,
+    "music": "/bgm/cbt01/musicbox/0003_story_cunzhuang"
+  },
+  {
+    "id": 1001004,
+    "name": "The Deserted Village",
+    "desc": "The island was once a haven of tranquility, until it faded into memory.",
+    "scoreId": 1001,
+    "rId": 31001004,
+    "music": "/bgm/cbt01/musicbox/0004_atmos_huishou"
+  },
+  {
+    "id": 1001005,
+    "name": "Morning Mist",
+    "desc": "As the first mist of morning rises, so too do you set out.",
+    "scoreId": 1001,
+    "rId": 31001005,
+    "music": "/bgm/cbt01/musicbox/0017_story_incave"
+  },
+  {
+    "id": 1001006,
+    "name": "A Long Farewell",
+    "desc": "Till the day we meet again.",
+    "scoreId": 1001,
+    "rId": 31001006,
+    "music": "/bgm/cbt01/musicbox/0012_story_tiaoya"
+  },
+  {
+    "id": 1002001,
+    "name": "The Fategazer",
+    "desc": "No one knows whether being watched by the Goddess of Fate is a blessing or a curse.",
+    "scoreId": 1002,
+    "rId": 31002001,
+    "music": "/bgm/cbt01/musicbox/0005_story_nvshenxiang"
+  },
+  {
+    "id": 1002002,
+    "name": "Our Sacred Destiny Ⅰ",
+    "desc": "We beseech fate to look kindly upon us.",
+    "scoreId": 1002,
+    "rId": 31002002,
+    "music": "/bgm/cbt01/musicbox/0006_atmos_shendianyiji"
+  },
+  {
+    "id": 1002003,
+    "name": "Our Sacred Destiny Ⅱ",
+    "desc": "We beseech fate to look kindly upon us — or else raise our swords against it.",
+    "scoreId": 1002,
+    "rId": 31002003,
+    "music": "/bgm/cbt01/musicbox/0029_atmos_shendianshangceng"
+  },
+  {
+    "id": 1003001,
+    "name": "At Stake",
+    "desc": "Hand in hand, they flee — chasing a single sliver of hope.",
+    "scoreId": 1003,
+    "rId": 31003001,
+    "music": "/bgm/cbt01/musicbox/0004_atmos_huishou"
+  },
+  {
+    "id": 1003002,
+    "name": "The Wrong Way",
+    "desc": "Treading the knife's edge of the past.",
+    "scoreId": 1003,
+    "rId": 31003002,
+    "music": "/bgm/cbt01/musicbox/0007_story_zaoyudiguojun"
+  },
+  {
+    "id": 1003003,
+    "name": "Fight, or Die Ⅰ",
+    "desc": "The struggle of a cornered beast.",
+    "scoreId": 1003,
+    "rId": 31003003,
+    "music": "/bgm/cbt01/musicbox/0009_combat_xibi_p1"
+  },
+  {
+    "id": 1003004,
+    "name": "Fight, or Die Ⅱ",
+    "desc": "If you wish to save all this.",
+    "scoreId": 1003,
+    "rId": 31003004,
+    "music": "/bgm/cbt01/musicbox/0011_combat_xibi_p2"
+  },
+  {
+    "id": 1004001,
+    "name": "The Closed Door",
+    "desc": "That door does not welcome strangers.",
+    "scoreId": 1004,
+    "rId": 31004001,
+    "music": "/bgm/cbt01/musicbox/0020_story_sanatorium"
+  },
+  {
+    "id": 1004002,
+    "name": "The Iron Cage",
+    "desc": "Endless cold and driving snow stand the surest watch upon its walls.",
+    "scoreId": 1004,
+    "rId": 31004002,
+    "music": "/bgm/cbt01/musicbox/0019_scene_binghucheng"
+  },
+  {
+    "id": 1004003,
+    "name": "Lullaby for a Voyager",
+    "desc": "Before the final destination is reached, this place will always be home.",
+    "scoreId": 1004,
+    "rId": 31004003,
+    "music": "/bgm/cbt01/musicbox/0016_judian"
+  },
+  {
+    "id": 1004004,
+    "name": "Bad Jokes",
+    "desc": "A barbed exchange makes quite the opening remarks.",
+    "scoreId": 1004,
+    "rId": 31004004,
+    "music": "/bgm/cbt01/musicbox/0033_story_humour"
+  },
+  {
+    "id": 1004005,
+    "name": "Joys of Life",
+    "desc": "Congratulations — you've won the chance of running into your {性别:brother from another mother|sister from another mister}.",
+    "scoreId": 1004,
+    "rId": 31004005,
+    "music": "/bgm/cbt01/musicbox/0024_story_pub"
+  },
+  {
+    "id": 1004006,
+    "name": "The Asphodel",
+    "desc": "Drinks, commissions, rumours, secrets — everything that can be traded changes hands here.",
+    "scoreId": 1004,
+    "rId": 31004006,
+    "music": "/bgm/cbt01/musicbox/0023_scene_pub"
+  },
+  {
+    "id": 1004007,
+    "name": "The Hypnos' House",
+    "desc": "A house where secrets slumber.",
+    "scoreId": 1004,
+    "rId": 31004007,
+    "music": "/bgm/cbt01/musicbox/0031_atmos_liaoyangyuan"
+  },
+  {
+    "id": 1004008,
+    "name": "My Sweet Little Home",
+    "desc": "Home, sweet home. There's nothing like it.",
+    "scoreId": 1004,
+    "rId": 31004008,
+    "music": "/bgm/cbt01/musicbox/0034_atomos_feina_home"
+  },
+  {
+    "id": 1005001,
+    "name": "Glevum Pit",
+    "desc": "A novice Phoxhunter's first taste of fortune.",
+    "scoreId": 1005,
+    "rId": 31005001,
+    "music": "/bgm/cbt01/musicbox/0030_atmos_kuangkeng"
+  },
+  {
+    "id": 1005002,
+    "name": "Over the Frozen Land",
+    "desc": "The beginning of a long trek.",
+    "scoreId": 1005,
+    "rId": 31005002,
+    "music": "/bgm/cbt01/musicbox/0018_scene_iceground"
+  },
+  {
+    "id": 1005003,
+    "name": "Snowstorm",
+    "desc": "In the howling gale, you count every step towards her.",
+    "scoreId": 1005,
+    "rId": 31005003,
+    "music": "/bgm/cbt02/musicbox/0042_story_find_saiqi"
+  },
+  {
+    "id": 1005004,
+    "name": "The Crystal Devourer",
+    "desc": "In retrospect, you know it was a tale of the brave.",
+    "scoreId": 1005,
+    "rId": 31005004,
+    "music": "/bgm/cbt01/musicbox/0032_combat_shijingzhe"
+  },
+  {
+    "id": 1005005,
+    "name": "The Lurkers",
+    "desc": "If you gaze long into an abyss, the abyss also gazes into you.",
+    "scoreId": 1005,
+    "rId": 31005005,
+    "music": "/bgm/cbt02/musicbox/0043_story_empire"
+  },
+  {
+    "id": 1005006,
+    "name": "Under Arbitrary Authority",
+    "desc": "We laugh when we speak of death, and weep as we go on living.",
+    "scoreId": 1005,
+    "rId": 31005006,
+    "music": "/bgm/cbt01/musicbox/0036_story_renweidaozu"
+  },
+  {
+    "id": 1005007,
+    "name": "The Awful Truth",
+    "desc": "He brings death — and life as well.",
+    "scoreId": 1005,
+    "rId": 31005007,
+    "music": "/bgm/cbt02/musicbox/0040_story_enlike_death"
+  },
+  {
+    "id": 1005008,
+    "name": "Avian Spirit Trials Ⅰ",
+    "desc": "Lost traveller, return to that dream — the Avian Spirit never left.",
+    "scoreId": 1005,
+    "rId": 31005008,
+    "music": "/bgm/cbt02/musicbox/0053_level_lingniaoshilian_1"
+  },
+  {
+    "id": 1005009,
+    "name": "Avian Spirit Trials Ⅱ",
+    "desc": "Lost traveller, leave this dream now — the Avian Spirit has taken flight.",
+    "scoreId": 1005,
+    "rId": 31005009,
+    "music": "/bgm/cbt02/musicbox/0053_level_lingniaoshilian_2"
+  },
+  {
+    "id": 1005010,
+    "name": "Lirico's Songs – A Cradle of Black Iron",
+    "desc": "She delivered glory and grief alike — swaddled in blackened iron beneath the frosted peak.",
+    "scoreId": 1005,
+    "rId": 31005010,
+    "music": "/bgm/1_1/musicbox/0134_lili_song"
+  },
+  {
+    "id": 1006001,
+    "name": "First Met With Psyche",
+    "desc": "They say Icelake has no summer. You think otherwise.",
+    "scoreId": 1006,
+    "rId": 31006001,
+    "music": "/bgm/cbt02/musicbox/0044_story_first_meet_saiqi_loop"
+  },
+  {
+    "id": 1006002,
+    "name": "Psyche: Daydream in a Chrysalis",
+    "desc": "Even a mayfly has the right to dream.",
+    "scoreId": 1006,
+    "rId": 31006002,
+    "music": "/bgm/cbt02/musicbox/0064_story_saiqi_theme_fantasy"
+  },
+  {
+    "id": 1006003,
+    "name": "Florescence Unmet",
+    "desc": "That flower has yet to come into its own.",
+    "scoreId": 1006,
+    "rId": 31006003,
+    "music": "/bgm/cbt02/musicbox/0050_story_saiqi_grow_flower"
+  },
+  {
+    "id": 1006004,
+    "name": "Memories that We Take",
+    "desc": "The camera is the finest hunter — only it can catch slippery time.",
+    "scoreId": 1006,
+    "rId": 31006004,
+    "music": "/bgm/cbt02/musicbox/0039_story_saiqi_see_flower"
+  },
+  {
+    "id": 1006005,
+    "name": "Destined End",
+    "desc": "All light races toward its extinguishing.",
+    "scoreId": 1006,
+    "rId": 31006005,
+    "music": "/bgm/cbt02/musicbox/0052_story_saiqi_transform"
+  },
+  {
+    "id": 1006006,
+    "name": "Footsteps of Her Lifetime",
+    "desc": "The story of her life.",
+    "scoreId": 1006,
+    "rId": 31006006,
+    "music": "/bgm/cbt02/musicbox/0049_combat_saiqi_memory"
+  },
+  {
+    "id": 1006007,
+    "name": "For What Dream Does Chrysalis Weave",
+    "desc": "The meaning of \"death\"?",
+    "scoreId": 1006,
+    "rId": 31006007,
+    "music": "/bgm/cbt02/musicbox/0047_combat_saiqi_p1"
+  },
+  {
+    "id": 1006008,
+    "name": "On What Breeze Do Wings Rise",
+    "desc": "The meaning of \"life\"?",
+    "scoreId": 1006,
+    "rId": 31006008,
+    "music": "/bgm/cbt02/musicbox/0048_combat_saiqi_p2"
+  },
+  {
+    "id": 1006009,
+    "name": "Cause I Was Born Here",
+    "desc": "Her answer.",
+    "scoreId": 1006,
+    "rId": 31006009,
+    "music": "/bgm/cbt02/musicbox/0054_combat_saiqi_p3"
+  },
+  {
+    "id": 1006010,
+    "name": "Amaranth",
+    "desc": "Blooming upon frozen earth.",
+    "scoreId": 1006,
+    "rId": 31006010,
+    "music": "/bgm/cbt02/musicbox/0056_story_saiqi_fly_to_sun"
+  },
+  {
+    "id": 1007001,
+    "name": "Before the War",
+    "desc": "For the fierce battle soon to come.",
+    "scoreId": 1007,
+    "rId": 31007001,
+    "music": "/bgm/cbt02/musicbox/0057_scene_ex01_prepare"
+  },
+  {
+    "id": 1007002,
+    "name": "Emergency Action",
+    "desc": "Advancing through the belly of the iron behemoth.",
+    "scoreId": 1007,
+    "rId": 31007002,
+    "music": "/bgm/cbt02/musicbox/0058_scene_ex01_action"
+  },
+  {
+    "id": 1007003,
+    "name": "A Vibrant Heart",
+    "desc": "A lifeblood called Phoxichor courses through every vein of Hyperborea.",
+    "scoreId": 1007,
+    "rId": 31007003,
+    "music": "/bgm/cbt02/musicbox/0059_scene_ex01_encounter"
+  },
+  {
+    "id": 1007004,
+    "name": "In Danger",
+    "desc": "No one knows where the next bullet will come from.",
+    "scoreId": 1007,
+    "rId": 31007004,
+    "music": "/bgm/cbt02/musicbox/0060_boss_ex01_lizhanzhe_loop"
+  },
+  {
+    "id": 1007005,
+    "name": "Escape",
+    "desc": "Be brave, and live on — together.",
+    "scoreId": 1007,
+    "rId": 31007005,
+    "music": "/bgm/cbt02/musicbox/0061_scene_ex01_escape"
+  },
+  {
+    "id": 1007006,
+    "name": "Katya: Guns and Vines",
+    "desc": "Until the mask is lifted, none can tell whether it hides the face of an angel or a demon.",
+    "scoreId": 1007,
+    "rId": 31007006,
+    "music": "/bgm/cbt02/musicbox/0062_story_kajia_jazz"
+  },
+  {
+    "id": 1007007,
+    "name": "Daphne: It's Raining in Dismania",
+    "desc": "\"It's raining tonight in Dismania.\"",
+    "scoreId": 1007,
+    "rId": 31007007,
+    "music": "/bgm/cbt02/musicbox/0065_story_daphnis_theme"
+  },
+  {
+    "id": 1007008,
+    "name": "After Rain",
+    "desc": "Clear skies will come.",
+    "scoreId": 1007,
+    "rId": 31007008,
+    "music": "/bgm/cbt02/musicbox/0067_story_daphnis_theme_piano"
+  },
+  {
+    "id": 1007009,
+    "name": "Burning Abyss",
+    "desc": "In the name of justice, the inquisitor casts down a trial by fire.",
+    "scoreId": 1007,
+    "rId": 31007009,
+    "music": "/bgm/cbt02/musicbox/0055_combat_boss_haier"
+  },
+  {
+    "id": 1007010,
+    "name": "Vergilius – What Is Glory Built Upon?",
+    "desc": "What is Hyperborea's glory built upon: Phoxene, black iron, war... or something else?",
+    "scoreId": 1007,
+    "rId": 31007010,
+    "music": "/bgm/cbt03/musicbox/0073_story_virgil_theme"
+  },
+  {
+    "id": 1008001,
+    "name": "The Wandering Lunosmith",
+    "desc": "Her wandering may well have traced the breadth of Atlasia a hundred times over.",
+    "scoreId": 1008,
+    "rId": 31008001,
+    "music": "/bgm/cbt02/musicbox/0041_story_jiaojiao_tiejiang"
+  },
+  {
+    "id": 1008002,
+    "name": "Lunotress's Sweetdream",
+    "desc": "Do the sleepy Lunotress dream of Luno Coins?",
+    "scoreId": 1008,
+    "rId": 31008002,
+    "music": "/bgm/1_0/musicbox/0083_system_shop_normal"
+  },
+  {
+    "id": 1008003,
+    "name": "Lunoeggy's Friendship",
+    "desc": "Lunoeggy thinks you're the most unreadable friend she's ever had.",
+    "scoreId": 1008,
+    "rId": 31008003,
+    "music": "/bgm/1_0/musicbox/0084_system_shop_danjiao"
+  },
+  {
+    "id": 1008004,
+    "name": "Lunoxplorer's Adventure",
+    "desc": "There is no end to adventure.",
+    "scoreId": 1008,
+    "rId": 31008004,
+    "music": "/bgm/1_0/musicbox/0089_system_shop_adventurer"
+  },
+  {
+    "id": 1009001,
+    "name": "Web of Logic",
+    "desc": "Weave logic into a web to catch a shard of truth.",
+    "scoreId": 1009,
+    "rId": 31009001,
+    "music": "/bgm/cbt03/musicbox/0072_story_reasoning"
+  },
+  {
+    "id": 1009002,
+    "name": "The Fischers: Our Bygone Days",
+    "desc": "Young, ardent hearts throb for a future in full colour.",
+    "scoreId": 1009,
+    "rId": 31009002,
+    "music": "/bgm/cbt03/musicbox/0071_lise_secret"
+  },
+  {
+    "id": 1009003,
+    "name": "Galea Theatre",
+    "desc": "Even the finest drama is but a fragment of life.",
+    "scoreId": 1009,
+    "rId": 31009003,
+    "music": "/bgm/cbt03/musicbox/0070_scene_opera_house"
+  },
+  {
+    "id": 1009004,
+    "name": "Stars Shining Over the Gutter",
+    "desc": "We are all in the gutter, but some of us are looking at the stars.",
+    "scoreId": 1009,
+    "rId": 31009004,
+    "music": "/bgm/cbt03/musicbox/0078_story_theater_in_drain"
+  },
+  {
+    "id": 1009005,
+    "name": "A Light Like a Beacon",
+    "desc": "Look up again — only phantoms refracted in shattered glass.",
+    "scoreId": 1009,
+    "rId": 31009005,
+    "music": "/bgm/cbt03/musicbox/0081_scene_alchemyacademy"
+  },
+  {
+    "id": 1009006,
+    "name": "Redemption",
+    "desc": "If we are forsaken by the gods, where then is redemption?",
+    "scoreId": 1009,
+    "rId": 31009006,
+    "music": "/bgm/cbt03/musicbox/0079_story_escape_from_lab_cs"
+  },
+  {
+    "id": 1009007,
+    "name": "Heart of Innocence",
+    "desc": "For the first time, I open my heart and embrace the world's gentle indifference.",
+    "scoreId": 1009,
+    "rId": 31009007,
+    "music": "/bgm/cbt03/musicbox/0069_boss_devil_linen"
+  },
+  {
+    "id": 1009008,
+    "name": "Requiem for the Nameless",
+    "desc": "Only the snow remembers.",
+    "scoreId": 1009,
+    "rId": 31009008,
+    "music": "/bgm/cbt03/musicbox/0077_story_requiem_for_nobody"
+  },
+  {
+    "id": 1010001,
+    "name": "When the Wind Rose in Mistwharf",
+    "desc": "An old tune on the wind, a new tale in Huaxu.",
+    "scoreId": 1010,
+    "rId": 31010001,
+    "music": "/bgm/1_1/musicbox/0135_login_theme"
+  },
+  {
+    "id": 1010002,
+    "name": "Beyond Mountains and Seas",
+    "desc": "A new land. A new legend.",
+    "scoreId": 1010,
+    "rId": 31010002,
+    "music": "/bgm/1_1/musicbox/0096_cs_dongguo_opening"
+  },
+  {
+    "id": 1010003,
+    "name": "Mistwharf",
+    "desc": "Where incense drifts, there lies the wind.",
+    "scoreId": 1010,
+    "rId": 31010003,
+    "music": "/bgm/1_1/musicbox/0104_scene_yanjindu"
+  },
+  {
+    "id": 1010004,
+    "name": "Starwharf",
+    "desc": "Quiet dreams, cradled in a boat beneath a river of stars.",
+    "scoreId": 1010,
+    "rId": 31010004,
+    "music": "/bgm/1_1/musicbox/0099_scene_port_01"
+  },
+  {
+    "id": 1010005,
+    "name": "Ripples at Dusk",
+    "desc": "At dusk, oars whisper across the water, and the traveller finds the way home.",
+    "scoreId": 1010,
+    "rId": 31010005,
+    "music": "/bgm/1_1/musicbox/0100_scene_port_02_round"
+  },
+  {
+    "id": 1010006,
+    "name": "An Audience with the Gods",
+    "desc": "The Way of Heaven endures, unbroken across the ages.",
+    "scoreId": 1010,
+    "rId": 31010006,
+    "music": "/bgm/1_1/musicbox/0102_story_dafengjiuzhang"
+  },
+  {
+    "id": 1010007,
+    "name": "Serene Joy",
+    "desc": "Pearls gleam and brocade shimmers; all is calm, all is well.",
+    "scoreId": 1010,
+    "rId": 31010007,
+    "music": "/bgm/1_1/musicbox/0105_scene_bainianchun"
+  },
+  {
+    "id": 1010008,
+    "name": "Tidesong Cavern",
+    "desc": "Deep within the silence of stone, only the sea's pulse can be heard.",
+    "scoreId": 1010,
+    "rId": 31010008,
+    "music": "/bgm/1_1/musicbox/0106_scene_cave_near_sea"
+  },
+  {
+    "id": 1010009,
+    "name": "Under the Apricot Petals",
+    "desc": "Apricot saplings once in the yard; now a grove in their place.",
+    "scoreId": 1010,
+    "rId": 31010009,
+    "music": "/bgm/1_1/musicbox/0110_story_fushu_theme"
+  },
+  {
+    "id": 1010010,
+    "name": "A Century Between Dreams",
+    "desc": "An old dream lingers; upon waking, a century had passed.",
+    "scoreId": 1010,
+    "rId": 31010010,
+    "music": "/bgm/1_1/musicbox/0113_scene_fushu_hospital"
+  },
+  {
+    "id": 1010011,
+    "name": "Gaps in Heaven's Net",
+    "desc": "Where Heaven's net runs thin, the cunning slip through.",
+    "scoreId": 1010,
+    "rId": 31010011,
+    "music": "/bgm/1_1/musicbox/0108_scene_black_market"
+  },
+  {
+    "id": 1010012,
+    "name": "Ashes of Doom",
+    "desc": "When doom's ashes finally settle, dusk falls on mountain and river.",
+    "scoreId": 1010,
+    "rId": 31010012,
+    "music": "/bgm/1_1/musicbox/0107_story_zhuyinzhizai_full"
+  },
+  {
+    "id": 1010013,
+    "name": "Gritblight Expanse",
+    "desc": "In the heart of the Gritblight, the sable pack prowls and howls.",
+    "scoreId": 1010,
+    "rId": 31010013,
+    "music": "/bgm/1_1/musicbox/0111_scene_wuhuizhidi"
+  },
+  {
+    "id": 1010014,
+    "name": "Twilight over Yu Abysm",
+    "desc": "The dead are gone; remembrance endures.",
+    "scoreId": 1010,
+    "rId": 31010014,
+    "music": "/bgm/1_1/musicbox/0114_scene_island_in_lake"
+  },
+  {
+    "id": 1010015,
+    "name": "Along the River of Forgetting",
+    "desc": "A long, arduous journey upstream.",
+    "scoreId": 1010,
+    "rId": 31010015,
+    "music": "/bgm/1_1/musicbox/0115_scene_wangchuan"
+  },
+  {
+    "id": 1010016,
+    "name": "Crowsong Hollow",
+    "desc": "War drums waned; warriors fell; arrows spent; bowstrings snapped.",
+    "scoreId": 1010,
+    "rId": 31010016,
+    "music": "/bgm/1_1/musicbox/0117_scene_tingyayuan"
+  },
+  {
+    "id": 1010017,
+    "name": "Myriad-Snare Hunting Array",
+    "desc": "Within the Myriad-Snare, none may escape.",
+    "scoreId": 1010,
+    "rId": 31010017,
+    "music": "/bgm/1_1/musicbox/0097_scene_ancient_battlefield"
+  },
+  {
+    "id": 1010018,
+    "name": "Mechapuppet Awakening",
+    "desc": "The mechapuppets awaken; with them, a forbidden art returns.",
+    "scoreId": 1010,
+    "rId": 31010018,
+    "music": "/bgm/1_1/musicbox/0123_boss_juque"
+  },
+  {
+    "id": 1010019,
+    "name": "Heart in Cinders",
+    "desc": "My heart is heavy with sorrow — where, then, is my way home?",
+    "scoreId": 1010,
+    "rId": 31010019,
+    "music": "/bgm/1_1/musicbox/0129_boss_yuming"
+  },
+  {
+    "id": 1010020,
+    "name": "Heaven Brought Down",
+    "desc": "Zhuyin weeps blood; sacrilege rises, and heaven is toppled.",
+    "scoreId": 1010,
+    "rId": 31010020,
+    "music": "/bgm/1_1/musicbox/0121_boss_heilong"
+  },
+  {
+    "id": 1011001,
+    "name": "A Nightingale in Wonderland Ⅰ",
+    "desc": "Why is that snow-white down so fragile, so easily torn by a storm?",
+    "scoreId": 1011,
+    "rId": 31011001,
+    "music": "/bgm/1_0/musicbox/0093_feina_activity_level_01"
+  },
+  {
+    "id": 1011002,
+    "name": "A Nightingale in Wonderland Ⅱ",
+    "desc": "At last she understood: wings are soft, so they may shelter others in warmth.",
+    "scoreId": 1011,
+    "rId": 31011002,
+    "music": "/bgm/1_0/musicbox/0094_feina_activity_level_02"
+  },
+  {
+    "id": 1011003,
+    "name": "When Dreams Gild the Night",
+    "desc": "A ball to greet the midsummer night.",
+    "scoreId": 1011,
+    "rId": 31011003,
+    "music": "/bgm/1_0/musicbox/0088_saiqi_skin"
+  },
+  {
+    "id": 1011004,
+    "name": "Into the Sandrealm",
+    "desc": "A seam between dream and waking.",
+    "scoreId": 1011,
+    "rId": 31011004,
+    "music": "/bgm/cbt02/musicbox/0046_level_xunlianchang"
+  },
+  {
+    "id": 1011005,
+    "name": "Faster and Faster!",
+    "desc": "The prey has nowhere left to run.",
+    "scoreId": 1011,
+    "rId": 31011005,
+    "music": "/bgm/cbt02/musicbox/0038_system_parkur"
+  },
+  {
+    "id": 1011006,
+    "name": "Arrow on String",
+    "desc": "Dead centre.",
+    "scoreId": 1011,
+    "rId": 31011006,
+    "music": "/bgm/1_0/musicbox/0090_system_shooting"
+  },
+  {
+    "id": 1011007,
+    "name": "Leisurely Angler",
+    "desc": "Fishing needs no purpose beyond itself.",
+    "scoreId": 1011,
+    "rId": 31011007,
+    "music": "/bgm/cbt03/musicbox/0082_system_fishing"
+  },
+  {
+    "id": 1012001,
+    "name": "Binary Fate",
+    "desc": "May this song restore balance to heaven and earth.",
+    "scoreId": 1012,
+    "rId": 31012001,
+    "music": "/bgm/1_3/musicbox/0148_theme_song_hyb"
+  },
+  {
+    "id": 1013001,
+    "name": "Dust on the Capital Road",
+    "desc": "Dust rises along the capital road, veiling gilded reins and ornate carriages.",
+    "scoreId": 1013,
+    "rId": 31013001,
+    "music": "/bgm/1_3/musicbox/0158_scene_yuanjiao"
+  },
+  {
+    "id": 1013002,
+    "name": "Splendour of Haojing",
+    "desc": "A city of a thousand years, still alive with the restless bustle of the world.",
+    "scoreId": 1013,
+    "rId": 31013002,
+    "music": "/bgm/1_3/musicbox/0155_scene_haojing"
+  },
+  {
+    "id": 1013003,
+    "name": "Jiaolan Village: Echoes of the Past – Xiao",
+    "desc": "The fragrance lingers; the xiao weeps low.",
+    "scoreId": 1013,
+    "rId": 31013003,
+    "music": "/bgm/1_3/musicbox/0156_scene_jiaolancun"
+  },
+  {
+    "id": 1013004,
+    "name": "Jiaolan Village: Echoes of the Past – Piano",
+    "desc": "The fragrance lingers; the qin speaks of years gone by.",
+    "scoreId": 1013,
+    "rId": 31013004,
+    "music": "/bgm/1_3/musicbox/0152_story_jiaolancun_piano"
+  },
+  {
+    "id": 1013005,
+    "name": "Beyond the Mountains",
+    "desc": "Beyond every peak lies a higher sky.",
+    "scoreId": 1013,
+    "rId": 31013005,
+    "music": "/bgm/1_3/musicbox/0157_scene_shanwaishan"
+  },
+  {
+    "id": 1013006,
+    "name": "The Balance of Black and White",
+    "desc": "Heaven and earth invert; all things return to the void.",
+    "scoreId": 1013,
+    "rId": 31013006,
+    "music": "/bgm/1_3/musicbox/0147_boss_two_dragon"
+  },
+  {
+    "id": 1013007,
+    "name": "Fate Without Cause",
+    "desc": "Fate blooms in an instant, owing nothing to cause.",
+    "scoreId": 1013,
+    "rId": 31013007,
+    "music": "/bgm/1_3/musicbox/0160_scene_wuyousheng_village"
+  },
+  {
+    "id": 1013008,
+    "name": "Jishu's Wonders",
+    "desc": "In every ingenious working, wonder quietly unfolds.",
+    "scoreId": 1013,
+    "rId": 31013008,
+    "music": "/bgm/1_3/musicbox/0150_scene_yanyingong"
+  },
+  {
+    "id": 1013009,
+    "name": "The Black Covenant",
+    "desc": "Upon the altar, the lost soul is called home.",
+    "scoreId": 1013,
+    "rId": 31013009,
+    "music": "/bgm/1_1/musicbox/0120_scene_zhuyinjitan"
+  },
+  {
+    "id": 1013010,
+    "name": "Where Light Cannot Reach",
+    "desc": "What cannot be forgotten lies still, untouched by time.",
+    "scoreId": 1013,
+    "rId": 31013010,
+    "music": "/bgm/1_3/musicbox/0142_story_zhiliu_memory"
+  },
+  {
+    "id": 1013011,
+    "name": "Lotus Born of Flame",
+    "desc": "From the ashes, a lotus blooms.",
+    "scoreId": 1013,
+    "rId": 31013011,
+    "music": "/bgm/1_3/musicbox/0143_story_zhiliu_kill_god"
+  }
+]
