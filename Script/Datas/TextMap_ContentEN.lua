@@ -35122,10 +35122,10 @@ Acquired through special means. Can be used as smelting material for Calamity We
           ContentEN = "Exiled Fangs: Grip"
         },
         RESOURCE_NAME_12045 = {
-          ContentEN = "Exiled Fangs: Left Blade"
+          ContentEN = "Exiled Fangs: Blade (Left)"
         },
         RESOURCE_NAME_12046 = {
-          ContentEN = "Exiled Fangs: Right Blade"
+          ContentEN = "Exiled Fangs: Blade (Right)"
         },
         RESOURCE_NAME_12047 = {
           ContentEN = "Guixu Ratchet: Bolt"
@@ -69560,7 +69560,7 @@ If you or your family have a history of epilepsy or have experienced similar sym
           ContentEN = "Secret Letter: Covenanter's Wings – Eternity"
         },
         UI_Name_Walnut_151755 = {
-          ContentEN = "Secret Letter: Feathered Serpent's Berserker"
+          ContentEN = "Secret Letter: Feathered Serpent's Resolve"
         },
         UI_Name_Walnut_151756 = {
           ContentEN = "Secret Letter: Feathered Serpent's Eternity"

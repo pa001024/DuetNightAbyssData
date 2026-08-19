@@ -55912,7 +55912,7 @@ Allez voir ce qui se passe.]]
           ContentFR = "Score maximal"
         },
         UI_BackpackPuzzle_RewardBtn = {
-          ContentFR = "Don de Maître Qiu"
+          ContentFR = "Récompenses"
         },
         UI_BackpackPuzzle_StartGame = {ContentFR = "Commencer"},
         UI_BackpackPuzzle_Target1 = {

@@ -383,12 +383,22 @@ end
 
 function M:_SetUpChatMsgListTimerCallback(MsgList, Context)
   if not self:_IsSetUpChatMsgListContextCurrent(Context) then
-    self:_Stop_SetUpChatMsgListTimer()
+    self:_Stop_SetUpChatMsgListTimer(Context and Context.Generation)
     return
   end
-  if self._SetUpChatMsgListIndex == #MsgList then
-    self:_Stop_SetUpChatMsgListTimer()
-    if 0 == #MsgList then
+  local Index = Context.Index or 0
+  if Index >= #MsgList then
+    local Generation = Context and Context.Generation
+    local Reconcile = self:_ReconcileChatListBuild(Context)
+    if not Reconcile then
+      self:_Stop_SetUpChatMsgListTimer(Generation)
+      return
+    end
+    if not self:_Stop_SetUpChatMsgListTimer(Generation) then
+      return
+    end
+    self:_ScheduleChatListBuildFinalAutoScroll(Context)
+    if 0 == Reconcile.FinalDisplayMessageCount then
       self.Text_DialogEmptyText:SetText(self:_GetCurrentDialogEmptyText())
       self.WS_Dialoglist:SetActiveWidgetIndex(1)
     end
@@ -397,8 +407,8 @@ function M:_SetUpChatMsgListTimerCallback(MsgList, Context)
     end
     return
   end
-  self._SetUpChatMsgListIndex = self._SetUpChatMsgListIndex + 1
-  self:_AddNewMsgToListView(MsgList[self._SetUpChatMsgListIndex])
+  Context.Index = Index + 1
+  self:_AddNewMsgToListView(MsgList[Context.Index], true)
   self.bDialogListRefreshed = false
 end
 

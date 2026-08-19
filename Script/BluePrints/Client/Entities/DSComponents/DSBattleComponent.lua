@@ -19,6 +19,13 @@ function Component:HandleAvatarBattleInfo(Callback, AvatarBattleInfos)
     self.AvatarInfos[AvatarEidStr] = Info
     self:DungeonObjectAddPlayer(AvatarEid)
     self:AddMoreInfoForDungeonObject(Info)
+    local DungeonInfo = DataMgr.Dungeon[GameMode.DungeonId]
+    local TicketLevel = Info.PlayerInfo and Info.PlayerInfo.IronSurvivalGameModeLevel
+    if TicketLevel and not GameMode.IronTicketGameModeLevel and DataMgr.IronSurvivalDungeon[GameMode.DungeonId] and DungeonInfo and DungeonInfo.DungeonType == "Defence" then
+      GameMode.IronTicketGameModeLevel = TicketLevel
+      GameMode:SetGameModeLevel(TicketLevel)
+      self.logger.info("Apply iron ticket level to Defence GameMode", GameMode.DungeonId, TicketLevel)
+    end
     if GameMode.AvatarInfos[AvatarEidStr] == nil then
       GameMode.AvatarInfos[AvatarEidStr] = Info
     end

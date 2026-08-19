@@ -381,6 +381,7 @@ return ReadOnly("RaidDungeon", {
   },
   [21514] = {
     BaseRaidPoint = 1500000,
+    DSEnable = true,
     DifficultyLevel = 4,
     DungeonId = 21514,
     FomulaId = 2,

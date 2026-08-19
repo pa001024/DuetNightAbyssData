@@ -7,7 +7,7 @@ end
 return ReadOnly("PreRaidRank", {
   [1] = {
     IsOnline = {
-      false,
+      true,
       false,
       false,
       false,

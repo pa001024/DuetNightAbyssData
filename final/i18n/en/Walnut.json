@@ -2072,13 +2072,13 @@
         "id": 12045,
         "type": "Resource",
         "count": 1,
-        "name": "Exiled Fangs: Left Blade"
+        "name": "Exiled Fangs: Blade (Left)"
       },
       {
         "id": 12046,
         "type": "Resource",
         "count": 1,
-        "name": "Exiled Fangs: Right Blade"
+        "name": "Exiled Fangs: Blade (Right)"
       },
       {
         "id": 211,
@@ -9841,7 +9841,7 @@
   },
   {
     "id": 151755,
-    "名称": "Secret Letter: Feathered Serpent's Berserker",
+    "名称": "Secret Letter: Feathered Serpent's Resolve",
     "获取途径": [
       "副本",
       "委托密函商店",

@@ -1591,7 +1591,7 @@ local Data = {
           ContentKR = "아군 유닛의 최대 HP가 #1 감소하며, 최대 정신력이 #2 상승한다."
         },
         Buff_Content_13222 = {
-          ContentKR = "아군 유닛의 공격이 #1 감소 시, 다중 사격이 #2 상승한다."
+          ContentKR = "아군 유닛의 공격이 #1 감소하고, 다중 사격이 #2 상승한다."
         },
         Buff_Content_14111 = {
           ContentKR = "아군 유닛이 크리티컬을 #1회 입힐 때마다 공격력이 #2 상승한다. 지속 시간 #3초, 최대 #4단계 중첩."
@@ -14806,7 +14806,7 @@ local Data = {
           ContentKR = "메인 퀘스트 '호경에 온 손님' 완료 후, 백년춘 달걀 루나에게서 구매하여 획득"
         },
         HomePianoAcc_1013008 = {
-          ContentKR = "메인 퀘스트 '천하의 위협' 완료 후, 백년춘 달걀 루나에게서 구매하여 획득"
+          ContentKR = "메인 퀘스트 '균천철위의 위협' 완료 후, 백년춘 달걀 루나에게서 구매하여 획득"
         },
         HomePianoAcc_1013009 = {
           ContentKR = "촉룡 제단을 탐색하여 획득"
@@ -15516,13 +15516,13 @@ local Data = {
           ContentKR = "'호경' 구역에 위치한 풍류생 발견하기"
         },
         HuaXu_Event_Des_102001211 = {
-          ContentKR = "퀘스트 '천하의 위협'에서 거궐 처치하기"
+          ContentKR = "퀘스트 '균천철위의 위협'에서 거궐 처치하기"
         },
         HuaXu_Event_Des_102001212 = {
-          ContentKR = "퀘스트 '천하의 위협'에서 검은 폐안과 하얀 폐안 처치하기"
+          ContentKR = "퀘스트 '균천철위의 위협'에서 검은 폐안과 하얀 폐안 처치하기"
         },
         HuaXu_Event_Des_102001213 = {
-          ContentKR = "퀘스트 '천하의 위협'에서 욱명에게 승리하기"
+          ContentKR = "퀘스트 '균천철위의 위협'에서 욱명에게 승리하기"
         },
         HuaXu_Event_Des_102001214 = {
           ContentKR = "퀘스트 'Binary Fate'에서 두 용 처치하기"
@@ -41374,7 +41374,7 @@ local Data = {
           ContentKR = "종식·들불"
         },
         SKILL_10399_08_DESC = {
-          ContentKR = "[파멸의 불꽃] 효과 상태 시, 자신의 근접 동조 무기의 크리티컬 확률, 크리티컬 대미지, 발동 확률이 상승한다. 상승 수치: <H>제삿불 종식</> 대응 속성의 <H>#1</>."
+          ContentKR = "[파멸의 불꽃] 효과 상태 시, 자신의 근접 동조 무기의 크리티컬 확률, 크리티컬 대미지, 발동 확률이 상승한다. 상승 수치: <H>쇠락한 권세</> 대응 속성의 <H>#1</>."
         },
         SKILL_10399_08_Name = {
           ContentKR = "제삿불·애도"
@@ -46953,7 +46953,7 @@ local Data = {
           ContentKR = "<H>메모 노트</>를 완료해도 개인 활약도를 올릴 수 있습니다. 개인 활약도를 올리고 풍성한 보상을 획득하세요."
         },
         UIGuide_HardBoss_01 = {
-          ContentKR = "메인 스토리의 일부 보스를 처치하면 대응하는 <H>악몽의 잔향</> 도전 입구가 해제돼."
+          ContentKR = "메인 스토리의 일부 보스를 처치하면 대응하는 <H>악몽의 잔향</> 도전 입구가 해제됩니다."
         },
         UIGuide_HardBoss_02 = {
           ContentKR = "악몽의 잔향 도전의 보스는 더욱 강력합니다. <H>매주</> 악몽의 잔향 도전에서 보상을 <H>5회</> 획득할 수 있습니다."
@@ -57994,7 +57994,7 @@ local Data = {
           ContentKR = "서프라이즈 × 깜짝"
         },
         UI_CHAR_SUBTITLE_3104 = {
-          ContentKR = "마음을 태우는 칼날"
+          ContentKR = "불타는 심장의 칼날"
         },
         UI_CHAR_SUBTITLE_3201 = {
           ContentKR = "지옥불의 감옥"
@@ -69745,7 +69745,7 @@ local Data = {
           ContentKR = "심판 받기"
         },
         UI_Npc_Name_Tumama = {
-          ContentKR = "「세계」 엄마 토끼"
+          ContentKR = "「심판」 엄마 토끼"
         },
         UI_Npc_Name_Tuosi = {ContentKR = "환상"},
         UI_Npc_Name_UnlockChest = {
@@ -70018,7 +70018,7 @@ local Data = {
           ContentKR = "기기 과부하로 발열이나 지연 현상이 발생할 수 있습니다. 활성화하시겠습니까?"
         },
         UI_OPTION_AutoApprove = {
-          ContentKR = "전시 동작 신청 자동 수락"
+          ContentKR = "신청 자동 수락"
         },
         UI_OPTION_AutoBackground = {
           ContentKR = "백그라운드 자동 다운로드"
@@ -72088,7 +72088,7 @@ local Data = {
           ContentKR = "해당 유저는 1대1 채팅을 활성화하지 않았습니다."
         },
         UI_Prompt_QuestTrans = {
-          ContentKR = "(으)로 이동하시겠습니까?"
+          ContentKR = "<H>%s</>(으)로 이동하시겠습니까?"
         },
         UI_Prop_ExploreItem = {
           ContentKR = "탐색 아이템"
@@ -73628,7 +73628,7 @@ local Data = {
           ContentKR = "선택 확인"
         },
         UI_SelectLayoutPopup_Content01 = {
-          ContentKR = "스파이럴 점프와 점프의 조합. 점프 버튼을 <highlight>위로 슬라이드</>하여 스파이럴 점프를 발동할 수 있습니다."
+          ContentKR = "스파이럴 점프와 점프 버튼의 조합. 점프 버튼을 <highlight>위로 슬라이드</>하여 스파이럴 점프를 발동할 수 있습니다."
         },
         UI_SelectLayoutPopup_Content02 = {
           ContentKR = "스파이럴 점프를 별도의 버튼으로 설정합니다. <highlight>터치</> 시 스파이럴 점프를 발동할 수 있습니다."
@@ -73641,9 +73641,7 @@ local Data = {
         },
         UI_SelectLayoutPopup_Tittle01 = {ContentKR = "플랜 1"},
         UI_SelectLayoutPopup_Tittle02 = {ContentKR = "플랜 2"},
-        UI_SelectLayoutPopup_Tittle03 = {
-          ContentKR = "레이아웃 플랜 선택"
-        },
+        UI_SelectLayoutPopup_Tittle03 = {ContentKR = "플랜 3"},
         UI_SelectLayoutPopup_Tittle04 = {
           ContentKR = "레이아웃 플랜 선택"
         },

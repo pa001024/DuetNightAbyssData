@@ -8,6 +8,7 @@ local GuildModel = require("BluePrints.UI.WBP.Guild.Model.GuildModel")
 local ChatModel = ChatController:GetModel()
 local FriendModel = FriendController:GetModel()
 local OffSetOfScroll = 75
+local ChatListBuildFinalAutoScrollTimerKey = "ChatListBuildFinalAutoScroll"
 local M = Class("BluePrints.UI.BP_UIState_C")
 
 function M:Construct()
@@ -236,27 +237,56 @@ function M:BtnChangeChannelOnPressed()
   ChatController:OpenChatChannelUI(self, self.CurrChannel)
 end
 
-function M:_Stop_SetUpChatMsgListTimer()
-  if self:IsExistTimer(self._SetUpChatMsgListTimer) then
-    self:RemoveTimer(self._SetUpChatMsgListTimer)
+function M:_ScheduleChatListBuildFinalAutoScroll(Context)
+  if not Context or not Context.bNeedAutoScrollAfterReconcile then
+    return
+  end
+  self:AddTimer(0.01, self._ApplyChatListBuildFinalAutoScroll, false, 0, ChatListBuildFinalAutoScrollTimerKey, true, Context.Generation, Context.Channel)
+end
+
+function M:_ApplyChatListBuildFinalAutoScroll(Generation, Channel)
+  if Generation ~= self._ChatListBuildGeneration or Channel ~= self.CurrChannel or Channel ~= ChatModel:GetCurrentChannel() then
+    return
+  end
+  self:_AutoScrollToEnd()
+end
+
+function M:_Stop_SetUpChatMsgListTimer(RequestedGeneration)
+  local ActiveGeneration = self._ChatListBuildActiveGeneration
+  if nil ~= RequestedGeneration and RequestedGeneration ~= ActiveGeneration then
+    return false
+  end
+  if self:IsExistTimer(ChatListBuildFinalAutoScrollTimerKey) then
+    self:RemoveTimer(ChatListBuildFinalAutoScrollTimerKey)
+  end
+  local TimerKey = self._SetUpChatMsgListTimer
+  if self:IsExistTimer(TimerKey) then
+    self:RemoveTimer(TimerKey)
+  end
+  if self.SB_Dialog then
     self.SB_Dialog:DisableDrag(false)
     self.SB_Dialog:SetRenderOpacity(1)
   end
+  self._SetUpChatMsgListTimer = nil
+  self._ChatListBuildActiveGeneration = nil
+  self._ChatListBuildActiveContext = nil
+  return true
 end
 
 function M:_CreateSetUpChatMsgListContext()
   return {
     Channel = self.CurrChannel,
     SubTab = ChatModel:GetCurrentSubTab(),
-    FriendUid = ChatModel:GetCurrentFriendUid()
+    FriendUid = ChatModel:GetCurrentFriendUid(),
+    Index = 0
   }
 end
 
 function M:_IsSetUpChatMsgListContextCurrent(Context)
-  if not Context then
-    return true
+  if not Context or Context.Generation == nil then
+    return false
   end
-  return Context.Channel == self.CurrChannel and Context.SubTab == ChatModel:GetCurrentSubTab() and Context.FriendUid == ChatModel:GetCurrentFriendUid()
+  return Context.Generation == self._ChatListBuildActiveGeneration and Context == self._ChatListBuildActiveContext and Context.Channel == self.CurrChannel and Context.Channel == ChatModel:GetCurrentChannel() and Context.SubTab == ChatModel:GetCurrentSubTab() and Context.FriendUid == ChatModel:GetCurrentFriendUid()
 end
 
 function M:_GetDisplayMsgMax()
@@ -295,6 +325,62 @@ function M:_PrepareMsgListForDisplay(MsgList)
   return Sliced
 end
 
+function M:_GetChatListBuildFinalSnapshot(Context)
+  local MessageList = ChatModel._MessageDict and ChatModel._MessageDict[Context.Channel]
+  local RawMsgList = MessageList and MessageList.ViewList or {}
+  local PreparedMsgList = self:_PrepareMsgListForDisplay(RawMsgList) or {}
+  return table.slice(PreparedMsgList, 1, #PreparedMsgList)
+end
+
+function M:_ResetChatListNavigationState(MsgList)
+  if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
+    return
+  end
+  self._ChatItemList = {}
+  self.CurrSelectChatItem = nil
+  for Index, MsgWrap in ipairs(MsgList or {}) do
+    MsgWrap.Index = Index
+  end
+end
+
+function M:_IsChatListPrefixOf(MsgList)
+  local CurrentCount = self.List_Dialog:GetNumItems()
+  if CurrentCount > #MsgList then
+    return false
+  end
+  for Index = 1, CurrentCount do
+    local Content = self.List_Dialog:GetItemAt(Index - 1)
+    if not Content or Content.Data ~= MsgList[Index] then
+      return false
+    end
+  end
+  return true
+end
+
+function M:_ReconcileChatListBuild(Context)
+  if not self:_IsSetUpChatMsgListContextCurrent(Context) then
+    return nil
+  end
+  local RemovedMsgs = ChatModel:GetChannelRemovedMsgs(Context.Channel) or {}
+  local FinalMsgList = self:_GetChatListBuildFinalSnapshot(Context)
+  local FallbackFullAlign = #RemovedMsgs > 0 or not self:_IsChatListPrefixOf(FinalMsgList)
+  if FallbackFullAlign then
+    self.List_Dialog:ClearListItems()
+    self._DialogItemCounter = 0
+    self._TotalHeight = 0
+    self:_ResetChatListNavigationState(FinalMsgList)
+    self:_AddMsgWrapsToListView(FinalMsgList, true)
+  else
+    local CurrentCount = self.List_Dialog:GetNumItems()
+    if CurrentCount < #FinalMsgList then
+      self:_AddMsgWrapsToListView(table.slice(FinalMsgList, CurrentCount + 1, #FinalMsgList), true)
+    end
+  end
+  return {
+    FinalDisplayMessageCount = #FinalMsgList
+  }
+end
+
 function M:_RemoveOldestDisplayMsgItem()
   local Item = self.List_Dialog:GetItemAt(0)
   if not Item then
@@ -322,21 +408,35 @@ end
 function M:_SetUpChatMsgList()
   self:_RefreshCachedDisplayMsgMax()
   self:_Stop_SetUpChatMsgListTimer()
+  self._ChatListBuildGeneration = (self._ChatListBuildGeneration or 0) + 1
+  local Generation = self._ChatListBuildGeneration
+  self._ChatListBuildActiveGeneration = Generation
   self.bDialogListRefreshed = false
   self._TotalHeight = 0
   self._DialogItemCounter = 0
   self.List_Dialog:ClearListItems()
   self.WS_Dialoglist:SetActiveWidgetIndex(0)
-  local MsgList = self:_PrepareMsgListForDisplay(ChatModel:GetCurrentMsgViewList())
-  self._SetUpChatMsgListIndex = 0
+  local RawMsgList = ChatModel:GetCurrentMsgViewList() or {}
+  ChatModel:GetChannelRemovedMsgs(self.CurrChannel)
+  local PreparedMsgList = self:_PrepareMsgListForDisplay(RawMsgList) or {}
+  local MsgList = table.slice(PreparedMsgList, 1, #PreparedMsgList)
   self.SB_Dialog:ScrollToStart()
   self.SB_Dialog:DisableDrag(true)
   self.SB_Dialog:SetRenderOpacity(0)
   local Context = self:_CreateSetUpChatMsgListContext()
+  Context.Generation = Generation
+  self._ChatListBuildActiveContext = Context
+  self:_ResetChatListNavigationState(MsgList)
   local _, TimerKey = self:AddTimer(0.01, self._SetUpChatMsgListTimerCallback, true, 0, nil, true, MsgList, Context)
   self._SetUpChatMsgListTimer = TimerKey
-  if CommonUtils.GetDeviceTypeByPlatformName(self) ~= "Mobile" then
-    self._ChatItemList = {}
+  if not self:IsExistTimer(TimerKey) then
+    local Reconcile = self:_ReconcileChatListBuild(Context)
+    if Reconcile and 0 == Reconcile.FinalDisplayMessageCount then
+      self.Text_DialogEmptyText:SetText(self:_GetCurrentDialogEmptyText())
+      self.WS_Dialoglist:SetActiveWidgetIndex(1)
+    end
+    self:_Stop_SetUpChatMsgListTimer(Generation)
+    return
   end
 end
 
@@ -938,7 +1038,7 @@ function M:Close()
   M.Super.Close(self)
 end
 
-function M:_AddMsgWrapsToListView(MsgWraps)
+function M:_AddMsgWrapsToListView(MsgWraps, bFromChatListBuild)
   if not MsgWraps then
     return
   end
@@ -949,6 +1049,10 @@ function M:_AddMsgWrapsToListView(MsgWraps)
     end
   end
   if 0 == #Wraps then
+    return
+  end
+  local Context = self._ChatListBuildActiveContext
+  if not bFromChatListBuild and self:_IsSetUpChatMsgListContextCurrent(Context) then
     return
   end
   self:_MakeRoomForDisplayMsgCount(#Wraps)
@@ -963,8 +1067,8 @@ function M:_AddMsgWrapsToListView(MsgWraps)
   end
 end
 
-function M:_AddNewMsgToListView(MsgWrap)
-  self:_AddMsgWrapsToListView({MsgWrap})
+function M:_AddNewMsgToListView(MsgWrap, bFromChatListBuild)
+  self:_AddMsgWrapsToListView({MsgWrap}, bFromChatListBuild)
 end
 
 function M:OnPlayerListUISelected(Content, bSkipInputAreaState)
@@ -1027,13 +1131,19 @@ function M:HandleChatMsgRecv(TimeWrap, MsgWrap)
     return
   end
   local NewBtnVisible = self.Group_NewMessage:IsVisible()
+  local BuildContext = self._ChatListBuildActiveContext
+  local bBuildActive = self:_IsSetUpChatMsgListContextCurrent(BuildContext)
   AudioManager(self):PlayUISound(self, "event:/ui/common/team_msg_pop", nil, nil)
   self:_AddNewMsgToListView(TimeWrap)
   self:_AddNewMsgToListView(MsgWrap)
   if not NewBtnVisible then
-    self:AddTimer(0.01, function()
-      self:_AutoScrollToEnd()
-    end)
+    if bBuildActive then
+      BuildContext.bNeedAutoScrollAfterReconcile = true
+    else
+      self:AddTimer(0.01, function()
+        self:_AutoScrollToEnd()
+      end)
+    end
   end
 end
 
@@ -1055,6 +1165,11 @@ function M:_AutoScrollToEnd()
 end
 
 function M:_ReduceOverflowMessage()
+  local Context = self._ChatListBuildActiveContext
+  if self:_IsSetUpChatMsgListContextCurrent(Context) then
+    Context.bDeferredOverflowRemoval = true
+    return
+  end
   local RemovedMsgs = ChatModel:GetChannelRemovedMsgs()
   for _ in ipairs(RemovedMsgs) do
     local Item = self.List_Dialog:GetItemAt(0)
@@ -1141,6 +1256,7 @@ function M:_HandleRefreshFriendInRegionChannel()
 end
 
 function M:Destruct()
+  self:_Stop_SetUpChatMsgListTimer()
   ChatController:UnRegisterEvent(self)
   FriendController:UnRegisterEvent(self)
   TeamController:UnRegisterEvent(self)
