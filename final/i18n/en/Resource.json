@@ -1117,8 +1117,8 @@
             -55302.52
           ],
           [
-            4181.7705,
-            -76947.875
+            4181.77,
+            -76947.88
           ],
           [
             -28387.24,
@@ -1149,7 +1149,7 @@
         "rewardId": 3017,
         "pos": [
           [
-            598.4079,
+            598.41,
             -54865.6
           ],
           [
@@ -2053,12 +2053,12 @@
             -8145.8623
           ],
           [
-            -4889.439,
-            10074.807
+            -4910.5835,
+            10076.304
           ],
           [
             10614.066,
-            -5541.3296
+            -5548.9346
           ],
           [
             6.792297,
@@ -2069,8 +2069,8 @@
             0.139648
           ],
           [
-            5212.7007,
-            8477.535
+            5042.7007,
+            8947.535
           ]
         ]
       },
@@ -2096,7 +2096,7 @@
           ],
           [
             13229.754,
-            -3721.313
+            -3731.18
           ],
           [
             -8.660204,
@@ -2263,6 +2263,10 @@
           [
             9757.137,
             4463.422
+          ],
+          [
+            19679.328,
+            11310.453
           ]
         ]
       },
@@ -2605,8 +2609,12 @@
             -1282.8984
           ],
           [
-            1469.3047,
-            15048.123
+            -23228.898,
+            11499.634
+          ],
+          [
+            5923.9688,
+            12845.674
           ],
           [
             37.21875,
@@ -3525,6 +3533,16 @@
         ]
       },
       {
+        "srId": 104106,
+        "rewardId": 3100,
+        "pos": [
+          [
+            -15743.213,
+            15375.578
+          ]
+        ]
+      },
+      {
         "srId": 104107,
         "rewardId": 3016,
         "pos": [
@@ -4109,6 +4127,16 @@
         ]
       },
       {
+        "srId": 104503,
+        "rewardId": 3100,
+        "pos": [
+          [
+            -649.99225,
+            0.004089
+          ]
+        ]
+      },
+      {
         "srId": 104504,
         "rewardId": 3015,
         "pos": [
@@ -4145,8 +4173,8 @@
             -55302.52
           ],
           [
-            4181.7705,
-            -76947.875
+            4181.77,
+            -76947.88
           ],
           [
             -28387.24,
@@ -4177,12 +4205,22 @@
         "rewardId": 3017,
         "pos": [
           [
-            598.4079,
+            598.41,
             -54865.6
           ],
           [
             3741.6,
             -85252.99
+          ]
+        ]
+      },
+      {
+        "srId": 104504,
+        "rewardId": 3100,
+        "pos": [
+          [
+            8575.996,
+            -17277.473
           ]
         ]
       },
@@ -4243,6 +4281,16 @@
           [
             72202.16,
             -70497.8
+          ]
+        ]
+      },
+      {
+        "srId": 104505,
+        "rewardId": 3100,
+        "pos": [
+          [
+            26826.873,
+            20064.148
           ]
         ]
       },
@@ -4594,6 +4642,10 @@
         "srId": 106001,
         "rewardId": 3100,
         "pos": [
+          [
+            2688.12,
+            -2333.67
+          ],
           [
             -7400,
             6260
@@ -8236,8 +8288,8 @@
         "srId": 100101,
         "pos": [
           [
-            50,
-            -80
+            5451,
+            6828
           ]
         ]
       }
@@ -15526,7 +15578,18 @@
     "icon": "T_Read_03",
     "rarity": 3,
     "desc": "A report alarming enough to give officials across the Empire a collective headache.",
-    "desc2": "The incident occurred at 09:00 yesterday morning. Princess Flodia departed from Platform Ⅰ aboard the Jackdaw, bound for the Imperial Capital, Dismania.\nOne of the perpetrators, an Icelake Phoxhunter whose identity has yet to be confirmed, had boarded the Gale at 08:00, also bound for Dismania. Roughly three hours after departure, the Jackdaw overtook the Gale. The Phoxhunter seized the opportunity to leap aboard the Jackdaw. Taking advantage of the relatively light guard presence on the roof, they entered the carriage from above, seized Princess Flodia, and jumped with her onto the Aurora Express, another train travelling on an adjacent track.\n\nThe Aurora Express was then hijacked by Katya of the Hazering, one of the leaders of the Forsakens, known by the codename \"Beast-King\". After the hijacking began, the 6th Legion stationed in the Cocytus Region immediately dispatched the airship Deepwinter in response. Katya used Princess Flodia as a hostage to prevent the airship from engaging. She later used the Aurora Express's main cannon to strike Deepwinter, and the blast also ignited a Heaventree in southern Cocytus.\nA violent confrontation then broke out between Katya and the Phoxhunter, presumably over what was to be done with Princess Flodia. Katya was later extracted by members of the Forsakens. The Phoxhunter's whereabouts remain unknown, and they are presumed to have been killed in the locomotive explosion.\n\nThe incident caused significant losses. The airship Deepwinter crashed, and the Aurora Express's locomotive was wrecked beyond repair.\nIn addition, dense airborne particulates released by the burning Heaventree will render the airspace between Cocytus and Dismania impassable for a considerable period. Should the Forsakens launch a large-scale uprising during this time, the Empire will have difficulty redeploying airships from across its territory to suppress the unrest.\nPrincess Flodia's current whereabouts are unknown. However, according to passengers aboard the Aurora Express who saw her during the incident, she does not appear to have been caught in the locomotive explosion.\n\nThe incident resulted in the deaths of more than a dozen civilians, with over forty others injured. The conductor, driver, and many train guards were killed in action while resisting the Forsakens. We honour these brave souls. The Empire will see the demons of the Forsakens pay blood for blood.\nAll glory to our Emperor!\n\nAttachment: Civilian Victims, 13 Total\nJeff Eysen — Icelake courier\nElena Horn — Icelake fur merchant\nCliff Miller — Dismania bank clerk\n..."
+    "desc2": "The incident occurred at 09:00 yesterday morning. Princess Flodia departed from Platform Ⅰ aboard the Jackdaw, bound for the Imperial Capital, Dismania.\nOne of the perpetrators, an Icelake Phoxhunter whose identity has yet to be confirmed, had boarded the Gale at 08:00, also bound for Dismania. Roughly three hours after departure, the Jackdaw overtook the Gale. The Phoxhunter seized the opportunity to leap aboard the Jackdaw. Taking advantage of the relatively light guard presence on the roof, they entered the carriage from above, seized Princess Flodia, and jumped with her onto the Aurora Express, another train travelling on an adjacent track.\n\nThe Aurora Express was then hijacked by Katya of the Hazering, one of the leaders of the Forsakens, known by the codename \"Beast-King\". After the hijacking began, the 6th Legion stationed in the Cocytus Region immediately dispatched the airship Deepwinter in response. Katya used Princess Flodia as a hostage to prevent the airship from engaging. She later used the Aurora Express's main cannon to strike Deepwinter, and the blast also ignited a Heaventree in southern Cocytus.\nA violent confrontation then broke out between Katya and the Phoxhunter, presumably over what was to be done with Princess Flodia. Katya was later extracted by members of the Forsakens. The Phoxhunter's whereabouts remain unknown, and they are presumed to have been killed in the locomotive explosion.\n\nThe incident caused significant losses. The airship Deepwinter crashed, and the Aurora Express's locomotive was wrecked beyond repair.\nIn addition, dense airborne particulates released by the burning Heaventree will render the airspace between Cocytus and Dismania impassable for a considerable period. Should the Forsakens launch a large-scale uprising during this time, the Empire will have difficulty redeploying airships from across its territory to suppress the unrest.\nPrincess Flodia's current whereabouts are unknown. However, according to passengers aboard the Aurora Express who saw her during the incident, she does not appear to have been caught in the locomotive explosion.\n\nThe incident resulted in the deaths of more than a dozen civilians, with over forty others injured. The conductor, driver, and many train guards were killed in action while resisting the Forsakens. We honour these brave souls. The Empire will see the demons of the Forsakens pay blood for blood.\nAll glory to our Emperor!\n\nAttachment: Civilian Victims, 13 Total\nJeff Eysen — Icelake courier\nElena Horn — Icelake fur merchant\nCliff Miller — Dismania bank clerk\n...",
+    "source": [
+      {
+        "srId": 101107,
+        "pos": [
+          [
+            1095.423,
+            -9882.082
+          ]
+        ]
+      }
+    ]
   },
   {
     "id": 3000001,
@@ -17111,7 +17174,7 @@
             31738.148
           ],
           [
-            19277.344,
+            19185.074,
             33638.203
           ],
           [
@@ -19031,44 +19094,44 @@
         "rewardId": 4010016,
         "pos": [
           [
-            46798.605,
-            -6421.5127
-          ],
-          [
-            46770.895,
-            -5520.551
-          ],
-          [
-            46156.723,
-            -8795.502
-          ],
-          [
-            46085.47,
-            -8049.509
-          ],
-          [
-            46453.48,
-            -7308.18
-          ],
-          [
-            49536.062,
-            -8686.675
+            49722.203,
+            -6500.5713
           ],
           [
             50724.867,
             -7722.8296
           ],
           [
-            49722.203,
-            -6500.5713
+            49536.062,
+            -8686.675
           ],
           [
-            47766.645,
-            -8968.144
+            46453.48,
+            -7308.18
+          ],
+          [
+            46085.47,
+            -8049.509
+          ],
+          [
+            46156.723,
+            -8795.502
+          ],
+          [
+            46770.895,
+            -5520.551
+          ],
+          [
+            46798.605,
+            -6421.5127
           ],
           [
             47175.617,
             -5213.061
+          ],
+          [
+            47766.645,
+            -8968.144
           ]
         ]
       },
@@ -19545,124 +19608,124 @@
         "rewardId": 4010019,
         "pos": [
           [
-            27752.846,
-            13032.052
-          ],
-          [
-            26587.95,
-            13128.349
-          ],
-          [
-            27508.4,
-            13595.029
-          ],
-          [
-            31341.87,
-            8504.646
-          ],
-          [
-            30115.822,
-            8442.784
-          ],
-          [
-            28078.59,
-            29382.861
-          ],
-          [
-            26204.09,
-            9437.688
-          ],
-          [
-            26687.29,
-            28057.236
-          ],
-          [
-            29851.877,
-            28454.75
-          ],
-          [
-            25068.982,
-            34451.824
-          ],
-          [
-            34197.973,
-            21095.086
-          ],
-          [
-            33104.37,
-            20380.13
-          ],
-          [
-            32322.69,
-            24118.475
-          ],
-          [
-            33770.535,
-            20526.727
-          ],
-          [
-            31733.953,
-            22518.959
-          ],
-          [
-            31316.68,
-            18099.424
-          ],
-          [
-            30526.059,
-            18008.225
-          ],
-          [
-            31062.326,
-            18842.018
-          ],
-          [
-            32948.2,
-            18556.889
-          ],
-          [
-            31845.918,
-            19148.232
-          ],
-          [
-            33617.54,
-            19599.146
-          ],
-          [
-            34781.316,
-            20081.473
+            31630.11,
+            16555.27
           ],
           [
             34194.703,
             17842.766
           ],
           [
-            31630.11,
-            16555.27
+            34781.316,
+            20081.473
           ],
           [
-            34991.168,
-            18930.133
+            33617.54,
+            19599.146
           ],
           [
-            40039.17,
-            11721.283
+            31845.918,
+            19148.232
           ],
           [
-            34214.48,
-            7749.73
+            32948.2,
+            18556.889
           ],
           [
-            27169.422,
-            9494.098
+            31062.326,
+            18842.018
+          ],
+          [
+            30526.059,
+            18008.225
+          ],
+          [
+            31316.68,
+            18099.424
+          ],
+          [
+            31733.953,
+            22518.959
+          ],
+          [
+            33770.535,
+            20526.727
+          ],
+          [
+            32322.69,
+            24118.475
+          ],
+          [
+            33104.37,
+            20380.13
+          ],
+          [
+            34197.973,
+            21095.086
+          ],
+          [
+            25068.982,
+            34451.824
+          ],
+          [
+            29851.877,
+            28454.75
+          ],
+          [
+            26687.29,
+            28057.236
+          ],
+          [
+            26204.09,
+            9437.688
+          ],
+          [
+            28078.59,
+            29382.861
+          ],
+          [
+            30115.822,
+            8442.784
+          ],
+          [
+            31341.87,
+            8504.646
+          ],
+          [
+            27508.4,
+            13595.029
+          ],
+          [
+            26587.95,
+            13128.349
+          ],
+          [
+            27752.846,
+            13032.052
+          ],
+          [
+            38425.79,
+            10337.842
           ],
           [
             38572.984,
             11459.185
           ],
           [
-            38425.79,
-            10337.842
+            27169.422,
+            9494.098
+          ],
+          [
+            34214.48,
+            7749.73
+          ],
+          [
+            40039.17,
+            11721.283
+          ],
+          [
+            34991.168,
+            18930.133
           ]
         ]
       }
@@ -23350,7 +23413,18 @@
     "icon": "T_Piano_Shop2",
     "rarity": 2,
     "desc": "A piece of sheet music — its notes trace a story like footprints in the sand.",
-    "desc2": "\"When your fingers brush the keys, the notes awaken — the wind's whispers, time's soft sigh, the hush of new shoots breaking soil. They give voice to ancient histories, to heroes' unspoken vows, to tales never etched on any page. They stand as testament to all that has ever been upon this land.\"\n \n— Lirico, the Wandering Bard"
+    "desc2": "\"When your fingers brush the keys, the notes awaken — the wind's whispers, time's soft sigh, the hush of new shoots breaking soil. They give voice to ancient histories, to heroes' unspoken vows, to tales never etched on any page. They stand as testament to all that has ever been upon this land.\"\n \n— Lirico, the Wandering Bard",
+    "source": [
+      {
+        "srId": 104503,
+        "pos": [
+          [
+            31928,
+            -86105
+          ]
+        ]
+      }
+    ]
   },
   {
     "id": 31013003,
@@ -23366,7 +23440,18 @@
     "icon": "T_Piano_Shop2",
     "rarity": 2,
     "desc": "A piece of sheet music — its notes trace a story like footprints in the sand.",
-    "desc2": "\"When your fingers brush the keys, the notes awaken — the wind's whispers, time's soft sigh, the hush of new shoots breaking soil. They give voice to ancient histories, to heroes' unspoken vows, to tales never etched on any page. They stand as testament to all that has ever been upon this land.\"\n \n— Lirico, the Wandering Bard"
+    "desc2": "\"When your fingers brush the keys, the notes awaken — the wind's whispers, time's soft sigh, the hush of new shoots breaking soil. They give voice to ancient histories, to heroes' unspoken vows, to tales never etched on any page. They stand as testament to all that has ever been upon this land.\"\n \n— Lirico, the Wandering Bard",
+    "source": [
+      {
+        "srId": 104504,
+        "pos": [
+          [
+            751,
+            -68286
+          ]
+        ]
+      }
+    ]
   },
   {
     "id": 31013005,
@@ -23374,7 +23459,18 @@
     "icon": "T_Piano_Shop2",
     "rarity": 2,
     "desc": "A piece of sheet music — its notes trace a story like footprints in the sand.",
-    "desc2": "\"When your fingers brush the keys, the notes awaken — the wind's whispers, time's soft sigh, the hush of new shoots breaking soil. They give voice to ancient histories, to heroes' unspoken vows, to tales never etched on any page. They stand as testament to all that has ever been upon this land.\"\n \n— Lirico, the Wandering Bard"
+    "desc2": "\"When your fingers brush the keys, the notes awaken — the wind's whispers, time's soft sigh, the hush of new shoots breaking soil. They give voice to ancient histories, to heroes' unspoken vows, to tales never etched on any page. They stand as testament to all that has ever been upon this land.\"\n \n— Lirico, the Wandering Bard",
+    "source": [
+      {
+        "srId": 105201,
+        "pos": [
+          [
+            7154,
+            -5703
+          ]
+        ]
+      }
+    ]
   },
   {
     "id": 31013006,

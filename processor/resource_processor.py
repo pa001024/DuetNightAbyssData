@@ -187,6 +187,7 @@ class ResourceProcessor(BaseProcessor):
 
             sources: Dict[int, List[Dict[str, Any]]] = {}
             self._collect_resource_sources_from_design_levels(sources)
+            self._merge_curated_source_overrides(sources)
 
             with self._shared_build_locks_lock:
                 cached = self._shared_resource_sources_cache.get(cache_key)
@@ -207,6 +208,103 @@ class ResourceProcessor(BaseProcessor):
                 lock = threading.Lock()
                 self._shared_build_locks[cache_key] = lock
             return lock
+
+    def _get_curated_overrides_path(self) -> Optional[Path]:
+        """解析人工坐标补充文件路径。
+
+        优先使用环境变量 DNA_RESOURCE_POS_OVERRIDES；否则使用
+        processor/resource_pos_overrides.json。文件不存在时返回 None。
+        """
+        env_path = os.getenv("DNA_RESOURCE_POS_OVERRIDES")
+        if env_path:
+            candidate = Path(env_path)
+            if candidate.is_file():
+                return candidate
+            print(
+                f"Warning: DNA_RESOURCE_POS_OVERRIDES={env_path} not found",
+                flush=True,
+            )
+            return None
+        default_path = Path(__file__).resolve().parent / "resource_pos_overrides.json"
+        if default_path.is_file():
+            return default_path
+        return None
+
+    def _load_curated_source_overrides(self) -> Dict[int, List[Dict[str, Any]]]:
+        """加载人工坐标补充数据。
+
+        数据文件格式（resource_id 为字符串键）：
+        {
+          "31013009": [
+            {"srId": 105701, "pos": [x, y]}
+          ]
+        }
+        pos 为 [x, y] 二元坐标，srId 必须是 SubRegion.json 中存在的子区域 ID。
+        """
+        overrides_path = self._get_curated_overrides_path()
+        if overrides_path is None:
+            return {}
+        try:
+            with open(overrides_path, "r", encoding="utf-8") as f:
+                raw = json.load(f)
+        except Exception as e:
+            print(
+                f"Warning: failed to load curated overrides {overrides_path}: {e}",
+                flush=True,
+            )
+            return {}
+        if not isinstance(raw, dict):
+            return {}
+
+        valid_sub_region_ids = set(self.sub_region_data.keys())
+        overrides: Dict[int, List[Dict[str, Any]]] = {}
+        for resource_id_str, entries in raw.items():
+            resource_id = self._to_int(resource_id_str)
+            if resource_id is None or resource_id not in self.resource_map:
+                continue
+            if not isinstance(entries, list):
+                continue
+            item_list: List[Dict[str, Any]] = []
+            for entry in entries:
+                if not isinstance(entry, dict):
+                    continue
+                sr_id = self._to_int(entry.get("srId"))
+                if sr_id is None or str(sr_id) not in valid_sub_region_ids:
+                    print(
+                        f"Warning: override {resource_id_str}: unknown srId {sr_id}",
+                        flush=True,
+                    )
+                    continue
+                pos = entry.get("pos")
+                if (
+                    not isinstance(pos, (list, tuple))
+                    or len(pos) < 2
+                    or not all(isinstance(v, (int, float)) for v in pos[:2])
+                ):
+                    continue
+                item_list.append(
+                    {"srId": sr_id, "pos": [float(pos[0]), float(pos[1])]}
+                )
+            if item_list:
+                overrides[resource_id] = item_list
+        return overrides
+
+    def _merge_curated_source_overrides(
+        self, sources: Dict[int, List[Dict[str, Any]]]
+    ) -> None:
+        """将人工坐标补充数据合并进资源来源索引。"""
+        overrides = self._load_curated_source_overrides()
+        if not overrides:
+            return
+        for resource_id, entries in overrides.items():
+            resource_sources = sources.setdefault(resource_id, [])
+            for entry in entries:
+                source_item = self._get_or_create_source_item(
+                    resource_sources, entry["srId"]
+                )
+                if not source_item:
+                    continue
+                self._append_source_pos(source_item, entry["pos"])
 
     def _shared_cache_key(self, suffix: str) -> Tuple[str, str, str]:
         """生成进程共享缓存键。"""
