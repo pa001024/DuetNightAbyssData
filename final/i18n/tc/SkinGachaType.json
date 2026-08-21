@@ -1,0 +1,37 @@
+[
+  {
+    "type": "GACHA_SKIN_TYPE_NORMAL",
+    "name": "常駐",
+    "subTabId": 1403
+  },
+  {
+    "type": "GACHA_SKIN_TYPE_SPECIAL",
+    "name": "限時復刻",
+    "subTabId": 1402
+  },
+  {
+    "type": "GACHA_SKIN_TYPE_SPECIAL_2",
+    "name": "限時復刻",
+    "subTabId": 1401
+  },
+  {
+    "type": "GACHA_SKIN_TYPE_SPECIAL_3",
+    "name": "活動限定",
+    "subTabId": 1401
+  },
+  {
+    "type": "GACHA_SKIN_TYPE_SPECIAL_4",
+    "name": "活動限定",
+    "subTabId": 1401
+  },
+  {
+    "type": "GACHA_SKIN_TYPE_SPECIAL_5",
+    "name": "活動限定",
+    "subTabId": 1401
+  },
+  {
+    "type": "GACHA_SKIN_TYPE_SPECIAL_6",
+    "name": "活動限定",
+    "subTabId": 1401
+  }
+]

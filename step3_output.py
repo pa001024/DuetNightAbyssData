@@ -55,6 +55,7 @@ from processor.backpack_puzzle_level_processor import BackpackPuzzleLevelProcess
 from processor.event_processor import EventProcessor
 from processor.monster_strong_affixes_processor import MonsterStrongAffixesProcessor
 from processor.skin_processor import SkinProcessor
+from processor.skin_gacha_processor import SKIN_GACHA_PROCESSOR_CLASSES
 from processor.solo_treasure_processor import SoloTreasureProcessor
 from processor.solo_treasure_gameplay_processor import SoloTreasureGamePlayProcessor
 from processor.iron_ticket_processor import IronTicketProcessor
@@ -390,6 +391,7 @@ class FinalProcessor:
             # Add other processor classes here as they are implemented
         }
         self.processor_classes.update(ROUGE_PRO_PROCESSOR_CLASSES)
+        self.processor_classes.update(SKIN_GACHA_PROCESSOR_CLASSES)
 
     def get_processor(self, file_type):
         """获取指定文件类型的处理器实例，每个调用创建新实例"""
@@ -564,6 +566,11 @@ if __name__ == "__main__":
         "TreasureHuntProgress",
         "TreasureHuntRepeatDungeon",
         "TreasureHuntStoryDungeon",
+        "SkinGacha",
+        "SkinGachaTab",
+        "SkinGachaType",
+        "SkinGachaItem",
+        "SkinGachaCumulative",
     ]
     default_file_types.extend(ROUGE_PRO_PROCESSOR_CLASSES)
 

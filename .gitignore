@@ -9,3 +9,4 @@ bin/
 .serena/
 final/i18n/*/translation.json
 .omx/
+.workbuddy/

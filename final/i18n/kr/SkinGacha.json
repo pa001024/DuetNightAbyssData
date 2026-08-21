@@ -1,0 +1,244 @@
+[
+  {
+    "id": 9001,
+    "name": "별빛의 노래",
+    "desc": "<highlight>10</>회 탐색할 때마다 보라색 등급 이상의 아이템을 확정적으로 획득하며, 최대 <highlight>90</>회 탐색 내에 금색 등급의 아이템을 확정적으로 획득합니다.",
+    "warning": "<Title>금색 등급 아이템 확정 획득</>\n 진행 중인 탐색 <highlight>%d</>/90\n \n<Title>상시 광채 확률 설명</>\n탐색을 통해 금색 등급 아이템을 획득할 기본 확률은 <highlight>0.3%%</>이며, 종합 확률은 <highlight>1.42%%</>입니다(확정 획득 포함). 탐색 <highlight>90</>회 이내에 금색 등급 아이템을 확정적으로 획득합니다.\n 각 아이템의 확률:\n 파도 타기 춤곡: <highlight>0.427%%</>\n 태양의 급보: <highlight>0.427%%</>\n 베일과 속삭임: <highlight>0.285%%</>\n 햇살 방앗간: <highlight>0.285%%</>\n \n탐색을 통해 보라색 등급의 아이템을 획득할 기본 확률은 <highlight>5.1%%</>이며, 종합 확률은 <highlight>12.46%%</>입니다(확정 획득 포함). 탐색 <highlight>10</>회 이내에 보라색 등급 이상의 아이템을 확정적으로 획득합니다. 이때, <highlight>99.7%%</> 확률로 보라색 등급 아이템을, <highlight>0.3%%</> 확률로 금색 등급 아이템을 획득합니다.\n확률 증가, 확정 획득 등이 적용될 경우, 해당 확률은 상세 규칙을 참고해 주시기 바랍니다.\n \n<Title>중복 획득 설명</>\n이미 보유한 외형을 중복 획득할 경우, 등급에 따라 다음과 같이 물빛 프리즘으로 전환됩니다.\n 금색 등급 캐릭터 외형: 물빛 프리즘*<highlight>60</>\n 금색 등급 무기 외형: 물빛 프리즘*<highlight>40</>\n 보라색 등급 외형: 물빛 프리즘*<highlight>4</>\n 파란색 등급 외형: 물빛 프리즘*<highlight>1</>。\n \n<Title>광채 계승 설명</>\n<highlight>별빛의 노래</> 내의 탐색 횟수는 독립적으로 계산되며, 다른 이벤트의 광채와 합산되지 않습니다.",
+    "coreDes": "유광 코스튬",
+    "coreDesColor": 5,
+    "type": "상시",
+    "subTabId": 1403,
+    "tabId": 1,
+    "sequence": 1,
+    "gachaTimes": 1,
+    "displayType": 1,
+    "historyType": 2,
+    "hideCountdown": true,
+    "cost": {
+      "res": [
+        1001
+      ],
+      "num10": 10,
+      "displayRes": [
+        99,
+        100,
+        1001
+      ]
+    },
+    "probabilityId": 9999,
+    "conditionId": 4041,
+    "star3ItemId": 99993,
+    "star4ItemId": 99992,
+    "star5ItemId": 99991
+  },
+  {
+    "id": 9002,
+    "name": "한여름 밤의 비상",
+    "desc": "<highlight>10</>회 탐색할 때마다 보라색 등급 이상의 아이템을 확정적으로 획득하며, 최대 <highlight>90</>회 탐색 내에 금색 등급 아이템을 확정적으로 획득합니다.",
+    "warning": "<Title>금색 등급 아이템 확정 획득</>\n진행 중인 탐색 <highlight>%d</>/90\n \n<Title>이벤트 한정 광채 확률 설명</>\n탐색을 통해 금색 또는 금색 등급 이상의 아이템을 획득할 기본 확률은 <highlight>0.3%%</>이며, 종합 확률은 <highlight>1.42%%</>입니다(확정 획득 포함). 탐색 <highlight>90</>회 이내에 금색 등급 아이템을 확정 획득합니다.\n각 아이템의 확률:\n 꿈속의 무도회: <highlight>0.641%%</>\n 무지개빛 프리즘*25: <highlight>0.641%%</>\n 무지개빛 프리즘*50: <highlight>0.142%%</>\n \n탐색을 통해 보라색 등급의 아이템을 획득할 기본 확률은 <highlight>5.1%%</>이며, 종합 확률은 <highlight>12.46%%</>입니다(확정 획득 포함). 탐색 <highlight>10</>회 이내에 보라색 등급 이상의 아이템을 확정적으로 획득합니다. 이때, <highlight>99.7%%</> 확률로 보라색 등급 아이템을, <highlight>0.3%%</> 확률로 금색 등급의 아이템을 획득합니다.\n확률 증가, 확정 획득 등이 적용될 경우, 해당 확률은 상세 규칙을 참고해 주시기 바랍니다.\n \n<Title>중복 획득 설명</>\n금색 등급 외형 꿈속의 무도회를 중복 획득할 경우, 무지개빛 프리즘*<highlight>25</>로 전환됩니다.\n그 외의 외형을 중복 획득할 경우, 다음과 같이 물빛 프리즘으로 전환됩니다.\n 보라색 등급 외형: 물빛 프리즘*<highlight>4</>\n 파란색 등급 외형: 물빛 프리즘*<highlight>1</>\n \n<Title>광채 계승 설명</>\n<highlight>한여름 밤의 비상</> 내의 탐색 횟수는 독립적으로 계산되며, 다른 이벤트의 광채와 합산되지 않습니다.",
+    "coreDes": "유광 코스튬",
+    "coreDesColor": 5,
+    "type": "기간 한정 복각",
+    "subTabId": 1402,
+    "tabId": 2,
+    "sequence": 2,
+    "gachaTimes": 1,
+    "displayType": 1,
+    "historyType": 2,
+    "hideCountdown": null,
+    "startTime": 1780279200,
+    "endTime": 1785142800,
+    "cost": {
+      "res": [
+        1004,
+        1003
+      ],
+      "num10": 10,
+      "displayRes": [
+        99,
+        1004,
+        1003
+      ]
+    },
+    "probabilityId": 1001,
+    "conditionId": 4041,
+    "star3ItemId": 99983,
+    "star4ItemId": 99982,
+    "star5ItemId": 99981
+  },
+  {
+    "id": 9003,
+    "name": "파도의 메아리",
+    "desc": "<highlight>10</>회 탐색할 때마다 보라색 등급 이상의 아이템을 확정적으로 획득하며, 최대 <highlight>90</>회 탐색 내에 금색 등급 아이템을 확정적으로 획득합니다.",
+    "warning": "<Title>금색 등급 아이템 확정 획득</>\n 현재 진행 중인 탐색 <highlight>%d</>/90\n \n<Title>이벤트 한정 광채 확률 설명</>\n금색 등급 아이템의 기본 탐색 확률은 <highlight>0.3%%</>이며, 종합 확률(확정 획득 포함)은 <highlight>1.42%%</>입니다. 최대 <highlight>90</>회 탐색 시 금색 등급 아이템을 확정적으로 획득합니다. 각 아이템의 획득 확률은 다음과 같습니다.\n순백의 파도: <highlight>0.641%%</> \n무지개빛 프리즘x25: <highlight>0.641%%</>\n무지개빛 프리즘x50: <highlight>0.142%%</>\n보라색 등급 아이템의 기본 탐색 확률은 <highlight>5.1%%</>이며, 종합 확률(확정 획득 포함)은 <highlight>12.46%%</>입니다. 최대 <highlight>10</>회 탐색 시 보라색 등급 아이템을 확정적으로 획득합니다.\n보라색 등급 아이템의 확정 확률은 <highlight>99.7%%</>이며, 금색 등급 아이템의 확정 확률은 <highlight>0.3%%</>입니다.\n확률 증가, 확정 획득 등이 적용될 경우, 해당 확률은 상세 규칙을 참고해 주시기 바랍니다.\n \n<Title>중복 획득 설명</>\n금색 등급 코스튬 순백의 파도를 중복 획득할 경우, 무지개빛 프리즘x<highlight>25</>개로 전환됩니다.\n이미 보유한 코스튬을 중복 획득할 경우, 물빛 프리즘으로 전환됩니다. 중복 획득한 보라색 등급 코스튬은 물빛 프리즘x<highlight>4</>개, 중복 획득한 파란색 등급 코스튬은 물빛 프리즘x<highlight>1</>개로 전환됩니다.\n \n<Title>광채 계승 설명</>\n<highlight>파도의 메아리</>의 탐색 횟수는 독립적으로 계산되며, 다른 광채 이벤트와 합산되지 않습니다.",
+    "coreDes": "유광 코스튬",
+    "coreDesColor": 5,
+    "type": "기간 한정 복각",
+    "subTabId": 1401,
+    "tabId": 3,
+    "sequence": 3,
+    "gachaTimes": 1,
+    "displayType": 1,
+    "historyType": 2,
+    "hideCountdown": null,
+    "startTime": 1785117600,
+    "endTime": 1788771600,
+    "cost": {
+      "res": [
+        1004,
+        1003
+      ],
+      "num10": 10,
+      "displayRes": [
+        99,
+        1004,
+        1003
+      ]
+    },
+    "probabilityId": 1001,
+    "conditionId": 4041,
+    "star3ItemId": 99973,
+    "star4ItemId": 99972,
+    "star5ItemId": 99971
+  },
+  {
+    "id": 9004,
+    "name": "밤의 연회, 끝없는 이야기",
+    "desc": "<highlight>10</>회 탐색할 때마다 보라색 등급 이상의 아이템을 확정적으로 획득하며, 최대 <highlight>90</>회 탐색 내에 금색 등급 아이템을 확정적으로 획득합니다.",
+    "warning": "<Title>금색 등급 아이템 확정 획득</>\n현재 진행 중인 탐색 <highlight>%d</>/90\n \n<Title>이벤트 한정 광채 확률 설명</>\n금색 등급 아이템의 기본 탐색 확률은 <highlight>0.3%%</>이며, 종합 확률(확정 획득 포함)은 <highlight>1.42%%</>입니다. 최대 <highlight>90</>회 탐색 시 금색 등급 아이템을 확정적으로 획득합니다. 각 아이템의 획득 확률은 다음과 같습니다.\n파티라는 전장: <highlight>0.641%%</> \n무지개빛 프리즘x25: <highlight>0.641%%</>\n무지개빛 프리즘x50: <highlight>0.142%%</>\n보라색 등급 아이템의 기본 탐색 확률은 <highlight>5.1%%</>이며, 종합 확률(확정 획득 포함)은 <highlight>12.46%%</>입니다. 최대 <highlight>10</>회 탐색 시 보라색 등급 아이템을 확정적으로 획득합니다.\n보라색 등급 아이템의 확정 확률은 <highlight>99.7%%</>이며, 금색 등급 아이템의 확정 확률은 <highlight>0.3%%</>입니다.\n확률 증가, 확정 획득 등이 적용될 경우, 해당 확률은 상세 규칙을 참고해 주시기 바랍니다.\n \n<Title>중복 획득 설명</>\n금색 등급 외형 '파티라는 전장'을 중복 획득할 경우, 무지개빛 프리즘x<highlight>25</>개로 전환됩니다.\n이미 보유한 외형을 중복 획득할 경우, 물빛 프리즘으로 전환됩니다. 중복 획득한 보라색 등급 코스튬은 물빛 프리즘x<highlight>4</>개, 중복 획득한 파란색 등급 외형은 물빛 프리즘x<highlight>1</>개로 전환됩니다.\n \n<Title>광채 계승 설명</>\n<highlight>밤의 연회, 끝없는 이야기</>의 탐색 횟수는 독립적으로 계산되며, 다른 광채 이벤트와 합산되지 않습니다.",
+    "coreDes": "유광 코스튬",
+    "coreDesColor": 5,
+    "type": "이벤트 한정",
+    "subTabId": 1401,
+    "tabId": 4,
+    "sequence": 4,
+    "gachaTimes": 1,
+    "displayType": 1,
+    "historyType": 2,
+    "hideCountdown": null,
+    "startTime": 1770602400,
+    "endTime": 1775466000,
+    "cost": {
+      "res": [
+        1004,
+        1003
+      ],
+      "num10": 10,
+      "displayRes": [
+        99,
+        1004,
+        1003
+      ]
+    },
+    "probabilityId": 1001,
+    "conditionId": 4041,
+    "star3ItemId": 99963,
+    "star4ItemId": 99962,
+    "star5ItemId": 99961
+  },
+  {
+    "id": 9005,
+    "name": "비상의 날개",
+    "desc": "<highlight>10</>회 탐색할 때마다 보라색 등급 이상의 아이템을 확정적으로 획득하며, 최대 <highlight>90</>회 탐색 내에 금색 등급 아이템을 확정적으로 획득합니다.",
+    "warning": "<Title>금색 등급 아이템 확정 획득</>\n진행 중인 탐색 <highlight>%d</>/90\n\n<Title>이벤트 한정 광채 확률 설명</>\n탐색을 통해 금색 등급의 아이템을 획득할 기본 확률은 <highlight>0.3%%</>이며, 종합 확률(확정 획득 포함)은 <highlight>1.42%%</>입니다. 최대 <highlight>90</>회 탐색 시 금색 등급의 아이템을 확정적으로 획득합니다. 각 아이템의 획득 확률은 다음과 같습니다.\n푸른 날개: <highlight>0.641%%</>\n무지개빛 프리즘x25: <highlight>0.641%%</>\n무지개빛 프리즘x50: <highlight>0.142%%</>\n보라색 등급 아이템의 기본 탐색 확률은 <highlight>5.1%%</>이며, 종합 확률(확정 획득 포함)은 <highlight>12.46%%</>입니다. 최대 <highlight>10</>회 탐색 시 보라색 등급 아이템을 확정적으로 획득합니다.\n보라색 등급 아이템의 확정 확률은 <highlight>99.7%%</>이며, 금색 등급 아이템의 확정 확률은 <highlight>0.3%%</>입니다.\n확률 증가, 확정 획득 등이 적용될 경우, 해당 확률은 상세 규칙을 참고해 주시기 바랍니다.\n\n<Title>중복 획득 설명</>\n금색 등급 외형 '푸른 날개'를 중복 획득할 경우, 무지개빛 프리즘x<highlight>25</>개로 전환됩니다.\n이미 보유한 외형을 중복 획득할 경우, 물빛 프리즘으로 전환됩니다. 중복 획득한 보라색 등급 코스튬은 물빛 프리즘x<highlight>4</>개, 중복 획득한 파란색 등급 코스튬은 물빛 프리즘x<highlight>1</>개로 전환됩니다.\n\n<Title>광채 계승 설명</>\n<highlight>비상의 날개</>의 탐색 횟수는 독립적으로 계산되며, 다른 광채 이벤트와 합산되지 않습니다.",
+    "coreDes": "유광 코스튬",
+    "coreDesColor": 5,
+    "type": "이벤트 한정",
+    "subTabId": 1401,
+    "tabId": 5,
+    "sequence": 5,
+    "gachaTimes": 1,
+    "displayType": 1,
+    "historyType": 2,
+    "hideCountdown": null,
+    "startTime": 1775440800,
+    "endTime": 1780304400,
+    "cost": {
+      "res": [
+        1004,
+        1003
+      ],
+      "num10": 10,
+      "displayRes": [
+        99,
+        1004,
+        1003
+      ]
+    },
+    "probabilityId": 1001,
+    "conditionId": 4041,
+    "star3ItemId": 99953,
+    "star4ItemId": 99952,
+    "star5ItemId": 99951
+  },
+  {
+    "id": 9007,
+    "name": "밤과 눈의 빛",
+    "desc": "<highlight>10</>회 탐색할 때마다 보라색 등급 이상의 아이템을 확정적으로 획득하며, 최대 <highlight>90</>회 탐색 내에 금색 등급 아이템을 확정적으로 획득합니다.",
+    "warning": "<Title>금색 등급 아이템 확정 획득</>\n 현재 진행 중인 탐색 <highlight>%d</>/90\n \n<Title>이벤트 한정 광채 확률 설명</>\n금색 등급 아이템의 기본 탐색 확률은 <highlight>0.3%%</>이며, 종합 확률(확정 획득 포함)은 <highlight>1.42%%</>입니다. 최대 <highlight>90</>회 탐색 시 금색 등급 아이템을 확정적으로 획득합니다. 각 아이템의 획득 확률은 다음과 같습니다.\n빛 따라 흰눈 따라: <highlight>0.641%%</> \n무지개빛 프리즘x25: <highlight>0.641%%</>\n무지개빛 프리즘x50: <highlight>0.142%%</>\n보라색 등급 아이템의 기본 탐색 확률은 <highlight>5.1%%</>이며, 종합 확률(확정 획득 포함)은 <highlight>12.46%%</>입니다. 최대 <highlight>10</>회 탐색 시 보라색 등급 아이템을 확정적으로 획득합니다.\n보라색 등급 아이템의 확정 확률은 <highlight>99.7%%</>이며, 금색 등급 아이템의 확정 확률은 <highlight>0.3%%</>입니다.\n확률 증가, 확정 획득 등이 적용될 경우, 해당 확률은 상세 규칙을 참고해 주시기 바랍니다.\n \n<Title>중복 획득 설명</>\n금색 등급 외형 '빛 따라 흰눈 따라'를 중복 획득할 경우, 무지개빛 프리즘x<highlight>25</>개로 전환됩니다.\n이미 보유한 외형을 중복 획득할 경우, 물빛 프리즘으로 전환됩니다. 중복 획득한 보라색 등급 코스튬은 물빛 프리즘x<highlight>4</>개, 중복 획득한 파란색 등급 외형은 물빛 프리즘x<highlight>1</>개로 전환됩니다.\n \n<Title>광채 계승 설명</>\n<highlight>밤과 눈의 빛</>의 탐색 횟수는 독립적으로 계산되며, 다른 광채 이벤트와 합산되지 않습니다.",
+    "coreDes": "유광 코스튬",
+    "coreDesColor": 5,
+    "type": "이벤트 한정",
+    "subTabId": 1401,
+    "tabId": 7,
+    "sequence": 7,
+    "gachaTimes": 1,
+    "displayType": 1,
+    "historyType": 2,
+    "hideCountdown": null,
+    "startTime": 1785117600,
+    "endTime": 1788771600,
+    "cost": {
+      "res": [
+        1004,
+        1003
+      ],
+      "num10": 10,
+      "displayRes": [
+        99,
+        1004,
+        1003
+      ]
+    },
+    "probabilityId": 1001,
+    "conditionId": 4041,
+    "star3ItemId": 99933,
+    "star4ItemId": 99932,
+    "star5ItemId": 99931
+  },
+  {
+    "id": 90021,
+    "name": "이 밤을 용서하라",
+    "desc": "<highlight>10</>회 탐색할 때마다 보라색 등급 이상의 아이템을 확정적으로 획득하며, 최대 <highlight>90</>회 탐색 내에 금색 등급 아이템을 확정적으로 획득합니다.",
+    "warning": "<Title>금색 등급 아이템 확정 획득</>\n현재 진행 중인 탐색 <highlight>%d</>/90\n \n<Title>이벤트 한정 광채 확률 설명</>\n금색 등급 아이템의 기본 탐색 확률은 <highlight>0.3%%</>이며, 종합 확률(확정 획득 포함)은 <highlight>1.42%%</>입니다. 최대 <highlight>90</>회 탐색 시 금색 등급 아이템을 확정적으로 획득합니다. 각 아이템의 획득 확률은 다음과 같습니다.\n용서하는 자: <highlight>0.641%%</> \n무지개빛 프리즘x25: <highlight>0.641%%</>\n무지개빛 프리즘x50: <highlight>0.142%%</>\n보라색 등급 아이템의 기본 탐색 확률은 <highlight>5.1%%</>이며, 종합 확률(확정 획득 포함)은 <highlight>12.46%%</>입니다. 최대 <highlight>10</>회 탐색 시 보라색 등급 아이템을 확정적으로 획득합니다.\n보라색 등급 아이템의 확정 확률은 <highlight>99.7%%</>이며, 금색 등급 아이템의 확정 확률은 <highlight>0.3%%</>입니다.\n확률 증가, 확정 획득 등이 적용될 경우, 해당 확률은 상세 규칙을 참고해 주시기 바랍니다.\n \n<Title>중복 획득 설명</>\n금색 등급 외형 '용서하는 자'를 중복 획득할 경우, 무지개빛 프리즘x<highlight>25</>개로 전환됩니다.\n이미 보유한 외형을 중복 획득할 경우, 물빛 프리즘으로 전환됩니다. 중복 획득한 보라색 등급 코스튬은 물빛 프리즘x<highlight>4</>개, 중복 획득한 파란색 등급 외형은 물빛 프리즘x<highlight>1</>개로 전환됩니다.\n \n<Title>광채 계승 설명</>\n<highlight>이 밤을 용서하라</>의 탐색 횟수는 독립적으로 계산되며, 다른 광채 이벤트와 합산되지 않습니다.",
+    "coreDes": "유광 코스튬",
+    "coreDesColor": 5,
+    "type": "이벤트 한정",
+    "subTabId": 1401,
+    "tabId": 6,
+    "sequence": 6,
+    "gachaTimes": 1,
+    "displayType": 1,
+    "historyType": 2,
+    "hideCountdown": null,
+    "startTime": 1780279200,
+    "endTime": 1785142800,
+    "cost": {
+      "res": [
+        1004,
+        1003
+      ],
+      "num10": 10,
+      "displayRes": [
+        99,
+        1004,
+        1003
+      ]
+    },
+    "probabilityId": 1001,
+    "conditionId": 4041,
+    "star3ItemId": 99943,
+    "star4ItemId": 99942,
+    "star5ItemId": 99941
+  }
+]

@@ -1,0 +1,422 @@
+[
+  {
+    "gachaId": 9002,
+    "rewards": [
+      {
+        "rewardId": 7601,
+        "target": 20,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 5,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      },
+      {
+        "rewardId": 7602,
+        "target": 40,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 5,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      },
+      {
+        "rewardId": 7603,
+        "target": 60,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 5,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      },
+      {
+        "rewardId": 7604,
+        "target": 80,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 5,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      },
+      {
+        "rewardId": 7605,
+        "target": 100,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 10,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      }
+    ]
+  },
+  {
+    "gachaId": 9003,
+    "rewards": [
+      {
+        "rewardId": 7601,
+        "target": 20,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 5,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      },
+      {
+        "rewardId": 7602,
+        "target": 40,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 5,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      },
+      {
+        "rewardId": 7603,
+        "target": 60,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 5,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      },
+      {
+        "rewardId": 7604,
+        "target": 80,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 5,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      },
+      {
+        "rewardId": 7605,
+        "target": 100,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 10,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      }
+    ]
+  },
+  {
+    "gachaId": 9004,
+    "rewards": [
+      {
+        "rewardId": 7601,
+        "target": 20,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 5,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      },
+      {
+        "rewardId": 7602,
+        "target": 40,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 5,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      },
+      {
+        "rewardId": 7603,
+        "target": 60,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 5,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      },
+      {
+        "rewardId": 7604,
+        "target": 80,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 5,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      },
+      {
+        "rewardId": 7605,
+        "target": 100,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 10,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      }
+    ]
+  },
+  {
+    "gachaId": 9005,
+    "rewards": [
+      {
+        "rewardId": 7601,
+        "target": 20,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 5,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      },
+      {
+        "rewardId": 7602,
+        "target": 40,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 5,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      },
+      {
+        "rewardId": 7603,
+        "target": 60,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 5,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      },
+      {
+        "rewardId": 7604,
+        "target": 80,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 5,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      },
+      {
+        "rewardId": 7605,
+        "target": 100,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 10,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      }
+    ]
+  },
+  {
+    "gachaId": 9007,
+    "rewards": [
+      {
+        "rewardId": 7601,
+        "target": 20,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 5,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      },
+      {
+        "rewardId": 7602,
+        "target": 40,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 5,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      },
+      {
+        "rewardId": 7603,
+        "target": 60,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 5,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      },
+      {
+        "rewardId": 7604,
+        "target": 80,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 5,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      },
+      {
+        "rewardId": 7605,
+        "target": 100,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 10,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      }
+    ]
+  },
+  {
+    "gachaId": 90021,
+    "rewards": [
+      {
+        "rewardId": 7601,
+        "target": 20,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 5,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      },
+      {
+        "rewardId": 7602,
+        "target": 40,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 5,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      },
+      {
+        "rewardId": 7603,
+        "target": 60,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 5,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      },
+      {
+        "rewardId": 7604,
+        "target": 80,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 5,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      },
+      {
+        "rewardId": 7605,
+        "target": 100,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 10,
+            "n": "Sablier prismatique (temporaire)"
+          }
+        ],
+        "mode": "Fixed"
+      }
+    ]
+  }
+]

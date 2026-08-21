@@ -1,0 +1,244 @@
+[
+  {
+    "id": 9001,
+    "name": "星光回旋曲",
+    "desc": "每<highlight>10</>次尋覓必定獲取紫色或紫色以上品質道具，至多<highlight>90</>次尋覓必定獲取金色品質道具。",
+    "warning": "<Title>必定獲取金色品質道具</>\n正在進行的尋覓 <highlight>%d</>/90\n\n<Title>常駐萬華概率說明</>\n經由尋覓獲取金色品質道具的基礎概率為<highlight>0.3%%</>，綜合概率（含保底）為<highlight>1.42%%</>，至多<highlight>90</>次尋覓必定獲取金色品質道具，其中各道具概率如下：\n踏浪舞曲：<highlight>0.427%%</>\n喚日急板：<highlight>0.427%%</>\n紗幕與耳語：<highlight>0.285%%</>\n陽光磨坊：<highlight>0.285%%</>\n經由尋覓獲取紫色品質道具的基礎概率為<highlight>5.1%%</>，綜合概率（含保底）為<highlight>12.46%%</>，至多<highlight>10</>次尋覓必定獲取紫色品質道具；\n通過保底獲取紫色品質道具的概率為<highlight>99.7%%</>，獲取金色品質道具的概率為<highlight>0.3%%</>。\n當觸發概率提升、保底等情況時的概率，請以具體規則為準。\n\n<Title>重複獲取說明</>\n如果重複獲取已擁有的外觀，將轉化為水色稜鏡；重複金色品質角色形象將轉化為水色稜鏡*<highlight>60</>，重複金色品質武器形象將轉化為水色稜鏡*<highlight>40</>，重複紫色品質外觀將轉化為水色稜鏡*<highlight>4</>，重複藍色品質外觀將轉化為水色稜鏡*<highlight>1</>。\n\n<Title>萬華繼承說明</>\n在<highlight>星光回旋曲</>中的尋覓次數將獨立計算，不與其他活動萬華合並計算。",
+    "coreDes": "流光形象",
+    "coreDesColor": 5,
+    "type": "常駐",
+    "subTabId": 1403,
+    "tabId": 1,
+    "sequence": 1,
+    "gachaTimes": 1,
+    "displayType": 1,
+    "historyType": 2,
+    "hideCountdown": true,
+    "cost": {
+      "res": [
+        1001
+      ],
+      "num10": 10,
+      "displayRes": [
+        99,
+        100,
+        1001
+      ]
+    },
+    "probabilityId": 9999,
+    "conditionId": 4041,
+    "star3ItemId": 99993,
+    "star4ItemId": 99992,
+    "star5ItemId": 99991
+  },
+  {
+    "id": 9002,
+    "name": "夏夢紛飛集",
+    "desc": "每<highlight>10</>次尋覓必定獲取紫色或紫色以上品質道具，至多<highlight>90</>次尋覓必定獲取金色品質道具。",
+    "warning": "<Title>必定獲取華彩砂礫</>\n正在進行的尋覓 <highlight>%d</>/90\n\n<Title>活動限定萬華概率說明</>\n經由尋覓獲取金色品質道具的基礎概率為<highlight>0.3%%</>，綜合概率（含保底）為<highlight>1.42%%</>，至多<highlight>90</>次尋覓必定獲取金色品質道具，其中各道具概率如下：\n夢中的舞會：<highlight>0.641%%</>\n虹色稜鏡*25：<highlight>0.641%%</>\n虹色稜鏡*50：<highlight>0.142%%</>\n經由尋覓獲取紫色品質道具的基礎概率為<highlight>5.1%%</>，綜合概率（含保底）為<highlight>12.46%%</>，至多<highlight>10</>次尋覓必定獲取紫色品質道具；\n通過保底獲取紫色品質道具的概率為<highlight>99.7%%</>，獲取金色品質道具的概率為<highlight>0.3%%</>。\n當觸發概率提升、保底等情況時的概率，請以具體規則為準。\n\n<Title>重複獲取說明</>\n如果重複獲取金色品質形象·夢中的舞會，將轉化為虹色稜鏡*<highlight>25</>。\n如果重複獲取其餘已擁有的外觀，將轉化為水色稜鏡；重複紫色品質外觀將轉化為水色稜鏡*<highlight>4</>，重複藍色品質外觀將轉化為水色稜鏡*<highlight>1</>。\n\n<Title>萬華繼承說明</>\n在<highlight>夏夢紛飛集</>中的尋覓次數將獨立計算，不與其他活動萬華合並計算。",
+    "coreDes": "流光形象",
+    "coreDesColor": 5,
+    "type": "限時復刻",
+    "subTabId": 1402,
+    "tabId": 2,
+    "sequence": 2,
+    "gachaTimes": 1,
+    "displayType": 1,
+    "historyType": 2,
+    "hideCountdown": null,
+    "startTime": 1780279200,
+    "endTime": 1785142800,
+    "cost": {
+      "res": [
+        1004,
+        1003
+      ],
+      "num10": 10,
+      "displayRes": [
+        99,
+        1004,
+        1003
+      ]
+    },
+    "probabilityId": 1001,
+    "conditionId": 4041,
+    "star3ItemId": 99983,
+    "star4ItemId": 99982,
+    "star5ItemId": 99981
+  },
+  {
+    "id": 9003,
+    "name": "潮音起天末",
+    "desc": "每<highlight>10</>次尋覓必定獲取紫色或紫色以上品質道具，至多<highlight>90</>次尋覓必定獲取金色品質道具。",
+    "warning": "<Title>必定獲取金色品質道具</>\n正在進行的尋覓 <highlight>%d</>/90\n\n<Title>活動限定萬華概率說明</>\n經由尋覓獲取金色品質道具的基礎概率為<highlight>0.3%%</>，綜合概率（含保底）為<highlight>1.42%%</>，至多<highlight>90</>次尋覓必定獲取金色品質道具，其中各道具概率如下：\n素浪濯心：<highlight>0.641%%</>\n虹色稜鏡*25：<highlight>0.641%%</>\n虹色稜鏡*50：<highlight>0.142%%</>\n經由尋覓獲取紫色品質道具的基礎概率為<highlight>5.1%%</>，綜合概率（含保底）為<highlight>12.46%%</>，至多<highlight>10</>次尋覓必定獲取紫色品質道具；\n通過保底獲取紫色品質道具的概率為<highlight>99.7%%</>，獲取金色品質道具的概率為<highlight>0.3%%</>。\n當觸發概率提升、保底等情況時的概率，請以具體規則為準。\n\n<Title>重複獲取說明</>\n如果重複獲取金色品質形象素浪濯心，將轉化為虹色稜鏡*<highlight>25</>。\n如果重複獲取其餘已擁有的外觀，將轉化為水色稜鏡；重複紫色品質外觀將轉化為水色稜鏡*<highlight>4</>，重複藍色品質外觀將轉化為水色稜鏡*<highlight>1</>。\n\n<Title>萬華繼承說明</>\n在<highlight>潮音起天末</>中的尋覓次數將獨立計算，不與其他活動萬華合併計算。",
+    "coreDes": "流光形象",
+    "coreDesColor": 5,
+    "type": "限時復刻",
+    "subTabId": 1401,
+    "tabId": 3,
+    "sequence": 3,
+    "gachaTimes": 1,
+    "displayType": 1,
+    "historyType": 2,
+    "hideCountdown": null,
+    "startTime": 1785117600,
+    "endTime": 1788771600,
+    "cost": {
+      "res": [
+        1004,
+        1003
+      ],
+      "num10": 10,
+      "displayRes": [
+        99,
+        1004,
+        1003
+      ]
+    },
+    "probabilityId": 1001,
+    "conditionId": 4041,
+    "star3ItemId": 99973,
+    "star4ItemId": 99972,
+    "star5ItemId": 99971
+  },
+  {
+    "id": 9004,
+    "name": "宴夜訴平生",
+    "desc": "每<highlight>10</>次尋覓必定獲取紫色或紫色以上品質道具，至多<highlight>90</>次尋覓必定獲取金色品質道具。",
+    "warning": "<Title>必定獲取金色品質道具</>\n正在進行的尋覓 <highlight>%d</>/90\n\n<Title>活動限定萬華概率說明</>\n經由尋覓獲取金色品質道具的基礎概率為<highlight>0.3%%</>，綜合概率（含保底）為<highlight>1.42%%</>，至多<highlight>90</>次尋覓必定獲取金色品質道具，其中各道具概率如下：\n攜金宴夜：<highlight>0.641%%</>\n虹色稜鏡*25：<highlight>0.641%%</>\n虹色稜鏡*50：<highlight>0.142%%</>\n經由尋覓獲取紫色品質道具的基礎概率為<highlight>5.1%%</>，綜合概率（含保底）為<highlight>12.46%%</>，至多<highlight>10</>次尋覓必定獲取紫色品質道具；\n透過保底獲取紫色品質道具的概率為<highlight>99.7%%</>，獲取金色品質道具的概率為<highlight>0.3%%</>。\n當觸發概率提升、保底等情況時的概率，請以具體規則為準。\n\n<Title>重複獲取說明</>\n如果重複獲取金色品質形象攜金宴夜，將轉化為虹色稜鏡*<highlight>25</>。\n如果重複獲取其餘已擁有的外觀，將轉化為水色稜鏡；重複紫色品質外觀將轉化為水色稜鏡*<highlight>4</>，重複藍色品質外觀將轉化為水色稜鏡*<highlight>1</>。\n\n<Title>萬華繼承說明</>\n在<highlight>宴夜訴平生</>中的尋覓次數將獨立計算，不與其他活動萬華合併計算。",
+    "coreDes": "流光形象",
+    "coreDesColor": 5,
+    "type": "活動限定",
+    "subTabId": 1401,
+    "tabId": 4,
+    "sequence": 4,
+    "gachaTimes": 1,
+    "displayType": 1,
+    "historyType": 2,
+    "hideCountdown": null,
+    "startTime": 1770602400,
+    "endTime": 1775466000,
+    "cost": {
+      "res": [
+        1004,
+        1003
+      ],
+      "num10": 10,
+      "displayRes": [
+        99,
+        1004,
+        1003
+      ]
+    },
+    "probabilityId": 1001,
+    "conditionId": 4041,
+    "star3ItemId": 99963,
+    "star4ItemId": 99962,
+    "star5ItemId": 99961
+  },
+  {
+    "id": 9005,
+    "name": "執羽叩青空",
+    "desc": "每<highlight>10</>次尋覓必定獲取紫色或紫色以上品質道具，至多<highlight>90</>次尋覓必定獲取金色品質道具。",
+    "warning": "<Title>必定獲取金色品質道具</>\n正在進行的尋覓 <highlight>%d</>/90\n\n<Title>活動限定萬華概率說明</>\n經由尋覓獲取金色品質道具的基礎概率為<highlight>0.3%%</>，綜合概率（含保底）為<highlight>1.42%%</>，至多<highlight>90</>次尋覓必定獲取金色品質道具，其中各道具概率如下：\n青羽天巡：<highlight>0.641%%</>\n虹色稜鏡*25：<highlight>0.641%%</>\n虹色稜鏡*50：<highlight>0.142%%</>\n經由尋覓獲取紫色品質道具的基礎概率為<highlight>5.1%%</>，綜合概率（含保底）為<highlight>12.46%%</>，至多<highlight>10</>次尋覓必定獲取紫色品質道具；\n透過保底獲取紫色品質道具的概率為<highlight>99.7%%</>，獲取金色品質道具的概率為<highlight>0.3%%</>。\n當觸發概率提升、保底等情況時的概率，請以具體規則為準。\n\n<Title>重複獲取說明</>\n如果重複獲取金色品質形象青羽天巡，將轉化為虹色稜鏡*<highlight>25</>。\n如果重複獲取其餘已擁有的外觀，將轉化為水色稜鏡；重複紫色品質外觀將轉化為水色稜鏡*<highlight>4</>，重複藍色品質外觀將轉化為水色稜鏡*<highlight>1</>。\n\n<Title>萬華繼承說明</>\n在<highlight>執羽叩青空</>中的尋覓次數將獨立計算，不與其他活動萬華合併計算。",
+    "coreDes": "流光形象",
+    "coreDesColor": 5,
+    "type": "活動限定",
+    "subTabId": 1401,
+    "tabId": 5,
+    "sequence": 5,
+    "gachaTimes": 1,
+    "displayType": 1,
+    "historyType": 2,
+    "hideCountdown": null,
+    "startTime": 1775440800,
+    "endTime": 1780304400,
+    "cost": {
+      "res": [
+        1004,
+        1003
+      ],
+      "num10": 10,
+      "displayRes": [
+        99,
+        1004,
+        1003
+      ]
+    },
+    "probabilityId": 1001,
+    "conditionId": 4041,
+    "star3ItemId": 99953,
+    "star4ItemId": 99952,
+    "star5ItemId": 99951
+  },
+  {
+    "id": 9007,
+    "name": "夜色與雪色",
+    "desc": "每<highlight>10</>次尋覓必定獲取紫色或紫色以上品質道具，至多<highlight>90</>次尋覓必定獲取金色品質道具。",
+    "warning": "<Title>必定獲取金色品質道具</>\n正在進行的尋覓 <highlight>%d</>/90\n\n<Title>活動限定萬華概率說明</>\n經由尋覓獲取金色品質道具的基礎概率為<highlight>0.3%%</>，綜合概率（含保底）為<highlight>1.42%%</>，至多<highlight>90</>次尋覓必定獲取金色品質道具，其中各道具概率如下：\n逐光追雪：<highlight>0.641%%</>\n虹色稜鏡*25：<highlight>0.641%%</>\n虹色稜鏡*50：<highlight>0.142%%</>\n經由尋覓獲取紫色品質道具的基礎概率為<highlight>5.1%%</>，綜合概率（含保底）為<highlight>12.46%%</>，至多<highlight>10</>次尋覓必定獲取紫色品質道具；\n透過保底獲取紫色品質道具的概率為<highlight>99.7%%</>，獲取金色品質道具的概率為<highlight>0.3%%</>。\n當觸發概率提升、保底等情況時的概率，請以具體規則為準。\n\n<Title>重複獲取說明</>\n如果重複獲取金色品質形象逐光追雪，將轉化為虹色稜鏡*<highlight>25</>。\n如果重複獲取其餘已擁有的外觀，將轉化為水色稜鏡；重複紫色品質外觀將轉化為水色稜鏡*<highlight>4</>，重複藍色品質外觀將轉化為水色稜鏡*<highlight>1</>。\n\n<Title>萬華繼承說明</>\n在<highlight>夜色與雪色</>中的尋覓次數將獨立計算，不與其他活動萬華合併計算。",
+    "coreDes": "流光形象",
+    "coreDesColor": 5,
+    "type": "活動限定",
+    "subTabId": 1401,
+    "tabId": 7,
+    "sequence": 7,
+    "gachaTimes": 1,
+    "displayType": 1,
+    "historyType": 2,
+    "hideCountdown": null,
+    "startTime": 1785117600,
+    "endTime": 1788771600,
+    "cost": {
+      "res": [
+        1004,
+        1003
+      ],
+      "num10": 10,
+      "displayRes": [
+        99,
+        1004,
+        1003
+      ]
+    },
+    "probabilityId": 1001,
+    "conditionId": 4041,
+    "star3ItemId": 99933,
+    "star4ItemId": 99932,
+    "star5ItemId": 99931
+  },
+  {
+    "id": 90021,
+    "name": "寬赦這良夜",
+    "desc": "每<highlight>10</>次尋覓必定獲取紫色或紫色以上品質道具，至多<highlight>90</>次尋覓必定獲取金色品質道具。",
+    "warning": "<Title>必定獲取金色品質道具</>\n正在進行的尋覓 <highlight>%d</>/90\n\n<Title>活動限定萬華概率說明</>\n經由尋覓獲取金色品質道具的基礎概率為<highlight>0.3%%</>，綜合概率（含保底）為<highlight>1.42%%</>，至多<highlight>90</>次尋覓必定獲取金色品質道具，其中各道具概率如下：\n赦罪者：<highlight>0.641%%</>\n虹色稜鏡*25：<highlight>0.641%%</>\n虹色稜鏡*50：<highlight>0.142%%</>\n經由尋覓獲取紫色品質道具的基礎概率為<highlight>5.1%%</>，綜合概率（含保底）為<highlight>12.46%%</>，至多<highlight>10</>次尋覓必定獲取紫色品質道具；\n透過保底獲取紫色品質道具的概率為<highlight>99.7%%</>，獲取金色品質道具的概率為<highlight>0.3%%</>。\n當觸發概率提升、保底等情況時的概率，請以具體規則為準。\n\n<Title>重複獲取說明</>\n如果重複獲取金色品質形象赦罪者，將轉化為虹色稜鏡*<highlight>25</>。\n如果重複獲取其餘已擁有的外觀，將轉化為水色稜鏡；重複紫色品質外觀將轉化為水色稜鏡*<highlight>4</>，重複藍色品質外觀將轉化為水色稜鏡*<highlight>1</>。\n\n<Title>萬華繼承說明</>\n在<highlight>寬赦這良夜</>中的尋覓次數將獨立計算，不與其他活動萬華合併計算。",
+    "coreDes": "流光形象",
+    "coreDesColor": 5,
+    "type": "活動限定",
+    "subTabId": 1401,
+    "tabId": 6,
+    "sequence": 6,
+    "gachaTimes": 1,
+    "displayType": 1,
+    "historyType": 2,
+    "hideCountdown": null,
+    "startTime": 1780279200,
+    "endTime": 1785142800,
+    "cost": {
+      "res": [
+        1004,
+        1003
+      ],
+      "num10": 10,
+      "displayRes": [
+        99,
+        1004,
+        1003
+      ]
+    },
+    "probabilityId": 1001,
+    "conditionId": 4041,
+    "star3ItemId": 99943,
+    "star4ItemId": 99942,
+    "star5ItemId": 99941
+  }
+]

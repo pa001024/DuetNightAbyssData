@@ -1,0 +1,72 @@
+[
+  {
+    "tabId": 1,
+    "name": "상시",
+    "icon": "T_Gacha_PoolBanner_Normal01",
+    "reddotNode": "Gacha_Normal",
+    "sequence": 99,
+    "gachaIds": [
+      9001
+    ]
+  },
+  {
+    "tabId": 2,
+    "name": "기간 한정 복각",
+    "icon": "T_Gacha_PoolBanner_Saiqi01",
+    "reddotNode": "Gacha_ReSpecial_1",
+    "sequence": 2,
+    "gachaIds": [
+      9002
+    ]
+  },
+  {
+    "tabId": 3,
+    "name": "기간 한정 복각",
+    "icon": "T_Gacha_PoolBanner_Baiheng01",
+    "reddotNode": "Gacha_ReSpecial_2",
+    "sequence": 2,
+    "gachaIds": [
+      9003
+    ]
+  },
+  {
+    "tabId": 4,
+    "name": "이벤트 한정",
+    "icon": "T_Gacha_PoolBanner_Zhiliu01",
+    "reddotNode": "Gacha_Special_3",
+    "sequence": 1,
+    "gachaIds": [
+      9004
+    ]
+  },
+  {
+    "tabId": 5,
+    "name": "이벤트 한정",
+    "icon": "T_Gacha_PoolBanner_Suyi01",
+    "reddotNode": "Gacha_Special_4",
+    "sequence": 1,
+    "gachaIds": [
+      9005
+    ]
+  },
+  {
+    "tabId": 6,
+    "name": "이벤트 한정",
+    "icon": "T_Gacha_PoolBanner_Fuluo01",
+    "reddotNode": "Gacha_Special_5",
+    "sequence": 1,
+    "gachaIds": [
+      90021
+    ]
+  },
+  {
+    "tabId": 7,
+    "name": "이벤트 한정",
+    "icon": "T_Gacha_PoolBanner_Eve01",
+    "reddotNode": "Gacha_Special_6",
+    "sequence": 1,
+    "gachaIds": [
+      9007
+    ]
+  }
+]
