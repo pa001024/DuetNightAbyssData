@@ -298,7 +298,7 @@ class DataLoader:
 
 
 class FinalProcessor:
-    def __init__(self, base_dir, output_dir):
+    def __init__(self, base_dir, output_dir, file_types=None):
         self.base_dir = base_dir
         self.output_dir = output_dir
         self.input_file_alias = {
@@ -393,6 +393,146 @@ class FinalProcessor:
         self.processor_classes.update(ROUGE_PRO_PROCESSOR_CLASSES)
         self.processor_classes.update(SKIN_GACHA_PROCESSOR_CLASSES)
 
+        # 导出 Char 时自动用 UAssetCLI(server 模式)从 uasset 字节码提取 BP->buff 映射，
+        # 供被动技能"行为"展示真实叠加的 buff；无 uasset 时回退到内置映射。
+        # 仅当显式请求 Char 才提取(测试等场景不会误启动 server)。
+        self.bp_addbuff_map = None
+        if file_types and "Char" in file_types:
+            self.bp_addbuff_map = self._load_bp_addbuff_map()
+
+    # ---------- UAssetCLI server(client) ----------
+    def _exe_path(self):
+        """定位 UAssetCLI 可执行文件。"""
+        project_root = os.path.dirname(os.path.abspath(__file__))
+        exe = os.path.join(project_root, "tools", "UAssetCLI", "UAssetCLI.exe")
+        return exe if os.path.isfile(exe) else None
+
+    def _discover_bp_uasset_dirs(self):
+        """定位解包后的被动蓝图 uasset 目录(PassiveEffect/DesignerBP 下的所有含 uasset 的子目录)。"""
+        unpack = os.environ.get("DNA_UNPACK_DIR", "").strip()
+        if not unpack:
+            sibling = os.path.normpath(
+                os.path.join(
+                    os.path.dirname(os.path.abspath(__file__)),
+                    "..",
+                    "dna-unpack",
+                )
+            )
+            if os.path.isdir(sibling):
+                unpack = sibling
+        if not unpack or not os.path.isdir(unpack):
+            return []
+        exports_root = os.path.join(unpack, "Fmodel", "Output", "Exports")
+        if not os.path.isdir(exports_root):
+            return []
+        designer_roots = []
+        for game in os.listdir(exports_root):
+            cand = os.path.join(
+                exports_root,
+                game,
+                "Content",
+                "BluePrints",
+                "Combat",
+                "PassiveEffect",
+                "DesignerBP",
+            )
+            if os.path.isdir(cand):
+                designer_roots.append(cand)
+        dirs = []
+        for root in designer_roots:
+            # 角色被动蓝图统一放在 DesignerBP/Player 下
+            player = os.path.join(root, "Player")
+            if os.path.isdir(player):
+                dirs.append(player)
+        return dirs
+
+    def _server_request(self, proc, cmd_obj):
+        """向 UAssetCLI server 发送一行 JSON 命令，读取一行 JSON 响应。"""
+        proc.stdin.write(json.dumps(cmd_obj, ensure_ascii=False) + "\n")
+        proc.stdin.flush()
+        line = proc.stdout.readline()
+        if not line:
+            raise RuntimeError("UAssetCLI server 意外退出")
+        return json.loads(line)
+
+    def _load_bp_addbuff_map(self):
+        """启动 UAssetCLI server，批量解析被动 BP uasset，返回 {BP名: [buff id...]}。"""
+        import subprocess
+
+        exe = self._exe_path()
+        if not exe:
+            return None
+        dirs = self._discover_bp_uasset_dirs()
+        if not dirs:
+            return None
+
+        buff_data = DataLoader(self.base_dir).load_json("Buff.json")
+        result = {}
+        proc = None
+        try:
+            proc = subprocess.Popen(
+                [exe, "server"],
+                stdin=subprocess.PIPE,
+                stdout=subprocess.PIPE,
+                text=True,
+                encoding="utf-8",
+                bufsize=1,
+            )
+            for d in dirs:
+                resp = self._server_request(proc, {"cmd": "parse_dir", "path": d})
+                if not resp.get("ok"):
+                    print(
+                        f"[UAssetCLI] 解析 {d} 失败: {resp.get('error')}",
+                        flush=True,
+                    )
+                    continue
+                files = (resp.get("result") or {}).get("Files", {})
+                for fname, funcs in files.items():
+                    bp_name = os.path.splitext(fname)[0]
+                    ids = []
+                    for fn, calls in funcs.items():
+                        for call in calls:
+                            if not isinstance(call, dict):
+                                continue
+                            if call.get("Function") != "AddBuffToTarget":
+                                continue
+                            for v in call.get("IntParams", []) or []:
+                                if (
+                                    isinstance(v, int)
+                                    and v >= 100000
+                                    and str(v) in buff_data
+                                    and v not in ids
+                                ):
+                                    ids.append(v)
+                    if ids:
+                        result[bp_name] = ids
+            if result:
+                print(
+                    f"[UAssetCLI] 已从 uasset 提取 {len(result)} 个 BP 的应用 buff 映射",
+                    flush=True,
+                )
+        except Exception as e:
+            print(
+                f"[UAssetCLI] 实时提取失败({e}), 回退内置映射",
+                flush=True,
+            )
+            result = None
+        finally:
+            if proc is not None:
+                try:
+                    self._server_request(proc, {"cmd": "shutdown"})
+                except Exception:
+                    pass
+                try:
+                    proc.stdin.close()
+                    proc.wait(timeout=5)
+                except Exception:
+                    try:
+                        proc.kill()
+                    except Exception:
+                        pass
+        return result
+
     def get_processor(self, file_type):
         """获取指定文件类型的处理器实例，每个调用创建新实例"""
         processor_class = self.processor_classes.get(file_type)
@@ -401,6 +541,8 @@ class FinalProcessor:
 
         # 为每个处理器创建独立的DataLoader实例，确保线程安全
         data_loader = DataLoader(self.base_dir)
+        if file_type == "Char":
+            return processor_class(data_loader, bp_addbuff_map=self.bp_addbuff_map)
         return processor_class(data_loader)
 
     def process_all_languages(self, file_types, languages):
@@ -578,5 +720,5 @@ if __name__ == "__main__":
     FILE_TYPES = args.file_types if args.file_types else default_file_types
 
     # Create processor and process all specified file types for all languages
-    processor = FinalProcessor(BASE_DIR, OUTPUT_DIR)
+    processor = FinalProcessor(BASE_DIR, OUTPUT_DIR, FILE_TYPES)
     processor.process_all_languages(FILE_TYPES, LANGUAGES)

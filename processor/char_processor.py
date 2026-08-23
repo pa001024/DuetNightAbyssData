@@ -1,5 +1,5 @@
 from processor.base_processor import BaseProcessor
-from processor._util import get_attr_config_key_from_attr_data
+from processor._util import get_attr_config_key_from_attr_data, P_MAP
 from processor.skill_creature_utils import (
     extract_skill_creatures,
 )
@@ -13,7 +13,7 @@ from typing import Any
 
 
 class CharProcessor(BaseProcessor):
-    def __init__(self, data_loader):
+    def __init__(self, data_loader, bp_addbuff_map=None):
         super().__init__(data_loader)
         self.file_type = "Char"
         # 加载必要的配置数据
@@ -51,6 +51,12 @@ class CharProcessor(BaseProcessor):
         self.camp_data = data_loader.load_json("CharCamp.json")
         self.weapon_tag_data = data_loader.load_json("WeaponTag.json")
         self.char_addon_attr_data = data_loader.load_json("CharAddonAttr.json")
+        # 被动蓝图(BP)实际应用的 buff：优先用 step3 从 uasset 实时提取的映射，
+        # 没有则回退到仓库内置的 processor/BPAddBuff.json(见 tools/UAssetCLI)
+        if bp_addbuff_map is not None:
+            self.bp_addbuff_data = bp_addbuff_map
+        else:
+            self.bp_addbuff_data = {}
         # 加载技能升级所需材料数据
         self.skill_level_up_data = data_loader.load_json("SkillLevelUp.json")
         self.char_card_level_up_data = data_loader.load_json("CharCardLevelUp.json")
@@ -59,6 +65,14 @@ class CharProcessor(BaseProcessor):
         )
         self._project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         self._asset_root = os.path.join(self._project_root, "out", "Asset")
+        # 兜底：无实时映射时读仓库内置的 processor/BPAddBuff.json
+        if not self.bp_addbuff_data:
+            fallback_path = os.path.join(
+                self._project_root, "processor", "BPAddBuff.json"
+            )
+            if os.path.isfile(fallback_path):
+                with open(fallback_path, "r", encoding="utf-8") as f:
+                    self.bp_addbuff_data = json.load(f)
         self._anim_path_cache = {}
         self._anim_meta_cache = {}
 
@@ -860,7 +874,10 @@ class CharProcessor(BaseProcessor):
         "Attack": "普攻",
         "HeavyAttack": "重击",
         "SlideAttack": "滑行攻击",
-        "FallAttack": "坠落攻击",
+        "FallAttack": "下落攻击",
+        "Shooting": "射击",
+        "HeavyShooting": "蓄力射击",
+        "Reload": "装填",
         "Dodge": "闪避",
         "Skill1": "战技",
         "Skill2": "终结技",
@@ -940,14 +957,23 @@ class CharProcessor(BaseProcessor):
         return skill_entry if isinstance(skill_entry, dict) else None
 
     def _attr_cn(self, attr_name):
-        """属性名转中文(优先基础属性表，其次 AttrConfig 的 Name 翻译)。"""
+        """属性名转中文（与 mod 属性同一流程：自带翻译 -> P_MAP）。
+
+        顺序：基础属性表(_BASE_ATTR_CN) -> AttrConfig.Name 的 i18n 自带翻译
+        -> P_MAP 兜底（_util.P_MAP，键可为中文名缩写或原始属性名）。
+        """
         if not attr_name:
             return attr_name
+        # 1) 伤害基值等基础属性表
         base_cn = self._BASE_ATTR_CN.get(attr_name)
         if base_cn:
             return base_cn
+        # 2) 自带翻译（和 mod 属性一致：AttrConfig 键解析 -> Name -> i18n）
+        attr_key = get_attr_config_key_from_attr_data(
+            {"AttrName": attr_name}, self.attr_config
+        )
         cfg = (
-            self.attr_config.get(attr_name)
+            self.attr_config.get(attr_key)
             if isinstance(self.attr_config, dict)
             else None
         )
@@ -956,8 +982,10 @@ class CharProcessor(BaseProcessor):
             if name_key:
                 cn = self.get_translated_text(name_key)
                 if cn and cn != name_key:
-                    return cn
-        return attr_name
+                    # 3) 过一遍 P_MAP（如 暴击率->暴击）
+                    return P_MAP.get(cn, cn)
+        # 4) P_MAP 兜底（键可为原始名，如 WeaponCRDModifierRate->武器暴击伤害）
+        return P_MAP.get(attr_name, attr_name)
 
     def _damage_type_cn(self, damage_type):
         """伤害类型转中文。"""
@@ -1024,21 +1052,30 @@ class CharProcessor(BaseProcessor):
             value = attr.get("Value")
             if value is None:
                 value = attr.get("Rate")
-            if value is None:
+            # 叠层 buff：每层加成 + 层数上限
+            if attr.get("Stackable") and value is not None:
+                text = f"每层+{self._fmt_rate(value)}{self._attr_cn(attr_name)}"
+                max_layer = buff.get("MaxLayer")
+                if max_layer:
+                    text += f"(最多{self._fmt_num(max_layer)}层)"
+                bits.append(text)
                 continue
-            bits.append(
-                f"{self._attr_cn(attr_name)}+{self._fmt_percent(attr_name, value)}"
-            )
+            # 属性上限类 buff（如充盈威力上限）
+            sup_limit = attr.get("SupLimitValue")
+            if sup_limit is not None:
+                bits.append(
+                    f"{self._attr_cn(attr_name)}上限{self._fmt_rate(sup_limit)}"
+                )
+                continue
+            if value is not None:
+                bits.append(
+                    f"{self._attr_cn(attr_name)}+{self._fmt_percent(attr_name, value)}"
+                )
         for dot in buff.get("DotDatas", []) or []:
-            if not isinstance(dot, dict):
-                continue
-            interval = dot.get("Interval")
-            rate = dot.get("Rate")
-            interval_text = self._fmt_num(interval) if interval is not None else "?"
-            dot_text = f"每{interval_text}秒造成{self._damage_type_cn(dot.get('DamageType'))}持续伤害"
-            if rate is not None:
-                dot_text += f"×{self._fmt_rate(rate)}"
-            bits.append(dot_text)
+            if isinstance(dot, dict):
+                dot_text = self._dot_summary(dot)
+                if dot_text:
+                    bits.append(dot_text)
         # 状态/模式类 buff 描述
         if buff.get("ActivateSkills"):
             bits.append("激活技能")
@@ -1059,6 +1096,55 @@ class CharProcessor(BaseProcessor):
         if bits:
             return f"增益({bid})[{', '.join(bits)}]"
         return f"增益({bid})"
+
+    def _dot_summary(self, dot):
+        """把 DotDatas 条目翻译成可读摘要（按 Type 区分，避免把神智消耗误当伤害）。
+
+        Type 取值：Dot=持续伤害, Hot=持续治疗, SpChange/SecondSpChange=神智变化,
+        AddShield=持续护盾, SkillEffect=每秒执行技能效果, AddComboCount=连击数增加。
+        """
+        interval = dot.get("Interval")
+        interval_text = self._fmt_num(interval) if interval is not None else "?"
+        dot_type = dot.get("Type", "")
+
+        def _percent(rate):
+            # 与伤害倍率一致：0<x<1 整数百分比，x>=1 保留一位小数百分比
+            if isinstance(rate, (int, float)):
+                if 0 < rate < 1:
+                    return f"{self._fmt_rate(rate * 100)}%"
+                return f"{rate * 100:.1f}%"
+            return self._fmt_rate(rate) if rate is not None else "?"
+
+        if dot_type == "Dot":
+            text = (
+                f"每{interval_text}秒造成"
+                f"{self._damage_type_cn(dot.get('DamageType'))}持续伤害"
+            )
+            if dot.get("Rate") is not None:
+                text += f"×{self._fmt_rate(dot.get('Rate'))}"
+            return text
+
+        if dot_type in ("SpChange", "SecondSpChange"):
+            value = dot.get("Value")
+            if value is None:
+                return f"每{interval_text}秒神智变化"
+            verb = "消耗" if value < 0 else "回复"
+            return f"每{interval_text}秒{verb}{self._fmt_num(abs(value))}神智"
+
+        if dot_type == "Hot":
+            base_cn = self._attr_cn(dot.get("BaseAttr")) or "生命"
+            return f"每{interval_text}秒回复{base_cn}{_percent(dot.get('Rate'))}"
+
+        if dot_type == "AddShield":
+            return f"每{interval_text}秒获得{_percent(dot.get('Rate'))}护盾"
+
+        if dot_type == "SkillEffect":
+            return f"每{interval_text}秒执行技能效果({dot.get('EffectId')})"
+
+        if dot_type == "AddComboCount":
+            return f"每{interval_text}秒增加连击数{self._fmt_num(dot.get('Value'))}"
+
+        return f"每{interval_text}秒[{dot_type}]"
 
     def _translate_task_effect(self, task_effect, task_id, max_level):
         """把单个 TaskEffect 翻译成可读中文片段。"""
@@ -1252,11 +1338,16 @@ class CharProcessor(BaseProcessor):
                     bp_name = bp.rsplit(".", 1)[0].rsplit("/", 1)[-1] if bp else ""
                     text = f"被动效果({passive_id})"
                     if passive_desc and passive_desc != passive_desc_key:
-                        text += f"：{passive_desc}"
+                        text += f":{passive_desc}"
                     elif bp_name:
                         text += f"({bp_name})"
                     if text not in parts:
                         parts.append(text)
+                    # BP 实际应用的 buff（从 uasset 字节码提取，见 tools/UAssetCLI）
+                    for buff_id in self.bp_addbuff_data.get(bp_name, []) or []:
+                        buff_text = self._buff_summary(buff_id)
+                        if buff_text and buff_text not in parts:
+                            parts.append(buff_text)
 
         walk_skill(skill_id)
 
@@ -1267,7 +1358,7 @@ class CharProcessor(BaseProcessor):
             if part not in seen:
                 seen.add(part)
                 unique_parts.append(part)
-        return "；".join(unique_parts)
+        return ";".join(unique_parts)
 
     def _collect_abstract_u_weapon_creatures(self, u_weapon_ids):
         """收集 Abstract 同律武器对应的实体。"""

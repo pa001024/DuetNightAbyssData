@@ -10,3 +10,4 @@ bin/
 final/i18n/*/translation.json
 .omx/
 .workbuddy/
+tools/UAssetCLI/obj/

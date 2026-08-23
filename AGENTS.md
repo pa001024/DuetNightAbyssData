@@ -42,6 +42,23 @@ python step3_output.py -f Char Weapon Mod
 
 - 修改导出相关代码后，必须重跑对应导出命令验证结果，例如 `python step3_output.py -f Monster`
 
+### UAssetCLI — uasset 字节码解析工具
+
+`tools/UAssetCLI/`（.NET 10，基于 UAssetAPI）用于直接从 `.uasset/.uexp` 读取蓝图
+编译后的字节码（Kismet 表达式树），FModel 的 JSON 导出不含这部分。编译产物
+`tools/UAssetCLI/UAssetCLI.exe`（framework-dependent 单文件，约 5MB）已提交进 git，
+依赖 .NET 10 运行时。
+
+- 用法：`UAssetCLI server`（stdio JSON 行协议，供 step3 自动调用）或 `UAssetCLI <文件|目录>`（一次性）。
+  server 命令：`{"cmd":"parse","path":...}` / `{"cmd":"parse_dir","path":...}` /
+  `{"cmd":"export","path":...}`（FModel 式整体 JSON）/ `{"cmd":"export_dir","path":...,"out":...}`
+  （写文件批量导出） / `{"cmd":"shutdown"}`。
+- step3 集成：`python step3_output.py -f Char` 自动以 server 模式批量解析
+  `PassiveEffect/DesignerBP/Player/` 下的被动 BP，提取 `AddBuffToTarget` 的 buff id
+  （需解包目录，见 `DNA_UNPACK_DIR` 环境变量，缺省尝试仓库同级 `../dna-unpack`），
+  提取完自动 `shutdown` 关闭；无 uasset/exe 时回退 `processor/BPAddBuff.json`。
+- 重新构建 exe 与重新生成 `processor/BPAddBuff.json` 见 `tools/UAssetCLI/README.md`。
+
 ### Development
 
 - No formal linting or type checking configured

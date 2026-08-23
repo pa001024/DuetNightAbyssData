@@ -1,0 +1,228 @@
+{
+  "BP_2B_Passive2": [
+    110431
+  ],
+  "BP_Aote_Passive": [
+    510213,
+    510222,
+    510221
+  ],
+  "BP_Baiheng_Passive_Target": [
+    240134,
+    240133
+  ],
+  "BP_Baiheng_Passive": [
+    240131,
+    240122,
+    240121
+  ],
+  "BP_Baiheng_Passive2": [
+    240141
+  ],
+  "BP_Baonu_Passive": [
+    150141,
+    150104,
+    150103
+  ],
+  "BP_Dafu_Skill2": [
+    540123
+  ],
+  "BP_Dafu": [
+    540103
+  ],
+  "BP_Eve_Passive": [
+    210203,
+    210211,
+    210201
+  ],
+  "BP_Falu_Passive": [
+    120232,
+    120231
+  ],
+  "BP_Feina_Extra": [
+    180141
+  ],
+  "BP_Feina": [
+    180101,
+    180102
+  ],
+  "BP_Fuluo": [
+    110221,
+    110231,
+    110203
+  ],
+  "BP_Haier_Passive": [
+    320102,
+    320122
+  ],
+  "BP_Heitao_Passive2": [
+    110102
+  ],
+  "BP_Heitao": [
+    110111,
+    110112
+  ],
+  "BP_Kami_Passive_Enemy": [
+    320205
+  ],
+  "BP_Kezhou_Passive": [
+    150312,
+    150329,
+    150311,
+    150326,
+    150313,
+    150328
+  ],
+  "BP_Landi": [
+    420201,
+    420200
+  ],
+  "BP_Lilikou_Extra": [
+    540204
+  ],
+  "BP_Lilikou": [
+    540203,
+    540231,
+    540232
+  ],
+  "BP_Linen": [
+    310131,
+    310141,
+    310132,
+    310123,
+    310124
+  ],
+  "BP_Lise_Passive": [
+    410101
+  ],
+  "BP_Lise_Skill02_02": [
+    410125,
+    410121
+  ],
+  "BP_Lise_Skill02_03": [
+    410122
+  ],
+  "BP_Maer_Passive": [
+    330121,
+    330131,
+    330101
+  ],
+  "BP_Maer_Passive2": [
+    330141
+  ],
+  "BP_Maer_Skill03_Target": [
+    330101
+  ],
+  "BP_Nifu_Passive": [
+    150231,
+    150221,
+    150222,
+    150223
+  ],
+  "BP_Nvzhu_Dark_Passive": [
+    120112,
+    120111
+  ],
+  "BP_Nvzhu_Dark_Passive2": [
+    120121
+  ],
+  "BP_Nvzhu_Light_Passive": [
+    160103
+  ],
+  "BP_Qiuxian_Passive": [
+    110431,
+    110401
+  ],
+  "BP_Saiqi_Passive2": [
+    530110
+  ],
+  "BP_Saiqi": [
+    530122,
+    530112,
+    530113
+  ],
+  "BP_Shuimu_UltraPassive": [
+    210105,
+    210106
+  ],
+  "BP_Shuimu": [
+    210121
+  ],
+  "BP_Songlu_Passive": [
+    510105,
+    510104,
+    510102,
+    510131,
+    510103
+  ],
+  "BP_Songlu_Skill2": [
+    510122
+  ],
+  "BP_SpBaonu_Passive": [
+    150502,
+    150503
+  ],
+  "BP_Suyi_ModPassive": [
+    150405
+  ],
+  "BP_Suyi_Passive": [
+    150409,
+    150407,
+    150408,
+    150424
+  ],
+  "BP_Tuosi_Extra": [
+    110301
+  ],
+  "BP_Tuosi_Passive": [
+    110304,
+    110303,
+    110331
+  ],
+  "BP_WeitaF_Water_Passvie": [
+    220113
+  ],
+  "BP_WeitaF_Water_Passvie2": [
+    220121
+  ],
+  "BP_Xier_Passive": [
+    310211
+  ],
+  "BP_Xier_Skill1": [
+    310203,
+    310206,
+    310204
+  ],
+  "BP_Yeer_Passive2": [
+    310304
+  ],
+  "BP_Yuming_Extra": [
+    420114
+  ],
+  "BP_Yuming_Skill2": [
+    420122
+  ],
+  "BP_Yuming": [
+    420123,
+    420141,
+    420104
+  ],
+  "BP_Zhangyu_Extra": [
+    230103
+  ],
+  "BP_Zhangyu_Summoned": [
+    230100,
+    230122
+  ],
+  "BP_Zhangyu": [
+    230121
+  ],
+  "BP_Zhiliu_Extra": [
+    410211
+  ],
+  "BP_Zhiliu": [
+    410222,
+    410221,
+    410223
+  ]
+}
