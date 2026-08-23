@@ -76,7 +76,7 @@ class CharProcessor(BaseProcessor):
         # SkillEffects TaskEffects 字段名缩写映射
         # "" 表示排除该字段
         self.skill_effect_field_abbr = {
-            # 排除的字段（内部使用或不必要）
+            # 排除的字段(内部使用或不必要)
             "Function": "fn",
             "TargetFilter": "",
             "DamageTag": "",
@@ -134,7 +134,7 @@ class CharProcessor(BaseProcessor):
             "UniquePassive": "up",
             "BPPath": "",
             "Vars": "v",
-            "VarSkillLevelSource": "",  # 排除 VarSkillLevelSource（内部使用）
+            "VarSkillLevelSource": "",  # 排除 VarSkillLevelSource(内部使用)
         }
         self.abyss_special_weapon_data = self._build_abyss_special_weapon_data()
 
@@ -241,7 +241,7 @@ class CharProcessor(BaseProcessor):
         # if not processed.get("突破"):
         #     del processed["突破"]
         if not processed.get("溯源"):
-            # 溯源数据缺失时（未实装/占位角色，如 5402），不再丢弃整个角色，
+            # 溯源数据缺失时(未实装/占位角色，如 5402)，不再丢弃整个角色，
             # 仅省略溯源字段，其余可用字段照常导出。
             del processed["溯源"]
 
@@ -470,7 +470,7 @@ class CharProcessor(BaseProcessor):
         # 获取属性类型
         attribute = battle_char.get("Attribute", "")
 
-        # 计算所有属性加成（ATK_Dark, ATK_Fire等）
+        # 计算所有属性加成(ATK_Dark, ATK_Fire等)
         if attribute:
             attr_key = f"ATK_{attribute}"
             if attr_key in battle_char:
@@ -693,6 +693,9 @@ class CharProcessor(BaseProcessor):
             del result["名称"]
         if not result.get("描述"):
             del result["描述"]
+        # 无论描述是否存在，都用 SkillNode/SkillEffects/Buff 等数据生成"行为"摘要(可交 LLM 加工)。
+        # 追加到 result 末尾，不参与子技能差异判断，避免打乱原有字段顺序
+        generated_template = self._generate_skill_template(skill_id)
 
         if skill_info.get("CD"):
             result["cd"] = skill_info.get("CD")
@@ -721,7 +724,7 @@ class CharProcessor(BaseProcessor):
         #         if skill_effects.get("b"):
         #             result["b"] = skill_effects["b"]
         #     else:
-        #         # 兼容旧格式（直接返回列表）
+        #         # 兼容旧格式(直接返回列表)
         #         result["e"] = skill_effects
 
         # # 处理被动技能特效解析
@@ -776,14 +779,14 @@ class CharProcessor(BaseProcessor):
                     # 当子技能的某个属性为空时，视为与父技能相同
                     is_different = False
                     for key, sub_value in sub_skill_data.items():
-                        # 跳过id和子技能字段
-                        if key in ["id", "子技能"]:
+                        # 跳过id、子技能和"行为"模板字段
+                        if key in ["id", "子技能", "行为"]:
                             continue
                         # 获取父技能对应属性值
                         parent_value = result.get(key)
                         # 比较规则：
                         # 1. 如果父技能没有该属性，且子技能属性值不为空，则视为不同
-                        # 2. 如果父技能有该属性，且子技能属性值与父技能不同（空值视为相同），则视为不同
+                        # 2. 如果父技能有该属性，且子技能属性值与父技能不同(空值视为相同)，则视为不同
                         if key not in result:
                             # 父技能没有该属性，子技能有该属性且不为空，则不同
                             if sub_value:
@@ -802,7 +805,469 @@ class CharProcessor(BaseProcessor):
             if processed_sub_skills:
                 result["子技能"] = processed_sub_skills
 
+        if generated_template:
+            result["行为"] = generated_template
+
         return result
+
+    # ---------------- 技能文本缺失时自动生成可读模板 ----------------
+
+    # 伤害类型 → 中文
+    _DAMAGE_TYPE_CN = {
+        "Fire": "火",
+        "Water": "水",
+        "Thunder": "雷",
+        "Wind": "风",
+        "Light": "光",
+        "Dark": "暗",
+        "Slash": "切割",
+        "Pierce": "贯穿",
+        "Smash": "震荡",
+        "TrueDamage": "真实",
+        "Default": "无属性",
+    }
+
+    # 伤害标签 → 中文
+    _DAMAGE_TAG_CN = {
+        "Skill": "技能",
+        "Skill1": "战技",
+        "Skill2": "终结技",
+        "Ultra": "终结技",
+        "Weapon": "武器",
+        "Attack": "普攻",
+        "Melee": "近战",
+        "Ranged": "远程",
+        "Dot": "持续",
+        "Explode": "爆炸",
+        "BonusDamage": "追加",
+    }
+
+    # 伤害基值属性 → 中文
+    _BASE_ATTR_CN = {
+        "ATK": "攻击",
+        "ATK_Char": "角色攻击",
+        "ATK_Melee": "近战武器攻击",
+        "ATK_Ultra": "终结攻击",
+        "SkillIntensity": "技能威力",
+        "MaxHp": "目标最大生命",
+        "MaxES": "目标护盾",
+        "HpRate": "目标生命比例",
+        "ES": "护盾",
+    }
+
+    # 动作/技能名 → 中文(用于 buff 状态摘要)
+    _ACTION_CN = {
+        "Attack": "普攻",
+        "HeavyAttack": "重击",
+        "SlideAttack": "滑行攻击",
+        "FallAttack": "坠落攻击",
+        "Dodge": "闪避",
+        "Skill1": "战技",
+        "Skill2": "终结技",
+    }
+
+    # 被动功能名 → 中文(ExecutePassiveFunction 展开)
+    _PASSIVE_FUNCTION_CN = {
+        "AddMspOnHit": "命中回复神智",
+        "AddShield": "获得护盾",
+        "AddbuffSkill02": "附加终结技增益",
+        "AddbuffSkillintensity": "附加技能威力增益",
+        "BladeUp": "武器强化/剑气蓄力",
+        "BombCreate": "生成炸弹",
+        "CheckAndRemoveBuff": "检测并移除增益",
+        "CheckBullet": "检查弹体",
+        "ClearComboCount": "清空连击数",
+        "ClearSkill01TargetNum": "清空战技目标计数",
+        "ConsumeSkill02AttackBullet": "消耗终结技攻击弹体",
+        "DownStage": "解除变身/离场",
+        "EndGrab": "结束抓取",
+        "ExecuteSkill01": "释放战技",
+        "ExecuteSkill02": "释放终结技",
+        "Falu_Skill01_On": "法露茜战技开启",
+        "FlyingSkill1": "飞行战技",
+        "FunnelCreate": "生成浮游炮",
+        "GradeAutoShoot": "按等级自动射击",
+        "HeavyAttackEnd": "重击结束",
+        "HeavyAttackStart": "重击开始",
+        "HenshinBuff": "变身增益",
+        "HenshinOff": "解除变身",
+        "HitWall": "命中墙体",
+        "LaunchShadowSword": "释放暗影剑",
+        "OnSkill02Hit": "终结技命中",
+        "OnStage": "登场",
+        "OnSummonHitWall": "召唤物命中墙体",
+        "OnZhiliuMarkRemove": "滞留标记移除时",
+        "PassiveAdditionalSummon": "被动追加召唤",
+        "PauseLifeTime": "暂停寿命计时",
+        "Promotion_Queen": "升变·皇后",
+        "Promotion_Rook": "升变·堡垒",
+        "QuitSkill02": "退出终结技",
+        "ResumeLifeTime": "恢复寿命计时",
+        "SetRate": "设置倍率",
+        "SetSkill02Level": "设置终结技等级",
+        "ShootJudge": "射击判定",
+        "ShootLoopStart": "开始循环射击",
+        "Skill01ConsumeEnergy": "战技消耗能量",
+        "Skill01_GatherTarget": "战技聚怪",
+        "Skill02AddBuff": "终结技附加增益",
+        "Skill02Off": "终结技关闭",
+        "Skill02SummonAttack": "终结技召唤攻击",
+        "Skill1AddBuff": "战技附加增益",
+        "Skill1AddMsp1": "战技回复神智1",
+        "Skill1AddMsp2": "战技回复神智2",
+        "Skill1AddPassive": "战技叠加被动层数",
+        "Skill1Beat": "战技命中",
+        "Skill1End": "战技结束",
+        "Skill2AddMsp": "终结技回复神智",
+        "Skill2AddPassive": "终结技叠加被动层数",
+        "StartDash": "开始冲刺",
+        "StartGrab": "开始抓取",
+        "StartShoot": "开始射击",
+        "StopDash": "停止冲刺",
+        "SummonSkill1": "召唤战技实体",
+    }
+
+    def _get_skill_entry(self, skill_id):
+        """提取技能的基准条目 skill[0][0]。"""
+        skill = self.skill_data.get(str(skill_id))
+        if not skill:
+            skill = self.skill_data.get(skill_id)
+        if not isinstance(skill, list) or not skill:
+            return None
+        skill_entry = skill[0]
+        if isinstance(skill_entry, list) and skill_entry:
+            skill_entry = skill_entry[0]
+        return skill_entry if isinstance(skill_entry, dict) else None
+
+    def _attr_cn(self, attr_name):
+        """属性名转中文(优先基础属性表，其次 AttrConfig 的 Name 翻译)。"""
+        if not attr_name:
+            return attr_name
+        base_cn = self._BASE_ATTR_CN.get(attr_name)
+        if base_cn:
+            return base_cn
+        cfg = (
+            self.attr_config.get(attr_name)
+            if isinstance(self.attr_config, dict)
+            else None
+        )
+        if isinstance(cfg, dict):
+            name_key = cfg.get("Name")
+            if name_key:
+                cn = self.get_translated_text(name_key)
+                if cn and cn != name_key:
+                    return cn
+        return attr_name
+
+    def _damage_type_cn(self, damage_type):
+        """伤害类型转中文。"""
+        if not damage_type:
+            return "无属性"
+        return self._DAMAGE_TYPE_CN.get(damage_type, str(damage_type))
+
+    @staticmethod
+    def _fmt_num(value):
+        """数值格式化：整数不带小数点。"""
+        if isinstance(value, float) and value == int(value):
+            return str(int(value))
+        return str(value)
+
+    @staticmethod
+    def _fmt_rate(value):
+        """倍率格式化：去掉多余尾零。"""
+        if not isinstance(value, (int, float)):
+            return str(value)
+        if value == int(value):
+            return str(int(value))
+        return f"{value:.3f}".rstrip("0").rstrip(".")
+
+    def _fmt_percent(self, attr_name, value):
+        """百分属性显示为百分比(IsPercent 时 ×100)。"""
+        is_percent = False
+        if isinstance(self.attr_config, dict):
+            cfg = self.attr_config.get(attr_name)
+            if isinstance(cfg, dict):
+                is_percent = bool(cfg.get("IsPercent"))
+        if is_percent and isinstance(value, (int, float)):
+            return f"{self._fmt_rate(value * 100)}%"
+        return self._fmt_num(value)
+
+    def _resolve_effect_rate(self, rate, task_id, max_level):
+        """解析 #N 占位符倍率为数值(取 1 级值)。"""
+        if isinstance(rate, str) and re.match(r"#\d+", rate):
+            try:
+                vals = self._process_placeholder(
+                    rate, task_id, max_level, "SkillEffects"
+                )
+                if vals is None:
+                    return rate
+                if isinstance(vals, list):
+                    return vals[0] if vals else rate
+                return vals
+            except Exception:
+                return rate
+        return rate
+
+    def _buff_summary(self, buff_id):
+        """生成 Buff 的可读摘要：属性增减 / 持续伤害。"""
+        if buff_id is None:
+            return ""
+        bid = buff_id[0] if isinstance(buff_id, list) else buff_id
+        buff = self.buff_data.get(str(bid))
+        if not isinstance(buff, dict):
+            return f"增益({bid})"
+        bits = []
+        for attr in buff.get("AddAttrs", []) or []:
+            if not isinstance(attr, dict):
+                continue
+            attr_name = attr.get("AttrName", "")
+            value = attr.get("Value")
+            if value is None:
+                value = attr.get("Rate")
+            if value is None:
+                continue
+            bits.append(
+                f"{self._attr_cn(attr_name)}+{self._fmt_percent(attr_name, value)}"
+            )
+        for dot in buff.get("DotDatas", []) or []:
+            if not isinstance(dot, dict):
+                continue
+            interval = dot.get("Interval")
+            rate = dot.get("Rate")
+            interval_text = self._fmt_num(interval) if interval is not None else "?"
+            dot_text = f"每{interval_text}秒造成{self._damage_type_cn(dot.get('DamageType'))}持续伤害"
+            if rate is not None:
+                dot_text += f"×{self._fmt_rate(rate)}"
+            bits.append(dot_text)
+        # 状态/模式类 buff 描述
+        if buff.get("ActivateSkills"):
+            bits.append("激活技能")
+        if buff.get("ReplaceActions"):
+            bits.append("替换动作")
+        if buff.get("EnableFlight"):
+            bits.append("启用飞行")
+        if buff.get("UseSummonWeapon"):
+            bits.append("召唤武器")
+        disabled = buff.get("DisableSkills")
+        if disabled:
+            if not isinstance(disabled, list):
+                disabled = [disabled]
+            disabled_cn = []
+            for action in disabled:
+                disabled_cn.append(self._ACTION_CN.get(str(action), str(action)))
+            bits.append(f"禁用[{', '.join(disabled_cn)}]")
+        if bits:
+            return f"增益({bid})[{', '.join(bits)}]"
+        return f"增益({bid})"
+
+    def _translate_task_effect(self, task_effect, task_id, max_level):
+        """把单个 TaskEffect 翻译成可读中文片段。"""
+        function_name = task_effect.get("Function", "")
+        fragments = []
+
+        if function_name == "Damage":
+            base_attr = task_effect.get("BaseAttr", "")
+            base_cn = self._attr_cn(base_attr) or "基础伤害"
+            rate = self._resolve_effect_rate(
+                task_effect.get("Rate"), task_id, max_level
+            )
+            damage_type = task_effect.get("DamageType")
+            tags = task_effect.get("DamageTag") or []
+            tag_names = []
+            for tag in tags:
+                tag_cn = self._DAMAGE_TAG_CN.get(tag)
+                if tag_cn and tag_cn not in tag_names:
+                    tag_names.append(tag_cn)
+            # 小倍率(0<x<1)用整数百分比，如 ×0.24 -> "近战武器攻击24%"
+            # 大倍率(x>=1)用保留一位小数的百分比，如 ×3.47 -> "角色攻击347.0%"
+            if isinstance(rate, (int, float)) and 0 < rate < 1:
+                text = f"造成{base_cn}{self._fmt_rate(rate * 100)}%"
+            elif isinstance(rate, (int, float)):
+                text = f"造成{base_cn}{rate * 100:.1f}%"
+            else:
+                rate_text = self._fmt_rate(rate) if rate is not None else "?"
+                text = f"造成{base_cn}×{rate_text}"
+            if damage_type:
+                text += f"的{self._damage_type_cn(damage_type)}属性伤害"
+            else:
+                text += "的伤害"
+            if tag_names:
+                text += "(" + "/".join(tag_names) + ")"
+            value = task_effect.get("Value")
+            if value is not None:
+                text += f"+{self._fmt_num(value)}"
+            fragments.append(text)
+
+        elif function_name == "CutToughness":
+            value = task_effect.get("Value")
+            if value is not None:
+                fragments.append(f"削减战姿{self._fmt_num(value)}")
+
+        elif function_name == "AddBuff":
+            buff_id = task_effect.get("BuffId")
+            last_time = task_effect.get("LastTime")
+            text = f"附加{self._buff_summary(buff_id)}"
+            if isinstance(last_time, (int, float)) and last_time != -1:
+                text += f"(持续{self._fmt_num(last_time)}秒)"
+            delay = task_effect.get("Delay")
+            if delay:
+                text = f"延迟{self._fmt_num(delay)}秒后" + text
+            fragments.append(text)
+
+        elif function_name == "RemoveBuff":
+            fragments.append(f"移除{self._buff_summary(task_effect.get('BuffId'))}")
+
+        elif function_name == "AddEnergyShield":
+            fragments.append("获得护盾")
+
+        elif function_name in (
+            "Heal",
+            "AddHp",
+            "AddHpByRate",
+            "RecoverHp",
+            "AddSp",
+            "RecoverSp",
+            "AddES",
+            "RecoverES",
+        ):
+            base = (
+                task_effect.get("BaseAttr")
+                or task_effect.get("BaseChar")
+                or function_name
+            )
+            fragments.append(f"恢复类效果({base})")
+
+        elif function_name == "CreateSkillCreature":
+            fragments.append(f"召唤实体({task_effect.get('CreatureId')})")
+
+        elif function_name == "GatherTargets":
+            fragments.append("牵引/聚怪")
+
+        elif function_name == "ExecutePassiveFunction":
+            # 展开被动功能：函数名中文 + 关联的被动效果上下文
+            function_name_raw = task_effect.get("FunctionName")
+            function_cn = self._PASSIVE_FUNCTION_CN.get(
+                str(function_name_raw), str(function_name_raw)
+            )
+            text = f"触发被动功能[{function_cn}]"
+            passive_id = task_effect.get("PassiveEffectId")
+            if passive_id is not None:
+                passive = self.passive_effect_data.get(str(passive_id))
+                if isinstance(passive, dict):
+                    bp = passive.get("BPPath", "")
+                    bp_name = bp.rsplit(".", 1)[0].rsplit("/", 1)[-1] if bp else ""
+                    text += f"(被动效果{passive_id}{'·' + bp_name if bp_name else ''})"
+            fragments.append(text)
+
+        elif function_name in (
+            "PlayFX",
+            "PlaySE",
+            "PlayAnim",
+            "HitStop",
+            "SetJumpVelocityScale",
+            "SetMovingSpeed",
+            "PlayUIAnim",
+            "Executeskilleffect",
+            "ExecuteSkillEffects",
+            "StartLoopShoot",
+        ):
+            # 纯表现/流程类，不进入模板
+            pass
+
+        elif function_name:
+            fragments.append(f"执行[{function_name}]")
+
+        return fragments
+
+    def _generate_skill_template(self, skill_id):
+        """沿 SkillNode→SkillEffects→Buff 生成技能"行为"的可读摘要。
+
+        无论技能描述是否存在都会生成，输出为一段中文自然语言(可交给 LLM 加工)，
+        形如："造成角色攻击×3.47的伤害(技能/战技)，削减战姿25；附加增益(540201)。"
+        """
+        parts = []
+        visited_effects = set()
+        visited_nodes = set()
+        visited_skills = set()
+        max_level = min(self._get_skill_max_level(skill_id), 12)
+
+        def walk_effect(effect_id):
+            if effect_id in visited_effects:
+                return
+            visited_effects.add(effect_id)
+            effect = self.skill_effects_data.get(str(effect_id))
+            if not isinstance(effect, dict):
+                return
+            for task_effect in effect.get("TaskEffects", []) or []:
+                if not isinstance(task_effect, dict):
+                    continue
+                for fragment in self._translate_task_effect(
+                    task_effect, effect_id, max_level
+                ):
+                    if fragment:
+                        parts.append(fragment)
+                # 递归展开子效果
+                for child_key in ("SkillEffect", "EffectIds"):
+                    child_ids = task_effect.get(child_key)
+                    if not isinstance(child_ids, list):
+                        child_ids = [child_ids]
+                    for child_id in child_ids:
+                        if child_id not in (None, ""):
+                            walk_effect(child_id)
+
+        def walk_node(node_id):
+            if node_id in visited_nodes:
+                return
+            visited_nodes.add(node_id)
+            node = self.skill_node_data.get(str(node_id))
+            if not isinstance(node, dict):
+                return
+            for effect_id in node.get("SkillNodeEffects", []) or []:
+                walk_effect(effect_id)
+            next_node = node.get("NextNodeId")
+            if next_node:
+                walk_node(next_node)
+
+        def walk_skill(inner_skill_id):
+            if inner_skill_id in visited_skills:
+                return
+            visited_skills.add(inner_skill_id)
+            skill_entry = self._get_skill_entry(inner_skill_id)
+            if not skill_entry:
+                return
+            begin_node = skill_entry.get("BeginNodeId")
+            if begin_node:
+                walk_node(begin_node)
+            # 被动效果
+            for passive_id in skill_entry.get("PassiveEffects", []) or []:
+                passive = self.passive_effect_data.get(str(passive_id))
+                if isinstance(passive, dict):
+                    passive_desc_key = passive.get("Desc")
+                    passive_desc = (
+                        self.get_translated_text(passive_desc_key)
+                        if passive_desc_key
+                        else ""
+                    )
+                    bp = passive.get("BPPath", "")
+                    bp_name = bp.rsplit(".", 1)[0].rsplit("/", 1)[-1] if bp else ""
+                    text = f"被动效果({passive_id})"
+                    if passive_desc and passive_desc != passive_desc_key:
+                        text += f"：{passive_desc}"
+                    elif bp_name:
+                        text += f"({bp_name})"
+                    if text not in parts:
+                        parts.append(text)
+
+        walk_skill(skill_id)
+
+        # 去重保序
+        seen = set()
+        unique_parts = []
+        for part in parts:
+            if part not in seen:
+                seen.add(part)
+                unique_parts.append(part)
+        return "；".join(unique_parts)
 
     def _collect_abstract_u_weapon_creatures(self, u_weapon_ids):
         """收集 Abstract 同律武器对应的实体。"""
@@ -899,11 +1364,11 @@ class CharProcessor(BaseProcessor):
 
         Args:
             buff_id: buff ID
-            buff_detail: buff详细数据（从Buff.json获取）
-            function_name: 函数名（AddBuff或RemoveBuff）
-            grow_source: 增长数据源（"SkillEffects" 或 "Buff"）
+            buff_detail: buff详细数据(从Buff.json获取)
+            function_name: 函数名(AddBuff或RemoveBuff)
+            grow_source: 增长数据源("SkillEffects" 或 "Buff")
             max_level: 最大等级
-            source_id: 源ID（用于查找增长数据，默认为None时使用buff_id）
+            source_id: 源ID(用于查找增长数据，默认为None时使用buff_id)
 
         Returns:
             dict: 解析后的buff数据
@@ -1038,7 +1503,7 @@ class CharProcessor(BaseProcessor):
         # 收集所有引用的SkillEffects ID和Buff ID
         effect_ids = set()
         buff_ids = set()
-        # 收集 e 字段中已处理的 Buff ID（用于去重）
+        # 收集 e 字段中已处理的 Buff ID(用于去重)
         buff_ids_in_e = set()
         import re
 
@@ -1121,7 +1586,7 @@ class CharProcessor(BaseProcessor):
                         # 从 SkillCreature.json 获取详细数据
                         sc_data = self.skill_creature_data.get(str(creature_id))
                         if sc_data:
-                            # 解析相关字段（跳过 BPPath 和其他内部字段）
+                            # 解析相关字段(跳过 BPPath 和其他内部字段)
                             sc_field_abbr = {
                                 "Type": "tp",
                                 "LifeTime": "lt",
@@ -1132,7 +1597,7 @@ class CharProcessor(BaseProcessor):
                                 "Tags": "tg",
                             }
                             for field_name, field_value in sc_data.items():
-                                # 处理 ShapeInfo（重要数据）
+                                # 处理 ShapeInfo(重要数据)
                                 if field_name == "ShapeInfo" and isinstance(
                                     field_value, dict
                                 ):
@@ -1183,7 +1648,7 @@ class CharProcessor(BaseProcessor):
                                 continue
                             if field_name == "CreatureId":
                                 continue
-                            # 处理其他字段（BaseChar, Direction, Distance, Location, Rotation, UseBattlePointId）
+                            # 处理其他字段(BaseChar, Direction, Distance, Location, Rotation, UseBattlePointId)
                             field_abbr = field_name[
                                 :2
                             ].lower()  # 简单缩写：BaseChar->bc, Direction->dr, etc.
@@ -1308,12 +1773,12 @@ class CharProcessor(BaseProcessor):
             if task_effects_result:
                 effects_result.append({"id": task_id, "t": task_effects_result})
 
-        # 构建buff引用数组（存储在新的b字段中）
+        # 构建buff引用数组(存储在新的b字段中)
         buffs_result = []
 
         # 处理从 SkillDescValues 中收集的 Buff 引用
         for buff_id in buff_ids:
-            # 跳过已在 e 字段中处理的 Buff ID（去重）
+            # 跳过已在 e 字段中处理的 Buff ID(去重)
             if buff_id in buff_ids_in_e:
                 continue
 
@@ -1340,7 +1805,7 @@ class CharProcessor(BaseProcessor):
     def _process_placeholder(self, field_value, passive_id, max_level, table):
         """处理占位符替换
 
-        替换字段值中的占位符（如 #1, #2 等）为实际值
+        替换字段值中的占位符(如 #1, #2 等)为实际值
 
         Args:
             field_value: 包含占位符的字段值
@@ -1506,8 +1971,8 @@ class CharProcessor(BaseProcessor):
         例如从 $...$*100$%攻击+$...$ 中提取 "{%}%攻击+{}"
 
         规则：
-        - 如果 $...$ 内部包含 *100，用 {%} 占位符（百分比）
-        - 否则用 {} 占位符（普通数值）
+        - 如果 $...$ 内部包含 *100，用 {%} 占位符(百分比)
+        - 否则用 {} 占位符(普通数值)
         - $...$ 外部的 % 直接保留为 % 字符
         """
         import re
@@ -1563,7 +2028,7 @@ class CharProcessor(BaseProcessor):
         if "*100" not in expr:
             return False
 
-        # 无完整描述上下文时，回退到旧逻辑（保持兼容）
+        # 无完整描述上下文时，回退到旧逻辑(保持兼容)
         if not isinstance(full_desc_value, str):
             return True
 
@@ -1680,9 +2145,7 @@ class CharProcessor(BaseProcessor):
 
     def process_skill_desc(self, skill_info, skill_id, max_level):
         """处理技能等级描述为紧凑格式"""
-        desc_keys = self._normalize_skill_desc_keys(
-            skill_info.get("SkillDescKeys", [])
-        )
+        desc_keys = self._normalize_skill_desc_keys(skill_info.get("SkillDescKeys", []))
         desc_values = self._normalize_skill_desc_values(
             skill_info.get("SkillDescValues", [])
         )
@@ -1756,10 +2219,10 @@ class CharProcessor(BaseProcessor):
             # 检查是否有格式
             format_template = self._extract_format_from_expr(preprocessed_desc_value)
 
-            # 分割表达式部分（处理复合表达式）
+            # 分割表达式部分(处理复合表达式)
 
             # 提取所有 $...$ 表达式，排除GText等特殊格式
-            # 只保留包含#的表达式（这些是数值计算表达式）
+            # 只保留包含#的表达式(这些是数值计算表达式)
             all_matches = re.findall(r"\$([^$]+)\$", preprocessed_desc_value)
             expr_matches = [m for m in all_matches if "#" in m]
             if not expr_matches:
@@ -1790,8 +2253,8 @@ class CharProcessor(BaseProcessor):
             if is_constant1:
                 final_value = values1[0]
                 if is_first_percentage:
-                    # 对于百分比，保持原始值（已经乘以100了）
-                    # 但要转换为小数形式（如17 -> 0.17）
+                    # 对于百分比，保持原始值(已经乘以100了)
+                    # 但要转换为小数形式(如17 -> 0.17)
                     final_value = final_value / 100.0
                 item["值"] = self.round_value(final_value)
             else:
@@ -1802,7 +2265,7 @@ class CharProcessor(BaseProcessor):
                     final_values.append(self.round_value(v))
                 item["值"] = final_values
 
-            # 计算第二个值（如果存在）
+            # 计算第二个值(如果存在)
             if len(expr_matches) > 1:
                 second_expr = expr_matches[1]
                 # 移除可能存在的%后缀
@@ -1835,7 +2298,7 @@ class CharProcessor(BaseProcessor):
             if format_template:
                 item["格式"] = format_template
 
-            # 基于字段引用的技能ID关联战斗数据（仅伤害字段）
+            # 基于字段引用的技能ID关联战斗数据(仅伤害字段)
             field_combat_meta = self._resolve_field_combat_meta(desc_values[i])
             if field_combat_meta.get("削韧"):
                 item["削韧"] = field_combat_meta["削韧"]
@@ -1887,7 +2350,7 @@ class CharProcessor(BaseProcessor):
             cancel, combo = self._get_skill_timing_by_begin_node(begin_node_id)
             mapping[0] = {"取消": cancel, "连段": combo}
 
-        # 分组1..N优先对应SubSkills（用户定义的子技能段）。
+        # 分组1..N优先对应SubSkills(用户定义的子技能段)。
         sub_skills = skill_info.get("SubSkills", [])
         for group_order in range(1, group_count):
             if group_order - 1 < len(sub_skills):
@@ -1919,7 +2382,7 @@ class CharProcessor(BaseProcessor):
         return skill_entry.get("BeginNodeId")
 
     def _resolve_field_combat_meta(self, desc_value):
-        """按字段引用的技能ID解析削韧/取消/连段（仅伤害字段）"""
+        """按字段引用的技能ID解析削韧/取消/连段(仅伤害字段)"""
         if not isinstance(desc_value, str):
             return {}
 
@@ -1974,7 +2437,7 @@ class CharProcessor(BaseProcessor):
         return result
 
     def _extract_referenced_ids(self, desc_value):
-        """提取字段中引用的 SkillEffects 与 SkillNode ID（按出现顺序去重）"""
+        """提取字段中引用的 SkillEffects 与 SkillNode ID(按出现顺序去重)"""
         if not isinstance(desc_value, str):
             return [], []
 
@@ -2139,7 +2602,7 @@ class CharProcessor(BaseProcessor):
         return result
 
     def _calc_skill_desc_value_raw(self, desc_value, skill_id, level):
-        """计算技能描述数值（原始数值，不格式化）"""
+        """计算技能描述数值(原始数值，不格式化)"""
         import re
 
         # 处理简单的数值表达式
@@ -2177,9 +2640,7 @@ class CharProcessor(BaseProcessor):
 
     def _process_skill_level_desc(self, skill_info, skill_id, level, language):
         """处理技能等级描述"""
-        desc_keys = self._normalize_skill_desc_keys(
-            skill_info.get("SkillDescKeys", [])
-        )
+        desc_keys = self._normalize_skill_desc_keys(skill_info.get("SkillDescKeys", []))
         desc_values = self._normalize_skill_desc_values(
             skill_info.get("SkillDescValues", [])
         )

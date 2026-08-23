@@ -5,6 +5,7 @@ from pathlib import Path
 from collections import OrderedDict
 from threading import Lock
 from typing import Any, Dict, List, Optional, Tuple
+from ._util import T_FALLBACK
 
 
 class BaseProcessor:
@@ -27,7 +28,9 @@ class BaseProcessor:
         self.dialogue_data_cache = {}
 
     @staticmethod
-    def _ref_outer_and_name(object_name: Optional[str]) -> Tuple[Optional[str], Optional[str]]:
+    def _ref_outer_and_name(
+        object_name: Optional[str],
+    ) -> Tuple[Optional[str], Optional[str]]:
         """解析对象引用的 Outer 与短名。"""
         if not object_name:
             return None, None
@@ -81,7 +84,11 @@ class BaseProcessor:
         object_name = ref_obj.get("ObjectName")
         object_path = ref_obj.get("ObjectPath")
         outer_name, short_name = BaseProcessor._ref_outer_and_name(object_name)
-        if by_path is not None and isinstance(object_path, str) and object_path in by_path:
+        if (
+            by_path is not None
+            and isinstance(object_path, str)
+            and object_path in by_path
+        ):
             return by_path[object_path]
         if outer_name and short_name:
             found = by_outer_name.get((outer_name, short_name))
@@ -160,7 +167,9 @@ class BaseProcessor:
         return index
 
     @classmethod
-    def _build_guide_point_loc_index(cls, guide_point_data: Dict[str, Any]) -> Dict[str, Dict[str, List[str]]]:
+    def _build_guide_point_loc_index(
+        cls, guide_point_data: Dict[str, Any]
+    ) -> Dict[str, Dict[str, List[str]]]:
         """构建导引点索引，避免每次查找全表扫描。"""
         by_normalized_name: Dict[str, List[str]] = {}
         by_token: Dict[str, List[str]] = {}
@@ -181,7 +190,9 @@ class BaseProcessor:
         return {"by_normalized_name": by_normalized_name, "by_token": by_token}
 
     @staticmethod
-    def _extract_guide_point_pos(guide_point_data: Optional[dict]) -> Tuple[Optional[int], Optional[List[float]]]:
+    def _extract_guide_point_pos(
+        guide_point_data: Optional[dict],
+    ) -> Tuple[Optional[int], Optional[List[float]]]:
         """将导引点数据收敛为 srId 与二维整数坐标。"""
         if not isinstance(guide_point_data, dict):
             return None, None
@@ -206,7 +217,9 @@ class BaseProcessor:
 
         return sr_id, pos
 
-    def _resolve_guide_point_pos(self, guide_point_name: Optional[str]) -> Tuple[Optional[int], Optional[List[float]]]:
+    def _resolve_guide_point_pos(
+        self, guide_point_name: Optional[str]
+    ) -> Tuple[Optional[int], Optional[List[float]]]:
         """按导引点名称读取真实坐标。"""
         if not isinstance(guide_point_name, str) or not guide_point_name:
             return None, None
@@ -222,7 +235,9 @@ class BaseProcessor:
         return re.sub(r"[^0-9A-Za-z]+", "", value).lower()
 
     @classmethod
-    def _extract_guide_point_name_tokens(cls, guide_point_name: Optional[str]) -> List[str]:
+    def _extract_guide_point_name_tokens(
+        cls, guide_point_name: Optional[str]
+    ) -> List[str]:
         """提取导引点名可用于检索的 token。"""
         if not isinstance(guide_point_name, str) or not guide_point_name:
             return []
@@ -264,18 +279,29 @@ class BaseProcessor:
             return candidates[0]
 
         normalized_candidates = [
-            (name, cls._normalize_guide_point_token(name))
-            for name in candidates
+            (name, cls._normalize_guide_point_token(name)) for name in candidates
         ]
-        exact = [name for name, normalized_name in normalized_candidates if normalized_name == normalized_token]
+        exact = [
+            name
+            for name, normalized_name in normalized_candidates
+            if normalized_name == normalized_token
+        ]
         if len(exact) == 1:
             return exact[0]
 
-        suffix = [name for name, normalized_name in normalized_candidates if normalized_name.endswith(normalized_token)]
+        suffix = [
+            name
+            for name, normalized_name in normalized_candidates
+            if normalized_name.endswith(normalized_token)
+        ]
         if len(suffix) == 1:
             return suffix[0]
 
-        contains = [name for name, normalized_name in normalized_candidates if normalized_token in normalized_name]
+        contains = [
+            name
+            for name, normalized_name in normalized_candidates
+            if normalized_token in normalized_name
+        ]
         if len(contains) == 1:
             return contains[0]
 
@@ -296,12 +322,16 @@ class BaseProcessor:
         if len(exact_matches) == 1:
             return exact_matches[0]
         if len(exact_matches) > 1:
-            picked = cls._pick_guide_point_name_from_candidates(normalized_token, exact_matches)
+            picked = cls._pick_guide_point_name_from_candidates(
+                normalized_token, exact_matches
+            )
             if picked:
                 return picked
 
         token_matches = by_token.get(normalized_token, [])
-        picked = cls._pick_guide_point_name_from_candidates(normalized_token, token_matches)
+        picked = cls._pick_guide_point_name_from_candidates(
+            normalized_token, token_matches
+        )
         if picked:
             return picked
 
@@ -343,7 +373,9 @@ class BaseProcessor:
         accumulate_attach_parent: bool = False,
     ) -> Optional[List[float]]:
         """从引用对象中直接解析坐标。"""
-        resolved_obj = BaseProcessor._resolve_ref_object(ref_obj, by_outer_name, by_name, by_path)
+        resolved_obj = BaseProcessor._resolve_ref_object(
+            ref_obj, by_outer_name, by_name, by_path
+        )
         if not isinstance(resolved_obj, dict):
             return None
 
@@ -389,7 +421,7 @@ class BaseProcessor:
                         by_path,
                         prefer_root_first=False,
                         accumulate_attach_parent=True,
-                        )
+                    )
                     if parent_loc is not None:
                         return [
                             local_loc[0] + parent_loc[0],
@@ -445,7 +477,9 @@ class BaseProcessor:
         def resolve_root_related() -> Optional[List[float]]:
             root_ref = props.get("RootComponent") or props.get("DefaultSceneRoot")
             if root_ref is not None:
-                loc = self._extract_ref_location(root_ref, by_outer_name, by_name, by_path)
+                loc = self._extract_ref_location(
+                    root_ref, by_outer_name, by_name, by_path
+                )
                 if loc is not None:
                     return loc
 
@@ -1009,9 +1043,11 @@ class BaseProcessor:
         # 从i18n_data中查找
         text_entry = self.i18n_data.get(text_key, {})
         if not text_entry:
-            return self.i18n_data_cn_alt.get(text_key, {}).get(
-                "TextMapContent", text_key
+            content = self.i18n_data_cn_alt.get(text_key, {}).get(
+                "TextMapContent", ""
             )
+            # T_FALLBACK 按文本 key 兜底（如未实装/占位文本）
+            return content or T_FALLBACK.get(text_key, text_key)
 
         # 获取当前语言
         language = language if language else self.data_loader.language
@@ -1053,7 +1089,8 @@ class BaseProcessor:
                     break
         if "{空格}" in content:
             content = content.replace("{空格}", " ")
-        return content or text_key
+        # T_FALLBACK 按文本 key 兜底（仅有真实翻译时优先用翻译，空值时用兜底）
+        return content or T_FALLBACK.get(text_key, text_key)
 
     def get_translated_dialogue(self, dialogue_key, language=""):
         """获取翻译后的对话文本

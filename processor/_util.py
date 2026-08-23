@@ -40,6 +40,10 @@ P_MAP = {
     "HyperTriggerCovertRate": "充盈威力转化",
 }
 
+T_FALLBACK = {
+    "UI_CHAR_NAME_5402": "莉莉蔻",
+}
+
 
 def get_attr_config_key_from_attr_data(attr_data, attr_config=None, unique_name=""):
     """按客户端 AvatarUtils 规则拼接属性键。"""
