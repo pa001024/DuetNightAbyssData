@@ -241,8 +241,9 @@ class CharProcessor(BaseProcessor):
         # if not processed.get("突破"):
         #     del processed["突破"]
         if not processed.get("溯源"):
+            # 溯源数据缺失时（未实装/占位角色，如 5402），不再丢弃整个角色，
+            # 仅省略溯源字段，其余可用字段照常导出。
             del processed["溯源"]
-            return None
 
         return processed
 

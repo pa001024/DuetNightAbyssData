@@ -8957,6 +8957,92 @@
     "碎片": 1003103
   },
   {
+    "id": 3104,
+    "icon": "Falu",
+    "名称": "Falsi",
+    "版本": "1.6",
+    "别名": "Cœur Forgé en Lame",
+    "阵营": "Empire Hyperboréen",
+    "属性": "火",
+    "精通": [
+      "Doubles lames",
+      "Lance-grenades"
+    ],
+    "标签": [
+      "DPS",
+      "Dégâts de compétence"
+    ],
+    "基础攻击": 21,
+    "基础生命": 96,
+    "基础防御": 288,
+    "基础护盾": 96,
+    "基础神智": 180,
+    "突破": [
+      {
+        "Pièce": 4160,
+        "Sel volatil endommagé": 10,
+        "Écaille de lézard flamboyant": 5
+      },
+      {
+        "Pièce": 8320,
+        "Réactif inflammable": 5,
+        "Flamme éternelle": 7
+      },
+      {
+        "Pièce": 13040,
+        "Réactif inflammable": 10,
+        "Flamme éternelle": 15
+      },
+      {
+        "Pièce": 27760,
+        "Réactif inflammable": 20,
+        "Chaînes embrasées": 6
+      },
+      {
+        "Pièce": 65280,
+        "Réactif inflammable": 40,
+        "Chaînes embrasées": 12
+      },
+      {
+        "Pièce": 194400,
+        "Réactif inflammable": 80,
+        "Chaînes embrasées": 25
+      }
+    ],
+    "技能": [
+      {
+        "id": 310401,
+        "类型": "Bonus",
+        "icon": "Heitao02_On",
+        "cd": 2,
+        "子技能": [
+          {
+            "id": 310411,
+            "类型": "Bonus",
+            "icon": "Heitao02_Off",
+            "cd": 2
+          }
+        ]
+      },
+      {
+        "id": 310402,
+        "类型": "Dégâts",
+        "icon": "Heitao02_On"
+      },
+      {
+        "id": 310403,
+        "类型": "Passive",
+        "icon": ""
+      },
+      {
+        "id": 310404,
+        "类型": "",
+        "icon": ""
+      }
+    ],
+    "碎片": 1003104
+  },
+  {
     "id": 3201,
     "icon": "Haier",
     "名称": "Vulcera",
@@ -15216,5 +15302,62 @@
       "Lorsqu’un allié affecté par [Formule purificatrice] inflige des dégâts à un ennemi affecté par [Formule de déclin], Daphne obtient 1 cumul augmentant les dégâts infligés de 7% pendant 12 s, jusqu’à un maximum de 3 cumuls.\nCet effet ne peut se produire qu’une fois par seconde."
     ],
     "碎片": 1005401
+  },
+  {
+    "id": 5402,
+    "icon": "Dafu",
+    "名称": "UI_CHAR_NAME_5402",
+    "版本": "2.0",
+    "别名": "UI_CHAR_SUBTITLE_5402",
+    "阵营": "Empire Hyperboréen",
+    "属性": "风",
+    "精通": [
+      "Arme d’hast",
+      "Fusil d’assaut"
+    ],
+    "基础攻击": 28,
+    "基础生命": 70,
+    "基础防御": 252,
+    "基础护盾": 140,
+    "基础神智": 150,
+    "突破": [],
+    "技能": [
+      {
+        "id": 540201,
+        "类型": "Bonus",
+        "icon": "Saiqi02_On",
+        "子技能": [
+          {
+            "id": 540211,
+            "类型": "Bonus",
+            "icon": "Saiqi02_Off"
+          }
+        ]
+      },
+      {
+        "id": 540202,
+        "类型": "Bonus",
+        "icon": "Dafu02",
+        "cd": 5,
+        "子技能": [
+          {
+            "id": 540221,
+            "类型": "Bonus",
+            "icon": "Dafu02",
+            "cd": 1
+          }
+        ]
+      },
+      {
+        "id": 540203,
+        "类型": "Passive",
+        "icon": "Dafu03"
+      },
+      {
+        "id": 540204,
+        "类型": "Passive",
+        "icon": "ExtraPassive"
+      }
+    ]
   }
 ]

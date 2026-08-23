@@ -8957,6 +8957,92 @@
     "碎片": 1003103
   },
   {
+    "id": 3104,
+    "icon": "Falu",
+    "名称": "Falsi",
+    "版本": "1.6",
+    "别名": "A Heart Tempered into a Blade",
+    "阵营": "The Hyperborean Empire",
+    "属性": "火",
+    "精通": [
+      "Dual Blades",
+      "Grenade Launcher"
+    ],
+    "标签": [
+      "DPS",
+      "Skill DMG"
+    ],
+    "基础攻击": 21,
+    "基础生命": 96,
+    "基础防御": 288,
+    "基础护盾": 96,
+    "基础神智": 180,
+    "突破": [
+      {
+        "Coin": 4160,
+        "Damaged Sal Volatile": 10,
+        "Flame Lizard Scale": 5
+      },
+      {
+        "Coin": 8320,
+        "Fuel Reagent": 5,
+        "Everbright Flame": 7
+      },
+      {
+        "Coin": 13040,
+        "Fuel Reagent": 10,
+        "Everbright Flame": 15
+      },
+      {
+        "Coin": 27760,
+        "Fuel Reagent": 20,
+        "Fire-Tempered Shackles": 6
+      },
+      {
+        "Coin": 65280,
+        "Fuel Reagent": 40,
+        "Fire-Tempered Shackles": 12
+      },
+      {
+        "Coin": 194400,
+        "Fuel Reagent": 80,
+        "Fire-Tempered Shackles": 25
+      }
+    ],
+    "技能": [
+      {
+        "id": 310401,
+        "类型": "Buff",
+        "icon": "Heitao02_On",
+        "cd": 2,
+        "子技能": [
+          {
+            "id": 310411,
+            "类型": "Buff",
+            "icon": "Heitao02_Off",
+            "cd": 2
+          }
+        ]
+      },
+      {
+        "id": 310402,
+        "类型": "DMG",
+        "icon": "Heitao02_On"
+      },
+      {
+        "id": 310403,
+        "类型": "Passive",
+        "icon": ""
+      },
+      {
+        "id": 310404,
+        "类型": "",
+        "icon": ""
+      }
+    ],
+    "碎片": 1003104
+  },
+  {
     "id": 3201,
     "icon": "Haier",
     "名称": "Hellfire",
@@ -15216,5 +15302,62 @@
       "When a teammate applied with [Purification Formula] deals damage to an enemy inflicted with [Decay Formula], Daphne gains 1 stack that increases Damage Dealt by 7% for 12s, up to 3 stacks. This effect can only be triggered once per second."
     ],
     "碎片": 1005401
+  },
+  {
+    "id": 5402,
+    "icon": "Dafu",
+    "名称": "UI_CHAR_NAME_5402",
+    "版本": "2.0",
+    "别名": "UI_CHAR_SUBTITLE_5402",
+    "阵营": "The Hyperborean Empire",
+    "属性": "风",
+    "精通": [
+      "Polearm",
+      "Assault Rifle"
+    ],
+    "基础攻击": 28,
+    "基础生命": 70,
+    "基础防御": 252,
+    "基础护盾": 140,
+    "基础神智": 150,
+    "突破": [],
+    "技能": [
+      {
+        "id": 540201,
+        "类型": "Buff",
+        "icon": "Saiqi02_On",
+        "子技能": [
+          {
+            "id": 540211,
+            "类型": "Buff",
+            "icon": "Saiqi02_Off"
+          }
+        ]
+      },
+      {
+        "id": 540202,
+        "类型": "Buff",
+        "icon": "Dafu02",
+        "cd": 5,
+        "子技能": [
+          {
+            "id": 540221,
+            "类型": "Buff",
+            "icon": "Dafu02",
+            "cd": 1
+          }
+        ]
+      },
+      {
+        "id": 540203,
+        "类型": "Passive",
+        "icon": "Dafu03"
+      },
+      {
+        "id": 540204,
+        "类型": "Passive",
+        "icon": "ExtraPassive"
+      }
+    ]
   }
 ]
