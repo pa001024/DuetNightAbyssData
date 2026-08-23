@@ -6776,7 +6776,7 @@
       52204
     ],
     "触发": 1.0,
-    "HyperTriggerCovertRate": 1.0,
+    "充盈威力转化": 1.0,
     "效果": "La part de Chance de déclenchement dépassant 100 % est convertie en Puissance de Surabondance du personnage à hauteur de 100.0%."
   },
   {
@@ -6998,7 +6998,7 @@
       53013
     ],
     "触发": 1.0,
-    "HyperTriggerCovertRate": 1.0,
+    "充盈威力转化": 1.0,
     "效果": "La part de Chance de déclenchement dépassant 100 % est convertie en Puissance de Surabondance du personnage à hauteur de 100.0%."
   },
   {
