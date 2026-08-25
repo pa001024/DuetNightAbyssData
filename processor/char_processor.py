@@ -956,11 +956,13 @@ class CharProcessor(BaseProcessor):
             skill_entry = skill_entry[0]
         return skill_entry if isinstance(skill_entry, dict) else None
 
-    def _attr_cn(self, attr_name):
+    def _attr_cn(self, attr_name, attr_data=None):
         """属性名转中文（与 mod 属性同一流程：自带翻译 -> P_MAP）。
 
         顺序：基础属性表(_BASE_ATTR_CN) -> AttrConfig.Name 的 i18n 自带翻译
         -> P_MAP 兜底（_util.P_MAP，键可为中文名缩写或原始属性名）。
+        attr_data: 完整属性字典（含 RateZone/DamageTag 等），用于把
+        DamageRate/DamagedRate 解析到精确配置键（如 DamageRate_Almighty -> 全属性穿透）。
         """
         if not attr_name:
             return attr_name
@@ -969,8 +971,12 @@ class CharProcessor(BaseProcessor):
         if base_cn:
             return base_cn
         # 2) 自带翻译（和 mod 属性一致：AttrConfig 键解析 -> Name -> i18n）
+        lookup_attr = (
+            dict(attr_data) if isinstance(attr_data, dict) else {"AttrName": attr_name}
+        )
+        lookup_attr["AttrName"] = attr_name
         attr_key = get_attr_config_key_from_attr_data(
-            {"AttrName": attr_name}, self.attr_config
+            lookup_attr, self.attr_config
         )
         cfg = (
             self.attr_config.get(attr_key)
@@ -1054,7 +1060,7 @@ class CharProcessor(BaseProcessor):
                 value = attr.get("Rate")
             # 叠层 buff：每层加成 + 层数上限
             if attr.get("Stackable") and value is not None:
-                text = f"每层+{self._fmt_rate(value)}{self._attr_cn(attr_name)}"
+                text = f"每层+{self._fmt_rate(value)}{self._attr_cn(attr_name, attr)}"
                 max_layer = buff.get("MaxLayer")
                 if max_layer:
                     text += f"(最多{self._fmt_num(max_layer)}层)"
@@ -1064,12 +1070,12 @@ class CharProcessor(BaseProcessor):
             sup_limit = attr.get("SupLimitValue")
             if sup_limit is not None:
                 bits.append(
-                    f"{self._attr_cn(attr_name)}上限{self._fmt_rate(sup_limit)}"
+                    f"{self._attr_cn(attr_name, attr)}上限{self._fmt_rate(sup_limit)}"
                 )
                 continue
             if value is not None:
                 bits.append(
-                    f"{self._attr_cn(attr_name)}+{self._fmt_percent(attr_name, value)}"
+                    f"{self._attr_cn(attr_name, attr)}+{self._fmt_percent(attr_name, value)}"
                 )
         for dot in buff.get("DotDatas", []) or []:
             if isinstance(dot, dict):
