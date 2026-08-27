@@ -2271,5 +2271,516 @@ return ReadOnly("PetBreak", {
       PetBreakNum = 0,
       PetId = 4944
     }
+  },
+  [510011] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510011
+    }
+  },
+  [510012] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510012
+    }
+  },
+  [510013] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510013
+    }
+  },
+  [510021] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510021
+    }
+  },
+  [510022] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510022
+    }
+  },
+  [510023] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510023
+    }
+  },
+  [510031] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510031
+    }
+  },
+  [510032] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510032
+    }
+  },
+  [510033] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510033
+    }
+  },
+  [510041] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510041
+    }
+  },
+  [510061] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510061
+    }
+  },
+  [510062] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510062
+    }
+  },
+  [510063] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510063
+    }
+  },
+  [510071] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510071
+    }
+  },
+  [510072] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510072
+    }
+  },
+  [510073] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510073
+    }
+  },
+  [510081] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510081
+    }
+  },
+  [510082] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510082
+    }
+  },
+  [510083] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510083
+    }
+  },
+  [510091] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510091
+    }
+  },
+  [510092] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510092
+    }
+  },
+  [510093] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510093
+    }
+  },
+  [510101] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510101
+    }
+  },
+  [510102] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510102
+    }
+  },
+  [510103] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510103
+    }
+  },
+  [510111] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510111
+    }
+  },
+  [510112] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510112
+    }
+  },
+  [510113] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510113
+    }
+  },
+  [510121] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510121
+    }
+  },
+  [510122] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510122
+    }
+  },
+  [510123] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510123
+    }
+  },
+  [510131] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510131
+    }
+  },
+  [510132] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510132
+    }
+  },
+  [510133] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510133
+    }
+  },
+  [510141] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510141
+    }
+  },
+  [510142] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510142
+    }
+  },
+  [510143] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510143
+    }
+  },
+  [510151] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510151
+    }
+  },
+  [510152] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510152
+    }
+  },
+  [510153] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510153
+    }
+  },
+  [510161] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510161
+    }
+  },
+  [510171] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510171
+    }
+  },
+  [510181] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510181
+    }
+  },
+  [510191] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510191
+    }
+  },
+  [510192] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510192
+    }
+  },
+  [510193] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510193
+    }
+  },
+  [510201] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510201
+    }
+  },
+  [510202] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510202
+    }
+  },
+  [510203] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510203
+    }
+  },
+  [510211] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510211
+    }
+  },
+  [510212] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510212
+    }
+  },
+  [510213] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510213
+    }
+  },
+  [510221] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510221
+    }
+  },
+  [510222] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510222
+    }
+  },
+  [510223] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510223
+    }
+  },
+  [510231] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510231
+    }
+  },
+  [510232] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510232
+    }
+  },
+  [510233] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510233
+    }
+  },
+  [510241] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510241
+    }
+  },
+  [510242] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510242
+    }
+  },
+  [510243] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510243
+    }
+  },
+  [510251] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510251
+    }
+  },
+  [510252] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510252
+    }
+  },
+  [510253] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510253
+    }
+  },
+  [510261] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510261
+    }
+  },
+  [510262] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510262
+    }
+  },
+  [510263] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510263
+    }
+  },
+  [510271] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510271
+    }
+  },
+  [510272] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510272
+    }
+  },
+  [510273] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510273
+    }
+  },
+  [510281] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510281
+    }
+  },
+  [510291] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510291
+    }
+  },
+  [510301] = {
+    [0] = {
+      EntryNum = 1,
+      PetBreakNum = 0,
+      PetId = 510301
+    }
   }
 })

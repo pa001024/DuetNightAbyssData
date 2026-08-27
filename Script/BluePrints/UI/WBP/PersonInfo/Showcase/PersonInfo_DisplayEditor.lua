@@ -194,7 +194,6 @@ end
 function M:SetCharacterToSlot(SlotIndex, CharData, Avatar, AppearanceInfo)
   local Draft = self:_CloneDraft(self.Draft)
   DisplayRules:AssignCharacterToSlot(Draft, SlotIndex or 1, CharData, Avatar, AppearanceInfo)
-  DisplayRules:NormalizeCharacterSlots(Draft)
   return self:_CommitDraftIfChanged(Draft, {
     Type = "CharacterChooseCommit",
     AffectedSlotIndices = {

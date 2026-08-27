@@ -32,7 +32,8 @@ function TalkTaskDataBase_C.New(TalkNodeData)
   Obj.bPauseGameGlobal = TalkNodeData.PauseGameGlobal
   Obj.bDisableMonsterAI = TalkNodeData.DisableMonsterAI
   Obj.bDisableNPCAI = TalkNodeData.DisableNPCAI
-  Obj.bHideAllBattleEntity = TalkNodeData.HideAllBattleEntity
+  Obj.bHidePickup = TalkNodeData.bHidePickup
+  Obj.bHideSkillCreature = TalkNodeData.bHideSkillCreature
   Obj.bDisableMonsterAIForSimpleTalk = TalkNodeData.DisableMonsterAIForSimpleTalk
   Obj.bHideElseCharacter = TalkNodeData.HideElseCharacter
   Obj.BeginTargetPoint = GameState:GetTargetPoint(TalkNodeData.BeginNewTargetPointName)
@@ -65,7 +66,7 @@ function TalkTaskDataBase_C.New(TalkNodeData)
   Obj.ProceduralCameraId = TalkNodeData.ProceduralCameraId
   Obj.IsPlayStartSound = TalkNodeData.IsPlayStartSound
   Obj.CameraBlendEaseExp = TalkNodeData.CameraBlendEaseExp or 2
-  Obj.bHideEffectCreature = TalkNodeData.HideEffectCreature
+  Obj.bHideSceneEffects = TalkNodeData.bHideSceneEffects
   Obj.bOverrideFailBlend = TalkNodeData.bOverrideFailBlend
   Obj.FailOutType = TalkNodeData.FailOutType
   Obj.FailOutTime = TalkNodeData.FailOutTime

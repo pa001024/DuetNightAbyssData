@@ -68,12 +68,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -126,7 +126,6 @@ return {
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
               ShowSkipButton = true,
-              ShowAutoPlayButton = true,
               ShowReviewButton = true,
               bBubblePlayCDEnable = true,
               BubblePlayCD = 10,

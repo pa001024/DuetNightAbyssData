@@ -1086,6 +1086,111 @@ return ReadOnly("InterfaceJump", {
     JumpType = "SelfDefinedJump",
     PortalUnlockCondition = {4431}
   },
+  [134] = {
+    InterfaceJumpId = 134,
+    JumpParameter1 = "JumpToShopPage",
+    JumpParameter2 = "10014",
+    JumpParameter3 = "100141",
+    JumpParameter4 = "nil",
+    JumpParameter5 = "MonsterDuelShop",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [135] = {
+    InterfaceJumpId = 135,
+    JumpParameter1 = "ActivityMoneyTree",
+    JumpType = "MereJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [136] = {
+    InterfaceJumpId = 136,
+    JumpParameter1 = "JumpToEventPage",
+    JumpParameter2 = "117",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [137] = {
+    InterfaceJumpId = 137,
+    JumpParameter1 = "JumpToEventPage",
+    JumpParameter2 = "129",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [138] = {
+    InterfaceJumpId = 138,
+    JumpParameter1 = "JumpToEventPage",
+    JumpParameter2 = "52",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [139] = {
+    InterfaceJumpId = 139,
+    JumpParameter1 = "JumpToEventPage",
+    JumpParameter2 = "122",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [140] = {
+    InterfaceJumpId = 140,
+    JumpParameter1 = "JumpToEventPage",
+    JumpParameter2 = "128",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [141] = {
+    InterfaceJumpId = 141,
+    JumpParameter1 = "ModArchiveMain",
+    JumpType = "MereJump",
+    PortalUnlockCondition = {4350},
+    PortalUnlockTips = "UI_Locked_Des_ModArchive"
+  },
+  [142] = {
+    InterfaceJumpId = 142,
+    JumpParameter1 = "JumpToEventPage",
+    JumpParameter2 = "124",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [143] = {
+    InterfaceJumpId = 143,
+    JumpParameter1 = "JumpToEventPage",
+    JumpParameter2 = "125",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [144] = {
+    InterfaceJumpId = 144,
+    JumpParameter1 = "JumpToEventPage",
+    JumpParameter2 = "121003",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [145] = {
+    InterfaceJumpId = 145,
+    JumpParameter1 = "JumpToEventPage",
+    JumpParameter2 = "116",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [146] = {
+    InterfaceJumpId = 146,
+    JumpParameter1 = "JumpToEventPage",
+    JumpParameter2 = "111006",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
   [1101] = {
     InterfaceJumpId = 1101,
     JumpParameter1 = "JumpToArmory",

@@ -78,48 +78,6 @@ return {
       questNodeData = {
         lineData = {
           {
-            startQuest = "1781007495632753",
-            startPort = "Out",
-            endQuest = "17810077084171406",
-            endPort = "In"
-          },
-          {
-            startQuest = "17810094968306673",
-            startPort = "Out",
-            endQuest = "1781007495632753",
-            endPort = "In"
-          },
-          {
-            startQuest = "17810096476047417",
-            startPort = "Out",
-            endQuest = "17810097659327934",
-            endPort = "In"
-          },
-          {
-            startQuest = "17810096476047417",
-            startPort = "Out",
-            endQuest = "17810097659327935",
-            endPort = "In"
-          },
-          {
-            startQuest = "17810096476047417",
-            startPort = "Out",
-            endQuest = "17810094968306673",
-            endPort = "In"
-          },
-          {
-            startQuest = "17810077084171406",
-            startPort = "Out",
-            endQuest = "17810098086459132",
-            endPort = "In"
-          },
-          {
-            startQuest = "17810098086459132",
-            startPort = "Out",
-            endQuest = "178100998821011672",
-            endPort = "In"
-          },
-          {
             startQuest = "17810086937653827",
             startPort = "Out",
             endQuest = "178101019900713026",
@@ -138,24 +96,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "178100998821011672",
-            startPort = "Out",
-            endQuest = "17810086937653827",
-            endPort = "In"
-          },
-          {
-            startQuest = "178101035102115679",
-            startPort = "Out",
-            endQuest = "178101042707816987",
-            endPort = "In"
-          },
-          {
-            startQuest = "178101042707816987",
-            startPort = "Out",
-            endQuest = "178101000713112092",
-            endPort = "In"
-          },
-          {
             startQuest = "178101047110118454",
             startPort = "Out",
             endQuest = "178101047110118455",
@@ -171,18 +111,6 @@ return {
             startQuest = "178101038319916736",
             startPort = "Out",
             endQuest = "178101047110118454",
-            endPort = "In"
-          },
-          {
-            startQuest = "178101042707816987",
-            startPort = "Out",
-            endQuest = "178101052154720047",
-            endPort = "In"
-          },
-          {
-            startQuest = "178101144210522173",
-            startPort = "Out",
-            endQuest = "178101035102115679",
             endPort = "In"
           },
           {
@@ -210,42 +138,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17810116771071043512",
-            startPort = "Out",
-            endQuest = "17810117411421044866",
-            endPort = "In"
-          },
-          {
-            startQuest = "17810117510811045117",
-            startPort = "Out",
-            endQuest = "17810117584881045421",
-            endPort = "In"
-          },
-          {
-            startQuest = "17810117510811045117",
-            startPort = "Out",
-            endQuest = "17810117584881045422",
-            endPort = "In"
-          },
-          {
-            startQuest = "17810117584881045421",
-            startPort = "Out",
-            endQuest = "17810117897351045859",
-            endPort = "Input_1"
-          },
-          {
-            startQuest = "17810117584881045422",
-            startPort = "Out",
-            endQuest = "17810117897351045859",
-            endPort = "Input_2"
-          },
-          {
-            startQuest = "17810117897351045859",
-            startPort = "Out",
-            endQuest = "1781007140944115",
-            endPort = "Fail"
-          },
-          {
             startQuest = "17810131289813081201",
             startPort = "Out",
             endQuest = "17810116189121042686",
@@ -262,6 +154,360 @@ return {
             startPort = "Out",
             endQuest = "17810131289813081201",
             endPort = "In"
+          },
+          {
+            startQuest = "17810098086459132",
+            startPort = "Out",
+            endQuest = "178100998821011672",
+            endPort = "In"
+          },
+          {
+            startQuest = "17833460842984348",
+            startPort = "Out",
+            endQuest = "17810077084171406",
+            endPort = "In"
+          },
+          {
+            startQuest = "17810077084171406",
+            startPort = "Out",
+            endQuest = "17810086937653827",
+            endPort = "In"
+          },
+          {
+            startQuest = "17833485082937630888",
+            startPort = "Out",
+            endQuest = "17833485082937630889",
+            endPort = "In"
+          },
+          {
+            startQuest = "17833485082937630888",
+            startPort = "Out",
+            endQuest = "17833485082937630890",
+            endPort = "In"
+          },
+          {
+            startQuest = "17833485082937630888",
+            startPort = "Out",
+            endQuest = "17833485082947630892",
+            endPort = "In"
+          },
+          {
+            startQuest = "17833485082937630888",
+            startPort = "Out",
+            endQuest = "17833485082937630891",
+            endPort = "In"
+          },
+          {
+            startQuest = "17833485082937630888",
+            startPort = "Out",
+            endQuest = "17833485082947630896",
+            endPort = "In"
+          },
+          {
+            startQuest = "17833485082937630888",
+            startPort = "Out",
+            endQuest = "17833485082947630895",
+            endPort = "In"
+          },
+          {
+            startQuest = "17833485082937630888",
+            startPort = "Out",
+            endQuest = "17833485082947630894",
+            endPort = "In"
+          },
+          {
+            startQuest = "17833485082937630888",
+            startPort = "Out",
+            endQuest = "17833485082947630893",
+            endPort = "In"
+          },
+          {
+            startQuest = "17833485082937630888",
+            startPort = "Out",
+            endQuest = "17833485082947630897",
+            endPort = "In"
+          },
+          {
+            startQuest = "178100714094399",
+            startPort = "QuestStart",
+            endQuest = "17833485082937630888",
+            endPort = "In"
+          },
+          {
+            startQuest = "17833485082937630888",
+            startPort = "Out",
+            endQuest = "17833460842984348",
+            endPort = "In"
+          },
+          {
+            startQuest = "17833485945538720198",
+            startPort = "Out",
+            endQuest = "17833485945538720199",
+            endPort = "In"
+          },
+          {
+            startQuest = "17833485945538720198",
+            startPort = "Out",
+            endQuest = "17833485945538720200",
+            endPort = "In"
+          },
+          {
+            startQuest = "17833485945538720198",
+            startPort = "Out",
+            endQuest = "17833485945538720201",
+            endPort = "In"
+          },
+          {
+            startQuest = "17833485945538720198",
+            startPort = "Out",
+            endQuest = "17833485945538720202",
+            endPort = "In"
+          },
+          {
+            startQuest = "17833485945538720198",
+            startPort = "Out",
+            endQuest = "17833485945538720203",
+            endPort = "In"
+          },
+          {
+            startQuest = "17833485945538720198",
+            startPort = "Out",
+            endQuest = "17833485945538720204",
+            endPort = "In"
+          },
+          {
+            startQuest = "17833485945538720198",
+            startPort = "Out",
+            endQuest = "17833485945538720205",
+            endPort = "In"
+          },
+          {
+            startQuest = "17833485945538720198",
+            startPort = "Out",
+            endQuest = "17833485945538720206",
+            endPort = "In"
+          },
+          {
+            startQuest = "17833485945538720199",
+            startPort = "Out",
+            endQuest = "17833485945538720207",
+            endPort = "Input_1"
+          },
+          {
+            startQuest = "17833485945538720200",
+            startPort = "Out",
+            endQuest = "17833485945538720207",
+            endPort = "Input_2"
+          },
+          {
+            startQuest = "17833485945538720201",
+            startPort = "Out",
+            endQuest = "17833485945538720207",
+            endPort = "Input_3"
+          },
+          {
+            startQuest = "17833485945538720202",
+            startPort = "Out",
+            endQuest = "17833485945538720207",
+            endPort = "Input_4"
+          },
+          {
+            startQuest = "17833485945538720203",
+            startPort = "Out",
+            endQuest = "17833485945538720207",
+            endPort = "Input_6"
+          },
+          {
+            startQuest = "17833485945538720205",
+            startPort = "Out",
+            endQuest = "17833485945538720207",
+            endPort = "Input_8"
+          },
+          {
+            startQuest = "17833485945538720204",
+            startPort = "Out",
+            endQuest = "17833485945538720207",
+            endPort = "Input_7"
+          },
+          {
+            startQuest = "17833485945538720206",
+            startPort = "Out",
+            endQuest = "17833485945538720207",
+            endPort = "Input_9"
+          },
+          {
+            startQuest = "17833485945538720198",
+            startPort = "Out",
+            endQuest = "17833485945538720208",
+            endPort = "In"
+          },
+          {
+            startQuest = "17833485945538720208",
+            startPort = "Out",
+            endQuest = "17833485945538720207",
+            endPort = "Input_5"
+          },
+          {
+            startQuest = "178100714094399",
+            startPort = "QuestStart",
+            endQuest = "17833485945538720198",
+            endPort = "In"
+          },
+          {
+            startQuest = "17833485945538720207",
+            startPort = "Out",
+            endQuest = "1781007140944115",
+            endPort = "Fail"
+          },
+          {
+            startQuest = "17833486144648720663",
+            startPort = "Out",
+            endQuest = "17833486144648720671",
+            endPort = "Input_1"
+          },
+          {
+            startQuest = "17833486144648720664",
+            startPort = "Out",
+            endQuest = "17833486144648720671",
+            endPort = "Input_2"
+          },
+          {
+            startQuest = "17833486144648720665",
+            startPort = "Out",
+            endQuest = "17833486144648720671",
+            endPort = "Input_3"
+          },
+          {
+            startQuest = "17833486144648720666",
+            startPort = "Out",
+            endQuest = "17833486144648720671",
+            endPort = "Input_4"
+          },
+          {
+            startQuest = "17833486144648720667",
+            startPort = "Out",
+            endQuest = "17833486144648720671",
+            endPort = "Input_6"
+          },
+          {
+            startQuest = "17833486144648720669",
+            startPort = "Out",
+            endQuest = "17833486144648720671",
+            endPort = "Input_8"
+          },
+          {
+            startQuest = "17833486144648720668",
+            startPort = "Out",
+            endQuest = "17833486144648720671",
+            endPort = "Input_7"
+          },
+          {
+            startQuest = "17833486144648720670",
+            startPort = "Out",
+            endQuest = "17833486144648720671",
+            endPort = "Input_9"
+          },
+          {
+            startQuest = "17833486144648720672",
+            startPort = "Out",
+            endQuest = "17833486144648720671",
+            endPort = "Input_5"
+          },
+          {
+            startQuest = "17810116771071043512",
+            startPort = "Out",
+            endQuest = "17833486144648720663",
+            endPort = "In"
+          },
+          {
+            startQuest = "17833486144648720671",
+            startPort = "Out",
+            endQuest = "17810117411421044866",
+            endPort = "In"
+          },
+          {
+            startQuest = "17810116771071043512",
+            startPort = "Out",
+            endQuest = "17833486144648720664",
+            endPort = "In"
+          },
+          {
+            startQuest = "17810116771071043512",
+            startPort = "Out",
+            endQuest = "17833486144648720665",
+            endPort = "In"
+          },
+          {
+            startQuest = "17810116771071043512",
+            startPort = "Out",
+            endQuest = "17833486144648720666",
+            endPort = "In"
+          },
+          {
+            startQuest = "17810116771071043512",
+            startPort = "Out",
+            endQuest = "17833486144648720672",
+            endPort = "In"
+          },
+          {
+            startQuest = "17810116771071043512",
+            startPort = "Out",
+            endQuest = "17833486144648720667",
+            endPort = "In"
+          },
+          {
+            startQuest = "17810116771071043512",
+            startPort = "Out",
+            endQuest = "17833486144648720668",
+            endPort = "In"
+          },
+          {
+            startQuest = "17810116771071043512",
+            startPort = "Out",
+            endQuest = "17833486144648720669",
+            endPort = "In"
+          },
+          {
+            startQuest = "17810116771071043512",
+            startPort = "Out",
+            endQuest = "17833486144648720670",
+            endPort = "In"
+          },
+          {
+            startQuest = "178600365393622276137",
+            startPort = "Out",
+            endQuest = "178600383809922276953",
+            endPort = "In"
+          },
+          {
+            startQuest = "178600383809922276953",
+            startPort = "Out",
+            endQuest = "178600389148522277275",
+            endPort = "In"
+          },
+          {
+            startQuest = "178600389148522277275",
+            startPort = "Out",
+            endQuest = "178101052154720047",
+            endPort = "In"
+          },
+          {
+            startQuest = "17810086937653827",
+            startPort = "Out",
+            endQuest = "178101035102115679",
+            endPort = "In"
+          },
+          {
+            startQuest = "178101144210522173",
+            startPort = "Out",
+            endQuest = "178101042707816987",
+            endPort = "In"
+          },
+          {
+            startQuest = "178101144210522173",
+            startPort = "Out",
+            endQuest = "178600365393622276137",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -269,28 +515,28 @@ return {
             key = "178100714094399",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 800, y = 300},
+            pos = {x = -170.000024668376, y = 320.00000050862633},
             propsData = {ModeType = 0}
           },
           ["1781007140944107"] = {
             key = "1781007140944107",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 3376.095938303734, y = 526.0545868813476},
+            pos = {x = 4979.429203678945, y = 686.0545800996639},
             propsData = {ModeType = 0}
           },
           ["1781007140944115"] = {
             key = "1781007140944115",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 2472.751703621419, y = 1737.3485919895525},
+            pos = {x = 2575.6928877918003, y = 2059.1538867060253},
             propsData = {}
           },
           ["1781007495632753"] = {
             key = "1781007495632753",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1711.5243398292043, y = 71.1617933763163},
+            pos = {x = 1482.492084583039, y = -207.8704612545754},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 11108501,
@@ -306,15 +552,15 @@ return {
           ["17810077084171406"] = {
             key = "17810077084171406",
             type = "ChangeStaticCreatorNode",
-            name = "生成小孩和脚印机关",
-            pos = {x = 1956.3680908601427, y = 77.50115364635485},
+            name = "生成小孩",
+            pos = {x = 1784.9282819042407, y = 87.68998104794751},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
               EnableFadeIn = false,
               EnableFadeOut = false,
               NewTargetPointName = "",
-              StaticCreatorIdList = {0}
+              StaticCreatorIdList = {312940006}
             }
           },
           ["17810086937653827"] = {
@@ -328,7 +574,7 @@ return {
               NpcId = 111162,
               GuideUIEnable = true,
               GuideType = "N",
-              GuidePointName = "",
+              GuidePointName = "Npc_Ailiou_312940006",
               DelayShowGuideTime = 0,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
@@ -346,10 +592,10 @@ return {
               ProceduralCameraId = 1,
               HideNpcs = false,
               HideMonsters = true,
-              HideAllBattleEntity = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
               HideMechanismsFX = false,
               ShowSkipButton = true,
-              ShowAutoPlayButton = true,
               ShowReviewButton = true,
               ShowWikiButton = true,
               SkipToOption = false,
@@ -389,7 +635,7 @@ return {
             key = "17810094968306673",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示指引点节点",
-            pos = {x = 1466.9277953241474, y = 56.29766168412281},
+            pos = {x = 2258.4698784088787, y = -687.4080724292618},
             propsData = {
               IsShow = true,
               bOpenRangeEffect = false,
@@ -397,53 +643,11 @@ return {
               GuideName = ""
             }
           },
-          ["17810096476047417"] = {
-            key = "17810096476047417",
-            type = "ChangeRoleNode",
-            name = "切换角色",
-            pos = {x = 1090.5982111577052, y = 118.42125149573518},
-            propsData = {QuestRoleId = 1040101, IsPlayFX = false}
-          },
-          ["17810097659327934"] = {
-            key = "17810097659327934",
-            type = "ForbidWeaponByWeaponTagNode",
-            name = "禁用/启用武器节点",
-            pos = {x = 1435.611426161098, y = -575.9134126982518},
-            propsData = {
-              WeaponTags = {"Melee", "Ranged"},
-              bForbid = true,
-              ForbidTag = "ForbidDefault",
-              bHidewhenForbid = true
-            }
-          },
-          ["17810097659327935"] = {
-            key = "17810097659327935",
-            type = "ActivePlayerSkillsNode",
-            name = "激活/失效 玩家技能",
-            pos = {x = 1435.9553414875713, y = -421.1720945958298},
-            propsData = {
-              PlayerId = 0,
-              bActiveEnable = false,
-              ActiveType = "Lock",
-              SkillNameList = {
-                "Avoid",
-                "BulletJump",
-                "Attack",
-                "Jump",
-                "Slide",
-                "SecondJump",
-                "Skill1",
-                "Skill2",
-                "Skill3",
-                "Fire"
-              }
-            }
-          },
           ["17810098086459132"] = {
             key = "17810098086459132",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 2244.1314048937393, y = 69.78010804666624},
+            pos = {x = 2289.292694660589, y = -378.60698320991116},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 0,
@@ -455,7 +659,7 @@ return {
             key = "178100998821011672",
             type = "ShowOrHideTaskIndicatorNode",
             name = "隐藏指引点节点",
-            pos = {x = 2479.5924825381794, y = 82.74072200296864},
+            pos = {x = 2569.9150620718783, y = -362.42056284169087},
             propsData = {
               IsShow = false,
               bOpenRangeEffect = false,
@@ -467,7 +671,7 @@ return {
             key = "178101000713112092",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示任务指引点节点",
-            pos = {x = 2209.5951718658725, y = 458.5551057505836},
+            pos = {x = 3472.4983821317, y = -446.2835927923657},
             propsData = {
               IsShow = true,
               bOpenRangeEffect = false,
@@ -478,7 +682,7 @@ return {
           ["178101019900713026"] = {
             key = "178101019900713026",
             type = "ChangeStaticCreatorNode",
-            name = "销毁小孩脚印机关",
+            name = "销毁小孩",
             pos = {x = 2992.1234893685105, y = 102.75726616890829},
             propsData = {
               ActiveEnable = false,
@@ -486,28 +690,28 @@ return {
               EnableFadeIn = false,
               EnableFadeOut = false,
               NewTargetPointName = "",
-              StaticCreatorIdList = {0}
+              StaticCreatorIdList = {312940006}
             }
           },
           ["178101035102115679"] = {
             key = "178101035102115679",
             type = "ChangeStaticCreatorNode",
-            name = "生成脚印机关与法露茜",
-            pos = {x = 1499.5159928115575, y = 728.6614501569354},
+            name = "生成法露茜",
+            pos = {x = 3075.2302441779984, y = -71.33853240444884},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
               EnableFadeIn = false,
               EnableFadeOut = false,
               NewTargetPointName = "",
-              StaticCreatorIdList = {0}
+              StaticCreatorIdList = {312940007, 312940010}
             }
           },
           ["178101037125616325"] = {
             key = "178101037125616325",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 2494.677274970184, y = 457.69371044437617},
+            pos = {x = 3757.5804852360116, y = -447.14498809857315},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 0,
@@ -519,7 +723,7 @@ return {
             key = "178101038319916736",
             type = "ShowOrHideTaskIndicatorNode",
             name = "隐藏任务指引点节点",
-            pos = {x = 2878.548239562976, y = 451.2420975940772},
+            pos = {x = 4141.451449828804, y = -453.5966009488721},
             propsData = {
               IsShow = false,
               bOpenRangeEffect = false,
@@ -531,10 +735,10 @@ return {
             key = "178101042707816987",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1802.7417967756119, y = 704.4679019683141},
+            pos = {x = 1914.3185805625249, y = 531.8175121833041},
             propsData = {
               IsNpcNode = false,
-              FirstDialogueId = 11108501,
+              FirstDialogueId = 11108701,
               FlowAssetPath = "",
               TalkType = "Guide",
               bIsStandalone = true,
@@ -548,7 +752,7 @@ return {
             key = "178101047110118454",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示任务指引点节点",
-            pos = {x = 2222.29751480576, y = 643.6082775435768},
+            pos = {x = 3485.2007250715874, y = -261.2304209993725},
             propsData = {
               IsShow = true,
               bOpenRangeEffect = false,
@@ -560,7 +764,7 @@ return {
             key = "178101047110118455",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 2497.7021986346217, y = 637.9081725996452},
+            pos = {x = 3760.605408900449, y = -266.9305259433041},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 0,
@@ -572,7 +776,7 @@ return {
             key = "178101047110118456",
             type = "ShowOrHideTaskIndicatorNode",
             name = "隐藏任务指引点节点",
-            pos = {x = 2786.1186187084913, y = 640.889599821351},
+            pos = {x = 4049.021828974319, y = -263.9490987215983},
             propsData = {
               IsShow = false,
               bOpenRangeEffect = false,
@@ -584,19 +788,19 @@ return {
             key = "178101052154720047",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 1505.7887065939635, y = 1152.8546823550998},
+            pos = {x = 1505.7021264762432, y = 1150.6259914551702},
             propsData = {
               GuideUIEnable = true,
-              StaticCreatorId = 0,
-              GuideType = "N",
-              GuidePointName = ""
+              StaticCreatorId = 312940008,
+              GuideType = "M",
+              GuidePointName = "Mechanism_QuestTrigger_312940008"
             }
           },
           ["178101144210522173"] = {
             key = "178101144210522173",
             type = "UpdateTaskBarAndTaskMainNode",
             name = "更新任务目标节点",
-            pos = {x = 1551.1427096516068, y = 527.8189709932093},
+            pos = {x = 1526.856995895279, y = 617.818969031365},
             propsData = {
               NewDescription = "Description_110213_4",
               NewDetail = "Content_110213_4",
@@ -625,10 +829,10 @@ return {
               ProceduralCameraId = 1,
               HideNpcs = false,
               HideMonsters = true,
-              HideAllBattleEntity = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
               HideMechanismsFX = false,
               ShowSkipButton = true,
-              ShowAutoPlayButton = true,
               ShowReviewButton = true,
               ShowWikiButton = true,
               SkipToOption = false,
@@ -658,22 +862,25 @@ return {
             key = "17810116189121042686",
             type = "ChangeStaticCreatorNode",
             name = "生成观察机关",
-            pos = {x = 2589.3928722861583, y = 1142.1592226892624},
+            pos = {x = 2585.7343357461787, y = 1142.1592226892624},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
               EnableFadeIn = false,
               EnableFadeOut = false,
               NewTargetPointName = "",
-              StaticCreatorIdList = {0}
+              StaticCreatorIdList = {312940009}
             }
           },
           ["17810116674041043164"] = {
             key = "17810116674041043164",
             type = "FirstObservationCompleteNode",
             name = "首次观察完成",
-            pos = {x = 2893.7525618237937, y = 1131.0966945517425},
-            propsData = {StaticCreatorId = 0, ObservationPointName = ""}
+            pos = {x = 2892.5330496438005, y = 1131.0966945517425},
+            propsData = {
+              StaticCreatorId = 312940009,
+              ObservationPointName = "Mechanism_TalkInteractiveItem_312940009"
+            }
           },
           ["17810116771071043512"] = {
             key = "17810116771071043512",
@@ -697,10 +904,10 @@ return {
               ProceduralCameraId = 1,
               HideNpcs = false,
               HideMonsters = true,
-              HideAllBattleEntity = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
               HideMechanismsFX = false,
               ShowSkipButton = true,
-              ShowAutoPlayButton = true,
               ShowReviewButton = true,
               ShowWikiButton = true,
               SkipToOption = false,
@@ -730,68 +937,19 @@ return {
             key = "17810117411421044866",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 3623.033474951234, y = 1147.1894994045504},
+            pos = {x = 4690.366802633164, y = 1175.1894989806951},
             propsData = {}
-          },
-          ["17810117510811045117"] = {
-            key = "17810117510811045117",
-            type = "WaitingSpecialQuestFailNode",
-            name = "等待特殊任务失败",
-            pos = {x = 1281.035275238636, y = 1644.122968850015},
-            propsData = {}
-          },
-          ["17810117584881045421"] = {
-            key = "17810117584881045421",
-            type = "ForbidWeaponByWeaponTagNode",
-            name = "禁用/启用武器节点",
-            pos = {x = 1645.6781345792608, y = 1561.7218190245096},
-            propsData = {
-              WeaponTags = {"Melee", "Ranged"},
-              bForbid = false,
-              ForbidTag = "ForbidDefault",
-              bHidewhenForbid = false
-            }
-          },
-          ["17810117584881045422"] = {
-            key = "17810117584881045422",
-            type = "ActivePlayerSkillsNode",
-            name = "激活/失效 玩家技能",
-            pos = {x = 1646.022049905734, y = 1716.4631371269315},
-            propsData = {
-              PlayerId = 0,
-              bActiveEnable = true,
-              ActiveType = "Lock",
-              SkillNameList = {
-                "Avoid",
-                "BulletJump",
-                "Attack",
-                "Jump",
-                "Slide",
-                "SecondJump",
-                "Skill1",
-                "Skill2",
-                "Skill3",
-                "Fire"
-              }
-            }
-          },
-          ["17810117897351045859"] = {
-            key = "17810117897351045859",
-            type = "WaitQuestFinishedNode",
-            name = "等待任务完成",
-            pos = {x = 2090.2945383091037, y = 1675.604450479759},
-            propsData = {ListenCount = 2, NeedFinishCount = 2}
           },
           ["17810131289813081201"] = {
             key = "17810131289813081201",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示任务指引点节点",
-            pos = {x = 2335.133499921684, y = 1156.8227508504974},
+            pos = {x = 2333.4093619755295, y = 1156.8227508504974},
             propsData = {
               IsShow = true,
               bOpenRangeEffect = false,
               GuideType = "M",
-              GuideName = ""
+              GuideName = "Mechanism_TalkInteractiveItem_312940009"
             }
           },
           ["17810131559023082099"] = {
@@ -803,6 +961,440 @@ return {
               NewDescription = "Description_110213_5",
               NewDetail = "Content_110213_5",
               SubTaskTargetIndex = 0
+            }
+          },
+          ["17833460842984348"] = {
+            key = "17833460842984348",
+            type = "ChangeStaticCreatorNode",
+            name = "生成脚印",
+            pos = {x = 1470.8632055148912, y = 99.12262904366207},
+            propsData = {
+              ActiveEnable = true,
+              EnableBlackScreenSync = false,
+              EnableFadeIn = false,
+              EnableFadeOut = false,
+              NewTargetPointName = "",
+              StaticCreatorIdList = {
+                312940001,
+                312940002,
+                312940003,
+                312940004,
+                312940005
+              }
+            }
+          },
+          ["17833485082937630888"] = {
+            key = "17833485082937630888",
+            type = "ChangeRoleNode",
+            name = "切换角色",
+            pos = {x = 220.30854609264952, y = -404.1635748200474},
+            propsData = {QuestRoleId = 22010101, IsPlayFX = false}
+          },
+          ["17833485082937630889"] = {
+            key = "17833485082937630889",
+            type = "ForbidWeaponByWeaponTagNode",
+            name = "禁用/启用武器节点",
+            pos = {x = -45.62831270237655, y = -1596.8837213285506},
+            propsData = {
+              WeaponTags = {"Melee", "Ranged"},
+              bForbid = true,
+              ForbidTag = "ForbidDefault",
+              bHidewhenForbid = true
+            }
+          },
+          ["17833485082937630890"] = {
+            key = "17833485082937630890",
+            type = "ActivePlayerSkillsNode",
+            name = "激活/失效 玩家技能",
+            pos = {x = -23.99448712107767, y = -1451.4636371970378},
+            propsData = {
+              PlayerId = 0,
+              bActiveEnable = false,
+              ActiveType = "Lock",
+              SkillNameList = {
+                "BulletJump",
+                "Attack",
+                "Skill1",
+                "Skill2",
+                "Skill3",
+                "Fire",
+                "SecondJump",
+                "Slide",
+                "Avoid",
+                "Jump"
+              }
+            }
+          },
+          ["17833485082937630891"] = {
+            key = "17833485082937630891",
+            type = "ShowOrHideUINode",
+            name = "显示或隐藏UI",
+            pos = {x = 508.8458093514862, y = -1664.3239013038087},
+            propsData = {
+              Function = "HideUIInScreen",
+              UIParam = "EnergySkill",
+              ActionParam = "SpiralLeap",
+              ShowOrHide = true
+            }
+          },
+          ["17833485082947630892"] = {
+            key = "17833485082947630892",
+            type = "ShowOrHideUINode",
+            name = "显示或隐藏UI",
+            pos = {x = 507.05698947570977, y = -1780.435702546045},
+            propsData = {
+              Function = "HideUIInScreen",
+              UIParam = "BloodBar",
+              ActionParam = "SpiralLeap",
+              ShowOrHide = true
+            }
+          },
+          ["17833485082947630893"] = {
+            key = "17833485082947630893",
+            type = "ShowOrHideUINode",
+            name = "显示或隐藏UI",
+            pos = {x = 503.4360618442877, y = -971.775092408451},
+            propsData = {
+              Function = "HideUIInScreen",
+              UIParam = "AimIndicator",
+              ActionParam = "SpiralLeap",
+              ShowOrHide = true
+            }
+          },
+          ["17833485082947630894"] = {
+            key = "17833485082947630894",
+            type = "ShowOrHideUINode",
+            name = "显示或隐藏UI",
+            pos = {x = 498.8230350243646, y = -1111.8128592058106},
+            propsData = {
+              Function = "HideUIInScreen",
+              UIParam = "GuideBook",
+              ActionParam = "SpiralLeap",
+              ShowOrHide = true
+            }
+          },
+          ["17833485082947630895"] = {
+            key = "17833485082947630895",
+            type = "ShowOrHideUINode",
+            name = "显示或隐藏UI",
+            pos = {x = 506.48970169103063, y = -1241.0509544698562},
+            propsData = {
+              Function = "HideUIInScreen",
+              UIParam = "BattleWheel",
+              ActionParam = "SpiralLeap",
+              ShowOrHide = true
+            }
+          },
+          ["17833485082947630896"] = {
+            key = "17833485082947630896",
+            type = "ShowOrHideUINode",
+            name = "显示或隐藏UI",
+            pos = {x = 503.6484318497612, y = -1372.7493671423185},
+            propsData = {
+              Function = "HideUIInScreen",
+              UIParam = "Entrance",
+              ActionParam = "SpiralLeap",
+              ShowOrHide = true
+            }
+          },
+          ["17833485082947630897"] = {
+            key = "17833485082947630897",
+            type = "CameraControlNode",
+            name = "镜头控制节点",
+            pos = {x = 86.39202172568548, y = -1254.2648633609672},
+            propsData = {
+              Duration = 0,
+              CameraName = "StoryCamera03",
+              LockRotate = false,
+              FocalLength = 0,
+              LensAperture = 0,
+              FOV = 0,
+              PPMaterialPath = ""
+            }
+          },
+          ["17833485945538720198"] = {
+            key = "17833485945538720198",
+            type = "WaitingSpecialQuestFailNode",
+            name = "等待特殊任务失败",
+            pos = {x = 717.0900886676206, y = 2057.1856693222594},
+            propsData = {}
+          },
+          ["17833485945538720199"] = {
+            key = "17833485945538720199",
+            type = "ForbidWeaponByWeaponTagNode",
+            name = "禁用/启用武器节点",
+            pos = {x = 1135.6041624870068, y = 1599.4445912375218},
+            propsData = {
+              WeaponTags = {"Melee", "Ranged"},
+              bForbid = false,
+              ForbidTag = "ForbidDefault",
+              bHidewhenForbid = false
+            }
+          },
+          ["17833485945538720200"] = {
+            key = "17833485945538720200",
+            type = "ActivePlayerSkillsNode",
+            name = "激活/失效 玩家技能",
+            pos = {x = 1169.5361249286898, y = 1772.8378698493839},
+            propsData = {
+              PlayerId = 0,
+              bActiveEnable = true,
+              ActiveType = "Lock",
+              SkillNameList = {
+                "BulletJump",
+                "Attack",
+                "Skill1",
+                "Skill2",
+                "Skill3",
+                "Fire",
+                "SecondJump",
+                "Slide",
+                "Avoid",
+                "Jump"
+              }
+            }
+          },
+          ["17833485945538720201"] = {
+            key = "17833485945538720201",
+            type = "ShowOrHideUINode",
+            name = "显示或隐藏UI",
+            pos = {x = 1149.6837608025994, y = 1930.660232536491},
+            propsData = {
+              Function = "HideUIInScreen",
+              UIParam = "BloodBar",
+              ActionParam = "SpiralLeap",
+              ShowOrHide = false
+            }
+          },
+          ["17833485945538720202"] = {
+            key = "17833485945538720202",
+            type = "ShowOrHideUINode",
+            name = "显示或隐藏UI",
+            pos = {x = 1151.4725806783758, y = 2046.7720337787277},
+            propsData = {
+              Function = "HideUIInScreen",
+              UIParam = "EnergySkill",
+              ActionParam = "SpiralLeap",
+              ShowOrHide = false
+            }
+          },
+          ["17833485945538720203"] = {
+            key = "17833485945538720203",
+            type = "ShowOrHideUINode",
+            name = "显示或隐藏UI",
+            pos = {x = 1146.2752031766508, y = 2338.346567940218},
+            propsData = {
+              Function = "HideUIInScreen",
+              UIParam = "Entrance",
+              ActionParam = "SpiralLeap",
+              ShowOrHide = false
+            }
+          },
+          ["17833485945538720204"] = {
+            key = "17833485945538720204",
+            type = "ShowOrHideUINode",
+            name = "显示或隐藏UI",
+            pos = {x = 1151.2903860854358, y = 2470.790322325649},
+            propsData = {
+              Function = "HideUIInScreen",
+              UIParam = "BattleWheel",
+              ActionParam = "SpiralLeap",
+              ShowOrHide = false
+            }
+          },
+          ["17833485945538720205"] = {
+            key = "17833485945538720205",
+            type = "ShowOrHideUINode",
+            name = "显示或隐藏UI",
+            pos = {x = 1143.6237194668442, y = 2597.109162761136},
+            propsData = {
+              Function = "HideUIInScreen",
+              UIParam = "GuideBook",
+              ActionParam = "SpiralLeap",
+              ShowOrHide = false
+            }
+          },
+          ["17833485945538720206"] = {
+            key = "17833485945538720206",
+            type = "ShowOrHideUINode",
+            name = "显示或隐藏UI",
+            pos = {x = 1146.0628331711773, y = 2742.2400975026435},
+            propsData = {
+              Function = "HideUIInScreen",
+              UIParam = "AimIndicator",
+              ActionParam = "SpiralLeap",
+              ShowOrHide = false
+            }
+          },
+          ["17833485945538720207"] = {
+            key = "17833485945538720207",
+            type = "WaitQuestFinishedNode",
+            name = "等待任务完成",
+            pos = {x = 1842.3100806529549, y = 2084.318570838745},
+            propsData = {ListenCount = 9, NeedFinishCount = 9}
+          },
+          ["17833485945538720208"] = {
+            key = "17833485945538720208",
+            type = "CameraControlClearNode",
+            name = "镜头恢复",
+            pos = {x = 1126.8805813395277, y = 2221.957114526111},
+            propsData = {Duration = 0}
+          },
+          ["17833486144648720663"] = {
+            key = "17833486144648720663",
+            type = "ForbidWeaponByWeaponTagNode",
+            name = "禁用/启用武器节点",
+            pos = {x = 3584.0421370214626, y = 642.7779651196727},
+            propsData = {
+              WeaponTags = {"Melee", "Ranged"},
+              bForbid = false,
+              ForbidTag = "ForbidDefault",
+              bHidewhenForbid = false
+            }
+          },
+          ["17833486144648720664"] = {
+            key = "17833486144648720664",
+            type = "ActivePlayerSkillsNode",
+            name = "激活/失效 玩家技能",
+            pos = {x = 3617.9740994631447, y = 816.1712437315348},
+            propsData = {
+              PlayerId = 0,
+              bActiveEnable = true,
+              ActiveType = "Lock",
+              SkillNameList = {
+                "BulletJump",
+                "Attack",
+                "Skill1",
+                "Skill2",
+                "Skill3",
+                "Fire",
+                "SecondJump",
+                "Slide",
+                "Avoid",
+                "Jump"
+              }
+            }
+          },
+          ["17833486144648720665"] = {
+            key = "17833486144648720665",
+            type = "ShowOrHideUINode",
+            name = "显示或隐藏UI",
+            pos = {x = 3598.121735337054, y = 973.993606418642},
+            propsData = {
+              Function = "HideUIInScreen",
+              UIParam = "BloodBar",
+              ActionParam = "SpiralLeap",
+              ShowOrHide = false
+            }
+          },
+          ["17833486144648720666"] = {
+            key = "17833486144648720666",
+            type = "ShowOrHideUINode",
+            name = "显示或隐藏UI",
+            pos = {x = 3599.9105552128312, y = 1090.1054076608787},
+            propsData = {
+              Function = "HideUIInScreen",
+              UIParam = "EnergySkill",
+              ActionParam = "SpiralLeap",
+              ShowOrHide = false
+            }
+          },
+          ["17833486144648720667"] = {
+            key = "17833486144648720667",
+            type = "ShowOrHideUINode",
+            name = "显示或隐藏UI",
+            pos = {x = 3594.7131777111063, y = 1381.6799418223688},
+            propsData = {
+              Function = "HideUIInScreen",
+              UIParam = "Entrance",
+              ActionParam = "SpiralLeap",
+              ShowOrHide = false
+            }
+          },
+          ["17833486144648720668"] = {
+            key = "17833486144648720668",
+            type = "ShowOrHideUINode",
+            name = "显示或隐藏UI",
+            pos = {x = 3599.7283606198926, y = 1514.1236962078},
+            propsData = {
+              Function = "HideUIInScreen",
+              UIParam = "BattleWheel",
+              ActionParam = "SpiralLeap",
+              ShowOrHide = false
+            }
+          },
+          ["17833486144648720669"] = {
+            key = "17833486144648720669",
+            type = "ShowOrHideUINode",
+            name = "显示或隐藏UI",
+            pos = {x = 3592.0616940013006, y = 1640.4425366432863},
+            propsData = {
+              Function = "HideUIInScreen",
+              UIParam = "GuideBook",
+              ActionParam = "SpiralLeap",
+              ShowOrHide = false
+            }
+          },
+          ["17833486144648720670"] = {
+            key = "17833486144648720670",
+            type = "ShowOrHideUINode",
+            name = "显示或隐藏UI",
+            pos = {x = 3594.500807705632, y = 1785.5734713847944},
+            propsData = {
+              Function = "HideUIInScreen",
+              UIParam = "AimIndicator",
+              ActionParam = "SpiralLeap",
+              ShowOrHide = false
+            }
+          },
+          ["17833486144648720671"] = {
+            key = "17833486144648720671",
+            type = "WaitQuestFinishedNode",
+            name = "等待任务完成",
+            pos = {x = 4290.7480551874105, y = 1127.651944720896},
+            propsData = {ListenCount = 9, NeedFinishCount = 9}
+          },
+          ["17833486144648720672"] = {
+            key = "17833486144648720672",
+            type = "CameraControlClearNode",
+            name = "镜头恢复",
+            pos = {x = 3575.318555873984, y = 1265.290488408262},
+            propsData = {Duration = 0}
+          },
+          ["178600365393622276137"] = {
+            key = "178600365393622276137",
+            type = "GoToNode",
+            name = "前往",
+            pos = {x = 1903.2634550518712, y = 709.940084380645},
+            propsData = {
+              GuideUIEnable = true,
+              StaticCreatorId = 312940011,
+              GuideType = "M",
+              GuidePointName = "Mechanism_QuestTrigger_312940011"
+            }
+          },
+          ["178600383809922276953"] = {
+            key = "178600383809922276953",
+            type = "GoToNode",
+            name = "前往",
+            pos = {x = 2307.5491605248562, y = 665.6543710602825},
+            propsData = {
+              GuideUIEnable = true,
+              StaticCreatorId = 312940012,
+              GuideType = "M",
+              GuidePointName = "Mechanism_QuestTrigger_312940012"
+            }
+          },
+          ["178600389148522277275"] = {
+            key = "178600389148522277275",
+            type = "GoToNode",
+            name = "前往",
+            pos = {x = 2668.9777240749104, y = 668.5115138551446},
+            propsData = {
+              GuideUIEnable = true,
+              StaticCreatorId = 312940013,
+              GuideType = "M",
+              GuidePointName = "Mechanism_QuestTrigger_312940013"
             }
           }
         },

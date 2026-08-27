@@ -2,7 +2,7 @@ local T = {}
 T.RT_1 = {0.5, 1.25}
 T.RT_2 = {0.3, 1}
 T.RT_3 = {-44610, 5350}
-T.RT_4 = {0, 0}
+T.RT_4 = {0.3, 1.25}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -404,98 +404,105 @@ return ReadOnly("Region", {
   },
   [1070] = {
     AlertDisable = true,
-    BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_White.WBP_Map_BG_White'",
-    CloseBlock = true,
+    BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_Black.WBP_Map_BG_Black'",
     IsRandom = {107001},
+    RegionDispCondition = 110232,
     RegionId = 1070,
     RegionMapFile = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Lxzs01_Main/Haiboliya_Thc_Lxzs01_Main",
     RegionMapId = 600,
-    RegionMapImage = "/Game/UI/WBP/Map/Widget/RegionMap/Chapter03/WBP_Map_Reg_Chapter03_Station_AG.WBP_Map_Reg_Chapter03_Station_AG",
-    RegionMapImageCenter = T.RT_4,
-    RegionMapWheelScale = T.RT_1,
-    RegionName = "EX02-新村庄",
-    RegionType = "Main"
+    RegionMapImage = "/Game/UI/WBP/Map/Widget/RegionMap/EX02/WBP_Map_Reg_EXChapter02_Lxzs01.WBP_Map_Reg_EXChapter02_Lxzs01",
+    RegionMapImageCenter = {-10762, -45312},
+    RegionMapWheelScale = T.RT_4,
+    RegionName = "UI_REGION_NAME_1070",
+    RegionType = "EX"
   },
   [1071] = {
     AlertDisable = true,
-    BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_White.WBP_Map_BG_White'",
-    CloseBlock = true,
+    BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_Black.WBP_Map_BG_Black'",
     IsRandom = {107101},
+    RegionDispCondition = 110232,
     RegionId = 1071,
     RegionMapFile = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Lxzs02_Main/Haiboliya_Thc_Lxzs02_Main",
     RegionMapId = 601,
-    RegionMapImage = "/Game/UI/WBP/Map/Widget/RegionMap/East/WBP_Map_Reg_East_Yanjindu.WBP_Map_Reg_East_Yanjindu",
-    RegionMapImageCenter = T.RT_4,
-    RegionMapWheelScale = T.RT_1,
-    RegionName = "EX02-旧村庄",
-    RegionType = "Main"
+    RegionMapImage = "/Game/UI/WBP/Map/Widget/RegionMap/EX02/WBP_Map_Reg_EXChapter02_Lxzs02.WBP_Map_Reg_EXChapter02_Lxzs02",
+    RegionMapImageCenter = {-45300, -33330},
+    RegionMapWheelScale = T.RT_4,
+    RegionName = "UI_REGION_NAME_1071",
+    RegionType = "EX"
   },
   [1072] = {
     AlertDisable = true,
-    BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_White.WBP_Map_BG_White'",
-    CloseBlock = true,
+    BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_Black.WBP_Map_BG_Black'",
     IsRandom = {107201},
     RegionId = 1072,
     RegionMapFile = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Lxzx_Main/Haiboliya_Thc_Lxzx_Main",
     RegionMapId = 602,
-    RegionMapImage = "/Game/UI/WBP/Map/Widget/RegionMap/East/WBP_Map_Reg_East_Haojing.WBP_Map_Reg_East_Haojing",
-    RegionMapImageCenter = T.RT_4,
-    RegionMapWheelScale = T.RT_1,
-    RegionName = "EX02-湖区",
-    RegionType = "Main"
+    RegionMapImage = "/Game/UI/WBP/Map/Widget/RegionMap/EX02/WBP_Map_Reg_EXChapter02_Lxzx.WBP_Map_Reg_EXChapter02_Lxzx",
+    RegionMapImageCenter = {11990, -27330},
+    RegionMapWheelScale = T.RT_4,
+    RegionName = "UI_REGION_NAME_1072",
+    RegionType = "EX"
   },
   [1073] = {
     IsRandom = {107301},
     RegionId = 1073,
     RegionMapFile = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Emyly/Haiboliya_Thc_Emyly_Main",
     RegionMapWheelScale = T.RT_1,
-    RegionName = "EX02-旧村庄-噩梦游乐园",
-    RegionType = "Main"
+    RegionName = "UI_REGION_NAME_1073",
+    RegionType = "EX"
   },
   [1074] = {
     IsRandom = {107401},
     RegionId = 1074,
     RegionMapFile = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Zchj/Haiboliya_Thc_Zchj_Main",
     RegionMapWheelScale = T.RT_1,
-    RegionName = "EX02-湖区-战场幻境",
-    RegionType = "Main"
+    RegionName = "UI_REGION_NAME_1074",
+    RegionType = "EX"
   },
   [1075] = {
+    AlertDisable = true,
+    BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_Black.WBP_Map_BG_Black'",
+    CloseBlock = true,
     IsRandom = {107501},
     RegionId = 1075,
     RegionMapFile = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Zjfj/Haiboliya_Thc_Zjfj_Main",
+    RegionMapId = 600,
     RegionMapWheelScale = T.RT_1,
-    RegionName = "EX02-新村庄-主角家",
-    RegionType = "Main"
+    RegionName = "UI_REGION_NAME_1075",
+    RegionType = "EX"
   },
   [1076] = {
     IsRandom = {107601},
     RegionId = 1076,
     RegionMapFile = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Boss/Haiboliya_Thc_Boss_Main",
     RegionMapWheelScale = T.RT_1,
-    RegionName = "EX02-新村庄-Boss战",
-    RegionType = "Main"
+    RegionName = "UI_REGION_NAME_1076",
+    RegionType = "EX"
   },
   [1077] = {
+    AlertDisable = true,
+    BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_Black.WBP_Map_BG_Black'",
+    CloseBlock = true,
     IsRandom = {107701},
     RegionId = 1077,
     RegionMapFile = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Jhs/Haiboliya_Thc_Jhs_Main",
+    RegionMapId = 600,
     RegionMapWheelScale = T.RT_1,
-    RegionName = "EX02-新村庄-净化室+墓地",
-    RegionType = "Main"
+    RegionName = "UI_REGION_NAME_1077",
+    RegionType = "EX"
   },
   [1078] = {
     IsRandom = {107801},
     RegionId = 1078,
     RegionMapFile = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Ck/Haiboliya_Thc_Ck_Main",
     RegionMapWheelScale = T.RT_1,
-    RegionName = "EX02-新村庄-仓库",
-    RegionType = "Main"
+    RegionName = "UI_REGION_NAME_1078",
+    RegionType = "EX"
   },
   [1081] = {
     IsRandom = {108101},
     RegionId = 1081,
-    RegionMapFile = "/Game/Maps/Levels/Ailixian/Ailixian_Sailafei_Main/Ailixian_Sailafei_Main",
+    RegionMapFile = "/Game/Maps/Levels/Ailixian/Ailixian_SLF_Main/Ailixian_SLF_Main",
     RegionMapWheelScale = T.RT_1,
     RegionName = "艾利西安-塞拉菲修道院",
     RegionType = "Main"
@@ -511,9 +518,25 @@ return ReadOnly("Region", {
   [1083] = {
     IsRandom = {108301},
     RegionId = 1083,
-    RegionMapFile = "/Game/Maps/Levels/Ailixian/Ailixian_DreamSailafei_Main/Ailixian_DreamSailafei_Main",
+    RegionMapFile = "/Game/Maps/Levels/Ailixian/Ailixian_LLKWon_Main/Ailixian_LLKWon_Main",
     RegionMapWheelScale = T.RT_1,
     RegionName = "艾利西安-莉莉蔻梦境",
+    RegionType = "Main"
+  },
+  [1084] = {
+    IsRandom = {108401},
+    RegionId = 1084,
+    RegionMapFile = "/Game/Maps/Levels/Ailixian/Ailixian_Miandao_Yyhf_Main/Ailixian_Miandao_Yyhf_Main",
+    RegionMapWheelScale = T.RT_1,
+    RegionName = "悠远海风号-眠岛海上",
+    RegionType = "Main"
+  },
+  [1085] = {
+    IsRandom = {108501},
+    RegionId = 1085,
+    RegionMapFile = "/Game/Maps/Levels/Ailixian/Ailixian_Yidai_Boss/Ailixian_Yidai_Boss_Main",
+    RegionMapWheelScale = T.RT_1,
+    RegionName = "艾利西安-伊黛梦境-Boss战",
     RegionType = "Main"
   },
   [1090] = {

@@ -53,6 +53,10 @@ function M:Init(Obj)
         Content.Count = BaseCount
       end
     end
+    if ItemData.ProductType then
+      Content.ProductType = ItemData.ProductType
+      Content.Level = ItemData.Level
+    end
     self.List_Item:AddItem(Content)
   end
   self:AddTimer(0.01, function()

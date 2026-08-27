@@ -99,11 +99,47 @@ function WBP_GuideTextFloat_C:DeleteGuideMessage(IsExecuteFinish)
   self:PlayOutAnim(IsExecuteFinish)
 end
 
+function WBP_GuideTextFloat_C:BindSlideMechReleaseAfterFinish()
+  if self.bSlideMechReleaseListening then
+    return
+  end
+  self.bSlideMechReleaseListening = true
+  self:ListenForInputAction("Slide", UE4.EInputEvent.IE_Released, true, {
+    self,
+    self.ReleaseSlideLogic
+  })
+end
+
+function WBP_GuideTextFloat_C:UnbindSlideMechReleaseAfterFinish()
+  if not self.bSlideMechReleaseListening then
+    return
+  end
+  self.bSlideMechReleaseListening = false
+  if self:IsListeningForInputAction("Slide", UE4.EInputEvent.IE_Released) then
+    self:StopListeningForInputAction("Slide", UE4.EInputEvent.IE_Released)
+  end
+end
+
+function WBP_GuideTextFloat_C:HandoffSlideMechReleaseListenerIfNeeded()
+  if not self.bSlideMechSlidePressed then
+    return
+  end
+  self:UnbindSlideMechReleaseAfterFinish()
+  local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
+  local UIMgr = GameInstance and GameInstance:GetGameUIManager()
+  local BattleMain = UIMgr and UIMgr:GetUIObj("BattleMain")
+  local TrackHUD = BattleMain and BattleMain.TrackHUD
+  if TrackHUD and TrackHUD.BindGuideSlideMechReleaseInput then
+    TrackHUD:BindGuideSlideMechReleaseInput()
+  end
+end
+
 function WBP_GuideTextFloat_C:Close()
   self.IsInit = false
   if self.IsInUIMode then
     self:SetInputUIOnly(false)
   end
+  self:HandoffSlideMechReleaseListenerIfNeeded()
   self.UIKey = self.UIKey or "GuideTextFloat"
   UIManager(self):UnLoadUI(self.UIKey)
   local GuideTextFloatList = UIManager(self):GetUIObj("GuideTextFloatList")
@@ -460,6 +496,7 @@ end
 function WBP_GuideTextFloat_C:Destruct()
   WBP_GuideTextFloat_C.Super.Destruct(self)
   self:SetInputUIOnly(false)
+  self:UnbindSlideMechReleaseAfterFinish()
   if self.IsTimePause then
     UE4.UGameplayStatics.SetGlobalTimeDilation(self, 1)
   end
@@ -494,12 +531,36 @@ function WBP_GuideTextFloat_C:ExecuteSlideLogic()
     return
   end
   local PlayerCharacter = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
-  if UE4.UKismetMathLibrary.Vector_IsZero(PlayerCharacter.MoveInputCache) then
+  if PlayerCharacter.IsInSlideMech then
+    self.bSlideMechSlidePressed = true
+    PlayerCharacter:StartSlide()
+  elseif UE4.UKismetMathLibrary.Vector_IsZero(PlayerCharacter.MoveInputCache) then
     PlayerCharacter:PlayCrouch()
   else
     PlayerCharacter:PlaySlide()
   end
   self:LogicExecuteFinish()
+  if self.bSlideMechSlidePressed then
+    self:BindSlideMechReleaseAfterFinish()
+  end
+end
+
+function WBP_GuideTextFloat_C:ReleaseSlideLogic()
+  if not self.bSlideMechSlidePressed then
+    return
+  end
+  self.bSlideMechSlidePressed = false
+  local PlayerCharacter = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
+  if not PlayerCharacter then
+    return
+  end
+  if PlayerCharacter.IsInSlideMech then
+    PlayerCharacter:OnSlideMechSlideEnd()
+    if PlayerCharacter.SetHoldCrouch then
+      PlayerCharacter:SetHoldCrouch(false)
+    end
+  end
+  self:UnbindSlideMechReleaseAfterFinish()
 end
 
 function WBP_GuideTextFloat_C:ExecuteFireLogic()
@@ -567,6 +628,13 @@ function WBP_GuideTextFloat_C:ExecuteOpenMenuLogic()
   self:LogicExecuteFinish()
 end
 
+function WBP_GuideTextFloat_C:ExecuteInteractiveLogic()
+  if self.NowState ~= "Interactive" then
+    return
+  end
+  self:LogicExecuteFinish()
+end
+
 function WBP_GuideTextFloat_C:PressSkillCombLogic()
   if not string.match(self.NowState, "Skill1") then
     return
@@ -611,6 +679,11 @@ function WBP_GuideTextFloat_C:AnalyzeExecuteLogic_Enum(Actions)
           self:ListenForInputAction(ActionName, UE4.EInputEvent.IE_Pressed, false, {
             self,
             self["Execute" .. ActionName .. "Logic"]
+          })
+        elseif "Interactive" == ActionName then
+          self:ListenForInputAction(ActionName, UE4.EInputEvent.IE_Pressed, false, {
+            self,
+            self.ExecuteInteractiveLogic
           })
         elseif string.match(ActionName, "Skill") then
           self:ListenForInputAction("GamepadUseSkill", UE4.EInputEvent.IE_Pressed, true, {

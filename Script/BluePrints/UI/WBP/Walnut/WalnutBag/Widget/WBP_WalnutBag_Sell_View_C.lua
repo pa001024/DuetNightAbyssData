@@ -1,3 +1,4 @@
+local MiscUtils = require("Utils.MiscUtils")
 require("UnLua")
 local WalnutBagController = require("BluePrints.UI.WBP.Walnut.WalnutBag.WalnutBagController")
 local WalnutBagModel = WalnutBagController:GetModel()
@@ -248,7 +249,7 @@ function M:ClickToOpenStuffList()
             ItemObj.SelfWidget:SetSelected(false)
           end
           local NowSaleStuffCount = self.NeedDealWithStuffCount[ItemObj.Uuid] or 1
-          ItemObj.SelfWidget:SetSelectNum(Utils.FormatNumber(NowSaleStuffCount, true))
+          ItemObj.SelfWidget:SetSelectNum(MiscUtils.FormatNumber(NowSaleStuffCount, true))
         end
       end
       self.List_Item:SetFocus()
@@ -602,7 +603,7 @@ function M:OnUpdateCurSelectItemSaleInfo(Num, bIsNeedRefreshSliderBar)
     self.CurSelectStuffContentInList.StateTagInfo.ExtraData[1] = Num
   end
   if self.CurSelectStuffContentInList.SelfWidget then
-    self.CurSelectStuffContentInList.SelfWidget:SetSelectNum(Utils.FormatNumber(Num, true))
+    self.CurSelectStuffContentInList.SelfWidget:SetSelectNum(MiscUtils.FormatNumber(Num, true))
   end
   self.Com_NumInput:RefreshCurInputNumber(Num)
   if bIsNeedRefreshSliderBar then

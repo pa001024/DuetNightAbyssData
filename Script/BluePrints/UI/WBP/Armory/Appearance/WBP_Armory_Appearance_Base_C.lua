@@ -107,7 +107,7 @@ function M:OnAppearanceNameEditBtnClicked()
   }, self)
 end
 
-function M:OnCharAppearanSuitRenamed(Ret, CharUuid, AppearanceIndex, NewName)
+function M:OnCharAppearanceSuitRenamed(Ret, CharUuid, AppearanceIndex, NewName)
   if not ErrorCode:Check(Ret) then
     return
   end
@@ -127,7 +127,7 @@ function M:InitDispatcher()
     self:AddDispatcher(EventID.OnCharCornerVisibilityChanged, self, self.ResetTarget)
     self:AddDispatcher(EventID.OnCharSkinChanged, self, self.OnCharAppearancePartChanged)
     self:AddDispatcher(EventID.OnCharHairChanged, self, self.OnCharAppearancePartChanged)
-    self:AddDispatcher(EventID.OnCharAppearanSuitRenamed, self, self.OnCharAppearanSuitRenamed)
+    self:AddDispatcher(EventID.OnCharAppearanceSuitRenamed, self, self.OnCharAppearanceSuitRenamed)
   else
     self:AddDispatcher(EventID.OnWeaponAppearanSuitRenamed, self, self.OnWeaponAppearanSuitRenamed)
   end
@@ -444,6 +444,13 @@ function M:InitWeaponAppearanceSuits()
     else
       AccessoryContent.IconPath = WeaponAccessoryData.Icon
       AccessoryContent.IsNoneIcon = false
+    end
+    if CommonConst.WeaponAccessoryTypes.Accessory ~= AccessoryType then
+      AccessoryContent.bForbidden = not AppearanceUtils.IsWeaponHasAnyStanceFX(self.Target.WeaponId)
+      
+      function AccessoryContent.OnForbiddenClicked(_self, Content)
+        UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_WeaponAccessory_NoAttackToast"))
+      end
     end
     self:OnAccessoryItemContentCreated(AccessoryContent)
     Widget:OnListItemObjectSet(AccessoryContent)

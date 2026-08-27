@@ -6,6 +6,9 @@ local M = Class({
 function M:Construct()
   self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(UGameplayStatics.GetPlayerController(self, 0))
   self.GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.OnUpdateUIStyleByInputTypeChange)
+  self.Btn_Go:SetDefaultGamePadImg(UIConst.GamePadImgKey.FaceButtonBottom)
+  self.Btn_CancelGo:SetDefaultGamePadImg(UIConst.GamePadImgKey.FaceButtonTop)
+  self:UpdateButtonGamepadHints(self.GameInputModeSubsystem:GetCurrentInputType())
 end
 
 function M:Destruct()
@@ -120,12 +123,19 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   if InKeyName == UIConst.GamePadKey.FaceButtonBottom then
+    if 0 == self.Switch_Button:GetActiveWidgetIndex() then
+      self.Btn_Go:OnBtnClicked()
+      return UWidgetBlueprintLibrary.Handled()
+    end
     local ActiveWidget = self.Switch_Button:GetActiveWidget()
     if ActiveWidget.Btn_Click then
       ActiveWidget.Btn_Click.OnClicked:Broadcast()
     else
       ActiveWidget:OnBtnClicked()
     end
+    return UWidgetBlueprintLibrary.Handled()
+  elseif InKeyName == UIConst.GamePadKey.FaceButtonTop and 0 == self.Switch_Button:GetActiveWidgetIndex() and self.WildMap.bRecurringTaskConveyMode then
+    self.Btn_CancelGo:OnBtnClicked()
     return UWidgetBlueprintLibrary.Handled()
   elseif "Escape" == InKeyName or InKeyName == UIConst.GamePadKey.FaceButtonRight then
     if self.Focused then
@@ -154,11 +164,18 @@ function M:RemoveKey()
 end
 
 function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
+  self:UpdateButtonGamepadHints(CurInputDevice)
   if self.Group_Temple:GetVisibility() == ESlateVisibility.Collapsed then
     return
   end
   self.Group_Temple:SetVisibility(CurInputDevice == ECommonInputType.Gamepad and ESlateVisibility.HitTestInvisible or ESlateVisibility.SelfHitTestInvisible)
   self:SetFocus()
+end
+
+function M:UpdateButtonGamepadHints(CurInputDevice)
+  local bIsGamepad = CurInputDevice == ECommonInputType.Gamepad
+  self.Btn_Go:SetGamepadIconVisibility(bIsGamepad and self.Btn_Go:IsVisible())
+  self.Btn_CancelGo:SetGamepadIconVisibility(bIsGamepad and self.Btn_CancelGo:IsVisible())
 end
 
 return M

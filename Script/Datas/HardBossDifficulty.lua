@@ -382,5 +382,59 @@ return ReadOnly("HardBossDifficulty", {
     DifficultyReward = 1027,
     ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Lieche.T_Permanent_HardBoss_VideoImg_Lieche",
     UnlockCondition = {2066, 160}
+  },
+  [1071] = {
+    DifficultyDes = "UI_HardBoss_Difficulty_Des_1071",
+    DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_1",
+    DifficultyID = 1071,
+    DifficultyLevel = 30,
+    DifficultyReward = 1022,
+    ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Aida.T_Permanent_HardBoss_VideoImg_Aida",
+    UnlockCondition = {2071}
+  },
+  [1072] = {
+    DifficultyDes = "UI_HardBoss_Difficulty_Des_1071",
+    DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_2",
+    DifficultyID = 1072,
+    DifficultyLevel = 40,
+    DifficultyReward = 1023,
+    ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Aida.T_Permanent_HardBoss_VideoImg_Aida",
+    UnlockCondition = {2072, 125}
+  },
+  [1073] = {
+    DifficultyDes = "UI_HardBoss_Difficulty_Des_1071",
+    DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_3",
+    DifficultyID = 1073,
+    DifficultyLevel = 50,
+    DifficultyReward = 1024,
+    ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Aida.T_Permanent_HardBoss_VideoImg_Aida",
+    UnlockCondition = {2073, 135}
+  },
+  [1074] = {
+    DifficultyDes = "UI_HardBoss_Difficulty_Des_1071",
+    DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_4",
+    DifficultyID = 1074,
+    DifficultyLevel = 60,
+    DifficultyReward = 1025,
+    ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Aida.T_Permanent_HardBoss_VideoImg_Aida",
+    UnlockCondition = {2074, 145}
+  },
+  [1075] = {
+    DifficultyDes = "UI_HardBoss_Difficulty_Des_1071",
+    DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_5",
+    DifficultyID = 1075,
+    DifficultyLevel = 70,
+    DifficultyReward = 1026,
+    ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Aida.T_Permanent_HardBoss_VideoImg_Aida",
+    UnlockCondition = {2075, 155}
+  },
+  [1076] = {
+    DifficultyDes = "UI_HardBoss_Difficulty_Des_1071",
+    DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_6",
+    DifficultyID = 1076,
+    DifficultyLevel = 80,
+    DifficultyReward = 1027,
+    ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Aida.T_Permanent_HardBoss_VideoImg_Aida",
+    UnlockCondition = {2076, 160}
   }
 })

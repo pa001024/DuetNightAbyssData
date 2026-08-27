@@ -25,4 +25,25 @@ function CoopUtils.GetGTextDebuffTitle(AsyncCombatComponent)
   return GTextAsyncCombatDebuffTitle .. " " .. GTextHyphen .. " " .. GText(Suffix)
 end
 
+function CoopUtils.GetMyProgress()
+  local bPersonal = UIUtils.IsInAsyncPersonalRoom()
+  if nil == bPersonal then
+    return
+  end
+  local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
+  if not GameMode then
+    return
+  end
+  local AsyncCombatComponent = GameMode:GetDungeonComponent()
+  if not AsyncCombatComponent then
+    return
+  end
+  if bPersonal then
+    local SnapShot = AsyncCombatComponent:GetSingleModeProgressSnapshot()
+    return SnapShot.Progress
+  else
+    return GWorld.GameInstance[CommonConst.DungeonSyncMsg.AsyncCombatRoomStateUpdate] and GWorld.GameInstance[CommonConst.DungeonSyncMsg.AsyncCombatRoomStateUpdate].Progress
+  end
+end
+
 return CoopUtils

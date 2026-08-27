@@ -24,6 +24,9 @@ return ReadOnly("DamageTag", {
   Explode = {DamageTag = "Explode"},
   Fade = {DamageTag = "Fade"},
   FallAttack = {DamageTag = "FallAttack"},
+  Falu_Skill02 = {
+    DamageTag = "Falu_Skill02"
+  },
   Falu_Skill1 = {
     DamageTag = "Falu_Skill1"
   },
@@ -100,6 +103,15 @@ return ReadOnly("DamageTag", {
   RouB106 = {DamageTag = "RouB106"},
   RouB107106 = {DamageTag = "RouB107106"},
   RouT103 = {DamageTag = "RouT103"},
+  SPliseGun01 = {
+    DamageTag = "SPliseGun01"
+  },
+  SPliseGun02 = {
+    DamageTag = "SPliseGun02"
+  },
+  SPlisePower = {
+    DamageTag = "SPlisePower"
+  },
   Saiqi = {DamageTag = "Saiqi"},
   SaiqiSkill01 = {
     DamageTag = "SaiqiSkill01"

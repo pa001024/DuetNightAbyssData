@@ -12,6 +12,14 @@ local TimeUtil = require("Utils.TimeUtils")
 local MiscUtils = require("Utils.MiscUtils")
 local TalkLogType = UE4.EStoryLogType.Talk
 local PlayerCharClass = LoadClass("/Game/BluePrints/Char/BP_PlayerCharacter.BP_PlayerCharacter_C")
+
+local function IsStoryStringEqual(Value, Expected)
+  if nil == Value or nil == Expected then
+    return false
+  end
+  return string.lower(tostring(Value)) == string.lower(tostring(Expected))
+end
+
 local TalkActorData_C = {}
 
 function TalkActorData_C.New(TalkActor, TalkActorType, TalkActorId, bIsExternal)
@@ -200,11 +208,23 @@ function BP_TalkContext_C:AddTalkActor(TalkTask, UnitType, UnitId, Unit, bIsExte
   if TalkTask.TalkActorDatas[UnitId] then
     return
   end
-  if TalkTask.TalkTaskData.BasicTalkType == "Cinematic" and Unit:IsA(UE4.ANpcCharacter) and Unit:JudgeSkinType() == UE4.ESkinType.DefaultSkin then
-    Unit:TriggerKawaiiLayerLink(TalkTask.TalkTaskData.bOpenDefaultSkinKawaii)
-  end
-  Unit:PreEnterStory({}, TalkTask.TalkTaskData.BasicTalkType == "Cinematic", TalkTask.TalkTaskData.bPauseNpcBT)
+  Unit:PreEnterStory(self:CreateStoryPlayableContext(TalkTask, UnitType, bIsExternal, TalkTask.TalkTaskData.bOpenDefaultSkinKawaii))
   TalkTask.TalkActorDatas[UnitId] = TalkActorData_C.New(Unit, UnitType, UnitId, bIsExternal)
+end
+
+function BP_TalkContext_C:CreateStoryPlayableContext(TalkTask, UnitType, bIsExternal, bOpenKawaiiLayerLink)
+  local Context = FStoryPlayableContext()
+  local bIsCinematic = IsStoryStringEqual(TalkTask.TalkTaskData.BasicTalkType, "Cinematic")
+  Context.bCacheMeshMaterials = bIsCinematic
+  Context.bPauseBT = TalkTask.TalkTaskData.bPauseNpcBT
+  Context.bIsExternal = bIsExternal
+  Context.bTriggerKawaiiLayerLink = bIsCinematic
+  Context.bOpenKawaiiLayerLink = bOpenKawaiiLayerLink
+  Context.bReleaseFireOnEnter = true
+  if IsStoryStringEqual(TalkTask.TalkTaskData.TalkType, "Bubble") and IsStoryStringEqual(UnitType, "Player") then
+    Context.bReleaseFireOnEnter = false
+  end
+  return Context
 end
 
 function BP_TalkContext_C:RemoveTalkActor(TalkTask, UnitId)
@@ -215,10 +235,7 @@ function BP_TalkContext_C:RemoveTalkActor(TalkTask, UnitId)
   end
   local Unit = Data.TalkActor
   if IsValid(Unit) then
-    if TalkTask.TalkTaskData.BasicTalkType == "Cinematic" and Unit:IsA(UE4.ANpcCharacter) and Unit:JudgeSkinType() == UE4.ESkinType.DefaultSkin then
-      Unit:TriggerKawaiiLayerLink(true)
-    end
-    Unit:PreExitStory({}, TalkTask.TalkTaskData.bPauseNpcBT, Data.bIsExternal)
+    Unit:PreExitStory(self:CreateStoryPlayableContext(TalkTask, Data.TalkActorType, Data.bIsExternal, true))
   end
   TalkTask.TalkActorDatas[UnitId] = nil
 end
@@ -419,7 +436,7 @@ function BP_TalkContext_C:GenDummyTalkNode(InTalkId, InTalkTypeStr)
     PauseGameGlobal = nil,
     DisableMonsterAI = nil,
     DisableNPCAI = nil,
-    HideAllBattleEntity = nil,
+    bHidePickup = nil,
     HideElseCharacter = nil,
     RestoreStand = nil,
     TalkActors = {
@@ -477,24 +494,7 @@ function BP_TalkContext_C:CreateImpressionMarkCondition(TriggerCondition, TalkTr
   return Condition
 end
 
-function BP_TalkContext_C:HideAllBattleEntity()
-  if self.SequenceTalkTask then
-    self.SequenceTalkTask.bHasHiddenBattleEntity = true
-    self:SetAllBattleEntityHidden(true)
-  end
-end
-
-function BP_TalkContext_C:ShowAllBattleEntity()
-  if self.SequenceTalkTask then
-    if not self.SequenceTalkTask.bHasHiddenBattleEntity then
-      return
-    end
-    self.SequenceTalkTask.bHasHiddenBattleEntity = false
-    self:SetAllBattleEntityHidden(false)
-  end
-end
-
-function BP_TalkContext_C:SetAllBattleEntityHidden(bHidden)
+function BP_TalkContext_C:SetPickupHidden(bHidden)
   local GameState = UE4.UGameplayStatics.GetGameState(self)
   GameState:HideAllPickups(Const.TalkHideTag, bHidden)
 end

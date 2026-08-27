@@ -25,5 +25,12 @@ return ReadOnly("VersionContent", {
     StartTime = LocalTimeProxy(1785182401),
     Version = 150,
     VersionName = "EventVersionName_150"
+  },
+  [160] = {
+    EndTime = LocalTimeProxy(1792454400),
+    RewardViewId = 100000160,
+    StartTime = LocalTimeProxy(1790553600),
+    Version = 160,
+    VersionName = "EventVersionName_160"
   }
 })

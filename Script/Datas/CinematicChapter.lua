@@ -150,7 +150,7 @@ return ReadOnly("CinematicChapter", {
       1101015,
       1101017
     },
-    ConditionId = 110201,
+    ConditionId = 110109,
     SortPriority = 3
   },
   [1201] = {

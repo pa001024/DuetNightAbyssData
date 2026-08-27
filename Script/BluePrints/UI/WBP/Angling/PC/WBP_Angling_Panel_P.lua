@@ -1,4 +1,8 @@
 require("UnLua")
+local EMCache = require("EMCache.EMCache")
+local FULL_AUTO_FISHING_CACHE_KEY = "FishingFullAutoEnabled"
+local AUTO_SMALL_TO_BIG_CACHE_KEY = "FishingAutoSmallToBigEnabled"
+local FULL_AUTO_FISHING_NEW_SEEN_CACHE_KEY = "FishingFullAutoNewSeen"
 local M = Class("BluePrints.UI.BP_UIState_C")
 
 function M:OnLoaded(...)
@@ -15,6 +19,7 @@ function M:OnLoaded(...)
     end
   end
   self.DeviceInPc = CommonUtils.GetDeviceTypeByPlatformName(self) ~= "Mobile"
+  self:InitAutoFishingPreferences()
   self.Angling_Main:Init(self, self.FishingSpotId, true)
   self.Angling_Fishing:Init(self, self.FishingSpotId)
   self.KeyEventState = ""
@@ -26,6 +31,29 @@ function M:OnLoaded(...)
   EventManager:AddEvent(EventID.LoadUI, self, self.ShowPet)
   EventManager:AddEvent(EventID.OnPropSetResources, self.Angling_Main, self.Angling_Main.OnGetLure)
   AudioManager(self):PlaySystemUIBGM("event:/bgm/cbt03/0082_system_fishing", nil, "Angling_Panel")
+end
+
+function M:InitAutoFishingPreferences()
+  self.bFullAutoFishingPreference = EMCache:Get(FULL_AUTO_FISHING_CACHE_KEY, true)
+  self.bAutoSmallToBigPreference = EMCache:Get(AUTO_SMALL_TO_BIG_CACHE_KEY, true)
+  if self.bFullAutoFishingPreference == nil then
+    self.bFullAutoFishingPreference = true
+  end
+  if self.bAutoSmallToBigPreference == nil then
+    self.bAutoSmallToBigPreference = true
+  end
+  local FullAutoFishingNewSeen = EMCache:Get(FULL_AUTO_FISHING_NEW_SEEN_CACHE_KEY, true)
+  self.bShowFullAutoFishingNew = nil == FullAutoFishingNewSeen
+end
+
+function M:SetFullAutoFishingPreference(bEnabled)
+  self.bFullAutoFishingPreference = true == bEnabled
+  EMCache:Set(FULL_AUTO_FISHING_CACHE_KEY, self.bFullAutoFishingPreference, true)
+end
+
+function M:SetAutoSmallToBigPreference(bEnabled)
+  self.bAutoSmallToBigPreference = true == bEnabled
+  EMCache:Set(AUTO_SMALL_TO_BIG_CACHE_KEY, self.bAutoSmallToBigPreference, true)
 end
 
 function M:ShowPet(UIName)
@@ -63,6 +91,8 @@ function M:SwitchOnMainPage()
 end
 
 function M:Close()
+  EventManager:RemoveEvent(EventID.OnFishHook, self.Angling_Fishing)
+  self.Angling_Fishing:CleanupFullAutoFishingSession()
   local PlayerController = UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
   local Player = PlayerController:GetMyPawn()
   local Eid = Player.MechanismEid
@@ -70,7 +100,6 @@ function M:Close()
   if Mechanism then
     Mechanism:EndInteractive(Player, true)
   end
-  EventManager:RemoveEvent(EventID.OnFishHook, self.Angling_Main)
   EventManager:RemoveEvent(EventID.LoadUI, self)
   EventManager:RemoveEvent(EventID.OnPropSetResources, self.Angling_Main)
   if self.PageState == "Main" then

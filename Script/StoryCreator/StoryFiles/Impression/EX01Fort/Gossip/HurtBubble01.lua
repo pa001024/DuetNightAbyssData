@@ -126,7 +126,6 @@ return {
               UseProceduralCamera = true,
               ProceduralCameraId = 1,
               ShowSkipButton = true,
-              ShowAutoPlayButton = true,
               ShowReviewButton = true,
               bBubblePlayCDEnable = false,
               BeginNewTargetPointName = "",

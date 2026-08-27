@@ -85,10 +85,8 @@ function BP_DefenceComponent_C:TriggerMonsterDead(Monster)
       if not self.bMonRuleReseted then
         self.bMonRuleReseted = true
         self.GameMode:DestroyAllMonsterSpawn()
-        self:AddTimer(3.5, function()
-          self:AddTimer(2, self.MonsterNumCheck, true, 0, "MonsterNumCheck")
-          self:AddTimer(5, self.FallbackNumCheck, true, 0, "FallbackNumCheck")
-        end, false, 0, "MonRuleReset")
+        self:AddTimer(2, self.MonsterNumCheck, true, -1.5, "MonsterNumCheck")
+        self:AddTimer(5, self.FallbackNumCheck, true, 0, "FallbackNumCheck")
       end
     end
   end

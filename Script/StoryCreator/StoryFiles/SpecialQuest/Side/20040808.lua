@@ -68,10 +68,10 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        SubRegionId = 106001,
+        SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
-        StoryGuidePointName = "Mechanism_QuestRegion_152480434",
+        StoryGuidePointName = "",
         JumpId = 0,
         IsBacktrack = false
       },
@@ -103,12 +103,6 @@ return {
           },
           {
             startQuest = "1782204109786984554",
-            startPort = "Out",
-            endQuest = "1783438599229347",
-            endPort = "In"
-          },
-          {
-            startQuest = "1783438599229347",
             startPort = "Out",
             endQuest = "1782204109786984555",
             endPort = "In"
@@ -196,15 +190,8 @@ return {
             key = "1782204109786984555",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 823.9095673505368, y = 80.86435235198938},
+            pos = {x = 656.3233604539851, y = 94.31262821405835},
             propsData = {}
-          },
-          ["1783438599229347"] = {
-            key = "1783438599229347",
-            type = "WaitOfTimeNode",
-            name = "延迟等待",
-            pos = {x = 555.387641954123, y = 18.145392639814474},
-            propsData = {WaitTime = 2}
           }
         },
         commentData = {}

@@ -341,16 +341,27 @@ return ReadOnly("AttrConfig", {
     IsPercent = true,
     Name = "HitMontageRate_Name"
   },
+  HyperTriggerConvertRate = {
+    AttrDesc = "Attr_DESC_HyperTriggerConvertRate",
+    Id = "HyperTriggerConvertRate",
+    IsPercent = true,
+    Name = "Attr_HyperTriggerConvertRate_Name",
+    ShowInInspector = true,
+    SortIndex1 = 22.6,
+    SortIndex2 = 22.6,
+    SortIndex3 = 22.6,
+    SortIndex4 = 22.6
+  },
   HyperTriggerRate = {
     AttrDesc = "Attr_DESC_HyperTriggerRate",
     Id = "HyperTriggerRate",
     IsPercent = true,
     Name = "Attr_HyperTriggerRate_Name",
     ShowInInspector = true,
-    SortIndex1 = 14.1,
-    SortIndex2 = 14.1,
-    SortIndex3 = 14.1,
-    SortIndex4 = 14.1
+    SortIndex1 = 17.1,
+    SortIndex2 = 17.1,
+    SortIndex3 = 17.1,
+    SortIndex4 = 17.1
   },
   JumpVelocityModifier = {
     Id = "JumpVelocityModifier",
@@ -532,10 +543,10 @@ return ReadOnly("AttrConfig", {
     IsPercent = true,
     Name = "Attr_StrongValue_Name",
     ShowInInspector = true,
-    SortIndex1 = 17.1,
-    SortIndex2 = 17.1,
-    SortIndex3 = 17.1,
-    SortIndex4 = 17.1
+    SortIndex1 = 17.2,
+    SortIndex2 = 17.2,
+    SortIndex3 = 17.2,
+    SortIndex4 = 17.2
   },
   TriggerEsRate = {
     Id = "TriggerEsRate",

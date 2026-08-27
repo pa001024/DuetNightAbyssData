@@ -113,7 +113,7 @@ function M:OpenMenuAnchor()
   if self.Tips_MenuAnchor:IsOpen() then
     return
   end
-  self.Tips_MenuAnchor:Open(true)
+  self.Tips_MenuAnchor:Open(self.Tips_MenuAnchor.UseApplicationMenuStack)
   if self.TipsDetail then
     self.TipsDetail:InitMessage(self.TextContent)
   end

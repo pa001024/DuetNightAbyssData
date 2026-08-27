@@ -19,6 +19,16 @@ T.RT_2 = {
   [5] = "sgm qcf 990103",
   [6] = "gm SuccessAllSystemGuide"
 }
+T.RT_3 = {
+  [1] = "sgm FinishTarget 1040800 1",
+  [2] = "sgm FinishTarget 1040810 1",
+  [3] = "sgm FinishTarget 1040801 1",
+  [4] = "sgm FinishTarget 1040802 1",
+  [5] = "sgm FinishTarget 1040812 1",
+  [6] = "sgm FinishTarget 1040803 1",
+  [7] = "sgm FinishTarget 1040804 1",
+  [8] = "sgm FinishTarget 1040814 1"
+}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -159,22 +169,22 @@ return ReadOnly("GMIntegration", {
   },
   ChangeAbyss131 = {
     GMCommands = {
-      [1] = "sgm settime 2026 07 29 10 00 00",
+      [1] = "sgm settime 2026 09 09 10 00 00",
       [2] = "gm SystemCommonUnlock",
       [3] = "sgm CompleteCondition 4220",
       [4] = "sgm CompleteCondition 8002",
-      [5] = "sgm SetAbyssLevelProgress 1502 50 5"
+      [5] = "sgm SetAbyssLevelProgress 1602 36 5"
     },
     GMDisplayName = "私服切换大秘境1.5上半",
     GMIntegrationName = "ChangeAbyss131"
   },
   ChangeAbyss132 = {
     GMCommands = {
-      [1] = "sgm settime 2026 08 19 10 00 00",
+      [1] = "sgm settime 2026 09 30 10 00 00",
       [2] = "gm SystemCommonUnlock",
       [3] = "sgm CompleteCondition 4220",
       [4] = "sgm CompleteCondition 8002",
-      [5] = "sgm SetAbyssLevelProgress 1504 50 5"
+      [5] = "sgm SetAbyssLevelProgress 1604 36 5"
     },
     GMDisplayName = "私服切换大秘境1.5下半",
     GMIntegrationName = "ChangeAbyss132"
@@ -241,6 +251,156 @@ return ReadOnly("GMIntegration", {
     },
     GMDisplayName = "解锁序章动态事件",
     GMIntegrationName = "DynPrologue"
+  },
+  EX02Diditask = {
+    GMCommands = {
+      [1] = "gm SystemCommonUnlock",
+      [2] = "gm UnlockRegionTeleport 1",
+      [3] = "sgm qcf 110201",
+      [4] = "sgm sl 50",
+      [5] = "gm skipregion 1 107201 1"
+    },
+    GMDisplayName = "【EX02】地底逃脱-地底",
+    GMIntegrationName = "EX02Diditask",
+    GMTab = "任务"
+  },
+  EX02Esport = {
+    GMCommands = {
+      [1] = "gm SystemCommonUnlock",
+      [2] = "gm UnlockRegionTeleport 1",
+      [3] = "gm skipregion 1 107201 1",
+      [4] = "sgm sl 50",
+      [5] = "gm SS = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UStorySubsystem:StaticClass())",
+      [6] = "gm SS:SetInt(\"ex02_11020201\",9)",
+      [7] = "sgm qcf 110201"
+    },
+    GMDisplayName = "【EX02】地底逃脱-护送任务",
+    GMIntegrationName = "EX02Esport",
+    GMTab = "任务"
+  },
+  EX02Oldpark = {
+    GMCommands = {
+      [1] = "gm SystemCommonUnlock",
+      [2] = "gm UnlockRegionTeleport 1",
+      [3] = "sgm qcf 100405",
+      [4] = "sgm sl 50",
+      [5] = "sgm qc 11020102",
+      [6] = "gm skipregion 1 107101 1"
+    },
+    GMDisplayName = "【EX02】废弃游乐园",
+    GMIntegrationName = "EX02Oldpark",
+    GMTab = "任务"
+  },
+  EX02Oldparkrun = {
+    GMCommands = {
+      [1] = "gm SystemCommonUnlock",
+      [2] = "gm UnlockRegionTeleport 1",
+      [3] = "sgm qcf 100405",
+      [4] = "sgm sl 50",
+      [5] = "sgm qc 11020103",
+      [6] = "gm skipregion 1 107101 1"
+    },
+    GMDisplayName = "【EX02】追逐法露西",
+    GMIntegrationName = "EX02Oldparkrun",
+    GMTab = "任务"
+  },
+  EX02Slide = {
+    GMCommands = {
+      [1] = "gm SystemCommonUnlock",
+      [2] = "gm UnlockRegionTeleport 1",
+      [3] = "gm skipregion 1 107201 1",
+      [4] = "sgm sl 50",
+      [5] = "gm SS = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UStorySubsystem:StaticClass())",
+      [6] = "gm SS:SetInt(\"ex02_11020201\",11)",
+      [7] = "sgm qcf 110201"
+    },
+    GMDisplayName = "【EX02】地底逃脱-滑索任务",
+    GMIntegrationName = "EX02Slide",
+    GMTab = "任务"
+  },
+  EX02Start = {
+    GMCommands = {
+      [1] = "gm SystemCommonUnlock",
+      [2] = "sgm qcf 100405",
+      [3] = "sgm sl 50",
+      [4] = "gm UnlockRegionTeleport 1",
+      [5] = "gm skipregion 1 210101 1"
+    },
+    GMDisplayName = "【EX02】章节开始",
+    GMIntegrationName = "EX02Start",
+    GMTab = "任务"
+  },
+  EX02Stealth = {
+    GMCommands = {
+      [1] = "gm SystemCommonUnlock",
+      [2] = "gm UnlockRegionTeleport 1",
+      [3] = "gm skipregion 1 107201 1",
+      [4] = "sgm sl 50",
+      [5] = "gm SS = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UStorySubsystem:StaticClass())",
+      [6] = "gm SS:SetInt(\"ex02_11020201\",3)",
+      [7] = "sgm qcf 110201"
+    },
+    GMDisplayName = "【EX02】地底逃脱-潜行任务",
+    GMIntegrationName = "EX02Stealth",
+    GMTab = "任务"
+  },
+  EX02faluxi = {
+    GMCommands = {
+      [1] = "gm SystemCommonUnlock",
+      [2] = "sgm sl 50",
+      [3] = "sgm qcf 110220",
+      [4] = "gm skipregion 1 107201 3",
+      [5] = "gm UnlockRegionTeleport 1"
+    },
+    GMDisplayName = "【EX02】支线-复仇者",
+    GMIntegrationName = "EX02faluxi",
+    GMTab = "任务"
+  },
+  EX02ground = {
+    GMCommands = {
+      [1] = "gm SystemCommonUnlock",
+      [2] = "sgm sl 50",
+      [3] = "sgm qcf 110202",
+      [4] = "gm skipregion 1 107201 1"
+    },
+    GMDisplayName = "【EX02】逃出生天-地底",
+    GMIntegrationName = "EX02ground",
+    GMTab = "任务"
+  },
+  ["EX02ground-newpark"] = {
+    GMCommands = {
+      [1] = "gm SystemCommonUnlock",
+      [2] = "sgm sl 50",
+      [3] = "sgm qcf 110202",
+      [4] = "sgm qc 11020301",
+      [5] = "gm skipregion 1 107001 1"
+    },
+    GMDisplayName = "【EX02】逃出生天-新村庄",
+    GMIntegrationName = "EX02ground-newpark",
+    GMTab = "任务"
+  },
+  EX02tonghuabin = {
+    GMCommands = {
+      [1] = "gm SystemCommonUnlock",
+      [2] = "sgm sl 50",
+      [3] = "sgm qcf 110203",
+      [4] = "gm skipregion 1 107001 7"
+    },
+    GMDisplayName = "【EX02】支线-童话兵暴乱",
+    GMIntegrationName = "EX02tonghuabin",
+    GMTab = "任务"
+  },
+  EX02zhansizhe = {
+    GMCommands = {
+      [1] = "gm SystemCommonUnlock",
+      [2] = "sgm sl 50",
+      [3] = "sgm qcf 110220",
+      [4] = "gm skipregion 1 107001 3",
+      [5] = "gm UnlockRegionTeleport 1"
+    },
+    GMDisplayName = "【EX02】支线-幸存者",
+    GMIntegrationName = "EX02zhansizhe",
+    GMTab = "任务"
   },
   East01C1 = {
     GMCommands = T.RT_1,
@@ -464,6 +624,18 @@ return ReadOnly("GMIntegration", {
     GMIntegrationName = "Ex02C31",
     GMTab = "任务"
   },
+  Ex02EM = {
+    GMCommands = {
+      [1] = "gm SystemCommonUnlock",
+      [2] = "gm UnlockRegionTeleport 1",
+      [3] = "sgm sl 50",
+      [4] = "sgm qcf 110201",
+      [5] = "sgm qc 11020201"
+    },
+    GMDisplayName = "【EX02】地底逃脱-噩梦游乐园",
+    GMIntegrationName = "Ex02EM",
+    GMTab = "任务"
+  },
   FakeQuest1002 = {
     GMCommands = {
       [1] = "gm FSG 2002",
@@ -587,16 +759,7 @@ return ReadOnly("GMIntegration", {
     GMTab = "任务"
   },
   FinishAllForgeLevelQuest = {
-    GMCommands = {
-      [1] = "sgm FinishTarget 1040800 1",
-      [2] = "sgm FinishTarget 1040810 1",
-      [3] = "sgm FinishTarget 1040801 1",
-      [4] = "sgm FinishTarget 1040802 1",
-      [5] = "sgm FinishTarget 1040812 1",
-      [6] = "sgm FinishTarget 1040803 1",
-      [7] = "sgm FinishTarget 1040804 1",
-      [8] = "sgm FinishTarget 1040814 1"
-    },
+    GMCommands = T.RT_3,
     GMDisplayName = "解锁所有熔炉等级任务",
     GMIntegrationName = "FinishAllForgeLevelQuest"
   },
@@ -606,6 +769,11 @@ return ReadOnly("GMIntegration", {
     },
     GMDisplayName = "完成所有新手任务",
     GMIntegrationName = "FinishAllStarterQuest"
+  },
+  FinishHyperWeaponMission = {
+    GMCommands = T.RT_3,
+    GMDisplayName = "完成所有灾厄武器任务",
+    GMIntegrationName = "FinishHyperWeaponMission"
   },
   FinishStarterQuest1 = {
     GMCommands = {
@@ -771,7 +939,9 @@ return ReadOnly("GMIntegration", {
       [27] = "sgm aom 24103 3",
       [28] = "sgm aom 25001 3",
       [29] = "sgm aom 25002 3",
-      [30] = "sgm aom 25003 3"
+      [30] = "sgm aom 25003 3",
+      [31] = "sgm aom 25004 3",
+      [32] = "sgm aom 25005 3"
     },
     GMIntegrationName = "GXY_2xLv3_mod"
   },
@@ -806,7 +976,9 @@ return ReadOnly("GMIntegration", {
       [27] = "sgm aom 32004 5",
       [28] = "sgm aom 32005 5",
       [29] = "sgm aom 32101 5",
-      [30] = "sgm aom 32102 5"
+      [30] = "sgm aom 32102 5",
+      [31] = "sgm aom 32103 5",
+      [32] = "sgm aom 32201 5"
     },
     GMIntegrationName = "GXY_3xLv5_mod"
   },
@@ -881,7 +1053,9 @@ return ReadOnly("GMIntegration", {
       [27] = "sgm ar 20015 9999999",
       [28] = "sgm ar 20016 9999999",
       [29] = "sgm ar 20017 9999999",
-      [30] = "sgm ar 20018 9999999"
+      [30] = "sgm ar 20018 9999999",
+      [31] = "sgm ar 20019 9999999",
+      [32] = "sgm ar 20020 9999999"
     },
     GMIntegrationName = "GXY_common_resource"
   },
@@ -1111,7 +1285,9 @@ return ReadOnly("GMIntegration", {
       [27] = "sgm tct2",
       [28] = "sgm tct2",
       [29] = "sgm tct2",
-      [30] = "sgm tct2"
+      [30] = "sgm tct2",
+      [31] = "sgm tct2",
+      [32] = "sgm tct2"
     },
     GMDisplayName = "联机时长增加50分钟",
     GMIntegrationName = "OnlineTimeEvent50Min"
@@ -1382,7 +1558,7 @@ return ReadOnly("GMIntegration", {
       [1] = "gm SystemCommonUnlock",
       [2] = "sgm CompleteCondition 4220",
       [3] = "sgm CompleteCondition 8002",
-      [4] = "sgm SetAbyssLevelProgress 1502 50 5"
+      [4] = "sgm SetAbyssLevelProgress 1602 50 5"
     },
     GMDisplayName = "新号解锁大秘境1.5上半",
     GMIntegrationName = "UnlockAbyss131"
@@ -1392,7 +1568,7 @@ return ReadOnly("GMIntegration", {
       [1] = "gm SystemCommonUnlock",
       [2] = "sgm CompleteCondition 4220",
       [3] = "sgm CompleteCondition 8002",
-      [4] = "sgm SetAbyssLevelProgress 1504 50 5"
+      [4] = "sgm SetAbyssLevelProgress 1604 50 5"
     },
     GMDisplayName = "新号解锁大秘境1.5下半",
     GMIntegrationName = "UnlockAbyss132"
@@ -1514,7 +1690,9 @@ return ReadOnly("GMIntegration", {
       [27] = "sgm aam 10",
       [28] = "sgm aam 10",
       [29] = "sgm aam 10",
-      [30] = "sgm aam 10"
+      [30] = "sgm aam 10",
+      [31] = "sgm CharPolarity",
+      [32] = "sgm WeaponPolarity"
     },
     GMDisplayName = "成为大佬",
     GMIntegrationName = "ZZZTopPlayer",

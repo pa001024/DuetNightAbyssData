@@ -41,11 +41,15 @@ function M:ReceiveInitialize()
   self.bPauseLightTask = false
   EventManager:AddEvent(EventID.CharRecover, self, self.OnPlayerRecover)
   EventManager:AddEvent(EventID.CharDie, self, self.OnPlayerDead)
+  EventManager:AddEvent(EventID.OnCommonBlackScreenBegin, self, self.PauseLightTalkTask)
+  EventManager:AddEvent(EventID.OnCommonBlackScreenEnd, self, self.ResumeLightTalkTask)
 end
 
 function M:ReceiveDeinitialize()
   EventManager:RemoveEvent(EventID.CharRecover, self)
   EventManager:RemoveEvent(EventID.CharDie, self)
+  EventManager:RemoveEvent(EventID.OnCommonBlackScreenBegin, self, self.PauseLightTalkTask)
+  EventManager:RemoveEvent(EventID.OnCommonBlackScreenEnd, self, self.ResumeLightTalkTask)
   self:CleanTimer()
   if self.TalkTasks then
     local TempTalkTasks = {}
@@ -99,13 +103,28 @@ function M:PlayTalk(TalkConfigKey, TalkAction, AudioAttachActor)
     self:PlayStorylineTalk(TalkTriggerInfo.StoryLinePath, TalkConfigKey, TalkTriggerInfo.TalkId, InteractiveActor, TalkAction.RelatedNPCIds, TalkPlayDialogue, TalkEndCallback)
     return true
   end
+  local TalkActors = {
+    {
+      TalkActorType = "Player",
+      TalkActorId = 0,
+      TalkActorVisible = true
+    }
+  }
+  if IsValid(InteractiveActor) and string.lower(InteractiveActor.UnitType) == "npc" then
+    table.insert(TalkActors, {
+      TalkActorType = "Npc",
+      TalkActorId = InteractiveActor.UnitId,
+      TalkActorVisible = true
+    })
+  end
+  TalkActors = TalkUtils:GetAllTalkActors(TalkTriggerInfo.DialogueId, TalkActors)
   local RawData = {
     AudioAttachActor = AudioAttachActor,
     TalkType = TalkTriggerInfo.TalkType,
     FirstDialogueId = TalkTriggerInfo.DialogueId,
     BlendInTime = 0.5,
     BlendOutTime = 0.5,
-    TalkActors = {}
+    TalkActors = TalkActors
   }
   local Key = self:RegisterTalkData(RawData)
   self:RegisterTalkTask(Key, TalkEndCallback, TalkFailCallback, TalkPlayDialogue)
@@ -685,7 +704,9 @@ local ImmersiveTalkTypes = {
   ETalkType.Show,
   ETalkType.FaultBlack,
   ETalkType.FixSimple,
+  ETalkType.FixSimpleNew,
   ETalkType.FreeSimple,
+  ETalkType.FreeSimpleNew,
   ETalkType.Simple
 }
 
@@ -932,7 +953,11 @@ function M:SetupSequenceNpc(LevelSequenceActor)
       Context.BoolParams:Add("InStory", true)
       Context.IntParams:Add("RegionDataType", 0)
       Context.OnUnitInitCreateReadyDynamic:Add(self, function(_, NewNpc)
-        NewNpc:PreEnterStory(nil, true, true)
+        local PreEnterContext = FStoryPlayableContext()
+        PreEnterContext.bCacheMeshMaterials = true
+        PreEnterContext.bPauseBT = true
+        PreEnterContext.bReleaseFireOnEnter = true
+        NewNpc:PreEnterStory(PreEnterContext)
         NewNpc:EnableSkeletalMeshActorRules(true)
         LevelSequenceActor:AddBindingByTag(Tag, NewNpc, false)
         LevelSequenceActor.SequencePlayer.OnFinished:Add(LevelSequenceActor, function()
@@ -941,7 +966,10 @@ function M:SetupSequenceNpc(LevelSequenceActor)
           end
           LevelSequenceActor:RemoveBindingByTag(Tag, NewNpc)
           NewNpc:EnableSkeletalMeshActorRules(false)
-          NewNpc:PreExitStory(nil, false, false)
+          local PreExitContext = FStoryPlayableContext()
+          PreExitContext.bPauseBT = false
+          PreExitContext.bIsExternal = false
+          NewNpc:PreExitStory(PreExitContext)
         end)
       end)
       GameState.EventMgr:CreateUnitNew(Context, true)

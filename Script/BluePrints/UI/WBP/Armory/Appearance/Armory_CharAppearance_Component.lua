@@ -71,6 +71,8 @@ function M:OnNewCharHairObtained(HairId, CharId)
     if self.SelectedHairId == HairId and self.CurrentTopTabIdx == self.HairTabIdx then
       self:UpdateHairDetails(Content)
     end
+    self:SortHairContents()
+    self:InitCharHairList()
   end
 end
 
@@ -235,9 +237,7 @@ function M:InitCharSkinList(Char)
       table.insert(self.SkinArray, Obj)
     end
   end
-  table.sort(self.SkinArray, function(a, b)
-    return a.SkinId < b.SkinId
-  end)
+  self:SortSkinContents()
   local AppearanceSuit = Char:GetAppearance(self.AppearanceSuitIndex)
   local SkinId = AppearanceSuit and AppearanceSuit.SkinId
   if not SkinId or SkinId <= 0 then
@@ -487,6 +487,20 @@ function M:CreateHairContents(Target)
       end
     ::lbl_323::
   end
+  self:SortHairContents()
+  local AppearanceSuit = Char:GetAppearance(self.AppearanceSuitIndex)
+  local HairId = AppearanceSuit and AppearanceSuit.HairId
+  if not HairId or HairId <= 0 then
+    HairId = DefaultHairId
+  end
+  if HairId and self.HairMap[HairId] then
+    self.CurrentHairContent = self.HairMap[HairId]
+    self.CurrentHairContent.bSelectTag = true
+  end
+end
+
+function M:SortHairContents()
+  local DefaultHairId = self.DefaultHairId
   table.sort(self.HairArray, function(a, b)
     if a.HairId == DefaultHairId then
       return true
@@ -500,15 +514,6 @@ function M:CreateHairContents(Target)
       return b.LockType
     end
   end)
-  local AppearanceSuit = Char:GetAppearance(self.AppearanceSuitIndex)
-  local HairId = AppearanceSuit and AppearanceSuit.HairId
-  if not HairId or HairId <= 0 then
-    HairId = DefaultHairId
-  end
-  if HairId and self.HairMap[HairId] then
-    self.CurrentHairContent = self.HairMap[HairId]
-    self.CurrentHairContent.bSelectTag = true
-  end
 end
 
 function M:InitCharHairList()
@@ -1252,8 +1257,6 @@ function M:OnTopTabSelected(TabWidget, Content)
   self:AddTimer(0.3, function()
     self:BlockAllUIInput(false, "OnTopTabSelected")
   end)
-  self.EnableDrag = true
-  self.EnableMouseWheel = true
   self.ActorController:TryDestroySequenceActorController()
   if self.CurrentTopTabIdx == self.SkinTabIdx then
     rawset(self, "bRecoverAppearanceWhenDestruct", true)
@@ -1274,8 +1277,6 @@ function M:OnTopTabSelected(TabWidget, Content)
     self.Tab_Accessory:SetVisibility(UIConst.VisibilityOp.Visible)
     self:InitCharAccessory()
   elseif self.CurrentTopTabIdx == self.MVPTabIdx then
-    self.EnableDrag = false
-    self.EnableMouseWheel = false
     if self.IsAccessoryContentsCreated then
       self:RecoverAccessory()
     end
@@ -1306,14 +1307,11 @@ function M:UpdateCharAppearanceResourceBar()
 end
 
 local function RemoveUnsupportedAccessories(SkinId, AccessorySuit)
-  local UnsupportedAcceesoryIdx = {}
+  local UnsupportedAccessoryIdx = {}
   for key, value in pairs(AccessorySuit) do
     if not ArmoryUtils:IsSkinSupportAccessory(SkinId, value) then
-      table.insert(UnsupportedAcceesoryIdx, key)
+      AccessorySuit[key] = nil
     end
-  end
-  for index, value in ipairs(UnsupportedAcceesoryIdx) do
-    AccessorySuit[value] = nil
   end
 end
 
@@ -1436,6 +1434,7 @@ function M:UpdateSkinLevelInfo(SkinId)
     local IsEquiped = self:IsEquipedSelectedSkin()
     self.SelectedSkinLevel = IsEquiped and Skin.SelectedLevel or Skin.Level
   end
+  self:OnLevelBtnClick(self.SelectedSkinLevel)
   self["WBP_Armory_Skin_LevelUp_" .. self.SelectedSkinLevel]:PlaySelectedAnimation()
 end
 
@@ -1477,6 +1476,7 @@ function M:IsEquipedSelectedSkin()
 end
 
 function M:OnLevelUpWidgetClicked(Level, Skip)
+  self:OnLevelBtnClick(Level)
   if Level == self.SelectedSkinLevel and not Skip then
     return
   end
@@ -1618,6 +1618,7 @@ function M:OnUpgradeSkinLevelClicked()
     self.Btn_Function:BindSingleEventOnClicked(self, self.OnRightConfirmBtnClicked)
     self.RightConfirmBtnFunc = self.OnRightConfirmBtnClicked
     self:RefreshLevelUpReddot()
+    self:LevelSkinFxInfo()
   end
   
   local Avatar = GWorld:GetAvatar()

@@ -91,7 +91,11 @@ function M:Construct()
   if not IsValid(self.Slot2) then
     self.Slot2 = self.AutoBattle:GetParent()
   end
-  local Config = EMCache:Get(CACHE_KEY, true) or DEFAULT_CONFIG
+  local Avatar = GWorld:GetAvatar()
+  local Config = DEFAULT_CONFIG
+  if Avatar then
+    Config = EMCache:Get(CACHE_KEY, true) or DEFAULT_CONFIG
+  end
   self.SlotConfig = {
     Config[1],
     Config[2]

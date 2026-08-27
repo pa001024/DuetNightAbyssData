@@ -65,6 +65,11 @@ return ReadOnly("CommonQuestPhase", {
     Index = 1,
     QuestPhaseId = 1204
   },
+  [1205] = {
+    EventId = 112005,
+    Index = 1,
+    QuestPhaseId = 1205
+  },
   [1301] = {
     EventId = 103014,
     Index = 1,
@@ -289,6 +294,26 @@ return ReadOnly("CommonQuestPhase", {
     RewardPreview = 1020011,
     SplineBP = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/WorldExplore/V14/Spine/WBP_Activity_WorldExplore_V14_Season01_Spine_03.WBP_Activity_WorldExplore_V14_Season01_Spine_03'"
   },
+  [1020041] = {
+    EntranceIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/WorldExplore/V16/T_Activity_WorldExplore_V16_ProgressMain.T_Activity_WorldExplore_V16_ProgressMain'",
+    EventId = 102004,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_WorldExplore_V16_Main.T_Tab_WorldExplore_V16_Main'",
+    Index = 1,
+    QuestPhaseId = 1020041,
+    QuestPhaseName = "Event_102004_QuestName1",
+    RewardPreview = 1020011,
+    SplineBP = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/WorldExplore/v16/Spine/WBP_Activity_WorldExplore_V16_Spine_01.WBP_Activity_WorldExplore_V16_Spine_01'"
+  },
+  [1020042] = {
+    EntranceIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/WorldExplore/V16/T_Activity_WorldExplore_V16_ProgressSide.T_Activity_WorldExplore_V16_ProgressSide'",
+    EventId = 102004,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_WorldExplore_V16_Side.T_Tab_WorldExplore_V16_Side'",
+    Index = 2,
+    QuestPhaseId = 1020042,
+    QuestPhaseName = "Event_102004_QuestName2",
+    RewardPreview = 1020011,
+    SplineBP = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/WorldExplore/v16/Spine/WBP_Activity_WorldExplore_V16_Spine_02.WBP_Activity_WorldExplore_V16_Spine_02'"
+  },
   [1030250] = {
     EventId = 103025,
     Index = 1,
@@ -313,9 +338,45 @@ return ReadOnly("CommonQuestPhase", {
     QuestPhaseId = 1030271,
     QuestPhaseName = "UI_TreasureHunt_QuestPhase2"
   },
+  [1030280] = {
+    EventId = 103028,
+    Index = 1,
+    QuestPhaseId = 1030280,
+    QuestPhaseName = "UI_MonsterDuel_QuestPhase1"
+  },
+  [1030281] = {
+    EventId = 103028,
+    Index = 2,
+    QuestPhaseId = 1030281,
+    QuestPhaseName = "UI_MonsterDuel_QuestPhase2"
+  },
+  [1030310] = {
+    EventId = 103031,
+    Index = 1,
+    QuestPhaseId = 1030310,
+    QuestPhaseName = "UI_TreasureHunt_QuestPhase1"
+  },
+  [1030311] = {
+    EventId = 103031,
+    Index = 2,
+    QuestPhaseId = 1030311,
+    QuestPhaseName = "UI_TreasureHunt_QuestPhase2"
+  },
   [103020021] = {
     EventId = 10302002,
     Index = 1,
     QuestPhaseId = 103020021
+  },
+  [103020022] = {
+    EventId = 111006,
+    Index = 1,
+    QuestPhaseId = 103020022,
+    QuestPhaseName = "RaidDungeon_Raid_Rank"
+  },
+  [103020023] = {
+    EventId = 111006,
+    Index = 2,
+    QuestPhaseId = 103020023,
+    QuestPhaseName = "RaidDungeon_PreRaid_Rank"
   }
 })

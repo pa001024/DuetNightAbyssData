@@ -3,12 +3,14 @@ local BaseTypes = require("BluePrints.Client.CustomTypes.BaseTypes")
 local CustomTypes = require("BluePrints.Client.CustomTypes.CustomTypes")
 local prop = require("NetworkEngine.Common.Prop")
 local FormatProperties = require("NetworkEngine.Common.Assemble").FormatProperties
+local CommonConst = require("CommonConst")
 local BGM = Class("BGM", CustomTypes.CustomAttr)
 BGM.__Props__ = {
   BgmPath = prop.prop("Str", "client save"),
   BgmParam = prop.prop("Str", "client save"),
   BgmParamValue = prop.prop("Int", "client save"),
-  BgmSubRegionId = prop.prop("IntList", "client save")
+  BgmSubRegionId = prop.prop("IntList", "client save"),
+  QuestChainId = prop.prop("Int", "client save", CommonConst.DefaultNotExistQuestChainId)
 }
 FormatProperties(BGM)
 local BGMDict = Class("BGMDict", CustomTypes.CustomDict)
@@ -141,6 +143,7 @@ function PlayerCharacterSuit:HandleBGM(SuitKey, Value)
     NewBgm.BgmParam = Value[2]
     NewBgm.BgmParamValue = Value[3]
     NewBgm.BgmSubRegionId = Value[4]
+    NewBgm.QuestChainId = Value[5] or CommonConst.DefaultNotExistQuestChainId
   else
     self.BGM:RemoveValue(SuitKey)
   end
@@ -296,8 +299,17 @@ function Suits:GetPlayerCharacterSuit()
 end
 
 function Suits:GetSuitBase(SuitType)
-  local HandleSuitTypeFunName = "Get" .. SuitType
-  return self[HandleSuitTypeFunName](self)
+  if not SuitType then
+    DebugPrint("ERROR::", "Suits:GetSuitBase SuitType is nil", debug.traceback())
+    return
+  end
+  local HandleSuitTypeFunName = "Get" .. tostring(SuitType)
+  local HandleSuitTypeFunc = self[HandleSuitTypeFunName]
+  if type(HandleSuitTypeFunc) ~= "function" then
+    DebugPrint("ERROR::", "Suits:GetSuitBase invalid SuitType", SuitType, HandleSuitTypeFunName, debug.traceback())
+    return
+  end
+  return HandleSuitTypeFunc(self)
 end
 
 FormatProperties(Suits)

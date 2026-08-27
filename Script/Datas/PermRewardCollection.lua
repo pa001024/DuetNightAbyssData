@@ -136,5 +136,17 @@ return ReadOnly("PermRewardCollection", {
     LockDes = "PermReward_UnlockTips_Common",
     RewardView = 1030221201,
     UnlockCondition = 4220
+  },
+  [10302212] = {
+    BigRewardView = 10302213,
+    DesText = "UI_ModGuideBook_Task_Des",
+    EventId = 103022,
+    EventTitle = "UI_ModGuideBook_Task_Title",
+    FinishCondition = 8048,
+    InterfaceJumpId = 141,
+    KeyId = 10302212,
+    LockDes = "PermReward_UnlockTips_Common",
+    RewardView = 1030221301,
+    UnlockCondition = 4350
   }
 })

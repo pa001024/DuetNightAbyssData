@@ -248,6 +248,9 @@ function Component:SetAvatarSignature(NewSignature, CallBackFunction)
 end
 
 function Component:CompletedDialogue(DialogueId)
+  if not DataMgr.DialogueId2WikiTextIds[DialogueId] and not DataMgr.ClueContentTrigger.Dialogue[DialogueId] then
+    return
+  end
   DebugPrint("[CompletedDialogue] DialogueId:" .. DialogueId)
   self:CallServerMethod("CompletedDialogue", DialogueId)
 end
@@ -536,6 +539,33 @@ function Component:GetPlayerRankAccessoryInfo(InCallBack, Uid)
   end
   
   self:CallServer("GetPlayerRankAccessoryInfo", Cb, Uid)
+end
+
+function Component:GetPlayerRankAccessoryInfo_V2(InCallBack, Uid)
+  self.logger.info("GetPlayerRankAccessoryInfo_V2")
+  
+  local function Cb(ErrCode, Ret)
+    if InCallBack then
+      InCallBack(ErrCode, Ret)
+    end
+  end
+  
+  self:CallServer("GetPlayerRankAccessoryInfo_V2", Cb, Uid)
+end
+
+function Component:GetOtherAvatarInfo(Callback, Uid)
+  assert(Uid)
+  
+  local function cb(ret, AvatarInfo)
+    if not ErrorCode:Check(ret) then
+      return
+    end
+    if Callback then
+      Callback(AvatarInfo)
+    end
+  end
+  
+  self:CallServer("GetOtherAvatarInfo", cb, Uid)
 end
 
 function Component:OnGetPlayerRankAccessoryInfo(RetErrorCode, Ret)

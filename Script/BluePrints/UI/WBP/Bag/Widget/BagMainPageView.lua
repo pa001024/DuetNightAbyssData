@@ -1,3 +1,4 @@
+local MiscUtils = require("Utils.MiscUtils")
 require("UnLua")
 local BagCommon = require("BluePrints.UI.WBP.Bag.BagCommon")
 local M = {}
@@ -292,7 +293,7 @@ function M:OnRefreshSaleSelectNum(StuffUuid, CurNum)
       TargetItem.StateTagInfo.ExtraData[1] = CurNum
     end
     if TargetItem.SelfWidget then
-      TargetItem.SelfWidget:SetSelectNum(Utils.FormatNumber(CurNum, true))
+      TargetItem.SelfWidget:SetSelectNum(MiscUtils.FormatNumber(CurNum, true))
     end
   end
 end

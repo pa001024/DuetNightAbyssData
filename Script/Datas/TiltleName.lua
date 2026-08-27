@@ -374,7 +374,7 @@ return ReadOnly("TiltleName", {
     TextMapId = "Title_10092"
   },
   [10093] = {
-    TextMapContent = "艾达（？？）的",
+    TextMapContent = "伊薇的",
     TextMapId = "Title_10093"
   },
   [10094] = {
@@ -476,6 +476,14 @@ return ReadOnly("TiltleName", {
   [10118] = {
     TextMapContent = "芙罗拉的",
     TextMapId = "Title_10118"
+  },
+  [10119] = {
+    TextMapContent = "乐园的",
+    TextMapId = "Title_10119"
+  },
+  [10120] = {
+    TextMapContent = "失忆的",
+    TextMapId = "Title_10120"
   },
   [20001] = {
     TextMapContent = "力量",
@@ -782,7 +790,7 @@ return ReadOnly("TiltleName", {
     TextMapId = "Title_20076"
   },
   [20077] = {
-    TextMapContent = "艾达（？？）",
+    TextMapContent = "伊薇",
     TextMapId = "Title_20077"
   },
   [20078] = {
@@ -876,5 +884,17 @@ return ReadOnly("TiltleName", {
   [20100] = {
     TextMapContent = "芙罗拉",
     TextMapId = "Title_20100"
+  },
+  [20101] = {
+    TextMapContent = "靶子",
+    TextMapId = "Title_20101"
+  },
+  [20102] = {
+    TextMapContent = "战车",
+    TextMapId = "Title_20102"
+  },
+  [20103] = {
+    TextMapContent = "乐园",
+    TextMapId = "Title_20103"
   }
 })

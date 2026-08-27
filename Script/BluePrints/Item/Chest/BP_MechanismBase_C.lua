@@ -9,6 +9,13 @@ function BP_MechanismBase_C:AuthorityInitInfo(Info)
   self:SetRewardID()
 end
 
+function BP_MechanismBase_C:InitComponent(Info)
+  if self.BP_EntangleComponent then
+    self.BP_EntangleComponent:InitComponent()
+  end
+  BP_MechanismBase_C.Super.InitComponent(self, Info)
+end
+
 function BP_MechanismBase_C:CustomAddGuideCondition()
   return not self.OpenState
 end
@@ -93,6 +100,26 @@ function BP_MechanismBase_C:CreateRegionData()
     IsActive = self.IsActive
   }
   self:UpdateRegionDataByTable(Data)
+end
+
+function BP_MechanismBase_C:RegisterCheckForbidEvent(Obj, Func)
+  if not Obj or not Func then
+    return
+  end
+  if self.CheckForbidEvents == nil then
+    self.CheckForbidEvents = {}
+  end
+  self.CheckForbidEvents[Obj] = Func
+end
+
+function BP_MechanismBase_C:UnRegisterCheckForbidEvent(Obj)
+  if not Obj then
+    return
+  end
+  if self.CheckForbidEvents == nil then
+    return
+  end
+  self.CheckForbidEvents[Obj] = nil
 end
 
 function BP_MechanismBase_C:ForceCloseMechanism(PlayerId, IsSuccess)

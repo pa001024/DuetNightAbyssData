@@ -105,6 +105,10 @@ function M:ShowChatText(MsgWrap)
   if AutoChessContent then
     Content = AutoChessContent
   end
+  local TeamInfoContent = ChatController:ParseTeamInfoText(MsgWrap)
+  if nil ~= TeamInfoContent then
+    Content = TeamInfoContent
+  end
   local Message = ChannelName .. SenderName .. Content
   self:PlayAnimation(self.Change)
   self.Text_DialogSingle:SetText(Message)

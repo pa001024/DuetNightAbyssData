@@ -52,11 +52,18 @@ python step3_output.py -f Char Weapon Mod
 - 用法：`UAssetCLI server`（stdio JSON 行协议，供 step3 自动调用）或 `UAssetCLI <文件|目录>`（一次性）。
   server 命令：`{"cmd":"parse","path":...}` / `{"cmd":"parse_dir","path":...}` /
   `{"cmd":"export","path":...}`（FModel 式整体 JSON）/ `{"cmd":"export_dir","path":...,"out":...}`
-  （写文件批量导出） / `{"cmd":"shutdown"}`。
+  （写文件批量导出） / `{"cmd":"fmodel","path":...,"package":...,"mount":"EM/Content"}` /
+  `{"cmd":"fmodel_dir","path":...,"root":...,"mount":"EM/Content"}`（按 FModel Output/Exports
+  数组格式在内存导出，供地图导出脚本用） / `{"cmd":"shutdown"}`。
 - step3 集成：`python step3_output.py -f Char` 自动以 server 模式批量解析
   `PassiveEffect/DesignerBP/Player/` 下的被动 BP，提取 `AddBuffToTarget` 的 buff id
   （需解包目录，见 `DNA_UNPACK_DIR` 环境变量，缺省尝试仓库同级 `../dna-unpack`），
   提取完自动 `shutdown` 关闭；无 uasset/exe 时回退 `processor/BPAddBuff.json`。
+- 地图导出集成：`export_all_maps.py` / `export_region_maps.py` 默认以 `fmodel`/`fmodel_dir`
+  server 模式直接解析 `UI/WBP/Map/Widget/Map_Splice` 与 `RegionMap` 下的 uasset，
+  解包目录可用 `.env` 的 `DNA_UNPACK_DIR` 指定（见 `uasset_client.py`）；无 uasset/exe
+  或 `--force-static-json` 时回退静态 JSON。修改地图导出代码后必须重跑
+  `python export_all_maps.py` 与 `python export_region_maps.py` 验证。
 - 重新构建 exe 与重新生成 `processor/BPAddBuff.json` 见 `tools/UAssetCLI/README.md`。
 
 ### Development

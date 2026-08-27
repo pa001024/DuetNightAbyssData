@@ -20,6 +20,9 @@ function M:DisableListScroll()
   if not List then
     return
   end
+  if List.DisableScroll then
+    List:DisableScroll(true)
+  end
   if List.SetScrollbarVisibility then
     List:SetScrollbarVisibility(UIConst.VisibilityOp.Collapsed)
   end

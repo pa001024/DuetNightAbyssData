@@ -65,8 +65,13 @@
     "icon": "T_Piano_Music13"
   },
   {
+    "id": 1014,
+    "name": "Aria des fleurs et du sifflet",
+    "icon": "T_Piano_Music14"
+  },
+  {
     "id": 9001,
-    "name": "Mission",
-    "icon": "T_Piano_LevelSelect_01"
+    "name": "MusicScoreName_9001",
+    "icon": "T_Piano_Music01"
   }
 ]

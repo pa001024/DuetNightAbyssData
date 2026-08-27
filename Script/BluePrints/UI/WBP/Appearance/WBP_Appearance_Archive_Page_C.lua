@@ -425,21 +425,6 @@ function M:ClickListItem(Content)
           Mode = "Preview"
         })
       end
-    elseif self.CurTabId == 402 then
-      local ParentIndex = DataMgr.AppearanceSubTab[self.CurTabId].ParentIndex
-      local Data = DataMgr[ParentIndex][Content.Id]
-      if Data.Video then
-        local SkinVideo = UIManager(self):LoadUINew("ArmorySkinVideo", {
-          Path = Data.Video,
-          SoundPath = Data.GetSoundPath,
-          DestructCB = function()
-            self:SetFocus()
-          end
-        })
-        if SkinVideo then
-          SkinVideo:SetFocus()
-        end
-      end
     else
       PageJumpUtils:JumpToSkinPreview({
         ItemType = Content.Type,

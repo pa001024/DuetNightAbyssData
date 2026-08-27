@@ -47,9 +47,9 @@ return {
       key = "1773299930697949358",
       type = "StoryNode",
       name = "开场剧情",
-      pos = {x = 378, y = 130},
+      pos = {x = 375.1875, y = 130},
       propsData = {
-        QuestId = 10100,
+        QuestId = 0,
         QuestDescriptionComment = "",
         QuestDescription = "",
         QuestDeatil = "",

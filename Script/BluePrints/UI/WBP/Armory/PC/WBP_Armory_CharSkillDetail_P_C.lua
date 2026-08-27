@@ -63,7 +63,7 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   if self.IsInFocusPath and self.IsGamepadInput or self.IsHyperLinkTipOpened then
     if not self.CurrentFocusState then
       local Widget
-      if self.IsNexLevelInfoShowed then
+      if self.IsNextLevelInfoShowed then
         Widget = self:GetAnyFocusableSkillAttrWidget()
         if not Widget and self.HB_Item:IsVisible() then
           Widget = self
@@ -313,7 +313,7 @@ function M:OnRightThumbKeyDown()
   local Widget = self:GetAnyFocusableSkillAttrWidget()
   if Widget then
     return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), Widget), true
-  elseif self.IsNexLevelInfoShowed and self.CurrentFocusState ~= FocusStates.Resource then
+  elseif self.IsNextLevelInfoShowed and self.CurrentFocusState ~= FocusStates.Resource then
     return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self), true
   end
 end
@@ -367,7 +367,7 @@ function M:OnFaceButtonLeftKeyDown()
       return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self.CurrentNodeInfo.UI), true
     end
   elseif self.ShouldShowBtnCheck and 1 == self.WidgetSwitcher_Page:GetActiveWidgetIndex() then
-    self:ShowNextLevelInfo(not self.IsNexLevelInfoShowed)
+    self:ShowNextLevelInfo(not self.IsNextLevelInfoShowed)
     if self.CurrentFocusState ~= FocusStates.Resource and self.CurrentFocusState ~= FocusStates.SkillAttr then
       return self:OnRightThumbKeyDown()
     end
@@ -418,8 +418,8 @@ end
 
 function M:OnBackKeyDown()
   if self.IsGamepadInput then
-    if self.IsNexLevelInfoShowed then
-      self:ShowNextLevelInfo(not self.IsNexLevelInfoShowed)
+    if self.IsNextLevelInfoShowed then
+      self:ShowNextLevelInfo(not self.IsNextLevelInfoShowed)
       if self.CurrentFocusState == FocusStates.SkillAttr then
         return self:OnRightThumbKeyDown()
       end
@@ -440,7 +440,7 @@ function M:OnTraingCloseKeydown()
 end
 
 function M:OnTabLeftKeyDown()
-  if not (not self.IsNexLevelInfoShowed and self.CurrentNodeInfo) or not self.ScrollBox_Attr:HasAnyChildren() then
+  if not (not self.IsNextLevelInfoShowed and self.CurrentNodeInfo) or not self.ScrollBox_Attr:HasAnyChildren() then
     return
   end
   local IsSkillAttrFocused = self.CurrentFocusState == FocusStates.SkillAttr
@@ -451,7 +451,7 @@ function M:OnTabLeftKeyDown()
 end
 
 function M:OnTabRightKeyDown()
-  if not (not self.IsNexLevelInfoShowed and self.CurrentNodeInfo) or not self.ScrollBox_Attr:HasAnyChildren() then
+  if not (not self.IsNextLevelInfoShowed and self.CurrentNodeInfo) or not self.ScrollBox_Attr:HasAnyChildren() then
     return
   end
   self.Tab_SkillDetail:TabToRight()
@@ -477,7 +477,7 @@ function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
 end
 
 function M:OnFocusReceived(MyGeometry, InFocusEvent)
-  if self.IsNexLevelInfoShowed then
+  if self.IsNextLevelInfoShowed then
     local Widget = self:GetAnyFocusableSkillAttrWidget()
     if Widget ~= self then
       return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), Widget)

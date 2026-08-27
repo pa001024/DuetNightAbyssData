@@ -1,3 +1,4 @@
+local MiscUtils = require("Utils.MiscUtils")
 require("UnLua")
 local M = Class("BluePrints.UI.BP_UIState_C")
 local EMCache = require("EMCache.EMCache")
@@ -44,7 +45,7 @@ function M:OnLoaded(...)
   self:SetFocus()
   self.MVPFinishFunction, self.MVPDamage, self.MVPName, self.MVPTextData = ...
   self.Text_Name:SetText(self.MVPName)
-  self.Text_Row01:SetText(GText("UI_STAT_DAMAGE_TITLE") .. ": " .. Utils.FormatNumber(math.floor(self.MVPDamage), true))
+  self.Text_Row01:SetText(GText("UI_STAT_DAMAGE_TITLE") .. ": " .. MiscUtils.FormatNumber(math.floor(self.MVPDamage), true))
   self:SetTextData()
   self:AddTimer(UIConst.MVPSkipShowTime, function()
     if self.IsSkip then

@@ -567,6 +567,14 @@ local function NormalizeCustomDisplayInfo(CustomDisplayInfo)
   return CustomDisplayInfo
 end
 
+local function ResolveCustomDisplaySlotIndex(CharParam, FallbackIndex)
+  local SlotIndex = tonumber(CharParam and CharParam.SlotIndex or nil) or FallbackIndex
+  if type(SlotIndex) ~= "number" or SlotIndex <= 0 then
+    return FallbackIndex
+  end
+  return SlotIndex
+end
+
 function M:_FindOwnerCharByCharId(CharId)
   if not self._Avatar or not CharId then
     return nil, nil
@@ -655,9 +663,11 @@ function M:_GetOtherCustomDisplayAppearance(CharId, SlotIndex)
   if not CharParamGroup then
     return nil
   end
-  local CharParam = CharParamGroup[SlotIndex]
-  if CharParam and CharParam.CharId == CharId then
-    return CharParam.Appearance
+  for Index, CharParam in ipairs(CharParamGroup) do
+    local ParamSlotIndex = ResolveCustomDisplaySlotIndex(CharParam, Index)
+    if ParamSlotIndex == SlotIndex and CharParam and CharParam.CharId == CharId then
+      return CharParam.Appearance
+    end
   end
   return nil
 end
@@ -754,7 +764,8 @@ function M:GetCustomDisplayDraft()
   CustomDisplay = NormalizeCustomDisplayInfo(CustomDisplay)
   local Draft = DisplayDraft:CreateEmpty(CustomDisplay.SceneId)
   local Avatar = self:IsOwener() and self._Avatar or self:GetFakeAvatar()
-  for SlotIndex, CharParam in ipairs(CustomDisplay.CharParamGroup or {}) do
+  for Index, CharParam in ipairs(CustomDisplay.CharParamGroup or {}) do
+    local SlotIndex = ResolveCustomDisplaySlotIndex(CharParam, Index)
     local Slot = DisplayDraft:GetCharacterSlot(Draft, SlotIndex)
     local CharData, CharUuid
     if CharParam and CharParam.CharId then
@@ -1027,7 +1038,7 @@ function M:SaveCustomDisplayDraft(DisplayEditor, Callback)
   for Index, CharParam in ipairs(CharParamGroup) do
     local Position = CharParam.Position or {}
     local Rotation = CharParam.Rotation or {}
-    DebugPrint(string.format("PersonInfoSaveCustomDisplay: slot=%s CharId=%s AppearancePlan=%s WeaponId=%s PoseId=%s Pos=(%s,%s,%s) Rot=(%s,%s,%s)", tostring(Index), tostring(CharParam.CharId), tostring(CharParam.AppearancePlan), tostring(CharParam.WeaponId), tostring(CharParam.PoseId), tostring(Position[1]), tostring(Position[2]), tostring(Position[3]), tostring(Rotation[1]), tostring(Rotation[2]), tostring(Rotation[3])))
+    DebugPrint(string.format("PersonInfoSaveCustomDisplay: slot=%s CharId=%s AppearancePlan=%s WeaponId=%s PoseId=%s Pos=(%s,%s,%s) Rot=(%s,%s,%s)", tostring(CharParam.SlotIndex or Index), tostring(CharParam.CharId), tostring(CharParam.AppearancePlan), tostring(CharParam.WeaponId), tostring(CharParam.PoseId), tostring(Position[1]), tostring(Position[2]), tostring(Position[3]), tostring(Rotation[1]), tostring(Rotation[2]), tostring(Rotation[3])))
   end
   return self:SaveCustomDisplay(SaveData, Callback)
 end

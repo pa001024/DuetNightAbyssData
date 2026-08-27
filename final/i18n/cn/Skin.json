@@ -253,7 +253,7 @@
   },
   {
     "id": 2102,
-    "name": "艾达（？？）的衣饰",
+    "name": "伊薇的衣饰",
     "desc": "蓝色的裙褶如同水中层叠的涟漪，倒映着少女眼中多彩的世界。",
     "icon": "T_Head_Eve",
     "rarity": 5,
@@ -275,6 +275,15 @@
         }
       ]
     }
+  },
+  {
+    "id": 2201,
+    "name": "UI_Skin_Name_2201",
+    "desc": "UI_Skin_Des_2201",
+    "icon": "T_Head_WeitaF",
+    "rarity": 5,
+    "charId": 2201,
+    "release": "1.6"
   },
   {
     "id": 2301,
@@ -403,9 +412,9 @@
   },
   {
     "id": 3104,
-    "name": "UI_Skin_Name_3104",
-    "desc": "UI_Skin_Des_3104",
-    "icon": "T_Head_Yeer",
+    "name": "法露茜的衣饰",
+    "desc": "被谎言与背叛撕扯的褴褛衣装，囚禁着心中熊熊燃烧的复仇之火。",
+    "icon": "T_Head_Falu",
     "rarity": 5,
     "charId": 3104,
     "release": "1.0",
@@ -539,6 +548,31 @@
         {
           "id": 10030,
           "name": "执棋者的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 4103,
+    "name": "UI_Skin_Name_4103",
+    "desc": "UI_Skin_Des_4103",
+    "icon": "T_Head_SpLise",
+    "rarity": 5,
+    "charId": 4103,
+    "release": "1.7",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10016,
+          "name": "逐灯者的肖像",
           "num": 1
         }
       ],
@@ -753,9 +787,9 @@
   },
   {
     "id": 110101,
-    "name": "UI_Skin_Name_110101",
-    "desc": "UI_Skin_Des_110101",
-    "icon": "T_Head_Heitao",
+    "name": "发条旋舞·贝蕾妮卡",
+    "desc": "舞者不断旋转，舞会永不落幕。",
+    "icon": "T_Head_Heitao01",
     "rarity": 5,
     "charId": 1101,
     "release": "1.6"
@@ -1003,6 +1037,15 @@
     ]
   },
   {
+    "id": 220101,
+    "name": "UI_Skin_Name_2201",
+    "desc": "UI_Skin_Des_2201",
+    "icon": "T_Head_WeitaM",
+    "rarity": 5,
+    "charId": 220101,
+    "release": "1.6"
+  },
+  {
     "id": 240101,
     "name": "素浪濯心",
     "desc": "易水涤尘，白浪静心。",
@@ -1049,12 +1092,43 @@
   },
   {
     "id": 310401,
-    "name": "UI_Skin_Name_310401",
-    "desc": "UI_Skin_Des_310401",
-    "icon": "",
+    "name": "缄默猎手",
+    "desc": "露出獠牙的那一刻便不再有回头的余地，等在前方的，唯有死斗。",
+    "icon": "T_Head_Falu01",
     "rarity": 5,
     "charId": 3104,
-    "release": "1.6"
+    "tag": "Falu01",
+    "release": "1.6",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 310491,
+          "name": "",
+          "num": 1
+        }
+      ],
+      "HeadSculpture": [
+        {
+          "id": 20015,
+          "name": "复仇者的肖像·缄言",
+          "num": 1
+        }
+      ]
+    },
+    "upgrade": [
+      {
+        "step": 2,
+        "amount": 54,
+        "currencyId": 1010,
+        "currency": "流光织针"
+      },
+      {
+        "step": 3,
+        "amount": 72,
+        "currencyId": 1010,
+        "currency": "流光织针"
+      }
+    ]
   },
   {
     "id": 320201,
@@ -1113,6 +1187,39 @@
           "id": 20005,
           "name": "执棋者的肖像·觥筹",
           "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 410301,
+    "name": "UI_Skin_Name_410301",
+    "desc": "UI_Skin_Des_410301",
+    "icon": "T_Head_Lise01",
+    "rarity": 5,
+    "charId": 4103,
+    "tag": "SpLise01",
+    "release": "1.7",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 410392,
+          "name": "UI_Skin_Name_410301",
+          "num": 1
+        }
+      ],
+      "HeadSculpture": [
+        {
+          "id": 10016,
+          "name": "逐灯者的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
         }
       ]
     }
@@ -1178,9 +1285,9 @@
   },
   {
     "id": 530102,
-    "name": "UI_Skin_Name_530102",
-    "desc": "UI_Skin_Des_530102",
-    "icon": "T_Head_Saiqi01",
+    "name": "发条旋舞·赛琪",
+    "desc": "舞者不断旋转，舞会永不落幕。",
+    "icon": "T_Head_Saiqi02",
     "rarity": 5,
     "charId": 5301,
     "release": "1.6"
@@ -1267,6 +1374,15 @@
     "release": "1.5"
   },
   {
+    "id": 11010161,
+    "name": "城市守则",
+    "desc": "守护安宁。",
+    "icon": "T_Pack_Police",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "9.9"
+  },
+  {
     "id": 11020141,
     "name": "黑色福音",
     "desc": "罪恶不需要温室的滋养，便能在人心中悄然盛开。",
@@ -1283,6 +1399,15 @@
     "rarity": 5,
     "charId": 1102,
     "release": "1.5"
+  },
+  {
+    "id": 11020161,
+    "name": "城市守则",
+    "desc": "守护安宁。",
+    "icon": "T_Pack_Police",
+    "rarity": 5,
+    "charId": 1102,
+    "release": "1.6"
   },
   {
     "id": 11030010,
@@ -1573,6 +1698,15 @@
     "release": "1.5"
   },
   {
+    "id": 15020161,
+    "name": "城市守则",
+    "desc": "守护安宁。",
+    "icon": "T_Pack_Police_Nifu",
+    "rarity": 5,
+    "charId": 1502,
+    "release": "1.6"
+  },
+  {
     "id": 15030011,
     "name": "墨玉韶华",
     "desc": "风华尽显，雅韵自成。",
@@ -1643,6 +1777,15 @@
     "rarity": 5,
     "charId": 1504,
     "release": "1.5"
+  },
+  {
+    "id": 15040161,
+    "name": "城市守则",
+    "desc": "守护安宁。",
+    "icon": "T_Pack_Police",
+    "rarity": 5,
+    "charId": 1504,
+    "release": "1.6"
   },
   {
     "id": 16010010,
@@ -1911,6 +2054,15 @@
     "release": "1.5"
   },
   {
+    "id": 18010161,
+    "name": "城市守则",
+    "desc": "守护安宁。",
+    "icon": "T_Pack_Police",
+    "rarity": 5,
+    "charId": 1801,
+    "release": "1.6"
+  },
+  {
     "id": 21010010,
     "name": "星芒夜愿",
     "desc": "在白昼最短的时节，当铃儿响起，人们便将心愿寄予夜空，让它乘着星芒飞向未来。",
@@ -1983,6 +2135,15 @@
     "release": "1.5"
   },
   {
+    "id": 21010161,
+    "name": "城市守则",
+    "desc": "守护安宁。",
+    "icon": "T_Pack_Police",
+    "rarity": 5,
+    "charId": 2101,
+    "release": "9.9"
+  },
+  {
     "id": 21020151,
     "name": "蔚蓝之海",
     "desc": "徜徉在盛夏的海风中，为蔚蓝的浪花干杯，为橙黄的焰火干杯，为此刻无拘无束的你我干杯。",
@@ -1990,6 +2151,15 @@
     "rarity": 5,
     "charId": 2102,
     "release": "9.9"
+  },
+  {
+    "id": 21020161,
+    "name": "城市守则",
+    "desc": "守护安宁。",
+    "icon": "T_Pack_Police",
+    "rarity": 5,
+    "charId": 2102,
+    "release": "1.6"
   },
   {
     "id": 23010010,
@@ -2109,6 +2279,15 @@
     "release": "1.5"
   },
   {
+    "id": 24010161,
+    "name": "城市守则",
+    "desc": "守护安宁。",
+    "icon": "T_Pack_Police",
+    "rarity": 5,
+    "charId": 2401,
+    "release": "1.6"
+  },
+  {
     "id": 31010010,
     "name": "星芒夜愿",
     "desc": "在白昼最短的时节，当铃儿响起，人们便将心愿寄予夜空，让它乘着星芒飞向未来。",
@@ -2181,6 +2360,15 @@
     "release": "1.5"
   },
   {
+    "id": 31010161,
+    "name": "城市守则",
+    "desc": "守护安宁。",
+    "icon": "T_Pack_Police",
+    "rarity": 5,
+    "charId": 3101,
+    "release": "1.6"
+  },
+  {
     "id": 31020141,
     "name": "黑色福音",
     "desc": "罪恶不需要温室的滋养，便能在人心中悄然盛开。",
@@ -2197,6 +2385,15 @@
     "rarity": 5,
     "charId": 3102,
     "release": "9.9"
+  },
+  {
+    "id": 31020161,
+    "name": "城市守则",
+    "desc": "守护安宁。",
+    "icon": "T_Pack_Police",
+    "rarity": 5,
+    "charId": 3102,
+    "release": "1.6"
   },
   {
     "id": 31030010,
@@ -2250,6 +2447,15 @@
     "icon": "T_Skin_TP05",
     "rarity": 5,
     "charId": 3103,
+    "release": "9.9"
+  },
+  {
+    "id": 31040161,
+    "name": "城市守则",
+    "desc": "守护安宁。",
+    "icon": "T_Pack_Police",
+    "rarity": 5,
+    "charId": 3104,
     "release": "9.9"
   },
   {
@@ -2325,6 +2531,15 @@
     "release": "1.5"
   },
   {
+    "id": 32010161,
+    "name": "城市守则",
+    "desc": "守护安宁。",
+    "icon": "T_Pack_Police",
+    "rarity": 5,
+    "charId": 3201,
+    "release": "1.6"
+  },
+  {
     "id": 32020131,
     "name": "叛逆风尚",
     "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
@@ -2350,6 +2565,15 @@
     "rarity": 5,
     "charId": 3202,
     "release": "9.9"
+  },
+  {
+    "id": 32020161,
+    "name": "城市守则",
+    "desc": "守护安宁。",
+    "icon": "T_Pack_Police",
+    "rarity": 5,
+    "charId": 3202,
+    "release": "1.6"
   },
   {
     "id": 33010010,
@@ -2424,6 +2648,15 @@
     "release": "1.5"
   },
   {
+    "id": 33010161,
+    "name": "城市守则",
+    "desc": "守护安宁。",
+    "icon": "T_Pack_Police",
+    "rarity": 5,
+    "charId": 3301,
+    "release": "1.6"
+  },
+  {
     "id": 41010010,
     "name": "星芒夜愿",
     "desc": "在白昼最短的时节，当铃儿响起，人们便将心愿寄予夜空，让它乘着星芒飞向未来。",
@@ -2496,6 +2729,15 @@
     "release": "1.5"
   },
   {
+    "id": 41010161,
+    "name": "城市守则",
+    "desc": "守护安宁。",
+    "icon": "T_Pack_Police",
+    "rarity": 5,
+    "charId": 4101,
+    "release": "1.6"
+  },
+  {
     "id": 41020121,
     "name": "冬日幻想",
     "desc": "一地雪人中为什么有一个看起来格外的大？",
@@ -2548,6 +2790,15 @@
     "rarity": 5,
     "charId": 4102,
     "release": "1.5"
+  },
+  {
+    "id": 41020161,
+    "name": "城市守则",
+    "desc": "守护安宁。",
+    "icon": "T_Pack_Police",
+    "rarity": 5,
+    "charId": 4102,
+    "release": "1.6"
   },
   {
     "id": 42010121,
@@ -2710,6 +2961,15 @@
     "rarity": 5,
     "charId": 4301,
     "release": "1.5"
+  },
+  {
+    "id": 43010161,
+    "name": "城市守则",
+    "desc": "守护安宁。",
+    "icon": "T_Pack_Police",
+    "rarity": 5,
+    "charId": 4301,
+    "release": "1.6"
   },
   {
     "id": 51010010,
@@ -2892,6 +3152,15 @@
     "release": "1.5"
   },
   {
+    "id": 53010161,
+    "name": "城市守则",
+    "desc": "守护安宁。",
+    "icon": "T_Pack_Police",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "9.9"
+  },
+  {
     "id": 54010010,
     "name": "星芒夜愿",
     "desc": "在白昼最短的时节，当铃儿响起，人们便将心愿寄予夜空，让它乘着星芒飞向未来。",
@@ -2962,5 +3231,14 @@
     "rarity": 5,
     "charId": 5401,
     "release": "1.5"
+  },
+  {
+    "id": 54010161,
+    "name": "城市守则",
+    "desc": "守护安宁。",
+    "icon": "T_Pack_Police",
+    "rarity": 5,
+    "charId": 5401,
+    "release": "1.6"
   }
 ]

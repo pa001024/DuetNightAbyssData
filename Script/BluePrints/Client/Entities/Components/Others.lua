@@ -1,5 +1,6 @@
 local SettingUtils = require("Utils.SettingUtils")
 local BattleHUDCommonConst = require("BluePrints.UI.UI_Phone.Battle.BattleHUDCommonConst")
+local SerializeUtils = require("Utils.SerializeUtils")
 local Component = {}
 local SignBoardBubbleTalkController = require("BluePrints.UI.WBP.SignBoardBubble.SignBoardBubbleTalkController")
 local StoryInteractiveController = require("BluePrints.UI.WBP.StoryInteractive.StoryInteractiveController")
@@ -129,6 +130,11 @@ function Component:InitReddotTrees()
   ReddotManager.AddNodeEx("Setting_Root")
   if SettingUtils.IsShowRedDotForLayoutPlan() then
     ReddotManager.IncreaseLeafNodeCount("Setting_Layout", 1)
+  end
+  local HasClickedAutoFold = EMCache:Get("HasClickedAutoFold", true)
+  if nil == HasClickedAutoFold and UIUtils.IsMobileInput() then
+    ReddotManager.ClearLeafNodeCount("Setting_Control_AutoFoldBtn")
+    ReddotManager.IncreaseLeafNodeCount("Setting_Control_AutoFoldBtn", 1)
   end
   ReddotManager.ClearLeafNodeCount("Setting_Service")
   local HasCustomerServiceRedDot = self:CheckCustomerServiceRedDot()
@@ -335,29 +341,46 @@ function Component:UpdateActionMapping(ActionMapping)
 end
 
 function Component:CheckSignBoardNpcDailyTalkIsLimit(NpcId)
+  local GMVariable = require("BluePrints.UI.GMInterface.GMVariable")
+  if GMVariable.DisableSignBoardTalkLimit then
+    return true
+  end
   if not NpcId or not DataMgr.Npc[NpcId] then
+    DebugPrint("[SignBoardTalk] CheckLimit false: NpcId invalid,", NpcId)
     return false
   end
   local NpcInfo = DataMgr.Npc[NpcId]
   local CharId = NpcInfo.CharId
   if not CharId or not self.CommonChars[CharId] then
+    DebugPrint("[SignBoardTalk] CheckLimit false: Char invalid, NpcId =", NpcId, "CharId =", CharId)
     return false
   end
   local CommonChar = self.CommonChars[CharId]
   if CommonChar.DailySignBoardNpcTalkCount >= DataMgr.GlobalConstant.IndividualLongIdleTalkTimes.ConstantValue then
+    DebugPrint("[SignBoardTalk] CheckLimit false: individual limit hit, NpcId =", NpcId, "count =", CommonChar.DailySignBoardNpcTalkCount, ">= limit =", DataMgr.GlobalConstant.IndividualLongIdleTalkTimes.ConstantValue)
     return false
   end
   if self.TotalSignBoardNpcDailyTalkCount >= DataMgr.GlobalConstant.LongIdleTalkTimes.ConstantValue then
+    DebugPrint("[SignBoardTalk] CheckLimit false: total limit hit, NpcId =", NpcId, "total =", self.TotalSignBoardNpcDailyTalkCount, ">= limit =", DataMgr.GlobalConstant.LongIdleTalkTimes.ConstantValue)
     return false
   end
   return true
 end
 
 function Component:TriggerAddSignBoardNpcDailyTalk(NpcId, callback)
+  local GMVariable = require("BluePrints.UI.GMInterface.GMVariable")
+  if GMVariable.DisableSignBoardTalkLimit then
+    DebugPrint("[SignBoardTalk] TriggerAdd bypass (GM), NpcId =", NpcId)
+    if callback then
+      callback(true)
+    end
+    return
+  end
   self.logger.debug("TriggerAddSignBoardNpcDailyTalk Begin", NpcId)
   
   local function Callback(Ret)
     self.logger.debug("TriggerAddSignBoardNpcDailyTalk Callback", NpcId, Ret)
+    DebugPrint("[SignBoardTalk] TriggerAdd callback, NpcId =", NpcId, "Ret =", Ret, "bSuccess =", Ret == ErrorCode.RET_SUCCESS)
     if callback then
       callback(Ret == ErrorCode.RET_SUCCESS)
     end

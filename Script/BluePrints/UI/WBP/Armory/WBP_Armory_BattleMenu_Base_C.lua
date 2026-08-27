@@ -810,53 +810,53 @@ end
 
 function M:NewItemContent(ServerData)
   local Obj = NewObject(UIUtils.GetCommonItemContentClass())
-  Obj.Type = CommonConst.DataType.Resource
-  Obj.ItemType = CommonConst.DataType.Resource
-  Obj.Id = ServerData.ResourceId
-  Obj.UnitId = ServerData.ResourceId
-  Obj.ResourceCount = 0
-  Obj.ResourceSType = ServerData.ResourceSType or ""
+  rawset(Obj, "Type", CommonConst.DataType.Resource)
+  rawset(Obj, "ItemType", CommonConst.DataType.Resource)
+  rawset(Obj, "Id", ServerData.ResourceId)
+  rawset(Obj, "UnitId", ServerData.ResourceId)
+  rawset(Obj, "ResourceCount", 0)
+  rawset(Obj, "ResourceSType", ServerData.ResourceSType or "")
   local Data = ServerData:Data()
   local DisplayData
   if Data.Type == "InfiniteBattleItem" then
-    Obj.ResourceCount = ""
+    rawset(Obj, "ResourceCount", "")
     if Obj.ResourceSType == "PhantomItem" then
-      Obj.IsPhantom = true
-      Obj.ItemDetailsButton01EventInfo = self:CreateOpenPhantomButtonEventInfo(Obj)
-      Obj.ItemDetailsButton02EventInfo = self:CreateQuickEquipButtonEventInfo(Obj)
+      rawset(Obj, "IsPhantom", true)
+      rawset(Obj, "ItemDetailsButton01EventInfo", self:CreateOpenPhantomButtonEventInfo(Obj))
+      rawset(Obj, "ItemDetailsButton02EventInfo", self:CreateQuickEquipButtonEventInfo(Obj))
       DisplayData = BattleUtils.ResolveCharacterAttributeSwitchPhantomData(Data)
       local BattleCharData = DataMgr.BattleChar[DisplayData.UseParam]
       local Element = BattleCharData and BattleCharData.Attribute
       if Element then
         local IconName = "Armory_" .. Element
-        Obj.AttrIcon = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_" .. IconName .. ".T_" .. IconName
+        rawset(Obj, "AttrIcon", "/Game/UI/Texture/Dynamic/Atlas/Armory/T_" .. IconName .. ".T_" .. IconName)
       end
     elseif Obj.ResourceSType == "MountItem" then
-      Obj.ItemDetailsButton01EventInfo = self:CreateOpenMountButtonEventInfo(Obj)
-      Obj.ItemDetailsButton02EventInfo = self:CreateQuickEquipButtonEventInfo(Obj)
+      rawset(Obj, "ItemDetailsButton01EventInfo", self:CreateOpenMountButtonEventInfo(Obj))
+      rawset(Obj, "ItemDetailsButton02EventInfo", self:CreateQuickEquipButtonEventInfo(Obj))
     else
-      Obj.ItemName = GText("INFINITY_SYMBOL")
-      Obj.ItemDetailsButton01EventInfo = self:CreateQuickEquipButtonEventInfo(Obj)
+      rawset(Obj, "ItemName", GText("INFINITY_SYMBOL"))
+      rawset(Obj, "ItemDetailsButton01EventInfo", self:CreateQuickEquipButtonEventInfo(Obj))
       if Obj.ResourceSType == "GestureItem" and not UIConst.LimitPreviewResource[Obj.Id] then
-        Obj.ItemDetailsButton02EventInfo = self:CreatePreviewButtonEventInfo(Obj)
+        rawset(Obj, "ItemDetailsButton02EventInfo", self:CreatePreviewButtonEventInfo(Obj))
       end
     end
   else
-    Obj.Count = ServerData.Count
+    rawset(Obj, "Count", ServerData.Count)
     if Data.BattleItemLimit then
-      Obj.ResourceCount = math.min(ServerData.Count, Data.BattleItemLimit)
+      rawset(Obj, "ResourceCount", math.min(ServerData.Count, Data.BattleItemLimit))
     end
-    Obj.ItemDetailsButton01EventInfo = self:CreateQuickEquipButtonEventInfo(Obj)
+    rawset(Obj, "ItemDetailsButton01EventInfo", self:CreateQuickEquipButtonEventInfo(Obj))
   end
   rawset(Obj, "IsEventItemt", Obj.ResourceSType == "EventItem")
-  Obj.IsEquiped = false
-  Obj.Rarity = Data.Rarity or 0
-  Obj.Icon = DisplayData and DisplayData.Icon or Data.Icon
-  Obj.bEnableDrag = true
-  Obj.ParentWidget = self
-  Obj.CharId = DisplayData and DisplayData.UseParam or Data.UseParam
-  Obj.MenuPlacement = EMenuPlacement.MenuPlacement_CenteredAboveAnchor
-  Obj.CreateDragWidget = self.CreateDragWidget
+  rawset(Obj, "IsEquiped", false)
+  rawset(Obj, "Rarity", Data.Rarity or 0)
+  rawset(Obj, "Icon", DisplayData and DisplayData.Icon or Data.Icon)
+  rawset(Obj, "bEnableDrag", true)
+  rawset(Obj, "ParentWidget", self)
+  rawset(Obj, "CharId", DisplayData and DisplayData.UseParam or Data.UseParam)
+  rawset(Obj, "MenuPlacement", EMenuPlacement.MenuPlacement_CenteredAboveAnchor)
+  rawset(Obj, "CreateDragWidget", self.CreateDragWidget)
   return Obj
 end
 
@@ -1539,9 +1539,9 @@ function M:OnWheelSlotDroped(Content, DropedSlot)
   local ContentInWheel = self.WheelContens[Content.UnitId]
   if ContentInWheel then
     if Content.WheelIdx and Content.WheelIdx ~= self.CurWheelWidget.WheelIdx then
-      local FormSlotIdx = self:WheelSlotIdx2ServerSlotIdx(Content.SlotIdx, Content.WheelIdx)
+      local FromSlotIdx = self:WheelSlotIdx2ServerSlotIdx(Content.SlotIdx, Content.WheelIdx)
       self.Parent:BlockAllUIInput(true)
-      Avatar:ExchangeBattleWheel(self.CurrentWheelIndex, FormSlotIdx, self:WheelSlotIdx2ServerSlotIdx(DropedSlot))
+      Avatar:ExchangeBattleWheel(self.CurrentWheelIndex, FromSlotIdx, self:WheelSlotIdx2ServerSlotIdx(DropedSlot))
       return
     elseif self:IsContentInWheelAndFull(ContentInWheel) then
       self:ShowEquippedWarning(ServerSlotIdx, Content)
@@ -1683,6 +1683,11 @@ function M:TryOpenPreview(Content)
 end
 
 function M:Destruct()
+  self.List_Item.BP_OnItemClicked:Clear()
+  self.List_Item.BP_OnItemSelectionChanged:Clear()
+  self.List_Item.BP_OnEntryInitialized:Clear()
+  self:UnbindAllFromAnimationFinished(self.Auto_Out)
+  self:UnbindAllFromAnimationFinished(self.Auto_In)
   if IsValid(self.PhantomWeaponMenu) then
     self.PhantomWeaponMenu:Close()
   end

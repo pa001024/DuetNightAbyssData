@@ -141,6 +141,24 @@
     ]
   },
   {
+    "id": 6001021,
+    "n": "舍身 疾冲秽兽",
+    "t": "Elite_Monster",
+    "f": 1,
+    "atk": 20,
+    "def": 300,
+    "hp": 510,
+    "tn": 600,
+    "icon": "Gr_Jichong_C01",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Melee",
+      "Mon.Strong.Kamikaze",
+      "Mon.Reward.B",
+      "Mon.Elite"
+    ]
+  },
+  {
     "id": 6001301,
     "n": "舍身·枯萎·爆破 疾冲秽兽",
     "t": "Elite_Monster",
@@ -167,7 +185,7 @@
     "f": 1,
     "atk": 10,
     "def": 130,
-    "hp": 350,
+    "hp": 88,
     "tn": 150,
     "icon": "Gr_Jichong_C01",
     "tags": [
@@ -302,6 +320,24 @@
     ]
   },
   {
+    "id": 6002021,
+    "n": "舍身 游击秽兽",
+    "t": "Elite_Monster",
+    "f": 1,
+    "atk": 11,
+    "def": 300,
+    "hp": 510,
+    "tn": 600,
+    "icon": "Gr_Youji_C01",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Kamikaze"
+    ]
+  },
+  {
     "id": 6002301,
     "n": "转雷·凛霜·守护 游击秽兽",
     "t": "Elite_Monster",
@@ -328,7 +364,7 @@
     "f": 1,
     "atk": 5.56,
     "def": 130,
-    "hp": 350,
+    "hp": 88,
     "tn": 150,
     "icon": "Gr_Youji_C01",
     "tags": [
@@ -374,12 +410,31 @@
     ]
   },
   {
+    "id": 6003015,
+    "n": "猩红 飘浮秽兽",
+    "t": "Elite_Monster",
+    "f": 1,
+    "atk": 11,
+    "def": 300,
+    "hp": 510,
+    "tn": 150,
+    "icon": "Gr_Piaofu_C01",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Fly",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Blood"
+    ]
+  },
+  {
     "id": 6003601,
     "n": "飘浮秽兽",
     "f": 1,
     "atk": 5.56,
     "def": 130,
-    "hp": 350,
+    "hp": 88,
     "tn": 150,
     "icon": "Gr_Piaofu_C01",
     "tags": [
@@ -493,6 +548,24 @@
     ]
   },
   {
+    "id": 6004021,
+    "n": "舍身 暴徒秽兽",
+    "t": "Elite_Monster",
+    "f": 1,
+    "atk": 20,
+    "def": 300,
+    "hp": 510,
+    "tn": 600,
+    "icon": "Gr_Baotu_C01",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Kamikaze"
+    ]
+  },
+  {
     "id": 6004301,
     "n": "霹雳·爆破·霜狱 暴徒秽兽",
     "t": "Elite_Monster",
@@ -541,7 +614,7 @@
     "f": 1,
     "atk": 18.75,
     "def": 200,
-    "hp": 1225,
+    "hp": 306,
     "tn": 300,
     "icon": "Gr_Baotu_C01",
     "tags": [
@@ -648,6 +721,24 @@
     ]
   },
   {
+    "id": 6007018,
+    "n": "复仇 灼心秽兽",
+    "t": "Elite_Monster",
+    "f": 1,
+    "atk": 11,
+    "def": 300,
+    "hp": 510,
+    "tn": 150,
+    "icon": "GR_Zhuoxin",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Revenge",
+      "Mon.Elite"
+    ]
+  },
+  {
     "id": 6007024,
     "n": "掠影 灼心秽兽",
     "t": "Elite_Monster",
@@ -692,7 +783,7 @@
     "f": 1,
     "atk": 5.56,
     "def": 130,
-    "hp": 350,
+    "hp": 88,
     "tn": 150,
     "icon": "GR_Zhuoxin",
     "tags": [
@@ -744,7 +835,7 @@
     "f": 1,
     "atk": 10,
     "def": 130,
-    "hp": 350,
+    "hp": 88,
     "tn": 150,
     "icon": "Gr_Jichong_C01",
     "tags": [
@@ -797,7 +888,7 @@
     "f": 1,
     "atk": 5.56,
     "def": 130,
-    "hp": 350,
+    "hp": 88,
     "tn": 150,
     "icon": "Gr_Youji_C01",
     "tags": [
@@ -912,7 +1003,7 @@
     "f": 1,
     "atk": 5.56,
     "def": 130,
-    "hp": 350,
+    "hp": 88,
     "tn": 150,
     "icon": "Gr_Piaofu_C01",
     "tags": [
@@ -966,7 +1057,7 @@
     "f": 1,
     "atk": 18.75,
     "def": 200,
-    "hp": 1225,
+    "hp": 306,
     "tn": 300,
     "icon": "Gr_Baotu_C01",
     "tags": [
@@ -1650,6 +1741,44 @@
     ]
   },
   {
+    "id": 7001019,
+    "n": "霜狱 狙击列兵",
+    "t": "Elite_Monster",
+    "f": 2,
+    "atk": 11,
+    "def": 300,
+    "es": 340,
+    "hp": 340,
+    "tn": 600,
+    "icon": "Jt_Juji_C01",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Strong.IceOrb",
+      "Mon.Reward.B",
+      "Mon.Elite"
+    ]
+  },
+  {
+    "id": 7001022,
+    "n": "转雷 狙击列兵",
+    "t": "Elite_Monster",
+    "f": 2,
+    "atk": 11,
+    "def": 300,
+    "es": 340,
+    "hp": 340,
+    "tn": 600,
+    "icon": "Jt_Juji_C01",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Strong.ThunderLaser",
+      "Mon.Reward.B",
+      "Mon.Elite"
+    ]
+  },
+  {
     "id": 7001024,
     "n": "掠影 狙击列兵",
     "t": "Elite_Monster",
@@ -1696,8 +1825,8 @@
     "f": 2,
     "atk": 5.56,
     "def": 130,
-    "es": 170,
-    "hp": 230,
+    "es": 43,
+    "hp": 58,
     "tn": 150,
     "icon": "Jt_Juji_C01",
     "tags": [
@@ -1899,8 +2028,8 @@
     "f": 2,
     "atk": 10,
     "def": 130,
-    "es": 170,
-    "hp": 230,
+    "es": 43,
+    "hp": 58,
     "tn": 150,
     "icon": "Jt_Pizhuo_C01",
     "tags": [
@@ -2086,8 +2215,8 @@
     "f": 2,
     "atk": 5.56,
     "def": 130,
-    "es": 170,
-    "hp": 230,
+    "es": 43,
+    "hp": 58,
     "tn": 150,
     "icon": "Jt_Ranger_C01",
     "tags": [
@@ -2156,8 +2285,8 @@
     "f": 2,
     "atk": 18.75,
     "def": 200,
-    "es": 680,
-    "hp": 815,
+    "es": 170,
+    "hp": 204,
     "tn": 300,
     "icon": "Jt_Tuji_C01",
     "tags": [
@@ -2228,6 +2357,26 @@
       "Mon.Ranged",
       "Mon.Reward.C",
       "Mon.Elite"
+    ]
+  },
+  {
+    "id": 7008013,
+    "n": "侵蚀 精锐士官",
+    "t": "Elite_Monster",
+    "f": 2,
+    "atk": 20,
+    "def": 300,
+    "es": 340,
+    "hp": 340,
+    "tn": 600,
+    "icon": "Jt_Zhihui",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Reward.C",
+      "Mon.Elite",
+      "Mon.Strong.Poison",
+      "Mon.SurvivalPoison"
     ]
   },
   {
@@ -2307,6 +2456,26 @@
     ]
   },
   {
+    "id": 7009013,
+    "n": "侵蚀 帝皇之仁",
+    "t": "Elite_Monster",
+    "f": 2,
+    "atk": 20,
+    "def": 300,
+    "es": 340,
+    "hp": 340,
+    "tn": 300,
+    "icon": "Jt_Zhiren",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Poison",
+      "Mon.SurvivalPoison"
+    ]
+  },
+  {
     "id": 7009020,
     "n": "残火 帝皇之仁",
     "t": "Elite_Monster",
@@ -2371,6 +2540,22 @@
     ]
   },
   {
+    "id": 7009601,
+    "n": "帝皇之仁",
+    "f": 2,
+    "atk": 18.75,
+    "def": 200,
+    "es": 170,
+    "hp": 204,
+    "tn": 300,
+    "icon": "Jt_Zhiren",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
+  },
+  {
     "id": 7010001,
     "n": "佩剑炼金术师",
     "f": 2,
@@ -2411,8 +2596,8 @@
     "f": 2,
     "atk": 5.56,
     "def": 130,
-    "es": 170,
-    "hp": 235,
+    "es": 43,
+    "hp": 58,
     "tn": 150,
     "icon": "Jt_Zhijian",
     "tags": [
@@ -2466,8 +2651,8 @@
     "f": 2,
     "atk": 5.56,
     "def": 130,
-    "es": 170,
-    "hp": 235,
+    "es": 43,
+    "hp": 58,
     "tn": 150,
     "icon": "Jt_Juji_C01",
     "tags": [
@@ -2539,8 +2724,8 @@
     "f": 2,
     "atk": 10,
     "def": 130,
-    "es": 170,
-    "hp": 235,
+    "es": 43,
+    "hp": 58,
     "tn": 150,
     "icon": "Jt_Pizhuo_C01",
     "tags": [
@@ -2595,8 +2780,8 @@
     "f": 2,
     "atk": 5.56,
     "def": 130,
-    "es": 170,
-    "hp": 235,
+    "es": 43,
+    "hp": 58,
     "tn": 150,
     "icon": "Jt_Ranger_C01",
     "tags": [
@@ -2614,6 +2799,23 @@
     "def": 200,
     "es": 136,
     "hp": 163,
+    "tn": 300,
+    "icon": "Jt_Tuji_C01",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Reward.E",
+      "Mon.Attribute.Thunder"
+    ]
+  },
+  {
+    "id": 7014601,
+    "n": "突击列兵Ⅱ",
+    "f": 2,
+    "atk": 18.75,
+    "def": 200,
+    "es": 170,
+    "hp": 204,
     "tn": 300,
     "icon": "Jt_Tuji_C01",
     "tags": [
@@ -2686,8 +2888,8 @@
     "f": 2,
     "atk": 5.56,
     "def": 130,
-    "es": 170,
-    "hp": 235,
+    "es": 43,
+    "hp": 58,
     "tn": 150,
     "icon": "JT_Jingjie",
     "tags": [
@@ -2789,6 +2991,27 @@
     ]
   },
   {
+    "id": 7018701,
+    "n": "霹雳·复仇 钢拳铁卫",
+    "t": "Elite_Monster",
+    "f": 2,
+    "atk": 32,
+    "def": 300,
+    "es": 340,
+    "hp": 340,
+    "tn": 150,
+    "icon": "JT_Tiequan",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Strong.Thunder.Double",
+      "Mon.Strong.Revenge.Double",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Double"
+    ]
+  },
+  {
     "id": 7019001,
     "n": "红衫铁卫",
     "f": 2,
@@ -2841,6 +3064,27 @@
       "Mon.Reward.B",
       "Mon.Strong.Fade",
       "Mon.Elite"
+    ]
+  },
+  {
+    "id": 7019701,
+    "n": "枯萎·凛霜 红衫铁卫",
+    "t": "Elite_Monster",
+    "f": 2,
+    "atk": 32,
+    "def": 300,
+    "es": 340,
+    "hp": 340,
+    "tn": 150,
+    "icon": "JT_Hongshan",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Strong.Fade.Double",
+      "Mon.Strong.Frozen.Double",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Double"
     ]
   },
   {
@@ -2944,8 +3188,8 @@
     "f": 4,
     "atk": 5.56,
     "def": 130,
-    "es": 410,
-    "hp": 70,
+    "es": 103,
+    "hp": 18,
     "tn": 150,
     "icon": "Jh_Zhishi",
     "tags": [
@@ -3093,8 +3337,8 @@
     "f": 4,
     "atk": 10,
     "def": 130,
-    "es": 410,
-    "hp": 70,
+    "es": 103,
+    "hp": 18,
     "tn": 150,
     "icon": "Jh_Xianfeng",
     "tags": [
@@ -3281,8 +3525,8 @@
     "f": 4,
     "atk": 5.56,
     "def": 130,
-    "es": 410,
-    "hp": 70,
+    "es": 103,
+    "hp": 18,
     "tn": 150,
     "icon": "Jh_Shenfu",
     "tags": [
@@ -4433,13 +4677,13 @@
   },
   {
     "id": 8516001,
-    "n": "富尔维斯【远期待包装】",
+    "n": "帝皇怒号",
     "t": "Boss",
     "atk": 15,
     "def": 720,
     "hp": 6000,
     "tn": 1000,
-    "icon": "Empty",
+    "icon": "Boss16_Fuer",
     "tags": [
       "Mon.Boss",
       "Mon.Reward.A"
@@ -4544,13 +4788,13 @@
   },
   {
     "id": 8520001,
-    "n": "艾达【远期待包装】",
+    "n": "「审判」兔妈妈",
     "t": "Boss",
     "atk": 25,
-    "def": 0,
-    "hp": 4000,
+    "def": 300,
+    "hp": 6000,
     "tn": 6000,
-    "icon": "Empty",
+    "icon": "Boss20_Aida",
     "tags": [
       "Mon.Boss",
       "Mon.Reward.A"
@@ -4561,7 +4805,7 @@
     "n": "欺惑者哈洛吉",
     "t": "Boss",
     "atk": 20,
-    "def": 0,
+    "def": 300,
     "hp": 6000,
     "tn": 6000,
     "icon": "Boss_Qihuo",
@@ -4785,6 +5029,22 @@
     ]
   },
   {
+    "id": 8523701,
+    "n": "枯萎 蒙恩的圣骑士",
+    "t": "Boss",
+    "atk": 100,
+    "def": 300,
+    "hp": 56250,
+    "tn": 2000,
+    "icon": "Boss23_Jishi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A",
+      "Mon.Corp",
+      "Mon.Strong.Fade"
+    ]
+  },
+  {
     "id": 8524001,
     "n": "恒梦咏叹调【远期待包装】",
     "t": "Boss",
@@ -4976,8 +5236,8 @@
     "f": 3,
     "atk": 10,
     "def": 130,
-    "es": 410,
-    "hp": 70,
+    "es": 103,
+    "hp": 18,
     "tn": 150,
     "icon": "SQ_Yinxie",
     "tags": [
@@ -5060,6 +5320,25 @@
       "Mon.Ranged",
       "Mon.Reward.B",
       "Mon.Strong.Blood",
+      "Mon.Elite"
+    ]
+  },
+  {
+    "id": 9002017,
+    "n": "守护 野蜂暗箭",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 11,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 600,
+    "icon": "SQ_Dufeng",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Shield",
       "Mon.Elite"
     ]
   },
@@ -5186,8 +5465,8 @@
     "f": 3,
     "atk": 5.56,
     "def": 130,
-    "es": 410,
-    "hp": 70,
+    "es": 103,
+    "hp": 18,
     "tn": 150,
     "icon": "SQ_Dufeng",
     "tags": [
@@ -5670,8 +5949,8 @@
     "f": 3,
     "atk": 5.56,
     "def": 130,
-    "es": 410,
-    "hp": 70,
+    "es": 103,
+    "hp": 18,
     "tn": 150,
     "icon": "SQ_Niaopao",
     "tags": [

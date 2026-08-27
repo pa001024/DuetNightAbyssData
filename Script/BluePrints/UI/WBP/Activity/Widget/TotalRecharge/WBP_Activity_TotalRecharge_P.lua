@@ -237,6 +237,7 @@ function M:ViewInfoBtnClick()
     end
   }
   Params.EventId = self.CurActivityId
+  Params.AutoFocus = true
   self.DetailPopupUI = UIManager(self):ShowCommonPopupUI(100306, Params, self)
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
 end
@@ -300,6 +301,11 @@ function M:Handle_KeyDownOnGamePad(InKeyName)
   elseif InKeyName == UIConst.GamePadKey.FaceButtonTop then
     if self.CanClaim and self.FocusWidgetName ~= "CheckRewardDetailView" then
       self:ClaimAllBtnClick()
+      IsEventHandled = true
+    end
+  elseif InKeyName == UIConst.GamePadKey.FaceButtonBottom then
+    if self.FocusWidgetName ~= "CheckRewardDetailView" then
+      self:JumpBtnClick()
       IsEventHandled = true
     end
   elseif InKeyName == UIConst.GamePadKey.SpecialLeft then

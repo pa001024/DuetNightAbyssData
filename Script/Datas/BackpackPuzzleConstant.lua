@@ -19,6 +19,6 @@ return ReadOnly("BackpackPuzzleConstant", {
   },
   BagGameEventId = {
     ConstantName = "BagGameEventId",
-    ConstantValue = 103015
+    ConstantValue = 103032
   }
 })

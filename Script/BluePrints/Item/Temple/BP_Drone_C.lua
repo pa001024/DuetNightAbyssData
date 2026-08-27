@@ -24,6 +24,7 @@ function M:CommonInitInfo(Info)
   self.PlayerDetected = false
   self.AlertValueToMax = false
   self.OtherFound = false
+  self.bVisionPaused = false
   if self.bAutoActive then
     self:ActiveCombat()
   end
@@ -45,6 +46,7 @@ function M:ResetInfo()
   self.PlayerDetected = false
   self.AlertValueToMax = false
   self.OtherFound = false
+  self.bVisionPaused = false
   self:SetActorTickEnabled(false)
   self:OnDroneAlarmChange(0)
   local GameState = UE4.UGameplayStatics.GetGameState(self)
@@ -59,6 +61,9 @@ end
 function M:OnPlayerIn(Player)
   self.PlayerInOverlap = true
   self.OverlappingPlayer = Player
+  if self.bVisionPaused then
+    return
+  end
   self:AddTimer(0.1, self.TryFindPlayer, true, -0.1, "TryFindPlayer", false, Player)
 end
 
@@ -71,7 +76,7 @@ function M:OnPlayerOut()
 end
 
 function M:TryFindPlayer(Player)
-  if not self.IsActive then
+  if not self.IsActive or self.bVisionPaused then
     return
   end
   local CapsuleHalfHeight = Player.CapsuleComponent:GetScaledCapsuleHalfHeight()
@@ -157,6 +162,9 @@ function M:RotateToInit(DeltaSeconds)
 end
 
 function M:OnOtherDroneFoundPlayer()
+  if self.bVisionPaused then
+    return
+  end
   self:OnGroupDroneFoundPlayer()
   self.OtherFound = true
   self.RotateFinish = false
@@ -164,6 +172,9 @@ function M:OnOtherDroneFoundPlayer()
 end
 
 function M:OnAllGroupDroneAlertZero()
+  if self.bVisionPaused then
+    return
+  end
   self.OtherFound = false
   self.RotateFinish = false
   self:SetActorTickEnabled(true)
@@ -262,6 +273,52 @@ function M:OnAlertValueReset()
   end
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
   GameMode:GetDungeonComponent():OnDroneAlertValueReset(self.GroupId, self.ManualItemId)
+end
+
+function M:OnEnterState(NowStateId)
+  self.Overridden.OnEnterState(self, NowStateId)
+  if 3 == NowStateId % 10 then
+    self:StopVisionDetection()
+  end
+end
+
+function M:OnLeaveState(NowStateId, NextStateId)
+  self.Overridden.OnLeaveState(self, NowStateId, NextStateId)
+  if 3 == NowStateId % 10 then
+    self:ResumeVisionDetection()
+  end
+end
+
+function M:StopVisionDetection()
+  DebugPrint("DroneVision StopVisionDetection", self.ManualItemId, self:GetName())
+  self.bVisionPaused = true
+  self.AlertValue = 0
+  self.AlertValueToMax = false
+  self.FoundPlayer = false
+  self.PlayerDetected = false
+  self.OtherFound = false
+  self.RotateFinish = true
+  self:RemoveTimer("TryFindPlayer")
+  self:SetActorTickEnabled(false)
+  self:OnDroneAlarmChange(0)
+  local GameState = UE4.UGameplayStatics.GetGameState(self)
+  if GameState then
+    GameState:RemoveGuideEid(self.Eid)
+  end
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  local DungeonComp = GameMode and GameMode:GetDungeonComponent()
+  if DungeonComp then
+    DungeonComp:OnDroneAlertValueReset(self.GroupId, self.ManualItemId)
+  end
+end
+
+function M:ResumeVisionDetection()
+  local bHasPlayer = self.OverlappingPlayer ~= nil
+  DebugPrint("DroneVision ResumeVisionDetection", self.ManualItemId, self:GetName(), "HasPlayer:", bHasPlayer)
+  self.bVisionPaused = false
+  if bHasPlayer then
+    self:AddTimer(0.1, self.TryFindPlayer, true, -0.1, "TryFindPlayer", false, self.OverlappingPlayer)
+  end
 end
 
 function M:ReceiveEndPlay()

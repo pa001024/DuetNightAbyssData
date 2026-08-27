@@ -111,4 +111,28 @@ function Component:SwitchSquadAutoPhantom(NewState)
   self:CallServerMethod("SwitchSquadAutoPhantom", NewState)
 end
 
+function Component:SwitchbAutoPhantomForBigWorld(NewState)
+  print(_G.LogTag, "SwitchbAutoPhantomForBigWorld", NewState)
+  self:CallServer("SwitchbAutoPhantomForBigWorld", nil, NewState)
+end
+
+function Component:ForbiddenAutoPhantomForBigWorldByTag(bForbidden, Tag)
+  if not self.ForbiddenTags then
+    self.ForbiddenTags = {}
+  end
+  if bForbidden then
+    self.ForbiddenTags[Tag] = 1
+  else
+    self.ForbiddenTags[Tag] = nil
+  end
+end
+
+function Component:GetAutoPhantomForBigWorldState()
+  local IsForbidden = false
+  if not self.bAutoPhantomForBigWorld or self.ForbiddenTags and not IsEmptyTable(self.ForbiddenTags) then
+    IsForbidden = true
+  end
+  return IsForbidden
+end
+
 return Component

@@ -5,6 +5,7 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("GoodsToDailyPack", {
+  ["com.hero.dna.Pay_DailyCharaShards_faluxi"] = 9010,
   ["com.hero.dna.Pay_DailyCharaShards_fuluola"] = 9007,
   ["com.hero.dna.Pay_DailyCharaShards_fushu"] = 9001,
   ["com.hero.dna.Pay_DailyCharaShards_kamila"] = 9006,

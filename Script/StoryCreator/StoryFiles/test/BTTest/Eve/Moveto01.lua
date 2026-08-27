@@ -78,6 +78,18 @@ return {
       questNodeData = {
         lineData = {
           {
+            startQuest = "17827326356378081679",
+            startPort = "Out",
+            endQuest = "17827327428239157374",
+            endPort = "In"
+          },
+          {
+            startQuest = "17827327428239157374",
+            startPort = "Out",
+            endQuest = "17665811181793896287",
+            endPort = "Success"
+          },
+          {
             startQuest = "17665811181793896284",
             startPort = "QuestStart",
             endQuest = "17665823361924605412",
@@ -92,8 +104,8 @@ return {
           {
             startQuest = "17665812163323896986",
             startPort = "Out",
-            endQuest = "17665811181793896287",
-            endPort = "Success"
+            endQuest = "17827326356378081679",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -101,14 +113,14 @@ return {
             key = "17665811181793896284",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 1056.3333333333333, y = 438.33333333333337},
+            pos = {x = 810.0175438596491, y = 433.5964912280702},
             propsData = {ModeType = 0}
           },
           ["17665811181793896287"] = {
             key = "17665811181793896287",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 1972.3333333333335, y = 404.00000000000006},
+            pos = {x = 2352.8596491228072, y = 424.52631578947376},
             propsData = {ModeType = 0}
           },
           ["17665811181793896290"] = {
@@ -122,19 +134,52 @@ return {
             key = "17665812163323896986",
             type = "SendMessageNode",
             name = "发送消息Moveto1",
-            pos = {x = 1674.9999999999998, y = 424},
+            pos = {x = 1404.7419354838707, y = 248.9677419354839},
             propsData = {
               MessageType = "BehaviorTree",
-              MessageContent = "Moveto01",
-              UnitId = 111001
+              MessageContent = "MoveToPosition",
+              UnitId = 77000009
             }
           },
           ["17665823361924605412"] = {
             key = "17665823361924605412",
             type = "WaitOfTimeNode",
             name = "延迟等待",
-            pos = {x = 1386.3333333333333, y = 416},
+            pos = {x = 1110.3859649122805, y = 370.57894736842104},
             propsData = {WaitTime = 1}
+          },
+          ["17827326356378081679"] = {
+            key = "17827326356378081679",
+            type = "ChangeNpcBBKeyNode",
+            name = "修改NPC行为树黑板键",
+            pos = {x = 1742.3760504201678, y = 299.9368089341},
+            propsData = {
+              NpcUnitId = 77000009,
+              QuestEventName = "MoveToPosition",
+              IsWait = true,
+              PostBehaviorEvent = "MoveToPosition",
+              MoveToPosEventName = "Location",
+              x = -944.818359,
+              y = -14080.469727,
+              z = -1013.364258
+            }
+          },
+          ["17827327428239157374"] = {
+            key = "17827327428239157374",
+            type = "TalkNode",
+            name = "对话节点",
+            pos = {x = 2030.770806380403, y = 304.4304045857606},
+            propsData = {
+              IsNpcNode = false,
+              FirstDialogueId = 11117601,
+              FlowAssetPath = "",
+              TalkType = "Guide",
+              bIsStandalone = true,
+              GuideMeshIndexList = {},
+              IsPlayStartSound = false,
+              GuideTalkStyle = "Normal",
+              OverrideFailBlend = false
+            }
           }
         },
         commentData = {}

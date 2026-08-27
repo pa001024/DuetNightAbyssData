@@ -54,6 +54,9 @@ end
 
 function Component:InStatus(InputStatus, status)
   InputStatus = InputStatus or self.AvatarStatus
+  if not InputStatus then
+    return nil
+  end
   return InputStatus[status]
 end
 

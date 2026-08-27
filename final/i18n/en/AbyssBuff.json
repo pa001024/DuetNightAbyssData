@@ -534,5 +534,29 @@
     "d": "When an ally summons a unit, all allies gain +5% Damage Dealt for 10s. Max 10 stacks.",
     "t": 1,
     "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 16121,
+    "icon": "Skill",
+    "n": "Andante Furioso: The Courage to Defy",
+    "d": "For every 20 instances of Skill DMG dealt by any ally, grants 1 stack of +5% Damage Dealt for 10s, up to 10 stacks.",
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 16211,
+    "icon": "Skill",
+    "n": "Allegro Agitato: Coin of the Gods",
+    "d": "When an ally uses a Combat Skill or Ultimate Skill, grants 1 stack of +30% Trigger Probability for 18s, up to 6 stacks.",
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 16221,
+    "icon": "Range",
+    "n": "Andante Furioso: The Courage to Defy",
+    "d": "For every 20 instances of Weapon DMG dealt by any ally, grants 1 stack of +5% Damage Dealt for 10s, up to 10 stacks.",
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
   }
 ]

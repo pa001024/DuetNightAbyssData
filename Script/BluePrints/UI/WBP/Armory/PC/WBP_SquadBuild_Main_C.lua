@@ -29,9 +29,31 @@ function WBP_SquadBuild_Main_P_C:Construct()
 end
 
 function WBP_SquadBuild_Main_P_C:Destruct()
+  self.bSquadBuildDestructing = true
+  if self.Btn_AutoAssist and self.Btn_AutoAssist.Btn_Click then
+    self.Btn_AutoAssist.Btn_Click.OnClicked:Remove(self, self.OpenAutoAssistPanel)
+  end
+  if IsValid(self.AutoAssistPanel) then
+    self.AutoAssistPanel.Owner = nil
+    self.AutoAssistPanel:RemoveFromParent()
+    rawset(self, "AutoAssistPanel", nil)
+  end
   WBP_SquadBuild_Main_P_C.Super.Destruct(self)
   AudioManager(self):SetEventSoundParam(self, "OpenSquad", {ToEnd = 1})
   self:QuitSquadSetting()
+end
+
+function WBP_SquadBuild_Main_P_C:OnEndClose()
+  if WBP_SquadBuild_Main_P_C.Super.OnEndClose then
+    WBP_SquadBuild_Main_P_C.Super.OnEndClose(self)
+  end
+  if UIManager(self):GetUI("ArmoryMain") then
+    return
+  end
+  local PlayerCharacter = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
+  if IsValid(PlayerCharacter) and PlayerCharacter.TryCreateAutoAssistPhantomsForBigWorld then
+    PlayerCharacter:TryCreateAutoAssistPhantomsForBigWorld()
+  end
 end
 
 WBP_SquadBuild_Main_P_C._components = {
@@ -165,6 +187,14 @@ function WBP_SquadBuild_Main_P_C:InitTextAndBtn()
     self:EditorSquad()
     AudioManager(self):PlayUISound(nil, "event:/ui/common/click_btn_confirm", nil, nil)
   end)
+  if self.Btn_AutoAssist then
+    if self.Btn_AutoAssist.Btn_Click then
+      self.Btn_AutoAssist.Btn_Click.OnClicked:Clear()
+      self.Btn_AutoAssist.Btn_Click.OnClicked:Add(self, self.OpenAutoAssistPanel)
+    end
+    self:UpdateAutoAssistEntry()
+    self:InitAutoAssistNewReddot()
+  end
   self:UpdateBtnInfo(self.Btn_EditName, nil, self.EditSquadName)
   self:SwitchBtnPanel("SquadList")
 end
@@ -306,6 +336,122 @@ function WBP_SquadBuild_Main_P_C:UpdateBtnInfo(BtnWidget, Text, Callback)
   BtnWidget.Button_Area.OnClicked:Add(self, Callback)
   if Text then
     BtnWidget:SetText(Text)
+  end
+end
+
+function WBP_SquadBuild_Main_P_C:UpdateAutoAssistEntry(IsEnabled)
+  if not self.Btn_AutoAssist then
+    return
+  end
+  if nil == IsEnabled then
+    local Avatar = GWorld:GetAvatar()
+    IsEnabled = Avatar and Avatar.bAutoPhantomForBigWorld == true
+  end
+  local StateText = IsEnabled and GText("UI_DUNGEON_DES_TRAINING_29") or GText("UI_DUNGEON_DES_TRAINING_30")
+  if self.Btn_AutoAssist.Text then
+    self.Btn_AutoAssist.Text:SetText(string.format("%s：%s", GText("UI_ArmourySquad_AutoSummon"), StateText))
+  end
+end
+
+function WBP_SquadBuild_Main_P_C:EnsureAutoAssistNewReddotWidget()
+  if IsValid(self.AutoAssistNewReddot) then
+    return self.AutoAssistNewReddot
+  end
+  if not self.Btn_AutoAssist then
+    return nil
+  end
+  local NewWidget = self.Btn_AutoAssist.New
+  if not IsValid(NewWidget) and self.Btn_AutoAssist.GetWidgetFromName then
+    NewWidget = self.Btn_AutoAssist:GetWidgetFromName("New")
+  end
+  if IsValid(NewWidget) then
+    rawset(self, "AutoAssistNewReddot", NewWidget)
+    return NewWidget
+  end
+  local Root = self.Btn_AutoAssist.Root
+  if not IsValid(Root) and self.Btn_AutoAssist.GetWidgetFromName then
+    Root = self.Btn_AutoAssist:GetWidgetFromName("Root")
+  end
+  if not IsValid(Root) then
+    return nil
+  end
+  NewWidget = self:CreateWidgetNew("ComItemNewReddot")
+  if not IsValid(NewWidget) then
+    return nil
+  end
+  local CanvasSlot = Root:AddChildToCanvas(NewWidget)
+  if not IsValid(CanvasSlot) then
+    NewWidget:RemoveFromParent()
+    return nil
+  end
+  local Anchors = FAnchors()
+  Anchors.Minimum = FVector2D(1, 0)
+  Anchors.Maximum = FVector2D(1, 0)
+  CanvasSlot:SetAnchors(Anchors)
+  CanvasSlot:SetAlignment(FVector2D(1, 0))
+  CanvasSlot:SetPosition(FVector2D(0, -2))
+  CanvasSlot:SetAutoSize(true)
+  CanvasSlot:SetZOrder(20)
+  rawset(self, "AutoAssistNewReddot", NewWidget)
+  return NewWidget
+end
+
+function WBP_SquadBuild_Main_P_C:InitAutoAssistNewReddot()
+  if self.bAutoAssistReddotBound or not ArmoryUtils:EnsureAutoAssistReddotNodes() then
+    return
+  end
+  ReddotManager.AddListenerEx(ArmoryUtils.AutoAssistReddotNodeName.AutoAssistEntryNew, self, self.OnAutoAssistNewReddotChanged)
+  self.bAutoAssistReddotBound = true
+end
+
+function WBP_SquadBuild_Main_P_C:OnAutoAssistNewReddotChanged(Count)
+  local NewWidget = self:EnsureAutoAssistNewReddotWidget()
+  if IsValid(NewWidget) then
+    NewWidget:SetVisibility(Count > 0 and ESlateVisibility.HitTestInvisible or ESlateVisibility.Collapsed)
+  end
+end
+
+function WBP_SquadBuild_Main_P_C:OpenAutoAssistPanel()
+  if self.IsInEditor or IsValid(self.AutoAssistPanel) then
+    return
+  end
+  local Panel = self:CreateWidgetNew("AutoAssitPanel")
+  if not IsValid(Panel) then
+    return
+  end
+  local HostPanel = UIUtils.GetRootUWidget(self)
+  if not IsValid(HostPanel) then
+    return
+  end
+  HostPanel:AddChild(Panel)
+  local CanvasSlot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(Panel)
+  if IsValid(CanvasSlot) then
+    local Anchors = FAnchors()
+    Anchors.Minimum = FVector2D(0, 0)
+    Anchors.Maximum = FVector2D(1, 1)
+    CanvasSlot:SetAnchors(Anchors)
+    CanvasSlot:SetOffsets(FMargin(0, 0, 0, 0))
+    CanvasSlot:SetZOrder(100)
+  else
+    local OverlaySlot = UE4.UWidgetLayoutLibrary.SlotAsOverlaySlot(Panel)
+    if IsValid(OverlaySlot) then
+      OverlaySlot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+      OverlaySlot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
+    end
+  end
+  rawset(self, "AutoAssistPanel", Panel)
+  Panel:Init(self)
+  ArmoryUtils:MarkAutoAssistReddotRead(ArmoryUtils.AutoAssistReddotNodeName.AutoAssistEntryNew)
+end
+
+function WBP_SquadBuild_Main_P_C:OnAutoAssistPanelClosed(Panel, IsEnabled)
+  if self.AutoAssistPanel ~= Panel then
+    return
+  end
+  rawset(self, "AutoAssistPanel", nil)
+  self:UpdateAutoAssistEntry(IsEnabled)
+  if not self.bSquadBuildDestructing then
+    self:InitUI()
   end
 end
 
@@ -768,6 +914,10 @@ function WBP_SquadBuild_Main_P_C:InitBottomTabOnSortStateInGamePad()
 end
 
 function WBP_SquadBuild_Main_P_C:OnBackKeyDown()
+  if IsValid(self.AutoAssistPanel) then
+    self.AutoAssistPanel:HandleBack()
+    return
+  end
   if self.Panel_Tips:IsVisible() then
     self:CloseTips(true)
     return
@@ -942,7 +1092,11 @@ function WBP_SquadBuild_Main_P_C:InitCurSquadInfo(IsAddSquad)
     Phantom1 = "",
     PhantomWeapon1 = "",
     Phantom2 = "",
-    PhantomWeapon2 = ""
+    PhantomWeapon2 = "",
+    PhantomModSuit1 = 0,
+    PhantomWeaponModSuit1 = 0,
+    PhantomModSuit2 = 0,
+    PhantomWeaponModSuit2 = 0
   }
   self.AddSquadAndEdit = false
   if not IsAddSquad and self.SquadInfo then
@@ -1394,6 +1548,7 @@ function WBP_SquadBuild_Main_P_C:UpdateRightDetailPanel()
   local Phantom1Params = {
     Uuid = self.SquadInfo.Phantom1,
     Id = self.SquadInfo.Phantom1Id,
+    ModSuit = self.SquadInfo.PhantomModSuit1,
     Type = "Char",
     Owner = self
   }
@@ -1401,6 +1556,7 @@ function WBP_SquadBuild_Main_P_C:UpdateRightDetailPanel()
   local Phantom1WeaponParams = {
     Uuid = self.SquadInfo.PhantomWeapon1,
     Id = self.SquadInfo.PhantomWeapon1Id,
+    ModSuit = self.SquadInfo.PhantomWeaponModSuit1,
     Type = self:GetWeaponTypeById(self.SquadInfo.PhantomWeapon1Id),
     Owner = self
   }
@@ -1408,6 +1564,7 @@ function WBP_SquadBuild_Main_P_C:UpdateRightDetailPanel()
   local Phantom2Params = {
     Uuid = self.SquadInfo.Phantom2,
     Id = self.SquadInfo.Phantom2Id,
+    ModSuit = self.SquadInfo.PhantomModSuit2,
     Type = "Char",
     Owner = self
   }
@@ -1415,6 +1572,7 @@ function WBP_SquadBuild_Main_P_C:UpdateRightDetailPanel()
   local Phantom2WeaponParams = {
     Uuid = self.SquadInfo.PhantomWeapon2,
     Id = self.SquadInfo.PhantomWeapon2Id,
+    ModSuit = self.SquadInfo.PhantomWeaponModSuit2,
     Type = self:GetWeaponTypeById(self.SquadInfo.PhantomWeapon2Id),
     Owner = self
   }
@@ -1572,9 +1730,6 @@ function WBP_SquadBuild_Main_P_C:ClickListItem(Content)
   if self.CurSlot and not self.PlayerAboutSlots[self.CurSlot.Type] and self.CurClickItemInfo == Content then
     return
   end
-  if self:CheckCurSlotIsPhantomSlot() and self.CurClickItemInfo == Content then
-    return
-  end
   if not self.PreContent then
     self.PreContent = self.CurSlot.ItemInfo
   end
@@ -1591,7 +1746,7 @@ function WBP_SquadBuild_Main_P_C:ClickListItem(Content)
     AudioManager(self):PlayUISound(nil, EquipSoundPaths.Weapon, nil, nil)
   end
   self.CurClickItemInfo = Content
-  if not self:CheckSlotTypeIsAboutMainRole(self.CurSlot) then
+  if not self:CheckSlotTypeIsAboutMainRole(self.CurSlot) and not self:CheckCurSlotIsPhantomSlot() then
     self:MakeSureCallback()
     return
   end
@@ -1684,6 +1839,10 @@ function WBP_SquadBuild_Main_P_C:CheckSlotTypeIsAboutMainRole(Slot)
 end
 
 function WBP_SquadBuild_Main_P_C:OnBGClick()
+  if IsValid(self.AutoAssistPanel) then
+    self.AutoAssistPanel:RequestClose()
+    return UIUtils.Handled
+  end
   self:CloseTips(true)
   return UIUtils.Unhandled
 end
@@ -1720,6 +1879,7 @@ function WBP_SquadBuild_Main_P_C:CloseTips(IsChoose)
   if not IsChoose then
     self:RevertAllItemIcon()
   end
+  self.CurClickItemInfo = nil
   self:FocusOnItemList()
 end
 
@@ -2081,6 +2241,9 @@ function WBP_SquadBuild_Main_P_C:UpdateRouletteSlot(Index)
 end
 
 function WBP_SquadBuild_Main_P_C:Handle_OnPCDown(InKeyName)
+  if IsValid(self.AutoAssistPanel) and self.AutoAssistPanel:HandleAutoAssistPC(InKeyName) then
+    return true
+  end
   if "Escape" == InKeyName then
     self:OnBackKeyDown()
     return true
@@ -2103,7 +2266,12 @@ end
 function WBP_SquadBuild_Main_P_C:OnUpdateUIStyleByInputTypeChange(CurInputType, CurGamepadName)
   self.CurInputDeviceType = CurInputType
   self.CurGamepadName = CurGamepadName
-  self:InitUI()
+  self:UpdateAutoAssistGamepadIcon()
+  if IsValid(self.AutoAssistPanel) then
+    self.AutoAssistPanel:OnUpdateUIStyleByInputTypeChange(CurInputType, CurGamepadName)
+  else
+    self:InitUI()
+  end
   self:SwitchSlotDeleteIconVisible()
 end
 
@@ -2144,6 +2312,22 @@ function WBP_SquadBuild_Main_P_C:RegisterBtnIconInGampad()
   self.Btn_Save:SetDefaultGamePadImg("X")
   self.Btn_Cancel:SetDefaultGamePadImg("B")
   self.Btn_Armory:SetDefaultGamePadImg("View")
+  if self.Btn_AutoAssist and self.Btn_AutoAssist.Controller then
+    self.Btn_AutoAssist.Controller:CreateCommonKey({
+      KeyInfoList = {
+        {Type = "Img", ImgShortPath = "View"}
+      }
+    })
+    self:UpdateAutoAssistGamepadIcon()
+  end
+end
+
+function WBP_SquadBuild_Main_P_C:UpdateAutoAssistGamepadIcon()
+  if not self.Btn_AutoAssist or not self.Btn_AutoAssist.Controller then
+    return
+  end
+  local Visibility = self.CurInputDeviceType == ECommonInputType.Gamepad and ESlateVisibility.HitTestInvisible or ESlateVisibility.Collapsed
+  self.Btn_AutoAssist.Controller:SetVisibility(Visibility)
 end
 
 function WBP_SquadBuild_Main_P_C:UpdateGamepadIcon(bShowSort, bShowDelete, bShowEditName, bShowEditSquad)
@@ -2361,6 +2545,9 @@ function WBP_SquadBuild_Main_P_C:SwitchAddSquadItemVisibility(bShow)
 end
 
 function WBP_SquadBuild_Main_P_C:Handle_OnGamePadDown(InKeyName)
+  if IsValid(self.AutoAssistPanel) then
+    return self.AutoAssistPanel:HandleAutoAssistGamepad(InKeyName)
+  end
   if "Gamepad_FaceButton_Right" == InKeyName then
     if self.Pos_Tips:GetChildAt(0) then
       self:CloseTips(true)
@@ -2491,8 +2678,10 @@ function WBP_SquadBuild_Main_P_C:Handle_OnGamePadDown(InKeyName)
     end
     return true
   elseif "Gamepad_Special_Left" == InKeyName then
-    if self.Panel_Roulette:IsVisible() or self.Panel_Tips:IsVisible() then
+    if self.IsInEditor or self.Panel_Roulette:IsVisible() or self.Panel_Tips:IsVisible() then
       self:GoToArmory()
+    else
+      self:OpenAutoAssistPanel()
     end
     return true
   elseif "Gamepad_RightThumbstick" == InKeyName then
@@ -2561,6 +2750,9 @@ function WBP_SquadBuild_Main_P_C:CheckLeftStickKeyName()
 end
 
 function WBP_SquadBuild_Main_P_C:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
+  if IsValid(self.AutoAssistPanel) then
+    return UIUtils.Unhandled
+  end
   local InKey = UE4.UKismetInputLibrary.GetKey(InAnalogInputEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   self.MoveDeltaX = 0
@@ -2593,6 +2785,12 @@ end
 function WBP_SquadBuild_Main_P_C:OnPreviewKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  if IsValid(self.AutoAssistPanel) then
+    if self.AutoAssistPanel:HandleAutoAssistPreviewKey(InKeyName) then
+      return UIUtils.Handled
+    end
+    return UIUtils.Unhandled
+  end
   local IsHandled = false
   if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
     if "Gamepad_DPad_Up" == InKeyName then
@@ -2630,6 +2828,10 @@ function WBP_SquadBuild_Main_P_C:CreateCDTimer()
 end
 
 function WBP_SquadBuild_Main_P_C:OnFocusReceived(MyGeometry, InFocusEvent)
+  if IsValid(self.AutoAssistPanel) then
+    self.AutoAssistPanel:FocusAutoAssistList()
+    return true
+  end
   self:AddDelayFrameFunc(function()
     if self.IsInEditor then
       self:FocusOnRightDetailPanel()

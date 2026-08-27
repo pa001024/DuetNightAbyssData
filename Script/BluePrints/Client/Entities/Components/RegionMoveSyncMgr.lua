@@ -1,4 +1,5 @@
 local Decorator = require("BluePrints.Client.Wrapper.Decorator")
+local MiscUtils = require("Utils.MiscUtils")
 local Component = {}
 local LuaConst = require("EMLuaConst")
 
@@ -92,10 +93,26 @@ function Component:DestoryAllOthers()
   if not self.OtherRoleInfo then
     return
   end
-  for k, v in pairs(self.OtherRoleInfo) do
-    self:RegionSyncRemoveRoleAndDestroy(v.ObjectId, v)
+  if not LuaConst.bEnableRegionDeferredDestroy then
+    for k, v in pairs(self.OtherRoleInfo) do
+      self:RegionSyncRemoveRoleAndDestroy(v.ObjectId, v)
+    end
+    self.OtherRoleInfo = {}
+  else
+    local RoleSnapshot = self.OtherRoleInfo
+    local GameInstance = GWorld.GameInstance
+    local RegionSycnSubsys = GameInstance and UE4.URegionSyncSubsystem.GetInstance(GameInstance)
+    if RegionSycnSubsys then
+      RegionSycnSubsys:RetireAllRoleBornInfo()
+      self.OtherRoleInfo = {}
+      for _, RoleInfo in pairs(RoleSnapshot) do
+        EventManager:FireEvent(EventID.OnlineRemoveOtherPlayer, RoleInfo.Uid)
+        EventManager:FireEvent(EventID.RemoveRegionIndicatorInfo, RoleInfo.Uid)
+      end
+    else
+      self.OtherRoleInfo = {}
+    end
   end
-  self.OtherRoleInfo = {}
 end
 
 function Component:NotifyCharacterStartSync(RegionOnlineId)
@@ -105,7 +122,7 @@ function Component:NotifyCharacterStartSync(RegionOnlineId)
     RegionSycnSubsys.RegionOnlineId = RegionOnlineId
     RegionSycnSubsys:ClearAllRoleBornInfo()
   end
-  NPCCreateSubSystem(GameInstance):SetIsOnlineState(true, RegionOnlineId)
+  MiscUtils.NPCCreateSubSystem(GameInstance):SetIsOnlineState(true, RegionOnlineId)
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(GameInstance, 0)
   if Player then
     Player:EnableRegionSync(true, RegionOnlineId)
@@ -120,7 +137,7 @@ function Component:NotifyCharacterEndSync(...)
   if RegionSycnSubsys then
     RegionSycnSubsys.RegionOnlineId = 0
   end
-  NPCCreateSubSystem(GameInstance):SetIsOnlineState(false)
+  MiscUtils.NPCCreateSubSystem(GameInstance):SetIsOnlineState(false)
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(GameInstance, 0)
   if Player then
     Player:EnableRegionSync(false, 0)
@@ -270,16 +287,17 @@ function Component:RegionSyncAddRoleToCreate(ObjId, RoleInfo)
   SuitTalble.HairId = CharInfo.HairId
   SuitTalble.SkinLevel = CharInfo.SkinLevel
   SuitTalble.HairColors = CharInfo.HairColors
+  SuitTalble.EffectInterval = CharInfo.EffectInterval
   SuitTalble.AccessoryCustomParams = CharInfo.AccessoryCustomParams
   if RoleInfo.WeaponInfo then
     local MeleeWeapon = {}
     if RoleInfo.WeaponInfo.MeleeWeapon then
-      Utils.FormatWeaponInfo(MeleeWeapon, RoleInfo.WeaponInfo.MeleeWeapon)
+      MiscUtils.FormatWeaponInfo(MeleeWeapon, RoleInfo.WeaponInfo.MeleeWeapon)
     end
     TempRoleInfo.MeleeWeapon = MeleeWeapon
     local RangedWeapon = {}
     if RoleInfo.WeaponInfo.RangedWeapon then
-      Utils.FormatWeaponInfo(RangedWeapon, RoleInfo.WeaponInfo.RangedWeapon)
+      MiscUtils.FormatWeaponInfo(RangedWeapon, RoleInfo.WeaponInfo.RangedWeapon)
     end
     TempRoleInfo.RangedWeapon = RangedWeapon
   end
@@ -321,16 +339,17 @@ function Component:RegionSyncChangeRoleInfo(ObjId, RoleInfo)
   SuitTalble.SkinLevel = CharInfo.SkinLevel
   SuitTalble.HairId = CharInfo.HairId
   SuitTalble.HairColors = CharInfo.HairColors
+  SuitTalble.EffectInterval = CharInfo.EffectInterval
   SuitTalble.AccessoryCustomParams = CharInfo.AccessoryCustomParams
   if RoleInfo.WeaponInfo then
     local MeleeWeapon = {}
     if RoleInfo.WeaponInfo.MeleeWeapon then
-      Utils.FormatWeaponInfo(MeleeWeapon, RoleInfo.WeaponInfo.MeleeWeapon)
+      MiscUtils.FormatWeaponInfo(MeleeWeapon, RoleInfo.WeaponInfo.MeleeWeapon)
     end
     TempRoleInfo.MeleeWeapon = MeleeWeapon
     local RangedWeapon = {}
     if RoleInfo.WeaponInfo.RangedWeapon then
-      Utils.FormatWeaponInfo(RangedWeapon, RoleInfo.WeaponInfo.RangedWeapon)
+      MiscUtils.FormatWeaponInfo(RangedWeapon, RoleInfo.WeaponInfo.RangedWeapon)
     end
     TempRoleInfo.RangedWeapon = RangedWeapon
   end
@@ -366,7 +385,7 @@ function Component:RegionSyncChangeWeaponInfo(ObjId, Message, Type)
   local TempRoleInfo = self.OtherRoleInfo[ObjId]
   if Message.WeaponInfo then
     local TempWeaponInfo = {}
-    Utils.FormatWeaponInfo(TempWeaponInfo, Message.WeaponInfo)
+    MiscUtils.FormatWeaponInfo(TempWeaponInfo, Message.WeaponInfo)
     TempRoleInfo[Type .. "Weapon"] = TempWeaponInfo
   end
   TempRoleInfo.ShowWeapon = "Melee"
@@ -446,9 +465,6 @@ function Component:RegionSyncUpdateMoveInfo(ObjId, MoveInfo)
     return
   end
   BornedChar:UpdateCharacterMoveInfo(MoveInfo)
-  if RegionSycnSubsys.LocalPlayerChar then
-    RegionSycnSubsys.LocalPlayerChar:CanPlayerBeInterCandidate(BornedChar.Eid, ActorLoc)
-  end
 end
 
 function Component:RegionSyncRemoveRoleAndDestroy(ObjId, RoleInfo)

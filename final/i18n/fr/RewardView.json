@@ -1237,6 +1237,11 @@
         "t": "Mod",
         "d": 1,
         "n": "Apogée · Exaltation"
+      },
+      {
+        "id": 227,
+        "t": "Resource",
+        "n": "Chant des Géniemon I"
       }
     ]
   },
@@ -1262,6 +1267,11 @@
         "id": 20013,
         "t": "Resource",
         "n": "Souvenir des Lunariens"
+      },
+      {
+        "id": 227,
+        "t": "Resource",
+        "n": "Chant des Géniemon I"
       }
     ]
   },
@@ -9223,6 +9233,12 @@
         "t": "Mod",
         "d": 1,
         "n": "Apogée · Exaltation"
+      },
+      {
+        "id": 227,
+        "t": "Resource",
+        "c": 30,
+        "n": "Chant des Géniemon I"
       }
     ]
   },
@@ -9432,6 +9448,12 @@
         "t": "Mod",
         "d": 1,
         "n": "Apogée · Exaltation"
+      },
+      {
+        "id": 227,
+        "t": "Resource",
+        "c": 40,
+        "n": "Chant des Géniemon I"
       }
     ]
   },
@@ -9641,6 +9663,12 @@
         "t": "Mod",
         "d": 1,
         "n": "Apogée · Exaltation"
+      },
+      {
+        "id": 227,
+        "t": "Resource",
+        "c": 50,
+        "n": "Chant des Géniemon I"
       }
     ]
   },
@@ -9850,6 +9878,12 @@
         "t": "Mod",
         "d": 1,
         "n": "Apogée · Exaltation"
+      },
+      {
+        "id": 227,
+        "t": "Resource",
+        "c": 60,
+        "n": "Chant des Géniemon I"
       }
     ]
   },
@@ -10059,6 +10093,12 @@
         "t": "Mod",
         "d": 1,
         "n": "Apogée · Exaltation"
+      },
+      {
+        "id": 227,
+        "t": "Resource",
+        "c": 70,
+        "n": "Chant des Géniemon I"
       }
     ]
   },
@@ -10268,6 +10308,12 @@
         "t": "Mod",
         "d": 1,
         "n": "Apogée · Exaltation"
+      },
+      {
+        "id": 227,
+        "t": "Resource",
+        "c": 80,
+        "n": "Chant des Géniemon I"
       }
     ]
   },
@@ -10477,6 +10523,12 @@
         "t": "Mod",
         "d": 1,
         "n": "Apogée · Exaltation"
+      },
+      {
+        "id": 227,
+        "t": "Resource",
+        "c": 90,
+        "n": "Chant des Géniemon I"
       }
     ]
   },
@@ -10686,6 +10738,12 @@
         "t": "Mod",
         "d": 1,
         "n": "Apogée · Exaltation"
+      },
+      {
+        "id": 227,
+        "t": "Resource",
+        "c": 100,
+        "n": "Chant des Géniemon I"
       }
     ]
   },
@@ -10715,6 +10773,12 @@
         "t": "Resource",
         "c": 10,
         "n": "Souvenir des Lunariens"
+      },
+      {
+        "id": 227,
+        "t": "Resource",
+        "c": 30,
+        "n": "Chant des Géniemon I"
       }
     ]
   },
@@ -10744,6 +10808,12 @@
         "t": "Resource",
         "c": 15,
         "n": "Souvenir des Lunariens"
+      },
+      {
+        "id": 227,
+        "t": "Resource",
+        "c": 40,
+        "n": "Chant des Géniemon I"
       }
     ]
   },
@@ -10773,6 +10843,12 @@
         "t": "Resource",
         "c": 20,
         "n": "Souvenir des Lunariens"
+      },
+      {
+        "id": 227,
+        "t": "Resource",
+        "c": 50,
+        "n": "Chant des Géniemon I"
       }
     ]
   },
@@ -10802,6 +10878,12 @@
         "t": "Resource",
         "c": 25,
         "n": "Souvenir des Lunariens"
+      },
+      {
+        "id": 227,
+        "t": "Resource",
+        "c": 60,
+        "n": "Chant des Géniemon I"
       }
     ]
   },
@@ -10831,6 +10913,12 @@
         "t": "Resource",
         "c": 30,
         "n": "Souvenir des Lunariens"
+      },
+      {
+        "id": 227,
+        "t": "Resource",
+        "c": 70,
+        "n": "Chant des Géniemon I"
       }
     ]
   },
@@ -10860,6 +10948,12 @@
         "t": "Resource",
         "c": 35,
         "n": "Souvenir des Lunariens"
+      },
+      {
+        "id": 227,
+        "t": "Resource",
+        "c": 80,
+        "n": "Chant des Géniemon I"
       }
     ]
   },
@@ -10889,6 +10983,12 @@
         "t": "Resource",
         "c": 40,
         "n": "Souvenir des Lunariens"
+      },
+      {
+        "id": 227,
+        "t": "Resource",
+        "c": 90,
+        "n": "Chant des Géniemon I"
       }
     ]
   },
@@ -10918,6 +11018,12 @@
         "t": "Resource",
         "c": 45,
         "n": "Souvenir des Lunariens"
+      },
+      {
+        "id": 227,
+        "t": "Resource",
+        "c": 100,
+        "n": "Chant des Géniemon I"
       }
     ]
   },
@@ -16752,7 +16858,7 @@
     "id": 91149,
     "child": [
       {
-        "id": 110065,
+        "id": 110067,
         "t": "Resource",
         "n": "Sceau démoniaque — Pactisant Hydro"
       }
@@ -16762,7 +16868,7 @@
     "id": 91150,
     "child": [
       {
-        "id": 110063,
+        "id": 110065,
         "t": "Resource",
         "n": "Sceau démoniaque — Pactisant Pyro"
       }
@@ -16772,7 +16878,7 @@
     "id": 91151,
     "child": [
       {
-        "id": 110064,
+        "id": 110066,
         "t": "Resource",
         "n": "Sceau démoniaque — Pactisant Électro"
       }
@@ -16782,7 +16888,7 @@
     "id": 91152,
     "child": [
       {
-        "id": 110062,
+        "id": 110064,
         "t": "Resource",
         "n": "Sceau démoniaque — Pactisant Anémo"
       }
@@ -16792,7 +16898,7 @@
     "id": 91153,
     "child": [
       {
-        "id": 110067,
+        "id": 110069,
         "t": "Resource",
         "n": "Sceau démoniaque — Pactisant Umbro"
       }
@@ -16802,7 +16908,7 @@
     "id": 91154,
     "child": [
       {
-        "id": 110066,
+        "id": 110068,
         "t": "Resource",
         "n": "Sceau démoniaque — Pactisant Lumino"
       }
@@ -17175,6 +17281,11 @@
         "id": 43006,
         "t": "Mod",
         "n": "Entrave"
+      },
+      {
+        "id": 41737,
+        "t": "Mod",
+        "n": "Décision"
       }
     ]
   },
@@ -17545,6 +17656,11 @@
         "id": 43006,
         "t": "Mod",
         "n": "Entrave"
+      },
+      {
+        "id": 41767,
+        "t": "Mod",
+        "n": "Décision · Raffinement"
       }
     ]
   },
@@ -17635,6 +17751,11 @@
         "id": 43006,
         "t": "Mod",
         "n": "Entrave"
+      },
+      {
+        "id": 41767,
+        "t": "Mod",
+        "n": "Décision · Raffinement"
       }
     ]
   },
@@ -18066,6 +18187,34 @@
     ]
   },
   {
+    "id": 100012,
+    "child": [
+      {
+        "id": 100,
+        "t": "Resource",
+        "c": 200,
+        "n": "Phoxène"
+      },
+      {
+        "id": 3010904,
+        "t": "WeaponSkin",
+        "n": "Valse des neiges de minuit – Lance-grenades"
+      },
+      {
+        "id": 208,
+        "t": "Resource",
+        "c": 5,
+        "n": "Carnet de mission — Tome III"
+      },
+      {
+        "id": 2004,
+        "t": "Resource",
+        "c": 5000,
+        "n": "Strophe"
+      }
+    ]
+  },
+  {
     "id": 101012,
     "child": [
       {
@@ -18213,6 +18362,35 @@
     ]
   },
   {
+    "id": 102004,
+    "child": [
+      {
+        "id": 1003,
+        "t": "Resource",
+        "c": 2,
+        "n": "Sablier prismatique"
+      },
+      {
+        "id": 100,
+        "t": "Resource",
+        "c": 300,
+        "n": "Phoxène"
+      },
+      {
+        "id": 112,
+        "t": "Resource",
+        "c": 30,
+        "n": "Éclat astral"
+      },
+      {
+        "id": 10100,
+        "t": "Resource",
+        "c": 1,
+        "n": "Trace du crépuscule"
+      }
+    ]
+  },
+  {
     "id": 103012,
     "child": [
       {
@@ -18298,7 +18476,7 @@
         "id": 120002,
         "t": "Resource",
         "c": 1,
-        "n": "Bon d’accessoires Souffle du vent"
+        "n": "Bon d’accessoires – Souffle du vent"
       },
       {
         "id": 1004,
@@ -18433,6 +18611,129 @@
     ]
   },
   {
+    "id": 103029,
+    "child": [
+      {
+        "id": 100,
+        "t": "Resource",
+        "c": 750,
+        "n": "Phoxène"
+      }
+    ]
+  },
+  {
+    "id": 103030,
+    "child": [
+      {
+        "id": 100,
+        "t": "Resource",
+        "c": 300,
+        "n": "Phoxène"
+      },
+      {
+        "id": 1003,
+        "t": "Resource",
+        "c": 2,
+        "n": "Sablier prismatique"
+      },
+      {
+        "id": 1009,
+        "t": "Resource",
+        "c": 4,
+        "n": "Fil stellaire"
+      },
+      {
+        "id": 10093,
+        "t": "CharAccessory",
+        "n": "Lanterne nocturne – Menthe"
+      },
+      {
+        "id": 120003,
+        "t": "Resource",
+        "n": "Bon miaou-miaou"
+      }
+    ]
+  },
+  {
+    "id": 103031,
+    "child": [
+      {
+        "id": 110026,
+        "t": "Resource",
+        "n": "Coffre de Sceau démoniaque épique — Typhon Anémo"
+      },
+      {
+        "id": 110027,
+        "t": "Resource",
+        "n": "Coffre de Sceau démoniaque épique — Typhon Pyro"
+      },
+      {
+        "id": 110028,
+        "t": "Resource",
+        "n": "Coffre de Sceau démoniaque épique — Typhon Électro"
+      },
+      {
+        "id": 110029,
+        "t": "Resource",
+        "n": "Coffre de Sceau démoniaque épique — Typhon Hydro"
+      },
+      {
+        "id": 110030,
+        "t": "Resource",
+        "n": "Coffre de Sceau démoniaque épique — Typhon Lumino"
+      },
+      {
+        "id": 110031,
+        "t": "Resource",
+        "n": "Coffre de Sceau démoniaque épique — Typhon Umbro"
+      },
+      {
+        "id": 211,
+        "t": "Resource",
+        "n": "Indice de Mandat scellé"
+      },
+      {
+        "id": 102,
+        "t": "Resource",
+        "n": "Globule cramoisi"
+      },
+      {
+        "id": 101,
+        "t": "Resource",
+        "n": "Pièce"
+      }
+    ]
+  },
+  {
+    "id": 103032,
+    "child": [
+      {
+        "id": 100,
+        "t": "Resource",
+        "c": 600,
+        "n": "Phoxène"
+      },
+      {
+        "id": 1003,
+        "t": "Resource",
+        "c": 4,
+        "n": "Sablier prismatique"
+      },
+      {
+        "id": 3016,
+        "t": "Resource",
+        "c": 1,
+        "n": "Catalyseur d’amplification"
+      },
+      {
+        "id": 10100,
+        "t": "Resource",
+        "c": 1,
+        "n": "Trace du crépuscule"
+      }
+    ]
+  },
+  {
     "id": 109003,
     "child": [
       {
@@ -18539,6 +18840,94 @@
         "id": 41026,
         "t": "Resource",
         "n": "Refuser"
+      }
+    ]
+  },
+  {
+    "id": 112005,
+    "child": [
+      {
+        "id": 100,
+        "t": "Resource",
+        "c": 300,
+        "n": "Phoxène"
+      },
+      {
+        "id": 1003,
+        "t": "Resource",
+        "c": 2,
+        "n": "Sablier prismatique"
+      },
+      {
+        "id": 1006,
+        "t": "Resource",
+        "c": 1,
+        "n": "Moule de fusion"
+      },
+      {
+        "id": 211,
+        "t": "Resource",
+        "n": "Indice de Mandat scellé"
+      },
+      {
+        "id": 20013,
+        "t": "Resource",
+        "n": "Souvenir des Lunariens"
+      },
+      {
+        "id": 102,
+        "t": "Resource",
+        "n": "Globule cramoisi"
+      },
+      {
+        "id": 101,
+        "t": "Resource",
+        "n": "Pièce"
+      }
+    ]
+  },
+  {
+    "id": 113001,
+    "child": [
+      {
+        "id": 40089,
+        "t": "CharAccessory",
+        "n": "Éclat d’éclipse"
+      },
+      {
+        "id": 60005,
+        "t": "CharAccessory",
+        "n": "Spirale des dragons d’encre"
+      },
+      {
+        "id": 1003,
+        "t": "Resource",
+        "c": 10,
+        "n": "Sablier prismatique"
+      },
+      {
+        "id": 1009,
+        "t": "Resource",
+        "c": 10,
+        "n": "Fil stellaire"
+      },
+      {
+        "id": 1006,
+        "t": "Resource",
+        "c": 1,
+        "n": "Moule de fusion"
+      },
+      {
+        "id": 3016,
+        "t": "Resource",
+        "c": 1,
+        "n": "Catalyseur d’amplification"
+      },
+      {
+        "id": 209,
+        "t": "Resource",
+        "c": 4,
+        "n": "Carnet de mission — Tome IV"
       }
     ]
   },
@@ -19423,6 +19812,66 @@
     ]
   },
   {
+    "id": 136017,
+    "child": [
+      {
+        "id": 41735,
+        "t": "Mod",
+        "n": "Ténacité"
+      },
+      {
+        "id": 42504,
+        "t": "Mod",
+        "n": "Chasse aux Déchus"
+      },
+      {
+        "id": 43404,
+        "t": "Mod",
+        "n": "Accélération"
+      }
+    ]
+  },
+  {
+    "id": 136018,
+    "child": [
+      {
+        "id": 41736,
+        "t": "Mod",
+        "n": "Raffinement"
+      },
+      {
+        "id": 43403,
+        "t": "Mod",
+        "n": "Focalisation"
+      },
+      {
+        "id": 43405,
+        "t": "Mod",
+        "n": "Ralentissement"
+      }
+    ]
+  },
+  {
+    "id": 136019,
+    "child": [
+      {
+        "id": 41317,
+        "t": "Mod",
+        "n": "Surabondance · Adresse"
+      },
+      {
+        "id": 42801,
+        "t": "Mod",
+        "n": "Entrave · Débordement"
+      },
+      {
+        "id": 43801,
+        "t": "Mod",
+        "n": "Entrave · Débordement"
+      }
+    ]
+  },
+  {
     "id": 136501,
     "child": [
       {
@@ -19599,6 +20048,26 @@
         "id": 43503,
         "t": "Mod",
         "n": "Chasse aux Émissaires Célestes"
+      }
+    ]
+  },
+  {
+    "id": 136510,
+    "child": [
+      {
+        "id": 41932,
+        "t": "Mod",
+        "n": "Désordre infernal"
+      },
+      {
+        "id": 41809,
+        "t": "Mod",
+        "n": "Lance-grenades affûté"
+      },
+      {
+        "id": 42501,
+        "t": "Mod",
+        "n": "Chasse aux Souillés"
       }
     ]
   },
@@ -19783,6 +20252,64 @@
         "t": "Mod",
         "d": 1,
         "n": "Fulgurance · Impact"
+      }
+    ]
+  },
+  {
+    "id": 137009,
+    "child": [
+      {
+        "id": 52801,
+        "t": "Mod",
+        "d": 1,
+        "n": "Entrave · Débordement"
+      },
+      {
+        "id": 52111,
+        "t": "Mod",
+        "d": 1,
+        "n": "Tranchant · Entrave"
+      },
+      {
+        "id": 52112,
+        "t": "Mod",
+        "d": 1,
+        "n": "Pénétration · Entrave"
+      },
+      {
+        "id": 52113,
+        "t": "Mod",
+        "d": 1,
+        "n": "Écrasement · Entrave"
+      }
+    ]
+  },
+  {
+    "id": 137010,
+    "child": [
+      {
+        "id": 53801,
+        "t": "Mod",
+        "d": 1,
+        "n": "Entrave · Débordement"
+      },
+      {
+        "id": 53111,
+        "t": "Mod",
+        "d": 1,
+        "n": "Tranchant · Entrave"
+      },
+      {
+        "id": 53112,
+        "t": "Mod",
+        "d": 1,
+        "n": "Pénétration · Entrave"
+      },
+      {
+        "id": 53113,
+        "t": "Mod",
+        "d": 1,
+        "n": "Écrasement · Entrave"
       }
     ]
   },
@@ -20371,6 +20898,122 @@
     "child": [
       {
         "id": 56124,
+        "t": "Mod",
+        "d": 1,
+        "n": "Ailes · Inspiration · Vigueur"
+      },
+      {
+        "id": 51002,
+        "t": "Mod",
+        "d": 1,
+        "n": "Nirvana"
+      },
+      {
+        "id": 51003,
+        "t": "Mod",
+        "d": 1,
+        "n": "Bénédiction"
+      },
+      {
+        "id": 51007,
+        "t": "Mod",
+        "d": 1,
+        "n": "Dévotion"
+      }
+    ]
+  },
+  {
+    "id": 139009,
+    "child": [
+      {
+        "id": 56131,
+        "t": "Mod",
+        "d": 1,
+        "n": "Décision"
+      },
+      {
+        "id": 51002,
+        "t": "Mod",
+        "d": 1,
+        "n": "Nirvana"
+      },
+      {
+        "id": 51003,
+        "t": "Mod",
+        "d": 1,
+        "n": "Bénédiction"
+      },
+      {
+        "id": 51007,
+        "t": "Mod",
+        "d": 1,
+        "n": "Dévotion"
+      }
+    ]
+  },
+  {
+    "id": 139010,
+    "child": [
+      {
+        "id": 56132,
+        "t": "Mod",
+        "d": 1,
+        "n": "Ailes · Inspiration · Décision"
+      },
+      {
+        "id": 51002,
+        "t": "Mod",
+        "d": 1,
+        "n": "Nirvana"
+      },
+      {
+        "id": 51003,
+        "t": "Mod",
+        "d": 1,
+        "n": "Bénédiction"
+      },
+      {
+        "id": 51007,
+        "t": "Mod",
+        "d": 1,
+        "n": "Dévotion"
+      }
+    ]
+  },
+  {
+    "id": 139011,
+    "child": [
+      {
+        "id": 56133,
+        "t": "Mod",
+        "d": 1,
+        "n": "Vigueur"
+      },
+      {
+        "id": 51002,
+        "t": "Mod",
+        "d": 1,
+        "n": "Nirvana"
+      },
+      {
+        "id": 51003,
+        "t": "Mod",
+        "d": 1,
+        "n": "Bénédiction"
+      },
+      {
+        "id": 51007,
+        "t": "Mod",
+        "d": 1,
+        "n": "Dévotion"
+      }
+    ]
+  },
+  {
+    "id": 139012,
+    "child": [
+      {
+        "id": 56134,
         "t": "Mod",
         "d": 1,
         "n": "Ailes · Inspiration · Vigueur"
@@ -26923,7 +27566,7 @@
         "id": 1026,
         "t": "Walnut",
         "c": 65,
-        "n": "Mandat scellé : Ada (?)"
+        "n": "Mandat scellé : Eve"
       },
       {
         "id": 2062,
@@ -26972,6 +27615,96 @@
         "t": "Resource",
         "c": 200,
         "n": "Prototype : Braise souveraine"
+      },
+      {
+        "id": 211,
+        "t": "Resource",
+        "c": 280,
+        "n": "Indice de Mandat scellé"
+      },
+      {
+        "id": 214,
+        "t": "Resource",
+        "n": "Billet de spectacle"
+      },
+      {
+        "id": 2013,
+        "t": "Resource",
+        "n": "Mélodie de combat III"
+      },
+      {
+        "id": 2009,
+        "t": "Resource",
+        "n": "Manuel d’arme III"
+      },
+      {
+        "id": 102,
+        "t": "Resource",
+        "n": "Globule cramoisi"
+      },
+      {
+        "id": 101,
+        "t": "Resource",
+        "n": "Pièce"
+      }
+    ]
+  },
+  {
+    "id": 1030034,
+    "child": [
+      {
+        "id": 1027,
+        "t": "Walnut",
+        "c": 65,
+        "n": "Mandat scellé : Falsi"
+      },
+      {
+        "id": 2065,
+        "t": "Walnut",
+        "c": 30,
+        "n": "Mandat scellé : Hurlement muet"
+      },
+      {
+        "id": 211,
+        "t": "Resource",
+        "c": 280,
+        "n": "Indice de Mandat scellé"
+      },
+      {
+        "id": 214,
+        "t": "Resource",
+        "n": "Billet de spectacle"
+      },
+      {
+        "id": 2013,
+        "t": "Resource",
+        "n": "Mélodie de combat III"
+      },
+      {
+        "id": 2009,
+        "t": "Resource",
+        "n": "Manuel d’arme III"
+      },
+      {
+        "id": 102,
+        "t": "Resource",
+        "n": "Globule cramoisi"
+      },
+      {
+        "id": 101,
+        "t": "Resource",
+        "n": "Pièce"
+      }
+    ]
+  },
+  {
+    "id": 1030035,
+    "child": [
+      {
+        "id": 15004,
+        "t": "Resource",
+        "c": 200,
+        "n": "Prototype : Plume sanguine"
       },
       {
         "id": 211,
@@ -27515,7 +28248,7 @@
         "id": 120004,
         "t": "Resource",
         "c": 1,
-        "n": "Bon d’accessoires Étoile d’argent"
+        "n": "Bon d’accessoires – Étoile d’argent"
       }
     ]
   },
@@ -27865,7 +28598,7 @@
         "id": 120004,
         "t": "Resource",
         "c": 1,
-        "n": "Bon d’accessoires Étoile d’argent"
+        "n": "Bon d’accessoires – Étoile d’argent"
       }
     ]
   },
@@ -28229,6 +28962,27 @@
         "t": "Skin",
         "c": 1,
         "n": "À la poursuite de la neige"
+      },
+      {
+        "id": 111,
+        "t": "Resource",
+        "n": "Prisme iridescent"
+      },
+      {
+        "id": 110,
+        "t": "Resource",
+        "n": "Prisme azuré"
+      }
+    ]
+  },
+  {
+    "id": 1039008,
+    "child": [
+      {
+        "id": 310401,
+        "t": "Skin",
+        "c": 1,
+        "n": "Chasseresse silencieuse"
       },
       {
         "id": 111,
@@ -28777,9 +29531,8 @@
     "child": [
       {
         "id": 201,
-        "t": "Resource",
-        "c": 1,
-        "n": "Module de transfert d’affinité"
+        "t": "WeaponAccessory",
+        "c": 1
       },
       {
         "id": 30100,
@@ -29587,7 +30340,76 @@
         "id": 1026,
         "t": "Walnut",
         "c": 3,
-        "n": "Mandat scellé : Ada (?)"
+        "n": "Mandat scellé : Eve"
+      }
+    ]
+  },
+  {
+    "id": 1611027,
+    "child": [
+      {
+        "id": 101,
+        "t": "Resource",
+        "c": 10000,
+        "n": "Pièce"
+      },
+      {
+        "id": 10102,
+        "t": "Resource",
+        "c": 3,
+        "n": "Anneau de la libération"
+      },
+      {
+        "id": 1027,
+        "t": "Walnut",
+        "c": 3,
+        "n": "Mandat scellé : Falsi"
+      }
+    ]
+  },
+  {
+    "id": 1611031,
+    "child": [
+      {
+        "id": 101,
+        "t": "Resource",
+        "c": 10000,
+        "n": "Pièce"
+      },
+      {
+        "id": 10103,
+        "t": "Resource",
+        "c": 3,
+        "n": "Anneau du temps renversé"
+      },
+      {
+        "id": 2067,
+        "t": "Walnut",
+        "c": 3,
+        "n": "Mandat scellé : Sanguis Sanctus – Épée-fouet"
+      }
+    ]
+  },
+  {
+    "id": 1611039,
+    "child": [
+      {
+        "id": 101,
+        "t": "Resource",
+        "c": 10000,
+        "n": "Pièce"
+      },
+      {
+        "id": 10104,
+        "t": "Resource",
+        "c": 3,
+        "n": "Anneau de la justice ravivée"
+      },
+      {
+        "id": 2065,
+        "t": "Walnut",
+        "c": 3,
+        "n": "Mandat scellé : Hurlement muet"
       }
     ]
   },
@@ -30321,6 +31143,87 @@
     ]
   },
   {
+    "id": 10001268,
+    "child": [
+      {
+        "id": 100,
+        "t": "Resource",
+        "c": 880,
+        "n": "Phoxène"
+      },
+      {
+        "id": 125,
+        "t": "Resource",
+        "c": 1,
+        "n": "Insigne de reliure"
+      },
+      {
+        "id": 1003,
+        "t": "Resource",
+        "c": 5,
+        "n": "Sablier prismatique"
+      },
+      {
+        "id": 201,
+        "t": "Resource",
+        "c": 2,
+        "n": "Module de transfert d’affinité"
+      },
+      {
+        "id": 202,
+        "t": "Resource",
+        "c": 2,
+        "n": "Module de transfert d’affinité d’arme"
+      },
+      {
+        "id": 10100,
+        "t": "Resource",
+        "c": 2,
+        "n": "Trace du crépuscule"
+      },
+      {
+        "id": 30157,
+        "t": "HeadSculpture",
+        "n": "Poupée miniature"
+      },
+      {
+        "id": 41065,
+        "t": "Resource",
+        "n": "Cœur de cristal"
+      },
+      {
+        "id": 102,
+        "t": "Resource",
+        "n": "Globule cramoisi"
+      },
+      {
+        "id": 208,
+        "t": "Resource",
+        "n": "Carnet de mission — Tome III"
+      },
+      {
+        "id": 2009,
+        "t": "Resource",
+        "n": "Manuel d’arme III"
+      },
+      {
+        "id": 2013,
+        "t": "Resource",
+        "n": "Mélodie de combat III"
+      },
+      {
+        "id": 20013,
+        "t": "Resource",
+        "n": "Souvenir des Lunariens"
+      },
+      {
+        "id": 101,
+        "t": "Resource",
+        "n": "Pièce"
+      }
+    ]
+  },
+  {
     "id": 10200101,
     "child": [
       {
@@ -30825,7 +31728,7 @@
     "id": 10302000,
     "child": [
       {
-        "id": 221,
+        "id": 223,
         "t": "Resource",
         "c": 1,
         "n": "Pièce stellaire"
@@ -31005,6 +31908,55 @@
     ]
   },
   {
+    "id": 10302004,
+    "child": [
+      {
+        "id": 15020161,
+        "t": "Skin",
+        "n": "Code urbain"
+      },
+      {
+        "id": 10134,
+        "t": "CharAccessory",
+        "n": "Dispositif Luno (III)"
+      },
+      {
+        "id": 10135,
+        "t": "CharAccessory",
+        "n": "Ballon multicolore – Blanc ivoire"
+      },
+      {
+        "id": 1003,
+        "t": "Resource",
+        "c": 2,
+        "n": "Sablier prismatique"
+      },
+      {
+        "id": 1009,
+        "t": "Resource",
+        "c": 2,
+        "n": "Fil stellaire"
+      },
+      {
+        "id": 100,
+        "t": "Resource",
+        "c": 120,
+        "n": "Phoxène"
+      },
+      {
+        "id": 112,
+        "t": "Resource",
+        "c": 10,
+        "n": "Éclat astral"
+      },
+      {
+        "id": 211,
+        "t": "Resource",
+        "n": "Indice de Mandat scellé"
+      }
+    ]
+  },
+  {
     "id": 10302101,
     "child": [
       {
@@ -31035,6 +31987,23 @@
         "t": "Skin",
         "c": 1,
         "n": "Nuit envoûtante — Hilda"
+      }
+    ]
+  },
+  {
+    "id": 10302103,
+    "child": [
+      {
+        "id": 530102,
+        "t": "Skin",
+        "c": 1,
+        "n": "Valse mécanique — Psyche"
+      },
+      {
+        "id": 110101,
+        "t": "Skin",
+        "c": 1,
+        "n": "Valse mécanique — Berenica"
       }
     ]
   },
@@ -31171,6 +32140,16 @@
     ]
   },
   {
+    "id": 10302213,
+    "child": [
+      {
+        "id": 10302213,
+        "t": "Reward",
+        "c": 1
+      }
+    ]
+  },
+  {
     "id": 10302400,
     "child": [
       {
@@ -31189,13 +32168,41 @@
         "id": 120004,
         "t": "Resource",
         "c": 1,
-        "n": "Bon d’accessoires Étoile d’argent"
+        "n": "Bon d’accessoires – Étoile d’argent"
       },
       {
         "id": 1003,
         "t": "Resource",
         "c": 30,
         "n": "Sablier prismatique"
+      }
+    ]
+  },
+  {
+    "id": 10302402,
+    "child": [
+      {
+        "id": 30070,
+        "t": "CharAccessory",
+        "n": "Lueur éternelle"
+      },
+      {
+        "id": 1003,
+        "t": "Resource",
+        "c": 30,
+        "n": "Sablier prismatique"
+      },
+      {
+        "id": 1009,
+        "t": "Resource",
+        "c": 20,
+        "n": "Fil stellaire"
+      },
+      {
+        "id": 120004,
+        "t": "Resource",
+        "c": 1,
+        "n": "Bon d’accessoires – Étoile d’argent"
       }
     ]
   },
@@ -31272,6 +32279,34 @@
         "id": 1009,
         "t": "Resource",
         "c": 4,
+        "n": "Fil stellaire"
+      }
+    ]
+  },
+  {
+    "id": 100000160,
+    "child": [
+      {
+        "id": 1003,
+        "t": "Resource",
+        "c": 22,
+        "n": "Sablier prismatique"
+      },
+      {
+        "id": 100,
+        "t": "Resource",
+        "c": 2370,
+        "n": "Phoxène"
+      },
+      {
+        "id": 15020161,
+        "t": "Skin",
+        "n": "Code urbain"
+      },
+      {
+        "id": 1009,
+        "t": "Resource",
+        "c": 6,
         "n": "Fil stellaire"
       }
     ]
@@ -31457,6 +32492,83 @@
         "t": "Resource",
         "c": 1,
         "n": "Sablier immaculé"
+      }
+    ]
+  },
+  {
+    "id": 1030221301,
+    "child": [
+      {
+        "id": 100,
+        "t": "Resource",
+        "c": 800,
+        "n": "Phoxène"
+      },
+      {
+        "id": 1005301,
+        "t": "Resource",
+        "c": 30,
+        "n": "Fragment de pensée : Psyche"
+      },
+      {
+        "id": 1002401,
+        "t": "Resource",
+        "c": 30,
+        "n": "Fragment de pensée : Fushu"
+      },
+      {
+        "id": 1003101,
+        "t": "Resource",
+        "c": 30,
+        "n": "Fragment de pensée : Lynn"
+      },
+      {
+        "id": 1004101,
+        "t": "Resource",
+        "c": 30,
+        "n": "Fragment de pensée : Rhythm"
+      },
+      {
+        "id": 1001502,
+        "t": "Resource",
+        "c": 30,
+        "n": "Fragment de pensée : Dame Nifle"
+      },
+      {
+        "id": 1001103,
+        "t": "Resource",
+        "c": 30,
+        "n": "Fragment de pensée : Phantasio"
+      },
+      {
+        "id": 10601,
+        "t": "Weapon",
+        "n": "Momiji Itteki"
+      },
+      {
+        "id": 10503,
+        "t": "Weapon",
+        "n": "Étreinte brisée"
+      },
+      {
+        "id": 10403,
+        "t": "Weapon",
+        "n": "Regard du requin abyssal"
+      },
+      {
+        "id": 20502,
+        "t": "Weapon",
+        "n": "Colère proscrite"
+      },
+      {
+        "id": 20301,
+        "t": "Weapon",
+        "n": "Jugement stellaire"
+      },
+      {
+        "id": 20602,
+        "t": "Weapon",
+        "n": "Lumière de l’Apocalypse"
       }
     ]
   }

@@ -68,9 +68,6 @@ function Component:PackSyncInfo(MoveInfo, MainPlayer)
   if 0 ~= ResourceId then
     MoveInfo.ExpressionId = ResourceId
   end
-  if MainPlayer then
-    MainPlayer:CanPlayerBeInterCandidate(self.Eid, ActorLoc)
-  end
   self:PackSyncInfo_Cpp(ActorLoc, ActorRot, CurVel, Acceleration, MovementMode, TimeStamp)
 end
 

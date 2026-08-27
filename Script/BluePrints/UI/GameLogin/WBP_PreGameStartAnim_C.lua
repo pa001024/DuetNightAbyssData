@@ -73,7 +73,7 @@ function WBP_PreGameStartAnim_C:PlayAnimAndClose()
   self.bClose = true
   self:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   local SystemLanguage = EMCache:Get("SystemLanguage") or "CN"
-  if "DE" == SystemLanguage or "FR" == SystemLanguage or "ES" == SystemLanguage then
+  if "FR" == SystemLanguage then
     SystemLanguage = "EN"
   elseif "CN" == SystemLanguage and UE.AHotUpdateGameMode.IsGlobalPak() then
     SystemLanguage = "CN_OverSea"

@@ -75,9 +75,10 @@ function FPlayAudioProxy:Resume()
   end
 end
 
-function TalkAudioComp_C.New()
+function TalkAudioComp_C.New(OnTalkAudioStateChanged)
   local Obj = setmetatable({}, {__index = TalkAudioComp_C})
-  TalkAudioComp_C:SetAudioState(ETalkAudioState.Stop)
+  Obj.OnTalkAudioStateChanged = OnTalkAudioStateChanged
+  Obj:SetAudioState(ETalkAudioState.Stop)
   return Obj
 end
 
@@ -219,7 +220,13 @@ function TalkAudioComp_C:SetAudioState(AudioState)
   if not ETalkAudioState[AudioState] then
     return
   end
+  if self.AudioState == AudioState then
+    return
+  end
   self.AudioState = AudioState
+  if self.OnTalkAudioStateChanged then
+    self.OnTalkAudioStateChanged(AudioState)
+  end
 end
 
 function TalkAudioComp_C:Clear()

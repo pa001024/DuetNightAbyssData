@@ -177,6 +177,7 @@ function M:UploadRandomCreatorData(RandomRuleId)
 end
 
 function M:RemoveData(Index)
+  self:ClearCreateUnitContext(Index)
   local Info = self.RegionData[Index]
   local QuestChainId = Info.QuestChainId
   if QuestChainId and QuestChainId > 0 and Info.QuestChainIndex then
@@ -315,6 +316,7 @@ end
 function M:UpdateLevelNameAndSubRegionId(DataTableIndex, Actor)
   local Data = self.RegionData[DataTableIndex]
   if Data then
+    self:ClearCreateUnitContext(DataTableIndex)
     Data.LevelName = Actor.LevelName
     Data.SubRegionId = Actor.SubRegionId
   end
@@ -323,6 +325,7 @@ end
 function M:ClearState(DataTableIndex)
   local Info = self.RegionData[DataTableIndex]
   if Info then
+    self:ClearCreateUnitContext(DataTableIndex)
     Info.State = {}
   end
 end
@@ -578,6 +581,7 @@ end
 function M:UpdateQuestId(Index, QuestId)
   local Data = self.RegionData[Index]
   if Data and Data.RegionDataType == ERegionDataType.RDT_QuestCommonData then
+    self:ClearCreateUnitContext(Index)
     Data.QuestId = QuestId
     DebugPrint("RegionData UpdateQuestId", Data.WorldRegionEid, QuestId)
   end

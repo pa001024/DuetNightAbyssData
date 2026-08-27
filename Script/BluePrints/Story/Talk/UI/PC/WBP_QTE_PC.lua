@@ -17,6 +17,7 @@ function M:RefreshOpInfoByInputDevice(CurInputType, CurGamepadName)
   else
     self:InitKeyBoardView()
   end
+  self:AddDispatcher("GameViewportInputKeyReleased", self, self.OnGlobalKeyUp)
   M.Super.RefreshOpInfoByInputDevice(self, CurInputType, CurGamepadName)
 end
 
@@ -25,7 +26,7 @@ function M:InitGamepadView()
     KeyInfoList = {
       {
         Type = "Img",
-        ImgShortPath = "Y",
+        ImgShortPath = self:GetInputGamePadActionName(),
         bLargeSize = true
       }
     }
@@ -71,6 +72,45 @@ function M:AdaptPlatform()
 end
 
 function M:SwitchShowMouseCursorInPIE(bShow)
+end
+
+local MOUSE_KEYS = {
+  LeftMouseButton = true,
+  RightMouseButton = true,
+  MiddleMouseButton = true,
+  ThumbMouseButton = true,
+  ThumbMouseButton2 = true
+}
+
+function M:OnGlobalKeyUp(Key)
+  DebugPrint("QTE: OnGlobalKeyUp", Key.KeyName)
+  if not self:CheckCanWorking() then
+    return
+  end
+  if not Key or not Key.KeyName then
+    return
+  end
+  if not MOUSE_KEYS[Key.KeyName] then
+    return
+  end
+  self:SetFocus()
+  local TargetKeyName = self:GetTargetKeyName()
+  if not TargetKeyName then
+    return
+  end
+  local InKeyName = Key.KeyName
+  if InKeyName == TargetKeyName then
+    self:OnInputPress(true)
+    return
+  end
+  self.FaultClickCount = self.FaultClickCount + 1
+  DebugPrint("QTE: 按键错误，错误次数", self.FaultClickCount)
+  if -1 ~= self.QTEConfig.ClickFaultToleranceCount and self.FaultClickCount > self.QTEConfig.ClickFaultToleranceCount then
+    DebugPrint("QTE: 由于按错次数超过设置值，QTE失败", self.QTEConfig.ClickFaultToleranceCount)
+    self:OnQTEFailed()
+  else
+    self:PlayQTEFaultPressAudio()
+  end
 end
 
 return M

@@ -152,6 +152,15 @@ function PageJumpUtils:GetItemAccess(ItemWidget, ItemId, ItemType, AccessKey, UI
     ItemWidget.Method:AddChild(AccessItem)
     return
   end
+  if "Convert" == AccessKey or "Convert_For_WP" == AccessKey then
+    local res, JumpToPage, NewText = self:CreateJumpToConvert(AccessItem, ItemType, ItemId, AccessText)
+    if not res then
+      return
+    end
+    self:ProcessAccessItem(AccessItem, NewText, self.UIPageName, AccessData.UIUnlockRuleId, JumpToPage)
+    ItemWidget.Method:AddChild(AccessItem)
+    return
+  end
   if "Home" == AccessKey then
     local res, JumpToPage = self:CreateJumpToHome(AccessItem)
     if not res then
@@ -886,7 +895,7 @@ function PageJumpUtils:CreateJumpToDungeonAccess(CommonParam, ItemType, ItemId, 
       DungeonId = Value.DungeonId
       MonsterId = Value.MonsterId
       assert(DungeonInfo[DungeonId], "找不到DungeonInfo[" .. DungeonId .. "]")
-      DungeonAccessText = GText(DataMgr.Monster[DataMgr.ModDungeonMonReward[MonsterId].MonsterUnitId].UnitName) .. GText("UI_LEVEL_NAME") .. DataMgr.Dungeon[DungeonId].DungeonLevel
+      DungeonAccessText = GText(DataMgr.Monster[DataMgr.ModDungeonMonReward[MonsterId].MonsterUnitId].UnitName) .. " " .. GText("UI_LEVEL_NAME") .. DataMgr.Dungeon[DungeonId].DungeonLevel
     end
     
     local function JumpToPage()
@@ -924,7 +933,7 @@ end
 function PageJumpUtils:CreateJumpToDungeonModAccess(CommonParam, ItemType, ItemId)
   assert(DataMgr.ModSelectDungeon[CommonParam.AccessParam], "Mod委托本配置参数错误, ", CommonParam.AccessKey)
   local AccessItem = self:CreateAccessItem(CommonParam.ItemWidget, CommonParam.AccessKey)
-  local DungeonAccessText = GText(CommonParam.AccessText) .. GText("UI_LEVEL_NAME") .. GText(CommonParam.AccessParam)
+  local DungeonAccessText = GText(CommonParam.AccessText) .. " " .. GText("UI_LEVEL_NAME") .. GText(CommonParam.AccessParam)
   local JumpToPage
   
   function JumpToPage()
@@ -1236,10 +1245,22 @@ function PageJumpUtils:CreateJumpToWalnutBag(CommonParam, ItemType, ItemId)
       WalnutCount = Avatar.Walnuts.WalnutBag[Value]
     end
     local WalnutAccessText = string.format("%s %s%d", GText(WalnutConfigData.Name), GText("UI_Bag_Sellconfirm_Hold"), WalnutCount)
+    local GameInstance = GWorld.GameInstance
+    local UIManager = GameInstance:GetGameUIManager()
     
     local function JumpToPage()
-      self:CloseFrontDialog()
-      self:JumpToWalnutBagPage(WalnutConfigData.WalnutType + 1, WalnutConfigData.WalnutId)
+      local WalnutBagMainPage = UIManager:GetUIObj("WalnutBagMain")
+      local bIsTop = IsValid(WalnutBagMainPage) and UIManager:GetCurrentState() == WalnutBagMainPage
+      if WalnutBagMainPage then
+        if bIsTop then
+          UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("Already_Here"))
+        else
+          self:JumpToWalnutBagPage(WalnutConfigData.WalnutType + 1, WalnutConfigData.WalnutId)
+        end
+      else
+        self:CloseFrontDialog()
+        self:JumpToWalnutBagPage(WalnutConfigData.WalnutType + 1, WalnutConfigData.WalnutId)
+      end
     end
     
     if 0 ~= WalnutCount then
@@ -1266,8 +1287,13 @@ function PageJumpUtils:CreateJumpToForge(AccessItem, ItemType, ItemId, AccessTex
     local PlayerAvatar = GWorld:GetAvatar()
     local AvatarDrafts = PlayerAvatar.Drafts
     if (not AvatarDrafts or not AvatarDrafts[DraftId]) and not DataMgr.Draft[DraftId].NotDraftTree then
-      self:CloseFrontDialog()
-      self:JumpToForgeCompendiumPathByDraftId(DraftId)
+      local ForgePathViewPage = UIManager:GetUIObj("ForgePathView")
+      if ForgePathViewPage then
+        UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("Have_no_designprint"))
+      else
+        self:CloseFrontDialog()
+        self:JumpToForgeCompendiumPathByDraftId(DraftId)
+      end
       return
     end
     self:CloseFrontDialog()
@@ -1289,6 +1315,48 @@ function PageJumpUtils:CreateJumpToForge(AccessItem, ItemType, ItemId, AccessTex
       AccessText = string.format(GText("MAIN_UI_FORGE02"), MaxProduceNum)
     end
   end
+  return true, JumpToPage, AccessText
+end
+
+function PageJumpUtils:CreateJumpToConvert(AccessItem, ItemType, ItemId, AccessText)
+  local ModData
+  if ItemType == CommonConst.ArmoryType.Mod then
+    ModData = DataMgr.Mod[ItemId]
+    if not ModData or 3 ~= ModData.Rarity and 4 ~= ModData.Rarity then
+      return false
+    end
+  elseif not DataMgr.Item2ConvertIdMap[ItemId] then
+    return false
+  end
+  local ConvertId
+  if ModData then
+    if 4 == ModData.Rarity then
+      ConvertId = 9999
+    else
+      ConvertId = 9998
+    end
+  else
+    ConvertId = DataMgr.Item2ConvertIdMap[ItemId]
+  end
+  local GameInstance = GWorld.GameInstance
+  local UIManager = GameInstance:GetGameUIManager()
+  
+  local function JumpToPage()
+    local PlayerAvatar = GWorld:GetAvatar()
+    local ForgeConvertPage = UIManager:GetUIObj("ForgeConvertMain")
+    local bIsTop = IsValid(ForgeConvertPage) and UIManager:GetCurrentState() == ForgeConvertPage
+    if ForgeConvertPage then
+      if bIsTop then
+        UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("Already_Here"))
+      else
+        self:JumpToForgeConvertByConvertId(ConvertId)
+      end
+    else
+      self:CloseFrontDialog()
+      self:JumpToForgeConvertByConvertId(ConvertId)
+    end
+  end
+  
   return true, JumpToPage, AccessText
 end
 
@@ -1854,6 +1922,20 @@ function PageJumpUtils:JumpToForgePageByDraftId(DraftId)
   end
 end
 
+function PageJumpUtils:JumpToForgeConvertByConvertId(ConvertId)
+  local GameInstance = GWorld.GameInstance
+  local UIManager = GameInstance:GetGameUIManager()
+  local ForgeConvertPage = UIManager:GetUIObj("ForgeConvertMain")
+  if not ForgeConvertPage then
+    ForgeConvertPage = UIManager:LoadUINew("ForgeConvertMain")
+    ForgeConvertPage:NavigateToTargetConvert(ConvertId)
+    UIManager:AddToJumpPageDeque(ForgeConvertPage)
+  else
+    ForgeConvertPage:NavigateToTargetConvert(ConvertId)
+    UIManager:PlaceJumpUIToTop(ForgeConvertPage, "ForgeConvertMain")
+  end
+end
+
 function PageJumpUtils:JumpToAnglingMap(Param)
   local GameInstance = GWorld.GameInstance
   local UIManager = GameInstance:GetGameUIManager()
@@ -1998,6 +2080,19 @@ function PageJumpUtils:JumpToTargetPage(TargetUIName, ...)
   else
     UIManager:PlaceJumpUIToTop(TargetUIPage, TargetUIName)
   end
+end
+
+function PageJumpUtils:JumpToFameTask(RegionId, TaskType)
+  local UIManager = GWorld.GameInstance:GetGameUIManager()
+  local FameTask = UIManager:GetUIObj("FameTask")
+  if not FameTask then
+    FameTask = UIManager:LoadUINew("FameTask", RegionId, TaskType)
+    UIManager:AddToJumpPageDeque(FameTask)
+  else
+    UIManager:PlaceJumpUIToTop(FameTask, "FameTask")
+    FameTask:JumpToTask(RegionId, TaskType)
+  end
+  return FameTask
 end
 
 function PageJumpUtils:JumpToGachaPage(GachaTabId)

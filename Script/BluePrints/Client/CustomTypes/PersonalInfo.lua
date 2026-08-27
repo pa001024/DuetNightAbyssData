@@ -27,7 +27,8 @@ PersonalInfoCharParam.__Props__ = {
   WeaponId = prop.prop("Int", "client save"),
   PoseId = prop.prop("Int", "client save", -1),
   Position = prop.prop("FloatList", "client save"),
-  Rotation = prop.prop("FloatList", "client save")
+  Rotation = prop.prop("FloatList", "client save"),
+  SlotIndex = prop.prop("Int", "client save")
 }
 FormatProperties(PersonalInfoCharParam)
 
@@ -69,6 +70,7 @@ function PersonalInfoCharParam:Update(Info)
   self.PoseId = Info.PoseId or -1
   self:SetPosition(Info.Position)
   self:SetRotation(Info.Rotation)
+  self.SlotIndex = Info.SlotIndex
 end
 
 local PersonalInfoCharParamGroup = Class("PersonalInfoCharParamGroup", CustomTypes.CustomList)
@@ -184,6 +186,12 @@ function PersonalInfo:HasWeaponDisplay(Id)
     end
   end
   return false
+end
+
+function PersonalInfo:UpdateCustomDisplay(CustomDisplay)
+  local CustomDisplayInfo = PersonalInfoCustomDisplay()
+  CustomDisplayInfo:Update(CustomDisplay)
+  self.CustomDisplay = CustomDisplayInfo
 end
 
 return {

@@ -1,5 +1,6 @@
 require("UnLua")
 local EMCache = require("EMCache.EMCache")
+local FULL_AUTO_FISHING_NEW_SEEN_CACHE_KEY = "FishingFullAutoNewSeen"
 local TimeUtils = require("Utils.TimeUtils")
 local M = Class("BluePrints.UI.BP_UIState_C")
 local FishingGameState = {
@@ -8,6 +9,13 @@ local FishingGameState = {
   Fishing = 3,
   EndFishing = 4
 }
+local AutoFishingStage = {
+  Reward = 1,
+  RecastDelay = 2,
+  SmallToBigChoice = 3
+}
+local AUTO_FISHING_RECAST_TIMER_KEY = "AutoFishingRecast"
+local AUTO_SMALL_TO_BIG_CONFIRM_DELAY = 10
 local EaseFuc = {
   Linear = 0,
   InQuad = 1,
@@ -48,6 +56,9 @@ function M:Init(RootPage, FishingSpotId)
   self.bCanEsc = true
   self.LastFishId = -1
   self.bIsSpecial = false
+  self.AutoSessionSerial = 0
+  self.CurrentAutoRound = nil
+  self.bReturnToMainAfterSpecialOut = false
   self.FishingHookResponseTime = DataMgr.GlobalConstant.FishingHookResponseTime.ConstantValue
   self.FishingGameInitialProgress = DataMgr.GlobalConstant.FishingGameInitialProgress.ConstantValue
   self.Angling_Special:Init(self)
@@ -64,6 +75,7 @@ function M:Init(RootPage, FishingSpotId)
   self.DeviceInPc = CommonUtils.GetDeviceTypeByPlatformName(self) ~= "Mobile"
   local bAutoPet = self.RootPage:CheckSkipFishingPet()
   self.WBP_Angling_Fishing_Btn:Init(self, bAutoPet)
+  self:InitAutoFishingSwitches()
   self.CurMode = self.GameInputModeSubsystem:GetCurrentInputType()
   self:RefreshInfoByInputTypeChange(self.CurMode)
   self:InitExitButton()
@@ -135,7 +147,97 @@ function M:Init(RootPage, FishingSpotId)
   self.InitGameStateFrame = 0
 end
 
-function M:SwitchWaitStart(FromSpecial)
+function M:InitAutoFishingSwitches()
+  self.Btn_Auto.Text_Name:SetText(GText("UI_Fishing_AutoNode"))
+  self.Btn_FFBF.Text_Name:SetText(GText("UI_Fishing_AutoSmallToBig"))
+  if self.DeviceInPc then
+    self.Btn_FFBF.Controller_CheckBox:CreateGamepadKey(UIConst.GamePadImgKey.FaceButtonLeft)
+    self.Btn_Auto.Controller_CheckBox:CreateGamepadKey(UIConst.GamePadImgKey.FaceButtonTop)
+  end
+  self.Btn_Auto.SwitchCheckBox:AddEventOnCheckStateChanged(self, self.OnFullAutoFishingSwitchChanged)
+  self.Btn_FFBF.SwitchCheckBox:AddEventOnCheckStateChanged(self, self.OnAutoSmallToBigSwitchChanged)
+  self:RefreshAutoFishingSwitchState()
+end
+
+function M:RefreshAutoFishingSwitchState()
+  local bCanAutoFishing = self.RootPage:CheckSkipFishingPet()
+  local bFullAutoEnabled = self.RootPage.bFullAutoFishingPreference
+  local bAutoSmallToBigEnabled = self.RootPage.bAutoSmallToBigPreference
+  self.Btn_Auto.SwitchCheckBox:SetChecked(bFullAutoEnabled, false)
+  self.Btn_FFBF.SwitchCheckBox:SetChecked(bAutoSmallToBigEnabled, false)
+  self.Btn_Auto:SetVisibility(bCanAutoFishing and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
+  local SmallToBigVisibility = UIConst.VisibilityOp.Collapsed
+  if bCanAutoFishing then
+    SmallToBigVisibility = bFullAutoEnabled and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed
+  end
+  self.Btn_FFBF:SetVisibility(SmallToBigVisibility)
+  local bShowNew = self.RootPage.bShowFullAutoFishingNew
+  self.Btn_Auto.New:SetEnable(bShowNew)
+  self.Btn_FFBF.New:SetEnable(bShowNew and bFullAutoEnabled)
+  if bShowNew and bCanAutoFishing then
+    EMCache:Set(FULL_AUTO_FISHING_NEW_SEEN_CACHE_KEY, true, true)
+  end
+end
+
+function M:DismissAutoFishingSwitchNew()
+  self.RootPage.bShowFullAutoFishingNew = false
+  self.Btn_Auto.New:SetEnable(false)
+  self.Btn_FFBF.New:SetEnable(false)
+end
+
+function M:OnFullAutoFishingSwitchChanged(bEnabled)
+  self:DismissAutoFishingSwitchNew()
+  self.RootPage:SetFullAutoFishingPreference(true == bEnabled)
+  self:RefreshAutoFishingSwitchState()
+  self:SetFocus()
+  local TipTextId = bEnabled and "UI_Fishing_AutoOn_Tips" or "UI_Fishing_AutoOff_Tips"
+  UIManager(self):ShowUITip(UIConst.Tip_CommonTop, GText(TipTextId))
+  local AutoRound = self.CurrentAutoRound
+  if not bEnabled and AutoRound and AutoRound.Stage == AutoFishingStage.RecastDelay then
+    self:ClearPendingSmallToBigOpportunity(AutoRound)
+    self:StopFullAutoFishingSession(true)
+  end
+end
+
+function M:OnAutoSmallToBigSwitchChanged(bEnabled)
+  self:DismissAutoFishingSwitchNew()
+  self.RootPage:SetAutoSmallToBigPreference(true == bEnabled)
+  self:RefreshAutoFishingSwitchState()
+  self:SetFocus()
+  local TipTextId = bEnabled and "UI_Fishing_AutoSmallToBigOn_Tips" or "UI_Fishing_AutoSmallToBigOff_Tips"
+  UIManager(self):ShowUITip(UIConst.Tip_CommonTop, GText(TipTextId))
+end
+
+function M:IsCurrentAutoRound(AutoRound)
+  return nil ~= AutoRound and self.CurrentAutoRound == AutoRound
+end
+
+function M:StartFishingRound(bFromAuto, SmallToBigLureFishId)
+  if self.FishingGameState ~= FishingGameState.WaitStart or self.CurrentAutoRound ~= nil then
+    return false
+  end
+  local bIsSmallToBigCast = nil ~= SmallToBigLureFishId
+  if not bFromAuto then
+    self:DismissAutoFishingSwitchNew()
+  end
+  local AutoRound
+  if bFromAuto or self.RootPage.bFullAutoFishingPreference and self.RootPage:CheckSkipFishingPet() then
+    if not bFromAuto then
+      self.AutoSessionSerial = self.AutoSessionSerial + 1
+    end
+    AutoRound = {
+      SessionId = self.AutoSessionSerial,
+      FishingRodId = self.RootPage.FishingRodId,
+      AutoSmallToBigEnabled = self.RootPage.bAutoSmallToBigPreference
+    }
+    self.CurrentAutoRound = AutoRound
+  end
+  self.WBP_Angling_Fishing_Btn:SetFullAutoFishingState(self.CurrentAutoRound ~= nil)
+  self:SwitchWaitFishing(bIsSmallToBigCast, AutoRound, SmallToBigLureFishId)
+  return true
+end
+
+function M:SwitchWaitStart(FromSpecial, AutoRound)
   if self.FishingGameState == FishingGameState.WaitStart and not FromSpecial then
     return
   end
@@ -144,15 +246,16 @@ function M:SwitchWaitStart(FromSpecial)
   self.bCanSpace = true
   self.bCanEsc = true
   if self.DeviceInPc then
-    self.Key_FishingPC_A:ChangeText(GText("UI_CTL_Fish_Throw"))
+    local FishingActionText = GText(AutoRound and "UI_Fishing_AutoEnd" or "UI_CTL_Fish_Throw")
+    self.Key_FishingPC_A:ChangeText(FishingActionText)
     self.Key_FishingPC_B:ChangeText(GText("UI_CTL_Quit"))
-    self.Key_Fishing_A:ChangeText(GText("UI_CTL_Fish_Throw"))
+    self.Key_Fishing_A:ChangeText(FishingActionText)
     self.Key_Fishing_B:ChangeText(GText("UI_CTL_Quit"))
   end
   if self.WBP_Angling_Fishing_Btn.ButtonPress then
     self.WBP_Angling_Fishing_Btn:OnReleaseButton(false)
   end
-  if self.bIsSpecial then
+  if self.bIsSpecial and not AutoRound then
     self.WBP_Angling_Fishing_Btn:SetVisibility(ESlateVisibility.Collapsed)
     self.Angling_Special:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.Angling_Special:OnCanSpecialFishing()
@@ -160,13 +263,14 @@ function M:SwitchWaitStart(FromSpecial)
   else
     self.WBP_Angling_Fishing_Btn:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.Angling_Special:SetVisibility(ESlateVisibility.Collapsed)
-    self.LastFishId = -1
-    local ResourceId = DataMgr.FishingLure[self.RootPage.FishingLureId].ResourceId
-    local Count = 0
-    local Avatar = GWorld:GetAvatar()
-    if Avatar then
-      Count = Avatar:GetResourceNum(ResourceId)
+    if AutoRound then
+      AutoRound.CanSmallToBig = true == self.bIsSpecial
+      self.bIsSpecial = false
     end
+    self.LastFishId = -1
+    local FishingLureData = DataMgr.FishingLure[self.RootPage.FishingLureId]
+    local ResourceId = FishingLureData and FishingLureData.ResourceId
+    local Count = ResourceId and self.RootPage.Angling_Main:GetResourceCount(ResourceId) or 0
     if 0 == Count then
       self.WBP_Angling_Fishing_Btn:SwitchWaitStart(true)
       self.RootPage.Angling_Main.BtnText:ForbidBtn(true)
@@ -175,9 +279,10 @@ function M:SwitchWaitStart(FromSpecial)
       self.RootPage.Angling_Main.BtnText:ForbidBtn(false)
     end
   end
+  self.WBP_Angling_Fishing_Btn:SetFullAutoFishingState(self.CurrentAutoRound ~= nil)
 end
 
-function M:SwitchWaitFishing(bIsSpecial)
+function M:SwitchWaitFishing(bIsSpecial, AutoRound, SmallToBigLureFishId)
   if self.FishingGameState == FishingGameState.WaitFishing then
     return
   end
@@ -187,11 +292,12 @@ function M:SwitchWaitFishing(bIsSpecial)
   self.Panel:SetVisibility(ESlateVisibility.Collapsed)
   self.Angling_Special:SetVisibility(ESlateVisibility.Collapsed)
   if self.DeviceInPc then
-    self.Key_FishingPC_A:ChangeText(GText("UI_CTL_Fish_Collect"))
-    self.Key_Fishing_A:ChangeText(GText("UI_CTL_Fish_Collect"))
+    local FishingActionText = GText(AutoRound and "UI_Fishing_AutoEnd" or "UI_CTL_Fish_Collect")
+    self.Key_FishingPC_A:ChangeText(FishingActionText)
+    self.Key_Fishing_A:ChangeText(FishingActionText)
   end
   self.RootPage:PlayPlayerMontage(1)
-  self:AvatarStartFish(bIsSpecial)
+  self:AvatarStartFish(bIsSpecial, AutoRound, SmallToBigLureFishId)
 end
 
 function M:SwitchFishing()
@@ -214,7 +320,7 @@ function M:SwitchFishing()
   self.RootPage:PlayPlayerMontage(2)
 end
 
-function M:SwitchEndFishing(bInterupt, bSuccess)
+function M:SwitchEndFishing(bInterupt, bSuccess, AutoRound)
   if self.FishingGameState == FishingGameState.EndFishing then
     return
   end
@@ -228,12 +334,15 @@ function M:SwitchEndFishing(bInterupt, bSuccess)
   end
   local Callback = {
     OnNotifyBegin = function()
-      if not bInterupt then
-        if bSuccess then
-          self:AvatarCompleteFish(bSuccess, self.LastFishId)
-        else
-          self:AvatarCompleteFish(bSuccess, self.LastFishId)
+      if AutoRound then
+        if self:IsCurrentAutoRound(AutoRound) and not AutoRound.CompletionSent then
+          AutoRound.CompletionSent = true
+          self:AvatarCompleteFish(bSuccess, self.LastFishId, AutoRound)
         end
+        return
+      end
+      if not bInterupt then
+        self:AvatarCompleteFish(bSuccess, self.LastFishId)
       end
       self:SwitchWaitStart()
     end
@@ -256,6 +365,28 @@ function M:OnSpecialFishingPanelOut()
   if self.DeviceInPc then
     self.WidgetSwitcher_MP:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   end
+  local AutoRound = self.CurrentAutoRound
+  if AutoRound and AutoRound.Stage == AutoFishingStage.SmallToBigChoice then
+    self.Angling_Special:RemoveTimer("SpecialFishing")
+    self.Angling_Special:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    if self.Angling_Special.bFailed then
+      local bReturnToMain = self.bReturnToMainAfterSpecialOut
+      self.bReturnToMainAfterSpecialOut = false
+      self:ClearPendingSmallToBigOpportunity(AutoRound)
+      self:StopFullAutoFishingSession(true)
+      if bReturnToMain then
+        self.RootPage:SwitchOnMainPage()
+      end
+    else
+      AutoRound.Stage = AutoFishingStage.RecastDelay
+      self:OnAutoFishingRecast(AutoRound, AutoRound.FishId)
+    end
+    return
+  end
+  if AutoRound then
+    self.Angling_Special:RemoveTimer("SpecialFishing")
+    return
+  end
   if self.Angling_Special.bFailed then
     self.Angling_Special:SetVisibility(ESlateVisibility.Collapsed)
     self:SwitchWaitStart(true)
@@ -265,15 +396,21 @@ function M:OnSpecialFishingPanelOut()
 end
 
 function M:OnClickExit()
-  if not self.bCanEsc then
+  if self.CurrentAutoRound then
+    self.bReturnToMainAfterSpecialOut = self.CurrentAutoRound.Stage == AutoFishingStage.SmallToBigChoice
+    self:RequestEndFullAutoFishing()
+    if not self.bReturnToMainAfterSpecialOut then
+      self.RootPage:SwitchOnMainPage()
+    end
+  elseif not self.bCanEsc then
     return
-  end
-  if self.FishingGameState == FishingGameState.Fishing then
+  elseif self.FishingGameState == FishingGameState.Fishing then
     self:SwitchEndFishing(false, false)
   elseif self.FishingGameState == FishingGameState.WaitFishing then
     self:RemoveTimer("OnFishHookTimeOut")
     self:SwitchEndFishing(true, false)
   else
+    self:DismissAutoFishingSwitchNew()
     self.RootPage:SwitchOnMainPage()
   end
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_return", nil, nil)
@@ -287,16 +424,12 @@ function M:OnClickAnglingButton()
   if self.WBP_Angling_Fishing_Btn:GetVisibility() == ESlateVisibility.Collapsed or not self.bCanSpace then
     return
   end
+  if self.CurrentAutoRound then
+    self:RequestEndFullAutoFishing()
+    return
+  end
   if self.FishingGameState == FishingGameState.WaitStart then
-    local Avatar = GWorld:GetAvatar()
-    if Avatar and not self.bIsSpecial then
-      local FishSpotAvatar = Avatar.FishingSpots[self.FishingSpotId]
-      if FishSpotAvatar and FishSpotAvatar.RemainFishCount <= 0 then
-        UIManager(self):ShowUITip(UIConst.Tip_CommonTop, string.format(GText("UI_Fishing_Toast_NoFish"), self.RootPage.RemainTimeStr))
-        return
-      end
-    end
-    self:SwitchWaitFishing(false)
+    self:StartFishingRound(false)
   elseif self.FishingGameState == FishingGameState.WaitFishing then
     AudioManager(self):StopSound(self, "OnFishHook")
     if -1 == self.LastFishId then
@@ -496,7 +629,9 @@ function M:OnCommonBtnSpaceUp()
 end
 
 function M:OnClickEsc()
-  if self.Angling_Special:GetVisibility() ~= ESlateVisibility.Collapsed then
+  if self.CurrentAutoRound then
+    self:OnClickExit()
+  elseif self.Angling_Special:GetVisibility() ~= ESlateVisibility.Collapsed then
     self.Angling_Special:OnClickQuit()
   else
     self:OnClickExit()
@@ -507,7 +642,7 @@ function M:Handle_KeyEventOnPC(InKeyName)
   if "SpaceBar" == InKeyName then
     self.WBP_Angling_Fishing_Btn:OnPressButton()
     self:OnSpaceDown()
-  elseif "E" == InKeyName and self.Angling_Special:GetVisibility() ~= ESlateVisibility.Collapsed then
+  elseif "E" == InKeyName and not self.CurrentAutoRound and self.Angling_Special:GetVisibility() ~= ESlateVisibility.Collapsed then
     self.Angling_Special:OnClickAngling()
   elseif "Escape" == InKeyName then
     self:OnClickEsc()
@@ -526,20 +661,29 @@ end
 
 function M:Handle_KeyEventOnGamePad(InKeyName)
   if "Gamepad_FaceButton_Bottom" == InKeyName then
-    if self.Angling_Special:GetVisibility() ~= ESlateVisibility.Collapsed then
+    if self.CurrentAutoRound then
+      self.WBP_Angling_Fishing_Btn:OnPressButton()
+      self:OnSpaceDown()
+    elseif self.Angling_Special:GetVisibility() ~= ESlateVisibility.Collapsed then
       self.Angling_Special:OnClickAngling()
     else
       self.WBP_Angling_Fishing_Btn:OnPressButton()
       self:OnSpaceDown()
     end
   elseif "Gamepad_FaceButton_Left" == InKeyName then
-    self.Angling_Special:OnClickAngling()
-  elseif "Gamepad_FaceButton_Right" == InKeyName then
     if self.Angling_Special:GetVisibility() ~= ESlateVisibility.Collapsed then
-      self.Angling_Special:OnClickQuit()
-    else
-      self:OnClickExit()
+      if not self.CurrentAutoRound then
+        self.Angling_Special:OnClickAngling()
+      end
+    elseif self.RootPage:CheckSkipFishingPet() and self.RootPage.bFullAutoFishingPreference then
+      self.Btn_FFBF.SwitchCheckBox:OnBtnClicked()
     end
+  elseif InKeyName == UIConst.GamePadKey.FaceButtonTop then
+    if self.RootPage:CheckSkipFishingPet() then
+      self.Btn_Auto.SwitchCheckBox:OnBtnClicked()
+    end
+  elseif "Gamepad_FaceButton_Right" == InKeyName then
+    self:OnClickEsc()
   elseif "Gamepad_Special_Right" == InKeyName then
     self:OnClickTip()
   elseif InKeyName == UIConst.GamePadKey.RightThumb then
@@ -580,9 +724,14 @@ function M:ChangeItemMoveDown(value)
 end
 
 function M:OnFishHook(FishId, bIsSpecial)
-  if DataMgr.Fish[FishId] then
-    self.SuccessTime = DataMgr.Fish[FishId].FishGetDuration or 10
-    self.EffectGameTime = DataMgr.Fish[FishId].FishHookOffset or 1.5
+  if self.FishingGameState ~= FishingGameState.WaitFishing then
+    return
+  end
+  local AutoRound = self.CurrentAutoRound
+  local FishData = DataMgr.Fish[FishId]
+  if FishData then
+    self.SuccessTime = FishData.FishGetDuration or 10
+    self.EffectGameTime = FishData.FishHookOffset or 1.5
   end
   self.bIsSpecial = bIsSpecial
   self.LastFishId = FishId
@@ -590,15 +739,40 @@ function M:OnFishHook(FishId, bIsSpecial)
   self.RootPage.FishingSpot:OnFishHook(FishId, bIsSpecial)
   self.RootPage.Angling_Main:RefreshFishLure(self.RootPage.FishingLureId)
   AudioManager(self):PlayUISound(self, "event:/sfx/common/scene/fish/bite", "OnFishHook", nil)
-  if not self:CheckSkipAngling() then
+  if AutoRound then
+    local bCanAutoCatch = self:CheckAutoFishingRodLevel(AutoRound.FishingRodId, FishId) and self.RootPage:CheckSkipFishingPet()
+    if bCanAutoCatch then
+      self:SwitchEndFishing(false, true, AutoRound)
+    else
+      self:StopFullAutoFishingSession(false)
+      self:SwitchFishing()
+    end
+  elseif not self:CheckSkipAngling() then
     self:AddTimer(self.FishingHookResponseTime, self.OnFishHookTimeOut, false, 0, "OnFishHookTimeOut")
   end
 end
 
 function M:OnFishHookTimeOut()
+  if self.FishingGameState ~= FishingGameState.WaitFishing then
+    return
+  end
   UIManager(self):LoadUINew("ExploreToastFail", "UI_Fishing_FishEscape")
   AudioManager(self):StopSound(self, "OnFishHook")
   self:SwitchEndFishing(true, false)
+end
+
+function M:CheckAutoFishingRodLevel(FishingRodId, FishId)
+  if not FishingRodId or not FishId then
+    return false
+  end
+  local FishingRodData = DataMgr.FishingRod[FishingRodId]
+  local FishData = DataMgr.Fish[FishId]
+  if not FishingRodData or not FishData then
+    return false
+  end
+  local AutoFishLevel = FishingRodData.AutoFishingLevel or 1
+  local FishLevel = FishData.FishLevel or 1
+  return AutoFishLevel >= FishLevel
 end
 
 function M:CheckSkipAngling()
@@ -606,27 +780,49 @@ function M:CheckSkipAngling()
     print(_G.LogTag, "Error: LXZ 没有上钩的鱼的id，可能是没有鱼竿资源或鱼饵资源")
     return
   end
-  local AutoFishLevel = DataMgr.FishingRod[self.RootPage.FishingRodId].AutoFishingLevel or 1
-  local FishLevel = DataMgr.Fish[self.LastFishId].FishLevel or 1
-  if AutoFishLevel < FishLevel then
+  if not self:CheckAutoFishingRodLevel(self.RootPage.FishingRodId, self.LastFishId) then
     return false
   end
   if _G.bSkipAngling then
     return true
   end
-  local Res = self.RootPage:CheckSkipFishingPet()
-  return Res
+  return self.RootPage:CheckSkipFishingPet()
 end
 
-function M:AvatarStartFish(bIsSpecial)
+function M:AvatarStartFish(bIsSpecial, AutoRound, SmallToBigLureFishId)
   local Avatar = GWorld:GetAvatar()
   if Avatar then
+    local FishingSpotId = self.RootPage.FishingSpotId
+    local FishingRodId = AutoRound and AutoRound.FishingRodId or self.RootPage.FishingRodId
+    local FishingLureId = self.RootPage.FishingLureId
+    local OnStartResult
+    if AutoRound then
+      function OnStartResult(Ret)
+        if not IsValid(self) then
+          return
+        end
+        if not IsValid(self.RootPage) then
+          self:CleanupFullAutoFishingSession()
+          return
+        end
+        if not (Ret ~= ErrorCode.RET_SUCCESS and self:IsCurrentAutoRound(AutoRound)) or self.FishingGameState ~= FishingGameState.WaitFishing then
+          return
+        end
+        UIManager(self):ShowError(Ret, 1.0, "CommonToastMain")
+        if bIsSpecial then
+          self:AvatarStopFish()
+        end
+        self:StopFullAutoFishingSession(true)
+      end
+    end
     if bIsSpecial then
-      Avatar:OnFishStart(self.RootPage.FishingSpotId, self.RootPage.FishingRodId, -1, self.LastFishId)
+      Avatar:OnFishStart(FishingSpotId, FishingRodId, -1, SmallToBigLureFishId or self.LastFishId, OnStartResult)
       self.LastFishId = -1
     else
-      Avatar:OnFishStart(self.RootPage.FishingSpotId, self.RootPage.FishingRodId, self.RootPage.FishingLureId, -1)
+      Avatar:OnFishStart(FishingSpotId, FishingRodId, FishingLureId, -1, OnStartResult)
     end
+  elseif AutoRound then
+    self:StopFullAutoFishingSession(true)
   else
     self:AddTimer(3, self.OnFishHook)
   end
@@ -636,54 +832,201 @@ function M:AvatarStopFish()
   self.bIsSpecial = false
   local Avatar = GWorld:GetAvatar()
   if Avatar then
-    Avatar:OnFishStop(self.RootPage.FishingSpotId)
-  else
+    Avatar:OnFishStop(self.FishingSpotId)
   end
 end
 
-function M:AvatarCompleteFish(IsSuccess, LastFishId)
+function M:AvatarCompleteFish(IsSuccess, LastFishId, AutoRound)
   local Avatar = GWorld:GetAvatar()
   if Avatar then
     local function ShowFishMap(Ret, FishId, FishSize, AvatarIsSuccess, RewardReturn)
+      if not IsValid(self) then
+        return
+      end
+      if not IsValid(self.RootPage) then
+        self:CleanupFullAutoFishingSession()
+        return
+      end
+      if AutoRound and not self:IsCurrentAutoRound(AutoRound) then
+        return
+      end
       print(_G.LogTag, "LXZ Avatar:GetFishCountByFishId0000000", RewardReturn)
-      
       PrintTable(RewardReturn, 10)
+      if Ret ~= ErrorCode.RET_SUCCESS then
+        UIManager(self):ShowError(Ret, 1.0, "CommonToastMain")
+        self.RootPage.FishingSpot:OnFishFail()
+        if AutoRound and self:IsCurrentAutoRound(AutoRound) then
+          self:StopFullAutoFishingSession(true)
+        end
+        return
+      end
       if AvatarIsSuccess then
-        print(_G.LogTag, "LXZ Avatar:GetFishCountByFishId", Avatar:GetFishCountByFishId(FishId))
+        local RewardFishId = LastFishId or FishId
+        local FishCountId = FishId or RewardFishId
+        if AutoRound then
+          AutoRound.FishId = RewardFishId
+          AutoRound.Stage = AutoFishingStage.Reward
+          self:SwitchWaitStart(false, AutoRound)
+        end
+        print(_G.LogTag, "LXZ Avatar:GetFishCountByFishId", Avatar:GetFishCountByFishId(FishCountId))
         self.RootPage.FishingSpot:OnFishSuccess()
-        if 1 == Avatar:GetFishCountByFishId(FishId) then
-          UIManager(self):LoadUINew("AnglingNewFish", {
-            FishId = LastFishId,
-            FishingPage = self,
-            IsNew = true,
-            FishSize = FishSize,
-            FishingSpotId = self.RootPage.FishingSpotId,
-            Rewards = RewardReturn
-          })
+        local bIsNew = 1 == Avatar:GetFishCountByFishId(FishCountId)
+        local RewardInfo = {
+          FishId = RewardFishId,
+          FishingPage = self,
+          IsNew = bIsNew,
+          FishSize = FishSize,
+          FishingSpotId = self.RootPage.FishingSpotId,
+          Rewards = RewardReturn,
+          AutoClose = nil ~= AutoRound,
+          AutoSessionId = AutoRound and AutoRound.SessionId or nil
+        }
+        UIManager(self):LoadUINew("AnglingNewFish", RewardInfo)
+        if bIsNew then
           local UnLockData = EMCache:Get("FishUnLockData", true)
           UnLockData = UnLockData or {}
-          UnLockData[LastFishId] = 2
+          UnLockData[RewardFishId] = 2
           EMCache:Set("FishUnLockData", UnLockData, true)
           ReddotManager.IncreaseLeafNodeCount("AnglingMap", 1)
-        else
-          UIManager(self):LoadUINew("AnglingNewFish", {
-            FishId = LastFishId,
-            FishingPage = self,
-            IsNew = false,
-            FishSize = FishSize,
-            FishingSpotId = self.RootPage.FishingSpotId,
-            Rewards = RewardReturn
-          })
         end
       else
         UIManager(self):LoadUINew("ExploreToastFail", "UI_Fishing_Fail")
         self.RootPage.FishingSpot:OnFishFail()
+        if AutoRound and self:IsCurrentAutoRound(AutoRound) then
+          self:StopFullAutoFishingSession(true)
+        end
       end
     end
     
     Avatar:OnCompleteFishGame(IsSuccess, ShowFishMap)
-  else
+  elseif AutoRound and self:IsCurrentAutoRound(AutoRound) then
+    self:StopFullAutoFishingSession(true)
   end
+end
+
+function M:ClearPendingSmallToBigOpportunity(AutoRound)
+  if not AutoRound or not AutoRound.CanSmallToBig then
+    return
+  end
+  self:AvatarStopFish()
+  AutoRound.CanSmallToBig = false
+end
+
+function M:RequestEndFullAutoFishing()
+  if not self.CurrentAutoRound then
+    return
+  end
+  local AutoRound = self.CurrentAutoRound
+  if self.FishingGameState == FishingGameState.WaitFishing then
+    self:StopFullAutoFishingSession(false)
+    self:SwitchEndFishing(true, false)
+    return
+  end
+  if self.FishingGameState == FishingGameState.EndFishing or AutoRound.Stage == AutoFishingStage.Reward then
+    AutoRound.StopAfterCurrent = true
+    return
+  end
+  if AutoRound.Stage == AutoFishingStage.SmallToBigChoice then
+    self.Angling_Special:SwitchWaitStart()
+    return
+  end
+  if AutoRound.Stage == AutoFishingStage.RecastDelay then
+    self:ClearPendingSmallToBigOpportunity(AutoRound)
+  end
+  self:StopFullAutoFishingSession(true)
+end
+
+function M:OnAutoFishRewardClosed(AutoSessionId)
+  if not IsValid(self.RootPage) then
+    self:CleanupFullAutoFishingSession()
+    return
+  end
+  local AutoRound = self.CurrentAutoRound
+  if not self:IsCurrentAutoRound(AutoRound) or AutoRound.SessionId ~= AutoSessionId or AutoRound.Stage ~= AutoFishingStage.Reward then
+    return
+  end
+  if not (not AutoRound.StopAfterCurrent and self.RootPage.bFullAutoFishingPreference) or not self.RootPage:CheckSkipFishingPet() then
+    self:ClearPendingSmallToBigOpportunity(AutoRound)
+    self:StopFullAutoFishingSession(true)
+    return
+  end
+  local bSmallToBigCast = AutoRound.CanSmallToBig and AutoRound.AutoSmallToBigEnabled
+  if AutoRound.CanSmallToBig and not bSmallToBigCast then
+    self:ClearPendingSmallToBigOpportunity(AutoRound)
+  end
+  if bSmallToBigCast then
+    AutoRound.Stage = AutoFishingStage.SmallToBigChoice
+    self.LastFishId = AutoRound.FishId
+    self.WBP_Angling_Fishing_Btn:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Angling_Special:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Angling_Special:OnCanSpecialFishing(AUTO_SMALL_TO_BIG_CONFIRM_DELAY)
+    return
+  end
+  AutoRound.Stage = AutoFishingStage.RecastDelay
+  self:AddTimer(3, self.OnAutoFishingRecast, false, 0, AUTO_FISHING_RECAST_TIMER_KEY, false, AutoRound)
+end
+
+function M:OnAutoFishingRecast(AutoRound, SmallToBigLureFishId)
+  if not IsValid(self.RootPage) then
+    self:CleanupFullAutoFishingSession()
+    return
+  end
+  if not self:IsCurrentAutoRound(AutoRound) or AutoRound.Stage ~= AutoFishingStage.RecastDelay then
+    return
+  end
+  if not self.RootPage.bFullAutoFishingPreference or not self.RootPage:CheckSkipFishingPet() then
+    self:ClearPendingSmallToBigOpportunity(AutoRound)
+    self:StopFullAutoFishingSession(true)
+    return
+  end
+  if not SmallToBigLureFishId then
+    local FishingLureData = DataMgr.FishingLure[self.RootPage.FishingLureId]
+    local Avatar = GWorld:GetAvatar()
+    local FishingSpot = Avatar and Avatar.FishingSpots[self.FishingSpotId]
+    if not (FishingLureData and FishingLureData.ResourceId) or 0 == self.RootPage.Angling_Main:GetResourceCount(FishingLureData.ResourceId) or FishingSpot and not FishingSpot:CheckCanFish() then
+      self:StopFullAutoFishingSession(true)
+      return
+    end
+  end
+  self.CurrentAutoRound = nil
+  local bStarted = self:StartFishingRound(true, SmallToBigLureFishId)
+  if not bStarted then
+    if SmallToBigLureFishId then
+      self:ClearPendingSmallToBigOpportunity(AutoRound)
+    end
+    self:StopFullAutoFishingSession(true)
+  end
+end
+
+function M:StopFullAutoFishingSession(bReturnToWaitStart)
+  self:RemoveTimer(AUTO_FISHING_RECAST_TIMER_KEY)
+  self.CurrentAutoRound = nil
+  if bReturnToWaitStart then
+    self.bIsSpecial = false
+    self.LastFishId = -1
+    self:SwitchWaitStart(true)
+  else
+    self.WBP_Angling_Fishing_Btn:SetFullAutoFishingState(false)
+  end
+end
+
+function M:CleanupFullAutoFishingSession()
+  local AutoRound = self.CurrentAutoRound
+  if AutoRound and self.FishingGameState == FishingGameState.WaitFishing then
+    self:AvatarStopFish()
+  elseif AutoRound and self.FishingGameState == FishingGameState.EndFishing and not AutoRound.CompletionSent then
+    AutoRound.CompletionSent = true
+    local Avatar = GWorld:GetAvatar()
+    if Avatar then
+      Avatar:OnCompleteFishGame(true)
+    end
+  elseif AutoRound and (AutoRound.Stage == AutoFishingStage.Reward or AutoRound.Stage == AutoFishingStage.RecastDelay or AutoRound.Stage == AutoFishingStage.SmallToBigChoice) then
+    if AutoRound.Stage == AutoFishingStage.SmallToBigChoice then
+      self.Angling_Special:RemoveTimer("SpecialFishing")
+    end
+    self:ClearPendingSmallToBigOpportunity(AutoRound)
+  end
+  self:StopFullAutoFishingSession(false)
 end
 
 function M:ShowRewardUI(FishId)
@@ -699,6 +1042,9 @@ function M:ShowRewardUI(FishId)
 end
 
 function M:RefreshInfoByInputTypeChange(CurInputDevice, CurGamepadName)
+  local ControllerVisibility = self.DeviceInPc and CurInputDevice == ECommonInputType.Gamepad and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed
+  self.Btn_Auto.Controller_CheckBox:SetVisibility(ControllerVisibility)
+  self.Btn_FFBF.Controller_CheckBox:SetVisibility(ControllerVisibility)
   if CurInputDevice == ECommonInputType.MouseAndKeyboard and self.DeviceInPc then
     self.WidgetSwitcher_MP:SetActiveWidgetIndex(0)
     self.WidgetSwitcher_Tip:SetActiveWidgetIndex(0)
@@ -714,6 +1060,14 @@ function M:RefreshInfoByInputTypeChange(CurInputDevice, CurGamepadName)
   elseif CurInputDevice == ECommonInputType.Touch then
   end
   self.Angling_Special:RefreshInfoByInputTypeChange(CurInputDevice, CurGamepadName)
+end
+
+function M:Destruct()
+  EventManager:RemoveEvent(EventID.OnFishHook, self)
+  self.Btn_Auto.SwitchCheckBox:RemoveEventOnCheckStateChanged(self)
+  self.Btn_FFBF.SwitchCheckBox:RemoveEventOnCheckStateChanged(self)
+  self:CleanupFullAutoFishingSession()
+  self.Super.Destruct(self)
 end
 
 return M

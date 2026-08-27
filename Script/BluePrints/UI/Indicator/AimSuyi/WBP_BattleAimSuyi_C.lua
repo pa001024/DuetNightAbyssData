@@ -213,7 +213,7 @@ function M:RefreshEnemyMarks(TargetEids)
             self.EnemyMarkWidgets[TargetEid] = Widget
             Widget:Init(self)
           else
-            Widget = UIManager(self):CreateWidget(EnemyMarkWidgetPath, true)
+            Widget = UIManager(self):CreateWidget(EnemyMarkWidgetPath)
             if Widget then
               self.EnemyMarks:AddChild(Widget)
               self.EnemyMarkWidgets[TargetEid] = Widget

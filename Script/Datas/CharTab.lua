@@ -26,8 +26,13 @@ return ReadOnly("CharTab", {
     Text = "UI_Armory_Appearance"
   },
   [5] = {
-    IconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Data",
+    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Mastery.T_Tab_Mastery'",
     TabId = 5,
+    Text = "UI_Armory_WeaponExcel"
+  },
+  [6] = {
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Data",
+    TabId = 6,
     Text = "UI_Armory_Information"
   }
 })

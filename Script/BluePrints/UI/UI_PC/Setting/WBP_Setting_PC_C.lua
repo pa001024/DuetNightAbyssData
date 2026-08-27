@@ -45,6 +45,15 @@ function WBP_Setting_PC_C:Construct()
 end
 
 function WBP_Setting_PC_C:Destruct()
+  if rawget(self, "TimerHandles") then
+    local TimerKeys = {}
+    for Key in pairs(self.TimerHandles) do
+      table.insert(TimerKeys, Key)
+    end
+    for _, Key in ipairs(TimerKeys) do
+      self:RemoveTimer(Key)
+    end
+  end
   ReddotManager.RemoveListener("Setting_Control_LayOutBtn", self)
   ReddotManager.RemoveListener("Setting_Control", self)
   ReddotManager.RemoveListener("Setting_Control_SettingBtn", self)
@@ -72,6 +81,7 @@ function WBP_Setting_PC_C:OnLoaded(...)
   self:InitSettingParameter()
   self:InitCommonTab(1, false)
   self:AddTimer(0.033, self.ListenScreenResolution, true, 0.0, "ListenScreenResolution", true)
+  self:UpdateGPUMemoryInfo()
   if not self.IsInLoginMainPage then
     UIManager(self):SwitchUINpcCamera(true, "Setting", self.NpcId, {
       IsHaveInOutAnim = self.IsNeedPlayNpcAnim
@@ -346,6 +356,15 @@ function WBP_Setting_PC_C:ListenScreenResolution()
   end
 end
 
+function WBP_Setting_PC_C:UpdateGPUMemoryInfo()
+  local Info = URuntimeCommonFunctionLibrary.GetGPUMemoryInfo()
+  if not Info then
+    return
+  end
+  local Text = string.format("%d MB / %d MB", Info.UsedMB, Info.TotalMB)
+  DebugPrint(string.format("[GPUMemory] Used=%d MB, Total=%d MB", Info.UsedMB, Info.TotalMB))
+end
+
 function WBP_Setting_PC_C:InitSettingParameter()
   self.HasBeenChanged = false
 end
@@ -475,13 +494,13 @@ function WBP_Setting_PC_C:RefreshForbiddenStateInListView(ListView, bForbidden, 
   for i = 0, ListView:GetNumItems() - 1 do
     local Item = ListView:GetItemAt(i)
     if Item and LayoutPlanForbiddenCaches[Item.Cache] and Item.SelfWidget then
-      ApplyLayoutPlanForbiddenState(Item.SelfWidget.Switcher_Option:GetActiveWidget(), bForbidden, bForce)
+      ApplyLayoutPlanForbiddenState(Item.SelfWidget:GetActiveOptionWidget(), bForbidden, bForce)
     end
   end
   local DisplayedEntries = ListView:GetDisplayedEntryWidgets()
   for _, Entry in pairs(DisplayedEntries) do
     if LayoutPlanForbiddenCaches[Entry.Cache] then
-      ApplyLayoutPlanForbiddenState(Entry.Switcher_Option:GetActiveWidget(), bForbidden, bForce)
+      ApplyLayoutPlanForbiddenState(Entry:GetActiveOptionWidget(), bForbidden, bForce)
     end
   end
 end
@@ -534,7 +553,7 @@ function WBP_Setting_PC_C:OnLayoutPlanOptionItemSet(OptionWidget, Content)
   end
   local bForbidden = 3 == self.LayoutSelectedIndex
   self:AddDelayFrameFunc(function()
-    ApplyLayoutPlanForbiddenState(OptionWidget.Switcher_Option:GetActiveWidget(), bForbidden, true)
+    ApplyLayoutPlanForbiddenState(OptionWidget:GetActiveOptionWidget(), bForbidden, true)
   end, 2)
 end
 
@@ -629,7 +648,8 @@ function WBP_Setting_PC_C:InitLayoutPlanList()
   self.List_CustomOption:ClearListItems()
   local LayoutPlanTab = {
     "LeftBulletJumpShow",
-    "LeftShootShow"
+    "LeftShootShow",
+    "AutoFold"
   }
   table.sort(LayoutPlanTab, function(a, b)
     local OptionConfig1 = DataMgr.Option[a]
@@ -1584,6 +1604,7 @@ function WBP_Setting_PC_C:SaveAllSetting()
       end
     end
   end
+  self:AddTimer(0.5, self.UpdateGPUMemoryInfo, false, 0.0, "GPUMemoryRefreshOnce", true)
 end
 
 function WBP_Setting_PC_C:RestoreAllDefaultSet()

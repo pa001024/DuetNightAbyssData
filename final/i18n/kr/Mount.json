@@ -177,5 +177,32 @@
     "access": [
       "상점"
     ]
+  },
+  {
+    "id": 1013,
+    "name": "가라, 헤이즐넛!·골드",
+    "des": "불멸도 시간 속에 사라지겠지... 마치 빗속의 눈물처럼.",
+    "icon": "Mounts_0017",
+    "resourceIcon": "Icon_Mounts_0017",
+    "rarity": 4,
+    "sort": 98,
+    "resourceId": 49986,
+    "fly": 1,
+    "access": [
+      "상점"
+    ]
+  },
+  {
+    "id": 1014,
+    "name": "재앙의 사자",
+    "des": "가는 곳마다 재앙이 피어난다.\n 비행 속도 50% 상승. 명성 허가 없이도 비행할 수 있게 된다.",
+    "icon": "Mounts_0014",
+    "resourceIcon": "Icon_Mounts_0014",
+    "rarity": 6,
+    "sort": 104,
+    "resourceId": 49985,
+    "access": [
+      "상점"
+    ]
   }
 ]

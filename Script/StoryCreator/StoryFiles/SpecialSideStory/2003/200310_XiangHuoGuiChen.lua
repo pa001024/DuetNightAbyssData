@@ -203,10 +203,10 @@ return {
               ProceduralCameraId = 1,
               HideNpcs = false,
               HideMonsters = true,
-              HideAllBattleEntity = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
               HideMechanismsFX = true,
               ShowSkipButton = true,
-              ShowAutoPlayButton = true,
               ShowReviewButton = true,
               ShowWikiButton = true,
               SkipToOption = false,
@@ -252,14 +252,7 @@ return {
               GuideMeshIndexList = {},
               IsPlayStartSound = false,
               GuideTalkStyle = "Normal",
-              OverrideFailBlend = false,
-              TalkActors = {
-                {
-                  TalkActorType = "Npc",
-                  TalkActorId = 200002,
-                  TalkActorVisible = true
-                }
-              }
+              OverrideFailBlend = false
             }
           },
           ["1766654712934357624"] = {
@@ -440,14 +433,7 @@ return {
               GuideMeshIndexList = {},
               IsPlayStartSound = false,
               GuideTalkStyle = "Normal",
-              OverrideFailBlend = false,
-              TalkActors = {
-                {
-                  TalkActorType = "Npc",
-                  TalkActorId = 200002,
-                  TalkActorVisible = true
-                }
-              }
+              OverrideFailBlend = false
             }
           },
           ["17674953116426417"] = {
@@ -739,10 +725,10 @@ return {
               ProceduralCameraId = 1,
               HideNpcs = false,
               HideMonsters = true,
-              HideAllBattleEntity = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
               HideMechanismsFX = true,
               ShowSkipButton = true,
-              ShowAutoPlayButton = true,
               ShowReviewButton = true,
               ShowWikiButton = true,
               SkipToOption = false,
@@ -946,10 +932,10 @@ return {
               ProceduralCameraId = 1,
               HideNpcs = false,
               HideMonsters = true,
-              HideAllBattleEntity = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
               HideMechanismsFX = true,
               ShowSkipButton = true,
-              ShowAutoPlayButton = true,
               ShowReviewButton = true,
               ShowWikiButton = true,
               SkipToOption = false,

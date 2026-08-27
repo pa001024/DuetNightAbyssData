@@ -49,6 +49,7 @@ VariableForGM.EnableRecordePlayerRoute = false
 VariableForGM.EnableShowAchievement = true
 VariableForGM.EnableShowLevelLoadingInfo = false
 VariableForGM.IgnoreGiftShopFriendLimit = false
+VariableForGM.DisableSignBoardTalkLimit = false
 VariableForGM.PrintPickupTriggerTick = false
 VariableForGM.HideEntertainmentUI = false
 VariableForGM.HideEntertainmentUIObj = {}

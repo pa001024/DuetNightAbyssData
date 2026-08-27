@@ -1,6 +1,47 @@
 require("UnLua")
 local M = Class("BluePrints/Item/BP_CombatItemBase_C")
-local KEY_EVENT_PRESSED = EventID.GameViewportInputKeyPressed
+local ACTION_EVENT_CONFIG = {
+  Avoid = {
+    EventId = EventID.OnAvoidPressed,
+    NeedField = "NeedAvoidEvent"
+  },
+  BulletJump = {
+    EventId = EventID.OnBulletJumpStarted,
+    NeedField = "NeedBulletJumpEvent"
+  },
+  Jump = {
+    EventId = EventID.OnJumpPressed,
+    NeedField = "NeedJumpEvent"
+  },
+  Slide = {
+    EventId = EventID.OnSlidePressed,
+    NeedField = "NeedSlideEvent"
+  },
+  Fire = {
+    EventId = EventID.OnFirePressed,
+    NeedField = "NeedFireEvent"
+  },
+  Skill1 = {
+    EventId = EventID.OnSkill1Pressed,
+    NeedField = "NeedSkill1Event"
+  },
+  Skill2 = {
+    EventId = EventID.OnSkill2Pressed,
+    NeedField = "NeedSkill2Event"
+  },
+  Skill3 = {
+    EventId = EventID.OnSkill3Pressed,
+    NeedField = "NeedSkill3Event"
+  },
+  ChargeBullet = {
+    EventId = EventID.OnChargeBulletPressed,
+    NeedField = "NeedChargeBulletEvent"
+  },
+  Interactive = {
+    EventId = EventID.OnInteractivePressed,
+    NeedField = "NeedInteractiveEvent"
+  }
+}
 
 function M:_GetTouchConfig()
   return {
@@ -36,13 +77,47 @@ function M:ReceiveBeginPlay()
   else
     print(_G.ErrorTag, "[MountTouchRing] 找不到碰撞盒组件 self.Box，请检查蓝图组件名")
   end
-  EventManager:RemoveEvent(KEY_EVENT_PRESSED, self)
-  EventManager:AddEvent(KEY_EVENT_PRESSED, self, self.OnViewportKeyPressed)
+  self._ActionEventCfg = self:_GetActionEventConfig()
+  if self._ActionEventCfg then
+    EventManager:RemoveEvent(self._ActionEventCfg.EventId, self)
+    EventManager:AddEvent(self._ActionEventCfg.EventId, self, self.OnPlayerActionTriggered)
+  elseif self:_GetTriggerActionName() then
+    print(_G.ErrorTag, "[MountTouchRing] 未识别的 TriggerActionName:", self:_GetTriggerActionName())
+  end
   DebugPrint("MountTouchRing:ReceiveBeginPlay")
 end
 
 function M:ReceiveEndPlay(Reason)
-  EventManager:RemoveEvent(KEY_EVENT_PRESSED, self)
+  if self._ActionEventCfg then
+    EventManager:RemoveEvent(self._ActionEventCfg.EventId, self)
+  end
+  for Player, _ in pairs(self._PlayersInBox or {}) do
+    self:_SetPlayerActionEventEnabled(Player, false)
+  end
+end
+
+function M:_GetTriggerActionName()
+  local ActionName = self.TriggerActionName or self.TriggerKey
+  if ActionName and "" ~= ActionName then
+    return ActionName
+  end
+  return nil
+end
+
+function M:_GetActionEventConfig()
+  local ActionName = self:_GetTriggerActionName()
+  if not ActionName then
+    return nil
+  end
+  return ACTION_EVENT_CONFIG[ActionName]
+end
+
+function M:_SetPlayerActionEventEnabled(Player, bEnabled)
+  local Cfg = self._ActionEventCfg
+  if not Cfg or not IsValid(Player) then
+    return
+  end
+  Player[Cfg.NeedField] = true == bEnabled
 end
 
 function M:_IsLocalPlayer(OtherActor)
@@ -58,6 +133,7 @@ function M:OnBoxBeginOverlap(Component, OtherActor)
     return
   end
   self._PlayersInBox[OtherActor] = true
+  self:_SetPlayerActionEventEnabled(OtherActor, true)
   local Cfg = self:_GetTouchConfig()
   if not self._DoneTouchScore and Cfg.bAddScore and 0 ~= Cfg.ScoreValue and self:_DoAddScore(Cfg.ScoreValue) then
     self._DoneTouchScore = true
@@ -74,6 +150,7 @@ function M:OnBoxEndOverlap(Component, OtherActor)
     return
   end
   self._PlayersInBox[OtherActor] = nil
+  self:_SetPlayerActionEventEnabled(OtherActor, false)
   if self._DoneTouchScore or self._DoneTouchBuff or self._DoneKey then
     self._Locked = true
   end
@@ -88,11 +165,8 @@ function M:_IsAnyPlayerInBox()
   return nil
 end
 
-function M:OnViewportKeyPressed(Key, EventType)
+function M:OnPlayerActionTriggered()
   if self._Locked or self._DoneKey then
-    return
-  end
-  if self.TriggerKey and Key and Key.KeyName ~= self.TriggerKey then
     return
   end
   local Player = self:_IsAnyPlayerInBox()
@@ -109,7 +183,7 @@ function M:OnViewportKeyPressed(Key, EventType)
   end
   if DidSomething then
     self._DoneKey = true
-    self:_OnTriggered("Key")
+    self:_OnTriggered("Action")
   end
 end
 

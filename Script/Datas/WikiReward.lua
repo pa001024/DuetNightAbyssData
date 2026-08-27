@@ -23,5 +23,6 @@ return ReadOnly("WikiReward", {
   [160] = {RewardId = 1001000, RewardProgress = 160},
   [170] = {RewardId = 1001000, RewardProgress = 170},
   [180] = {RewardId = 1001000, RewardProgress = 180},
-  [190] = {RewardId = 1001000, RewardProgress = 190}
+  [190] = {RewardId = 1001000, RewardProgress = 190},
+  [200] = {RewardId = 1001000, RewardProgress = 200}
 })

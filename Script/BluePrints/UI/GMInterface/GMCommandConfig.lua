@@ -1460,6 +1460,90 @@ GMCommandConfig.commands["系统"].commands = {
     }
   },
   {
+    text = "联机大厅",
+    mode = "menu",
+    widget_path = TipsPaths.Common,
+    commands = {
+      {
+        text = "打开联机大厅",
+        mode = "button",
+        callback = "OpenTeamHallUI",
+        close_gm = true
+      },
+      {
+        text = "打开发起招募弹窗",
+        mode = "button",
+        callback = "OpenTeamHallRecruit",
+        close_gm = true
+      },
+      {
+        text = "打开招募分享弹窗（实际分享）",
+        mode = "button",
+        callback = "OpenTeamHallRecruitShare",
+        close_gm = true
+      },
+      {
+        text = "当前状态：未招募",
+        mode = "button",
+        callback = "RefreshTeamHallRecruitmentState"
+      },
+      {
+        text = "开启招募",
+        mode = "menu",
+        widget_path = TipsPaths.MultiInput,
+        commands = {
+          {
+            text = "招募大类Id",
+            mode = "edit",
+            parameters = {1}
+          },
+          {
+            text = "招募二级类型Id",
+            mode = "edit",
+            parameters = {1}
+          },
+          {
+            text = "副本等级",
+            mode = "edit",
+            parameters = {10}
+          },
+          {
+            text = "执行",
+            mode = "button",
+            callback = "OpenTeamHallRecruitment"
+          }
+        }
+      },
+      {
+        text = "关闭招募",
+        mode = "button",
+        callback = "CloseTeamHallRecruitment"
+      },
+      {
+        text = "查询大厅列表",
+        mode = "menu",
+        widget_path = TipsPaths.MultiInput,
+        commands = {
+          {
+            text = "招募二级类型Id",
+            mode = "edit",
+            parameters = {1}
+          },
+          {
+            text = "执行",
+            mode = "button",
+            callback = "QueryTeamHallRecruitmentList"
+          }
+        }
+      },
+      {
+        text = "查询当前招募状态",
+        mode = "button",
+        callback = "PrintTeamHallRecruitmentState"
+      }
+    }
+  },
+  {
     text = "多人挑战界面",
     mode = "menu",
     widget_path = TipsPaths.MultiInput,
@@ -2307,7 +2391,32 @@ GMCommandConfig.commands["其他"].commands = {
     }
   }
 }
-GMCommandConfig.commands["自定义"].commands = {}
+GMCommandConfig.commands["自定义"].commands = {
+  {
+    text = "解锁线索墙所有事件回顾",
+    mode = "button",
+    callback = "ExecConsoleCommand",
+    parameters = {
+      "gm UnlockAllReview"
+    }
+  },
+  {
+    text = "解锁线索墙所有页签",
+    mode = "button",
+    callback = "ExecConsoleCommand",
+    parameters = {
+      "gm UnlockAllCluePage"
+    }
+  },
+  {
+    text = "设置所有线索内容到终态",
+    mode = "button",
+    callback = "ExecConsoleCommand",
+    parameters = {
+      "gm SetAllClueContentFinalState"
+    }
+  }
+}
 GMCommandConfig.commands.ShowFlags.commands = {}
 GMCommandConfig.commands["场景"].commands = {
   {

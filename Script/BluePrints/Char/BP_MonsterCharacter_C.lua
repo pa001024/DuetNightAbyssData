@@ -29,17 +29,6 @@ function BP_MonsterCharacter_C:ReceiveBeginPlay()
   end
 end
 
-function BP_MonsterCharacter_C:ReceiveOnCharacterReady()
-  self.Overridden.ReceiveOnCharacterReady(self)
-  if self.UnitId == 210201 then
-    local GameState = UGameplayStatics.GetGameState(self)
-    local Avatar = GWorld:GetAvatar()
-    if GameState.MonsterHideTagInTalk == "Talk" and Avatar and Avatar:IsInHardBoss() then
-      GameState:HideMonster(false, "Talk", self)
-    end
-  end
-end
-
 function BP_MonsterCharacter_C:TryStartOutAirWallCheck(Info)
   local GameState = UGameplayStatics.GetGameState(self)
   local IsInDungeon = GameState and GameState:IsInDungeon()
@@ -560,6 +549,37 @@ end
 function BP_MonsterCharacter_C:PhysStateErrorReset_Lua()
   Battle(self):ShowError_Monster_Inner_Lua("PhysStateErrorReset_Lua" .. self:GetName())
   self.Mesh:TermBodiesBelow("Root")
+end
+
+function BP_MonsterCharacter_C:InitMonHudHealthBar_Lua(Owner)
+  if not IsValid(Owner) then
+    return
+  end
+  local Eid = Owner.Eid
+  if not Eid or Eid <= 0 then
+    return
+  end
+  if IsValid(self.HudHealthBar) then
+    return
+  end
+  local HudHealthBar = UIManager(self):_CreateWidgetNew("MonHudHealthBar")
+  if not HudHealthBar then
+    ScreenPrint("LoadUI加载对应WidgetUI失败，创建特殊展示怪物血条Widget失败！WidgetUIName MonHudHealthBar")
+    return
+  end
+  self.HudHealthBar = HudHealthBar
+  HudHealthBar:InitWidget(Eid, Owner.Data.UnitName)
+end
+
+function BP_MonsterCharacter_C:DestroyMonHudHealthBar_Lua()
+  local HudHealthBar = self.HudHealthBar
+  self.HudHealthBar = nil
+  if IsValid(HudHealthBar) then
+    if HudHealthBar.ClearScriptRegister then
+      HudHealthBar:ClearScriptRegister()
+    end
+    HudHealthBar:RemoveFromParent()
+  end
 end
 
 AssembleComponents(BP_MonsterCharacter_C)

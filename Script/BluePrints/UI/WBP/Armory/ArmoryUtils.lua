@@ -26,7 +26,8 @@ M.ArmorySubTabNames = {
   HyperGrade = CommonConst.ArmoryTag.HyperGrade,
   Appearance = "Appearance",
   Files = "Files",
-  Entry = "Entry"
+  Entry = "Entry",
+  WeaponMastery = "WeaponMastery"
 }
 M.ArmorySubPageName = {
   Mod = "Mod",
@@ -49,47 +50,51 @@ M.PreviewTargetStates = {
   Max = 1,
   Custom = 2
 }
+M.AutoAssistReddotNodeName = {
+  SquadEntranceNew = "ArmorySquadAutoAssistEntranceNew",
+  AutoAssistEntryNew = "ArmorySquadAutoAssistEntryNew"
+}
 
 function M:NewCharOrWeaponItemContent(Target, Type, Tag, bNotReddot, ReddotFrom)
   local Obj = NewObject(UIUtils.GetCommonItemContentClass())
-  Obj.Uuid = Target.Uuid
-  Obj.Type = Type
-  Obj.ItemType = Type
-  Obj.Tag = Tag
-  Obj.UnitId = Target[Type .. "Id"]
-  Obj.UnitName = GText(Target[Type .. "Name"])
-  Obj.Rarity = Target[Type .. "Rarity"]
-  Obj.Icon = Target:Data().Icon
-  Obj.Level = Target.Level
-  Obj.GradeLevel = Target.GradeLevel
+  rawset(Obj, "Uuid", Target.Uuid)
+  rawset(Obj, "Type", Type)
+  rawset(Obj, "ItemType", Type)
+  rawset(Obj, "Tag", Tag)
+  rawset(Obj, "UnitId", Target[Type .. "Id"])
+  rawset(Obj, "UnitName", GText(Target[Type .. "Name"]))
+  rawset(Obj, "Rarity", Target[Type .. "Rarity"])
+  rawset(Obj, "Icon", Target:Data().Icon)
+  rawset(Obj, "Level", Target.Level)
+  rawset(Obj, "GradeLevel", Target.GradeLevel)
   if "Weapon" == Type then
-    Obj.bIncarnon = HyperWeaponUtils.IsHyperWeapon(Target.WeaponId)
+    rawset(Obj, "bIncarnon", HyperWeaponUtils.IsHyperWeapon(Target.WeaponId))
   end
   local Element = DataMgr["Battle" .. Type][Obj.UnitId].Attribute
   if Element then
     local IconName = "Armory_" .. Element
-    Obj.AttrIcon = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_" .. IconName .. ".T_" .. IconName
+    rawset(Obj, "AttrIcon", "/Game/UI/Texture/Dynamic/Atlas/Armory/T_" .. IconName .. ".T_" .. IconName)
   end
   if not bNotReddot then
     local IsNew, Upgradeable, HasReward = M["TryAddNew" .. Type .. "Reddot"](M, Target)
-    Obj.IsNew = IsNew
-    Obj.Upgradeable = Upgradeable
-    Obj.HasReward = HasReward
+    rawset(Obj, "IsNew", IsNew)
+    rawset(Obj, "Upgradeable", Upgradeable)
+    rawset(Obj, "HasReward", HasReward)
   end
   if not bNotReddot and Obj.bIncarnon then
-    Obj.HasWeaponForgeReward = GWorld:GetAvatar():IsWeaponHasForgeReward(Target.WeaponId)
+    rawset(Obj, "HasWeaponForgeReward", GWorld:GetAvatar():IsWeaponHasForgeReward(Target.WeaponId))
   end
   if "Archive" == ReddotFrom then
-    Obj.IsNew = M.TryAddArchiveNewReddot(M, Obj, Tag)
+    rawset(Obj, "IsNew", M.TryAddArchiveNewReddot(M, Obj, Tag))
   end
   if Obj.Upgradeable or Obj.HasReward or Obj.HasWeaponForgeReward then
-    Obj.RedDotType = UIConst.RedDotType.CommonRedDot
+    rawset(Obj, "RedDotType", UIConst.RedDotType.CommonRedDot)
   elseif Obj.IsNew then
-    Obj.RedDotType = UIConst.RedDotType.NewRedDot
+    rawset(Obj, "RedDotType", UIConst.RedDotType.NewRedDot)
   end
-  Obj.IsLocked = Target.IsLock and Target:IsLock()
-  Obj.LockType = Obj.IsLocked and 1 or 0
-  Obj.SortPriority = Target:Data().SortPriority or 0
+  rawset(Obj, "IsLocked", Target.IsLock and Target:IsLock())
+  rawset(Obj, "LockType", Obj.IsLocked and 1 or 0)
+  rawset(Obj, "SortPriority", Target:Data().SortPriority or 0)
   return Obj
 end
 
@@ -103,12 +108,12 @@ end
 
 function M:NewCommonItemContent(Target, Type)
   local Obj = NewObject(UIUtils.GetCommonItemContentClass())
-  Obj.Uuid = Target.Uuid
-  Obj.Id = Target[Type .. "Id"]
-  Obj.ItemType = Type
-  Obj.Rarity = Target[Type .. "Rarity"]
-  Obj.Icon = Target:Data().Icon
-  Obj.SortPriority = Target:Data().SortPriority or 0
+  rawset(Obj, "Uuid", Target.Uuid)
+  rawset(Obj, "Id", Target[Type .. "Id"])
+  rawset(Obj, "ItemType", Type)
+  rawset(Obj, "Rarity", Target[Type .. "Rarity"])
+  rawset(Obj, "Icon", Target:Data().Icon)
+  rawset(Obj, "SortPriority", Target:Data().SortPriority or 0)
   return Obj
 end
 
@@ -131,36 +136,36 @@ end
 
 function M:NewPetItemContent(Target)
   local Obj = NewObject(UIUtils.GetCommonItemContentClass())
-  Obj.UniqueId = Target.UniqueId
-  Obj.Uuid = Target.UniqueId
-  Obj.BreakNum = Target.BreakNum
-  Obj.Type = CommonConst.ArmoryType.Pet
-  Obj.ItemType = CommonConst.ArmoryType.Pet
-  Obj.Tag = CommonConst.ArmoryType.Pet
-  Obj.UnitId = Target.PetId
+  rawset(Obj, "UniqueId", Target.UniqueId)
+  rawset(Obj, "Uuid", Target.UniqueId)
+  rawset(Obj, "BreakNum", Target.BreakNum)
+  rawset(Obj, "Type", CommonConst.ArmoryType.Pet)
+  rawset(Obj, "ItemType", CommonConst.ArmoryType.Pet)
+  rawset(Obj, "Tag", CommonConst.ArmoryType.Pet)
+  rawset(Obj, "UnitId", Target.PetId)
   local Data = DataMgr.Pet[Obj.UnitId]
   if Target.Name and Target.Name ~= "" then
-    Obj.UnitName = Target.Name
+    rawset(Obj, "UnitName", Target.Name)
   else
-    Obj.UnitName = GText(Data.Name)
+    rawset(Obj, "UnitName", GText(Data.Name))
   end
-  Obj.Rarity = Data.Rarity
-  Obj.Icon = Data.Icon
-  Obj.LockType = Target.IsLock and 1 or 0
-  Obj.SortPriority = Data.SortPriority or 0
-  Obj.IsResourcePet = Target:IsResourcePet()
+  rawset(Obj, "Rarity", Data.Rarity)
+  rawset(Obj, "Icon", Data.Icon)
+  rawset(Obj, "LockType", Target.IsLock and 1 or 0)
+  rawset(Obj, "SortPriority", Data.SortPriority or 0)
+  rawset(Obj, "IsResourcePet", Target:IsResourcePet())
   if Obj.IsResourcePet then
-    Obj.PetEntry = {
+    rawset(Obj, "PetEntry", {
       Target.Entry and Target.Entry[1]
-    }
+    })
   else
-    Obj.Level = Target.Level
+    rawset(Obj, "Level", Target.Level)
   end
-  Obj.IsPremium = Target:IsPremium()
+  rawset(Obj, "IsPremium", Target:IsPremium())
   local IsNew, _ = M.TryAddNewPetReddot(M, Target)
-  Obj.IsNew = IsNew
+  rawset(Obj, "IsNew", IsNew)
   if Obj.IsNew then
-    Obj.RedDotType = UIConst.RedDotType.NewRedDot
+    rawset(Obj, "RedDotType", UIConst.RedDotType.NewRedDot)
   end
   return Obj
 end
@@ -179,33 +184,33 @@ end
 function M:NewResourceItemContent(Target)
   local Data = Target:Data()
   local Obj = NewObject(UIUtils.GetCommonItemContentClass())
-  Obj.Count = GText("INFINITY_SYMBOL")
-  Obj.Type = CommonConst.DataType.Resource
-  Obj.ItemType = CommonConst.DataType.Resource
-  Obj.UnitId = Target.ResourceId
-  Obj.ResourceSType = Target.ResourceSType
-  Obj.IsEquiped = false
-  Obj.Rarity = Data.Rarity or 0
-  Obj.Icon = Data.Icon
-  Obj.CharId = Data.UseParam
+  rawset(Obj, "Count", GText("INFINITY_SYMBOL"))
+  rawset(Obj, "Type", CommonConst.DataType.Resource)
+  rawset(Obj, "ItemType", CommonConst.DataType.Resource)
+  rawset(Obj, "UnitId", Target.ResourceId)
+  rawset(Obj, "ResourceSType", Target.ResourceSType)
+  rawset(Obj, "IsEquiped", false)
+  rawset(Obj, "Rarity", Data.Rarity or 0)
+  rawset(Obj, "Icon", Data.Icon)
+  rawset(Obj, "CharId", Data.UseParam)
   return Obj
 end
 
 function M:NewModItemContent(Target, Type)
   Type = Type or CommonConst.ArmoryType.Mod
   local Obj = NewObject(UIUtils.GetCommonItemContentClass())
-  Obj.Uuid = Target.Uuid
-  Obj.Type = Type
-  Obj.UnitId = Target[Type .. "Id"]
-  Obj.UnitName = DataMgr[Obj.Type][Obj.UnitId].Name
-  Obj.ItemName = Obj.UnitName
-  Obj.Rarity = Target.Rarity
-  Obj.Polarity = Target.Polarity
-  Obj.Icon = Target.Icon
-  Obj.AddAttrs = Target.AddAttrs
-  Obj.Level = Target.Level
-  Obj.CardLevel = Target.CurrentModCardLevel or 0
-  Obj.Cost = Target.Cost
+  rawset(Obj, "Uuid", Target.Uuid)
+  rawset(Obj, "Type", Type)
+  rawset(Obj, "UnitId", Target[Type .. "Id"])
+  rawset(Obj, "UnitName", DataMgr[Obj.Type][Obj.UnitId].Name)
+  rawset(Obj, "ItemName", Obj.UnitName)
+  rawset(Obj, "Rarity", Target.Rarity)
+  rawset(Obj, "Polarity", Target.Polarity)
+  rawset(Obj, "Icon", Target.Icon)
+  rawset(Obj, "AddAttrs", Target.AddAttrs)
+  rawset(Obj, "Level", Target.Level)
+  rawset(Obj, "CardLevel", Target.CurrentModCardLevel or 0)
+  rawset(Obj, "Cost", Target.Cost)
   return Obj
 end
 
@@ -730,10 +735,11 @@ function ReddotCreateFunctions.CreateCharReddotInfos(M)
   
   local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(DataMgr.ReddotNode.NewChar.Name)
   RemoveUnknownChars(CacheDetail)
+  ReddotManager.AddNode(DataMgr.ReddotNode.NewReleasedChar.Name, nil, 1, nil, nil)
   for CharId, value in pairs(DataMgr.Char) do
     M:TryAddUnlockableCharReddot(CharId)
     M:TryAddNewReleasedCharReddot(CharId)
-    if not CommonUtils.IsCurrentVersionNewRelease(CommonConst.DataType.Char, CharId) then
+    if not CommonUtils.IsCurrentVersionNewRelease(CommonConst.DataType.Char, CharId) or DataMgr.CharacterAttributeSwitch[CharId] then
       M:_SetReddotReadCommon(CharId, DataMgr.ReddotNode.NewReleasedChar.Name, false)
     end
   end
@@ -848,13 +854,18 @@ function ReddotCreateFunctions.CreateModReddotInfos(M)
 end
 
 function ReddotCreateFunctions.CreateRecordReddotInfos(M)
-  pcall(M.InitAllCharRecordReddot(), M)
+  pcall(M.InitAllCharRecordReddot, M)
 end
 
 function ReddotCreateFunctions.CreateCharVoiceReddotInfos(M)
 end
 
+local CharAppearanceReddotInfoCreated = {}
+
 local function CreateOneCharAppearanceReddotInfos(CharId)
+  if CharAppearanceReddotInfoCreated[CharId] then
+    return
+  end
   local Avatar = GWorld:GetAvatar()
   local CommonChar = Avatar.CommonChars[CharId]
   local AllAccessorys = Avatar.CharAccessorys
@@ -924,6 +935,7 @@ local function CreateOneCharAppearanceReddotInfos(CharId)
   local HairNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair .. CharId
   GetOrAddTreeNode(SkinNodeName, nil, true)
   GetOrAddTreeNode(HairNodeName, nil, true)
+  CharAppearanceReddotInfoCreated[CharId] = true
 end
 
 function ReddotCreateFunctions.CreateCharAppearanceReddotInfos(M)
@@ -963,6 +975,7 @@ function ReddotCreateFunctions.CreateCharAppearanceReddotInfos(M)
       end
     end
   end
+  CharAppearanceReddotInfoCreated = {}
   local NewCharAppearanceChildNodes = {}
   for _, Char in pairs(Avatar.Chars) do
     local CharId = Char.CharId
@@ -1789,6 +1802,9 @@ function M:TryAddNewReleasedCharReddot(CharId)
   if not Data or Data.IsNotOpen or not CommonUtils.IsCurrentVersionNewRelease(CommonConst.DataType.Char, CharId) then
     return
   end
+  if DataMgr.CharacterAttributeSwitch[CharId] then
+    return
+  end
   return M:_TryAddNewReddotCommon(CharId, DataMgr.ReddotNode.NewReleasedChar.Name)
 end
 
@@ -1797,7 +1813,7 @@ function M:TryAddNewCharSkillReddot(CharSkill, Id, CharUuid, bCanLevelUp)
     return
   end
   if not CharSkill:Data() then
-    print(_G.LogTag, "红点添加失败，CharSkill的表数据无效，无效Id: " .. CharSkill.SkillId)
+    DebugPrint("Error: 红点添加失败，CharSkill的表数据无效，无效Id: " .. CharSkill.SkillId)
     return false
   end
   if nil == Id then
@@ -2679,6 +2695,20 @@ function M:GetWeaponNoneAccessoryIconPaths()
   return AccessoryIconPaths
 end
 
+function M:ExtraProcessCharAttrs(AttrTable, MeleeWeapon, RangedWeapon, Char)
+  if MeleeWeapon and RangedWeapon and Char then
+    local Avatar = GWorld:GetAvatar()
+    local BaseHyperTriggerRate = AttrTable.HyperTriggerRate
+    local MeleeAttrs = MeleeWeapon:DumpDefaultBattleAttr(Avatar, {Char = Char}).TotalValues
+    local RangedAttrs = RangedWeapon:DumpDefaultBattleAttr(Avatar, {Char = Char}).TotalValues
+    local HyperTriggerRateStartValue = DataMgr.AttrLimit.MaxTriggerProbability.CovertStartValue
+    AttrTable.HyperTriggerRate = URuntimeCommonFunctionLibrary.CalcCharHyperTriggerRate(BaseHyperTriggerRate, HyperTriggerRateStartValue, MeleeAttrs.TriggerProbability, RangedAttrs.TriggerProbability, MeleeAttrs.HyperTriggerConvertRate, RangedAttrs.HyperTriggerConvertRate)
+  end
+  if Char then
+    AttrTable.ExcelWeaponTag = UIUtils.GetExcelWeaponTagString(Char.CharId)
+  end
+end
+
 function M:InsertWeaponTypeImpl(WeaponId, AttrTable)
   local WeaponTypeKey = "WeaponType"
   local AttrConfigData = DataMgr.AttrConfig[WeaponTypeKey]
@@ -3110,6 +3140,128 @@ function M:IsShowHyperWeapon(WeaponTag)
     end
   end
   return self:IsHyperWeaponUnlocked()
+end
+
+local function ArmoryMainInAnimFromSecondaryUI_OnClose()
+  local ArmoryMain = UIManager(GWorld.GameInstance):GetArmoryUIObj()
+  if ArmoryMain then
+    ArmoryMain:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    ArmoryMain.Panel_SubUI:SetVisibility(UIConst.VisibilityOp.Hidden)
+    ArmoryMain:PlayAnimation(ArmoryMain.RoleList_In)
+    ArmoryMain:PlayAnimation(ArmoryMain.BG_BackFirst)
+    ArmoryMain.Tab_Arm:PlayInAnim()
+    ArmoryMain.ReceiveEnterStateNoAnim = true
+    ArmoryMain:UpdateMontageAndCamera()
+  end
+end
+
+local function ArmoryMainInAnimFromSecondaryUI_OnDestruct()
+  local ArmoryMain = UIManager(GWorld.GameInstance):GetArmoryUIObj()
+  if ArmoryMain then
+    ArmoryMain:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    ArmoryMain.Panel_SubUI:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  end
+end
+
+function M:GetArmoryMainInAnimFromSecondaryPage()
+  return ArmoryMainInAnimFromSecondaryUI_OnClose, ArmoryMainInAnimFromSecondaryUI_OnDestruct
+end
+
+local CachedExcelWeaponConsumeData = {}
+
+function M:GetExcelWeaponConsumeData(WeaponTag)
+  if CachedExcelWeaponConsumeData[WeaponTag] then
+    return CachedExcelWeaponConsumeData[WeaponTag]
+  end
+  local Data = DataMgr.ExcelWeaponExpandItem[WeaponTag]
+  if not Data then
+    return {}
+  end
+  local Result = {}
+  for index, value in ipairs(Data.ItemId or {}) do
+    table.insert(Result, {
+      ResourceId = value,
+      NeedCount = Data.ItemNum and Data.ItemNum[index] or 0
+    })
+  end
+  CachedExcelWeaponConsumeData[WeaponTag] = Result
+  return Result
+end
+
+function M:IsExcelWeaponUnlockResourceEnough(WeaponTag)
+  local ConsumeData = self:GetExcelWeaponConsumeData(WeaponTag)
+  if not ConsumeData or 0 == #ConsumeData then
+    return
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return false
+  end
+  for _, Data in ipairs(ConsumeData) do
+    local ServerResource = Avatar.Resources[Data.ResourceId] or {Count = 0}
+    if ServerResource.Count < Data.NeedCount then
+      return false
+    end
+  end
+  return true
+end
+
+local AUTO_ASSIST_REDDOT_READ_STATE_KEY = "Read"
+
+function M:IsAutoAssistFeatureUnlocked()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return false
+  end
+  local Rule = DataMgr.UIUnlockRule.AutoAssist or DataMgr.UIUnlockRule.AutoAssit or DataMgr.UIUnlockRule.Squad
+  if not Rule or not Rule.ConditionId then
+    return false
+  end
+  return ConditionUtils.CheckCondition(Avatar, Rule.ConditionId)
+end
+
+function M:EnsureAutoAssistReddotNode(NodeName)
+  local Node = ReddotManager.GetTreeNode(NodeName)
+  Node = Node or ReddotManager.AddNodeEx(NodeName, nil, Const.ReddotCacheType.UserCache, EReddotType.New)
+  if not Node then
+    return nil
+  end
+  local Detail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
+  if not Detail then
+    return Node
+  end
+  if nil == Detail[AUTO_ASSIST_REDDOT_READ_STATE_KEY] then
+    Detail[AUTO_ASSIST_REDDOT_READ_STATE_KEY] = false
+  end
+  if false == Detail[AUTO_ASSIST_REDDOT_READ_STATE_KEY] and Node.Count <= 0 then
+    ReddotManager.IncreaseLeafNodeCount(NodeName, 1)
+  elseif true == Detail[AUTO_ASSIST_REDDOT_READ_STATE_KEY] and Node.Count > 0 then
+    ReddotManager.ClearLeafNodeCount(NodeName)
+  end
+  return Node
+end
+
+function M:EnsureAutoAssistReddotNodes()
+  if not self:IsAutoAssistFeatureUnlocked() then
+    return false
+  end
+  self:EnsureAutoAssistReddotNode(self.AutoAssistReddotNodeName.SquadEntranceNew)
+  self:EnsureAutoAssistReddotNode(self.AutoAssistReddotNodeName.AutoAssistEntryNew)
+  return true
+end
+
+function M:MarkAutoAssistReddotRead(NodeName)
+  if not self:EnsureAutoAssistReddotNodes() then
+    return
+  end
+  local Detail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
+  if Detail then
+    Detail[AUTO_ASSIST_REDDOT_READ_STATE_KEY] = true
+  end
+  local Node = ReddotManager.GetTreeNode(NodeName)
+  if Node and Node.Count > 0 then
+    ReddotManager.ClearLeafNodeCount(NodeName)
+  end
 end
 
 return M

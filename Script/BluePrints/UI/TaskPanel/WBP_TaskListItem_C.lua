@@ -154,6 +154,9 @@ function WBP_TaskListItem_C:RefreshListItemInfo(Content)
   if -1 ~= self.QuestChainId then
     local UnlockConditionId = QuestConfig.UnlockCondition
     local QuestState = Avatar and Avatar:CheckCondition(UnlockConditionId) and QuestStateEnum.DOING or QuestStateEnum.LOCK
+    if self.QuestChainId and Avatar.QuestChains and Avatar.QuestChains[self.QuestChainId] and Avatar.QuestChains[self.QuestChainId].IsAdvanceUnlock then
+      QuestState = QuestStateEnum.DOING
+    end
     if not UnlockConditionId then
       QuestState = QuestStateEnum.DOING
     end

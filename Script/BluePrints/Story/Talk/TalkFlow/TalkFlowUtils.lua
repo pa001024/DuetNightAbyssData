@@ -1,6 +1,7 @@
 local FEFNode_PlayAudio = require("BluePrints.Story.Talk.TalkFlow.Nodes.DelegateNodes.EFNode_PlayAudio")
 local FEFNode_WaitForSeconds = require("BluePrints.Story.Talk.TalkFlow.Nodes.DelegateNodes.EFNode_WaitForSeconds")
 local FEFNode_TypingText = require("BluePrints.Story.Talk.TalkFlow.Nodes.DelegateNodes.EFNode_TypingText")
+local FEFNode_ConditionalDelay = require("BluePrints.Story.Talk.TalkFlow.Nodes.DelegateNodes.EFNode_ConditionalDelay")
 local BaseDialogueData_C = require("BluePrints.Story.Talk.Model.DialogueData.BaseDialogueData")
 local BubbleDialogueData_C = require("BluePrints.Story.Talk.Model.DialogueData.BubbleDialogueData")
 local GuideDialogueData_C = require("BluePrints.Story.Talk.Model.DialogueData.GuideDialogueData")
@@ -130,6 +131,8 @@ function M:GetTokenRoot(Context, RootName)
     return Context and Context.FlowType
   elseif "UI" == RootName then
     return Context and Context.UI
+  elseif "GlobalConstant" == RootName then
+    return DataMgr.GlobalConstant
   end
 end
 
@@ -140,7 +143,8 @@ local TokenRootNames = {
   Owner = 1,
   TalkTaskData = 1,
   FlowType = 1,
-  UI = 1
+  UI = 1,
+  GlobalConstant = 1
 }
 
 function M:IsTokenRootName(RootName)
@@ -310,6 +314,14 @@ end
 
 function M:Delay(Flow, Context, Params)
   local Node = FEFNode_WaitForSeconds:CreateNode(Flow, Context.FlowOwner, Params)
+  if not Node then
+    return
+  end
+  return Node.StartPin, Node.FinishPin
+end
+
+function M:ConditionalDelay(Flow, Context, Params)
+  local Node = FEFNode_ConditionalDelay:CreateNode(Flow, Context.FlowOwner, Params)
   if not Node then
     return
   end

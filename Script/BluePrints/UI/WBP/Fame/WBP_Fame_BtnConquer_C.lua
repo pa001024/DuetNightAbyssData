@@ -14,6 +14,10 @@ function M:Construct()
   self.TextRefresTime:SetText(GText("RegionReputation_RefreshTime"))
 end
 
+function M:SetTextRefresTime_1(RefresTimeText)
+  self.TextRefresTime:SetText(RefresTimeText)
+end
+
 function M:SetTextRefresTime(RefresTimeText)
   self.TextRefresTime_1:SetText(RefresTimeText)
 end

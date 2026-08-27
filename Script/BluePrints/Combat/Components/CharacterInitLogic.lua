@@ -244,6 +244,9 @@ function Component:UnpackAvatarInfoNew(Context)
   end
   self.AvatarInfo = AvatarInfo
   local RoleInfo = AvatarInfo.RoleInfo
+  if IsAuthority(self) then
+    self:SetCurrentExcelWeaponExpand(RoleInfo and RoleInfo.CurrentExcelWeaponExpand or {})
+  end
   if RoleInfo then
     for Key, Value in pairs(RoleInfo) do
       if type(Value) == "number" then
@@ -296,6 +299,9 @@ end
 
 function Component:PreInitInfo(Info)
   self:UnpackAvatarInfo(Info)
+  if IsAuthority(self) then
+    self:SetCurrentExcelWeaponExpand(Info.CurrentExcelWeaponExpand or {})
+  end
   self.FromOtherWorld = Info.FromOtherWorld or false
   self.FromArmory = Info.FromArmory or false
   self.IsSettlementOtherRole = Info.IsSettlementOtherRole or false
@@ -376,6 +382,7 @@ function Component:RealInitInfo(Info)
   end
   self.ServerInitSuccess = true
   self.InitSuccess = true
+  self:ApplyCommonURO()
   self:PostInitInfo(Info)
   if Info.PreReadyCallback then
     Info.PreReadyCallback(self)
@@ -512,7 +519,7 @@ end
 function Component:SetPlayerInfo(Info)
   self.EndPointTransform = nil
   if Info.PlayerHp then
-    self:SetAttr("Hp", math.min(Info.PlayerHp, self:GetAttr("MaxHp")))
+    self:SetHpFromInitRestore(math.min(Info.PlayerHp, self:GetAttr("MaxHp")))
     self:CalcHpPercent()
   end
   if Info.PlayerSp then
@@ -623,7 +630,7 @@ function Component:ClientInitInfo(Info)
 end
 
 function Component:FormatWeaponInfo(TempWeapon, DumpWeaponInfo)
-  Utils.FormatWeaponInfo(TempWeapon, DumpWeaponInfo)
+  MiscUtils.FormatWeaponInfo(TempWeapon, DumpWeaponInfo)
 end
 
 function Component:ClientPlayEnterMontage()
@@ -756,7 +763,7 @@ function Component:OnCharacterReady(Info)
       ClientTryEndLoading()
     end
   end
-  if IsDedicatedServer(self) and IsAuthority(self) then
+  if IsDedicatedServer(self) and IsAuthority(self) and self.BornInfo and not self.BornInfo.IsEmpty then
     self.ServerBornInfo = self.BornInfo:ToEffectStruct()
   end
   self:ZeroComboCount(UE4.EClearComboReason.Timelimit)
@@ -1008,9 +1015,11 @@ function Component:SyncAppearanceSuit(AppearanceSuit)
   if AppearanceSuit then
     Result = EffectResults.Result()
     for Key, Value in pairs(AppearanceSuit) do
-      Result[Key] = Value
+      if "CharId" ~= Key and "IsShowPartMesh" ~= Key then
+        Result[Key] = Value
+      end
     end
-    Result = Result:ToEffectStruct(self.ServerAppearanceSuit)
+    Result = Result:ToEffectStruct(self.ServerAppearanceSuit, EffectResults.Schemas.CharAppearanceSuit)
   else
     Result = FEffectStruct()
   end

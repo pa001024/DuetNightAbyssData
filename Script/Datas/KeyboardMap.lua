@@ -66,6 +66,20 @@ return ReadOnly("KeyboardMap", {
     Key = "MouseScrollUp",
     SortId = 41
   },
+  ChangeSlideMechLeft = {
+    ActionName = "ChangeSlideMechLeft",
+    IsActionMapping = true,
+    IsShowInSetting = false,
+    Key = "A",
+    SortId = 63
+  },
+  ChangeSlideMechRight = {
+    ActionName = "ChangeSlideMechRight",
+    IsActionMapping = true,
+    IsShowInSetting = false,
+    Key = "D",
+    SortId = 64
+  },
   ChargeBullet = {
     ActionName = "ChargeBullet",
     ActionNameText = "UI_Keyboard_Map_ChargeBullet",
@@ -270,6 +284,15 @@ return ReadOnly("KeyboardMap", {
     Key = "J",
     SortId = 16
   },
+  OpenTeamHall = {
+    ActionName = "OpenTeamHall",
+    ActionNameText = "UI_teamLobby",
+    CanChanged = true,
+    IsActionMapping = true,
+    IsShowInSetting = true,
+    Key = "O",
+    SortId = 61
+  },
   QuitChallenge = {
     ActionName = "QuitChallenge",
     ActionNameText = "UI_Keyboard_Map_QuitChallenge",
@@ -349,6 +372,13 @@ return ReadOnly("KeyboardMap", {
     IsShowInSetting = true,
     Key = "LeftControl",
     SortId = 7
+  },
+  SlideMechTurn = {
+    ActionName = "SlideMechTurn",
+    IsActionMapping = true,
+    IsShowInSetting = false,
+    Key = "V",
+    SortId = 62
   },
   StoryInteractive = {
     ActionName = "StoryInteractive",

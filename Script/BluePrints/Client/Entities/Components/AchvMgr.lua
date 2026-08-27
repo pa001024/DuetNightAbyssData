@@ -16,7 +16,7 @@ function Component:OnProgressChange(OldIndex, NewIndex, AchvId, CurrentCount)
   end
   if unlocked and _G.ShowAchievement then
     local UIManger = UIManager(GWorld.GameInstance)
-    local UI = UIManger:GetUIObjAsync("AchievementPanel", function(UIObj)
+    local UI = UIManger:GetUIObj("AchievementPanel", function(UIObj)
       if UIObj then
         if Achv:IsIndividual() then
           CurrentCount = Achv.CompletionValue
@@ -39,11 +39,13 @@ end
 
 function Component:_OnPropChangeAchvs(Keys)
   self:HandleIOSAchievement(Keys)
-  if Keys[2] and "FinishedTargets" == Keys[2] then
-    local AchvId = Keys[1]
-    if self.Achvs:IsAchvCanGetReward(AchvId) then
-      self:TryAddAchieveReddot(self.Achvs:GetAchv(AchvId):Data().AchievementType)
-    end
+  local AchvId = Keys[1]
+  local PropName = Keys[2]
+  if AchvId and self.Achvs then
+    self.Achvs:UpdateAchvLockState(AchvId)
+  end
+  if PropName and "FinishedTargets" == PropName and self.Achvs:IsAchvCanGetReward(AchvId) then
+    self:TryAddAchieveReddot(self.Achvs:GetAchv(AchvId):Data().AchievementType)
   end
 end
 
@@ -145,6 +147,9 @@ function Component:GetAllAchvRewardByType(AchvTypeId, AchvId, cb)
 end
 
 function Component:EnterWorld()
+  if self.Achvs then
+    self.Achvs:InitLockCache()
+  end
   self:RefreshAchieveReddot()
   self:SyncSteamAchievements()
 end

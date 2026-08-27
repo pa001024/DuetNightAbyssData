@@ -93,6 +93,9 @@ end
 function M:OnInitAddBtn()
   self.Btn_Add.Panel_Img:SetActiveWidgetIndex(1)
   self.Btn_Add:BindOnClickEvent(function()
+    if self:HandleAddButtonClick() then
+      return
+    end
     if IsValid(FriendController:GetView(self)) then
       TeamController:ShowToast(GText("UI_Team_InFriend"))
     else

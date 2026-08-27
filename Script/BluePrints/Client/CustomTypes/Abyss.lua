@@ -3,6 +3,7 @@ local BaseTypes = require("BluePrints.Client.CustomTypes.BaseTypes")
 local CustomTypes = require("BluePrints.Client.CustomTypes.CustomTypes")
 local prop = require("NetworkEngine.Common.Prop")
 local FormatProperties = require("NetworkEngine.Common.Assemble").FormatProperties
+local SerializeUtils = require("Utils.SerializeUtils")
 local AbyssTeam = Class("AbyssTeam", CustomTypes.CustomAttr)
 AbyssTeam.__Props__ = {
   Char = prop.prop("ObjId", "client save"),

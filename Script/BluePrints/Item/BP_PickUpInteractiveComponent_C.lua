@@ -142,7 +142,17 @@ function BP_PickUpInteractiveComponent_C:BtnReleased(PlayerActor, InPressTimeSec
   local Owner = self:GetOwner()
   if PlayerActor and PlayerActor.SetEnterInteractive then
     PlayerActor:SetEnterInteractive(false, self.MontageName or "Interactive_01_Montage", nil, "MechInteractive")
-    PlayerActor:SetCharacterTag("Idle")
+    local InteractiveExitFallbackTimer
+    InteractiveExitFallbackTimer = self:AddTimer(3.0, function()
+      if IsValid(PlayerActor) and not PlayerActor.IsInteractive and PlayerActor:CharacterInTag("Interactive") then
+        PlayerActor:SetCharacterTag("Idle")
+      end
+      self:RemoveTimer(InteractiveExitFallbackTimer)
+      if self.InteractiveExitFallbackTimer == InteractiveExitFallbackTimer then
+        self.InteractiveExitFallbackTimer = nil
+      end
+    end)
+    self.InteractiveExitFallbackTimer = InteractiveExitFallbackTimer
     self:OnBtnReleased()
   end
 end

@@ -1,6 +1,8 @@
 require("UnLua")
 local MiscUtils = require("Utils.MiscUtils")
 local EMCache = require("EMCache.EMCache")
+local TimeUtils = require("Utils.TimeUtils")
+local MonthCardModel = require("BluePrints.UI.WBP.Perk.MonthCard.MonthCardModel")
 local M = Class("BluePrints.UI.Shop.WBP_Shop_Base_New_C")
 M._components = {
   "BluePrints.UI.UI_PC.Common.HorizontalListViewResizeComp",
@@ -56,20 +58,15 @@ function M:OnLoaded(...)
   local ShopMainTabData = DataMgr.ShopTabMain[MainTabIdx]
   if "Shop" == ShopSystemName and (nil == MainTabIdx or ShopMainTabData and ShopMainTabData.PinVideo) then
     local SwitchBannerList = ShopUtils:GetBannerInfo(true)
-    local BannerList = ShopUtils:GetBannerInfo()
-    local Banner
-    if SwitchBannerList[1] then
-      Banner = SwitchBannerList[1]
-    elseif BannerList[1] then
-      Banner = BannerList[1]
-    end
-    if Banner then
-      local BannerId = Banner.Id
-      BgVideoPath = DataMgr.ShopBannerTab[BannerId].BgVideoPath
-      DisplayId = DataMgr.ShopBannerTab[BannerId].DisplayId
-      DisplayType = DataMgr.ShopBannerTab[BannerId].DisplayType
-      if BgVideoPath and "" ~= BgVideoPath and self:IsFirstTimeToEnterBanner(BannerId) then
+    local BannerData, BannerIdDict, SmallBannerData = ShopUtils:GetBannerInfo()
+    local BannerId = self:ResolveDefaultBannerId(nil, BannerData, BannerIdDict, SmallBannerData)
+    if BannerId then
+      local BannerTab = DataMgr.ShopBannerTab[BannerId]
+      if BannerTab and BannerTab.BgVideoPath and BannerTab.BgVideoPath ~= "" and self:IsFirstTimeToEnterBanner(BannerId) then
         bPlayVideoTopFirst = true
+        BgVideoPath = BannerTab.BgVideoPath
+        DisplayType = BannerTab.DisplayType
+        DisplayId = BannerTab.DisplayId
       end
     end
   end
@@ -612,6 +609,7 @@ local SMALL_BANNER_WIDGET_NAMES = {
   "Shop_RecommendBannerSmall03",
   "Shop_RecommendBannerSmall04"
 }
+local MONTH_CARD_REMINDER_CACHE_KEY = "ShopMain_MonthCardReminderDay"
 local NAVIGATION_RULES = {
   [4] = {
     {
@@ -863,18 +861,135 @@ function M:InitNormalBannerList(BannerData, Path, SmallBannerData)
   end
 end
 
+function M:GetActiveMonthCardBannerId(BannerData, SmallBannerData)
+  for _, Data in ipairs(BannerData or {}) do
+    if Data.BannerType == UIConst.ShopBannerType.MonthCard then
+      return Data.Id
+    end
+  end
+  for _, Data in ipairs(SmallBannerData or {}) do
+    if Data.BannerType == UIConst.ShopBannerType.MonthCard then
+      return Data.Id
+    end
+  end
+  return nil
+end
+
+function M:IsMonthCardReminderShownToday()
+  local LastShownTime = EMCache:Get(MONTH_CARD_REMINDER_CACHE_KEY, true)
+  if not LastShownTime then
+    return false
+  end
+  return TimeUtils.GetIntervalDay(LastShownTime, TimeUtils.NowTime()) < 1
+end
+
+function M:MarkMonthCardReminderShown()
+  EMCache:Set(MONTH_CARD_REMINDER_CACHE_KEY, TimeUtils.NowTime(), true)
+end
+
+function M:ResolveDefaultBannerId(SelectBannerId, BannerData, BannerIdDict, SmallBannerData)
+  if SelectBannerId and BannerIdDict[SelectBannerId] then
+    return SelectBannerId
+  end
+  local MonthCardBannerId = self:GetActiveMonthCardBannerId(BannerData, SmallBannerData)
+  if MonthCardBannerId and not MonthCardModel:IsMonthCardPurchased() and not self:IsMonthCardReminderShownToday() then
+    return MonthCardBannerId
+  end
+  local SwitchBannerList = ShopUtils:GetBannerInfo(true)
+  if SwitchBannerList and next(SwitchBannerList) then
+    return SwitchBannerList[1].Id
+  end
+  if BannerData[1] then
+    return BannerData[1].Id
+  end
+  return nil
+end
+
+function M:GetBannerWidgetAndContent(BannerId)
+  local function IsWidgetVisible(Widget)
+    if not Widget then
+      return false
+    end
+    local Visibility = Widget:GetVisibility()
+    return Visibility ~= ESlateVisibility.Collapsed and Visibility ~= ESlateVisibility.Hidden
+  end
+  
+  for _, widgetName in ipairs(SMALL_BANNER_WIDGET_NAMES) do
+    local Widget = self[widgetName]
+    if Widget and Widget.BannerId == BannerId and IsWidgetVisible(Widget) then
+      return Widget, Widget.Content
+    end
+  end
+  if self.Shop_Recommend_ListItem and self.Shop_Recommend_ListItem.BannerId == BannerId and IsWidgetVisible(self.Shop_Recommend_ListItem) then
+    return self.Shop_Recommend_ListItem, self.Shop_Recommend_ListItem.Content
+  end
+  for _, widgetName in ipairs(SMALL_BANNER_WIDGET_NAMES) do
+    local Widget = self[widgetName]
+    if Widget and Widget.BannerId == BannerId then
+      return Widget, Widget.Content
+    end
+  end
+  if self.Shop_Recommend_ListItem and self.Shop_Recommend_ListItem.BannerId == BannerId then
+    return self.Shop_Recommend_ListItem, self.Shop_Recommend_ListItem.Content
+  end
+  return nil, nil
+end
+
+function M:SyncBannerItemSelectState(BannerId)
+  local ScrollBoxChildrenTable = self.ScrollBox_Recommend:GetAllChildren():ToTable()
+  if ScrollBoxChildrenTable then
+    for _, Widget in pairs(ScrollBoxChildrenTable) do
+      if Widget and Widget.UnSelect then
+        Widget:UnSelect()
+      end
+    end
+  end
+  for _, widgetName in ipairs(SMALL_BANNER_WIDGET_NAMES) do
+    local Widget = self[widgetName]
+    if Widget and Widget.UnSelect then
+      Widget:UnSelect()
+    end
+  end
+  if self.Shop_Recommend_ListItem and self.Shop_Recommend_ListItem.UnSelect then
+    self.Shop_Recommend_ListItem:UnSelect()
+  end
+  local Widget, Content = self:GetBannerWidgetAndContent(BannerId)
+  if Widget then
+    Widget.bSelected = true
+    Widget:StopAllAnimations()
+    Widget:PlayAnimation(Widget.Click)
+  end
+  return Widget, Content
+end
+
 function M:InitBannerPage(SelectBannerId)
   self.BannerIdMap = {}
   self.SwitchBannerList = ShopUtils:GetBannerInfo(true)
   local BannerData, BannerIdDict, SmallBannerData = ShopUtils:GetBannerInfo()
   self:InitSmallBanners(SmallBannerData)
-  if SelectBannerId then
+  local bShouldSelectMonthCard = false
+  local MonthCardBannerId
+  local bMonthCardInNormalBanner = false
+  if SelectBannerId and BannerIdDict[SelectBannerId] then
     self.SelectBannerId = SelectBannerId
-  elseif not BannerIdDict[self.SelectBannerId] then
+  else
     self.SelectBannerId = nil
+    MonthCardBannerId = self:GetActiveMonthCardBannerId(BannerData, SmallBannerData)
+    if MonthCardBannerId and not MonthCardModel:IsMonthCardPurchased() and not self:IsMonthCardReminderShownToday() then
+      for _, Data in ipairs(BannerData) do
+        if Data.Id == MonthCardBannerId then
+          bMonthCardInNormalBanner = true
+          break
+        end
+      end
+      bShouldSelectMonthCard = true
+      self:MarkMonthCardReminderShown()
+    end
   end
   if not self.SelectBannerId then
-    if self.SwitchBannerList and next(self.SwitchBannerList) then
+    if bShouldSelectMonthCard then
+      self.SelectBannerId = MonthCardBannerId
+    elseif self.SwitchBannerList and next(self.SwitchBannerList) then
       self.SelectBannerId = self.SwitchBannerList[1].Id
     else
       assert(BannerData[1], "有效Banner数量不足一个")
@@ -891,6 +1006,18 @@ function M:InitBannerPage(SelectBannerId)
   self:InitNormalBannerList(BannerData, Path, SmallBannerData)
   if bSwitchBanner and not CommonUtils:IfExistSystemGuideUI(self) then
     self.Shop_RecommendBanner:SetFocus()
+  end
+  if bShouldSelectMonthCard and not bMonthCardInNormalBanner then
+    self:AddTimer(0, function()
+      self.LastWidgetContent = nil
+      local Widget, Content = self:SyncBannerItemSelectState(MonthCardBannerId)
+      if Widget then
+        self:OnBannerItemClick(MonthCardBannerId, Content, false)
+        self:AddTimer(0.05, function()
+          self:GamePadFocusToSelectBannerItem()
+        end)
+      end
+    end)
   end
   self:AddTimer(0.5, function()
     self:OnUserScrolled()
@@ -1980,21 +2107,30 @@ function M:GetSelectBannerItem()
   if not self.SelectBannerId or self.ShowSwitchBanner then
     return self.Shop_RecommendBanner
   end
+  
+  local function IsWidgetVisible(Widget)
+    if not Widget then
+      return false
+    end
+    local Visibility = Widget:GetVisibility()
+    return Visibility ~= ESlateVisibility.Collapsed and Visibility ~= ESlateVisibility.Hidden
+  end
+  
   local ScrollBoxChildrenTable = self.ScrollBox_Recommend:GetAllChildren():ToTable()
   if ScrollBoxChildrenTable and next(ScrollBoxChildrenTable) then
     for index, Widget in pairs(ScrollBoxChildrenTable) do
-      if Widget.BannerId and Widget.BannerId == self.SelectBannerId then
+      if Widget.BannerId and Widget.BannerId == self.SelectBannerId and IsWidgetVisible(Widget) then
         return Widget
       end
     end
   end
   for _, widgetName in ipairs(SMALL_BANNER_WIDGET_NAMES) do
     local Widget = self[widgetName]
-    if Widget and Widget.BannerId == self.SelectBannerId then
+    if Widget and Widget.BannerId == self.SelectBannerId and IsWidgetVisible(Widget) then
       return Widget
     end
   end
-  if self.Shop_Recommend_ListItem and self.Shop_Recommend_ListItem.BannerId == self.SelectBannerId then
+  if self.Shop_Recommend_ListItem and self.Shop_Recommend_ListItem.BannerId == self.SelectBannerId and IsWidgetVisible(self.Shop_Recommend_ListItem) then
     return self.Shop_Recommend_ListItem
   end
   return nil

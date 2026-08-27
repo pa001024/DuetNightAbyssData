@@ -5,7 +5,7 @@ function M:Init(Params)
 end
 
 function M:_ResetMountPreviewTransitionState()
-  if not self.bWatingForDelayFrame and not self.DisappearFXPlaying and not self.LTweenHandle_PlayDisappearFX then
+  if not self.bWaitingForDelayFrame and not self.DisappearFXPlaying and not self.LTweenHandle_PlayDisappearFX then
     return
   end
   self:CancelPendingDelayFramePreview()
@@ -72,7 +72,7 @@ function M:PlayMountMontageOnDisplay()
   if self.DelayFrame and self.DelayFrame > 0 then
     self:HidePlayerAndMount(true)
     self:PlayDisappearFX(ArmoryPlayer.FXComponent, function()
-      if self.bClosed or self.bDestructed or not self.IsControled then
+      if self.bClosed or self.bDestructed or not self.IsControlled then
         self:HidePlayerAndMount(false)
         return
       end

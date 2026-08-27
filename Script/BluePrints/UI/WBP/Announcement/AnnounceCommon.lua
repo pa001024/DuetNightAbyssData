@@ -18,9 +18,7 @@ local AnnounceCommon = {
     [CommonConst.SystemLanguages.KR] = "otf",
     [CommonConst.SystemLanguages.TC] = "woff",
     [CommonConst.SystemLanguages.JP] = "woff",
-    [CommonConst.SystemLanguages.FR] = "woff",
-    [CommonConst.SystemLanguages.DE] = "otf",
-    [CommonConst.SystemLanguages.ES] = "otf"
+    [CommonConst.SystemLanguages.FR] = "woff"
   },
   LongYMDHMFormat = "(%d+)-(%d+)-(%d+)%s*(%d+)%s*:%s*(%d+)%s*~%s*(%d+)-(%d+)-(%d+)%s*(%d+)%s*:%s*(%d+)",
   LongTimeFormat = "(%[%s*%d+-%d+-%d+%s*%d+%s*:%s*%d+%s*~%s*%d+-%d+-%d+%s*%d+%s*:%s*%d+%s*%])",

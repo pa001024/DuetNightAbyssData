@@ -220,13 +220,23 @@ function M:SetInitParams(Params)
   self:NotifyGamePauseChange(InitForcePaus)
   self:SetLockGamePause(Params.bLockGamePause)
   self:SetLockCameraPos(Params.bLockCameraPos)
-  if Params.StartPos ~= "" then
+  if type(Params.StartPos) == "string" and Params.StartPos ~= "" then
     local OutConvertedVector, OutIsValid = UE4.UKismetStringLibrary.Conv_StringToVector(Params.StartPos)
     if OutIsValid then
       self.Camera:SetLocation(OutConvertedVector)
       self.Camera:SetRotation(self.Camera:K2_GetActorRotation())
       self.OriginalCameraTransform.Translation = self.Camera:K2_GetActorLocation()
       Params.bUseStartPos = true
+    end
+  end
+  if "string" == type(Params.StartRotation) and "" ~= Params.StartRotation then
+    local RotartionString = Params.StartRotation
+    RotartionString = string.gsub(RotartionString, "[itchawol]", "")
+    local OutConvertedRotator, OutIsValid = UE4.UKismetStringLibrary.Conv_StringToRotator(RotartionString)
+    if OutIsValid then
+      self.Camera:SetRotation(OutConvertedRotator)
+      self.OriginalCameraTransform.Rotation = self.Camera:K2_GetActorRotation():ToQuat()
+      Params.bUseStartRotation = true
     end
   end
   self.bDisableCustom = Params.bDisableCustom
@@ -697,7 +707,9 @@ end
 
 function M:ResetCamera0()
   local OriRotation
-  if self.LookAtTargetName and self.TargetActors[self.LookAtTargetName] then
+  if self.InitParams.bUseStartRotation then
+    OriRotation = UKismetMathLibrary.Quat_Rotator(self.OriginalCameraTransform.Rotation)
+  elseif self.LookAtTargetName and self.TargetActors[self.LookAtTargetName] then
     local LookAtTarget = self.TargetActors[self.LookAtTargetName]
     OriRotation = UKismetMathLibrary.FindLookAtRotation(self.Camera:K2_GetActorLocation(), LookAtTarget:K2_GetActorLocation())
   elseif self.InitLookAtTarget then
@@ -813,6 +825,7 @@ function M:Screenshot()
   if self.bSelfHidden or self.Main:GetVisibility() ~= UIConst.VisibilityOp.Visible then
     return
   end
+  self.bTakeAnyPhoto = true
   if not self.IsShotTargetSucceeded and not self.bFindTargetEveryFrame then
     self:TryFindTargets()
   end
@@ -1058,7 +1071,9 @@ function M:Destruct()
         EventManager:RemoveEvent(EventID.UnLoadUI, _self)
         
         self.CloseCallback({
-          IsSucceeded = self.IsShotTargetSucceeded
+          IsSucceeded = self.IsShotTargetSucceeded,
+          From = self.InitParams.From,
+          IsTakeAnyPhoto = self.bTakeAnyPhoto
         })
       end
     end
@@ -1130,6 +1145,9 @@ function M:RecoverActorTickableState()
 end
 
 function M:NotifyGamePauseChange(IsGamePause)
+  if self.bLockGamePause then
+    return
+  end
   if IsGamePause then
     if self.NeedUpdateLODCharacter and #self.NeedUpdateLODCharacter > 0 then
       self.bNeedUpdateLODCharacterOnce = true

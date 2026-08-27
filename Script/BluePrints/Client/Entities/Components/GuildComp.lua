@@ -428,6 +428,38 @@ function Component:GuildHomeGetRandomVisitGuild(Callback, ExcludeGuildId)
   CallGuildRpc(self, "GuildHomeGetRandomVisitGuild", Callback, ExcludeGuildId or 0)
 end
 
+function Component:GuildSeatEditWeaponPlan(Callback, PlanId, TargetId, Type, AppearanceIndex)
+  CallGuildRpc(self, "GuildSeatEditWeaponPlan", Callback, PlanId or 0, TargetId or 0, Type or 0, AppearanceIndex or 0)
+end
+
+function Component:GuildSeatEditCharacterPlan(Callback, PlanId, TargetId, Type, AppearanceIndex)
+  CallGuildRpc(self, "GuildSeatEditCharacterPlan", Callback, PlanId or 0, TargetId or 0, Type or 0, AppearanceIndex or 0)
+end
+
+function Component:GuildSeatEditActionPlan(Callback, PlanId, TargetId, Type, AppearanceIndex)
+  CallGuildRpc(self, "GuildSeatEditActionPlan", Callback, PlanId or 0, TargetId or 0, Type or 0, AppearanceIndex or 0)
+end
+
+function Component:GuildSeatOccupy(Callback, SeatId)
+  CallGuildRpc(self, "GuildSeatOccupy", Callback, SeatId or 0)
+end
+
+function Component:GuildSeatSetOccupiedPlan(Callback, SeatId, PlanId)
+  CallGuildRpc(self, "GuildSeatSetOccupiedPlan", Callback, SeatId or 0, PlanId or 0)
+end
+
+function Component:GuildSeatExtendLease(Callback, SeatId)
+  CallGuildRpc(self, "GuildSeatExtendLease", Callback, SeatId or 0)
+end
+
+function Component:GuildSeatLike(Callback, TargetUid, SeatType)
+  CallGuildRpc(self, "GuildSeatLike", Callback, TargetUid or 0, SeatType or 0)
+end
+
+function Component:GuildSeatCopy(Callback, TargetUid, SeatType)
+  CallGuildRpc(self, "GuildSeatCopy", Callback, TargetUid or 0, SeatType or 0)
+end
+
 function Component:GetGuildMessage(Callback)
   local SrcParams = table.pack()
   if NormalizeInt(self.GuildId, 0) <= 0 then
@@ -650,14 +682,6 @@ function Component:ChatToGuild(Callback, Content)
   end
   
   CallGuildRpc(self, "ChatToGuild", InnerCallback, Content)
-end
-
-function Component:GuildHomeExchangeFund(Callback, Count)
-  CallGuildRpc(self, "GuildHomeExchangeFund", Callback, Count or 0)
-end
-
-function Component:GuildHomeBuyComponent(Callback, ComponentId, Count)
-  CallGuildRpc(self, "GuildHomeBuyComponent", Callback, ComponentId or 0, Count or 0)
 end
 
 return Component

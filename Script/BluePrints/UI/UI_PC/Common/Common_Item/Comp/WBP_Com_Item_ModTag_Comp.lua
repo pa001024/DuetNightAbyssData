@@ -2,8 +2,10 @@ local Component = {}
 
 function Component:SetModTag(bAllowModTag, bModEquiped)
   local function Callback(ModTagUI)
+    if not self.Content.bAllowCustom then
+      return
+    end
     self.ModTagUI = UE.FWeakObjectPtr(ModTagUI)
-    
     self:AddWidgetToNode(nil, self.ModTagUI)
     ModTagUI:StopAllAnimations()
     if bModEquiped then

@@ -24,14 +24,15 @@ end
 function M:OnListItemObjectSet(Content)
   self.Content = Content
   self.Owner = Content.Owner
+  self._OnForbiddenClicked = Content.OnForbiddenClicked
   self._OnAddedToFocusPath = Content.OnAddedToFocusPath
   self._OnRemovedFromFocusPath = Content.OnRemovedFromFocusPath
   self.Content.Entry = self
   self.IsPreviewMode = Content.IsPreviewMode
+  self.bForbidden = Content.bForbidden
   self.ItemId = Content.AccessoryId
   self.TipType = Content.TipType
   self.IsDressed = Content.IsDressed
-  EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
   self:SetIcon(Content.IconPath, Content.IsNoneIcon)
   self:SetRarity(Content.Rarity)
   self:SetReddot(Content.IsNew)
@@ -113,6 +114,15 @@ function M:SetRarity(Rarity)
 end
 
 function M:InitButton()
+  if self.bForbidden then
+    EMUIAnimationSubsystem:EMStopAnimation(self, self.Normal)
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Forbidden)
+    self.Button_Area:SetIsEnabled(false)
+    return
+  end
+  EMUIAnimationSubsystem:EMStopAnimation(self, self.Forbidden)
+  EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
+  self.Button_Area:SetIsEnabled(true)
   if not self.IsPreviewMode or self.IsCharacterTrialMode then
     return
   end
@@ -178,6 +188,25 @@ function M:OnRemovedFromFocusPath()
   if self._OnRemovedFromFocusPath then
     self._OnRemovedFromFocusPath(self.Owner, self.Content)
   end
+end
+
+function M:OnMouseButtonDown(MyGeometry, MouseEvent)
+  if UKismetInputLibrary.PointerEvent_IsMouseButtonDown(MouseEvent, EKeys.RightMouseButton) then
+    return UIUtils.Handled
+  end
+  self.bMouseDown = true
+  return UIUtils.Handled
+end
+
+function M:OnMouseButtonUp(MyGeometry, MouseEvent)
+  if UKismetInputLibrary.PointerEvent_IsMouseButtonDown(MouseEvent, EKeys.RightMouseButton) then
+    return UIUtils.Handled
+  end
+  if self.bMouseDown and self.bForbidden and self._OnForbiddenClicked then
+    self._OnForbiddenClicked(self.Owner, self.Content)
+  end
+  self.bMouseDown = false
+  return UIUtils.Handled
 end
 
 return M

@@ -95,6 +95,39 @@ function M:CheckTabCondition(Condition)
   return true
 end
 
+function M:GetTargetRegionCanClaimExperienceTasks(RegionId, QuestChainType)
+  local Avatar = self:GetAvatar()
+  local RegionData = DataMgr.RegionReputation[RegionId]
+  if not (Avatar and RegionData) or not self:CheckTabCondition(RegionData.Condition) then
+    return {}
+  end
+  local Reputation = Avatar.RegionReputations[RegionId]
+  if not Reputation then
+    return {}
+  end
+  local ReputationLevels = DataMgr.ReputationLevel[RegionId]
+  local MaxLevelData = ReputationLevels and ReputationLevels[#ReputationLevels]
+  if MaxLevelData and Reputation.ReputationLevel >= MaxLevelData.ReputationLevel then
+    return {}
+  end
+  local CanClaimTasks = {}
+  local QuestIds = DataMgr.ReputationId2ExperienceQuestId[RegionId] or {}
+  for _, QuestId in pairs(QuestIds) do
+    local ExperienceData = DataMgr.ReputationExperience[QuestId]
+    local QuestChain = Avatar.QuestChains[QuestId]
+    local QuestChainData = DataMgr.QuestChain[QuestId]
+    local bMatchQuestChainType = nil == QuestChainType or QuestChainData and tostring(QuestChainData.QuestChainType) == tostring(QuestChainType)
+    if ExperienceData and QuestChain and QuestChain:IsFinish() and bMatchQuestChainType and not Reputation.ExperienceQuestRewardRecord[QuestId] then
+      table.insert(CanClaimTasks, QuestId)
+    end
+  end
+  return CanClaimTasks
+end
+
+function M:HasTargetRegionCanClaimExperienceTask(RegionId, QuestChainType)
+  return #self:GetTargetRegionCanClaimExperienceTasks(RegionId, QuestChainType) > 0
+end
+
 function M:GetEntrustTaskRefreshTime(RegionId)
   local Avatar = self:GetAvatar()
   if not Avatar then
@@ -166,7 +199,9 @@ function M:GetEntrustTasks(RegionId)
       TaskContent = TabData.EntrustContent,
       TaskReward = TaskReward,
       TaskSubmissions = TaskSubmissions,
-      NPCName = TabData.NPCName
+      NPCName = TabData.NPCName,
+      ItemType = TabData.ItemType,
+      ItemId = TabData.ItemId
     }
     table.insert(AllEntrustTask, TaskInfo)
   end
@@ -532,6 +567,20 @@ function M:GetTaskDesProgress(RegionId, TaskId)
   end
   local CurrentProgress = self:GetTargetRecurringTaskProgress(RegionId, TaskId)
   return string.format("%d/%d", CurrentProgress, TargetCount)
+end
+
+function M:GetRecurringTaskPointInfo(TaskId)
+  local RegionFameMapUtils = require("BluePrints.UI.WBP.Fame.RegionFameMapUtils")
+  local Result = {bHasPoint = false}
+  TaskId = tonumber(TaskId)
+  if not TaskId then
+    return Result
+  end
+  local TaskData = DataMgr.RecurringTask[TaskId]
+  if not TaskData or not TaskData.TargetId then
+    return Result
+  end
+  return RegionFameMapUtils.ParseRecurringTaskPointInfo(TaskData)
 end
 
 function M:GetTargetLevelRewardState(RegionId, TargetLevel)

@@ -115,10 +115,8 @@ function M:OnConfirmKeyDown()
 end
 
 function M:OnItemAddedToFocusPath(Widget)
-  DebugPrint("OnItemAddedToFocusPath", Widget)
   rawset(self, "FocusedWidget", Widget)
   if self.IsGamePadInput then
-    DebugPrint("ScrollWidgetIntoView", Widget)
     self.Owner.ScrollBox_Parameter:ScrollWidgetIntoView(Widget, false, 0)
   end
 end

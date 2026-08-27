@@ -91,21 +91,38 @@ function Component:GMGetAllChatChannelInfo(Callback)
   self:CallServer("GMGetAllChatChannelInfo", callback)
 end
 
-Component:LimitCall(CommonConst.CHAT_INTERVAL)
+Component:LimitCall(CommonConst.CHAT_INTERVAL, function(obj, channel_type, content, Complete)
+  if Complete then
+    Complete(false, ErrorCode.RET_CALL_TOO_FREQUENTLY)
+  end
+end)
 
-function Component:ChatToWorld(channel_type, content)
+function Component:ChatToWorld(channel_type, content, Complete)
+  local bCompleted = false
+  
+  local function CompleteOnce(bSuccess, RetCode)
+    if bCompleted or not Complete then
+      return
+    end
+    bCompleted = true
+    Complete(bSuccess, RetCode)
+  end
+  
   self.logger.debug("Sending content to channel: " .. channel_type .. " content: " .. content)
   local ret = self:CheckChatToWorld(channel_type, content)
   if not ChatController:CheckError(ret, true) then
+    CompleteOnce(false, ret)
     return
   end
   
   local function callback(Ret)
     if not ChatController:CheckError(Ret, true) then
       self.logger.debug("ChatToWorld: ErrorCode: " .. Ret)
+      CompleteOnce(false, Ret)
       return
     end
     ChatController:RecvChatToWorld(channel_type, content)
+    CompleteOnce(true, Ret)
   end
   
   self:CallServer("ChatToWorld", callback, channel_type, content)

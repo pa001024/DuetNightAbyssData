@@ -641,6 +641,7 @@ function M:OnMyselfButtonClicked()
   elseif self.Avatar and self.Avatar.Uid then
     self.PendingPreviewRankInfo = self.SelfItemData.RankInfo
     self:RequestRankTargetPreview(self.Avatar.Uid)
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_AppearanceScore_NoRanktoast"))
   end
 end
 

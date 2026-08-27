@@ -1,6 +1,7 @@
 require("UnLua")
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
 local AppearanceShareModel = require("BluePrints.UI.WBP.Appearance.AppearanceShareModel")
+local SerializeUtils = require("Utils.SerializeUtils")
 local M = {}
 local DefaultPlanNamePrefix = "UI_Squad_Appearance_TITLE"
 local MsgSelectPlanFirst = "请选择导入方案"
@@ -147,6 +148,9 @@ local function HasExplicitEmptyPartMeshSlot(AppearanceInfo, SkinId)
   end
   local AccessorySuit = AppearanceInfo and (AppearanceInfo.AccessorySuit or AppearanceInfo.Accessory) or nil
   local AccessoryId = AccessorySuit and AccessorySuit[AccessoryTypeIndex] or nil
+  if nil == AccessoryId and AccessorySuit then
+    AccessoryId = AccessorySuit[tostring(AccessoryTypeIndex)]
+  end
   return nil ~= AccessoryId and SafeNumber(AccessoryId, 0) == EmptyAccessoryId
 end
 
@@ -887,6 +891,7 @@ function M:ClearImportSequenceState()
     EventManager:RemoveEvent(EventID.OnCharAccessoryRemoved, self)
     EventManager:RemoveEvent(EventID.OnCharSkinChanged, self)
     EventManager:RemoveEvent(EventID.OnCharHairChanged, self)
+    EventManager:RemoveEvent(EventID.OnCharShowPartMesh, self)
   end
   self.bImportSequenceListening = false
   self.ImportSequenceState = nil
@@ -906,6 +911,7 @@ function M:BeginImportSequence(CharUuid, AppearanceIndex, Operations, OnFinished
   EventManager:AddEvent(EventID.OnCharAccessoryRemoved, self, self.OnImportAccessoryRemovedFinished)
   EventManager:AddEvent(EventID.OnCharSkinChanged, self, self.OnImportSkinChangedFinished)
   EventManager:AddEvent(EventID.OnCharHairChanged, self, self.OnImportHairChangedFinished)
+  EventManager:AddEvent(EventID.OnCharShowPartMesh, self, self.OnImportPartMeshShowFinished)
   self.bImportSequenceListening = true
 end
 
@@ -1007,6 +1013,29 @@ function M:OnImportHairChangedFinished(Ret, CharUuid, AppearanceIndex)
   self:HandleImportOperationFinished("Hair", Ret, CharUuid, AppearanceIndex)
 end
 
+function M:OnImportPartMeshShowFinished(Ret, CharUuid, SkinId, IsShowPartMesh, AppearanceIndex)
+  local State = self.ImportSequenceState
+  if not State then
+    return
+  end
+  if CharUuid ~= State.CharUuid or SafeNumber(AppearanceIndex, 0) ~= State.AppearanceIndex then
+    return
+  end
+  local Operation = State.CurrentOperation
+  if not Operation or Operation.Kind ~= "PartMeshShow" then
+    return
+  end
+  if SafeNumber(SkinId, 0) ~= SafeNumber(Operation.SkinId, 0) or Operation.IsShowPartMesh == true ~= (true == IsShowPartMesh) then
+    return
+  end
+  if not ErrorCode:Check(Ret) then
+    self:FinishImportSequence(false)
+    return
+  end
+  State.CurrentOperation = nil
+  self:RunNextImportOperation()
+end
+
 function M:CanApplyImport()
   return self:CanStartImport() and self.CanImportPlan == true
 end
@@ -1039,6 +1068,12 @@ function M:ApplyImport(OnFinished)
   local CurrentHairId = SafeNumber(CurrentSuit and CurrentSuit.HairId, 0)
   local CurrentAccessory = CurrentSuit and CurrentSuit.Accessory or {}
   local CurrentAccessoryCustomParams = CurrentSuit and CurrentSuit.AccessoryCustomParams or {}
+  local _, PartMeshAccessoryType = GetPartMeshAccessoryInfoBySkinId(SkinId)
+  local PartMeshAccessoryTypeIndex = PartMeshAccessoryType and CommonConst.NewCharAccessoryTypes and CommonConst.NewCharAccessoryTypes[PartMeshAccessoryType] or nil
+  local CurrentPartMeshAccessoryId = PartMeshAccessoryTypeIndex and SafeNumber(CurrentAccessory[PartMeshAccessoryTypeIndex], 0) or 0
+  local CurrentHasExplicitHiddenPartMesh = nil ~= PartMeshAccessoryTypeIndex and CurrentPartMeshAccessoryId == EmptyAccessoryId
+  local TargetHasExplicitHiddenPartMesh = nil ~= PartMeshAccessoryTypeIndex and HasExplicitEmptyPartMeshSlot(AppearanceInfo, SkinId)
+  local NeedSyncPartMeshShow = nil ~= PartMeshAccessoryTypeIndex and CurrentHasExplicitHiddenPartMesh ~= TargetHasExplicitHiddenPartMesh
   local Operations = {}
   if SkinId > 0 and SkinId ~= CurrentSkinId then
     table.insert(Operations, {
@@ -1053,6 +1088,16 @@ function M:ApplyImport(OnFinished)
       Kind = "Hair",
       Invoke = function()
         Avatar:ChangeCharAppearanceHair(CharUuid, AppearanceIndex, HairId)
+      end
+    })
+  end
+  if NeedSyncPartMeshShow then
+    table.insert(Operations, {
+      Kind = "PartMeshShow",
+      SkinId = SkinId,
+      IsShowPartMesh = not TargetHasExplicitHiddenPartMesh,
+      Invoke = function()
+        Avatar:SetCharSkinShowPart(CharUuid, SkinId, not TargetHasExplicitHiddenPartMesh, AppearanceIndex)
       end
     })
   end

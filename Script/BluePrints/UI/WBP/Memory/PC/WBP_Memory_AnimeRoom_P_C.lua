@@ -20,7 +20,9 @@ end
 
 function M:OnInAnimationFinished()
   M.Super.OnInAnimationFinished(self)
-  self:SetFocus()
+  if self:ShouldFocus() then
+    self:SetFocus()
+  end
   if self.UsingGamepad then
     self:SetFocusTarget()
   end

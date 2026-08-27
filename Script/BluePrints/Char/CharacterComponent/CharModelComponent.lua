@@ -36,12 +36,10 @@ function Component:GetNPCServerSkinIdByUnitId(NpcId, ConmmonSkinId)
     end
     local CommonChar = Avatar.CommonChars[CharId]
     if nil == CommonChar then
-      Utils.ScreenPrint("时装信息错误, CommonChars为空，CharId:" .. tostring(CharId))
       return 0
     end
     local Skin = CommonChar.OwnedSkins[SkinId]
     if nil == Skin then
-      Utils.ScreenPrint("时装信息错误, OwnedSkins，SkinId::" .. tostring(SkinId))
       return 0
     end
     local SkinInfo = DataMgr.Skin[SkinId]

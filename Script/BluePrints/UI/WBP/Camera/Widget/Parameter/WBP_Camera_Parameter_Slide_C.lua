@@ -74,6 +74,9 @@ function M:UpdateValue()
   if type(self.Content.Suffix) == "string" then
     self.Text_Num:SetText(string.format("%d%s", Value, self.Content.Suffix))
   else
+    if self.Content.DividedBy then
+      Value = Value / self.Content.DividedBy
+    end
     self.Text_Num:SetText(Value)
   end
 end

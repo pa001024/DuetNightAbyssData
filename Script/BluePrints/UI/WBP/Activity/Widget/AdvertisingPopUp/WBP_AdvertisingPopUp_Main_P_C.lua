@@ -265,7 +265,7 @@ function M:RefreshText(PopInfo)
       DebugPrint("Failed to create TitleWidget for PopId: " .. tostring(PopId))
       return
     end
-    if TitleWidget and TitleWidget.Condition then
+    if TitleWidget and nil ~= TitleWidget.Condition then
       TitleWidget.Condition = false
       TitleWidget:SetTitleSingle()
     end
@@ -275,9 +275,9 @@ function M:RefreshText(PopInfo)
     if TitleWidget.Text_MainTitle then
       TitleWidget.Text_MainTitle:SetText(GText(PopInfo.PopTitle))
     end
-    if 5 == PopId and TitleWidget.Text_Subtitle then
+    if PopInfo.PopSubTitle and TitleWidget.Text_Subtitle then
       TitleWidget.Text_Subtitle:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-      TitleWidget.Text_Subtitle:SetText(GText("UI_AsyncCombat_CombatRoom"))
+      TitleWidget.Text_Subtitle:SetText(GText(PopInfo.PopSubTitle))
     end
     self.Title:AddChildToOverlay(TitleWidget)
     self.CacheTitles[PopId] = TitleWidget

@@ -153,5 +153,25 @@ return ReadOnly("MonsterLevelDrop", {
     ProbabilityUp = T.RT_6,
     RewardId = T.RT_8,
     StartTime = LocalTimeProxy(1787018400)
+  },
+  [14] = {
+    BaseProbability = T.RT_5,
+    EndTime = LocalTimeProxy(2524622400),
+    MonsterLevel = T.RT_2,
+    MonsterLevelDropId = 14,
+    MonsterLevelDropView = 15004,
+    ProbabilityUp = T.RT_6,
+    RewardId = {
+      [1] = 313001,
+      [2] = 313001,
+      [3] = 313001,
+      [4] = 313001,
+      [5] = 313001,
+      [6] = 313001,
+      [7] = 313001,
+      [8] = 313001,
+      [9] = 313001
+    },
+    StartTime = LocalTimeProxy(1790647200)
   }
 })

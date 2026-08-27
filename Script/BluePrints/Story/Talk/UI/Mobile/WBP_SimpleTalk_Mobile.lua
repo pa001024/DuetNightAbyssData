@@ -1,26 +1,26 @@
 require("UnLua")
 local ImpressionItemUIPath = "/Game/UI/WBP/Impression/Mobile/WBP_Impression_Item_M.WBP_Impression_Item_M"
-local WBP_Impression_Mobile = Class("BluePrints.Story.Talk.UI.Common.WBP_SimpleTalk_Common")
+local WBP_SimpleTalk_Mobile = Class("BluePrints.Story.Talk.UI.Common.WBP_SimpleTalk_Common")
 
-function WBP_Impression_Mobile:GetImpressionItemUIPath()
+function WBP_SimpleTalk_Mobile:GetImpressionItemUIPath()
   return ImpressionItemUIPath
 end
 
-function WBP_Impression_Mobile:InitPlayKey()
+function WBP_SimpleTalk_Mobile:InitPlayKey()
   self.bAutoPlay = GWorld.GameInstance.bGlobalAutoPlay
   self.Story_PlayBtn:InitPlayKey()
 end
 
-function WBP_Impression_Mobile:ChangeAutoPlay()
+function WBP_SimpleTalk_Mobile:ChangeAutoPlay()
   self.Story_PlayBtn.bAutoPlay = not self.Story_PlayBtn.bAutoPlay
   self:SwitchAutoPlay()
 end
 
-function WBP_Impression_Mobile:ChangeAutoPlayUI()
+function WBP_SimpleTalk_Mobile:ChangeAutoPlayUI()
   self.Story_PlayBtn:ChangeAutoPlayUI()
 end
 
-function WBP_Impression_Mobile:AdaptPlatform()
+function WBP_SimpleTalk_Mobile:AdaptPlatform()
   if self.KeyNode then
     self.KeyNode:SetVisibility(ESlateVisibility.Collapsed)
   end
@@ -32,27 +32,27 @@ function WBP_Impression_Mobile:AdaptPlatform()
   end
 end
 
-function WBP_Impression_Mobile:OnExitButtonSelectedPlatform(bIsSelect)
+function WBP_SimpleTalk_Mobile:OnExitButtonSelectedPlatform(bIsSelect)
 end
 
-function WBP_Impression_Mobile:OnExitButtonReleasedByPlatform()
+function WBP_SimpleTalk_Mobile:OnExitButtonReleasedByPlatform()
   self:PlayAnimation(self.BtnQuit_Normal)
 end
 
-function WBP_Impression_Mobile:PlayExitButtonHoveredPerformanceByPlatform()
+function WBP_SimpleTalk_Mobile:PlayExitButtonHoveredPerformanceByPlatform()
 end
 
-function WBP_Impression_Mobile:PlayExitButtonUnhoveredPerformanceByPlatform()
+function WBP_SimpleTalk_Mobile:PlayExitButtonUnhoveredPerformanceByPlatform()
 end
 
-function WBP_Impression_Mobile:InitAutoPlay()
+function WBP_SimpleTalk_Mobile:InitAutoPlay()
   self:ChangeAutoPlayUI()
 end
 
-function WBP_Impression_Mobile:ChangeImgMouseVisibility(OptionData)
+function WBP_SimpleTalk_Mobile:ChangeImgMouseVisibility(OptionData)
   if self.Img_Mouse then
     self.Img_Mouse:SetVisibility(ESlateVisibility.Collapsed)
   end
 end
 
-return WBP_Impression_Mobile
+return WBP_SimpleTalk_Mobile

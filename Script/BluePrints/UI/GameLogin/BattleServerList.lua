@@ -71,6 +71,12 @@ return {
     ip = "10.112.0.32",
     port = 8000
   },
+  [303] = {
+    area = "China",
+    hostnum = 303,
+    ip = "10.18.8.197",
+    port = 8000
+  },
   [306] = {
     area = "China",
     hostnum = 306,
@@ -86,8 +92,14 @@ return {
   [308] = {
     area = "China",
     hostnum = 308,
-    ip = "10.18.8.111",
+    ip = "10.18.200.76",
     port = 8000
+  },
+  [309] = {
+    area = "China",
+    hostnum = 309,
+    ip = "10.18.200.55",
+    port = 28000
   },
   [311] = {
     area = "China",
@@ -99,6 +111,18 @@ return {
     area = "China",
     hostnum = 312,
     ip = "10.18.8.245",
+    port = 8000
+  },
+  [313] = {
+    area = "China",
+    hostnum = 313,
+    ip = "10.18.200.6",
+    port = 18000
+  },
+  [314] = {
+    area = "China",
+    hostnum = 314,
+    ip = "10.18.200.79",
     port = 8000
   },
   [317] = {
@@ -118,6 +142,18 @@ return {
     hostnum = 319,
     ip = "10.18.200.104",
     port = 8000
+  },
+  [333] = {
+    area = "China",
+    hostnum = 333,
+    ip = "10.18.5.70",
+    port = 8000
+  },
+  [398] = {
+    area = "China",
+    hostnum = 398,
+    ip = "127.0.0.1",
+    port = 18001
   },
   [399] = {
     area = "China",
@@ -155,34 +191,22 @@ return {
     ip = "10.1.0.2",
     port = 8000
   },
-  [1109] = {
-    area = "China",
-    hostnum = 1109,
-    ip = "10.18.200.171",
-    port = 8000
-  },
   [511] = {
-    area = "China",
-    hostnum = 511,
-    ip = "10.113.0.5",
-    port = 8000
-  },
-  [512] = {
-    area = "China",
+    area = "Asian",
     hostnum = 512,
     ip = "10.113.0.2",
     port = 8000
   },
   [513] = {
-    area = "China",
-    hostnum = 513,
-    ip = "10.113.0.4",
-    port = 8000
-  },
-  [514] = {
-    area = "China",
+    area = "SEA",
     hostnum = 514,
     ip = "10.113.0.1",
+    port = 8000
+  },
+  [1109] = {
+    area = "China",
+    hostnum = 1109,
+    ip = "10.18.200.171",
     port = 8000
   },
   [5001] = {
@@ -283,18 +307,6 @@ return {
     area = "Europe",
     hostnum = 40051,
     ip = "10.50.0.138",
-    port = 8000
-  },
-  [50001] = {
-    area = "HMT",
-    hostnum = 50051,
-    ip = "172.19.0.19",
-    port = 8000
-  },
-  [60001] = {
-    area = "SEA",
-    hostnum = 60051,
-    ip = "172.22.32.45",
     port = 8000
   },
   [70001] = {

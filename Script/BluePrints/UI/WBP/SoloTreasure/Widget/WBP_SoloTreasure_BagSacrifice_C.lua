@@ -1,3 +1,4 @@
+local MiscUtils = require("Utils.MiscUtils")
 require("UnLua")
 local InventoryController = require("BluePrints.UI.WBP.SoloTreasure.Widget.Inventory.InventoryController")
 local InventoryCommonConst = require("BluePrints.UI.WBP.SoloTreasure.Widget.Inventory.InventoryCommonConst")
@@ -225,7 +226,7 @@ function M:UpdateProgress()
   local TotalValue = ValueInfo.TotalValue
   local PrevValue = self.CurTotalValue or 0
   self.CurTotalValue = TotalValue
-  self.Num_Value:SetText(Utils.FormatNumber(TotalValue, false))
+  self.Num_Value:SetText(MiscUtils.FormatNumber(TotalValue, false))
   UIUtils.RollingNumberEffect(self, self.Num_Value, PrevValue, TotalValue - PrevValue, 0.5)
   self:AnimateProgressTo(self:CalcBarPercent(TotalValue))
   self:SetSacrificeBtnEnabled(TotalValue > 0)

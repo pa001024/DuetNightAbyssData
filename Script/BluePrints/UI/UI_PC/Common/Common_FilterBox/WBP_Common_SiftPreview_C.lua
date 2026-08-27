@@ -99,6 +99,7 @@ function M:Init(Owner, ItemUI, SelectedItems, ItemDatas)
 end
 
 function M:OnBtnClearClicked()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click", nil, nil)
   self:ClearItemSelection()
   self:PlayAnimation(self.Click)
 end

@@ -1,5 +1,93 @@
 [
   {
+    "id": 101401,
+    "name": "Flodia Bloomfield Station 百花車站",
+    "desc": "車站以群花的公主為名。",
+    "scoreId": 1014,
+    "rId": 3101401,
+    "music": "/bgm/1_4/musicbox/0161_scene_train_station"
+  },
+  {
+    "id": 101402,
+    "name": "Tea Time 茶歇時間",
+    "desc": "眾所周知，在茶歇時間，總會有些小小的意外發生。",
+    "scoreId": 1014,
+    "rId": 3101402,
+    "music": "/bgm/1_4/musicbox/0166_story_danger"
+  },
+  {
+    "id": 101403,
+    "name": "Graceful Steps 輕盈曳步",
+    "desc": "輕盈地踮起腳尖，滑步——悄悄潛入。",
+    "scoreId": 1014,
+    "rId": 3101403,
+    "music": "/bgm/1_4/musicbox/0162_story_jazz_sneak_into"
+  },
+  {
+    "id": 101404,
+    "name": "Hilda - A Maid's Virtue 希爾妲：女僕的美德",
+    "desc": "清理一切污穢之物，驅趕所有不速之客，正是一位女僕的美德。",
+    "scoreId": 1014,
+    "rId": 3101404,
+    "music": "/bgm/1_4/musicbox/0165_story_xier_theme"
+  },
+  {
+    "id": 101405,
+    "name": "Bloomfield Waltz 百花圓舞曲",
+    "desc": "金碧輝煌的穹頂下，趕赴一場與紅衫衛隊們的槍彈邀約。",
+    "scoreId": 1014,
+    "rId": 3101405,
+    "music": "/bgm/1_4/musicbox/0163_combat_jazz_01"
+  },
+  {
+    "id": 101406,
+    "name": "Explosion Art 爆炸藝術",
+    "desc": "將惡意與欺惑研磨成火藥，迎接一場盛大的爆炸。",
+    "scoreId": 1014,
+    "rId": 3101406,
+    "music": "/bgm/1_4/musicbox/0168_boss_haluoji"
+  },
+  {
+    "id": 101407,
+    "name": "Flora - In the Golden Cage 芙羅拉：黃金的囚徒",
+    "desc": "一隻黃金牢籠中的囚鳥，註定無法飛向廣闊的麥田。",
+    "scoreId": 1014,
+    "rId": 3101407,
+    "music": "/bgm/1_4/musicbox/0167_story_fuluo_theme"
+  },
+  {
+    "id": 101408,
+    "name": "The Crown 冠冕",
+    "desc": "指尖流淌的旋律是優雅、是體面，亦是沉重的冠冕。",
+    "scoreId": 1014,
+    "rId": 3101408,
+    "music": "/bgm/1_4/musicbox/0170_story_fuluo_play_piano"
+  },
+  {
+    "id": 101409,
+    "name": "The Reaper's Feast 死亡歡宴",
+    "desc": "來吧，爆炸吧，在死神的歡宴裡起舞吧！",
+    "scoreId": 1014,
+    "rId": 3101409,
+    "music": "/bgm/1_4/musicbox/0171_combat_lieche_loop"
+  },
+  {
+    "id": 101410,
+    "name": "Our Sacred Oath 永恆誓約",
+    "desc": "在命運的罅隙，立下生與死的誓言。",
+    "scoreId": 1014,
+    "rId": 3101410,
+    "music": "/bgm/1_4/musicbox/0172_story_counter_attack"
+  },
+  {
+    "id": 101411,
+    "name": "Rebirth 涉過霧海",
+    "desc": "渡過霧海，前往下一個新生的彼岸。",
+    "scoreId": 1014,
+    "rId": 3101411,
+    "music": "/bgm/1_4/musicbox/0173_story_main_theme_choir"
+  },
+  {
     "id": 1001001,
     "name": "Duet Night Abyss Main Theme 二重螺旋",
     "desc": "曆經暮色的浸洗，駛過無垠的黑夜，而後，一起去往明天。",

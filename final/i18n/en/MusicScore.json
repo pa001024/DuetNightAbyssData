@@ -65,8 +65,13 @@
     "icon": "T_Piano_Music13"
   },
   {
+    "id": 1014,
+    "name": "Aria for Blossoms and Steam Whistles",
+    "icon": "T_Piano_Music14"
+  },
+  {
     "id": 9001,
-    "name": "Commissions",
-    "icon": "T_Piano_LevelSelect_01"
+    "name": "MusicScoreName_9001",
+    "icon": "T_Piano_Music01"
   }
 ]

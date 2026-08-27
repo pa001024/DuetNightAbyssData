@@ -37,7 +37,11 @@ function M:Init(ConfigData)
   self.MaxValue = ConfigData.MaxValue or 999
   self.EnableMiniBtn = ConfigData.EnableMiniBtn or false
   self.EnableMaxBtn = ConfigData.EnableMaxBtn or false
-  self.ClickInterval = ConfigData.ClickInterval or 1
+  self.ClickInterval = math.abs(tonumber(ConfigData.ClickInterval) or 1)
+  if self.ClickInterval <= 0 then
+    self.ClickInterval = 1
+  end
+  self.CurrentCount = self:NormalizeCount(self.CurrentCount)
   rawset(self, "MiniBtnGamePadKey", self.EnableMiniBtn and (ConfigData.MiniBtnGamePadKey or "DPadLeft") or nil)
   rawset(self, "MaxBtnGamePadKey", self.EnableMaxBtn and (ConfigData.MaxBtnGamePadKey or "DPadRight") or nil)
   self.MinusBtnCallback = ConfigData.MinusBtnCallback
@@ -74,9 +78,11 @@ function M:RefreshBaseInfo()
   if IsValid(self.GameInputModeSubsystem) then
     self:RefreshOpInfoByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
   end
-  self.StepCount = 0 == self.MaxValue - self.MinValue and 1 or self.MaxValue - self.MinValue
-  self.Slider:SetStepSize(1 / self.StepCount)
-  self.Slider_Controller:SetStepSize(1 / self.StepCount)
+  self.StepCount = math.max(self.MaxValue - self.MinValue, 1)
+  local NormalizedStep = math.min(self.ClickInterval / self.StepCount, 1)
+  self.Slider:SetStepSize(NormalizedStep)
+  self.Slider_Controller:SetStepSize(NormalizedStep)
+  self.CurrentCount = self:NormalizeCount(self.CurrentCount)
   self:UpdateSliderAndProgress()
   if self.MaxValue - self.MinValue <= 0 then
     self.Slider:SetLocked(true)
@@ -135,6 +141,31 @@ function M:RefreshBaseInfo()
   if self.Text_Max then
     self.Text_Max:SetText(GText("UI_SHOP_MAX"))
   end
+end
+
+function M:NormalizeCount(Value)
+  Value = tonumber(Value) or self.MinValue
+  Value = math.max(self.MinValue, math.min(Value, self.MaxValue))
+  local Step = self.ClickInterval or 1
+  local StepIndex = math.floor((Value - self.MinValue) / Step + 0.5)
+  local Result = self.MinValue + StepIndex * Step
+  local LastStepValue = self.MinValue + math.floor((self.MaxValue - self.MinValue) / Step) * Step
+  if LastStepValue < self.MaxValue and Value >= (LastStepValue + self.MaxValue) * 0.5 then
+    Result = self.MaxValue
+  end
+  return math.max(self.MinValue, math.min(Result, self.MaxValue))
+end
+
+function M:GetCountAfterStepChange(ChangeCount)
+  local StepMultiple = math.max(1, math.floor(math.abs(ChangeCount) / self.ClickInterval + 0.5))
+  local LastStepValue = self.MinValue + math.floor((self.MaxValue - self.MinValue) / self.ClickInterval) * self.ClickInterval
+  if ChangeCount < 0 then
+    if self.CurrentCount == self.MaxValue and LastStepValue < self.MaxValue then
+      return self:NormalizeCount(LastStepValue - (StepMultiple - 1) * self.ClickInterval)
+    end
+    return self:NormalizeCount(self.CurrentCount - StepMultiple * self.ClickInterval)
+  end
+  return self:NormalizeCount(self.CurrentCount + StepMultiple * self.ClickInterval)
 end
 
 function M:InitWidgetInfoInGamePad(IsUseGamePad)
@@ -421,7 +452,7 @@ function M:OnClickToMinus()
     return
   end
   local OldNumberValue = self.CurrentCount
-  self.CurrentCount = self.CurrentCount - FinalCount
+  self.CurrentCount = self:GetCountAfterStepChange(-FinalCount)
   self:UpdateSliderAndProgress()
   if self.ForbidAdd then
     self:ForbidAddOperation(false, true)
@@ -454,7 +485,7 @@ function M:OnClickToAdd()
     return
   end
   local OldNumberValue = self.CurrentCount
-  self.CurrentCount = self.CurrentCount + FinalCount
+  self.CurrentCount = self:GetCountAfterStepChange(FinalCount)
   self:UpdateSliderAndProgress()
   if self.ForbidMin then
     self:ForbidMinOperation(false, true)
@@ -535,7 +566,7 @@ function M:TriggerKeyUpEvent()
 end
 
 function M:ForbidMinOperation(Forbidden, FromSliderValueChanged)
-  if not FromSliderValueChanged and not Forbidden and self.CurrentCount - self.ClickInterval < self.MinValue then
+  if not FromSliderValueChanged and not Forbidden and self:NormalizeCount(self.CurrentCount - self.ClickInterval) == self.CurrentCount then
     Forbidden = true
   end
   if self.ExternalOperationForbidden then
@@ -562,7 +593,7 @@ function M:ForbidMinOperation(Forbidden, FromSliderValueChanged)
 end
 
 function M:ForbidAddOperation(Forbidden, FromSliderValueChanged)
-  if not FromSliderValueChanged and not Forbidden and self.CurrentCount + self.ClickInterval > self.MaxValue then
+  if not FromSliderValueChanged and not Forbidden and self:NormalizeCount(self.CurrentCount + self.ClickInterval) == self.CurrentCount then
     Forbidden = true
   end
   if self.ExternalOperationForbidden then
@@ -627,9 +658,7 @@ end
 
 function M:OnSliderValueChanged(Value)
   local SlideValue = Value * self.StepCount + self.MinValue
-  SlideValue = math.floor(SlideValue + 0.5)
-  local NewCount = math.floor(math.max(self.MinValue, math.min(SlideValue, self.MaxValue)))
-  self:UpdateSliderValue()
+  local NewCount = self:NormalizeCount(SlideValue)
   if NewCount ~= self.CurrentCount then
     self.CurrentCount = NewCount
     self:ForbidAddOperation(self.CurrentCount >= self.MaxValue, true)
@@ -639,6 +668,8 @@ function M:OnSliderValueChanged(Value)
       local EventSoundPath = self.SoundResPath.Slider or "event:/ui/common/click"
       AudioManager(self):PlayUISound(self.WS_Slider, EventSoundPath, nil, nil)
     end
+  else
+    self:UpdateSliderAndProgress()
   end
 end
 
@@ -651,20 +682,14 @@ function M:OnUnSelectedSlider()
 end
 
 function M:ChangeSliderValueByInputNumber(Value, NoNeedCallback)
-  if Value < self.MinValue then
-    Value = self.MinValue
-  end
-  if Value > self.MaxValue then
-    Value = self.MaxValue
-  end
-  self.CurrentCount = Value
+  self.CurrentCount = self:NormalizeCount(Value)
   self:ForbidAddOperation(self.CurrentCount >= self.MaxValue, true)
   self:ForbidMinOperation(self.CurrentCount <= self.MinValue, true)
   self:UpdateSliderAndProgress(not NoNeedCallback)
 end
 
 function M:SetValue(Value)
-  self.CurrentCount = Value
+  self.CurrentCount = self:NormalizeCount(Value)
 end
 
 function M:SetMinValue(MinValue)
@@ -676,9 +701,9 @@ function M:SetMaxValue(MaxValue)
 end
 
 function M:OverrideValueLimit(InitValue, MaxValue, MinValue, bRefresh)
-  self.CurrentCount = InitValue or 1
   self.MaxValue = MaxValue or 999
   self.MinValue = MinValue or 1
+  self.CurrentCount = self:NormalizeCount(InitValue or 1)
   if bRefresh then
     self:RefreshBaseInfo()
   else
@@ -731,7 +756,7 @@ function M:UpdateSliderAndProgress(NeedCallback)
 end
 
 function M:RefreshCurInputNumber(NewNumber)
-  self.CurrentCount = NewNumber or 1
+  self.CurrentCount = self:NormalizeCount(NewNumber or 1)
   self:UpdateSliderAndProgress()
   self:RefreshBtnState()
 end

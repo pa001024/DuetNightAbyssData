@@ -1,4 +1,27 @@
 local StorylineUtils = require("StoryCreator.StoryLogic.StorylineUtils")
+local STLData = {}
+STLData.__index = STLData
+
+function STLData.New()
+  return setmetatable({}, STLData)
+end
+
+function STLData:SaveSuitUpdateData(FunctionName, SuitType, SuitSubType, SuitKey, ...)
+  local SuitValue = {
+    ...
+  }
+  if #SuitValue <= 1 then
+    SuitValue = table.unpack(SuitValue)
+  end
+  local SuitUpdateData = {
+    FunctionName = FunctionName,
+    SuitType = SuitType,
+    SuitSubType = SuitSubType,
+    Param = {SuitKey = SuitKey, SuitValue = SuitValue}
+  }
+  table.insert(self, SuitUpdateData)
+end
+
 local Questline = Class("StoryCreator.StoryLogic.StorylineNodes.Storyline.BaseStoryline")
 local STLogType = UE.EStoryLogType.STL
 
@@ -16,7 +39,7 @@ function Questline:Init(QuestlineData, Storyline, StoryNode)
   self.RunningNodeList = {}
   self.bLockRunningNodeList = false
   self.FinishedNodeList = {}
-  self.STLData = {}
+  self.STLData = STLData.New()
   self:BuildQuestline()
 end
 
@@ -51,10 +74,6 @@ StoryNodeKey:]] .. self.Data.key
   self:BuildAdjacencyMap(self.Data.questNodeData.lineData, "startQuest", "endQuest")
   self.HasStarted = false
   self.HasFinished = true
-end
-
-function Questline:GetStorySubsystem()
-  return UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UStorySubsystem:StaticClass())
 end
 
 function Questline:StartQuest(NodeId)
@@ -108,61 +127,11 @@ QuestNodeKey:]] .. NodeId
   self.RunningNodeList = {}
   self.HasStarted = true
   self.HasFinished = false
-  local StorySubsystem = self:GetStorySubsystem()
-  if self.QuestChainId > 0 and StorySubsystem then
-    StorySubsystem:CaptureGlobalQuestVarSnapshot(self.QuestChainId)
-  end
   self:HandleActivateSkill(self.QuestId, "Start")
   self:StartNode(self.StartedNode)
 end
 
-function Questline:HandleActivateSkill(QuestId, QuestLineState)
-  local QuestActiveSkillConfig = DataMgr.QuestActiveSkill[QuestId]
-  if not QuestActiveSkillConfig then
-    return
-  end
-  if QuestActiveSkillConfig.QuestStartorSuccess ~= QuestLineState then
-    return
-  end
-  local Controller = UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
-  local PlayerController = Controller:Cast(UE4.ASinglePlayerController)
-  local ActivateHandle = QuestActiveSkillConfig.InactiveorActive == "Active"
-  if QuestActiveSkillConfig.ActiveType == "Lock" then
-    local SkillNamesArray = TArray(0)
-    for _, SkillType in pairs(QuestActiveSkillConfig.SkillId) do
-      if PlayerController:CheckSkillInActive(ESkillName[SkillType]) then
-        if ActivateHandle then
-          SkillNamesArray:Add(ESkillName[SkillType])
-        end
-      elseif not ActivateHandle then
-        SkillNamesArray:Add(ESkillName[SkillType])
-      end
-    end
-    if ActivateHandle then
-      PlayerController:ActiveSkills(SkillNamesArray, "UnLock")
-    else
-      PlayerController:InActiveSkills(SkillNamesArray, "Lock")
-    end
-  else
-    local SkillNamesArray = TArray(0)
-    for _, SkillType in pairs(QuestActiveSkillConfig.SkillId) do
-      if PlayerController:CheckSkillInActive(ESkillName[SkillType]) then
-        if ActivateHandle then
-          SkillNamesArray:Add(ESkillName[SkillType])
-        end
-      elseif not ActivateHandle then
-        SkillNamesArray:Add(ESkillName[SkillType])
-      end
-    end
-    if ActivateHandle then
-      PlayerController:UnEmptySkills(SkillNamesArray)
-    else
-      PlayerController:EmptySkills(SkillNamesArray)
-    end
-  end
-end
-
-function Questline:StartNode(NextNode, InportInfo)
+function Questline:StartNode(NextNode, InPortInfo)
   if self.Storyline.HasFinished then
     local Message = string.format([[
 FileName: %s
@@ -187,7 +156,7 @@ NodeInfo: %s]], self.FileName, NextNode:ToString())
   if NextNode.HasStopped then
     return
   end
-  if "Stop" == InportInfo then
+  if "Stop" == InPortInfo then
     NextNode.HasStopped = true
     DebugPrint("----------------------------------------------------------StopNode ", NextNode:ToString())
     NextNode:Stop()
@@ -197,7 +166,7 @@ NodeInfo: %s]], self.FileName, NextNode:ToString())
     self.RunningNodeList[NextNode.Key] = NextNode
     DebugPrint("----------------------------------------------------------StartNode ", NextNode:ToString())
     self:TryAddAfterSpecialQuestFailMark(NextNode)
-    NextNode:Start(self, InportInfo)
+    NextNode:Start(self, InPortInfo)
   end
 end
 
@@ -288,27 +257,41 @@ StoryNodeKey:]] .. self.Data.key
     UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, STLogType, "任务已结束", Message)
     return
   end
-  self:ClearQuest()
   self.HasFinished = true
   self.HasStarted = false
+  self:ClearQuest(bSucceeded)
   self:ClearNodeWhenQuestFinish(bSucceeded)
+  if bSucceeded then
+    self:SaveBGMDataOnSuccess()
+  end
   local StorySubsystem = self:GetStorySubsystem()
-  if self.QuestChainId > 0 and StorySubsystem then
+  if StorySubsystem then
     if bSucceeded then
-      if self.QuestData and self.QuestData.bIsEndQuest then
-        StorySubsystem:ClearGlobalQuestVarsByQuestChainId(self.QuestChainId)
-      else
-        StorySubsystem:FlushGlobalQuestVarsToServer(self.QuestChainId)
+      if self.QuestData and not self.QuestData.bIsEndQuest then
+        StorySubsystem:FlushGlobalVariables(self.QuestChainId)
       end
     else
-      StorySubsystem:RestoreGlobalQuestVarSnapshot(self.QuestChainId)
+      StorySubsystem:RestoreQuestChainVariables(self.QuestChainId)
     end
   end
   DebugPrint("Questline Finish", self.QuestId)
   self.StoryNode:FinishQuest(OutPortName, bSucceeded)
 end
 
-function Questline:ClearQuest()
+function Questline:StopQuest(IgnoreFinishClear)
+  self.HasFinished = true
+  self.HasStarted = false
+  self:ClearQuest()
+  local StorySubsystem = self:GetStorySubsystem()
+  if StorySubsystem then
+    StorySubsystem:RestoreQuestChainVariables(self.QuestChainId)
+  end
+  if not IgnoreFinishClear then
+    self:ClearNodeWhenQuestFinish(false)
+  end
+end
+
+function Questline:ClearQuest(bClearQuestChainVars)
   self.bLockRunningNodeList = true
   local RunningNodes = {}
   for _, Node in pairs(self.RunningNodeList) do
@@ -325,7 +308,7 @@ function Questline:ClearQuest()
   end
   self.bLockRunningNodeList = false
   self.RunningNodeList = {}
-  if self.QuestChainId > 0 and self.QuestId > 0 then
+  if bClearQuestChainVars and self.QuestChainId > 0 and self.QuestId > 0 then
     local StorySubsystem = self:GetStorySubsystem()
     if StorySubsystem then
       StorySubsystem:ClearVarByQuestChainId(self.QuestChainId)
@@ -350,6 +333,20 @@ function Questline:ClearNodeWhenQuestFinish(IsSuccess)
   end
 end
 
+function Questline:SuccessQuest()
+  self:ClearQuest()
+  self._SuccessNode:Start(self)
+end
+
+function Questline:FailQuest()
+  self:ClearQuest()
+  self._FailNode:Start(self)
+end
+
+function Questline:StopStory()
+  self.StoryNode:StopStory()
+end
+
 function Questline:OnStop()
   for i = #self.FinishedNodeList, 1, -1 do
     local Node = self.FinishedNodeList[i]
@@ -368,65 +365,6 @@ function Questline:OnFinish()
     end
   end
   self.FinishedNodeList = {}
-end
-
-function Questline:StopQuest(IgnoreFinishClear)
-  self.HasFinished = true
-  self.HasStarted = false
-  self:ClearQuest()
-  if not IgnoreFinishClear then
-    self:ClearNodeWhenQuestFinish(false)
-    self:QuestlineEnd("Stop")
-  end
-end
-
-function Questline:SuccessQuest()
-  self:ClearQuest()
-  self._SuccessNode:Start(self)
-end
-
-function Questline:FailQuest()
-  self:ClearQuest()
-  self._FailNode:Start(self)
-end
-
-function Questline:PrintInfo()
-  DebugPrint("---------------------------QuestInfo---------------------------")
-  DebugPrint("QuestId: ", self.QuestId)
-  DebugPrint("任务描述: ", self.QuestDescriptionComment)
-  for _, Node in pairs(self.RunningNodeList) do
-    DebugPrint("---------------------------NodeInfo---------------------------")
-    DebugPrint(Node:ToString())
-    DebugPrint("---------------------------NodeInfo---------------------------")
-  end
-  DebugPrint("---------------------------QuestInfo---------------------------")
-end
-
-function Questline:SaveSuitUpdateData(FunctionName, SuitType, SuitSubType, SuitKey, ...)
-  if not self.STLData then
-    self.STLData = {}
-  end
-  local SuitValue = {
-    ...
-  }
-  if #SuitValue <= 1 then
-    SuitValue = table.unpack(SuitValue)
-  end
-  local SuitUpdateData = {
-    FunctionName = FunctionName,
-    SuitType = SuitType,
-    SuitSubType = SuitSubType,
-    Param = {SuitKey = SuitKey, SuitValue = SuitValue}
-  }
-  table.insert(self.STLData, SuitUpdateData)
-end
-
-function Questline:StopStory()
-  self.StoryNode:StopStory()
-end
-
-function Questline:GetAllLineData()
-  return self.Data.questNodeData.lineData
 end
 
 function Questline:GetPayload(...)
@@ -462,21 +400,12 @@ NodeInfo:]] .. Node:ToString()
   end
 end
 
-function Questline:QuestlineEnd(Reason)
-  if "Stop" == Reason then
-    local Avatar = GWorld:GetAvatar()
-    local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
-    if self.QuestChainId > 0 and self.QuestId > 0 and Avatar and GameMode then
-      local TaskInfo = {
-        TaskChainId = self.QuestChainId,
-        TaskId = self.QuestId,
-        IsChainLastTask = self.QuestData.bIsEndQuest,
-        IsChapterEnd = self.QuestData.bIsEndChapter
-      }
-      Avatar:DoRefreshTaskItemUIInfo("Add", TaskInfo)
-      GameMode:RecoverDataByQuestChainId(self.QuestChainId, self.QuestId)
-    end
-  end
+function Questline:GetStorySubsystem()
+  return UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UStorySubsystem:StaticClass())
+end
+
+function Questline:GetAllLineData()
+  return self.Data.questNodeData.lineData
 end
 
 function Questline:IsGuideNodeRunning()
@@ -489,6 +418,198 @@ function Questline:IsGuideNodeRunning()
     end
   end
   return false
+end
+
+function Questline:SaveSuitUpdateData(...)
+  self.STLData:SaveSuitUpdateData(...)
+end
+
+function Questline:GetSTLData()
+  return self.STLData
+end
+
+function Questline:GetConfirmFullfill()
+  return self.ConfirmFullfill
+end
+
+function Questline:SaveBGMDataOnSuccess()
+  if not (self.QuestChainId > 0) or not (self.QuestId > 0) then
+    return
+  end
+  local Avatar = GWorld:GetAvatar()
+  local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
+  if not Avatar or not GameMode then
+    return
+  end
+  local TaskUtils = require("BluePrints.UI.TaskPanel.TaskUtils")
+  if TaskUtils:CheckSpecialTaskDoing() then
+    return
+  end
+  self:SaveSTLBGM()
+  self:SaveStoryCustomBGM()
+  self:SaveAuCondition()
+end
+
+function Questline:SaveSTLBGM()
+  local EventName, Key, Value
+  local NeedStore = false
+  local RelatedRegionId = 0
+  local QuestChainId = 0
+  EventName, Key, Value, RelatedRegionId, QuestChainId, NeedStore = AudioManager(GWorld.GameInstance):GetCurPlaySTLBGM(0)
+  RelatedRegionId = RelatedRegionId:ToTable()
+  if true == NeedStore then
+    DebugPrint("STLBGM BGM Store", EventName, Key, Value)
+    PrintTable(RelatedRegionId)
+    self.STLData:SaveSuitUpdateData("UpdateSuitKey2Value", CommonConst.SuitType.PlayerCharacterSuit, CommonConst.PlayerCharacterSuit.BGM, 0, EventName, Key, Value, RelatedRegionId, QuestChainId)
+  else
+    DebugPrint("STLBGM BGM Clear")
+    self.STLData:SaveSuitUpdateData("UpdateSuitKey2Value", CommonConst.SuitType.PlayerCharacterSuit, CommonConst.PlayerCharacterSuit.BGM, 0, nil)
+  end
+  EventName = nil
+  Key = nil
+  Value = nil
+  NeedStore = false
+  EventName, Key, Value, RelatedRegionId, QuestChainId, NeedStore = AudioManager(GWorld.GameInstance):GetCurPlaySTLBGM(1)
+  RelatedRegionId = RelatedRegionId:ToTable()
+  if true == NeedStore then
+    DebugPrint("STLBGM Noise Store", EventName, Key, Value, RelatedRegionId, QuestChainId)
+    self.STLData:SaveSuitUpdateData("UpdateSuitKey2Value", CommonConst.SuitType.PlayerCharacterSuit, CommonConst.PlayerCharacterSuit.BGM, 1, EventName, Key, Value, RelatedRegionId, QuestChainId)
+  else
+    DebugPrint("STLBGM Noise Clear")
+    self.STLData:SaveSuitUpdateData("UpdateSuitKey2Value", CommonConst.SuitType.PlayerCharacterSuit, CommonConst.PlayerCharacterSuit.BGM, 1, nil)
+  end
+  EventName = nil
+  Key = nil
+  Value = nil
+  NeedStore = false
+  EventName, Key, Value, RelatedRegionId, QuestChainId, NeedStore = AudioManager(GWorld.GameInstance):GetCurPlaySTLBGM(2)
+  RelatedRegionId = RelatedRegionId:ToTable()
+  if true == NeedStore then
+    DebugPrint("STLBGM SnapShot Store", EventName, Key, Value, RelatedRegionId, QuestChainId)
+    self.STLData:SaveSuitUpdateData("UpdateSuitKey2Value", CommonConst.SuitType.PlayerCharacterSuit, CommonConst.PlayerCharacterSuit.BGM, 2, EventName, Key, Value, RelatedRegionId, QuestChainId)
+  else
+    DebugPrint("STLBGM SnapShot Clear")
+    self.STLData:SaveSuitUpdateData("UpdateSuitKey2Value", CommonConst.SuitType.PlayerCharacterSuit, CommonConst.PlayerCharacterSuit.BGM, 2, nil)
+  end
+end
+
+function Questline:SaveStoryCustomBGM()
+  local AudioMgr = AudioManager(GWorld.GameInstance)
+  if not AudioMgr then
+    return
+  end
+  for _, SoundType in pairs(CommonConst.BGMSoundType) do
+    local StoredCustomBGMs = AudioMgr:GetStoredCustomBGMs(SoundType)
+    local StoredCustomBGMTable = StoredCustomBGMs and StoredCustomBGMs:ToTable() or {}
+    local CustomBGMValues = {}
+    for _, SoundInfo in ipairs(StoredCustomBGMTable) do
+      local BgmParam = ""
+      local BgmParamValue = 0
+      if SoundInfo.EventKeyValue then
+        local EventKeyValueTable = SoundInfo.EventKeyValue:ToTable() or {}
+        for Param, ParamValue in pairs(EventKeyValueTable) do
+          BgmParam = Param
+          BgmParamValue = ParamValue
+          break
+        end
+      end
+      local RelatedRegionId = {}
+      if SoundInfo.RelatedRegionId then
+        RelatedRegionId = SoundInfo.RelatedRegionId:ToTable() or {}
+      end
+      table.insert(CustomBGMValues, {
+        BgmPath = SoundInfo.EventName,
+        BgmParam = BgmParam,
+        BgmParamValue = BgmParamValue,
+        BgmSubRegionId = RelatedRegionId,
+        SoundUnitKey = SoundInfo.Key,
+        QuestChainId = SoundInfo.QuestChainId
+      })
+    end
+    if next(CustomBGMValues) then
+      DebugPrint("CustomBGM Store", SoundType)
+      PrintTable(CustomBGMValues, 10, "CustomBGM Store")
+      self.STLData:SaveSuitUpdateData("UpdateSuitKey2Table", CommonConst.SuitType.QuestSuit, CommonConst.QuestSuit.CustomBGM, SoundType, CustomBGMValues)
+    else
+      DebugPrint("CustomBGM Clear", SoundType)
+      self.STLData:SaveSuitUpdateData("UpdateSuitKey2Table", CommonConst.SuitType.QuestSuit, CommonConst.QuestSuit.CustomBGM, SoundType, nil)
+    end
+  end
+end
+
+function Questline:SaveAuCondition()
+  local NeedStore = false
+  local SavedAuCondition
+  SavedAuCondition, NeedStore = AudioManager(GWorld.GameInstance):SaveAuCondition()
+  if true == NeedStore then
+    SavedAuCondition = SavedAuCondition:ToTable()
+    DebugPrint("Store AuCondition")
+    self.STLData:SaveSuitUpdateData("UpdateSuitKey2Table", CommonConst.SuitType.PlayerCharacterSuit, CommonConst.PlayerCharacterSuit.BGMParams, "BGMParams", SavedAuCondition)
+  else
+    self.STLData:SaveSuitUpdateData("UpdateSuitKey2Table", CommonConst.SuitType.PlayerCharacterSuit, CommonConst.PlayerCharacterSuit.BGMParams, "BGMParams", nil)
+  end
+end
+
+function Questline:HandleActivateSkill(QuestId, QuestLineState)
+  local QuestActiveSkillConfig = DataMgr.QuestActiveSkill[QuestId]
+  if not QuestActiveSkillConfig then
+    return
+  end
+  if QuestActiveSkillConfig.QuestStartorSuccess ~= QuestLineState then
+    return
+  end
+  local Controller = UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
+  local PlayerController = Controller:Cast(UE4.ASinglePlayerController)
+  local ActivateHandle = QuestActiveSkillConfig.InactiveorActive == "Active"
+  if QuestActiveSkillConfig.ActiveType == "Lock" then
+    local SkillNamesArray = TArray(0)
+    for _, SkillType in pairs(QuestActiveSkillConfig.SkillId) do
+      if PlayerController:CheckSkillInActive(ESkillName[SkillType]) then
+        if ActivateHandle then
+          SkillNamesArray:Add(ESkillName[SkillType])
+        end
+      elseif not ActivateHandle then
+        SkillNamesArray:Add(ESkillName[SkillType])
+      end
+    end
+    if ActivateHandle then
+      PlayerController:ActiveSkills(SkillNamesArray, "UnLock")
+    else
+      PlayerController:InActiveSkills(SkillNamesArray, "Lock")
+    end
+  else
+    local SkillNamesArray = TArray(0)
+    for _, SkillType in pairs(QuestActiveSkillConfig.SkillId) do
+      if PlayerController:CheckSkillInActive(ESkillName[SkillType]) then
+        if ActivateHandle then
+          SkillNamesArray:Add(ESkillName[SkillType])
+        end
+      elseif not ActivateHandle then
+        SkillNamesArray:Add(ESkillName[SkillType])
+      end
+    end
+    if ActivateHandle then
+      PlayerController:UnEmptySkills(SkillNamesArray)
+    else
+      PlayerController:EmptySkills(SkillNamesArray)
+    end
+  end
+end
+
+function Questline:PrintInfo()
+  DebugPrint("---------------------------QuestInfo---------------------------")
+  DebugPrint("QuestId: ", self.QuestId)
+  DebugPrint("任务描述: ", self.QuestDescriptionComment)
+  for _, Node in pairs(self.RunningNodeList) do
+    DebugPrint("---------------------------NodeInfo---------------------------")
+    DebugPrint(Node:ToString())
+    DebugPrint("---------------------------NodeInfo---------------------------")
+  end
+  DebugPrint("---------------------------QuestInfo---------------------------")
+end
+
+function Questline:UpdateCurrentSTLData(SuitSubType, SuitKey, UpdateParam)
+  self.StoryNode:UpdateCurrentSTLData(SuitSubType, SuitKey, UpdateParam)
 end
 
 return Questline

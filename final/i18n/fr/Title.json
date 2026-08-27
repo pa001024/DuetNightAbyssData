@@ -521,7 +521,7 @@
   },
   {
     "id": 10093,
-    "name": "d’Ada (?)",
+    "name": "d’Eve",
     "suf": false
   },
   {
@@ -670,6 +670,18 @@
     "name": "de Flora",
     "suf": false,
     "src": "成就「Instants figés : Flora」"
+  },
+  {
+    "id": 10119,
+    "name": "du Paradis",
+    "suf": false,
+    "src": "成就「Le Paradis des Lapins blancs」"
+  },
+  {
+    "id": 10120,
+    "name": "amnésique",
+    "suf": false,
+    "src": "成就「Qui suis-je ?」"
   },
   {
     "id": 20001,
@@ -1102,7 +1114,7 @@
   },
   {
     "id": 20077,
-    "name": "Ada (?)",
+    "name": "Eve",
     "suf": true
   },
   {
@@ -1240,5 +1252,23 @@
     "name": "Flora",
     "suf": true,
     "src": "成就「Un moment de répit : Flora」"
+  },
+  {
+    "id": 20101,
+    "name": "Cible",
+    "suf": true,
+    "src": "成就「Dans le mille !」"
+  },
+  {
+    "id": 20102,
+    "name": "Le Chariot",
+    "suf": true,
+    "src": "成就「Retour triomphal ?」"
+  },
+  {
+    "id": 20103,
+    "name": "Paradis",
+    "suf": true,
+    "src": "成就「Sous le Paradis」"
   }
 ]

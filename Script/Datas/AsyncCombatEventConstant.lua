@@ -39,7 +39,7 @@ return ReadOnly("AsyncCombatEventConstant", {
   },
   AsyncCombat_EventId = {
     ConstantName = "AsyncCombat_EventId",
-    ConstantValue = 121002
+    ConstantValue = 121003
   },
   AsyncCombat_HomeownerLimit = {
     ConstantName = "AsyncCombat_HomeownerLimit",
@@ -81,8 +81,76 @@ return ReadOnly("AsyncCombatEventConstant", {
     ConstantName = "AsyncCombat_SpawnInterval",
     ConstantValue = 2
   },
+  AsyncCombat_StoppageTimeRoomDuration = {
+    ConstantName = "AsyncCombat_StoppageTimeRoomDuration",
+    ConstantValue = 720
+  },
+  AsyncCombat_StoppageTimeRoomShowHintTime = {
+    ConstantName = "AsyncCombat_StoppageTimeRoomShowHintTime",
+    ConstantValue = 30
+  },
   AsyncCombat_WeeklyLimit = {
     ConstantName = "AsyncCombat_WeeklyLimit",
     ConstantValue = 3
+  },
+  AsyncRoomGenerateEnd = {
+    ConstantName = "AsyncRoomGenerateEnd",
+    ConstantValue = 22
+  },
+  AsyncRoomGenerateStart = {
+    ConstantName = "AsyncRoomGenerateStart",
+    ConstantValue = 7
+  },
+  AsyncRoomGenerate_MaxTotalCount = {
+    ConstantName = "AsyncRoomGenerate_MaxTotalCount",
+    ConstantValue = 150
+  },
+  AsyncRoom_CheckInterval = {
+    ConstantName = "AsyncRoom_CheckInterval",
+    ConstantValue = 600
+  },
+  AsyncRoom__CheckCount = {
+    ConstantName = "AsyncRoom__CheckCount",
+    ConstantValue = 2
+  },
+  Async_FreeGiveNum = {
+    ConstantName = "Async_FreeGiveNum",
+    ConstantValue = 3
+  },
+  Async_FreeGiveWeekDay = {
+    ConstantName = "Async_FreeGiveWeekDay",
+    ConstantValue = 5
+  },
+  Async_FreeRoomBonusRate = {
+    ConstantName = "Async_FreeRoomBonusRate",
+    ConstantValue = 10
+  },
+  Async_HighRiskScript = {
+    ConstantName = "Async_HighRiskScript",
+    ConstantValue = 1.5
+  },
+  Async_HighRiskScriptTime = {
+    ConstantName = "Async_HighRiskScriptTime",
+    ConstantValue = 24
+  },
+  Async_MediumRiskScript = {
+    ConstantName = "Async_MediumRiskScript",
+    ConstantValue = 1
+  },
+  Async_MediumRiskScriptTime = {
+    ConstantName = "Async_MediumRiskScriptTime",
+    ConstantValue = 24
+  },
+  Async_MvpScore = {
+    ConstantName = "Async_MvpScore",
+    ConstantValue = 3
+  },
+  Async_ParticipationScore = {
+    ConstantName = "Async_ParticipationScore",
+    ConstantValue = 1
+  },
+  Async_RiskScriptCopyID = {
+    ConstantName = "Async_RiskScriptCopyID",
+    ConstantValue = 40604
   }
 })

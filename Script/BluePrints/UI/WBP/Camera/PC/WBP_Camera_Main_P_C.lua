@@ -77,7 +77,6 @@ function M:InitKeySetting()
   self.KeyDownEvent[self.MoveCloseGamepad] = self.OnMoveCloseKeyDown
   self.KeyDownEvent[self.MoveFarGamepad] = self.OnMoveFarKeyDown
   self.KeyDownEvent[self.FastCloseCamera] = self.OnFastCloseCameraKeyDown
-  self.KeyDownEvent[self.FastCloseCamera] = self.OnFastCloseCameraKeyDown
   self.KeyUpEvent = {}
   self.KeyUpEvent[self.CameraMoveLeftKey] = self.OnCameraMoveLeftKeyUp
   self.KeyUpEvent[self.CameraMoveRightKey] = self.OnCameraMoveRightKeyUp
@@ -412,10 +411,6 @@ function M:OnPuaseClicked()
 end
 
 function M:OnFastCloseCameraKeyDown()
-  if self.bShowHideCharacterWidget then
-    self:ToggleShowHideCharacterWidget()
-  end
-  self:CheckHasAnyOperationOrClose()
 end
 
 function M:OnMouseButtonDown(MyGeometry, MouseEvent)
@@ -859,15 +854,9 @@ end
 
 function M:SetBottomWidgetVisibility(bHitTestable)
   if bHitTestable then
-    self.Zoom_Key:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    self.HideUI_Key:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    self.Pause_Key:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    self.Reset_Key:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.WS_RightCorner:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   else
-    self.Zoom_Key:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-    self.HideUI_Key:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-    self.Pause_Key:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-    self.Reset_Key:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    self.WS_RightCorner:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   end
 end
 
@@ -1146,12 +1135,25 @@ function M:RefreshCameraCustomizeHudShortcutVisible()
   if self.WS_RightCorner and self.WS_RightCorner.SetActiveWidgetIndex then
     self.WS_RightCorner:SetActiveWidgetIndex(bGamepadInput and 1 or 0)
   end
+  local ForceHideKey = {}
+  if self.bLockCameraPos then
+    ForceHideKey[self.Move_Key] = true
+    ForceHideKey[self.Key_Controller_Move] = true
+    ForceHideKey[self.Zoom_Key] = true
+    ForceHideKey[self.Key_Controller_Zoom] = true
+  end
+  if self.bLockGamePause then
+    ForceHideKey[self.Pause_Key] = true
+    ForceHideKey[self.Key_Controller_Pause] = true
+  end
   for _, Widget in ipairs(self:GetCameraCustomizePCShortcutWidgets()) do
     local bBlockedPCShortcut = Widget == self.Switch_Key or Widget == self.HideUI_Key or Widget == self.Customize_Key
-    self:SetCameraCustomizeShortcutVisible(Widget, not bGamepadInput and (not bCustomizeOpened or not bBlockedPCShortcut))
+    local bVisible = not bGamepadInput and (not bCustomizeOpened or not bBlockedPCShortcut) and not ForceHideKey[Widget]
+    self:SetCameraCustomizeShortcutVisible(Widget, bVisible)
   end
   for _, Widget in ipairs(self:GetCameraCustomizeGamepadShortcutWidgets()) do
     local bVisible = bGamepadInput and (not bCustomizeOpened or self:IsCameraCustomizeGamepadShortcutVisibleWhenOpened(Widget))
+    bVisible = bVisible and not ForceHideKey[Widget]
     self:SetCameraCustomizeShortcutVisible(Widget, bVisible)
   end
   self:RefreshFocalLengthSliderKeyInfo()

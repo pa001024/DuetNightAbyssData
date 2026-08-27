@@ -38,5 +38,6 @@ return ReadOnly("ModApplicationType", {
   [104] = {ApplicationTypeId = 104},
   [105] = {ApplicationTypeId = 105},
   [106] = {ApplicationTypeId = 106},
-  [1504] = {ApplicationTypeId = 1504}
+  [1504] = {ApplicationTypeId = 1504},
+  [5101] = {ApplicationTypeId = 5101}
 })

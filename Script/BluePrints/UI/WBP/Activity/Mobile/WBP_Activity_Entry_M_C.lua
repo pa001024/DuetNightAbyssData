@@ -62,6 +62,9 @@ function M:ReceiveEnterState(StackAction)
     self:JudgeNeedShowVersionView()
   end
   self.Super.ReceiveEnterState(self, StackAction)
+  if 1 == StackAction then
+    self:RefreshCurrentBGVideo()
+  end
 end
 
 function M:Close()

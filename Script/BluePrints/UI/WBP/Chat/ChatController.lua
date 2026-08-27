@@ -6,6 +6,7 @@ local HeroUSDKUtils = require("Utils.HeroUSDKUtils")
 local MiscUtils = require("Utils.MiscUtils")
 local AppearanceShareModel = require("BluePrints.UI.WBP.Appearance.AppearanceShareModel")
 local AutoChessShareModel = require("BluePrints.UI.AutoChess.AutoChessShareModel")
+local TeamHallRecruitShareModel = require("BluePrints.UI.WBP.TeamHall.TeamHallRecruitShareModel")
 local json = require("rapidjson")
 local GuildDynamicMessageUidOrder = {
   ChangedDecl = {"EditorUid"},
@@ -103,6 +104,26 @@ end
 
 function M:OpenView(WorldContex, bBattle)
   return M.Super.OpenView(self, WorldContex, ChatCommon.MainUIId, true, bBattle)
+end
+
+function M:OpenViewToChannel(WorldContext, ChannelType, bBattle)
+  if not ChannelType or ChatModel:IsChannelExclude(ChannelType) then
+    return nil
+  end
+  ChatModel:SetCurrentChannel(ChannelType)
+  local View = self:OpenView(WorldContext, bBattle)
+  if not View then
+    return nil
+  end
+  if View.GetVisibility and View.SetVisibility and View:GetVisibility() == UIConst.VisibilityOp.Collapsed then
+    View:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  end
+  if View.SelectTabByChannelType then
+    View:SelectTabByChannelType(ChannelType)
+  elseif View.SelectItemByChannelType then
+    View:SelectItemByChannelType(ChannelType)
+  end
+  return View
 end
 
 function M:GetView(WorldContex)
@@ -222,7 +243,7 @@ function M:SendRequestLeaveChatChannel(ChannelType)
   end
 end
 
-function M:SendChatToWorld(ChannelType, ContentText)
+function M:SendChatToWorld(ChannelType, ContentText, Complete)
   local ModContent = self:TryParseMyModSuitInfo(ContentText)
   if ModContent then
     ContentText = ModContent
@@ -239,7 +260,7 @@ function M:SendChatToWorld(ChannelType, ContentText)
   if AutoChessShareContent and not ModContent and not DyeShareContent and not AppearanceShareContent then
     ContentText = AutoChessShareContent
   end
-  self:GetAvatar():ChatToWorld(ChannelType, ContentText)
+  self:GetAvatar():ChatToWorld(ChannelType, ContentText, Complete)
 end
 
 function M:RecvChatToWorld(ChannelType, ContentText)
@@ -308,7 +329,7 @@ function M:RecvChatToSettlementOnline(ContentText)
   self:_AddMessage(FakeMessage, false)
 end
 
-function M:SendChatToGuild(ContentText)
+function M:SendChatToGuild(ContentText, Complete)
   local ModContent = self:TryParseMyModSuitInfo(ContentText)
   if ModContent then
     ContentText = ModContent
@@ -321,7 +342,19 @@ function M:SendChatToGuild(ContentText)
   if AutoChessShareContent and not ModContent and not DyeShareContent then
     ContentText = AutoChessShareContent
   end
-  self:GetAvatar():ChatToGuild(nil, ContentText)
+  local bCompleted = false
+  
+  local function OnChatToGuildComplete(RetCode)
+    if bCompleted then
+      return
+    end
+    bCompleted = true
+    if Complete then
+      Complete(RetCode == ErrorCode.RET_SUCCESS, RetCode)
+    end
+  end
+  
+  self:GetAvatar():ChatToGuild(Complete and OnChatToGuildComplete or nil, ContentText)
 end
 
 function M:RecvChatToGuild(ContentText)
@@ -1795,9 +1828,15 @@ function M:ParseAsyncCombatRoomInfoText(MsgWrap)
   if not MsgWrap.AsyncCombatRoomInfo then
     return nil
   end
-  local RateResId = MsgWrap.AsyncCombatRoomInfo.RateResId or 206
-  local RateRes = DataMgr.Resource[RateResId]
-  local Percent = RateRes and RateRes.UseParam and RateRes.UseParam / 100 or 100
+  local RoomData = DataMgr.AsyncCombat[MsgWrap.AsyncCombatRoomInfo.RoomConfId]
+  local Percent = 100
+  if RoomData and 1 == RoomData.RoomType then
+    Percent = DataMgr.AsyncCombatEventConstant.Async_FreeRoomBonusRate.ConstantValue * 100
+  else
+    local RateResId = MsgWrap.AsyncCombatRoomInfo.RateResId or 206
+    local RateRes = DataMgr.Resource[RateResId]
+    Percent = RateRes and RateRes.UseParam and RateRes.UseParam / 100 or 100
+  end
   return string.format(GText("UI_AsyncCombat_ChatShare"), Percent)
 end
 
@@ -1806,6 +1845,16 @@ function M:ParseGuildRecruitText(MsgWrap)
     return nil
   end
   return MsgWrap.GuildRecruitInfo.RecruitMessage or ""
+end
+
+function M:ParseTeamInfoText(MsgWrap)
+  if MsgWrap.TeamInfo then
+    return TeamHallRecruitShareModel.BuildCompactText(MsgWrap.TeamInfo)
+  end
+  if MsgWrap.bInvalidTeamInfo then
+    return GText("UI_RecruitMembers")
+  end
+  return nil
 end
 
 function M:ClearChannelReddot(ChannelType)
@@ -2001,7 +2050,7 @@ end
 
 local OldSendChatToWorld = M.SendChatToWorld
 
-function M:SendChatToWorld(ChannelType, ContentText)
+function M:SendChatToWorld(ChannelType, ContentText, Complete)
   local AppearanceShareContent = self:TryParseMyAppearancePlanInfo(ContentText)
   if AppearanceShareContent then
     ContentText = AppearanceShareContent
@@ -2010,7 +2059,7 @@ function M:SendChatToWorld(ChannelType, ContentText)
   if AutoChessShareContent and not AppearanceShareContent then
     ContentText = AutoChessShareContent
   end
-  return OldSendChatToWorld(self, ChannelType, ContentText)
+  return OldSendChatToWorld(self, ChannelType, ContentText, Complete)
 end
 
 local OldSendChatToTeam = M.SendChatToTeam
@@ -2043,7 +2092,7 @@ end
 
 local OldSendChatToGuild = M.SendChatToGuild
 
-function M:SendChatToGuild(ContentText)
+function M:SendChatToGuild(ContentText, Complete)
   local AppearanceShareContent = self:TryParseMyAppearancePlanInfo(ContentText)
   if AppearanceShareContent then
     ContentText = AppearanceShareContent
@@ -2052,7 +2101,7 @@ function M:SendChatToGuild(ContentText)
   if AutoChessShareContent and not AppearanceShareContent then
     ContentText = AutoChessShareContent
   end
-  return OldSendChatToGuild(self, ContentText)
+  return OldSendChatToGuild(self, ContentText, Complete)
 end
 
 local OldCheckTextValid = M.CheckTextValid

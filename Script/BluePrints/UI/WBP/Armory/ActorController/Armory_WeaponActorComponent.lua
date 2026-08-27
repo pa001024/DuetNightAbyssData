@@ -75,7 +75,7 @@ function M:DoSomethingWithWeapon(BehaviorName, Func, ...)
   coroutine.resume(Co, ...)
 end
 
-function M:DoDeferedWeaponBehavior()
+function M:DoDeferredWeaponBehavior()
   local WeaponCoroutineArray = {}
   for _, value in ipairs(self.WeaponCoroutineArray) do
     table.insert(WeaponCoroutineArray, value)
@@ -412,7 +412,7 @@ function M:OnArmoryWeaponLoaded(WeaponActor, WeaponReflection)
     self:SetAccessoriesTickableWhenPaused(WeaponReflection.Accessories)
   end
   self:ResetActorRotation()
-  self:DoDeferedWeaponBehavior()
+  self:DoDeferredWeaponBehavior()
   if self.ViewActorType ~= self.ViewActorTypes.SingleWeapon then
     self:HideWeaponActor(self.UIName, true)
   end

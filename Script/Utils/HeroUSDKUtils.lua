@@ -3,6 +3,30 @@ local CommonUtils = require("Utils.CommonUtils")
 local ServerConfig = require("ServerConfig")
 local TimerMgr = require("BluePrints.Common.TimerMgr")
 local HeroUSDKUtils = {}
+HeroUSDKUtils.SpecialChannelIdList = {
+  255,
+  11,
+  2,
+  23
+}
+HeroUSDKUtils.ExtraSpecialChannelIdList = {270}
+
+function HeroUSDKUtils.IsSpecialChannel(ChannelId, bIncludeExtra)
+  ChannelId = ChannelId or HeroUSDKSubsystem():GetChannelId()
+  for _, Id in ipairs(HeroUSDKUtils.SpecialChannelIdList) do
+    if Id == ChannelId then
+      return true
+    end
+  end
+  if bIncludeExtra then
+    for _, Id in ipairs(HeroUSDKUtils.ExtraSpecialChannelIdList) do
+      if Id == ChannelId then
+        return true
+      end
+    end
+  end
+  return false
+end
 
 function HeroUSDKUtils.IsEnable()
   return HeroUSDKSubsystem(GWorld.GameInstance):IsHeroSDKEnable()

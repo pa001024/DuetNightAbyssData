@@ -1,4 +1,5 @@
 local FocusAreas = {CustomList = "CustomList", HiddenSelf = "HiddenSelf"}
+local SerializeUtils = require("Utils.SerializeUtils")
 local M = {}
 local ELocationAxis = {
   X = "X",

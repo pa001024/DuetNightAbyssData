@@ -46,6 +46,9 @@ function M:OnLoaded(...)
   end
   self:InitTabItems()
   self:InitReddot()
+  if 3 == self.TargetIndex and not ReturnUtils.CanParticipateInvite() then
+    self.TargetIndex = 1
+  end
   self:OnTabItemClicked(self.TargetIndex)
   self:PlayInAnimation()
   AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "OpenReturnMain", nil)

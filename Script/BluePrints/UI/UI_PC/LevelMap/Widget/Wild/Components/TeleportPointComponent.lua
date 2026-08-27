@@ -204,12 +204,41 @@ function Component:GetTeleportLocalPos()
   end
 end
 
+function Component:GetOrCreateHardBossMapTips()
+  local MapTips = self.TureHardBoss_MapTips
+  if not MapTips or not IsValid(MapTips) then
+    MapTips = self:CreateWidgetAsync("HardBossMapTips")
+    if not MapTips then
+      DebugPrint("Create HardBossMapTips failed")
+      return
+    end
+    self.TureHardBoss_MapTips = MapTips
+    MapTips.Parent = self
+    MapTips:SetVisibility(ESlateVisibility.Collapsed)
+    self.ModeComp:AddChildToConveyHardBoss(MapTips)
+    MapTips:BindToAnimationFinished(MapTips.Out, {
+      MapTips,
+      MapTips.PlayOutAnimFinished
+    })
+    MapTips.Common_Button_Text_PC:BindEventOnClicked(self, self.OnConveyClicked)
+  end
+  if self.RegionIcon then
+    local Icon = LoadObject(self.RegionIcon)
+    if Icon then
+      MapTips.Icon_Camp:SetBrushResourceObject(Icon)
+    end
+  end
+  return MapTips
+end
+
 function Component:OnTeleportPointClick(Id)
   self.CurrentConveyId = nil
   local data = DataMgr.TeleportPoint[Id]
   if not data or not self:CheckControlPriority_Normal() then
     return
   end
+  self.LevelMap_Convey_Widget_PC.Btn_Go:UnBindEventOnClickedByObj(self)
+  self.LevelMap_Convey_Widget_PC.Btn_Go:BindEventOnClicked(self, self.OnConveyClicked)
   self:ClosePanel(true)
   if self.CurrentSelectPoint and self.TeleportPoints[Id] then
     self.CurrentSelectPoint:PlayAnimation(self.CurrentSelectPoint.NormalAni)
@@ -229,13 +258,18 @@ function Component:OnTeleportPointClick(Id)
   self.ClickedSelectWidget = self.SelectWidgetTable[Id]
   self.CurrentConveyId = Id
   if self.TeleportIdToHardBossId[self.CurrentConveyId] then
-    self.TureHardBoss_MapTips:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    self.TureHardBoss_MapTips:RefreshMapTips(self.TeleportIdToHardBossId[self.CurrentConveyId])
+    local MapTips = self:GetOrCreateHardBossMapTips()
+    if not MapTips then
+      self:ClosePanel(true)
+      return
+    end
+    MapTips:RefreshMapTips(self.TeleportIdToHardBossId[self.CurrentConveyId])
+    MapTips:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     local floorId = self.TeleportPoint2FloorId[data.Id]
     if floorId then
       self:OnFloorBtnClicked(floorId, true)
     end
-    self.TureHardBoss_MapTips:SetFocus()
+    MapTips:SetFocus()
   else
     self.LevelMap_Convey_Widget_PC.Btn_Go:UnBindEventOnClickedByObj(self)
     self.LevelMap_Convey_Widget_PC.Btn_Go:BindEventOnClicked(self, self.OnConveyClicked)
@@ -274,6 +308,7 @@ function Component:OnTeleportPointClick(Id)
   end
   self:MoveMapToTelepoint(Id)
   self.LevelMap_Convey_Widget_PC:SetFocus()
+  self:RefreshRecurringTaskConveyMode(CommonConst.RegionMapTrackingType.TeleportPoint, Id)
 end
 
 function Component:OnConveyClicked(ForceUnlock)

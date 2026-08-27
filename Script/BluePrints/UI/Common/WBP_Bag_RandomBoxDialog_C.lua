@@ -32,7 +32,7 @@ function M:ShowItemList(PackId)
   local Counts = DataMgr.Reward[PackId].Count
   local Rates = DataMgr.Reward[PackId].Param
   self.List_Item:ClearListItems()
-  for key, value in pairs(PackDetail) do
+  for key, value in ipairs(PackDetail) do
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
     local Type = Types[key]
     local ResourceConfig = DataMgr[Type][value]

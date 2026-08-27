@@ -84,12 +84,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17809186452371014490",
-            startPort = "Out",
-            endQuest = "17809202999701015452",
-            endPort = "In"
-          },
-          {
             startQuest = "17809202999701015452",
             startPort = "Out",
             endQuest = "17809213274861016948",
@@ -102,21 +96,9 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17809218464671018676",
-            startPort = "Out",
-            endQuest = "17809219111391019660",
-            endPort = "In"
-          },
-          {
             startQuest = "17809253182861020697",
             startPort = "Out",
             endQuest = "17809253182861020698",
-            endPort = "In"
-          },
-          {
-            startQuest = "17809219111391019660",
-            startPort = "Out",
-            endQuest = "17809253708611021733",
             endPort = "In"
           },
           {
@@ -132,12 +114,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17809254969741024150",
-            startPort = "Out",
-            endQuest = "17809255281591024620",
-            endPort = "In"
-          },
-          {
             startQuest = "17809255395781025094",
             startPort = "Out",
             endQuest = "17809255395781025095",
@@ -147,12 +123,6 @@ return {
             startQuest = "17809255395781025095",
             startPort = "Out",
             endQuest = "17809255395781025097",
-            endPort = "In"
-          },
-          {
-            startQuest = "17809255281591024620",
-            startPort = "Out",
-            endQuest = "17809255395781025096",
             endPort = "In"
           },
           {
@@ -214,6 +184,60 @@ return {
             startPort = "QuestStart",
             endQuest = "17809263798713058660",
             endPort = "Input"
+          },
+          {
+            startQuest = "17809254969741024150",
+            startPort = "Out",
+            endQuest = "17851232901903335379",
+            endPort = "In"
+          },
+          {
+            startQuest = "17851232901903335379",
+            startPort = "Out",
+            endQuest = "17851233036603335726",
+            endPort = "In"
+          },
+          {
+            startQuest = "17851228892643334446",
+            startPort = "Out",
+            endQuest = "17809255395781025096",
+            endPort = "In"
+          },
+          {
+            startQuest = "17809218464671018676",
+            startPort = "Out",
+            endQuest = "17809253708611021733",
+            endPort = "In"
+          },
+          {
+            startQuest = "17809186452371014490",
+            startPort = "Out",
+            endQuest = "17872236805531120979",
+            endPort = "In"
+          },
+          {
+            startQuest = "17872236805531120979",
+            startPort = "Out",
+            endQuest = "17809202999701015452",
+            endPort = "In"
+          },
+          {
+            startQuest = "17851233036603335726",
+            startPort = "Out",
+            endQuest = "17851356172973339773",
+            endPort = "In"
+          },
+          {
+            startQuest = "17851356172973339773",
+            startPort = "Out",
+            endQuest = "17809255281591024620",
+            endPort = "In"
+          },
+          {
+            startQuest = "17809255281591024620",
+            startPort = "Out",
+            endQuest = "17851228892643334446",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -243,7 +267,7 @@ return {
             type = "ChangeRoleNode",
             name = "切换角色",
             pos = {x = 1077.1466310329322, y = 320.87929213956284},
-            propsData = {QuestRoleId = 1040101, IsPlayFX = false}
+            propsData = {QuestRoleId = 22010101, IsPlayFX = false}
           },
           ["17809202999701015452"] = {
             key = "17809202999701015452",
@@ -367,7 +391,7 @@ return {
             key = "17809255281591024620",
             type = "UpdateTaskBarAndTaskMainNode",
             name = "更新任务目标节点",
-            pos = {x = 1856.7354043622993, y = 424.04713370659664},
+            pos = {x = 1867.546214950191, y = 1005.1282028057947},
             propsData = {
               NewDescription = "Description_110214_4",
               NewDetail = "Content_110214_4",
@@ -437,7 +461,7 @@ return {
             key = "17809257736041026167",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 2296.129338525188, y = -182.01346070090915},
+            pos = {x = 2296.129338525188, y = -183.36481202439566},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 312780024,
@@ -467,10 +491,10 @@ return {
               ProceduralCameraId = 1,
               HideNpcs = false,
               HideMonsters = true,
-              HideAllBattleEntity = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
               HideMechanismsFX = false,
               ShowSkipButton = true,
-              ShowAutoPlayButton = true,
               ShowReviewButton = true,
               ShowWikiButton = true,
               SkipToOption = false,
@@ -543,7 +567,7 @@ return {
               DelayShowGuideTime = 0,
               bUseFlowAssetActors = true,
               FirstDialogueId = 0,
-              FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1102/110214/11021403.11021403'",
+              FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1102/110214/11021404.11021404'",
               TalkType = "FixSimple",
               TalkStageName = "",
               BlendInTime = 0,
@@ -556,10 +580,10 @@ return {
               ProceduralCameraId = 1,
               HideNpcs = false,
               HideMonsters = true,
-              HideAllBattleEntity = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
               HideMechanismsFX = false,
               ShowSkipButton = true,
-              ShowAutoPlayButton = true,
               ShowReviewButton = true,
               ShowWikiButton = true,
               SkipToOption = false,
@@ -605,6 +629,120 @@ return {
               RevertToDefaultWeather = false,
               ForceWeatherType = 0
             }
+          },
+          ["17851228892643334446"] = {
+            key = "17851228892643334446",
+            type = "KillMonsterNode",
+            name = "击杀怪物",
+            pos = {x = 1902.070269744331, y = 1236.6144398284864},
+            propsData = {
+              KillMonsterType = "Id",
+              MonsterNeedNums = 15,
+              IsShow = true,
+              GuideType = "P",
+              GuideName = "QuestSign1102140205",
+              IsShowMonsterGuide = false,
+              StaticCreatorIdList = {
+                312780582,
+                312780584,
+                312780585,
+                312780586,
+                312780587,
+                312780588,
+                312780589,
+                312780590,
+                312780591,
+                312780592,
+                312780593,
+                312780594,
+                312780595,
+                312780596,
+                312780597,
+                312780598,
+                312780599,
+                312780600,
+                312780601,
+                312780602
+              }
+            }
+          },
+          ["17851232901903335379"] = {
+            key = "17851232901903335379",
+            type = "UpdateTaskBarAndTaskMainNode",
+            name = "更新任务目标节点",
+            pos = {x = 1873.424589430241, y = 425.49028398371564},
+            propsData = {
+              NewDescription = "Description_110214_6",
+              NewDetail = "Content_110214_6",
+              SubTaskTargetIndex = 0
+            }
+          },
+          ["17851233036603335726"] = {
+            key = "17851233036603335726",
+            type = "GoToNode",
+            name = "前往",
+            pos = {x = 1869.3705375217796, y = 582.9179810069863},
+            propsData = {
+              GuideUIEnable = true,
+              StaticCreatorId = 312780583,
+              GuideType = "P",
+              GuidePointName = "QuestSign1102140204"
+            }
+          },
+          ["17851356172973339773"] = {
+            key = "17851356172973339773",
+            type = "ChangeStaticCreatorNode",
+            name = "生成怪物",
+            pos = {x = 1890.6729212603486, y = 817.7180349169673},
+            propsData = {
+              ActiveEnable = true,
+              EnableBlackScreenSync = false,
+              EnableFadeIn = false,
+              EnableFadeOut = false,
+              NewTargetPointName = "",
+              StaticCreatorIdList = {
+                312780582,
+                312780584,
+                312780585,
+                312780586,
+                312780587,
+                312780588,
+                312780589,
+                312780590,
+                312780591,
+                312780592,
+                312780593,
+                312780594,
+                312780595,
+                312780596,
+                312780597,
+                312780598,
+                312780599,
+                312780600,
+                312780601,
+                312780602
+              }
+            }
+          },
+          ["17872236805531120979"] = {
+            key = "17872236805531120979",
+            type = "ChangeStaticCreatorNode",
+            name = "生成怪物",
+            pos = {x = 1097.8448959157774, y = 512.7096396367026},
+            propsData = {
+              ActiveEnable = true,
+              EnableBlackScreenSync = false,
+              EnableFadeIn = false,
+              EnableFadeOut = false,
+              NewTargetPointName = "",
+              StaticCreatorIdList = {
+                312780603,
+                312780604,
+                312780605,
+                312780606,
+                312780607
+              }
+            }
           }
         },
         commentData = {
@@ -618,7 +756,7 @@ return {
             key = "17810118421781495",
             name = "第二件物品+战斗",
             position = {x = 1814.9545556231092, y = -397.1268635601651},
-            size = {width = 294.2409497128072, height = 1512.1796823106367}
+            size = {width = 365.22678630056726, height = 1886.8015826265976}
           },
           ["17810118992842779"] = {
             key = "17810118992842779",

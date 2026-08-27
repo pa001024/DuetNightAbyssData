@@ -164,7 +164,6 @@ end
 
 function M:StartPetRaceProcess(TrackData)
   InGameModel:Init()
-  self.GameLogicComponent.RaceSplineId = self.RaceId
   self:InitDefaultCamera()
   local GameState = UE4.UGameplayStatics.GetGameState(self)
   GameState.bInPetRace = true
@@ -193,7 +192,7 @@ function M:StartPetRaceProcess(TrackData)
   if IsValid(Player) then
     Player:AddDisableInputTag("PetRace")
     Player:SetCanInteractiveTrigger(false, "PetRace")
-    Player:SetESCMenuForbiddenState(true)
+    Player:SetESCMenuForbiddenStateByTag(true, "PetRace")
   end
   self:ShowRaceSplineArrow()
   MissionIndicatorManager:TriggerAllIndicatorVisible(false)
@@ -287,69 +286,6 @@ function M:GMStartPetRaceProcess(TrackData)
   self:SetDefaultCameraToSplineStart()
 end
 
-function M:SetDefaultCameraToSplineStart()
-  if not (IsValid(self.DefaultCamera) and IsValid(self.CameraSplineComponent)) or not IsValid(self.RaceSplineComponent) then
-    return
-  end
-  local CameraStartLocation = self.CameraSplineComponent:GetLocationAtSplinePoint(0, ESplineCoordinateSpace.World)
-  local RaceStartLocation = self.RaceSplineComponent:GetLocationAtSplinePoint(0, ESplineCoordinateSpace.World)
-  local LookAtRotation = UE4.UKismetMathLibrary.FindLookAtRotation(CameraStartLocation, RaceStartLocation)
-  self.DefaultCamera:K2_SetActorLocationAndRotation(CameraStartLocation, LookAtRotation, false, nil, false)
-  self.CurrentLookAtRotation = LookAtRotation
-  self.CurrentCameraLocation = RaceStartLocation
-  self.OriginalFOV = self.DefaultCamera.CameraComponent.FieldOfView
-  self.TargetPetRaceFov = self.DefaultCamera.RacePetFOV
-end
-
-function M:PlayCountDownSequence()
-  local SequenceAsset = LoadObject(self.CountDownSequencePath)
-  if not IsValid(SequenceAsset) then
-    return
-  end
-  local DefaultTrans = UE4.UKismetMathLibrary.MakeTransform(self:K2_GetActorLocation(), UE4.FRotator(0, 0, 0), UE4.FVector(1, 1, 1))
-  self.LevelSequenceActor = UE4.ULevelSequencePlayer.CreateLevelSequencePlayer(GWorld.GameInstance, SequenceAsset, UE4.FMovieSceneSequencePlaybackSettings())
-  self.SequencePlayer = self.LevelSequenceActor.SequencePlayer
-  if self.LevelSequenceActor and self.SequencePlayer then
-    self.SequencePlayer.OnFinished:Clear()
-    self.SequencePlayer.OnFinished:Add(self, function()
-      if IsValid(self.LevelSequenceActor) then
-        self.LevelSequenceActor:K2_DestroyActor()
-        self.LevelSequenceActor = nil
-        self.SequencePlayer = nil
-      end
-    end)
-    self.SequencePlayer:Play()
-  end
-end
-
-function M:PlayerStartSequence(TrackData)
-  local SequenceAsset = LoadObject(self.SplineShowSequencePath)
-  if not IsValid(SequenceAsset) then
-    self:SpawnPetMoveRaceAndInitRaceLotteryInfo(TrackData)
-    return
-  end
-  local DefaultTrans = UE4.UKismetMathLibrary.MakeTransform(self:K2_GetActorLocation(), UE4.FRotator(0, 0, 0), UE4.FVector(1, 1, 1))
-  self.LevelSequenceActor = UE4.ULevelSequencePlayer.CreateLevelSequencePlayer(GWorld.GameInstance, SequenceAsset, UE4.FMovieSceneSequencePlaybackSettings())
-  self.SequencePlayer = self.LevelSequenceActor.SequencePlayer
-  if self.LevelSequenceActor and self.SequencePlayer then
-    self.SequencePlayer.OnFinished:Clear()
-    self.SequencePlayer.OnFinished:Add(self, function()
-      local PetRaceStartSkip = UIManager(self):GetUIObj("PetRaceStartSkip")
-      if PetRaceStartSkip then
-        PetRaceStartSkip:Close()
-      end
-      self:SpawnPetMoveRaceAndInitRaceLotteryInfo(TrackData)
-      if IsValid(self.LevelSequenceActor) then
-        self.LevelSequenceActor:K2_DestroyActor()
-        self.LevelSequenceActor = nil
-        self.SequencePlayer = nil
-      end
-    end)
-    local PetRaceStartSkip = UIManager(self):LoadUINew("PetRaceStartSkip", self.RaceId)
-    self.SequencePlayer:Play()
-  end
-end
-
 function M:GMSpawnPetMoveRaceAndInitRaceLotteryInfo(TrackData, RaceProcessRecordMap, TotalPlayerList)
   local TotalSeconds = TrackData.TotalSecondNum
   local RaceTrackData = TrackData.RaceTrackData
@@ -406,6 +342,69 @@ function M:GMPlayerStartSequence(TrackData, RaceProcessRecordMap, TotalPlayerLis
         PetRaceStartSkip:Close()
       end
       self:GMSpawnPetMoveRaceAndInitRaceLotteryInfo(TrackData, RaceProcessRecordMap, TotalPlayerList)
+      if IsValid(self.LevelSequenceActor) then
+        self.LevelSequenceActor:K2_DestroyActor()
+        self.LevelSequenceActor = nil
+        self.SequencePlayer = nil
+      end
+    end)
+    local PetRaceStartSkip = UIManager(self):LoadUINew("PetRaceStartSkip", self.RaceId)
+    self.SequencePlayer:Play()
+  end
+end
+
+function M:SetDefaultCameraToSplineStart()
+  if not (IsValid(self.DefaultCamera) and IsValid(self.CameraSplineComponent)) or not IsValid(self.RaceSplineComponent) then
+    return
+  end
+  local CameraStartLocation = self.CameraSplineComponent:GetLocationAtSplinePoint(0, ESplineCoordinateSpace.World)
+  local RaceStartLocation = self.RaceSplineComponent:GetLocationAtSplinePoint(0, ESplineCoordinateSpace.World)
+  local LookAtRotation = UE4.UKismetMathLibrary.FindLookAtRotation(CameraStartLocation, RaceStartLocation)
+  self.DefaultCamera:K2_SetActorLocationAndRotation(CameraStartLocation, LookAtRotation, false, nil, false)
+  self.CurrentLookAtRotation = LookAtRotation
+  self.CurrentCameraLocation = RaceStartLocation
+  self.OriginalFOV = self.DefaultCamera.CameraComponent.FieldOfView
+  self.TargetPetRaceFov = self.DefaultCamera.RacePetFOV
+end
+
+function M:PlayCountDownSequence()
+  local SequenceAsset = LoadObject(self.CountDownSequencePath)
+  if not IsValid(SequenceAsset) then
+    return
+  end
+  local DefaultTrans = UE4.UKismetMathLibrary.MakeTransform(self:K2_GetActorLocation(), UE4.FRotator(0, 0, 0), UE4.FVector(1, 1, 1))
+  self.LevelSequenceActor = UE4.ULevelSequencePlayer.CreateLevelSequencePlayer(GWorld.GameInstance, SequenceAsset, UE4.FMovieSceneSequencePlaybackSettings())
+  self.SequencePlayer = self.LevelSequenceActor.SequencePlayer
+  if self.LevelSequenceActor and self.SequencePlayer then
+    self.SequencePlayer.OnFinished:Clear()
+    self.SequencePlayer.OnFinished:Add(self, function()
+      if IsValid(self.LevelSequenceActor) then
+        self.LevelSequenceActor:K2_DestroyActor()
+        self.LevelSequenceActor = nil
+        self.SequencePlayer = nil
+      end
+    end)
+    self.SequencePlayer:Play()
+  end
+end
+
+function M:PlayerStartSequence(TrackData)
+  local SequenceAsset = LoadObject(self.SplineShowSequencePath)
+  if not IsValid(SequenceAsset) then
+    self:SpawnPetMoveRaceAndInitRaceLotteryInfo(TrackData)
+    return
+  end
+  local DefaultTrans = UE4.UKismetMathLibrary.MakeTransform(self:K2_GetActorLocation(), UE4.FRotator(0, 0, 0), UE4.FVector(1, 1, 1))
+  self.LevelSequenceActor = UE4.ULevelSequencePlayer.CreateLevelSequencePlayer(GWorld.GameInstance, SequenceAsset, UE4.FMovieSceneSequencePlaybackSettings())
+  self.SequencePlayer = self.LevelSequenceActor.SequencePlayer
+  if self.LevelSequenceActor and self.SequencePlayer then
+    self.SequencePlayer.OnFinished:Clear()
+    self.SequencePlayer.OnFinished:Add(self, function()
+      local PetRaceStartSkip = UIManager(self):GetUIObj("PetRaceStartSkip")
+      if PetRaceStartSkip then
+        PetRaceStartSkip:Close()
+      end
+      self:SpawnPetMoveRaceAndInitRaceLotteryInfo(TrackData)
       if IsValid(self.LevelSequenceActor) then
         self.LevelSequenceActor:K2_DestroyActor()
         self.LevelSequenceActor = nil

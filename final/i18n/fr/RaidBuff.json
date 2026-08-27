@@ -70,5 +70,17 @@
       "10%",
       "50%"
     ]
+  },
+  {
+    "RaidBuffID": 16,
+    "RaidBuffDes": "Lorsque la Puissance de Surabondance d’un personnage dépasse 100 %, chaque tranche supplémentaire de 100% permet aux Dégâts de compétence ou de Surabondance d’ignorer 4% de la DÉF de la cible, jusqu’à un maximum de 40% ignorés.\nLorsque le personnage consomme du Désordre, il gagne un effet augmentant la Chance de déclenchement de 60% pendant 12 s, cumulable jusqu’à 3 fois.",
+    "RaidBuffParameter": [
+      "100%",
+      "4%",
+      "40%",
+      "60%",
+      "12",
+      "3"
+    ]
   }
 ]

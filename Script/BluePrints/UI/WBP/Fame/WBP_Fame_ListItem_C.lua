@@ -5,6 +5,7 @@ local M = Class({
 
 function M:Construct()
   self.BtnReward_1.Button_Area.OnClicked:Add(self, self.OnReceiveBtnClicked)
+  self.BtnReward_1:SetGamePadImg("A")
 end
 
 function M:Destruct()
@@ -14,6 +15,7 @@ end
 function M:OnListItemObjectSet(Content)
   rawset(self, "Content", Content)
   rawset(self, "State", Content.State)
+  rawset(self, "State", Content.State)
   rawset(self, "Level", Content.Level)
   rawset(self, "RewardID", Content.RewardID)
   rawset(self, "FameModel", Content.FameModel)
@@ -22,10 +24,45 @@ function M:OnListItemObjectSet(Content)
   rawset(self, "Index", Content.Index)
   rawset(self, "OnMenuOpenChanged", Content.OnMenuOpenChanged)
   rawset(self, "OnReceiveRewardCallBack", Content.OnReceiveRewardCallBack)
+  rawset(self, "IsFameTaskItem", Content.IsFameTaskItem)
+  rawset(self, "QuestId", Content.QuestId)
+  rawset(self, "Description", Content.Description)
+  rawset(self, "ResourceId", Content.ResourceId)
+  rawset(self, "ExpCount", Content.ExpCount)
   self.RichTextContent:SetText(string.format(GText("ReputationLevel_ListContent"), self.Level))
-  self:InitRewardList()
+  if self.IsFameTaskItem then
+    self:InitRewardList_FameTaskItem()
+    self.RichTextContent:SetText(GText(self.Description))
+  else
+    self:InitRewardList()
+  end
   self:InitBtn()
   Content.SelfWidget = self
+end
+
+function M:InitRewardList_FameTaskItem()
+  local resourceData = DataMgr.Resource[self.ResourceId]
+  if not resourceData then
+    UEPrint(string.format("WBP_Fame_ListItem_C InitRewardList not find ResourceId Data %d", self.ResourceId))
+    return
+  end
+  self.ListItem:ClearListItems()
+  local Content = NewObject(UIUtils.GetCommonItemContentClass())
+  local Id = self.ResourceId
+  local Type = "Resource"
+  local ResourceInfo = resourceData
+  Content.ItemType = Type
+  Content.Id = Id
+  Content.Rarity = ResourceInfo.Rarity
+  Content.Icon = ResourceInfo.Icon
+  Content.IsShowDetails = true
+  Content.Count = self.ExpCount
+  Content.bHasGot = self.State == CommonConst.FameRewardState.AlreadyClaimed
+  Content.OnMenuOpenChangedEvents = {
+    Obj = self.Parent,
+    Callback = self.OnMenuOpenChanged
+  }
+  self.ListItem:AddItem(Content)
 end
 
 function M:InitRewardList()
@@ -84,9 +121,13 @@ function M:OnReceiveBtnClicked()
   end
   local Avatar = GWorld:GetAvatar()
   if Avatar then
-    Avatar:GetRegionReputationLevelReward(self.RegionId, {
-      self.Level
-    }, self.OnReceiveRewardCallBack)
+    if self.IsFameTaskItem and self.IsFameTaskItem == true then
+      Avatar:GetExperienceQuestReward(self.QuestId, self.OnReceiveRewardCallBack)
+    else
+      Avatar:GetRegionReputationLevelReward(self.RegionId, {
+        self.Level
+      }, self.OnReceiveRewardCallBack)
+    end
   end
 end
 
@@ -107,13 +148,17 @@ end
 function M:Handle_OnGamePadButtonDown(InKeyName)
   local IsEventHandled = false
   if InKeyName == UIConst.GamePadKey.FaceButtonBottom then
-    self:OnReceiveBtnClicked()
-    IsEventHandled = true
+    if self.State == CommonConst.FameRewardState.ReadyClaim then
+      self:OnReceiveBtnClicked()
+      IsEventHandled = true
+    end
   elseif InKeyName == UIConst.GamePadKey.FaceButtonLeft then
-    rawset(self, "bFocusedList", true)
-    self.ListItem:NavigateToIndex(0)
-    self.ListItem:SetFocus()
-    IsEventHandled = true
+    if self.ListItem:GetNumItems() > 0 then
+      rawset(self, "bFocusedList", true)
+      self.ListItem:NavigateToIndex(0)
+      self.ListItem:SetFocus()
+      IsEventHandled = true
+    end
   elseif InKeyName == UIConst.GamePadKey.FaceButtonRight and self.bFocusedList then
     rawset(self, "bFocusedList", false)
     self:SetFocus()
@@ -156,9 +201,9 @@ function M:UpdateGamePadStyle()
         }
       })
     end
-    self.WBP_Com_KeyImg:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.WBP_Com_KeyImg:SetVisibility(self.ListItem:GetNumItems() > 0 and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
     self:AddDelayFrameFunc(function()
-      self.BtnReward_1:SetGamePadVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      self.BtnReward_1:SetGamePadVisibility(self.State == CommonConst.FameRewardState.ReadyClaim and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
       self:SetFocus()
     end, 1)
   else

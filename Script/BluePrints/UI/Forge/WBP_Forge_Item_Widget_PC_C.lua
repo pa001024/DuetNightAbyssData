@@ -1,3 +1,4 @@
+local MiscUtils = require("Utils.MiscUtils")
 require("UnLua")
 local ForgeConst = require("Blueprints.UI.Forge.ForgeConst")
 local ForgeUtils = require("Blueprints.UI.Forge.ForgeUtils")
@@ -148,7 +149,7 @@ function WBP_ForgeItemWidget:SetHovered(IsSelected)
 end
 
 function WBP_ForgeItemWidget:OnBtnStartClicked()
-  if self.WidgetCurrentState == ForgeConst.DraftState.NotStarted and (not self.Content.IsFoundryEnough or not self.Content.IsResourceEnough) then
+  if self.WidgetCurrentState == ForgeConst.DraftState.NotStarted and not self.Content.CanProduce then
     if self.EventShowPath then
       self.EventShowPath()
     else
@@ -206,7 +207,9 @@ function WBP_ForgeItemWidget:InitializeView()
   self:BindUIEvents()
   self.WidgetCurrentState = self.Content.State
   local DraftInfo = DataMgr.Draft[self.Content.Id]
-  local Content = ForgeUtils:ConstructItemContentFromDraftId(self.Content.Id)
+  local Content = ForgeUtils:ConstructItemContentFromDraftId(self.Content.Id, {
+    UseDraftTips = not self.Content.HasBlueprint
+  })
   Content.IsShowDetails = true
   Content.OnMenuOpenChangedEvents = {
     Obj = self,
@@ -234,7 +237,6 @@ function WBP_ForgeItemWidget:InitializeView()
     bShowDenominator = true,
     HandleMouseDown = true
   })
-  self.Text_BluePrintsNumName:SetText(GText("UI_FORGING_BLUEPRINT"))
   self.Text_ItemCurrentOwned:SetText(GText("UI_FORGING_CURRENT"))
   self:RefreshNum()
   if self.Content.State == ForgeConst.DraftState.NotStarted then
@@ -333,13 +335,26 @@ end
 
 function WBP_ForgeItemWidget:RefreshNum()
   local DraftInfo = DataMgr.Draft[self.Content.Id]
-  self.Text_BluePrintsNumName:SetText(GText("UI_FORGING_BLUEPRINT"))
   if DraftInfo.IsInfinity then
     self.Text_BluePrintsNum:SetText("<Img id=\"Infinity\" height=\"36\" width=\"28\"/>")
+  elseif 0 == self.Content.Count then
+    local Color = FSlateColor()
+    Color.SpecifiedColor.R = 1.0
+    Color.SpecifiedColor.G = 0.0
+    Color.SpecifiedColor.B = 0.0
+    self.Text_BluePrintsNum:SetText("0")
+    self.Text_BluePrintsNum:SetColorAndOpacity(Color)
+    self.ItemWidget:SetShadow(true)
   else
-    self.Text_BluePrintsNum:SetText(tostring(FormatNumber(self.Content.Count, true)))
+    local Color = FSlateColor()
+    Color.SpecifiedColor.R = 1.0
+    Color.SpecifiedColor.G = 1.0
+    Color.SpecifiedColor.B = 1.0
+    self.Text_BluePrintsNum:SetText(tostring(MiscUtils.FormatNumber(self.Content.Count, true)))
+    self.Text_BluePrintsNum:SetColorAndOpacity(Color)
+    self.ItemWidget:SetShadow(false)
   end
-  self.Text_ItemOwnedNum:SetText(tostring(FormatNumber(self.Content.ProductCount, true)))
+  self.Text_ItemOwnedNum:SetText(tostring(MiscUtils.FormatNumber(self.Content.ProductCount, true)))
   if self.Content.IsNotSeen then
     self.ItemWidget:SetRedDot(UIConst.RedDotType.NewRedDot)
   else

@@ -38,6 +38,27 @@ function Component:CleanUpAnchor()
 end
 
 function Component:OnAnchorGetUserMenuContent(Anchor)
+  local ActionIds = PlayerMenuActionRegistry:BuildDefaultActionIds({
+    AvatarInfo = self._AvatarInfo,
+    GuildInfo = self.GuildInfo,
+    GuildNotShowOpreationBtn = self.GuildNotShowOpreationBtn,
+    NotShowGuildSendPrivateChat = self.NotShowGuildSendPrivateChat,
+    MenuConfig = self._MenuConfig
+  })
+  local FuncList = PlayerMenuActionRegistry:BuildMenuFuncList(ActionIds, {
+    Owner = self,
+    AvatarInfo = self._AvatarInfo,
+    MessageContent = self._MessageContent,
+    CloseMenu = function()
+      if self.HeadAnchor then
+        self.HeadAnchor:Close()
+      end
+    end
+  })
+  return ChatController:OpenPlayerBtnList(self, self._AvatarInfo, FuncList, self.GuildInfo)
+end
+
+function Component:OnAnchorGetUserMenuContentOld(Anchor)
   local ActionIds = {}
   local Avatar = ChatController:GetAvatar()
   local Uid = self._AvatarInfo.Uid or self._AvatarInfo.Uuid

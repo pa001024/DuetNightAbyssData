@@ -1,3 +1,4 @@
+local MiscUtils = require("Utils.MiscUtils")
 require("UnLua")
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
@@ -122,7 +123,7 @@ function M:UpdateIcon()
 end
 
 function M:UpdateValue()
-  local NumText = string.format("%s", Utils.FormatNumber(self.Value, false))
+  local NumText = string.format("%s", MiscUtils.FormatNumber(self.Value, false))
   self.Text_Num:SetText(NumText)
 end
 

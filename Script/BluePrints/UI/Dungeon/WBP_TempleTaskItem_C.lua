@@ -7,6 +7,13 @@ function M:SetTargetInfo(Text)
   self.Text_ScoreDesc:SetText(Text)
 end
 
+function M:SetStarVisible(bVisible)
+  local StarWidget = self.ItemStar
+  if StarWidget then
+    StarWidget:SetVisibility(bVisible and ESlateVisibility.SelfHitTestInvisible or ESlateVisibility.Collapsed)
+  end
+end
+
 function M:PlayStarAnimation(IsHardMode)
   if IsHardMode then
     self:PlayAnimation(self.Gain_1)
@@ -37,18 +44,6 @@ end
 
 function M:ShowStarGrey()
   self.StarSlot:GetChildAt(0).WS_Type:SetActiveWidgetIndex(0)
-end
-
-function M:PlayNormalAnimationToWeaponVerify()
-  self:PlayAnimation(self.Normal_Weapon)
-end
-
-function M:PlayStarAnimationToWeaponVerify()
-  self:PlayAnimation(self.Gain_Weapon)
-end
-
-function M:PlayLossAnimationToWeaponVerify()
-  self:PlayAnimation(self.Loss_Weapon)
 end
 
 return M

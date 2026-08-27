@@ -1561,7 +1561,7 @@
   },
   {
     "id": 1026,
-    "名称": "Mandat scellé : Ada (?)",
+    "名称": "Mandat scellé : Eve",
     "获取途径": [
       "副本",
       "委托密函商店",
@@ -1574,13 +1574,73 @@
         "id": 1002102,
         "type": "Resource",
         "count": 10,
-        "name": "Fragment de pensée : Ada (?)"
+        "name": "Fragment de pensée : Eve"
       },
       {
         "id": 1002102,
         "type": "Resource",
         "count": 2,
-        "name": "Fragment de pensée : Ada (?)"
+        "name": "Fragment de pensée : Eve"
+      },
+      {
+        "id": 30001,
+        "type": "Resource",
+        "count": 1,
+        "name": "Essence vitale"
+      },
+      {
+        "id": 2012,
+        "type": "Resource",
+        "count": 1,
+        "name": "Mélodie de combat II"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice de Mandat scellé"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 1
+  },
+  {
+    "id": 1027,
+    "名称": "Mandat scellé : Falsi",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声",
+      "沉浸式戏剧"
+    ],
+    "奖励": [
+      {
+        "id": 1003104,
+        "type": "Resource",
+        "count": 10,
+        "name": "Fragment de pensée : Falsi"
+      },
+      {
+        "id": 1003104,
+        "type": "Resource",
+        "count": 2,
+        "name": "Fragment de pensée : Falsi"
       },
       {
         "id": 30001,
@@ -5460,6 +5520,186 @@
     "类型": 2
   },
   {
+    "id": 2065,
+    "名称": "Mandat scellé : Hurlement muet",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10405,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Hurlement muet",
+        "d": 1
+      },
+      {
+        "id": 12170,
+        "type": "Resource",
+        "count": 1,
+        "name": "Hurlement muet : Poignée"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12171,
+        "type": "Resource",
+        "count": 1,
+        "name": "Hurlement muet : Lame gauche"
+      },
+      {
+        "id": 12172,
+        "type": "Resource",
+        "count": 1,
+        "name": "Hurlement muet : Lame droite"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice de Mandat scellé"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2067,
+    "名称": "Mandat scellé : Sanguis Sanctus – Épée-fouet",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10505,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Sanguis Sanctus – Épée-fouet",
+        "d": 1
+      },
+      {
+        "id": 12176,
+        "type": "Resource",
+        "count": 1,
+        "name": "Sanguis Sanctus – Épée-fouet : Poignée"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12177,
+        "type": "Resource",
+        "count": 1,
+        "name": "Sanguis Sanctus – Épée-fouet : Lame"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice de Mandat scellé"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 151317,
+    "名称": "Mandat scellé : Surabondance · Adresse",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51317,
+        "type": "Mod",
+        "count": 1,
+        "name": "Surabondance · Adresse",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
     "id": 151321,
     "名称": "Mandat scellé : Néant du Griffon · Conflagration",
     "获取途径": [
@@ -9120,6 +9360,126 @@
     "类型": 3
   },
   {
+    "id": 151735,
+    "名称": "Mandat scellé : Ténacité de Quetzalcoatl",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51735,
+        "type": "Mod",
+        "count": 1,
+        "name": "Ténacité",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151736,
+    "名称": "Mandat scellé : Raffinement de Quetzalcoatl",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51736,
+        "type": "Mod",
+        "count": 1,
+        "name": "Raffinement",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
     "id": 151737,
     "名称": "Mandat scellé : Décision du Pactisant",
     "获取途径": [
@@ -9134,6 +9494,66 @@
         "type": "Mod",
         "count": 1,
         "name": "Décision",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151738,
+    "名称": "Mandat scellé : Nirvana du Pactisant · Décision",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51738,
+        "type": "Mod",
+        "count": 1,
+        "name": "Nirvana · Décision",
         "d": 1
       },
       {
@@ -10500,6 +10920,66 @@
     "类型": 3
   },
   {
+    "id": 151768,
+    "名称": "Mandat scellé : Ardeur du Pactisant · Décision",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51768,
+        "type": "Mod",
+        "count": 1,
+        "name": "Ardeur · Décision",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
     "id": 151911,
     "名称": "Mandat scellé : Sacrifice illusoire de l’Arbitre",
     "获取途径": [
@@ -10694,6 +11174,66 @@
         "type": "Mod",
         "count": 1,
         "name": "Brasier dévorant",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151932,
+    "名称": "Mandat scellé : Désordre infernal d’Ifrit",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51932,
+        "type": "Mod",
+        "count": 1,
+        "name": "Désordre infernal",
         "d": 1
       },
       {
@@ -11474,6 +12014,246 @@
         "type": "Mod",
         "count": 1,
         "name": "Ailes · Inspiration · Fureur",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 156121,
+    "名称": "Mandat scellé : Éveil du Métamorphe",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 56121,
+        "type": "Mod",
+        "count": 1,
+        "name": "Éveil",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 156122,
+    "名称": "Mandat scellé : Ailes · Inspiration · Éveil",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 56122,
+        "type": "Mod",
+        "count": 1,
+        "name": "Ailes · Inspiration · Éveil",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 156123,
+    "名称": "Mandat scellé : Vigueur du Métamorphe",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 56123,
+        "type": "Mod",
+        "count": 1,
+        "name": "Vigueur",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 156124,
+    "名称": "Mandat scellé : Ailes · Inspiration · Vigueur",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 56124,
+        "type": "Mod",
+        "count": 1,
+        "name": "Ailes · Inspiration · Vigueur",
         "d": 1
       },
       {

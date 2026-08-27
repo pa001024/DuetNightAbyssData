@@ -15,6 +15,11 @@ return ReadOnly("CharacterAttributeSwitch", {
     CharGroupId = 1,
     CharId = 1601
   },
+  [2201] = {
+    CharAttribute = "Water",
+    CharGroupId = 11,
+    CharId = 2201
+  },
   [120101] = {
     CharAttribute = "Dark",
     CharGroupId = 0,
@@ -24,5 +29,10 @@ return ReadOnly("CharacterAttributeSwitch", {
     CharAttribute = "Light",
     CharGroupId = 0,
     CharId = 160101
+  },
+  [220101] = {
+    CharAttribute = "Water",
+    CharGroupId = 10,
+    CharId = 220101
   }
 })

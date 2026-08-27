@@ -1,4 +1,5 @@
 require("UnLua")
+local SerializeUtils = require("Utils.SerializeUtils")
 local ComRankingUtils = {}
 ComRankingUtils.ItemType = {Squad = 0, Score = 1}
 ComRankingUtils.RankIconPath = {

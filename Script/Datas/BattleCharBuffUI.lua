@@ -199,6 +199,21 @@ return ReadOnly("BattleCharBuffUI", {
     IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Skill/T_Skill_Yeer01.T_Skill_Yeer01'",
     Type = "Layer"
   },
+  [3104] = {
+    BuffId = {
+      [0] = 310421,
+      [1] = 310421,
+      [2] = 310421,
+      [3] = 310421,
+      [4] = 310421,
+      [5] = 310421,
+      [6] = 310421
+    },
+    ElementAttr = "Fire",
+    ID = 3104,
+    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Skill/T_Skill_Falu02.T_Skill_Falu02'",
+    Type = "LastTime"
+  },
   [3201] = {
     BuffId = {
       [0] = 320111,

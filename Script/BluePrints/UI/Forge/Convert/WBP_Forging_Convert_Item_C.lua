@@ -49,8 +49,19 @@ function M:InitItem()
   ItemContent.Icon = Content.Icon
   ItemContent.IsSelect = false
   ItemContent.NotInteractive = Content.NotInteractive
-  self.Item_S:Init(ItemContent)
+  local IconDice = LoadObject(Content.Icon)
+  self.Icon_Item:SetBrushResourceObject(IconDice)
+  self:SetRarity(Content.Rarity)
   self.TextHave:SetText(GText("UI_FORGING_CURRENT"))
+end
+
+function M:SetRarity(Rarity)
+  if self["Img_Quality_" .. Rarity] then
+    self.Img_Quality:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Img_Quality:SetBrushFromTexture(self["Img_Quality_" .. Rarity])
+  else
+    self.Img_Quality:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
 end
 
 function M:SetNewIcon(bIsNew)
@@ -66,12 +77,10 @@ function M:SetName(Name)
 end
 
 function M:SetCount(Count)
-  if self.Content.ProductType == CommonConst.ArmoryType.Mod then
-    self.TextHave:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    self.Num:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  if self.Content.ProductType == CommonConst.ArmoryType.Mod or 0 == Count then
+    self.Group_Num:SetVisibility(UE4.ESlateVisibility.Collapsed)
   else
-    self.TextHave:SetVisibility(UE4.ESlateVisibility.Visible)
-    self.Num:SetVisibility(UE4.ESlateVisibility.Visible)
+    self.Group_Num:SetVisibility(UE4.ESlateVisibility.Visible)
     self.Num:SetText(Count)
   end
 end
@@ -104,9 +113,13 @@ function M:SetSelected(IsSelected)
   end
   self:StopAllAnimations()
   if IsSelected then
+    if self["Img_Quality_Hover_" .. self.Content.Rarity] then
+      self.Img_Quality_Hover:SetBrushFromTexture(self["Img_Quality_Hover_" .. self.Content.Rarity])
+    end
     self:PlayAnimation(self.Click)
   else
     self:PlayAnimation(self.Normal)
+    self:SetRarity(self.Content.Rarity)
   end
 end
 

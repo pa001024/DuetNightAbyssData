@@ -1,5 +1,5 @@
 local SetTimeOfDayNode = Class("StoryCreator.StoryLogic.StorylineNodes.BaseQuestNode")
-local TIME_ELAPSE_TAG_PREFIX = "SetTimeOfDayNode_"
+local TIME_ELAPSE_TAG_PREFIX = "SetTimeOfDayNode_TaskNode"
 
 function SetTimeOfDayNode:Init()
   self.TargetTime = 0
@@ -10,17 +10,13 @@ function SetTimeOfDayNode:Init()
   self.ForceWeatherType = -1
 end
 
-function SetTimeOfDayNode:GetTimeElapseTag()
-  return TIME_ELAPSE_TAG_PREFIX .. tostring(self.Key or "Unknown")
-end
-
 function SetTimeOfDayNode:Execute()
   if not self.EnvironmentManager or not IsValid(self.EnvironmentManager) then
     local Player = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
     self.EnvironmentManager = UE4.UGameplayStatics.GetActorOfClass(Player, UE4.AEnvironmentManager:StaticClass())
   end
   self.EnvironmentManager:SetTimeOfDay(self.TargetTime, true, ESetTODReason.DesignSet, self.NeedLerp, self.LerpTime)
-  local Tag = self:GetTimeElapseTag()
+  local Tag = TIME_ELAPSE_TAG_PREFIX
   if self.StopTimeElapse then
     self.EnvironmentManager:SetEnableTimeElapse(false, Tag)
   else

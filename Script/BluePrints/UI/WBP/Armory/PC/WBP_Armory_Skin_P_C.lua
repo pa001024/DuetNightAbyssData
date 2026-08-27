@@ -90,6 +90,11 @@ function M:Construct()
       {Type = "Img", ImgShortPath = "LS"}
     }
   })
+  self.Key_CheckMod:CreateCommonKey({
+    KeyInfoList = {
+      {Type = "Img", ImgShortPath = "Menu"}
+    }
+  })
   self.Key_Show:CreateCommonKey({
     KeyInfoList = {
       {Type = "Img", ImgShortPath = "View"}
@@ -103,6 +108,11 @@ function M:Construct()
   self.Key_Custom:CreateCommonKey({
     KeyInfoList = {
       {Type = "Img", ImgShortPath = "Y"}
+    }
+  })
+  self.Btn_FX.Key_Gamepad:CreateCommonKey({
+    KeyInfoList = {
+      {Type = "Img", ImgShortPath = "Menu"}
     }
   })
   M.Super.Construct(self)
@@ -155,6 +165,8 @@ function M:UpdateKeySetting()
   self:ClearAllKeyEvents()
   self.BottomKeyInfo = {}
   self.RepeatKeyDownEvents = {}
+  self.EnableMouseWheel = self.CurrentTopTabIdx ~= self.WeaponStanceFXTabIdx and self.CurrentTopTabIdx ~= self.MVPTabIdx
+  self.EnableDrag = self.EnableMouseWheel
   if self.IsGamepadInput then
     local StateName = self.FSM:Peak().Name
     if StateName == FocusAreas.Resource then
@@ -179,11 +191,24 @@ function M:UpdateKeySetting()
           self:AddKeyDownEvent(UIConst.GamePadKey.FaceButtonTop, function()
             self.WBP_Armory_SkinMod:OnBtnModClicked()
           end)
+          self:AddKeyDownEvent(Const.GamepadSpecialRight, function()
+            if not self.Btn_CheckMod:IsMenuAnchorOpen() then
+              self.Btn_CheckMod:OpenMenuAnchor()
+            end
+          end)
+          self:AddKeyUpEvent(Const.GamepadSpecialRight, function()
+            if self.Btn_CheckMod:IsMenuAnchorOpen() then
+              self.Btn_CheckMod:CloseMenuAnchor()
+            end
+          end)
           self:AddKeyDownEvent(UIConst.GamePadKey.LeftThumb, self.OnGamePadFocusToModDetailsKeyDown)
         end
       end
       if self.Panel_LevelUp:IsVisible() then
         self:AddKeyDownEvent(UIConst.GamePadKey.LeftThumb, self.OnGamePadLeftThumbKeyDown)
+      end
+      if self.Btn_FX:IsVisible() then
+        self:AddKeyDownEvent(UIConst.GamePadKey.SpecialRight, self.OpenSkinFxKeyDown)
       end
       table.insert(self.BottomKeyInfo, self.HideUI_KeyInfoList)
       if self.EnableMouseWheel and self.ActorController:IsEnableCameraScrolling() then
@@ -239,11 +264,14 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
   end
   self.IsGamepadInput = CurInputDevice == ECommonInputType.Gamepad
   if self.IsGamepadInput then
+    self.Btn_CheckMod.Tips_MenuAnchor:SetUseApplicationMenuStack(false)
     self.Key_Show:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     self.Panel_Key_Dye:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     self.Panel_Key_Custom:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     self.Key_LevelUp:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    self.Btn_FX.Key_Gamepad:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     self.Key_Mod:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    self.Key_CheckMod:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     if not self.IsInFocusPath then
       return
     end
@@ -259,11 +287,14 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
       self.Key_LevelUp:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end
   else
+    self.Btn_CheckMod.Tips_MenuAnchor:SetUseApplicationMenuStack(true)
     self.Panel_Key_Dye:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Key_Show:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Panel_Key_Custom:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Key_LevelUp:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Btn_FX.Key_Gamepad:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Key_Mod:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Key_CheckMod:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
   self:UpdateKeySetting()
 end
@@ -606,6 +637,15 @@ function M:OnGamePadLeftThumbKeyDown()
   return UIUtils.Handled, true
 end
 
+function M:OpenSkinFxKeyDown()
+  if not self.SkinMap then
+    return
+  end
+  if self:HasSkinFxShow(self.SkinMap[self.SelectedSkinId]) then
+    self:OnClickFxWidget()
+  end
+end
+
 function M:OnGamePadFocusToModDetailsKeyDown()
   if self.Type ~= CommonConst.DataType.Weapon then
     return
@@ -633,7 +673,7 @@ function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   local StateName = self.FSM:Peak().Name
-  if InKeyName == Const.GamepadFaceButtonDown and StateName ~= FocusAreas.Resource then
+  if InKeyName == Const.GamepadFaceButtonDown and StateName ~= FocusAreas.Resource and not UIUtils.HasAnyFocus(self.WBP_Armory_SkinMod) then
     self:OnGamePadConfirKeyDown()
     return UE4.UWidgetBlueprintLibrary.Handled()
   end
@@ -658,6 +698,17 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
     return UE4.UWidgetBlueprintLibrary.Handled()
   end
   local Reply, IsHandled = self:ProcessOnKeyDown(MyGeometry, InKeyEvent)
+  if IsHandled then
+    return Reply
+  end
+  return UE4.UWidgetBlueprintLibrary.Handled()
+end
+
+function M:OnKeyUp(MyGeometry, InKeyEvent)
+  if CommonUtils:IfExistSystemGuideUI(self) then
+    return UE4.UWidgetBlueprintLibrary.Handled()
+  end
+  local Reply, IsHandled = self:ProcessOnKeyUp(MyGeometry, InKeyEvent)
   if IsHandled then
     return Reply
   end

@@ -22,6 +22,13 @@ function M:Construct()
   self.Button_Area.OnUnhovered:Add(self, self.BtnAreaOnUnhovered)
   self.Button_Area.OnClicked:Add(self, self.BtnAreaOnClicked)
   self.Button_Area.OnPressed:Add(self, self.BtnAreaOnPressed)
+  if not self.OriginalClickMethod then
+    self.OriginalClickMethod = self.Button_Area.ClickMethod
+  end
+  if self.GameInputModeSubsystem then
+    self.GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.ApplyClickMethodByInputType)
+  end
+  self:ApplyClickMethodByInputType()
 end
 
 function M:Destruct()
@@ -33,6 +40,24 @@ function M:Destruct()
   self.Button_Area.OnUnhovered:Remove(self, self.BtnAreaOnUnhovered)
   self.Button_Area.OnClicked:Remove(self, self.BtnAreaOnClicked)
   self.Button_Area.OnPressed:Remove(self, self.BtnAreaOnPressed)
+  if self.OriginalClickMethod then
+    self.Button_Area:SetClickMethod(self.OriginalClickMethod)
+    self.OriginalClickMethod = nil
+  end
+end
+
+function M:ApplyClickMethodByInputType(CurInputDevice, CurGamepadName)
+  if not self.GameInputModeSubsystem then
+    return
+  end
+  if self.GameInputModeSubsystem and not CurInputDevice then
+    CurInputDevice = self.GameInputModeSubsystem:GetCurrentInputType()
+  end
+  if CurInputDevice == ECommonInputType.Gamepad then
+    self.Button_Area:SetClickMethod(EButtonClickMethod.DownAndUp)
+  else
+    self.Button_Area:SetClickMethod(EButtonClickMethod.PreciseClick)
+  end
 end
 
 function M:BtnAreaOnPressed()

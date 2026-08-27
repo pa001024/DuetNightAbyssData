@@ -5,6 +5,9 @@ local M = Class({
 
 function M:Construct()
   self.List_Item.BP_OnEntryGenerated:Add(self, self.OnListItemEntryGenerated)
+  self.List_Item.OnCreateEmptyContent:Bind(self, function()
+    return self:CreateEmptyItem()
+  end)
 end
 
 function M:Destruct()
@@ -31,6 +34,7 @@ end
 
 function M:InitItemList(SubmitId)
   self.DisplayItems = {}
+  self.List_Item:ClearListItems()
   if not SubmitId then
     DebugPrint("展示物品弹窗: SubmitId is nil")
     return
@@ -88,7 +92,15 @@ function M:InitItemList(SubmitId)
     Obj.Owner = self.Owner
     self.List_Item:AddItem(Obj)
   end
+  self.List_Item:SetScrollbarVisibility(ESlateVisibility.Collapsed)
   self.List_Item:SetControlScrollbarInside(true)
+  self.List_Item:RequestFillEmptyContent()
+end
+
+function M:CreateEmptyItem()
+  local Obj = NewObject(UIUtils.GetCommonItemContentClass())
+  Obj.IsEmpty = true
+  return Obj
 end
 
 function M:OnContentFocusReceived(MyGeometry, InFocusEvent)
@@ -117,7 +129,8 @@ function M:OnListItemEntryGenerated(Widget)
   if Widget.ItemIdx == self.DefaultSelectItemIdx then
     self.bDefaultItemSelected = true
     Widget:RealClicked(true)
-    self.List_Item:NavigateToIndex(Widget.ItemIdx)
+    local CurrentItemIdx = math.max(0, Widget.ItemIdx - 1)
+    self.List_Item:NavigateToIndex(CurrentItemIdx)
   end
 end
 

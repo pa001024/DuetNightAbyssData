@@ -235,6 +235,34 @@ return ReadOnly("GlobalPassiveData", {
     ID = 15221,
     Vars = {Buff = 2015221, LastTime = 10}
   },
+  [16121] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HitCountBuff.BP_AbyssGP_HitCountBuff",
+    Camp = "Player",
+    ID = 16121,
+    Vars = {
+      Buff = 2016121,
+      DamageTag = "Skill",
+      HitCount = 20,
+      LastTime = 10
+    }
+  },
+  [16211] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_SkillAddBuff.BP_AbyssGP_SkillAddBuff",
+    Camp = "Player",
+    ID = 16211,
+    Vars = {Buff = 2016211, LastTime = 18}
+  },
+  [16221] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HitCountBuff.BP_AbyssGP_HitCountBuff",
+    Camp = "Player",
+    ID = 16221,
+    Vars = {
+      Buff = 2016221,
+      DamageTag = "Weapon",
+      HitCount = 20,
+      LastTime = 10
+    }
+  },
   [20002] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HitRemoveBuffNew.BP_AbyssGP_HitRemoveBuffNew",
     Camp = "Monster",
@@ -658,6 +686,17 @@ return ReadOnly("GlobalPassiveData", {
       Element = "Water",
       MaxSkillInten = 5,
       Penetration = 0.05
+    }
+  },
+  [30106] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Raid/BP_RaidGP_016.BP_RaidGP_016",
+    Camp = "Player",
+    ID = 30106,
+    Vars = {
+      Divider = 1,
+      LastTime = 12,
+      MaxHyper = 11,
+      Penetration = 0.04
     }
   },
   [30101001] = {

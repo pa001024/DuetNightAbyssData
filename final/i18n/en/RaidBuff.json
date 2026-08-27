@@ -70,5 +70,17 @@
       "10%",
       "50%"
     ]
+  },
+  {
+    "RaidBuffID": 16,
+    "RaidBuffDes": "For every 100% by which Overflow Intensity exceeds 100%, the character's Skill DMG and Overflow DMG ignore 4% of the target's DEF, up to 40%.\nWhen the character consumes Disruption, grants +60% Trigger Probability for 12s, stacking up to 3 times.",
+    "RaidBuffParameter": [
+      "100%",
+      "4%",
+      "40%",
+      "60%",
+      "12",
+      "3"
+    ]
   }
 ]

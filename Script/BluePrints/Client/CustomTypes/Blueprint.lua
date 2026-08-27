@@ -10,17 +10,17 @@ Draft.__Props__ = {
   Name = prop.getter("Data", "Name"),
   DraftDoingNum = prop.prop("Int", "client save", 0),
   DraftCompleteNum = prop.prop("Int", "client save", 0),
+  StartTime = prop.prop("Int", "client save"),
+  State = prop.prop("Int", "client save", 0),
+  Count = prop.prop("Int", "client save", 0),
+  Resource = prop.getter("RedirectResourceDataWrapper", "Resource"),
+  Weapon = prop.getter("RedirectWeaponDataWrapper", "Weapon"),
+  Mod = prop.getter("RedirectModDataWrapper", "Mod"),
+  IronTicket = prop.getter("RedirectIronTicketDataWrapper", "IronTicket"),
   ProductType = prop.getter("Data", "ProductType"),
   ProductId = prop.getter("Data", "ProductId"),
   ProductNum = prop.getter("Data", "ProductNum"),
   Time = prop.getter("Data", "Time"),
-  Resource = prop.getter("RedirectData", "Resource"),
-  Weapon = prop.getter("RedirectData", "Weapon"),
-  Mod = prop.getter("RedirectData", "Mod"),
-  IronTicket = prop.getter("RedirectData", "IronTicket"),
-  StartTime = prop.prop("Int", "client save"),
-  State = prop.prop("Int", "client save", 0),
-  Count = prop.prop("Int", "client save", 0),
   IsInfinity = prop.getter("Data", "IsInfinity"),
   FoundryCost = prop.getter("Data", "FoundryCost"),
   Rarity = prop.getter("Data", "Rarity"),
@@ -35,17 +35,32 @@ function Draft:Data()
   return DataMgr.Draft[self.DraftId]
 end
 
-function Draft:RedirectData()
-  local RedirectData = {}
-  RedirectData.Resource = self:RedirectResourceData()
-  RedirectData.Weapon = self:RedirectWeaponData()
-  RedirectData.Mod = self:RedirectModData()
-  RedirectData.IronTicket = self:RedirectIronTicketData()
-  return RedirectData
+function Draft:RedirectResourceDataWrapper()
+  return {
+    Resource = self:RedirectResourceData()
+  }
+end
+
+function Draft:RedirectWeaponDataWrapper()
+  return {
+    Weapon = self:RedirectWeaponData()
+  }
+end
+
+function Draft:RedirectModDataWrapper()
+  return {
+    Mod = self:RedirectModData()
+  }
+end
+
+function Draft:RedirectIronTicketDataWrapper()
+  return {
+    IronTicket = self:RedirectIronTicketData()
+  }
 end
 
 function Draft:RedirectResourceData()
-  local DraftInfo = DataMgr.Draft[self.DraftId]
+  local DraftInfo = self:Data()
   local Resource = {}
   if not DraftInfo.Resource then
     return Resource
@@ -62,7 +77,7 @@ function Draft:RedirectResourceData()
 end
 
 function Draft:RedirectWeaponData()
-  local DraftInfo = DataMgr.Draft[self.DraftId]
+  local DraftInfo = self:Data()
   local Weapon = {}
   if not DraftInfo.Resource then
     return Weapon
@@ -79,7 +94,7 @@ function Draft:RedirectWeaponData()
 end
 
 function Draft:RedirectModData()
-  local DraftInfo = DataMgr.Draft[self.DraftId]
+  local DraftInfo = self:Data()
   local Mod = {}
   if not DraftInfo.Resource then
     return Mod
@@ -96,7 +111,7 @@ function Draft:RedirectModData()
 end
 
 function Draft:RedirectIronTicketData()
-  local DraftInfo = DataMgr.Draft[self.DraftId]
+  local DraftInfo = self:Data()
   local IronTicket = {}
   if not DraftInfo.Resource then
     return IronTicket

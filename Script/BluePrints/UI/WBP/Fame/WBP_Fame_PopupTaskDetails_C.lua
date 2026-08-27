@@ -23,6 +23,8 @@ function M:OnListItemObjectSet(Content)
   rawset(self, "TaskModel", Content.TaskModel)
   rawset(self, "OnMenuOpenChanged", Content.OnMenuOpenChanged)
   rawset(self, "Parent", Content.Parent)
+  rawset(self, "ItemType", Content.ItemType)
+  rawset(self, "ItemId", Content.ItemId)
   Content.SelfWidget = self
   self.TaskNPCIcon = self.TaskNPCIcon or "空（临时）"
   self.TaskTitle = self.TaskTitle or "空（临时）"
@@ -37,6 +39,18 @@ function M:OnListItemObjectSet(Content)
   self:InitSubmissionInfo()
   self:RefreshButtonState()
   self:UpdateGamePadStyle()
+  if self.TaskID then
+    local tableData = DataMgr.ReputationEntrust[self.TaskID]
+    if tableData then
+      if 2 == tableData.Rarity then
+        self.BG_Quality:SetBrushFromTexture(self.BG_Quality_2)
+      elseif 3 == tableData.Rarity then
+        self.BG_Quality:SetBrushFromTexture(self.BG_Quality_3)
+      elseif 4 == tableData.Rarity then
+        self.BG_Quality:SetBrushFromTexture(self.BG_Quality_4)
+      end
+    end
+  end
 end
 
 function M:RefreshButtonState()
@@ -101,6 +115,24 @@ function M:InitRewardInfo()
     Callback = self.OnMenuOpenChanged
   }
   self.List_Reward:AddItem(Content)
+  do
+    local ItemType = self.ItemType
+    local ItemId = self.ItemId
+    if ItemType and ItemId then
+      local Content = NewObject(UIUtils.GetCommonItemContentClass())
+      Content.Id = ItemId
+      Content.ItemType = ItemType
+      local ResourceInfo = DataMgr[ItemType][ItemId]
+      Content.Icon = ResourceInfo.Icon
+      Content.Count = nil
+      Content.IsShowDetails = true
+      Content.OnMenuOpenChangedEvents = {
+        Obj = self.Parent,
+        Callback = self.OnMenuOpenChanged
+      }
+      self.List_Reward:AddItem(Content)
+    end
+  end
 end
 
 function M:InitSubmissionInfo()

@@ -1,5 +1,6 @@
 require("UnLua")
 local M = Class("BluePrints.UI.UI_PC.Common.Common_Dialog.Common_Dialog_ContentBase")
+local LIST_REWARD_FOCUS_TIMER_KEY = "CommonSiftListRewardDefaultFocus"
 
 function M:Construct()
   M.Super.Construct(self)
@@ -269,6 +270,31 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
   return M.Super.OnFocusReceived(self, MyGeometry, InFocusEvent)
 end
 
+function M:GetDefaultGamepadFocusTarget()
+  if not self.List_Selection then
+    return nil
+  end
+  local FirstSiftItem = self.List_Selection:GetChildAt(0)
+  if not FirstSiftItem then
+    return self.List_Selection
+  end
+  if FirstSiftItem.WBox_Selection then
+    return FirstSiftItem.WBox_Selection:GetChildAt(0) or FirstSiftItem
+  end
+  if FirstSiftItem.ListReward then
+    return FirstSiftItem.ListReward
+  end
+  return FirstSiftItem
+end
+
+function M:HandleDialogFocused()
+  local FocusTarget = self:GetDefaultGamepadFocusTarget()
+  if FocusTarget and self.List_Selection then
+    self.List_Selection:ScrollToStart()
+  end
+  return FocusTarget
+end
+
 function M:InitListenEvent()
   if IsValid(self.GameInputModeSubsystem) then
     self.GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.RefreshOpInfoByInputDevice)
@@ -296,29 +322,38 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
 end
 
 function M:InitGamePadTarget()
+  if not IsValid(self.GameInputModeSubsystem) then
+    return
+  end
   self.CurInputDevice = self.GameInputModeSubsystem:GetCurrentInputType()
-  if self.CurInputDevice == ECommonInputType.Gamepad then
-    local firstSiftItem = self.List_Selection:GetChildAt(0)
-    self.GameInputModeSubsystem:SetTargetUIFocusWidget(firstSiftItem)
-    if firstSiftItem and firstSiftItem.WBox_Selection then
-      local firstCheckBox = firstSiftItem.WBox_Selection:GetChildAt(0)
-      self.GameInputModeSubsystem:SetTargetUIFocusWidget(firstCheckBox)
-      if firstCheckBox and firstCheckBox.CheckBox_Selection then
-        self.GameInputModeSubsystem:SetTargetUIFocusWidget(firstCheckBox.CheckBox_Selection)
-        self.List_Selection:SetScrollOffset(0)
+  self:RemoveTimer(LIST_REWARD_FOCUS_TIMER_KEY)
+  if self.CurInputDevice ~= ECommonInputType.Gamepad then
+    return
+  end
+  local FocusTarget = self:GetDefaultGamepadFocusTarget()
+  if FocusTarget then
+    self.GameInputModeSubsystem:SetTargetUIFocusWidget(FocusTarget)
+  end
+  if self.List_Selection then
+    self.List_Selection:ScrollToStart()
+  end
+  local FirstSiftItem = self.List_Selection and self.List_Selection:GetChildAt(0)
+  if FirstSiftItem and FirstSiftItem.ListReward then
+    self:AddTimer(0.1, function()
+      if not IsValid(self) or not IsValid(self.GameInputModeSubsystem) then
+        return
       end
-    elseif firstSiftItem and firstSiftItem.ListReward then
-      local firstCheckBox = firstSiftItem.ListReward:GetItemAt(0)
-      if firstCheckBox and firstCheckBox.UI then
-        self:AddTimer(0.1, function()
-          self.GameInputModeSubsystem:SetTargetUIFocusWidget(firstCheckBox.UI)
-        end, false)
-        self.List_Selection:ScrollToStart()
-      else
-        self.GameInputModeSubsystem:SetTargetUIFocusWidget(firstSiftItem.ListReward)
+      if self.GameInputModeSubsystem:GetCurrentInputType() ~= ECommonInputType.Gamepad then
+        return
+      end
+      local CurrentFirstSiftItem = self.List_Selection and self.List_Selection:GetChildAt(0)
+      local CurrentFirstContent = CurrentFirstSiftItem and CurrentFirstSiftItem.ListReward and CurrentFirstSiftItem.ListReward:GetItemAt(0)
+      local DelayedFocusTarget = CurrentFirstContent and CurrentFirstContent.UI or self:GetDefaultGamepadFocusTarget()
+      if DelayedFocusTarget then
+        self.GameInputModeSubsystem:SetTargetUIFocusWidget(DelayedFocusTarget)
         self.List_Selection:ScrollToStart()
       end
-    end
+    end, false, 0, LIST_REWARD_FOCUS_TIMER_KEY)
   end
 end
 

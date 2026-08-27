@@ -6,17 +6,24 @@ local EDetectTargetMethods = {
   ProjectToScreenAndLineTrace = 3
 }
 local M = Class("BluePrints.Common.TimerMgr")
-local CameraModeEnum = {0, 1}
-M.CurrentCameraMode = 0
+
+function M:Init(GuildManager)
+  self.GuildManager = GuildManager
+end
 
 function M:Rotate(Roll, Pitch, Yaw)
+  local bTopView = self.GuildManager.Settings.CameraMoveMode == UE4.EGuildCameraMoveMode.TopDownView
   local CurRotation = self:K2_GetActorRotation()
   Yaw = Yaw * self.YawSpeed
   Pitch = Pitch * self.PitchSpeed
   CurRotation.Yaw = CurRotation.Yaw + Yaw
-  CurRotation.Pitch = CurRotation.Pitch + Pitch
   CurRotation.Yaw = math.clamp(CurRotation.Yaw, self.YawMin, self.YawMax)
-  CurRotation.Pitch = math.clamp(CurRotation.Pitch, -self.PitchMax, -self.PitchMin)
+  if bTopView then
+    CurRotation.Pitch = -89.9
+  else
+    CurRotation.Pitch = CurRotation.Pitch + Pitch
+    CurRotation.Pitch = math.clamp(CurRotation.Pitch, -self.PitchMax, -self.PitchMin)
+  end
   self:K2_SetActorRotation(CurRotation, false)
 end
 
@@ -42,6 +49,10 @@ function M:Zoom(Distance)
   TargetArmLength = TargetArmLength + Distance * self.ZoomSpeed
   TargetArmLength = math.clamp(TargetArmLength, self.ZoomMin, self.ZoomMax)
   self.SpringArm.TargetArmLength = TargetArmLength
+end
+
+function M:OnChangedCameraMode()
+  self:Rotate(0, 0, 0)
 end
 
 return M

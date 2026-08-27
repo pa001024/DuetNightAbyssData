@@ -26,8 +26,9 @@ function M:HideAllText()
   end
 end
 
-function M:Init(ActionName, IsByStl)
+function M:Init(ActionName, IsByStl, DescriptionTextMapId)
   self.SkillType = ActionName
+  self.DescriptionTextMapId = DescriptionTextMapId or ""
   self.Key:SetVisibility(UE4.ESlateVisibility.Visible)
   self.IsByStl = IsByStl
   if not self.IsByStl then
@@ -222,7 +223,10 @@ function M:ShowActionKeyAndTextByGamePad(ActionName)
 end
 
 function M:SetActionText(ActionName)
-  if "Attack" == ActionName then
+  if self.DescriptionTextMapId ~= "" then
+    self.Key.Text_Describe:SetText(GText(self.DescriptionTextMapId))
+    return
+  elseif "Attack" == ActionName then
     self.Key.Text_Describe:SetText(GText("Guide_HighlightButton_Attack"))
   elseif "MoveCamera" == ActionName then
     self.Key.Text_Describe:SetText(GText("Guide_HighlightButton_MoveCamera"))
@@ -232,6 +236,8 @@ function M:SetActionText(ActionName)
     self.Key.Text_Describe:SetText(GText("Guide_HighlightButton_Skill2"))
   elseif "Skill3" == ActionName then
     self.Key.Text_Describe:SetText(GText("Guide_HighlightButton_Skill3"))
+  elseif "Jump" == ActionName then
+    self.Key.Text_Describe:SetText(GText("UI_Keyboard_Map_Jump"))
   elseif self.SkillType == "Interactive" then
     self.Key.Text_Describe:SetText(GText("MESSAGE_TITLE_LOADING_21_PC"))
   elseif self.SkillType == "Slide" then

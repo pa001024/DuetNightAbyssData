@@ -8,8 +8,8 @@ function Component:ExploreIdActive(RarelyId, SubRegionId)
     return
   end
   local Explore = self.Explores[RarelyId]
-  if Explore and not Explore:IsInActive() then
-    return
+  if Explore and not Explore:IsInActive() and 0 == Explore.StarBonusList:Length() then
+    return false
   end
   
   local function Callback(RetCode)
@@ -89,7 +89,7 @@ function Component:ExploreIdCompleteLimit(RarelyId)
   self:CallServer("SetExploreChallageComplete", Callback, RarelyId)
 end
 
-function Component:ExploreIdComplete(RarelyId)
+function Component:ExploreIdComplete(RarelyId, StarLevel)
   if not self:IsRealInBigWorld() then
     return
   end
@@ -105,7 +105,7 @@ function Component:ExploreIdComplete(RarelyId)
     end
   end
   
-  self:CallServer("ExploreIdComplete", Callback, RarelyId or 0)
+  self:CallServer("ExploreIdComplete", Callback, RarelyId or 0, StarLevel or -1)
 end
 
 function Component:ExploreIdsComplete(RarelyIdTable)

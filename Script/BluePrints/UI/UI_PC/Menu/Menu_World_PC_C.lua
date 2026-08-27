@@ -173,7 +173,7 @@ function Menu_World_PC_C:OnScrollBox_FunctionScrolled()
       return
     end
     UIUtils.UpdateScrollBoxReddot(self.ScrollBox_Function, self.Com_RedDot_Up, self.Com_RedDot_Down, nil, nil, ReddotAndNewCalFunc)
-  end)
+  end, false, 0, "UpdateEscScrollBoxReddot", true)
 end
 
 function Menu_World_PC_C:ReceiveEnterState(EnteredState)

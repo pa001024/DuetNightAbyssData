@@ -1,6 +1,6 @@
 return {
   storyName = "Test_LJ",
-  storyDescription = "策划测试用 STL（AI 维护）",
+  storyDescription = "",
   lineData = {
     {
       startStory = "17910000000000001",
@@ -133,15 +133,16 @@ return {
               ProceduralCameraId = 1,
               HideNpcs = false,
               HideMonsters = true,
-              HideAllBattleEntity = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
               HideMechanismsFX = false,
               ShowSkipButton = true,
-              ShowAutoPlayButton = true,
               ShowReviewButton = true,
               ShowWikiButton = true,
               SkipToOption = false,
               DisableNpcOptimization = true,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",

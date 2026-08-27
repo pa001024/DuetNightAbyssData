@@ -37,6 +37,7 @@ function BP_NPCFollowComponent_C:InitConfig()
   else
     self.CachedNpcId = tonumber(NpcIdStr)
   end
+  self.CachedFollowComponentId = tonumber(self.FollowComponentId) or 0
   self.CachedAutoSpawn = self.bAutoSpawn == true
   self.CachedDisableNpcMovement = self.bDisableNpcMovement ~= false
   self.CachedSpawnDelay = self.SpawnDelay or 0
@@ -51,6 +52,10 @@ function BP_NPCFollowComponent_C:InitConfig()
   else
     self.CachedLocationOffset = FVector(0, 0, 0)
   end
+end
+
+function BP_NPCFollowComponent_C:GetFollowComponentId()
+  return self.CachedFollowComponentId or 0
 end
 
 function BP_NPCFollowComponent_C:TrySpawnNpc()

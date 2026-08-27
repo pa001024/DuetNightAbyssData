@@ -1435,7 +1435,9 @@ function Component:EnterOrExitTaskRegion(WidgetName, IsEnter)
     TaskBar:PlayAnimation(TaskBar.Tooltip2_Out)
     if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
       TaskBar:StopAnimation(TaskBar.Tooltip_Out)
-      TaskBar:PlayAnimation(TaskBar.Tooltip_In)
+      if TaskBar.CanPlayToolTipIn and TaskBar:CanPlayToolTipIn() then
+        TaskBar:PlayAnimation(TaskBar.Tooltip_In)
+      end
     end
     self:ShowOrHideGuidePointInRangeIndicator(false)
   end

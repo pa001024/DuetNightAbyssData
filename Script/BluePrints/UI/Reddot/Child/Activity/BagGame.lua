@@ -65,12 +65,13 @@ function ReddotTreeNode_BagGame:OnInitNodeCache(NodeCache)
 end
 
 function ReddotTreeNode_BagGame:_InitAwardCache(NodeCache)
-  local LevelsInfo = DataMgr.BackpackPuzzleLevel
+  local LevelsInfo = BagGameModel:GetLevelsInfo()
   if not LevelsInfo then
     return
   end
   NodeCache.Detail = {}
-  for LevelId, _ in pairs(LevelsInfo) do
+  for _, LevelInfo in ipairs(LevelsInfo) do
+    local LevelId = LevelInfo.LevelId
     if BagGameModel:HasRewardToGet(LevelId) then
       NodeCache.Detail[LevelId] = true
       NodeCache.Count = NodeCache.Count + 1
@@ -79,9 +80,18 @@ function ReddotTreeNode_BagGame:_InitAwardCache(NodeCache)
 end
 
 function ReddotTreeNode_BagGame:_InitNewCache(NodeCache)
+  local CurrentLevelIdSet = {}
+  local LevelsInfo = BagGameModel:GetLevelsInfo()
+  for _, LevelInfo in ipairs(LevelsInfo or {}) do
+    CurrentLevelIdSet[LevelInfo.LevelId] = true
+  end
   for k, v in pairs(NodeCache.Detail) do
-    if type(k) == "number" and true == v then
-      NodeCache.Count = NodeCache.Count + 1
+    if type(k) == "number" then
+      if CurrentLevelIdSet[k] and true == v then
+        NodeCache.Count = NodeCache.Count + 1
+      elseif not CurrentLevelIdSet[k] then
+        NodeCache.Detail[k] = nil
+      end
     end
   end
 end
@@ -161,11 +171,12 @@ function ReddotTreeNode_BagGame:_Judge(EventId)
     Avatar:_TryRefreshBagGameNewReddot()
   end
   if self.Name == "BagGameAward" then
-    local LevelsInfo = DataMgr.BackpackPuzzleLevel
+    local LevelsInfo = BagGameModel:GetLevelsInfo()
     if not LevelsInfo then
       return false
     end
-    for LevelId, _ in pairs(LevelsInfo) do
+    for _, LevelInfo in ipairs(LevelsInfo) do
+      local LevelId = LevelInfo.LevelId
       if BagGameModel:HasRewardToGet(LevelId) then
         return true
       end

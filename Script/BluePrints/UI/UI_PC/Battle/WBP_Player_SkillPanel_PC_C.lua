@@ -22,6 +22,62 @@ function WBP_Player_SkillPanel_PC_C:Initialize(Initializer)
   self.MyFVector2D = FVector2D(0, 0)
 end
 
+function WBP_Player_SkillPanel_PC_C:SetShootTargetHUDMode(IsActive)
+  local ShootTargetHiddenWidgetNames = {
+    "Battle_Skill_1",
+    "Battle_Skill_2",
+    "Assist_Skill",
+    "Dodge_Skill",
+    "Energy_Skill",
+    "Overlay_Spiritualized",
+    "Overlay_Mounts"
+  }
+  if IsActive then
+    if not self.ShootTargetWidgetVisibilityCache then
+      self.ShootTargetWidgetVisibilityCache = {}
+      for _, WidgetName in ipairs(ShootTargetHiddenWidgetNames) do
+        local Widget = self[WidgetName]
+        if Widget then
+          self.ShootTargetWidgetVisibilityCache[WidgetName] = Widget:GetVisibility()
+        end
+      end
+      if self.Weapon_Panel then
+        self.ShootTargetWeaponPanelVisibility = self.Weapon_Panel:GetVisibility()
+      end
+    end
+    for _, WidgetName in ipairs(ShootTargetHiddenWidgetNames) do
+      local Widget = self[WidgetName]
+      if Widget then
+        Widget:SetVisibility(ESlateVisibility.Collapsed)
+      end
+    end
+    if self.Weapon_Panel then
+      self.Weapon_Panel:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    end
+    if IsValid(self.OwnerPlayer) then
+      self:RefreshWeaponIcon()
+    end
+    return
+  end
+  local VisibilityCache = self.ShootTargetWidgetVisibilityCache
+  if VisibilityCache then
+    for WidgetName, Visibility in pairs(VisibilityCache) do
+      local Widget = self[WidgetName]
+      if Widget then
+        Widget:SetVisibility(Visibility)
+      end
+    end
+    self.ShootTargetWidgetVisibilityCache = nil
+  end
+  if self.Weapon_Panel and self.ShootTargetWeaponPanelVisibility ~= nil then
+    self.Weapon_Panel:SetVisibility(self.ShootTargetWeaponPanelVisibility)
+  end
+  self.ShootTargetWeaponPanelVisibility = nil
+  if IsValid(self.OwnerPlayer) then
+    self:RefreshWeaponIcon()
+  end
+end
+
 function WBP_Player_SkillPanel_PC_C:Construct()
   self.Super.Construct(self)
   self:InitListenEvent()

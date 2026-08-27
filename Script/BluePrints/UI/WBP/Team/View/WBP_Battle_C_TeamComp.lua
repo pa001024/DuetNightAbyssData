@@ -168,6 +168,9 @@ function Component:ResetTeamAbout()
 end
 
 function Component:OpenTeamInfo()
+  if rawget(self, "OpenTeamInfoAsync") then
+    return
+  end
   if not TeamModel:GetTeam() or #TeamModel:GetTeam().Members <= 1 then
     return
   end
@@ -181,7 +184,7 @@ function Component:OpenTeamInfo()
   DebugPrint(DebugTag, LXYTag, "OpenTeamInfo")
   self:PlayAnimation(self.Team_Out)
   CoroutineUtils.RunAsyncTask(self, "OpenTeamInfoAsync", function(CoObj)
-    local TeamInfoUI = UIManager(self):GetUIObjAsync(TeamCommon.InfoUIName, CoObj)
+    local TeamInfoUI = UIManager(self):GetUIObj(TeamCommon.InfoUIName, CoObj)
     if IsValid(TeamInfoUI) then
       TeamInfoUI:UnbindAllFromAnimationFinished(TeamInfoUI.Auto_Out)
       TeamInfoUI:StopAnimation(TeamInfoUI.Auto_Out)

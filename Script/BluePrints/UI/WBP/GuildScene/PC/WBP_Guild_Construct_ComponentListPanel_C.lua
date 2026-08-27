@@ -182,170 +182,36 @@ function M:CloseByGamepad()
   self.Parent:CloseSidePanel()
 end
 
-function M:GetFallbackComponentItems()
-  return {
-    {
-      UnitId = 900001,
-      ActorId = "TestComponent_001",
-      Name = "石块1",
-      ConsumeValue = 120
-    },
-    {
-      UnitId = 900002,
-      ActorId = "TestComponent_002",
-      Name = "石块2",
-      ConsumeValue = 80
-    },
-    {
-      UnitId = 900003,
-      ActorId = "TestComponent_003",
-      Name = "悬挂灯组",
-      ConsumeValue = 35
-    },
-    {
-      UnitId = 900005,
-      ActorId = "TestComponent_005",
-      Name = "盆栽组合",
-      ConsumeValue = 20
-    }
-  }
-end
-
-function M:GetGuildManager()
-  if self.Parent and self.Parent.GuildManager then
-    return self.Parent.GuildManager
-  end
-  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
-  if GameMode and GameMode.GetGuildConstructManager then
-    return GameMode:GetGuildConstructManager()
-  end
-end
-
-function M:GetPlacedActorStates()
-  local GuildManager = self:GetGuildManager()
-  if not GuildManager then
-    return nil
-  end
-  local StateGetters = {
-    "GetAllActorStates",
-    "GetActorStates",
-    "GetAllConstructActorStates",
-    "GetPlacedActorStates"
-  }
-  for _, FuncName in ipairs(StateGetters) do
-    local Func = GuildManager[FuncName]
-    if Func then
-      local States = Func(GuildManager)
-      if States then
-        return States
-      end
-    end
-  end
-  local IdGetters = {
-    "GetAllActorIds",
-    "GetActorIds",
-    "GetPlacedActorIds"
-  }
-  for _, FuncName in ipairs(IdGetters) do
-    local Func = GuildManager[FuncName]
-    if Func then
-      local ActorIds = Func(GuildManager)
-      if ActorIds then
-        local States = {}
-        local IdList = ActorIds.ToTable and ActorIds:ToTable() or ActorIds
-        for _, ActorId in pairs(IdList) do
-          local ActorState, bOK = GuildManager:GetActorState(ActorId)
-          if false ~= bOK and ActorState then
-            table.insert(States, ActorState)
-          end
-        end
-        return States
-      end
-    end
-  end
-end
-
-function M:GetConsumeValue(UnitId, GuildItemData)
-  if not GuildItemData then
-    return 0
-  end
-  return GuildItemData.PerformanceCost or GuildItemData.PerformanceValue or GuildItemData.Performance or GuildItemData.Cost or GuildItemData.PerformanceCost or 0
-end
-
-function M:BuildItemData(ActorState)
-  if not ActorState or not ActorState.UnitId then
-    return nil
-  end
-  local UnitId = ActorState.UnitId
-  local GuildItemData = DataMgr.GuildItem and DataMgr.GuildItem[UnitId]
-  if not GuildItemData then
-    return nil
-  end
-  return {
-    UnitId = UnitId,
-    ActorId = ActorState.ActorId or ActorState.Guid or ActorState.Id,
-    Name = GuildItemData.Name,
-    ConsumeValue = self:GetConsumeValue(UnitId, GuildItemData)
-  }
-end
-
 function M:GetComponentItems()
-  local Items
-  if self.Parent and self.Parent.GetComponentListItems then
-    Items = self.Parent:GetComponentListItems()
+  local GuildManager = self.Parent.GuildManager
+  if not GuildManager then
+    return {}
   end
-  if not Items then
-    local ActorStates = self:GetPlacedActorStates()
-    if ActorStates then
-      Items = {}
-      local StateList = ActorStates.ToTable and ActorStates:ToTable() or ActorStates
-      for _, ActorState in pairs(StateList) do
-        local ItemData = self:BuildItemData(ActorState)
-        if ItemData then
-          table.insert(Items, ItemData)
-        end
-      end
+  local ActorStates = GuildManager:GetSceneActors()
+  local ActorStateList = ActorStates:ToTable()
+  local ComponentItems = {}
+  for _, ActorState in ipairs(ActorStateList) do
+    local UnitId = ActorState.UnitId
+    local GuildItemData = DataMgr.GuildItem[UnitId]
+    if GuildItemData then
+      table.insert(ComponentItems, {
+        UnitId = UnitId,
+        ActorId = ActorState.Id,
+        Name = GuildItemData.Name or "",
+        Count = 1,
+        SortIndex = #ComponentItems + 1,
+        ConsumeValue = GuildItemData.Cost
+      })
     end
   end
-  local NormalizedItems = self:NormalizeComponentItems(Items or {})
-  if #NormalizedItems <= 0 then
-    return self:NormalizeComponentItems(self:GetFallbackComponentItems())
-  end
-  return NormalizedItems
-end
-
-function M:NormalizeComponentItems(ComponentItems)
-  local Items = {}
-  local ItemList = ComponentItems.ToTable and ComponentItems:ToTable() or ComponentItems
-  for _, ItemData in pairs(ItemList or {}) do
-    local NormalizedItem = self:NormalizeItemData(ItemData)
-    if NormalizedItem then
-      NormalizedItem.SortIndex = #Items + 1
-      table.insert(Items, NormalizedItem)
-    end
-  end
-  return Items
-end
-
-function M:NormalizeItemData(ItemData)
-  if not ItemData then
-    return nil
-  end
-  if ItemData.UnitId and (not ItemData.Name or ItemData.ConsumeValue == nil) then
-    local GuildItemData = DataMgr.GuildItem and DataMgr.GuildItem[ItemData.UnitId]
-    ItemData.Name = ItemData.Name or GuildItemData and GuildItemData.Name or ""
-    ItemData.ConsumeValue = ItemData.ConsumeValue or self:GetConsumeValue(ItemData.UnitId, GuildItemData)
-  end
-  ItemData.Name = ItemData.Name or ""
-  ItemData.ConsumeValue = tonumber(ItemData.ConsumeValue) or 0
-  return ItemData
+  return ComponentItems
 end
 
 function M:MatchSearch(ItemData)
   if not self.SearchText or self.SearchText == "" then
     return true
   end
-  local Name = ItemData.Name or ""
+  local Name = ItemData.DisplayName or GText(ItemData.Name)
   if CommonUtils and CommonUtils.CheckFuzzySearchWithSinglePhase then
     return CommonUtils.CheckFuzzySearchWithSinglePhase({Name}, self.SearchText, false)
   end
@@ -424,14 +290,9 @@ function M:RefreshCost(ComponentItems)
 end
 
 function M:GetTotalConsumeValueLimit()
-  if self.Parent and self.Parent.GetTotalConsumeValueLimit then
-    return self.Parent:GetTotalConsumeValueLimit()
-  end
-  local GuildManager = self:GetGuildManager()
-  if GuildManager and GuildManager.GetPerformanceLimit then
-    return GuildManager:GetPerformanceLimit()
-  end
-  return 60000
+  self.GuildManager = self.GuildManager or self.Parent.GuildManager
+  local CostTotal = self.GuildManager and self.GuildManager.CostTotal or 0
+  return CostTotal
 end
 
 function M:OnComponentItemClicked(ItemData, ItemWidget, IsSelected)
@@ -440,6 +301,9 @@ function M:OnComponentItemClicked(ItemData, ItemWidget, IsSelected)
   end
   self.SelectedItemData = IsSelected and ItemData
   self.SelectedItemWidget = IsSelected and ItemWidget
+  if IsSelected then
+    self.Parent:OnComponentListItemClicked(ItemData)
+  end
 end
 
 function M:OnComponentFocusChanged(ItemWidget)
@@ -451,23 +315,19 @@ function M:OnComponentFocusChanged(ItemWidget)
 end
 
 function M:OnComponentTakeBackClicked(ItemData)
-  if self.Parent and self.Parent.OnComponentTakeBackClicked then
+  if self.Parent.OnComponentTakeBackClicked then
     self.Parent:OnComponentTakeBackClicked(ItemData)
+    self:RefreshUI()
   else
-    ScreenPrint("组件收回接口未接入：" .. tostring(ItemData and ItemData.Name or ""))
+    ScreenPrint("组件收回接口未接入：" .. GText(ItemData.Name))
   end
 end
 
 function M:OnComponentEditClicked(ItemData)
-  if self.Parent and self.Parent.OnComponentEditClicked then
-    ScreenPrint("当前为测试数据：无法编辑")
-    return
-  end
-  if self.Parent and self.Parent.CloseSidePanel then
-    self.Parent:CloseSidePanel()
-  end
-  if self.Parent and self.Parent.SelectActor and ItemData and ItemData.ActorId then
-    self.Parent:SelectActor(ItemData.ActorId)
+  if self.Parent.OnComponentEditClicked then
+    self.Parent:OnComponentEditClicked(ItemData)
+  else
+    ScreenPrint("组件编辑接口未接入：" .. GText(ItemData.Name))
   end
 end
 

@@ -10,6 +10,15 @@ function BP_StorySubsystem_C:TryInitVars()
   StoryVarsObject:TryInitVars()
 end
 
+function BP_StorySubsystem_C:OnRep_StoryVariable(Variables)
+  local StoryVarsObject = self:GetStoryVarsObject()
+  if not StoryVarsObject then
+    UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, VarLogType, "StorySubsystem错误: StoryVarsObject无效", "找不到StoryVarsObject，联系程序排查")
+    return
+  end
+  StoryVarsObject:OnRep_StoryVariable(Variables)
+end
+
 function BP_StorySubsystem_C:ExecuteBlueprintVarFunction(FunctionName, VarName, Vars, QuestChainId, NeedReturnBoolean)
   local VarValue = self:GetInt(VarName)
   local StoryVarsObject = self:GetStoryVarsObject()
@@ -44,10 +53,28 @@ end
 function BP_StorySubsystem_C:ExecuteBlueprintFunction(FunctionName, Vars)
   local StoryVarsObject = self:GetStoryVarsObject()
   if not StoryVarsObject then
-    UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, VarLogType, "StorySubsystem错误: StoryVarsObject无效", "找不到StoryVarsObject，联系程序排查")
+    UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, VarLogType, "StorySubsystem错误: StoryVarsObject无效", "ExecuteBlueprintFunction时找不到StoryVarsObject，联系程序排查")
     return
   end
   return StoryVarsObject:ExecuteBlueprintFunction(FunctionName, Vars)
+end
+
+function BP_StorySubsystem_C:RestoreQuestChainVariables(QuestChainId)
+  local StoryVarsObject = self:GetStoryVarsObject()
+  if not StoryVarsObject then
+    UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, VarLogType, "StorySubsystem错误: StoryVarsObject无效", "RestoreQuestChainVariables时找不到StoryVarsObject，联系程序排查")
+    return
+  end
+  StoryVarsObject:RestoreQuestChainVariables(QuestChainId)
+end
+
+function BP_StorySubsystem_C:FlushGlobalVariables(QuestChainId)
+  local StoryVarsObject = self:GetStoryVarsObject()
+  if not StoryVarsObject then
+    UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, VarLogType, "StorySubsystem错误: StoryVarsObject无效", "FlushGlobalVariables时找不到StoryVarsObject，联系程序排查")
+    return
+  end
+  StoryVarsObject:FlushGlobalVariables(QuestChainId)
 end
 
 return BP_StorySubsystem_C

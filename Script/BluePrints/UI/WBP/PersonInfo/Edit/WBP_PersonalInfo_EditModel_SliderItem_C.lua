@@ -1,4 +1,5 @@
 require("UnLua")
+local MiscUtils = require("Utils.MiscUtils")
 local M = Class("BluePrints.UI.BP_EMUserWidget_C")
 local GAMEPAD_SLIDER_KEY = UIConst.GamePadImgKey.LeftThumb
 local GAMEPAD_SLIDER_THUMB_KEY = "LH"
@@ -96,7 +97,7 @@ function M:HandleSliderCaptureBegin()
 end
 
 function M:HandleSliderCaptureEnd()
-  SPrint("HandleSliderCaptureEnd")
+  MiscUtils.SPrint("HandleSliderCaptureEnd")
   if self.OwnerWidget then
     self.OwnerWidget:OnEndTransformSliderDrag(self.AxisName)
   end

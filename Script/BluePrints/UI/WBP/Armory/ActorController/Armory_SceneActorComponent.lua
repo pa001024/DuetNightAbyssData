@@ -7,12 +7,12 @@ end
 
 local PreviewSceneLoaded = {}
 
-local function IncreacePreviewSceneRefCount(PreviewLevelName)
+local function IncreasePreviewSceneRefCount(PreviewLevelName)
   PreviewSceneLoaded[PreviewLevelName] = PreviewSceneLoaded[PreviewLevelName] or 0
   PreviewSceneLoaded[PreviewLevelName] = PreviewSceneLoaded[PreviewLevelName] + 1
 end
 
-local function DecreacePreviewSceneRefCount(PreviewLevelName)
+local function DecreasePreviewSceneRefCount(PreviewLevelName)
   if PreviewSceneLoaded[PreviewLevelName] then
     PreviewSceneLoaded[PreviewLevelName] = PreviewSceneLoaded[PreviewLevelName] - 1
     if PreviewSceneLoaded[PreviewLevelName] <= 0 then
@@ -66,9 +66,6 @@ local function GetLevelScriptActor(WorldLoader, PreviewLevelName)
 end
 
 function M:TryLoadPreviewScene(SceneType)
-  if _HadAnyPreviewScene() then
-    self.EPreviewSceneType = self.EPreviewSceneType or CommonConst.EPreviewSceneType.PreviewCommon
-  end
   self.EPreviewSceneType = SceneType or self.EPreviewSceneType
   local Path = CommonConst.PreviewScenePaths[self.EPreviewSceneType]
   if not Path then
@@ -104,13 +101,13 @@ function M:TryLoadPreviewScene(SceneType)
       end, PreviewLevelLocation, FRotator(0, 0, 0))
       if bSuccess then
         self.PreviewLevelName = PreviewLevelName
-        IncreacePreviewSceneRefCount(PreviewLevelName)
+        IncreasePreviewSceneRefCount(PreviewLevelName)
         self.bPreviewSceneLoaded = true
       else
         self.PreviewSceneTrans = nil
       end
     else
-      IncreacePreviewSceneRefCount(PreviewLevelName)
+      IncreasePreviewSceneRefCount(PreviewLevelName)
       self.bPreviewSceneLoaded = true
       self.PreviewLevelName = PreviewLevelName
       self.ArmoryHelper:AddTimer(0.1, function()
@@ -128,7 +125,7 @@ function M:UnloadPreviewScene()
   if self.bPreviewSceneLoaded then
     local PreviewLevelName = "PreviewLevel" .. self.EPreviewSceneType
     self.bPreviewSceneLoaded = false
-    DecreacePreviewSceneRefCount(PreviewLevelName)
+    DecreasePreviewSceneRefCount(PreviewLevelName)
     if not IsPreviewSceneHasRef(PreviewLevelName) then
       local UnitBudgetMgr = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UE4.UUnitBudgetAllocatorSubsystem)
       if UnitBudgetMgr then
@@ -263,7 +260,7 @@ function M:DoSomethingWithScene(BehaviorName, Func, ...)
   coroutine.resume(Co, ...)
 end
 
-function M:DoDeferedSceneBehavior()
+function M:DoDeferredSceneBehavior()
   local SceneCoroutineArray = {}
   for _, value in ipairs(self.SceneCoroutineArray) do
     table.insert(SceneCoroutineArray, value)
@@ -282,7 +279,7 @@ end
 function M:OnPreviewSceneLoaded()
   self:DisableEnvirSystem(false)
   self.IsPreviewSceneLoading = false
-  self:DoDeferedSceneBehavior()
+  self:DoDeferredSceneBehavior()
   if not self.IsPlayingSequence then
     self:UpdateSceneLighting()
   end

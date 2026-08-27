@@ -17,12 +17,11 @@ function M:InitUI(Index, bSelected, Owner)
   if not Avatar then
     return
   end
-  local PlanData = Avatar:GetMobileHudPlan(self.Index)
-  if not PlanData then
-    return
-  end
   local DefaultPlanName = Avatar:GetDefaultMobileHudPlanName(self.Index)
-  local PlanName = PlanData.HudPlanName or DefaultPlanName
+  local PlanData = Avatar:GetMobileHudPlan(self.Index)
+  local SavedPlanName = PlanData and PlanData.HudPlanName
+  local IsInvalidSavedName = nil == SavedPlanName or "" == SavedPlanName or "Default" == SavedPlanName
+  local PlanName = IsInvalidSavedName and DefaultPlanName or SavedPlanName
   self.PlanName = PlanName
   self.TextContent:SetText(PlanName)
 end

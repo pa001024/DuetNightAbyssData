@@ -242,10 +242,10 @@
     "charId": 1102,
     "type": "Show",
     "icon": "Fuluo",
-    "srId": 102102,
+    "srId": 210101,
     "pos": [
-      -10847,
-      -21383
+      -230,
+      4961
     ],
     "talks": [
       {
@@ -2276,10 +2276,15 @@
   },
   {
     "id": 82102,
-    "name": "Ada (?)",
+    "name": "Eve",
     "camp": "NPC",
     "charId": 2102,
     "type": "Show",
+    "srId": 210101,
+    "pos": [
+      -226,
+      4952
+    ],
     "talks": [
       {
         "id": 90290001,
@@ -2296,6 +2301,21 @@
             "id": 90290200,
             "content": "Hm ? Qu’est-ce que tu as dans la main ?",
             "next": 90290201
+          },
+          {
+            "id": 90290300,
+            "content": "Tu ne lui en veux pas ?",
+            "next": 90290301
+          },
+          {
+            "id": 90290400,
+            "content": "Parle-moi du vrai Victor.",
+            "next": 90290401
+          },
+          {
+            "id": 90290500,
+            "content": "Pourquoi tu dis souvent « Yiou » ? Ça veut dire quelque chose de spécial ?",
+            "next": 90290501
           }
         ]
       },
@@ -2314,6 +2334,27 @@
         "next": 90290202
       },
       {
+        "id": 90290301,
+        "content": "Hm... Les villageois qu’elle a capturés, et leurs familles aussi, doivent sûrement la détester. Elle a été profondément blessée... et elle a profondément blessé les autres.",
+        "voice": "char/Eve/vo_topic_03_3",
+        "npc": 82102,
+        "next": 90290302
+      },
+      {
+        "id": 90290401,
+        "content": "Oh, le vrai Victor ! C’était l’ami d’enfance d’Ada. Quelqu’un de très joyeux, avec un grand sens de la justice, et qui aimait énormément la ville d’Arcano.",
+        "voice": "char/Eve/vo_topic_04_1",
+        "npc": 82102,
+        "next": 90290402
+      },
+      {
+        "id": 90290501,
+        "content": "Yiou ? Non ! C’est juste une petite exclamation très pratique~",
+        "voice": "char/Eve/vo_topic_05_1",
+        "npc": 82102,
+        "next": 90290502
+      },
+      {
         "id": 90290102,
         "content": "Il est marron, gros comme un pouce, avec des ailes brillantes, deux antennes et six petites pattes toutes poilues...",
         "voice": "char/Eve/vo_topic_01_2",
@@ -2328,6 +2369,27 @@
         "next": 90290203
       },
       {
+        "id": 90290302,
+        "content": "Mais moi... je n’arrive pas à la haïr. Après tout, c’est elle qui m’a fait venir au monde.",
+        "voice": "char/Eve/vo_topic_03_4",
+        "npc": 82102,
+        "next": 90290303
+      },
+      {
+        "id": 90290402,
+        "content": "C’était quelqu’un de bien... et c’est justement pour ça qu’il a perdu la vie.",
+        "voice": "char/Eve/vo_topic_04_2",
+        "npc": 82102,
+        "next": 90290403
+      },
+      {
+        "id": 90290502,
+        "content": "Je ne me souviens même plus quand j’ai commencé à le dire. C’est devenu une habitude sans que je m’en rende compte. C’est magique, non ?",
+        "voice": "char/Eve/vo_topic_05_2",
+        "npc": 82102,
+        "next": 90290503
+      },
+      {
         "id": 90290103,
         "content": "?!",
         "npc": 100001,
@@ -2338,6 +2400,36 @@
         "content": "Vous résistez de toutes vos forces à la tentation.",
         "npc": 100001,
         "next": 90290204
+      },
+      {
+        "id": 90290303,
+        "content": "Si je le peux, j’aimerais retrouver ceux qui vivaient autrefois avec nous au Paradis. Après tout... je suis Ada, et Ada est moi. Alors si je peux aider tout le monde un peu, peut-être que je pourrai aussi réparer une partie de ses fautes.",
+        "voice": "char/Eve/vo_topic_03_5",
+        "npc": 82102,
+        "options": [
+          {
+            "id": 90290002,
+            "content": "Parlons d’autre chose",
+            "next": 90290001
+          },
+          {
+            "id": 90290003,
+            "content": "À plus tard"
+          }
+        ]
+      },
+      {
+        "id": 90290403,
+        "content": "Ce jour-là, il était déjà parti rejoindre la Légion. Mais quand il a entendu les tirs de canon, il est revenu pour sauver sa ville de toutes ses forces... Tu connais la suite. Ce jour-là, personne n’a survécu, sauf Ada.",
+        "voice": "char/Eve/vo_topic_04_3",
+        "npc": 82102,
+        "next": 90290404
+      },
+      {
+        "id": 90290503,
+        "content": "Je pensais que ça venait de ton nom. Ça y ressemble un peu.",
+        "npc": 100001,
+        "next": 90290504
       },
       {
         "id": 90290104,
@@ -2354,6 +2446,19 @@
         "next": 90290205
       },
       {
+        "id": 90290404,
+        "content": "Pas étonnant qu’Ada se souvienne autant de lui.",
+        "npc": 100001,
+        "next": 90290405
+      },
+      {
+        "id": 90290504,
+        "content": "Yiou ?! Tu es vraiment {性别:malin|maline}, toi ! Tu as découvert le secret~ Mais tu l’as pris à l’envers !",
+        "voice": "char/Eve/vo_topic_05_3",
+        "npc": 82102,
+        "next": 90290505
+      },
+      {
         "id": 90290105,
         "content": "Non ! C’est de la vermine !",
         "npc": 100001,
@@ -2364,6 +2469,30 @@
         "content": "Il y a quelque chose qui cloche... Ces pièces sont trop légères.",
         "npc": 100001,
         "next": 90290206
+      },
+      {
+        "id": 90290405,
+        "content": "Oui ! Alors, au fond, que le jeu d’Ada se termine grâce à quelqu’un qui jouait « Victor », c’était peut-être une très belle fin, non ? Le vrai Victor aurait sûrement voulu libérer Ada de cet endroit horrible.",
+        "voice": "char/Eve/vo_topic_04_4",
+        "npc": 82102,
+        "options": [
+          {
+            "id": 90290002,
+            "content": "Parlons d’autre chose",
+            "next": 90290001
+          },
+          {
+            "id": 90290003,
+            "content": "À plus tard"
+          }
+        ]
+      },
+      {
+        "id": 90290505,
+        "content": "En fait, « Yiou » est venu avant « Eve » ! Comme je n’ai pas beaucoup étudié, je ne savais pas me trouver un nom impressionnant. Alors j’ai fait « yiou, yiou » en me tapotant la tête... et j’ai décidé de m’appeler Eve !",
+        "voice": "char/Eve/vo_topic_05_4",
+        "npc": 82102,
+        "next": 90290506
       },
       {
         "id": 90290106,
@@ -2380,6 +2509,12 @@
         "next": 90290207
       },
       {
+        "id": 90290506,
+        "content": "Tu as vraiment choisi ton nom comme ça ?! Enfin... ça te ressemble bien.",
+        "npc": 100001,
+        "next": 90290507
+      },
+      {
         "id": 90290107,
         "content": "N’en dis pas plus...",
         "npc": 100001,
@@ -2390,6 +2525,23 @@
         "content": "Ce sont clairement des fausses pièces. Il faut vite les détruire, sinon on va se faire arrêter.",
         "npc": 100001,
         "next": 90290208
+      },
+      {
+        "id": 90290507,
+        "content": "Oui, oui, tu trouves aussi ? En fait, je suis peut-être un génie des noms~",
+        "voice": "char/Eve/vo_topic_05_5",
+        "npc": 82102,
+        "options": [
+          {
+            "id": 90290002,
+            "content": "Parlons d’autre chose",
+            "next": 90290001
+          },
+          {
+            "id": 90290003,
+            "content": "À plus tard"
+          }
+        ]
       },
       {
         "id": 90290108,
@@ -3009,7 +3161,7 @@
     "srId": 210101,
     "pos": [
       31,
-      5110
+      5031
     ],
     "talks": [
       {
@@ -3443,6 +3595,184 @@
           },
           {
             "id": 90180005,
+            "content": "<I>À bientôt.</>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 83104,
+    "name": "Falsi",
+    "camp": "NPC",
+    "charId": 3104,
+    "type": "Show",
+    "talks": [
+      {
+        "id": 90300001,
+        "content": "Mm... Bonjour.",
+        "voice": "char/Falu/vo_welcome",
+        "npc": 83104,
+        "options": [
+          {
+            "id": 90300100,
+            "content": "Pourquoi travailles-tu pour Fulvis ?",
+            "next": 90300101
+          },
+          {
+            "id": 90300200,
+            "content": "Parle-moi de la XIIIᵉ Légion.",
+            "next": 90300201
+          },
+          {
+            "id": 90300300,
+            "content": "Tu trembles ?",
+            "next": 90300301
+          }
+        ]
+      },
+      {
+        "id": 90300101,
+        "content": "Intégrer la XIIIᵉ Légion est déjà un rêve inaccessible pour la plupart des soldats. Alors risquer ma vie pour l’un ou l’autre de ses dirigeants... à mes yeux, cela ne faisait aucune différence.",
+        "voice": "char/Falu/vo_topic_01_1",
+        "npc": 83104,
+        "next": 90300102
+      },
+      {
+        "id": 90300201,
+        "content": "Les affaires internes de la Légion ne m’intéressaient pas, et je ne me mêlais jamais de la vie privée de mes camarades. Je ne maintenais avec eux que des relations superficielles. Ainsi, lorsqu’il fallait les utiliser... ou les trahir... je n’en éprouvais aucun remords.",
+        "voice": "char/Falu/vo_topic_02_1",
+        "npc": 83104,
+        "next": 90300202
+      },
+      {
+        "id": 90300301,
+        "content": "Vous vous trompez.",
+        "voice": "char/Falu/vo_topic_03_1",
+        "npc": 83104,
+        "next": 90300302
+      },
+      {
+        "id": 90300102,
+        "content": "Ou peut-être voulais-je simplement prouver quelque chose. Je ne voulais plus rester éternellement « numéro deux ».",
+        "voice": "char/Falu/vo_topic_01_2",
+        "npc": 83104,
+        "next": 90300103
+      },
+      {
+        "id": 90300202,
+        "content": "Quant aux documents confidentiels passés entre mes mains, je ne faisais que les transmettre ou les détruire selon les ordres reçus. Les informations auxquelles j’avais accès n’étaient, la plupart du temps, que des banalités.",
+        "voice": "char/Falu/vo_topic_02_2",
+        "npc": 83104,
+        "next": 90300203
+      },
+      {
+        "id": 90300302,
+        "content": "Même votre voix tremble.",
+        "npc": 100001,
+        "next": 90300303
+      },
+      {
+        "id": 90300103,
+        "content": "Mais une fois engagée sur cette voie, il n’était plus possible de faire marche arrière. À partir du moment où j’ai été entraînée dans ses machinations, je n’ai plus eu d’autre choix que d’avancer... pas à pas.",
+        "voice": "char/Falu/vo_topic_01_3",
+        "npc": 83104,
+        "next": 90300104
+      },
+      {
+        "id": 90300203,
+        "content": "Si vous en avez le temps, je peux au moins vous parler des opérations que j’ai menées au sein de la XIIIᵉ Légion. Chacune d’elles est gravée dans ma mémoire.",
+        "voice": "char/Falu/vo_topic_02_3",
+        "npc": 83104,
+        "next": 90300204
+      },
+      {
+        "id": 90300303,
+        "content": "... Depuis que j’ai quitté la Légion, je vois souvent du sang dans mes rêves.",
+        "voice": "char/Falu/vo_topic_03_2",
+        "npc": 83104,
+        "next": 90300304
+      },
+      {
+        "id": 90300104,
+        "content": "Qu’on avance ou qu’on recule... l’abysse nous attend de toute façon.",
+        "npc": 100001,
+        "next": 90300105
+      },
+      {
+        "id": 90300204,
+        "content": "Je préfère vous prévenir : si le contenu de ces missions vous révulse, ou si le simple fait de les connaître vous attire des ennuis... je n’en assumerai pas la responsabilité.",
+        "voice": "char/Falu/vo_topic_02_4",
+        "npc": 83104,
+        "options": [
+          {
+            "id": 90300002,
+            "content": "<I>Parlons d’autre chose.</>",
+            "next": 90300001
+          },
+          {
+            "id": 90300003,
+            "content": "<I>À bientôt.</>"
+          }
+        ]
+      },
+      {
+        "id": 90300304,
+        "content": "Le sang de ceux qui sont morts par ma faute. Il coule le long de mes mains jusqu’à mes pieds, s’enracine dans le sol... puis se change en un enchevêtrement d’épines écarlates qui me cloue sur place.",
+        "voice": "char/Falu/vo_topic_03_3",
+        "npc": 83104,
+        "next": 90300305
+      },
+      {
+        "id": 90300105,
+        "content": "Oui. Mais je ne chercherai pas à excuser le sang sur mes mains. Disposez de moi comme il vous plaira. Insultez-moi, frappez-moi si cela vous chante... je ne riposterai pas.",
+        "voice": "char/Falu/vo_topic_01_4",
+        "npc": 83104,
+        "options": [
+          {
+            "id": 90300002,
+            "content": "<I>Parlons d’autre chose.</>",
+            "next": 90300001
+          },
+          {
+            "id": 90300003,
+            "content": "<I>À bientôt.</>"
+          }
+        ]
+      },
+      {
+        "id": 90300305,
+        "content": "Alors, dans mes rêves, j’essaie de laver mes mains. Mais ce sang est brûlant... peu importe combien de fois je les frotte, la douleur ne disparaît jamais. J’aimerais hurler... mais respirer me demande déjà toutes mes forces.",
+        "voice": "char/Falu/vo_topic_03_4",
+        "npc": 83104,
+        "next": 90300306
+      },
+      {
+        "id": 90300306,
+        "content": "C’est la punition que je dois porter. Je ne fuirai pas... et je ne le peux pas.",
+        "voice": "char/Falu/vo_topic_03_5",
+        "npc": 83104,
+        "next": 90300307
+      },
+      {
+        "id": 90300307,
+        "content": "Respire profondément.",
+        "npc": 100001,
+        "next": 90300308
+      },
+      {
+        "id": 90300308,
+        "content": "Haa... haa... Merci.",
+        "voice": "char/Falu/vo_topic_03_6",
+        "npc": 83104,
+        "options": [
+          {
+            "id": 90300002,
+            "content": "<I>Parlons d’autre chose.</>",
+            "next": 90300001
+          },
+          {
+            "id": 90300003,
             "content": "<I>À bientôt.</>"
           }
         ]
@@ -6520,7 +6850,7 @@
   },
   {
     "id": 92102,
-    "name": "Ada (?)",
+    "name": "Eve",
     "camp": "NPC",
     "charId": 2102,
     "type": "Normal"
@@ -6558,6 +6888,13 @@
     "name": "Yale",
     "camp": "NPC",
     "charId": 3103,
+    "type": "Normal"
+  },
+  {
+    "id": 93104,
+    "name": "Falsi",
+    "camp": "NPC",
+    "charId": 3104,
     "type": "Normal"
   },
   {
@@ -8567,6 +8904,7 @@
     "id": 110022,
     "name": "{nickname2}",
     "camp": "NPC",
+    "charId": 220101,
     "type": "Normal"
   },
   {
@@ -8729,6 +9067,7 @@
     "id": 110040,
     "name": "{nickname2}",
     "camp": "NPC",
+    "charId": 220101,
     "type": "Normal"
   },
   {
@@ -9544,6 +9883,7 @@
     "id": 110048,
     "name": "{nickname2}",
     "camp": "NPC",
+    "charId": 220101,
     "type": "Normal"
   },
   {
@@ -9621,7 +9961,72 @@
     "type": "Normal"
   },
   {
+    "id": 111005,
+    "name": "« La Papesse » Ada",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111006,
+    "name": "« La Papesse » Ada",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111007,
+    "name": "« La Papesse » Ada",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111008,
+    "name": "???",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111009,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
     "id": 111110,
+    "name": "Falsi",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111111,
+    "name": "Falsi",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111112,
+    "name": "Falsi",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111113,
+    "name": "Falsi",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111114,
+    "name": "Falsi",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111115,
+    "name": "Falsi",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111116,
     "name": "Falsi",
     "camp": "NPC",
     "type": "Normal"
@@ -9666,12 +10071,14 @@
     "id": 111126,
     "name": "« Le Chariot » Victor ?",
     "camp": "NPC",
+    "charId": 220101,
     "type": "Normal"
   },
   {
     "id": 111127,
     "name": "« Le Chariot » Victor ?",
     "camp": "NPC",
+    "charId": 220101,
     "type": "Normal"
   },
   {
@@ -9820,7 +10227,7 @@
   },
   {
     "id": 111173,
-    "name": "UI_CMNpc_Name_Anbixiu",
+    "name": "« La Tour » Ambitio",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -9946,6 +10353,172 @@
   {
     "id": 111194,
     "name": "« L’Impératrice » Teresa",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111195,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111196,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111197,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111198,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111199,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111200,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111201,
+    "name": "« La Force » Bernard",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111202,
+    "name": "« La Papesse » Ada",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111203,
+    "name": "« La Papesse » Ada",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111204,
+    "name": "« La Papesse » Ada",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111205,
+    "name": "« La Papesse » Ada",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111206,
+    "name": "« La Papesse » Ada",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111207,
+    "name": "« La Papesse » Ada",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111208,
+    "name": "« La Papesse » Ada",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111209,
+    "name": "« La Papesse » Ada",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111210,
+    "name": "« La Papesse » Ada",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111211,
+    "name": "« La Papesse » Ada",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111212,
+    "name": "« La Papesse » Ada",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111213,
+    "name": "« La Papesse » Ada",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111214,
+    "name": "« La Papesse » Ada",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111215,
+    "name": "« La Papesse » Ada",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111216,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111217,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111218,
+    "name": "« La Papesse » Ada",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111219,
+    "name": "« La Papesse » Ada",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111220,
+    "name": "« La Papesse » Ada",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111221,
+    "name": "« La Papesse » Ada",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111222,
+    "name": "« La Papesse » Ada",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111223,
+    "name": "« Le Pendu » Isaac",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -15014,6 +15587,252 @@
     "id": 250036,
     "camp": "NPC",
     "type": "Normal"
+  },
+  {
+    "id": 250037,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250038,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250039,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250040,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250041,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250042,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250043,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250044,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250045,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250046,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250047,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250048,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250049,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250050,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250051,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250052,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250053,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250054,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250055,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250056,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250057,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250058,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250059,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250060,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250061,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250062,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 260001,
+    "name": "Rhythm"
+  },
+  {
+    "id": 260002,
+    "name": "Camilla"
+  },
+  {
+    "id": 260003,
+    "name": "Habitant de Brumelac"
+  },
+  {
+    "id": 260004,
+    "name": "Vieil homme abattu"
+  },
+  {
+    "id": 260005,
+    "name": "Mamie Rhodes"
+  },
+  {
+    "id": 260006,
+    "name": "Garde impatient"
+  },
+  {
+    "id": 260007,
+    "name": "Ouvrier distrait"
+  },
+  {
+    "id": 260008,
+    "name": "Clara"
+  },
+  {
+    "id": 260009,
+    "name": "Garde vigilant"
+  },
+  {
+    "id": 260010,
+    "name": "Mathis"
+  },
+  {
+    "id": 260011,
+    "name": "Ouvrier colérique"
+  },
+  {
+    "id": 260012,
+    "name": "Recouvreur menaçant"
+  },
+  {
+    "id": 260013,
+    "name": "Dougie"
+  },
+  {
+    "id": 260014,
+    "name": "Homme furieux"
+  },
+  {
+    "id": 260015,
+    "name": "Voisin de passage"
+  },
+  {
+    "id": 260016,
+    "name": "Jeune fille Charon épuisée"
+  },
+  {
+    "id": 260017,
+    "name": "Rae"
+  },
+  {
+    "id": 260018,
+    "name": "Marchand enthousiaste"
+  },
+  {
+    "id": 260019,
+    "name": "Citadin enjoué"
+  },
+  {
+    "id": 260020,
+    "name": "Carson"
+  },
+  {
+    "id": 260021,
+    "name": "Soldat en patrouille"
+  },
+  {
+    "id": 260022,
+    "name": "Lieutenant-colonel Johnson"
+  },
+  {
+    "id": 260023,
+    "name": "Garde affolé"
+  },
+  {
+    "id": 260024,
+    "name": "Client serviable"
+  },
+  {
+    "id": 260025,
+    "name": "Freda"
+  },
+  {
+    "id": 260026,
+    "name": "Employé du théâtre"
+  },
+  {
+    "id": 260027,
+    "name": "Kori"
+  },
+  {
+    "id": 260028,
+    "name": "Susanna"
+  },
+  {
+    "id": 260029,
+    "name": "Blues"
   },
   {
     "id": 700002,
@@ -20336,7 +21155,7 @@
   },
   {
     "id": 700213,
-    "name": "Voisin de Buck",
+    "name": "Voisine de Buck",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -23920,7 +24739,9 @@
   },
   {
     "id": 700474,
-    "name": "Garde de la gare"
+    "name": "Garde de la gare",
+    "camp": "NPC",
+    "type": "Normal"
   },
   {
     "id": 700475,
@@ -23995,7 +24816,7 @@
   },
   {
     "id": 700501,
-    "name": "Clara",
+    "name": "克拉拉",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -28860,6 +29681,89 @@
     "type": "Normal"
   },
   {
+    "id": 700636,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700637,
+    "name": "Auteur du journal",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700638,
+    "name": "Soldat de l’Église Élyséenne agonisant",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700639,
+    "name": "Auteur du journal",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700640,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700641,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700642,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700643,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700644,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700645,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700646,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700647,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700648,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700649,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700650,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700651,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
     "id": 701001,
     "name": "Technicien des égouts",
     "camp": "NPC",
@@ -33299,7 +34203,7 @@
         "options": [
           {
             "id": 51125502,
-            "content": "<I>{性别:Désolé|Désolée}.<I>",
+            "content": "<I>{性别:Désolé|Désolée}.</>",
             "next": 51125503,
             "impr": [
               1041,
@@ -37572,10 +38476,10 @@
     "name": "Vieux Chen",
     "camp": "NPC",
     "type": "Normal",
-    "srId": 104504,
+    "srId": 104108,
     "pos": [
-      -25530,
-      -64659
+      40190,
+      69060
     ]
   },
   {
@@ -61641,6 +62545,493 @@
     ]
   },
   {
+    "id": 703128,
+    "name": "« L’Impératrice » Teresa",
+    "camp": "NPC",
+    "type": "Normal",
+    "talks": [
+      {
+        "id": 51301301,
+        "content": "Victor, tu es venu goûter mon ragoût de pommes de terre ? Il sera bientôt prêt, le temps que je finisse de nourrir ces pigeons. Attends encore un peu, d’accord ?",
+        "npc": 703128,
+        "next": 51301302
+      },
+      {
+        "id": 51301302,
+        "content": "Ce n’est pas grave, nous n’avons pas encore faim. Est-ce que vous savez comment rencontrer Maman Lapin ?",
+        "next": 51301303
+      },
+      {
+        "id": 51301303,
+        "content": "... Maman Lapin, hein... ? Héhé. Dans ce cas, tu n’as vraiment pas besoin de te presser. Tu pourras naturellement la voir demain soir, pendant la Parade du Paradis.",
+        "npc": 703128
+      }
+    ]
+  },
+  {
+    "id": 703129,
+    "name": "« Le Diable » Aamon",
+    "camp": "NPC",
+    "type": "Normal",
+    "talks": [
+      {
+        "id": 51301401,
+        "content": "Ambitio, aide-moi à déplacer ces caisses.",
+        "npc": 703129,
+        "next": 51301402
+      },
+      {
+        "id": 51301402,
+        "content": "Oh, oh...",
+        "npc": 703132,
+        "next": 51301403
+      },
+      {
+        "id": 51301403,
+        "content": "Non, pas ça ! Je parlais des caisses ! Pourquoi tu m’as apporté des paniers de fleurs ?! Tu n’es plus un enfant, quand même ! Tu n’arrives même pas à faire la différence entre un panier de fleurs et une caisse ?",
+        "npc": 703129,
+        "next": 51301404
+      },
+      {
+        "id": 51301404,
+        "content": "Panier de fleurs... joli...",
+        "npc": 703132,
+        "next": 51301405
+      },
+      {
+        "id": 51301405,
+        "content": "Toi, tu, tu... Je vais vraiment finir par mourir d’exaspération à cause de toi un de ces jours !",
+        "npc": 703129,
+        "next": 51301406
+      },
+      {
+        "id": 51301406,
+        "content": "Hé, regarde les vêtements d’Ambitio.",
+        "npc": 703134,
+        "next": 51301407
+      },
+      {
+        "id": 51301407,
+        "content": "Ce motif sombre... c’est le symbole des Déchus ?!",
+        "next": 51301408
+      },
+      {
+        "id": 51301408,
+        "content": "Victor, qu’est-ce qui vous arrive ? On dirait que vous êtes prêts à tuer quelqu’un.",
+        "npc": 703129,
+        "next": 51301409
+      },
+      {
+        "id": 51301409,
+        "content": "Ambitio pourrait être membre des Déchus. Reculez.",
+        "next": 51301410
+      },
+      {
+        "id": 51301410,
+        "content": "Les Déchus ? C’est quoi ça... ? Ambitio est juste un idiot incapable de distinguer un panier de fleurs d’une caisse. Ce n’est certainement pas l’un de ceux dont tu parles.",
+        "npc": 703129,
+        "next": 51301411
+      },
+      {
+        "id": 51301411,
+        "content": "Il aime simplement ramasser toutes sortes de choses étranges et les accrocher sur lui. Vous n’avez pas besoin de vous inquiéter.",
+        "npc": 703129,
+        "next": 51301412
+      },
+      {
+        "id": 51301412,
+        "content": "Ce motif, cool. Victor, tu en veux un ? Je t’en dessine un.",
+        "npc": 703132,
+        "next": 51301413
+      },
+      {
+        "id": 51301413,
+        "content": "Non merci...",
+        "next": 51301414
+      },
+      {
+        "id": 51301414,
+        "content": "Bon, Ambitio, je vais t’expliquer une dernière fois. Ça, c’est une caisse. Ça, c’est un panier de fleurs. Répète après moi !",
+        "npc": 703129,
+        "next": 51301415
+      },
+      {
+        "id": 51301415,
+        "content": "Caisse... panier de fleurs... caisse... panier de fleurs... cais-panier... fleur-caisse...",
+        "npc": 703132,
+        "next": 51301416
+      },
+      {
+        "id": 51301416,
+        "content": "...",
+        "next": 51301417
+      },
+      {
+        "id": 51301417,
+        "content": "<I>En effet, sa réaction ne ressemble vraiment pas à celle d’un membre des Déchus. Ses vêtements ne semblent pas non plus être à sa taille... Je me suis peut-être vraiment fait des idées...</>"
+      }
+    ]
+  },
+  {
+    "id": 703130,
+    "name": "« Les Amoureux » Vena",
+    "camp": "NPC",
+    "type": "Normal",
+    "talks": [
+      {
+        "id": 51301101,
+        "content": "Hansel... Tu me manques tellement. La chaleur de tes bras me manque... Notre petite maison délabrée mais chaleureuse me manque...",
+        "npc": 703130,
+        "next": 51301102
+      },
+      {
+        "id": 51301102,
+        "content": "Tiens, Victor, quand est-ce que tu es arrivé ? Alors, tu viens me raconter ton histoire d’amour ? L’heureuse élue serait... cette demoiselle ?",
+        "npc": 703130,
+        "next": 51301103
+      },
+      {
+        "id": 51301103,
+        "content": "Ne fais pas ce genre de suppositions ridicules.",
+        "npc": 703134,
+        "next": 51301104
+      },
+      {
+        "id": 51301104,
+        "content": "Hé hé, la petite est gênée ? D’accord, d’accord, je ne demanderai rien alors.",
+        "npc": 703130,
+        "next": 51301105
+      },
+      {
+        "id": 51301105,
+        "content": "Victor, la prochaine fois qu’on sera tous les deux, tu me raconteras ça en cachette, d’accord~ ?",
+        "npc": 703130
+      }
+    ]
+  },
+  {
+    "id": 703131,
+    "name": "« Le Pendu » Isaac",
+    "camp": "NPC",
+    "type": "Normal",
+    "talks": [
+      {
+        "id": 51301701,
+        "content": "Victor, tu te souviens de ces pétales rouges et blancs dans le village ?",
+        "npc": 703131,
+        "next": 51301702
+      },
+      {
+        "id": 51301702,
+        "content": "Héhé, à voir ton expression, je dirais que non. Ce n’est pas grave, laisse-moi te raconter.",
+        "npc": 703131,
+        "next": 51301703
+      },
+      {
+        "id": 51301703,
+        "content": "Autrefois, une légende circulait à Arcano. Il y a très, très longtemps, une jeune fille fut séparée de sa famille pendant une guerre.",
+        "npc": 703131,
+        "next": 51301704
+      },
+      {
+        "id": 51301704,
+        "content": "Après la fin du conflit, la jeune fille partit à la recherche de sa famille. Finalement, elle fut attirée par les fleurs rouges et blanches des Montagnes d’Arcano, alors elle s’assit parmi elles pour se reposer.",
+        "npc": 703131,
+        "next": 51301705
+      },
+      {
+        "id": 51301705,
+        "content": "Après s’être reposée, elle cueillit une fleur rouge au hasard. Lorsqu’elle se releva, elle vit qu’à l’autre bout du champ de fleurs, un jeune homme venait lui aussi de se lever, tenant une fleur blanche entre ses mains.",
+        "npc": 703131,
+        "next": 51301706
+      },
+      {
+        "id": 51301706,
+        "content": "Ce n’est qu’à ce moment-là que la jeune fille remarqua que le jeune homme en face d’elle était son propre frère. En réalité, sa famille avait continué à la chercher pendant toutes ces années, et ce jour-là, ils avaient simplement été attirés par ce champ de fleurs rouges et blanches.",
+        "npc": 703131,
+        "next": 51301707
+      },
+      {
+        "id": 51301707,
+        "content": "C’est pourquoi, dans les Montagnes d’Arcano, les pétales rouges et blancs représentent « l’espoir » et « les retrouvailles ». Peu importe les difficultés que vous rencontrerez, gardez toujours espoir et attendez le jour où vous vous retrouverez dans cette mer de fleurs.",
+        "npc": 703131,
+        "next": 51301708
+      },
+      {
+        "id": 51301708,
+        "content": "Oh, désolé... Ma vieille habitude a encore repris le dessus. Je vous raconte encore toutes sortes de choses sans importance.",
+        "npc": 703131,
+        "next": 51301709
+      },
+      {
+        "id": 51301709,
+        "content": "Ce n’est rien.",
+        "next": 51301710
+      },
+      {
+        "id": 51301710,
+        "content": "Héhé, alors allez donc vous occuper de vos affaires. Je vais aller disposer quelques pétales ailleurs. Si cela vous intéresse, je pourrai vous raconter d’autres histoires la prochaine fois.",
+        "npc": 703131
+      }
+    ]
+  },
+  {
+    "id": 703132,
+    "name": "« La Tour » Ambitio",
+    "camp": "NPC",
+    "type": "Normal",
+    "talks": [
+      {
+        "id": 51301401,
+        "content": "Ambitio, aide-moi à déplacer ces caisses.",
+        "npc": 703129,
+        "next": 51301402
+      },
+      {
+        "id": 51301402,
+        "content": "Oh, oh...",
+        "npc": 703132,
+        "next": 51301403
+      },
+      {
+        "id": 51301403,
+        "content": "Non, pas ça ! Je parlais des caisses ! Pourquoi tu m’as apporté des paniers de fleurs ?! Tu n’es plus un enfant, quand même ! Tu n’arrives même pas à faire la différence entre un panier de fleurs et une caisse ?",
+        "npc": 703129,
+        "next": 51301404
+      },
+      {
+        "id": 51301404,
+        "content": "Panier de fleurs... joli...",
+        "npc": 703132,
+        "next": 51301405
+      },
+      {
+        "id": 51301405,
+        "content": "Toi, tu, tu... Je vais vraiment finir par mourir d’exaspération à cause de toi un de ces jours !",
+        "npc": 703129,
+        "next": 51301406
+      },
+      {
+        "id": 51301406,
+        "content": "Hé, regarde les vêtements d’Ambitio.",
+        "npc": 703134,
+        "next": 51301407
+      },
+      {
+        "id": 51301407,
+        "content": "Ce motif sombre... c’est le symbole des Déchus ?!",
+        "next": 51301408
+      },
+      {
+        "id": 51301408,
+        "content": "Victor, qu’est-ce qui vous arrive ? On dirait que vous êtes prêts à tuer quelqu’un.",
+        "npc": 703129,
+        "next": 51301409
+      },
+      {
+        "id": 51301409,
+        "content": "Ambitio pourrait être membre des Déchus. Reculez.",
+        "next": 51301410
+      },
+      {
+        "id": 51301410,
+        "content": "Les Déchus ? C’est quoi ça... ? Ambitio est juste un idiot incapable de distinguer un panier de fleurs d’une caisse. Ce n’est certainement pas l’un de ceux dont tu parles.",
+        "npc": 703129,
+        "next": 51301411
+      },
+      {
+        "id": 51301411,
+        "content": "Il aime simplement ramasser toutes sortes de choses étranges et les accrocher sur lui. Vous n’avez pas besoin de vous inquiéter.",
+        "npc": 703129,
+        "next": 51301412
+      },
+      {
+        "id": 51301412,
+        "content": "Ce motif, cool. Victor, tu en veux un ? Je t’en dessine un.",
+        "npc": 703132,
+        "next": 51301413
+      },
+      {
+        "id": 51301413,
+        "content": "Non merci...",
+        "next": 51301414
+      },
+      {
+        "id": 51301414,
+        "content": "Bon, Ambitio, je vais t’expliquer une dernière fois. Ça, c’est une caisse. Ça, c’est un panier de fleurs. Répète après moi !",
+        "npc": 703129,
+        "next": 51301415
+      },
+      {
+        "id": 51301415,
+        "content": "Caisse... panier de fleurs... caisse... panier de fleurs... cais-panier... fleur-caisse...",
+        "npc": 703132,
+        "next": 51301416
+      },
+      {
+        "id": 51301416,
+        "content": "...",
+        "next": 51301417
+      },
+      {
+        "id": 51301417,
+        "content": "<I>En effet, sa réaction ne ressemble vraiment pas à celle d’un membre des Déchus. Ses vêtements ne semblent pas non plus être à sa taille... Je me suis peut-être vraiment fait des idées...</>"
+      }
+    ]
+  },
+  {
+    "id": 703133,
+    "name": "« L’Hermite » Tacita",
+    "camp": "NPC",
+    "type": "Normal",
+    "talks": [
+      {
+        "id": 51301501,
+        "content": "...",
+        "npc": 703133,
+        "next": 51301502
+      },
+      {
+        "id": 51301502,
+        "content": "Bonjour ?",
+        "next": 51301503
+      },
+      {
+        "id": 51301503,
+        "content": "...",
+        "npc": 703133,
+        "next": 51301504
+      },
+      {
+        "id": 51301504,
+        "content": "Désolée, Victor. Je ne connais pas les réponses aux questions que tu cherches.",
+        "npc": 703133,
+        "next": 51301505
+      },
+      {
+        "id": 51301505,
+        "content": "<I>Je n’ai encore rien demandé pourtant...</>",
+        "next": 51301506
+      },
+      {
+        "id": 51301506,
+        "content": "Mamie Tacita n’est pas très bavarde. Allons plutôt voir ailleurs.",
+        "npc": 703137,
+        "next": 51301507
+      },
+      {
+        "id": 51301507,
+        "content": "Héhé, ce n’est pas que je n’aime pas parler. C’est simplement qu’à mon âge, on finit par comprendre que trop parler peut parfois nous causer des ennuis.",
+        "npc": 703133,
+        "next": 51301508
+      },
+      {
+        "id": 51301508,
+        "content": "Souvenez-vous également d’une chose : ne dites jamais aux autres quelque chose dont vous n’êtes pas absolument certains...",
+        "npc": 703133
+      }
+    ]
+  },
+  {
+    "id": 703134,
+    "name": "Falsi",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 703135,
+    "name": "Vergilius",
+    "camp": "NPC",
+    "type": "Normal",
+    "srId": 101901,
+    "pos": [
+      23006,
+      9824
+    ],
+    "talks": [
+      {
+        "id": 51300101,
+        "content": "Les soldats ont trouvé plusieurs habitants d’Arcano près des Montagnes d’Arcano. Voici les rapports d’interrogatoire qu’ils ont remis.",
+        "npc": 703135,
+        "next": 51300102
+      },
+      {
+        "id": 51300102,
+        "content": "Au final, j’ai passé un bon moment à les parcourir... mais au lieu de diminuer, la pile de rapports n’a fait qu’augmenter...",
+        "npc": 703135,
+        "next": 51300103
+      },
+      {
+        "id": 51300103,
+        "content": "要不你也一起看一下，看看和你在这里得到的情报有无出入？",
+        "npc": 703135
+      },
+      {
+        "id": 51301001,
+        "content": "Comparé aux trains, les installations des dirigeables sont vraiment rudimentaires... Ces sièges durs comme la pierre donnent l’impression que vos os vont finir en morceaux.",
+        "npc": 703135,
+        "next": 51301002
+      },
+      {
+        "id": 51301002,
+        "content": "C’est sûrement parce que les dirigeables n’ont pas encore été adaptés à un usage civil. Les soldats n’ont pas vraiment de raison de se plaindre.",
+        "next": 51301003
+      },
+      {
+        "id": 51301003,
+        "content": "Bon, fais avec pour l’instant. Une fois arrivé à Rougerive, tu pourras enfin bien te reposer pendant quelque temps.",
+        "npc": 703135
+      }
+    ]
+  },
+  {
+    "id": 703136,
+    "name": "« La Tempérance » Mensura",
+    "camp": "NPC",
+    "type": "Normal",
+    "srId": 107001,
+    "pos": [
+      -15644,
+      -72966
+    ],
+    "talks": [
+      {
+        "id": 51301601,
+        "content": "Décalez ces drapeaux de cinq centimètres vers la gauche. Ce sera mieux s’ils restent parfaitement symétriques.",
+        "npc": 703136,
+        "next": 51301602
+      },
+      {
+        "id": 51301602,
+        "content": "... J’ai toujours l’impression que c’est légèrement de travers. Bon, je vais le faire moi-même.",
+        "npc": 703136,
+        "next": 51301603
+      },
+      {
+        "id": 51301603,
+        "content": "Tiens, où est passée l’échelle ? Je l’avais pourtant posée derrière moi il y a un instant... Ha... Ma mémoire devient vraiment de plus en plus mauvaise... Est-ce que je suis arrivée à l’âge où il faut accepter de vieillir ?",
+        "npc": 703136
+      }
+    ]
+  },
+  {
+    "id": 703137,
+    "name": "Eve",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 703138,
+    "name": "« La Justice » Justus",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 703139,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
     "id": 790001,
     "name": "Mia",
     "camp": "NPC",
@@ -62256,6 +63647,55 @@
     "type": "Normal"
   },
   {
+    "id": 790092,
+    "name": "« La Papesse » Ada",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 790093,
+    "name": "« Le Jugement » Maman Lapin",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 790094,
+    "name": "Falsi",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 790095,
+    "name": "Avar",
+    "camp": "NPC",
+    "type": "Normal",
+    "srId": 102102,
+    "pos": [
+      630,
+      7268
+    ],
+    "talks": [
+      {
+        "id": 11017901,
+        "content": "Allez. Restez en contact et soyez prudent.",
+        "voice": "story/1002/110179/1B950862",
+        "npc": 110010
+      }
+    ]
+  },
+  {
+    "id": 790096,
+    "name": "Heve",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 790097,
+    "name": "Barton",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
     "id": 800001,
     "name": "Snow",
     "camp": "NPC",
@@ -62328,7 +63768,7 @@
   },
   {
     "id": 818004,
-    "name": "Chasseur de Phoxène timide",
+    "name": "Chasseuse de Phoxène timide",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -64312,7 +65752,7 @@
   },
   {
     "id": 992102,
-    "name": "Ada (?)",
+    "name": "Eve",
     "camp": "NPC",
     "charId": 2102,
     "type": "Normal"
@@ -64350,6 +65790,13 @@
     "name": "Yale",
     "camp": "NPC",
     "charId": 3103,
+    "type": "Normal"
+  },
+  {
+    "id": 993104,
+    "name": "Falsi",
+    "camp": "NPC",
+    "charId": 3104,
     "type": "Normal"
   },
   {
@@ -64717,18 +66164,21 @@
     "id": 1100221,
     "name": "{nickname2}",
     "camp": "NPC",
+    "charId": 2201,
     "type": "Normal"
   },
   {
     "id": 1100401,
     "name": "{nickname2}",
     "camp": "NPC",
+    "charId": 2201,
     "type": "Normal"
   },
   {
     "id": 1100481,
     "name": "{nickname2}",
     "camp": "NPC",
+    "charId": 2201,
     "type": "Normal"
   },
   {
@@ -64827,12 +66277,14 @@
     "id": 11112601,
     "name": "« Le Chariot » Victor ?",
     "camp": "NPC",
+    "charId": 2201,
     "type": "Normal"
   },
   {
     "id": 11112701,
     "name": "« Le Chariot » Victor ?",
     "camp": "NPC",
+    "charId": 2201,
     "type": "Normal"
   },
   {
@@ -66430,6 +67882,11 @@
     "name": "Falsi",
     "camp": "NPC",
     "type": "Normal",
+    "srId": 210101,
+    "pos": [
+      -219,
+      4944
+    ],
     "talks": [
       {
         "id": 741147210,
@@ -70639,7 +72096,7 @@
     "srId": 210101,
     "pos": [
       31,
-      5110
+      5031
     ],
     "talks": [
       {
@@ -72572,6 +74029,12 @@
   {
     "id": 77000008,
     "name": "interact测试",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 77000009,
+    "name": "« La Papesse » Ada",
     "camp": "NPC",
     "type": "Normal"
   }

@@ -2,8 +2,10 @@ local Component = {}
 
 function Component:SetTimeTag(TimeTagList)
   local function Callback(TimeTagUI)
+    if table.isempty(self.Content.TimeTagList) then
+      return
+    end
     self.TimeTag = UE.FWeakObjectPtr(TimeTagUI)
-    
     self:AddWidgetToNode(nil, self.TimeTag)
     TimeTagUI:SetUpTimeTag(TimeTagList)
   end

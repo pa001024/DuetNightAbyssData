@@ -224,7 +224,7 @@ function M:InitPreviewView()
       end
       for index, ColorIndex in ipairs(DyeDetialInfo) do
         local Content = NewObject(UIUtils.GetCommonItemContentClass())
-        Content.ColorId = ColorIndex
+        rawset(Content, "ColorId", ColorIndex)
         self.List_Color:AddItem(Content)
       end
       self.List_Color:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)

@@ -94,9 +94,14 @@ function M:Update(Content)
     self.Panel_Trial:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
   if Content.NeedShowModIndexInfo and Content.ModSuitIndex then
-    self.Panel_Text:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    local SuitName = GText(string.format("Mod_SuitName_%s", Content.ModSuitIndex))
-    self.Text_Name:SetText(SuitName)
+    local SuitNameKey = string.format("Mod_SuitName_%s", Content.ModSuitIndex)
+    local SuitName = GText(SuitNameKey)
+    if SuitName and SuitName ~= SuitNameKey and "" ~= SuitName then
+      self.Panel_Text:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      self.Text_Name:SetText(SuitName)
+    else
+      self.Panel_Text:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
   else
     self.Panel_Text:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end

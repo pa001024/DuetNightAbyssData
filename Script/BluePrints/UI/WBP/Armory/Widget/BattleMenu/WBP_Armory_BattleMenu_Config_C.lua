@@ -591,17 +591,17 @@ function M:NewResourceItemContent(ServerData)
   end
   local DisplayData = BattleUtils.GetCharacterAttributeSwitchVisiblePhantomData(RawData) or RawData
   local Obj = NewObject(UIUtils.GetCommonItemContentClass())
-  Obj.Owner = self
-  Obj.Count = GText("INFINITY_SYMBOL")
-  Obj.Type = CommonConst.DataType.Resource
-  Obj.UnitId = ServerData.ResourceId
-  Obj.ResourceSType = ServerData.ResourceSType
-  Obj.IsEquiped = false
-  Obj.Rarity = DisplayData.Rarity or RawData.Rarity or 0
-  Obj.Icon = DisplayData.Icon or RawData.Icon
-  Obj.CharId = DisplayData.UseParam or RawData.UseParam
-  Obj.OnAddedToFocusPath = self.OnPhantomItemAddedToFocusPath
-  Obj.OnRemovedFromFocusPath = self.OnPhantomItemRemovedFromFocusPath
+  rawset(Obj, "Owner", self)
+  rawset(Obj, "Count", GText("INFINITY_SYMBOL"))
+  rawset(Obj, "Type", CommonConst.DataType.Resource)
+  rawset(Obj, "UnitId", ServerData.ResourceId)
+  rawset(Obj, "ResourceSType", ServerData.ResourceSType)
+  rawset(Obj, "IsEquiped", false)
+  rawset(Obj, "Rarity", DisplayData.Rarity or RawData.Rarity or 0)
+  rawset(Obj, "Icon", DisplayData.Icon or RawData.Icon)
+  rawset(Obj, "CharId", DisplayData.UseParam or RawData.UseParam)
+  rawset(Obj, "OnAddedToFocusPath", self.OnPhantomItemAddedToFocusPath)
+  rawset(Obj, "OnRemovedFromFocusPath", self.OnPhantomItemRemovedFromFocusPath)
   return Obj
 end
 

@@ -40,7 +40,9 @@ function Component:GM_TestSoloTreasureBox(UnitId, Times)
   for index = 1, Times do
     print(string.format("GM_TestSoloTreasureBox(%d) Once*******************", UnitId))
     local SoloTreasureUtils = require("Utils.SoloTreasureUtils")
-    local list = SoloTreasureUtils:GetExtractionTreasureMechanismItemList(UnitId)
+    local SeasonId = SoloTreasureUtils:GetSoloTreasureSeasonId()
+    local EventId = DataMgr.PermanentTreasureHunt[SeasonId] and DataMgr.PermanentTreasureHunt[SeasonId].SeasonEventId
+    local list = SoloTreasureUtils:GetExtractionTreasureMechanismItemList(UnitId, EventId)
     for i = 1, #list do
       local ItemID = list[i]
       print("***GM_TestSoloTreasureBox ItemId=", ItemID)
@@ -118,7 +120,9 @@ function Component:GM_TestSoloTreasureMechanismAndItem(DungeonId)
     if DataMgr.ExtractionTreasureMechanism[UnitId] == nil then
       return
     end
-    local list = SoloTreasureUtils:GetExtractionTreasureMechanismItemList(UnitId)
+    local SeasonId = SoloTreasureUtils:GetSoloTreasureSeasonId()
+    local EventId = DataMgr.PermanentTreasureHunt[SeasonId] and DataMgr.PermanentTreasureHunt[SeasonId].SeasonEventId
+    local list = SoloTreasureUtils:GetExtractionTreasureMechanismItemList(UnitId, EventId)
     for i = 1, #list do
       local ItemID = list[i]
       print(string.format("***GM_TestSoloTreasureMechanismAndItem %s UniqueId=%d UnitId=%d ItemId=%d", str, uniqueid, UnitId, ItemID))

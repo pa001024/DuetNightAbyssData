@@ -8,6 +8,7 @@ local AllButtonStyleName, DefaultSkillStyleNodeName = {
   "Sprint_Multi",
   "Switch"
 }, "Common_Btn"
+local TRACK_ATTACK_SKILL_NAME = "Attack"
 
 function WBP_Player_SkillItem_PC_C:Initialize(Initializer)
   self.Super.Initialize(self)
@@ -29,6 +30,7 @@ function WBP_Player_SkillItem_PC_C:Initialize(Initializer)
   self.InActiveStates_Cover = {
     "Lock",
     "Ban",
+    "Forbidden",
     "Empty"
   }
   self.InActiveStates_Opacity = {"RegionBan", "Hooking"}
@@ -159,6 +161,13 @@ function WBP_Player_SkillItem_PC_C:SetButtonStyleByState(SkillEnumId, StateName)
   elseif "Lock" == StateName then
     self:RemoveAllListenInput()
     self:PlayAnimationForward(self.Lock_In)
+  elseif "Forbidden" == StateName then
+    self:RemoveAllListenInput()
+    self:PlayAnimationForward(self.Forbidden)
+  elseif "UnForbidden" == StateName then
+    self:RemoveAllListenInput()
+    self:AddSkillListeningInput()
+    self:PlayAnimationForward(self.Normal)
   elseif "Ban" == StateName then
     self:RemoveAllListenInput()
     self:PlayAnimationForward(self.Ban)
@@ -233,6 +242,15 @@ function WBP_Player_SkillItem_PC_C:RefreshSkillStyleInTimer(SkillName)
   end
   if self.SkillInfo[SkillName] == nil then
     return
+  end
+  local bRailForbidden = self:IsRailAttackBanned()
+  if bRailForbidden ~= self.bRailForbidden then
+    self.bRailForbidden = bRailForbidden
+    if bRailForbidden then
+      self:SetButtonStyleByState(self.SkillEnumId, "Forbidden")
+    else
+      self:SetButtonStyleByState(self.SkillEnumId, "UnForbidden")
+    end
   end
   local SkillId = self.SkillInfo[SkillName].SkillId
   if nil == SkillId or CommonUtils.HasValue(self.InActiveStates_Cover, self.CurButtonState) then
@@ -455,6 +473,59 @@ function WBP_Player_SkillItem_PC_C:ClearRemainAnim()
   if self.VX_guide_Flash and self.VX_guide_Flash:GetRenderOpacity() >= 1.0 then
     EMUIAnimationSubsystem:EMPlayAnimation(self, self.Guide_Remind, 1)
   end
+end
+
+function WBP_Player_SkillItem_PC_C:IsOnRail()
+  if not IsValid(self.OwnerPlayer) then
+    return false
+  end
+  return self.OwnerPlayer.IsInSlideMech == true
+end
+
+function WBP_Player_SkillItem_PC_C:IsInSlideMechChangeOrTurnJump()
+  if not IsValid(self.OwnerPlayer) then
+    return false
+  end
+  if type(self.OwnerPlayer.IsInSlideMechChangeOrTurnJump) == "function" then
+    return self.OwnerPlayer:IsInSlideMechChangeOrTurnJump() == true
+  end
+  return false
+end
+
+function WBP_Player_SkillItem_PC_C:IsRailAttackBanned()
+  if not self:IsOnRail() then
+    return false
+  end
+  if self:IsInSlideMechChangeOrTurnJump() then
+    local SkillId = self.OwnerPlayer:GetSkillByType(UE.ESkillType.Skill1)
+    if not SkillId or 0 == SkillId or not self.OwnerPlayer:CheckCanSkillCancel(SkillId) then
+      return true
+    end
+  end
+  return self.OwnerPlayer:CheckSkillInActive(ESkillName.Skill1)
+end
+
+function WBP_Player_SkillItem_PC_C:InitTrackItem()
+  self.Key_Img:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.Key_Img:SetRenderOpacity(1.0)
+  self.Energy:SetRenderTranslation(FVector2D(-9999, -9999))
+  self.Text_Skill:SetText(GText("UI_Track_Attack"))
+  local KeyAttackName = CommonUtils:GetActionMappingKeyName(TRACK_ATTACK_SKILL_NAME)
+  if "" == KeyAttackName then
+    KeyAttackName = DataMgr.KeyBoardMap[TRACK_ATTACK_SKILL_NAME].Key
+  end
+  self.Common_Key_PC:CreateCommonKey({
+    KeyInfoList = {
+      {Type = "Text", Text = KeyAttackName}
+    },
+    bBattleKey = true
+  })
+  local SkillIcon = UIUtils.GetIconListByActionName(TRACK_ATTACK_SKILL_NAME)[1]
+  self.Key_Img:CreateCommonKey({
+    KeyInfoList = {
+      {Type = "Img", ImgShortPath = SkillIcon}
+    }
+  })
 end
 
 AssembleComponents(WBP_Player_SkillItem_PC_C)

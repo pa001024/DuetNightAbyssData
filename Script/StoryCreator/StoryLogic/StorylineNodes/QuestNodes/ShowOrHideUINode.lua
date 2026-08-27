@@ -11,16 +11,16 @@ function ShowOrHideUINode:Start(Context)
   self.Context = Context
   local GameInstance = GWorld.GameInstance
   local GameMode = UE4.UGameplayStatics.GetGameMode(GameInstance)
-  local GameState = GameMode.EMGameState
   DebugPrint("ShowOrHideUINode: Start", self.Function, self.UIParam, self.ActionParam, self.ShowOrHide)
   if self.Function == "HideUIInScreen" then
-    if GameState and GameState.HideUIInScreen then
-      GameState:HideUIInScreen(self.UIParam, self.ShowOrHide, self)
+    if GameMode and GameMode.HideUIInScreen then
+      GameMode:HideUIInScreen(self.UIParam, self.ShowOrHide, "ShowOrHideUINode")
       DebugPrint("ShowOrHideUINode: Start self.RealSetVisibility", self.RealSetVisibility)
     end
   elseif self.Function == "SetContinuedPCGuideVisibility" and GameMode.SetContinuedPCGuideVisibility then
-    GameMode:SetContinuedPCGuideVisibility(self.ActionParam, self.ShowOrHide)
+    GameMode:SetContinuedPCGuideVisibility(self.ActionParam, self.ShowOrHide, "ShowOrHideUINode")
   end
+  self:UpdateCurrentSTLData()
   self:FinishAction()
 end
 
@@ -29,36 +29,30 @@ function ShowOrHideUINode:FinishAction()
 end
 
 function ShowOrHideUINode:OnQuestlineSuccess()
+  if not self.Context then
+    return
+  end
   if self.Function == "HideUIInScreen" then
-    self.Context:SaveSuitUpdateData("UpdateSuitKey2Value", CommonConst.SuitType.PlayerCharacterSuit, CommonConst.PlayerCharacterSuit.HideUIInScreen, self.UIParam, self.ShowOrHide)
+    self.Context:SaveSuitUpdateData("UpdateSuitKey2Value", CommonConst.SuitType.PlayerCharacterSuit, CommonConst.PlayerCharacterSuit.HideUIInScreen, self.UIParam, nil)
   elseif self.Function == "SetContinuedPCGuideVisibility" then
-    self.Context:SaveSuitUpdateData("UpdateSuitKey2Value", CommonConst.SuitType.PlayerCharacterSuit, CommonConst.PlayerCharacterSuit.ContinuedGuide, self.ActionParam, self.ShowOrHide)
+    self.Context:SaveSuitUpdateData("UpdateSuitKey2Value", CommonConst.SuitType.PlayerCharacterSuit, CommonConst.PlayerCharacterSuit.ContinuedGuide, self.ActionParam, nil)
   end
 end
 
-function ShowOrHideUINode:OnQuestlineFail()
-  DebugPrint("ShowOrHideUINode: OnQuestlineFail", self.Function, self.UIParam, self.ActionParam, self.ShowOrHide)
-  local GameInstance = GWorld.GameInstance
-  local GameMode = UE4.UGameplayStatics.GetGameMode(GameInstance)
+function ShowOrHideUINode:UpdateCurrentSTLData()
+  if not self.Context then
+    return
+  end
   if self.Function == "HideUIInScreen" then
-    DebugPrint("ShowOrHideUINode: OnQuestlineFail self.RealSetVisibility", self.RealSetVisibility)
-    if self.RealSetVisibility == true and GameMode.HideUIInScreen then
-      local GameState = GameMode.EMGameState
-      if GameState and GameState.HideUIInScreen then
-        GameState:HideUIInScreen(self.UIParam, not self.ShowOrHide, self)
-      end
-    end
+    self.Context:UpdateCurrentSTLData(CommonConst.QuestSuit.HideUIInScreen, self.UIParam, {
+      IsHide = self.ShowOrHide,
+      Tag = "ShowOrHideUINode"
+    })
   elseif self.Function == "SetContinuedPCGuideVisibility" then
-    local BattleMainUI = UIManager(self):GetUIObj("BattleMain")
-    if BattleMainUI then
-      local Instruction = BattleMainUI.Pos_Instruction:GetChildAt(0)
-      if Instruction and GameMode.SetContinuedPCGuideVisibility and true == Instruction["RealSet" .. self.ActionParam] then
-        DebugPrint("ShowOrHideUINode: OnQuestlineFail SetContinuedPCGuideVisibility RealSet")
-        BattleMainUI:AddTimer(1, function()
-          GameMode:SetContinuedPCGuideVisibility(self.ActionParam, not self.ShowOrHide)
-        end)
-      end
-    end
+    self.Context:UpdateCurrentSTLData(CommonConst.QuestSuit.ContinuedGuide, self.ActionParam, {
+      IsHide = self.ShowOrHide,
+      Tag = "ShowOrHideUINode"
+    })
   end
 end
 

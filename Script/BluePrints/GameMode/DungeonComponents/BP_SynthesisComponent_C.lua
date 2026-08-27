@@ -193,6 +193,7 @@ function BP_SynthesisComponent_C:OnMonsterGuideAdded_Destruction(Eid)
   local RageValuePerStage = math.ceil(self.MaxRageValue / #self.RageValueStages)
   self:AddRageValue(RageValuePerStage)
   self.GameMode.EMGameState:MulticastShowDiscoverSupervisorToast(math.floor(100 / #self.RageValueStages))
+  self.GameMode:TriggerGameModeEvent("Event_OnDiscoverSupervisor")
   self:OnSupervisorGuideAdded(Eid)
 end
 

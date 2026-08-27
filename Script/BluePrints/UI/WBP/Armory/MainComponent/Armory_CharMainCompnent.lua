@@ -155,6 +155,12 @@ function M:CharMain_InitSubUI()
     Params.bNeedStandBtn = self.Params.bNeedStandBtn
   elseif self.CurSubTab.Name == ArmoryUtils.ArmorySubTabNames.Appearance then
     Params.AppearanceIndex = self.Params.AppearanceIndex
+  elseif self.CurSubTab.Name == ArmoryUtils.ArmorySubTabNames.WeaponMastery and not self.IsPreviewMode then
+    local Char = GWorld:GetAvatar().Chars[Target.Uuid]
+    if Char then
+      EMCache:Set("IsWeaponMasterySubTabClicked" .. Char.CharId, true, true)
+      self:SubTabReddotFunc(self.CurSubTab.Name)
+    end
   end
   self:DefaultInitSubUI(Params)
   if self.CurSubTab.Name == ArmoryUtils.ArmorySubTabNames.Attribute then
@@ -165,7 +171,7 @@ end
 function M:CharMain_ReceiveEnterState()
   self:ResetCharData()
   self:_UpdateSkillUpgradeReddot(ArmoryUtils:GetAvatar(), self.ComparedChar.Uuid)
-  if self.CurSubTab.Name ~= ArmoryUtils.ArmorySubTabNames.Skill then
+  if self.CurSubTab.Name ~= ArmoryUtils.ArmorySubTabNames.Skill and self.CurSubTab.Name ~= ArmoryUtils.ArmorySubTabNames.WeaponMastery then
     self:InitSubUI()
   end
   self:UpdateSubTabReddotCommon(ArmoryUtils.ArmorySubTabNames.Attribute)
@@ -264,9 +270,9 @@ end
 function M:NewElmtIconContent(ElmtType, ElmtName, IsSelected)
   local Obj = NewObject(UIUtils.GetCommonItemContentClass())
   local IconName = "Armory_" .. ElmtType
-  Obj.Icon = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_" .. IconName .. ".T_" .. IconName
-  Obj.Text = GText(ElmtName)
-  Obj.IsSelected = IsSelected
+  rawset(Obj, "Icon", "/Game/UI/Texture/Dynamic/Atlas/Armory/T_" .. IconName .. ".T_" .. IconName)
+  rawset(Obj, "Text", GText(ElmtName))
+  rawset(Obj, "IsSelected", IsSelected)
   return Obj
 end
 
@@ -336,7 +342,7 @@ function M:CharMain_SelectRoleListItem(Content)
   self:CreateAndSelectSubTab()
   self:UpdateCharCardLevel()
   local ReadNew = true
-  if not Content.Upgradeable and Content.IsOwned then
+  if not self.IsPreviewMode and not Content.Upgradeable and Content.IsOwned then
     local NodeName = DataMgr.ReddotNode.NewUltraGradeChar.Name
     local UltraNode = ReddotManager.GetTreeNode(NodeName)
     if UltraNode and UltraNode.Count > 0 then
@@ -393,7 +399,9 @@ local function AddContent(self, Char)
   Obj.IsOwned = true
   Obj.bCollection = Char.IsStar
   Obj.IsStar = Char.IsStar
-  Obj.IsNew = Obj.IsNew or ArmoryUtils:TryAddNewUltraGradeCharReddot(Char)
+  if not self.ReddotFrom then
+    Obj.IsNew = Obj.IsNew or ArmoryUtils:TryAddNewUltraGradeCharReddot(Char)
+  end
   if Obj.IsNew and not Obj.Upgradeable then
     Obj.RedDotType = UIConst.RedDotType.NewRedDot
   end

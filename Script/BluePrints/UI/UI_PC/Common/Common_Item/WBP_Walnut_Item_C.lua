@@ -1,3 +1,4 @@
+local MiscUtils = require("Utils.MiscUtils")
 require("UnLua")
 local M = Class({
   "BluePrints.UI.UI_PC.Common.Common_Item.WBP_Com_item_Universal_L_C"
@@ -58,11 +59,11 @@ function M:RefreshItemsViewWithStateTag(Content)
   local StateTagInfo = Content.StateTagInfo or {}
   if StateTagInfo.Name == "IsToChoose" then
     if StateTagInfo.ExtraData ~= nil then
-      self:SetSelectNum(Utils.FormatNumber(StateTagInfo.ExtraData[1], true), Utils.FormatNumber(StateTagInfo.ExtraData[2], true))
+      self:SetSelectNum(MiscUtils.FormatNumber(StateTagInfo.ExtraData[1], true), MiscUtils.FormatNumber(StateTagInfo.ExtraData[2], true))
       self:SetItemMinus(true)
       self.MinusWidget.Btn_Minus:UnBindEventOnClicked(self, self.CancelSelectClick)
       self.MinusWidget.Btn_Minus:BindEventOnClicked(self, self.CancelSelectClick)
-      self:SetItemMoney(StateTagInfo.ExtraData[4], Utils.FormatNumber(math.floor(StateTagInfo.ExtraData[3] + 0.5), true))
+      self:SetItemMoney(StateTagInfo.ExtraData[4], MiscUtils.FormatNumber(math.floor(StateTagInfo.ExtraData[3] + 0.5), true))
     end
     self:CheckAndSetVisibility(self.SelectWidget, UIConst.VisibilityOp.SelfHitTestInvisible)
     self:CheckAndSetVisibility(self.SelectCountWidget, UIConst.VisibilityOp.SelfHitTestInvisible)
@@ -71,15 +72,15 @@ function M:RefreshItemsViewWithStateTag(Content)
       self:SetItemMinus(true)
       self.MinusWidget.Btn_Minus:UnBindEventOnClicked(self, self.CancelSelectClick)
       self.MinusWidget.Btn_Minus:BindEventOnClicked(self, self.CancelSelectClick)
-      self:SetSelectNum(Utils.FormatNumber(StateTagInfo.ExtraData[1], true), Utils.FormatNumber(StateTagInfo.ExtraData[2], true))
-      self:SetItemMoney(StateTagInfo.ExtraData[4], Utils.FormatNumber(math.floor(StateTagInfo.ExtraData[3] + 0.5), true))
+      self:SetSelectNum(MiscUtils.FormatNumber(StateTagInfo.ExtraData[1], true), MiscUtils.FormatNumber(StateTagInfo.ExtraData[2], true))
+      self:SetItemMoney(StateTagInfo.ExtraData[4], MiscUtils.FormatNumber(math.floor(StateTagInfo.ExtraData[3] + 0.5), true))
     end
     self:CheckAndSetVisibility(self.MinusWidget, UIConst.VisibilityOp.SelfHitTestInvisible)
     self:CheckAndSetVisibility(self.SelectCountWidget, UIConst.VisibilityOp.SelfHitTestInvisible)
   elseif StateTagInfo.Name == "Normal" then
     if StateTagInfo.ExtraData ~= nil then
-      self:SetSelectNum(0, Utils.FormatNumber(StateTagInfo.ExtraData[1], true))
-      self:SetItemMoney(StateTagInfo.ExtraData[3], Utils.FormatNumber(math.floor(StateTagInfo.ExtraData[2] + 0.5), true))
+      self:SetSelectNum(0, MiscUtils.FormatNumber(StateTagInfo.ExtraData[1], true))
+      self:SetItemMoney(StateTagInfo.ExtraData[3], MiscUtils.FormatNumber(math.floor(StateTagInfo.ExtraData[2] + 0.5), true))
       self:CheckAndSetVisibility(self.MinusWidget, UIConst.VisibilityOp.Collapsed)
       self:CheckAndSetVisibility(self.SelectWidget, UIConst.VisibilityOp.Collapsed)
       self:CheckAndSetVisibility(self.SelectCountWidget, UIConst.VisibilityOp.Collapsed)

@@ -1,5 +1,5 @@
 local CommonUtils = require("Utils.CommonUtils")
-local Utils = {}
+local MiscUtils = {}
 local GetDisplayName = UE4.UKismetSystemLibrary.GetDisplayName
 local IsObjId = CommonUtils.IsObjId
 local ObjId2Str = CommonUtils.ObjId2Str
@@ -7,18 +7,18 @@ local bDistribution = UE4.URuntimeCommonFunctionLibrary.IsDistribution()
 local bEnableShippingLog = UE4.URuntimeCommonFunctionLibrary.EnableLogInShipping()
 local IsValid = UE4.UObject.IsValid
 
-function Utils.IsValid(Object)
+function MiscUtils.IsValid(Object)
   if nil == Object then
     return false
   end
   if not Object.IsValid then
-    Traceback(WarningTag, "Utils.IsValid本意是给UObject判断有效性的，不建议传luaTable进来")
+    Traceback(WarningTag, "MiscUtils.IsValid本意是给UObject判断有效性的，不建议传luaTable进来")
     return true
   end
   return IsValid(Object)
 end
 
-Utils.PrintArray = not (not bDistribution or bEnableShippingLog) and Utils.EmptyFunction or function(Targets, Log)
+MiscUtils.PrintArray = not (not bDistribution or bEnableShippingLog) and MiscUtils.EmptyFunction or function(Targets, Log)
   if Targets.ToArray then
     Targets = Targets:ToArray()
   end
@@ -31,7 +31,7 @@ Utils.PrintArray = not (not bDistribution or bEnableShippingLog) and Utils.Empty
   print(LogTag, s)
 end
 
-function Utils.DumpMap(map)
+function MiscUtils.DumpMap(map)
   local ret = {}
   local keys = map:Keys()
   for i = 1, keys:Length() do
@@ -42,7 +42,7 @@ function Utils.DumpMap(map)
   return "{" .. table.concat(ret, ",") .. "}"
 end
 
-function Utils.DumpArray(array)
+function MiscUtils.DumpArray(array)
   local ret = {}
   for i = 1, array:Length() do
     table.insert(ret, array:Get(i))
@@ -50,7 +50,7 @@ function Utils.DumpArray(array)
   return "[" .. table.concat(ret, ",") .. "]"
 end
 
-function Utils.DumpSet(set)
+function MiscUtils.DumpSet(set)
   local array = set:ToArray()
   local ret = {}
   for i = 1, array:Length() do
@@ -59,23 +59,23 @@ function Utils.DumpSet(set)
   return "(" .. table.concat(ret, ",") .. ")"
 end
 
-Utils.PrintMap = not (not bDistribution or bEnableShippingLog) and Utils.EmptyFunction or function(Map)
+MiscUtils.PrintMap = not (not bDistribution or bEnableShippingLog) and MiscUtils.EmptyFunction or function(Map)
   PrintTable(Map:ToTable())
 end
-Utils.Error = not (not bDistribution or bEnableShippingLog) and Utils.EmptyFunction or function(log)
+MiscUtils.Error = not (not bDistribution or bEnableShippingLog) and MiscUtils.EmptyFunction or function(log)
   local s = "Error.." .. tostring(log)
   print(LogTag, s)
 end
 
-function Utils.Trim(str)
+function MiscUtils.Trim(str)
   return (string.gsub(str, "^[%s\n\r\t]*(.-)[%s\n\r\t]*$", "%1"))
 end
 
-function Utils.TrimAll(str)
+function MiscUtils.TrimAll(str)
   return (str:gsub("%s+", ""))
 end
 
-function Utils.Keys(Table)
+function MiscUtils.Keys(Table)
   local Keys = {}
   for k, v in pairs(Table) do
     table.insert(Keys, k)
@@ -83,7 +83,7 @@ function Utils.Keys(Table)
   return Keys
 end
 
-function Utils.Values(Table)
+function MiscUtils.Values(Table)
   local Values = {}
   for k, v in pairs(Table) do
     table.insert(Values, v)
@@ -91,7 +91,7 @@ function Utils.Values(Table)
   return Values
 end
 
-function Utils.IKeys(Table)
+function MiscUtils.IKeys(Table)
   local Keys = {}
   for k, v in ipairs(Table) do
     table.insert(Keys, k)
@@ -99,7 +99,7 @@ function Utils.IKeys(Table)
   return Keys
 end
 
-function Utils.IValues(Table)
+function MiscUtils.IValues(Table)
   local Values = {}
   for k, v in ipairs(Table) do
     table.insert(Values, v)
@@ -107,7 +107,7 @@ function Utils.IValues(Table)
   return Values
 end
 
-function Utils.PairsByKeys(Table)
+function MiscUtils.PairsByKeys(Table)
   local KeyTable = {}
   for n in pairs(Table) do
     KeyTable[#KeyTable + 1] = n
@@ -120,46 +120,46 @@ function Utils.PairsByKeys(Table)
   end
 end
 
-function Utils.Swap(x, y)
+function MiscUtils.Swap(x, y)
   local Temp = x
   x = y
   y = Temp
   return x, y
 end
 
-function Utils.IsListenServer(Actor)
+function MiscUtils.IsListenServer(Actor)
   return UNeModeFunctionLibrary.IsListenServer(Actor)
 end
 
-function Utils.IsSimulatedProxy(actor)
+function MiscUtils.IsSimulatedProxy(actor)
   return 1 == actor:GetLocalRole()
 end
 
-function Utils.IsAutonomousProxy(actor)
+function MiscUtils.IsAutonomousProxy(actor)
   return 2 == actor:GetLocalRole()
 end
 
 local IsActorValidInGame = UE4.AActor.IsActorValidInGame
 
-function Utils.IsActorValid(Actor)
+function MiscUtils.IsActorValid(Actor)
   if nil == Actor then
     return false
   end
   if not IsActorValidInGame then
-    Utils.Traceback(ErrorTag, "Utils.IsActorValid本意是给Actor判断有效性的，不建议传其他类型对象进来")
+    MiscUtils.Traceback(ErrorTag, "MiscUtils.IsActorValid本意是给Actor判断有效性的，不建议传其他类型对象进来")
     return true
   end
   return IsActorValidInGame(Actor)
 end
 
-function Utils.IsWithoutAvatar(InWorldContext)
+function MiscUtils.IsWithoutAvatar(InWorldContext)
   local IsPIE = UE4.URuntimeCommonFunctionLibrary.IsPlayInEditor(InWorldContext)
   local Avatar = GWorld:GetAvatar()
   return true == IsPIE and nil == Avatar
 end
 
-function Utils.IsTakeRecorderCapturing(WorldContext)
-  if Utils.IsWithoutAvatar(WorldContext) then
+function MiscUtils.IsTakeRecorderCapturing(WorldContext)
+  if MiscUtils.IsWithoutAvatar(WorldContext) then
     local GameInstance = UGameplayStatics.GetGameInstance(WorldContext)
     if GameInstance.IsTakeRecorderCapturing then
       return true
@@ -168,7 +168,7 @@ function Utils.IsTakeRecorderCapturing(WorldContext)
   return false
 end
 
-function Utils.GetObjectRight(ObjectInst)
+function MiscUtils.GetObjectRight(ObjectInst)
   local ObjectRight = FVector()
   if ObjectInst.GetActorRightVector then
     ObjectRight = ObjectInst:GetActorRightVector()
@@ -178,7 +178,7 @@ function Utils.GetObjectRight(ObjectInst)
   return ObjectRight
 end
 
-function Utils.GetObjectFoward(ObjectInst)
+function MiscUtils.GetObjectFoward(ObjectInst)
   local ObjectForward = FVector()
   if ObjectInst.GetActorForwardVector then
     ObjectForward = ObjectInst:GetActorForwardVector()
@@ -188,7 +188,7 @@ function Utils.GetObjectFoward(ObjectInst)
   return ObjectForward
 end
 
-function Utils.GetObjectLocation(ObjectInst)
+function MiscUtils.GetObjectLocation(ObjectInst)
   local ObjectLoc = FVector()
   if ObjectInst.K2_GetActorLocation then
     ObjectLoc = ObjectInst:K2_GetActorLocation()
@@ -198,7 +198,7 @@ function Utils.GetObjectLocation(ObjectInst)
   return ObjectLoc
 end
 
-function Utils.ToFVector(t)
+function MiscUtils.ToFVector(t)
   if t.X then
     return FVector(t.X, t.Y, t.Z)
   else
@@ -206,12 +206,12 @@ function Utils.ToFVector(t)
   end
 end
 
-function Utils.GameMode(context)
+function MiscUtils.GameMode(context)
   context = context or GWorld.GameInstance
   return UE4.UGameplayStatics.GetGameMode(context)
 end
 
-function Utils.LazyLoadClass(str, persistent)
+function MiscUtils.LazyLoadClass(str, persistent)
   local object = {}
   object.path = str
   
@@ -229,12 +229,12 @@ function Utils.LazyLoadClass(str, persistent)
   return object
 end
 
-function Utils.LazyLoadObject(str)
+function MiscUtils.LazyLoadObject(str)
   local object = {}
   object.path = str
   
   function object:get()
-    if self.object and Utils.IsValid(self.object) then
+    if self.object and MiscUtils.IsValid(self.object) then
       return self.object
     elseif self.path ~= "" or self.path ~= nil then
       return LoadObject(self.path)
@@ -246,42 +246,42 @@ function Utils.LazyLoadObject(str)
   return object
 end
 
-local GlobalDamageStruct = Utils.LazyLoadClass("/Game/BluePrints/Combat/BP_DamageStruct.BP_DamageStruct", true)
-local PetClass = Utils.LazyLoadClass("/Game/BluePrints/Char/BP_PetNpc/BP_PetNPC.BP_PetNPC_C", true)
-local GlobalFunctionLibrary = Utils.LazyLoadClass("/Game/BluePrints/Common/BP_GlobalFunctionLibrary.BP_GlobalFunctionLibrary_C", true)
+local GlobalDamageStruct = MiscUtils.LazyLoadClass("/Game/BluePrints/Combat/BP_DamageStruct.BP_DamageStruct", true)
+local PetClass = MiscUtils.LazyLoadClass("/Game/BluePrints/Char/BP_PetNpc/BP_PetNPC.BP_PetNPC_C", true)
+local GlobalFunctionLibrary = MiscUtils.LazyLoadClass("/Game/BluePrints/Common/BP_GlobalFunctionLibrary.BP_GlobalFunctionLibrary_C", true)
 
-function Utils.GetHitActor(HitResult)
+function MiscUtils.GetHitActor(HitResult)
   return GlobalFunctionLibrary:get().GetHitActor(HitResult)
 end
 
-function Utils.TransEPhysicalSurface(EPhysicalSurface)
+function MiscUtils.TransEPhysicalSurface(EPhysicalSurface)
   return GlobalFunctionLibrary:get().TransEPhysicalSurface(EPhysicalSurface)
 end
 
-function Utils.DamageEventClass()
+function MiscUtils.DamageEventClass()
   return GlobalDamageStruct:get()
 end
 
-function Utils.PreloadPetClass()
+function MiscUtils.PreloadPetClass()
   DebugPrint("BP_PetNpc Class", PetClass:get())
 end
 
-function Utils.Round(FloatValue)
+function MiscUtils.Round(FloatValue)
   if 0 == FloatValue then
     return 0
   end
   if FloatValue > 0 then
     return math.floor(FloatValue + 0.5)
   else
-    return -Utils.Round(-FloatValue)
+    return -MiscUtils.Round(-FloatValue)
   end
 end
 
-function Utils.IsNilOrEmpty(InStr)
+function MiscUtils.IsNilOrEmpty(InStr)
   return nil == InStr or "" == InStr
 end
 
-function Utils.InArray(Array, Value)
+function MiscUtils.InArray(Array, Value)
   if not Array or 0 == Array:Length() then
     return false
   end
@@ -293,18 +293,18 @@ function Utils.InArray(Array, Value)
   return false
 end
 
-function Utils.Int(FloatValue)
+function MiscUtils.Int(FloatValue)
   if 0 == FloatValue then
     return 0
   end
   if FloatValue > 0 then
     return math.floor(FloatValue + 1.0E-4)
   else
-    return -Utils.Int(-FloatValue)
+    return -MiscUtils.Int(-FloatValue)
   end
 end
 
-function Utils.NumberToBool(Number)
+function MiscUtils.NumberToBool(Number)
   if nil == Number then
     return false
   end
@@ -320,27 +320,27 @@ function Utils.NumberToBool(Number)
   return Number
 end
 
-function Utils.IsLowerAuthority(actor)
+function MiscUtils.IsLowerAuthority(actor)
   return actor:GetLocalRole() < 3
 end
 
-function Utils.GetCacheClass(ActorPath)
+function MiscUtils.GetCacheClass(ActorPath)
   if Const.CacheClassMap then
     return Const.CacheClassMap[ActorPath]
   end
   return nil
 end
 
-function Utils.IsInRange(Source, Target, MinDis, MaxDis)
+function MiscUtils.IsInRange(Source, Target, MinDis, MaxDis)
   local Dis = (Target - Source):Size()
   return MaxDis >= Dis and MinDis <= Dis
 end
 
-function Utils.IsInCircle(Source, Target, Radius)
+function MiscUtils.IsInCircle(Source, Target, Radius)
   return Radius >= (Target - Source):Size()
 end
 
-function Utils.CircleCrossSegment(Point1, Point2, CircleCenter, CircleRadius)
+function MiscUtils.CircleCrossSegment(Point1, Point2, CircleCenter, CircleRadius)
   local Flag1 = (Point1.X - CircleCenter.X) * (Point1.X - CircleCenter.X) + (Point1.Y - CircleCenter.Y) * (Point1.Y - CircleCenter.Y) <= CircleRadius * CircleRadius
   local Flag2 = (Point2.X - CircleCenter.X) * (Point2.X - CircleCenter.X) + (Point2.Y - CircleCenter.Y) * (Point2.Y - CircleCenter.Y) <= CircleRadius * CircleRadius
   if Flag1 and Flag2 then
@@ -366,7 +366,7 @@ function Utils.CircleCrossSegment(Point1, Point2, CircleCenter, CircleRadius)
   end
 end
 
-function Utils.IsInsideSector(Source, SourceForward, Target, TargetRadius, Radius, Angle)
+function MiscUtils.IsInsideSector(Source, SourceForward, Target, TargetRadius, Radius, Angle)
   if (Target - Source):Size() > TargetRadius + Radius then
     return false
   end
@@ -390,26 +390,26 @@ function Utils.IsInsideSector(Source, SourceForward, Target, TargetRadius, Radiu
   end
   local LeftEdgePoint = Source + LeftEdge2D * Radius
   local RightEdgePoint = Source + RightEdge2D * Radius
-  if Utils.IsInCircle(Source, Target, TargetRadius) or Utils.IsInCircle(LeftEdgePoint, Target, TargetRadius) or Utils.IsInCircle(RightEdgePoint, Target, TargetRadius) then
+  if MiscUtils.IsInCircle(Source, Target, TargetRadius) or MiscUtils.IsInCircle(LeftEdgePoint, Target, TargetRadius) or MiscUtils.IsInCircle(RightEdgePoint, Target, TargetRadius) then
     return true
   end
-  if Utils.CircleCrossSegment(LeftEdgePoint, Source, Target, TargetRadius) or Utils.CircleCrossSegment(RightEdgePoint, Source, Target, TargetRadius) then
+  if MiscUtils.CircleCrossSegment(LeftEdgePoint, Source, Target, TargetRadius) or MiscUtils.CircleCrossSegment(RightEdgePoint, Source, Target, TargetRadius) then
     return true
   end
   return false
 end
 
-function Utils.IsRingCrossSector(CenterPos2D, Forward2D, TargetLoc2D, OutterRadius, Radius, Angle, InnerRadius)
-  if not Utils.IsInsideSector(CenterPos2D, Forward2D, TargetLoc2D, OutterRadius, Radius, Angle) then
+function MiscUtils.IsRingCrossSector(CenterPos2D, Forward2D, TargetLoc2D, OutterRadius, Radius, Angle, InnerRadius)
+  if not MiscUtils.IsInsideSector(CenterPos2D, Forward2D, TargetLoc2D, OutterRadius, Radius, Angle) then
     return false
   end
   if InnerRadius > (CenterPos2D - TargetLoc2D):Size() then
-    return Utils.SectorCrossInnerCircle(CenterPos2D, Forward2D, TargetLoc2D, OutterRadius, Radius, Angle, InnerRadius)
+    return MiscUtils.SectorCrossInnerCircle(CenterPos2D, Forward2D, TargetLoc2D, OutterRadius, Radius, Angle, InnerRadius)
   end
   return true
 end
 
-function Utils.SectorCrossInnerCircle(CenterPos2D, Forward2D, TargetLoc2D, OutterRadius, Radius, Angle, InnerRadius)
+function MiscUtils.SectorCrossInnerCircle(CenterPos2D, Forward2D, TargetLoc2D, OutterRadius, Radius, Angle, InnerRadius)
   Forward2D:Normalize()
   local HalfAngle = Angle / 2.0
   local CosHalfAngle = UE4.UKismetMathLibrary.DegCos(HalfAngle)
@@ -420,7 +420,7 @@ function Utils.SectorCrossInnerCircle(CenterPos2D, Forward2D, TargetLoc2D, Outte
   RightEdge2D:Normalize()
   local LeftEdgePoint = CenterPos2D + LeftEdge2D * Radius
   local RightEdgePoint = CenterPos2D + RightEdge2D * Radius
-  if not Utils.IsInCircle(LeftEdgePoint, TargetLoc2D, InnerRadius) or not Utils.IsInCircle(RightEdgePoint, TargetLoc2D, InnerRadius) then
+  if not MiscUtils.IsInCircle(LeftEdgePoint, TargetLoc2D, InnerRadius) or not MiscUtils.IsInCircle(RightEdgePoint, TargetLoc2D, InnerRadius) then
     return true
   end
   if InnerRadius > (TargetLoc2D - CenterPos2D):Size() + Radius then
@@ -440,59 +440,59 @@ function Utils.SectorCrossInnerCircle(CenterPos2D, Forward2D, TargetLoc2D, Outte
   return InnerRadius <= (MaxCrossPoint - TargetLoc2D):Size()
 end
 
-function Utils.PointInRect(TargetDotEdge, TargetToSourcePow2, TargetDotEdgePow2, RadiusPow2)
+function MiscUtils.PointInRect(TargetDotEdge, TargetToSourcePow2, TargetDotEdgePow2, RadiusPow2)
   return TargetDotEdge >= 0 and RadiusPow2 >= TargetToSourcePow2 - TargetDotEdgePow2
 end
 
-function Utils.CalculateQuadrant(CurrentDir, Angle)
+function MiscUtils.CalculateQuadrant(CurrentDir, Angle)
   local Forward = 0
   local Backward = 1
   local Right = 6
   local Left = 7
   local Buffer = Const.Buffer
-  if Utils.AngleInRange(Angle, Const.FLThreshold, Const.FRThreshold, Buffer, CurrentDir ~= Forward or CurrentDir ~= Backward) then
+  if MiscUtils.AngleInRange(Angle, Const.FLThreshold, Const.FRThreshold, Buffer, CurrentDir ~= Forward or CurrentDir ~= Backward) then
     return Forward
   end
-  if Utils.AngleInRange(Angle, Const.FRThreshold, Const.BRThreshold, Buffer, CurrentDir ~= Right or CurrentDir ~= Left) then
+  if MiscUtils.AngleInRange(Angle, Const.FRThreshold, Const.BRThreshold, Buffer, CurrentDir ~= Right or CurrentDir ~= Left) then
     return Right
   end
-  if Utils.AngleInRange(Angle, Const.BLThreshold, Const.FLThreshold, Buffer, CurrentDir ~= Right or CurrentDir ~= Left) then
+  if MiscUtils.AngleInRange(Angle, Const.BLThreshold, Const.FLThreshold, Buffer, CurrentDir ~= Right or CurrentDir ~= Left) then
     return Left
   end
   return Backward
 end
 
-function Utils.AngleInRange(Angle, MinAngle, MaxAngle, Buffer, IncreaseBuffer)
+function MiscUtils.AngleInRange(Angle, MinAngle, MaxAngle, Buffer, IncreaseBuffer)
   if IncreaseBuffer then
     return Angle >= MinAngle - Buffer and Angle <= MaxAngle + Buffer
   end
   return Angle >= MinAngle + Buffer and Angle <= MaxAngle - Buffer
 end
 
-function Utils.BetweenTwoVec(Left, Mid, Right)
+function MiscUtils.BetweenTwoVec(Left, Mid, Right)
   local Left2D = UE4.UKismetMathLibrary.Conv_VectorToVector2D(Left)
   local Mid2D = UE4.UKismetMathLibrary.Conv_VectorToVector2D(Mid)
   local Right2D = UE4.UKismetMathLibrary.Conv_VectorToVector2D(Right)
   return Left2D:Cross(Mid2D) * Right2D:Cross(Mid2D) <= 0
 end
 
-function Utils.FourDirToEightDir(LocRelativeVelocityDir)
+function MiscUtils.FourDirToEightDir(LocRelativeVelocityDir)
   local TargetVelocityBlend = FVelocityBlend()
-  local Aix, LeanAix = table.unpack(Utils.AixsCheck(Utils.WithTolerance(LocRelativeVelocityDir.X), Utils.WithTolerance(LocRelativeVelocityDir.Y)))
+  local Aix, LeanAix = table.unpack(MiscUtils.AixsCheck(MiscUtils.WithTolerance(LocRelativeVelocityDir.X), MiscUtils.WithTolerance(LocRelativeVelocityDir.Y)))
   local Value = math.abs(LocRelativeVelocityDir.X)
   local ValueNormal = math.abs(LocRelativeVelocityDir.Y)
   if Value < ValueNormal then
-    Value, ValueNormal = Utils.Swap(Value, ValueNormal)
+    Value, ValueNormal = MiscUtils.Swap(Value, ValueNormal)
   end
   LeanAixVal = UE4.UKismetMathLibrary.Sqrt(2) * ValueNormal
   AixVal = Value - ValueNormal
-  AixVal, LeanAixVal = Utils.Average(AixVal, LeanAixVal)
+  AixVal, LeanAixVal = MiscUtils.Average(AixVal, LeanAixVal)
   TargetVelocityBlend[Aix] = UE4.UKismetMathLibrary.FClamp(AixVal, 0.1, 1)
   TargetVelocityBlend[LeanAix] = UE4.UKismetMathLibrary.FClamp(LeanAixVal, 0.1, 1)
   return TargetVelocityBlend
 end
 
-function Utils.FourDirVelocityBlend(LocRelativeVelocityDir)
+function MiscUtils.FourDirVelocityBlend(LocRelativeVelocityDir)
   local TargetVelocityBlend = FVelocityBlend()
   local Value = math.abs(LocRelativeVelocityDir.X)
   local ValueNormal = math.abs(LocRelativeVelocityDir.Y)
@@ -509,7 +509,7 @@ function Utils.FourDirVelocityBlend(LocRelativeVelocityDir)
   return TargetVelocityBlend
 end
 
-function Utils.AixsCheck(x, y)
+function MiscUtils.AixsCheck(x, y)
   local QuadrantTable = {
     {1, 2},
     {3, 4},
@@ -542,7 +542,7 @@ function Utils.AixsCheck(x, y)
   return AixsTable[QuadrantTable[QuadrantIndex][AixIndex]]
 end
 
-function Utils.Sign(Value, Tolerance)
+function MiscUtils.Sign(Value, Tolerance)
   local T = Tolerance
   if not Tolerance then
     T = 0.01
@@ -553,11 +553,11 @@ function Utils.Sign(Value, Tolerance)
   return 1
 end
 
-function Utils.Average(x, y)
+function MiscUtils.Average(x, y)
   return x / (math.abs(x) + math.abs(y)), y / (math.abs(x) + math.abs(y))
 end
 
-function Utils.WithTolerance(Value, Tolerance)
+function MiscUtils.WithTolerance(Value, Tolerance)
   local T = Tolerance
   if not Tolerance then
     T = 0.01
@@ -570,7 +570,7 @@ function Utils.WithTolerance(Value, Tolerance)
   return Value
 end
 
-function Utils.FormatNumberWithCommas(Number)
+function MiscUtils.FormatNumberWithCommas(Number)
   local Sep = CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR and " " or ","
   if type(Number) == "number" then
     if Number < 100000 then
@@ -587,7 +587,72 @@ function Utils.FormatNumberWithCommas(Number)
   end
 end
 
-Utils.GetStrTable = not (not bDistribution or bEnableShippingLog) and Utils.EmptyFunction or function(ct, t, step, deep, PrettyFormat)
+local FormatNumberTable = {
+  k = 1000,
+  M = 1000000,
+  B = 1000000000
+}
+
+function MiscUtils.FormatNumber(Number, UseFormat)
+  if not UseFormat then
+    local Result = MiscUtils.FormatNumberWithCommas(Number)
+    return Result
+  end
+  local NumberStr = tostring(math.floor(Number))
+  local NumLen = string.len(NumberStr)
+  local FormatSign, FormatSignLen, FormatSignText
+  if NumLen >= 11 then
+    FormatSign = "B"
+    FormatSignText = "UI_Amount_Billion"
+    FormatSignLen = 9
+  elseif NumLen >= 8 then
+    FormatSign = "M"
+    FormatSignText = "UI_Amount_Million"
+    FormatSignLen = 6
+  elseif NumLen >= 6 then
+    FormatSign = "k"
+    FormatSignText = "UI_Amount_Thousand"
+    FormatSignLen = 3
+  end
+  if not FormatSign or nil == FormatNumberTable[FormatSign] then
+    return NumberStr
+  end
+  local IntegerPart = string.sub(NumberStr, 1, NumLen - FormatSignLen)
+  IntegerPart = MiscUtils.FormatNumberWithCommas(IntegerPart)
+  if 0 == Number % FormatNumberTable[FormatSign] then
+    return IntegerPart .. GText(FormatSignText)
+  else
+    local DecimalNum_1 = 10 * Number // FormatNumberTable[FormatSign] % 10
+    if 9 == DecimalNum_1 then
+      return IntegerPart .. ".9" .. GText(FormatSignText)
+    else
+      local DecimalNum_2 = 100 * Number // FormatNumberTable[FormatSign] % 10
+      DecimalNum_1 = DecimalNum_1 + (DecimalNum_2 >= 5 and 1 or 0)
+      if DecimalNum_1 > 0 then
+        return IntegerPart .. "." .. DecimalNum_1 .. GText(FormatSignText)
+      else
+        return IntegerPart .. GText(FormatSignText)
+      end
+    end
+  end
+end
+
+function MiscUtils.FormatWeaponInfo(TempWeapon, DumpWeaponInfo)
+  TempWeapon.SlotData = {}
+  TempWeapon.ModData = {}
+  TempWeapon.ModPassives = nil
+  TempWeapon.SkillInfos = nil
+  TempWeapon.ReplaceAttrs = nil
+  TempWeapon.EnhanceLevel = DumpWeaponInfo.EnhanceLevel or 0
+  TempWeapon.WeaponId = DumpWeaponInfo.WeaponId or 0
+  TempWeapon.GradeLevel = DumpWeaponInfo.GradeLevel or 0
+  TempWeapon.HyperCardLevel = DumpWeaponInfo.HyperCardLevel or 0
+  TempWeapon.AppearanceInfo = DumpWeaponInfo
+  TempWeapon.AppearanceInfo.EnhanceLevel = nil
+  TempWeapon.AppearanceInfo.GradeLevel = nil
+end
+
+MiscUtils.GetStrTable = not (not bDistribution or bEnableShippingLog) and MiscUtils.EmptyFunction or function(ct, t, step, deep, PrettyFormat)
   if type(t) ~= "table" then
     ct[#ct + 1] = tostring(t)
     return
@@ -600,7 +665,7 @@ Utils.GetStrTable = not (not bDistribution or bEnableShippingLog) and Utils.Empt
     local type_k = type(k)
     local type_v = type(v)
     local str_k, str_v
-    if "table" == type_v and v.IsValid and Utils.IsValid(v) then
+    if "table" == type_v and v.IsValid and MiscUtils.IsValid(v) then
       type_v = tostring(GetDisplayName(v))
     end
     if "string" == type_k and IsObjId(k) then
@@ -632,7 +697,7 @@ Utils.GetStrTable = not (not bDistribution or bEnableShippingLog) and Utils.Empt
       ct[#ct + 1] = "\n"
     end
     if type(v) == "table" and step < deep then
-      Utils.GetStrTable(ct, v, step + 1, deep, PrettyFormat)
+      MiscUtils.GetStrTable(ct, v, step + 1, deep, PrettyFormat)
     end
   end
   
@@ -652,14 +717,14 @@ Utils.GetStrTable = not (not bDistribution or bEnableShippingLog) and Utils.Empt
   end
 end
 
-function Utils.CorrectUrl(Url)
+function MiscUtils.CorrectUrl(Url)
   Url = string.gsub(Url, "([%%+#&= ])", function(c)
     return string.format("%%%02X", string.byte(c))
   end)
   return Url
 end
 
-function Utils.IsSingleByteWord(Word)
+function MiscUtils.IsSingleByteWord(Word)
   for i = 1, #Word do
     local curByte = string.byte(Word, i)
     if curByte < 0 or curByte > 127 then
@@ -669,25 +734,22 @@ function Utils.IsSingleByteWord(Word)
   return true
 end
 
-Utils.AudioManager_Var = nil
-
-function Utils.GetAudioManager_Lua(context)
+function MiscUtils.GetAudioManager_Lua(context)
   if IsDedicatedServer(context) then
-    Utils.AudioManager_Var = CommonUtils.EmptyProxy
-  else
-    local GameInstance = UE4.UGameplayStatics.GetGameInstance(context)
-    if GameInstance and GameInstance.GetAudioManager then
-      Utils.AudioManager_Var = GameInstance:GetAudioManager()
-    end
+    return CommonUtils.EmptyProxy
   end
-  return Utils.AudioManager_Var
+  local GameInstance = UE4.UGameplayStatics.GetGameInstance(context)
+  if GameInstance and GameInstance.GetAudioManager then
+    return GameInstance:GetAudioManager()
+  end
+  return nil
 end
 
-function Utils.GetGameCofingSettings(VarName)
+function MiscUtils.GetGameCofingSettings(VarName)
   return UE4.UGameConfigSetttings.Get()[VarName]
 end
 
-function Utils:InitializeSettings()
+function MiscUtils:InitializeSettings()
   local WorldContext = GWorld.GameInstance
   local IsPIE = UE4.URuntimeCommonFunctionLibrary.IsPlayInEditor(WorldContext)
   if IsPIE then
@@ -697,18 +759,18 @@ function Utils:InitializeSettings()
     UE4.UKismetSystemLibrary.ExecuteConsoleCommand(WorldContext, "r.ReflectionCaptureGPUArrayCopy 0", nil)
   end
   UE4.UKismetSystemLibrary.ExecuteConsoleCommand(WorldContext, "Slate.EnableRetainedRenderingWithLocalTransform 0", nil)
-  Utils.PreloadPetClass()
+  MiscUtils.PreloadPetClass()
 end
 
-function Utils.AddTickLodActor(InTag, InActor, TickLodFlag)
+function MiscUtils.AddTickLodActor(InTag, InActor, TickLodFlag)
   URuntimeCommonFunctionLibrary.AddTickLodObject(InTag, InActor, TickLodFlag)
 end
 
-function Utils.RemoveTickLodActor(InTag, InActor, TickLodFlag)
+function MiscUtils.RemoveTickLodActor(InTag, InActor, TickLodFlag)
   URuntimeCommonFunctionLibrary.RemoveTickLodObject(InTag, InActor, TickLodFlag)
 end
 
-function Utils.BlockTickLod(InTag, bBlock, InActor, BlockTag, TickLodFlag)
+function MiscUtils.BlockTickLod(InTag, bBlock, InActor, BlockTag, TickLodFlag)
   if InActor.BlockTickLod then
     InActor:BlockTickLod(bBlock, InTag, TickLodFlag)
     return
@@ -720,7 +782,7 @@ function Utils.BlockTickLod(InTag, bBlock, InActor, BlockTag, TickLodFlag)
   SignificanceMgrSubsystem:BlockTickLod(InTag, bBlock, InActor, BlockTag, TickLodFlag)
 end
 
-function Utils.PlayMontageBySkeletaMesh(Owner, MeshComp, MontageAsset, PlayParam)
+function MiscUtils.PlayMontageBySkeletaMesh(Owner, MeshComp, MontageAsset, PlayParam)
   if not MontageAsset then
     local Result = PlayParam.OnCompleted and PlayParam.OnCompleted(Owner, true)
     return
@@ -738,7 +800,7 @@ function Utils.PlayMontageBySkeletaMesh(Owner, MeshComp, MontageAsset, PlayParam
     _StartSec = PlayParam.StartSec
   end
   local MontCallbackProxy = UE4.UPlayMontageCallbackProxy.CreateProxyObjectForPlayMontage(MeshComp, MontageAsset, _PlayRate, _StartPos, _StartSec)
-  if not Utils.IsValid(MontCallbackProxy) then
+  if not MiscUtils.IsValid(MontCallbackProxy) then
     return
   end
   
@@ -797,24 +859,24 @@ function Utils.PlayMontageBySkeletaMesh(Owner, MeshComp, MontageAsset, PlayParam
   end
 end
 
-function Utils.EnableFriendFXBias(enable)
+function MiscUtils.EnableFriendFXBias(enable)
   if Const.EnableFriendFXQualityBias ~= enable then
     Const.EnableFriendFXQualityBias = enable
     Const.ScalabilityUpdateTime = Const.ScalabilityUpdateTime + 1
   end
 end
 
-function Utils.SetFriendFXQuality(quality)
+function MiscUtils.SetFriendFXQuality(quality)
   if Const.FriendFXQuality ~= quality then
     Const.FriendFXQuality = quality
     Const.ScalabilityUpdateTime = Const.ScalabilityUpdateTime + 1
   end
 end
 
-function Utils.EmptyFunction(...)
+function MiscUtils.EmptyFunction(...)
 end
 
-function Utils.SaveCacheClass(ActorPath, UnitBlueprint)
+function MiscUtils.SaveCacheClass(ActorPath, UnitBlueprint)
   if not Const.CacheClassMap then
     Const.CacheClassMap = {}
   end
@@ -824,16 +886,23 @@ function Utils.SaveCacheClass(ActorPath, UnitBlueprint)
   end
 end
 
-function Utils.GetNPCCreateSubSystem_Lua(context)
+local NPCCreateSubSystem_Var
+
+function MiscUtils.GetNPCCreateSubSystem_Lua(context)
   if IsDedicatedServer(context) then
-    Utils.NPCCreateSubSystem_Var = CommonUtils.EmptyProxy
-  else
-    Utils.NPCCreateSubSystem_Var = UNPCCreateSubSystem.GetSubsystem(context)
+    return CommonUtils.EmptyProxy
   end
-  return Utils.NPCCreateSubSystem_Var
+  if not IsValid(NPCCreateSubSystem_Var) then
+    NPCCreateSubSystem_Var = UNPCCreateSubSystem.GetSubsystem(context)
+  end
+  return NPCCreateSubSystem_Var
 end
 
-function Utils.StringToByteTable(Data)
+function MiscUtils.NPCCreateSubSystem(context)
+  return MiscUtils.GetNPCCreateSubSystem_Lua(context)
+end
+
+function MiscUtils.StringToByteTable(Data)
   local Len = string.len(Data)
   local ByteTable = {}
   for i = 1, Len do
@@ -842,7 +911,7 @@ function Utils.StringToByteTable(Data)
   return ByteTable
 end
 
-function Utils.ByteArrayToString(ByteArray)
+function MiscUtils.ByteArrayToString(ByteArray)
   local Chars = {}
   local Len = ByteArray:Num()
   for i = 1, Len do
@@ -851,7 +920,7 @@ function Utils.ByteArrayToString(ByteArray)
   return table.concat(Chars)
 end
 
-function Utils.GetGameReviewPlatform()
+function MiscUtils.GetGameReviewPlatform()
   local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName()
   if "IOS" == PlatformName then
     return "IOS"
@@ -868,4 +937,45 @@ function Utils.GetGameReviewPlatform()
   return ""
 end
 
-return Utils
+MiscUtils.SPrint = not (not bDistribution or bEnableShippingLog) and MiscUtils.EmptyFunction or function(text, duration, color)
+  duration = duration or 4
+  color = color or UE4.FLinearColor(0, 1, 0, 1)
+  UE4.UKismetSystemLibrary.PrintString(GWorld.GameInstance, tostring(text), true, false, color, duration)
+end
+
+local function BuildPrintText(...)
+  local Params = table.pack(...)
+  local MsgList = {}
+  for Idx = 1, Params.n do
+    MsgList[#MsgList + 1] = tostring(Params[Idx])
+  end
+  return table.concat(MsgList, " ")
+end
+
+function MiscUtils.GreenPrint(...)
+  MiscUtils.SPrint(BuildPrintText(...), nil, UE4.FLinearColor(0, 1, 0, 1))
+end
+
+function MiscUtils.RedPrint(...)
+  MiscUtils.SPrint(BuildPrintText(...), nil, UE4.FLinearColor(1, 0, 0, 1))
+end
+
+function MiscUtils.GLink(LinkId)
+  local IsGlobalPak = UE.AHotUpdateGameMode.IsGlobalPak()
+  local LinkInfo = DataMgr.PolicyLink[LinkId]
+  if not LinkInfo then
+    return nil
+  end
+  local Link
+  if IsGlobalPak then
+    local SystemLanguage = EMCache:Get("SystemLanguage") or "EN"
+    if LinkInfo then
+      Link = LinkInfo["Abroad" .. SystemLanguage] or LinkInfo.AbroadEN or LinkInfo.ChinaCN
+    end
+  elseif LinkInfo then
+    Link = LinkInfo.ChinaCN
+  end
+  return Link
+end
+
+return MiscUtils

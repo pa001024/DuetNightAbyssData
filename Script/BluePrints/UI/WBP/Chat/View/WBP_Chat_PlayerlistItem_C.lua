@@ -355,17 +355,8 @@ function M:_SetHeadIcon(HeadIconId)
     return
   end
   local HeadData = DataMgr.HeadSculpture[HeadIconId]
-  if not HeadData or not HeadData.HeadPath then
-    SetHeadOpacity(false)
-    return
-  end
-  local HeadIcon = LoadObject(HeadData.HeadPath)
-  if not IsValid(HeadIcon) then
-    SetHeadOpacity(false)
-    return
-  end
   SetHeadOpacity(true)
-  self.WBP_Com_ItemHead:SetHeadIcon(HeadIcon)
+  self.WBP_Com_ItemHead:SetHeadIconById(HeadIconId)
 end
 
 function M:_SetEmptyState(bIsEmpty)

@@ -1824,8 +1824,9 @@ return {
               bOpenDefaultSkinKawaii = false,
               HideNpcs = false,
               HideMonsters = true,
-              HideAllBattleEntity = true,
-              HideEffectCreature = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
+              bHideSceneEffects = true,
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
@@ -2330,8 +2331,9 @@ return {
               bOpenDefaultSkinKawaii = false,
               HideNpcs = false,
               HideMonsters = true,
-              HideAllBattleEntity = true,
-              HideEffectCreature = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
+              bHideSceneEffects = true,
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
@@ -2604,8 +2606,9 @@ return {
               bOpenDefaultSkinKawaii = false,
               HideNpcs = false,
               HideMonsters = true,
-              HideAllBattleEntity = true,
-              HideEffectCreature = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
+              bHideSceneEffects = true,
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
@@ -2679,7 +2682,7 @@ return {
       key = "story_1686819708762921",
       type = "StoryNode",
       name = "上山",
-      pos = {x = 458.8116680400097, y = -61.471333858045},
+      pos = {x = 460.8116680400097, y = -61.471333858045},
       propsData = {
         QuestId = 10010201,
         QuestDescriptionComment = "前往山上的遗迹",
@@ -2896,12 +2899,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1704175979086184683",
-            startPort = "QuestStart",
-            endQuest = "17581633336301932868",
-            endPort = "In"
-          },
-          {
             startQuest = "175472823494711811",
             startPort = "Out",
             endQuest = "17586254372202378",
@@ -2923,6 +2920,30 @@ return {
             startQuest = "175472823494711811",
             startPort = "Out",
             endQuest = "1704175979086184686",
+            endPort = "In"
+          },
+          {
+            startQuest = "1704175979086184683",
+            startPort = "QuestStart",
+            endQuest = "17581633336301932868",
+            endPort = "In"
+          },
+          {
+            startQuest = "178608809053624876",
+            startPort = "Out",
+            endQuest = "178608810402825137",
+            endPort = "In"
+          },
+          {
+            startQuest = "178608810402825137",
+            startPort = "Out",
+            endQuest = "178608812118925303",
+            endPort = "In"
+          },
+          {
+            startQuest = "17581633336301932868",
+            startPort = "Out",
+            endQuest = "178608809053624876",
             endPort = "In"
           }
         },
@@ -3033,7 +3054,7 @@ return {
             key = "1704175979086184683",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = -1020.1698978219741, y = -133.80055392877279},
+            pos = {x = -1564.1698978219742, y = -105.80055392877279},
             propsData = {ModeType = 0}
           },
           ["1704175979086184684"] = {
@@ -3376,7 +3397,7 @@ return {
             key = "17581633336301932868",
             type = "GoToRegionNode",
             name = "进入区域",
-            pos = {x = -1012.2539884866911, y = -318.5521772603941},
+            pos = {x = -1110.253988486691, y = -332.5521772603941},
             propsData = {
               RegionType = 1,
               IsEnter = "Enter",
@@ -3393,6 +3414,42 @@ return {
             pos = {x = 1741.4107871678946, y = -490.0813235623373},
             propsData = {
               EventName = "grapplepoints_active"
+            }
+          },
+          ["178608809053624876"] = {
+            key = "178608809053624876",
+            type = "ShowOrHideUINode",
+            name = "显示或隐藏UI-Energy",
+            pos = {x = -1172, y = 36.00000000000003},
+            propsData = {
+              Function = "HideUIInScreen",
+              UIParam = "EnergySkill",
+              ActionParam = "None",
+              ShowOrHide = true
+            }
+          },
+          ["178608810402825137"] = {
+            key = "178608810402825137",
+            type = "ShowOrHideUINode",
+            name = "显示操作",
+            pos = {x = -864.344827586207, y = 40.20689655172418},
+            propsData = {
+              Function = "SetContinuedPCGuideVisibility",
+              UIParam = "None",
+              ActionParam = "Dodge",
+              ShowOrHide = false
+            }
+          },
+          ["178608812118925303"] = {
+            key = "178608812118925303",
+            type = "ShowOrHideUINode",
+            name = "显示操作",
+            pos = {x = -548.5517241379309, y = 36.41379310344827},
+            propsData = {
+              Function = "SetContinuedPCGuideVisibility",
+              UIParam = "None",
+              ActionParam = "SpiralLeap",
+              ShowOrHide = false
             }
           }
         },

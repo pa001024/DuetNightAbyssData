@@ -53,8 +53,10 @@ function M:InitLevelsInfo()
   end
   local BackpackPuzzleLevelInfo = CommonUtils.CopyTable(BackpackPuzzleLevel)
   for _, Info in pairs(BackpackPuzzleLevelInfo) do
-    Info.GridDistribute = SanitizeGridDistribute(Info.GridDistribute)
-    table.insert(self.LevelsInfo, Info)
+    if Info.EventId == self.CurEventId then
+      Info.GridDistribute = SanitizeGridDistribute(Info.GridDistribute)
+      table.insert(self.LevelsInfo, Info)
+    end
   end
   table.sort(self.LevelsInfo, function(A, B)
     return A.LevelId < B.LevelId
@@ -88,7 +90,10 @@ end
 
 function M:GetLevelInfo(LevelId)
   local BackpackPuzzleLevelInfo = DataMgr.BackpackPuzzleLevel
-  return BackpackPuzzleLevelInfo and BackpackPuzzleLevelInfo[LevelId]
+  local LevelInfo = BackpackPuzzleLevelInfo and BackpackPuzzleLevelInfo[LevelId]
+  if LevelInfo and LevelInfo.EventId == self.CurEventId then
+    return LevelInfo
+  end
 end
 
 function M:GetLevelTargetScores(LevelId)

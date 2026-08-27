@@ -137,6 +137,10 @@ function M:RefreshManualArchiveRewardReddot()
 end
 
 function M:RefreshLimitRewardReddot(ClearCache)
+  if not self:IsPlaySubtabUnlocked() then
+    ReddotManager.ClearLeafNodeCount(self.REDDOT_NODE_LIMIT_REWARD, true)
+    return
+  end
   ClearCache = ClearCache or false
   local SeasonConfig = self:GetSeasonConfigData()
   local EventId = SeasonConfig and SeasonConfig.SeasonEventId or -1

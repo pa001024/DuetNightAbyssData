@@ -1,3 +1,4 @@
+local MiscUtils = require("Utils.MiscUtils")
 require("UnLua")
 local WBP_SoloTreasure_HudScore_C = Class({
   "BluePrints.UI.BP_UIState_C"
@@ -170,7 +171,7 @@ function WBP_SoloTreasure_HudScore_C:SetGameScoreWithScrollAnimation()
       IsDone = true
       AudioManager(self):StopSound(self, "AddScore")
     end
-    self.Text_AllNum:SetText(Utils.FormatNumber(self.CurGameScore, false))
+    self.Text_AllNum:SetText(MiscUtils.FormatNumber(self.CurGameScore, false))
   end, true, 1, "UpdateGameScore", true)
 end
 

@@ -1041,8 +1041,13 @@ function ConditionUtils:JudgeDailyFreeTicketAmount(Params)
 end
 
 function ConditionUtils:JudgeHaveItem(Params)
-  if GWorld:IsSkynetServer() or not IsDedicatedServer(GWorld.GameInstance) then
-    local ItemType, ItemId, Count = Params[1], Params[2], Params[3]
+  local ItemType, ItemId, Count = Params[1], Params[2], Params[3]
+  if GWorld:IsSkynetServer() then
+    local CheckUtils = require("src.utils.CheckUtils")
+    return CheckUtils.IsEnough(self, ItemType, {
+      [ItemId] = Count
+    })
+  elseif not IsDedicatedServer(GWorld.GameInstance) then
     local CheckFuncName = "Check" .. ItemType .. "Enough"
     local CheckMethod = self[CheckFuncName]
     if not CheckMethod then
@@ -1253,6 +1258,26 @@ function ConditionUtils:JudgeFinishAbyss(Params)
         return true
       end
     end
+  end
+  return false
+end
+
+function ConditionUtils:JudgeModArchiveReward(Params)
+  if GWorld:IsSkynetServer() or not IsDedicatedServer(GWorld.GameInstance) then
+    local ModPhaseId = Params
+    if not self.ModBookQuestPhaseRewardsGot[ModPhaseId] then
+      return false
+    end
+    local ModBookQuestIds = DataMgr.ModPhaseId2QuestId[ModPhaseId]
+    if ModBookQuestIds then
+      for _, ModBookQuestId in ipairs(ModBookQuestIds) do
+        local mod_book_quest = self.ModBookQuests[ModBookQuestId]
+        if not mod_book_quest or not mod_book_quest:HasRecvReward() then
+          return false
+        end
+      end
+    end
+    return true
   end
   return false
 end

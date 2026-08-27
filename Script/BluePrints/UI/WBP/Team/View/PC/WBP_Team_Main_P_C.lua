@@ -18,8 +18,17 @@ function M:Construct()
       }
     }
   })
-  self.Key_GamePad:AddExecuteLogic(self, self.FocusToMyHead)
-  UIManager(self):GetGameInputModeSubsystem().OnInputMethodChanged:Add(self, self.OnInputDeviceChange)
+  self.Key_GamePad:AddExecuteLogic(self, function()
+    if self.Head_TeamLooking:IsVisible() then
+      self:FocusUIByUid(nil)
+    else
+      self:FocusUIByUid(TeamController:GetAvatar().Uid)
+    end
+  end)
+  self.TeamMainInputModeSubsystem = UIManager(self):GetGameInputModeSubsystem()
+  if IsValid(self.TeamMainInputModeSubsystem) then
+    self.TeamMainInputModeSubsystem.OnInputMethodChanged:Add(self, self.OnInputDeviceChange)
+  end
   self:OnInputDeviceChange()
 end
 
@@ -47,8 +56,13 @@ function M:OnInputDeviceChange()
 end
 
 function M:Destruct()
-  self.Key_GamePad:RemoveExecuteLogic()
-  UIManager(self):GetGameInputModeSubsystem().OnInputMethodChanged:Remove(self, self.OnInputDeviceChange)
+  if IsValid(self.Key_GamePad) then
+    self.Key_GamePad:RemoveExecuteLogic()
+  end
+  if IsValid(self) and IsValid(self.TeamMainInputModeSubsystem) then
+    self.TeamMainInputModeSubsystem.OnInputMethodChanged:Remove(self, self.OnInputDeviceChange)
+  end
+  self.TeamMainInputModeSubsystem = nil
   M.Super.Destruct(self)
 end
 
@@ -172,6 +186,9 @@ function M:OnInitAddBtn()
     TeamHead:SetGamepadCursor()
     TeamHead.Panel_Img:SetActiveWidgetIndex(1)
     TeamHead:BindOnClickEvent(function()
+      if self:HandleAddButtonClick() then
+        return
+      end
       if IsValid(FriendController:GetView(self)) then
         TeamController:ShowToast(GText("UI_Team_InFriend"))
       else
@@ -225,10 +242,6 @@ function M:Close()
   M.Super.Close(self)
 end
 
-function M:FocusToMyHead()
-  self:FocusUIByUid(TeamController:GetAvatar().Uid)
-end
-
 function M:OnFocusLost(InFocusEvent)
   self.bIsFocusable = false
 end
@@ -248,18 +261,23 @@ function M:OnAddedToFocusPath(InFocusEvent)
 end
 
 function M:FocusUIByUid(Uid)
+  DebugPrint("WBP_Team_Main_P_C :: FocusUIByUid , ", self.bIsFocusable, self.bOpenBtnList, self:IsVisible())
   if not (not self.bIsFocusable or self.bOpenBtnList) or not self:IsVisible() then
     return
   end
-  DebugPrint("WBP_Team_Main_P_C :: FocusUIByUid , ")
   self.bIsFocusable = true
-  local TeamModel = TeamController:GetModel()
-  if TeamModel:IsYourself(Uid) then
-    self.Head_My.Head_Team:SetGamepadCursor()
-    self.Head_My.Head_Team.Button_Area:SetFocus()
-  elseif self.Teammate2UI[Uid] then
-    self.Teammate2UI[Uid].Head_Team:SetGamepadCursor()
-    self.Teammate2UI[Uid].Head_Team.Button_Area:SetFocus()
+  if not Uid and self.Head_TeamLooking:IsVisible() then
+    self.Head_TeamLooking.Head_Team:SetGamepadCursor()
+    self.Head_TeamLooking.Head_Team.Button_Area:SetFocus()
+  else
+    local TeamModel = TeamController:GetModel()
+    if TeamModel:IsYourself(Uid) then
+      self.Head_My.Head_Team:SetGamepadCursor()
+      self.Head_My.Head_Team.Button_Area:SetFocus()
+    elseif self.Teammate2UI[Uid] then
+      self.Teammate2UI[Uid].Head_Team:SetGamepadCursor()
+      self.Teammate2UI[Uid].Head_Team.Button_Area:SetFocus()
+    end
   end
   self.bOpenBtnList = false
   self.OpenedUid = nil

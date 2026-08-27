@@ -13,6 +13,13 @@ end
 
 function M:OnListItemObjectSet(Content)
   self.Content = Content
+  if Content.IsEmpty then
+    self.WS_Item:SetActiveWidgetIndex(1)
+    self.bNotInteractive = true
+    return
+  end
+  self.WS_Item:SetActiveWidgetIndex(0)
+  self.bNotInteractive = false
   self.Owner = Content.Owner
   self.Parent = Content.Parent
   self.ItemId = Content.ItemId

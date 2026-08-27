@@ -19,12 +19,44 @@ function Component:GetQuestChainBGMSuitBase(QuestChainId)
   return QuestChainSuit:GetBGMSuitBase()
 end
 
+function Component:GetQuestChainCustomBGMSuitBase(QuestChainId)
+  local QuestChainSuit = self:GetQuestChainSuit(QuestChainId)
+  if not QuestChainSuit then
+    return
+  end
+  return QuestChainSuit:GetCustomBGMSuitBase()
+end
+
 function Component:GetQuestChainBGMParamsSuitBase(QuestChainId)
   local QuestChainSuit = self:GetQuestChainSuit(QuestChainId)
   if not QuestChainSuit then
     return
   end
   return QuestChainSuit:GetBGMParamsSuitBase()
+end
+
+function Component:GetQuestChainHideUIInScreenBase(QuestChainId)
+  local QuestChainSuit = self:GetQuestChainSuit(QuestChainId)
+  if not QuestChainSuit then
+    return
+  end
+  return QuestChainSuit:GetHideUIInScreenBase()
+end
+
+function Component:GetQuestChainContinuedGuideBase(QuestChainId)
+  local QuestChainSuit = self:GetQuestChainSuit(QuestChainId)
+  if not QuestChainSuit then
+    return
+  end
+  return QuestChainSuit:GetContinuedGuideBase()
+end
+
+function Component:GetQuestChainSwitchStoryModeBase(QuestChainId)
+  local QuestChainSuit = self:GetQuestChainSuit(QuestChainId)
+  if not QuestChainSuit then
+    return
+  end
+  return QuestChainSuit:GetSwitchStoryModeBase()
 end
 
 return Component

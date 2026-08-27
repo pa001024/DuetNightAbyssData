@@ -1,5 +1,6 @@
 local LibraryPath = "/Game/Asset/Effect/Blueprint/PostProcess/PostProcessFunctionLibrary.PostProcessFunctionLibrary"
 local DialogueLine_Sequence = require("BluePrints.Story.FlowGraph.FlowNode.TalkFlowNode.Dialogue.DialogueLine_Sequence")
+local CommonTalkTaskData_C = require("BluePrints.Story.Talk.Model.CommonTalkTaskData")
 local SequenceDriver = {}
 SequenceDriver.__index = SequenceDriver
 
@@ -11,6 +12,7 @@ function SequenceDriver.New(Node)
   Obj.Lines = nil
   Obj.FirstLine = nil
   Obj.ActiveLine = nil
+  Obj.MobilePanMediaRateTickTimer = nil
   return Obj
 end
 
@@ -80,6 +82,20 @@ function SequenceDriver:TryStartSequence()
   if IsValid(FlowAsset) and FlowAsset:IsCutsceneFlow() then
     UE4.UMovieSceneSequenceExtensions.SetClockSource(LevelSequence, UE4.EUpdateClockSource.Platform)
   end
+  if UTalkEditorFunctionLibrary and UE4.URuntimeCommonFunctionLibrary.IsPlayInEditor(GWorld.GameInstance) then
+    local Ret1, Ret2 = UTalkEditorFunctionLibrary.ValidateTalkLevelSequence(LevelSequence)
+    local Errors
+    if type(Ret1) == "userdata" then
+      Errors = Ret1
+    else
+      Errors = Ret2
+    end
+    if Errors then
+      for _, Msg in pairs(Errors) do
+        UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, UE4.EStoryLogType.Talk, "对话Seq走/跑跨句未勾自动播放", tostring(Msg))
+      end
+    end
+  end
   Node:PlaySequence()
   if not IsValid(Node.SequencePlayer) or not IsValid(Node.RuntimeProxy) then
     DebugPrint("WXT__DialogueDriver_Sequence:TryStartSequence", "SequencePlayer/RuntimeProxy invalid")
@@ -87,6 +103,7 @@ function SequenceDriver:TryStartSequence()
   end
   self:BindSequenceActors()
   Node.RuntimeProxy:SetUpLua(Node:TryGetTalkTask())
+  self.MobilePanMediaRateTickTimer = CommonTalkTaskData_C.StartMobilePanMediaRateTick(Node:TryGetTalkTask(), FlowAsset.LevelSequenceActor, LevelSequence)
   return true
 end
 
@@ -164,6 +181,11 @@ function SequenceDriver:Resume()
 end
 
 function SequenceDriver:Cleanup()
+  local RateTickTimer = self.MobilePanMediaRateTickTimer
+  if RateTickTimer and RateTickTimer.Manager then
+    RateTickTimer.Manager:DestroyTimer(RateTickTimer.GroupTag, RateTickTimer)
+  end
+  self.MobilePanMediaRateTickTimer = nil
   if self.ActiveLine and self.ActiveLine.Cleanup then
     self.ActiveLine:Cleanup()
   end

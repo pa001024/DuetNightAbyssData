@@ -61,6 +61,10 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, ...)
     self.AreaInfo:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   end
   self:InitCommonWidget()
+  self.FamePreview:SetRegionName(self)
+  self.ImpressionPreview:Init(self.CurrentMainRegionId)
+  self.ImpressionPreview:UnBindEventOnClicked(self, self.OnClickDimension)
+  self.ImpressionPreview:BindEventOnClicked(self, self.OnClickDimension)
 end
 
 function M:UpdateConditionRes()
@@ -269,6 +273,24 @@ function M:InitCommonWidget()
       Desc = GText("UI_BACK")
     }
   }
+  self.BottomBarGamePadKeys = {
+    {
+      KeyInfoList = {
+        {Type = "Img", ImgShortPath = "A"}
+      },
+      Desc = GText("UI_CTL_Select")
+    },
+    {
+      KeyInfoList = {
+        {Type = "Img", ImgShortPath = "B"}
+      },
+      Desc = GText("UI_BACK")
+    }
+  }
+  if self.Key_GamePad then
+    self.Key_GamePad:CreateGamepadKey(UIConst.GamePadImgKey.FaceButtonLeft)
+    self.Key_GamePad:SetVisibility(ESlateVisibility.Collapsed)
+  end
   if self.DeviceInPc then
     self:InitBottomTab()
   end
@@ -371,6 +393,7 @@ function M:InitWildMap()
   WildMap.OriginalRegionId = RealRegionId
   WildMap:Init(false, RealRegionId, self)
   WildMap:OnScaleChange(self.SliderPecent)
+  self.ImpressionPreview:Init(RealRegionId)
 end
 
 function M:InitWildMapWithoutShow()
@@ -450,33 +473,50 @@ function M:OnTabItemClick(TabWidget)
     self.IsOpenMap = false
     self:UpdateWildMapKeys()
     self.AreaInfo:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.ImpressionPreview:Init(RealRegionId)
   end
+  self.FamePreview:SetRegionName(self)
 end
 
 function M:UpdateWildMapKeys()
-  if not self.DeviceInPc or not self.RealWildMap then
+  if not self.RealWildMap then
     return
   end
   if self.RealWildMap:GetIsOpenDispatch() then
     return
   end
+  if not self.DeviceInPc then
+    local IsMapEmpty = self.RealWildMap:IsMapEmpty()
+    self:SetReturnHomeVisible(not self.ReturnHomeConditionRes or self.WildMapKeysShow or IsMapEmpty)
+    self:SetSliderZoomVisible(not self.IsPanelOpen and not IsMapEmpty)
+    return
+  end
   if self.WildMapKeysShow or self.RealWildMap:IsMapEmpty() then
     if self.ReturnHomeConditionRes then
       self.Btn_ReturnHome:SetVisibility(ESlateVisibility.Visible)
+      self.Panel_RegionName:SetVisibility(UE4.ESlateVisibility.Visible)
+      self.ImpressionPreview:SetVisibility(UE4.ESlateVisibility.Visible)
+      self.FamePreview:SetVisibility(UE4.ESlateVisibility.Visible)
     end
     self:UpdateDispatchKeyVisibility()
   else
     self.Btn_ReturnHome:SetVisibility(ESlateVisibility.Collapsed)
+    self.Panel_RegionName:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.ImpressionPreview:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.FamePreview:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
   local MapTipsWidgetVisible = self.RealWildMap:IsMapTipsWidgetVisible()
   if self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then
     if not MapTipsWidgetVisible then
-      self.Key_Tip:UpdateKeyInfo(not (not self:IsInteractiveOpen() and self.WildMapKeysShow) and self.BackGamePadKey or self.WildMapGamePadKeys)
+      if self.bBottomBarFocused then
+        self.Key_Tip:UpdateKeyInfo(self.BottomBarGamePadKeys)
+      else
+        self.Key_Tip:UpdateKeyInfo(not (not self:IsInteractiveOpen() and self.WildMapKeysShow) and self.BackGamePadKey or self.WildMapGamePadKeys)
+      end
     end
     self.Entrance_Dispatch.WS_Type:SetActiveWidgetIndex(1)
-    self.Entrance_Dispatch.Icon_Key:CreateGamepadKey("X")
-    self.Btn_ReturnHome.Switch_Type:SetActiveWidgetIndex(2)
-    self.Btn_ReturnHome.Key_Controller:CreateGamepadKey(UIConst.GamePadImgKey.RightThumb)
+    self.Entrance_Dispatch.Icon_Key:SetVisibility(ESlateVisibility.Collapsed)
+    self.Btn_ReturnHome.Switch_Type:SetActiveWidgetIndex(1)
   else
     self.Key_Tip:UpdateKeyInfo(not (not self:IsInteractiveOpen() and self.WildMapKeysShow) and self.BackKey or self.WildMapKeys)
     self.Entrance_Dispatch.WS_Type:SetActiveWidgetIndex(0)
@@ -487,11 +527,17 @@ function M:UpdateWildMapKeys()
       }
     })
   end
+  self:UpdateBottomBarEntryKeyVisibility(MapTipsWidgetVisible)
   if self.IsPanelOpen or self.RealWildMap:IsMapEmpty() then
     self.Slider_Zoom:SetVisibility(ESlateVisibility.Collapsed)
   else
     self.Slider_Zoom:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   end
+end
+
+function M:UpdateBottomBarEntryKeyVisibility(MapTipsWidgetVisible)
+  local bShow = self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad and not self.bBottomBarFocused and not self:IsInteractiveOpen() and (self.WildMapKeysShow or self.RealWildMap:IsMapEmpty()) and not self.IsPanelOpen and not MapTipsWidgetVisible and #self:GetBottomBarFocusableButtons() > 0
+  self.Key_GamePad:SetVisibility(bShow and ESlateVisibility.SelfHitTestInvisible or ESlateVisibility.Collapsed)
 end
 
 function M:UpdateDispatchKeyVisibility()
@@ -512,6 +558,7 @@ function M:UpdateWorldMapKeys()
   if not self.DeviceInPc then
     return
   end
+  self.Key_GamePad:SetVisibility(ESlateVisibility.Collapsed)
   local Keys = {
     {
       KeyInfoList = {
@@ -573,6 +620,68 @@ end
 
 function M:OnGotoPositionKeyDown()
   self.RealWildMap:OpenOptionSelect()
+end
+
+function M:GetBottomBarFocusableButtons()
+  local Buttons = {}
+  
+  local function AddButton(Widget, Button)
+    if Widget and Button and Widget:IsVisible() then
+      table.insert(Buttons, Button)
+    end
+  end
+  
+  AddButton(self.Btn_ReturnHome, self.Btn_ReturnHome and self.Btn_ReturnHome.Btn_Back)
+  AddButton(self.ImpressionPreview, self.ImpressionPreview and self.ImpressionPreview.Btn_Dimension)
+  AddButton(self.FamePreview, self.FamePreview and self.FamePreview.Btn_Click)
+  AddButton(self.Entrance_Dispatch, self.Entrance_Dispatch and self.Entrance_Dispatch.Btn_Click)
+  return Buttons
+end
+
+function M:EnterBottomBarFocus()
+  local Buttons = self:GetBottomBarFocusableButtons()
+  if 0 == #Buttons then
+    return false
+  end
+  for _, Button in ipairs(Buttons) do
+    Button:SetNavigationRuleBase(EUINavigation.Up, EUINavigationRule.Stop)
+    Button:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
+  end
+  self.bBottomBarFocused = true
+  self.BottomBarFocusIndex = 1
+  self.BottomBarAnalogLocks = {}
+  Buttons[1]:SetFocus()
+  self.Key_GamePad:SetVisibility(ESlateVisibility.Collapsed)
+  self.Key_Tip:UpdateKeyInfo(self.BottomBarGamePadKeys)
+  return true
+end
+
+function M:ExitBottomBarFocus()
+  if not self.bBottomBarFocused then
+    return false
+  end
+  self:ResetBottomBarFocusState()
+  self:UpdateWildMapKeys()
+  if self.RealWildMap then
+    self.RealWildMap:SetFocus()
+  end
+  return true
+end
+
+function M:ResetBottomBarFocusState()
+  self.bBottomBarFocused = false
+  self.BottomBarFocusIndex = nil
+  self.BottomBarAnalogLocks = nil
+end
+
+function M:MoveBottomBarFocus(Offset)
+  local Buttons = self:GetBottomBarFocusableButtons()
+  if 0 == #Buttons then
+    self:ExitBottomBarFocus()
+    return
+  end
+  self.BottomBarFocusIndex = ((self.BottomBarFocusIndex or 1) - 1 + Offset) % #Buttons + 1
+  Buttons[self.BottomBarFocusIndex]:SetFocus()
 end
 
 function M:OnReturnHomeKeyDown()
@@ -669,7 +778,9 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   print(_G.LogTag, "LXZ OnKeyDown", InKeyName)
   local OpenMapKey = CommonUtils:GetActionMappingKeyName("OpenMap")
-  if "Escape" == InKeyName or InKeyName == UIConst.GamePadKey.FaceButtonRight then
+  if InKeyName == UIConst.GamePadKey.FaceButtonRight and self:ExitBottomBarFocus() then
+    return UWidgetBlueprintLibrary.Handled()
+  elseif "Escape" == InKeyName or InKeyName == UIConst.GamePadKey.FaceButtonRight then
     if self.DispatchAgentList ~= nil then
       self.DispatchAgentList:OnClickClose()
       self.DispatchAgentList = nil
@@ -706,7 +817,7 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   elseif InKeyName == OpenMapKey and self.bIsCanCloseByHotKey then
     self:PlayOutAnim()
     return UWidgetBlueprintLibrary.Handled()
-  elseif ("H" == InKeyName or InKeyName == UIConst.GamePadKey.RightThumb) and self.ReturnHomeConditionRes then
+  elseif "H" == InKeyName and self.ReturnHomeConditionRes then
     self:OnReturnHomeKeyDown()
     return UWidgetBlueprintLibrary.Handled()
   elseif "Gamepad_Special_Right" == InKeyName and self.Dispatch_ChatChannel:IsVisible() then
@@ -726,7 +837,24 @@ end
 function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  if InKeyName == UIConst.GamePadKey.FaceButtonBottom and 1 == self.CurTabId then
+  if InKeyName == UIConst.GamePadKey.FaceButtonLeft and 2 == self.CurTabId and not self.bBottomBarFocused then
+    if self:EnterBottomBarFocus() then
+      return UWidgetBlueprintLibrary.Handled()
+    end
+    return UWidgetBlueprintLibrary.Unhandled()
+  elseif self.bBottomBarFocused then
+    if InKeyName == UIConst.GamePadKey.FaceButtonBottom then
+      self.Key_GamePad:SetVisibility(ESlateVisibility.Collapsed)
+      self.Key_GamePad:SetVisibility(ESlateVisibility.Collapsed)
+      return UWidgetBlueprintLibrary.Unhandled()
+    elseif InKeyName == UIConst.GamePadKey.DPadLeft then
+      self:MoveBottomBarFocus(-1)
+      return UWidgetBlueprintLibrary.Handled()
+    elseif InKeyName == UIConst.GamePadKey.DPadRight then
+      self:MoveBottomBarFocus(1)
+      return UWidgetBlueprintLibrary.Handled()
+    end
+  elseif InKeyName == UIConst.GamePadKey.FaceButtonBottom and 1 == self.CurTabId then
     DebugPrint("jly OnPreviewKeyDown", InKeyName)
     return self.LevelMap_World:Handle_KeyEventOnGamePad(InKeyName)
   end
@@ -766,12 +894,18 @@ function M:LoadOrUnLoadWildMap(bLoad, bShowWorldMap)
     self.Slider_Zoom:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     if self.ReturnHomeConditionRes then
       self.Btn_ReturnHome:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+      self.Panel_RegionName:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+      self.ImpressionPreview:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+      self.FamePreview:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     end
     self.LevelMap_World:HideWorldMap()
     AudioManager(self):PlayUISound(self, "event:/ui/common/map_switch_to_level", "", nil)
   else
     self.Slider_Zoom:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.Btn_ReturnHome:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.Panel_RegionName:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.ImpressionPreview:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.FamePreview:SetVisibility(UE4.ESlateVisibility.Collapsed)
     if bShowWorldMap then
       self.LevelMap_World:ShowWorldMap()
     end
@@ -927,6 +1061,7 @@ end
 
 function M:OnCloseDispatch()
   DebugPrint("OnCloseDispatch")
+  self:ResetBottomBarFocusState()
   self.RealWildMap:SetIsOpenDispatch(false)
   self.RealWildMap:ClosePanel(false)
   self.RealWildMap:CloseForDispatch(false)
@@ -1024,6 +1159,9 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
     return
   end
   self.LastInputDevice = CurInputDevice
+  if self.GameInputModeSubsystem:GetCurrentInputType() ~= ECommonInputType.Gamepad then
+    self.bBottomBarFocused = false
+  end
   if 1 == self.CurTabId then
     self:SetChatBtnVis(false)
     self:UpdateWorldMapKeys()
@@ -1033,7 +1171,15 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
   else
     self:SetChatBtnVis(true)
     self:UpdateWildMapKeys()
-    if self:HasFocusedDescendants() or self:HasAnyUserFocus() then
+    if self.bBottomBarFocused then
+      local Buttons = self:GetBottomBarFocusableButtons()
+      if #Buttons > 0 then
+        Buttons[1]:SetFocus()
+      else
+        self.bBottomBarFocused = false
+        self.RealWildMap:SetFocus()
+      end
+    elseif self:HasFocusedDescendants() or self:HasAnyUserFocus() then
       if self:IsInteractiveOpen() then
         if self.Interactive_Locate:GetVisibility() == ESlateVisibility.SelfHitTestInvisible then
           self.Interactive_Locate.Wbox:GetChildAt(0):SetFocus()
@@ -1065,6 +1211,10 @@ function M:SetFocus_Lua()
 end
 
 function M:OnFocusReceived(MyGeometry, InFocusEvent)
+  if self.bBottomBarFocused then
+    self:ResetBottomBarFocusState()
+    self:UpdateWildMapKeys()
+  end
   if self.DispatchAgentList == nil and nil == self.DispatchList and self.DispatchDetail then
     self.DispatchDetail:SetFocus()
     return UWidgetBlueprintLibrary.Handle
@@ -1083,10 +1233,28 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
 end
 
 function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
+  if self.bBottomBarFocused then
+    local InKey = UE4.UKismetInputLibrary.GetKey(InAnalogInputEvent)
+    local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+    if InKeyName == UIConst.GamePadKey.LeftAnalogX or InKeyName == UIConst.GamePadKey.LeftAnalogY then
+      local AnalogValue = UE4.UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent)
+      self.BottomBarAnalogLocks = self.BottomBarAnalogLocks or {}
+      if math.abs(AnalogValue) <= 0.2 then
+        self.BottomBarAnalogLocks[InKeyName] = nil
+      elseif math.abs(AnalogValue) >= 0.5 and not self.BottomBarAnalogLocks[InKeyName] then
+        self.BottomBarAnalogLocks[InKeyName] = true
+        if InKeyName == UIConst.GamePadKey.LeftAnalogX then
+          self:MoveBottomBarFocus(AnalogValue > 0 and 1 or -1)
+        end
+      end
+      return UE4.UWidgetBlueprintLibrary.Handled()
+    end
+    return UE4.UWidgetBlueprintLibrary.Unhandled()
+  end
   if 1 == self.CurTabId then
     return self.LevelMap_World:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
   else
-    return UE4.UWidgetBlueprintLibrary.UnHandled()
+    return UE4.UWidgetBlueprintLibrary.Unhandled()
   end
 end
 
@@ -1170,15 +1338,21 @@ function M:IsEntranceDispatchVisible()
 end
 
 function M:SetEntranceDispatchVisible(Visible)
-  local Vis = Visible and ESlateVisibility.SelfHitTestInvisible or ESlateVisibility.Collapsed
-  self.Entrance_Dispatch:SetVisibility(Vis)
 end
 
 function M:SetReturnHomeVisible(Visible)
   if Visible then
     self.Btn_ReturnHome:SetVisibility(ESlateVisibility.Visible)
+    self.Panel_RegionName:SetVisibility(ESlateVisibility.Visible)
+    self.ImpressionPreview:SetVisibility(ESlateVisibility.Visible)
+    self.FamePreview:SetVisibility(ESlateVisibility.Visible)
+    self.Entrance_Dispatch:SetVisibility(ESlateVisibility.Visible)
   else
     self.Btn_ReturnHome:SetVisibility(ESlateVisibility.Collapsed)
+    self.Panel_RegionName:SetVisibility(ESlateVisibility.Collapsed)
+    self.ImpressionPreview:SetVisibility(ESlateVisibility.Collapsed)
+    self.FamePreview:SetVisibility(ESlateVisibility.Collapsed)
+    self.Entrance_Dispatch:SetVisibility(ESlateVisibility.Collapsed)
   end
 end
 
@@ -1318,6 +1492,13 @@ function M:HostClose()
   else
     self:Close()
   end
+end
+
+function M:OnClickDimension()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click", "", nil)
+  self.ImpressionPreview:SetIsChecked(false)
+  local DimensionPanel = UIManager(self):LoadUINew("RegionMapImpression")
+  DimensionPanel:Init(self.ImpressionPreview.RegionId, self.RealWildMap)
 end
 
 return M

@@ -15,9 +15,11 @@ function FDisableCameraArmComponent:Execute()
 end
 
 function FDisableCameraArmComponent:Resume()
-  DebugPrint("FDisableCameraArmComponent:Resume PreState NowState", self.PreState, self.Player.CharSpringArmComponent.bArmCollision)
   if IsValid(self.Player) and IsValid(self.Player.CharSpringArmComponent) then
+    DebugPrint("FDisableCameraArmComponent:Resume PreState NowState", self.PreState, self.Player.CharSpringArmComponent.bArmCollision)
     self.Player.CharSpringArmComponent.bArmCollision = self.PreState
+  else
+    DebugPrint("FDisableCameraArmComponent:Resume Player or CharSpringArmComponent is not valid")
   end
 end
 

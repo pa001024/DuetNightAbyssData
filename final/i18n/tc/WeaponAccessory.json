@@ -464,10 +464,42 @@
     "unlock": "通過稜鏡兌換獲得"
   },
   {
+    "id": 10059,
+    "name": "幽燃囚籠·涅白",
+    "desc": "囚籠無法關住火焰。",
+    "icon": "T_Fashion_Weapon43_03",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 10060,
+    "name": "幽燃囚籠·墨玉",
+    "desc": "囚籠無法關住火焰。",
+    "icon": "T_Fashion_Weapon43_02",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 10061,
+    "name": "幽燃囚籠·鎏金",
+    "desc": "囚籠無法關住火焰。",
+    "icon": "T_Fashion_Weapon43_01",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
     "id": 20001,
     "name": "爆裂塗鴉",
     "desc": "適用於招式魔之楔咆哮切割。",
     "icon": "T_Fashion_Fx20",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 20004,
+    "name": "荊棘螺旋",
+    "desc": "適用於招式魔之楔遊影破空。",
+    "icon": "T_Fashion_Fx42",
     "rarity": 5,
     "unlock": "通過稜鏡兌換獲得"
   },
@@ -477,7 +509,7 @@
     "desc": "適用於招式魔之楔穿引共鳴。",
     "icon": "T_Fashion_Fx21",
     "rarity": 5,
-    "unlock": "通過稜鏡兌換獲得"
+    "unlock": "通過商店獲得"
   },
   {
     "id": 40001,

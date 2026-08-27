@@ -56,7 +56,7 @@ end
 
 function M:ClampValue(Value)
   Value = tonumber(Value) or self.MinValue
-  Value = math.floor(Value / self.Step + 0.5) * self.Step
+  Value = self.MinValue + math.floor((Value - self.MinValue) / self.Step + 0.5) * self.Step
   if Value < self.MinValue then
     Value = self.MinValue
   elseif Value > self.MaxValue then

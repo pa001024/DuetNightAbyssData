@@ -37,7 +37,10 @@ function ShowOrHideTaskIndicatorNode:ClearWhenQuestFail()
 end
 
 function ShowOrHideTaskIndicatorNode:CreateOrDestoryEffect(bCreate)
-  local GameState = UE4.UGameplayStatics.GetGameState(self)
+  local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
+  if nil == GameState then
+    return
+  end
   local NewTargetPoint = GameState:GetTargetPoint(self.GuideName)
   if nil == NewTargetPoint then
     return

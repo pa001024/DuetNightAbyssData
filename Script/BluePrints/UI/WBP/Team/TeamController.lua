@@ -2,6 +2,14 @@ local TeamModel = require("BluePrints.UI.WBP.Team.TeamModel")
 local TeamCommon = require("BluePrints.UI.WBP.Team.TeamCommon")
 local InviteQueueManager = require("BluePrints.UI.Common.InviteQueueManager")
 local GlobalConstant = DataMgr.GlobalConstant
+
+local function NotifyTeamHallRecruitingStateBridge(bSuppressCancelRecruitmentToast)
+  local TeamHallController = _G.TeamHallController
+  if TeamHallController and TeamHallController.OnTeamRecruitingStateBridge then
+    TeamHallController:OnTeamRecruitingStateBridge(bSuppressCancelRecruitmentToast)
+  end
+end
+
 local M = Class("BluePrints.Common.MVC.Controller")
 M.HeadUIs = {}
 
@@ -80,9 +88,21 @@ function M:ShowToast(Text, Duration)
   M.Super.ShowToast(self, Text, Duration, {bPopWait = true})
 end
 
+function M:OpenTeamHallInvite()
+  local TeamHallController = _G.TeamHallController
+  if TeamHallController and TeamHallController.OpenTeamHallInvite then
+    TeamHallController:OpenTeamHallInvite()
+  end
+end
+
 function M:OpenHeadUI(ParentWidget, bBattle)
   local HeadUI = self:GetUIMgr(ParentWidget):LoadUINew(TeamCommon.HeadUIName, ParentWidget, bBattle)
   self:GetUIMgr(ParentWidget):RemoveLoadedUI(HeadUI:GetName())
+  
+  function HeadUI.OnOpenAddMember()
+    self:OpenTeamHallInvite()
+  end
+  
   M.HeadUIs[ParentWidget] = HeadUI
   return HeadUI
 end
@@ -90,6 +110,11 @@ end
 function M:OpenHeadUI2(ParentWidget, bBattle)
   local HeadUI = self:GetUIMgr(ParentWidget):LoadUINew(TeamCommon.HeadUIName2, ParentWidget, bBattle)
   self:GetUIMgr(ParentWidget):RemoveLoadedUI(HeadUI:GetName())
+  
+  function HeadUI.OnOpenAddMember()
+    self:OpenTeamHallInvite()
+  end
+  
   M.HeadUIs[ParentWidget] = HeadUI
   return HeadUI
 end
@@ -99,6 +124,9 @@ function M:GetHeadUI(ParentWidget)
 end
 
 function M:ClearHeadUI(ParentWidget)
+  if not ParentWidget then
+    return
+  end
   M.HeadUIs[ParentWidget] = nil
 end
 
@@ -131,6 +159,14 @@ function M:SendTeamInvite(Uid)
   local Timer = TeamModel:GetInviteSendBox()[Uid]
   if Timer then
     return
+  end
+  local FriendData = FriendController:GetModel():GetFriendDict()[Uid]
+  if FriendData and FriendData.Info then
+    local Info = FriendData.Info
+    if not Info.IsOnline or Info.IsInDungeon or Info.IsInSpecialQuest then
+      self:ShowToast(GText("StatusNotAllowJoiningTeam"))
+      return
+    end
   end
   self:GetAvatar():TeamInvite(Uid)
 end
@@ -186,25 +222,30 @@ function M:SendTeamLeave()
   self:GetAvatar():TeamLeave()
 end
 
-function M:RecvTeamLeave(ErrCode, bKick)
+function M:RecvTeamLeave(ErrCode, bKick, bSelfLeave)
   if not self:CheckError(ErrCode, true) then
     return
   end
+  local bRecruiting = false
   local OldTeamData = TeamModel:GetTeam()
   if not OldTeamData then
     return
   end
+  local LeaderUid = TeamModel:GetTeamLeaderId()
+  local bSuppressCancelRecruitmentToast = bSelfLeave and LeaderUid and LeaderUid ~= self:GetAvatar().Uid
   local Text = GText("UI_Team_YouLeaveTeam")
   if bKick then
     Text = GText("UI_Team_YouBeKicked")
   elseif 1 == #TeamModel:GetTeam().Members then
+    bRecruiting = self:GetAvatar().InStatus and self:GetAvatar():InStatus(nil, CommonConst.AvatarStatus.InTeamHall) or false
     Text = GText("UI_Team_TeamDisband")
   end
-  if GWorld:IsStandAlone() then
+  if GWorld:IsStandAlone() and not bRecruiting then
     self:ShowToast(Text)
   end
   TeamModel:SetTeam(nil)
   self:NotifyEvent(TeamCommon.EventId.TeamLeave, OldTeamData)
+  NotifyTeamHallRecruitingStateBridge(bSuppressCancelRecruitmentToast)
 end
 
 function M:SendTeamChangeLeader(NewLeaderUid)
@@ -216,6 +257,7 @@ function M:RecvTeamChangeLeader(ErrCode, NewLeaderUid)
     return
   end
   self:NotifyEvent(TeamCommon.EventId.TeamChangeLeader, NewLeaderUid)
+  NotifyTeamHallRecruitingStateBridge()
 end
 
 function M:RecvTeamBeInvited(InviteInfo)
@@ -276,6 +318,7 @@ function M:RecvTeamOnAddPlayer(MemberInfo)
   end
   self:NotifyEvent(TeamCommon.EventId.TeamOnAddPlayer, MemberInfo)
   ChatController:SendMemberChangeTipsToTeam(MemberInfo, TeamCommon.EventId.TeamOnAddPlayer)
+  NotifyTeamHallRecruitingStateBridge()
 end
 
 function M:RecvTeamOnDelPlayer(Uid, LeaveReason)
@@ -284,7 +327,7 @@ function M:RecvTeamOnDelPlayer(Uid, LeaveReason)
   if Member and not Member.bDsData then
     local Text = ""
     if Uid == self:GetAvatar().Uid and TeamModel:GetTeam() then
-      self:RecvTeamLeave(ErrorCode.RET_SUCCESS, false)
+      self:RecvTeamLeave(ErrorCode.RET_SUCCESS, false, true)
       return
     end
     if LeaveReason == CommonConst.LeaveTeamReason.Willing then
@@ -305,6 +348,7 @@ function M:RecvTeamOnDelPlayer(Uid, LeaveReason)
       TeamModel:SetTeam(nil)
       self:NotifyEvent(TeamCommon.EventId.TeamLeave, OldTeamData)
     end
+    NotifyTeamHallRecruitingStateBridge()
   end
 end
 
@@ -318,6 +362,7 @@ function M:RecvTeamOnInit(Team)
   end
   InviteQueueManager:ClearType(InviteQueueManager.InviteType.Team)
   self:NotifyEvent(TeamCommon.EventId.TeamOnInit, TeamModel:GetTeam())
+  NotifyTeamHallRecruitingStateBridge()
 end
 
 function M:RecvDsServerDie()
@@ -339,6 +384,7 @@ function M:RecvTeamOnChangeLeader(Uid)
     end
     TeamModel:SetTeadLeaderId(Uid)
     self:NotifyEvent(TeamCommon.EventId.TeamOnChangeLeader, NewLeader, OldLeaderId)
+    NotifyTeamHallRecruitingStateBridge()
   end
 end
 
@@ -404,6 +450,7 @@ function M:RecvTeamMemberPropChange(ChangeInfo, Uid)
       Member.HeadState = TeamCommon.HeadState.Offline
     end
     self:NotifyEvent(TeamCommon.EventId.TeamOnMemberChange, Member, Pos)
+    NotifyTeamHallRecruitingStateBridge()
   end
 end
 
@@ -558,7 +605,7 @@ function M:DoCheckCanEnterDungeon(DungeonId)
     local CostNeed = DataMgr.Dungeon[DungeonId] and DataMgr.Dungeon[DungeonId].DungeonCost[1] or 0
     local MemberNames, WhoUids = {}, {}
     for _, TeamMember in pairs(TeamInfo.Members) do
-      if CostNeed > TeamMember.ActionPoint then
+      if (TeamMember.ActionPoint or 0) < (CostNeed or 0) then
         local PosText = GText(string.format("UI_STAT_Online_P%s", TeamMember.Index))
         table.insert(MemberNames, PosText)
         table.insert(WhoUids, TeamMember.Uid)

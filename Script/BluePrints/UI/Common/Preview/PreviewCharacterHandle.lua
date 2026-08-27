@@ -18,6 +18,7 @@ function M:Init(Params)
   self.SceneService = Params.SceneService
   self.EnableReflection = Params.EnableReflection ~= false
   self.EnableSelectionCollision = Params.EnableSelectionCollision == true
+  self.bLightweightPreview = true == Params.bLightweightPreview
   self.Actor = nil
   self.ReflectionActor = nil
   self.OwnsActorInstance = false
@@ -396,7 +397,6 @@ local function ApplyCharacterPreviewState(TargetActor)
   end
   TargetActor:ClearWeapon()
   TargetActor:SetCharacterTag("Interactive")
-  TargetActor:KawaiiSwitch(true)
   if TargetActor.PlayerAnimInstance then
     TargetActor.PlayerAnimInstance:SetKawiiLayerState(EKawaiiLayerState.EKLS_Armory)
   end
@@ -424,7 +424,7 @@ local function EnableActorSelectionCollision(TargetActor)
   TargetActor.Mesh:SetCollisionResponseToChannel(UE4.ECollisionChannel.ECC_Camera, UE4.ECollisionResponse.ECR_Block)
 end
 
-local function ChangeCharacterInternal(TargetActor, Avatar, CharInfo)
+local function ChangeCharacterInternal(TargetActor, Avatar, CharInfo, bLightweightPreview)
   if not TargetActor or not CharInfo then
     return nil
   end
@@ -437,11 +437,14 @@ local function ChangeCharacterInternal(TargetActor, Avatar, CharInfo)
   end
   if Char and Avatar and GameMode then
     CharId = Char.CharId
-    AvatarBattleInfo = AvatarUtils:GetDefaultBattleInfo(Avatar, {Char = Char})
-    AvatarBattleInfo = {AvatarInfo = AvatarBattleInfo}
-    AvatarBattleInfo = GameMode:SimplifyInfoForInit(AvatarBattleInfo)
-    AvatarBattleInfo.FromArmory = true
-    TargetActor:InitCharacterInfo(AvatarBattleInfo)
+    AvatarBattleInfo = AvatarUtils:BuildPreviewCharacterInitInfo(Avatar, {
+      Char = Char,
+      bLightweightPreview = true == bLightweightPreview
+    })
+    if AvatarBattleInfo then
+      AvatarBattleInfo = GameMode:SimplifyInfoForInit(AvatarBattleInfo)
+      TargetActor:InitCharacterInfo(AvatarBattleInfo)
+    end
   else
     CharId = CharInfo.CharId
     if not CharId then
@@ -479,12 +482,14 @@ function M:Create(CharInfo, Avatar)
   self.CharInfo = CharInfo
   self.Avatar = Avatar
   local UIManager = UIManager(self.ViewUI)
-  self.Actor = UIManager:CreatePreviewPlayerActor(self.CharInfo, self.Avatar)
+  self.Actor = UIManager:CreatePreviewPlayerActor(self.CharInfo, self.Avatar, {
+    bLightweightPreview = self.bLightweightPreview
+  })
   self.OwnsActorInstance = self.Actor ~= nil
   if not self.Actor then
     return
   end
-  ChangeCharacterInternal(self.Actor, self.Avatar, self.CharInfo)
+  ApplyCharacterPreviewState(self.Actor)
   if self.EnableSelectionCollision then
     EnableActorSelectionCollision(self.Actor)
   end
@@ -502,9 +507,11 @@ function M:Create(CharInfo, Avatar)
     end
   end
   if self.EnableReflection then
-    self.ReflectionActor = UIManager:CreatePreviewPlayerReflection(self.CharInfo, self.Avatar)
+    self.ReflectionActor = UIManager:CreatePreviewPlayerReflection(self.CharInfo, self.Avatar, {
+      bLightweightPreview = self.bLightweightPreview
+    })
     self.OwnsReflectionInstance = nil ~= self.ReflectionActor
-    ChangeCharacterInternal(self.ReflectionActor, self.Avatar, self.CharInfo)
+    ChangeCharacterInternal(self.ReflectionActor, self.Avatar, self.CharInfo, self.bLightweightPreview)
     AttachActorToRoot(self.ReflectionActor, self.RootActor)
     self:UpdateReflectionTransform()
   end
@@ -521,12 +528,12 @@ function M:ChangeCharacter(CharInfo, Avatar, bForceChange)
   if not CharId then
     return
   end
-  ChangeCharacterInternal(self.Actor, self.Avatar, self.CharInfo)
+  ChangeCharacterInternal(self.Actor, self.Avatar, self.CharInfo, self.bLightweightPreview)
   if self.EnableSelectionCollision then
     EnableActorSelectionCollision(self.Actor)
   end
   if self.ReflectionActor then
-    ChangeCharacterInternal(self.ReflectionActor, self.Avatar, self.CharInfo)
+    ChangeCharacterInternal(self.ReflectionActor, self.Avatar, self.CharInfo, self.bLightweightPreview)
     self:UpdateReflectionTransform()
   elseif self.EnableReflection then
     self:Create(self.CharInfo, self.Avatar)

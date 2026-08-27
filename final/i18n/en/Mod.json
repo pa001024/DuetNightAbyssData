@@ -2055,6 +2055,19 @@
     "效果": "Increases your ATK by 42.0% with each revival during commissions or Nocturnal Echoes (up to 126.0%)."
   },
   {
+    "id": 41317,
+    "icon": "Sphinx01",
+    "名称": "Overflow – Finesse",
+    "版本": "1.6",
+    "系列": "Sphinx's ",
+    "品质": "紫",
+    "极性": "O",
+    "耐受": 20,
+    "类型": "Characters",
+    "充盈威力": 3,
+    "效果": "When dealing Skill DMG, there is a 54.0% chance to trigger Bonus Effects."
+  },
+  {
     "id": 41321,
     "icon": "Griffin01_Black",
     "名称": "Nihility·Wildfire",
@@ -3001,29 +3014,29 @@
   {
     "id": 41735,
     "icon": "FeatheredSnake01_Red",
-    "名称": "Volition",
-    "版本": "99.9",
+    "名称": "Resolve",
+    "版本": "1.6",
     "系列": "Feathered Serpent's ",
     "品质": "紫",
     "极性": "D",
     "属性": "Pyro",
-    "耐受": 15,
+    "耐受": 12,
     "类型": "Characters",
-    "技能威力": 1.0,
+    "背水": 0.12,
     "效果": "The element effect activates only when at least 4 Demon Wedges aligned to Track D are equipped."
   },
   {
     "id": 41736,
     "icon": "FeatheredSnake01_Red",
-    "名称": "Spectrum",
-    "版本": "99.9",
+    "名称": "Refinement",
+    "版本": "1.6",
     "系列": "Feathered Serpent's ",
     "品质": "紫",
     "极性": "O",
     "属性": "Pyro",
-    "耐受": 15,
+    "耐受": 12,
     "类型": "Characters",
-    "技能范围": 1.0,
+    "技能伤害": 0.24,
     "效果": "The element effect activates only when at least 4 Demon Wedges aligned to Track O are equipped."
   },
   {
@@ -3038,6 +3051,21 @@
     "耐受": 25,
     "类型": "Characters",
     "技能威力": 0.6,
+    "效果": "Once upgraded to +5.0, this Demon Wedge can be equipped in multiples."
+  },
+  {
+    "id": 41738,
+    "icon": "Mephisto01_Red",
+    "名称": "Nirvana – Volition",
+    "版本": "1.6",
+    "系列": "Covenanter's ",
+    "品质": "紫",
+    "极性": "D",
+    "属性": "Pyro",
+    "耐受": 25,
+    "类型": "Characters",
+    "生命": 0.72,
+    "技能威力": 0.3,
     "效果": "Once upgraded to +5.0, this Demon Wedge can be equipped in multiples."
   },
   {
@@ -3364,6 +3392,21 @@
     "效果": "Once upgraded to +5.0, this Demon Wedge can be equipped in multiples."
   },
   {
+    "id": 41768,
+    "icon": "Mephisto01_Orange",
+    "名称": "Blaze – Volition",
+    "版本": "1.6",
+    "系列": "Covenanter's ",
+    "品质": "紫",
+    "极性": "A",
+    "属性": "Lumino",
+    "耐受": 25,
+    "类型": "Characters",
+    "攻击": 0.72,
+    "技能威力": 0.3,
+    "效果": "Once upgraded to +5.0, this Demon Wedge can be equipped in multiples."
+  },
+  {
     "id": 41801,
     "icon": "Jormungand01",
     "名称": "Gleaming Sword",
@@ -3562,6 +3605,20 @@
     "类型": "Characters",
     "技能威力": 0.3,
     "效果": "When a Pyro character deals damage, gains 1 stack that increases ATK by 0.96% for 15.0s, up to 120.0 stacks."
+  },
+  {
+    "id": 41932,
+    "icon": "Ifrit01",
+    "名称": "Inferno Disruption",
+    "版本": "1.6",
+    "系列": "Ifrit's ",
+    "品质": "紫",
+    "极性": "O",
+    "属性": "Pyro",
+    "耐受": 24,
+    "类型": "Characters",
+    "充盈威力": 3,
+    "效果": "When a Pyro character consumes Pyro Disruption, their DMG Dealt increases by 12.0% for 10.0s, stacking up to 5.0 times."
   },
   {
     "id": 41941,
@@ -3927,6 +3984,31 @@
     "效果": "Damage dealt to enemies at or below your level is always a CRIT and triggers bonus effects."
   },
   {
+    "id": 42704,
+    "icon": "Fenrir01",
+    "名称": "Dissolution",
+    "版本": "1.7",
+    "系列": "Fenrir's ",
+    "品质": "紫",
+    "极性": "D",
+    "耐受": 15,
+    "类型": "Melee Weapons",
+    "CutTNRate": 1.0
+  },
+  {
+    "id": 42801,
+    "icon": "Fenrir01",
+    "名称": "Trammel – Surplus",
+    "版本": "1.6",
+    "系列": "Fenrir's ",
+    "品质": "紫",
+    "极性": "D",
+    "耐受": 20,
+    "类型": "Melee Weapons",
+    "触发": 0.9,
+    "充盈转化": 1.08
+  },
+  {
     "id": 43001,
     "icon": "Lilith01",
     "名称": "Impetus",
@@ -4286,6 +4368,19 @@
     "耐受": 15,
     "类型": "Ranged Weapons",
     "效果": "When dealing damage to an enemy at or below the character's level, there is a 50.0% chance to turn it into a stationary oil barrel. The next time it takes damage, it is defeated instantly and deals Smash Damage equal to 720.0% of the character's ATK to enemies within 10 m."
+  },
+  {
+    "id": 43801,
+    "icon": "Fafnir01",
+    "名称": "Trammel – Surplus",
+    "版本": "1.6",
+    "系列": "Fafnir's ",
+    "品质": "紫",
+    "极性": "D",
+    "耐受": 20,
+    "类型": "Ranged Weapons",
+    "触发": 0.9,
+    "充盈转化": 1.08
   },
   {
     "id": 44001,
@@ -4661,6 +4756,22 @@
       51316
     ],
     "效果": "Increases your ATK by 77.0% with each revival during commissions or Nocturnal Echoes (up to 231.0%)."
+  },
+  {
+    "id": 51317,
+    "icon": "Sphinx01",
+    "名称": "Overflow – Finesse",
+    "版本": "1.6",
+    "系列": "Sphinx's ",
+    "品质": "金",
+    "极性": "O",
+    "耐受": 22,
+    "类型": "Characters",
+    "消耗": [
+      51317
+    ],
+    "充盈威力": 5.5,
+    "效果": "When dealing Skill DMG, there is a 100.0% chance to trigger Bonus Effects."
   },
   {
     "id": 51321,
@@ -5792,29 +5903,35 @@
   {
     "id": 51735,
     "icon": "FeatheredSnake01_Red",
-    "名称": "Volition",
-    "版本": "99.9",
+    "名称": "Resolve",
+    "版本": "1.6",
     "系列": "Feathered Serpent's ",
     "品质": "金",
     "极性": "D",
     "属性": "Pyro",
-    "耐受": 15,
+    "耐受": 22,
     "类型": "Characters",
-    "技能威力": 1.0,
+    "消耗": [
+      51735
+    ],
+    "背水": 0.22,
     "效果": "The element effect activates only when at least 4 Demon Wedges aligned to Track D are equipped."
   },
   {
     "id": 51736,
     "icon": "FeatheredSnake01_Red",
-    "名称": "Spectrum",
-    "版本": "99.9",
+    "名称": "Refinement",
+    "版本": "1.6",
     "系列": "Feathered Serpent's ",
     "品质": "金",
     "极性": "O",
     "属性": "Pyro",
-    "耐受": 15,
+    "耐受": 22,
     "类型": "Characters",
-    "技能范围": 1.0,
+    "消耗": [
+      51736
+    ],
+    "技能伤害": 0.44,
     "效果": "The element effect activates only when at least 4 Demon Wedges aligned to Track O are equipped."
   },
   {
@@ -5832,6 +5949,24 @@
       51737
     ],
     "技能威力": 1.1,
+    "效果": "Once upgraded to +5.0, this Demon Wedge can be equipped in multiples."
+  },
+  {
+    "id": 51738,
+    "icon": "Mephisto01_Red",
+    "名称": "Nirvana – Volition",
+    "版本": "1.6",
+    "系列": "Covenanter's ",
+    "品质": "金",
+    "极性": "D",
+    "属性": "Pyro",
+    "耐受": 27,
+    "类型": "Characters",
+    "消耗": [
+      51738
+    ],
+    "生命": 1.32,
+    "技能威力": 0.55,
     "效果": "Once upgraded to +5.0, this Demon Wedge can be equipped in multiples."
   },
   {
@@ -6224,6 +6359,24 @@
     "效果": "Once upgraded to +5.0, this Demon Wedge can be equipped in multiples."
   },
   {
+    "id": 51768,
+    "icon": "Mephisto01_Orange",
+    "名称": "Blaze – Volition",
+    "版本": "1.6",
+    "系列": "Covenanter's ",
+    "品质": "金",
+    "极性": "A",
+    "属性": "Lumino",
+    "耐受": 27,
+    "类型": "Characters",
+    "消耗": [
+      51768
+    ],
+    "攻击": 1.32,
+    "技能威力": 0.55,
+    "效果": "Once upgraded to +5.0, this Demon Wedge can be equipped in multiples."
+  },
+  {
     "id": 51801,
     "icon": "Jormungand01",
     "名称": "Gleaming Sword",
@@ -6470,6 +6623,23 @@
     ],
     "技能威力": 0.55,
     "效果": "When a Pyro character deals damage, gains 1 stack that increases ATK by 1.76% for 15.0s, up to 120.0 stacks."
+  },
+  {
+    "id": 51932,
+    "icon": "Ifrit01",
+    "名称": "Inferno Disruption",
+    "版本": "1.6",
+    "系列": "Ifrit's ",
+    "品质": "金",
+    "极性": "O",
+    "属性": "Pyro",
+    "耐受": 27,
+    "类型": "Characters",
+    "消耗": [
+      51932
+    ],
+    "充盈威力": 5.5,
+    "效果": "When a Pyro character consumes Pyro Disruption, their DMG Dealt increases by 22.0% for 10.0s, stacking up to 5.0 times."
   },
   {
     "id": 51941,
@@ -6730,6 +6900,57 @@
     "物理": 0.99
   },
   {
+    "id": 52111,
+    "icon": "Cerberus01",
+    "名称": "Edge·Trammel",
+    "版本": "1.6",
+    "系列": "Cerberus's ",
+    "品质": "金",
+    "极性": "A",
+    "耐受": 23,
+    "类型": "Melee Weapons",
+    "消耗": [
+      52111
+    ],
+    "限定": "切割",
+    "物理": 0.88,
+    "触发": 1.21
+  },
+  {
+    "id": 52112,
+    "icon": "Cerberus01",
+    "名称": "Penetration·Trammel",
+    "版本": "1.6",
+    "系列": "Cerberus's ",
+    "品质": "金",
+    "极性": "A",
+    "耐受": 23,
+    "类型": "Melee Weapons",
+    "消耗": [
+      52112
+    ],
+    "限定": "贯穿",
+    "物理": 0.88,
+    "触发": 1.21
+  },
+  {
+    "id": 52113,
+    "icon": "Cerberus01",
+    "名称": "Crusher·Trammel",
+    "版本": "1.6",
+    "系列": "Cerberus's ",
+    "品质": "金",
+    "极性": "A",
+    "耐受": 23,
+    "类型": "Melee Weapons",
+    "消耗": [
+      52113
+    ],
+    "限定": "震荡",
+    "物理": 0.88,
+    "触发": 1.21
+  },
+  {
     "id": 52203,
     "icon": "Fenrir01",
     "名称": "Continuity·Trammel",
@@ -6765,19 +6986,18 @@
   {
     "id": 52801,
     "icon": "Fenrir01",
-    "名称": "缠缚·满溢（远期待包装）",
+    "名称": "Trammel – Surplus",
     "版本": "1.6",
     "系列": "Fenrir's ",
     "品质": "金",
     "极性": "D",
-    "耐受": 25,
+    "耐受": 21,
     "类型": "Melee Weapons",
     "消耗": [
-      52204
+      52801
     ],
-    "触发": 1.0,
-    "充盈威力转化": 1.0,
-    "效果": "Trigger Probability over 100% is converted into Overflow Intensity for that character at a 100.0% ratio."
+    "触发": 1.65,
+    "充盈转化": 2
   },
   {
     "id": 53001,
@@ -6985,21 +7205,71 @@
     "物理": 0.99
   },
   {
+    "id": 53111,
+    "icon": "Lilith01",
+    "名称": "Edge·Trammel",
+    "版本": "1.6",
+    "系列": "Lilith's ",
+    "品质": "金",
+    "极性": "A",
+    "耐受": 23,
+    "类型": "Ranged Weapons",
+    "消耗": [
+      53111
+    ],
+    "限定": "切割",
+    "物理": 0.88,
+    "触发": 1.21
+  },
+  {
+    "id": 53112,
+    "icon": "Lilith01",
+    "名称": "Penetration·Trammel",
+    "版本": "1.6",
+    "系列": "Lilith's ",
+    "品质": "金",
+    "极性": "A",
+    "耐受": 23,
+    "类型": "Ranged Weapons",
+    "消耗": [
+      53112
+    ],
+    "限定": "贯穿",
+    "物理": 0.88,
+    "触发": 1.21
+  },
+  {
+    "id": 53113,
+    "icon": "Lilith01",
+    "名称": "Crusher·Trammel",
+    "版本": "1.6",
+    "系列": "Lilith's ",
+    "品质": "金",
+    "极性": "A",
+    "耐受": 23,
+    "类型": "Ranged Weapons",
+    "消耗": [
+      53113
+    ],
+    "限定": "震荡",
+    "物理": 0.88,
+    "触发": 1.21
+  },
+  {
     "id": 53801,
     "icon": "Fafnir01",
-    "名称": "缠缚·满溢（远期待包装）",
+    "名称": "Trammel – Surplus",
     "版本": "1.6",
     "系列": "Fafnir's ",
     "品质": "金",
     "极性": "D",
-    "耐受": 22,
+    "耐受": 21,
     "类型": "Ranged Weapons",
     "消耗": [
-      53013
+      53801
     ],
-    "触发": 1.0,
-    "充盈威力转化": 1.0,
-    "效果": "Trigger Probability over 100% is converted into Overflow Intensity for that character at a 100.0% ratio."
+    "触发": 1.65,
+    "充盈转化": 2
   },
   {
     "id": 54001,
@@ -7518,74 +7788,74 @@
   {
     "id": 56131,
     "icon": "Changeling01_Red",
-    "名称": "Blaze",
-    "版本": "99.9",
+    "名称": "Volition",
+    "版本": "1.6",
     "系列": "Changeling's ",
     "品质": "金",
     "极性": "D",
     "属性": "Pyro",
-    "耐受": 29,
+    "耐受": 25,
     "类型": "Characters",
     "消耗": [
       56131
     ],
     "减伤": 0.3,
-    "效果": "Grants +100.0% ATK when Skill Range is ≥ 150.0%."
+    "效果": "When Overflow Intensity is at least 500.0%, Skill Intensity increases by 88.0% (Overflow Intensity gained from Weapon Conversion does not count)."
   },
   {
     "id": 56132,
     "icon": "Siren01_Red",
-    "名称": "Wings·Inspo·Blaze",
-    "版本": "99.9",
+    "名称": "Wings – Inspo – Volition",
+    "版本": "1.6",
     "系列": "Siren's ",
     "品质": "金",
     "极性": "D",
     "属性": "Pyro",
-    "耐受": 29,
+    "耐受": 45,
     "类型": "Characters",
     "消耗": [
       56132
     ],
-    "神智": 1.0,
-    "技能效益": 1.0,
-    "减伤": 0.3,
-    "效果": "Grants +100.0% ATK when Skill Range is ≥ 150.0%."
+    "神智": 1.65,
+    "技能效益": 0.44,
+    "减伤": 0.5,
+    "效果": "When Overflow Intensity is at least 500.0%, Skill Intensity increases by 88.0% (Overflow Intensity gained from Weapon Conversion does not count)."
   },
   {
     "id": 56133,
     "icon": "Changeling01_Red",
-    "名称": "Volition",
-    "版本": "99.9",
+    "名称": "Morale",
+    "版本": "1.6",
     "系列": "Changeling's ",
     "品质": "金",
     "极性": "D",
     "属性": "Pyro",
-    "耐受": 29,
+    "耐受": 25,
     "类型": "Characters",
     "消耗": [
       56133
     ],
     "减伤": 0.3,
-    "效果": "Grants +100.0% Skill Intensity to self and allies when Skill Efficiency is ≥ 150.0%."
+    "效果": "When Skill Intensity is ≥ 350.0%, the whole team gains +66.0% Morale."
   },
   {
     "id": 56134,
     "icon": "Siren01_Red",
-    "名称": "Wings·Inspo·Volition",
-    "版本": "99.9",
+    "名称": "Wings – Inspo – Morale",
+    "版本": "1.6",
     "系列": "Siren's ",
     "品质": "金",
     "极性": "D",
     "属性": "Pyro",
-    "耐受": 29,
+    "耐受": 45,
     "类型": "Characters",
     "消耗": [
       56134
     ],
-    "神智": 1.0,
-    "技能效益": 1.0,
-    "减伤": 0.3,
-    "效果": "Grants +100.0% Skill Intensity to self and allies when Skill Efficiency is ≥ 150.0%."
+    "神智": 1.65,
+    "技能效益": 0.44,
+    "减伤": 0.5,
+    "效果": "When Skill Intensity is ≥ 350.0%, the whole team gains +66.0% Morale."
   },
   {
     "id": 56141,
@@ -7804,22 +8074,6 @@
     "效果": "Grants +99.0% CRIT Chance to self and allies when Skill Duration is ≥ 200.0%."
   },
   {
-    "id": 56201,
-    "icon": "Pan01",
-    "名称": "充盈·巧击(远期待包装)",
-    "版本": "1.6",
-    "系列": "Pan's ",
-    "品质": "金",
-    "极性": "O",
-    "耐受": 27,
-    "类型": "Characters",
-    "消耗": [
-      56201
-    ],
-    "充盈威力": 1.0,
-    "效果": "When dealing Skill DMG, there is a 80.0% chance to trigger Bonus Effects."
-  },
-  {
     "id": 101001,
     "icon": "Fenrir01",
     "名称": "Whirl of Illusion",
@@ -7839,7 +8093,7 @@
         "字段": [
           {
             "名称": "1-Hit DMG",
-            "值": 0.65,
+            "值": 1.95,
             "削韧": 20,
             "卡肉": 0.03,
             "取消": 0.2,
@@ -7847,7 +8101,7 @@
           },
           {
             "名称": "2-Hit DMG",
-            "值": 0.85,
+            "值": 2.55,
             "削韧": 25,
             "卡肉": 0.03,
             "取消": 0.2,
@@ -7855,7 +8109,7 @@
           },
           {
             "名称": "3-Hit DMG",
-            "值": 0.55,
+            "值": 1.65,
             "格式": "{%}×4",
             "削韧": 25,
             "取消": 0.2667,
@@ -7863,7 +8117,7 @@
           },
           {
             "名称": "4-Hit DMG",
-            "值": 1.2,
+            "值": 3.6,
             "削韧": 40,
             "卡肉": 0.1,
             "取消": 0.6333,
@@ -7893,7 +8147,7 @@
         "字段": [
           {
             "名称": "Charged Attack DMG",
-            "值": 2.28,
+            "值": 6.56,
             "削韧": 73,
             "卡肉": 0.1,
             "取消": 1.2333
@@ -7922,7 +8176,7 @@
         "字段": [
           {
             "名称": "Charged Attack DMG",
-            "值": 1.14,
+            "值": 3.28,
             "格式": "{%}×2",
             "削韧": 36,
             "取消": 1.2333
@@ -7951,7 +8205,7 @@
         "字段": [
           {
             "名称": "Charged Attack DMG",
-            "值": 0.3,
+            "值": 0.97,
             "削韧": 10,
             "取消": 1.5
           }
@@ -7979,13 +8233,13 @@
         "字段": [
           {
             "名称": "Plunge DMG",
-            "值": 0.47,
+            "值": 1.41,
             "削韧": 15,
             "取消": 1.7
           },
           {
             "名称": "Plunge 2-Hit DMG",
-            "值": 0.63,
+            "值": 1.89,
             "削韧": 20,
             "取消": 1.7
           }
@@ -8013,7 +8267,7 @@
         "字段": [
           {
             "名称": "1-Hit DMG",
-            "值": 1.1,
+            "值": 3.3,
             "削韧": 25,
             "卡肉": 0.03,
             "取消": 0.4,
@@ -8021,7 +8275,7 @@
           },
           {
             "名称": "2-Hit DMG",
-            "值": 1.2,
+            "值": 3.6,
             "格式": "{%}×2",
             "削韧": 25,
             "卡肉": 0.03,
@@ -8030,8 +8284,8 @@
           },
           {
             "名称": "3-Hit DMG",
-            "值": 0.5,
-            "值2": 1.5,
+            "值": 1.5,
+            "值2": 4.5,
             "格式": "{%}×2+{%}",
             "削韧": 40,
             "卡肉": 0.1,
@@ -8040,8 +8294,8 @@
           },
           {
             "名称": "4-Hit DMG",
-            "值": 0.3,
-            "值2": 3.7,
+            "值": 0.9,
+            "值2": 11.1,
             "格式": "{%}+{%}",
             "削韧": 150,
             "卡肉": 0.1,
@@ -8072,7 +8326,7 @@
         "字段": [
           {
             "名称": "Path DMG",
-            "值": 1.24,
+            "值": 4.74,
             "削韧": 40,
             "取消": 1.4
           }
@@ -8100,7 +8354,7 @@
         "字段": [
           {
             "名称": "1-Hit DMG",
-            "值": 1.2,
+            "值": 3.6,
             "削韧": 30,
             "卡肉": 0.07,
             "取消": 0.5945,
@@ -8108,7 +8362,7 @@
           },
           {
             "名称": "2-Hit DMG",
-            "值": 0.7,
+            "值": 2.1,
             "削韧": 35,
             "卡肉": 0.07,
             "取消": 0.6,
@@ -8116,7 +8370,7 @@
           },
           {
             "名称": "3-Hit DMG",
-            "值": 1.8,
+            "值": 5.4,
             "削韧": 70,
             "卡肉": 0.07,
             "取消": 1.212,
@@ -8124,7 +8378,7 @@
           },
           {
             "名称": "Path DMG",
-            "值": 1.42,
+            "值": 4.26,
             "削韧": 35,
             "取消": 1.212,
             "连段": 1.6667
@@ -8153,19 +8407,19 @@
         "字段": [
           {
             "名称": "Path DMG",
-            "值": 0.55,
+            "值": 1.65,
             "削韧": 20,
             "取消": 17.0667
           },
           {
             "名称": "Charged Attack Finisher DMG",
-            "值": 2,
+            "值": 6.35,
             "削韧": 62,
             "取消": 17.0667
           },
           {
             "名称": "Endpoint DMG",
-            "值": 0.55,
+            "值": 1.65,
             "削韧": 20,
             "取消": 17.0667
           }
@@ -8193,7 +8447,7 @@
         "字段": [
           {
             "名称": "1-Hit DMG",
-            "值": 0.4,
+            "值": 1.2,
             "格式": "{%}×3",
             "削韧": 15,
             "卡肉": 0.07,
@@ -8202,7 +8456,7 @@
           },
           {
             "名称": "2-Hit DMG",
-            "值": 0.5,
+            "值": 1.5,
             "格式": "{%}×3",
             "削韧": 20,
             "卡肉": 0.07,
@@ -8211,7 +8465,7 @@
           },
           {
             "名称": "3-Hit DMG",
-            "值": 0.7,
+            "值": 2.1,
             "格式": "{%}×5",
             "削韧": 25,
             "卡肉": 0.07,
@@ -8220,7 +8474,7 @@
           },
           {
             "名称": "4-Hit DMG",
-            "值": 3.4,
+            "值": 10.2,
             "削韧": 80,
             "卡肉": 0.07,
             "取消": 0.6689,
@@ -8250,7 +8504,7 @@
         "字段": [
           {
             "名称": "Sliding Attack DMG",
-            "值": 2.05,
+            "值": 6.16,
             "削韧": 66,
             "卡肉": 0.03,
             "取消": 0.9388
@@ -8279,7 +8533,7 @@
         "字段": [
           {
             "名称": "1-Hit DMG",
-            "值": 0.55,
+            "值": 1.65,
             "削韧": 20,
             "卡肉": 0.03,
             "取消": 0.1667,
@@ -8287,7 +8541,7 @@
           },
           {
             "名称": "2-Hit DMG",
-            "值": 1.2,
+            "值": 3.6,
             "削韧": 35,
             "卡肉": 0.03,
             "取消": 0.3,
@@ -8295,7 +8549,7 @@
           },
           {
             "名称": "3-Hit DMG",
-            "值": 0.55,
+            "值": 1.65,
             "格式": "{%}×4",
             "削韧": 20,
             "取消": 0.8667,
@@ -8303,7 +8557,7 @@
           },
           {
             "名称": "4-Hit DMG",
-            "值": 0.82,
+            "值": 2.46,
             "格式": "{%}×5",
             "削韧": 25,
             "取消": 1.3,
@@ -8333,9 +8587,36 @@
         "字段": [
           {
             "名称": "Charged Attack DMG",
-            "值": 0.88,
+            "值": 2.15,
             "削韧": 28,
             "取消": 2
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 104004,
+    "icon": "Fenrir01",
+    "名称": "Cyclone Waltz",
+    "版本": "1.6",
+    "系列": "Fenrir's ",
+    "品质": "紫",
+    "极性": "V",
+    "耐受": 25,
+    "类型": "Melee Weapons",
+    "暴击": 0.4,
+    "效果": "Upgrades the Dual Blades Charged Attack to dash forward, damaging enemies in its path for double the damage of the standard attack.",
+    "技能替换": {
+      "1040102": {
+        "id": 1040302,
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Path DMG",
+            "值": 4.12,
+            "削韧": 47
           }
         ]
       }
@@ -8361,13 +8642,13 @@
         "字段": [
           {
             "名称": "Charged Attack DMG",
-            "值": 0.24,
+            "值": 1,
             "削韧": 10,
             "取消": 1.0333
           },
           {
             "名称": "Path DMG",
-            "值": 1.23,
+            "值": 4.96,
             "削韧": 36,
             "取消": 1.0333
           }
@@ -8443,7 +8724,7 @@
         "字段": [
           {
             "名称": "1-Hit DMG",
-            "值": 0.25,
+            "值": 0.75,
             "格式": "{%}×2",
             "削韧": 10,
             "取消": 0.4333,
@@ -8451,7 +8732,7 @@
           },
           {
             "名称": "2-Hit DMG",
-            "值": 0.385,
+            "值": 1.1,
             "格式": "{%}×3",
             "削韧": 12,
             "取消": 0.3333,
@@ -8502,7 +8783,7 @@
         "字段": [
           {
             "名称": "1-Hit DMG",
-            "值": 0.65,
+            "值": 1.95,
             "削韧": 20,
             "卡肉": 0.03,
             "取消": 0.2,
@@ -8510,7 +8791,7 @@
           },
           {
             "名称": "2-Hit DMG",
-            "值": 0.85,
+            "值": 2.55,
             "削韧": 25,
             "卡肉": 0.03,
             "取消": 0.2,
@@ -8518,7 +8799,7 @@
           },
           {
             "名称": "3-Hit DMG",
-            "值": 0.55,
+            "值": 1.65,
             "格式": "{%}×4",
             "削韧": 25,
             "取消": 0.2667,
@@ -8526,7 +8807,7 @@
           },
           {
             "名称": "4-Hit DMG",
-            "值": 1.2,
+            "值": 3.6,
             "削韧": 40,
             "卡肉": 0.1,
             "取消": 0.6333,
@@ -8560,7 +8841,7 @@
         "字段": [
           {
             "名称": "Charged Attack DMG",
-            "值": 0.3,
+            "值": 0.97,
             "削韧": 10,
             "取消": 1.5
           }
@@ -8592,13 +8873,13 @@
         "字段": [
           {
             "名称": "Plunge DMG",
-            "值": 0.47,
+            "值": 1.41,
             "削韧": 15,
             "取消": 1.7
           },
           {
             "名称": "Plunge 2-Hit DMG",
-            "值": 0.63,
+            "值": 1.89,
             "削韧": 20,
             "取消": 1.7
           }
@@ -8630,7 +8911,7 @@
         "字段": [
           {
             "名称": "1-Hit DMG",
-            "值": 1.1,
+            "值": 3.3,
             "削韧": 25,
             "卡肉": 0.03,
             "取消": 0.4,
@@ -8638,7 +8919,7 @@
           },
           {
             "名称": "2-Hit DMG",
-            "值": 1.2,
+            "值": 3.6,
             "格式": "{%}×2",
             "削韧": 25,
             "卡肉": 0.03,
@@ -8647,8 +8928,8 @@
           },
           {
             "名称": "3-Hit DMG",
-            "值": 0.5,
-            "值2": 1.5,
+            "值": 1.5,
+            "值2": 4.5,
             "格式": "{%}×2+{%}",
             "削韧": 40,
             "卡肉": 0.1,
@@ -8657,8 +8938,8 @@
           },
           {
             "名称": "4-Hit DMG",
-            "值": 0.3,
-            "值2": 3.7,
+            "值": 0.9,
+            "值2": 11.1,
             "格式": "{%}+{%}",
             "削韧": 150,
             "卡肉": 0.1,
@@ -8693,7 +8974,7 @@
         "字段": [
           {
             "名称": "1-Hit DMG",
-            "值": 1.2,
+            "值": 3.6,
             "削韧": 30,
             "卡肉": 0.07,
             "取消": 0.5945,
@@ -8701,7 +8982,7 @@
           },
           {
             "名称": "2-Hit DMG",
-            "值": 0.7,
+            "值": 2.1,
             "削韧": 35,
             "卡肉": 0.07,
             "取消": 0.6,
@@ -8709,7 +8990,7 @@
           },
           {
             "名称": "3-Hit DMG",
-            "值": 1.8,
+            "值": 5.4,
             "削韧": 70,
             "卡肉": 0.07,
             "取消": 1.212,
@@ -8717,7 +8998,7 @@
           },
           {
             "名称": "Path DMG",
-            "值": 1.42,
+            "值": 4.26,
             "削韧": 35,
             "取消": 1.212,
             "连段": 1.6667
@@ -8750,7 +9031,7 @@
         "字段": [
           {
             "名称": "Sliding Attack DMG",
-            "值": 2.05,
+            "值": 6.16,
             "削韧": 66,
             "卡肉": 0.03,
             "取消": 0.9388

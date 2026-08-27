@@ -66,6 +66,7 @@ end
 
 function M:OnRemovedFromFocusPath(MyGeometry, MouseEvent)
   self.ListRewardMouseBeginPos = nil
+  self.Com_Reward:SetVisibility(ESlateVisibility.Collapsed)
   return UIUtils.Unhandled
 end
 
@@ -87,6 +88,7 @@ function M:InitItemContent()
   self.List_Reward:SetWheelScrollMultiplier(0)
   self.Mobile = "Mobile" == CommonUtils.GetDeviceTypeByPlatformName(self)
   self.IsEnter = false
+  self.Com_Reward:SetVisibility(ESlateVisibility.Collapsed)
   if self.IsEmpty then
     self.WS_Item:SetActiveWidgetIndex(1)
     self.bIsFocusable = false
@@ -434,7 +436,7 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
 end
 
 function M:UpdatKeyDisplay(FocusTypeName)
-  if UIUtils.UtilsGetCurrentInputType() ~= ECommonInputType.Gamepad then
+  if UIUtils.UtilsGetCurrentInputType() ~= ECommonInputType.Gamepad or self.IsEmpty or not self.Parent then
     return
   end
   self.Parent:UpdatKeyDisplay()

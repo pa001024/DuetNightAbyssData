@@ -4,6 +4,7 @@ local MissionIndicatorManager = {}
 MissionIndicatorManager.MissionIndicatorNames = {}
 MissionIndicatorManager.SpecialSideIndicatorNames = {}
 MissionIndicatorManager.MissionNpcSideBubbles = {}
+MissionIndicatorManager.MissionNpcMissionBubbles = {}
 MissionIndicatorManager.bTriggerCollapsAll = true
 MissionIndicatorManager.TrackingSpecialSideQuestChainId = nil
 
@@ -30,6 +31,9 @@ function MissionIndicatorManager:ActiveMissionIndicatorByNode(InNode)
   local UIObj = self:LoadMissionIndicatorUI(IndicatorData, InNode)
   if nil ~= UIObj then
     MissionIndicatorManager.MissionIndicatorNames[UIObj:GetName()] = IndicatorData.SourceId
+    if InNode.GuideType == "NpcBubble" then
+      MissionIndicatorManager.MissionNpcMissionBubbles[IndicatorData.PointKey] = UIObj:GetName()
+    end
     EventManager:FireEvent(EventID.OnChangeTaskIndicator, TaskUtils.MissionNpcGuideMaps)
   end
 end
@@ -49,6 +53,19 @@ function MissionIndicatorManager:ActiveFailryQuestIndicatorBy(InNode)
     MissionIndicatorManager.MissionIndicatorNames[UIObj:GetName()] = IndicatorData.SourceId
     EventManager:FireEvent(EventID.OnChangeTaskIndicator, TaskUtils.MissionNpcGuideMaps)
   end
+end
+
+function MissionIndicatorManager:CheckHasNpcSideBubble(InUnitId)
+  if MissionIndicatorManager.MissionNpcMissionBubbles[InUnitId] then
+    local UIManager = GWorld.GameInstance:GetGameUIManager()
+    local UIObj = UIManager:GetUIObj(MissionIndicatorManager.MissionNpcMissionBubbles[InUnitId])
+    if UIObj and UIObj.AvatarTrackingId == UIObj.CurGuideChainId then
+      return true
+    else
+      return false
+    end
+  end
+  return false
 end
 
 function MissionIndicatorManager:ReactiveMissionIndicatorByNode(InNode)
@@ -74,6 +91,9 @@ function MissionIndicatorManager:ReactiveMissionIndicatorByNode(InNode)
   end
   local UIObj = UIManager:GetUIObj(UIName)
   if UIObj then
+    if UIObj.GuideInfoCache and UIObj.GuideInfoCache.GuideType == "NpcBubble" and MissionIndicatorManager.MissionNpcMissionBubbles[UIObj.GuideInfoCache.PointName] then
+      MissionIndicatorManager.MissionNpcMissionBubbles[UIObj.GuideInfoCache.PointName] = nil
+    end
     UIObj:CloseIndicator()
   end
 end
@@ -102,11 +122,17 @@ end
 function MissionIndicatorManager:SetIndicatorDataBy_QuestStartNode(InData, InNode)
   InData.GuideType = InNode.StoryGuideType
   InData.PointKey = InNode.StoryGuidePointName
-  if InNode.StoryGuideType == "Npc" then
+  if InNode.StoryGuideType == "Npc" or InNode.StoryGuideType == "NpcBubble" then
     local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
     local TargetStaticCreator = GameState.StaticCreatorStringNameMap:FindRef(InNode.StoryGuidePointName)
     if TargetStaticCreator then
       InData.PointKey = TargetStaticCreator.UnitId
+    end
+    if InNode.StoryGuideType == "NpcBubble" then
+      local IconTexture = TaskUtils:GetIconTextureByTrackQuestChainType()
+      if IconTexture then
+        EventManager:FireEvent(EventID.EnableNpcIndicator, InData.PointKey, true, IconTexture)
+      end
     end
   end
   InData.StaticCreatorKey = InNode.StoryGuidePointName
@@ -115,11 +141,17 @@ end
 function MissionIndicatorManager:SetIndicatorDataBy_ElevatorNode(InData, InNode)
   InData.GuideType = InNode.GuideType
   InData.PointKey = InNode.GuideDisplayName
-  if InNode.GuideType == "N" then
+  if InNode.GuideType == "N" or InNode.GuideType == "NpcBubble" then
     local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
     local TargetStaticCreator = GameState.StaticCreatorStringNameMap:FindRef(InNode.GuidePointName)
     if TargetStaticCreator then
       InData.PointKey = TargetStaticCreator.UnitId
+    end
+    if InNode.GuideType == "NpcBubble" then
+      local IconTexture = TaskUtils:GetIconTextureByTrackQuestChainType()
+      if IconTexture then
+        EventManager:FireEvent(EventID.EnableNpcIndicator, InData.PointKey, true, IconTexture)
+      end
     end
   end
   InData.StaticCreatorKey = InNode.GuideDisplayName
@@ -128,11 +160,17 @@ end
 function MissionIndicatorManager:SetIndicatorDataBy_GoToNode(InData, InNode)
   InData.GuideType = InNode.GuideType
   InData.PointKey = InNode.GuidePointName
-  if InNode.GuideType == "N" then
+  if InNode.GuideType == "N" or InNode.GuideType == "NpcBubble" then
     local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
     local TargetStaticCreator = GameState.StaticCreatorStringNameMap:FindRef(InNode.GuidePointName)
     if TargetStaticCreator then
       InData.PointKey = TargetStaticCreator.UnitId
+    end
+    if InNode.GuideType == "NpcBubble" then
+      local IconTexture = TaskUtils:GetIconTextureByTrackQuestChainType()
+      if IconTexture then
+        EventManager:FireEvent(EventID.EnableNpcIndicator, InData.PointKey, true, IconTexture)
+      end
     end
   end
   InData.StaticCreatorKey = InNode.GuidePointName
@@ -141,11 +179,17 @@ end
 function MissionIndicatorManager:SetIndicatorDataBy_GoToRegionNode(InData, InNode)
   InData.GuideType = InNode.GuideType
   InData.PointKey = InNode.GuideName
-  if InNode.GuideType == "N" then
+  if InNode.GuideType == "N" or InNode.GuideType == "NpcBubble" then
     local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
     local TargetStaticCreator = GameState.StaticCreatorStringNameMap:FindRef(InNode.GuideName)
     if TargetStaticCreator then
       InData.PointKey = TargetStaticCreator.UnitId
+    end
+    if InNode.GuideType == "NpcBubble" then
+      local IconTexture = TaskUtils:GetIconTextureByTrackQuestChainType()
+      if IconTexture then
+        EventManager:FireEvent(EventID.EnableNpcIndicator, InData.PointKey, true, IconTexture)
+      end
     end
   end
   InData.StaticCreatorKey = InNode.GuideName
@@ -154,11 +198,17 @@ end
 function MissionIndicatorManager:SetIndicatorDataBy_SitOnNode(InData, InNode)
   InData.GuideType = InNode.GuideType
   InData.PointKey = InNode.GuidePointName
-  if InNode.GuideType == "N" then
+  if InNode.GuideType == "N" or InNode.GuideType == "NpcBubble" then
     local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
     local TargetStaticCreator = GameState.StaticCreatorStringNameMap:FindRef(InNode.GuidePointName)
     if TargetStaticCreator then
       InData.PointKey = TargetStaticCreator.UnitId
+    end
+    if InNode.GuideType == "NpcBubble" then
+      local IconTexture = TaskUtils:GetIconTextureByTrackQuestChainType()
+      if IconTexture then
+        EventManager:FireEvent(EventID.EnableNpcIndicator, InData.PointKey, true, IconTexture)
+      end
     end
   end
   InData.StaticCreatorKey = InNode.GuidePointName
@@ -167,11 +217,17 @@ end
 function MissionIndicatorManager:SetIndicatorDataBy_MiniGameOpenGateNode(InData, InNode)
   InData.GuideType = InNode.GuideType
   InData.PointKey = InNode.GuidePointName
-  if InNode.GuideType == "N" then
+  if InNode.GuideType == "N" or InNode.GuideType == "NpcBubble" then
     local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
     local TargetStaticCreator = GameState.StaticCreatorStringNameMap:FindRef(InNode.GuidePointName)
     if TargetStaticCreator then
       InData.PointKey = TargetStaticCreator.UnitId
+    end
+    if InNode.GuideType == "NpcBubble" then
+      local IconTexture = TaskUtils:GetIconTextureByTrackQuestChainType()
+      if IconTexture then
+        EventManager:FireEvent(EventID.EnableNpcIndicator, InData.PointKey, true, IconTexture)
+      end
     end
   end
   InData.StaticCreatorKey = InNode.GuidePointName
@@ -180,11 +236,17 @@ end
 function MissionIndicatorManager:SetIndicatorDataBy_SubmitItemNode(InData, InNode)
   InData.GuideType = InNode.GuideType
   InData.PointKey = InNode.GuidePointName
-  if InData.GuideType == "N" then
+  if InData.GuideType == "N" or InNode.GuideType == "NpcBubble" then
     local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
     local TargetStaticCreator = GameState.StaticCreatorStringNameMap:FindRef(InNode.GuidePointName)
     if TargetStaticCreator then
       InData.PointKey = TargetStaticCreator.UnitId
+    end
+    if InNode.GuideType == "NpcBubble" then
+      local IconTexture = TaskUtils:GetIconTextureByTrackQuestChainType()
+      if IconTexture then
+        EventManager:FireEvent(EventID.EnableNpcIndicator, InData.PointKey, true, IconTexture)
+      end
     end
   end
   InData.StaticCreatorKey = InNode.GuidePointName
@@ -193,11 +255,17 @@ end
 function MissionIndicatorManager:SetIndicatorDataBy_DisplayItemNode(InData, InNode)
   InData.GuideType = InNode.GuideType
   InData.PointKey = InNode.GuidePointName
-  if InData.GuideType == "N" then
+  if InData.GuideType == "N" or InNode.GuideType == "NpcBubble" then
     local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
     local TargetStaticCreator = GameState.StaticCreatorStringNameMap:FindRef(InNode.GuidePointName)
     if TargetStaticCreator then
       InData.PointKey = TargetStaticCreator.UnitId
+    end
+    if InNode.GuideType == "NpcBubble" then
+      local IconTexture = TaskUtils:GetIconTextureByTrackQuestChainType()
+      if IconTexture then
+        EventManager:FireEvent(EventID.EnableNpcIndicator, InData.PointKey, true, IconTexture)
+      end
     end
   end
   InData.StaticCreatorKey = InNode.GuidePointName
@@ -218,11 +286,17 @@ end
 function MissionIndicatorManager:SetIndicatorDataBy_ResourceCollectNode(InData, InNode)
   InData.GuideType = InNode.GuideType
   InData.PointKey = InNode.GuidePointName
-  if InNode.GuideType == "N" then
+  if InNode.GuideType == "N" or InNode.GuideType == "NpcBubble" then
     local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
     local TargetStaticCreator = GameState.StaticCreatorStringNameMap:FindRef(InNode.GuidePointName)
     if TargetStaticCreator then
       InData.PointKey = TargetStaticCreator.UnitId
+    end
+    if InNode.GuideType == "NpcBubble" then
+      local IconTexture = TaskUtils:GetIconTextureByTrackQuestChainType()
+      if IconTexture then
+        EventManager:FireEvent(EventID.EnableNpcIndicator, InData.PointKey, true, IconTexture)
+      end
     end
   end
   InData.StaticCreatorKey = InNode.GuidePointName
@@ -230,10 +304,16 @@ end
 
 function MissionIndicatorManager:SetIndicatorDataBy_TalkNode(InData, InNode)
   InData.GuideType = InNode.GuideType
-  if InData.GuideType == "N" then
+  if InData.GuideType == "N" or InNode.GuideType == "NpcBubble" then
     InData.PointKey = InNode.NpcId
   else
     InData.PointKey = InNode.GuidePointName
+  end
+  if InNode.GuideType == "NpcBubble" then
+    local IconTexture = TaskUtils:GetIconTextureByTrackQuestChainType()
+    if IconTexture then
+      EventManager:FireEvent(EventID.EnableNpcIndicator, InData.PointKey, true, IconTexture)
+    end
   end
   InData.StaticCreatorKey = InNode.GuidePointName
 end
@@ -241,11 +321,17 @@ end
 function MissionIndicatorManager:SetIndicatorDataBy_WaitImpressionTalkCompleteNode(InData, InNode)
   InData.GuideType = InNode.GuideType
   InData.PointKey = InNode.NPCStaticCreaterName
-  if InNode.GuideType == "N" then
+  if InNode.GuideType == "N" or InNode.GuideType == "NpcBubble" then
     local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
     local TargetStaticCreator = GameState.StaticCreatorStringNameMap:FindRef(InNode.NPCStaticCreaterName)
     if TargetStaticCreator then
       InData.PointKey = TargetStaticCreator.UnitId
+    end
+    if InNode.GuideType == "NpcBubble" then
+      local IconTexture = TaskUtils:GetIconTextureByTrackQuestChainType()
+      if IconTexture then
+        EventManager:FireEvent(EventID.EnableNpcIndicator, InData.PointKey, true, IconTexture)
+      end
     end
   end
   InData.StaticCreatorKey = InNode.NPCStaticCreaterName
@@ -265,11 +351,17 @@ end
 function MissionIndicatorManager:SetIndicatorDataBy_ShowOrHideTaskIndicatorNode(InData, InNode)
   InData.GuideType = InNode.GuideType
   InData.PointKey = InNode.GuideName
-  if InNode.GuideType == "N" then
+  if InNode.GuideType == "N" or InNode.GuideType == "NpcBubble" then
     local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
     local TargetStaticCreator = GameState.StaticCreatorStringNameMap:FindRef(InNode.GuideName)
     if TargetStaticCreator then
       InData.PointKey = TargetStaticCreator.UnitId
+    end
+    if InNode.GuideType == "NpcBubble" then
+      local IconTexture = TaskUtils:GetIconTextureByTrackQuestChainType()
+      if IconTexture then
+        EventManager:FireEvent(EventID.EnableNpcIndicator, InData.PointKey, true, IconTexture)
+      end
     end
   end
   InData.StaticCreatorKey = InNode.GuideName
@@ -279,11 +371,17 @@ end
 function MissionIndicatorManager:SetIndicatorDataBy_GameModeCompleteNode(InData, InNode)
   InData.GuideType = InNode.GuideType
   InData.PointKey = InNode.GuidePointName
-  if InNode.GuideType == "N" then
+  if InNode.GuideType == "N" or InNode.GuideType == "NpcBubble" then
     local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
     local TargetStaticCreator = GameState.StaticCreatorStringNameMap:FindRef(InNode.GuideName)
     if TargetStaticCreator then
       InData.PointKey = TargetStaticCreator.UnitId
+    end
+    if InNode.GuideType == "NpcBubble" then
+      local IconTexture = TaskUtils:GetIconTextureByTrackQuestChainType()
+      if IconTexture then
+        EventManager:FireEvent(EventID.EnableNpcIndicator, InData.PointKey, true, IconTexture)
+      end
     end
   end
   InData.StaticCreatorKey = InNode.GuidePointName

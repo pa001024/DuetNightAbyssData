@@ -16,6 +16,9 @@ function S:Destruct()
     EventManager:RemoveEvent(EventID.GameViewportSizeChanged, self)
     EventManager:RemoveEvent(EventID.RefreshVoiceName, self)
   end
+  EventManager:RemoveEvent(EventID.OnSwitchAntiAliasing, self)
+  EventManager:RemoveEvent(EventID.OnSwitchRendering, self)
+  EventManager:RemoveEvent(EventID.OnSwitchUpscalingMethod, self)
 end
 
 function S:Init(Parent, CacheName, CacheInfo)
@@ -213,25 +216,28 @@ function S:CheckUnFoldItemIsValid(Index)
 end
 
 function S:RefreshOptionOnClick(SelectOptionId)
+  if self.CacheName == "AntiAliasing" then
+    local BlockAASwitch = false
+    if URuntimeCommonFunctionLibrary.IsDLSSSupported() and UDLSSLibrary and 0 ~= UDLSSLibrary.GetDLSSMode() then
+      BlockAASwitch = true
+    end
+    if USRMBlueprintLibrary and USRMBlueprintLibrary.GetActiveSRTypeAndQualityMode then
+      local ActiveSRType = USRMBlueprintLibrary.GetActiveSRTypeAndQualityMode()
+      if ActiveSRType == ESuperResolutionType.XeSS then
+        BlockAASwitch = true
+      end
+    end
+    if BlockAASwitch then
+      return
+    end
+  end
   local IsNeedSave = false
   if self.NowOptionId ~= SelectOptionId then
     self.Parent:ChangeUnfoldListSelection(SelectOptionId)
     IsNeedSave = true
   end
-  local bNeedSetText = true
-  if self.CacheName == "AntiAliasing" and URuntimeCommonFunctionLibrary.IsDLSSSupported() then
-    local NowDLSS = 1
-    if UDLSSLibrary then
-      NowDLSS = UDLSSLibrary.GetDLSSMode()
-    end
-    if 0 ~= NowDLSS then
-      bNeedSetText = false
-    end
-  end
-  if bNeedSetText then
-    self.NowOptionId = SelectOptionId
-    self.Text_Current:SetText(GText(self.UnFoldTextList[self.NowOptionId]))
-  end
+  self.NowOptionId = SelectOptionId
+  self.Text_Current:SetText(GText(self.UnFoldTextList[self.NowOptionId]))
   self:OnClickSubOptionList()
   if IsNeedSave then
     self:SaveOptionSetting()
@@ -296,8 +302,8 @@ end
 
 function S:SaveOptionSetting()
   if self["Save" .. self.CacheName .. "OptionSetting"] then
-    if self.EMCacheName == "GameUserSettings" or self.EMCacheName == "ConsoleVariable" or self.EMCacheName == "AntiAliasing" or self.EMCacheName == "ContentPerformance" or self.CacheName == "MobileResolution" then
-      GWorld.GameInstance.SetOverallScalabilityLevelSimple(CommonConst.OverallPerformanceCustom)
+    if self.EMCacheName == "GameUserSettings" or self.EMCacheName == "ConsoleVariable" or self.EMCacheName == "AntiAliasing" or self.EMCacheName == "ContentPerformance" or self.CacheName == "MobileResolution" or self.CacheName == "WaterQuality" or self.CacheName == "PlantEnhance" or self.CacheName == "UpscalingMethod" or self.CacheName == "QualityMode" then
+      SettingUtils.EnterCustomTier()
       if self.Parent.OverallPreset then
         self.Parent.OverallPreset:RefreshOverallPreset()
       end
@@ -312,7 +318,7 @@ end
 function S:SaveMiniOptionSetting()
   if self["Save" .. self.CacheName .. "MiniOptionSetting"] then
     if self.EMCacheName == "GameUserSettings" or self.EMCacheName == "ConsoleVariable" or self.EMCacheName == "AntiAliasing" or self.EMCacheName == "ContentPerformance" then
-      GWorld.GameInstance.SetOverallScalabilityLevelSimple(CommonConst.OverallPerformanceCustom)
+      SettingUtils.EnterCustomTier()
       if self.Parent.OverallPreset then
         self.Parent.OverallPreset:RefreshOverallPreset()
       end
@@ -429,12 +435,17 @@ function S:SetInterfaceModeOldOptionId()
       [23] = 5
     }
     local Resolution = GameUserSettings:GetScreenResolution()
-    local Index = Resolution.X * CommonConst.ScreenScale / Resolution.Y
-    Index = math.floor(Index + 0.5)
-    if nil == ScreenScaleList[Index] then
-      Index = CommonConst.DefaultScreenScale
+    local CurrentAspectRatio = Resolution.X / Resolution.Y
+    local NearestOptionId
+    local MinAspectRatioDiff = math.huge
+    for ScreenScale, OptionId in pairs(ScreenScaleList) do
+      local AspectRatioDiff = math.abs(CurrentAspectRatio - ScreenScale / CommonConst.ScreenScale)
+      if MinAspectRatioDiff > AspectRatioDiff then
+        MinAspectRatioDiff = AspectRatioDiff
+        NearestOptionId = OptionId
+      end
     end
-    self.OldOptionId = ScreenScaleList[Index]
+    self.OldOptionId = NearestOptionId
   end
 end
 
@@ -479,13 +490,14 @@ end
 function S:SaveOverallPresetOptionSetting(IsRestore)
   self.OptionCache = self.OverallPresetList[self.NowOptionId]
   if self.OptionCache == CommonConst.OverallPerformanceCustom then
+    SettingUtils.RecordCustomBaseTier()
+    GWorld.GameInstance:SetScalabilityLevel(CommonConst.OverallPerformanceCustom)
     SettingUtils.SaveEMCache(self.EMCacheName, self.EMCacheKey, self.OptionCache)
   else
     SettingUtils.SaveEMCache(self.EMCacheName, self.EMCacheKey, self.OptionCache)
-    GWorld.GameInstance.SetOverallScalabilityLevel(self.OptionCache)
+    SettingUtils.SetPlatformPerformanceLevel(self.OptionCache, true)
     SettingUtils.InitAntiAliasingCache(self.OptionCache)
     SettingUtils.InitMobileResolution(self.OptionCache)
-    SettingUtils.InitRealtimeSunlight(self.OptionCache)
     if not IsRestore then
       self.Parent:OnTabSelected(self.Parent.CurrentWidget, true)
     end
@@ -504,7 +516,6 @@ function S:RefreshOverallPreset()
     CurrText = self.UnFoldTextList[self.NowOptionId]
   end
   self.Text_Current:SetText(CurrText)
-  SettingUtils.SaveEMCache(self.EMCacheName, self.EMCacheKey, NowOverallPreset)
 end
 
 function S:SetContentPerformanceOldOptionId()
@@ -692,7 +703,7 @@ end
 
 function S:SaveAntiAliasingOptionSetting()
   self.OptionCache = self.AntiAliasingList[self.NowOptionId]
-  UKismetSystemLibrary.ExecuteConsoleCommand(self, "r.DefaultFeature.AntiAliasing " .. self.OptionCache)
+  URuntimeCommonFunctionLibrary.SetConsoleVariableIntValue("r.DefaultFeature.AntiAliasing", self.OptionCache, 3)
   SettingUtils.SaveEMCache(self.EMCacheName, self.EMCacheKey, self.OptionCache)
   if not self.RefreshByEvent then
     EventManager:FireEvent(EventID.OnSwitchAntiAliasing, self.OptionCache)
@@ -836,7 +847,7 @@ end
 function S:SaveModelDetailsOptionSetting()
   self.OptionCache = self.ModelDetailsList[self.NowOptionId]
   SettingUtils.SaveEMCache(self.EMCacheName, "r.SkeletalMeshLODBias", self.OptionCache)
-  GWorld.GameInstance:SetGameScalabilityLevelByName("r.SkeletalMeshLODBias", self.OptionCache)
+  GWorld.GameInstance:SetGameSettingByName("r.SkeletalMeshLODBias", self.OptionCache)
 end
 
 function S:SetLocalAtomizationOldOptionId()
@@ -1474,13 +1485,7 @@ end
 
 function S:UpdateOptionOnSwitchAntiAliasing(AntiAliasingType)
   if 2 == AntiAliasingType then
-    local OptionContentVis = self.OptionContent:GetVisibility()
-    if OptionContentVis == UE4.ESlateVisibility.Collapsed then
-      self.RefreshByEvent = true
-      self:RestoreDefaultOptionSet()
-      self.RefreshByEvent = false
-      self.OptionContent:SetVisibility(UE4.ESlateVisibility.Visible)
-    end
+    self.OptionContent:SetVisibility(UE4.ESlateVisibility.Visible)
     return
   elseif 1 == self.NowOptionId then
     self.OptionContent:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -1499,7 +1504,7 @@ end
 
 function S:RestoreDefaultUpscalingMethod()
   local NowAntiAliasing = URuntimeCommonFunctionLibrary.GetAntiAliasingMethodType()
-  if 2 == NowAntiAliasing and 1 ~= self.NowOptionId then
+  if 2 ~= NowAntiAliasing and 1 ~= self.NowOptionId then
     self:RefreshOptionOnClick(1)
   else
     self:SaveUpscalingMethodOptionSetting()

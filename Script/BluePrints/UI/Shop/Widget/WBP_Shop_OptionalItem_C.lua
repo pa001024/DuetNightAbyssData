@@ -255,7 +255,9 @@ function M:ConfirmDealWithConsumableItems(UseEffectType, UseParam, OpenCallback)
       break
     end
   end
-  OptIdxList = {OptIndex}
+  OptIdxList = {
+    [OptIndex] = 1
+  }
   if "SelectCharacter" == UseEffectType then
     bIsNew = not PlayerAvatar:CheckCharEnough({
       [self.CurrentChooseInfo.ChooseId] = 1
@@ -269,17 +271,17 @@ function M:ConfirmDealWithConsumableItems(UseEffectType, UseParam, OpenCallback)
   local function DealWithConsumableItemsCallback()
     local OptionalItemsDataConfig = DataMgr.OptReward[OptionalId]
     if "SelectWeapon" == UseEffectType then
-      local WeaponChooseId = OptionalItemsDataConfig.Id[OptIdxList[1]]
+      local WeaponChooseId = OptionalItemsDataConfig.Id[OptIndex]
       if WeaponChooseId then
         UIUtils.ShowGetItemPage(BagCommon.StuffType.Weapon, WeaponChooseId, 1, nil, nil, ReOpenOptDialog)
       end
     elseif "SelectCharacter" == UseEffectType then
-      local CharChooseId = OptionalItemsDataConfig.Id[OptIdxList[1]]
+      local CharChooseId = OptionalItemsDataConfig.Id[OptIndex]
       if CharChooseId then
         UIUtils.ShowGetItemPage("Char", CharChooseId, 1, nil, nil, ReOpenOptDialog, nil, nil, nil, bIsNew)
       end
     elseif "SelectPet" == UseEffectType then
-      local PetChooseId = OptionalItemsDataConfig.Id[OptIdxList[1]]
+      local PetChooseId = OptionalItemsDataConfig.Id[OptIndex]
       if PetChooseId then
         local GameInstance = GWorld.GameInstance
         local UIManager = GameInstance:GetGameUIManager()
@@ -304,17 +306,17 @@ function M:ConfirmDealWithConsumableResource(UseEffectType)
     return
   end
   DebugPrint("Now ConfirmDealWithConsumableItems The ChooseId is ", self.CurrentChooseInfo.ChooseId)
-  local ResourceId, OptionalId, OptIdxList, OptionalList, Count = nil, nil, nil, {}, 0
+  local ResourceId, OptionalId, OptIdxList, OptionalList = nil, nil, nil, {}
   if type(self.CurrentChooseInfo) == "table" and "SelectResource" == UseEffectType then
     local k, v = next(self.CurrentChooseInfo)
     ResourceId, OptionalId = v.ResourceId, v.OptionalId
     OptIdxList = {}
     for k, v in pairs(self.CurrentChooseInfo) do
-      for i = 1, v.ConsumeCount do
-        table.insert(OptIdxList, v.ChooseIndex)
-        Count = Count + 1
+      local ConsumeCount = v.ConsumeCount or 0
+      if ConsumeCount > 0 then
+        OptIdxList[v.ChooseIndex] = (OptIdxList[v.ChooseIndex] or 0) + ConsumeCount
       end
-      OptionalList[v.ChooseId] = v.ConsumeCount
+      OptionalList[v.ChooseId] = ConsumeCount
     end
   else
     ResourceId, OptionalId = self.CurrentChooseInfo.ResourceId, self.CurrentChooseInfo.OptionalId
@@ -322,7 +324,7 @@ function M:ConfirmDealWithConsumableResource(UseEffectType)
       OptIdxList = self.CurrentChooseInfo.ChooseIndex
     else
       OptIdxList = {
-        self.CurrentChooseInfo.ChooseIndex
+        [self.CurrentChooseInfo.ChooseIndex] = 1
       }
     end
   end

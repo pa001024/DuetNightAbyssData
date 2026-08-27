@@ -109,8 +109,10 @@ function M:SetChecked(IsChecked, bNotifyChanged)
       self:NotifyCheckStateChanged()
     end
     if IsChecked then
+      self:StopAnimation(self.Open_Click)
       self:PlayAnimation(self.Close_Click)
     else
+      self:StopAnimation(self.Close_Click)
       self:PlayAnimation(self.Open_Click)
     end
   end

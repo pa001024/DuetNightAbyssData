@@ -11,6 +11,7 @@ function WBP_Forging_Convert_PopUp_Choose_C:Construct()
   self.TextName:SetText(GText("UI_Bag_Sell_Select"))
   self.WBP_Com_Tips:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self:ShowItemDetailsPanel(false)
+  self:AddDispatcher(EventID.OnUpdateBagItem, self, self.OnBagItemLockedOrUnlocked)
   self:InitListenEvent()
   self:SwitchBindButtonEvents(true)
   self.Btn_Yes:BindForbidStateExecuteEvent(self, self.OnYesButtonClicked)
@@ -31,6 +32,9 @@ function WBP_Forging_Convert_PopUp_Choose_C:SetConfirmCallback(Parent, Callback)
 end
 
 function WBP_Forging_Convert_PopUp_Choose_C:InitSlotCount(ConvertContent)
+  if not ConvertContent then
+    return
+  end
   DebugPrint("Yihan@ WBP_Forging_Convert_PopUp_Choose_C.InitSlotCount", ConvertContent.Idx)
   self.ConvertContent = ConvertContent
   local SlotCount = DataMgr.Convert[ConvertContent.Idx].ConvertNum
@@ -211,11 +215,6 @@ function WBP_Forging_Convert_PopUp_Choose_C:CreateModContent(Uuid, Index, Callba
   Content.bEnableDrag = false
   Content.bDontOpenTipsWhenClick = false
   Content.bAura = false
-  if Mod:IsLock() then
-    Content.LockType = 1
-  else
-    Content.LockType = nil
-  end
   Content.Id = Content.Uuid
   Content.ItemType = Content.Type
   if Content.Level > 0 then
@@ -234,7 +233,7 @@ function WBP_Forging_Convert_PopUp_Choose_C:CreateModContent(Uuid, Index, Callba
   Content.OnMouseButtonUpEvents = {
     Obj = self,
     Callback = Callback,
-    Params = {Content, Index = ChoosedIndex}
+    Params = {Content, ChoosedIndex}
   }
   Content.OnFocusReceivedEvent = {
     Obj = self,
@@ -250,13 +249,118 @@ function WBP_Forging_Convert_PopUp_Choose_C:CreateModContent(Uuid, Index, Callba
   return Content
 end
 
+function WBP_Forging_Convert_PopUp_Choose_C:GetCurrentModServerData(ItemContent)
+  if not ItemContent or ItemContent.ItemType ~= CommonConst.ArmoryType.Mod or not ItemContent.Uuid then
+    return nil
+  end
+  return ModModel:GetMod(ItemContent.Uuid)
+end
+
+function WBP_Forging_Convert_PopUp_Choose_C:CanShowModLock(ItemContent)
+  local ModServerData = self:GetCurrentModServerData(ItemContent)
+  return nil ~= ModServerData and nil ~= ModServerData.Level and ModServerData.Level > 0
+end
+
+function WBP_Forging_Convert_PopUp_Choose_C:UpdateModEntryLockState(ItemContent)
+  if not ItemContent then
+    return
+  end
+  local EntryWidget = URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(self.List_Item, self.List_Item:GetIndexForItem(ItemContent))
+  if EntryWidget and EntryWidget.WBP_Com_Item_Universal_L then
+    EntryWidget.WBP_Com_Item_Universal_L:SetLock(ItemContent.IsLocked and 1 or 0)
+  end
+end
+
+function WBP_Forging_Convert_PopUp_Choose_C:OnDetailLockBtnClick(ItemContent, SetLock)
+  if not self:CanShowModLock(ItemContent) then
+    return
+  end
+  self.ItemDetailsContent = ItemContent
+  self.SetTipLockAfterRPCBackFunc = SetLock
+  local Avatar = GWorld:GetAvatar()
+  local ModServerData = self:GetCurrentModServerData(ItemContent)
+  if not ModServerData then
+    return
+  end
+  if ModServerData:IsLock() then
+    local function CancelFunc()
+      if self.WBP_Com_Tips and self.WBP_Com_Tips.Btn_Locked then
+        self.WBP_Com_Tips.Btn_Locked:ForbidBtn(false)
+      end
+    end
+    
+    local function ConfirmFunc()
+      if self.WBP_Com_Tips and self.WBP_Com_Tips.Btn_Locked then
+        self.WBP_Com_Tips.Btn_Locked:ForbidBtn(true)
+      end
+      ModController:OpenSeconderyPassword(ItemContent.Uuid, self)
+    end
+    
+    UIManager(self):ShowCommonPopupUI(100019, {RightCallbackFunction = ConfirmFunc, CloseBtnCallbackFunction = CancelFunc}, self)
+  else
+    if self.WBP_Com_Tips and self.WBP_Com_Tips.Btn_Locked then
+      self.WBP_Com_Tips.Btn_Locked:ForbidBtn(true)
+    end
+    self:BlockAllUIInput(true)
+    Avatar:LockResourceInBag(CommonConst.AllType.Mod, ItemContent.Uuid)
+  end
+end
+
+function WBP_Forging_Convert_PopUp_Choose_C:OnBagItemLockedOrUnlocked(OpAction, ErrCode, Uuid)
+  self:BlockAllUIInput(false)
+  if not ErrorCode:Check(ErrCode) or "StateChange" ~= OpAction then
+    return
+  end
+  local ListItems = self.List_Item:GetListItems()
+  local TargetContent
+  for i = 1, ListItems:Length() do
+    local ContentItem = ListItems:GetRef(i)
+    if ContentItem and ContentItem.ItemType == CommonConst.ArmoryType.Mod and ContentItem.Uuid == Uuid then
+      ContentItem.IsLocked = not ContentItem.IsLocked
+      ContentItem.LockType = ContentItem.IsLocked and 1 or 0
+      self:UpdateModEntryLockState(ContentItem)
+      TargetContent = ContentItem
+      break
+    end
+  end
+  if not TargetContent and self.ItemDetailsContent and self.ItemDetailsContent.Uuid == Uuid then
+    self.ItemDetailsContent.IsLocked = not self.ItemDetailsContent.IsLocked
+    self.ItemDetailsContent.LockType = self.ItemDetailsContent.IsLocked and 1 or 0
+    TargetContent = self.ItemDetailsContent
+  elseif TargetContent then
+    self.ItemDetailsContent = TargetContent
+  end
+  if not TargetContent then
+    return
+  end
+  if self.SetTipLockAfterRPCBackFunc and TargetContent.Uuid == Uuid then
+    self.SetTipLockAfterRPCBackFunc(TargetContent.IsLocked)
+    self.SetTipLockAfterRPCBackFunc = nil
+  end
+  if self.WBP_Com_Tips and self.WBP_Com_Tips.Btn_Locked and self.WBP_Com_Tips.Btn_Locked:IsBtnForbidden() then
+    self.WBP_Com_Tips.Btn_Locked:ForbidBtn(false)
+  end
+  if TargetContent and TargetContent.IsLocked then
+    ModController:ShowToast(GText("UI_Toast_Mod_AutoLock"))
+    for Index, Content in ipairs(self.IsChoosedTbl) do
+      if Content.Id == TargetContent.Id then
+        self:OnChoosedMaterialClicked(TargetContent, Index, true)
+        break
+      end
+    end
+  else
+    UIManager(self):ShowError(7007, nil, UIConst.Tip_CommonToast)
+  end
+end
+
 function WBP_Forging_Convert_PopUp_Choose_C:OnMaterialItemSelected(ItemContent)
   DebugPrint("Yihan@ WBP_Forging_Convert_PopUp_Choose_C:OnMaterialItemSelected", ItemContent, self:GetHaveCount(ItemContent.Id), ItemContent.ClickedCount)
   if ItemContent.ItemType == CommonConst.ArmoryType.Mod then
-    if 1 == ItemContent.LockType then
-      return
-    end
-    if 0 == ItemContent.Count or ItemContent.Count < ItemContent.ClickedCount + 1 then
+    local IsLockedMod = 1 == ItemContent.LockType
+    if IsLockedMod then
+      UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("MoZhiXie_locked"))
+      self:KeepSelectState(ItemContent)
+    elseif 0 == ItemContent.Count or ItemContent.Count < ItemContent.ClickedCount + 1 then
       self:KeepSelectState(ItemContent)
     elseif self:MaterialIsEnough() then
       UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("Convert_ResourcesFull"))
@@ -273,12 +377,6 @@ function WBP_Forging_Convert_PopUp_Choose_C:OnMaterialItemSelected(ItemContent)
     self:SelectMaterialItem(ItemContent)
   end
   if self.CurItemDetails ~= ItemContent or not self.bItemDetailsShowed then
-    self.CurItemDetails = ItemContent
-    self:ShowItemDetailsPanel(true)
-    ItemContent.ItemId = ItemContent.ItemType == CommonConst.ArmoryType.Mod and ItemContent.UnitId or ItemContent.Id
-    ItemContent.bHideGamePad = false
-    self.WBP_Com_Tips:PlayAnimation(self.WBP_Com_Tips.Change)
-    self.WBP_Com_Tips:RefreshItemInfo(ItemContent, true)
     self:RefreshItemDetailsByContent(ItemContent, true, false)
   end
 end
@@ -368,7 +466,7 @@ function WBP_Forging_Convert_PopUp_Choose_C:ShowChoosedMaterial()
   end
 end
 
-function WBP_Forging_Convert_PopUp_Choose_C:OnChoosedMaterialClicked(Content, Index)
+function WBP_Forging_Convert_PopUp_Choose_C:OnChoosedMaterialClicked(Content, Index, bKeepMaterialFocus)
   if 0 == #self.IsChoosedTbl then
     return
   end
@@ -401,7 +499,11 @@ function WBP_Forging_Convert_PopUp_Choose_C:OnChoosedMaterialClicked(Content, In
     end
   end
   if UIUtils.IsGamepadInput() then
-    self:UpdataGamepadFocus(Index)
+    if bKeepMaterialFocus then
+      self:SetDefaultMaterialFocus()
+    else
+      self:UpdataGamepadFocus(Index)
+    end
   end
 end
 
@@ -603,6 +705,7 @@ function WBP_Forging_Convert_PopUp_Choose_C:RefreshItemDetailsByContent(ItemCont
   end
   if self.CurItemDetails ~= ItemContent or not self.bItemDetailsShowed then
     self.CurItemDetails = ItemContent
+    self.ItemDetailsContent = ItemContent
     self:ShowItemDetailsPanel(true)
     local ItemDetailParam = {}
     ItemDetailParam.ItemType = ItemContent.ItemType or "Resource"
@@ -613,10 +716,24 @@ function WBP_Forging_Convert_PopUp_Choose_C:RefreshItemDetailsByContent(ItemCont
     end
     ItemDetailParam.bHideGamePad = true
     ItemDetailParam.HandleKeyDown = false
+    local bShowLockIcon = false
+    if self:CanShowModLock(ItemContent) then
+      local ModServerData = self:GetCurrentModServerData(ItemContent)
+      ItemDetailParam.LockType = ModServerData:IsLock() and 1 or 0
+      ItemDetailParam.IsLocked = ModServerData:IsLock()
+      ItemDetailParam.bWaitRPCRet = true
+      
+      function ItemDetailParam.LockedButtonClickCallBack(SetLock)
+        self:OnDetailLockBtnClick(ItemContent, SetLock)
+      end
+      
+      bShowLockIcon = true
+    end
     if bPlayAnim and self.WBP_Com_Tips and self.WBP_Com_Tips.Change then
       self.WBP_Com_Tips:PlayAnimation(self.WBP_Com_Tips.Change)
     end
-    self.WBP_Com_Tips:RefreshItemInfo(ItemDetailParam, true)
+    self.WBP_Com_Tips.bShowLock = bShowLockIcon
+    self.WBP_Com_Tips:RefreshItemInfo(ItemDetailParam, true, true)
   end
 end
 

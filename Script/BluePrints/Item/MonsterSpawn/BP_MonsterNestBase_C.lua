@@ -23,10 +23,24 @@ function M:DeActive()
 end
 
 function M:OnActiveStateChange()
-  self.Super.OnActiveStateChange(self)
+  M.Super.OnActiveStateChange(self)
   if self.IsActive then
+    self:CheckSpawnDirection()
     self:AddTimer(self.MonsterSpawnInterval, self.SpawnMonsters, true, 0, "SpawnMonstersTimer")
   end
+end
+
+function M:CheckSpawnDirection()
+  if not self.AlwaysSpawnDown then
+    return
+  end
+  if not IsValid(self.MonsterSpawnPoint) then
+    return
+  end
+  local ActorRot = self:K2_GetActorRotation()
+  local CurRelRot = self.MonsterSpawnPoint.RelativeRotation
+  local NegatedRot = FRotator(CurRelRot.Pitch, CurRelRot.Yaw, -ActorRot.Roll)
+  self.MonsterSpawnPoint:K2_SetRelativeRotation(NegatedRot, false, nil, false)
 end
 
 function M:ShowDeath()

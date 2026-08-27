@@ -13,7 +13,16 @@ function M:Construct()
   end
   self.BannerTab = setmetatable({}, {__index = BannerTab})
   self.BannerTab.ItemId = self:GetValidItemId(self.BannerTab)
-  self.Btn_Qa:BindEventOnClicked(self, self.OnClickQa)
+  if self.Btn_Qa then
+    if self.Btn_Qa.Btn_Click then
+      self.Btn_Qa:Init({
+        ClickCallback = self.OnClickQa,
+        OwnerWidget = self
+      })
+    elseif self.Btn_Qa.Button_Area then
+      self.Btn_Qa:BindEventOnClicked(self, self.OnClickQa)
+    end
+  end
   self.Btn_Pay.Btn_Buy.OnClicked:Add(self, self.OnBtn_BuyClick)
   self:AddDispatcher(EventID.OnNewWeaponSkinObtained, self, self.OnNewWeaponSkinObtained)
   self.Btn_Pay.Key_ControllerBuy:CreateCommonKey({
@@ -26,7 +35,7 @@ function M:Construct()
 end
 
 function M:Destruct()
-  if self.Btn_Qa then
+  if self.Btn_Qa and self.Btn_Qa.Button_Area then
     self.Btn_Qa:UnBindEventOnClicked(self, self.OnClickQa)
   end
   if self.Btn_Pay and self.Btn_Pay.Btn_Buy then
@@ -40,11 +49,11 @@ end
 
 function M:OnClickQa()
   if self.BannerTab and self.BannerTab.PreviewType == "WeaponSkin" and self.BannerTab.PreviewId then
-    UIManager(self):LoadUINew("ArmorySkin", {
-      Type = "Weapon",
-      SkinId = self.BannerTab.PreviewId[1],
-      IsPreviewMode = true,
-      OpenPreviewDyeFromShopItem = true
+    PageJumpUtils:JumpToSkinPreview({
+      ItemType = "WeaponSkin",
+      TypeId = self.BannerTab.PreviewId[1],
+      SinglePreview = true,
+      HidePurchase = true
     })
   end
 end

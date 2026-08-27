@@ -14,7 +14,8 @@ return ReadOnly("ModArchiveInfo", {
       14,
       15,
       16,
-      1504
+      1504,
+      5101
     },
     ArchiveStep = 3,
     ArchiveTitle = "UI_Armory_Char",

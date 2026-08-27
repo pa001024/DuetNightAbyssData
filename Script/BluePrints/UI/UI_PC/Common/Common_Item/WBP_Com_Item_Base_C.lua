@@ -1,3 +1,4 @@
+local MiscUtils = require("Utils.MiscUtils")
 require("UnLua")
 local CoroutineUtils = require("CoroutineUtils")
 local TimeUtils = require("Utils.TimeUtils")
@@ -277,10 +278,11 @@ function M:_SetMostRarityFX(Rarity, DynamicMaterial)
         return
       end
       self._MostRarityFX = MostRarityFX
-      if not self.WidgetMap[self._MostRarityFX] then
-        self:AddWidgetToNode(self._MostRarityFX)
-        self:CheckWidgetIsTop(self._MostRarityFX)
+      if 6 ~= self.Rarity then
+        return
       end
+      self:AddWidgetToNode(self._MostRarityFX)
+      self:CheckWidgetIsTop(self._MostRarityFX)
     end, "/Game/UI/WBP/Common/Item/Widget/WBP_Com_Item_RedVX.WBP_Com_Item_RedVX")
   else
     self:AddWidgetToNode(self._MostRarityFX)
@@ -452,7 +454,9 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
   if self.OnFocusReceivedEvent then
     local Obj = self.OnFocusReceivedEvent.Obj
     local Callback = self.OnFocusReceivedEvent.Callback
-    Callback(Obj)
+    if Callback then
+      Callback(Obj)
+    end
   end
   return UIUtils.Handled
 end
@@ -462,7 +466,9 @@ function M:OnAddedToFocusPath(InFocusEvent)
     local Obj = self.OnAddedToFocusPathEvent.Obj
     local Callback = self.OnAddedToFocusPathEvent.Callback
     local Params = self.OnAddedToFocusPathEvent.Params
-    Callback(Obj, Params)
+    if Callback then
+      Callback(Obj, Params)
+    end
   end
 end
 
@@ -471,7 +477,9 @@ function M:OnRemovedFromFocusPath(InFocusEvent)
     local Obj = self.OnRemovedFromFocusPathEvent.Obj
     local Callback = self.OnRemovedFromFocusPathEvent.Callback
     local Params = self.OnRemovedFromFocusPathEvent.Params
-    Callback(Obj, Params)
+    if Callback then
+      Callback(Obj, Params)
+    end
   end
 end
 
@@ -763,8 +771,8 @@ function M:SetCount(Count, NeedCount, MaxCount, bNotCountFormat, bShowNotHaveSty
     local bCountFormat = not bNotCountFormat
     if NeedCount then
       self.CountWidget = self:CreateWidgetAsync("ComItemNeedCount", CoroutineObj)
-      self.CountWidget.Text_Hold:SetText(FormatNumber(Count, bCountFormat))
-      self.CountWidget.Text_Total:SetText("/" .. tostring(FormatNumber(NeedCount, bCountFormat)))
+      self.CountWidget.Text_Hold:SetText(MiscUtils.FormatNumber(Count, bCountFormat))
+      self.CountWidget.Text_Total:SetText("/" .. tostring(MiscUtils.FormatNumber(NeedCount, bCountFormat)))
       if Count >= NeedCount or self.CountTextWhite then
         self.CountWidget.Text_Hold:SetColorAndOpacity(UE4.UUIFunctionLibrary.StringToSlateColor("FFFFFFFF"))
       else
@@ -772,12 +780,12 @@ function M:SetCount(Count, NeedCount, MaxCount, bNotCountFormat, bShowNotHaveSty
       end
     elseif MaxCount then
       self.CountWidget = self:CreateWidgetAsync("ComItemNumber", CoroutineObj)
-      local NumStr = FormatNumber(Count, bCountFormat)
-      NumStr = NumStr .. "~" .. FormatNumber(MaxCount, bCountFormat)
+      local NumStr = MiscUtils.FormatNumber(Count, bCountFormat)
+      NumStr = NumStr .. "~" .. MiscUtils.FormatNumber(MaxCount, bCountFormat)
       self.CountWidget.Text_Num:SetText(NumStr)
     elseif Count then
       self.CountWidget = self:CreateWidgetAsync("ComItemNumber", CoroutineObj)
-      local NumStr = FormatNumber(Count, bCountFormat)
+      local NumStr = MiscUtils.FormatNumber(Count, bCountFormat)
       self.CountWidget.Text_Num:SetText(NumStr)
       if self.CountTextRed then
         self.CountWidget.Text_Num:SetColorAndOpacity(UE4.UUIFunctionLibrary.StringToSlateColor("D82E30FF"))

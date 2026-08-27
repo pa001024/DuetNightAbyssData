@@ -23,6 +23,7 @@ function M:InitContent(Params, PopupData, Owner)
   self.Super.InitContent(self, Params, PopupData, Owner)
   self.Owner = Owner
   self.DungeonId = Params.DungeonId
+  self.IsAutoNextRoundContinue = Params.IsAutoNextRoundContinue
   self:InitItemList(self.DungeonId)
   local Avatar = GWorld:GetAvatar()
   assert(Avatar, "NO AVATAR")
@@ -35,6 +36,9 @@ function M:InitContent(Params, PopupData, Owner)
     self:BindDialogEvent("OnRightBtnClicked", self.OnRightBtnClicked)
   elseif self.bIsInMultiDungeon and not self.bIsInTempScene then
     self:BindDialogEvent("OnRightBtnClicked", self.OnRightBtnClicked)
+  end
+  if self.IsAutoNextRoundContinue then
+    self.LastTicketId = GWorld.GameInstance:GetTicketId() or -1
   end
   self.VB_CountDown:SetVisibility(UE4.ESlateVisibility.Collapsed)
 end
@@ -91,13 +95,43 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
 end
 
 function M:PostInitContent(Params, PopupData, Owner)
-  self:OnItemClicked(self.TicketIds[1], true)
-  self.LastTickedItem:SetFocus()
+  if Params.IsAutoNextRoundContinue and -1 ~= self.LastTicketId then
+    local Avatar = GWorld:GetAvatar()
+    if not Avatar then
+      return
+    end
+    local TicketId = -1
+    local ResourceServerData = Avatar.Resources[self.LastTicketId]
+    if ResourceServerData then
+      local Count = ResourceServerData.Count
+      if Count > 0 then
+        TicketId = self.LastTicketId
+      end
+    end
+    self:OnItemClicked(TicketId, true)
+  else
+    self:OnItemClicked(self.TicketIds[1], true)
+  end
+  if self.LastTickedItem then
+    self.LastTickedItem:SetFocus()
+  end
 end
 
 function M:OnItemClicked(TicketId, bNotPlayAnim)
   if self.bIsInTeam then
     self.Owner:ForbidRightBtn(false)
+  end
+  if self.IsAutoNextRoundContinue and not bNotPlayAnim then
+    local ButtonBar = self.Owner and self.Owner.GetButtonBar and self.Owner:GetButtonBar()
+    if ButtonBar and ButtonBar.StopCountDown then
+      ButtonBar:StopCountDown()
+      if ButtonBar.SetCountDownBarVisible then
+        ButtonBar:SetCountDownBarVisible(false)
+      end
+      if ButtonBar.Btn_Yes and ButtonBar.CountDownBaseYesText then
+        ButtonBar.Btn_Yes:SetText(ButtonBar.CountDownBaseYesText)
+      end
+    end
   end
   if TicketId then
     local bSelected = self.TicketItemTable[TicketId]:OnClicked()

@@ -166,6 +166,14 @@ return ReadOnly("StoryVariable", {
     IsGlobal = true,
     VarName = "Entrance110101"
   },
+  Entrance110201 = {
+    IsGlobal = true,
+    VarName = "Entrance110201"
+  },
+  Ex02CustomNPC_show = {
+    IsGlobal = true,
+    VarName = "Ex02CustomNPC_show"
+  },
   FAET = {IsGlobal = true, VarName = "FAET"},
   FakeQuest1002 = {
     IsGlobal = true,
@@ -574,6 +582,14 @@ return ReadOnly("StoryVariable", {
   IQ10040510 = {IsGlobal = true, VarName = "IQ10040510"},
   IQ110103 = {IsGlobal = true, VarName = "IQ110103"},
   IQ110107 = {IsGlobal = true, VarName = "IQ110107"},
+  IQ11020104 = {IsGlobal = true, VarName = "IQ11020104"},
+  IQ11020302 = {IsGlobal = true, VarName = "IQ11020302"},
+  IQ11022101 = {IsGlobal = true, VarName = "IQ11022101"},
+  IQ11023101 = {IsGlobal = true, VarName = "IQ11023101"},
+  IQ11023103 = {IsGlobal = true, VarName = "IQ11023103"},
+  IQ11023201 = {IsGlobal = true, VarName = "IQ11023201"},
+  IQ11023206 = {IsGlobal = true, VarName = "IQ11023206"},
+  IQ110233 = {IsGlobal = true, VarName = "IQ110233"},
   IQ12010307 = {IsGlobal = true, VarName = "IQ12010307"},
   IQ12010313 = {IsGlobal = true, VarName = "IQ12010313"},
   IQ12010502 = {IsGlobal = true, VarName = "IQ12010502"},
@@ -590,6 +606,7 @@ return ReadOnly("StoryVariable", {
     VarName = "IQ12030706_jlc"
   },
   IQ120315 = {IsGlobal = true, VarName = "IQ120315"},
+  IQ13010101 = {IsGlobal = true, VarName = "IQ13010101"},
   IQ200404 = {IsGlobal = true, VarName = "IQ200404"},
   IQ200405 = {IsGlobal = true, VarName = "IQ200405"},
   Int12020208 = {
@@ -682,6 +699,11 @@ return ReadOnly("StoryVariable", {
   SaiqiWalk100206 = {
     IsGlobal = true,
     VarName = "SaiqiWalk100206"
+  },
+  Scehutao_110220 = {
+    DefaultValue = 1,
+    IsGlobal = true,
+    VarName = "Scehutao_110220"
   },
   Scenpc_511257 = {
     IsGlobal = true,
@@ -831,6 +853,10 @@ return ReadOnly("StoryVariable", {
     IsGlobal = true,
     VarName = "Scenpc_512307"
   },
+  Scenpc_513001 = {
+    IsGlobal = true,
+    VarName = "Scenpc_513001"
+  },
   ShenPan1st = {IsGlobal = true, VarName = "ShenPan1st"},
   ShenPan2nd = {IsGlobal = true, VarName = "ShenPan2nd"},
   ShenWenNPC110105 = {
@@ -902,8 +928,8 @@ return ReadOnly("StoryVariable", {
   },
   TestVar5 = {QuestChainId = 100102, VarName = "TestVar5"},
   TestVar6 = {
+    DefaultValue = 3,
     IsGlobal = true,
-    QuestChainId = 100102,
     VarName = "TestVar6"
   },
   WangchuanFushu01 = {
@@ -976,6 +1002,18 @@ return ReadOnly("StoryVariable", {
     IsGlobal = true,
     VarName = "ex02_11020104"
   },
+  ex02_110201_1 = {
+    IsGlobal = true,
+    VarName = "ex02_110201_1"
+  },
+  ex02_110201_2 = {
+    IsGlobal = true,
+    VarName = "ex02_110201_2"
+  },
+  ex02_110201_3 = {
+    IsGlobal = true,
+    VarName = "ex02_110201_3"
+  },
   ex02_110202 = {
     IsGlobal = true,
     VarName = "ex02_110202"
@@ -987,6 +1025,26 @@ return ReadOnly("StoryVariable", {
   ex02_11020202 = {
     IsGlobal = true,
     VarName = "ex02_11020202"
+  },
+  ex02_11020301 = {
+    IsGlobal = true,
+    VarName = "ex02_11020301"
+  },
+  ex02_11020302 = {
+    IsGlobal = true,
+    VarName = "ex02_11020302"
+  },
+  ex02_110203_1 = {
+    IsGlobal = true,
+    VarName = "ex02_110203_1"
+  },
+  ex02_110203_2 = {
+    IsGlobal = true,
+    VarName = "ex02_110203_2"
+  },
+  ex02_110211 = {
+    IsGlobal = true,
+    VarName = "ex02_110211"
   },
   ex02_110213 = {
     IsGlobal = true,
@@ -1000,6 +1058,26 @@ return ReadOnly("StoryVariable", {
     IsGlobal = true,
     VarName = "ex02_110215"
   },
+  ex02_11022001_FirstDay = {
+    IsGlobal = true,
+    VarName = "ex02_11022001_FirstDay"
+  },
+  ex02_110221 = {
+    IsGlobal = true,
+    VarName = "ex02_110221"
+  },
+  ex02_11022101 = {
+    IsGlobal = true,
+    VarName = "ex02_11022101"
+  },
+  ex02_11022102 = {
+    IsGlobal = true,
+    VarName = "ex02_11022102"
+  },
+  ex02_11022201 = {
+    IsGlobal = true,
+    VarName = "ex02_11022201"
+  },
   ex02_11023101_First = {
     IsGlobal = true,
     VarName = "ex02_11023101_First"
@@ -1007,6 +1085,66 @@ return ReadOnly("StoryVariable", {
   ex02_11023102_Dinner = {
     IsGlobal = true,
     VarName = "ex02_11023102_Dinner"
+  },
+  ex02_11023103_Escape = {
+    IsGlobal = true,
+    VarName = "ex02_11023103_Escape"
+  },
+  ex02_11023104_Cave = {
+    IsGlobal = true,
+    VarName = "ex02_11023104_Cave"
+  },
+  ex02_11023201_Eve = {
+    IsGlobal = true,
+    VarName = "ex02_11023201_Eve"
+  },
+  ex02_11023202_Ada_1 = {
+    IsGlobal = true,
+    VarName = "ex02_11023202_Ada_1"
+  },
+  ex02_11023202_Ada_2 = {
+    IsGlobal = true,
+    VarName = "ex02_11023202_Ada_2"
+  },
+  ex02_11023202_Ada_3 = {
+    IsGlobal = true,
+    VarName = "ex02_11023202_Ada_3"
+  },
+  ex02_11023202_Ada_4 = {
+    IsGlobal = true,
+    VarName = "ex02_11023202_Ada_4"
+  },
+  ex02_11023203_AfterAda = {
+    IsGlobal = true,
+    VarName = "ex02_11023203_AfterAda"
+  },
+  ex02_11023204_Fuer = {
+    IsGlobal = true,
+    VarName = "ex02_11023204_Fuer"
+  },
+  ex02_11023205_AfterFuer = {
+    IsGlobal = true,
+    VarName = "ex02_11023205_AfterFuer"
+  },
+  ex02_11023206_End = {
+    IsGlobal = true,
+    VarName = "ex02_11023206_End"
+  },
+  ex02_Stealth01 = {
+    IsGlobal = true,
+    VarName = "ex02_Stealth01"
+  },
+  ex02_Stealth02 = {
+    IsGlobal = true,
+    VarName = "ex02_Stealth02"
+  },
+  ex02_Stealth03 = {
+    IsGlobal = true,
+    VarName = "ex02_Stealth03"
+  },
+  ex02_Stealth04 = {
+    IsGlobal = true,
+    VarName = "ex02_Stealth04"
   },
   icl100303 = {IsGlobal = true, VarName = "icl100303"},
   icl100303bf = {

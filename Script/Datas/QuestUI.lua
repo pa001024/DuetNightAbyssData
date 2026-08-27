@@ -141,6 +141,15 @@ return ReadOnly("QuestUI", {
     QuestId = 100408,
     UIName = "Chapter_Transition04_02"
   },
+  [110201] = {
+    AudioPath = "event:/ui/common/main_quest_start_ex02",
+    AudioPathFinal = "event:/ui/common/main_quest_start_ex02",
+    CantoName = "Episode_Ex02",
+    ChapterName = "UI_ChapterName_Ex02",
+    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Region/T_Region_Playground.T_Region_Playground'",
+    QuestId = 110201,
+    UIName = "ChapterTaskUI_Ex02"
+  },
   [120101] = {
     AudioPath = "event:/ui/common/main_quest_start",
     AudioPathFinal = "event:/ui/common/main_quest_finish",

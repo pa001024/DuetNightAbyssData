@@ -53,11 +53,22 @@ function M:OnMouseButtonUp(MyGeometry, MouseEvent)
 end
 
 function M:OnTouchEnded(MyGeometry, TouchEvent)
-  return self:OnMouseButtonUp(MyGeometry, TouchEvent)
+  local ItemWidget = self.WBP_Com_Item_Universal_L.Content and self.WBP_Com_Item_Universal_L.Content.SelfWidget
+  if not ItemWidget or not ItemWidget.bMouseButtonDown then
+    return UIUtils.Unhandled
+  end
+  return ItemWidget:OnMouseButtonUp(MyGeometry, TouchEvent)
 end
 
 function M:OnTouchStarted(MyGeometry, TouchEvent)
-  return self:OnMouseButtonDown(MyGeometry, TouchEvent)
+  if self.Content.IsEmpty then
+    return UIUtils.Handled
+  end
+  local ItemWidget = self.WBP_Com_Item_Universal_L.Content and self.WBP_Com_Item_Universal_L.Content.SelfWidget
+  if ItemWidget and not ItemWidget.bMouseButtonDown then
+    return ItemWidget:OnMouseButtonDown(MyGeometry, TouchEvent)
+  end
+  return UIUtils.Unhandled
 end
 
 function M:InitCompView()

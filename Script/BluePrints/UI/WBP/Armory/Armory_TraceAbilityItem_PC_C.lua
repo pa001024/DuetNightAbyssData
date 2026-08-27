@@ -9,6 +9,13 @@ function M:Construct()
   self.bIsFocusable = true
 end
 
+function M:Destruct()
+  self.Btn_Click.OnClicked:Clear()
+  self.Btn_Click.OnPressed:Clear()
+  self.Btn_Click.OnHovered:Clear()
+  self.Btn_Click.OnUnhovered:Clear()
+end
+
 function M:Init(Parent, TraceId, IsLock)
   self.Parent = Parent
   self.TraceId = TraceId

@@ -2521,5 +2521,225 @@
         ]
       }
     ]
+  },
+  {
+    "id": 1128,
+    "name": "Safety Instructions",
+    "desc": "Safety instructions posted beside an amusement attraction. After brushing away the soot and ash, parts of the text can still just be made out.",
+    "icon": "T_Read_01",
+    "res": [
+      {
+        "id": 2000127,
+        "type": "Read",
+        "text": "Please follow the instructions below when operating this attraction (<H>especially you, Ada!!!</>):\n\n1. For safety, make sure at least two people are present before use.\n2. Before use, check that all connections are secure. If anything needs fixing, the toolbox is behind the attraction. (If Ada is sent to fetch it, make sure she puts every tool back where it belongs.)\n3. Once everything is secure, start it up. Loud noises during startup and a longer-than-usual startup time are both normal. (Hopefully it won't scare the children.)\n4. If you run into a problem you can't fix, ask Morgana to handle it. (Do NOT let Ada try to fix anything by herself! Unless the problem seems too easy and you feel like unlocking hard mode.)\n5...\n...\n\n(The rest of the text is illegible.)"
+      }
+    ]
+  },
+  {
+    "id": 1129,
+    "name": "A Fallen Legionary's Recording",
+    "desc": "A damaged recording device. Based on its contents, it seems to have belonged to an airship commander from the war four years ago.",
+    "icon": "T_Read_02",
+    "res": [
+      {
+        "id": 2000128,
+        "type": "Read",
+        "text": "...\nWe've reached the border.\nStrikes confirmed. Elysian forward units are retreating. Hold formation. Keep the pressure on... Wait. What did they just launch from that position? Hard left! All units, hard left!\n...\n*cough* ...Airship Unit Four is hit! The Elysian Heralds are counterattacking! Heavy casualties! Requesting reinforcements. Repeat, requesting reinforcements...\n...\nBrothers... the Elysian Divine Heralds have launched a full counteroffensive on every front. They've broken through our lines and advanced deep into Hyperborean territory. Our losses are catastrophic.\n...\nWe've received our final order. Crash-land near Mount Arcano. Hold the position there, and keep the enemy inside artillery range... Hahaha... Look on the bright side, brothers. We're dead either way. But if we can drag this many Elysian soldiers down with us, that's not such a bad deal..."
+      }
+    ]
+  },
+  {
+    "id": 1130,
+    "name": "An Elysian Soldier's Final Notes",
+    "desc": "A handwritten note left by an Elysian soldier. The script is crooked and unsteady; whoever wrote it must have been barely able to hold the pen.",
+    "icon": "T_Read_02",
+    "res": [
+      {
+        "id": 2000129,
+        "type": "Drop",
+        "text": "\"If you're reading this, take these notes with you. Expose the Empire's crimes. Don't let the Children of the Gods suffer any longer.\n\nThe Legion turned on its own allies and shelled civilian towns without mercy. We survived only because the Divine Heralds protected us, and by the grace of the gods. But...\n...\nEvery step drains what little strength we have left. No one says it aloud, but we all know this is as far as we go. The mines we laid during our retreat may slow their pursuit for a while, but our supplies ran out long ago.\nNo one is leaving this valley alive...\nGods, forgive us. We failed to cleanse those damned blasphemers. Take my comrades back into your embrace. They whispered prayers to you until their final breaths. Please... hear them...\"\n\n(The rest of the entry is smeared with dark blood. Only a few words remain legible at the bottom.)\n\n\"...I don't want to die.\"",
+        "srId": 107201
+      }
+    ]
+  },
+  {
+    "id": 1131,
+    "name": "A Nameless Soldier's Recording",
+    "desc": "An audio log left behind by a soldier. He survived the horrors of the war four years ago longer than most, but death caught up with him in the end.",
+    "icon": "T_Read_02",
+    "res": [
+      {
+        "id": 2000130,
+        "type": "Read",
+        "text": "Fire... fire everywhere... Alarms blaring. Screams all around me... I remember now. The <H>Hammerhead</> tried to make an emergency landing... but it failed.\nRed. All I can see is red... So hot. Burning red...\n...\nThe commander dragged me out of the Hammerhead... The Elysian assault still hasn't let up. Comms say our main force crash-landed in the valley to the south. We need to find a way down there and regroup with them... We have to keep the Elysian army tied down here...\n...\nDamn it. Those Elysian bastards have sealed every mountain pass. The commander took a round covering my retreat... No reinforcements. No supplies. No hope... We're on our own...\n...\nThe bombardment woke me. I know those guns. They're ours.\nI can feel the whole mountain range shaking. Haha... hahaha... That's what you get for crossing the Legions. Hah... *cough*...\nI don't know how long the shelling went on. When it finally stopped, my commander went out to look for survivors...\nNow the whole world is quiet... So peaceful. So... cold...\nGood night, world."
+      }
+    ]
+  },
+  {
+    "id": 1132,
+    "name": "Rules of Arcano",
+    "desc": "Rules posted throughout Paradise. All residents are required to follow them.",
+    "icon": "T_Read_02",
+    "res": [
+      {
+        "id": 2000131,
+        "type": "Read",
+        "text": "Rule Ⅰ\nMount Arcano is our Paradise, and we are all Mother Bunny's White Bunnies.\nRule Ⅱ\nWhite Bunnies must love one another. Violence between White Bunnies is forbidden. When conflicts arise, they must be settled through games.\nRule Ⅲ\nBunnies come in many colors. White Bunnies are friends. Red Bunnies are dangerous. If you see a Red Bunny, report it to the chief at once.\nRule Ⅳ\nThe Parade is Arcano's monthly grand celebration. During the Parade, all Bunnies must complete one game together.\nRule Ⅴ\nThe toys of Mount Arcano are our friends. You may accept their help and protection.\nRule Ⅵ\nAll White Bunnies must remember their Arcana names. They reveal our essence. We must never act against it.\nRule Ⅶ\nThe giant metal man in the sky is the enemy of Paradise. If the giant metal man appears, stop whatever you are doing and proceed at once to the Pond of Slumber.\nRule Ⅷ\nFor those who have broken the rules, the Pond of Slumber will help them find peace again.\nRule Ⅸ\nUnless the giant metal man appears, no one may approach the Pond of Slumber without the chief's permission.\nRule Ⅹ\nTo keep our lives from being disturbed by the outside world, no White Bunny may leave Paradise without permission."
+      }
+    ]
+  },
+  {
+    "id": 1133,
+    "name": "The Never-Ending Tea Party",
+    "desc": "A fairy-tale book by an unknown author. Read closely, and something faintly unsettling seems to stir beneath the tale.",
+    "icon": "T_Read_01",
+    "res": [
+      {
+        "id": 2000132,
+        "type": "Drop",
+        "text": "The tea party has begun. There are dazzling fireworks, beautiful finery, endless sweets, dear little animals, and merry laughter.\nThe tea party has begun. There are raging storms, dazzling fireworks, beautiful finery, endless sweets, dear little animals, and merry laughter.\nThe tea party has begun. There is a burning stage, dazzling fireworks, beautiful finery, endless sweets, dear little animals, and merry laughter.\nThe tea party has begun. There is creeping moss, dazzling fireworks, beautiful finery, endless sweets, dear little animals, and merry laughter.\nThe tea party has begun. There are dazzling fireworks, beautiful finery, endless sweets, dear little animals, and merry laughter.\nCome now. The rabbits will pour us mead, and the flowers will dust us with sugar.\nCome now. Take your seats beneath the summer-night fireworks, and raise a blessing to this beautiful hour — one that shall never fade.",
+        "srId": 107001
+      }
+    ]
+  },
+  {
+    "id": 1134,
+    "name": "A Letter in the Emperor's Hand",
+    "desc": "A confidential letter from His Majesty Julius to {nickname2}. It must not fall into anyone else's hands.",
+    "icon": "T_Read_03",
+    "res": [
+      {
+        "id": 2000133,
+        "type": "Read",
+        "text": "Destroy this letter after reading.\nEnsure Vergilius's safety.\nWithin six months, eliminate Duke Servius. Leave no trace."
+      }
+    ]
+  },
+  {
+    "id": 1135,
+    "name": "A Bloodstained Letter",
+    "desc": "A letter found beside the remains of a carrier pigeon. Scraps of flesh still cling to the bird's bones; it seems to have been torn apart by a bird of prey not long ago, then discarded here. The letter never made it out of Mount Arcano.",
+    "icon": "T_Read_03",
+    "res": [
+      {
+        "id": 2000134,
+        "type": "Drop",
+        "text": "I don't know where this letter will end up, or who will find it. But please, kind stranger... I beg you. Save me. I am in a village called Arcano, on Mount Arcano. This carrier pigeon should be able to lead you here...\nI was once an ordinary housewife from Scarletriver. Fred, the explorer who vanished on Mount Arcano several years ago, was my husband. I came to Mount Arcano to look for him, only to find a new village here, also called Arcano.\nBut this New Arcano is nothing like the tourist village we knew. It is a sealed-off hell full of madmen.\nTo avoid being killed by the village's master, \"Mother Bunny\", everyone who enters the village is forced to play whatever role she assigns them. My husband... was killed by that madwoman.\nI want to avenge him, but I have no weapon, no strength, and no way to fight her. How are ordinary people like us supposed to fight power like hers?\nI want to run, but I don't know who here is still in their right mind, and who is spying for Mother Bunny. I saw two close friends turn on each other. One gave away the other's escape plan, and the one who tried to run was drowned alive in front of us all. The worst part was that no one mourned. They just stood there, murmuring about eternal sleep beneath the water, rebirth, and reunion...\nTo survive, I can only play along and pretend to be the kind, gentle \"Teresa\". But familiar faces keep vanishing, one after another, and strangers take their place. I can't go on like this... I don't know if I will be the next to disappear, or if tomorrow there will be a new \"Teresa\" in my place... I'm so afraid. So afraid that sometimes I forget how to breathe. Panic closes around my throat. I feel as if I could break at any moment...\nBefore I lose myself completely, I have to write this. If you find this letter, please get me out of Mount Arcano. If you help me escape, I will do anything for you...\nPlease...",
+        "srId": 107001
+      }
+    ]
+  },
+  {
+    "id": 1136,
+    "name": "Testimony of Eric Woodville",
+    "desc": "An interrogation report on an Arcano survivor, delivered to Vergilius by a Legion soldier. It contains Eric Woodville's testimony.",
+    "icon": "T_Read_02",
+    "res": [
+      {
+        "id": 2000135,
+        "type": "Drop",
+        "text": "I am Eric Woodville, a folklorist from Aethyrie. Three years ago, I came to Mount Arcano with my assistant to investigate whether any of Arcano's villagers had survived.\nLater, we both fell under Mother Bunny's control and were forced to stay on Mount Arcano. At first, under the influence of drugs, I believed for a while that I was a villager named Isaac. It was my assistant, Catherine, who brought me back to myself. She had been assigned the role of \"The Magician\", Morgana.\nShe is my finest and most brilliant student. She was also the one who persuaded me to play along with Mother Bunny's demands. Against power like hers, all we could do was endure in silence and wait for a real chance to escape.\nSo we devoted ourselves to our roles and tried to blend into life in \"Paradise\". In doing so, we stood by and watched others die.\nPlease forgive Catherine and me for our selfishness. We acted as we did because we feared for our lives...\nI doubt we will have another chance to see that young officer. Sir, if possible, please pass on my thanks to him.\n\n(This testimony is broadly consistent with the account given by \"The Magician\". Further identity verification should be sought through Aethyrie's diplomatic channels.)",
+        "srId": 107001
+      }
+    ]
+  },
+  {
+    "id": 1137,
+    "name": "Testimony of \"Temperance\"",
+    "desc": "An interrogation report on an Arcano survivor, delivered to Vergilius by a Legion soldier. It contains the testimony of \"Temperance\", whose real name is unknown.",
+    "icon": "T_Read_02",
+    "res": [
+      {
+        "id": 2000136,
+        "type": "Drop",
+        "text": "I... I don't remember who I am anymore...\nI think I wrote my name down in a notebook a long time ago. My name, and how many days I had been in Paradise.\nBut after drinking the water a few times, I even forgot where I hid it...\nWhere are you taking me after this? If I leave Paradise... what am I supposed to be then?\nNo, no, I don't blame you. I just don't know... I don't know... I don't know anything anymore...\n\n(Recording terminated. The victim was highly emotionally unstable and deemed unfit for further questioning.)",
+        "srId": 107001
+      }
+    ]
+  },
+  {
+    "id": 1138,
+    "name": "Testimony of \"The Tower\"",
+    "desc": "An interrogation report on an Arcano survivor, delivered to Vergilius by a Legion soldier. It contains the testimony of \"The Tower\", whose real name is unknown.",
+    "icon": "T_Read_02",
+    "res": [
+      {
+        "id": 2000137,
+        "type": "Drop",
+        "text": "Everyone else was running, so... so I ran too.\n...Sir, everyone says weapons are dangerous. Then why do you have them?\n\nVictor asked me about them too... the Forsakens... What does that even mean...? Why did you hit me...?\n\nUm... do you like this cool design...? I can draw it on your uniforms too. It'll look really nice, so... could you please stop hitting me...? Mother Bunny is scary... and all of you are scary too...\n\n(No useful information obtained. Initial assessment: the drugs have erased the subject's memories related to the Forsakens. Transferred to the Royal Military Prison for further interrogation.)",
+        "srId": 107001
+      }
+    ]
+  },
+  {
+    "id": 1139,
+    "name": "Testimony of Tom",
+    "desc": "An interrogation report on an Arcano survivor, delivered to Vergilius by a Legion soldier. It contains Tom's testimony.",
+    "icon": "T_Read_02",
+    "res": [
+      {
+        "id": 2000138,
+        "type": "Drop",
+        "text": "Hahaha... I finally got out! Holy ****, I actually got out! Hahahaha! Sorry, sorry, officers, I'm just a little excited... Heh... ahahaha!\n(A stream of incoherent profanity follows.)\nAhem... Mm. All right. Ask away, officers. Anything I know, I'll tell you. All of it. Hahaha!\nDamn, it feels good to talk like a person again. ****, hell yeah!\n(A stream of incoherent profanity follows.)\nOh, right. My name's Tom. Don't know my last name. I didn't lose my memory or anything. I've just been scraping by on the streets for as long as I can remember, and I never knew who my parents were. People usually called me street rat, little bastard, filthy little beggar... that sort of thing. Pick whichever one you like, officers. Heh.\n\n(The victim remained highly agitated throughout the interrogation. Little useful information was obtained.)",
+        "srId": 107001
+      }
+    ]
+  },
+  {
+    "id": 1140,
+    "name": "Testimony of Jenny Blount",
+    "desc": "An interrogation report on an Arcano survivor, delivered to Vergilius by a Legion soldier. It contains Jenny Blount's testimony.",
+    "icon": "T_Read_02",
+    "res": [
+      {
+        "id": 2000139,
+        "type": "Drop",
+        "text": "My name is Jenny Blount. I'm just an ordinary citizen from Scarletriver. If there was anything unusual about me, it was that I was reckless when I was young, and cared far too much about my pride.\nTwo years ago, I was having tea at a café when I overheard some people spinning tales about Mount Arcano. I mocked them for it and said only children would be scared by stories like that.\nThen they bet me the stories were true. Of course, I didn't believe a word of it, so I took the bet and came to Mount Arcano myself.\nAnd then... well, you can see how that turned out. The moment I arrived, Mother Bunny forced me into one of her roles and wouldn't let me leave. I've been stuck here for two years. *sigh*... Two years of my life, gone... all because I couldn't swallow my pride over a stupid bet. *sigh*...\n\n(The victim provided several local legends concerning Mount Arcano. Little useful information was obtained.)",
+        "srId": 107001
+      }
+    ]
+  },
+  {
+    "id": 1141,
+    "name": "A Lost Sheet – Arcano",
+    "desc": "A collection of enigmatic pages discovered by chance. Some are delicate scrolls of fine parchment; others, freshly printed sheets with ink still crisp and dark. A few are no more than torn scraps from half-used notebooks. Whether neatly penned or barely legible, they all share one thing in common — each contains a hint pointing to the whereabouts of a hidden treasure.",
+    "icon": "T_TreasureMap_EXChapter01",
+    "res": [
+      {
+        "id": 20660,
+        "type": "Drop",
+        "name": "Arcano (Ⅰ)",
+        "text": "Chase a deer and bring it to Mother Bunny, dear as a mother;\nChase a deer and bring it to Mother Bunny, sacred as a god.\nTake its cloven hooves, cut away its defiant horns;\nTeach its stubborn heart to yield.\nPeel the soft hide, stitch it with thread and bone;\nSpread the skin across the stony road.\nMother Bunny, come to us!\nReach out your gentle hand—\nUnder the gaze of the <H>Golden Deer</>—\nGrant me a second life.\n\n— Hymn to Mother Bunny: The Deer Hunt",
+        "srId": 107001
+      },
+      {
+        "id": 20661,
+        "type": "Drop",
+        "name": "Arcano (Ⅱ)",
+        "text": "Why won't you believe me? You keep saying it's just a rabbit-shaped stone, but it's Mother Bunny's incarnation! Can't you hear Her voice?\nIt's not a hallucination, it's real... If you go there now, you can still see the gift She left for me, <H>right at Her feet</>!\nShe chose me! She acknowledged me! She forgave me! She's invited me to Her world, to serve by Her side — a paradise, a land where rivers flow with honey... It's paradise, paradise! Her paradise!",
+        "srId": 107001
+      },
+      {
+        "id": 20662,
+        "type": "Drop",
+        "name": "Arcano (Ⅲ)",
+        "text": "Congratulations to the 99th lucky player of the spinning teacup! You've hit the jackpot!\nCome down now and head to the room, there's a lucky gift waiting for you. A reward truly worthy of your fortune.\nI don't know who you are, my guess is, maybe the most playful little Ada? Haha, it doesn't really matter. After all, this paradise exists to bring joy, and whoever receives that joy, it's a good thing. This is our shared town of Arcano. This is our home, our paradise.\nYou don't need to thank anyone for this unexpected gift. Thank yourself. It was your luck that brought you here, your attentiveness that found this note, and that's how you earned this gift. Arcano is growing better and better, it's thanks to everyone, and the rewards should be shared by everyone.\nNow, go to <H>the room with the golden sign</> right in front of you, and claim it! Have a wonderful day!\nTo the future of Arcano! To our future!",
+        "srId": 107101
+      },
+      {
+        "id": 20663,
+        "type": "Drop",
+        "name": "Arcano (Ⅳ)",
+        "text": "The crash landing failed. Half of my body has gone numb. I don't think I'll make it until rescue arrives.\nThere's still some supplies left in the <H>airship</>. Take them, my comrade, may your battles go well.\nIf you can, please go to the rear cabin. Find a photo of a girl with long golden hair, and  bury it with me, resting on my chest. That... is my only wish.",
+        "srId": 107101
+      },
+      {
+        "id": 20664,
+        "type": "Drop",
+        "name": "Arcano (Ⅴ)",
+        "text": "Dear Rosalia:\n\nI'm nearly at Arcano. As I mentioned before, I'll record my experiences here and send them to you. I've heard the local folklore is quite unique, and for a fantasy novelist like me, it's the perfect place to gather material!\nYou know I've been struggling with writer's block lately, and it's been bothering me a lot. I believe that visiting the place in person will spark some fresh ideas.\nI've already come up with a story: a girl who accidentally obtains a pair of red dancing shoes that grant wishes. But in truth, every wish comes at a price. When she can no longer bear the cost and tries to get rid of the shoes, she finds that her feet have already grown into them...\nWhat do you think of this slightly horror-tinged story? I've already written over a dozen pages of manuscript. As expected, a new environment really does get the creativity flowing. Once I return from this trip and finish sorting out these drafts, I'll submit them to the publisher again.\n...\nThe townsfolk are warm and welcoming, not as frightening as the rumours said. I knew most of those urban legends were exaggerated, and there was nothing to worry about after all. A bit of a shame, though — this won't be giving me much material for my horror stories.\nI've had a bit too much to drink, and I'm feeling dizzy... Huh, where did I put my luggage? Oh, there it is — <H>by the pillar in the corner of the room</>.\nStill feeling lightheaded... I should get some proper rest.\n\n...\n\nIs this... a letter I wrote?\nWho is Rosalia...?\nAnd... who am I...?\n\n(The rest has been burned away, the edges charred and uneven.)",
+        "srId": 107201
+      }
+    ]
   }
 ]

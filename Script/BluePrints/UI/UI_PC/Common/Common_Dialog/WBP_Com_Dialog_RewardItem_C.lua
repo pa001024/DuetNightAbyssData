@@ -49,6 +49,7 @@ function M:OnListItemObjectSet(Content)
   self.Rewards = Content.ConfigData.Rewards
   self.ReceiveCallBack = Content.ConfigData.ReceiveCallBack
   self.Btn_Reward:SetText(GText(Content.ConfigData.ReceiveButtonText) or GText("UI_Archive_CollectionClaim"))
+  self.Btn_Reward:SetDefaultGamePadImg(UIConst.GamePadImgKey.FaceButtonBottom)
   if Content.ConfigData.ReceiveCallBack then
     self.Btn_Reward:BindEventOnClicked(self, function()
       if self.bReceiving then

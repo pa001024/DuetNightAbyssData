@@ -9,7 +9,7 @@ return ReadOnly("DestroyReason", {
     DestroyReason = "AutoChess",
     IsClearGuide = true,
     IsClearStaticCreatorRef = true,
-    IsMonClearBattleInfo = true,
+    IsMonClearBattleInfo = false,
     IsTriggerDestroyEvent = true,
     IsTriggrRelationSpawn = false
   },

@@ -220,6 +220,9 @@ function M:PlayOrStopBGM(Params)
   local bStoreToServer = Params.bStoreToServer
   local SoundType = SoundTypeMap[Params.SoundType]
   local PlayType = Params.PlayType
+  local TalkTask = self:TryGetTalkTask()
+  local TalkTaskData = TalkTask.TalkTaskData
+  local QuestChainId = TalkTaskData.QuestChainId
   local RelateRegionIdArray = {}
   for _, Id in pairs(RelatedRegionId) do
     table.insert(RelateRegionIdArray, Id)
@@ -236,7 +239,7 @@ function M:PlayOrStopBGM(Params)
       return OnFinish()
     end
     if PlayType == PlayTypes.Play then
-      self:PlayBGM(SoundPriority, SoundType, EventPath, Key, Value, RelateRegionIdArray, ClientRelatedRegionIdArray, bStoreToServer, SoundUnitKey)
+      self:PlayBGM(SoundPriority, SoundType, EventPath, Key, Value, RelateRegionIdArray, ClientRelatedRegionIdArray, bStoreToServer, SoundUnitKey, QuestChainId)
     elseif PlayType == PlayTypes.Pause then
       self:PauseBGM(SoundType)
     elseif PlayType == PlayTypes.Resume then
@@ -251,7 +254,7 @@ function M:PlayOrStopBGM(Params)
   end)
 end
 
-function M:PlayBGM(SoundPriority, SoundType, EventPath, Key, Value, RelatedRegionId, ClientRelatedRegionId, bStoreToServer, SoundUnitKey)
+function M:PlayBGM(SoundPriority, SoundType, EventPath, Key, Value, RelatedRegionId, ClientRelatedRegionId, bStoreToServer, SoundUnitKey, QuestChainId)
   local Event
   if string.find(EventPath, "/Game/Asset/") then
     Event = UE4.LoadObject(EventPath)
@@ -259,9 +262,9 @@ function M:PlayBGM(SoundPriority, SoundType, EventPath, Key, Value, RelatedRegio
     Event = UFMODBlueprintStatics.FindEventByName(EventPath)
   end
   if SoundPriority == SoundPrioritys.Level then
-    self:PlayLevelBGM(SoundType, Event, Key, Value, RelatedRegionId, ClientRelatedRegionId, bStoreToServer)
+    self:PlayLevelBGM(SoundType, Event, Key, Value, RelatedRegionId, ClientRelatedRegionId, bStoreToServer, QuestChainId)
   elseif SoundPriority == SoundPrioritys.StoryCustom then
-    self:PlayStoryCustomBGM(SoundType, Event, Key, Value, RelatedRegionId, ClientRelatedRegionId, bStoreToServer, SoundUnitKey)
+    self:PlayStoryCustomBGM(SoundType, Event, Key, Value, RelatedRegionId, ClientRelatedRegionId, bStoreToServer, SoundUnitKey, QuestChainId)
   elseif SoundPriority == SoundPrioritys.Invite then
     self:PlayInviteBGM(SoundType, Event, Key, Value, RelatedRegionId, ClientRelatedRegionId, bStoreToServer)
   elseif SoundPriority == SoundPrioritys.CGReview then
@@ -271,21 +274,21 @@ function M:PlayBGM(SoundPriority, SoundType, EventPath, Key, Value, RelatedRegio
   end
 end
 
-function M:PlayLevelBGM(SoundType, Event, Key, Value, RelatedRegionId, ClientRelatedRegionId, bStoreToServer)
+function M:PlayLevelBGM(SoundType, Event, Key, Value, RelatedRegionId, ClientRelatedRegionId, bStoreToServer, QuestChainId)
   self.AudioManager:StoreLastSTLBGM(SoundType)
-  self.AudioManager:PlayLevelSound(SoundType, Event, RelatedRegionId, ClientRelatedRegionId, Key, Value, false, bStoreToServer)
+  self.AudioManager:PlayLevelSound(SoundType, Event, RelatedRegionId, ClientRelatedRegionId, Key, Value, false, bStoreToServer, QuestChainId)
 end
 
 function M:PlayInviteBGM(SoundType, Event, Key, Value, RelatedRegionId, ClientRelatedRegionId, bStoreToServer)
   self.AudioManager:PlayInviteBGM(SoundType, Event, Key, Value, RelatedRegionId, ClientRelatedRegionId)
 end
 
-function M:PlayStoryCustomBGM(SoundType, Event, Key, Value, RelatedRegionId, ClientRelatedRegionId, bStoreToServer, SoundUnitKey)
+function M:PlayStoryCustomBGM(SoundType, Event, Key, Value, RelatedRegionId, ClientRelatedRegionId, bStoreToServer, SoundUnitKey, QuestChainId)
   if "" == SoundUnitKey then
     DebugPrint("Error: TalkDSL PlayOrStopBGM Func Stop. SoundPriority is StoryCustom but SoundUnitKey is Empty!")
     return
   end
-  self.AudioManager:PlayStoryCustomBGM(SoundType, Event, SoundUnitKey, Key, Value, RelatedRegionId, ClientRelatedRegionId)
+  self.AudioManager:PlayStoryCustomBGM(SoundType, Event, SoundUnitKey, Key, Value, RelatedRegionId, ClientRelatedRegionId, QuestChainId)
 end
 
 function M:PlayCGReviewBGM(SoundType, Event, Key, Value, RelatedRegionId, ClientRelatedRegionId)

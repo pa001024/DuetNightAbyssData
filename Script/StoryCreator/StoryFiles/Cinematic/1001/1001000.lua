@@ -102,12 +102,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17791581245183390276",
-            startPort = "Out",
-            endQuest = "17791581245183390277",
-            endPort = "In"
-          },
-          {
             startQuest = "17791581245183390277",
             startPort = "Out",
             endQuest = "17791581245183390278",
@@ -126,7 +120,25 @@ return {
             endPort = "In"
           },
           {
+            startQuest = "17791581245183390276",
+            startPort = "Out",
+            endQuest = "1782831686380528",
+            endPort = "In"
+          },
+          {
+            startQuest = "1782831686380528",
+            startPort = "Out",
+            endQuest = "17791581245183390277",
+            endPort = "In"
+          },
+          {
             startQuest = "17805634402347039072",
+            startPort = "Out",
+            endQuest = "1782831696638876",
+            endPort = "In"
+          },
+          {
+            startQuest = "1782831696638876",
             startPort = "Out",
             endQuest = "17791581245183390270",
             endPort = "Success"
@@ -144,14 +156,14 @@ return {
             key = "17791581245183390270",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 2497.1428571428564, y = 560.0000000000001},
+            pos = {x = 2761.1428571428564, y = 553.6842105263158},
             propsData = {ModeType = 0}
           },
           ["17791581245183390271"] = {
             key = "17791581245183390271",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 2221.428571428571, y = 827.1428571428571},
+            pos = {x = 2133.0075187969924, y = 1046.9323308270675},
             propsData = {}
           },
           ["17791581245183390272"] = {
@@ -219,8 +231,9 @@ return {
               bOpenDefaultSkinKawaii = false,
               HideNpcs = false,
               HideMonsters = true,
-              HideAllBattleEntity = true,
-              HideEffectCreature = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
+              bHideSceneEffects = true,
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
@@ -287,6 +300,20 @@ return {
               SoundPriority = 3,
               SoundType = 1
             }
+          },
+          ["1782831686380528"] = {
+            key = "1782831686380528",
+            type = "ShowOrHideBattlePetNode",
+            name = "显示/隐藏魔灵",
+            pos = {x = 1075.029329550932, y = 680.5969250690383},
+            propsData = {IsShow = false}
+          },
+          ["1782831696638876"] = {
+            key = "1782831696638876",
+            type = "ShowOrHideBattlePetNode",
+            name = "显示/隐藏魔灵",
+            pos = {x = 2468.0819611298793, y = 562.1758724374594},
+            propsData = {IsShow = true}
           }
         },
         commentData = {}

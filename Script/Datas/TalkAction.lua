@@ -1592,6 +1592,88 @@ return ReadOnly("TalkAction", {
     IsSpecialAnim = false,
     MontageSection = "Start"
   },
+  Emo_Sit_End = {
+    ActionMontage = "Emo_Sit",
+    AnimationId = "Emo_Sit_End",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsSpecialAnim = false,
+    MontageSection = "End"
+  },
+  Emo_Sit_Loop = {
+    ActionMontage = "Emo_Sit",
+    AnimationId = "Emo_Sit_Loop",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsSpecialAnim = false,
+    MontageSection = "Loop"
+  },
+  Emo_Sit_Start = {
+    ActionMontage = "Emo_Sit",
+    AnimationId = "Emo_Sit_Start",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsSpecialAnim = false,
+    MontageSection = "Start"
+  },
+  Eve_Gesture_Bed = {
+    ActionMontage = "Story_SleepOnSide_Loop",
+    AnimationId = "Eve_Gesture_Bed",
+    BlendInTime = 0,
+    BlendOutTime = 0,
+    IsSpecialAnim = false,
+    MontagePrePath = "Interactive/Show",
+    MontageSection = "Loop"
+  },
+  Eve_Idle = {
+    ActionMontage = "Idle",
+    AnimationId = "Eve_Idle",
+    BlendInTime = 0,
+    BlendOutTime = 0,
+    IsSpecialAnim = false,
+    MontagePrePath = "Locomotion",
+    MontageSection = "Default"
+  },
+  Eve_Story_Liedown = {
+    ActionMontage = "Story_Liedown",
+    AnimationId = "Eve_Story_Liedown",
+    BlendInTime = 0,
+    BlendOutTime = 0,
+    IsSpecialAnim = false,
+    MontageSection = "Default"
+  },
+  Eve_Story_RPGWeak = {
+    ActionMontage = "Story_RPGWeak",
+    AnimationId = "Eve_Story_RPGWeak",
+    BlendInTime = 0,
+    BlendOutTime = 0,
+    IsSpecialAnim = false,
+    MontageSection = "Loop"
+  },
+  Eve_Story_Squat_End = {
+    ActionMontage = "Story_Squat",
+    AnimationId = "Eve_Story_Squat_End",
+    BlendInTime = 0,
+    BlendOutTime = 0,
+    IsSpecialAnim = false,
+    MontageSection = "End"
+  },
+  Eve_Story_Squat_Start = {
+    ActionMontage = "Story_Squat",
+    AnimationId = "Eve_Story_Squat_Start",
+    BlendInTime = 0,
+    BlendOutTime = 0,
+    IsSpecialAnim = false,
+    MontageSection = "Start"
+  },
+  Eve_Story_Tree = {
+    ActionMontage = "Story_Tree",
+    AnimationId = "Eve_Story_Tree",
+    BlendInTime = 0,
+    BlendOutTime = 0,
+    IsSpecialAnim = false,
+    MontageSection = "Loop"
+  },
   Excited01_End = {
     ActionMontage = "Emo_Excited01",
     AnimationId = "Excited01_End",
@@ -1752,6 +1834,24 @@ return ReadOnly("TalkAction", {
     IsSpecialAnim = false,
     MontageSection = "Start",
     bUseIK = false
+  },
+  Falu_Idle = {
+    ActionMontage = "Idle",
+    AnimationId = "Falu_Idle",
+    BlendInTime = 0,
+    BlendOutTime = 0,
+    IsSpecialAnim = false,
+    MontagePrePath = "Locomotion",
+    MontageSection = "Default"
+  },
+  Falu_Story_Unconscious = {
+    ActionMontage = "Story_Unconscious_Loop",
+    AnimationId = "Falu_Story_Unconscious",
+    BlendInTime = 0,
+    BlendOutTime = 0,
+    IsSpecialAnim = false,
+    MontagePrePath = "Interactive/Show",
+    MontageSection = "Loop"
   },
   Feina_Story_CuteHairAction_End = {
     ActionMontage = "Story_CuteHairAction",
@@ -2088,6 +2188,14 @@ return ReadOnly("TalkAction", {
     IsOnceAction = true,
     IsSpecialAnim = false,
     MontageSection = "End"
+  },
+  Helpless01_Loop = {
+    ActionMontage = "Emo_Helpless01",
+    AnimationId = "Helpless01_Loop",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsSpecialAnim = false,
+    MontageSection = "Loop"
   },
   Helpless01_Start = {
     ActionMontage = "Emo_Helpless01",
@@ -3130,6 +3238,14 @@ return ReadOnly("TalkAction", {
     BlendOutTime = 0.2,
     IsSpecialAnim = false,
     MontageSection = "Start"
+  },
+  Rest = {
+    ActionMontage = "Emo_Rest",
+    AnimationId = "Rest",
+    BlendInTime = 0,
+    BlendOutTime = 0,
+    IsSpecialAnim = false,
+    MontageSection = "Loop"
   },
   Sad02_End = {
     ActionMontage = "Emo_Sad02",
@@ -4223,6 +4339,111 @@ return ReadOnly("TalkAction", {
     IsSpecialAnim = false,
     MontageSection = "Start"
   },
+  Story_Afraid_End = {
+    ActionMontage = "Story_Afraid",
+    AnimationId = "Story_Afraid_End",
+    BlendInTime = 0,
+    BlendOutTime = 0,
+    IsSpecialAnim = false,
+    MontageSection = "End"
+  },
+  Story_Afraid_Loop = {
+    ActionMontage = "Story_Afraid",
+    AnimationId = "Story_Afraid_Loop",
+    BlendInTime = 0,
+    BlendOutTime = 0,
+    IsSpecialAnim = false,
+    MontageSection = "Loop"
+  },
+  Story_Afraid_Start = {
+    ActionMontage = "Story_Afraid",
+    AnimationId = "Story_Afraid_Start",
+    BlendInTime = 0,
+    BlendOutTime = 0,
+    IsSpecialAnim = false,
+    MontageSection = "Start"
+  },
+  Story_Chorus_End = {
+    ActionMontage = "Story_Chorus",
+    AnimationId = "Story_Chorus_End",
+    BlendInTime = 0,
+    BlendOutTime = 0,
+    IsSpecialAnim = false,
+    MontageSection = "End"
+  },
+  Story_Chorus_Loop = {
+    ActionMontage = "Story_Chorus",
+    AnimationId = "Story_Chorus_Loop",
+    BlendInTime = 0,
+    BlendOutTime = 0,
+    IsSpecialAnim = false,
+    MontageSection = "Loop"
+  },
+  Story_Chorus_Start = {
+    ActionMontage = "Story_Chorus",
+    AnimationId = "Story_Chorus_Start",
+    BlendInTime = 0,
+    BlendOutTime = 0,
+    IsSpecialAnim = false,
+    MontageSection = "Start"
+  },
+  Story_CryLR_End = {
+    ActionMontage = "Story_CryLR",
+    AnimationId = "Story_CryLR_End",
+    BlendInTime = 0,
+    BlendOutTime = 0,
+    IsSpecialAnim = false,
+    MontageSection = "End"
+  },
+  Story_CryLR_Loop = {
+    ActionMontage = "Story_CryLR",
+    AnimationId = "Story_CryLR_Loop",
+    BlendInTime = 0,
+    BlendOutTime = 0,
+    IsSpecialAnim = false,
+    MontageSection = "Loop"
+  },
+  Story_CryLR_Start = {
+    ActionMontage = "Story_CryLR",
+    AnimationId = "Story_CryLR_Start",
+    BlendInTime = 0,
+    BlendOutTime = 0,
+    IsSpecialAnim = false,
+    MontageSection = "Start"
+  },
+  Story_Die01_Loop = {
+    ActionMontage = "Story_Die01",
+    AnimationId = "Story_Die01_Loop",
+    BlendInTime = 0,
+    BlendOutTime = 0,
+    IsSpecialAnim = false,
+    MontageSection = "Loop"
+  },
+  Story_Gun_End = {
+    ActionMontage = "Story_Gun",
+    AnimationId = "Story_Gun_End",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsOnceAction = true,
+    IsSpecialAnim = false,
+    MontageSection = "End"
+  },
+  Story_Gun_Loop = {
+    ActionMontage = "Story_Gun",
+    AnimationId = "Story_Gun_Loop",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsSpecialAnim = false,
+    MontageSection = "Loop"
+  },
+  Story_Gun_Start = {
+    ActionMontage = "Story_Gun",
+    AnimationId = "Story_Gun_Start",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsSpecialAnim = false,
+    MontageSection = "Start"
+  },
   Story_HandToHand_End = {
     ActionMontage = "Story_HandToHand",
     AnimationId = "Story_HandToHand_End",
@@ -4331,6 +4552,31 @@ return ReadOnly("TalkAction", {
     AnimationId = "Story_KneelDown_Start",
     BlendInTime = 0,
     BlendOutTime = 0,
+    IsSpecialAnim = false,
+    MontageSection = "Start"
+  },
+  Story_Squat_End = {
+    ActionMontage = "Story_Squat",
+    AnimationId = "Story_Squat_End",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsOnceAction = true,
+    IsSpecialAnim = false,
+    MontageSection = "End"
+  },
+  Story_Squat_Loop = {
+    ActionMontage = "Story_Squat",
+    AnimationId = "Story_Squat_Loop",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsSpecialAnim = false,
+    MontageSection = "Loop"
+  },
+  Story_Squat_Start = {
+    ActionMontage = "Story_Squat",
+    AnimationId = "Story_Squat_Start",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
     IsSpecialAnim = false,
     MontageSection = "Start"
   },

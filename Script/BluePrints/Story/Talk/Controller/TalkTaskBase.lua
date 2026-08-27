@@ -404,7 +404,11 @@ function TalkTaskBase_C:CreateExpressionComponent()
 end
 
 function TalkTaskBase_C:CreateTalkAudioComponent()
-  self.TalkAudioComp = TalkAudioComp_C.New()
+  self.TalkAudioComp = TalkAudioComp_C.New(function(AudioState)
+    if self.UI and self.UI.OnTalkAudioStateChanged then
+      self.UI:OnTalkAudioStateChanged(AudioState)
+    end
+  end)
 end
 
 function TalkTaskBase_C:PlayAudio(DialogueData, Callback, bIsAttachActor, bPauseResume, bNoWait, OverrideAttachActor)
@@ -646,8 +650,9 @@ function TalkTaskBase_C:OnTalkEnd()
 end
 
 function TalkTaskBase_C:ProcessShowHide(bIsBegin)
-  self:SwitchEnableComponent(self.HideAllBattleEntityComponent, bIsBegin)
-  self:SwitchEnableComponent(self.HideAllEffectComponent, bIsBegin)
+  self:SwitchEnableComponent(self.HidePickupComponent, bIsBegin)
+  self:SwitchEnableComponent(self.HideSkillCreatureComponent, bIsBegin)
+  self:SwitchEnableComponent(self.HideSceneEffectsComponent, bIsBegin)
   self:SwitchEnableComponent(self.HideMechanismsFXComponent, bIsBegin)
   if bIsBegin then
     if self.HideAllMonstersComponent then

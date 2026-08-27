@@ -46,6 +46,7 @@ function M:Init(Params)
       break
     end
   end
+  self.TextWear:SetText(GText("UI_Accessory_Equipped"))
   self.HasMod = HasMod
   if HasMod then
     if Params.ForbidModBtn then
@@ -66,6 +67,12 @@ function M:Init(Params)
       self.HaveNode:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     else
       self.HaveNode:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+    if Params.ShowAlreadyHave then
+      self.NormalAnim = self.Normal
+      self.NoHaveNode:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.HaveNode:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+      self.TextWear:SetText(GText("UI_Consumable_HasGot"))
     end
   else
     self.NormalAnim = self.Not
@@ -123,6 +130,7 @@ end
 
 function M:OnBtnClicked()
   AudioManager(self):PlayUISound(nil, "event:/ui/common/click_mid", nil, nil)
+  self.WBP_Com_TipsMenuAnchor:SetVisibility(UIConst.VisibilityOp.Visible)
   self.WBP_Com_TipsMenuAnchor:OpenItemDetailsWidget()
 end
 
@@ -138,13 +146,16 @@ end
 function M:OnMenuOpenChanged(bIsOpen)
   self.IsMenuOpened = bIsOpen
   if bIsOpen then
-    self:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    self.Button_Tips:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     self:StopAllAnimations()
     self:PlayAnimation(self.Click)
   else
-    self:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Button_Tips:SetVisibility(UIConst.VisibilityOp.Visible)
     self:StopAnimation(self.Click)
     self:PlayAnimation(self.NormalAnim)
+    if self.Params and self.Params.Owner then
+      self.Params.Owner:SetFocus()
+    end
   end
 end
 

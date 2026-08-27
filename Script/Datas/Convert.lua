@@ -18,6 +18,7 @@ return ReadOnly("Convert", {
     CovertId = 1001,
     ProductId = 10101,
     ProductNum = 2,
+    ProductTipsType = "weeklyboss",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -33,6 +34,7 @@ return ReadOnly("Convert", {
     CovertId = 1002,
     ProductId = 10102,
     ProductNum = 2,
+    ProductTipsType = "weeklyboss",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -48,6 +50,7 @@ return ReadOnly("Convert", {
     CovertId = 1003,
     ProductId = 10103,
     ProductNum = 2,
+    ProductTipsType = "weeklyboss",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -63,6 +66,7 @@ return ReadOnly("Convert", {
     CovertId = 1004,
     ProductId = 10104,
     ProductNum = 2,
+    ProductTipsType = "weeklyboss",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -78,6 +82,7 @@ return ReadOnly("Convert", {
     CovertId = 1005,
     ProductId = 11003,
     ProductNum = 2,
+    ProductTipsType = "wpmaterial",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -95,6 +100,7 @@ return ReadOnly("Convert", {
     CovertId = 1006,
     ProductId = 11006,
     ProductNum = 2,
+    ProductTipsType = "wpmaterial",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -112,6 +118,7 @@ return ReadOnly("Convert", {
     CovertId = 1007,
     ProductId = 11009,
     ProductNum = 2,
+    ProductTipsType = "wpmaterial",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -129,6 +136,7 @@ return ReadOnly("Convert", {
     CovertId = 1008,
     ProductId = 11012,
     ProductNum = 2,
+    ProductTipsType = "wpmaterial",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -146,6 +154,7 @@ return ReadOnly("Convert", {
     CovertId = 1009,
     ProductId = 11015,
     ProductNum = 2,
+    ProductTipsType = "wpmaterial",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -163,6 +172,7 @@ return ReadOnly("Convert", {
     CovertId = 1010,
     ProductId = 11018,
     ProductNum = 2,
+    ProductTipsType = "wpmaterial",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -180,6 +190,7 @@ return ReadOnly("Convert", {
     CovertId = 1011,
     ProductId = 12068,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -193,6 +204,7 @@ return ReadOnly("Convert", {
     CovertId = 1012,
     ProductId = 12070,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -206,6 +218,7 @@ return ReadOnly("Convert", {
     CovertId = 1013,
     ProductId = 12001,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -219,6 +232,7 @@ return ReadOnly("Convert", {
     CovertId = 1014,
     ProductId = 12022,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -232,6 +246,7 @@ return ReadOnly("Convert", {
     CovertId = 1015,
     ProductId = 12110,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -245,6 +260,7 @@ return ReadOnly("Convert", {
     CovertId = 1016,
     ProductId = 12074,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -258,6 +274,7 @@ return ReadOnly("Convert", {
     CovertId = 1017,
     ProductId = 12112,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -271,6 +288,7 @@ return ReadOnly("Convert", {
     CovertId = 1018,
     ProductId = 12044,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -285,6 +303,7 @@ return ReadOnly("Convert", {
     CovertId = 1019,
     ProductId = 12087,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -299,6 +318,7 @@ return ReadOnly("Convert", {
     CovertId = 1020,
     ProductId = 12026,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -312,6 +332,7 @@ return ReadOnly("Convert", {
     CovertId = 1021,
     ProductId = 12114,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -325,6 +346,7 @@ return ReadOnly("Convert", {
     CovertId = 1022,
     ProductId = 12003,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -339,6 +361,7 @@ return ReadOnly("Convert", {
     CovertId = 1023,
     ProductId = 12116,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -353,6 +376,7 @@ return ReadOnly("Convert", {
     CovertId = 1024,
     ProductId = 12028,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -367,6 +391,7 @@ return ReadOnly("Convert", {
     CovertId = 1025,
     ProductId = 12119,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -381,6 +406,7 @@ return ReadOnly("Convert", {
     CovertId = 1026,
     ProductId = 12122,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -394,6 +420,7 @@ return ReadOnly("Convert", {
     CovertId = 1027,
     ProductId = 12031,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -407,6 +434,7 @@ return ReadOnly("Convert", {
     CovertId = 1028,
     ProductId = 12124,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -421,6 +449,7 @@ return ReadOnly("Convert", {
     CovertId = 1029,
     ProductId = 12076,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -435,6 +464,7 @@ return ReadOnly("Convert", {
     CovertId = 1030,
     ProductId = 12127,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -449,6 +479,7 @@ return ReadOnly("Convert", {
     CovertId = 1031,
     ProductId = 12009,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -463,6 +494,7 @@ return ReadOnly("Convert", {
     CovertId = 1032,
     ProductId = 12130,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -477,6 +509,7 @@ return ReadOnly("Convert", {
     CovertId = 1033,
     ProductId = 12079,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -491,6 +524,7 @@ return ReadOnly("Convert", {
     CovertId = 1034,
     ProductId = 12106,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -505,6 +539,7 @@ return ReadOnly("Convert", {
     CovertId = 1035,
     ProductId = 12103,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -519,6 +554,7 @@ return ReadOnly("Convert", {
     CovertId = 1036,
     ProductId = 12040,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -532,6 +568,7 @@ return ReadOnly("Convert", {
     CovertId = 1037,
     ProductId = 12085,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -545,6 +582,7 @@ return ReadOnly("Convert", {
     CovertId = 1038,
     ProductId = 12072,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -558,6 +596,7 @@ return ReadOnly("Convert", {
     CovertId = 1039,
     ProductId = 12053,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -571,6 +610,7 @@ return ReadOnly("Convert", {
     CovertId = 1040,
     ProductId = 12042,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -584,6 +624,7 @@ return ReadOnly("Convert", {
     CovertId = 1041,
     ProductId = 12082,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -598,6 +639,7 @@ return ReadOnly("Convert", {
     CovertId = 1042,
     ProductId = 12090,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -611,6 +653,7 @@ return ReadOnly("Convert", {
     CovertId = 1043,
     ProductId = 12092,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -625,6 +668,7 @@ return ReadOnly("Convert", {
     CovertId = 1044,
     ProductId = 12095,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -639,6 +683,7 @@ return ReadOnly("Convert", {
     CovertId = 1045,
     ProductId = 12098,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -652,6 +697,7 @@ return ReadOnly("Convert", {
     CovertId = 1046,
     ProductId = 12006,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -666,6 +712,7 @@ return ReadOnly("Convert", {
     CovertId = 1047,
     ProductId = 12047,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -679,6 +726,7 @@ return ReadOnly("Convert", {
     CovertId = 1048,
     ProductId = 12100,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -693,6 +741,7 @@ return ReadOnly("Convert", {
     CovertId = 1049,
     ProductId = 12033,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -707,6 +756,7 @@ return ReadOnly("Convert", {
     CovertId = 1050,
     ProductId = 12012,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -721,6 +771,7 @@ return ReadOnly("Convert", {
     CovertId = 1051,
     ProductId = 12015,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -735,6 +786,7 @@ return ReadOnly("Convert", {
     CovertId = 1052,
     ProductId = 12050,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -749,6 +801,7 @@ return ReadOnly("Convert", {
     CovertId = 1053,
     ProductId = 12036,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -763,6 +816,7 @@ return ReadOnly("Convert", {
     CovertId = 1054,
     ProductId = 12018,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -777,6 +831,7 @@ return ReadOnly("Convert", {
     CovertId = 1055,
     ProductId = 12024,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -790,6 +845,7 @@ return ReadOnly("Convert", {
     CovertId = 1056,
     ProductId = 12055,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -803,6 +859,7 @@ return ReadOnly("Convert", {
     CovertId = 1057,
     ProductId = 12057,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -816,6 +873,7 @@ return ReadOnly("Convert", {
     CovertId = 1058,
     ProductId = 12059,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -830,6 +888,7 @@ return ReadOnly("Convert", {
     CovertId = 1059,
     ProductId = 12062,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -844,6 +903,7 @@ return ReadOnly("Convert", {
     CovertId = 1060,
     ProductId = 12065,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -858,6 +918,7 @@ return ReadOnly("Convert", {
     CovertId = 1061,
     ProductId = 12133,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -871,6 +932,7 @@ return ReadOnly("Convert", {
     CovertId = 1062,
     ProductId = 12135,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -885,6 +947,7 @@ return ReadOnly("Convert", {
     CovertId = 1063,
     ProductId = 12138,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -899,6 +962,7 @@ return ReadOnly("Convert", {
     CovertId = 1064,
     ProductId = 12141,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -913,6 +977,7 @@ return ReadOnly("Convert", {
     CovertId = 1065,
     ProductId = 12144,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -927,6 +992,7 @@ return ReadOnly("Convert", {
     CovertId = 1066,
     ProductId = 12147,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -941,6 +1007,7 @@ return ReadOnly("Convert", {
     CovertId = 1067,
     ProductId = 12150,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -954,6 +1021,7 @@ return ReadOnly("Convert", {
     CovertId = 1068,
     ProductId = 12152,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -968,6 +1036,7 @@ return ReadOnly("Convert", {
     CovertId = 1069,
     ProductId = 12155,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -981,6 +1050,7 @@ return ReadOnly("Convert", {
     CovertId = 1070,
     ProductId = 12157,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -995,6 +1065,7 @@ return ReadOnly("Convert", {
     CovertId = 1071,
     ProductId = 12160,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -1009,6 +1080,7 @@ return ReadOnly("Convert", {
     CovertId = 1072,
     ProductId = 12163,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -1023,6 +1095,7 @@ return ReadOnly("Convert", {
     CovertId = 1073,
     ProductId = 12166,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
@@ -1036,12 +1109,42 @@ return ReadOnly("Convert", {
     CovertId = 1074,
     ProductId = 12168,
     ProductNum = 1,
+    ProductTipsType = "wpcomponent",
     ProductType = "Resource",
     ReleaseVersion = 100,
     Resource = {
       [1] = 12169
     },
     SortPriority = 927
+  },
+  [1075] = {
+    ConvertCost = T.RT_2,
+    ConvertNum = 3,
+    CovertId = 1075,
+    ProductId = 12170,
+    ProductNum = 1,
+    ProductTipsType = "wpcomponent",
+    ProductType = "Resource",
+    ReleaseVersion = 100,
+    Resource = {
+      [1] = 12171,
+      [2] = 12172
+    },
+    SortPriority = 926
+  },
+  [1076] = {
+    ConvertCost = T.RT_2,
+    ConvertNum = 3,
+    CovertId = 1076,
+    ProductId = 12176,
+    ProductNum = 1,
+    ProductTipsType = "wpcomponent",
+    ProductType = "Resource",
+    ReleaseVersion = 100,
+    Resource = {
+      [1] = 12177
+    },
+    SortPriority = 925
   },
   [9998] = {
     ConvertCost = {
@@ -1052,6 +1155,7 @@ return ReadOnly("Convert", {
     ModConvert = 2,
     ModConvertResource = 1008,
     ProductNum = 1,
+    ProductTipsType = "reset",
     ProductType = "Mod",
     ReleaseVersion = 120,
     SortPriority = 9998
@@ -1063,6 +1167,7 @@ return ReadOnly("Convert", {
     ModConvert = 1,
     ModConvertResource = 1007,
     ProductNum = 1,
+    ProductTipsType = "reset",
     ProductType = "Mod",
     ReleaseVersion = 120,
     SortPriority = 9999

@@ -417,6 +417,42 @@
                 ]
               },
               {
+                "id": 1041072,
+                "itemType": "Resource",
+                "typeId": 3101408,
+                "typeName": "〈왕관〉",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1001,
+                "sequence": 1,
+                "unlock": [
+                  1011,
+                  "Benefit",
+                  10
+                ]
+              },
+              {
+                "id": 1041073,
+                "itemType": "Resource",
+                "typeId": 3101409,
+                "typeName": "〈죽음의 연회〉",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1001,
+                "sequence": 1,
+                "unlock": [
+                  1011,
+                  "Benefit",
+                  10
+                ]
+              },
+              {
                 "id": 1410006,
                 "itemType": "Resource",
                 "typeId": 31004001,
@@ -982,6 +1018,42 @@
                 ]
               },
               {
+                "id": 1041074,
+                "itemType": "Resource",
+                "typeId": 3101410,
+                "typeName": "〈영원한 맹세〉",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1002,
+                "sequence": 1,
+                "unlock": [
+                  1011,
+                  "Morality",
+                  10
+                ]
+              },
+              {
+                "id": 1041075,
+                "itemType": "Resource",
+                "typeId": 3101411,
+                "typeName": "〈안개의 바다를 건너〉",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1002,
+                "sequence": 1,
+                "unlock": [
+                  1011,
+                  "Morality",
+                  10
+                ]
+              },
+              {
                 "id": 1410008,
                 "itemType": "Resource",
                 "typeId": 31004007,
@@ -1490,6 +1562,24 @@
                   1011,
                   "Wisdom",
                   20
+                ]
+              },
+              {
+                "id": 1041069,
+                "itemType": "Resource",
+                "typeId": 3101405,
+                "typeName": "〈블룸필드 왈츠〉",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1003,
+                "sequence": 1,
+                "unlock": [
+                  1011,
+                  "Wisdom",
+                  10
                 ]
               },
               {
@@ -2073,6 +2163,78 @@
                   1011,
                   "Empathy",
                   20
+                ]
+              },
+              {
+                "id": 1041067,
+                "itemType": "Resource",
+                "typeId": 3101402,
+                "typeName": "〈티타임〉",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1004,
+                "sequence": 1,
+                "unlock": [
+                  1011,
+                  "Empathy",
+                  10
+                ]
+              },
+              {
+                "id": 1041068,
+                "itemType": "Resource",
+                "typeId": 3101404,
+                "typeName": "〈힐다: 메이드의 미덕〉",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1004,
+                "sequence": 1,
+                "unlock": [
+                  1011,
+                  "Empathy",
+                  10
+                ]
+              },
+              {
+                "id": 1041070,
+                "itemType": "Resource",
+                "typeId": 3101406,
+                "typeName": "〈폭발이라는 예술〉",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1004,
+                "sequence": 1,
+                "unlock": [
+                  1011,
+                  "Empathy",
+                  10
+                ]
+              },
+              {
+                "id": 1041071,
+                "itemType": "Resource",
+                "typeId": 3101407,
+                "typeName": "〈플로라: 황금 새장 안의 죄수〉",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1004,
+                "sequence": 1,
+                "unlock": [
+                  1011,
+                  "Empathy",
+                  10
                 ]
               },
               {
@@ -2807,7 +2969,7 @@
                 "id": 1011140,
                 "itemType": "Resource",
                 "typeId": 1001201,
-                "typeName": "아이디어 조각·월석 사냥꾼·어둠",
+                "typeName": "아이디어 조각·{nickname}·어둠",
                 "price": 1,
                 "priceType": 3001,
                 "priceName": "십면 주사위",

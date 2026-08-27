@@ -36,34 +36,34 @@ return ReadOnly("PopupPack", {
     TabId = 7
   },
   [4] = {
-    Desc = "Pack_Desc_PopupPack",
-    DisplayPath = "/Game/UI/Texture/Dynamic/Image/Gacha/SingleIcon/T_Gacha_GiftPop_JJ01.T_Gacha_GiftPop_JJ01",
-    Duration = 2,
-    MaxTrigger = 1,
-    Name = "Pack_Name_PopupPack",
+    Desc = "Pack_Desc_PopupPack4",
+    DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/SingleIcon/T_Gacha_GiftPop_JJ01.T_Gacha_GiftPop_JJ01'",
+    Duration = 120,
+    MaxTrigger = 3,
+    Name = "Pack_Name_PopupPack1",
     PopupPackId = 4,
     ShopItemId = 990004,
-    TabId = 1
+    TabId = 8
   },
   [5] = {
-    Desc = "Pack_Desc_PopupPack",
-    DisplayPath = "/Game/UI/Texture/Dynamic/Image/Gacha/SingleIcon/T_Gacha_GiftPop_JJ01.T_Gacha_GiftPop_JJ01",
-    Duration = 2,
-    MaxTrigger = 1,
-    Name = "Pack_Name_PopupPack",
+    Desc = "Pack_Desc_PopupPack5",
+    DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/SingleIcon/T_Gacha_GiftPop_JJ03.T_Gacha_GiftPop_JJ03'",
+    Duration = 120,
+    MaxTrigger = 3,
+    Name = "Pack_Name_PopupPack2",
     PopupPackId = 5,
     ShopItemId = 990005,
-    TabId = 2
+    TabId = 8
   },
   [6] = {
-    Desc = "Pack_Desc_PopupPack",
-    DisplayPath = "/Game/UI/Texture/Dynamic/Image/Gacha/SingleIcon/T_Gacha_GiftPop_JJ01.T_Gacha_GiftPop_JJ01",
-    Duration = 5,
-    MaxTrigger = 1,
-    Name = "Pack_Name_PopupPack",
+    Desc = "Pack_Desc_PopupPack6",
+    DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/SingleIcon/T_Gacha_GiftPop_JJ04.T_Gacha_GiftPop_JJ04'",
+    Duration = 120,
+    MaxTrigger = 3,
+    Name = "Pack_Name_PopupPack3",
     PopupPackId = 6,
     ShopItemId = 990006,
-    TabId = 2
+    TabId = 8
   },
   [7] = {
     Desc = "Pack_Desc_PopupPack",

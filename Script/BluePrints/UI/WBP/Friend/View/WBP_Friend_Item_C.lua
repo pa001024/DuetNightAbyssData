@@ -116,8 +116,10 @@ function M:Construct()
   GuildController:RegisterEvent(self, function(self, EventId, ...)
     local Info = (...)
     local GuildId = (...)
-    if EventId == GuildCommon.EventID.OnGetGuildInfo and self.WaitGuildId == Info.GuildId then
-      self:OnGetGuildFullInfo(Info)
+    if EventId == GuildCommon.EventID.OnGetGuildInfo then
+      if Info and self.WaitGuildId == Info.GuildId then
+        self:OnGetGuildFullInfo(Info)
+      end
     elseif EventId == GuildCommon.EventID.OnGetGuildInfoFail and self.WaitGuildId == GuildId then
       self:OnGetGuildFullInfo(nil)
     end
@@ -267,7 +269,7 @@ function M:OnAnchorGetUserMenuContent()
   AddGuildAction(Switch, self.CardGuildFullInfo, self.PersonData)
   local BtnOption
   if self.Type == FriendCommon.FriendTabType.RecentMatch then
-    BtnOption = {AllowReportInNonChatContext = true, AllowNegativeAttitude = true}
+    BtnOption = {AllowReportWithoutMessageContent = true}
   end
   return ChatController:OpenPlayerBtnList(self, self.PersonData, Switch, self.CardGuildFullInfo, BtnOption)
 end
@@ -850,25 +852,29 @@ function M:GetCardGuildInfo(GuildId, Uid)
     if not IsValid(self) then
       return
     end
-    local Info = MemberInfos[Uid]
-    if Info.GuildId and 0 ~= Info.GuildId then
-      self.WaitGuildId = Info.GuildId
-      if Info.GuildId == GuildController:GetAvatar().GuildId then
-        self:OnGetGuildFullInfo(GuildController:GetModel():GetCurrGuild())
-      else
-        GuildController:SendGetGuildInfo(Info.GuildId)
-      end
-      Avatar:QueryGuildChatOpen(function(Ret, IsOpen)
-        if Ret ~= ErrorCode.RET_SUCCESS then
-          return
-        end
-        self.CardGuildChatOpen = IsOpen
-        self:WaitCardGuildInfoCallback()
-      end, Info.Uid)
-    else
+    local Info = MemberInfos and MemberInfos[Uid]
+    if not (Info and Info.GuildId) or 0 == Info.GuildId then
       self:WaitCardGuildInfoCallback()
       self:WaitCardGuildInfoCallback()
+      return
     end
+    self.WaitGuildId = Info.GuildId
+    local CurrGuild = GuildController:GetModel():GetCurrGuild()
+    if Info.GuildId == GuildController:GetAvatar().GuildId and CurrGuild then
+      self:OnGetGuildFullInfo(CurrGuild)
+    elseif Info.GuildId ~= GuildController:GetAvatar().GuildId then
+      GuildController:SendGetGuildInfo(Info.GuildId)
+    end
+    Avatar:QueryGuildChatOpen(function(Ret, IsOpen)
+      if Ret ~= ErrorCode.RET_SUCCESS then
+        return
+      end
+      if not IsValid(self) then
+        return
+      end
+      self.CardGuildChatOpen = IsOpen
+      self:WaitCardGuildInfoCallback()
+    end, Info.Uid)
   end, {Uid}, true)
 end
 
@@ -892,6 +898,9 @@ function AddGuildAction(Actions, GuildInfo, AvatarInfo)
     return
   end
   local SelfGuildInfo = GuildController:GetModel():GetCurrGuild()
+  if not SelfGuildInfo then
+    return
+  end
   if GuildInfo.GuildId == SelfGuildInfo.GuildId then
     local ActionIds = {}
     table.insert(ActionIds, MenuActionId.GuildSendPrivateChat)

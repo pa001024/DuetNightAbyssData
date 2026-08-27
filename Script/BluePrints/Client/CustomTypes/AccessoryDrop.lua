@@ -3,6 +3,7 @@ local BaseTypes = require("BluePrints.Client.CustomTypes.BaseTypes")
 local CustomTypes = require("BluePrints.Client.CustomTypes.CustomTypes")
 local prop = require("NetworkEngine.Common.Prop")
 local FormatProperties = require("NetworkEngine.Common.Assemble").FormatProperties
+local CommonConst = require("CommonConst")
 local AccessoryDrop = Class("AccessoryDrop", CustomTypes.CustomAttr)
 AccessoryDrop.__Props__ = {
   EventId = prop.prop("Int", "client save"),
@@ -11,15 +12,37 @@ AccessoryDrop.__Props__ = {
   BoxRewardRecord = prop.prop("Int2IntDict", "client save"),
   RewardId = prop.getter("Data", "RewardId"),
   RewardCount = prop.getter("Data", "RewardCount"),
-  BoxPerDay = prop.getter("Data", "BoxPerDay")
+  BoxPerDay = prop.getter("Data", "BoxPerDay"),
+  BoxMaximum = prop.getter("Data", "BoxMaximum"),
+  EventStartTime = prop.getter("EventMain", "EventStartTime")
 }
 
 function AccessoryDrop:Data()
   return DataMgr.BoxDrop[self.EventId]
 end
 
+function AccessoryDrop:EventMain()
+  return DataMgr.EventMain[self.EventId]
+end
+
 function AccessoryDrop:Init(EventId)
   self.EventId = EventId
+  self.LastAccessoryDropRefresh = self.EventStartTime - CommonConst.SECOND_IN_DAY
+end
+
+function AccessoryDrop:AutoAddDropBox()
+  self.LastAccessoryDropRefresh = math.max(self.LastAccessoryDropRefresh, self.EventStartTime)
+  local IntervalDay = TimeUtils.GetIntervalDay(self.LastAccessoryDropRefresh, TimeUtils.NowTime())
+  if IntervalDay < 1 then
+    return ErrorCode.RET_ACCESORRYDROP_BOX_NOT_REFRESH_TIME
+  end
+  local CanAddNum = self.BoxMaximum - self.CurDropBoxNum
+  if CanAddNum < 0 then
+    return ErrorCode.RET_ACCESORRYDROP_BOX_NUM_OVER_LIMIT
+  end
+  local RealAddNum = math.min(CanAddNum, self.BoxPerDay * IntervalDay)
+  self:AddDropBoxNum(RealAddNum)
+  return ErrorCode.RET_SUCCESS, RealAddNum
 end
 
 function AccessoryDrop:AddDropBoxNum(Num)
@@ -30,6 +53,7 @@ end
 function AccessoryDrop:InitDropBoxNum()
   self.CurDropBoxNum = self.BoxPerDay
   self.LastAccessoryDropRefresh = TimeUtils.NowTime()
+  return self.CurDropBoxNum
 end
 
 function AccessoryDrop:DelDropBoxNum(Num)

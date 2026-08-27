@@ -142,11 +142,13 @@ function M:ProcessOnKeyUp(MyGeometry, InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   if self.IsKeyDown[InKeyName] then
     self.IsKeyDown[InKeyName] = false
-    local IsLongPresssing = self.IsLongPressing[InKeyName]
+    local IsLongPressing = self.IsLongPressing[InKeyName]
     self.IsLongPressing[InKeyName] = false
     local TimerKey = InKeyName .. "_LongPress"
-    self:RemoveTimer(TimerKey)
-    if IsLongPresssing then
+    if self.RemoveTimer then
+      self:RemoveTimer(TimerKey)
+    end
+    if IsLongPressing then
       self:RemoveTimer(TimerKey .. "End")
       local LongPressEvent = self.LongPressEvents[InKeyName] or {}
       if LongPressEvent.CancelCB then
@@ -180,11 +182,13 @@ function M:OnRemovedFromFocusPath()
   end
   for key, value in pairs(self.IsKeyDown) do
     self.IsKeyDown[key] = false
-    local IsLongPresssing = self.IsLongPressing[key]
+    local IsLongPressing = self.IsLongPressing[key]
     self.IsLongPressing[key] = false
     local TimerKey = key .. "_LongPress"
-    self:RemoveTimer(TimerKey)
-    if IsLongPresssing then
+    if self.RemoveTimer then
+      self:RemoveTimer(TimerKey)
+    end
+    if IsLongPressing then
       self:RemoveTimer(TimerKey .. "End")
       local LongPressEvent = self.LongPressEvents[key] or {}
       if LongPressEvent.CancelCB then

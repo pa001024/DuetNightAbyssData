@@ -18,34 +18,68 @@ function M:GetMissionState()
   return "NotStart"
 end
 
+function M:DispatchMissionState(State)
+  if self._DispatchedMissionState == State then
+    return false
+  end
+  self._DispatchedMissionState = State
+  self._LastMissionState = State
+  DebugPrint("MissionGroup_C DispatchMissionState", self.QuestID, State)
+  if "NotStart" == State then
+    self:TriggerOnMissionNotStart()
+  elseif "Doing" == State then
+    self:TriggerOnMissionStart()
+  elseif "Complete" == State then
+    self:TriggerOnMissionComplete()
+  end
+  return true
+end
+
+function M:SyncMissionStateFromQuest()
+  local State = self:GetMissionState()
+  self._LastMissionState = State
+  self:DispatchMissionState(State)
+end
+
+function M:ShouldDeferInitialMissionStateSync()
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  if not IsValid(GameMode) then
+    GameMode = GWorld.GameInstance and GWorld.GameInstance:GetCurrentGameMode()
+  end
+  if IsValid(GameMode) and GameMode.IsBigWorldActived then
+    return false
+  end
+  local Travel = WorldTravelSubsystem and WorldTravelSubsystem(self)
+  if Travel and Travel:IsRegionWorld() then
+    return true
+  end
+  if IsValid(GameMode) and GameMode.IsInRegion and GameMode:IsInRegion() then
+    return true
+  end
+  return false
+end
+
 function M:ReceiveBeginPlay()
   self.Overridden.ReceiveBeginPlay(self)
   self._LastMissionState = self:GetMissionState()
-  self:RegisterGameModeEvents()
+  DebugPrint("MissionGroup_C ReceiveBeginPlay", self._LastMissionState)
   EventManager:AddEvent(EventID.OnUpdateQuestChain, self, self.OnUpdateQuestChainHandler)
   EventManager:AddEvent(EventID.OnCompleteQuestChain, self, self.OnCompleteQuestChainHandler)
   EventManager:AddEvent(EventID.OnMissionGroupStart, self, self.OnReceiveMissionStart)
   EventManager:AddEvent(EventID.OnQuestRestart, self, self.OnReceiveMissionStart)
-  EventManager:AddEvent(EventID.OnMechanismEnterState, self, self.OnMechanismEnterStateHandler)
-  self:AddTimer(0.01, function()
-    if not IsValid(self) then
-      return
-    end
-    if self._LastMissionState == "NotStart" then
-      self:TriggerOnMissionNotStart()
-    elseif self._LastMissionState == "Doing" then
-      self:TriggerOnMissionStart()
-    elseif self._LastMissionState == "Complete" then
-      self:TriggerOnMissionComplete()
-    end
-  end, false, 0, "MissionGroupInitialQuestStateCheck", false)
+  if self:ShouldDeferInitialMissionStateSync() then
+    DebugPrint("MissionGroup_C defer initial sync until BigWorldActive", self.QuestID)
+  else
+    self:SyncMissionStateFromQuest()
+  end
 end
 
 function M:ReceiveEndPlay(Reason)
-  self:UnRegisterGameModeEvents()
   EventManager:RemoveEvent(EventID.OnUpdateQuestChain, self)
   EventManager:RemoveEvent(EventID.OnCompleteQuestChain, self)
-  EventManager:RemoveEvent(EventID.OnMechanismEnterState, self)
+  EventManager:RemoveEvent(EventID.OnMissionGroupStart, self)
+  EventManager:RemoveEvent(EventID.OnQuestRestart, self)
+  self._DispatchedMissionState = nil
   self:CleanDelayActions()
   self:CleanTimer()
   self.Overridden.ReceiveEndPlay(self, Reason)
@@ -61,13 +95,11 @@ function M:OnUpdateQuestChainHandler(QuestChainId)
     return
   end
   self._LastMissionState = NewState
-  if "Doing" == NewState then
-    self:TriggerOnMissionStart()
-  elseif "Complete" == NewState then
-    self:TriggerOnMissionComplete()
-  elseif "NotStart" == NewState then
-    self:TriggerOnMissionNotStart()
+  if self:ShouldDeferInitialMissionStateSync() then
+    DebugPrint("MissionGroup_C OnUpdateQuestChainHandler deferred", self.QuestID, NewState)
+    return
   end
+  self:DispatchMissionState(NewState)
 end
 
 function M:OnCompleteQuestChainHandler(QuestChainId, QuestId)
@@ -82,7 +114,11 @@ function M:OnCompleteQuestChainHandler(QuestChainId, QuestId)
     return
   end
   self._LastMissionState = "Complete"
-  self:TriggerOnMissionComplete()
+  if self:ShouldDeferInitialMissionStateSync() then
+    DebugPrint("MissionGroup_C OnCompleteQuestChainHandler deferred", self.QuestID)
+    return
+  end
+  self:DispatchMissionState("Complete")
 end
 
 function M:OnReceiveMissionStart(QuestId)
@@ -90,10 +126,19 @@ function M:OnReceiveMissionStart(QuestId)
   if not QuestId or QuestId ~= self.QuestID then
     return
   end
-  local NewState = self:GetMissionState()
-  if "Doing" == NewState then
-    self:TriggerOnMissionStart()
+  if self._LastMissionState == "Doing" then
+    return
   end
+  local NewState = self:GetMissionState()
+  if "Doing" ~= NewState then
+    return
+  end
+  self._LastMissionState = "Doing"
+  if self:ShouldDeferInitialMissionStateSync() then
+    DebugPrint("MissionGroup_C OnReceiveMissionStart deferred", self.QuestID)
+    return
+  end
+  self:DispatchMissionState("Doing")
 end
 
 function M:RegisterGameModeEvents()

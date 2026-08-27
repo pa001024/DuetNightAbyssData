@@ -41,6 +41,16 @@ function M:OnListItemInited(Content, EntryUI)
   end
 end
 
+function M:CacheAllItemContents(ItemContents)
+  if not self.CachedAllItemContents or not self.CachedAllItemContents.Clear then
+    return
+  end
+  self.CachedAllItemContents:Clear()
+  for _, Content in ipairs(ItemContents or {}) do
+    self.CachedAllItemContents:Add(Content)
+  end
+end
+
 function M:Init(Parent, Params)
   self.Parent = Parent
   self.Params = Params
@@ -51,6 +61,7 @@ function M:Init(Parent, Params)
   self.SortIdx = Params.SortIdx
   self.SortType = Params.SortType
   self.AllItemContents = Params.ItemContents
+  self:CacheAllItemContents(self.AllItemContents)
   self.EMListView_Filter:ClearListItems()
   self.SelectedFilterContents = {}
   self.FilteredContents = {}
@@ -109,6 +120,7 @@ end
 
 function M:SetItemContents(ItemContents)
   self.AllItemContents = ItemContents
+  self:CacheAllItemContents(self.AllItemContents)
   self:UpdateFilterInfos()
   if self.Event_FilterFunction then
     self.FilteredContents = self.Event_FilterFunction(self.EventReceiver, self.AllItemContents, self.FilterIdxes) or {}

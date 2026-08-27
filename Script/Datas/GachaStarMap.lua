@@ -323,6 +323,21 @@ return ReadOnly("GachaStarMap", {
       [4] = T.RT_11,
       [6] = T.RT_6
     },
+    [9008] = {
+      [2] = {
+        Star3 = T.RT_1,
+        Star4 = T.RT_1,
+        Star5 = {
+          [310401] = T.RT_13
+        },
+        Up4 = T.RT_1,
+        Up5 = T.RT_1,
+        UpSum4 = 0,
+        UpSum5 = 0
+      },
+      [4] = T.RT_11,
+      [6] = T.RT_6
+    },
     [90021] = {
       [2] = {
         Star3 = T.RT_1,

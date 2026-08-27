@@ -1,6 +1,7 @@
 local EMCache = require("EMCache.EMCache")
 local Component = {}
 local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
+local CoopModel = require("BluePrints.UI.WBP.Activity.PC.Coop.Model.CoopModel")
 
 function Component:AsyncCombatCreateRoom(InCallback, RoomId, Rate, Permission)
   local function Callback(ErrorCode, RoomInfo)
@@ -139,6 +140,26 @@ function Component:OnAsyncCombatRoomDelete(RoomUniId, bSendRewardMail)
   end
 end
 
+function Component:OnAsyncCombatExtraRoomNotify(RoomUid, State)
+  self.logger.debug("OnAsyncCombatExtraRoomNotify", RoomUid, State)
+  if not self.AsyncCombatLoginSuccess then
+    return
+  end
+  if State == CommonConst.AsyncCombatExtraRoomState.Open then
+    ReddotManager.IncreaseLeafNodeCount("AsyncCombatStoppageNew", 1, {
+      CacheKey = "New",
+      Type = "StoppageRoom",
+      RoomIds = {RoomUid}
+    })
+  elseif State == CommonConst.AsyncCombatExtraRoomState.Close then
+    ReddotManager.DecreaseLeafNodeCount("AsyncCombatStoppageNew", 1, {
+      CacheKey = "New",
+      Type = "StoppageRoom",
+      RoomIds = {RoomUid}
+    })
+  end
+end
+
 function Component:EnterWorld()
   EventManager:AddEvent(EventID.OnLoginSuccess, self, self.RefreshRedDot)
 end
@@ -162,18 +183,46 @@ function Component:RefreshAsyncCombatNew()
   ReddotManager.ClearLeafNodeCount(NodeName, true)
   local ActivityID = DataMgr.AsyncCombatEventConstant.AsyncCombat_EventId.ConstantValue
   if ActivityUtils.CheckEventIsOpen(ActivityID) then
-    local AsyncCombat = self.AsyncCombats
-    local NewTimes = AsyncCombat[ActivityID].CreateRoomTimes or 0
-    if NewTimes > 0 then
-      return
-    end
-    local AsyncCombatCreateBtnCickTime = EMCache:Get("AsyncCombatBtnTime", true)
-    if not AsyncCombatCreateBtnCickTime then
-      ReddotManager.IncreaseLeafNodeCount(NodeName, 1, {CacheKey = "New"})
+    local FreeCreateTimes, FreeGiveNum = CoopModel:AsyncCombatGetFreeCreateTimes()
+    if FreeCreateTimes < FreeGiveNum then
+      if FreeCreateTimes > 0 then
+        return
+      end
+      local AsyncCombatCreateBtnCickTime = EMCache:Get("AsyncCombatFreeBtnTime", true)
+      if not AsyncCombatCreateBtnCickTime then
+        ReddotManager.IncreaseLeafNodeCount(NodeName, 1, {CacheKey = "New", Type = "FreeCreate"})
+      else
+        local FreeGiveWeekDay = DataMgr.AsyncCombatEventConstant.Async_FreeGiveWeekDay.ConstantValue
+        local NextFreshTime = TimeUtils.NextWeekDayRefreshTime(FreeGiveWeekDay)
+        local LastFreshTime = NextFreshTime - 604800
+        if AsyncCombatCreateBtnCickTime < LastFreshTime then
+          ReddotManager.IncreaseLeafNodeCount(NodeName, 1, {CacheKey = "New", Type = "FreeCreate"})
+        end
+      end
     else
-      local TimeCheck = TimeUtils.IsTimestampFromPreviousWeek(AsyncCombatCreateBtnCickTime or 0)
-      if true == TimeCheck then
-        ReddotManager.IncreaseLeafNodeCount(NodeName, 1, {CacheKey = "New"})
+      local AsyncCombatData = self.AsyncCombats and self.AsyncCombats[ActivityID]
+      if not AsyncCombatData then
+        DebugPrint(ErrorTag, "RefreshAsyncCombatNew: AsyncCombatData is nil", ActivityID)
+        return
+      end
+      local NewTimes = AsyncCombatData.CreateRoomTimes or 0
+      if NewTimes > 0 then
+        return
+      end
+      local AsyncCombatCreateBtnCickTime = EMCache:Get("AsyncCombatBtnTime", true)
+      if not AsyncCombatCreateBtnCickTime then
+        ReddotManager.IncreaseLeafNodeCount(NodeName, 1, {
+          CacheKey = "New",
+          Type = "NormalCreate"
+        })
+      else
+        local TimeCheck = TimeUtils.IsTimestampFromPreviousWeek(AsyncCombatCreateBtnCickTime or 0)
+        if true == TimeCheck then
+          ReddotManager.IncreaseLeafNodeCount(NodeName, 1, {
+            CacheKey = "New",
+            Type = "NormalCreate"
+          })
+        end
       end
     end
   end
@@ -185,20 +234,63 @@ function Component:RefreshAsyncCombatRewardRedDot()
     ReddotManager.AddNode(NodeName)
   end
   ReddotManager.ClearLeafNodeCount(NodeName, true)
-  self:AsyncCombatGetOwnedRoom(function(Err, RoomList)
-    if Err ~= ErrorCode.RET_SUCCESS then
-      return
-    end
-    local RewardCount = 0
-    for _, roomData in ipairs(RoomList) do
-      if roomData.IsPass == true and 1 == roomData.RewardState then
-        RewardCount = RewardCount + 1
+  local StoppageNodeName = "AsyncCombatStoppageNew"
+  if not ReddotManager.GetTreeNode(StoppageNodeName) then
+    ReddotManager.AddNode(StoppageNodeName)
+  end
+  local ActivityID = DataMgr.AsyncCombatEventConstant.AsyncCombat_EventId.ConstantValue
+  if ActivityUtils.CheckEventIsOpen(ActivityID) then
+    self:AsyncCombatGetOwnedRoom(function(Err, RoomList)
+      if Err ~= ErrorCode.RET_SUCCESS then
+        return
       end
+      local RewardCount = 0
+      local StoppageRoom = {}
+      local RoomDuration = DataMgr.AsyncCombatEventConstant.AsyncCombat_RoomDuration.ConstantValue * 60
+      local StoppageRoomDuration = DataMgr.AsyncCombatEventConstant.AsyncCombat_StoppageTimeRoomDuration.ConstantValue * 60
+      local StoppageRoomCache = EMCache:Get("AsynccombatStoppageRoomClickTime" .. ActivityID, true)
+      local CurrentTime = TimeUtils.NowTime()
+      for _, roomData in ipairs(RoomList) do
+        if 1 == roomData.RewardState then
+          RewardCount = RewardCount + 1
+        end
+        if roomData.IsPass and roomData.IsPass == true then
+          if roomData.IsMaster == false and 0 == roomData.RewardState and roomData.CloseTime and CurrentTime < roomData.CloseTime + StoppageRoomDuration then
+            if not StoppageRoomCache then
+              table.insert(StoppageRoom, roomData.RoomUniqueId)
+            elseif StoppageRoomCache and not StoppageRoomCache[roomData.RoomUniqueId] then
+              table.insert(StoppageRoom, roomData.RoomUniqueId)
+            end
+          end
+        else
+          local CreateTime = roomData.CreateTime or 0
+          if roomData.IsMaster == false and CurrentTime >= CreateTime + RoomDuration and 0 == roomData.RewardState and roomData.CloseTime and CurrentTime < roomData.CloseTime + StoppageRoomDuration then
+            if not StoppageRoomCache then
+              table.insert(StoppageRoom, roomData.RoomUniqueId)
+            elseif StoppageRoomCache and not StoppageRoomCache[roomData.RoomUniqueId] then
+              table.insert(StoppageRoom, roomData.RoomUniqueId)
+            end
+          end
+        end
+      end
+      if RewardCount > 0 then
+        ReddotManager.IncreaseLeafNodeCount(NodeName, RewardCount, {CacheKey = "Red"})
+      end
+      if #StoppageRoom > 0 then
+        ReddotManager.IncreaseLeafNodeCount(StoppageNodeName, #StoppageRoom, {
+          CacheKey = "New",
+          Type = "StoppageRoom",
+          RoomIds = StoppageRoom
+        })
+      end
+    end)
+  else
+    local CacheName = "AsynccombatStoppageRoomClickTime" .. ActivityID
+    local StoppageRoomCache = EMCache:Get(CacheName, true)
+    if StoppageRoomCache and next(StoppageRoomCache) == nil then
+      EMCache:Remove(CacheName, true)
     end
-    if RewardCount > 0 then
-      ReddotManager.IncreaseLeafNodeCount(NodeName, RewardCount, {CacheKey = "Red"})
-    end
-  end)
+  end
 end
 
 return Component

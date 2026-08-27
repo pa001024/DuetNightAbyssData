@@ -3,7 +3,7 @@ local ETalkType = require("BluePrints.Story.Talk.Base.ETalkType")
 local FHideGameUIComponent = require("BluePrints.Story.Components.HideGameUIComponent")
 local FPauseGameComponent = require("BluePrints.Story.Components.PauseGameComponent")
 local FDisableNpcPerformanceOptimizationComponent = require("BluePrints.Story.Components.DisableNpcPerformanceOptimizationComponent")
-local FHideAllEffectComponent = require("BluePrints.Story.Components.HideAllEffectComponent")
+local FHideSceneEffectsComponent = require("BluePrints.Story.Components.HideSceneEffectsComponent")
 local FHideMechanismsFXComponent = require("BluePrints.Story.Components.HideMechanismsFXComponent")
 local FSoundEffectComponent = require("BluePrints.Story.Components.SoundEffectComponent")
 local ETalkNodeFinishType = require("StoryCreator.StoryLogic.StorylineUtils").ETalkNodeFinishType
@@ -14,7 +14,8 @@ local FDisableCameraArmComponent = require("BluePrints.Story.Components.DisableC
 local FSwitchEmoIdleComponent = require("BluePrints.Story.Components.SwitchEmoIdleComponent")
 local FDisableInteractiveComponent = require("BluePrints.Story.Components.DisableInteractiveComponent")
 local FDialogueWikiComponent = require("BluePrints.Story.Components.DialogueWikiComponent")
-local FHideAllBattleEntityComponent = require("BluePrints.Story.Components.HideAllBattleEntityComponent")
+local FHidePickupComponent = require("BluePrints.Story.Components.HidePickupComponent")
+local FHideSkillCreatureComponent = require("BluePrints.Story.Components.HideSkillCreatureComponent")
 local FStopPlayerActionComponent = require("BluePrints.Story.Components.StopPlayerActionComponent")
 local FEnableCharacterDitherComponent = require("BluePrints.Story.Components.EnableCharacterDitherComponent")
 local FDisableCharacterDitherComponent = require("BluePrints.Story.Components.DisableCharacterDitherComponent")
@@ -26,6 +27,7 @@ local FLockNpcSpawnComponent = require("BluePrints.Story.Components.LockNpcSpawn
 local SimpleDialogueData_C = require("BluePrints.Story.Talk.Model.DialogueData").SimpleDialogueData_C
 local TalkUtils = require("BluePrints.Story.Talk.View.TalkUtils")
 local TalkOptionData_C = require("BluePrints.Story.Talk.Model.TalkOptionData").TalkOptionData_C
+local CommonTalkTaskData_C = require("BluePrints.Story.Talk.Model.CommonTalkTaskData")
 local ETalkOptionType = require("BluePrints.Story.Talk.Model.TalkOptionData").ETalkOptionType
 local ImpressionModel = require("BluePrints.Story.Talk.Model.ImpressionModel")
 local EDialogueNodeType = TalkUtils.EDialogueNodeType
@@ -880,7 +882,10 @@ function CommonTalkTask:PlayDialogue(bPauseResume, bSkipping)
   local CurrentDialogueId = Dialogue.DialogueId
   DebugPrint("CommonTalkTask:PlayDialogue:", CurrentDialogueId)
   local DialogueData = SimpleDialogueData_C.New(self, CurrentDialogueId, self.TalkContext)
-  self:RecordDialogueCompleted(DialogueData.DialogueId)
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    Avatar:CompletedDialogue(DialogueData.DialogueId)
+  end
   self.DialogueWikiComponent:CompletePlayDialogue(Dialogue.RelatedWikiId)
   if DialogueData.bIsBlack then
     self:TryShowDialogueBlackUI()
@@ -1077,9 +1082,9 @@ function CommonTalkTask:CreateStopPlayerActionComponent()
   end
 end
 
-function CommonTalkTask:CreateHideAllBattleEntityComponent()
-  if self.TalkTaskData.bHideAllBattleEntity then
-    self.HideAllBattleEntityComponent = FHideAllBattleEntityComponent:New(self.TalkContext)
+function CommonTalkTask:CreateHidePickupComponent()
+  if self.TalkTaskData.bHidePickup then
+    self.HidePickupComponent = FHidePickupComponent:New(self.TalkContext)
   end
 end
 
@@ -1131,9 +1136,15 @@ function CommonTalkTask:CreatePauseGameComponent()
   end
 end
 
-function CommonTalkTask:CreateHideEffectComponent()
-  if self.TalkTaskData.bHideEffectCreature then
-    self.HideAllEffectComponent = FHideAllEffectComponent:New()
+function CommonTalkTask:CreateHideSceneEffectsComponent()
+  if self.TalkTaskData.bHideSceneEffects then
+    self.HideSceneEffectsComponent = FHideSceneEffectsComponent:New()
+  end
+end
+
+function CommonTalkTask:CreateHideSkillCreatureComponent()
+  if self.TalkTaskData.bHideSkillCreature then
+    self.HideSkillCreatureComponent = FHideSkillCreatureComponent:New(self.TalkContext)
   end
 end
 
@@ -1390,7 +1401,7 @@ function CommonTalkTask:CreateComponents()
   self:CreateFreezeWCComponent()
   self:CreateTalkAudioComponent()
   self:CreatePauseGameComponent()
-  self:CreateHideEffectComponent()
+  self:CreateHideSceneEffectsComponent()
   self:CreateHideMechanismsFXComponent()
   self:CreateExpressionComponent()
   self:CreateHideGameUIComponent()
@@ -1404,7 +1415,8 @@ function CommonTalkTask:CreateComponents()
   self:CreateSetForceLodComponent()
   self:CreateDisablePlayerInputComponent()
   self:CreateDisableInteractiveComponent()
-  self:CreateHideAllBattleEntityComponent()
+  self:CreateHidePickupComponent()
+  self:CreateHideSkillCreatureComponent()
   self:CreateSetPlayerInvincibleComponent()
   self:CreateDisableNpcPerformanceOptimizationComponent()
   self:CreateDisableCameraArmComponent()
@@ -1424,6 +1436,7 @@ end
 function CommonTalkTask:TryPlaySequence()
   if self.TalkTaskData.SequencePlayer then
     self.TalkContext:BindActors(self)
+    CommonTalkTaskData_C.StartMobilePanMediaRateTick(self, self.TalkTaskData.SequenceActor, self.TalkTaskData.Sequence)
     self.TalkTaskData.SequencePlayer:Play()
     local PlayerController = UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
     UTalkSequenceFunctionLibrary.UpdatePlayerCameraManager(PlayerController)
@@ -1526,27 +1539,6 @@ end
 
 function CommonTalkTask:CheckResource()
   return true
-end
-
-function CommonTalkTask:RecordDialogueCompleted(DialogueId)
-  local Avatar = GWorld:GetAvatar()
-  if nil == Avatar then
-    return
-  end
-  if not self:CanRecordDialogueCompleted(DialogueId) then
-    return
-  end
-  Avatar:CompletedDialogue(DialogueId)
-end
-
-function CommonTalkTask:CanRecordDialogueCompleted(DialogueId)
-  if DataMgr.DialogueId2WikiTextIds[DialogueId] then
-    return true
-  end
-  if DataMgr.ClueContentTrigger.Dialogue[DialogueId] then
-    return true
-  end
-  return false
 end
 
 function CommonTalkTask:OnPaused()

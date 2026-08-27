@@ -19,9 +19,8 @@ function M:CreateNode(Flow, FlowOwner, Params)
     end
   end
   
+  local bNodeFinished = false
   TypingNode.OnStart:Add(TypingNode, function(Node)
-    local bNodeFinished = false
-    
     local function FinishNode()
       if bNodeFinished then
         return
@@ -38,7 +37,7 @@ function M:CreateNode(Flow, FlowOwner, Params)
       return
     end
     NameWidget:SetText(NpcName)
-    TypingWidget:SetTypingSpeed(0.05)
+    TypingWidget:SetTypingSpeed(0.5)
     TypingWidget:UnBindEventOnFinished()
     TypingWidget:BindEventOnFinished(Node, function(_, FinishOrPageEnd)
       if FinishOrPageEnd then
@@ -62,6 +61,7 @@ function M:CreateNode(Flow, FlowOwner, Params)
     })
   end)
   TypingNode.OnFinish:Add(TypingNode, function()
+    bNodeFinished = true
     OnFinishCleanUp()
   end)
   TypingNode.OnPause:Add(TypingNode, function()

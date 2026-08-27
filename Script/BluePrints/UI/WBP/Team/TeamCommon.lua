@@ -39,6 +39,7 @@ local TeamCommon = {
   },
   KickConfirmDialog = 100107,
   LeaveConfirmDialog = 100108,
+  CancelRecruitConfirmDialog = 100425,
   MeleeWeaponIconPath = "/Game/UI/Texture/Dynamic/Atlas/Battle/T_Battle_Team_Melee.T_Battle_Team_Melee",
   RangedWeaponIconPath = "/Game/UI/Texture/Dynamic/Atlas/Battle/T_Battle_Team_Ranged.T_Battle_Team_Ranged",
   Dead = "T_Dead_",

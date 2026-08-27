@@ -64,7 +64,7 @@ function WBP_Com_Activity_RewardTab_C:OnCellClicked(NotPlaySound)
   if self.IsSelect then
     return
   end
-  self.Content.Root:RefreshListRewardInfo(self, NotPlaySound)
+  self.Content.Root:RefreshListRewardInfo(self, NotPlaySound, true)
 end
 
 function WBP_Com_Activity_RewardTab_C:OnCellHovered()

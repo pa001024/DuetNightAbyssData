@@ -6,9 +6,4 @@ M.EPanelState = {
   Dialog = 4,
   Hidden = 5
 }
-M.CheckpointState = {
-  Normal = "Normal",
-  Aiming = "Aiming",
-  Completed = "Completed"
-}
 return M

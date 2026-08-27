@@ -351,13 +351,13 @@ function M:SetSelectedCharacterItem(NewSelectedCharacterItem)
   end
   if self.CurrentSelectedCharacterItem then
     self.CurrentSelectedCharacterItem.IsSelect = false
-    if self.CurrentSelectedCharacterItem.SelfWidget then
+    if IsValid(self.CurrentSelectedCharacterItem.SelfWidget) then
       self.CurrentSelectedCharacterItem.SelfWidget:SetSelected(false)
     end
   end
   if NewSelectedCharacterItem then
     NewSelectedCharacterItem.IsSelect = true
-    if NewSelectedCharacterItem.SelfWidget then
+    if IsValid(NewSelectedCharacterItem.SelfWidget) then
       NewSelectedCharacterItem.SelfWidget:SetSelected(true)
     end
   end

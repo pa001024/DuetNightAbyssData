@@ -1,3 +1,4 @@
+local SerializeUtils = require("Utils.SerializeUtils")
 local Component = {}
 
 function Component:CheckWeaponSkinEnough(CheckData)
@@ -155,14 +156,15 @@ function Component:RemoveCharAppearanceAccessory(CharUuid, AppearanceIndex, Acce
   self:CallServer("RemoveCharAppearanceAccessory", Callback, CharUuid, AppearanceIndex, AccessoryId)
 end
 
-function Component:SetCharSkinShowPart(CharUuid, SkinId, IsShowPartMesh)
+function Component:SetCharSkinShowPart(CharUuid, SkinId, IsShowPartMesh, AppearanceIndex)
+  AppearanceIndex = AppearanceIndex or -1
+  
   local function Callback(Ret)
-    self.logger.debug("ZJT_ 1 SetCharSkinShowPart ServerCallClient ", Ret, CharUuid, SkinId, IsShowPartMesh)
-    
-    EventManager:FireEvent(EventID.OnCharShowPartMesh, Ret, CharUuid, SkinId, IsShowPartMesh)
+    self.logger.debug("ZJT_ 1 SetCharSkinShowPart ServerCallClient ", Ret, CharUuid, SkinId, IsShowPartMesh, AppearanceIndex)
+    EventManager:FireEvent(EventID.OnCharShowPartMesh, Ret, CharUuid, SkinId, IsShowPartMesh, AppearanceIndex)
   end
   
-  self:CallServer("SetCharSkinShowPart", Callback, CharUuid, SkinId, IsShowPartMesh)
+  self:CallServer("SetCharSkinShowPart", Callback, CharUuid, SkinId, IsShowPartMesh, AppearanceIndex)
 end
 
 function Component:ChangeCharAppearanceSkin(CharUuid, AppearanceIndex, SkinId)
@@ -303,7 +305,7 @@ function Component:UpdateCharAppearanceSuitName(CharUuid, AppearanceIndex, NewNa
   local function Callback(Ret)
     self.logger.debug("ZJT_ UpdateCharAppearanceSuitName ", Ret, NewName)
     
-    EventManager:FireEvent(EventID.OnCharAppearanSuitRenamed, Ret, CharUuid, AppearanceIndex, NewName)
+    EventManager:FireEvent(EventID.OnCharAppearanceSuitRenamed, Ret, CharUuid, AppearanceIndex, NewName)
   end
   
   self:CallServer("UpdateCharAppearanceSuitName", Callback, CharUuid, AppearanceIndex, NewName)
@@ -384,6 +386,19 @@ end
 function Component:OpenAccessoryRankUI()
   local AppearanceRankModel = require("BluePrints.UI.WBP.Appearance.AppearanceRankModel")
   AppearanceRankModel:Open()
+end
+
+function Component:SetCharSkinEffectInterval(InCallback, SkinId, NewEffectInterval)
+  self.logger.debug("SetCharSkinEffectInterval Start", SkinId, NewEffectInterval)
+  
+  local function Callback(Ret)
+    self.logger.debug("SetCharSkinEffectInterval Callback", Ret, SkinId, NewEffectInterval)
+    if InCallback then
+      InCallback(Ret, SkinId, NewEffectInterval)
+    end
+  end
+  
+  self:CallServer("SetCharSkinEffectInterval", Callback, SkinId, NewEffectInterval)
 end
 
 return Component

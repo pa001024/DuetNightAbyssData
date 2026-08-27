@@ -526,9 +526,6 @@ function SystemGuideManager:IsSystemGuideStartBlocked()
       return true
     end
   end
-  if GWorld and GWorld.StoryMgr and GWorld.StoryMgr.bEnableStory == false then
-    return true
-  end
   return false
 end
 
@@ -1115,6 +1112,20 @@ end
 
 function SystemGuideManager:RemoveFlow(Flow)
   GameFlowUtils:RemoveFlow(Flow)
+end
+
+function SystemGuideManager:GetRunningGuideDiagnosticContext()
+  local GuideId = self.RunningId
+  if not (self.IsGuideStoryRunning and GuideId) or -1 == GuideId then
+    return nil
+  end
+  local GuideItem = self.GuideDic[GuideId]
+  local SystemGuideData = DataMgr and DataMgr.SystemGuide
+  local GuideData = GuideItem and GuideItem.Data or SystemGuideData and SystemGuideData[GuideId]
+  return {
+    GuideId = GuideId,
+    GuideStoryline = GuideData and GuideData.GuideStoryline or nil
+  }
 end
 
 function SystemGuideManager:RemoveCurStl()

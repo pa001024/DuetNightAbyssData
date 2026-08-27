@@ -12,8 +12,11 @@ function M:Construct()
   self.bIsFocusable = true
   self.Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   self.Controller = self.Player.Controller
-  self.GuildItemCount = self:GetGuildItemCount()
   self.CommonKeyDatas = self:GetCommonKeyDatas()
+  self.bMovedBefore = false
+  self.bMoved = false
+  self.GameInputModeSubsystem = UE4.UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
+  self.NavigateWidgetOpacity = 1
   self:SetVisibility(UIConst.VisibilityOp.Visible)
   self:InitCamera()
   self:InitKeySetting()
@@ -32,7 +35,8 @@ function M:InitKeySetting()
     [EKeys.W.KeyName] = self.OperatorCameraMoveClose,
     [EKeys.S.KeyName] = self.OperatorCameraMoveFar,
     [EKeys.Escape.KeyName] = self.OperatorEscape,
-    [EKeys.Delete.KeyName] = self.OperatorDelete
+    [EKeys.Delete.KeyName] = self.OperatorDelete,
+    [EKeys.Gamepad_FaceButton_Right.KeyName] = self.OperatorEscape
   }
   self.MouseWheelFuncMap = {
     MouseScrollUp = self.OperatorCameraZoomIn,
@@ -43,10 +47,26 @@ function M:InitKeySetting()
     [EKeys.Z.KeyName] = self.OperatorUndo,
     [EKeys.Y.KeyName] = self.OperatorRedo
   }
+  self.ShiftKeyDownFuncMap = {
+    [EKeys.X.KeyName] = self.OperatorLeft,
+    [EKeys.Z.KeyName] = self.OperatorRight
+  }
+  self.CameraGamepadKey = {
+    [UIConst.GamePadKey.DPadUp] = true,
+    [UIConst.GamePadKey.DPadDown] = true,
+    [UIConst.GamePadKey.DPadLeft] = true,
+    [UIConst.GamePadKey.DPadRight] = true,
+    [UIConst.GamePadKey.LeftTriggerThreshold] = true,
+    [UIConst.GamePadKey.RightTriggerThreshold] = true
+  }
 end
 
 function M:OperatorDelete()
   local DeletedId = self.GuildManager:GetSelectedActorGuild()
+  self:DeleteGuildActor(DeletedId)
+end
+
+function M:DeleteGuildActor(DeletedId)
   if not UE4.UGuildConstructFunctionLibrary.IsValidGuid(DeletedId) then
     return
   end
@@ -56,6 +76,13 @@ end
 
 function M:OnEndClose()
   USequenceFunctionLibrary.SetViewTargetWithBlend(self.Controller, self.Player)
+  if self.GuildManager then
+    self.GuildManager:OnCloseEditMode()
+    self.GuildManager.OnPlacedItemChanged:Remove(self, self.OnSceneDataChanged)
+    if self.ComponentList then
+      self.GuildManager.OnBuyItemChanged:Remove(self.ComponentList, self.ComponentList.OnGuildItemCountChanged)
+    end
+  end
 end
 
 function M:OperatorUndo()
@@ -73,15 +100,11 @@ function M:OperatorRedo()
 end
 
 function M:OperatorSave()
-  self.GuildManager:SaveScene("./GuildConstruct.json")
+  self.GuildManager:SaveSceneLua()
 end
 
 function M:OperatorEscape()
-  if self.SettingPanel and self.SettingPanel:GetVisibility() == UE4.ESlateVisibility.Visible then
-    self:CloseSidePanel()
-    return Handle
-  end
-  if self.ListPanel and self.ListPanel:GetVisibility() == UE4.ESlateVisibility.Visible then
+  if self:IsOpenSidePanel() then
     self:CloseSidePanel()
     return Handle
   end
@@ -91,18 +114,12 @@ function M:OperatorEscape()
     
     function Params.RightCallbackFunction()
       self:OperatorSave()
-      self.GuildManager:DiscardTemporaryOperations()
-      self.GuildManager:ClearHistory()
-      self.CameraActor:K2_SetActorTransform(self.CameraSavedTransform, false, nil, false)
       self:Close()
     end
     
     UIManager(self):ShowCommonPopupUI(100383, Params, self)
     return Handle
   end
-  self.GuildManager:DiscardTemporaryOperations()
-  self.GuildManager:ClearHistory()
-  self.CameraActor:K2_SetActorTransform(self.CameraSavedTransform, false, nil, false)
   self:Close()
   return Handle
 end
@@ -144,16 +161,16 @@ function M:PlacedCallBack(UnitId)
   local Hit = UE4.FHitResult()
   local bHit = UE4.UGuildConstructFunctionLibrary.LineTraceSingleObjectChannel(self, StartLocation, EndLocation, UE4.ECollisionChannel.ECC_GameTraceChannel14, Hit)
   if bHit then
-    self:CreateActor(UnitId, Hit, false)
+    self:CreateActor(UnitId, Hit)
   end
 end
 
-function M:CreateActor(UnitId, HitResult, SnapToGrid)
+function M:CreateActor(UnitId, HitResult)
   if not HitResult then
     return
   end
   local Point = HitResult.ImpactPoint
-  if SnapToGrid then
+  if self.GuildManager.ComponentMoveMode == UE4.EGuildComponentMoveMode.GridMove then
     Point.X = math.floor(Point.X / 50) * 50
     Point.Y = math.floor(Point.Y / 50) * 50
   end
@@ -161,30 +178,38 @@ function M:CreateActor(UnitId, HitResult, SnapToGrid)
   local CreateOperator = UE4.UGuildConstructFunctionLibrary.CreateActor(self.GuildManager, UnitId, HitResult.Actor, Point, FRotator(0, 0, 0), FVector(1, 1, 1))
   UE4.UGuildConstructFunctionLibrary.CreateActorExec(self.GuildManager, CreateOperator)
   self:EnterEditMode(CreateOperator.ActorCreateState.Id)
+  return CreateOperator
 end
 
 function M:OnClickDescMsg()
+  UIManager:ShowCommonPopupUI(100390, {})
 end
 
-function M:OnSceneDataChanged()
-  local UnitMap = self.GuildManager:CaculateSceneActorInfo()
+function M:OnSceneDataChanged(AddedCount, RemovedCount)
   local PlaceNum = 0
   local SumCost = 0
-  for Key, Value in pairs(UnitMap) do
-    local Data = DataMgr.GuildItem[Key]
-    if Data then
-      PlaceNum = PlaceNum + Value
-      SumCost = SumCost + Value * Data.Cost
+  local GuildItemCount = self.GuildManager and self.GuildManager.GuildItemCount or {}
+  for UnitId, ItemCount in pairs(GuildItemCount) do
+    local PlacedCount = ItemCount.PlacedCount or 0
+    if PlacedCount > 0 then
+      local Data = DataMgr.GuildItem[UnitId]
+      if Data then
+        PlaceNum = PlaceNum + PlacedCount
+        SumCost = SumCost + PlacedCount * Data.Cost
+      end
     end
   end
-  local CostTotal = 100.0
   self.Construct_Info.Text_PlaceNum:SetText(tostring(PlaceNum))
   self.Construct_Info.Text_CostNum:SetText(tostring(SumCost))
+  local CostTotal = self.GuildManager and self.GuildManager.CostTotal or 0
   self.Construct_Info.Text_CostTotal:SetText(tostring(CostTotal))
   if SumCost >= CostTotal then
     self.Construct_Info.Text_CostNum:SetColorAndOpacity(self.RedColor)
   else
     self.Construct_Info.Text_CostNum:SetColorAndOpacity(self.DefaultColor)
+  end
+  if self.SettingPanel and self.SettingPanel:IsVisible() and self.SettingPanel.RefreshUI then
+    self.SettingPanel:RefreshUI()
   end
 end
 
@@ -196,7 +221,7 @@ function M:InitInfo()
   self.DefaultColor = UE4.UUIFunctionLibrary.StringToSlateColor("E8A75BFF")
   self.RedColor = UE4.UUIFunctionLibrary.StringToSlateColor("E9003DFF")
   self:OnSceneDataChanged()
-  self.GuildManager.OnSceneChanged:Add(self, self.OnSceneDataChanged)
+  self.GuildManager.OnPlacedItemChanged:Add(self, self.OnSceneDataChanged)
 end
 
 function M:InitButton()
@@ -218,9 +243,8 @@ function M:InitCamera()
   self.bCameraZoomOutKeyDown = false
   self.bShiftKeyDown = false
   self.CameraActor = UE4.UGameplayStatics.GetActorOfClass(self, UE4.AGuildConstructCameraBase)
-  if self.CameraActor then
-    self.CameraActor.ComponentEdit = self.ComponentEdit
-    self.CameraSavedTransform = self.CameraActor:GetTransform()
+  if self.GuildManager then
+    self.CameraActor:Init(self.GuildManager)
   end
   USequenceFunctionLibrary.SetViewTarget(self:GetOwningPlayer(), self.CameraActor)
 end
@@ -229,14 +253,6 @@ function M:OnCancelSelect()
   self.ComponentList:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.Btn_Close:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.ComponentEdit:OnCancelSelect()
-end
-
-function M:GetGuildItemCount()
-  local GuildItemCount = {
-    [1] = 10,
-    [2] = 20
-  }
-  return GuildItemCount
 end
 
 function M:InitResourceBar()
@@ -251,9 +267,18 @@ function M:InitResourceBar()
   for _, CoinId in ipairs(TopResource) do
     self.ResourceBar:SetResourceBarVisibility(CoinId, true)
   end
+  local ResourceBarIcon = UIUtils.UtilsGetKeyIconPathInGamepad("RS", "Generic")
+  self.ResourceBar:SetGamePadKeyImgByPath(ResourceBarIcon)
+  self.ResourceBar:SetLastFocusWidget(self)
   self.ResourceBar:InitGamePadTip({
+    KeyInfo = {
+      KeyInfoList = {
+        {Type = "Img", ImgShortPath = "Menu"}
+      }
+    },
     ClickFuncObj = self,
-    ClickFunc = self.OnClickDescMsg
+    ClickFunc = self.OnClickDescMsg,
+    bAllowForbid = true
   })
   self.ResourceBar:HideTip(false)
 end
@@ -261,9 +286,11 @@ end
 function M:InitItemList()
   local UserData = {
     GuildManager = self.GuildManager,
-    GuildItems = self.GuildItemCount,
     ItemPlacedCallBack = function(_, UnitId)
       self:PlacedCallBack(UnitId)
+    end,
+    OperatorSave = function(_)
+      self:OperatorSave()
     end
   }
   self.ComponentList:Init(UserData, self.CommonKeyDatas)
@@ -276,6 +303,13 @@ end
 function M:CreateSidePanel(WidgetName)
   local WidgetPanel = UIManager(self):_CreateWidgetNew(WidgetName)
   WidgetPanel:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.SidePanel:AddChildToCanvas(WidgetPanel)
+  local Slot = WidgetPanel.Slot
+  local Anchors = UE4.FAnchors()
+  Anchors.Minimum = FVector2D(0, 0)
+  Anchors.Maximum = FVector2D(1, 1)
+  Slot:SetAnchors(Anchors)
+  Slot:SetOffsets(FMargin(0, 0, 0, 0))
   if WidgetPanel.Init then
     WidgetPanel:Init(self)
   end
@@ -287,13 +321,6 @@ function M:CreateSidePanel(WidgetName)
     WidgetPanel.Btn_Quit.OnClicked:Clear()
     WidgetPanel.Btn_Quit.OnClicked:Add(self, self.CloseSidePanel)
   end
-  self.SidePanel:AddChildToCanvas(WidgetPanel)
-  local Slot = WidgetPanel.Slot
-  local Anchors = UE4.FAnchors()
-  Anchors.Minimum = FVector2D(0, 0)
-  Anchors.Maximum = FVector2D(1, 1)
-  Slot:SetAnchors(Anchors)
-  Slot:SetOffsets(FMargin(0, 0, 0, 0))
   return WidgetPanel
 end
 
@@ -319,6 +346,10 @@ function M:OnListButtonDown()
   end
 end
 
+function M:IsOpenSidePanel()
+  return (not self.SettingPanel or not self.SettingPanel:IsVisible()) and self.ListPanel and self.ListPanel:IsVisible()
+end
+
 function M:CloseSidePanel()
   if self.SettingPanel then
     self.SettingPanel:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -341,15 +372,19 @@ function M:OnComponentTakeBackClicked(ItemData)
   if not ItemData or not ItemData.ActorId then
     return
   end
-  ScreenPrint("组件收回接口未接入")
+  self:DeleteGuildActor(ItemData.ActorId)
 end
 
 function M:OnComponentEditClicked(ItemData)
   if not ItemData or not ItemData.ActorId then
     return
   end
+  if not UE4.UGuildConstructFunctionLibrary.IsValidGuid(ItemData.ActorId) then
+    return
+  end
   self:CloseSidePanel()
-  self:SelectActor(ItemData.ActorId)
+  self.GuildManager:BeginExecuteOperation()
+  self:EnterEditMode(ItemData.ActorId)
 end
 
 function M:TestAddComponentList()
@@ -410,6 +445,8 @@ end
 function M:OnKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  ScreenPrint("chenxiaokang")
+  ScreenPrint(InKeyName)
   if UE4.UKismetInputLibrary.InputEvent_IsControlDown(InKeyEvent) then
     local Func = self.ControlKeyDownFuncMap and self.ControlKeyDownFuncMap[InKeyName]
     if Func then
@@ -488,6 +525,12 @@ end
 
 function M:OnMouseButtonDown(MyGeometry, MouseEvent)
   self.HitActor = nil
+  if self:IsOpenSidePanel() then
+    return
+  end
+  if self:IsOpenEditPanel() then
+    return
+  end
   local PlayerController = self:GetOwningPlayer()
   if PlayerController then
     local AbsoluteScreenPos = UE4.UKismetInputLibrary.PointerEvent_GetScreenSpacePosition(MouseEvent)
@@ -523,6 +566,9 @@ function M:OnMouseMove(MyGeometry, MouseEvent)
   if UKismetInputLibrary.PointerEvent_IsMouseButtonDown(MouseEvent, EKeys.RightMouseButton) and not self.bIsDragActor then
     local CursorDelta = UE4.UKismetInputLibrary.PointerEvent_GetCursorDelta(MouseEvent)
     self:RotateCamera(0, -CursorDelta.Y, CursorDelta.X)
+    if self:IsOpenEditPanel() and not self.ComponentEdit.bIsDragActor then
+      self.ComponentEdit:UpdateWidgetPosition()
+    end
   end
   return Unhandle
 end
@@ -580,26 +626,40 @@ function M:Tick(MyGeometry, InDeltaTime)
   if self.bShiftKeyDown then
     MoveStep = MoveStep * 1.5
   end
+  self.bMoved = false
   if self.bCameraMoveLeftKeyDown then
     self:MoveCamera(0, -MoveStep, 0)
+    self.bMoved = true
   end
   if self.bCameraMoveRightKeyDown then
     self:MoveCamera(0, MoveStep, 0)
+    self.bMoved = true
   end
   if self.bCameraMoveCloseKeyDown then
     self:MoveCamera(MoveStep, 0, 0)
+    self.bMoved = true
   end
   if self.bCameraMoveFarKeyDown then
     self:MoveCamera(-MoveStep, 0, 0)
+    self.bMoved = true
   end
   if self.bCameraZoomInKeyDown then
     self:ZoomCamera(-MoveStep)
     self.bCameraZoomInKeyDown = false
+    self.bMoved = true
   end
   if self.bCameraZoomOutKeyDown then
     self:ZoomCamera(MoveStep)
     self.bCameraZoomOutKeyDown = false
+    self.bMoved = true
   end
+  if self.bMoved and self:IsOpenEditPanel() and not self.ComponentEdit.bIsDragActor then
+    self.ComponentEdit:UpdateWidgetPosition()
+  end
+  if self.bMovedBefore and not self.bMoved and self:IsOpenEditPanel() then
+    self.ComponentEdit:UpdateWidgetPosition()
+  end
+  self.bMovedBefore = self.bMoved
 end
 
 function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
@@ -609,7 +669,6 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   if not self.Main:IsVisible() or not UIUtils.HasAnyFocus(self) then
     return
   end
-  self.ComponentList.List_Component:SetFocus()
 end
 
 function M:OnFocusReceived(MyGeometry, InFocusEvent)
@@ -679,6 +738,70 @@ function M:GetCommonKeyDatas()
     DescText = "调整视角"
   }
   return CommonKeyDatas
+end
+
+function M:IsOpenEditPanel()
+  return self.ComponentEdit and self.ComponentEdit:GetVisibility() ~= UIConst.VisibilityOp.Collapsed
+end
+
+function M:HandleGamepadCamera(MyGeometry, InKeyEvent)
+  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  if 0 ~= self.NavigateWidgetOpacity then
+    self.GameInputModeSubsystem:SetNavigateWidgetOpacity(0, true)
+    self.NavigateWidgetOpacity = 0
+  end
+  if InKeyName == UIConst.GamePadKey.DPadUp then
+    self:OperatorCameraMoveClose()
+  elseif InKeyName == UIConst.GamePadKey.DPadDown then
+    self:OperatorCameraMoveFar()
+  elseif InKeyName == UIConst.GamePadKey.DPadLeft then
+    self:OperatorCameraMoveLeft()
+  elseif InKeyName == UIConst.GamePadKey.DPadRight then
+    self:OperatorCameraMoveRight()
+  elseif InKeyName == UIConst.GamePadKey.LeftTriggerThreshold and not self:IsOpenSidePanel() then
+    self:OperatorCameraZoomIn()
+  elseif InKeyName == UIConst.GamePadKey.RightTriggerThreshold and not self:IsOpenSidePanel() then
+    self:OperatorCameraZoomOut()
+  end
+  return Handle
+end
+
+function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
+  local KeyName = self:KeyEventToKeyName(InKeyEvent)
+  if UIUtils.IsGamepadInput() and self.CameraGamepadKey[KeyName] then
+    return self:HandleGamepadCamera(MyGeometry, InKeyEvent)
+  end
+  return Unhandle
+end
+
+function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
+  local InKeyName = self:KeyEventToKeyName(InAnalogInputEvent)
+  local AddOffset = UE4.UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent)
+  if InKeyName == UIConst.GamePadKey.RightAnalogY then
+    self:RotateCamera(0, AddOffset, 0)
+    return Handle
+  elseif InKeyName == UIConst.GamePadKey.RightAnalogX then
+    self:RotateCamera(0, 0, AddOffset)
+    return Handle
+  elseif 1 ~= self.NavigateWidgetOpacity then
+    self.GameInputModeSubsystem:SetNavigateWidgetOpacity(1, true)
+    self.NavigateWidgetOpacity = 1
+  end
+  return Unhandle
+end
+
+function M:OnFocusReceived()
+  self.ComponentList.List_Component:SetFocus()
+end
+
+function M:KeyEventToKeyName(InKeyEvent)
+  if not InKeyEvent then
+    return
+  end
+  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  return InKeyName
 end
 
 return M

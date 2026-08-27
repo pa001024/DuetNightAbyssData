@@ -5,6 +5,105 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("Music", {
+  [101401] = {
+    Event = "event:/bgm/1_4/musicbox/0161_scene_train_station",
+    MusicDes = "HomePianoDes_101401",
+    MusicId = 101401,
+    MusicName = "HomePianoName_101401",
+    MusicScoreId = 1014,
+    PathDes = "HomePianoAcc_101401",
+    Resource = 3101401
+  },
+  [101402] = {
+    Event = "event:/bgm/1_4/musicbox/0166_story_danger",
+    MusicDes = "HomePianoDes_101402",
+    MusicId = 101402,
+    MusicName = "HomePianoName_101402",
+    MusicScoreId = 1014,
+    PathDes = "HomePianoAcc_101402",
+    Resource = 3101402
+  },
+  [101403] = {
+    Event = "event:/bgm/1_4/musicbox/0162_story_jazz_sneak_into",
+    MusicDes = "HomePianoDes_101403",
+    MusicId = 101403,
+    MusicName = "HomePianoName_101403",
+    MusicScoreId = 1014,
+    PathDes = "HomePianoAcc_101403",
+    Resource = 3101403
+  },
+  [101404] = {
+    Event = "event:/bgm/1_4/musicbox/0165_story_xier_theme",
+    MusicDes = "HomePianoDes_101404",
+    MusicId = 101404,
+    MusicName = "HomePianoName_101404",
+    MusicScoreId = 1014,
+    PathDes = "HomePianoAcc_101404",
+    Resource = 3101404
+  },
+  [101405] = {
+    Event = "event:/bgm/1_4/musicbox/0163_combat_jazz_01",
+    MusicDes = "HomePianoDes_101405",
+    MusicId = 101405,
+    MusicName = "HomePianoName_101405",
+    MusicScoreId = 1014,
+    PathDes = "HomePianoAcc_101405",
+    Resource = 3101405
+  },
+  [101406] = {
+    Event = "event:/bgm/1_4/musicbox/0168_boss_haluoji",
+    MusicDes = "HomePianoDes_101406",
+    MusicId = 101406,
+    MusicName = "HomePianoName_101406",
+    MusicScoreId = 1014,
+    PathDes = "HomePianoAcc_101406",
+    Resource = 3101406
+  },
+  [101407] = {
+    Event = "event:/bgm/1_4/musicbox/0167_story_fuluo_theme",
+    MusicDes = "HomePianoDes_101407",
+    MusicId = 101407,
+    MusicName = "HomePianoName_101407",
+    MusicScoreId = 1014,
+    PathDes = "HomePianoAcc_101407",
+    Resource = 3101407
+  },
+  [101408] = {
+    Event = "event:/bgm/1_4/musicbox/0170_story_fuluo_play_piano",
+    MusicDes = "HomePianoDes_101408",
+    MusicId = 101408,
+    MusicName = "HomePianoName_101408",
+    MusicScoreId = 1014,
+    PathDes = "HomePianoAcc_101408",
+    Resource = 3101408
+  },
+  [101409] = {
+    Event = "event:/bgm/1_4/musicbox/0171_combat_lieche_loop",
+    MusicDes = "HomePianoDes_101409",
+    MusicId = 101409,
+    MusicName = "HomePianoName_101409",
+    MusicScoreId = 1014,
+    PathDes = "HomePianoAcc_101409",
+    Resource = 3101409
+  },
+  [101410] = {
+    Event = "event:/bgm/1_4/musicbox/0172_story_counter_attack",
+    MusicDes = "HomePianoDes_101410",
+    MusicId = 101410,
+    MusicName = "HomePianoName_101410",
+    MusicScoreId = 1014,
+    PathDes = "HomePianoAcc_101410",
+    Resource = 3101410
+  },
+  [101411] = {
+    Event = "event:/bgm/1_4/musicbox/0173_story_main_theme_choir",
+    MusicDes = "HomePianoDes_101411",
+    MusicId = 101411,
+    MusicName = "HomePianoName_101411",
+    MusicScoreId = 1014,
+    PathDes = "HomePianoAcc_101411",
+    Resource = 3101411
+  },
   [1001001] = {
     Event = "event:/bgm/cbt01/musicbox/0015_login",
     MusicDes = "HomePianoDes_1001001",

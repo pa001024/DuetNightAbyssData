@@ -4,6 +4,18 @@ function M:Initialize(Initializer)
   rawset(self, "FilterInfos", {})
 end
 
+function M:ReceiveEndPlay(...)
+  UE4.UKismetSystemLibrary.ExecuteConsoleCommand(self, "r.SeparateTranslucency 1", nil)
+end
+
+function M:K2_OnEndViewTarget(PC)
+  UE4.UKismetSystemLibrary.ExecuteConsoleCommand(self, "r.SeparateTranslucency 1", nil)
+end
+
+function M:K2_OnBecomeViewTarget(PC)
+  UE4.UKismetSystemLibrary.ExecuteConsoleCommand(self, "r.SeparateTranslucency 0", nil)
+end
+
 function M:EnableFocusMethod(bEnable)
   local Camera = self:GetActiveCamera()
   Camera.FocusSettings.FocusMethod = bEnable and ECameraFocusMethod.Manual or ECameraFocusMethod.Disable
@@ -12,6 +24,26 @@ end
 function M:IsFocusMethodEnabled()
   local Camera = self:GetActiveCamera()
   return Camera.FocusSettings.FocusMethod ~= ECameraFocusMethod.Disable
+end
+
+function M:GetFocusDistance()
+  local Camera = self:GetActiveCamera()
+  return Camera.FocusSettings.ManualFocusDistance
+end
+
+function M:SetFocusDistance(FocusDistance)
+  local Camera = self:GetActiveCamera()
+  Camera.FocusSettings.ManualFocusDistance = FocusDistance
+end
+
+function M:GetAperture()
+  local Camera = self:GetActiveCamera()
+  return Camera.CurrentAperture
+end
+
+function M:SetAperture(Aperture)
+  local Camera = self:GetActiveCamera()
+  Camera.CurrentAperture = Aperture
 end
 
 function M:GetContrast()
@@ -95,47 +127,50 @@ function M:SetWhiteTint(WhiteTint)
   Camera.PostProcessSettings.WhiteTint = WhiteTint
 end
 
-function M:GetFilterIntensity()
+function M:GetFilterIntensity(FilterType)
   local Camera = self:GetActiveCamera()
   self.FilterInfos[Camera] = self.FilterInfos[Camera] or {}
-  return self.FilterInfos[Camera].Intensity or 1
+  self.FilterInfos[Camera].Intensities = self.FilterInfos[Camera].Intensities or {}
+  FilterType = FilterType or self:GetFilterType()
+  return self.FilterInfos[Camera].Intensities[FilterType] or 1
 end
 
 function M:SetFilterIntensity(Intensity)
-  local FilterType = self:GetFilterType()
-  self:SetFilter(nil)
   local Camera = self:GetActiveCamera()
+  local CurrentFilterType = self:GetFilterType()
+  self:SetFilter(nil)
   self.FilterInfos[Camera] = self.FilterInfos[Camera] or {}
-  self.FilterInfos[Camera].Intensity = Intensity
-  self.FilterInfos[Camera].FilterType = FilterType
+  self.FilterInfos[Camera].Intensities = self.FilterInfos[Camera].Intensities or {}
+  self.FilterInfos[Camera].Intensities[CurrentFilterType] = Intensity
+  self.FilterInfos[Camera].FilterType = CurrentFilterType
   self:UpdateCurrentFilter()
 end
 
 function M:SetFilter(FilterType)
   local Camera = self:GetActiveCamera()
   self.FilterInfos[Camera] = self.FilterInfos[Camera] or {}
-  self.FilterInfos[Camera].FilterType = FilterType
+  self.FilterInfos[Camera].FilterType = FilterType or -1
   self:UpdateCurrentFilter()
 end
 
 function M:GetFilterType()
   local Camera = self:GetActiveCamera()
   self.FilterInfos[Camera] = self.FilterInfos[Camera] or {}
-  return self.FilterInfos[Camera].FilterType
+  return self.FilterInfos[Camera].FilterType or -1
 end
 
 function M:UpdateCurrentFilter()
   local Camera = self:GetActiveCamera()
-  local FilterInfos = self.FilterInfos[Camera] or {}
-  local FilterType = FilterInfos.FilterType
-  local Intensity = FilterInfos.Intensity or self:GetFilterIntensity()
+  local FilterType = self:GetFilterType()
+  local Intensity = self:GetFilterIntensity(FilterType)
   local UPostProcessFunctionLibrary = LoadClass(Const.PostProcessFunctionLibraryPath)
   local OldMI = self.SimplePPMaterial:Find(Camera)
   if OldMI then
     UPostProcessFunctionLibrary.ClearSimplePostProcess(OldMI, Camera, Intensity)
     self.SimplePPMaterial:Remove(Camera)
+    Camera.PostProcessSettings.WeightedBlendables.Array:Clear()
   end
-  if FilterType then
+  if FilterType and FilterType >= 0 then
     local MI = UPostProcessFunctionLibrary.SimplePostProcess(FilterType, Camera, Intensity)
     self.SimplePPMaterial:Add(Camera, MI)
   end
@@ -160,7 +195,8 @@ function M:GetFilterData()
         ID = Res.ID,
         PPEnum = Res.PPEnum,
         IconPath = Res.IconPath and Res.IconPath .. IconPathSuffix,
-        TextmapID = Res.TextmapID
+        TextmapID = Res.TextmapID,
+        Step = Res.Step and Res.Step > 0 and Res.Step or 1
       })
     end
   end

@@ -3720,6 +3720,166 @@ return ReadOnly("Dispatch", {
     Ttk = 600,
     Weight = 1
   },
+  [210904] = {
+    DispatchCD = 450,
+    DispatchCondition = 89109,
+    DispatchDemand = T.RT_4,
+    DispatchId = 210904,
+    DispatchPerson = 2,
+    DispatchType = "Battle",
+    DispatchUIId = 210904,
+    PlayerLevel = T.RT_6,
+    Rarity = 2,
+    RegionId = 1071,
+    RewardId = {
+      40676,
+      40677,
+      40678,
+      40000
+    },
+    Ttk = 600,
+    Weight = 1
+  },
+  [210905] = {
+    DispatchCD = 450,
+    DispatchCondition = 89109,
+    DispatchDemand = T.RT_4,
+    DispatchId = 210905,
+    DispatchPerson = 2,
+    DispatchType = "Battle",
+    DispatchUIId = 210905,
+    PlayerLevel = T.RT_17,
+    Rarity = 2,
+    RegionId = 1071,
+    RewardId = {
+      40679,
+      40680,
+      40681,
+      40000
+    },
+    Ttk = 600,
+    Weight = 1
+  },
+  [211104] = {
+    DispatchCD = 450,
+    DispatchCondition = 89111,
+    DispatchDemand = T.RT_4,
+    DispatchId = 211104,
+    DispatchPerson = 2,
+    DispatchType = "Battle",
+    DispatchUIId = 211104,
+    PlayerLevel = T.RT_6,
+    Rarity = 2,
+    RegionId = 1071,
+    RewardId = {
+      40688,
+      40689,
+      40690,
+      40000
+    },
+    Ttk = 600,
+    Weight = 1
+  },
+  [211105] = {
+    DispatchCD = 450,
+    DispatchCondition = 89111,
+    DispatchDemand = T.RT_4,
+    DispatchId = 211105,
+    DispatchPerson = 2,
+    DispatchType = "Battle",
+    DispatchUIId = 211105,
+    PlayerLevel = T.RT_17,
+    Rarity = 2,
+    RegionId = 1071,
+    RewardId = {
+      40691,
+      40692,
+      40693,
+      40000
+    },
+    Ttk = 600,
+    Weight = 1
+  },
+  [211204] = {
+    DispatchCD = 450,
+    DispatchCondition = 89112,
+    DispatchDemand = T.RT_23,
+    DispatchId = 211204,
+    DispatchPerson = 2,
+    DispatchType = "Collect",
+    DispatchUIId = 211204,
+    PlayerLevel = T.RT_6,
+    Rarity = 2,
+    RegionId = 1070,
+    RewardId = {
+      40694,
+      40695,
+      40696,
+      40000
+    },
+    Ttk = 600,
+    Weight = 1
+  },
+  [211205] = {
+    DispatchCD = 450,
+    DispatchCondition = 89112,
+    DispatchDemand = T.RT_23,
+    DispatchId = 211205,
+    DispatchPerson = 2,
+    DispatchType = "Collect",
+    DispatchUIId = 211205,
+    PlayerLevel = T.RT_17,
+    Rarity = 2,
+    RegionId = 1070,
+    RewardId = {
+      40697,
+      40698,
+      40699,
+      40000
+    },
+    Ttk = 600,
+    Weight = 1
+  },
+  [211304] = {
+    DispatchCD = 450,
+    DispatchCondition = 89113,
+    DispatchDemand = T.RT_4,
+    DispatchId = 211304,
+    DispatchPerson = 2,
+    DispatchType = "Battle",
+    DispatchUIId = 211304,
+    PlayerLevel = T.RT_6,
+    Rarity = 2,
+    RegionId = 1071,
+    RewardId = {
+      40700,
+      40701,
+      40702,
+      40000
+    },
+    Ttk = 600,
+    Weight = 1
+  },
+  [211305] = {
+    DispatchCD = 450,
+    DispatchCondition = 89113,
+    DispatchDemand = T.RT_4,
+    DispatchId = 211305,
+    DispatchPerson = 2,
+    DispatchType = "Battle",
+    DispatchUIId = 211305,
+    PlayerLevel = T.RT_17,
+    Rarity = 2,
+    RegionId = 1071,
+    RewardId = {
+      40703,
+      40704,
+      40705,
+      40000
+    },
+    Ttk = 600,
+    Weight = 1
+  },
   [301802] = {
     DispatchCD = 600,
     DispatchCondition = 89018,
@@ -4741,6 +4901,46 @@ return ReadOnly("Dispatch", {
       40667,
       40668,
       40669,
+      40000
+    },
+    Ttk = 600,
+    Weight = 1
+  },
+  [311004] = {
+    DispatchCD = 600,
+    DispatchCondition = 89110,
+    DispatchDemand = T.RT_42,
+    DispatchId = 311004,
+    DispatchPerson = 3,
+    DispatchType = "Collect",
+    DispatchUIId = 311004,
+    PlayerLevel = T.RT_6,
+    Rarity = 3,
+    RegionId = 1071,
+    RewardId = {
+      40682,
+      40683,
+      40684,
+      40000
+    },
+    Ttk = 600,
+    Weight = 1
+  },
+  [311005] = {
+    DispatchCD = 600,
+    DispatchCondition = 89110,
+    DispatchDemand = T.RT_42,
+    DispatchId = 311005,
+    DispatchPerson = 3,
+    DispatchType = "Collect",
+    DispatchUIId = 311005,
+    PlayerLevel = T.RT_17,
+    Rarity = 3,
+    RegionId = 1071,
+    RewardId = {
+      40685,
+      40686,
+      40687,
       40000
     },
     Ttk = 600,

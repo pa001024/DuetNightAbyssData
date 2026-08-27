@@ -464,10 +464,42 @@
     "unlock": "通过棱镜兑换获得"
   },
   {
+    "id": 10059,
+    "name": "幽燃囚笼·黛蓝",
+    "desc": "囚笼无法关住火焰。",
+    "icon": "T_Fashion_Weapon43_03",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 10060,
+    "name": "幽燃囚笼·锈红",
+    "desc": "囚笼无法关住火焰。",
+    "icon": "T_Fashion_Weapon43_02",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 10061,
+    "name": "幽燃囚笼·涅白",
+    "desc": "囚笼无法关住火焰。",
+    "icon": "T_Fashion_Weapon43_01",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
     "id": 20001,
     "name": "爆裂涂鸦",
     "desc": "适用于招式魔之楔咆哮切割。",
     "icon": "T_Fashion_Fx20",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 20004,
+    "name": "荆棘螺旋",
+    "desc": "适用于招式魔之楔游影破空。",
+    "icon": "T_Fashion_Fx42",
     "rarity": 5,
     "unlock": "通过棱镜兑换获得"
   },
@@ -477,7 +509,7 @@
     "desc": "适用于招式魔之楔穿引共鸣。",
     "icon": "T_Fashion_Fx21",
     "rarity": 5,
-    "unlock": "通过棱镜兑换获得"
+    "unlock": "通过商店获得"
   },
   {
     "id": 40001,

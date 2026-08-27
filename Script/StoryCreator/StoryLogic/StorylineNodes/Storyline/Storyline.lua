@@ -1,5 +1,7 @@
 local StorylineUtils = require("StoryCreator.StoryLogic.StorylineUtils")
 local STLogType = UE.EStoryLogType.STL
+local TaskUtils = require("BluePrints.UI.TaskPanel.TaskUtils")
+local ImpressionController = require("BluePrints.Story.Talk.Controller.ImpressionController")
 local Storyline = Class("StoryCreator.StoryLogic.StorylineNodes.Storyline.BaseStoryline")
 
 function Storyline:Init(StorylineData, FileName, EndCallback, StopCallback, Payload)
@@ -10,24 +12,13 @@ function Storyline:Init(StorylineData, FileName, EndCallback, StopCallback, Payl
   self.EndCallback = EndCallback
   self.StopCallback = StopCallback
   self.Payload = Payload
-  self:TimerInit()
   self.RunningNodeList = {}
   self.FinishedNodeList = {}
   self.bLockRunningNodeList = false
   self.OnStartNodeCallbacks = {}
   self.OnFinishNodeCallbacks = {}
+  self:SetCurrentSTLData()
   self:BuildStoryline()
-end
-
-function Storyline:GetPayload(Key)
-  return self.Payload and self.Payload[Key]
-end
-
-function Storyline:AddPayload(Key, Value)
-  if not self.Payload then
-    self.Payload = {}
-  end
-  self.Payload[Key] = Value
 end
 
 function Storyline:BuildStoryline()
@@ -63,11 +54,7 @@ FileName:]] .. self.FileName
   end
 end
 
-function Storyline:GetStoryNode(QuestId)
-  return self.QuestIdNodeList[QuestId]
-end
-
-function Storyline:StartStory(QuestId, NodeId)
+function Storyline:StartStory(QuestId, NodeId, UseData)
   DebugPrint("Storyline StartStory QuestId:", QuestId, ",NodeId:", NodeId)
   if self.HasStarted then
     self.StartedNode = self.QuestIdNodeList[QuestId]
@@ -102,6 +89,10 @@ QuestId:]] .. QuestId
   self.RunningNodeList = {}
   self.HasStarted = true
   self.HasFinished = false
+  self:ResetChangedInfo()
+  if UseData then
+    self:UseCurrentSTLData()
+  end
   self:StartNode(self.StartedNode, NodeId)
 end
 
@@ -164,12 +155,13 @@ NodeInfo: %s]], self.FileName, Node:ToString())
   table.insert(self.FinishedNodeList, Node)
   self.RunningNodeList[Node.Key] = nil
   DebugPrint("----------------------------------------------------------FinishNode", Result, Node:ToString())
+  self:OnStoryNodeFinish(Node, OutPortNames, Result)
   for _, Callback in ipairs(self.OnFinishNodeCallbacks) do
     Callback.Func(Callback.Obj, self.QuestChainId, Node, OutPortNames, Result)
   end
   if Node == self._EndNode then
     if false == self._EndNode:GetEndResult() then
-      self:Stop()
+      self:StopStory()
     else
       self:FinishStory()
     end
@@ -205,13 +197,25 @@ QuestChainId:]] .. self.QuestChainId
     UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, STLogType, "任务链已结束", Message)
     return
   end
-  self:ClearStory(IgnoreFinishClear)
   self.HasFinished = true
   self.HasStarted = false
+  self:ClearStory(IgnoreFinishClear)
   self:OnFinish()
+  self:ClearVariable()
   DebugPrint("Storyline Finish", self.QuestChainId)
   if self.EndCallback then
     self:EndCallback()
+  end
+end
+
+function Storyline:StopStory(IgnoreFinishClear)
+  self.HasFinished = true
+  self.HasStarted = false
+  self:ClearStory(IgnoreFinishClear)
+  self:RollbackCurrentSTLData()
+  self:OnStop()
+  if self.StopCallback then
+    self:StopCallback()
   end
 end
 
@@ -227,6 +231,7 @@ function Storyline:ClearStory(IgnoreFinishClear)
     end
     Node.HasFinished = true
     Node.HasStarted = false
+    self:OnStoryNodeStop(Node)
     table.insert(self.FinishedNodeList, Node)
   end
   self.bLockRunningNodeList = false
@@ -234,52 +239,11 @@ function Storyline:ClearStory(IgnoreFinishClear)
   self:ClearNodeCallbacks()
 end
 
-function Storyline:Stop(IgnoreFinishClear)
-  self:ClearStory(IgnoreFinishClear)
-  self.HasFinished = true
-  self.HasStarted = false
-  self:OnStop()
-  if self.StopCallback then
-    self:StopCallback()
+function Storyline:ClearVariable()
+  local StorySubsystem = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UStorySubsystem:StaticClass())
+  if StorySubsystem then
+    StorySubsystem:ClearGlobalQuestVarsByQuestChainId(self.QuestChainId)
   end
-end
-
-function Storyline:Success()
-  for _, StoryNode in pairs(self.RunningNodeList) do
-    if StoryNode.SuccessQuest then
-      StoryNode:SuccessQuest()
-    end
-  end
-end
-
-function Storyline:PrintInfo()
-  DebugPrint("---------------------------StorylineInfo---------------------------")
-  DebugPrint("QuestchainId: ", self.QuestChainId)
-  for _, StoryNode in pairs(self.RunningNodeList) do
-    if StoryNode.PrintInfo then
-      StoryNode:PrintInfo()
-    end
-  end
-  DebugPrint("---------------------------StorylineInfo---------------------------")
-end
-
-function Storyline:TimerInit()
-  if self.TimerHandles == nil then
-    self.TimerHandles = {}
-    self.TimerKeyIdx = 0
-  end
-end
-
-function Storyline:GetTimerSource(IsRealTime)
-  if IsRealTime then
-    return URuntimeCommonFunctionLibrary
-  else
-    return UE4.UKismetSystemLibrary
-  end
-end
-
-function Storyline:StopStory()
-  self:Stop()
 end
 
 function Storyline:CheckHaveNextNode(Node, OutPortNames)
@@ -299,6 +263,17 @@ function Storyline:CheckHaveOutPort(OutPortNames, TargetOutPortName)
     end
   end
   return false
+end
+
+function Storyline:GetPayload(Key)
+  return self.Payload and self.Payload[Key]
+end
+
+function Storyline:AddPayload(Key, Value)
+  if not self.Payload then
+    self.Payload = {}
+  end
+  self.Payload[Key] = Value
 end
 
 function Storyline:ClearNodeCallbacks()
@@ -330,16 +305,141 @@ function Storyline:RemoveStartNodeCallback(Obj)
   end
 end
 
-function Storyline:IsGuideNodeRunning()
-  if self.HasFinished then
-    return false
-  end
-  for _, StoryNode in pairs(self.RunningNodeList or {}) do
-    if StoryNode.IsGuideNodeRunning and StoryNode:IsGuideNodeRunning() then
-      return true
+function Storyline:RecoverOnIncomplete(StoryNode, bRecoverBGM)
+  local QuestChainId = self.QuestChainId
+  local QuestId = StoryNode.QuestId
+  if QuestChainId > 0 and QuestId > 0 then
+    local Avatar = GWorld:GetAvatar()
+    local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
+    if Avatar and GameMode then
+      local TaskInfo = {
+        TaskChainId = QuestChainId,
+        TaskId = QuestId,
+        IsChainLastTask = StoryNode.bIsEndQuest,
+        IsChapterEnd = StoryNode.bIsEndChapter
+      }
+      Avatar:DoRefreshTaskItemUIInfo("Add", TaskInfo)
+      GameMode:RecoverDataByQuestChainId(QuestChainId, QuestId)
     end
   end
-  return false
+  if bRecoverBGM then
+    AudioManager(GWorld.GameInstance):RecoverLastSTLBGM()
+  end
+end
+
+function Storyline:OnStoryNodeStop(Node)
+  if Node.Questline then
+    self:RecoverOnIncomplete(Node, false)
+  end
+end
+
+function Storyline:OnStoryNodeFinish(StoryNode, OutPortNames, Result)
+  local Questline = StoryNode.Questline
+  if not Questline then
+    return
+  end
+  local QuestChainId = self.QuestChainId
+  local QuestId = StoryNode.QuestId
+  local STLData = Questline:GetSTLData()
+  local ConfirmFullfill = Questline:GetConfirmFullfill()
+  local Avatar = GWorld:GetAvatar()
+  local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
+  if not Avatar then
+    DebugPrint("Avatar Is nil")
+  end
+  if not GameMode then
+    DebugPrint("GameMode Is nil")
+  end
+  if true ~= Result then
+    DebugPrint("----------------------------------------------------------Storyline:OnStoryNodeFinish(Fail)", StoryNode:ToString())
+    self:RecoverOnIncomplete(StoryNode, true)
+    return
+  end
+  if QuestId > 0 and Avatar and Avatar:IsQuestFinished(QuestId) then
+    return
+  end
+  DebugPrint("----------------------------------------------------------Storyline:OnStoryNodeFinish(Success)", StoryNode:ToString())
+  GWorld.UploadQuestChainData = true
+  local PlayerCharacter = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
+  if 0 ~= StoryNode.JumpId then
+    TaskUtils:RemoveQuestInterfaceJump(QuestId)
+  end
+  if QuestChainId > 0 and QuestId > 0 and Avatar and GameMode and not TaskUtils:CheckSpecialTaskDoing() then
+    local RegionUpdateDatas = GameMode:GetRegionQuestChainUpdateData(QuestChainId)
+    local RegionQuestCommonUpdateDatas = GameMode:GetRegionQuestCommonUpdateData(QuestId)
+    GameMode:UpdateQuestRegionDatas(QuestChainId, RegionUpdateDatas)
+    self:SetSpecialLoadingId(StoryNode)
+    local Location = PlayerCharacter:GetSafeLocation()
+    if Location == FVector(0, 0, 0) then
+      local LastRegionLocation = Avatar.LastRegionData:GetLocation()
+      if LastRegionLocation and next(LastRegionLocation) then
+        Location = FVector(LastRegionLocation.X, LastRegionLocation.Y, LastRegionLocation.Z)
+      end
+    end
+    local Rotation = PlayerCharacter.CurrentRotation
+    local QuestCoordinate = {
+      LastRegionId = PlayerCharacter:GetRegionId(Location),
+      Location = {
+        X = Location.X,
+        Y = Location.Y,
+        Z = Location.Z
+      },
+      Rotation = {
+        Pitch = Rotation.Pitch,
+        Yaw = Rotation.Yaw,
+        Roll = Rotation.Roll
+      }
+    }
+    local STLExportInfo = DataMgr.STLExportQuestChain[QuestChainId]
+    local IsPreQuest = false
+    if STLExportInfo and STLExportInfo.Quests[QuestId] ~= nil and STLExportInfo.Quests[QuestId].IsPreQuest then
+      IsPreQuest = STLExportInfo.Quests[QuestId].IsPreQuest
+    end
+    local ServerParamTable = {}
+    ServerParamTable.QuestChainId = QuestChainId
+    ServerParamTable.QuestId = QuestId
+    ServerParamTable.TriggerType = CommonConst.QuestState.Success
+    ServerParamTable.TargetId = nil
+    ServerParamTable.TargetCount = nil
+    self:SaveCurrentSTLData(STLData)
+    ServerParamTable.STLData = STLData or {}
+    ServerParamTable.RegionQuestDatas = RegionUpdateDatas or {}
+    ServerParamTable.QuestCoordinate = QuestCoordinate or {}
+    ServerParamTable.QuestCommonDatas = RegionQuestCommonUpdateDatas or {}
+    ServerParamTable.SelectRes = ConfirmFullfill
+    ServerParamTable.bIsPlayBlackScreenOnComplete = StoryNode.bIsPlayBlackScreenOnComplete
+    ServerParamTable.ManualTrigger = nil
+    ServerParamTable.NextId = OutPortNames[1]
+    if IsPreQuest then
+      Avatar:HandleQuestChainDoing_QuestComplete(ServerParamTable)
+    else
+      Avatar:CompleteQuestSuccess(ServerParamTable)
+    end
+    AudioManager(GWorld.GameInstance):ClearSTLBGM()
+    local TaskInfo = {
+      TaskChainId = QuestChainId,
+      TaskId = QuestId,
+      IsChainLastTask = StoryNode.bIsEndQuest,
+      IsChapterEnd = StoryNode.bIsEndChapter
+    }
+    Avatar:DoRefreshTaskItemUIInfo("Delete", TaskInfo)
+  end
+  if TaskUtils:CheckSpecialTaskDoing() and StoryNode.QuestDescription ~= "" and "" ~= StoryNode.QuestDeatil then
+    TaskUtils:UpdateSpecialTaskInfo("DeleteSpecialTaskInfo", nil)
+  end
+  local TalkTriggerId = self:GetPayload("TalkTriggerId")
+  ImpressionController:SetTalkTriggerComplete(TalkTriggerId)
+  PlayerCharacter:SavePlayerSkillUsedTimes()
+  GWorld.UploadQuestChainData = false
+end
+
+function Storyline:SetSpecialLoadingId(StoryNode)
+  local Id = StoryNode.QuestDeliverId
+  local LoadingId = StoryNode.QuestDeliverLoadingId
+  if Id and LoadingId and DataMgr.SubRegion[Id] and DataMgr.RegionLoading[LoadingId] then
+    GWorld.GameInstance.QuestDeliverId = Id
+    GWorld.GameInstance.QuestDeliverLoadingId = LoadingId
+  end
 end
 
 function Storyline:OnStop()
@@ -360,6 +460,158 @@ function Storyline:OnFinish()
     end
   end
   self.FinishedNodeList = {}
+end
+
+function Storyline:GetStoryNode(QuestId)
+  return self.QuestIdNodeList[QuestId]
+end
+
+function Storyline:IsGuideNodeRunning()
+  if self.HasFinished then
+    return false
+  end
+  for _, StoryNode in pairs(self.RunningNodeList or {}) do
+    if StoryNode.IsGuideNodeRunning and StoryNode:IsGuideNodeRunning() then
+      return true
+    end
+  end
+  return false
+end
+
+function Storyline:PrintInfo()
+  DebugPrint("---------------------------StorylineInfo---------------------------")
+  DebugPrint("QuestchainId: ", self.QuestChainId)
+  for _, StoryNode in pairs(self.RunningNodeList) do
+    if StoryNode.PrintInfo then
+      StoryNode:PrintInfo()
+    end
+  end
+  DebugPrint("---------------------------StorylineInfo---------------------------")
+end
+
+function Storyline:UpdateCurrentSTLData(SuitSubType, SuitKey, UpdateParam)
+  if not self.CurrentSTLData then
+    self.CurrentSTLData = {}
+  end
+  if SuitSubType == CommonConst.QuestSuit.HideUIInScreen then
+    local IsHide = UpdateParam.IsHide
+    local Tag = UpdateParam.Tag
+    if not self.ChangedInfo[SuitSubType] then
+      self.ChangedInfo[SuitSubType] = {}
+    end
+    if not self.ChangedInfo[SuitSubType][SuitKey] then
+      self.ChangedInfo[SuitSubType][SuitKey] = 1
+    end
+    if not self.CurrentSTLData[SuitSubType] then
+      self.CurrentSTLData[SuitSubType] = {}
+    end
+    if not self.CurrentSTLData[SuitSubType][SuitKey] then
+      self.CurrentSTLData[SuitSubType][SuitKey] = {}
+    end
+    local TagSet = self.CurrentSTLData[SuitSubType][SuitKey]
+    if IsHide then
+      TagSet[Tag] = 1
+    else
+      TagSet[Tag] = nil
+    end
+  elseif SuitSubType == CommonConst.QuestSuit.ContinuedGuide then
+    local IsHide = UpdateParam.IsHide
+    local Tag = UpdateParam.Tag
+    if not self.ChangedInfo[SuitSubType] then
+      self.ChangedInfo[SuitSubType] = {}
+    end
+    if not self.ChangedInfo[SuitSubType][SuitKey] then
+      self.ChangedInfo[SuitSubType][SuitKey] = 1
+    end
+    if not self.CurrentSTLData[SuitSubType] then
+      self.CurrentSTLData[SuitSubType] = {}
+    end
+    if not self.CurrentSTLData[SuitSubType][SuitKey] then
+      self.CurrentSTLData[SuitSubType][SuitKey] = {}
+    end
+    local TagSet = self.CurrentSTLData[SuitSubType][SuitKey]
+    if IsHide then
+      TagSet[Tag] = nil
+    else
+      TagSet[Tag] = 1
+    end
+  end
+end
+
+function Storyline:SetCurrentSTLData(CurrentSTLData)
+  self.CurrentSTLData = CurrentSTLData and CurrentSTLData:save_dump(CurrentSTLData) or {}
+end
+
+function Storyline:ResetChangedInfo()
+  self.ChangedInfo = {}
+end
+
+function Storyline:UseCurrentSTLData()
+  if not self.CurrentSTLData then
+    return
+  end
+  if self.CurrentSTLData.HideUIInScreen then
+    local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
+    if GameMode and GameMode.HideUIInScreen then
+      for UIName, HideTags in pairs(self.CurrentSTLData.HideUIInScreen) do
+        for HideTag, _ in pairs(HideTags) do
+          GameMode:HideUIInScreen(UIName, true, HideTag)
+        end
+      end
+    end
+  end
+  if self.CurrentSTLData.ContinuedGuide then
+    local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
+    if GameMode and GameMode.SetContinuedPCGuideVisibility then
+      for ActionName, HideTags in pairs(self.CurrentSTLData.ContinuedGuide) do
+        for HideTag, _ in pairs(HideTags) do
+          GameMode:SetContinuedPCGuideVisibility(ActionName, false, HideTag)
+        end
+      end
+    end
+  end
+end
+
+function Storyline:RollbackCurrentSTLData()
+  if not self.CurrentSTLData then
+    return
+  end
+  if self.CurrentSTLData.HideUIInScreen then
+    local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
+    if GameMode and GameMode.HideUIInScreen then
+      for UIName, HideTags in pairs(self.CurrentSTLData.HideUIInScreen) do
+        for HideTag, _ in pairs(HideTags) do
+          GameMode:HideUIInScreen(UIName, false, HideTag)
+        end
+      end
+    end
+  end
+  if self.CurrentSTLData.ContinuedGuide then
+    local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
+    if GameMode and GameMode.SetContinuedPCGuideVisibility then
+      for ActionName, HideTags in pairs(self.CurrentSTLData.ContinuedGuide) do
+        for HideTag, _ in pairs(HideTags) do
+          GameMode:SetContinuedPCGuideVisibility(ActionName, true, HideTag)
+        end
+      end
+    end
+  end
+end
+
+function Storyline:SaveCurrentSTLData(STLData)
+  for SuitSubType, SuitKeys in pairs(self.ChangedInfo) do
+    if SuitSubType == CommonConst.QuestSuit.HideUIInScreen then
+      for SuitKey, _ in pairs(SuitKeys) do
+        local HideTags = self.CurrentSTLData[SuitSubType][SuitKey]
+        STLData:SaveSuitUpdateData("UpdateSuitKey2Table", CommonConst.SuitType.QuestSuit, CommonConst.QuestSuit.HideUIInScreen, SuitKey, HideTags)
+      end
+    elseif SuitSubType == CommonConst.QuestSuit.ContinuedGuide then
+      for SuitKey, _ in pairs(SuitKeys) do
+        local ShowTags = self.CurrentSTLData[SuitSubType][SuitKey]
+        STLData:SaveSuitUpdateData("UpdateSuitKey2Table", CommonConst.SuitType.QuestSuit, CommonConst.QuestSuit.ContinuedGuide, SuitKey, ShowTags)
+      end
+    end
+  end
 end
 
 return Storyline

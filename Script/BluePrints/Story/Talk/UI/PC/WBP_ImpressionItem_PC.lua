@@ -28,11 +28,13 @@ end
 function WBP_ImpressionItem_PC:OnSelectedByPlatform(bIsSelect)
   DebugPrint("WBP_ImpressionItem_PC:OnSelectByPlatform", bIsSelect)
   if bIsSelect then
-    self:StopAnimation(self.UnHover)
-    self:StopAnimation(self.Forbidden_UnHover)
     if self:IsSelfEnabled() then
+      self:StopAnimation(self.Normal)
+      self:StopAnimation(self.UnHover)
       self:PlayAnimation(self.Hover, 0, 1)
     else
+      self:StopAnimation(self.Forbidden_Normal)
+      self:StopAnimation(self.Forbidden_UnHover)
       self:PlayAnimation(self.Forbidden_Hover)
     end
   else

@@ -17,6 +17,13 @@ function WBP_CommonDialogCurrency_PC_C:InitContent(Params)
       IsCantItemSelection = true,
       MenuPlacement = EMenuPlacement.MenuPlacement_MenuRight
     })
+    self.CurrencyItemContent = {
+      ItemType = "Resource",
+      ItemId = Params.ResourceId,
+      MenuPlacement = EMenuPlacement.MenuPlacement_MenuRight,
+      UIName = "CommonDialog",
+      IsShowDetails = true
+    }
   end
   self.Text_Expend:SetText(Params.Denominator)
   if Params.bShowNumerator then
@@ -73,12 +80,57 @@ function WBP_CommonDialogCurrency_PC_C:RefreshOpInfoByInputDevice(CurInputDevice
     return
   end
   self.CurInputDeviceType = CurInputDevice
-  if self.CurInputDeviceType == ECommonInputType.MouseAndKeyboard then
+  self:RefreshCurrencyGamepadKeyVisible()
+end
+
+function WBP_CommonDialogCurrency_PC_C:RefreshCurrencyGamepadKeyVisible()
+  if not self.Key_GamePad then
+    return
+  end
+  local bShow = self.CurInputDeviceType == ECommonInputType.Gamepad and not self:IsCurrencyTipsOpen()
+  self.Key_GamePad:SetVisibility(bShow and UIConst.VisibilityOp.Visible or UIConst.VisibilityOp.Collapsed)
+end
+
+function WBP_CommonDialogCurrency_PC_C:GetCurrencyMenuAnchor()
+  local ItemIcon = self.Common_Item_Icon
+  return ItemIcon and ItemIcon.ItemDetails_MenuAnchor or nil
+end
+
+function WBP_CommonDialogCurrency_PC_C:IsCurrencyTipsOpen()
+  local MenuAnchor = self:GetCurrencyMenuAnchor()
+  local AnchorWidget = MenuAnchor and MenuAnchor.ItemDetailsMenuAnchor
+  return AnchorWidget and AnchorWidget:IsOpen() or false
+end
+
+function WBP_CommonDialogCurrency_PC_C:BindCurrencyMenuOpenChanged(Obj, Callback)
+  local MenuAnchor = self:GetCurrencyMenuAnchor()
+  local AnchorWidget = MenuAnchor and MenuAnchor.ItemDetailsMenuAnchor
+  if AnchorWidget then
+    AnchorWidget.OnMenuOpenChanged:Remove(Obj, Callback)
+    AnchorWidget.OnMenuOpenChanged:Add(Obj, Callback)
+  end
+end
+
+function WBP_CommonDialogCurrency_PC_C:OpenCurrencyTips(RestoreFocusWidget)
+  local MenuAnchor = self:GetCurrencyMenuAnchor()
+  if not MenuAnchor or not self.CurrencyItemContent then
+    return false
+  end
+  if MenuAnchor and RestoreFocusWidget then
+    MenuAnchor:SetLastFocusWidget(RestoreFocusWidget)
+  end
+  if self.Key_GamePad then
     self.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  elseif self.CurInputDeviceType == ECommonInputType.Gamepad then
-    self.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Visible)
-  else
-    self.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  MenuAnchor:OpenItemDetailsWidget(false, self.CurrencyItemContent)
+  self:RefreshCurrencyGamepadKeyVisible()
+  return self:IsCurrencyTipsOpen()
+end
+
+function WBP_CommonDialogCurrency_PC_C:CloseCurrencyTips(bForce)
+  local MenuAnchor = self:GetCurrencyMenuAnchor()
+  if MenuAnchor then
+    MenuAnchor:CloseItemDetailsWidget(bForce)
   end
 end
 

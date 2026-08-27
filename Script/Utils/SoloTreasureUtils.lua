@@ -1,12 +1,11 @@
 local SoloTreasureUtils = {}
-local SDRC = require("Datas.ServerDomLevel_data.ServerDomRandomCreator")
-local SDSC = require("Datas.ServerDomLevel_data.ServerDomStaticCreator")
 local AvatarUtils = require("BluePrints.Client.AvatarUtils")
 
 function SoloTreasureUtils:GenerateStaticPointsList(DungeonId)
   if not DungeonId then
     return {}
   end
+  local SDSC = require("Datas.ServerDomLevel_data.ServerDomStaticCreator")
   local DungeonData = SDSC[DungeonId]
   if not DungeonData then
     return {}
@@ -22,6 +21,7 @@ function SoloTreasureUtils:GenerateRandomPointsList(DungeonId)
   if not DungeonId then
     return {}
   end
+  local SDRC = require("Datas.ServerDomLevel_data.ServerDomRandomCreator")
   local DungeonRandomCreatorData = SDRC[DungeonId]
   if not DungeonRandomCreatorData then
     return {}
@@ -336,6 +336,7 @@ function SoloTreasureUtils:CalcTotalTreasureScore_LotteryType_5(AllItemList, Par
 end
 
 function SoloTreasureUtils:GetStaticCreatorInfo(DungeonId, StaticCreatorId)
+  local SDSC = require("Datas.ServerDomLevel_data.ServerDomStaticCreator")
   if not SDSC[DungeonId] then
     return nil
   end
@@ -362,8 +363,18 @@ end
 function SoloTreasureUtils:SoloTreasureGetSeasonConfig(EventId)
   local NowTime = TimeUtils.NowTime()
   for _, tabSeasonData in pairs(DataMgr.PermanentTreasureHunt) do
-    local StartTime = tabSeasonData.SeasonStartDate and TimeUtils.EastEightToLocalTimestamp(tabSeasonData.SeasonStartDate) or 0
-    local EndTime = tabSeasonData.SeasonAvailableDate and TimeUtils.EastEightToLocalTimestamp(tabSeasonData.SeasonAvailableDate) or math.maxinteger
+    local StartTime = tabSeasonData.SeasonStartDate
+    if GWorld:IsSkynetServer() then
+      StartTime = TimeUtils.EastEightToLocalTimestamp(tabSeasonData.SeasonStartDate) or StartTime or 0
+    else
+      StartTime = 0
+    end
+    local EndTime = tabSeasonData.SeasonAvailableDate
+    if GWorld:IsSkynetServer() then
+      EndTime = TimeUtils.EastEightToLocalTimestamp(tabSeasonData.SeasonAvailableDate) or EndTime or math.maxinteger
+    else
+      EndTime = math.maxinteger
+    end
     if tabSeasonData.SeasonEventId == EventId and NowTime >= StartTime and NowTime < EndTime then
       return tabSeasonData
     end

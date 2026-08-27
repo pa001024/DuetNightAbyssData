@@ -32,6 +32,11 @@ function Component:InitSpecialView(ItemData, ...)
     self.Text_NotHold:SetText(GText("UI_Consumable_NotOwned"))
     self.WidgetSwitcher_Info:SetActiveWidgetIndex(1)
   end
+  if ItemData.NotShowInfo then
+    self.WidgetSwitcher_Info:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  else
+    self.WidgetSwitcher_Info:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  end
 end
 
 return Component

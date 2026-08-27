@@ -1,4 +1,5 @@
 require("UnLua")
+local GLink = require("Utils.MiscUtils").GLink
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
 })

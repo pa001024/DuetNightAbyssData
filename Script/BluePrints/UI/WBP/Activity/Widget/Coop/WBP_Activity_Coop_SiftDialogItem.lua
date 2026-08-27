@@ -8,6 +8,13 @@ function M:Construct()
   self.isSelectedAll = false
   self.disableInteraction = false
   self.CurContent = nil
+  self.ListReward.OnCreateEmptyContent:Bind(self, self.CreateEmptyRewardContent)
+end
+
+function M:CreateEmptyRewardContent()
+  local Content = NewObject(UIUtils.GetCommonItemContentClass())
+  Content.IsEmpty = true
+  return Content
 end
 
 function M:Init(Owner, InItem)
@@ -63,6 +70,7 @@ function M:InitSelectionItems(SelectionDatas, SelectionText, IconPaths)
       self.ListReward:AddItem(Content)
     end
   end
+  self.ListReward:RequestFillEmptyContent()
 end
 
 function M:RefreshBigReward(RewardId, IsSelected)
@@ -76,7 +84,7 @@ function M:RefreshBigReward(RewardId, IsSelected)
   local numChildren = self.ListReward:GetNumItems()
   for i = 1, numChildren do
     local child = self.ListReward:GetItemAt(i - 1)
-    if child and child.UI and child.UI.Content.bClick == false then
+    if child and not child.IsEmpty and child.UI and child.UI.Content.bClick == false then
       allSelected = false
       break
     end
@@ -106,7 +114,7 @@ function M:OnBtnSelectAllClicked()
   local numChildren = self.ListReward:GetNumItems()
   for i = 1, numChildren do
     local child = self.ListReward:GetItemAt(i - 1)
-    if child and child.UI and child.UI.Content.bClick ~= isChecked then
+    if child and not child.IsEmpty and child.UI and child.UI.Content.bClick ~= isChecked then
       child.UI:OnClickSelected()
     end
   end
@@ -124,7 +132,7 @@ function M:OnSelectionItemChanged(CheckState, selectionUI)
   local numChildren = self.ListReward:GetNumItems()
   for i = 1, numChildren do
     local child = self.ListReward:GetItemAt(i - 1)
-    if child and child.UI.Content.bClick == false then
+    if child and not child.IsEmpty and child.UI and child.UI.Content.bClick == false then
       allSelected = false
       break
     end
@@ -165,6 +173,7 @@ function M:PlayCheckSound(IsChecked)
 end
 
 function M:Destruct()
+  self.ListReward.OnCreateEmptyContent:Unbind()
   self.Btn_SelectAll.OnClicked:Remove(self, self.OnBtnSelectAllClicked)
   self.Btn_SelectAll.OnHovered:Remove(self, self.OnBtnSelectAllHovered)
   self.Btn_SelectAll.OnUnhovered:Remove(self, self.OnBtnSelectAllUnhovered)
@@ -277,7 +286,7 @@ function M:GetPrevWrapBox()
 end
 
 function M:OnItemHoveredChanged(Content, IsHover)
-  if not IsValid(Content) then
+  if not IsValid(Content) or Content.IsEmpty then
     return
   end
   if IsHover then

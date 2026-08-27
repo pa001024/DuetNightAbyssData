@@ -20,10 +20,9 @@ function M:PreStartFlowNode(StartNode)
       if IsValid(Node) then
         Node:TriggerFirstOutput(true)
       end
-      if self.RestartDialogueId then
-        self:SetSkipInRestartTag(true)
-        self:SkipToEnd()
-        self:SetSkipInRestartTag(nil)
+      local DialogueFlowGraphComponent = self.TalkTask.DialogueFlowGraphComponent
+      if DialogueFlowGraphComponent then
+        DialogueFlowGraphComponent:SkipToRestartDialogue()
       end
     end)
   elseif UE4.URuntimeCommonFunctionLibrary.IsPlayInEditor(self) then
@@ -51,10 +50,9 @@ function M:StartDebugTalkTaskCreation()
     if IsValid(Node) then
       Node:TriggerFirstOutput(true)
     end
-    if self.RestartDialogueId then
-      self:SetSkipInRestartTag(true)
-      self:SkipToEnd()
-      self:SetSkipInRestartTag(nil)
+    local DialogueFlowGraphComponent = Task.DialogueFlowGraphComponent
+    if DialogueFlowGraphComponent then
+      DialogueFlowGraphComponent:SkipToRestartDialogue()
     end
   end)
 end

@@ -194,7 +194,6 @@ return {
               BlendEaseExp = 2,
               ForceAutoPlay = true,
               ShowSkipButton = true,
-              ShowAutoPlayButton = true,
               ShowReviewButton = true,
               ShowWikiButton = true,
               BeginNewTargetPointName = "",

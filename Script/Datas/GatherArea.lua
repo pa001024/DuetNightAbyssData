@@ -14,7 +14,7 @@ return ReadOnly("GatherArea", {
     GatherAreaTeleportId = 1011,
     Shape = 2,
     SubRegion = 101101,
-    UnlockConditionId = 100208
+    UnlockConditionId = 10020105
   },
   [2] = {
     AreaId = 2,
@@ -48,5 +48,16 @@ return ReadOnly("GatherArea", {
     Shape = 1,
     SubRegion = 106001,
     UnlockConditionId = 332
+  },
+  [5] = {
+    AreaId = 5,
+    AreaLocation = {-19450, -78420},
+    AreaRotYaw = 0,
+    AreaScale = {170, 170},
+    FloorId = 0,
+    GatherAreaTeleportId = 1702,
+    Shape = 2,
+    SubRegion = 107001,
+    UnlockConditionId = 110232
   }
 })

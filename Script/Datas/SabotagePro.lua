@@ -36,5 +36,6 @@ return ReadOnly("SabotagePro", {
     DungeonId = 64202,
     MonsterSpawnIds = T.RT_1,
     TimeLimit = 90
-  }
+  },
+  [91801] = {DungeonId = 91801, TimeLimit = 90}
 })

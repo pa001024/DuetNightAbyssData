@@ -39,7 +39,8 @@ Weapon.__Props__ = {
   WeaponSubType = prop.getter("Data", "WeaponSubType"),
   HyperCardLevel = prop.prop("Int", "client save", 0),
   HyperTalent = prop.prop("Int2IntSetDict", "client save"),
-  IsStar = prop.prop("Bool", "client save", false)
+  IsStar = prop.prop("Bool", "client save", false),
+  IsWarLike = prop.prop("Bool", "client save", false)
 }
 
 function Weapon:Init(Uuid, WeaponId, Level)
@@ -791,32 +792,16 @@ function Weapon:CalcAddAttrs(Avatar, BaseValues, ModRateValues, ModAddValues, Ch
   end
   for Index, AttrData in pairs(AddData.AddAttrs) do
     if AttrData.HyperWeaponSkillTreeID and 0 ~= AttrData.HyperWeaponSkillTreeID and not HyperWeaponUtils.IsHyperWeaponSkillActivatedByUid(self.Uuid, AttrData.HyperWeaponSkillTreeID) then
-    elseif AttrData.IsWeaponMastery then
-      if not Char then
-      else
-        local BattleInfo = Char:BattleData()
-        local ExcelWeaponTags = BattleInfo and BattleInfo.ExcelWeaponTags
-        local bMasteryMatch = false
-        if ExcelWeaponTags then
-          for _, ExcelWeaponTag in pairs(ExcelWeaponTags) do
-            if self:HasTag(ExcelWeaponTag) then
-              bMasteryMatch = true
-              break
-            end
-          end
-        end
-        if not bMasteryMatch then
-        elseif not AttrData.IsCharAttr then
-          local UniqueName = table.concat({
-            "Weapon:[",
-            self.WeaponId,
-            "]AddAttrs:[",
-            Index,
-            "]"
-          })
-          self:CalcOneAttrData(BaseValues, ModRateValues, ModAddValues, AttrData, 1, UniqueName)
-        end
-      end
+    elseif AttrData.IsWeaponMastery and not self:IsWeaponInMastery(Char) then
+    elseif not AttrData.IsCharAttr then
+      local UniqueName = table.concat({
+        "Weapon:[",
+        self.WeaponId,
+        "]AddAttrs:[",
+        Index,
+        "]"
+      })
+      self:CalcOneAttrData(BaseValues, ModRateValues, ModAddValues, AttrData, 1, UniqueName)
     end
   end
 end
@@ -828,32 +813,16 @@ function Weapon:CalcCharAddAttrs(BaseValues, ModRateValue, ModAddValues, Char)
   end
   for Index, AttrData in pairs(AddData.AddAttrs) do
     if AttrData.HyperWeaponSkillTreeID and 0 ~= AttrData.HyperWeaponSkillTreeID and not HyperWeaponUtils.IsHyperWeaponSkillActivatedByUid(self.Uuid, AttrData.HyperWeaponSkillTreeID) then
-    elseif AttrData.IsWeaponMastery then
-      if not Char then
-      else
-        local BattleInfo = Char:BattleData()
-        local ExcelWeaponTags = BattleInfo and BattleInfo.ExcelWeaponTags
-        local bMasteryMatch = false
-        if ExcelWeaponTags then
-          for _, ExcelWeaponTag in pairs(ExcelWeaponTags) do
-            if self:HasTag(ExcelWeaponTag) then
-              bMasteryMatch = true
-              break
-            end
-          end
-        end
-        if not bMasteryMatch then
-        elseif AttrData.IsCharAttr then
-          local UniqueName = table.concat({
-            "Weapon:[",
-            self.WeaponId,
-            "]AddAttrs:[",
-            Index,
-            "]"
-          })
-          self:CalcOneAttrData(BaseValues, ModRateValue, ModAddValues, AttrData, 1, UniqueName)
-        end
-      end
+    elseif AttrData.IsWeaponMastery and not self:IsWeaponInMastery(Char) then
+    elseif AttrData.IsCharAttr then
+      local UniqueName = table.concat({
+        "Weapon:[",
+        self.WeaponId,
+        "]AddAttrs:[",
+        Index,
+        "]"
+      })
+      self:CalcOneAttrData(BaseValues, ModRateValue, ModAddValues, AttrData, 1, UniqueName)
     end
   end
 end
@@ -892,27 +861,45 @@ function Weapon:CalcOneAttrs(AttrName, BaseValues, ModRateValues, RateIndex, Mod
   end
 end
 
-function Weapon:CalcExcelWeaponAttr(Avatar, ModRateValues, Char)
+function Weapon:IsWeaponInMastery(Char)
   if not Char then
+    return false
+  end
+  local BattleInfo = Char:BattleData()
+  local ExcelWeaponTags = BattleInfo and BattleInfo.ExcelWeaponTags
+  if ExcelWeaponTags then
+    for _, ExcelWeaponTag in pairs(ExcelWeaponTags) do
+      if self:HasTag(ExcelWeaponTag) then
+        return true
+      end
+    end
+  end
+  local Expand = Char.CurrentExcelWeaponExpand
+  if Expand then
+    for ExcelWeaponTag in pairs(Expand) do
+      if self:HasTag(ExcelWeaponTag) then
+        return true
+      end
+    end
+  end
+  return false
+end
+
+function Weapon:CalcExcelWeaponAttr(Avatar, ModRateValues, Char)
+  if not self:IsWeaponInMastery(Char) then
     return
   end
   local BattleInfo = Char:BattleData()
-  local ExcelWeaponTags = BattleInfo.ExcelWeaponTags
-  if not ExcelWeaponTags then
+  local ExcelWeaponRate = BattleInfo and BattleInfo.ExcelWeaponRate
+  if not ExcelWeaponRate then
     return
   end
-  for _, ExcelWeaponTag in pairs(ExcelWeaponTags) do
-    if self:HasTag(ExcelWeaponTag) then
-      local ExcelWeaponRate = BattleInfo.ExcelWeaponRate
-      for _AttrName, _ in pairs(DataMgr.Attribute) do
-        local AttrName = "ATK_" .. _AttrName
-        if not ModRateValues[AttrName] then
-          ModRateValues[AttrName] = {}
-        end
-        ModRateValues[AttrName][CommonConst.RateIndex.ExcelWeapon] = (ModRateValues[AttrName][CommonConst.RateIndex.ExcelWeapon] or 0) + ExcelWeaponRate
-      end
-      return
+  for _AttrName, _ in pairs(DataMgr.Attribute) do
+    local AttrName = "ATK_" .. _AttrName
+    if not ModRateValues[AttrName] then
+      ModRateValues[AttrName] = {}
     end
+    ModRateValues[AttrName][CommonConst.RateIndex.ExcelWeapon] = (ModRateValues[AttrName][CommonConst.RateIndex.ExcelWeapon] or 0) + ExcelWeaponRate
   end
 end
 

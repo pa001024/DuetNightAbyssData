@@ -1,4 +1,5 @@
 local M = Class("BluePrints.Common.MVC.Model")
+local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 
 local function ClearPendingRoomRankRequest(self, Avatar)
   if Avatar and Avatar.UnregisterRoomDamageListListener then
@@ -16,6 +17,31 @@ function M:Destory()
   local Avatar = self:GetAvatar()
   ClearPendingRoomRankRequest(self, Avatar)
   M.Super.Destory(self)
+  self.BonusRate = nil
+end
+
+function M:GetActivityStartEndTime(ActivityId)
+  local EventMainExcel = DataMgr.EventMain[ActivityId]
+  if not EventMainExcel then
+    DebugPrint(ErrorTag, "GetActivityStartEndTime: EventMainExcel is nil, ActivityId = " .. tostring(ActivityId))
+    return nil, nil
+  end
+  return EventMainExcel.EventStartTime:GetTime(), EventMainExcel.EventEndTime:GetTime()
+end
+
+function M:GetBonusRateByRateId(RateId)
+  if not self.BonusRate then
+    self.BonusRate = {}
+  end
+  if not self.BonusRate[RateId] then
+    if 0 == RateId then
+      self.BonusRate[RateId] = DataMgr.AsyncCombatEventConstant.Async_FreeRoomBonusRate.ConstantValue * 100
+      return self.BonusRate[RateId]
+    end
+    local RateResData = DataMgr.Resource[RateId]
+    self.BonusRate[RateId] = RateResData.UseParam / 100
+  end
+  return self.BonusRate[RateId]
 end
 
 function M:GetAsyncCombatRoomRewardIdList()
@@ -119,10 +145,51 @@ function M:AsyncCombatGetGoingRoomNum()
   local EventId = DataMgr.AsyncCombatEventConstant.AsyncCombat_EventId.ConstantValue
   local MaxNum = DataMgr.AsyncCombatEventConstant.AsyncCombat_ConcurrencyLimit.ConstantValue
   local count = 0
+  if not AsyncCombat[EventId] then
+    return 0, MaxNum
+  end
   for _ in pairs(AsyncCombat[EventId].GoingRoom) do
     count = count + 1
   end
   return count, MaxNum
+end
+
+function M:AsyncCombatGetFreeCreateTimes()
+  local Avatar = self:GetAvatar()
+  if not Avatar then
+    return 0, 0
+  end
+  local AsyncCombat = Avatar.AsyncCombats
+  local EventId = DataMgr.AsyncCombatEventConstant.AsyncCombat_EventId.ConstantValue
+  if not AsyncCombat[EventId] then
+    DebugPrint(ErrorTag, "AsyncCombatGetPlayerInfo: AsyncCombat[EventId] is nil, EventId = " .. tostring(EventId))
+    return 0, 0
+  end
+  local EventMainExcel = DataMgr.EventMain[EventId]
+  local NowTime = TimeUtils.NowTime()
+  local EndTime = EventMainExcel.EventEndTime
+  local StartTime = EventMainExcel.EventStartTime or 0
+  local LastRefreshTime = AsyncCombat[EventId].FreeCreateTimesRefreshTime or 0
+  if StartTime and LastRefreshTime < StartTime:GetTime() or NowTime >= EndTime:GetTime() then
+    return 0, 0
+  end
+  local FreeCreateTimes = AsyncCombat[EventId].FreeCreateTimes
+  local FreeGiveNum = DataMgr.AsyncCombatEventConstant.Async_FreeGiveNum.ConstantValue
+  return FreeCreateTimes, FreeGiveNum
+end
+
+function M:AsyncCombatGetFreeCreateTimesRefreshTime()
+  local Avatar = self:GetAvatar()
+  if not Avatar then
+    return 0
+  end
+  local AsyncCombat = Avatar.AsyncCombats
+  local EventId = DataMgr.AsyncCombatEventConstant.AsyncCombat_EventId.ConstantValue
+  if not AsyncCombat[EventId] then
+    DebugPrint(ErrorTag, "AsyncCombatGetPlayerInfo: AsyncCombat[EventId] is nil, EventId = " .. tostring(EventId))
+    return 0
+  end
+  return AsyncCombat[EventId].FreeCreateTimesRefreshTime or 0
 end
 
 function M:AsyncCombatGetPlayerInfo()
@@ -132,6 +199,10 @@ function M:AsyncCombatGetPlayerInfo()
   end
   local AsyncCombat = Avatar.AsyncCombats
   local EventId = DataMgr.AsyncCombatEventConstant.AsyncCombat_EventId.ConstantValue
+  if not AsyncCombat[EventId] then
+    DebugPrint(ErrorTag, "AsyncCombatGetPlayerInfo: AsyncCombat[EventId] is nil, EventId = " .. tostring(EventId))
+    return 0
+  end
   return AsyncCombat[EventId].CreateRoomTimes or 0
 end
 

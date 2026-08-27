@@ -8,6 +8,8 @@ function WBP_AchievementPanel_C:Initialize(Initializer)
   self.ShowQueen = {}
   self.index = 1
   self.StartTime = 0
+  self.ToastTimerKey = "AchievementToastDuration"
+  self.ToastState = "Idle"
 end
 
 function WBP_AchievementPanel_C:OnLoaded(...)
@@ -51,6 +53,7 @@ function WBP_AchievementPanel_C:UpdateAchievementPage(CountStage, TargetNeedCoun
   end
   
   local function wrapfunc()
+    self.ToastState = "FadingOut"
     if self:IsAnimationPlaying(self.FadeIn) or self:IsAnimationPlaying(self.FadeOut) then
       self:StopAnimation(self.FadeIn)
       self:StopAnimation(self.FadeOut)
@@ -58,7 +61,7 @@ function WBP_AchievementPanel_C:UpdateAchievementPage(CountStage, TargetNeedCoun
     self:PlayAnimation(self.FadeOut, 0, 1, EUMGSequencePlayMode.Forward, 1, true)
   end
   
-  self:AddTimer(5.0, wrapfunc)
+  self:AddTimer(5.0, wrapfunc, false, nil, self.ToastTimerKey)
   self.StartTime = UE4.UGameplayStatics.GetTimeSeconds(self)
   local Text_Title_Info = GText(self.AchievementConfigData.AchievementName)
   local Straight_matter_Desc = GText("UI_AchievementToast_Progress")
@@ -89,6 +92,7 @@ function WBP_AchievementPanel_C:UpdateAchievementPage(CountStage, TargetNeedCoun
     self:StopAnimation(self.FadeIn)
     self:StopAnimation(self.FadeOut)
   end
+  self.ToastState = "Showing"
   self:PlayAnimation(self.FadeIn, 0, 1, EUMGSequencePlayMode.Forward, 1, false)
 end
 
@@ -101,7 +105,24 @@ function WBP_AchievementPanel_C:AddQuene(AchvId, Count, TargetNeedCount, NewInde
   table.insert(self.ShowQueen, info)
 end
 
+function WBP_AchievementPanel_C:HasPendingAchievementToast()
+  if not self.ShowQueen then
+    return false
+  end
+  if self.ShowQueen[self.index] ~= nil then
+    return true
+  end
+  local NextIndex = next(self.ShowQueen)
+  self.index = NextIndex or 1
+  return nil ~= NextIndex
+end
+
 function WBP_AchievementPanel_C:Text_Title_End_Event()
+  self:RemoveTimer(self.ToastTimerKey)
+  self.ToastState = "Idle"
+  if self:GetVisibility() == UE4.ESlateVisibility.Collapsed then
+    return
+  end
   local avatar = GWorld:GetAvatar()
   if self.ShowQueen[self.index] ~= nil and avatar then
     local Info = self.ShowQueen[self.index]
@@ -124,6 +145,13 @@ function WBP_AchievementPanel_C:Text_Title_End_Event()
     return
   end
   self:Close()
+end
+
+function WBP_AchievementPanel_C:Hide(HideTag)
+  WBP_AchievementPanel_C.Super.Hide(self, HideTag)
+  if self.ToastState == "Showing" and self:IsExistTimer(self.ToastTimerKey) then
+    self:PauseTimer(self.ToastTimerKey)
+  end
 end
 
 function WBP_AchievementPanel_C:TriggerUnlock()
@@ -153,9 +181,30 @@ function WBP_AchievementPanel_C:EndTalk()
 end
 
 function WBP_AchievementPanel_C:Show(HideTag)
+  if not self:HasPendingAchievementToast() and self.ToastState == "Idle" then
+    HideTag = HideTag or UIConst.CommonHideTagName.DefaultTag
+    self.HideTags = self.HideTags or {}
+    self.HideTags[HideTag] = nil
+    if IsEmptyTable(self.HideTags) and self:GetVisibility() ~= UE4.ESlateVisibility.Collapsed then
+      self:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
+    return
+  end
   WBP_AchievementPanel_C.Super.Show(self, HideTag)
   local IsHide = not IsEmptyTable(self.HideTags)
-  if not IsHide then
+  if IsHide then
+    return
+  end
+  if self.ToastState == "Showing" then
+    if self:IsExistTimer(self.ToastTimerKey) then
+      self:UnPauseTimer(self.ToastTimerKey)
+    end
+    return
+  end
+  if self.ToastState == "FadingOut" then
+    return
+  end
+  if self:HasPendingAchievementToast() then
     self:Text_Title_End_Event()
   end
 end

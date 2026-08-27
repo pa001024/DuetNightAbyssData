@@ -1,5 +1,6 @@
 require("UnLua")
 local EMCache = require("EMCache.EMCache")
+local CoopModel = require("BluePrints.UI.WBP.Activity.PC.Coop.Model.CoopModel")
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
 })
@@ -29,10 +30,16 @@ function M:Initialize(Initializer)
   self._UpdatingRoomState = false
   self.bCreated = false
   self.bInGuild = nil
+  self.bFreeMode = false
+  self.AvailableFreeCreateTimes = -1
+  self.TotalFreeCreateTimes = -1
 end
 
 function M:Construct()
   self.Btn.Button_Area.OnClicked:Add(self, self.CreateRoom)
+  if self.CreateBtn_Personal then
+    self.CreateBtn_Personal.Button_Area.OnClicked:Add(self, self.CreateFreeRoom)
+  end
   self.BtnClose01.Btn_Close.OnClicked:Add(self, self.ClickClose)
   self.BtnCloseFull.OnClicked:Add(self, self.ClickClose)
   local DesiredWidget = UE4.FWidgetChild()
@@ -42,7 +49,187 @@ end
 function M:Destruct()
 end
 
+function M:InitFree()
+  local Used, Limit = CoopModel:AsyncCombatGetFreeCreateTimes()
+  DebugPrint(string.format("WBP_Activity_Coop_Create_P_C:InitFree: Used: %s, Limit: %s", tostring(Used), tostring(Limit)))
+  local Rest = Limit - Used
+  self.bFreeMode = Rest and Rest > 0
+  self.AvailableFreeCreateTimes = Rest
+  self.TotalFreeCreateTimes = Limit
+end
+
+function M:InitFreeReward()
+  self.ListReward:ClearListItems()
+  local RewardIdSet = {}
+  local RewardIdList = {}
+  for key, value in pairs(DataMgr.AsyncCombat) do
+    if value.Invalid then
+    elseif 1 == value.RoomType then
+      local RewardId = value.ID
+      if RewardId and not RewardIdSet[RewardId] then
+        RewardIdSet[RewardId] = true
+        table.insert(RewardIdList, RewardId)
+      end
+    end
+  end
+  local SelectedRewardId = RewardIdList[1]
+  for key, value in ipairs(RewardIdList) do
+    local RewardData = DataMgr.Resource[value]
+    local Content = NewObject(UIUtils.GetCommonItemContentClass())
+    Content.Id = RewardData.ResourceId
+    Content.Icon = RewardData.Icon
+    Content.ItemType = "Resource"
+    Content.UIName = RewardData.ResourceName
+    Content.Rarity = RewardData.Rarity
+    Content.IsShowDetails = false
+    Content.ParentWidget = self
+    Content.Parent = self
+    Content.Rec = "Reward"
+    if value == SelectedRewardId then
+      Content.bClick = true
+      self.CurReward = Content
+      self.CurClickRewardItem = Content
+    else
+      Content.bClick = false
+    end
+    Content.OnMouseButtonDownEvent = {
+      Obj = self,
+      Callback = function()
+        if self.CurClickRewardItem then
+          self.CurClickRewardItem.SelfWidget:SetSelected(false)
+        end
+        if self.CurClickEntrustItem then
+          self.CurClickEntrustItem.SelfWidget:SetSelected(false)
+        end
+        AudioManager(self):PlayItemSound(self, Content.Id, "Click", Content.ItemType)
+        Content.SelfWidget:SetSelected(true)
+        self.CurClickRewardItem = Content
+        self.WBP_Com_Tips:SetVisibility(UE4.ESlateVisibility.Visible)
+        self.WBP_Com_Tips:RefreshItemInfo(Content, true)
+      end
+    }
+    Content.OverrideDetailsBackObject = self
+    
+    function Content.OverrideDetailsBackEvent()
+      self:SetFocus()
+    end
+    
+    self.ListReward:AddItem(Content)
+  end
+  self:AddTimer(0.01, function()
+    if self.CurReward then
+      self.ListReward:BP_NavigateToItem(self.CurReward)
+    end
+  end)
+end
+
+function M:InitFreeTicket()
+  self.ListMultiplier:ClearListItems()
+  if self.WS_Multiplier then
+    self.WS_Multiplier:SetActiveWidgetIndex(1)
+  end
+  if self.Text_Multiplier_01 then
+    self.Text_Multiplier_01:SetText(GText("UI_AsyncCombat_NoManualConsume"))
+  end
+  if self.Text_Multiplier_02 then
+    self.Text_Multiplier_02:SetText(GText("UI_AsyncCombat_ActivityRewardRate"))
+  end
+  if self.Tag_Multiplier then
+    if DataMgr.AsyncCombatEventConstant and DataMgr.AsyncCombatEventConstant.Async_FreeRoomBonusRate and DataMgr.AsyncCombatEventConstant.Async_FreeRoomBonusRate.ConstantValue then
+      self.Tag_Multiplier.TextNum:SetText(string.format("+%s%%", tostring(DataMgr.AsyncCombatEventConstant.Async_FreeRoomBonusRate.ConstantValue * 100)))
+    end
+    if self.Tag_Multiplier.Personal then
+      self.Tag_Multiplier:PlayAnimation(self.Tag_Multiplier.Personal)
+    end
+  end
+end
+
+function M:InitFreeRoomLevel()
+  self.ListDifficulty:ClearListItems()
+  if self.WS_Difficulty then
+    self.WS_Difficulty:SetActiveWidgetIndex(1)
+  end
+  local Content = NewObject(UIUtils.GetCommonItemContentClass())
+  Content.Level = 110
+  Content.bClick = true
+  Content.ParentWidget = self
+  self.Difficulty_Personal:OnListItemObjectSet(Content)
+  self.Difficulty_Personal.Btn.OnClicked:Clear()
+  self.Difficulty_Personal.bIsFocusable = false
+end
+
+function M:InitFreeRoomState()
+  if self.WS_Private then
+    self.WS_Private:SetActiveWidgetIndex(1)
+  end
+  if self.Private_Personal then
+    self.Private_Personal.TextPrivate:SetText(GText("UI_AsyncCombat_Public"))
+    self.Private_Personal:Init(RoomState.Public, self)
+    self:SetRoomStateChecked(RoomState.Public, false)
+    self:SetRoomStateChecked(RoomState.Friend, false)
+    self:SetRoomStateChecked(RoomState.Guild, false)
+    self:SetRoomStateChecked(RoomState.Private, false)
+    self.Public = true
+    self.Private_Personal.Btn.OnClicked:Clear()
+    self.Private_Personal:SetChecked(true)
+    self.Private_Personal.bIsFocusable = false
+  end
+end
+
+function M:InitFreeRoomBtn()
+  if self.WS_CreateBtn then
+    self.WS_CreateBtn:SetActiveWidgetIndex(1)
+  end
+  if self.CreateBtn_Personal then
+    self.CreateBtn_Personal.Cd_Node:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.CreateBtn_Personal.TextContent:SetVisibility(UIConst.VisibilityOp.Visible)
+    self.CreateBtn_Personal.TextStart:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    local Text = GText("UI_AsyncCombat_FreeCreateCount")
+    local I18nText = string.format(Text, self.AvailableFreeCreateTimes, self.TotalFreeCreateTimes)
+    self.CreateBtn_Personal.TextContent:SetText(I18nText)
+  end
+end
+
+function M:CreateFreeRoom()
+  DebugPrint(string.format("WBP_Activity_Coop_Create_P_C:CreateFreeRoom: self.AvailableFreeCreateTimes: %s, self.TotalFreeCreateTimes: %s", tostring(self.AvailableFreeCreateTimes), tostring(self.TotalFreeCreateTimes)))
+  if not self.bFreeMode then
+    return
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  
+  local function Callback(ErrorNumber, RoomInfo)
+    DebugPrint(string.format("WBP_Activity_Coop_Create_P_C:CreateFreeRoom: ErrorCode: %s, RoomInfo: %s", tostring(ErrorNumber), tostring(RoomInfo)))
+    if not ErrorCode:Check(ErrorNumber) then
+      UIManager(self):ShowUITip(UIConst.Tip_CommonTop, GText("UI_AsyncCombat_ConditionNotMet"))
+      return
+    end
+    local Detail = UIManager(self):LoadUINew("CoopDetails", RoomInfo, false)
+    if Detail then
+      Detail:InitPageTab()
+      Detail:Init(RoomInfo)
+      Detail.bNeedRefreshHallList = true
+      self.bCreated = true
+    end
+    self:ClickClose()
+    Avatar:RefreshAsyncCombatNew()
+  end
+  
+  Avatar:AsyncCombatCreateRoom(Callback, self.RoomId, DataMgr.AsyncCombatEventConstant.Async_FreeRoomBonusRate.ConstantValue or 10, {1})
+end
+
+function M:InitFreeNavigation()
+  self.ListReward:SetNavigationRuleCustom(EUINavigation.Down, {
+    self,
+    function()
+    end
+  })
+end
+
 function M:Init(Parent)
+  self:InitFree()
   self.Parent = Parent
   self:PlayAnimation(self.In)
   AudioManager(self):PlayUISound(self, "event:/ui/activity/lianmeiyanyi_crystal_sub_panel_show", "Open", nil)
@@ -63,12 +250,21 @@ function M:Init(Parent)
   self.Btn.Cd_Node:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Btn.TextContent:SetVisibility(UE4.ESlateVisibility.Visible)
   self.Btn.TextStart:SetVisibility(UE4.ESlateVisibility.Collapsed)
-  self:InitReward()
-  self:InitTicket()
-  self:InitRoomLevel()
-  self:InitRoomState()
-  self:InitNavgation()
-  self:InitRoomBtn()
+  if not self.bFreeMode then
+    self:InitReward()
+    self:InitTicket()
+    self:InitRoomLevel()
+    self:InitRoomState()
+    self:InitNavgation()
+    self:InitRoomBtn()
+  else
+    self:InitFreeReward()
+    self:InitFreeTicket()
+    self:InitFreeRoomLevel()
+    self:InitFreeRoomState()
+    self:InitFreeNavigation()
+    self:InitFreeRoomBtn()
+  end
   self.Btn:ForbidBtn(true)
   self:AddTimer(0.01, function()
     self:RefreshBigReward(self.CurReward.Id)
@@ -83,6 +279,9 @@ function M:InitRoomBtn()
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
+  end
+  if self.WS_CreateBtn then
+    self.WS_CreateBtn:SetActiveWidgetIndex(0)
   end
   local Count = DataMgr.AsyncCombatEventConstant.AsyncCombat_WeeklyLimit.ConstantValue
   local EventId = DataMgr.AsyncCombatEventConstant.AsyncCombat_EventId.ConstantValue
@@ -153,7 +352,7 @@ function M:InitReward()
   local RewardIdList = {}
   for key, value in pairs(DataMgr.AsyncCombat) do
     if value.Invalid then
-    else
+    elseif 1 ~= value.RoomType then
       local RewardId = value.ID
       if RewardId and not RewardIdSet[RewardId] then
         RewardIdSet[RewardId] = true
@@ -235,6 +434,9 @@ function M:InitTicket()
   if not Avatar then
     return
   end
+  if self.WS_Multiplier then
+    self.WS_Multiplier:SetActiveWidgetIndex(0)
+  end
   self.ListMultiplier:ClearListItems()
   local CachedEntrustId = EMCache:Get("Entrust")
   local BlueId = DataMgr.AsyncCombatEventConstant.AsyncCombat_AddBonusRate1.ConstantValue
@@ -308,7 +510,7 @@ function M:InitTicket()
     end
   end
   
-  self:AddTimer(0.1, SelectDefaultEntrustCallback, true, 0, "SelectDefaultEntrustTimer")
+  self:AddTimer(0.1, SelectDefaultEntrustCallback, false, 0, "SelectDefaultEntrustTimer")
 end
 
 function M:SelectDefaultEntrust(FirstOwnedEntrust)
@@ -331,6 +533,9 @@ function M:SelectDefaultEntrust(FirstOwnedEntrust)
 end
 
 function M:InitRoomState()
+  if self.WS_Private then
+    self.WS_Private:SetActiveWidgetIndex(0)
+  end
   self.Private01:Init(RoomState.Public, self)
   self.Private02:Init(RoomState.Friend, self)
   self.Private03:Init(RoomState.Guild, self)
@@ -486,6 +691,9 @@ function M:UpdateSelectBtn(Forbid)
 end
 
 function M:InitRoomLevel()
+  if self.WS_Difficulty then
+    self.WS_Difficulty:SetActiveWidgetIndex(0)
+  end
   self.ListDifficulty:ClearListItems()
   local CachedLevel = EMCache:Get("CurLevel")
   local LevelTable = {
@@ -585,6 +793,9 @@ function M:CreateRoom()
 end
 
 function M:GetRate()
+  if self.bFreeMode and DataMgr.AsyncCombatEventConstant and DataMgr.AsyncCombatEventConstant.Async_FreeRoomBonusRate and DataMgr.AsyncCombatEventConstant.Async_FreeRoomBonusRate.ConstantValue then
+    return DataMgr.AsyncCombatEventConstant.Async_FreeRoomBonusRate.ConstantValue
+  end
   local Rate
   if self.Entrust and self.Entrust.TicketId then
     if self.Entrust.TicketId == 206 then
@@ -605,7 +816,8 @@ function M:RefreshBigReward(Id)
     self.CurCount = nil
     for key, value in pairs(DataMgr.AsyncCombat) do
       local Info = DataMgr.AsyncCombat[key]
-      if Info.ID == Id and Info.Level == self.CurLevel.Level and not Info.Invalid then
+      if self.bFreeMode and 1 ~= Info.RoomType then
+      elseif Info.ID == Id and Info.Level == self.CurLevel.Level and not Info.Invalid then
         self.RoomId = key
         self.CurCount = Info.Count
         break
@@ -640,7 +852,7 @@ function M:RefreshBigReward(Id)
   end
   self.BigReward.Icon.WBP_Com_ItemIcon.Img_Icon:SetBrushFromTexture(LoadObject(DataMgr.Resource[Id].Icon))
   self.BigReward.Icon.Panel_ItemNum:SetVisibility(UE4.ESlateVisibility.Visible)
-  if self.Entrust then
+  if self.Entrust or RealCount then
     self.BigReward.Icon.TextNum:SetText(RealCount)
   else
     self.BigReward.Icon.TextNum:SetText("???")
@@ -654,7 +866,11 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
     self:ClickClose()
     return UE4.UWidgetBlueprintLibrary.Handled()
   elseif "Gamepad_FaceButton_Left" == InKeyName then
-    self:CreateRoom()
+    if not self.bFreeMode then
+      self:CreateRoom()
+    else
+      self:CreateFreeRoom()
+    end
     return UE4.UWidgetBlueprintLibrary.Handled()
   elseif "Gamepad_FaceButton_Right" == InKeyName then
     if self.WBP_Com_Tips:HasFocusedDescendants() or self.WBP_Com_Tips:HasAnyUserFocus() then
@@ -682,6 +898,9 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputType, CurGamepadName)
       self.Panel_Key:ClearChildren()
     end
     self.Btn.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    if self.CreateBtn_Personal then
+      self.CreateBtn_Personal.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
     if self.GamepadEntrust and self.GamepadEntrust.bHover and not self.GamepadEntrust.bClick then
       self.GamepadEntrust.UI:PlayAnimation(self.GamepadEntrust.UI.UnHover)
       self.GamepadEntrust.bHover = false
@@ -694,6 +913,9 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputType, CurGamepadName)
     self:SetFocus()
     self:InitPadKeyInfo()
     self.Btn.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Visible)
+    if self.CreateBtn_Personal then
+      self.CreateBtn_Personal.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Visible)
+    end
     self.UsingGamepad = true
   end
 end
@@ -717,6 +939,9 @@ function M:InitPadKeyInfo()
   self.Panel_Key:AddChild(Key_Choose)
   self.Panel_Key:AddChild(Key_B)
   self.Btn.WBP_Com_KeyImg:CreateGamepadKey("X")
+  if self.CreateBtn_Personal then
+    self.CreateBtn_Personal.WBP_Com_KeyImg:CreateGamepadKey("X")
+  end
 end
 
 function M:ClickClose()

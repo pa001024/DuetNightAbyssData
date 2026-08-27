@@ -122,7 +122,7 @@ function BattleDumpUtils:GetDefaultUltraWeaponInfo(Avatar, Char)
   return UltraWeapons
 end
 
-function BattleDumpUtils:GetPhantomBattleInfo(Avatar, Char, Weapon, Pet, bNotUseUWeapon)
+function BattleDumpUtils:GetPhantomBattleInfo(Avatar, Char, Weapon, Pet, bNotUseUWeapon, ModSuit, WeaponModSuit)
   local Info = {
     Char = Char,
     IsPhantom = true,
@@ -141,13 +141,22 @@ function BattleDumpUtils:GetPhantomBattleInfo(Avatar, Char, Weapon, Pet, bNotUse
   end
   if Info.Char then
     Info.CharModSuit = Info.Char.ModSuitIndex
+    if ModSuit and ModSuit > 0 then
+      Info.CharModSuit = ModSuit
+    end
     Info.UltraWeapons = self:GetDefaultUltraWeaponInfo(Avatar, Info.Char)
   end
   if Info.MeleeWeapon then
     Info.MeleeWeaponModSuit = Info.MeleeWeapon.ModSuitIndex
+    if WeaponModSuit and WeaponModSuit > 0 then
+      Info.MeleeWeaponModSuit = WeaponModSuit
+    end
   end
   if Info.RangedWeapon then
     Info.RangedWeaponModSuit = Info.RangedWeapon.ModSuitIndex
+    if WeaponModSuit and WeaponModSuit > 0 then
+      Info.RangedWeaponModSuit = WeaponModSuit
+    end
   end
   local AvatarInfo = self:GetBattleInfoByInfo(Avatar, Info, bNotUseUWeapon)
   AvatarInfo.Pet = {}
@@ -258,6 +267,7 @@ function BattleDumpUtils:GetSquadInfoByTemplate(Avatar, Squad)
       TemplateAvatar.Chars[Phantom1CharUuid] = TemplateAvatar.Chars:LoadChar(DumpAvatarData("Chars", Phantom1CharUuid))
       TemplateAvatar.CommonChars[CharId] = TemplateAvatar.CommonChars:LoadCommonChar(DumpAvatarData("CommonChars", CharId))
       ExtraSquad.Phantom1 = Phantom1CharUuid
+      ExtraSquad.PhantomModSuit1 = Squad.Phantom1.ModIndex
     end
     if Squad.PhantomWeapon1.bTrial then
       ExtraSquad.PhantomWeapon1 = TemplateDumpUtils:CreateTemplate_Weapon(TemplateAvatar, Squad.PhantomWeapon1.Id)
@@ -265,6 +275,7 @@ function BattleDumpUtils:GetSquadInfoByTemplate(Avatar, Squad)
       local PhantomWeapon1Uuid = Squad.PhantomWeapon1.Id
       TemplateAvatar.Weapons[PhantomWeapon1Uuid] = TemplateAvatar.Weapons:LoadWeapon(DumpAvatarData("Weapons", PhantomWeapon1Uuid))
       ExtraSquad.PhantomWeapon1 = PhantomWeapon1Uuid
+      ExtraSquad.PhantomWeaponModSuit1 = Squad.PhantomWeapon1.ModIndex
     end
   end
   if Squad.Phantom2 and next(Squad.Phantom2) then
@@ -279,6 +290,7 @@ function BattleDumpUtils:GetSquadInfoByTemplate(Avatar, Squad)
       TemplateAvatar.Chars[Phantom2CharUuid] = TemplateAvatar.Chars:LoadChar(DumpAvatarData("Chars", Phantom2CharUuid))
       TemplateAvatar.CommonChars[CharId] = TemplateAvatar.CommonChars:LoadCommonChar(DumpAvatarData("CommonChars", CharId))
       ExtraSquad.Phantom2 = Phantom2CharUuid
+      ExtraSquad.PhantomModSuit2 = Squad.Phantom2.ModIndex
     end
     if Squad.PhantomWeapon2.bTrial then
       ExtraSquad.PhantomWeapon2 = TemplateDumpUtils:CreateTemplate_Weapon(TemplateAvatar, Squad.PhantomWeapon2.Id)
@@ -286,6 +298,7 @@ function BattleDumpUtils:GetSquadInfoByTemplate(Avatar, Squad)
       local PhantomWeapon2Uuid = Squad.PhantomWeapon2.Id
       TemplateAvatar.Weapons[PhantomWeapon2Uuid] = TemplateAvatar.Weapons:LoadWeapon(DumpAvatarData("Weapons", PhantomWeapon2Uuid))
       ExtraSquad.PhantomWeapon2 = PhantomWeapon2Uuid
+      ExtraSquad.PhantomWeaponModSuit2 = Squad.PhantomWeapon2.ModIndex
     end
   end
   if Squad.Pet.bTrial then

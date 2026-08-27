@@ -860,9 +860,23 @@ function M:CheckIsAutoMode()
   if not DungeonId then
     return
   end
+  local DungeonInfo = DataMgr.Dungeon[DungeonId]
+  if not DungeonInfo then
+    return
+  end
   local IsInSettlement = GWorld.GameInstance:IsInTempScene()
-  local IsAutoMode = not IsInSettlement and Avatar.Dungeons[DungeonId] and Avatar.Dungeons[DungeonId].AutoProgress
-  local Progress = GameState.DungeonProgress or 0
+  local IsAutoMode = Avatar.Dungeons[DungeonId] and Avatar.Dungeons[DungeonId].AutoProgress
+  local IsEndlessDungeon = DungeonInfo.DungeonWinMode == CommonConst.DungeonWinMode.Endless
+  local Progress = 0
+  if IsInSettlement or not IsEndlessDungeon then
+    local IsResetAutoNextRoundProgress = GWorld.GameInstance.IsResetAutoNextRoundProgress
+    Progress = GWorld.GameInstance:GetAutoNextRoundProgress(DungeonId) or 0
+    if IsResetAutoNextRoundProgress then
+      return
+    end
+  else
+    Progress = GameState.DungeonProgress or 0
+  end
   if IsAutoMode and Progress <= IsAutoMode + 1 and 0 ~= IsAutoMode then
     self.CheckIsAutoModeTimer = nil
     local AutoCheckTime

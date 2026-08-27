@@ -2,6 +2,7 @@ require("UnLua")
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
 local ActorController = require("BluePrints.UI.WBP.Armory.ActorController.Armory_ActorController")
 local AppearanceImportModel = require("BluePrints.UI.WBP.Appearance.AppearanceImportModel")
+local MiscUtils = require("Utils.MiscUtils")
 local M = Class("BluePrints.UI.BP_UIState_C")
 M._components = {
   "BluePrints.UI.WBP.Armory.MainComponent.Armory_PointerInputComponent",
@@ -34,7 +35,7 @@ function M:Construct()
     self.IMG_Click.OnMouseButtonDownEvent:Unbind()
     self.IMG_Click.OnMouseButtonDownEvent:Bind(self, self.On_IMG_Click_MouseButtonDown)
   else
-    RedPrint("[外观导入] 构造警告：缺少 IMG_Click，无法拖拽旋转预览角色")
+    MiscUtils.RedPrint("[外观导入] 构造警告：缺少 IMG_Click，无法拖拽旋转预览角色")
   end
   self.Btn_Import:BindEventOnClicked(self, self.OnOpenImportWindowClicked)
   self.List_Appearance.GridPanel_Char:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
@@ -55,7 +56,7 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, Params)
   self.CloseCallbackParent = self.Params.Parent
   self.Model = AppearanceImportModel:New(self, self.Params)
   if not self.Model:IsValid() then
-    RedPrint("[外观导入] 初始化界面失败：" .. tostring(self.Model:GetErrorText() or "导入模型无效"))
+    MiscUtils.RedPrint("[外观导入] 初始化界面失败：" .. tostring(self.Model:GetErrorText() or "导入模型无效"))
     UIManager(self):ShowUITip(UIConst.Tip_CommonToast, self.Model:GetErrorText() or GText("UI_COMMONPOP_TITLE_100059"))
     self:Close()
     return
@@ -84,7 +85,7 @@ end
 
 function M:RefreshSharerBasicInfo()
   if not self.Model then
-    RedPrint("[外观导入] 刷新分享者信息失败：导入模型为空")
+    MiscUtils.RedPrint("[外观导入] 刷新分享者信息失败：导入模型为空")
     return
   end
   if self.Text_Name then
@@ -102,18 +103,18 @@ function M:RefreshSharerBasicInfo()
       self.Head_Player:SetHeadFrame(SharerInfo.HeadFrameId)
     end
   else
-    RedPrint("[外观导入] 刷新分享者信息警告：Head_Player 为空")
+    MiscUtils.RedPrint("[外观导入] 刷新分享者信息警告：Head_Player 为空")
   end
   if self.WS_Title and self.Overlay_Title then
     RefreshSharerTitleWidget(self, SharerInfo)
   else
-    RedPrint("[外观导入] 刷新分享者信息警告：称号控件不完整")
+    MiscUtils.RedPrint("[外观导入] 刷新分享者信息警告：称号控件不完整")
   end
 end
 
 function M:RefreshSharerAppearanceStructure()
   if not self.Model then
-    RedPrint("[外观导入] 刷新外观结构失败：导入模型为空")
+    MiscUtils.RedPrint("[外观导入] 刷新外观结构失败：导入模型为空")
     return
   end
   if self.Text_Avatar then
@@ -121,16 +122,16 @@ function M:RefreshSharerAppearanceStructure()
   end
   RefreshPreviewCharIcon(self, self.Model:GetPreviewCharId())
   if not self.List_Appearance then
-    RedPrint("[外观导入] 刷新外观结构失败：List_Appearance 为空")
+    MiscUtils.RedPrint("[外观导入] 刷新外观结构失败：List_Appearance 为空")
     return
   end
   local PreviewMainModel = self.Model:GetPreviewMainModel()
   if not PreviewMainModel then
-    RedPrint("[外观导入] 刷新外观结构失败：预览主模型为空")
+    MiscUtils.RedPrint("[外观导入] 刷新外观结构失败：预览主模型为空")
     return
   end
   if not self.List_Appearance.Init then
-    RedPrint("[外观导入] 刷新外观结构失败：List_Appearance 缺少 Init")
+    MiscUtils.RedPrint("[外观导入] 刷新外观结构失败：List_Appearance 缺少 Init")
     return
   end
   self.List_Appearance:Init(PreviewMainModel, {
@@ -153,7 +154,7 @@ end
 
 function M:InitPreviewActor()
   if not self.Model then
-    RedPrint("[外观导入] 初始化预览角色中止：导入模型为空")
+    MiscUtils.RedPrint("[外观导入] 初始化预览角色中止：导入模型为空")
     return
   end
   local DummyAvatar = self.Model:GetPreviewDummyAvatar()
@@ -161,10 +162,10 @@ function M:InitPreviewActor()
   if DummyAvatar then
     ArmoryUtils:SetTemporaryAvatar(DummyAvatar)
   else
-    RedPrint("[外观导入] 初始化预览角色警告：DummyAvatar 为空")
+    MiscUtils.RedPrint("[外观导入] 初始化预览角色警告：DummyAvatar 为空")
   end
   if not DummyChar then
-    RedPrint("[外观导入] 初始化预览角色警告：DummyChar 为空")
+    MiscUtils.RedPrint("[外观导入] 初始化预览角色警告：DummyChar 为空")
   end
   self.ActorController = ActorController:New({
     ViewUI = self,
@@ -177,7 +178,7 @@ function M:InitPreviewActor()
     self.ActorController:OnOpened()
     self:RefreshPreviewAppearance()
   else
-    RedPrint("[外观导入] 初始化预览角色失败：ActorController 创建失败")
+    MiscUtils.RedPrint("[外观导入] 初始化预览角色失败：ActorController 创建失败")
   end
 end
 
@@ -196,7 +197,7 @@ end
 function M:InitImportWindow()
   local Window = self.ImportWindow
   if not IsValid(Window) then
-    RedPrint("[外观导入] 初始化导入窗口失败：ImportWindow 无效")
+    MiscUtils.RedPrint("[外观导入] 初始化导入窗口失败：ImportWindow 无效")
     return
   end
   self.WindowWidget = Window
@@ -209,7 +210,7 @@ function M:InitImportWindow()
     Window.Parent = self
     Window.Model = self.Model
     if not Window.Init then
-      RedPrint("[外观导入] 初始化导入窗口失败：ImportWindow 缺少 Init")
+      MiscUtils.RedPrint("[外观导入] 初始化导入窗口失败：ImportWindow 缺少 Init")
     end
   end
 end
@@ -246,14 +247,14 @@ end
 
 function M:OpenImportWindow()
   if not self.Model then
-    RedPrint("[外观导入] 打开导入窗口失败：导入模型为空")
+    MiscUtils.RedPrint("[外观导入] 打开导入窗口失败：导入模型为空")
     return
   end
   if not self.Model:CanOpenImportWindow() then
     return
   end
   if not IsValid(self.WindowWidget) then
-    RedPrint("[外观导入] 打开导入窗口失败：WindowWidget 无效")
+    MiscUtils.RedPrint("[外观导入] 打开导入窗口失败：WindowWidget 无效")
     return
   end
   if self.WindowWidget.ShowWindow then
@@ -288,11 +289,11 @@ end
 
 function M:OnImportClicked()
   if not self.Model then
-    RedPrint("[外观导入] 点击导入中止：导入模型为空")
+    MiscUtils.RedPrint("[外观导入] 点击导入中止：导入模型为空")
     return
   end
   if not self.Model:CanApplyImport() then
-    RedPrint("[外观导入] 点击导入被拦截：" .. tostring(self.Model:GetWarningText()))
+    MiscUtils.RedPrint("[外观导入] 点击导入被拦截：" .. tostring(self.Model:GetWarningText()))
     UIManager(self):ShowUITip(UIConst.Tip_CommonToast, self.Model:GetWarningText() ~= "" and self.Model:GetWarningText() or GText("UI_COMMONPOP_TITLE_100059"))
     return
   end
@@ -307,7 +308,7 @@ end
 
 function M:ExecuteImport()
   if not self.Model then
-    RedPrint("[外观导入] 执行导入中止：导入模型为空")
+    MiscUtils.RedPrint("[外观导入] 执行导入中止：导入模型为空")
     return
   end
   self.Model:ApplyImport(function(IsSuccess)
@@ -404,7 +405,7 @@ end
 
 function M:InitCommonTab()
   if not self.Com_Tab then
-    RedPrint("[外观导入] 初始化通用页签失败：Com_Tab 为空")
+    MiscUtils.RedPrint("[外观导入] 初始化通用页签失败：Com_Tab 为空")
     return
   end
   self:CreateKeySetting()
@@ -457,7 +458,7 @@ end
 
 function M:RefreshBottomKeyInfo()
   if not self.Com_Tab then
-    RedPrint("[外观导入] 刷新底部按键信息失败：Com_Tab 为空")
+    MiscUtils.RedPrint("[外观导入] 刷新底部按键信息失败：Com_Tab 为空")
     return
   end
   if not self.BottomKeyInfoList then
@@ -470,7 +471,7 @@ function M:RefreshBottomKeyInfo()
   if self.Com_Tab.UpdateBottomKeyInfo then
     self.Com_Tab:UpdateBottomKeyInfo(self.BottomKeyInfoList)
   elseif self.IsPC then
-    RedPrint("[外观导入] 刷新底部按键信息失败：Com_Tab 缺少 UpdateBottomKeyInfo")
+    MiscUtils.RedPrint("[外观导入] 刷新底部按键信息失败：Com_Tab 缺少 UpdateBottomKeyInfo")
   end
 end
 
@@ -645,7 +646,7 @@ function RefreshSharerTitleWidget(OwnerWidget, SharerInfo)
   end
   local TitleFrameWidget = UIManager(OwnerWidget):LoadTitleFrameWidget(TitleFrame)
   if not TitleFrameWidget then
-    RedPrint("[外观导入] 加载分享者称号框失败，TitleFrame=" .. tostring(TitleFrame))
+    MiscUtils.RedPrint("[外观导入] 加载分享者称号框失败，TitleFrame=" .. tostring(TitleFrame))
     return
   end
   OwnerWidget.Overlay_Title:AddChildToOverlay(TitleFrameWidget)
@@ -655,7 +656,7 @@ end
 function RefreshPreviewCharIcon(OwnerWidget, CharId)
   local CharData = DataMgr.Char and DataMgr.Char[CharId] or nil
   if not CharData then
-    RedPrint("[外观导入] 刷新预览角色头像失败，缺少角色配置，CharId=" .. tostring(CharId))
+    MiscUtils.RedPrint("[外观导入] 刷新预览角色头像失败，缺少角色配置，CharId=" .. tostring(CharId))
     return
   end
   if OwnerWidget.Icon_Avatar then

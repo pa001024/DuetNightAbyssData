@@ -95,6 +95,24 @@ return ReadOnly("AppearanceSingleScore", {
     SingleScoreId = 15,
     Type = "Skin"
   },
+  [16] = {
+    Id = 310401,
+    Score = 600,
+    SingleScoreId = 16,
+    Type = "Skin"
+  },
+  [17] = {
+    Id = 110101,
+    Score = 160,
+    SingleScoreId = 17,
+    Type = "Skin"
+  },
+  [18] = {
+    Id = 530102,
+    Score = 160,
+    SingleScoreId = 18,
+    Type = "Skin"
+  },
   [1001] = {
     Id = 80054,
     Score = 100,
@@ -665,6 +683,132 @@ return ReadOnly("AppearanceSingleScore", {
     SingleScoreId = 1095,
     Type = "CharAccessory"
   },
+  [1096] = {
+    Id = 70008,
+    Score = 100,
+    SingleScoreId = 1096,
+    Type = "CharAccessory"
+  },
+  [1097] = {
+    Id = 70081,
+    Score = 100,
+    SingleScoreId = 1097,
+    Type = "CharAccessory"
+  },
+  [1098] = {
+    Id = 70082,
+    Score = 100,
+    SingleScoreId = 1098,
+    Type = "CharAccessory"
+  },
+  [1099] = {
+    Id = 70083,
+    Score = 100,
+    SingleScoreId = 1099,
+    Type = "CharAccessory"
+  },
+  [1100] = {
+    Id = 13053,
+    Score = 100,
+    SingleScoreId = 1100,
+    Type = "CharAccessory"
+  },
+  [1101] = {
+    Id = 13055,
+    Score = 100,
+    SingleScoreId = 1101,
+    Type = "CharAccessory"
+  },
+  [1102] = {
+    Id = 13056,
+    Score = 100,
+    SingleScoreId = 1102,
+    Type = "CharAccessory"
+  },
+  [1103] = {
+    Id = 13054,
+    Score = 100,
+    SingleScoreId = 1103,
+    Type = "CharAccessory"
+  },
+  [1104] = {
+    Id = 40085,
+    Score = 100,
+    SingleScoreId = 1104,
+    Type = "CharAccessory"
+  },
+  [1105] = {
+    Id = 40086,
+    Score = 100,
+    SingleScoreId = 1105,
+    Type = "CharAccessory"
+  },
+  [1106] = {
+    Id = 40087,
+    Score = 100,
+    SingleScoreId = 1106,
+    Type = "CharAccessory"
+  },
+  [1107] = {
+    Id = 40088,
+    Score = 100,
+    SingleScoreId = 1107,
+    Type = "CharAccessory"
+  },
+  [1108] = {
+    Id = 80061,
+    Score = 100,
+    SingleScoreId = 1108,
+    Type = "CharAccessory"
+  },
+  [1109] = {
+    Id = 80062,
+    Score = 100,
+    SingleScoreId = 1109,
+    Type = "CharAccessory"
+  },
+  [1110] = {
+    Id = 80063,
+    Score = 100,
+    SingleScoreId = 1110,
+    Type = "CharAccessory"
+  },
+  [1111] = {
+    Id = 80060,
+    Score = 100,
+    SingleScoreId = 1111,
+    Type = "CharAccessory"
+  },
+  [1112] = {
+    Id = 31007,
+    Score = 100,
+    SingleScoreId = 1112,
+    Type = "CharAccessory"
+  },
+  [1113] = {
+    Id = 21015,
+    Score = 100,
+    SingleScoreId = 1113,
+    Type = "CharAccessory"
+  },
+  [1114] = {
+    Id = 11009,
+    Score = 100,
+    SingleScoreId = 1114,
+    Type = "CharAccessory"
+  },
+  [1115] = {
+    Id = 60005,
+    Score = 100,
+    SingleScoreId = 1115,
+    Type = "CharAccessory"
+  },
+  [1116] = {
+    Id = 40089,
+    Score = 100,
+    SingleScoreId = 1116,
+    Type = "CharAccessory"
+  },
   [2001] = {
     Id = 3010401,
     Score = 400,
@@ -701,6 +845,12 @@ return ReadOnly("AppearanceSingleScore", {
     SingleScoreId = 2006,
     Type = "WeaponSkin"
   },
+  [2007] = {
+    Id = 3010615,
+    Score = 400,
+    SingleScoreId = 2007,
+    Type = "WeaponSkin"
+  },
   [3001] = {
     Id = 20001,
     Score = 150,
@@ -711,6 +861,12 @@ return ReadOnly("AppearanceSingleScore", {
     Id = 40001,
     Score = 150,
     SingleScoreId = 3002,
+    Type = "WeaponAccessory"
+  },
+  [3003] = {
+    Id = 20004,
+    Score = 150,
+    SingleScoreId = 3003,
     Type = "WeaponAccessory"
   },
   [4001] = {
@@ -729,6 +885,12 @@ return ReadOnly("AppearanceSingleScore", {
     Id = 1010,
     Score = 1000,
     SingleScoreId = 4003,
+    Type = "Mount"
+  },
+  [4004] = {
+    Id = 1014,
+    Score = 1000,
+    SingleScoreId = 4004,
     Type = "Mount"
   },
   [5001] = {
@@ -1023,6 +1185,24 @@ return ReadOnly("AppearanceSingleScore", {
     Id = 41068,
     Score = 1200,
     SingleScoreId = 5020003,
+    Type = "Resource"
+  },
+  [5020004] = {
+    Id = 41069,
+    Score = 1200,
+    SingleScoreId = 5020004,
+    Type = "Resource"
+  },
+  [5020005] = {
+    Id = 41070,
+    Score = 1200,
+    SingleScoreId = 5020005,
+    Type = "Resource"
+  },
+  [5020006] = {
+    Id = 41071,
+    Score = 1200,
+    SingleScoreId = 5020006,
     Type = "Resource"
   }
 })

@@ -76,11 +76,27 @@ local function RefreshActionBtnStyle(BtnWidget, IsGamepad, GamePadKey)
   end
 end
 
+local function IsSingleMenuItemMode(SelfWidget)
+  return 1 == SelfWidget.SingleMenuItemCount
+end
+
+local function TriggerSingleMenuAction(SelfWidget)
+  if not IsSingleMenuItemMode(SelfWidget) or not SelfWidget.SingleMenuCallback then
+    return false
+  end
+  SelfWidget.SingleMenuCallback(SelfWidget.SingleMenuCallbackObj)
+  if IsValid(SelfWidget) then
+    AudioManager(SelfWidget):PlayUISound(SelfWidget, "event:/ui/common/click", nil, nil)
+  end
+  return true
+end
+
 local function RefreshControllerVisibility(SelfWidget)
   local IsGamepad = TeamController:IsGamepad()
   SelfWidget.Group_Controller:SetVisibility(IsGamepad and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
   SelfWidget.Group_Bottom:SetVisibility(IsGamepad and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
-  SelfWidget.Key_Confirm:SetVisibility(IsGamepad and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
+  local ShowConfirmKey = IsGamepad and not IsSingleMenuItemMode(SelfWidget)
+  SelfWidget.Key_Confirm:SetVisibility(ShowConfirmKey and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
   SelfWidget.Key_Back:SetVisibility(IsGamepad and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
   if IsGamepad then
     SelfWidget.Controller_Guild:CreateCommonKey({
@@ -109,6 +125,9 @@ function M:OnInputDeviceChange()
   RefreshControllerVisibility(self)
   if TeamController:IsGamepad() then
     self.bIsFocusable = true
+    if IsSingleMenuItemMode(self) then
+      self:SetFocus()
+    end
   elseif not TeamController:IsMobile() then
     self.bIsFocusable = false
   end
@@ -314,7 +333,8 @@ end
 
 local function InitReportButton(SelfWidget, AvatarInfo, BtnOption)
   local ShowReportBtn = BtnOption.ShowReportBtn
-  local AllowReportInNonChatContext = BtnOption.AllowReportInNonChatContext == true
+  local AllowReportWithoutMessageContent = BtnOption.AllowReportWithoutMessageContent == true
+  local AllowReportInNonChatContext = true == BtnOption.AllowReportInNonChatContext
   if nil == ShowReportBtn then
     ShowReportBtn = true
   end
@@ -338,7 +358,7 @@ local function InitReportButton(SelfWidget, AvatarInfo, BtnOption)
   elseif InBounsScene or IsInDungeon then
     AllowReport = true
   else
-    AllowReport = HasMessageContent or AllowReportInNonChatContext
+    AllowReport = HasMessageContent or AllowReportWithoutMessageContent or AllowReportInNonChatContext
   end
   if not AllowReport then
     SelfWidget.Btn_Report:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -365,13 +385,20 @@ local function InitOtherButtons(SelfWidget, AvatarInfo, BtnOption)
 end
 
 local function InitMenuList(SelfWidget, FuncList, AvatarInfo, GuildInfo)
+  SelfWidget.SingleMenuItemCount = #(FuncList or {})
+  local IsSingleMenuItem = IsSingleMenuItemMode(SelfWidget)
   for _, Func in ipairs(FuncList or {}) do
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
     Content.Owner = SelfWidget
-    Content.ForceHideGamepadKey = true
+    Content.ForceHideGamepadKey = not IsSingleMenuItem
+    Content.AlwaysShowGamepadKey = IsSingleMenuItem
     Func(Content, AvatarInfo, GuildInfo, function()
       CloseHeadAnchor(SelfWidget.Owner)
     end)
+    if IsSingleMenuItem then
+      SelfWidget.SingleMenuCallback = Content.Callback
+      SelfWidget.SingleMenuCallbackObj = Content.Owner
+    end
     SelfWidget.List_Btn:AddItem(Content)
   end
 end
@@ -379,6 +406,9 @@ end
 function M:Init(AvatarInfo, GuildInfo, FuncList, BtnOption)
   self.AvatarInfo = AvatarInfo
   self.BtnOption = BtnOption or {}
+  self.SingleMenuItemCount = 0
+  self.SingleMenuCallback = nil
+  self.SingleMenuCallbackObj = nil
   
   function self.DoBlockAction()
   end
@@ -391,10 +421,16 @@ function M:Init(AvatarInfo, GuildInfo, FuncList, BtnOption)
   InitOtherButtons(self, AvatarInfo, self.BtnOption)
   InitMenuList(self, FuncList, AvatarInfo, GuildInfo)
   RefreshControllerVisibility(self)
+  if TeamController:IsGamepad() and IsSingleMenuItemMode(self) then
+    self:SetFocus()
+  end
   SetDefaultMenuFocus(self)
 end
 
 function M:BP_GetDesiredFocusTarget()
+  if TeamController:IsGamepad() and IsSingleMenuItemMode(self) then
+    return self
+  end
   return self.List_Btn or self
 end
 
@@ -417,7 +453,9 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
-    if "Gamepad_FaceButton_Right" == InKeyName then
+    if InKeyName == Const.GamepadFaceButtonDown and TriggerSingleMenuAction(self) then
+      return UWidgetBlueprintLibrary.Handled()
+    elseif "Gamepad_FaceButton_Right" == InKeyName then
       CloseHeadAnchor(self.Owner)
       return UWidgetBlueprintLibrary.Handled()
     elseif InKeyName == UIConst.GamePadKey.FaceButtonLeft then

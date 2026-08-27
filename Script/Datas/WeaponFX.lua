@@ -1169,7 +1169,7 @@ return ReadOnly("WeaponFX", {
       NotBlocking = true,
       PlayByChar = true,
       Scale = T.RT_2,
-      SoundID = 3305,
+      SoundID = 3307,
       WeaponBlueprintId = 101,
       WeaponFXId = 3000801,
       bTickEventWhenPaused = true
@@ -2067,7 +2067,7 @@ return ReadOnly("WeaponFX", {
       NotBlocking = true,
       PlayByChar = true,
       Scale = T.RT_2,
-      SoundID = 3305,
+      SoundID = 3307,
       WeaponBlueprintId = 102,
       WeaponFXId = 3000802,
       bTickEventWhenPaused = true
@@ -3253,7 +3253,7 @@ return ReadOnly("WeaponFX", {
       NotBlocking = true,
       PlayByChar = true,
       Scale = T.RT_2,
-      SoundID = 3305,
+      SoundID = 3307,
       WeaponBlueprintId = 103,
       WeaponFXId = 3000803,
       bTickEventWhenPaused = true
@@ -4805,7 +4805,7 @@ return ReadOnly("WeaponFX", {
       NotBlocking = true,
       PlayByChar = true,
       Scale = T.RT_2,
-      SoundID = 3305,
+      SoundID = 3307,
       WeaponBlueprintId = 104,
       WeaponFXId = 3000804,
       bTickEventWhenPaused = true
@@ -5683,6 +5683,101 @@ return ReadOnly("WeaponFX", {
       WeaponFXId = 1040167,
       bTickEventWhenPaused = true
     },
+    Mod02_HeavyAttack_Ground = {
+      Attach = true,
+      ChangeColorByChar = true,
+      DetachWhenSkillEnds = true,
+      FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Dualblade/Mod_02/NS_Heitao_Dualblade_Mod02_HeavyAttack_Ground.NS_Heitao_Dualblade_Mod02_HeavyAttack_Ground",
+      FXPriorityType = 90,
+      GroupName = "Mod02_HeavyAttack_Ground",
+      LocalOffset = T.RT_1,
+      LocalRotation = T.RT_1,
+      PlayByChar = true,
+      Scale = T.RT_2,
+      WeaponBlueprintId = 104,
+      WeaponFXId = 1040171,
+      bTickEventWhenPaused = true
+    },
+    Mod02_HeavyAttack_Knife = {
+      Attach = true,
+      ChangeColorByChar = true,
+      DetachWhenSkillEnds = true,
+      FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Dualblade/Mod_02/NS_Heitao_Dualblade_Mod02_HeavyAttack_Knife.NS_Heitao_Dualblade_Mod02_HeavyAttack_Knife",
+      FXPriorityType = 90,
+      GroupName = "Mod02_HeavyAttack_Knife",
+      LocalOffset = {
+        34.5336,
+        1.1111,
+        112.4787
+      },
+      LocalRotation = {
+        9.1351,
+        -16.8632,
+        90.417
+      },
+      PlayByChar = true,
+      Scale = T.RT_2,
+      WeaponBlueprintId = 104,
+      WeaponFXId = 1040169,
+      bTickEventWhenPaused = true
+    },
+    Mod02_HeavyAttack_Smoke = {
+      Attach = true,
+      ChangeColorByChar = true,
+      DetachWhenSkillEnds = true,
+      FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Dualblade/Mod_02/NS_Heitao_Dualblade_Mod02_HeavyAttack_Smoke.NS_Heitao_Dualblade_Mod02_HeavyAttack_Smoke",
+      FXPriorityType = 90,
+      GroupName = "Mod02_HeavyAttack_Smoke",
+      LocalOffset = {
+        46.6744,
+        198.9525,
+        0
+      },
+      LocalRotation = T.RT_7,
+      PlayByChar = true,
+      Scale = T.RT_2,
+      WeaponBlueprintId = 104,
+      WeaponFXId = 1040170,
+      bTickEventWhenPaused = true
+    },
+    Mod02_HeavyAttack_Smoke02 = {
+      Attach = true,
+      ChangeColorByChar = true,
+      DetachWhenSkillEnds = true,
+      FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Dualblade/Mod_02/NS_Heitao_Dualblade_Mod02_HeavyAttack_Smoke02.NS_Heitao_Dualblade_Mod02_HeavyAttack_Smoke02",
+      FXPriorityType = 90,
+      GroupName = "Mod02_HeavyAttack_Smoke02",
+      LocalOffset = {
+        0,
+        0,
+        25
+      },
+      LocalRotation = T.RT_1,
+      PlayByChar = true,
+      Scale = T.RT_2,
+      WeaponBlueprintId = 104,
+      WeaponFXId = 1040172,
+      bTickEventWhenPaused = true
+    },
+    Mod02_HeavyAttack_Xuli = {
+      Attach = true,
+      ChangeColorByChar = true,
+      DetachWhenSkillEnds = true,
+      FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Dualblade/Mod_02/NS_Heitao_Dualblade_Mod02_HeavyAttack_Xuli.NS_Heitao_Dualblade_Mod02_HeavyAttack_Xuli",
+      FXPriorityType = 90,
+      GroupName = "Mod02_HeavyAttack_Xuli",
+      LocalOffset = {
+        26.0729,
+        -15.8312,
+        206.9344
+      },
+      LocalRotation = T.RT_1,
+      PlayByChar = true,
+      Scale = T.RT_2,
+      WeaponBlueprintId = 104,
+      WeaponFXId = 1040168,
+      bTickEventWhenPaused = true
+    },
     SlideAttack_Knife = {
       Attach = true,
       ChangeColorByChar = true,
@@ -5953,9 +6048,96 @@ return ReadOnly("WeaponFX", {
       NotBlocking = true,
       PlayByChar = true,
       Scale = T.RT_2,
-      SoundID = 3305,
+      SoundID = 3307,
       WeaponBlueprintId = 105,
       WeaponFXId = 3000805,
+      bTickEventWhenPaused = true
+    },
+    HeavyAttack_1050202_Mod01_HeavyAttack_TengWan_001 = {
+      Attach = true,
+      ChangeColorByChar = true,
+      DetachWhenSkillEnds = true,
+      FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Swordwhip/NS_Swordwhip_TengWan_001.NS_Swordwhip_TengWan_001",
+      FXPriorityType = 90,
+      GroupName = "HeavyAttack_1050202_Mod01_HeavyAttack_TengWan_001",
+      LocalOffset = {
+        0,
+        0,
+        20
+      },
+      LocalRotation = T.RT_1,
+      PlayByChar = true,
+      Scale = T.RT_2,
+      SkillId = 1050202,
+      UseAttackSpeed = true,
+      WeaponBlueprintId = 105,
+      WeaponFXId = 1050128,
+      bTickEventWhenPaused = true
+    },
+    HeavyAttack_1050202_Mod01_HeavyAttack_TengWan_002 = {
+      Attach = true,
+      ChangeColorByChar = true,
+      DetachWhenSkillEnds = true,
+      FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Swordwhip/NS_Swordwhip_TengWan_002.NS_Swordwhip_TengWan_002",
+      FXPriorityType = 90,
+      GroupName = "HeavyAttack_1050202_Mod01_HeavyAttack_TengWan_002",
+      LocalOffset = T.RT_1,
+      LocalRotation = T.RT_7,
+      PlayByChar = true,
+      Scale = T.RT_2,
+      SkillId = 1050202,
+      UseAttackSpeed = true,
+      WeaponBlueprintId = 105,
+      WeaponFXId = 1050129,
+      bTickEventWhenPaused = true
+    },
+    HeavyAttack_1050202_Mod01_HeavyAttack_TengWan_003 = {
+      Attach = true,
+      ChangeColorByChar = true,
+      DetachWhenSkillEnds = true,
+      FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Swordwhip/NS_Swordwhip_TengWan_003.NS_Swordwhip_TengWan_003",
+      FXPriorityType = 90,
+      GroupName = "HeavyAttack_1050202_Mod01_HeavyAttack_TengWan_003",
+      LocalOffset = T.RT_37,
+      LocalRotation = T.RT_7,
+      PlayByChar = true,
+      Scale = T.RT_2,
+      SkillId = 1050202,
+      UseAttackSpeed = true,
+      WeaponBlueprintId = 105,
+      WeaponFXId = 1050130,
+      bTickEventWhenPaused = true
+    },
+    HeavyAttack_1050202_Mod01_HeavyAttack_TengWan_004 = {
+      Attach = true,
+      ChangeColorByChar = true,
+      DetachWhenSkillEnds = true,
+      FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Swordwhip/NS_Swordwhip_TengWan_004.NS_Swordwhip_TengWan_004",
+      FXPriorityType = 90,
+      GroupName = "HeavyAttack_1050202_Mod01_HeavyAttack_TengWan_004",
+      LocalOffset = T.RT_25,
+      LocalRotation = T.RT_1,
+      PlayByChar = true,
+      Scale = T.RT_2,
+      SkillId = 1050202,
+      UseAttackSpeed = true,
+      WeaponBlueprintId = 105,
+      WeaponFXId = 1050131,
+      bTickEventWhenPaused = true
+    },
+    HeavyAttack_1050202_Mod01_HeavyAttack_TengWan_005 = {
+      ChangeColorByChar = true,
+      FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Swordwhip/NS_Swordwhip_TengWan_005.NS_Swordwhip_TengWan_005",
+      FXPriorityType = 90,
+      GroupName = "HeavyAttack_1050202_Mod01_HeavyAttack_TengWan_005",
+      LocalOffset = T.RT_7,
+      LocalRotation = T.RT_1,
+      PlayByChar = true,
+      Scale = T.RT_2,
+      SkillId = 1050202,
+      UseAttackSpeed = true,
+      WeaponBlueprintId = 105,
+      WeaponFXId = 1050132,
       bTickEventWhenPaused = true
     },
     HeavyAttack_End_01 = {
@@ -6823,7 +7005,7 @@ return ReadOnly("WeaponFX", {
       NotBlocking = true,
       PlayByChar = true,
       Scale = T.RT_2,
-      SoundID = 3305,
+      SoundID = 3307,
       WeaponBlueprintId = 106,
       WeaponFXId = 3000806,
       bTickEventWhenPaused = true
@@ -7924,7 +8106,7 @@ return ReadOnly("WeaponFX", {
       LocalRotation = T.RT_1,
       Scale = T.RT_2,
       SocketName = "ArrowPoint",
-      SoundID = 2060107,
+      SoundID = 2060504,
       WeaponBlueprintId = 20605,
       WeaponFXId = 2060501,
       bTickEventWhenPaused = true
@@ -7940,7 +8122,7 @@ return ReadOnly("WeaponFX", {
       LocalRotation = T.RT_1,
       Scale = T.RT_2,
       SocketName = "ArrowPoint",
-      SoundID = 2060108,
+      SoundID = 2060504,
       WeaponBlueprintId = 20605,
       WeaponFXId = 2060502,
       bTickEventWhenPaused = true
@@ -7956,7 +8138,7 @@ return ReadOnly("WeaponFX", {
       LocalRotation = T.RT_1,
       Scale = T.RT_2,
       SocketName = "ArrowPoint",
-      SoundID = 2060109,
+      SoundID = 2060504,
       WeaponBlueprintId = 20605,
       WeaponFXId = 2060503,
       bTickEventWhenPaused = true
@@ -7972,7 +8154,7 @@ return ReadOnly("WeaponFX", {
       LocalRotation = T.RT_1,
       Scale = T.RT_2,
       SocketName = "ArrowPoint",
-      SoundID = 2060110,
+      SoundID = 2060504,
       WeaponBlueprintId = 20605,
       WeaponFXId = 2060504,
       bTickEventWhenPaused = true
@@ -7987,7 +8169,7 @@ return ReadOnly("WeaponFX", {
       LocalRotation = T.RT_1,
       Scale = T.RT_2,
       SocketName = "ArrowPoint",
-      SoundID = 2060106,
+      SoundID = 2060503,
       WeaponBlueprintId = 20605,
       WeaponFXId = 2060512,
       bTickEventWhenPaused = true
@@ -8002,7 +8184,7 @@ return ReadOnly("WeaponFX", {
       LocalRotation = T.RT_1,
       Scale = T.RT_2,
       SocketName = "ArrowPoint",
-      SoundID = 2060104,
+      SoundID = 2060503,
       WeaponBlueprintId = 20605,
       WeaponFXId = 2060511,
       bTickEventWhenPaused = true
@@ -8017,7 +8199,7 @@ return ReadOnly("WeaponFX", {
       LocalRotation = T.RT_1,
       Scale = T.RT_2,
       SocketName = "ArrowPoint",
-      SoundID = 2060105,
+      SoundID = 2060503,
       WeaponBlueprintId = 20605,
       WeaponFXId = 2060512,
       bTickEventWhenPaused = true

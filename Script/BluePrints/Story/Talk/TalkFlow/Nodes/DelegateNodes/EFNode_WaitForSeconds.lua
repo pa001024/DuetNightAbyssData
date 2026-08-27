@@ -7,9 +7,8 @@ function M:CreateNode(Flow, FlowOwner, Params)
   local TimerManager = TalkContext and TalkContext.TalkTimerManager
   local DelayNode = Flow:CreateNode(UEFNode_Delegate)
   DelayNode.DebugLog = string.format("WaitForSecondsNode Delay: %.3f", DelaySeconds)
+  local bNodeFinished = false
   DelayNode.OnStart:Add(DelayNode, function(Node)
-    local bNodeFinished = false
-    
     local function FinishNode()
       if bNodeFinished then
         return
@@ -44,6 +43,9 @@ function M:CreateNode(Flow, FlowOwner, Params)
     if TimerManager then
       TimerManager:UnPauseTimer(GroupTag)
     end
+  end)
+  DelayNode.OnFinish:Add(DelayNode, function()
+    bNodeFinished = true
   end)
   return DelayNode
 end

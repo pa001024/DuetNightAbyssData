@@ -3,6 +3,7 @@ local BaseTypes = require("BluePrints.Client.CustomTypes.BaseTypes")
 local CustomTypes = require("BluePrints.Client.CustomTypes.CustomTypes")
 local prop = require("NetworkEngine.Common.Prop")
 local FormatProperties = require("NetworkEngine.Common.Assemble").FormatProperties
+local SerializeUtils = require("Utils.SerializeUtils")
 local TreasureHunt = Class("TreasureHunt", CustomTypes.CustomAttr)
 TreasureHunt.__Props__ = {
   EventId = prop.prop("Int", "client save"),

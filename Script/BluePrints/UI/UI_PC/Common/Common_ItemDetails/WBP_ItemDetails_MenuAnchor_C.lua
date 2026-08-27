@@ -169,7 +169,7 @@ function M:OpenItemDetailsWidget(bIsHover, Content)
     if self.ParentWidget then
       self.CommonItemDetails.UIName = self.ParentWidget.UIName
     end
-    self.CommonItemDetails:RefreshItemInfo(Content)
+    self.CommonItemDetails:RefreshItemInfo(Content, Content.bNotFocus)
   end
 end
 

@@ -153,8 +153,12 @@ end
 function WBP_Build_Slot_P_C:UpdateCurSquadInfo()
   if self.IsPhantomWeapon and self.Num then
     self.Owner:UpdateCurSquadInfo("PhantomWeapon" .. self.Num, self.Uuid or "")
+    self.Owner:UpdateCurSquadInfo("PhantomWeaponModSuit" .. self.Num, self.ModSuit or 0)
   elseif self.Type == "Char" then
     self.Owner:UpdateCurSquadInfo("Phantom" .. string.sub(self:GetName(), -1), self.Uuid or "")
+    if self.Owner.PhantomSlot[self:GetName()] then
+      self.Owner:UpdateCurSquadInfo("PhantomModSuit" .. string.sub(self:GetName(), -1), self.ModSuit or 0)
+    end
   elseif self.Type == "Pet" then
     self.Owner:UpdateCurSquadInfo("Pet", self.Uuid or 0)
   elseif self.Type == "Melee" then
@@ -395,28 +399,29 @@ function WBP_Build_Slot_P_C:SetTitleName()
     self:SetModTextBgVisbile(false)
     return
   end
-  if self.Owner.PhantomSlot[self:GetName()] then
-    self.Panel_Text:SetVisibility(ESlateVisibility.Collapsed)
-    self:SetModTextBgVisbile(false)
-    return
-  else
-    self.Panel_Text:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    self:SetModTextBgVisbile(true)
-  end
-  if not self.Owner:CheckSlotTypeIsAboutMainRole(self) then
+  local bIsMainRole = self.Owner:CheckSlotTypeIsAboutMainRole(self)
+  local bIsPhantom = self.Owner.PhantomSlot[self:GetName()]
+  if not bIsMainRole and not bIsPhantom then
     self.Panel_Text:SetVisibility(ESlateVisibility.Collapsed)
     self:SetModTextBgVisbile(false)
     return
   end
-  if not self.ModSuit then
+  local ModSuit = tonumber(self.ModSuit)
+  if not ModSuit or ModSuit <= 0 then
+    self.Panel_Text:SetVisibility(ESlateVisibility.Collapsed)
+    self:SetModTextBgVisbile(false)
+    return
+  end
+  ModController:SyncTarget(self.Uuid)
+  local SuitNameKey = string.format("Mod_SuitName_%s", ModSuit)
+  local SuitName = tostring(ModController:GetModel():GetSuitName(ModSuit) or "")
+  if "" == SuitName or SuitName == SuitNameKey then
     self.Panel_Text:SetVisibility(ESlateVisibility.Collapsed)
     self:SetModTextBgVisbile(false)
     return
   end
   self.Panel_Text:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self:SetModTextBgVisbile(true)
-  ModController:SyncTarget(self.Uuid)
-  local SuitName = ModController:GetModel():GetSuitName(self.ModSuit)
   self.Text_Name:SetText(SuitName)
 end
 

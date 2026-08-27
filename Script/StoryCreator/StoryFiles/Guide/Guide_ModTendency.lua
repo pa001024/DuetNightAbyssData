@@ -96,18 +96,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "170556371570296903",
-            startPort = "Out",
-            endQuest = "170556373703597392",
-            endPort = "In"
-          },
-          {
-            startQuest = "170556373703597392",
-            startPort = "Out",
-            endQuest = "1701326201315116238",
-            endPort = "In"
-          },
-          {
             startQuest = "1701328391212123872",
             startPort = "Out",
             endQuest = "170556377059098262",
@@ -153,6 +141,12 @@ return {
             startQuest = "175715933668013946853",
             startPort = "Out",
             endQuest = "1701326737530121630",
+            endPort = "In"
+          },
+          {
+            startQuest = "170556371570296903",
+            startPort = "Out",
+            endQuest = "1701326201315116238",
             endPort = "In"
           }
         },
@@ -239,7 +233,7 @@ return {
             key = "1701328391212123872",
             type = "ShowGuideTextNode",
             name = "Text显示信息",
-            pos = {x = 1420.6999020901023, y = 539.7117124051672},
+            pos = {x = 1422.6999020901023, y = 539.7117124051672},
             propsData = {
               MessageId = 300906,
               MessageNote = "通过消耗移转模块，可以给该插槽增加、修改或删除趋向。部分魔之楔有趋向，当魔之楔的趋向和插槽趋向相同时，可降低装配所需的耐受值。",
@@ -494,7 +488,7 @@ return {
             key = "170556367605395955",
             type = "ShowGuideTextNode",
             name = "Text显示信息",
-            pos = {x = 319.31503354518964, y = 342.51420466895627},
+            pos = {x = 321.31503354518964, y = 342.51420466895627},
             propsData = {
               MessageId = 300909,
               MessageNote = "为了更高效地发挥魔之楔的效果，部分<H>魔之楔</>在研制时被赋予了适配于不同个体的<H>趋向</>。",
@@ -533,7 +527,7 @@ return {
             key = "170556373703597392",
             type = "ShowGuideTextNode",
             name = "Text显示信息",
-            pos = {x = 1209.8642441385177, y = 358.1702148991353},
+            pos = {x = 1295.8642441385177, y = 126.17021489913532},
             propsData = {
               MessageId = 300910,
               MessageNote = "如果你得到了强大的魔之楔，却为<H>趋向不合</>而头痛，要不要试一下<H>调整槽位趋向</>呢？",

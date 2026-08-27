@@ -2,6 +2,22 @@ require("UnLua")
 local M = Class("BluePrints.UI.BP_UIState_C")
 local ProgressBarRefreshIntervel = 0.1
 local ProgressBarRefreshTimerTag = "QTE_ProgressBar"
+local QTE_UI_TAG = "QTE"
+local MULTI_QTE_MODE = {NORMAL = 1, TRACK_QTE = 2}
+
+function M:IsNeedPlaySuccessAnimationWhenForceSuccess()
+  if self.QTEConfig.MultiQTEMode and self.QTEConfig.MultiQTEMode == MULTI_QTE_MODE.TRACK_QTE then
+    return true
+  end
+  return false
+end
+
+function M:IsNeedShowMultiClickProgress()
+  if self.QTEConfig.MultiQTEMode and self.QTEConfig.MultiQTEMode == MULTI_QTE_MODE.TRACK_QTE then
+    return true
+  end
+  return false
+end
 
 function M:ResponseQTE(Config)
   DebugPrint("QTE: ResponseQTE", Config.SuccessClickNum)
@@ -16,6 +32,7 @@ function M:ResponseQTE(Config)
   self:SwitchShowMouseCursorInPIE(true)
   self:PlayQTEShowAudio()
   self:AddEvent()
+  self:SaveAndHideUnderlyingUI()
   self:RefreshOpInfoByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
 end
 
@@ -35,7 +52,13 @@ function M:SwitchType(Config)
     self:SwitchHideProgressBar(false)
     self:SwitchShowVX_Par(false)
   elseif Config.ClickType == "Multi" then
-    self:SwitchHideProgressBar(true)
+    if self:IsNeedShowMultiClickProgress() then
+      self.ProgressBarMat:SetScalarParameterValue("Percent", 0)
+      self:SwitchHideProgressBar(false)
+    else
+      self:SwitchHideProgressBar(true)
+    end
+    self.bRefreshProgressBar = false
     self:SwitchShowVX_Par(true)
     self:BindToAnimationFinished(self.In, {
       self,
@@ -114,6 +137,20 @@ function M:RefreshProgressBar(DeltaTime)
   end
 end
 
+function M:RefreshMultiClickProgress()
+  if not self:IsNeedShowMultiClickProgress() then
+    return
+  end
+  if self.QTEConfig.bBlockProgressRefreshed then
+    return
+  end
+  if self.bWorking_QTE and self.QTEConfig then
+    local Percent = self.ShortClickCount / self.QTEConfig.SuccessClickNum
+    DebugPrint("QTE: UI RefreshMultiClickProgress Percent: ", Percent)
+    self.ProgressBarMat:SetScalarParameterValue("Percent", Percent)
+  end
+end
+
 function M:GetClickButtonText()
   if not (self.QTEConfig and self.QTEConfig.InputActionName) or not self.QTEConfig.InputGamePadActionName then
     return
@@ -121,17 +158,30 @@ function M:GetClickButtonText()
   return self.QTEConfig.InputActionName
 end
 
-function M:OnInputPress()
+function M:GetInputGamePadActionName()
+  if not self.QTEConfig or not self.QTEConfig.InputGamePadActionName then
+    return "Y"
+  end
+  return self.QTEConfig.InputGamePadActionName
+end
+
+function M:OnInputPress(bMouseClick)
   if not self:CheckCanWorking() then
     return
   end
-  self.ShortClickCount = self.ShortClickCount + 1
+  if not self.QTEConfig.bBlockProgressRefreshed then
+    self.ShortClickCount = self.ShortClickCount + 1
+  end
   DebugPrint("QTE: Correct Click", self.ShortClickCount)
   self:PlayAnimation(self.FeedBack)
+  self:RefreshMultiClickProgress()
+  if type(self.OnCorrectClickCallbackFunc) == "function" then
+    self.OnCorrectClickCallbackFunc(self.OnCorrectClickCallbackObj, self.ShortClickCount)
+  end
   if self.ShortClickCount >= self.QTEConfig.SuccessClickNum then
     self:OnQTESucceed()
   else
-    self:PlayQTERightPressAudio()
+    self:PlayQTERightPressAudio(bMouseClick)
   end
 end
 
@@ -143,7 +193,7 @@ function M:GetTargetKeyName()
     if self.QTEConfig.InputGamePadActionName == "None" then
       return UIConst.GamePadKey.FaceButtonTop
     else
-      return self.QTEConfig.InputGamePadActionName
+      return Const.ShortKeyToGamePadKey[self.QTEConfig.InputGamePadActionName]
     end
   end
   return self.QTEConfig.InputActionName
@@ -162,7 +212,7 @@ function M:OnKeyUp(MyGeometry, InKeyEvent)
   end
   self.FaultClickCount = self.FaultClickCount + 1
   DebugPrint("QTE: 按键错误，错误次数", self.FaultClickCount)
-  if self.FaultClickCount > self.QTEConfig.ClickFaultToleranceCount then
+  if -1 ~= self.QTEConfig.ClickFaultToleranceCount and self.FaultClickCount > self.QTEConfig.ClickFaultToleranceCount then
     DebugPrint("QTE: 由于按错次数超过设置值，QTE失败", self.QTEConfig.ClickFaultToleranceCount)
     self:OnQTEFailed()
   else
@@ -215,15 +265,31 @@ function M:ClearQTE()
   self:RemoveEvent()
 end
 
+function M:SaveAndHideUnderlyingUI()
+  if not self.QTEConfig.bHideUnderlyingUI then
+    return
+  end
+  UIManager(self):HideAllUI_EX({QTE_UI_TAG}, true, QTE_UI_TAG)
+end
+
+function M:RestoreUnderlyingUI()
+  if not self.QTEConfig.bHideUnderlyingUI then
+    return
+  end
+  UIManager(self):HideAllUI_EX({}, false, QTE_UI_TAG)
+end
+
 function M:OnAnimationFinished(Animation)
   if Animation == self.Success then
     if self.OnSuccCallbackObj and self.OnSuccCallbackFunc then
       self:SetVisibility(ESlateVisibility.Collapsed)
+      self:RestoreUnderlyingUI()
       self.OnSuccCallbackFunc(self.OnSuccCallbackObj)
       self:SetOnSuccCallback()
     end
   elseif Animation == self.Fail and self.OnFailCallbackObj and self.OnFailCallbackFunc then
     self:SetVisibility(ESlateVisibility.Collapsed)
+    self:RestoreUnderlyingUI()
     self.OnFailCallbackFunc(self.OnFailCallbackObj)
     self:SetOnFailCallback()
   end
@@ -239,6 +305,11 @@ function M:SetOnFailCallback(Obj, Func)
   self.OnFailCallbackFunc = Func
 end
 
+function M:SetOnCorrectClickCallback(Obj, Func)
+  self.OnCorrectClickCallbackObj = Obj
+  self.OnCorrectClickCallbackFunc = Func
+end
+
 function M:OnTimeOut(bForceSuccess, CB)
   DebugPrint("QTE: WBP_QTE_Common: OnTimeOut")
   self.bWorking_QTE = false
@@ -246,21 +317,23 @@ function M:OnTimeOut(bForceSuccess, CB)
   self:SetOnFailCallback()
   self:ClearQTE()
   if not self.bQteResponded then
+    local function CallBack()
+      CB()
+      
+      self:RestoreUnderlyingUI()
+    end
+    
     if bForceSuccess then
-      self:BindToAnimationFinished(self.Out, {
-        self,
-        function()
-          CB()
-        end
-      })
-      self:PlayAnimation(self.Out)
+      if self:IsNeedPlaySuccessAnimationWhenForceSuccess() then
+        self:BindToAnimationFinished(self.Success, {self, CallBack})
+        self:PlayAnimation(self.Success)
+        self:PlayQTESuccessAudio()
+      else
+        self:BindToAnimationFinished(self.Out, {self, CallBack})
+        self:PlayAnimation(self.Out)
+      end
     else
-      self:BindToAnimationFinished(self.Fail, {
-        self,
-        function()
-          CB()
-        end
-      })
+      self:BindToAnimationFinished(self.Fail, {self, CallBack})
       self:PlayAnimation(self.Fail)
       self:PlayQTEFailAudio()
     end
@@ -293,8 +366,12 @@ function M:PlayQTESuccessAudio()
   AudioManager(self):PlayUISound(self, "event:/ui/common/qte_success", "", nil)
 end
 
-function M:PlayQTERightPressAudio()
-  AudioManager(self):PlayUISound(self, "event:/ui/common/qte_press", "", nil)
+function M:PlayQTERightPressAudio(bMouseClick)
+  local AudioEvent = "event:/ui/common/qte_press"
+  if bMouseClick then
+    AudioEvent = "event:/ui/common/qte_mouse_press"
+  end
+  AudioManager(self):PlayUISound(self, AudioEvent, "", nil)
 end
 
 function M:PlayQTEFaultPressAudio()

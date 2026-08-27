@@ -26,12 +26,18 @@ function View:Initialize(Initializer)
   self.NextRoomUid = 0
   self.HasMore = false
   self.bOpenSquad = true
+  self.FreeTimerHanle = nil
+  self.FreeTimesRefreshTime = nil
+  self.ActivityStartTime = nil
+  self.ActivityEndTime = nil
   self.SelectedItems = {}
   self.TimerKey = "AsyncCombat_Hall_Refresh"
   self.EventId = DataMgr.AsyncCombatEventConstant.AsyncCombat_EventId.ConstantValue
   self.MaxDurationSeconds = DataMgr.AsyncCombatEventConstant.AsyncCombat_RoomDuration.ConstantValue * 60
   self.ReddotNodeName = "AsyncCombatReward"
   self.NewNodeName = "AsyncCombatNew"
+  self.StoppageNodeName = "AsyncCombatStoppageNew"
+  self.StoppageNodeType = "StoppageRoom"
 end
 
 function View:InitUIInfo(Name, IsInUIMode, EventList, ...)
@@ -50,6 +56,7 @@ function View:InitUIInfo(Name, IsInUIMode, EventList, ...)
   self.TabItem03:SetShowText(GText("UI_AsyncCombat_Guild"))
   self.TabItem03:SetIconPath("/Game/UI/Texture/Dynamic/Atlas/Coop/T_Coop_Guild.T_Coop_Guild")
   CoopModel:Init()
+  self.ActivityStartTime, self.ActivityEndTime = CoopModel:GetActivityStartEndTime(self.EventId)
   self:InitTable()
   self.Super.InitUIInfo(self, Name, IsInUIMode, EventList, ...)
 end
@@ -174,6 +181,10 @@ function View:InitTable(TabId)
 end
 
 function View:CloseSelf()
+  if self.FreeTimerHanle then
+    self:RemoveTimer(self.FreeTimerHanle)
+    self.FreeTimerHanle = nil
+  end
   AudioManager(self):SetEventSoundParam(self, "AsyncCombatHall", {ToEnd = 1})
   CoopModel:Destory()
   EventManager:FireEvent(EventID.OnActivityEntryShowVisible)
@@ -209,11 +220,13 @@ function View:SetKeyImgShow(IsShow)
     self.BtnRoom.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Visible)
     self.BtnRe.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Visible)
     self.BtnCreate.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Visible)
+    self.CreateReward_Personal.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Visible)
     self.CreateReward.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Visible)
   else
     self.BtnRoom.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.BtnRe.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.BtnCreate.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.CreateReward_Personal.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.CreateReward.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
 end
@@ -458,6 +471,11 @@ function View:InitKeyInfo()
       {Type = "Img", ImgShortPath = "X"}
     }
   })
+  self.CreateReward_Personal.WBP_Com_KeyImg:CreateCommonKey({
+    KeyInfoList = {
+      {Type = "Img", ImgShortPath = "X"}
+    }
+  })
   self.CreateReward.WBP_Com_KeyImg:CreateCommonKey({
     KeyInfoList = {
       {Type = "Img", ImgShortPath = "Y"}
@@ -553,9 +571,11 @@ function View:BindEvents()
   end
   self.BtnRoom.Btn.OnClicked:Add(self, self.OnRoomFilterClicked)
   self.BtnCreate.Btn.OnClicked:Add(self, self.OnBtnCreateClicked)
+  self.CreateReward_Personal.Btn.OnClicked:Add(self, self.OnBtnCreateClicked)
   self.CreateReward.Btn.OnClicked:Add(self, self.OnBtnRewardClicked)
   self.ListRoom.BP_OnItemIsHoveredChanged:Add(self, self.OnItemHoveredChanged)
   EventManager:AddEvent(EventID.OnWeeklyRefresh, self, self.RefreshWeekly)
+  EventManager:AddEvent(EventID.OnDailyRefresh, self, self.RefreshWeekly)
   EventManager:AddEvent("AsyncCombatRoomEnd", self, self.RefreshRoomEnd)
   self.ListRoom.OnListViewScrolled:Add(self, self._OnListItemScrolled)
   self.ListRoom.OnCreateEmptyContent:Bind(self, function()
@@ -598,8 +618,10 @@ function View:OnBtnCreateClicked()
   end
   local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
   if CacheDetail and CacheDetail.New and CacheDetail.New >= 1 then
-    ReddotManager.DecreaseLeafNodeCount(NodeName, 1, {CacheKey = "New"})
-    EMCache:Set("AsyncCombatBtnTime", TimeUtils.NowTime(), true)
+    local CurReddotType = CacheDetail.NormalCreate and "NormalCreate" or "FreeCreate"
+    local CacheName = CacheDetail.NormalCreate and "AsyncCombatBtnTime" or "AsyncCombatFreeBtnTime"
+    ReddotManager.DecreaseLeafNodeCount(NodeName, 1, {CacheKey = "New", Type = CurReddotType})
+    EMCache:Set(CacheName, TimeUtils.NowTime(), true)
   end
   if self.CreateRoomLimit == true then
     UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_AsyncCombat_HostLimitExceeded"))
@@ -931,8 +953,7 @@ function View:RefreshSubTabs()
     self.TabItem02:SetShowText(GText("UI_AsyncCombat_Finished"))
     self.TabItem02:SetIconPath("/Game/UI/Texture/Dynamic/Atlas/Coop/T_Coop_End.T_Coop_End")
   end
-  self:RefreshFirstTabRedDot(self.NewNum, self.RedDotNum)
-  self:RefreshSubTabRedDot(self.NewNum, self.RedDotNum)
+  self:RefreshSubTabRedDot(self.NewNum, self.RedDotNum, self.StoppageNewNum)
   self:SelectListChange(1, true)
 end
 
@@ -946,16 +967,22 @@ end
 function View:RefreshList()
   self.ListRoom:ClearListItems()
   self.CreateReward:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Ws_Content:SetActiveWidgetIndex(1)
   if 1 == self.CurFirstTabIdx then
     local permission = self.SelectedSubTabIdx or 1
     CoopModel:AsyncCombatGetRoomList(permission, self.NextRoomUid, function(Err, RoomList)
       if Err ~= ErrorCode.RET_SUCCESS then
+        DebugPrint("AsyncCombatErrorCode：" .. Err)
+        self.Ws_Content:SetActiveWidgetIndex(1)
         return
       end
       if 1 ~= self.CurFirstTabIdx then
         return
       end
       self.RoomList = RoomList.Rooms
+      for Idx, roomData in ipairs(self.RoomList) do
+        roomData.Idx = Idx
+      end
       self.NextRoomUid = RoomList.NextRoomUid
       self.HasMore = RoomList.HasMore
       self:SiftShowList(self.RoomList)
@@ -963,6 +990,8 @@ function View:RefreshList()
   elseif 2 == self.CurFirstTabIdx then
     CoopModel:AsyncCombatGetOwnedRoom(function(Err, RoomList)
       if Err ~= ErrorCode.RET_SUCCESS then
+        DebugPrint("AsyncCombatErrorCode：" .. Err)
+        self.Ws_Content:SetActiveWidgetIndex(1)
         return
       end
       if 2 ~= self.CurFirstTabIdx then
@@ -972,34 +1001,61 @@ function View:RefreshList()
       local RewardCount = 0
       local ShowList = {}
       local MaxDurationSeconds = self.MaxDurationSeconds
-      for _, roomData in ipairs(RoomList) do
-        if roomData.IsPass == false then
-          local CreateTime = URuntimeCommonFunctionLibrary.GetDateTimeFromUnixTime(roomData.CreateTime or 0)
-          local CurTime = URuntimeCommonFunctionLibrary.GetDateTimeFromUnixTime(TimeUtils.NowTime())
-          local RemainTime = UKismetMathLibrary.Subtract_DateTimeDateTime(CurTime, CreateTime)
-          local elapsedSeconds = UKismetMathLibrary.GetTotalSeconds(RemainTime)
-          local IsRoomTimeDown = false
-          if MaxDurationSeconds <= elapsedSeconds then
-            IsRoomTimeDown = true
+      local ContributionRequire = DataMgr.AsyncCombatEventConstant.AsyncCombat_BaseContributionRequire.ConstantValue
+      local Dration = DataMgr.AsyncCombatEventConstant.AsyncCombat_StoppageTimeRoomDuration.ConstantValue * 60
+      local CurrentTimeStamp = TimeUtils.NowTime()
+      for Idx, roomData in ipairs(RoomList) do
+        roomData.Idx = Idx
+        local CreateTime = URuntimeCommonFunctionLibrary.GetDateTimeFromUnixTime(roomData.CreateTime or 0)
+        local CurTime = URuntimeCommonFunctionLibrary.GetDateTimeFromUnixTime(CurrentTimeStamp)
+        local RemainTime = UKismetMathLibrary.Subtract_DateTimeDateTime(CurTime, CreateTime)
+        local elapsedSeconds = UKismetMathLibrary.GetTotalSeconds(RemainTime)
+        local IsRoomTimeDown = false
+        if MaxDurationSeconds <= elapsedSeconds then
+          IsRoomTimeDown = true
+        end
+        local IsStopageRoomTimeDown = false
+        if roomData.CloseTime then
+          local ContributionRoomCloseTime = roomData.CloseTime + Dration
+          if CurrentTimeStamp >= ContributionRoomCloseTime then
+            IsStopageRoomTimeDown = true
+          else
+            IsStopageRoomTimeDown = false
           end
+        end
+        if roomData.IsPass == false then
           if 1 == self.SelectedSubTabIdx then
             if false == IsRoomTimeDown then
               table.insert(ShowList, roomData)
             elseif true == IsRoomTimeDown and 1 == roomData.RewardState then
               table.insert(ShowList, roomData)
               RewardCount = RewardCount + 1
+            elseif 0 == roomData.RewardState and false == roomData.IsMaster and false == IsStopageRoomTimeDown and roomData.Contribution and ContributionRequire > roomData.Contribution then
+              table.insert(ShowList, roomData)
             end
-          elseif 2 == self.SelectedSubTabIdx and true == IsRoomTimeDown and 1 ~= roomData.RewardState then
-            table.insert(ShowList, roomData)
+          elseif 2 == self.SelectedSubTabIdx then
+            if true == IsRoomTimeDown and 2 == roomData.RewardState then
+              table.insert(ShowList, roomData)
+            elseif true == IsRoomTimeDown and true == IsStopageRoomTimeDown and 1 ~= roomData.RewardState then
+              table.insert(ShowList, roomData)
+            elseif true == IsRoomTimeDown and true == roomData.IsMaster and 0 == roomData.RewardState then
+              table.insert(ShowList, roomData)
+            end
           end
         elseif roomData.IsPass == true then
           if 1 == self.SelectedSubTabIdx then
             if 1 == roomData.RewardState then
               table.insert(ShowList, roomData)
               RewardCount = RewardCount + 1
+            elseif 0 == roomData.RewardState and false == IsStopageRoomTimeDown and 0 == roomData.RewardState and ContributionRequire > roomData.Contribution then
+              table.insert(ShowList, roomData)
             end
-          elseif 2 == self.SelectedSubTabIdx and 1 ~= roomData.RewardState then
-            table.insert(ShowList, roomData)
+          elseif 2 == self.SelectedSubTabIdx then
+            if 2 == roomData.RewardState then
+              table.insert(ShowList, roomData)
+            elseif true == IsRoomTimeDown and true == IsStopageRoomTimeDown and 1 ~= roomData.RewardState then
+              table.insert(ShowList, roomData)
+            end
           end
         end
       end
@@ -1060,7 +1116,9 @@ function View:_OnListItemScrolled(ItemOffset, DistanceRemaining)
 end
 
 function View:AddRoomListToShowList(RoomList)
-  for _, roomData in ipairs(RoomList) do
+  local CurrentNum = #self.RoomList
+  for Idx, roomData in ipairs(RoomList) do
+    roomData.Idx = CurrentNum + Idx
     table.insert(self.RoomList, roomData)
   end
   local SelectedItems = self.SelectedItems
@@ -1110,21 +1168,19 @@ function View:RefreshShowList(ShowList, IsAdd)
   self.Ws_Content:SetActiveWidgetIndex(0)
   table.sort(ShowList, function(a, b)
     if a.RateResId ~= b.RateResId then
-      return a.RateResId > b.RateResId
+      local BonusRateA = CoopModel:GetBonusRateByRateId(a.RateResId)
+      local BonusRateB = CoopModel:GetBonusRateByRateId(b.RateResId)
+      return BonusRateA > BonusRateB
     end
     if a.Progress ~= b.Progress then
-      return a.RateResId < b.RateResId
+      return a.Progress < b.Progress
     end
-    if a.Level ~= b.Level then
-      return a.Level > b.Level
+    local LevelA = DataMgr.AsyncCombat[a.RoomConfId].Level
+    local LevelB = DataMgr.AsyncCombat[b.RoomConfId].Level
+    if LevelA ~= LevelB then
+      return LevelA > LevelB
     end
-    if a.MemberCount ~= b.MemberCount then
-      return a.MemberCount < b.MemberCount
-    end
-    if a.CreateTime ~= b.CreateTime then
-      return a.CreateTime > b.CreateTime
-    end
-    return a.RoomUniqueId > b.RoomUniqueId
+    return a.Idx < b.Idx
   end)
   local RewardCount = 0
   for Index, roomData in ipairs(ShowList) do
@@ -1178,21 +1234,55 @@ function View:RefreshRoomEnd(RoomUniId, IsPass, RewardState)
   end
 end
 
+function View:RefreshRoomMasterInfo(RoomUniId)
+  if not RoomUniId then
+    return
+  end
+  local numItems = self.ListRoom:GetNumItems()
+  for i = 0, numItems - 1 do
+    local Content = self.ListRoom:GetItemAt(i)
+    if IsValid(Content) and not Content.IsEmpty and Content.Widget and Content.Widget.RoomData and Content.Widget.RoomData.RoomUniqueId and Content.Widget.RoomData.RoomUniqueId == RoomUniId then
+      Content.Widget.RoomData.IsMaster = true
+      Content.Widget:UpdateRoomInfo()
+    end
+  end
+end
+
 function View:RefreshPlayerInfo()
-  local WeekLimit = DataMgr.AsyncCombatEventConstant.AsyncCombat_WeeklyLimit.ConstantValue
-  local CurrentNum = WeekLimit - CoopModel:AsyncCombatGetPlayerInfo()
-  if 0 == CurrentNum then
-    self.CreateRoomLimit = true
-    self.BtnCreate.Btn:SetForbidden(true)
-    self.TextNum:SetText(string.format("<Highlight>%d</>/%d", CurrentNum, WeekLimit))
+  local FreeCreateTimes, FreeGiveNum = CoopModel:AsyncCombatGetFreeCreateTimes()
+  if FreeCreateTimes < FreeGiveNum then
+    self.Btn_Personal:SetVisibility(UE4.ESlateVisibility.Visible)
+    self.Btn_01:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    local FreeTimesStr = string.format(GText("UI_AsyncCombat_FreeCreateCount"), FreeGiveNum - FreeCreateTimes, FreeGiveNum)
+    self.CreateReward_Personal.TextCreate:SetText(FreeTimesStr)
+    if not self.FreeTimerHanle then
+      local FreeGiveWeekDay = DataMgr.AsyncCombatEventConstant.Async_FreeGiveWeekDay.ConstantValue
+      self.FreeTimesRefreshTime = TimeUtils.NextWeekDayRefreshTime(FreeGiveWeekDay)
+      self.FreeTimerHanle = self:AddTimer(1, self.UpdateFreeTime, true, 0, "UpdateAsyncCombatFreeTimes", true)
+      self:UpdateFreeTime()
+    end
   else
-    self.CreateRoomLimit = false
-    self.BtnCreate.Btn:SetForbidden(false)
-    self.TextNum:SetText(string.format("%d/%d", CurrentNum, WeekLimit))
+    self.Btn_Personal:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.Btn_01:SetVisibility(UE4.ESlateVisibility.Visible)
+    if self.FreeTimerHanle then
+      self:RemoveTimer(self.FreeTimerHanle)
+      self.FreeTimerHanle = nil
+    end
+    local WeekLimit = DataMgr.AsyncCombatEventConstant.AsyncCombat_WeeklyLimit.ConstantValue
+    local CurrentNum = WeekLimit - CoopModel:AsyncCombatGetPlayerInfo()
+    if 0 == CurrentNum then
+      self.CreateRoomLimit = true
+      self.BtnCreate.Btn:SetForbidden(true)
+      self.TextNum:SetText(string.format("<Highlight>%d</>/%d", CurrentNum, WeekLimit))
+    else
+      self.CreateRoomLimit = false
+      self.BtnCreate.Btn:SetForbidden(false)
+      self.TextNum:SetText(string.format("%d/%d", CurrentNum, WeekLimit))
+    end
   end
   local CurrentJoinRoomNum, LimitNum = CoopModel:AsyncCombatGetGoingRoomNum()
   local NumText = string.format("：%d/%d", CurrentJoinRoomNum, LimitNum)
-  if CurrentJoinRoomNum == LimitNum then
+  if LimitNum <= CurrentJoinRoomNum then
     NumText = string.format(GText("：<Highlight>%d</>/%d"), CurrentJoinRoomNum, LimitNum)
   end
   if self:IsMobile() then
@@ -1208,44 +1298,106 @@ function View:RefreshPlayerInfo()
   end
 end
 
+function View:UpdateFreeTime()
+  if not self.FreeTimesRefreshTime then
+    local FreeGiveWeekDay = DataMgr.AsyncCombatEventConstant.Async_FreeGiveWeekDay.ConstantValue
+    self.FreeTimesRefreshTime = TimeUtils.NextWeekDayRefreshTime(FreeGiveWeekDay)
+  end
+  if self.FreeTimesRefreshTime and self.FreeTimesRefreshTime > self.ActivityEndTime then
+    self.FreeTimesRefreshTime = self.ActivityEndTime
+  end
+  local CurrentTime = TimeUtils.NowTime()
+  if CurrentTime > self.ActivityEndTime then
+    self:SetDueTime(0)
+    self:RemoveTimer(self.FreeTimerHanle)
+    self.FreeTimesRefreshTime = nil
+    return
+  end
+  local RemainRefreshTime = self.FreeTimesRefreshTime - CurrentTime
+  if RemainRefreshTime < 0 then
+    self.FreeTimesRefreshTime = nil
+    RemainRefreshTime = 0
+  end
+  self:SetDueTime(RemainRefreshTime)
+end
+
+function View:SetDueTime(DueTime)
+  DueTime = DueTime or 0
+  if DueTime >= CommonConst.SECOND_IN_DAY then
+    local DayLeft = math.floor(DueTime / CommonConst.SECOND_IN_DAY)
+    self.Text_RefreshTime:SetText(string.format(GText("UI_AsyncCombat_Date_Due"), DayLeft))
+  elseif DueTime >= CommonConst.SECOND_IN_HOUR then
+    local HourLeft = math.floor(DueTime / CommonConst.SECOND_IN_HOUR)
+    self.Text_RefreshTime:SetText(string.format(GText("UI_AsyncCombat_Date_Hour"), HourLeft))
+  elseif DueTime >= CommonConst.SECOND_IN_MINUTE then
+    local MinLeft = math.floor(DueTime / CommonConst.SECOND_IN_MINUTE)
+    self.Text_RefreshTime:SetText(string.format(GText("UI_AsyncCombat_Date_Minute"), MinLeft))
+  else
+    self.Text_RefreshTime:SetText(string.format(GText("UI_AsyncCombat_Date_Second"), DueTime))
+  end
+end
+
 function View:AddReddotListen()
   ActivityReddotHelper.AddReddotListenByTabId(self.EventId, {
     Obj = self,
     Func = function(self, Count, RdType, RdName)
       local RedDotCacheDetail = ReddotManager.GetLeafNodeCacheDetail(self.ReddotNodeName) or {}
       local NewCacheDetail = ReddotManager.GetLeafNodeCacheDetail(self.NewNodeName) or {}
-      self:RefreshFirstTabRedDot(NewCacheDetail.New, RedDotCacheDetail.Red)
-      self:RefreshSubTabRedDot(NewCacheDetail.New, RedDotCacheDetail.Red)
+      local StoppageCacheDetail = ReddotManager.GetLeafNodeCacheDetail(self.StoppageNodeName) or {}
+      self:RefreshFirstTabRedDot(NewCacheDetail, RedDotCacheDetail.Red, StoppageCacheDetail.New)
+      self:RefreshSubTabRedDot(NewCacheDetail.New, RedDotCacheDetail.Red, StoppageCacheDetail.New)
     end
   })
 end
 
-function View:RefreshFirstTabRedDot(NewNum, RedDotNum)
+function View:RefreshFirstTabRedDot(NewCacheDetail, RedDotNum, StoppageNewNum)
+  local NewNum = NewCacheDetail.New or 0
+  StoppageNewNum = StoppageNewNum or 0
+  RedDotNum = RedDotNum or 0
+  self.RedDotNum = RedDotNum
+  self.NewNum = NewNum
+  self.StoppageNewNum = StoppageNewNum
   if NewNum and NewNum >= 1 then
-    self.BtnCreate.New:SetVisibility(UE4.ESlateVisibility.Visible)
+    if NewCacheDetail.FreeCreate then
+      self.CreateReward_Personal.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    elseif NewCacheDetail.NormalCreate then
+      self.BtnCreate.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    end
+    self.BtnCreate.HintDot:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.CreateReward_Personal.HintDot:SetVisibility(UE4.ESlateVisibility.Collapsed)
   else
     self.BtnCreate.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.BtnCreate.HintDot:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.CreateReward_Personal.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.CreateReward_Personal.HintDot:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
   if RedDotNum and RedDotNum >= 1 then
     self.WBP_Com_Tab:ShowTabRedDotByTabId(2, false, true, false)
+  elseif RedDotNum and 0 == RedDotNum and StoppageNewNum and StoppageNewNum > 0 then
+    self.WBP_Com_Tab:ShowTabRedDotByTabId(2, true, true, false)
   else
     self.WBP_Com_Tab:ShowTabRedDotByTabId(2, false, false, false)
   end
 end
 
-function View:RefreshSubTabRedDot(NewNum, RedDotNum)
+function View:RefreshSubTabRedDot(NewNum, RedDotNum, StoppageNewNum)
   RedDotNum = RedDotNum or 0
   NewNum = NewNum or 0
-  self.RedDotNum = RedDotNum
-  self.NewNum = NewNum
+  StoppageNewNum = StoppageNewNum or 0
   if 2 == self.CurFirstTabIdx then
     if RedDotNum > 0 then
       self.TabItem01.Reddot:SetVisibility(UE4.ESlateVisibility.Visible)
       self.TabItem01.Reddot:SetReddotStyle(0)
       self.CreateReward:SetVisibility(UE4.ESlateVisibility.Visible)
+      self.TabItem01.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    elseif 0 == RedDotNum and StoppageNewNum > 0 then
+      self.TabItem01.Reddot:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      self.CreateReward:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      self.TabItem01.New:SetVisibility(UE4.ESlateVisibility.Visible)
     else
       self.TabItem01.Reddot:SetVisibility(UE4.ESlateVisibility.Collapsed)
       self.CreateReward:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      self.TabItem01.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
     end
   else
     self.TabItem01.Reddot:SetVisibility(UE4.ESlateVisibility.Collapsed)

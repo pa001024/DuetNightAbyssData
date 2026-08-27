@@ -81,9 +81,9 @@
   },
   {
     "id": 3010111,
-    "name": "UI_WeaponSkin_Name_3010111",
-    "desc": "",
-    "icon": "",
+    "name": "기나긴 밤의 종막·대검",
+    "desc": "UI_WeaponSkin_Des_3010111",
+    "icon": "T_Head_Claymore_Yejin",
     "rarity": 5,
     "unlock": "상점을 통해 획득"
   },
@@ -149,6 +149,14 @@
     "desc": "",
     "icon": "",
     "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010209,
+    "name": "절규·한손검",
+    "desc": "꾸아악——————!",
+    "icon": "T_Head_Sword_Nahan",
+    "rarity": 4,
     "unlock": "상점을 통해 획득"
   },
   {
@@ -377,9 +385,17 @@
   },
   {
     "id": 3010613,
-    "name": "UI_WeaponSkin_Name_3010610",
+    "name": "UI_WeaponSkin_Name_3010613",
     "desc": "",
     "icon": "",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010615,
+    "name": "불타는 심장의 업화",
+    "desc": "마음을 연료로, 만물을 재로 불태운다.",
+    "icon": "T_Head_Dualblade_Fenxin",
     "rarity": 5,
     "unlock": "상점을 통해 획득"
   },
@@ -496,6 +512,14 @@
     "unlock": "상점을 통해 획득"
   },
   {
+    "id": 3010807,
+    "name": "절규·칼날 채찍",
+    "desc": "꾸아악——————!",
+    "icon": "T_Head_Swordwhip_Nahan",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
     "id": 3010901,
     "name": "탄도는 고정이다옹",
     "desc": "냐옹~~~",
@@ -521,9 +545,9 @@
   },
   {
     "id": 3010904,
-    "name": "UI_WeaponSkin_Name_3010904",
-    "desc": "",
-    "icon": "",
+    "name": "기나긴 밤의 종막·핸드 캐논",
+    "desc": "UI_WeaponSkin_Des_3010111",
+    "icon": "T_Head_Cannon_Yejin",
     "rarity": 5,
     "unlock": "상점을 통해 획득"
   },
@@ -562,7 +586,7 @@
   {
     "id": 3011005,
     "name": "UI_WeaponSkin_Name_3011005",
-    "desc": "",
+    "desc": "UI_WeaponSkin_Des_3010111",
     "icon": "",
     "rarity": 5,
     "unlock": "상점을 통해 획득"

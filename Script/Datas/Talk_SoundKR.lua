@@ -1009,7 +1009,7 @@ local Data = {
   },
   {
     MinKey = "voice_kr_char_Dafu_vo_emotion_sigh_01",
-    MaxKey = "voice_kr_char_Fuluo_vo_emotion_hesitate_01",
+    MaxKey = "voice_kr_char_Feina_vo_emotion_personal_03",
     Loader = function()
       return {
         voice_kr_char_Dafu_vo_emotion_sigh_01 = {
@@ -1567,6 +1567,311 @@ local Data = {
           SelectKey = "voice_kr_char_Eve_vo_welcome",
           SoundLength = 5480
         },
+        voice_kr_char_Falu_vo_appear = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_appear",
+          SoundLength = 3480
+        },
+        voice_kr_char_Falu_vo_battleidle = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_battleidle",
+          SoundLength = 1700
+        },
+        voice_kr_char_Falu_vo_birthday = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_birthday",
+          SoundLength = 28350
+        },
+        voice_kr_char_Falu_vo_companio_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_companio_01",
+          SoundLength = 19150
+        },
+        voice_kr_char_Falu_vo_companio_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_companio_02",
+          SoundLength = 12100
+        },
+        voice_kr_char_Falu_vo_companio_03 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_companio_03",
+          SoundLength = 15600
+        },
+        voice_kr_char_Falu_vo_emotion_amaze_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_amaze_01",
+          SoundLength = 550
+        },
+        voice_kr_char_Falu_vo_emotion_amaze_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_amaze_02",
+          SoundLength = 540
+        },
+        voice_kr_char_Falu_vo_emotion_complacent_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_complacent_01",
+          SoundLength = 600
+        },
+        voice_kr_char_Falu_vo_emotion_conclude_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_conclude_01",
+          SoundLength = 900
+        },
+        voice_kr_char_Falu_vo_emotion_confuse_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_confuse_01",
+          SoundLength = 610
+        },
+        voice_kr_char_Falu_vo_emotion_continue_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_continue_01",
+          SoundLength = 750
+        },
+        voice_kr_char_Falu_vo_emotion_disdain_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_disdain_01",
+          SoundLength = 550
+        },
+        voice_kr_char_Falu_vo_emotion_dislike_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_dislike_01",
+          SoundLength = 880
+        },
+        voice_kr_char_Falu_vo_emotion_dislike_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_dislike_02",
+          SoundLength = 880
+        },
+        voice_kr_char_Falu_vo_emotion_dislike_03 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_dislike_03",
+          SoundLength = 1680
+        },
+        voice_kr_char_Falu_vo_emotion_excuse_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_excuse_01",
+          SoundLength = 680
+        },
+        voice_kr_char_Falu_vo_emotion_happy_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_happy_01",
+          SoundLength = 600
+        },
+        voice_kr_char_Falu_vo_emotion_happy_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_happy_02",
+          SoundLength = 1260
+        },
+        voice_kr_char_Falu_vo_emotion_happy_03 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_happy_03",
+          SoundLength = 1600
+        },
+        voice_kr_char_Falu_vo_emotion_hesitate_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_hesitate_01",
+          SoundLength = 1790
+        },
+        voice_kr_char_Falu_vo_emotion_no_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_no_01",
+          SoundLength = 700
+        },
+        voice_kr_char_Falu_vo_emotion_objection_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_objection_01",
+          SoundLength = 930
+        },
+        voice_kr_char_Falu_vo_emotion_personal_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_personal_01",
+          SoundLength = 610
+        },
+        voice_kr_char_Falu_vo_emotion_personal_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_personal_02",
+          SoundLength = 850
+        },
+        voice_kr_char_Falu_vo_emotion_personal_03 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_personal_03",
+          SoundLength = 1290
+        },
+        voice_kr_char_Falu_vo_emotion_personal_04 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_personal_04",
+          SoundLength = 960
+        },
+        voice_kr_char_Falu_vo_emotion_personal_05 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_personal_05",
+          SoundLength = 820
+        },
+        voice_kr_char_Falu_vo_emotion_realize_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_realize_01",
+          SoundLength = 800
+        },
+        voice_kr_char_Falu_vo_emotion_refute_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_refute_01",
+          SoundLength = 850
+        },
+        voice_kr_char_Falu_vo_emotion_reply_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_reply_01",
+          SoundLength = 590
+        },
+        voice_kr_char_Falu_vo_emotion_reply_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_reply_02",
+          SoundLength = 590
+        },
+        voice_kr_char_Falu_vo_emotion_sigh_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_sigh_01",
+          SoundLength = 670
+        },
+        voice_kr_char_Falu_vo_emotion_sigh_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_sigh_02",
+          SoundLength = 1350
+        },
+        voice_kr_char_Falu_vo_emotion_start_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_start_01",
+          SoundLength = 840
+        },
+        voice_kr_char_Falu_vo_emotion_start_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_start_02",
+          SoundLength = 960
+        },
+        voice_kr_char_Falu_vo_emotion_thank_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_thank_01",
+          SoundLength = 800
+        },
+        voice_kr_char_Falu_vo_emotion_think_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_think_01",
+          SoundLength = 1230
+        },
+        voice_kr_char_Falu_vo_emotion_understand_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_understand_01",
+          SoundLength = 870
+        },
+        voice_kr_char_Falu_vo_emotion_unexpect_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_unexpect_01",
+          SoundLength = 590
+        },
+        voice_kr_char_Falu_vo_emotion_yes_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_emotion_yes_01",
+          SoundLength = 920
+        },
+        voice_kr_char_Falu_vo_fail = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_fail",
+          SoundLength = 4890
+        },
+        voice_kr_char_Falu_vo_gain = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_gain",
+          SoundLength = 6780
+        },
+        voice_kr_char_Falu_vo_idle = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_idle",
+          SoundLength = 3660
+        },
+        voice_kr_char_Falu_vo_lvup = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_lvup",
+          SoundLength = 1090
+        },
+        voice_kr_char_Falu_vo_topic_01_1 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_topic_01_1",
+          SoundLength = 9930
+        },
+        voice_kr_char_Falu_vo_topic_01_2 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_topic_01_2",
+          SoundLength = 7380
+        },
+        voice_kr_char_Falu_vo_topic_01_3 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_topic_01_3",
+          SoundLength = 10840
+        },
+        voice_kr_char_Falu_vo_topic_01_4 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_topic_01_4",
+          SoundLength = 10000
+        },
+        voice_kr_char_Falu_vo_topic_02_1 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_topic_02_1",
+          SoundLength = 14320
+        },
+        voice_kr_char_Falu_vo_topic_02_2 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_topic_02_2",
+          SoundLength = 13130
+        },
+        voice_kr_char_Falu_vo_topic_02_3 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_topic_02_3",
+          SoundLength = 11070
+        },
+        voice_kr_char_Falu_vo_topic_02_4 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_topic_02_4",
+          SoundLength = 12110
+        },
+        voice_kr_char_Falu_vo_topic_03_1 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_topic_03_1",
+          SoundLength = 1680
+        },
+        voice_kr_char_Falu_vo_topic_03_2 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_topic_03_2",
+          SoundLength = 4140
+        },
+        voice_kr_char_Falu_vo_topic_03_3 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_topic_03_3",
+          SoundLength = 12400
+        },
+        voice_kr_char_Falu_vo_topic_03_4 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_topic_03_4",
+          SoundLength = 13980
+        },
+        voice_kr_char_Falu_vo_topic_03_5 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_topic_03_5",
+          SoundLength = 6090
+        },
+        voice_kr_char_Falu_vo_topic_03_6 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_topic_03_6",
+          SoundLength = 4760
+        },
+        voice_kr_char_Falu_vo_victory = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_victory",
+          SoundLength = 4680
+        },
+        voice_kr_char_Falu_vo_welcome = {
+          ProgrammerSoundPath = "event:/voice/kr/char/Falu/vo",
+          SelectKey = "voice_kr_char_Falu_vo_welcome",
+          SoundLength = 2010
+        },
         voice_kr_char_Feina_vo_appear = {
           ProgrammerSoundPath = "event:/voice/kr/char/Feina/vo",
           SelectKey = "voice_kr_char_Feina_vo_appear",
@@ -1706,7 +2011,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/char/Feina/vo",
           SelectKey = "voice_kr_char_Feina_vo_emotion_personal_03",
           SoundLength = 1700
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_char_Feina_vo_emotion_personal_04",
+    MaxKey = "voice_kr_char_Heitao_vo_emotion_continue_01",
+    Loader = function()
+      return {
         voice_kr_char_Feina_vo_emotion_personal_04 = {
           ProgrammerSoundPath = "event:/voice/kr/char/Feina/vo",
           SelectKey = "voice_kr_char_Feina_vo_emotion_personal_04",
@@ -2011,15 +2324,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/char/Fuluo/vo",
           SelectKey = "voice_kr_char_Fuluo_vo_emotion_hesitate_01",
           SoundLength = 1580
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_char_Fuluo_vo_emotion_no_01",
-    MaxKey = "voice_kr_char_Hero_vo_mouth_f",
-    Loader = function()
-      return {
+        },
         voice_kr_char_Fuluo_vo_emotion_no_01 = {
           ProgrammerSoundPath = "event:/voice/kr/char/Fuluo/vo",
           SelectKey = "voice_kr_char_Fuluo_vo_emotion_no_01",
@@ -2714,7 +3019,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/char/Heitao/vo",
           SelectKey = "voice_kr_char_Heitao_vo_emotion_continue_01",
           SoundLength = 1780
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_char_Heitao_vo_emotion_disdain_01",
+    MaxKey = "voice_kr_char_Kezhou_vo_topic_02_1",
+    Loader = function()
+      return {
         voice_kr_char_Heitao_vo_emotion_disdain_01 = {
           ProgrammerSoundPath = "event:/voice/kr/char/Heitao/vo",
           SelectKey = "voice_kr_char_Heitao_vo_emotion_disdain_01",
@@ -3019,15 +3332,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/char/Hero/vo",
           SelectKey = "voice_kr_char_Hero_vo_mouth_f",
           SoundLength = 36230
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_char_Hero_vo_mouth_m",
-    MaxKey = "voice_kr_char_Landi_vo_topic_01_1",
-    Loader = function()
-      return {
+        },
         voice_kr_char_Hero_vo_mouth_m = {
           ProgrammerSoundPath = "event:/voice/kr/char/Hero/vo",
           SelectKey = "voice_kr_char_Hero_vo_mouth_m",
@@ -3722,7 +4027,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/char/Kezhou/vo",
           SelectKey = "voice_kr_char_Kezhou_vo_topic_02_1",
           SoundLength = 7260
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_char_Kezhou_vo_topic_02_2",
+    MaxKey = "voice_kr_char_Lise_vo_topic_06_1",
+    Loader = function()
+      return {
         voice_kr_char_Kezhou_vo_topic_02_2 = {
           ProgrammerSoundPath = "event:/voice/kr/char/Kezhou/vo",
           SelectKey = "voice_kr_char_Kezhou_vo_topic_02_2",
@@ -4027,15 +4340,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/char/Landi/vo",
           SelectKey = "voice_kr_char_Landi_vo_topic_01_1",
           SoundLength = 20770
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_char_Landi_vo_topic_01_2",
-    MaxKey = "voice_kr_char_Maer_vo_topic_02_4",
-    Loader = function()
-      return {
+        },
         voice_kr_char_Landi_vo_topic_01_2 = {
           ProgrammerSoundPath = "event:/voice/kr/char/Landi/vo",
           SelectKey = "voice_kr_char_Landi_vo_topic_01_2",
@@ -4730,7 +5035,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/char/Lise/vo",
           SelectKey = "voice_kr_char_Lise_vo_topic_06_1",
           SoundLength = 12380
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_char_Lise_vo_topic_06_2",
+    MaxKey = "voice_kr_char_Nifu_vo_emotion_personal_04",
+    Loader = function()
+      return {
         voice_kr_char_Lise_vo_topic_06_2 = {
           ProgrammerSoundPath = "event:/voice/kr/char/Lise/vo",
           SelectKey = "voice_kr_char_Lise_vo_topic_06_2",
@@ -5035,15 +5348,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/char/Maer/vo",
           SelectKey = "voice_kr_char_Maer_vo_topic_02_4",
           SoundLength = 4950
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_char_Maer_vo_topic_03_1",
-    MaxKey = "voice_kr_char_Qiuxian_vo_emotion_thank_01",
-    Loader = function()
-      return {
+        },
         voice_kr_char_Maer_vo_topic_03_1 = {
           ProgrammerSoundPath = "event:/voice/kr/char/Maer/vo",
           SelectKey = "voice_kr_char_Maer_vo_topic_03_1",
@@ -5108,6 +5413,156 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
           SelectKey = "voice_kr_char_NanzhuDark_vo_battleidle",
           SoundLength = 4450
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_amaze_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_amaze_01",
+          SoundLength = 520
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_amaze_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_amaze_02",
+          SoundLength = 1020
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_complacent_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_complacent_01",
+          SoundLength = 820
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_conclude_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_conclude_01",
+          SoundLength = 1260
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_confuse_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_confuse_01",
+          SoundLength = 990
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_continue_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_continue_01",
+          SoundLength = 1000
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_disdain_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_disdain_01",
+          SoundLength = 1190
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_dislike_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_dislike_01",
+          SoundLength = 630
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_dislike_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_dislike_02",
+          SoundLength = 1310
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_dislike_03 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_dislike_03",
+          SoundLength = 1110
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_excuse_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_excuse_01",
+          SoundLength = 1030
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_happy_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_happy_01",
+          SoundLength = 720
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_happy_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_happy_02",
+          SoundLength = 1290
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_happy_03 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_happy_03",
+          SoundLength = 1350
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_hesitate_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_hesitate_01",
+          SoundLength = 920
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_no_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_no_01",
+          SoundLength = 960
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_objection_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_objection_01",
+          SoundLength = 960
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_realize_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_realize_01",
+          SoundLength = 740
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_refute_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_refute_01",
+          SoundLength = 940
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_reply_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_reply_01",
+          SoundLength = 890
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_reply_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_reply_02",
+          SoundLength = 750
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_sigh_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_sigh_01",
+          SoundLength = 670
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_sigh_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_sigh_02",
+          SoundLength = 910
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_start_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_start_01",
+          SoundLength = 1190
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_start_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_start_02",
+          SoundLength = 1220
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_thank_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_thank_01",
+          SoundLength = 1010
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_think_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_think_01",
+          SoundLength = 1110
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_understand_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_understand_01",
+          SoundLength = 890
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_unexpect_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_unexpect_01",
+          SoundLength = 500
+        },
+        voice_kr_char_NanzhuDark_vo_emotion_yes_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
+          SelectKey = "voice_kr_char_NanzhuDark_vo_emotion_yes_01",
+          SoundLength = 910
         },
         voice_kr_char_NanzhuDark_vo_fail = {
           ProgrammerSoundPath = "event:/voice/kr/char/NanzhuDark/vo",
@@ -5299,6 +5754,156 @@ local Data = {
           SelectKey = "voice_kr_char_NanzhuLight_vo_victory",
           SoundLength = 4090
         },
+        voice_kr_char_NanzhuWater_vo_emotion_amaze_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_amaze_01",
+          SoundLength = 520
+        },
+        voice_kr_char_NanzhuWater_vo_emotion_amaze_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_amaze_02",
+          SoundLength = 1020
+        },
+        voice_kr_char_NanzhuWater_vo_emotion_complacent_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_complacent_01",
+          SoundLength = 820
+        },
+        voice_kr_char_NanzhuWater_vo_emotion_conclude_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_conclude_01",
+          SoundLength = 1260
+        },
+        voice_kr_char_NanzhuWater_vo_emotion_confuse_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_confuse_01",
+          SoundLength = 990
+        },
+        voice_kr_char_NanzhuWater_vo_emotion_continue_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_continue_01",
+          SoundLength = 1000
+        },
+        voice_kr_char_NanzhuWater_vo_emotion_disdain_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_disdain_01",
+          SoundLength = 1190
+        },
+        voice_kr_char_NanzhuWater_vo_emotion_dislike_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_dislike_01",
+          SoundLength = 630
+        },
+        voice_kr_char_NanzhuWater_vo_emotion_dislike_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_dislike_02",
+          SoundLength = 1310
+        },
+        voice_kr_char_NanzhuWater_vo_emotion_dislike_03 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_dislike_03",
+          SoundLength = 1110
+        },
+        voice_kr_char_NanzhuWater_vo_emotion_excuse_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_excuse_01",
+          SoundLength = 1030
+        },
+        voice_kr_char_NanzhuWater_vo_emotion_happy_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_happy_01",
+          SoundLength = 720
+        },
+        voice_kr_char_NanzhuWater_vo_emotion_happy_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_happy_02",
+          SoundLength = 1290
+        },
+        voice_kr_char_NanzhuWater_vo_emotion_happy_03 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_happy_03",
+          SoundLength = 1350
+        },
+        voice_kr_char_NanzhuWater_vo_emotion_hesitate_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_hesitate_01",
+          SoundLength = 920
+        },
+        voice_kr_char_NanzhuWater_vo_emotion_no_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_no_01",
+          SoundLength = 960
+        },
+        voice_kr_char_NanzhuWater_vo_emotion_objection_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_objection_01",
+          SoundLength = 960
+        },
+        voice_kr_char_NanzhuWater_vo_emotion_realize_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_realize_01",
+          SoundLength = 740
+        },
+        voice_kr_char_NanzhuWater_vo_emotion_refute_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_refute_01",
+          SoundLength = 940
+        },
+        voice_kr_char_NanzhuWater_vo_emotion_reply_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_reply_01",
+          SoundLength = 890
+        },
+        voice_kr_char_NanzhuWater_vo_emotion_reply_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_reply_02",
+          SoundLength = 750
+        },
+        voice_kr_char_NanzhuWater_vo_emotion_sigh_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_sigh_01",
+          SoundLength = 670
+        },
+        voice_kr_char_NanzhuWater_vo_emotion_sigh_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_sigh_02",
+          SoundLength = 910
+        },
+        voice_kr_char_NanzhuWater_vo_emotion_start_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_start_01",
+          SoundLength = 1190
+        },
+        voice_kr_char_NanzhuWater_vo_emotion_start_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_start_02",
+          SoundLength = 1220
+        },
+        voice_kr_char_NanzhuWater_vo_emotion_thank_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_thank_01",
+          SoundLength = 1010
+        },
+        voice_kr_char_NanzhuWater_vo_emotion_think_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_think_01",
+          SoundLength = 1110
+        },
+        voice_kr_char_NanzhuWater_vo_emotion_understand_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_understand_01",
+          SoundLength = 890
+        },
+        voice_kr_char_NanzhuWater_vo_emotion_unexpect_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_unexpect_01",
+          SoundLength = 500
+        },
+        voice_kr_char_NanzhuWater_vo_emotion_yes_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NanzhuWater/vo",
+          SelectKey = "voice_kr_char_NanzhuWater_vo_emotion_yes_01",
+          SoundLength = 910
+        },
         voice_kr_char_Nifu_vo_appear = {
           ProgrammerSoundPath = "event:/voice/kr/char/Nifu/vo",
           SelectKey = "voice_kr_char_Nifu_vo_appear",
@@ -5438,7 +6043,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/char/Nifu/vo",
           SelectKey = "voice_kr_char_Nifu_vo_emotion_personal_04",
           SoundLength = 1150
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_char_Nifu_vo_emotion_personal_05",
+    MaxKey = "voice_kr_char_Qiuxian_vo_topic_03_1",
+    Loader = function()
+      return {
         voice_kr_char_Nifu_vo_emotion_personal_05 = {
           ProgrammerSoundPath = "event:/voice/kr/char/Nifu/vo",
           SelectKey = "voice_kr_char_Nifu_vo_emotion_personal_05",
@@ -5679,6 +6292,156 @@ local Data = {
           SelectKey = "voice_kr_char_NvzhuDark_vo_battleidle",
           SoundLength = 4060
         },
+        voice_kr_char_NvzhuDark_vo_emotion_amaze_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_amaze_01",
+          SoundLength = 1090
+        },
+        voice_kr_char_NvzhuDark_vo_emotion_amaze_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_amaze_02",
+          SoundLength = 620
+        },
+        voice_kr_char_NvzhuDark_vo_emotion_complacent_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_complacent_01",
+          SoundLength = 1230
+        },
+        voice_kr_char_NvzhuDark_vo_emotion_conclude_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_conclude_01",
+          SoundLength = 1180
+        },
+        voice_kr_char_NvzhuDark_vo_emotion_confuse_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_confuse_01",
+          SoundLength = 620
+        },
+        voice_kr_char_NvzhuDark_vo_emotion_continue_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_continue_01",
+          SoundLength = 1350
+        },
+        voice_kr_char_NvzhuDark_vo_emotion_disdain_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_disdain_01",
+          SoundLength = 1910
+        },
+        voice_kr_char_NvzhuDark_vo_emotion_dislike_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_dislike_01",
+          SoundLength = 910
+        },
+        voice_kr_char_NvzhuDark_vo_emotion_dislike_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_dislike_02",
+          SoundLength = 1000
+        },
+        voice_kr_char_NvzhuDark_vo_emotion_dislike_03 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_dislike_03",
+          SoundLength = 920
+        },
+        voice_kr_char_NvzhuDark_vo_emotion_excuse_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_excuse_01",
+          SoundLength = 1030
+        },
+        voice_kr_char_NvzhuDark_vo_emotion_happy_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_happy_01",
+          SoundLength = 710
+        },
+        voice_kr_char_NvzhuDark_vo_emotion_happy_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_happy_02",
+          SoundLength = 1570
+        },
+        voice_kr_char_NvzhuDark_vo_emotion_happy_03 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_happy_03",
+          SoundLength = 1550
+        },
+        voice_kr_char_NvzhuDark_vo_emotion_hesitate_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_hesitate_01",
+          SoundLength = 1600
+        },
+        voice_kr_char_NvzhuDark_vo_emotion_no_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_no_01",
+          SoundLength = 1050
+        },
+        voice_kr_char_NvzhuDark_vo_emotion_objection_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_objection_01",
+          SoundLength = 1350
+        },
+        voice_kr_char_NvzhuDark_vo_emotion_realize_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_realize_01",
+          SoundLength = 1530
+        },
+        voice_kr_char_NvzhuDark_vo_emotion_refute_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_refute_01",
+          SoundLength = 940
+        },
+        voice_kr_char_NvzhuDark_vo_emotion_reply_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_reply_01",
+          SoundLength = 620
+        },
+        voice_kr_char_NvzhuDark_vo_emotion_reply_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_reply_02",
+          SoundLength = 800
+        },
+        voice_kr_char_NvzhuDark_vo_emotion_sigh_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_sigh_01",
+          SoundLength = 1460
+        },
+        voice_kr_char_NvzhuDark_vo_emotion_sigh_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_sigh_02",
+          SoundLength = 1110
+        },
+        voice_kr_char_NvzhuDark_vo_emotion_start_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_start_01",
+          SoundLength = 1260
+        },
+        voice_kr_char_NvzhuDark_vo_emotion_start_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_start_02",
+          SoundLength = 1340
+        },
+        voice_kr_char_NvzhuDark_vo_emotion_thank_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_thank_01",
+          SoundLength = 960
+        },
+        voice_kr_char_NvzhuDark_vo_emotion_think_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_think_01",
+          SoundLength = 1190
+        },
+        voice_kr_char_NvzhuDark_vo_emotion_understand_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_understand_01",
+          SoundLength = 1070
+        },
+        voice_kr_char_NvzhuDark_vo_emotion_unexpect_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_unexpect_01",
+          SoundLength = 1000
+        },
+        voice_kr_char_NvzhuDark_vo_emotion_yes_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
+          SelectKey = "voice_kr_char_NvzhuDark_vo_emotion_yes_01",
+          SoundLength = 840
+        },
         voice_kr_char_NvzhuDark_vo_fail = {
           ProgrammerSoundPath = "event:/voice/kr/char/NvzhuDark/vo",
           SelectKey = "voice_kr_char_NvzhuDark_vo_fail",
@@ -5869,6 +6632,156 @@ local Data = {
           SelectKey = "voice_kr_char_NvzhuLight_vo_victory",
           SoundLength = 4420
         },
+        voice_kr_char_NvzhuWater_vo_emotion_amaze_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_amaze_01",
+          SoundLength = 1090
+        },
+        voice_kr_char_NvzhuWater_vo_emotion_amaze_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_amaze_02",
+          SoundLength = 620
+        },
+        voice_kr_char_NvzhuWater_vo_emotion_complacent_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_complacent_01",
+          SoundLength = 1230
+        },
+        voice_kr_char_NvzhuWater_vo_emotion_conclude_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_conclude_01",
+          SoundLength = 1180
+        },
+        voice_kr_char_NvzhuWater_vo_emotion_confuse_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_confuse_01",
+          SoundLength = 620
+        },
+        voice_kr_char_NvzhuWater_vo_emotion_continue_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_continue_01",
+          SoundLength = 1350
+        },
+        voice_kr_char_NvzhuWater_vo_emotion_disdain_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_disdain_01",
+          SoundLength = 1910
+        },
+        voice_kr_char_NvzhuWater_vo_emotion_dislike_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_dislike_01",
+          SoundLength = 910
+        },
+        voice_kr_char_NvzhuWater_vo_emotion_dislike_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_dislike_02",
+          SoundLength = 1000
+        },
+        voice_kr_char_NvzhuWater_vo_emotion_dislike_03 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_dislike_03",
+          SoundLength = 920
+        },
+        voice_kr_char_NvzhuWater_vo_emotion_excuse_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_excuse_01",
+          SoundLength = 1030
+        },
+        voice_kr_char_NvzhuWater_vo_emotion_happy_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_happy_01",
+          SoundLength = 710
+        },
+        voice_kr_char_NvzhuWater_vo_emotion_happy_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_happy_02",
+          SoundLength = 1570
+        },
+        voice_kr_char_NvzhuWater_vo_emotion_happy_03 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_happy_03",
+          SoundLength = 1550
+        },
+        voice_kr_char_NvzhuWater_vo_emotion_hesitate_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_hesitate_01",
+          SoundLength = 1600
+        },
+        voice_kr_char_NvzhuWater_vo_emotion_no_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_no_01",
+          SoundLength = 1050
+        },
+        voice_kr_char_NvzhuWater_vo_emotion_objection_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_objection_01",
+          SoundLength = 1350
+        },
+        voice_kr_char_NvzhuWater_vo_emotion_realize_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_realize_01",
+          SoundLength = 1530
+        },
+        voice_kr_char_NvzhuWater_vo_emotion_refute_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_refute_01",
+          SoundLength = 940
+        },
+        voice_kr_char_NvzhuWater_vo_emotion_reply_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_reply_01",
+          SoundLength = 620
+        },
+        voice_kr_char_NvzhuWater_vo_emotion_reply_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_reply_02",
+          SoundLength = 800
+        },
+        voice_kr_char_NvzhuWater_vo_emotion_sigh_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_sigh_01",
+          SoundLength = 1460
+        },
+        voice_kr_char_NvzhuWater_vo_emotion_sigh_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_sigh_02",
+          SoundLength = 1110
+        },
+        voice_kr_char_NvzhuWater_vo_emotion_start_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_start_01",
+          SoundLength = 1260
+        },
+        voice_kr_char_NvzhuWater_vo_emotion_start_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_start_02",
+          SoundLength = 1340
+        },
+        voice_kr_char_NvzhuWater_vo_emotion_thank_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_thank_01",
+          SoundLength = 960
+        },
+        voice_kr_char_NvzhuWater_vo_emotion_think_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_think_01",
+          SoundLength = 1190
+        },
+        voice_kr_char_NvzhuWater_vo_emotion_understand_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_understand_01",
+          SoundLength = 1070
+        },
+        voice_kr_char_NvzhuWater_vo_emotion_unexpect_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_unexpect_01",
+          SoundLength = 1000
+        },
+        voice_kr_char_NvzhuWater_vo_emotion_yes_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/NvzhuWater/vo",
+          SelectKey = "voice_kr_char_NvzhuWater_vo_emotion_yes_01",
+          SoundLength = 840
+        },
         voice_kr_char_Qiuxian_vo_battleidle = {
           ProgrammerSoundPath = "event:/voice/kr/char/Qiuxian/vo",
           SelectKey = "voice_kr_char_Qiuxian_vo_battleidle",
@@ -6043,15 +6956,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/char/Qiuxian/vo",
           SelectKey = "voice_kr_char_Qiuxian_vo_emotion_thank_01",
           SoundLength = 870
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_char_Qiuxian_vo_emotion_think_01",
-    MaxKey = "voice_kr_char_Songlu_vo_emotion_dislike_03",
-    Loader = function()
-      return {
+        },
         voice_kr_char_Qiuxian_vo_emotion_think_01 = {
           ProgrammerSoundPath = "event:/voice/kr/char/Qiuxian/vo",
           SelectKey = "voice_kr_char_Qiuxian_vo_emotion_think_01",
@@ -6146,7 +7051,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/char/Qiuxian/vo",
           SelectKey = "voice_kr_char_Qiuxian_vo_topic_03_1",
           SoundLength = 13410
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_char_Qiuxian_vo_topic_03_2",
+    MaxKey = "voice_kr_char_Songlu_vo_emotion_start_01",
+    Loader = function()
+      return {
         voice_kr_char_Qiuxian_vo_topic_03_2 = {
           ProgrammerSoundPath = "event:/voice/kr/char/Qiuxian/vo",
           SelectKey = "voice_kr_char_Qiuxian_vo_topic_03_2",
@@ -7051,15 +7964,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/char/Songlu/vo",
           SelectKey = "voice_kr_char_Songlu_vo_emotion_dislike_03",
           SoundLength = 1260
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_char_Songlu_vo_emotion_excuse_01",
-    MaxKey = "voice_kr_char_Tuosi_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_kr_char_Songlu_vo_emotion_excuse_01 = {
           ProgrammerSoundPath = "event:/voice/kr/char/Songlu/vo",
           SelectKey = "voice_kr_char_Songlu_vo_emotion_excuse_01",
@@ -7154,7 +8059,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/char/Songlu/vo",
           SelectKey = "voice_kr_char_Songlu_vo_emotion_start_01",
           SoundLength = 1220
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_char_Songlu_vo_emotion_start_02",
+    MaxKey = "voice_kr_char_WeitaF_vo_emotion_objection_01",
+    Loader = function()
+      return {
         voice_kr_char_Songlu_vo_emotion_start_02 = {
           ProgrammerSoundPath = "event:/voice/kr/char/Songlu/vo",
           SelectKey = "voice_kr_char_Songlu_vo_emotion_start_02",
@@ -8059,15 +8972,370 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/char/Tuosi/vo",
           SelectKey = "voice_kr_char_Tuosi_vo_welcome",
           SoundLength = 7810
+        },
+        voice_kr_char_WeitaF_vo_appear = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_appear",
+          SoundLength = 2580
+        },
+        voice_kr_char_WeitaF_vo_battleidle = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_battleidle",
+          SoundLength = 2470
+        },
+        voice_kr_char_WeitaF_vo_emotion_amaze_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_amaze_01",
+          SoundLength = 930
+        },
+        voice_kr_char_WeitaF_vo_emotion_amaze_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_amaze_02",
+          SoundLength = 540
+        },
+        voice_kr_char_WeitaF_vo_emotion_complacent_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_complacent_01",
+          SoundLength = 1320
+        },
+        voice_kr_char_WeitaF_vo_emotion_conclude_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_conclude_01",
+          SoundLength = 860
+        },
+        voice_kr_char_WeitaF_vo_emotion_confuse_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_confuse_01",
+          SoundLength = 510
+        },
+        voice_kr_char_WeitaF_vo_emotion_continue_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_continue_01",
+          SoundLength = 990
+        },
+        voice_kr_char_WeitaF_vo_emotion_disdain_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_disdain_01",
+          SoundLength = 800
+        },
+        voice_kr_char_WeitaF_vo_emotion_dislike_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_dislike_01",
+          SoundLength = 560
+        },
+        voice_kr_char_WeitaF_vo_emotion_dislike_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_dislike_02",
+          SoundLength = 610
+        },
+        voice_kr_char_WeitaF_vo_emotion_dislike_03 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_dislike_03",
+          SoundLength = 1380
+        },
+        voice_kr_char_WeitaF_vo_emotion_excuse_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_excuse_01",
+          SoundLength = 720
+        },
+        voice_kr_char_WeitaF_vo_emotion_happy_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_happy_01",
+          SoundLength = 1070
+        },
+        voice_kr_char_WeitaF_vo_emotion_happy_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_happy_02",
+          SoundLength = 1430
+        },
+        voice_kr_char_WeitaF_vo_emotion_happy_03 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_happy_03",
+          SoundLength = 1500
+        },
+        voice_kr_char_WeitaF_vo_emotion_hesitate_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_hesitate_01",
+          SoundLength = 1240
+        },
+        voice_kr_char_WeitaF_vo_emotion_no_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_no_01",
+          SoundLength = 780
+        },
+        voice_kr_char_WeitaF_vo_emotion_objection_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_objection_01",
+          SoundLength = 660
         }
       }
     end
   },
   {
-    MinKey = "voice_kr_char_Xibi_vo_appear",
-    MaxKey = "voice_kr_char_Yeer_vo_mouth",
+    MinKey = "voice_kr_char_WeitaF_vo_emotion_realize_01",
+    MaxKey = "voice_kr_char_Yeer_vo_companio_01_1",
     Loader = function()
       return {
+        voice_kr_char_WeitaF_vo_emotion_realize_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_realize_01",
+          SoundLength = 1160
+        },
+        voice_kr_char_WeitaF_vo_emotion_refute_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_refute_01",
+          SoundLength = 900
+        },
+        voice_kr_char_WeitaF_vo_emotion_reply_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_reply_01",
+          SoundLength = 640
+        },
+        voice_kr_char_WeitaF_vo_emotion_reply_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_reply_02",
+          SoundLength = 650
+        },
+        voice_kr_char_WeitaF_vo_emotion_sigh_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_sigh_01",
+          SoundLength = 680
+        },
+        voice_kr_char_WeitaF_vo_emotion_sigh_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_sigh_02",
+          SoundLength = 1000
+        },
+        voice_kr_char_WeitaF_vo_emotion_start_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_start_01",
+          SoundLength = 830
+        },
+        voice_kr_char_WeitaF_vo_emotion_start_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_start_02",
+          SoundLength = 1060
+        },
+        voice_kr_char_WeitaF_vo_emotion_thank_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_thank_01",
+          SoundLength = 910
+        },
+        voice_kr_char_WeitaF_vo_emotion_think_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_think_01",
+          SoundLength = 1120
+        },
+        voice_kr_char_WeitaF_vo_emotion_understand_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_understand_01",
+          SoundLength = 1110
+        },
+        voice_kr_char_WeitaF_vo_emotion_unexpect_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_unexpect_01",
+          SoundLength = 640
+        },
+        voice_kr_char_WeitaF_vo_emotion_yes_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_emotion_yes_01",
+          SoundLength = 680
+        },
+        voice_kr_char_WeitaF_vo_fail = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_fail",
+          SoundLength = 2370
+        },
+        voice_kr_char_WeitaF_vo_lvup = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_lvup",
+          SoundLength = 2220
+        },
+        voice_kr_char_WeitaF_vo_victory = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
+          SelectKey = "voice_kr_char_WeitaF_vo_victory",
+          SoundLength = 1910
+        },
+        voice_kr_char_WeitaM_vo_appear = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_appear",
+          SoundLength = 2730
+        },
+        voice_kr_char_WeitaM_vo_battleidle = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_battleidle",
+          SoundLength = 2440
+        },
+        voice_kr_char_WeitaM_vo_emotion_amaze_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_amaze_01",
+          SoundLength = 690
+        },
+        voice_kr_char_WeitaM_vo_emotion_amaze_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_amaze_02",
+          SoundLength = 610
+        },
+        voice_kr_char_WeitaM_vo_emotion_complacent_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_complacent_01",
+          SoundLength = 1040
+        },
+        voice_kr_char_WeitaM_vo_emotion_conclude_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_conclude_01",
+          SoundLength = 750
+        },
+        voice_kr_char_WeitaM_vo_emotion_confuse_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_confuse_01",
+          SoundLength = 640
+        },
+        voice_kr_char_WeitaM_vo_emotion_continue_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_continue_01",
+          SoundLength = 930
+        },
+        voice_kr_char_WeitaM_vo_emotion_disdain_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_disdain_01",
+          SoundLength = 1120
+        },
+        voice_kr_char_WeitaM_vo_emotion_dislike_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_dislike_01",
+          SoundLength = 640
+        },
+        voice_kr_char_WeitaM_vo_emotion_dislike_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_dislike_02",
+          SoundLength = 780
+        },
+        voice_kr_char_WeitaM_vo_emotion_dislike_03 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_dislike_03",
+          SoundLength = 1140
+        },
+        voice_kr_char_WeitaM_vo_emotion_excuse_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_excuse_01",
+          SoundLength = 750
+        },
+        voice_kr_char_WeitaM_vo_emotion_happy_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_happy_01",
+          SoundLength = 550
+        },
+        voice_kr_char_WeitaM_vo_emotion_happy_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_happy_02",
+          SoundLength = 1240
+        },
+        voice_kr_char_WeitaM_vo_emotion_happy_03 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_happy_03",
+          SoundLength = 1420
+        },
+        voice_kr_char_WeitaM_vo_emotion_hesitate_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_hesitate_01",
+          SoundLength = 710
+        },
+        voice_kr_char_WeitaM_vo_emotion_no_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_no_01",
+          SoundLength = 710
+        },
+        voice_kr_char_WeitaM_vo_emotion_objection_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_objection_01",
+          SoundLength = 720
+        },
+        voice_kr_char_WeitaM_vo_emotion_realize_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_realize_01",
+          SoundLength = 1090
+        },
+        voice_kr_char_WeitaM_vo_emotion_refute_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_refute_01",
+          SoundLength = 850
+        },
+        voice_kr_char_WeitaM_vo_emotion_reply_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_reply_01",
+          SoundLength = 580
+        },
+        voice_kr_char_WeitaM_vo_emotion_reply_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_reply_02",
+          SoundLength = 620
+        },
+        voice_kr_char_WeitaM_vo_emotion_reply_03 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_reply_03",
+          SoundLength = 590
+        },
+        voice_kr_char_WeitaM_vo_emotion_sigh_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_sigh_01",
+          SoundLength = 670
+        },
+        voice_kr_char_WeitaM_vo_emotion_sigh_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_sigh_02",
+          SoundLength = 980
+        },
+        voice_kr_char_WeitaM_vo_emotion_start_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_start_01",
+          SoundLength = 760
+        },
+        voice_kr_char_WeitaM_vo_emotion_start_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_start_02",
+          SoundLength = 1130
+        },
+        voice_kr_char_WeitaM_vo_emotion_thank_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_thank_01",
+          SoundLength = 970
+        },
+        voice_kr_char_WeitaM_vo_emotion_think_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_think_01",
+          SoundLength = 920
+        },
+        voice_kr_char_WeitaM_vo_emotion_understand_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_understand_01",
+          SoundLength = 920
+        },
+        voice_kr_char_WeitaM_vo_emotion_unexpect_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_unexpect_01",
+          SoundLength = 790
+        },
+        voice_kr_char_WeitaM_vo_emotion_yes_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_emotion_yes_01",
+          SoundLength = 670
+        },
+        voice_kr_char_WeitaM_vo_fail = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_fail",
+          SoundLength = 2660
+        },
+        voice_kr_char_WeitaM_vo_lvup = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_lvup",
+          SoundLength = 2190
+        },
+        voice_kr_char_WeitaM_vo_victory = {
+          ProgrammerSoundPath = "event:/voice/kr/char/WeitaM/vo",
+          SelectKey = "voice_kr_char_WeitaM_vo_victory",
+          SoundLength = 1640
+        },
         voice_kr_char_Xibi_vo_appear = {
           ProgrammerSoundPath = "event:/voice/kr/char/Xibi/vo",
           SelectKey = "voice_kr_char_Xibi_vo_appear",
@@ -8807,7 +10075,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/char/Yeer/vo",
           SelectKey = "voice_kr_char_Yeer_vo_companio_01_1",
           SoundLength = 8220
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_char_Yeer_vo_companio_01_2",
+    MaxKey = "voice_kr_char_Zhiliu_vo_emotion_disdain_01",
+    Loader = function()
+      return {
         voice_kr_char_Yeer_vo_companio_01_2 = {
           ProgrammerSoundPath = "event:/voice/kr/char/Yeer/vo",
           SelectKey = "voice_kr_char_Yeer_vo_companio_01_2",
@@ -9067,15 +10343,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/char/Yeer/vo",
           SelectKey = "voice_kr_char_Yeer_vo_mouth",
           SoundLength = 41590
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_char_Yeer_vo_topic_01_1",
-    MaxKey = "voice_kr_env_700002_7D2B8592",
-    Loader = function()
-      return {
+        },
         voice_kr_char_Yeer_vo_topic_01_1 = {
           ProgrammerSoundPath = "event:/voice/kr/char/Yeer/vo",
           SelectKey = "voice_kr_char_Yeer_vo_topic_01_1",
@@ -9815,7 +11083,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/char/Zhiliu/vo",
           SelectKey = "voice_kr_char_Zhiliu_vo_emotion_disdain_01",
           SoundLength = 620
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_char_Zhiliu_vo_emotion_dislike_01",
+    MaxKey = "voice_kr_env_Ver0102_7D702F3A",
+    Loader = function()
+      return {
         voice_kr_char_Zhiliu_vo_emotion_dislike_01 = {
           ProgrammerSoundPath = "event:/voice/kr/char/Zhiliu/vo",
           SelectKey = "voice_kr_char_Zhiliu_vo_emotion_dislike_01",
@@ -10075,15 +11351,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/env",
           SelectKey = "voice_kr_env_700002_7D2B8592",
           SoundLength = 1260
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_env_700003_7D2B95FA",
-    MaxKey = "voice_kr_env_Ver0102_7D7037C2",
-    Loader = function()
-      return {
+        },
         voice_kr_env_700003_7D2B95FA = {
           ProgrammerSoundPath = "event:/voice/kr/env",
           SelectKey = "voice_kr_env_700003_7D2B95FA",
@@ -10823,7 +12091,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/env",
           SelectKey = "voice_kr_env_Ver0102_7D702F3A",
           SoundLength = 4070
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_env_Ver0102_7D702F64",
+    MaxKey = "voice_kr_inv_Dafu_002_C8B90B72",
+    Loader = function()
+      return {
         voice_kr_env_Ver0102_7D702F64 = {
           ProgrammerSoundPath = "event:/voice/kr/env",
           SelectKey = "voice_kr_env_Ver0102_7D702F64",
@@ -11083,15 +12359,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/env",
           SelectKey = "voice_kr_env_Ver0102_7D7037C2",
           SoundLength = 2370
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_env_Ver0102_7D7037EC",
-    MaxKey = "voice_kr_inv_Dafu_003_C8B91C04",
-    Loader = function()
-      return {
+        },
         voice_kr_env_Ver0102_7D7037EC = {
           ProgrammerSoundPath = "event:/voice/kr/env",
           SelectKey = "voice_kr_env_Ver0102_7D7037EC",
@@ -11831,7 +13099,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Dafu/002",
           SelectKey = "voice_kr_inv_Dafu_002_C8B90B72",
           SoundLength = 8060
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Dafu_002_C8B90B9C",
+    MaxKey = "voice_kr_inv_Fushu_001_C8C5B4A9",
+    Loader = function()
+      return {
         voice_kr_inv_Dafu_002_C8B90B9C = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Dafu/002",
           SelectKey = "voice_kr_inv_Dafu_002_C8B90B9C",
@@ -12091,15 +13367,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Dafu/003",
           SelectKey = "voice_kr_inv_Dafu_003_C8B91C04",
           SoundLength = 3200
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Dafu_003_C8B91C2E",
-    MaxKey = "voice_kr_inv_Fushu_002_C8C5C53C_f",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Dafu_003_C8B91C2E = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Dafu/003",
           SelectKey = "voice_kr_inv_Dafu_003_C8B91C2E",
@@ -12839,7 +14107,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Fushu/001",
           SelectKey = "voice_kr_inv_Fushu_001_C8C5B4A9",
           SoundLength = 21350
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Fushu_001_C8C5B4AA",
+    MaxKey = "voice_kr_inv_Fushu_004_C8C5EAA4",
+    Loader = function()
+      return {
         voice_kr_inv_Fushu_001_C8C5B4AA = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Fushu/001",
           SelectKey = "voice_kr_inv_Fushu_001_C8C5B4AA",
@@ -13099,15 +14375,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Fushu/002",
           SelectKey = "voice_kr_inv_Fushu_002_C8C5C53C_f",
           SoundLength = 5460
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Fushu_002_C8C5C566",
-    MaxKey = "voice_kr_inv_Heitao_001_C85F3DB2_m",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Fushu_002_C8C5C566 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Fushu/002",
           SelectKey = "voice_kr_inv_Fushu_002_C8C5C566",
@@ -13847,7 +15115,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Fushu/004",
           SelectKey = "voice_kr_inv_Fushu_004_C8C5EAA4",
           SoundLength = 5440
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Fushu_004_C8C5EACE",
+    MaxKey = "voice_kr_inv_Kami_001_14170ACA",
+    Loader = function()
+      return {
         voice_kr_inv_Fushu_004_C8C5EACE = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Fushu/004",
           SelectKey = "voice_kr_inv_Fushu_004_C8C5EACE",
@@ -14107,15 +15383,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Heitao/001",
           SelectKey = "voice_kr_inv_Heitao_001_C85F3DB2_m",
           SoundLength = 900
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Heitao_001_C85F3DDC",
-    MaxKey = "voice_kr_inv_Kami_002_14171CD6",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Heitao_001_C85F3DDC = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Heitao/001",
           SelectKey = "voice_kr_inv_Heitao_001_C85F3DDC",
@@ -14855,7 +16123,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Kami/001",
           SelectKey = "voice_kr_inv_Kami_001_14170ACA",
           SoundLength = 2370
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Kami_001_14170AF4",
+    MaxKey = "voice_kr_inv_Kezhou_002_C8CC3F6A",
+    Loader = function()
+      return {
         voice_kr_inv_Kami_001_14170AF4 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Kami/001",
           SelectKey = "voice_kr_inv_Kami_001_14170AF4",
@@ -15115,15 +16391,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Kami/002",
           SelectKey = "voice_kr_inv_Kami_002_14171CD6",
           SoundLength = 5510
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Kami_002_14171D00",
-    MaxKey = "voice_kr_inv_Kezhou_003_C8CC4EAC",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Kami_002_14171D00 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Kami/002",
           SelectKey = "voice_kr_inv_Kami_002_14171D00",
@@ -15863,7 +17131,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Kezhou/002",
           SelectKey = "voice_kr_inv_Kezhou_002_C8CC3F6A",
           SoundLength = 8050
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Kezhou_002_C8CC3F94",
+    MaxKey = "voice_kr_inv_Landi_001_C858D4BE",
+    Loader = function()
+      return {
         voice_kr_inv_Kezhou_002_C8CC3F94 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Kezhou/002",
           SelectKey = "voice_kr_inv_Kezhou_002_C8CC3F94",
@@ -16123,15 +17399,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Kezhou/003",
           SelectKey = "voice_kr_inv_Kezhou_003_C8CC4EAC",
           SoundLength = 15900
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Kezhou_003_C8CC4ED6",
-    MaxKey = "voice_kr_inv_Landi_004_C85907C4",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Kezhou_003_C8CC4ED6 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Kezhou/003",
           SelectKey = "voice_kr_inv_Kezhou_003_C8CC4ED6",
@@ -16871,7 +18139,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Landi/001",
           SelectKey = "voice_kr_inv_Landi_001_C858D4BE",
           SoundLength = 8170
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Landi_001_C858D4E8",
+    MaxKey = "voice_kr_inv_Linen_003_C88C3C5C",
+    Loader = function()
+      return {
         voice_kr_inv_Landi_001_C858D4E8 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Landi/001",
           SelectKey = "voice_kr_inv_Landi_001_C858D4E8",
@@ -17131,15 +18407,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Landi/004",
           SelectKey = "voice_kr_inv_Landi_004_C85907C4",
           SoundLength = 7660
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Landi_004_C85907EE",
-    MaxKey = "voice_kr_inv_Nifu_001_C8B2901E",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Landi_004_C85907EE = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Landi/004",
           SelectKey = "voice_kr_inv_Landi_004_C85907EE",
@@ -17879,7 +19147,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Linen/003",
           SelectKey = "voice_kr_inv_Linen_003_C88C3C5C",
           SoundLength = 4280
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Linen_003_C88C3C86",
+    MaxKey = "voice_kr_inv_Nifu_004_C8B2BEB6",
+    Loader = function()
+      return {
         voice_kr_inv_Linen_003_C88C3C86 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Linen/003",
           SelectKey = "voice_kr_inv_Linen_003_C88C3C86",
@@ -18139,15 +19415,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Nifu/001",
           SelectKey = "voice_kr_inv_Nifu_001_C8B2901E",
           SoundLength = 22240
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Nifu_001_C8B29048",
-    MaxKey = "voice_kr_inv_Saiqi_001_C878E158",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Nifu_001_C8B29048 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Nifu/001",
           SelectKey = "voice_kr_inv_Nifu_001_C8B29048",
@@ -18887,7 +20155,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Nifu/004",
           SelectKey = "voice_kr_inv_Nifu_004_C8B2BEB6",
           SoundLength = 14050
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Nifu_004_C8B2BEE0",
+    MaxKey = "voice_kr_inv_Shuimu_002_01",
+    Loader = function()
+      return {
         voice_kr_inv_Nifu_004_C8B2BEE0 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Nifu/004",
           SelectKey = "voice_kr_inv_Nifu_004_C8B2BEE0",
@@ -19147,15 +20423,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Saiqi/001",
           SelectKey = "voice_kr_inv_Saiqi_001_C878E158",
           SoundLength = 3500
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Saiqi_001_C878E182",
-    MaxKey = "voice_kr_inv_Shuimu_003_C885CFCC",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Saiqi_001_C878E182 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Saiqi/001",
           SelectKey = "voice_kr_inv_Saiqi_001_C878E182",
@@ -19895,7 +21163,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Shuimu/002",
           SelectKey = "voice_kr_inv_Shuimu_002_01",
           SoundLength = 14620
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Shuimu_002_02",
+    MaxKey = "voice_kr_inv_Songlu_002_C86C20D4",
+    Loader = function()
+      return {
         voice_kr_inv_Shuimu_002_02 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Shuimu/002",
           SelectKey = "voice_kr_inv_Shuimu_002_02",
@@ -20155,15 +21431,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Shuimu/003",
           SelectKey = "voice_kr_inv_Shuimu_003_C885CFCC",
           SoundLength = 9690
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Shuimu_003_C885CFF6",
-    MaxKey = "voice_kr_inv_Songlu_004_C86C4150",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Shuimu_003_C885CFF6 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Shuimu/003",
           SelectKey = "voice_kr_inv_Shuimu_003_C885CFF6",
@@ -20903,7 +22171,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Songlu/002",
           SelectKey = "voice_kr_inv_Songlu_002_C86C20D4",
           SoundLength = 10260
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Songlu_002_C86C2128",
+    MaxKey = "voice_kr_inv_Suyi_003_C8DF8FEE",
+    Loader = function()
+      return {
         voice_kr_inv_Songlu_002_C86C2128 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Songlu/002",
           SelectKey = "voice_kr_inv_Songlu_002_C86C2128",
@@ -21163,15 +22439,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Songlu/004",
           SelectKey = "voice_kr_inv_Songlu_004_C86C4150",
           SoundLength = 5760
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Songlu_004_C86C41A4",
-    MaxKey = "voice_kr_inv_Tuosi_001_C89F56E6",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Songlu_004_C86C41A4 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Songlu/004",
           SelectKey = "voice_kr_inv_Songlu_004_C86C41A4",
@@ -21911,7 +23179,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Suyi/003",
           SelectKey = "voice_kr_inv_Suyi_003_C8DF8FEE",
           SoundLength = 16480
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Suyi_003_C8DF9018",
+    MaxKey = "voice_kr_inv_Tuosi_003_C89F7A56",
+    Loader = function()
+      return {
         voice_kr_inv_Suyi_003_C8DF9018 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Suyi/003",
           SelectKey = "voice_kr_inv_Suyi_003_C8DF9018",
@@ -22171,15 +23447,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Tuosi/001",
           SelectKey = "voice_kr_inv_Tuosi_001_C89F56E6",
           SoundLength = 14510
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Tuosi_001_C89F5710",
-    MaxKey = "voice_kr_inv_Tuosi_004_C89F8A16",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Tuosi_001_C89F5710 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Tuosi/001",
           SelectKey = "voice_kr_inv_Tuosi_001_C89F5710",
@@ -22919,7 +24187,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Tuosi/003",
           SelectKey = "voice_kr_inv_Tuosi_003_C89F7A56",
           SoundLength = 2610
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Tuosi_003_C89F7A80",
+    MaxKey = "voice_kr_inv_Xier_003_C8528B9E",
+    Loader = function()
+      return {
         voice_kr_inv_Tuosi_003_C89F7A80 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Tuosi/003",
           SelectKey = "voice_kr_inv_Tuosi_003_C89F7A80",
@@ -23179,15 +24455,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Tuosi/004",
           SelectKey = "voice_kr_inv_Tuosi_004_C89F8A16",
           SoundLength = 7810
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Tuosi_004_C89F8A40",
-    MaxKey = "voice_kr_inv_Xier_005_C852AE65",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Tuosi_004_C89F8A40 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Tuosi/004",
           SelectKey = "voice_kr_inv_Tuosi_004_C89F8A40",
@@ -23927,7 +25195,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Xier/003",
           SelectKey = "voice_kr_inv_Xier_003_C8528B9E",
           SoundLength = 9790
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Xier_003_C8528BC8",
+    MaxKey = "voice_kr_inv_Yuming_003_C8D2C028",
+    Loader = function()
+      return {
         voice_kr_inv_Xier_003_C8528BC8 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Xier/003",
           SelectKey = "voice_kr_inv_Xier_003_C8528BC8",
@@ -24187,15 +25463,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Xier/005",
           SelectKey = "voice_kr_inv_Xier_005_C852AE65",
           SoundLength = 7090
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Xier_005_C852AE66",
-    MaxKey = "voice_kr_inv_Yuming_004_C8D2CCF4",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Xier_005_C852AE66 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Xier/005",
           SelectKey = "voice_kr_inv_Xier_005_C852AE66",
@@ -24935,7 +26203,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Yuming/003",
           SelectKey = "voice_kr_inv_Yuming_003_C8D2C028",
           SoundLength = 14340
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Yuming_003_C8D2C052",
+    MaxKey = "voice_kr_inv_Zhiliu_001_C8D8FFC4",
+    Loader = function()
+      return {
         voice_kr_inv_Yuming_003_C8D2C052 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Yuming/003",
           SelectKey = "voice_kr_inv_Yuming_003_C8D2C052",
@@ -25195,15 +26471,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Yuming/004",
           SelectKey = "voice_kr_inv_Yuming_004_C8D2CCF4",
           SoundLength = 9630
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Yuming_004_C8D2CD1E_f",
-    MaxKey = "voice_kr_inv_Zhiliu_002_C8D912CC",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Yuming_004_C8D2CD1E_f = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Yuming/004",
           SelectKey = "voice_kr_inv_Yuming_004_C8D2CD1E_f",
@@ -25943,7 +27211,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Zhiliu/001",
           SelectKey = "voice_kr_inv_Zhiliu_001_C8D8FFC4",
           SoundLength = 9700
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Zhiliu_001_C8D8FFEE",
+    MaxKey = "voice_kr_story_0_600308_9647E34A",
+    Loader = function()
+      return {
         voice_kr_inv_Zhiliu_001_C8D8FFEE = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Zhiliu/001",
           SelectKey = "voice_kr_inv_Zhiliu_001_C8D8FFEE",
@@ -26203,15 +27479,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Zhiliu/002",
           SelectKey = "voice_kr_inv_Zhiliu_002_C8D912CC",
           SoundLength = 12650
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Zhiliu_002_C8D912F6",
-    MaxKey = "voice_kr_story_0_601205_96815FB2",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Zhiliu_002_C8D912F6 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Zhiliu/002",
           SelectKey = "voice_kr_inv_Zhiliu_002_C8D912F6",
@@ -26951,7 +28219,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/0",
           SelectKey = "voice_kr_story_0_600308_9647E34A",
           SoundLength = 2240
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_0_600309_9647F3B2",
+    MaxKey = "voice_kr_story_1001_100119_191052A8",
+    Loader = function()
+      return {
         voice_kr_story_0_600309_9647F3B2 = {
           ProgrammerSoundPath = "event:/voice/kr/story/0",
           SelectKey = "voice_kr_story_0_600309_9647F3B2",
@@ -27211,15 +28487,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/0",
           SelectKey = "voice_kr_story_0_601205_96815FB2",
           SoundLength = 6170
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_0_601206_9681701A",
-    MaxKey = "voice_kr_story_1001_100123_1910934D",
-    Loader = function()
-      return {
+        },
         voice_kr_story_0_601206_9681701A = {
           ProgrammerSoundPath = "event:/voice/kr/story/0",
           SelectKey = "voice_kr_story_0_601206_9681701A",
@@ -28002,7 +29270,15 @@ local Data = {
           SelectKey = "voice_kr_story_1001_100119_191052A8",
           SoundLength = 930,
           SoundVolume = 0
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1001_100119_191052D2_f",
+    MaxKey = "voice_kr_story_1002_101003_1948F94A",
+    Loader = function()
+      return {
         voice_kr_story_1001_100119_191052D2_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1001",
           SelectKey = "voice_kr_story_1001_100119_191052D2_f",
@@ -28294,15 +29570,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1001",
           SelectKey = "voice_kr_story_1001_100123_1910934D",
           SoundLength = 2950
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1001_100124_1910A38A_f",
-    MaxKey = "voice_kr_story_1002_101008_19494C24_f",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1001_100124_1910A38A_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1001",
           SelectKey = "voice_kr_story_1001_100124_1910A38A_f",
@@ -29064,7 +30332,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101003_1948F94A",
           SoundLength = 2910
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_101004_1949090A",
+    MaxKey = "voice_kr_story_1002_101019_194A001E_f",
+    Loader = function()
+      return {
         voice_kr_story_1002_101004_1949090A = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101004_1949090A",
@@ -29324,15 +30600,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101008_19494C24_f",
           SoundLength = 2410
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_101008_19494C24_m",
-    MaxKey = "voice_kr_story_1002_101024_194A53FC_f",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_101008_19494C24_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101008_19494C24_m",
@@ -30081,7 +31349,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101019_194A001E_f",
           SoundLength = 6160
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_101019_194A001E_m",
+    MaxKey = "voice_kr_story_1002_101045_194BAAD8",
+    Loader = function()
+      return {
         voice_kr_story_1002_101019_194A001E_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101019_194A001E_m",
@@ -30348,15 +31624,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101024_194A53FC_f",
           SoundLength = 10400
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_101024_194A53FC_m",
-    MaxKey = "voice_kr_story_1002_101048_194BDC64",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_101024_194A53FC_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101024_194A53FC_m",
@@ -31099,7 +32367,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101045_194BAAD8",
           SoundLength = 10500
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_101045_194BAB02",
+    MaxKey = "voice_kr_story_1002_101061_194CB158",
+    Loader = function()
+      return {
         voice_kr_story_1002_101045_194BAB02 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101045_194BAB02",
@@ -31359,15 +32635,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101048_194BDC64",
           SoundLength = 8790
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_101048_194BDC8E_f",
-    MaxKey = "voice_kr_story_1002_101063_194CD27D_m",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_101048_194BDC8E_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101048_194BDC8E_f",
@@ -32112,7 +33380,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101061_194CB158",
           SoundLength = 13290
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_101061_194CB182_f",
+    MaxKey = "voice_kr_story_1002_101078_194DC816",
+    Loader = function()
+      return {
         voice_kr_story_1002_101061_194CB182_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101061_194CB182_f",
@@ -32372,15 +33648,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101063_194CD27D_m",
           SoundLength = 2800
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_101063_194CD2A6",
-    MaxKey = "voice_kr_story_1002_101083_194E1922_m",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_101063_194CD2A6 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101063_194CD2A6",
@@ -33121,7 +34389,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101078_194DC816",
           SoundLength = 14460
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_101078_194DC840_f",
+    MaxKey = "voice_kr_story_1002_101097_194F00A0_f",
+    Loader = function()
+      return {
         voice_kr_story_1002_101078_194DC840_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101078_194DC840_f",
@@ -33381,15 +34657,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101083_194E1922_m",
           SoundLength = 2280
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_101083_194E194C",
-    MaxKey = "voice_kr_story_1002_101100_194F3034_m",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_101083_194E194C = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101083_194E194C",
@@ -34134,7 +35402,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101097_194F00A0_f",
           SoundLength = 1830
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_101097_194F00A0_m",
+    MaxKey = "voice_kr_story_1002_101109_194FC4D8_f",
+    Loader = function()
+      return {
         voice_kr_story_1002_101097_194F00A0_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101097_194F00A0_m",
@@ -34394,15 +35670,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101100_194F3034_m",
           SoundLength = 4860
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_101101_194F4072",
-    MaxKey = "voice_kr_story_1002_101120_191B9980",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_101101_194F4072 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101101_194F4072",
@@ -35148,7 +36416,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101109_194FC4D8_f",
           SoundLength = 4990
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_101109_194FC4D8_m",
+    MaxKey = "voice_kr_story_1002_101131_19512E9A",
+    Loader = function()
+      return {
         voice_kr_story_1002_101109_194FC4D8_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101109_194FC4D8_m",
@@ -35415,15 +36691,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101120_191B9980",
           SoundLength = 1880
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_101120_191B99AA",
-    MaxKey = "voice_kr_story_1002_101135_19516F68_m",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_101120_191B99AA = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101120_191B99AA",
@@ -36175,7 +37443,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101131_19512E9A",
           SoundLength = 5080
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_101132_19513D0A_f",
+    MaxKey = "voice_kr_story_1002_101211_19564E1E",
+    Loader = function()
+      return {
         voice_kr_story_1002_101132_19513D0A_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101132_19513D0A_f",
@@ -36435,15 +37711,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101135_19516F68_m",
           SoundLength = 3160
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_101135_19516F92",
-    MaxKey = "voice_kr_story_1002_101230_195784DA",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_101135_19516F92 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101135_19516F92",
@@ -37183,7 +38451,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101211_19564E1E",
           SoundLength = 6070
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_101212_19565D8A_f",
+    MaxKey = "voice_kr_story_1002_101259_19596510",
+    Loader = function()
+      return {
         voice_kr_story_1002_101212_19565D8A_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101212_19565D8A_f",
@@ -37443,15 +38719,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101230_195784DA",
           SoundLength = 8320
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_101230_19578504",
-    MaxKey = "voice_kr_story_1002_101307_195BD041",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_101230_19578504 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101230_19578504",
@@ -38191,7 +39459,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101259_19596510",
           SoundLength = 13130
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_101259_1959653A",
+    MaxKey = "voice_kr_story_1002_110107_1B906DC2_f",
+    Loader = function()
+      return {
         voice_kr_story_1002_101259_1959653A = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101259_1959653A",
@@ -38451,15 +39727,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101307_195BD041",
           SoundLength = 5690
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_101308_195BD042",
-    MaxKey = "voice_kr_story_1002_110111_1B90AFB6",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_101308_195BD042 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101308_195BD042",
@@ -39205,7 +40473,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110107_1B906DC2_f",
           SoundLength = 7080
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_110107_1B906DC2_m",
+    MaxKey = "voice_kr_story_1002_110115_1B90F696",
+    Loader = function()
+      return {
         voice_kr_story_1002_110107_1B906DC2_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110107_1B906DC2_m",
@@ -39469,15 +40745,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110111_1B90AFB6",
           SoundLength = 9070
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_110111_1B90AFE0",
-    MaxKey = "voice_kr_story_1002_110118_1B9120C0",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_110111_1B90AFE0 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110111_1B90AFE0",
@@ -40217,7 +41485,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110115_1B90F696",
           SoundLength = 10620
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_110115_1B90F6C0",
+    MaxKey = "voice_kr_story_1002_110124_1B918678_f",
+    Loader = function()
+      return {
         voice_kr_story_1002_110115_1B90F6C0 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110115_1B90F6C0",
@@ -40477,15 +41753,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110118_1B9120C0",
           SoundLength = 1920
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_110118_1B9120EA",
-    MaxKey = "voice_kr_story_1002_110125_1B919344_f",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_110118_1B9120EA = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110118_1B9120EA",
@@ -41225,7 +42493,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110124_1B918678_f",
           SoundLength = 4090
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_110124_1B918678_m",
+    MaxKey = "voice_kr_story_1002_110134_1B92276A_f",
+    Loader = function()
+      return {
         voice_kr_story_1002_110124_1B918678_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110124_1B918678_m",
@@ -41493,15 +42769,7 @@ local Data = {
           SelectKey = "voice_kr_story_1002_110125_1B919344_f",
           SoundLength = 4680,
           SoundVolume = 0
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_110125_1B919344_m",
-    MaxKey = "voice_kr_story_1002_110136_1B924C2A",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_110125_1B919344_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110125_1B919344_m",
@@ -42252,7 +43520,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110134_1B92276A_f",
           SoundLength = 10240
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_110134_1B92276A_m",
+    MaxKey = "voice_kr_story_1002_110151_1B93426C_f",
+    Loader = function()
+      return {
         voice_kr_story_1002_110134_1B92276A_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110134_1B92276A_m",
@@ -42513,15 +43789,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110136_1B924C2A",
           SoundLength = 13630
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_110136_1B924C54",
-    MaxKey = "voice_kr_story_1002_110153_1B935F4C_m",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_110136_1B924C54 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110136_1B924C54",
@@ -43267,7 +44535,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110151_1B93426C_f",
           SoundLength = 1070
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_110151_1B93426C_m",
+    MaxKey = "voice_kr_story_1002_110168_1B9455B8_f",
+    Loader = function()
+      return {
         voice_kr_story_1002_110151_1B93426C_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110151_1B93426C_m",
@@ -43528,15 +44804,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110153_1B935F4C_m",
           SoundLength = 6790
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_110153_1B935F76",
-    MaxKey = "voice_kr_story_1002_110171_1B94854C",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_110153_1B935F76 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110153_1B935F76",
@@ -44276,7 +45544,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110168_1B9455B8_f",
           SoundLength = 2710
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_110168_1B9455B8_m",
+    MaxKey = "voice_kr_story_1002_110182_1B9539EE_m",
+    Loader = function()
+      return {
         voice_kr_story_1002_110168_1B9455B8_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110168_1B9455B8_m",
@@ -44543,15 +45819,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110171_1B94854C",
           SoundLength = 24080
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_110171_1B948576",
-    MaxKey = "voice_kr_story_1002_110189_1B95ACF0_m",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_110171_1B948576 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110171_1B948576",
@@ -45291,7 +46559,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110182_1B9539EE_m",
           SoundLength = 4420
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_110182_1B953A6C_f",
+    MaxKey = "voice_kr_story_1002_110193_1B95F00A",
+    Loader = function()
+      return {
         voice_kr_story_1002_110182_1B953A6C_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110182_1B953A6C_f",
@@ -45551,15 +46827,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110189_1B95ACF0_m",
           SoundLength = 8370
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_110189_1B95AD1A_f",
-    MaxKey = "voice_kr_story_1002_510103_7FB2F0A0",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_110189_1B95AD1A_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110189_1B95AD1A_f",
@@ -46299,7 +47567,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110193_1B95F00A",
           SoundLength = 17160
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_110193_1B95F034_f",
+    MaxKey = "voice_kr_story_1003_100308_191C7096",
+    Loader = function()
+      return {
         voice_kr_story_1002_110193_1B95F034_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110193_1B95F034_f",
@@ -46559,15 +47835,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_510103_7FB2F0A0",
           SoundLength = 7690
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_510103_7FB2F0CA",
-    MaxKey = "voice_kr_story_1003_100311_191CA126",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_510103_7FB2F0CA = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_510103_7FB2F0CA",
@@ -47307,7 +48575,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100308_191C7096",
           SoundLength = 1360
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1003_100308_191C70C0_f",
+    MaxKey = "voice_kr_story_1003_100323_191D6534",
+    Loader = function()
+      return {
         voice_kr_story_1003_100308_191C70C0_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100308_191C70C0_f",
@@ -47567,15 +48843,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100311_191CA126",
           SoundLength = 6970
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1003_100311_191CA150",
-    MaxKey = "voice_kr_story_1003_100326_191D9618_f",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1003_100311_191CA150 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100311_191CA150",
@@ -48315,7 +49583,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100323_191D6534",
           SoundLength = 3650
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1003_100323_191D655E_f",
+    MaxKey = "voice_kr_story_1003_100333_191E0ABE",
+    Loader = function()
+      return {
         voice_kr_story_1003_100323_191D655E_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100323_191D655E_f",
@@ -48575,15 +49851,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100326_191D9618_f",
           SoundLength = 5440
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1003_100326_191D9618_m",
-    MaxKey = "voice_kr_story_1003_100336_191E3B24_m",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1003_100326_191D9618_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100326_191D9618_m",
@@ -49323,7 +50591,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100333_191E0ABE",
           SoundLength = 3770
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1003_100333_191E0AE8",
+    MaxKey = "voice_kr_story_1003_100342_191E9F62_f",
+    Loader = function()
+      return {
         voice_kr_story_1003_100333_191E0AE8 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100333_191E0AE8",
@@ -49583,15 +50859,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100336_191E3B24_m",
           SoundLength = 1900
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1003_100336_191E3B4E",
-    MaxKey = "voice_kr_story_1003_100343_191EB294",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1003_100336_191E3B4E = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100336_191E3B4E",
@@ -50331,7 +51599,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100342_191E9F62_f",
           SoundLength = 14090
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1003_100342_191E9F62_m",
+    MaxKey = "voice_kr_story_1003_100349_191F1096_f",
+    Loader = function()
+      return {
         voice_kr_story_1003_100342_191E9F62_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100342_191E9F62_m",
@@ -50591,15 +51867,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100343_191EB294",
           SoundLength = 6830
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1003_100344_191EBCEA",
-    MaxKey = "voice_kr_story_1003_100352_191F439C_m",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1003_100344_191EBCEA = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100344_191EBCEA",
@@ -51339,7 +52607,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100349_191F1096_f",
           SoundLength = 1010
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1003_100349_191F1096_m",
+    MaxKey = "voice_kr_story_1003_100357_191F925C",
+    Loader = function()
+      return {
         voice_kr_story_1003_100349_191F1096_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100349_191F1096_m",
@@ -51599,15 +52875,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100352_191F439C_m",
           SoundLength = 1700
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1003_100352_191F43C6",
-    MaxKey = "voice_kr_story_1003_100360_191FC394",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1003_100352_191F43C6 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100352_191F43C6",
@@ -52358,7 +53626,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100357_191F925C",
           SoundLength = 2350
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1003_100357_191F9286",
+    MaxKey = "voice_kr_story_1003_100365_192015C6",
+    Loader = function()
+      return {
         voice_kr_story_1003_100357_191F9286 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100357_191F9286",
@@ -52618,15 +53894,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100360_191FC394",
           SoundLength = 3820
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1003_100360_191FC3BE",
-    MaxKey = "voice_kr_story_1003_100365_19201CD4_f",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1003_100360_191FC3BE = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100360_191FC3BE",
@@ -53366,7 +54634,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100365_192015C6",
           SoundLength = 7990
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1003_100365_192015F0",
+    MaxKey = "voice_kr_story_1003_100376_1920CA14",
+    Loader = function()
+      return {
         voice_kr_story_1003_100365_192015F0 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100365_192015F0",
@@ -53626,15 +54902,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100365_19201CD4_f",
           SoundLength = 1270
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1003_100365_19201CD4_m",
-    MaxKey = "voice_kr_story_1003_100380_191EF0C4",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1003_100365_19201CD4_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100365_19201CD4_m",
@@ -54374,7 +55642,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100376_1920CA14",
           SoundLength = 2790
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1003_100376_1920CA3E",
+    MaxKey = "voice_kr_story_1004_100405_1922AAF2",
+    Loader = function()
+      return {
         voice_kr_story_1003_100376_1920CA3E = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100376_1920CA3E",
@@ -54634,15 +55910,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100380_191EF0C4",
           SoundLength = 2320
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1003_100380_191EF0C5",
-    MaxKey = "voice_kr_story_1004_100407_1922C7D2_f",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1003_100380_191EF0C5 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100380_191EF0C5",
@@ -55382,7 +56650,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100405_1922AAF2",
           SoundLength = 11140
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1004_100405_1922AB1C",
+    MaxKey = "voice_kr_story_1004_100416_19235C76",
+    Loader = function()
+      return {
         voice_kr_story_1004_100405_1922AB1C = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100405_1922AB1C",
@@ -55642,15 +56918,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100407_1922C7D2_f",
           SoundLength = 4990
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1004_100407_1922C7D2_m",
-    MaxKey = "voice_kr_story_1004_100419_19238CDC_f",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1004_100407_1922C7D2_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100407_1922C7D2_m",
@@ -56390,7 +57658,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100416_19235C76",
           SoundLength = 6850
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1004_100416_19235CA0",
+    MaxKey = "voice_kr_story_1004_100426_19240200",
+    Loader = function()
+      return {
         voice_kr_story_1004_100416_19235CA0 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100416_19235CA0",
@@ -56650,15 +57926,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100419_19238CDC_f",
           SoundLength = 2810
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1004_100419_19238CDC_m",
-    MaxKey = "voice_kr_story_1004_100428_192421D4_m",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1004_100419_19238CDC_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100419_19238CDC_m",
@@ -57398,7 +58666,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100426_19240200",
           SoundLength = 1880
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1004_100426_1924022A",
+    MaxKey = "voice_kr_story_1004_100438_1924C4BE",
+    Loader = function()
+      return {
         voice_kr_story_1004_100426_1924022A = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100426_1924022A",
@@ -57658,15 +58934,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100428_192421D4_m",
           SoundLength = 3910
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1004_100428_192421FE",
-    MaxKey = "voice_kr_story_1004_100440_1924E414",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1004_100428_192421FE = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100428_192421FE",
@@ -58406,7 +59674,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100438_1924C4BE",
           SoundLength = 8260
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1004_100438_1924C4E8_f",
+    MaxKey = "voice_kr_story_1004_100448_19256850_m",
+    Loader = function()
+      return {
         voice_kr_story_1004_100438_1924C4E8_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100438_1924C4E8_f",
@@ -58666,15 +59942,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100440_1924E414",
           SoundLength = 11090
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1004_100440_1924E43E",
-    MaxKey = "voice_kr_story_1004_100451_19259B56",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1004_100440_1924E43E = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100440_1924E43E",
@@ -59414,7 +60682,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100448_19256850_m",
           SoundLength = 9740
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1004_100448_1925687A_f",
+    MaxKey = "voice_kr_story_1004_100460_19262DAE",
+    Loader = function()
+      return {
         voice_kr_story_1004_100448_1925687A_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100448_1925687A_f",
@@ -59674,15 +60950,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100451_19259B56",
           SoundLength = 10400
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1004_100451_19259B80",
-    MaxKey = "voice_kr_story_1004_100462_19264D04",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1004_100451_19259B80 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100451_19259B80",
@@ -60422,7 +61690,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100460_19262DAE",
           SoundLength = 10900
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1004_100460_19262DD8_f",
+    MaxKey = "voice_kr_story_1004_100467_1926A0B0_m",
+    Loader = function()
+      return {
         voice_kr_story_1004_100460_19262DD8_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100460_19262DD8_f",
@@ -60682,15 +61958,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100462_19264D04",
           SoundLength = 18100
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1004_100462_19264D2E_f",
-    MaxKey = "voice_kr_story_1004_100471_1926E100",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1004_100462_19264D2E_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100462_19264D2E_f",
@@ -61430,7 +62698,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100467_1926A0B0_m",
           SoundLength = 7370
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1004_100468_1926AF4A",
+    MaxKey = "voice_kr_story_1004_100477_1927453E",
+    Loader = function()
+      return {
         voice_kr_story_1004_100468_1926AF4A = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100468_1926AF4A",
@@ -61690,15 +62966,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100471_1926E100",
           SoundLength = 1750
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1004_100471_1926E12A",
-    MaxKey = "voice_kr_story_1004_100479_192766E0",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1004_100471_1926E12A = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100471_1926E12A",
@@ -62438,7 +63706,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100477_1927453E",
           SoundLength = 7070
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1004_100477_19274568_f",
+    MaxKey = "voice_kr_story_1004_100485_1927C72E_f",
+    Loader = function()
+      return {
         voice_kr_story_1004_100477_19274568_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100477_19274568_f",
@@ -62698,15 +63974,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100479_192766E0",
           SoundLength = 5480
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1004_100479_1927670A",
-    MaxKey = "voice_kr_story_1004_100489_1928094C",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1004_100479_1927670A = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100479_1927670A",
@@ -63446,7 +64714,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100485_1927C72E_f",
           SoundLength = 4460
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1004_100485_1927C72E_m",
+    MaxKey = "voice_kr_story_1004_100493_19284B6A",
+    Loader = function()
+      return {
         voice_kr_story_1004_100485_1927C72E_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100485_1927C72E_m",
@@ -63706,15 +64982,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100489_1928094C",
           SoundLength = 8890
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1004_100489_19280976",
-    MaxKey = "voice_kr_story_1004_100495_19286A42_m",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1004_100489_19280976 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100489_19280976",
@@ -64454,7 +65722,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100493_19284B6A",
           SoundLength = 1030
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1004_100493_19284B94",
+    MaxKey = "voice_kr_story_1004_100499_1928B176_m",
+    Loader = function()
+      return {
         voice_kr_story_1004_100493_19284B94 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100493_19284B94",
@@ -64714,15 +65990,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100495_19286A42_m",
           SoundLength = 1020
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1004_100495_19286A6C",
-    MaxKey = "voice_kr_story_1004_100499_1928B7B2_m",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1004_100495_19286A6C = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100495_19286A6C",
@@ -65462,7 +66730,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100499_1928B176_m",
           SoundLength = 6110
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1004_100499_1928B1A0_f",
+    MaxKey = "voice_kr_story_1102_111007_1BCA18C2",
+    Loader = function()
+      return {
         voice_kr_story_1004_100499_1928B1A0_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100499_1928B1A0_f",
@@ -65722,15 +66998,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100499_1928B7B2_m",
           SoundLength = 3340
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1004_100499_1928B7DC",
-    MaxKey = "voice_kr_story_1200_120015_1E0B6760_f",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1004_100499_1928B7DC = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100499_1928B7DC",
@@ -65881,6 +67149,10662 @@ local Data = {
           SelectKey = "voice_kr_story_1004_100499_1928BBF9",
           SoundLength = 3230
         },
+        voice_kr_story_1102_111000_1BC9A5EA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111000_1BC9A5EA_f",
+          SoundLength = 5910
+        },
+        voice_kr_story_1102_111000_1BC9A5EA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111000_1BC9A5EA_m",
+          SoundLength = 5630
+        },
+        voice_kr_story_1102_111000_1BC9A614_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111000_1BC9A614_f",
+          SoundLength = 7780
+        },
+        voice_kr_story_1102_111000_1BC9A614_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111000_1BC9A614_m",
+          SoundLength = 7360
+        },
+        voice_kr_story_1102_111000_1BC9A63E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111000_1BC9A63E_f",
+          SoundLength = 10140
+        },
+        voice_kr_story_1102_111000_1BC9A63E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111000_1BC9A63E_m",
+          SoundLength = 10340
+        },
+        voice_kr_story_1102_111000_1BC9A668_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111000_1BC9A668_f",
+          SoundLength = 11970
+        },
+        voice_kr_story_1102_111000_1BC9A668_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111000_1BC9A668_m",
+          SoundLength = 12410
+        },
+        voice_kr_story_1102_111000_1BC9A692_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111000_1BC9A692_f",
+          SoundLength = 6130
+        },
+        voice_kr_story_1102_111000_1BC9A692_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111000_1BC9A692_m",
+          SoundLength = 6310
+        },
+        voice_kr_story_1102_111000_1BC9A6BC_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111000_1BC9A6BC_f",
+          SoundLength = 12870
+        },
+        voice_kr_story_1102_111000_1BC9A6BC_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111000_1BC9A6BC_m",
+          SoundLength = 12440
+        },
+        voice_kr_story_1102_111000_1BC9A6E6_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111000_1BC9A6E6_f",
+          SoundLength = 10280
+        },
+        voice_kr_story_1102_111000_1BC9A6E6_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111000_1BC9A6E6_m",
+          SoundLength = 10610
+        },
+        voice_kr_story_1102_111001_1BC9B652_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111001_1BC9B652_f",
+          SoundLength = 4020
+        },
+        voice_kr_story_1102_111001_1BC9B652_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111001_1BC9B652_m",
+          SoundLength = 3810
+        },
+        voice_kr_story_1102_111002_1BC9C6BA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9C6BA_f",
+          SoundLength = 15050
+        },
+        voice_kr_story_1102_111002_1BC9C6BA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9C6BA_m",
+          SoundLength = 16120
+        },
+        voice_kr_story_1102_111002_1BC9C6E4_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9C6E4_f",
+          SoundLength = 15020
+        },
+        voice_kr_story_1102_111002_1BC9C6E4_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9C6E4_m",
+          SoundLength = 16520
+        },
+        voice_kr_story_1102_111002_1BC9C70E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9C70E_f",
+          SoundLength = 11560
+        },
+        voice_kr_story_1102_111002_1BC9C70E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9C70E_m",
+          SoundLength = 11280
+        },
+        voice_kr_story_1102_111002_1BC9C738_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9C738_f",
+          SoundLength = 5990
+        },
+        voice_kr_story_1102_111002_1BC9C738_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9C738_m",
+          SoundLength = 6950
+        },
+        voice_kr_story_1102_111002_1BC9C762_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9C762_f",
+          SoundLength = 3820
+        },
+        voice_kr_story_1102_111002_1BC9C762_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9C762_m",
+          SoundLength = 4070
+        },
+        voice_kr_story_1102_111002_1BC9C78C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9C78C",
+          SoundLength = 9820
+        },
+        voice_kr_story_1102_111002_1BC9C7B6_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9C7B6_f",
+          SoundLength = 2490
+        },
+        voice_kr_story_1102_111002_1BC9C7B6_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9C7B6_m",
+          SoundLength = 2720
+        },
+        voice_kr_story_1102_111002_1BC9C7E0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9C7E0",
+          SoundLength = 3450
+        },
+        voice_kr_story_1102_111002_1BC9C80A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9C80A",
+          SoundLength = 12020
+        },
+        voice_kr_story_1102_111002_1BC9C834 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9C834",
+          SoundLength = 3650
+        },
+        voice_kr_story_1102_111002_1BC9C85E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9C85E_f",
+          SoundLength = 640
+        },
+        voice_kr_story_1102_111002_1BC9C85E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9C85E_m",
+          SoundLength = 660
+        },
+        voice_kr_story_1102_111002_1BC9C888 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9C888",
+          SoundLength = 6250
+        },
+        voice_kr_story_1102_111002_1BC9C8B2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9C8B2",
+          SoundLength = 12810
+        },
+        voice_kr_story_1102_111002_1BC9C8DC_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9C8DC_f",
+          SoundLength = 5560
+        },
+        voice_kr_story_1102_111002_1BC9C8DC_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9C8DC_m",
+          SoundLength = 5930
+        },
+        voice_kr_story_1102_111002_1BC9C906 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9C906",
+          SoundLength = 6100
+        },
+        voice_kr_story_1102_111002_1BC9C930 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9C930",
+          SoundLength = 12710
+        },
+        voice_kr_story_1102_111002_1BC9C95A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9C95A",
+          SoundLength = 8480
+        },
+        voice_kr_story_1102_111002_1BC9C984_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9C984_f",
+          SoundLength = 1750
+        },
+        voice_kr_story_1102_111002_1BC9C984_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9C984_m",
+          SoundLength = 1720
+        },
+        voice_kr_story_1102_111002_1BC9C9AE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9C9AE",
+          SoundLength = 5940
+        },
+        voice_kr_story_1102_111002_1BC9C9D8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9C9D8",
+          SoundLength = 13730
+        },
+        voice_kr_story_1102_111002_1BC9CA02 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CA02",
+          SoundLength = 11120
+        },
+        voice_kr_story_1102_111002_1BC9CA2C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CA2C_f",
+          SoundLength = 3300
+        },
+        voice_kr_story_1102_111002_1BC9CA2C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CA2C_m",
+          SoundLength = 3580
+        },
+        voice_kr_story_1102_111002_1BC9CA56 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CA56",
+          SoundLength = 7400
+        },
+        voice_kr_story_1102_111002_1BC9CA80 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CA80",
+          SoundLength = 10920
+        },
+        voice_kr_story_1102_111002_1BC9CAAA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CAAA_f",
+          SoundLength = 12410
+        },
+        voice_kr_story_1102_111002_1BC9CAAA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CAAA_m",
+          SoundLength = 13230
+        },
+        voice_kr_story_1102_111002_1BC9CAD4_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CAD4_f",
+          SoundLength = 16990
+        },
+        voice_kr_story_1102_111002_1BC9CAD4_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CAD4_m",
+          SoundLength = 21190
+        },
+        voice_kr_story_1102_111002_1BC9CAFE_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CAFE_f",
+          SoundLength = 1300
+        },
+        voice_kr_story_1102_111002_1BC9CAFE_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CAFE_m",
+          SoundLength = 1260
+        },
+        voice_kr_story_1102_111002_1BC9CB28_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CB28_f",
+          SoundLength = 10320
+        },
+        voice_kr_story_1102_111002_1BC9CB28_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CB28_m",
+          SoundLength = 13140
+        },
+        voice_kr_story_1102_111002_1BC9CB52 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CB52",
+          SoundLength = 7400
+        },
+        voice_kr_story_1102_111002_1BC9CB7C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CB7C",
+          SoundLength = 5650
+        },
+        voice_kr_story_1102_111002_1BC9CBA6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CBA6",
+          SoundLength = 5110
+        },
+        voice_kr_story_1102_111002_1BC9CBD0_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CBD0_f",
+          SoundLength = 550
+        },
+        voice_kr_story_1102_111002_1BC9CBD0_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CBD0_m",
+          SoundLength = 730
+        },
+        voice_kr_story_1102_111002_1BC9CBFA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CBFA",
+          SoundLength = 2320
+        },
+        voice_kr_story_1102_111002_1BC9CC24_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CC24_f",
+          SoundLength = 4790
+        },
+        voice_kr_story_1102_111002_1BC9CC24_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CC24_m",
+          SoundLength = 5970
+        },
+        voice_kr_story_1102_111002_1BC9CC4E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CC4E_f",
+          SoundLength = 2610
+        },
+        voice_kr_story_1102_111002_1BC9CC4E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CC4E_m",
+          SoundLength = 2750
+        },
+        voice_kr_story_1102_111002_1BC9CC78 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CC78",
+          SoundLength = 5940
+        },
+        voice_kr_story_1102_111002_1BC9CCA2_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CCA2_f",
+          SoundLength = 8240
+        },
+        voice_kr_story_1102_111002_1BC9CCA2_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CCA2_m",
+          SoundLength = 8520
+        },
+        voice_kr_story_1102_111002_1BC9CCCC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CCCC",
+          SoundLength = 6280
+        },
+        voice_kr_story_1102_111002_1BC9CCF6_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CCF6_f",
+          SoundLength = 4510
+        },
+        voice_kr_story_1102_111002_1BC9CCF6_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CCF6_m",
+          SoundLength = 4900
+        },
+        voice_kr_story_1102_111002_1BC9CD20 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CD20",
+          SoundLength = 15810
+        },
+        voice_kr_story_1102_111002_1BC9CD21 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CD21",
+          SoundLength = 9660
+        },
+        voice_kr_story_1102_111002_1BC9CD4A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CD4A_f",
+          SoundLength = 10810
+        },
+        voice_kr_story_1102_111002_1BC9CD4A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CD4A_m",
+          SoundLength = 11460
+        },
+        voice_kr_story_1102_111002_1BC9CD74_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CD74_f",
+          SoundLength = 5860
+        },
+        voice_kr_story_1102_111002_1BC9CD74_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111002_1BC9CD74_m",
+          SoundLength = 6460
+        },
+        voice_kr_story_1102_111004_1BC9E78A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9E78A",
+          SoundLength = 10360
+        },
+        voice_kr_story_1102_111004_1BC9E7B4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9E7B4",
+          SoundLength = 11050
+        },
+        voice_kr_story_1102_111004_1BC9E7DE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9E7DE",
+          SoundLength = 1430
+        },
+        voice_kr_story_1102_111004_1BC9E808 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9E808",
+          SoundLength = 5540
+        },
+        voice_kr_story_1102_111004_1BC9E832 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9E832",
+          SoundLength = 7080
+        },
+        voice_kr_story_1102_111004_1BC9E85C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9E85C",
+          SoundLength = 11840
+        },
+        voice_kr_story_1102_111004_1BC9E886_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9E886_f",
+          SoundLength = 5190
+        },
+        voice_kr_story_1102_111004_1BC9E886_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9E886_m",
+          SoundLength = 5340
+        },
+        voice_kr_story_1102_111004_1BC9E8B0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9E8B0",
+          SoundLength = 3400
+        },
+        voice_kr_story_1102_111004_1BC9E8DA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9E8DA_f",
+          SoundLength = 2620
+        },
+        voice_kr_story_1102_111004_1BC9E8DA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9E8DA_m",
+          SoundLength = 2070
+        },
+        voice_kr_story_1102_111004_1BC9E904 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9E904",
+          SoundLength = 4950
+        },
+        voice_kr_story_1102_111004_1BC9E92E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9E92E_f",
+          SoundLength = 7890
+        },
+        voice_kr_story_1102_111004_1BC9E92E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9E92E_m",
+          SoundLength = 7700
+        },
+        voice_kr_story_1102_111004_1BC9E958_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9E958_f",
+          SoundLength = 7000
+        },
+        voice_kr_story_1102_111004_1BC9E958_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9E958_m",
+          SoundLength = 6660
+        },
+        voice_kr_story_1102_111004_1BC9E982 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9E982",
+          SoundLength = 2650
+        },
+        voice_kr_story_1102_111004_1BC9E9AC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9E9AC",
+          SoundLength = 9820
+        },
+        voice_kr_story_1102_111004_1BC9E9D6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9E9D6",
+          SoundLength = 13760
+        },
+        voice_kr_story_1102_111004_1BC9EA00_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9EA00_f",
+          SoundLength = 5580
+        },
+        voice_kr_story_1102_111004_1BC9EA00_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9EA00_m",
+          SoundLength = 5510
+        },
+        voice_kr_story_1102_111004_1BC9EA2A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9EA2A",
+          SoundLength = 8890
+        },
+        voice_kr_story_1102_111004_1BC9EA54 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9EA54",
+          SoundLength = 10710
+        },
+        voice_kr_story_1102_111004_1BC9EA7E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9EA7E",
+          SoundLength = 4250
+        },
+        voice_kr_story_1102_111004_1BC9EAA8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9EAA8",
+          SoundLength = 8900
+        },
+        voice_kr_story_1102_111004_1BC9EAD2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9EAD2",
+          SoundLength = 16000
+        },
+        voice_kr_story_1102_111004_1BC9EAFC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9EAFC",
+          SoundLength = 10280
+        },
+        voice_kr_story_1102_111004_1BC9EB26 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9EB26",
+          SoundLength = 13580
+        },
+        voice_kr_story_1102_111004_1BC9EB50 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9EB50",
+          SoundLength = 11960
+        },
+        voice_kr_story_1102_111004_1BC9EB7A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9EB7A",
+          SoundLength = 1180
+        },
+        voice_kr_story_1102_111004_1BC9EBA4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9EBA4",
+          SoundLength = 8610
+        },
+        voice_kr_story_1102_111004_1BC9EBCE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9EBCE",
+          SoundLength = 4820
+        },
+        voice_kr_story_1102_111004_1BC9EC4C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9EC4C",
+          SoundLength = 11340
+        },
+        voice_kr_story_1102_111004_1BC9EC76_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9EC76_f",
+          SoundLength = 530
+        },
+        voice_kr_story_1102_111004_1BC9EC76_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111004_1BC9EC76_m",
+          SoundLength = 840
+        },
+        voice_kr_story_1102_111005_1BC9F7F2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111005_1BC9F7F2",
+          SoundLength = 9020
+        },
+        voice_kr_story_1102_111006_1BCA085A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111006_1BCA085A",
+          SoundLength = 4020
+        },
+        voice_kr_story_1102_111007_1BCA18C2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111007_1BCA18C2",
+          SoundLength = 10480
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1102_111007_1BCA18EC_f",
+    MaxKey = "voice_kr_story_1102_111031_1BCBA4A4_m",
+    Loader = function()
+      return {
+        voice_kr_story_1102_111007_1BCA18EC_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111007_1BCA18EC_f",
+          SoundLength = 2530
+        },
+        voice_kr_story_1102_111007_1BCA18EC_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111007_1BCA18EC_m",
+          SoundLength = 2670
+        },
+        voice_kr_story_1102_111007_1BCA1916 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111007_1BCA1916",
+          SoundLength = 6410
+        },
+        voice_kr_story_1102_111007_1BCA1940_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111007_1BCA1940_f",
+          SoundLength = 1910
+        },
+        voice_kr_story_1102_111007_1BCA1940_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111007_1BCA1940_m",
+          SoundLength = 1370
+        },
+        voice_kr_story_1102_111008_1BCA292A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111008_1BCA292A_f",
+          SoundLength = 1660
+        },
+        voice_kr_story_1102_111008_1BCA292A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111008_1BCA292A_m",
+          SoundLength = 1520
+        },
+        voice_kr_story_1102_111008_1BCA2954 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111008_1BCA2954",
+          SoundLength = 9160
+        },
+        voice_kr_story_1102_111008_1BCA297E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111008_1BCA297E_f",
+          SoundLength = 6250
+        },
+        voice_kr_story_1102_111008_1BCA297E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111008_1BCA297E_m",
+          SoundLength = 5810
+        },
+        voice_kr_story_1102_111008_1BCA29A8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111008_1BCA29A8",
+          SoundLength = 8670
+        },
+        voice_kr_story_1102_111008_1BCA29D2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111008_1BCA29D2",
+          SoundLength = 7570
+        },
+        voice_kr_story_1102_111009_1BCA3992_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111009_1BCA3992_f",
+          SoundLength = 4390
+        },
+        voice_kr_story_1102_111009_1BCA3992_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111009_1BCA3992_m",
+          SoundLength = 4600
+        },
+        voice_kr_story_1102_111009_1BCA39BC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111009_1BCA39BC",
+          SoundLength = 9980
+        },
+        voice_kr_story_1102_111009_1BCA39E6_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111009_1BCA39E6_f",
+          SoundLength = 2540
+        },
+        voice_kr_story_1102_111009_1BCA39E6_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111009_1BCA39E6_m",
+          SoundLength = 2360
+        },
+        voice_kr_story_1102_111009_1BCA3A10 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111009_1BCA3A10",
+          SoundLength = 8570
+        },
+        voice_kr_story_1102_111009_1BCA3A3A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111009_1BCA3A3A_f",
+          SoundLength = 3580
+        },
+        voice_kr_story_1102_111009_1BCA3A3A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111009_1BCA3A3A_m",
+          SoundLength = 4340
+        },
+        voice_kr_story_1102_111010_1BCA49FA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111010_1BCA49FA",
+          SoundLength = 3810
+        },
+        voice_kr_story_1102_111011_1BCA5A62_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111011_1BCA5A62_f",
+          SoundLength = 1160
+        },
+        voice_kr_story_1102_111011_1BCA5A62_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111011_1BCA5A62_m",
+          SoundLength = 980
+        },
+        voice_kr_story_1102_111011_1BCA5A8C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111011_1BCA5A8C",
+          SoundLength = 9110
+        },
+        voice_kr_story_1102_111011_1BCA5AB6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111011_1BCA5AB6",
+          SoundLength = 6740
+        },
+        voice_kr_story_1102_111011_1BCA5AE0_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111011_1BCA5AE0_f",
+          SoundLength = 4120
+        },
+        voice_kr_story_1102_111011_1BCA5AE0_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111011_1BCA5AE0_m",
+          SoundLength = 4520
+        },
+        voice_kr_story_1102_111011_1BCA5B0A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111011_1BCA5B0A",
+          SoundLength = 8840
+        },
+        voice_kr_story_1102_111011_1BCA5B5E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111011_1BCA5B5E",
+          SoundLength = 8010
+        },
+        voice_kr_story_1102_111011_1BCA5BB2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111011_1BCA5BB2",
+          SoundLength = 6140
+        },
+        voice_kr_story_1102_111011_1BCA5BDC_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111011_1BCA5BDC_f",
+          SoundLength = 3200
+        },
+        voice_kr_story_1102_111011_1BCA5BDC_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111011_1BCA5BDC_m",
+          SoundLength = 3460
+        },
+        voice_kr_story_1102_111011_1BCA5C06 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111011_1BCA5C06",
+          SoundLength = 2860
+        },
+        voice_kr_story_1102_111011_1BCA5C30 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111011_1BCA5C30",
+          SoundLength = 13390
+        },
+        voice_kr_story_1102_111012_1BCA6ACA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111012_1BCA6ACA",
+          SoundLength = 4920
+        },
+        voice_kr_story_1102_111013_1BCA7B32 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111013_1BCA7B32",
+          SoundLength = 3570
+        },
+        voice_kr_story_1102_111013_1BCA7B5C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111013_1BCA7B5C_f",
+          SoundLength = 1410
+        },
+        voice_kr_story_1102_111013_1BCA7B5C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111013_1BCA7B5C_m",
+          SoundLength = 1100
+        },
+        voice_kr_story_1102_111013_1BCA7B86 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111013_1BCA7B86",
+          SoundLength = 14150
+        },
+        voice_kr_story_1102_111014_1BCA8B9A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111014_1BCA8B9A",
+          SoundLength = 7550
+        },
+        voice_kr_story_1102_111014_1BCA8BC4_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111014_1BCA8BC4_f",
+          SoundLength = 4430
+        },
+        voice_kr_story_1102_111014_1BCA8BC4_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111014_1BCA8BC4_m",
+          SoundLength = 4980
+        },
+        voice_kr_story_1102_111014_1BCA8BEE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111014_1BCA8BEE",
+          SoundLength = 9880
+        },
+        voice_kr_story_1102_111014_1BCA8C18 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111014_1BCA8C18",
+          SoundLength = 7290
+        },
+        voice_kr_story_1102_111014_1BCA8C96 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111014_1BCA8C96",
+          SoundLength = 15360
+        },
+        voice_kr_story_1102_111014_1BCA8CC0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111014_1BCA8CC0",
+          SoundLength = 5630
+        },
+        voice_kr_story_1102_111014_1BCA8D68 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111014_1BCA8D68",
+          SoundLength = 11750
+        },
+        voice_kr_story_1102_111014_1BCA8D92 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111014_1BCA8D92",
+          SoundLength = 6140
+        },
+        voice_kr_story_1102_111014_1BCA8DBC_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111014_1BCA8DBC_f",
+          SoundLength = 670
+        },
+        voice_kr_story_1102_111014_1BCA8DBC_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111014_1BCA8DBC_m",
+          SoundLength = 1490
+        },
+        voice_kr_story_1102_111014_1BCA8DE6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111014_1BCA8DE6",
+          SoundLength = 11560
+        },
+        voice_kr_story_1102_111014_1BCA8E10 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111014_1BCA8E10",
+          SoundLength = 9690
+        },
+        voice_kr_story_1102_111014_1BCA8E3A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111014_1BCA8E3A",
+          SoundLength = 5440
+        },
+        voice_kr_story_1102_111015_1BCA9C02 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111015_1BCA9C02",
+          SoundLength = 3940
+        },
+        voice_kr_story_1102_111016_1BCAAC6A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAAC6A_f",
+          SoundLength = 2450
+        },
+        voice_kr_story_1102_111016_1BCAAC6A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAAC6A_m",
+          SoundLength = 2290
+        },
+        voice_kr_story_1102_111016_1BCAAC94 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAAC94",
+          SoundLength = 9560
+        },
+        voice_kr_story_1102_111016_1BCAACBE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAACBE",
+          SoundLength = 6470
+        },
+        voice_kr_story_1102_111016_1BCAACE8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAACE8",
+          SoundLength = 18430
+        },
+        voice_kr_story_1102_111016_1BCAAD12_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAAD12_f",
+          SoundLength = 4810
+        },
+        voice_kr_story_1102_111016_1BCAAD12_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAAD12_m",
+          SoundLength = 4910
+        },
+        voice_kr_story_1102_111016_1BCAAD66 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAAD66",
+          SoundLength = 8600
+        },
+        voice_kr_story_1102_111016_1BCAAD90 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAAD90",
+          SoundLength = 12020
+        },
+        voice_kr_story_1102_111016_1BCAADBA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAADBA_f",
+          SoundLength = 4620
+        },
+        voice_kr_story_1102_111016_1BCAADBA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAADBA_m",
+          SoundLength = 5120
+        },
+        voice_kr_story_1102_111016_1BCAADE4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAADE4",
+          SoundLength = 10830
+        },
+        voice_kr_story_1102_111016_1BCAAE0E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAAE0E_f",
+          SoundLength = 7530
+        },
+        voice_kr_story_1102_111016_1BCAAE0E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAAE0E_m",
+          SoundLength = 7310
+        },
+        voice_kr_story_1102_111016_1BCAAE62 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAAE62",
+          SoundLength = 1790
+        },
+        voice_kr_story_1102_111016_1BCAAE8C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAAE8C_f",
+          SoundLength = 5950
+        },
+        voice_kr_story_1102_111016_1BCAAE8C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAAE8C_m",
+          SoundLength = 6050
+        },
+        voice_kr_story_1102_111016_1BCAAEB6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAAEB6",
+          SoundLength = 4100
+        },
+        voice_kr_story_1102_111016_1BCAAEE0_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAAEE0_f",
+          SoundLength = 3780
+        },
+        voice_kr_story_1102_111016_1BCAAEE0_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAAEE0_m",
+          SoundLength = 4840
+        },
+        voice_kr_story_1102_111016_1BCAAF0A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAAF0A_f",
+          SoundLength = 2890
+        },
+        voice_kr_story_1102_111016_1BCAAF0A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAAF0A_m",
+          SoundLength = 3160
+        },
+        voice_kr_story_1102_111016_1BCAAF5E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAAF5E",
+          SoundLength = 7830
+        },
+        voice_kr_story_1102_111016_1BCAAF88 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAAF88",
+          SoundLength = 12030
+        },
+        voice_kr_story_1102_111016_1BCAAFDC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAAFDC",
+          SoundLength = 3770
+        },
+        voice_kr_story_1102_111016_1BCAB030 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAB030",
+          SoundLength = 10550
+        },
+        voice_kr_story_1102_111016_1BCAB084 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAB084",
+          SoundLength = 17010
+        },
+        voice_kr_story_1102_111016_1BCAB0AE_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAB0AE_f",
+          SoundLength = 4010
+        },
+        voice_kr_story_1102_111016_1BCAB0AE_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAB0AE_m",
+          SoundLength = 3890
+        },
+        voice_kr_story_1102_111016_1BCAB0D8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAB0D8",
+          SoundLength = 8020
+        },
+        voice_kr_story_1102_111016_1BCAB102_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAB102_f",
+          SoundLength = 2860
+        },
+        voice_kr_story_1102_111016_1BCAB102_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAB102_m",
+          SoundLength = 3490
+        },
+        voice_kr_story_1102_111016_1BCAB12C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAB12C",
+          SoundLength = 11240
+        },
+        voice_kr_story_1102_111016_1BCAB156 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAB156",
+          SoundLength = 9880
+        },
+        voice_kr_story_1102_111016_1BCAB180 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAB180",
+          SoundLength = 8700
+        },
+        voice_kr_story_1102_111016_1BCAB1AA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAB1AA_f",
+          SoundLength = 520
+        },
+        voice_kr_story_1102_111016_1BCAB1AA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAB1AA_m",
+          SoundLength = 710
+        },
+        voice_kr_story_1102_111016_1BCAB1D4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAB1D4",
+          SoundLength = 7530
+        },
+        voice_kr_story_1102_111016_1BCAB1FE_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAB1FE_f",
+          SoundLength = 1210
+        },
+        voice_kr_story_1102_111016_1BCAB1FE_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAB1FE_m",
+          SoundLength = 1090
+        },
+        voice_kr_story_1102_111016_1BCAB228 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111016_1BCAB228",
+          SoundLength = 2160
+        },
+        voice_kr_story_1102_111017_1BCABCD2_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111017_1BCABCD2_f",
+          SoundLength = 1320
+        },
+        voice_kr_story_1102_111017_1BCABCD2_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111017_1BCABCD2_m",
+          SoundLength = 1210
+        },
+        voice_kr_story_1102_111017_1BCABCFC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111017_1BCABCFC",
+          SoundLength = 12910
+        },
+        voice_kr_story_1102_111017_1BCABD26_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111017_1BCABD26_f",
+          SoundLength = 5370
+        },
+        voice_kr_story_1102_111017_1BCABD26_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111017_1BCABD26_m",
+          SoundLength = 5470
+        },
+        voice_kr_story_1102_111017_1BCABD50 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111017_1BCABD50",
+          SoundLength = 4990
+        },
+        voice_kr_story_1102_111017_1BCABD7A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111017_1BCABD7A",
+          SoundLength = 1770
+        },
+        voice_kr_story_1102_111018_1BCACD3A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111018_1BCACD3A",
+          SoundLength = 2860
+        },
+        voice_kr_story_1102_111019_1BCADDA2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111019_1BCADDA2",
+          SoundLength = 3980
+        },
+        voice_kr_story_1102_111019_1BCADE4A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111019_1BCADE4A",
+          SoundLength = 6060
+        },
+        voice_kr_story_1102_111020_1BCAEE0A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111020_1BCAEE0A",
+          SoundLength = 6940
+        },
+        voice_kr_story_1102_111020_1BCAEE34 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111020_1BCAEE34",
+          SoundLength = 4270
+        },
+        voice_kr_story_1102_111021_1BCAFE72 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111021_1BCAFE72",
+          SoundLength = 6030
+        },
+        voice_kr_story_1102_111022_1BCB0EDA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111022_1BCB0EDA",
+          SoundLength = 4330
+        },
+        voice_kr_story_1102_111022_1BCB0F04_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111022_1BCB0F04_f",
+          SoundLength = 4890
+        },
+        voice_kr_story_1102_111022_1BCB0F04_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111022_1BCB0F04_m",
+          SoundLength = 4570
+        },
+        voice_kr_story_1102_111022_1BCB0F2E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111022_1BCB0F2E",
+          SoundLength = 4210
+        },
+        voice_kr_story_1102_111022_1BCB0FAC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111022_1BCB0FAC",
+          SoundLength = 1670
+        },
+        voice_kr_story_1102_111022_1BCB0FD6_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111022_1BCB0FD6_f",
+          SoundLength = 1050
+        },
+        voice_kr_story_1102_111022_1BCB0FD6_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111022_1BCB0FD6_m",
+          SoundLength = 940
+        },
+        voice_kr_story_1102_111022_1BCB1000 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111022_1BCB1000",
+          SoundLength = 4930
+        },
+        voice_kr_story_1102_111022_1BCB102A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111022_1BCB102A",
+          SoundLength = 9990
+        },
+        voice_kr_story_1102_111022_1BCB1054_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111022_1BCB1054_f",
+          SoundLength = 3830
+        },
+        voice_kr_story_1102_111022_1BCB1054_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111022_1BCB1054_m",
+          SoundLength = 3630
+        },
+        voice_kr_story_1102_111023_1BCB1F42 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111023_1BCB1F42",
+          SoundLength = 6550
+        },
+        voice_kr_story_1102_111023_1BCB1F6C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111023_1BCB1F6C_f",
+          SoundLength = 4530
+        },
+        voice_kr_story_1102_111023_1BCB1F6C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111023_1BCB1F6C_m",
+          SoundLength = 4950
+        },
+        voice_kr_story_1102_111024_1BCB2FAA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111024_1BCB2FAA",
+          SoundLength = 8880
+        },
+        voice_kr_story_1102_111024_1BCB2FD4_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111024_1BCB2FD4_f",
+          SoundLength = 5360
+        },
+        voice_kr_story_1102_111024_1BCB2FD4_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111024_1BCB2FD4_m",
+          SoundLength = 5910
+        },
+        voice_kr_story_1102_111025_1BCB403C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111025_1BCB403C",
+          SoundLength = 8040
+        },
+        voice_kr_story_1102_111026_1BCB507A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111026_1BCB507A_f",
+          SoundLength = 10350
+        },
+        voice_kr_story_1102_111026_1BCB507A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111026_1BCB507A_m",
+          SoundLength = 11600
+        },
+        voice_kr_story_1102_111026_1BCB50A4_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111026_1BCB50A4_f",
+          SoundLength = 2180
+        },
+        voice_kr_story_1102_111026_1BCB50A4_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111026_1BCB50A4_m",
+          SoundLength = 2620
+        },
+        voice_kr_story_1102_111028_1BCB714A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB714A",
+          SoundLength = 900
+        },
+        voice_kr_story_1102_111028_1BCB7174_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB7174_f",
+          SoundLength = 2550
+        },
+        voice_kr_story_1102_111028_1BCB7174_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB7174_m",
+          SoundLength = 2410
+        },
+        voice_kr_story_1102_111028_1BCB719E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB719E",
+          SoundLength = 7260
+        },
+        voice_kr_story_1102_111028_1BCB71C8_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB71C8_f",
+          SoundLength = 4660
+        },
+        voice_kr_story_1102_111028_1BCB71C8_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB71C8_m",
+          SoundLength = 5720
+        },
+        voice_kr_story_1102_111028_1BCB71F2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB71F2",
+          SoundLength = 9170
+        },
+        voice_kr_story_1102_111028_1BCB721C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB721C_f",
+          SoundLength = 7600
+        },
+        voice_kr_story_1102_111028_1BCB721C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB721C_m",
+          SoundLength = 8230
+        },
+        voice_kr_story_1102_111028_1BCB7246 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB7246",
+          SoundLength = 1360
+        },
+        voice_kr_story_1102_111028_1BCB7270_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB7270_f",
+          SoundLength = 1040
+        },
+        voice_kr_story_1102_111028_1BCB7270_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB7270_m",
+          SoundLength = 960
+        },
+        voice_kr_story_1102_111028_1BCB729A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB729A",
+          SoundLength = 1270
+        },
+        voice_kr_story_1102_111028_1BCB72C4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB72C4",
+          SoundLength = 880
+        },
+        voice_kr_story_1102_111028_1BCB72EE_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB72EE_f",
+          SoundLength = 8960
+        },
+        voice_kr_story_1102_111028_1BCB72EE_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB72EE_m",
+          SoundLength = 10020
+        },
+        voice_kr_story_1102_111028_1BCB7318 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB7318",
+          SoundLength = 4250
+        },
+        voice_kr_story_1102_111028_1BCB7342_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB7342_f",
+          SoundLength = 1010
+        },
+        voice_kr_story_1102_111028_1BCB7342_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB7342_m",
+          SoundLength = 1300
+        },
+        voice_kr_story_1102_111028_1BCB736C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB736C_f",
+          SoundLength = 5690
+        },
+        voice_kr_story_1102_111028_1BCB736C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB736C_m",
+          SoundLength = 6400
+        },
+        voice_kr_story_1102_111028_1BCB7396 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB7396",
+          SoundLength = 7550
+        },
+        voice_kr_story_1102_111028_1BCB73C0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB73C0",
+          SoundLength = 1510
+        },
+        voice_kr_story_1102_111028_1BCB73EA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB73EA_f",
+          SoundLength = 1470
+        },
+        voice_kr_story_1102_111028_1BCB73EA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB73EA_m",
+          SoundLength = 1320
+        },
+        voice_kr_story_1102_111028_1BCB7492_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB7492_f",
+          SoundLength = 9470
+        },
+        voice_kr_story_1102_111028_1BCB7492_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB7492_m",
+          SoundLength = 9860
+        },
+        voice_kr_story_1102_111028_1BCB74BC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB74BC",
+          SoundLength = 3310
+        },
+        voice_kr_story_1102_111028_1BCB74E6_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB74E6_f",
+          SoundLength = 9620
+        },
+        voice_kr_story_1102_111028_1BCB74E6_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB74E6_m",
+          SoundLength = 10730
+        },
+        voice_kr_story_1102_111028_1BCB7510 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB7510",
+          SoundLength = 1170
+        },
+        voice_kr_story_1102_111028_1BCB753A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB753A_f",
+          SoundLength = 5020
+        },
+        voice_kr_story_1102_111028_1BCB753A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB753A_m",
+          SoundLength = 5030
+        },
+        voice_kr_story_1102_111028_1BCB7564 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111028_1BCB7564",
+          SoundLength = 1690
+        },
+        voice_kr_story_1102_111029_1BCB81B2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111029_1BCB81B2",
+          SoundLength = 5890
+        },
+        voice_kr_story_1102_111029_1BCB81DC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111029_1BCB81DC",
+          SoundLength = 840
+        },
+        voice_kr_story_1102_111029_1BCB8206 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111029_1BCB8206",
+          SoundLength = 4460
+        },
+        voice_kr_story_1102_111029_1BCB8230 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111029_1BCB8230",
+          SoundLength = 2510
+        },
+        voice_kr_story_1102_111029_1BCB825A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111029_1BCB825A",
+          SoundLength = 10560
+        },
+        voice_kr_story_1102_111029_1BCB8284 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111029_1BCB8284",
+          SoundLength = 8760
+        },
+        voice_kr_story_1102_111029_1BCB82AE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111029_1BCB82AE",
+          SoundLength = 8900
+        },
+        voice_kr_story_1102_111029_1BCB82D8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111029_1BCB82D8",
+          SoundLength = 6210
+        },
+        voice_kr_story_1102_111029_1BCB8302 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111029_1BCB8302",
+          SoundLength = 1450
+        },
+        voice_kr_story_1102_111029_1BCB832C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111029_1BCB832C_f",
+          SoundLength = 2960
+        },
+        voice_kr_story_1102_111029_1BCB832C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111029_1BCB832C_m",
+          SoundLength = 3040
+        },
+        voice_kr_story_1102_111029_1BCB8356 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111029_1BCB8356",
+          SoundLength = 2520
+        },
+        voice_kr_story_1102_111030_1BCB921A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111030_1BCB921A",
+          SoundLength = 2080
+        },
+        voice_kr_story_1102_111030_1BCB9244_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111030_1BCB9244_f",
+          SoundLength = 900
+        },
+        voice_kr_story_1102_111030_1BCB9244_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111030_1BCB9244_m",
+          SoundLength = 1050
+        },
+        voice_kr_story_1102_111031_1BCBA282_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA282_f",
+          SoundLength = 1920
+        },
+        voice_kr_story_1102_111031_1BCBA282_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA282_m",
+          SoundLength = 2240
+        },
+        voice_kr_story_1102_111031_1BCBA2AC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA2AC",
+          SoundLength = 14140
+        },
+        voice_kr_story_1102_111031_1BCBA2D6_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA2D6_f",
+          SoundLength = 1460
+        },
+        voice_kr_story_1102_111031_1BCBA2D6_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA2D6_m",
+          SoundLength = 1400
+        },
+        voice_kr_story_1102_111031_1BCBA300 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA300",
+          SoundLength = 9380
+        },
+        voice_kr_story_1102_111031_1BCBA354_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA354_f",
+          SoundLength = 1660
+        },
+        voice_kr_story_1102_111031_1BCBA354_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA354_m",
+          SoundLength = 1750
+        },
+        voice_kr_story_1102_111031_1BCBA37E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA37E",
+          SoundLength = 4600
+        },
+        voice_kr_story_1102_111031_1BCBA3A8_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA3A8_f",
+          SoundLength = 4030
+        },
+        voice_kr_story_1102_111031_1BCBA3A8_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA3A8_m",
+          SoundLength = 4750
+        },
+        voice_kr_story_1102_111031_1BCBA3D2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA3D2",
+          SoundLength = 1680
+        },
+        voice_kr_story_1102_111031_1BCBA3FC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA3FC",
+          SoundLength = 630
+        },
+        voice_kr_story_1102_111031_1BCBA426_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA426_f",
+          SoundLength = 10040
+        },
+        voice_kr_story_1102_111031_1BCBA426_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA426_m",
+          SoundLength = 11210
+        },
+        voice_kr_story_1102_111031_1BCBA450_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA450_f",
+          SoundLength = 9350
+        },
+        voice_kr_story_1102_111031_1BCBA450_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA450_m",
+          SoundLength = 11870
+        },
+        voice_kr_story_1102_111031_1BCBA47A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA47A_f",
+          SoundLength = 10800
+        },
+        voice_kr_story_1102_111031_1BCBA47A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA47A_m",
+          SoundLength = 14810
+        },
+        voice_kr_story_1102_111031_1BCBA4A4_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA4A4_f",
+          SoundLength = 1220
+        },
+        voice_kr_story_1102_111031_1BCBA4A4_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA4A4_m",
+          SoundLength = 1020
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1102_111031_1BCBA4CE_f",
+    MaxKey = "voice_kr_story_1102_111058_1BCD64B2_m",
+    Loader = function()
+      return {
+        voice_kr_story_1102_111031_1BCBA4CE_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA4CE_f",
+          SoundLength = 5560
+        },
+        voice_kr_story_1102_111031_1BCBA4CE_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA4CE_m",
+          SoundLength = 5260
+        },
+        voice_kr_story_1102_111031_1BCBA4F8_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA4F8_f",
+          SoundLength = 8380
+        },
+        voice_kr_story_1102_111031_1BCBA4F8_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA4F8_m",
+          SoundLength = 9110
+        },
+        voice_kr_story_1102_111031_1BCBA522_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA522_f",
+          SoundLength = 11330
+        },
+        voice_kr_story_1102_111031_1BCBA522_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA522_m",
+          SoundLength = 11190
+        },
+        voice_kr_story_1102_111031_1BCBA54C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA54C",
+          SoundLength = 4890
+        },
+        voice_kr_story_1102_111031_1BCBA576_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA576_f",
+          SoundLength = 5050
+        },
+        voice_kr_story_1102_111031_1BCBA576_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA576_m",
+          SoundLength = 5400
+        },
+        voice_kr_story_1102_111031_1BCBA5A0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA5A0",
+          SoundLength = 500
+        },
+        voice_kr_story_1102_111031_1BCBA5CA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA5CA_f",
+          SoundLength = 2770
+        },
+        voice_kr_story_1102_111031_1BCBA5CA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA5CA_m",
+          SoundLength = 2870
+        },
+        voice_kr_story_1102_111031_1BCBA5F4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA5F4",
+          SoundLength = 8450
+        },
+        voice_kr_story_1102_111031_1BCBA61E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA61E",
+          SoundLength = 2730
+        },
+        voice_kr_story_1102_111031_1BCBA648_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA648_f",
+          SoundLength = 9910
+        },
+        voice_kr_story_1102_111031_1BCBA648_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA648_m",
+          SoundLength = 10540
+        },
+        voice_kr_story_1102_111031_1BCBA672 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111031_1BCBA672",
+          SoundLength = 5600
+        },
+        voice_kr_story_1102_111032_1BCBB2EA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111032_1BCBB2EA",
+          SoundLength = 3100
+        },
+        voice_kr_story_1102_111032_1BCBB314 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111032_1BCBB314",
+          SoundLength = 1000
+        },
+        voice_kr_story_1102_111032_1BCBB33E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111032_1BCBB33E_f",
+          SoundLength = 1690
+        },
+        voice_kr_story_1102_111032_1BCBB33E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111032_1BCBB33E_m",
+          SoundLength = 1540
+        },
+        voice_kr_story_1102_111033_1BCBC352 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111033_1BCBC352",
+          SoundLength = 4700
+        },
+        voice_kr_story_1102_111033_1BCBC3A6_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111033_1BCBC3A6_f",
+          SoundLength = 4990
+        },
+        voice_kr_story_1102_111033_1BCBC3A6_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111033_1BCBC3A6_m",
+          SoundLength = 4690
+        },
+        voice_kr_story_1102_111033_1BCBC3D0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111033_1BCBC3D0",
+          SoundLength = 1360
+        },
+        voice_kr_story_1102_111034_1BCBD3BA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111034_1BCBD3BA_f",
+          SoundLength = 2550
+        },
+        voice_kr_story_1102_111034_1BCBD3BA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111034_1BCBD3BA_m",
+          SoundLength = 2170
+        },
+        voice_kr_story_1102_111035_1BCBE422 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111035_1BCBE422",
+          SoundLength = 990
+        },
+        voice_kr_story_1102_111036_1BCBF48A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111036_1BCBF48A",
+          SoundLength = 3280
+        },
+        voice_kr_story_1102_111037_1BCC04F2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111037_1BCC04F2",
+          SoundLength = 5690
+        },
+        voice_kr_story_1102_111037_1BCC051C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111037_1BCC051C",
+          SoundLength = 4120
+        },
+        voice_kr_story_1102_111037_1BCC0546 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111037_1BCC0546",
+          SoundLength = 6920
+        },
+        voice_kr_story_1102_111038_1BCC155A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111038_1BCC155A_f",
+          SoundLength = 2810
+        },
+        voice_kr_story_1102_111038_1BCC155A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111038_1BCC155A_m",
+          SoundLength = 3410
+        },
+        voice_kr_story_1102_111039_1BCC25C2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111039_1BCC25C2",
+          SoundLength = 5270
+        },
+        voice_kr_story_1102_111039_1BCC25EC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111039_1BCC25EC",
+          SoundLength = 9660
+        },
+        voice_kr_story_1102_111039_1BCC2616 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111039_1BCC2616",
+          SoundLength = 7910
+        },
+        voice_kr_story_1102_111039_1BCC2640_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111039_1BCC2640_f",
+          SoundLength = 7190
+        },
+        voice_kr_story_1102_111039_1BCC2640_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111039_1BCC2640_m",
+          SoundLength = 7200
+        },
+        voice_kr_story_1102_111039_1BCC266A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111039_1BCC266A",
+          SoundLength = 6090
+        },
+        voice_kr_story_1102_111039_1BCC2694_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111039_1BCC2694_f",
+          SoundLength = 1000
+        },
+        voice_kr_story_1102_111039_1BCC2694_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111039_1BCC2694_m",
+          SoundLength = 990
+        },
+        voice_kr_story_1102_111039_1BCC26BE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111039_1BCC26BE",
+          SoundLength = 10250
+        },
+        voice_kr_story_1102_111039_1BCC26E8_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111039_1BCC26E8_f",
+          SoundLength = 6130
+        },
+        voice_kr_story_1102_111039_1BCC26E8_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111039_1BCC26E8_m",
+          SoundLength = 6740
+        },
+        voice_kr_story_1102_111039_1BCC2712 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111039_1BCC2712",
+          SoundLength = 9610
+        },
+        voice_kr_story_1102_111039_1BCC273C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111039_1BCC273C_f",
+          SoundLength = 3590
+        },
+        voice_kr_story_1102_111039_1BCC273C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111039_1BCC273C_m",
+          SoundLength = 3560
+        },
+        voice_kr_story_1102_111040_1BCC362A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111040_1BCC362A",
+          SoundLength = 3030
+        },
+        voice_kr_story_1102_111040_1BCC3654_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111040_1BCC3654_f",
+          SoundLength = 3010
+        },
+        voice_kr_story_1102_111040_1BCC3654_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111040_1BCC3654_m",
+          SoundLength = 3220
+        },
+        voice_kr_story_1102_111041_1BCC4692 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111041_1BCC4692",
+          SoundLength = 4930
+        },
+        voice_kr_story_1102_111042_1BCC56FA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111042_1BCC56FA",
+          SoundLength = 6950
+        },
+        voice_kr_story_1102_111042_1BCC5724 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111042_1BCC5724",
+          SoundLength = 4060
+        },
+        voice_kr_story_1102_111042_1BCC574E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111042_1BCC574E_f",
+          SoundLength = 3450
+        },
+        voice_kr_story_1102_111042_1BCC574E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111042_1BCC574E_m",
+          SoundLength = 3250
+        },
+        voice_kr_story_1102_111043_1BCC6762_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111043_1BCC6762_f",
+          SoundLength = 1690
+        },
+        voice_kr_story_1102_111043_1BCC6762_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111043_1BCC6762_m",
+          SoundLength = 1190
+        },
+        voice_kr_story_1102_111043_1BCC678C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111043_1BCC678C",
+          SoundLength = 2710
+        },
+        voice_kr_story_1102_111044_1BCC77CA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111044_1BCC77CA",
+          SoundLength = 2680
+        },
+        voice_kr_story_1102_111046_1BCC989A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111046_1BCC989A",
+          SoundLength = 6350
+        },
+        voice_kr_story_1102_111046_1BCC98C4_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111046_1BCC98C4_f",
+          SoundLength = 1560
+        },
+        voice_kr_story_1102_111046_1BCC98C4_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111046_1BCC98C4_m",
+          SoundLength = 1230
+        },
+        voice_kr_story_1102_111046_1BCC9918 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111046_1BCC9918",
+          SoundLength = 1190
+        },
+        voice_kr_story_1102_111046_1BCC996C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111046_1BCC996C",
+          SoundLength = 4380
+        },
+        voice_kr_story_1102_111047_1BCCA902_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111047_1BCCA902_f",
+          SoundLength = 3350
+        },
+        voice_kr_story_1102_111047_1BCCA902_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111047_1BCCA902_m",
+          SoundLength = 3760
+        },
+        voice_kr_story_1102_111047_1BCCA92C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111047_1BCCA92C",
+          SoundLength = 590
+        },
+        voice_kr_story_1102_111049_1BCCC9D2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111049_1BCCC9D2",
+          SoundLength = 10560
+        },
+        voice_kr_story_1102_111049_1BCCC9FC_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111049_1BCCC9FC_f",
+          SoundLength = 4020
+        },
+        voice_kr_story_1102_111049_1BCCC9FC_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111049_1BCCC9FC_m",
+          SoundLength = 4740
+        },
+        voice_kr_story_1102_111049_1BCCCA26 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111049_1BCCCA26",
+          SoundLength = 3820
+        },
+        voice_kr_story_1102_111049_1BCCCA50_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111049_1BCCCA50_f",
+          SoundLength = 5710
+        },
+        voice_kr_story_1102_111049_1BCCCA50_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111049_1BCCCA50_m",
+          SoundLength = 7050
+        },
+        voice_kr_story_1102_111049_1BCCCA7A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111049_1BCCCA7A",
+          SoundLength = 7420
+        },
+        voice_kr_story_1102_111049_1BCCCAA4_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111049_1BCCCAA4_f",
+          SoundLength = 2620
+        },
+        voice_kr_story_1102_111049_1BCCCAA4_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111049_1BCCCAA4_m",
+          SoundLength = 2240
+        },
+        voice_kr_story_1102_111049_1BCCCACE_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111049_1BCCCACE_f",
+          SoundLength = 2650
+        },
+        voice_kr_story_1102_111049_1BCCCACE_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111049_1BCCCACE_m",
+          SoundLength = 2630
+        },
+        voice_kr_story_1102_111049_1BCCCAF8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111049_1BCCCAF8",
+          SoundLength = 9900
+        },
+        voice_kr_story_1102_111049_1BCCCB22 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111049_1BCCCB22",
+          SoundLength = 14660
+        },
+        voice_kr_story_1102_111050_1BCCDA3A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111050_1BCCDA3A",
+          SoundLength = 5520
+        },
+        voice_kr_story_1102_111051_1BCCEAA2_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111051_1BCCEAA2_f",
+          SoundLength = 2700
+        },
+        voice_kr_story_1102_111051_1BCCEAA2_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111051_1BCCEAA2_m",
+          SoundLength = 2600
+        },
+        voice_kr_story_1102_111051_1BCCEACC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111051_1BCCEACC",
+          SoundLength = 5920
+        },
+        voice_kr_story_1102_111051_1BCCEAF6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111051_1BCCEAF6",
+          SoundLength = 5320
+        },
+        voice_kr_story_1102_111052_1BCCFB0A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111052_1BCCFB0A_f",
+          SoundLength = 4920
+        },
+        voice_kr_story_1102_111052_1BCCFB0A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111052_1BCCFB0A_m",
+          SoundLength = 4570
+        },
+        voice_kr_story_1102_111052_1BCCFB34 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111052_1BCCFB34",
+          SoundLength = 4030
+        },
+        voice_kr_story_1102_111053_1BCD0B72_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111053_1BCD0B72_f",
+          SoundLength = 2580
+        },
+        voice_kr_story_1102_111053_1BCD0B72_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111053_1BCD0B72_m",
+          SoundLength = 2500
+        },
+        voice_kr_story_1102_111053_1BCD0B9C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111053_1BCD0B9C",
+          SoundLength = 9890
+        },
+        voice_kr_story_1102_111053_1BCD0BC6_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111053_1BCD0BC6_f",
+          SoundLength = 1550
+        },
+        voice_kr_story_1102_111053_1BCD0BC6_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111053_1BCD0BC6_m",
+          SoundLength = 1540
+        },
+        voice_kr_story_1102_111053_1BCD0BF0_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111053_1BCD0BF0_f",
+          SoundLength = 1000
+        },
+        voice_kr_story_1102_111053_1BCD0BF0_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111053_1BCD0BF0_m",
+          SoundLength = 610
+        },
+        voice_kr_story_1102_111053_1BCD0C1A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111053_1BCD0C1A",
+          SoundLength = 8410
+        },
+        voice_kr_story_1102_111053_1BCD0C44_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111053_1BCD0C44_f",
+          SoundLength = 2430
+        },
+        voice_kr_story_1102_111053_1BCD0C44_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111053_1BCD0C44_m",
+          SoundLength = 2070
+        },
+        voice_kr_story_1102_111053_1BCD0C6E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111053_1BCD0C6E",
+          SoundLength = 9000
+        },
+        voice_kr_story_1102_111054_1BCD1BDA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1BDA_f",
+          SoundLength = 1290
+        },
+        voice_kr_story_1102_111054_1BCD1BDA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1BDA_m",
+          SoundLength = 1100
+        },
+        voice_kr_story_1102_111054_1BCD1C04 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1C04",
+          SoundLength = 3740
+        },
+        voice_kr_story_1102_111054_1BCD1C2E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1C2E",
+          SoundLength = 13180
+        },
+        voice_kr_story_1102_111054_1BCD1C58_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1C58_f",
+          SoundLength = 2510
+        },
+        voice_kr_story_1102_111054_1BCD1C58_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1C58_m",
+          SoundLength = 2730
+        },
+        voice_kr_story_1102_111054_1BCD1C82 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1C82",
+          SoundLength = 10410
+        },
+        voice_kr_story_1102_111054_1BCD1CAC_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1CAC_f",
+          SoundLength = 7180
+        },
+        voice_kr_story_1102_111054_1BCD1CAC_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1CAC_m",
+          SoundLength = 7440
+        },
+        voice_kr_story_1102_111054_1BCD1CD6_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1CD6_f",
+          SoundLength = 3960
+        },
+        voice_kr_story_1102_111054_1BCD1CD6_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1CD6_m",
+          SoundLength = 3610
+        },
+        voice_kr_story_1102_111054_1BCD1D00 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1D00",
+          SoundLength = 6160
+        },
+        voice_kr_story_1102_111054_1BCD1D2A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1D2A_f",
+          SoundLength = 2230
+        },
+        voice_kr_story_1102_111054_1BCD1D2A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1D2A_m",
+          SoundLength = 2430
+        },
+        voice_kr_story_1102_111054_1BCD1D54 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1D54",
+          SoundLength = 11180
+        },
+        voice_kr_story_1102_111054_1BCD1D7E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1D7E_f",
+          SoundLength = 3730
+        },
+        voice_kr_story_1102_111054_1BCD1D7E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1D7E_m",
+          SoundLength = 3190
+        },
+        voice_kr_story_1102_111054_1BCD1DA8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1DA8",
+          SoundLength = 3380
+        },
+        voice_kr_story_1102_111054_1BCD1DD2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1DD2",
+          SoundLength = 6750
+        },
+        voice_kr_story_1102_111054_1BCD1DFC_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1DFC_f",
+          SoundLength = 770
+        },
+        voice_kr_story_1102_111054_1BCD1DFC_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1DFC_m",
+          SoundLength = 710
+        },
+        voice_kr_story_1102_111054_1BCD1E26 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1E26",
+          SoundLength = 3500
+        },
+        voice_kr_story_1102_111054_1BCD1E50_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1E50_f",
+          SoundLength = 3090
+        },
+        voice_kr_story_1102_111054_1BCD1E50_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1E50_m",
+          SoundLength = 2810
+        },
+        voice_kr_story_1102_111054_1BCD1E7A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1E7A",
+          SoundLength = 5360
+        },
+        voice_kr_story_1102_111054_1BCD1EA4_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1EA4_f",
+          SoundLength = 11540
+        },
+        voice_kr_story_1102_111054_1BCD1EA4_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1EA4_m",
+          SoundLength = 12170
+        },
+        voice_kr_story_1102_111054_1BCD1ECE_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1ECE_f",
+          SoundLength = 8540
+        },
+        voice_kr_story_1102_111054_1BCD1ECE_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1ECE_m",
+          SoundLength = 8720
+        },
+        voice_kr_story_1102_111054_1BCD1EF8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1EF8",
+          SoundLength = 13080
+        },
+        voice_kr_story_1102_111054_1BCD1F22_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1F22_f",
+          SoundLength = 1400
+        },
+        voice_kr_story_1102_111054_1BCD1F22_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1F22_m",
+          SoundLength = 1300
+        },
+        voice_kr_story_1102_111054_1BCD1F4C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1F4C_f",
+          SoundLength = 3520
+        },
+        voice_kr_story_1102_111054_1BCD1F4C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1F4C_m",
+          SoundLength = 4280
+        },
+        voice_kr_story_1102_111054_1BCD1F76 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1F76",
+          SoundLength = 3860
+        },
+        voice_kr_story_1102_111054_1BCD1FA0_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1FA0_f",
+          SoundLength = 5130
+        },
+        voice_kr_story_1102_111054_1BCD1FA0_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1FA0_m",
+          SoundLength = 6140
+        },
+        voice_kr_story_1102_111054_1BCD1FCA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1FCA",
+          SoundLength = 13340
+        },
+        voice_kr_story_1102_111054_1BCD1FF4_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1FF4_f",
+          SoundLength = 5730
+        },
+        voice_kr_story_1102_111054_1BCD1FF4_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD1FF4_m",
+          SoundLength = 6260
+        },
+        voice_kr_story_1102_111054_1BCD201E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111054_1BCD201E",
+          SoundLength = 12950
+        },
+        voice_kr_story_1102_111055_1BCD2C42_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111055_1BCD2C42_f",
+          SoundLength = 9270
+        },
+        voice_kr_story_1102_111055_1BCD2C42_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111055_1BCD2C42_m",
+          SoundLength = 9790
+        },
+        voice_kr_story_1102_111056_1BCD3CAA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111056_1BCD3CAA_f",
+          SoundLength = 6920
+        },
+        voice_kr_story_1102_111056_1BCD3CAA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111056_1BCD3CAA_m",
+          SoundLength = 7480
+        },
+        voice_kr_story_1102_111057_1BCD4D12_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111057_1BCD4D12_f",
+          SoundLength = 6250
+        },
+        voice_kr_story_1102_111057_1BCD4D12_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111057_1BCD4D12_m",
+          SoundLength = 6740
+        },
+        voice_kr_story_1102_111058_1BCD5D7A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD5D7A",
+          SoundLength = 2000
+        },
+        voice_kr_story_1102_111058_1BCD5DA4_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD5DA4_f",
+          SoundLength = 890
+        },
+        voice_kr_story_1102_111058_1BCD5DA4_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD5DA4_m",
+          SoundLength = 810
+        },
+        voice_kr_story_1102_111058_1BCD5DCE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD5DCE",
+          SoundLength = 1140
+        },
+        voice_kr_story_1102_111058_1BCD5E22_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD5E22_f",
+          SoundLength = 5870
+        },
+        voice_kr_story_1102_111058_1BCD5E22_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD5E22_m",
+          SoundLength = 6470
+        },
+        voice_kr_story_1102_111058_1BCD5E76_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD5E76_f",
+          SoundLength = 7050
+        },
+        voice_kr_story_1102_111058_1BCD5E76_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD5E76_m",
+          SoundLength = 7570
+        },
+        voice_kr_story_1102_111058_1BCD5EA0_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD5EA0_f",
+          SoundLength = 9220
+        },
+        voice_kr_story_1102_111058_1BCD5EA0_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD5EA0_m",
+          SoundLength = 9490
+        },
+        voice_kr_story_1102_111058_1BCD5ECA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD5ECA",
+          SoundLength = 16050
+        },
+        voice_kr_story_1102_111058_1BCD5EF4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD5EF4",
+          SoundLength = 11460
+        },
+        voice_kr_story_1102_111058_1BCD5F1E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD5F1E_f",
+          SoundLength = 12440
+        },
+        voice_kr_story_1102_111058_1BCD5F1E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD5F1E_m",
+          SoundLength = 13150
+        },
+        voice_kr_story_1102_111058_1BCD5F48 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD5F48",
+          SoundLength = 1750
+        },
+        voice_kr_story_1102_111058_1BCD5F72_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD5F72_f",
+          SoundLength = 3800
+        },
+        voice_kr_story_1102_111058_1BCD5F72_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD5F72_m",
+          SoundLength = 4000
+        },
+        voice_kr_story_1102_111058_1BCD5F9C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD5F9C",
+          SoundLength = 10180
+        },
+        voice_kr_story_1102_111058_1BCD5FC6_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD5FC6_f",
+          SoundLength = 3060
+        },
+        voice_kr_story_1102_111058_1BCD5FC6_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD5FC6_m",
+          SoundLength = 2830
+        },
+        voice_kr_story_1102_111058_1BCD5FF0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD5FF0",
+          SoundLength = 10440
+        },
+        voice_kr_story_1102_111058_1BCD601A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD601A",
+          SoundLength = 9600
+        },
+        voice_kr_story_1102_111058_1BCD6044 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD6044",
+          SoundLength = 15210
+        },
+        voice_kr_story_1102_111058_1BCD606E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD606E",
+          SoundLength = 14210
+        },
+        voice_kr_story_1102_111058_1BCD6098_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD6098_f",
+          SoundLength = 8180
+        },
+        voice_kr_story_1102_111058_1BCD6098_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD6098_m",
+          SoundLength = 7940
+        },
+        voice_kr_story_1102_111058_1BCD60C2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD60C2",
+          SoundLength = 4720
+        },
+        voice_kr_story_1102_111058_1BCD60EC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD60EC",
+          SoundLength = 15830
+        },
+        voice_kr_story_1102_111058_1BCD6116 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD6116",
+          SoundLength = 12730
+        },
+        voice_kr_story_1102_111058_1BCD6140 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD6140",
+          SoundLength = 10060
+        },
+        voice_kr_story_1102_111058_1BCD61BE_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD61BE_f",
+          SoundLength = 2480
+        },
+        voice_kr_story_1102_111058_1BCD61BE_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD61BE_m",
+          SoundLength = 2520
+        },
+        voice_kr_story_1102_111058_1BCD61E8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD61E8",
+          SoundLength = 6090
+        },
+        voice_kr_story_1102_111058_1BCD6212_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD6212_f",
+          SoundLength = 1350
+        },
+        voice_kr_story_1102_111058_1BCD6212_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD6212_m",
+          SoundLength = 1390
+        },
+        voice_kr_story_1102_111058_1BCD623C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD623C",
+          SoundLength = 6470
+        },
+        voice_kr_story_1102_111058_1BCD6266 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD6266",
+          SoundLength = 7620
+        },
+        voice_kr_story_1102_111058_1BCD6290 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD6290",
+          SoundLength = 2820
+        },
+        voice_kr_story_1102_111058_1BCD62BA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD62BA",
+          SoundLength = 3500
+        },
+        voice_kr_story_1102_111058_1BCD62E4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD62E4",
+          SoundLength = 5890
+        },
+        voice_kr_story_1102_111058_1BCD630E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD630E",
+          SoundLength = 18290
+        },
+        voice_kr_story_1102_111058_1BCD6338 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD6338",
+          SoundLength = 7500
+        },
+        voice_kr_story_1102_111058_1BCD6362_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD6362_f",
+          SoundLength = 5150
+        },
+        voice_kr_story_1102_111058_1BCD6362_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD6362_m",
+          SoundLength = 5420
+        },
+        voice_kr_story_1102_111058_1BCD638C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD638C_f",
+          SoundLength = 2880
+        },
+        voice_kr_story_1102_111058_1BCD638C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD638C_m",
+          SoundLength = 3260
+        },
+        voice_kr_story_1102_111058_1BCD63B6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD63B6",
+          SoundLength = 10360
+        },
+        voice_kr_story_1102_111058_1BCD645E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD645E_f",
+          SoundLength = 950
+        },
+        voice_kr_story_1102_111058_1BCD645E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD645E_m",
+          SoundLength = 1610
+        },
+        voice_kr_story_1102_111058_1BCD6488_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD6488_f",
+          SoundLength = 13610
+        },
+        voice_kr_story_1102_111058_1BCD6488_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD6488_m",
+          SoundLength = 15550
+        },
+        voice_kr_story_1102_111058_1BCD64B2_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD64B2_f",
+          SoundLength = 10260
+        },
+        voice_kr_story_1102_111058_1BCD64B2_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD64B2_m",
+          SoundLength = 11950
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1102_111058_1BCD64DC_f",
+    MaxKey = "voice_kr_story_1102_111083_1BCEF7A3_f",
+    Loader = function()
+      return {
+        voice_kr_story_1102_111058_1BCD64DC_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD64DC_f",
+          SoundLength = 14980
+        },
+        voice_kr_story_1102_111058_1BCD64DC_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD64DC_m",
+          SoundLength = 18690
+        },
+        voice_kr_story_1102_111058_1BCD6506_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD6506_f",
+          SoundLength = 1550
+        },
+        voice_kr_story_1102_111058_1BCD6506_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD6506_m",
+          SoundLength = 1400
+        },
+        voice_kr_story_1102_111058_1BCD6530_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD6530_f",
+          SoundLength = 7320
+        },
+        voice_kr_story_1102_111058_1BCD6530_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD6530_m",
+          SoundLength = 8160
+        },
+        voice_kr_story_1102_111058_1BCD655A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD655A_f",
+          SoundLength = 3920
+        },
+        voice_kr_story_1102_111058_1BCD655A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111058_1BCD655A_m",
+          SoundLength = 3820
+        },
+        voice_kr_story_1102_111059_1BCD6DE2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111059_1BCD6DE2",
+          SoundLength = 3970
+        },
+        voice_kr_story_1102_111060_1BCD7E4A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111060_1BCD7E4A",
+          SoundLength = 7490
+        },
+        voice_kr_story_1102_111060_1BCD7E74 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111060_1BCD7E74",
+          SoundLength = 7100
+        },
+        voice_kr_story_1102_111060_1BCD7E9E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111060_1BCD7E9E",
+          SoundLength = 8610
+        },
+        voice_kr_story_1102_111060_1BCD7EC8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111060_1BCD7EC8",
+          SoundLength = 13040
+        },
+        voice_kr_story_1102_111060_1BCD7EF2_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111060_1BCD7EF2_f",
+          SoundLength = 590
+        },
+        voice_kr_story_1102_111060_1BCD7EF2_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111060_1BCD7EF2_m",
+          SoundLength = 630
+        },
+        voice_kr_story_1102_111061_1BCD8EB2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD8EB2",
+          SoundLength = 5720
+        },
+        voice_kr_story_1102_111061_1BCD8EDC_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD8EDC_f",
+          SoundLength = 7690
+        },
+        voice_kr_story_1102_111061_1BCD8EDC_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD8EDC_m",
+          SoundLength = 8200
+        },
+        voice_kr_story_1102_111061_1BCD8F06 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD8F06",
+          SoundLength = 5320
+        },
+        voice_kr_story_1102_111061_1BCD8F30 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD8F30",
+          SoundLength = 14010
+        },
+        voice_kr_story_1102_111061_1BCD8F5A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD8F5A",
+          SoundLength = 6460
+        },
+        voice_kr_story_1102_111061_1BCD8F84 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD8F84",
+          SoundLength = 8550
+        },
+        voice_kr_story_1102_111061_1BCD9002 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD9002",
+          SoundLength = 2330
+        },
+        voice_kr_story_1102_111061_1BCD902C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD902C",
+          SoundLength = 1450
+        },
+        voice_kr_story_1102_111061_1BCD9056 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD9056",
+          SoundLength = 9190
+        },
+        voice_kr_story_1102_111061_1BCD9080_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD9080_f",
+          SoundLength = 10960
+        },
+        voice_kr_story_1102_111061_1BCD9080_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD9080_m",
+          SoundLength = 10550
+        },
+        voice_kr_story_1102_111061_1BCD90AA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD90AA_f",
+          SoundLength = 6240
+        },
+        voice_kr_story_1102_111061_1BCD90AA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD90AA_m",
+          SoundLength = 6840
+        },
+        voice_kr_story_1102_111061_1BCD90D4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD90D4",
+          SoundLength = 8650
+        },
+        voice_kr_story_1102_111061_1BCD90FE_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD90FE_f",
+          SoundLength = 13560
+        },
+        voice_kr_story_1102_111061_1BCD90FE_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD90FE_m",
+          SoundLength = 12700
+        },
+        voice_kr_story_1102_111061_1BCD9128 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD9128",
+          SoundLength = 3390
+        },
+        voice_kr_story_1102_111061_1BCD9152_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD9152_f",
+          SoundLength = 610
+        },
+        voice_kr_story_1102_111061_1BCD9152_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD9152_m",
+          SoundLength = 680
+        },
+        voice_kr_story_1102_111061_1BCD917C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD917C",
+          SoundLength = 6310
+        },
+        voice_kr_story_1102_111061_1BCD91D0_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD91D0_f",
+          SoundLength = 4350
+        },
+        voice_kr_story_1102_111061_1BCD91D0_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD91D0_m",
+          SoundLength = 4670
+        },
+        voice_kr_story_1102_111061_1BCD91FA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD91FA",
+          SoundLength = 6810
+        },
+        voice_kr_story_1102_111061_1BCD924E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD924E_f",
+          SoundLength = 10570
+        },
+        voice_kr_story_1102_111061_1BCD924E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD924E_m",
+          SoundLength = 10300
+        },
+        voice_kr_story_1102_111061_1BCD9278 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD9278",
+          SoundLength = 14980
+        },
+        voice_kr_story_1102_111061_1BCD92A2_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD92A2_f",
+          SoundLength = 1600
+        },
+        voice_kr_story_1102_111061_1BCD92A2_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD92A2_m",
+          SoundLength = 1640
+        },
+        voice_kr_story_1102_111061_1BCD92CC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111061_1BCD92CC",
+          SoundLength = 15010
+        },
+        voice_kr_story_1102_111062_1BCD9F1A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111062_1BCD9F1A",
+          SoundLength = 3970
+        },
+        voice_kr_story_1102_111063_1BCDAF82 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111063_1BCDAF82",
+          SoundLength = 9160
+        },
+        voice_kr_story_1102_111063_1BCDAFAC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111063_1BCDAFAC",
+          SoundLength = 6060
+        },
+        voice_kr_story_1102_111064_1BCDBFEA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111064_1BCDBFEA",
+          SoundLength = 9860
+        },
+        voice_kr_story_1102_111064_1BCDC014 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111064_1BCDC014",
+          SoundLength = 6520
+        },
+        voice_kr_story_1102_111065_1BCDD052 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD052",
+          SoundLength = 2330
+        },
+        voice_kr_story_1102_111065_1BCDD07C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD07C",
+          SoundLength = 9910
+        },
+        voice_kr_story_1102_111065_1BCDD0A6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD0A6",
+          SoundLength = 5780
+        },
+        voice_kr_story_1102_111065_1BCDD0D0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD0D0",
+          SoundLength = 12580
+        },
+        voice_kr_story_1102_111065_1BCDD0FA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD0FA",
+          SoundLength = 16890
+        },
+        voice_kr_story_1102_111065_1BCDD124 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD124",
+          SoundLength = 4690
+        },
+        voice_kr_story_1102_111065_1BCDD14E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD14E",
+          SoundLength = 8150
+        },
+        voice_kr_story_1102_111065_1BCDD178 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD178",
+          SoundLength = 4730
+        },
+        voice_kr_story_1102_111065_1BCDD1A2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD1A2",
+          SoundLength = 6920
+        },
+        voice_kr_story_1102_111065_1BCDD1CC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD1CC",
+          SoundLength = 7870
+        },
+        voice_kr_story_1102_111065_1BCDD1F6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD1F6",
+          SoundLength = 7100
+        },
+        voice_kr_story_1102_111065_1BCDD220 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD220",
+          SoundLength = 13140
+        },
+        voice_kr_story_1102_111065_1BCDD24A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD24A",
+          SoundLength = 7110
+        },
+        voice_kr_story_1102_111065_1BCDD274 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD274",
+          SoundLength = 5510
+        },
+        voice_kr_story_1102_111065_1BCDD29E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD29E",
+          SoundLength = 13700
+        },
+        voice_kr_story_1102_111065_1BCDD2C8_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD2C8_f",
+          SoundLength = 8070
+        },
+        voice_kr_story_1102_111065_1BCDD2C8_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD2C8_m",
+          SoundLength = 8380
+        },
+        voice_kr_story_1102_111065_1BCDD2F2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD2F2",
+          SoundLength = 5680
+        },
+        voice_kr_story_1102_111065_1BCDD31C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD31C",
+          SoundLength = 13940
+        },
+        voice_kr_story_1102_111065_1BCDD346 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD346",
+          SoundLength = 3960
+        },
+        voice_kr_story_1102_111065_1BCDD370 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD370",
+          SoundLength = 7300
+        },
+        voice_kr_story_1102_111065_1BCDD39A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD39A",
+          SoundLength = 3050
+        },
+        voice_kr_story_1102_111065_1BCDD3C4_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD3C4_f",
+          SoundLength = 2490
+        },
+        voice_kr_story_1102_111065_1BCDD3C4_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD3C4_m",
+          SoundLength = 2920
+        },
+        voice_kr_story_1102_111065_1BCDD3EE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD3EE",
+          SoundLength = 10130
+        },
+        voice_kr_story_1102_111065_1BCDD418 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD418",
+          SoundLength = 15080
+        },
+        voice_kr_story_1102_111065_1BCDD442 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD442",
+          SoundLength = 940
+        },
+        voice_kr_story_1102_111065_1BCDD46C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD46C_f",
+          SoundLength = 6530
+        },
+        voice_kr_story_1102_111065_1BCDD46C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD46C_m",
+          SoundLength = 6610
+        },
+        voice_kr_story_1102_111065_1BCDD496 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD496",
+          SoundLength = 9000
+        },
+        voice_kr_story_1102_111065_1BCDD4C0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD4C0",
+          SoundLength = 3890
+        },
+        voice_kr_story_1102_111065_1BCDD4EA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD4EA",
+          SoundLength = 4610
+        },
+        voice_kr_story_1102_111065_1BCDD514 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD514",
+          SoundLength = 6490
+        },
+        voice_kr_story_1102_111065_1BCDD53E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD53E",
+          SoundLength = 7100
+        },
+        voice_kr_story_1102_111065_1BCDD568 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD568",
+          SoundLength = 8030
+        },
+        voice_kr_story_1102_111065_1BCDD592 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD592",
+          SoundLength = 13380
+        },
+        voice_kr_story_1102_111065_1BCDD5BC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD5BC",
+          SoundLength = 1880
+        },
+        voice_kr_story_1102_111065_1BCDD5E6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD5E6",
+          SoundLength = 7690
+        },
+        voice_kr_story_1102_111065_1BCDD610 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD610",
+          SoundLength = 4530
+        },
+        voice_kr_story_1102_111065_1BCDD63A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD63A",
+          SoundLength = 11060
+        },
+        voice_kr_story_1102_111065_1BCDD664 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD664",
+          SoundLength = 10620
+        },
+        voice_kr_story_1102_111065_1BCDD6B8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD6B8",
+          SoundLength = 11630
+        },
+        voice_kr_story_1102_111065_1BCDD6E2_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD6E2_f",
+          SoundLength = 8510
+        },
+        voice_kr_story_1102_111065_1BCDD6E2_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD6E2_m",
+          SoundLength = 8040
+        },
+        voice_kr_story_1102_111065_1BCDD70C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD70C",
+          SoundLength = 11780
+        },
+        voice_kr_story_1102_111065_1BCDD736 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD736",
+          SoundLength = 11920
+        },
+        voice_kr_story_1102_111065_1BCDD760 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD760",
+          SoundLength = 4940
+        },
+        voice_kr_story_1102_111065_1BCDD78A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD78A",
+          SoundLength = 8470
+        },
+        voice_kr_story_1102_111065_1BCDD7B4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD7B4",
+          SoundLength = 10980
+        },
+        voice_kr_story_1102_111065_1BCDD7DE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD7DE",
+          SoundLength = 4220
+        },
+        voice_kr_story_1102_111065_1BCDD808_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD808_f",
+          SoundLength = 7720
+        },
+        voice_kr_story_1102_111065_1BCDD808_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD808_m",
+          SoundLength = 7320
+        },
+        voice_kr_story_1102_111065_1BCDD832 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD832",
+          SoundLength = 15550
+        },
+        voice_kr_story_1102_111065_1BCDD85C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD85C",
+          SoundLength = 9680
+        },
+        voice_kr_story_1102_111065_1BCDD85D = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD85D",
+          SoundLength = 10470
+        },
+        voice_kr_story_1102_111065_1BCDD85E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD85E",
+          SoundLength = 5050
+        },
+        voice_kr_story_1102_111065_1BCDD886 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD886",
+          SoundLength = 16290
+        },
+        voice_kr_story_1102_111065_1BCDD8B0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD8B0",
+          SoundLength = 4620
+        },
+        voice_kr_story_1102_111065_1BCDD8B0_1 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD8B0_1",
+          SoundLength = 3990
+        },
+        voice_kr_story_1102_111065_1BCDD8B0_2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD8B0_2",
+          SoundLength = 4620
+        },
+        voice_kr_story_1102_111065_1BCDD8DA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD8DA_f",
+          SoundLength = 12080
+        },
+        voice_kr_story_1102_111065_1BCDD8DA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD8DA_m",
+          SoundLength = 12920
+        },
+        voice_kr_story_1102_111065_1BCDD904_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD904_f",
+          SoundLength = 17820
+        },
+        voice_kr_story_1102_111065_1BCDD904_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD904_m",
+          SoundLength = 17220
+        },
+        voice_kr_story_1102_111065_1BCDD92E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD92E_f",
+          SoundLength = 13590
+        },
+        voice_kr_story_1102_111065_1BCDD92E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD92E_m",
+          SoundLength = 12070
+        },
+        voice_kr_story_1102_111065_1BCDD958_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD958_f",
+          SoundLength = 11040
+        },
+        voice_kr_story_1102_111065_1BCDD958_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD958_m",
+          SoundLength = 11360
+        },
+        voice_kr_story_1102_111065_1BCDD982 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111065_1BCDD982",
+          SoundLength = 7050
+        },
+        voice_kr_story_1102_111066_1BCDE0BA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111066_1BCDE0BA",
+          SoundLength = 2880
+        },
+        voice_kr_story_1102_111066_1BCDE0E4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111066_1BCDE0E4",
+          SoundLength = 3290
+        },
+        voice_kr_story_1102_111066_1BCDE10E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111066_1BCDE10E",
+          SoundLength = 4670
+        },
+        voice_kr_story_1102_111066_1BCDE138 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111066_1BCDE138",
+          SoundLength = 4120
+        },
+        voice_kr_story_1102_111066_1BCDE162 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111066_1BCDE162",
+          SoundLength = 9020
+        },
+        voice_kr_story_1102_111066_1BCDE1B6_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111066_1BCDE1B6_f",
+          SoundLength = 7580
+        },
+        voice_kr_story_1102_111066_1BCDE1B6_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111066_1BCDE1B6_m",
+          SoundLength = 7150
+        },
+        voice_kr_story_1102_111066_1BCDE20A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111066_1BCDE20A",
+          SoundLength = 7040
+        },
+        voice_kr_story_1102_111066_1BCDE234 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111066_1BCDE234",
+          SoundLength = 8450
+        },
+        voice_kr_story_1102_111066_1BCDE25E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111066_1BCDE25E",
+          SoundLength = 7540
+        },
+        voice_kr_story_1102_111067_1BCDF122 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111067_1BCDF122",
+          SoundLength = 9190
+        },
+        voice_kr_story_1102_111067_1BCDF14C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111067_1BCDF14C",
+          SoundLength = 5830
+        },
+        voice_kr_story_1102_111068_1BCE018A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111068_1BCE018A",
+          SoundLength = 3330
+        },
+        voice_kr_story_1102_111068_1BCE01B4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111068_1BCE01B4",
+          SoundLength = 11070
+        },
+        voice_kr_story_1102_111068_1BCE01DE_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111068_1BCE01DE_f",
+          SoundLength = 2060
+        },
+        voice_kr_story_1102_111068_1BCE01DE_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111068_1BCE01DE_m",
+          SoundLength = 1700
+        },
+        voice_kr_story_1102_111068_1BCE0208 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111068_1BCE0208",
+          SoundLength = 12610
+        },
+        voice_kr_story_1102_111068_1BCE0232_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111068_1BCE0232_f",
+          SoundLength = 1190
+        },
+        voice_kr_story_1102_111068_1BCE0232_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111068_1BCE0232_m",
+          SoundLength = 1640
+        },
+        voice_kr_story_1102_111068_1BCE025C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111068_1BCE025C",
+          SoundLength = 3940
+        },
+        voice_kr_story_1102_111068_1BCE0286_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111068_1BCE0286_f",
+          SoundLength = 19860
+        },
+        voice_kr_story_1102_111068_1BCE0286_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111068_1BCE0286_m",
+          SoundLength = 21160
+        },
+        voice_kr_story_1102_111068_1BCE02B0_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111068_1BCE02B0_f",
+          SoundLength = 5020
+        },
+        voice_kr_story_1102_111068_1BCE02B0_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111068_1BCE02B0_m",
+          SoundLength = 4930
+        },
+        voice_kr_story_1102_111068_1BCE02DA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111068_1BCE02DA",
+          SoundLength = 7480
+        },
+        voice_kr_story_1102_111068_1BCE0304 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111068_1BCE0304",
+          SoundLength = 11200
+        },
+        voice_kr_story_1102_111068_1BCE032E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111068_1BCE032E",
+          SoundLength = 3040
+        },
+        voice_kr_story_1102_111068_1BCE0358_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111068_1BCE0358_f",
+          SoundLength = 2100
+        },
+        voice_kr_story_1102_111068_1BCE0358_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111068_1BCE0358_m",
+          SoundLength = 2140
+        },
+        voice_kr_story_1102_111068_1BCE0382 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111068_1BCE0382",
+          SoundLength = 10760
+        },
+        voice_kr_story_1102_111068_1BCE03AC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111068_1BCE03AC",
+          SoundLength = 14770
+        },
+        voice_kr_story_1102_111068_1BCE03D6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111068_1BCE03D6",
+          SoundLength = 6520
+        },
+        voice_kr_story_1102_111068_1BCE0400 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111068_1BCE0400",
+          SoundLength = 2830
+        },
+        voice_kr_story_1102_111068_1BCE042A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111068_1BCE042A",
+          SoundLength = 6980
+        },
+        voice_kr_story_1102_111068_1BCE0454 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111068_1BCE0454",
+          SoundLength = 1130
+        },
+        voice_kr_story_1102_111068_1BCE047E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111068_1BCE047E",
+          SoundLength = 4280
+        },
+        voice_kr_story_1102_111068_1BCE04A8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111068_1BCE04A8",
+          SoundLength = 8350
+        },
+        voice_kr_story_1102_111069_1BCE11F2_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111069_1BCE11F2_f",
+          SoundLength = 1230
+        },
+        voice_kr_story_1102_111069_1BCE11F2_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111069_1BCE11F2_m",
+          SoundLength = 960
+        },
+        voice_kr_story_1102_111069_1BCE121C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111069_1BCE121C",
+          SoundLength = 5550
+        },
+        voice_kr_story_1102_111070_1BCE225A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111070_1BCE225A_f",
+          SoundLength = 1280
+        },
+        voice_kr_story_1102_111070_1BCE225A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111070_1BCE225A_m",
+          SoundLength = 850
+        },
+        voice_kr_story_1102_111071_1BCE32C2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111071_1BCE32C2",
+          SoundLength = 2260
+        },
+        voice_kr_story_1102_111071_1BCE32EC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111071_1BCE32EC",
+          SoundLength = 6350
+        },
+        voice_kr_story_1102_111072_1BCE432A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111072_1BCE432A_f",
+          SoundLength = 2220
+        },
+        voice_kr_story_1102_111072_1BCE432A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111072_1BCE432A_m",
+          SoundLength = 2050
+        },
+        voice_kr_story_1102_111072_1BCE4354_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111072_1BCE4354_f",
+          SoundLength = 4440
+        },
+        voice_kr_story_1102_111072_1BCE4354_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111072_1BCE4354_m",
+          SoundLength = 3570
+        },
+        voice_kr_story_1102_111072_1BCE437E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111072_1BCE437E",
+          SoundLength = 700
+        },
+        voice_kr_story_1102_111072_1BCE43A8_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111072_1BCE43A8_f",
+          SoundLength = 850
+        },
+        voice_kr_story_1102_111072_1BCE43A8_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111072_1BCE43A8_m",
+          SoundLength = 700
+        },
+        voice_kr_story_1102_111073_1BCE5392_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111073_1BCE5392_f",
+          SoundLength = 970
+        },
+        voice_kr_story_1102_111073_1BCE5392_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111073_1BCE5392_m",
+          SoundLength = 920
+        },
+        voice_kr_story_1102_111074_1BCE63FA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111074_1BCE63FA_f",
+          SoundLength = 2860
+        },
+        voice_kr_story_1102_111074_1BCE63FA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111074_1BCE63FA_m",
+          SoundLength = 2750
+        },
+        voice_kr_story_1102_111075_1BCE7462_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111075_1BCE7462_f",
+          SoundLength = 2360
+        },
+        voice_kr_story_1102_111075_1BCE7462_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111075_1BCE7462_m",
+          SoundLength = 2100
+        },
+        voice_kr_story_1102_111075_1BCE748C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111075_1BCE748C_f",
+          SoundLength = 2570
+        },
+        voice_kr_story_1102_111075_1BCE748C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111075_1BCE748C_m",
+          SoundLength = 2320
+        },
+        voice_kr_story_1102_111075_1BCE74B6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111075_1BCE74B6",
+          SoundLength = 2290
+        },
+        voice_kr_story_1102_111076_1BCE84CA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111076_1BCE84CA_f",
+          SoundLength = 1620
+        },
+        voice_kr_story_1102_111076_1BCE84CA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111076_1BCE84CA_m",
+          SoundLength = 1540
+        },
+        voice_kr_story_1102_111077_1BCE9532 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111077_1BCE9532",
+          SoundLength = 4880
+        },
+        voice_kr_story_1102_111077_1BCE955C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111077_1BCE955C_f",
+          SoundLength = 3950
+        },
+        voice_kr_story_1102_111077_1BCE955C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111077_1BCE955C_m",
+          SoundLength = 3910
+        },
+        voice_kr_story_1102_111078_1BCEA59A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111078_1BCEA59A",
+          SoundLength = 9670
+        },
+        voice_kr_story_1102_111078_1BCEA5C4_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111078_1BCEA5C4_f",
+          SoundLength = 4690
+        },
+        voice_kr_story_1102_111078_1BCEA5C4_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111078_1BCEA5C4_m",
+          SoundLength = 4080
+        },
+        voice_kr_story_1102_111079_1BCEB602 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111079_1BCEB602",
+          SoundLength = 7660
+        },
+        voice_kr_story_1102_111079_1BCEB62C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111079_1BCEB62C_f",
+          SoundLength = 8260
+        },
+        voice_kr_story_1102_111079_1BCEB62C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111079_1BCEB62C_m",
+          SoundLength = 5930
+        },
+        voice_kr_story_1102_111080_1BCEC66A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111080_1BCEC66A_f",
+          SoundLength = 3190
+        },
+        voice_kr_story_1102_111080_1BCEC66A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111080_1BCEC66A_m",
+          SoundLength = 2660
+        },
+        voice_kr_story_1102_111081_1BCED6D2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111081_1BCED6D2",
+          SoundLength = 7680
+        },
+        voice_kr_story_1102_111081_1BCED6FC_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111081_1BCED6FC_f",
+          SoundLength = 7870
+        },
+        voice_kr_story_1102_111081_1BCED6FC_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111081_1BCED6FC_m",
+          SoundLength = 6170
+        },
+        voice_kr_story_1102_111082_1BCEE73A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111082_1BCEE73A",
+          SoundLength = 3650
+        },
+        voice_kr_story_1102_111082_1BCEE764 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111082_1BCEE764",
+          SoundLength = 4800
+        },
+        voice_kr_story_1102_111083_1BCEF7A2_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111083_1BCEF7A2_f",
+          SoundLength = 3110
+        },
+        voice_kr_story_1102_111083_1BCEF7A2_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111083_1BCEF7A2_m",
+          SoundLength = 2570
+        },
+        voice_kr_story_1102_111083_1BCEF7A3_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111083_1BCEF7A3_f",
+          SoundLength = 7910
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1102_111083_1BCEF7A3_m",
+    MaxKey = "voice_kr_story_1102_111095_1BCFC1EC",
+    Loader = function()
+      return {
+        voice_kr_story_1102_111083_1BCEF7A3_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111083_1BCEF7A3_m",
+          SoundLength = 8140
+        },
+        voice_kr_story_1102_111083_1BCEF7CC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111083_1BCEF7CC",
+          SoundLength = 5050
+        },
+        voice_kr_story_1102_111083_1BCEF7F6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111083_1BCEF7F6",
+          SoundLength = 1200
+        },
+        voice_kr_story_1102_111083_1BCEF820_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111083_1BCEF820_f",
+          SoundLength = 2010
+        },
+        voice_kr_story_1102_111083_1BCEF820_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111083_1BCEF820_m",
+          SoundLength = 1730
+        },
+        voice_kr_story_1102_111083_1BCEF84A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111083_1BCEF84A_f",
+          SoundLength = 5230
+        },
+        voice_kr_story_1102_111083_1BCEF84A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111083_1BCEF84A_m",
+          SoundLength = 5700
+        },
+        voice_kr_story_1102_111084_1BCF080A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111084_1BCF080A_f",
+          SoundLength = 10900
+        },
+        voice_kr_story_1102_111084_1BCF080A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111084_1BCF080A_m",
+          SoundLength = 11350
+        },
+        voice_kr_story_1102_111084_1BCF0834 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111084_1BCF0834",
+          SoundLength = 4300
+        },
+        voice_kr_story_1102_111084_1BCF085E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111084_1BCF085E_f",
+          SoundLength = 730
+        },
+        voice_kr_story_1102_111084_1BCF085E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111084_1BCF085E_m",
+          SoundLength = 730
+        },
+        voice_kr_story_1102_111084_1BCF0888 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111084_1BCF0888",
+          SoundLength = 12810
+        },
+        voice_kr_story_1102_111084_1BCF08B2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111084_1BCF08B2",
+          SoundLength = 1300
+        },
+        voice_kr_story_1102_111084_1BCF08DC_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111084_1BCF08DC_f",
+          SoundLength = 12200
+        },
+        voice_kr_story_1102_111084_1BCF08DC_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111084_1BCF08DC_m",
+          SoundLength = 12220
+        },
+        voice_kr_story_1102_111084_1BCF0906 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111084_1BCF0906",
+          SoundLength = 8430
+        },
+        voice_kr_story_1102_111084_1BCF0930 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111084_1BCF0930",
+          SoundLength = 1940
+        },
+        voice_kr_story_1102_111085_1BCF1872_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111085_1BCF1872_f",
+          SoundLength = 2460
+        },
+        voice_kr_story_1102_111085_1BCF1872_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111085_1BCF1872_m",
+          SoundLength = 2270
+        },
+        voice_kr_story_1102_111085_1BCF189C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111085_1BCF189C",
+          SoundLength = 7930
+        },
+        voice_kr_story_1102_111085_1BCF18C6_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111085_1BCF18C6_f",
+          SoundLength = 1080
+        },
+        voice_kr_story_1102_111085_1BCF18C6_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111085_1BCF18C6_m",
+          SoundLength = 950
+        },
+        voice_kr_story_1102_111086_1BCF28DA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111086_1BCF28DA_f",
+          SoundLength = 8040
+        },
+        voice_kr_story_1102_111086_1BCF28DA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111086_1BCF28DA_m",
+          SoundLength = 7410
+        },
+        voice_kr_story_1102_111086_1BCF2904_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111086_1BCF2904_f",
+          SoundLength = 530
+        },
+        voice_kr_story_1102_111086_1BCF2904_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111086_1BCF2904_m",
+          SoundLength = 810
+        },
+        voice_kr_story_1102_111086_1BCF292E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111086_1BCF292E",
+          SoundLength = 5470
+        },
+        voice_kr_story_1102_111086_1BCF2982_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111086_1BCF2982_f",
+          SoundLength = 2800
+        },
+        voice_kr_story_1102_111086_1BCF2982_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111086_1BCF2982_m",
+          SoundLength = 2780
+        },
+        voice_kr_story_1102_111086_1BCF29AC_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111086_1BCF29AC_f",
+          SoundLength = 7450
+        },
+        voice_kr_story_1102_111086_1BCF29AC_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111086_1BCF29AC_m",
+          SoundLength = 7200
+        },
+        voice_kr_story_1102_111086_1BCF2A00_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111086_1BCF2A00_f",
+          SoundLength = 1590
+        },
+        voice_kr_story_1102_111086_1BCF2A00_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111086_1BCF2A00_m",
+          SoundLength = 1650
+        },
+        voice_kr_story_1102_111086_1BCF2A2A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111086_1BCF2A2A",
+          SoundLength = 11100
+        },
+        voice_kr_story_1102_111086_1BCF2A7E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111086_1BCF2A7E",
+          SoundLength = 780
+        },
+        voice_kr_story_1102_111086_1BCF2AA8_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111086_1BCF2AA8_f",
+          SoundLength = 4120
+        },
+        voice_kr_story_1102_111086_1BCF2AA8_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111086_1BCF2AA8_m",
+          SoundLength = 5040
+        },
+        voice_kr_story_1102_111086_1BCF2AD2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111086_1BCF2AD2",
+          SoundLength = 6770
+        },
+        voice_kr_story_1102_111086_1BCF2AFC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111086_1BCF2AFC",
+          SoundLength = 5070
+        },
+        voice_kr_story_1102_111086_1BCF2B26 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111086_1BCF2B26",
+          SoundLength = 7710
+        },
+        voice_kr_story_1102_111087_1BCF3942_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111087_1BCF3942_f",
+          SoundLength = 11170
+        },
+        voice_kr_story_1102_111087_1BCF3942_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111087_1BCF3942_m",
+          SoundLength = 11320
+        },
+        voice_kr_story_1102_111087_1BCF396C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111087_1BCF396C",
+          SoundLength = 5550
+        },
+        voice_kr_story_1102_111088_1BCF49AA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111088_1BCF49AA",
+          SoundLength = 770
+        },
+        voice_kr_story_1102_111088_1BCF49D4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111088_1BCF49D4",
+          SoundLength = 4050
+        },
+        voice_kr_story_1102_111088_1BCF49FE_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111088_1BCF49FE_f",
+          SoundLength = 7440
+        },
+        voice_kr_story_1102_111088_1BCF49FE_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111088_1BCF49FE_m",
+          SoundLength = 7170
+        },
+        voice_kr_story_1102_111088_1BCF4A28 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111088_1BCF4A28",
+          SoundLength = 3280
+        },
+        voice_kr_story_1102_111088_1BCF4A7C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111088_1BCF4A7C",
+          SoundLength = 8540
+        },
+        voice_kr_story_1102_111088_1BCF4AD0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111088_1BCF4AD0",
+          SoundLength = 16180
+        },
+        voice_kr_story_1102_111088_1BCF4AFA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111088_1BCF4AFA",
+          SoundLength = 4150
+        },
+        voice_kr_story_1102_111088_1BCF4B24 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111088_1BCF4B24",
+          SoundLength = 13770
+        },
+        voice_kr_story_1102_111088_1BCF4B4E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111088_1BCF4B4E",
+          SoundLength = 10480
+        },
+        voice_kr_story_1102_111088_1BCF4B78_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111088_1BCF4B78_f",
+          SoundLength = 550
+        },
+        voice_kr_story_1102_111088_1BCF4B78_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111088_1BCF4B78_m",
+          SoundLength = 1150
+        },
+        voice_kr_story_1102_111088_1BCF4BA2_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111088_1BCF4BA2_f",
+          SoundLength = 13780
+        },
+        voice_kr_story_1102_111088_1BCF4BA2_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111088_1BCF4BA2_m",
+          SoundLength = 14860
+        },
+        voice_kr_story_1102_111088_1BCF4BCC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111088_1BCF4BCC",
+          SoundLength = 8020
+        },
+        voice_kr_story_1102_111088_1BCF4BF6_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111088_1BCF4BF6_f",
+          SoundLength = 760
+        },
+        voice_kr_story_1102_111088_1BCF4BF6_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111088_1BCF4BF6_m",
+          SoundLength = 700
+        },
+        voice_kr_story_1102_111089_1BCF5A12 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5A12",
+          SoundLength = 6120
+        },
+        voice_kr_story_1102_111089_1BCF5A3C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5A3C",
+          SoundLength = 4090
+        },
+        voice_kr_story_1102_111089_1BCF5A66_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5A66_f",
+          SoundLength = 8620
+        },
+        voice_kr_story_1102_111089_1BCF5A66_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5A66_m",
+          SoundLength = 7990
+        },
+        voice_kr_story_1102_111089_1BCF5A90_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5A90_f",
+          SoundLength = 3950
+        },
+        voice_kr_story_1102_111089_1BCF5A90_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5A90_m",
+          SoundLength = 4020
+        },
+        voice_kr_story_1102_111089_1BCF5ABA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5ABA_f",
+          SoundLength = 9870
+        },
+        voice_kr_story_1102_111089_1BCF5ABA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5ABA_m",
+          SoundLength = 9900
+        },
+        voice_kr_story_1102_111089_1BCF5AE4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5AE4",
+          SoundLength = 4820
+        },
+        voice_kr_story_1102_111089_1BCF5B0E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5B0E_f",
+          SoundLength = 4690
+        },
+        voice_kr_story_1102_111089_1BCF5B0E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5B0E_m",
+          SoundLength = 4560
+        },
+        voice_kr_story_1102_111089_1BCF5B38 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5B38",
+          SoundLength = 4810
+        },
+        voice_kr_story_1102_111089_1BCF5B62_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5B62_f",
+          SoundLength = 19230
+        },
+        voice_kr_story_1102_111089_1BCF5B62_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5B62_m",
+          SoundLength = 19650
+        },
+        voice_kr_story_1102_111089_1BCF5B8C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5B8C_f",
+          SoundLength = 6180
+        },
+        voice_kr_story_1102_111089_1BCF5B8C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5B8C_m",
+          SoundLength = 5900
+        },
+        voice_kr_story_1102_111089_1BCF5BB6_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5BB6_f",
+          SoundLength = 3690
+        },
+        voice_kr_story_1102_111089_1BCF5BB6_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5BB6_m",
+          SoundLength = 3760
+        },
+        voice_kr_story_1102_111089_1BCF5BE0_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5BE0_f",
+          SoundLength = 10610
+        },
+        voice_kr_story_1102_111089_1BCF5BE0_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5BE0_m",
+          SoundLength = 10370
+        },
+        voice_kr_story_1102_111089_1BCF5C34 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5C34",
+          SoundLength = 4970
+        },
+        voice_kr_story_1102_111089_1BCF5C88 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5C88",
+          SoundLength = 8220
+        },
+        voice_kr_story_1102_111089_1BCF5CDC_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5CDC_f",
+          SoundLength = 11250
+        },
+        voice_kr_story_1102_111089_1BCF5CDC_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5CDC_m",
+          SoundLength = 11410
+        },
+        voice_kr_story_1102_111089_1BCF5D06_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5D06_f",
+          SoundLength = 17500
+        },
+        voice_kr_story_1102_111089_1BCF5D06_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5D06_m",
+          SoundLength = 16720
+        },
+        voice_kr_story_1102_111089_1BCF5D30_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5D30_f",
+          SoundLength = 11910
+        },
+        voice_kr_story_1102_111089_1BCF5D30_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5D30_m",
+          SoundLength = 12290
+        },
+        voice_kr_story_1102_111089_1BCF5D5A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5D5A_f",
+          SoundLength = 14100
+        },
+        voice_kr_story_1102_111089_1BCF5D5A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5D5A_m",
+          SoundLength = 14450
+        },
+        voice_kr_story_1102_111089_1BCF5D84_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5D84_f",
+          SoundLength = 8070
+        },
+        voice_kr_story_1102_111089_1BCF5D84_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5D84_m",
+          SoundLength = 8120
+        },
+        voice_kr_story_1102_111089_1BCF5DAE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5DAE",
+          SoundLength = 8550
+        },
+        voice_kr_story_1102_111089_1BCF5DD8_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5DD8_f",
+          SoundLength = 2380
+        },
+        voice_kr_story_1102_111089_1BCF5DD8_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5DD8_m",
+          SoundLength = 2330
+        },
+        voice_kr_story_1102_111089_1BCF5E02_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5E02_f",
+          SoundLength = 17130
+        },
+        voice_kr_story_1102_111089_1BCF5E02_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5E02_m",
+          SoundLength = 17160
+        },
+        voice_kr_story_1102_111089_1BCF5E2C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5E2C",
+          SoundLength = 10050
+        },
+        voice_kr_story_1102_111089_1BCF5E56_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5E56_f",
+          SoundLength = 14890
+        },
+        voice_kr_story_1102_111089_1BCF5E56_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5E56_m",
+          SoundLength = 15580
+        },
+        voice_kr_story_1102_111089_1BCF5E80 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5E80",
+          SoundLength = 610
+        },
+        voice_kr_story_1102_111089_1BCF5EAA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5EAA",
+          SoundLength = 6790
+        },
+        voice_kr_story_1102_111089_1BCF5ED4_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5ED4_f",
+          SoundLength = 16510
+        },
+        voice_kr_story_1102_111089_1BCF5ED4_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5ED4_m",
+          SoundLength = 16820
+        },
+        voice_kr_story_1102_111089_1BCF5EFE_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5EFE_f",
+          SoundLength = 12950
+        },
+        voice_kr_story_1102_111089_1BCF5EFE_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5EFE_m",
+          SoundLength = 12970
+        },
+        voice_kr_story_1102_111089_1BCF5F28_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5F28_f",
+          SoundLength = 12050
+        },
+        voice_kr_story_1102_111089_1BCF5F28_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5F28_m",
+          SoundLength = 10780
+        },
+        voice_kr_story_1102_111089_1BCF5F52 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5F52",
+          SoundLength = 570
+        },
+        voice_kr_story_1102_111089_1BCF5F7C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5F7C",
+          SoundLength = 1730
+        },
+        voice_kr_story_1102_111089_1BCF5FA6_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5FA6_f",
+          SoundLength = 4880
+        },
+        voice_kr_story_1102_111089_1BCF5FA6_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5FA6_m",
+          SoundLength = 4640
+        },
+        voice_kr_story_1102_111089_1BCF5FFA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5FFA_f",
+          SoundLength = 9920
+        },
+        voice_kr_story_1102_111089_1BCF5FFA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF5FFA_m",
+          SoundLength = 9820
+        },
+        voice_kr_story_1102_111089_1BCF6024_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF6024_f",
+          SoundLength = 5980
+        },
+        voice_kr_story_1102_111089_1BCF6024_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF6024_m",
+          SoundLength = 6640
+        },
+        voice_kr_story_1102_111089_1BCF604E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF604E",
+          SoundLength = 3980
+        },
+        voice_kr_story_1102_111089_1BCF6078_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF6078_f",
+          SoundLength = 5540
+        },
+        voice_kr_story_1102_111089_1BCF6078_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF6078_m",
+          SoundLength = 5140
+        },
+        voice_kr_story_1102_111089_1BCF60A2_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF60A2_f",
+          SoundLength = 10380
+        },
+        voice_kr_story_1102_111089_1BCF60A2_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF60A2_m",
+          SoundLength = 10870
+        },
+        voice_kr_story_1102_111089_1BCF60CC_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF60CC_f",
+          SoundLength = 7230
+        },
+        voice_kr_story_1102_111089_1BCF60CC_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF60CC_m",
+          SoundLength = 6300
+        },
+        voice_kr_story_1102_111089_1BCF60F6_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF60F6_f",
+          SoundLength = 7760
+        },
+        voice_kr_story_1102_111089_1BCF60F6_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF60F6_m",
+          SoundLength = 7800
+        },
+        voice_kr_story_1102_111089_1BCF6120_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF6120_f",
+          SoundLength = 2300
+        },
+        voice_kr_story_1102_111089_1BCF6120_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF6120_m",
+          SoundLength = 2310
+        },
+        voice_kr_story_1102_111089_1BCF614A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF614A",
+          SoundLength = 13520
+        },
+        voice_kr_story_1102_111089_1BCF6174_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF6174_f",
+          SoundLength = 8460
+        },
+        voice_kr_story_1102_111089_1BCF6174_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF6174_m",
+          SoundLength = 8740
+        },
+        voice_kr_story_1102_111089_1BCF619E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF619E",
+          SoundLength = 580
+        },
+        voice_kr_story_1102_111089_1BCF61C8_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF61C8_f",
+          SoundLength = 10670
+        },
+        voice_kr_story_1102_111089_1BCF61C8_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF61C8_m",
+          SoundLength = 10810
+        },
+        voice_kr_story_1102_111089_1BCF61F2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF61F2",
+          SoundLength = 11980
+        },
+        voice_kr_story_1102_111089_1BCF621C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF621C_f",
+          SoundLength = 7000
+        },
+        voice_kr_story_1102_111089_1BCF621C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF621C_m",
+          SoundLength = 7030
+        },
+        voice_kr_story_1102_111089_1BCF6246_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF6246_f",
+          SoundLength = 9620
+        },
+        voice_kr_story_1102_111089_1BCF6246_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF6246_m",
+          SoundLength = 9290
+        },
+        voice_kr_story_1102_111089_1BCF6270_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF6270_f",
+          SoundLength = 5690
+        },
+        voice_kr_story_1102_111089_1BCF6270_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF6270_m",
+          SoundLength = 5350
+        },
+        voice_kr_story_1102_111089_1BCF629A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF629A",
+          SoundLength = 6170
+        },
+        voice_kr_story_1102_111089_1BCF62C4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF62C4",
+          SoundLength = 2640
+        },
+        voice_kr_story_1102_111089_1BCF62EE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF62EE",
+          SoundLength = 6110
+        },
+        voice_kr_story_1102_111089_1BCF6318 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF6318",
+          SoundLength = 7000
+        },
+        voice_kr_story_1102_111089_1BCF6342 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111089_1BCF6342",
+          SoundLength = 9090
+        },
+        voice_kr_story_1102_111090_1BCF6A7A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111090_1BCF6A7A",
+          SoundLength = 5560
+        },
+        voice_kr_story_1102_111090_1BCF6AA4_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111090_1BCF6AA4_f",
+          SoundLength = 1030
+        },
+        voice_kr_story_1102_111090_1BCF6AA4_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111090_1BCF6AA4_m",
+          SoundLength = 960
+        },
+        voice_kr_story_1102_111090_1BCF6ACE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111090_1BCF6ACE",
+          SoundLength = 13830
+        },
+        voice_kr_story_1102_111090_1BCF6AF8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111090_1BCF6AF8",
+          SoundLength = 14750
+        },
+        voice_kr_story_1102_111090_1BCF6B22_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111090_1BCF6B22_f",
+          SoundLength = 2450
+        },
+        voice_kr_story_1102_111090_1BCF6B22_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111090_1BCF6B22_m",
+          SoundLength = 2190
+        },
+        voice_kr_story_1102_111090_1BCF6B4C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111090_1BCF6B4C",
+          SoundLength = 12350
+        },
+        voice_kr_story_1102_111090_1BCF6B76 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111090_1BCF6B76",
+          SoundLength = 9540
+        },
+        voice_kr_story_1102_111090_1BCF6BA0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111090_1BCF6BA0",
+          SoundLength = 4960
+        },
+        voice_kr_story_1102_111090_1BCF6BCA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111090_1BCF6BCA",
+          SoundLength = 7640
+        },
+        voice_kr_story_1102_111090_1BCF6BF4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111090_1BCF6BF4",
+          SoundLength = 9800
+        },
+        voice_kr_story_1102_111090_1BCF6C48 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111090_1BCF6C48",
+          SoundLength = 7130
+        },
+        voice_kr_story_1102_111090_1BCF6C72 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111090_1BCF6C72",
+          SoundLength = 10860
+        },
+        voice_kr_story_1102_111090_1BCF6C9C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111090_1BCF6C9C",
+          SoundLength = 9140
+        },
+        voice_kr_story_1102_111090_1BCF6CC6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111090_1BCF6CC6",
+          SoundLength = 11750
+        },
+        voice_kr_story_1102_111090_1BCF6CF0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111090_1BCF6CF0",
+          SoundLength = 9690
+        },
+        voice_kr_story_1102_111090_1BCF6D1A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111090_1BCF6D1A",
+          SoundLength = 12840
+        },
+        voice_kr_story_1102_111090_1BCF6D44 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111090_1BCF6D44",
+          SoundLength = 10670
+        },
+        voice_kr_story_1102_111091_1BCF7AE2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111091_1BCF7AE2",
+          SoundLength = 7860
+        },
+        voice_kr_story_1102_111092_1BCF8B4A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111092_1BCF8B4A",
+          SoundLength = 5980
+        },
+        voice_kr_story_1102_111093_1BCF9BB2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111093_1BCF9BB2",
+          SoundLength = 11930
+        },
+        voice_kr_story_1102_111094_1BCFAC1A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111094_1BCFAC1A",
+          SoundLength = 5660
+        },
+        voice_kr_story_1102_111095_1BCFBC82 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFBC82",
+          SoundLength = 5650
+        },
+        voice_kr_story_1102_111095_1BCFBCAC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFBCAC",
+          SoundLength = 9790
+        },
+        voice_kr_story_1102_111095_1BCFBCD6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFBCD6",
+          SoundLength = 2280
+        },
+        voice_kr_story_1102_111095_1BCFBD00_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFBD00_f",
+          SoundLength = 1440
+        },
+        voice_kr_story_1102_111095_1BCFBD00_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFBD00_m",
+          SoundLength = 1360
+        },
+        voice_kr_story_1102_111095_1BCFBD2A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFBD2A",
+          SoundLength = 11250
+        },
+        voice_kr_story_1102_111095_1BCFBD54_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFBD54_f",
+          SoundLength = 3330
+        },
+        voice_kr_story_1102_111095_1BCFBD54_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFBD54_m",
+          SoundLength = 2970
+        },
+        voice_kr_story_1102_111095_1BCFBDA8_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFBDA8_f",
+          SoundLength = 1870
+        },
+        voice_kr_story_1102_111095_1BCFBDA8_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFBDA8_m",
+          SoundLength = 1810
+        },
+        voice_kr_story_1102_111095_1BCFBDFC_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFBDFC_f",
+          SoundLength = 3750
+        },
+        voice_kr_story_1102_111095_1BCFBDFC_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFBDFC_m",
+          SoundLength = 3770
+        },
+        voice_kr_story_1102_111095_1BCFBE50_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFBE50_f",
+          SoundLength = 6150
+        },
+        voice_kr_story_1102_111095_1BCFBE50_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFBE50_m",
+          SoundLength = 6830
+        },
+        voice_kr_story_1102_111095_1BCFBE7A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFBE7A",
+          SoundLength = 13880
+        },
+        voice_kr_story_1102_111095_1BCFBEA4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFBEA4",
+          SoundLength = 3080
+        },
+        voice_kr_story_1102_111095_1BCFBF76 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFBF76",
+          SoundLength = 12310
+        },
+        voice_kr_story_1102_111095_1BCFBFCA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFBFCA",
+          SoundLength = 5440
+        },
+        voice_kr_story_1102_111095_1BCFBFF4_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFBFF4_f",
+          SoundLength = 510
+        },
+        voice_kr_story_1102_111095_1BCFBFF4_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFBFF4_m",
+          SoundLength = 550
+        },
+        voice_kr_story_1102_111095_1BCFC01E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC01E",
+          SoundLength = 4660
+        },
+        voice_kr_story_1102_111095_1BCFC072 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC072",
+          SoundLength = 10520
+        },
+        voice_kr_story_1102_111095_1BCFC09C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC09C_f",
+          SoundLength = 660
+        },
+        voice_kr_story_1102_111095_1BCFC09C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC09C_m",
+          SoundLength = 550
+        },
+        voice_kr_story_1102_111095_1BCFC0C6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC0C6",
+          SoundLength = 8170
+        },
+        voice_kr_story_1102_111095_1BCFC11A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC11A",
+          SoundLength = 8500
+        },
+        voice_kr_story_1102_111095_1BCFC144_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC144_f",
+          SoundLength = 540
+        },
+        voice_kr_story_1102_111095_1BCFC144_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC144_m",
+          SoundLength = 540
+        },
+        voice_kr_story_1102_111095_1BCFC16E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC16E",
+          SoundLength = 6440
+        },
+        voice_kr_story_1102_111095_1BCFC198 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC198",
+          SoundLength = 9240
+        },
+        voice_kr_story_1102_111095_1BCFC1EC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC1EC",
+          SoundLength = 6550
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1102_111095_1BCFC216_f",
+    MaxKey = "voice_kr_story_1102_111096_1BD0B36C",
+    Loader = function()
+      return {
+        voice_kr_story_1102_111095_1BCFC216_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC216_f",
+          SoundLength = 500
+        },
+        voice_kr_story_1102_111095_1BCFC216_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC216_m",
+          SoundLength = 500
+        },
+        voice_kr_story_1102_111095_1BCFC240 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC240",
+          SoundLength = 5860
+        },
+        voice_kr_story_1102_111095_1BCFC294 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC294",
+          SoundLength = 2420
+        },
+        voice_kr_story_1102_111095_1BCFC2BE_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC2BE_f",
+          SoundLength = 630
+        },
+        voice_kr_story_1102_111095_1BCFC2BE_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC2BE_m",
+          SoundLength = 560
+        },
+        voice_kr_story_1102_111095_1BCFC2E8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC2E8",
+          SoundLength = 6910
+        },
+        voice_kr_story_1102_111095_1BCFC312 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC312",
+          SoundLength = 8400
+        },
+        voice_kr_story_1102_111095_1BCFC366 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC366",
+          SoundLength = 3720
+        },
+        voice_kr_story_1102_111095_1BCFC390_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC390_f",
+          SoundLength = 680
+        },
+        voice_kr_story_1102_111095_1BCFC390_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC390_m",
+          SoundLength = 660
+        },
+        voice_kr_story_1102_111095_1BCFC3BA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC3BA",
+          SoundLength = 3400
+        },
+        voice_kr_story_1102_111095_1BCFC40E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC40E",
+          SoundLength = 4200
+        },
+        voice_kr_story_1102_111095_1BCFC438_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC438_f",
+          SoundLength = 730
+        },
+        voice_kr_story_1102_111095_1BCFC438_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC438_m",
+          SoundLength = 540
+        },
+        voice_kr_story_1102_111095_1BCFC462 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC462",
+          SoundLength = 4400
+        },
+        voice_kr_story_1102_111095_1BCFC48C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC48C",
+          SoundLength = 9150
+        },
+        voice_kr_story_1102_111095_1BCFC4B6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC4B6",
+          SoundLength = 9310
+        },
+        voice_kr_story_1102_111095_1BCFC55E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC55E",
+          SoundLength = 8560
+        },
+        voice_kr_story_1102_111095_1BCFC588 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC588",
+          SoundLength = 9440
+        },
+        voice_kr_story_1102_111095_1BCFC5B2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC5B2",
+          SoundLength = 1270
+        },
+        voice_kr_story_1102_111095_1BCFC5DC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC5DC",
+          SoundLength = 16380
+        },
+        voice_kr_story_1102_111095_1BCFC630 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC630",
+          SoundLength = 5720
+        },
+        voice_kr_story_1102_111095_1BCFC65A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC65A",
+          SoundLength = 11190
+        },
+        voice_kr_story_1102_111095_1BCFC684 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC684",
+          SoundLength = 15240
+        },
+        voice_kr_story_1102_111095_1BCFC6AE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC6AE",
+          SoundLength = 700
+        },
+        voice_kr_story_1102_111095_1BCFC702_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC702_f",
+          SoundLength = 7990
+        },
+        voice_kr_story_1102_111095_1BCFC702_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC702_m",
+          SoundLength = 7740
+        },
+        voice_kr_story_1102_111095_1BCFC72C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC72C",
+          SoundLength = 8720
+        },
+        voice_kr_story_1102_111095_1BCFC780 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC780",
+          SoundLength = 17400
+        },
+        voice_kr_story_1102_111095_1BCFC7AA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC7AA_f",
+          SoundLength = 6590
+        },
+        voice_kr_story_1102_111095_1BCFC7AA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC7AA_m",
+          SoundLength = 6430
+        },
+        voice_kr_story_1102_111095_1BCFC7D4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC7D4",
+          SoundLength = 3980
+        },
+        voice_kr_story_1102_111095_1BCFC7FE_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC7FE_f",
+          SoundLength = 17220
+        },
+        voice_kr_story_1102_111095_1BCFC7FE_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC7FE_m",
+          SoundLength = 16900
+        },
+        voice_kr_story_1102_111095_1BCFC828 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC828",
+          SoundLength = 610
+        },
+        voice_kr_story_1102_111095_1BCFC852_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC852_f",
+          SoundLength = 10450
+        },
+        voice_kr_story_1102_111095_1BCFC852_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC852_m",
+          SoundLength = 10460
+        },
+        voice_kr_story_1102_111095_1BCFC87C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC87C",
+          SoundLength = 8050
+        },
+        voice_kr_story_1102_111095_1BCFC8A6_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC8A6_f",
+          SoundLength = 640
+        },
+        voice_kr_story_1102_111095_1BCFC8A6_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC8A6_m",
+          SoundLength = 660
+        },
+        voice_kr_story_1102_111095_1BCFC8D0_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC8D0_f",
+          SoundLength = 6580
+        },
+        voice_kr_story_1102_111095_1BCFC8D0_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC8D0_m",
+          SoundLength = 7720
+        },
+        voice_kr_story_1102_111095_1BCFC8FA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC8FA",
+          SoundLength = 6030
+        },
+        voice_kr_story_1102_111095_1BCFC924 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC924",
+          SoundLength = 7020
+        },
+        voice_kr_story_1102_111095_1BCFC925 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC925",
+          SoundLength = 13680
+        },
+        voice_kr_story_1102_111095_1BCFC926 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC926",
+          SoundLength = 18230
+        },
+        voice_kr_story_1102_111095_1BCFC927 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC927",
+          SoundLength = 15490
+        },
+        voice_kr_story_1102_111095_1BCFC928 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC928",
+          SoundLength = 17370
+        },
+        voice_kr_story_1102_111095_1BCFC929 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC929",
+          SoundLength = 7930
+        },
+        voice_kr_story_1102_111095_1BCFC930 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC930",
+          SoundLength = 5410
+        },
+        voice_kr_story_1102_111095_1BCFC931_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC931_f",
+          SoundLength = 13730
+        },
+        voice_kr_story_1102_111095_1BCFC931_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC931_m",
+          SoundLength = 13600
+        },
+        voice_kr_story_1102_111095_1BCFC932_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC932_f",
+          SoundLength = 5900
+        },
+        voice_kr_story_1102_111095_1BCFC932_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC932_m",
+          SoundLength = 6040
+        },
+        voice_kr_story_1102_111095_1BCFC933 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC933",
+          SoundLength = 3560
+        },
+        voice_kr_story_1102_111095_1BCFC934_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC934_f",
+          SoundLength = 1830
+        },
+        voice_kr_story_1102_111095_1BCFC934_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC934_m",
+          SoundLength = 1750
+        },
+        voice_kr_story_1102_111095_1BCFC935 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC935",
+          SoundLength = 510
+        },
+        voice_kr_story_1102_111095_1BCFC936 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC936",
+          SoundLength = 6620
+        },
+        voice_kr_story_1102_111095_1BCFC937 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC937",
+          SoundLength = 14680
+        },
+        voice_kr_story_1102_111095_1BCFC938 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC938",
+          SoundLength = 11940
+        },
+        voice_kr_story_1102_111095_1BCFC939 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC939",
+          SoundLength = 11660
+        },
+        voice_kr_story_1102_111095_1BCFC940 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC940",
+          SoundLength = 11440
+        },
+        voice_kr_story_1102_111095_1BCFC944 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC944",
+          SoundLength = 1140
+        },
+        voice_kr_story_1102_111095_1BCFC946 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC946",
+          SoundLength = 1220
+        },
+        voice_kr_story_1102_111095_1BCFC947 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC947",
+          SoundLength = 6510
+        },
+        voice_kr_story_1102_111095_1BCFC948 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC948",
+          SoundLength = 7970
+        },
+        voice_kr_story_1102_111095_1BCFC949 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111095_1BCFC949",
+          SoundLength = 5360
+        },
+        voice_kr_story_1102_111096_1BCFCCEA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BCFCCEA",
+          SoundLength = 6320
+        },
+        voice_kr_story_1102_111096_1BCFCD14 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BCFCD14",
+          SoundLength = 12880
+        },
+        voice_kr_story_1102_111096_1BCFCD3E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BCFCD3E",
+          SoundLength = 8780
+        },
+        voice_kr_story_1102_111096_1BCFCD68 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BCFCD68",
+          SoundLength = 4470
+        },
+        voice_kr_story_1102_111096_1BCFCD92 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BCFCD92",
+          SoundLength = 9970
+        },
+        voice_kr_story_1102_111096_1BCFCDBC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BCFCDBC",
+          SoundLength = 1760
+        },
+        voice_kr_story_1102_111096_1BCFDD52_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BCFDD52_f",
+          SoundLength = 8000
+        },
+        voice_kr_story_1102_111096_1BCFDD52_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BCFDD52_m",
+          SoundLength = 7700
+        },
+        voice_kr_story_1102_111096_1BCFDD7C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BCFDD7C_f",
+          SoundLength = 1080
+        },
+        voice_kr_story_1102_111096_1BCFDD7C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BCFDD7C_m",
+          SoundLength = 770
+        },
+        voice_kr_story_1102_111096_1BCFDDA6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BCFDDA6",
+          SoundLength = 1290
+        },
+        voice_kr_story_1102_111096_1BCFDDD0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BCFDDD0",
+          SoundLength = 4340
+        },
+        voice_kr_story_1102_111096_1BCFEDBA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BCFEDBA_f",
+          SoundLength = 1290
+        },
+        voice_kr_story_1102_111096_1BCFEDBA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BCFEDBA_m",
+          SoundLength = 1300
+        },
+        voice_kr_story_1102_111096_1BCFEDE4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BCFEDE4",
+          SoundLength = 5370
+        },
+        voice_kr_story_1102_111096_1BCFEE0E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BCFEE0E",
+          SoundLength = 6150
+        },
+        voice_kr_story_1102_111096_1BCFEE38 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BCFEE38",
+          SoundLength = 7180
+        },
+        voice_kr_story_1102_111096_1BCFEE62 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BCFEE62",
+          SoundLength = 5040
+        },
+        voice_kr_story_1102_111096_1BCFEE8C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BCFEE8C",
+          SoundLength = 9740
+        },
+        voice_kr_story_1102_111096_1BCFEEB6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BCFEEB6",
+          SoundLength = 3640
+        },
+        voice_kr_story_1102_111096_1BCFEEE0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BCFEEE0",
+          SoundLength = 3890
+        },
+        voice_kr_story_1102_111096_1BCFFE22 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BCFFE22",
+          SoundLength = 4860
+        },
+        voice_kr_story_1102_111096_1BCFFE4C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BCFFE4C",
+          SoundLength = 1820
+        },
+        voice_kr_story_1102_111096_1BD00E8A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD00E8A_f",
+          SoundLength = 2660
+        },
+        voice_kr_story_1102_111096_1BD00E8A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD00E8A_m",
+          SoundLength = 2180
+        },
+        voice_kr_story_1102_111096_1BD00EB4_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD00EB4_f",
+          SoundLength = 1080
+        },
+        voice_kr_story_1102_111096_1BD00EB4_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD00EB4_m",
+          SoundLength = 1400
+        },
+        voice_kr_story_1102_111096_1BD02F5A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD02F5A_f",
+          SoundLength = 8220
+        },
+        voice_kr_story_1102_111096_1BD02F5A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD02F5A_m",
+          SoundLength = 8990
+        },
+        voice_kr_story_1102_111096_1BD02F84 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD02F84",
+          SoundLength = 4560
+        },
+        voice_kr_story_1102_111096_1BD03FC2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD03FC2",
+          SoundLength = 3230
+        },
+        voice_kr_story_1102_111096_1BD03FEC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD03FEC",
+          SoundLength = 5200
+        },
+        voice_kr_story_1102_111096_1BD04016 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD04016",
+          SoundLength = 2550
+        },
+        voice_kr_story_1102_111096_1BD04040 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD04040",
+          SoundLength = 8950
+        },
+        voice_kr_story_1102_111096_1BD0406A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0406A",
+          SoundLength = 3530
+        },
+        voice_kr_story_1102_111096_1BD040BE_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD040BE_f",
+          SoundLength = 4250
+        },
+        voice_kr_story_1102_111096_1BD040BE_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD040BE_m",
+          SoundLength = 4580
+        },
+        voice_kr_story_1102_111096_1BD04112_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD04112_f",
+          SoundLength = 2420
+        },
+        voice_kr_story_1102_111096_1BD04112_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD04112_m",
+          SoundLength = 2020
+        },
+        voice_kr_story_1102_111096_1BD04190 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD04190",
+          SoundLength = 14150
+        },
+        voice_kr_story_1102_111096_1BD041BA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD041BA",
+          SoundLength = 8160
+        },
+        voice_kr_story_1102_111096_1BD041E4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD041E4",
+          SoundLength = 6710
+        },
+        voice_kr_story_1102_111096_1BD0420E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0420E_f",
+          SoundLength = 590
+        },
+        voice_kr_story_1102_111096_1BD0420E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0420E_m",
+          SoundLength = 830
+        },
+        voice_kr_story_1102_111096_1BD04238 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD04238",
+          SoundLength = 5400
+        },
+        voice_kr_story_1102_111096_1BD04262 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD04262",
+          SoundLength = 2800
+        },
+        voice_kr_story_1102_111096_1BD0428C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0428C",
+          SoundLength = 5140
+        },
+        voice_kr_story_1102_111096_1BD042B6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD042B6",
+          SoundLength = 3530
+        },
+        voice_kr_story_1102_111096_1BD042E0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD042E0",
+          SoundLength = 11990
+        },
+        voice_kr_story_1102_111096_1BD0430A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0430A",
+          SoundLength = 2780
+        },
+        voice_kr_story_1102_111096_1BD04334 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD04334",
+          SoundLength = 560
+        },
+        voice_kr_story_1102_111096_1BD0435E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0435E",
+          SoundLength = 3300
+        },
+        voice_kr_story_1102_111096_1BD04388 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD04388",
+          SoundLength = 5690
+        },
+        voice_kr_story_1102_111096_1BD043B2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD043B2",
+          SoundLength = 3070
+        },
+        voice_kr_story_1102_111096_1BD0502A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0502A",
+          SoundLength = 3340
+        },
+        voice_kr_story_1102_111096_1BD05054_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD05054_f",
+          SoundLength = 2450
+        },
+        voice_kr_story_1102_111096_1BD05054_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD05054_m",
+          SoundLength = 2460
+        },
+        voice_kr_story_1102_111096_1BD0507E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0507E",
+          SoundLength = 11630
+        },
+        voice_kr_story_1102_111096_1BD050A8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD050A8",
+          SoundLength = 13930
+        },
+        voice_kr_story_1102_111096_1BD050D2_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD050D2_f",
+          SoundLength = 2920
+        },
+        voice_kr_story_1102_111096_1BD050D2_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD050D2_m",
+          SoundLength = 2710
+        },
+        voice_kr_story_1102_111096_1BD050FC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD050FC",
+          SoundLength = 1100
+        },
+        voice_kr_story_1102_111096_1BD05126 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD05126",
+          SoundLength = 10080
+        },
+        voice_kr_story_1102_111096_1BD05150 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD05150",
+          SoundLength = 12730
+        },
+        voice_kr_story_1102_111096_1BD0517A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0517A",
+          SoundLength = 4000
+        },
+        voice_kr_story_1102_111096_1BD051A4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD051A4",
+          SoundLength = 10410
+        },
+        voice_kr_story_1102_111096_1BD051CE_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD051CE_f",
+          SoundLength = 960
+        },
+        voice_kr_story_1102_111096_1BD051CE_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD051CE_m",
+          SoundLength = 880
+        },
+        voice_kr_story_1102_111096_1BD06092 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD06092",
+          SoundLength = 4630
+        },
+        voice_kr_story_1102_111096_1BD060BC_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD060BC_f",
+          SoundLength = 5800
+        },
+        voice_kr_story_1102_111096_1BD060BC_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD060BC_m",
+          SoundLength = 5470
+        },
+        voice_kr_story_1102_111096_1BD060E6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD060E6",
+          SoundLength = 13400
+        },
+        voice_kr_story_1102_111096_1BD06110 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD06110",
+          SoundLength = 3850
+        },
+        voice_kr_story_1102_111096_1BD070FA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD070FA",
+          SoundLength = 16120
+        },
+        voice_kr_story_1102_111096_1BD07124 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD07124",
+          SoundLength = 4260
+        },
+        voice_kr_story_1102_111096_1BD0714E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0714E",
+          SoundLength = 6090
+        },
+        voice_kr_story_1102_111096_1BD07178_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD07178_f",
+          SoundLength = 1460
+        },
+        voice_kr_story_1102_111096_1BD07178_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD07178_m",
+          SoundLength = 1550
+        },
+        voice_kr_story_1102_111096_1BD071A2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD071A2",
+          SoundLength = 5180
+        },
+        voice_kr_story_1102_111096_1BD071CC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD071CC",
+          SoundLength = 4290
+        },
+        voice_kr_story_1102_111096_1BD07220 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD07220",
+          SoundLength = 10520
+        },
+        voice_kr_story_1102_111096_1BD0724A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0724A",
+          SoundLength = 5300
+        },
+        voice_kr_story_1102_111096_1BD0729E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0729E",
+          SoundLength = 740
+        },
+        voice_kr_story_1102_111096_1BD072C8_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD072C8_f",
+          SoundLength = 6020
+        },
+        voice_kr_story_1102_111096_1BD072C8_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD072C8_m",
+          SoundLength = 6330
+        },
+        voice_kr_story_1102_111096_1BD072F2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD072F2",
+          SoundLength = 1580
+        },
+        voice_kr_story_1102_111096_1BD0731C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0731C",
+          SoundLength = 7140
+        },
+        voice_kr_story_1102_111096_1BD08162 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD08162",
+          SoundLength = 6710
+        },
+        voice_kr_story_1102_111096_1BD0818C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0818C_f",
+          SoundLength = 1790
+        },
+        voice_kr_story_1102_111096_1BD0818C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0818C_m",
+          SoundLength = 1850
+        },
+        voice_kr_story_1102_111096_1BD081B6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD081B6",
+          SoundLength = 17850
+        },
+        voice_kr_story_1102_111096_1BD081E0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD081E0",
+          SoundLength = 4500
+        },
+        voice_kr_story_1102_111096_1BD08288 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD08288",
+          SoundLength = 2700
+        },
+        voice_kr_story_1102_111096_1BD082B2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD082B2",
+          SoundLength = 6000
+        },
+        voice_kr_story_1102_111096_1BD082DC_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD082DC_f",
+          SoundLength = 5950
+        },
+        voice_kr_story_1102_111096_1BD082DC_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD082DC_m",
+          SoundLength = 5800
+        },
+        voice_kr_story_1102_111096_1BD08306 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD08306",
+          SoundLength = 5040
+        },
+        voice_kr_story_1102_111096_1BD08330 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD08330",
+          SoundLength = 14530
+        },
+        voice_kr_story_1102_111096_1BD0835A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0835A",
+          SoundLength = 4600
+        },
+        voice_kr_story_1102_111096_1BD08384 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD08384",
+          SoundLength = 9260
+        },
+        voice_kr_story_1102_111096_1BD083AE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD083AE",
+          SoundLength = 6350
+        },
+        voice_kr_story_1102_111096_1BD083D8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD083D8",
+          SoundLength = 14390
+        },
+        voice_kr_story_1102_111096_1BD08402 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD08402",
+          SoundLength = 15620
+        },
+        voice_kr_story_1102_111096_1BD0842C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0842C",
+          SoundLength = 7730
+        },
+        voice_kr_story_1102_111096_1BD091CA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD091CA",
+          SoundLength = 7230
+        },
+        voice_kr_story_1102_111096_1BD091F4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD091F4",
+          SoundLength = 6870
+        },
+        voice_kr_story_1102_111096_1BD0A232 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0A232",
+          SoundLength = 10370
+        },
+        voice_kr_story_1102_111096_1BD0A25C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0A25C",
+          SoundLength = 10890
+        },
+        voice_kr_story_1102_111096_1BD0A286 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0A286",
+          SoundLength = 12570
+        },
+        voice_kr_story_1102_111096_1BD0A2B0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0A2B0",
+          SoundLength = 6250
+        },
+        voice_kr_story_1102_111096_1BD0A2DA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0A2DA",
+          SoundLength = 10770
+        },
+        voice_kr_story_1102_111096_1BD0A304 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0A304",
+          SoundLength = 7150
+        },
+        voice_kr_story_1102_111096_1BD0A32E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0A32E",
+          SoundLength = 9680
+        },
+        voice_kr_story_1102_111096_1BD0A358 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0A358",
+          SoundLength = 13870
+        },
+        voice_kr_story_1102_111096_1BD0A382 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0A382",
+          SoundLength = 9670
+        },
+        voice_kr_story_1102_111096_1BD0A3AC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0A3AC",
+          SoundLength = 13980
+        },
+        voice_kr_story_1102_111096_1BD0A3D6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0A3D6",
+          SoundLength = 17580
+        },
+        voice_kr_story_1102_111096_1BD0A400 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0A400",
+          SoundLength = 2320
+        },
+        voice_kr_story_1102_111096_1BD0A42A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0A42A",
+          SoundLength = 1850
+        },
+        voice_kr_story_1102_111096_1BD0A42A_1 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0A42A_1",
+          SoundLength = 1850
+        },
+        voice_kr_story_1102_111096_1BD0A42A_2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0A42A_2",
+          SoundLength = 1510
+        },
+        voice_kr_story_1102_111096_1BD0A42A_3 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0A42A_3",
+          SoundLength = 1620
+        },
+        voice_kr_story_1102_111096_1BD0A42A_4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0A42A_4",
+          SoundLength = 1710
+        },
+        voice_kr_story_1102_111096_1BD0A454 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0A454",
+          SoundLength = 10450
+        },
+        voice_kr_story_1102_111096_1BD0B29A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B29A",
+          SoundLength = 920
+        },
+        voice_kr_story_1102_111096_1BD0B2C4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B2C4",
+          SoundLength = 1300
+        },
+        voice_kr_story_1102_111096_1BD0B2EE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B2EE",
+          SoundLength = 960
+        },
+        voice_kr_story_1102_111096_1BD0B318 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B318",
+          SoundLength = 1230
+        },
+        voice_kr_story_1102_111096_1BD0B342_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B342_f",
+          SoundLength = 1980
+        },
+        voice_kr_story_1102_111096_1BD0B342_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B342_m",
+          SoundLength = 2010
+        },
+        voice_kr_story_1102_111096_1BD0B36C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B36C",
+          SoundLength = 950
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1102_111096_1BD0B396_f",
+    MaxKey = "voice_kr_story_1102_111096_1BD28E8C",
+    Loader = function()
+      return {
+        voice_kr_story_1102_111096_1BD0B396_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B396_f",
+          SoundLength = 5880
+        },
+        voice_kr_story_1102_111096_1BD0B396_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B396_m",
+          SoundLength = 6220
+        },
+        voice_kr_story_1102_111096_1BD0B3C0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B3C0",
+          SoundLength = 6040
+        },
+        voice_kr_story_1102_111096_1BD0B3EA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B3EA_f",
+          SoundLength = 570
+        },
+        voice_kr_story_1102_111096_1BD0B3EA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B3EA_m",
+          SoundLength = 790
+        },
+        voice_kr_story_1102_111096_1BD0B414 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B414",
+          SoundLength = 7990
+        },
+        voice_kr_story_1102_111096_1BD0B43E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B43E",
+          SoundLength = 18310
+        },
+        voice_kr_story_1102_111096_1BD0B468 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B468",
+          SoundLength = 12570
+        },
+        voice_kr_story_1102_111096_1BD0B492_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B492_f",
+          SoundLength = 11600
+        },
+        voice_kr_story_1102_111096_1BD0B492_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B492_m",
+          SoundLength = 12600
+        },
+        voice_kr_story_1102_111096_1BD0B4BC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B4BC",
+          SoundLength = 3540
+        },
+        voice_kr_story_1102_111096_1BD0B510_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B510_f",
+          SoundLength = 8650
+        },
+        voice_kr_story_1102_111096_1BD0B510_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B510_m",
+          SoundLength = 9210
+        },
+        voice_kr_story_1102_111096_1BD0B53A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B53A_f",
+          SoundLength = 6980
+        },
+        voice_kr_story_1102_111096_1BD0B53A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B53A_m",
+          SoundLength = 7080
+        },
+        voice_kr_story_1102_111096_1BD0B564 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B564",
+          SoundLength = 12800
+        },
+        voice_kr_story_1102_111096_1BD0B58E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B58E",
+          SoundLength = 8660
+        },
+        voice_kr_story_1102_111096_1BD0B5B8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B5B8",
+          SoundLength = 9540
+        },
+        voice_kr_story_1102_111096_1BD0B5E2_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B5E2_f",
+          SoundLength = 13710
+        },
+        voice_kr_story_1102_111096_1BD0B5E2_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B5E2_m",
+          SoundLength = 14700
+        },
+        voice_kr_story_1102_111096_1BD0B60C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B60C",
+          SoundLength = 5200
+        },
+        voice_kr_story_1102_111096_1BD0B636_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B636_f",
+          SoundLength = 8270
+        },
+        voice_kr_story_1102_111096_1BD0B636_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B636_m",
+          SoundLength = 10430
+        },
+        voice_kr_story_1102_111096_1BD0B68A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B68A_f",
+          SoundLength = 2620
+        },
+        voice_kr_story_1102_111096_1BD0B68A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B68A_m",
+          SoundLength = 2850
+        },
+        voice_kr_story_1102_111096_1BD0B6B4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B6B4",
+          SoundLength = 1160
+        },
+        voice_kr_story_1102_111096_1BD0B6DE_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B6DE_f",
+          SoundLength = 7670
+        },
+        voice_kr_story_1102_111096_1BD0B6DE_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B6DE_m",
+          SoundLength = 8010
+        },
+        voice_kr_story_1102_111096_1BD0B708 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B708",
+          SoundLength = 2880
+        },
+        voice_kr_story_1102_111096_1BD0B732 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B732",
+          SoundLength = 8890
+        },
+        voice_kr_story_1102_111096_1BD0B75C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B75C_f",
+          SoundLength = 10360
+        },
+        voice_kr_story_1102_111096_1BD0B75C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B75C_m",
+          SoundLength = 11290
+        },
+        voice_kr_story_1102_111096_1BD0B786_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B786_f",
+          SoundLength = 11450
+        },
+        voice_kr_story_1102_111096_1BD0B786_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B786_m",
+          SoundLength = 11630
+        },
+        voice_kr_story_1102_111096_1BD0B7B0_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B7B0_f",
+          SoundLength = 13900
+        },
+        voice_kr_story_1102_111096_1BD0B7B0_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B7B0_m",
+          SoundLength = 15100
+        },
+        voice_kr_story_1102_111096_1BD0B7DA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B7DA_f",
+          SoundLength = 11810
+        },
+        voice_kr_story_1102_111096_1BD0B7DA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B7DA_m",
+          SoundLength = 11870
+        },
+        voice_kr_story_1102_111096_1BD0B804_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B804_f",
+          SoundLength = 13760
+        },
+        voice_kr_story_1102_111096_1BD0B804_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B804_m",
+          SoundLength = 14730
+        },
+        voice_kr_story_1102_111096_1BD0B82E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B82E_f",
+          SoundLength = 12210
+        },
+        voice_kr_story_1102_111096_1BD0B82E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B82E_m",
+          SoundLength = 12900
+        },
+        voice_kr_story_1102_111096_1BD0B858 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B858",
+          SoundLength = 13900
+        },
+        voice_kr_story_1102_111096_1BD0B882 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B882",
+          SoundLength = 6900
+        },
+        voice_kr_story_1102_111096_1BD0B8D6_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B8D6_f",
+          SoundLength = 2850
+        },
+        voice_kr_story_1102_111096_1BD0B8D6_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B8D6_m",
+          SoundLength = 2800
+        },
+        voice_kr_story_1102_111096_1BD0B900 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B900",
+          SoundLength = 880
+        },
+        voice_kr_story_1102_111096_1BD0B92A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B92A_f",
+          SoundLength = 9170
+        },
+        voice_kr_story_1102_111096_1BD0B92A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B92A_m",
+          SoundLength = 9530
+        },
+        voice_kr_story_1102_111096_1BD0B954_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B954_f",
+          SoundLength = 14630
+        },
+        voice_kr_story_1102_111096_1BD0B954_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B954_m",
+          SoundLength = 15470
+        },
+        voice_kr_story_1102_111096_1BD0B97E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B97E",
+          SoundLength = 10070
+        },
+        voice_kr_story_1102_111096_1BD0B9A8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B9A8",
+          SoundLength = 7250
+        },
+        voice_kr_story_1102_111096_1BD0B9D2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B9D2",
+          SoundLength = 13510
+        },
+        voice_kr_story_1102_111096_1BD0B9FC_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B9FC_f",
+          SoundLength = 4120
+        },
+        voice_kr_story_1102_111096_1BD0B9FC_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0B9FC_m",
+          SoundLength = 4170
+        },
+        voice_kr_story_1102_111096_1BD0BA26 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BA26",
+          SoundLength = 11410
+        },
+        voice_kr_story_1102_111096_1BD0BA50_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BA50_f",
+          SoundLength = 5650
+        },
+        voice_kr_story_1102_111096_1BD0BA50_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BA50_m",
+          SoundLength = 5670
+        },
+        voice_kr_story_1102_111096_1BD0BA7A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BA7A",
+          SoundLength = 4800
+        },
+        voice_kr_story_1102_111096_1BD0BAA4_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BAA4_f",
+          SoundLength = 7000
+        },
+        voice_kr_story_1102_111096_1BD0BAA4_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BAA4_m",
+          SoundLength = 7510
+        },
+        voice_kr_story_1102_111096_1BD0BACE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BACE",
+          SoundLength = 9450
+        },
+        voice_kr_story_1102_111096_1BD0BAF8_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BAF8_f",
+          SoundLength = 3880
+        },
+        voice_kr_story_1102_111096_1BD0BAF8_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BAF8_m",
+          SoundLength = 4510
+        },
+        voice_kr_story_1102_111096_1BD0BB22 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BB22",
+          SoundLength = 4530
+        },
+        voice_kr_story_1102_111096_1BD0BB76_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BB76_f",
+          SoundLength = 2590
+        },
+        voice_kr_story_1102_111096_1BD0BB76_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BB76_m",
+          SoundLength = 3070
+        },
+        voice_kr_story_1102_111096_1BD0BBA0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BBA0",
+          SoundLength = 3930
+        },
+        voice_kr_story_1102_111096_1BD0BBCA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BBCA",
+          SoundLength = 12970
+        },
+        voice_kr_story_1102_111096_1BD0BBF4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BBF4",
+          SoundLength = 10550
+        },
+        voice_kr_story_1102_111096_1BD0BC1E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BC1E",
+          SoundLength = 4780
+        },
+        voice_kr_story_1102_111096_1BD0BC48 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BC48",
+          SoundLength = 2720
+        },
+        voice_kr_story_1102_111096_1BD0BC72_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BC72_f",
+          SoundLength = 5730
+        },
+        voice_kr_story_1102_111096_1BD0BC72_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BC72_m",
+          SoundLength = 7550
+        },
+        voice_kr_story_1102_111096_1BD0BC9C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BC9C",
+          SoundLength = 14800
+        },
+        voice_kr_story_1102_111096_1BD0BCC6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BCC6",
+          SoundLength = 6460
+        },
+        voice_kr_story_1102_111096_1BD0BCF0_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BCF0_f",
+          SoundLength = 6390
+        },
+        voice_kr_story_1102_111096_1BD0BCF0_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BCF0_m",
+          SoundLength = 6390
+        },
+        voice_kr_story_1102_111096_1BD0BD1A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BD1A",
+          SoundLength = 630
+        },
+        voice_kr_story_1102_111096_1BD0BD44_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BD44_f",
+          SoundLength = 5530
+        },
+        voice_kr_story_1102_111096_1BD0BD44_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BD44_m",
+          SoundLength = 5540
+        },
+        voice_kr_story_1102_111096_1BD0BD6E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BD6E_f",
+          SoundLength = 9200
+        },
+        voice_kr_story_1102_111096_1BD0BD6E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BD6E_m",
+          SoundLength = 9930
+        },
+        voice_kr_story_1102_111096_1BD0BD98_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BD98_f",
+          SoundLength = 9050
+        },
+        voice_kr_story_1102_111096_1BD0BD98_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BD98_m",
+          SoundLength = 10060
+        },
+        voice_kr_story_1102_111096_1BD0BDC2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BDC2",
+          SoundLength = 3090
+        },
+        voice_kr_story_1102_111096_1BD0BDEC_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BDEC_f",
+          SoundLength = 10590
+        },
+        voice_kr_story_1102_111096_1BD0BDEC_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BDEC_m",
+          SoundLength = 11430
+        },
+        voice_kr_story_1102_111096_1BD0BE16_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BE16_f",
+          SoundLength = 15790
+        },
+        voice_kr_story_1102_111096_1BD0BE16_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BE16_m",
+          SoundLength = 15580
+        },
+        voice_kr_story_1102_111096_1BD0BE40_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BE40_f",
+          SoundLength = 4250
+        },
+        voice_kr_story_1102_111096_1BD0BE40_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BE40_m",
+          SoundLength = 4670
+        },
+        voice_kr_story_1102_111096_1BD0BE6A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BE6A_f",
+          SoundLength = 4370
+        },
+        voice_kr_story_1102_111096_1BD0BE6A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BE6A_m",
+          SoundLength = 4200
+        },
+        voice_kr_story_1102_111096_1BD0BE94 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BE94",
+          SoundLength = 9980
+        },
+        voice_kr_story_1102_111096_1BD0BEBE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BEBE",
+          SoundLength = 11150
+        },
+        voice_kr_story_1102_111096_1BD0BEE8_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BEE8_f",
+          SoundLength = 880
+        },
+        voice_kr_story_1102_111096_1BD0BEE8_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0BEE8_m",
+          SoundLength = 830
+        },
+        voice_kr_story_1102_111096_1BD0D36A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0D36A",
+          SoundLength = 9790
+        },
+        voice_kr_story_1102_111096_1BD0D3BE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0D3BE",
+          SoundLength = 2600
+        },
+        voice_kr_story_1102_111096_1BD0D3E8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0D3E8",
+          SoundLength = 2830
+        },
+        voice_kr_story_1102_111096_1BD0D412_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0D412_f",
+          SoundLength = 3890
+        },
+        voice_kr_story_1102_111096_1BD0D412_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0D412_m",
+          SoundLength = 4130
+        },
+        voice_kr_story_1102_111096_1BD0D43C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0D43C",
+          SoundLength = 5400
+        },
+        voice_kr_story_1102_111096_1BD0D466 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0D466",
+          SoundLength = 4840
+        },
+        voice_kr_story_1102_111096_1BD0D490_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0D490_f",
+          SoundLength = 5000
+        },
+        voice_kr_story_1102_111096_1BD0D490_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0D490_m",
+          SoundLength = 5800
+        },
+        voice_kr_story_1102_111096_1BD0E3D2_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0E3D2_f",
+          SoundLength = 6440
+        },
+        voice_kr_story_1102_111096_1BD0E3D2_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0E3D2_m",
+          SoundLength = 6750
+        },
+        voice_kr_story_1102_111096_1BD0F43A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0F43A_f",
+          SoundLength = 4880
+        },
+        voice_kr_story_1102_111096_1BD0F43A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0F43A_m",
+          SoundLength = 5010
+        },
+        voice_kr_story_1102_111096_1BD0F464 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0F464",
+          SoundLength = 11910
+        },
+        voice_kr_story_1102_111096_1BD0F48E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0F48E",
+          SoundLength = 11170
+        },
+        voice_kr_story_1102_111096_1BD0F4B8_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0F4B8_f",
+          SoundLength = 1100
+        },
+        voice_kr_story_1102_111096_1BD0F4B8_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD0F4B8_m",
+          SoundLength = 970
+        },
+        voice_kr_story_1102_111096_1BD1150A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD1150A",
+          SoundLength = 3160
+        },
+        voice_kr_story_1102_111096_1BD11534_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD11534_f",
+          SoundLength = 4330
+        },
+        voice_kr_story_1102_111096_1BD11534_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD11534_m",
+          SoundLength = 5070
+        },
+        voice_kr_story_1102_111096_1BD14642 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD14642",
+          SoundLength = 8730
+        },
+        voice_kr_story_1102_111096_1BD1466C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD1466C_f",
+          SoundLength = 5080
+        },
+        voice_kr_story_1102_111096_1BD1466C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD1466C_m",
+          SoundLength = 5060
+        },
+        voice_kr_story_1102_111096_1BD14696 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD14696",
+          SoundLength = 10920
+        },
+        voice_kr_story_1102_111096_1BD146C0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD146C0",
+          SoundLength = 9750
+        },
+        voice_kr_story_1102_111096_1BD146EA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD146EA_f",
+          SoundLength = 12550
+        },
+        voice_kr_story_1102_111096_1BD146EA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD146EA_m",
+          SoundLength = 13940
+        },
+        voice_kr_story_1102_111096_1BD16712_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD16712_f",
+          SoundLength = 4390
+        },
+        voice_kr_story_1102_111096_1BD16712_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD16712_m",
+          SoundLength = 4710
+        },
+        voice_kr_story_1102_111096_1BD1673C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD1673C",
+          SoundLength = 3730
+        },
+        voice_kr_story_1102_111096_1BD187E2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD187E2",
+          SoundLength = 8230
+        },
+        voice_kr_story_1102_111096_1BD1880C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD1880C_f",
+          SoundLength = 7500
+        },
+        voice_kr_story_1102_111096_1BD1880C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD1880C_m",
+          SoundLength = 7750
+        },
+        voice_kr_story_1102_111096_1BD18860_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD18860_f",
+          SoundLength = 10540
+        },
+        voice_kr_story_1102_111096_1BD18860_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD18860_m",
+          SoundLength = 11340
+        },
+        voice_kr_story_1102_111096_1BD188B4_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD188B4_f",
+          SoundLength = 13500
+        },
+        voice_kr_story_1102_111096_1BD188B4_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD188B4_m",
+          SoundLength = 14080
+        },
+        voice_kr_story_1102_111096_1BD18908_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD18908_f",
+          SoundLength = 12320
+        },
+        voice_kr_story_1102_111096_1BD18908_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD18908_m",
+          SoundLength = 12990
+        },
+        voice_kr_story_1102_111096_1BD18932_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD18932_f",
+          SoundLength = 2520
+        },
+        voice_kr_story_1102_111096_1BD18932_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD18932_m",
+          SoundLength = 2640
+        },
+        voice_kr_story_1102_111096_1BD1984A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD1984A_f",
+          SoundLength = 8430
+        },
+        voice_kr_story_1102_111096_1BD1984A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD1984A_m",
+          SoundLength = 9360
+        },
+        voice_kr_story_1102_111096_1BD1B91A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD1B91A_f",
+          SoundLength = 4980
+        },
+        voice_kr_story_1102_111096_1BD1B91A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD1B91A_m",
+          SoundLength = 5000
+        },
+        voice_kr_story_1102_111096_1BD1D9EA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD1D9EA_f",
+          SoundLength = 2500
+        },
+        voice_kr_story_1102_111096_1BD1D9EA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD1D9EA_m",
+          SoundLength = 2140
+        },
+        voice_kr_story_1102_111096_1BD1DA14 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD1DA14",
+          SoundLength = 13710
+        },
+        voice_kr_story_1102_111096_1BD1DA3E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD1DA3E",
+          SoundLength = 12400
+        },
+        voice_kr_story_1102_111096_1BD1DA68_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD1DA68_f",
+          SoundLength = 3440
+        },
+        voice_kr_story_1102_111096_1BD1DA68_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD1DA68_m",
+          SoundLength = 4070
+        },
+        voice_kr_story_1102_111096_1BD1DA92 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD1DA92",
+          SoundLength = 5280
+        },
+        voice_kr_story_1102_111096_1BD1EA52 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD1EA52",
+          SoundLength = 5370
+        },
+        voice_kr_story_1102_111096_1BD1FABA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD1FABA_f",
+          SoundLength = 4330
+        },
+        voice_kr_story_1102_111096_1BD1FABA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD1FABA_m",
+          SoundLength = 4430
+        },
+        voice_kr_story_1102_111096_1BD1FAE4_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD1FAE4_f",
+          SoundLength = 870
+        },
+        voice_kr_story_1102_111096_1BD1FAE4_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD1FAE4_m",
+          SoundLength = 750
+        },
+        voice_kr_story_1102_111096_1BD1FB0E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD1FB0E_f",
+          SoundLength = 3140
+        },
+        voice_kr_story_1102_111096_1BD1FB0E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD1FB0E_m",
+          SoundLength = 3620
+        },
+        voice_kr_story_1102_111096_1BD20B22 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD20B22",
+          SoundLength = 14750
+        },
+        voice_kr_story_1102_111096_1BD20B4C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD20B4C",
+          SoundLength = 3420
+        },
+        voice_kr_story_1102_111096_1BD21B8A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD21B8A",
+          SoundLength = 4040
+        },
+        voice_kr_story_1102_111096_1BD22BF2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD22BF2",
+          SoundLength = 2060
+        },
+        voice_kr_story_1102_111096_1BD22C1C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD22C1C",
+          SoundLength = 2970
+        },
+        voice_kr_story_1102_111096_1BD23C5A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD23C5A",
+          SoundLength = 7180
+        },
+        voice_kr_story_1102_111096_1BD23C84 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD23C84",
+          SoundLength = 2870
+        },
+        voice_kr_story_1102_111096_1BD23CAE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD23CAE",
+          SoundLength = 4840
+        },
+        voice_kr_story_1102_111096_1BD23CD8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD23CD8",
+          SoundLength = 2970
+        },
+        voice_kr_story_1102_111096_1BD23D02 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD23D02",
+          SoundLength = 6290
+        },
+        voice_kr_story_1102_111096_1BD23D2C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD23D2C",
+          SoundLength = 6600
+        },
+        voice_kr_story_1102_111096_1BD23D56 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD23D56",
+          SoundLength = 2730
+        },
+        voice_kr_story_1102_111096_1BD23D80 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD23D80",
+          SoundLength = 9830
+        },
+        voice_kr_story_1102_111096_1BD23DAA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD23DAA",
+          SoundLength = 5500
+        },
+        voice_kr_story_1102_111096_1BD23DD4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD23DD4",
+          SoundLength = 2060
+        },
+        voice_kr_story_1102_111096_1BD24CC2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD24CC2",
+          SoundLength = 4690
+        },
+        voice_kr_story_1102_111096_1BD24CEC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD24CEC",
+          SoundLength = 8280
+        },
+        voice_kr_story_1102_111096_1BD24D16 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD24D16",
+          SoundLength = 1210
+        },
+        voice_kr_story_1102_111096_1BD24D40 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD24D40",
+          SoundLength = 5520
+        },
+        voice_kr_story_1102_111096_1BD25D2A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD25D2A",
+          SoundLength = 7000
+        },
+        voice_kr_story_1102_111096_1BD25D54 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD25D54",
+          SoundLength = 9740
+        },
+        voice_kr_story_1102_111096_1BD25D7E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD25D7E",
+          SoundLength = 7050
+        },
+        voice_kr_story_1102_111096_1BD25DA8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD25DA8",
+          SoundLength = 10650
+        },
+        voice_kr_story_1102_111096_1BD25DD2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD25DD2",
+          SoundLength = 3630
+        },
+        voice_kr_story_1102_111096_1BD25DFC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD25DFC",
+          SoundLength = 14550
+        },
+        voice_kr_story_1102_111096_1BD25E26 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD25E26",
+          SoundLength = 6390
+        },
+        voice_kr_story_1102_111096_1BD25E50 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD25E50",
+          SoundLength = 1640
+        },
+        voice_kr_story_1102_111096_1BD25E7A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD25E7A",
+          SoundLength = 18500
+        },
+        voice_kr_story_1102_111096_1BD25EA4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD25EA4",
+          SoundLength = 3170
+        },
+        voice_kr_story_1102_111096_1BD25ECE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD25ECE",
+          SoundLength = 7450
+        },
+        voice_kr_story_1102_111096_1BD25EF8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD25EF8",
+          SoundLength = 4890
+        },
+        voice_kr_story_1102_111096_1BD26D92 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD26D92",
+          SoundLength = 3540
+        },
+        voice_kr_story_1102_111096_1BD26DBC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD26DBC",
+          SoundLength = 10980
+        },
+        voice_kr_story_1102_111096_1BD26DE6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD26DE6",
+          SoundLength = 3680
+        },
+        voice_kr_story_1102_111096_1BD27DFA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD27DFA",
+          SoundLength = 18870
+        },
+        voice_kr_story_1102_111096_1BD27E24 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD27E24",
+          SoundLength = 14720
+        },
+        voice_kr_story_1102_111096_1BD27E4E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD27E4E",
+          SoundLength = 9230
+        },
+        voice_kr_story_1102_111096_1BD27E78_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD27E78_f",
+          SoundLength = 2800
+        },
+        voice_kr_story_1102_111096_1BD27E78_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD27E78_m",
+          SoundLength = 2450
+        },
+        voice_kr_story_1102_111096_1BD28E62_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD28E62_f",
+          SoundLength = 1850
+        },
+        voice_kr_story_1102_111096_1BD28E62_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD28E62_m",
+          SoundLength = 1460
+        },
+        voice_kr_story_1102_111096_1BD28E8C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD28E8C",
+          SoundLength = 2380
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1102_111096_1BD28EB6",
+    MaxKey = "voice_kr_story_1102_111096_1BD3972E_f",
+    Loader = function()
+      return {
+        voice_kr_story_1102_111096_1BD28EB6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD28EB6",
+          SoundLength = 3720
+        },
+        voice_kr_story_1102_111096_1BD29ECA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD29ECA",
+          SoundLength = 12400
+        },
+        voice_kr_story_1102_111096_1BD29EF4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD29EF4",
+          SoundLength = 5430
+        },
+        voice_kr_story_1102_111096_1BD29F1E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD29F1E_f",
+          SoundLength = 3220
+        },
+        voice_kr_story_1102_111096_1BD29F1E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD29F1E_m",
+          SoundLength = 3490
+        },
+        voice_kr_story_1102_111096_1BD29F48 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD29F48",
+          SoundLength = 14680
+        },
+        voice_kr_story_1102_111096_1BD29F72_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD29F72_f",
+          SoundLength = 6430
+        },
+        voice_kr_story_1102_111096_1BD29F72_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD29F72_m",
+          SoundLength = 7540
+        },
+        voice_kr_story_1102_111096_1BD29F9C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD29F9C",
+          SoundLength = 4020
+        },
+        voice_kr_story_1102_111096_1BD29FC6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD29FC6",
+          SoundLength = 11680
+        },
+        voice_kr_story_1102_111096_1BD2A01A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2A01A",
+          SoundLength = 6840
+        },
+        voice_kr_story_1102_111096_1BD2A06E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2A06E",
+          SoundLength = 4750
+        },
+        voice_kr_story_1102_111096_1BD2A0C2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2A0C2",
+          SoundLength = 6760
+        },
+        voice_kr_story_1102_111096_1BD2A0EC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2A0EC",
+          SoundLength = 6760
+        },
+        voice_kr_story_1102_111096_1BD2AF32 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2AF32",
+          SoundLength = 3580
+        },
+        voice_kr_story_1102_111096_1BD2BF9A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2BF9A",
+          SoundLength = 11060
+        },
+        voice_kr_story_1102_111096_1BD2BF9A_1 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2BF9A_1",
+          SoundLength = 10880
+        },
+        voice_kr_story_1102_111096_1BD2BF9A_3 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2BF9A_3",
+          SoundLength = 10880
+        },
+        voice_kr_story_1102_111096_1BD2BF9A_4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2BF9A_4",
+          SoundLength = 10780
+        },
+        voice_kr_story_1102_111096_1BD2BF9A_5 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2BF9A_5",
+          SoundLength = 11060
+        },
+        voice_kr_story_1102_111096_1BD2BF9A_6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2BF9A_6",
+          SoundLength = 10530
+        },
+        voice_kr_story_1102_111096_1BD2BFC4_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2BFC4_f",
+          SoundLength = 1900
+        },
+        voice_kr_story_1102_111096_1BD2BFC4_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2BFC4_m",
+          SoundLength = 1880
+        },
+        voice_kr_story_1102_111096_1BD2BFEE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2BFEE",
+          SoundLength = 4780
+        },
+        voice_kr_story_1102_111096_1BD2C018 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2C018",
+          SoundLength = 6030
+        },
+        voice_kr_story_1102_111096_1BD2C042 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2C042",
+          SoundLength = 6750
+        },
+        voice_kr_story_1102_111096_1BD2C06C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2C06C_f",
+          SoundLength = 1150
+        },
+        voice_kr_story_1102_111096_1BD2C06C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2C06C_m",
+          SoundLength = 1050
+        },
+        voice_kr_story_1102_111096_1BD2C096 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2C096",
+          SoundLength = 14410
+        },
+        voice_kr_story_1102_111096_1BD2C0C0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2C0C0",
+          SoundLength = 16070
+        },
+        voice_kr_story_1102_111096_1BD2C0EA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2C0EA",
+          SoundLength = 650
+        },
+        voice_kr_story_1102_111096_1BD2C114 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2C114",
+          SoundLength = 2900
+        },
+        voice_kr_story_1102_111096_1BD2C13E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2C13E",
+          SoundLength = 3080
+        },
+        voice_kr_story_1102_111096_1BD2C168 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2C168",
+          SoundLength = 10830
+        },
+        voice_kr_story_1102_111096_1BD2C192 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2C192",
+          SoundLength = 10440
+        },
+        voice_kr_story_1102_111096_1BD2D002 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2D002",
+          SoundLength = 8300,
+          SoundVolume = 0
+        },
+        voice_kr_story_1102_111096_1BD2D02C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2D02C",
+          SoundLength = 14840,
+          SoundVolume = 0
+        },
+        voice_kr_story_1102_111096_1BD2D056 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2D056",
+          SoundLength = 16850,
+          SoundVolume = 0
+        },
+        voice_kr_story_1102_111096_1BD2D080 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2D080",
+          SoundLength = 9140,
+          SoundVolume = 0
+        },
+        voice_kr_story_1102_111096_1BD2D0AA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2D0AA",
+          SoundLength = 9360,
+          SoundVolume = 0
+        },
+        voice_kr_story_1102_111096_1BD2D0D4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2D0D4",
+          SoundLength = 12250,
+          SoundVolume = 0
+        },
+        voice_kr_story_1102_111096_1BD2D0FE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2D0FE",
+          SoundLength = 12310,
+          SoundVolume = 0
+        },
+        voice_kr_story_1102_111096_1BD2D128 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2D128",
+          SoundLength = 9120,
+          SoundVolume = 0
+        },
+        voice_kr_story_1102_111096_1BD2D152 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2D152",
+          SoundLength = 8470,
+          SoundVolume = 0
+        },
+        voice_kr_story_1102_111096_1BD2D17C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2D17C",
+          SoundLength = 10600,
+          SoundVolume = 0
+        },
+        voice_kr_story_1102_111096_1BD2E06A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2E06A",
+          SoundLength = 4630
+        },
+        voice_kr_story_1102_111096_1BD2E094 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2E094",
+          SoundLength = 6470
+        },
+        voice_kr_story_1102_111096_1BD2E0BE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2E0BE",
+          SoundLength = 1800
+        },
+        voice_kr_story_1102_111096_1BD2E0E8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2E0E8",
+          SoundLength = 7020
+        },
+        voice_kr_story_1102_111096_1BD2E112 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2E112",
+          SoundLength = 15900
+        },
+        voice_kr_story_1102_111096_1BD2E13C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2E13C",
+          SoundLength = 5390
+        },
+        voice_kr_story_1102_111096_1BD2F0D2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2F0D2",
+          SoundLength = 4170
+        },
+        voice_kr_story_1102_111096_1BD2F0FC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2F0FC",
+          SoundLength = 9230
+        },
+        voice_kr_story_1102_111096_1BD2F126 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2F126",
+          SoundLength = 10120
+        },
+        voice_kr_story_1102_111096_1BD2F150 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2F150",
+          SoundLength = 3390
+        },
+        voice_kr_story_1102_111096_1BD2F17A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2F17A",
+          SoundLength = 6590
+        },
+        voice_kr_story_1102_111096_1BD2F1A4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD2F1A4",
+          SoundLength = 13060
+        },
+        voice_kr_story_1102_111096_1BD3013A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3013A",
+          SoundLength = 16870
+        },
+        voice_kr_story_1102_111096_1BD30164 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD30164",
+          SoundLength = 15800
+        },
+        voice_kr_story_1102_111096_1BD3018E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3018E",
+          SoundLength = 16260
+        },
+        voice_kr_story_1102_111096_1BD301B8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD301B8",
+          SoundLength = 14520
+        },
+        voice_kr_story_1102_111096_1BD301E2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD301E2",
+          SoundLength = 4370
+        },
+        voice_kr_story_1102_111096_1BD3020C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3020C",
+          SoundLength = 16510
+        },
+        voice_kr_story_1102_111096_1BD30236_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD30236_f",
+          SoundLength = 3270
+        },
+        voice_kr_story_1102_111096_1BD30236_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD30236_m",
+          SoundLength = 3230
+        },
+        voice_kr_story_1102_111096_1BD30260 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD30260",
+          SoundLength = 3460
+        },
+        voice_kr_story_1102_111096_1BD3028A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3028A_f",
+          SoundLength = 8060
+        },
+        voice_kr_story_1102_111096_1BD3028A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3028A_m",
+          SoundLength = 9030
+        },
+        voice_kr_story_1102_111096_1BD302B4_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD302B4_f",
+          SoundLength = 3220
+        },
+        voice_kr_story_1102_111096_1BD302B4_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD302B4_m",
+          SoundLength = 3270
+        },
+        voice_kr_story_1102_111096_1BD30332_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD30332_f",
+          SoundLength = 4770
+        },
+        voice_kr_story_1102_111096_1BD30332_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD30332_m",
+          SoundLength = 4480
+        },
+        voice_kr_story_1102_111096_1BD3035C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3035C",
+          SoundLength = 800
+        },
+        voice_kr_story_1102_111096_1BD303B0_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD303B0_f",
+          SoundLength = 8090
+        },
+        voice_kr_story_1102_111096_1BD303B0_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD303B0_m",
+          SoundLength = 9420
+        },
+        voice_kr_story_1102_111096_1BD303DA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD303DA",
+          SoundLength = 6600
+        },
+        voice_kr_story_1102_111096_1BD30404 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD30404",
+          SoundLength = 14420
+        },
+        voice_kr_story_1102_111096_1BD3042E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3042E_f",
+          SoundLength = 5450
+        },
+        voice_kr_story_1102_111096_1BD3042E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3042E_m",
+          SoundLength = 6510
+        },
+        voice_kr_story_1102_111096_1BD30458 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD30458",
+          SoundLength = 14670
+        },
+        voice_kr_story_1102_111096_1BD30482 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD30482",
+          SoundLength = 1610
+        },
+        voice_kr_story_1102_111096_1BD304AC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD304AC",
+          SoundLength = 20550
+        },
+        voice_kr_story_1102_111096_1BD304D6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD304D6",
+          SoundLength = 7040
+        },
+        voice_kr_story_1102_111096_1BD30500 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD30500",
+          SoundLength = 6830
+        },
+        voice_kr_story_1102_111096_1BD3052A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3052A",
+          SoundLength = 4510
+        },
+        voice_kr_story_1102_111096_1BD30554 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD30554",
+          SoundLength = 4330
+        },
+        voice_kr_story_1102_111096_1BD3057E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3057E",
+          SoundLength = 7780
+        },
+        voice_kr_story_1102_111096_1BD311A2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD311A2",
+          SoundLength = 4060
+        },
+        voice_kr_story_1102_111096_1BD311CC_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD311CC_f",
+          SoundLength = 7970
+        },
+        voice_kr_story_1102_111096_1BD311CC_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD311CC_m",
+          SoundLength = 8080
+        },
+        voice_kr_story_1102_111096_1BD311F6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD311F6",
+          SoundLength = 4740
+        },
+        voice_kr_story_1102_111096_1BD31220 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD31220",
+          SoundLength = 4720
+        },
+        voice_kr_story_1102_111096_1BD3124A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3124A",
+          SoundLength = 6300
+        },
+        voice_kr_story_1102_111096_1BD31274 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD31274",
+          SoundLength = 2430
+        },
+        voice_kr_story_1102_111096_1BD3220A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3220A",
+          SoundLength = 7390
+        },
+        voice_kr_story_1102_111096_1BD32234 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD32234",
+          SoundLength = 17390
+        },
+        voice_kr_story_1102_111096_1BD33272 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD33272",
+          SoundLength = 5700
+        },
+        voice_kr_story_1102_111096_1BD3329C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3329C",
+          SoundLength = 5370
+        },
+        voice_kr_story_1102_111096_1BD332C6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD332C6",
+          SoundLength = 3510
+        },
+        voice_kr_story_1102_111096_1BD332F0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD332F0",
+          SoundLength = 7040
+        },
+        voice_kr_story_1102_111096_1BD3331A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3331A",
+          SoundLength = 5510
+        },
+        voice_kr_story_1102_111096_1BD33344 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD33344",
+          SoundLength = 6510
+        },
+        voice_kr_story_1102_111096_1BD342DA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD342DA",
+          SoundLength = 6550
+        },
+        voice_kr_story_1102_111096_1BD34304 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34304",
+          SoundLength = 9620
+        },
+        voice_kr_story_1102_111096_1BD3432E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3432E",
+          SoundLength = 8170
+        },
+        voice_kr_story_1102_111096_1BD34358 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34358",
+          SoundLength = 11350
+        },
+        voice_kr_story_1102_111096_1BD34382 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34382",
+          SoundLength = 6930
+        },
+        voice_kr_story_1102_111096_1BD343AC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD343AC",
+          SoundLength = 11670
+        },
+        voice_kr_story_1102_111096_1BD343D6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD343D6",
+          SoundLength = 7210
+        },
+        voice_kr_story_1102_111096_1BD34400 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34400",
+          SoundLength = 15720
+        },
+        voice_kr_story_1102_111096_1BD3442A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3442A",
+          SoundLength = 5300
+        },
+        voice_kr_story_1102_111096_1BD34454 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34454",
+          SoundLength = 8490
+        },
+        voice_kr_story_1102_111096_1BD3447E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3447E",
+          SoundLength = 14910
+        },
+        voice_kr_story_1102_111096_1BD344A8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD344A8",
+          SoundLength = 10590
+        },
+        voice_kr_story_1102_111096_1BD344D2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD344D2",
+          SoundLength = 780
+        },
+        voice_kr_story_1102_111096_1BD344FC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD344FC",
+          SoundLength = 7470
+        },
+        voice_kr_story_1102_111096_1BD34526 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34526",
+          SoundLength = 13510
+        },
+        voice_kr_story_1102_111096_1BD34550_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34550_f",
+          SoundLength = 3890
+        },
+        voice_kr_story_1102_111096_1BD34550_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34550_m",
+          SoundLength = 4440
+        },
+        voice_kr_story_1102_111096_1BD3457A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3457A",
+          SoundLength = 8850
+        },
+        voice_kr_story_1102_111096_1BD345A4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD345A4",
+          SoundLength = 4430
+        },
+        voice_kr_story_1102_111096_1BD345CE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD345CE",
+          SoundLength = 6370
+        },
+        voice_kr_story_1102_111096_1BD345F8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD345F8",
+          SoundLength = 1300
+        },
+        voice_kr_story_1102_111096_1BD34622 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34622",
+          SoundLength = 10870
+        },
+        voice_kr_story_1102_111096_1BD3464C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3464C",
+          SoundLength = 550
+        },
+        voice_kr_story_1102_111096_1BD34676 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34676",
+          SoundLength = 12440
+        },
+        voice_kr_story_1102_111096_1BD346A0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD346A0",
+          SoundLength = 2200
+        },
+        voice_kr_story_1102_111096_1BD346CA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD346CA",
+          SoundLength = 7200
+        },
+        voice_kr_story_1102_111096_1BD346F4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD346F4",
+          SoundLength = 3650
+        },
+        voice_kr_story_1102_111096_1BD3471E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3471E",
+          SoundLength = 3110
+        },
+        voice_kr_story_1102_111096_1BD34748 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34748",
+          SoundLength = 1940
+        },
+        voice_kr_story_1102_111096_1BD34772 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34772",
+          SoundLength = 5270
+        },
+        voice_kr_story_1102_111096_1BD3479C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3479C",
+          SoundLength = 9120
+        },
+        voice_kr_story_1102_111096_1BD347C6_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD347C6_f",
+          SoundLength = 7880
+        },
+        voice_kr_story_1102_111096_1BD347C6_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD347C6_m",
+          SoundLength = 8910
+        },
+        voice_kr_story_1102_111096_1BD347F0_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD347F0_f",
+          SoundLength = 900
+        },
+        voice_kr_story_1102_111096_1BD347F0_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD347F0_m",
+          SoundLength = 860
+        },
+        voice_kr_story_1102_111096_1BD348C2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD348C2",
+          SoundLength = 5120
+        },
+        voice_kr_story_1102_111096_1BD348EC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD348EC",
+          SoundLength = 9280
+        },
+        voice_kr_story_1102_111096_1BD34916 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34916",
+          SoundLength = 10580
+        },
+        voice_kr_story_1102_111096_1BD34940 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34940",
+          SoundLength = 5840
+        },
+        voice_kr_story_1102_111096_1BD3496A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3496A",
+          SoundLength = 8760
+        },
+        voice_kr_story_1102_111096_1BD34994 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34994",
+          SoundLength = 8630
+        },
+        voice_kr_story_1102_111096_1BD349BE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD349BE",
+          SoundLength = 10270
+        },
+        voice_kr_story_1102_111096_1BD349E8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD349E8",
+          SoundLength = 3080
+        },
+        voice_kr_story_1102_111096_1BD34A12 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34A12",
+          SoundLength = 7550
+        },
+        voice_kr_story_1102_111096_1BD34A3C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34A3C",
+          SoundLength = 6490
+        },
+        voice_kr_story_1102_111096_1BD34A66 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34A66",
+          SoundLength = 540
+        },
+        voice_kr_story_1102_111096_1BD34A90 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34A90",
+          SoundLength = 5450
+        },
+        voice_kr_story_1102_111096_1BD34ABA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34ABA",
+          SoundLength = 12290
+        },
+        voice_kr_story_1102_111096_1BD34AE4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34AE4",
+          SoundLength = 4520
+        },
+        voice_kr_story_1102_111096_1BD34AE4_1 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34AE4_1",
+          SoundLength = 4010
+        },
+        voice_kr_story_1102_111096_1BD34AE4_2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34AE4_2",
+          SoundLength = 4520
+        },
+        voice_kr_story_1102_111096_1BD34AE4_3 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34AE4_3",
+          SoundLength = 4290
+        },
+        voice_kr_story_1102_111096_1BD34AE4_4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34AE4_4",
+          SoundLength = 4260
+        },
+        voice_kr_story_1102_111096_1BD34AE4_5 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34AE4_5",
+          SoundLength = 4320
+        },
+        voice_kr_story_1102_111096_1BD34B0E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34B0E",
+          SoundLength = 8130
+        },
+        voice_kr_story_1102_111096_1BD34B38_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34B38_f",
+          SoundLength = 4300
+        },
+        voice_kr_story_1102_111096_1BD34B38_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34B38_m",
+          SoundLength = 4590
+        },
+        voice_kr_story_1102_111096_1BD34B62 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD34B62",
+          SoundLength = 5760
+        },
+        voice_kr_story_1102_111096_1BD36428 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD36428",
+          SoundLength = 7900
+        },
+        voice_kr_story_1102_111096_1BD36452 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD36452",
+          SoundLength = 3540
+        },
+        voice_kr_story_1102_111096_1BD3647C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3647C",
+          SoundLength = 2460
+        },
+        voice_kr_story_1102_111096_1BD364A6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD364A6",
+          SoundLength = 7730
+        },
+        voice_kr_story_1102_111096_1BD364D0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD364D0",
+          SoundLength = 10230
+        },
+        voice_kr_story_1102_111096_1BD364FA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD364FA",
+          SoundLength = 11440
+        },
+        voice_kr_story_1102_111096_1BD36524 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD36524",
+          SoundLength = 4980
+        },
+        voice_kr_story_1102_111096_1BD3654E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3654E",
+          SoundLength = 11630
+        },
+        voice_kr_story_1102_111096_1BD36578 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD36578",
+          SoundLength = 4100
+        },
+        voice_kr_story_1102_111096_1BD365A2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD365A2",
+          SoundLength = 12910
+        },
+        voice_kr_story_1102_111096_1BD365CC_1 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD365CC_1",
+          SoundLength = 2460
+        },
+        voice_kr_story_1102_111096_1BD365CC_2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD365CC_2",
+          SoundLength = 1440
+        },
+        voice_kr_story_1102_111096_1BD365CC_3 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD365CC_3",
+          SoundLength = 1860
+        },
+        voice_kr_story_1102_111096_1BD365F6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD365F6",
+          SoundLength = 8230
+        },
+        voice_kr_story_1102_111096_1BD36620 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD36620",
+          SoundLength = 5410
+        },
+        voice_kr_story_1102_111096_1BD37412 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD37412",
+          SoundLength = 11060
+        },
+        voice_kr_story_1102_111096_1BD37412_1 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD37412_1",
+          SoundLength = 10890
+        },
+        voice_kr_story_1102_111096_1BD37412_4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD37412_4",
+          SoundLength = 10780
+        },
+        voice_kr_story_1102_111096_1BD37412_5 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD37412_5",
+          SoundLength = 11060
+        },
+        voice_kr_story_1102_111096_1BD37412_6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD37412_6",
+          SoundLength = 10530
+        },
+        voice_kr_story_1102_111096_1BD3847A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3847A",
+          SoundLength = 870
+        },
+        voice_kr_story_1102_111096_1BD394E2_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD394E2_f",
+          SoundLength = 2610
+        },
+        voice_kr_story_1102_111096_1BD394E2_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD394E2_m",
+          SoundLength = 2210
+        },
+        voice_kr_story_1102_111096_1BD3950C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3950C",
+          SoundLength = 14080
+        },
+        voice_kr_story_1102_111096_1BD39536_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD39536_f",
+          SoundLength = 4760
+        },
+        voice_kr_story_1102_111096_1BD39536_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD39536_m",
+          SoundLength = 4960
+        },
+        voice_kr_story_1102_111096_1BD39560 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD39560",
+          SoundLength = 5060
+        },
+        voice_kr_story_1102_111096_1BD3958A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3958A_f",
+          SoundLength = 1490
+        },
+        voice_kr_story_1102_111096_1BD3958A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3958A_m",
+          SoundLength = 1450
+        },
+        voice_kr_story_1102_111096_1BD395B4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD395B4",
+          SoundLength = 6130
+        },
+        voice_kr_story_1102_111096_1BD395DE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD395DE",
+          SoundLength = 16040
+        },
+        voice_kr_story_1102_111096_1BD39608 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD39608",
+          SoundLength = 11790
+        },
+        voice_kr_story_1102_111096_1BD39632 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD39632",
+          SoundLength = 16290
+        },
+        voice_kr_story_1102_111096_1BD3965C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3965C",
+          SoundLength = 7010
+        },
+        voice_kr_story_1102_111096_1BD39686 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD39686",
+          SoundLength = 12980
+        },
+        voice_kr_story_1102_111096_1BD396B0_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD396B0_f",
+          SoundLength = 6500
+        },
+        voice_kr_story_1102_111096_1BD396B0_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD396B0_m",
+          SoundLength = 6890
+        },
+        voice_kr_story_1102_111096_1BD396DA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD396DA",
+          SoundLength = 11730
+        },
+        voice_kr_story_1102_111096_1BD39704 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD39704",
+          SoundLength = 5980
+        },
+        voice_kr_story_1102_111096_1BD3972E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3972E_f",
+          SoundLength = 6120
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1102_111096_1BD3972E_m",
+    MaxKey = "voice_kr_story_1102_111096_1BD51EA2_5",
+    Loader = function()
+      return {
+        voice_kr_story_1102_111096_1BD3972E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3972E_m",
+          SoundLength = 6410
+        },
+        voice_kr_story_1102_111096_1BD39758 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD39758",
+          SoundLength = 11640
+        },
+        voice_kr_story_1102_111096_1BD39782_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD39782_f",
+          SoundLength = 5780
+        },
+        voice_kr_story_1102_111096_1BD39782_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD39782_m",
+          SoundLength = 6550
+        },
+        voice_kr_story_1102_111096_1BD397AC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD397AC",
+          SoundLength = 4650
+        },
+        voice_kr_story_1102_111096_1BD397D6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD397D6",
+          SoundLength = 3340
+        },
+        voice_kr_story_1102_111096_1BD3A54A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3A54A",
+          SoundLength = 8760
+        },
+        voice_kr_story_1102_111096_1BD3A574 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3A574",
+          SoundLength = 7710
+        },
+        voice_kr_story_1102_111096_1BD3A59E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3A59E",
+          SoundLength = 12420
+        },
+        voice_kr_story_1102_111096_1BD3A5C8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3A5C8",
+          SoundLength = 8600
+        },
+        voice_kr_story_1102_111096_1BD3A5F2_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3A5F2_f",
+          SoundLength = 6310
+        },
+        voice_kr_story_1102_111096_1BD3A5F2_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3A5F2_m",
+          SoundLength = 7700
+        },
+        voice_kr_story_1102_111096_1BD3A61C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3A61C_f",
+          SoundLength = 5050
+        },
+        voice_kr_story_1102_111096_1BD3A61C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3A61C_m",
+          SoundLength = 5450
+        },
+        voice_kr_story_1102_111096_1BD3B5B2_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3B5B2_f",
+          SoundLength = 6600
+        },
+        voice_kr_story_1102_111096_1BD3B5B2_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3B5B2_m",
+          SoundLength = 7580
+        },
+        voice_kr_story_1102_111096_1BD3C61A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3C61A",
+          SoundLength = 3410
+        },
+        voice_kr_story_1102_111096_1BD3C644_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3C644_f",
+          SoundLength = 3150
+        },
+        voice_kr_story_1102_111096_1BD3C644_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3C644_m",
+          SoundLength = 3380
+        },
+        voice_kr_story_1102_111096_1BD3E6EA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3E6EA",
+          SoundLength = 2210
+        },
+        voice_kr_story_1102_111096_1BD3E714_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3E714_f",
+          SoundLength = 2510
+        },
+        voice_kr_story_1102_111096_1BD3E714_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3E714_m",
+          SoundLength = 2140
+        },
+        voice_kr_story_1102_111096_1BD3E73E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3E73E",
+          SoundLength = 2150
+        },
+        voice_kr_story_1102_111096_1BD3E768_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3E768_f",
+          SoundLength = 1950
+        },
+        voice_kr_story_1102_111096_1BD3E768_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3E768_m",
+          SoundLength = 1990
+        },
+        voice_kr_story_1102_111096_1BD3E792_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3E792_f",
+          SoundLength = 4270
+        },
+        voice_kr_story_1102_111096_1BD3E792_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3E792_m",
+          SoundLength = 4110
+        },
+        voice_kr_story_1102_111096_1BD3F752_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3F752_f",
+          SoundLength = 2040
+        },
+        voice_kr_story_1102_111096_1BD3F752_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3F752_m",
+          SoundLength = 1080
+        },
+        voice_kr_story_1102_111096_1BD3F77C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3F77C",
+          SoundLength = 3540
+        },
+        voice_kr_story_1102_111096_1BD3F7A6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3F7A6",
+          SoundLength = 5400
+        },
+        voice_kr_story_1102_111096_1BD3F7D0_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3F7D0_f",
+          SoundLength = 3160
+        },
+        voice_kr_story_1102_111096_1BD3F7D0_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD3F7D0_m",
+          SoundLength = 3100
+        },
+        voice_kr_story_1102_111096_1BD407BA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD407BA_f",
+          SoundLength = 2950
+        },
+        voice_kr_story_1102_111096_1BD407BA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD407BA_m",
+          SoundLength = 2850
+        },
+        voice_kr_story_1102_111096_1BD41822_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD41822_f",
+          SoundLength = 1940
+        },
+        voice_kr_story_1102_111096_1BD41822_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD41822_m",
+          SoundLength = 1350
+        },
+        voice_kr_story_1102_111096_1BD4288A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4288A",
+          SoundLength = 9730
+        },
+        voice_kr_story_1102_111096_1BD428B4_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD428B4_f",
+          SoundLength = 2660
+        },
+        voice_kr_story_1102_111096_1BD428B4_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD428B4_m",
+          SoundLength = 2520
+        },
+        voice_kr_story_1102_111096_1BD428DE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD428DE",
+          SoundLength = 2150
+        },
+        voice_kr_story_1102_111096_1BD42908 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD42908",
+          SoundLength = 1970
+        },
+        voice_kr_story_1102_111096_1BD42932 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD42932",
+          SoundLength = 10310
+        },
+        voice_kr_story_1102_111096_1BD4295C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4295C_f",
+          SoundLength = 2990
+        },
+        voice_kr_story_1102_111096_1BD4295C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4295C_m",
+          SoundLength = 2830
+        },
+        voice_kr_story_1102_111096_1BD42986 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD42986",
+          SoundLength = 17390
+        },
+        voice_kr_story_1102_111096_1BD429B0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD429B0",
+          SoundLength = 5670
+        },
+        voice_kr_story_1102_111096_1BD429DA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD429DA",
+          SoundLength = 4530
+        },
+        voice_kr_story_1102_111096_1BD42A04_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD42A04_f",
+          SoundLength = 1680
+        },
+        voice_kr_story_1102_111096_1BD42A04_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD42A04_m",
+          SoundLength = 1400
+        },
+        voice_kr_story_1102_111096_1BD438F2_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD438F2_f",
+          SoundLength = 2280
+        },
+        voice_kr_story_1102_111096_1BD438F2_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD438F2_m",
+          SoundLength = 2330
+        },
+        voice_kr_story_1102_111096_1BD44984_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD44984_f",
+          SoundLength = 2390
+        },
+        voice_kr_story_1102_111096_1BD44984_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD44984_m",
+          SoundLength = 2280
+        },
+        voice_kr_story_1102_111096_1BD459C2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD459C2",
+          SoundLength = 7880
+        },
+        voice_kr_story_1102_111096_1BD459EC_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD459EC_f",
+          SoundLength = 8120
+        },
+        voice_kr_story_1102_111096_1BD459EC_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD459EC_m",
+          SoundLength = 8860
+        },
+        voice_kr_story_1102_111096_1BD45A16_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD45A16_f",
+          SoundLength = 6760
+        },
+        voice_kr_story_1102_111096_1BD45A16_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD45A16_m",
+          SoundLength = 5790
+        },
+        voice_kr_story_1102_111096_1BD46A2A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD46A2A_f",
+          SoundLength = 2210
+        },
+        voice_kr_story_1102_111096_1BD46A2A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD46A2A_m",
+          SoundLength = 1940
+        },
+        voice_kr_story_1102_111096_1BD46A54 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD46A54",
+          SoundLength = 8290
+        },
+        voice_kr_story_1102_111096_1BD46A7E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD46A7E_f",
+          SoundLength = 4620
+        },
+        voice_kr_story_1102_111096_1BD46A7E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD46A7E_m",
+          SoundLength = 4530
+        },
+        voice_kr_story_1102_111096_1BD46AA8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD46AA8",
+          SoundLength = 6360
+        },
+        voice_kr_story_1102_111096_1BD46AD2_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD46AD2_f",
+          SoundLength = 4120
+        },
+        voice_kr_story_1102_111096_1BD46AD2_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD46AD2_m",
+          SoundLength = 4410
+        },
+        voice_kr_story_1102_111096_1BD46AFC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD46AFC",
+          SoundLength = 16810
+        },
+        voice_kr_story_1102_111096_1BD46B26_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD46B26_f",
+          SoundLength = 6200
+        },
+        voice_kr_story_1102_111096_1BD46B26_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD46B26_m",
+          SoundLength = 5640
+        },
+        voice_kr_story_1102_111096_1BD46B50 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD46B50",
+          SoundLength = 3790
+        },
+        voice_kr_story_1102_111096_1BD46B7A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD46B7A_f",
+          SoundLength = 10120
+        },
+        voice_kr_story_1102_111096_1BD46B7A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD46B7A_m",
+          SoundLength = 11400
+        },
+        voice_kr_story_1102_111096_1BD47A92_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD47A92_f",
+          SoundLength = 1540
+        },
+        voice_kr_story_1102_111096_1BD47A92_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD47A92_m",
+          SoundLength = 1240
+        },
+        voice_kr_story_1102_111096_1BD49B62_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD49B62_f",
+          SoundLength = 3840
+        },
+        voice_kr_story_1102_111096_1BD49B62_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD49B62_m",
+          SoundLength = 3970
+        },
+        voice_kr_story_1102_111096_1BD49B8C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD49B8C_f",
+          SoundLength = 2590
+        },
+        voice_kr_story_1102_111096_1BD49B8C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD49B8C_m",
+          SoundLength = 2290
+        },
+        voice_kr_story_1102_111096_1BD49BB6_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD49BB6_f",
+          SoundLength = 3330
+        },
+        voice_kr_story_1102_111096_1BD49BB6_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD49BB6_m",
+          SoundLength = 4150
+        },
+        voice_kr_story_1102_111096_1BD4ABCA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4ABCA_f",
+          SoundLength = 13510
+        },
+        voice_kr_story_1102_111096_1BD4ABCA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4ABCA_m",
+          SoundLength = 15080
+        },
+        voice_kr_story_1102_111096_1BD4ABF4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4ABF4",
+          SoundLength = 1680
+        },
+        voice_kr_story_1102_111096_1BD4AC1E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4AC1E_f",
+          SoundLength = 6040
+        },
+        voice_kr_story_1102_111096_1BD4AC1E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4AC1E_m",
+          SoundLength = 6480
+        },
+        voice_kr_story_1102_111096_1BD4AC48 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4AC48",
+          SoundLength = 5090
+        },
+        voice_kr_story_1102_111096_1BD4AC72 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4AC72",
+          SoundLength = 12140
+        },
+        voice_kr_story_1102_111096_1BD4ACF0_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4ACF0_f",
+          SoundLength = 4480
+        },
+        voice_kr_story_1102_111096_1BD4ACF0_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4ACF0_m",
+          SoundLength = 4630
+        },
+        voice_kr_story_1102_111096_1BD4AD1A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4AD1A",
+          SoundLength = 11170
+        },
+        voice_kr_story_1102_111096_1BD4AD44 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4AD44",
+          SoundLength = 15110
+        },
+        voice_kr_story_1102_111096_1BD4AD6E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4AD6E",
+          SoundLength = 8880
+        },
+        voice_kr_story_1102_111096_1BD4AD98_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4AD98_f",
+          SoundLength = 3350
+        },
+        voice_kr_story_1102_111096_1BD4AD98_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4AD98_m",
+          SoundLength = 3230
+        },
+        voice_kr_story_1102_111096_1BD4ADC2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4ADC2",
+          SoundLength = 17840
+        },
+        voice_kr_story_1102_111096_1BD4ADEC_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4ADEC_f",
+          SoundLength = 2770
+        },
+        voice_kr_story_1102_111096_1BD4ADEC_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4ADEC_m",
+          SoundLength = 2800
+        },
+        voice_kr_story_1102_111096_1BD4AF90 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4AF90",
+          SoundLength = 8590
+        },
+        voice_kr_story_1102_111096_1BD4AFBA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4AFBA",
+          SoundLength = 18240
+        },
+        voice_kr_story_1102_111096_1BD4AFE4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4AFE4",
+          SoundLength = 12100
+        },
+        voice_kr_story_1102_111096_1BD4B00E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B00E",
+          SoundLength = 10750
+        },
+        voice_kr_story_1102_111096_1BD4B038 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B038",
+          SoundLength = 5870
+        },
+        voice_kr_story_1102_111096_1BD4B062 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B062",
+          SoundLength = 11320
+        },
+        voice_kr_story_1102_111096_1BD4B08C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B08C",
+          SoundLength = 7810
+        },
+        voice_kr_story_1102_111096_1BD4B0B6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B0B6",
+          SoundLength = 14820
+        },
+        voice_kr_story_1102_111096_1BD4B0E0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B0E0",
+          SoundLength = 5610
+        },
+        voice_kr_story_1102_111096_1BD4B10A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B10A",
+          SoundLength = 6380
+        },
+        voice_kr_story_1102_111096_1BD4B134 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B134",
+          SoundLength = 3480
+        },
+        voice_kr_story_1102_111096_1BD4B15E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B15E_f",
+          SoundLength = 10260
+        },
+        voice_kr_story_1102_111096_1BD4B15E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B15E_m",
+          SoundLength = 10890
+        },
+        voice_kr_story_1102_111096_1BD4B188 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B188",
+          SoundLength = 3800
+        },
+        voice_kr_story_1102_111096_1BD4B1B2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B1B2",
+          SoundLength = 13970
+        },
+        voice_kr_story_1102_111096_1BD4B1DC_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B1DC_f",
+          SoundLength = 9490
+        },
+        voice_kr_story_1102_111096_1BD4B1DC_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B1DC_m",
+          SoundLength = 10510
+        },
+        voice_kr_story_1102_111096_1BD4B206 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B206",
+          SoundLength = 13230
+        },
+        voice_kr_story_1102_111096_1BD4B230 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B230",
+          SoundLength = 16100
+        },
+        voice_kr_story_1102_111096_1BD4B25A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B25A",
+          SoundLength = 13270
+        },
+        voice_kr_story_1102_111096_1BD4B284 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B284",
+          SoundLength = 9610
+        },
+        voice_kr_story_1102_111096_1BD4B2AE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B2AE",
+          SoundLength = 16630
+        },
+        voice_kr_story_1102_111096_1BD4B2D8_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B2D8_f",
+          SoundLength = 8650
+        },
+        voice_kr_story_1102_111096_1BD4B2D8_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B2D8_m",
+          SoundLength = 9780
+        },
+        voice_kr_story_1102_111096_1BD4B302_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B302_f",
+          SoundLength = 11400
+        },
+        voice_kr_story_1102_111096_1BD4B302_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B302_m",
+          SoundLength = 11350
+        },
+        voice_kr_story_1102_111096_1BD4B32C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B32C",
+          SoundLength = 14600
+        },
+        voice_kr_story_1102_111096_1BD4B356 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B356",
+          SoundLength = 8940
+        },
+        voice_kr_story_1102_111096_1BD4B380 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B380",
+          SoundLength = 9610
+        },
+        voice_kr_story_1102_111096_1BD4B3AA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B3AA",
+          SoundLength = 4580
+        },
+        voice_kr_story_1102_111096_1BD4B3D4_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B3D4_f",
+          SoundLength = 2520
+        },
+        voice_kr_story_1102_111096_1BD4B3D4_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B3D4_m",
+          SoundLength = 2530
+        },
+        voice_kr_story_1102_111096_1BD4B3FE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B3FE",
+          SoundLength = 6920
+        },
+        voice_kr_story_1102_111096_1BD4B428_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B428_f",
+          SoundLength = 2240
+        },
+        voice_kr_story_1102_111096_1BD4B428_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B428_m",
+          SoundLength = 2420
+        },
+        voice_kr_story_1102_111096_1BD4B452 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B452",
+          SoundLength = 11270
+        },
+        voice_kr_story_1102_111096_1BD4B47C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B47C",
+          SoundLength = 14740
+        },
+        voice_kr_story_1102_111096_1BD4B4A6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B4A6",
+          SoundLength = 8430
+        },
+        voice_kr_story_1102_111096_1BD4B4D0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B4D0",
+          SoundLength = 13910
+        },
+        voice_kr_story_1102_111096_1BD4B4FA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B4FA",
+          SoundLength = 10300
+        },
+        voice_kr_story_1102_111096_1BD4B524_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B524_f",
+          SoundLength = 4410
+        },
+        voice_kr_story_1102_111096_1BD4B524_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B524_m",
+          SoundLength = 4330
+        },
+        voice_kr_story_1102_111096_1BD4B54E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B54E",
+          SoundLength = 3020
+        },
+        voice_kr_story_1102_111096_1BD4B578 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4B578",
+          SoundLength = 9450
+        },
+        voice_kr_story_1102_111096_1BD4CC9A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4CC9A",
+          SoundLength = 9510
+        },
+        voice_kr_story_1102_111096_1BD4CCC4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4CCC4",
+          SoundLength = 3490
+        },
+        voice_kr_story_1102_111096_1BD4CCEE_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4CCEE_f",
+          SoundLength = 2520
+        },
+        voice_kr_story_1102_111096_1BD4CCEE_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4CCEE_m",
+          SoundLength = 1950
+        },
+        voice_kr_story_1102_111096_1BD4CD18 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4CD18",
+          SoundLength = 6580
+        },
+        voice_kr_story_1102_111096_1BD4CD42_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4CD42_f",
+          SoundLength = 1220
+        },
+        voice_kr_story_1102_111096_1BD4CD42_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4CD42_m",
+          SoundLength = 1050
+        },
+        voice_kr_story_1102_111096_1BD4DD02_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4DD02_f",
+          SoundLength = 2970
+        },
+        voice_kr_story_1102_111096_1BD4DD02_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4DD02_m",
+          SoundLength = 3050
+        },
+        voice_kr_story_1102_111096_1BD4DD2C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4DD2C_f",
+          SoundLength = 6010
+        },
+        voice_kr_story_1102_111096_1BD4DD2C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4DD2C_m",
+          SoundLength = 7660
+        },
+        voice_kr_story_1102_111096_1BD4DD56 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4DD56",
+          SoundLength = 860
+        },
+        voice_kr_story_1102_111096_1BD4DD80 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4DD80",
+          SoundLength = 1300
+        },
+        voice_kr_story_1102_111096_1BD4DDAA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4DDAA",
+          SoundLength = 8320
+        },
+        voice_kr_story_1102_111096_1BD4DDD4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4DDD4",
+          SoundLength = 8200
+        },
+        voice_kr_story_1102_111096_1BD4DDFE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4DDFE",
+          SoundLength = 18240
+        },
+        voice_kr_story_1102_111096_1BD4DE28 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4DE28",
+          SoundLength = 8740
+        },
+        voice_kr_story_1102_111096_1BD4DE52 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4DE52",
+          SoundLength = 14410
+        },
+        voice_kr_story_1102_111096_1BD4DE7C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4DE7C",
+          SoundLength = 6280
+        },
+        voice_kr_story_1102_111096_1BD4DEA6_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4DEA6_f",
+          SoundLength = 2310
+        },
+        voice_kr_story_1102_111096_1BD4DEA6_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4DEA6_m",
+          SoundLength = 2180
+        },
+        voice_kr_story_1102_111096_1BD4DED0_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4DED0_f",
+          SoundLength = 7190
+        },
+        voice_kr_story_1102_111096_1BD4DED0_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4DED0_m",
+          SoundLength = 7940
+        },
+        voice_kr_story_1102_111096_1BD4DEFA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4DEFA_f",
+          SoundLength = 8860
+        },
+        voice_kr_story_1102_111096_1BD4DEFA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4DEFA_m",
+          SoundLength = 9620
+        },
+        voice_kr_story_1102_111096_1BD4DF24_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4DF24_f",
+          SoundLength = 5070
+        },
+        voice_kr_story_1102_111096_1BD4DF24_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4DF24_m",
+          SoundLength = 5630
+        },
+        voice_kr_story_1102_111096_1BD4DF4E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4DF4E",
+          SoundLength = 3610
+        },
+        voice_kr_story_1102_111096_1BD4DF78_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4DF78_f",
+          SoundLength = 8360
+        },
+        voice_kr_story_1102_111096_1BD4DF78_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4DF78_m",
+          SoundLength = 7890
+        },
+        voice_kr_story_1102_111096_1BD4DFA2_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4DFA2_f",
+          SoundLength = 3780
+        },
+        voice_kr_story_1102_111096_1BD4DFA2_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4DFA2_m",
+          SoundLength = 4740
+        },
+        voice_kr_story_1102_111096_1BD4DFCC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4DFCC",
+          SoundLength = 850
+        },
+        voice_kr_story_1102_111096_1BD4DFF6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4DFF6",
+          SoundLength = 5150
+        },
+        voice_kr_story_1102_111096_1BD4ED6A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4ED6A_f",
+          SoundLength = 3880
+        },
+        voice_kr_story_1102_111096_1BD4ED6A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4ED6A_m",
+          SoundLength = 3680
+        },
+        voice_kr_story_1102_111096_1BD4FDD2_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4FDD2_f",
+          SoundLength = 4970
+        },
+        voice_kr_story_1102_111096_1BD4FDD2_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD4FDD2_m",
+          SoundLength = 5910
+        },
+        voice_kr_story_1102_111096_1BD50E3A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD50E3A",
+          SoundLength = 5780
+        },
+        voice_kr_story_1102_111096_1BD50E64_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD50E64_f",
+          SoundLength = 1730
+        },
+        voice_kr_story_1102_111096_1BD50E64_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD50E64_m",
+          SoundLength = 1630
+        },
+        voice_kr_story_1102_111096_1BD50E8E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD50E8E",
+          SoundLength = 3060
+        },
+        voice_kr_story_1102_111096_1BD50EB8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD50EB8",
+          SoundLength = 1370
+        },
+        voice_kr_story_1102_111096_1BD50EE2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD50EE2",
+          SoundLength = 3240
+        },
+        voice_kr_story_1102_111096_1BD50F0C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD50F0C_f",
+          SoundLength = 1650
+        },
+        voice_kr_story_1102_111096_1BD50F0C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD50F0C_m",
+          SoundLength = 1520
+        },
+        voice_kr_story_1102_111096_1BD50F36 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD50F36",
+          SoundLength = 9670
+        },
+        voice_kr_story_1102_111096_1BD50F60 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD50F60",
+          SoundLength = 3580
+        },
+        voice_kr_story_1102_111096_1BD50F8A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD50F8A_f",
+          SoundLength = 1960
+        },
+        voice_kr_story_1102_111096_1BD50F8A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD50F8A_m",
+          SoundLength = 1690
+        },
+        voice_kr_story_1102_111096_1BD50FB4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD50FB4",
+          SoundLength = 15220
+        },
+        voice_kr_story_1102_111096_1BD50FDE_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD50FDE_f",
+          SoundLength = 1350
+        },
+        voice_kr_story_1102_111096_1BD50FDE_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD50FDE_m",
+          SoundLength = 2170
+        },
+        voice_kr_story_1102_111096_1BD51EA2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD51EA2",
+          SoundLength = 3300
+        },
+        voice_kr_story_1102_111096_1BD51EA2_1 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD51EA2_1",
+          SoundLength = 3100
+        },
+        voice_kr_story_1102_111096_1BD51EA2_2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD51EA2_2",
+          SoundLength = 2420
+        },
+        voice_kr_story_1102_111096_1BD51EA2_4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD51EA2_4",
+          SoundLength = 8090
+        },
+        voice_kr_story_1102_111096_1BD51EA2_5 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD51EA2_5",
+          SoundLength = 6340
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1102_111096_1BD51ECC",
+    MaxKey = "voice_kr_story_1102_111096_1BD6AA5A",
+    Loader = function()
+      return {
+        voice_kr_story_1102_111096_1BD51ECC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD51ECC",
+          SoundLength = 5930
+        },
+        voice_kr_story_1102_111096_1BD51ECC_1 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD51ECC_1",
+          SoundLength = 3510
+        },
+        voice_kr_story_1102_111096_1BD51ECC_2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD51ECC_2",
+          SoundLength = 3000
+        },
+        voice_kr_story_1102_111096_1BD51ECC_3 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD51ECC_3",
+          SoundLength = 2400
+        },
+        voice_kr_story_1102_111096_1BD51ECC_4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD51ECC_4",
+          SoundLength = 4290
+        },
+        voice_kr_story_1102_111096_1BD51ECC_5 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD51ECC_5",
+          SoundLength = 5930
+        },
+        voice_kr_story_1102_111096_1BD51EF6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD51EF6",
+          SoundLength = 2410
+        },
+        voice_kr_story_1102_111096_1BD51F20 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD51F20",
+          SoundLength = 6850
+        },
+        voice_kr_story_1102_111096_1BD51F4A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD51F4A",
+          SoundLength = 9340
+        },
+        voice_kr_story_1102_111096_1BD51F74 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD51F74",
+          SoundLength = 11220
+        },
+        voice_kr_story_1102_111096_1BD51F9E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD51F9E",
+          SoundLength = 7650
+        },
+        voice_kr_story_1102_111096_1BD51FC8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD51FC8",
+          SoundLength = 5830
+        },
+        voice_kr_story_1102_111096_1BD51FF2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD51FF2",
+          SoundLength = 9620
+        },
+        voice_kr_story_1102_111096_1BD5201C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5201C",
+          SoundLength = 17290
+        },
+        voice_kr_story_1102_111096_1BD52046 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD52046",
+          SoundLength = 10690
+        },
+        voice_kr_story_1102_111096_1BD52070 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD52070",
+          SoundLength = 6080
+        },
+        voice_kr_story_1102_111096_1BD5209A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5209A",
+          SoundLength = 5580
+        },
+        voice_kr_story_1102_111096_1BD520C4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD520C4",
+          SoundLength = 15920
+        },
+        voice_kr_story_1102_111096_1BD520EE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD520EE",
+          SoundLength = 1910
+        },
+        voice_kr_story_1102_111096_1BD53F72 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD53F72",
+          SoundLength = 5500
+        },
+        voice_kr_story_1102_111096_1BD53F9C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD53F9C_f",
+          SoundLength = 6490
+        },
+        voice_kr_story_1102_111096_1BD53F9C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD53F9C_m",
+          SoundLength = 6570
+        },
+        voice_kr_story_1102_111096_1BD54FDA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD54FDA_f",
+          SoundLength = 3090
+        },
+        voice_kr_story_1102_111096_1BD54FDA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD54FDA_m",
+          SoundLength = 3320
+        },
+        voice_kr_story_1102_111096_1BD56042 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD56042",
+          SoundLength = 4860
+        },
+        voice_kr_story_1102_111096_1BD5606C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5606C",
+          SoundLength = 10100
+        },
+        voice_kr_story_1102_111096_1BD56096 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD56096",
+          SoundLength = 3210
+        },
+        voice_kr_story_1102_111096_1BD560C0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD560C0",
+          SoundLength = 12760
+        },
+        voice_kr_story_1102_111096_1BD560EA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD560EA",
+          SoundLength = 19750
+        },
+        voice_kr_story_1102_111096_1BD56114 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD56114",
+          SoundLength = 14650
+        },
+        voice_kr_story_1102_111096_1BD5613E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5613E",
+          SoundLength = 1030
+        },
+        voice_kr_story_1102_111096_1BD56168 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD56168",
+          SoundLength = 15680
+        },
+        voice_kr_story_1102_111096_1BD56192 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD56192",
+          SoundLength = 9410
+        },
+        voice_kr_story_1102_111096_1BD561BC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD561BC",
+          SoundLength = 8860
+        },
+        voice_kr_story_1102_111096_1BD561E6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD561E6",
+          SoundLength = 20510
+        },
+        voice_kr_story_1102_111096_1BD56210 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD56210",
+          SoundLength = 4580
+        },
+        voice_kr_story_1102_111096_1BD5623A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5623A",
+          SoundLength = 7160
+        },
+        voice_kr_story_1102_111096_1BD56264 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD56264",
+          SoundLength = 4520
+        },
+        voice_kr_story_1102_111096_1BD5628E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5628E",
+          SoundLength = 11380
+        },
+        voice_kr_story_1102_111096_1BD562B8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD562B8",
+          SoundLength = 1650
+        },
+        voice_kr_story_1102_111096_1BD570AA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD570AA",
+          SoundLength = 19270
+        },
+        voice_kr_story_1102_111096_1BD570D4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD570D4",
+          SoundLength = 11530
+        },
+        voice_kr_story_1102_111096_1BD570FE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD570FE",
+          SoundLength = 14610
+        },
+        voice_kr_story_1102_111096_1BD57128 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD57128",
+          SoundLength = 15760
+        },
+        voice_kr_story_1102_111096_1BD57152_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD57152_f",
+          SoundLength = 8620
+        },
+        voice_kr_story_1102_111096_1BD57152_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD57152_m",
+          SoundLength = 8680
+        },
+        voice_kr_story_1102_111096_1BD5717C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5717C",
+          SoundLength = 1230
+        },
+        voice_kr_story_1102_111096_1BD571A6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD571A6",
+          SoundLength = 17590
+        },
+        voice_kr_story_1102_111096_1BD571D0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD571D0",
+          SoundLength = 6390
+        },
+        voice_kr_story_1102_111096_1BD571FA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD571FA",
+          SoundLength = 8550
+        },
+        voice_kr_story_1102_111096_1BD57224 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD57224",
+          SoundLength = 1620
+        },
+        voice_kr_story_1102_111096_1BD5724E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5724E",
+          SoundLength = 9760
+        },
+        voice_kr_story_1102_111096_1BD57278 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD57278",
+          SoundLength = 20130
+        },
+        voice_kr_story_1102_111096_1BD572A2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD572A2",
+          SoundLength = 11110
+        },
+        voice_kr_story_1102_111096_1BD572CC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD572CC",
+          SoundLength = 15130
+        },
+        voice_kr_story_1102_111096_1BD58112 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD58112",
+          SoundLength = 5790
+        },
+        voice_kr_story_1102_111096_1BD5813C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5813C",
+          SoundLength = 640
+        },
+        voice_kr_story_1102_111096_1BD58166 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD58166",
+          SoundLength = 7900
+        },
+        voice_kr_story_1102_111096_1BD58190 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD58190",
+          SoundLength = 3340
+        },
+        voice_kr_story_1102_111096_1BD581BA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD581BA",
+          SoundLength = 8170
+        },
+        voice_kr_story_1102_111096_1BD581E4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD581E4",
+          SoundLength = 860
+        },
+        voice_kr_story_1102_111096_1BD5820E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5820E",
+          SoundLength = 6850
+        },
+        voice_kr_story_1102_111096_1BD58238 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD58238",
+          SoundLength = 2010
+        },
+        voice_kr_story_1102_111096_1BD58262 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD58262",
+          SoundLength = 4070
+        },
+        voice_kr_story_1102_111096_1BD5917A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5917A",
+          SoundLength = 880
+        },
+        voice_kr_story_1102_111096_1BD591A4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD591A4",
+          SoundLength = 1330
+        },
+        voice_kr_story_1102_111096_1BD591CE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD591CE",
+          SoundLength = 6040
+        },
+        voice_kr_story_1102_111096_1BD591F8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD591F8",
+          SoundLength = 10820
+        },
+        voice_kr_story_1102_111096_1BD59222 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD59222",
+          SoundLength = 7580
+        },
+        voice_kr_story_1102_111096_1BD5924C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5924C",
+          SoundLength = 3450
+        },
+        voice_kr_story_1102_111096_1BD59276 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD59276",
+          SoundLength = 3750
+        },
+        voice_kr_story_1102_111096_1BD592A0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD592A0",
+          SoundLength = 8100
+        },
+        voice_kr_story_1102_111096_1BD592CA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD592CA",
+          SoundLength = 15710
+        },
+        voice_kr_story_1102_111096_1BD592F4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD592F4",
+          SoundLength = 1660
+        },
+        voice_kr_story_1102_111096_1BD5931E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5931E",
+          SoundLength = 4120
+        },
+        voice_kr_story_1102_111096_1BD59348 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD59348",
+          SoundLength = 3230
+        },
+        voice_kr_story_1102_111096_1BD59372 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD59372",
+          SoundLength = 3660
+        },
+        voice_kr_story_1102_111096_1BD5939C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5939C",
+          SoundLength = 7840
+        },
+        voice_kr_story_1102_111096_1BD593C6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD593C6",
+          SoundLength = 15620
+        },
+        voice_kr_story_1102_111096_1BD59498 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD59498",
+          SoundLength = 20880
+        },
+        voice_kr_story_1102_111096_1BD594C2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD594C2",
+          SoundLength = 3180
+        },
+        voice_kr_story_1102_111096_1BD594EC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD594EC",
+          SoundLength = 9700
+        },
+        voice_kr_story_1102_111096_1BD59516 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD59516",
+          SoundLength = 15960
+        },
+        voice_kr_story_1102_111096_1BD59540 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD59540",
+          SoundLength = 10750
+        },
+        voice_kr_story_1102_111096_1BD5956A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5956A",
+          SoundLength = 4290
+        },
+        voice_kr_story_1102_111096_1BD59594 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD59594",
+          SoundLength = 900
+        },
+        voice_kr_story_1102_111096_1BD595BE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD595BE",
+          SoundLength = 4790
+        },
+        voice_kr_story_1102_111096_1BD595E8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD595E8",
+          SoundLength = 3370
+        },
+        voice_kr_story_1102_111096_1BD59612 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD59612",
+          SoundLength = 6100
+        },
+        voice_kr_story_1102_111096_1BD5963C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5963C",
+          SoundLength = 6180
+        },
+        voice_kr_story_1102_111096_1BD59666 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD59666",
+          SoundLength = 9790
+        },
+        voice_kr_story_1102_111096_1BD59690 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD59690",
+          SoundLength = 13670
+        },
+        voice_kr_story_1102_111096_1BD596BA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD596BA",
+          SoundLength = 5120
+        },
+        voice_kr_story_1102_111096_1BD5A1E2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5A1E2",
+          SoundLength = 2020
+        },
+        voice_kr_story_1102_111096_1BD5B24A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5B24A_f",
+          SoundLength = 1330
+        },
+        voice_kr_story_1102_111096_1BD5B24A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5B24A_m",
+          SoundLength = 1250
+        },
+        voice_kr_story_1102_111096_1BD5C2B2_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5C2B2_f",
+          SoundLength = 4250
+        },
+        voice_kr_story_1102_111096_1BD5C2B2_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5C2B2_m",
+          SoundLength = 4050
+        },
+        voice_kr_story_1102_111096_1BD5C2DC_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5C2DC_f",
+          SoundLength = 4690
+        },
+        voice_kr_story_1102_111096_1BD5C2DC_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5C2DC_m",
+          SoundLength = 4900
+        },
+        voice_kr_story_1102_111096_1BD5C306_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5C306_f",
+          SoundLength = 5120
+        },
+        voice_kr_story_1102_111096_1BD5C306_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5C306_m",
+          SoundLength = 6330
+        },
+        voice_kr_story_1102_111096_1BD5C330 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5C330",
+          SoundLength = 9680
+        },
+        voice_kr_story_1102_111096_1BD5C35A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5C35A",
+          SoundLength = 10190
+        },
+        voice_kr_story_1102_111096_1BD5C384 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5C384",
+          SoundLength = 1280
+        },
+        voice_kr_story_1102_111096_1BD5C3AE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5C3AE",
+          SoundLength = 4180
+        },
+        voice_kr_story_1102_111096_1BD5C3D8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5C3D8",
+          SoundLength = 12630
+        },
+        voice_kr_story_1102_111096_1BD5C402 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5C402",
+          SoundLength = 7720
+        },
+        voice_kr_story_1102_111096_1BD5C42C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5C42C",
+          SoundLength = 8730
+        },
+        voice_kr_story_1102_111096_1BD5C456 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5C456",
+          SoundLength = 13600
+        },
+        voice_kr_story_1102_111096_1BD5C480_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5C480_f",
+          SoundLength = 1600
+        },
+        voice_kr_story_1102_111096_1BD5C480_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5C480_m",
+          SoundLength = 1670
+        },
+        voice_kr_story_1102_111096_1BD5C4AA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5C4AA",
+          SoundLength = 12410
+        },
+        voice_kr_story_1102_111096_1BD5C4D4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5C4D4",
+          SoundLength = 11030
+        },
+        voice_kr_story_1102_111096_1BD5C552 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5C552",
+          SoundLength = 12640
+        },
+        voice_kr_story_1102_111096_1BD5C57C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5C57C",
+          SoundLength = 4000
+        },
+        voice_kr_story_1102_111096_1BD5C5A6_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5C5A6_f",
+          SoundLength = 830
+        },
+        voice_kr_story_1102_111096_1BD5C5A6_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5C5A6_m",
+          SoundLength = 660
+        },
+        voice_kr_story_1102_111096_1BD5C5D0_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5C5D0_f",
+          SoundLength = 790
+        },
+        voice_kr_story_1102_111096_1BD5C5D0_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5C5D0_m",
+          SoundLength = 770
+        },
+        voice_kr_story_1102_111096_1BD5D31A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5D31A",
+          SoundLength = 6140
+        },
+        voice_kr_story_1102_111096_1BD5D344 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5D344",
+          SoundLength = 16190
+        },
+        voice_kr_story_1102_111096_1BD5D36E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5D36E",
+          SoundLength = 4450
+        },
+        voice_kr_story_1102_111096_1BD5D398 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5D398",
+          SoundLength = 3430
+        },
+        voice_kr_story_1102_111096_1BD5D3C2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5D3C2",
+          SoundLength = 9110
+        },
+        voice_kr_story_1102_111096_1BD5D3EC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5D3EC",
+          SoundLength = 3320
+        },
+        voice_kr_story_1102_111096_1BD5E382_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5E382_f",
+          SoundLength = 2580
+        },
+        voice_kr_story_1102_111096_1BD5E382_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5E382_m",
+          SoundLength = 3100
+        },
+        voice_kr_story_1102_111096_1BD5E3AC_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5E3AC_f",
+          SoundLength = 4180
+        },
+        voice_kr_story_1102_111096_1BD5E3AC_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5E3AC_m",
+          SoundLength = 4810
+        },
+        voice_kr_story_1102_111096_1BD5E3D6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5E3D6",
+          SoundLength = 4690
+        },
+        voice_kr_story_1102_111096_1BD5E400_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5E400_f",
+          SoundLength = 1860
+        },
+        voice_kr_story_1102_111096_1BD5E400_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5E400_m",
+          SoundLength = 1790
+        },
+        voice_kr_story_1102_111096_1BD5E42A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5E42A",
+          SoundLength = 12180
+        },
+        voice_kr_story_1102_111096_1BD5E454_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5E454_f",
+          SoundLength = 3140
+        },
+        voice_kr_story_1102_111096_1BD5E454_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5E454_m",
+          SoundLength = 3870
+        },
+        voice_kr_story_1102_111096_1BD5E47E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5E47E",
+          SoundLength = 11540
+        },
+        voice_kr_story_1102_111096_1BD5E4A8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD5E4A8",
+          SoundLength = 22030
+        },
+        voice_kr_story_1102_111096_1BD60452 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD60452",
+          SoundLength = 6220
+        },
+        voice_kr_story_1102_111096_1BD6047C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6047C",
+          SoundLength = 6540
+        },
+        voice_kr_story_1102_111096_1BD604A6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD604A6",
+          SoundLength = 7140
+        },
+        voice_kr_story_1102_111096_1BD604D0_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD604D0_f",
+          SoundLength = 6270
+        },
+        voice_kr_story_1102_111096_1BD604D0_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD604D0_m",
+          SoundLength = 6720
+        },
+        voice_kr_story_1102_111096_1BD614BA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD614BA",
+          SoundLength = 8340
+        },
+        voice_kr_story_1102_111096_1BD614E4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD614E4",
+          SoundLength = 6850
+        },
+        voice_kr_story_1102_111096_1BD6150E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6150E_f",
+          SoundLength = 6760
+        },
+        voice_kr_story_1102_111096_1BD6150E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6150E_m",
+          SoundLength = 7490
+        },
+        voice_kr_story_1102_111096_1BD62522_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD62522_f",
+          SoundLength = 2570
+        },
+        voice_kr_story_1102_111096_1BD62522_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD62522_m",
+          SoundLength = 2550
+        },
+        voice_kr_story_1102_111096_1BD6254C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6254C",
+          SoundLength = 3800
+        },
+        voice_kr_story_1102_111096_1BD6358A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6358A",
+          SoundLength = 5780
+        },
+        voice_kr_story_1102_111096_1BD635B4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD635B4",
+          SoundLength = 4440
+        },
+        voice_kr_story_1102_111096_1BD635DE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD635DE",
+          SoundLength = 2920
+        },
+        voice_kr_story_1102_111096_1BD63608 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD63608",
+          SoundLength = 2980
+        },
+        voice_kr_story_1102_111096_1BD63632 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD63632",
+          SoundLength = 11050
+        },
+        voice_kr_story_1102_111096_1BD6365C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6365C_f",
+          SoundLength = 1940
+        },
+        voice_kr_story_1102_111096_1BD6365C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6365C_m",
+          SoundLength = 1730
+        },
+        voice_kr_story_1102_111096_1BD63686 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD63686",
+          SoundLength = 6400
+        },
+        voice_kr_story_1102_111096_1BD636B0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD636B0",
+          SoundLength = 7630
+        },
+        voice_kr_story_1102_111096_1BD645F2_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD645F2_f",
+          SoundLength = 8120
+        },
+        voice_kr_story_1102_111096_1BD645F2_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD645F2_m",
+          SoundLength = 8480
+        },
+        voice_kr_story_1102_111096_1BD6461C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6461C_f",
+          SoundLength = 9190
+        },
+        voice_kr_story_1102_111096_1BD6461C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6461C_m",
+          SoundLength = 9430
+        },
+        voice_kr_story_1102_111096_1BD64646_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD64646_f",
+          SoundLength = 7740
+        },
+        voice_kr_story_1102_111096_1BD64646_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD64646_m",
+          SoundLength = 8110
+        },
+        voice_kr_story_1102_111096_1BD64670_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD64670_f",
+          SoundLength = 6460
+        },
+        voice_kr_story_1102_111096_1BD64670_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD64670_m",
+          SoundLength = 7370
+        },
+        voice_kr_story_1102_111096_1BD6469A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6469A_f",
+          SoundLength = 5540
+        },
+        voice_kr_story_1102_111096_1BD6469A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6469A_m",
+          SoundLength = 5890
+        },
+        voice_kr_story_1102_111096_1BD6565A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6565A",
+          SoundLength = 10140
+        },
+        voice_kr_story_1102_111096_1BD65684_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD65684_f",
+          SoundLength = 8140
+        },
+        voice_kr_story_1102_111096_1BD65684_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD65684_m",
+          SoundLength = 8500
+        },
+        voice_kr_story_1102_111096_1BD656AE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD656AE",
+          SoundLength = 7710
+        },
+        voice_kr_story_1102_111096_1BD666C2_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD666C2_f",
+          SoundLength = 4130
+        },
+        voice_kr_story_1102_111096_1BD666C2_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD666C2_m",
+          SoundLength = 4040
+        },
+        voice_kr_story_1102_111096_1BD666EC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD666EC",
+          SoundLength = 5860
+        },
+        voice_kr_story_1102_111096_1BD66716 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD66716",
+          SoundLength = 5690
+        },
+        voice_kr_story_1102_111096_1BD66740 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD66740",
+          SoundLength = 5720
+        },
+        voice_kr_story_1102_111096_1BD6676A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6676A",
+          SoundLength = 7770
+        },
+        voice_kr_story_1102_111096_1BD6772A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6772A",
+          SoundLength = 3800
+        },
+        voice_kr_story_1102_111096_1BD67754 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD67754",
+          SoundLength = 4290
+        },
+        voice_kr_story_1102_111096_1BD68792 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD68792",
+          SoundLength = 5680
+        },
+        voice_kr_story_1102_111096_1BD687BC_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD687BC_f",
+          SoundLength = 3600
+        },
+        voice_kr_story_1102_111096_1BD687BC_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD687BC_m",
+          SoundLength = 3990
+        },
+        voice_kr_story_1102_111096_1BD6A862 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6A862",
+          SoundLength = 1630
+        },
+        voice_kr_story_1102_111096_1BD6A88C_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6A88C_f",
+          SoundLength = 1720
+        },
+        voice_kr_story_1102_111096_1BD6A88C_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6A88C_m",
+          SoundLength = 1690
+        },
+        voice_kr_story_1102_111096_1BD6A8B6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6A8B6",
+          SoundLength = 6810
+        },
+        voice_kr_story_1102_111096_1BD6A8E0_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6A8E0_f",
+          SoundLength = 4220
+        },
+        voice_kr_story_1102_111096_1BD6A8E0_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6A8E0_m",
+          SoundLength = 3910
+        },
+        voice_kr_story_1102_111096_1BD6A90A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6A90A",
+          SoundLength = 12100
+        },
+        voice_kr_story_1102_111096_1BD6A934 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6A934",
+          SoundLength = 12860
+        },
+        voice_kr_story_1102_111096_1BD6A95E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6A95E_f",
+          SoundLength = 4320
+        },
+        voice_kr_story_1102_111096_1BD6A95E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6A95E_m",
+          SoundLength = 4250
+        },
+        voice_kr_story_1102_111096_1BD6A988 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6A988",
+          SoundLength = 18660
+        },
+        voice_kr_story_1102_111096_1BD6A9B2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6A9B2",
+          SoundLength = 4960
+        },
+        voice_kr_story_1102_111096_1BD6A9DC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6A9DC",
+          SoundLength = 5350
+        },
+        voice_kr_story_1102_111096_1BD6AA06 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6AA06",
+          SoundLength = 4750
+        },
+        voice_kr_story_1102_111096_1BD6AA30 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6AA30",
+          SoundLength = 3390
+        },
+        voice_kr_story_1102_111096_1BD6AA5A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6AA5A",
+          SoundLength = 3980
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1102_111096_1BD6AA84",
+    MaxKey = "voice_kr_story_1200_120004_1E0AB048_m",
+    Loader = function()
+      return {
+        voice_kr_story_1102_111096_1BD6AA84 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6AA84",
+          SoundLength = 12430
+        },
+        voice_kr_story_1102_111096_1BD6AAAE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6AAAE",
+          SoundLength = 2580
+        },
+        voice_kr_story_1102_111096_1BD6AAD8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6AAD8",
+          SoundLength = 5850
+        },
+        voice_kr_story_1102_111096_1BD6AB02 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6AB02",
+          SoundLength = 4650
+        },
+        voice_kr_story_1102_111096_1BD6AB2C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6AB2C",
+          SoundLength = 13330
+        },
+        voice_kr_story_1102_111096_1BD6AB56 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6AB56",
+          SoundLength = 11300
+        },
+        voice_kr_story_1102_111096_1BD6AB80 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6AB80",
+          SoundLength = 3430
+        },
+        voice_kr_story_1102_111096_1BD6ABAA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6ABAA",
+          SoundLength = 4690
+        },
+        voice_kr_story_1102_111096_1BD6ABD4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6ABD4",
+          SoundLength = 7270
+        },
+        voice_kr_story_1102_111096_1BD6ABFE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6ABFE",
+          SoundLength = 6860
+        },
+        voice_kr_story_1102_111096_1BD6AC28 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6AC28",
+          SoundLength = 10270
+        },
+        voice_kr_story_1102_111096_1BD6AC52 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6AC52",
+          SoundLength = 10650
+        },
+        voice_kr_story_1102_111096_1BD6AC7C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6AC7C",
+          SoundLength = 1200
+        },
+        voice_kr_story_1102_111096_1BD6ACA6_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6ACA6_f",
+          SoundLength = 780
+        },
+        voice_kr_story_1102_111096_1BD6ACA6_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6ACA6_m",
+          SoundLength = 770
+        },
+        voice_kr_story_1102_111096_1BD6ACD0_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6ACD0_f",
+          SoundLength = 4060
+        },
+        voice_kr_story_1102_111096_1BD6ACD0_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6ACD0_m",
+          SoundLength = 3810
+        },
+        voice_kr_story_1102_111096_1BD6ACFA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6ACFA",
+          SoundLength = 13970
+        },
+        voice_kr_story_1102_111096_1BD6AD24_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6AD24_f",
+          SoundLength = 2690
+        },
+        voice_kr_story_1102_111096_1BD6AD24_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6AD24_m",
+          SoundLength = 2520
+        },
+        voice_kr_story_1102_111096_1BD6AD4E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6AD4E",
+          SoundLength = 8110
+        },
+        voice_kr_story_1102_111096_1BD6AD78 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6AD78",
+          SoundLength = 9960
+        },
+        voice_kr_story_1102_111096_1BD6ADA2_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6ADA2_f",
+          SoundLength = 3640
+        },
+        voice_kr_story_1102_111096_1BD6ADA2_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6ADA2_m",
+          SoundLength = 3680
+        },
+        voice_kr_story_1102_111096_1BD6ADCC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6ADCC",
+          SoundLength = 11150
+        },
+        voice_kr_story_1102_111096_1BD6ADF6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6ADF6",
+          SoundLength = 13140
+        },
+        voice_kr_story_1102_111096_1BD6AE20 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6AE20",
+          SoundLength = 11490
+        },
+        voice_kr_story_1102_111096_1BD6AE4A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6AE4A",
+          SoundLength = 5150
+        },
+        voice_kr_story_1102_111096_1BD6AE74_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6AE74_f",
+          SoundLength = 11010
+        },
+        voice_kr_story_1102_111096_1BD6AE74_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6AE74_m",
+          SoundLength = 12040
+        },
+        voice_kr_story_1102_111096_1BD6AE9E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6AE9E",
+          SoundLength = 5700
+        },
+        voice_kr_story_1102_111096_1BD6AEC8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6AEC8",
+          SoundLength = 2650
+        },
+        voice_kr_story_1102_111096_1BD6AEF2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6AEF2",
+          SoundLength = 680
+        },
+        voice_kr_story_1102_111096_1BD6AF1C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6AF1C",
+          SoundLength = 5270
+        },
+        voice_kr_story_1102_111096_1BD6AF46 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6AF46",
+          SoundLength = 4410
+        },
+        voice_kr_story_1102_111096_1BD6AF70 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6AF70",
+          SoundLength = 12450
+        },
+        voice_kr_story_1102_111096_1BD6B8CA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6B8CA",
+          SoundLength = 2570
+        },
+        voice_kr_story_1102_111096_1BD6D99A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6D99A_f",
+          SoundLength = 2490
+        },
+        voice_kr_story_1102_111096_1BD6D99A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6D99A_m",
+          SoundLength = 2630
+        },
+        voice_kr_story_1102_111096_1BD6D9C4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6D9C4",
+          SoundLength = 2070
+        },
+        voice_kr_story_1102_111096_1BD6D9EE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6D9EE",
+          SoundLength = 12220
+        },
+        voice_kr_story_1102_111096_1BD6DA18 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6DA18",
+          SoundLength = 3010
+        },
+        voice_kr_story_1102_111096_1BD6DA42 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6DA42",
+          SoundLength = 19310
+        },
+        voice_kr_story_1102_111096_1BD6DA6C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6DA6C",
+          SoundLength = 4110
+        },
+        voice_kr_story_1102_111096_1BD6DA96 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6DA96",
+          SoundLength = 10950
+        },
+        voice_kr_story_1102_111096_1BD6DAC0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6DAC0",
+          SoundLength = 6470
+        },
+        voice_kr_story_1102_111096_1BD6DAEA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6DAEA",
+          SoundLength = 6730
+        },
+        voice_kr_story_1102_111096_1BD6DB14 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6DB14",
+          SoundLength = 10990
+        },
+        voice_kr_story_1102_111096_1BD6DB3E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6DB3E_f",
+          SoundLength = 1230
+        },
+        voice_kr_story_1102_111096_1BD6DB3E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6DB3E_m",
+          SoundLength = 640
+        },
+        voice_kr_story_1102_111096_1BD6DB68 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6DB68",
+          SoundLength = 850
+        },
+        voice_kr_story_1102_111096_1BD6DB92_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6DB92_f",
+          SoundLength = 4200
+        },
+        voice_kr_story_1102_111096_1BD6DB92_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6DB92_m",
+          SoundLength = 4440
+        },
+        voice_kr_story_1102_111096_1BD6DBBC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6DBBC",
+          SoundLength = 860
+        },
+        voice_kr_story_1102_111096_1BD6DBE6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6DBE6",
+          SoundLength = 3790
+        },
+        voice_kr_story_1102_111096_1BD6DC10 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6DC10",
+          SoundLength = 11570
+        },
+        voice_kr_story_1102_111096_1BD6DC3A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6DC3A",
+          SoundLength = 2620
+        },
+        voice_kr_story_1102_111096_1BD6DC64 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6DC64",
+          SoundLength = 2890
+        },
+        voice_kr_story_1102_111096_1BD6DCB8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6DCB8",
+          SoundLength = 11810
+        },
+        voice_kr_story_1102_111096_1BD6DCE2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6DCE2",
+          SoundLength = 5240
+        },
+        voice_kr_story_1102_111096_1BD6DD0C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6DD0C",
+          SoundLength = 13440
+        },
+        voice_kr_story_1102_111096_1BD6DD36 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6DD36",
+          SoundLength = 3110
+        },
+        voice_kr_story_1102_111096_1BD6DD60_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6DD60_f",
+          SoundLength = 5180
+        },
+        voice_kr_story_1102_111096_1BD6DD60_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6DD60_m",
+          SoundLength = 5350
+        },
+        voice_kr_story_1102_111096_1BD6DD8A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6DD8A_f",
+          SoundLength = 9010
+        },
+        voice_kr_story_1102_111096_1BD6DD8A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6DD8A_m",
+          SoundLength = 8360
+        },
+        voice_kr_story_1102_111096_1BD6DDB4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6DDB4",
+          SoundLength = 8030
+        },
+        voice_kr_story_1102_111096_1BD6DDDE_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6DDDE_f",
+          SoundLength = 13140
+        },
+        voice_kr_story_1102_111096_1BD6DDDE_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6DDDE_m",
+          SoundLength = 12250
+        },
+        voice_kr_story_1102_111096_1BD6DE08 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6DE08",
+          SoundLength = 8260
+        },
+        voice_kr_story_1102_111096_1BD6FA6A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FA6A_f",
+          SoundLength = 2960
+        },
+        voice_kr_story_1102_111096_1BD6FA6A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FA6A_m",
+          SoundLength = 2790
+        },
+        voice_kr_story_1102_111096_1BD6FA94 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FA94",
+          SoundLength = 2080
+        },
+        voice_kr_story_1102_111096_1BD6FABE_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FABE_f",
+          SoundLength = 3820
+        },
+        voice_kr_story_1102_111096_1BD6FABE_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FABE_m",
+          SoundLength = 3600
+        },
+        voice_kr_story_1102_111096_1BD6FAE8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FAE8",
+          SoundLength = 4200
+        },
+        voice_kr_story_1102_111096_1BD6FB12 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FB12",
+          SoundLength = 6520
+        },
+        voice_kr_story_1102_111096_1BD6FB3C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FB3C",
+          SoundLength = 7250
+        },
+        voice_kr_story_1102_111096_1BD6FB66 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FB66",
+          SoundLength = 8210
+        },
+        voice_kr_story_1102_111096_1BD6FB90_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FB90_f",
+          SoundLength = 5750
+        },
+        voice_kr_story_1102_111096_1BD6FB90_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FB90_m",
+          SoundLength = 5810
+        },
+        voice_kr_story_1102_111096_1BD6FBBA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FBBA",
+          SoundLength = 1440
+        },
+        voice_kr_story_1102_111096_1BD6FBE4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FBE4",
+          SoundLength = 2020
+        },
+        voice_kr_story_1102_111096_1BD6FC0E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FC0E",
+          SoundLength = 4730
+        },
+        voice_kr_story_1102_111096_1BD6FC38 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FC38",
+          SoundLength = 10410
+        },
+        voice_kr_story_1102_111096_1BD6FC62 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FC62",
+          SoundLength = 1170
+        },
+        voice_kr_story_1102_111096_1BD6FC8C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FC8C",
+          SoundLength = 2050
+        },
+        voice_kr_story_1102_111096_1BD6FCB6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FCB6",
+          SoundLength = 5240
+        },
+        voice_kr_story_1102_111096_1BD6FCE0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FCE0",
+          SoundLength = 3400
+        },
+        voice_kr_story_1102_111096_1BD6FD0A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FD0A_f",
+          SoundLength = 3270
+        },
+        voice_kr_story_1102_111096_1BD6FD0A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FD0A_m",
+          SoundLength = 3180
+        },
+        voice_kr_story_1102_111096_1BD6FD34_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FD34_f",
+          SoundLength = 9790
+        },
+        voice_kr_story_1102_111096_1BD6FD34_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FD34_m",
+          SoundLength = 10580
+        },
+        voice_kr_story_1102_111096_1BD6FD5E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FD5E_f",
+          SoundLength = 6880
+        },
+        voice_kr_story_1102_111096_1BD6FD5E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FD5E_m",
+          SoundLength = 7760
+        },
+        voice_kr_story_1102_111096_1BD6FD88_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FD88_f",
+          SoundLength = 770
+        },
+        voice_kr_story_1102_111096_1BD6FD88_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FD88_m",
+          SoundLength = 820
+        },
+        voice_kr_story_1102_111096_1BD6FDB2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FDB2",
+          SoundLength = 4600
+        },
+        voice_kr_story_1102_111096_1BD6FDDC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FDDC",
+          SoundLength = 23450
+        },
+        voice_kr_story_1102_111096_1BD6FE06 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FE06",
+          SoundLength = 6890
+        },
+        voice_kr_story_1102_111096_1BD6FE30 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FE30",
+          SoundLength = 1360
+        },
+        voice_kr_story_1102_111096_1BD6FE5A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FE5A_f",
+          SoundLength = 3990
+        },
+        voice_kr_story_1102_111096_1BD6FE5A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD6FE5A_m",
+          SoundLength = 4510
+        },
+        voice_kr_story_1102_111096_1BD71B3A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD71B3A",
+          SoundLength = 3870,
+          SoundVolume = 0
+        },
+        voice_kr_story_1102_111096_1BD71B64 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD71B64",
+          SoundLength = 6870
+        },
+        voice_kr_story_1102_111096_1BD71B8E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD71B8E_f",
+          SoundLength = 3120
+        },
+        voice_kr_story_1102_111096_1BD71B8E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD71B8E_m",
+          SoundLength = 2990
+        },
+        voice_kr_story_1102_111096_1BD71BB8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD71BB8",
+          SoundLength = 2650
+        },
+        voice_kr_story_1102_111096_1BD71BE2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD71BE2",
+          SoundLength = 11760
+        },
+        voice_kr_story_1102_111096_1BD71C0C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD71C0C",
+          SoundLength = 4700
+        },
+        voice_kr_story_1102_111096_1BD71C36_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD71C36_f",
+          SoundLength = 2920
+        },
+        voice_kr_story_1102_111096_1BD71C36_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD71C36_m",
+          SoundLength = 2770
+        },
+        voice_kr_story_1102_111096_1BD71C60 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD71C60",
+          SoundLength = 5070
+        },
+        voice_kr_story_1102_111096_1BD71C8A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD71C8A",
+          SoundLength = 3140
+        },
+        voice_kr_story_1102_111096_1BD71CB4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD71CB4",
+          SoundLength = 7500
+        },
+        voice_kr_story_1102_111096_1BD71CDE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD71CDE",
+          SoundLength = 5010
+        },
+        voice_kr_story_1102_111096_1BD71D08 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD71D08",
+          SoundLength = 8410
+        },
+        voice_kr_story_1102_111096_1BD71D32_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD71D32_f",
+          SoundLength = 1100
+        },
+        voice_kr_story_1102_111096_1BD71D32_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD71D32_m",
+          SoundLength = 760
+        },
+        voice_kr_story_1102_111096_1BD72BA2_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72BA2_f",
+          SoundLength = 2730
+        },
+        voice_kr_story_1102_111096_1BD72BA2_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72BA2_m",
+          SoundLength = 2830
+        },
+        voice_kr_story_1102_111096_1BD72BCC = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72BCC",
+          SoundLength = 5610
+        },
+        voice_kr_story_1102_111096_1BD72BF6 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72BF6",
+          SoundLength = 8070
+        },
+        voice_kr_story_1102_111096_1BD72C20_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72C20_f",
+          SoundLength = 6870
+        },
+        voice_kr_story_1102_111096_1BD72C20_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72C20_m",
+          SoundLength = 7140
+        },
+        voice_kr_story_1102_111096_1BD72C4A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72C4A_f",
+          SoundLength = 5060
+        },
+        voice_kr_story_1102_111096_1BD72C4A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72C4A_m",
+          SoundLength = 5440
+        },
+        voice_kr_story_1102_111096_1BD72C74 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72C74",
+          SoundLength = 20350
+        },
+        voice_kr_story_1102_111096_1BD72C9E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72C9E_f",
+          SoundLength = 2010
+        },
+        voice_kr_story_1102_111096_1BD72C9E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72C9E_m",
+          SoundLength = 1950
+        },
+        voice_kr_story_1102_111096_1BD72CC8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72CC8",
+          SoundLength = 7860
+        },
+        voice_kr_story_1102_111096_1BD72CF2_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72CF2_f",
+          SoundLength = 1830
+        },
+        voice_kr_story_1102_111096_1BD72CF2_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72CF2_m",
+          SoundLength = 1850
+        },
+        voice_kr_story_1102_111096_1BD72D1C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72D1C",
+          SoundLength = 2610
+        },
+        voice_kr_story_1102_111096_1BD72D46_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72D46_f",
+          SoundLength = 2020
+        },
+        voice_kr_story_1102_111096_1BD72D46_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72D46_m",
+          SoundLength = 2070
+        },
+        voice_kr_story_1102_111096_1BD72D70 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72D70",
+          SoundLength = 9190
+        },
+        voice_kr_story_1102_111096_1BD72D9A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72D9A_f",
+          SoundLength = 6480
+        },
+        voice_kr_story_1102_111096_1BD72D9A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72D9A_m",
+          SoundLength = 6350
+        },
+        voice_kr_story_1102_111096_1BD72DC4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72DC4",
+          SoundLength = 11480
+        },
+        voice_kr_story_1102_111096_1BD72DEE_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72DEE_f",
+          SoundLength = 5940
+        },
+        voice_kr_story_1102_111096_1BD72DEE_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72DEE_m",
+          SoundLength = 6530
+        },
+        voice_kr_story_1102_111096_1BD72E18 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72E18",
+          SoundLength = 9450
+        },
+        voice_kr_story_1102_111096_1BD72E42 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72E42",
+          SoundLength = 12760
+        },
+        voice_kr_story_1102_111096_1BD72E6C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72E6C",
+          SoundLength = 12790
+        },
+        voice_kr_story_1102_111096_1BD72E96_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72E96_f",
+          SoundLength = 2040
+        },
+        voice_kr_story_1102_111096_1BD72E96_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72E96_m",
+          SoundLength = 1940
+        },
+        voice_kr_story_1102_111096_1BD72EC0 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72EC0",
+          SoundLength = 4500
+        },
+        voice_kr_story_1102_111096_1BD72EEA = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD72EEA",
+          SoundLength = 11820
+        },
+        voice_kr_story_1102_111096_1BD73C0A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD73C0A_f",
+          SoundLength = 4790
+        },
+        voice_kr_story_1102_111096_1BD73C0A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD73C0A_m",
+          SoundLength = 5430
+        },
+        voice_kr_story_1102_111096_1BD75CDA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD75CDA_f",
+          SoundLength = 870
+        },
+        voice_kr_story_1102_111096_1BD75CDA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD75CDA_m",
+          SoundLength = 530
+        },
+        voice_kr_story_1102_111096_1BD75D04 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD75D04",
+          SoundLength = 7730
+        },
+        voice_kr_story_1102_111096_1BD75D2E_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD75D2E_f",
+          SoundLength = 2780
+        },
+        voice_kr_story_1102_111096_1BD75D2E_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD75D2E_m",
+          SoundLength = 2790
+        },
+        voice_kr_story_1102_111096_1BD75D58 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD75D58",
+          SoundLength = 9330
+        },
+        voice_kr_story_1102_111096_1BD75E00 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD75E00",
+          SoundLength = 3120
+        },
+        voice_kr_story_1102_111096_1BD75E2A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD75E2A",
+          SoundLength = 4270
+        },
+        voice_kr_story_1102_111096_1BD75E54_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD75E54_f",
+          SoundLength = 5450
+        },
+        voice_kr_story_1102_111096_1BD75E54_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD75E54_m",
+          SoundLength = 6080
+        },
+        voice_kr_story_1102_111096_1BD75E7E = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD75E7E",
+          SoundLength = 4140
+        },
+        voice_kr_story_1102_111096_1BD75EA8_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD75EA8_f",
+          SoundLength = 3830
+        },
+        voice_kr_story_1102_111096_1BD75EA8_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD75EA8_m",
+          SoundLength = 4140
+        },
+        voice_kr_story_1102_111096_1BD75ED2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD75ED2",
+          SoundLength = 7930
+        },
+        voice_kr_story_1102_111096_1BD75EFC_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD75EFC_f",
+          SoundLength = 3020
+        },
+        voice_kr_story_1102_111096_1BD75EFC_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD75EFC_m",
+          SoundLength = 3320
+        },
+        voice_kr_story_1102_111096_1BD75F26 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD75F26",
+          SoundLength = 12390
+        },
+        voice_kr_story_1102_111096_1BD75F50_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD75F50_f",
+          SoundLength = 5720
+        },
+        voice_kr_story_1102_111096_1BD75F50_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD75F50_m",
+          SoundLength = 7020
+        },
+        voice_kr_story_1102_111096_1BD75F7A = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD75F7A",
+          SoundLength = 9450
+        },
+        voice_kr_story_1102_111096_1BD75FA4_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD75FA4_f",
+          SoundLength = 2000
+        },
+        voice_kr_story_1102_111096_1BD75FA4_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD75FA4_m",
+          SoundLength = 1630
+        },
+        voice_kr_story_1102_111096_1BD75FCE = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD75FCE",
+          SoundLength = 6830
+        },
+        voice_kr_story_1102_111096_1BD75FF8 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD75FF8",
+          SoundLength = 8340
+        },
+        voice_kr_story_1102_111096_1BD76022 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD76022",
+          SoundLength = 3890
+        },
+        voice_kr_story_1102_111096_1BD77DD4 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD77DD4",
+          SoundLength = 920
+        },
+        voice_kr_story_1102_111096_1BD78E12_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD78E12_f",
+          SoundLength = 4800
+        },
+        voice_kr_story_1102_111096_1BD78E12_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD78E12_m",
+          SoundLength = 4480
+        },
+        voice_kr_story_1102_111096_1BD873C2 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD873C2",
+          SoundLength = 3950
+        },
+        voice_kr_story_1102_111096_1BD8842A_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD8842A_f",
+          SoundLength = 1270
+        },
+        voice_kr_story_1102_111096_1BD8842A_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD8842A_m",
+          SoundLength = 1180
+        },
+        voice_kr_story_1102_111096_1BD88454 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD88454",
+          SoundLength = 780
+        },
+        voice_kr_story_1102_111096_1BD89492 = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD89492",
+          SoundLength = 4420
+        },
+        voice_kr_story_1102_111096_1BD8A4FA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD8A4FA_f",
+          SoundLength = 4030
+        },
+        voice_kr_story_1102_111096_1BD8A4FA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD8A4FA_m",
+          SoundLength = 3480
+        },
+        voice_kr_story_1102_111096_1BD8B562_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD8B562_f",
+          SoundLength = 5050
+        },
+        voice_kr_story_1102_111096_1BD8B562_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD8B562_m",
+          SoundLength = 5770
+        },
+        voice_kr_story_1102_111096_1BD8C5CA_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD8C5CA_f",
+          SoundLength = 1120
+        },
+        voice_kr_story_1102_111096_1BD8C5CA_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD8C5CA_m",
+          SoundLength = 1040
+        },
+        voice_kr_story_1102_111096_1BD8C5F4_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD8C5F4_f",
+          SoundLength = 2690
+        },
+        voice_kr_story_1102_111096_1BD8C5F4_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD8C5F4_m",
+          SoundLength = 2300
+        },
+        voice_kr_story_1102_111096_1BD8D632_f = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD8D632_f",
+          SoundLength = 2560
+        },
+        voice_kr_story_1102_111096_1BD8D632_m = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD8D632_m",
+          SoundLength = 2460
+        },
+        voice_kr_story_1102_111096_1BD8D65C = {
+          ProgrammerSoundPath = "event:/voice/kr/story/1102",
+          SelectKey = "voice_kr_story_1102_111096_1BD8D65C",
+          SoundLength = 3410
+        },
         voice_kr_story_1200_120004_1E0AAFCA = {
           ProgrammerSoundPath = "event:/voice/kr/story/1200",
           SelectKey = "voice_kr_story_1200_120004_1E0AAFCA",
@@ -65905,7 +77829,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1200",
           SelectKey = "voice_kr_story_1200_120004_1E0AB048_m",
           SoundLength = 12830
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1200_120004_1E0AB072_f",
+    MaxKey = "voice_kr_story_1200_120015_1E0B6D1E_f",
+    Loader = function()
+      return {
         voice_kr_story_1200_120004_1E0AB072_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1200",
           SelectKey = "voice_kr_story_1200_120004_1E0AB072_f",
@@ -66730,15 +78662,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1200",
           SelectKey = "voice_kr_story_1200_120015_1E0B6760_f",
           SoundLength = 2640
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1200_120015_1E0B6760_m",
-    MaxKey = "voice_kr_story_1201_120100_1E10DA12_f",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1200_120015_1E0B6760_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1200",
           SelectKey = "voice_kr_story_1200_120015_1E0B6760_m",
@@ -66913,7 +78837,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1200",
           SelectKey = "voice_kr_story_1200_120015_1E0B6D1E_f",
           SoundLength = 6450
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1200_120015_1E0B6D1E_m",
+    MaxKey = "voice_kr_story_1201_120101_1E10EBA0_f",
+    Loader = function()
+      return {
         voice_kr_story_1200_120015_1E0B6D1E_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1200",
           SelectKey = "voice_kr_story_1200_120015_1E0B6D1E_m",
@@ -67738,15 +79670,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120100_1E10DA12_f",
           SoundLength = 3560
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1201_120100_1E10DA12_m",
-    MaxKey = "voice_kr_story_1201_120106_1E113ADE_f",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1201_120100_1E10DA12_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120100_1E10DA12_m",
@@ -67921,7 +79845,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120101_1E10EBA0_f",
           SoundLength = 9830
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1201_120101_1E10EBA0_m",
+    MaxKey = "voice_kr_story_1201_120107_1E114DE6",
+    Loader = function()
+      return {
         voice_kr_story_1201_120101_1E10EBA0_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120101_1E10EBA0_m",
@@ -68746,15 +80678,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120106_1E113ADE_f",
           SoundLength = 8260
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1201_120106_1E113ADE_m",
-    MaxKey = "voice_kr_story_1201_120111_1E1E2B9E",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1201_120106_1E113ADE_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120106_1E113ADE_m",
@@ -68929,7 +80853,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120107_1E114DE6",
           SoundLength = 11630
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1201_120107_1E114E10",
+    MaxKey = "voice_kr_story_1201_120111_C8462C8E",
+    Loader = function()
+      return {
         voice_kr_story_1201_120107_1E114E10 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120107_1E114E10",
@@ -69754,15 +81686,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120111_1E1E2B9E",
           SoundLength = 740
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1201_120111_1E1E2BC8",
-    MaxKey = "voice_kr_story_1201_120113_1E1F10FA_f",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1201_120111_1E1E2BC8 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120111_1E1E2BC8",
@@ -69937,7 +81861,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120111_C8462C8E",
           SoundLength = 14590
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1201_120111_C8462CB8",
+    MaxKey = "voice_kr_story_1201_120113_1E1F2402",
+    Loader = function()
+      return {
         voice_kr_story_1201_120111_C8462CB8 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120111_C8462CB8",
@@ -70762,15 +82694,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120113_1E1F10FA_f",
           SoundLength = 1530
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1201_120113_1E1F10FA_m",
-    MaxKey = "voice_kr_story_1201_120114_1E1FD682",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1201_120113_1E1F10FA_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120113_1E1F10FA_m",
@@ -70945,7 +82869,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120113_1E1F2402",
           SoundLength = 3050
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1201_120113_1E1F242C_f",
+    MaxKey = "voice_kr_story_1201_120114_1E1FF6D4_f",
+    Loader = function()
+      return {
         voice_kr_story_1201_120113_1E1F242C_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120113_1E1F242C_f",
@@ -71770,15 +83702,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120114_1E1FD682",
           SoundLength = 4150
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1201_120114_1E1FD6AC",
-    MaxKey = "voice_kr_story_1201_120114_1E20AD44_m",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1201_120114_1E1FD6AC = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120114_1E1FD6AC",
@@ -71953,7 +83877,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120114_1E1FF6D4_f",
           SoundLength = 1570
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1201_120114_1E1FF6D4_m",
+    MaxKey = "voice_kr_story_1201_120114_C8483B0C",
+    Loader = function()
+      return {
         voice_kr_story_1201_120114_1E1FF6D4_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120114_1E1FF6D4_m",
@@ -72778,15 +84710,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120114_1E20AD44_m",
           SoundLength = 1300
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1201_120114_1E20AD6E",
-    MaxKey = "voice_kr_story_1201_120126_1E128352",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1201_120114_1E20AD6E = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120114_1E20AD6E",
@@ -72961,7 +84885,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120114_C8483B0C",
           SoundLength = 2100
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1201_120115_1E11CCE2",
+    MaxKey = "voice_kr_story_1201_120127_1E129588",
+    Loader = function()
+      return {
         voice_kr_story_1201_120115_1E11CCE2 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120115_1E11CCE2",
@@ -73786,15 +85718,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120126_1E128352",
           SoundLength = 6850
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1201_120126_1E12837C",
-    MaxKey = "voice_kr_story_1201_120135_1E1319EE_m",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1201_120126_1E12837C = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120126_1E12837C",
@@ -73969,7 +85893,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120127_1E129588",
           SoundLength = 7840
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1201_120127_1E1295B2",
+    MaxKey = "voice_kr_story_1201_120140_1E136884_f",
+    Loader = function()
+      return {
         voice_kr_story_1201_120127_1E1295B2 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120127_1E1295B2",
@@ -74794,15 +86726,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120135_1E1319EE_m",
           SoundLength = 5330
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1201_120135_1E131A18",
-    MaxKey = "voice_kr_story_1201_120159_1E14A2DC",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1201_120135_1E131A18 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120135_1E131A18",
@@ -74977,7 +86901,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120140_1E136884_f",
           SoundLength = 3590
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1201_120140_1E136884_m",
+    MaxKey = "voice_kr_story_1201_120165_1E15015C",
+    Loader = function()
+      return {
         voice_kr_story_1201_120140_1E136884_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120140_1E136884_m",
@@ -75802,15 +87734,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120159_1E14A2DC",
           SoundLength = 9010
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1201_120159_1E14A306",
-    MaxKey = "voice_kr_story_1201_120184_1E163A64",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1201_120159_1E14A306 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120159_1E14A306",
@@ -75985,7 +87909,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120165_1E15015C",
           SoundLength = 6490
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1201_120166_1E15119A",
+    MaxKey = "voice_kr_story_1201_120186_1E165C5A",
+    Loader = function()
+      return {
         voice_kr_story_1201_120166_1E15119A = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120166_1E15119A",
@@ -76810,15 +88742,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120184_1E163A64",
           SoundLength = 6310
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1201_120185_1E164952",
-    MaxKey = "voice_kr_story_1201_120207_1E17B296",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1201_120185_1E164952 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120185_1E164952",
@@ -76993,7 +88917,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120186_1E165C5A",
           SoundLength = 660
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1201_120186_1E165CAE",
+    MaxKey = "voice_kr_story_1201_120212_1E180474_m",
+    Loader = function()
+      return {
         voice_kr_story_1201_120186_1E165CAE = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120186_1E165CAE",
@@ -77818,15 +89750,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120207_1E17B296",
           SoundLength = 10200
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1201_120207_1E17B2C0",
-    MaxKey = "voice_kr_story_1201_120229_1E191E7A",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1201_120207_1E17B2C0 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120207_1E17B2C0",
@@ -78001,7 +89925,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120212_1E180474_m",
           SoundLength = 3840
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1201_120220_1E18878A",
+    MaxKey = "voice_kr_story_1201_120233_1E195E4C",
+    Loader = function()
+      return {
         voice_kr_story_1201_120220_1E18878A = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120220_1E18878A",
@@ -78826,15 +90758,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120229_1E191E7A",
           SoundLength = 2380
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1201_120229_1E191EA4",
-    MaxKey = "voice_kr_story_1204_120406_1E247662",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1201_120229_1E191EA4 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120229_1E191EA4",
@@ -79009,7 +90933,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120233_1E195E4C",
           SoundLength = 1040
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1201_120233_1E195E76_f",
+    MaxKey = "voice_kr_story_1204_120411_1E24C576",
+    Loader = function()
+      return {
         voice_kr_story_1201_120233_1E195E76_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120233_1E195E76_f",
@@ -79834,15 +91766,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120406_1E247662",
           SoundLength = 10060
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1204_120406_1E24768C",
-    MaxKey = "voice_kr_story_1204_120429_1E25EF12_m",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1204_120406_1E24768C = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120406_1E24768C",
@@ -80017,7 +91941,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120411_1E24C576",
           SoundLength = 6440
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1204_120411_1E24C5A0",
+    MaxKey = "voice_kr_story_1204_120429_1E25F3D4",
+    Loader = function()
+      return {
         voice_kr_story_1204_120411_1E24C5A0 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120411_1E24C5A0",
@@ -80842,15 +92774,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120429_1E25EF12_m",
           SoundLength = 8770
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1204_120429_1E25EF3C",
-    MaxKey = "voice_kr_story_1204_120437_1E2674F2",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1204_120429_1E25EF3C = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120429_1E25EF3C",
@@ -81025,7 +92949,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120429_1E25F3D4",
           SoundLength = 2560
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1204_120429_1E25F3FE",
+    MaxKey = "voice_kr_story_1204_120438_1E26816A",
+    Loader = function()
+      return {
         voice_kr_story_1204_120429_1E25F3FE = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120429_1E25F3FE",
@@ -81850,15 +93782,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120437_1E2674F2",
           SoundLength = 950
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1204_120437_1E26751C",
-    MaxKey = "voice_kr_story_1204_120449_1E273510_1",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1204_120437_1E26751C = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120437_1E26751C",
@@ -82033,7 +93957,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120438_1E26816A",
           SoundLength = 3240
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1204_120438_1E268194",
+    MaxKey = "voice_kr_story_1204_120451_1E2757D8",
+    Loader = function()
+      return {
         voice_kr_story_1204_120438_1E268194 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120438_1E268194",
@@ -82858,15 +94790,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120449_1E273510_1",
           SoundLength = 1030
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1204_120449_1E273510_2",
-    MaxKey = "voice_kr_story_1204_120457_1E27BA48",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1204_120449_1E273510_2 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120449_1E273510_2",
@@ -83041,7 +94965,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120451_1E2757D8",
           SoundLength = 11380
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1204_120451_1E275802",
+    MaxKey = "voice_kr_story_1204_120457_1E27BE8C_f",
+    Loader = function()
+      return {
         voice_kr_story_1204_120451_1E275802 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120451_1E275802",
@@ -83866,15 +95798,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120457_1E27BA48",
           SoundLength = 10790
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1204_120457_1E27BA72",
-    MaxKey = "voice_kr_story_1204_120469_1E287D06_m",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1204_120457_1E27BA72 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120457_1E27BA72",
@@ -84049,7 +95973,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120457_1E27BE8C_f",
           SoundLength = 18700
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1204_120457_1E27BE8C_m",
+    MaxKey = "voice_kr_story_1204_120470_1E288E16",
+    Loader = function()
+      return {
         voice_kr_story_1204_120457_1E27BE8C_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120457_1E27BE8C_m",
@@ -84874,15 +96806,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120469_1E287D06_m",
           SoundLength = 3610
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1204_120469_1E287D5A",
-    MaxKey = "voice_kr_story_1204_120484_1E2972F4",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1204_120469_1E287D5A = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120469_1E287D5A",
@@ -85057,7 +96981,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120470_1E288E16",
           SoundLength = 4080
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1204_120470_1E288E40",
+    MaxKey = "voice_kr_story_1204_120487_1E29A74A_f",
+    Loader = function()
+      return {
         voice_kr_story_1204_120470_1E288E40 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120470_1E288E40",
@@ -85882,15 +97814,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120484_1E2972F4",
           SoundLength = 5500
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1204_120484_1E29731E",
-    MaxKey = "voice_kr_story_1204_120491_1E29E992",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1204_120484_1E29731E = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120484_1E29731E",
@@ -86065,7 +97989,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120487_1E29A74A_f",
           SoundLength = 6210
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1204_120487_1E29A74A_m",
+    MaxKey = "voice_kr_story_1204_120492_1E29FB74",
+    Loader = function()
+      return {
         voice_kr_story_1204_120487_1E29A74A_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120487_1E29A74A_m",
@@ -86890,15 +98822,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120491_1E29E992",
           SoundLength = 5370
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1204_120491_1E29E9BC",
-    MaxKey = "voice_kr_story_1206_120605_1E313764",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1204_120491_1E29E9BC = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120491_1E29E9BC",
@@ -87073,7 +98997,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120492_1E29FB74",
           SoundLength = 4240
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1204_120492_1E29FB9E",
+    MaxKey = "voice_kr_story_1206_120606_1E31474E",
+    Loader = function()
+      return {
         voice_kr_story_1204_120492_1E29FB9E = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120492_1E29FB9E",
@@ -87898,15 +99830,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120605_1E313764",
           SoundLength = 10420
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1206_120605_1E31378E_f",
-    MaxKey = "voice_kr_story_1206_120611_1E319C74",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1206_120605_1E31378E_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120605_1E31378E_f",
@@ -88081,7 +100005,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120606_1E31474E",
           SoundLength = 10250
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1206_120606_1E3147A2",
+    MaxKey = "voice_kr_story_1206_120612_1E31AC34_m",
+    Loader = function()
+      return {
         voice_kr_story_1206_120606_1E3147A2 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120606_1E3147A2",
@@ -88906,15 +100838,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120611_1E319C74",
           SoundLength = 2100
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1206_120612_1E31A6F4",
-    MaxKey = "voice_kr_story_1206_120617_1E31FDBE_m",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1206_120612_1E31A6F4 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120612_1E31A6F4",
@@ -89089,7 +101013,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120612_1E31AC34_m",
           SoundLength = 2970
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1206_120612_1E31AC5E",
+    MaxKey = "voice_kr_story_1206_120619_1E3219A2_m",
+    Loader = function()
+      return {
         voice_kr_story_1206_120612_1E31AC5E = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120612_1E31AC5E",
@@ -89914,15 +101846,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120617_1E31FDBE_m",
           SoundLength = 1200
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1206_120617_1E31FDE8",
-    MaxKey = "voice_kr_story_1206_120625_1E327CE4_f",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1206_120617_1E31FDE8 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120617_1E31FDE8",
@@ -90097,7 +102021,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120619_1E3219A2_m",
           SoundLength = 1930
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1206_120619_1E3219CC",
+    MaxKey = "voice_kr_story_1206_120626_1E328D4C",
+    Loader = function()
+      return {
         voice_kr_story_1206_120619_1E3219CC = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120619_1E3219CC",
@@ -90922,15 +102854,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120625_1E327CE4_f",
           SoundLength = 6350
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1206_120625_1E327CE4_m",
-    MaxKey = "voice_kr_story_1206_120632_1E32EFE6",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1206_120625_1E327CE4_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120625_1E327CE4_m",
@@ -91105,7 +103029,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120626_1E328D4C",
           SoundLength = 7860
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1206_120626_1E328D76",
+    MaxKey = "voice_kr_story_1206_120633_1E32FFD0",
+    Loader = function()
+      return {
         voice_kr_story_1206_120626_1E328D76 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120626_1E328D76",
@@ -91930,15 +103862,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120632_1E32EFE6",
           SoundLength = 5730
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1206_120632_1E32F010",
-    MaxKey = "voice_kr_story_2001_200006_3211C7B8_m",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1206_120632_1E32F010 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120632_1E32F010",
@@ -92113,7 +104037,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120633_1E32FFD0",
           SoundLength = 4860
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1206_120633_1E32FFFA",
+    MaxKey = "voice_kr_story_2001_200008_3211EA02",
+    Loader = function()
+      return {
         voice_kr_story_1206_120633_1E32FFFA = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120633_1E32FFFA",
@@ -92938,15 +104870,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/2001",
           SelectKey = "voice_kr_story_2001_200006_3211C7B8_m",
           SoundLength = 2790
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_2001_200008_3211E56A",
-    MaxKey = "voice_kr_story_2001_200054_3214DDAE",
-    Loader = function()
-      return {
+        },
         voice_kr_story_2001_200008_3211E56A = {
           ProgrammerSoundPath = "event:/voice/kr/story/2001",
           SelectKey = "voice_kr_story_2001_200008_3211E56A",
@@ -93121,7 +105045,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/2001",
           SelectKey = "voice_kr_story_2001_200008_3211EA02",
           SoundLength = 10180
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_2001_200008_3211EA2C",
+    MaxKey = "voice_kr_story_2001_200057_32150CC4_m",
+    Loader = function()
+      return {
         voice_kr_story_2001_200008_3211EA2C = {
           ProgrammerSoundPath = "event:/voice/kr/story/2001",
           SelectKey = "voice_kr_story_2001_200008_3211EA2C",
@@ -93946,15 +105878,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/2001",
           SelectKey = "voice_kr_story_2001_200054_3214DDAE",
           SoundLength = 9160
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_2001_200055_3214E882_f",
-    MaxKey = "voice_kr_story_2001_200070_3215E1B8",
-    Loader = function()
-      return {
+        },
         voice_kr_story_2001_200055_3214E882_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/2001",
           SelectKey = "voice_kr_story_2001_200055_3214E882_f",
@@ -94129,7 +106053,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/2001",
           SelectKey = "voice_kr_story_2001_200057_32150CC4_m",
           SoundLength = 1210
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_2001_200057_32150CEE",
+    MaxKey = "voice_kr_story_2001_200070_3215E1B8",
+    Loader = function()
+      return {
         voice_kr_story_2001_200057_32150CEE = {
           ProgrammerSoundPath = "event:/voice/kr/story/2001",
           SelectKey = "voice_kr_story_2001_200057_32150CEE",

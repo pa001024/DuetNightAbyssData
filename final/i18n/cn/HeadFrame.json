@@ -301,5 +301,33 @@
     "desc": "适用于头像框。",
     "icon": "T_Head_Frame40",
     "access": "通过商店获得"
+  },
+  {
+    "id": 10047,
+    "name": "发条旋舞·锈红",
+    "desc": "适用于头像框。",
+    "icon": "T_Head_Frame41",
+    "access": "通过活动获得"
+  },
+  {
+    "id": 10048,
+    "name": "发条旋舞·墨玉",
+    "desc": "适用于头像框。",
+    "icon": "T_Head_Frame40",
+    "access": "通过活动获得"
+  },
+  {
+    "id": 10049,
+    "name": "鹅啊——",
+    "desc": "适用于头像框。",
+    "icon": "T_Head_Frame43",
+    "access": "通过商店获得"
+  },
+  {
+    "id": 10050,
+    "name": "来自幽冥",
+    "desc": "适用于头像框。",
+    "icon": "T_Head_Frame40",
+    "access": "通过月度订单获得"
   }
 ]

@@ -125,30 +125,30 @@ return ReadOnly("Exterminate", {
     EliteRange = T.RT_1,
     EliteSpawnOnlyRelation = true,
     EliteSpawnRule = 110801,
-    NormalRange = T.RT_3,
+    NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 110802,
-    TargetNum = 40
+    TargetNum = 70
   },
   [90802] = {
     DungeonId = 90802,
     EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = true,
     EliteSpawnRule = 110801,
-    NormalRange = T.RT_3,
+    NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 110802,
-    TargetNum = 40
+    TargetNum = 70
   },
   [90803] = {
     DungeonId = 90803,
     EliteRange = T.RT_2,
     EliteSpawnOnlyRelation = true,
     EliteSpawnRule = 10801,
-    NormalRange = T.RT_3,
+    NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10802,
-    TargetNum = 40
+    TargetNum = 70
   },
   [90804] = {
     DungeonId = 90804,
@@ -165,30 +165,30 @@ return ReadOnly("Exterminate", {
     EliteRange = T.RT_4,
     EliteSpawnOnlyRelation = true,
     EliteSpawnRule = 110801,
-    NormalRange = T.RT_3,
+    NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 110802,
-    TargetNum = 40
+    TargetNum = 70
   },
   [90806] = {
     DungeonId = 90806,
     EliteRange = T.RT_4,
     EliteSpawnOnlyRelation = true,
     EliteSpawnRule = 10801,
-    NormalRange = T.RT_3,
+    NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10802,
-    TargetNum = 40
+    TargetNum = 70
   },
   [90807] = {
     DungeonId = 90807,
     EliteRange = T.RT_2,
     EliteSpawnOnlyRelation = true,
     EliteSpawnRule = 10801,
-    NormalRange = T.RT_3,
+    NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10802,
-    TargetNum = 40
+    TargetNum = 70
   },
   [91125] = {
     DungeonId = 91125,

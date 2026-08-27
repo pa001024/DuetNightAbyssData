@@ -33,36 +33,6 @@ local DaysOrdinal = {
   "31st"
 }
 local MonthNames = {
-  ContentES = {
-    full = {
-      "enero",
-      "febrero",
-      "marzo",
-      "abril",
-      "mayo",
-      "junio",
-      "julio",
-      "agosto",
-      "septiembre",
-      "octubre",
-      "noviembre",
-      "diciembre"
-    },
-    abbr = {
-      "ene",
-      "feb",
-      "mar",
-      "abr",
-      "may",
-      "jun",
-      "jul",
-      "ago",
-      "sept",
-      "oct",
-      "nov",
-      "dic"
-    }
-  },
   ContentFR = {
     full = {
       "janvier",
@@ -91,36 +61,6 @@ local MonthNames = {
       "oct.",
       "nov.",
       "déc."
-    }
-  },
-  ContentDE = {
-    full = {
-      "Januar",
-      "Februar",
-      "März",
-      "April",
-      "Mai",
-      "Juni",
-      "Juli",
-      "August",
-      "September",
-      "Oktober",
-      "November",
-      "Dezember"
-    },
-    abbr = {
-      "Jan.",
-      "Feb.",
-      "März",
-      "Apr.",
-      "Mai",
-      "Juni",
-      "Juli",
-      "Aug.",
-      "Sept.",
-      "Okt.",
-      "Nov.",
-      "Dez."
     }
   }
 }
@@ -155,8 +95,6 @@ function Utils.GDate(DateFormatID, Time, Language)
     Format = Format.FormatJP
   elseif Language == CommonConst.SystemLanguages.KR then
     Format = Format.FormatKR
-  elseif Language == CommonConst.SystemLanguages.ES then
-    Format = Format.FormatES
   elseif Language == CommonConst.SystemLanguages.FR then
     Format = Format.FormatFR
   else

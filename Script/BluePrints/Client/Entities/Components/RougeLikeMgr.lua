@@ -1,5 +1,6 @@
 local TimeUtils = require("Utils.TimeUtils")
 local RougeConst = require("BluePrints.UI.UI_PC.RougeLike.RougeAchive.RougeConst")
+local SerializeUtils = require("Utils.SerializeUtils")
 local Component = {}
 
 function Component:EnterWorld()

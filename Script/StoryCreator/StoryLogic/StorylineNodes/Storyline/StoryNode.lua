@@ -4,6 +4,11 @@ local EMCache = require("EMCache.EMCache")
 
 function StoryNode:Start(Context, NodeId)
   self.Questline = Questline(self.Data, Context, self)
+  local SuccessNode = self.Questline and self.Questline:GetSuccessNode()
+  if SuccessNode then
+    self.QuestDeliverId = SuccessNode.Id
+    self.QuestDeliverLoadingId = SuccessNode.LoadingId
+  end
   local Avatar = GWorld:GetAvatar()
   local Cache
   if Avatar then
@@ -100,6 +105,10 @@ function StoryNode:IsGuideNodeRunning()
     return self.Questline:IsGuideNodeRunning()
   end
   return false
+end
+
+function StoryNode:UpdateCurrentSTLData(SuitSubType, SuitKey, UpdateParam)
+  self.Context:UpdateCurrentSTLData(SuitSubType, SuitKey, UpdateParam)
 end
 
 return StoryNode

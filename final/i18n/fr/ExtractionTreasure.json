@@ -622,5 +622,77 @@
     "type": 4,
     "rarity": 5,
     "value": 280000
+  },
+  {
+    "id": 200130,
+    "name": "Épée longue en bronze",
+    "icon": "T_Activity_SoloTreasure_33",
+    "shape": [
+      2,
+      3
+    ],
+    "type": 4,
+    "rarity": 5,
+    "value": 200000
+  },
+  {
+    "id": 200131,
+    "name": "Cheval d’or galopant",
+    "icon": "T_Activity_SoloTreasure_32",
+    "shape": [
+      3,
+      3
+    ],
+    "type": 4,
+    "rarity": 5,
+    "value": 150000
+  },
+  {
+    "id": 200132,
+    "name": "Imitation du Jade de l’Équilibre",
+    "icon": "T_Activity_SoloTreasure_30",
+    "shape": [
+      1,
+      1
+    ],
+    "type": 4,
+    "rarity": 5,
+    "value": 150000
+  },
+  {
+    "id": 200133,
+    "name": "Le boulier prodigieux",
+    "icon": "T_Activity_SoloTreasure_31",
+    "shape": [
+      2,
+      3
+    ],
+    "type": 3,
+    "rarity": 4,
+    "value": 25000
+  },
+  {
+    "id": 200134,
+    "name": "Sceptre du dragon assoupi",
+    "icon": "T_Activity_SoloTreasure_34",
+    "shape": [
+      1,
+      3
+    ],
+    "type": 3,
+    "rarity": 4,
+    "value": 18000
+  },
+  {
+    "id": 200135,
+    "name": "Gourde des nuages errants",
+    "icon": "T_Activity_SoloTreasure_35",
+    "shape": [
+      1,
+      2
+    ],
+    "type": 3,
+    "rarity": 4,
+    "value": 12000
   }
 ]

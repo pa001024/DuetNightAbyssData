@@ -115,16 +115,4 @@ function RougeLikeInfo:IsManualRewardGot(ManualType, Index)
 end
 
 FormatProperties(RougeLikeInfo)
-local RougeProInfo = Class("RougeProInfo", CustomTypes.CustomAttr)
-RougeProInfo.__Props__ = {
-  LastSeasonId = prop.prop("Int", "save", -1),
-  ProgressingSeasonId = prop.prop("Int", "client save cross"),
-  Manual = prop.prop("Int2IntSetDict", "client save"),
-  ManualRewardGot = prop.prop("Int2IntSetDict", "client save"),
-  Talent = prop.prop("Int2IntDict", "client save cross"),
-  TalentTotalPoint = prop.prop("Int", "client save", 0),
-  Contract = prop.prop("Int", "client save cross", 3),
-  UnlockContract = prop.prop("Int", "client save", 0)
-}
-FormatProperties(RougeProInfo)
-return {RougeLikeInfo = RougeLikeInfo, RougeProInfo = RougeProInfo}
+return {RougeLikeInfo = RougeLikeInfo}

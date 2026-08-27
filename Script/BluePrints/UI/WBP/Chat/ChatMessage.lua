@@ -1,6 +1,7 @@
 local json = require("rapidjson")
 local AppearanceShareModel = require("BluePrints.UI.WBP.Appearance.AppearanceShareModel")
 local AutoChessShareModel = require("BluePrints.UI.AutoChess.AutoChessShareModel")
+local TeamHallRecruitShareModel = require("BluePrints.UI.WBP.TeamHall.TeamHallRecruitShareModel")
 local IsSharerInfoEmpty, BuildSharerInfoFromSender
 local MessageWrap = {
   __index = {
@@ -9,7 +10,6 @@ local MessageWrap = {
     EmojiInfos = nil,
     ModSuitInfo = nil,
     Index = 0,
-    bMergedDisplay = false,
     _SetUpMessage = function(self, Message)
       if Message then
         self.Message = Message
@@ -64,6 +64,9 @@ local MessageWrap = {
         self.GuildRecruitInfo = json.decode(JsonStr)
       elseif string.startswith(Content, ChatCommon.AutoChessShareHeader) then
         self.AutoChessShareInfo = AutoChessShareModel.ParseAutoChessShareMsg(Content)
+      elseif string.startswith(Content, ChatCommon.TeamInfoHeader) then
+        local SenderUid = self.Message.Sender and self.Message.Sender.Uid
+        self.TeamInfo, self.bInvalidTeamInfo = TeamHallRecruitShareModel.Decode(Content, SenderUid)
       end
     end,
     IsSticker = function(self)
@@ -144,7 +147,6 @@ local MessageList = {
         end
         local TimeTipInterval = DataMgr.GlobalConstant.ChatTimeTipInterval.ConstantValue
         local TimeDelta = NewMsg.Time - LastMsg.Time
-        MsgWrap.bMergedDisplay = IsNormalChatMsgWrap(LastMsgWrap) and IsSameSender(NewMsg, LastMsg) and TimeDelta >= 0 and TimeTipInterval >= TimeDelta
         if TimeTipInterval < TimeDelta then
           TimeMsgWrap = MessageWrap:New({
             Time = NewMsg.Time,

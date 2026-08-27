@@ -167,6 +167,9 @@ function M:OnCancelBtnClicked()
 end
 
 function M:OnConfirmBtnClicked()
+  if self:IsAnimationPlaying(self.In) or self:IsAnimationPlaying(self.Out) then
+    return
+  end
   if self.IsClickConfirmBtn then
     return
   end

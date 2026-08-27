@@ -259,6 +259,16 @@ return ReadOnly("GuideBookConditionOne", {
         RewardId = 7000
       }
     },
+    [11020201] = {
+      [1] = {
+        CompleteUIGuideId = 163,
+        FinishQuest = 11020201,
+        GuideId = 163,
+        GuideNoteId = 174,
+        GuideNoteTab = 3,
+        RewardId = 7000
+      }
+    },
     [12010309] = {
       [1] = {
         CompleteUIGuideId = 90,
@@ -646,6 +656,16 @@ return ReadOnly("GuideBookConditionOne", {
         RewardId = 7000
       }
     },
+    EX02Hammer = {
+      [1] = {
+        CompleteUIGuideId = 161,
+        GuideId = 161,
+        GuideNoteId = 172,
+        GuideNoteTab = 3,
+        MechanismTag = "EX02Hammer",
+        RewardId = 7000
+      }
+    },
     EastQiZi = {
       [1] = {
         CompleteUIGuideId = 103,
@@ -938,6 +958,16 @@ return ReadOnly("GuideBookConditionOne", {
         GuideNoteId = 139,
         GuideNoteTab = 3,
         MechanismTag = "YYGPinTu",
+        RewardId = 7000
+      }
+    },
+    targetboard = {
+      [1] = {
+        CompleteUIGuideId = 162,
+        GuideId = 162,
+        GuideNoteId = 173,
+        GuideNoteTab = 3,
+        MechanismTag = "targetboard",
         RewardId = 7000
       }
     }
@@ -1402,6 +1432,26 @@ return ReadOnly("GuideBookConditionOne", {
         GuideNoteTab = 3,
         RewardId = 7000,
         SysGuideId = 2098
+      }
+    },
+    [2125] = {
+      [1] = {
+        CompleteUIGuideId = 160,
+        GuideId = 160,
+        GuideNoteId = 171,
+        GuideNoteTab = 5,
+        RewardId = 7000,
+        SysGuideId = 2125
+      }
+    },
+    [2126] = {
+      [1] = {
+        CompleteUIGuideId = 159,
+        GuideId = 159,
+        GuideNoteId = 170,
+        GuideNoteTab = 5,
+        RewardId = 7000,
+        SysGuideId = 2126
       }
     }
   }

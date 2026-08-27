@@ -18,21 +18,6 @@ local RightBottomBtnName = {
   "Announcement",
   "Back"
 }
-local HideSwitchAccountChannelIdList = {
-  255,
-  11,
-  2,
-  23
-}
-
-local function IsChannelIdInList(ChannelId)
-  for _, Item in ipairs(HideSwitchAccountChannelIdList) do
-    if Item == ChannelId then
-      return true
-    end
-  end
-  return false
-end
 
 function WBP_GameStartMainPage_C:Initialize(Initializer)
   self.Super.Initialize(self)
@@ -595,7 +580,11 @@ function WBP_GameStartMainPage_C:OnGetAllAvatars()
     local AvatarCount = CommonUtils.TableLength(GWorld.GetAvatarInfos)
     if bDevQuickLoginGetAllAvatars and DevQuickLoginSelectedServerInfo and DevQuickLoginSelectedServerInfo.hostnum then
       local SelectedHostnum = DevQuickLoginSelectedServerInfo.hostnum
-      self:SetServerInfo(self.ServerInfos[SelectedHostnum] or DevQuickLoginSelectedServerInfo)
+      local ServerInfo = DevQuickLoginSelectedServerInfo
+      if 399 ~= SelectedHostnum then
+        ServerInfo = self.ServerInfos[SelectedHostnum] or DevQuickLoginSelectedServerInfo
+      end
+      self:SetServerInfo(ServerInfo)
       DebugPrint("DevQuickLogin GetAllAvatars keep selected server", SelectedHostnum)
     end
     if 0 == AvatarCount then
@@ -1957,7 +1946,7 @@ end
 function WBP_GameStartMainPage_C:SetSwitchBtnVisable(bShow)
   local bIsWegameChannel = UE4.UUsdkSettings:GetDefaultObject().Channel == UE4.EHeroUSDKChannel.WeGame
   local ChannelId = HeroUSDKSubsystem(self):GetChannelId()
-  local bIsHideSwitchAccountChannel = IsChannelIdInList(ChannelId)
+  local bIsHideSwitchAccountChannel = HeroUSDKUtils.IsSpecialChannel(ChannelId)
   local bIsForceShowSwitchAccountChannel = HeroUSDKSubsystem(self):GetAppChannelId() == "P39476A"
   if bShow and not bIsWegameChannel and (bIsForceShowSwitchAccountChannel or not bIsHideSwitchAccountChannel) and not UE4.UUCloudGameInstanceSubsystem.IsCloudGame() then
     self.Btn_Back:SetVisibility(ESlateVisibility.SelfHitTestInvisible)

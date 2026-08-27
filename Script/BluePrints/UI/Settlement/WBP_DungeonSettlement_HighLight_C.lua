@@ -1,3 +1,4 @@
+local MiscUtils = require("Utils.MiscUtils")
 local FriendController = require("BluePrints.UI.WBP.Friend.FriendController")
 require("UnLua")
 local WBP_Settlement_DataDisplay_C = Class({
@@ -97,12 +98,12 @@ end
 function WBP_Settlement_DataDisplay_C:InitData()
   local NumText = self.Parmas.Value
   if NumText < 1000000000 then
-    NumText = Utils.FormatNumber(NumText, false)
+    NumText = MiscUtils.FormatNumber(NumText, false)
     if self.Parmas.DataName == "Damage" or self.Parmas.DataName == "Damaged" then
       NumText = string.format("%s", NumText) .. "%"
     end
   else
-    NumText = Utils.FormatNumber(NumText, true)
+    NumText = MiscUtils.FormatNumber(NumText, true)
   end
   self.Text_Data:SetVisibility(ESlateVisibility.Visible)
   self.Text_Data:SetText(NumText)

@@ -12,6 +12,11 @@ M._components = {
   "BluePrints.UI.WBP.PersonInfo.Edit.WBP_PersonalInfo_EditRoot_P_GamepadComp"
 }
 
+function M:Construct()
+  self.bHasScriptImplementedTick = true
+  self.Super.Construct(self)
+end
+
 function M:OnLoaded(OpenArg)
   self.Super.OnLoaded(self, OpenArg)
   local TabName = type(OpenArg) == "table" and OpenArg.TabName or OpenArg
@@ -269,6 +274,10 @@ function M:_ResumeEditPreviewCameraControl()
   if self.ActorController.ViewTarget then
     self.ActorController:ViewTarget()
   end
+end
+
+function M:EMDestruct()
+  self.Super.EMDestruct(self)
 end
 
 AssembleComponents(M)

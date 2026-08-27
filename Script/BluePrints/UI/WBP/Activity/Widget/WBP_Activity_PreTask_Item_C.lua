@@ -2,6 +2,7 @@ require("UnLua")
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
+local DefaultTipText = "Event_PretextTasks2_UnlockTips"
 
 function M:OnListItemObjectSet(Content)
   self.Content = Content
@@ -14,6 +15,10 @@ function M:OnListItemObjectSet(Content)
   self.IsForbidClick = Content.IsForbidClick
   self.IsShowFinish = Content.IsShowFinish
   self.IsShowTip = Content.IsShowTip
+  self.TipText = Content.TipText
+  if self.TipText == nil or self.TipText == "" then
+    self.TipText = DefaultTipText
+  end
   self:UpdateLockDisplay()
   self:UpdateClickAbility()
 end
@@ -41,7 +46,7 @@ function M:OnClickedBtn()
     return
   end
   if self.IsShowTip then
-    UIManager(self):ShowUITip(UIConst.Tip_CommonTop, GText("Event_PretextTasks2_UnlockTips"))
+    UIManager(self):ShowUITip(UIConst.Tip_CommonTop, GText(self.TipText))
     return
   end
   if not self.OnClickedParams then

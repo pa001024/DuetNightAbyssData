@@ -15,8 +15,25 @@ function M:OnGetLicense()
   self:InitLicenseUI()
 end
 
-function M:OnLoaded()
+function M:OnLoaded(ParentWidget)
+  self.FocusParentWidget = ParentWidget
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_confirm_positive", nil, nil)
+end
+
+function M:CloseAndRestoreParentFocus()
+  local FocusParentWidget = self.FocusParentWidget
+  self:Close()
+  if not IsValid(FocusParentWidget) then
+    return
+  end
+  local TopUI = UIManager(FocusParentWidget):GetLastestAndFocusableUIWidgetObj()
+  if TopUI == FocusParentWidget then
+    if type(FocusParentWidget.SetFocus_Lua) == "function" then
+      FocusParentWidget:SetFocus_Lua()
+    else
+      FocusParentWidget:SetFocus()
+    end
+  end
 end
 
 function M:InitLicenseUI()
@@ -133,8 +150,8 @@ end
 
 function M:OnAnimationFinished(Animation)
   if Animation == self.Out and self.IsPlayOut then
-    self:Close()
     self.IsPlayOut = false
+    self:CloseAndRestoreParentFocus()
   end
 end
 
@@ -146,9 +163,9 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   if "Escape" == InKeyName then
-    self:Close()
+    self:CloseAndRestoreParentFocus()
   elseif "Gamepad_FaceButton_Right" == InKeyName then
-    self:Close()
+    self:CloseAndRestoreParentFocus()
   end
   return UE4.UWidgetBlueprintLibrary.Handled()
 end

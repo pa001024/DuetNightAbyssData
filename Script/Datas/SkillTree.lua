@@ -49,9 +49,32 @@ T.RT_25 = {
   [3] = T.RT_12
 }
 T.RT_26 = {Skill = 210003}
-T.RT_27 = {Skill = 310003}
-T.RT_28 = {Skill = 310001}
-T.RT_29 = {Skill = 410003}
+T.RT_27 = {Skill = 220101}
+T.RT_28 = {Attr = 220101}
+T.RT_29 = {Attr = 220102}
+T.RT_30 = {
+  [1] = T.RT_27,
+  [2] = T.RT_28,
+  [3] = T.RT_29
+}
+T.RT_31 = {Skill = 220102}
+T.RT_32 = {Attr = 220103}
+T.RT_33 = {Attr = 220104}
+T.RT_34 = {
+  [1] = T.RT_31,
+  [2] = T.RT_32,
+  [3] = T.RT_33
+}
+T.RT_35 = {Skill = 220103}
+T.RT_36 = {Skill = 220104}
+T.RT_37 = {
+  [1] = T.RT_35,
+  [2] = T.RT_36,
+  [3] = T.RT_26
+}
+T.RT_38 = {Skill = 310003}
+T.RT_39 = {Skill = 310001}
+T.RT_40 = {Skill = 410003}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -251,6 +274,12 @@ return ReadOnly("SkillTree", {
       [3] = T.RT_26
     }
   },
+  [2201] = {
+    CharID = 2201,
+    Skill1 = T.RT_30,
+    Skill2 = T.RT_34,
+    Skill3 = T.RT_37
+  },
   [2301] = {
     CharID = 2301,
     Skill1 = {
@@ -302,7 +331,7 @@ return ReadOnly("SkillTree", {
     Skill3 = {
       [1] = {Skill = 310103},
       [2] = {Skill = 310104},
-      [3] = T.RT_27
+      [3] = T.RT_38
     }
   },
   [3102] = {
@@ -320,7 +349,7 @@ return ReadOnly("SkillTree", {
     Skill3 = {
       [1] = {Skill = 310203},
       [2] = {Skill = 310204},
-      [3] = T.RT_27
+      [3] = T.RT_38
     }
   },
   [3103] = {
@@ -338,7 +367,25 @@ return ReadOnly("SkillTree", {
     Skill3 = {
       [1] = {Skill = 310303},
       [2] = {Skill = 310304},
-      [3] = T.RT_28
+      [3] = T.RT_39
+    }
+  },
+  [3104] = {
+    CharID = 3104,
+    Skill1 = {
+      [1] = {Skill = 310401},
+      [2] = {Attr = 310401},
+      [3] = {Attr = 310402}
+    },
+    Skill2 = {
+      [1] = {Skill = 310402},
+      [2] = {Attr = 310403},
+      [3] = {Attr = 310404}
+    },
+    Skill3 = {
+      [1] = {Skill = 310403},
+      [2] = {Skill = 310404},
+      [3] = {Skill = 100004}
     }
   },
   [3201] = {
@@ -356,7 +403,7 @@ return ReadOnly("SkillTree", {
     Skill3 = {
       [1] = {Skill = 320103},
       [2] = {Skill = 320104},
-      [3] = T.RT_28
+      [3] = T.RT_39
     }
   },
   [3202] = {
@@ -428,7 +475,7 @@ return ReadOnly("SkillTree", {
     Skill3 = {
       [1] = {Skill = 410203},
       [2] = {Skill = 410204},
-      [3] = T.RT_29
+      [3] = T.RT_40
     }
   },
   [4201] = {
@@ -482,7 +529,7 @@ return ReadOnly("SkillTree", {
     Skill3 = {
       [1] = {Skill = 430103},
       [2] = {Skill = 430104},
-      [3] = T.RT_29
+      [3] = T.RT_40
     }
   },
   [5101] = {
@@ -568,5 +615,11 @@ return ReadOnly("SkillTree", {
     Skill1 = T.RT_18,
     Skill2 = T.RT_22,
     Skill3 = T.RT_25
+  },
+  [220101] = {
+    CharID = 220101,
+    Skill1 = T.RT_30,
+    Skill2 = T.RT_34,
+    Skill3 = T.RT_37
   }
 })

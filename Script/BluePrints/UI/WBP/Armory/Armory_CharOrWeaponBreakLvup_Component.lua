@@ -62,7 +62,7 @@ function Component:InitBreakLevelUpIntensify(WidgetPath, Params)
 end
 
 function Component:CreateBreakLevelUpWidget(WidgetPath, Params)
-  self.IntensifyWidget = UIManager(self):CreateWidget(WidgetPath, true)
+  self.IntensifyWidget = UIManager(self):CreateWidget(WidgetPath)
   self.VB_Node:AddChild(self.IntensifyWidget)
   if self.IntensifyWidget then
     Params = Params or {}

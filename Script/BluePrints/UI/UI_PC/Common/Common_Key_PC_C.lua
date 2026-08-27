@@ -354,17 +354,28 @@ function Common_Key_PC:CreateSubKeyDesc(KeyInfo)
 end
 
 function Common_Key_PC:_InitSingleKeyContent(KeyInfo)
-  if KeyInfo.Type == "Text" then
+  local KeyType, bUseLargeSize = self:_ResolveKeyType(KeyInfo.Type)
+  local bLargeSize = bUseLargeSize or KeyInfo.bLargeSize
+  if "Text" == KeyType then
     if self.bIsSubKeyDesc then
       return
     end
-    if KeyInfo.Text then
-      self:_SetImage(KeyInfo.Type, KeyInfo.Text, KeyInfo.ImgLongPath, KeyInfo.bLargeSize)
-    else
-      self:_SetImage(KeyInfo.Type, KeyInfo.ImgShortPath, KeyInfo.ImgLongPath, KeyInfo.bLargeSize)
+    if self.Text_Key and bUseLargeSize then
+      local KeyName = KeyInfo.Text or KeyInfo.ImgShortPath
+      if KeyName then
+        local KeyText = CommonUtils:GetKeyText(KeyName)
+        self.Text_Key:SetText(KeyText)
+        self:_AdjustSpacers(KeyText)
+      end
+      return
     end
-  elseif KeyInfo.Type == "Img" then
-    self:_SetImage(KeyInfo.Type, KeyInfo.ImgShortPath, KeyInfo.ImgLongPath, KeyInfo.bLargeSize)
+    if KeyInfo.Text then
+      self:_SetImage(KeyType, KeyInfo.Text, KeyInfo.ImgLongPath, bLargeSize)
+    else
+      self:_SetImage(KeyType, KeyInfo.ImgShortPath, KeyInfo.ImgLongPath, bLargeSize)
+    end
+  elseif "Img" == KeyType then
+    self:_SetImage(KeyType, KeyInfo.ImgShortPath, KeyInfo.ImgLongPath, bLargeSize)
   end
 end
 
@@ -433,21 +444,41 @@ function Common_Key_PC:_SetBattleShortCutKeyHidden()
   end
 end
 
+function Common_Key_PC:_ResolveKeyType(Type)
+  if "Text_L" == Type then
+    return "Text", true
+  elseif "Img_L" == Type then
+    return "Img", true
+  end
+  return Type, false
+end
+
 function Common_Key_PC:_GetBlueprintClass(Type)
-  if "Text" == Type then
+  local KeyType, bUseLargeSize = self:_ResolveKeyType(Type)
+  if "Text" == KeyType then
+    if bUseLargeSize then
+      return UE4.UClass.Load("WidgetBlueprint'/Game/UI/WBP/Common/Key/WBP_Com_KeyText_L.WBP_Com_KeyText_L_C'")
+    end
     return UE4.UClass.Load("WidgetBlueprint'/Game/UI/WBP/Common/Key/WBP_Com_KeyText.WBP_Com_KeyText_C'")
-  elseif "Img" == Type then
+  elseif "Img" == KeyType then
+    if bUseLargeSize then
+      return UE4.UClass.Load("WidgetBlueprint'/Game/UI/WBP/Common/Key/WBP_Com_KeyImg_L.WBP_Com_KeyImg_L_C'")
+    end
     return UE4.UClass.Load("WidgetBlueprint'/Game/UI/WBP/Common/Key/WBP_Com_KeyImg.WBP_Com_KeyImg_C'")
-  elseif "Add" == Type then
+  elseif "Add" == KeyType then
     return UE4.UClass.Load("WidgetBlueprint'/Game/UI/WBP/Common/Key/WBP_Com_KeyAdd.WBP_Com_KeyAdd_C'")
-  elseif "Or" == Type then
+  elseif "Or" == KeyType then
     return UE4.UClass.Load("WidgetBlueprint'/Game/UI/WBP/Common/Key/WBP_Com_KeyOr.WBP_Com_KeyOr_C'")
   end
 end
 
-function Common_Key_PC:SetDescription(Description)
+function Common_Key_PC:SetDescription(Description, bRealSetDesc)
   if not self.Text_Desc then
     return
+  end
+  if bRealSetDesc then
+    self.Desc = Description
+    self.CreateInfo.Desc = Description
   end
   self.Text_Desc:SetText(Description)
 end

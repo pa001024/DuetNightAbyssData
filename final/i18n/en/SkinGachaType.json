@@ -16,7 +16,7 @@
   },
   {
     "type": "GACHA_SKIN_TYPE_SPECIAL_3",
-    "name": "Event-Exclusive",
+    "name": "Limited-Time Rerun",
     "subTabId": 1401
   },
   {
@@ -31,6 +31,11 @@
   },
   {
     "type": "GACHA_SKIN_TYPE_SPECIAL_6",
+    "name": "Event-Exclusive",
+    "subTabId": 1401
+  },
+  {
+    "type": "GACHA_SKIN_TYPE_SPECIAL_7",
     "name": "Event-Exclusive",
     "subTabId": 1401
   }

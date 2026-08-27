@@ -177,7 +177,7 @@ function Component:InitBreakLvUpIntensify(WidgetPath, Params)
 end
 
 function Component:CreateBreakLvUpWidget(WidgetPath, Params)
-  self.EnhanceWidget = UIManager(self):CreateWidget(WidgetPath, true)
+  self.EnhanceWidget = UIManager(self):CreateWidget(WidgetPath)
   self.VB_Node:AddChild(self.EnhanceWidget)
   if self.EnhanceWidget then
     Params = Params or {}

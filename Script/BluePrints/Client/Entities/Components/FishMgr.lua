@@ -52,11 +52,14 @@ function Component:GetFishMaxSize(FishId)
   return FishSize
 end
 
-function Component:OnFishStart(FishingSpotId, FishingRodId, FishingLureId, FishId)
+function Component:OnFishStart(FishingSpotId, FishingRodId, FishingLureId, FishId, callback)
   self.logger.debug("OnFishStart Begin", FishingSpotId, FishingRodId, FishingLureId, FishId)
   
   local function Callback(Ret)
     self.logger.debug("OnFishStart Callback", Ret, FishingSpotId, FishingRodId, FishingLureId, FishId)
+    if callback then
+      callback(Ret)
+    end
   end
   
   self:CallServer("OnFishStart", Callback, FishingSpotId, FishingRodId, FishingLureId, FishId)

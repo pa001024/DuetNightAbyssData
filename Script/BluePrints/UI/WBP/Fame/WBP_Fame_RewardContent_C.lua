@@ -7,6 +7,7 @@ local M = Class({
 
 function M:Construct()
   self.Fame_CompletionProgress.Btn_Reward.Button_Area.OnClicked:Add(self, self.OnGetAllRewardsBtnClicked)
+  self.Fame_CompletionProgress.Btn_Reward:SetGamePadImg("Y")
 end
 
 function M:Destruct()
@@ -276,6 +277,7 @@ function M:RefreshRewardList()
   else
     self.Fame_CompletionProgress.Btn_Reward:ForbidBtn(false)
   end
+  self:RefreshAllRewardsGamepadStyle()
   self:InitLeftReward()
 end
 
@@ -369,8 +371,9 @@ function M:Handle_OnGamePadButtonDown(InKeyName)
       self:SetFocus()
       IsEventHandled = true
     end
-  elseif InKeyName == UIConst.GamePadKey.FaceButtonTop then
+  elseif InKeyName == UIConst.GamePadKey.FaceButtonTop and not self.Fame_CompletionProgress.Btn_Reward:IsBtnForbidden() then
     self:OnGetAllRewardsBtnClicked()
+    IsEventHandled = true
   end
   return IsEventHandled
 end
@@ -404,18 +407,13 @@ function M:UpdateUIStyleInPlatform()
       Item.SelfWidget:UpdateGamePadStyle()
     end
   end
-  if self.CurInputDeviceType == ECommonInputType.Gamepad then
-    if not rawget(self, "GamePadKeyInited") then
-      rawset(self, "GamePadKeyInited", true)
-      local ImgPath = UIUtils.UtilsGetKeyIconPathInGamepad("Y", self.CurGamepadName)
-      local Img = LoadObject(ImgPath)
-      self.Fame_CompletionProgress.Btn_Reward.Img_GamePad:SetBrushResourceObject(Img)
-    end
-    self.Fame_CompletionProgress.Btn_Reward:SetGamePadVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-  else
-    self.Fame_CompletionProgress.Btn_Reward:SetGamePadVisibility(UIConst.VisibilityOp.Collapsed)
-  end
+  self:RefreshAllRewardsGamepadStyle()
   self.Reward:UpdateUIStyleInPlatform()
+end
+
+function M:RefreshAllRewardsGamepadStyle()
+  local bShow = self.CurInputDeviceType == ECommonInputType.Gamepad and not self.Fame_CompletionProgress.Btn_Reward:IsBtnForbidden()
+  self.Fame_CompletionProgress.Btn_Reward:SetGamePadVisibility(bShow and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
 end
 
 function M:UpdateSelectedRewardIdx(NewIdx)
@@ -424,18 +422,6 @@ end
 
 function M:OnMenuOpenChanged(IsOpen)
   if IsOpen then
-    self.Com_Tab:UpdateBottomKeyInfo({
-      {
-        KeyInfoList = {
-          {
-            Type = "Text",
-            Text = "Esc",
-            ClickCallback = self.CloseSelf,
-            Owner = self
-          }
-        }
-      }
-    })
   else
     self.Com_Tab:UpdateBottomKeyInfo({
       {

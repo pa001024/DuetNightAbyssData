@@ -1,3 +1,4 @@
+local MiscUtils = require("Utils.MiscUtils")
 require("UnLua")
 local EffectResults = require("BluePrints.Combat.BattleLogic.EffectResults")
 local EMCache = require("EMCache.EMCache")
@@ -32,7 +33,18 @@ function BP_WeaponBase_C:IsReplaceAttrs()
 end
 
 function BP_WeaponBase_C:SetBornInfoAppearance()
-  self.BornInfo.AppearanceInfo = self.AppearanceInfo
+  local Src = self.AppearanceInfo
+  local Info = {}
+  if Src then
+    for Key, Value in pairs(Src) do
+      Info[Key] = Value
+    end
+    Info.WeaponId = nil
+    Info.HyperCardLevel = nil
+  end
+  if nil ~= next(Info) then
+    self.BornInfo.AppearanceInfo = Info
+  end
 end
 
 function BP_WeaponBase_C:SetData()
@@ -48,33 +60,20 @@ function BP_WeaponBase_C:ApplyWeaponAttributes()
 end
 
 function BP_WeaponBase_C:SetServerBornInfo()
-  self.ServerBornInfo = self.BornInfo:ToEffectStruct()
+  if not self.BornInfo or self.BornInfo.IsEmpty then
+    return
+  end
+  self.ServerBornInfo = self.BornInfo:ToEffectStruct(nil, EffectResults.Schemas.WeaponBornInfo)
 end
 
 function BP_WeaponBase_C:Lua_InitWeaponAppearance()
   self:InitWeaponAppearance(self.AppearanceInfo)
 end
 
-function BP_WeaponBase_C:InitForExhibit()
-  local Avatar = GWorld and GWorld.GetAvatar and GWorld:GetAvatar()
-  local ItemInfo = Avatar and Avatar.GetGuildExhibitItemInfo and Avatar:GetGuildExhibitItemInfo(self.ExhibitUuid)
-  if not ItemInfo then
-    return
-  end
-  local WeaponInfo = ItemInfo
-  if not WeaponInfo.AppearanceInfo then
-    WeaponInfo = {}
-    Utils.FormatWeaponInfo(WeaponInfo, ItemInfo)
-  end
-  self.AppearanceInfo = WeaponInfo.AppearanceInfo or WeaponInfo
-  self.HyperWeaponLevel = WeaponInfo.HyperCardLevel or 0
-  self:InitWeaponAppearance(self.AppearanceInfo)
-end
-
 function BP_WeaponBase_C:InitWeaponAppearance(AppearanceInfo)
   self.AppearanceInfo = AppearanceInfo
-  if AppearanceInfo then
-    self.HyperWeaponLevel = AppearanceInfo.GradeLevel
+  if AppearanceInfo and AppearanceInfo.HyperCardLevel ~= nil then
+    self.HyperWeaponLevel = AppearanceInfo.HyperCardLevel
   end
   self:InitWeaponSkin(AppearanceInfo and AppearanceInfo.SkinId)
   if self.bIsShow then
@@ -91,7 +90,11 @@ function BP_WeaponBase_C:Lua_InitShowWeaponAppearance()
     self:ChangeAccessory(AccessorySuit[AccessoryTypeIdx], AccessoryType)
   end
   EventManager:FireEvent(EventID.OnShowWeaponLoadFinished, self)
-  self:InitHyperWeaponMaterialEffect()
+  if self.bUseCppHyperWeaponMaterialEffect then
+    self:InitHyperWeaponMaterialEffectCPP()
+  else
+    self:InitHyperWeaponMaterialEffect()
+  end
 end
 
 function BP_WeaponBase_C:InitHyperWeaponMaterialEffect()

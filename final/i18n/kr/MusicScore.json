@@ -65,8 +65,13 @@
     "icon": "T_Piano_Music13"
   },
   {
+    "id": 1014,
+    "name": "꽃과 기적 소리의 아리아",
+    "icon": "T_Piano_Music14"
+  },
+  {
     "id": 9001,
-    "name": "의뢰",
-    "icon": "T_Piano_LevelSelect_01"
+    "name": "MusicScoreName_9001",
+    "icon": "T_Piano_Music01"
   }
 ]

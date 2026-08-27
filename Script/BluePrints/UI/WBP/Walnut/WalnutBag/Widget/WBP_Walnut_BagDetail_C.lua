@@ -226,6 +226,13 @@ function M:UpdateUIStyleInPlatform(IsUseGamePad)
   else
     self.Key_Check:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
+  if IsUseGamePad then
+    self.ScrollBox_Detail:SetControlScrollbarInside(false)
+    self.ScrollBox_Detail:SetScrollBarVisibility(ESlateVisibility.Visible)
+  else
+    self.ScrollBox_Detail:SetScrollBarVisibility(ESlateVisibility.Collapsed)
+    self.ScrollBox_Detail:SetControlScrollbarInside(true)
+  end
 end
 
 function M:SetIsNeedPlayResolveAnim(bIsNeedPlay)
@@ -253,6 +260,22 @@ function M:Handle_KeyDownOnGamePad(InKeyName)
   return IsEventHandled
 end
 
+function M:Handle_OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
+  if self:IsInGamePadViewMode() then
+    return UE4.UWidgetBlueprintLibrary.UnHandled()
+  end
+  local InKey = UE4.UKismetInputLibrary.GetKey(InAnalogInputEvent)
+  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  local AddOffset = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent) * 5
+  if "Gamepad_RightY" == InKeyName then
+    local CurScrollOffset = self.ScrollBox_Detail:GetScrollOffset()
+    local ScrollOffset = math.clamp(CurScrollOffset - AddOffset, 0, self.ScrollBox_Detail:GetScrollOffsetOfEnd())
+    self.ScrollBox_Detail:SetScrollOffset(ScrollOffset)
+    return UE4.UWidgetBlueprintLibrary.Handled()
+  end
+  return UE4.UWidgetBlueprintLibrary.UnHandled()
+end
+
 function M:DoCustomNavigationWithStuff(EUINavigation)
   local TargetNavigateWidget
   if self.AllMethodSubWidgetList and #self.AllMethodSubWidgetList > 0 then
@@ -272,6 +295,7 @@ function M:DoCustomNavigationWithMethod(EUINavigation)
 end
 
 function M:EnterGamePadViewMode()
+  self.ScrollBox_Detail:ScrollToStart()
   self.Item_1st:SetFocus()
   self:UpdateUIStyleInPlatform(false)
   if self.ParentWidget then

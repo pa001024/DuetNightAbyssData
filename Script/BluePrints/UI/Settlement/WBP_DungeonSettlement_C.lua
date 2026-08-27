@@ -708,8 +708,8 @@ function M:DefaultContinue()
   if not Avatar then
     return
   end
-  if self.IsAutoNextRound then
-    DebugPrint("ljl@ DunegonSettlement AutoNextRound", self.AutoNextRound:GetSelectCount())
+  if self.IsAutoNextRoundShowPanel then
+    DebugPrint("ljl@ DunegonSettlement AutoNextRoundShowPanel", self.AutoNextRound:GetSelectCount())
     Avatar:SetDungeonAutoProgress(self.DungeonId, self.AutoNextRound:GetSelectCount())
   end
   if not Avatar:IsInNarrowDungeon() then
@@ -768,6 +768,9 @@ function M:Exit()
   local Avatar = GWorld:GetAvatar()
   Avatar:ExitDungeonSettlement()
   EventManager:AddEvent(EventID.OnExitDungeon, self, self.DefaultExit)
+  if self.IsAutoNextRoundContinue then
+    self:HideMainCountDownWidget()
+  end
 end
 
 function M:DefaultExit()
@@ -918,6 +921,12 @@ end
 
 function M:CalcPropInfo()
   self:ShowCountDown()
+  if self.IsAutoNextRoundContinue then
+    local TotalTime = DataMgr.GlobalConstant.AutoRoundsCheckTime.ConstantValue or 5
+    self:ShowMainCountDownWidget(TotalTime, self.AutoNextRound_CurProgress, self.AutoNextRound_MaxProgress, function()
+      self:OnBtnContinueClicked()
+    end)
+  end
   if self.IsTemple then
     return
   end
@@ -1296,6 +1305,13 @@ function M:CreateOneReward(RewardType, RewardTypeValue, Id, Num, IsSpecial, IsEx
   local RewardInfo = DataMgr[RewardType][tonumber(Id)]
   if RewardInfo then
     local ResourceData = {}
+    if "UpgradeMod" == RewardType then
+      ResourceData.ModLevel = RewardInfo.ModLevel
+      local ModId = RewardInfo.ModId
+      RewardInfo = DataMgr.Mod[ModId]
+      RewardType = "Mod"
+      Id = ModId
+    end
     ResourceData.Priority = RewardTypeValue.DungeonRewardSeq or 0
     ResourceData.Id = Id
     ResourceData.Count = Num
@@ -1428,6 +1444,9 @@ function M:NewPropContent(Content, RewardViewWidget)
     ItemContent.UIName = "DungeonSettlement"
     if Content.Uid then
       ItemContent.Uuid = Content.Uid
+    end
+    if Content.ModLevel then
+      ItemContent.ModLevel = Content.ModLevel
     end
   end
   return ItemContent
@@ -1590,16 +1609,16 @@ function M:ShowCountDown()
   self.ProgressInterval = 0.06666666666666667
   self.Bar_Click:SetPercent(0)
   self.Bar_Click:SetVisibility(ESlateVisibility.Collapsed)
-  self:AddTimer(1, self.CountDown, true, -1, "CountDown")
+  self:AddTimer(1, self.ExitCountDown, true, -1, "ExitCountDown")
   self:AddTimer(self.ProgressInterval, self.SetProgressBar, true, -1, "SetProgressBar", nil, self.ProgressInterval)
 end
 
-function M:CountDown()
+function M:ExitCountDown()
   local Text = string.format(GText("UI_Text_ExitTime"), self.RemainTime)
   self.Text_ExitTime:SetText(Text)
   if self.RemainTime <= 0 then
     self:Exit()
-    self:RemoveTimer("CountDown")
+    self:RemoveTimer("ExitCountDown")
     self:RemoveTimer("SetProgressBar")
   end
   self.RemainTime = self.RemainTime - 1
@@ -1612,13 +1631,42 @@ end
 
 function M:CheckIsAutoNextRoundMode()
   self.IsAutoNextRound = false
+  self.IsAutoNextRoundShowPanel = false
+  self.IsAutoNextRoundContinue = false
   if not self:IsStandAloneSolo() then
     return
   end
   local DungeonInfo = DataMgr.Dungeon[self.DungeonId]
   if DungeonInfo then
-    self.IsAutoNextRound = DungeonInfo.AutoNextRound and DungeonInfo.DungeonWinMode == CommonConst.DungeonWinMode.Endless
+    self.IsAutoNextRound = DungeonInfo.AutoNextRound or false
   end
+  if not self.IsAutoNextRound then
+    return
+  end
+  if DungeonInfo.DungeonWinMode == CommonConst.DungeonWinMode.Endless then
+    self.IsAutoNextRoundShowPanel = true
+  elseif not self.IsWin then
+    self.IsAutoNextRoundShowPanel = true
+  else
+    self.AutoNextRound_MaxProgress = self:GetMaxAutoProgress(self.DungeonId)
+    self.AutoNextRound_CurProgress = GWorld.GameInstance:GetAutoNextRoundProgress(self.DungeonId)
+    if self.AutoNextRound_CurProgress < self.AutoNextRound_MaxProgress then
+      self.IsAutoNextRoundContinue = true
+    else
+      self.IsAutoNextRoundShowPanel = true
+    end
+  end
+end
+
+function M:GetMaxAutoProgress(DungeonId)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return 0
+  end
+  if not Avatar.Dungeons[DungeonId] then
+    return 0
+  end
+  return Avatar.Dungeons[DungeonId].AutoProgress or 0
 end
 
 function M:CheckIsNoExpMode()
@@ -2647,7 +2695,7 @@ function M:Handle_OnGamePadDown(InKeyName)
     return true
   elseif "Gamepad_RightThumbstick" == InKeyName then
     if IsDpadUp then
-      if self.IsAutoNextRound then
+      if self.IsAutoNextRoundShowPanel then
         self.GamePadPressingKeys.Gamepad_DPad_Up = nil
         self.GamePadPressingKeys.Gamepad_RightThumbstick = nil
         self.AutoNextRound:SetAutoNextRoundFocus(true)
@@ -2869,6 +2917,16 @@ function M:TryEnterDungeonAgain()
       end
     end)
   end
+  if bIsStandAloneSolo and not bNeedTicket then
+    self:OnAutoNextRoundContinue()
+  end
+end
+
+function M:OnAutoNextRoundContinue()
+  if self.IsAutoNextRoundContinue then
+    DebugPrint("ljl@ DunegonSettlement AutoNextRoundContinue")
+    GWorld.GameInstance:AddAutoNextRoundProgress(self.DungeonId)
+  end
 end
 
 function M:IsSolo()
@@ -2898,6 +2956,7 @@ function M:OpenTicketDialog(DungeonId)
         DebugPrint("ljl@WBP_DungeonSettlement_C M:OpenTicketDialog SetTicketId", SelectedTicketId)
         GWorld.GameInstance:SetTicketId(SelectedTicketId)
       end
+      self:OnAutoNextRoundContinue()
       local Avatar = GWorld:GetAvatar()
       Avatar:EnterDungeonAgain(function(Ret)
         self:BlockAllUIInput(false)
@@ -2927,6 +2986,16 @@ function M:OpenTicketDialog(DungeonId)
       end
       if PopupUI then
         PopupUI:OnClose()
+      end
+    end
+  end
+  if self.IsAutoNextRoundContinue then
+    DialogParams.IsAutoNextRoundContinue = true
+    DialogParams.CountDownSeconds = DataMgr.GlobalConstant.AutoRoundsCheckTime.ConstantValue or 5
+    
+    function DialogParams.CountDownCallbackFunction(_, Data, PopupUI)
+      if PopupUI and PopupUI.OnRightBtnClicked then
+        PopupUI:OnRightBtnClicked()
       end
     end
   end
@@ -3061,8 +3130,42 @@ function M:InitAutoNextRoundContent()
     self.AutoNextRound:SetVisibility(UE4.ESlateVisibility.Collapsed)
     return
   end
-  self.AutoNextRound:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-  self.AutoNextRound:Init(DataMgr.Dungeon[self.DungeonId])
+  if self.IsAutoNextRoundShowPanel then
+    self.AutoNextRound:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.AutoNextRound:Init(DataMgr.Dungeon[self.DungeonId])
+  else
+    self.AutoNextRound:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+end
+
+function M:ShowMainCountDownWidget(TotalTime, CurProgress, TotalProgress, Callback)
+  self.Auto_CountDown:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  self.MainCountDownTotalTime = TotalTime
+  self.MainCountDownRemainTime = self.MainCountDownTotalTime
+  self.CountDown.Text_CountDown:SetText(string.format("%d", TotalTime))
+  self:AddTimer(0.1, self.OnUpdateMainCountDown, true, 0, "OnUpdateMainCountDown", true, Callback)
+  self.Text_Tips:SetText(string.format(GText("UI_Auto_Round_DungeonTips_1"), CurProgress, TotalProgress))
+end
+
+function M:HideMainCountDownWidget()
+  self.Auto_CountDown:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self:RemoveTimer("OnUpdateMainCountDown")
+end
+
+function M:OnUpdateMainCountDown(Callback)
+  self.MainCountDownRemainTime = self.MainCountDownRemainTime - 0.1
+  local IntCountDown = math.ceil(self.MainCountDownRemainTime)
+  IntCountDown = math.max(IntCountDown, 0)
+  local CountDownPercent = IntCountDown / self.MainCountDownTotalTime
+  self.CountDown.Text_CountDown:SetText(string.format("%d", IntCountDown))
+  self.Bar01:SetPercent(CountDownPercent)
+  self.Bar02:SetPercent(CountDownPercent)
+  if self.MainCountDownRemainTime <= 0 and self.IsInit then
+    self:RemoveTimer("OnUpdateMainCountDown")
+    if Callback then
+      Callback()
+    end
+  end
 end
 
 function M:InitBanReward()

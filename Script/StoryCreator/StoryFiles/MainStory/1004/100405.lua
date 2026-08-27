@@ -238,10 +238,10 @@ return {
               ProceduralCameraId = 1,
               HideNpcs = false,
               HideMonsters = true,
-              HideAllBattleEntity = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
               HideMechanismsFX = false,
               ShowSkipButton = true,
-              ShowAutoPlayButton = true,
               ShowReviewButton = true,
               ShowWikiButton = true,
               SkipToOption = false,
@@ -289,10 +289,10 @@ return {
               ProceduralCameraId = 1,
               HideNpcs = false,
               HideMonsters = true,
-              HideAllBattleEntity = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
               HideMechanismsFX = false,
               ShowSkipButton = true,
-              ShowAutoPlayButton = true,
               ShowReviewButton = true,
               ShowWikiButton = true,
               SkipToOption = false,
@@ -340,10 +340,10 @@ return {
               ProceduralCameraId = 1,
               HideNpcs = false,
               HideMonsters = true,
-              HideAllBattleEntity = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
               HideMechanismsFX = false,
               ShowSkipButton = true,
-              ShowAutoPlayButton = true,
               ShowReviewButton = true,
               ShowWikiButton = true,
               SkipToOption = false,
@@ -391,10 +391,10 @@ return {
               ProceduralCameraId = 1,
               HideNpcs = false,
               HideMonsters = true,
-              HideAllBattleEntity = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
               HideMechanismsFX = false,
               ShowSkipButton = true,
-              ShowAutoPlayButton = true,
               ShowReviewButton = true,
               ShowWikiButton = true,
               SkipToOption = false,
@@ -442,10 +442,10 @@ return {
               ProceduralCameraId = 1,
               HideNpcs = false,
               HideMonsters = true,
-              HideAllBattleEntity = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
               HideMechanismsFX = false,
               ShowSkipButton = true,
-              ShowAutoPlayButton = true,
               ShowReviewButton = true,
               ShowWikiButton = true,
               SkipToOption = false,
@@ -609,10 +609,10 @@ return {
               ProceduralCameraId = 1,
               HideNpcs = false,
               HideMonsters = true,
-              HideAllBattleEntity = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
               HideMechanismsFX = false,
               ShowSkipButton = true,
-              ShowAutoPlayButton = true,
               ShowReviewButton = true,
               ShowWikiButton = true,
               SkipToOption = false,
@@ -675,8 +675,9 @@ return {
               bOpenDefaultSkinKawaii = false,
               HideNpcs = false,
               HideMonsters = true,
-              HideAllBattleEntity = true,
-              HideEffectCreature = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
+              bHideSceneEffects = true,
               HideMechanismsFX = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
@@ -832,10 +833,10 @@ return {
               ProceduralCameraId = 1,
               HideNpcs = false,
               HideMonsters = true,
-              HideAllBattleEntity = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
               HideMechanismsFX = false,
               ShowSkipButton = true,
-              ShowAutoPlayButton = true,
               ShowReviewButton = true,
               ShowWikiButton = true,
               SkipToOption = false,
@@ -1031,10 +1032,10 @@ return {
               ProceduralCameraId = 1,
               HideNpcs = false,
               HideMonsters = true,
-              HideAllBattleEntity = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
               HideMechanismsFX = false,
               ShowSkipButton = true,
-              ShowAutoPlayButton = true,
               ShowReviewButton = true,
               ShowWikiButton = true,
               SkipToOption = false,
@@ -1240,10 +1241,10 @@ return {
               ProceduralCameraId = 1,
               HideNpcs = false,
               HideMonsters = true,
-              HideAllBattleEntity = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
               HideMechanismsFX = false,
               ShowSkipButton = true,
-              ShowAutoPlayButton = true,
               ShowReviewButton = true,
               ShowWikiButton = true,
               SkipToOption = false,
@@ -1983,11 +1984,11 @@ return {
           {
             startQuest = "177772350985934974122",
             startPort = "QuestStart",
-            endQuest = "177936604515058991910",
-            endPort = "Input"
+            endQuest = "17834290092023282552",
+            endPort = "In"
           },
           {
-            startQuest = "177936604515058991910",
+            startQuest = "17834290092023282552",
             startPort = "Out",
             endQuest = "177772350985934974132",
             endPort = "In"
@@ -1998,7 +1999,7 @@ return {
             key = "177772350985934974122",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = -1023.7513019369823, y = 267.60432355475626},
+            pos = {x = -1373.7513019369821, y = 275.60432355475626},
             propsData = {ModeType = 0}
           },
           ["177772350985934974123"] = {
@@ -2037,8 +2038,9 @@ return {
               bOpenDefaultSkinKawaii = false,
               HideNpcs = true,
               HideMonsters = true,
-              HideAllBattleEntity = true,
-              HideEffectCreature = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
+              bHideSceneEffects = true,
               HideMechanismsFX = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
@@ -2056,17 +2058,12 @@ return {
               OverrideFailBlend = false
             }
           },
-          ["177936604515058991910"] = {
-            key = "177936604515058991910",
-            type = "StandAloneBlackScreenNode",
-            name = "独立黑屏节点",
-            pos = {x = -746.1835655314753, y = 257.6804695562437},
-            propsData = {
-              FadeInSeconds = 0,
-              FadeOutSeconds = 0,
-              DurationSeconds = 2,
-              IsStandAlone = false
-            }
+          ["17834290092023282552"] = {
+            key = "17834290092023282552",
+            type = "WaitQuestArtLevelLoadedNode",
+            name = "等待Task关卡加载",
+            pos = {x = -1014.5185185185185, y = 264.74074074074076},
+            propsData = {VarName = "IQ10040506", BlackScreenEnable = true}
           }
         },
         commentData = {}
@@ -2110,24 +2107,6 @@ return {
       questNodeData = {
         lineData = {
           {
-            startQuest = "177919557921211107688",
-            startPort = "QuestStart",
-            endQuest = "17795213188823871489",
-            endPort = "Input"
-          },
-          {
-            startQuest = "17795213188823871489",
-            startPort = "Out",
-            endQuest = "177919559781411108256",
-            endPort = "In"
-          },
-          {
-            startQuest = "17795213188823871489",
-            startPort = "Out",
-            endQuest = "177969881698146457301",
-            endPort = "In"
-          },
-          {
             startQuest = "177919559781411108256",
             startPort = "Out",
             endQuest = "177969882188246457520",
@@ -2138,6 +2117,24 @@ return {
             startPort = "Out",
             endQuest = "177919557921211107689",
             endPort = "Success"
+          },
+          {
+            startQuest = "177919557921211107688",
+            startPort = "QuestStart",
+            endQuest = "17834290409813283149",
+            endPort = "In"
+          },
+          {
+            startQuest = "17834290409813283149",
+            startPort = "Out",
+            endQuest = "177969881698146457301",
+            endPort = "In"
+          },
+          {
+            startQuest = "17834290409813283149",
+            startPort = "Out",
+            endQuest = "177919559781411108256",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -2184,8 +2181,9 @@ return {
               bOpenDefaultSkinKawaii = false,
               HideNpcs = false,
               HideMonsters = true,
-              HideAllBattleEntity = true,
-              HideEffectCreature = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
+              bHideSceneEffects = true,
               HideMechanismsFX = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
@@ -2201,18 +2199,6 @@ return {
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
               OverrideFailBlend = false
-            }
-          },
-          ["17795213188823871489"] = {
-            key = "17795213188823871489",
-            type = "StandAloneBlackScreenNode",
-            name = "独立黑屏节点",
-            pos = {x = 1326.196581196581, y = 351.1880341880342},
-            propsData = {
-              FadeInSeconds = 0,
-              FadeOutSeconds = 0,
-              DurationSeconds = 2,
-              IsStandAlone = false
             }
           },
           ["177969881698146457301"] = {
@@ -2241,6 +2227,13 @@ return {
               SoundPriority = 0,
               SoundType = 0
             }
+          },
+          ["17834290409813283149"] = {
+            key = "17834290409813283149",
+            type = "WaitQuestArtLevelLoadedNode",
+            name = "等待Task关卡加载",
+            pos = {x = 1378.5185185185185, y = 357.1851851851852},
+            propsData = {VarName = "IQ10040506", BlackScreenEnable = true}
           }
         },
         commentData = {}

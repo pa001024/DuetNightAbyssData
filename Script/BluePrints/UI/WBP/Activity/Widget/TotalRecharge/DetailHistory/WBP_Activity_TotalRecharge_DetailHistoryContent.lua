@@ -175,9 +175,15 @@ end
 function M:OnGamePadDown(InKeyName)
   local IsEventHandled = false
   if InKeyName == UIConst.GamePadKey.DPadLeft then
+    if 0 == self.Ws_Content:GetActiveWidgetIndex() then
+      return
+    end
     self:OnFlipBefore()
     IsEventHandled = true
   elseif InKeyName == UIConst.GamePadKey.DPadRight then
+    if 0 == self.Ws_Content:GetActiveWidgetIndex() then
+      return
+    end
     self:OnFlipNext()
     IsEventHandled = true
   end
@@ -212,6 +218,20 @@ function M:OnFlipNext()
   end
   self.Text_Page:SetText(self.PageIndex .. "/" .. self.PageMax)
   self:UpdateListRecord()
+end
+
+function M:BP_GetDesiredFocusTarget()
+  return self.Owner
+end
+
+function M:InitKeyboardView()
+  self.WS_Left:SetActiveWidgetIndex(0)
+  self.WS_Right:SetActiveWidgetIndex(0)
+end
+
+function M:InitGamepadView()
+  self.WS_Left:SetActiveWidgetIndex(1)
+  self.WS_Right:SetActiveWidgetIndex(1)
 end
 
 return M

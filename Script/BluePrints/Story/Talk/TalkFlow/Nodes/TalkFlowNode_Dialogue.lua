@@ -142,8 +142,31 @@ function M:Stop()
   end
 end
 
+function M:IsOnlyPlayAudioPending()
+  local SubFlow = self.SubFlow
+  if not IsValid(SubFlow) or not SubFlow.RunningNodes then
+    return false
+  end
+  local RunningNodes = SubFlow.RunningNodes:ToTable()
+  local DelegateNodeCount = 0
+  for _, Node in ipairs(RunningNodes) do
+    if Node:IsA(UEFNode_Delegate) then
+      DelegateNodeCount = DelegateNodeCount + 1
+    end
+  end
+  if 1 ~= DelegateNodeCount then
+    return false
+  end
+  local FlowOwner = self.Context and self.Context.FlowOwner
+  local TalkAudioComp = FlowOwner and FlowOwner.TalkAudioComp
+  return TalkAudioComp and TalkAudioComp:GetAudioState() == "Play"
+end
+
 function M:RequestSkip()
   if self.SubFlow then
+    if self:IsOnlyPlayAudioPending() then
+      self.bSkipToNext = true
+    end
     self.SubFlow:Skip()
     return true
   end
@@ -152,8 +175,11 @@ end
 
 function M:RealSkip()
   if self.SubFlow then
-    self.bSkipToNext = true
     self.SubFlow:Skip()
+    local TalkSubsystem = USubsystemBlueprintLibrary.GetWorldSubsystem(GWorld.GameInstance, UTalkSubsystem)
+    if TalkSubsystem then
+      TalkSubsystem:DestroyDialogueFlow(self.DialogueId)
+    end
     return true
   end
   return self:ResumePendingIterate()
@@ -161,7 +187,10 @@ end
 
 function M:Record()
   M.Super.Record(self)
-  self.DialogueRecordComponent:OnDialogueRecord(self.Dialogue.DialogueId, self.Dialogue)
+  if not self.DialogueRecordComponent then
+    return
+  end
+  self.DialogueRecordComponent:OnDialogueRecord(self.DialogueId, self.Dialogue)
 end
 
 return M

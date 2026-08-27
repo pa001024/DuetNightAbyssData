@@ -23,7 +23,7 @@ return ReadOnly("ConditionalRewardEvent", {
     EventId = 107003,
     EventReward = 107006,
     HideBPNode = T.RT_1,
-    RewardClaimCondition = 6022,
+    RewardClaimCondition = 10020105,
     RewardUnlockTips = "UI_RewardUnlockTips_107003"
   }
 })

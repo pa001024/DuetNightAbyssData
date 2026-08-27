@@ -454,6 +454,44 @@ function Component:GM_RemoveMonsterBuff(BuffId)
   end
 end
 
+function Component:GM_IncreaseMonsterBuffLayer(BuffId, Layer)
+  BuffId = tonumber(BuffId)
+  Layer = tonumber(Layer) or 1
+  local GameState = UE4.UGameplayStatics.GetGameState(self)
+  for Eid, Target in pairs(GameState.MonsterMap) do
+    assert(Target, self:ShowEidError(Eid))
+    if Target:GetCamp() == ECampName.Monster then
+      local BuffObj = self:FindBuffById(Target, BuffId, 0, false)
+      local Success = false
+      if BuffObj then
+        local CurrentLayer = BuffObj:GetLayerNum()
+        Success = self:ChangeBuffLayerFromTarget(Target, Target, BuffId, CurrentLayer + Layer, false)
+      else
+        local Value = self:CalcUserProperty(Target, Target, "ATK", nil)
+        local AddedBuffs = self:AddBuffToTarget(Target, Target, BuffId, -1, Value, nil, Layer)
+        Success = AddedBuffs:Num() > 0
+      end
+      if not Success then
+        ScreenPrint("Eid为:" .. tostring(Target.Eid) .. "Buff:" .. tostring(BuffId) .. "增加层数失败")
+      end
+    end
+  end
+end
+
+function Component:GM_ReduceMonsterBuffLayer(BuffId, Layer)
+  Layer = tonumber(Layer) or 1
+  local GameState = UE4.UGameplayStatics.GetGameState(self)
+  for Eid, Target in pairs(GameState.MonsterMap) do
+    assert(Target, self:ShowEidError(Eid))
+    if Target:GetCamp() == ECampName.Monster then
+      local Success = self:ReduceBuffLayerFromTarget(Target, Target, BuffId, Layer, false)
+      if not Success then
+        ScreenPrint("Eid为:" .. tostring(Target.Eid) .. "Buff:" .. tostring(BuffId) .. "减少层数失败")
+      end
+    end
+  end
+end
+
 function Component:GM_ChangeCreatureSpeed(Speed)
   Const.SkillCreatureSpeed = Speed
   require("EMLuaConst").SkillCreatureSpeed = Const.SkillCreatureSpeed

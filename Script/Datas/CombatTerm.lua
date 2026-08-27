@@ -160,6 +160,21 @@ return ReadOnly("CombatTerm", {
     CombatTermExplaination = "TERMEXP_2102_Skill02_03",
     CombatTermId = "Term_2102_Skill02_03"
   },
+  Term_2201_PassiveBuff = {
+    CombatTerm = "TERM_2201_PassiveBuff",
+    CombatTermExplaination = "TERMEXP_2201_PassiveBuff",
+    CombatTermId = "Term_2201_PassiveBuff"
+  },
+  Term_2201_Skill02_01 = {
+    CombatTerm = "TERM_2201_Skill02_01",
+    CombatTermExplaination = "TERMEXP_2201_Skill02_01",
+    CombatTermId = "Term_2201_Skill02_01"
+  },
+  Term_2201_Summon = {
+    CombatTerm = "TERM_2201_Summon",
+    CombatTermExplaination = "TERMEXP_2201_Summon",
+    CombatTermId = "Term_2201_Summon"
+  },
   Term_2301_Summon = {
     CombatTerm = "TERM_2301_Summon",
     CombatTermExplaination = "TERMEXP_2301_Summon",
@@ -204,6 +219,26 @@ return ReadOnly("CombatTerm", {
     CombatTerm = "TERM_3103_Summon02",
     CombatTermExplaination = "TERMEXP_3103_Summon02",
     CombatTermId = "Term_3103_Summon02"
+  },
+  Term_3104_Skill01_01 = {
+    CombatTerm = "TERM_3104_Skill01_01",
+    CombatTermExplaination = "TERMEXP_3104_Skill01_01",
+    CombatTermId = "Term_3104_Skill01_01"
+  },
+  Term_3104_Skill02_01 = {
+    CombatTerm = "TERM_3104_Skill02_01",
+    CombatTermExplaination = "TERMEXP_3104_Skill02_01",
+    CombatTermId = "Term_3104_Skill02_01"
+  },
+  Term_3104_Skill02_02 = {
+    CombatTerm = "TERM_3104_Skill02_02",
+    CombatTermExplaination = "TERMEXP_3104_Skill02_02",
+    CombatTermId = "Term_3104_Skill02_02"
+  },
+  Term_3104_Skill02_03 = {
+    CombatTerm = "TERM_3104_Skill02_03",
+    CombatTermExplaination = "TERMEXP_3104_Skill02_03",
+    CombatTermId = "Term_3104_Skill02_03"
   },
   Term_3201_Skill01 = {
     CombatTerm = "TERM_3201_Skill01",

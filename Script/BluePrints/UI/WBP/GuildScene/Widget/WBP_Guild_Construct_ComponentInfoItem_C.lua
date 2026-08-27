@@ -16,7 +16,7 @@ function M:OnListItemObjectSet(Content)
   local ItemData = Content.ItemData
   self.ItemData = ItemData
   self.Parent = Content.Parent
-  self.Text_Name:SetText(self:GetDisplayName(ItemData.Name))
+  self.Text_Name:SetText(GText(ItemData.Name))
   self.Text_Cost:SetText(tostring(ItemData.ConsumeValue or 0))
   self.Btn_TakeBack:SetText(GText("UI_RetrieveComponent"))
   self.Btn_Edit:SetText(GText("UI_EditComponent"))
@@ -36,12 +36,6 @@ function M:InitGamepad()
   self.Btn_TakeBack:SetGamePadImg("Menu")
   self.Btn_Edit:SetGamePadImg("Y")
   self:AddInputMethodChangedListen()
-end
-
-function M:GetDisplayName(Name)
-  local Text = tostring(Name or "")
-  local Parts = string.split(Text, "/")
-  return Parts[#Parts] or Text
 end
 
 function M:SetExpanded(bExpanded)

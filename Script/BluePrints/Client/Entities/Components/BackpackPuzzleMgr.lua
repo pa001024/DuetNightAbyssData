@@ -5,6 +5,29 @@ local TimeUtils = require("Utils.TimeUtils")
 local BagGameAwardReddotName = "BagGameAward"
 local BagGameNewReddotName = "BagGameNew"
 
+local function BuildCurrentBagGameLevelIdSet(LevelsInfo)
+  local LevelIdSet = {}
+  for _, LevelInfo in ipairs(LevelsInfo) do
+    LevelIdSet[LevelInfo.LevelId] = true
+  end
+  return LevelIdSet
+end
+
+local function ClearForeignBagGameReddotCache(ReddotName, CacheDetail, CurrentLevelIdSet)
+  local ForeignLevelIds = {}
+  for LevelId, _ in pairs(CacheDetail) do
+    if type(LevelId) == "number" and not CurrentLevelIdSet[LevelId] then
+      table.insert(ForeignLevelIds, LevelId)
+    end
+  end
+  for _, LevelId in ipairs(ForeignLevelIds) do
+    if true == CacheDetail[LevelId] then
+      ReddotManager.DecreaseLeafNodeCount(ReddotName, 1, {LevelId = LevelId})
+    end
+    CacheDetail[LevelId] = nil
+  end
+end
+
 function Component:_OnLoginSuccess()
   BackpackPuzzleController:Init()
   self:InitReddot()
@@ -71,11 +94,14 @@ function Component:_TryRefreshBagGameAwardReddot()
   if not CacheDetail then
     return
   end
-  local LevelsInfo = DataMgr.BackpackPuzzleLevel
+  local LevelsInfo = BagGameModel:GetLevelsInfo()
   if not LevelsInfo then
     return
   end
-  for LevelId, _ in pairs(LevelsInfo) do
+  local CurrentLevelIdSet = BuildCurrentBagGameLevelIdSet(LevelsInfo)
+  ClearForeignBagGameReddotCache(BagGameAwardReddotName, CacheDetail, CurrentLevelIdSet)
+  for _, LevelInfo in ipairs(LevelsInfo) do
+    local LevelId = LevelInfo.LevelId
     local bHasReward = BagGameModel:HasRewardToGet(LevelId)
     local bCached = true == CacheDetail[LevelId]
     if bHasReward and not bCached then
@@ -99,7 +125,12 @@ function Component:_TryRefreshBagGameNewReddot()
     return
   end
   local LevelsInfo = BagGameModel:GetLevelsInfo()
-  if not LevelsInfo or 0 == #LevelsInfo then
+  if not LevelsInfo then
+    return
+  end
+  local CurrentLevelIdSet = BuildCurrentBagGameLevelIdSet(LevelsInfo)
+  ClearForeignBagGameReddotCache(BagGameNewReddotName, CacheDetail, CurrentLevelIdSet)
+  if 0 == #LevelsInfo then
     return
   end
   for i, LevelInfo in ipairs(LevelsInfo) do

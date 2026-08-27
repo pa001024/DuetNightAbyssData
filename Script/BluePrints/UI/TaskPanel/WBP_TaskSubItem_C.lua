@@ -3,6 +3,7 @@ local WBP_TaskSubItem_C = Class("BluePrints.UI.BP_UIState_C")
 local TaskUtils = require("BluePrints.UI.TaskPanel.TaskUtils")
 local GuidePointLocData = require("BluePrints.UI.TaskPanel/QuestGuidePointLocData")
 local EMCache = require("EMCache.EMCache")
+local ClientEventUtils = require("BluePrints.Common.ClientEvent.ClientEventUtils")
 local QuestRealStateEnum = {
   Lock = 0,
   Doing = 1,
@@ -275,6 +276,17 @@ function WBP_TaskSubItem_C:GetDetailInfo()
     self.QuestDeatil = GText("UI_QUEST_UNKNOWN")
   else
     self.QuestDeatil = GText(Info.QuestDeatil)
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  if Avatar.InSpecialQuest and ClientEventUtils:GetCurrentEvent() and ClientEventUtils:GetCurrentEvent().PreQuestChainId then
+    if self.QuestChainId == ClientEventUtils:GetCurrentEvent().PreQuestChainId and Avatar.QuestChains[self.QuestChainId] and self.QuestID == Avatar.QuestChains[self.QuestChainId].DoingQuestId then
+      self:TrySetSTLDetail(self.QuestChainId, self.QuestID)
+    else
+      return
+    end
   end
   self:TrySetSTLDetail(self.QuestChainId, self.QuestID)
 end

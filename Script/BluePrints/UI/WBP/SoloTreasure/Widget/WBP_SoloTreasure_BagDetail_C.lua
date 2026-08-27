@@ -1,3 +1,4 @@
+local MiscUtils = require("Utils.MiscUtils")
 require("UnLua")
 local InventoryController = require("BluePrints.UI.WBP.SoloTreasure.Widget.Inventory.InventoryController")
 local InventoryCommonConst = require("BluePrints.UI.WBP.SoloTreasure.Widget.Inventory.InventoryCommonConst")
@@ -51,7 +52,7 @@ function M:UpdateBagTreasureValues()
   end
   local BagTreasureValue = self.Dungeonobject.TreasureScore or 0
   if BagTreasureValue then
-    local FormattedBagTreasureValue = Utils.FormatNumber(BagTreasureValue, false)
+    local FormattedBagTreasureValue = MiscUtils.FormatNumber(BagTreasureValue, false)
     self.Text_DetailsNum02:SetText(tostring(FormattedBagTreasureValue))
   end
 end
@@ -62,7 +63,7 @@ function M:UpdateCombatValues()
   end
   local CombatScore = self.Dungeonobject.KillMonsterScore or 0
   if CombatScore then
-    local FormattedCombatScore = Utils.FormatNumber(CombatScore, false)
+    local FormattedCombatScore = MiscUtils.FormatNumber(CombatScore, false)
     self.Text_DetailsNum01:SetText(tostring(FormattedCombatScore))
   end
 end

@@ -3,6 +3,7 @@ local BaseTypes = require("BluePrints.Client.CustomTypes.BaseTypes")
 local CustomTypes = require("BluePrints.Client.CustomTypes.CustomTypes")
 local prop = require("NetworkEngine.Common.Prop")
 local FormatProperties = require("NetworkEngine.Common.Assemble").FormatProperties
+local SerializeUtils = require("Utils.SerializeUtils")
 local RaidSeason = Class("RaidSeason", CustomTypes.CustomAttr)
 RaidSeason.__Props__ = {
   RaidSeasonId = prop.prop("Int", "client save"),
@@ -136,16 +137,26 @@ function RaidSeason:GetRaidGoupId()
   end
 end
 
-function RaidSeason:GetRaidSeasonRewadCount(ResRaidScore, TargetTime)
+function RaidSeason:GetRaidRewardParams(DungeonId)
+  if self.RaidPointToRewrad and next(self.RaidPointToRewrad) and self.RaidPointToRewradMaxTime and self.RaidPointToRewradMaxTime > 0 then
+    return self.RaidPointToRewrad, self.RaidPointToRewradMaxTime
+  else
+    local RaidDungeonConf = DataMgr.RaidDungeon[DungeonId]
+    return RaidDungeonConf.RaidPointToRewrad, RaidDungeonConf.RaidPointToRewradMaxTime
+  end
+end
+
+function RaidSeason:GetRaidSeasonRewadCount(ResRaidScore, TargetTime, DungeonId)
   local TargetReward = {}
   if ResRaidScore <= 0 then
     return TargetReward
   end
   if self:CheckTarget_IsRaidTime(TargetTime) then
-    for BaseScore, BaseRewardId in pairs(self.RaidPointToRewrad) do
+    local RaidPointToRewrad, RaidPointToRewradMaxTime = self:GetRaidRewardParams(DungeonId)
+    for BaseScore, BaseRewardId in pairs(RaidPointToRewrad) do
       local BaseRewardCount = math.max(math.floor(ResRaidScore // BaseScore), 0)
-      if BaseRewardCount > self.RaidPointToRewradMaxTime then
-        BaseRewardCount = self.RaidPointToRewradMaxTime
+      if RaidPointToRewradMaxTime < BaseRewardCount then
+        BaseRewardCount = RaidPointToRewradMaxTime
       end
       for Index = 1, BaseRewardCount do
         table.insert(TargetReward, BaseRewardId)

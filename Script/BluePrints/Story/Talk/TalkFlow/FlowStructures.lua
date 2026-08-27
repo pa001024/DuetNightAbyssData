@@ -80,17 +80,45 @@ local M = {
     }
   },
   Observation = {
+    DialogueDataType = "Simple",
     Operations = {
       {
-        SEQ = {
+        PARA = {
           [1] = {
-            TypingText = {
-              DialogueData = "$Dialogue",
-              NameWidget = "$Owner.NpcNameText",
-              TypingWidget = "$Owner.TypingText"
+            SEQ = {
+              [1] = {
+                TypingText = {
+                  DialogueData = "$RawDialogue",
+                  NameWidget = "$Owner.NpcNameText",
+                  TypingWidget = "$Owner.TypingText"
+                }
+              },
+              [2] = {
+                ConditionalDelay = {
+                  Condition = "$Owner.IsAutoPlay",
+                  Delay = "$GlobalConstant.TalkWaitForNewPage.ConstantValue",
+                  GroupTag = "$Owner"
+                }
+              }
             }
           },
           [2] = {
+            PlayAudio = {
+              VoiceName = "$Dialogue.VoiceName",
+              SrcActor = "$Dialogue.TalkActorData.TalkActor",
+              ExtraInfo = "$RawDialogue",
+              SoundHandle = "Observation",
+              bIsAttachActor = false,
+              bKeepAudioOnSkip = true
+            }
+          },
+          [3] = {
+            Delay = {
+              Delay = "$Dialogue.Duration",
+              GroupTag = "$Owner"
+            }
+          },
+          [4] = {
             PlayScript = {
               DialogueId = "$DialogueId"
             }

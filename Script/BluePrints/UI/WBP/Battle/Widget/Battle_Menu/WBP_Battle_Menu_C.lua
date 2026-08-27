@@ -23,17 +23,6 @@ M.SLOT_INDEX_2_BG_INDEX = {
 }
 
 function M:Construct()
-  self.SlotDirections = {
-    FVector2D(1, 0),
-    UKismetMathLibrary.Normal2D(FVector2D(1, -1)),
-    FVector2D(0, -1),
-    UKismetMathLibrary.Normal2D(FVector2D(-1, -1)),
-    FVector2D(-1, 0),
-    UKismetMathLibrary.Normal2D(FVector2D(-1, 1)),
-    FVector2D(0, 1),
-    UKismetMathLibrary.Normal2D(FVector2D(1, 1)),
-    FVector2D(1, 0)
-  }
   self.TotalSlotNumber = 8
   self.AngelPerSlot = 360 / self.TotalSlotNumber
   self.OuterWheelRadius = 9999999
@@ -129,13 +118,10 @@ end
 
 function M:CalcHoveredSlot(DisFromCenter)
   local NormalDiff = UKismetMathLibrary.Normal2D(DisFromCenter)
-  for i = 1, self.TotalSlotNumber do
-    local AngelSlot = UKismetMathLibrary.DegAcos(UKismetMathLibrary.DotProduct2D(NormalDiff, self.SlotDirections[i]))
-    local AngelNextSlot = UKismetMathLibrary.DegAcos(UKismetMathLibrary.DotProduct2D(NormalDiff, self.SlotDirections[i + 1]))
-    if AngelSlot >= 0 and AngelSlot <= self.AngelPerSlot and AngelNextSlot > 0 and AngelNextSlot <= self.AngelPerSlot then
-      return i
-    end
-  end
+  local AngleDeg = -UKismetMathLibrary.DegAtan2(NormalDiff.Y, NormalDiff.X)
+  AngleDeg = AngleDeg < 0 and AngleDeg + 360 or AngleDeg
+  local Raw = math.floor(AngleDeg / self.AngelPerSlot) + 1
+  return Raw > self.TotalSlotNumber and 1 or Raw
 end
 
 function M:SetWheelRadius(InnerWheelRadius, OuterWheelRadius)

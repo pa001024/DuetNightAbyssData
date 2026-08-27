@@ -496,6 +496,13 @@ function M:CurrentStateEvent_SetBubbleWidget(ParamentsTable)
   self.Owner:SetBubbleWidgetShowOrHide(bShow)
 end
 
+function M:CurrentStateEvent_StopVisionDetection(ParamentsTable)
+  DebugPrint("DroneVision CurrentStateEvent_StopVisionDetection", self.Owner:GetName())
+  if self.Owner.StopVisionDetection then
+    self.Owner:StopVisionDetection()
+  end
+end
+
 function M:EventsNextState_Test(ParamentsTable, NextStateId, Callback)
   self:EventsNextStateCallback()
   if self:CheckCallback(Index) then
@@ -575,6 +582,14 @@ function M:EventsNextState_CreateSpecialMonster(ParamentsTable, NextStateId, Cal
     return
   end
   self.Owner:CreateSpecialMonster(RuleId)
+  self:EventsNextStateCallback(Callback, NextStateId)
+end
+
+function M:EventsNextState_ResumeVisionDetection(ParamentsTable, NextStateId, Callback)
+  DebugPrint("DroneVision EventsNextState_ResumeVisionDetection", self.Owner:GetName(), "→StateId:", NextStateId)
+  if self.Owner.ResumeVisionDetection then
+    self.Owner:ResumeVisionDetection()
+  end
   self:EventsNextStateCallback(Callback, NextStateId)
 end
 

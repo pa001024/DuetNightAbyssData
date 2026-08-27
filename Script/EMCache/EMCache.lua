@@ -4,7 +4,7 @@ local rapidjson = require("rapidjson")
 local crypt = require("crypt")
 local MiscUtils = require("Utils.MiscUtils")
 local CryptKey = crypt.base64encode("DuetNightAbyss")
-local MaxFileSize = 16777218
+local MaxFileSize = 25165827
 local FileNamePart = "EMCache"
 local CommonTag = "Common"
 local FileDir = UEMPathFunctionLibrary.GetProjectSavedDirectory() .. "SaveGames/" .. FileNamePart .. "/"
@@ -82,25 +82,131 @@ function EMCache:Remove(Key, bUseUUID)
   Cache[Key] = nil
 end
 
-function EMCache:_GetCacheName(bUseUUID)
-  local Tag = CommonTag
-  if bUseUUID then
-    local Avatar = GWorld:GetAvatar() or self.TempAvatar
-    if not Avatar then
-      Utils.Traceback(ErrorTag, LXYTag .. "[EMCache Error]Avatar is nil, Can't Get user Cache")
-      return
-    end
-    Tag = tostring(Avatar.Account)
-    if Avatar.Uid then
-      local Hostnum = tonumber(Avatar.Uid) // 10000000 // 10
-      Tag = tostring(Hostnum) .. "_" .. Tag
-    else
-      DebugPrint(ErrorTag, "[EMCache Error] Avatar有问题，Uid为空！！！")
-      return
-    end
-    return FileNamePart .. "_" .. Tag
+function EMCache:_GetUserAvatar()
+  local Avatar = GWorld:GetAvatar() or self.TempAvatar
+  if not Avatar then
+    Utils.Traceback(ErrorTag, LXYTag .. "[EMCache Error]Avatar is nil, Can't Get user Cache")
+    return
   end
-  return Tag .. "_" .. FileNamePart
+  return Avatar
+end
+
+function EMCache:_GetUserCacheTag()
+  local Avatar = self:_GetUserAvatar()
+  if not Avatar then
+    return
+  end
+  local Tag = tostring(Avatar.Account)
+  if not Tag or "" == Tag then
+    DebugPrint(ErrorTag, "[EMCache Error] Avatar有问题，Account为空！！！")
+    return
+  end
+  return Tag
+end
+
+function EMCache:_GetUserAvatarUid()
+  local Avatar = self:_GetUserAvatar()
+  if not Avatar then
+    return
+  end
+  local Uid = Avatar.Uid
+  if not Uid or 0 == Uid then
+    DebugPrint(ErrorTag, "[EMCache Error] Avatar有问题，Uid为空！！！")
+    return
+  end
+  return tostring(Uid)
+end
+
+function EMCache:_GetLegacyHostnum(Avatar)
+  if not Avatar then
+    return
+  end
+  local Uid = Avatar.Uid
+  if not Uid or 0 == Uid then
+    return
+  end
+  local Hostnum = tonumber(Uid) // 10000000 // 10
+  if Hostnum <= 0 then
+    return
+  end
+  return tostring(Hostnum)
+end
+
+function EMCache:_IsUserCacheFileName(FileName, Account, AvatarUid, LegacyHostnum)
+  local Name = FileName
+  local DotIndex = string.find(Name, "%.")
+  if DotIndex then
+    Name = string.sub(Name, 1, DotIndex - 1)
+  end
+  local Prefix = FileNamePart .. "_"
+  if string.sub(Name, 1, #Prefix) ~= Prefix then
+    return false
+  end
+  if Name == FileNamePart .. "_" .. Account .. "_" .. AvatarUid then
+    return true
+  end
+  local Remaining = string.sub(Name, #Prefix + 1)
+  local Underline = string.find(Remaining, "_")
+  if Underline then
+    local HostPart = string.sub(Remaining, 1, Underline - 1)
+    local Tail = string.sub(Remaining, Underline + 1)
+    if string.match(HostPart, "^%d+$") == nil or Tail ~= Account then
+      return false
+    end
+    if LegacyHostnum then
+      return HostPart == LegacyHostnum
+    end
+    return true
+  end
+  return false
+end
+
+function EMCache:_FindUserCacheSlot(Account, AvatarUid, LegacyHostnum)
+  local NewName = FileNamePart .. "_" .. Account .. "_" .. AvatarUid
+  local SaveGameDir = UKismetSystemLibrary.GetProjectSavedDirectory() .. "SaveGames/"
+  local FileNames = TArray("")
+  if not UE4.URuntimeCommonFunctionLibrary.GetAllFileNamesInDic(SaveGameDir, FileNames) then
+    return NewName
+  end
+  local FoundOld
+  for i = 1, FileNames:Length() do
+    local FileFull = string.gsub(FileNames:GetRef(i), "\\", "/")
+    local PathParts = Split(FileFull, "/")
+    local BaseName = PathParts[#PathParts]
+    if self:_IsUserCacheFileName(BaseName, Account, AvatarUid, LegacyHostnum) then
+      local Name = BaseName
+      local DotIndex = string.find(Name, "%.")
+      if DotIndex then
+        Name = string.sub(Name, 1, DotIndex - 1)
+      end
+      if Name == NewName then
+        return NewName
+      else
+        FoundOld = FoundOld or Name
+      end
+    end
+  end
+  if FoundOld then
+    if LegacyHostnum then
+      DebugPrint(DebugTag, "[EMCache] 旧命名用户缓存(按 Hostnum=" .. LegacyHostnum .. " + Account 索引)索引到: " .. FoundOld)
+    else
+      DebugPrint(DebugTag, "[EMCache] 旧命名用户缓存(忽略Hostnum,仅Account)索引到: " .. FoundOld)
+    end
+    return FoundOld
+  end
+  return NewName
+end
+
+function EMCache:_GetCacheName(bUseUUID)
+  if bUseUUID then
+    local Tag = self:_GetUserCacheTag()
+    local AvatarUid = self:_GetUserAvatarUid()
+    if not Tag or not AvatarUid then
+      return
+    end
+    return FileNamePart .. "_" .. Tag .. "_" .. AvatarUid
+  end
+  return CommonTag .. "_" .. FileNamePart
 end
 
 function EMCache:_Save(bUseUUID, bNeedClean)
@@ -128,7 +234,19 @@ function EMCache:_RealLoadCache(bUseUUID)
   if not self._SaveGameClassWrap then
     self._SaveGameClassWrap = MiscUtils.LazyLoadClass("/Game/BluePrints/Client/BP_EMSaveGame.BP_EMSaveGame_C", true)
   end
-  local CacheName = self:_GetCacheName(bUseUUID)
+  local CacheName
+  if bUseUUID then
+    local Avatar = self:_GetUserAvatar()
+    local Account = self:_GetUserCacheTag()
+    local AvatarUid = self:_GetUserAvatarUid()
+    if not Account or not AvatarUid then
+      return {}
+    end
+    local LegacyHostnum = self:_GetLegacyHostnum(Avatar)
+    CacheName = self:_FindUserCacheSlot(Account, AvatarUid, LegacyHostnum)
+  else
+    CacheName = self:_GetCacheName(bUseUUID)
+  end
   if not CacheName then
     return {}
   end
@@ -138,7 +256,7 @@ function EMCache:_RealLoadCache(bUseUUID)
     return {}
   end
   if #SaveGame.EMCacheContent > MaxFileSize then
-    GWorld.logger.error(string.format("缓存内容超过2M了，跳过本次序列化并删除该缓存 ：%s", CacheName))
+    GWorld.logger.error(string.format("缓存内容超过3M了，跳过本次序列化并删除该缓存 ：%s", CacheName))
     return {}
   end
   local FileContent = ""
@@ -197,7 +315,7 @@ function EMCache:_RealSaveCache(Cache, bUseUUID)
     end
     local ExtraPath = FileDir .. CacheName .. ".json"
     if #FileContent > MaxFileSize then
-      GWorld.logger.error(string.format("缓存内容超过2M了，太大的缓存怀疑是有写入泄漏，查一下到底哪里有写入泄漏\n有问题的缓存文件: %s", ExtraPath))
+      GWorld.logger.error(string.format("缓存内容超过3M了，太大的缓存怀疑是有写入泄漏，查一下到底哪里有写入泄漏\n有问题的缓存文件: %s", ExtraPath))
     end
     local ok = UE4.URuntimeCommonFunctionLibrary.SaveFile(ExtraPath, FileContent)
     if not ok then
@@ -246,6 +364,16 @@ function EMCache:Reset(bClean, bUseUUID)
   if nil == bClean then
     bClean = true
   end
+  local Account, AvatarUid, LegacyHostnum
+  if not bClean and bUseUUID then
+    local Avatar = self:_GetUserAvatar()
+    Account = self:_GetUserCacheTag()
+    AvatarUid = self:_GetUserAvatarUid()
+    LegacyHostnum = self:_GetLegacyHostnum(Avatar)
+    if not Account or not AvatarUid then
+      return
+    end
+  end
   
   local function RealReset(Dir)
     local FileNames = TArray("")
@@ -258,16 +386,11 @@ function EMCache:Reset(bClean, bUseUUID)
       else
         local FileName = Split(FileFull, "/")
         FileName = FileName[#FileName]
-        local CacheName = self:_GetCacheName(bUseUUID)
-        if not CacheName then
-          return
-        end
         if not bUseUUID and string.sub(FileName, 1, #CommonTag) == CommonTag then
           UE4.UBlueprintFileUtilsBPLibrary.DeleteFile(FileFull)
           break
-        elseif bUseUUID and string.sub(FileName, 1, #CacheName) == CacheName then
+        elseif bUseUUID and self:_IsUserCacheFileName(FileName, Account, AvatarUid, LegacyHostnum) then
           UE4.UBlueprintFileUtilsBPLibrary.DeleteFile(FileFull)
-          break
         end
       end
     end

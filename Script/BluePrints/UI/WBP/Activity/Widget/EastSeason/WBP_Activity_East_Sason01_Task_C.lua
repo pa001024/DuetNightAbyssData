@@ -116,6 +116,7 @@ function M:InitUI()
   end
   self.Btn_GetAll:SetText(GText("UI_GameEvent_ClaimAll"))
   self.Text_Tip:SetText(GText("Event_102001_Quest01_Tips"))
+  AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "EastSeasonTaskOpen", nil)
   self:RefreshTabReddot()
 end
 
@@ -175,6 +176,7 @@ function M:CloseSelf()
   end
   self.ParentWidget:RefreshUI()
   self.IsClosingUi = true
+  AudioManager(self):SetEventSoundParam(self, "EastSeasonTaskOpen", {ToEnd = 1})
   self:PlayAnimation(self.Out)
   EventManager:FireEvent(EventID.OnReturnToActivityEntry)
   EventManager:FireEvent(EventID.OnActivityEntryShowVisible)
@@ -266,6 +268,14 @@ function M:InitQuestPhaseContent(TabId)
   local CompletedQuestCount, TotalQuestCount = EastSeasonQuestUtils:GetQuestPhaseInfo(self.EventId, self.QuestPhaseId)
   self.Text_Progress:SetText(CompletedQuestCount .. "/" .. TotalQuestCount)
   self.Text_Type:SetText(self.AllTabInfo[self.TabId].Text)
+  local TextColor = self.Color_Sub
+  if 1 == TabId then
+    TextColor = self.Color_Main
+  end
+  if TextColor then
+    self.Text_Type:SetColorAndOpacity(TextColor)
+    self.Text_Progress:SetColorAndOpacity(TextColor)
+  end
   if self.BackgroundWidgets then
     for index, widget in pairs(self.BackgroundWidgets) do
       if IsValid(widget) then

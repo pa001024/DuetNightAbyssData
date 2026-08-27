@@ -43,5 +43,25 @@ return ReadOnly("LimitedPrizePool", {
     ResultBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/LimitedPrizePool/Succubus/WBP_LimitedPrizePool_GetReward_Succubus_P.WBP_LimitedPrizePool_GetReward_Succubus_P'",
     ResultMobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/LimitedPrizePool/Succubus/WBP_LimitedPrizePool_GetReward_Succubus_M.WBP_LimitedPrizePool_GetReward_Succubus_M'",
     RoundBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/LimitedPrizePool/Succubus/WBP_LimitedPrizePool_RewardSwitchTip_Succubus.WBP_LimitedPrizePool_RewardSwitchTip_Succubus'"
+  },
+  [10302103] = {
+    BigPrizeBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/LimitedPrizePool/Doll/WBP_LimitedPrizePool_SelectPrize_Doll_P.WBP_LimitedPrizePool_SelectPrize_Doll_P'",
+    BigPrizeMobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/LimitedPrizePool/Doll/WBP_LimitedPrizePool_SelectPrize_Doll_M.WBP_LimitedPrizePool_SelectPrize_Doll_M'",
+    BigPrizeSoundEffects = "event:/ui/common/limit_gift_pool_sub_page_in_muou",
+    BigPrizeVideoPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/Activity/Activity_LimitedPrizePool_BG02.Activity_LimitedPrizePool_BG02'",
+    EventId = 10302103,
+    ExtraItem = {
+      [2] = {80059, 1},
+      [3] = {13059, 1},
+      [4] = {10161, 1}
+    },
+    HistoryBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/LimitedPrizePool/Doll/History/WBP_LimitedPrizePool_DetailHistoryContent_Doll.WBP_LimitedPrizePool_DetailHistoryContent_Doll'",
+    LimitedPrizePoolId = {1007, 1008},
+    ProcessBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/LimitedPrizePool/Doll/WBP_LimitedPrizePool_Gacha_Doll_P.WBP_LimitedPrizePool_Gacha_Doll_P'",
+    ProcessMobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/LimitedPrizePool/Doll/WBP_LimitedPrizePool_Gacha_Doll_M.WBP_LimitedPrizePool_Gacha_Doll_M'",
+    ProcessSoundEffects = "event:/ui/common/limit_gift_pool_gacha_show_muou",
+    ResultBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/LimitedPrizePool/Doll/WBP_LimitedPrizePool_GetReward_Doll_P.WBP_LimitedPrizePool_GetReward_Doll_P'",
+    ResultMobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/LimitedPrizePool/Doll/WBP_LimitedPrizePool_GetReward_Doll_M.WBP_LimitedPrizePool_GetReward_Doll_M'",
+    RoundBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/LimitedPrizePool/Doll/WBP_LimitedPrizePool_RewardSwitchTip_Doll.WBP_LimitedPrizePool_RewardSwitchTip_Doll'"
   }
 })

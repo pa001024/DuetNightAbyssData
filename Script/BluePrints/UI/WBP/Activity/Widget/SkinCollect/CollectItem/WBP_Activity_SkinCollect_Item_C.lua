@@ -759,7 +759,7 @@ end
 
 function M:OnMouseButtonDown(MyGeometry, MouseEvent)
   if not self.bClaimableMode then
-    return
+    return UE4.UWidgetBlueprintLibrary.Unhandled()
   end
   self:PlayCurrentSubWidgetMouseAnimForce("Press")
   return UE4.UWidgetBlueprintLibrary.Handled()
@@ -767,9 +767,10 @@ end
 
 function M:OnMouseButtonUp(MyGeometry, MouseEvent)
   if not self.bClaimableMode then
-    return
+    return UE4.UWidgetBlueprintLibrary.Unhandled()
   end
   self:PlayCurrentSubWidgetMouseAnimForce("Normal")
+  return UE4.UWidgetBlueprintLibrary.Handled()
 end
 
 function M:OnAddedToFocusPath(InFocusEvent)

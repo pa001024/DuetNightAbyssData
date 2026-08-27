@@ -373,13 +373,15 @@ function M:EnableNameWidget(bEnable, Name)
   self:EnableHeadWidget("Name", bEnable, GText(Name))
 end
 
-function M:PreEnterStory(OnFinished, bCacheMeshMaterials, bPauseBT)
+function M:PreEnterStory(Context)
   if self.bInStory then
-    StoryPlayableUtils:ExecuteStoryDelegate(OnFinished)
     return
   end
-  if bCacheMeshMaterials and self.CharacterFashion then
-    self.CharacterFashion:PreEnterStory(bCacheMeshMaterials)
+  if Context and Context.bTriggerKawaiiLayerLink and self.JudgeSkinType and self.TriggerKawaiiLayerLink and self:JudgeSkinType() == UE4.ESkinType.DefaultSkin then
+    self:TriggerKawaiiLayerLink(Context.bOpenKawaiiLayerLink)
+  end
+  if Context and Context.bCacheMeshMaterials and self.CharacterFashion then
+    self.CharacterFashion:PreEnterStory(Context.bCacheMeshMaterials)
   end
   self:AddTimer(0.01, function()
     self.NativeMeshTickOptions = {}
@@ -394,17 +396,18 @@ function M:PreEnterStory(OnFinished, bCacheMeshMaterials, bPauseBT)
       end
     end
   end)
-  if bPauseBT and self.StopBT then
+  if Context and Context.bPauseBT and self.StopBT then
     self:StopBT("Talk")
   end
   self.bInStory = true
-  StoryPlayableUtils:ExecuteStoryDelegate(OnFinished)
 end
 
-function M:PreExitStory(OnFinished, bStartBT, bIsExternal)
+function M:PreExitStory(Context)
   if not self.bInStory then
-    StoryPlayableUtils:ExecuteStoryDelegate(OnFinished)
     return
+  end
+  if Context and Context.bTriggerKawaiiLayerLink and self.JudgeSkinType and self.TriggerKawaiiLayerLink and self:JudgeSkinType() == UE4.ESkinType.DefaultSkin then
+    self:TriggerKawaiiLayerLink(Context.bOpenKawaiiLayerLink)
   end
   if self.CharacterFashion then
     self.CharacterFashion:PreExitStory()
@@ -421,17 +424,12 @@ function M:PreExitStory(OnFinished, bStartBT, bIsExternal)
     end
   end
   self.NativeInSetShadow = nil
-  if bStartBT and self.RestartBT then
+  if Context and Context.bPauseBT and self.RestartBT then
     self:RestartBT()
   end
   local EMGameState = UE4.UGameplayStatics.GetGameState(self)
   EMGameState:HideNpc(false, Const.TalkHideTag, self)
   self.bInStory = false
-  StoryPlayableUtils:ExecuteStoryDelegate(OnFinished)
-end
-
-function M:IsInStory()
-  return self.bInStory
 end
 
 return M

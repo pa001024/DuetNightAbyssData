@@ -15,9 +15,13 @@ Squad.__Props__ = {
   Pet = prop.prop("Int", "client save", 0),
   WheelIndex = prop.prop("Int", "client save", 0),
   Phantom1 = prop.prop("ObjId", "client save", ""),
+  PhantomModSuit1 = prop.prop("Int", "client save", 0),
   PhantomWeapon1 = prop.prop("ObjId", "client save", ""),
+  PhantomWeaponModSuit1 = prop.prop("Int", "client save", 0),
   Phantom2 = prop.prop("ObjId", "client save", ""),
-  PhantomWeapon2 = prop.prop("ObjId", "client save", "")
+  PhantomModSuit2 = prop.prop("Int", "client save", 0),
+  PhantomWeapon2 = prop.prop("ObjId", "client save", ""),
+  PhantomWeaponModSuit2 = prop.prop("Int", "client save", 0)
 }
 FormatProperties(Squad)
 

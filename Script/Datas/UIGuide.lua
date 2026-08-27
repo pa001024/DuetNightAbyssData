@@ -61,7 +61,7 @@ return ReadOnly("UIGuide", {
     MainGuideTitle = "MAINUIGUIDE_TITLE_HARDBOSS"
   },
   [12] = {
-    ChildGuideId = {1201, 1204},
+    ChildGuideId = {1201},
     GuideId = 12,
     MainGuideTitle = "MAINUIGUIDE_TITLE_MOD"
   },
@@ -927,6 +927,39 @@ return ReadOnly("UIGuide", {
     },
     GuideId = 158,
     MainGuideTitle = "Message_Guide_ActivityWeapon_T"
+  },
+  [159] = {
+    ChildGuideId = {15901},
+    GuideId = 159,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_Observation_1"
+  },
+  [160] = {
+    ChildGuideId = {
+      16001,
+      16002,
+      16003
+    },
+    GuideId = 160,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_StringBoard_1"
+  },
+  [161] = {
+    ChildGuideId = {16101},
+    GuideId = 161,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_Hammer_1"
+  },
+  [162] = {
+    ChildGuideId = {16201},
+    GuideId = 162,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_TargetBoard_1"
+  },
+  [163] = {
+    ChildGuideId = {
+      16301,
+      16302,
+      16303
+    },
+    GuideId = 163,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_SlideSpline_1"
   },
   [1001] = {
     ChildGuideId = {

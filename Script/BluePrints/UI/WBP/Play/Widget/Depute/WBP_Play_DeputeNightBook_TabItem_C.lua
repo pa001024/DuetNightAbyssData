@@ -1,4 +1,5 @@
 require("UnLua")
+local MonsterUtils = require("Utils.MonsterUtils")
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C",
   "BluePrints.UI.BP_EMUserWidgetUtils_C"
@@ -158,29 +159,66 @@ function M:RefreshDungeonRewards()
   table.sort(MonsterRewardDataList, function(A, B)
     return A.Sequence < B.Sequence
   end)
+  local FilterAttr = self.Parent and self.Parent.AttrFilterByLevel and self.Parent.AttrFilterByLevel[self.DungeonData.Name]
+  if FilterAttr and "All" ~= FilterAttr then
+    local FilteredList = {}
+    for _, RewardData in ipairs(MonsterRewardDataList) do
+      if self:_RewardMatchesAttribute(RewardData, FilterAttr) then
+        table.insert(FilteredList, RewardData)
+      end
+    end
+    MonsterRewardDataList = FilteredList
+  end
   local loadedItemCount = 0
-  for Index, RewardData in ipairs(MonsterRewardDataList) do
+  for _, RewardData in ipairs(MonsterRewardDataList) do
     local Content = self:CreateRewardContent(RewardData)
     self.List_NightBookItem:AddItem(Content)
-    if self:IsExistTimer(self.NextFrameListEmpty) then
-      self:RemoveTimer(self.NextFrameListEmpty)
-    end
-    self.NextFrameListEmpty = self:AddTimer(0.01, function()
-      local ItemUIs = self.List_NightBookItem:GetDisplayedEntryWidgets()
-      local RestCount = UIUtils.GetListViewContentMaxCount(self.List_NightBookItem, ItemUIs, true) - ItemUIs:Length()
-      for i = 1, RestCount do
-        self:CreateAndAddEmptyItem()
-      end
-      self.List_NightBookItem:ScrollToTop()
-      self.List_NightBookItem:RequestPlayEntriesAnim()
-    end, false, 0, "DeputeNightBook_TabItemListView")
   end
+  if 0 == #MonsterRewardDataList then
+    self:CreateAndAddEmptyItem()
+  end
+  if self:IsExistTimer(self.NextFrameListEmpty) then
+    self:RemoveTimer(self.NextFrameListEmpty)
+  end
+  self.NextFrameListEmpty = self:AddTimer(0.01, function()
+    local ItemUIs = self.List_NightBookItem:GetDisplayedEntryWidgets()
+    local RestCount = UIUtils.GetListViewContentMaxCount(self.List_NightBookItem, ItemUIs, true) - ItemUIs:Length()
+    for i = 1, RestCount do
+      self:CreateAndAddEmptyItem()
+    end
+    self.List_NightBookItem:ScrollToTop()
+    self.List_NightBookItem:RequestPlayEntriesAnim()
+  end, false, 0, "DeputeNightBook_TabItemListView")
 end
 
 function M:CreateAndAddEmptyItem()
   local Content = NewObject(UIUtils.GetCommonItemContentClass())
   Content.IsEmpty = true
   self.List_NightBookItem:AddItem(Content)
+end
+
+function M:_RewardMatchesAttribute(RewardData, FilterAttr)
+  if not RewardData.MonsterUnitId or not RewardData.DungeonList then
+    return false
+  end
+  local AttrData = DataMgr.Attribute[FilterAttr]
+  local TargetIcon = AttrData and AttrData.Icon
+  if not TargetIcon then
+    return false
+  end
+  local DungeonId = RewardData.DungeonList[1]
+  if not DungeonId or not DataMgr.Dungeon[DungeonId] then
+    return false
+  end
+  local AllBuffs = MonsterUtils.GetRealMonsterBuffs(DungeonId, RewardData.MonsterUnitId)
+  for _, BuffId in ipairs(AllBuffs) do
+    local BuffInfo = DataMgr.Buff[BuffId]
+    local DamageTypeData = BuffInfo and BuffInfo.WeaknessType and DataMgr.DamageType[BuffInfo.WeaknessType]
+    if DamageTypeData and DamageTypeData.WeaknessIcon == TargetIcon then
+      return true
+    end
+  end
+  return false
 end
 
 function M:CreateRewardContent(RewardData)

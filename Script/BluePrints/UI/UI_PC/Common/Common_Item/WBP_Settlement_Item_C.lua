@@ -16,6 +16,9 @@ function M:InitCompView()
   self.Super.InitCompView(self)
   self:SetCount(self.Count, self.NeedCount, self.MaxCount, self.NotCountFormat)
   self:SetBonus(self.BonusType, self.ExtraBonusText)
+  if self.Content.ItemType == "Mod" and self.Content.ModLevel and self.Content.ModLevel > 0 then
+    self:SetItemStartLevel(self.Content.ModLevel)
+  end
   self:SetRedDot(self.RedDotType)
 end
 

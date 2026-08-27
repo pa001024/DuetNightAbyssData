@@ -76,6 +76,12 @@ class CharProcessor(BaseProcessor):
         self._anim_path_cache = {}
         self._anim_meta_cache = {}
 
+        # 预计算"召唤物"伤害效果ID(同伴召唤物/独立实体)，用于给伤害字段标记"召唤物" tag
+        (
+            self.summon_owned_effect_ids,
+            self.ce_creature_bp_effect_ids,
+        ) = self._build_summon_effect_ids()
+
         # 等级列表，用于显示属性
         self.levels = [1]
 
@@ -166,7 +172,7 @@ class CharProcessor(BaseProcessor):
         name = self.get_translated_text(char_data.get("CharName", ""))
         elm = self._process_element(char_id)
         character_data = self.character_data.get(str(char_id), {})
-        if name == "{nickname}":
+        if name == "{nickname}" or name == "{nickname2}":
             name = f"主角-{elm}"
         # 构建基础处理后的Char数据
         processed = {
@@ -854,6 +860,9 @@ class CharProcessor(BaseProcessor):
         "Dot": "持续",
         "Explode": "爆炸",
         "BonusDamage": "追加",
+        # 充盈伤害：由数据 DamageTag 标记(见 DamageTag.json 的 HyperTrigger)，
+        # 不依赖描述文本解析，用于与普通伤害区分
+        "HyperTrigger": "充盈",
     }
 
     # 伤害基值属性 → 中文
@@ -2395,6 +2404,12 @@ class CharProcessor(BaseProcessor):
             if format_template:
                 item["格式"] = format_template
 
+            # 伤害字段额外 tag(充盈/武器/召唤物等)：由引用 SkillEffects 的数据标记
+            # (DamageTag / 实体自带攻击效果)，与普通伤害区分，不解析描述文本
+            damage_tags = self._resolve_field_damage_tags(desc_values[i])
+            if damage_tags:
+                item["tag"] = damage_tags
+
             # 基于字段引用的技能ID关联战斗数据(仅伤害字段)
             field_combat_meta = self._resolve_field_combat_meta(desc_values[i])
             if field_combat_meta.get("削韧"):
@@ -2556,6 +2571,120 @@ class CharProcessor(BaseProcessor):
                 skill_node_ids.append(node_id)
 
         return skill_effect_ids, skill_node_ids
+
+    # 伤害字段的额外 tag：由引用 SkillEffects 的 Damage DamageTag 解析(见 DamageTag.json)，
+    # 不解析描述文本；配合召唤物(实体)自带攻击效果标记区分伤害来源与类型。
+    _FIELD_DAMAGE_TAG_CN = {
+        "HyperTrigger": "充盈",
+        "Weapon": "武器",
+        "Attack": "普攻",
+        "Dot": "持续",
+        "Explode": "爆炸",
+        "BonusDamage": "追加",
+    }
+
+    def _build_summon_effect_ids(self) -> tuple:
+        """收集"召唤物"伤害效果ID集合(数据驱动，不解析描述文本)。
+
+        召唤物 = 游戏正统的同伴召唤物(BattleChar.SummonId 实体，如 海月水母/触手/玄蛟
+        /幻象) 或 技能生成、拥有独立 Blueprint(BPPath) 且通过 CreatureEffects(自身
+        攻击) 造成伤害的真实实体(如 妮芙的[月猎])；排除仅通过 LoopExecuteSkillEffects
+        循环执行的组件型实体(如 泉符/领域/灰烬区域，它们只是技能机制表现)。
+        返回 (同伴召唤物效果ID集合, 独立实体CreatureEffects效果ID集合)。
+        """
+        # 同伴召唤物：所有 BattleChar.SummonId 对应的实体
+        summon_creature_ids = set()
+        for char_data in self.battle_char_data.values():
+            if not isinstance(char_data, dict):
+                continue
+            for sid in char_data.get("SummonId") or []:
+                if isinstance(sid, (int, str)) and str(sid).isdigit():
+                    summon_creature_ids.add(int(sid))
+
+        def collect(value, ids):
+            if isinstance(value, (int, str)) and str(value).isdigit():
+                ids.add(int(value))
+            elif isinstance(value, list):
+                for item in value:
+                    collect(item, ids)
+            elif isinstance(value, dict):
+                for item in value.values():
+                    collect(item, ids)
+
+        summon_owned: set = set()
+        ce_creature_bp_owned: set = set()
+
+        for creature in self.skill_creature_data.values():
+            if not isinstance(creature, dict):
+                continue
+            creature_id = creature.get("CreatureId")
+            if isinstance(creature_id, str) and creature_id.isdigit():
+                creature_id = int(creature_id)
+            if creature_id in summon_creature_ids:
+                # 同伴召唤物的自带效果(攻击/循环/延迟)都算召唤物伤害来源
+                collect(creature.get("CreatureEffects"), summon_owned)
+                collect(creature.get("DelayEffect"), summon_owned)
+                loop = creature.get("LoopExecuteSkillEffects")
+                if isinstance(loop, dict):
+                    collect(loop.get("SkillEffects"), summon_owned)
+            # 独立实体：拥有 BPPath 且通过 CreatureEffects(自身攻击) 造成伤害
+            if creature.get("BPPath"):
+                collect(creature.get("CreatureEffects"), ce_creature_bp_owned)
+
+        return summon_owned, ce_creature_bp_owned
+
+    def _resolve_field_damage_tags(self, desc_value) -> list[str]:
+        """按字段引用的 SkillEffects 任务解析伤害字段的额外 tag(如 充盈/武器/召唤物)。
+
+        充盈/武器/普攻/持续/爆炸/追加 等由数据 Damage 任务的 DamageTag 标记(见
+        DamageTag.json)；召唤物 指该效果属于某角色的同伴召唤物(BattleChar.SummonId)
+        或拥有独立 Blueprint 且通过 CreatureEffects 自身攻击的实体(见
+        _build_summon_effect_ids)，排除泉符/领域等技能机制组件。
+        只对字段实际引用的任务(TaskEffects[N])判定，避免把同效果的增益时长等
+        非伤害字段误标；全部由数据驱动，不解析描述文本(如"充盈伤害"字段名)。
+        """
+        if not isinstance(desc_value, str):
+            return []
+
+        tags = []
+        for m in re.finditer(
+            r"\$#SkillEffects\[(\d+)\](?:\.TaskEffects\[(\d+)\])?", desc_value
+        ):
+            effect_id = int(m.group(1))
+            skill_effect = self.skill_effects_data.get(str(effect_id))
+            if not isinstance(skill_effect, dict):
+                skill_effect = self.skill_effects_data.get(effect_id)
+            if not isinstance(skill_effect, dict):
+                continue
+
+            task_effects = skill_effect.get("TaskEffects", []) or []
+            if m.group(2):
+                # 游戏内 TaskEffects 索引从 1 开始，转 0 基
+                index = int(m.group(2)) - 1
+                if 0 <= index < len(task_effects):
+                    task_effects = [task_effects[index]]
+                else:
+                    task_effects = []
+
+            is_summon_effect = (
+                effect_id in self.summon_owned_effect_ids
+                or effect_id in self.ce_creature_bp_effect_ids
+            )
+            referenced_damage = False
+            for task_effect in task_effects:
+                if not isinstance(task_effect, dict):
+                    continue
+                if task_effect.get("Function") != "Damage":
+                    continue
+                referenced_damage = True
+                for tag in task_effect.get("DamageTag") or []:
+                    tag_cn = self._FIELD_DAMAGE_TAG_CN.get(tag)
+                    if tag_cn and tag_cn not in tags:
+                        tags.append(tag_cn)
+            # 召唤物伤害：字段引用的是该实体的伤害任务
+            if is_summon_effect and referenced_damage and "召唤物" not in tags:
+                tags.append("召唤物")
+        return tags
 
     def _get_skill_timing_by_skill_id(self, skill_id):
         """通过技能ID查找BeginNodeId并解析取消/连段"""

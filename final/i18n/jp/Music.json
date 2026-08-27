@@ -1,5 +1,93 @@
 [
   {
+    "id": 101401,
+    "name": "Flodia Bloomfield Station フラワー駅",
+    "desc": "駅は花の姫にちなんで名づけられた。",
+    "scoreId": 1014,
+    "rId": 3101401,
+    "music": "/bgm/1_4/musicbox/0161_scene_train_station"
+  },
+  {
+    "id": 101402,
+    "name": "Tea Time ティータイム",
+    "desc": "ご存じのとおり、ティータイムにはいつだって小さなハプニングがつきものだ。",
+    "scoreId": 1014,
+    "rId": 3101402,
+    "music": "/bgm/1_4/musicbox/0166_story_danger"
+  },
+  {
+    "id": 101403,
+    "name": "Graceful Steps 軽やかなステップ",
+    "desc": "軽やかにつま先立ち、ステップを踏んで――そっと忍び込む。",
+    "scoreId": 1014,
+    "rId": 3101403,
+    "music": "/bgm/1_4/musicbox/0162_story_jazz_sneak_into"
+  },
+  {
+    "id": 101404,
+    "name": "Hilda - A Maid's Virtue ヒルダ：メイドの美徳",
+    "desc": "あらゆる穢れを払い、招かれざる客をすべて追い払うことこそ、メイドの美徳である。",
+    "scoreId": 1014,
+    "rId": 3101404,
+    "music": "/bgm/1_4/musicbox/0165_story_xier_theme"
+  },
+  {
+    "id": 101405,
+    "name": "Bloomfield Waltz フラワー円舞曲",
+    "desc": "黄金に輝くドームの下、赤服の衛兵たちが差し出す銃弾の招待に応じる。",
+    "scoreId": 1014,
+    "rId": 3101405,
+    "music": "/bgm/1_4/musicbox/0163_combat_jazz_01"
+  },
+  {
+    "id": 101406,
+    "name": "Explosion Art 爆発の芸術",
+    "desc": "悪意と欺瞞をすり潰して火薬に変え、盛大な爆発を迎えよう。",
+    "scoreId": 1014,
+    "rId": 3101406,
+    "music": "/bgm/1_4/musicbox/0168_boss_haluoji"
+  },
+  {
+    "id": 101407,
+    "name": "Flora - In the Golden Cage フローラ：黄金の囚人",
+    "desc": "黄金の鳥籠に囚われた鳥は、広大な麦畑へ飛び立つことはかなわない。",
+    "scoreId": 1014,
+    "rId": 3101407,
+    "music": "/bgm/1_4/musicbox/0167_story_fuluo_theme"
+  },
+  {
+    "id": 101408,
+    "name": "The Crown 冠",
+    "desc": "指先から流れ出す旋律は優雅で、品格に満ち、そして重い冠でもある。",
+    "scoreId": 1014,
+    "rId": 3101408,
+    "music": "/bgm/1_4/musicbox/0170_story_fuluo_play_piano"
+  },
+  {
+    "id": 101409,
+    "name": "The Reaper's Feast 死の饗宴",
+    "desc": "さあ、爆ぜろ。死神の饗宴で舞い踊れ！",
+    "scoreId": 1014,
+    "rId": 3101409,
+    "music": "/bgm/1_4/musicbox/0171_combat_lieche_loop"
+  },
+  {
+    "id": 101410,
+    "name": "Our Sacred Oath 永遠の誓約",
+    "desc": "運命の狭間で、生と死の誓いを立てる。",
+    "scoreId": 1014,
+    "rId": 3101410,
+    "music": "/bgm/1_4/musicbox/0172_story_counter_attack"
+  },
+  {
+    "id": 101411,
+    "name": "Rebirth ニヴルヘイムを渡って",
+    "desc": "ニヴルヘイムを越え、次なる新生の彼岸へ向かう。",
+    "scoreId": 1014,
+    "rId": 3101411,
+    "music": "/bgm/1_4/musicbox/0173_story_main_theme_choir"
+  },
+  {
     "id": 1001001,
     "name": "Duet Night Abyss Main Theme デュエットナイトアビス",
     "desc": "黄昏に染まり、果てなき闇夜を駆け抜け、そして共に明日へ。",

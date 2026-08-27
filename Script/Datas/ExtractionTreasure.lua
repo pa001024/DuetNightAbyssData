@@ -7,14 +7,11 @@ T.RT_5 = {1, 2}
 T.RT_6 = {3, 4}
 T.RT_7 = {3, 3}
 T.RT_8 = {
-  [3] = 1.5
+  [1] = 0.8,
+  [2] = 0.8
 }
 T.RT_9 = {
-  [1] = 0.5,
-  [2] = 0.75
-}
-T.RT_10 = {
-  [3] = 1.1
+  [3] = 1.2
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
@@ -318,7 +315,8 @@ return ReadOnly("ExtractionTreasure", {
     TreasurePlayModeType = true,
     TreasureRarity = 6,
     TreasureType = 5,
-    TreasureValue = 100
+    TreasureValue = 100,
+    TreasureZoom = T.RT_8
   },
   [199131] = {
     Icon = "/Game/UI/Texture/Dynamic/Image/Prop/Activity/SoloTreasure/T_Activity_SoloTreasure_28.T_Activity_SoloTreasure_28",
@@ -329,7 +327,8 @@ return ReadOnly("ExtractionTreasure", {
     TreasurePlayModeType = true,
     TreasureRarity = 6,
     TreasureType = 5,
-    TreasureValue = 100
+    TreasureValue = 100,
+    TreasureZoom = T.RT_8
   },
   [199132] = {
     Icon = "/Game/UI/Texture/Dynamic/Image/Prop/Activity/SoloTreasure/T_Activity_SoloTreasure_29.T_Activity_SoloTreasure_29",
@@ -340,7 +339,8 @@ return ReadOnly("ExtractionTreasure", {
     TreasurePlayModeType = true,
     TreasureRarity = 6,
     TreasureType = 5,
-    TreasureValue = 100
+    TreasureValue = 100,
+    TreasureZoom = T.RT_8
   },
   [200101] = {
     Icon = "/Game/UI/Texture/Dynamic/Image/Prop/Activity/SoloTreasure/T_Activity_SoloTreasure_22.T_Activity_SoloTreasure_22",
@@ -373,8 +373,7 @@ return ReadOnly("ExtractionTreasure", {
     TreasurePlayModeType = true,
     TreasureRarity = 1,
     TreasureType = 3,
-    TreasureValue = 320,
-    TreasureZoom = T.RT_8
+    TreasureValue = 320
   },
   [200106] = {
     Icon = "/Game/UI/Texture/Dynamic/Image/Prop/Activity/SoloTreasure/T_Activity_SoloTreasure_07.T_Activity_SoloTreasure_07",
@@ -396,8 +395,7 @@ return ReadOnly("ExtractionTreasure", {
     TreasurePlayModeType = true,
     TreasureRarity = 1,
     TreasureType = 3,
-    TreasureValue = 360,
-    TreasureZoom = T.RT_9
+    TreasureValue = 360
   },
   [200108] = {
     Icon = "/Game/UI/Texture/Dynamic/Image/Prop/Activity/SoloTreasure/T_Activity_SoloTreasure_03.T_Activity_SoloTreasure_03",
@@ -486,8 +484,7 @@ return ReadOnly("ExtractionTreasure", {
     TreasurePlayModeType = true,
     TreasureRarity = 3,
     TreasureType = 4,
-    TreasureValue = 9000,
-    TreasureZoom = T.RT_10
+    TreasureValue = 9000
   },
   [200120] = {
     Icon = "/Game/UI/Texture/Dynamic/Image/Prop/Activity/SoloTreasure/T_Activity_SoloTreasure_21.T_Activity_SoloTreasure_21",
@@ -500,7 +497,9 @@ return ReadOnly("ExtractionTreasure", {
     TreasureRarity = 3,
     TreasureType = 3,
     TreasureValue = 12000,
-    TreasureZoom = T.RT_9
+    TreasureZoom = {
+      [3] = 0.8
+    }
   },
   [200121] = {
     Icon = "/Game/UI/Texture/Dynamic/Image/Prop/Activity/SoloTreasure/T_Activity_SoloTreasure_19.T_Activity_SoloTreasure_19",
@@ -535,7 +534,7 @@ return ReadOnly("ExtractionTreasure", {
     TreasureRarity = 4,
     TreasureType = 2,
     TreasureValue = 20000,
-    TreasureZoom = T.RT_8
+    TreasureZoom = T.RT_9
   },
   [200124] = {
     Icon = "/Game/UI/Texture/Dynamic/Image/Prop/Activity/SoloTreasure/T_Activity_SoloTreasure_11.T_Activity_SoloTreasure_11",
@@ -548,7 +547,7 @@ return ReadOnly("ExtractionTreasure", {
     TreasureRarity = 4,
     TreasureType = 3,
     TreasureValue = 16000,
-    TreasureZoom = T.RT_8
+    TreasureZoom = T.RT_9
   },
   [200125] = {
     Icon = "/Game/UI/Texture/Dynamic/Image/Prop/Activity/SoloTreasure/T_Activity_SoloTreasure_01.T_Activity_SoloTreasure_01",
@@ -561,7 +560,7 @@ return ReadOnly("ExtractionTreasure", {
     TreasureRarity = 4,
     TreasureType = 3,
     TreasureValue = 26000,
-    TreasureZoom = T.RT_10
+    TreasureZoom = T.RT_9
   },
   [200126] = {
     Icon = "/Game/UI/Texture/Dynamic/Image/Prop/Activity/SoloTreasure/T_Activity_SoloTreasure_02.T_Activity_SoloTreasure_02",
@@ -573,8 +572,7 @@ return ReadOnly("ExtractionTreasure", {
     TreasurePlayModeType = true,
     TreasureRarity = 5,
     TreasureType = 2,
-    TreasureValue = 150000,
-    TreasureZoom = T.RT_9
+    TreasureValue = 150000
   },
   [200127] = {
     Icon = "/Game/UI/Texture/Dynamic/Image/Prop/Activity/SoloTreasure/T_Activity_SoloTreasure_23.T_Activity_SoloTreasure_23",
@@ -586,8 +584,7 @@ return ReadOnly("ExtractionTreasure", {
     TreasurePlayModeType = true,
     TreasureRarity = 5,
     TreasureType = 4,
-    TreasureValue = 135000,
-    TreasureZoom = T.RT_9
+    TreasureValue = 135000
   },
   [200128] = {
     Icon = "/Game/UI/Texture/Dynamic/Image/Prop/Activity/SoloTreasure/T_Activity_SoloTreasure_09.T_Activity_SoloTreasure_09",
@@ -599,8 +596,7 @@ return ReadOnly("ExtractionTreasure", {
     TreasurePlayModeType = true,
     TreasureRarity = 5,
     TreasureType = 4,
-    TreasureValue = 240000,
-    TreasureZoom = T.RT_9
+    TreasureValue = 240000
   },
   [200129] = {
     Icon = "/Game/UI/Texture/Dynamic/Image/Prop/Activity/SoloTreasure/T_Activity_SoloTreasure_13.T_Activity_SoloTreasure_13",
@@ -612,7 +608,76 @@ return ReadOnly("ExtractionTreasure", {
     TreasurePlayModeType = true,
     TreasureRarity = 5,
     TreasureType = 4,
-    TreasureValue = 280000,
+    TreasureValue = 280000
+  },
+  [200130] = {
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Prop/Activity/SoloTreasure/T_Activity_SoloTreasure_33.T_Activity_SoloTreasure_33'",
+    Name = "UI_ExtreactionTreasure_Name_33",
+    SettlementIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Prop/Activity/SoloTreasure/T_Activity_SoloTreasure256_33.T_Activity_SoloTreasure256_33'",
+    Shape = T.RT_4,
+    TreasureArchiveBigSize = 1,
+    TreasureId = 200130,
+    TreasurePlayModeType = true,
+    TreasureRarity = 5,
+    TreasureType = 4,
+    TreasureValue = 200000,
     TreasureZoom = T.RT_9
+  },
+  [200131] = {
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Prop/Activity/SoloTreasure/T_Activity_SoloTreasure_32.T_Activity_SoloTreasure_32'",
+    Name = "UI_ExtreactionTreasure_Name_34",
+    SettlementIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Prop/Activity/SoloTreasure/T_Activity_SoloTreasure256_32.T_Activity_SoloTreasure256_32'",
+    Shape = T.RT_7,
+    TreasureArchiveBigSize = 1,
+    TreasureId = 200131,
+    TreasurePlayModeType = true,
+    TreasureRarity = 5,
+    TreasureType = 4,
+    TreasureValue = 150000
+  },
+  [200132] = {
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Prop/Activity/SoloTreasure/T_Activity_SoloTreasure_30.T_Activity_SoloTreasure_30'",
+    Name = "UI_ExtreactionTreasure_Name_35",
+    SettlementIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Prop/Activity/SoloTreasure/T_Activity_SoloTreasure256_30.T_Activity_SoloTreasure256_30'",
+    Shape = T.RT_1,
+    TreasureId = 200132,
+    TreasurePlayModeType = true,
+    TreasureRarity = 5,
+    TreasureType = 4,
+    TreasureValue = 150000
+  },
+  [200133] = {
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Prop/Activity/SoloTreasure/T_Activity_SoloTreasure_31.T_Activity_SoloTreasure_31'",
+    Name = "UI_ExtreactionTreasure_Name_36",
+    SettlementIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Prop/Activity/SoloTreasure/T_Activity_SoloTreasure256_31.T_Activity_SoloTreasure256_31'",
+    Shape = T.RT_4,
+    TreasureArchiveBigSize = 1,
+    TreasureId = 200133,
+    TreasurePlayModeType = true,
+    TreasureRarity = 4,
+    TreasureType = 3,
+    TreasureValue = 25000
+  },
+  [200134] = {
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Prop/Activity/SoloTreasure/T_Activity_SoloTreasure_34.T_Activity_SoloTreasure_34'",
+    Name = "UI_ExtreactionTreasure_Name_37",
+    SettlementIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Prop/Activity/SoloTreasure/T_Activity_SoloTreasure256_34.T_Activity_SoloTreasure256_34'",
+    Shape = T.RT_3,
+    TreasureId = 200134,
+    TreasurePlayModeType = true,
+    TreasureRarity = 4,
+    TreasureType = 3,
+    TreasureValue = 18000
+  },
+  [200135] = {
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Prop/Activity/SoloTreasure/T_Activity_SoloTreasure_35.T_Activity_SoloTreasure_35'",
+    Name = "UI_ExtreactionTreasure_Name_38",
+    SettlementIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Prop/Activity/SoloTreasure/T_Activity_SoloTreasure256_35.T_Activity_SoloTreasure256_35'",
+    Shape = T.RT_5,
+    TreasureId = 200135,
+    TreasurePlayModeType = true,
+    TreasureRarity = 4,
+    TreasureType = 3,
+    TreasureValue = 12000
   }
 })

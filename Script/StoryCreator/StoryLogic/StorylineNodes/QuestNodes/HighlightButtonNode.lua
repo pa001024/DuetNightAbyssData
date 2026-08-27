@@ -3,6 +3,7 @@ local HighlightButtonNode = Class("StoryCreator.StoryLogic.StorylineNodes.Questl
 function HighlightButtonNode:Init()
   self.ShowEnable = false
   self.SkillType = ""
+  self.DescriptionTextMapId = ""
 end
 
 function HighlightButtonNode:Start(Context)
@@ -27,12 +28,12 @@ function HighlightButtonNode:ShowMessage(Context)
       if nil == Instruction then
         Instruction = BattleMain:GetOrAddWidget("InstructionPC", BattleMain.Pos_Instruction)
         if Instruction then
-          Instruction:Init(self.SkillType, true)
+          Instruction:Init(self.SkillType, true, self.DescriptionTextMapId)
           Instruction:HideAllText()
         end
       end
       if Instruction then
-        Instruction:Init(self.SkillType, true)
+        Instruction:Init(self.SkillType, true, self.DescriptionTextMapId)
         DebugPrint(self.SkillType, "===HighlightButton=Show=PC===========================", Instruction.Key.Main:GetRenderOpacity())
         if 1 ~= Instruction.Key.Main:GetRenderOpacity() then
           self.RealStart = true
@@ -118,6 +119,7 @@ function HighlightButtonNode:ShowMessage(Context)
         elseif self.SkillType == "Slide" then
           Instruction.Key.Text_Describe:SetText(GText("Guide_HighlightButton_Crouch"))
         end
+        Instruction:SetActionText(self.SkillType)
       end
     else
       DebugPrint(self.SkillType, "===HighlightButton=Show=Mobile===========================")
@@ -207,6 +209,7 @@ function HighlightButtonNode:OnQuestlineFail()
         elseif self.SkillType == "Slide" then
           Instruction.Key.Text_Describe:SetText(GText("Guide_HighlightButton_Crouch"))
         end
+        Instruction:SetActionText(self.SkillType)
       end
     else
       DebugPrint(self.SkillType, "===HighlightButton=Show=Mobile===========================")

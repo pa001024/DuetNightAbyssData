@@ -7,12 +7,14 @@ function M:Init(Content)
   rawset(self, "MaxFameValue", Content.MaxFameValue)
   rawset(self, "bMaxLevel", Content.bMaxLevel)
   rawset(self, "bNotUpdateProgress", Content.bNotUpdateProgress)
-  self.TextLevel:SetText(GText("ReputationLevel_Title01"))
+  rawset(self, "CurRegionTabId", Content.CurRegionTabId)
   self.TextLevelNum:SetText(self.FameLevel)
   if self.bMaxLevel then
+    self.TextLevel:SetText(GText("LevelUP_Full_Reputation"))
     self.TextNow_1:SetText(GText("Reputation_MaxLevel"))
     self.WidgetSwitcher_0:SetActiveWidgetIndex(1)
   else
+    self.TextLevel:SetText(string.format(GText("LevelUP_Need_Reputation"), self.FameLevel + 1))
     if self.MaxFameValue then
       self.TextTotal:SetText(string.format("/%d", self.MaxFameValue))
     end
@@ -25,6 +27,19 @@ function M:Init(Content)
       LevelPercent = self.CurrentFameValue / self.MaxFameValue
     end
     self.ProgressBar_Fame:SetPercent(LevelPercent)
+  end
+  self:UpdateRegionUIIcon()
+  if self.CurRegionTabId then
+    local resourceID
+    if self.CurRegionTabId == 1001 then
+      resourceID = 2015
+    elseif self.CurRegionTabId == 1002 then
+      resourceID = 2016
+    end
+    local resourceData = DataMgr.Resource[resourceID]
+    if resourceData then
+      self.Image_94:SetBrushResourceObject(LoadObject(resourceData.Icon))
+    end
   end
 end
 
@@ -69,6 +84,24 @@ end
 function M:EndAddExp_Lua()
   self:RemoveTimer("AddExpLoop", true)
   rawset(self, "PlayingSound", false)
+end
+
+function M:UpdateRegionUIIcon()
+  self.CurRegionData = DataMgr.RegionReputation[self.CurRegionTabId]
+  local RegionUIIcon = self.CurRegionData and self.CurRegionData.RegionUIIcon
+  if self.RegionUIIcon and self.RegionUIIcon == RegionUIIcon then
+    return
+  end
+  self.RegionUIIcon = RegionUIIcon
+  local Icon = LoadObject(self.RegionUIIcon)
+  if not Icon then
+    return
+  end
+  local DynamicMaterial = self.Image_Region:GetDynamicMaterial()
+  if not IsValid(DynamicMaterial) then
+    return
+  end
+  DynamicMaterial:SetTextureParameterValue("IconTex", Icon)
 end
 
 return M

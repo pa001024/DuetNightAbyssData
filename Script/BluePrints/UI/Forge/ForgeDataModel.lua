@@ -15,6 +15,11 @@ local ProductPriority = setmetatable({
     return #ProductPriority + 1
   end
 })
+local PreShowDraftTabTypes = {
+  [ForgeConst.TabType.Weapon] = true,
+  [ForgeConst.TabType.Mod] = true,
+  [ForgeConst.TabType.CharAccessory] = true
+}
 
 function ForgeDataModel:Initialize()
   local PlayerAvatar = GWorld:GetAvatar()
@@ -55,27 +60,66 @@ function ForgeDataModel:OnBlueComplete(DraftId)
 end
 
 function ForgeDataModel:OnGetNewDraft(DraftIdTable)
-  for _, DraftId in ipairs(DraftIdTable) do
+  self.Drafts = self.Drafts or {}
+  for _, DraftId in ipairs(DraftIdTable or {}) do
     if self:IsDraftNotSeen(DraftId) then
       if not self.Drafts[DraftId] then
         local Draft = self:ConstructDraftInfoByDraftId(DraftId)
-        self.Drafts[DraftId] = Draft
+        if Draft then
+          self.Drafts[DraftId] = Draft
+        end
       end
-      self:IncreaseNewdotByDraftInfo(DraftId)
+      if self.Drafts[DraftId] then
+        self:IncreaseNewdotByDraftInfo(DraftId)
+      end
     end
   end
 end
 
 function ForgeDataModel:GetDraftInfoById(DraftId)
+  self.Drafts = self.Drafts or {}
   if not self.Drafts[DraftId] then
     local Draft = self:ConstructDraftInfoByDraftId(DraftId)
-    self.Drafts[DraftId] = Draft
+    if Draft then
+      self.Drafts[DraftId] = Draft
+    end
   end
   return self.Drafts[DraftId]
 end
 
 function ForgeDataModel:RemoveDraftInfoById(DraftId)
   self.Drafts[DraftId] = nil
+end
+
+function ForgeDataModel:GetDraftTabType(DraftId, DraftInfo)
+  if DraftInfo and DraftInfo.TabType then
+    return DraftInfo.TabType
+  end
+  local TabData = DataMgr.DraftId2TabAndSubTab[DraftId]
+  if TabData and TabData.TabType then
+    return TabData.TabType
+  end
+  local DraftData = DataMgr.Draft[DraftId]
+  return DraftData and DraftData.ProductType
+end
+
+function ForgeDataModel:IsPreShowDraft(DraftId, DraftInfo)
+  return PreShowDraftTabTypes[self:GetDraftTabType(DraftId, DraftInfo)] == true
+end
+
+function ForgeDataModel:ShouldConstructDraftFromConfig(DraftId)
+  local DraftData = DataMgr.Draft[DraftId]
+  if not DraftData or not DataMgr.DraftId2TabAndSubTab[DraftId] then
+    return false
+  end
+  return PreShowDraftTabTypes[DraftData.ProductType] == true
+end
+
+function ForgeDataModel:HasOwnedBlueprint(DraftInfo)
+  if not DraftInfo then
+    return false
+  end
+  return DraftInfo.IsInfinity or DraftInfo.Count > 0 or DraftInfo.State ~= ForgeConst.DraftState.NotStarted
 end
 
 function ForgeDataModel:OnDraftStartProduce(DraftId)
@@ -94,6 +138,9 @@ function ForgeDataModel:ConstructDraftInfoByDraftId(DraftId)
   local PlayerAvatar = GWorld:GetAvatar()
   if PlayerAvatar.Drafts and PlayerAvatar.Drafts[DraftId] then
     return self:ConstructDraftInfoByServerDraftData(DraftId, PlayerAvatar.Drafts[DraftId])
+  end
+  if self:ShouldConstructDraftFromConfig(DraftId) then
+    return self:ConstructDraftInfoByConfigData(DraftId)
   end
   return nil
 end
@@ -118,7 +165,6 @@ function ForgeDataModel:ConstructDraftInfoByServerDraftData(DraftId, Data)
   end
   Draft.FoundryCost = Data.FoundryCost
   Draft.IsSetTarget = self:IsDraftSetTarget(DraftId)
-  Draft.IsNotSeen = self:IsDraftNotSeen(DraftId)
   Draft.TabType = DataMgr.DraftId2TabAndSubTab[DraftId].TabType
   Draft.SubTabType = DataMgr.DraftId2TabAndSubTab[DraftId].SubTabType
   Draft.TypePriority = DataMgr.RewardType[Draft.ProductType].DungeonRewardSeq
@@ -143,12 +189,64 @@ function ForgeDataModel:ConstructDraftInfoByServerDraftData(DraftId, Data)
       Draft.Foundries[FoundryId] = FoundryCost
     end
   end
+  Draft.HasBlueprint = self:HasOwnedBlueprint(Draft)
+  Draft.IsNotSeen = Draft.HasBlueprint and self:IsDraftNotSeen(DraftId) or false
+  return Draft
+end
+
+function ForgeDataModel:ConstructDraftInfoByConfigData(DraftId)
+  local DraftData = DataMgr.Draft[DraftId]
+  local TabData = DataMgr.DraftId2TabAndSubTab[DraftId]
+  if not DraftData or not TabData then
+    return nil
+  end
+  local Draft = {}
+  Draft.Id = DraftId
+  Draft.Count = 0
+  Draft.IsInfinity = false
+  Draft.ProductId = DraftData.ProductId
+  Draft.ProductNum = DraftData.ProductNum
+  Draft.ProductType = DraftData.ProductType
+  Draft.ProductName = self:GetProductNameByTypeAndId(DraftData.ProductType, DraftData.ProductId)
+  Draft.CostTime = (DraftData.Time or 0) * 60
+  Draft.TotalTime = Draft.CostTime
+  Draft.StartTime = 0
+  Draft.State = ForgeConst.DraftState.NotStarted
+  Draft.DraftDoingNum = 0
+  Draft.DraftCompleteNum = 0
+  Draft.FoundryCost = DraftData.FoundryCost
+  Draft.IsSetTarget = self:IsDraftSetTarget(DraftId)
+  Draft.IsNotSeen = false
+  Draft.TabType = TabData.TabType
+  Draft.SubTabType = TabData.SubTabType
+  Draft.TypePriority = DataMgr.RewardType[Draft.ProductType].DungeonRewardSeq
+  Draft.Rarity = ItemUtils.GetItemRarity(Draft.ProductId, Draft.ProductType)
+  Draft.Resources = {}
+  if DraftData.Resource then
+    for _, Res in ipairs(DraftData.Resource) do
+      table.insert(Draft.Resources, {
+        Id = Res.Id,
+        Num = Res.Num,
+        Type = Res.Type or "Resource"
+      })
+      if Res.Type == "Mod" then
+        Draft.ModAsMaterial = true
+      end
+    end
+  end
+  Draft.Foundries = {}
+  if DraftData.FoundryCost then
+    for FoundryId, FoundryCost in pairs(DraftData.FoundryCost) do
+      Draft.Foundries[FoundryId] = FoundryCost
+    end
+  end
+  Draft.HasBlueprint = false
   return Draft
 end
 
 function ForgeDataModel:UpdateData()
   local PlayerAvatar = GWorld:GetAvatar()
-  self.ServerData = PlayerAvatar.Drafts
+  self.ServerData = PlayerAvatar.Drafts or {}
   self.Drafts = self.Drafts or {}
   for DraftId, Data in pairs(self.ServerData) do
     if not self.Drafts[DraftId] then
@@ -156,6 +254,17 @@ function ForgeDataModel:UpdateData()
       self.Drafts[DraftId] = Draft
       self:CheckState(DraftId)
     else
+      self:CheckState(DraftId)
+    end
+  end
+  for DraftId, _ in pairs(DataMgr.Draft) do
+    if self:ShouldConstructDraftFromConfig(DraftId) then
+      if not self.Drafts[DraftId] then
+        local Draft = self:ConstructDraftInfoByConfigData(DraftId)
+        if Draft then
+          self.Drafts[DraftId] = Draft
+        end
+      end
       self:CheckState(DraftId)
     end
   end
@@ -333,23 +442,39 @@ function ForgeDataModel:CheckState(DraftId)
   if not Avatar then
     return
   end
-  local ServerDraftInfo = Avatar.Drafts[DraftId]
+  local ServerDraftInfo = Avatar.Drafts and Avatar.Drafts[DraftId]
   local DraftInfo = self:GetDraftInfoById(DraftId)
   if DraftInfo then
-    if not ServerDraftInfo or ServerDraftInfo.Count <= 0 and 0 == ServerDraftInfo.State and not DraftInfo.IsInfinity then
+    if not ServerDraftInfo then
+      if not self:IsPreShowDraft(DraftId, DraftInfo) then
+        self:RemoveDraftInfoById(DraftInfo.Id)
+        return nil
+      end
+      DraftInfo.State = ForgeConst.DraftState.NotStarted
+      DraftInfo.Count = 0
+      DraftInfo.IsInfinity = false
+      DraftInfo.DraftDoingNum = 0
+      DraftInfo.DraftCompleteNum = 0
+      DraftInfo.StartTime = 0
+      DraftInfo.TotalTime = DraftInfo.CostTime
+    elseif ServerDraftInfo.Count <= 0 and ServerDraftInfo.State == ForgeConst.DraftState.NotStarted and not ServerDraftInfo.IsInfinity and not self:IsPreShowDraft(DraftId, DraftInfo) then
       self:RemoveDraftInfoById(DraftInfo.Id)
       return nil
+    else
+      DraftInfo.State = ServerDraftInfo.State
+      DraftInfo.Count = ServerDraftInfo.Count or 0
+      DraftInfo.IsInfinity = ServerDraftInfo.IsInfinity or false
+      DraftInfo.DraftDoingNum = ServerDraftInfo.DraftDoingNum or 0
+      DraftInfo.DraftCompleteNum = ServerDraftInfo.DraftCompleteNum or 0
+      DraftInfo.StartTime = ServerDraftInfo.StartTime or 0
+      DraftInfo.TotalTime = DraftInfo.CostTime
+      if DraftInfo.State == ForgeConst.DraftState.InProgress then
+        DraftInfo.TotalTime = DraftInfo.CostTime * (DraftInfo.DraftDoingNum + DraftInfo.DraftCompleteNum)
+      end
     end
-    DraftInfo.State = ServerDraftInfo.State
-    DraftInfo.Count = ServerDraftInfo.Count
-    DraftInfo.DraftDoingNum = ServerDraftInfo.DraftDoingNum
-    DraftInfo.DraftCompleteNum = ServerDraftInfo.DraftCompleteNum
-    DraftInfo.StartTime = ServerDraftInfo.StartTime
     DraftInfo.IsSetTarget = self:IsDraftSetTarget(DraftInfo.Id)
-    DraftInfo.IsNotSeen = self:IsDraftNotSeen(DraftInfo.Id)
-    if DraftInfo.State == ForgeConst.DraftState.InProgress then
-      DraftInfo.TotalTime = DraftInfo.CostTime * (DraftInfo.DraftDoingNum + DraftInfo.DraftCompleteNum)
-    end
+    DraftInfo.HasBlueprint = self:HasOwnedBlueprint(DraftInfo)
+    DraftInfo.IsNotSeen = DraftInfo.HasBlueprint and self:IsDraftNotSeen(DraftInfo.Id) or false
   else
     return nil
   end
@@ -363,13 +488,13 @@ end
 
 function ForgeDataModel:CanProduce(Draft)
   local PlayerAvatar = GWorld:GetAvatar()
-  local flag = true
+  local IsNotStarted = Draft.State == ForgeConst.DraftState.NotStarted
+  local flag = IsNotStarted
   local IsResourceEnough = true
   local IsFoundryEnough = true
   local MaxNum = 0
-  flag = flag and Draft.State == ForgeConst.DraftState.NotStarted
-  flag = flag and (Draft.Count > 0 or Draft.IsInfinity)
-  if flag then
+  flag = flag and (Draft.Count > 0 or Draft.IsInfinity or Draft.ProductType == CommonConst.ArmoryType.Weapon)
+  if IsNotStarted then
     MaxNum = INF
     for _, Res in ipairs(Draft.Resources) do
       local ResourceNeed = Res.Num
@@ -389,6 +514,9 @@ function ForgeDataModel:CanProduce(Draft)
         IsFoundryEnough = false
       end
     end
+  end
+  if not flag then
+    MaxNum = 0
   end
   if not Draft.IsInfinity then
     MaxNum = math.min(MaxNum, Draft.Count)
@@ -470,6 +598,7 @@ function ForgeDataModel:ConstructForgeItemContent(Obj, DraftInfo)
   Obj.IsResourceEnough = DraftInfo.IsResourceEnough
   Obj.IsFoundryEnough = DraftInfo.IsFoundryEnough
   Obj.IsNotSeen = DraftInfo.IsNotSeen
+  Obj.HasBlueprint = DraftInfo.HasBlueprint
   
   function Obj.GetDataModel()
     return self
@@ -643,11 +772,71 @@ function ForgeDataModel:HasIronTicket(Id)
   return Count
 end
 
-function ForgeDataModel:GetDatasByFilter(Filter, SubFilter, CommonFilter)
+function ForgeDataModel:GetDraftMaterialOwnedCount(DraftInfo)
+  if not DraftInfo or DraftInfo.HasBlueprint then
+    return 0
+  end
+  local OwnedCount = 0
+  for _, Res in ipairs(DraftInfo.Resources or {}) do
+    local ResType = Res.Type or "Resource"
+    local HaveNum = 0
+    if "CharAccessory" == ResType then
+      HaveNum = self:HasAccessory(Res.Id) and 1 or 0
+    elseif "IronTicket" == ResType then
+      HaveNum = self:HasIronTicket(Res.Id)
+    else
+      HaveNum = self:GetResourceNum(ResType, Res.Id) or 0
+    end
+    OwnedCount = OwnedCount + math.min(HaveNum, Res.Num or 0)
+  end
+  return OwnedCount
+end
+
+function ForgeDataModel:GetDraftMaterialProgressInfo(DraftInfo)
+  if not DraftInfo or DraftInfo.HasBlueprint then
+    return 0, 0, false
+  end
+  local SatisfiedCount = 0
+  local TotalCount = 0
+  for _, Res in ipairs(DraftInfo.Resources or {}) do
+    local ResType = Res.Type or "Resource"
+    local HaveNum = 0
+    if "CharAccessory" == ResType then
+      HaveNum = self:HasAccessory(Res.Id) and 1 or 0
+    elseif "IronTicket" == ResType then
+      HaveNum = self:HasIronTicket(Res.Id)
+    else
+      HaveNum = self:GetResourceNum(ResType, Res.Id) or 0
+    end
+    local NeedNum = Res.Num or 0
+    if NeedNum > 0 then
+      TotalCount = TotalCount + 1
+    end
+    if NeedNum > 0 and HaveNum >= NeedNum then
+      SatisfiedCount = SatisfiedCount + 1
+    end
+  end
+  return SatisfiedCount, TotalCount, TotalCount > 0 and TotalCount <= SatisfiedCount
+end
+
+function ForgeDataModel:GetDraftSatisfiedMaterialCount(DraftInfo)
+  local SatisfiedCount = self:GetDraftMaterialProgressInfo(DraftInfo)
+  return SatisfiedCount
+end
+
+function ForgeDataModel:IsUnOwnedFilterSelected(Filter, SortByIdx)
+  if 3 ~= SortByIdx then
+    return false
+  end
+  return true == PreShowDraftTabTypes[Filter]
+end
+
+function ForgeDataModel:GetDatasByFilter(Filter, SubFilter, CommonFilter, SortByIdx)
   self:UpdateData()
   local FilterResult = {HasFilterItem = false, HasSubFilterItem = false}
   local GlobalReleaseVersion = DataMgr.GlobalConstant.CurrentVersion.ConstantValue
   local FiltedDrafts = {}
+  local IsUnOwnedOnly = self:IsUnOwnedFilterSelected(Filter, SortByIdx)
   for _, Item in pairs(self.Drafts) do
     local ReleaseVersion = DataMgr.Draft[Item.Id].ReleaseVersion
     local IsValidItem = true
@@ -659,6 +848,12 @@ function ForgeDataModel:GetDatasByFilter(Filter, SubFilter, CommonFilter)
       for k, v in pairs(FilterItemResult) do
         IsValidItem = IsValidItem and v
         FilterResult[k] = FilterResult[k] or v
+      end
+    end
+    if IsValidItem and IsUnOwnedOnly then
+      IsValidItem = not Item.HasBlueprint and self:GetDraftSatisfiedMaterialCount(Item) > 0
+      if FilterResult.HasFilterItem == false then
+        FilterResult.HasFilterItem = true
       end
     end
     if IsValidItem then
@@ -742,6 +937,30 @@ local function SortByIsNotSeen(Item_1, Item_2)
   return false
 end
 
+local function SortByHasBlueprint(Item_1, Item_2)
+  local HasBlueprint_1 = Item_1.HasBlueprint or false
+  local HasBlueprint_2 = Item_2.HasBlueprint or false
+  if HasBlueprint_1 ~= HasBlueprint_2 then
+    return true, HasBlueprint_1
+  end
+  return false
+end
+
+local function SortByOwnedMaterialCount(Item_1, Item_2)
+  if Item_1.HasBlueprint or Item_2.HasBlueprint or false then
+    return false
+  end
+  local Count_1, _, IsAllSatisfied_1 = ForgeDataModel:GetDraftMaterialProgressInfo(Item_1)
+  local Count_2, _, IsAllSatisfied_2 = ForgeDataModel:GetDraftMaterialProgressInfo(Item_2)
+  if IsAllSatisfied_1 ~= IsAllSatisfied_2 then
+    return true, IsAllSatisfied_1
+  end
+  if Count_1 ~= Count_2 then
+    return true, Count_1 > Count_2
+  end
+  return false
+end
+
 local function SortByRarity(Item_1, Item_2, IsIncrease)
   if Item_1.Rarity ~= Item_2.Rarity then
     if IsIncrease then
@@ -785,31 +1004,46 @@ end
 
 local SortMethods_MainTab_ByType = {
   SortByIsNotSeen,
+  SortByHasBlueprint,
+  SortByOwnedMaterialCount,
   SortByState,
   SortByTypePriority,
   SortByRarity
 }
 local SortMethods_MainTab_ByRarity = {
   SortByIsNotSeen,
+  SortByHasBlueprint,
+  SortByOwnedMaterialCount,
   SortByState,
   SortByRarity,
   SortByTypePriority
 }
 local SortMethods_SubTabAll_ByType = {
   SortByIsNotSeen,
+  SortByHasBlueprint,
+  SortByOwnedMaterialCount,
   SortByState,
   SortBySubTabType,
   SortByRarity
 }
 local SortMethods_SubTabAll_ByRarity = {
   SortByIsNotSeen,
+  SortByHasBlueprint,
+  SortByOwnedMaterialCount,
   SortByState,
   SortByRarity,
   SortBySubTabType
 }
-local SortMethods_SubTab_ByType = {SortByIsNotSeen, SortByState}
+local SortMethods_SubTab_ByType = {
+  SortByIsNotSeen,
+  SortByHasBlueprint,
+  SortByOwnedMaterialCount,
+  SortByState
+}
 local SortMethods_SubTab_ByRarity = {
   SortByIsNotSeen,
+  SortByHasBlueprint,
+  SortByOwnedMaterialCount,
   SortByState,
   SortByRarity
 }
@@ -904,7 +1138,9 @@ function ForgeDataModel:CheckFilterResult(FilterItemResult)
 end
 
 function ForgeDataModel:Filter_All(Item, SubFilter)
-  return {HasFilterItem = true}
+  return {
+    HasFilterItem = Item.HasBlueprint or not self:IsPreShowDraft(Item.Id, Item)
+  }
 end
 
 function ForgeDataModel:Filter_Forging(Item, SubFilter)
@@ -920,28 +1156,30 @@ function ForgeDataModel:Filter_Ready(Item, SubFilter)
   }
 end
 
-function ForgeDataModel:Filter_Weapon(Item, SubFilter)
-  if Item.ProductType ~= "Weapon" then
+function ForgeDataModel:FilterPreShowDraftItem(Item, SubFilter, ProductType, AllSubFilter)
+  if Item.ProductType ~= ProductType then
     return {HasFilterItem = false}
+  end
+  if not Item.HasBlueprint and self:GetDraftSatisfiedMaterialCount(Item) <= 0 then
+    return {HasFilterItem = true, HasSubFilterItem = false}
   end
   if SubFilter then
     local ItemSubTabType = DataMgr.DraftId2TabAndSubTab[Item.Id].SubTabType
-    if SubFilter ~= ForgeConst.SubTabType.Weapon_All and SubFilter ~= ItemSubTabType then
+    if SubFilter ~= AllSubFilter and SubFilter ~= ItemSubTabType then
       return {HasFilterItem = true, HasSubFilterItem = false}
     end
   end
   return {HasFilterItem = true, HasSubFilterItem = true}
 end
 
+function ForgeDataModel:Filter_Weapon(Item, SubFilter)
+  return self:FilterPreShowDraftItem(Item, SubFilter, ForgeConst.TabType.Weapon, ForgeConst.SubTabType.Weapon_All)
+end
+
 function ForgeDataModel:Filter_Mod(Item, SubFilter, CommonFilter)
-  if Item.ProductType ~= "Mod" then
-    return {HasFilterItem = false}
-  end
-  if SubFilter then
-    local ItemSubTabType = DataMgr.DraftId2TabAndSubTab[Item.Id].SubTabType
-    if SubFilter ~= ForgeConst.SubTabType.Mod_All and SubFilter ~= ItemSubTabType then
-      return {HasFilterItem = true, HasSubFilterItem = false}
-    end
+  local Result = self:FilterPreShowDraftItem(Item, SubFilter, ForgeConst.TabType.Mod, ForgeConst.SubTabType.Mod_All)
+  if not Result.HasFilterItem or not Result.HasSubFilterItem then
+    return Result
   end
   if CommonFilter then
     local SelectedItems = CommonFilter.FilterSelectedItems
@@ -977,16 +1215,7 @@ function ForgeDataModel:Filter_Resource(Item, SubFilter)
 end
 
 function ForgeDataModel:Filter_CharAccessory(Item, SubFilter)
-  if Item.ProductType ~= "CharAccessory" then
-    return {HasFilterItem = false}
-  end
-  if SubFilter then
-    local ItemSubTabType = DataMgr.DraftId2TabAndSubTab[Item.Id].SubTabType
-    if SubFilter ~= ForgeConst.SubTabType.Accessory_All and SubFilter ~= ItemSubTabType then
-      return {HasFilterItem = true, HasSubFilterItem = false}
-    end
-  end
-  return {HasFilterItem = true, HasSubFilterItem = true}
+  return self:FilterPreShowDraftItem(Item, SubFilter, ForgeConst.TabType.CharAccessory, ForgeConst.SubTabType.Accessory_All)
 end
 
 function ForgeDataModel:ChooseCostItems(DraftId, Count)

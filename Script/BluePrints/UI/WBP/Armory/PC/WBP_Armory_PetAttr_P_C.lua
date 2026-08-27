@@ -21,6 +21,7 @@ function M:Construct()
 end
 
 function M:Init(Params)
+  self.bFromOptRewardPreview = Params.bFromOptRewardPreview == true
   M.Super.Init(self, Params)
   self._OnAddedToFocusPath = Params.OnAddedToFocusPath
   self._OnRemovedFromFocusPath = Params.OnRemovedFromFocusPath
@@ -30,6 +31,10 @@ function M:Init(Params)
   if EMCache:Get("PetIsShowNew", true) then
     self.New:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
+  if self.bFromOptRewardPreview then
+    self.Panel_Invisible:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  self:UpdateGamepadKeyStyle()
 end
 
 function M:Destruct()
@@ -53,7 +58,9 @@ function M:UpdateGamepadKeyStyle()
       self.Btn_Replace:SetGamePadVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     end
   end
-  if self.IsGamepadInput then
+  if self.bFromOptRewardPreview then
+    self.Key_Invisible:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  elseif self.IsGamepadInput then
     self.Key_Invisible:CreateCommonKey({
       KeyInfoList = {
         {
@@ -99,6 +106,9 @@ function M:OnParentKeyDown(MyGeometry, InKeyEvent)
     return UIUtils.Handled, true
   elseif InKeyName == UIConst.GamePadKey.FaceButtonTop then
   elseif InKeyName == UIConst.GamePadKey.RightThumb then
+    if self.bFromOptRewardPreview then
+      return UIUtils.Handled, true
+    end
     self:BtnInvisibleArea()
   end
 end

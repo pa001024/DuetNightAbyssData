@@ -87,6 +87,16 @@ function FDialogueFlowGraphComponent:SkipToEnd()
   DebugPrint("FDialogueFlowGraphComponent:SkipToEnd Fin.")
 end
 
+function FDialogueFlowGraphComponent:SkipToRestartDialogue()
+  local FlowAsset = self.FlowAsset
+  if not FlowAsset or not FlowAsset.RestartDialogueId then
+    return
+  end
+  FlowAsset:SetSkipInRestartTag(true)
+  self:SkipToEnd()
+  FlowAsset:SetSkipInRestartTag(nil)
+end
+
 function FDialogueFlowGraphComponent:Iterate(...)
   if self.FlowDialogueData then
     local FlowDialogueData = self.FlowDialogueData

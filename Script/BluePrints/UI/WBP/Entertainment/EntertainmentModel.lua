@@ -47,6 +47,7 @@ end
 
 function M:Init()
   M.Super.Init(self)
+  self:TryInitListenResources()
   self:RefreshRedState()
   EventManager:AddEvent(EventID.OnNewCharObtained, self, self.OnNewCharObtained)
   EventManager:AddEvent(EventID.OnCharDeleted, self, self.OnCharDeleted)
@@ -58,10 +59,30 @@ function M:TryListenEvent()
   local bIsInBigWorld = Avatar and Avatar:IsInBigWorld()
   local bIsInHomeBase = Avatar and Avatar:CheckSubRegionType(Avatar:GetCurrentRegionId(), CommonConst.SubRegionType.Home)
   if Avatar and bIsInBigWorld and bIsInHomeBase then
-    EventManager:AddEvent(EventID.OnResourcesChanged, self, self.RefreshRedState)
-    EventManager:AddEvent(EventID.QuestChainFinished, self, self.RefreshRedState)
-    EventManager:AddEvent(EventID.OnPropSetResources, self, self.RefreshRedState)
+    EventManager:AddEvent(EventID.OnResourcesChanged, self, self.OnConcernedResourceChanged)
+    EventManager:AddEvent(EventID.QuestChainFinished, self, self.TriggerRefreshRedState)
+    EventManager:AddEvent(EventID.OnPropSetResources, self, self.OnConcernedResourceChanged)
   end
+end
+
+function M:TryInitListenResources()
+  self.ListenResources = EntertainmentUtil:GetConcernedResourceIds()
+end
+
+function M:OnConcernedResourceChanged(ResourceId)
+  if ResourceId and self.ListenResources and self.ListenResources[ResourceId] then
+    self:TriggerRefreshRedState()
+  end
+end
+
+function M:TriggerRefreshRedState()
+  local GameInstance = GWorld and GWorld.GameInstance
+  UE4.UBattleFunctionLibrary.DeferredCall(GameInstance, "Entertainment_UpdateRedState", function()
+    if self.IsDestroied then
+      return
+    end
+    self:RefreshRedState()
+  end)
 end
 
 function M:Destory()
@@ -71,6 +92,7 @@ function M:Destory()
   EventManager:RemoveEvent(EventID.OnResourcesChanged, self)
   EventManager:RemoveEvent(EventID.QuestChainFinished, self)
   EventManager:RemoveEvent(EventID.OnPropSetResources, self)
+  self.ListenResources = nil
   if self.WaitQueue then
     self.WaitQueue:Stop()
     self.WaitQueue = nil

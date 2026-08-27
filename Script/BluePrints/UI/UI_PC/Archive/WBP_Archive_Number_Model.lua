@@ -24,18 +24,36 @@ function ArchiveNumberModel:CheckHyperWeaponCanShow()
 end
 
 function ArchiveNumberModel:GetCharacterSumNumber()
+  local Avatar = GWorld:GetAvatar()
   local CurrentVersion = DataMgr.GlobalConstant.CurrentVersion.ConstantValue
+  local CharacterAttributeSwitch = DataMgr.CharacterAttributeSwitch
+  local GroupId2PlayerCharacterIds = {}
   local Sum = 0
-  local Flag = false
   for _, Info in pairs(DataMgr.Char) do
     if not Info.IsNotOpen and (not Info.ReleaseVersion or CurrentVersion >= Info.ReleaseVersion) then
       if Info.GenderTag then
-        if not Flag then
-          Flag = true
-          Sum = Sum + 1
+        if CharacterAttributeSwitch[Info.CharId] then
+          local CharGroupId = CharacterAttributeSwitch[Info.CharId].CharGroupId
+          if not GroupId2PlayerCharacterIds[CharGroupId] then
+            GroupId2PlayerCharacterIds[CharGroupId] = {}
+          end
+          GroupId2PlayerCharacterIds[CharGroupId][Info.CharId] = 1
         end
       else
         Sum = Sum + 1
+      end
+    end
+  end
+  local ArchiveList = {}
+  local Type = 1001
+  if Avatar then
+    ArchiveList = Avatar.Archives[Type].ArchiveList or {}
+  end
+  for GroupId, CharIds in pairs(GroupId2PlayerCharacterIds) do
+    for CharId, _ in pairs(CharIds) do
+      if ArchiveList[CharId] then
+        Sum = Sum + 1
+        break
       end
     end
   end
@@ -122,12 +140,16 @@ function ArchiveNumberModel:GetCurrentNumber(ArchiveType)
   elseif Avatar then
     if 1001 == ArchiveType then
       local Char = DataMgr.Char
-      local Flag = false
+      local CharacterAttributeSwitch = DataMgr.CharacterAttributeSwitch
+      local GroupIdSet = {}
       for Id, _ in pairs(Avatar.Archives[ArchiveType].ArchiveList) do
         if Char[Id].GenderTag then
-          if not Flag then
-            Flag = true
-            CurrentNum = CurrentNum + 1
+          if CharacterAttributeSwitch[Id] then
+            local CharGroupId = CharacterAttributeSwitch[Id].CharGroupId
+            if not GroupIdSet[CharGroupId] then
+              GroupIdSet[CharGroupId] = 1
+              CurrentNum = CurrentNum + 1
+            end
           end
         else
           CurrentNum = CurrentNum + 1

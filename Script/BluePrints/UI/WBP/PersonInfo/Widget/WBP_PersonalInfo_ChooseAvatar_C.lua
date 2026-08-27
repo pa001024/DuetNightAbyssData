@@ -1,4 +1,5 @@
 require("UnLua")
+local MiscUtils = require("Utils.MiscUtils")
 local AvatarIconMaterialPath = "/Game/UI/Materials/CommonItem/MI_PersonalItem_Circle.MI_PersonalItem_Circle"
 local GAMEPAD_CONFIRM_KEY = UIConst.GamePadKey.FaceButtonBottom
 local M = Class("BluePrints.UI.BP_EMUserWidget_C")
@@ -112,9 +113,13 @@ function M:_PlaySlotStateAnimation()
   self:StopAllAnimations()
   if bSelected then
     self:PlayAnimation(self.Click)
-  else
-    self:PlayAnimation(self.Normal)
+    return
   end
+  self:PlayAnimation(self.Normal)
+end
+
+function M:PlayAnimation(AnimationName)
+  self.Overridden.PlayAnimation(self, AnimationName)
 end
 
 function M:OnFocusReceived(MyGeometry, InFocusEvent)

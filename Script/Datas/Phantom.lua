@@ -27,7 +27,7 @@ T.RT_9 = {
   [1] = "/Game/AssetDesign/AI/Player/Baiheng/BT_Phantom_Baiheng.BT_Phantom_Baiheng"
 }
 T.RT_10 = {
-  [1] = "/Game/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.BT_Phantom_Linen"
+  [1] = "/Game/AssetDesign/AI/Player/Weita/BT_Phantom_Weita_Water.BT_Phantom_Weita_Water"
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
@@ -475,6 +475,20 @@ return ReadOnly("Phantom", {
     UnitName = "伊薇-魅影",
     WearMeleeWeapon = 1
   },
+  [2201] = {
+    AutoRespawn = 5,
+    BT = T.RT_10,
+    BattleRoleId = 2201,
+    Camp = "Player",
+    GuideIconAni = "/Game/UI/UI_PC/Guide/Guide_Point/Guide_Icon_Phantom.Guide_Icon_Phantom",
+    HatredRatio = 0.5,
+    IsPlayerMapping = true,
+    RespawnUI = 20001,
+    UnitBPPath = "/Game/BluePrints/Char/BP_Phantom/BP_PhantomCharacter.BP_PhantomCharacter",
+    UnitId = 2201,
+    UnitName = "EX女主-水-魅影",
+    WearMeleeWeapon = 1
+  },
   [2301] = {
     AutoRespawn = 5,
     BT = {
@@ -505,7 +519,9 @@ return ReadOnly("Phantom", {
   },
   [3101] = {
     AutoRespawn = 5,
-    BT = T.RT_10,
+    BT = {
+      [1] = "/Game/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.BT_Phantom_Linen"
+    },
     BattleRoleId = 3101,
     Camp = "Player",
     GuideIconAni = "/Game/UI/UI_PC/Guide/Guide_Point/Guide_Icon_Phantom.Guide_Icon_Phantom",
@@ -548,7 +564,9 @@ return ReadOnly("Phantom", {
   },
   [3104] = {
     AutoRespawn = 5,
-    BT = T.RT_10,
+    BT = {
+      [1] = "/Game/AssetDesign/AI/Player/Falu/BT_Phantom_Falu.BT_Phantom_Falu"
+    },
     BattleRoleId = 3104,
     Camp = "Player",
     GuideIconAni = "/Game/UI/UI_PC/Guide/Guide_Point/Guide_Icon_Phantom.Guide_Icon_Phantom",
@@ -762,6 +780,20 @@ return ReadOnly("Phantom", {
     UnitBPPath = "/Game/BluePrints/Char/BP_Phantom/BP_PhantomCharacter.BP_PhantomCharacter",
     UnitId = 160101,
     UnitName = "男主-光-魅影",
+    WearMeleeWeapon = 1
+  },
+  [220101] = {
+    AutoRespawn = 5,
+    BT = T.RT_10,
+    BattleRoleId = 220101,
+    Camp = "Player",
+    GuideIconAni = "/Game/UI/UI_PC/Guide/Guide_Point/Guide_Icon_Phantom.Guide_Icon_Phantom",
+    HatredRatio = 0.5,
+    IsPlayerMapping = true,
+    RespawnUI = 20001,
+    UnitBPPath = "/Game/BluePrints/Char/BP_Phantom/BP_PhantomCharacter.BP_PhantomCharacter",
+    UnitId = 220101,
+    UnitName = "EX男主-水-魅影",
     WearMeleeWeapon = 1
   }
 })

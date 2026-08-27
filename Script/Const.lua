@@ -987,6 +987,7 @@ Const.IndexNum = {
   "⑩"
 }
 Const.bShowDamageDetails = false
+Const.HideNormalMonsterBuffIcon = true
 Const.bEditorOpenFXBudget = true
 Const.DialogueSnapShot = {
   HEART = 1,
@@ -1078,9 +1079,7 @@ Const.NewFoliageRulePhone = {
   Low = {"_TypL_DenL"}
 }
 Const.OldFoliageRuleMap = {
-  "Chapter01_Icelake",
-  "Chapter01_Won",
-  "Prologue_"
+  "Chapter01_Won"
 }
 Const.SimulateMovementDebugPlatform = ""
 Const.CheckDungeonMonId = false
@@ -1108,8 +1107,6 @@ Const.PlayerPreloadSummon_IOS = false
 Const.NPCDeadCache_Win = true
 Const.NPCDeadCache_IOS = false
 Const.NPCDeadCache_Andriod = true
-Const.LowMemoryDeviceNPCOptimize = true
-Const.OnlineNPCCreateOptimize = true
 Const.CNPCDelHide = true
 Const.bCustomNPCMoveBalanceTick = true
 Const.EnableCacheSummonID = {
@@ -1121,6 +1118,7 @@ Const.RegionPreloadSupportSceneId = {
 Const.RegionStoryPreloadSupportSceneId = {
   [0] = 1001
 }
+Const.bUseMonsterWeaponPool = true
 Const.bServerMonsterDead = true
 Const.NeedStoreSTLBGM = true
 Const.FootstepFXSlowSpeed = 230

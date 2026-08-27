@@ -1,5 +1,6 @@
 local EventID = {}
 _G.EventID = EventID
+EventID.OnTeamHallUpdate = "OnTeamHallUpdate"
 EventID.OnLoginSuccess = "OnLoginSuccess"
 EventID.OnGetAllAvatars = "OnGetAllAvatars"
 EventID.OnRefreshWithNextDay = "OnRefreshWithNextDay"
@@ -63,6 +64,8 @@ EventID.OnAutoClaimWeaponBreakCollectReward = "OnAutoClaimWeaponBreakCollectRewa
 EventID.OnPetReddotRead = "OnPetReddotRead"
 EventID.OnMVPSequenceFinish = "OnMVPSequenceFinish"
 EventID.OnStarTargetChanged = "OnStarTargetChanged"
+EventID.OnExcelWeaponExpandUnlocked = "OnExcelWeaponExpandUnlocked"
+EventID.OnExcelWeaponExpandSwitched = "OnExcelWeaponExpandSwitched"
 EventID.OnCharShowPartMesh = "OnCharShowPartMesh"
 EventID.OnCharCornerVisibilityChanged = "OnCharCornerVisibilityChanged"
 EventID.OnCharAppearanceChanged = "OnCharAppearanceChanged"
@@ -72,9 +75,11 @@ EventID.OnCharSkinChanged = "OnCharSkinChanged"
 EventID.OnCharHairChanged = "OnCharHairChanged"
 EventID.OnCharColorsChanged = "OnCharColorsChanged"
 EventID.OnCharHairColorsChanged = "OnCharHairColorsChanged"
-EventID.OnCharAppearanSuitRenamed = "OnCharAppearanSuitRenamed"
+EventID.OnCharAppearanceSuitRenamed = "OnCharAppearanceSuitRenamed"
 EventID.OnCharSkinColorPlanChanged = "OnCharSkinColorPlanChanged"
 EventID.OnCharHairColorPlanChanged = "OnCharHairColorPlanChanged"
+EventID.OnCharSkinFxCountChanged = "OnCharSkinFxCountChanged"
+EventID.OnCharSkinFxCountSet = "OnCharSkinFxCountSet"
 EventID.OnWeaponColorsChanged = "OnWeaponColorsChanged"
 EventID.OnWeaponSkinChanged = "OnWeaponSkinChanged"
 EventID.OnWeaponAccessoryChanged = "OnWeaponAccessoryChanged"
@@ -131,11 +136,11 @@ EventID.OnDungeonOtherPlayerJoin = "OnDungeonOtherPlayerJoin"
 EventID.OnDungeonOtherPlayerLeave = "OnDungeonOtherPlayerLeave"
 EventID.OnRepDungeonProgress = "OnRepDungeonProgress"
 EventID.OnNotifyClientToCloseLoading = "OnNotifyClientToCloseLoading"
-EventID.OnEnableStory = "OnEnableStory"
 EventID.OnDisableEscOnDungeonLoading = "OnDisableEscOnDungeonLoading"
 EventID.OnRepBattleProgressNum = "OnRepBattleProgressNum"
 EventID.OnRepBattleProgressInfo = "OnRepBattleProgressInfo"
 EventID.OnGuildBossStatsUpdate = "OnGuildBossStatsUpdate"
+EventID.OnAsyncCombatSingleModeProgressUpdate = "OnAsyncCombatSingleModeProgressUpdate"
 EventID.TeamMatchStartEntering = "TeamMatchStartEntering"
 EventID.TeamMatchStartMatching = "TeamMatchStartMatching"
 EventID.TeamMatchOneRefused = "TeamMatchOneRefused"
@@ -222,6 +227,12 @@ EventID.OnChargeTimeUp = "OnChargeTimeUp"
 EventID.OnSynthesisEnergyValueChange = "OnSynthesisEnergyValueChange"
 EventID.OnRepFeinaStar = "OnRepFeinaStar"
 EventID.UpdateRankStarScore = "UpdateRankStarScore"
+EventID.InitShootTargetUI = "InitShootTargetUI"
+EventID.AddShootTargetScore = "AddShootTargetScore"
+EventID.EndShootTargetGame = "EndShootTargetGame"
+EventID.OnShootTargetScoreChanged = "OnShootTargetScoreChanged"
+EventID.OnShootTargetEnter = "OnShootTargetEnter"
+EventID.OnShootTargetStart = "OnShootTargetStart"
 EventID.ShowBossBlood = "ShowBossBlood"
 EventID.RefreshMainPlayerBlood = "RefreshMainPlayerBlood"
 EventID.UpdateMainPlayerSp = "UpdateMainPlayerSp"
@@ -314,6 +325,7 @@ EventID.OnCameraLockOnChanged = "OnCameraLockOnChanged"
 EventID.OnShootCameraDistanceOptionChanged = "OnShootCameraDistanceOptionChanged"
 EventID.OnScreenshotToken = "OnScreenshotToken"
 EventID.OnInitScreenshotParams = "OnInitScreenshotParams"
+EventID.OnPhotoSpotShot = "OnPhotoSpotShot"
 EventID.OnGameStateTimerAdded = "OnGameStateTimerAdded"
 EventID.OnGameStateTimerEnded = "OnGameStateTimerEnded"
 EventID.OnMainCharacterBeginPlay = "OnMainCharacterBeginPlay"
@@ -340,6 +352,7 @@ EventID.OnMiniGameCreated = "OnMiniGameCreated"
 EventID.OnMechanismEnterState = "OnMechanismEnterState"
 EventID.OnOpenMechanism = "OnOpenMechanism"
 EventID.OnMobileHookShow = "OnMobileHookShow"
+EventID.OnMobileSlideSplineShow = "OnMobileSlideSplineShow"
 EventID.OnPlayerGetResource = "OnPlayerGetResource"
 EventID.OnManualPickUpReady = "OnManualPickUpReady"
 EventID.CircleAroundGameStart = "CircleAroundGameStart"
@@ -353,6 +366,7 @@ EventID.OnKongmingLanternBreak = "OnKongmingLanternBreak"
 EventID.OnMonsterAlive = "OnMonsterAlive"
 EventID.OnMonsterClear = "OnMonsterClear"
 EventID.OnRingRockFinish = "OnRingRockFinish"
+EventID.OnSlideBossClickCountChange = "OnSlideBossClickCountChange"
 EventID.LoadUI = "LoadUI"
 EventID.UnLoadUI = "UnLoadUI"
 EventID.OnAddWidgetComponent = "OnAddWidgetComponent"
@@ -438,6 +452,7 @@ EventID.HideNpcSideIndicator = "HideNpcSideIndicator"
 EventID.AddRegionIndicatorInfo = "AddRegionIndicatorInfo"
 EventID.RemoveRegionIndicatorInfo = "RemoveRegionIndicatorInfo"
 EventID.EnableNpcSideBubble = "EnableNpcSideBubble"
+EventID.EnableNpcIndicator = "EnableNpcIndicator"
 EventID.OnMissiongIndicatorFloorLevelChange = "OnMissiongIndicatorFloorLevelChange"
 EventID.OnSetQuestTracking = "OnSetQuestTracking"
 EventID.OnCancelQuestTracking = "OnCancelQuestTracking"
@@ -488,12 +503,15 @@ EventID.OnFallAttackPressed = "OnFallAttackPressed"
 EventID.OnSlideAttackPressed = "OnSlideAttackPressed"
 EventID.OnAutoAttackEnabledChanged = "OnAutoAttackEnabledChanged"
 EventID.OnAutoShootEnabledChanged = "OnAutoShootEnabledChanged"
+EventID.OnSlideMechStateChanged = "OnSlideMechStateChanged"
+EventID.OnSlideMechSwitchSuccess = "OnSlideMechSwitchSuccess"
 EventID.OnEnterTriggerBox = "OnEnterTriggerBox"
 EventID.OnLeaveTriggerBox = "OnLeaveTriggerBox"
 EventID.ApplicationWillEnterBackground = "ApplicationWillEnterBackground"
 EventID.ApplicationHasEnteredForeground = "ApplicationHasEnteredForeground"
 EventID.ApplicationWillDeactivate = "ApplicationWillDeactivate"
 EventID.ApplicationHasReactivated = "ApplicationHasReactivated"
+EventID.WindowMinimizedChanged = "WindowMinimizedChanged"
 EventID.OnPurchaseShopItemSuccess = "OnPurchaseShopItemSuccess"
 EventID.OnPurchaseShopItem = "OnPurchaseShopItem"
 EventID.OnRechargeFinished = "OnRechargeFinished"
@@ -518,6 +536,7 @@ EventID.OnRepPhantomRecoveryValue = "OnRepPhantomRecoveryValue"
 EventID.OnBattleReady = "OnBattleReady"
 EventID.ServerGMSucceed = "ServerGMSucceed"
 EventID.TeamControllerEvent = "TeamControllerEvent"
+EventID.TeamHallControllerEvent = "TeamHallControllerEvent"
 EventID.ChatControllerEvent = "ChatControllerEvent"
 EventID.ActivityControllerEvent = "ActivityControllerEvent"
 EventID.FriendControllerEvent = "FriendControllerEvent"
@@ -705,6 +724,7 @@ EventID.OnExitMobileHudTrial = "OnExitMobileHudTrial"
 EventID.OnSwitchAntiAliasing = "OnSwitchAntiAliasing"
 EventID.OnSwitchUpscalingMethod = "OnSwitchUpscalingMethod"
 EventID.OnSwitchRendering = "OnSwitchRendering"
+EventID.OnSTLIsWaitPostBTEvent = "OnSTLIsWaitPostBTEvent"
 EventID.OnAutoChessCreateMonster = "OnAutoChessCreateMonster"
 EventID.OnAutoChessRemoveMonster = "OnAutoChessRemoveMonster"
 EventID.OnCheckIsGameOver = "OnCheckIsGameOver"
@@ -749,8 +769,11 @@ EventID.OnSelectChannelSuccess = "OnSelectChannelSuccess"
 EventID.OnChatUpdateInput = "OnChatUpdateInput"
 EventID.OnRecordButtonOptionChanged = "OnRecordButtonOptionChanged"
 EventID.OnMoveModelOptionChanged = "OnMoveModelOptionChanged"
+EventID.OnFoldFeatureOptionChanged = "OnFoldFeatureOptionChanged"
 EventID.OnBlockQuestSelect = "OnBlockQuestSelect"
 EventID.OnRaceGameTimesSet = "OnRaceGameTimesSet"
+EventID.OnCommonBlackScreenBegin = "OnCommonBlackScreenBegin"
+EventID.OnCommonBlackScreenEnd = "OnCommonBlackScreenEnd"
 local Event = {}
 EventID.OnSendGiftFinished = "OnSendGiftFinished"
 Event.List = nil
@@ -766,6 +789,8 @@ function Event:New()
   o._InvokeDepth = 0
   o._Snapshot = {}
   o._InvalidObjs = {}
+  o.FuncCount = {}
+  o.Suspect = {}
   return o
 end
 
@@ -787,38 +812,58 @@ function Event:Remove(obj)
   end
   self.List[obj] = nil
   self.FuncMap[obj] = nil
+  if self.FuncCount then
+    self.FuncCount[obj] = nil
+  end
+  if self.Suspect then
+    self.Suspect[obj] = nil
+  end
 end
 
-function Event:CheckIsLeak(eventName, bLog)
+function Event:CheckIsLeak(eventName)
+  if not GWorld.IsDev then
+    return
+  end
+  self.FuncCount = self.FuncCount or {}
+  self.Suspect = self.Suspect or {}
   local RealCount = 0
-  if 0 ~= self.LastCount and self.LastCount < self.NowCount and bLog then
-    local Visited = {}
-    local Logger = {}
-    for obj, List in pairs(self.List) do
-      if obj.Overridden and not Visited[obj.Overridden] then
-        if string.startswith(tostring(obj.Overridden), "UWorldTravelSubsystem") then
-          self.NowCount = self.NowCount - #List
+  local LeakLogs = {}
+  for obj, List in pairs(self.List) do
+    local NewCount = #List
+    RealCount = RealCount + NewCount
+    local OldCount = self.FuncCount[obj]
+    self.FuncCount[obj] = NewCount
+    if OldCount then
+      if NewCount > OldCount then
+        if self.Suspect[obj] then
+          table.insert(LeakLogs, {
+            obj = obj,
+            old = OldCount,
+            now = NewCount
+          })
+          self.Suspect[obj] = nil
         else
-          Visited[obj.Overridden] = 1
-          Logger[obj.Overridden] = #List
-          elseif obj.__Name__ then
-            Logger[obj.__Name__] = #List
-          elseif not Visited[obj] then
-            Visited[obj] = 1
-            Logger[obj] = #List
-          end
-          RealCount = RealCount + #List
+          self.Suspect[obj] = 1
         end
-    end
-    if self.LastCount < self.NowCount then
-      ScreenPrint(ErrorTag .. string.format("EventManager事件 %s 发现内存泄漏，请检查该事件注册后是否正确清理，LastCount:%s，NowCount:%s", eventName, self.LastCount, self.NowCount))
-      for Obj, Count in pairs(Logger) do
-        DebugPrint(ErrorTag, string.format("该泄漏的事件绑定的函数数量:%s, 类名or对象:", Count), Obj)
+      elseif NewCount <= OldCount then
+        self.Suspect[obj] = nil
       end
     end
-    self.NowCount = RealCount
+  end
+  if #LeakLogs > 0 then
+    ScreenPrint(ErrorTag .. string.format("EventManager事件 %s 检测到监听泄漏，共 %s 个监听对象持续增长，请检查注册后是否正确清理", eventName, #LeakLogs))
+    for _, Log in ipairs(LeakLogs) do
+      local Desc = tostring(Log.obj)
+      if Log.obj.__Name__ then
+        Desc = Log.obj.__Name__
+      elseif Log.obj.Overridden then
+        Desc = tostring(Log.obj.Overridden)
+      end
+      DebugPrint(ErrorTag, string.format("对象[%s] 监听函数数量 LastCount:%s -> NowCount:%s", Desc, Log.old, Log.now), Log.obj)
+    end
   end
   self.LastCount = self.NowCount
+  self.NowCount = RealCount
 end
 
 function Event:Invoke(...)
@@ -876,6 +921,12 @@ function Event:Invoke(...)
       if self.FuncMap then
         self.FuncMap[obj] = nil
       end
+      if self.FuncCount then
+        self.FuncCount[obj] = nil
+      end
+      if self.Suspect then
+        self.Suspect[obj] = nil
+      end
     end
   end, function(InvokeErr)
     GWorld.logger.error(Traceback(ErrorTag, InvokeErr, true))
@@ -897,6 +948,9 @@ end
 
 function Event:RemoveAll()
   self.List = {}
+  self.FuncMap = {}
+  self.FuncCount = {}
+  self.Suspect = {}
 end
 
 local EventManager = {}
@@ -934,13 +988,12 @@ function EventManager:FireEvent(eventName, ...)
 end
 
 function EventManager:CheckIsLeak()
-  local bLog = true
   if not GWorld.IsDev then
     return
   end
   DebugPrint(WarningTag, "检测EventMananger事件泄漏...")
   for eventName, Event in pairs(self.EventDic) do
-    Event:CheckIsLeak(eventName, bLog)
+    Event:CheckIsLeak(eventName)
   end
 end
 

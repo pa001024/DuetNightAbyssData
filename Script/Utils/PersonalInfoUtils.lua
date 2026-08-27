@@ -37,4 +37,20 @@ function PersonalInfoUtils:HasPersonalInfoGesture(Avatar, PoseId)
   return CommonUtils.HasValue(PersonalInfoGestureList, PoseId)
 end
 
+function PersonalInfoUtils:HasCustomDisplayChar(Avatar)
+  local PersonalInfo = Avatar and Avatar.PersonalInfo
+  if not PersonalInfo then
+    return false
+  end
+  local CustomDisplay = PersonalInfo.CustomDisplay
+  if not CustomDisplay then
+    return false
+  end
+  local CharParamGroup = CustomDisplay.CharParamGroup
+  if CommonUtils.TableLength(CharParamGroup) <= 0 then
+    return false
+  end
+  return true
+end
+
 return PersonalInfoUtils

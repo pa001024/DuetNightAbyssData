@@ -2,6 +2,9 @@ local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C",
   "BluePrints.Common.DelayFrameComponent"
 })
+M._components = {
+  "BluePrints.UI.BP_EMUserWidgetUtils_C"
+}
 
 function M:Construct()
   self.FadeInAnimation = self.In
@@ -36,8 +39,6 @@ function M:Construct()
     self,
     self.LeaveRewardViewMode
   })
-  self:SetInputType(UIUtils.UtilsGetCurrentInputType(), UIUtils.UtilsGetCurrentGamepadName())
-  self:ListenInputTypeChanged()
 end
 
 function M:Destruct()
@@ -45,32 +46,6 @@ function M:Destruct()
   self.PrizeButton:UnbindUpdateReward()
   self.Round:UnbindindOnMenuOpenChanged()
   self.HistoryButton:UnBindEventOnClicked(self, self.OpenHistory)
-  self:UnlistenInputTypeChanged()
-end
-
-function M:ListenInputTypeChanged()
-  local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
-  local GameInputModeSubsystem = UE4.UGameInputModeSubsystem.GetGameInputModeSubsystem(PlayerController)
-  if IsValid(GameInputModeSubsystem) then
-    GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.SetInputType)
-  end
-end
-
-function M:UnlistenInputTypeChanged()
-  local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
-  local GameInputModeSubsystem = UE4.UGameInputModeSubsystem.GetGameInputModeSubsystem(PlayerController)
-  if IsValid(GameInputModeSubsystem) then
-    GameInputModeSubsystem.OnInputMethodChanged:Remove(self, self.SetInputType)
-  end
-end
-
-function M:SetInputType(NewInputType, NewGamepadName)
-  if NewInputType == ECommonInputType.Touch then
-  else
-    if NewInputType == ECommonInputType.Gamepad then
-    else
-    end
-  end
 end
 
 function M:InitPage(ActivityId, TabId, ActivityInfo, ParentWidget)
@@ -82,6 +57,9 @@ function M:InitPage(ActivityId, TabId, ActivityInfo, ParentWidget)
   self.EventId = ActivityId
   self.EventEndTime = EventData.EventEndTime
   self.PrizeButton:Init(self, self.EventId)
+  if IsValid(self.CollectReward) then
+    self.CollectReward:Init(self.EventId)
+  end
   self.Title:SetTitle(GText(EventData.EventName))
   self.Title:SetDesc(GText(EventData.EventDes), false)
   self.Title:SetTips(EventData.EventRule, self.ViewInfoBtnClick, self)
@@ -102,25 +80,28 @@ function M:HandleKeyDownInPage(MyGeometry, InKeyEvent)
   local Key = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local KeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(Key)
   if UE4.UKismetInputLibrary.Key_IsGamepadKey(Key) then
-    bHandled = self:OnGamePadButtonDown(KeyName)
+    bHandled = self:OnGamePadButtonDown(KeyName, MyGeometry, InKeyEvent)
   else
     bHandled = false
   end
   return bHandled
 end
 
-function M:OnGamePadButtonDown(InKeyName)
-  local IsEventHandled = self:Handle_KeyDownOnGamePad(InKeyName)
+function M:OnGamePadButtonDown(InKeyName, MyGeometry, InKeyEvent)
+  local IsEventHandled = self:Handle_KeyDownOnGamePad(InKeyName, MyGeometry, InKeyEvent)
   return IsEventHandled
 end
 
-function M:Handle_KeyDownOnGamePad(KeyName)
+function M:Handle_KeyDownOnGamePad(KeyName, MyGeometry, InKeyEvent)
   local bHandled = false
-  if self:IsInCheckDetailMode() and KeyName ~= UIConst.GamePadKey.FaceButtonRight and KeyName ~= UIConst.GamePadKey.SpecialLeft then
+  if self:IsInCheckDetailMode() and KeyName ~= UIConst.GamePadKey.FaceButtonRight and KeyName ~= UIConst.GamePadKey.SpecialLeft and KeyName ~= UIConst.GamePadKey.LeftThumb then
     bHandled = true
   elseif KeyName == UIConst.GamePadKey.SpecialLeft then
     bHandled = true
-    self.Round:SetQAChecked(not self.Round:IsQAChecked())
+    self:OpenRoundInfoByGamePad()
+  elseif KeyName == UIConst.GamePadKey.LeftThumb and IsValid(self.CollectReward) then
+    bHandled = true
+    self.CollectReward:OpenCollectRewardPopup()
   elseif KeyName == UIConst.GamePadKey.FaceButtonBottom then
     bHandled = true
     self:EnterRewardViewMode()
@@ -149,6 +130,12 @@ function M:Handle_KeyDownOnGamePad(KeyName)
     self:ViewInfoBtnClick()
   end
   return bHandled
+end
+
+function M:OpenRoundInfoByGamePad()
+  if IsValid(self.Round) then
+    self.Round:SetQAChecked(not self.Round:IsQAChecked())
+  end
 end
 
 function M:ShowPage(IsNeedPlayInAnim)
@@ -480,4 +467,5 @@ function M:SetShowRewardWidget(Widget)
   end
 end
 
+AssembleComponents(M)
 return M

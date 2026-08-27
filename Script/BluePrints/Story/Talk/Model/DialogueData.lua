@@ -22,6 +22,7 @@ function DialogueDataBase_C.New(TalkTask, DialogueId, DialogueData, TalkContext)
   Obj.ShowStoryContent = TalkUtils:TryResolveStoryPanel(DialogueData.DialoguePanelType)
   Obj.HeadIconType = DialogueData.HeadIconType
   Obj.GuideFacialId = DialogueData.GuideFacialId
+  Obj.Facial2DId = DialogueData.Facial2DId
   Obj.ExStoryInfo = DialogueData.ExStoryInfo
   return Obj
 end

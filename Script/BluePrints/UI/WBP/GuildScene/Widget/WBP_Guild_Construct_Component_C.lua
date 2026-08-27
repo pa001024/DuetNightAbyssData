@@ -31,15 +31,28 @@ function M:TestClick()
   Utils.ScreenPrint("2")
 end
 
+function M:GetGuildManager()
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  return GameMode and GameMode:GetGuildConstructManager()
+end
+
+function M:GetOwnedCount(UnitId)
+  local GuildManager = self:GetGuildManager()
+  if not GuildManager or not GuildManager.GuildItemCount then
+    return 0
+  end
+  local ItemCount = GuildManager.GuildItemCount[UnitId]
+  return ItemCount and ItemCount.TotalCount or 0
+end
+
 function M:OnListItemObjectSet(Content)
+  self.Content = Content
   self.UnitId = Content.UnitId
-  self.Count = Content.Count
+  self.Count = self:GetOwnedCount(Content.UnitId)
   self.PlacedCallBack = Content.PlacedCallBack
-  ScreenPrint("444")
-  ScreenPrint(self.PlacedCallBack)
   local Name = Content.Name
   local IconPath = Content.Icon
-  local Count = Content.Count
+  local Count = self.Count
   UResourceLibrary.LoadObjectAsync(self, IconPath, {
     self,
     function(_, Icon)
@@ -55,21 +68,38 @@ function M:OnListItemObjectSet(Content)
   self.Text_Num:SetText(tostring(Count))
 end
 
-function M:OnMouseButtonDown(MyGeometry, MouseEvent)
-  Utils.ScreenPrint("OnMouseButtonDown")
+function M:RefreshCount(Count)
+  self.Count = Count or self:GetOwnedCount(self.UnitId)
+  if self.Content then
+    self.Content.Count = self.Count
+  end
+  if self.Count <= 1 then
+    self:PlayAnimation(self.Lock)
+    self.Text_Num:SetText(tostring(self.Count))
+    return
+  end
+  self:PlayAnimation(self.In)
+  self.Text_Num:SetText(tostring(self.Count))
+end
+
+function M:OnMouseButtonUp(MyGeometry, MouseEvent)
   if self.ItemDetailsMenuAnchor then
+    local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+    local GuildManager = GameMode and GameMode.GetGuildConstructManager and GameMode:GetGuildConstructManager()
     local Content = {
       ItemType = "GuildConstruct",
       bHideGamePad = true,
       UnitId = self.UnitId,
       LeftNum = self.Count,
-      PlacedNum = 8,
+      PlacedNum = GuildManager and GuildManager:GetSceneActorCountByUnitId(self.UnitId) or 0,
       MenuPlacement = EMenuPlacement.MenuPlacement_AboveAnchor,
       PlaceCallback = self.PlacedCallBack
     }
-    ScreenPrint(Content.PlaceCallback)
     self.ItemDetailsMenuAnchor:OpenItemDetailsWidget(false, Content)
   end
+end
+
+function M:OnMouseButtonDown(MyGeometry, MouseEvent)
   if UKismetInputLibrary.PointerEvent_IsMouseButtonDown(MouseEvent, EKeys.RightMouseButton) then
     return UE4.UWidgetBlueprintLibrary.Unhandled()
   end

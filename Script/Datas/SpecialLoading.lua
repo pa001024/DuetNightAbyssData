@@ -255,5 +255,60 @@ return ReadOnly("SpecialLoading", {
     TriggerCondition = {
       ActivityRacing = {}
     }
+  },
+  [10046] = {
+    Id = 10046,
+    LoadingId = 10700101,
+    Region = {SpawnPoint = 1, SubId = 107001}
+  },
+  [10047] = {
+    Id = 10047,
+    LoadingId = 10700101,
+    Region = {SpawnPoint = 2, SubId = 107001}
+  },
+  [10048] = {
+    Id = 10048,
+    LoadingId = 10700102,
+    Region = {SpawnPoint = 3, SubId = 107001}
+  },
+  [10049] = {
+    Id = 10049,
+    LoadingId = 10700102,
+    Region = {SubId = 107501}
+  },
+  [10050] = {
+    Id = 10050,
+    LoadingId = 10700102,
+    Region = {SubId = 107801}
+  },
+  [10051] = {
+    Id = 10051,
+    LoadingId = 10710101,
+    Region = {SubId = 107101}
+  },
+  [10052] = {
+    Id = 10052,
+    LoadingId = 10720101,
+    Region = {SubId = 107201}
+  },
+  [10053] = {
+    Id = 10053,
+    LoadingId = 10730101,
+    Region = {SubId = 107301}
+  },
+  [10054] = {
+    Id = 10054,
+    LoadingId = 10770101,
+    Region = {SubId = 107701}
+  },
+  [10055] = {
+    Id = 10055,
+    LoadingId = 10740101,
+    Region = {SubId = 107401}
+  },
+  [10056] = {
+    Id = 10056,
+    LoadingId = 10760101,
+    Region = {SubId = 107601}
   }
 })

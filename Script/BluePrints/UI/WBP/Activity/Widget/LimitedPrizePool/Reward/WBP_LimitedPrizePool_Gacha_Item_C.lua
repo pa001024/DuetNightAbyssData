@@ -16,6 +16,7 @@ function M:OnListItemObjectSet(Content)
     self:SetCount(Content.Count)
   end
   M.Super.OnListItemObjectSet(self, Content)
+  self:SetBonus(Content.BonusType or 0)
   local bSkin = Content.ItemType == "Skin" or Content.ItemType == "WeaponSkin" or Content.ItemType == "Mount"
   if bSkin then
     self.OwningList = nil

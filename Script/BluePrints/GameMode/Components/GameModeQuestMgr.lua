@@ -6,11 +6,9 @@ function GameModeQuestMgr:InitRegionSuit(Avatar, RegionId)
   local SuitTypeFuncTable = {}
   SuitTypeFuncTable[CommonConst.SuitType.GameModeSuit] = self.GameModeSuitRecover
   SuitTypeFuncTable[CommonConst.SuitType.PlayerCharacterSuit] = self.PlayerCharacterSuitRecover
-  for _, SuitType in pairs(CommonConst.SuitType) do
+  for SuitType, SuitTypeFunc in pairs(SuitTypeFuncTable) do
     local SuitTypeData = Avatar.Suits:GetSuitBase(SuitType)
-    if SuitTypeFuncTable[SuitType] then
-      SuitTypeFuncTable[SuitType](self, SuitType, SuitTypeData)
-    end
+    SuitTypeFunc(self, SuitType, SuitTypeData)
   end
 end
 
@@ -116,7 +114,7 @@ function GameModeQuestMgr:ContinuedGuideSuitRecover(SuitType, SuitSubBase)
     return
   end
   for SuitKey, SuitValue in pairs(SuitSubBase) do
-    self:SetContinuedPCGuideVisibility(SuitKey, SuitValue)
+    self:SetContinuedPCGuideVisibility(SuitKey, SuitValue, CommonConst.DefaultTag.ContinuedGuide)
   end
 end
 
@@ -162,7 +160,7 @@ function GameModeQuestMgr:HideUIInScreenSuitRecover(SuitType, SuitSubBase)
     return
   end
   for SuitKey, SuitValue in pairs(SuitSubBase) do
-    self:HideUIInScreen(SuitKey, SuitValue, "HideUIInScreenSuitRecover")
+    self:HideUIInScreen(SuitKey, SuitValue, CommonConst.DefaultTag.HideUIInScreen)
   end
 end
 
@@ -172,10 +170,15 @@ function GameModeQuestMgr:BGMSuitRecover(SuitType, SuitSubBase)
   end
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   for SuitKey, SuitValue in pairs(SuitSubBase:all_dump(SuitSubBase)) do
-    local Event = AudioManager(Player):GetFMODEventByPath_Sync(SuitValue.BgmPath)
-    DebugPrint("BGMSuitRecover", SuitKey, SuitValue.BgmPath, SuitValue.BgmSubRegionId)
-    PrintTable(SuitValue.BgmSubRegionId, 3)
-    AudioManager(Player):PlayLevelSound(tonumber(SuitKey), Event, SuitValue.BgmSubRegionId, {}, SuitValue.BgmParam, SuitValue.BgmParamValue, false, true)
+    DebugPrint("BGMSuitRecover QuestChain_BGM", SuitKey, SuitValue.BgmPath, SuitValue.BgmSubRegionId, SuitValue.QuestChainId)
+    local QuestChainId = SuitValue.QuestChainId or 0
+    if QuestChainId > 0 then
+      DebugPrint("BGMSuitRecover QuestChain_BGM Deferred", SuitKey, QuestChainId)
+    else
+      local Event = AudioManager(Player):GetFMODEventByPath_Sync(SuitValue.BgmPath)
+      PrintTable(SuitValue.BgmSubRegionId, 3)
+      AudioManager(Player):PlayLevelSound(tonumber(SuitKey), Event, SuitValue.BgmSubRegionId, {}, SuitValue.BgmParam, SuitValue.BgmParamValue, false, true, SuitValue.QuestChainId)
+    end
   end
 end
 
@@ -637,6 +640,32 @@ function GameModeQuestMgr:QuestTimerEndCloseBlackScreen(LevelName)
     UIManager(self):HideCommonBlackScreen("QuestArtLevelChange")
     self.QuestArtLevelChangeLevelName = ""
   end
+end
+
+function GameModeQuestMgr:GameModeChangeQuestArtLevelById(IsLoad, ArtLevelControlId)
+  local ArtLevelControlInfo = DataMgr.ArtLevelControl[ArtLevelControlId]
+  if not ArtLevelControlInfo then
+    GWorld.logger.error("BP_EMGameMode_C:GameModeChangeQuestArtLevelById ArtLevelControlId Not In DataMgr. ArtLevelControlId:" .. ArtLevelControlId)
+    return
+  end
+  local LoadParam = IsLoad and 1 or 0
+  self:RealQuestArtLevelChange(ArtLevelControlInfo.RegionId, ArtLevelControlInfo.VarName, true, LoadParam)
+end
+
+function GameModeQuestMgr:GameModeChangeQuestArtLevelByVarName(IsLoad, VarName)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local SubRegionId = Avatar:GetCurrentRegionId()
+  local SubRegionData = DataMgr.SubRegion[SubRegionId]
+  if not SubRegionData then
+    DebugPrint("GameModeQuestMgr:GameModeChangeQuestArtLevelByVarName 当前处于错误子区域，无法触发。RegionId: ", SubRegionId)
+    return
+  end
+  local RegionId = SubRegionData.RegionId
+  local LoadParam = IsLoad and 1 or 0
+  self:RealQuestArtLevelChange(RegionId, VarName, true, LoadParam)
 end
 
 return GameModeQuestMgr

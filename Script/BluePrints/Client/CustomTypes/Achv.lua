@@ -147,6 +147,9 @@ function Achv:Reset()
 end
 
 FormatProperties(Achv)
+local _TransitiveRequires = {}
+local _ReverseTransitive = {}
+local _LockCache = setmetatable({}, {__mode = "k"})
 local AchvDict = Class("AchvDict", CustomTypes.CustomDict)
 AchvDict.KeyType = BaseTypes.Int
 AchvDict.ValueType = Achv
@@ -161,18 +164,137 @@ function AchvDict:GetAchv(AchvId)
   if not achv then
     achv = self:NewAchv(AchvId)
     self[AchvId] = achv
+    local cache = _LockCache[self]
+    if cache then
+      cache._IsFinishedCache[AchvId] = false
+    end
   end
   return achv
 end
 
-function AchvDict:IsAchvLocked(AchvId)
-  local achv = self:GetAchv(AchvId)
-  if not achv.BeforeAchvs then
+function AchvDict.GetTransitiveRequires(AchvId)
+  local cached = _TransitiveRequires[AchvId]
+  if cached then
+    return cached
+  end
+  local result = {}
+  local stack = {AchvId}
+  local visited = {
+    [AchvId] = true
+  }
+  while #stack > 0 do
+    local currentId = table.remove(stack)
+    local achvInfo = DataMgr.Achievement[currentId]
+    if achvInfo and achvInfo.AchievementRequire then
+      for _, preId in ipairs(achvInfo.AchievementRequire) do
+        if not visited[preId] then
+          visited[preId] = true
+          table.insert(result, preId)
+          table.insert(stack, preId)
+        end
+      end
+    end
+  end
+  _TransitiveRequires[AchvId] = result
+  for _, preId in ipairs(result) do
+    local list = _ReverseTransitive[preId]
+    if not list then
+      list = {}
+      _ReverseTransitive[preId] = list
+    end
+    local found = false
+    for _, depId in ipairs(list) do
+      if depId == AchvId then
+        found = true
+        break
+      end
+    end
+    if not found then
+      table.insert(list, AchvId)
+    end
+  end
+  return result
+end
+
+function AchvDict:InitLockCache()
+  local cache = {}
+  _LockCache[self] = cache
+  cache._IsLockedCache = {}
+  cache._IsFinishedCache = {}
+  for achvId, achv in pairs(self) do
+    if type(achvId) == "number" and achv and achv.IsFinished then
+      cache._IsFinishedCache[achvId] = achv:IsFinished()
+    end
+  end
+  local achievementData = DataMgr and DataMgr.Achievement
+  if achievementData then
+    for achvId, _ in pairs(achievementData) do
+      self:_RefreshLockStatus(achvId)
+    end
+  end
+end
+
+function AchvDict:_RefreshLockStatus(AchvId)
+  local cache = _LockCache[self]
+  if not cache then
+    local deps = AchvDict.GetTransitiveRequires(AchvId)
+    for _, preId in ipairs(deps) do
+      local preAchv = self[preId]
+      if not preAchv or not preAchv:IsFinished() then
+        return true
+      end
+    end
     return false
   end
-  for _, preId in pairs(achv.BeforeAchvs) do
-    local achievePre = self:GetAchv(preId)
-    if not (not achievePre or achievePre:IsFinished()) or self:IsAchvLocked(preId) then
+  local locked = false
+  local deps = _TransitiveRequires[AchvId]
+  if deps then
+    for _, preId in ipairs(deps) do
+      local preAchv = self[preId]
+      if not preAchv or not preAchv:IsFinished() then
+        locked = true
+        break
+      end
+    end
+  end
+  cache._IsLockedCache[AchvId] = locked
+  return locked
+end
+
+function AchvDict:UpdateAchvLockState(AchvId)
+  local cache = _LockCache[self]
+  if not cache then
+    return
+  end
+  local achv = self[AchvId]
+  local nowFinished = achv and achv:IsFinished()
+  local wasFinished = cache._IsFinishedCache[AchvId]
+  if nowFinished == wasFinished then
+    return
+  end
+  cache._IsFinishedCache[AchvId] = nowFinished
+  local dependents = _ReverseTransitive[AchvId]
+  if not dependents then
+    return
+  end
+  for _, dependentId in ipairs(dependents) do
+    cache._IsLockedCache[dependentId] = nil
+  end
+end
+
+function AchvDict:IsAchvLocked(AchvId)
+  local cache = _LockCache[self]
+  if cache then
+    local cached = cache._IsLockedCache[AchvId]
+    if nil ~= cached then
+      return cached
+    end
+    return self:_RefreshLockStatus(AchvId)
+  end
+  local deps = AchvDict.GetTransitiveRequires(AchvId)
+  for _, preId in ipairs(deps) do
+    local achievePre = self[preId]
+    if not achievePre or not achievePre:IsFinished() then
       return true
     end
   end
@@ -244,6 +366,17 @@ function AchvTargetDict:GetAchvTarget(TargetId)
   return target
 end
 
+local function _BuildGlobalGraphs()
+  local achievementData = DataMgr and DataMgr.Achievement
+  if not achievementData then
+    return
+  end
+  for achvId, _ in pairs(achievementData) do
+    AchvDict.GetTransitiveRequires(achvId)
+  end
+end
+
+_BuildGlobalGraphs()
 return {
   Achv = Achv,
   AchvDict = AchvDict,

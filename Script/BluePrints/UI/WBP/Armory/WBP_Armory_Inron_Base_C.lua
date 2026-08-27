@@ -474,7 +474,7 @@ function M:OnClickBTN(Type, Resource1, Resource2)
         RightItems = {
           {
             ItemId = Resource1.Id,
-            ItemType = Resource2.ItemType,
+            ItemType = Resource1.ItemType,
             Count = BuyCount
           }
         },
@@ -538,7 +538,7 @@ function M:OnClickBTN(Type, Resource1, Resource2)
       RightItems = {
         {
           ItemId = Resource1.Id,
-          ItemType = Resource2.ItemType,
+          ItemType = Resource1.ItemType,
           Count = BuyCount
         }
       },

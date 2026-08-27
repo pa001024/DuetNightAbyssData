@@ -50,6 +50,41 @@ function Component:AddTimer(interval, func, isloop, delay, Key, IsRealTime, ...)
   return Timer, Key
 end
 
+function Component:AddTimerWithoutRemove(interval, func, isloop, delay, Key, IsRealTime, ...)
+  if nil == self or nil == func then
+    return
+  end
+  if nil == interval or interval <= 0 then
+    func(self, ...)
+    return
+  end
+  self:Timer_Init()
+  if nil == Key then
+    return self:AddTimer(interval, func, isloop, delay, Key, IsRealTime, ...)
+  end
+  local OldTimer = self.TimerHandles[Key]
+  local TimerInfo = OldTimer and self.TimerHandleDatas[OldTimer]
+  if not TimerInfo or not TimerInfo.Func then
+    return self:AddTimer(interval, func, isloop, delay, Key, IsRealTime, ...)
+  end
+  local bRequestedRealTime = true == IsRealTime
+  local bExistingRealTime = true == TimerInfo.IsRealTime
+  if bExistingRealTime ~= bRequestedRealTime then
+    return self:AddTimer(interval, func, isloop, delay, Key, IsRealTime, ...)
+  end
+  local Source = self:GetTimerSource(TimerInfo.IsRealTime) or UE4.UKismetSystemLibrary
+  local NewTimer = Source.K2_SetTimerDelegate({
+    self,
+    TimerInfo.Func
+  }, interval, bExistingLoop, delay)
+  self.TimerHandles[Key] = NewTimer
+  self.TimerHandleDatas[OldTimer] = nil
+  TimerInfo.Key = Key
+  TimerInfo.IsRealTime = bExistingRealTime
+  self.TimerHandleDatas[NewTimer] = TimerInfo
+  return NewTimer, Key
+end
+
 function Component:_GetTimerInfo(Key)
   if not Key or not rawget(self, "TimerHandles") then
     return nil, nil, nil

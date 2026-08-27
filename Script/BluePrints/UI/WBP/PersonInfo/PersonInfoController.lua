@@ -62,6 +62,22 @@ function M:SetMainPageUIHidden(bHidden)
   self.bIsHide = true == bHidden
 end
 
+function M:NeedHideUI()
+  if self.bAutoHideUIOnNextOpen ~= true then
+    return false
+  end
+  local Draft = PersonInfoModel.GetCustomDisplayDraft and PersonInfoModel:GetCustomDisplayDraft() or nil
+  if type(Draft) ~= "table" then
+    return false
+  end
+  for _, Slot in ipairs(Draft.CharacterSlots or {}) do
+    if Slot and Slot.CharData then
+      return true
+    end
+  end
+  return false
+end
+
 function M:RefreshMainPageGuildInfo()
   if not self.MainPage or not self.MainPage.PersonInfoMainPage then
     return

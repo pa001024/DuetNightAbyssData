@@ -11,6 +11,7 @@ M._components = {
 local FocusStates = {Tab = "Tab", Option = "Option"}
 
 function M:Construct()
+  self.RedDotInfos = {}
   self.IsInited = false
   self.bIsFocusable = true
   self.Btn_Close.Btn_Close.OnClicked:Add(self, self.OnCloseClicked)
@@ -127,17 +128,21 @@ function M:CreateOptionWidgets(TabContent)
   self:UnBindAllOptionWidgetFocusEvent()
   self.GridPanel_Parameter:ClearChildren()
   local UIManager = UIManager(self)
+  local IsMobile = CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile"
   for index, value in ipairs(TabContent.Options) do
-    local WidgetPath = CameraParameterConfig.GetOptionWidgetPath(value.WidgetType)
-    local Widget = UIManager:CreateWidget(WidgetPath)
-    if Widget then
-      rawset(Widget, "Config", value)
-      self.GridPanel_Parameter:AddChild(Widget)
-      Widget.BP_OnAddedToFocusPath:Add(self, self.OnOptionAddedToFocusPath)
-      Widget.bIsFocusable = true
-      Widget:SetTitle(GText(value.Title))
-      Widget.Slot:SetRow(index - 1)
-      Widget.Slot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+    if value.HideOnMobile and IsMobile then
+    else
+      local WidgetPath = CameraParameterConfig.GetOptionWidgetPath(value.WidgetType)
+      local Widget = UIManager:CreateWidget(WidgetPath)
+      if Widget then
+        rawset(Widget, "Config", value)
+        self.GridPanel_Parameter:AddChild(Widget)
+        Widget.BP_OnAddedToFocusPath:Add(self, self.OnOptionAddedToFocusPath)
+        Widget.bIsFocusable = true
+        Widget:SetTitle(GText(value.Title))
+        Widget.Slot:SetRow(index - 1)
+        Widget.Slot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+      end
     end
   end
   local AllOptionWidgets = self.GridPanel_Parameter:GetAllChildren():ToTable() or {}
@@ -169,6 +174,7 @@ function M:CreateOptionWidgets(TabContent)
 end
 
 function M:InitOptionList(TabContent)
+  self.CurrentContents = {}
   self.Text_Title:SetText(TabContent.Title)
   local TabId = TabContent and TabContent.TabId or ""
   if self["InitOptionList_" .. TabId] then
@@ -196,11 +202,25 @@ function M:CreateOptionContentCommon(OptionConfig, Widget)
   for key, value in pairs(OptionConfig) do
     Content[key] = value
   end
+  self.CurrentContents[Content.OptionId] = Content
   return Content
+end
+
+function M:UpdateEditConditionWidgetsVisibility()
+  for key, Content in pairs(self.CurrentContents) do
+    if Content.EditCondition then
+      if self.CurrentContents[Content.EditCondition] and self.CurrentContents[Content.EditCondition].IsChecked then
+        Content.Widget:SetVisibility(UIConst.VisibilityOp.SelfHitTestVisible)
+      else
+        Content.Widget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      end
+    end
+  end
 end
 
 function M:InitOptionList_Lens(TabContent)
   self:CommonInitOptionList()
+  self:UpdateEditConditionWidgetsVisibility()
 end
 
 function M:InitOption_CameraMode(Config, Widget)
@@ -295,13 +315,47 @@ function M:OnFocusMethodChanged(IsChecked, Params)
   end
   Content.IsChecked = IsChecked
   Widget:Init(Content)
+  self:UpdateEditConditionWidgetsVisibility()
 end
 
 function M:OnDepthOfFieldCheckedChanged(IsChecked, Content)
   local Model = self.PhotoCameraModel
   Model:EnableFocusMethod(IsChecked)
+  Content.IsChecked = Model:IsFocusMethodEnabled()
   self:SetOptionRedDotRead(Content)
   self:OnCheckBoxOptionCheckedChanged(Content)
+  self:UpdateEditConditionWidgetsVisibility()
+end
+
+function M:InitOption_FocusDistance(Config, Widget)
+  local Model = self.PhotoCameraModel
+  local Content = self:CreateOptionContentCommon(Config, Widget)
+  Content.Default = Model:GetFocusDistance()
+  Content.OnValueChanged = self.OnFocusDistanceSlideValueChanged
+  Widget:Init(Content)
+end
+
+function M:OnFocusDistanceSlideValueChanged(CurrentValue, Content)
+  local Model = self.PhotoCameraModel
+  Model:SetFocusDistance(CurrentValue)
+  self:SetOptionRedDotRead(Content)
+end
+
+function M:InitOption_Aperture(Config, Widget)
+  local Model = self.PhotoCameraModel
+  local Content = self:CreateOptionContentCommon(Config, Widget)
+  Content.Default = Model:GetAperture() * Config.DividedBy
+  Content.Default = math.floor(Content.Default + 0.5)
+  Content.DividedBy = Config.DividedBy
+  Content.OnValueChanged = self.OnApertureSlideValueChanged
+  Widget:Init(Content)
+end
+
+function M:OnApertureSlideValueChanged(CurrentValue, Content)
+  local Model = self.PhotoCameraModel
+  CurrentValue = CurrentValue / Content.DividedBy
+  Model:SetAperture(CurrentValue)
+  self:SetOptionRedDotRead(Content)
 end
 
 function M:InitOptionList_Color(TabContent)
@@ -431,7 +485,9 @@ function M:InitOption_FilterList(Config, Widget)
   Content.FilterData = Model:GetFilterData()
   Content.CurrentFilter = Model:GetFilterType()
   Content.Config = Config
-  Content.RedDotInfos = self.RedDotInfos[Content.TabId][Content.OptionId]
+  if self.RedDotInfos[Content.TabId] then
+    Content.RedDotInfos = self.RedDotInfos[Content.TabId][Content.OptionId]
+  end
   Widget:Init(Content)
 end
 
@@ -440,6 +496,16 @@ function M:OnFilterItemSelectionChanged(FilterItem, OptionContent)
   local EFilterType = FilterItem and FilterItem.Data.PPEnum
   Model:SetFilter(EFilterType)
   self:SetFilterItemRedDotRead(FilterItem, OptionContent)
+  local OptionWidgets = self.GridPanel_Parameter:GetAllChildren():ToTable()
+  for _, Widget in ipairs(OptionWidgets) do
+    if Widget.Config and Widget.Config.OptionId == "FilterIntensity" then
+      Widget.Content.Step = FilterItem.Data.Step or 1
+      Widget:Init(Widget.Content)
+      local Intensity = Model:GetFilterIntensity()
+      Widget:SetValue(Intensity)
+      break
+    end
+  end
 end
 
 function M:OnCloseClicked()
@@ -448,6 +514,7 @@ function M:OnCloseClicked()
 end
 
 function M:Destruct()
+  self.IsInited = false
   self.Btn_Close.Btn_Close.OnClicked:Remove(self, self.OnCloseClicked)
   self:UnBindAllOptionWidgetFocusEvent()
 end
@@ -499,10 +566,13 @@ function M:CreateCustomRedDotInfo_FilterList(OptionId, CacheDetail, OptionRedDot
   CacheDetail[OptionId] = CacheDetail[OptionId] or {}
   local OptionCacheDetail = CacheDetail[OptionId]
   local HasRedDot
-  for key, value in pairs(FilterData) do
-    OptionCacheDetail[value.ID] = OptionCacheDetail[value.ID] or 1
-    if 1 == OptionCacheDetail[value.ID] then
-      OptionRedDotInfo[value.ID] = UIConst.RedDotType.NewRedDot
+  for key, value in pairs(FilterData or {}) do
+    local ID = value.ID
+    if ID then
+      OptionCacheDetail[ID] = OptionCacheDetail[ID] or 1
+      if 1 == OptionCacheDetail[ID] then
+        OptionRedDotInfo[ID] = UIConst.RedDotType.NewRedDot
+      end
     end
   end
 end
@@ -807,6 +877,7 @@ function M:ResetCurrentTabOptions(FilterFunc)
     end
     ::lbl_61::
   end
+  self:RestoreOptionFocusIfNeeded()
   return UIUtils.Handled, true
 end
 
@@ -818,6 +889,47 @@ function M:IsOptionSkipReset(OptionId, Config)
     return true
   end
   return false
+end
+
+function M:RestoreOptionFocusIfNeeded()
+  if not self.IsGamePadInput then
+    return
+  end
+  local State = self.FSM:Peak()
+  if State.Name ~= FocusStates.Option then
+    return
+  end
+  local CurrentWidget = State.Widget
+  if IsValid(CurrentWidget) and CurrentWidget:IsVisible() then
+    return
+  end
+  local TargetWidget = self:GetVisibleOptionWidgetById("DepthOfField")
+  if not IsValid(TargetWidget) then
+    TargetWidget = self:GetFirstVisibleOptionWidget()
+  end
+  if IsValid(TargetWidget) then
+    TargetWidget:SetFocus()
+  end
+end
+
+function M:GetVisibleOptionWidgetById(OptionId)
+  local OptionWidgets = self.GridPanel_Parameter:GetAllChildren():ToTable() or {}
+  for _, Widget in ipairs(OptionWidgets) do
+    if Widget.Config and Widget.Config.OptionId == OptionId and Widget:IsVisible() then
+      return Widget
+    end
+  end
+  return nil
+end
+
+function M:GetFirstVisibleOptionWidget()
+  local OptionWidgets = self.GridPanel_Parameter:GetAllChildren():ToTable() or {}
+  for _, Widget in ipairs(OptionWidgets) do
+    if IsValid(Widget) and Widget:IsVisible() then
+      return Widget
+    end
+  end
+  return nil
 end
 
 function M:ResetOption_CameraMode(Widget, Config)
@@ -844,6 +956,22 @@ function M:ResetOption_DepthOfField(Widget, Config)
   Model:EnableFocusMethod(Default)
   Widget.Content.IsChecked = Default
   Widget.CheckBox:SetChecked(Default, false)
+  self:UpdateEditConditionWidgetsVisibility()
+end
+
+function M:ResetOption_FocusDistance(Widget, Config)
+  local Model = self.PhotoCameraModel
+  local Default = Config.Default or 0
+  Model:SetFocusDistance(Default)
+  Widget:SetValue(Default)
+end
+
+function M:ResetOption_Aperture(Widget, Config)
+  local Model = self.PhotoCameraModel
+  local Default = Config.Default or 0
+  Widget:SetValue(Default)
+  Default = Default / Config.DividedBy
+  Model:SetAperture(Default)
 end
 
 function M:ResetOption_Contrast(Widget, Config)

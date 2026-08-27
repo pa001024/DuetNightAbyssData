@@ -1,5 +1,6 @@
 require("Unlua")
 require("Const")
+local EMLuaConst = require("EMLuaConst")
 local BattleUtils = require("Utils.BattleUtils")
 local RegionDataMgrSubsystem_C = Class({
   "BluePrints.Common.RegionDataInitLogic",
@@ -583,6 +584,16 @@ function RegionDataMgrSubsystem_C:RegionAddDataByStaticCreator(LevelName, Creato
   end
 end
 
+function RegionDataMgrSubsystem_C:CompleteCreatorDataAndBuildCache(LuaTableIndex)
+  if not EMLuaConst.bEnableCreateUnitContextCache then
+    return
+  end
+  if not self.DataPool.RegionData[LuaTableIndex] then
+    return
+  end
+  self:BuildAndCacheCreateUnitContext(LuaTableIndex)
+end
+
 function RegionDataMgrSubsystem_C:RegionAddDataByRandomCreator(LevelName, RuleId, Param, TmpEid, SpawnRandomTableId, SpawnIdxInRule, WorldRegionEid)
   if URuntimeCommonFunctionLibrary.UseCppRegionData(self) then
     return
@@ -623,6 +634,12 @@ function RegionDataMgrSubsystem_C:RegionAddDataByUnit(TargetActor)
   self.DataLibrary:AddUnitRegionCacheData(UnitRegionData)
   self:AddCretorActiveCache(UnitRegionData)
   Avatar:AvatarC2SAddRegionActorData(UnitRegionData)
+  if EMLuaConst.bEnableCreateUnitContextCache then
+    local LuaTableIndex = self:GetLuaDataIndex(TargetActor.WorldRegionEid)
+    if LuaTableIndex and LuaTableIndex > 0 then
+      self:BuildAndCacheCreateUnitContext(LuaTableIndex)
+    end
+  end
 end
 
 function RegionDataMgrSubsystem_C:MarkSSDataCreating(LevelName, WorldRegionEid)
@@ -648,9 +665,8 @@ function RegionDataMgrSubsystem_C:SSDataAlreadyExist(LevelName, WorldRegionEid)
   return true
 end
 
-function RegionDataMgrSubsystem_C:RecoverRegionDataByIndex(LuaTableIndex)
+function RegionDataMgrSubsystem_C:BuildAndCacheCreateUnitContext(LuaTableIndex)
   local Info = self.DataPool:GetRegionEntityDataNoCopy(LuaTableIndex)
-  local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
   local Context = AEventMgr.CreateUnitContext()
   self:FillCreateUnitContext(Context, Info)
   if Info.Type then
@@ -668,6 +684,15 @@ UnitId:]] .. Info.UnitId .. [[
  
 UnitType:]] .. Info.UnitTYpe .. "WorldRegionEid:" .. Info.WorldRegionEid, Info)
   end
+  if EMLuaConst.bEnableCreateUnitContextCache then
+    self.DataPool:SaveCreateUnitContext(LuaTableIndex, Context)
+  end
+  return Context
+end
+
+function RegionDataMgrSubsystem_C:RecoverRegionDataByIndex(LuaTableIndex)
+  local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
+  local Context = self:BuildAndCacheCreateUnitContext(LuaTableIndex)
   GameMode.EMGameState.EventMgr:CreateUnitNew(Context, false)
 end
 
@@ -1090,7 +1115,7 @@ function RegionDataMgrSubsystem_C:RemoveRegionDataUpdateCallback(UnitType, Obj)
 end
 
 function RegionDataMgrSubsystem_C:ExeRegionDataUpdateCallback(RegionData)
-  if RegionData.UnitType then
+  if self.RegionDataUpdateCallback and RegionData.UnitType then
     local Pair = self.RegionDataUpdateCallback[RegionData.UnitType]
     if Pair then
       for Obj, Func in pairs(Pair) do

@@ -265,7 +265,7 @@
       ]
     ],
     "icon": "T_Bag_1x2_01",
-    "basicPoint": 50,
+    "basicPoint": 100,
     "maxStack": 30,
     "currentStack": 5
   },

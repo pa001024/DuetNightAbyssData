@@ -56,6 +56,7 @@ function M:Construct()
   self:AddDispatcher(EventID.OnResourcesChanged, self, self.UpdateBtnStateByResourceChanged)
   self.List_Accessory.BP_OnItemClicked:Clear()
   self.List_Accessory.BP_OnItemClicked:Add(self, self.OnAccessoryItemClicked)
+  self.Btn_FX.Btn_Area.OnClicked:Add(self, self.OnClickFxWidget)
   self.List_Accessory.OnCreateEmptyContent:Bind(self, function(self)
     return NewObject(UIUtils.GetCommonItemContentClass())
   end)
@@ -72,6 +73,7 @@ function M:Construct()
   self.Num_Fenghua:SetText(0)
   self.Text_Fenghua:SetText(GText("UI_AppearanceScore_ScoreName"))
   self.Text_Show:SetText(GText("UI_Controller_Check"))
+  self.Btn_FX.Text_FX:SetText(GText("UI_Skin_Upgrade_Interval"))
   rawset(self, "NoneAccessoryId", DataMgr.GlobalConstant.EmptyCharAccessoryID.ConstantValue)
   self.Btn_Dye:BindEventOnClicked(self, self.OnDyeBtnClicked)
   rawset(self, "NameFont", {
@@ -82,6 +84,59 @@ function M:Construct()
     "Font_Gold",
     "Font_Red"
   })
+end
+
+function M:OnClickFxWidget()
+  local Avatar = GWorld:GetAvatar()
+  local Scale = 10.0
+  local SelectedContent = self.SkinMap[self.SelectedSkinId]
+  local Params = {}
+  local CommonChar = Avatar.CommonChars[SelectedContent.CharId]
+  local CharSkin = CommonChar.OwnedSkins[SelectedContent.SkinId]
+  local EffectIntervalText = 0
+  if -1 ~= CharSkin.EffectInterval then
+    EffectIntervalText = math.floor(CharSkin.EffectInterval * Scale + 0.5) / Scale
+  else
+    local SkinConfig = DataMgr.Skin[self.SelectedSkinId]
+    if SkinConfig and SkinConfig.TimerInterval then
+      local TimerInterval = SkinConfig.TimerInterval[3]
+      local MinInterval = SkinConfig.MinInterval
+      EffectIntervalText = math.floor((TimerInterval - MinInterval) * Scale + 0.5) / Scale
+    end
+  end
+  Params.EffectIntervalText = EffectIntervalText
+  Params.Tips = {
+    string.format(GText("UI_Skin_Upgrade_Conetnt_2"), EffectIntervalText)
+  }
+  Params.CharId = SelectedContent.CharId
+  Params.SkinId = SelectedContent.SkinId
+  Params.SkinWidget = self
+  Params.RightCallbackObj = self
+  Params.RightCallbackFunction = self.OnClickFxRightBtn
+  Params.LeftCallbackFunction = self.OnClickFxLeftBtn
+  Params.DontCloseWhenLeftBtnClicked = true
+  Params.DontCloseWhenRightBtnClicked = true
+  Params.LeftGamepadImg = UIConst.GamePadImgKey.FaceButtonTop
+  Params.RightGamepadImg = UIConst.GamePadImgKey.FaceButtonBottom
+  Params.ShowBKeyClose = true
+  AudioManager(self):PlayUISound(nil, "event:/ui/common/click_mid", nil, nil)
+  UIManager(self):ShowCommonPopupUI(100427, Params, self)
+end
+
+function M:OnClickFxLeftBtn()
+  EventManager:FireEvent(EventID.OnCharSkinFxCountChanged)
+end
+
+function M:OnClickFxRightBtn()
+  local function SkinFxCountSetCB(NewEffectInterval)
+    self.Btn_FX.Time_FX:SetText(string.format("%s%s", NewEffectInterval, "s"))
+    
+    if self.ActorController then
+      self.ActorController:RefreshEffectInterval(NewEffectInterval)
+    end
+  end
+  
+  EventManager:FireEvent(EventID.OnCharSkinFxCountSet, self.SelectedSkinId, SkinFxCountSetCB)
 end
 
 function M:OnNewAccessoryObtained(AccessoryId)
@@ -150,7 +205,28 @@ function M:OnNewSkinObtained(SkinId)
     if self.SelectedSkinId == SkinId and self.CurrentTopTabIdx == self.SkinTabIdx then
       self:UpdateSkinDetails(Content)
     end
+    self:SortSkinContents()
+    self:InitSkinList()
   end
+end
+
+function M:SortSkinContents()
+  table.sort(self.SkinArray, function(a, b)
+    if not not a.LockType ~= not not b.LockType then
+      if a.LockType then
+        return false
+      else
+        return true
+      end
+    end
+    if a.Rarity and b.Rarity then
+      if a.Rarity == b.Rarity then
+        return a.SkinId < b.SkinId
+      end
+      return a.Rarity < b.Rarity
+    end
+    return a.SkinId < b.SkinId
+  end)
 end
 
 function M:On_Image_Click_MouseButtonDown(MyGeometry, MouseEvent)
@@ -313,10 +389,12 @@ function M:CreateTabConfig()
       Text = GText(DataMgr.AppearanceTab[3].Text),
       IconPath = DataMgr.AppearanceTab[3].IconPath
     })
-    table.insert(self.TopTabs, {
-      Text = GText(DataMgr.AppearanceTab[5].Text),
-      IconPath = DataMgr.AppearanceTab[5].IconPath
-    })
+    if self.Target and AppearanceUtils.IsWeaponHasAnyStanceFX(self.Target.WeaponId) then
+      table.insert(self.TopTabs, {
+        Text = GText(DataMgr.AppearanceTab[5].Text),
+        IconPath = DataMgr.AppearanceTab[5].IconPath
+      })
+    end
   end
   rawset(self, "TabConfig", {
     TitleName = GText("UI_Armory_Appearance"),
@@ -457,6 +535,7 @@ function M:OnLoaded(...)
 end
 
 function M:OnTopTabSelected(TabWidget, Content)
+  self.Btn_FX:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self:HideSkinLevelUpWidget()
   self.CurrentTopTabIdx = TabWidget.Idx
   if self.ActorController then
@@ -541,7 +620,58 @@ end
 
 function M:SelectSkinById(SkinId)
   SkinId = SkinId or self.CurrentSkinContent.SkinId
+  self.ClickSkinLevel = 1
+  local Skin = self:GetOwnedSkinData(SkinId)
+  local IsOwned = nil ~= Skin
+  if IsOwned then
+    local IsEquiped = self:IsEquipedSelectedSkin()
+    self.ClickSkinLevel = IsEquiped and Skin.SelectedLevel or Skin.Level
+  end
   self:SelectSkinByContent(self.SkinMap[SkinId])
+end
+
+function M:UpdateSkinFxInfo(Content)
+  if 1 ~= self.CurrentTopTabIdx then
+    return
+  end
+  self.Btn_FX:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  if Content.ItemType == "Skin" and not self.IsPreviewMode then
+    if self:HasSkinFxShow(Content) then
+      self.Btn_FX:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
+    local Scale = 10.0
+    local Avatar = GWorld:GetAvatar()
+    local CommonChar = Avatar.CommonChars[Content.CharId]
+    if CommonChar then
+      local CharSkin = CommonChar.OwnedSkins[Content.SkinId]
+      if CharSkin then
+        if -1 ~= CharSkin.EffectInterval then
+          local EffectIntervalText = math.floor(CharSkin.EffectInterval * Scale + 0.5) / Scale
+          self.Btn_FX.Time_FX:SetText(string.format("%s%s", EffectIntervalText, "s"))
+        else
+          local SkinConfig = DataMgr.Skin[Content.SkinId]
+          if SkinConfig and SkinConfig.TimerInterval then
+            local TimerInterval = SkinConfig.TimerInterval[3]
+            local MinInterval = SkinConfig.MinInterval
+            local TimerIntervalText = math.floor((TimerInterval - MinInterval) * Scale + 0.5) / Scale
+            self.Btn_FX.Time_FX:SetText(string.format("%s%s", TimerIntervalText, "s"))
+          else
+            DebugPrint("SelectSkinByContent SkinNoTimerInterval")
+            self.Btn_FX:SetVisibility(UIConst.VisibilityOp.Collapsed)
+          end
+        end
+      end
+    end
+  end
+end
+
+function M:LevelSkinFxInfo()
+  self:UpdateSkinFxInfo(self.SkinMap[self.SelectedSkinId])
+end
+
+function M:OnLevelBtnClick(Level)
+  self.ClickSkinLevel = Level
+  self:UpdateSkinFxInfo(self.SkinMap[self.SelectedSkinId])
 end
 
 function M:SelectSkinByContent(Content)
@@ -553,6 +683,24 @@ function M:SelectSkinByContent(Content)
   SelectedContent = Content
   ArmoryUtils:SetItemIsSelected(SelectedContent, true)
   self:UpdateSkinDetails(Content)
+  self:UpdateSkinFxInfo(Content)
+end
+
+function M:HasSkinFxShow(Content)
+  local CurSkin = self:GetOwnedSkinData(self.SelectedSkinId)
+  if not CurSkin or self.ClickSkinLevel > CurSkin.Level or self.ClickSkinLevel <= 1 then
+    return false
+  end
+  if Content.ItemType == "Skin" then
+    local IsDisplay
+    if Content.ItemType == "Skin" then
+      IsDisplay = DataMgr.SkinUpgrade and DataMgr.SkinUpgrade[Content.ItemId]
+    elseif Content.ItemType == "WeaponSkin" then
+      IsDisplay = DataMgr.WeaponSkinUpgrade and DataMgr.WeaponSkinUpgrade[Content.ItemId]
+    end
+    return IsDisplay
+  end
+  return false
 end
 
 function M:UpdateSkinDetails(Content)
@@ -887,6 +1035,52 @@ function M:UpdateAccessoryDetails(Content)
       Panel:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end
   end
+  self:UpdateAccessoryBtns(Content)
+  rawset(self, "AccessoryVideoData", nil)
+  if Content == self.NoneAccessory then
+    return
+  end
+  local Data
+  local Avatar = GWorld:GetAvatar()
+  if self.Type == CommonConst.ArmoryType.Char then
+    Data = DataMgr.CharAccessory[Content.AccessoryId] or DataMgr.CharPartMesh[Content.AccessoryId]
+    self.Text_CharName:SetText(GText(UIConst.AccessoryTypeTextMap[Data.AccessoryType] or ""))
+    self.Num_Fenghua:SetText(Avatar:GetAppearanceScore(CommonConst.DataType.CharAccessory, Content.AccessoryId) or "")
+  else
+    Data = DataMgr.WeaponAccessory[Content.AccessoryId]
+    self.Text_CharName:SetText(GText(UIConst.AccessoryTypeTextMap.WeaponAccessory))
+    self:UpdateWeaponStanceFXInfo(Content)
+    self.Num_Fenghua:SetText(Avatar:GetAppearanceScore(CommonConst.DataType.WeaponAccessory, Content.AccessoryId) or "")
+  end
+  self:UpdateAccessoryVideo(Data)
+  if Data.Rarity and self.NameFont[Data.Rarity] and self[self.NameFont[Data.Rarity]] then
+    self.Text_Name:SetFont(self[self.NameFont[Data.Rarity]])
+  end
+  self.Text_Name:SetText(GText(Data.Name))
+  self.Text_Info:SetText(GText(Data.Des))
+  self.Text_SkinName_World:SetText(EnText(Data.Name))
+  self.Text_Char_None:SetVisibility(ESlateVisibility.Collapsed)
+  self.Group_Icon:SetVisibility(ESlateVisibility.Collapsed)
+  self.Tag_Quality:SetVisibility(ESlateVisibility.Collapsed)
+  local AccessoryIconPath = ArmoryUtils:GetCharNoneAccessoryIconPaths()[Data.AccessoryType]
+  if AccessoryIconPath then
+    local AccessoryIcon = LoadObject(AccessoryIconPath)
+    self.Image_Element:SetBrushResourceObject(AccessoryIcon)
+    self.Group_Icon:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  end
+  if Data.Rarity then
+    self.Tag_Quality:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Tag_Quality:Init(Data.Rarity)
+  end
+  if not self:IsAnimationPlaying(self.In) then
+    self:PlayAnimation(self.Change)
+  end
+  if Content ~= self.NoneAccessory and Content.RedDotType and not self.NoReddot then
+    ArmoryUtils:SetItemReddotRead(Content, true)
+  end
+end
+
+function M:UpdateAccessoryBtns(Content)
   self.UseParamsInOpt = nil
   self.LeftConfirmBtnFunc = nil
   self.RightConfirmBtnFunc = nil
@@ -993,48 +1187,6 @@ function M:UpdateAccessoryDetails(Content)
       self.Btn_Function:SetText(GText("UI_CharPreview_Cannot_Equip"))
       self.Btn_Function:ForbidBtn(true)
     end
-  end
-  rawset(self, "AccessoryVideoData", nil)
-  if Content == self.NoneAccessory then
-    return
-  end
-  local Data
-  local Avatar = GWorld:GetAvatar()
-  if self.Type == CommonConst.ArmoryType.Char then
-    Data = DataMgr.CharAccessory[Content.AccessoryId] or DataMgr.CharPartMesh[Content.AccessoryId]
-    self.Text_CharName:SetText(GText(UIConst.AccessoryTypeTextMap[Data.AccessoryType] or ""))
-    self.Num_Fenghua:SetText(Avatar:GetAppearanceScore(CommonConst.DataType.CharAccessory, Content.AccessoryId) or "")
-  else
-    Data = DataMgr.WeaponAccessory[Content.AccessoryId]
-    self.Text_CharName:SetText(GText(UIConst.AccessoryTypeTextMap.WeaponAccessory))
-    self:UpdateWeaponStanceFXInfo(Content)
-    self.Num_Fenghua:SetText(Avatar:GetAppearanceScore(CommonConst.DataType.WeaponAccessory, Content.AccessoryId) or "")
-  end
-  self:UpdateAccessoryVideo(Data)
-  if Data.Rarity and self.NameFont[Data.Rarity] and self[self.NameFont[Data.Rarity]] then
-    self.Text_Name:SetFont(self[self.NameFont[Data.Rarity]])
-  end
-  self.Text_Name:SetText(GText(Data.Name))
-  self.Text_Info:SetText(GText(Data.Des))
-  self.Text_SkinName_World:SetText(EnText(Data.Name))
-  self.Text_Char_None:SetVisibility(ESlateVisibility.Collapsed)
-  self.Group_Icon:SetVisibility(ESlateVisibility.Collapsed)
-  self.Tag_Quality:SetVisibility(ESlateVisibility.Collapsed)
-  local AccessoryIconPath = ArmoryUtils:GetCharNoneAccessoryIconPaths()[Data.AccessoryType]
-  if AccessoryIconPath then
-    local AccessoryIcon = LoadObject(AccessoryIconPath)
-    self.Image_Element:SetBrushResourceObject(AccessoryIcon)
-    self.Group_Icon:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  end
-  if Data.Rarity then
-    self.Tag_Quality:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    self.Tag_Quality:Init(Data.Rarity)
-  end
-  if not self:IsAnimationPlaying(self.In) then
-    self:PlayAnimation(self.Change)
-  end
-  if Content ~= self.NoneAccessory and Content.RedDotType and not self.NoReddot then
-    ArmoryUtils:SetItemReddotRead(Content, true)
   end
 end
 
@@ -1163,16 +1315,47 @@ function M:InitAccessoryListCommon()
   self.List_Accessory:RequestPlayEntriesAnim()
 end
 
+function M:CreateModActorController()
+  local AC = self.ActorController
+  if not AC then
+    return nil
+  end
+  local ModAC = ActorController:New({
+    ViewUI = self,
+    IsPreviewMode = false,
+    Char = AC.CurrentCharInfo,
+    bNeedEndCamera = false
+  })
+  ModAC:OnOpened()
+  ModAC:ChangeWeaponModel(AC.CurrentWeaponInfo)
+  self.ModActorController = ModAC
+  return ModAC
+end
+
+function M:DestroyModActorController()
+  local ModAC = self.ModActorController
+  self.ModActorController = nil
+  if ModAC then
+    ModAC:OnClosed()
+    ModAC:OnDestruct()
+  end
+end
+
 local bFirstJump = true
 
 function M:OnModBtnClicked()
   if self.Type == CommonConst.ArmoryType.Weapon then
-    ModController:SetActorController(self.ActorController)
+    local ModAC = self:CreateModActorController()
+    ModController:SetActorController(ModAC)
     local ModView = ModController:OpenView(ModCommon.ArmoryMod, self.Type, self.Target:HasTag("Melee") and "Melee" or "Ranged", {
       self.Target.Uuid
     }, nil, {
       Func = function()
-        ModController:SetActorController(self.ActorController)
+        self:DestroyModActorController()
+        ModController:SetActorController(nil)
+        if self.ActorController and not self.ActorController:IsViewTarget() then
+          self.ActorController:ViewTarget()
+        end
         self:SetFocus()
       end
     }, ModCommon.MainUICase.Normal)
@@ -1299,10 +1482,10 @@ end
 function M:OnHideUIKeyDown()
   self.bSelfHidden = not self.bSelfHidden
   if self.bSelfHidden then
-    self:SetRenderOpacity(0)
+    self.Main:SetRenderOpacity(0)
     self.Image_Click.Slot:SetZOrder(10)
   else
-    self:SetRenderOpacity(1)
+    self.Main:SetRenderOpacity(1)
     self.Image_Click.Slot:SetZOrder(-1)
   end
 end
@@ -1387,9 +1570,9 @@ function M:PlayInAnim()
       self.ComBgSwitch:AddToViewport(self:GetZOrder())
       self.ComBgSwitch:PlayAnimation(self.ComBgSwitch.In)
       self.ComBgSwitch:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-      self:SetRenderOpacity(0)
+      self.Main:SetRenderOpacity(0)
       self:AddTimer(0.3, function()
-        self:SetRenderOpacity(1)
+        self.Main:SetRenderOpacity(1)
         self:Init(self.Params)
         self:StopAnimation(self.Out)
         self:PlayAnimation(self.In)
@@ -1424,6 +1607,11 @@ function M:RealClose()
 end
 
 function M:Destruct()
+  if self.ModActorController then
+    self.ModActorController:OnClosed()
+    self.ModActorController:OnDestruct()
+    self.ModActorController = nil
+  end
   ModController:SetActorController(nil)
   if self.ActorController then
     self.ActorController:HidePlayerActor(self.UIName, false)
@@ -1445,6 +1633,7 @@ function M:Destruct()
   if self.BlackScreenHandle then
     UIManager(self):HideCommonBlackScreen(self.BlackScreenHandle)
   end
+  self.Btn_Play.Btn_Area.OnClicked:Clear()
   M.Super.Destruct(self)
   if self.bRecoverAppearanceWhenDestruct and not self.IsPreviewMode then
     self.SelectedSkinLevel = nil

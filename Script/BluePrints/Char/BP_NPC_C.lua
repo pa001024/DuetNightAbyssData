@@ -4,6 +4,7 @@ local MiscUtils = require("Utils.MiscUtils")
 local TalkAudioComp_C = require("BluePrints.Story.Talk.Controller.TalkAudioComp")
 local StoryPlayableUtils = require("BluePrints.Story.StoryPlayableUtils")
 local ClientEventUtils = require("BluePrints.Common.ClientEvent.ClientEventUtils")
+local TaskUtils = require("BluePrints.UI.TaskPanel.TaskUtils")
 local BP_NPC_C = Class({
   "BluePrints.Char.BP_NpcCharacterBase_C"
 })
@@ -122,10 +123,6 @@ function BP_NPC_C:CheckCanPart()
   end
 end
 
-function BP_NPC_C:StartTalkContext(TalkId, PlayerActor)
-  self.NpcTalkInteractiveComponent:StartTalkContext(TalkId, PlayerActor)
-end
-
 function BP_NPC_C:IsCustomNPC()
   return self.Hair_SM ~= nil
 end
@@ -226,6 +223,9 @@ function BP_NPC_C:SetSitPoseWithoutInteractive(CallBackFunc, IsImmediately, Mont
   self.IsSitting = true
   self.IsSpecialSit = true
   self:SetCharacterTag("Seating")
+  if self.CharacterFashion then
+    self.CharacterFashion:StopNPCCreateEffectTimer()
+  end
   self.CapsuleComponent:IgnoreActorWhenMoving(self, true)
   local AllNeedIgnoreActor = TArray(AActor)
   local StaticMeshResult = TArray(AActor)
@@ -393,6 +393,9 @@ function BP_NPC_C:RealSetSitPoseWithInteractiveAndNoDown(CallBackFunc)
   self.IsSitting = true
   self.IsSpecialSit = true
   self:SetCharacterTag("Seating")
+  if self.CharacterFashion then
+    self.CharacterFashion:StopNPCCreateEffectTimer()
+  end
   self.CapsuleComponent:IgnoreActorWhenMoving(self, true)
   local StaticMeshResult = TArray(AActor)
   local MeshClass = UE4.AStaticMeshActor
@@ -927,14 +930,16 @@ function BP_NPC_C:TriggerNpcGlobalTimeDilation(IsPause)
   self:SetActorImmunePause(self, IsPause)
 end
 
-function BP_NPC_C:PreEnterStory(OnFinished, bCacheMeshMaterials, bPauseBT)
+function BP_NPC_C:PreEnterStory(Context)
   if self.bEnterStory then
-    StoryPlayableUtils:ExecuteStoryDelegate(OnFinished)
     return
   end
   self.bEnterStory = true
-  if bCacheMeshMaterials and self.CharacterFashion then
-    self.CharacterFashion:PreEnterStory(bCacheMeshMaterials)
+  if Context and Context.bTriggerKawaiiLayerLink and self:JudgeSkinType() == UE4.ESkinType.DefaultSkin then
+    self:TriggerKawaiiLayerLink(Context.bOpenKawaiiLayerLink)
+  end
+  if Context and Context.bCacheMeshMaterials and self.CharacterFashion then
+    self.CharacterFashion:PreEnterStory(Context.bCacheMeshMaterials)
   end
   self:AddTimer(0.01, function()
     self.NativeMeshTickOptions = {}
@@ -954,7 +959,7 @@ function BP_NPC_C:PreEnterStory(OnFinished, bCacheMeshMaterials, bPauseBT)
       SKMeshComp:SetCastInsetShadow(true)
     end
   end
-  if bPauseBT and self.StopBT then
+  if Context and Context.bPauseBT and self.StopBT then
     self:StopBT("Talk")
   end
   local WorldCompositionSubSystem = USubsystemBlueprintLibrary.GetWorldSubsystem(self, UWorldCompositionSubSystem)
@@ -962,15 +967,16 @@ function BP_NPC_C:PreEnterStory(OnFinished, bCacheMeshMaterials, bPauseBT)
     WorldCompositionSubSystem:UnregisterEntryToWorldComposition(self)
   end
   self.bInStory = true
-  StoryPlayableUtils:ExecuteStoryDelegate(OnFinished)
 end
 
-function BP_NPC_C:PreExitStory(OnFinished, bStartBT, bIsExternal)
+function BP_NPC_C:PreExitStory(Context)
   if not self.bEnterStory then
-    StoryPlayableUtils:ExecuteStoryDelegate(OnFinished)
     return
   end
   self.bEnterStory = false
+  if Context and Context.bTriggerKawaiiLayerLink and self:JudgeSkinType() == UE4.ESkinType.DefaultSkin then
+    self:TriggerKawaiiLayerLink(Context.bOpenKawaiiLayerLink)
+  end
   if self.CharacterFashion then
     self.CharacterFashion:PreExitStory()
   end
@@ -986,7 +992,7 @@ function BP_NPC_C:PreExitStory(OnFinished, bStartBT, bIsExternal)
     end
   end
   self.NativeInSetShadow = nil
-  if bStartBT and self.RestartBT then
+  if Context and Context.bPauseBT and self.RestartBT then
     self:RestartBT()
   end
   local Controller = self:GetController()
@@ -995,7 +1001,7 @@ function BP_NPC_C:PreExitStory(OnFinished, bStartBT, bIsExternal)
   end
   local EMGameState = UE4.UGameplayStatics.GetGameState(self)
   EMGameState:HideNpc(false, Const.TalkHideTag, self)
-  if bIsExternal then
+  if Context and Context.bIsExternal then
     local WorldCompositionSubSystem = USubsystemBlueprintLibrary.GetWorldSubsystem(self, UWorldCompositionSubSystem)
     if IsValid(WorldCompositionSubSystem) then
       WorldCompositionSubSystem:RegisterEntryToWorldComposition(self)
@@ -1004,11 +1010,6 @@ function BP_NPC_C:PreExitStory(OnFinished, bStartBT, bIsExternal)
     self:EMActorDestroy(EDestroyReason.TalkContext)
   end
   self.bInStory = false
-  StoryPlayableUtils:ExecuteStoryDelegate(OnFinished)
-end
-
-function BP_NPC_C:IsInStory()
-  return self.bInStory
 end
 
 function BP_NPC_C:InitNpcAccessories(CharId)
@@ -1088,6 +1089,10 @@ function BP_NPC_C:GetBlueprintPath()
   return self.Data.UnitBPPath
 end
 
+function BP_NPC_C:Rotate(Angle, MontangeName, InRate)
+  self:RotateOffset(Angle, nil, MontangeName, InRate)
+end
+
 function BP_NPC_C:TempSetNpcData(InNpcId)
   local NpcData = DataMgr.Npc[InNpcId]
   if InNpcId and InNpcId > 0 and nil ~= NpcData then
@@ -1102,13 +1107,11 @@ function BP_NPC_C:TempSetNpcData(InNpcId)
   end
 end
 
-function BP_NPC_C:InitNpcSideQuestBubbleBrush(InQuestChainId)
-  if self.HeadWidgetComponent and self.HeadWidgetComponent:GetWidget() then
-    if DataMgr.QuestChain[InQuestChainId] and DataMgr.QuestChain[InQuestChainId].QuestChainType == Const.SpecialSideQuestChainType then
-      self.HeadWidgetComponent:GetWidget().Com_GuidePoint.Img_GuidePoint_Icon:SetBrushResourceObject(LoadObject("/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpSideMission_Un.T_Gp_SpSideMission_Un"))
-    else
-      self.HeadWidgetComponent:GetWidget().Com_GuidePoint.Img_GuidePoint_Icon:SetBrushResourceObject(LoadObject("/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SideMission_Un.T_Gp_SideMission_Un"))
-    end
+function BP_NPC_C:GetNpcSideQuestBubbleBrush(InQuestChainId)
+  if DataMgr.QuestChain[InQuestChainId] and DataMgr.QuestChain[InQuestChainId].QuestChainType == Const.SpecialSideQuestChainType then
+    return "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpSideMission_Un.T_Gp_SpSideMission_Un"
+  else
+    return "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SideMission_Un.T_Gp_SideMission_Un"
   end
 end
 
@@ -1122,11 +1125,33 @@ end
 function BP_NPC_C:TryEnableNpcSideBubble(InNpcId, IsEnable)
   if MissionIndicatorManager.MissionNpcSideBubbles[self.UnitId] and InNpcId == self.UnitId and IsEnable then
     self.IsShowSideIndicator = IsEnable
-    self:InitNpcSideQuestBubbleBrush(MissionIndicatorManager.MissionNpcSideBubbles[self.UnitId])
     self:EnableNpcSideBubbleWidget(IsEnable)
   elseif false == IsEnable and InNpcId == self.UnitId then
     self.IsShowSideIndicator = IsEnable
     self:EnableNpcSideBubbleWidget(IsEnable)
+  end
+end
+
+function BP_NPC_C:TryEnableIndicator(bEnable, Brush)
+  if bEnable and self.EnableIndicator then
+    self:EnableHeadWidget("NpcSideIndicator", false, nil)
+  end
+  self.EnableIndicator = bEnable
+  if bEnable then
+    self:EnableHeadWidget("NpcSideIndicator", bEnable, Brush)
+    self:CollapsedOtherBubble(bEnable)
+  else
+    self:EnableHeadWidget("NpcSideIndicator", false, nil)
+    self:CollapsedOtherBubble(false)
+  end
+end
+
+function BP_NPC_C:TryEnableNpcMissionBubble(InUnitId)
+  if MissionIndicatorManager:CheckHasNpcSideBubble(InUnitId) then
+    local IconTexture = TaskUtils:GetIconTextureByTrackQuestChainType()
+    if IconTexture then
+      EventManager:FireEvent(EventID.EnableNpcIndicator, InUnitId, true, IconTexture)
+    end
   end
 end
 
@@ -1140,15 +1165,22 @@ end
 
 function BP_NPC_C:EnableNpcSideBubbleWidget(bEnable)
   if self.IsShowSideIndicator and bEnable and (self.IsInSpecialQuest == false or self.IsInSpecialQuest == nil) then
-    self:EnableHeadWidget("NpcSideIndicator", bEnable, self)
+    self:EnableHeadWidget("NpcSideIndicator", bEnable, self:GetNpcSideQuestBubbleBrush(MissionIndicatorManager.MissionNpcSideBubbles[self.UnitId]))
+    self:CollapsedOtherBubble(bEnable)
   else
-    self:EnableHeadWidget("NpcSideIndicator", false, self)
+    self:EnableHeadWidget("NpcSideIndicator", false, nil)
+    self:CollapsedOtherBubble(false)
   end
 end
 
-function BP_NPC_C:CollapsedOtherBubble()
-  self:EnableHeadIconWidget(false)
-  self:EnableImpressionWidget(false)
+function BP_NPC_C:CollapsedOtherBubble(bCollapsed)
+  if bCollapsed then
+    self.IsNeedCollapsedOtherBubble = true
+    self:EnableHeadIconWidget(false)
+    self:EnableImpressionWidget(false)
+  else
+    self.IsNeedCollapsedOtherBubble = false
+  end
 end
 
 function BP_NPC_C:EnableImpressionWidget(bEnable)

@@ -2,6 +2,18 @@ local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
 
+local function DecreaseLimitedPrizeRewardSelectReddot(Index)
+  local NodeName = "LimitedPrizeRewardSelect"
+  if not ReddotManager.GetTreeNode(NodeName) then
+    ReddotManager.AddNode(NodeName)
+  end
+  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
+  if CacheDetail[Index] then
+    CacheDetail[Index] = nil
+    ReddotManager.DecreaseLeafNodeCount(NodeName, 1)
+  end
+end
+
 function M:Construct()
   self.RedDot = self.Reddot
   self.CustomSelectButton = self.Btn_Add
@@ -60,35 +72,47 @@ function M:Init(Content)
 end
 
 function M:OpenSelectWidget(RestoreIndex)
-  if self.Content.Ids and #self.Content.Ids <= 1 or self.Content.bLocked then
+  local Content = self.Content
+  if not IsValid(Content) or Content.Ids and #Content.Ids <= 1 or Content.bLocked then
     return
   end
   local ItemDatas = {}
-  for Index, Id in ipairs(self.Content.Ids) do
+  for Index, Id in ipairs(Content.Ids) do
     table.insert(ItemDatas, {
       OriginalIndex = Index,
       ResourceId = Id,
       StuffId = Id,
-      StuffType = self.Content.Type,
-      StuffName = GText(ItemUtils.GetItemName(Id, self.Content.Type)),
-      StuffIcon = ItemUtils.GetItemIconPath(Id, self.Content.Type),
-      Rarity = ItemUtils.GetItemRarity(Id, self.Content.Type),
-      HaveCountNumber = ItemUtils.GetItemNum(Id, self.Content.Type),
+      StuffType = Content.Type,
+      StuffName = GText(ItemUtils.GetItemName(Id, Content.Type)),
+      StuffIcon = ItemUtils.GetItemIconPath(Id, Content.Type),
+      Rarity = ItemUtils.GetItemRarity(Id, Content.Type),
+      HaveCountNumber = ItemUtils.GetItemNum(Id, Content.Type),
       IsCanSelect = true,
-      StuffCount = self.Content.Count
+      StuffCount = Content.Count
     })
   end
+  local SelectContext = {
+    Content = Content,
+    EventId = Content.EventId,
+    Number = Content.Number,
+    OriginalSelectedIndex = Content.SelectedIndex,
+    SelectedId = Content.Id,
+    SelectedIndex = Content.SelectedIndex,
+    Owner = Content.OnSetSelectableReward and Content.OnSetSelectableReward[1]
+  }
+  local ConfirmSelectItem = self.ConfirmSelectItem
   UIManager(self):ShowCommonPopupUI(100335, {
     ParentWidget = self,
     AutoFocus = true,
     IsLimitedPrizePool = true,
     Title = GText("UI_LimitedPrizePool_SelecteTitle"),
     OptionalItemsList = ItemDatas,
-    SelectedIndex = self.Content.SelectedIndex,
-    FunctionCallbackObj = self,
+    SelectedIndex = Content.SelectedIndex,
+    FunctionCallbackObj = SelectContext,
     ChooseCallbackFunction = self.SelectItem,
-    RightCallbackObj = self,
-    RightCallbackFunction = self.ConfirmSelectItem,
+    RightCallbackFunction = function(_, Result, PopUI)
+      ConfirmSelectItem(SelectContext, Result, PopUI)
+    end,
     RightGamepadImg = EKeys.A.KeyName,
     RightGamepadKey = Const.GamepadFaceButtonBottom,
     RestoreSelectIndex = RestoreIndex
@@ -101,7 +125,7 @@ function M:SelectItem(Item)
 end
 
 function M:ConfirmSelectItem(Result, PopUI)
-  if self.Content.SelectedIndex == self.SelectedIndex then
+  if not self.SelectedIndex or self.OriginalSelectedIndex == self.SelectedIndex then
     return
   end
   local Avatar = GWorld:GetAvatar()
@@ -113,13 +137,27 @@ function M:ConfirmSelectItem(Result, PopUI)
     if not ErrorCode:Check(Ret) then
       return
     end
-    self.Content.Id = self.SelectedId
-    self.Content.SelectedIndex = self.SelectedIndex
-    self:SetSelectedItem(self.Content)
-    self:TryDecreaseLimitedPrizeRewardSelectReddot(self.Content.Number)
+    local Content
+    if IsValid(self.Owner) and IsValid(self.Owner.Rewards) then
+      Content = self.Owner.Rewards:GetItemAt(self.Number - 1)
+    end
+    if not IsValid(Content) and IsValid(self.Content) then
+      Content = self.Content
+    end
+    if not IsValid(Content) then
+      return
+    end
+    Content.Id = self.SelectedId
+    Content.SelectedIndex = self.SelectedIndex
+    if IsValid(Content.Entry) then
+      Content.Entry:Refresh()
+    elseif Content.OnSetSelectableReward and Content.OnSetSelectableReward[1] and Content.OnSetSelectableReward[2] then
+      Content.OnSetSelectableReward[2](Content.OnSetSelectableReward[1])
+    end
+    DecreaseLimitedPrizeRewardSelectReddot(self.Number)
   end
   
-  Avatar:SetLimitPrizeSelfSelect(Callback, self.Content.EventId, self.Content.Number, self.SelectedIndex)
+  Avatar:SetLimitPrizeSelfSelect(Callback, self.EventId, self.Number, self.SelectedIndex)
 end
 
 function M:SetSelectedItem(ItemData)
@@ -193,15 +231,7 @@ function M:RestoreSelectWidget()
 end
 
 function M:TryDecreaseLimitedPrizeRewardSelectReddot(Index)
-  local NodeName = "LimitedPrizeRewardSelect"
-  if not ReddotManager.GetTreeNode(NodeName) then
-    ReddotManager.AddNode(NodeName)
-  end
-  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
-  if CacheDetail[Index] then
-    CacheDetail[Index] = nil
-    ReddotManager.DecreaseLeafNodeCount(NodeName, 1)
-  end
+  DecreaseLimitedPrizeRewardSelectReddot(Index)
 end
 
 function M:ItemMenuAnchorChanged(IsOpen)

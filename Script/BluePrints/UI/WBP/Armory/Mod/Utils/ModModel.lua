@@ -152,24 +152,11 @@ function M:CalcQuickEquipSlotsList(ModUuid)
   end
   
   local function SortFunc(SlotUIData1, SlotUIData2)
-    if Mod.Polarity == SlotUIData1:GetPolarity() and Mod.Polarity == SlotUIData2:GetPolarity() then
-      return SlotUIData1.SlotId < SlotUIData2.SlotId
-    end
-    if Mod.Polarity == SlotUIData1:GetPolarity() then
-      return true
-    end
-    if Mod.Polarity == SlotUIData2:GetPolarity() then
-      return false
-    end
     if Mod.Polarity ~= CommonConst.NonePolarity then
-      if SlotUIData1:GetPolarity() == CommonConst.NonePolarity and SlotUIData2:GetPolarity() == CommonConst.NonePolarity then
-        return SlotUIData1.SlotId < SlotUIData2.SlotId
-      end
-      if CommonConst.NonePolarity == SlotUIData1:GetPolarity() then
-        return true
-      end
-      if CommonConst.NonePolarity == SlotUIData2:GetPolarity() then
-        return false
+      local bSlot1HasPolarity = SlotUIData1:GetPolarity() ~= CommonConst.NonePolarity
+      local bSlot2HasPolarity = SlotUIData2:GetPolarity() ~= CommonConst.NonePolarity
+      if bSlot1HasPolarity ~= bSlot2HasPolarity then
+        return bSlot1HasPolarity
       end
     end
     return SlotUIData1.SlotId < SlotUIData2.SlotId
@@ -580,16 +567,34 @@ function M:GetSuitName(SuitIndex, Target)
   return SuitName
 end
 
+function M:GetSlotPolarityText(Polarity)
+  local Conf = DataMgr.ModPolarity[Polarity]
+  return Conf and (Conf.SlotChar or Conf.Char) or ""
+end
+
 function M:GetPolarityText(Polarity)
   return DataMgr.ModPolarity[Polarity].Char or ""
 end
 
-function M:GetSortedPolarityConfs()
-  local SortedConfs = MiscUtils.Values(DataMgr.ModPolarity)
-  table.sort(SortedConfs, function(a, b)
+function M:GetSortedSlotPolarityConfs()
+  return self:FilterPolarityConfs("HideInPolarityEditUI")
+end
+
+function M:GetSortedModPolarityConfs()
+  return self:FilterPolarityConfs("HideInModPolarity")
+end
+
+function M:FilterPolarityConfs(HideField)
+  local Confs = {}
+  for _, Conf in ipairs(MiscUtils.Values(DataMgr.ModPolarity)) do
+    if not Conf[HideField] then
+      table.insert(Confs, Conf)
+    end
+  end
+  table.sort(Confs, function(a, b)
     return a.Id < b.Id
   end)
-  return SortedConfs
+  return Confs
 end
 
 function M:IsModUINormal()
@@ -963,9 +968,16 @@ end
 
 function M:_FilterListOfPolarity(Polarity, bStrictMatch, SlotUIData)
   local ModPendingList = {}
+  local bSlotMatchAllPolarity = Polarity ~= CommonConst.NonePolarity and not bStrictMatch
   for _, ModUuid in ipairs(self.ModListForAutoEquip) do
     local Mod = self:GetMod(ModUuid)
-    if self:IsModMatchPolarity(Mod, Polarity, bStrictMatch) then
+    local bMatch
+    if bSlotMatchAllPolarity then
+      bMatch = Mod.Polarity ~= CommonConst.NonePolarity
+    else
+      bMatch = self:IsModMatchPolarity(Mod, Polarity, bStrictMatch)
+    end
+    if bMatch then
       local IsAuraSlot = SlotUIData:IsAura()
       if IsAuraSlot and Mod:IsAura() or not IsAuraSlot then
         table.insert(ModPendingList, Mod)

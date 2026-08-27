@@ -162,16 +162,16 @@
     "entrusts": [
       {
         "id": 10001,
-        "name": "Collecte de ressources",
-        "desc": "« Vous passez souvent votre temps à courir les routes... Vous avez sûrement ramassé pas mal de bonnes choses, non ? Si ça ne vous dérange pas, vous pourriez m’en vendre quelques-unes ? J’essaie de monter un petit commerce à côté... »",
-        "icon": "T_Head_WaimaiJJ",
-        "exp": 30,
-        "weight": 10,
+        "name": "Mission quotidienne",
+        "desc": "Vous êtes... un Chasseur de Phoxène ? Voilà, je souhaite acheter quelques spécialités locales, mais je suis très occupé et je n’ai pas le temps d’aller les chercher une par une. On m’a donc conseillé de m’adresser à vous. Pour la rémunération, nous pourrons nous arranger, mais il me faut absolument cette marchandise.",
+        "icon": "T_Fame_Head02",
+        "exp": 20,
+        "weight": 20,
         "items": [
           [
             "Resource",
             4010011,
-            10
+            6
           ],
           [
             "Resource",
@@ -182,16 +182,16 @@
       },
       {
         "id": 10002,
-        "name": "Collecte de ressources",
-        "desc": "« Vous passez souvent votre temps à courir les routes... Vous avez sûrement ramassé pas mal de bonnes choses, non ? Si ça ne vous dérange pas, vous pourriez m’en vendre quelques-unes ? J’essaie de monter un petit commerce à côté... »",
-        "icon": "T_Head_WaimaiJJ",
-        "exp": 30,
-        "weight": 10,
+        "name": "Mission quotidienne",
+        "desc": "Chaque fois que maman passe devant la boutique, elle dit qu’elle me l’achètera. La dernière fois, elle m’a demandé de travailler deux fois plus dans la journée, cette fois de bien m’occuper de ma petite sœur... mais elle ne l’a jamais fait. J’en ai tellement envie... Si seulement quelqu’un pouvait me l’offrir...",
+        "icon": "T_Fame_Head01",
+        "exp": 20,
+        "weight": 20,
         "items": [
           [
             "Resource",
             4010011,
-            10
+            6
           ],
           [
             "Resource",
@@ -202,16 +202,16 @@
       },
       {
         "id": 10003,
-        "name": "Collecte de ressources",
-        "desc": "« Vous passez souvent votre temps à courir les routes... Vous avez sûrement ramassé pas mal de bonnes choses, non ? Si ça ne vous dérange pas, vous pourriez m’en vendre quelques-unes ? J’essaie de monter un petit commerce à côté... »",
-        "icon": "T_Head_WaimaiJJ",
-        "exp": 30,
-        "weight": 10,
+        "name": "Mission quotidienne",
+        "desc": "Mon mari ? Il est parti il y a quelques années. Il a peut-être été attaqué par des Souillés, ou peut-être par des personnes. Quoi qu’il en soit, il n’est jamais revenu. Je ne vous dis pas cela pour éveiller votre pitié, seulement pour bavarder un peu en attendant les provisions.",
+        "icon": "T_Fame_Head03",
+        "exp": 20,
+        "weight": 20,
         "items": [
           [
             "Resource",
             4010011,
-            10
+            6
           ],
           [
             "Resource",
@@ -222,11 +222,11 @@
       },
       {
         "id": 10004,
-        "name": "Collecte de ressources",
-        "desc": "« Vous passez souvent votre temps à courir les routes... Vous avez sûrement ramassé pas mal de bonnes choses, non ? Si ça ne vous dérange pas, vous pourriez m’en vendre quelques-unes ? J’essaie de monter un petit commerce à côté... »",
-        "icon": "T_Head_WaimaiJJ",
-        "exp": 30,
-        "weight": 10,
+        "name": "Mission quotidienne",
+        "desc": "Ces choses sont fascinantes, vous ne trouvez pas ? J’ai passé la majeure partie de ma vie à les étudier. Aujourd’hui, même les yeux fermés, à leur simple odeur, je peux reconnaître ce que vous m’apportez.",
+        "icon": "T_Fame_Head02",
+        "exp": 20,
+        "weight": 20,
         "items": [
           [
             "Resource",
@@ -242,11 +242,11 @@
       },
       {
         "id": 10005,
-        "name": "Collecte de ressources",
-        "desc": "« Vous passez souvent votre temps à courir les routes... Vous avez sûrement ramassé pas mal de bonnes choses, non ? Si ça ne vous dérange pas, vous pourriez m’en vendre quelques-unes ? J’essaie de monter un petit commerce à côté... »",
-        "icon": "T_Head_WaimaiJJ",
-        "exp": 30,
-        "weight": 10,
+        "name": "Mission quotidienne",
+        "desc": "Les bijoux somptueux et les parures éclatantes ont fini par me lasser. Ma vie a besoin d’un peu de nouveauté. J’ai confié la même demande à des marchands venus de contrées lointaines, à des ménestrels errants, ainsi qu’à vous. J’espère que vous saurez tous me surprendre.",
+        "icon": "T_Fame_Head02",
+        "exp": 20,
+        "weight": 20,
         "items": [
           [
             "Resource",
@@ -262,9 +262,9 @@
       },
       {
         "id": 10006,
-        "name": "Collecte de matériaux",
-        "desc": "« Un Chasseur de Phoxène veut parier contre toi. Il affirme que tu en es incapable. Alors ? Tu acceptes le pari ? »",
-        "icon": "T_Head_Kami",
+        "name": "Mission quotidienne",
+        "desc": "Je travaille à l’usine depuis toujours. Fatigué ou non, il faut bien continuer à vivre. J’ai entendu dire que le métier de Chasseur de Phoxène rapportait plutôt bien, même s’il est un peu dangereux. Et vous, pourquoi êtes-vous devenu Chasseur de Phoxène ? Et comment allez-vous me prouver que vous êtes doué dans ce domaine ?",
+        "icon": "T_Fame_Head02",
         "exp": 20,
         "weight": 20,
         "items": [
@@ -282,9 +282,9 @@
       },
       {
         "id": 10007,
-        "name": "Collecte de matériaux",
-        "desc": "« Un Chasseur de Phoxène veut parier contre toi. Il affirme que tu en es incapable. Alors ? Tu acceptes le pari ? »",
-        "icon": "T_Head_Kami",
+        "name": "Mission quotidienne",
+        "desc": "Ça, ça, et ça aussi ! Je veux tout ! L’argent ? Mettez ça sur la note et demandez à mon père de payer~ En tout cas, vous devez me trouver ces objets !",
+        "icon": "T_Fame_Head02",
         "exp": 20,
         "weight": 20,
         "items": [
@@ -302,9 +302,9 @@
       },
       {
         "id": 10008,
-        "name": "Collecte de matériaux",
-        "desc": "« Un Chasseur de Phoxène veut parier contre toi. Il affirme que tu en es incapable. Alors ? Tu acceptes le pari ? »",
-        "icon": "T_Head_Kami",
+        "name": "Mission quotidienne",
+        "desc": "Mmh... Je ne suis pas ivre ! Autrefois, moi aussi, j’étais un Chasseur de Phoxène très réputé ! Vous dites que vous l’êtes aussi ? Tss~ Je ne vous crois pas~ Si vous arrivez à me rapporter ces matériaux en... mmh... trois heures, alors je reconnaîtrai vos capacités !",
+        "icon": "T_Fame_Head02",
         "exp": 20,
         "weight": 20,
         "items": [
@@ -322,9 +322,9 @@
       },
       {
         "id": 10009,
-        "name": "Collecte de matériaux",
-        "desc": "« Un Chasseur de Phoxène veut parier contre toi. Il affirme que tu en es incapable. Alors ? Tu acceptes le pari ? »",
-        "icon": "T_Head_Kami",
+        "name": "Mission quotidienne",
+        "desc": "Hum hum~ J’annonce officiellement que je vais créer un classement, puis inviter tous mes amis de l’école à voter pour élire le meilleur Chasseur de Phoxène de Givrelac ! Vous voulez participer ? Et si vous alliez trouver quelques objets pour prouver vos capacités ? Je dirai beaucoup de bien de vous pendant le vote~",
+        "icon": "T_Fame_Head03",
         "exp": 20,
         "weight": 20,
         "items": [
@@ -342,16 +342,16 @@
       },
       {
         "id": 10010,
-        "name": "Collecte de matériaux",
-        "desc": "« Un Chasseur de Phoxène veut parier contre toi. Il affirme que tu en es incapable. Alors ? Tu acceptes le pari ? »",
-        "icon": "T_Head_Kami",
-        "exp": 20,
-        "weight": 20,
+        "name": "Mission urgente",
+        "desc": "Ces derniers temps, les vents glacés qui soufflent tard dans la nuit à Givrelac sont particulièrement violents. Même les fleurs de la serre semblent abattues, et cela risque de déplaire aux dames qui viennent récupérer leurs commandes. Si possible, pourriez-vous aller cueillir quelques bouquets frais à l’extérieur ? Je les assemblerai avec les fleurs de la boutique avant de les leur livrer.",
+        "icon": "T_Fame_Head03",
+        "exp": 30,
+        "weight": 10,
         "items": [
           [
             "Resource",
             20002,
-            400
+            600
           ],
           [
             "Resource",
@@ -362,16 +362,16 @@
       },
       {
         "id": 10011,
-        "name": "Collecte de matériaux",
-        "desc": "« Un Chasseur de Phoxène veut parier contre toi. Il affirme que tu en es incapable. Alors ? Tu acceptes le pari ? »",
-        "icon": "T_Head_Kami",
-        "exp": 20,
-        "weight": 20,
+        "name": "Mission urgente",
+        "desc": "Je n’ai toujours pas oublié cette silhouette envoûtante... J’aimerais lui offrir quelque chose d’unique. Pas des fruits de mon verger, mais plutôt des spécialités plus sauvages, venues d’ailleurs. Vous autres Chasseurs de Phoxène devriez bien avoir une solution, non ? J’espère que cela lui plaira...",
+        "icon": "T_Fame_Head02",
+        "exp": 30,
+        "weight": 10,
         "items": [
           [
             "Resource",
             20012,
-            400
+            600
           ],
           [
             "Resource",
@@ -382,9 +382,9 @@
       },
       {
         "id": 10012,
-        "name": "Collecte de matériaux",
-        "desc": "« Un Chasseur de Phoxène veut parier contre toi. Il affirme que tu en es incapable. Alors ? Tu acceptes le pari ? »",
-        "icon": "T_Head_Kami",
+        "name": "Mission urgente",
+        "desc": "Ah... J’ai tellement envie de dormir... Mais ces marchands ne cessent de me poser des problèmes, à parler de spécialités locales à vendre dans leurs boutiques. Comment voulez-vous que je sache où en trouver ? Vous auriez une solution ?",
+        "icon": "T_Fame_Head04",
         "exp": 30,
         "weight": 10,
         "items": [
@@ -402,9 +402,9 @@
       },
       {
         "id": 10013,
-        "name": "Collecte de matériaux",
-        "desc": "« Un Chasseur de Phoxène veut parier contre toi. Il affirme que tu en es incapable. Alors ? Tu acceptes le pari ? »",
-        "icon": "T_Head_Kami",
+        "name": "Mission urgente",
+        "desc": "La Maison d’Hypnos a récemment accueilli de nouveaux enfants malheureux, et il y a de plus en plus de choses dont il faut s’occuper. Certains aimeraient sortir avec moi pour voir davantage le monde extérieur avant que leurs forces ne les abandonnent, mais je ne peux pas me dédoubler. Alors je me suis dit... pourriez-vous leur rapporter quelques objets du monde extérieur ? Peut-être que cela leur ferait un peu de bien.",
+        "icon": "T_Fame_Head03",
         "exp": 30,
         "weight": 10,
         "items": [
@@ -422,9 +422,9 @@
       },
       {
         "id": 10014,
-        "name": "Collecte de matériaux",
-        "desc": "« Un Chasseur de Phoxène veut parier contre toi. Il affirme que tu en es incapable. Alors ? Tu acceptes le pari ? »",
-        "icon": "T_Head_Kami",
+        "name": "Mission urgente",
+        "desc": "J’ai perdu l’inspiration ! Comme un poisson privé d’eau ! Comme une fleur privée de parfum ! Comme des amants privés d’amour ! Comme des ennemis jurés incapables de lever leur lame ! Alors ! Je vous en supplie ! Rapportez-moi quelque chose de plus frais, de plus nouveau ! Que je retrouve mon inspiration, que je récupère enfin ma capacité à créer !",
+        "icon": "T_Fame_Head01",
         "exp": 30,
         "weight": 10,
         "items": [
@@ -442,16 +442,16 @@
       },
       {
         "id": 10015,
-        "name": "Collecte de fournitures",
-        "desc": "« Hein ?! Quoi ?! J’ai entendu dire qu’un génie des poubelles exauce les vœux sincères~ Haha, je rigole ! Mais sérieux, j’ai vraiment besoin de ces fournitures ! »",
-        "icon": "T_Head_Maer",
-        "exp": 30,
-        "weight": 10,
+        "name": "Mission d’un ami",
+        "desc": "Ces vendeurs de faux alcool sont comme des mouches. On en chasse une bande, une autre revient aussitôt... Tu dis pouvoir m’aider ? Inutile. Ces vauriens-là, je m’en charge moi-même. Si tu veux vraiment faire quelque chose pour moi... en dehors de veiller sur Snow, je pense que cette tâche te conviendra mieux.",
+        "icon": "T_Head_Kami",
+        "exp": 40,
+        "weight": 5,
         "items": [
           [
             "Resource",
             20004,
-            100
+            150
           ],
           [
             "Resource",
@@ -462,16 +462,16 @@
       },
       {
         "id": 10016,
-        "name": "Collecte de fournitures",
-        "desc": "« Hein ?! Quoi ?! J’ai entendu dire qu’un génie des poubelles exauce les vœux sincères~ Haha, je rigole ! Mais sérieux, j’ai vraiment besoin de ces fournitures ! »",
+        "name": "Mission d’un ami",
+        "desc": "Argh... Oncle Sam s’est encore entaillé la main en fouillant dans les poubelles. Je lui avais pourtant dit de penser à mettre des gants ! Bon, pas le choix, je vais devoir vous confier ça. Je vous en supplie, sans vous, je ne saurais vraiment pas à qui demander~",
         "icon": "T_Head_Maer",
-        "exp": 30,
-        "weight": 10,
+        "exp": 40,
+        "weight": 5,
         "items": [
           [
             "Resource",
             20015,
-            100
+            150
           ],
           [
             "Resource",
@@ -482,16 +482,16 @@
       },
       {
         "id": 10017,
-        "name": "Collecte de fournitures",
-        "desc": "« Hein ?! Quoi ?! J’ai entendu dire qu’un génie des poubelles exauce les vœux sincères~ Haha, je rigole ! Mais sérieux, j’ai vraiment besoin de ces fournitures ! »",
-        "icon": "T_Head_Maer",
-        "exp": 30,
-        "weight": 10,
+        "name": "Mission d’un ami",
+        "desc": "Bonjour, {性别:Monsieur|Mademoiselle} Licorne. Je dessine un nouveau livre d’images, et ton histoire y figurera aussi~ Mais avant de commencer, il me reste encore quelque chose à terminer... {性别:Monsieur|Mademoiselle} Licorne, tu veux bien m’aider ?",
+        "icon": "T_Head_Feina",
+        "exp": 40,
+        "weight": 5,
         "items": [
           [
             "Resource",
             20016,
-            100
+            150
           ],
           [
             "Resource",
@@ -502,9 +502,9 @@
       },
       {
         "id": 10018,
-        "name": "Collecte de fournitures",
-        "desc": "« Hein ?! Quoi ?! J’ai entendu dire qu’un génie des poubelles exauce les vœux sincères~ Haha, je rigole ! Mais sérieux, j’ai vraiment besoin de ces fournitures ! »",
-        "icon": "T_Head_Maer",
+        "name": "Mission d’un ami",
+        "desc": "L’Étranger m’avait pourtant promis qu’il m’emmènerait avec lui la prochaine fois qu’il sortirait... Menteur. {性别:Monsieur|Mademoiselle} Licorne, je peux venir avec toi quand tu sors ? Promis, je ne te causerai pas d’ennuis.",
+        "icon": "T_Head_Feina",
         "exp": 40,
         "weight": 5,
         "items": [
@@ -522,9 +522,9 @@
       },
       {
         "id": 10019,
-        "name": "Collecte de fournitures",
-        "desc": "« Hein ?! Quoi ?! J’ai entendu dire qu’un génie des poubelles exauce les vœux sincères~ Haha, je rigole ! Mais sérieux, j’ai vraiment besoin de ces fournitures ! »",
-        "icon": "T_Head_Maer",
+        "name": "Mission d’un ami",
+        "desc": "Tu as vu Wells récemment ? Il a accepté une mission, mais il ne l’a toujours pas terminée, et il a disparu. À mon avis, il doit être ivre mort dans une maison quelque part. Le commanditaire est déjà venu plusieurs fois réclamer des nouvelles... Bon, puisque c’est comme ça, autant que tu termines cette mission à sa place.",
+        "icon": "T_Head_Kami",
         "exp": 40,
         "weight": 5,
         "items": [
@@ -542,9 +542,9 @@
       },
       {
         "id": 10020,
-        "name": "Collecte de fournitures",
-        "desc": "« Hein ?! Quoi ?! J’ai entendu dire qu’un génie des poubelles exauce les vœux sincères~ Haha, je rigole ! Mais sérieux, j’ai vraiment besoin de ces fournitures ! »",
-        "icon": "T_Head_Maer",
+        "name": "Mission d’un ami",
+        "desc": "Tu as vu Wells récemment ? Il a accepté une mission, mais il ne l’a toujours pas terminée, et il a disparu. À mon avis, il doit être ivre mort dans une maison quelque part. Le commanditaire est déjà venu plusieurs fois réclamer des nouvelles... Bon, puisque c’est comme ça, autant que tu termines cette mission à sa place.",
+        "icon": "T_Head_Kami",
         "exp": 40,
         "weight": 5,
         "items": [
@@ -725,16 +725,16 @@
     "entrusts": [
       {
         "id": 11001,
-        "name": "Collecte de ressources",
-        "desc": "« Snow dit que vous trouvez souvent ce genre d’objets en voyage... Et qu’ils finissent la plupart du temps inutilisés. Si possible, pourriez-vous m’en céder quelques-uns ? »",
-        "icon": "T_Head_JinliJJ",
-        "exp": 30,
-        "weight": 10,
+        "name": "Mission quotidienne",
+        "desc": "Je me fais vieux, et mes jambes ne me portent plus très bien. Je me demandais si quelque jeune âme charitable accepterait de m’aider et de me rapporter quelques objets.",
+        "icon": "T_Fame_Head02",
+        "exp": 20,
+        "weight": 20,
         "items": [
           [
             "Resource",
             4010018,
-            10
+            6
           ],
           [
             "Resource",
@@ -745,16 +745,16 @@
       },
       {
         "id": 11002,
-        "name": "Collecte de ressources",
-        "desc": "« Snow dit que vous trouvez souvent ce genre d’objets en voyage... Et qu’ils finissent la plupart du temps inutilisés. Si possible, pourriez-vous m’en céder quelques-uns ? »",
-        "icon": "T_Head_JinliJJ",
-        "exp": 30,
-        "weight": 10,
+        "name": "Mission quotidienne",
+        "desc": "Maman ne me laisse pas sortir jouer tout seul. Elle dit qu’un Bi’an obscur pourrait me mordre dehors... Mais les Bi’an ne sont-ils pas tous gentils ? Tant pis, je vais demander à un grand frère ou à une grande sœur de me rapporter des choses~",
+        "icon": "T_Fame_Head01",
+        "exp": 20,
+        "weight": 20,
         "items": [
           [
             "Resource",
             4010018,
-            10
+            6
           ],
           [
             "Resource",
@@ -765,16 +765,16 @@
       },
       {
         "id": 11003,
-        "name": "Collecte de ressources",
-        "desc": "« Snow dit que vous trouvez souvent ce genre d’objets en voyage... Et qu’ils finissent la plupart du temps inutilisés. Si possible, pourriez-vous m’en céder quelques-uns ? »",
-        "icon": "T_Head_JinliJJ",
-        "exp": 30,
-        "weight": 10,
+        "name": "Mission quotidienne",
+        "desc": "L’art de l’encens repose sur les matériaux et se distingue par le savoir-faire. Mais si les matériaux eux-mêmes viennent à manquer, aucune technique, aussi brillante soit-elle, ne pourra produire un bon encens.",
+        "icon": "T_Fame_Head02",
+        "exp": 20,
+        "weight": 20,
         "items": [
           [
             "Resource",
             4010018,
-            10
+            6
           ],
           [
             "Resource",
@@ -785,11 +785,11 @@
       },
       {
         "id": 11004,
-        "name": "Collecte de ressources",
-        "desc": "« Snow dit que vous trouvez souvent ce genre d’objets en voyage... Et qu’ils finissent la plupart du temps inutilisés. Si possible, pourriez-vous m’en céder quelques-uns ? »",
-        "icon": "T_Head_JinliJJ",
-        "exp": 30,
-        "weight": 10,
+        "name": "Mission quotidienne",
+        "desc": "Que voulez-vous, toute cette cargaison a été renversée par un Bi’an obscur. Il faudra encore attendre plusieurs mois avant que la suivante soit prête, et les clients nous pressent déjà de toutes parts. Enfin, je n’ai plus qu’à vous demander de m’aider à trouver quelques substituts !",
+        "icon": "T_Fame_Head02",
+        "exp": 20,
+        "weight": 20,
         "items": [
           [
             "Resource",
@@ -805,11 +805,11 @@
       },
       {
         "id": 11005,
-        "name": "Collecte de ressources",
-        "desc": "« Snow dit que vous trouvez souvent ce genre d’objets en voyage... Et qu’ils finissent la plupart du temps inutilisés. Si possible, pourriez-vous m’en céder quelques-uns ? »",
-        "icon": "T_Head_JinliJJ",
-        "exp": 30,
-        "weight": 10,
+        "name": "Mission quotidienne",
+        "desc": "Mrrr miaou, miaou miaou miaou, mrrr... (On dirait qu’il dit : donnez-moi quelque chose !)",
+        "icon": "T_Head_Cat",
+        "exp": 20,
+        "weight": 20,
         "items": [
           [
             "Resource",
@@ -825,9 +825,9 @@
       },
       {
         "id": 11006,
-        "name": "Collecte de matériaux",
-        "desc": "« Ces marchandises sont très demandées. Malheureusement, les Bi’an obscurs sévissent sur les routes commerciales, rendant le ravitaillement difficile. Si vous acceptez de nous aider, nous vous en serions profondément reconnaissants. »",
-        "icon": "T_Head_FameCommon",
+        "name": "Mission quotidienne",
+        "desc": "Je voudrais construire un gros engin, quelque chose qui porte la marque de Huaxu tout en intégrant le savoir-faire unique et jalousement gardé de notre Secte Jishu. Mais voilà... il me manque quelques matériaux. Héhé~ Vous pourriez peut-être...",
+        "icon": "T_Fame_Head01",
         "exp": 20,
         "weight": 20,
         "items": [
@@ -845,9 +845,9 @@
       },
       {
         "id": 11007,
-        "name": "Collecte de matériaux",
-        "desc": "« Ces marchandises sont très demandées. Malheureusement, les Bi’an obscurs sévissent sur les routes commerciales, rendant le ravitaillement difficile. Si vous acceptez de nous aider, nous vous en serions profondément reconnaissants. »",
-        "icon": "T_Head_FameCommon",
+        "name": "Mission quotidienne",
+        "desc": "Le Tisse-Étoiles chargé de ces provisions est parti en mer et n’est toujours pas revenu. Nous ignorons s’il lui est arrivé quelque chose ou s’il y a une autre raison, mais les familles qui attendent ces provisions ne peuvent plus patienter. Si cela ne vous dérange pas, pourriez-vous nous aider à en retrouver ?",
+        "icon": "T_Fame_Head02",
         "exp": 20,
         "weight": 20,
         "items": [
@@ -865,9 +865,9 @@
       },
       {
         "id": 11008,
-        "name": "Collecte de matériaux",
-        "desc": "« Ces marchandises sont très demandées. Malheureusement, les Bi’an obscurs sévissent sur les routes commerciales, rendant le ravitaillement difficile. Si vous acceptez de nous aider, nous vous en serions profondément reconnaissants. »",
-        "icon": "T_Head_FameCommon",
+        "name": "Mission quotidienne",
+        "desc": "Les pluies de montagne se succèdent depuis plusieurs jours. Le sol est détrempé et boueux, les méchapoupées commencent à rouiller, et il nous faut acheter un lot supplémentaire de matériel de réparation.",
+        "icon": "T_Fame_Head02",
         "exp": 20,
         "weight": 20,
         "items": [
@@ -885,9 +885,9 @@
       },
       {
         "id": 11009,
-        "name": "Collecte de matériaux",
-        "desc": "« Ces marchandises sont très demandées. Malheureusement, les Bi’an obscurs sévissent sur les routes commerciales, rendant le ravitaillement difficile. Si vous acceptez de nous aider, nous vous en serions profondément reconnaissants. »",
-        "icon": "T_Head_FameCommon",
+        "name": "Mission quotidienne",
+        "desc": "Engager un chercheur de trésors professionnel coûte une belle somme. Autant dépenser un peu moins pour trouver quelques curiosités, puis les revendre à ceux qui n’ont jamais rien vu du monde.",
+        "icon": "T_Fame_Head02",
         "exp": 20,
         "weight": 20,
         "items": [
@@ -905,9 +905,9 @@
       },
       {
         "id": 11010,
-        "name": "Collecte de matériaux",
-        "desc": "« Ces marchandises sont très demandées. Malheureusement, les Bi’an obscurs sévissent sur les routes commerciales, rendant le ravitaillement difficile. Si vous acceptez de nous aider, nous vous en serions profondément reconnaissants. »",
-        "icon": "T_Head_FameCommon",
+        "name": "Mission quotidienne",
+        "desc": "La montagne porte des arbres, les arbres portent des branches ; mon cœur se tourne vers vous... Ah ! Non, non ! Cette mission, je l’ai lancée pour moi-même. Ce n’est absolument pas pour lui offrir quelque chose...",
+        "icon": "T_Fame_Head03",
         "exp": 20,
         "weight": 20,
         "items": [
@@ -925,16 +925,16 @@
       },
       {
         "id": 11011,
-        "name": "Collecte de matériaux",
-        "desc": "« Ces marchandises sont très demandées. Malheureusement, les Bi’an obscurs sévissent sur les routes commerciales, rendant le ravitaillement difficile. Si vous acceptez de nous aider, nous vous en serions profondément reconnaissants. »",
-        "icon": "T_Head_FameCommon",
-        "exp": 20,
-        "weight": 20,
+        "name": "Mission urgente",
+        "desc": "J’ai entendu dire que les épices venues de l’extérieur du Jardin Yinyuan possédaient elles aussi un charme particulier. Si je suis venu cette fois, c’est pour chercher de nouvelles inspirations de culture. Si vous pouviez m’aider, par exemple en me rapportant quelques nouveautés, ce serait idéal.",
+        "icon": "T_Fame_Head03",
+        "exp": 30,
+        "weight": 10,
         "items": [
           [
             "Resource",
             20012,
-            400
+            450
           ],
           [
             "Resource",
@@ -945,9 +945,9 @@
       },
       {
         "id": 11012,
-        "name": "Collecte de matériaux",
-        "desc": "« Ces marchandises sont très demandées. Malheureusement, les Bi’an obscurs sévissent sur les routes commerciales, rendant le ravitaillement difficile. Si vous acceptez de nous aider, nous vous en serions profondément reconnaissants. »",
-        "icon": "T_Head_FameCommon",
+        "name": "Mission urgente",
+        "desc": "Libre entre ciel et terre, moi seul me connais... Ne me demande pas comment ton humble serviteur a réussi à te contacter. Commence plutôt par me trouver quelques trésors !",
+        "icon": "T_Fame_Head02",
         "exp": 30,
         "weight": 10,
         "items": [
@@ -965,9 +965,9 @@
       },
       {
         "id": 11013,
-        "name": "Collecte de matériaux",
-        "desc": "« Ces marchandises sont très demandées. Malheureusement, les Bi’an obscurs sévissent sur les routes commerciales, rendant le ravitaillement difficile. Si vous acceptez de nous aider, nous vous en serions profondément reconnaissants. »",
-        "icon": "T_Head_FameCommon",
+        "name": "Mission urgente",
+        "desc": "Je suis parti quelque temps au loin. À mon retour à Huaxu, mes employés m’ont appris que plus de la moitié des épices de l’entrepôt avaient disparu. Ils disent que ce serait l’œuvre d’un fantôme ? Je ne connais pas toute l’histoire, je ne me prononcerai donc pas. Mais les marchandises manquantes doivent tout de même être remplacées. C’est pourquoi je viens vous demander de l’aide.",
+        "icon": "T_Fame_Head02",
         "exp": 30,
         "weight": 10,
         "items": [
@@ -985,9 +985,9 @@
       },
       {
         "id": 11014,
-        "name": "Collecte de matériaux",
-        "desc": "« Ces marchandises sont très demandées. Malheureusement, les Bi’an obscurs sévissent sur les routes commerciales, rendant le ravitaillement difficile. Si vous acceptez de nous aider, nous vous en serions profondément reconnaissants. »",
-        "icon": "T_Head_FameCommon",
+        "name": "Mission urgente",
+        "desc": "Un passager venu d’ailleurs nous a raconté que, chez eux, on vendait aussi des choses sur les bateaux de promenade. Cela nous a semblé vraiment nouveau. Mes deux frères et moi en avons discuté, puis nous avons décidé d’acheter quelques bonnes marchandises pour les revendre nous aussi à bord.",
+        "icon": "T_Fame_Head02",
         "exp": 30,
         "weight": 10,
         "items": [
@@ -1005,9 +1005,9 @@
       },
       {
         "id": 11015,
-        "name": "Collecte de matériaux",
-        "desc": "« Ces marchandises sont très demandées. Malheureusement, les Bi’an obscurs sévissent sur les routes commerciales, rendant le ravitaillement difficile. Si vous acceptez de nous aider, nous vous en serions profondément reconnaissants. »",
-        "icon": "T_Head_FameCommon",
+        "name": "Mission urgente",
+        "desc": "Les affaires du Restaurant Tongfu marchent incroyablement bien ces derniers temps ! C’est grâce aux nouveaux plats, bien sûr. Mais comme les prix sont un peu élevés, certains clients nous ont aussi laissé pas mal de mauvaises critiques. Peu importe ! Si baisser les prix nous oblige à utiliser des ingrédients de mauvaise qualité, mieux vaut encore payer davantage pour de vrais bons produits, pas vrai ?",
+        "icon": "T_Fame_Head02",
         "exp": 30,
         "weight": 10,
         "items": [
@@ -1025,16 +1025,16 @@
       },
       {
         "id": 11016,
-        "name": "Collecte de fournitures",
-        "desc": "« Inutile de te mettre sur la défensive. Aide-moi aujourd’hui, et je saurai te rendre la pareille le moment venu. »",
-        "icon": "T_Head_Qiu",
-        "exp": 30,
-        "weight": 10,
+        "name": "Mission d’un ami",
+        "desc": "Je t’ai déjà beaucoup sollicité, mais Huaxu se relève à peine, et je dois encore m’occuper de toutes sortes d’affaires. Certaines tâches me semblent trop importantes pour être confiées à n’importe qui, alors je viens te demander de l’aide. Rassure-toi, l’Éternel Printemps a les moyens : ta récompense sera à la hauteur.",
+        "icon": "T_Head_Zhiliu",
+        "exp": 40,
+        "weight": 5,
         "items": [
           [
             "Resource",
             20015,
-            100
+            150
           ],
           [
             "Resource",
@@ -1045,16 +1045,16 @@
       },
       {
         "id": 11017,
-        "name": "Collecte de fournitures",
-        "desc": "« Inutile de te mettre sur la défensive. Aide-moi aujourd’hui, et je saurai te rendre la pareille le moment venu. »",
+        "name": "Mission d’un ami",
+        "desc": "Mon {性别:ami|amie}, pourquoi t’empresses-tu de m’éviter dès que tu me vois ? Serais-je donc une bête féroce ? Cette fois, je viens te trouver pour une mission particulière. Si tu ne m’aides pas, je ne vois vraiment personne d’assez compétent à qui la confier. Quant à la récompense, elle te sera bien entendu remise une fois l’affaire réglée.",
         "icon": "T_Head_Qiu",
-        "exp": 30,
-        "weight": 10,
+        "exp": 40,
+        "weight": 5,
         "items": [
           [
             "Resource",
             20016,
-            100
+            150
           ],
           [
             "Resource",
@@ -1065,9 +1065,9 @@
       },
       {
         "id": 11018,
-        "name": "Collecte de fournitures",
-        "desc": "« Inutile de te mettre sur la défensive. Aide-moi aujourd’hui, et je saurai te rendre la pareille le moment venu. »",
-        "icon": "T_Head_Qiu",
+        "name": "Mission d’un ami",
+        "desc": "Il y a quelques jours, je suis retourné aux Pics Extérieurs et j’y ai remarqué un enfant assez singulier. Sa manière raide et sérieuse de s’entraîner aux arts martiaux m’a rappelé celle que j’avais à son âge. J’aimerais lui acheter quelques objets, mais mes fonctions m’accaparent et je ne peux pas m’absenter. Pourrais-tu peut-être... Si cela te dérange, je ne t’importunerai pas davantage.",
+        "icon": "T_Head_Yuming",
         "exp": 40,
         "weight": 5,
         "items": [
@@ -1085,9 +1085,9 @@
       },
       {
         "id": 11019,
-        "name": "Collecte de fournitures",
-        "desc": "« Inutile de te mettre sur la défensive. Aide-moi aujourd’hui, et je saurai te rendre la pareille le moment venu. »",
-        "icon": "T_Head_Qiu",
+        "name": "Mission d’un ami",
+        "desc": "Yo ! Il y a quelques jours, j’ai un peu trop bu et je me suis endormi dans l’entrepôt où Grande-tante garde ses méchapoupées. Sauf que le bouchon de la jarre était mal fermé, et l’alcool a détrempé tous ces blocs de bois ! Elle veut maintenant me passer un savon. Avant qu’elle ne me mette la main dessus, je n’ai plus qu’à venir te demander de l’aide !",
+        "icon": "T_Head_Kezhou",
         "exp": 40,
         "weight": 5,
         "items": [
@@ -1105,9 +1105,9 @@
       },
       {
         "id": 11020,
-        "name": "Collecte de fournitures",
-        "desc": "« Inutile de te mettre sur la défensive. Aide-moi aujourd’hui, et je saurai te rendre la pareille le moment venu. »",
-        "icon": "T_Head_Qiu",
+        "name": "Mission d’un ami",
+        "desc": "Depuis la réforme des Neuf Chapitres de Dafeng, le peuple de Huaxu reprend peu à peu les armes. Mais après avoir si longtemps délaissé les arts martiaux, rares sont ceux qui savent vraiment se battre, hormis quelques Magistrats de Yingtian et Vagabonds. Je me dis que si tu pouvais leur donner un coup de main et leur montrer quelques techniques, ce serait peut-être plus approprié que si j’y allais moi-même.",
+        "icon": "T_Head_Zhiliu",
         "exp": 40,
         "weight": 5,
         "items": [
@@ -1119,6 +1119,26 @@
           [
             "Resource",
             4010016,
+            10
+          ]
+        ]
+      },
+      {
+        "id": 11021,
+        "name": "Mission d’un ami",
+        "desc": "Oncle Tang recommence à mener des expériences dangereuses sur les méchapoupées avec les enfants des Pics Extérieurs. Cette fois, c’est lui qui a été blessé par l’explosion. Et la prochaine ? Je m’inquiète vraiment pour lui, mais il n’y a presque personne de fiable aux Pics Extérieurs. La dernière fois, j’ai demandé à Kezhou de le surveiller, et il est parti boire ! Si tu pouvais venir nous aider...",
+        "icon": "T_Head_Suyi",
+        "exp": 40,
+        "weight": 5,
+        "items": [
+          [
+            "Resource",
+            20015,
+            100
+          ],
+          [
+            "Resource",
+            4010019,
             10
           ]
         ]

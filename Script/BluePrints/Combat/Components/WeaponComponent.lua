@@ -24,6 +24,10 @@ function Component:ClientAddWeapon(Weapon)
 end
 
 function Component:ChangeUsingWeaponById(WeaponId)
+  if self:IsMonster() and self:UseMonsterWeaponBase() then
+    self:ChangeUsingMonsterWeaponById(WeaponId)
+    return
+  end
   self.WeaponPos = Const.Shoulder
   if not WeaponId then
     self:RealChangeUsingWeapon(nil)
@@ -44,6 +48,32 @@ function Component:ChangeUsingWeaponById(WeaponId)
   NewWeapon:ShouldHideWeapon(true)
 end
 
+function Component:ChangeUsingMonsterWeaponById(WeaponId)
+  if not self:IsMonster() or not self:UseMonsterWeaponBase() then
+    return
+  end
+  self.WeaponPos = Const.Shoulder
+  if not WeaponId or 0 == WeaponId then
+    self:MonRealChangeUsingMonsterWeapon(nil)
+    if self.EMAnimInstance then
+      self.EMAnimInstance.WeaponTagFloat = 0
+    end
+    self.WeaponTagFloat = 0
+    return
+  end
+  local NewWeapon = self:GetMonsterWeapon(WeaponId)
+  if not NewWeapon then
+    return
+  end
+  if self.UsingMonsterWeapon and self.UsingMonsterWeapon.WeaponId == NewWeapon.WeaponId then
+    self:MonRealChangeUsingMonsterWeapon(NewWeapon)
+    return
+  end
+  self:BindMonsterWeaponToHand(NewWeapon)
+  self:MonRealChangeUsingMonsterWeapon(NewWeapon)
+  NewWeapon:ShouldHideWeapon(true)
+end
+
 function Component:GetMonsterFirstWeapon()
   local WeaponId = self.Data.WeaponId and self.Data.WeaponId[1]
   if not WeaponId then
@@ -56,22 +86,26 @@ function Component:ServerChangeMonsterWeapon(ChangeReason)
   if not self:IsMonster() then
     return
   end
-  local WeaponIndex = self.Data.ChangeWeaponParams[ChangeReason]
+  local WeaponList = self.Data and self.Data.WeaponId
+  local ChangeWeaponParams = self.Data and self.Data.ChangeWeaponParams
+  if not WeaponList or not ChangeWeaponParams then
+    return
+  end
+  local WeaponIndex = ChangeWeaponParams[ChangeReason]
   if not WeaponIndex then
+    return
+  end
+  local WeaponId = 0 == WeaponIndex and 0 or WeaponList[WeaponIndex]
+  if not WeaponId then
     return
   end
   self.LastWeaponIndex = self.WeaponIndex
   self.WeaponIndex = WeaponIndex
-  if 0 == WeaponIndex then
-  end
-  if self.LastWeaponIndex then
-    local LastWeaponIndex = self.Data.WeaponId[self.LastWeaponIndex]
-  end
-  local LastWeaponWeapon = self:GetWeapon(self.LastWeaponIndex)
+  local LastWeaponId = self.LastWeaponIndex and WeaponList[self.LastWeaponIndex]
+  local LastWeaponWeapon = LastWeaponId and (self:UseMonsterWeaponBase() and self:GetMonsterWeapon(LastWeaponId) or self:GetWeapon(LastWeaponId))
   if LastWeaponWeapon then
     LastWeaponWeapon:ShouldHideWeapon(true)
   end
-  local WeaponId = self.Data.WeaponId[WeaponIndex]
   self:ChangeUsingWeaponById(WeaponId)
   self:GetOwnBlackBoardComponent():SetValueAsInt("WeaponIndex", WeaponIndex)
 end

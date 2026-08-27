@@ -3,10 +3,23 @@ local M = Class("BluePrints.UI.Shop.Banner.WBP_Shop_Banner_Base_C")
 
 function M:Construct()
   M.Super.Construct(self)
-  self.Btn_Qa:BindEventOnClicked(self, self.OnClickQa)
-  self.Btn_Qa:TryOverrideSoundFunc(function()
-    AudioManager(self):PlayUISound(self, "event:/ui/activity/large_btn_click", nil, nil)
-  end)
+  if self.Btn_Qa then
+    if self.Btn_Qa.Btn_Click then
+      self.Btn_Qa:Init({
+        ClickCallback = self.OnClickQa,
+        OwnerWidget = self,
+        SoundFunc = function()
+          AudioManager(self):PlayUISound(self, "event:/ui/activity/large_btn_click", nil, nil)
+        end,
+        SoundFuncReceiver = self
+      })
+    elseif self.Btn_Qa.Button_Area then
+      self.Btn_Qa:BindEventOnClicked(self, self.OnClickQa)
+      self.Btn_Qa:TryOverrideSoundFunc(function()
+        AudioManager(self):PlayUISound(self, "event:/ui/activity/large_btn_click", nil, nil)
+      end)
+    end
+  end
   self.BannerTab = self:GetBannerTabData("WBP_Shop_Recommend_AvatarSkin")
   self.RefreshTimerName = "WBP_Shop_Banner_Recommend_AvatarSkin_C_RefreshLeftTime"
   self.Btn_Get.Btn_Buy.OnClicked:Add(self, self.OnGoToInterface)
@@ -14,7 +27,7 @@ function M:Construct()
 end
 
 function M:Destruct()
-  if self.Btn_Qa then
+  if self.Btn_Qa and self.Btn_Qa.Button_Area then
     self.Btn_Qa:UnBindEventOnClicked(self, self.OnClickQa)
   end
   if self.Btn_Get and self.Btn_Get.Btn_Buy then

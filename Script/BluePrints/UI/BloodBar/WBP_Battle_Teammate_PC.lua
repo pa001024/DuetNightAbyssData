@@ -60,6 +60,73 @@ function WBP_Teammate_PC_C:InitConfig(Owner)
   self:InitShortageUI()
 end
 
+function WBP_Teammate_PC_C:InitRPGDisplayConfig(NameText)
+  self.bDisplayOnlyMode = true
+  self.Owner = nil
+  self.Eid = 0
+  self.MaxHp = 1
+  self.CurHp = 1
+  self.LastHp = 1
+  self.MaxShield = 1
+  self.CurShield = 1
+  self.LastShield = 1
+  self.CurOverShield = 0
+  self.LastOverShield = 0
+  self.BloodState = {}
+  self.HpBar = nil
+  self.ShieldBar = nil
+  self.bPendingPhantomSetName = false
+  self:CheckAndLoadShieldBar()
+  self:LoadHpBar()
+  if self.HpBar then
+    self.HpBar:SetBarPercent(1)
+  end
+  if self.ShieldBar then
+    self.ShieldBar:SetBarPercent(1)
+  end
+  if self.Text_Name then
+    self.Text_Name:SetText(GText(NameText) or "")
+  end
+  if self.Button_Area then
+    self.Button_Area:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+  if self.Pos_Resurrection then
+    self.Pos_Resurrection:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+  if self.Pos_Overreach then
+    self.Pos_Overreach:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+  if self.Text_Overreach then
+    self.Text_Overreach:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+  if self.VX_Teammate_InvincibilLight then
+    self.VX_Teammate_InvincibilLight:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+  local Avatar = GWorld:GetAvatar()
+  local MiniIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mini/"
+  local Prefix = "T_Normal_"
+  local PhantomGuideIconImg = Avatar and 0 == Avatar.Sex and "Mini_WeitaM" or "Mini_WeitaF"
+  local NormalIconName = Prefix .. PhantomGuideIconImg
+  UE4.UResourceLibrary.LoadObjectAsync(self, MiniIconPath .. NormalIconName .. "." .. NormalIconName .. "'", {
+    self,
+    WBP_Teammate_PC_C.LoadImageFinish
+  })
+  self:BindToAnimationFinished(self.In, {
+    self,
+    function()
+      self:UnbindAllFromAnimationFinished(self.In)
+      local HpBarGeometry = self.Group_HPBarRoot:GetTickSpaceGeometry()
+      local Size = UE4.USlateBlueprintLibrary.GetLocalSize(HpBarGeometry)
+      if self.HpBar then
+        self.HpBar:SetLength(Size.X)
+        self.HpBar:SetHeight(Size.Y)
+      end
+    end
+  })
+  self:PlayAnimation(self.In)
+  self.IsDestroied = nil
+end
+
 function WBP_Teammate_PC_C:InitWithOutCharacter(PlayerState)
   self.RoleId = PlayerState.CharId
   self.Eid = PlayerState.Eid
@@ -549,7 +616,7 @@ function WBP_Teammate_PC_C:Construct()
   end
   self:AddDispatcher(EventID.OnRepOwnerEidPhantomState, self, self._SyncPlayerName)
   self:AddDispatcher(EventID.OnRepPlayerName, self, self._SyncPlayerName)
-  self:AddDispatcher(EventID.OnCloseLoading, self, self._SyncPlayerName)
+  self:AddDispatcher(EventID.CloseLoading, self, self._SyncPlayerName)
 end
 
 function WBP_Teammate_PC_C:_SyncPlayerName()

@@ -303,7 +303,6 @@ function M:_AddReddotListenInner(ChannelName, ChannelType)
 end
 
 function M:ResetUI()
-  self:_Stop_SetUpChatMsgListTimer()
   self.CurrSelectPlayer = nil
   self.Group_NewMessage:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Group_BottomEmpty:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -319,40 +318,13 @@ function M:ResetUI()
   self.Btn_Sent:SetText("")
 end
 
-function M:_SetUpChatMsgListTimerCallback(MsgList, Context)
-  if not self:_IsSetUpChatMsgListContextCurrent(Context) then
-    self:_Stop_SetUpChatMsgListTimer(Context and Context.Generation)
-    return
+function M:_OnSetUpChatMsgListEnd()
+  if self.CurrSelectPlayer then
+    local FriendData = self.CurrSelectPlayer.Data
+    local Name = FriendData.Info.Nickname
+    local Remark = FriendData.Remark and FriendData.Remark ~= "" and string.format("(%s)", FriendData.Remark) or ""
+    self.Text_ChannelTitle:SetText(Name .. Remark)
   end
-  local Index = Context.Index or 0
-  if Index >= #MsgList then
-    local Reconcile = self:_ReconcileChatListBuild(Context)
-    if not Reconcile then
-      self:_Stop_SetUpChatMsgListTimer(Context and Context.Generation)
-      return
-    end
-    if not self:_Stop_SetUpChatMsgListTimer(Context and Context.Generation) then
-      return
-    end
-    self:_ScheduleChatListBuildFinalAutoScroll(Context)
-    if 0 == Reconcile.FinalDisplayMessageCount then
-      self.Text_DialogEmptyText:SetText(self:_GetCurrentDialogEmptyText())
-      self.WS_Dialoglist:SetActiveWidgetIndex(1)
-    end
-    if ChatModel:GetChannelUnreadCount() > 0 then
-      ChatController:SendChatNewMsgRead()
-    end
-    if self.CurrSelectPlayer then
-      local FriendData = self.CurrSelectPlayer.Data
-      local Name = FriendData.Info.Nickname
-      local Remark = FriendData.Remark and FriendData.Remark ~= "" and string.format("(%s)", FriendData.Remark) or ""
-      self.Text_ChannelTitle:SetText(Name .. Remark)
-    end
-    return
-  end
-  Context.Index = Index + 1
-  self:_AddNewMsgToListView(MsgList[Context.Index], true)
-  self.bDialogListRefreshed = false
 end
 
 function M:CalcWrapTextAt()

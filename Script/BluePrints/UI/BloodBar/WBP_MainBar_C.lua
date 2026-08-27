@@ -15,10 +15,13 @@ end
 
 function WBP_MainBar_C:InitConfig_Lua(IsMainPlayer, ActorOwner)
   rawset(self, "Owner", ActorOwner)
+  self.LastChaosLayerByBuffId = {}
+  self.LastDisplayChaosBuffId = nil
+  self.LastChaosPlayerAttribute = nil
   self.IsDestroied = nil
   if IsMainPlayer then
+    self:RemoveAllDispatcher()
     self:AddDispatcher(EventID.OnCharGradeLevelUp, self, self.OnCharGradeLevelUp)
-    self:AddDispatcher(EventID.CharDie, self, self.CharDie)
     self:AddDispatcher(EventID.CharRecover, self, self.CharRecovery)
     self:AddDispatcher(EventID.RefreshMainPlayerBlood, self, self.Reinitialize)
     self:AddDispatcher(EventID.OnCharLevelUpInBattle, self, self.OnUpdateCharLevelAndExp)
@@ -39,8 +42,15 @@ function WBP_MainBar_C:InitConfig_Lua(IsMainPlayer, ActorOwner)
   self:SetName()
 end
 
-function WBP_MainBar_C:Reinit_Lua(ActorOwner)
+function WBP_MainBar_C:ReInit_Lua(ActorOwner)
   rawset(self, "Owner", ActorOwner)
+  self.LastChaosLayerByBuffId = {}
+  self.LastDisplayChaosBuffId = nil
+  self.LastChaosPlayerAttribute = nil
+  if self.ChaosBuffWidget then
+    self.ChaosBuffWidget:ReInit()
+  end
+  self:UpdateCharBuffUI()
   self:RegisterEventsNormal()
 end
 
@@ -51,7 +61,7 @@ function WBP_MainBar_C:Construct()
   end
   self:AddDispatcher(EventID.OnRepOwnerEidPhantomState, self, self._SyncPhantomName)
   self:AddDispatcher(EventID.OnRepPlayerName, self, self._SyncPhantomName)
-  self:AddDispatcher(EventID.OnCloseLoading, self, self._SyncPhantomName)
+  self:AddDispatcher(EventID.CloseLoading, self, self._SyncPhantomName)
 end
 
 function WBP_MainBar_C:SetInTeam()
@@ -71,6 +81,13 @@ function WBP_MainBar_C:RegisterEventsNormal()
   if (self.Owner:IsMonster() or self.Owner:IsCombatItemBase() or self.Owner:IsNPC() or self.Owner:IsMechanismSummon()) and self.bIsDangerEnemy then
     self:AddDispatcher(EventID.MainPlayerLevelUp, self, self.OnMainPlayerLevelUp)
   end
+  if self.Owner:IsMonster() then
+    self:AddDispatcher(EventID.ChangeRole, self, self.OnLocalPlayerRoleChanged)
+  end
+end
+
+function WBP_MainBar_C:OnLocalPlayerRoleChanged()
+  self:UpdateCharBuffUI()
 end
 
 function WBP_MainBar_C:OnMainPlayerLevelUp(MainPlayerNowLevel)
@@ -155,6 +172,9 @@ function WBP_MainBar_C:OnUpdateCharLevelAndExp()
     return
   end
   local NowLevel = self.Owner:GetAttr("Level")
+  if not NowLevel or NowLevel <= 0 then
+    return
+  end
   self.Lv:SetText(GText("UI_LEVEL_NAME"))
   self.Num_Lv_elite:SetText(NowLevel)
   if self.OldLevel and NowLevel > self.OldLevel and self.Owner:IsMainPlayer() then
@@ -357,12 +377,107 @@ function WBP_MainBar_C:GetLastingEffectColorMap()
   return self.LastingEffectColorMap
 end
 
+function WBP_MainBar_C:GetLocalPlayerAttribute()
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
+  if not IsValid(Player) then
+    return nil
+  end
+  local RoleId = Player.CurrentRoleId
+  if not RoleId or RoleId <= 0 then
+    return nil
+  end
+  local BattleCharConfig = DataMgr.BattleChar[RoleId]
+  if not BattleCharConfig then
+    return nil
+  end
+  return BattleCharConfig.Attribute
+end
+
+function WBP_MainBar_C:FindLocalPlayerChaosBuff(PlayerAttribute, ChaosBuffs)
+  if not PlayerAttribute or "Default" == PlayerAttribute then
+    return nil
+  end
+  for Index = 1, ChaosBuffs:Num() do
+    local BuffData = ChaosBuffs:GetRef(Index)
+    local BuffConfig = DataMgr.Buff[BuffData.BuffId]
+    local BuffElement = BuffConfig and BuffConfig.BPVars and BuffConfig.BPVars.Element
+    if BuffElement == PlayerAttribute then
+      return BuffData
+    end
+  end
+  return nil
+end
+
+function WBP_MainBar_C:EnsureChaosBuffWidget()
+  if self.ChaosBuffWidget then
+    return
+  end
+  local BuffWidget = self:CreateWidgetNew("ChaosBuff")
+  if BuffWidget then
+    BuffWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.ChaosAnchor:AddChildToOverlay(BuffWidget)
+    self.ChaosBuffWidget = BuffWidget
+  end
+end
+
+function WBP_MainBar_C:RefreshChaosBuffUI_Lua(ChaosBuffs)
+  if not self.ChaosAnchor then
+    self:SetForceShowNameByChaosBuff(false)
+    return
+  end
+  self:EnsureChaosBuffWidget()
+  local LastLayers = self.LastChaosLayerByBuffId or {}
+  local CurrentLayers = {}
+  local CurrentBuffsById = {}
+  local HasVisibleBuff = false
+  for Index = 1, ChaosBuffs:Num() do
+    local BuffData = ChaosBuffs:GetRef(Index)
+    CurrentBuffsById[BuffData.BuffId] = BuffData
+    CurrentLayers[BuffData.BuffId] = BuffData.Layer or 0
+  end
+  local PlayerAttribute = self:GetLocalPlayerAttribute()
+  local LastPlayerAttribute = self.LastChaosPlayerAttribute
+  local IsPlayerAttributeChanged = nil ~= LastPlayerAttribute and LastPlayerAttribute ~= PlayerAttribute
+  self.LastChaosPlayerAttribute = PlayerAttribute
+  local BuffWidget = self.ChaosBuffWidget
+  local DisplayBuff = self:FindLocalPlayerChaosBuff(PlayerAttribute, ChaosBuffs)
+  local DisplayBuffId = DisplayBuff and DisplayBuff.BuffId
+  local LastDisplayBuffId = self.LastDisplayChaosBuffId
+  local LastLayer = DisplayBuffId == LastDisplayBuffId and LastLayers[DisplayBuffId] or nil
+  self.LastDisplayChaosBuffId = DisplayBuffId
+  if BuffWidget then
+    if DisplayBuff then
+      local CurrentLayer = DisplayBuff.Layer or 0
+      local IsLayerReduced = nil ~= LastLayer and LastLayer > CurrentLayer
+      local IsLayerIncreased = nil ~= LastLayer and LastLayer < CurrentLayer
+      local IsNewBuff = nil ~= DisplayBuffId and nil == LastLayers[DisplayBuffId]
+      HasVisibleBuff = true
+      BuffWidget:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      BuffWidget:RefreshChaosBuff(DisplayBuff, IsNewBuff, IsLayerReduced, IsLayerIncreased)
+      self:SetForceShowNameByChaosBuff(true)
+    elseif not IsPlayerAttributeChanged and LastDisplayBuffId and not CurrentBuffsById[LastDisplayBuffId] then
+      HasVisibleBuff = true
+      BuffWidget:OnChaosBuffRemoved(function()
+        if BuffWidget:GetVisibility() == UIConst.VisibilityOp.Collapsed then
+          self.ChaosAnchor:SetVisibility(UIConst.VisibilityOp.Collapsed)
+        end
+        self:SetForceShowNameByChaosBuff(false)
+      end)
+    else
+      BuffWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self:SetForceShowNameByChaosBuff(false)
+    end
+  end
+  self.LastChaosLayerByBuffId = CurrentLayers
+  self.ChaosAnchor:SetVisibility(HasVisibleBuff and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
+end
+
 function WBP_MainBar_C:Destruct()
   WBP_MainBar_C.Super.Destruct(self)
   self.IsDestroied = true
   self:RemoveDispatcher(EventID.OnRepOwnerEidPhantomState)
   self:RemoveDispatcher(EventID.OnRepPlayerName)
-  self:RemoveDispatcher(EventID.OnCloseLoading)
+  self:RemoveDispatcher(EventID.CloseLoading)
 end
 
 return WBP_MainBar_C

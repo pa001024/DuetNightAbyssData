@@ -1,8 +1,7 @@
 local Npc = DungeonClass.Class()
 Npc.__Class__ = "Npc"
 Npc.__Component__ = {
-  "BluePrints.DungeonObject.Replication.ReplicatedPropertySupport",
-  "BluePrints.DungeonObject.RougePro.RougeProShopNpc"
+  "BluePrints.DungeonObject.Replication.ReplicatedPropertySupport"
 }
 
 function Npc:__Init__(DungeonObject)

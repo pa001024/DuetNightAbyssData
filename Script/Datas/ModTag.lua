@@ -166,5 +166,9 @@ return ReadOnly("ModTag", {
   [1504] = {
     ApplicationType = 1504,
     ModTagText = T.RT_1
+  },
+  [5101] = {
+    ApplicationType = 5101,
+    ModTagText = T.RT_1
   }
 })

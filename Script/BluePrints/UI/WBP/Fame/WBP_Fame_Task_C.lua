@@ -110,6 +110,11 @@ function M:InitTaskTab()
   end, 1, "FillWithTaskInfo")
 end
 
+function M:JumpToTask(RegionId, TaskType)
+  self.Com_Tab:SelectTabById(RegionId)
+  self.Fame_Tab:SelectTab(TaskType)
+end
+
 function M:InitRegionTabInfo()
   local AllRegionTabInfo = {}
   for RegionId, TabData in pairs(DataMgr.RegionReputation) do
@@ -186,6 +191,10 @@ function M:OnTaskTabItemClick(TabWidget)
     self.SelectedEntrustTask = nil
     self:RefreshRecurringTask()
   else
+    local Avatar = GWorld:GetAvatar()
+    if Avatar then
+      Avatar:MarkEntrustFameTaskReddotRead(self.CurRegionTabId)
+    end
     self.SelectedRecurringTask = nil
     self:RefreshEntrustTask()
   end
@@ -202,18 +211,6 @@ function M:OnMenuOpenChanged(IsOpen)
     return
   end
   if IsOpen then
-    self.Com_Tab:UpdateBottomKeyInfo({
-      {
-        KeyInfoList = {
-          {
-            Type = "Text",
-            Text = "Esc",
-            ClickCallback = self.CloseSelf,
-            Owner = self
-          }
-        }
-      }
-    })
   else
     local NewBottomKeyInfo = {
       {
@@ -316,6 +313,7 @@ function M:InitFameDetail(bNotUpdateProgress)
     Content.MaxFameValue = RegionData[Content.FameLevel + 1].ReputationLevelMaxExp
   end
   Content.bNotUpdateProgress = bNotUpdateProgress
+  Content.CurRegionTabId = self.CurRegionTabId
   self.Fame_Progress:Init(Content)
 end
 
@@ -417,8 +415,29 @@ function M:UpdateUIStyleInPlatform(CurInputDevice, CurGamepadName)
       end
     end
   end
-  self:SetFocus()
+  if UIManager(self):GetLastestAndFocusableUIWidgetObj() == self then
+    self:SetFocus()
+  end
   self.WBP_Fame_BtnRefresh:UpdateGamePadStyle()
+end
+
+function M:OnFocusReceived(MyGeometry, InFocusEvent)
+  if self:NeedShowMask() then
+    return M.Super.OnFocusReceived(self, MyGeometry, InFocusEvent)
+  end
+  local TargetWidget
+  if self.CurTaskTabId == FameTaskType.RecurringTask then
+    if self.CurRecurringTaskLevel then
+      TargetWidget = self["WBP_Fame_TaskLevel_" .. self.CurRecurringTaskLevel].Button
+    end
+  else
+    self.List_Item_1:NavigateToIndex(0)
+    TargetWidget = self.List_Item_1
+  end
+  if IsValid(TargetWidget) then
+    return UE4.UWidgetBlueprintLibrary.SetUserFocus(UE4.UWidgetBlueprintLibrary.Handled(), TargetWidget)
+  end
+  return M.Super.OnFocusReceived(self, MyGeometry, InFocusEvent)
 end
 
 function M:InitListenEvent()
@@ -467,25 +486,10 @@ function M:OnEntrustFameTaskReddotChange()
   if not AllRegionReputationData then
     return
   end
-  local TreeNode = ReddotManager.GetTreeNode("EntrustFameTask")
-  local HaveReddot = false
-  if TreeNode and TreeNode.Count > 0 then
-    HaveReddot = true
-  end
-  if not HaveReddot then
-    if self.Fame_Tab.ConfigData then
-      self.Fame_Tab:ShowTabRedDotByTabId(FameTaskType.ReputationEntrust)
-    end
-    self:UpdateRegionTabReddot()
-    return
-  end
   if self.CurRegionTabId then
-    local CanSubmitEntrustTask = RegionFameModel:GetTargetRegionEntrustTaskCanSubmit(self.CurRegionTabId)
-    if CanSubmitEntrustTask then
-      self:UpdateEntrustTaskReddot()
-      if self.CurTaskTabId == FameTaskType.ReputationEntrust then
-        self:RefreshEntrustTask()
-      end
+    self:UpdateEntrustTaskReddot()
+    if self.CurTaskTabId == FameTaskType.ReputationEntrust then
+      self:RefreshEntrustTask()
     end
   end
   self:UpdateRegionTabReddot()
@@ -826,7 +830,7 @@ function M:RefreshEntrustTask()
     Content.NPCName = TaskInfo.NPCName
     Content.OnMenuOpenChanged = self.OnMenuOpenChanged
     
-    function Content.SubmitTaskCallback(Ret, ReputationId, QuestId)
+    function Content.SubmitTaskCallback(Ret, ReputationId, QuestId, RewardReturn)
       if Ret == ErrorCode.RET_SUCCESS then
         UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("ReputationEntrust_Submit_Tips"))
         self:ConsumeTargetQuestMod(QuestId)
@@ -834,6 +838,18 @@ function M:RefreshEntrustTask()
         self:InitWeeklyDetail()
         self:UpdateEntrustTaskReddot()
         self:UpdateRegionTabReddot()
+        if RewardReturn then
+          UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, RewardReturn, nil, function()
+            local Manager = UIManager(self)
+            local TopUI = Manager:GetLastestAndFocusableUIWidgetObj()
+            if TopUI == self then
+              self:SetFocus()
+            elseif TopUI == Manager:GetUIObj("CommonDialog") then
+              TopUI.ParentWidget = self
+              TopUI.DontFocusParentWidget = false
+            end
+          end, self, true)
+        end
         return
       end
       local Error = DataMgr.ErrorCode[Ret]
@@ -846,6 +862,8 @@ function M:RefreshEntrustTask()
     
     Content.TaskModel = RegionFameModel
     Content.Parent = self
+    Content.ItemType = TaskInfo.ItemType
+    Content.ItemId = TaskInfo.ItemId
     self.List_Item_1:AddItem(Content)
   end
   self:UpdateRefreshBtnDetail()

@@ -1,19 +1,9 @@
 require("UnLua")
-local AutoChessConst = require("BluePrints.UI.AutoChess.AutoChessConst")
 local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 local ActivityReddotHelper = require("BluePrints.UI.WBP.Activity.ActivityReddotHelper")
+local TaskUtils = require("BluePrints.UI.TaskPanel.TaskUtils")
+local QuestUtils = require("Utils.QuestUtils")
 local M = {}
-local NotNeedShowButtonActivityId = {
-  [103011] = true,
-  [103020] = true,
-  [10302001] = true,
-  [103015] = true
-}
-local NeedShowButtonActivityIdByTabName = {
-  [AutoChessConst.ActiveId] = true,
-  [121001] = true,
-  [121002] = true
-}
 
 function M:PlayFadeIn()
   self:PlayAnimation(self.In)
@@ -52,9 +42,6 @@ function M:IsPageInVisible()
 end
 
 function M:RefreshPageStaticView(ActivityConfigData, PageConfigData, InfoClickFunction, ShopClickFunction, GoToTargetPageFunction, StuffDetailOpenFunction, GoToTaskClickFunction, GoToMoreClickFunction)
-  if not self.NotNeedShowButtonActivityId then
-    self.NotNeedShowButtonActivityId = NotNeedShowButtonActivityId
-  end
   local PlayerAvatar = GWorld:GetAvatar()
   local TitleWidget = UIManager(self):CreateWidget(ActivityConfigData.EventNameBPPath)
   self:UpdateEventTitleInfo(ActivityConfigData, TitleWidget, PlayerAvatar)
@@ -129,6 +116,9 @@ function M:RefreshPageStaticView(ActivityConfigData, PageConfigData, InfoClickFu
   end
   if PageConfigData.JumpUnlockCondition and not ConditionUtils.CheckCondition(PlayerAvatar, PageConfigData.JumpUnlockCondition) then
     IsLock = true
+  end
+  if ActivityConfigData.QuestChainIdToUnlock and TaskUtils:IsQuestChainAdvanceUnlock(ActivityConfigData.QuestChainIdToUnlock) then
+    IsLock = false
   end
   self.WS:SetVisibility(UIConst.VisibilityOp.Visible)
   self.Group_Reward:SetVisibility(UIConst.VisibilityOp.Visible)
@@ -221,6 +211,7 @@ function M:RefreshPageStaticView(ActivityConfigData, PageConfigData, InfoClickFu
   end
   self.Btn_Confirm:SetGamePadImg("A")
   self:BindAllClickFunction(InfoClickFunction, ShopClickFunction, GoToTargetPageFunction, GoToTaskClickFunction, GoToMoreClickFunction)
+  self:InitUnlockInAdvance(ActivityConfigData, PageConfigData)
   self:InitUIInfoByPlatform()
   local CallbackInfo = {
     Obj = self,
@@ -235,9 +226,9 @@ function M:RefreshPageStaticView(ActivityConfigData, PageConfigData, InfoClickFu
       end
     end
   }
-  if NeedShowButtonActivityIdByTabName[self.CurActivityId] then
+  if ActivityConfigData.IsUseTabReddotForJumpButton then
     ActivityReddotHelper.AddReddotListenByTabId(self.ParentTabId, CallbackInfo)
-  elseif not self.NotNeedShowButtonActivityId[self.CurActivityId] then
+  elseif not ActivityConfigData.IsHideJumpButtonReddot then
     ActivityReddotHelper.RemoveReddotListenByEventId(self.CurActivityId, self)
     ActivityReddotHelper.AddReddotListenByEventId(self.CurActivityId, CallbackInfo)
   end
@@ -392,6 +383,70 @@ function M:RefreshRewardList()
       Content.bHasGot = has
       Content.SelfWidget:SetIsGot(Content.bHasGot)
     end
+  end
+end
+
+function M:InitUnlockInAdvance(InActivityConfigData, InPageConfigData)
+  DebugPrint(string.format("InitUnlockInAdvance: InActivityConfigData: %s, InPageConfigData: %s", tostring(InActivityConfigData), tostring(InPageConfigData)))
+  if not InActivityConfigData or not InPageConfigData then
+    return
+  end
+  if not InActivityConfigData.QuestChainIdToUnlock then
+    DebugPrint(string.format("lxc: InitUnlockInAdvance: 活动 %s 活动id %s 未配置QuestChainIdToUnlock，跳过提前解锁初始化", GText(InActivityConfigData.EventName), InActivityConfigData.EventId))
+    return
+  end
+  local Status = ActivityUtils.DetermineBtnConfirmStatusByEvent(InActivityConfigData)
+  if not Status or 1 == Status then
+    self.WS:SetActiveWidgetIndex(1)
+    self.Text_Lock:SetText(GText("EventPortal_UnlockTips_103004"))
+  elseif 2 == Status then
+    self.WS:SetActiveWidgetIndex(0)
+    self.Btn_Confirm:SetText(GText("UI_UnlockQuestAdvance_Button"))
+    local bCanUnlock = QuestUtils:CheckQuestChainUnlockTime(InActivityConfigData.QuestChainIdToUnlock)
+    local Avatar = GWorld:GetAvatar()
+    local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
+    
+    local function Callback(Ret, InQuestChainId)
+      DebugPrint(string.format("lxc: 提前解锁任务: %s, Ret: %d", tostring(InQuestChainId), Ret))
+      if not ErrorCode:Check(Ret) then
+        return
+      end
+      TaskUtils:SetTrackingQuestInfoToServer(InQuestChainId)
+      self.Btn_Confirm:UnBindEventOnClickedByObj(self)
+      local bBeHome = Avatar.CurrentRegionId and DataMgr.SubRegion[Avatar.CurrentRegionId] and DataMgr.SubRegion[Avatar.CurrentRegionId].SubRegionType == "home"
+      if not bBeHome then
+        GameMode:HandleLevelDeliver(UE4.EModeType.ModeRegion, 210101, 1, true)
+      else
+        if self.ParentWidget and self.ParentWidget.RefreshViewAfterPageDataSet then
+          self.ParentWidget:RefreshViewAfterPageDataSet(InActivityConfigData, InPageConfigData)
+        end
+        self:RefreshPageStaticView(InActivityConfigData, InPageConfigData, self.ViewInfoBtnClick, self.GoToShopClick, self.GoToTargetPageClick, self.OnStuffDetailOpenChanged, self.GoToTaskClick, self.GoToMoreClick)
+      end
+    end
+    
+    local function RightCallbackFunction()
+      if not bCanUnlock then
+        DebugPrint(string.format("lxc: UnlockInAdvanceCallback: 任务 %s 不能提前解锁，请检查配置", tostring(InActivityConfigData.QuestChainIdToUnlock)))
+        return
+      end
+      if not Avatar or not GameMode then
+        DebugPrint(string.format("lxc: UnlockInAdvanceCallback: Avatar: %s, GameMode: %s", tostring(Avatar), tostring(GameMode)))
+        return
+      end
+      Avatar:UnlockQuestChainAdvance(InActivityConfigData.QuestChainIdToUnlock, Callback)
+    end
+    
+    local Params = {RightCallbackObj = nil, RightCallbackFunction = RightCallbackFunction}
+    
+    local function UnlockInAdvanceCallback()
+      UIManager(self):ShowCommonPopupUI(100413, Params)
+    end
+    
+    self.Btn_Confirm:UnBindEventOnClickedByObj(self)
+    self.Btn_Confirm:BindSingleEventOnClicked(self, UnlockInAdvanceCallback)
+  elseif 3 == Status then
+    self.WS:SetActiveWidgetIndex(0)
+    self.Btn_Confirm:SetText(GText("UI_GameEvent_EventPortal_Goto"))
   end
 end
 

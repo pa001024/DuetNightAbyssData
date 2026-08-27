@@ -24710,6 +24710,708 @@
     ]
   },
   {
+    "id": 210904,
+    "name": "Battle-Worn Shadows",
+    "level": [
+      50,
+      59
+    ],
+    "regionId": 1071,
+    "subRegionId": 107101,
+    "chance": 5,
+    "completeNum": -1,
+    "dayLimit": false,
+    "reward": [
+      51003
+    ],
+    "nodes": [
+      {
+        "id": "17823743482854326468",
+        "type": "TalkNode",
+        "name": "历战者出现开车",
+        "next": [
+          "17830611978911082025"
+        ],
+        "dialogues": [
+          {
+            "id": 71009001,
+            "content": "(The harbinger of doom has finally appeared. Defeat it, just as you have countless times before.)",
+            "npc": 800006,
+            "next": 71009002
+          }
+        ]
+      },
+      {
+        "id": "17830610926631405",
+        "type": "TalkNode",
+        "name": "历战者出现开车",
+        "dialogues": [
+          {
+            "id": 71009002,
+            "content": "(The commotion has drawn even more Filthoids. Drive them off.)",
+            "npc": 800006,
+            "next": 71009003
+          }
+        ]
+      },
+      {
+        "id": "17830611978911082025",
+        "type": "TalkNode",
+        "name": "历战者出现开车",
+        "dialogues": [
+          {
+            "id": 71009003,
+            "content": "(With the Filthoids vanquished, the sinister aura dissipates. For now, the area is safe.)",
+            "npc": 800006
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 210905,
+    "name": "Battle-Worn Shadows",
+    "level": [
+      60,
+      65
+    ],
+    "regionId": 1071,
+    "subRegionId": 107101,
+    "chance": 5,
+    "completeNum": -1,
+    "dayLimit": false,
+    "reward": [
+      51003
+    ],
+    "nodes": [
+      {
+        "id": "17823743482854326468",
+        "type": "TalkNode",
+        "name": "历战者出现开车",
+        "next": [
+          "17830611978911082025"
+        ],
+        "dialogues": [
+          {
+            "id": 71009001,
+            "content": "(The harbinger of doom has finally appeared. Defeat it, just as you have countless times before.)",
+            "npc": 800006,
+            "next": 71009002
+          }
+        ]
+      },
+      {
+        "id": "17830610926631405",
+        "type": "TalkNode",
+        "name": "历战者出现开车",
+        "dialogues": [
+          {
+            "id": 71009002,
+            "content": "(The commotion has drawn even more Filthoids. Drive them off.)",
+            "npc": 800006,
+            "next": 71009003
+          }
+        ]
+      },
+      {
+        "id": "17830611978911082025",
+        "type": "TalkNode",
+        "name": "历战者出现开车",
+        "dialogues": [
+          {
+            "id": 71009003,
+            "content": "(With the Filthoids vanquished, the sinister aura dissipates. For now, the area is safe.)",
+            "npc": 800006
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 211104,
+    "name": "Incoming Fire",
+    "level": [
+      50,
+      59
+    ],
+    "regionId": 1071,
+    "subRegionId": 107101,
+    "chance": 5,
+    "completeNum": -1,
+    "dayLimit": false,
+    "reward": [
+      51003
+    ],
+    "nodes": [
+      {
+        "id": "17830613856413243167",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17830614162003243914",
+          "17830614106323243777"
+        ],
+        "dialogues": [
+          {
+            "id": 71009201,
+            "content": "(The nearby Filthoids are growing restless. Drive them off as fast as you can.)",
+            "npc": 800006,
+            "next": 71009202
+          }
+        ]
+      },
+      {
+        "id": "17830614052443243617",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "dialogues": [
+          {
+            "id": 71009202,
+            "content": "(During the fighting, a Filthoid accidentally activated the abandoned military weapons nearby. Evade the bombardment!)",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17830614162003243914",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "dialogues": [
+          {
+            "id": 71009204,
+            "content": "(All threats neutralised. The last siren sputters and dies, leaving only silence behind.)",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17830614106323243777",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "dialogues": [
+          {
+            "id": 71009203,
+            "content": "(The bombardment is intensifying.)",
+            "npc": 800006
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 211105,
+    "name": "Incoming Fire",
+    "level": [
+      60,
+      65
+    ],
+    "regionId": 1071,
+    "subRegionId": 107101,
+    "chance": 5,
+    "completeNum": -1,
+    "dayLimit": false,
+    "reward": [
+      51003
+    ],
+    "nodes": [
+      {
+        "id": "17830613856413243167",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17830614162003243914",
+          "17830614106323243777"
+        ],
+        "dialogues": [
+          {
+            "id": 71009201,
+            "content": "(The nearby Filthoids are growing restless. Drive them off as fast as you can.)",
+            "npc": 800006,
+            "next": 71009202
+          }
+        ]
+      },
+      {
+        "id": "17830614052443243617",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "dialogues": [
+          {
+            "id": 71009202,
+            "content": "(During the fighting, a Filthoid accidentally activated the abandoned military weapons nearby. Evade the bombardment!)",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17830614162003243914",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "dialogues": [
+          {
+            "id": 71009204,
+            "content": "(All threats neutralised. The last siren sputters and dies, leaving only silence behind.)",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17830614106323243777",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "dialogues": [
+          {
+            "id": 71009203,
+            "content": "(The bombardment is intensifying.)",
+            "npc": 800006
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 211204,
+    "name": "Surprise Cache",
+    "level": [
+      50,
+      59
+    ],
+    "regionId": 1070,
+    "subRegionId": 107001,
+    "chance": 5,
+    "completeNum": -1,
+    "dayLimit": false,
+    "reward": [
+      51003
+    ],
+    "nodes": [
+      {
+        "id": "17827191384701670783",
+        "type": "TalkNode",
+        "name": "开始开车",
+        "next": [
+          "17827191384701670787",
+          "17827191384701670789",
+          "17827191384701670791",
+          "17827191384701670793",
+          "17827191384701670786",
+          "17827191384701670788",
+          "17827191384701670790",
+          "17827191384701670792",
+          "17827191384701670794"
+        ],
+        "dialogues": [
+          {
+            "id": 71009301,
+            "content": "(A cluster of supply crates lies ahead. Might be worth a closer look.)",
+            "npc": 800006,
+            "next": 71009302
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670785",
+        "type": "TalkNode",
+        "name": "电池开车",
+        "dialogues": [
+          {
+            "id": 71009302,
+            "content": "(You discover a stash of valuable materials inside the crate.)",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670787",
+        "type": "TalkNode",
+        "name": "电池开车",
+        "dialogues": [
+          {
+            "id": 71009302,
+            "content": "(You discover a stash of valuable materials inside the crate.)",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670789",
+        "type": "TalkNode",
+        "name": "电池开车",
+        "dialogues": [
+          {
+            "id": 71009302,
+            "content": "(You discover a stash of valuable materials inside the crate.)",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670791",
+        "type": "TalkNode",
+        "name": "电池开车",
+        "dialogues": [
+          {
+            "id": 71009302,
+            "content": "(You discover a stash of valuable materials inside the crate.)",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670793",
+        "type": "TalkNode",
+        "name": "电池开车",
+        "dialogues": [
+          {
+            "id": 71009302,
+            "content": "(You discover a stash of valuable materials inside the crate.)",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670786",
+        "type": "TalkNode",
+        "name": "秽兽开车",
+        "dialogues": [
+          {
+            "id": 71009303,
+            "content": "(Tales speak of Filthoids hiding in crates to ambush the unwary. Looks like this batch picked the wrong target. Deal with them and claim your prize.)",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670788",
+        "type": "TalkNode",
+        "name": "秽兽开车",
+        "dialogues": [
+          {
+            "id": 71009303,
+            "content": "(Tales speak of Filthoids hiding in crates to ambush the unwary. Looks like this batch picked the wrong target. Deal with them and claim your prize.)",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670790",
+        "type": "TalkNode",
+        "name": "秽兽开车",
+        "dialogues": [
+          {
+            "id": 71009303,
+            "content": "(Tales speak of Filthoids hiding in crates to ambush the unwary. Looks like this batch picked the wrong target. Deal with them and claim your prize.)",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670792",
+        "type": "TalkNode",
+        "name": "秽兽开车",
+        "dialogues": [
+          {
+            "id": 71009303,
+            "content": "(Tales speak of Filthoids hiding in crates to ambush the unwary. Looks like this batch picked the wrong target. Deal with them and claim your prize.)",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670794",
+        "type": "TalkNode",
+        "name": "秽兽开车",
+        "dialogues": [
+          {
+            "id": 71009303,
+            "content": "(Tales speak of Filthoids hiding in crates to ambush the unwary. Looks like this batch picked the wrong target. Deal with them and claim your prize.)",
+            "npc": 800006
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 211205,
+    "name": "Surprise Cache",
+    "level": [
+      60,
+      65
+    ],
+    "regionId": 1070,
+    "subRegionId": 107001,
+    "chance": 5,
+    "completeNum": -1,
+    "dayLimit": false,
+    "reward": [
+      51003
+    ],
+    "nodes": [
+      {
+        "id": "17827191384701670783",
+        "type": "TalkNode",
+        "name": "开始开车",
+        "next": [
+          "17827191384701670787",
+          "17827191384701670789",
+          "17827191384701670791",
+          "17827191384701670793",
+          "17827191384701670786",
+          "17827191384701670788",
+          "17827191384701670790",
+          "17827191384701670792",
+          "17827191384701670794"
+        ],
+        "dialogues": [
+          {
+            "id": 71009301,
+            "content": "(A cluster of supply crates lies ahead. Might be worth a closer look.)",
+            "npc": 800006,
+            "next": 71009302
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670785",
+        "type": "TalkNode",
+        "name": "电池开车",
+        "dialogues": [
+          {
+            "id": 71009302,
+            "content": "(You discover a stash of valuable materials inside the crate.)",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670787",
+        "type": "TalkNode",
+        "name": "电池开车",
+        "dialogues": [
+          {
+            "id": 71009302,
+            "content": "(You discover a stash of valuable materials inside the crate.)",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670789",
+        "type": "TalkNode",
+        "name": "电池开车",
+        "dialogues": [
+          {
+            "id": 71009302,
+            "content": "(You discover a stash of valuable materials inside the crate.)",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670791",
+        "type": "TalkNode",
+        "name": "电池开车",
+        "dialogues": [
+          {
+            "id": 71009302,
+            "content": "(You discover a stash of valuable materials inside the crate.)",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670793",
+        "type": "TalkNode",
+        "name": "电池开车",
+        "dialogues": [
+          {
+            "id": 71009302,
+            "content": "(You discover a stash of valuable materials inside the crate.)",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670786",
+        "type": "TalkNode",
+        "name": "秽兽开车",
+        "dialogues": [
+          {
+            "id": 71009303,
+            "content": "(Tales speak of Filthoids hiding in crates to ambush the unwary. Looks like this batch picked the wrong target. Deal with them and claim your prize.)",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670788",
+        "type": "TalkNode",
+        "name": "秽兽开车",
+        "dialogues": [
+          {
+            "id": 71009303,
+            "content": "(Tales speak of Filthoids hiding in crates to ambush the unwary. Looks like this batch picked the wrong target. Deal with them and claim your prize.)",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670790",
+        "type": "TalkNode",
+        "name": "秽兽开车",
+        "dialogues": [
+          {
+            "id": 71009303,
+            "content": "(Tales speak of Filthoids hiding in crates to ambush the unwary. Looks like this batch picked the wrong target. Deal with them and claim your prize.)",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670792",
+        "type": "TalkNode",
+        "name": "秽兽开车",
+        "dialogues": [
+          {
+            "id": 71009303,
+            "content": "(Tales speak of Filthoids hiding in crates to ambush the unwary. Looks like this batch picked the wrong target. Deal with them and claim your prize.)",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670794",
+        "type": "TalkNode",
+        "name": "秽兽开车",
+        "dialogues": [
+          {
+            "id": 71009303,
+            "content": "(Tales speak of Filthoids hiding in crates to ambush the unwary. Looks like this batch picked the wrong target. Deal with them and claim your prize.)",
+            "npc": 800006
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 211304,
+    "name": "Filthoid-Infested Cliffs",
+    "level": [
+      50,
+      59
+    ],
+    "regionId": 1071,
+    "subRegionId": 107101,
+    "chance": 5,
+    "completeNum": -1,
+    "dayLimit": false,
+    "reward": [
+      51003
+    ],
+    "nodes": [
+      {
+        "id": "17830615326795406630",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17830615663685407551"
+        ],
+        "dialogues": [
+          {
+            "id": 71009401,
+            "content": "(Filthoids keep charging up the cliff. Drive them back.)",
+            "npc": 800006,
+            "next": 71009402
+          }
+        ]
+      },
+      {
+        "id": "17830646891498652733",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "dialogues": [
+          {
+            "id": 71009402,
+            "content": "(The sounds of battle have drawn more Filthoids up the cliff. Drive them back.)",
+            "npc": 800006,
+            "next": 71009403
+          }
+        ]
+      },
+      {
+        "id": "17830615663685407551",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "dialogues": [
+          {
+            "id": 71009403,
+            "content": "(You have cleared out every Filthoid nearby. The area is safe for now.)",
+            "npc": 800006
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 211305,
+    "name": "Filthoid-Infested Cliffs",
+    "level": [
+      60,
+      65
+    ],
+    "regionId": 1071,
+    "subRegionId": 107101,
+    "chance": 5,
+    "completeNum": -1,
+    "dayLimit": false,
+    "reward": [
+      51003
+    ],
+    "nodes": [
+      {
+        "id": "17830615326795406630",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17830615663685407551"
+        ],
+        "dialogues": [
+          {
+            "id": 71009401,
+            "content": "(Filthoids keep charging up the cliff. Drive them back.)",
+            "npc": 800006,
+            "next": 71009402
+          }
+        ]
+      },
+      {
+        "id": "17830646891498652733",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "dialogues": [
+          {
+            "id": 71009402,
+            "content": "(The sounds of battle have drawn more Filthoids up the cliff. Drive them back.)",
+            "npc": 800006,
+            "next": 71009403
+          }
+        ]
+      },
+      {
+        "id": "17830615663685407551",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "dialogues": [
+          {
+            "id": 71009403,
+            "content": "(You have cleared out every Filthoid nearby. The area is safe for now.)",
+            "npc": 800006
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": 301802,
     "name": "Aggressive Patrol",
     "level": [
@@ -32006,6 +32708,124 @@
             "id": 71008807,
             "content": "Sorry to keep you waiting! I knew I could count on you to watch over it!",
             "npc": 818015
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 311004,
+    "name": "Rescue the Geniemon",
+    "level": [
+      50,
+      59
+    ],
+    "regionId": 1071,
+    "subRegionId": 107101,
+    "chance": 5,
+    "completeNum": -1,
+    "dayLimit": false,
+    "reward": [
+      51003
+    ],
+    "nodes": [
+      {
+        "id": "1782376173109592882",
+        "type": "TalkNode",
+        "name": "解救宠物开车",
+        "next": [
+          "1782376173109592889"
+        ],
+        "dialogues": [
+          {
+            "id": 71009101,
+            "content": "(Enemies are nearby. Drive them off before rescuing the Geniemon.)",
+            "npc": 800006,
+            "next": 71009102
+          }
+        ]
+      },
+      {
+        "id": "1782376173109592888",
+        "type": "TalkNode",
+        "name": "击杀秽兽开车",
+        "dialogues": [
+          {
+            "id": 71009102,
+            "content": "(The sounds of battle have drawn more enemies.)",
+            "npc": 800006,
+            "next": 71009103
+          }
+        ]
+      },
+      {
+        "id": "1782376173109592889",
+        "type": "TalkNode",
+        "name": "击杀怪物开车",
+        "dialogues": [
+          {
+            "id": 71009103,
+            "content": "(The area is clear for the moment. Now's your chance to free the Geniemon.)",
+            "npc": 800006
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 311005,
+    "name": "Rescue the Geniemon",
+    "level": [
+      60,
+      65
+    ],
+    "regionId": 1071,
+    "subRegionId": 107101,
+    "chance": 5,
+    "completeNum": -1,
+    "dayLimit": false,
+    "reward": [
+      51003
+    ],
+    "nodes": [
+      {
+        "id": "1782376173109592882",
+        "type": "TalkNode",
+        "name": "解救宠物开车",
+        "next": [
+          "1782376173109592889"
+        ],
+        "dialogues": [
+          {
+            "id": 71009101,
+            "content": "(Enemies are nearby. Drive them off before rescuing the Geniemon.)",
+            "npc": 800006,
+            "next": 71009102
+          }
+        ]
+      },
+      {
+        "id": "1782376173109592888",
+        "type": "TalkNode",
+        "name": "击杀秽兽开车",
+        "dialogues": [
+          {
+            "id": 71009102,
+            "content": "(The sounds of battle have drawn more enemies.)",
+            "npc": 800006,
+            "next": 71009103
+          }
+        ]
+      },
+      {
+        "id": "1782376173109592889",
+        "type": "TalkNode",
+        "name": "击杀怪物开车",
+        "dialogues": [
+          {
+            "id": 71009103,
+            "content": "(The area is clear for the moment. Now's your chance to free the Geniemon.)",
+            "npc": 800006
           }
         ]
       }

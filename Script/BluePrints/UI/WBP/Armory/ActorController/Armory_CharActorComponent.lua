@@ -144,7 +144,7 @@ function M:LoadPlayerInfo()
     return
   end
   local Hp = math.floor(math.max(self.PlayerInfo.HpRate * Player:GetAttr("MaxHp"), 1))
-  Player:SetAttr("Hp", Hp)
+  Player:SetHpFromInitRestore(Hp)
   local MaxES = Player:GetAttr("MaxES")
   if MaxES and 0 ~= MaxES then
     local ES = math.floor(self.PlayerInfo.ESRate * MaxES)
@@ -196,15 +196,11 @@ local function ChangeCharModelInternal(self, PlayCharacter, Avatar, CharInfo, Ch
   end
   if Char and GameMode then
     CharId = Char.CharId
-    AvatarBattleInfo = AvatarUtils:GetDefaultBattleInfo(Avatar, {Char = Char})
-    AvatarBattleInfo = {AvatarInfo = AvatarBattleInfo}
-    AvatarBattleInfo = GameMode:SimplifyInfoForInit(AvatarBattleInfo)
-    AvatarBattleInfo.FromArmory = true
-    if AvatarBattleInfo.AvatarInfo then
-      AvatarBattleInfo.AvatarInfo.MeleeWeapon = nil
-      AvatarBattleInfo.AvatarInfo.RangedWeapon = nil
+    AvatarBattleInfo = AvatarUtils:BuildPreviewCharacterInitInfo(Avatar, {Char = Char})
+    if AvatarBattleInfo then
+      AvatarBattleInfo = GameMode:SimplifyInfoForInit(AvatarBattleInfo)
+      PlayCharacter:InitCharacterInfo(AvatarBattleInfo)
     end
-    PlayCharacter:InitCharacterInfo(AvatarBattleInfo)
   else
     CharId = CharInfo.CharId
     AvatarBattleInfo.FromOtherWorld = true
@@ -213,7 +209,6 @@ local function ChangeCharModelInternal(self, PlayCharacter, Avatar, CharInfo, Ch
   end
   PlayCharacter:ClearWeapon()
   PlayCharacter:SetCharacterTag("Interactive")
-  PlayCharacter:KawaiiSwitch(true)
   if PlayCharacter.PlayerAnimInstance then
     PlayCharacter.PlayerAnimInstance:SetKawiiLayerState(EKawaiiLayerState.EKLS_Armory)
   end
@@ -315,8 +310,8 @@ end
 
 function M:CreatePlayerActor()
   local UIManager = UIManager(self.ViewUI)
-  local IsCharActorFistCreated
-  self.ArmoryPlayer, IsCharActorFistCreated = UIManager:CreateOrGetArmoryPlayerActor(self.CurrentCharInfo, self:GetAvatar())
+  local IsCharActorFirstCreated
+  self.ArmoryPlayer, IsCharActorFirstCreated = UIManager:CreateOrGetArmoryPlayerActor(self.CurrentCharInfo, self:GetAvatar(), {bLightweightPreview = false})
   PlayerActorRefs[self] = self.ArmoryPlayer
   self:UpdateAudioListener()
   self:ClearPlayerHideTag(self.ArmoryPlayer)
@@ -324,7 +319,7 @@ function M:CreatePlayerActor()
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self.ViewUI, 0)
   Params.PreRoleId = Player.CurrentRoleId
   Params.PrePlayerCapsuleHalfHeight = Player.CapsuleComponent:GetScaledCapsuleHalfHeight()
-  if not IsCharActorFistCreated and self.CurrentCharInfo then
+  if not IsCharActorFirstCreated and self.CurrentCharInfo then
     self:ChangeCharModel(self.CurrentCharInfo, true, nil, true)
   end
   self.CurrentAppearanceInfo = self.ArmoryPlayer.InfoForInit and self.ArmoryPlayer.InfoForInit.AppearanceSuit
@@ -339,7 +334,6 @@ function M:CreatePlayerActor()
     if IsValid(UIManager.ArmoryWeapon) then
       UIManager.ArmoryWeapon:SetActorHideTag(self.UIName, true)
     end
-    PlayerActor:KawaiiSwitch(true)
     if PlayerActor.PlayerAnimInstance then
       PlayerActor.PlayerAnimInstance:SetKawiiLayerState(EKawaiiLayerState.EKLS_Armory)
     end
@@ -369,7 +363,7 @@ function M:CreatePlayerActor()
   end
   self:SetReflectionActor(self.ArmoryPlayer, PlayerReflection)
   PlayerReflectionRefs[self] = PlayerReflection
-  if not IsCharActorFistCreated and self.CurrentCharInfo then
+  if not IsCharActorFirstCreated and self.CurrentCharInfo then
     self:ChangeCharModel(self.CurrentCharInfo, true, nil, true)
   end
   AfterCreated(PlayerReflection)
@@ -502,6 +496,39 @@ function M:StopPlayerMontage(Params)
     self:StopSequence()
   end
   self.CurMontageTag = "None"
+end
+
+function M:PausePlayerMontage()
+  self.IsMontagePaused = true
+  
+  local function PauseMontage(PlayerCharacter)
+    if nil == PlayerCharacter then
+      return
+    end
+    PlayerCharacter.PlayerAnimInstance:Montage_Pause()
+  end
+  
+  local Player = self:GetPlayerActor()
+  PauseMontage(Player)
+  PauseMontage(self:GetReflectionActor(Player))
+end
+
+function M:ResumePlayerMontage()
+  if not self.IsMontagePaused then
+    return
+  end
+  self.IsMontagePaused = false
+  
+  local function ResumeMontage(PlayerCharacter)
+    if nil == PlayerCharacter then
+      return
+    end
+    PlayerCharacter.PlayerAnimInstance:Montage_Resume()
+  end
+  
+  local Player = self:GetPlayerActor()
+  ResumeMontage(Player)
+  ResumeMontage(self:GetReflectionActor(Player))
 end
 
 function M:StopPlayerFX()

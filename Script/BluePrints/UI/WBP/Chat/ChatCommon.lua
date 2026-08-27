@@ -95,6 +95,7 @@ ChatCommon.GiftCopyHeader = "ChatGift:"
 ChatCommon.AsyncCombatRoomCopyHeader = "AsyncCombatRoom:"
 ChatCommon.GuildRecruitHeader = "GuildRecruit:"
 ChatCommon.AutoChessShareHeader = "AutoChessShare:"
+ChatCommon.TeamInfoHeader = "TeamInfo:"
 ChatCommon.ChatFocusType = {
   Default = 0,
   PlayerList = 1,

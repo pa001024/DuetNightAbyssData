@@ -459,6 +459,11 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("WeaponTemplate", {
+  [41] = {
+    RuleId = 41,
+    WeaponId = 41,
+    WeaponLevel = 70
+  },
   [111] = {
     RuleId = 111,
     WeaponId = 10103,
@@ -1992,6 +1997,13 @@ return ReadOnly("WeaponTemplate", {
     WeaponId = 10403,
     WeaponLevel = 70
   },
+  [7010405] = {
+    ModId = T.RT_3,
+    ModLevel = T.RT_12,
+    RuleId = 7010405,
+    WeaponId = 10405,
+    WeaponLevel = 70
+  },
   [7010501] = {
     ModId = T.RT_36,
     ModLevel = T.RT_37,
@@ -3339,11 +3351,25 @@ return ReadOnly("WeaponTemplate", {
     WeaponId = 10105,
     WeaponLevel = 30
   },
+  [10105002] = {
+    ModId = T.RT_3,
+    ModLevel = T.RT_12,
+    RuleId = 10105002,
+    WeaponId = 10105,
+    WeaponLevel = 70
+  },
   [10107001] = {
     ModId = T.RT_3,
     ModLevel = T.RT_12,
     RuleId = 10107001,
     WeaponId = 10107,
+    WeaponLevel = 70
+  },
+  [10201001] = {
+    ModId = T.RT_3,
+    ModLevel = T.RT_12,
+    RuleId = 10201001,
+    WeaponId = 10201,
     WeaponLevel = 70
   },
   [10202001] = {
@@ -3391,6 +3417,13 @@ return ReadOnly("WeaponTemplate", {
     ModLevel = T.RT_12,
     RuleId = 10403001,
     WeaponId = 10403,
+    WeaponLevel = 70
+  },
+  [10405001] = {
+    ModId = T.RT_3,
+    ModLevel = T.RT_2,
+    RuleId = 10405001,
+    WeaponId = 10405,
     WeaponLevel = 70
   },
   [10502001] = {
@@ -4093,6 +4126,20 @@ return ReadOnly("WeaponTemplate", {
     WeaponId = 20101,
     WeaponLevel = 70
   },
+  [20102001] = {
+    ModId = T.RT_5,
+    ModLevel = T.RT_12,
+    RuleId = 20102001,
+    WeaponId = 20102,
+    WeaponLevel = 70
+  },
+  [20201001] = {
+    ModId = T.RT_5,
+    ModLevel = T.RT_12,
+    RuleId = 20201001,
+    WeaponId = 20201,
+    WeaponLevel = 70
+  },
   [20203001] = {
     ModId = T.RT_7,
     ModLevel = T.RT_12,
@@ -4466,6 +4513,14 @@ return ReadOnly("WeaponTemplate", {
     RuleId = 701030401,
     WeaponCostumeId = 3010107,
     WeaponId = 10304,
+    WeaponLevel = 70
+  },
+  [701040501] = {
+    ModId = T.RT_3,
+    ModLevel = T.RT_12,
+    RuleId = 701040501,
+    WeaponCostumeId = 3010615,
+    WeaponId = 10405,
     WeaponLevel = 70
   },
   [702020701] = {

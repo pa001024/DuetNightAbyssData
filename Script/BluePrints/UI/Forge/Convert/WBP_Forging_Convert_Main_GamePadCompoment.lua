@@ -178,7 +178,7 @@ function M:Handle_KeyDownOnGamePad(KeyName)
     return true
   elseif KeyName == UIConst.GamePadKey.LeftThumb then
     if self.CurFocusedItem then
-      self:OnEMListItemClicked(self.CurFocusedItem)
+      self:SelectEMListItem(self.CurFocusedItem)
       self:RefreshItemDetails(self.CurFocusedItem)
     end
     return true

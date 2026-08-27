@@ -633,21 +633,6 @@ return ReadOnly("DanmakuCreature", {
     TimeLife = 8,
     Vars = {DanmakuScale = 0.5}
   },
-  [852001] = {
-    BPPath = "/Game/BluePrints/Combat/Danmaku/BP_DanmakuCreatures/BP_DanmakuCreature_BossTuosi_Skill07.BP_DanmakuCreature_BossTuosi_Skill07",
-    BoundCount = 1,
-    BreakCount = 1,
-    CanHitDurScale = true,
-    DanmakuCreatureId = 852001,
-    HitEnemy = {852099},
-    HitScene = {8520100},
-    MatPath = "/Game/Asset/Effect/Material/Lightning/m_ball_Taki_001.m_ball_Taki_001",
-    ScaleInfo = T.RT_5,
-    ShapeInfo = T.RT_6,
-    Speed = 1000,
-    Tags = T.RT_3,
-    TimeLife = 4
-  },
   [600000401] = {
     BPPath = "/Game/BluePrints/Combat/Danmaku/BP_DanmakuCreatures/BP_DanmakuCreature_Strong_Thunder_Bullet.BP_DanmakuCreature_Strong_Thunder_Bullet",
     BoundCount = 1,

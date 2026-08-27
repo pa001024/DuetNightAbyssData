@@ -6,9 +6,9 @@
       11202
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "（待包装）米笛奥伦之索求的描述",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_11",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "Pursuit of Midioren"
+    "name": "RLPTreasureGroup_Name_11"
   },
   {
     "id": 12,
@@ -17,9 +17,9 @@
       12202
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "（待包装）艾伊基斯之勇猛的描述",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_12",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "Valour of Aegis"
+    "name": "RLPTreasureGroup_Name_12"
   },
   {
     "id": 13,
@@ -28,9 +28,9 @@
       13202
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "（待包装）狄欧普拉之巧艺的描述",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_13",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "Craft of Dioptra"
+    "name": "RLPTreasureGroup_Name_13"
   },
   {
     "id": 14,
@@ -39,9 +39,9 @@
       14202
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "（待包装）塞库勒姆之开创的描述",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_14",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "Genesis of Saeculum"
+    "name": "RLPTreasureGroup_Name_14"
   },
   {
     "id": 15,
@@ -50,9 +50,9 @@
       15202
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "（待包装）德拉克玛之精明的描述",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_15",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "Acumen of Drakhma"
+    "name": "RLPTreasureGroup_Name_15"
   },
   {
     "id": 16,
@@ -61,9 +61,9 @@
       16202
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "（待包装）逻各斯之洞见的描述",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_16",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "Insight of Logos"
+    "name": "RLPTreasureGroup_Name_16"
   },
   {
     "id": 17,
@@ -72,9 +72,9 @@
       17201
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "Damage dealt by Consonance Weapons is increased by <Highlight>100%</>.",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_17",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "Crimson Beasts"
+    "name": "RLPTreasureGroup_Name_17"
   },
   {
     "id": 18,
@@ -84,9 +84,9 @@
       18301
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "While all allies are within <Highlight>30</>m of one another, all allies' Damage Dealt is increased by <Highlight>100%</>.",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_18",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "Plumes Entwined"
+    "name": "RLPTreasureGroup_Name_18"
   },
   {
     "id": 19,
@@ -95,9 +95,9 @@
       19201
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "With all <Highlight>2</> [Guardian Knight] Artefacts collected, your character gains Ultra Shield points equal to <Highlight>10%</> Max HP every <Highlight>10</>s.",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_19",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "Guardian Knight"
+    "name": "RLPTreasureGroup_Name_19"
   },
   {
     "id": 20,
@@ -107,9 +107,9 @@
       20201
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "Skill DMG, Melee Weapon DMG, and Ranged Weapon DMG are no longer reduced.",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_20",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "Bird-Masked Freak"
+    "name": "RLPTreasureGroup_Name_20"
   },
   {
     "id": 21,
@@ -119,9 +119,9 @@
       21301
     ],
     "bigIcon": "T_Rouge_TreasureGroup_2",
-    "groupEffectDesc": "（待包装）繁荣之神的描述",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_21",
     "icon": "T_Rouge_TreasureGroup_2_1",
-    "name": "God of Abundance"
+    "name": "RLPTreasureGroup_Name_21"
   },
   {
     "id": 22,
@@ -132,9 +132,9 @@
       22104
     ],
     "bigIcon": "T_Rouge_TreasureGroup_3",
-    "groupEffectDesc": "With all <Highlight>4</> [Four Elemental Seals] Artefacts collected, Trigger Probability is set to <Highlight>50%</>, Damage Multiplier is set to <Highlight>100%</>, and all damage is converted to True Damage.",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_22",
     "icon": "T_Rouge_TreasureGroup_3_1",
-    "name": "Four Elemental Seals"
+    "name": "RLPTreasureGroup_Name_22"
   },
   {
     "id": 23,
@@ -145,9 +145,9 @@
       23301
     ],
     "bigIcon": "T_Rouge_TreasureGroup_4",
-    "groupEffectDesc": "With all <Highlight>4</> [Penitent Knight] Artefacts collected, removes the penalty and increases total damage bonus to <Highlight>400%</>.",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_23",
     "icon": "T_Rouge_TreasureGroup_4_1",
-    "name": "Penitent Knight"
+    "name": "RLPTreasureGroup_Name_23"
   },
   {
     "id": 24,
@@ -156,9 +156,9 @@
       24201
     ],
     "bigIcon": "T_Rouge_TreasureGroup_5",
-    "groupEffectDesc": "With all <Highlight>2</> [Forlorn Sorceress] Artefacts collected, increases [Stance] reduction by <Highlight>100%</>, and Damage Dealt to enemies under [Ask's Retribution] by <Highlight>100%</>.",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_24",
     "icon": "T_Rouge_TreasureGroup_5_1",
-    "name": "Forlorn Sorceress"
+    "name": "RLPTreasureGroup_Name_24"
   },
   {
     "id": 25,
@@ -171,9 +171,9 @@
       25306
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "（待包装）圣迹残像的描述",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_25",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "Sacred Vestiges"
+    "name": "RLPTreasureGroup_Name_25"
   },
   {
     "id": 26,
@@ -184,8 +184,8 @@
       26301
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "（待包装）闲逸学者的描述",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_26",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "Scholar's Leisure"
+    "name": "RLPTreasureGroup_Name_26"
   }
 ]

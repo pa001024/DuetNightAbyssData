@@ -15,6 +15,7 @@ function Common_BlackScreen_C:OnLoaded(...)
   self.OutAnimationPlayTime = Params.OutAnimationPlayTime
   self.OutAnimationBPSetting = Params.OutAnimationBPSetting
   self.IsPlayOutWhenLoaded = Params.IsPlayOutWhenLoaded
+  EventManager:FireEvent(EventID.OnCommonBlackScreenBegin, self:GetName())
   self:BindToAnimationFinished(self.In, function()
     if self.InAnimationObj and self.InAnimationCallback then
       self.InAnimationCallback(self.InAnimationObj)
@@ -39,6 +40,11 @@ function Common_BlackScreen_C:OnLoaded(...)
   else
     self:PlayInAnimationWhenLoaded()
   end
+end
+
+function Common_BlackScreen_C:OnEndClose()
+  self.Super.OnEndClose(self)
+  EventManager:FireEvent(EventID.OnCommonBlackScreenEnd, self:GetName())
 end
 
 function Common_BlackScreen_C:InitScreenColor()

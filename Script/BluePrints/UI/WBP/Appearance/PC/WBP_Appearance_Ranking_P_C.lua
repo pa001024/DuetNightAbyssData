@@ -22,13 +22,25 @@ function M:InitCommonTab()
     },
     {
       GamePadInfoList = {
+        {Type = "Img", ImgShortPath = "A"}
+      },
+      Desc = GText("UI_Controller_Check"),
+      bLongPress = false
+    },
+    {
+      GamePadInfoList = {
         {Type = "Img", ImgShortPath = "RH"}
       },
       Desc = GText("UI_CTL_RotatePreview")
     },
     {
       KeyInfoList = {
-        {Type = "Text", Text = "Esc"}
+        {
+          Type = "Text",
+          Text = "Esc",
+          ClickCallback = self.CloseSelf,
+          Owner = self
+        }
       },
       GamePadInfoList = {
         {Type = "Img", ImgShortPath = "B"}
@@ -54,6 +66,36 @@ function M:InitCommonTab()
   local TabWidget = self.Com_Tab or self.Tab
   if TabWidget then
     TabWidget:Init(self.TabConfigData, true)
+  end
+end
+
+function M:UpdateTapBottomKeyInfo(IsMenuOpened)
+  if not self.MenuBottomKeyInfo then
+    self.MenuBottomKeyInfo = {
+      {
+        GamePadInfoList = {
+          {Type = "Img", ImgShortPath = "A"}
+        },
+        Desc = GText("UI_Tips_Ensure"),
+        bLongPress = false
+      },
+      {
+        GamePadInfoList = {
+          {Type = "Img", ImgShortPath = "B"}
+        },
+        Desc = GText("UI_BACK"),
+        bLongPress = false
+      }
+    }
+  end
+  local TabWidget = self.Com_Tab or self.Tab
+  if not TabWidget or not TabWidget.UpdateBottomKeyInfo then
+    return
+  end
+  if IsMenuOpened then
+    TabWidget:UpdateBottomKeyInfo(self.MenuBottomKeyInfo)
+  else
+    TabWidget:UpdateBottomKeyInfo(self.NormalBottomKeyInfo)
   end
 end
 

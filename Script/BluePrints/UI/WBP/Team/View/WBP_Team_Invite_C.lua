@@ -7,8 +7,6 @@ local M = Class({
 
 function M:Construct()
   M.Super.Construct(self)
-  local RejectTime = DataMgr.GlobalConstant.InviteRejectTime.ConstantValue
-  self.Text_Tip:SetText(string.format(GText("UI_Team_Ignore"), RejectTime))
   self.BtnYes_Mobile:BindEventOnClicked(self, self.OnBtnClick, true)
   
   function self.BtnYes_Mobile.SoundFunc()
@@ -65,6 +63,9 @@ function M:Construct()
     UIManager(self):GetGameInputModeSubsystem().OnInputMethodChanged:Add(self, self.OnInputDeviceChange)
     self:OnInputDeviceChange()
     self:AddDispatcher(EventID.GameViewportInputKeyReleased, self, function(self, Key, AnyHandled)
+      if not self:IsVisible() then
+        return
+      end
       if Key.KeyName == "Y" then
         self:OnBtnClick(true)
         AnyHandled.bHandled = true
@@ -77,6 +78,9 @@ function M:Construct()
       end
     end)
     self:AddDispatcher(EventID.GameViewportInputKeyPressed, self, function(self, Key, AnyHandled)
+      if not self:IsVisible() then
+        return
+      end
       DebugPrint("OnInputKey_Lua" .. EventID.GameViewportInputKeyPressed, Key)
       if Key.KeyName == UIConst.GamePadKey.SpecialRight then
         self:OnBtnClick(true)
@@ -183,10 +187,17 @@ function M:InitUIInfo(Name, bInUIMode, EventList, ...)
     self.Panel_Tip:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Text_Title:SetText(GText("UI_Team_Invitation"))
     self.Text_Request:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    local RejectTime = DataMgr.GlobalConstant.InviteRejectTime.ConstantValue
+    self.Text_Tip:SetText(string.format(GText("UI_Team_Ignore"), RejectTime))
   elseif self.InviteType == InviteQueueManager.InviteType.Guild then
     self.Panel_Tip:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Text_Title:SetText(GText("UI_GuildInvitation"))
     self.Text_Request:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  elseif self.InviteType == InviteQueueManager.InviteType.TeamHall then
+    self.Panel_Tip:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Text_Title:SetText(GText("UI_TeamHall_Invitation"))
+    self.Text_Request:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Text_Tip:SetText(string.format(GText("UI_TeamHall_Ignore")))
   end
   if TeamController:IsMobile() then
     self.CheckBox_Tip.KeyHolder:SetVisibility(UIConst.VisibilityOp.Collapsed)

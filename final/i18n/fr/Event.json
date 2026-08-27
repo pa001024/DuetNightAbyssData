@@ -119,6 +119,20 @@
     "endTime": 1788771600
   },
   {
+    "id": 101018,
+    "name": "Retour de la pécheresse",
+    "desc": "Connectez-vous pendant 7 jours pour recevoir des récompenses",
+    "startTime": 1788746400,
+    "endTime": 1792400400
+  },
+  {
+    "id": 101019,
+    "name": "Lueur ravivée",
+    "desc": "Dans le vent glacé, elle ravive les braises de son cœur et salue l’avenir.\nConnectez-vous 5 jours pendant l’événement pour obtenir des récompenses.",
+    "startTime": 1792029600,
+    "endTime": 1793048400
+  },
+  {
     "id": 102001,
     "name": "Huaxu — Parfums et Merveilles",
     "desc": "Huaxu, terre paisible où flotte un parfum d’encens.\nVous y êtes {性别:convié|conviée}, attendant que Zhiliu vous dévoile un paysage éthéré, à la fois immémorial et jamais vu.",
@@ -138,6 +152,13 @@
     "desc": "À la veille du Flot d’étoiles argentées vers le sud, les joies et les peines de chacun continuaient de se jouer sur la scène de la Gare des Cent-Fleurs.\nTerminez la nouvelle série de quêtes de la Gare des Cent-Fleurs pour obtenir des récompenses.\nCondition de déblocage : terminez le chapitre « Flot d’étoiles argentées » de l’histoire principale, puis acceptez et terminez les quêtes secondaires « Pain noir et beurre » et « Quand le sifflet pleure » à la Gare des Cent-Fleurs pour débloquer cet événement.",
     "startTime": 1785117600,
     "endTime": 1788771600
+  },
+  {
+    "id": 102004,
+    "name": "Guide de flânerie festive",
+    "desc": "Après avoir franchi montagnes profondes et forêts épaisses, vous découvrez une ville qui vous est totalement inconnue.\nSes habitants vous tendent chaleureusement la main et vous invitent à entrer avec eux dans un paradis digne d’un conte de fées.",
+    "startTime": 1788746400,
+    "endTime": 1792400400
   },
   {
     "id": 103001,
@@ -272,7 +293,7 @@
   },
   {
     "id": 103020,
-    "name": "Souvenirs étoilés",
+    "name": "Souvenirs étoilés I",
     "desc": "Terminez des missions pendant l’événement pour obtenir des récompenses",
     "startTime": 1777514400,
     "endTime": 1779051599,
@@ -328,7 +349,7 @@
     "desc": "Le temps, c’est la réputation. Pour l’honneur de la Gare des Cent-Fleurs, Eisenbahn exige de tous ses employés qu’ils soient prêts à tout moment à aller toujours plus vite — y compris leurs Géniemon.",
     "startTime": 1785981600,
     "endTime": 1787000400,
-    "rule": "<H>Règles de l’événement « Périple doré – Course de Géniemon »</>\n\n1) Pendant l’événement, la phase de paris se déroule chaque jour de 5 h 00 à 20 h 00 (heure du serveur). Durant cette période, vous pouvez sélectionner jusqu’à 6 participants à soutenir depuis l’interface de l’événement et utiliser des Insignes de Géniemon pour leur apporter votre soutien. Les Chasseurs de Phoxène peuvent modifier leurs choix à tout moment pendant cette phase. En revanche, les Insignes de Géniemon déjà utilisés ne peuvent pas être récupérés ; seul leur nombre peut être augmenté.\n\n2) Pendant la phase de paris, les Chasseurs de Phoxène peuvent consulter l’état de chaque participant. La vitesse de départ de la journée dépend de sa vitesse de base ainsi que de son état du jour. Il est également possible de dépenser des Insignes de Géniemon afin d’obtenir des informations sur l’état des participants.\n\n3) De 20 h 00 à 20 h 30 (heure du serveur) a lieu la synchronisation des résultats. Durant cette période, il n’est plus possible de modifier les participants soutenus ni d’utiliser des Insignes de Géniemon.\n\n4) De 20 h 30 à 5 h 00 le lendemain (heure du serveur) se déroule la publication des résultats. Durant cette période, les Chasseurs de Phoxène peuvent se rendre sur le lieu de la compétition afin de consulter les résultats et récupérer les récompenses de pari du jour.\n\n5) Si vous n’avez soutenu aucun participant en utilisant des Insignes de Géniemon pendant la phase de paris, vous pourrez uniquement consulter les résultats lors de leur publication et ne pourrez pas récupérer les récompenses de pari du jour.\n\n6) Les récompenses de pari de chaque journée peuvent être récupérées jusqu’à 5 h 00 le lendemain (heure du serveur). Pensez à les récupérer avant leur expiration."
+    "rule": "<H>Règles de l’événement « Périple doré – Course de Géniemon »</>\n \n1) Pendant l’événement, la phase de paris se déroule chaque jour de 5 h 00 à 20 h 00 (heure du serveur). Durant cette période, vous pouvez sélectionner jusqu’à 6 participants à soutenir depuis l’interface de l’événement et utiliser des Insignes de Géniemon pour leur apporter votre soutien. Les Chasseurs de Phoxène peuvent modifier leurs choix à tout moment pendant cette phase. En revanche, les Insignes de Géniemon déjà utilisés ne peuvent pas être récupérés ; seul leur nombre peut être augmenté.\n \n2) Pendant la phase de paris, les Chasseurs de Phoxène peuvent consulter l’état de chaque participant. La vitesse de départ de la journée dépend de sa vitesse de base ainsi que de son état du jour. Il est également possible de dépenser des Insignes de Géniemon afin d’obtenir des informations sur l’état des participants.\n \n3) De 20 h 00 à 20 h 30 (heure du serveur) a lieu la synchronisation des résultats. Durant cette période, il n’est plus possible de modifier les participants soutenus ni d’utiliser des Insignes de Géniemon.\n \n4) De 20 h 30 à 5 h 00 le lendemain (heure du serveur) se déroule la publication des résultats. Durant cette période, les Chasseurs de Phoxène peuvent se rendre sur le lieu de la compétition afin de consulter les résultats et récupérer les récompenses de pari du jour.\n \n5) Si vous n’avez soutenu aucun participant en utilisant des Insignes de Géniemon pendant la phase de paris, vous pourrez uniquement consulter les résultats lors de leur publication et ne pourrez pas récupérer les récompenses de pari du jour.\n \n6) Les récompenses de pari de chaque journée peuvent être récupérées jusqu’à 5 h 00 le lendemain (heure du serveur). Pensez à les récupérer avant leur expiration."
   },
   {
     "id": 103026,
@@ -344,6 +365,36 @@
     "desc": "Simulation inspirée du Tournoi de l’Encens de Huaxu. Terminez les épreuves pour obtenir de nombreuses récompenses.",
     "startTime": 1785117600,
     "endTime": 1788814800
+  },
+  {
+    "id": 103029,
+    "name": "Luno, la bourse ou la vie !",
+    "desc": "Lulu, pilleuse de loot, sort déjà du Phoxène pour implorer pitié... On la laisse filer ?",
+    "startTime": 1788746400,
+    "endTime": 1790629200,
+    "rule": "1) Pendant l’événement, les joueurs peuvent récupérer gratuitement une quantité définie de Phoxène une fois par jour. Après l’avoir récupérée, vous pouvez acheter « Bonus quotidien » pour augmenter la quantité de Phoxène du jour, ou acheter « Bonus global » pour augmenter la quantité de Phoxène du jour ainsi que celle des jours restants.\n2) Effet du bonus : après achat, le total de Phoxène obtenu pour le jour concerné équivaut à 5 fois la quantité gratuite du jour.\n3) Après le premier achat de « Bonus quotidien », vous ne pourrez plus acheter « Bonus global »."
+  },
+  {
+    "id": 103030,
+    "name": "Souvenirs figés",
+    "desc": "Immortaliser le passé dans les jeux d’ombre et de lumière, et garder une trace de notre voyage.",
+    "startTime": 1789005600,
+    "endTime": 1790629200,
+    "rule": "1. Pendant l’événement, de nouveaux défis photo sont débloqués chaque jour\n2. Une fois les défis terminés, rendez-vous dans l’interface de l’événement pour récupérer vos récompenses\n"
+  },
+  {
+    "id": 103031,
+    "name": "Épreuve de chasse au trésor",
+    "desc": "Simulation inspirée du Tournoi de l’Encens de Huaxu. Terminez les épreuves pour obtenir de nombreuses récompenses.",
+    "startTime": 1788825600,
+    "endTime": 1792443600
+  },
+  {
+    "id": 103032,
+    "name": "Trésors du Marché Voilé",
+    "desc": "Ces objets anciens, patinés par le temps, ne retrouvent leur éclat qu’entre les mains de ceux qui en ont besoin.",
+    "startTime": 1790820000,
+    "endTime": 1791838800
   },
   {
     "id": 105001,
@@ -376,7 +427,7 @@
   {
     "id": 107003,
     "name": "Chemins qui se croisent",
-    "desc": "Les zones en coop seront disponibles une fois la quête « Fer noir, Fleur blanche » du Chapitre du Vagabond de la Nuit entièrement terminée. Rendez-vous sur la place de Givrelac pour participer au mode coop et recevoir de belles récompenses.",
+    "desc": "Les zones en coop seront disponibles après avoir progressé dans la quête principale « Renaissance » du Chapitre 1 du Vagabond de la Nuit jusqu’à votre arrivée à Givrelac. Rendez-vous sur la place de Givrelac pour participer au mode coop et recevoir de belles récompenses.",
     "startTime": 1761523200,
     "endTime": null
   },
@@ -463,6 +514,14 @@
     "rule": "Règles du tournoi :\n1) Le Sommet du Chasseur de Phoxène se déroule en deux phases : la Phase de groupes et le Classement suprême. À l’ouverture de l’événement, la Phase de groupes débute immédiatement.\n\n2) Durant la Phase de groupes, les escouades de Chasseurs de Phoxène obtiennent des points selon leurs performances en combat. Le meilleur score détermine leur répartition en groupes. À la fin de la phase, les récompenses sont attribuées selon le groupe atteint — pensez à les récupérer depuis la page de l’événement. Une fois la Phase de groupes terminée, le Classement suprême débute immédiatement.\n\n3) Durant la phase de Classement suprême, les escouades obtiennent des points de classement selon leurs performances à chaque défi. Le meilleur score détermine le classement au sein du groupe. Les défis du Classement suprême nécessitent un Laissez-passer d’escouade, et chaque tentative permet d’obtenir un certain nombre de Jetons de Phoxène en fonction des points gagnés.\n\n4) Les Jetons de Phoxène peuvent être échangés contre des objets dans la boutique de classement. Certains articles se débloquent selon le meilleur score atteint durant la phase de Classement suprême.\n\n5) Les escouades n’ayant pas participé à la Phase de groupes ne seront ni réparties en groupes ni classées durant le Classement suprême. Elles peuvent toutefois relever les défis du Classement suprême pour obtenir des Jetons de Phoxène et effectuer des échanges dans la boutique de classement, y compris pour les objets débloqués par les paliers de score.\n\nRègles des défis :\n1) Durant les défis de la Phase de groupes, vaincre le nombre d’ennemis requis dans le temps imparti permet de réussir le défi.\n\n2) Durant les défis du Classement suprême, vaincre des ennemis de type Menace mineure inflige des dégâts supplémentaires aux ennemis de type Menace majeure. Éliminer les ennemis de type Menace majeure dans le temps imparti permet de réussir le défi.\n\n3) Lors des défis de la Phase de groupes et du Classement suprême, des points bonus sont accordés en fonction du temps restant.\n\n4) En cas d’échec, des points sont attribués à la fin du temps imparti selon un pourcentage du score estimé."
   },
   {
+    "id": 111006,
+    "name": "Sommet du Chasseur de Phoxène",
+    "desc": "La compétition est gravée dans la nature humaine. Elle a porté nos peuples, les a faits grandir et perdurer jusqu’à aujourd’hui.\nMais ici, il ne s’agit pas de la loi du plus fort. C’est une rivalité maîtrisée — un feu qui insuffle l’élan au groupe et forge les légendes.",
+    "startTime": 1791338400,
+    "endTime": 1792789200,
+    "rule": "Règles du tournoi :\n1) Le Sommet du Chasseur de Phoxène se déroule en deux phases : la Phase de groupes et le Classement suprême. À l’ouverture de l’événement, la Phase de groupes débute immédiatement.\n\n2) Durant la Phase de groupes, les escouades de Chasseurs de Phoxène obtiennent des points selon leurs performances en combat. Le meilleur score détermine leur répartition en groupes. À la fin de la phase, les récompenses sont attribuées selon le groupe atteint — pensez à les récupérer depuis la page de l’événement. Une fois la Phase de groupes terminée, le Classement suprême débute immédiatement.\n\n3) Durant la phase de Classement suprême, les escouades obtiennent des points de classement selon leurs performances à chaque défi. Le meilleur score détermine le classement au sein du groupe. Les défis du Classement suprême nécessitent un Laissez-passer d’escouade, et chaque tentative permet d’obtenir un certain nombre de Jetons de Phoxène en fonction des points gagnés.\n\n4) Les Jetons de Phoxène peuvent être échangés contre des objets dans la boutique de classement. Certains articles se débloquent selon le meilleur score atteint durant la phase de Classement suprême.\n\n5) Les escouades n’ayant pas participé à la Phase de groupes ne seront ni réparties en groupes ni classées durant le Classement suprême. Elles peuvent toutefois relever les défis du Classement suprême pour obtenir des Jetons de Phoxène et effectuer des échanges dans la boutique de classement, y compris pour les objets débloqués par les paliers de score.\n\nRègles des défis :\n1) Durant les défis de la Phase de groupes, vaincre le nombre d’ennemis requis dans le temps imparti permet de réussir le défi.\n\n2) Durant les défis du Classement suprême, vaincre des ennemis de type Menace mineure inflige des dégâts supplémentaires aux ennemis de type Menace majeure. Éliminer les ennemis de type Menace majeure dans le temps imparti permet de réussir le défi.\n\n3) Lors des défis de la Phase de groupes et du Classement suprême, des points bonus sont accordés en fonction du temps restant.\n\n4) En cas d’échec, des points sont attribués à la fin du temps imparti selon un pourcentage du score estimé."
+  },
+  {
     "id": 112001,
     "name": "Croisière étoilée",
     "desc": "Obtenez des récompenses en fonction du temps total passé dans les Zones en coop pendant l’événement",
@@ -491,11 +550,18 @@
     "endTime": 1787518800
   },
   {
+    "id": 112005,
+    "name": "Croisière étoilée",
+    "desc": "Obtenez des récompenses en fonction du temps total passé dans les Zones en coop pendant l’événement",
+    "startTime": 1789610400,
+    "endTime": 1790715600
+  },
+  {
     "id": 113001,
-    "name": "Registre des trésors",
+    "name": "Floraison de trésors",
     "desc": "Obtenez des récompenses en fonction du montant total rechargé pendant l’événement",
-    "startTime": 3376699200,
-    "endTime": 3384925200
+    "startTime": 1788746400,
+    "endTime": 1792400400
   },
   {
     "id": 114001,
@@ -517,6 +583,13 @@
     "desc": "Ensemble, nous déciderons de la direction que prendra l’histoire. Plongez dans notre représentation et menons ensemble ce récit vers son dénouement parfait.",
     "startTime": 1785981600,
     "endTime": 1788685200
+  },
+  {
+    "id": 121003,
+    "name": "Théâtre immersif",
+    "desc": "Ensemble, nous déciderons de la direction que prendra l’histoire. Plongez dans notre représentation et menons ensemble ce récit vers son dénouement parfait.",
+    "startTime": 1789610400,
+    "endTime": 1792314000
   },
   {
     "id": 1020012,
@@ -622,6 +695,22 @@
     "rule": "<Title>Règles du Théâtre immersif</>\n\n1) Le Théâtre immersif se compose de trois sections : [Représentation classique], [Représentation à l’affiche] et [Représentation immortelle]. Vous devez terminer la section précédente pour déverrouiller la suivante. La Représentation classique est un défi unique, tandis que les Représentations à l’affiche et immortelles s’alternent à chaque mise à jour. La Représentation immortelle propose des scènes permanentes, rejouables une fois les conditions requises remplies.\n\n2) Vaincre tous les ennemis dans le temps imparti permet de réussir le défi. Chaque scène rapporte des Étoiles et des Billets souvenir. Les Étoiles donnent accès à des récompenses de palier, et les Billets souvenir peuvent être échangés à la Boutique du Théâtre contre des objets exclusifs.\n\n3) Les Représentations classique et à l’affiche comportent deux manches : l’Odyssée du héros et le Retour du héros, chacune nécessitant une équipe différente. Les récompenses finales dépendent du nombre total d’Étoiles obtenues au cours des deux manches. La Représentation immortelle ne contient que l’Odyssée du héros.\n\n4) Chaque manche se divise en cinq salles à franchir successivement. Terminer toutes les salles des deux manches permet de débloquer l’acte suivant. En cas d’échec ou de dépassement de temps, la progression s’interrompt.\n\n5) Chaque scène comporte un effet spécial appelé [Résonance scénique], qui confère des bonus ou malus pendant le combat. Ajustez votre stratégie en conséquence."
   },
   {
+    "id": 1030034,
+    "name": "Théâtre immersif",
+    "desc": "Vous êtes à la fois spectateur et acteur du récit. Entrez dans votre propre scène — là où le courage affronte les plus puissants adversaires, et où la joie d’un dénouement parfait vous attend.",
+    "startTime": 1788832800,
+    "endTime": 1790647200,
+    "rule": "<Title>Règles du Théâtre immersif</>\n\n1) Le Théâtre immersif se compose de trois sections : [Représentation classique], [Représentation à l’affiche] et [Représentation immortelle]. Vous devez terminer la section précédente pour déverrouiller la suivante. La Représentation classique est un défi unique, tandis que les Représentations à l’affiche et immortelles s’alternent à chaque mise à jour. La Représentation immortelle propose des scènes permanentes, rejouables une fois les conditions requises remplies.\n\n2) Vaincre tous les ennemis dans le temps imparti permet de réussir le défi. Chaque scène rapporte des Étoiles et des Billets souvenir. Les Étoiles donnent accès à des récompenses de palier, et les Billets souvenir peuvent être échangés à la Boutique du Théâtre contre des objets exclusifs.\n\n3) Les Représentations classique et à l’affiche comportent deux manches : l’Odyssée du héros et le Retour du héros, chacune nécessitant une équipe différente. Les récompenses finales dépendent du nombre total d’Étoiles obtenues au cours des deux manches. La Représentation immortelle ne contient que l’Odyssée du héros.\n\n4) Chaque manche se divise en cinq salles à franchir successivement. Terminer toutes les salles des deux manches permet de débloquer l’acte suivant. En cas d’échec ou de dépassement de temps, la progression s’interrompt.\n\n5) Chaque scène comporte un effet spécial appelé [Résonance scénique], qui confère des bonus ou malus pendant le combat. Ajustez votre stratégie en conséquence."
+  },
+  {
+    "id": 1030035,
+    "name": "Théâtre immersif",
+    "desc": "Vous êtes à la fois spectateur et acteur du récit. Entrez dans votre propre scène — là où le courage affronte les plus puissants adversaires, et où la joie d’un dénouement parfait vous attend.",
+    "startTime": 1790647200,
+    "endTime": 1792486800,
+    "rule": "<Title>Règles du Théâtre immersif</>\n\n1) Le Théâtre immersif se compose de trois sections : [Représentation classique], [Représentation à l’affiche] et [Représentation immortelle]. Vous devez terminer la section précédente pour déverrouiller la suivante. La Représentation classique est un défi unique, tandis que les Représentations à l’affiche et immortelles s’alternent à chaque mise à jour. La Représentation immortelle propose des scènes permanentes, rejouables une fois les conditions requises remplies.\n\n2) Vaincre tous les ennemis dans le temps imparti permet de réussir le défi. Chaque scène rapporte des Étoiles et des Billets souvenir. Les Étoiles donnent accès à des récompenses de palier, et les Billets souvenir peuvent être échangés à la Boutique du Théâtre contre des objets exclusifs.\n\n3) Les Représentations classique et à l’affiche comportent deux manches : l’Odyssée du héros et le Retour du héros, chacune nécessitant une équipe différente. Les récompenses finales dépendent du nombre total d’Étoiles obtenues au cours des deux manches. La Représentation immortelle ne contient que l’Odyssée du héros.\n\n4) Chaque manche se divise en cinq salles à franchir successivement. Terminer toutes les salles des deux manches permet de débloquer l’acte suivant. En cas d’échec ou de dépassement de temps, la progression s’interrompt.\n\n5) Chaque scène comporte un effet spécial appelé [Résonance scénique], qui confère des bonus ou malus pendant le combat. Ajustez votre stratégie en conséquence."
+  },
+  {
     "id": 10300601,
     "name": "Jeux de l’Amitié",
     "desc": "« H-hé, attends ! ATTENDS ! Cette fois, réglons ça... poliment, d’accord !?\nPar exemple... un pari ! Si tu réussis ce petit défi, je te donne tout le butin ! »\n  \n— Lulu, pilleuse de loot, recroquevillée au sol, suppliant qu’on l’épargne.",
@@ -655,7 +744,7 @@
   },
   {
     "id": 10302001,
-    "name": "Souvenirs étoilés",
+    "name": "Souvenirs étoilés I",
     "desc": "Terminez des missions pendant l’événement pour obtenir des récompenses",
     "startTime": 1782352800,
     "endTime": 1783889999,
@@ -706,6 +795,28 @@
     }
   },
   {
+    "id": 10302003,
+    "name": "Souvenirs étoilés I",
+    "desc": "Terminez des missions pendant l’événement pour obtenir des récompenses",
+    "startTime": 1790215200,
+    "endTime": 1791752399,
+    "rule": "1) Pendant l’événement, vous recevrez 2 cadeaux stellaires par jour. Chaque cadeau stellaire peut être ouvert à l’aide de 3 Pièces stellaires.\n2) Les tâches permettent d’obtenir des Pièces stellaires, utilisables pour ouvrir des cadeaux stellaires ou échanger diverses récompenses dans la boutique stellaire.",
+    "boxDrop": {
+      "boxCoinId": 223,
+      "boxMaximum": 36,
+      "boxPerDay": 2,
+      "coinPerBox": 3,
+      "eventId": 10302003,
+      "rewardCount": [
+        16
+      ],
+      "rewardId": [
+        114109,
+        114108
+      ]
+    }
+  },
+  {
     "id": 10302101,
     "name": "Cloître des prières ",
     "desc": "Pendant l’événement, vous pouvez obtenir des apparences de la série « Sept jours d’alliance » ainsi que d’autres récompenses cosmétiques.",
@@ -720,6 +831,22 @@
     "startTime": 1787018400,
     "endTime": 1790629200,
     "rule": "1) Cet événement comprend 2 manches, chacune comportant 8 récompenses. L’une d’elles est une apparence souhaitée. Une fois cette apparence obtenue dans une manche, vous recevez immédiatement toutes les récompenses restantes de cette manche.\n2) Avant le premier tissage d’une manche, vous pouvez librement modifier l’apparence souhaitée et les récompenses sélectionnées. Après un premier tissage, ces choix ne peuvent plus être modifiés pour la manche en cours.\n3) Les récompenses d’une même manche ne peuvent être obtenues qu’une seule fois. À mesure que le nombre de récompenses restantes diminue, leur probabilité d’obtention augmente proportionnellement. Une fois la manche terminée, les probabilités sont réinitialisées.\n \n4) Probabilités initiales d’obtention :\nApparence de personnage : 0,08 %\nEffet de pas : 0,92 %\nAccessoire dorsal – Haut : 1 %\nAccessoire de visage : 2 %\nCadre d’avatar : 13 %\nAvatar : 13 %\nTeinture iridescente ×3 : 35 %\nCarnet de mission — Tome III ×6 : 35 %\n \n5) Le nombre de Fils stellaires requis augmente avec le nombre de tissages effectués. Une fois la manche terminée, le coût est réinitialisé.\n \nNombre de Fils stellaires requis par tissage :\n1er tissage : Fil stellaire ×1\n2e tissage : Fil stellaire ×3\n3e tissage : Fil stellaire ×6\n4e tissage : Fil stellaire ×10\n5e tissage : Fil stellaire ×15\n6e tissage : Fil stellaire ×20\n7e tissage : Fil stellaire ×25\n8e tissage : Fil stellaire ×30"
+  },
+  {
+    "id": 10302103,
+    "name": "Rhapsodie fantasque",
+    "desc": "Pendant l’événement, vous pouvez obtenir des apparences de personnage de la série « Valse mécanique » ainsi que d’autres récompenses cosmétiques.",
+    "startTime": 1790647200,
+    "endTime": 1794214800,
+    "rule": "1) Cet événement comprend 2 manches, chacune comportant 8 récompenses. L’une d’elles est une apparence souhaitée. Une fois cette apparence obtenue dans une manche, vous recevez immédiatement toutes les récompenses restantes de cette manche.\n \n2) Remplissez les conditions de collection dans [Collection] pour obtenir automatiquement des récompenses supplémentaires. Après avoir réuni les 2 apparences de personnage de cet événement, vous pourrez récupérer la récompense d’arrière-plan par courrier.\n \n3) Avant le premier tissage d’une manche, vous pouvez librement modifier l’apparence souhaitée et les récompenses sélectionnées. Après un premier tissage, ces choix ne peuvent plus être modifiés pour la manche en cours.\n \n4) Les récompenses d’une même manche ne peuvent être obtenues qu’une seule fois. À mesure que le nombre de récompenses restantes diminue, leur probabilité d’obtention augmente proportionnellement. Une fois la manche terminée, les probabilités sont réinitialisées.\n \n5) Probabilités initiales d’obtention :\nApparence de personnage : 0,08 %\nAura : 0,92 %\nAccessoire dorsal – Haut : 1 %\nAccessoire de tête : 2 %\nCadre d’avatar : 13 %\nAvatar : 13 %\nTeinture iridescente ×3 : 35 %\nCarnet de mission — Tome III ×6 : 35 %\n \n6) Le nombre de Fils stellaires requis augmente avec le nombre de tissages effectués. Une fois la manche terminée, le coût est réinitialisé.\n \nNombre de Fils stellaires requis par tissage :\n1er tissage : Fil stellaire ×1\n2e tissage : Fil stellaire ×3\n3e tissage : Fil stellaire ×6\n4e tissage : Fil stellaire ×10\n5e tissage : Fil stellaire ×15\n6e tissage : Fil stellaire ×20\n7e tissage : Fil stellaire ×25\n8e tissage : Fil stellaire ×30"
+  },
+  {
+    "id": 10302402,
+    "name": "Fresques chatoyantes",
+    "desc": "Pendant l’événement, collectionnez certaines apparences afin d’obtenir des points et débloquer de nombreuses récompenses.",
+    "startTime": 1788746400,
+    "endTime": 1792400400,
+    "rule": "Accomplissez les tâches de collection de la liste d’apparences afin d’obtenir des points d’apparence. Débloquez les récompenses avec des Phoxènes afin d’obtenir de précieuses récompenses."
   },
   {
     "id": 103009001,
@@ -794,6 +921,22 @@
     "rule": "Pendant l’événement, les missions du Manuel des Vagabonds de la Nuit accordent un bonus de Sceaux démoniaques (jusqu’à <highlight>6</> fois par jour). Ce bonus se cumule avec celui du Manuel. En lançant une mission pendant cette période, vous obtiendrez davantage de Sceaux démoniaques.\n\nChaque jour, vous pouvez tenter jusqu’à <highlight>3</> missions temporaires de Sceaux démoniaques. Les tentatives ne se cumulent pas et sont réinitialisées lors du reset quotidien.\n\nChaque mission de Sceaux démoniaques du Manuel des Vagabonds de la Nuit possède une variante temporaire où les Ordonnateurs apparaissent en grand nombre."
   },
   {
+    "id": 103009010,
+    "name": "Jour d’abondance",
+    "desc": "Pendant l’événement, les Sceaux démoniaques ont un taux de butin accru dans les missions du Manuel des Vagabonds de la Nuit.\nDes missions temporaires de Sceaux démoniaques sont également disponibles.",
+    "startTime": 1789005600,
+    "endTime": 1789592400,
+    "rule": "Pendant l’événement, les missions du Manuel des Vagabonds de la Nuit accordent un bonus de Sceaux démoniaques (jusqu’à <highlight>6</> fois par jour). Ce bonus se cumule avec celui du Manuel. En lançant une mission pendant cette période, vous obtiendrez davantage de Sceaux démoniaques.\n\nChaque jour, vous pouvez tenter jusqu’à <highlight>3</> missions temporaires de Sceaux démoniaques. Les tentatives ne se cumulent pas et sont réinitialisées lors du reset quotidien.\n\nChaque mission de Sceaux démoniaques du Manuel des Vagabonds de la Nuit possède une variante temporaire où les Ordonnateurs apparaissent en grand nombre."
+  },
+  {
+    "id": 103009011,
+    "name": "Jour d’abondance",
+    "desc": "Pendant l’événement, les Sceaux démoniaques ont un taux de butin accru dans les missions du Manuel des Vagabonds de la Nuit.\nDes missions temporaires de Sceaux démoniaques sont également disponibles.",
+    "startTime": 1790820000,
+    "endTime": 1791406800,
+    "rule": "Pendant l’événement, les missions du Manuel des Vagabonds de la Nuit accordent un bonus de Sceaux démoniaques (jusqu’à <highlight>6</> fois par jour). Ce bonus se cumule avec celui du Manuel. En lançant une mission pendant cette période, vous obtiendrez davantage de Sceaux démoniaques.\n\nChaque jour, vous pouvez tenter jusqu’à <highlight>3</> missions temporaires de Sceaux démoniaques. Les tentatives ne se cumulent pas et sont réinitialisées lors du reset quotidien.\n\nChaque mission de Sceaux démoniaques du Manuel des Vagabonds de la Nuit possède une variante temporaire où les Ordonnateurs apparaissent en grand nombre."
+  },
+  {
     "id": 105101013,
     "name": "Traces dans le sable",
     "desc": "Aucun remède n’efface les maux enracinés du monde.\nMais sa nature, façonnée parmi les maîtres guérisseurs, en porte la douceur.\nSa silhouette flotte dans les effluves d’herbes médicinales, et chaque trait de ses prescriptions apaise, en silence, l’impermanence de la vie.",
@@ -864,6 +1007,13 @@
     "endTime": 1788771600
   },
   {
+    "id": 105101023,
+    "name": "Traces dans le sable",
+    "desc": "Honneur, clémence et dignité... Il suffisait de baisser la tête et d’implorer pour obtenir tout ce que l’on désirait.\nElle en fut longtemps convaincue, jusqu’à tout perdre.\nLes regrets vinrent trop tard, et les morts ne reviendraient plus.\nIl ne lui restait qu’à forger ce corps brisé en une lame qui ne plierait ni ne reculerait jamais.",
+    "startTime": 1788746400,
+    "endTime": 1792400400
+  },
+  {
     "id": 105102011,
     "name": "Quand les rêves se parent de nuit",
     "desc": "Par une nuit d’été, sous un ciel étoilé, la forêt s’anime d’une valse où se mêlent pensées sauvages et ailes de papillon... Un spectacle qu’elle n’avait jamais contemplé.",
@@ -925,5 +1075,12 @@
     "desc": "La première neige se pose sur les épaules, et le rideau se lève sur l’histoire.",
     "startTime": 1785117600,
     "endTime": 1788771600
+  },
+  {
+    "id": 105102025,
+    "name": "Jusqu’aux flammes infernales",
+    "desc": "Même l’enfer ne marque pas la fin de sa traque.",
+    "startTime": 1788746400,
+    "endTime": 1792400400
   }
 ]

@@ -16,6 +16,9 @@ local TypeSort = {
   Resource = 6,
   Drop = 7
 }
+local NIGHTBOOK_STATES_UINAME = "NightBookStates"
+local ATTR_FILTER_OPEN_KEY = Const.GamepadSpecialLeft
+local ATTR_FILTER_OPEN_KEYIMG = "View"
 
 function M:Construct()
   self.IsPC = CommonUtils.GetDeviceTypeByPlatformName(self) == "PC"
@@ -54,6 +57,21 @@ function M:Construct()
   self.SelectCellIndex = 0
   self.DoubleMod = self:IsDoubleMod()
   self.Btn_Qa:BindEventOnClicked(self, self.OnTips)
+  local GameInstance = GWorld.GameInstance
+  if GameInstance then
+    GameInstance.NightBookAttrFilter = GameInstance.NightBookAttrFilter or {}
+    self.AttrFilterByLevel = GameInstance.NightBookAttrFilter
+  else
+    self.AttrFilterByLevel = {}
+  end
+  self.AttrFilterMenuOpen = false
+  self.Text_Switch:SetText(GText("UI_Controller_Switch"))
+  self.Btn_Switch.OnClicked:Add(self, self.OnAttrFilterEntryClicked)
+  if self.Btn_Switch.SetIsFocusable then
+    self.Btn_Switch:SetIsFocusable(false)
+  end
+  self.Panel_States.OnGetMenuContentEvent:Bind(self, self.OnProvideAttrFilterContent)
+  self.Panel_States.OnMenuOpenChanged:Add(self, self.OnAttrFilterMenuOpenChanged)
   if self.IsMobile then
     return
   end
@@ -79,6 +97,11 @@ function M:Construct()
 end
 
 function M:Destruct()
+  if self.AttrFilterMenuOpen then
+    self.AttrFilterMenuOpen = false
+    self:RestoreGlobalKeysAfterAttrFilter()
+  end
+  self.bAttrFilterClosing = false
   self:PlayAnimation(self.Out)
 end
 
@@ -138,9 +161,14 @@ function M:RefreshData()
   end)
   self:UpdatKeyDisplay()
   local UnlockedMaxIndex = 0
+  local CachedTabName = EMCache:Get("NightBook_LastTab", true)
+  local CachedTabIndex
   for i, DungeonData in ipairs(SortedDungeonData) do
     if PageJumpUtils:CheckDungeonCondition(DungeonData.Condition) then
       UnlockedMaxIndex = i
+      if CachedTabName and DungeonData.Name == CachedTabName then
+        CachedTabIndex = i
+      end
     end
   end
   for i, DungeonData in ipairs(SortedDungeonData) do
@@ -152,7 +180,7 @@ function M:RefreshData()
     Content.Index = i
     local Level = tonumber(string.match(DungeonData.Name or "", "_(%d+)$"))
     Content.Level = Level
-    if i == UnlockedMaxIndex and 0 == self.SelectCellIndex then
+    if i == (CachedTabIndex or UnlockedMaxIndex) and 0 == self.SelectCellIndex then
       self.SelectCellIndex = i
     end
     self.List_NigheBookTab:AddItem(Content)
@@ -188,6 +216,120 @@ function M:OnClickedCell(Content)
   self.List_NigheBookTab:NavigateToIndex(self.SelectCellContent.Index - 1)
   Content.UI:SelectCell()
   Content.UI:RefreshDungeonRewards()
+  self:RefreshAttrFilterIcon(self.AttrFilterByLevel[Content.DungeonData.Name])
+  EMCache:Set("NightBook_LastTab", Content.DungeonData.Name, true)
+end
+
+function M:OnProvideAttrFilterContent()
+  self.StatesWidget = self:CreateWidgetNew(NIGHTBOOK_STATES_UINAME)
+  return self.StatesWidget
+end
+
+function M:OnAttrFilterEntryClicked()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_level_02", nil, nil)
+  if self.AttrFilterMenuOpen then
+    self:CloseAttrFilterMenu()
+    return
+  end
+  if self.bAttrFilterClosing then
+    return
+  end
+  if self.AttrFilterJustClosed then
+    return
+  end
+  self.Panel_States:Open(true)
+  if self.StatesWidget then
+    local CurrentLevel = self.SelectCellContent and self.SelectCellContent.DungeonData and self.SelectCellContent.DungeonData.Name
+    local SelectedAttr = CurrentLevel and self.AttrFilterByLevel[CurrentLevel] or "All"
+    self.StatesWidget:Init(self, SelectedAttr)
+    if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
+      self:AddTimer(0.03, function()
+        if self.StatesWidget then
+          self.StatesWidget:NavigateToSelected()
+        end
+      end, false, 0, "NightBookAttrFilterFocus")
+    end
+  end
+end
+
+function M:_FocusBackToLevelTab()
+  if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad and self.SelectCellContent then
+    self.List_NigheBookTab:NavigateToIndex(self.SelectCellContent.Index - 1)
+  end
+end
+
+function M:CloseAttrFilterMenu()
+  if not self.AttrFilterMenuOpen or self.bAttrFilterClosing then
+    return
+  end
+  self:_FocusBackToLevelTab()
+  local StatesWidget = self.StatesWidget
+  if not StatesWidget or not StatesWidget.PlayCloseAnimation then
+    self.Panel_States:Close()
+    return
+  end
+  self.bAttrFilterClosing = true
+  StatesWidget:PlayCloseAnimation(function()
+    self.bAttrFilterClosing = false
+    if self.AttrFilterMenuOpen and IsValid(self.Panel_States) then
+      self.Panel_States:Close()
+    end
+  end)
+end
+
+function M:OnAttrFilterSelected(AttrKey)
+  local CurrentLevel = self.SelectCellContent and self.SelectCellContent.DungeonData and self.SelectCellContent.DungeonData.Name
+  if not CurrentLevel then
+    return
+  end
+  self.AttrFilterByLevel[CurrentLevel] = AttrKey
+  self:RefreshAttrFilterIcon(AttrKey)
+  if self.SelectCellContent.UI then
+    self.SelectCellContent.UI:RefreshDungeonRewards()
+  end
+end
+
+function M:RefreshAttrFilterIcon(AttrKey)
+  local IsAll = not AttrKey or "All" == AttrKey
+  self.WS_Icon:SetActiveWidgetIndex(IsAll and 0 or 1)
+  if not IsAll then
+    local AttrData = DataMgr.Attribute[AttrKey]
+    if AttrData then
+      self.Image_Icon:SetBrushFromTexture(LoadObject(AttrData.Icon))
+    end
+  end
+end
+
+function M:RefreshAttrFilterEntryKey(bIsGamepad)
+  if bIsGamepad and (self.bFocusList_Reward or self.bFocusDownList_Reward) then
+    self.WS_SwtichIcon:SetVisibility(ESlateVisibility.Collapsed)
+    return
+  end
+  self.WS_SwtichIcon:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  self.WS_SwtichIcon:SetActiveWidgetIndex(bIsGamepad and 1 or 0)
+  if bIsGamepad then
+    self.Key_Switch:CreateCommonKey({
+      KeyInfoList = {
+        {Type = "Img", ImgShortPath = ATTR_FILTER_OPEN_KEYIMG}
+      }
+    })
+  end
+end
+
+function M:OnAttrFilterMenuOpenChanged(bIsOpen)
+  self.AttrFilterMenuOpen = bIsOpen
+  self:UpdatKeyDisplay()
+  if bIsOpen then
+    return
+  end
+  self.bAttrFilterClosing = false
+  self:RestoreGlobalKeysAfterAttrFilter()
+  self.StatesWidget = nil
+  self.AttrFilterJustClosed = true
+  self:AddTimer(0.2, function()
+    self.AttrFilterJustClosed = false
+  end, false, 0, "NightBookAttrFilterJustClosed")
+  self:_FocusBackToLevelTab()
 end
 
 function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
@@ -203,6 +345,33 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   else
   end
   self:UpdatKeyDisplay()
+end
+
+function M:SetGlobalBottomBarVisible(bVisible)
+  local StyleOfPlay = UIManager(self):GetUIObj("StyleOfPlay")
+  if not StyleOfPlay then
+    return
+  end
+  if StyleOfPlay.TeamHeadUI and StyleOfPlay.TeamHeadUI.Key_GamePad then
+    local bShowGamePadKey = bVisible and UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad
+    StyleOfPlay.TeamHeadUI.Key_GamePad:SetVisibility(bShowGamePadKey and ESlateVisibility.SelfHitTestInvisible or ESlateVisibility.Collapsed)
+  end
+  local ComTab = StyleOfPlay.ComTab
+  if ComTab and ComTab.Group_Chat and ComTab.Group_Chat:GetChildAt(0) then
+    local Chat = ComTab.Group_Chat:GetChildAt(0)
+    Chat.bOpen = bVisible
+    Chat:HideWSKey(bVisible)
+  end
+end
+
+function M:RestoreGlobalKeysAfterAttrFilter()
+  self:SetGlobalBottomBarVisible(true)
+  if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
+    local StyleOfPlay = UIManager(self):GetUIObj("StyleOfPlay")
+    if StyleOfPlay and StyleOfPlay.ComTab then
+      StyleOfPlay.ComTab:UpdateUIStyleInPlatform(true)
+    end
+  end
 end
 
 function M:UpdatKeyDisplay()
@@ -314,6 +483,19 @@ function M:UpdatKeyDisplay()
       StyleOfPlay.ComTab.WBP_Com_Tab_ResourceBar.KeyImg_GamePad:SetVisibility(ESlateVisibility.Collapsed)
       StyleOfPlay.ComTab.WBP_Com_Tab_ResourceBar.Tip_GamePad:SetVisibility(ESlateVisibility.Collapsed)
     end
+    self:RefreshAttrFilterEntryKey(true)
+    if self.AttrFilterMenuOpen then
+      self.Key_DeputeNight:SetVisibility(ESlateVisibility.Collapsed)
+      self.DoubleMod_SwitchTab.Key_01:SetVisibility(ESlateVisibility.Collapsed)
+      self.Key_Qa:SetVisibility(ESlateVisibility.Collapsed)
+      if self.Root and self.Root.DeputeTab then
+        self.Root.DeputeTab:UpdateUIStyleInPlatform(false)
+      end
+      StyleOfPlay.ComTab:UpdateUIStyleInPlatform(false)
+      StyleOfPlay.ComTab.WBP_Com_Tab_ResourceBar.KeyImg_GamePad:SetVisibility(ESlateVisibility.Collapsed)
+      StyleOfPlay.ComTab.WBP_Com_Tab_ResourceBar.Tip_GamePad:SetVisibility(ESlateVisibility.Collapsed)
+      self:SetGlobalBottomBarVisible(false)
+    end
   else
     if self.IsPC then
       self.Key_More_GamePad:SetVisibility(ESlateVisibility.Collapsed)
@@ -323,6 +505,7 @@ function M:UpdatKeyDisplay()
     end
     self.Btn_More:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.DoubleMod_SwitchTab.Key_01:SetVisibility(ESlateVisibility.Collapsed)
+    self:RefreshAttrFilterEntryKey(false)
   end
   StyleOfPlay:UpdateOtherPageTab(BottomKeyInfo)
 end
@@ -402,6 +585,10 @@ function M:RefreshRewardInfoList(Level)
       elseif Content.ItemType == "Walnut" then
         local WalnutsInBag = Avatar.Walnuts.WalnutBag
         Content.bShadow = (WalnutsInBag[Content.Id] or 0) <= 0
+      end
+      if ItemData.ProductType then
+        Content.ProductType = ItemData.ProductType
+        Content.Level = ItemData.Level
       end
       self.List_Reward:AddItem(Content)
     end
@@ -498,8 +685,13 @@ function M:OnGamePadDown(InKeyName)
         break
       end
     end
-  elseif InKeyName == Const.GamepadFaceButtonUp and not self.bFocusList_Reward and self.DoubleMod then
-    self.DoubleMod_SwitchTab:OnClicked()
+  elseif InKeyName == Const.GamepadFaceButtonUp then
+    if not self.bFocusList_Reward and self.DoubleMod then
+      self.DoubleMod_SwitchTab:OnClicked()
+      IsEventHandled = true
+    end
+  elseif InKeyName == ATTR_FILTER_OPEN_KEY and not self.bFocusList_Reward and not self.bFocusDownList_Reward and not self.AttrFilterMenuOpen then
+    self:OnAttrFilterEntryClicked()
     IsEventHandled = true
   end
   return IsEventHandled

@@ -46,6 +46,8 @@ function M:Init(ItemType, ItemData, ChooseCallback, ParentWidget, ...)
     ChooseId = ItemData.StuffId,
     ChooseIndex = ItemData.Index,
     ChooseName = ItemData.StuffName,
+    CharPieceId = ItemData.CharPieceId,
+    CharUnlockRequiredPiece = ItemData.CharUnlockRequiredPiece,
     ChooseWidget = self
   }
   self.Content = ItemData
@@ -94,7 +96,7 @@ function M:InitCommonView(ItemData)
   end
   self:SetIcon(ItemData.StuffIcon)
   self:SetRarity(ItemData.Rarity)
-  self.Btn_Check:BindEventOnClicked(self, self.OnBtnCheckClicked)
+  self:InitCheckState()
   self.Button_Area.OnClicked:Add(self, self.OnBtnChooseClicked)
   self.Btn_Check.AudioEventPath = "event:/ui/common/click_btn_small"
 end
@@ -160,6 +162,7 @@ function M:OnAddedToFocusPath(InFocusEvent)
     self:OnBtnChooseHovered()
     if self.ParentWidget then
       self.ParentWidget:ScrollToTargetItem(self)
+      self.ParentWidget:RefreshGamepadShortcutVisible(self)
     end
   end
 end
@@ -184,7 +187,26 @@ end
 function M:InitSpecialView(ItemData, ...)
 end
 
+function M:CanCheckDetails()
+  if self.ItemType == BagCommon.OptionalItemType.Pet then
+    local PetData = DataMgr.Pet[self.Content.StuffId]
+    return not PetData or 2 ~= PetData.PetType
+  end
+  return true
+end
+
+function M:InitCheckState()
+  if not self:CanCheckDetails() then
+    self.Btn_Check:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    return
+  end
+  self.Btn_Check:BindEventOnClicked(self, self.OnBtnCheckClicked)
+end
+
 function M:OnBtnCheckClicked()
+  if not self:CanCheckDetails() then
+    return
+  end
   local BagMainPage = UIManager(self):GetUIObj("BagMain")
   if self.ItemType == BagCommon.OptionalItemType.Weapon then
     if BagMainPage and self.ParentWidget then
@@ -198,6 +220,8 @@ function M:OnBtnCheckClicked()
       PreviewWeaponIds = {
         self.Content.StuffId
       },
+      bFromOptRewardPreview = true,
+      bHideSquadBuildBtn = true,
       EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewCommon,
       bHideBoxBtn = true,
       bNoEndCamera = true,
@@ -216,6 +240,8 @@ function M:OnBtnCheckClicked()
       PreviewCharIds = {
         self.Content.StuffId
       },
+      bFromOptRewardPreview = true,
+      bHideSquadBuildBtn = true,
       EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewCommon,
       bHideBoxBtn = true,
       bNoEndCamera = true,
@@ -234,6 +260,8 @@ function M:OnBtnCheckClicked()
       PreviewPetIds = {
         self.Content.StuffId
       },
+      bFromOptRewardPreview = true,
+      bHideSquadBuildBtn = true,
       EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewCommon,
       bHideBoxBtn = true,
       bNoEndCamera = true,

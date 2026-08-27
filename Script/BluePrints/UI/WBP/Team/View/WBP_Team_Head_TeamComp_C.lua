@@ -1,5 +1,6 @@
 local FriendModel = FriendController:GetModel()
 local TeamModel = TeamController:GetModel()
+local TeamHallController = require("BluePrints.UI.WBP.TeamHall.TeamHallController")
 local Component = {}
 
 function Component:InitComp(Owner, MemberInfo, Index, bAnim)
@@ -16,10 +17,10 @@ function Component:InitComp(Owner, MemberInfo, Index, bAnim)
     self.Head_Anchor:SetPlacement(EMenuPlacement.MenuPlacement_BelowRightAnchor)
   end
   self.Head_Team:SetGamepadCursor()
-  if not self.Owner.bBattle then
+  if self:CanOpenHeadMenu() then
     self.Head_Team:SetHoldUp(true)
     self.Head_Team:BindOnClickEvent(function()
-      self.Head_Anchor:Open(true)
+      self:OnHeadClicked()
     end)
   end
   self:StopAllAnimations()
@@ -27,9 +28,53 @@ function Component:InitComp(Owner, MemberInfo, Index, bAnim)
   if bAnim then
     self:PlayAnimation(self.Add)
   end
+  self:UnbindAllFromAnimationFinished(self.Disagree)
+  self:BindToAnimationFinished(self.Disagree, {
+    self,
+    function()
+      self.ResetHeadTimer = self:AddTimer(0.1, function()
+        self.MemberInfo.HeadState = TeamCommon.HeadState.Normal
+        self:SetHeadState()
+      end, false, 0, nil, true)
+    end
+  })
+end
+
+function Component:CanOpenHeadMenu()
+  return not self.Owner.bBattle or self.MemberInfo and self.MemberInfo.bUseTeamHallPlayerMenu
+end
+
+function Component:OnHeadClicked()
+  if self.MemberInfo and self.MemberInfo.bUseTeamHallPlayerMenu then
+    self:OpenTeamHallHeadMenu()
+    return
+  end
+  self.Head_Anchor:Open(true)
+end
+
+function Component:OpenTeamHallHeadMenu()
+  if self.bTeamHallMenuAvatarRequesting then
+    return
+  end
+  self.bTeamHallMenuAvatarRequesting = true
+  TeamHallController:ResolveRecruitmentPlayerAvatarInfo(self.MemberInfo, function(AvatarInfo)
+    if not IsValid(self) then
+      return
+    end
+    self.bTeamHallMenuAvatarRequesting = false
+    if not AvatarInfo then
+      return
+    end
+    self.TeamHallMenuAvatarInfo = AvatarInfo
+    self.Head_Anchor:Open(true)
+  end)
 end
 
 function Component:SetHeadState(HeadState)
+  if self.ResetHeadTimer and self:IsExistTimer(self.ResetHeadTimer) then
+    self:RemoveTimer(self.ResetHeadTimer)
+  end
+  self.ResetHeadTimer = nil
   self.HeadState = HeadState or self.MemberInfo.HeadState
   if not self.HeadState then
     self.HeadState = TeamCommon.HeadState.Normal
@@ -79,6 +124,13 @@ function Component:OnAnimationFinishedComp(InAnim)
 end
 
 function Component:OnGetMenuContentComp(Anchor)
+  if self.MemberInfo and self.MemberInfo.bUseTeamHallPlayerMenu then
+    local AvatarInfo = self.TeamHallMenuAvatarInfo or self.MemberInfo.TeamHallMenuAvatarInfo
+    if not AvatarInfo then
+      return nil
+    end
+    return TeamHallController:OpenRecruitmentPlayerMenu(self, AvatarInfo, self.Head_Anchor)
+  end
   if not self.Head_Team.bSelected then
     return
   end
@@ -163,6 +215,9 @@ function Component:OnMenuOpenChangedComp(bOpen)
   if bOpen then
     self.Owner.bOpenBtnList = true
     self.Owner.OpenedUid = self.MemberInfo.Uid
+    if self.Owner.OnBoardHeadMenuOpenChanged then
+      self.Owner:OnBoardHeadMenuOpenChanged(true)
+    end
     return
   end
   if self.Head_Team then
@@ -170,6 +225,9 @@ function Component:OnMenuOpenChangedComp(bOpen)
   end
   if self.Owner.FocusUIByUid and TeamController:IsGamepad() then
     self.Owner:FocusUIByUid(self.Owner.OpenedUid)
+  end
+  if self.Owner.OnBoardHeadMenuOpenChanged then
+    self.Owner:OnBoardHeadMenuOpenChanged(bOpen)
   end
   self.Owner.bOpenBtnList = false
   self.Owner.OpenedUid = nil

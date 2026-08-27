@@ -24,6 +24,7 @@ function WBP_Build_Tips_C:InitUI()
     self.Switch_Tips:SetActiveWidgetIndex(0)
     self.Edit_Tips:SetComfirmCallball(self.MakeSureCallback, self.Owner)
     self.Edit_Tips:FreahWeaponView(self.Name, self.ItemInfo.Rarity, self.Uuid, nil, self.ItemInfo.Type == "Char")
+    self.Edit_Tips:SetOnCloseByGamepadCallback(self.Owner.CloseTips, self.Owner)
     self.Edit_Tips.Btn_Confirm:SetText(GText("UI_Squad_Equip"))
     self.Edit_Tips.ModType01:SetFocus()
   else

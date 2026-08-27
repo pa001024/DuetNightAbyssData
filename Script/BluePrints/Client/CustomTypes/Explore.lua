@@ -16,6 +16,7 @@ Explore.__Props__ = {
   ExploreData = prop.prop("ExploreBaseAttr", "client save"),
   RegionId = prop.prop("Int", "client save", 0),
   IsBonus = prop.prop("Bool", "client save", 0),
+  StarBonusList = prop.prop("IntList", "client save", {}),
   RewardId = prop.getter("ExploreGroupReward", "RewardId"),
   IfOnlyOnce = prop.getter("ExploreGroupReward", "IfOnlyOnce")
 }
@@ -42,7 +43,7 @@ function Explore:SetActive()
   if self.ExploreState == CommonConst.ExploreState.Doing then
     return true
   end
-  if not self:IsInActive() then
+  if not self:IsInActive() and 0 == self.StarBonusList:Length() then
     return false
   end
   self.ExploreState = CommonConst.ExploreState.Doing

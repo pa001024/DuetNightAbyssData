@@ -43,8 +43,17 @@ function M:Construct()
       {Type = "Img", ImgShortPath = "View"}
     }
   })
-  self.Btn_Qa:UnBindEventOnClicked(self, self.OnGoToCharDetails)
-  self.Btn_Qa:BindEventOnClicked(self, self.OnGoToCharDetails)
+  if self.Btn_Qa then
+    if self.Btn_Qa.Btn_Click then
+      self.Btn_Qa:Init({
+        ClickCallback = self.OnGoToCharDetails,
+        OwnerWidget = self
+      })
+    elseif self.Btn_Qa.Button_Area then
+      self.Btn_Qa:UnBindEventOnClicked(self, self.OnGoToCharDetails)
+      self.Btn_Qa:BindEventOnClicked(self, self.OnGoToCharDetails)
+    end
+  end
   self.Key_Reward.Text_Desc:SetText(GText("UI_Controller_CheckReward"))
   self.Key_Reward:CreateSubKeyDesc({
     KeyInfoList = {
@@ -55,7 +64,7 @@ function M:Construct()
 end
 
 function M:Destruct()
-  if self.Btn_Qa then
+  if self.Btn_Qa and self.Btn_Qa.Button_Area then
     self.Btn_Qa:UnBindEventOnClicked(self, self.OnGoToCharDetails)
   end
   if self.Btn_Pay then

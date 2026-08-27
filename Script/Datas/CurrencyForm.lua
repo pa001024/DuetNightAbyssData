@@ -19,5 +19,10 @@ return ReadOnly("CurrencyForm", {
     IfAdd = true,
     IfMax = true,
     ResourceID = 103
+  },
+  [4005] = {
+    IfAdd = true,
+    IfMax = false,
+    ResourceID = 4005
   }
 })

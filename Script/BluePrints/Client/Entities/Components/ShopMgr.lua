@@ -85,8 +85,9 @@ function Component:CheckIsFirstBonus(ShopItemId)
   if not DataMgr.FirstBonusNum[ShopItemId] then
     return false
   end
-  if self:GetShopItemAlreadyPurchaseTimes(ShopItemId) > 0 then
-    return false
+  local ShopItem = self.ShopItems[ShopItemId]
+  if ShopItem then
+    return ShopItem.CanFirstBonus
   end
   return true
 end

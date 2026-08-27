@@ -1,3 +1,4 @@
+local MiscUtils = require("Utils.MiscUtils")
 require("UnLua")
 require("DataMgr")
 local InventoryCommonConst = require("BluePrints.UI.WBP.SoloTreasure.Widget.Inventory.InventoryCommonConst")
@@ -185,7 +186,7 @@ end
 
 function M:UpdateShowTotalScore(AddTreasureScore)
   self.TotalScore = (self.Dungeonobject.TreasureScore or 0) + (self.Dungeonobject.KillMonsterScore or 0)
-  self.Text_Num:SetText(Utils.FormatNumber(self.TotalScore, false))
+  self.Text_Num:SetText(MiscUtils.FormatNumber(self.TotalScore, false))
   UIUtils.RollingNumberEffect(self, self.Text_Num, self.TotalScore - AddTreasureScore, AddTreasureScore, self.NumChangePeriod)
   if 0 ~= AddTreasureScore then
     AudioManager(self):PlayUISound(self, "event:/ui/activity/sdc_bag_score_num_change", "ScoreNumChange", nil)

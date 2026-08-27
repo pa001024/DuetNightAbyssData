@@ -102,15 +102,17 @@ function Common_GuidePoint_C:CheckIsNeedShowRangeStyle(Name)
   return false
 end
 
-function Common_GuidePoint_C:OnEnabled(InNpc)
-  InNpc.IsNeedCollapsedOtherBubble = true
-  InNpc:CollapsedOtherBubble()
+function Common_GuidePoint_C:OnEnabled(Brush)
   self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  if type(Brush) == "string" then
+    Brush = LoadObject(Brush)
+  end
+  self.Img_GuidePoint_Icon:SetBrushResourceObject(Brush)
 end
 
-function Common_GuidePoint_C:OnDisabled(InNpc)
-  InNpc.IsNeedCollapsedOtherBubble = false
+function Common_GuidePoint_C:OnDisabled()
   self:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Img_GuidePoint_Icon:SetBrushResourceObject(nil)
 end
 
 function Common_GuidePoint_C:InitNpcSideQuestBubble(ParentHeadWidget)
@@ -119,20 +121,6 @@ function Common_GuidePoint_C:InitNpcSideQuestBubble(ParentHeadWidget)
 end
 
 function Common_GuidePoint_C:InitBubble(InWidget)
-  if InWidget and InWidget.AttachedWidgetComponent then
-    local Owner = InWidget.AttachedWidgetComponent:GetOwner()
-    if Owner then
-      for InQuestChainId, Data in pairs(DataMgr.QuestChain) do
-        if Data and Data.QuestNpcId and Data.QuestNpcId == Owner.UnitId then
-          if DataMgr.QuestChain[InQuestChainId] and DataMgr.QuestChain[InQuestChainId].QuestChainType == Const.SpecialSideQuestChainType then
-            self.Img_GuidePoint_Icon:SetBrushResourceObject(LoadObject("/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpSideMission_Un.T_Gp_SpSideMission_Un"))
-          else
-            self.Img_GuidePoint_Icon:SetBrushResourceObject(LoadObject("/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SideMission_Un.T_Gp_SideMission_Un"))
-          end
-        end
-      end
-    end
-  end
 end
 
 function Common_GuidePoint_C:PlayLoopUISound()

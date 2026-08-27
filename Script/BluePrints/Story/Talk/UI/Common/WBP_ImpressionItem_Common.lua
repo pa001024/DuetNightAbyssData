@@ -218,8 +218,6 @@ function WBP_ImpressionItem_Common:SetState(NewState)
     self:PlayAnimation(self.Normal)
     if self.bIsSelected then
       self:PlayAnimation(self.Read)
-    else
-      self:PlayAnimationReverse(self.Read)
     end
   elseif self.State == EImpressionButtonState.Disabled then
     self:SetVisibility(ESlateVisibility.SelfHitTestInvisible)

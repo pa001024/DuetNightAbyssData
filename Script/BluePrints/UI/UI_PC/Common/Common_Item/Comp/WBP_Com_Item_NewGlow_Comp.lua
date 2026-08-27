@@ -2,8 +2,10 @@ local Component = {}
 
 function Component:SetNewGlow(bNewGlow)
   local function Callback(NewGlowUI)
+    if not self.bNewGlow then
+      return
+    end
     self.NewGlow = UE.FWeakObjectPtr(NewGlowUI)
-    
     self:AddWidgetToNode(nil, self.NewGlow)
     NewGlowUI:SetRarity(self.Rarity)
   end

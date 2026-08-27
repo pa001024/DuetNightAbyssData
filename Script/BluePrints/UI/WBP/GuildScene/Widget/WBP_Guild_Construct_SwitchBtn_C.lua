@@ -25,7 +25,7 @@ end
 function M:PlaySwitchAnim(SelectedIndex)
   self:StopAllAnimations()
   if 1 == SelectedIndex then
-    self:PlayAnimation(self.Switch_Right, 0, 1, UE4.EUMGSequencePlayMode.Reverse)
+    self:PlayAnimation(self.Switch_Left)
   else
     self:PlayAnimation(self.Switch_Right)
   end

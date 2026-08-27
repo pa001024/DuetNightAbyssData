@@ -9,7 +9,10 @@ AsyncCombat.__Props__ = {
   CreateRoomTimes = prop.prop("Int", "client save", 0),
   GoingRoom = prop.prop("IntSet", "client save"),
   OwnedRoom = prop.prop("IntSet", "client save"),
-  CreatedRoom = prop.prop("IntSet", "client save")
+  CreatedRoom = prop.prop("IntSet", "client save"),
+  FreeCreateTimes = prop.prop("Int", "client save", 0),
+  FreeCreateTimesRefreshTime = prop.prop("Int", "client save", 0),
+  ActiveScore = prop.prop("Int", "client save", 0)
 }
 
 function AsyncCombat:Init(EventId)
@@ -18,6 +21,14 @@ end
 
 function AsyncCombat:AddCreateRoomTimes()
   self.CreateRoomTimes = self.CreateRoomTimes + 1
+end
+
+function AsyncCombat:AddFreeCreateTimes()
+  self.FreeCreateTimes = self.FreeCreateTimes + 1
+end
+
+function AsyncCombat:AddActiveScore(Score)
+  self.ActiveScore = self.ActiveScore + Score
 end
 
 function AsyncCombat:AddOwnedRoom(RoomUniId)

@@ -3,13 +3,17 @@ local M = Class("BluePrints.UI.BP_EMUserWidget_C")
 
 function M:OnListItemObjectSet(Content)
   self.CompleteInfo = Content.Info
-  self.WS_State:SetActiveWidgetIndex(0)
-  self.Text_Info:SetText("? ? ?")
+  self.Text_Describe:SetText("? ? ?")
 end
 
 function M:SetCompleted()
-  self.WS_State:SetActiveWidgetIndex(1)
-  self.Text_Info:SetText(self.CompleteInfo)
+  self.Text_Describe:SetText(GText(self.CompleteInfo))
+  self:PlayAnimation(self.CompletionTask)
+  self:PlayAnimation(self.Refresh)
+end
+
+function M:PlayOut()
+  self:PlayAnimation(self.Out)
 end
 
 return M

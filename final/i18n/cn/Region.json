@@ -397,7 +397,7 @@
   },
   {
     "id": 1042,
-    "name": "UI_REGION_NAME_1042",
+    "name": "听鸦原",
     "type": "Main",
     "mapScale": [
       0.5,
@@ -409,7 +409,7 @@
   },
   {
     "id": 1043,
-    "name": "UI_REGION_NAME_1043",
+    "name": "往隙",
     "type": "Main",
     "mapScale": [
       0.5,
@@ -421,7 +421,7 @@
   },
   {
     "id": 1044,
-    "name": "UI_REGION_NAME_1044",
+    "name": "往隙",
     "type": "Main",
     "mapScale": [
       0.5,
@@ -458,8 +458,8 @@
       {
         "name": "WBP_Map_East_HaoJing_BG",
         "pos": [
-          1864,
-          1444,
+          0,
+          0,
           8192,
           8192
         ],
@@ -469,8 +469,8 @@
       {
         "name": "WBP_Map_East_HaoJing",
         "pos": [
-          1864,
-          1444,
+          0,
+          0,
           8192,
           8192
         ],
@@ -481,7 +481,7 @@
   },
   {
     "id": 1046,
-    "name": "UI_REGION_NAME_1046",
+    "name": "听鸦原",
     "type": "Main",
     "mapScale": [
       0.5,
@@ -493,7 +493,7 @@
   },
   {
     "id": 1047,
-    "name": "UI_REGION_NAME_1047",
+    "name": "听鸦原",
     "type": "Main",
     "mapScale": [
       0.5,
@@ -531,7 +531,7 @@
   },
   {
     "id": 1050,
-    "name": "UI_REGION_NAME_1050",
+    "name": "往隙",
     "type": "Main",
     "mapScale": [
       0.5,
@@ -876,16 +876,16 @@
   },
   {
     "id": 1070,
-    "name": "EX02-新村庄",
-    "type": "Main",
+    "name": "阿尔卡诺镇",
+    "type": "EX",
     "mapId": 600,
-    "mapImage": "WBP_Map_Reg_Chapter03_Station_AG",
+    "mapImage": "WBP_Map_Reg_EXChapter02_Lxzs01",
     "mapCenter": [
-      0,
-      0
+      -10762,
+      -45312
     ],
     "mapScale": [
-      0.5,
+      0.3,
       1.25
     ],
     "isRandom": [
@@ -894,10 +894,10 @@
     "alertDisable": true,
     "mapMapping": [
       {
-        "name": "WBP_Map_Chapter03_Station_L0",
+        "name": "WBP_Map_EXChapter02_Lxzs01",
         "pos": [
-          4096,
-          2048,
+          0,
+          0,
           8192,
           4096
         ],
@@ -908,16 +908,16 @@
   },
   {
     "id": 1071,
-    "name": "EX02-旧村庄",
-    "type": "Main",
+    "name": "阿尔卡诺镇旧址",
+    "type": "EX",
     "mapId": 601,
-    "mapImage": "WBP_Map_Reg_East_Yanjindu",
+    "mapImage": "WBP_Map_Reg_EXChapter02_Lxzs02",
     "mapCenter": [
-      0,
-      0
+      -45300,
+      -33330
     ],
     "mapScale": [
-      0.5,
+      0.3,
       1.25
     ],
     "isRandom": [
@@ -926,18 +926,7 @@
     "alertDisable": true,
     "mapMapping": [
       {
-        "name": "WBP_Map_East_Yanjindu_L0",
-        "pos": [
-          0,
-          0,
-          8192,
-          8192
-        ],
-        "opacity": 1,
-        "zOrder": 0
-      },
-      {
-        "name": "WBP_Map_East_Yanjindu_L-1",
+        "name": "WBP_Map_EXChapter02_Lxzs02",
         "pos": [
           0,
           0,
@@ -951,16 +940,16 @@
   },
   {
     "id": 1072,
-    "name": "EX02-湖区",
-    "type": "Main",
+    "name": "阿尔卡诺山裂隙",
+    "type": "EX",
     "mapId": 602,
-    "mapImage": "WBP_Map_Reg_East_Haojing",
+    "mapImage": "WBP_Map_Reg_EXChapter02_Lxzx",
     "mapCenter": [
-      0,
-      0
+      11990,
+      -27330
     ],
     "mapScale": [
-      0.5,
+      0.3,
       1.25
     ],
     "isRandom": [
@@ -969,21 +958,10 @@
     "alertDisable": true,
     "mapMapping": [
       {
-        "name": "WBP_Map_East_HaoJing_BG",
+        "name": "WBP_Map_EXChapter02_Lxzx",
         "pos": [
-          1864,
-          1444,
-          8192,
-          8192
-        ],
-        "opacity": 1,
-        "zOrder": -1
-      },
-      {
-        "name": "WBP_Map_East_HaoJing",
-        "pos": [
-          1864,
-          1444,
+          0,
+          0,
           8192,
           8192
         ],
@@ -995,7 +973,7 @@
   {
     "id": 1073,
     "name": "EX02-旧村庄-噩梦游乐园",
-    "type": "Main",
+    "type": "EX",
     "mapScale": [
       0.5,
       1.25
@@ -1007,7 +985,7 @@
   {
     "id": 1074,
     "name": "EX02-湖区-战场幻境",
-    "type": "Main",
+    "type": "EX",
     "mapScale": [
       0.5,
       1.25
@@ -1019,19 +997,21 @@
   {
     "id": 1075,
     "name": "EX02-新村庄-主角家",
-    "type": "Main",
+    "type": "EX",
+    "mapId": 600,
     "mapScale": [
       0.5,
       1.25
     ],
     "isRandom": [
       107501
-    ]
+    ],
+    "alertDisable": true
   },
   {
     "id": 1076,
     "name": "EX02-新村庄-Boss战",
-    "type": "Main",
+    "type": "EX",
     "mapScale": [
       0.5,
       1.25
@@ -1043,19 +1023,21 @@
   {
     "id": 1077,
     "name": "EX02-新村庄-净化室+墓地",
-    "type": "Main",
+    "type": "EX",
+    "mapId": 600,
     "mapScale": [
       0.5,
       1.25
     ],
     "isRandom": [
       107701
-    ]
+    ],
+    "alertDisable": true
   },
   {
     "id": 1078,
     "name": "EX02-新村庄-仓库",
-    "type": "Main",
+    "type": "EX",
     "mapScale": [
       0.5,
       1.25
@@ -1098,6 +1080,30 @@
     ],
     "isRandom": [
       108301
+    ]
+  },
+  {
+    "id": 1084,
+    "name": "悠远海风号-眠岛海上",
+    "type": "Main",
+    "mapScale": [
+      0.5,
+      1.25
+    ],
+    "isRandom": [
+      108401
+    ]
+  },
+  {
+    "id": 1085,
+    "name": "艾利西安-伊黛梦境-Boss战",
+    "type": "Main",
+    "mapScale": [
+      0.5,
+      1.25
+    ],
+    "isRandom": [
+      108501
     ]
   },
   {

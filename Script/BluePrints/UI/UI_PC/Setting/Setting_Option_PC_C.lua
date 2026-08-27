@@ -1,23 +1,66 @@
 require("UnLua")
 local EMCache = require("EMCache.EMCache")
 local S = Class("BluePrints.UI.BP_EMUserWidget_C")
+local OptionWidgetNames = {
+  Click = "SettingOptionClick",
+  Empty = "SettingOptionEmpty",
+  Scroll = "SettingOptionScroll",
+  Switch = "SettingOptionSwitch",
+  UnFold = "SettingOptionUnFold"
+}
+
+function S:GetActiveOptionWidget()
+  return self.ActiveOptionWidget
+end
+
+function S:CreateOptionWidget(ControlType)
+  if self.ActiveOptionWidget and self.ActiveControlType == ControlType then
+    return self.ActiveOptionWidget
+  end
+  local UIName = OptionWidgetNames[ControlType]
+  if not UIName then
+    DebugPrint("Setting_Option_PC_C CreateOptionWidget invalid ControlType：" .. tostring(ControlType))
+    return nil
+  end
+  local OptionWidget = UIManager(self):_CreateWidgetNew(UIName)
+  if not OptionWidget then
+    DebugPrint("Setting_Option_PC_C CreateOptionWidget failed：" .. tostring(ControlType) .. " " .. tostring(UIName))
+    return nil
+  end
+  self.Node_Option:ClearChildren()
+  self.Node_Option:AddChild(OptionWidget)
+  self.ActiveOptionWidget = OptionWidget
+  self.ActiveControlType = ControlType
+  return OptionWidget
+end
 
 function S:OnListItemObjectSet(Content)
-  self:PlayAnimation(self.In)
   self.Content = Content
   Content.SelfWidget = self
   self.Cache = Content.Cache
+  local ControlType
   if self.Cache == "Click" then
-    self.Switcher_Option:SetActiveWidget(self.Click)
-    self.Click:Init(self, nil, nil, Content)
+    ControlType = "Click"
   elseif self.Cache == "Empty" then
-    self.Switcher_Option:SetActiveWidget(self[self.Cache])
-    self.Empty:Init(self)
+    ControlType = "Empty"
   else
     self.CacheInfo = DataMgr.Option[self.Cache]
-    local ControlType = self.CacheInfo.ControlType
-    self.Switcher_Option:SetActiveWidget(self[ControlType])
-    self[ControlType]:Init(self, self.Cache, self.CacheInfo, Content)
+    if not self.CacheInfo then
+      DebugPrint("Setting_Option_PC_C OnListItemObjectSet missing option config")
+      return
+    end
+    ControlType = self.CacheInfo.ControlType
+  end
+  local OptionWidget = self:CreateOptionWidget(ControlType)
+  if not OptionWidget then
+    return
+  end
+  if self.Cache == "Click" then
+    OptionWidget:Init(self, nil, nil, Content)
+  elseif self.Cache == "Empty" then
+    OptionWidget:Init(self)
+  else
+    OptionWidget:Init(self, self.Cache, self.CacheInfo, Content)
   end
   self:PlayAnimation(self.In)
   self:SetNavigationRuleCustomBoundary(UE4.EUINavigation.Up, {
@@ -44,17 +87,20 @@ function S:OnNavigateDown()
 end
 
 function S:GetFirstWidgetToNavigate()
-  local ActiveOptionWidget = self.Switcher_Option:GetActiveWidget()
-  return ActiveOptionWidget:GetFirstWidgetToNavigate()
+  local ActiveOptionWidget = self:GetActiveOptionWidget()
+  return ActiveOptionWidget and ActiveOptionWidget:GetFirstWidgetToNavigate()
 end
 
 function S:GetLastWidgetToNavigate()
-  local ActiveOptionWidget = self.Switcher_Option:GetActiveWidget()
-  return ActiveOptionWidget:GetLastWidgetToNavigate()
+  local ActiveOptionWidget = self:GetActiveOptionWidget()
+  return ActiveOptionWidget and ActiveOptionWidget:GetLastWidgetToNavigate()
 end
 
 function S:Gamepad_SetHovered(bIsHovered)
-  local ActiveOptionWidget = self.Switcher_Option:GetActiveWidget()
+  local ActiveOptionWidget = self:GetActiveOptionWidget()
+  if not ActiveOptionWidget then
+    return
+  end
   ActiveOptionWidget:Gamepad_SetHovered(bIsHovered)
   if bIsHovered and self.Content.UpdateBottomKeyFunc then
     self.Content.UpdateBottomKeyFunc(ActiveOptionWidget:GetBottomKeyInfos())
@@ -63,8 +109,10 @@ end
 
 function S:Handle_KeyDownOnGamePad(InKeyName)
   local IsHandled = false
-  local ActiveOptionWidget = self.Switcher_Option:GetActiveWidget()
-  IsHandled = ActiveOptionWidget:Handle_KeyDownOnGamePad(InKeyName)
+  local ActiveOptionWidget = self:GetActiveOptionWidget()
+  if ActiveOptionWidget then
+    IsHandled = ActiveOptionWidget:Handle_KeyDownOnGamePad(InKeyName)
+  end
   return IsHandled
 end
 
@@ -83,8 +131,10 @@ end
 
 function S:Handle_KeyUpOnGamePad(InKeyName)
   local IsHandled = false
-  local ActiveOptionWidget = self.Switcher_Option:GetActiveWidget()
-  IsHandled = ActiveOptionWidget:Handle_KeyUpOnGamePad(InKeyName)
+  local ActiveOptionWidget = self:GetActiveOptionWidget()
+  if ActiveOptionWidget then
+    IsHandled = ActiveOptionWidget:Handle_KeyUpOnGamePad(InKeyName)
+  end
   return IsHandled
 end
 
@@ -123,8 +173,8 @@ function S:ClearUnfoldState()
   if self.Cache == "Empty" then
     return
   end
-  local ActiveOptionWidget = self.Switcher_Option:GetActiveWidget()
-  if ActiveOptionWidget.ClearOpenListState then
+  local ActiveOptionWidget = self:GetActiveOptionWidget()
+  if ActiveOptionWidget and ActiveOptionWidget.ClearOpenListState then
     ActiveOptionWidget:ClearOpenListState()
   end
 end
@@ -133,8 +183,8 @@ function S:OnClickLeftMouseButton()
   if self.Cache == "Empty" then
     return
   end
-  local ActiveOptionWidget = self.Switcher_Option:GetActiveWidget()
-  if ActiveOptionWidget.OnClickLeftMouseButton then
+  local ActiveOptionWidget = self:GetActiveOptionWidget()
+  if ActiveOptionWidget and ActiveOptionWidget.OnClickLeftMouseButton then
     ActiveOptionWidget:OnClickLeftMouseButton()
   end
 end
@@ -143,13 +193,9 @@ function S:RestoreDefaultOptionSet()
   if self.Cache == "Empty" then
     return
   end
-  local ControlType = self.CacheInfo.ControlType
-  if "Scroll" == ControlType then
-    self.Scroll:RestoreDefaultOptionSet()
-  elseif "UnFold" == ControlType then
-    self.UnFold:RestoreDefaultOptionSet()
-  elseif "Switch" == ControlType then
-    self.Switch:RestoreDefaultOptionSet()
+  local ActiveOptionWidget = self:GetActiveOptionWidget()
+  if ActiveOptionWidget and ActiveOptionWidget.RestoreDefaultOptionSet then
+    ActiveOptionWidget:RestoreDefaultOptionSet()
   end
 end
 
@@ -157,9 +203,9 @@ function S:RestoreOldValueOptionSet()
   if self.Cache == "Empty" then
     return
   end
-  local ControlType = self.CacheInfo.ControlType
-  if "Scroll" == ControlType then
-    self.Scroll:RestoreOldValueOptionSet()
+  local ActiveOptionWidget = self:GetActiveOptionWidget()
+  if ActiveOptionWidget and ActiveOptionWidget.RestoreOldValueOptionSet then
+    ActiveOptionWidget:RestoreOldValueOptionSet()
   end
 end
 
@@ -167,14 +213,19 @@ function S:SaveOptionSetting()
   if self.Cache == "Empty" then
     return
   end
-  local ControlType = self.CacheInfo.ControlType
-  if "Scroll" == ControlType then
-    self.Scroll:SaveOptionSetting()
-  elseif "UnFold" == ControlType then
-    self.UnFold:SaveOptionSetting()
-  elseif "Switch" == ControlType then
-    self.Switch:SaveOptionSetting()
+  local ActiveOptionWidget = self:GetActiveOptionWidget()
+  if ActiveOptionWidget and ActiveOptionWidget.SaveOptionSetting then
+    ActiveOptionWidget:SaveOptionSetting()
   end
+end
+
+function S:BP_OnEntryReleased()
+  if self.Content and self.Content.SelfWidget == self then
+    self.Content.SelfWidget = nil
+  end
+  self.Content = nil
+  self.Cache = nil
+  self.CacheInfo = nil
 end
 
 function S:OnParentTabSwitch()

@@ -519,5 +519,75 @@ return ReadOnly("BookSeriesArchive", {
     BookSeriesId = 1127,
     BookSeriesName = "READSERIES_1127",
     DetailDes = "READ_DESC_20600"
+  },
+  [1128] = {
+    BookSeriesId = 1128,
+    BookSeriesName = "READ_NAME_2000127",
+    DetailDes = "READ_DESC_2000127"
+  },
+  [1129] = {
+    BookSeriesId = 1129,
+    BookSeriesName = "READ_NAME_2000128",
+    DetailDes = "READ_DESC_2000128"
+  },
+  [1130] = {
+    BookSeriesId = 1130,
+    BookSeriesName = "READ_NAME_2000129",
+    DetailDes = "READ_DESC_2000129"
+  },
+  [1131] = {
+    BookSeriesId = 1131,
+    BookSeriesName = "READ_NAME_2000130",
+    DetailDes = "READ_DESC_2000130"
+  },
+  [1132] = {
+    BookSeriesId = 1132,
+    BookSeriesName = "READ_NAME_2000131",
+    DetailDes = "READ_DESC_2000131"
+  },
+  [1133] = {
+    BookSeriesId = 1133,
+    BookSeriesName = "READ_NAME_2000132",
+    DetailDes = "READ_DESC_2000132"
+  },
+  [1134] = {
+    BookSeriesId = 1134,
+    BookSeriesName = "READ_NAME_2000133",
+    DetailDes = "READ_DESC_2000133"
+  },
+  [1135] = {
+    BookSeriesId = 1135,
+    BookSeriesName = "READ_NAME_2000134",
+    DetailDes = "READ_DESC_2000134"
+  },
+  [1136] = {
+    BookSeriesId = 1136,
+    BookSeriesName = "READ_NAME_2000135",
+    DetailDes = "READ_DESC_2000135"
+  },
+  [1137] = {
+    BookSeriesId = 1137,
+    BookSeriesName = "READ_NAME_2000136",
+    DetailDes = "READ_DESC_2000136"
+  },
+  [1138] = {
+    BookSeriesId = 1138,
+    BookSeriesName = "READ_NAME_2000137",
+    DetailDes = "READ_DESC_2000137"
+  },
+  [1139] = {
+    BookSeriesId = 1139,
+    BookSeriesName = "READ_NAME_2000138",
+    DetailDes = "READ_DESC_2000138"
+  },
+  [1140] = {
+    BookSeriesId = 1140,
+    BookSeriesName = "READ_NAME_2000139",
+    DetailDes = "READ_DESC_2000139"
+  },
+  [1141] = {
+    BookSeriesId = 1141,
+    BookSeriesName = "READSERIES_1141",
+    DetailDes = "READ_DESC_20600"
   }
 })

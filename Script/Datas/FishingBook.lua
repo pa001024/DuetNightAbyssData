@@ -350,6 +350,56 @@ return ReadOnly("FishingBook", {
     FishingNoteId = 3205,
     FishingSpot = 10600101
   },
+  [3301] = {
+    FishId = 3301,
+    FishingNoteId = 3301,
+    FishingSpot = 10700101
+  },
+  [3302] = {
+    FishId = 3302,
+    FishingNoteId = 3302,
+    FishingSpot = 10700101
+  },
+  [3303] = {
+    FishId = 3303,
+    FishingNoteId = 3303,
+    FishingSpot = 10700101
+  },
+  [3304] = {
+    FishId = 3304,
+    FishingNoteId = 3304,
+    FishingSpot = 10700101
+  },
+  [3305] = {
+    FishId = 3305,
+    FishingNoteId = 3305,
+    FishingSpot = 10700101
+  },
+  [3401] = {
+    FishId = 3401,
+    FishingNoteId = 3401,
+    FishingSpot = 10720101
+  },
+  [3402] = {
+    FishId = 3402,
+    FishingNoteId = 3402,
+    FishingSpot = 10720101
+  },
+  [3403] = {
+    FishId = 3403,
+    FishingNoteId = 3403,
+    FishingSpot = 10720101
+  },
+  [3404] = {
+    FishId = 3404,
+    FishingNoteId = 3404,
+    FishingSpot = 10720101
+  },
+  [3405] = {
+    FishId = 3405,
+    FishingNoteId = 3405,
+    FishingSpot = 10720101
+  },
   [110101] = {
     FishId = 110101,
     FishingNoteId = 110101,
@@ -694,5 +744,55 @@ return ReadOnly("FishingBook", {
     FishId = 320501,
     FishingNoteId = 320501,
     FishingSpot = 10600101
+  },
+  [330101] = {
+    FishId = 330101,
+    FishingNoteId = 330101,
+    FishingSpot = 10700101
+  },
+  [330201] = {
+    FishId = 330201,
+    FishingNoteId = 330201,
+    FishingSpot = 10700101
+  },
+  [330301] = {
+    FishId = 330301,
+    FishingNoteId = 330301,
+    FishingSpot = 10700101
+  },
+  [330401] = {
+    FishId = 330401,
+    FishingNoteId = 330401,
+    FishingSpot = 10700101
+  },
+  [330501] = {
+    FishId = 330501,
+    FishingNoteId = 330501,
+    FishingSpot = 10700101
+  },
+  [340101] = {
+    FishId = 340101,
+    FishingNoteId = 340101,
+    FishingSpot = 10720101
+  },
+  [340201] = {
+    FishId = 340201,
+    FishingNoteId = 340201,
+    FishingSpot = 10720101
+  },
+  [340301] = {
+    FishId = 340301,
+    FishingNoteId = 340301,
+    FishingSpot = 10720101
+  },
+  [340401] = {
+    FishId = 340401,
+    FishingNoteId = 340401,
+    FishingSpot = 10720101
+  },
+  [340501] = {
+    FishId = 340501,
+    FishingNoteId = 340501,
+    FishingSpot = 10720101
   }
 })

@@ -1037,8 +1037,11 @@ end
 function S:ShowVoiceResourcePopup()
   for i = 0, self.List_Options:GetNumItems() - 1 do
     local Item = self.List_Options:GetItemAt(i)
-    if Item and Item.Cache == "SystemVoice" and Item.SelfWidget and Item.SelfWidget.Switcher_Option:GetActiveWidget() then
-      Item.SelfWidget.Switcher_Option:GetActiveWidget():ShowVoiceResourcePopup()
+    if Item and Item.Cache == "SystemVoice" and Item.SelfWidget then
+      local ActiveOptionWidget = Item.SelfWidget:GetActiveOptionWidget()
+      if ActiveOptionWidget and ActiveOptionWidget.ShowVoiceResourcePopup then
+        ActiveOptionWidget:ShowVoiceResourcePopup()
+      end
     end
   end
 end

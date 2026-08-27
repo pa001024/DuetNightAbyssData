@@ -1,3 +1,4 @@
+local MiscUtils = require("Utils.MiscUtils")
 require("UnLua")
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
@@ -59,7 +60,7 @@ function M:OnDrawListviewItem(WindowAction)
     end
     DebugPrint("OnDrawListviewItem SoloTreasureScore:", self.SoloTreasureScore, TotalScoreBeforeLottery)
     TotalScoreBeforeLottery = math.max(TotalScoreBeforeLottery, self.SoloTreasureScore)
-    self.Text_TitleNum:SetText(Utils.FormatNumber(TotalScoreBeforeLottery, false))
+    self.Text_TitleNum:SetText(MiscUtils.FormatNumber(TotalScoreBeforeLottery, false))
     self.NeedDraw = false
   end, false, 0.05)
 end

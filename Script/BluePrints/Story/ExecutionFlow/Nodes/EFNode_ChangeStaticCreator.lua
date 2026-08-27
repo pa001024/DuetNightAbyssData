@@ -9,7 +9,7 @@ function M:CreateNode(Flow, TalkTask, Params)
   local StoryLine
   local Avatar = GWorld:GetAvatar()
   if Avatar then
-    StoryLine = Avatar:GetClientQuestChainStoryline(TalkTaskData.QuestChainId)
+    StoryLine = Avatar:GetQuestChainProxyStoryline(TalkTaskData.QuestChainId)
   end
   StoryLine = StoryLine or GWorld.StoryMgr:GetStory(TalkTaskData.FilePath)
   for _, StoryNode in pairs(StoryLine.RunningNodeList) do

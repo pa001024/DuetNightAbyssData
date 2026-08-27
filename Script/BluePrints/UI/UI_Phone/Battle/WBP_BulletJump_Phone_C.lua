@@ -69,7 +69,8 @@ function M:StopAutoRetryTimer()
 end
 
 function M:IsTripleMode()
-  return self.OwnerPanel ~= nil and self.OwnerPanel.CurrentLayout >= 7
+  local CurrentLayout = self.OwnerPanel and self.OwnerPanel.CurrentLayout
+  return type(CurrentLayout) == "number" and CurrentLayout >= 7
 end
 
 function M:IsMountJumpMode()

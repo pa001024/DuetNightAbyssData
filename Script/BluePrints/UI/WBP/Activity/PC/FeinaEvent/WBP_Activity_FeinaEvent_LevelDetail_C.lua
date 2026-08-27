@@ -85,12 +85,14 @@ function M:GoToDungeon()
   local EventId = DataMgr.EventConstant.FeinaEventId.ConstantValue
   local DungeonId = self.Tab01.IsClick and self.DungeonId[1] or self.DungeonId[2]
   local ActivityMain = UIManager(self):GetUIObj("ActivityMain")
-  local CurTabIndex = 1
+  local CurTabIndex = -1
   if ActivityMain then
     CurTabIndex = ActivityMain.CurTabId
   end
   local ExitDungeonInfo = {Type = "FeinaEvent", CurTabIndex = CurTabIndex}
-  GWorld.GameInstance:SetExitDungeonData(ExitDungeonInfo)
+  if -1 ~= CurTabIndex then
+    GWorld.GameInstance:SetExitDungeonData(ExitDungeonInfo)
+  end
   Avatar:EnterEventDungeon(function()
     self.RootPanel:DirectlyClose()
   end, DungeonId, nil, EventId)

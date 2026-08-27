@@ -637,5 +637,257 @@ return ReadOnly("Swatch", {
     HairResourceID = 30119,
     ResourceID = 30116,
     Sort = 9
+  },
+  [1046] = {
+    ActualB = 1,
+    ActualG = 0.491,
+    ActualR = 0.314,
+    ColorID = 1046,
+    ColorNumber = {
+      152,
+      186,
+      255
+    },
+    HairResourceID = 30119,
+    ResourceID = 30120,
+    Sort = 46
+  },
+  [1047] = {
+    ActualB = 1,
+    ActualG = 0.2159,
+    ActualR = 0.1248,
+    ColorID = 1047,
+    ColorNumber = {
+      99,
+      128,
+      255
+    },
+    HairResourceID = 30119,
+    ResourceID = 30120,
+    Sort = 47
+  },
+  [1048] = {
+    ActualB = 0.9911,
+    ActualG = 0.0666,
+    ActualR = 0.0497,
+    ColorID = 1048,
+    ColorNumber = {
+      63,
+      73,
+      254
+    },
+    HairResourceID = 30119,
+    ResourceID = 30120,
+    Sort = 48
+  },
+  [1049] = {
+    ActualB = 0.8469,
+    ActualG = 0,
+    ActualR = 0.0024,
+    ColorID = 1049,
+    ColorNumber = {
+      8,
+      0,
+      237
+    },
+    HairResourceID = 30119,
+    ResourceID = 30120,
+    Sort = 49
+  },
+  [1050] = {
+    ActualB = 0.3185,
+    ActualG = 0,
+    ActualR = 0.0012,
+    ColorID = 1050,
+    ColorNumber = {
+      4,
+      0,
+      153
+    },
+    HairResourceID = 30119,
+    ResourceID = 30120,
+    Sort = 50
+  },
+  [1051] = {
+    ActualB = 0.1221,
+    ActualG = 0,
+    ActualR = 0.0012,
+    ColorID = 1051,
+    ColorNumber = {
+      4,
+      0,
+      98
+    },
+    HairResourceID = 30119,
+    ResourceID = 30120,
+    Sort = 51
+  },
+  [1052] = {
+    ActualB = 0.8796,
+    ActualG = 0.4247,
+    ActualR = 0.7225,
+    ColorID = 1052,
+    ColorNumber = {
+      221,
+      174,
+      241
+    },
+    HairResourceID = 30119,
+    ResourceID = 30121,
+    Sort = 52
+  },
+  [1053] = {
+    ActualB = 0.9047,
+    ActualG = 0.1746,
+    ActualR = 0.6172,
+    ColorID = 1053,
+    ColorNumber = {
+      206,
+      116,
+      244
+    },
+    HairResourceID = 30119,
+    ResourceID = 30121,
+    Sort = 53
+  },
+  [1054] = {
+    ActualB = 0.9047,
+    ActualG = 0.1022,
+    ActualR = 0.6654,
+    ColorID = 1054,
+    ColorNumber = {
+      213,
+      90,
+      244
+    },
+    HairResourceID = 30119,
+    ResourceID = 30121,
+    Sort = 54
+  },
+  [1055] = {
+    ActualB = 0.2705,
+    ActualG = 0.0578,
+    ActualR = 0.1912,
+    ColorID = 1055,
+    ColorNumber = {
+      121,
+      68,
+      142
+    },
+    HairResourceID = 30119,
+    ResourceID = 30122,
+    Sort = 55
+  },
+  [1056] = {
+    ActualB = 0.1301,
+    ActualG = 0.0185,
+    ActualR = 0.0648,
+    ColorID = 1056,
+    ColorNumber = {
+      72,
+      37,
+      101
+    },
+    HairResourceID = 30119,
+    ResourceID = 30122,
+    Sort = 56
+  },
+  [1057] = {
+    ActualB = 0.0423,
+    ActualG = 0.0123,
+    ActualR = 0.0262,
+    ColorID = 1057,
+    ColorNumber = {
+      45,
+      29,
+      58
+    },
+    HairResourceID = 30119,
+    ResourceID = 30122,
+    Sort = 57
+  },
+  [1058] = {
+    ActualB = 0.0999,
+    ActualG = 0.0953,
+    ActualR = 0.2307,
+    ColorID = 1058,
+    ColorNumber = {
+      132,
+      87,
+      89
+    },
+    HairResourceID = 30119,
+    ResourceID = 30123,
+    Sort = 58
+  },
+  [1059] = {
+    ActualB = 0.0356,
+    ActualG = 0.0331,
+    ActualR = 0.0999,
+    ColorID = 1059,
+    ColorNumber = {
+      89,
+      51,
+      53
+    },
+    HairResourceID = 30119,
+    ResourceID = 30123,
+    Sort = 59
+  },
+  [1060] = {
+    ActualB = 0.0176,
+    ActualG = 0.0176,
+    ActualR = 0.0343,
+    ColorID = 1060,
+    ColorNumber = {
+      52,
+      36,
+      36
+    },
+    HairResourceID = 30119,
+    ResourceID = 30123,
+    Sort = 60
+  },
+  [1061] = {
+    ActualB = 0.4735,
+    ActualG = 1,
+    ActualR = 0.3763,
+    ColorID = 1061,
+    ColorNumber = {
+      165,
+      255,
+      183
+    },
+    HairResourceID = 30119,
+    ResourceID = 30124,
+    Sort = 61
+  },
+  [1062] = {
+    ActualB = 0.2159,
+    ActualG = 0.7011,
+    ActualR = 0.0252,
+    ColorID = 1062,
+    ColorNumber = {
+      44,
+      218,
+      128
+    },
+    HairResourceID = 30119,
+    ResourceID = 30124,
+    Sort = 62
+  },
+  [1063] = {
+    ActualB = 0.1981,
+    ActualG = 1,
+    ActualR = 0,
+    ColorID = 1063,
+    ColorNumber = {
+      0,
+      255,
+      123
+    },
+    HairResourceID = 30119,
+    ResourceID = 30124,
+    Sort = 63
   }
 })

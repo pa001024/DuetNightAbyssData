@@ -287,9 +287,6 @@ function Component:OnListItemInited(Content, EntryUI)
   if Content.IsChosen == nil then
     return
   end
-  if Content.IsChosen == nil then
-    return
-  end
   Content.UI:SetSelected(Content.IsChosen)
 end
 

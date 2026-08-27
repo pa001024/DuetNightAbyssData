@@ -4,7 +4,6 @@ local UIUtils = require("Utils.UIUtils")
 local EMCache = require("EMCache.EMCache")
 local TimeUtils = require("Utils.TimeUtils")
 local TaskUtils = require("BluePrints.UI.TaskPanel.TaskUtils")
-local ReasoningUtils = require("BluePrints.UI.WBP.DetectiveMinigame.ReasoningUtils")
 local GuidePointLocData = require("BluePrints.UI.TaskPanel/QuestGuidePointLocData")
 local TABALL_ID = 99
 local QuestRealStateEnum = {
@@ -32,17 +31,21 @@ function WBP_Task_Main:Initialize(Initializer)
   self.PlatformName = nil
   self.CurFocusWidget = nil
   self.IsCanCloseByHotKey = false
+  self.bShowingCommonDialog = false
 end
 
 function WBP_Task_Main:Construct()
   self:InitListenEvent()
-  ReddotManager.AddListener("DetectiveQuestion", self, self.UpdateReasoningRedDot)
-  ReddotManager.AddListener("DetectiveAnswer", self, self.UpdateReasoningRedDot)
   EventManager:AddEvent(EventID.CheckShowMap, self, self.CheckNeedShowLevelMap)
 end
 
 function WBP_Task_Main:OnLoaded(...)
   self.Super.OnLoaded(self, ...)
+  self.bQuestChainBGMClosing = false
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    Avatar:SetTaskPanelQuestChainBGMDeferred(true)
+  end
   local JumpQuestId = (...)
   if nil ~= (...) then
     self.JumpQuestChainId = tonumber(JumpQuestId)
@@ -60,6 +63,7 @@ function WBP_Task_Main:OnLoaded(...)
   end
   self.RootWidget.Btn_Jump:BindEventOnClicked(self, self.OnClickJumpBtn)
   self.RootWidget.Btn_Giveup:BindEventOnClicked(self, self.OnClickGiveUpBtn)
+  self.RootWidget.Btn_Start:BindSingleEventOnClicked(self, self.OnClickStartBtn)
   local PlayerCharacter = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   self.CurPlayerCharacterLevel = PlayerCharacter:GetAttr("Level")
   if self:IsAnimationPlaying(self.In) then
@@ -160,34 +164,74 @@ function WBP_Task_Main:InitTabInfo()
   else
     self.CommonTabWidget:SelectTab(1)
   end
+  self:InitStringBoardEntrance()
+  self:InitReasoningEntrance()
+end
+
+function WBP_Task_Main:GetTabEntranceNode()
+  return self.CommonTabWidget and self.CommonTabWidget.WBP_Com_Tab_Node_Entrance
+end
+
+function WBP_Task_Main:GetTabEntranceWidget(NameTag)
+  local EntranceNode = self:GetTabEntranceNode()
+  if not EntranceNode or not EntranceNode.EntranceWidgetList then
+    return nil
+  end
+  return EntranceNode.EntranceWidgetList[NameTag]
+end
+
+function WBP_Task_Main:InitReasoningEntrance()
+  local EntranceNode = self:GetTabEntranceNode()
+  if not EntranceNode then
+    return
+  end
+  EntranceNode:AddEntranceWidget({
+    UIConfig = "WidgetBlueprint'/Game/UI/WBP/Reasoning/Widget/WBP_Reasoning_Entrance.WBP_Reasoning_Entrance'",
+    NameTag = "Reasoning",
+    Index = 2,
+    ConditionCallback = function()
+      return self:CheckReasoningCondition()
+    end
+  })
+end
+
+function WBP_Task_Main:CheckReasoningCondition()
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return false
   end
   local UnlockedQuestions = Avatar.DetectiveGameUnlockedQuestions
-  if nil ~= UnlockedQuestions then
-    local Count = 0
-    for _, _ in pairs(UnlockedQuestions) do
-      Count = Count + 1
-    end
-    if Count > 0 then
-      self.CommonTabWidget.Pos_Reasoning:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-      self.CommonTabWidget.ReasoningEntrance = UIManager(self):CreateWidget("WidgetBlueprint'/Game/UI/WBP/Reasoning/Widget/WBP_Reasoning_Entrance.WBP_Reasoning_Entrance'", true)
-      self.CommonTabWidget.ReasoningEntrance.Text:SetText(GText("Minigame_Textmap_100304"))
-      self.CommonTabWidget.Pos_Reasoning:ClearChildren()
-      self.CommonTabWidget.Pos_Reasoning:AddChildToOverlay(self.CommonTabWidget.ReasoningEntrance)
-      self.CommonTabWidget.ReasoningEntrance.Btn_Click.OnClicked:Add(self, self.OnClickReasoningEntrance)
-      self.CommonTabWidget.ReasoningEntrance.Key_GamePad:CreateCommonKey({
-        KeyInfoList = {
-          {Type = "Img", ImgShortPath = "Menu"}
-        }
-      })
-      if self.UsingGamepad then
-        self.CommonTabWidget.ReasoningEntrance.Key_GamePad:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-      end
-    end
+  if nil == UnlockedQuestions then
+    return false
   end
-  self:UpdateReasoningRedDot()
+  return not UnlockedQuestions:IsEmpty()
+end
+
+function WBP_Task_Main:InitStringBoardEntrance()
+  local EntranceNode = self:GetTabEntranceNode()
+  if not EntranceNode then
+    return
+  end
+  EntranceNode:AddEntranceWidget({
+    UIConfig = "WidgetBlueprint'/Game/UI/WBP/StringBoard/Widget/WBP_StringBoard_Entrance.WBP_StringBoard_Entrance'",
+    NameTag = "StringBoard",
+    Index = 1,
+    ConditionCallback = function()
+      return self:CheckStringBoardCondition()
+    end
+  })
+end
+
+function WBP_Task_Main:CheckStringBoardCondition()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return false
+  end
+  local StringBoardConfig = require("BluePrints.UI.InvestigationWall.StringBoardConfig")
+  if not StringBoardConfig or not StringBoardConfig.EntranceUnlockConditionId then
+    return false
+  end
+  return Avatar:CheckCondition(StringBoardConfig.EntranceUnlockConditionId)
 end
 
 function WBP_Task_Main:UpdateTabWidgetReddot()
@@ -580,6 +624,9 @@ function WBP_Task_Main:ShowQuestDetailInfo(QuestWidget)
   if not UnlockConditionId then
     IsUnLocking = false
   end
+  if Avatar and Avatar.QuestChains[QuestChainId] and Avatar.QuestChains[QuestChainId].IsAdvanceUnlock then
+    IsUnLocking = true
+  end
   if self:CheckShowTime(QuestChainId) then
     IsUnLocking = false
   end
@@ -751,6 +798,14 @@ function WBP_Task_Main:ShowQuestDetailInfo(QuestWidget)
       end
     end
   end
+  if self.RootWidget.Group_Start then
+    self.RootWidget.Btn_Start:SetText(GText("UI_UnlockQuestForce_Button"))
+    if QuestWidget.State == QuestRealStateEnum.Block then
+      self.RootWidget.Group_Start:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    else
+      self.RootWidget.Group_Start:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+  end
   if not IsUnLocking then
     self.RootWidget.Common_Button_Text_PC:ForbidBtn(true)
     if not self.IsForbiddenButton then
@@ -867,8 +922,15 @@ function WBP_Task_Main:OnKeyDown(MyGeometry, InKeyEvent)
     self:IsShowGamePad(false)
     self:InitTabPadKeyInfoForTips()
   elseif "Gamepad_Special_Right" == KeyName then
-    if self.CommonTabWidget.ReasoningEntrance then
-      self:OnClickReasoningEntrance()
+    local EntranceNode = self:GetTabEntranceNode()
+    if EntranceNode and EntranceNode.HandleMenuKey then
+      local LastFocusWidget
+      if self.CurFocusWidget and self.CurFocusWidget.Task_SubItem then
+        LastFocusWidget = self.CurFocusWidget.Task_SubItem
+      elseif self.CurFocusWidget then
+        LastFocusWidget = self.CurFocusWidget
+      end
+      IsEventHandled = true == EntranceNode:HandleMenuKey(LastFocusWidget)
     end
   elseif "Gamepad_FaceButton_Top" == KeyName then
     if self.IsTaskEmpty == true then
@@ -883,6 +945,8 @@ function WBP_Task_Main:OnKeyDown(MyGeometry, InKeyEvent)
     end
     if self.RootWidget.Group_Jump:GetVisibility() == ESlateVisibility.SelfHitTestInvisible then
       self:OnClickJumpBtn()
+    elseif self.RootWidget.Group_Start and self.RootWidget.Group_Start:GetVisibility() ~= UIConst.VisibilityOp.Collapsed and self.CurSelectQuest.State == QuestRealStateEnum.Block then
+      self:OnClickStartBtn()
     end
   elseif "Gamepad_FaceButton_Left" == KeyName then
     if self.IsTaskEmpty == true then
@@ -928,6 +992,7 @@ function WBP_Task_Main:OnKeyDown(MyGeometry, InKeyEvent)
     IsEventHandled = self.CommonTabWidget:Handle_KeyEventOnGamePad(KeyName)
   elseif "Gamepad_Special_Left" == KeyName and self.RootWidget.Key_Giveup:GetVisibility() == ESlateVisibility.Visible then
     self:OnClickGiveUpBtn()
+    IsEventHandled = true
   end
   if IsEventHandled then
     return UE4.UWidgetBlueprintLibrary.Handled()
@@ -967,6 +1032,7 @@ end
 
 function WBP_Task_Main:Close()
   EMCache:Set("QuestPantlTab", self.SaveTabId or self.CurTabId, true)
+  self.bQuestChainBGMClosing = true
   self.Super.Close(self)
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
@@ -994,10 +1060,11 @@ function WBP_Task_Main:Close()
   if self.CurTrackingQuest and self.CurTrackingQuest.SubRegionId <= 0 then
     self:SetTrackingQuestInfoToServer()
   end
+  Avatar:FinishTaskPanelQuestChainBGMDeferred(ClientTrackId, ServerTrackId)
 end
 
-function WBP_Task_Main:CheckNeedShowLevelMap()
-  if TaskUtils:GetQuestInterfaceJump(self.CurSelectQuest.QuestID) then
+function WBP_Task_Main:CheckNeedShowLevelMap(QuestChainId)
+  if self.CurSelectQuest and TaskUtils:GetQuestInterfaceJump(self.CurSelectQuest.QuestID) then
     return
   end
   local bShowLevelMap = false
@@ -1005,21 +1072,6 @@ function WBP_Task_Main:CheckNeedShowLevelMap()
   if not Avatar then
     return
   end
-  local HomeBaseRegionId = Const.HomeBaseSubRegionId
-  
-  local function CheckIsNeedShowLevelMap(AvatarRegionId, TaskSubRegionId)
-    if 0 == TaskSubRegionId then
-      return false
-    end
-    if AvatarRegionId == TaskSubRegionId and TaskSubRegionId == HomeBaseRegionId then
-      return false
-    end
-    if AvatarRegionId ~= TaskSubRegionId and TaskSubRegionId == HomeBaseRegionId then
-      return true
-    end
-    return true
-  end
-  
   local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
   local UIManager = GameInstance:GetGameUIManager()
   local TrackingQuestData = TaskUtils:GetTrackingQuestDetailInfo()
@@ -1040,7 +1092,6 @@ function WBP_Task_Main:CheckNeedShowLevelMap()
     if not (RegionMapId and DataMgr.RegionMap[RegionMapId]) or not DataMgr.RegionMap[RegionMapId].RegionId then
       return
     end
-    local RegionId = DataMgr.RegionMap[RegionMapId].RegionId
     if false == IsInRegion then
       bShowLevelMap = true
       local MainMap = UIManager:LoadUINew("LevelMapMain", true)
@@ -1055,7 +1106,16 @@ function WBP_Task_Main:CheckNeedShowLevelMap()
     EventManager:FireEvent(EventID.OnSetQuestTracking, self.CurSelectQuest.QuestChainId)
   end
   if false == bShowLevelMap then
-    self:Close()
+    if self.IsTrackingButtonClicked then
+      self:Close()
+    else
+      local InvestigationWallUtils = require("BluePrints.UI.InvestigationWall.InvestigationWallUtils")
+      local ResolvedQuestChainId = QuestChainId or Avatar.TrackingQuestChainId
+      local RegionAction = InvestigationWallUtils.ResolveQuestTrackRegionAction(Avatar, ResolvedQuestChainId, nil)
+      if RegionAction == InvestigationWallUtils.QuestTrackRegionAction.SameRegion then
+        self:Close()
+      end
+    end
   end
 end
 
@@ -1130,6 +1190,10 @@ function WBP_Task_Main:CheckAvatarIsInQuestSubRegion()
 end
 
 function WBP_Task_Main:Destruct()
+  local Avatar = GWorld:GetAvatar()
+  if Avatar and not self.bQuestChainBGMClosing then
+    Avatar:FinishTaskPanelQuestChainBGMDeferred(self.TrackingQuestId, Avatar.TrackingQuestChainId)
+  end
   if IsValid(self.GameInputModeSubsystem) then
     self.GameInputModeSubsystem.OnInputMethodChanged:Remove(self, self.RefreshOpInfoByInputDevice)
   end
@@ -1140,8 +1204,6 @@ function WBP_Task_Main:Destruct()
       ReddotManager.RemoveListener(RedDotName, self)
     end
   end
-  ReddotManager.RemoveListener("DetectiveQuestion", self)
-  ReddotManager.RemoveListener("DetectiveAnswer", self)
   self.RootWidget.Btn_Giveup:UnBindEventOnClicked(self, self.OnClickGiveUpBtn)
   WBP_Task_Main.Super.Destruct(self)
 end
@@ -1204,6 +1266,16 @@ function WBP_Task_Main:ReSwitchTaskBarTrackingQuest(InNewTrackingQuestChainId)
 end
 
 function WBP_Task_Main:OnTrackButtonClicked()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    DebugPrint("lxc: WBP_Task_Main:OnTrackButtonClicked: no Avatar!")
+    return
+  end
+  if Avatar.InSpecialQuest then
+    DebugPrint("lxc: WBP_Task_Main:OnTrackButtonClicked: 在特殊任务中，不允许开始追踪任务 Avatar.InSpecialQuest: %s", tostring(Avatar.InSpecialQuest))
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, "QUEST_INSPECIALQUEST_MSG")
+    return
+  end
   if not TaskUtils:JudgeCanTrack() then
     UIManager(self):ShowUITip(UIConst.Tip_CommonTop, GText("Quest_Tips_QuestTrackLock"))
     return
@@ -1249,6 +1321,15 @@ function WBP_Task_Main:OnTrackButtonClicked()
 end
 
 function WBP_Task_Main:OnClickJumpBtn()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    DebugPrint("lxc: WBP_Task_Main:OnClickJumpBtn no avatar")
+    return
+  end
+  if Avatar.InSpecialQuest then
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, "QUEST_INSPECIALQUEST_MSG")
+    return
+  end
   if not TaskUtils:JudgeCanTrack() then
     UIManager(self):ShowUITip(UIConst.Tip_CommonTop, GText("Quest_Tips_QuestTrackLock"))
     return
@@ -1616,7 +1697,11 @@ function WBP_Task_Main:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName
   else
     self.UsingGamepad = true
     self:InitPadKeyInfo()
-    self:SetFocusOnTrackWidget(self.CurSelectId)
+    self:AddTimer(0.1, function()
+      if not self.bShowingCommonDialog then
+        self:SetFocusOnTrackWidget(self.CurSelectId)
+      end
+    end)
     self:IsShowGamePad(true)
   end
 end
@@ -1637,14 +1722,6 @@ function WBP_Task_Main:InitPadKeyInfo()
       {Type = "Img", ImgShortPath = "LS"}
     }
   })
-  if self.CommonTabWidget.ReasoningEntrance then
-    self.CommonTabWidget.ReasoningEntrance.Key_GamePad:CreateCommonKey({
-      KeyInfoList = {
-        {Type = "Img", ImgShortPath = "Menu"}
-      }
-    })
-    self.CommonTabWidget.ReasoningEntrance.Key_GamePad:SetVisibility(UE4.ESlateVisibility.Visible)
-  end
   self.RootWidget.Key_Qa:CreateCommonKey({
     KeyInfoList = {
       {Type = "Img", ImgShortPath = "RS"}
@@ -1654,6 +1731,7 @@ function WBP_Task_Main:InitPadKeyInfo()
   self.RootWidget.Key_Title_Rewards:SetVisibility(UE4.ESlateVisibility.Visible)
   self.RootWidget.Key_Map:SetVisibility(UE4.ESlateVisibility.Visible)
   self.RootWidget.Common_Button_Text_PC:SetGamePadImg("X")
+  self.RootWidget.Btn_Start:SetGamePadImg("Y")
 end
 
 function WBP_Task_Main:InitTabPadKeyInfo()
@@ -1801,18 +1879,18 @@ function WBP_Task_Main:IsShowGamePad(IsShow)
     self.RootWidget.Key_Title_Rewards:SetVisibility(UE4.ESlateVisibility.Visible)
     self.RootWidget.Common_Button_Text_PC:SetGamePadVisibility(UE4.ESlateVisibility.Visible)
     self.RootWidget.GroupKey:SetVisibility(UE4.ESlateVisibility.Visible)
-    if self.CommonTabWidget.ReasoningEntrance then
-      self.CommonTabWidget.ReasoningEntrance.Key_GamePad:SetVisibility(UE4.ESlateVisibility.Visible)
-    end
+    self.RootWidget.Btn_Start:SetGamePadVisibility(UIConst.VisibilityOp.Visible)
   else
     self.CommonTabWidget.SizeBox_Left:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.CommonTabWidget.SizeBox_Right:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.RootWidget.Key_Title_Rewards:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.RootWidget.Common_Button_Text_PC:SetGamePadVisibility(UE4.ESlateVisibility.Collapsed)
     self.RootWidget.GroupKey:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    if self.CommonTabWidget.ReasoningEntrance then
-      self.CommonTabWidget.ReasoningEntrance.Key_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    end
+    self.RootWidget.Btn_Start:SetGamePadVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  local EntranceNode = self:GetTabEntranceNode()
+  if EntranceNode and EntranceNode.SetHostAllowGamePadKey then
+    EntranceNode:SetHostAllowGamePadKey(true == IsShow)
   end
   self:SetTrackButtonText(self.TrackingQuestId == self.CurSelectId)
   if self.bNeedBlock then
@@ -1832,7 +1910,7 @@ function WBP_Task_Main:ReceiveEnterState(StackAction)
     if self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then
       self:InitPadKeyInfo()
     end
-    if self.CurFocusWidget and self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then
+    if self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad and self.CurFocusWidget then
       self.CurFocusWidget.Task_SubItem:SetFocus()
     end
   end
@@ -1842,43 +1920,14 @@ function WBP_Task_Main:ReceiveEnterState(StackAction)
   end
 end
 
-function WBP_Task_Main:OnClickReasoningEntrance()
-  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_confirm", nil, nil)
-  local UIManager = self:GetGameInstance():GetGameUIManager()
-  UIManager:LoadUINew("DetectiveMinigame")
-end
-
-function WBP_Task_Main:UpdateReasoningRedDot()
-  local IsNewClue = ReasoningUtils:IsAllClueHasNewClue()
-  local IsNewQuestion = ReasoningUtils:IsAllQuestionHasNewQuestion()
-  if self.CommonTabWidget and self.CommonTabWidget.ReasoningEntrance then
-    if IsNewClue then
-      self.CommonTabWidget.ReasoningEntrance.Bubble:ShowInfo()
-      self.CommonTabWidget.ReasoningEntrance.Panel_Clue:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-      self.CommonTabWidget.ReasoningEntrance.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    elseif IsNewQuestion then
-      self.CommonTabWidget.ReasoningEntrance.Panel_Clue:SetVisibility(UE4.ESlateVisibility.Collapsed)
-      self.CommonTabWidget.ReasoningEntrance.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    else
-      self.CommonTabWidget.ReasoningEntrance.Panel_Clue:SetVisibility(UE4.ESlateVisibility.Collapsed)
-      self.CommonTabWidget.ReasoningEntrance.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    end
-  end
-end
-
-function WBP_Task_Main:ShouldShowReasoningEntrance()
+function WBP_Task_Main:OnClickGiveUpBtn()
+  DebugPrint("lxc: WBP_Task_Main:OnClickGiveUpBtn")
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
-    return false
+    return
   end
-  local UnlockedQuestions = Avatar.DetectiveGameUnlockedQuestions or {}
-  local UnlockedResults = Avatar.DetectiveGameUnlockedResult or {}
-  return false
-end
-
-function WBP_Task_Main:OnClickGiveUpBtn()
-  local UIManager = UIManager(self)
-  if not UIManager then
+  if Avatar.InSpecialQuest then
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, "QUEST_INSPECIALQUEST_MSG")
     return
   end
   local Params = {
@@ -1889,7 +1938,7 @@ function WBP_Task_Main:OnClickGiveUpBtn()
     CloseBtnCallbackObj = self,
     CloseBtnCallbackFunction = self.HandleCancelGiveUpTask
   }
-  UIManager:ShowCommonPopupUI(100320, Params)
+  UIManager(self):ShowCommonPopupUI(100320, Params)
 end
 
 function WBP_Task_Main:HandleCancelGiveUpTask()
@@ -1924,7 +1973,8 @@ function WBP_Task_Main:HandleConfirmGiveUpTask()
     self.CurTrackingQuest = nil
   end
   Avatar:GiveUpQuestChain(self.CurSelectQuest.QuestChainId)
-  Avatar:StopClientQuestChainStoryline(QuestChainInfo.QuestChainId)
+  local OldQuestChainId = self.CurSelectQuest.QuestChainId
+  Avatar:StopQuestChainProxyStoryline(QuestChainInfo.QuestChainId)
   local ItemToRemove
   local ListItems = self.RootWidget.List_Task:GetListItems()
   for _, ListItem in pairs(ListItems) do
@@ -1985,6 +2035,71 @@ function WBP_Task_Main:HandleConfirmGiveUpTask()
   if self.RootWidget.Tab_Change then
     self.RootWidget:PlayAnimation(self.RootWidget.Tab_Change)
   end
+end
+
+function WBP_Task_Main:OnClickStartBtn()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    DebugPrint("lxc: WBP_Task_Main:OnClickStartBtn no avatar")
+    return
+  end
+  if Avatar.InSpecialQuest then
+    DebugPrint("lxc: WBP_Task_Main:OnClickStartBtn 特殊任务中，不允许开始互斥任务 Avatar.InSpecialQuest: %s", tostring(Avatar.InSpecialQuest))
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, "QUEST_INSPECIALQUEST_MSG")
+    return
+  end
+  
+  local function ConfirmCallback()
+    local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
+    if not GameMode then
+      DebugPrint(string.format("lxc: ConfirmCallback: GameMode为nil"))
+      return
+    end
+    if not Avatar then
+      DebugPrint(string.format("lxc: ConfirmCallback: 获取avatar失败"))
+      return
+    end
+    if not self.CurSelectQuest or not self.CurSelectQuest.QuestChainId then
+      DebugPrint(string.format("lxc: ConfirmCallback: 任务面板CurSelectQuest无效, self.CurSelectQuest: %s, self.CurSelectQuest.QuestChainId", tostring(self.CurSelectQuest), tostring(self.CurSelectQuest and self.CurSelectQuest.QuestChainId)))
+      return
+    end
+    local ChapterId = DataMgr.QuestChainId2ChapId[self.CurSelectQuest.QuestChainId]
+    if not ChapterId then
+      DebugPrint(string.format("lxc: ConfirmCallback: no ChapterId for QuestChainId: %s", tostring(self.CurSelectQuest.QuestChainId)))
+      return
+    end
+    
+    local function Callback(Ret, ChapterId)
+      DebugPrint(string.format("lxc: Avatar:UnlockQuestChapterForce Callback: Ret: %d, ChapterId: %s", Ret, tostring(ChapterId)))
+      if ErrorCode:Check(Ret) then
+        local bBeHome = Avatar.CurrentRegionId and DataMgr.SubRegion[Avatar.CurrentRegionId] and DataMgr.SubRegion[Avatar.CurrentRegionId].SubRegionType == "home"
+        self:OnTrackButtonClicked()
+        if not bBeHome then
+          GameMode:HandleLevelDeliver(UE4.EModeType.ModeRegion, 210101, 1, true)
+        else
+          self.CommonTabWidget:SelectTab(self.CurTabId)
+        end
+      end
+    end
+    
+    Avatar:UnlockQuestChapterForce(ChapterId, Callback)
+    self.bShowingCommonDialog = false
+  end
+  
+  local function OnClosePopup()
+    self.bShowingCommonDialog = false
+  end
+  
+  local Params = {
+    RightCallbackObj = self,
+    RightCallbackFunction = ConfirmCallback,
+    LeftCallbackObj = self,
+    LeftCallbackFunction = OnClosePopup,
+    CloseBtnCallbackObj = self,
+    CloseBtnCallbackFunction = OnClosePopup
+  }
+  UIManager(self):ShowCommonPopupUI(100414, Params)
+  self.bShowingCommonDialog = true
 end
 
 return WBP_Task_Main

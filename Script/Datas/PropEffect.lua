@@ -26,6 +26,14 @@ return ReadOnly("PropEffect", {
     ReplaceSupportSkillDesc = "SKILL_ICON_Search",
     UsingIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_CentralSquare_Unequip.T_Icon_CentralSquare_Unequip"
   },
+  [49985] = {
+    Id = 49985,
+    UsingIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_Gesture_1002.T_Mounts_Gesture_1002'"
+  },
+  [49986] = {
+    Id = 49986,
+    UsingIcon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_Gesture_0402.T_Mounts_Gesture_0402"
+  },
   [49987] = {
     Id = 49987,
     UsingIcon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_Gesture_0302.T_Mounts_Gesture_0302"

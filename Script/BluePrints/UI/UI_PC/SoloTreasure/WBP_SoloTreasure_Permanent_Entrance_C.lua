@@ -156,6 +156,12 @@ function M:OnShopClicked()
 end
 
 function M:OnRewardClicked()
+  local SeasonId = PermanentSoloTreasureDataModel:GetCurrentSeasonId()
+  local Remaining = PermanentSoloTreasureDataModel:GetSeasonTimeInfo(SeasonId)
+  if Remaining <= 0 then
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_SoloTreasure_NoInEventTime"))
+    return
+  end
   SoloTreasurePermanentDataModel:OpenReward()
 end
 

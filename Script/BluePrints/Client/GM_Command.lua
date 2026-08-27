@@ -48,6 +48,8 @@ function GM_Command:Init_Command()
     CloseUI = "CloseUI",
     CloseAllUI = "CloseAllUI",
     CloseCurrentUI = "CloseCurrentUI",
+    CloseTopUI = "CloseCurrentUI",
+    closetopui = "CloseCurrentUI",
     ShowGuideUI = "ShowGuideUI",
     FallAttackPoint = "FallAttackPoint",
     FallAttackPointPos = "FallAttackPointPos",
@@ -57,6 +59,7 @@ function GM_Command:Init_Command()
     LowerArmScale = "LowerArmScale",
     HandScale = "HandScale",
     Debug = "Debug",
+    PrintCNPCInfo = "PrintCNPCInfo",
     AiDebugLog = "AiDebugLog",
     UpdateVLM = "UpdateVLM",
     GlobalTimeDilation = "GlobalTimeDilation",
@@ -88,6 +91,7 @@ function GM_Command:Init_Command()
     BreakableItemNavEnableInLower = "BreakableItemNavEnableInLower",
     PrintActorSCLoc = "PrintActorSCLoc",
     TestServerRandomCreator = "TestServerRandomCreator",
+    MoneyTreeTestRandom = "MoneyTreeTestRandom",
     EnterIronSurvivalDungeon = "EnterIronSurvivalDungeon",
     Recovery = "RecoverySelf",
     RecoverPlayer = "RecoverPlayer",
@@ -107,6 +111,7 @@ function GM_Command:Init_Command()
     YXD = "YXDTEST",
     THY = "THYTEST",
     JTY = "JTYTEST",
+    CYH = "CYHTEST",
     LJL = "LJLTEST",
     HTY = "HTYTEST",
     LHQ = "LHQTEST",
@@ -183,10 +188,6 @@ function GM_Command:Init_Command()
     MaxES = "MaxES",
     TestGuildWarRanking = "TestGuildWarRanking",
     TestCoopRank = "TestCoopRank",
-    SE = "SimulateExhibit",
-    SimulateExhibit = "SimulateExhibit",
-    SEC = "SimulateExhibitClear",
-    SimulateExhibitClear = "SimulateExhibitClear",
     AddES = "AddES",
     God = "God",
     DefCoreGod = "DefCoreGod",
@@ -213,6 +214,8 @@ function GM_Command:Init_Command()
     AddMonsterBuff = "AddMonsterBuff",
     AddMonsterBuffDuration = "AddMonsterBuffDuration",
     RemoveMonsterBuff = "RemoveMonsterBuff",
+    IMBL = "IncreaseMonsterBuffLayer",
+    RMBL = "ReduceMonsterBuffLayer",
     AddGP = "AddGP",
     RemoveAllGP = "RemoveAllGP",
     PrintGP = "PrintGP",
@@ -220,6 +223,9 @@ function GM_Command:Init_Command()
     MSPDT = "MonsterSpawnPointDistributeLogicTest",
     StartXibiBoss = "StartXibiBoss",
     UnlockHardBoss = "UnlockHardBoss",
+    UnlockAllReview = "UnlockAllReview",
+    UnlockAllCluePage = "UnlockAllCluePage",
+    SetAllClueContentFinalState = "SetAllClueContentFinalState",
     UnlockRegionTeleport = "UnlockRegionTeleport",
     UnlockRegionDelivery = "UnlockRegionDelivery",
     AddRougeLikeCurrency = "AddRougeLikeCurrency",
@@ -280,9 +286,12 @@ function GM_Command:Init_Command()
     TestStory1 = "TestStory1",
     RunStory = "RunStoryline",
     StopStory = "StopStoryline",
-    ForbidAllStory = "ForbidAllStory",
     PrintStorylineInfo = "PrintStorylineInfo",
     PrintQuestChainsNeedRestart = "PrintQuestChainsNeedRestart",
+    PST = "PrintSignBoardTalk",
+    PrintSignBoardTalk = "PrintSignBoardTalk",
+    DSBTL = "DisableSignBoardTalkLimit",
+    DisableSignBoardTalkLimit = "DisableSignBoardTalkLimit",
     RemoveAllImpression = "RemoveAllImpression",
     CIS = "CompleteImpressionSystem",
     PlayTalk = "PlayTalk",
@@ -368,6 +377,16 @@ function GM_Command:Init_Command()
     PrintAUAForbidTag = "PrintAUAForbidTag",
     PrintCurAuActionCount = "PrintCurAuActionCount",
     MechanismStateDebug = "MechanismStateDebug",
+    TrainMove = "TrainMove",
+    TrainHide = "TrainHide",
+    TrainShow = "TrainShow",
+    TrainDestroy = "TrainDestroy",
+    TrainCarriage = "TrainCarriage",
+    TrainSpawn = "TrainSpawn",
+    TrainState = "TrainState",
+    TrainManualItem = "TrainManualItem",
+    ListManualCombat = "ListManualCombat",
+    DbgTrainInit = "DbgTrainInit",
     StartSpecialQuest = "StartSpecialQuest",
     SuccessSpecialQuest = "SuccessSpecialQuest",
     FailerSpecialQuest = "FailerSpecialQuest",
@@ -555,6 +574,9 @@ function GM_Command:Init_Command()
     ShowGlobalVersion = "ShowGlobalVersion",
     HideGlobalVersion = "HideGlobalVersion",
     OpenOnlineActionView = "OpenOnlineActionView",
+    TeamHallRecruitment = "TeamHallRecruitment",
+    QueryTeamHallList = "QueryTeamHallList",
+    PrintTeamHallRecruitmentState = "PrintTeamHallRecruitmentState",
     SwitchMobileHUDLayout = "SwitchMobileHUDLayout",
     OpenMultiChallenge = "OpenMultiChallenge",
     ChangeDSMonsterFramingNodeConfig = "ChangeDSMonsterFramingNodeConfig",
@@ -590,35 +612,60 @@ function GM_Command:Init_Command()
     TestCoopCreate = "TestCoopCreate",
     GP = "GP",
     GenerateNpcLocation = "GenerateNpcLocation",
-    EnterRougePro = "EnterRougePro",
-    GMEnterTriggerBox = "GMEnterTriggerBox",
-    GMExitTriggerBox = "GMExitTriggerBox",
-    RougeProCmd = "RougeProCmd",
-    GuildInit = "GuildInit",
     ShowNetPrint = "ShowNetPrint",
-    TestRaceInGame = "TestRaceInGame"
+    TestRaceInGame = "TestRaceInGame",
+    GuildInit = "GuildInit",
+    GuildResource = "GuildResource",
+    StartSlideFromPoint = "StartSlideFromPoint"
   }
 end
 
-function GM_Command:GuildInit()
-  local GameMode = UE.UGameplayStatics.GetGameMode(self.Player)
-  GameMode:InitGuildConstruct()
+function GM_Command:GuildResource()
+  local Avatar = self:GetClientAvatar()
+  ScreenPrint(Avatar.GuildInfo.GuildHomeData.Fund)
 end
 
-function GM_Command:EnterRougePro(DungeonId, IsDSDungeon)
-  DungeonId = tonumber(DungeonId)
-  IsDSDungeon = tonumber(IsDSDungeon)
-  if not DungeonId then
-    return
-  end
-  local avatar = self:GetClientAvatar()
-  if avatar then
-    if 1 == IsDSDungeon then
-      avatar:EnterDungeon(DungeonId, CommonConst.DungeonNetMode.DedicatedServer)
-    else
-      avatar:EnterDungeon(DungeonId)
+function GM_Command:GuildInit()
+  local function SuccessCallback(...)
+    DebugPrint("lxc: WBP_Battle_C:OnGuildConstructionBtnClicked 进入建造模式")
+    
+    local ErrCode, RelatedData, BuildLock = ...
+    if not ErrCode then
+      DebugPrint("lxc: WBP_Battle_C:OnGuildConstructionBtnClicked no ErrCode")
+      return
     end
+    if not RelatedData then
+      DebugPrint("lxc: WBP_Battle_C:OnGuildConstructionBtnClicked no data")
+      return
+    end
+    if not BuildLock then
+      DebugPrint("lxc: WBP_Battle_C:OnGuildConstructionBtnClicked no BuildLock")
+      return
+    end
+    local bCanEnterBuild = RelatedData.PermissionSummary.CanEnterBuild
+    DebugPrint("lxc: WBP_Battle_C:OnGuildConstructionBtnClicked ErrorCode:" .. ErrCode)
+    DebugPrint("lxc: WBP_Battle_C:OnGuildConstructionBtnClicked bCanEnterBuild:" .. tostring(bCanEnterBuild))
+    DebugPrint(string.format("lxc: WBP_Battle_C:OnGuildConstructionBtnClicked IsLocked: %s, IsSelf: %s", tostring(BuildLock.IsLocked), tostring(BuildLock.IsSelf)))
+    if not ErrorCode:Check(ErrCode) then
+      return
+    end
+    if not bCanEnterBuild then
+      UIManager(self):ShowUITip(UIConst.Tip_CommonToast, "UI_NoEditPermission_2")
+      return
+    end
+    if BuildLock.IsLocked and not BuildLock.IsSelf then
+      UIManager(self):ShowUITip(UIConst.Tip_CommonToast, string.format(GText("UI_GuildConstructing"), BuildLock.HolderName))
+      return
+    end
+    local GameMode = UE.UGameplayStatics.GetGameMode(self.Player)
+    if not GameMode.GuildConstructManager then
+      GameMode:InitGuildConstruct()
+    end
+    GameMode:EnterGuildConstructModifyMode()
   end
+  
+  local Avatar = self:GetClientAvatar()
+  Avatar:GuildHomeEnterBuild(SuccessCallback)
 end
 
 function GM_Command:OpenUIMainSoloTreasure(Mode)
@@ -1047,8 +1094,6 @@ end
 function GM_Command:DedicatedServerCommand(Func, ...)
   local MyPlayerController = UE4.UGameplayStatics.GetPlayerController(self:GetGameInstance(), 0)
   assert(MyPlayerController, "非法PlayerController")
-  local func = MyPlayerController["GM_" .. Func]
-  assert(func, "没找到函数:GM_" .. Func)
   local Args = {
     ...
   }
@@ -1057,7 +1102,9 @@ function GM_Command:DedicatedServerCommand(Func, ...)
   local ArgsMessage = FMessage()
   ArgsMessage:SetBytes(ArgsStr, #ArgsStr)
   if IsStandAlone(self.Player) then
-    func(MyPlayerController, ArgsMessage)
+    local LocalFunc = MyPlayerController["GM_" .. Func]
+    assert(LocalFunc, "没找到函数:GM_" .. Func)
+    LocalFunc(MyPlayerController, ArgsMessage)
     return
   end
   MyPlayerController:GMDedicatedServerCommand(Func, ArgsMessage)
@@ -1086,6 +1133,14 @@ function GM_Command:Server_Command(FunctionName, Args)
   end
   
   Avatar:CallServer("DoGmCommand", callback, FunctionName, table.unpack(Args))
+end
+
+function GM_Command:MoneyTreeTestRandom(EventId, ClaimIndex, Count)
+  self:Server_Command("MoneyTreeTestRandom", {
+    EventId,
+    ClaimIndex,
+    Count
+  })
 end
 
 function GM_Command:ReloadAll(...)
@@ -1481,6 +1536,10 @@ function GM_Command:CloseCurrentUI()
       TopUI:Close()
     end
   end
+end
+
+function GM_Command:CloseTopUI()
+  return self:CloseCurrentUI()
 end
 
 function GM_Command:ShowGuideUI(GuideId)
@@ -2174,7 +2233,14 @@ function GM_Command:PrintActorSCLoc(Eid)
 end
 
 function GM_Command:LJLTEST(arg)
-  self.Player.RPCComponent:NotifyServerStartExitDelivery()
+  local ClickCounts = tonumber(arg)
+  self.Player:AddTimer(0.1, function()
+    GWorld.GameInstance.MeteorMechanism:OnReceiveClick()
+    ClickCounts = ClickCounts - 1
+    if ClickCounts <= 0 then
+      self.Player:RemoveTimer("ljltest")
+    end
+  end, true, 0, "ljltest", true)
 end
 
 function GM_Command:YXDTEST(type)
@@ -2208,7 +2274,7 @@ function GM_Command:YXDTEST(type)
   end
 end
 
-function GM_Command:YLYTEST(type, StaticCreatorId, Speed, TransTime)
+function GM_Command:YLYTEST(type, StaticCreatorId, Speed, TransTime, Arg5)
   local GameMode = UE.UGameplayStatics.GetGameMode(self.Player)
   if "1" == type then
     UIManager(GWorld.GameInstance):LoadUINew("SoloTreasureEvacuation")
@@ -2226,7 +2292,245 @@ function GM_Command:YLYTEST(type, StaticCreatorId, Speed, TransTime)
     local TransitionTime = tonumber(TransTime) or 0
     DebugPrint("yly gm SetRollerCoasterSpeed", StaticCreatorId, "Speed =", TargetSpeed, "Time =", TransitionTime)
     GameMode:SetRollerCoasterSpeed(tonumber(StaticCreatorId), TargetSpeed, TransitionTime)
+  elseif "6" == type then
+    local MechanismId = tonumber(StaticCreatorId)
+    local FollowComponentId = tonumber(Speed) or 1
+    local bSpawn = "1" == tostring(TransTime)
+    DebugPrint("yly gm SetMechanismFollowNpc", MechanismId, "FollowComponentId =", FollowComponentId, "bSpawn =", bSpawn)
+    GameMode:SetMechanismFollowNpc(MechanismId, FollowComponentId, bSpawn)
+  elseif "7" == type then
+    local Shelf = GameMode.EMGameState:GetMechanismActorById(tonumber(StaticCreatorId))
+    if IsValid(Shelf) and Shelf.OnLingQinTrigger then
+      local bForward = 0 ~= (tonumber(Speed) or 1)
+      DebugPrint("yly gm OnLingQinTrigger", StaticCreatorId, "bForward =", bForward)
+      Shelf:OnLingQinTrigger(bForward)
+    else
+      DebugPrint("yly gm OnLingQinTrigger: Shelf not found, Id =", StaticCreatorId)
+    end
+  elseif "8" == type then
+    local Shelf = GameMode.EMGameState:GetMechanismActorById(tonumber(StaticCreatorId))
+    if IsValid(Shelf) then
+      if 0 ~= (tonumber(Speed) or 1) then
+        Shelf:MoveNext()
+      else
+        Shelf:MovePrev()
+      end
+    end
+  elseif "10" == type then
+    self:RollerCoasterLookAtTest(StaticCreatorId, Speed, TransTime, Arg5)
+  elseif "11" == type then
+    self:RollerCoasterCameraMonitor(StaticCreatorId)
+  elseif "12" == type then
+    self:RollerCoasterLookAtTestClear()
+  elseif "13" == type then
+    self:RollerCoasterInstructionTest(StaticCreatorId)
+  elseif "14" == type then
+    self:RollerCoasterHudStateDump()
+  elseif "15" == type then
+    self:RollerCoasterHudHideTest()
   end
+end
+
+function GM_Command:RollerCoasterLookAtTest(YawOffset, PitchOffset, Duration, Distance)
+  YawOffset = tonumber(YawOffset) or 30
+  PitchOffset = tonumber(PitchOffset) or 0
+  Duration = tonumber(Duration) or 5
+  Distance = tonumber(Distance) or 1500
+  local Player = self.Player
+  if not IsValid(Player) then
+    DebugPrint("yly gm LookAtTest: 玩家无效")
+    return
+  end
+  if Duration <= 0 then
+    DebugPrint("yly gm LookAtTest: Duration 必须大于 0，否则组件不会置接管标志位")
+    return
+  end
+  local CartRot = Player:K2_GetActorRotation()
+  local TargetRot = FRotator(CartRot.Pitch + PitchOffset, CartRot.Yaw + YawOffset, 0)
+  local EyeLoc = Player:K2_GetActorLocation() + FVector(0, 0, 80)
+  local TargetLoc = EyeLoc + UE4.UKismetMathLibrary.GetForwardVector(TargetRot) * Distance
+  self:RollerCoasterDestroyLookAtTarget()
+  local TargetClass = ANewTargetPoint and ANewTargetPoint.StaticClass()
+  if not TargetClass then
+    DebugPrint("yly gm LookAtTest: 找不到 ANewTargetPoint 类")
+    return
+  end
+  local Target = GWorld.GameInstance:GetWorld():SpawnActor(TargetClass, UE4.FTransform(FRotator(0, 0, 0), TargetLoc), UE4.ESpawnActorCollisionHandlingMethod.AlwaysSpawn, nil, nil, nil)
+  if not IsValid(Target) then
+    DebugPrint("yly gm LookAtTest: 目标点生成失败")
+    return
+  end
+  self.YLYLookAtTarget = Target
+  local Action = UE4.UAsyncCameraLookToTargetAction.CameraLookToActor(GWorld.GameInstance, Target, Duration, UE4.EEasingFunc.SinusoidalInOut, true)
+  if IsValid(Action) then
+    self.YLYLookAtActionRef = Ref(Action)
+    Action.OnEnd:Add(GWorld.GameInstance, function()
+      Action.OnEnd:Clear()
+      self.YLYLookAtActionRef = nil
+      DebugPrint("yly gm LookAtTest: OnEnd 已回调（剧情节点会在这里推进下一个节点）")
+    end)
+  else
+    DebugPrint("yly gm LookAtTest: Action 创建失败")
+  end
+  DebugPrint(string.format("yly gm LookAtTest: 车头 Yaw=%.1f Pitch=%.1f，目标偏移 Yaw=%.1f Pitch=%.1f，时长=%.1fs，距离=%.0f", CartRot.Yaw, CartRot.Pitch, YawOffset, PitchOffset, Duration, Distance))
+end
+
+function GM_Command:RollerCoasterCameraMonitor(CoasterId)
+  local Player = self.Player
+  if not IsValid(Player) then
+    return
+  end
+  if Player:IsExistTimer("YLYCoasterCamera") then
+    Player:RemoveTimer("YLYCoasterCamera")
+    DebugPrint("yly gm 相机监控: 已关闭")
+    return
+  end
+  CoasterId = tonumber(CoasterId)
+  local GameMode = UE4.UGameplayStatics.GetGameMode(Player)
+  Player:AddTimer(0.1, function()
+    local Controller = Player:GetController()
+    if not IsValid(Controller) then
+      return
+    end
+    local CameraManager = Controller.PlayerCameraManager
+    local Comp = Player.CameraRotationComponent
+    if not IsValid(CameraManager) or not IsValid(Comp) then
+      return
+    end
+    local CtrlRot = Controller:GetControlRotation()
+    local CartRot = Player:K2_GetActorRotation()
+    local bClamping = CameraManager.ViewYawMax - CameraManager.ViewYawMin < 350
+    local SpringArm = Player.CharSpringArmComponent
+    local ArmLength = IsValid(SpringArm) and SpringArm.BaseTargetArmLength or -1
+    local TakeoverState = "未传Id"
+    if CoasterId and IsValid(GameMode) then
+      local Coaster = GameMode.EMGameState:GetMechanismActorById(CoasterId)
+      if IsValid(Coaster) then
+        TakeoverState = tostring(Coaster.CameraTakeoverState)
+      else
+        TakeoverState = "过山车未找到"
+      end
+    end
+    DebugPrint(string.format("yly 相机监控 夹取=%s 让位状态=%s LookAt=%s 自动旋转=%s | Yaw窗口[%.1f, %.1f] Pitch窗口[%.1f, %.1f] | 车头 Y=%.1f P=%.1f | 镜头 Y=%.1f P=%.1f | 相对 Y=%.1f P=%.1f | 臂长=%.1f", bClamping and "ON" or "OFF", TakeoverState, tostring(Comp.IsCameraLookingToTarget), tostring(Comp:GetIsControllerAutoRotating()), CameraManager.ViewYawMin, CameraManager.ViewYawMax, CameraManager.ViewPitchMin, CameraManager.ViewPitchMax, CartRot.Yaw, CartRot.Pitch, CtrlRot.Yaw, CtrlRot.Pitch, UE4.UKismetMathLibrary.NormalizeAxis(CtrlRot.Yaw - CartRot.Yaw), UE4.UKismetMathLibrary.NormalizeAxis(CtrlRot.Pitch - CartRot.Pitch), ArmLength))
+  end, true, 0, "YLYCoasterCamera")
+  DebugPrint("yly gm 相机监控: 已开启（再执行一次 gm yly 11 关闭）")
+end
+
+function GM_Command:RollerCoasterLookAtTestClear()
+  local Player = self.Player
+  if IsValid(Player) then
+    local Comp = Player.CameraRotationComponent
+    if IsValid(Comp) and Comp.IsCameraLookingToTarget then
+      Comp:StopCameraLookToTarget()
+    end
+    if Player:IsExistTimer("YLYCoasterCamera") then
+      Player:RemoveTimer("YLYCoasterCamera")
+    end
+  end
+  self.YLYLookAtActionRef = nil
+  self:RollerCoasterDestroyLookAtTarget()
+  DebugPrint("yly gm LookAtTest: 已清理")
+end
+
+function GM_Command:RollerCoasterDestroyLookAtTarget()
+  if self.YLYLookAtTarget and IsValid(self.YLYLookAtTarget) then
+    self.YLYLookAtTarget:K2_DestroyActor()
+  end
+  self.YLYLookAtTarget = nil
+end
+
+local YLYCoasterHudNames = {
+  "Pos_Instruction",
+  "Char_Skill"
+}
+local YLYCoasterHudTestTag = "YLYHudTest"
+
+local function YLYGetBattleMain()
+  local UIMgr = UIManager(GWorld.GameInstance)
+  local BattleMain = UIMgr and UIMgr:GetUIObj("BattleMain")
+  if not BattleMain then
+    DebugPrint("yly gm: BattleMain 未加载，先进战斗场景")
+  end
+  return BattleMain
+end
+
+local function YLYVisibilityName(Visibility)
+  local Op = UIConst.VisibilityOp
+  if Visibility == Op.Collapsed then
+    return "Collapsed(不可见)"
+  elseif Visibility == Op.Hidden then
+    return "Hidden(不可见)"
+  elseif Visibility == Op.Visible then
+    return "Visible(可见)"
+  elseif Visibility == Op.SelfHitTestInvisible then
+    return "SelfHitTestInvisible(可见)"
+  elseif Visibility == Op.HitTestInvisible then
+    return "HitTestInvisible(可见)"
+  end
+  return tostring(Visibility)
+end
+
+function GM_Command:RollerCoasterInstructionTest(ActionName)
+  local BattleMain = YLYGetBattleMain()
+  if not BattleMain or not BattleMain.ShowInstructionInfo then
+    return
+  end
+  local Actions = {
+    "SpiralLeap",
+    "Dodge",
+    "Skill1",
+    "Skill2",
+    "Skill2Attack"
+  }
+  if ActionName and "" ~= ActionName then
+    Actions = {ActionName}
+  end
+  local bShow = not self.YLYInstructionShown
+  for _, Name in ipairs(Actions) do
+    BattleMain:ShowInstructionInfo(Name, not bShow, "YLYInstructionTest")
+  end
+  self.YLYInstructionShown = bShow
+  DebugPrint("yly gm 按键提示: 强制显示 =", bShow, "条目 =", table.concat(Actions, ","))
+  self:RollerCoasterHudStateDump()
+end
+
+function GM_Command:RollerCoasterHudStateDump()
+  local BattleMain = YLYGetBattleMain()
+  if not BattleMain then
+    return
+  end
+  for _, Name in ipairs(YLYCoasterHudNames) do
+    local UIObj = BattleMain[Name]
+    if not UIObj and BattleMain.GetUIObjBytUIPath then
+      UIObj = BattleMain:GetUIObjBytUIPath(Name)
+    end
+    if not IsValid(UIObj) then
+      DebugPrint(string.format("yly gm HUD状态 %s: 控件不存在", Name))
+    else
+      local TagList = {}
+      local Tags = BattleMain.SystemHideTags and BattleMain.SystemHideTags[Name]
+      if Tags then
+        for Tag, _ in pairs(Tags) do
+          table.insert(TagList, tostring(Tag))
+        end
+      end
+      DebugPrint(string.format("yly gm HUD状态 %s: 可见性 = %s, 隐藏Tag = [%s]", Name, YLYVisibilityName(UIObj:GetVisibility()), table.concat(TagList, ",")))
+    end
+  end
+end
+
+function GM_Command:RollerCoasterHudHideTest()
+  local BattleMain = YLYGetBattleMain()
+  if not BattleMain or not BattleMain.HideSubSystem then
+    return
+  end
+  local bHide = not self.YLYHudHidden
+  for _, Name in ipairs(YLYCoasterHudNames) do
+    BattleMain:HideSubSystem(Name, YLYCoasterHudTestTag, bHide)
+  end
+  self.YLYHudHidden = bHide
+  DebugPrint("yly gm HUD隐藏测试: bHide =", bHide)
+  self:RollerCoasterHudStateDump()
 end
 
 function GM_Command:THYTEST(type, TaskId, Arg)
@@ -2324,6 +2628,20 @@ end
 
 function GM_Command:JTYTEST(Value)
   PageJumpUtils:JumpToForgeCompendiumPathByDraftId(1001)
+end
+
+function GM_Command:CYHTEST(Value)
+  local Avatar = GWorld:GetAvatar()
+  if Avatar.FreshmenGift:IsFreshmenGiftRewardGot() then
+    return
+  end
+  local Params = {}
+  
+  function Params.CloseChoosePageFun()
+  end
+  
+  local UIManager = GWorld.GameInstance:GetGameUIManager()
+  UIManager:LoadUINew("StoryOptionalAvatar", Params)
 end
 
 function GM_Command:HTYTEST(type, Id)
@@ -2485,6 +2803,24 @@ function GM_Command:RemoveMonsterBuff(BuffId)
   self:ServerBattleCommand("RemoveMonsterBuff", BuffId)
 end
 
+function GM_Command:IncreaseMonsterBuffLayer(BuffId, Layer)
+  BuffId = tonumber(BuffId)
+  Layer = tonumber(Layer) or 1
+  assert(BuffId, "BuffId要填数字")
+  assert(DataMgr.Buff[BuffId], "找不到[" .. tostring(BuffId) .. "]对应的Buff")
+  assert(Layer > 0, "增加层数必须大于0")
+  self:ServerBattleCommand("IncreaseMonsterBuffLayer", BuffId, Layer)
+end
+
+function GM_Command:ReduceMonsterBuffLayer(BuffId, Layer)
+  BuffId = tonumber(BuffId)
+  Layer = tonumber(Layer) or 1
+  assert(BuffId, "BuffId要填数字")
+  assert(DataMgr.Buff[BuffId], "找不到[" .. tostring(BuffId) .. "]对应的Buff")
+  assert(Layer > 0, "减少层数必须大于0")
+  self:ServerBattleCommand("ReduceMonsterBuffLayer", BuffId, Layer)
+end
+
 function GM_Command:StartXibiBoss()
   local function NodeCallback(...)
     self:SuccQuestChain(100102)
@@ -2532,6 +2868,167 @@ function GM_Command:UnlockHardBoss(bAll)
   end
   self:CompleteSystemCondition()
   SystemGuideManager:GMEnforceFinishAllSysGuide()
+end
+
+function GM_Command:UnlockAllReview()
+  print(_G.LogTag, "UnlockAllReview")
+  local GMFunctionLibrary = require("BluePrints.UI.GMInterface.GMFunctionLibrary")
+  local CommonConst = require("CommonConst")
+  local GameInstance = self:GetGameInstance()
+  
+  local function CompleteConditionId(ConditionId)
+    if not ConditionId then
+      return
+    end
+    if type(ConditionId) == "table" then
+      for i = 1, #ConditionId do
+        CompleteConditionId(ConditionId[i])
+      end
+      return
+    end
+    GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm CompleteCondition " .. tostring(ConditionId))
+  end
+  
+  local ConditionSet = {}
+  
+  local function CollectCondition(ConditionId)
+    if not ConditionId then
+      return
+    end
+    if type(ConditionId) == "table" then
+      for i = 1, #ConditionId do
+        CollectCondition(ConditionId[i])
+      end
+      return
+    end
+    ConditionSet[ConditionId] = true
+  end
+  
+  for _, ReviewConfig in pairs(DataMgr.Review or {}) do
+    CollectCondition(ReviewConfig.UnlockCondition)
+    CollectCondition(ReviewConfig.FinishCondition)
+  end
+  for _, ChainConfig in pairs(DataMgr.ReviewChain or {}) do
+    CollectCondition(ChainConfig.FirstShowCondition)
+  end
+  for ConditionId, _ in pairs(ConditionSet) do
+    CompleteConditionId(ConditionId)
+  end
+  local Avatar = GWorld:GetAvatar()
+  if Avatar and Avatar.EventReviewPages then
+    for ReviewId, _ in pairs(DataMgr.Review or {}) do
+      local Review = Avatar.EventReviewPages:GetEventReview(ReviewId)
+      if Review then
+        Review:TrySetState(CommonConst.EventReviewState.Explored)
+      end
+    end
+  end
+  local StringBoardReddotHelper = require("BluePrints.UI.InvestigationWall.StringBoardReddotHelper")
+  StringBoardReddotHelper.RequestSyncAllNews()
+end
+
+function GM_Command:UnlockAllCluePage()
+  print(_G.LogTag, "UnlockAllCluePage")
+  local GMFunctionLibrary = require("BluePrints.UI.GMInterface.GMFunctionLibrary")
+  local GameInstance = self:GetGameInstance()
+  
+  local function CompleteConditionId(ConditionId)
+    if not ConditionId then
+      return
+    end
+    if type(ConditionId) == "table" then
+      for i = 1, #ConditionId do
+        CompleteConditionId(ConditionId[i])
+      end
+      return
+    end
+    GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm CompleteCondition " .. tostring(ConditionId))
+  end
+  
+  local ConditionSet = {}
+  
+  local function CollectCondition(ConditionId)
+    if not ConditionId then
+      return
+    end
+    if type(ConditionId) == "table" then
+      for i = 1, #ConditionId do
+        CollectCondition(ConditionId[i])
+      end
+      return
+    end
+    ConditionSet[ConditionId] = true
+  end
+  
+  for _, CluePageConfig in pairs(DataMgr.CluePage or {}) do
+    CollectCondition(CluePageConfig.UnlockConditionID)
+  end
+  for ConditionId, _ in pairs(ConditionSet) do
+    CompleteConditionId(ConditionId)
+  end
+  local StringBoardReddotHelper = require("BluePrints.UI.InvestigationWall.StringBoardReddotHelper")
+  StringBoardReddotHelper.RequestSyncAllNews()
+end
+
+function GM_Command:SetAllClueContentFinalState()
+  print(_G.LogTag, "SetAllClueContentFinalState")
+  local CommonConst = require("CommonConst")
+  local GMFunctionLibrary = require("BluePrints.UI.GMInterface.GMFunctionLibrary")
+  local GameInstance = self:GetGameInstance()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  
+  local function GetFinalState(ClueContentId)
+    local ContentConfig = DataMgr.ClueContent and DataMgr.ClueContent[ClueContentId]
+    return ContentConfig and ContentConfig.FinalState or CommonConst.ClueContentState.Unlocked
+  end
+  
+  local DialogueIdSet = {}
+  local ResourceIdSet = {}
+  local MechPairSet = {}
+  local TriggerData = DataMgr.ClueContentTrigger or {}
+  for DialogueId, TriggerGroup in pairs(TriggerData.Dialogue or {}) do
+    for _, TriggerEntry in pairs(TriggerGroup) do
+      local ClueContentId = TriggerEntry and TriggerEntry.ClueContentId
+      if ClueContentId and TriggerEntry.State == GetFinalState(ClueContentId) then
+        DialogueIdSet[DialogueId] = true
+      end
+    end
+  end
+  for ResourceId, TriggerGroup in pairs(TriggerData.Resource or {}) do
+    for _, TriggerEntry in pairs(TriggerGroup) do
+      local ClueContentId = TriggerEntry and TriggerEntry.ClueContentId
+      if ClueContentId and TriggerEntry.State == GetFinalState(ClueContentId) then
+        ResourceIdSet[ResourceId] = true
+      end
+    end
+  end
+  for CreatorId, StateGroup in pairs(TriggerData.MechState or {}) do
+    for StateId, TriggerGroup in pairs(StateGroup or {}) do
+      for _, TriggerEntry in pairs(TriggerGroup) do
+        local ClueContentId = TriggerEntry and TriggerEntry.ClueContentId
+        if ClueContentId and TriggerEntry.State == GetFinalState(ClueContentId) then
+          local MechKey = tostring(CreatorId) .. "_" .. tostring(StateId)
+          MechPairSet[MechKey] = {CreatorId, StateId}
+        end
+      end
+    end
+  end
+  if Avatar.CompletedDialogue then
+    for DialogueId, _ in pairs(DialogueIdSet) do
+      Avatar:CompletedDialogue(DialogueId)
+    end
+  end
+  for ResourceId, _ in pairs(ResourceIdSet) do
+    GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm ar " .. tostring(ResourceId) .. " 1")
+  end
+  for _, MechPair in pairs(MechPairSet) do
+    self:Server_Command("OnMechStateChanged_Clue", MechPair)
+  end
+  local StringBoardReddotHelper = require("BluePrints.UI.InvestigationWall.StringBoardReddotHelper")
+  StringBoardReddotHelper.RequestSyncAllNews()
 end
 
 function GM_Command:UnlockRegionTeleport(bEnabled)
@@ -2605,8 +3102,12 @@ function GM_Command:AiDebugLog()
 end
 
 function GM_Command:ResetLoc()
-  local GameMode = UE.UGameplayStatics.GetGameMode(self.Player)
-  GameMode:SetPlayerSafeLoction(self.Player.Eid)
+  if IsStandAlone(self.Player) then
+    local GameMode = UE.UGameplayStatics.GetGameMode(self.Player)
+    GameMode:SetPlayerSafeLoction(self.Player.Eid)
+  else
+    self.Player.RPCComponent:RequestSetPlayerSafeLoction(self.Player.Eid)
+  end
 end
 
 function GM_Command:ChangeCharCornerVisibility(IsVisible)
@@ -3107,7 +3608,7 @@ function GM_Command:StopStoryline(QuestChainId)
   end
   local Avatar = GWorld:GetAvatar()
   if Avatar then
-    Avatar:StopClientQuestChainStoryline(QuestChainId)
+    Avatar:StopQuestChainProxyStoryline(QuestChainId)
   end
 end
 
@@ -3480,6 +3981,15 @@ function GM_Command:ShowRayCreature()
   require("EMLuaConst").IsShowRayCreature = Const.IsShowRayCreature
 end
 
+function GM_Command:PrintCNPCInfo()
+  local NPCCreateSubSystem = UE4.USubsystemBlueprintLibrary.GetWorldSubsystem(self.Player, UE4.UNPCCreateSubSystem)
+  if not NPCCreateSubSystem then
+    DebugPrint("PrintCNPCInfo: NPCCreateSubSystem not found")
+    return
+  end
+  NPCCreateSubSystem:PrintAllCustomNpcInfoInGame()
+end
+
 function GM_Command:SetWeather(WeatherName)
   local EnvirSystemActors = TArray(AActor)
   local BPClass = LoadClass("/Game/Asset/Scene/common/EnvirSystem/EnvirSystemActor.EnvirSystemActor")
@@ -3836,6 +4346,21 @@ function GM_Command:EnableSplineMove(IsMove, CanReverse, ShouldReachTargetPoint)
   else
     Player:EndMoveAlongSpline()
   end
+end
+
+function GM_Command:StartSlideFromPoint(StartPointName)
+  if not (IsValid(self.Player) and StartPointName) or "" == StartPointName then
+    DebugPrint("StartSlideFromPoint 参数无效，用法：gm StartSlideFromPoint <StartPointName>")
+    return false
+  end
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self.Player)
+  if not IsValid(GameMode) or not GameMode.StartSlideFromPoint then
+    DebugPrint("StartSlideFromPoint GameMode 接口无效")
+    return false
+  end
+  local IsSuccess = GameMode:StartSlideFromPoint(StartPointName)
+  DebugPrint("StartSlideFromPoint", StartPointName, IsSuccess)
+  return true == IsSuccess
 end
 
 function GM_Command:EnableSplatoonMove(IsMove)
@@ -4241,6 +4766,36 @@ function GM_Command:PrintQuestData()
       print(_G.LogTag, "ZJT_ PrintQuestData QuestData eid ", WorldRegionEid, RegionBaseData.Eid, RegionBaseData.QuestId, RegionBaseData.Id, RegionBaseData.SubRegionId, RegionBaseData.LevelName, RegionBaseData.CreatorId)
     end
   end
+end
+
+function GM_Command:PrintSignBoardTalk()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    DebugPrint("[SignBoardTalk] PrintSignBoardTalk: Avatar nil")
+    return
+  end
+  local IndividualLimit = DataMgr.GlobalConstant.IndividualLongIdleTalkTimes.ConstantValue
+  local TotalLimit = DataMgr.GlobalConstant.LongIdleTalkTimes.ConstantValue
+  DebugPrint("[SignBoardTalk] === SignBoard Talk Limit Dump ===")
+  DebugPrint("[SignBoardTalk] [Config] IndividualLongIdleTalkTimes(单NPC上限) =", IndividualLimit, "LongIdleTalkTimes(总上限) =", TotalLimit)
+  DebugPrint("[SignBoardTalk] [Total] TotalSignBoardNpcDailyTalkCount =", Avatar.TotalSignBoardNpcDailyTalkCount, "/", TotalLimit)
+  if not Avatar.SignBoardNpc then
+    DebugPrint("[SignBoardTalk] Avatar.SignBoardNpc nil, skip per-NPC dump")
+    return
+  end
+  for Pos, NpcId in pairs(Avatar.SignBoardNpc) do
+    local NpcInfo = DataMgr.Npc[NpcId]
+    local CharId = NpcInfo and NpcInfo.CharId
+    local CommonChar = CharId and Avatar.CommonChars and Avatar.CommonChars[CharId]
+    local Count = CommonChar and CommonChar.DailySignBoardNpcTalkCount or 0
+    DebugPrint("[SignBoardTalk] [NPC] Pos =", Pos, "NpcId =", NpcId, "CharId =", CharId, "DailyCount =", Count, "/", IndividualLimit)
+  end
+end
+
+function GM_Command:DisableSignBoardTalkLimit()
+  local GMVariable = require("BluePrints.UI.GMInterface.GMVariable")
+  GMVariable.DisableSignBoardTalkLimit = not GMVariable.DisableSignBoardTalkLimit
+  DebugPrint("[SignBoardTalk] DisableSignBoardTalkLimit = " .. tostring(GMVariable.DisableSignBoardTalkLimit))
 end
 
 function GM_Command:RequireAndEnterDS(DungeonId, Reason)
@@ -4776,7 +5331,7 @@ function GM_Command:PrintStorylineInfo()
   DebugPrint("---------------------- QuestMgr Start ----------------------")
   local Avatar = GWorld:GetAvatar()
   if Avatar then
-    Avatar:PrintClientQuestChainStorylineInfo()
+    Avatar:PrintQuestChainProxyStorylineInfo()
   end
   DebugPrint("---------------------- QuestMgr End ------------------------")
   DebugPrint("---------------------- StoryMgr Start ----------------------")
@@ -4788,28 +5343,6 @@ function GM_Command:PrintQuestChainsNeedRestart()
   local Avatar = GWorld:GetAvatar()
   if Avatar then
     Avatar:PrintQuestChainsNeedRestart()
-  end
-end
-
-function GM_Command:ForbidAllStory(bForbid)
-  if not GWorld or not GWorld.StoryMgr then
-    return
-  end
-  local bShouldForbid = tonumber(bForbid)
-  if nil == bShouldForbid then
-    bShouldForbid = 1
-  end
-  if bShouldForbid > 0 then
-    GWorld.StoryMgr:DisableStory()
-    GWorld.StoryMgr:StopAllStoryline()
-    local Avatar = GWorld:GetAvatar()
-    if Avatar then
-      Avatar:StopAllClientQuestChainStoryline()
-    end
-    ScreenPrint("All story triggers disabled")
-  else
-    GWorld.StoryMgr:EnableStory()
-    ScreenPrint("All story triggers enabled")
   end
 end
 
@@ -5511,8 +6044,6 @@ function GM_Command:I18Time(FormatID, Language)
       DebugPrint("Current I18Time: " .. GDate(FormatID, nil, CommonConst.SystemLanguages.JP))
     elseif "kr" == Language then
       DebugPrint("Current I18Time: " .. GDate(FormatID, nil, CommonConst.SystemLanguages.KR))
-    elseif "es" == Language then
-      DebugPrint("Current I18Time: " .. GDate(FormatID, nil, CommonConst.SystemLanguages.ES))
     elseif "fr" == Language then
       DebugPrint("Current I18Time: " .. GDate(FormatID, nil, CommonConst.SystemLanguages.FR))
     else
@@ -7255,11 +7786,8 @@ function GM_Command:LJHTEST()
   EventManager:FireEvent(EventID.OnDailyRefresh)
 end
 
-function GM_Command:AYFTEST(EventName, EventDescribe, EventSuccess, EventFail)
-  local GameMode = UE4.UGameplayStatics.GetGameMode(self.Player)
-  if GameMode then
-    GameMode:OnDungeonRandomEventUINode(EventName, EventDescribe, EventSuccess, EventFail)
-  end
+function GM_Command:AYFTEST(bIsFirstPerson)
+  EventManager:FireEvent(EventID.InitShootTargetUI, bIsFirstPerson)
 end
 
 function GM_Command:TestGraphTask()
@@ -7283,9 +7811,29 @@ function GM_Command:LHQTEST(InNpcId, InFlag)
     local AnimationAsset2 = LoadObject(AssetPath2)
     local Spline = GameState.PetRaceSplineMaps:FindRef(InNpcId)
     if 1 == flag then
-      if Spline then
-        Spline:StartRaceLottery()
+      local GameInstance = self:GetGameInstance()
+      local NpcCharacters = UE4.UGameplayStatics.GetAllActorsOfClass(GameInstance, UE4.ANpcCharacter)
+      local NpcCount = 0
+      for _, Npc in pairs(NpcCharacters) do
+        NpcCount = NpcCount + 1
+        local NpcName = UKismetSystemLibrary.GetObjectName(Npc)
+        local UnitId = Npc.UnitId or 0
+        local SkeletalMeshComponents = Npc:K2_GetComponentsByClass(USkeletalMeshComponent)
+        local SkeletalMeshComponentCount = 0
+        for _, SkeletalMeshComponent in pairs(SkeletalMeshComponents) do
+          SkeletalMeshComponentCount = SkeletalMeshComponentCount + 1
+          local ComponentName = UKismetSystemLibrary.GetObjectName(SkeletalMeshComponent)
+          local SkeletalMeshName = "None"
+          if SkeletalMeshComponent.SkeletalMesh then
+            SkeletalMeshName = UKismetSystemLibrary.GetObjectName(SkeletalMeshComponent.SkeletalMesh)
+          end
+          DebugPrint(string.format("[NpcSkeletalMesh] Npc=%s UnitId=%s Component=%s SkeletalMesh=%s", NpcName, tostring(UnitId), ComponentName, SkeletalMeshName))
+        end
+        if 0 == SkeletalMeshComponentCount then
+          DebugPrint(string.format("[NpcSkeletalMesh] Npc=%s UnitId=%s has no USkeletalMeshComponent", NpcName, tostring(UnitId)))
+        end
       end
+      DebugPrint(string.format("[NpcSkeletalMesh] TotalNpcCount=%d", NpcCount))
     elseif 0 == flag then
       local Avatar = GWorld:GetAvatar()
       if Avatar then
@@ -9800,108 +10348,460 @@ function GM_Command:Copymode(Step)
   end
 end
 
-function GM_Command:RougeProCmd(Cmd, ...)
-  local Avatar = self:GetClientAvatar() or GWorld:GetAvatar()
-  if not Avatar or not Avatar.Eid then
-    print("RougeProCmd: Avatar.Eid is nil")
+function GM_Command:FindTrainByUnitId(UnitId)
+  local TrainModule = require("BluePrints.Item.Mechanism.BP_SplineTrain_Dynamic_C")
+  local allTrains = TrainModule.GetAllTrains()
+  for train, _ in pairs(allTrains) do
+    if IsValid(train) and train.UnitId == UnitId then
+      return train
+    end
+  end
+  return nil
+end
+
+function GM_Command:ListAllTrains()
+  local TrainModule = require("BluePrints.Item.Mechanism.BP_SplineTrain_Dynamic_C")
+  local allTrains = TrainModule.GetAllTrains()
+  local count = 0
+  for train, _ in pairs(allTrains) do
+    if IsValid(train) then
+      count = count + 1
+      ScreenPrint(string.format("Train[%d]: UnitId=%s  Name=%s  IsMoving=%s  Carriages=%d", count, tostring(train.UnitId), train:GetName(), tostring(train.IsMoving), train.ActiveMeshCount or 0))
+    end
+  end
+  if 0 == count then
+    ScreenPrint("No trains found in level")
+  else
+    ScreenPrint(string.format("Total: %d train(s)", count))
+  end
+  return count
+end
+
+function GM_Command:TrainMove(...)
+  local args = {
+    ...
+  }
+  local UnitId = tonumber(args[1])
+  local bStart
+  if args[2] then
+    bStart = "0" ~= args[2]
+  end
+  if not UnitId then
+    self:ListAllTrains()
+    ScreenPrint("Usage: gm TrainMove <UnitId> [1=start / 0=stop]")
     return
   end
-  if IsStandAlone(self.Player) then
-    local GameMode = UE.UGameplayStatics.GetGameMode(self.Player)
-    if not GameMode or not GameMode.NotifyServerDungeonEvent then
-      print("RougeProCmd: GameMode unavailable")
+  local train = self:FindTrainByUnitId(UnitId)
+  if not train or not IsValid(train) then
+    ScreenPrint(string.format("Train with UnitId=%d not found!", UnitId))
+    self:ListAllTrains()
+    return
+  end
+  if nil == bStart then
+    if train.IsMoving then
+      train:StopTrainMove()
+      ScreenPrint(string.format("Train %d STOPPED", UnitId))
+    else
+      train:StartTrainMove()
+      ScreenPrint(string.format("Train %d STARTED", UnitId))
+    end
+  elseif bStart then
+    train:StartTrainMove()
+    ScreenPrint(string.format("Train %d STARTED", UnitId))
+  else
+    train:StopTrainMove()
+    ScreenPrint(string.format("Train %d STOPPED", UnitId))
+  end
+end
+
+function GM_Command:TrainHide(...)
+  local args = {
+    ...
+  }
+  local UnitId = tonumber(args[1])
+  if not UnitId then
+    self:ListAllTrains()
+    ScreenPrint("Usage: gm TrainHide <UnitId>")
+    return
+  end
+  local train = self:FindTrainByUnitId(UnitId)
+  if not train or not IsValid(train) then
+    ScreenPrint(string.format("Train with UnitId=%d not found!", UnitId))
+    return
+  end
+  train:HideTrain()
+  ScreenPrint(string.format("Train %d hidden (use TrainShow + state0 to restore)", UnitId))
+end
+
+function GM_Command:TrainShow(...)
+  local args = {
+    ...
+  }
+  local UnitId = tonumber(args[1])
+  if not UnitId then
+    self:ListAllTrains()
+    ScreenPrint("Usage: gm TrainShow <UnitId>")
+    return
+  end
+  local train = self:FindTrainByUnitId(UnitId)
+  if not train or not IsValid(train) then
+    ScreenPrint(string.format("Train with UnitId=%d not found!", UnitId))
+    return
+  end
+  train:ShowTrain()
+  train:ClearCarriages()
+  train._LastInitParamsSnapshot = nil
+  train:EnsureTrainInitialized(nil)
+  ScreenPrint(string.format("Train %d shown and rebuilt", UnitId))
+end
+
+function GM_Command:TrainDestroy(...)
+  local args = {
+    ...
+  }
+  local UnitId = tonumber(args[1])
+  if not UnitId then
+    self:ListAllTrains()
+    ScreenPrint("Usage: gm TrainDestroy <UnitId>  (IRREVERSIBLE!)")
+    return
+  end
+  local train = self:FindTrainByUnitId(UnitId)
+  if not train or not IsValid(train) then
+    ScreenPrint(string.format("Train with UnitId=%d not found!", UnitId))
+    return
+  end
+  train:DestroyTrain()
+  ScreenPrint(string.format("Train %d DESTROYED (actor deleted)", UnitId))
+end
+
+function GM_Command:TrainCarriage(...)
+  local args = {
+    ...
+  }
+  local UnitId = tonumber(args[1])
+  local count = tonumber(args[2])
+  if not (UnitId and count) or count < 1 then
+    self:ListAllTrains()
+    ScreenPrint("Usage: gm TrainCarriage <UnitId> <count>  (count >= 1)")
+    return
+  end
+  local train = self:FindTrainByUnitId(UnitId)
+  if not train or not IsValid(train) then
+    ScreenPrint(string.format("Train with UnitId=%d not found!", UnitId))
+    return
+  end
+  train:SetCarriageCount(count)
+  ScreenPrint(string.format("Train %d carriage count set to %d and rebuilt", UnitId, count))
+end
+
+function GM_Command:TrainSpawn(...)
+  local args = {
+    ...
+  }
+  local UnitId = tonumber(args[1])
+  if not UnitId then
+    ScreenPrint("Usage: gm TrainSpawn <UnitId>")
+    return
+  end
+  local train = self:FindTrainByUnitId(UnitId)
+  if train and IsValid(train) then
+    train:ResetToState0Runtime()
+    train:UpdateTriggerBoxes()
+    ScreenPrint(string.format("Train %d already exists, reset to state 0", UnitId))
+    return
+  end
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self.Player)
+  if not GameMode or not GameMode.TriggerMechanism then
+    ScreenPrint("Cannot spawn: no GameMode.TriggerMechanism")
+    return
+  end
+  local mechanismData = DataMgr.Mechanism[UnitId]
+  local stateId
+  if mechanismData and mechanismData.StateIdList then
+    for _, id in ipairs(mechanismData.StateIdList) do
+      if type(id) == "number" and 0 == id % 10 then
+        stateId = id
+        break
+      end
+    end
+  end
+  stateId = stateId or UnitId * 10
+  GameMode:TriggerMechanism(UnitId, stateId)
+  ScreenPrint(string.format("Train %d spawn triggered: StateId=%d", UnitId, stateId))
+end
+
+function GM_Command:TrainState(...)
+  local args = {
+    ...
+  }
+  local UnitId = tonumber(args[1])
+  local stateNum = tonumber(args[2])
+  if not UnitId or nil == stateNum then
+    self:ListAllTrains()
+    ScreenPrint("Usage: gm TrainState <UnitId> <stateNum>")
+    ScreenPrint("  stateNum: 0=Init(stop)  1=Move(start)  2=...")
+    return
+  end
+  local train = self:FindTrainByUnitId(UnitId)
+  if not train or not IsValid(train) then
+    ScreenPrint(string.format("Train with UnitId=%d not found!", UnitId))
+    self:ListAllTrains()
+    return
+  end
+  local mechanismData = DataMgr.Mechanism[UnitId]
+  local targetStateId
+  if mechanismData and mechanismData.StateIdList then
+    for _, id in ipairs(mechanismData.StateIdList) do
+      if type(id) == "number" and id % 10 == stateNum then
+        targetStateId = id
+        break
+      end
+    end
+  end
+  if not targetStateId then
+    ScreenPrint(string.format("Train %d: no StateId found for stateNum=%d in StateIdList", UnitId, stateNum))
+    return
+  end
+  local prevState = train.StateId and train.StateId % 10 or "?"
+  train:ChangeState("Manual", 0, targetStateId)
+  ScreenPrint(string.format("Train %d state: %s -> %d (StateId=%d, Manual)", UnitId, tostring(prevState), stateNum, targetStateId))
+end
+
+function GM_Command:ListManualCombat(...)
+  local args = {
+    ...
+  }
+  local filterId = tonumber(args[1])
+  local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
+  if not GameState or not GameState.ManualActiveCombat then
+    ScreenPrint("[ManualActiveCombat] GameState or ManualActiveCombat is nil")
+    return
+  end
+  local count = 0
+  local found = false
+  for manualId, combatItem in pairs(GameState.ManualActiveCombat) do
+    if not filterId or manualId == filterId then
+      count = count + 1
+      if IsValid(combatItem) then
+        found = true
+        local msg = string.format("[ManualActiveCombat] [%d] ManualItemId=%s UnitId=%s Name=%s StateId=%s BpBorn=%s InitSuccess=%s", count, tostring(manualId), tostring(combatItem.UnitId), combatItem:GetName(), tostring(combatItem.StateId), tostring(combatItem.BpBorn), tostring(combatItem.InitSuccess))
+        ScreenPrint(msg)
+        print(_G.LogTag, msg)
+      else
+        local msg = string.format("[ManualActiveCombat] [%d] ManualItemId=%s INVALID actor", count, tostring(manualId))
+        ScreenPrint(msg)
+        print(_G.LogTag, msg)
+      end
+    end
+  end
+  if filterId and not found then
+    ScreenPrint(string.format("[ManualActiveCombat] ManualItemId=%d NOT registered (total in map: check all entries with gm ListManualCombat)", filterId))
+  elseif 0 == count then
+    ScreenPrint("[ManualActiveCombat] empty — no manual mechanisms registered yet")
+  else
+    ScreenPrint(string.format("[ManualActiveCombat] total listed: %d", count))
+  end
+  return count
+end
+
+function GM_Command:DbgTrainInit(...)
+  local args = {
+    ...
+  }
+  local filterId = tonumber(args[1])
+  local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
+  if not GameMode then
+    ScreenPrint("[ManualActiveCombat] DbgTrainInit: no GameMode")
+    return
+  end
+  local found = 0
+  
+  local function dumpActor(actor, source)
+    if not IsValid(actor) then
       return
     end
-    GameMode:NotifyServerDungeonEvent("RougeProCmd", Avatar.Eid, Cmd, ...)
-  else
-    self:DedicatedServerCommand("RougeProCmd", Avatar.Eid, Cmd, ...)
-  end
-end
-
-function GM_Command:SimulateExhibit(Type, UnitId, SkinId)
-  local Avatar = self:GetClientAvatar() or GWorld:GetAvatar()
-  if not Avatar then
-    print("[SimulateExhibit] Avatar is nil")
-    return
-  end
-  if not Avatar.GuildExhibitMgr then
-    print("[SimulateExhibit] GuildExhibitMgr component not found on Avatar")
-    return
-  end
-  UnitId = tonumber(UnitId)
-  SkinId = tonumber(SkinId) or 0
-  if not (Type and UnitId) or UnitId <= 0 then
-    print("[SimulateExhibit] Usage: SE <Character|Weapon|Mount> <UnitId> [SkinId]")
-    return
-  end
-  local ItemInfo = {}
-  local TypeLower = string.lower(Type)
-  local Player = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
-  local DefaultLocation = {
-    X = 0,
-    Y = 0,
-    Z = 0
-  }
-  local DefaultRotation = {
-    Pitch = 0,
-    Yaw = 0,
-    Roll = 0
-  }
-  if Player then
-    local PlayerLoc = Player:K2_GetActorLocation()
-    DefaultLocation = {
-      X = PlayerLoc.X,
-      Y = PlayerLoc.Y,
-      Z = PlayerLoc.Z
-    }
-  end
-  if "character" == TypeLower then
-    ItemInfo.Type = UE4.EExhibitType.Character
-    ItemInfo.CharId = UnitId
-    ItemInfo.SkinId = SkinId
-    if SkinId <= 0 then
-      ItemInfo.SkinId = UnitId
+    if filterId and actor.ManualItemId ~= filterId then
+      return
     end
-    print(string.format("[SimulateExhibit] Pushing Character CharId=%d SkinId=%d", UnitId, ItemInfo.SkinId))
-  elseif "weapon" == TypeLower then
-    ItemInfo.Type = UE4.EExhibitType.Weapon
-    ItemInfo.WeaponId = UnitId
-    ItemInfo.AppearanceInfo = {SkinId = SkinId}
-    print(string.format("[SimulateExhibit] Pushing Weapon WeaponId=%d SkinId=%d", UnitId, SkinId))
-  elseif "mount" == TypeLower then
-    ItemInfo.Type = UE4.EExhibitType.Mount
-    ItemInfo.MountId = UnitId
-    print(string.format("[SimulateExhibit] Pushing Mount MountId=%d", UnitId))
-  else
-    print("[SimulateExhibit] Unknown Type: " .. tostring(Type) .. ", expected Character/Weapon/Mount")
-    return
+    found = found + 1
+    local lines = {
+      string.format("[ManualActiveCombat] DbgTrainInit (%s)", source),
+      string.format("  Name=%s ManualItemId=%s UnitId=%s UnitType=%s", actor:GetName(), tostring(actor.ManualItemId), tostring(actor.UnitId), tostring(actor.UnitType)),
+      string.format("  BpBorn=%s InitSuccess=%s ServerInitSuccess=%s IsAuthority=%s", tostring(actor.BpBorn), tostring(actor.InitSuccess), tostring(actor.ServerInitSuccess), tostring(IsAuthority(actor)))
+    }
+    if actor.InitTags then
+      local tagStr = {}
+      for tag, val in pairs(actor.InitTags) do
+        table.insert(tagStr, tostring(tag) .. "=" .. tostring(val))
+      end
+      table.insert(lines, "  InitTags: " .. table.concat(tagStr, ", "))
+    end
+    for _, line in ipairs(lines) do
+      ScreenPrint(line)
+      print(_G.LogTag, line)
+    end
+    if actor.TryInitActorInfo then
+      actor:TryInitActorInfo("BeginPlay")
+      actor:TryInitActorInfo("InitInfo")
+      actor:TryInitActorInfo("Battle")
+      actor:TryInitActorInfo("OnInit")
+      ScreenPrint("  -> forced TryInitActorInfo x4")
+    end
+    if actor.RegisterToGameState and (actor.InitSuccess or actor.ManualItemId > 0) then
+      actor:RegisterToGameState()
+      ScreenPrint("  -> called RegisterToGameState")
+    end
+    self:ListManualCombat(actor.ManualItemId)
   end
-  ItemInfo.Location = DefaultLocation
-  ItemInfo.Rotation = DefaultRotation
-  local ObjId = tostring(os.time())
-  local ok, err = pcall(function()
-    Avatar.GuildExhibitMgr:AddGuildExhibitActor(ObjId, ItemInfo)
-  end)
-  if not ok then
-    print("[SimulateExhibit] Failed: " .. tostring(err))
+  
+  if GameMode.BPBornActor then
+    for _, actor in pairs(GameMode.BPBornActor:ToTable()) do
+      dumpActor(actor, "BPBornActor")
+    end
+  end
+  local TrainModule = require("BluePrints.Item.Mechanism.BP_SplineTrain_Dynamic_C")
+  for train, _ in pairs(TrainModule.GetAllTrains()) do
+    dumpActor(train, "AllTrains")
+  end
+  if 0 == found then
+    ScreenPrint("[ManualActiveCombat] DbgTrainInit: no matching actor (check BpBorn/ManualItemId)")
+    ScreenPrint("  Hint: restart PIE after lua change; check server log if Play As Client")
+  end
+  return found
+end
+
+function GM_Command:TrainManualItem(...)
+  local args = {
+    ...
+  }
+  local manualItemId = tonumber(args[1]) or 170504001
+  local componentStateId = tonumber(args[2]) or 1705041
+  local stateId = tonumber(args[3]) or 0
+  local questId = tonumber(args[4]) or 0
+  
+  local function doTrigger()
+    self:ListManualCombat(manualItemId)
+    local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
+    if not GameMode or not GameMode.TriggerMechanismManualItem then
+      ScreenPrint("GameMode.TriggerMechanismManualItem not found")
+      return
+    end
+    local GameState = UE4.UGameplayStatics.GetGameState(GameMode)
+    if GameState and GameState.ManualActiveCombat then
+      local combatItem = GameState.ManualActiveCombat:Find(manualItemId)
+      if not combatItem or not IsValid(combatItem) then
+        ScreenPrint(string.format("Warning: ManualItemId=%d not in ManualActiveCombat — run gm ListManualCombat", manualItemId))
+      end
+    end
+    local Arr = TArray(0)
+    Arr:Add(manualItemId)
+    GameMode:TriggerMechanismManualItem(Arr, componentStateId, stateId, questId)
+    ScreenPrint(string.format("TriggerMechanismManualItem: ManualItemId=%d ComponentStateId=%d StateId=%d QuestId=%d", manualItemId, componentStateId, stateId, questId))
+  end
+  
+  if IsStandAlone(GWorld.GameInstance) then
+    doTrigger()
   else
-    print("[SimulateExhibit] Successfully pushed exhibit data")
+    self:DedicatedServerCommand("TriggerMechanismManualItem", manualItemId, componentStateId, stateId, questId)
+    ScreenPrint(string.format("DS TriggerMechanismManualItem sent: ManualItemId=%d ComponentStateId=%d StateId=%d QuestId=%d", manualItemId, componentStateId, stateId, questId))
   end
 end
 
-function GM_Command:SimulateExhibitClear()
+function GM_Command:PrintTeamHallRecruitmentState()
   local Avatar = self:GetClientAvatar() or GWorld:GetAvatar()
   if not Avatar then
-    print("[SimulateExhibitClear] Avatar is nil")
+    ScreenPrint("TeamHallRecruitment: avatar not found")
     return
   end
-  if not Avatar.GuildExhibitMgr then
-    print("[SimulateExhibitClear] GuildExhibitMgr component not found on Avatar")
+  local bRecruiting = Avatar.InStatus and Avatar:InStatus(nil, CommonConst.AvatarStatus.InTeamHall) or false
+  local TeamHallId = Avatar.TeamHallId or 0
+  local TeamRequestList = Avatar.TeamRequestList or {}
+  ScreenPrint(string.format("TeamHallRecruitment state=%s TeamHallId=%s TeamRequestCount=%d", bRecruiting and "ON" or "OFF", tostring(TeamHallId), #TeamRequestList))
+end
+
+function GM_Command:QueryTeamHallList(...)
+  local Avatar = self:GetClientAvatar() or GWorld:GetAvatar()
+  if not Avatar or not Avatar.RefreshTeamHallList then
+    ScreenPrint("QueryTeamHallList: avatar interface not found")
     return
   end
-  print("[SimulateExhibitClear] Clearing all exhibit data...")
-  Avatar.GuildExhibitMgr:RemoveGuildExhibitActor(nil, nil)
-  print("[SimulateExhibitClear] All exhibit data cleared")
+  local Filters = {}
+  for _, Arg in ipairs({
+    ...
+  }) do
+    local Filter = tonumber(Arg)
+    if Filter then
+      table.insert(Filters, Filter)
+    end
+  end
+  Avatar:RefreshTeamHallList(function(ErrCode)
+    if not ErrorCode:Check(ErrCode) then
+      ScreenPrint("QueryTeamHallList failed: " .. tostring(ErrCode))
+    end
+  end, Filters)
+end
+
+function GM_Command:TeamHallRecruitment(Mode, FirstType, SecondType, DungeonLevel)
+  local Avatar = self:GetClientAvatar() or GWorld:GetAvatar()
+  if not Avatar then
+    ScreenPrint("TeamHallRecruitment: avatar not found")
+    return
+  end
+  local ModeStr = Mode and string.lower(tostring(Mode)) or ""
+  if "0" == ModeStr or "off" == ModeStr or "close" == ModeStr or "false" == ModeStr then
+    if not Avatar.CancelRecruitmentInTeamHall then
+      ScreenPrint("TeamHallRecruitment: cancel interface not found")
+      return
+    end
+    Avatar:CancelRecruitmentInTeamHall(function()
+      ScreenPrint("TeamHallRecruitment closed")
+      self:PrintTeamHallRecruitmentState()
+    end)
+    return
+  end
+  if "1" ~= ModeStr and "on" ~= ModeStr and "open" ~= ModeStr and "true" ~= ModeStr then
+    ScreenPrint("Usage: gm TeamHallRecruitment <on/off> [FirstType SecondType DungeonLevel]")
+    self:PrintTeamHallRecruitmentState()
+    return
+  end
+  local FinalFirstType = tonumber(FirstType)
+  local FinalSecondType = tonumber(SecondType)
+  local FinalDungeonLevel = self:_GetValidTeamHallDungeonLevelIndex(FinalSecondType, DungeonLevel)
+  if not FinalFirstType or not FinalSecondType then
+    ScreenPrint("Usage: gm TeamHallRecruitment on <FirstType> <SecondType> [DungeonLevel]")
+    return
+  end
+  if not Avatar.PublishRecruitmentInTeamHall then
+    ScreenPrint("TeamHallRecruitment: publish interface not found")
+    return
+  end
+  Avatar:PublishRecruitmentInTeamHall(function()
+    ScreenPrint(string.format("TeamHallRecruitment opened: First=%d Second=%d Level=%d", FinalFirstType, FinalSecondType, FinalDungeonLevel))
+    self:PrintTeamHallRecruitmentState()
+  end, {
+    FirstType = FinalFirstType,
+    SecondType = FinalSecondType,
+    DungeonLevel = FinalDungeonLevel,
+    Tags = {}
+  })
+end
+
+function GM_Command:_GetValidTeamHallDungeonLevelIndex(SecondType, DungeonLevel)
+  local FinalDungeonLevel = tonumber(DungeonLevel) or 0
+  local TeamSecondTypeData = DataMgr and DataMgr.TeamSecondType and DataMgr.TeamSecondType[SecondType]
+  local ValidDungeonLevels = TeamSecondTypeData and TeamSecondTypeData.DungeonLevel
+  if not ValidDungeonLevels or #ValidDungeonLevels <= 0 then
+    return FinalDungeonLevel
+  end
+  if nil ~= ValidDungeonLevels[FinalDungeonLevel] then
+    return FinalDungeonLevel
+  end
+  for Index, ValidLevel in ipairs(ValidDungeonLevels) do
+    if ValidLevel == FinalDungeonLevel then
+      return Index
+    end
+  end
+  return 1
 end
 
 return GM_Command

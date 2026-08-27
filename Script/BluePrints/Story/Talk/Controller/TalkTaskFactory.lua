@@ -92,10 +92,10 @@ function TalkTaskFactory:AttachCompsToTask(TalkTask, TalkTaskData, TalkType)
     local TalkComp_DisableInteractiveTrigger = TalkComp_DisableInteractiveTrigger_C.New(TalkTaskData.TalkContext.Player)
     self:AttachCompToTask(TalkTask, TalkComp_DisableInteractiveTrigger)
   end
-  if TalkTaskData.bHideAllBattleEntity then
-    local TalkComp_HideAllBattleEntity_C = require("BluePrints.Story.Talk.Controller.TalkComps").TalkComp_HideAllBattleEntity_C
-    local TalkComp_HideAllBattleEntity = TalkComp_HideAllBattleEntity_C.New(TalkTaskData.TalkContext)
-    self:AttachCompToTask(TalkTask, TalkComp_HideAllBattleEntity)
+  if TalkTaskData.bHidePickup then
+    local TalkComp_HidePickup_C = require("BluePrints.Story.Talk.Controller.TalkComps").TalkComp_HidePickup_C
+    local TalkComp_HidePickup = TalkComp_HidePickup_C.New(TalkTaskData.TalkContext)
+    self:AttachCompToTask(TalkTask, TalkComp_HidePickup)
   end
   if TalkTaskData.bHideElseCharacter then
     local TalkComp_HideElseCharacter_C = require("BluePrints.Story.Talk.Controller.TalkComps").TalkComp_HideElseCharacter_C

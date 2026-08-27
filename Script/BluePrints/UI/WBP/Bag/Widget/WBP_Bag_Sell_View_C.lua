@@ -1042,7 +1042,7 @@ function WBP_Bag_Sell_View_C:OnUpdateCurSelectItemSaleInfo(SaleNum, bIsNeedRefre
     self.CurSelectStuffContentInList.StateTagInfo.ExtraData[1] = SaleNum
   end
   if self.CurSelectStuffContentInList.SelfWidget then
-    self.CurSelectStuffContentInList.SelfWidget:SetSelectNum(Utils.FormatNumber(SaleNum, true))
+    self.CurSelectStuffContentInList.SelfWidget:SetSelectNum(MiscUtils.FormatNumber(SaleNum, true))
   end
   self.Com_NumInput:RefreshCurInputNumber(SaleNum)
   if bIsNeedRefreshSliderBar then
@@ -1091,7 +1091,7 @@ function WBP_Bag_Sell_View_C:ClickToOpenStuffList()
             self:OnListSelectStuffClicked(ItemObj, "SelectFirstItem")
           end
           local NowSaleStuffCount = self.NeedDealWithStuffCount[ItemObj.Uuid] or 1
-          ItemObj.SelfWidget:SetSelectNum(Utils.FormatNumber(NowSaleStuffCount, true))
+          ItemObj.SelfWidget:SetSelectNum(MiscUtils.FormatNumber(NowSaleStuffCount, true))
         end
       end
       self.List_Item:SetFocus()
@@ -1397,7 +1397,7 @@ function WBP_Bag_Sell_View_C:UpdateItemInfoFromList(StuffContentList)
       StuffContentInList.StateTagInfo.ExtraData[1] = SaleNum
     end
     if StuffContentInList.SelfWidget then
-      StuffContentInList.SelfWidget:SetSelectNum(Utils.FormatNumber(SaleNum, true), Utils.FormatNumber(StuffContent.Count, true))
+      StuffContentInList.SelfWidget:SetSelectNum(MiscUtils.FormatNumber(SaleNum, true), MiscUtils.FormatNumber(StuffContent.Count, true))
     end
     if self.ParentWidget then
       self.ParentWidget:OnRefreshSaleSelectNum(StuffContent.Uuid, SaleNum)
@@ -1428,7 +1428,7 @@ function WBP_Bag_Sell_View_C:UpdateItemNumFromList(StuffContent, DeltaNum)
     StuffContentInList.StateTagInfo.ExtraData[1] = SaleNum
   end
   if StuffContentInList.SelfWidget then
-    StuffContentInList.SelfWidget:SetSelectNum(Utils.FormatNumber(SaleNum, true))
+    StuffContentInList.SelfWidget:SetSelectNum(MiscUtils.FormatNumber(SaleNum, true))
   end
   if self.ParentWidget then
     self.ParentWidget:OnRefreshSaleSelectNum(StuffContent.Uuid, SaleNum)

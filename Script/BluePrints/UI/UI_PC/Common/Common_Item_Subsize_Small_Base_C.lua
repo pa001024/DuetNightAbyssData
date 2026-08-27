@@ -1,3 +1,4 @@
+local MiscUtils = require("Utils.MiscUtils")
 require("UnLua")
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
@@ -191,16 +192,16 @@ function M:SetCount(Count, NotCountFormat)
     self.Panel_Num:SetVisibility(ESlateVisibility.Visible)
     local NumStr
     if NotCountFormat then
-      NumStr = FormatNumber(Count, false)
+      NumStr = MiscUtils.FormatNumber(Count, false)
       if self.MaxCount and self.MaxCount > 0 then
         NumStr = NumStr .. "~"
         NumStr = NumStr .. CommonUtils.GetCountStr(self.MaxCount, 3)
       end
     else
-      NumStr = FormatNumber(Count, true)
+      NumStr = MiscUtils.FormatNumber(Count, true)
       if self.MaxCount and self.MaxCount > 0 then
         NumStr = NumStr .. "~"
-        NumStr = NumStr .. FormatNumber(self.MaxCount, true)
+        NumStr = NumStr .. MiscUtils.FormatNumber(self.MaxCount, true)
       end
     end
     self.Text_Num:SetText(NumStr)
@@ -469,8 +470,8 @@ end
 
 function M:ShowFactionText(Hold, Need)
   self.Text_Switch:SetActiveWidgetIndex(1)
-  self.Text_Hold:SetText(FormatNumber(Hold, true))
-  self.Text_Need:SetText("/" .. tostring(FormatNumber(Need, true)))
+  self.Text_Hold:SetText(MiscUtils.FormatNumber(Hold, true))
+  self.Text_Need:SetText("/" .. tostring(MiscUtils.FormatNumber(Need, true)))
   if Need <= Hold then
     self.Text_Hold:SetColorAndOpacity(UE4.UUIFunctionLibrary.StringToSlateColor("FFFFFFFF"))
   else

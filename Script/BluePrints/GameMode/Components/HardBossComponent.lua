@@ -39,7 +39,7 @@ function HardBossComponent:InitHardBoss(BossBattleId, DifficultyId)
   GWorld.StoryMgr:Clear()
   local Avatar = GWorld:GetAvatar()
   if Avatar then
-    Avatar:StopAllClientQuestChainStoryline()
+    Avatar:StopAllQuestChainProxyStoryline()
   end
   self.LevelGameMode:DestroyAllMonsterSpawn()
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)

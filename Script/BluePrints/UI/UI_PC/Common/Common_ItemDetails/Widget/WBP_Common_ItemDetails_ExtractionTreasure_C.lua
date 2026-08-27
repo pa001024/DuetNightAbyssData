@@ -1,3 +1,4 @@
+local MiscUtils = require("Utils.MiscUtils")
 require("UnLua")
 local M = Class()
 
@@ -15,7 +16,7 @@ function M:InitItemInfo(ItemType, ItemId, UnitId)
   end
   local TreasureValue = ExtractionTreasureData.TreasureValue
   if TreasureValue then
-    local FormattedTreasureValue = Utils.FormatNumber(TreasureValue, false)
+    local FormattedTreasureValue = MiscUtils.FormatNumber(TreasureValue, false)
     self.Text_Num:SetText(FormattedTreasureValue)
   end
   self.Text_Value:SetText(GText("UI_Extraction_SingleSpaceValue"))
@@ -24,7 +25,7 @@ function M:InitItemInfo(ItemType, ItemId, UnitId)
     local TreasureSize = ExtractionTreasureData.Shape[1] * ExtractionTreasureData.Shape[2]
     if TreasureValue and TreasureSize then
       local TreasureValuePreGrid = math.ceil(TreasureValue / TreasureSize)
-      local FormattedTreasureValuePreGrid = Utils.FormatNumber(TreasureValuePreGrid, true)
+      local FormattedTreasureValuePreGrid = MiscUtils.FormatNumber(TreasureValuePreGrid, true)
       self.Num_Value:SetText(FormattedTreasureValuePreGrid)
     end
     self.Bag_Position:SetShowSize(FVector2D(ExtractionTreasureData.Shape[1], ExtractionTreasureData.Shape[2]))

@@ -37,7 +37,7 @@ P_MAP = {
     "普通攻击伤害": "普攻增伤",
     "蓄力攻击伤害": "蓄力增伤",
     "下落攻击伤害": "下落增伤",
-    "HyperTriggerCovertRate": "充盈威力转化",
+    "HyperTriggerCovertRate": "充盈转化",
     "WeaponCRDModifierRate": "暴伤",
     "WeaponCRDModifierValue": "暴伤",
     # Buff AddAttrs 常见属性名兜底（无 AttrConfig 自带翻译时用）
@@ -73,6 +73,7 @@ P_MAP = {
 
 T_FALLBACK = {
     "UI_CHAR_NAME_5402": "莉莉蔻",
+    "UI_CHAR_NAME_4103": "SP黎瑟",
 }
 
 

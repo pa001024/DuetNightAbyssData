@@ -58,9 +58,13 @@ function Component:GetSquadCreateInfoByExtra(ExtraInfo)
     RangedWeaponModSuit = ExtraInfo.RangedWeaponModSuit or self.Weapons[self.RangedWeapon].ModSuitIndex,
     WheelIndex = self.WheelIndex,
     Phantom1 = ExtraInfo.Phantom1,
+    PhantomModSuit1 = ExtraInfo.PhantomModSuit1,
     Phantom2 = ExtraInfo.Phantom2,
+    PhantomModSuit2 = ExtraInfo.PhantomModSuit2,
     PhantomWeapon1 = ExtraInfo.PhantomWeapon1,
+    PhantomWeaponModSuit1 = ExtraInfo.PhantomWeaponModSuit1,
     PhantomWeapon2 = ExtraInfo.PhantomWeapon2,
+    PhantomWeaponModSuit2 = ExtraInfo.PhantomWeaponModSuit2,
     Pet = ExtraInfo.Pet
   }
   return ResInfo

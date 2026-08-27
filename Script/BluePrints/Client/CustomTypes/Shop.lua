@@ -22,6 +22,7 @@ ShopItem.__Props__ = {
   AlreadyPurchaseTimes = prop.prop("Int", "client save", 0),
   RemainPurchaseTimes = prop.prop("Int", "client save", -1),
   EnhanceRedDotCleaned = prop.prop("Bool", "client save", false),
+  CanFirstBonus = prop.prop("Bool", "client save", false),
   ItemType = prop.getter("Data", "ItemType"),
   TypeId = prop.getter("Data", "TypeId"),
   TypeNum = prop.getter("Data", "TypeNum"),
@@ -47,6 +48,12 @@ function ShopItem:Init(ItemId)
     self.RemainPurchaseTimes = PurchaseLimit
   end
   self:SetRefreshTime(ItemId)
+  local Data = DataMgr.FirstBonusNum[self.ItemId]
+  if Data and Data.FirstBonusNum then
+    self.CanFirstBonus = true
+  else
+    self.CanFirstBonus = false
+  end
 end
 
 function ShopItem:Data()
@@ -87,6 +94,14 @@ function ShopItem:SetRefreshTime(ItemId)
     self.LastRefreshTime = TimeUtils.DataToTimestamp(year, month, 1, table.unpack(refresh_hms))
   else
     self.LastRefreshTime = StartTime
+  end
+end
+
+function ShopItem:ResetFirstBonus()
+  self.CanFirstBonus = false
+  local Data = DataMgr.FirstBonusNum[self.ItemId]
+  if Data and Data.ResetCheck then
+    self.CanFirstBonus = true
   end
 end
 

@@ -633,6 +633,28 @@ v140ids = set(
     ]
 )
 
+v150ids = set(
+    [
+        10200301,
+    ]
+)
+
+v160ids = set(
+    [
+        1014001,
+        7015801,
+        7015901,
+        7016001,
+        7016101,
+        7016201,
+        7016301,
+        7016401,
+        7016501,
+        10100801,
+        52000901,
+    ]
+)
+
 
 class AchievementProcessor(BaseProcessor):
     def __init__(self, data_loader):
@@ -641,7 +663,11 @@ class AchievementProcessor(BaseProcessor):
 
     def process_item(self, achievement_data, language):
         id = achievement_data.get("AchievementId", 0)
-        ver = "1.5"
+        ver = "1.7"
+        if id in v160ids:
+            ver = "1.6"
+        if id in v150ids:
+            ver = "1.5"
         if id in v140ids:
             ver = "1.4"
         if id in v130ids:

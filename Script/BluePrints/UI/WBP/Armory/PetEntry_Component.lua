@@ -189,7 +189,7 @@ function M:InitNavigationRules()
     Widget1:SetNavigationRuleBase(EUINavigation.Left, EUINavigationRule.Escape)
     Widget2:SetNavigationRuleBase(EUINavigation.Up, EUINavigationRule.Stop)
     Widget2:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
-    Widget2:SetNavigationRuleExplicit(EUINavigation.Left, Widget2)
+    Widget2:SetNavigationRuleExplicit(EUINavigation.Left, Widget1)
     Widget2:SetNavigationRuleBase(EUINavigation.Right, EUINavigationRule.Stop)
   elseif 3 == #self.DisplayEntryItemWidgets then
     local Widget1, Widget2, Widget3 = self.EntryItem_1, self.EntryItem_2, self.EntryItem_3

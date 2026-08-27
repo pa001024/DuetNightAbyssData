@@ -122,7 +122,10 @@ end
 
 function M:UpdataGamepadFocus(Index)
   if #self.IsChoosedTbl > 0 then
-    local FocusIndex = Index
+    local FocusIndex = Index or #self.IsChoosedTbl
+    if FocusIndex < 1 then
+      FocusIndex = 1
+    end
     if FocusIndex > #self.IsChoosedTbl then
       FocusIndex = #self.IsChoosedTbl
     end
@@ -155,14 +158,18 @@ function M:OnGamePadDown(KeyName)
     end
     return true
   end
-  if self.bItemDetailsShowed and KeyName == UIConst.GamePadKey.FaceButtonTop then
-    if self:IsInTipsFocus() then
+  if self.bItemDetailsShowed then
+    if KeyName == UIConst.GamePadKey.FaceButtonTop then
+      if self:IsInTipsFocus() then
+        return true
+      end
+      if #self.IsChoosedTbl > 0 then
+        self:UpdataGamepadFocus(1)
+      end
       return true
+    elseif KeyName == UIConst.GamePadKey.SpecialRight then
+      return self.WBP_Com_Tips:OnGamePadDown(KeyName)
     end
-    if #self.IsChoosedTbl > 0 then
-      self:UpdataGamepadFocus(1)
-    end
-    return true
   end
   if KeyName == UIConst.GamePadKey.FaceButtonLeft then
     self:OnYesButtonClicked()

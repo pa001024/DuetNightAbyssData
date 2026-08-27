@@ -8,6 +8,7 @@ end
 function WBP_Battle_Fort02_P_C:OnLoaded(...)
   self.HideUITable = {
     Pos_Entry = 1,
+    Pos_Aim = 1,
     Pos_Drops = 1,
     Pos_SpecialDrops = 1,
     Pos_NewMonster = 1,

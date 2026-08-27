@@ -62,8 +62,10 @@ function M:StartTalkTrigger(GossipTriggerId)
   local TalkTriggerId = SignBoardBubbleTalkModel:GetTalkTriggerId(GossipTriggerId)
   local Avatar = self:GetAvatar()
   if not TalkTriggerId then
+    DebugPrint("[SignBoardTalk] StartTalkTrigger skip: TalkTriggerId nil, GossipTriggerId =", GossipTriggerId)
     return
   end
+  DebugPrint("[SignBoardTalk] StartTalkTrigger try, GossipTriggerId =", GossipTriggerId, "TalkTriggerId =", TalkTriggerId)
   if not Avatar then
     return
   end
@@ -95,10 +97,13 @@ function M:StartTalkTrigger(GossipTriggerId)
   end
   
   local NpcId = SignBoardBubbleTalkModel:GetServerCanTriggerNpc(GossipTriggerId)
+  DebugPrint("[SignBoardTalk] StartTalkTrigger selected NpcId =", NpcId)
   Avatar:TriggerAddSignBoardNpcDailyTalk(NpcId, function(bSuccess)
     if bSuccess and GossipTriggerId == SignBoardBubbleTalkModel:GetRunningTalkTrigger() then
+      DebugPrint("[SignBoardTalk] StartTalkTrigger SUCCESS, GossipTriggerId =", GossipTriggerId)
       OnTriggerSucces()
     else
+      DebugPrint("[SignBoardTalk] StartTalkTrigger FAILED/END, GossipTriggerId =", GossipTriggerId, "bSuccess =", bSuccess)
       OnTriggerFailedOrEnd()
     end
   end)
@@ -147,6 +152,7 @@ function M:TickCheck()
   end
   local NewTriggerId = SignBoardBubbleTalkModel:CheckWaitTriggerQueue()
   if NewTriggerId then
+    DebugPrint("[SignBoardTalk] TickCheck picked NewTriggerId =", NewTriggerId)
     self:StartTalkTrigger(NewTriggerId)
   end
 end

@@ -58,6 +58,9 @@ function M:AddTopTabReddotListen()
   
   local function SetTopTabReddot(TabIdx, IsNew)
     local Content = self.TopTabs[TabIdx]
+    if not Content then
+      return
+    end
     Content.IsNew = IsNew
     if IsValid(Content.UI) then
       Content.UI:SetReddot(Content.IsNew)
@@ -140,9 +143,7 @@ function M:InitWeaponSkinList()
       self:OnSkinContentCreated(Obj)
     end
   end
-  table.sort(self.SkinArray, function(a, b)
-    return a.SkinId < b.SkinId
-  end)
+  self:SortSkinContents()
   local WeaponData = self.Target:Data()
   local DefaultSkin = NewObject(UIUtils.GetCommonItemContentClass())
   rawset(DefaultSkin, "SkinId", CurWeaponId)
@@ -648,6 +649,18 @@ function M:UpdateWeaponStanceFXInfo(Content)
   self.WBP_Armory_SkinMod:Init(Params)
   self.Mod_Title_Line:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.Mod_Content:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.Btn_CheckMod:Init({
+    OwnerWidget = self,
+    TextContent = GText("UI_Accessory_Stance_Tips"),
+    OnMenuOpenChangedCallBack = function(self, IsOpen)
+      if self.IsGamepadInput and self.GetDesiredFocusTarget then
+        local Widget = self:GetDesiredFocusTarget()
+        if Widget then
+          Widget:SetFocus()
+        end
+      end
+    end
+  })
 end
 
 function M:OnTopTabSelected(TabWidget, Content)

@@ -3,6 +3,7 @@ local BaseTypes = require("BluePrints.Client.CustomTypes.BaseTypes")
 local CustomTypes = require("BluePrints.Client.CustomTypes.CustomTypes")
 local prop = require("NetworkEngine.Common.Prop")
 local FormatProperties = require("NetworkEngine.Common.Assemble").FormatProperties
+local SerializeUtils = require("Utils.SerializeUtils")
 local RougeServerBuild = Class("RougeServerBuild", CustomTypes.CustomAttr)
 RougeServerBuild.__Props__ = {
   Id = prop.prop("Int", "save"),

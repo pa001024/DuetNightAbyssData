@@ -1,4 +1,8 @@
 require("UnLua")
+local FISHING_ICON_INDEX = 0
+local EMPTY_ICON_INDEX = 1
+local AUTO_ICON_INDEX = 2
+local STOP_AUTO_ICON_INDEX = 3
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
@@ -26,15 +30,22 @@ function M:Init(RootPage, bAutoPet)
   if not self.RootPage.DeviceInPc then
     self.WidgetSwitcher_Key:SetVisibility(ESlateVisibility.Collapsed)
   end
-  if self.bAutoPet then
-    self.Switcher:SetActiveWidgetIndex(2)
-  else
-    self.Switcher:SetActiveWidgetIndex(1)
-  end
+  self.BaseSwitcherIndex = self.bAutoPet and AUTO_ICON_INDEX or EMPTY_ICON_INDEX
+  self:RefreshFullAutoSwitcher()
+end
+
+function M:RefreshFullAutoSwitcher()
+  local SwitcherIndex = self.bFullAutoFishingSessionActive and STOP_AUTO_ICON_INDEX or self.BaseSwitcherIndex
+  self.Switcher:SetActiveWidgetIndex(SwitcherIndex)
+end
+
+function M:SetFullAutoFishingState(bSessionActive)
+  self.bFullAutoFishingSessionActive = true == bSessionActive
+  self:RefreshFullAutoSwitcher()
 end
 
 function M:OnClickButton()
-  if self.bForbidden then
+  if self.bForbidden and not self.bFullAutoFishingSessionActive then
     UIManager(self):ShowUITip(UIConst.Tip_CommonTop, "UI_Fishing_Toast_NoFishingLure")
     return
   end
@@ -93,30 +104,36 @@ function M:SwitchWaitStart(bForbidden)
     end
     self.bForbidden = true
   end
-  if self.bAutoPet then
-    self.Switcher:SetActiveWidgetIndex(2)
-  else
-    self.Switcher:SetActiveWidgetIndex(1)
-  end
+  self.BaseSwitcherIndex = self.bAutoPet and AUTO_ICON_INDEX or EMPTY_ICON_INDEX
+  self:RefreshFullAutoSwitcher()
 end
 
 function M:SwitchWaitFishing()
-  self.Btn_Angling:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  self.Switcher:SetActiveWidgetIndex(0)
+  local Visibility = self.bFullAutoFishingSessionActive and UIConst.VisibilityOp.Visible or UIConst.VisibilityOp.SelfHitTestInvisible
+  self.Btn_Angling:SetVisibility(Visibility)
+  self.BaseSwitcherIndex = FISHING_ICON_INDEX
+  self:RefreshFullAutoSwitcher()
 end
 
 function M:SwitchWaitStartFishing()
   self.Btn_Angling:SetVisibility(ESlateVisibility.Visible)
+  self.BaseSwitcherIndex = FISHING_ICON_INDEX
+  self:RefreshFullAutoSwitcher()
   self:PlayAnimation(self.Remind, 0, 0)
 end
 
 function M:SwitchFishing()
   self.Btn_Angling:SetVisibility(ESlateVisibility.Visible)
+  self.BaseSwitcherIndex = FISHING_ICON_INDEX
+  self:RefreshFullAutoSwitcher()
   self:StopAnimation(self.Remind)
 end
 
 function M:SwitchEndFishing()
-  self.Btn_Angling:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  local Visibility = self.bFullAutoFishingSessionActive and UIConst.VisibilityOp.Visible or UIConst.VisibilityOp.SelfHitTestInvisible
+  self.Btn_Angling:SetVisibility(Visibility)
+  self.BaseSwitcherIndex = FISHING_ICON_INDEX
+  self:RefreshFullAutoSwitcher()
   self:StopAnimation(self.Remind)
   self:PlayAnimation(self.Normal)
 end

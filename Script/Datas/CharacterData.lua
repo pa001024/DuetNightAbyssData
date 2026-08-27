@@ -185,6 +185,18 @@ return ReadOnly("CharacterData", {
     CvJPName = "CVName3013",
     CvKRName = "CVName4013"
   },
+  [3104] = {
+    CharBirth = "UI_CHAR_BIRTH_3104",
+    CharBirthday = "46358",
+    CharForce = "UI_CHAR_FORCE_3104",
+    CharId = 3104,
+    CharName = "UI_CHAR_NAME_3104",
+    CharSex = true,
+    CvCNName = "CVName1028",
+    CvENName = "CVName2028",
+    CvJPName = "CVName3028",
+    CvKRName = "CVName4028"
+  },
   [3201] = {
     CharBirth = "UI_CHAR_BIRTH_3201",
     CharBirthday = "45522",

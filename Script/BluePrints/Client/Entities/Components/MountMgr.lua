@@ -1,10 +1,14 @@
+local DeferCallUtils = require("Utils.DeferCallUtils")
 local Component = {}
 
 function Component:EnterWorld()
   self.logger.debug("ZJT_ EnterWorld MountMgr ")
   self:InitMountRedDotInfo()
-  EventManager:RemoveEvent(EventID.OnPropSetResources, self)
   EventManager:AddEvent(EventID.OnPropSetResources, self, self.OnGetFlyLicenseResource)
+end
+
+function Component:LeaveWorld()
+  EventManager:RemoveEvent(EventID.OnPropSetResources, self)
 end
 
 function Component:OnGetFlyLicenseResource(ResourceId)
@@ -16,7 +20,7 @@ end
 
 function Component:DelayRefreshMountLicenseRedDot()
   local WorldContextObject = GWorld and GWorld.GameInstance
-  UE4.UBattleFunctionLibrary.DeferredCall(WorldContextObject, "MountMgr_RefreshMountLicenseRedDot", function()
+  DeferCallUtils.DeferredCall(WorldContextObject, "MountMgr_RefreshMountLicenseRedDot", function()
     self:TryAddLicenseItemNewRedDot()
   end)
 end

@@ -58,17 +58,25 @@ function M:InitCoopChatCard(AsyncCombatRoomInfo, bSelfMsg)
   if not self.RoomUniqueId then
     return
   end
-  self.RateResId = AsyncCombatRoomInfo.RateResId
-  DebugPrint("WBP_Activity_Coop_ChatCard_C:InitCoopChatCard: self.RateResId: " .. tostring(self.RateResId))
-  if not self.RateResId then
-    return
+  local Percent = 100
+  local AnimationName = "Lv_04"
+  if 1 == AsyncCombatData.RoomType then
+    Percent = DataMgr.AsyncCombatEventConstant.Async_FreeRoomBonusRate.ConstantValue * 100
+    AnimationName = "Personal"
+  else
+    self.RateResId = AsyncCombatRoomInfo.RateResId
+    DebugPrint("WBP_Activity_Coop_ChatCard_C:InitCoopChatCard: self.RateResId: " .. tostring(self.RateResId))
+    if not self.RateResId then
+      return
+    end
+    local RateRes = DataMgr.Resource[self.RateResId]
+    DebugPrint("WBP_Activity_Coop_ChatCard_C:InitCoopChatCard: RateRes: " .. tostring(RateRes))
+    if not RateRes then
+      return
+    end
+    Percent = RateRes.UseParam and RateRes.UseParam / 100 or 100
+    AnimationName = CoopModel:GetRewardAnimationByDifficultyId(self.RateResId)
   end
-  local RateRes = DataMgr.Resource[self.RateResId]
-  DebugPrint("WBP_Activity_Coop_ChatCard_C:InitCoopChatCard: RateRes: " .. tostring(RateRes))
-  if not RateRes then
-    return
-  end
-  local Percent = RateRes.UseParam and RateRes.UseParam / 100 or 100
   self.Text_Avatar:SetText(string.format(GText("UI_AsyncCombat_StageName"), self.Level))
   UResourceLibrary.LoadObjectAsync(self, ResourceDataIcon, {
     self,
@@ -78,6 +86,7 @@ function M:InitCoopChatCard(AsyncCombatRoomInfo, bSelfMsg)
   })
   self.Text_Plan:SetText(GText("UI_AsyncCombat_RateBonus_Chat"))
   self.Tag_Reward.TextNum:SetText("+" .. string.format("%d", Percent) .. "%")
+  self.Tag_Reward:PlayAnimation(self.Tag_Reward[AnimationName])
   self.bInitialized = true
 end
 

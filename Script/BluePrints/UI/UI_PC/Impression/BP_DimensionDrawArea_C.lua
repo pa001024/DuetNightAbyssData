@@ -63,7 +63,7 @@ function BP_DimensionDrawArea_C:SwitchActive(bActive)
 end
 
 function BP_DimensionDrawArea_C:StartLoop()
-  self:PlayAnimation(self.Loop, 0, 5)
+  self:PlayAnimation(self.Loop, 0, 0)
   AudioManager(self):PlayUISound(self, "event:/ui/common/map_five_dimension_panel_show", "DimensionPanel", nil)
 end
 

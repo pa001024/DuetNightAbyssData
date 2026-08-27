@@ -33,7 +33,11 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
   local CurInputDeviceType = UIUtils.UtilsGetCurrentInputType()
   CurInputDeviceType = UIUtils.UtilsGetCurrentInputType()
   if CurInputDeviceType == UE4.ECommonInputType.Gamepad then
+    local LastFocusedRowIndex = self.Owner.LastTargetRowIndex
     self:TriggerOnSelected()
+    if LastFocusedRowIndex and LastFocusedRowIndex > self.RowIndex then
+      self.Owner:ScrollRowIntoView(self.RowIndex, true)
+    end
     AudioManager(self):PlayItemSound(self, self.Item.Id, "Click", self.Item.ItemType)
   end
   return self.Super.OnFocusReceived(self, MyGeometry, InFocusEvent)
@@ -134,7 +138,9 @@ function M:UpdateDraftState(DraftState, ShowRedDot)
     self:PlayAnimation(self.DisCast)
   end
   if not self.IsInCompendiumMode and ShowRedDot then
-    self.Item:SetRedDot(UIConst.RedDotType.CommonRedDot)
+    self.Reddot:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  else
+    self.Reddot:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
 end
 
@@ -179,6 +185,7 @@ function M:SetEmpty()
   self:SetUpLineVisible(false)
   self:PlayAnimation(self.lack, 0, 1, UE4.EUMGSequencePlayMode.Reverse)
   self:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
+  self.Reddot:SetVisibility(UE4.ESlateVisibility.Collapsed)
 end
 
 function M:OnAnimationFinished(InAnimation)

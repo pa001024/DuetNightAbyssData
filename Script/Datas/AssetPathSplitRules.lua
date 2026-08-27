@@ -876,6 +876,12 @@ return ReadOnly("AssetPathSplitRules", {
     ModelId = 851101,
     MontageSuffixList = T.RT_1
   },
+  [852201] = {
+    IsPreloadMesh = true,
+    IsPreloadWeapon = true,
+    ModelId = 852201,
+    MontageSuffixList = T.RT_1
+  },
   [900101] = {
     IsPreloadMesh = true,
     IsPreloadWeapon = true,
@@ -964,6 +970,18 @@ return ReadOnly("AssetPathSplitRules", {
     IsPreloadMesh = true,
     IsPreloadWeapon = true,
     ModelId = 950104,
+    MontageSuffixList = T.RT_1
+  },
+  [951101] = {
+    IsPreloadMesh = true,
+    IsPreloadWeapon = true,
+    ModelId = 951101,
+    MontageSuffixList = T.RT_1
+  },
+  [951201] = {
+    IsPreloadMesh = true,
+    IsPreloadWeapon = true,
+    ModelId = 951201,
     MontageSuffixList = T.RT_1
   },
   [980101] = {

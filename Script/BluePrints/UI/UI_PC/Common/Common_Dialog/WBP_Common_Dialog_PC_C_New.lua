@@ -164,7 +164,7 @@ function WBP_Common_Dialog_PC_C:InitGamepadView(CurGamepadName)
   if nil ~= ForceShow then
     self:ShowGamepadCloseBtn(ForceShow)
   else
-    self:ShowGamepadCloseBtn((HasCloseBtn or HasQuitTip) and not HasButtonBar)
+    self:ShowGamepadCloseBtn((HasCloseBtn or HasQuitTip) and not HasButtonBar, HasQuitTip)
   end
   if self.Params and self.Params.AutoFocus and self.VB_Node:GetChildrenCount() > 2 then
     local Widget = self.VB_Node:GetChildAt(1)
@@ -236,6 +236,7 @@ function WBP_Common_Dialog_PC_C:UpdateView(PopupStyleID, Params, PopupData)
   self.CurItemIndex = nil
   self.PopupData = PopupData
   self.Params = Params or {}
+  self.NeedAutoCloseTime = PopupData.ShowQuitTip or 5
   for k, v in pairs(PopupData.ExtraParams or {}) do
     self.Params[k] = v
   end
@@ -290,6 +291,7 @@ function WBP_Common_Dialog_PC_C:UpdateView(PopupStyleID, Params, PopupData)
     self.ForbiddenRightBtnCallbackObj = Params.ForbiddenRightCallbackObj
     self.ForbiddenRightBtnClickedCallback = Params.ForbiddenRightCallbackFunction
     self.DontCloseWhenRightBtnClicked = Params.DontCloseWhenRightBtnClicked
+    self.NeedSecondPop = Params.NeedSecondPop
   end
   self.Pos_Title:ClearChildren()
   local DialogTitle
@@ -435,7 +437,15 @@ function WBP_Common_Dialog_PC_C:UpdateView(PopupStyleID, Params, PopupData)
   end
   self.CloseMask.OnClicked:Clear()
   if PopupData.ShowQuitTip then
-    self.Text_Tips:SetText(GText("UI_TRAIN_CLOSE"))
+    if PopupData.ShowQuitTip > 1 then
+      self.Text_Tips:SetText(string.format(GText("UI_AutoClose"), self.NeedAutoCloseTime or PopupData.ShowQuitTip))
+      if not self:IsExistTimer("AutoCloseTimer") then
+        self.NeedAutoCloseTime = PopupData.ShowQuitTip
+        self:AddTimer(1.0, self.AutoCloseUpdateTips, true, 0, "AutoCloseTimer")
+      end
+    else
+      self.Text_Tips:SetText(GText("UI_TRAIN_CLOSE"))
+    end
     self.Panel_Tips:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self.CloseMask.OnPressed:Add(self, self.OnCloseMaskClicked)
     self.CloseMask:SetVisibility(UE4.ESlateVisibility.Visible)
@@ -454,6 +464,22 @@ function WBP_Common_Dialog_PC_C:UpdateView(PopupStyleID, Params, PopupData)
     end
   end
   self:AutofitDialog(PopupStyle)
+end
+
+function WBP_Common_Dialog_PC_C:AutoCloseUpdateTips()
+  if self.NeedAutoCloseTime <= 0 then
+    self:RemoveTimer("AutoCloseTimer")
+    self:OnCloseMaskClicked()
+    return
+  end
+  self.NeedAutoCloseTime = self.NeedAutoCloseTime - 1
+  if self.GamepadCloseBtnIndex then
+    local HotkeyWidget = self:GetGamepadShortcutByIndex(self.GamepadCloseBtnIndex)
+    if HotkeyWidget then
+      HotkeyWidget:SetDescription(string.format(GText("UI_AutoClose"), self.NeedAutoCloseTime), true)
+    end
+  end
+  self.Text_Tips:SetText(string.format(GText("UI_AutoClose"), self.NeedAutoCloseTime))
 end
 
 function WBP_Common_Dialog_PC_C:BP_GetDesiredFocusTarget()
@@ -719,6 +745,10 @@ function WBP_Common_Dialog_PC_C:OnRightBtnClicked()
   if not self.PopupStyle.ShowRightButton then
     return
   end
+  if self.NeedSecondPop then
+    self:BroadcastDialogEvent(DialogEvent.OnRightBtnClicked)
+    return
+  end
   self:BroadcastDialogEvent(DialogEvent.OnRightBtnClicked)
   if self.RightBtnClickedCallback then
     local Data = self:PackageResult()
@@ -924,20 +954,38 @@ function WBP_Common_Dialog_PC_C:IsGamepadShortcutVisible(Index)
   return GamepadShortcut:GetVisibility() == UE4.ESlateVisibility.SelfHitTestInvisible
 end
 
-function WBP_Common_Dialog_PC_C:ShowGamepadCloseBtn(bShow)
+function WBP_Common_Dialog_PC_C:ShowGamepadCloseBtn(bShow, QuitTipMode)
   if bShow then
     if self.GamepadCloseBtnIndex then
+      if QuitTipMode and QuitTipMode > 1 then
+        local HotkeyWidget = self:GetGamepadShortcutByIndex(self.GamepadCloseBtnIndex)
+        if HotkeyWidget then
+          HotkeyWidget:SetDescription(string.format(GText("UI_AutoClose"), self.NeedAutoCloseTime), true)
+        end
+      end
       return
     end
-    self.GamepadCloseBtnIndex = self:InitGamepadShortcut({
-      KeyInfoList = {
-        {
-          Type = "Img",
-          ImgLongPath = UIUtils.UtilsGetKeyIconPathInGamepad("B", self.CurGamepadName)
-        }
-      },
-      Desc = GText("UI_Controller_Close")
-    }, #self.Index2GamepadShortcut)
+    if QuitTipMode and QuitTipMode > 1 then
+      self.GamepadCloseBtnIndex = self:InitGamepadShortcut({
+        KeyInfoList = {
+          {
+            Type = "Img",
+            ImgLongPath = UIUtils.UtilsGetKeyIconPathInGamepad("B", self.CurGamepadName)
+          }
+        },
+        Desc = string.format(GText("UI_AutoClose"), self.NeedAutoCloseTime)
+      }, #self.Index2GamepadShortcut)
+    else
+      self.GamepadCloseBtnIndex = self:InitGamepadShortcut({
+        KeyInfoList = {
+          {
+            Type = "Img",
+            ImgLongPath = UIUtils.UtilsGetKeyIconPathInGamepad("B", self.CurGamepadName)
+          }
+        },
+        Desc = GText("UI_Controller_Close")
+      }, #self.Index2GamepadShortcut)
+    end
   elseif self.GamepadCloseBtnIndex then
     self:HideGamepadShortcut(self.GamepadCloseBtnIndex)
     self.GamepadCloseBtnIndex = nil

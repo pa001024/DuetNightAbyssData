@@ -5,8 +5,8 @@ local M = Class({
 function M:InitializedToolbar()
   M.Super.InitializedToolbar(self)
   self.Story_PlayBtn:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  self.Story_PlayBtn.bAutoPlay = GWorld.GameInstance.bGlobalAutoPlay
   self.Story_PlayBtn:InitPlayKey()
+  self:ChangeAutoPlayUI()
 end
 
 function M:ChangeAutoPlay()

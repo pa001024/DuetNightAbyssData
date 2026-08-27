@@ -3,6 +3,7 @@ local StrLib = require("BluePrints.Common.DataStructure")
 local Deque = StrLib.Deque
 local MaxTeammate = TeamCommon.MaxTeamMembers - 1
 local TeamModel = TeamController:GetModel()
+local TeamHallController = require("BluePrints.UI.WBP.TeamHall.TeamHallController")
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
 })
@@ -19,8 +20,7 @@ function M:Construct()
   self.SizeBox_Leave:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.Btn_Leave:BindEventOnClicked(self, self.OnLeaveTeamClicked)
   self.Btn_Invite:BindEventOnClicked(self, self.OnInviteClicked)
-  self.Btn_Leave:SetText(GText("UI_Team_Leave"))
-  self.Btn_Invite:SetText(GText("UI_Friend_Invite"))
+  self.Btn_Invite:SetText(GText("UI_teamLobby"))
   self.WB_Player:SetVisibility(UIConst.VisibilityOp.Collapsed)
   AudioManager(self):PlayUISound(self, "event:/ui/common/team_panel_expand", nil, nil)
   if GWorld:IsStandAlone() then
@@ -170,7 +170,7 @@ function M:OnLeaveTeamClicked()
 end
 
 function M:OnInviteClicked()
-  FriendController:OpenView(self, FriendCommon.FriendTabType.MyFriend)
+  TeamHallController:OpenTeamHall()
   self:Close()
 end
 

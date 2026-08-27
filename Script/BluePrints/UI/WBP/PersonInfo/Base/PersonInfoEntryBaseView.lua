@@ -88,4 +88,20 @@ function M:CreatePersonInfoMainPage(ConfigData)
   return PageMain
 end
 
+function M:HideUIInstant()
+  PersonInfoController:SetMainPageUIHidden(true)
+  self.Content:SetRenderOpacity(0)
+  local Tab = self.Com_Tab or self.Com_Tab_M
+  Tab:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  local GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
+  if GameInputModeSubsystem then
+    GameInputModeSubsystem:SetNavigateWidgetOpacity(0)
+  end
+end
+
+function M:PlayAnimation(Animation)
+  DebugPrint("PlayAnimation", Animation)
+  self.Overridden.PlayAnimation(self, Animation)
+end
+
 return M

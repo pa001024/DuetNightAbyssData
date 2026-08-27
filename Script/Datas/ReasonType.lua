@@ -103,6 +103,10 @@ return ReadOnly("ReasonType", {
     ReasonId = 1002,
     ReasonName = "CHAR_BREAK_CONSUME"
   },
+  CHAR_EXCEL_WEAPON_EXPAND_CONSUME = {
+    ReasonId = 1011,
+    ReasonName = "CHAR_EXCEL_WEAPON_EXPAND_CONSUME"
+  },
   CHAR_LEVELUP_CONSUME = {
     ReasonId = 1001,
     ReasonName = "CHAR_LEVELUP_CONSUME"
@@ -131,6 +135,10 @@ return ReadOnly("ReasonType", {
   CLIENT_REQUEST_USE_CONSUME = {
     ReasonId = 19001,
     ReasonName = "CLIENT_REQUEST_USE_CONSUME"
+  },
+  CLUE_REWARD_GET = {
+    ReasonId = 57001,
+    ReasonName = "CLUE_REWARD_GET"
   },
   COLLECT_REWARD_EXP = {
     ReasonId = 21009,
@@ -249,6 +257,10 @@ return ReadOnly("ReasonType", {
     ReasonName = "FISH_CONSUME"
   },
   FISH_GET = {ReasonId = 27002, ReasonName = "FISH_GET"},
+  FRESHMEN_GIFT_REWARD = {
+    ReasonId = 55001,
+    ReasonName = "FRESHMEN_GIFT_REWARD"
+  },
   GACHA_CUMULATIVE_REWARD = {
     ReasonId = 22004,
     ReasonName = "GACHA_CUMULATIVE_REWARD"
@@ -376,6 +388,10 @@ return ReadOnly("ReasonType", {
   MOD_WEAPON_POLARITY_CONSUME = {
     ReasonId = 3004,
     ReasonName = "MOD_WEAPON_POLARITY_CONSUME"
+  },
+  MONEY_TREE_REWARD = {
+    ReasonId = 56001,
+    ReasonName = "MONEY_TREE_REWARD"
   },
   MONTHLY_CARD_BUY = {
     ReasonId = 31001,

@@ -11,7 +11,12 @@ function Menu_Portrait_PC_C:OnLoaded(...)
 end
 
 function Menu_Portrait_PC_C:SetImage(Path, Id, IsHeadFrame, IsDynamic)
+  local Avatar = GWorld:GetAvatar()
   if -1 == Id or nil == Id then
+    if Avatar and Id == Avatar.HeadFrameId then
+      self:PlayAnimation(self.Select_Normal)
+      self.IsSelect = true
+    end
     self.Img_Item:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Panel_DynamicFrame:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.DynamicHead:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -23,7 +28,7 @@ function Menu_Portrait_PC_C:SetImage(Path, Id, IsHeadFrame, IsDynamic)
   end
   if IsDynamic then
     self.Img_Item:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    local NewWidget = UIManager(self):CreateWidget(Path, true)
+    local NewWidget = UIManager(self):CreateWidget(Path)
     if self.IsHeadFrame then
       self.DynamicFrame:SetContent(NewWidget)
       self.Panel_DynamicFrame:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
@@ -47,21 +52,15 @@ function Menu_Portrait_PC_C:SetImage(Path, Id, IsHeadFrame, IsDynamic)
   end
   self.Icon_Empty:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.IsSelect = false
-  local Avatar = GWorld:GetAvatar()
   if Avatar then
     if not IsHeadFrame then
       if Id == Avatar.HeadIconId then
         self:PlayAnimation(self.Select_Normal)
         self.IsSelect = true
       end
-    else
-      if Id == Avatar.HeadFrameId then
-        self:PlayAnimation(self.Select_Normal)
-        self.IsSelect = true
-      end
-      if -1 == Id then
-        self.Icon_Empty:SetVisibility(UIConst.VisibilityOp.Visible)
-      end
+    elseif Id == Avatar.HeadFrameId then
+      self:PlayAnimation(self.Select_Normal)
+      self.IsSelect = true
     end
   end
   if self.IsSelect then

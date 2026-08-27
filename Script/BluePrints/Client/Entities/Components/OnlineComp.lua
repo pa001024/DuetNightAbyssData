@@ -1,6 +1,7 @@
 local pb = require("pb")
 local Decorator = require("BluePrints.Client.Wrapper.Decorator")
 local LuaConst = require("EMLuaConst")
+local MiscUtils = require("Utils.MiscUtils")
 local MessageTypeToFunc = {
   EnterRegionOnline = "HandleEnterRegionOnline",
   LeaveRegionOnline = "HandleLeaveRegionOnline",
@@ -61,7 +62,6 @@ function Component:EnterWorld()
   self.CurrentGuildId = nil
   self.RegionAvatars = {}
   self:InitMoveSyncMgr()
-  self:InitGuildExhibitMgr()
 end
 
 function Component:RequestEnterOnline(online_type, ShowWeapon, CurrentState, PlayerInfo)
@@ -1013,7 +1013,7 @@ function Component:RequestDeadRegionOnlineItem(online_type, SenderEid, UniqueId)
 end
 
 function Component:RequestChangeRegionOnlineItemState(online_type, UniqueId, OwnerEid, InteractiveId, NewState, IsGlobal, bInMobile)
-  GreenPrint("客户端发起联机动作申请 RequestChangeRegionOnlineItemState", "online_type：", online_type, "，UniqueId：", UniqueId, "，OwnerEid：", CommonUtils.ObjId2Str(OwnerEid), "，InteractiveId：", InteractiveId, "，NewState：", NewState)
+  MiscUtils.GreenPrint("客户端发起联机动作申请 RequestChangeRegionOnlineItemState", "online_type：", online_type, "，UniqueId：", UniqueId, "，OwnerEid：", CommonUtils.ObjId2Str(OwnerEid), "，InteractiveId：", InteractiveId, "，NewState：", NewState)
   self.logger.debug("ZJT_ RequestChangeRegionOnlineItemState ", online_type, UniqueId, OwnerEid, InteractiveId, NewState, CommonUtils.ObjId2Str(OwnerEid))
   
   local function Callback(Ret, Message)
@@ -1031,12 +1031,12 @@ function Component:RequestChangeRegionOnlineItemState(online_type, UniqueId, Own
         IsGlobalOnlineItem = IsGlobal
       }
       self:RealInteractive(message)
-      GreenPrint("联机动作申请成功")
+      MiscUtils.GreenPrint("联机动作申请成功")
     elseif 52015 == Ret or 52025 == Ret then
-      GreenPrint("联机动作申请超时拒绝")
+      MiscUtils.GreenPrint("联机动作申请超时拒绝")
       EventManager:FireEvent(EventID.OnReceivedOnlineActionApplicationReject, OwnerEid, UniqueId, InteractiveId)
     else
-      RedPrint("联机动作申请失败", "错误码：", Ret)
+      MiscUtils.RedPrint("联机动作申请失败", "错误码：", Ret)
     end
     self.logger.debug("ZJT_ RequestChangeRegionOnlineItemState Callback ", Ret, online_type, UniqueId, OwnerEid, InteractiveId, NewState)
   end
@@ -1063,19 +1063,19 @@ function Component:RequestLeaveRegionOnlineItem(online_type, UniqueId, OwnerEid,
 end
 
 function Component:RequestUseOwnerRegionOnlineItem(RequestEid, UniqueId, InteractiveId)
-  GreenPrint("收到申请 RequestUseOwnerRegionOnlineItem", "RequestEid：", CommonUtils.ObjId2Str(RequestEid), "，UniqueId：", UniqueId, "，InteractiveId：", InteractiveId)
+  MiscUtils.GreenPrint("收到申请 RequestUseOwnerRegionOnlineItem", "RequestEid：", CommonUtils.ObjId2Str(RequestEid), "，UniqueId：", UniqueId, "，InteractiveId：", InteractiveId)
   EventManager:FireEvent(EventID.ReceivedOthersOnlineActionApplication, RequestEid, UniqueId, InteractiveId)
   self.logger.debug("ZJT_ 111 RequestUseOwnerRegionOnlineItem ", CommonUtils.ObjId2Str(RequestEid))
 end
 
 function Component:OnRequestUseOwnerRegionOnlineItem(RequestEid, RequestRes, UniqueId, InteractiveId)
-  GreenPrint("回复申请 OnRequestUseOwnerRegionOnlineItem", "RequestEid：", CommonUtils.ObjId2Str(RequestEid), "，RequestRes：", RequestRes, "，UniqueId：", UniqueId, "，InteractiveId：", InteractiveId)
+  MiscUtils.GreenPrint("回复申请 OnRequestUseOwnerRegionOnlineItem", "RequestEid：", CommonUtils.ObjId2Str(RequestEid), "，RequestRes：", RequestRes, "，UniqueId：", UniqueId, "，InteractiveId：", InteractiveId)
   
   local function Callback(Ret, RequestEid, RequestRes, UniqueId, InteractiveId)
     if 0 == Ret then
-      GreenPrint("回复申请 OnRequestUseOwnerRegionOnlineItem 服务端返回结果", "Ret：", Ret, "，UniqueId：", UniqueId, "，InteractiveId：", InteractiveId)
+      MiscUtils.GreenPrint("回复申请 OnRequestUseOwnerRegionOnlineItem 服务端返回结果", "Ret：", Ret, "，UniqueId：", UniqueId, "，InteractiveId：", InteractiveId)
     else
-      RedPrint("回复申请 OnRequestUseOwnerRegionOnlineItem 服务端返回结果", "Ret：", Ret, "，UniqueId：", UniqueId, "，InteractiveId：", InteractiveId)
+      MiscUtils.RedPrint("回复申请 OnRequestUseOwnerRegionOnlineItem 服务端返回结果", "Ret：", Ret, "，UniqueId：", UniqueId, "，InteractiveId：", InteractiveId)
     end
     self.logger.debug("ZJT_ OnRequestUseOwnerRegionOnlineItem ", Ret, self.CurrentOnlineType, RequestRes, UniqueId, InteractiveId)
     if 0 ~= Ret then
@@ -1179,20 +1179,20 @@ function Component:RequestUseCreateMount(online_type, ResourceId, MountId, UseSt
 end
 
 function Component:RequestHostInvitationOther(InvitationEid, UniqueId, InteractiveId, NewState)
-  GreenPrint("客户端发起邀请 RequestHostInvitationOther", "InvitationEid：", CommonUtils.ObjId2Str(InvitationEid), "，UniqueId：", UniqueId, "，InteractiveId：", InteractiveId, "，NewState：", NewState)
+  MiscUtils.GreenPrint("客户端发起邀请 RequestHostInvitationOther", "InvitationEid：", CommonUtils.ObjId2Str(InvitationEid), "，UniqueId：", UniqueId, "，InteractiveId：", InteractiveId, "，NewState：", NewState)
   
   local function Callback(Ret)
     if 52015 == Ret or 52025 == Ret then
-      GreenPrint("客户端发起邀请结果", "Ret：", Ret, "，UniqueId：", UniqueId, "，InteractiveId：", InteractiveId, "，NewState：", NewState)
+      MiscUtils.GreenPrint("客户端发起邀请结果", "Ret：", Ret, "，UniqueId：", UniqueId, "，InteractiveId：", InteractiveId, "，NewState：", NewState)
       EventManager:FireEvent(EventID.OnReceivedOnlineActionInvitationReject, InvitationEid, UniqueId, InteractiveId, NewState)
     elseif 0 == Ret then
-      GreenPrint("客户端发起邀请结果", "Ret：", Ret, "，UniqueId：", UniqueId, "，InteractiveId：", InteractiveId, "，NewState：", NewState)
+      MiscUtils.GreenPrint("客户端发起邀请结果", "Ret：", Ret, "，UniqueId：", UniqueId, "，InteractiveId：", InteractiveId, "，NewState：", NewState)
       EventManager:FireEvent(EventID.OnReceivedOnlineActionInvitationAgree, InvitationEid, UniqueId, InteractiveId, NewState)
     elseif 52024 == Ret then
-      GreenPrint("客户端发起邀请结果", "Ret：", Ret, "，UniqueId：", UniqueId, "，InteractiveId：", InteractiveId, "，NewState：", NewState)
+      MiscUtils.GreenPrint("客户端发起邀请结果", "Ret：", Ret, "，UniqueId：", UniqueId, "，InteractiveId：", InteractiveId, "，NewState：", NewState)
       UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_RegionOnline_Invite_Inviting"))
     else
-      RedPrint("客户端发起邀请结果 未知错误", "Ret：", Ret, "，UniqueId：", UniqueId, "，InteractiveId：", InteractiveId, "，NewState：", NewState)
+      MiscUtils.RedPrint("客户端发起邀请结果 未知错误", "Ret：", Ret, "，UniqueId：", UniqueId, "，InteractiveId：", InteractiveId, "，NewState：", NewState)
     end
     self.logger.debug("ZJT_ RequestHostInvitationOther ", Ret)
   end
@@ -1201,13 +1201,13 @@ function Component:RequestHostInvitationOther(InvitationEid, UniqueId, Interacti
 end
 
 function Component:OnRequestOtherUserRegionOnlineItem(InviterEid, RequestRes, UniqueId, InteractiveId)
-  GreenPrint("回复邀请 OnRequestOtherUserRegionOnlineItem", "InviterEid：", CommonUtils.ObjId2Str(InviterEid), "，RequestRes：", RequestRes, "，UniqueId：", UniqueId, "，InteractiveId：", InteractiveId)
+  MiscUtils.GreenPrint("回复邀请 OnRequestOtherUserRegionOnlineItem", "InviterEid：", CommonUtils.ObjId2Str(InviterEid), "，RequestRes：", RequestRes, "，UniqueId：", UniqueId, "，InteractiveId：", InteractiveId)
   
   local function Callback(Ret)
     if 0 == Ret then
-      GreenPrint("回复邀请结果", "Ret：", Ret, "，UniqueId：", UniqueId, "，InteractiveId：", InteractiveId)
+      MiscUtils.GreenPrint("回复邀请结果", "Ret：", Ret, "，UniqueId：", UniqueId, "，InteractiveId：", InteractiveId)
     else
-      RedPrint("回复邀请结果", "Ret：", Ret, "，UniqueId：", UniqueId, "，InteractiveId：", InteractiveId)
+      MiscUtils.RedPrint("回复邀请结果", "Ret：", Ret, "，UniqueId：", UniqueId, "，InteractiveId：", InteractiveId)
     end
     self.logger.debug("ZJT_ OnRequestOtherUserRegionOnlineItem ", Ret, self.CurrentOnlineType, RequestRes)
     if 0 == Ret then
@@ -1230,7 +1230,7 @@ function Component:OnRequestOtherUserRegionOnlineItem(InviterEid, RequestRes, Un
 end
 
 function Component:RequestOtherUserRegionOnlineItem(OwnerEid, UniqueId, InteractiveId)
-  GreenPrint("客户端收到邀请 RequestOtherUserRegionOnlineItem", "OwnerEid：", CommonUtils.ObjId2Str(OwnerEid), "，UniqueId：", UniqueId, "，InteractiveId：", InteractiveId)
+  MiscUtils.GreenPrint("客户端收到邀请 RequestOtherUserRegionOnlineItem", "OwnerEid：", CommonUtils.ObjId2Str(OwnerEid), "，UniqueId：", UniqueId, "，InteractiveId：", InteractiveId)
   EventManager:FireEvent(EventID.ReceivedOthersOnlineActionInvitation, OwnerEid, UniqueId, InteractiveId)
 end
 

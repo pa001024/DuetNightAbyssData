@@ -393,6 +393,7 @@ function M:ScrollToSelectTab()
 end
 
 function M:InitItem(ConfigData)
+  self.List_Item:ScrollToTop()
   self.List_Item:ClearListItems()
   if 1 == ConfigData.SortType then
     self:SortItems()
@@ -585,12 +586,15 @@ function M:InitListTabInfo()
   end
 end
 
-function M:RefreshListRewardInfo(Item, NotPlaySound)
+function M:RefreshListRewardInfo(Item, NotPlaySound, bIsNeedRefocus)
   if self.SelectedContent then
     self.SelectedContent.Entry:UnSelected()
   end
   self.SelectedContent = Item.Content
   self.SelectedContent.Entry:Selected(NotPlaySound)
+  if bIsNeedRefocus and UIUtils.UtilsGetCurrentInputType() == ECommonInputType.MouseAndKeyboard then
+    self:SetFocus()
+  end
   self:RealRefreshListRewardInfo(self.SelectedContent.Type)
 end
 

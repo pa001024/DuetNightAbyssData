@@ -69,6 +69,7 @@ return ReadOnly("AsyncCombat", {
     ID = 101,
     Key = 1,
     Level = 50,
+    SingleModeBossUnitID = 8516601,
     Type = "Resource"
   },
   [2] = {
@@ -81,6 +82,7 @@ return ReadOnly("AsyncCombat", {
     ID = 101,
     Key = 2,
     Level = 70,
+    SingleModeBossUnitID = 8516602,
     Type = "Resource"
   },
   [3] = {
@@ -93,6 +95,7 @@ return ReadOnly("AsyncCombat", {
     ID = 101,
     Key = 3,
     Level = 90,
+    SingleModeBossUnitID = 8516603,
     Type = "Resource"
   },
   [4] = {
@@ -105,6 +108,7 @@ return ReadOnly("AsyncCombat", {
     ID = 101,
     Key = 4,
     Level = 110,
+    SingleModeBossUnitID = 8516604,
     Type = "Resource"
   },
   [5] = {
@@ -117,6 +121,7 @@ return ReadOnly("AsyncCombat", {
     ID = 102,
     Key = 5,
     Level = 50,
+    SingleModeBossUnitID = 8516601,
     Type = "Resource"
   },
   [6] = {
@@ -129,6 +134,7 @@ return ReadOnly("AsyncCombat", {
     ID = 102,
     Key = 6,
     Level = 70,
+    SingleModeBossUnitID = 8516602,
     Type = "Resource"
   },
   [7] = {
@@ -141,6 +147,7 @@ return ReadOnly("AsyncCombat", {
     ID = 102,
     Key = 7,
     Level = 90,
+    SingleModeBossUnitID = 8516603,
     Type = "Resource"
   },
   [8] = {
@@ -153,6 +160,7 @@ return ReadOnly("AsyncCombat", {
     ID = 102,
     Key = 8,
     Level = 110,
+    SingleModeBossUnitID = 8516604,
     Type = "Resource"
   },
   [9] = {
@@ -165,6 +173,7 @@ return ReadOnly("AsyncCombat", {
     ID = 20013,
     Key = 9,
     Level = 50,
+    SingleModeBossUnitID = 8516601,
     Type = "Resource"
   },
   [10] = {
@@ -177,6 +186,7 @@ return ReadOnly("AsyncCombat", {
     ID = 20013,
     Key = 10,
     Level = 70,
+    SingleModeBossUnitID = 8516602,
     Type = "Resource"
   },
   [11] = {
@@ -189,6 +199,7 @@ return ReadOnly("AsyncCombat", {
     ID = 20013,
     Key = 11,
     Level = 90,
+    SingleModeBossUnitID = 8516603,
     Type = "Resource"
   },
   [12] = {
@@ -201,6 +212,7 @@ return ReadOnly("AsyncCombat", {
     ID = 20013,
     Key = 12,
     Level = 110,
+    SingleModeBossUnitID = 8516604,
     Type = "Resource"
   },
   [13] = {
@@ -213,6 +225,7 @@ return ReadOnly("AsyncCombat", {
     ID = 2013,
     Key = 13,
     Level = 50,
+    SingleModeBossUnitID = 8516601,
     Type = "Resource"
   },
   [14] = {
@@ -225,6 +238,7 @@ return ReadOnly("AsyncCombat", {
     ID = 2013,
     Key = 14,
     Level = 70,
+    SingleModeBossUnitID = 8516602,
     Type = "Resource"
   },
   [15] = {
@@ -237,6 +251,7 @@ return ReadOnly("AsyncCombat", {
     ID = 2013,
     Key = 15,
     Level = 90,
+    SingleModeBossUnitID = 8516603,
     Type = "Resource"
   },
   [16] = {
@@ -249,6 +264,7 @@ return ReadOnly("AsyncCombat", {
     ID = 2013,
     Key = 16,
     Level = 110,
+    SingleModeBossUnitID = 8516604,
     Type = "Resource"
   },
   [17] = {
@@ -261,6 +277,7 @@ return ReadOnly("AsyncCombat", {
     ID = 2009,
     Key = 17,
     Level = 50,
+    SingleModeBossUnitID = 8516601,
     Type = "Resource"
   },
   [18] = {
@@ -273,6 +290,7 @@ return ReadOnly("AsyncCombat", {
     ID = 2009,
     Key = 18,
     Level = 70,
+    SingleModeBossUnitID = 8516602,
     Type = "Resource"
   },
   [19] = {
@@ -285,6 +303,7 @@ return ReadOnly("AsyncCombat", {
     ID = 2009,
     Key = 19,
     Level = 90,
+    SingleModeBossUnitID = 8516603,
     Type = "Resource"
   },
   [20] = {
@@ -297,6 +316,7 @@ return ReadOnly("AsyncCombat", {
     ID = 2009,
     Key = 20,
     Level = 110,
+    SingleModeBossUnitID = 8516604,
     Type = "Resource"
   },
   [21] = {
@@ -309,6 +329,7 @@ return ReadOnly("AsyncCombat", {
     ID = 211,
     Key = 21,
     Level = 50,
+    SingleModeBossUnitID = 8516601,
     Type = "Resource"
   },
   [22] = {
@@ -321,6 +342,7 @@ return ReadOnly("AsyncCombat", {
     ID = 211,
     Key = 22,
     Level = 70,
+    SingleModeBossUnitID = 8516602,
     Type = "Resource"
   },
   [23] = {
@@ -333,6 +355,7 @@ return ReadOnly("AsyncCombat", {
     ID = 211,
     Key = 23,
     Level = 90,
+    SingleModeBossUnitID = 8516603,
     Type = "Resource"
   },
   [24] = {
@@ -345,6 +368,7 @@ return ReadOnly("AsyncCombat", {
     ID = 211,
     Key = 24,
     Level = 110,
+    SingleModeBossUnitID = 8516604,
     Type = "Resource"
   },
   [25] = {
@@ -358,6 +382,7 @@ return ReadOnly("AsyncCombat", {
     Invalid = true,
     Key = 25,
     Level = 50,
+    SingleModeBossUnitID = 8516601,
     Type = "Resource"
   },
   [26] = {
@@ -371,6 +396,7 @@ return ReadOnly("AsyncCombat", {
     Invalid = true,
     Key = 26,
     Level = 70,
+    SingleModeBossUnitID = 8516602,
     Type = "Resource"
   },
   [27] = {
@@ -384,6 +410,7 @@ return ReadOnly("AsyncCombat", {
     Invalid = true,
     Key = 27,
     Level = 90,
+    SingleModeBossUnitID = 8516603,
     Type = "Resource"
   },
   [28] = {
@@ -397,6 +424,91 @@ return ReadOnly("AsyncCombat", {
     Invalid = true,
     Key = 28,
     Level = 110,
+    SingleModeBossUnitID = 8516604,
+    Type = "Resource"
+  },
+  [29] = {
+    BossCreatorID = 1001,
+    BossRound = T.RT_1,
+    BossUnitID = T.RT_5,
+    Count = 21600,
+    DungeonBuff = "0:2500101,40:2500102,80:2500103,120:2500104,160:2500105",
+    DungeonID = 40604,
+    ID = 102,
+    Key = 29,
+    Level = 110,
+    RoomType = 1,
+    SingleModeBossUnitID = 8516604,
+    Type = "Resource"
+  },
+  [30] = {
+    BossCreatorID = 1001,
+    BossRound = T.RT_1,
+    BossUnitID = T.RT_5,
+    Count = 200,
+    DungeonBuff = "0:2500101,40:2500102,80:2500103,120:2500104,160:2500105",
+    DungeonID = 40604,
+    ID = 20013,
+    Key = 30,
+    Level = 110,
+    RoomType = 1,
+    SingleModeBossUnitID = 8516604,
+    Type = "Resource"
+  },
+  [31] = {
+    BossCreatorID = 1001,
+    BossRound = T.RT_1,
+    BossUnitID = T.RT_5,
+    Count = 135,
+    DungeonBuff = "0:2500101,40:2500102,80:2500103,120:2500104,160:2500105",
+    DungeonID = 40604,
+    ID = 2013,
+    Key = 31,
+    Level = 110,
+    RoomType = 1,
+    SingleModeBossUnitID = 8516604,
+    Type = "Resource"
+  },
+  [32] = {
+    BossCreatorID = 1001,
+    BossRound = T.RT_1,
+    BossUnitID = T.RT_5,
+    Count = 200,
+    DungeonBuff = "0:2500101,40:2500102,80:2500103,120:2500104,160:2500105",
+    DungeonID = 40604,
+    ID = 2009,
+    Key = 32,
+    Level = 110,
+    RoomType = 1,
+    SingleModeBossUnitID = 8516604,
+    Type = "Resource"
+  },
+  [33] = {
+    BossCreatorID = 1001,
+    BossRound = T.RT_1,
+    BossUnitID = T.RT_5,
+    Count = 150,
+    DungeonBuff = "0:2500101,40:2500102,80:2500103,120:2500104,160:2500105",
+    DungeonID = 40604,
+    ID = 211,
+    Key = 33,
+    Level = 110,
+    RoomType = 1,
+    SingleModeBossUnitID = 8516604,
+    Type = "Resource"
+  },
+  [34] = {
+    BossCreatorID = 1001,
+    BossRound = T.RT_1,
+    BossUnitID = T.RT_5,
+    Count = 400000,
+    DungeonBuff = "0:2500101,40:2500102,80:2500103,120:2500104,160:2500105",
+    DungeonID = 40604,
+    ID = 101,
+    Key = 34,
+    Level = 110,
+    RoomType = 1,
+    SingleModeBossUnitID = 8516604,
     Type = "Resource"
   }
 })

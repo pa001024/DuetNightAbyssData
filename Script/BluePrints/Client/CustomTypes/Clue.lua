@@ -111,10 +111,23 @@ function Clue:Finished()
   self.State = CommonConst.ClueState.Finished
 end
 
+function Clue:IsFinished()
+  return self.State == CommonConst.ClueState.Finished
+end
+
 function Clue:Rebuild()
+  self:RemoveInvalidClueContents()
   self:EnsureClueContents()
   self:RebuildClueContentStateCnt()
   self:UpdateState()
+end
+
+function Clue:RemoveInvalidClueContents()
+  for _, ClueContentId in ipairs(self.ClueContents:Keys()) do
+    if DataMgr.ClueContentId2ClueId[ClueContentId] ~= self.ClueId then
+      self.ClueContents:RemoveValue(ClueContentId)
+    end
+  end
 end
 
 function Clue:EnsureClueContents()
@@ -166,9 +179,23 @@ function ClueDict:GetClueContent(ClueId, ClueContentId)
   return ClueContent, Clue
 end
 
+function ClueDict:GetFinishedCount()
+  local FinishedCount = 0
+  for _, Clue in ipairs(self:Values()) do
+    if Clue:IsFinished() then
+      FinishedCount = FinishedCount + 1
+    end
+  end
+  return FinishedCount
+end
+
 function ClueDict:Rebuild()
   for _, Clue in ipairs(self:Values()) do
-    Clue:Rebuild()
+    if Clue:Data() then
+      Clue:Rebuild()
+    else
+      self:RemoveValue(Clue.ClueId)
+    end
   end
 end
 

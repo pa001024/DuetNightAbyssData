@@ -10,7 +10,10 @@ local CoopUtils = require("BluePrints.UI.WBP.Activity.PC.Coop.CoopUtils")
 local EMCache = require("EMCache.EMCache")
 local HyperWeaponUtils = require("Utils.HyperWeaponUtils")
 local GuildPermissionUtils = require("BluePrints.UI.WBP.Guild.Common.GuildPermissionUtils")
+local TeamHallCommon = require("BluePrints.UI.WBP.TeamHall.TeamHallCommon")
+local TeamHallController = require("BluePrints.UI.WBP.TeamHall.TeamHallController")
 local WBP_Battle_C = Class("BluePrints.UI.BP_UIState_C")
+local TrackKeyTipBPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/PC/WBP_Battle_TrackKeyTip_P.WBP_Battle_TrackKeyTip_P'"
 WBP_Battle_C._components = {
   "BluePrints.UI.WBP.Chat.View.WBP_Battle_C_ChatComp",
   "BluePrints.UI.WBP.Team.View.WBP_Battle_C_TeamComp",
@@ -114,6 +117,10 @@ function WBP_Battle_C:OnLoaded(...)
     self,
     self.OpenAppearanceGestureGruop
   })
+  self:ListenForInputAction("OpenTeamHall", EInputEvent.IE_Pressed, false, {
+    self,
+    self.OpenTeamHall
+  })
   self:AddDispatcher(EventID.ShowTeammateBloodUI, self, self.AddTeammateUI)
   self:AddDispatcher(EventID.CloseTeammateBloodUI, self, self.RemoveTeammateUI)
   self:AddDispatcher(EventID.OnMainUIReddotUpdate, self, self.UpdateRedDotStates)
@@ -128,9 +135,11 @@ function WBP_Battle_C:OnLoaded(...)
   self:AddDispatcher(EventID.UnLoadUI, self, self.OnSystemUIUnLoad)
   self:AddDispatcher(EventID.OnChangeKeyBoardSet, self, self.InitBtnList)
   self:AddDispatcher(EventID.OnSwitchRole, self, self.OnSwitchRole)
+  self:AddDispatcher(EventID.OnSlideMechStateChanged, self, self.OnSlideMechStateChanged)
   self:AddDispatcher(EventID.OnHomeBaseBtnPlayAnim, self, self.OnHomeBaseBtnPlayAnim)
   self:AddDispatcher(EventID.ShowOrHideMainPlayerBloodUI, self, self.ShowOrHideMainPlayerBloodUI)
   self:AddDispatcher(EventID.OnTempleRightUI, self, self.OnTempleRightUI)
+  self:AddDispatcher(EventID.InitShootTargetUI, self, self.InitShootTargetUI)
   self:AddDispatcher(EventID.OnSoloTreasureScoreAndBagUI, self, self.OnSoloTreasureScoreAndBagUI)
   self:AddDispatcher(EventID.OnPartyProgressStart, self, self.OnPartyProgressStart)
   self:AddDispatcher(EventID.OnModBookQuestFinished, self, self.OnModBookQuestFinished)
@@ -148,35 +157,34 @@ function WBP_Battle_C:OnLoaded(...)
   self:AddDispatcher(EventID.OnTeleportReady, self, self.TeleportReady)
   self:AddDispatcher(EventID.OnSwitchWeapon, self, self.RefreshSpiritualized)
   self:AddDispatcher(EventID.OnSelectWeapon, self, self.RefreshSpiritualized)
-  self:AddDispatcher(EventID.UpdateMainPlayerWeaponSp, self, function(self, NowWeaponSp, bImmediateOrOwnerActor, OwnerActor)
-    local bImmediate = true == bImmediateOrOwnerActor
-    if not OwnerActor and not bImmediate then
-      OwnerActor = bImmediateOrOwnerActor
-    end
+  TeamHallController:RegisterEvent(self, self.OnTeamHallUpdate)
+  self:AddDispatcher(EventID.UpdateMainPlayerWeaponSp, self, function(self, NowWeaponSp, bImmediate, OwnerActor)
     if not IsValid(OwnerActor) or not OwnerActor:IsMainPlayer() then
       return
     end
-    self:RefreshSpiritualized({CurrentWeaponSp = NowWeaponSp, bImmediate = bImmediate})
+    self:RefreshSpiritualized({
+      CurrentWeaponSp = NowWeaponSp,
+      bImmediate = true == bImmediate
+    })
   end)
-  self:AddDispatcher(EventID.UpdateMainPlayerMaxWeaponSp, self, function(self, NowMaxWeaponSp, OwnerActorOrOldMaxWeaponSp, OwnerActor)
-    OwnerActor = OwnerActor or OwnerActorOrOldMaxWeaponSp
+  self:AddDispatcher(EventID.UpdateMainPlayerMaxWeaponSp, self, function(self, NowMaxWeaponSp, OwnerActor)
     if not IsValid(OwnerActor) or not OwnerActor:IsMainPlayer() then
       return
     end
     self:RefreshSpiritualized({MaxWeaponSp = NowMaxWeaponSp})
   end)
-  self:AddDispatcher(EventID.UpdateMainPlayerSecondaryResource, self, function(self, NowSecondaryResource, OwnerActorOrOldSecondaryResource, OwnerActor)
-    OwnerActor = OwnerActor or OwnerActorOrOldSecondaryResource
+  self:AddDispatcher(EventID.UpdateMainPlayerSecondaryResource, self, function(self, NowSecondaryResource, OwnerActor)
     if not IsValid(OwnerActor) or not OwnerActor:IsMainPlayer() then
       return
     end
     AIDeBugLog.Log("AIDeBug_Attribute_SecondaryResource", "UI_RECV", {
       Now = NowSecondaryResource,
-      Arg2 = tostring(OwnerActorOrOldSecondaryResource)
+      Owner = tostring(OwnerActor)
     })
     self:RefreshSpiritualized({CurrentSecondaryCount = NowSecondaryResource})
   end)
   self:AddDispatcher(EventID.OnRepClientDungeonMessage, self, self.RepClientDungeonMessage)
+  self:AddDispatcher(EventID.OnAsyncCombatSingleModeProgressUpdate, self, self.AsyncCombatSingleModeProgressUpdate)
   local NodeName = DataMgr.ReddotNode.Quest.Name
   local Avatar = GWorld:GetAvatar()
   if Avatar then
@@ -283,6 +291,19 @@ function WBP_Battle_C:OnGameLanguageChanged()
   end
 end
 
+function WBP_Battle_C:OnTeamHallUpdate(EventId)
+  if EventId == TeamHallCommon.EventId.TeamRequestNew then
+    self.Btn_Recruit.New:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  elseif EventId == TeamHallCommon.EventId.TeamRequestPanelClosed then
+    self.Btn_Recruit.New:SetVisibility(ESlateVisibility.Collapsed)
+  end
+  local TeamRequestList = TeamHallController:GetTeamRequestList()
+  if TeamRequestList[1] then
+  else
+    self.Btn_Recruit.New:SetVisibility(ESlateVisibility.Collapsed)
+  end
+end
+
 function WBP_Battle_C:GetOrAddWidget(WidgetName, NodeToAdd)
   local Widget = NodeToAdd:GetChildAt(0)
   if Widget then
@@ -323,7 +344,166 @@ function WBP_Battle_C:InitWithMainCharacter()
   end, false)
   self:InitDataPhone()
   self:RefreshSpiritualized()
+  self:SyncSlideMechHUDStateFromPlayer(Player, "InitWithMainCharacter")
   return true
+end
+
+function WBP_Battle_C:SyncSlideMechHUDStateFromPlayer(Player, Reason)
+  Player = IsValid(Player) and Player or UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
+  if not IsValid(Player) then
+    return
+  end
+  self:OnSlideMechStateChanged(Player.IsInSlideMech == true, Player, Player.CurSlideMechEid or Player.SlideMechEid or 0, Reason or "Sync")
+end
+
+function WBP_Battle_C:OnSlideMechStateChanged(IsInSlideMech, Player, SlideMechEid, Reason)
+  local MainPlayer = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
+  if IsValid(Player) and IsValid(MainPlayer) and Player ~= MainPlayer then
+    return
+  end
+  self:SetTrackHUDVisible(true == IsInSlideMech, Player or MainPlayer, SlideMechEid, Reason)
+  if IsValid(self.Joystick) then
+    if true == IsInSlideMech then
+      self.Joystick:SetTouchVisibility(UE4.ESlateVisibility.Collapsed)
+    else
+      self.Joystick:SetTouchVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    end
+  end
+  if IsValid(self.Char_Skill) and type(self.Char_Skill.OnSlideMechStateChanged) == "function" then
+    self.Char_Skill:OnSlideMechStateChanged(true == IsInSlideMech, Player or MainPlayer, SlideMechEid, Reason)
+  end
+end
+
+function WBP_Battle_C:IsTrackHUDSupported()
+  return IsValid(self.Pos_Track)
+end
+
+function WBP_Battle_C:SetTrackHUDVisible(bVisible, Player, SlideMechEid, Reason)
+  if not self:IsTrackHUDSupported() then
+    return
+  end
+  self.bShouldShowTrackHUD = true == bVisible
+  self.TrackHUDPlayer = Player
+  self.TrackHUDSlideMechEid = SlideMechEid
+  self.TrackHUDReason = Reason
+  if not self.bShouldShowTrackHUD then
+    self:SetBattleCharSkillForTrack(true)
+    if IsValid(self.TrackHUD) then
+      if type(self.TrackHUD.OnLeaveSlideMech) == "function" then
+        self.TrackHUD:OnLeaveSlideMech(Player, SlideMechEid, Reason)
+      end
+      self.TrackHUD:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
+    self.Pos_Track:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    return
+  end
+  self:SetBattleCharSkillForTrack(false)
+  self.Pos_Track:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  if IsValid(self.TrackHUD) then
+    self:ShowTrackHUD(Player, SlideMechEid, Reason)
+    return
+  end
+  self:LoadTrackHUDAsync()
+end
+
+function WBP_Battle_C:LoadTrackHUDAsync()
+  if self.bLoadingTrackHUD then
+    return
+  end
+  self.bLoadingTrackHUD = true
+  self:CreateWidgetAsync("BattleTrackSkill", function(TrackHUD)
+    self.bLoadingTrackHUD = false
+    if not (IsValid(self) and IsValid(TrackHUD)) or not self:IsTrackHUDSupported() then
+      return
+    end
+    self.TrackHUD = TrackHUD
+    self.Pos_Track:AddChild(TrackHUD)
+    local OverlaySlot = UE4.UWidgetLayoutLibrary.SlotAsOverlaySlot(TrackHUD)
+    OverlaySlot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+    OverlaySlot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
+    if type(TrackHUD.InitWithBattleMain) == "function" then
+      TrackHUD:InitWithBattleMain(self)
+    end
+    if self.bShouldShowTrackHUD then
+      self:ShowTrackHUD(self.TrackHUDPlayer, self.TrackHUDSlideMechEid, self.TrackHUDReason)
+    else
+      TrackHUD:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
+  end)
+end
+
+function WBP_Battle_C:ShowTrackHUD(Player, SlideMechEid, Reason)
+  if not IsValid(self.TrackHUD) then
+    return
+  end
+  self.TrackHUD:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  if type(self.TrackHUD.OnEnterSlideMech) == "function" then
+    self.TrackHUD:OnEnterSlideMech(Player, SlideMechEid, Reason)
+  end
+end
+
+function WBP_Battle_C:SetTrackDodgePromptVisible(bVisible, bShowLeft, bShowRight, bIsPlayAudio)
+  if not bVisible then
+    if IsValid(self.TrackKeyTip) then
+      self.TrackKeyTip:SetPromptVisible(false, false, false, bIsPlayAudio)
+    end
+    if IsValid(self.TrackHUD) and type(self.TrackHUD.SetDodgeGuideVisible) == "function" then
+      self.TrackHUD:SetDodgeGuideVisible(false, false)
+    end
+    return
+  end
+  if self.Platform == CommonConst.CLIENT_DEVICE_TYPE.MOBILE then
+    if IsValid(self.TrackHUD) and type(self.TrackHUD.SetDodgeGuideVisible) == "function" then
+      self.TrackHUD:SetDodgeGuideVisible(bShowLeft, bShowRight)
+    end
+    return
+  end
+  if not IsValid(self.TrackKeyTip) then
+    self.TrackKeyTip = UIManager(self):CreateWidget(TrackKeyTipBPPath, false)
+    self.Pos_Track:AddChild(self.TrackKeyTip)
+    local OverlaySlot = UE4.UWidgetLayoutLibrary.SlotAsOverlaySlot(self.TrackKeyTip)
+    OverlaySlot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+    OverlaySlot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
+  end
+  self.Pos_Track:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  self.TrackKeyTip:SetPromptVisible(true, bShowLeft, bShowRight)
+end
+
+function WBP_Battle_C:SetBattleCharSkillForTrack(bVisible)
+  if not IsValid(self.Char_Skill) then
+    return
+  end
+  if bVisible then
+    if not self.bTrackHiddenCharSkill then
+      return
+    end
+    self.bTrackHiddenCharSkill = false
+    local bNeedRestoreSkillInput = self.TrackPrevCharSkillVisibility ~= UE4.ESlateVisibility.Collapsed
+    self.Char_Skill:SetVisibility(self.TrackPrevCharSkillVisibility or UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.TrackPrevCharSkillVisibility = nil
+    if not bNeedRestoreSkillInput then
+      return
+    end
+    if IsValid(self.Char_Skill.Battle_Skill_1) and type(self.Char_Skill.Battle_Skill_1.AddSkillListeningInput) == "function" then
+      self.Char_Skill.Battle_Skill_1:AddSkillListeningInput()
+    end
+    if IsValid(self.Char_Skill.Battle_Skill_2) and "function" == type(self.Char_Skill.Battle_Skill_2.AddSkillListeningInput) then
+      self.Char_Skill.Battle_Skill_2:AddSkillListeningInput()
+    end
+  else
+    if self.bTrackHiddenCharSkill then
+      return
+    end
+    self.bTrackHiddenCharSkill = true
+    self.TrackPrevCharSkillVisibility = self.Char_Skill:GetVisibility()
+    if IsValid(self.Char_Skill.Battle_Skill_1) and "function" == type(self.Char_Skill.Battle_Skill_1.RemoveAllListenInput) then
+      self.Char_Skill.Battle_Skill_1:RemoveAllListenInput()
+    end
+    if IsValid(self.Char_Skill.Battle_Skill_2) and "function" == type(self.Char_Skill.Battle_Skill_2.RemoveAllListenInput) then
+      self.Char_Skill.Battle_Skill_2:RemoveAllListenInput()
+    end
+    self.Char_Skill:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
 end
 
 function WBP_Battle_C:GetOrAddDynamicEventWidget()
@@ -792,6 +972,7 @@ end
 function WBP_Battle_C:Destruct()
   EventManager:RemoveEvent(EventID.GameViewportInputKeyPressed, self)
   EventManager:RemoveEvent(EventID.GameViewportInputKeyReleased, self)
+  TeamHallController:UnRegisterEvent(self)
   for Eid, TeammateUI in pairs(self.TeammateEidSet or {}) do
     self:RemoveTeammateUI(Eid, TeammateUI)
   end
@@ -1025,6 +1206,7 @@ function WBP_Battle_C:ShowSystemEntrance()
     end
   end
   self.Btn_Task:ShowSystemEntranceOnGamePadInput(self.IsShowSystemEntrance)
+  self.Btn_Recruit:ShowSystemEntranceOnGamePadInput(self.IsShowSystemEntrance)
 end
 
 function WBP_Battle_C:CloseSystemEntrance()
@@ -1036,6 +1218,7 @@ function WBP_Battle_C:CloseSystemEntrance()
     end
   end
   self.Btn_Task:ShowSystemEntranceOnGamePadInput(self.IsShowSystemEntrance)
+  self.Btn_Recruit:ShowSystemEntranceOnGamePadInput(self.IsShowSystemEntrance)
 end
 
 function WBP_Battle_C:OpenArmory()
@@ -1068,6 +1251,10 @@ end
 
 function WBP_Battle_C:OpenGuideBook()
   self:OpenSystemByAction("OpenGuideBook")
+end
+
+function WBP_Battle_C:OpenTeamHall()
+  self:OpenSystemByAction("OpenTeamHall")
 end
 
 function WBP_Battle_C:OpenBattlePass()
@@ -1324,6 +1511,16 @@ end
 
 function WBP_Battle_C:OnAvatarStatusUpdate(OldStatus, NewStatus)
   self:InitMainUIInBigWorld()
+  local Avatar = GWorld:GetAvatar()
+  if Avatar:InStatus(nil, CommonConst.AvatarStatus.InTeamHall) then
+    self.Btn_Recruit.VX_Loop:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.Btn_Recruit.ImageBtnBG:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.Btn_Recruit:PlayAnimation(self.Btn_Recruit.Loop, 0, 0)
+  else
+    self.Btn_Recruit.VX_Loop:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.Btn_Recruit.ImageBtnBG:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.Btn_Recruit:StopAnimation(self.Btn_Recruit.Loop)
+  end
 end
 
 function WBP_Battle_C:InitMainUIInBigWorld()
@@ -1398,7 +1595,53 @@ function WBP_Battle_C:InitBtnList()
   if self.Btn_Task then
     self:InitTaskPanelBtn()
   end
+  if self.Btn_Recruit then
+    self:InitRecruitBtn()
+  end
   self:InitEsc()
+  local TeamRequestList = TeamHallController:GetTeamRequestList()
+  if TeamRequestList[1] then
+    local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(TeamHallCommon.ReddotName.TeamRequest)
+    if not next(CacheDetail) then
+      return
+    end
+    self.Btn_Recruit.New:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  end
+end
+
+function WBP_Battle_C:InitRecruitBtn()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local GameState = UE4.URuntimeCommonFunctionLibrary.GetCurrentGameState(self)
+  local IsHide = false
+  local IsInRouge = Avatar:IsInRougeLike()
+  local IsInDG = false
+  if GameState then
+    IsInDG = GameState:IsInDungeon()
+  end
+  local IsInHB = Avatar:IsInHardBoss()
+  IsHide = IsInRouge or IsInDG or IsInHB
+  self.Btn_Recruit.Name:SetText(GText("UI_teamLobby"))
+  local KeyText = CommonUtils:GetActionMappingKeyName("OpenTeamHall")
+  self.Btn_Recruit.Common_Key_Hud_PC:CreateCommonKey({
+    KeyInfoList = {
+      {Type = "Text", Text = KeyText}
+    }
+  })
+  local SystemData = DataMgr.MainUI[37]
+  if not IsHide and self:CheckUIUnlock(SystemData.UIUnlockRuleName) then
+    if self.HB_Recruit then
+      self.HB_Recruit:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    end
+    self.Btn_Recruit:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  else
+    if self.HB_Recruit then
+      self.HB_Recruit:SetVisibility(ESlateVisibility.Collapsed)
+    end
+    self.Btn_Recruit:SetVisibility(ESlateVisibility.Collapsed)
+  end
 end
 
 function WBP_Battle_C:InitGuideBookBtn()
@@ -1427,8 +1670,7 @@ function WBP_Battle_C:InitTaskPanelBtn()
     IsInDG = GameState:IsInDungeon()
   end
   local IsInHB = Avatar:IsInHardBoss()
-  local IsInSQ = Avatar:IsInSpecialQuest()
-  IsHide = IsInRouge or IsInDG or IsInHB or IsInSQ
+  IsHide = IsInRouge or IsInDG or IsInHB
   local SystemData = DataMgr.MainUI[9]
   if not IsHide then
     if SystemData.ShowCondition then
@@ -1758,7 +2000,10 @@ function WBP_Battle_C:OnSystemUIUnLoad(UIName)
   if 0 ~= UIManager(self).States:Num() then
     return
   end
-  self:UnLoadSystem(UIName)
+  local bIsPlayInAnim = self:UnLoadSystem(UIName)
+  if "IronExpPopup" == UIName and not bIsPlayInAnim and not self:CheckPlayInOutSystems() then
+    self:TryRecoverUI()
+  end
 end
 
 function WBP_Battle_C:UnLoadSystem(UIName)
@@ -1936,9 +2181,7 @@ function WBP_Battle_C:ShowPlayerDeadUI()
   if BattleResurgenceUI then
     self:ShowOrHideMainPlayerBloodUI(false, "Dead")
     self:HideSubSystem("Char_Skill", "Dead", true)
-    if self.TakeAimIndicator then
-      self.TakeAimIndicator:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    end
+    self:HideSubSystem("Pos_Aim", "Dead", true)
     self:ShowOrHideTeamDataTag(false)
   end
   if self.HBox then
@@ -1957,8 +2200,8 @@ function WBP_Battle_C:HidePlayerDeadUI()
   if self.HBox then
     self.HBox:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   end
+  self:HideSubSystem("Pos_Aim", "Dead", false)
   if self.TakeAimIndicator then
-    self.TakeAimIndicator:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
     self.TakeAimIndicator:RefreshUIShowPage()
   end
   local PlayerAvatar, IsNeedShowTeamTag = GWorld:GetAvatar(), false
@@ -1998,9 +2241,6 @@ function WBP_Battle_C:ShowBattleFortUI()
       end
     end
     self:ShowOrHideMainPlayerBloodUI(false, "BattleFort")
-    if self.TakeAimIndicator then
-      self.TakeAimIndicator:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    end
     if IsValid(self.Joystick) then
       self.Joystick:SetTouchVisibility(UE4.ESlateVisibility.Collapsed)
     end
@@ -2022,7 +2262,6 @@ function WBP_Battle_C:HideBattleFortUI()
     end
     self:ShowOrHideMainPlayerBloodUI(true, "BattleFort")
     if self.TakeAimIndicator then
-      self.TakeAimIndicator:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
       self.TakeAimIndicator:RefreshUIShowPage()
     end
     if IsValid(self.Joystick) then
@@ -2155,7 +2394,15 @@ function WBP_Battle_C:SetVisibility(InVisibility)
   end
 end
 
-function WBP_Battle_C:ShowInstructionInfo(ActionName, IsHide)
+function WBP_Battle_C:ShowInstructionInfo(ActionName, IsHide, Tag)
+  self.InstructionShowTags = self.InstructionShowTags or {}
+  self.InstructionShowTags[ActionName] = self.InstructionShowTags[ActionName] or {}
+  local ShowTags = self.InstructionShowTags[ActionName]
+  if IsHide then
+    ShowTags[Tag] = nil
+  else
+    ShowTags[Tag] = 1
+  end
   local Platform = CommonUtils:GetDeviceTypeByPlatformName(self)
   self.Pos_Instruction:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   local Instruction = self.Pos_Instruction:GetChildAt(0)
@@ -2174,10 +2421,10 @@ function WBP_Battle_C:ShowInstructionInfo(ActionName, IsHide)
   end
   if Instruction then
     DebugPrint(ActionName, "===ShowInstructionInfo=============================")
-    if IsHide then
-      Instruction:HideActionText(ActionName)
-    else
+    if next(ShowTags) then
       Instruction:ShowActionText(ActionName)
+    else
+      Instruction:HideActionText(ActionName)
     end
   end
 end
@@ -2222,7 +2469,7 @@ function WBP_Battle_C:CreatTakeAimIndicator()
     Slot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
     local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
     self.TakeAimIndicator:Init(Player)
-    self.Pos_Aim:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
+    self:SetSubSystemVisibility("Pos_Aim", UIConst.VisibilityOp.HitTestInvisible)
   end
 end
 
@@ -2247,11 +2494,38 @@ function WBP_Battle_C:OnPreviewKeyDown(MyGeometry, InKeyEvent)
   return UIUtils.Unhandled
 end
 
+function WBP_Battle_C:GetUIObjBytUIPath(UIPath)
+  local UIObj
+  local UIPathes = UIManager(self):GetUIPathFromString(UIPath)
+  if UIPathes then
+    local len = #UIPathes
+    if len > 1 then
+      if "BattleMain" ~= UIPathes[1] then
+        DebugPrint("WBP_Battle_C:UI路径没有以BattleMain开头", UIPath)
+        return
+      end
+      local root_ui = self
+      for i = 2, len do
+        root_ui = root_ui and root_ui[UIPathes[i]]
+      end
+      if root_ui then
+        UIObj = root_ui
+      end
+    end
+  end
+  if not UIObj then
+    DebugPrint("WBP_Battle_C:输入的UI路径错误,没有找到该UI", UIPath)
+  end
+  return UIObj
+end
+
 function WBP_Battle_C:HideSubSystem(Name, HideTag, IsHide)
   if not HideTag or not Name then
     return
   end
-  if self[Name] then
+  local UIObj = self[Name]
+  UIObj = UIObj or self:GetUIObjBytUIPath(Name)
+  if UIObj then
     if not self.SystemHideTags[Name] then
       self.SystemHideTags[Name] = {}
     end
@@ -2262,22 +2536,24 @@ function WBP_Battle_C:HideSubSystem(Name, HideTag, IsHide)
       Tags[HideTag] = nil
     end
     if IsEmptyTable(Tags) then
-      self[Name]:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      UIObj:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     else
-      self[Name]:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      UIObj:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end
   end
 end
 
 function WBP_Battle_C:SetSubSystemVisibility(Name, Visibility)
-  if self[Name] and not self:IsSubSystemHide(Name) then
-    self[Name]:SetVisibility(Visibility)
+  local UIObj = self[Name]
+  UIObj = UIObj or self:GetUIObjBytUIPath(Name)
+  if UIObj and not self:IsSubSystemHide(Name) then
+    UIObj:SetVisibility(Visibility)
   end
 end
 
 function WBP_Battle_C:IsSubSystemHide(Name)
-  if not Name or not self[Name] then
-    DebugPrint("System Does Not Exist. Name: ", Name)
+  if not Name then
+    DebugPrint("IsSubSystemHide:Name Is Empty")
     return
   end
   local Tags = self.SystemHideTags[Name]
@@ -2298,6 +2574,59 @@ function WBP_Battle_C:OnTempleRightUI()
   local TaskBar = TaskUtils:GetTaskBarWidget()
   if TaskBar then
     TaskBar:SetUIVisibilityTag("Temple", true)
+  end
+end
+
+function WBP_Battle_C:InitShootTargetUI(FirstIn)
+  if FirstIn then
+    self.Group_Temple:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.Pos_TempleRight:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.Pos_TempleRight:ClearChildren()
+    self.TempleRightUI = self:CreateWidgetNew("DungeonTempleRight")
+    self.TempleRightUI:ConstructInfo("ShootTarget")
+    self.Pos_TempleRight:AddChild(self.TempleRightUI)
+    self.Pos_TempleRight:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  else
+    self.Pos_TempleRight:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.Group_Temple:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.Pos_TempleRight:ClearChildren()
+  end
+  self:SetShootTargetHUDMode(FirstIn)
+end
+
+function WBP_Battle_C:SetShootTargetHUDMode(IsActive)
+  local ShootTargetHideUI = {
+    "Pos_Entry",
+    "Pos_Drops",
+    "Pos_SpecialDrops",
+    "Pos_NewMonster",
+    "Battle_Map",
+    "Btn_GuideBook",
+    "Group_ChatEntry",
+    "Chat_Entry",
+    "Buff",
+    "Team",
+    "HBox",
+    "SizeBox_Map",
+    "Btn_Task",
+    "Pos_TaskBar"
+  }
+  for _, Name in ipairs(ShootTargetHideUI) do
+    self:HideSubSystem(Name, "ShootTarget", IsActive)
+  end
+  self:ShowOrHideMainPlayerBloodUI(not IsActive, "ShootTarget")
+  if self.Char_Skill and self.Char_Skill.SetShootTargetHUDMode then
+    self.Char_Skill:SetShootTargetHUDMode(IsActive)
+  end
+  if self.Btn_Esc then
+    self.Btn_Esc:LoadImage(11)
+    if not IsActive then
+      self:_RefreshEscReddot()
+    end
+  end
+  local Combo = UIManager(self):GetUIObj("BattleCombo")
+  if nil ~= Combo then
+    Combo:SetRenderOpacity(IsActive and 0 or 1)
   end
 end
 
@@ -2393,6 +2722,8 @@ function WBP_Battle_C:EMAfterInitialize()
       self:ArrangeSingleWidgetWithRetainerBox(self.Pos_Drops, "CustomRetainerBox_CommonDrops", 2, 10)
       self:ArrangeSingleWidgetWithRetainerBox(self.Char_Skill, "CustomRetainerBox_Skill", 1, 3)
       self:ArrangeSingleWidgetWithRetainerBox(self.Pos_Entry, "CustomRetainerBox_Entry", 3, 15)
+      self:ArrangeSingleWidgetWithRetainerBox(self.HBox, "CustomRetainerBox_HBox", 5, 20)
+      self:ArrangeSingleWidgetWithRetainerBox(self.LeftAutoBtn, "CustomRetainerBox_LeftAutoBtn", 8, 20)
     end
   elseif self.Platform == CommonConst.CLIENT_DEVICE_TYPE.PC then
     if UIConst.OptimizeSwitch[CommonConst.CLIENT_DEVICE_TYPE.PC].UI_WRAPPING_WITH_INVALIDBOX then
@@ -2902,6 +3233,9 @@ function WBP_Battle_C:CreateHudScore()
   local HudScore = self:GetHudScore()
   if not HudScore then
     local HudScoreBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Coop/WBP_Activity_Coop_HudScore.WBP_Activity_Coop_HudScore'"
+    if self.bSingleMode then
+      HudScoreBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Coop/WBP_Activity_Coop_HudScore_Personal.WBP_Activity_Coop_HudScore_Personal'"
+    end
     HudScore = UIManager(self):CreateWidget(HudScoreBPPath)
     if not HudScore then
       DebugPrint("clx: WBP_Battle_C:InitAsyncCombatHUD 创建WBP_Activity_Coop_HudScore失败")
@@ -2918,12 +3252,18 @@ function WBP_Battle_C:InitAsyncCombatHUDMobile()
   if not RankingWidget then
     return
   end
+  if self.bSingleMode then
+    return
+  end
   RankingWidget.Button.OnClicked:Clear()
   RankingWidget.Button.OnClicked:Add(self, self.ExpandAndCollapseRanking)
   RankingWidget.Image_68:SetRenderTransformAngle(90)
 end
 
 function WBP_Battle_C:InitAsyncCombatHUDCommon()
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  local CustomPreInitInfo = GameMode and GameMode.PreInitInfo
+  self.bSingleMode = CustomPreInitInfo and CustomPreInitInfo.bSingleMode
   local RankingWidget = self:GetHudRankingAll()
   if not RankingWidget then
     local Platform = CommonUtils:GetDeviceTypeByPlatformName(self)
@@ -2936,41 +3276,97 @@ function WBP_Battle_C:InitAsyncCombatHUDCommon()
   if not RankingWidget then
     return
   end
-  RankingWidget.TextRound:SetText(GText("UI_AsyncCombat_StageNumber") .. " " .. 1)
-  RankingWidget.TextTitle:SetText(GText("AsyncCombatDebuffTitle"))
+  if not self.bSingleMode then
+    RankingWidget.TextRound:SetText(GText("UI_AsyncCombat_StageNumber") .. " " .. 1)
+  else
+    RankingWidget.TextRound:SetText(GText("UI_AsyncCombat_CombatRoom"))
+    RankingWidget.TextRanking:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    RankingWidget.ListRanking:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    if RankingWidget.Ws_Key then
+      RankingWidget.Ws_Key:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+    if RankingWidget.Com_KeyImg then
+      RankingWidget.Com_KeyImg:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+    if RankingWidget.Com_KeyText then
+      RankingWidget.Com_KeyText:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+    if RankingWidget.TextKey then
+      RankingWidget.TextKey:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+    if RankingWidget.BtnExpand then
+      RankingWidget.BtnExpand:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+  end
+  local GTextDebuffTitle = CoopUtils.GetGTextDebuffTitle(self.AsyncCombatComponent)
+  if GTextDebuffTitle then
+    RankingWidget.TextTitle:SetText(GTextDebuffTitle)
+  end
   local HudScore = self:GetHudScore()
   HudScore = HudScore or self:CreateHudScore()
   if not HudScore then
     return
   end
   HudScore.WBP_Com_Time.Text_TimeDesc:SetText(GText("UI_AsyncCombat_EndInTime"))
-  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
-  local CustomPreInitInfo = GameMode and GameMode.PreInitInfo
   local CreateTime = TimeUtils.NowTime()
   if CustomPreInitInfo then
     CreateTime = CustomPreInitInfo.CreateTime
   end
-  local RoomDuration = DataMgr.AsyncCombatEventConstant.AsyncCombat_RoomDuration.ConstantValue * 60 or 86400
+  local RoomDuration = 86400
+  if not self.bSingleMode then
+    RoomDuration = DataMgr.AsyncCombatEventConstant.AsyncCombat_RoomDuration.ConstantValue * 60 or RoomDuration
+  else
+    if CustomPreInitInfo.CloseTime then
+      CreateTime = CustomPreInitInfo.CloseTime
+    end
+    RoomDuration = DataMgr.AsyncCombatEventConstant.AsyncCombat_StoppageTimeRoomDuration.ConstantValue * 60 or RoomDuration
+  end
   local EndTime = CreateTime + RoomDuration
   HudScore:SetupCountDown(EndTime)
-  HudScore.Text_ScoreTitle01:SetText(GText("UI_AsyncCombat_ChallengeProgress2"))
+  HudScore.Text_Score_Now:SetText(CommonUtils.FormatNumInFrench(tostring(0)))
+  if not self.bSingleMode then
+    HudScore.Text_ScoreTitle01:SetText(GText("UI_AsyncCombat_ChallengeProgress2"))
+  else
+    HudScore.Text_ScoreTitle01:SetText(GText("UI_AsyncCombat_IndividualContribution"))
+    if self.AsyncCombatComponent and self.AsyncCombatComponent.GetSingleModeProgressSnapshot then
+      local SnapShot = self.AsyncCombatComponent:GetSingleModeProgressSnapshot()
+      if SnapShot and SnapShot.Progress then
+        local Progress = math.floor(SnapShot.Progress * 10) / 10
+        HudScore.Text_Score_Now:SetText(CommonUtils.FormatNumInFrench(tostring(Progress)))
+      end
+    end
+  end
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
   end
-  
-  local function RequestRoomInfo()
-    Avatar:SyncToServerDungeonMessage(CommonConst.DungeonSyncMsg.AsyncCombatQueryState, {Type = "Room"})
+  if not self.bSingleMode then
+    local function RequestRoomInfo()
+      Avatar:SyncToServerDungeonMessage(CommonConst.DungeonSyncMsg.AsyncCombatQueryState, {Type = "Room"})
+    end
+    
+    RequestRoomInfo()
+    self:AddTimer(self.RepClientDungeonMessageInterval, RequestRoomInfo, true, 0, "RequestRoomInfo")
+  else
+    local function UpdateDebuffText()
+      GTextDebuffTitle = CoopUtils.GetGTextDebuffTitle(self.AsyncCombatComponent)
+      
+      if GTextDebuffTitle then
+        RankingWidget.TextTitle:SetText(GTextDebuffTitle)
+      end
+    end
+    
+    self:AddTimer(1, UpdateDebuffText, true, 0)
   end
-  
-  RequestRoomInfo()
-  self:AddTimer(self.RepClientDungeonMessageInterval, RequestRoomInfo, true, 0, "RequestRoomInfo")
 end
 
 function WBP_Battle_C:InitAsyncCombatHUDPC()
   local RankingWidget = self:GetHudRankingAll()
   RankingWidget = RankingWidget or self:CreateHudRankingAllPC()
   if not RankingWidget then
+    return
+  end
+  if self.bSingleMode then
     return
   end
   self:InitAsyncCombatKeyTip()
@@ -3030,6 +3426,9 @@ function WBP_Battle_C:InitAsyncCombatKeyTip()
 end
 
 function WBP_Battle_C:RepClientDungeonMessage(MessageName, tbl)
+  if self.bSingleMode then
+    return
+  end
   if MessageName == CommonConst.DungeonSyncMsg.AsyncCombatRoomStateUpdate then
     local RankingWidget = self:GetHudRankingAll()
     if not RankingWidget then
@@ -3065,6 +3464,27 @@ function WBP_Battle_C:RepClientDungeonMessage(MessageName, tbl)
     UIManager(self):LoadUINew("CoopHudTips01", {CurRound = CurRound})
   end
   GWorld.GameInstance[MessageName] = tbl
+end
+
+function WBP_Battle_C:AsyncCombatSingleModeProgressUpdate(SnapShot)
+  if not self.bSingleMode then
+    return
+  end
+  if not SnapShot then
+    return
+  end
+  local HUDScore = self:GetHudScore()
+  if not HUDScore then
+    return
+  end
+  if SnapShot.Progress then
+    local OldProgress = tonumber(HUDScore.Text_Score_Now:GetText())
+    local NewProgress = math.floor(SnapShot.Progress * 10) / 10
+    if OldProgress and OldProgress < NewProgress then
+      HUDScore:PlayAnimation(HUDScore.Up)
+    end
+    HUDScore.Text_Score_Now:SetText(CommonUtils.FormatNumInFrench(tostring(NewProgress)))
+  end
 end
 
 function WBP_Battle_C:ExpandAndCollapseRanking()
@@ -3502,7 +3922,18 @@ function WBP_Battle_C:InitGuildEntrance()
   self.Pos_Entry:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.ListView:ClearListItems()
   local ClassPath = UE4.LoadClass("/Game/UI/WBP/Battle/Widget/WBP_Main_Btnlist_Content.WBP_Main_Btnlist_Content_C")
+  local GameMode = UE.UGameplayStatics.GetGameMode(self)
+  if GameMode then
+    GameMode:InitGuildConstruct()
+  end
   local Contents = {
+    {
+      TexturePath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Guild_Construct.T_Entrance_Guild_Construct'",
+      Name = "UI_DevelopmentProgress_2",
+      Obj = self,
+      GuildCallback = self.OnGuildConstructionBtnClicked,
+      ImgShortPath = "X"
+    },
     {
       TexturePath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Guild_Visit.T_Entrance_Guild_Visit'",
       Name = "UI_VisitGuild_2",
@@ -3602,7 +4033,7 @@ function WBP_Battle_C:OnGuildConstructionBtnClicked()
       return
     end
     local GameMode = UE.UGameplayStatics.GetGameMode(self)
-    GameMode:InitGuildConstruct()
+    GameMode:EnterGuildConstructModifyMode()
   end
   
   local Avatar = GWorld:GetAvatar()
@@ -3654,10 +4085,19 @@ function WBP_Battle_C:PlayGuildInfoIn()
 end
 
 function WBP_Battle_C:PetRaceHideOrShowBattleUI(IsHide, HideUITable)
+  if IsHide then
+    self.bNotReShowTaskBar = self.Pos_TaskBar:GetVisibility() == ESlateVisibility.Collapsed
+  end
   if HideUITable then
     for Name, _ in pairs(HideUITable) do
       self:HideSubSystem(Name, "PetRace", IsHide)
     end
+  end
+  if false == IsHide then
+    if self.bNotReShowTaskBar then
+      self.Pos_TaskBar:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+    self.bNotReShowTaskBar = nil
   end
 end
 

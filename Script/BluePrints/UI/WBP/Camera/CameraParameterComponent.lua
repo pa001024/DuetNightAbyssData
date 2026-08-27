@@ -2,6 +2,11 @@ local M = {}
 
 function M:Construct()
   self.IsShowGuideLine = {}
+  self.FilterIntensities = {
+    {},
+    {},
+    {}
+  }
   self.Parameter:Hide()
   self.Parameter:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.GuideLine:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -93,6 +98,26 @@ function M:IsFocusMethodEnabled()
   return self.Camera:IsFocusMethodEnabled()
 end
 
+function M:GetFocusDistance()
+  return self.Camera:GetFocusDistance()
+end
+
+function M:SetFocusDistance(FocusDistance)
+  self.Camera:SetFocusDistance(FocusDistance)
+end
+
+function M:GetAperture()
+  return self.Camera:GetAperture()
+end
+
+function M:SetAperture(Aperture)
+  self.Camera:SetAperture(Aperture)
+end
+
+function M:GetContrast()
+  return self.Camera:GetContrast() * 100
+end
+
 function M:GetContrast()
   return self.Camera:GetContrast() * 100
 end
@@ -161,14 +186,13 @@ function M:SetWhiteTint(WhiteTint)
 end
 
 function M:GetFilterIntensity()
-  return self.Camera:GetFilterIntensity() * 100
+  return self.FilterIntensities[self.CurCameraIndex + 1][self:GetFilterType()] or 100
 end
 
 function M:SetFilterIntensity(Intensity)
   self.bHasAnyOperation = true
-  self:AddTimer(0.1, function()
-    self.Camera:SetFilterIntensity(Intensity / 100)
-  end)
+  self.FilterIntensities[self.CurCameraIndex + 1][self:GetFilterType()] = Intensity
+  self.Camera:SetFilterIntensity(Intensity / 100)
 end
 
 function M:GetFilterData()
@@ -176,7 +200,7 @@ function M:GetFilterData()
 end
 
 function M:GetFilterType()
-  return self.Camera:GetFilterType()
+  return self.Camera:GetFilterType() or -1
 end
 
 function M:SetFilter(EFilterType)

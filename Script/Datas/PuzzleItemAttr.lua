@@ -109,7 +109,7 @@ return ReadOnly("PuzzleItemAttr", {
     MaxAmmo = 20
   },
   [201] = {
-    BasicPoint = 50,
+    BasicPoint = 100,
     GUIPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Prop/Activity/Bag/T_Bag_1x2_01.T_Bag_1x2_01'",
     ItemGrid = "[1],[1]",
     ItemId = 201,

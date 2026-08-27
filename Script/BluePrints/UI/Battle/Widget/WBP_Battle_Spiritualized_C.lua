@@ -76,28 +76,11 @@ function M:CalcTalentActive(CurrentWeapon)
   if not IsValid(CurrentWeapon) then
     return false
   end
-  local Avatar = GWorld:GetAvatar()
-  if not Avatar then
-    return false
-  end
   local PlayerCharcter = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
-  local CharId = PlayerCharcter and PlayerCharcter.CurrentRoleId
-  if not CharId or -1 == CharId then
+  if not PlayerCharcter then
     return false
   end
-  local CharBattleInfo = DataMgr.BattleChar[CharId]
-  local ExcelWeaponTags = CharBattleInfo and CharBattleInfo.ExcelWeaponTags
-  local WeaponBattleInfo = DataMgr.BattleWeapon[CurrentWeapon.WeaponId]
-  local WeaponTags = WeaponBattleInfo and WeaponBattleInfo.WeaponTag
-  if not ExcelWeaponTags or not WeaponTags then
-    return false
-  end
-  for _, WeaponTag in pairs(WeaponTags) do
-    if CommonUtils.HasValue(ExcelWeaponTags, WeaponTag) then
-      return true
-    end
-  end
-  return false
+  return PlayerCharcter:IsWeaponInMastery(CurrentWeapon)
 end
 
 function M:HandleStateAndAnim(CurrentWeaponSp, MaxWeaponSp, CurrentSecondaryCount, HasSecondaryResource, IsTalentActive)

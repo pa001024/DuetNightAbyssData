@@ -2,8 +2,9 @@ require("UnLua")
 require("DataMgr")
 local DevServerList = require("BluePrints/UI/GameLogin/DevServerList")
 local WBP_ServerSelect_C = Class("BluePrints.UI.BP_UIState_C")
-local AllServers, ServerList, CurrentServerList
-local CurrentArea = 0
+local AllServers
+local AllDynamicPrivateServers = {}
+local ServerList, CurrentServerList, CurrentSelectObj
 
 function WBP_ServerSelect_C:Construct()
   self.Super.Construct(self)
@@ -22,8 +23,13 @@ function WBP_ServerSelect_C:Show(VisibilityOp)
     if nil == ServerList then
       self:RefreshSeverList()
     else
-      self:VerifyListViewCallBack()
-      self.ListView_Area:SetSelectedIndex(CurrentArea)
+      self:RefreshDynamicPrivateServerList(function()
+        if not IsValid(CurrentSelectObj) then
+          self:VerifyListViewCallBack()
+        else
+          self.ListView_Area:BP_SetSelectedItem(CurrentSelectObj)
+        end
+      end)
     end
   end
 end
@@ -34,59 +40,66 @@ function WBP_ServerSelect_C:RefreshSeverList()
 end
 
 function WBP_ServerSelect_C:TryToGetServerList()
-  self:AddTimer(0.5, self.VerifyListViewCallBack, false, 0, "VerifyListView")
   AllServers = {}
   for k, v in pairs(DevServerList) do
     if k < 1000 or k >= 7000 and k <= 7100 or k >= 8000 and k <= 8100 then
       AllServers[k] = v
     end
   end
+  self:RefreshDynamicPrivateServerList(function()
+    self:VerifyListViewCallBack()
+  end)
+end
+
+function WBP_ServerSelect_C:RefreshDynamicPrivateServerList(Callback)
+  UE.URuntimeCommonFunctionLibrary.HttpGet("http://10.18.200.237:2379/v2/keys/ps/?recursive=true", {
+    GWorld.GameInstance,
+    function(_, Content)
+      local Json = require("rapidjson")
+      
+      local function ParseServer()
+        local InServers = Json.decode(Content).node.nodes
+        for i = 1, #InServers do
+          local value = InServers[i].value
+          local value_t = Json.decode(value)
+          AllDynamicPrivateServers[i] = {
+            hostnum = 399,
+            ip = value_t.Ip,
+            name = value_t.Name,
+            port = 18000
+          }
+        end
+      end
+      
+      local ok, error = pcall(ParseServer)
+      if not ok then
+        DebugPrint(ErrorTag, error)
+      end
+      if Callback then
+        Callback()
+      end
+    end
+  })
 end
 
 function WBP_ServerSelect_C:VerifyListViewCallBack()
   if AllServers then
     self.ListView_Area:ClearListItems()
     local obj = self:NewAreaItemContent(nil)
-    CurrentArea = 0
-    obj.Area = CurrentArea
+    obj.Area = "Recommend"
     obj.Name = "推荐"
     self.ListView_Area:AddItem(obj)
-    ServerList = {
-      {
-        area = 1,
-        name = "开发",
-        servers = nil
-      },
-      {
-        area = 2,
-        name = "开发2",
-        servers = nil
-      },
-      {
-        area = 3,
-        name = "QA",
-        servers = nil
-      },
-      {
-        area = 4,
-        name = "策划",
-        servers = nil
-      },
-      {
-        area = 5,
-        name = "其他",
-        servers = nil
-      }
-    }
+    CurrentSelectObj = obj
+    ServerList = {}
     for k, v in pairs(AllServers) do
       if ServerList[v.area] == nil then
         ServerList[v.area] = {
           area = v.area,
-          name = "Area " .. v.area,
+          name = v.area,
           servers = nil
         }
       end
-      if ServerList[v.area].servers == nil then
+      if nil == ServerList[v.area].servers then
         ServerList[v.area].servers = {}
       end
       ServerList[v.area].servers[k] = v
@@ -100,6 +113,7 @@ function WBP_ServerSelect_C:VerifyListViewCallBack()
         self.ListView_Area:AddItem(self:NewAreaItemContent(AreaContent))
       end
     end
+    self.ListView_Area:AddItem(self:NewAreaItemContent({area = "Private", name = "私服"}))
     self.ListView_Area:BP_SetSelectedItem(obj)
     self:RemoveTimer("VerifyListView")
     self.CircularThrobber_1:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -137,23 +151,28 @@ function WBP_ServerSelect_C:SwitchArea(area)
   if not GWorld.IsDev then
     return
   end
-  if area ~= CurrentArea then
+  if CurrentSelectObj and area ~= CurrentSelectObj.Area then
     UIUtils.PlayCommonBtnSe(self)
   end
   if nil ~= ServerList then
-    CurrentArea = area
     self.SelectedArea = self.ListView_Area:BP_GetSelectedItem()
+    CurrentSelectObj = self.SelectedArea
+    print(_G.LogTag, "SwitchArea:", self.SelectedArea.Name)
     self.List:ClearListItems()
     CurrentServerList = {}
-    if 0 == area then
+    if "Recommend" == area then
       for k, v in pairs(AllServers) do
+        table.insert(CurrentServerList, v)
+      end
+    elseif "Private" == area then
+      for k, v in pairs(AllDynamicPrivateServers) do
         table.insert(CurrentServerList, v)
       end
     else
       for k, v in pairs(ServerList) do
         if v.area == area and v.servers then
           for k, v in pairs(v.servers) do
-            if v.area == area then
+            if v.area and v.area == area then
               table.insert(CurrentServerList, v)
             end
           end
@@ -162,6 +181,9 @@ function WBP_ServerSelect_C:SwitchArea(area)
       end
     end
     table.sort(CurrentServerList, function(a, b)
+      if a.hostnum == b.hostnum then
+        return a.name < b.name
+      end
       return a.hostnum < b.hostnum
     end)
     self:SearchServer(self.Input_Search_Server:GetText())

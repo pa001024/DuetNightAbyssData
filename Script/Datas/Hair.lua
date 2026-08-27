@@ -179,6 +179,19 @@ return ReadOnly("Hair", {
     ReleaseVersion = 150,
     Sound = "SOUND_ITEM_NORMAL"
   },
+  [2201] = {
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Nvzhu02.T_Icon_Nvzhu02'",
+    CharId = 2201,
+    CharPartId = 220102,
+    ExcludeCollect = true,
+    ExcludeCollectServer = true,
+    HairId = 2201,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Nvzhu02.T_Icon_Nvzhu02'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Nvzhu02.T_Icon_Nvzhu02'",
+    Rarity = 0,
+    ReleaseVersion = 160,
+    Sound = "SOUND_ITEM_NORMAL"
+  },
   [2222] = {
     CharPartId = 240192,
     Des = "测试描述2",
@@ -256,16 +269,16 @@ return ReadOnly("Hair", {
     Sound = "SOUND_ITEM_NORMAL"
   },
   [3104] = {
-    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Yeer.T_Icon_Yeer'",
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Falu.T_Icon_Falu'",
     CharId = 3104,
     CharPartId = 310402,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     HairId = 3104,
-    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Yeer.T_Icon_Yeer'",
-    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Yeer.T_Icon_Yeer'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Falu.T_Icon_Falu'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Falu.T_Icon_Falu'",
     Rarity = 0,
-    ReleaseVersion = 100,
+    ReleaseVersion = 160,
     Sound = "SOUND_ITEM_NORMAL"
   },
   [3201] = {
@@ -331,6 +344,19 @@ return ReadOnly("Hair", {
     LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Zhiliu.T_Icon_Zhiliu'",
     Rarity = 0,
     ReleaseVersion = 120,
+    Sound = "SOUND_ITEM_NORMAL"
+  },
+  [4103] = {
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_SpLise.T_Icon_SpLise'",
+    CharId = 4103,
+    CharPartId = 410302,
+    ExcludeCollect = true,
+    ExcludeCollectServer = true,
+    HairId = 4103,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_SpLise.T_Icon_SpLise'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_SpLise.T_Icon_SpLise'",
+    Rarity = 0,
+    ReleaseVersion = 170,
     Sound = "SOUND_ITEM_NORMAL"
   },
   [4201] = {
@@ -483,6 +509,8 @@ return ReadOnly("Hair", {
     LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head51.T_Fashion_Head51'",
     Name = "UI_Accessory_Name_12125",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 16,
     Sound = "SOUND_ITEM_NORMAL"
   },
   [10126] = {
@@ -497,6 +525,8 @@ return ReadOnly("Hair", {
     LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head47.T_Fashion_Head47'",
     Name = "UI_Accessory_Name_12126",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 16,
     Sound = "SOUND_ITEM_NORMAL"
   },
   [10127] = {
@@ -517,7 +547,7 @@ return ReadOnly("Hair", {
   [10128] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Hat09_01.T_Fashion_Hat09_01'",
     ChangeColor = 4,
-    CharPartId = 10128,
+    CharPartId = 10127,
     Des = "UI_Accessory_Desc_12125",
     GoShopTypeId = {120348},
     HairDescribe = "UI_Accessory_Desc_12125",
@@ -533,7 +563,7 @@ return ReadOnly("Hair", {
   [10129] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Hat09_02.T_Fashion_Hat09_02'",
     ChangeColor = 3,
-    CharPartId = 10129,
+    CharPartId = 10127,
     Des = "UI_Accessory_Desc_12125",
     GoShopTypeId = {120349},
     HairDescribe = "UI_Accessory_Desc_12125",
@@ -549,7 +579,7 @@ return ReadOnly("Hair", {
   [10130] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Hat09_04.T_Fashion_Hat09_04'",
     ChangeColor = 2,
-    CharPartId = 10130,
+    CharPartId = 10127,
     Des = "UI_Accessory_Desc_12125",
     GoShopTypeId = {120350},
     HairDescribe = "UI_Accessory_Desc_12125",
@@ -562,6 +592,77 @@ return ReadOnly("Hair", {
     Rarity = 4,
     RegainItemId = 110,
     RegainItemNum = 4,
+    Sound = "SOUND_ITEM_NORMAL"
+  },
+  [10131] = {
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head76_01.T_Fashion_Head76_01'",
+    CharPartId = 10131,
+    Des = "UI_Accessory_Desc_12131",
+    GoShopTypeId = {1203574},
+    HairDescribe = "UI_Accessory_Desc_12131",
+    HairId = 10131,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head76_01.T_Fashion_Head76_01'",
+    IsCommon = true,
+    IsHideHat = true,
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head76_01.T_Fashion_Head76_01'",
+    Name = "UI_Accessory_Name_12131",
+    Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 16,
+    Sound = "SOUND_ITEM_NORMAL"
+  },
+  [10132] = {
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head76_02.T_Fashion_Head76_02'",
+    ChangeColor = 2,
+    CharPartId = 10131,
+    Des = "UI_Accessory_Desc_12131",
+    GoShopTypeId = {1203635},
+    HairDescribe = "UI_Accessory_Desc_12131",
+    HairId = 10132,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head76_02.T_Fashion_Head76_02'",
+    IsCommon = true,
+    IsHideHat = true,
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head76_02.T_Fashion_Head76_02'",
+    Name = "UI_Accessory_Name_12132",
+    Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 16,
+    Sound = "SOUND_ITEM_NORMAL"
+  },
+  [10133] = {
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head76_03.T_Fashion_Head76_03'",
+    ChangeColor = 3,
+    CharPartId = 10131,
+    Des = "UI_Accessory_Desc_12131",
+    GoShopTypeId = {1203646},
+    HairDescribe = "UI_Accessory_Desc_12131",
+    HairId = 10133,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head76_03.T_Fashion_Head76_03'",
+    IsCommon = true,
+    IsHideHat = true,
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head76_03.T_Fashion_Head76_03'",
+    Name = "UI_Accessory_Name_12133",
+    Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 2,
+    Sound = "SOUND_ITEM_NORMAL"
+  },
+  [10134] = {
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head76_04.T_Fashion_Head76_04'",
+    ChangeColor = 4,
+    CharPartId = 10131,
+    Des = "UI_Accessory_Desc_12131",
+    GoShopTypeId = {1203657},
+    HairDescribe = "UI_Accessory_Desc_12131",
+    HairId = 10134,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head76_04.T_Fashion_Head76_04'",
+    IsCommon = true,
+    IsHideHat = true,
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head76_04.T_Fashion_Head76_04'",
+    Name = "UI_Accessory_Name_12134",
+    Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 16,
     Sound = "SOUND_ITEM_NORMAL"
   },
   [110292] = {
@@ -641,6 +742,19 @@ return ReadOnly("Hair", {
     ReleaseVersion = 150,
     Sound = "SOUND_ITEM_NORMAL"
   },
+  [220101] = {
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Nanzhu02.T_Icon_Nanzhu02'",
+    CharId = 220101,
+    CharPartId = 220105,
+    ExcludeCollect = true,
+    ExcludeCollectServer = true,
+    HairId = 220101,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Nanzhu02.T_Icon_Nanzhu02'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Nanzhu02.T_Icon_Nanzhu02'",
+    Rarity = 0,
+    ReleaseVersion = 160,
+    Sound = "SOUND_ITEM_NORMAL"
+  },
   [240192] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Baiheng_01.T_Fashion_Baiheng_01'",
     CharId = 2401,
@@ -654,6 +768,19 @@ return ReadOnly("Hair", {
     ReleaseVersion = 110,
     Sound = "SOUND_ITEM_NORMAL"
   },
+  [310491] = {
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Falu_01.T_Fashion_Falu_01'",
+    CharId = 3104,
+    CharPartId = 310491,
+    ExcludeCollect = true,
+    ExcludeCollectServer = true,
+    HairId = 310491,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Falu_01.T_Fashion_Falu_01'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Falu_01.T_Fashion_Falu_01'",
+    Rarity = 0,
+    ReleaseVersion = 160,
+    Sound = "SOUND_ITEM_NORMAL"
+  },
   [410292] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Zhiliu_01.T_Fashion_Zhiliu_01'",
     CharId = 4102,
@@ -665,6 +792,17 @@ return ReadOnly("Hair", {
     Name = "UI_Skin_Name_410201",
     Rarity = 5,
     ReleaseVersion = 120,
+    Sound = "SOUND_ITEM_NORMAL"
+  },
+  [410392] = {
+    CharId = 4103,
+    CharPartId = 410392,
+    ExcludeCollect = true,
+    HairId = 410392,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Zhiliu_01.T_Fashion_Zhiliu_01'",
+    Name = "UI_Skin_Name_410301",
+    Rarity = 5,
+    ReleaseVersion = 170,
     Sound = "SOUND_ITEM_NORMAL"
   },
   [530192] = {

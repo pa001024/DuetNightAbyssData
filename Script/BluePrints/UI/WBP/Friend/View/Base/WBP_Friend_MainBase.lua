@@ -38,7 +38,6 @@ end
 function M:Destruct()
   FriendController:UnRegisterEvent(self)
   ChatController:UnRegisterEvent(self)
-  AudioManager(self):SetEventSoundParam(self, "FriendMainBase", {ToEnd = 1})
   M.Super.Destruct(self)
 end
 
@@ -88,6 +87,7 @@ function M:Close()
   if self.IsBeginToClose then
     return
   end
+  AudioManager(self):SetEventSoundParam(self, "FriendMainBase", {ToEnd = 1})
   local AttachWidget = self:GetAttachWidget()
   if self._TeamHeadPanel and TeamController:GetHeadUI(AttachWidget) == self._TeamHeadPanel then
     self._TeamHeadPanel:Close()

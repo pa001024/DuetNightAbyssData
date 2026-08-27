@@ -35,7 +35,7 @@ function M:Construct()
     },
     SkipRefreshInputType = true
   })
-  self:AddDispatcher(EventID.OnCharAppearanSuitRenamed, self, self.OnCharAppearanSuitRenamed)
+  self:AddDispatcher(EventID.OnCharAppearanceSuitRenamed, self, self.OnCharAppearanceSuitRenamed)
   self:AddDispatcher(EventID.OnCharAppearanceChanged, self, self.OnCharAppearanceChanged)
   rawset(self, "FSM", FSM:New(self, {
     StateNames = FocusStates,
@@ -360,7 +360,7 @@ function M:OnAppearanceNameEditBtnClicked()
   }, self)
 end
 
-function M:OnCharAppearanSuitRenamed(Ret, CharUuid, AppearanceIndex, NewName)
+function M:OnCharAppearanceSuitRenamed(Ret, CharUuid, AppearanceIndex, NewName)
   if not ErrorCode:Check(Ret) then
     return
   end

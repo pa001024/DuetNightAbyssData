@@ -1,5 +1,6 @@
 require("UnLua")
 local EMCache = require("EMCache.EMCache")
+local GLink = require("Utils.MiscUtils").GLink
 local S = Class("BluePrints.UI.BP_EMUserWidget_C")
 
 function S:Construct()

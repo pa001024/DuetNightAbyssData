@@ -379,6 +379,7 @@ function ActivityUtils.RefreshActivityReddotNode()
       ActivityReddotHelper.RefreshReddotNode(ActivityID)
     end
   end
+  ActivityUtils.TryClear14DaySignInReddots()
 end
 
 function ActivityUtils.TryAddActivityReddotCommon(CacheKey, ActivityID)
@@ -401,6 +402,23 @@ function ActivityUtils.GetReddotCachInfoByKey(CacheKey, ActivityID)
   local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(ReddotName)
   if CacheDetail then
     return CacheDetail[CacheKey]
+  end
+end
+
+function ActivityUtils.TryClear14DaySignInReddots()
+  local Avatar = GWorld:GetAvatar()
+  if not (Avatar and DataMgr.DailyLogin) or not DataMgr.EventMain then
+    return
+  end
+  for ActivityId, DailyLoginData in pairs(DataMgr.DailyLogin) do
+    local EventData = DataMgr.EventMain[ActivityId]
+    if 14 == DailyLoginData.LoginDuration and EventData and EventData.IsEndWhenSucc and EventData.EventEndCondition and ConditionUtils.CheckCondition(Avatar, EventData.EventEndCondition) then
+      local HasRed = 1 == ActivityUtils.GetReddotCachInfoByKey("Red", ActivityId)
+      local HasNew = 1 == ActivityUtils.GetReddotCachInfoByKey("New", ActivityId)
+      if HasRed or HasNew then
+        ActivityUtils.TryClearActivityReddotCommon(ActivityId)
+      end
+    end
   end
 end
 
@@ -663,6 +681,46 @@ function ActivityUtils.IsAccessoryDropActivity(ActivityId)
     end
   end
   return false
+end
+
+function ActivityUtils.DetermineBtnConfirmStatusByEvent(InEvent)
+  if not InEvent then
+    return nil
+  end
+  if not InEvent.PretextTasks1 and not InEvent.PretextTasks2 then
+    return 3
+  end
+  local Avatar = GWorld:GetAvatar()
+  if Avatar and InEvent.QuestChainIdToUnlock and Avatar.QuestChains and Avatar.QuestChains[InEvent.QuestChainIdToUnlock] and Avatar.QuestChains[InEvent.QuestChainIdToUnlock].IsAdvanceUnlock then
+    return 3
+  end
+  local TaskUtils = require("BluePrints.UI.TaskPanel.TaskUtils")
+  if not TaskUtils:FirstChapterQuestFinished() then
+    return 1
+  else
+    local bFinishedPretextTask1 = false
+    bFinishedPretextTask1 = InEvent.PretextTasks1 and TaskUtils:IsQuestFinished(InEvent.PretextTasks1)
+    if not InEvent.PretextTasks1 then
+      bFinishedPretextTask1 = true
+    end
+    local bFinishedPretextTask2 = false
+    if not InEvent.PretextTasks2 then
+      bFinishedPretextTask2 = true
+    else
+      for Index, QuestChainId in pairs(InEvent.PretextTasks2) do
+        if not TaskUtils:IsQuestFinished(QuestChainId) then
+          bFinishedPretextTask2 = false
+          break
+        end
+      end
+    end
+    local bHasUnfinished = not bFinishedPretextTask1 or not bFinishedPretextTask2
+    if bHasUnfinished then
+      return 2
+    else
+      return 3
+    end
+  end
 end
 
 return ActivityUtils

@@ -55,4 +55,9 @@ function M:ShowBloodUI()
   end
 end
 
+function M:ReceiveEndPlay()
+  M.Super.ReceiveEndPlay()
+  self:DeactiveGuide(-1)
+end
+
 return M

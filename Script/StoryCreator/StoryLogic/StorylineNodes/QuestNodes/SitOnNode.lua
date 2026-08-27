@@ -55,7 +55,10 @@ function SitOnNode:UpdateInteractiveIcon()
   if InteractiveUI then
     local MergeName = SeatItem.ChestInteractiveComponent.MergeName
     local MergeActor = InteractiveUI.MergeActors and InteractiveUI.MergeActors[MergeName]
-    local MergeInteractiveComp = IsValid(MergeActor) and MergeActor.BP_MergeInteractiveComponent
+    local MergeInteractiveComp
+    if IsValid(MergeActor) then
+      MergeInteractiveComp = MergeActor.BP_MergeInteractiveComponent
+    end
     if IsValid(MergeInteractiveComp) then
       MergeInteractiveComp:UpdateInteractiveUIState()
     end
@@ -68,6 +71,17 @@ function SitOnNode:GetSeat()
     return
   end
   local SeatItem = GameMode.BPBornRegionActor:FindRef(self.ManualItemId)
+  if IsValid(SeatItem) then
+    return SeatItem
+  end
+  local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
+  if not GameState then
+    return SeatItem
+  end
+  local Creator = GameState.StaticCreatorMap:FindRef(self.ManualItemId)
+  if Creator and Creator.ChildEids and Creator.ChildEids:Length() > 0 then
+    SeatItem = Battle(GameMode):GetEntity(Creator.ChildEids[1])
+  end
   return SeatItem
 end
 

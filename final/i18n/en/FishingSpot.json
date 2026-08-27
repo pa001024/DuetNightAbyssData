@@ -466,5 +466,83 @@
     "extraRewardProb": 0.1,
     "petId": 4941,
     "petProb": 0.5
+  },
+  {
+    "id": 10700101,
+    "name": "Fishing Spot: Paradise Village",
+    "icon": "",
+    "waterType": 1,
+    "fishCountLimit": 100,
+    "replenishDay": 24,
+    "fishIds": [
+      1101,
+      1102,
+      1103,
+      3301,
+      3302,
+      3303,
+      3304,
+      3305
+    ],
+    "showFishIds": [
+      3301,
+      3302,
+      3303,
+      3304,
+      3305
+    ],
+    "weights": [
+      40,
+      40,
+      40,
+      15,
+      15,
+      10,
+      0,
+      0
+    ],
+    "extraReward": 301010,
+    "extraRewardProb": 0.1,
+    "petId": 4941,
+    "petProb": 0.5
+  },
+  {
+    "id": 10720101,
+    "name": "Fishing Spot: Mount Arcano Rift",
+    "icon": "",
+    "waterType": 3,
+    "fishCountLimit": 100,
+    "replenishDay": 24,
+    "fishIds": [
+      1301,
+      1302,
+      1303,
+      3401,
+      3402,
+      3403,
+      3404,
+      3405
+    ],
+    "showFishIds": [
+      3401,
+      3402,
+      3403,
+      3404,
+      3405
+    ],
+    "weights": [
+      40,
+      40,
+      40,
+      15,
+      15,
+      10,
+      5,
+      5
+    ],
+    "extraReward": 301011,
+    "extraRewardProb": 0.1,
+    "petId": 4941,
+    "petProb": 0.5
   }
 ]

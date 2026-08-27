@@ -179,6 +179,12 @@ return ReadOnly("BattleWeaponAttr", {
     RangedWeaponAttrDisplay = "AlwaysFalse",
     UltraWeaponInherit = 1
   },
+  CutTNRate = {
+    AttrName = "CutTNRate",
+    DefaultValue = 1,
+    MeleeWeaponAttrDisplay = "AlwaysFalse",
+    RangedWeaponAttrDisplay = "AlwaysFalse"
+  },
   ExplodeBulletRate = {
     AttrName = "ExplodeBulletRate",
     DefaultValue = 0,
@@ -215,11 +221,11 @@ return ReadOnly("BattleWeaponAttr", {
     MeleeWeaponAttrDisplay = "AlwaysFalse",
     RangedWeaponAttrDisplay = "AlwaysFalse"
   },
-  HyperTriggerCovertRate = {
-    AttrName = "HyperTriggerCovertRate",
-    DefaultValue = 0,
-    MeleeWeaponAttrDisplay = "OnlyModified",
-    RangedWeaponAttrDisplay = "OnlyModified",
+  HyperTriggerConvertRate = {
+    AttrName = "HyperTriggerConvertRate",
+    DefaultValue = 1,
+    MeleeWeaponAttrDisplay = "AlwaysTrue",
+    RangedWeaponAttrDisplay = "AlwaysTrue",
     UltraWeaponInherit = 1
   },
   JhRate = {

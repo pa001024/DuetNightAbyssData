@@ -83,7 +83,7 @@ function EMLevelLoader:InitGameGraphicsSettings()
     if nil == AAValue then
       AAValue = 2
     end
-    UE4.UKismetSystemLibrary.ExecuteConsoleCommand(self, "r.DefaultFeature.AntiAliasing " .. AAValue)
+    URuntimeCommonFunctionLibrary.SetConsoleVariableIntValue("r.DefaultFeature.AntiAliasing", AAValue, 3)
     EMCache:Set(AAOptionName, AAValue)
   else
     local AAMOptionName = "AntiAliasingMobile"
@@ -98,7 +98,7 @@ function EMLevelLoader:InitGameGraphicsSettings()
       AAValue = 4
     end
     AAValue = 2
-    UE4.UKismetSystemLibrary.ExecuteConsoleCommand(self, "r.DefaultFeature.AntiAliasing " .. AAValue)
+    URuntimeCommonFunctionLibrary.SetConsoleVariableIntValue("r.DefaultFeature.AntiAliasing", AAValue, 3)
     EMCache:Set(AAMOptionName, AAMSwitch)
   end
   local ScreenPercentage = 100

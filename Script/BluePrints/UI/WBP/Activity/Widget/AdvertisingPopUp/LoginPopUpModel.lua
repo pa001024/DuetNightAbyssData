@@ -27,6 +27,10 @@ function M:CalculateNeedOpenLoginPopUp()
   if not Avatar then
     return ShowPopUp
   end
+  local GameState = UE4.UGameplayStatics.GetGameState(GWorld:GetMainPlayer())
+  if GameState:IsInDungeon() then
+    return
+  end
   if self.LoginSuccess == false then
     return ShowPopUp
   end

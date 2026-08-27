@@ -4,6 +4,7 @@ local Component = {}
 function Component:EnterWorld()
   self.logger.debug("EntityBase EnterWorld")
   self.in_world = true
+  self.CacheOnRepNotify = nil
 end
 
 function Component:LeaveWorld()
@@ -95,6 +96,17 @@ function Component:GetCrossAttrs()
   return result
 end
 
+function Component:CacheOrTriggerOnRepNotify(func, ...)
+  if self.CacheOnRepNotify == nil then
+    func(...)
+  else
+    self.CacheOnRepNotify[#self.CacheOnRepNotify + 1] = {
+      func,
+      ...
+    }
+  end
+end
+
 function Component:ClientPropChanged(name, value)
   self.logger.debug("ClientPropChanged", name)
   local _type = self.__Class__
@@ -113,7 +125,7 @@ function Component:ClientPropChanged(name, value)
   self.Props[name] = object
   local func = self["_OnPropChange" .. name]
   if nil ~= func then
-    func(self, {})
+    self:CacheOrTriggerOnRepNotify(func, self, {})
   end
 end
 
@@ -158,7 +170,7 @@ function Component:ClientPropSet(name, key, value)
   end
   local func = self["_OnPropChange" .. name]
   if nil ~= func then
-    func(self, {key}, OldValue)
+    self:CacheOrTriggerOnRepNotify(func, self, {key}, OldValue)
   end
 end
 
@@ -192,24 +204,58 @@ function Component:ClientPropDictChange(prop_name, key, second_prop_name, attr_v
   end
   local func = self["_OnPropChange" .. prop_name]
   if nil ~= func then
-    func(self, {key, second_prop_name}, OldValue)
+    self:CacheOrTriggerOnRepNotify(func, self, {key, second_prop_name}, OldValue)
   end
 end
 
-function Component:ClientFlashSyncProp(CacheSyncProp)
-  self.logger.info("ClientFlashSyncProp")
+function Component:ClientFlushSyncProp(CacheSyncProp)
+  self.logger.info("ClientFlushSyncProp")
   if type(CacheSyncProp) ~= "table" then
     return
   end
-  for _, info in ipairs(CacheSyncProp) do
-    if "ClientPropChanged" == info[1] then
-      self:ClientPropChanged(info[2], info[3])
-    elseif "ClientPropSet" == info[1] then
-      self:ClientPropSet(info[2], info[3], info[4])
-    elseif "ClientPropDictChange" == info[1] then
-      self:ClientPropDictChange(info[2], info[3], info[4], info[5])
+  self.CacheOnRepNotify = {}
+  
+  local function RealOnSyncProp()
+    local PropChanged = CacheSyncProp.PropChanged
+    if PropChanged then
+      for i = 1, #PropChanged do
+        local Prop = PropChanged[i]
+        self:ClientPropChanged(Prop[1], Prop[2])
+      end
+    end
+    local PropSet = CacheSyncProp.PropSet
+    if PropSet then
+      for k, vs in pairs(PropSet) do
+        for i = 1, #vs do
+          local Prop = vs[i]
+          self:ClientPropSet(k, Prop[1], Prop[2])
+        end
+      end
+    end
+    local PropDictChange = CacheSyncProp.PropDictChange
+    if PropDictChange then
+      for k, vs in pairs(PropDictChange) do
+        for ck, vss in pairs(vs) do
+          for i = 1, #vss do
+            local Prop = vss[i]
+            self:ClientPropDictChange(k, ck, Prop[1], Prop[2])
+          end
+        end
+      end
     end
   end
+  
+  local ok, err = xpcall(RealOnSyncProp, debug.traceback)
+  local CacheOnRepNotify = self.CacheOnRepNotify
+  self.CacheOnRepNotify = nil
+  assert(ok, err)
+  ok, err = xpcall(function()
+    for i = 1, #CacheOnRepNotify do
+      local Notify = CacheOnRepNotify[i]
+      local func = Notify[1]
+      func(select(2, table.unpack(Notify)))
+    end
+  end, debug.traceback)
 end
 
 function Component:OnDestroy()

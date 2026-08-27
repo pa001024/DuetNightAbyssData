@@ -2521,5 +2521,225 @@
         ]
       }
     ]
+  },
+  {
+    "id": 1128,
+    "name": "Manuel d’utilisation",
+    "desc": "Consignes placées près des attractions. En balayant les cendres noircies, on parvient encore à distinguer quelques fragments de texte.",
+    "icon": "T_Read_01",
+    "res": [
+      {
+        "id": 2000127,
+        "type": "Read",
+        "text": "Veuillez respecter scrupuleusement les étapes suivantes lors de l’utilisation (<H>surtout Ada !</>) :\n1) Afin d’éviter tout accident, l’attraction ne doit être utilisée qu’en présence d’au moins deux personnes.\n2) Avant de jouer, vérifiez que les raccords de l’appareil ne sont pas desserrés. Le cas échéant, vous trouverez des outils de réparation dans la boîte située à l’arrière. (Si c’est Ada qui va les chercher, surveillez-la bien pour qu’elle les remette correctement à leur place.)\n3) Une fois l’appareil solidement fixé, vous pouvez tenter de le démarrer. Un bruit important au lancement et un temps de démarrage prolongé sont des phénomènes normaux. (Espérons que cela ne fera pas peur aux enfants.)\n4) En cas de problème technique impossible à résoudre, demandez à Morgana de s’en charger. (Ne laissez surtout jamais Ada s’occuper seule d’un problème technique ! À moins de trouver les pannes existantes trop faciles à réparer et de vouloir vous ajouter un défi.)\n5) ...\n(Le texte qui suit est illisible.)"
+      }
+    ]
+  },
+  {
+    "id": 1129,
+    "name": "Enregistrement d’un légionnaire tombé au combat",
+    "desc": "Appareil d’enregistrement endommagé. D’après son contenu, il appartenait sans doute à un commandant d’unité de dirigeables durant la guerre d’il y a quatre ans.",
+    "icon": "T_Read_02",
+    "res": [
+      {
+        "id": 2000128,
+        "type": "Read",
+        "text": "...\nNous avons atteint la ligne frontalière.\n \nLe raid aérien porte ses fruits. Les forces avancées d’Élysium battent en retraite. Continuez à ce rythme... Attendez, qu’est-ce que c’est que ce truc lancé depuis leurs positions ?! Virez à gauche, tous les appareils, manœuvre d’évitement immédiate !\n ...\nKhh... L’unité de dirigeables n° 4 a subi une contre-attaque des Émissaires Célestes d’Élysium ! Pertes sévères ! Demande de renforts, je répète : demande de renforts...\n...\nLes gars... les Émissaires Célestes d’Élysium ont lancé une contre-offensive totale sur toutes les lignes de front. Ils ont déjà franchi la zone de combat avancée et pénètrent au cœur même de l’Empire ! Nos pertes sont catastrophiques !\n...\nJe viens de recevoir le dernier ordre. Atterrissage forcé dans le secteur des Montagnes d’Arcano. Tenir cette position coûte que coûte et maintenir l’ennemi dans la zone de bombardement de notre artillerie... Hahaha... allez, les gars, voyez le bon côté des choses : mourir en emportant autant de soldats de l’Église Élyséenne avec nous... ce n’est pas une si mauvaise affaire..."
+      }
+    ]
+  },
+  {
+    "id": 1130,
+    "name": "Carnet d’un soldat de l’Église Élyséenne",
+    "desc": "Carnet d’un soldat de l’Église Élyséenne. L’écriture est tremblante et irrégulière ; son propriétaire était manifestement déjà très affaibli au moment de rédiger ces lignes.",
+    "icon": "T_Read_02",
+    "res": [
+      {
+        "id": 2000129,
+        "type": "Drop",
+        "text": "Si quelqu’un retrouve ce carnet, qu’il révèle au monde les crimes de l’Empire. Il ne faut pas laisser les enfants des dieux souffrir davantage.\n \nCes salauds de la Légion impériale ont abandonné les forces alliées ainsi que les villes civiles, puis ont lancé un bombardement à grande échelle sans la moindre hésitation. Grâce à la protection des Émissaires Célestes et aux bénédictions divines, nous avons survécu de justesse. Mais...\n ...\nSans qu’aucun de nous ait besoin de le dire à voix haute, nous avons tous compris la même chose : notre fuite s’arrêterait ici... Même si nous avions posé des mines durant notre retraite, elles ne retiendraient sans doute les poursuivants qu’un court instant, et nos réserves étaient déjà épuisées.\n \nPlus personne ne quitterait jamais cette vallée...\n \nÔ Dieux, pardonnez notre échec. Nous n’avons pas réussi à exterminer ces maudits blasphémateurs. Ô Dieux, guidez mes frères d’armes vers votre royaume. Jusqu’à leur dernier souffle, ils ont continué à réciter vos prières. Ô Dieux, je vous en supplie...\n \n(Le reste du texte est recouvert d’un sang noirci. Seuls quelques mots, griffonnés tout en bas de la page, restent encore lisibles.)\n \nJe... ne veux pas mourir...",
+        "srId": 107201
+      }
+    ]
+  },
+  {
+    "id": 1131,
+    "name": "Enregistrement d’un soldat anonyme",
+    "desc": "Enregistrement d’un soldat. Bien qu’il ait survécu plus longtemps que la plupart des soldats d’il y a quatre ans, et qu’il ait consigné les horreurs de cette époque sur cet appareil, il n’a finalement pas échappé à la mort.",
+    "icon": "T_Read_02",
+    "res": [
+      {
+        "id": 2000130,
+        "type": "Read",
+        "text": "Du feu... Il y a du feu partout... Des alarmes stridentes et des hurlements partout... Je me souviens maintenant : le <H>Marteau</> a raté son atterrissage forcé...\nDu rouge. Je ne vois plus que du rouge... Un rouge brûlant...\n...\nLe commandant m’a tiré hors du Marteau... Les attaques d’Élysium n’avaient pas cessé. Dans le communicateur, il me semble avoir entendu que le gros des troupes avait été contraint d’atterrir d’urgence dans la vallée au sud. Nous devons trouver un moyen de les rejoindre... Nous devons retenir l’armée d’Élysium ici...\n...\nCes maudits chiens de l’Église Élyséenne ont bloqué tous les chemins de montagne. Le commandant a été touché en couvrant ma retraite... Pas de renforts. Pas de ravitaillement. Pas d’espoir...\n \nNous ne pouvons compter que sur nous-mêmes.\n...\nLe vacarme assourdissant des bombardements m’a tiré de mon sommeil. Je le reconnaissais : c’était le tonnerre de l’artillerie de notre Empire...\nJe sentais toute la chaîne de montagnes trembler. Haha... Hahaha... Voilà ce qu’il en coûte de provoquer la Légion, haha, khh... khh, khh...\nAprès je ne sais combien de vagues de bombardements, le commandant est parti à la recherche d’autres survivants...\n \nMaintenant... Le monde entier est silencieux.\nC’est rassurant... Si calme... Si froid...\nBonne nuit... monde..."
+      }
+    ]
+  },
+  {
+    "id": 1132,
+    "name": "Règlement d’Arcano",
+    "desc": "Règlement affiché dans tout le village du Paradis. Tous les habitants sont tenus de s’y conformer.",
+    "icon": "T_Read_02",
+    "res": [
+      {
+        "id": 2000131,
+        "type": "Read",
+        "text": "- Première règle : les Montagnes d’Arcano sont notre Paradis. Nous sommes tous les Lapins Blancs de Maman Lapin. \n- Deuxième règle : tous les Lapins Blancs doivent s’aimer les uns les autres. Toute violence entre Lapins Blancs est interdite. En cas de conflit, celui-ci doit être résolu par le jeu.\n- Troisième règle : il existe de nombreuses couleurs de lapins. Les lapins blancs sont nos amis. Les lapins rouges sont dangereux. Si vous apercevez un lapin rouge, signalez-le immédiatement au chef du village.\n- Quatrième règle : la Parade du Paradis est la plus grande fête d’Arcano. Lors de cette célébration, une partie doit avoir lieu.\n- Cinquième règle : les jouets des Montagnes d’Arcano sont nos compagnons bienveillants. Vous pouvez accepter leur protection et leur aide.\n- Sixième règle : tous les Lapins Blancs doivent se souvenir de leur nom d’arcane. Il représente leur essence. N’agissez jamais contre votre essence.\n- Septième règle : les grands hommes de métal qui flottent dans le ciel sont les ennemis du Paradis. Si vous en voyez un, abandonnez immédiatement ce que vous êtes en train de faire et rendez-vous à l’Étang du Repos.\n- Huitième règle : si vous enfreignez une règle, l’Étang du Repos vous aidera à retrouver la paix intérieure.\n- Neuvième règle : en l’absence d’un grand homme de métal dans le ciel, il est interdit d’approcher l’Étang du Repos sans l’autorisation du chef du village.\n- Dixième règle : afin que notre quotidien ne soit pas perturbé par les troubles du monde extérieur, aucun Lapin Blanc ne doit quitter notre Paradis sans raison valable."
+      }
+    ]
+  },
+  {
+    "id": 1133,
+    "name": "Le Goûter sans fin",
+    "desc": "Livre de contes rédigé par un auteur inconnu. En le feuilletant attentivement, on sent poindre une étrange inquiétude derrière ces histoires.",
+    "icon": "T_Read_01",
+    "res": [
+      {
+        "id": 2000132,
+        "type": "Drop",
+        "text": "L’heure du goûter a sonné. Ici vous attendent des feux d’artifice éclatants, des parures somptueuses, des friandises sans fin, d’adorables animaux et les rires des convives ;\nL’heure du goûter a sonné. Ici vous attendent des tempêtes déchaînées, des feux d’artifice éclatants, des parures somptueuses, des friandises sans fin, d’adorables animaux et les rires des convives ;\nL’heure du goûter a sonné. Ici vous attendent une scène en flammes, des feux d’artifice éclatants, des parures somptueuses, des friandises sans fin, d’adorables animaux et les rires des convives ;\nL’heure du goûter a sonné. Ici vous attendent de la mousse luxuriante, des feux d’artifice éclatants, des parures somptueuses, des friandises sans fin, d’adorables animaux et les rires des convives ;\nL’heure du goûter a sonné. Ici vous attendent des feux d’artifice éclatants, des parures somptueuses, des friandises sans fin, d’adorables animaux et les rires des convives ;\nVenez, les lapins nous serviront l’hydromel, les fleurs nous couvriront de glaçage ;\nVenez prendre place sous les feux d’artifice d’une nuit d’été, et offrir à ces instants merveilleux une bénédiction qui ne connaîtra jamais de fin.",
+        "srId": 107001
+      }
+    ]
+  },
+  {
+    "id": 1134,
+    "name": "Lettre manuscrite de l’Empereur",
+    "desc": "Lettre secrète de Sa Majesté Julius adressée à {nickname2}. Elle ne doit absolument être vue par personne d’autre.",
+    "icon": "T_Read_03",
+    "res": [
+      {
+        "id": 2000133,
+        "type": "Read",
+        "text": "À brûler après lecture.\nProtège Vergilius.\nDans les six mois à venir, assassine le duc Servius sans laisser la moindre trace."
+      }
+    ]
+  },
+  {
+    "id": 1135,
+    "name": "Lettre de détresse ensanglantée",
+    "desc": "Lettre de détresse retrouvée près des ossements d’un pigeon. Quelques traces de sang et de chair adhèrent encore aux os, preuve qu’il a récemment été dévoré par un rapace avant d’être abandonné ici. Cette lettre, elle, n’a jamais pu quitter les Montagnes d’Arcano.",
+    "icon": "T_Read_03",
+    "res": [
+      {
+        "id": 2000134,
+        "type": "Drop",
+        "text": "Je ne sais pas jusqu’où cette lettre ira, ni qui la lira, mais vous qui lisez ces mots, je vous en supplie... sauvez-moi... Je me trouve dans le nouveau village d’Arcano, au cœur des Montagnes d’Arcano. Ce pigeon devrait pouvoir vous mener jusqu’ici...\n \nJ’étais une simple femme au foyer de Rougerive. Mon mari, Fred, était un explorateur disparu il y a plusieurs années dans les Montagnes d’Arcano. Pour le retrouver, je suis venue à mon tour jusqu’ici... mais je ne m’attendais pas à découvrir un tout nouveau village d’Arcano.\n \nSeulement, ce nouveau village d’Arcano n’a rien de la ville touristique que nous connaissions. C’est un endroit coupé du monde extérieur, rempli de fous !\n \nPour ne pas être tués par la maîtresse du village, « Maman Lapin », tous ceux qui y entrent doivent jouer le rôle qu’elle leur impose. Mon mari, Fred... a été tué par cette folle...\n \nJe voulais venger mon mari, mais je n’ai ni arme ni force. Face au pouvoir terrifiant de Maman Lapin, de simples gens comme nous ne peuvent même pas se défendre.\n \nJe voulais fuir, mais je ne sais pas combien d’habitants sont encore lucides, ni combien sont les yeux et les oreilles de Maman Lapin. J’ai vu de mes propres yeux deux amis proches se trahir : l’un a dénoncé le projet de fuite de l’autre, et celui qui avait été dénoncé a été noyé vivant sous nos yeux à tous. Le plus terrifiant, c’est que les autres n’ont montré aucune tristesse. Ils répétaient sans cesse des mots comme sommeil dans l’eau, renaissance et retrouvailles...\n \nPour survivre, je n’ai eu d’autre choix que de jouer le jeu et d’incarner « Teresa », douce et bienveillante. Mais en voyant les visages familiers disparaître un à un, puis être remplacés par d’autres, je ne peux plus tenir... Je ne sais pas si je serai la prochaine à disparaître. Je ne sais pas si, demain, « Teresa » sera remplacée par quelqu’un d’autre... J’ai peur. Si peur que j’en oublie parfois comment respirer... Cette sensation d’étouffement née de la panique pourrait me faire perdre la raison à tout instant...\n \nAvant de m’effondrer, j’ai enfin écrit cette lettre de détresse... Si vous la lisez, je vous en supplie, faites-moi sortir des Montagnes d’Arcano. Si vous m’aidez à fuir, je ferai tout ce que vous voudrez... Je vous en supplie...",
+        "srId": 107001
+      }
+    ]
+  },
+  {
+    "id": 1136,
+    "name": "Déposition d’Eric Woodville",
+    "desc": "Rapport d’interrogatoire d’un habitant remis à Vergilius par un soldat de la Légion. Il s’agit de la déposition d’Eric Woodville.",
+    "icon": "T_Read_02",
+    "res": [
+      {
+        "id": 2000135,
+        "type": "Drop",
+        "text": "Je suis Eric Woodville, folkloriste d’Aethyrie. Il y a trois ans, afin de découvrir s’il restait des habitants survivants à Arcano, je suis venu dans les Montagnes d’Arcano avec mon assistante.\n \nPar la suite, nous avons tous deux été placés sous l’emprise de Maman Lapin et retenus de force dans les montagnes. Au début, sous l’effet des drogues, j’ai même cru être Isaac, un habitant du village. C’est mon assistante Catherine qui m’a réveillé. Ici, elle jouait le rôle du « Magicien », Morgana.\n \nElle est mon élève la plus brillante et la plus talentueuse. C’est aussi elle qui m’a convaincu de continuer à jouer le rôle exigé par Maman Lapin, car face à une force absolue, nous ne pouvions qu’endurer en silence et attendre l’occasion idéale, celle qui nous permettrait à coup sûr de nous échapper.\n \nNous nous sommes donc appliqués à incarner nos rôles respectifs et à nous fondre dans la vie du Paradis. Bien sûr, nous avons aussi regardé froidement les autres mourir sans intervenir.\n \nJe vous demande de pardonner mon égoïsme et celui de Catherine, mais pour notre propre sécurité, nous ne pouvions agir autrement...\n \nNous aurons sans doute bien du mal à revoir {性别2:ce jeune officier|cette jeune officière}. Officier, si cela vous est possible, je vous prie de lui transmettre mes remerciements.\n \n(La déposition concorde globalement avec celle du « Magicien ». Contacter les représentants diplomatiques d’Aethyrie pour procéder à une vérification d’identité approfondie.)",
+        "srId": 107001
+      }
+    ]
+  },
+  {
+    "id": 1137,
+    "name": "Déposition de « La Tempérance »",
+    "desc": "Rapport d’interrogatoire d’un habitant remis à Vergilius par un soldat de la Légion. Il s’agit de la déposition de « La Tempérance » (véritable identité inconnue).",
+    "icon": "T_Read_02",
+    "res": [
+      {
+        "id": 2000136,
+        "type": "Drop",
+        "text": "Je... je ne me souviens plus de qui je suis...\n \nIl y a longtemps, je crois que j’avais noté dans un carnet comment je m’appelais, et combien de jours j’avais passés au Paradis.\n \nMais après avoir bu cette eau plusieurs fois, j’ai même oublié où j’avais rangé ce carnet...\n \nMessieurs les officiers, où va-t-on m’emmener maintenant ? Sans le Paradis, sous quelle identité suis-je censé vivre ?\n \nNon, non, je ne vous accuse pas, messieurs les officiers. C’est juste que je ne sais pas... Je ne sais pas... Je ne sais plus rien du tout...\n \n(Fin de l’enregistrement. La victime présente de fortes fluctuations émotionnelles et n’est pas en état de poursuivre l’interrogatoire.)",
+        "srId": 107001
+      }
+    ]
+  },
+  {
+    "id": 1138,
+    "name": "Déposition de « La Tour »",
+    "desc": "Rapport d’interrogatoire d’un habitant remis à Vergilius par un soldat de la Légion. Il s’agit de la déposition de « La Tour » (véritable identité inconnue).",
+    "icon": "T_Read_02",
+    "res": [
+      {
+        "id": 2000137,
+        "type": "Drop",
+        "text": "Tout le monde s’est mis à courir, alors j’ai couru aussi.\n \n... Monsieur l’officier, tout le monde dit que les armes sont dangereuses. Pourquoi est-ce que vous en portez ?\n \nVictor aussi m’a posé des questions... Les Déchus, ou je ne sais quoi... Qu’est-ce que ça veut dire, exactement... ? Pourquoi est-ce qu’on m’a frappé... ?\n \nEuh... Vous voulez ce symbole super cool, messieurs les officiers... ? Je peux aussi vous le dessiner sur vos vêtements. Vous arrêterez de me frapper, après... ? Maman Lapin fait peur, mais vous aussi, vous faites très peur...\n \n(Aucune information utile obtenue. Première hypothèse : les effets de la substance lui ont fait perdre les souvenirs liés aux Déchus. Transféré à la Prison Militaire Royale pour interrogatoire approfondi.)",
+        "srId": 107001
+      }
+    ]
+  },
+  {
+    "id": 1139,
+    "name": "Déposition de Tom",
+    "desc": "Rapport d’interrogatoire d’un habitant remis à Vergilius par un soldat de la Légion. Il s’agit de la déposition de Tom.",
+    "icon": "T_Read_02",
+    "res": [
+      {
+        "id": 2000138,
+        "type": "Drop",
+        "text": "Hahahahahaha ! Je me suis enfin tiré de là, hahahahaha ! Pardon, pardon, messieurs les officiers, je suis un peu trop excité... Héhé, hahahahahaha !\n \n(Une série d’insultes incohérentes.)\n \nKhh... Hum, ça y est. Posez vos questions, messieurs les officiers. Je vous dirai tout ce que je sais, hahahaha !\n \nÇa fait un bien fou de pouvoir parler comme un être humain, ******, putain que c’est bon !\n \n(Une série d’insultes incohérentes.)\n \nAh, je m’appelle Tom. Mon nom de famille, j’en sais rien. Je n’ai pas perdu la mémoire, pourtant. C’est juste que depuis que je suis gosse, j’ai toujours vécu dehors. Je ne sais même pas qui étaient mes parents. En général, on m’appelait petit mendiant, sale bâtard, ce genre de trucs. Choisissez celui qui vous plaît le plus, messieurs les officiers, héhé.\n \n(La victime est en état d’excitation intense. Peu d’informations utiles obtenues.)",
+        "srId": 107001
+      }
+    ]
+  },
+  {
+    "id": 1140,
+    "name": "Déposition de Jenny Blount",
+    "desc": "Rapport d’interrogatoire d’un habitant remis à Vergilius par un soldat de la Légion. Il s’agit de la déposition de Jenny Blount.",
+    "icon": "T_Read_02",
+    "res": [
+      {
+        "id": 2000139,
+        "type": "Drop",
+        "text": "Je m’appelle Jenny Blount. Je ne suis qu’une simple citoyenne de Rougerive. S’il fallait vraiment citer quelque chose de particulier chez moi, je dirais que, dans ma jeunesse, j’étais téméraire... et que je tenais beaucoup trop à ma fierté.\n \nIl y a deux ans, alors que je prenais le thé dans un café, j’ai entendu des gens raconter avec force détails des légendes sur les Montagnes d’Arcano. Je n’ai pas pu m’empêcher de me moquer d’eux : se laisser effrayer par des légendes urbaines bonnes à faire peur aux enfants, franchement...\n \nAlors ils ont insisté en disant que ces rumeurs étaient vraies, et ont voulu parier avec moi. Naturellement, je n’y croyais pas. J’ai donc accepté leur pari et je suis venue faire un voyage dans les Montagnes d’Arcano.\n \nLe résultat, vous l’avez sous les yeux, messieurs les officiers... À peine arrivée, j’ai été piégée ici par Maman Lapin pendant deux ans. Ah... À mon âge, pourquoi est-ce que j’ai absolument voulu avoir le dernier mot ce jour-là... Ah...\n \n(La victime nous a communiqué plusieurs rumeurs au sujet des Montagnes d’Arcano. Peu d’informations utiles obtenues.)",
+        "srId": 107001
+      }
+    ]
+  },
+  {
+    "id": 1141,
+    "name": "Feuille perdue — Arcano",
+    "desc": "Une collection de feuillets énigmatiques trouvés au hasard de vos pérégrinations.\nCertains sont de délicats rouleaux de parchemin, d’autres encore portent l’odeur fraîche d’une encre à peine sèche ; quelques-uns ne sont que des lambeaux arrachés à la hâte d’un vieux carnet.\nOrdonnées ou illisibles, détaillées ou brouillonnes, toutes partagent pourtant un même trait manifeste : chacune indique, à sa manière, l’emplacement d’un \"trésor\".",
+    "icon": "T_TreasureMap_EXChapter01",
+    "res": [
+      {
+        "id": 20660,
+        "type": "Drop",
+        "name": "Arcano — Tome I",
+        "text": "Poursuis un cerf et offre-le à Maman Lapin, aimée comme une mère ;\nPoursuis un cerf et offre-le à Maman Lapin, vénérée comme une divinité ;\nArrache-lui ses sabots fendus, tranche ses bois indomptés ;\nChâtie son entêtement obstiné !\nDépouille-le de sa douce fourrure et recouds-la de fil et d’aiguille ;\nRecouvre de peau de cerf le sentier jonché de pierres.\nMaman Lapin, viens jusqu’ici !\nTends ta main bienveillante,\nSous le témoignage du <H>Cerf d’Or</>,\nAccorde-moi une seconde vie.\n \n— <I>Hymne à Maman Lapin – Chapitre de la Chasse au Cerf</>",
+        "srId": 107001
+      },
+      {
+        "id": 20661,
+        "type": "Drop",
+        "name": "Arcano — Tome II",
+        "text": "Pourquoi refuses-tu de me croire ? Tu t’obstines à dire que ce n’est qu’une <H>Pierre Lapin</> !\nC’est pourtant l’incarnation de Maman Lapin. Tu n’entends donc pas Sa voix ?\n \nCe n’est pas une hallucination, vraiment... Si tu y vas maintenant, tu pourras encore voir Son cadeau. Il est juste <H>à Ses pieds</> !\n \nElle m’a choisi ! Elle m’a reconnu ! Elle m’a pardonné ! Elle m’a invité à rejoindre Son monde, pour La servir à Ses côtés. Là-bas, c’est le paradis, c’est le Paradis, c’est la terre où coule le Fleuve de Miel... C’est le Paradis... le Paradis... le Paradis ! Son Paradis !",
+        "srId": 107001
+      },
+      {
+        "id": 20662,
+        "type": "Drop",
+        "name": "Arcano — Tome III",
+        "text": "Félicitations au quatre-vingt-dix-neuvième heureux gagnant des tasses tournantes ! Vous avez décroché le gros lot !\nDescendez d’ici et rendez-vous dans la pièce où un cadeau exceptionnel vous attend. Une récompense à la hauteur de votre incroyable chance.\nJe ne sais pas lequel des habitants d’Arcano vous êtes. Peut-être la petite Ada, toujours prête à s’amuser ? Hahaha ! Enfin, peu importe qui vous êtes. Le Paradis existe avant tout pour rendre les gens heureux. Peu importe à qui cette joie est offerte, c’est une bonne chose.\n \nIci, c’est notre Arcano à tous. Ici, c’est notre foyer, notre Paradis à tous.\nPour ce cadeau inattendu, ne remerciez personne. La seule personne que vous devez remercier, c’est vous-même. C’est votre bonne étoile qui vous a conduit jusqu’ici, et c’est grâce à votre sens de l’observation que vous avez trouvé ce billet et obtenu cette récompense.\nArcano devient chaque jour un endroit meilleur grâce aux efforts de chacun. Il est donc naturel que chacun puisse profiter des fruits de ces efforts.\nAllez maintenant récupérer votre cadeau dans <H>la pièce juste en face, à l’enseigne dorée</> !\n \nJe vous souhaite une merveilleuse journée !\nÀ l’avenir d’Arcano ! À notre avenir !",
+        "srId": 107101
+      },
+      {
+        "id": 20663,
+        "type": "Drop",
+        "name": "Arcano — Tome IV",
+        "text": "L’atterrissage d’urgence a échoué. La moitié de mon corps ne répond plus. Je ne pense pas survivre jusqu’à l’arrivée des secours.\nIl reste encore des provisions dans le <H>dirigeable</>. Mes camarades, emportez-les avec vous. Puisse votre mission se dérouler sans encombre.\nSi vous le pouvez, allez dans la soute arrière du dirigeable et trouvez la photo d’une jeune fille aux longs cheveux blonds. Déposez-la sur ma poitrine et enterrez-la avec moi...\nC’est le seul souvenir auquel je tiens encore.",
+        "srId": 107101
+      },
+      {
+        "id": 20664,
+        "type": "Drop",
+        "name": "Arcano — Tome V",
+        "text": "Ma chère Rosalia,\nJ’arrive bientôt à Arcano. Comme je te l’avais promis, je consignerai toutes mes observations sur cette ville et je te les enverrai par courrier.\nIl paraît que les coutumes locales y sont très particulières. Pour un auteur de romans fantastiques comme moi, c’est tout simplement un lieu rêvé pour trouver l’inspiration !\nTu le sais, je traverse une période où l’inspiration me fait défaut et cela me désespère. Je suis persuadé que venir ici en personne me donnera quantité de nouvelles idées.\nJ’ai déjà trouvé mon histoire. Elle parlera d’une jeune fille qui obtient par hasard une paire de chaussures de danse rouges capables d’exaucer les vœux. Mais en réalité, chaque vœu réalisé exige un prix. Et lorsqu’elle voudra enfin s’en débarrasser, incapable de continuer à en payer le prix, elle découvrira que les chaussures ont fusionné avec ses pieds...\nQu’en penses-tu ? Un conte avec une petite touche d’horreur, ça te plaît ? J’ai déjà rempli une bonne quinzaine de pages de brouillons. Comme je m’y attendais, changer d’environnement stimule vraiment l’inspiration. Une fois ce voyage terminé, je mettrai tout cela au propre avant de l’envoyer de nouveau à une maison d’édition.\n...\nLes habitants sont chaleureux et accueillants, bien loin de l’image effrayante que leur prêtent les rumeurs. J’en étais sûr : la plupart de ces légendes urbaines ne sont que des histoires déformées de bouche à oreille. Il n’y avait vraiment aucune raison de s’inquiéter.\nC’est un peu dommage, finalement... Je comptais justement y puiser de l’inspiration pour mon histoire d’horreur.\nJ’ai un peu trop bu... J’ai la tête qui tourne...\nHein ? Où est-ce que j’ai posé mes bagages déjà ?\nAh... je les vois. <H>À côté du pilier, dans le coin de la pièce</>.\nJ’ai vraiment la tête qui tourne...\nJe ferais mieux d’aller dormir un peu.\n...\n...\nC’est... moi qui ai écrit cette lettre ?\nQui est Rosalia... ?\nEt moi...\nQui suis-je... ?\n \n(La suite de la lettre a été détruite par les flammes. Les bords noircis sont irréguliers et entièrement carbonisés.)",
+        "srId": 107201
+      }
+    ]
   }
 ]

@@ -16,9 +16,7 @@ local Language2ESystemLanguage = {
   ContentJP = ESystemLanguage.ContentJP,
   ContentKR = ESystemLanguage.ContentKR,
   ContentTC = ESystemLanguage.ContentTC,
-  ContentDE = ESystemLanguage.ContentDE,
-  ContentFR = ESystemLanguage.ContentFR,
-  ContentES = ESystemLanguage.ContentES
+  ContentFR = ESystemLanguage.ContentFR
 }
 local BP_EMGameInstance_C = Class({
   "BluePrints.Common.TimerMgr",
@@ -31,6 +29,7 @@ function BP_EMGameInstance_C:OnLoginSuccess()
   if Const.OpenVerifyArray then
     self:InitVerifyArray()
   end
+  self.NightBookAttrFilter = {}
 end
 
 function BP_EMGameInstance_C:GetInt(TableName, VarName)
@@ -73,6 +72,10 @@ function BP_EMGameInstance_C:_FontOptimizeSetting()
   end
 end
 
+function BP_EMGameInstance_C:_ApplyKawaiiPhysicsSetting()
+  UKismetSystemLibrary.ExecuteConsoleCommand(self, string.format("a.KawaiiPhysics.UseSIMD %d", EMLuaConst.KawaiiPhysicsUseSIMD), nil)
+end
+
 function BP_EMGameInstance_C:InitReady()
   GWorld.IsDev = self:GetIsDev()
   if IsDedicatedServer(self) then
@@ -80,6 +83,7 @@ function BP_EMGameInstance_C:InitReady()
     print(_G.LogTag, "DebugServer", GWorld.bDebugServer)
   else
     self:_FontOptimizeSetting()
+    self:_ApplyKawaiiPhysicsSetting()
   end
   if URuntimeCommonFunctionLibrary.IsPlayInEditor(self) then
     DebugPrint("Check Open FX Budget in Editor ", Const.bEditorOpenFXBudget)
@@ -325,9 +329,7 @@ function BP_EMGameInstance_C:OnPlayerControllerGameEnd_Internal(IsWin, BattleInf
   local Avatar = GWorld:GetAvatar()
   local IsHardBoss = Avatar and Avatar:IsInHardBoss()
   local WorldCompositionSubSystem = UE4.USubsystemBlueprintLibrary.GetWorldSubsystem(self, UE4.UWorldCompositionSubSystem)
-  local GameState = UE4.UGameplayStatics.GetGameState(self)
-  local IsRougePro = GameState and GameState.GameModeType == "RougePro"
-  local AvatarStatusEnable = Avatar and not WorldCompositionSubSystem and not Avatar:IsInRougeLike() and not IsRougePro
+  local AvatarStatusEnable = Avatar and not WorldCompositionSubSystem and not Avatar:IsInRougeLike()
   if AvatarStatusEnable and not Avatar:IsInNarrowDungeon() then
     GWorld.DungeonSettlementAgainInVisible = true
   end
@@ -1889,6 +1891,7 @@ function BP_EMGameInstance_C:ReceiveInit()
   end
   
   self.ApplicationHasReactivatedDelegate:Add(self, self.OnApplicationHasReactivated)
+  EventManager:AddEvent(EventID.WindowMinimizedChanged, self, self.OnWindowMinimizedChanged)
   local TeammateEffects = EMCache:Get("TeammateEffects")
   if TeammateEffects then
     UEMGameInstance.SetFriendFXQuality(TeammateEffects)
@@ -1904,6 +1907,24 @@ end
 function BP_EMGameInstance_C:OnApplicationWillTerminate()
   self.ApplicationWillTerminateDelegate:Clear()
   EMCache:SaveAll(false)
+end
+
+function BP_EMGameInstance_C:OnWindowMinimizedChanged(bIsMinimized)
+  if bIsMinimized then
+    local LockFrameRate = EMLuaConst.WindowMinimizedFrameRate or 0
+    if LockFrameRate > 0 then
+      UKismetSystemLibrary.ExecuteConsoleCommand(self, string.format("t.MaxFPS %d", LockFrameRate), nil)
+    end
+    EMCache:SaveAll(false)
+  else
+    local GameUserSettings = UE4.UGameUserSettings:GetGameUserSettings()
+    local FrameRateLimit = IsValid(GameUserSettings) and GameUserSettings:GetFrameRateLimit() or 0
+    if FrameRateLimit and FrameRateLimit > 0 then
+      UKismetSystemLibrary.ExecuteConsoleCommand(self, string.format("t.MaxFPS %d", math.floor(FrameRateLimit)), nil)
+    else
+      self:SetUnfixedFrameRate()
+    end
+  end
 end
 
 function BP_EMGameInstance_C:ReceiveShutdown()
@@ -1968,6 +1989,10 @@ end
 function BP_EMGameInstance_C:InitGameSystemLanguage()
   local SystemLanguage = EMCache:Get("SystemLanguage")
   if nil ~= SystemLanguage then
+    if "DE" == SystemLanguage or "ES" == SystemLanguage then
+      SystemLanguage = "EN"
+      EMCache:Set("SystemLanguage", "EN")
+    end
     CommonConst.SystemLanguage = CommonConst.SystemLanguages[SystemLanguage]
     self.SystemLanguage = Language2ESystemLanguage[CommonConst.SystemLanguage]
   else
@@ -1978,9 +2003,7 @@ function BP_EMGameInstance_C:InitGameSystemLanguage()
         en = "EN",
         ko = "KR",
         ja = "JP",
-        de = "DE",
-        fr = "FR",
-        es = "ES"
+        fr = "FR"
       }
       local ChineseLanguageMapping = {
         cn = "CN",
@@ -2036,8 +2059,6 @@ function BP_EMGameInstance_C:SetCurrentLanguage()
     KR = "ko",
     JP = "ja",
     FR = "fr",
-    DE = "de",
-    ES = "es",
     TC = "zh-Hant-tw"
   }
   local SystemLanguage = EMCache:Get("SystemLanguage")
@@ -2278,12 +2299,12 @@ function BP_EMGameInstance_C:GetPlayerMVPDataByIndex(PlayerIndex)
   if Players and Players[PlayerIndex] then
     local NumText = Players[PlayerIndex][1].Value
     if NumText < 1000000000 then
-      NumText = Utils.FormatNumber(NumText, false)
+      NumText = MiscUtils.FormatNumber(NumText, false)
       if Players[PlayerIndex][1].DataName == "Damage" or Players[PlayerIndex][1].DataName == "Damaged" then
         NumText = string.format("%s", NumText) .. "%"
       end
     else
-      NumText = Utils.FormatNumber(NumText, true)
+      NumText = MiscUtils.FormatNumber(NumText, true)
     end
     DebugPrint("MvpData", PlayerIndex, Players[PlayerIndex][1].DataName, NumText)
     return {
@@ -3067,6 +3088,29 @@ function BP_EMGameInstance_C:GetTicketId()
     return self.TicketId
   end
   return -1
+end
+
+function BP_EMGameInstance_C:AddAutoNextRoundProgress(DungeonId)
+  if not self.AutoNextRoundProgress then
+    self.AutoNextRoundProgress = {}
+  end
+  self.AutoNextRoundProgress[DungeonId] = (self.AutoNextRoundProgress[DungeonId] or 0) + 1
+end
+
+function BP_EMGameInstance_C:ResetAutoNextRoundProgress(DungeonId)
+  if not self.AutoNextRoundProgress then
+    self.AutoNextRoundProgress = {}
+  end
+  self.AutoNextRoundProgress[DungeonId] = 0
+  self.IsResetAutoNextRoundProgress = true
+end
+
+function BP_EMGameInstance_C:GetAutoNextRoundProgress(DungeonId)
+  if not self.AutoNextRoundProgress then
+    return 0
+  end
+  self.IsResetAutoNextRoundProgress = false
+  return self.AutoNextRoundProgress[DungeonId] or 0
 end
 
 return BP_EMGameInstance_C

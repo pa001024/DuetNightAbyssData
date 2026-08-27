@@ -7,6 +7,17 @@ function M:EMAfterInitialize()
   end
 end
 
+function M:EMSetManagedLuaWidgetTickActive(bActive)
+  local TickSubsystem = rawget(self, "EMLuaWidgetTickSubsystem")
+  if not IsValid(TickSubsystem) then
+    TickSubsystem = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(self, UE4.UEMLuaWidgetTickSubsystem)
+    rawset(self, "EMLuaWidgetTickSubsystem", TickSubsystem)
+  end
+  if IsValid(TickSubsystem) then
+    TickSubsystem:NotifyWidgetActiveChanged(self, bActive)
+  end
+end
+
 function M:_SetUpScrollBoxRStickInput(ScrollView, ScrollSpeed, bIsReserve)
   self.TargetScrollBoxWithRStickInput = ScrollView
   self.ScrollOffsetOfEndOfSBox = ScrollView:GetScrollOffsetOfEnd()

@@ -16,7 +16,8 @@ function M:OnTeamMainFocusChanged(bFocused)
     self.WBP_Com_FilterSort.Controller,
     self.Button_BlackList.Key_GamePad,
     self.Button_Request.Key_GamePad,
-    self.Key_GamePad
+    self.Key_GamePad,
+    self.Key_Check_GamePad
   }
   for _, KeyWidget in ipairs(KeyWidgets) do
     KeyWidget:SetVisibility(UIConst.VisibilityOp[Visibility])
@@ -140,6 +141,7 @@ function M:Construct()
       {Type = "Img", ImgShortPath = "X"}
     }
   })
+  self.Key_Check_GamePad:CreateGamepadKey(UIConst.GamePadImgKey.DPadRight)
   self:AddInputMethodChangedListen()
   self:OnUpdateUIStyleByInputTypeChange(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
 end
@@ -172,6 +174,12 @@ function M:OnOnlineCheckBoxChange(bChecked)
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
   self.bFilterOnline = bChecked
   self:RefreshList()
+end
+
+function M:ToggleOnlineFilterByGamepad()
+  local bChecked = not self.bFilterOnline
+  self.CheckBox_Online:SetCheckedState(bChecked and ECheckBoxState.Checked or ECheckBoxState.Unchecked)
+  self:OnOnlineCheckBoxChange(bChecked)
 end
 
 function M:OpenFriendDialogWindow(DialogType)
@@ -213,7 +221,12 @@ function M:OnRefreshListEnd()
   self.Num_Friend:SetText(#FriendList)
   self:RefreshNavigationRule()
   if self:HasFocusedDescendants() or self:HasAnyUserFocus() or not FriendController:IsGamepad() then
-    self.MyListView:SetFocus()
+    if FriendController:IsGamepad() and self.MyListView:GetNumItems() > 0 then
+      self.MyListView:SetSelectedIndex(0)
+      self.MyListView:NavigateToIndex(0)
+    else
+      self.MyListView:SetFocus()
+    end
   end
 end
 
@@ -249,8 +262,10 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
   end
   if CurInputDevice == ECommonInputType.MouseAndKeyboard then
     self.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Key_Check_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
   elseif CurInputDevice == ECommonInputType.Gamepad then
     self.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Visible)
+    self.Key_Check_GamePad:SetVisibility(UIConst.VisibilityOp.Visible)
   end
   self:RefreshNavigationRule()
 end
@@ -273,6 +288,9 @@ function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
   if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
     if "Gamepad_DPad_Left" == InKeyName then
       self:OpenFriendDialogWindow(FriendCommon.FriendDialogType.BlackList)
+      IsHandled = true
+    elseif InKeyName == UIConst.GamePadKey.DPadRight then
+      self:ToggleOnlineFilterByGamepad()
       IsHandled = true
     elseif "Gamepad_LeftThumbstick" == InKeyName then
       local GameInstance = GWorld.GameInstance

@@ -45,7 +45,7 @@ function M:PlayPetVoice(VoiceStr)
 end
 
 function M:OnArmoryShowPet()
-  if self.bWaitForNotifyToChangePet and self.RealChangePetModel and self.IsControled then
+  if self.bWaitForNotifyToChangePet and self.RealChangePetModel and self.IsControlled then
     self.bWaitForNotifyToChangePet = false
     self.bShouldSetPetFresnel = true
     self.RealChangePetModel()
@@ -166,17 +166,15 @@ function M:PetLvUpOrBreakUp()
     return
   end
   local MeshLocation = ArmoryPet.SkeletalMesh:K2_GetComponentLocation()
-  if ArmoryPet then
-    ArmoryPet.FXComponent:PlayEffectByIDParams(305, {
-      bTickEvenWhenPaused = true,
-      UseAbsoluteLocation = true,
-      Location = {
-        MeshLocation.X,
-        MeshLocation.Y,
-        MeshLocation.Z
-      }
-    })
-  end
+  ArmoryPet.FXComponent:PlayEffectByIDParams(305, {
+    bTickEvenWhenPaused = true,
+    UseAbsoluteLocation = true,
+    Location = {
+      MeshLocation.X,
+      MeshLocation.Y,
+      MeshLocation.Z
+    }
+  })
 end
 
 function M:Component_OnClosed()

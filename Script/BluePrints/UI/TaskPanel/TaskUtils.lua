@@ -1176,4 +1176,119 @@ function TaskUtils:GetAndClearChooseCharId()
   return CharId
 end
 
+function TaskUtils:FirstChapterQuestFinished()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar or not Avatar.QuestChains then
+    return
+  end
+  return ConditionUtils.CheckCondition(Avatar, 6028)
+end
+
+function TaskUtils:IsQuestFinished(InQuestChain)
+  if not InQuestChain then
+    return
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar or not Avatar.QuestChains then
+    return
+  end
+  if type(InQuestChain) == "number" then
+    return Avatar.QuestChains[InQuestChain] and Avatar.QuestChains[InQuestChain]:IsFinish()
+  elseif type(InQuestChain) == "table" then
+    return InQuestChain.IsFinish and InQuestChain:IsFinish()
+  end
+end
+
+function TaskUtils:CanUnlockInAdvance(InQuestChain)
+  if not InQuestChain then
+    return
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar or not Avatar.QuestChains then
+    return
+  end
+  
+  local function DetermineQuestChainData(InQuestChainData)
+    if not (InQuestChainData and InQuestChainData.UnlockStartTime) or not InQuestChainData.UnlockEndTime then
+      return false
+    end
+    local NowTime = TimeUtils.NowTime()
+    return NowTime >= InQuestChainData.UnlockStartTime and NowTime <= InQuestChainData.UnlockEndTime
+  end
+  
+  if type(InQuestChain) == "number" then
+    local QuestChainData = DataMgr.QuestChain[InQuestChain]
+    return DetermineQuestChainData(QuestChainData)
+  elseif type(InQuestChain) == "table" then
+    local QuestChainData
+    if InQuestChain.Data then
+      QuestChainData = InQuestChain:Data()
+    end
+    return DetermineQuestChainData(QuestChainData)
+  end
+end
+
+function TaskUtils:SetTrackingQuestInfoToServer(InTrackingQuestId)
+  DebugPrint("lxc: TaskUtils:SetTrackingQuestInfoToServer InTrackingQuestId " .. tostring(InTrackingQuestId))
+  if not InTrackingQuestId then
+    DebugPrint("lxc: TaskUtils:SetTrackingQuestInfoToServer InTrackingQuestId is nil")
+    return
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    DebugPrint("lxc: TaskUtils:SetTrackingQuestInfoToServer no Avatar")
+    return
+  end
+  local ServerTrackId = Avatar.TrackingQuestChainId
+  local ClientTrackId = InTrackingQuestId
+  local QuestChain = Avatar.QuestChains[ClientTrackId]
+  if not QuestChain then
+    DebugPrint("lxc: TaskUtils:SetTrackingQuestInfoToServer no QuestChain for QuestChainId = " .. tostring(InTrackingQuestId))
+    return
+  end
+  if ServerTrackId ~= ClientTrackId then
+    if QuestChain then
+      TaskUtils:ResumQuestTaskBarOnTrack(ServerTrackId, ClientTrackId, QuestChain.DoingQuestId)
+    else
+      TaskUtils:ResumQuestTaskBarOnTrack(ServerTrackId, nil, nil)
+    end
+  end
+  local Info = TaskUtils:GetQuestDetail(ClientTrackId, QuestChain.DoingQuestId)
+  if not Info then
+    DebugPrint("lxc: TaskUtils:SetTrackingQuestInfoToServer no Info")
+    return
+  end
+  if not Info.SubRegionId then
+    DebugPrint("lxc: TaskUtils:SetTrackingQuestInfoToServer no Info.SubRegionId")
+    return
+  end
+  if ServerTrackId and not ClientTrackId then
+    Avatar:CancelQuestTracking(ServerTrackId)
+  elseif ServerTrackId ~= ClientTrackId then
+    Avatar:SetQuestTracking(ClientTrackId, Info.SubRegionId)
+  else
+    Avatar:SetQuestTracking(ClientTrackId, Info.SubRegionId)
+  end
+end
+
+function TaskUtils:IsQuestChainAdvanceUnlock(InQuestChain)
+  local Avatar = GWorld:GetAvatar()
+  DebugPrint("TaskUtils:CanUnlockInAdvance: InQuestChain: " .. tostring(InQuestChain))
+  DebugPrint("TaskUtils:CanUnlockInAdvance: Avatar: " .. tostring(Avatar))
+  if not InQuestChain or not Avatar then
+    return false
+  end
+  local QuestChain
+  if type(InQuestChain) == "number" then
+    QuestChain = Avatar.QuestChains[InQuestChain]
+  elseif type(InQuestChain) == "table" then
+    QuestChain = InQuestChain
+  end
+  DebugPrint("TaskUtils:CanUnlockInAdvance: QuestChain: " .. tostring(QuestChain))
+  if not QuestChain then
+    return false
+  end
+  return QuestChain.IsAdvanceUnlock
+end
+
 return TaskUtils

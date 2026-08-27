@@ -13,12 +13,11 @@ end
 
 function PlayerManager:GetAvatarCrossAttr(AvatarEid)
   if not IsSkynetServer() then
-    local GameMode = UE.UGameplayStatics.GetGameMode(GWorld.GameInstance)
-    assert(GameMode, "GameMode is nil")
-    assert(GameMode.AvatarInfos, "GameMode is nil")
     local AvatarEidStr = CommonUtils.ObjId2Str(AvatarEid)
-    local Info = GameMode.AvatarInfos[AvatarEidStr]
-    return Info and Info.PlayerInfo
+    if self.DSEntity and self.DSEntity.AvatarInfos then
+      local Info = self.DSEntity.AvatarInfos[AvatarEidStr]
+      return Info and Info.PlayerInfo
+    end
   else
     return DungeonInstance.OwnerAvatar:GetCrossAttrs()
   end

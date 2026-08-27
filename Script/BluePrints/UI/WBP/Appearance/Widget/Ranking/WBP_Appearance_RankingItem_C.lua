@@ -235,6 +235,13 @@ function M:InitPlayerPoint()
   end
 end
 
+function M:RestoreHeadMenuFocus()
+  if not self.ParentWidget or not self.ParentWidget.IsGamePad then
+    return
+  end
+  self:SetFocus()
+end
+
 function M:TryPrepareGuildSimpleInfoBeforeOpen(OpenCallback)
   if type(OpenCallback) ~= "function" then
     return
@@ -327,6 +334,9 @@ function M:HeadMenuOpenChanged(bOpen)
   if self.ParentWidget and self.ParentWidget.UpdateTapBottomKeyInfo then
     self.ParentWidget:UpdateTapBottomKeyInfo(bOpen)
   end
+  if not bOpen then
+    self:RestoreHeadMenuFocus()
+  end
 end
 
 function M:OnKeyDown(MyGeometry, InKeyEvent)
@@ -341,7 +351,6 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
       end
     elseif "Gamepad_FaceButton_Right" == InKeyName and self.Head_Anchor and self.Head_Anchor:IsOpen() then
       self.Head_Anchor:Close()
-      self:SetFocus()
       IsEventHandled = true
     end
   end

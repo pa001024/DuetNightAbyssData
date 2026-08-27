@@ -187,6 +187,19 @@ function M:CancelNewReddot(Content)
   ReddotManager.DecreaseLeafNodeCount(CameraGameUtils.ReddotNodeName)
 end
 
+function M:RefreshPhotoItemReddot(QuestChainId)
+  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(self.ReddotNodeName)
+  for _, Content in pairs(self.PhotoItemContents) do
+    if Content.QuestChainId == QuestChainId then
+      Content.RewardGot = true
+    end
+    Content.ReddotType = CacheDetail and CacheDetail[Content.QuestChainId] or self.ReddotType.NONE
+    if Content.SelfWidget and Content.SelfWidget.UpdateReddot then
+      Content.SelfWidget:UpdateReddot()
+    end
+  end
+end
+
 function M:OnPhotoItemClicked(Content)
   if self.ContentClicked == Content then
     return
@@ -399,6 +412,8 @@ function M:OnRewardAndPhotoButtonClicked()
     self.Text_PhotoDis:SetText(GText("UI_Reward_Received"))
     self.ContentClicked.RewardGot = true
     self:RefreshRewardList()
+    CameraGameUtils.RefreshReddot(self.EventId)
+    self:RefreshPhotoItemReddot(self.ContentClicked.QuestChainId)
   end
   
   AudioManager(self):PlayUISound(self, "event:/ui/activity/sub_btn_click", nil, nil)

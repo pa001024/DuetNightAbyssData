@@ -7,5 +7,8 @@ end
 return ReadOnly("ConditionId2Mail", {
   [4010] = {
     [1] = 10016
+  },
+  [10302103] = {
+    [1] = 10086
   }
 })

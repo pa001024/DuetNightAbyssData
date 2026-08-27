@@ -196,7 +196,7 @@ return ReadOnly("MainUI", {
   [17] = {
     ActionName = "OpenChat",
     EnterId = 17,
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Common/T_Entrance_Chat.T_Entrance_Chat",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Chat.T_Entrance_Chat",
     Name = "MAIN_UI_CHAT",
     ReddotNode = "ChatMainMenu",
     SystemUIName = "ChatMain",
@@ -296,7 +296,7 @@ return ReadOnly("MainUI", {
     ShowCondition = {
       2,
       5,
-      350
+      8047
     },
     SystemUIName = "ModArchiveMain",
     UIUnlockRuleName = "ModArchive"
@@ -409,5 +409,14 @@ return ReadOnly("MainUI", {
     Sequence = 191,
     SystemUIName = "MemoryMain",
     UIUnlockRuleName = "Memory"
+  },
+  [37] = {
+    ActionName = "OpenTeamHall",
+    EnterId = 37,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Team.T_Entrance_Team",
+    Name = "MAIN_UI_TEAMHALL",
+    Sequence = 132,
+    SystemUIName = "TeamHall",
+    UIUnlockRuleName = "TeamHall"
   }
 })

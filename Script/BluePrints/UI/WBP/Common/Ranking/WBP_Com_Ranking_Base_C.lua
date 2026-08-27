@@ -2,6 +2,7 @@ require("UnLua")
 local ActorController = require("BluePrints.UI.WBP.Armory.ActorController.Armory_ActorController")
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
 local ComRankingUtils = require("BluePrints.UI.WBP.Common.Ranking.ComRankingUtils")
+local SerializeUtils = require("Utils.SerializeUtils")
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
 })
@@ -543,7 +544,7 @@ function M:InitPreviewScene(OnReady)
       end
     end
     
-    if ActorControllerRef.IsControled then
+    if ActorControllerRef.IsControlled then
       OnReady()
     end
   end

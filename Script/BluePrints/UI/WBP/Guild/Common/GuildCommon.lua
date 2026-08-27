@@ -65,7 +65,8 @@ GuildCommon.EventID = {
   OnGuildGetIdByName = "OnGuildGetIdByName",
   OnNotifyGuildRemoveJoinRequests = "OnNotifyGuildRemoveJoinRequests",
   OnGetOtherPlayerPersonalInfo = "OnGetOtherPlayerPersonalInfo",
-  OnGuildMessageMarkDirty = "OnGuildMessageMarkDirty"
+  OnGuildMessageMarkDirty = "OnGuildMessageMarkDirty",
+  OnGuildHomeDataUpdate = "OnGuildHomeDataUpdate"
 }
 _G.GuildCommon = GuildCommon
 return GuildCommon

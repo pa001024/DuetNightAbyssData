@@ -5,16 +5,19 @@ function WBP_Common_Dialog_Item_Currency_PC_C:PreInitContent(Params, PopupData, 
   self.Super.PreInitContent(self, Params, PopupData, Owner)
   self:BindDialogEvent(DialogEvent.HideDialogItem, self.HideDialogItem)
   self:BindDialogEvent("UpdateFunds", self.Show_Funds)
+  self:BindDialogEvent("CloseCurrencyItemTips", self.CloseCurrencyItemTips)
 end
 
 function WBP_Common_Dialog_Item_Currency_PC_C:InitContent(Params, PopupData, Owner)
   self.Owner = Owner
   self.PosIndex = self.Owner:GetItemIndex()
   self.SupportLSFocus = Params and Params.SupportLSFocus or false
+  self.SupportRSOpenTips = Params and Params.SupportRSOpenTips or false
   self:Show_Funds(Params, PopupData)
 end
 
 function WBP_Common_Dialog_Item_Currency_PC_C:Show_Funds(Params, PopupData)
+  self:CloseCurrencyItemTips(true)
   if Params and Params.Funds then
     local Widgets = self.HB_Item:GetAllChildren()
     local WidgetCount = self.HB_Item:GetChildrenCount()
@@ -41,6 +44,9 @@ function WBP_Common_Dialog_Item_Currency_PC_C:Show_Funds(Params, PopupData)
           InParams.ResourceId = value.FundId
         end
         Widget:InitContent(InParams)
+        if Widget.BindCurrencyMenuOpenChanged then
+          Widget:BindCurrencyMenuOpenChanged(self, self.OnCurrencyItemMenuOpenChanged)
+        end
       end
     end
     if WidgetCount > #Params.Funds then
@@ -54,8 +60,83 @@ function WBP_Common_Dialog_Item_Currency_PC_C:Show_Funds(Params, PopupData)
   end
 end
 
+function WBP_Common_Dialog_Item_Currency_PC_C:GetFirstCurrencyWidget()
+  local WidgetCount = self.HB_Item:GetChildrenCount()
+  for Index = 0, WidgetCount - 1 do
+    local Widget = self.HB_Item:GetChildAt(Index)
+    if Widget and Widget:GetVisibility() ~= UE.ESlateVisibility.Collapsed then
+      return Widget
+    end
+  end
+  return nil
+end
+
+function WBP_Common_Dialog_Item_Currency_PC_C:GetCurrencyTipsRestoreWidget()
+  local RestoreWidget
+  for _, ContentWidget in pairs(self.Owner.ContentWidgetTable) do
+    if ContentWidget ~= self and ContentWidget.HandleDialogFocused then
+      RestoreWidget = ContentWidget:HandleDialogFocused()
+      if RestoreWidget then
+        break
+      end
+    end
+  end
+  if not RestoreWidget and self.Owner.BP_GetDesiredFocusTarget then
+    RestoreWidget = self.Owner:BP_GetDesiredFocusTarget()
+  end
+  return RestoreWidget or self.Owner
+end
+
+function WBP_Common_Dialog_Item_Currency_PC_C:OpenCurrencyItemTips()
+  local Widget = self:GetFirstCurrencyWidget()
+  if not Widget or not Widget.OpenCurrencyTips then
+    return false
+  end
+  self.CurrencyTipsRestoreWidget = self:GetCurrencyTipsRestoreWidget()
+  if Widget.bIsFocusable ~= nil then
+    Widget.bIsFocusable = true
+  end
+  Widget:SetFocus()
+  return Widget:OpenCurrencyTips(self.CurrencyTipsRestoreWidget)
+end
+
+function WBP_Common_Dialog_Item_Currency_PC_C:CloseCurrencyItemTips(bForce)
+  local Widget = self.OpenedCurrencyWidget or self:GetFirstCurrencyWidget()
+  if Widget and Widget.CloseCurrencyTips then
+    Widget:CloseCurrencyTips(bForce)
+  end
+end
+
+function WBP_Common_Dialog_Item_Currency_PC_C:RefreshCurrencyGamepadKeyVisible()
+  local WidgetCount = self.HB_Item:GetChildrenCount()
+  for Index = 0, WidgetCount - 1 do
+    local Widget = self.HB_Item:GetChildAt(Index)
+    if Widget and Widget.RefreshCurrencyGamepadKeyVisible then
+      Widget:RefreshCurrencyGamepadKeyVisible()
+    end
+  end
+end
+
+function WBP_Common_Dialog_Item_Currency_PC_C:OnCurrencyItemMenuOpenChanged(bIsOpen, Content)
+  self.CurrencyTipsOpening = bIsOpen
+  self.OpenedCurrencyWidget = bIsOpen and Content and Content.SelfWidget or nil
+  self:RefreshCurrencyGamepadKeyVisible()
+  self:BroadcastDialogEvent("CurrencyItemTipsChanged", bIsOpen)
+  if not bIsOpen and UIUtils.IsGamepadInput() then
+    local RestoreWidget = self.CurrencyTipsRestoreWidget
+    self:AddTimer(0.01, function()
+      if IsValid(RestoreWidget) then
+        RestoreWidget:SetFocus()
+      elseif IsValid(self.Owner) then
+        self.Owner:SetFocus()
+      end
+    end)
+  end
+end
+
 function WBP_Common_Dialog_Item_Currency_PC_C:HideDialogItem(Params, PopupData)
   if Params.DialogItemIndex == self.PosIndex then
+    self:CloseCurrencyItemTips(true)
     if Params.bHideDialogItem then
       self:SetVisibility(UE.ESlateVisibility.Collapsed)
     else
@@ -89,9 +170,12 @@ function WBP_Common_Dialog_Item_Currency_PC_C:OnContentKeyDown(MyGeometry, InKey
   if self.SupportLSFocus then
     if InKeyName == Const.GamepadLeftThumbstick then
       return self:Focus2Currency(true)
-    elseif InKeyName == Const.GamepadFaceButtonRight then
+    elseif InKeyName == Const.GamepadFaceButtonRight and not self.CurrencyTipsOpening then
       return self:Focus2Currency(false)
     end
+  end
+  if self.SupportRSOpenTips and InKeyName == Const.GamepadRightThumbstick then
+    return self:OpenCurrencyItemTips()
   end
   return false
 end

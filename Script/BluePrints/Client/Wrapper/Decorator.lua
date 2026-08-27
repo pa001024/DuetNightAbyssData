@@ -57,45 +57,52 @@ local LuaBaseTypes = {
   table = "table"
 }
 
+function Decorator:RpcFunc(FuncName, args_type, f)
+  local function NewFunc(obj, ...)
+    local args_value = {
+      ...
+    }
+    if #args_type ~= #args_value then
+      error(string.format("The argument number is not match, %s need %d args, but %d args are given", FuncName, #args_type, #args_value))
+    end
+    for index, arg in ipairs(args_value) do
+      local arg_type = args_type[index]
+      if LuaBaseTypes[arg_type] then
+        if type(arg) ~= LuaBaseTypes[arg_type] then
+          error(string.format("The argument type is not match, %s %s arg need %s, but %s is given", FuncName, index, arg_type, type(arg)))
+        end
+        if "Int" == arg_type and math.type(arg) ~= "integer" then
+          error(string.format("The argument type is not match, %s %s arg need Int, but %s is given", FuncName, index, math.type(arg)))
+        end
+      elseif "ObjId" == arg_type then
+        if not PropUtils.IsObjId(arg) then
+          error(string.format("The argument type is not match, %s %s arg need ObjId", FuncName, index))
+        end
+      else
+        local real_type = ClassMgr:GetType(arg_type)
+        if not real_type then
+          error(string.format("The argument type is error, %s %s arg %s", FuncName, index, arg_type))
+        end
+        if arg.__Class__ ~= real_type then
+          error(string.format("The argument class is not match, %s %s arg need %s, but %s is given", FuncName, index, arg_type, arg.__Name__))
+        end
+      end
+    end
+    f(obj, ...)
+    local OnPostRpc = obj.OnPostRpc
+    if OnPostRpc then
+      OnPostRpc(obj, FuncName)
+    end
+  end
+  
+  return NewFunc
+end
+
 function Decorator:Rpc(args)
   self:AddDecorator(function(FuncName, f)
     local args_type = SplitAndTrim(args, ",")
     GWorld:AddRpcFunc(FuncName, args_type)
-    
-    local function NewFunc(obj, ...)
-      local args_value = {
-        ...
-      }
-      if #args_type ~= #args_value then
-        error(string.format("The argument number is not match, %s need %d args, but %d args are given", FuncName, #args_type, #args_value))
-      end
-      for index, arg in ipairs(args_value) do
-        local arg_type = args_type[index]
-        if LuaBaseTypes[arg_type] then
-          if type(arg) ~= LuaBaseTypes[arg_type] then
-            error(string.format("The argument type is not match, %s %s arg need %s, but %s is given", FuncName, index, arg_type, type(arg)))
-          end
-          if "Int" == arg_type and math.type(arg) ~= "integer" then
-            error(string.format("The argument type is not match, %s %s arg need Int, but %s is given", FuncName, index, math.type(arg)))
-          end
-        elseif "ObjId" == arg_type then
-          if not PropUtils.IsObjId(arg) then
-            error(string.format("The argument type is not match, %s %s arg need ObjId", FuncName, index))
-          end
-        else
-          local real_type = ClassMgr:GetType(arg_type)
-          if not real_type then
-            error(string.format("The argument type is error, %s %s arg %s", FuncName, index, arg_type))
-          end
-          if arg.__Class__ ~= real_type then
-            error(string.format("The argument class is not match, %s %s arg need %s, but %s is given", FuncName, index, arg_type, arg.__Name__))
-          end
-        end
-      end
-      f(obj, ...)
-    end
-    
-    return NewFunc
+    return self:RpcFunc(FuncName, args_type, f)
   end)
 end
 
@@ -119,7 +126,7 @@ function Decorator:BlockAllUIInput(RPCName)
   end)
 end
 
-function Decorator:LimitCall(interval)
+function Decorator:LimitCall(interval, OnLimited)
   self:AddDecorator(function(FuncName, f)
     local function NewFunc(obj, ...)
       local now_time = os.time()
@@ -129,7 +136,8 @@ function Decorator:LimitCall(interval)
       if now_time > refresh_time then
         f(obj, ...)
         GWorld.LimitCallMethods[FuncName] = now_time + interval
-      else
+      elseif OnLimited then
+        OnLimited(obj, ...)
       end
     end
     

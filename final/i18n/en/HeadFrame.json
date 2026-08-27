@@ -301,5 +301,33 @@
     "desc": "Used as an avatar frame.",
     "icon": "T_Head_Frame40",
     "access": "Available at Shop"
+  },
+  {
+    "id": 10047,
+    "name": "发条旋舞·绣红",
+    "desc": "Used as an avatar frame.",
+    "icon": "T_Head_Frame41",
+    "access": "Available from events"
+  },
+  {
+    "id": 10048,
+    "name": "发条旋舞·墨玉",
+    "desc": "Used as an avatar frame.",
+    "icon": "T_Head_Frame40",
+    "access": "Available from events"
+  },
+  {
+    "id": 10049,
+    "name": "鹅啊——",
+    "desc": "Used as an avatar frame.",
+    "icon": "T_Head_Frame43",
+    "access": "Available at Shop"
+  },
+  {
+    "id": 10050,
+    "name": "来自幽冥",
+    "desc": "Used as an avatar frame.",
+    "icon": "T_Head_Frame40",
+    "access": "Available through Monthly Pass"
   }
 ]

@@ -483,6 +483,7 @@ return ReadOnly("SystemGuide", {
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Tracking.story",
     IsInRegion = 1,
+    OpenInterface = "BattleMain",
     PlayerInControl = 1,
     SysGuideId = 2067
   },
@@ -556,17 +557,6 @@ return ReadOnly("SystemGuide", {
     PreSysGuideId = 2069,
     SysGuideId = 2073,
     UIUnlockRule = "WalnutBag"
-  },
-  [2074] = {
-    FinishQuestChain = 100208,
-    GuideChannel = "SystemGuideWithoutUI",
-    GuideEnd = 0,
-    GuideSkip = 1,
-    GuideStart = 1,
-    GuideStoryline = "Guide/Guide_OnlineArea.story",
-    IsInRegion = 1,
-    PlayerInControl = 1,
-    SysGuideId = 2074
   },
   [2075] = {
     FinishQuestChain = 200104,
@@ -714,7 +704,7 @@ return ReadOnly("SystemGuide", {
     SysGuideId = 2087
   },
   [2088] = {
-    EnterDungeon = 40801,
+    EnterDungeon = 40401,
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
     GuideSkip = 0,
@@ -1063,5 +1053,25 @@ return ReadOnly("SystemGuide", {
     IsInRegion = 1,
     OpenInterface = "SoloTreasurePermanentMain",
     SysGuideId = 2124
+  },
+  [2125] = {
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_StringBoard.story",
+    IsInRegion = 1,
+    OpenInterface = "StringBoardMain",
+    SysGuideId = 2125
+  },
+  [2126] = {
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_Observation.story",
+    IsInRegion = 1,
+    OpenInterface = "Observation",
+    SysGuideId = 2126
   }
 })

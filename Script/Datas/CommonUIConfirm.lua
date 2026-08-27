@@ -144,15 +144,21 @@ return ReadOnly("CommonUIConfirm", {
     InteractivePriority = 1
   },
   [123] = {
-    ConfirmText = "UI_MECHANISM_123",
+    ConfirmText = "Ul_Hammer_Interact_Machine",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Mechanism",
     Id = 123,
     InteractivePriority = 1
   },
   [124] = {
-    ConfirmText = "UI_MECHANISM_124",
+    ConfirmText = "Ul_Hammer_Interact_Chest",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Mechanism",
     Id = 124
+  },
+  [125] = {
+    ConfirmText = "UI_MECHANISM_125",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Mechanism",
+    Id = 125,
+    InteractiveRadius = 1000
   },
   [200] = {
     ConfirmText = "UI_DUNGEON_DES_TRAINING_11",
@@ -383,6 +389,16 @@ return ReadOnly("CommonUIConfirm", {
     ConfirmText = "UI_MECHANISM_928",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Mechanism",
     Id = 928
+  },
+  [929] = {
+    ConfirmText = "INTERACTIVE_SEAT",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Sit",
+    Id = 929,
+    InteractiveFailMsg = "UI_INTERACTIVE_FAILMSG",
+    InteractiveRadius = 150,
+    InteractiveTag = "Seating",
+    InteractiveType = 4,
+    TriggerInterAnim = "Interactive_Sit_01"
   },
   [1003] = {
     ConfirmText = "UI_MECHANISM_104",
@@ -1224,6 +1240,270 @@ return ReadOnly("CommonUIConfirm", {
     ConfirmText = "UI_SUBMIT_10630",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_SubmitItem.T_Interactive_SubmitItem'",
     Id = 10630,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10631] = {
+    ConfirmText = "UI_MECHANISM_10631",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10631,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10632] = {
+    ConfirmText = "UI_MECHANISM_10632",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10632,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10633] = {
+    ConfirmText = "UI_MECHANISM_10633",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10633,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10634] = {
+    ConfirmText = "UI_MECHANISM_10634",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10634,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10635] = {
+    ConfirmText = "UI_MECHANISM_10635",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10635,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10636] = {
+    ConfirmText = "UI_MECHANISM_10636",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10636,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10637] = {
+    ConfirmText = "UI_MECHANISM_10637",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10637,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10638] = {
+    ConfirmText = "UI_MECHANISM_10638",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10638,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10639] = {
+    ConfirmText = "UI_MECHANISM_10639",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10639,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10640] = {
+    ConfirmText = "UI_MECHANISM_10640",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10640,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10641] = {
+    ConfirmText = "UI_MECHANISM_10641",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10641,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10642] = {
+    ConfirmText = "UI_MECHANISM_10642",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10642,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10643] = {
+    ConfirmText = "UI_MECHANISM_10643",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10643,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10644] = {
+    ConfirmText = "UI_MECHANISM_10644",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10644,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10645] = {
+    ConfirmText = "UI_MECHANISM_10645",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10645,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10646] = {
+    ConfirmText = "UI_MECHANISM_10646",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10646,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10647] = {
+    ConfirmText = "UI_MECHANISM_10647",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10647,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10648] = {
+    ConfirmText = "UI_MECHANISM_10648",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10648,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10649] = {
+    ConfirmText = "UI_MECHANISM_10649",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10649,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10650] = {
+    ConfirmText = "UI_MECHANISM_10650",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10650,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10651] = {
+    ConfirmText = "UI_MECHANISM_10651",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10651,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10652] = {
+    ConfirmText = "UI_MECHANISM_10652",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10652,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10653] = {
+    ConfirmText = "UI_MECHANISM_10653",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10653,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10654] = {
+    ConfirmText = "UI_MECHANISM_10654",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10654,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10655] = {
+    ConfirmText = "UI_MECHANISM_10655",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10655,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10656] = {
+    ConfirmText = "UI_MECHANISM_10656",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10656,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10657] = {
+    ConfirmText = "UI_MECHANISM_10657",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10657,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10658] = {
+    ConfirmText = "UI_MECHANISM_10658",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10658,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10659] = {
+    ConfirmText = "UI_MECHANISM_10659",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10659,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10660] = {
+    ConfirmText = "UI_MECHANISM_10660",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10660,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10661] = {
+    ConfirmText = "UI_MECHANISM_10661",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10661,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10662] = {
+    ConfirmText = "UI_MECHANISM_10662",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10662,
+    InteractiveAngle = 180,
+    InteractivePriority = 2,
+    InteractiveRadius = 300
+  },
+  [10663] = {
+    ConfirmText = "UI_MECHANISM_10663",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 10663,
     InteractiveAngle = 180,
     InteractivePriority = 2,
     InteractiveRadius = 300
@@ -2540,20 +2820,246 @@ return ReadOnly("CommonUIConfirm", {
     ConfirmText = "DROP_QuestPlay_11023104",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Fix",
     Id = 100142,
-    InteractiveRadius = 150,
+    InteractiveRadius = 800,
     QuestInteractiveType = 1
   },
   [100143] = {
     ConfirmText = "DROP_QuestPlay_11023105",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Talk",
     Id = 100143,
-    InteractiveRadius = 300,
+    InteractiveRadius = 800,
     QuestInteractiveType = 1
   },
   [100144] = {
     ConfirmText = "DROP_QuestPlay_11023106",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Talk",
     Id = 100144,
+    InteractiveRadius = 800,
+    QuestInteractiveType = 1
+  },
+  [100145] = {
+    ConfirmText = "DROP_QuestPlay_11023107",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Mechanism",
+    Id = 100145,
+    InteractiveRadius = 150,
+    QuestInteractiveType = 1
+  },
+  [100146] = {
+    ConfirmText = "DROP_QUEST_EntranceEX02",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Key",
+    Id = 100146,
+    InteractiveAngle = 120,
+    InteractiveRadius = 300,
+    QuestInteractiveType = 1
+  },
+  [100147] = {
+    ConfirmText = "DROP_QUEST_ObservePattenEX02",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Check",
+    Id = 100147,
+    InteractiveAngle = 180,
+    InteractiveRadius = 250,
+    QuestInteractiveType = 1
+  },
+  [100148] = {
+    ConfirmText = "DROP_QUEST_EntranceEX02_1",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Key",
+    Id = 100148,
+    InteractiveAngle = 120,
+    InteractiveRadius = 300,
+    QuestInteractiveType = 1
+  },
+  [100149] = {
+    ConfirmText = "DROP_QUEST_EntranceEX02_2",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Key",
+    Id = 100149,
+    InteractiveAngle = 120,
+    InteractiveRadius = 300,
+    QuestInteractiveType = 1
+  },
+  [100150] = {
+    ConfirmText = "DROP_QUEST_Observegun",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Key",
+    Id = 100150,
+    InteractiveAngle = 120,
+    InteractiveRadius = 300,
+    QuestInteractiveType = 1
+  },
+  [100151] = {
+    ConfirmText = "DROP_QUEST_ObservePatten_Ground",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Check",
+    Id = 100151,
+    InteractiveAngle = 180,
+    InteractiveRadius = 250,
+    QuestInteractiveType = 1
+  },
+  [100152] = {
+    ConfirmText = "DROP_QUEST_EntranceEX02_3",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Key",
+    Id = 100152,
+    InteractiveAngle = 120,
+    InteractiveRadius = 300,
+    QuestInteractiveType = 1
+  },
+  [100153] = {
+    ConfirmText = "DROP_QUEST_Watchfaluxi",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Check",
+    Id = 100153,
+    InteractiveAngle = 120,
+    InteractiveRadius = 150,
+    QuestInteractiveType = 1
+  },
+  [100154] = {
+    ConfirmText = "DROP_QUEST_Pickup",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Pick",
+    Id = 100154,
+    InteractiveAngle = 360,
+    InteractiveRadius = 200,
+    QuestInteractiveType = 1
+  },
+  [100155] = {
+    ConfirmText = "DROP_QUEST_Sitdown",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Pick",
+    Id = 100155,
+    InteractiveAngle = 45,
+    InteractiveRadius = 150,
+    PlayerFaceAngle = 45,
+    QuestInteractiveType = 1
+  },
+  [100156] = {
+    ConfirmText = "DROP_QUEST_TalkToEve",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Pick",
+    Id = 100156,
+    InteractiveAngle = 180,
+    InteractiveRadius = 150,
+    QuestInteractiveType = 1
+  },
+  [100157] = {
+    ConfirmText = "DROP_QUEST_Transportjoystick",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Pick",
+    Id = 100157,
+    InteractiveAngle = 120,
+    InteractiveRadius = 150,
+    QuestInteractiveType = 1
+  },
+  [100158] = {
+    ConfirmText = "DROP_QuestPlay_11021301",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Leave",
+    Id = 100158,
+    InteractiveAngle = 360,
+    InteractiveRadius = 300,
+    QuestInteractiveType = 1
+  },
+  [100159] = {
+    ConfirmText = "DROP_QUEST_EntranceEX02_4",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Key",
+    Id = 100159,
+    InteractiveAngle = 120,
+    InteractiveRadius = 300,
+    QuestInteractiveType = 1
+  },
+  [100160] = {
+    ConfirmText = "DROP_QuestPlay_11023201",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Leave",
+    Id = 100160,
+    InteractiveAngle = 120,
+    InteractiveRadius = 300,
+    QuestInteractiveType = 1
+  },
+  [100161] = {
+    ConfirmText = "DROP_QuestPlay_11023202",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Check",
+    Id = 100161,
+    InteractiveAngle = 120,
+    InteractiveRadius = 300,
+    QuestInteractiveType = 1
+  },
+  [100162] = {
+    ConfirmText = "DROP_QUEST_watchshuzhi",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Check",
+    Id = 100162,
+    InteractiveAngle = 120,
+    InteractiveRadius = 300,
+    QuestInteractiveType = 1
+  },
+  [100163] = {
+    ConfirmText = "DROP_QUEST_watchshiti",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Check",
+    Id = 100163,
+    InteractiveAngle = 120,
+    InteractiveRadius = 300,
+    QuestInteractiveType = 1
+  },
+  [100164] = {
+    ConfirmText = "DROP_QUEST_watchluoshi",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Check",
+    Id = 100164,
+    InteractiveAngle = 120,
+    InteractiveRadius = 300,
+    QuestInteractiveType = 1
+  },
+  [100165] = {
+    ConfirmText = "DROP_QUEST_ObservePatten_Ground2",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Check",
+    Id = 100165,
+    InteractiveAngle = 180,
+    InteractiveRadius = 250,
+    QuestInteractiveType = 1
+  },
+  [100166] = {
+    ConfirmText = "DROP_QuestPlay_11023108",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Check",
+    Id = 100166,
+    InteractiveAngle = 180,
+    InteractiveRadius = 250,
+    QuestInteractiveType = 1
+  },
+  [100167] = {
+    ConfirmText = "DROP_QUEST_ObservePatten_shanjiao",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Check",
+    Id = 100167,
+    InteractiveRadius = 250,
+    QuestInteractiveType = 1
+  },
+  [100168] = {
+    ConfirmText = "DROP_QUEST_ObservePatten_shanding",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Check",
+    Id = 100168,
+    InteractiveRadius = 250,
+    QuestInteractiveType = 1
+  },
+  [100169] = {
+    ConfirmText = "DROP_QUEST_thinkpatten",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Check",
+    Id = 100169,
+    InteractiveRadius = 250,
+    QuestInteractiveType = 1
+  },
+  [100170] = {
+    ConfirmText = "EX02_thinkpatten_Observe",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Check",
+    Id = 100170,
+    InteractiveRadius = 250,
+    QuestInteractiveType = 1
+  },
+  [100171] = {
+    ConfirmText = "DROP_QuestPlay_11023109",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Mechanism",
+    Id = 100171,
+    InteractiveRadius = 300,
+    QuestInteractiveType = 1
+  },
+  [100173] = {
+    ConfirmText = "DROP_QuestPlay_11023203",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Leave",
+    Id = 100173,
+    InteractiveRadius = 250,
+    QuestInteractiveType = 1
+  },
+  [100174] = {
+    ConfirmText = "UI_MECHANISM_ZZJ_ENTER",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Mechanism",
+    Id = 100174,
+    InteractiveAngle = 360,
     InteractiveRadius = 300,
     QuestInteractiveType = 1
   },

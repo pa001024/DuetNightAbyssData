@@ -30,23 +30,27 @@ function M:InitPage(EventId)
     self.List_Task:AddItem(MainQuestContent)
     table.insert(self.TaskListContents, MainQuestContent)
   end
-  local SideQuestInfo = self:GetSideQuestInfo()
-  if SideQuestInfo.DisplayTextName then
-    local SideQuestContent = NewObject(UIUtils.GetCommonItemContentClass())
-    SideQuestContent.ParentWidget = self
-    SideQuestContent.OnClickedParams = {
-      Obj = self,
-      Callback = self.OnClicked_TaskBtn,
-      Params = table.pack(SideQuestInfo.JumpQuestChainId)
-    }
-    SideQuestContent.BtnName = "Side"
-    SideQuestContent.DisplayText = SideQuestInfo.DisplayTextName
-    SideQuestContent.IsShowLock = SideQuestInfo.IsShowLock
-    SideQuestContent.IsForbidClick = SideQuestInfo.IsForbidClick
-    SideQuestContent.IsShowFinish = SideQuestInfo.IsShowFinish
-    SideQuestContent.IsShowTip = SideQuestInfo.IsShowTip
-    self.List_Task:AddItem(SideQuestContent)
-    table.insert(self.TaskListContents, SideQuestContent)
+  local SideQuestInfoList = self:GetSideQuestInfoList()
+  for _, SideQuestInfo in pairs(SideQuestInfoList or {}) do
+    if SideQuestInfo.DisplayTextName then
+      local SideQuestContent = NewObject(UIUtils.GetCommonItemContentClass())
+      SideQuestContent.ParentWidget = self
+      SideQuestContent.OnClickedParams = {
+        Obj = self,
+        Callback = self.OnClicked_TaskBtn,
+        Params = table.pack(SideQuestInfo.JumpQuestChainId)
+      }
+      SideQuestContent.BtnName = "Side"
+      SideQuestContent.DisplayText = SideQuestInfo.DisplayTextName
+      SideQuestContent.IsShowLock = SideQuestInfo.IsShowLock
+      SideQuestContent.IsForbidClick = SideQuestInfo.IsForbidClick
+      SideQuestContent.IsShowFinish = SideQuestInfo.IsShowFinish
+      SideQuestContent.IsShowTip = SideQuestInfo.IsShowTip
+      SideQuestContent.TipText = SideQuestInfo.TipText
+      SideQuestContent.SideQuestChainId = SideQuestInfo.SideQuestChainId
+      self.List_Task:AddItem(SideQuestContent)
+      table.insert(self.TaskListContents, SideQuestContent)
+    end
   end
   self.Key_PerTaskTitle:CreateCommonKey({
     KeyInfoList = {
@@ -63,8 +67,12 @@ function M:UpdatePage()
   self:UpdateVisibility()
   for _, QuestContent in pairs(self.TaskListContents) do
     if IsValid(QuestContent) then
-      local FunName = "Get" .. QuestContent.BtnName .. "QuestInfo"
-      local NewQuestInfo = FunName(self)
+      local NewQuestInfo = {}
+      if QuestContent.BtnName == "Main" then
+        NewQuestInfo = self:GetMainQuestInfo()
+      elseif QuestContent.BtnName == "Side" then
+        NewQuestInfo = self:GetSideQuestInfoNew(QuestContent.SideQuestChainId)
+      end
       QuestContent.OnClickedParams = {
         Obj = self,
         Callback = self.OnClicked_TaskBtn,
@@ -75,6 +83,8 @@ function M:UpdatePage()
       QuestContent.IsForbidClick = NewQuestInfo.IsForbidClick
       QuestContent.IsShowFinish = NewQuestInfo.IsShowFinish
       QuestContent.IsShowTip = NewQuestInfo.IsShowTip
+      QuestContent.TipText = NewQuestInfo.TipText
+      QuestContent.SideQuestChainId = NewQuestInfo.SideQuestChainId
       QuestContent.SelfWidget:OnListItemObjectSet(QuestContent)
     end
   end
@@ -182,32 +192,79 @@ function M:GetMainQuestInfo()
   return Res
 end
 
-function M:GetSideQuestInfo()
+function M:GetSideQuestInfoList()
   local Res = {}
   local ConfigedSideQuestChainIds = self.EventInfo.PretextTasks2
   if not ConfigedSideQuestChainIds then
     return Res
   end
-  local FirstDoingQuestChainId = 0
-  local IsAllFinished = true
   for _, SideQuestChainId in pairs(ConfigedSideQuestChainIds) do
-    local SideQuestChainState = self:GetQuestChainState(SideQuestChainId)
-    IsAllFinished = IsAllFinished and "Finish" == SideQuestChainState
-    if "Doing" == SideQuestChainState then
-      FirstDoingQuestChainId = SideQuestChainId
+    table.insert(Res, self:GetSideQuestInfoNew(SideQuestChainId))
+  end
+  return Res
+end
+
+function M:GetSideQuestInfoNew(SideQuestChainId)
+  local Res = {}
+  local SideQuestChainState = self:GetQuestChainStateNew(SideQuestChainId)
+  if "Finish" == SideQuestChainState then
+    Res.IsShowFinish = true
+    Res.IsForbidClick = true
+  elseif "Doing" == SideQuestChainState then
+    Res.JumpQuestChainId = SideQuestChainId
+  elseif "Unlock" == SideQuestChainState then
+    Res.IsShowTip = true
+    Res.TipText = self:GetSideTipTextByQuestChainId(SideQuestChainId, SideQuestChainState)
+  elseif "Lock" == SideQuestChainState then
+    Res.IsShowLock = true
+    Res.IsShowTip = true
+    Res.TipText = self:GetSideTipTextByQuestChainId(SideQuestChainId, SideQuestChainState)
+  end
+  local QuestChain = DataMgr.QuestChain[SideQuestChainId]
+  if QuestChain then
+    local ChapterName = QuestChain.ChapterName or ""
+    local QuestChainName = QuestChain.QuestChainName or ""
+    Res.DisplayTextName = GText(ChapterName) .. "·" .. GText(QuestChainName)
+  end
+  Res.SideQuestChainId = SideQuestChainId
+  return Res
+end
+
+function M:GetSideTipTextByQuestChainId(QuestChainId, QuestChainState)
+  local Index = 0
+  for i, SideQuestChainId in pairs(self.EventInfo.PretextTasks2) do
+    if SideQuestChainId == QuestChainId then
+      Index = i
       break
     end
   end
-  local LastQuestChainId = ConfigedSideQuestChainIds[#ConfigedSideQuestChainIds]
-  local ChapterName = DataMgr.QuestChain[LastQuestChainId].ChapterName or ""
-  local QuestChainName = DataMgr.QuestChain[LastQuestChainId].QuestChainName or ""
-  Res.DisplayTextName = GText(ChapterName) .. "·" .. GText(QuestChainName)
-  Res.IsShowLock = FirstDoingQuestChainId ~= LastQuestChainId
-  Res.IsForbidClick = IsAllFinished
-  Res.IsShowTip = 0 == FirstDoingQuestChainId
-  Res.JumpQuestChainId = FirstDoingQuestChainId
-  Res.IsShowFinish = IsAllFinished
-  return Res
+  if "Unlock" == QuestChainState then
+    return self.EventInfo.PretextTask2ReceiveToast and self.EventInfo.PretextTask2ReceiveToast[Index]
+  end
+  if "Lock" == QuestChainState then
+    return self.EventInfo.PretextTask2UnlockToast and self.EventInfo.PretextTask2UnlockToast[Index]
+  end
+  return ""
+end
+
+function M:GetQuestChainStateNew(QuestChainId)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return ""
+  end
+  if Avatar:IsQuestChainFinished(QuestChainId) then
+    return "Finish"
+  end
+  if Avatar:IsQuestChainDoing(QuestChainId) then
+    return "Doing"
+  end
+  if Avatar:IsQuestChainUnlock(QuestChainId) then
+    return "Unlock"
+  end
+  if Avatar:IsQuestChainLock(QuestChainId) then
+    return "Lock"
+  end
+  return "Lock"
 end
 
 function M:GetQuestChainState(QuestChainId)

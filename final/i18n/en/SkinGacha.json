@@ -108,7 +108,7 @@
     "warning": "<Title>Guaranteed Golden-tier Item</>\n Current Weaves: <highlight>%d</>/90\n \n<Title>Event-Exclusive Myriad Drop Rates</>\n The base drop rate per Weave for a Golden-tier item is <highlight>0.3%%</>. The overall drop rate, including guarantees, is <highlight>1.42%%</>. A Golden-tier item is guaranteed within <highlight>90</> Weaves at most. Individual drop rates:\nEpulary Elegance: <highlight>0.641%%</>\nIridescent Prism ×25: <highlight>0.641%%</>\nIridescent Prism ×50: <highlight>0.142%%</>\nThe base drop rate per Weave for a Purple-tier item is <highlight>5.1%%</>. The overall drop rate, including guarantees, is <highlight>12.46%%</>. A Purple-tier item is guaranteed within <highlight>10</> Weaves at most. When the guarantee triggers, the chance of receiving a Purple-tier item is <highlight>99.7%%</>, and of receiving a Golden-tier item is <highlight>0.3%%</>.\nIn cases involving rate-ups or guarantees, please refer to the specific banner rules.\n\n<Title>About Duplicates</>\nEach duplicate Epulary Elegance (Golden-tier skin) converts into Iridescent Prism ×<highlight>25</>.\nOn obtaining a Purple- or Blue-tier skin you already own, it converts into Lucent Prisms:\nEach duplicate Purple-tier skin converts into Lucent Prism ×<highlight>4</>.\nEach duplicate Blue-tier skin converts into Lucent Prism ×<highlight>1</>.\n\n<Title>About Weave Progress</>\nWeave counts for the <highlight>Nocturnal Narration</> banner are tallied separately and do not carry over to other Myriad banners.",
     "coreDes": "Lustrous Skin",
     "coreDesColor": 5,
-    "type": "Event-Exclusive",
+    "type": "Limited-Time Rerun",
     "subTabId": 1401,
     "tabId": 4,
     "sequence": 4,
@@ -116,8 +116,8 @@
     "displayType": 1,
     "historyType": 2,
     "hideCountdown": null,
-    "startTime": 1770602400,
-    "endTime": 1775466000,
+    "startTime": 1788746400,
+    "endTime": 1792400400,
     "cost": {
       "res": [
         1004,
@@ -205,6 +205,41 @@
     "star3ItemId": 99933,
     "star4ItemId": 99932,
     "star5ItemId": 99931
+  },
+  {
+    "id": 9008,
+    "name": "Where the Long Road Leads",
+    "desc": "You are guaranteed a Purple- or higher-tier item within every <highlight>10</> Weaves, and a Golden-tier item is guaranteed within <highlight>90</> Weaves.",
+    "warning": "<Title>Guaranteed Golden-tier Item</>\nCurrent Weaves: <highlight>%d</>/90\n\n<Title>Event-Exclusive Myriad Drop Rates</>\nThe base drop rate per Weave for a Golden-tier item is <highlight>0.3%%</>. The overall drop rate, including guarantees, is <highlight>1.42%%</>. A Golden-tier item is guaranteed within <highlight>90</> Weaves. Individual drop rates:\nSilent Hunter: <highlight>0.641%%</>\nIridescent Prism ×25: <highlight>0.641%%</>\nIridescent Prism ×50: <highlight>0.142%%</>\nThe base drop rate per Weave for a Purple-tier item is <highlight>5.1%%</>. The overall drop rate, including guarantees, is <highlight>12.46%%</>. A Purple-tier item is guaranteed within <highlight>10</> Weaves. When the guarantee triggers, the chance of receiving a Purple-tier item is <highlight>99.7%%</>, and of receiving a Golden-tier item is <highlight>0.3%%</>.\nIn cases involving rate-ups or guarantees, please refer to the specific banner rules.\n\n<Title>About Duplicates</>\nEach duplicate Silent Hunter (Golden-tier skin) converts into Iridescent Prism ×<highlight>25</>.\nOn obtaining a Purple- or Blue-tier skin you already own, it converts into Lucent Prism:\nEach duplicate Purple-tier skin converts into Lucent Prism ×<highlight>4</>.\nEach duplicate Blue-tier skin converts into Lucent Prism ×<highlight>1</>.\n\n<Title>About Weave Progress</>\nWeave counts for the <highlight>Where the Long Road Leads</> banner are tallied separately and do not carry over to other Myriad banners.",
+    "coreDes": "Lustrous Skin",
+    "coreDesColor": 5,
+    "type": "Event-Exclusive",
+    "subTabId": 1401,
+    "tabId": 8,
+    "sequence": 8,
+    "gachaTimes": 1,
+    "displayType": 1,
+    "historyType": 2,
+    "hideCountdown": null,
+    "startTime": 1788746400,
+    "endTime": 1792400400,
+    "cost": {
+      "res": [
+        1004,
+        1003
+      ],
+      "num10": 10,
+      "displayRes": [
+        99,
+        1004,
+        1003
+      ]
+    },
+    "probabilityId": 1001,
+    "conditionId": 4041,
+    "star3ItemId": 99923,
+    "star4ItemId": 99922,
+    "star5ItemId": 99921
   },
   {
     "id": 90021,

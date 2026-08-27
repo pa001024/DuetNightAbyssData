@@ -34,7 +34,8 @@ function M:OnLoaded(...)
   })
   self.Text_GetItem:SetText(GText("UI_COMMONPOP_TITLE_100017"))
   self.Text_Tip:SetText(GText("UI_TRAIN_CLOSE"))
-  local ShopItemType, ShopItemId, Count, PurchaseRewards, func, ParentWidget, IsReAttachFocusToPage, ToastText = ...
+  local ShopItemType, ShopItemId, Count, PurchaseRewards, func, ParentWidget, IsReAttachFocusToPage, ToastText, GotoCallback = ...
+  self.GotoCallback = GotoCallback
   if -1 == func then
     func = nil
   end
@@ -58,11 +59,24 @@ function M:OnLoaded(...)
   else
     self.Toast_GetItem:SetVisibility(ESlateVisibility.Collapsed)
   end
+  if GotoCallback and self.Btn_Goto then
+    self.Btn_Goto:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Btn_Goto:SetText(GText("Enter_Now"))
+    self.Btn_Goto:SetGamePadImg("Y")
+    self.Btn_Goto:BindEventOnClicked(self, self.GotoButtonClicked)
+    self.Text_Tip:SetVisibility(ESlateVisibility.Collapsed)
+    self.ForbidCloseByGotoBtn = true
+  elseif not GotoCallback and self.Btn_Goto then
+    self.Btn_Goto:SetVisibility(ESlateVisibility.Collapsed)
+    self.Text_Tip:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.ForbidCloseByGotoBtn = false
+  end
 end
 
 function M:InitGetItemInfo(ShopItemType, ShopItemId, Count, PurchaseRewards)
   self.List_Item:ClearListItems()
   self.List_Item_Single:ClearListItems()
+  self.BonusInfo = PurchaseRewards and PurchaseRewards.BonusInfo or nil
   if PurchaseRewards then
     local RewardType = DataMgr.RewardType
     for ItemType, _ in pairs(RewardType) do
@@ -101,19 +115,49 @@ function M:InitGetItemInfo(ShopItemType, ShopItemId, Count, PurchaseRewards)
         return false
       end
     end)
+    local PetRewardInfos = PurchaseRewards.PetRewardInfos or {}
+    local PetRewardsForSort = {}
+    for i, PetRewardInfo in ipairs(PetRewardInfos) do
+      local PetData = DataMgr.Pet[PetRewardInfo.PetId]
+      PetRewardsForSort[i] = {
+        OriginalIndex = i,
+        PetRewardInfo = PetRewardInfo,
+        SortPriority = PetData and PetData.SortPriority or 0,
+        PetData = PetData
+      }
+    end
+    table.sort(PetRewardsForSort, function(A, B)
+      if A.SortPriority ~= B.SortPriority then
+        return A.SortPriority > B.SortPriority
+      end
+      return A.OriginalIndex < B.OriginalIndex
+    end)
+    for _, Entry in ipairs(PetRewardsForSort) do
+      if Entry.PetData then
+        table.insert(self.RewardInfoList, {
+          ItemId = Entry.PetRewardInfo.PetId,
+          ItemInfo = {
+            TableName = CommonConst.DataType.Pet,
+            PetRewardInfo = Entry.PetRewardInfo
+          }
+        })
+      else
+        DebugPrint(ErrorTag, "WBP_CommonGetItem invalid Pet reward", Entry.PetRewardInfo.PetId)
+      end
+    end
     if #self.RewardInfoList > 7 then
       self.WS_List:SetActiveWidgetIndex(0)
-      for _, Value in pairs(self.RewardInfoList) do
+      for _, Value in ipairs(self.RewardInfoList) do
         local ItemId, ItemInfo = Value.ItemId, Value.ItemInfo
-        local Content = self:NewItemContent(ItemInfo.TableName, ItemId, ItemInfo.ItemCount)
+        local Content = self:NewItemContent(ItemInfo.TableName, ItemId, ItemInfo.ItemCount, ItemInfo.PetRewardInfo)
         self.List_Item:AddItem(Content)
       end
       self.NowList = self.List_Item
     else
       self.WS_List:SetActiveWidgetIndex(1)
-      for _, Value in pairs(self.RewardInfoList) do
+      for _, Value in ipairs(self.RewardInfoList) do
         local ItemId, ItemInfo = Value.ItemId, Value.ItemInfo
-        local Content = self:NewItemContent(ItemInfo.TableName, ItemId, ItemInfo.ItemCount)
+        local Content = self:NewItemContent(ItemInfo.TableName, ItemId, ItemInfo.ItemCount, ItemInfo.PetRewardInfo)
         self.List_Item_Single:AddItem(Content)
       end
       self.NowList = self.List_Item_Single
@@ -162,6 +206,7 @@ function M:ItemMenuAnchorChanged(bIsOpen)
   if bIsOpen then
     self.bCantClose = bIsOpen
   end
+  self:RefreshGotoGamepadIconVisible()
   local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
   local GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(PlayerController)
   if GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then
@@ -388,7 +433,9 @@ function M:ConfirmDealWithConsumableItems(UseEffectType, UseParam)
       break
     end
   end
-  OptIdxList = {OptIndex}
+  OptIdxList = {
+    [OptIndex] = 1
+  }
   if "SelectCharacter" == UseEffectType then
     bIsNew = not PlayerAvatar:CheckCharEnough({
       [self.CurrentChooseInfo.ChooseId] = 1
@@ -398,17 +445,17 @@ function M:ConfirmDealWithConsumableItems(UseEffectType, UseParam)
   local function DealWithConsumableItemsCallback()
     local OptionalItemsDataConfig = DataMgr.OptReward[OptionalId]
     if "SelectWeapon" == UseEffectType then
-      local WeaponChooseId = OptionalItemsDataConfig.Id[OptIdxList[1]]
+      local WeaponChooseId = OptionalItemsDataConfig.Id[OptIndex]
       if WeaponChooseId then
         UIUtils.ShowGetItemPage(BagCommon.StuffType.Weapon, WeaponChooseId, 1)
       end
     elseif "SelectCharacter" == UseEffectType then
-      local CharChooseId = OptionalItemsDataConfig.Id[OptIdxList[1]]
+      local CharChooseId = OptionalItemsDataConfig.Id[OptIndex]
       if CharChooseId then
         UIUtils.ShowGetItemPage("Char", CharChooseId, 1, nil, nil, nil, nil, nil, nil, bIsNew)
       end
     elseif "SelectPet" == UseEffectType then
-      local PetChooseId = OptionalItemsDataConfig.Id[OptIdxList[1]]
+      local PetChooseId = OptionalItemsDataConfig.Id[OptIndex]
       if PetChooseId then
         local GameInstance = GWorld.GameInstance
         local UIManager = GameInstance:GetGameUIManager()
@@ -433,17 +480,17 @@ function M:ConfirmDealWithConsumableResource(UseEffectType)
     return
   end
   DebugPrint("Now ConfirmDealWithConsumableItems The ChooseId is ", self.CurrentChooseInfo.ChooseId)
-  local ResourceId, OptionalId, OptIdxList, OptionalList, Count = nil, nil, nil, {}, 0
+  local ResourceId, OptionalId, OptIdxList, OptionalList = nil, nil, nil, {}
   if type(self.CurrentChooseInfo) == "table" and "SelectResource" == UseEffectType then
     local k, v = next(self.CurrentChooseInfo)
     ResourceId, OptionalId = v.ResourceId, v.OptionalId
     OptIdxList = {}
     for k, v in pairs(self.CurrentChooseInfo) do
-      for i = 1, v.ConsumeCount do
-        table.insert(OptIdxList, v.ChooseIndex)
-        Count = Count + 1
+      local ConsumeCount = v.ConsumeCount or 0
+      if ConsumeCount > 0 then
+        OptIdxList[v.ChooseIndex] = (OptIdxList[v.ChooseIndex] or 0) + ConsumeCount
       end
-      OptionalList[v.ChooseId] = v.ConsumeCount
+      OptionalList[v.ChooseId] = ConsumeCount
     end
   else
     ResourceId, OptionalId = self.CurrentChooseInfo.ResourceId, self.CurrentChooseInfo.OptionalId
@@ -451,7 +498,7 @@ function M:ConfirmDealWithConsumableResource(UseEffectType)
       OptIdxList = self.CurrentChooseInfo.ChooseIndex
     else
       OptIdxList = {
-        self.CurrentChooseInfo.ChooseIndex
+        [self.CurrentChooseInfo.ChooseIndex] = 1
       }
     end
   end
@@ -747,7 +794,9 @@ function M:InitHandleKeyInfo()
     self.Panel_Key:AddChild(Item1)
   end
   self.Panel_Key:AddChild(Item2)
-  self.Panel_Key:AddChild(Item3)
+  if not self.GotoCallback then
+    self.Panel_Key:AddChild(Item3)
+  end
 end
 
 function M:InitOptRewardHandleKeyInfo()
@@ -762,11 +811,22 @@ function M:InitOptRewardHandleKeyInfo()
   self.Panel_Key:AddChild(Item1)
 end
 
-function M:NewItemContent(ItemType, ItemId, Count)
+function M:NewItemContent(ItemType, ItemId, Count, PetRewardInfo)
   local ItemData = DataMgr[ItemType][ItemId]
   local Obj = NewObject(UIUtils.GetCommonItemContentClass())
+  if "UpgradeMod" == ItemType then
+    ItemType = "Mod"
+    ItemId = ItemData.ModId
+    Obj.ModLevel = ItemData.ModLevel
+    Obj.StartLevelNum = ItemData.ModLevel
+  end
   Obj.ItemType = ItemType
   Obj.Id = ItemId
+  if PetRewardInfo then
+    Obj.Type = CommonConst.ArmoryType.Pet
+    Obj.PetEntry = PetRewardInfo.EntryIds
+    Obj.BreakNum = 0
+  end
   local Name
   if "Draft" == ItemType then
     local ProductData = DataMgr[ItemData.ProductType][ItemData.ProductId]
@@ -791,6 +851,11 @@ function M:NewItemContent(ItemType, ItemId, Count)
   end
   Obj.IsShowDetails = true
   Obj.UIName = "GetItemPage"
+  local Bonus = self.BonusInfo and self.BonusInfo[ItemId]
+  if Bonus then
+    Obj.BonusType = Bonus.BonusType
+    Obj.ExtraBonusText = Bonus.ExtraBonusText
+  end
   Obj.OnMenuOpenChangedEvents = {
     Obj = self,
     Callback = self.ItemMenuAnchorChanged
@@ -803,9 +868,20 @@ function M:BindActionOnClosed(func, ParentWidget)
   self.ParentWidget = ParentWidget
 end
 
+function M:GotoButtonClicked()
+  self.ForbidCloseByGotoBtn = false
+  self:CloseSelf()
+  if self.GotoCallback then
+    self.GotoCallback()
+  end
+end
+
 function M:CloseSelf()
   if self.bCantClose then
     self.bCantClose = false
+    return
+  end
+  if self.ForbidCloseByGotoBtn then
     return
   end
   self:RemoveTimer("InitGetItemInfo")
@@ -838,7 +914,7 @@ end
 function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
   if CurInputDevice == ECommonInputType.Touch then
     self.Panel_Key:SetVisibility(ESlateVisibility.Collapsed)
-    if self.NotShowTextTip then
+    if self.NotShowTextTip or self.ForbidCloseByGotoBtn then
       self.Text_Tip:SetVisibility(ESlateVisibility.Collapsed)
     else
       self.Text_Tip:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
@@ -849,7 +925,7 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
   local ActiveWidgetIndex = IsUseKeyAndMouse and 0 or 1
   if IsUseKeyAndMouse then
     self.Panel_Key:SetVisibility(ESlateVisibility.Collapsed)
-    if self.NotShowTextTip then
+    if self.NotShowTextTip or self.ForbidCloseByGotoBtn then
       self.Text_Tip:SetVisibility(ESlateVisibility.Collapsed)
     else
       self.Text_Tip:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
@@ -865,6 +941,7 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
     end
     self.Text_Tip:SetVisibility(ESlateVisibility.Collapsed)
   end
+  self:RefreshGotoGamepadIconVisible()
 end
 
 function M:OnKeyDown(MyGeometry, InKeyEvent)
@@ -903,8 +980,12 @@ function M:OnGamePadDown(InKeyName)
   if "Gamepad_FaceButton_Right" == InKeyName and not self.IsOptRewardsView then
     self:CloseSelf()
     IsEventHandled = true
-  elseif "Gamepad_FaceButton_Top" == InKeyName and self.Btn_Open then
-    self.Btn_Open:OnBtnClicked()
+  elseif "Gamepad_FaceButton_Top" == InKeyName then
+    if self.GotoCallback then
+      self:GotoButtonClicked()
+    elseif self.Btn_Open then
+      self.Btn_Open:OnBtnClicked()
+    end
     IsEventHandled = true
   end
   return IsEventHandled
@@ -917,6 +998,14 @@ function M:OnGamePadUp(InKeyName)
     IsEventHandled = true
   end
   return IsEventHandled
+end
+
+function M:RefreshGotoGamepadIconVisible()
+  if not self.GotoCallback or not self.Btn_Goto then
+    return
+  end
+  local bShow = UIUtils.IsGamepadInput() and not self.IsShowDetails
+  self.Btn_Goto:SetGamepadIconVisibility(bShow)
 end
 
 return M

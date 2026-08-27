@@ -56,14 +56,14 @@ function M:Init(Params)
   self.List_Plan:ClearListItems()
   for index, value in ipairs(self.PlanNames) do
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
-    Content.Text = GText(value)
-    Content.Owner = self
-    Content.Idx = index
+    rawset(Content, "Text", GText(value))
+    rawset(Content, "Owner", self)
+    rawset(Content, "Idx", index)
     if self.SelectedItemIndex == index then
       self.CurContent = Content
-      Content.IsSelected = true
+      rawset(Content, "IsSelected", true)
     else
-      Content.IsSelected = false
+      rawset(Content, "IsSelected", false)
     end
     table.insert(self.ItemContents, Content)
     self.List_Plan:AddItem(Content)

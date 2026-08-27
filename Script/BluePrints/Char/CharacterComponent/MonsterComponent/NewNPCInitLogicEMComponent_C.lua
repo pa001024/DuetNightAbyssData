@@ -14,10 +14,6 @@ function M:NewNpcInitComponent_PreInit_Lua(Owner, UnitType, UnitId)
   if not Owner.BornInfo then
     Owner.BornInfo = EffectResults.Result()
   end
-  if DataMgr.Npc[UnitId] and DataMgr.Npc[UnitId].NpcType ~= "Show" then
-    local bUseSkin = EMCache:Get("AutoFashion")
-    GWorld.GameInstance.IsAutoFashionSwitch = bUseSkin
-  end
 end
 
 function M:NewNpcInitComponent_CacheBornInfo(Owner)
@@ -50,6 +46,9 @@ function M:NewNpcInitComponent_PrepareWaitInitTags_Lua(Owner)
 end
 
 function M:NewNpcInitComponent_SyncServerBornInfo(Owner)
+  if not Owner.BornInfo or Owner.BornInfo.IsEmpty then
+    return
+  end
   Owner.ServerBornInfo = Owner.BornInfo:ToEffectStruct()
 end
 

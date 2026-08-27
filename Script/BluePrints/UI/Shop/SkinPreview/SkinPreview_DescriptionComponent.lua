@@ -1,7 +1,37 @@
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
 local M = {}
 
+local function SetElementIcon(self, IconPath)
+  local ElementIcon = IconPath and LoadObject(IconPath)
+  if not ElementIcon then
+    return
+  end
+  self.Image_Element:SetBrushResourceObject(ElementIcon)
+  self.Image_Element:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  if self.BG_Icon then
+    self.BG_Icon:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  end
+end
+
+function M:ResetDescriptionVisibility()
+  self.BackGround:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Tag_Quality:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.Text_Char_None:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Image_Element:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  if self.BG_Icon then
+    self.BG_Icon:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  self.HorizontalBox_Color:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Tab_Change:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.WBP_Mounts:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Mod_Title_Line:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Mod_Content:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Group_Video:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.VideoPlayer:Stop()
+end
+
 function M:UpdateDescription(ItemData)
+  self:ResetDescriptionVisibility()
   local itemType = ItemData.ItemType
   if "Skin" == itemType then
     self:UpdateCharSkinDescription(ItemData)
@@ -37,32 +67,17 @@ function M:UpdateCharSkinDescription(SkinInfo)
   self.Tag_Quality:Init(SkinData.Rarity)
   self:UpdateSkinNameFontByRarity(SkinData.Rarity)
   self:HideZoomKey(false)
-  self.Tag_Quality:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  self.HorizontalBox_Color:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  self.Tab_Change:SetVisibility(ESlateVisibility.Collapsed)
-  self.WBP_Mounts:SetVisibility(ESlateVisibility.Collapsed)
+  self.HorizontalBox_Color:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   local ElementType = DataMgr.BattleChar[SkinData.CharId].Attribute
   if ElementType then
     local IconName = "Armory_" .. ElementType
-    local AttributeIcon = LoadObject("/Game/UI/Texture/Dynamic/Atlas/Armory/T_" .. IconName .. ".T_" .. IconName)
-    self.Image_Element:SetBrushResourceObject(AttributeIcon)
-    self.Image_Element:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    if self.BG_Icon then
-      self.BG_Icon:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    end
-  else
-    self.Image_Element:SetVisibility(ESlateVisibility.Collapsed)
-    if self.BG_Icon then
-      self.BG_Icon:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    end
+    SetElementIcon(self, "/Game/UI/Texture/Dynamic/Atlas/Armory/T_" .. IconName .. ".T_" .. IconName)
   end
-  if self.Avatar:CheckCharEnough({
+  if not self.Avatar:CheckCharEnough({
     [SkinData.CharId] = 1
   }) then
-    self.Text_Char_None:SetVisibility(ESlateVisibility.Collapsed)
-  else
     self.Text_Char_None:SetText(GText("UI_SkinPreview_CharNotOwned"))
-    self.Text_Char_None:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Text_Char_None:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   end
 end
 
@@ -77,28 +92,9 @@ function M:UpdateHairDescription(SkinInfo)
   self.Tag_Quality:Init(HairData.Rarity)
   self:UpdateSkinNameFontByRarity(HairData.Rarity)
   self:HideZoomKey(false)
-  self.Tag_Quality:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  self.Text_Char_None:SetVisibility(ESlateVisibility.Collapsed)
-  self.Tab_Change:SetVisibility(ESlateVisibility.Collapsed)
-  self.WBP_Mounts:SetVisibility(ESlateVisibility.Collapsed)
-  local AccessoryIconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Fashion_Hair.T_Tab_Fashion_Hair"
-  if AccessoryIconPath then
-    local AccessoryIcon = LoadObject(AccessoryIconPath)
-    self.Image_Element:SetBrushResourceObject(AccessoryIcon)
-    self.Image_Element:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    if self.BG_Icon then
-      self.BG_Icon:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    end
-  else
-    self.Image_Element:SetVisibility(ESlateVisibility.Collapsed)
-    if self.BG_Icon then
-      self.BG_Icon:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    end
-  end
-  if HairData.IsCommon == true then
-    self.HorizontalBox_Color:SetVisibility(ESlateVisibility.Collapsed)
-  else
-    self.HorizontalBox_Color:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  SetElementIcon(self, "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Fashion_Hair.T_Tab_Fashion_Hair")
+  if HairData.IsCommon ~= true then
+    self.HorizontalBox_Color:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   end
 end
 
@@ -113,25 +109,7 @@ function M:UpdateCharAccessoryDescription(SkinInfo)
   self.Tag_Quality:Init(AccessoryData.Rarity)
   self:UpdateSkinNameFontByRarity(AccessoryData.Rarity)
   self:HideZoomKey(false)
-  self.Tag_Quality:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  self.Text_Char_None:SetVisibility(ESlateVisibility.Collapsed)
-  self.HorizontalBox_Color:SetVisibility(ESlateVisibility.Collapsed)
-  self.Tab_Change:SetVisibility(ESlateVisibility.Collapsed)
-  self.WBP_Mounts:SetVisibility(ESlateVisibility.Collapsed)
-  local AccessoryIconPath = ArmoryUtils:GetCharNoneAccessoryIconPaths()[AccessoryData.AccessoryType]
-  if AccessoryIconPath then
-    local AccessoryIcon = LoadObject(AccessoryIconPath)
-    self.Image_Element:SetBrushResourceObject(AccessoryIcon)
-    self.Image_Element:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    if self.BG_Icon then
-      self.BG_Icon:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    end
-  else
-    self.Image_Element:SetVisibility(ESlateVisibility.Collapsed)
-    if self.BG_Icon then
-      self.BG_Icon:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    end
-  end
+  SetElementIcon(self, ArmoryUtils:GetCharNoneAccessoryIconPaths()[AccessoryData.AccessoryType])
 end
 
 function M:UpdateCharGestureDescription(SkinInfo)
@@ -145,28 +123,7 @@ function M:UpdateCharGestureDescription(SkinInfo)
   self.Tag_Quality:Init(GestureData.Rarity)
   self:UpdateSkinNameFontByRarity(GestureData.Rarity)
   self:HideZoomKey(false)
-  self.Tag_Quality:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  self.Text_Char_None:SetVisibility(ESlateVisibility.Collapsed)
-  self.HorizontalBox_Color:SetVisibility(ESlateVisibility.Collapsed)
-  self.Tab_Change:SetVisibility(ESlateVisibility.Collapsed)
-  self.WBP_Mounts:SetVisibility(ESlateVisibility.Collapsed)
-  local GestureIconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Action.T_Tab_Action"
-  local GestureIcon
-  if GestureIconPath then
-    GestureIcon = LoadObject(GestureIconPath)
-  end
-  if GestureIcon then
-    self.Image_Element:SetBrushResourceObject(GestureIcon)
-    self.Image_Element:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    if self.BG_Icon then
-      self.BG_Icon:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    end
-  else
-    self.Image_Element:SetVisibility(ESlateVisibility.Collapsed)
-    if self.BG_Icon then
-      self.BG_Icon:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    end
-  end
+  SetElementIcon(self, "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Action.T_Tab_Action")
 end
 
 function M:UpdateWeaponSkinDescription(SkinInfo)
@@ -179,28 +136,14 @@ function M:UpdateWeaponSkinDescription(SkinInfo)
   self.Tag_Quality:Init(WeaponSkinData.Rarity)
   self:UpdateSkinNameFontByRarity(WeaponSkinData.Rarity)
   self:HideZoomKey(true)
-  self.Tag_Quality:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  self.Text_Char_None:SetVisibility(ESlateVisibility.Collapsed)
-  self.HorizontalBox_Color:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  self.Tab_Change:SetVisibility(ESlateVisibility.Collapsed)
-  self.WBP_Mounts:SetVisibility(ESlateVisibility.Collapsed)
+  self.HorizontalBox_Color:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   local WeaponTypeInfo = DataMgr.WeaponTypeContrast[WeaponSkinData.ApplicationType]
   if not WeaponTypeInfo then
     return
   end
   self.Text_CharName:SetText(string.format(GText("UI_SkinPreview_WeaponType"), GText(WeaponTypeInfo.WeaponTagTextmap)))
   if WeaponTypeInfo.Icon then
-    local TagIcon = LoadObject(WeaponTypeInfo.Icon)
-    self.Image_Element:SetBrushResourceObject(TagIcon)
-    self.Image_Element:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    if self.BG_Icon then
-      self.BG_Icon:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    end
-  else
-    self.Image_Element:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    if self.BG_Icon then
-      self.BG_Icon:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    end
+    SetElementIcon(self, WeaponTypeInfo.Icon)
   end
 end
 
@@ -215,15 +158,37 @@ function M:UpdateWeaponAccessoryDescription(SkinInfo)
   self.Tag_Quality:Init(WeaponAccessoryData.Rarity)
   self:UpdateSkinNameFontByRarity(WeaponAccessoryData.Rarity)
   self:HideZoomKey(true)
-  self.Tag_Quality:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  self.Text_Char_None:SetVisibility(ESlateVisibility.Collapsed)
-  self.Image_Element:SetVisibility(ESlateVisibility.Collapsed)
-  if self.BG_Icon then
-    self.BG_Icon:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  if WeaponAccessoryData.StanceFXType ~= "Accessory" then
+    local ConfigData = {
+      OwnerWidget = self,
+      TextContent = GText("UI_Accessory_Stance_Tips"),
+      OnMenuOpenChangedCallBack = self.OnModMenuStateChanged
+    }
+    self.Btn_CheckMod:Init(ConfigData)
+    self.TextTitleMod:SetText(GText("UI_Accessory_Stance_Mod"))
+    local Params = {
+      Parant = self,
+      Target = {Uuid = nil},
+      Type = "Weapon",
+      ForbidModBtn = true,
+      ShowAlreadyHave = true,
+      ModId = self:GetWeaponStanceFXModId(SkinInfo.TypeId),
+      Owner = self,
+      OnModBtnClicked = nil
+    }
+    self.WBP_Armory_SkinMod:Init(Params)
+    local Params = {
+      Path = WeaponAccessoryData.Video,
+      SoundPath = WeaponAccessoryData.GetSoundPath
+    }
+    self:InitVideoInfo(Params)
+    self.Group_Video:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Mod_Title_Line:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Mod_Content:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.BackGround:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  else
+    self.Tab_Change:SetVisibility(UIConst.VisibilityOp.Visible)
   end
-  self.HorizontalBox_Color:SetVisibility(ESlateVisibility.Collapsed)
-  self.Tab_Change:SetVisibility(ESlateVisibility.Visible)
-  self.WBP_Mounts:SetVisibility(ESlateVisibility.Collapsed)
 end
 
 function M:UpdateMountDescription(ItemData)
@@ -239,24 +204,47 @@ function M:UpdateMountDescription(ItemData)
   self.Text_Info:SetText(GText(MountData.MountDes))
   self.Tag_Quality:Init(MountData.MountRarity)
   self:UpdateSkinNameFontByRarity(MountData.MountRarity)
-  self.WBP_Mounts:SetVisibility(ESlateVisibility.Collapsed)
-  self.Text_Char_None:SetVisibility(ESlateVisibility.Collapsed)
-  self.Tab_Change:SetVisibility(ESlateVisibility.Collapsed)
-  self.HorizontalBox_Color:SetVisibility(ESlateVisibility.Collapsed)
-  local MountIconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Mounts.T_Tab_Mounts"
-  if MountIconPath then
-    local MountIcon = LoadObject(MountIconPath)
-    self.Image_Element:SetBrushResourceObject(MountIcon)
-    self.Image_Element:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    if self.BG_Icon then
-      self.BG_Icon:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    end
-  else
-    self.Image_Element:SetVisibility(ESlateVisibility.Collapsed)
-    if self.BG_Icon then
-      self.BG_Icon:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  SetElementIcon(self, "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Mounts.T_Tab_Mounts")
+end
+
+function M:GetWeaponStanceFXModId(WeaponAccessoryId)
+  local WeaponAccessoryData = DataMgr.WeaponAccessory[WeaponAccessoryId]
+  if not WeaponAccessoryData or not WeaponAccessoryData.StanceFXTag then
+    return nil
+  end
+  local StanceFXTag = tonumber(WeaponAccessoryData.StanceFXTag)
+  local ModApplicationType = DataMgr.WeaponAccessoryId2ModApplicationType and DataMgr.WeaponAccessoryId2ModApplicationType[WeaponAccessoryId]
+  for ModId, ModData in pairs(DataMgr.Mod) do
+    if (not ModApplicationType or ModData.ApplicationType == ModApplicationType) and ModData.ModActivateSkills then
+      for _, Tag in pairs(ModData.ModActivateSkills) do
+        if tonumber(Tag) == StanceFXTag then
+          return ModId
+        end
+      end
     end
   end
+end
+
+function M:InitVideoInfo(Params)
+  self:RefreshOpInfoByInputDevice(UIUtils.UtilsGetCurrentInputType())
+  self.VideoPlayer:SetIsNeedAudio(true)
+  Params = Params or {}
+  if Params.MediaSource then
+    self.VideoPlayer:SetUrlByMediaSource(Params.MediaSource)
+  elseif Params.Url then
+    self.VideoPlayer:SetUrl(Params.Url)
+  elseif Params.Path then
+    local MediaSource = LoadObject(Params.Path)
+    if MediaSource then
+      self.VideoPlayer:SetUrlByMediaSource(MediaSource)
+    end
+  end
+  if Params.SoundPath then
+    AudioManager(self):PlayUISound(self, "event:/ui/common/gacha_amb", "GachaAmb", nil)
+    AudioManager(self):PlayUISound(self, Params.SoundPath, "SkinVideoSound", nil)
+  end
+  self.VideoPlayer:SetLooping(true)
+  self.VideoPlayer:Play()
 end
 
 return M

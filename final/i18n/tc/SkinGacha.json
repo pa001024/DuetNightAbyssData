@@ -108,7 +108,7 @@
     "warning": "<Title>必定獲取金色品質道具</>\n正在進行的尋覓 <highlight>%d</>/90\n\n<Title>活動限定萬華概率說明</>\n經由尋覓獲取金色品質道具的基礎概率為<highlight>0.3%%</>，綜合概率（含保底）為<highlight>1.42%%</>，至多<highlight>90</>次尋覓必定獲取金色品質道具，其中各道具概率如下：\n攜金宴夜：<highlight>0.641%%</>\n虹色稜鏡*25：<highlight>0.641%%</>\n虹色稜鏡*50：<highlight>0.142%%</>\n經由尋覓獲取紫色品質道具的基礎概率為<highlight>5.1%%</>，綜合概率（含保底）為<highlight>12.46%%</>，至多<highlight>10</>次尋覓必定獲取紫色品質道具；\n透過保底獲取紫色品質道具的概率為<highlight>99.7%%</>，獲取金色品質道具的概率為<highlight>0.3%%</>。\n當觸發概率提升、保底等情況時的概率，請以具體規則為準。\n\n<Title>重複獲取說明</>\n如果重複獲取金色品質形象攜金宴夜，將轉化為虹色稜鏡*<highlight>25</>。\n如果重複獲取其餘已擁有的外觀，將轉化為水色稜鏡；重複紫色品質外觀將轉化為水色稜鏡*<highlight>4</>，重複藍色品質外觀將轉化為水色稜鏡*<highlight>1</>。\n\n<Title>萬華繼承說明</>\n在<highlight>宴夜訴平生</>中的尋覓次數將獨立計算，不與其他活動萬華合併計算。",
     "coreDes": "流光形象",
     "coreDesColor": 5,
-    "type": "活動限定",
+    "type": "限時復刻",
     "subTabId": 1401,
     "tabId": 4,
     "sequence": 4,
@@ -116,8 +116,8 @@
     "displayType": 1,
     "historyType": 2,
     "hideCountdown": null,
-    "startTime": 1770602400,
-    "endTime": 1775466000,
+    "startTime": 1788746400,
+    "endTime": 1792400400,
     "cost": {
       "res": [
         1004,
@@ -205,6 +205,41 @@
     "star3ItemId": 99933,
     "star4ItemId": 99932,
     "star5ItemId": 99931
+  },
+  {
+    "id": 9008,
+    "name": "長路何所向",
+    "desc": "每<highlight>10</>次尋覓必定獲取紫色或紫色以上品質道具，至多<highlight>90</>次尋覓必定獲取金色品質道具。",
+    "warning": "<Title>必定獲取金色品質道具</>\n正在進行的尋覓 <highlight>%d</>/90\n\n<Title>活動限定萬華概率說明</>\n經由尋覓獲取金色品質道具的基礎概率為<highlight>0.3%%</>，綜合概率（含保底）為<highlight>1.42%%</>，至多<highlight>90</>次尋覓必定獲取金色品質道具，其中各道具概率如下：\n緘默獵手：<highlight>0.641%%</>\n虹色稜鏡*25：<highlight>0.641%%</>\n虹色稜鏡*50：<highlight>0.142%%</>\n經由尋覓獲取紫色品質道具的基礎概率為<highlight>5.1%%</>，綜合概率（含保底）為<highlight>12.46%%</>，至多<highlight>10</>次尋覓必定獲取紫色品質道具；\n通過保底獲取紫色品質道具的概率為<highlight>99.7%%</>，獲取金色品質道具的概率為<highlight>0.3%%</>。\n當觸發概率提升、保底等情況時的概率，請以具體規則為準。\n\n<Title>重複獲取說明</>\n如果重複獲取金色品質形象緘默獵手，將轉化為虹色稜鏡*<highlight>25</>。\n如果重複獲取其餘已擁有的外觀，將轉化為水色稜鏡；重複紫色品質外觀將轉化為水色稜鏡*<highlight>4</>，重複藍色品質外觀將轉化為水色稜鏡*<highlight>1</>。\n\n<Title>萬華繼承說明</>\n在<highlight>長路何所向</>中的尋覓次數將獨立計算，不與其他活動萬華合併計算。",
+    "coreDes": "流光形象",
+    "coreDesColor": 5,
+    "type": "活動限定",
+    "subTabId": 1401,
+    "tabId": 8,
+    "sequence": 8,
+    "gachaTimes": 1,
+    "displayType": 1,
+    "historyType": 2,
+    "hideCountdown": null,
+    "startTime": 1788746400,
+    "endTime": 1792400400,
+    "cost": {
+      "res": [
+        1004,
+        1003
+      ],
+      "num10": 10,
+      "displayRes": [
+        99,
+        1004,
+        1003
+      ]
+    },
+    "probabilityId": 1001,
+    "conditionId": 4041,
+    "star3ItemId": 99923,
+    "star4ItemId": 99922,
+    "star5ItemId": 99921
   },
   {
     "id": 90021,

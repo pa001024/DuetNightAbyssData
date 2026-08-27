@@ -113,7 +113,11 @@ StateImpl.BeginState = State:New("BeginState", {
     if IsValid(GameInputSubsystem) then
       GameInputSubsystem:DisableInputMode("CommonChangeScene")
     end
-    GWorld.StoryMgr:EnableStory()
+    GWorld.StoryMgr:AddInLoadingListener()
+    local Avatar = GWorld:GetAvatar()
+    if Avatar then
+      Avatar:AddInLoadingListener()
+    end
     local PlayerCharacter = GWorld:GetMainPlayer()
     if PlayerCharacter then
       PlayerCharacter:SetCanInteractiveTrigger(true, "Loading")

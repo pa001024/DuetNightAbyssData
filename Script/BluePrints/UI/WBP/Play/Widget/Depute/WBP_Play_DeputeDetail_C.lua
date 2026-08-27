@@ -861,7 +861,7 @@ function M:RefreshLevelCellContent(DungeonId)
 end
 
 function M:AutoNextRoundInit()
-  if 1 ~= self.DungeonData.DungeonWinMode or not self.DungeonData.AutoNextRound then
+  if not self.DungeonData.AutoNextRound then
     self.AutoNextRound:SetVisibility(UE4.ESlateVisibility.Collapsed)
     return
   end
@@ -1025,6 +1025,10 @@ function M:RefreshRewardInfoList(DungeonId)
     elseif Content.ItemType == "Walnut" then
       local WalnutsInBag = Avatar.Walnuts.WalnutBag
       Content.bShadow = (WalnutsInBag[Content.Id] or 0) <= 0
+    end
+    if ItemData.ProductType then
+      Content.ProductType = ItemData.ProductType
+      Content.Level = ItemData.Level
     end
     self.List_Prop:AddItem(Content)
   end

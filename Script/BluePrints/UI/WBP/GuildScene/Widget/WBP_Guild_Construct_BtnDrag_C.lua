@@ -10,28 +10,22 @@ end
 
 function M:OnBtnPressed()
   Utils.ScreenPrint("WBP_Guild_Construct_BtnDrag_C:BtnPressed")
-  self.Parent.bIsDragActor = true
   self.bIsDragActor = true
 end
 
 function M:OnBtnReleased()
-  Utils.ScreenPrint("WBP_Guild_Construct_BtnDrag_C:BtnReleased")
-  self.Parent.bIsDragActor = false
-  self.bIsDragActor = false
 end
 
 function M:OnMouseButtonDown(MyGeometry, MouseEvent)
-  Utils.ScreenPrint("WBP_Guild_Construct_BtnDrag_C:OnMouseButtonDown")
-  self.Parent.bIsDragActor = true
-  self.bIsDragActor = true
-  return UE4.UWidgetBlueprintLibrary.Handled()
+  if self.Parent then
+    return self.Parent:OnMouseButtonDown(MyGeometry, MouseEvent)
+  end
 end
 
 function M:OnMouseButtonUp(MyGeometry, MouseEvent)
-  Utils.ScreenPrint("WBP_Guild_Construct_BtnDrag_C:OnMouseButtonUp")
-  self.Parent.bIsDragActor = false
-  self.bIsDragActor = false
-  return UE4.UWidgetBlueprintLibrary.Unhandled()
+  if self.Parent then
+    return self.Parent:OnMouseButtonUp(MyGeometry, MouseEvent)
+  end
 end
 
 function M:InitOperation()

@@ -14,6 +14,11 @@ local MiscUtils = require("Utils.MiscUtils")
 local EMLuaConst = require("EMLuaConst")
 local SettlementCameraData = require("SettlementCameraData")
 local BattleEventName = require("BluePrints/Combat/BattleEvents/BattleEventName")
+local ENABLE_AUTO_PLAY_COMPONENT = false
+local SLIDE_HOOK_START_SOUND_PATH = "event:/sfx/common/player/action/commnon_gousuo_start"
+local SLIDE_HOOK_END_SOUND_PATH = "event:/sfx/common/player/action/commnon_gousuo_end"
+local SLIDE_HOOK_START_SOUND_KEY = "GousuoStart"
+local SLIDE_HOOK_END_SOUND_KEY = "GousuoEnd"
 local BP_PlayerCharacter_C = Class("BluePrints.Char.BP_CharacterBase_C")
 BP_PlayerCharacter_C._components = {
   "BluePrints.Char.CharacterComponent.PickupComponent",
@@ -29,6 +34,9 @@ BP_PlayerCharacter_C._components = {
   "BluePrints.Char.CharacterComponent.CharMoveSyncMgr",
   "BluePrints.Char.CharacterComponent.PropEffectComponent"
 }
+if ENABLE_AUTO_PLAY_COMPONENT then
+  table.insert(BP_PlayerCharacter_C._components, "BluePrints.Char.CharacterComponent.AutoPlayComponent")
+end
 
 function BP_PlayerCharacter_C:Initialize(Initializer)
   self:PlayerCharacterInitialize()
@@ -51,7 +59,6 @@ function BP_PlayerCharacter_C:ReceiveBeginPlay()
   MiscUtils.InitializeSettings(self)
   self:RefreshTeamMemberInfo("ReceiveBeginPlay")
   if self:IsMainPlayer() then
-    EventManager:RemoveEvent(EventID.ChangeRole, self)
     EventManager:AddEvent(EventID.ChangeRole, self, self.OnChangeRole)
     EventManager:FireEvent(EventID.OnMainCharacterBeginPlay)
     local IsOpenHelperAim = EMCache:Get("IsOpenHelperAim")
@@ -386,7 +393,46 @@ function BP_PlayerCharacter_C:SetQuestBattleWheelID(QuestBattleWheelID)
   end
 end
 
+function BP_PlayerCharacter_C:GetActiveSpecialQuestUniversalConfig()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return nil
+  end
+  local SpecialQuestId = Avatar.SpecialQuestId
+  if (not SpecialQuestId or 0 == SpecialQuestId) and Avatar.SpecialQuestData then
+    for Id, Data in pairs(Avatar.SpecialQuestData) do
+      if Data and Data.IsDoing and Data:IsDoing() then
+        SpecialQuestId = Id
+        break
+      end
+    end
+  end
+  if not SpecialQuestId or 0 == SpecialQuestId then
+    return nil
+  end
+  local bActive = Avatar.InSpecialQuest
+  if not bActive and Avatar.IsInSpecialQuest then
+    bActive = Avatar:IsInSpecialQuest()
+  end
+  if not bActive then
+    local Data = Avatar.SpecialQuestData and Avatar.SpecialQuestData[SpecialQuestId]
+    bActive = Data and Data.IsDoing and Data:IsDoing()
+  end
+  if not bActive then
+    return nil
+  end
+  local SpecialQuestConfig = DataMgr.SpecialQuestConfig[SpecialQuestId]
+  if not SpecialQuestConfig or not SpecialQuestConfig.UniversalConfigId then
+    return nil
+  end
+  return DataMgr.UniversalConfig[SpecialQuestConfig.UniversalConfigId]
+end
+
 function BP_PlayerCharacter_C:EnableBattleWheel()
+  local UniversalConfig = self:GetActiveSpecialQuestUniversalConfig()
+  if UniversalConfig and UniversalConfig.DisableBattleWheel then
+    return
+  end
   local GameInstance = GWorld.GameInstance
   local Controller = UE4.UGameplayStatics.GetPlayerController(GameInstance, 0)
   if Controller then
@@ -405,6 +451,10 @@ function BP_PlayerCharacter_C:DisableBattleWheel()
 end
 
 function BP_PlayerCharacter_C:ShowBattleWheel()
+  local UniversalConfig = self:GetActiveSpecialQuestUniversalConfig()
+  if UniversalConfig and UniversalConfig.HideBattleWheel then
+    return
+  end
   local Controller = self:GetController()
   if Controller then
     Controller.bShowBattleWheel = true
@@ -771,6 +821,7 @@ function BP_PlayerCharacter_C:HandleDeadDuringQuest()
 end
 
 function BP_PlayerCharacter_C:RealOnDead_Lua(KillMineRoleEid, KillMineSkillId, DeathReason)
+  self:TryReleaseSlideMechOnDead(KillMineRoleEid, KillMineSkillId, DeathReason)
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
   if nil ~= GameMode then
     GameMode:NotifyGameModePlayerDead(self)
@@ -809,9 +860,9 @@ function BP_PlayerCharacter_C:RealOnDead_Lua(KillMineRoleEid, KillMineSkillId, D
 end
 
 function BP_PlayerCharacter_C:OnTriggerFallTrigger(GameMode, FallTrigger)
-  if GameMode and FallTrigger then
+  if GameMode then
     local ControllerIndex = UE4.URuntimeCommonFunctionLibrary.GetPlayerControllerIndex(self, self:GetController())
-    GameMode:OnTriggerFallTrigger(FallTrigger, self, ControllerIndex)
+    GameMode:TriggerOnFallTriggerEventToBP(FallTrigger, self, ControllerIndex)
   end
 end
 
@@ -1534,12 +1585,287 @@ function BP_PlayerCharacter_C:LeaveSeatingTag(NewTag)
   self.CapsuleComponent:SetCollisionResponseToChannel(ECollisionChannel.ECC_WorldStatic, ECollisionResponse.ECR_Block)
 end
 
+do
+  local SLIDE_ACCEL_BUFF_ID = 64
+  local SLIDE_BUFF_DECAY_TIMER = "SlideBuffLayerDecay"
+  local SLIDE_ACCEL_FX_NAME = "Slide_Acceleration_Wind"
+  local SLIDE_ACCEL_FX_PATH = "/Game/Asset/Effect/Niagara/GamePlay/Railway/NS_Railway_wind_002.NS_Railway_wind_002"
+  
+  function BP_PlayerCharacter_C:RefreshSlideAccelerationFX()
+    if IsDedicatedServer(self) or not IsValid(self.FXComponent) then
+      return
+    end
+    local IsPlaying = self.FXComponent:IsFXPlay_Level(SLIDE_ACCEL_FX_NAME)
+    if self.SlideSpeedStateActive and not self.SlideSpeedPaused and self.SlideBuffLayer > 0 and self.SlideSpeedPhase == "Accelerating" and self.SlideCurrentSpeed < self.SlideTargetSpeed then
+      if not IsPlaying and IsValid(self.Mesh) then
+        self.FXComponent:SpawnFXAttached_Level(SLIDE_ACCEL_FX_PATH, SLIDE_ACCEL_FX_NAME, self.Mesh, "Root_Effect", FVector(0, 0, 0), FRotator(0, 0, 0), FVector(1, 1, 1), EAttachLocation.KeepRelativeOffset, true)
+        self.SlideAccelerationFXDeadTime = nil
+      end
+      return
+    end
+    if IsPlaying and not self.SlideAccelerationFXDeadTime then
+      self.FXComponent:SetFXBoolParam_Level(SLIDE_ACCEL_FX_NAME, "DeadTime", true)
+      self.FXComponent:StopFX_Level(SLIDE_ACCEL_FX_NAME, false)
+      self.SlideAccelerationFXDeadTime = true
+    elseif not IsPlaying then
+      self.SlideAccelerationFXDeadTime = nil
+    end
+  end
+  
+  function BP_PlayerCharacter_C:BindSlideAccelerationBuff()
+    if self.SlideBuffBound or not self.BuffManager then
+      return
+    end
+    self.SlideBuffAddedDelegate = {
+      self,
+      self.OnSlideAccelerationBuffChanged
+    }
+    self.SlideBuffRemovedDelegate = {
+      self,
+      self.OnSlideAccelerationBuffRemoved
+    }
+    self.SlideBuffRefreshedDelegate = {
+      self,
+      self.OnSlideAccelerationBuffChanged
+    }
+    self.BuffManager:BP_BindOnBuffAdded(SLIDE_ACCEL_BUFF_ID, self.SlideBuffAddedDelegate)
+    self.BuffManager:BP_BindOnBuffRemoved(SLIDE_ACCEL_BUFF_ID, self.SlideBuffRemovedDelegate)
+    self.BuffManager:BP_BindOnBuffRefreshed(SLIDE_ACCEL_BUFF_ID, self.SlideBuffRefreshedDelegate)
+    self.SlideBuffBound = true
+  end
+  
+  function BP_PlayerCharacter_C:UnbindSlideAccelerationBuff()
+    if not self.SlideBuffBound or not self.BuffManager then
+      return
+    end
+    self.BuffManager:BP_UnbindOnBuffAdded(SLIDE_ACCEL_BUFF_ID, self.SlideBuffAddedDelegate)
+    self.BuffManager:BP_UnbindOnBuffRemoved(SLIDE_ACCEL_BUFF_ID, self.SlideBuffRemovedDelegate)
+    self.BuffManager:BP_UnbindOnBuffRefreshed(SLIDE_ACCEL_BUFF_ID, self.SlideBuffRefreshedDelegate)
+    self.SlideBuffAddedDelegate = nil
+    self.SlideBuffRemovedDelegate = nil
+    self.SlideBuffRefreshedDelegate = nil
+    self.SlideBuffBound = false
+  end
+  
+  function BP_PlayerCharacter_C:BeginSlideSpeedState(BaseSpeed, AccTime)
+    self:UnbindSlideAccelerationBuff()
+    self.SlideSpeedStateActive = true
+    self.SlideBaseSpeed = BaseSpeed
+    self.SlideTargetSpeed = BaseSpeed
+    self.SlideBuffValue = 1.0
+    self.SlideBuffLayer = 0
+    self.SlideAcceleration = math.abs(DataMgr.MovementParams.Acceleration.ParamValue or 500)
+    self.SlideDeceleration = math.abs(DataMgr.MovementParams.Deceleration.ParamValue or -500)
+    self.SlideAccelerationUnitTime = DataMgr.MovementParams.AccelerationUnitTime.ParamValue or 1
+    self.SlideEntryAccTime = AccTime or 0
+    self.SlideUsingEntryAcceleration = self.SlideEntryAccTime > 0
+    self.SlideCurrentSpeed = self.SlideUsingEntryAcceleration and 0 or BaseSpeed
+    self.SlideSpeedPhase = self.SlideUsingEntryAcceleration and "Accelerating" or "Cruising"
+    self.SlideMovingRate = BaseSpeed > 0 and self.SlideCurrentSpeed / BaseSpeed or 0
+    self:BindSlideAccelerationBuff()
+  end
+  
+  function BP_PlayerCharacter_C:StopSlideBuffDecay()
+    self:RemoveTimer(SLIDE_BUFF_DECAY_TIMER)
+  end
+  
+  function BP_PlayerCharacter_C:StartSlideBuffDecay()
+    if not IsAuthority(self) or self.SlideSpeedPaused or self.SlideBuffDecayPaused or self.SlideBuffLayer <= 0 or self:IsExistTimer(SLIDE_BUFF_DECAY_TIMER) then
+      return
+    end
+    self:AddTimer(math.max(self.SlideAccelerationUnitTime, 0.01), function()
+      if not self.SlideSpeedStateActive or self.SlideSpeedPaused then
+        self:StopSlideBuffDecay()
+        return
+      end
+      local Buff = self.BuffManager and self.BuffManager:FindBuffById(SLIDE_ACCEL_BUFF_ID, 0, false)
+      if Buff then
+        self:ReduceBuffLayer(self, SLIDE_ACCEL_BUFF_ID, 1, false)
+      else
+        self:StopSlideBuffDecay()
+      end
+    end, true, 0, SLIDE_BUFF_DECAY_TIMER)
+  end
+  
+  function BP_PlayerCharacter_C:PauseSlideBuffDecay()
+    self.SlideBuffDecayPaused = true
+    if self:IsExistTimer(SLIDE_BUFF_DECAY_TIMER) then
+      self:PauseTimer(SLIDE_BUFF_DECAY_TIMER)
+    end
+  end
+  
+  function BP_PlayerCharacter_C:ResumeSlideBuffDecay()
+    self.SlideBuffDecayPaused = false
+    if self:IsExistTimer(SLIDE_BUFF_DECAY_TIMER) then
+      self:UnPauseTimer(SLIDE_BUFF_DECAY_TIMER)
+    else
+      self:StartSlideBuffDecay()
+    end
+  end
+  
+  function BP_PlayerCharacter_C:RefreshSlideSpeedPhase()
+    local Delta = self.SlideTargetSpeed - self.SlideCurrentSpeed
+    if math.abs(Delta) <= 0.01 then
+      self.SlideCurrentSpeed = self.SlideTargetSpeed
+      self.SlideSpeedPhase = "Cruising"
+    else
+      self.SlideSpeedPhase = Delta > 0 and "Accelerating" or "Decelerating"
+    end
+  end
+  
+  function BP_PlayerCharacter_C:RefreshSlideBaseSpeed(BaseSpeed)
+    if not self.SlideSpeedStateActive or self.SlideBaseSpeed == BaseSpeed then
+      return
+    end
+    self.SlideBaseSpeed = BaseSpeed
+    self.SlideTargetSpeed = BaseSpeed * (self.SlideBuffLayer > 0 and self.SlideBuffValue or 1.0)
+    self:RefreshSlideSpeedPhase()
+  end
+  
+  function BP_PlayerCharacter_C:OnSlideAccelerationBuffChanged(Buff)
+    if not self.SlideSpeedStateActive or not Buff then
+      return
+    end
+    self.SlideBuffLayer = Buff.Layer or 0
+    self.SlideBuffValue = Buff.Value or 1.0
+    self.SlideUsingEntryAcceleration = false
+    self.SlideTargetSpeed = self.SlideBaseSpeed * self.SlideBuffValue
+    self:RefreshSlideSpeedPhase()
+    self:StartSlideBuffDecay()
+  end
+  
+  function BP_PlayerCharacter_C:OnSlideAccelerationBuffRemoved(Buff, RemovedReason)
+    if not self.SlideSpeedStateActive then
+      return
+    end
+    self.SlideBuffLayer = 0
+    self.SlideBuffValue = 1.0
+    self.SlideUsingEntryAcceleration = false
+    self.SlideTargetSpeed = self.SlideBaseSpeed
+    self:StopSlideBuffDecay()
+    self:RefreshSlideSpeedPhase()
+  end
+  
+  function BP_PlayerCharacter_C:AddSlideAccelerationBuff(Rate, BuffLayer)
+    if not self.SlideSpeedStateActive or not IsAuthority(self) then
+      return false
+    end
+    local Layer = math.max(math.floor(tonumber(BuffLayer) or 0), 1)
+    Battle(self):AddBuffToTarget(self, self, SLIDE_ACCEL_BUFF_ID, -1, 1 + (tonumber(Rate) or 0), nil, Layer)
+    return true
+  end
+  
+  function BP_PlayerCharacter_C:UpdateSlideSpeedState(DeltaSeconds, BaseSpeed)
+    if not self.SlideSpeedStateActive or self.SlideSpeedPaused then
+      return
+    end
+    self:RefreshSlideBaseSpeed(BaseSpeed)
+    if self.SlideSpeedPhase == "Accelerating" then
+      local Acceleration = self.SlideUsingEntryAcceleration and (self.SlideEntryAccTime > 0 and self.SlideBaseSpeed / self.SlideEntryAccTime or self.SlideTargetSpeed) or self.SlideAcceleration
+      self.SlideCurrentSpeed = math.min(self.SlideCurrentSpeed + Acceleration * DeltaSeconds, self.SlideTargetSpeed)
+    elseif self.SlideSpeedPhase == "Decelerating" then
+      self.SlideCurrentSpeed = math.max(self.SlideCurrentSpeed - self.SlideDeceleration * DeltaSeconds, self.SlideTargetSpeed)
+    end
+    if math.abs(self.SlideTargetSpeed - self.SlideCurrentSpeed) <= 0.01 and self.SlideSpeedPhase ~= "Cruising" then
+      self.SlideUsingEntryAcceleration = false
+      self:RefreshSlideSpeedPhase()
+    end
+    self:RefreshSlideAccelerationFX()
+    self.SlideMovingRate = self.SlideBaseSpeed > 0 and self.SlideCurrentSpeed / self.SlideBaseSpeed or 0
+  end
+  
+  function BP_PlayerCharacter_C:PauseSlideSpeedForTurn()
+    self.SlideSpeedPaused = true
+    self:PauseSlideBuffDecay()
+    self:RefreshSlideAccelerationFX()
+  end
+  
+  function BP_PlayerCharacter_C:ResumeSlideSpeedAfterTurn(BaseSpeed)
+    if not self.SlideSpeedStateActive then
+      return
+    end
+    self.SlideSpeedPaused = false
+    self.SlideUsingEntryAcceleration = false
+    self.SlideBaseSpeed = BaseSpeed
+    self.SlideCurrentSpeed = 0
+    self.SlideTargetSpeed = BaseSpeed * (self.SlideBuffLayer > 0 and self.SlideBuffValue or 1.0)
+    self:RefreshSlideSpeedPhase()
+    self:ResumeSlideBuffDecay()
+  end
+  
+  function BP_PlayerCharacter_C:RestoreSlideCameraState()
+    local Controller = self:GetController()
+    if Controller then
+      Controller:RemoveDisableRotationInputTag("SlideSplineTurn")
+      local CameraManager = Controller.PlayerCameraManager
+      if CameraManager and self.SlideCameraOriginalViewYawMin ~= nil then
+        CameraManager.ViewYawMin = self.SlideCameraOriginalViewYawMin
+        CameraManager.ViewYawMax = self.SlideCameraOriginalViewYawMax
+        CameraManager.ViewPitchMin = self.SlideCameraOriginalViewPitchMin
+        CameraManager.ViewPitchMax = self.SlideCameraOriginalViewPitchMax
+      end
+    end
+    if self.SlideCameraLerping and self.CameraRotationComponent then
+      self.CameraRotationComponent:StopControlRotationLerp()
+    end
+    self.SlideCameraActive = nil
+    self.SlideCameraLerping = nil
+    self.SlideCameraBaseRotation = nil
+    self.SlideCameraOriginalViewYawMin = nil
+    self.SlideCameraOriginalViewYawMax = nil
+    self.SlideCameraOriginalViewPitchMin = nil
+    self.SlideCameraOriginalViewPitchMax = nil
+  end
+  
+  function BP_PlayerCharacter_C:ClearSlideSpeedState()
+    if not self.SlideSpeedStateActive then
+      return
+    end
+    self:StopSlideBuffDecay()
+    if IsAuthority(self) and self.BuffManager then
+      local Buff = self.BuffManager:FindBuffById(SLIDE_ACCEL_BUFF_ID, 0, false)
+      if Buff then
+        self:ReduceBuffLayer(self, SLIDE_ACCEL_BUFF_ID, Buff.Layer or 1, false)
+      end
+    end
+    self:UnbindSlideAccelerationBuff()
+    self.SlideSpeedStateActive = nil
+    self.SlideSpeedPaused = nil
+    self.SlideBuffDecayPaused = nil
+    self.SlideBaseSpeed = nil
+    self.SlideCurrentSpeed = nil
+    self.SlideTargetSpeed = nil
+    self.SlideSpeedPhase = nil
+    self.SlideBuffLayer = nil
+    self.SlideBuffValue = nil
+    self.SlideMovingRate = nil
+    self:RefreshSlideAccelerationFX()
+  end
+end
+
+local function IsLocalSlidePlayer(Player)
+  return Player:IsMainPlayer()
+end
+
+function BP_PlayerCharacter_C:PlaySlideHookStartSound()
+  if not IsLocalSlidePlayer(self) then
+    return
+  end
+  AudioManager(self):PlayFMODSound(self, nil, SLIDE_HOOK_START_SOUND_PATH, SLIDE_HOOK_START_SOUND_KEY, nil, nil, true, false, nil, true)
+end
+
+function BP_PlayerCharacter_C:PlaySlideHookEndSound()
+  if not IsLocalSlidePlayer(self) then
+    return
+  end
+  AudioManager(self):PlayNormalSound(self, nil, SLIDE_HOOK_END_SOUND_PATH, SLIDE_HOOK_END_SOUND_KEY, false)
+end
+
 function BP_PlayerCharacter_C:TryEnterSlideMech()
   if self.IsFlyingToSlideMech then
     return
   end
   if self.IsInSlideMech and self.CurSlideMechEid > 0 then
-    self:TryLeaveSlideMech()
     return
   end
   local GameState = UE4.UGameplayStatics.GetGameState(self)
@@ -1549,19 +1875,69 @@ function BP_PlayerCharacter_C:TryEnterSlideMech()
   local SlideMechMap = GameState.SlideMechanismMap:ToTable()
   for Eid, SlideMech in pairs(SlideMechMap) do
     if IsValid(SlideMech) and SlideMech.bProximityPromptShowing then
+      if SlideMech.CanInteractive == false then
+        SlideMech:HideSlidePrompt()
+        break
+      end
       DebugPrint("TryEnterSlideMech proximity ", SlideMech.Eid, SlideMech:GetName())
       local Controller = self:GetController()
       if Controller then
         local ControlRotation = Controller:GetControlRotation()
         SlideMech.CachedPlayerForward = UE4.UKismetMathLibrary.GetForwardVector(ControlRotation)
       end
-      SlideMech:RemoveTimer("ProximityCheck")
       SlideMech:HideSlidePrompt()
-      SlideMech.NearbyPlayer = nil
       SlideMech:PlayerFirstEnterSlideMech(self)
       return
     end
   end
+end
+
+function BP_PlayerCharacter_C:StartSlideMechFromPoint_Lua(TargetSlide, StartProgress, bForward, bUseAttachAnimation)
+  local GameState = UE4.UGameplayStatics.GetGameState(self)
+  if not (GameState and TargetSlide.Length) or TargetSlide.Length <= 0 or not TargetSlide.Eid then
+    return false
+  end
+  local RegisteredSlide = GameState.SlideMechanismMap:FindRef(TargetSlide.Eid)
+  if RegisteredSlide ~= TargetSlide then
+    return false
+  end
+  local OldSlideEid = self.CurSlideMechEid > 0 and self.CurSlideMechEid or self.SlideMechEid
+  local OldSlide = OldSlideEid and GameState.SlideMechanismMap:FindRef(OldSlideEid) or nil
+  if self.IsFlyingToSlideMech then
+    self:StopMontage()
+    if self.IsFlyingToSlideMech then
+      self:CleanUpSlideMechEnter()
+    end
+  end
+  if IsValid(OldSlide) and OldSlide.CurPlayer == self then
+    OldSlide:ForceReleaseForFlow()
+  end
+  if IsValid(TargetSlide.CurPlayer) then
+    TargetSlide:ForceReleaseForFlow()
+  end
+  TargetSlide:StopProximityCheck()
+  TargetSlide.CachedEntryProgress = StartProgress
+  TargetSlide.CachedEntryDistance = StartProgress * TargetSlide.Length
+  TargetSlide.CachedEntryMoveDirection = bForward and 1 or -1
+  if bUseAttachAnimation then
+    TargetSlide:PlayerFirstEnterSlideMech(self)
+  else
+    self.SlideMechEid = TargetSlide.Eid
+    self:ChangeToMasterSlideMech()
+    TargetSlide:OnSlideSplineCharacterReady()
+    self:FirstInSlideMech()
+  end
+  return true
+end
+
+function BP_PlayerCharacter_C:ApplySlideMechFlyCollision()
+  self:SetCollisionType("CapsuleComponent", "MonsterPawn", ECollisionResponse.ECR_Overlap, false)
+  self:SetCollisionType("CapsuleComponent", "WorldStatic", ECollisionResponse.ECR_Overlap, false)
+end
+
+function BP_PlayerCharacter_C:RestoreSlideMechFlyCollision()
+  self:SetCollisionType("CapsuleComponent", "MonsterPawn", ECollisionResponse.ECR_Block, false)
+  self:SetCollisionType("CapsuleComponent", "WorldStatic", ECollisionResponse.ECR_Block, false)
 end
 
 function BP_PlayerCharacter_C:BeginEnterSlideMech(MechEid)
@@ -1611,15 +1987,26 @@ function BP_PlayerCharacter_C:BeginEnterSlideMech(MechEid)
     end,
     OnInterrupted = function()
       self:CleanUpSlideMechEnter()
+    end,
+    OnCompleted = function()
+      self.bSlideMechEnterMontagePlaying = false
+    end,
+    OnBlendOut = function()
+      if self.IsInSlideMech then
+        self.bSlideMechEnterMontagePlaying = false
+      end
     end
   }
   self:ChangeToMasterSlideMech()
+  self:SetVector("Hook_TargetLocation", SplineStartLocation)
+  self:PlaySlideHookStartSound()
   SlideMech:OnSlideSplineCharacterReady()
   self.IsFlyingToSlideMech = true
+  self.bSlideMechEnterMontagePlaying = true
   self:ForbidSkillsInHooking(true)
   self:DisableBattleWheel()
   self:AddForbidTag("SlideMech")
-  self:SetActorEnableCollision(false)
+  self:ApplySlideMechFlyCollision()
   self:PlayActionMontage("Interactive/MechInteractive", "Interactive_SlideSpline_Hook_Montage", AllCallback)
   self:ChangeGravityUseAnim(true, 1.0E-4, false, true, false)
   self:AddTimer(0.001, function()
@@ -1672,16 +2059,25 @@ function BP_PlayerCharacter_C:CleanUpSlideMechEnter()
     self.SlideMechMoveTimer = nil
   end
   self.IsFlyingToSlideMech = false
+  self.bSlideMechEnterMontagePlaying = false
   self:ForbidSkillsInHooking(false)
   self:EnableBattleWheel()
   self:MinusForbidTag("SlideMech")
-  self:SetActorEnableCollision(true)
+  self:RestoreSlideMechFlyCollision()
   self:ChangeGravityUseAnim(false, 0.0)
   self:RemoveTimer("SlideMechGravity")
+  local GameState = UE4.UGameplayStatics.GetGameState(self)
+  local SlideMech = GameState and GameState.SlideMechanismMap:FindRef(self.SlideMechEid) or nil
+  if IsValid(SlideMech) and SlideMech.CachedEntryMoveDirection then
+    SlideMech.CachedEntryDistance = nil
+    SlideMech.CachedEntryProgress = nil
+    SlideMech.CachedEntryMoveDirection = nil
+  end
 end
 
 function BP_PlayerCharacter_C:OnSlideMechEnterCompleted()
   DebugPrint("SlideMech Enter Completed, start sliding along spline")
+  self:PlaySlideHookEndSound()
   if self.SlideMechMoveTimer then
     self:RemoveTimer("SlideMechMoveToSpline")
     self.SlideMechMoveTimer = nil
@@ -1690,112 +2086,213 @@ function BP_PlayerCharacter_C:OnSlideMechEnterCompleted()
   self:ForbidSkillsInHooking(false)
   self:EnableBattleWheel()
   self:MinusForbidTag("SlideMech")
-  self:SetActorEnableCollision(true)
+  self:RestoreSlideMechFlyCollision()
   self:ChangeGravityUseAnim(false, 0.0)
   self:RemoveTimer("SlideMechGravity")
   self:FirstInSlideMech()
 end
 
 function BP_PlayerCharacter_C:ChangeToMasterSlideMech()
+  local ChangeToRoleId = 11101
   local Avatar = GWorld:GetAvatar()
-  if not Avatar then
-    self:ChangeRole(11301)
-    return
-  end
-  DebugPrint("zwk ChangeRoleToSlideMech ", Avatar.WeitaSex, Avatar.Sex)
-  local RegionId = Avatar:GetCurrentRegionId()
-  if not RegionId or DataMgr.SubRegion[RegionId] == nil then
-    self:ChangeRole(11301)
-    return
-  end
-  local PlayerIdentity = DataMgr.SubRegion[RegionId].SwitchPlayer
-  if not PlayerIdentity then
-    self:ChangeRole(11301)
-    return
-  end
-  local MasterGender = 1
-  self.HeroTempInfo = {
-    RoleInfo = {
-      PlayerHp = self:GetAttr("Hp"),
-      PlayerSp = self:GetAttr("Sp"),
-      PlayerES = self:GetAttr("ES")
-    },
-    RangedWeapon = {
-      BulletNum = self.RangedWeapon and self.RangedWeapon:GetAttr("BulletNum") or 0,
-      MagazineBulletNum = self.RangedWeapon and self.RangedWeapon:GetAttr("MagazineBulletNum") or 0
-    }
-  }
-  Avatar.HeroTempInfo = self.HeroTempInfo
-  if "Player" == PlayerIdentity then
-    MasterGender = Avatar.Sex
+  local SavedQuestRoleID = self.AvatarQuestRoleID or 0
+  self:RecoverBanSkills()
+  if Avatar then
+    local RegionId = Avatar:GetCurrentRegionId()
+    local PlayerIdentity = RegionId and DataMgr.SubRegion[RegionId] and DataMgr.SubRegion[RegionId].SwitchPlayer or nil
+    local bIsEX = type(PlayerIdentity) == "string" and string.find(PlayerIdentity, "EXPlayer", 1, true) ~= nil
+    local MasterGender = bIsEX and Avatar.WeitaSex or Avatar.Sex
+    if nil == MasterGender then
+      MasterGender = 1
+    end
+    if bIsEX then
+      ChangeToRoleId = 0 == MasterGender and 11401 or 11301
+    else
+      ChangeToRoleId = 0 == MasterGender and 11201 or 11101
+    end
+    DebugPrint("ChangeToMasterSlideMech WeitaSex:", Avatar.WeitaSex, "Sex:", Avatar.Sex, "RegionId:", RegionId, "PlayerIdentity:", PlayerIdentity, "bIsEX:", bIsEX, "MasterGender:", MasterGender, "ChangeToRoleId:", ChangeToRoleId, "PreRoleId=", self.CurrentRoleId, "PreQuestRoleID=", SavedQuestRoleID, "PreLevel=", self:GetAttr("Level"), "PreSkinId=", self.CurrentSkinId)
   else
-    MasterGender = Avatar.WeitaSex
+    DebugPrint("ChangeToMasterSlideMech Avatar is nil")
   end
-  local RoleId = 1 == MasterGender and 11301 or 11401
-  self:ChangeRole(RoleId)
-  local BattlePet = self:GetBattlePet()
-  if BattlePet then
-    BattlePet:HideBattlePet("Master", false)
+  local AvatarInfo
+  local RoleInfo = DataMgr.QuestRoleInfo[ChangeToRoleId]
+  if RoleInfo then
+    AvatarInfo = AvatarUtils:GetBattleInfoByQuestRoleId(ChangeToRoleId, Avatar)
+  end
+  if AvatarInfo and AvatarInfo.RoleInfo then
+    if AvatarInfo.RoleInfo then
+      AvatarInfo.RoleInfo.AvatarQuestRoleID = SavedQuestRoleID
+    end
+    self:ChangeRole(nil, AvatarInfo)
+  else
+    self:ChangeRole(ChangeToRoleId)
+  end
+  self.AvatarQuestRoleID = SavedQuestRoleID
+  self.AvatarSlideRoleID = ChangeToRoleId
+  if self.RangedWeapon and 0 == self.RangedWeapon:GetAttr("MagazineBulletNum") then
+    self.RangedWeapon:SetWeaponState("NoBullet", true)
+  end
+  EventManager:FireEvent(EventID.OnSwitchRole)
+end
+
+function BP_PlayerCharacter_C:NotifySlideMechHUDStateChanged(IsInSlideMech, Reason, SlideMechEid)
+  EventManager:FireEvent(EventID.OnSlideMechStateChanged, true == IsInSlideMech, self, SlideMechEid or 0, Reason)
+end
+
+function BP_PlayerCharacter_C:ClearSlideMechGameplayFlags()
+  self.InSlideMechTurning = false
+  self.IsSwitchingSlideMech = false
+  self.bSlideMechEnterMontagePlaying = false
+  if self.InSlideMechJump and self.OnSlideMechJumpEnd then
+    self:OnSlideMechJumpEnd()
+  else
+    self.InSlideMechJump = false
+  end
+  if self.InSlideMechSlide and self.OnSlideMechSlideEnd then
+    self:OnSlideMechSlideEnd()
+  else
+    self.InSlideMechSlide = false
+  end
+  if self.PlayerAnimInstance then
+    self.PlayerAnimInstance.InSlideMechTurn = false
+    self.PlayerAnimInstance.IsSwitchingSlideMech = false
+    self.PlayerAnimInstance.InSlideMechSlide = false
+    self.PlayerAnimInstance.InSlideMechJump = false
+    if self.PlayerAnimInstance.SlideMechReJump ~= nil then
+      self.PlayerAnimInstance.SlideMechReJump = false
+    end
+    if nil ~= self.PlayerAnimInstance.SlideMechReSideJump then
+      self.PlayerAnimInstance.SlideMechReSideJump = false
+    end
+  end
+  if self.SetHoldCrouch then
+    self:SetHoldCrouch(false)
+  end
+  local Controller = self:GetController()
+  if Controller and Controller.ResetIgnoreMoveInput then
+    Controller:ResetIgnoreMoveInput()
   end
 end
 
-function BP_PlayerCharacter_C:ChangeBackToHeroSlideMech()
+function BP_PlayerCharacter_C:ChangeBackToHeroSlideMech(bForceDead)
+  local LastSlideMechEid = self.CurSlideMechEid or self.SlideMechEid or 0
+  self:ClearSlideSpeedState()
+  self:RestoreSlideCameraState()
+  self:ClearSlideMechGameplayFlags()
   self.SlideMechEid = 0
   self.CurSlideMechEid = 0
   self.IsInSlideMech = false
-  self:ChangeRole()
-  local BattlePet = self:GetBattlePet()
-  if BattlePet then
-    BattlePet:HideBattlePet("Master", false)
+  self.bSlideMechEnterMontagePlaying = false
+  self:NotifySlideMechHUDStateChanged(false, "ChangeBackToHeroSlideMech", LastSlideMechEid)
+  local QuestRoleID = self.AvatarQuestRoleID
+  if not QuestRoleID or 0 == QuestRoleID then
+    QuestRoleID = 0
+  end
+  self.AvatarSlideRoleID = 0
+  local Avatar = GWorld:GetAvatar()
+  if nil == Avatar then
+    self:ChangeRole(Const.DefaultRoleID)
+    return
+  end
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  if IsValid(GameMode) then
+    GameMode:SwitchToQuestRole(QuestRoleID, false, bForceDead)
   end
 end
 
 function BP_PlayerCharacter_C:FirstInSlideMech()
   self.CharacterMovement:SetMovementMode(UE4.EMovementMode.MOVE_Flying)
-  self.SlideMovingRate = 1
-  local AccTime = DataMgr.MovementParams.AccTime.ParamValue or 0
-  if AccTime > 0 then
-    self.SlideMovingRate = 0
-    local LoopNum = math.ceil(AccTime / 0.02)
-    local DeltaRate = 1 / LoopNum
-    self:AddTimer(0.02, function()
-      self.SlideMovingRate = math.clamp(self.SlideMovingRate + DeltaRate, 0, 1)
-      if self.SlideMovingRate >= 1 then
-        self:RemoveTimer("SlideAcc")
-      end
-    end, true, 0, "SlideAcc")
-  end
   if self.SlideMechEid then
     local GameState = UE4.UGameplayStatics.GetGameState(self)
     if GameState then
       local SlideMech = GameState.SlideMechanismMap:FindRef(self.SlideMechEid)
       if IsValid(SlideMech) then
+        self:BeginSlideSpeedState(SlideMech.Speed, SlideMech.AccTime)
         local EntryProgress = SlideMech.CachedEntryProgress
+        local EntryMoveDirection = SlideMech.CachedEntryMoveDirection
         if EntryProgress then
           SlideMech.CachedEntryProgress = nil
           SlideMech.CachedEntryDistance = nil
         end
-        if SlideMech.AllowTurn and SlideMech.CachedPlayerForward then
+        SlideMech.CachedEntryMoveDirection = nil
+        if EntryMoveDirection then
+          SlideMech.MoveDirection = EntryMoveDirection
+          SlideMech.CachedPlayerForward = nil
+        elseif not SlideMech.AllowTurn then
+          SlideMech.MoveDirection = SlideMech:GetConfiguredMoveDirection()
+          SlideMech.CachedPlayerForward = nil
+        elseif SlideMech.CachedPlayerForward then
           local EntryDist = (EntryProgress or 0) * SlideMech.Length
           local Tangent = SlideMech.Spline:GetDirectionAtDistanceAlongSpline(EntryDist, ESplineCoordinateSpace.World)
           local Dot = SlideMech.CachedPlayerForward:Dot(Tangent)
           SlideMech.MoveDirection = Dot >= 0 and 1 or -1
           SlideMech.CachedPlayerForward = nil
         else
-          SlideMech.MoveDirection = 1
+          SlideMech.MoveDirection = SlideMech:GetConfiguredMoveDirection()
           SlideMech.CachedPlayerForward = nil
         end
         SlideMech:RealFirstInSlideMech(self)
         if EntryProgress then
           SlideMech.Progress = EntryProgress
+          SlideMech:MoveWithSpline(0, self, true)
         end
         SlideMech:BeginSlideSplineMove(true)
+        self:NotifySlideMechHUDStateChanged(true, "FirstInSlideMech", self.CurSlideMechEid or self.SlideMechEid or 0)
       end
     end
   end
 end
 
+function BP_PlayerCharacter_C:GetCurrentSlideMech()
+  local Eid = self.CurSlideMechEid and self.CurSlideMechEid > 0 and self.CurSlideMechEid or self.SlideMechEid
+  if not Eid or Eid <= 0 then
+    return nil
+  end
+  local GameState = UE4.UGameplayStatics.GetGameState(self)
+  if not GameState or not GameState.SlideMechanismMap then
+    return nil
+  end
+  local SlideMech = GameState.SlideMechanismMap:FindRef(Eid)
+  if IsValid(SlideMech) then
+    return SlideMech
+  end
+  return nil
+end
+
+function BP_PlayerCharacter_C:IsInSlideMechChangeOrTurnJump()
+  if not self.IsInSlideMech then
+    return false
+  end
+  if self.IsSwitchingSlideMech or self.InSlideMechTurning then
+    return true
+  end
+  local Anim = self.PlayerAnimInstance
+  if not Anim then
+    return false
+  end
+  if Anim.IsSwitchingSlideMech or Anim.InSlideMechTurn then
+    return true
+  end
+  if Anim.GetCurrentStateNameByStateMachineName then
+    local StateName = Anim:GetCurrentStateNameByStateMachineName("Locomotion")
+    if "SideJump" == StateName or "ReSideJump" == StateName or "Turn" == StateName then
+      return true
+    end
+  end
+  return false
+end
+
+function BP_PlayerCharacter_C:BlockUseSkillInSlideMechChangeOrTurnJump_Lua(SkillId)
+  return self:IsInSlideMechChangeOrTurnJump() and not self:CheckCanSkillCancel(SkillId)
+end
+
 function BP_PlayerCharacter_C:TryLeaveSlideMech()
+  if self.IsFlyingToSlideMech then
+    return
+  end
+  if not self.IsInSlideMech then
+    return
+  end
   if self.CurSlideMechEid <= 0 then
     return
   end
@@ -1813,13 +2310,78 @@ function BP_PlayerCharacter_C:TryLeaveSlideMech()
   SlideMech:LeaveSlideMechanism(false)
 end
 
+function BP_PlayerCharacter_C:TryReleaseSlideMechOnDead(KillMineRoleEid, KillMineSkillId, DeathReason)
+  local bOnSlide = self.IsInSlideMech or self.CurSlideMechEid and self.CurSlideMechEid > 0 or self.SlideMechEid and self.SlideMechEid > 0 or self.IsFlyingToSlideMech
+  if not bOnSlide then
+    return false
+  end
+  local SlideMech = self:GetCurrentSlideMech()
+  if self.IsFlyingToSlideMech then
+    self:CleanUpSlideMechEnter()
+  end
+  if IsValid(SlideMech) then
+    SlideMech:ForceReleaseForFlow(true)
+  end
+  if self.IsInSlideMech or self.SlideMechEid and self.SlideMechEid > 0 or self.CurSlideMechEid and self.CurSlideMechEid > 0 then
+    self:ChangeBackToHeroSlideMech(true)
+  end
+  self:SetAttr("Hp", 0)
+  if self.CalcHpPercent then
+    self:CalcHpPercent()
+  end
+  self:SetDead(true, DeathReason, KillMineRoleEid, KillMineSkillId)
+  if self.SetCharacterTag then
+    self:SetCharacterTag("Dead")
+  end
+  self:StopMontage()
+  self.InSlideMechTurning = false
+  self.IsSwitchingSlideMech = false
+  if self.InSlideMechJump then
+    self:OnSlideMechJumpEnd()
+  end
+  if self.InSlideMechSlide then
+    self:OnSlideMechSlideEnd()
+  end
+  if self.PlayerAnimInstance then
+    self.PlayerAnimInstance.InSlideMechTurn = false
+    self.PlayerAnimInstance.IsSwitchingSlideMech = false
+    self.PlayerAnimInstance.InSlideMechSlide = false
+    self.PlayerAnimInstance.InSlideMechJump = false
+  end
+  self:ReplayDeadMontageAfterSlideRelease()
+  return true
+end
+
+function BP_PlayerCharacter_C:ReplayDeadMontageAfterSlideRelease()
+  local HitLogicComp = self.GetOrAddHitLogicComp and self:GetOrAddHitLogicComp()
+  if HitLogicComp and HitLogicComp.SwitchDeadMontage then
+    local Montage = HitLogicComp:SwitchDeadMontage()
+    if Montage then
+      local TargetSlotName = HitLogicComp.SwitchDeadMontageSlotName and HitLogicComp:SwitchDeadMontageSlotName()
+      if self.PlayerAnimInstance and TargetSlotName and "" ~= TargetSlotName and self.PlayerAnimInstance.SetMontageSpecificSlotName then
+        self.PlayerAnimInstance:SetMontageSpecificSlotName(Montage, TargetSlotName)
+      end
+      if self.PlayMontageByAsset then
+        self:PlayMontageByAsset(Montage)
+        return
+      end
+    end
+  end
+  if self.PlayHitMontage then
+    self:PlayHitMontage("Die")
+  end
+end
+
 function BP_PlayerCharacter_C:ReceiveEndPlay(Reason)
+  self:ClearSlideSpeedState()
+  self:RestoreSlideCameraState()
   self:DeinitAutoCombatComponent()
   if self.ArmoryHelper then
     self.ArmoryHelper:DestroySelf()
   end
   self:TryCloseAllSkillUI()
   self:RefreshTeamMemberInfo("ReceiveEndPlay")
+  EventManager:RemoveEvent(EventID.ChangeRole, self)
   EventManager:RemoveEvent(EventID.OnStartSkillFeature, self)
   EventManager:RemoveEvent(EventID.SetDefaultWeapon, self)
   EventManager:RemoveEvent(EventID.OnMainCharacterInitReady, self)
@@ -2023,11 +2585,25 @@ function BP_PlayerCharacter_C:SetESCMenuForbiddenState(IsForbidden)
   self.IsESCForbidden = IsForbidden or false
 end
 
-function BP_PlayerCharacter_C:GetESCMenuForbiddenState()
-  if self.IsESCForbidden == nil then
-    return false
+function BP_PlayerCharacter_C:SetESCMenuForbiddenStateByTag(IsForbidden, Tag)
+  if not self.ESCForbiddenTags then
+    self.ESCForbiddenTags = {}
   end
-  return self.IsESCForbidden
+  if IsForbidden then
+    self.ESCForbiddenTags[Tag] = 1
+  else
+    self.ESCForbiddenTags[Tag] = nil
+  end
+end
+
+function BP_PlayerCharacter_C:GetESCMenuForbiddenState()
+  local IsESCForbidden = false
+  if not self.ESCForbiddenTags or IsEmptyTable(self.ESCForbiddenTags) then
+    IsESCForbidden = false
+  else
+    IsESCForbidden = true
+  end
+  return IsESCForbidden
 end
 
 function BP_PlayerCharacter_C:SetMaxMovingSpeed(Rate)
@@ -2335,12 +2911,6 @@ end
 
 function BP_PlayerCharacter_C:PlayDungeonSettlementMVPSequence(FolderPath, Offset)
   local SequencePath = "/Game/Asset/Char/Player/Common/MVPShow/" .. FolderPath .. "/Sequence/" .. FolderPath .. "_MVPShow_Cam." .. FolderPath .. "_MVPShow_Cam"
-  if CommonUtils.GetRuntimePlatform(self) == "Mobile" then
-    local MobileSequencePath = "/Game/Asset/Char/Player/Common/MVPShow/" .. FolderPath .. "/Sequence/" .. "SQ_" .. FolderPath .. "_MVPShow_Cam_Mobile." .. "SQ_" .. FolderPath .. "_MVPShow_Cam_Mobile"
-    if UResourceLibrary.CheckResourceExistOnDisk(MobileSequencePath) then
-      SequencePath = MobileSequencePath
-    end
-  end
   DebugPrint("PlayMVPSequence RealMVPSequencePath:", SequencePath)
   self:PlayMVPSequence(SequencePath, Offset)
 end
@@ -2354,6 +2924,10 @@ function BP_PlayerCharacter_C:OnMVPSequenceFinish()
 end
 
 function BP_PlayerCharacter_C:ProcessMVPSequenceActor()
+  local UPostProcessFunctionLibrary = LoadClass(Const.PostProcessFunctionLibraryPath)
+  if UPostProcessFunctionLibrary then
+    UPostProcessFunctionLibrary.MobileCloseLightTrack(self.MVPSequenceActor)
+  end
 end
 
 function BP_PlayerCharacter_C:CheckLevelFinishMontagePath(PathPrefix, MontageSuffix)
@@ -2639,21 +3213,20 @@ function BP_PlayerCharacter_C:RefreshTeamMemberInfo(OpType)
   end
 end
 
-function BP_PlayerCharacter_C:PreEnterStory(OnFinished)
+function BP_PlayerCharacter_C:PreEnterStory(Context)
   if self.bInStory then
-    StoryPlayableUtils:ExecuteStoryDelegate(OnFinished)
     return
   end
   self.bInStory = true
-  self:CleanInputWhenEnterTalk()
-  self:ReleaseFire()
+  if Context and Context.bReleaseFireOnEnter then
+    self:CleanInputWhenEnterTalk(true)
+    self:ReleaseFire()
+  end
   self:SetStealth(true, "Story")
-  StoryPlayableUtils:ExecuteStoryDelegate(OnFinished)
 end
 
-function BP_PlayerCharacter_C:PreExitStory(OnFinished)
+function BP_PlayerCharacter_C:PreExitStory(Context)
   if not self.bInStory then
-    StoryPlayableUtils:ExecuteStoryDelegate(OnFinished)
     return
   end
   self.bInStory = false
@@ -2662,7 +3235,6 @@ function BP_PlayerCharacter_C:PreExitStory(OnFinished)
   if IsValid(TS) then
     TS:TalkHidePlayerCharacter(self, false, Const.TalkHideTag)
   end
-  StoryPlayableUtils:ExecuteStoryDelegate(OnFinished)
 end
 
 function BP_PlayerCharacter_C:_CheckCanChangeToMaster(ShowLog, CheckRegion)

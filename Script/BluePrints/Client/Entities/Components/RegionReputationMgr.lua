@@ -1,13 +1,29 @@
 local RegionFameController = require("BluePrints.UI.WBP.Fame.RegionFameController")
+local RegionFameMapUtils = require("BluePrints.UI.WBP.Fame.RegionFameMapUtils")
+local EMCache = require("EMCache.EMCache")
 local Component = {}
+local EntrustFameTaskReadCacheKeyPrefix = "ReadRefreshTime_"
+
+local function GetEntrustFameTaskReadCacheKey(ReputationId)
+  return EntrustFameTaskReadCacheKeyPrefix .. tostring(ReputationId)
+end
 
 function Component:EnterWorld()
   RegionFameController:Init()
+  EventManager:AddEvent(EventID.QuestChainFinished, self, self.OnExperienceFameTaskStateChange)
+  EventManager:AddEvent(EventID.ConditionComplete, self, self.OnExperienceFameTaskStateChange)
   self:AddReddot()
+  RegionFameMapUtils.EnsureTrackListenerRegistered()
 end
 
 function Component:LeaveWorld()
+  EventManager:RemoveEvent(EventID.QuestChainFinished, self, self.OnExperienceFameTaskStateChange)
+  EventManager:RemoveEvent(EventID.ConditionComplete, self, self.OnExperienceFameTaskStateChange)
   RegionFameController:Destory()
+end
+
+function Component:OnExperienceFameTaskStateChange()
+  self:UpdateExperienceFameTaskReddot()
 end
 
 function Component:GetReputationRecurringQuest(ReputationId)
@@ -48,6 +64,7 @@ function Component:GetReputationEntrustQuest(ReputationId)
 end
 
 function Component:_OnPropChangeRegionReputations(Keys)
+  RegionFameMapUtils.CheckRecurringQuestMapTrack()
   self:RegionReputationsChange(Keys)
 end
 
@@ -122,6 +139,19 @@ function Component:AddReddot()
   end
   self:UpdateRecurringFameTaskReddot()
   self:UpdateEntrustFameTaskReddot()
+  self:UpdateExperienceFameTaskReddot()
+end
+
+function Component:UpdateExperienceFameTaskReddot()
+  local RegionFameModel = RegionFameController:GetModel()
+  local CanClaimTaskCount = 0
+  for ReputationId, _ in pairs(DataMgr.RegionReputation or {}) do
+    CanClaimTaskCount = CanClaimTaskCount + #RegionFameModel:GetTargetRegionCanClaimExperienceTasks(ReputationId)
+  end
+  if not ReddotManager.GetTreeNode("ExperienceFameTask") then
+    ReddotManager.AddNodeEx("ExperienceFameTask")
+  end
+  UIUtils.SetReddotTreeLeafNodeCount("ExperienceFameTask", CanClaimTaskCount)
 end
 
 function Component:UpdateRecurringFameTaskReddot()
@@ -143,34 +173,74 @@ function Component:UpdateRecurringFameTaskReddot()
   UIUtils.SetReddotTreeLeafNodeCount("RecurringFameTask", CanClaimTaskCount)
 end
 
+function Component:IsEntrustFameTaskReddotRead(ReputationId)
+  local Reputation = self.RegionReputations[ReputationId]
+  if not Reputation then
+    return false
+  end
+  if not ReddotManager.GetTreeNode("EntrustFameTask") then
+    ReddotManager.AddNodeEx("EntrustFameTask")
+  end
+  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("EntrustFameTask") or {}
+  local RefreshVersion = Reputation.LastRefreshTime2 or 0
+  local CacheKey = GetEntrustFameTaskReadCacheKey(ReputationId)
+  local CachedRefreshVersion = CacheDetail[CacheKey]
+  local bIsRead = CachedRefreshVersion == RefreshVersion
+  return bIsRead
+end
+
+function Component:HasUnreadEntrustFameTaskReddot(ReputationId)
+  local RegionFameModel = RegionFameController:GetModel()
+  return RegionFameModel:GetTargetRegionEntrustTaskCanSubmit(ReputationId) and not self:IsEntrustFameTaskReddotRead(ReputationId)
+end
+
+function Component:MarkEntrustFameTaskReddotRead(ReputationId)
+  local Reputation = self.RegionReputations[ReputationId]
+  if not Reputation then
+    return
+  end
+  if not ReddotManager.GetTreeNode("EntrustFameTask") then
+    ReddotManager.AddNodeEx("EntrustFameTask")
+  end
+  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("EntrustFameTask")
+  if not CacheDetail then
+    return
+  end
+  local CacheKey = GetEntrustFameTaskReadCacheKey(ReputationId)
+  local RefreshVersion = Reputation.LastRefreshTime2 or 0
+  CacheDetail[CacheKey] = RefreshVersion
+  EMCache:SaveUser(false)
+  self:UpdateEntrustFameTaskReddot()
+end
+
+function Component:ResetEntrustFameTaskReddotRead(ReputationId)
+  if not ReddotManager.GetTreeNode("EntrustFameTask") then
+    ReddotManager.AddNodeEx("EntrustFameTask")
+  end
+  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("EntrustFameTask")
+  local CacheKey = GetEntrustFameTaskReadCacheKey(ReputationId)
+  if CacheDetail and nil ~= CacheDetail[CacheKey] then
+    CacheDetail[CacheKey] = nil
+    EMCache:SaveUser(false)
+  end
+end
+
 function Component:UpdateEntrustFameTaskReddot()
   local RegionFameModel = RegionFameController:GetModel()
   local AllRegionReputationData = DataMgr.RegionReputation
   if not AllRegionReputationData then
     return
   end
-  local bHasCanSubmit = false
+  local UnreadRegionCount = 0
   for ReputationId, _ in pairs(AllRegionReputationData) do
-    local CanSubmitEntrustTask = RegionFameModel:GetTargetRegionEntrustTaskCanSubmit(ReputationId)
-    if CanSubmitEntrustTask then
-      bHasCanSubmit = true
-      break
+    if RegionFameModel:GetTargetRegionEntrustTaskCanSubmit(ReputationId) and not self:IsEntrustFameTaskReddotRead(ReputationId) then
+      UnreadRegionCount = UnreadRegionCount + 1
     end
   end
   if not ReddotManager.GetTreeNode("EntrustFameTask") then
     ReddotManager.AddNodeEx("EntrustFameTask")
   end
-  if bHasCanSubmit then
-    local Reddot = ReddotManager.GetTreeNode("EntrustFameTask")
-    if Reddot and Reddot.Count <= 0 then
-      ReddotManager.IncreaseLeafNodeCount("EntrustFameTask", 1)
-    end
-  else
-    local Reddot = ReddotManager.GetTreeNode("EntrustFameTask")
-    if Reddot then
-      ReddotManager.ClearLeafNodeCount("EntrustFameTask", false)
-    end
-  end
+  UIUtils.SetReddotTreeLeafNodeCount("EntrustFameTask", UnreadRegionCount)
 end
 
 function Component:CheckReputationLevelReward(ReputationId, Level)
@@ -239,6 +309,9 @@ function Component:CancelRecurringQuest(ReputationId, QuestId, Cb)
   
   local function Callback(Ret)
     self.logger.debug("CancelRecurringQuest Callback", Ret, ReputationId, QuestId)
+    if Ret == ErrorCode.RET_SUCCESS then
+      RegionFameMapUtils.TryStopTrackForRecurringQuest(QuestId)
+    end
     Cb(Ret, ReputationId, QuestId)
   end
   
@@ -262,6 +335,7 @@ function Component:ManualRefreshEntrustQuest(ReputationId, Cb)
   local function Callback(Ret, ReputationId)
     self.logger.debug("ManualRefreshEntrustQuest Callback", Ret, ReputationId)
     if Ret == ErrorCode.RET_SUCCESS then
+      self:ResetEntrustFameTaskReddotRead(ReputationId)
       self:UpdateEntrustFameTaskReddot()
     end
     Cb(Ret, ReputationId)
@@ -273,10 +347,10 @@ end
 function Component:CompleteEntrustQuest(ReputationId, QuestId, Callback)
   self.logger.debug("CompleteEntrustQuest Begin", ReputationId, QuestId)
   
-  local function cb(Ret)
+  local function cb(Ret, RewardReturn)
     self.logger.debug("CompleteEntrustQuest Callback", Ret, ReputationId, QuestId)
     if Callback then
-      Callback(Ret, ReputationId, QuestId)
+      Callback(Ret, ReputationId, QuestId, RewardReturn)
     end
   end
   
@@ -296,6 +370,38 @@ function Component:GetRegionReputationLevelReward(ReputationId, LevelInfo, Cb)
   self:CallServer("GetRegionReputationLevelReward", Callback, ReputationId, LevelInfo)
 end
 
+function Component:GetExperienceQuestReward(QuestId, Cb)
+  self.logger.debug("GetExperienceQuestReward Begin", QuestId)
+  
+  local function Callback(Ret, RewardReturn)
+    self.logger.debug("GetExperienceQuestReward Callback", Ret, QuestId)
+    if Ret == ErrorCode.RET_SUCCESS then
+      self:UpdateExperienceFameTaskReddot()
+    end
+    if Cb then
+      Cb(Ret, RewardReturn, QuestId)
+    end
+  end
+  
+  self:CallServer("GetExperienceQuestReward", Callback, QuestId)
+end
+
+function Component:GetAllExperienceQuestReward(ReputationId, Cb)
+  self.logger.debug("GetAllExperienceQuestReward Begin", ReputationId)
+  
+  local function Callback(Ret, RewardReturn)
+    self.logger.debug("GetAllExperienceQuestReward Callback", Ret, RewardReturn)
+    if Ret == ErrorCode.RET_SUCCESS then
+      self:UpdateExperienceFameTaskReddot()
+    end
+    if Cb then
+      Cb(Ret, RewardReturn, ReputationId)
+    end
+  end
+  
+  self:CallServer("GetAllExperienceQuestReward", Callback, ReputationId)
+end
+
 function Component:AutoGetRecurringQuestReward(ReputationId, QuestList, RealScoreGet)
   self.logger.debug("AutoGetRecurringQuestReward ", ReputationId, QuestList, RealScoreGet)
 end
@@ -303,6 +409,11 @@ end
 function Component:OnRecurringQuestTimeOut(ReputationId, QuestId)
   self.logger.debug("OnRecurringQuestTimeOut ", ReputationId, QuestId)
   EventManager:FireEvent(EventID.RecurringQuestTimeOut, ReputationId)
+end
+
+function Component:OnRecurringQuestCompleted(ReputationId, QuestId)
+  self.logger.debug("OnRecurringQuestCompleted ", ReputationId, QuestId)
+  UIManager(self):ShowUITip("CommonToastMain", GText("Reputation_Task_Completed") or "", 1.5)
 end
 
 function Component:OnGetReputationExp(ReputationId, OldLevel, OldExp, NewLevel, NewExp)

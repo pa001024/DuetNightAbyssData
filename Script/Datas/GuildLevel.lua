@@ -39,9 +39,33 @@ return ReadOnly("GuildLevel", {
     GuildMembersNum = 45
   },
   [6] = {
-    GuildDes = "GuildUpgradeDes_6",
+    GuildDes = "GuildUpgradeDes_5",
     GuildEXP = 154000,
     GuildLv = 6,
     GuildMembersNum = 50
+  },
+  [7] = {
+    GuildDes = "GuildUpgradeDes_5",
+    GuildEXP = 168000,
+    GuildLv = 7,
+    GuildMembersNum = 55
+  },
+  [8] = {
+    GuildDes = "GuildUpgradeDes_5",
+    GuildEXP = 227500,
+    GuildLv = 8,
+    GuildMembersNum = 60
+  },
+  [9] = {
+    GuildDes = "GuildUpgradeDes_5",
+    GuildEXP = 294000,
+    GuildLv = 9,
+    GuildMembersNum = 65
+  },
+  [10] = {
+    GuildDes = "GuildUpgradeDes_6",
+    GuildEXP = 367500,
+    GuildLv = 10,
+    GuildMembersNum = 70
   }
 })

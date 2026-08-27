@@ -45,10 +45,6 @@ return ReadOnly("InteractiveInfo", {
     BPPath = "/Game/BluePrints/Story/Interactive/InteractiveComponent/InteractChild/BP_MapInteract.BP_MapInteract",
     Id = "Map"
   },
-  NpcTalk = {
-    BPPath = "/Game/BluePrints/Story/Interactive/InteractiveComponent/BP_NpcTalkInteractiveComponent.BP_NpcTalkInteractiveComponent",
-    Id = "NpcTalk"
-  },
   PetNpcGame = {
     BPPath = "/Game/BluePrints/Story/Interactive/InteractiveComponent/BP_PetNPCInteractiveComponent.BP_PetNPCInteractiveComponent",
     Id = "PetNpcGame"

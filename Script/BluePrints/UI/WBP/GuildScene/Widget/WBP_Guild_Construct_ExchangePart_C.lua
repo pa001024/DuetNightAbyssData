@@ -8,7 +8,7 @@ end
 
 function M:InitExchangeData()
   self.ConsumeCurrency = CommonConst.GuildFundsCoin
-  self.ConsumeNum = 15
+  self.ConsumeNum = DataMgr.GlobalConstant.GuildHomeFundExchangeRate.ConstantValue
 end
 
 function M:PreInitContent(Params, PopupData, Owner)
@@ -156,11 +156,15 @@ function M:OnExchangeBtnClicked()
   end
   local Avatar = GWorld:GetAvatar()
   
-  local function TransformCallBack(Count)
-    UIUtils.ShowGetItemPageAndOpenBagIfNeeded("Resource", self.ConsumeCurrency, Count, nil, false, nil, self, false)
+  local function TransformCallBack(ErrCode, Count)
+    if 0 ~= ErrCode then
+      UIManager(self):ShowError(ErrCode, 1.0, "CommonToastMain")
+      return
+    end
+    UIUtils.ShowGetItemPageAndOpenBagIfNeeded("Resource", self.ConsumeCurrency, Count.AddFund, nil, false, nil, self, false)
   end
   
-  Avatar:TransformCoin4ToCoin1(self.CurrentCount, TransformCallBack)
+  Avatar:GuildHomeExchangeFund(TransformCallBack, self.CurrentCount)
 end
 
 function M:OnBuyBtnClicked()

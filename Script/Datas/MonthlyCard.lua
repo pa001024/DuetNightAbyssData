@@ -231,7 +231,7 @@ return ReadOnly("MonthlyCard", {
     EndTime = LocalTimeProxy(1792702800),
     GoodsId = "com.hero.dna.Pay_107",
     Name = "RESOURCE_NAME_121",
-    UniqueReward = 82036
+    UniqueReward = 82050
   },
   [10020] = {
     BeginTime = LocalTimeProxy(1792702800),

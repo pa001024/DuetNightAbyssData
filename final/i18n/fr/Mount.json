@@ -177,5 +177,32 @@
     "access": [
       "Boutique"
     ]
+  },
+  {
+    "id": 1013,
+    "name": "Filbert, fonce fonce fonce ! – Doré",
+    "des": "Même l’immortel finit par se perdre, comme des larmes dans la pluie.",
+    "icon": "Mounts_0017",
+    "resourceIcon": "Icon_Mounts_0017",
+    "rarity": 4,
+    "sort": 98,
+    "resourceId": 49986,
+    "fly": 1,
+    "access": [
+      "Boutique"
+    ]
+  },
+  {
+    "id": 1014,
+    "name": "Héraut de la calamité",
+    "des": "Là où il passe, la calamité prolifère.\nVitesse de vol +50 %. Aucun avantage de réputation n’est requis pour le vol.",
+    "icon": "Mounts_0014",
+    "resourceIcon": "Icon_Mounts_0014",
+    "rarity": 6,
+    "sort": 104,
+    "resourceId": 49985,
+    "access": [
+      "Boutique"
+    ]
   }
 ]

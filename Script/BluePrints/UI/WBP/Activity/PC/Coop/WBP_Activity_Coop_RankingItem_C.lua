@@ -151,6 +151,12 @@ function M:InitPlayerRank()
   if not RankNum then
     return
   end
+  if RankNum >= 1 and RankNum <= 3 then
+    self.Image_RankIcon:SetVisibility(UIConst.VisibilityOp.Visible)
+    self.Image_RankIcon:SetBrushFromTexture(self.RankIconTexture[RankNum])
+  else
+    self.Image_RankIcon:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
   if RankNum > 0 then
     self.Text_Ranking:SetText(RankNum)
   else

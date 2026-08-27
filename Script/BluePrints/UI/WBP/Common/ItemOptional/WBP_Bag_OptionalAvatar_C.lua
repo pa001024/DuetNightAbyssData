@@ -13,17 +13,25 @@ function M:InitContent(Params, PopupData, Owner)
   self.CurrentChooseWidget = nil
   self.AllItemsWidget = {}
   self.ParentWidget = Params.ParentWidget
-  self.CurrentChooseInfo = Params.ParentWidget.CurrentChooseInfo or nil
+  self.CurrentChooseInfo = Params.ParentWidget and Params.ParentWidget.CurrentChooseInfo or nil
   self.ResourceId = Params.ResourceId
   self.IsLimitedPrizePool = Params.IsLimitedPrizePool or false
   self.RestoreSelectIndex = Params.RestoreSelectIndex
   self.OriginSelectIndex = Params.SelectedIndex
-  self:ShowGamepadShortcutBtn({
+  self.Owner.RightBtnCallbackObj = self
+  self.IsNewCharChoose = Params.IsNewCharChoose
+  self:BindDialogEvent("CurrencyItemTipsChanged", self.OnCurrencyItemTipsChanged)
+  self:BindDialogEvent(DialogEvent.OnRightBtnClicked, self.OpenConfirmPopUI)
+  self.CloseChoosePageFun = Params.CloseChoosePageFun
+  self.GamePadKeyLS = self:ShowGamepadShortcutBtn({
     KeyInfoList = {
       {Type = "Img", ImgShortPath = "LS"}
     },
     Desc = GText("UI_Controller_CheckDetails")
   })
+  if self.IsNewCharChoose then
+    self:InitFreshmenGiftContent()
+  end
   if self.IsLimitedPrizePool then
     self:InitLimitedPrizePoolItemsInfo()
   else
@@ -56,6 +64,7 @@ function M:InitAllOptionalItemsInfo()
     table.insert(self.AllItemsWidget, Item)
   end
   local AllCanNavigateCount = #self.AllItemsWidget
+  DebugPrint("ayff test AllCanNavigateCount:", AllCanNavigateCount)
   for Idx, TargetWidget in ipairs(self.AllItemsWidget) do
     if TargetWidget then
       TargetWidget:SetNavigationRuleBase(EUINavigation.Up, EUINavigationRule.Stop)
@@ -143,6 +152,39 @@ function M:InitLimitedPrizePoolItemsInfo()
   self:FillWithEmptyItems()
 end
 
+function M:InitFreshmenGiftContent()
+  self.OptionalItemsList = {}
+  local CharIdList = DataMgr.FreshmenGift
+  for _, Data in pairs(CharIdList) do
+    local CharId = Data.CharId
+    local Content = NewObject(UIUtils.GetCommonItemContentClass())
+    local CharData = DataMgr.Char[CharId]
+    Content.NotShowInfo = true
+    Content.HaveCountNumber = 0
+    Content.StuffType = "Avatar"
+    Content.StuffId = CharId
+    Content.SortPriority = Data.SortPriority or 0
+    Content.Rarity = CharData.CharRarity
+    Content.StuffIcon = CharData.Icon
+    Content.StuffName = GText(CharData.CharName)
+    Content.CharPieceId = CharData.CharPieceId
+    Content.CharUnlockRequiredPiece = CharData.CharUnlockRequiredPiece
+    local Tbl = DataMgr.BattleChar
+    local Cfg = Tbl and Tbl[CharId]
+    local Element = Cfg and Cfg.Attribute
+    local IconName = "Armory_" .. Element
+    Content.Attribute = Element
+    Content.AttrIcon = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_" .. IconName .. ".T_" .. IconName
+    table.insert(self.OptionalItemsList, Content)
+  end
+  table.sort(self.OptionalItemsList, function(A, B)
+    if A.SortPriority ~= B.SortPriority then
+      return A.SortPriority > B.SortPriority
+    end
+    return A.StuffId < B.StuffId
+  end)
+end
+
 function M:FillWithEmptyItems()
   local Size = self.Root.WidthOverride
   local ItemSize = self.AllItemsWidget[1].Root.WidthOverride
@@ -158,10 +200,16 @@ function M:FillWithEmptyItems()
 end
 
 function M:ChangeChooseClickCallback(bSelectState, ChooseInfo)
+  self:BroadcastDialogEvent("CloseCurrencyItemTips")
   if self.CurrentChooseWidget then
     self.CurrentChooseWidget:SetSelected(false)
   end
   self.CurrentChooseInfo = ChooseInfo
+  if self.OnSelectContentChangeCallback then
+    local Obj = self.OnSelectContentChangeCallback[1]
+    local Callback = self.OnSelectContentChangeCallback[2]
+    Callback(Obj, ChooseInfo)
+  end
   local IsForbid = ChooseInfo and ChooseInfo.IsForbidLimitPrize
   if IsForbid then
     self.CurrentChooseWidget = ChooseInfo.ChooseWidget
@@ -188,6 +236,23 @@ function M:ChangeChooseClickCallback(bSelectState, ChooseInfo)
         self.Owner:HideDialogTip(1, false)
         self.Owner:ShowDialogTip(2)
       end, 1)
+    elseif self.CurrentChooseInfo.CharPieceId and self.CurrentChooseInfo.CharUnlockRequiredPiece then
+      local ResourceData = DataMgr.Resource[self.CurrentChooseInfo.CharPieceId]
+      local ResourceName = ResourceData and ResourceData.ResourceName
+      local Funds = {}
+      Funds[1] = {}
+      Funds[1].FundId = self.CurrentChooseInfo.CharPieceId
+      Funds[1].FundNeed = self.CurrentChooseInfo.CharUnlockRequiredPiece
+      Funds[1].CostText = GText("Will_Gain")
+      Funds[1].NoColor = true
+      self:AddDelayFrameFunc(function()
+        self:BroadcastDialogEvent("UpdateFunds", {
+          Funds = Funds,
+          CurrencyGamepadKey = UIConst.GamePadImgKey.RightThumb
+        })
+        self.Owner:HideDialogTip(1, false)
+        self.Owner:ShowDialogTip(2)
+      end, 1)
     end
   else
     self.CurrentChooseWidget = nil
@@ -195,6 +260,54 @@ function M:ChangeChooseClickCallback(bSelectState, ChooseInfo)
     self.Owner:HideDialogTip(2)
     self.Owner:ShowDialogTip(1)
   end
+end
+
+function M:OnCurrencyItemTipsChanged(bIsOpen)
+  self.bCurrencyItemTipsOpen = bIsOpen
+  if bIsOpen then
+    self:HideGamepadShortcut(self.GamePadKeyLS)
+    self:SetGamepadBtnKeyVisibility(false)
+    if self.IsNewCharChoose then
+      self:AddTimer(0.01, function()
+        for _, Tip in ipairs(self.Owner.Tips or {}) do
+          if Tip.GetFirstCurrencyWidget then
+            local CurrencyWidget = Tip.OpenedCurrencyWidget or Tip:GetFirstCurrencyWidget()
+            local MenuAnchor = CurrencyWidget and CurrencyWidget:GetCurrencyMenuAnchor()
+            local ItemDetails = MenuAnchor and MenuAnchor.CommonItemDetails
+            local AccessItems = ItemDetails and ItemDetails.Method:GetAllChildren():ToTable() or {}
+            for _, AccessItem in ipairs(AccessItems) do
+              function AccessItem.JumpFunc()
+                UIManager(self):ShowUITip("CommonToastMain", GText("UI_COMMONPOP_TITLE_100059"))
+              end
+            end
+          end
+        end
+      end)
+    end
+  else
+    self:RefreshGamepadShortcutVisible()
+  end
+end
+
+function M:RefreshGamepadShortcutVisible(CurrentHoveredWidget)
+  CurrentHoveredWidget = CurrentHoveredWidget or self:GetCurrentHoverItem()
+  local bCanCheckDetails = not CurrentHoveredWidget or CurrentHoveredWidget:CanCheckDetails()
+  local bShowGamepadBtnKey = UIUtils.IsGamepadInput() and not self.bCurrencyItemTipsOpen
+  local bShowCheckDetails = bShowGamepadBtnKey and bCanCheckDetails
+  if bShowCheckDetails then
+    self:ShowGamepadShortcut(self.GamePadKeyLS)
+  else
+    self:HideGamepadShortcut(self.GamePadKeyLS)
+  end
+  self:SetGamepadBtnKeyVisibility(bShowGamepadBtnKey)
+end
+
+function M:InitGamepadView()
+  self:RefreshGamepadShortcutVisible()
+end
+
+function M:InitKeyboardView()
+  self:RefreshGamepadShortcutVisible()
 end
 
 function M:StoreChooseInfo()
@@ -230,6 +343,10 @@ end
 
 function M:BP_GetDesiredFocusTarget()
   return self.CurrentChooseWidget or self.ScrollBox_Avatar
+end
+
+function M:HandleDialogFocused()
+  return self:GetCurrentHoverItem() or self.CurrentChooseWidget or self.ScrollBox_Avatar
 end
 
 function M:OnBtnYes()
@@ -295,17 +412,73 @@ function M:OnContentKeyDown(MyGeometry, InKeyEvent)
     if InKeyName == UIConst.GamePadKey.LeftThumb then
       local CurrentHoveredWidget = self:GetCurrentHoverItem()
       if nil ~= CurrentHoveredWidget then
-        CurrentHoveredWidget:OnBtnCheckClicked()
+        if CurrentHoveredWidget:CanCheckDetails() then
+          CurrentHoveredWidget:OnBtnCheckClicked()
+        end
         IsEventHandled = true
       end
     elseif InKeyName == UIConst.GamePadKey.FaceButtonBottom then
-      self:OnBtnYes()
+      if self.CurrentChooseInfo and not self.CurrentChooseInfo.CharPieceId then
+        self:OnBtnYes()
+      end
       local ButtonBar = self.Owner:GetButtonBar()
       ButtonBar:SimulateRightBtnClick()
       IsEventHandled = true
     end
   end
   return IsEventHandled
+end
+
+function M:OpenConfirmPopUI()
+  if not self.IsNewCharChoose then
+    return
+  end
+  local ConfirmParams = {}
+  local SelectedCharId = self.CurrentChooseInfo.ChooseId
+  local SelectedName
+  if SelectedCharId then
+    SelectedName = GText(DataMgr.Char[SelectedCharId].CharName)
+    ConfirmParams.ShortTextParams = {SelectedName}
+  end
+  local ConfirmCallback = {
+    OnRightBtnClick = function(_, _, ConfirmPopUI)
+      local Avatar = GWorld:GetAvatar()
+      Avatar:FreshmenGiftGetReward(SelectedCharId, function(Ret, CharId)
+        if ErrorCode:Check(Ret) then
+          if ConfirmPopUI and ConfirmPopUI.RemoveFirstItemInPopupQueue then
+            ConfirmPopUI:RemoveFirstItemInPopupQueue()
+          end
+          local ResourceId = DataMgr.Char[CharId].CharPieceId
+          local ResourceData = DataMgr.Resource[ResourceId]
+          local Type = "Resource"
+          local Count = DataMgr.Char[CharId].CharUnlockRequiredPiece
+          local bGotoArmory = false
+          local CloseChoosePageFun = self.CloseChoosePageFun
+          UIUtils.ShowGetItemPageAndOpenBagIfNeeded(Type, ResourceId, Count, nil, false, function()
+            if bGotoArmory then
+              local PageJumpFunctionLibrary = require("Utils.PageJumpFunctionConfig")
+              PageJumpFunctionLibrary.JumpToArmory("Character", "Attr", CharId)
+              CloseChoosePageFun()
+            end
+          end, self, true, nil, nil, GText("Character_Unlock"), function()
+            bGotoArmory = true
+          end)
+        end
+      end)
+    end
+  }
+  
+  function ConfirmParams.RightCallbackFunction(Obj, ConfirmData, ConfirmPopUI)
+    ConfirmCallback.OnRightBtnClick(Obj, ConfirmData, ConfirmPopUI)
+  end
+  
+  ConfirmParams.AutoFocus = true
+  local Owner = self.Owner
+  if Owner and Owner.ShowPopupPush then
+    self:AddDelayFrameFunc(function()
+      Owner:ShowPopupPush(100417, ConfirmParams, Owner)
+    end, 1)
+  end
 end
 
 return M

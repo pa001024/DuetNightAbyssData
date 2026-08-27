@@ -2,7 +2,7 @@ return {
   StaticCreator = {
     ["242890195"] = {
       CreatorId = 242890195,
-      UnitType = "",
+      UnitType = "Npc",
       UnitId = 700582
     },
     ["272890097"] = {
@@ -1014,6 +1014,16 @@ return {
       CreatorId = 352890168,
       UnitType = "Npc",
       UnitId = 700485
+    },
+    ["2890220"] = {
+      CreatorId = 2890220,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["2890221"] = {
+      CreatorId = 2890221,
+      UnitType = "Mechanism",
+      UnitId = 1130128
     }
   },
   ManualItem = {

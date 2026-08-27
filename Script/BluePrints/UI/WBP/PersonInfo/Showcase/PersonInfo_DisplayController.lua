@@ -74,7 +74,7 @@ function M:Init(Params)
   self.ExCameraOffset = nil
   self.LastCameraTags = nil
   self._FixedCameraTransTimeOnce = nil
-  self.IsControled = false
+  self.IsControlled = false
   self.IsPreviewSuspended = false
   self._NeedRefreshEnvironmentOnBecomeViewTarget = false
   self.CurrentCameraRigLocalPosition = FVector(0, 0, 0)
@@ -118,6 +118,10 @@ end
 function M:OnOpened(SceneSpec)
   DebugPrint(string.format("PersonInfoDisplayController: OnOpened sceneSpec=%s editor=%s initialChar=%s initialSceneId=%s", tostring(nil ~= SceneSpec), tostring(nil ~= self.Editor), tostring(self.InitialCharInfo and self.InitialCharInfo.CharId or nil), tostring(self.InitialSceneId)))
   self:EnsureHelper()
+  local FXMgr = UE4.USubsystemBlueprintLibrary.GetWorldSubsystem(self.ViewUI, UE4.UFXPriorityManager)
+  if FXMgr then
+    FXMgr.SetFXTickEvenPaused(self.ViewUI, "PersonInfo", true)
+  end
   self._NeedRefreshEnvironmentOnBecomeViewTarget = true
   if true == self.SkipInitialDraftLoad then
     DebugPrint("PersonInfoDisplayController: OnOpened skip initial draft load")
@@ -166,6 +170,12 @@ function M:OnClosed()
   end
   self.bClosed = true
   self:ResumePreviewControl()
+  if self.ViewUI then
+    local FXMgr = UE4.USubsystemBlueprintLibrary.GetWorldSubsystem(self.ViewUI, UE4.UFXPriorityManager)
+    if FXMgr then
+      FXMgr.SetFXTickEvenPaused(self.ViewUI, "PersonInfo", false)
+    end
+  end
   if self.PreviewCameraRuntime then
     self.PreviewCameraRuntime:EndViewTarget()
   end
@@ -253,7 +263,7 @@ function M:ApplySceneColor(SceneId)
 end
 
 function M:OnHelperBecomeViewTarget(PC)
-  self.IsControled = true
+  self.IsControlled = true
   if self._NeedRefreshEnvironmentOnBecomeViewTarget and self.SceneService then
     self._NeedRefreshEnvironmentOnBecomeViewTarget = false
     local NeedUpdateLighting = not self._SceneColorLightingScheduled
@@ -263,7 +273,7 @@ function M:OnHelperBecomeViewTarget(PC)
 end
 
 function M:OnHelperEndViewTarget(PC)
-  self.IsControled = false
+  self.IsControlled = false
 end
 
 function M:OnAfterHelperEndViewTarget(NewTarget)
@@ -406,7 +416,8 @@ function M:RebuildEntities(EntitySpecs)
         ViewUI = self.ViewUI,
         SceneService = self.SceneService,
         EnableReflection = PersonInfoCommon.EnablePreviewReflection,
-        EnableSelectionCollision = true
+        EnableSelectionCollision = true,
+        bLightweightPreview = true
       })
       CharacterHandle:Create(EntitySpec.Source and EntitySpec.Source.CharData, EntitySpec.Source and EntitySpec.Source.Avatar)
       if EntitySpec.Appearance then
@@ -1256,7 +1267,7 @@ function M:ViewTarget()
     DebugPrint("PersonInfoDisplayController: ViewTarget skipped because preview suspended")
     return
   end
-  if self.IsControled then
+  if self.IsControlled then
     DebugPrint("PersonInfoDisplayController: ViewTarget skipped because already controlled")
     return
   end
@@ -1300,7 +1311,8 @@ function M:PreviewCharacterChooseSlot(SlotIndex, CharData, Avatar, AppearanceInf
       ViewUI = self.ViewUI,
       SceneService = self.SceneService,
       EnableReflection = PersonInfoCommon.EnablePreviewReflection,
-      EnableSelectionCollision = true
+      EnableSelectionCollision = true,
+      bLightweightPreview = true
     })
     CharacterHandle:Create(CharData, self.Avatar)
     self.EntityHandles[EntityId] = CharacterHandle

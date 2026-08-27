@@ -5,21 +5,6 @@ local BP_ChestInteractiveComponent_C = Class({
 })
 local BP_InteractiveBaseComponent_C = require("BluePrints.Story.Interactive.InteractiveComponent.BP_InteractiveBaseComponent_C")
 
-function BP_ChestInteractiveComponent_C:TriggerEnter(PlayerActor)
-  self.Overridden.TriggerEnter(self, PlayerActor)
-  self.OnInteractiveTriggerEnter:Broadcast(PlayerActor)
-end
-
-function BP_ChestInteractiveComponent_C:TriggerTick(PlayerActor)
-  self.Overridden.TriggerTick(self, PlayerActor)
-  self.OnInteractiveTriggerTick:Broadcast(PlayerActor)
-end
-
-function BP_ChestInteractiveComponent_C:TriggerExit(PlayerActor)
-  self.Overridden.TriggerExit(self, PlayerActor)
-  self.OnInteractiveTriggerExit:Broadcast(PlayerActor)
-end
-
 function BP_ChestInteractiveComponent_C:NotDisplayInteractiveBtn(PlayerActor)
   BP_InteractiveBaseComponent_C.NotDisplayInteractiveBtn(self, PlayerActor)
   if PlayerActor and PlayerActor:CheckMechanismEid(self:GetOwner().Eid) and not self:IsCanInteractive(PlayerActor) then
@@ -61,6 +46,16 @@ function BP_ChestInteractiveComponent_C:IsForbidden(PlayerActor)
     local Res = Owner:IsForbidden(PlayerActor)
     if Res then
       return true
+    end
+  end
+  if Owner and Owner.CheckForbidEvents then
+    for Obj, Func in pairs(Owner.CheckForbidEvents) do
+      if Func then
+        local Res = Func(Obj, PlayerActor)
+        if Res then
+          return true
+        end
+      end
     end
   end
   return not self:CheckInteractiveSucc(PlayerActor.Eid)
@@ -269,7 +264,10 @@ function BP_ChestInteractiveComponent_C:GetLongPressingText()
   if Owner and Owner.GetLongPressingText then
     return Owner:GetLongPressingText()
   end
-  return ""
+  if self.LongPressingTextKey and self.LongPressingTextKey ~= "" then
+    return GText(self.LongPressingTextKey)
+  end
+  return self:GetInteractiveName()
 end
 
 function BP_ChestInteractiveComponent_C:GetInteractiveIcon(PlayerActor)

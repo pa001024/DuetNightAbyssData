@@ -24,6 +24,34 @@ function M:OnActorReady(Info)
   self.DeviceInPc = CommonUtils.GetDeviceTypeByPlatformName(self) == "PC"
 end
 
+function M:RegisterOpenMechanismCallback(Obj, Func)
+  if not Obj or not Func then
+    return
+  end
+  self.OpenMechanismCallbacks = self.OpenMechanismCallbacks or {}
+  self.OpenMechanismCallbacks[Obj] = Func
+end
+
+function M:UnregisterOpenMechanismCallback(Obj)
+  if not Obj or not self.OpenMechanismCallbacks then
+    return
+  end
+  self.OpenMechanismCallbacks[Obj] = nil
+end
+
+function M:InvokeOpenMechanismCallbacks()
+  if not self.OpenMechanismCallbacks then
+    return
+  end
+  for Obj, Func in pairs(self.OpenMechanismCallbacks) do
+    if IsValid(Obj) then
+      Func(Obj, self)
+    else
+      self.OpenMechanismCallbacks[Obj] = nil
+    end
+  end
+end
+
 function M:OpenMechanism(PlayerId)
   if self:CheckPlayerEid(PlayerId) then
     return
@@ -68,6 +96,7 @@ function M:OpenMechanism(PlayerId)
   PlayerCharacter:SetCollisionType("CapsuleComponent", "MonsterPawn", ECollisionResponse.ECR_OverLap, false)
   PlayerCharacter:SetCollisionType("CapsuleComponent", "WorldStatic", ECollisionResponse.ECR_OverLap, false)
   PlayerCharacter:K2_SetActorRotation(Rot, false, nil, false)
+  self:InvokeOpenMechanismCallbacks()
 end
 
 function M:CloseMechanism(PlayerId, IsSuccess)

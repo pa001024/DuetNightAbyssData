@@ -482,9 +482,9 @@ end
 
 function M:NewWeaponTagIconContent(IconPath, TagName, IsSelected)
   local Obj = NewObject(UIUtils.GetCommonItemContentClass())
-  Obj.Icon = IconPath or ""
-  Obj.Text = GText(TagName)
-  Obj.IsSelected = IsSelected
+  rawset(Obj, "Icon", IconPath or "")
+  rawset(Obj, "Text", GText(TagName))
+  rawset(Obj, "IsSelected", IsSelected)
   return Obj
 end
 

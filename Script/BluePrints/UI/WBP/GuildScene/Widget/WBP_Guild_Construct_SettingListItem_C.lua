@@ -3,7 +3,7 @@ require("Utils.UIUtils")
 local M = Class("BluePrints.UI.BP_EMUserWidget_C")
 
 function M:Construct()
-  self.bIsFocusable = true
+  self.bIsFocusable = false
   self.FocusWidget = self
 end
 
@@ -83,13 +83,13 @@ function M:SetupButton(ItemData)
   local Options = ItemData.Options or {}
   for i, Option in ipairs(Options) do
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
-    Content.Text = GText(Option.Label)
+    Content.Text = Option.Text or GText(Option.Label)
     Content.ParentWidget = self
     Content.bGamepadIconVisible = false
     Content.GamepadButtonIndex = i
     
     function Content.OnClickFunction()
-      self:OnButtonClicked(Option.ID, GText(Option.Label), Content)
+      self:OnButtonClicked(Option)
     end
     
     self.BtnList.List_Button:AddItem(Content)
@@ -100,15 +100,21 @@ function M:BP_GetDesiredFocusTarget()
   return self.FocusWidget
 end
 
-function M:OnButtonClicked(OptionID, Text)
-  Utils.ScreenPrint("ButtonClicked" .. self.GroupID .. OptionID)
+function M:OnButtonClicked(Option)
+  if not Option then
+    return
+  end
+  local Text = Option.Text or GText(Option.Label)
+  Utils.ScreenPrint("ButtonClicked" .. self.GroupID .. Option.ID)
   local ShortText = string.format(GText("UI_ConfirmDestroyAll"), Text)
   local Params = {
     ShortText = ShortText,
     OnCloseCallbackObj = self,
     OnCloseCallbackFunction = self.OnSettingPopupClosed,
     RightCallbackFunction = function(_)
-      Utils.ScreenPrint("RightCallbackFunction::" .. self.GroupID .. OptionID)
+      if self.Parent and self.Parent.QuickDemolishByOption then
+        self.Parent:QuickDemolishByOption(Option)
+      end
     end
   }
   UIManager(self):ShowCommonPopupUI(100386, Params, self)

@@ -114,7 +114,11 @@ function WBP_BattleMap_C:Construct()
   if self.bNewMaterial then
     self:AddTimer(0.01, function()
       self.InMapWidth = USlateBlueprintLibrary.GetLocalSize(self.RetainerBox_101:GetCachedGeometry())
-      self.OutMapWidth = USlateBlueprintLibrary.GetLocalSize(self.Battle.RetainerBox_2:GetCachedGeometry())
+      if self.Battle and self.Battle.RetainerBox_2 then
+        self.OutMapWidth = USlateBlueprintLibrary.GetLocalSize(self.Battle.RetainerBox_2:GetCachedGeometry())
+      else
+        self.OutMapWidth = self.InMapWidth
+      end
       self:InitMapWidth()
     end)
     self.EnemyMaterial = self.EnemyPanel:GetDynamicMaterial()

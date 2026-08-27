@@ -3,6 +3,7 @@ local ReviewUtils = require("BluePrints.UI.WBP.StoryReview.StoryReviewUtils")
 local TalkUtils = require("BluePrints.Story.Talk.View.TalkUtils")
 local EDialogueNodeType = TalkUtils.EDialogueNodeType
 local LibraryPath = "/Game/Asset/Effect/Blueprint/PostProcess/PostProcessFunctionLibrary.PostProcessFunctionLibrary"
+local MobileCustomDepthCVar = "r.Mobile.CustomDepth"
 local WaitItemUniqueTag = {
   UIPlayDialogue = 1,
   DelayTime = 2,
@@ -14,17 +15,17 @@ local WaitItemUniqueTag = {
 local M = Class("BluePrints.Story.Talk.Controller.CommonTalkTask")
 
 function M:Start(...)
-  local bMobile = CommonUtils.GetRuntimePlatform(GWorld.GameInstance) == "Mobile"
-  if bMobile then
-    UE4.UKismetSystemLibrary.ExecuteConsoleCommand(GWorld.GameInstance, "r.Mobile.CustomDepth 1")
+  if CommonUtils.GetRuntimePlatform(GWorld.GameInstance) == "Mobile" then
+    self.OriginalMobileCustomDepth = UE4.UKismetSystemLibrary.GetConsoleVariableIntValue(MobileCustomDepthCVar)
+    URuntimeCommonFunctionLibrary.SetConsoleVariableIntValue(MobileCustomDepthCVar, 1, 0)
   end
   M.Super.Start(self, ...)
 end
 
 function M:End()
-  local bMobile = CommonUtils.GetRuntimePlatform(GWorld.GameInstance) == "Mobile"
-  if bMobile then
-    UE4.UKismetSystemLibrary.ExecuteConsoleCommand(GWorld.GameInstance, "r.Mobile.CustomDepth 0")
+  if self.OriginalMobileCustomDepth ~= nil then
+    URuntimeCommonFunctionLibrary.SetConsoleVariableIntValue(MobileCustomDepthCVar, self.OriginalMobileCustomDepth, 0)
+    self.OriginalMobileCustomDepth = nil
   end
   local PlayerController = UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
   AudioManager(self):StopSound(PlayerController, Const.TalkSoundKey)
@@ -128,7 +129,10 @@ function M:PlayDialogue(bPauseResume, bSkipping)
   local DialogueData = CinematicDialogueData_C.New(self, CurrentDialogueId, self.TalkContext)
   if not DialogueData.Content then
     self:IterateDialogue()
-    self:RecordDialogueCompleted(DialogueData.DialogueId)
+    local Avatar = GWorld:GetAvatar()
+    if Avatar then
+      Avatar:CompletedDialogue(DialogueData.DialogueId)
+    end
     return
   end
   if self.WaitQueue then
@@ -151,7 +155,10 @@ function M:PlayDialogue(bPauseResume, bSkipping)
   self.TalkContext.TalkTimerManager:AddTimer(self, DialogueData.Duration, nil, nil, self, function()
     WaitQueuePointer:CompleteWaitItem(WaitItemUniqueTag.DelayTime)
   end)
-  self:RecordDialogueCompleted(DialogueData.DialogueId)
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    Avatar:CompletedDialogue(DialogueData.DialogueId)
+  end
 end
 
 function M:EndDialogue()

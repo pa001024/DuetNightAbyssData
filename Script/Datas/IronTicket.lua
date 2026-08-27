@@ -1,5 +1,5 @@
 local T = {}
-T.RT_1 = {"Forging"}
+T.RT_1 = {"Forging", "Dungeon"}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end

@@ -8,6 +8,7 @@ from typing import Dict, List, Optional, Tuple
 
 from PIL import Image
 
+import uasset_client
 from export_all_maps import extract_image_resource_stems, extract_texture_input_dir
 from stitch_map_tiles import _collect_tiles, _parse_layout_placements, stitch_tiles_by_positions
 
@@ -149,6 +150,17 @@ def _ref_outer_and_name(object_name: Optional[str]) -> Tuple[Optional[str], Opti
     return None, None
 
 
+def _outer_tail_name(outer) -> Optional[str]:
+    """从 Outer 字段中提取末尾名称，兼容 str 与 {ObjectName:...} 两种形态。"""
+    if isinstance(outer, str):
+        return outer
+    if isinstance(outer, dict):
+        value = outer.get("ObjectName")
+        if isinstance(value, str):
+            return value.strip("'").split(".")[-1]
+    return None
+
+
 def _resolve_ref_object(
     ref_obj: dict,
     by_outer_name: Dict[Tuple[str, str], dict],
@@ -169,24 +181,18 @@ def _resolve_ref_object(
     if len(candidates) == 1:
         return candidates[0]
     if outer and candidates:
+        # Outer 可能是 dict（{ObjectName/...}），需取末尾名称再比较，避免同名对象解析错误
         for candidate in candidates:
-            if candidate.get("Outer") == outer:
+            if _outer_tail_name(candidate.get("Outer")) == outer:
                 return candidate
     return candidates[0] if candidates else None
 
 
-def _extract_splice_grid_slot_props(
-    widget_json_path: Path,
-    grid_name: str,
-) -> Optional[dict]:
+def _extract_splice_grid_slot_props(arr: List[dict], grid_name: str) -> Optional[dict]:
     """
     提取 Map_Splice Widget 中承载 UniformGridPanel 的 CanvasPanelSlot 属性。
     用于把已拼接的小图按“子 Widget 内部布局”再放入外层槽位，避免直接缩放导致错位。
     """
-    try:
-        arr = json.loads(widget_json_path.read_text(encoding="utf-8"))
-    except Exception:
-        return None
     if not isinstance(arr, list):
         return None
 
@@ -199,8 +205,9 @@ def _extract_splice_grid_slot_props(
         outer = obj.get("Outer")
         if isinstance(name, str):
             by_name.setdefault(name, []).append(obj)
-            if isinstance(outer, str):
-                by_outer_name[(outer, name)] = obj
+            outer_tail = _outer_tail_name(outer)
+            if outer_tail is not None:
+                by_outer_name[(outer_tail, name)] = obj
 
     root_panel = None
     widget_tree = None
@@ -301,6 +308,7 @@ def _walk_panel_collect_layers(
     parent_opacity: float,
     by_outer_name: Dict[Tuple[str, str], dict],
     by_name: Dict[str, List[dict]],
+    server,
     exports_root: Path,
     splice_dir: Path,
     texture_root: Path,
@@ -349,6 +357,7 @@ def _walk_panel_collect_layers(
                 parent_opacity=layer_opacity,
                 by_outer_name=by_outer_name,
                 by_name=by_name,
+                server=server,
                 exports_root=exports_root,
                 splice_dir=splice_dir,
                 texture_root=texture_root,
@@ -367,10 +376,15 @@ def _walk_panel_collect_layers(
         if not class_path:
             continue
         widget_rel = class_path.split(".")[0]
-        widget_json = (exports_root / widget_rel).with_suffix(".json")
+        child_data, child_source = uasset_client.load_widget_json(
+            server, exports_root, widget_rel, mount=getattr(server, "mount", "EM/Content")
+        )
+        if child_data is None:
+            continue
         child_png = _render_map_splice_widget(
             class_path=class_path,
-            exports_root=exports_root,
+            child_data=child_data,
+            child_source=child_source,
             splice_dir=splice_dir,
             texture_root=texture_root,
             cache_root=splice_cache_root,
@@ -384,9 +398,7 @@ def _walk_panel_collect_layers(
             fallback_size = child_im.size
         x, y, w, h = _slot_geometry(parent_rect, slot_props, fallback_size=fallback_size)
 
-        inner_slot_props = None
-        if widget_json.is_file():
-            inner_slot_props = _extract_splice_grid_slot_props(widget_json, grid_name)
+        inner_slot_props = _extract_splice_grid_slot_props(child_data, grid_name)
         if inner_slot_props is not None:
             inner_x, inner_y, inner_w, inner_h = _slot_geometry(
                 parent_rect=(0, 0, w, h),
@@ -415,7 +427,8 @@ def _walk_panel_collect_layers(
 
 def _render_map_splice_widget(
     class_path: str,
-    exports_root: Path,
+    child_data: List[dict],
+    child_source: Path,
     splice_dir: Path,
     texture_root: Path,
     cache_root: Path,
@@ -426,23 +439,19 @@ def _render_map_splice_widget(
     将 Map_Splice 小图 Widget 渲染为 PNG（有缓存）。
     class_path 例:
     EM/Content/UI/WBP/Map/Widget/Map_Splice/Prologue/WBP_Map_Prologue_100101.WBP_Map_Prologue_100101_C
+    child_source: 数据来源文件（uasset 或 json），用于缓存有效期判断。
     """
-    widget_rel = class_path.split(".")[0]
-    widget_json = (exports_root / widget_rel).with_suffix(".json")
-    if not widget_json.is_file():
-        return None
-
-    rel_json = widget_json.relative_to(splice_dir)
-    out_png = (cache_root / rel_json).with_suffix(".png")
+    rel = child_source.relative_to(splice_dir)
+    out_png = (cache_root / rel).with_suffix(".png")
     out_png.parent.mkdir(parents=True, exist_ok=True)
     if (
         out_png.is_file()
         and not force_rebuild
-        and out_png.stat().st_mtime >= widget_json.stat().st_mtime
+        and out_png.stat().st_mtime >= child_source.stat().st_mtime
     ):
         return out_png
 
-    input_dir = extract_texture_input_dir(widget_json, texture_root)
+    input_dir = extract_texture_input_dir(child_data, texture_root)
     if input_dir is None:
         return None
 
@@ -454,7 +463,7 @@ def _render_map_splice_widget(
 
     try:
         placements, _slot_count, grid_bounds = _parse_layout_placements(
-            layout_json_path=widget_json,
+            layout_data=child_data,
             grid_name=grid_name,
             tile_path_by_stem=tile_path_by_stem,
         )
@@ -471,7 +480,7 @@ def _render_map_splice_widget(
         pass
 
     # fallback: 无 UniformGridPanel，复制首张 Image 对应贴图
-    stems = extract_image_resource_stems(widget_json)
+    stems = extract_image_resource_stems(child_data)
     for stem in stems:
         src = tile_path_by_stem.get(stem)
         if src is not None and src.is_file():
@@ -481,7 +490,8 @@ def _render_map_splice_widget(
 
 
 def _collect_region_layers(
-    region_json_path: Path,
+    region_data: List[dict],
+    server,
     exports_root: Path,
     splice_dir: Path,
     texture_root: Path,
@@ -489,7 +499,7 @@ def _collect_region_layers(
     grid_name: str,
     force_splice_rebuild: bool,
 ) -> List[Layer]:
-    arr = json.loads(region_json_path.read_text(encoding="utf-8"))
+    arr = region_data
     if not isinstance(arr, list):
         return []
 
@@ -502,8 +512,9 @@ def _collect_region_layers(
         outer = obj.get("Outer")
         if isinstance(name, str):
             by_name.setdefault(name, []).append(obj)
-            if isinstance(outer, str):
-                by_outer_name[(outer, name)] = obj
+            outer_tail = _outer_tail_name(outer)
+            if outer_tail is not None:
+                by_outer_name[(outer_tail, name)] = obj
 
     root_panel = None
     widget_tree = None
@@ -541,6 +552,7 @@ def _collect_region_layers(
         parent_opacity=1.0,
         by_outer_name=by_outer_name,
         by_name=by_name,
+        server=server,
         exports_root=exports_root,
         splice_dir=splice_dir,
         texture_root=texture_root,
@@ -585,20 +597,23 @@ def _compose_layers(layers: List[Layer], output_path: Path) -> Optional[Tuple[in
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="把 RegionMap JSON 引用的子图合成为全图")
+    parser = argparse.ArgumentParser(description="把 RegionMap 引用的子图合成为全图")
     parser.add_argument(
         "--regionmap-dir",
-        default="../dna-unpack/Fmodel/Output/Exports/EM/Content/UI/WBP/Map/Widget/RegionMap",
+        default=uasset_client.map_widget_dir("RegionMap")
+        or Path("../dna-unpack/Fmodel/Output/Exports/EM/Content/UI/WBP/Map/Widget/RegionMap"),
         help="RegionMap 目录",
     )
     parser.add_argument(
         "--splice-dir",
-        default="../dna-unpack/Fmodel/Output/Exports/EM/Content/UI/WBP/Map/Widget/Map_Splice",
+        default=uasset_client.map_widget_dir("Map_Splice")
+        or Path("../dna-unpack/Fmodel/Output/Exports/EM/Content/UI/WBP/Map/Widget/Map_Splice"),
         help="Map_Splice 目录",
     )
     parser.add_argument(
         "--texture-root",
-        default="../dna-unpack/Fmodel/Output/Exports/EM/Content/UI/Texture/Static/Image/Map",
+        default=uasset_client.texture_static_dir()
+        or Path("../dna-unpack/Fmodel/Output/Exports/EM/Content/UI/Texture/Static/Image/Map"),
         help="地图贴图根目录",
     )
     parser.add_argument(
@@ -617,6 +632,11 @@ def main() -> None:
         action="store_true",
         help="忽略 out/map_splice 缓存，强制重建 Map_Splice 子图",
     )
+    parser.add_argument(
+        "--force-static-json",
+        action="store_true",
+        help="强制使用静态 JSON（不走 UAssetCLI server 解析 uasset）",
+    )
 
     args = parser.parse_args()
 
@@ -633,9 +653,31 @@ def main() -> None:
     if not texture_root.is_dir():
         raise SystemExit(f"贴图根目录不存在: {texture_root}")
 
-    exports_root = splice_dir.parents[6]
+    exports_root = uasset_client.get_exports_root()
+    if exports_root is None:
+        exports_root = splice_dir.parents[6] if len(splice_dir.parents) > 6 else splice_dir.parent
 
-    region_files = sorted(regionmap_dir.rglob("WBP_Map_Reg*.json"))
+    exe = uasset_client.get_uasset_exe()
+    uassets = sorted(regionmap_dir.rglob("WBP_Map_Reg*.uasset"))
+    use_server = (
+        not args.force_static_json
+        and exe is not None
+        and exports_root is not None
+        and bool(uassets)
+    )
+    server = None
+    if use_server:
+        server = uasset_client.UAssetServer(exe=exe)
+        server.start()
+        region_files = uassets
+        print(f"[INFO] 数据源: UAssetCLI server 模式（{len(uassets)} 个 RegionMap uasset）", flush=True)
+    else:
+        region_files = sorted(regionmap_dir.rglob("WBP_Map_Reg*.json"))
+        if args.force_static_json:
+            print("[INFO] 数据源: 静态 JSON（已强制）", flush=True)
+        elif not uassets:
+            print("[INFO] 数据源: 静态 JSON（无 uasset / exe）", flush=True)
+
     total = len(region_files)
     ok = 0
     skip = 0
@@ -644,34 +686,47 @@ def main() -> None:
     print(f"[INFO] RegionMap: {regionmap_dir}", flush=True)
     print(f"[INFO] Output: {output_root.resolve()}", flush=True)
 
-    for region_json in region_files:
-        rel = region_json.relative_to(regionmap_dir)
-        out_png = (output_root / rel).with_suffix(".png")
-        print(f"[RUN ] {rel}", flush=True)
-        try:
-            layers = _collect_region_layers(
-                region_json_path=region_json,
-                exports_root=exports_root,
-                splice_dir=splice_dir,
-                texture_root=texture_root,
-                splice_cache_root=splice_cache_root,
-                grid_name=args.grid_name,
-                force_splice_rebuild=args.force_splice_rebuild,
-            )
-            if not layers:
-                print(f"[SKIP] {rel} / 未找到可合成子层", flush=True)
-                skip += 1
-                continue
-            size = _compose_layers(layers, out_png)
-            if size is None:
-                print(f"[SKIP] {rel} / 合成尺寸无效", flush=True)
-                skip += 1
-                continue
-            print(f"[ OK ] {rel}  layers={len(layers)}  size={size[0]}x{size[1]}", flush=True)
-            ok += 1
-        except Exception as exc:
-            print(f"[FAIL] {rel} / {exc}", flush=True)
-            fail += 1
+    try:
+        for region_source in region_files:
+            rel = region_source.relative_to(regionmap_dir)
+            out_png = (output_root / rel).with_suffix(".png")
+            print(f"[RUN ] {rel}", flush=True)
+            try:
+                if use_server and region_source.suffix == ".uasset":
+                    region_data = server.fmodel(region_source, exports_root)
+                else:
+                    region_data = json.loads(region_source.read_text(encoding="utf-8"))
+                if not region_data:
+                    print(f"[SKIP] {rel} / 布局数据不可用", flush=True)
+                    skip += 1
+                    continue
+                layers = _collect_region_layers(
+                    region_data=region_data,
+                    server=server,
+                    exports_root=exports_root,
+                    splice_dir=splice_dir,
+                    texture_root=texture_root,
+                    splice_cache_root=splice_cache_root,
+                    grid_name=args.grid_name,
+                    force_splice_rebuild=args.force_splice_rebuild,
+                )
+                if not layers:
+                    print(f"[SKIP] {rel} / 未找到可合成子层", flush=True)
+                    skip += 1
+                    continue
+                size = _compose_layers(layers, out_png)
+                if size is None:
+                    print(f"[SKIP] {rel} / 合成尺寸无效", flush=True)
+                    skip += 1
+                    continue
+                print(f"[ OK ] {rel}  layers={len(layers)}  size={size[0]}x{size[1]}", flush=True)
+                ok += 1
+            except Exception as exc:
+                print(f"[FAIL] {rel} / {exc}", flush=True)
+                fail += 1
+    finally:
+        if server is not None:
+            server.close()
 
     print("===== 完成 =====", flush=True)
     print(f"TOTAL={total}  OK={ok}  SKIP={skip}  FAIL={fail}", flush=True)

@@ -187,7 +187,7 @@ function M:Construct()
   local Root = UE.UWindowTitleBarFunctionLibrary.GetWindowTitleBarRootWidget()
   if Root then
     if Root.WidgetTree and Root.WidgetTree.RootWidget then
-      Root.WidgetTree.RootWidget:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      Root.WidgetTree.RootWidget:SetVisibility(UIConst.VisibilityOp.Visible)
     end
     if Root.OnWindowMaximizeStateChanged then
       Root.OnWindowMaximizeStateChanged:Add(self, self.OnWindowMaximizeStateChanged)

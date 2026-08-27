@@ -81,9 +81,9 @@
   },
   {
     "id": 3010111,
-    "name": "UI_WeaponSkin_Name_3010111",
-    "desc": "",
-    "icon": "",
+    "name": "夜の雪舞・大剣",
+    "desc": "UI_WeaponSkin_Des_3010111",
+    "icon": "T_Head_Claymore_Yejin",
     "rarity": 5,
     "unlock": "ショップで獲得"
   },
@@ -149,6 +149,14 @@
     "desc": "",
     "icon": "",
     "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010209,
+    "name": "グワグワッ！・片手剣",
+    "desc": "グワッ――—————！",
+    "icon": "T_Head_Sword_Nahan",
+    "rarity": 4,
     "unlock": "ショップで獲得"
   },
   {
@@ -377,9 +385,17 @@
   },
   {
     "id": 3010613,
-    "name": "UI_WeaponSkin_Name_3010610",
+    "name": "UI_WeaponSkin_Name_3010613",
     "desc": "",
     "icon": "",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010615,
+    "name": "心を灼く獄炎",
+    "desc": "以心饲火，焚烬万物。",
+    "icon": "T_Head_Dualblade_Fenxin",
     "rarity": 5,
     "unlock": "ショップで獲得"
   },
@@ -496,6 +512,14 @@
     "unlock": "ショップで獲得"
   },
   {
+    "id": 3010807,
+    "name": "グワグワッ！・ウィップブレード",
+    "desc": "グワッ――—————！",
+    "icon": "T_Head_Swordwhip_Nahan",
+    "rarity": 4,
+    "unlock": "ショップで獲得"
+  },
+  {
     "id": 3010901,
     "name": "茶トラの天下",
     "desc": "にゃ～～～",
@@ -521,9 +545,9 @@
   },
   {
     "id": 3010904,
-    "name": "UI_WeaponSkin_Name_3010904",
-    "desc": "",
-    "icon": "",
+    "name": "夜の雪舞・ランチャー",
+    "desc": "UI_WeaponSkin_Des_3010111",
+    "icon": "T_Head_Cannon_Yejin",
     "rarity": 5,
     "unlock": "ショップで獲得"
   },
@@ -562,7 +586,7 @@
   {
     "id": 3011005,
     "name": "UI_WeaponSkin_Name_3011005",
-    "desc": "",
+    "desc": "UI_WeaponSkin_Des_3010111",
     "icon": "",
     "rarity": 5,
     "unlock": "ショップで獲得"

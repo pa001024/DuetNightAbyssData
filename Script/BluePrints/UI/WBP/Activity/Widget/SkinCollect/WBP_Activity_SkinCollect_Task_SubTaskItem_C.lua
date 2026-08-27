@@ -1,6 +1,7 @@
 require("UnLua")
 local PageJumpUtils = require("Utils.PageJumpUtils")
 local UIUtils = require("Utils.UIUtils")
+local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 local M = Class("BluePrints.UI.BP_EMUserWidget_C")
 local BUTTON_STATE_GET = 0
 local BUTTON_STATE_NOT_DONE = 1
@@ -41,6 +42,19 @@ end
 
 local function IsNonEmptyString(Value)
   return type(Value) == "string" and "" ~= Value
+end
+
+local function IsJumpToExistingActivity(JumpConfig)
+  if not JumpConfig or JumpConfig.JumpType ~= "SelfDefinedJump" or JumpConfig.JumpParameter1 ~= "JumpToEventPage" then
+    return false
+  end
+  local TabId = tonumber(JumpConfig.JumpParameter2)
+  if not ActivityUtils.IsTabIdValid(TabId) then
+    return false
+  end
+  local GameInstance = GWorld and GWorld.GameInstance
+  local UIManager = GameInstance and GameInstance:GetGameUIManager()
+  return UIManager and UIManager:GetUIObj("ActivityMain") ~= nil
 end
 
 local function FindWidgetByName(Widget, WidgetName)
@@ -403,8 +417,17 @@ function M:TryJumpByJumpId()
     return false
   end
   local JumpId = tonumber(Content.JumpLink)
-  if not (JumpId and DataMgr.InterfaceJump) or not DataMgr.InterfaceJump[JumpId] then
+  local JumpConfig = JumpId and DataMgr.InterfaceJump and DataMgr.InterfaceJump[JumpId]
+  if not JumpConfig then
     return false
+  end
+  if IsJumpToExistingActivity(JumpConfig) then
+    local OwnerPopup = Content.OwnerPopup
+    if OwnerPopup and OwnerPopup.Close then
+      OwnerPopup.PendingActivityJumpId = JumpId
+      OwnerPopup:Close()
+      return true
+    end
   end
   return PageJumpUtils:JumpToTargetPageByJumpId(JumpId)
 end

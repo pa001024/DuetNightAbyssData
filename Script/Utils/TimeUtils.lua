@@ -42,6 +42,11 @@ function TimeUtils.RealTime()
   return os.time()
 end
 
+function TimeUtils.InvalidateStandardTime()
+  TimeUtils.StandardTimestamp = 0
+  TimeUtils.RemoveStandardOffset = 0
+end
+
 function TimeUtils.SetStandardTimestamp(Timestamp)
   TimeUtils.StandardTimestamp = Timestamp or 0
 end
@@ -275,6 +280,26 @@ function TimeUtils.NextWeeklyRefreshTime(now, refresh_hms)
     local d1 = os.date("*t", os.time(data))
     return TimeUtils.DataToTimestamp(d1.year, d1.month, d1.day, table.unpack(refresh_hms))
   end
+end
+
+function TimeUtils.NextWeekDayRefreshTime(weekDay, now, refresh_hms)
+  weekDay = weekDay and weekDay % 7 + 1 or 2
+  now = now or TimeUtils.NowTime()
+  refresh_hms = refresh_hms or TimeUtils.RefreshHMS
+  local data = TimeUtils.TimestampToDataObj(now)
+  local hms = {
+    data.hour,
+    data.min,
+    data.sec
+  }
+  local wday = data.wday
+  local TodayRefreshTime = TimeUtils.DataToTimestamp(data.year, data.month, data.day, table.unpack(refresh_hms))
+  local ForwardDays = (7 + weekDay - wday) % 7
+  if 0 == ForwardDays and now >= TodayRefreshTime then
+    ForwardDays = 7
+  end
+  local NextRefreshTime = TodayRefreshTime + ForwardDays * 86400
+  return NextRefreshTime
 end
 
 function TimeUtils.GetSec(hour, min, sec)

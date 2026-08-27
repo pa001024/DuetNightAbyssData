@@ -197,74 +197,90 @@ T.RT_39 = {
 }
 T.RT_40 = {
   [1] = 101,
+  [2] = 10207,
+  [3] = 10103
+}
+T.RT_41 = {
+  [1] = 101,
+  [2] = 10206,
+  [3] = 10103
+}
+T.RT_42 = {
+  [1] = 101,
   [2] = 10208,
   [3] = 10103,
   [4] = 10100
 }
-T.RT_41 = {
+T.RT_43 = {
+  [220102] = 4
+}
+T.RT_44 = {
+  [220101] = 4
+}
+T.RT_45 = {
   [1] = 101,
   [2] = 10204,
   [3] = 10102
 }
-T.RT_42 = {
+T.RT_46 = {
   [1] = 101,
   [2] = 10203,
   [3] = 10102
 }
-T.RT_43 = {
+T.RT_47 = {
   [1] = 101,
   [2] = 10205,
   [3] = 10102,
   [4] = 10100
 }
-T.RT_44 = {
+T.RT_48 = {
   [1] = 101,
   [2] = 10207,
   [3] = 10102
 }
-T.RT_45 = {
+T.RT_49 = {
   [1] = 101,
   [2] = 10206,
   [3] = 10102
 }
-T.RT_46 = {
+T.RT_50 = {
   [1] = 101,
   [2] = 10208,
   [3] = 10102,
   [4] = 10100
 }
-T.RT_47 = {
+T.RT_51 = {
   [160102] = 4
 }
-T.RT_48 = {
+T.RT_52 = {
   [160101] = 4
 }
-T.RT_49 = {
+T.RT_53 = {
   [1] = 101,
   [2] = 10201,
   [3] = 10103
 }
-T.RT_50 = {
+T.RT_54 = {
   [1] = 101,
   [2] = 10200,
   [3] = 10103
 }
-T.RT_51 = {
+T.RT_55 = {
   [1] = 101,
   [2] = 10202,
   [3] = 10103,
   [4] = 10100
 }
-T.RT_52 = {
+T.RT_56 = {
   [1] = 101,
   [2] = 10205,
   [3] = 10103,
   [4] = 10100
 }
-T.RT_53 = {
+T.RT_57 = {
   [120102] = 4
 }
-T.RT_54 = {
+T.RT_58 = {
   [120101] = 4
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
@@ -459,7 +475,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
       [2] = {
         Amount = T.RT_12,
         CharID = 1201,
-        NeedSkill = T.RT_54,
+        NeedSkill = T.RT_58,
         Num = 1,
         ResourceID = T.RT_28,
         Skill = T.RT_15
@@ -477,7 +493,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
       [2] = {
         Amount = T.RT_12,
         CharID = 1201,
-        NeedSkill = T.RT_53,
+        NeedSkill = T.RT_57,
         Num = 3,
         ResourceID = T.RT_28,
         Skill = T.RT_10
@@ -527,7 +543,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 1501,
         NeedBreak = 5,
         Num = 2,
-        ResourceID = T.RT_51,
+        ResourceID = T.RT_55,
         Skill = T.RT_13
       }
     },
@@ -547,7 +563,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 1501,
         NeedLevel = 75,
         Num = 4,
-        ResourceID = T.RT_51,
+        ResourceID = T.RT_55,
         Skill = T.RT_7
       }
     },
@@ -557,7 +573,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 1501,
         NeedBreak = 2,
         Num = 5,
-        ResourceID = T.RT_50,
+        ResourceID = T.RT_54,
         Skill = T.RT_4
       },
       [3] = {
@@ -565,7 +581,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 1501,
         NeedBreak = 4,
         Num = 6,
-        ResourceID = T.RT_49,
+        ResourceID = T.RT_53,
         Skill = T.RT_1
       }
     }
@@ -587,7 +603,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 1502,
         NeedBreak = 5,
         Num = 2,
-        ResourceID = T.RT_52,
+        ResourceID = T.RT_56,
         Skill = T.RT_13
       }
     },
@@ -607,7 +623,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 1502,
         NeedLevel = 75,
         Num = 4,
-        ResourceID = T.RT_52,
+        ResourceID = T.RT_56,
         Skill = T.RT_7
       }
     },
@@ -655,7 +671,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 1503,
         NeedBreak = 5,
         Num = 2,
-        ResourceID = T.RT_51,
+        ResourceID = T.RT_55,
         Skill = T.RT_13
       }
     },
@@ -675,7 +691,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 1503,
         NeedLevel = 75,
         Num = 4,
-        ResourceID = T.RT_51,
+        ResourceID = T.RT_55,
         Skill = T.RT_7
       }
     },
@@ -685,7 +701,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 1503,
         NeedBreak = 2,
         Num = 5,
-        ResourceID = T.RT_50,
+        ResourceID = T.RT_54,
         Skill = T.RT_4
       },
       [3] = {
@@ -693,7 +709,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 1503,
         NeedBreak = 4,
         Num = 6,
-        ResourceID = T.RT_49,
+        ResourceID = T.RT_53,
         Skill = T.RT_1
       }
     }
@@ -763,7 +779,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
       [2] = {
         Amount = T.RT_12,
         CharID = 1601,
-        NeedSkill = T.RT_48,
+        NeedSkill = T.RT_52,
         Num = 1,
         ResourceID = T.RT_11,
         Skill = T.RT_15
@@ -773,7 +789,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 1601,
         NeedBreak = 5,
         Num = 2,
-        ResourceID = T.RT_46,
+        ResourceID = T.RT_50,
         Skill = T.RT_13
       }
     },
@@ -781,7 +797,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
       [2] = {
         Amount = T.RT_12,
         CharID = 1601,
-        NeedSkill = T.RT_47,
+        NeedSkill = T.RT_51,
         Num = 3,
         ResourceID = T.RT_11,
         Skill = T.RT_10
@@ -791,7 +807,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 1601,
         NeedLevel = 75,
         Num = 4,
-        ResourceID = T.RT_46,
+        ResourceID = T.RT_50,
         Skill = T.RT_7
       }
     },
@@ -801,7 +817,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 1601,
         NeedBreak = 2,
         Num = 5,
-        ResourceID = T.RT_45,
+        ResourceID = T.RT_49,
         Skill = T.RT_4
       },
       [3] = {
@@ -809,7 +825,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 1601,
         NeedBreak = 4,
         Num = 6,
-        ResourceID = T.RT_44,
+        ResourceID = T.RT_48,
         Skill = T.RT_1
       }
     }
@@ -831,7 +847,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 1801,
         NeedBreak = 5,
         Num = 2,
-        ResourceID = T.RT_46,
+        ResourceID = T.RT_50,
         Skill = T.RT_13
       }
     },
@@ -851,7 +867,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 1801,
         NeedLevel = 75,
         Num = 4,
-        ResourceID = T.RT_46,
+        ResourceID = T.RT_50,
         Skill = T.RT_7
       }
     },
@@ -861,7 +877,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 1801,
         NeedBreak = 2,
         Num = 5,
-        ResourceID = T.RT_45,
+        ResourceID = T.RT_49,
         Skill = T.RT_4
       },
       [3] = {
@@ -869,7 +885,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 1801,
         NeedBreak = 4,
         Num = 6,
-        ResourceID = T.RT_44,
+        ResourceID = T.RT_48,
         Skill = T.RT_1
       }
     }
@@ -891,7 +907,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 2101,
         NeedBreak = 5,
         Num = 2,
-        ResourceID = T.RT_43,
+        ResourceID = T.RT_47,
         Skill = T.RT_13
       }
     },
@@ -911,7 +927,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 2101,
         NeedLevel = 75,
         Num = 4,
-        ResourceID = T.RT_43,
+        ResourceID = T.RT_47,
         Skill = T.RT_7
       }
     },
@@ -921,7 +937,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 2101,
         NeedBreak = 2,
         Num = 5,
-        ResourceID = T.RT_42,
+        ResourceID = T.RT_46,
         Skill = T.RT_4
       },
       [3] = {
@@ -929,7 +945,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 2101,
         NeedBreak = 4,
         Num = 6,
-        ResourceID = T.RT_41,
+        ResourceID = T.RT_45,
         Skill = T.RT_1
       }
     }
@@ -951,7 +967,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 2102,
         NeedBreak = 5,
         Num = 2,
-        ResourceID = T.RT_43,
+        ResourceID = T.RT_47,
         Skill = T.RT_13
       }
     },
@@ -971,7 +987,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 2102,
         NeedLevel = 75,
         Num = 4,
-        ResourceID = T.RT_43,
+        ResourceID = T.RT_47,
         Skill = T.RT_7
       }
     },
@@ -981,7 +997,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 2102,
         NeedBreak = 2,
         Num = 5,
-        ResourceID = T.RT_42,
+        ResourceID = T.RT_46,
         Skill = T.RT_4
       },
       [3] = {
@@ -989,7 +1005,63 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 2102,
         NeedBreak = 4,
         Num = 6,
+        ResourceID = T.RT_45,
+        Skill = T.RT_1
+      }
+    }
+  },
+  [2201] = {
+    [1] = {
+      [2] = {
+        Amount = T.RT_12,
+        CharID = 2201,
+        NeedSkill = T.RT_44,
+        Num = 1,
+        ResourceID = T.RT_11,
+        Skill = T.RT_15
+      },
+      [3] = {
+        Amount = T.RT_14,
+        CharID = 2201,
+        NeedBreak = 5,
+        Num = 2,
+        ResourceID = T.RT_42,
+        Skill = T.RT_13
+      }
+    },
+    [2] = {
+      [2] = {
+        Amount = T.RT_12,
+        CharID = 2201,
+        NeedSkill = T.RT_43,
+        Num = 3,
+        ResourceID = T.RT_11,
+        Skill = T.RT_10
+      },
+      [3] = {
+        Amount = T.RT_9,
+        CharID = 2201,
+        NeedLevel = 75,
+        Num = 4,
+        ResourceID = T.RT_42,
+        Skill = T.RT_7
+      }
+    },
+    [3] = {
+      [2] = {
+        Amount = T.RT_6,
+        CharID = 2201,
+        NeedBreak = 2,
+        Num = 5,
         ResourceID = T.RT_41,
+        Skill = T.RT_4
+      },
+      [3] = {
+        Amount = T.RT_3,
+        CharID = 2201,
+        NeedBreak = 4,
+        Num = 6,
+        ResourceID = T.RT_40,
         Skill = T.RT_1
       }
     }
@@ -1071,7 +1143,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 2401,
         NeedBreak = 5,
         Num = 2,
-        ResourceID = T.RT_40,
+        ResourceID = T.RT_42,
         Skill = T.RT_13
       }
     },
@@ -1091,7 +1163,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 2401,
         NeedLevel = 75,
         Num = 4,
-        ResourceID = T.RT_40,
+        ResourceID = T.RT_42,
         Skill = T.RT_7
       }
     },
@@ -1101,11 +1173,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 2401,
         NeedBreak = 2,
         Num = 5,
-        ResourceID = {
-          [1] = 101,
-          [2] = 10206,
-          [3] = 10103
-        },
+        ResourceID = T.RT_41,
         Skill = T.RT_4
       },
       [3] = {
@@ -1113,11 +1181,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 2401,
         NeedBreak = 4,
         Num = 6,
-        ResourceID = {
-          [1] = 101,
-          [2] = 10207,
-          [3] = 10103
-        },
+        ResourceID = T.RT_40,
         Skill = T.RT_1
       }
     }
@@ -1306,6 +1370,66 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         NeedBreak = 4,
         Num = 6,
         ResourceID = T.RT_16,
+        Skill = T.RT_1
+      }
+    }
+  },
+  [3104] = {
+    [1] = {
+      [2] = {
+        Amount = T.RT_12,
+        CharID = 3104,
+        NeedSkill = {
+          [310401] = 4
+        },
+        Num = 1,
+        ResourceID = T.RT_19,
+        Skill = T.RT_15
+      },
+      [3] = {
+        Amount = T.RT_14,
+        CharID = 3104,
+        NeedBreak = 5,
+        Num = 2,
+        ResourceID = T.RT_22,
+        Skill = T.RT_13
+      }
+    },
+    [2] = {
+      [2] = {
+        Amount = T.RT_12,
+        CharID = 3104,
+        NeedSkill = {
+          [310402] = 4
+        },
+        Num = 3,
+        ResourceID = T.RT_19,
+        Skill = T.RT_10
+      },
+      [3] = {
+        Amount = T.RT_9,
+        CharID = 3104,
+        NeedLevel = 75,
+        Num = 4,
+        ResourceID = T.RT_22,
+        Skill = T.RT_7
+      }
+    },
+    [3] = {
+      [2] = {
+        Amount = T.RT_6,
+        CharID = 3104,
+        NeedBreak = 2,
+        Num = 5,
+        ResourceID = T.RT_21,
+        Skill = T.RT_4
+      },
+      [3] = {
+        Amount = T.RT_3,
+        CharID = 3104,
+        NeedBreak = 4,
+        Num = 6,
+        ResourceID = T.RT_20,
         Skill = T.RT_1
       }
     }
@@ -2051,7 +2175,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
       [2] = {
         Amount = T.RT_12,
         CharID = 120101,
-        NeedSkill = T.RT_54,
+        NeedSkill = T.RT_58,
         Num = 1,
         ResourceID = T.RT_28,
         Skill = T.RT_15
@@ -2069,7 +2193,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
       [2] = {
         Amount = T.RT_12,
         CharID = 120101,
-        NeedSkill = T.RT_53,
+        NeedSkill = T.RT_57,
         Num = 3,
         ResourceID = T.RT_28,
         Skill = T.RT_10
@@ -2107,7 +2231,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
       [2] = {
         Amount = T.RT_12,
         CharID = 160101,
-        NeedSkill = T.RT_48,
+        NeedSkill = T.RT_52,
         Num = 1,
         ResourceID = T.RT_11,
         Skill = T.RT_15
@@ -2117,7 +2241,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 160101,
         NeedBreak = 5,
         Num = 2,
-        ResourceID = T.RT_46,
+        ResourceID = T.RT_50,
         Skill = T.RT_13
       }
     },
@@ -2125,7 +2249,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
       [2] = {
         Amount = T.RT_12,
         CharID = 160101,
-        NeedSkill = T.RT_47,
+        NeedSkill = T.RT_51,
         Num = 3,
         ResourceID = T.RT_11,
         Skill = T.RT_10
@@ -2135,7 +2259,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 160101,
         NeedLevel = 75,
         Num = 4,
-        ResourceID = T.RT_46,
+        ResourceID = T.RT_50,
         Skill = T.RT_7
       }
     },
@@ -2145,7 +2269,7 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 160101,
         NeedBreak = 2,
         Num = 5,
-        ResourceID = T.RT_45,
+        ResourceID = T.RT_49,
         Skill = T.RT_4
       },
       [3] = {
@@ -2153,7 +2277,63 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         CharID = 160101,
         NeedBreak = 4,
         Num = 6,
-        ResourceID = T.RT_44,
+        ResourceID = T.RT_48,
+        Skill = T.RT_1
+      }
+    }
+  },
+  [220101] = {
+    [1] = {
+      [2] = {
+        Amount = T.RT_12,
+        CharID = 220101,
+        NeedSkill = T.RT_44,
+        Num = 1,
+        ResourceID = T.RT_11,
+        Skill = T.RT_15
+      },
+      [3] = {
+        Amount = T.RT_14,
+        CharID = 220101,
+        NeedBreak = 5,
+        Num = 2,
+        ResourceID = T.RT_42,
+        Skill = T.RT_13
+      }
+    },
+    [2] = {
+      [2] = {
+        Amount = T.RT_12,
+        CharID = 220101,
+        NeedSkill = T.RT_43,
+        Num = 3,
+        ResourceID = T.RT_11,
+        Skill = T.RT_10
+      },
+      [3] = {
+        Amount = T.RT_9,
+        CharID = 220101,
+        NeedLevel = 75,
+        Num = 4,
+        ResourceID = T.RT_42,
+        Skill = T.RT_7
+      }
+    },
+    [3] = {
+      [2] = {
+        Amount = T.RT_6,
+        CharID = 220101,
+        NeedBreak = 2,
+        Num = 5,
+        ResourceID = T.RT_41,
+        Skill = T.RT_4
+      },
+      [3] = {
+        Amount = T.RT_3,
+        CharID = 220101,
+        NeedBreak = 4,
+        Num = 6,
+        ResourceID = T.RT_40,
         Skill = T.RT_1
       }
     }

@@ -274,6 +274,15 @@ function WBP_Forging_Compendium_C:OnKeyDown(MyGeometry, InKeyEvent)
   return UE4.UWidgetBlueprintLibrary.Unhandled()
 end
 
+function WBP_Forging_Compendium_C:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
+  local InKey = UE4.UKismetInputLibrary.GetKey(InAnalogInputEvent)
+  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  if InKeyName == UIConst.GamePadKey.RightAnalogY and self.ItemDetails and self.ItemDetails:IsVisible() then
+    return self.ItemDetails:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
+  end
+  return UE4.UWidgetBlueprintLibrary.Unhandled()
+end
+
 function WBP_Forging_Compendium_C:Handle_KeyDownOnGamePad(InKeyName)
   local IsEventHandled = false
   local CurrentState = self.ControllerFSM:Current()
@@ -286,9 +295,11 @@ function WBP_Forging_Compendium_C:Handle_KeyDownOnGamePad(InKeyName)
         self:ShowDraftPath(self.CurSelectedContent.Id)
       end
       IsEventHandled = true
+    elseif InKeyName == Const.GamepadSpecialLeft then
+      IsEventHandled = self.ItemDetails:TryGoToFirstItem()
     end
   end
-  IsEventHandled = self.Tab:Handle_KeyEventOnGamePad(InKeyName)
+  IsEventHandled = self.Tab:Handle_KeyEventOnGamePad(InKeyName) or IsEventHandled
   return IsEventHandled
 end
 
@@ -376,6 +387,8 @@ function WBP_Forging_Compendium_C:SelectDraftItem(Content)
   ItemDetailParam.ItemId = Content.Id
   ItemDetailParam.ItemType = "Draft"
   ItemDetailParam.bHideGamePad = true
+  ItemDetailParam.OverrideDetailsBackObj = self
+  ItemDetailParam.OverrideDetailsBackEvent = self.RestoreFocusFromItemDetails
   self.ItemDetails:PlayAnimation(self.ItemDetails.Change)
   self.ItemDetails:RefreshItemInfo(ItemDetailParam, true)
   if DataMgr.Draft[Content.Id].NotDraftTree then
@@ -414,6 +427,26 @@ function WBP_Forging_Compendium_C:SelectDraftItem(Content)
       CurWidget:SetNew(false)
     end
     ForgeModel:MarkDraftAsSeen(Content.Id)
+  end
+end
+
+function WBP_Forging_Compendium_C:RestoreFocusFromItemDetails()
+  self.ItemDetails.bFocusItem = false
+  if not self.CurSelectedContent then
+    self.List_Item:SetFocus()
+    return
+  end
+  local ItemIndex = self.List_Item:GetIndexForItem(self.CurSelectedContent)
+  if ItemIndex < 0 then
+    self.List_Item:SetFocus()
+    return
+  end
+  local Entry = URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(self.List_Item, ItemIndex)
+  if Entry then
+    Entry:SetFocus()
+  else
+    self.List_Item:NavigateToIndex(ItemIndex)
+    self.List_Item:SetFocus()
   end
 end
 

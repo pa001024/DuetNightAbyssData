@@ -205,8 +205,9 @@ function M:HasFinalDialogue()
 end
 
 function M:RealSkip()
-  DebugPrint("M@RealSkip", self.LastSelectedId, self.bForbidSkip, self.IterGraph:GetRestartTag())
-  if self.bForbidSkip and not self.IterGraph:GetRestartTag() then
+  local RestartTag = self.Flow and self.Flow:GetRestartTag()
+  DebugPrint("M@RealSkip", self.LastSelectedId, self.bForbidSkip, RestartTag)
+  if self.bForbidSkip and not RestartTag then
     return EDialogueIterType.Out, true
   end
   local OutPortName = EDialogueIterType.Out

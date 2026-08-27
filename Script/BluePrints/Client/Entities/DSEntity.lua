@@ -7,6 +7,7 @@ local bHookGameModeReadyForInitNext = false
 DSEntity.__Component__ = {
   "BluePrints.Client.Entities.DSComponents.DSRewardsComponent",
   "BluePrints.Client.Entities.DSComponents.DSBattleComponent",
+  "BluePrints.Client.Entities.DSComponents.DSPerformanceCaptureComponent",
   "BluePrints.Client.Entities.CommonComponents.ResourceUseComponent",
   "BluePrints.Client.Entities.CommonComponents.AutoBattleTestComponent",
   "BluePrints.Client.Entities.DSComponents.DSTargetComponent",
@@ -269,9 +270,15 @@ function DSEntity:Ping()
   self:CallServerMethod("Echo")
 end
 
-function DSEntity:DSStat(Cmd)
-  print(_G.LogTag, "DSStat", Cmd)
-  GWorld.GameInstance:ExecuteCmd(Cmd)
+function DSEntity:DSStat(Cmd, ...)
+  local CmdStr = tostring(Cmd)
+  for _, Arg in ipairs({
+    ...
+  }) do
+    CmdStr = CmdStr .. " " .. tostring(Arg)
+  end
+  print(_G.LogTag, "DSStat", CmdStr)
+  GWorld.GameInstance:ExecuteCmd(CmdStr)
 end
 
 function DSEntity:TestHotUpdate()

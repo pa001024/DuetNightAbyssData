@@ -50,6 +50,7 @@ function WBP_VideoPlayer_C:OnMediaPlayEnd()
 end
 
 function WBP_VideoPlayer_C:FireCallback()
+  AudioManager(self):StopSound(self, "VideoPlayerSound")
   if self.OnPlayEnd:IsBound() then
     DebugPrint("CY@ OnMediaPlayEnd Broadcast")
     self.OnPlayEnd:Broadcast(self)
@@ -160,6 +161,13 @@ function WBP_VideoPlayer_C:SetLooping(Looping)
   return false
 end
 
+function WBP_VideoPlayer_C:PlaySoundOnMediaPlayStart(SoundPath)
+  if not SoundPath then
+    return
+  end
+  self.SoundPath = SoundPath
+end
+
 function WBP_VideoPlayer_C:OnMediaPlayStart()
   self:ShowVideoSurface()
   if self.Image_Mask then
@@ -170,6 +178,8 @@ function WBP_VideoPlayer_C:OnMediaPlayStart()
       self.MediaPlayer:Rewind()
       self:Pause()
     end)
+  elseif self.SoundPath then
+    AudioManager(self):PlayUISound(self, self.SoundPath, "VideoPlayerSound", nil)
   end
 end
 

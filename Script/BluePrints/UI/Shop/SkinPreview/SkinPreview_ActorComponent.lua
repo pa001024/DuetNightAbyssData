@@ -191,6 +191,11 @@ function M:_GenerateWeaponAccessoryParams(ItemData, Avatar)
       Params.SkinId = currentSkinId
     end
   end
+  if WeaponAccessoryData.StanceFXType ~= "Accessory" then
+    self.IsWeaponModAccessory = true
+  else
+    self.IsWeaponModAccessory = false
+  end
   return Params
 end
 
@@ -424,6 +429,11 @@ function M:ApplyAccessoryPreview(itemType)
   else
     self.ActorController:ChangeWeaponAccessory(self.Params.AccessoryId, CommonConst.WeaponAccessoryTypes.Accessory)
     self.ActorController:EnableCameraScrolling(false)
+    if self.IsWeaponModAccessory then
+      self.ActorController:ResetActorRotation()
+      self.EnableDrag = false
+      self.EnableMouseWheel = false
+    end
   end
 end
 
@@ -565,8 +575,7 @@ function M:UpdateToWeaponAccessoryPreview(ItemData)
   else
     self.ActorController:ChangeSingleWeapon(self.Avatar.Weapons[self.Avatar.MeleeWeapon], "WeaponAccessory" == self.LastItemType)
   end
-  self.ActorController:ChangeWeaponAccessory(WeaponAccessoryData.WeaponAccessoryId, CommonConst.WeaponAccessoryTypes.Accessory)
-  self.ActorController:EnableCameraScrolling(false)
+  self:ApplyAccessoryPreview(ItemData.ItemType)
 end
 
 function M:UpdateToGesturePreview(ItemData)
@@ -593,6 +602,7 @@ function M:UpdateToMountsPreview(ItemData)
   local MountData = DataMgr.Mount[ItemData.TypeId]
   self.ActorController:SetArmoryCameraTag(MountData.CameraName or CommonConst.ArmoryType.Char, "", "")
   self.ActorController:CreateMount(ItemData.TypeId)
+  self.ActorController:SetArmoryCameraTag(MountData.CameraName or CommonConst.ArmoryType.Char, "", "")
   self.ActorController.ArmoryHelper:SetViewActor(self.ActorController.ArmoryPlayer)
 end
 

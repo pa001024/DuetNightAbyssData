@@ -60,7 +60,7 @@ end
 
 function ModSlotUIData:GetPolarityText(InPolarity)
   InPolarity = InPolarity or self:GetPolarity()
-  return GetModModel():GetPolarityText(InPolarity)
+  return GetModModel():GetSlotPolarityText(InPolarity)
 end
 
 function ModSlotUIData:InState(State)
@@ -141,9 +141,7 @@ function ModSlotUIData:_CalcPolarityState(Mod)
       end
     elseif Mod.Polarity == CommonConst.NonePolarity then
       self.PolarityState = ModCommon.SlotPolarityState.ModNoPolarity
-    elseif Mod.Polarity ~= Polarity then
-      self.PolarityState = ModCommon.SlotPolarityState.NoMatch
-    elseif Mod.Polarity == Polarity then
+    else
       self.PolarityState = ModCommon.SlotPolarityState.Match
     end
   elseif Polarity == CommonConst.NonePolarity then

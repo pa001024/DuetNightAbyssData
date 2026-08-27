@@ -22,6 +22,7 @@ function M:BuildFlow()
     return
   end
   local Context = {
+    Flow = self,
     FlowType = self.FlowType,
     FlowOwner = self.FlowOwner,
     TalkTaskData = self.FlowOwner and self.FlowOwner.TalkTaskData
@@ -86,6 +87,14 @@ function M:RequestSkipDialogue()
   return false
 end
 
+function M:ResumePendingIterate()
+  local CurrentNode = self.CurrentNode
+  if CurrentNode and CurrentNode.ResumePendingIterate then
+    return CurrentNode:ResumePendingIterate()
+  end
+  return false
+end
+
 function M:Pause()
   if self.CurrentNode then
     self.CurrentNode:Pause()
@@ -126,9 +135,6 @@ end
 function M:Clear()
 end
 
-function M:OnNodeEnd(...)
-end
-
 function M:BindOnFlowEndEvent(Obj, Event)
   self.OnFlowEndObj = Obj
   self.OnFlowEndEvent = Event
@@ -149,6 +155,7 @@ function M:OnDialogueEnd()
   if self.OnDialogueEndObj and self.OnDialogueEndEvent then
     self.OnDialogueEndEvent(self.OnDialogueEndObj)
   end
+  self:End()
 end
 
 function M:BindOnFlowCreatedEvent(Obj, Event)
@@ -177,9 +184,6 @@ function M:OnNodeEnter(Node)
     return
   end
   self.CurrentNode = Node
-  if Node:GetType() == EDialogueNodeType.End then
-    self:End()
-  end
 end
 
 function M:GetCurrentNode()

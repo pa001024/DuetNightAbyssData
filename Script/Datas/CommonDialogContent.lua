@@ -303,6 +303,10 @@ return ReadOnly("CommonDialogContent", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/LimitedPrizePool/Frame/WBP_Activity_LimitedPrizePool_DetailHistoryContent_Frame.WBP_Activity_LimitedPrizePool_DetailHistoryContent_Frame'",
     ContentId = "WBP_Activity_LimitedPrizePool_DetailHistoryContent_Frame"
   },
+  WBP_Activity_MoneyTree_Dialog = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/MoneyTree/WBP_Activity_MoneyTree_Dialog.WBP_Activity_MoneyTree_Dialog'",
+    ContentId = "WBP_Activity_MoneyTree_Dialog"
+  },
   WBP_Activity_TotalRecharge_DetailHistoryContent = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/TotalRecharge/WBP_Activity_TotalRecharge_DetailHistoryContent.WBP_Activity_TotalRecharge_DetailHistoryContent'",
     ContentId = "WBP_Activity_TotalRecharge_DetailHistoryContent"
@@ -339,6 +343,10 @@ return ReadOnly("CommonDialogContent", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Widget/Dye/WBP_Armory_DyeCostDialog.WBP_Armory_DyeCostDialog'",
     ContentId = "WBP_Armory_Dye_Num"
   },
+  WBP_Armory_FXDialog = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Widget/Unit/WBP_Armory_FXDialog.WBP_Armory_FXDialog'",
+    ContentId = "WBP_Armory_FXDialog"
+  },
   WBP_Armory_Incarnon_ActiveDialog = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Widget/Incarnon/WBP_Armory_Incarnon_ActiveDialog.WBP_Armory_Incarnon_ActiveDialog'",
     ContentId = "WBP_Armory_Incarnon_ActiveDialog"
@@ -370,6 +378,10 @@ return ReadOnly("CommonDialogContent", {
   WBP_Chat_ChannelContent = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Chat/Widget/Channel/WBP_Chat_ChannelContent.WBP_Chat_ChannelContent'",
     ContentId = "WBP_Chat_ChannelContent"
+  },
+  WBP_Com_Dialog_CollectReward = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Dialog/Widget/Reward/WBP_Com_Dialog_CollectReward.WBP_Com_Dialog_CollectReward'",
+    ContentId = "WBP_Com_Dialog_CollectReward"
   },
   WBP_Experience_BuffDialog = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Experience/PC/WBP_Experience_Dialog.WBP_Experience_Dialog'",
@@ -482,6 +494,14 @@ return ReadOnly("CommonDialogContent", {
   WBP_Task_Dialog_Ticket_Content = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Task/Widget/WBP_Task_Dialog_Ticket.WBP_Task_Dialog_Ticket'",
     ContentId = "WBP_Task_Dialog_Ticket_Content"
+  },
+  WBP_Team_Recruit = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Team/Widget/Recruit/WBP_Team_Recruit.WBP_Team_Recruit'",
+    ContentId = "WBP_Team_Recruit"
+  },
+  WBP_Team_RecruitShare = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Team/Widget/RecruitShare/WBP_Team_RecruitShare.WBP_Team_RecruitShare'",
+    ContentId = "WBP_Team_RecruitShare"
   },
   WeaponResolve = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Bag/Widget/WBP_Bag_SellDialog.WBP_Bag_SellDialog'",

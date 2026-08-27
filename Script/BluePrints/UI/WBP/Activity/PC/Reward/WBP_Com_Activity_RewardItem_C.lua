@@ -407,23 +407,27 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
       IsEventHandled = true
       self:SwitchSelectedMode()
     elseif InKeyName == UIConst.GamePadKey.FaceButtonRight then
-      if self.Owner.IsInViewMode then
+      if self.Owner and self.Owner.IsInViewMode then
         IsEventHandled = true
         self:SwitchSelectedMode()
         self:SetFocus()
       end
     elseif InKeyName == UIConst.GamePadKey.FaceButtonBottom then
       IsEventHandled = true
-      if 0 == self.WS_State:GetActiveWidgetIndex() then
+      if 0 == self.WS_State:GetActiveWidgetIndex() and self.Owner and self.Owner.RewardContent_OneClick then
         self.Owner.RewardContent_OneClick.Btn_OneClick:OnBtnClicked()
       end
     elseif InKeyName == UIConst.GamePadKey.FaceButtonTop and not self.Owner.IsInViewMode then
       IsEventHandled = true
-      self.Owner.RewardContent_OneClick.Btn_OneClick:OnBtnClicked()
+      if self.Owner and self.Owner.RewardContent_OneClick then
+        self.Owner.RewardContent_OneClick.Btn_OneClick:OnBtnClicked()
+      end
     end
   elseif "SpaceBar" == InKeyName then
     IsEventHandled = true
-    self.Owner.RewardContent_OneClick.Btn_OneClick:OnBtnClicked()
+    if self.Owner and self.Owner.RewardContent_OneClick then
+      self.Owner.RewardContent_OneClick.Btn_OneClick:OnBtnClicked()
+    end
   end
   if IsEventHandled then
     return UWidgetBlueprintLibrary.Handled()

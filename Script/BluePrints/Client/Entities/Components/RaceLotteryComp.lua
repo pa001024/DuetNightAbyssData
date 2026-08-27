@@ -11,6 +11,7 @@ end
 
 function Component:LeaveWorld()
   DebugPrint("RaceLotteryComp LeaveWorld")
+  TimeUtils.InvalidateStandardTime()
   RacingOutsiderController:Destory()
 end
 

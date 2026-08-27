@@ -47,7 +47,7 @@ function M:SetLangImage()
     return
   end
   local SystemLanguage = EMCache:Get("SystemLanguage") or "EN"
-  if "DE" == SystemLanguage or "FR" == SystemLanguage or "ES" == SystemLanguage then
+  if "FR" == SystemLanguage then
     SystemLanguage = "EN"
   elseif "CN" == SystemLanguage and UE.AHotUpdateGameMode.IsGlobalPak() then
     SystemLanguage = "CN_OverSea"

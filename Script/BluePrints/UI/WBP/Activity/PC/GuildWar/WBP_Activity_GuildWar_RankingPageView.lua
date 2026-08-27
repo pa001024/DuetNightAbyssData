@@ -2,6 +2,7 @@ require("UnLua")
 local ActorController = require("BluePrints.UI.WBP.Armory.ActorController.Armory_ActorController")
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
 local GuildWarUtils = require("BluePrints.UI.WBP.Activity.Widget.GuildWar.GuildWarUtils")
+local SerializeUtils = require("Utils.SerializeUtils")
 local M = Class({})
 
 function M:OnLoaded(...)

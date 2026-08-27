@@ -255,6 +255,10 @@ return ReadOnly("SoundEffect", {
     SoundId = 221,
     SoundPath = "event:/sfx/common/scene/shenmiao/hammer_pre"
   },
+  [231] = {
+    SoundId = 231,
+    SoundPath = "event:/sfx/common/scene/ex02/rail_glide_loop"
+  },
   [301] = {
     NumLimit = 5,
     SoundId = 301,
@@ -849,6 +853,10 @@ return ReadOnly("SoundEffect", {
     SoundId = 3007,
     SoundPath = "event:/sfx/common/player/action/footstep_costume_meimo"
   },
+  [3008] = {
+    SoundId = 3008,
+    SoundPath = "event:/sfx/common/player/action/footstep_costume_falu"
+  },
   [3101] = {
     NumLimit = 5,
     SoundId = 3101,
@@ -875,6 +883,22 @@ return ReadOnly("SoundEffect", {
   [3106] = {
     SoundId = 3106,
     SoundPath = "event:/sfx/common/player/action/huanwen_costume_bingxue_loop"
+  },
+  [3107] = {
+    SoundId = 3107,
+    SoundPath = "event:/sfx/btc/common/goutou_huanwen"
+  },
+  [3108] = {
+    SoundId = 3108,
+    SoundPath = "event:/sfx/btc/common/puke_huanwen"
+  },
+  [3109] = {
+    SoundId = 3109,
+    SoundPath = "event:/sfx/btc/common/yinfu_huanwen"
+  },
+  [3110] = {
+    SoundId = 3110,
+    SoundPath = "event:/sfx/btc/common/pukeyinfu_huanwen"
   },
   [3201] = {
     NumLimit = 5,
@@ -908,6 +932,10 @@ return ReadOnly("SoundEffect", {
   [3306] = {
     SoundId = 3306,
     SoundPath = "event:/sfx/btc/eve/fallattack"
+  },
+  [3307] = {
+    SoundId = 3307,
+    SoundPath = "event:/sfx/btc/falu/fallattack_1.6"
   },
   [3401] = {
     SoundId = 3401,
@@ -952,6 +980,14 @@ return ReadOnly("SoundEffect", {
   [3411] = {
     SoundId = 3411,
     SoundPath = "event:/sfx/btc/eve/bulletjump"
+  },
+  [3412] = {
+    SoundId = 3412,
+    SoundPath = "event:/sfx/btc/falu/bulletjump"
+  },
+  [3413] = {
+    SoundId = 3413,
+    SoundPath = "event:/sfx/btc/xiunv/bulletjump_xiunv03"
   },
   [3502] = {
     NumLimit = 5,
@@ -1589,6 +1625,18 @@ return ReadOnly("SoundEffect", {
     SoundId = 210214,
     SoundPath = "event:/sfx/player/Eve01/update03"
   },
+  [220101] = {
+    SoundId = 220101,
+    SoundPath = "event:/sfx/player/NanzhuWater/common_summon_birth"
+  },
+  [220102] = {
+    SoundId = 220102,
+    SoundPath = "event:/sfx/player/NanzhuWater/common_summon_atk"
+  },
+  [220103] = {
+    SoundId = 220103,
+    SoundPath = "event:/sfx/player/NanzhuWater/water_hit"
+  },
   [230101] = {
     NumLimit = 5,
     SoundId = 230101,
@@ -1678,6 +1726,47 @@ return ReadOnly("SoundEffect", {
     NumLimit = 5,
     SoundId = 310302,
     SoundPath = "event:/sfx/player/Yeer/land_explode"
+  },
+  [310401] = {
+    ReplaceSoundID = {
+      [310499] = "event:/sfx/player/Falu01/explode"
+    },
+    SoundId = 310401,
+    SoundPath = "event:/sfx/player/Falu/explode"
+  },
+  [310402] = {
+    ReplaceSoundID = {
+      [310499] = "event:/sfx/player/Falu01/skill01_1_end"
+    },
+    SoundId = 310402,
+    SoundPath = "event:/sfx/player/Falu/skill01_1_end"
+  },
+  [310403] = {
+    SoundId = 310403,
+    SoundPath = "event:/sfx/common/player/hit/weapon/dualbladeHit_sp"
+  },
+  [310404] = {
+    SoundId = 310404,
+    SoundPath = "event:/sfx/common/player/hit/weapon/dualbladeHit_combo"
+  },
+  [310405] = {
+    SoundId = 310405,
+    SoundPath = "event:/sfx/common/player/hit/weapon/dualbladeHit_heavy"
+  },
+  [310406] = {
+    ReplaceSoundID = {
+      [310499] = "event:/sfx/player/Falu01/skill01_1_loop"
+    },
+    SoundId = 310406,
+    SoundPath = "event:/sfx/player/Falu/skill01_1_loop"
+  },
+  [310408] = {
+    SoundId = 310408,
+    SoundPath = "event:/sfx/player/Falu01/update02"
+  },
+  [310409] = {
+    SoundId = 310409,
+    SoundPath = "event:/sfx/player/Falu01/update03"
   },
   [320101] = {
     NumLimit = 5,
@@ -3605,6 +3694,79 @@ return ReadOnly("SoundEffect", {
     SoundId = 851519,
     SoundPath = "event:/sfx/boss/Jushi/common_beHit"
   },
+  [851601] = {
+    SoundId = 851601,
+    SoundPath = "event:/sfx/common/enemy/hit/dualbladeHit_light"
+  },
+  [851602] = {
+    SoundId = 851602,
+    SoundPath = "event:/sfx/common/enemy/hit/heavySwordHit_normal"
+  },
+  [851603] = {
+    SoundId = 851603,
+    SoundPath = "event:/sfx/boss/Fuer/skill03_bullet_spawn"
+  },
+  [851604] = {
+    SoundId = 851604,
+    SoundPath = "event:/sfx/boss/Fuer/skill03_bullet_hit_ground"
+  },
+  [851605] = {
+    SoundId = 851605,
+    SoundPath = "event:/sfx/common/enemy/hit/bullet_hit"
+  },
+  [851606] = {
+    SoundId = 851606,
+    SoundPath = "event:/sfx/boss/Fuer/skill04_grenade_main_spawn"
+  },
+  [851607] = {
+    SoundId = 851607,
+    SoundPath = "event:/sfx/boss/Fuer/skill04_grenade_main_explo"
+  },
+  [851608] = {
+    SoundId = 851608,
+    SoundPath = "event:/sfx/boss/Fuer/skill04_grenade_sub_spawn"
+  },
+  [851609] = {
+    SoundId = 851609,
+    SoundPath = "event:/sfx/boss/Fuer/skill04_grenade_sub_explo"
+  },
+  [851610] = {
+    SoundId = 851610,
+    SoundPath = "event:/sfx/common/enemy/hit/bullet_hit"
+  },
+  [851611] = {
+    SoundId = 851611,
+    SoundPath = "event:/sfx/boss/Fuer/skill05_laser_spawn"
+  },
+  [851612] = {SoundId = 851612},
+  [851613] = {
+    SoundId = 851613,
+    SoundPath = "event:/sfx/boss/Fuer/skill05_laser_groundfire_spawn"
+  },
+  [851614] = {
+    SoundId = 851614,
+    SoundPath = "event:/sfx/common/enemy/hit/electric_ball"
+  },
+  [851615] = {
+    SoundId = 851615,
+    SoundPath = "event:/sfx/common/enemy/hit/heavySwordHit_normal"
+  },
+  [851616] = {
+    SoundId = 851616,
+    SoundPath = "event:/sfx/common/enemy/hit/dualbladeHit_light"
+  },
+  [851617] = {
+    SoundId = 851617,
+    SoundPath = "event:/sfx/boss/Fuer/rocket_spawn"
+  },
+  [851618] = {
+    SoundId = 851618,
+    SoundPath = "event:/sfx/boss/Fuer/rocket_explo"
+  },
+  [851619] = {
+    SoundId = 851619,
+    SoundPath = "event:/sfx/common/enemy/hit/bullet_hit"
+  },
   [851701] = {
     SoundId = 851701,
     SoundPath = "event:/sfx/common/enemy/hit/spearHit_heavy"
@@ -3833,6 +3995,86 @@ return ReadOnly("SoundEffect", {
     SoundId = 851940,
     SoundPath = "event:/sfx/common/player/hit/magic/explode_small_hit"
   },
+  [852001] = {
+    SoundId = 852001,
+    SoundPath = "event:/sfx/boss/Aida/common_hit"
+  },
+  [852002] = {
+    SoundId = 852002,
+    SoundPath = "event:/sfx/boss/Aida/skill02_fx_shot"
+  },
+  [852003] = {
+    SoundId = 852003,
+    SoundPath = "event:/sfx/boss/Aida/skill02_fx_loop"
+  },
+  [852004] = {
+    SoundId = 852004,
+    SoundPath = "event:/sfx/boss/Aida/skill02_fx_exp"
+  },
+  [852005] = {
+    SoundId = 852005,
+    SoundPath = "event:/sfx/boss/Aida/skill04_fx"
+  },
+  [852006] = {
+    SoundId = 852006,
+    SoundPath = "event:/sfx/boss/Aida/skill05_fx_atk"
+  },
+  [852007] = {
+    SoundId = 852007,
+    SoundPath = "event:/sfx/boss/Aida/skill06_fx_charge"
+  },
+  [852008] = {
+    SoundId = 852008,
+    SoundPath = "event:/sfx/boss/Aida/common_fx_open"
+  },
+  [852009] = {
+    SoundId = 852009,
+    SoundPath = "event:/sfx/boss/Aida/common_fx_close"
+  },
+  [852010] = {
+    SoundId = 852010,
+    SoundPath = "event:/sfx/boss/Aida/common_fx_light"
+  },
+  [852011] = {
+    SoundId = 852011,
+    SoundPath = "event:/sfx/boss/Aida/common_fx_train_atk"
+  },
+  [852012] = {
+    SoundId = 852012,
+    SoundPath = "event:/sfx/boss/Aida/skill10_fx_shot"
+  },
+  [852013] = {
+    SoundId = 852013,
+    SoundPath = "event:/sfx/boss/Aida/skill10_fx_exp"
+  },
+  [852014] = {
+    SoundId = 852014,
+    SoundPath = "event:/sfx/boss/Aida/common_hit_laser"
+  },
+  [852015] = {
+    SoundId = 852015,
+    SoundPath = "event:/sfx/boss/Aida/skill12_fx_exp"
+  },
+  [852016] = {
+    SoundId = 852016,
+    SoundPath = "event:/sfx/boss/Aida/skill13_fx_beam"
+  },
+  [852017] = {
+    SoundId = 852017,
+    SoundPath = "event:/sfx/boss/Aida/skill13_fx_up"
+  },
+  [852018] = {
+    SoundId = 852018,
+    SoundPath = "event:/sfx/boss/Aida/skill13_fx_uploop"
+  },
+  [852019] = {
+    SoundId = 852019,
+    SoundPath = "event:/sfx/boss/Aida/skill13_fx_"
+  },
+  [852021] = {
+    SoundId = 852021,
+    SoundPath = "event:/sfx/boss/Aida/skill13_fx_"
+  },
   [852101] = {
     SoundId = 852101,
     SoundPath = "event:/sfx/common/enemy/hit/heavySwordHit_normal"
@@ -3932,6 +4174,34 @@ return ReadOnly("SoundEffect", {
   [852218] = {
     SoundId = 852218,
     SoundPath = "event:/sfx/boss/Tuisheng/be_hit_light"
+  },
+  [852301] = {
+    SoundId = 852301,
+    SoundPath = "event:/sfx/boss/Jishi/skill07_fx_exp"
+  },
+  [852302] = {
+    SoundId = 852302,
+    SoundPath = "event:/sfx/boss/Jishi/skill07_fx_exp"
+  },
+  [852303] = {
+    SoundId = 852303,
+    SoundPath = "event:/sfx/common/enemy/hit/electric_ball"
+  },
+  [852304] = {
+    SoundId = 852304,
+    SoundPath = "event:/sfx/common/enemy/hit/shield_hit"
+  },
+  [852305] = {
+    SoundId = 852305,
+    SoundPath = "event:/sfx/common/enemy/hit/dualbladeHit_light"
+  },
+  [852306] = {
+    SoundId = 852306,
+    SoundPath = "event:/sfx/common/enemy/hit/windHit"
+  },
+  [852307] = {
+    SoundId = 852307,
+    SoundPath = "event:/sfx/common/enemy/hit/electric_ball"
   },
   [900001] = {
     NumLimit = 3,
@@ -4240,6 +4510,22 @@ return ReadOnly("SoundEffect", {
     NumLimit = 5,
     SoundId = 2020702,
     SoundPath = "event:/sfx/weapon/Crossbow/Leyuan/bullet_bounce"
+  },
+  [2029801] = {
+    SoundId = 2029801,
+    SoundPath = "event:/sfx/weapon/Crossbow/Yemei/explode"
+  },
+  [2029802] = {
+    SoundId = 2029802,
+    SoundPath = "event:/sfx/weapon/Crossbow/Yemei/flash"
+  },
+  [2029803] = {
+    SoundId = 2029803,
+    SoundPath = "event:/sfx/weapon/Crossbow/Yemei/bullet_bounce"
+  },
+  [2029804] = {
+    SoundId = 2029804,
+    SoundPath = "event:/sfx/weapon/Crossbow/Yemei/bullet_flyby"
   },
   [2030101] = {
     NumLimit = 5,
@@ -4693,6 +4979,22 @@ return ReadOnly("SoundEffect", {
     NumLimit = 5,
     SoundId = 2060308,
     SoundPath = "event:/sfx/weapon/Bow/Inbu/shoot"
+  },
+  [2060501] = {
+    SoundId = 2060501,
+    SoundPath = "event:/sfx/weapon/Bow/Maojiang/explode"
+  },
+  [2060502] = {
+    SoundId = 2060502,
+    SoundPath = "event:/sfx/weapon/Shotgun/Baopo/stage2_hit"
+  },
+  [2060503] = {
+    SoundId = 2060503,
+    SoundPath = "event:/sfx/weapon/Bow/Maojiang/phase_light"
+  },
+  [2060504] = {
+    SoundId = 2060504,
+    SoundPath = "event:/sfx/weapon/Bow/Maojiang/charge_loop"
   },
   [3150201] = {
     NumLimit = 5,

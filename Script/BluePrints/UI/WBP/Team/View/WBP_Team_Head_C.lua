@@ -1,6 +1,7 @@
 require("UnLua")
 local M = Class({
-  "BluePrints.UI.BP_EMUserWidget_C"
+  "BluePrints.UI.BP_EMUserWidget_C",
+  "BluePrints.Common.TimerMgr"
 })
 
 function M:Construct()
@@ -23,6 +24,16 @@ function M:OnMenuOpenChanged(bOpen)
     end
   end
   self:OnMenuOpenChangedComp(bOpen)
+end
+
+function M:ShowTeamHall()
+  self.Head_Team.Panel_Img:SetVisibility(ESlateVisibility.Collapsed)
+  self.WidgetSwitcher_State:SetActiveWidgetIndex(5)
+  self.Tag_Team:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Head_Team:SetGamepadCursor()
+  self.Head_Team:BindOnClickEvent(function()
+    UIManager(self):LoadUINew("TeamRecruitApplySidePop")
+  end)
 end
 
 function M:OnGetMenuContent(Anchor)

@@ -1,3 +1,4 @@
+local MiscUtils = require("Utils.MiscUtils")
 require("Unlua")
 local SoloTreasureDataModel = require("BluePrints.UI.WBP.Activity.Widget.SoloTreasure.SoloTreasureDataModel")
 local SoloTreasureRewardBtn = Class({
@@ -60,7 +61,7 @@ function SoloTreasureRewardBtn:OnBtnClicked()
 end
 
 function SoloTreasureRewardBtn:SetScore(UserCurrentScore)
-  local NumText = Utils.FormatNumber(UserCurrentScore, false)
+  local NumText = MiscUtils.FormatNumber(UserCurrentScore, false)
   if NumText and self.Num_Icon then
     self.Num_Icon:SetText(NumText)
   end

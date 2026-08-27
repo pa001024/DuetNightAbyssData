@@ -10,6 +10,7 @@ M._components = {
   "BluePrints.UI.WBP.Armory.ActorController.Armory_MountActorComponent"
 }
 local SelfObjCount = 0
+local ActorControllerUsers = {SkillDetails = true}
 
 function M:SwitchArmoryCamera(IsArmoryCamera, Duration)
   if not self.ArmoryHelper then
@@ -36,7 +37,7 @@ function M:SwitchArmoryCamera(IsArmoryCamera, Duration)
     Duration = Duration or _Duration
     
     local function OnRecoverEnd()
-      self:OnRecorverCameraEnd()
+      self:OnRecoverCameraEnd()
     end
     
     self.ArmoryHelper:RecorverCamera(nil, OnRecoverEnd, Duration, StartTransform, StartLocation, StartRotation)
@@ -124,7 +125,7 @@ end
 function M:OnHelperBecomeViewTarget(PC)
   UIManager(self.ViewUI):HideOrShowOtherUINpcActor(true, "ActorController_BecomeViewTarget", 0)
   DebugPrint("CY@ OnHelperBecomeViewTarget:", self.ObjId, "FirstBeComeViewTarget:", self.OnFirstBecomeViewTarget, "SequencePlaying:", self.IsPlayingSequence)
-  self.IsControled = true
+  self.IsControlled = true
   self.bTryDestroyActorsWhenDestruct = false
   if self.OnFirstBecomeViewTarget then
     self.OnFirstBecomeViewTarget()
@@ -159,6 +160,9 @@ function M:OnHelperBecomeViewTarget(PC)
     self:RecoverToSingleWeapon()
   else
     self:SetNoActorCamera()
+  end
+  if self.bPreviewSceneLoaded then
+    self.ArmoryHelper:OnPreviewSceneLoaded()
   end
   self:RefreshEnvironment(true)
 end
@@ -225,9 +229,49 @@ function M:RecoverToSingleWeapon()
   end
 end
 
+function M:IsActorControllerUser(UIName)
+  if ActorControllerUsers[UIName] then
+    return true
+  end
+  local SystemData = DataMgr.SystemUI[UIName]
+  if SystemData and SystemData.System then
+    return SystemData.System == "Armory"
+  end
+  return false
+end
+
+function M:OnLoadUI(UIName)
+  self.ArmoryHelper:AddTimer(0.01, function()
+    self:CheckAndBlockCharSound()
+  end, false, 0, "CheckAndBlockCharSound", true)
+end
+
+function M:CheckAndBlockCharSound()
+  local UIMgr = UIManager(GWorld.GameInstance)
+  local TopUI = UIMgr:GetWidgetObjInTopStack()
+  local ConfigName = TopUI and TopUI.GetUIConfigName and TopUI:GetUIConfigName()
+  if not DataMgr.SystemUI[ConfigName] then
+    return
+  end
+  if not UIMgr.ArmoryPlayer then
+    return
+  end
+  if self:IsActorControllerUser(ConfigName) then
+    AudioManager(self.ViewUI):SetEventSoundParam(UIMgr.ArmoryPlayer, "ActorControllerBlockCharSound", {ToEnd = 1})
+  else
+    AudioManager(self.ViewUI):PlayUISound(UIMgr.ArmoryPlayer, "event:/ui/common/mute_ui_char_idle", "ActorControllerBlockCharSound", nil)
+  end
+end
+
+function M:OnUnloadUI(UIName)
+  self.ArmoryHelper:AddTimer(0.01, function()
+    self:CheckAndBlockCharSound()
+  end, false, 0, "CheckAndBlockCharSound", true)
+end
+
 function M:OnHelperEndViewTarget(PC)
   UIManager(self.ViewUI):HideOrShowOtherUINpcActor(false, "ActorController_BecomeViewTarget", 0)
-  self.IsControled = false
+  self.IsControlled = false
   self.LastCharModelInfo = self.CurrentCharInfo
   self.LastWeaponInfo = self.CurrentWeaponInfo
   self.LastCharAppearanceInfo = self.CurrentAppearanceInfo
@@ -329,7 +373,7 @@ function M:HideRealPlayer(bHide)
   end
   Player:SetActorHideTag(self.UIName, bHide)
   Player.CharCameraComponent:SetComponentTickEnabled(not bHide)
-  if self.IsCharActorFistCreated then
+  if self.IsCharActorFirstCreated then
     local UIManager = UIManager(self.ViewUI)
     UIManager:HideOrShowPlayerFX(Player, bHide, self.UIName)
     if IsValid(self.ArmoryPlayer) then
@@ -453,7 +497,7 @@ function M:SetMontageAndCamera(Type, Tag, Behavior, ExtraTag)
     self:HidePlayerActor("ActorController_PlayDisappearFX", true)
     self.LastMontageTag, self.bShowOrHideWeapon = self:CalcArmoryMontageTag(self.LastMontageAndCameraType, self.LastMontageAndCameraTag, self.LastMontageAndCameraBehavior)
     self:PlayDisappearFX(ArmoryPlayer.FXComponent, function()
-      if self.bClosed or self.bDestructed or not self.IsControled then
+      if self.bClosed or self.bDestructed or not self.IsControlled then
         return
       end
       self:PlayAppearFX(ArmoryPlayer.FXComponent)
@@ -469,7 +513,7 @@ function M:PlayDisappearFX(FXComponent, OnFXFinished)
   local DelayFrame = self.DelayFrame
   self.DelayFrame = nil
   local IsLastDisappearFXPlaying = self.DisappearFXPlaying
-  self.bWatingForDelayFrame = true
+  self.bWaitingForDelayFrame = true
   if FXComponent and not IsLastDisappearFXPlaying and not self.bNoDisappearFX then
     AudioManager(self.ViewUI):PlayUISound(self.ViewUI, "event:/ui/common/role_disappear", nil, nil)
     local Params = {bTickEvenWhenPaused = true, NotAttached = true}
@@ -500,7 +544,7 @@ function M:PlayDisappearFX(FXComponent, OnFXFinished)
   self.LTweenHandle_PlayDisappearFX = UE4.ULTweenBPLibrary.DelayFrameCall(self.ViewUI, DelayFrame or 0, function()
     self.LTweenHandle_PlayDisappearFX = nil
     self.DisappearFXPlaying = false
-    self.bWatingForDelayFrame = false
+    self.bWaitingForDelayFrame = false
     self.bNoDisappearFX = false
     if OnFXFinished then
       OnFXFinished()
@@ -544,7 +588,7 @@ function M:CancelPendingDelayFramePreview()
   end
   self.LTweenHandle_PlayDisappearFX = nil
   self.DelayFrame = nil
-  self.bWatingForDelayFrame = false
+  self.bWaitingForDelayFrame = false
   self.LastDelayCameraTags = nil
   self.DisappearFXPlaying = false
   self.bNoDisappearFX = false
@@ -587,13 +631,32 @@ function M:GetReflectionActor(Owner)
   return self.Reflections[Owner]
 end
 
+function M:RefreshEffectInterval(NewEffectInterval)
+  local Player = self.ArmoryPlayer
+  local PlayerReflection = Player and self:GetReflectionActor(Player)
+  
+  local function RefreshCharacterFashion(Character)
+    local CharacterFashion = Character and Character.CharacterFashion
+    if CharacterFashion and CharacterFashion.OnEffectIntervalRefreshed then
+      CharacterFashion:OnEffectIntervalRefreshed(NewEffectInterval)
+    end
+  end
+  
+  RefreshCharacterFashion(Player)
+  RefreshCharacterFashion(PlayerReflection)
+end
+
 function M:GetReflectionOwner(ReflectionActor)
   return self.ReflectionOwners[ReflectionActor]
 end
 
 function M:SetReflectionActor(Owner, ReflectionActor)
-  self.Reflections[Owner] = ReflectionActor
-  self.ReflectionOwners[ReflectionActor] = Owner
+  if Owner then
+    self.Reflections[Owner] = ReflectionActor
+  end
+  if ReflectionActor then
+    self.ReflectionOwners[ReflectionActor] = Owner
+  end
 end
 
 function M:BindEvent(Obj, Events)
@@ -607,7 +670,7 @@ function M:SetArmoryMontageTag(Tag, bShowOrHideWeapon)
   self.bShowOrHideWeapon = bShowOrHideWeapon
   Tag = Tag or "None"
   self.LastMontageTag = Tag
-  if self.bWatingForDelayFrame then
+  if self.bWaitingForDelayFrame then
     return
   end
   local bPlay = true
@@ -618,6 +681,7 @@ function M:SetArmoryMontageTag(Tag, bShowOrHideWeapon)
   local PlayerReflection = self:GetReflectionActor(Player)
   if bPlay then
     self:ResetActorRotation()
+    self.IsMontagePaused = false
     self.bPlaySameMontage = false
     self.CurMontageTag = Tag
     
@@ -717,7 +781,7 @@ function M:SetArmoryCameraTag(Tag1, Tag2, Tag3, Tag4)
     Tag3 or "",
     Tag4 or ""
   }
-  if self.bWatingForDelayFrame then
+  if self.bWaitingForDelayFrame then
     self.LastDelayCameraTags = {
       Tag1 or "",
       Tag2 or "",
@@ -920,10 +984,10 @@ function M:OnScrolling(DeltaMove)
   self.ArmoryHelper:OnScrolling(DeltaMove)
 end
 
-function M:OnRecorverCameraEnd()
+function M:OnRecoverCameraEnd()
   self:BeforeDestruct()
-  if self.Event_OnRecorverCameraEnd then
-    self.Event_OnRecorverCameraEnd.Func(self.Event_OnRecorverCameraEnd.Obj)
+  if self.Event_OnRecoverCameraEnd then
+    self.Event_OnRecoverCameraEnd.Func(self.Event_OnRecoverCameraEnd.Obj)
   end
 end
 
@@ -961,8 +1025,8 @@ function M:RecoverCamera()
   if not self.bNeedEndCamera then
     self:SwitchArmoryCamera(false, 0)
   else
-    if self.Event_OnRecorverCameraStart then
-      self.Event_OnRecorverCameraStart.Func(self.Event_OnRecorverCameraStart.Obj)
+    if self.Event_OnRecoverCameraStart then
+      self.Event_OnRecoverCameraStart.Func(self.Event_OnRecoverCameraStart.Obj)
     end
     self:SwitchArmoryCamera(false, nil)
   end
@@ -975,10 +1039,12 @@ function M:OnDestruct()
   SelfObjCount = SelfObjCount - 1
   GWorld.GameInstance:SetDynamicResolution(self.UIName, false)
   self.bDestructed = true
+  EventManager:RemoveEvent(EventID.OnWindowResized, self)
+  EventManager:RemoveEvent(EventID.LoadUI, self)
+  EventManager:RemoveEvent(EventID.UnLoadUI, self)
   if not self.bClosed then
     self:OnClosed_Implementation()
   end
-  EventManager:RemoveEvent(EventID.OnWindowResized, self)
   self:Component_OnDestruct()
   if self.bTryDestroyActorsWhenDestruct then
     self.bTryDestroyActorsWhenDestruct = false
@@ -1023,7 +1089,7 @@ function M:Component_OnDestruct()
 end
 
 function M:ViewTarget()
-  if self.IsControled or self.bDestructed then
+  if self.IsControlled or self.bDestructed then
     return
   end
   if not IsValid(self.ArmoryHelper) then
@@ -1052,7 +1118,7 @@ end
 
 function M:IsViewTarget()
   if self.ViewUI then
-    return self.IsControled and self.ViewUI:GetOwningPlayer():GetViewTarget() == self:GetViewTarget()
+    return self.IsControlled and self.ViewUI:GetOwningPlayer():GetViewTarget() == self:GetViewTarget()
   end
 end
 
@@ -1127,7 +1193,7 @@ end
 function M:SetCurrentViewUI(ViewUI)
   if self.ViewUIs[ViewUI] then
     self.ViewUI = ViewUI
-    self.UIName = self.ViewUI:GetUIConfigName()
+    self:SetUIName(self.ViewUI:GetUIConfigName())
     DebugPrint("CY@ActorController SetCurrentViewUI", self.UIName)
   end
 end
@@ -1145,8 +1211,13 @@ function M:ResetCurrentViewUI()
       self.ViewUI = ViewUI
     end
   end
-  self.UIName = self.ViewUI:GetUIConfigName()
+  self:SetUIName(self.ViewUI:GetUIConfigName())
   DebugPrint("CY@ActorController ResetCurrentViewUI", self.UIName)
+end
+
+function M:SetUIName(UIName)
+  self.UIName = UIName
+  ActorControllerUsers[UIName] = true
 end
 
 function M:Init(Params)
@@ -1166,12 +1237,8 @@ function M:Init(Params)
   self.CurrentCharInfo = Params.Char
   self.CurrentWeaponInfo = Params.Weapon
   self.CurrentPetInfo = Params.Pet
-  self.bEnableReflection = Params.bEnableReflection
-  if self.EPreviewSceneType and self.bEnableReflection == nil then
-    self.bEnableReflection = true
-  end
-  self.Event_OnRecorverCameraStart = Params.OnRecorverCameraStart
-  self.Event_OnRecorverCameraEnd = Params.OnRecorverCameraEnd
+  self.Event_OnRecoverCameraStart = Params.OnRecoverCameraStart
+  self.Event_OnRecoverCameraEnd = Params.OnRecoverCameraEnd
   self.Event_AfterEndViewTarget = Params.AfterEndViewTarget
   self.OnRecoverPlayerAppearance = Params.OnRecoverPlayerAppearance
   self.ViewActorTypes = {Player = 1, SingleWeapon = 2}
@@ -1181,8 +1248,9 @@ function M:Init(Params)
   self.ReflectionOwners = {}
   self.ObjId = SelfObjCount
   self.IsSecondary = SelfObjCount > 1
-  self.UIName = self.ViewUI:GetUIConfigName()
-  if nil ~= Params.bPlayRoleChangedSound then
+  self:SetUIName(self.ViewUI:GetUIConfigName())
+  ActorControllerUsers[self.UIName] = true
+  if Params.bPlayRoleChangedSound ~= nil then
     self.bPlayRoleChangedSound = Params.bPlayRoleChangedSound
   else
     self.bPlayRoleChangedSound = true
@@ -1197,6 +1265,8 @@ function M:Init(Params)
     local _, tempChar = next(DummyAvatar.Chars)
     self.CurrentCharInfo = tempChar
   end
+  EventManager:AddEvent(EventID.LoadUI, self, self.OnLoadUI)
+  EventManager:AddEvent(EventID.UnLoadUI, self, self.OnUnloadUI)
   EventManager:AddEvent(EventID.OnWindowResized, self, function(self)
     self.ViewUI:AddTimer(0.3, function()
       if self.LastCameraTags then

@@ -831,6 +831,20 @@ return ReadOnly("Title", {
     Name = "Title_10118",
     TitleID = 10118
   },
+  [10119] = {
+    Des = "Title_Des",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_Title.T_Icon_Random_Title'",
+    IfSuffix = false,
+    Name = "Title_10119",
+    TitleID = 10119
+  },
+  [10120] = {
+    Des = "Title_Des",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_Title.T_Icon_Random_Title'",
+    IfSuffix = false,
+    Name = "Title_10120",
+    TitleID = 10120
+  },
   [20001] = {
     Des = "Title_Des",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_Title.T_Icon_Random_Title'",
@@ -1530,5 +1544,26 @@ return ReadOnly("Title", {
     IfSuffix = true,
     Name = "Title_20100",
     TitleID = 20100
+  },
+  [20101] = {
+    Des = "Title_Des",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_Title.T_Icon_Random_Title'",
+    IfSuffix = true,
+    Name = "Title_20101",
+    TitleID = 20101
+  },
+  [20102] = {
+    Des = "Title_Des",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_Title.T_Icon_Random_Title'",
+    IfSuffix = true,
+    Name = "Title_20102",
+    TitleID = 20102
+  },
+  [20103] = {
+    Des = "Title_Des",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_Title.T_Icon_Random_Title'",
+    IfSuffix = true,
+    Name = "Title_20103",
+    TitleID = 20103
   }
 })

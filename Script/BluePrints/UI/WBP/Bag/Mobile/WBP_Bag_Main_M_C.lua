@@ -238,6 +238,8 @@ function WBP_Bag_Main_M_C:SetConsumeReddot()
 end
 
 function WBP_Bag_Main_M_C:BindReddotTreeEvents()
+  local BagConsumeNode = ReddotManager.GetTreeNode("Bag_Consume")
+  BagConsumeNode = BagConsumeNode or ReddotManager.AddNodeEx("Bag_Consume", nil, 1)
   ReddotManager.AddListener("Bag_Consume", self, function()
     self:UpdateTabReddot(BagCommon.ItemTypeToTabId.ConsumableItem)
   end)

@@ -30,9 +30,20 @@ T.RT_5 = {
 T.RT_6 = {
   [1] = "Resource",
   [2] = "Resource",
-  [3] = "Resource"
+  [3] = "Resource",
+  [4] = "Resource"
 }
 T.RT_7 = {
+  [1] = 1,
+  [2] = 1,
+  [3] = 1
+}
+T.RT_8 = {
+  [1] = "Resource",
+  [2] = "Resource",
+  [3] = "Resource"
+}
+T.RT_9 = {
   [1] = 1,
   [2] = 1,
   [3] = 1,
@@ -56,7 +67,7 @@ T.RT_7 = {
   [21] = 1,
   [22] = 1
 }
-T.RT_8 = {
+T.RT_10 = {
   [1] = "Skin",
   [2] = "Skin",
   [3] = "Skin",
@@ -80,7 +91,7 @@ T.RT_8 = {
   [21] = "Skin",
   [22] = "Skin"
 }
-T.RT_9 = {
+T.RT_11 = {
   [1] = 1,
   [2] = 1,
   [3] = 1,
@@ -95,7 +106,7 @@ T.RT_9 = {
   [12] = 1,
   [13] = 1
 }
-T.RT_10 = {
+T.RT_12 = {
   [1] = "Skin",
   [2] = "Skin",
   [3] = "Skin",
@@ -314,12 +325,7 @@ return ReadOnly("OptReward", {
       [4] = 10104
     },
     OptRewardId = 4002,
-    Type = {
-      [1] = "Resource",
-      [2] = "Resource",
-      [3] = "Resource",
-      [4] = "Resource"
-    }
+    Type = T.RT_6
   },
   [4003] = {
     Count = T.RT_3,
@@ -412,11 +418,7 @@ return ReadOnly("OptReward", {
     }
   },
   [4006] = {
-    Count = {
-      [1] = 1,
-      [2] = 1,
-      [3] = 1
-    },
+    Count = T.RT_7,
     Id = {
       [1] = 15035,
       [2] = 15031,
@@ -424,7 +426,65 @@ return ReadOnly("OptReward", {
     },
     OptRewardId = 4006,
     ResourceId = 110059,
+    Type = T.RT_8
+  },
+  [4007] = {
+    Count = T.RT_1,
+    Id = {
+      [1] = 15032,
+      [2] = 15035,
+      [3] = 15031,
+      [4] = 15036
+    },
+    OptRewardId = 4007,
+    ResourceId = 110062,
     Type = T.RT_6
+  },
+  [4008] = {
+    Count = T.RT_7,
+    Id = {
+      [1] = 4073,
+      [2] = 4083,
+      [3] = 4093
+    },
+    OptRewardId = 4008,
+    ResourceId = 110072,
+    Type = {
+      [1] = "Pet",
+      [2] = "Pet",
+      [3] = "Pet"
+    }
+  },
+  [4009] = {
+    Count = {
+      [1] = 1,
+      [2] = 1,
+      [3] = 1,
+      [4] = 1,
+      [5] = 1,
+      [6] = 1,
+      [7] = 1
+    },
+    Id = {
+      [1] = 510041,
+      [2] = 510161,
+      [3] = 510171,
+      [4] = 510181,
+      [5] = 510281,
+      [6] = 510291,
+      [7] = 510301
+    },
+    OptRewardId = 4009,
+    ResourceId = 110071,
+    Type = {
+      [1] = "Pet",
+      [2] = "Pet",
+      [3] = "Pet",
+      [4] = "Pet",
+      [5] = "Pet",
+      [6] = "Pet",
+      [7] = "Pet"
+    }
   },
   [5001] = {
     Count = {
@@ -571,7 +631,7 @@ return ReadOnly("OptReward", {
     }
   },
   [5004] = {
-    Count = T.RT_7,
+    Count = T.RT_9,
     Id = {
       [1] = 11010122,
       [2] = 11030122,
@@ -598,10 +658,10 @@ return ReadOnly("OptReward", {
     },
     OptRewardId = 5004,
     ResourceId = 110015,
-    Type = T.RT_8
+    Type = T.RT_10
   },
   [5005] = {
-    Count = T.RT_7,
+    Count = T.RT_9,
     Id = {
       [1] = 11010121,
       [2] = 11030121,
@@ -628,7 +688,7 @@ return ReadOnly("OptReward", {
     },
     OptRewardId = 5005,
     ResourceId = 110016,
-    Type = T.RT_8
+    Type = T.RT_10
   },
   [5006] = {
     Count = {
@@ -692,7 +752,7 @@ return ReadOnly("OptReward", {
     }
   },
   [5007] = {
-    Count = T.RT_9,
+    Count = T.RT_11,
     Id = {
       [1] = 11020141,
       [2] = 15020141,
@@ -710,7 +770,7 @@ return ReadOnly("OptReward", {
     },
     OptRewardId = 5007,
     ResourceId = 110042,
-    Type = T.RT_10
+    Type = T.RT_12
   },
   [5008] = {
     Count = {
@@ -725,10 +785,10 @@ return ReadOnly("OptReward", {
     },
     OptRewardId = 5008,
     ResourceId = 110043,
-    Type = T.RT_6
+    Type = T.RT_8
   },
   [5009] = {
-    Count = T.RT_9,
+    Count = T.RT_11,
     Id = {
       [1] = 11010151,
       [2] = 11020151,
@@ -746,7 +806,44 @@ return ReadOnly("OptReward", {
     },
     OptRewardId = 5009,
     ResourceId = 110060,
-    Type = T.RT_10
+    Type = T.RT_12
+  },
+  [5010] = {
+    Count = {
+      [1] = 1,
+      [2] = 1,
+      [3] = 1,
+      [4] = 1,
+      [5] = 1,
+      [6] = 1,
+      [7] = 1,
+      [8] = 1,
+      [9] = 1
+    },
+    Id = {
+      [1] = 15040161,
+      [2] = 18010161,
+      [3] = 21020161,
+      [4] = 24010161,
+      [5] = 31010161,
+      [6] = 33010161,
+      [7] = 41010161,
+      [8] = 43010161,
+      [9] = 54010161
+    },
+    OptRewardId = 5010,
+    ResourceId = 110063,
+    Type = {
+      [1] = "Skin",
+      [2] = "Skin",
+      [3] = "Skin",
+      [4] = "Skin",
+      [5] = "Skin",
+      [6] = "Skin",
+      [7] = "Skin",
+      [8] = "Skin",
+      [9] = "Skin"
+    }
   },
   [5101] = {
     Count = T.RT_2,

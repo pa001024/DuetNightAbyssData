@@ -61,6 +61,20 @@ return ReadOnly("Facial", {
     NpcMouth = "AngryClose_Mouth",
     SoundBaseMouth = "LipSyncBase_Normal_Mouth"
   },
+  Ashamed = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Ashamed",
+    NpcEye = "Ashamed",
+    NpcMouth = "Ashamed_Mouth",
+    SoundBaseMouth = "LipSyncBase_Normal_Mouth"
+  },
+  Awkward = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Awkward",
+    NpcEye = "Awkward",
+    NpcMouth = "Awkward_Mouth",
+    SoundBaseMouth = "LipSyncBase_Normal_Mouth"
+  },
   Bai_Beg = {
     Eye1BlendInTime = 0.4,
     FacialId = "Bai_Beg",
@@ -416,6 +430,13 @@ return ReadOnly("Facial", {
     NpcMouth = "Disappoint01_Mouth",
     SoundBaseMouth = "LipSyncBase_Normal_Mouth"
   },
+  Doubt = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Doubt",
+    NpcEye = "Doubt",
+    NpcMouth = "Doubt_Mouth",
+    SoundBaseMouth = "LipSyncBase_Normal_Mouth"
+  },
   Doubt01 = {
     Eye1BlendInTime = 0.4,
     FacialId = "Doubt01",
@@ -435,6 +456,13 @@ return ReadOnly("Facial", {
     FacialId = "Eyebrow01",
     NpcEye = "Eyebrow01",
     NpcMouth = "Eyebrow01_Mouth",
+    SoundBaseMouth = "LipSyncBase_Normal_Mouth"
+  },
+  Fear = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Fear",
+    NpcEye = "Fear",
+    NpcMouth = "Fear_Mouth",
     SoundBaseMouth = "LipSyncBase_Normal_Mouth"
   },
   Fuluo_Shock = {
@@ -498,6 +526,13 @@ return ReadOnly("Facial", {
     FacialId = "Helpless",
     NpcEye = "Helpless",
     NpcMouth = "Helpless_Mouth",
+    SoundBaseMouth = "LipSyncBase_Normal_Mouth"
+  },
+  Hungry = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Hungry",
+    NpcEye = "Hungry",
+    NpcMouth = "Hungry_Mouth",
     SoundBaseMouth = "LipSyncBase_Normal_Mouth"
   },
   Iyada01 = {
@@ -712,6 +747,13 @@ return ReadOnly("Facial", {
     NpcMouth = "Shock03_Mouth",
     SoundBaseMouth = "LipSyncBase_Normal_Mouth"
   },
+  Shock04 = {
+    Eye1BlendInTime = 0.3,
+    FacialId = "Shock04",
+    NpcEye = "Shock04",
+    NpcMouth = "Shock04_Mouth",
+    SoundBaseMouth = "LipSyncBase_Normal_Mouth"
+  },
   Shy = {
     Eye1BlendInTime = 0.4,
     FacialId = "Shy",
@@ -725,6 +767,13 @@ return ReadOnly("Facial", {
     NpcEye = "SillyLaugh",
     NpcMouth = "SillyLaugh_Mouth",
     SoundBaseMouth = "LipSyncBase_Smile_Mouth"
+  },
+  Sleepy = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Sleepy",
+    NpcEye = "Sleepy",
+    NpcMouth = "Sleepy_Mouth",
+    SoundBaseMouth = "LipSyncBase_Normal_Mouth"
   },
   Smile01 = {
     Eye1BlendInTime = 0.4,
@@ -787,6 +836,20 @@ return ReadOnly("Facial", {
     FacialId = "Specialpain",
     NpcEye = "Specialpain",
     NpcMouth = "Specialpain_Mouth",
+    SoundBaseMouth = "LipSyncBase_Normal_Mouth"
+  },
+  Speechless = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Speechless",
+    NpcEye = "Speechless",
+    NpcMouth = "Speechless_Mouth",
+    SoundBaseMouth = "LipSyncBase_Normal_Mouth"
+  },
+  Story_hate = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Story_hate",
+    NpcEye = "Story_hate",
+    NpcMouth = "Story_hate_Mouth",
     SoundBaseMouth = "LipSyncBase_Normal_Mouth"
   },
   Surprise = {

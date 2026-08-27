@@ -68,6 +68,13 @@ return ReadOnly("ReddotNode", {
     NodeModuleName = "Activity.AccessoryDrop",
     Type = 1
   },
+  Acti_AccessoryDrop04 = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_AccessoryDrop04",
+    NodeModuleName = "Activity.AccessoryDrop",
+    Type = 1
+  },
   Acti_AprilFoolDay = {
     CacheType = 1,
     IsLeaf = true,
@@ -96,7 +103,8 @@ return ReadOnly("ReddotNode", {
     Childs = {
       "Acti_AsyncCombat",
       "AsyncCombatReward",
-      "AsyncCombatNew"
+      "AsyncCombatNew",
+      "AsyncCombatStoppageNew"
     },
     Name = "Acti_AsyncCombatTab",
     bInvokeEveryTime = true
@@ -238,6 +246,20 @@ return ReadOnly("ReddotNode", {
     NodeModuleName = "Activity.ActivityBase",
     Type = 0
   },
+  Acti_DoubleMod160 = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_DoubleMod160",
+    NodeModuleName = "Activity.ActivityBase",
+    Type = 0
+  },
+  Acti_DoubleMod165 = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_DoubleMod165",
+    NodeModuleName = "Activity.ActivityBase",
+    Type = 0
+  },
   Acti_FeinaEvent = {
     CacheType = 1,
     IsLeaf = true,
@@ -281,6 +303,13 @@ return ReadOnly("ReddotNode", {
     Type = 0,
     bInvokeEveryTime = true
   },
+  Acti_Leyuan = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_Leyuan",
+    NodeModuleName = "Activity.QuestEvent",
+    Type = 0
+  },
   Acti_LimitedPrize = {
     CacheType = 1,
     IsLeaf = true,
@@ -306,6 +335,13 @@ return ReadOnly("ReddotNode", {
     },
     Name = "Acti_MidTerm",
     bInvokeEveryTime = true
+  },
+  Acti_MoneyTree = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_MoneyTree",
+    NodeModuleName = "Activity.MoneyTree",
+    Type = 0
   },
   Acti_MultiDeviceLogin = {
     CacheType = 1,
@@ -386,6 +422,13 @@ return ReadOnly("ReddotNode", {
     CacheType = 1,
     IsLeaf = true,
     Name = "Acti_SignInEve",
+    NodeModuleName = "Activity.DailySignIn",
+    Type = 0
+  },
+  Acti_SignInFalu = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_SignInFalu",
     NodeModuleName = "Activity.DailySignIn",
     Type = 0
   },
@@ -551,10 +594,24 @@ return ReadOnly("ReddotNode", {
     NodeModuleName = "Activity.TrialChar",
     Type = 1
   },
+  Acti_TraiFaluSkin01 = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_TraiFaluSkin01",
+    NodeModuleName = "Activity.TrialChar",
+    Type = 1
+  },
   Acti_TrailEveChar = {
     CacheType = 1,
     IsLeaf = true,
     Name = "Acti_TrailEveChar",
+    NodeModuleName = "Activity.TrialChar",
+    Type = 1
+  },
+  Acti_TrailFaluChar = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_TrailFaluChar",
     NodeModuleName = "Activity.TrialChar",
     Type = 1
   },
@@ -927,6 +984,14 @@ return ReadOnly("ReddotNode", {
     Type = 0,
     bInvokeEveryTime = true
   },
+  AsyncCombatStoppageNew = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "AsyncCombatStoppageNew",
+    NodeModuleName = "AsyncCombat",
+    Type = 1,
+    bInvokeEveryTime = true
+  },
   AutoChessEquip = {
     CacheType = 1,
     IsLeaf = true,
@@ -1173,6 +1238,12 @@ return ReadOnly("ReddotNode", {
     },
     Name = "EscPortrait"
   },
+  ExperienceFameTask = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "ExperienceFameTask",
+    Type = 0
+  },
   ExperienceItem = {
     CacheType = 1,
     IsLeaf = true,
@@ -1193,6 +1264,7 @@ return ReadOnly("ReddotNode", {
       "FameMain",
       "RecurringFameTask",
       "EntrustFameTask",
+      "ExperienceFameTask",
       "MountLicense_Item"
     },
     Name = "Fame"
@@ -1219,9 +1291,11 @@ return ReadOnly("ReddotNode", {
       "Gacha_Special_4",
       "Gacha_Special_5",
       "Gacha_Special_6",
+      "Gacha_Special_7",
       "Gacha_New",
       "Gacha_ReSpecial_1",
-      "Gacha_ReSpecial_2"
+      "Gacha_ReSpecial_2",
+      "Gacha_ReSpecial_3"
     },
     Name = "Gacha"
   },
@@ -1250,6 +1324,13 @@ return ReadOnly("ReddotNode", {
     CacheType = 0,
     IsLeaf = true,
     Name = "Gacha_ReSpecial_2",
+    NodeModuleName = "Gacha",
+    Type = 0
+  },
+  Gacha_ReSpecial_3 = {
+    CacheType = 0,
+    IsLeaf = true,
+    Name = "Gacha_ReSpecial_3",
     NodeModuleName = "Gacha",
     Type = 0
   },
@@ -1292,6 +1373,13 @@ return ReadOnly("ReddotNode", {
     CacheType = 0,
     IsLeaf = true,
     Name = "Gacha_Special_6",
+    NodeModuleName = "Gacha",
+    Type = 0
+  },
+  Gacha_Special_7 = {
+    CacheType = 0,
+    IsLeaf = true,
+    Name = "Gacha_Special_7",
     NodeModuleName = "Gacha",
     Type = 0
   },
@@ -1702,7 +1790,8 @@ return ReadOnly("ReddotNode", {
       "UI_QUEST_SUBTAB_NAME_Activity",
       "UI_QUEST_SUBTAB_NAME_LimitedtimeActivity",
       "UI_QUEST_SUBTAB_NAME_SpecialSlide",
-      "UI_QUEST_SUBTAB_NAME_SIDE"
+      "UI_QUEST_SUBTAB_NAME_SIDE",
+      "StringBoard"
     },
     Name = "Quest"
   },
@@ -1825,11 +1914,24 @@ return ReadOnly("ReddotNode", {
     Name = "Setting_Control_AddBtn",
     Type = 1
   },
+  Setting_Control_AutoFoldBtn = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Setting_Control_AutoFoldBtn",
+    Type = 1
+  },
+  Setting_Control_CustomLayoutBtn = {
+    Childs = {
+      "Setting_Control_TrailBtn",
+      "Setting_Control_AddBtn"
+    },
+    Name = "Setting_Control_CustomLayoutBtn"
+  },
   Setting_Control_LayOutBtn = {
     Childs = {
       "Setting_Layout",
-      "Setting_Control_TrailBtn",
-      "Setting_Control_AddBtn"
+      "Setting_Control_CustomLayoutBtn",
+      "Setting_Control_AutoFoldBtn"
     },
     Name = "Setting_Control_LayOutBtn"
   },
@@ -2287,6 +2389,38 @@ return ReadOnly("ReddotNode", {
     IsLeaf = true,
     Name = "StarterQuest",
     Type = 0
+  },
+  StringBoard = {
+    Childs = {
+      "StringBoard_BoardNew",
+      "StringBoard_LineNew",
+      "StringBoard_ProgressReward"
+    },
+    Name = "StringBoard",
+    NodeModuleName = "StringBoard"
+  },
+  StringBoard_BoardNew = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "StringBoard_BoardNew",
+    NodeModuleName = "StringBoard",
+    Type = 1,
+    bInvokeEveryTime = true
+  },
+  StringBoard_LineNew = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "StringBoard_LineNew",
+    NodeModuleName = "StringBoard",
+    Type = 1,
+    bInvokeEveryTime = true
+  },
+  StringBoard_ProgressReward = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "StringBoard_ProgressReward",
+    Type = 0,
+    bInvokeEveryTime = true
   },
   SystemAnnouncement = {
     CacheType = 0,

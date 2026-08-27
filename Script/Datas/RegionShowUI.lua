@@ -155,6 +155,24 @@ return ReadOnly("RegionShowUI", {
     TitleText = "Episode_Region_Huaxu_Alt",
     TransText = "Episode_Region_None_Trans"
   },
+  [107001] = {
+    AudioPath = "event:/ui/common/map_name_show_ex02",
+    RegionShowId = 107001,
+    TitleText = "Episode_Region_EX02_LYZ",
+    TransText = "Episode_Region_None_Trans"
+  },
+  [107101] = {
+    AudioPath = "event:/ui/common/map_name_show_ex02",
+    RegionShowId = 107101,
+    TitleText = "Episode_Region_EX02_AEKNZFX",
+    TransText = "Episode_Region_None_Trans"
+  },
+  [107301] = {
+    AudioPath = "event:/ui/common/map_name_show_ex02",
+    RegionShowId = 107301,
+    TitleText = "Episode_Region_EX02_AEKNS",
+    TransText = "Episode_Region_None_Trans"
+  },
   [120101] = {
     AudioPath = "event:/ui/common/map_name_show",
     RegionShowId = 120101,

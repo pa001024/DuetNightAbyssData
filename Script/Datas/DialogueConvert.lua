@@ -108752,7 +108752,7 @@ local Data = {
   },
   {
     MinKey = 11019116,
-    MaxKey = 12001532,
+    MaxKey = 12001370,
     Loader = function()
       return {
         [11019116] = {
@@ -109140,6 +109140,657 @@ local Data = {
                     AnimationId = "Sigh_End",
                     Duration = 3,
                     _click = false
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11102501] = {
+          Operations = {
+            [1] = {
+              PlayNormalSound = {
+                EventPath = "event:/sfx/common/story/ex02/task_enemybark_01",
+                PlayAs2D = true
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11103302] = {
+          Operations = {
+            [1] = {
+              PlayNormalSound = {
+                EventPath = "event:/sfx/common/story/ex02/task_enemybark_02",
+                PlayAs2D = true
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11104603] = {
+          Operations = {
+            [1] = {
+              PlayNormalSound = {
+                EventPath = "event:/sfx/common/story/ex02/task_enemybark_03",
+                PlayAs2D = true
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11104605] = {
+          Operations = {
+            [1] = {
+              PlayNormalSound = {
+                EventPath = "event:/sfx/common/story/ex02/task_enemybark_04",
+                PlayAs2D = true
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11111701] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "-2211.855469,-101.972656,1978.391846,0.000005,-35.599724,0.601444,35.0,100000.0,false,Manual,22.0,16:9 Digital Film"
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11111702] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "208.75,-28.175781,97.272461,0.000016,-28.799648,170.375381,35.0,100000.0,false,Manual,22.0,16:9 Digital Film"
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11112001] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "179.542969,860.847656,3059.659912,-0.000004,-66.597641,-99.637665,35.0,100000.0,false,Manual,22.0,16:9 Digital Film"
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11112201] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "746.296875,-276.429688,1655.058594,0.000027,-63.995857,153.071915,35.0,100000.0,false,Manual,22.0,16:9 Digital Film"
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11112701] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "1086.054688,-1882.109375,908.652588,0.000042,-23.591219,113.143715,35.0,100000.0,false,Manual,22.0,16:9 Digital Film"
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11115901] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "280.159668,-685.53125,751.279297,0.000017,-22.160179,139.14975,35.0,100000.0,false,DoNotOverride,22.0,二重螺旋16:9"
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11116001] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 111194,
+                FacialId = "Cin_Ahaha01"
+              }
+            },
+            [2] = {
+              PlayAnimation = {ActorId = 111194, AnimationId = "Onground02"}
+            },
+            [3] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "-526.374023,-253.546875,400.530273,0.000052,-37.599228,24.197649,30.0,100000.0,false,DoNotOverride,2.8,16:9 Digital Film"
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11116601] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 111194,
+                FacialId = "Cin_Ahaha01"
+              }
+            },
+            [2] = {
+              PlayAnimation = {ActorId = 111194, AnimationId = "Onground02"}
+            },
+            [3] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "-526.374023,-253.546875,66.306641,0.000051,-37.599228,24.196974,30.0,100000.0,false,DoNotOverride,2.8,16:9 Digital Film"
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11118909] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 2}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 111173,
+                        AnimationId = "Idle",
+                        Duration = 0.5
+                      }
+                    }
+                  }
+                },
+                [2] = {
+                  MoveTo = {
+                    ActorId = 111173,
+                    MoveSpeed = 250,
+                    TargetPoint = "AnbixiuPoint1"
+                  }
+                },
+                [3] = {
+                  MoveTo = {
+                    ActorId = 111173,
+                    MoveSpeed = 250,
+                    TargetPoint = "AnbixiuPoint2"
+                  }
+                },
+                [4] = {
+                  SetVisibility = {ActorId = 111173, Visibility = "Hide"}
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11118911] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  PlayAnimation = {ActorId = 111168, AnimationId = "Sigh_End"}
+                },
+                [2] = {
+                  PlayAnimation = {
+                    ActorId = 111168,
+                    AnimationId = "Angry01_Start"
+                  }
+                },
+                [3] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 6}
+                    },
+                    [2] = {
+                      PlayAnimation = {ActorId = 111168, AnimationId = "Idle"}
+                    }
+                  }
+                },
+                [4] = {
+                  MoveTo = {
+                    ActorId = 111168,
+                    MoveSpeed = 250,
+                    TargetPoint = "KaermaPoint1"
+                  }
+                },
+                [5] = {
+                  MoveTo = {
+                    ActorId = 111168,
+                    MoveSpeed = 250,
+                    TargetPoint = "KaermaPoint2"
+                  }
+                },
+                [6] = {
+                  MoveTo = {
+                    ActorId = 111168,
+                    MoveSpeed = 250,
+                    TargetPoint = "KaermaPoint3"
+                  }
+                },
+                [7] = {
+                  SetVisibility = {ActorId = 111168, Visibility = "Hide"}
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11119001] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  LookAt = {
+                    LookAtDescription = {LookId = 111165, LookedInfo = 111171}
+                  }
+                },
+                [2] = {
+                  LookAt = {
+                    LookAtDescription = {LookId = 111171, LookedInfo = 111165}
+                  }
+                },
+                [3] = {
+                  PlayAnimation = {ActorId = 111165, AnimationId = "AgreeHead"}
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11119002] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  PlayAnimation = {ActorId = 111171, AnimationId = "Think_End"}
+                },
+                [2] = {
+                  PlayAnimation = {ActorId = 111171, AnimationId = "Pray_Start"}
+                },
+                [3] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 2}
+                    },
+                    [2] = {
+                      PlayAnimation = {ActorId = 111171, AnimationId = "Pray_End"}
+                    }
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11119003] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  PlayAnimation = {ActorId = 111165, AnimationId = "AgreeHead"}
+                },
+                [2] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 1}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 111165,
+                        AnimationId = "Explain02_End"
+                      }
+                    }
+                  }
+                },
+                [3] = {
+                  PlayAnimation = {ActorId = 111165, AnimationId = "Idle"}
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11119004] = {
+          Operations = {
+            [1] = {
+              PARA = {
+                [1] = {
+                  SEQ = {
+                    [1] = {
+                      MoveTo = {
+                        ActorId = 111165,
+                        MoveSpeed = 300,
+                        TargetPoint = "MogannaPoint1"
+                      }
+                    },
+                    [2] = {
+                      MoveTo = {
+                        ActorId = 111165,
+                        MoveSpeed = 300,
+                        TargetPoint = "MogannaPoint2"
+                      }
+                    },
+                    [3] = {
+                      MoveTo = {
+                        ActorId = 111165,
+                        MoveSpeed = 300,
+                        TargetPoint = "MogannaPoint3"
+                      }
+                    },
+                    [4] = {
+                      SetVisibility = {ActorId = 111165, Visibility = "Hide"}
+                    }
+                  }
+                },
+                [2] = {
+                  SEQ = {
+                    [1] = {
+                      MoveTo = {
+                        ActorId = 111171,
+                        MoveSpeed = 250,
+                        TargetPoint = "YisakePoint1"
+                      }
+                    },
+                    [2] = {
+                      MoveTo = {
+                        ActorId = 111171,
+                        MoveSpeed = 250,
+                        TargetPoint = "YisakePoint2"
+                      }
+                    },
+                    [3] = {
+                      MoveTo = {
+                        ActorId = 111171,
+                        MoveSpeed = 250,
+                        TargetPoint = "YisakePoint3"
+                      }
+                    },
+                    [4] = {
+                      SetVisibility = {ActorId = 111171, Visibility = "Hide"}
+                    }
+                  }
+                },
+                [3] = {
+                  SEQ = {
+                    [1] = {
+                      SEQ = {
+                        [1] = {
+                          Delay = {DelaySeconds = 4}
+                        },
+                        [2] = {
+                          PlayAnimation = {ActorId = 111163, AnimationId = "Sigh_End"}
+                        }
+                      }
+                    },
+                    [2] = {
+                      MoveTo = {
+                        ActorId = 111163,
+                        MoveSpeed = 250,
+                        TargetPoint = "YamengPoint1"
+                      }
+                    },
+                    [3] = {
+                      MoveTo = {
+                        ActorId = 111163,
+                        MoveSpeed = 250,
+                        TargetPoint = "YamengPoint2"
+                      }
+                    },
+                    [4] = {
+                      MoveTo = {
+                        ActorId = 111163,
+                        MoveSpeed = 250,
+                        TargetPoint = "YamengPoint3"
+                      }
+                    },
+                    [5] = {
+                      SetVisibility = {ActorId = 111163, Visibility = "Hide"}
+                    }
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11119006] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {
+                ActorId = 111201,
+                AnimationId = "Story_Gun_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11121801] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "453.507812,-2083.214844,166.027344,0.000033,4.399304,101.391747,35.0,100000.0,false,Manual,22.0,16:9 Digital Film"
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11122001] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "170.449219,-263.777344,89.162109,0.000087,39.988834,139.927094,35.0,100000.0,false,Manual,22.0,16:9 Digital Film"
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11122101] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "-516.894531,-1371.578125,577.080078,0.000175,-8.59845,68.201668,35.0,100000.0,false,Manual,2.8,16:9 Digital Film"
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11122301] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "241.59668,-731.140625,432.53125,0.000042,-14.800227,105.795197,22.0,100000.0,true,Manual,2.8,16:9 Digital Film"
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11122501] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "-375.027344,-422.410156,399.65625,0.000089,-26.799133,48.360119,35.0,100000.0,false,Manual,22.0,16:9 Digital Film"
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11122601] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "2687.590576,-6197.257324,5479.570312,0.00002,-28.805079,112.774338,35.0,100000.0,false,Manual,22.0,16:9 Digital Film"
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11122701] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "-231.348633,-570.339844,934.628906,0.000105,-51.997799,67.289696,35.0,100000.0,false,Manual,22.0,16:9 Digital Film"
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11122801] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "-642.517578,-453.445435,479.814453,0.000007,-25.599787,36.702122,35.0,100000.0,false,Manual,22.0,16:9 Digital Film"
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11123901] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "-787.810547,96.210938,128.80127,0.000002,9.999984,-5.201758,35.0,100000.0,false,Manual,22.0,16:9 Digital Film"
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11124001] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "-161.429947,-8.197708,187.695801,0.000108,16.999207,14.083107,35.0,100000.0,false,Manual,22.0,16:9 Digital Film"
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11124101] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "-350.062012,9.492157,142.532227,0.000033,-14.799469,-2.33727,35.0,100000.0,false,Manual,22.0,16:9 Digital Film"
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11124201] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "446.257751,-59.893768,138.591797,-0.002685,2.593108,-30.41341,13.702001,100000.0,false,Manual,22.0,16:9 Digital Film"
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11124301] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "-226.806335,-87.486938,718.358887,0.002324,-51.207607,3.640168,35.0,100000.0,false,Manual,2.8,16:9 Digital Film"
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11124401] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "-1440.425781,224.095703,693.294922,0.000092,-6.99897,4.630114,35.0,100000.0,false,Manual,22.0,16:9 Digital Film"
                   }
                 }
               }
@@ -115681,7 +116332,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12001401,
+    MaxKey = 12010308,
+    Loader = function()
+      return {
         [12001401] = {
           Operations = {
             [1] = {
@@ -116915,15 +117574,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12001533,
-    MaxKey = 12010722,
-    Loader = function()
-      return {
+        },
         [12001533] = {
           Operations = {
             [1] = {
@@ -121149,7 +121800,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12010309,
+    MaxKey = 12013411,
+    Loader = function()
+      return {
         [12010309] = {
           Operations = {
             [1] = {
@@ -122005,15 +122664,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12010723,
-    MaxKey = 12013517,
-    Loader = function()
-      return {
+        },
         [12010723] = {
           Operations = {
             [1] = {
@@ -126729,7 +127380,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12013412,
+    MaxKey = 12020901,
+    Loader = function()
+      return {
         [12013412] = {
           Operations = {
             [1] = {
@@ -127560,15 +128219,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12013518,
-    MaxKey = 12030411,
-    Loader = function()
-      return {
+        },
         [12013518] = {
           Operations = {
             [1] = {
@@ -133252,7 +133903,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12022101,
+    MaxKey = 12032309,
+    Loader = function()
+      return {
         [12022101] = {
           Operations = {
             [1] = {
@@ -134162,15 +134821,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12030412,
-    MaxKey = 12032354,
-    Loader = function()
-      return {
+        },
         [12030412] = {
           Operations = {
             [1] = {
@@ -140595,7 +141246,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12032310,
+    MaxKey = 12034304,
+    Loader = function()
+      return {
         [12032310] = {
           Operations = {
             [1] = {
@@ -141756,15 +142415,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12032501,
-    MaxKey = 12034712,
-    Loader = function()
-      return {
+        },
         [12032501] = {
           Operations = {
             [1] = {
@@ -148481,7 +149132,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12034305,
+    MaxKey = 20000602,
+    Loader = function()
+      return {
         [12034305] = {
           Operations = {
             [1] = {
@@ -149673,15 +150332,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12034713,
-    MaxKey = 20000819,
-    Loader = function()
-      return {
+        },
         [12034713] = {
           Operations = {
             [1] = {
@@ -153331,7 +153982,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 20000603,
+    MaxKey = 20006005,
+    Loader = function()
+      return {
         [20000603] = {
           Operations = {
             [1] = {
@@ -154538,15 +155197,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 20000820,
-    MaxKey = 20006106,
-    Loader = function()
-      return {
+        },
         [20000820] = {
           Operations = {
             [1] = {
@@ -161861,7 +162512,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 20006007,
+    MaxKey = 51001206,
+    Loader = function()
+      return {
         [20006007] = {
           Operations = {
             [1] = {
@@ -162784,15 +163443,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 20006201,
-    MaxKey = 51001404,
-    Loader = function()
-      return {
+        },
         [20006201] = {
           Operations = {
             [1] = {
@@ -165637,7 +166288,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51001207,
+    MaxKey = 51003413,
+    Loader = function()
+      return {
         [51001207] = {
           Operations = {
             [1] = {
@@ -166625,15 +167284,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51001405,
-    MaxKey = 51003809,
-    Loader = function()
-      return {
+        },
         [51001405] = {
           Operations = {
             [1] = {
@@ -169120,7 +169771,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51003501,
+    MaxKey = 51005303,
+    Loader = function()
+      return {
         [51003501] = {
           Operations = {
             [1] = {
@@ -169613,15 +170272,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51003810,
-    MaxKey = 51005908,
-    Loader = function()
-      return {
+        },
         [51003810] = {
           Operations = {
             [1] = {
@@ -171938,7 +172589,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51005310,
+    MaxKey = 51007001,
+    Loader = function()
+      return {
         [51005310] = {
           Operations = {
             [1] = {
@@ -172587,15 +173246,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51005909,
-    MaxKey = 51007145,
-    Loader = function()
-      return {
+        },
         [51005909] = {
           Operations = {
             [1] = {
@@ -176903,7 +177554,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51007002,
+    MaxKey = 51009217,
+    Loader = function()
+      return {
         [51007002] = {
           Operations = {
             [1] = {
@@ -177308,15 +177967,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51007146,
-    MaxKey = 51009414,
-    Loader = function()
-      return {
+        },
         [51007146] = {
           Operations = {
             [1] = {
@@ -179965,7 +180616,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51009218,
+    MaxKey = 51009723,
+    Loader = function()
+      return {
         [51009218] = {
           Operations = {
             [1] = {
@@ -180838,15 +181497,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51009415,
-    MaxKey = 51009804,
-    Loader = function()
-      return {
+        },
         [51009415] = {
           Operations = {
             [1] = {
@@ -184129,7 +184780,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51009724,
+    MaxKey = 51010106,
+    Loader = function()
+      return {
         [51009724] = {
           Operations = {
             [1] = {
@@ -184707,15 +185366,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51009806,
-    MaxKey = 51012106,
-    Loader = function()
-      return {
+        },
         [51009806] = {
           Operations = {
             [1] = {
@@ -187675,7 +188326,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51010107,
+    MaxKey = 51102048,
+    Loader = function()
+      return {
         [51010107] = {
           Operations = {
             [1] = {
@@ -188136,15 +188795,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51012501,
-    MaxKey = 51103007,
-    Loader = function()
-      return {
+        },
         [51012501] = {
           Operations = {
             [1] = {
@@ -190370,7 +191021,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51102049,
+    MaxKey = 51105088,
+    Loader = function()
+      return {
         [51102049] = {
           Operations = {
             [1] = {
@@ -190995,15 +191654,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51103008,
-    MaxKey = 51105125,
-    Loader = function()
-      return {
+        },
         [51103008] = {
           Operations = {
             [1] = {
@@ -194220,7 +194871,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51105089,
+    MaxKey = 51106023,
+    Loader = function()
+      return {
         [51105089] = {
           Operations = {
             [1] = {
@@ -194849,15 +195508,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51105126,
-    MaxKey = 51110006,
-    Loader = function()
-      return {
+        },
         [51105126] = {
           Operations = {
             [1] = {
@@ -197927,7 +198578,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51106026,
+    MaxKey = 51120025,
+    Loader = function()
+      return {
         [51106026] = {
           Operations = {
             [1] = {
@@ -198258,15 +198917,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51110007,
-    MaxKey = 51122017,
-    Loader = function()
-      return {
+        },
         [51110007] = {
           Operations = {
             [1] = {
@@ -201044,7 +201695,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51120028,
+    MaxKey = 51150009,
+    Loader = function()
+      return {
         [51120028] = {
           Operations = {
             [1] = {
@@ -201437,15 +202096,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51122022,
-    MaxKey = 51151029,
-    Loader = function()
-      return {
+        },
         [51122022] = {
           Operations = {
             [1] = {
@@ -204606,7 +205257,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51150010,
+    MaxKey = 51153056,
+    Loader = function()
+      return {
         [51150010] = {
           Operations = {
             [1] = {
@@ -205439,15 +206098,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51151030,
-    MaxKey = 51168002,
-    Loader = function()
-      return {
+        },
         [51151030] = {
           Operations = {
             [1] = {
@@ -208906,7 +209557,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51153057,
+    MaxKey = 51200512,
+    Loader = function()
+      return {
         [51153057] = {
           Operations = {
             [1] = {
@@ -209437,15 +210096,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51168004,
-    MaxKey = 51200586,
-    Loader = function()
-      return {
+        },
         [51168004] = {
           Operations = {
             [1] = {
@@ -211106,7 +211757,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51200514,
+    MaxKey = 51213083,
+    Loader = function()
+      return {
         [51200514] = {
           Operations = {
             [1] = {
@@ -211418,15 +212077,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51200588,
-    MaxKey = 51213226,
-    Loader = function()
-      return {
+        },
         [51200588] = {
           Operations = {
             [1] = {
@@ -213323,7 +213974,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51213085,
+    MaxKey = 72000702,
+    Loader = function()
+      return {
         [51213085] = {
           Operations = {
             [1] = {
@@ -213820,15 +214479,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51213229,
-    MaxKey = 72001502,
-    Loader = function()
-      return {
+        },
         [51213229] = {
           Operations = {
             [1] = {
@@ -216157,7 +216808,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 72000703,
+    MaxKey = 72005605,
+    Loader = function()
+      return {
         [72000703] = {
           Operations = {
             [1] = {
@@ -216710,15 +217369,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 72001503,
-    MaxKey = 72006206,
-    Loader = function()
-      return {
+        },
         [72001503] = {
           Operations = {
             [1] = {
@@ -219657,7 +220308,15 @@ local Data = {
             }
           },
           bAllowClick = false
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 72005606,
+    MaxKey = 72201903,
+    Loader = function()
+      return {
         [72005606] = {
           Operations = {
             [1] = {
@@ -220248,15 +220907,7 @@ local Data = {
             }
           },
           bAllowClick = false
-        }
-      }
-    end
-  },
-  {
-    MinKey = 72006301,
-    MaxKey = 80020516,
-    Loader = function()
-      return {
+        },
         [72006301] = {
           Operations = {
             [1] = {
@@ -220314,6 +220965,1028 @@ local Data = {
           bAllowClick = false
         },
         [72006304] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72006401] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72006402] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72006403] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72006404] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72006501] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72006502] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72006503] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72006504] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72006601] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72006602] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72006603] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72006604] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72006701] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72006702] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72006703] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72006704] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72006801] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72006802] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72006803] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72006804] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72006901] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72006902] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72006903] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72006904] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72007001] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72007002] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72007003] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72007004] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72007101] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72007102] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72007103] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72007104] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72007201] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72007202] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72007203] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72007204] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72007301] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72007302] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72007303] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72007304] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72007401] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72007402] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72007403] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72007404] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72007501] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72007502] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72007503] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72007504] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72007601] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72007602] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72007603] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72007604] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72007701] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72007702] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72007703] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 820000,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 820000,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72007704] = {
           Operations = {
             [1] = {
               PlayFacial = {
@@ -221902,7 +223575,15 @@ local Data = {
             }
           },
           bAllowClick = false
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 72201904,
+    MaxKey = 80040221,
+    Loader = function()
+      return {
         [72201904] = {
           Operations = {
             [1] = {
@@ -224030,15 +225711,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80020517,
-    MaxKey = 80050201,
-    Loader = function()
-      return {
+        },
         [80020517] = {
           Operations = {
             [1] = {
@@ -226626,7 +228299,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80040222,
+    MaxKey = 80060121,
+    Loader = function()
+      return {
         [80040222] = {
           Operations = {
             [1] = {
@@ -229059,15 +230740,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80050202,
-    MaxKey = 80060439,
-    Loader = function()
-      return {
+        },
         [80050202] = {
           Operations = {
             [1] = {
@@ -230927,7 +232600,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80060123,
+    MaxKey = 80070330,
+    Loader = function()
+      return {
         [80060123] = {
           Operations = {
             [1] = {
@@ -232029,15 +233710,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80060440,
-    MaxKey = 80080242,
-    Loader = function()
-      return {
+        },
         [80060440] = {
           Operations = {
             [1] = {
@@ -234142,7 +235815,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80070331,
+    MaxKey = 80100103,
+    Loader = function()
+      return {
         [80070331] = {
           Operations = {
             [1] = {
@@ -236268,15 +237949,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80080243,
-    MaxKey = 80100422,
-    Loader = function()
-      return {
+        },
         [80080243] = {
           Operations = {
             [1] = {
@@ -238264,7 +239937,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80100104,
+    MaxKey = 80120119,
+    Loader = function()
+      return {
         [80100104] = {
           Operations = {
             [1] = {
@@ -239358,15 +241039,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80100423,
-    MaxKey = 80120405,
-    Loader = function()
-      return {
+        },
         [80100423] = {
           Operations = {
             [1] = {
@@ -241114,7 +242787,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80120120,
+    MaxKey = 80130308,
+    Loader = function()
+      return {
         [80120120] = {
           Operations = {
             [1] = {
@@ -242992,15 +244673,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80120406,
-    MaxKey = 80140122,
-    Loader = function()
-      return {
+        },
         [80120406] = {
           Operations = {
             [1] = {
@@ -244528,7 +246201,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80130309,
+    MaxKey = 80140326,
+    Loader = function()
+      return {
         [80130309] = {
           Operations = {
             [1] = {
@@ -246342,15 +248023,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80140123,
-    MaxKey = 80150206,
-    Loader = function()
-      return {
+        },
         [80140123] = {
           Operations = {
             [1] = {
@@ -248965,7 +250638,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80140328,
+    MaxKey = 80160307,
+    Loader = function()
+      return {
         [80140328] = {
           Operations = {
             [1] = {
@@ -251140,15 +252821,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80150207,
-    MaxKey = 80170422,
-    Loader = function()
-      return {
+        },
         [80150207] = {
           Operations = {
             [1] = {
@@ -253538,7 +255211,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80160308,
+    MaxKey = 80180332,
+    Loader = function()
+      return {
         [80160308] = {
           Operations = {
             [1] = {
@@ -254573,15 +256254,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80170426,
-    MaxKey = 80200016,
-    Loader = function()
-      return {
+        },
         [80170426] = {
           Operations = {
             [1] = {
@@ -257048,7 +258721,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80180333,
+    MaxKey = 80200238,
+    Loader = function()
+      return {
         [80180333] = {
           Operations = {
             [1] = {
@@ -258642,15 +260323,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80200017,
-    MaxKey = 80210208,
-    Loader = function()
-      return {
+        },
         [80200017] = {
           Operations = {
             [1] = {
@@ -262166,7 +263839,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80200239,
+    MaxKey = 90030103,
+    Loader = function()
+      return {
         [80200239] = {
           Operations = {
             [1] = {
@@ -264714,15 +266395,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80210209,
-    MaxKey = 90100101,
-    Loader = function()
-      return {
+        },
         [80210209] = {
           Operations = {
             [1] = {
@@ -266998,7 +268671,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 90030104,
+    MaxKey = 90180201,
+    Loader = function()
+      return {
         [90030104] = {
           Operations = {
             [1] = {
@@ -268242,15 +269923,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 90100103,
-    MaxKey = 90240106,
-    Loader = function()
-      return {
+        },
         [90100103] = {
           Operations = {
             [1] = {
@@ -269682,7 +271355,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 90180204,
+    MaxKey = 710054041,
+    Loader = function()
+      return {
         [90180204] = {
           Operations = {
             [1] = {
@@ -270762,15 +272443,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 90240201,
-    MaxKey = 741147001,
-    Loader = function()
-      return {
+        },
         [90240201] = {
           Operations = {
             [1] = {
@@ -272474,7 +274147,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 710054042,
+    MaxKey = 741147112,
+    Loader = function()
+      return {
         [710054042] = {
           Operations = {
             [1] = {
@@ -273201,15 +274882,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741147002,
-    MaxKey = 741147201,
-    Loader = function()
-      return {
+        },
         [741147002] = {
           Operations = {
             [1] = {
@@ -275366,7 +277039,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741147113,
+    MaxKey = 741147333,
+    Loader = function()
+      return {
         [741147113] = {
           Operations = {
             [1] = {
@@ -277080,15 +278761,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741147202,
-    MaxKey = 741147431,
-    Loader = function()
-      return {
+        },
         [741147202] = {
           Operations = {
             [1] = {
@@ -279290,7 +280963,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741147334,
+    MaxKey = 741147814,
+    Loader = function()
+      return {
         [741147334] = {
           Operations = {
             [1] = {
@@ -280911,15 +282592,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741147432,
-    MaxKey = 741148122,
-    Loader = function()
-      return {
+        },
         [741147432] = {
           Operations = {
             [1] = {
@@ -283066,7 +284739,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741147815,
+    MaxKey = 741148525,
+    Loader = function()
+      return {
         [741147815] = {
           Operations = {
             [1] = {
@@ -284777,15 +286458,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741148123,
-    MaxKey = 741148907,
-    Loader = function()
-      return {
+        },
         [741148123] = {
           Operations = {
             [1] = {
@@ -286927,7 +288600,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741148526,
+    MaxKey = 741149310,
+    Loader = function()
+      return {
         [741148526] = {
           Operations = {
             [1] = {
@@ -288617,15 +290298,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741148908,
-    MaxKey = 741149618,
-    Loader = function()
-      return {
+        },
         [741148908] = {
           Operations = {
             [1] = {
@@ -290770,7 +292443,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741149311,
+    MaxKey = 760000103,
+    Loader = function()
+      return {
         [741149311] = {
           Operations = {
             [1] = {
@@ -292487,15 +294168,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741149619,
-    MaxKey = 1101930901,
-    Loader = function()
-      return {
+        },
         [741149619] = {
           Operations = {
             [1] = {
@@ -294470,7 +296143,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 800205121,
+    MaxKey = 1101930901,
+    Loader = function()
+      return {
         [800205121] = {
           Operations = {
             [1] = {

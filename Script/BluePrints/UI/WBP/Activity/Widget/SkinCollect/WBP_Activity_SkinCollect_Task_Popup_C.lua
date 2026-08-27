@@ -1,5 +1,6 @@
 require("UnLua")
 local UIUtils = require("Utils.UIUtils")
+local PageJumpUtils = require("Utils.PageJumpUtils")
 local SkinCollectTaskPopupModel = require("BluePrints.UI.WBP.Activity.Widget.SkinCollect.SkinCollectTaskPopupModel")
 local M = Class("BluePrints.UI.BP_UIState_C")
 local TASK_TYPE_SCROLL_ARROW_TIMER = "SkinCollectTaskTypeScrollArrow"
@@ -584,6 +585,15 @@ function M:Close()
     self.Auto_Out = self.Out
   end
   self.Super.Close(self)
+end
+
+function M:RealClose()
+  local PendingActivityJumpId = self.PendingActivityJumpId
+  self.PendingActivityJumpId = nil
+  self.Super.RealClose(self)
+  if PendingActivityJumpId then
+    PageJumpUtils:JumpToTargetPageByJumpId(PendingActivityJumpId)
+  end
 end
 
 function M:GetTaskTypeListWidget()

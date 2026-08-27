@@ -323,9 +323,8 @@ end
 function M:UpdateQucikSlotItem(Content, SlotIndex, IsChange)
   local function UpdateQucikSlotItemCallBack(Ret, PageIndex, SlotIndex, ResourceId)
     if 0 == Ret then
-      AudioManager(self):PlayUISound(nil, "event:/ui/common/weapon_replace", nil, nil)
-      
       self.SelectSlot = SlotIndex
+      
       self:UpdateQuickGestureItem()
       local QuickWidget = self.Gruop_Gesture.WB_Btn:GetChildAt(SlotIndex - 1)
       if QuickWidget and not IsChange then
@@ -562,13 +561,11 @@ function M:UpdatePage()
       self.Gruop_Gesture.Btn_R:ForbidBtn(true)
     end
   end
-  AudioManager(self):PlayUISound(nil, "event:/ui/common/sub_bar_content_scroll", nil, nil)
   self.PageClick = nil
   self:UpdateBtnFunction()
 end
 
 function M:OnBtnLClicked()
-  AudioManager(self):PlayUISound(nil, "event:/ui/common/click_btn_add", nil, nil)
   if not self.PageClick then
     self.Gruop_Gesture:PlayAnimation(self.Gruop_Gesture.Up)
     self.PageClick = "Up"
@@ -576,7 +573,6 @@ function M:OnBtnLClicked()
 end
 
 function M:OnBtnRClicked()
-  AudioManager(self):PlayUISound(nil, "event:/ui/common/click_btn_add", nil, nil)
   if not self.PageClick then
     self.Gruop_Gesture:PlayAnimation(self.Gruop_Gesture.Down)
     self.PageClick = "Down"

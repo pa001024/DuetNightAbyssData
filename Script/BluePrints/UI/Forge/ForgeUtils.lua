@@ -54,14 +54,17 @@ function ForgeUtils:ConstructItemContentFromResourceId(ResType, ResId)
   return Content
 end
 
-function ForgeUtils:ConstructItemContentFromDraftId(DraftId)
+function ForgeUtils:ConstructItemContentFromDraftId(DraftId, Params)
   local DraftInfo = DataMgr.Draft[DraftId]
+  Params = Params or {}
+  local UseDraftTips = Params.UseDraftTips or false
   local Content = {
-    Id = DraftInfo.ProductId,
+    Id = UseDraftTips and DraftId or DraftInfo.ProductId,
     UIName = "ForgeMain",
-    ItemType = DraftInfo.ProductType,
+    ItemType = UseDraftTips and "Draft" or DraftInfo.ProductType,
     MenuPlacement = EMenuPlacement.MenuPlacement_MenuRight,
-    HandleMouseDown = true
+    HandleMouseDown = true,
+    IsDraftType = UseDraftTips
   }
   local ProductName = ""
   if DraftInfo then

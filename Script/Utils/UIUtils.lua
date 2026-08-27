@@ -141,19 +141,64 @@ function UIUtils.ShowHudRewardConvert(TitleText, Rewards)
   return UIUtils.ShowHudReward(TitleText, List)
 end
 
-function UIUtils.ShowGetItemPage(ItemType, ItemId, Count, PurchaseRewards, bSpecial, func, ParentWidget, IsReAttachFocusToPage, bOnlyItemPage, bIsNew, ToastText)
+local function IsAutoUseRandomSelectPack(ItemType, ItemId)
+  if ItemType ~= CommonConst.DataType.Resource then
+    return false
+  end
+  local ResourceData = DataMgr.Resource[ItemId]
+  return ResourceData and ResourceData.UsageMode == "AutoUseWhenAdd" and ResourceData.UseEffectType == "RandomSelectPack"
+end
+
+local function FilterAutoUseRandomSelectPack(ItemType, ItemId, Count, PurchaseRewards)
+  local bFiltered = false
+  local bCopiedPurchaseRewards = false
+  if IsAutoUseRandomSelectPack(ItemType, ItemId) then
+    ItemType, ItemId, Count = nil, nil, nil
+    bFiltered = true
+  end
+  local Resources = PurchaseRewards and PurchaseRewards.Resources
+  if Resources then
+    for ResourceId in pairs(Resources) do
+      if IsAutoUseRandomSelectPack(CommonConst.DataType.Resource, ResourceId) then
+        if not bCopiedPurchaseRewards then
+          PurchaseRewards = CommonUtils.DeepCopy(PurchaseRewards)
+          bCopiedPurchaseRewards = true
+        end
+        PurchaseRewards.Resources[ResourceId] = nil
+        bFiltered = true
+      end
+    end
+  end
+  if bFiltered and PurchaseRewards then
+    for RewardType in pairs(DataMgr.RewardType) do
+      local Rewards = PurchaseRewards[RewardType .. "s"]
+      if Rewards and next(Rewards) then
+        return ItemType, ItemId, Count, PurchaseRewards, true
+      end
+    end
+    PurchaseRewards = nil
+  end
+  return ItemType, ItemId, Count, PurchaseRewards, bFiltered
+end
+
+function UIUtils.ShowGetItemPage(ItemType, ItemId, Count, PurchaseRewards, bSpecial, func, ParentWidget, IsReAttachFocusToPage, bOnlyItemPage, bIsNew, ToastText, GotoCallback)
+  local bFiltered
+  ItemType, ItemId, Count, PurchaseRewards, bFiltered = FilterAutoUseRandomSelectPack(ItemType, ItemId, Count, PurchaseRewards)
+  if bFiltered and not ItemType and not PurchaseRewards then
+    return
+  end
   GameFlowUtils:AddFlow("GetItemPage", {
     GWorld.GameInstance,
     function(_, Flow)
       local UIName = bSpecial and "GetItemPageSP" or "GetItemPage"
-      UIUtils.ShowGetItemPageInternal(ItemType, ItemId, Count, PurchaseRewards, bSpecial, func, ParentWidget, IsReAttachFocusToPage, bOnlyItemPage, bIsNew, ToastText)
+      UIUtils.ShowGetItemPageInternal(ItemType, ItemId, Count, PurchaseRewards, bSpecial, func, ParentWidget, IsReAttachFocusToPage, bOnlyItemPage, bIsNew, ToastText, GotoCallback)
       local UIManager = GWorld.GameInstance:GetGameUIManager()
       UIManager:AddFlow(UIName, Flow)
     end
   })
 end
 
-function UIUtils.ShowGetItemPageInternal(ItemType, ItemId, Count, PurchaseRewards, bSpecial, func, ParentWidget, IsReAttachFocusToPage, bOnlyItemPage, bIsNew, ToastText)
+function UIUtils.ShowGetItemPageInternal(ItemType, ItemId, Count, PurchaseRewards, bSpecial, func, ParentWidget, IsReAttachFocusToPage, bOnlyItemPage, bIsNew, ToastText, GotoCallback)
   ItemType = ItemType or -1
   ItemId = ItemId or -1
   Count = Count or -1
@@ -172,9 +217,9 @@ function UIUtils.ShowGetItemPageInternal(ItemType, ItemId, Count, PurchaseReward
       local CharData = DataMgr.Char[ItemId]
       local RegainItemId = CharData and CharData.RegainCharItemId or nil
       local RegainItemCount = CharData and CharData.RegainCharItemNum or nil
-      UIManager:LoadUINew(SystemUIName, "Resource", RegainItemId, RegainItemCount, PurchaseRewards, func, ParentWidget, IsReAttachFocusToPage, ToastText)
+      UIManager:LoadUINew(SystemUIName, "Resource", RegainItemId, RegainItemCount, PurchaseRewards, func, ParentWidget, IsReAttachFocusToPage, ToastText, GotoCallback)
     else
-      UIManager:LoadUINew(SystemUIName, ItemType, ItemId, Count, PurchaseRewards, func, ParentWidget, IsReAttachFocusToPage, ToastText)
+      UIManager:LoadUINew(SystemUIName, ItemType, ItemId, Count, PurchaseRewards, func, ParentWidget, IsReAttachFocusToPage, ToastText, GotoCallback)
     end
   end
   
@@ -266,10 +311,28 @@ function UIUtils.ShowGetCharWeaponPage(TargetTable, CallbackFunc, ParentWidget, 
   coroutine.resume(AsyncFunc)
 end
 
-function UIUtils.ShowGetItemPageAndOpenBagIfNeeded(ItemType, ItemId, Count, PurchaseRewards, bSpecial, func, ParentWidget, IsReAttachFocusToPage, bOnlyItemPage, bIsNew, ToastText)
+function UIUtils.ShowGetItemPageAndOpenBagIfNeeded(ItemType, ItemId, Count, PurchaseRewards, bSpecial, func, ParentWidget, IsReAttachFocusToPage, bOnlyItemPage, bIsNew, ToastText, GotoCallback)
+  if nil == bSpecial then
+    local function IsSpecialResource(ResourceId)
+      local ResourceData = DataMgr.Resource[tonumber(ResourceId) or ResourceId]
+      
+      return ResourceData and 7 == ResourceData.MaterialClassify
+    end
+    
+    bSpecial = ItemType == CommonConst.DataType.Resource and ItemId and IsSpecialResource(ItemId) or false
+    if not bSpecial and PurchaseRewards and PurchaseRewards.Resources then
+      for ResourceId in pairs(PurchaseRewards.Resources) do
+        if IsSpecialResource(ResourceId) then
+          bSpecial = true
+          break
+        end
+      end
+    end
+  end
   local needOpenBag = false
   local OpenBagId
   local ToastText = ToastText or nil
+  local GotoCallback = GotoCallback or nil
   local bHasGestureItem = false
   if PurchaseRewards and PurchaseRewards.Resources then
     for Id, resource in pairs(PurchaseRewards.Resources) do
@@ -304,7 +367,7 @@ function UIUtils.ShowGetItemPageAndOpenBagIfNeeded(ItemType, ItemId, Count, Purc
     end
   end
   
-  UIUtils.ShowGetItemPage(ItemType, ItemId, Count, PurchaseRewards, bSpecial, callback, ParentWidget, IsReAttachFocusToPage, bOnlyItemPage, bIsNew, ToastText)
+  UIUtils.ShowGetItemPage(ItemType, ItemId, Count, PurchaseRewards, bSpecial, callback, ParentWidget, IsReAttachFocusToPage, bOnlyItemPage, bIsNew, ToastText, GotoCallback)
 end
 
 function UIUtils.GetCommonDragDropOperationClass()
@@ -745,6 +808,17 @@ function UIUtils.UpdateScrollBoxReddot(TargetScrollBox, ScrollBox_FrontRedDot, S
   if TableHasNew then
     bHasBackNew = true
   end
+  local ScrollOffset = TargetScrollBox:GetScrollOffset()
+  local EndOffset = TargetScrollBox:GetScrollOffsetOfEnd()
+  local EdgeTolerance = 0.5
+  if ScrollOffset <= EdgeTolerance then
+    bHasFrontReddot = false
+    bHasFrontNew = false
+  end
+  if EdgeTolerance >= EndOffset - ScrollOffset then
+    bHasBackReddot = false
+    bHasBackNew = false
+  end
   local FrontAnim = "Loop_T"
   local BackAnim = "Loop_D"
   if TargetScrollBox.Orientation == EOrientation.Orient_Horizontal then
@@ -767,7 +841,6 @@ function UIUtils.UpdateScrollBoxReddot(TargetScrollBox, ScrollBox_FrontRedDot, S
     end
   end
   
-  print("lgc@ :", "bHasFrontReddot", tostring(bHasFrontReddot), "bHasBackReddot", tostring(bHasBackReddot), "bHasFrontNew", tostring(bHasFrontNew), "bHasBackNew", tostring(bHasBackNew))
   if ScrollBox_FrontRedDot then
     SetListIndicator(ScrollBox_FrontRedDot, bHasFrontReddot, FrontAnim)
   end
@@ -1034,6 +1107,48 @@ function UIUtils.BindScrollBoxReddotAndNewClickEvent(TargetScrollBox, ScrollBox_
   if not TargetScrollBox then
     return
   end
+  local CalibrationTimerOwner = GWorld and GWorld.GameInstance
+  local CalibrationTimerKey = "UIUtils_ScrollBoxReddotClickCalibration_" .. tostring(TargetScrollBox)
+  local CalibrationInterval = 0.1
+  local CalibrationMaxAttempts = 5
+  
+  local function ArrayContainsWidget(TargetArray, TargetWidget)
+    for _, Widget in ipairs(TargetArray:ToTable()) do
+      if Widget == TargetWidget then
+        return true
+      end
+    end
+    return false
+  end
+  
+  local function ScheduleAnimatedScrollCalibration(TargetWidget)
+    if not CalibrationTimerOwner then
+      return
+    end
+    local Attempt = 0
+    
+    local function Calibrate()
+      if not TargetScrollBox or not TargetWidget then
+        return
+      end
+      Attempt = Attempt + 1
+      local OutFullyOutOfStartArray = TArray(UObject)
+      local OutPartiallyOutOfStartArray = TArray(UObject)
+      local OutFullyVisibleArray = TArray(UObject)
+      local OutPartiallyOutOfEndArray = TArray(UObject)
+      local OutFullyOutOfEndArray = TArray(UObject)
+      TargetScrollBox:GetChildWidgetsPosInScrollBox(OutFullyOutOfStartArray, OutPartiallyOutOfStartArray, OutFullyVisibleArray, OutPartiallyOutOfEndArray, OutFullyOutOfEndArray)
+      local bVisibleEnough = ArrayContainsWidget(OutFullyVisibleArray, TargetWidget) or ArrayContainsWidget(OutPartiallyOutOfEndArray, TargetWidget)
+      local bStillClipped = not bVisibleEnough
+      if bStillClipped and Attempt < CalibrationMaxAttempts then
+        CalibrationTimerOwner:AddTimer(CalibrationInterval, Calibrate, false, 0, CalibrationTimerKey, true)
+        return
+      end
+      UIUtils.UpdateScrollBoxReddot(TargetScrollBox, ScrollBox_FrontRedDot, ScrollBox_BackRedDot, ScrollBox_FrontNew, ScrollBox_BackNew, ReddotAndNewCalFunc)
+    end
+    
+    CalibrationTimerOwner:AddTimer(CalibrationInterval, Calibrate, false, 0, CalibrationTimerKey, true)
+  end
   
   local function BindClickEvent(indicator, isFront, isReddot)
     if not indicator or not indicator.Btn_Click then
@@ -1063,7 +1178,8 @@ function UIUtils.BindScrollBoxReddotAndNewClickEvent(TargetScrollBox, ScrollBox_
         for _, widget in ipairs(targetWidgets) do
           local bHasReddot, bHasNew = ReddotAndNewCalFunc(widget)
           if isReddot and bHasReddot or not isReddot and bHasNew then
-            TargetScrollBox:ScrollWidgetIntoView(widget, true)
+            TargetScrollBox:ScrollWidgetIntoView(widget, true, UE4.EDescendantScrollDestination.IntoView, 5.0)
+            ScheduleAnimatedScrollCalibration(widget)
             return
           end
         end
@@ -1079,6 +1195,7 @@ function UIUtils.BindScrollBoxReddotAndNewClickEvent(TargetScrollBox, ScrollBox_
           local bHasReddot, bHasNew = ReddotAndNewCalFunc(widget)
           if isReddot and bHasReddot or not isReddot and bHasNew then
             TargetScrollBox:ScrollWidgetIntoView(widget, true)
+            ScheduleAnimatedScrollCalibration(widget)
             return
           end
         end
@@ -1477,6 +1594,10 @@ function UIUtils.OpenEsc()
 end
 
 function UIUtils.IsMenuWorld()
+  local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
+  if GameMode and GameMode.IsShootTargetGameActive and GameMode:IsShootTargetGameActive() then
+    return false
+  end
   local DungeonId = GWorld.GameInstance:GetCurrentDungeonId()
   local Avatar = GWorld:GetAvatar()
   if Avatar and DungeonId and DungeonId <= 0 then
@@ -2172,7 +2293,7 @@ function UIUtils.NumberToChinese(Num)
 end
 
 function UIUtils.RollingNumberEffect(UIState, TextWidget, OrigNum, AddNum, UpdateDestTotalTime, IntervalTime, EndCallBackObj, EndCallback)
-  TextWidget:SetText(Utils.FormatNumber(OrigNum, false))
+  TextWidget:SetText(MiscUtils.FormatNumber(OrigNum, false))
   UpdateDestTotalTime = UpdateDestTotalTime or 1
   IntervalTime = IntervalTime or 0.01
   local DestNum = OrigNum + AddNum
@@ -2195,7 +2316,7 @@ function UIUtils.RollingNumberEffect(UIState, TextWidget, OrigNum, AddNum, Updat
     if OrigNum == DestNum then
       IsDone = true
     end
-    TextWidget:SetText(Utils.FormatNumber(OrigNum, false))
+    TextWidget:SetText(MiscUtils.FormatNumber(OrigNum, false))
   end, true, 0, "UpdateNum", true)
   return DestNum
 end
@@ -3065,7 +3186,7 @@ function UIUtils.CanOpenSkinPreview(ItemType, TypeId)
   end
   if "WeaponAccessory" == ItemType then
     local WeaponAccessoryData = DataMgr.WeaponAccessory[TypeId]
-    return WeaponAccessoryData and WeaponAccessoryData.StanceFXType == "Accessory" or false
+    return WeaponAccessoryData and true or false
   end
   if "Resource" == ItemType then
     local ResData = DataMgr.Resource[TypeId]
@@ -3092,6 +3213,37 @@ function UIUtils.RegionPlayerNum()
   local Number = UE4.UGuildConstructFunctionLibrary.GetRegionSyncedPlayerNumber()
   DebugPrint("lxc: GetActivePlayerNum: " .. tostring(Number))
   return Number
+end
+
+function UIUtils.CreateWidgetsInPanel(Panel, ItemCount)
+  if not Panel then
+    return
+  end
+  local AllChildren = Panel:GetAllChildren():ToTable()
+  local WidgetClass = UGameplayStatics.GetObjectClass(AllChildren[1])
+  local TotalCount = 0
+  local UIManager = UIManager(Panel)
+  for i = 1, ItemCount do
+    TotalCount = TotalCount + 1
+    local Widget = AllChildren[i]
+    if not Widget then
+      Widget = UIManager:CreateWidget(WidgetClass, false)
+      Panel:AddChild(Widget)
+    end
+    if Widget then
+      Widget:SetVisibility(UIConst.VisibilityOp.Visible)
+    end
+  end
+  for i = TotalCount + 1, #AllChildren do
+    local Widget = AllChildren[i]
+    if Widget then
+      if 1 == i then
+        Widget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      else
+        Widget:RemoveFromParent()
+      end
+    end
+  end
 end
 
 function UIUtils.IsAsyncCombatRoomMessage(InMessage)
@@ -3137,6 +3289,14 @@ function UIUtils.IsAsyncCombatRoomMessageWrapValid(InMessageWrap)
     return false
   end
   return DataMgr.AsyncCombat[RoomId] ~= nil
+end
+
+function UIUtils.IsInAsyncPersonalRoom()
+  local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
+  local PreInitInfo = GameMode and GameMode.PreInitInfo
+  if PreInitInfo then
+    return PreInitInfo.bSingleMode ~= nil and PreInitInfo.bSingleMode ~= false
+  end
 end
 
 AssembleComponents(UIUtils)

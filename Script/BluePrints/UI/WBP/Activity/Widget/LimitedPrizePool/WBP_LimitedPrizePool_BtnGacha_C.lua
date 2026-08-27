@@ -439,8 +439,7 @@ function M:BuildConvertFlags(PrizeResult)
     RewardMap[ItemType] = RewardMap[ItemType] or {}
     RewardMap[ItemType][Id] = (RewardMap[ItemType][Id] or 0) + Count
   end
-  for _, ItemData in ipairs(PrizeResult or {}) do
-    local Idx = ItemData[1]
+  for ResultIndex, ItemData in ipairs(PrizeResult or {}) do
     local ItemType = ItemUtils.GetItemType(ItemData[2])
     local Id = ItemData[3]
     local Count = AvatarUtils:GetTargetDataStatistics(Avatar, ItemType, Id)
@@ -449,7 +448,7 @@ function M:BuildConvertFlags(PrizeResult)
     if CurrentRewardCount and CurrentRewardCount == Count then
       RewardMap[ItemType][Id] = -1
     elseif ItemConfig and ItemConfig.RegainItemId then
-      ConvertFlags[Idx] = true
+      ConvertFlags[ResultIndex] = true
     end
   end
   return ConvertFlags

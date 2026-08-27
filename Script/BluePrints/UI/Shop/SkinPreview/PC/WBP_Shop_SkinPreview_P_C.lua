@@ -150,10 +150,20 @@ function M:Construct()
       {Type = "Img", ImgShortPath = "LS"}
     }
   })
-  self.Key_GamePad_L:SetVisibility(ESlateVisibility.Collapsed)
-  self.Key_GamePad_R:SetVisibility(ESlateVisibility.Collapsed)
-  self.Key_Preview:SetVisibility(ESlateVisibility.Collapsed)
-  self.Gift_GamePad:SetVisibility(ESlateVisibility.Collapsed)
+  self.Key_CheckMod:CreateCommonKey({
+    KeyInfoList = {
+      {Type = "Img", ImgShortPath = "Menu"}
+    }
+  })
+  self.Key_Mod:CreateCommonKey({
+    KeyInfoList = {
+      {Type = "Img", ImgShortPath = "LS"}
+    }
+  })
+  self.Key_GamePad_L:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Key_GamePad_R:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Key_Preview:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Gift_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
 function M:InitKeySetting()
@@ -171,27 +181,27 @@ end
 function M:UpdateUI()
   M.Super.UpdateUI(self)
   if self.IsGamepadInput then
-    self.Key_GamePad_L:SetVisibility((self.bFirst or self.ShopItemData.SinglePreview) and ESlateVisibility.Collapsed or ESlateVisibility.SelfHitTestInvisible)
-    self.Key_GamePad_R:SetVisibility((self.bLast or self.ShopItemData.SinglePreview) and ESlateVisibility.Collapsed or ESlateVisibility.SelfHitTestInvisible)
+    self.Key_GamePad_L:SetVisibility((self.bFirst or self.ShopItemData.SinglePreview) and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Key_GamePad_R:SetVisibility((self.bLast or self.ShopItemData.SinglePreview) and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.SelfHitTestInvisible)
     if self.ShopItemData.SuitRewardId then
       self.Tab_Skin:UpdateSingleBottomKeyInfo(1, self.MenuKeyInfoList)
-      self.Tab_Skin:SetSingleBottomKeyInfoVisibility(1, ESlateVisibility.SelfHitTestInvisible)
-      self.Key_Preview:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-      self.Btn_Preview:SetVisibility(ESlateVisibility.Collapsed)
+      self.Tab_Skin:SetSingleBottomKeyInfoVisibility(1, UIConst.VisibilityOp.SelfHitTestInvisible)
+      self.Key_Preview:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      self.Btn_Preview:SetVisibility(UIConst.VisibilityOp.Collapsed)
     else
       self.Tab_Skin:UpdateSingleBottomKeyInfo(1, {})
-      self.Tab_Skin:SetSingleBottomKeyInfoVisibility(1, ESlateVisibility.Collapsed)
-      self.Key_Preview:SetVisibility(ESlateVisibility.Collapsed)
+      self.Tab_Skin:SetSingleBottomKeyInfoVisibility(1, UIConst.VisibilityOp.Collapsed)
+      self.Key_Preview:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end
     if self.ShopItemData.ItemType == "Skin" or self.ShopItemData.ItemType == "WeaponSkin" then
-      self.Key_Dye_GamePad:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.Key_Dye_GamePad:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     else
-      self.Key_Dye_GamePad:SetVisibility(ESlateVisibility.Collapsed)
+      self.Key_Dye_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end
     if self.BtnChooseGiftEnable then
-      self.Gift_GamePad:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.Gift_GamePad:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     else
-      self.Gift_GamePad:SetVisibility(ESlateVisibility.Collapsed)
+      self.Gift_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end
     if self.EnableDrag == false then
       self:HideDragKey(true)
@@ -234,43 +244,102 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
   if self.IsGamepadInput then
     if self.ShopItemData.SuitRewardId then
       self.Tab_Skin:UpdateSingleBottomKeyInfo(1, self.MenuKeyInfoList)
-      self.Key_Preview:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-      self.Btn_Preview:SetVisibility(ESlateVisibility.Collapsed)
+      self.Key_Preview:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      self.Btn_Preview:SetVisibility(UIConst.VisibilityOp.Collapsed)
     else
       self.Tab_Skin:UpdateSingleBottomKeyInfo(1, {})
     end
     if self.ShopItemData.ItemType == "WeaponSkin" or self.ShopItemData.ItemType == "Skin" then
-      self.Key_Dye_GamePad:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.Key_Dye_GamePad:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     else
-      self.Key_Dye_GamePad:SetVisibility(ESlateVisibility.Collapsed)
+      self.Key_Dye_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end
     if not self.bFirst and not self.ShopItemData.SinglePreview then
-      self.Key_GamePad_L:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.Key_GamePad_L:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     end
     if not self.bLast and not self.ShopItemData.SinglePreview then
-      self.Key_GamePad_R:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.Key_GamePad_R:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     end
     if self.BtnChooseGiftEnable then
-      self.Gift_GamePad:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.Gift_GamePad:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     else
-      self.Gift_GamePad:SetVisibility(ESlateVisibility.Collapsed)
+      self.Gift_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end
     if false == self.EnableDrag then
       self:HideDragKey(true)
     else
       self:HideDragKey(false)
     end
-    self.Key_LevelUp:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Key_LevelUp:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Key_CheckMod:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Key_Mod:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   else
     if self.ShopItemData.SuitRewardId then
-      self.Key_Preview:SetVisibility(ESlateVisibility.Collapsed)
-      self.Btn_Preview:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.Key_Preview:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.Btn_Preview:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     end
-    self.Key_GamePad_L:SetVisibility(ESlateVisibility.Collapsed)
-    self.Key_GamePad_R:SetVisibility(ESlateVisibility.Collapsed)
-    self.Key_Preview:SetVisibility(ESlateVisibility.Collapsed)
-    self.Gift_GamePad:SetVisibility(ESlateVisibility.Collapsed)
-    self.Key_LevelUp:SetVisibility(ESlateVisibility.Collapsed)
+    self.Key_GamePad_L:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Key_GamePad_R:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Key_Preview:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Gift_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Key_LevelUp:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Key_CheckMod:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Key_Mod:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+end
+
+function M:OnModMenuStateChanged(bIsOpen)
+  if bIsOpen then
+    if UIUtils.IsGamepadInput() then
+      self.Btn_Function:ForbidBtn(true)
+    end
+    self.BottomKeyInfo_BeforeSelectDiscount = not self.Tab_Skin.BottomKeyInfo_BeforeResourceSelect and self.Tab_Skin.ConfigData and self.Tab_Skin.ConfigData.BottomKeyInfo
+    if UIUtils.IsGamepadInput() then
+      self.Gift_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.Tab_Change:ForceHideGamePadKey(true)
+      self.Tab_Change:UpdateGamePadKey()
+      self.Key_GamePad_L:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.Key_GamePad_R:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.WS_Btn_Dye:SetActiveWidgetIndex(0)
+      self.Key_Preview:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.Btn_Function:SetGamepadIconVisibility(false)
+      self.Tab_Skin.WBP_Com_Tab_ResourceBar:HideGamePadKey(true)
+      self.Key_LevelUp:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.Key_CheckMod:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.Key_Mod:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+    local KeyInfo = {}
+    self.Tab_Skin:UpdateBottomKeyInfo(KeyInfo)
+    self.InSelectDiscountMode = true
+  else
+    if not self.BuyButtonState then
+      self.Btn_Function:ForbidBtn(false)
+    end
+    if self.BottomKeyInfo_BeforeSelectDiscount then
+      local KeyInfo = self.BottomKeyInfo_BeforeSelectDiscount
+      self.BottomKeyInfo_BeforeSelectDiscount = nil
+      self.Tab_Skin:UpdateBottomKeyInfo(KeyInfo)
+    end
+    if UIUtils.IsGamepadInput() then
+      if self.BtnChooseGiftEnable then
+        self.Gift_GamePad:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      end
+      self.Tab_Change:ForceHideGamePadKey(false)
+      self.Tab_Change:UpdateGamePadKey()
+      self.Key_GamePad_L:SetVisibility((self.bFirst or self.ShopItemData.SinglePreview) and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.SelfHitTestInvisible)
+      self.Key_GamePad_R:SetVisibility((self.bLast or self.ShopItemData.SinglePreview) and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.SelfHitTestInvisible)
+      self.WS_Btn_Dye:SetActiveWidgetIndex(1)
+      self.Key_Preview:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      self.Btn_Function:SetGamepadIconVisibility(true)
+      self.Tab_Skin.WBP_Com_Tab_ResourceBar:HideGamePadKey(false)
+      self.Key_LevelUp:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      self.Key_CheckMod:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      self.Key_Mod:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
+    self.InSelectDiscountMode = false
+    if UIUtils.IsGamepadInput() then
+      self:SetFocus()
+    end
   end
 end
 
@@ -287,6 +356,8 @@ function M:EnterSelectDiscountMode()
     self.Btn_Function:SetGamepadIconVisibility(false)
     self.Tab_Skin.WBP_Com_Tab_ResourceBar:HideGamePadKey(true)
     self.Key_LevelUp:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Key_CheckMod:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Key_Mod:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
   self.InSelectDiscountMode = true
 end
@@ -310,6 +381,8 @@ function M:ExitSelectDiscountMode()
     self.Btn_Function:SetGamepadIconVisibility(true)
     self.Tab_Skin.WBP_Com_Tab_ResourceBar:HideGamePadKey(false)
     self.Key_LevelUp:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Key_CheckMod:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Key_Mod:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   end
   self.InSelectDiscountMode = false
 end
@@ -367,27 +440,27 @@ end
 function M:HideDragKey(IsHidden)
   if IsHidden then
     self.Tab_Skin:UpdateSingleBottomKeyInfo(5, {})
-    self.Tab_Skin:SetSingleBottomKeyInfoVisibility(5, ESlateVisibility.Collapsed)
+    self.Tab_Skin:SetSingleBottomKeyInfoVisibility(5, UIConst.VisibilityOp.Collapsed)
   else
     self.Tab_Skin:UpdateSingleBottomKeyInfo(5, self.RightThumbstickAnalogBottomKeyInfoList)
-    self.Tab_Skin:SetSingleBottomKeyInfoVisibility(5, ESlateVisibility.SelfHitTestInvisible)
+    self.Tab_Skin:SetSingleBottomKeyInfoVisibility(5, UIConst.VisibilityOp.SelfHitTestInvisible)
   end
 end
 
 function M:HideZoomKey(IsHidden)
   if IsHidden then
     self.Tab_Skin:UpdateSingleBottomKeyInfo(4, {})
-    self.Tab_Skin:SetSingleBottomKeyInfoVisibility(4, ESlateVisibility.Collapsed)
+    self.Tab_Skin:SetSingleBottomKeyInfoVisibility(4, UIConst.VisibilityOp.Collapsed)
   else
     self.Tab_Skin:UpdateSingleBottomKeyInfo(4, self.ZoomKeyInfoList)
-    self.Tab_Skin:SetSingleBottomKeyInfoVisibility(4, ESlateVisibility.SelfHitTestInvisible)
+    self.Tab_Skin:SetSingleBottomKeyInfoVisibility(4, UIConst.VisibilityOp.SelfHitTestInvisible)
   end
 end
 
 function M:HideReplayKey(IsHidden)
   if IsHidden then
     self.Tab_Skin:UpdateSingleBottomKeyInfo(2, {})
-    self.Tab_Skin:SetSingleBottomKeyInfoVisibility(2, ESlateVisibility.Collapsed)
+    self.Tab_Skin:SetSingleBottomKeyInfoVisibility(2, UIConst.VisibilityOp.Collapsed)
   else
     self.Tab_Skin:UpdateSingleBottomKeyInfo(2, {})
     if self.ShopItemData.ItemType == "Mount" then
@@ -398,7 +471,7 @@ function M:HideReplayKey(IsHidden)
         self.Tab_Skin:UpdateSingleBottomKeyInfo(2, self.ReplayKeyInfoList)
       end
     end
-    self.Tab_Skin:SetSingleBottomKeyInfoVisibility(2, ESlateVisibility.SelfHitTestInvisible)
+    self.Tab_Skin:SetSingleBottomKeyInfoVisibility(2, UIConst.VisibilityOp.SelfHitTestInvisible)
   end
 end
 

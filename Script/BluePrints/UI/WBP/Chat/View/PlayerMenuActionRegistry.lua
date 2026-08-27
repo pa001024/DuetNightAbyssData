@@ -20,7 +20,7 @@ M.ActionId = {
   QuitGuild = "QUIT_GUILD",
   DissolveGuild = "DISSOLVE_GUILD"
 }
-local GetActionBuilders
+local GetActionBuilders, CopyActionIds, RemoveActionById, AddGuildAction
 
 function M:BuildMenuFuncList(ActionIds, Context)
   local FuncList = {}
@@ -35,6 +35,85 @@ function M:BuildMenuFuncList(ActionIds, Context)
     end
   end
   return FuncList
+end
+
+function M:BuildDefaultActionIds(Context)
+  Context = Context or {}
+  local ActionIds = {}
+  local AvatarInfo = Context.AvatarInfo
+  local Avatar = ChatController:GetAvatar()
+  if not Avatar or type(AvatarInfo) ~= "table" then
+    return ActionIds
+  end
+  local Uid = AvatarInfo.Uid or AvatarInfo.Uuid
+  local IsYourSelf = Uid == Avatar.Uid
+  local InBounsScene = GWorld.GameInstance.IsInTempScene and GWorld.GameInstance:IsInTempScene()
+  local IsInDungeon = GWorld:GetAvatar():IsInDungeon()
+  local IsInHardBoss = GWorld:GetAvatar():IsInHardBoss()
+  local TeamModel = TeamController:GetModel()
+  local TargetUid = AvatarInfo.Uid or AvatarInfo.Uuid
+  local bNotInvitable = TeamModel:GetInviteSendBox()[TargetUid] or Avatar:IsInMultiDungeon()
+  local TeamData = TeamModel:GetTeam()
+  bNotInvitable = bNotInvitable or 4 == (TeamData and #TeamData.Members) or TeamModel:IsMemberExist(TargetUid)
+  local ShouldCheckInviteTeam = false
+  if IsInHardBoss then
+    if InBounsScene then
+      ShouldCheckInviteTeam = true
+      ActionIds = IsYourSelf and {} or {
+        M.ActionId.AddFriendOrChat,
+        M.ActionId.InviteTeam
+      }
+    else
+      ShouldCheckInviteTeam = true
+      ActionIds = IsYourSelf and {
+        M.ActionId.ShowRecord
+      } or {
+        M.ActionId.AddFriendOrChat,
+        M.ActionId.ShowRecord,
+        M.ActionId.InviteTeam
+      }
+    end
+  elseif InBounsScene or IsInDungeon then
+    if InBounsScene then
+      ActionIds = IsYourSelf and {} or {
+        M.ActionId.AddFriendOrChat
+      }
+    else
+      ShouldCheckInviteTeam = true
+      ActionIds = IsYourSelf and {} or {
+        M.ActionId.AddFriendOrChat,
+        M.ActionId.InviteTeam
+      }
+    end
+  else
+    ShouldCheckInviteTeam = true
+    ActionIds = IsYourSelf and {
+      M.ActionId.ShowRecord
+    } or {
+      M.ActionId.AddFriendOrChat,
+      M.ActionId.ShowRecord,
+      M.ActionId.InviteTeam
+    }
+  end
+  if not IsYourSelf and not table.isempty(ActionIds) then
+    if bNotInvitable and ShouldCheckInviteTeam then
+      RemoveActionById(ActionIds, M.ActionId.InviteTeam)
+    end
+    if Context.bApplyChatChannelFilter ~= false then
+      local Channel = ChatController:GetModel():GetCurrentChannel()
+      if (Channel == ChatCommon.ChannelDef.InTeam or Channel == ChatCommon.ChannelDef.Friend) and FriendModel:GetFriendDict()[AvatarInfo.Uid] and IsValid(ChatController:GetView()) then
+        RemoveActionById(ActionIds, M.ActionId.AddFriendOrChat)
+      end
+    end
+  end
+  if false ~= Context.bIncludeGuildAction then
+    AddGuildAction(ActionIds, Context.GuildInfo, AvatarInfo, Context.GuildNotShowOpreationBtn, Context.NotShowGuildSendPrivateChat)
+  end
+  local ConfigActionIds = Context.MenuConfig and Context.MenuConfig.VisibleActionIds
+  if type(ConfigActionIds) == "table" then
+    ActionIds = CopyActionIds(ConfigActionIds)
+  end
+  return ActionIds
 end
 
 local function CloseMenu(Context)
@@ -112,7 +191,7 @@ local function BuildAddFriendOrChat(Context)
       
       function Content.Callback()
         CloseFrontUIBeforeNavigate()
-        ChatController:OpenView(self)
+        ChatController:OpenView(nil)
         ChatController:SelectPlayerToChat(TargetUid)
         CloseMenu(Context)
       end
@@ -261,6 +340,67 @@ local function DissolveGuild(Context)
       local GuildCommon = require("BluePrints.UI.WBP.Guild.Common.GuildCommon")
       local UIManager = GWorld.GameInstance:GetGameUIManager()
       UIManager:ShowCommonPopupUI(GuildCommon.GuildComfirmDialog, Params)
+    end
+  end
+end
+
+function CopyActionIds(ActionIds)
+  local Copied = {}
+  for _, ActionId in ipairs(ActionIds or {}) do
+    table.insert(Copied, ActionId)
+  end
+  return Copied
+end
+
+function RemoveActionById(ActionIds, TargetActionId)
+  for Idx, ActionId in ipairs(ActionIds or {}) do
+    if ActionId == TargetActionId then
+      table.remove(ActionIds, Idx)
+      return
+    end
+  end
+end
+
+function AddGuildAction(ActionIds, GuildInfo, AvatarInfo, GuildNotShowOpreationBtn, NotShowGuildSendPrivateChat)
+  local IsInGuild = GuildController:GetModel():IsInGuild()
+  if not IsInGuild then
+    return
+  end
+  if not GuildInfo then
+    table.insert(ActionIds, M.ActionId.GuildInvite)
+    return
+  end
+  local MyUid = ChatController:GetAvatar().Uid
+  local MemberUid = AvatarInfo.Uuid or AvatarInfo.Uid
+  if MyUid == MemberUid then
+    local MemberCount = #GuildInfo.Members
+    local IsMaster = MyUid == GuildInfo.OwnerUid
+    if IsMaster and 1 == MemberCount then
+      table.insert(ActionIds, M.ActionId.DissolveGuild)
+    else
+      if IsMaster then
+        GuildInfo.IsSelfMaster = IsMaster
+      end
+      table.insert(ActionIds, M.ActionId.QuitGuild)
+    end
+    return
+  end
+  local SelfGuildInfo = GuildController:GetModel():GetCurrGuild()
+  if GuildInfo.GuildId == SelfGuildInfo.GuildId then
+    if not NotShowGuildSendPrivateChat then
+      table.insert(ActionIds, M.ActionId.GuildSendPrivateChat)
+    end
+    local SelfMember = GuildController.GetGuildMember(SelfGuildInfo.Members, ChatController:GetAvatar().Uid)
+    local CurMember = GuildController.GetGuildMember(GuildInfo.Members, MemberUid)
+    local SelfTitle = SelfMember.Title
+    local CurTitle = CurMember.Title
+    if not GuildNotShowOpreationBtn then
+      if SelfTitle >= 3 and SelfTitle > CurTitle then
+        table.insert(ActionIds, M.ActionId.GuildAdjustRole)
+      end
+      if SelfTitle > CurTitle then
+        table.insert(ActionIds, M.ActionId.KickOutGuildMember)
+      end
     end
   end
 end

@@ -3,6 +3,7 @@ local ImpressionModel = require("BluePrints.Story.Talk.Model.ImpressionModel")
 local M = Class("BluePrints.UI.BP_EMUserWidget_C")
 
 function M:Init(RegionId)
+  self.RegionId = RegionId
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     GWorld.logger.error("BP_DimensionDrawAreaBtn_C：Init()，Avatar不存在")

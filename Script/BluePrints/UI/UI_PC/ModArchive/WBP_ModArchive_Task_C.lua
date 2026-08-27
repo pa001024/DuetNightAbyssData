@@ -97,39 +97,16 @@ function WBP_ModArchive_Task_C:InitTasks()
       TaskInfo.TaskDes = v.TaskDes
       TaskInfo.JumpTaskTypeParam = v.JumpTaskTypeParam
       TaskInfo.CollectTaskTypeParam = v.CollectTaskTypeParam
-      if v.TaskType == "Jump" then
-        local CompleteCount = Avatar.AchvTargets:GetAchvTarget(v.TargetId[1]).Count
-        if CompleteCount >= v.Target then
-          TaskInfo.Complete = true
-        else
-          TaskInfo.Complete = false
-        end
-      elseif v.TaskType == "Collect" then
+      local ModBookQuest = Avatar.ModBookQuests:GetModBookQuest(v.TaskId)
+      TaskInfo.Complete = ModBookQuest and ModBookQuest.IsComplete and ModBookQuest:IsComplete() or false
+      TaskInfo.RewardsGot = ModBookQuest and ModBookQuest.RewardsGot or false
+      if v.TaskType == "Collect" then
         local ModStates = {}
-        TaskInfo.Complete = true
-        for i = 1, #v.CollectTaskTypeParam do
-          ModStates[v.CollectTaskTypeParam[i]] = false
-        end
-        for ModId, GetTime in pairs(Avatar.HoldMods) do
-          if false == ModStates[ModId] then
-            ModStates[ModId] = true
-          end
-        end
-        for i = 1, #v.CollectTaskTypeParam do
-          if not ModStates[v.CollectTaskTypeParam[i]] then
-            TaskInfo.Complete = false
-          end
+        local UniqueRecords = ModBookQuest and ModBookQuest.UniqueRecords
+        for _, ModId in ipairs(v.CollectTaskTypeParam or {}) do
+          ModStates[ModId] = UniqueRecords and UniqueRecords[tostring(ModId)] ~= nil or false
         end
         TaskInfo.ModStates = ModStates
-      end
-      local ModBookQuest = Avatar.ModBookQuests:GetModBookQuest(v.TaskId)
-      if ModBookQuest.IsComplete and ModBookQuest:IsComplete() then
-        TaskInfo.Complete = true
-      end
-      if ModBookQuest.RewardsGot then
-        TaskInfo.RewardsGot = true
-      else
-        TaskInfo.RewardsGot = false
       end
       table.insert(self.ValidTask, TaskInfo)
     end
@@ -520,7 +497,7 @@ function WBP_ModArchive_Task_C:RefreshLRBtnState()
     Info.Id = ResourceId
     Info.Count = Reward.Count[j][1]
     Info.ItemName = ItemData.ResourceName
-    Info.ItemType = "Resource"
+    Info.ItemType = Reward.Type[j]
     Info.Rarity = ItemData.Rarity or ItemData.WeaponRarity or 1
     Info.Icon = ItemData.Icon
     Info.IsShowDetails = true

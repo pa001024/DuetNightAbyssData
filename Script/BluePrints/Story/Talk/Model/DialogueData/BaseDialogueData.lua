@@ -27,6 +27,7 @@ DialogueId:]] .. DialogueId
   Obj.DialoguePanelType = DialogueData.DialoguePanelType
   Obj.HeadIconType = DialogueData.HeadIconType
   Obj.GuideFacialId = DialogueData.GuideFacialId
+  Obj.Facial2DId = DialogueData.Facial2DId
   Obj.CameraBlendCurve = DialogueData.CameraBlendCurve
   return Obj
 end

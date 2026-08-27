@@ -31,10 +31,10 @@
   },
   {
     "tabId": 4,
-    "name": "Myriade limitée",
+    "name": "Retour limité",
     "icon": "T_Gacha_PoolBanner_Zhiliu01",
-    "reddotNode": "Gacha_Special_3",
-    "sequence": 1,
+    "reddotNode": "Gacha_ReSpecial_3",
+    "sequence": 2,
     "gachaIds": [
       9004
     ]
@@ -67,6 +67,16 @@
     "sequence": 1,
     "gachaIds": [
       9007
+    ]
+  },
+  {
+    "tabId": 8,
+    "name": "Myriade limitée",
+    "icon": "T_Gacha_PoolBanner_Falu01",
+    "reddotNode": "Gacha_Special_7",
+    "sequence": 1,
+    "gachaIds": [
+      9008
     ]
   }
 ]

@@ -51,12 +51,7 @@ function WBP_Forging_Convert_Main_C:OnLoaded(...)
   self:InitUI()
   self:InitKeySetting()
   self:InitTab()
-  self:InitLeftList()
   self:ShowItemDetailsPanel(false)
-  self:AddTimer(0.01, function()
-    self:ChooseDefault()
-    self:RemoveTimer("TimeToLoadList")
-  end, false, 0, "TimeToLoadList")
   self.WBP_Forging_Convert:InitSlider()
   self.EMList:SetScrollbarVisibility(UE4.ESlateVisibility.Collapsed)
   self.EMList:SetControlScrollbarInside(true)
@@ -155,12 +150,40 @@ function WBP_Forging_Convert_Main_C:InitKeySetting()
   self.EscapeKey = "Escape"
   self.KeyDownEvent = {}
   self.KeyDownEvent[self.EscapeKey] = self.OnReturnKeyDown
+  self.KeyDownEvent[self.SwitchTab_LeftKey] = function()
+    self.Com_Tab:TabToLeft()
+  end
+  self.KeyDownEvent[self.SwitchTab_RightKey] = function()
+    self.Com_Tab:TabToRight()
+  end
 end
 
 function WBP_Forging_Convert_Main_C:InitTab()
+  local AllTabInfo = {}
+  self.TabIdx2DataIdx = {}
+  self.TabIdx2TabType = {}
+  for i = 1, #DataMgr.RecastingTab do
+    table.insert(self.TabIdx2DataIdx, i)
+  end
+  table.sort(self.TabIdx2DataIdx, function(DataIdx_1, DataIdx_2)
+    return DataMgr.RecastingTab[DataIdx_1].Sequence > DataMgr.RecastingTab[DataIdx_2].Sequence
+  end)
+  for TabIdx = 1, #DataMgr.RecastingTab do
+    local DataIdx = self.TabIdx2DataIdx[TabIdx]
+    local TabData = DataMgr.RecastingTab[DataIdx]
+    self.TabIdx2TabType[TabIdx] = TabData.ProductType
+    table.insert(AllTabInfo, {
+      Text = GText(TabData.TabName),
+      TabId = TabIdx,
+      IconPath = TabData.Icon
+    })
+  end
   local TabConfigData = {
     TitleName = GText("UI_Convert"),
+    LeftKey = "Q",
+    RightKey = "E",
     StyleName = "Text",
+    Tabs = AllTabInfo,
     DynamicNode = {
       "Back",
       "ResourceBar",
@@ -194,6 +217,52 @@ function WBP_Forging_Convert_Main_C:InitTab()
     OverridenTopResouces = {101}
   }
   self.Com_Tab:Init(TabConfigData)
+  self.Com_Tab:BindEventOnTabSelected(self, self.OnTabItemSelected)
+  self.Com_Tab:SelectTab(1)
+end
+
+function WBP_Forging_Convert_Main_C:OnTabItemSelected(TabWidget)
+  local PrevTabType = self:GetCurrentTabType()
+  self.TabIndex = TabWidget.Idx
+  self:InitLeftList()
+  if self.IsNavigatingToTargetConvert then
+    return
+  end
+  self:ChooseDefault()
+  self:NavigateToFirstEntry()
+end
+
+function WBP_Forging_Convert_Main_C:NavigateToFirstEntry()
+  self:AddTimer(0.2, function()
+    if self.IsNavigatingToTargetConvert then
+      return
+    end
+    local ForgeItemWidgets = self.EMList:GetDisplayedEntryWidgets()
+    local AllItemsNum = self.EMList:GetNumItems()
+    local ForgeItemWidgetsNum = ForgeItemWidgets:Num()
+    local MinIndex = -1
+    for Index = 1, ForgeItemWidgetsNum do
+      local Entry = ForgeItemWidgets:GetRef(Index)
+      local EntryIndex = self.EMList:GetIndexForItem(Entry.Content)
+      if -1 ~= EntryIndex then
+        if -1 == MinIndex then
+          MinIndex = EntryIndex
+        else
+          MinIndex = math.min(MinIndex, EntryIndex)
+        end
+      end
+    end
+    MinIndex = math.clamp(MinIndex, 0, AllItemsNum - 1)
+    if not CommonUtils:IfExistSystemGuideUI(self) then
+      self.EMList:NavigateToIndex(MinIndex)
+      self.EMList:SetFocus()
+    end
+  end)
+end
+
+function WBP_Forging_Convert_Main_C:GetCurrentTabType()
+  local TabType = self.TabIdx2TabType[self.TabIndex]
+  return TabType
 end
 
 function WBP_Forging_Convert_Main_C:InitLeftList()
@@ -203,15 +272,18 @@ function WBP_Forging_Convert_Main_C:InitLeftList()
     return
   end
   local sortHelper = {}
+  local TabType = self:GetCurrentTabType()
   for id, Data in pairs(ConvertData) do
     local ProductId
-    if Data.ProductType == CommonConst.ArmoryType.Mod then
-      ProductId = Data.ModConvertResource
-    else
-      ProductId = Data.ProductId
-    end
-    if ProductId then
-      table.insert(sortHelper, {id = id, Data = Data})
+    if "All" == TabType or Data.ProductTipsType == TabType then
+      if Data.ProductType == CommonConst.ArmoryType.Mod then
+        ProductId = Data.ModConvertResource
+      else
+        ProductId = Data.ProductId
+      end
+      if ProductId then
+        table.insert(sortHelper, {id = id, Data = Data})
+      end
     end
   end
   table.sort(sortHelper, function(a, b)
@@ -225,7 +297,7 @@ function WBP_Forging_Convert_Main_C:InitLeftList()
     Content.bActivate = true
     Content.bGolden = false
     Content.ItemData = item.Data
-    Content.ConvertId = item.CovertId
+    Content.ConvertId = item.id
     local ResourceId, ItemType, ProductType
     if Content.ItemData.ProductType == CommonConst.ArmoryType.Mod then
       ResourceId = Content.ItemData.ModConvertResource
@@ -302,8 +374,11 @@ function WBP_Forging_Convert_Main_C:ShowChooseUI(ChoosedMaterialTbl)
   self.WBP_Forging_Convert_PopUp_Choose:ShowAllMaterial(self.CurListItem, ChoosedMaterialTbl)
 end
 
-function WBP_Forging_Convert_Main_C:OnEMListItemClicked(Item)
-  DebugPrint("Yihan@ WBP_Forging_Convert_C:OnEMListItemClicked12312312313", Item)
+function WBP_Forging_Convert_Main_C:SelectEMListItem(Item)
+  if not Item then
+    return
+  end
+  DebugPrint("Yihan@ WBP_Forging_Convert_C:SelectEMListItem", Item)
   if self.WBP_Forging_Convert.bInMixAnimation or self.CurListItem == Item then
     return
   end
@@ -313,7 +388,6 @@ function WBP_Forging_Convert_Main_C:OnEMListItemClicked(Item)
   self.WBP_Forging_Convert_PopUp_Choose:InitAll(Item)
   self.WBP_Forging_Convert:UpdateBottomState({})
   local CurWidget = URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(self.EMList, self.EMList:GetIndexForItem(Item))
-  DebugPrint("Yihan@ 111111111111111111CurWidget", CurWidget)
   if self:ItemIsNew(Item.Idx) then
     local ConvertReddotDetails = ReddotManager.GetLeafNodeCacheDetail("ForgeConvert")
     for _, Details in pairs(ConvertReddotDetails) do
@@ -341,7 +415,14 @@ function WBP_Forging_Convert_Main_C:OnEMListItemClicked(Item)
   self.EMList:BP_ClearSelection()
   self.EMList:BP_SetItemSelection(Item, true)
   self.CurListItem = Item
-  AudioManager(self):PlayItemSound(self, self.CurListItem.Id, "Click", self.CurListItem.ItemType)
+  return true
+end
+
+function WBP_Forging_Convert_Main_C:OnEMListItemClicked(Item)
+  if not self:SelectEMListItem(Item) then
+    return
+  end
+  AudioManager(self):PlayItemSound(self, Item.Id, "Click", Item.ItemType)
 end
 
 function WBP_Forging_Convert_Main_C:OnClose()
@@ -357,12 +438,6 @@ function WBP_Forging_Convert_Main_C:OnClose()
   else
     self.IsClosing = true
     self:PlayAnimation(self.Out)
-    local GameInstance = GWorld.GameInstance
-    local UIManager = GameInstance:GetGameUIManager()
-    local ForgePage = UIManager:GetUIObj("ForgeMain")
-    if not ForgeConvertPage then
-      local UI = UIManager:LoadUINew("ForgeMain")
-    end
     self:ClearChoosedState()
     ForgeModel:ClearConvertNewRedDots()
     AudioManager(self):SetEventSoundParam(self, "ForgeConvertIn", {ToEnd = 1})
@@ -377,8 +452,11 @@ end
 
 function WBP_Forging_Convert_Main_C:ChooseDefault()
   local ListItems = self.EMList:GetListItems()
+  if ListItems:Num() <= 0 then
+    return
+  end
   local ListItem = ListItems:GetRef(1)
-  self:OnEMListItemClicked(ListItem)
+  self:SelectEMListItem(ListItem)
 end
 
 function WBP_Forging_Convert_Main_C:ClearChoosedState()
@@ -434,8 +512,93 @@ function WBP_Forging_Convert_Main_C:OnReturnKeyDown()
   self:OnClose()
 end
 
+function WBP_Forging_Convert_Main_C:NavigateToTab(TabIndex)
+  if self.TabIndex == TabIndex then
+    return
+  end
+  self.Com_Tab:SelectTab(TabIndex)
+end
+
+function WBP_Forging_Convert_Main_C:CancelNavigateToTargetConvert()
+  if self.NavigateToTargetConvertTimer then
+    self:RemoveTimer(self.NavigateToTargetConvertTimer)
+    self.NavigateToTargetConvertTimer = nil
+  end
+  if self.NavigateToTargetConvertFocusTimer then
+    self:RemoveTimer(self.NavigateToTargetConvertFocusTimer)
+    self.NavigateToTargetConvertFocusTimer = nil
+  end
+  self.TargetConvertId = nil
+  self.IsNavigatingToTargetConvert = false
+end
+
+function WBP_Forging_Convert_Main_C:NavigateToTargetConvert(ConvertId)
+  ConvertId = tonumber(ConvertId) or ConvertId
+  if not DataMgr.Convert or not DataMgr.Convert[ConvertId] then
+    DebugPrint("NavigateToTargetConvert：找不到ConvertId", ConvertId)
+    return false
+  end
+  self.WBP_Forging_Convert:ClearMergeTbl()
+  self:ClearAllMaterial()
+  self.WBP_Forging_Convert:UpdateBottomState({})
+  self.WBP_Forging_Convert:InitSliderValue()
+  self.WBP_Forging_Convert:UpdateTextPanel()
+  self:ShowItemDetailsPanel(false)
+  self.WBP_Forging_Convert_PopUp_Choose:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self:CancelNavigateToTargetConvert()
+  self.TargetConvertId = ConvertId
+  self.IsNavigatingToTargetConvert = true
+  self:NavigateToTab(1)
+  self.NavigateToTargetConvertTimer = self:AddTimer(0.3, function()
+    self.NavigateToTargetConvertTimer = nil
+    if not self.IsNavigatingToTargetConvert then
+      return
+    end
+    local ListItems = self.EMList:GetListItems()
+    local ListItemsNum = ListItems:Num()
+    local TargetObject
+    local TargetIndex = -1
+    for i = 1, ListItemsNum do
+      local ListItem = ListItems:GetRef(i)
+      if ListItem.ConvertId == ConvertId or ListItem.Idx == ConvertId then
+        TargetObject = ListItem
+        TargetIndex = i - 1
+        break
+      end
+    end
+    if not TargetObject then
+      self:CancelNavigateToTargetConvert()
+      self:ChooseDefault()
+      self:NavigateToFirstEntry()
+      return
+    end
+    local IsGamepad = UIUtils.IsGamepadInput()
+    if IsGamepad then
+      self.EMList:NavigateToIndex(TargetIndex)
+    else
+      self.EMList:ScrollIndexIntoView(TargetIndex)
+    end
+    self:SelectEMListItem(TargetObject)
+    self.NavigateToTargetConvertFocusTimer = self:AddTimer(0.1, function()
+      self.NavigateToTargetConvertFocusTimer = nil
+      if not self.IsNavigatingToTargetConvert then
+        return
+      end
+      local CurrentIndex = self.EMList:GetIndexForItem(TargetObject)
+      if IsGamepad and CurrentIndex >= 0 then
+        self.EMList:NavigateToIndex(CurrentIndex)
+        self.EMList:SetFocus()
+      end
+      self.TargetConvertId = nil
+      self.IsNavigatingToTargetConvert = false
+    end)
+  end)
+  return true
+end
+
 function WBP_Forging_Convert_Main_C:Destruct()
   DebugPrint("Yihan@ WBP_Forging_Convert_Main_C Destruct")
+  self:CancelNavigateToTargetConvert()
 end
 
 AssembleComponents(WBP_Forging_Convert_Main_C)

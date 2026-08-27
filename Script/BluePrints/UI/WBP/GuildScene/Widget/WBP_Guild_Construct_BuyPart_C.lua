@@ -8,8 +8,8 @@ end
 function M:InitContent(Params, PopupData, Owner)
   M.Super.InitContent(self, Params, PopupData, Owner)
   self.ItemData = Params.ItemData
-  self.ConsumeCurrency = tonumber(self.ItemData.ConsumeCurrency) or CommonConst.GuildFundsCoin
-  self.ConsumeNum = tonumber(self.ItemData.ConsumeNum) or 1
+  self.ConsumeCurrency = CommonConst.GuildFundsCoin
+  self.ConsumeNum = tonumber(self.ItemData.Cost) or 1
   self.CurrentCount = 1
   self:UpdatePricePanel()
   self:InitUIWidget()
@@ -47,14 +47,19 @@ function M:InitCommonWidget()
 end
 
 function M:InitUIWidget()
-  if self.ItemData.PicAlbum then
-    local IconTexture = LoadObject(self.ItemData.PicAlbum)
-    if IconTexture then
-      self.Image_Icon:SetBrushFromTexture(IconTexture)
-    end
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  local GuildManager = GameMode:GetGuildConstructManager()
+  local IconPath = GuildManager and GuildManager:GetAssetObjectIconStringPath(self.ItemData.ItemID)
+  if IconPath then
+    UResourceLibrary.LoadObjectAsync(self, IconPath, {
+      self,
+      function(_, IconTexture)
+        self.Image_Icon:SetBrushResourceObject(IconTexture)
+      end
+    })
   end
-  self.Text_Name:SetText(GText(self.ItemData.ComponentName))
-  self.Text_Desc:SetText(GText(self.ItemData.ComponentDesc))
+  self.Text_Name:SetText(GText(self.ItemData.Name))
+  self.Text_Desc:SetText(GText(self.ItemData.Desc))
   self.Text_Exchange:SetText(GText("UI_Shop_ExchangeAmount") .. ":")
   self:AddTimer(0.01, function()
     self:ForceLayoutPrepass()
@@ -123,13 +128,7 @@ function M:UpdateCost(Cost)
   if not IsValid(ChildCurrencyWidget) then
     return
   end
-  local Avatar = GWorld:GetAvatar()
-  local ResourceData = DataMgr.Resource[self.ConsumeCurrency]
-  if not ResourceData then
-    DebugPrint("WBP_Guild_Construct_BuyPart_C UpdateCost invalid ConsumeCurrency", self.ConsumeCurrency)
-    return
-  end
-  local ResourceCount = Avatar and Avatar:GetResourceNum(self.ConsumeCurrency) or 0
+  local ResourceCount = self:GetOwnedCount()
   local Params = {
     ResourceId = self.ConsumeCurrency,
     Denominator = Cost,
@@ -148,12 +147,9 @@ function M:GetMaxCount()
 end
 
 function M:GetOwnedCount()
-  local Data = DataMgr.Resource[self.ConsumeCurrency]
-  local Avatar = GWorld:GetAvatar()
-  if Avatar and Data then
-    return Avatar:GetResourceNum(self.ConsumeCurrency) or 0
-  end
-  return 0
+  local GuildInfo = GuildController:GetModel():GetCurrGuild()
+  local GuildHomeData = GuildInfo and GuildInfo.GuildHomeData
+  return GuildHomeData and GuildHomeData.Fund or 0
 end
 
 function M:IsSelectorEnabled()
@@ -173,12 +169,23 @@ function M:OnBuyBtnClicked()
   self.Owner.DontCloseWhenRightBtnClicked = nil
   local Avatar = GWorld:GetAvatar()
   
-  local function BuyComponentCallBack(Count)
+  local function BuyComponentCallBack(ErrCode, Msg)
+    if 0 ~= ErrCode then
+      UIManager(self):ShowError(ErrCode, 1.0, "CommonToastMain")
+      return
+    end
     UIManager(self):ShowUITip(UIConst.Tip_CommonToast, "UI_ComponentPurchased")
+    local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+    if GameMode then
+      local GuildManager = GameMode:GetGuildConstructManager()
+      if GuildManager then
+        GuildManager:UpdateGuildItemInventory(Msg)
+      end
+    end
     self.Owner:OnCloseBtnClicked()
   end
   
-  Avatar:GuildHomeBuyComponent(BuyComponentCallBack, self.ItemData.ID, self.CurrentCount)
+  Avatar:GuildHomeBuyComponent(BuyComponentCallBack, self.ItemData.ItemID, self.CurrentCount)
 end
 
 function M:OnKeyDown(MyGeometry, InKeyEvent)

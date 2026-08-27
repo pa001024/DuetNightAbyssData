@@ -2,6 +2,10 @@ local M = Class({
   "BluePrints.UI.UI_PC.Common.Common_Dialog.Common_Dialog_ContentBase"
 })
 
+local function IsSameRewardRecord(LeftRecord, RightRecord)
+  return LeftRecord and RightRecord and LeftRecord.TimeStamp == RightRecord.TimeStamp and LeftRecord.Round == RightRecord.Round and LeftRecord.PrizeIndex == RightRecord.PrizeIndex and LeftRecord.SelfSelectId == RightRecord.SelfSelectId
+end
+
 function M:Construct()
   self.ResultText = self.Text_Designation
   self.RoundText = self.Text_Type
@@ -81,8 +85,15 @@ function M:GenerateServerAdaptationRewardList(PoolId)
     local Pool = Avatar.LimitPrize[PoolId]
     if Pool then
       PrintTable(Pool.Record, 3)
+      local PreviousRecord
       for _, Record in ipairs(Pool.Record) do
-        table.insert(RewardList, Record.Props)
+        local CurrentRecord = Record.Props
+        if IsSameRewardRecord(PreviousRecord, CurrentRecord) then
+          PreviousRecord = nil
+        else
+          table.insert(RewardList, CurrentRecord)
+          PreviousRecord = CurrentRecord
+        end
       end
     end
   end

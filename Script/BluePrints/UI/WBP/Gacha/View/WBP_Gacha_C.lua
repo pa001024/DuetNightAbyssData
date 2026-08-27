@@ -121,6 +121,8 @@ function M:ReceiveEnterState(StackAction)
   M.Super.ReceiveEnterState(self, StackAction)
   if self.bInGachaMain then
     self:RefreshGachaInfo(self.TabId)
+  elseif self.bGachaRes and self.GetItemPage then
+    self.GetItemPage:OnPageReShown()
   end
   if UIUtils.IsGamepadInput() then
     local GiftPopup = UIManager(self):GetUIObj("GachaGiftPopup")

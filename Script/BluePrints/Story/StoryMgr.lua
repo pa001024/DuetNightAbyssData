@@ -10,8 +10,6 @@ function StoryMgr:Init()
   self.NpcInteractiveTalkDetail = {}
   self.NpcInteractiveTalkId = 0
   self.WaitTalkTriggerCompleted = {}
-  self.ClientQuestChains = nil
-  self.bEnableStory = true
 end
 
 function StoryMgr:IsCanRunStoryMgr()
@@ -21,38 +19,21 @@ function StoryMgr:IsCanRunStoryMgr()
   return false
 end
 
-function StoryMgr:EnableStory()
-  self.bEnableStory = true
-  EventManager:FireEvent(EventID.OnEnableStory)
+function StoryMgr:AddInLoadingListener()
   EventManager:AddEvent(EventID.InLoading, self, self.HandleInLoading)
-  local Avatar = GWorld:GetAvatar()
-  if Avatar then
-    EventManager:AddEvent(EventID.InLoading, Avatar, Avatar.ClientQuestChainsHandleInLoading)
-  end
 end
 
-function StoryMgr:DisableStory()
-  self.bEnableStory = false
+function StoryMgr:RemoveInLoadingListener()
   EventManager:RemoveEvent(EventID.InLoading, self)
-  local Avatar = GWorld:GetAvatar()
-  if Avatar then
-    EventManager:RemoveEvent(EventID.InLoading, Avatar)
-  end
 end
 
 function StoryMgr:HandleInLoading()
-  self:DisableStory()
+  self:RemoveInLoadingListener()
   if self:IsCanRunStoryMgr() == false then
     return
   end
   if TaskUtils and TaskUtils.RemoveAllQuestExtraInfo then
     TaskUtils:RemoveAllQuestExtraInfo()
-  end
-  if self.ClientQuestChains then
-    for _, ClientQuestChain in pairs(self.ClientQuestChains) do
-      ClientQuestChain:StopStoryline()
-    end
-    self.ClientQuestChains = nil
   end
   self:Clear()
 end
@@ -86,11 +67,6 @@ function StoryMgr:RunStory(StoryPath, QuestId, NodeId, EndCallback, StopCallback
   end
   
   local Storyline = StorylineUtils.BuildStoryline(StoryPath, EndCallbackWithClear, StopCallbackWithClear, Payload)
-  if self.bEnableStory == false then
-    local Title = "STL 已禁用"
-    local Message = string.format("试图在禁用时运行新的 STL %s", StoryPath)
-    UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, STLogType, Title, Message)
-  end
   if not Storyline then
     local Message = "Story不存在" .. [[
 
@@ -116,7 +92,7 @@ end
 function StoryMgr:StopStoryline(StoryPath, IgnoreFinishClear)
   local Storyline = self.Storylines[StoryPath]
   if Storyline then
-    Storyline:Stop(IgnoreFinishClear)
+    Storyline:StopStory(IgnoreFinishClear)
   end
 end
 
@@ -137,7 +113,7 @@ function StoryMgr:StopAllStoryline()
     table.insert(Storylines, Storyline)
   end
   for _, Storyline in pairs(Storylines) do
-    Storyline:Stop()
+    Storyline:StopStory()
   end
   self.Storylines = {}
 end

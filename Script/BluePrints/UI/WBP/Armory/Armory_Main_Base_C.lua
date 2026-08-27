@@ -302,12 +302,12 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, Params)
     Weapon = not self.ComparedChar and self[self.ComparedWeaponName or ""],
     Pet = self.ComparedPet,
     bNeedEndCamera = not Params.bNoEndCamera,
-    OnRecorverCameraEnd = {
-      Func = self.OnRecorverCameraEnd,
+    OnRecoverCameraEnd = {
+      Func = self.OnRecoverCameraEnd,
       Obj = self
     },
-    OnRecorverCameraStart = {
-      Func = self.OnRecorverCameraStart,
+    OnRecoverCameraStart = {
+      Func = self.OnRecoverCameraStart,
       Obj = self
     }
   })
@@ -468,25 +468,27 @@ function M:CreateTabContent(Tab, TabId, Params)
   else
     Obj = {}
   end
-  Obj.Owner = self
-  Obj.TabId = TabId
-  Obj.Name = Tab.Name
-  Obj.Type = Tab.Type
-  Obj.Tag = Tab.Tag
-  Obj.Text = Tab.Text
-  Obj.IconPath = Tab.IconPath
+  rawset(Obj, "Owner", self)
+  rawset(Obj, "TabId", TabId)
+  rawset(Obj, "Name", Tab.Name)
+  rawset(Obj, "Type", Tab.Type)
+  rawset(Obj, "Tag", Tab.Tag)
+  rawset(Obj, "Text", Tab.Text)
+  rawset(Obj, "IconPath", Tab.IconPath)
   if self.IsPC then
-    Obj.WidgetPath = Tab.PCWidgetPath
+    rawset(Obj, "WidgetPath", Tab.PCWidgetPath)
   else
-    Obj.WidgetPath = Tab.MobileWidgetPath
+    rawset(Obj, "WidgetPath", Tab.MobileWidgetPath)
   end
   if not self.IsPreviewMode then
-    Obj.CheckReddot = Tab.CheckReddot
+    rawset(Obj, "CheckReddot", Tab.CheckReddot)
     if Tab.CheckReddot then
-      Obj.IsNew, Obj.Upgradeable = Tab.CheckReddot(Params)
+      local IsNew, Upgradeable = Tab.CheckReddot(Params)
+      rawset(Obj, "IsNew", IsNew)
+      rawset(Obj, "Upgradeable", Upgradeable)
     end
   end
-  Obj.TabData = Tab
+  rawset(Obj, "TabData", Tab)
   return Obj
 end
 
@@ -513,31 +515,20 @@ function M:OnMainTabClicked(Widget, Content)
   self:SelectMainTab(Content)
 end
 
+local EquivalentSubTabNames = {
+  [ArmoryUtils.ArmorySubTabNames.HyperGrade] = ArmoryUtils.ArmorySubTabNames.Grade,
+  [ArmoryUtils.ArmorySubTabNames.Grade] = ArmoryUtils.ArmorySubTabNames.HyperGrade
+}
+
 function M:UpdateSubTabs(SubTabs)
   self.EMListView_SubTab:ClearListItems()
   local TabNameToSelect = not self.SubTabName_JumpTo and self.CurSubTab and self.CurSubTab.Name
-  local TabNameToSelectArray = {}
-  if TabNameToSelect then
-    TabNameToSelectArray[TabNameToSelect] = true
-    if TabNameToSelect == CommonConst.ArmoryTag.Grade or TabNameToSelect == CommonConst.ArmoryTag.HyperGrade then
-      TabNameToSelectArray[CommonConst.ArmoryTag.Grade] = true
-      TabNameToSelectArray[CommonConst.ArmoryTag.HyperGrade] = true
-    end
-  end
   local TabTypeToSelect = self.CurSubTab and self.CurSubTab.Type
-  local TabTypeToSelectArray = {}
-  if TabTypeToSelect then
-    TabTypeToSelectArray[TabTypeToSelect] = true
-    if TabTypeToSelect == CommonConst.ArmoryType.Weapon or TabTypeToSelect == CommonConst.ArmoryType.HyperWeapon then
-      TabTypeToSelectArray[CommonConst.ArmoryType.Weapon] = true
-      TabTypeToSelectArray[CommonConst.ArmoryType.HyperWeapon] = true
-    end
-  end
   self.SubTabName_JumpTo = nil
   local TabToSelect
   for _, Tab in ipairs(SubTabs) do
-    local bShouldSelectTab = nil == TabTypeToSelect or TabTypeToSelectArray[Tab.Type]
-    if TabNameToSelectArray[Tab.Name] and bShouldSelectTab then
+    local bShouldSelectTab = nil == TabTypeToSelect or TabTypeToSelect and Tab.Type == TabTypeToSelect
+    if bShouldSelectTab and (Tab.Name == TabNameToSelect or EquivalentSubTabNames[TabNameToSelect] == Tab.Name or EquivalentSubTabNames[Tab.Name] == TabNameToSelect) then
       Tab.IsSelected = true
       TabToSelect = Tab
     else
@@ -687,6 +678,7 @@ function M:ModifySubUIInitParams(Params)
   Params.bNeedPreviewSwitcher = self.bNeedPreviewSwitcher
   Params.IsCharacterTrialMode = self.IsCharacterTrialMode
   Params.bFormPersonalPage = self.Params.bFormPersonalPage
+  Params.bFromOptRewardPreview = self.Params.bFromOptRewardPreview
   self:CallFunctionByName(self.CurMainTab.Name .. "Main_ModifySubUIInitParams", Params)
 end
 
@@ -819,13 +811,7 @@ function M:UpdateMontageAndCamera(Duration)
     return
   end
   self.ActorController:FixedCameraTransTimeOnce(Duration)
-  local TabType = self.CurSubTab.Type
-  local TabTag = self.CurSubTab.Tag
-  if self.CurSubTab.Type == CommonConst.ArmoryType.HyperWeapon then
-    TabType = CommonConst.ArmoryType.Weapon
-    TabTag = CommonConst.ArmoryTag.Grade
-  end
-  self.ActorController:SetMontageAndCamera(TabType, self.CurMainTab.Name, TabTag)
+  self.ActorController:SetMontageAndCamera(self.CurSubTab.Type, self.CurMainTab.Name, self.CurSubTab.Tag)
 end
 
 function M:ResetActorRotation()
@@ -927,11 +913,11 @@ end
 function M:Component_BeforeClose()
 end
 
-function M:OnRecorverCameraStart()
+function M:OnRecoverCameraStart()
   self:ModifyWaitForCloseEventCount(true)
 end
 
-function M:OnRecorverCameraEnd()
+function M:OnRecoverCameraEnd()
   self:ModifyWaitForCloseEventCount(false)
 end
 
@@ -954,6 +940,12 @@ function M:RealClose()
   M.Super.RealClose(self)
   if self.OnCloseDelegate and self.OnCloseDelegate[2] then
     self.OnCloseDelegate[2](self.OnCloseDelegate[1], self.OnCloseDelegate[3])
+  end
+  if not UIManager(self):GetUI("SquadMainUINew") then
+    local PlayerCharacter = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
+    if IsValid(PlayerCharacter) and PlayerCharacter.TryCreateAutoAssistPhantomsForBigWorld then
+      PlayerCharacter:TryCreateAutoAssistPhantomsForBigWorld()
+    end
   end
 end
 
@@ -1094,7 +1086,7 @@ function M:CreateConstInfos()
     PCWidgetPath = "WidgetBlueprint'/Game/UI/WBP/Armory/PC/WBP_Armory_Incarnon_P.WBP_Armory_Incarnon_P'",
     MobileWidgetPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Mobile/WBP_Armory_Incarnon_M.WBP_Armory_Incarnon_M'",
     Name = ArmoryUtils.ArmorySubTabNames.HyperGrade,
-    Type = CommonConst.ArmoryType.HyperWeapon,
+    Type = CommonConst.ArmoryType.Weapon,
     Tag = CommonConst.ArmoryTag.HyperGrade,
     Text = GText(DataMgr.WeaponTab[4].Text),
     IconPath = DataMgr.WeaponTab[4].IconPath,
@@ -1238,14 +1230,45 @@ function M:CreateConstInfos()
             CheckReddot = function(Params)
             end
           },
+          [ArmoryUtils.ArmorySubTabNames.WeaponMastery] = {
+            PCWidgetPath = "WidgetBlueprint'/Game/UI/WBP/Armory/PC/WBP_Armory_Mastery_P.WBP_Armory_Mastery_P'",
+            MobileWidgetPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Mobile/WBP_Armory_Mastery_M.WBP_Armory_Mastery_M'",
+            Name = ArmoryUtils.ArmorySubTabNames.WeaponMastery,
+            Type = CommonConst.ArmoryType.Char,
+            Tag = ArmoryUtils.ArmorySubTabNames.WeaponMastery,
+            Text = GText(DataMgr.CharTab[5].Text),
+            IconPath = DataMgr.CharTab[5].IconPath,
+            CheckIsUnlocked = function(Avatar, Char)
+              if self.Params.bHideCharWeaponMastery then
+                return false
+              end
+              local Char = Char or self.ComparedChar
+              if not Char then
+                return false
+              end
+              return true
+            end,
+            CheckReddot = function(Params)
+              if self.IsPreviewMode then
+                return false
+              end
+              local Char = Params.Char or self.ComparedChar
+              Char = GWorld:GetAvatar().Chars[Char.Uuid]
+              if not Char then
+                return false
+              end
+              local IsClicked = EMCache:Get("IsWeaponMasterySubTabClicked" .. Char.CharId, true)
+              return not IsClicked
+            end
+          },
           [ArmoryUtils.ArmorySubTabNames.Files] = {
             PCWidgetPath = "WidgetBlueprint'/Game/UI/WBP/Armory/PC/WBP_Armory_Record_P.WBP_Armory_Record_P'",
             MobileWidgetPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Mobile/WBP_Armory_Record_M.WBP_Armory_Record_M'",
             Name = ArmoryUtils.ArmorySubTabNames.Files,
             Type = CommonConst.ArmoryType.Char,
             Tag = CommonConst.ArmoryTag.Files,
-            Text = GText(DataMgr.CharTab[5].Text),
-            IconPath = DataMgr.CharTab[5].IconPath,
+            Text = GText(DataMgr.CharTab[6].Text),
+            IconPath = DataMgr.CharTab[6].IconPath,
             CheckIsUnlocked = function(Avatar, Char)
               local CharGroup = ArmoryUtils:GetCharGroup(Char.CharId)
               local Gender2RoleIds = Const.DefaultAttributeMaster
@@ -1260,6 +1283,7 @@ function M:CreateConstInfos()
           ArmoryUtils.ArmorySubTabNames.Attribute,
           ArmoryUtils.ArmorySubTabNames.Skill,
           ArmoryUtils.ArmorySubTabNames.Grade,
+          ArmoryUtils.ArmorySubTabNames.WeaponMastery,
           ArmoryUtils.ArmorySubTabNames.Appearance,
           ArmoryUtils.ArmorySubTabNames.Files
         },

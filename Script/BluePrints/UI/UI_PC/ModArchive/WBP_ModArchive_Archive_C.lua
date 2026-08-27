@@ -99,6 +99,7 @@ function WBP_ModArchive_Archive_C:OnTabSelected()
     self.PreTab = self.CurTab
   end
   self.CurTab = NextTab
+  self:ClearTabNew(self.CurTab)
   local NeedUpdateModCount = true
   self:InitTabList(NeedUpdateModCount)
   self:PlayAnimation(self.SwitchTab)
@@ -254,19 +255,21 @@ function WBP_ModArchive_Archive_C:AddModArchiveListItemContent(Entry, listIdx, M
       self.CurItemWidget = Widget
       if self.IsInPolarityView or not self.IsInSearchView then
       end
-      if ModBookModsViewState[ArchiveId] and ModBookModsViewState[ArchiveId][CurModInfo.Id] then
+      if ModBookModsViewState[ArchiveId] and true == ModBookModsViewState[ArchiveId][CurModInfo.Id] then
         ModBookModsViewState[ArchiveId][CurModInfo.Id] = false
-      end
-      local ReddotNode = DataMgr.ModGuideBookArchiveTab[self.CurTab].ReddotNode
-      local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(ReddotNode)
-      if CacheDetail.NewNum then
-        CacheDetail.NewNum = CacheDetail.NewNum - 1
-        if CacheDetail.States and CacheDetail.States[CurModInfo.Id] then
-          CacheDetail.States[CurModInfo.Id] = false
+        local ReddotNode = DataMgr.ModGuideBookArchiveTab[self.CurTab].ReddotNode
+        local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(ReddotNode)
+        if CacheDetail then
+          if CacheDetail.States and CacheDetail.States[CurModInfo.Id] then
+            CacheDetail.States[CurModInfo.Id] = false
+          end
+          if (CacheDetail.NewNum or 0) > 0 then
+            CacheDetail.NewNum = CacheDetail.NewNum - 1
+            ReddotManager.DecreaseLeafNodeCount(ReddotNode, 1, CacheDetail)
+          end
         end
+        EMCache:Set("ModBookModsViewState", ModBookModsViewState, true)
       end
-      ReddotManager.DecreaseLeafNodeCount(ReddotNode, 1, CacheDetail)
-      EMCache:Set("ModBookModsViewState", ModBookModsViewState, true)
     end
     Widget:PlayAnimation(Widget.In)
   end
@@ -377,13 +380,15 @@ function WBP_ModArchive_Archive_C:OnItemClicked(ModInfo, LockState, WidgetIndex,
     Widget.Content.RedDotType = nil
     local ReddotNode = DataMgr.ModGuideBookArchiveTab[self.CurTab].ReddotNode
     local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(ReddotNode)
-    if CacheDetail and CacheDetail.NewNum then
-      CacheDetail.NewNum = CacheDetail.NewNum - 1
+    if CacheDetail then
       if CacheDetail.States and CacheDetail.States[ModInfo.Id] then
         CacheDetail.States[ModInfo.Id] = false
       end
+      if (CacheDetail.NewNum or 0) > 0 then
+        CacheDetail.NewNum = CacheDetail.NewNum - 1
+        ReddotManager.DecreaseLeafNodeCount(ReddotNode, 1, CacheDetail)
+      end
     end
-    ReddotManager.DecreaseLeafNodeCount(ReddotNode, 1, CacheDetail)
   end
   EMCache:Set("ModBookModsViewState", ModBookModsViewState, true)
   self.Owner:RefreshDot()
@@ -669,44 +674,56 @@ function WBP_ModArchive_Archive_C:OnMenuOpenChanged(bIsOpen)
   end
 end
 
-function WBP_ModArchive_Archive_C:HandlePreTab()
-  if not self.GroupInfo then
+function WBP_ModArchive_Archive_C:ClearTabNew(TabId)
+  local TabInfo = DataMgr.ModGuideBookArchiveTab and DataMgr.ModGuideBookArchiveTab[TabId]
+  if not TabInfo then
     return
   end
   local ModBookModsViewState = EMCache:Get("ModBookModsViewState", true)
-  if not ModBookModsViewState then
-    return
-  end
-  local Num = 0
-  for _, ModInfo in pairs(self.GroupInfo) do
-    if ModInfo then
-      for i = 1, #ModInfo.ModList do
-        local ModId = ModInfo.ModList[i]
-        if ModBookModsViewState and ModBookModsViewState[ModInfo.ArchiveId] and ModBookModsViewState[ModInfo.ArchiveId][ModId] then
-          Num = Num + 1
-          ModBookModsViewState[ModInfo.ArchiveId][ModId] = false
+  local ViewStateChanged = false
+  if ModBookModsViewState then
+    for ArchiveId, ArchiveInfo in pairs(DataMgr.ModGuideBookArchive or {}) do
+      if ArchiveInfo.TabId == TabId and ModBookModsViewState[ArchiveId] then
+        for ModId, IsNew in pairs(ModBookModsViewState[ArchiveId]) do
+          if true == IsNew then
+            ModBookModsViewState[ArchiveId][ModId] = false
+            ViewStateChanged = true
+          end
         end
       end
     end
   end
-  EMCache:Set("ModBookModsViewState", ModBookModsViewState, true)
-  self.Owner:RefreshDot()
-  if self.PreTab then
-    local ReddotNode = DataMgr.ModGuideBookArchiveTab[self.PreTab].ReddotNode
+  if ViewStateChanged then
+    EMCache:Set("ModBookModsViewState", ModBookModsViewState, true)
+  end
+  local ReddotChanged = false
+  local ReddotNode = TabInfo.ReddotNode
+  if ReddotNode then
     local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(ReddotNode)
-    local DecreaseNum = 0
-    if CacheDetail.NewNum then
-      DecreaseNum = CacheDetail.NewNum
+    if CacheDetail then
+      local DecreaseNum = CacheDetail.NewNum or 0
       CacheDetail.NewNum = 0
-    end
-    if CacheDetail.States then
-      for index, value in pairs(CacheDetail.States) do
-        CacheDetail.States[index] = false
+      if CacheDetail.States then
+        for ModId, IsNew in pairs(CacheDetail.States) do
+          if true == IsNew then
+            CacheDetail.States[ModId] = false
+            ReddotChanged = true
+          end
+        end
+      end
+      if DecreaseNum > 0 then
+        ReddotChanged = true
+        ReddotManager.DecreaseLeafNodeCount(ReddotNode, DecreaseNum, CacheDetail)
       end
     end
-    CacheDetail.NewNum = 0
-    ReddotManager.DecreaseLeafNodeCount(ReddotNode, DecreaseNum, CacheDetail)
   end
+  if (ViewStateChanged or ReddotChanged) and self.Owner then
+    self.Owner:RefreshDot()
+  end
+end
+
+function WBP_ModArchive_Archive_C:HandlePreTab()
+  self:ClearTabNew(self.PreTab)
 end
 
 function WBP_ModArchive_Archive_C:PreClose()
@@ -774,7 +791,7 @@ end
 function WBP_ModArchive_Archive_C:InitPolarityList()
   if not self.PolarityFilterConf then
     self.PolarityFilterConf = {}
-    local SortedConfs = ModModel:GetSortedPolarityConfs()
+    local SortedConfs = ModModel:GetSortedModPolarityConfs()
     for _, PolarityInfo in pairs(SortedConfs) do
       table.insert(self.PolarityFilterConf, {
         Polarity = PolarityInfo.Id

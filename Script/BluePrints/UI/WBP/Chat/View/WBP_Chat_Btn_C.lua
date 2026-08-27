@@ -25,13 +25,13 @@ function M:BtnAreaOnClicked()
   if self.OnClick and self.BindObj then
     self.OnClick(self.BindObj)
   end
-  AudioManager(self):PlayUISound(self, "event:/ui/common/click", nil, nil)
 end
 
 function M:OnListItemObjectSet(Content)
   Content.UI = self
   self.IsEnter = nil
   self.ForceHideGamepadKey = Content and Content.ForceHideGamepadKey == true
+  self.AlwaysShowGamepadKey = Content and true == Content.AlwaysShowGamepadKey
   self.Owner = Content.Owner
   self.Button_Area:SetVisibility(UIConst.VisibilityOp.Visible)
   self:SetText(Content.Text)
@@ -64,6 +64,7 @@ function M:Destruct()
   self.BindObj = nil
   self.OnClick = nil
   self.bForbidden = nil
+  self.AlwaysShowGamepadKey = nil
   self.ForceHideGamepadKey = nil
   self.Button_Area.OnClicked:Remove(self, self.BtnAreaOnClicked)
   self.Button_Forbid.OnClicked:Remove(self, self.BtnAreaOnClicked)
@@ -114,7 +115,7 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
 end
 
 function M:UpdateUIStyleInPlatform()
-  local IsShow = not self.ForceHideGamepadKey and self.IsEnter and self.CurInputDeviceType == ECommonInputType.Gamepad
+  local IsShow = not self.ForceHideGamepadKey and self.CurInputDeviceType == ECommonInputType.Gamepad and (self.IsEnter or self.AlwaysShowGamepadKey)
   self.Key_Text:SetVisibility(IsShow and UIConst.VisibilityOp.Visible or UIConst.VisibilityOp.Collapsed)
 end
 

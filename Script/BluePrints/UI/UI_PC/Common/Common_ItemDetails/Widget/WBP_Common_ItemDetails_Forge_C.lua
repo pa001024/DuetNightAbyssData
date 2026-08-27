@@ -41,14 +41,16 @@ function WBP_Common_ItemDetails_Forge_C:InitView(DraftInfo, Controller, OnDetail
   else
     self.Text_RequiredTime:SetText(string.format(GText("UI_SHOP_REMAINTIME_MINUTE"), math.floor(DraftInfo.CostTime / 60)))
   end
+  self.LastTime:SetTimeText("")
+  self.Btn_SpeedUp:SetGamePadImg("A")
+  self.Btn_SpeedUp:SetText(GText("UI_COMMONPOP_TITLE_100018"))
   local AccelerateCostType = DataMgr.GlobalConstant.AccelerateCostType.ConstantValue
-  self.Cost_Ticket:InitContent({
+  self.Btn_SpeedUp.Cost_Ticket:InitContent({
     ResourceId = AccelerateCostType,
     Numerator = 0,
     Denominator = 0,
     bShowDenominator = true
   })
-  self.Cost_Ticket:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
   if DraftInfo.State == ForgeConst.DraftState.NotStarted then
     self:InitNotStartedView(DraftInfo)
   elseif DraftInfo.State == ForgeConst.DraftState.InProgress then
@@ -62,11 +64,13 @@ function WBP_Common_ItemDetails_Forge_C:InitView(DraftInfo, Controller, OnDetail
   self.BtnStart:BindEventOnClicked(self, self.OnBtnStartClicked)
   self.BtnReward:UnBindEventOnClickedByObj(self)
   self.BtnReward:BindEventOnClicked(self, self.OnBtnStartClicked)
+  self.Btn_SpeedUp:UnBindEventOnClickedByObj(self)
+  self.Btn_SpeedUp:BindEventOnClicked(self, self.OnBtnStartClicked)
   self.Btn_Cancel:UnBindEventOnClickedByObj(self)
   self.Btn_Cancel:BindEventOnClicked(self, self.OnBtnCancelClicked)
   self.Key_Controller_Cancel:CreateGamepadKey(UIConst.GamePadImgKey.FaceButtonLeft)
   self.Cost:SwitchToPC()
-  self.Cost_Ticket:SwitchToPC()
+  self.Btn_SpeedUp.Cost_Ticket:SwitchToPC()
   local GameInputSubsystem = UIManager(self):GetGameInputModeSubsystem()
   if GameInputSubsystem then
     GameInputSubsystem.OnInputMethodChanged:Add(self, self.RefreshOpInfoByInputDevice)
@@ -131,7 +135,6 @@ function WBP_Common_ItemDetails_Forge_C:InitNotStartedView(DraftInfo)
   if self.CurrentDraftInfo.CanProduce then
     self.BtnStart:SetText(GText("UI_FORGING_START"))
     self.Switch_Btn:SetActiveWidgetIndex(0)
-    self.Switch_Material:SetActiveWidgetIndex(0)
     self.Cost:SetIsEnough(true)
     self:PlayAnimation(self.CastNormal)
     self.Switch_Type:SetActiveWidgetIndex(0)
@@ -152,8 +155,7 @@ end
 
 function WBP_Common_ItemDetails_Forge_C:InitInProgressView(DraftInfo)
   self.WidgetCurrentState = ForgeConst.DraftState.InProgress
-  self.Switch_Btn:SetActiveWidgetIndex(0)
-  self.Switch_Material:SetActiveWidgetIndex(1)
+  self.Switch_Btn:SetActiveWidgetIndex(3)
   self.BtnStart:SetText(GText("UI_COMMONPOP_TITLE_100018"))
   self.BtnStart:SetVisibility(UE4.ESlateVisibility.Visible)
   self.VX_glowfire:ActivateSystem(true)
@@ -208,12 +210,12 @@ function WBP_Common_ItemDetails_Forge_C:UpdateAccerateTickets()
     local Cost = self.Controller.ForgeModel:GetAccerateCost(self.CurrentDraftInfo.Id)
     local Avatar = GWorld:GetAvatar()
     local Count = Avatar:GetResourceNum(AccelerateCostType)
-    self.Cost_Ticket:SetCost(Cost, Count)
+    self.Btn_SpeedUp.Cost_Ticket:SetCost(Cost, Count)
     if Cost > Count then
       self.Switch_Btn:SetActiveWidgetIndex(2)
       self.Text_Tips_MaterialNotEnough:SetText(GText("UI_FORGING_ACCELERATE_NOTENOUGH"))
     else
-      self.Switch_Btn:SetActiveWidgetIndex(0)
+      self.Switch_Btn:SetActiveWidgetIndex(3)
     end
   end
 end
@@ -237,6 +239,7 @@ function WBP_Common_ItemDetails_Forge_C:SwitchToProgressView(IsImmediately)
     self:PlayAnimation(self.CastProgress)
   end
   self.Switch_Type:SetActiveWidgetIndex(0)
+  self.Panel_Progress:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   if UIUtils.IsGamepadInput() then
     self.Key_Controller_Cancel:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   end

@@ -6,6 +6,7 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
 end
 return ReadOnly("WeaponAccessoryId2ModApplicationType", {
   [20001] = 103,
+  [20004] = 105,
   [30001] = 102,
   [40001] = 106
 })

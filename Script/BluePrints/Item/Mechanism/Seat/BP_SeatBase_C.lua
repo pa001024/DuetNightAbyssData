@@ -4,7 +4,6 @@ local UseNewNpcMoveComp = true
 
 function BP_SeatBase_C:ReceiveBeginPlay()
   BP_SeatBase_C.Super.ReceiveBeginPlay(self)
-  self.PointArray = self:K2_GetComponentsByClass(LoadClass("/Game/BluePrints/Item/Mechanism/Seat/BP_SeatPointComponent.BP_SeatPointComponent_C"):StaticClass())
   self.PlayerAndSeat = {}
   self.DefaultInteractiveComponent.MergeName = "Seat"
   if self.DefaultInteractiveComponent then
@@ -187,14 +186,7 @@ function BP_SeatBase_C:PlayAnim(PlayerId, InteractiveState, MechanismEid)
 end
 
 function BP_SeatBase_C:GetCanOpen(PlayerEid)
-  local tmp = true
-  for i = 1, self.PointArray:Length() do
-    tmp = tmp and self.PointArray[i].IsUsed
-  end
-  self.CanOpen = not tmp
-  local Player = Battle(self):GetEntity(PlayerEid)
-  local CharacterInfo = DataMgr.PlayerStateMachine[Player.AutoSyncProp.CharacterTag]
-  self.CanOpen = self.CanOpen and not CharacterInfo.Seating
+  self.Overridden.GetCanOpen(self, PlayerEid)
 end
 
 function BP_SeatBase_C:FindPoint(PlayerEid)
@@ -374,6 +366,9 @@ function BP_SeatBase_C:OpenMechanismWithoutInteractive(Character, CallBackFunc, 
       end
       local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
       Character:SetCharacterTag(self.ChestInteractiveComponent.InteractiveTag)
+      if Character.CharacterFashion then
+        Character.CharacterFashion:StopNPCCreateEffectTimer()
+      end
       self:SetSittingParam(Character, Point, EnterPoint)
       Character.CapsuleComponent:IgnoreActorWhenMoving(self, true)
       Character.CapsuleComponent:IgnoreActorWhenMoving(Player, true)

@@ -538,4 +538,96 @@ function Component:_OnPropChangeCharacterAttributeSwitch(Keys)
   self._CharacterAttributeSwitchMapCache = self:_CopyCharacterAttributeSwitchMap(self.CharacterAttributeSwitch)
 end
 
+function Component:UnlockExcelWeaponExpand(CharUuid, ExcelWeaponTags, InCallback)
+  self.logger.debug("UnlockExcelWeaponExpand Begin", CommonUtils.ObjId2Str(CharUuid), CommonUtils.TableToString(ExcelWeaponTags))
+  
+  local function Callback(ret)
+    self.logger.debug("UnlockExcelWeaponExpand Callback", ret)
+    if InCallback then
+      InCallback(ret, CharUuid, ExcelWeaponTags)
+    end
+    EventManager:FireEvent(EventID.OnExcelWeaponExpandUnlocked, ret, CharUuid, ExcelWeaponTags)
+  end
+  
+  self:CallServer("UnlockExcelWeaponExpand", Callback, CharUuid, ExcelWeaponTags)
+end
+
+function Component:SwitchExcelWeaponExpand(CharUuid, ExcelWeaponTags, InCallback)
+  self.logger.debug("SwitchExcelWeaponExpand Begin", CommonUtils.ObjId2Str(CharUuid), CommonUtils.TableToString(ExcelWeaponTags))
+  
+  local function Callback(ret)
+    self.logger.debug("SwitchExcelWeaponExpand Callback", ret)
+    if InCallback then
+      InCallback(ret, CharUuid, ExcelWeaponTags)
+    end
+    EventManager:FireEvent(EventID.OnExcelWeaponExpandSwitched, ret, CharUuid, ExcelWeaponTags)
+  end
+  
+  self:CallServer("SwitchExcelWeaponExpand", Callback, CharUuid, ExcelWeaponTags)
+end
+
+function Component:SwitchArmoryTargetWarLike(InCallback, TargetType, TargetId, IsWarLike)
+  local TargetInfo = {
+    TargetType = TargetType,
+    TargetId = TargetId,
+    IsWarLike = true == IsWarLike
+  }
+  
+  local function Callback(ret)
+    self.logger.debug("SwitchArmoryTargetWarLike Callback", ret, TargetType, CommonUtils.ObjId2Str(TargetId), TargetInfo.IsWarLike)
+    if InCallback then
+      InCallback(ret, TargetInfo)
+    end
+  end
+  
+  self:CallServer("SwitchArmoryTargetWarLike", Callback, TargetInfo)
+end
+
+function Component:GetFirstTwoPhantomAndWeapon(IgnoreAutoSwitch)
+  if true ~= IgnoreAutoSwitch and true ~= self.bAutoPhantomForBigWorld then
+    return nil
+  end
+  if self:IsInDungeon2() then
+    return nil
+  end
+  local SubRegionId = self.CurrentRegionId
+  local tabSubRegion = DataMgr.SubRegion[SubRegionId]
+  if tabSubRegion and tabSubRegion.PalForbidden then
+    return nil
+  end
+  local UpdateInfo = {}
+  local FirstChar, SecondChar = AvatarUtils:GetFirstTwoCharOrWeapon(self, self.Chars, "Char", function(Eid)
+    if Eid == self.CurrentChar then
+      return true
+    end
+    local char_1 = self.Chars[Eid]
+    local char_2 = self.Chars[self.CurrentChar]
+    return char_1 and char_2 and not not AvatarUtils:IsCharacterAttributeSwitchSameGroup(char_1.CharId, char_2.CharId)
+  end)
+  UpdateInfo.Phantom1 = FirstChar
+  UpdateInfo.Phantom2 = SecondChar
+  local FirstWeapon, SecondWeapon = AvatarUtils:GetFirstTwoCharOrWeapon(self, self.Weapons, "Weapon", function(Eid)
+    return Eid == self.MeleeWeapon or Eid == self.RangedWeapon
+  end)
+  if FirstChar then
+    if FirstWeapon then
+      UpdateInfo.PhantomWeapon1 = FirstWeapon
+      UpdateInfo.PhantomWeaponModSuit1 = self.Weapons[FirstWeapon] and self.Weapons[FirstWeapon].ModSuitIndex
+    else
+      UpdateInfo.Phantom1 = nil
+      UpdateInfo.PhantomWeaponModSuit1 = 0
+    end
+  end
+  if SecondChar then
+    if SecondWeapon then
+      UpdateInfo.PhantomWeapon2 = SecondWeapon
+      UpdateInfo.PhantomWeaponModSuit2 = self.Weapons[SecondWeapon] and self.Weapons[SecondWeapon].ModSuitIndex
+    else
+      UpdateInfo.Phantom2 = nil
+      UpdateInfo.PhantomWeaponModSuit2 = 0
+    end
+  end
+  return UpdateInfo
+end
+
 return Component

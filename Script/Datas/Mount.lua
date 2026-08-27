@@ -14,6 +14,11 @@ T.RT_4 = {
   5
 }
 T.RT_5 = {
+  0,
+  0,
+  15
+}
+T.RT_6 = {
   10,
   0,
   -30
@@ -91,11 +96,7 @@ return ReadOnly("Mount", {
     MountDisplayScale = 0.6,
     MountIcon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_0004.T_Mounts_0004",
     MountId = 1003,
-    MountLocOffset = {
-      0,
-      0,
-      15
-    },
+    MountLocOffset = T.RT_5,
     MountName = "RESOURCE_NAME_49996",
     MountRarity = 4,
     ResourceIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mounts/T_Icon_Mounts_0004.T_Icon_Mounts_0004",
@@ -112,7 +113,7 @@ return ReadOnly("Mount", {
     MountDisplayScale = 0.5,
     MountIcon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_0005.T_Mounts_0005",
     MountId = 1004,
-    MountLocOffset = T.RT_5,
+    MountLocOffset = T.RT_6,
     MountName = "RESOURCE_NAME_49995",
     MountRarity = 5,
     ResourceIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mounts/T_Icon_Mounts_0005.T_Icon_Mounts_0005",
@@ -131,7 +132,7 @@ return ReadOnly("Mount", {
     MountDisplayScale = 0.5,
     MountIcon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_0006.T_Mounts_0006",
     MountId = 1005,
-    MountLocOffset = T.RT_5,
+    MountLocOffset = T.RT_6,
     MountName = "RESOURCE_NAME_49992",
     MountRarity = 5,
     ResourceIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mounts/T_Icon_Mounts_0006.T_Icon_Mounts_0006",
@@ -148,7 +149,7 @@ return ReadOnly("Mount", {
     MountDisplayScale = 0.5,
     MountIcon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_0008.T_Mounts_0008",
     MountId = 1006,
-    MountLocOffset = T.RT_5,
+    MountLocOffset = T.RT_6,
     MountName = "RESOURCE_NAME_49994",
     MountRarity = 5,
     ResourceIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mounts/T_Icon_Mounts_0008.T_Icon_Mounts_0008",
@@ -165,7 +166,7 @@ return ReadOnly("Mount", {
     MountDisplayScale = 0.5,
     MountIcon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_0007.T_Mounts_0007",
     MountId = 1007,
-    MountLocOffset = T.RT_5,
+    MountLocOffset = T.RT_6,
     MountName = "RESOURCE_NAME_49993",
     MountRarity = 5,
     ResourceIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mounts/T_Icon_Mounts_0007.T_Icon_Mounts_0007",
@@ -262,5 +263,42 @@ return ReadOnly("Mount", {
     ResourceIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mounts/T_Icon_Mounts_0013.T_Icon_Mounts_0013",
     ResourceId = 49987,
     SortPriority = 99
+  },
+  [1013] = {
+    AccessKey = T.RT_3,
+    AnimPath = "/Game/Asset/Char/Mount/Mnt004_Zhenzi/Animation/Montage/Interactive/Mnt004_Zhenzi_System_Idle_Montage.Mnt004_Zhenzi_System_Idle_Montage",
+    BattleMountId = 1013,
+    CameraName = "Char_Mount_ZhenZi",
+    FlyLicense = 1,
+    MountDes = "RESOURCE_DESC_49996",
+    MountDisplayScale = 0.6,
+    MountIcon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_0017.T_Mounts_0017",
+    MountId = 1013,
+    MountLocOffset = T.RT_5,
+    MountName = "RESOURCE_NAME_49986",
+    MountRarity = 4,
+    ResourceIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mounts/T_Icon_Mounts_0017.T_Icon_Mounts_0017",
+    ResourceId = 49986,
+    SortPriority = 98
+  },
+  [1014] = {
+    AccessKey = T.RT_3,
+    AnimPath = "/Game/Asset/Char/Mount/Mnt009_Zaie/Animation/Montage/Interactive/Mnt009_Zaie_System_Idle_Montage.Mnt009_Zaie_System_Idle_Montage",
+    BattleMountId = 1014,
+    CameraName = "Char_Mount_HeiLong",
+    MountDes = "RESOURCE_DESC_49985",
+    MountDisplayScale = 0.3,
+    MountIcon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_0014.T_Mounts_0014",
+    MountId = 1014,
+    MountLocOffset = {
+      30,
+      0,
+      5
+    },
+    MountName = "RESOURCE_NAME_49985",
+    MountRarity = 6,
+    ResourceIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mounts/T_Icon_Mounts_0014.T_Icon_Mounts_0014",
+    ResourceId = 49985,
+    SortPriority = 104
   }
 })

@@ -337,7 +337,15 @@ end
 
 function M:SetQualityModeOldOptionId()
   self:RefreshSuperResolution()
-  self.OldOptionId = SettingUtils.GetEMCache(self.CacheName, self.EMCacheKey, tonumber(self.DefaultValue))
+  local SubOptionDefaultValueTemp = self:GetSubOptionDefaultValue()
+  local CurDefault = SubOptionDefaultValueTemp[SettingUtils.GetUpValueByValueType(self.UpOptionValue)]
+  local CacheValue
+  if 0 == CurDefault then
+    self.OldOptionId = 0
+  else
+    CacheValue = SettingUtils.GetEMCache(self.CacheName, self.EMCacheKey, CurDefault)
+    self.OldOptionId = 0 == CacheValue and CurDefault or CacheValue
+  end
 end
 
 function M:RestoreDefaultQualityMode()
@@ -346,9 +354,12 @@ end
 
 function M:SaveQualityModeOptionSetting()
   self:RefreshSuperResolution()
-  USRMBlueprintLibrary.SetSRTypeAndQuality(self.UpOption.UpscalingMethod, self.OptionIdToQuality[self.NowOptionId] or 1)
-  SettingUtils.SaveEMCache(self.CacheName, self.EMCacheKey, self.NowOptionId)
-  SettingUtils.SaveEMCache("QualityModeValue", nil, self.OptionIdToQuality[self.NowOptionId] or 1)
+  local QualityModeValue = self.OptionIdToQuality[self.NowOptionId] or 1
+  USRMBlueprintLibrary.SetSRTypeAndQuality(self.UpOption.UpscalingMethod, QualityModeValue)
+  if 0 ~= self.NowOptionId then
+    SettingUtils.SaveEMCache(self.CacheName, self.EMCacheKey, self.NowOptionId)
+    SettingUtils.SaveEMCache("QualityModeValue", nil, QualityModeValue)
+  end
 end
 
 function M:RefreshSuperResolution()

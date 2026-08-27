@@ -162,16 +162,16 @@
     "entrusts": [
       {
         "id": 10001,
-        "name": "Gathering Request",
-        "desc": "\"You're always out and about. Bet you've picked up a fair few good finds — think you could sell me some? I'm trying out a little sideline...\"",
-        "icon": "T_Head_WaimaiJJ",
-        "exp": 30,
-        "weight": 10,
+        "name": "Daily Commission",
+        "desc": "You're... a Phoxhunter? Here's the thing: I want to buy some local specialities, but I'm far too busy to visit every shop myself. Someone recommended you. Name your price. Whatever it takes, I want those goods.",
+        "icon": "T_Fame_Head02",
+        "exp": 20,
+        "weight": 20,
         "items": [
           [
             "Resource",
             4010011,
-            10
+            6
           ],
           [
             "Resource",
@@ -182,16 +182,16 @@
       },
       {
         "id": 10002,
-        "name": "Gathering Request",
-        "desc": "\"You're always out and about. Bet you've picked up a fair few good finds — think you could sell me some? I'm trying out a little sideline...\"",
-        "icon": "T_Head_WaimaiJJ",
-        "exp": 30,
-        "weight": 10,
+        "name": "Daily Commission",
+        "desc": "Every time we pass that shop, Mum says she'll buy it for me if I do what she asks. Last time, she said I had to work two shifts in one day. This time, she told me to look after my little sister. I did everything she asked, but she still hasn't kept her promise... I want it so badly. If only someone would bring it to me...",
+        "icon": "T_Fame_Head01",
+        "exp": 20,
+        "weight": 20,
         "items": [
           [
             "Resource",
             4010011,
-            10
+            6
           ],
           [
             "Resource",
@@ -202,16 +202,16 @@
       },
       {
         "id": 10003,
-        "name": "Gathering Request",
-        "desc": "\"You're always out and about. Bet you've picked up a fair few good finds — think you could sell me some? I'm trying out a little sideline...\"",
-        "icon": "T_Head_WaimaiJJ",
-        "exp": 30,
-        "weight": 10,
+        "name": "Daily Commission",
+        "desc": "My husband? He left a few years ago. Maybe Filthoids got him. Maybe someone did. Either way, he never came back. I'm not telling you this for sympathy. We're only making conversation while I wait for my order.",
+        "icon": "T_Fame_Head03",
+        "exp": 20,
+        "weight": 20,
         "items": [
           [
             "Resource",
             4010011,
-            10
+            6
           ],
           [
             "Resource",
@@ -222,11 +222,11 @@
       },
       {
         "id": 10004,
-        "name": "Gathering Request",
-        "desc": "\"You're always out and about. Bet you've picked up a fair few good finds — think you could sell me some? I'm trying out a little sideline...\"",
-        "icon": "T_Head_WaimaiJJ",
-        "exp": 30,
-        "weight": 10,
+        "name": "Daily Commission",
+        "desc": "They're fascinating, aren't they? Don't you think so? I've spent most of my life studying them. These days, I could close my eyes, take a single whiff, and tell you exactly what you've brought me.",
+        "icon": "T_Fame_Head02",
+        "exp": 20,
+        "weight": 20,
         "items": [
           [
             "Resource",
@@ -242,11 +242,11 @@
       },
       {
         "id": 10005,
-        "name": "Gathering Request",
-        "desc": "\"You're always out and about. Bet you've picked up a fair few good finds — think you could sell me some? I'm trying out a little sideline...\"",
-        "icon": "T_Head_WaimaiJJ",
-        "exp": 30,
-        "weight": 10,
+        "name": "Daily Commission",
+        "desc": "I've grown tired of lavish jewellery. I want something new — something out of the ordinary. I've given the same commission to a foreign merchant, a wandering bard, and you. Let's see which of you can surprise me.",
+        "icon": "T_Fame_Head02",
+        "exp": 20,
+        "weight": 20,
         "items": [
           [
             "Resource",
@@ -262,9 +262,9 @@
       },
       {
         "id": 10006,
-        "name": "Materials Request",
-        "desc": "\"A Phoxhunter wants to wager with you — says there's no way you'll get hold of those supplies. Care to take the bet?\"",
-        "icon": "T_Head_Kami",
+        "name": "Daily Commission",
+        "desc": "I've worked at the factory for years. Tired or not, life goes on. I hear you can make good money as a Phoxhunter, though the work can be dangerous. So why did you become one? Let's see if you're any good.",
+        "icon": "T_Fame_Head02",
         "exp": 20,
         "weight": 20,
         "items": [
@@ -282,9 +282,9 @@
       },
       {
         "id": 10007,
-        "name": "Materials Request",
-        "desc": "\"A Phoxhunter wants to wager with you — says there's no way you'll get hold of those supplies. Care to take the bet?\"",
-        "icon": "T_Head_Kami",
+        "name": "Daily Commission",
+        "desc": "I want everything on this list! Money? Father will take care of that. Now go find it all for me!",
+        "icon": "T_Fame_Head02",
         "exp": 20,
         "weight": 20,
         "items": [
@@ -302,9 +302,9 @@
       },
       {
         "id": 10008,
-        "name": "Materials Request",
-        "desc": "\"A Phoxhunter wants to wager with you — says there's no way you'll get hold of those supplies. Care to take the bet?\"",
-        "icon": "T_Head_Kami",
+        "name": "Daily Commission",
+        "desc": "Hic... I'm not drunk! I used to be quite the famous Phoxhunter, I'll have you know! Huh? You're one too? Heh... I don't buy it. You've got... hic... three hours. Bring me these materials, and maybe then I'll believe you!",
+        "icon": "T_Fame_Head02",
         "exp": 20,
         "weight": 20,
         "items": [
@@ -322,9 +322,9 @@
       },
       {
         "id": 10009,
-        "name": "Materials Request",
-        "desc": "\"A Phoxhunter wants to wager with you — says there's no way you'll get hold of those supplies. Care to take the bet?\"",
-        "icon": "T_Head_Kami",
+        "name": "Daily Commission",
+        "desc": "Ahem! I've decided to rank Icelake's Phoxhunters, and all my friends at school get a vote! Want to enter? Bring back a few things and show me what you can do. I'll tell everyone how amazing you are when it's time to vote!",
+        "icon": "T_Fame_Head03",
         "exp": 20,
         "weight": 20,
         "items": [
@@ -342,16 +342,16 @@
       },
       {
         "id": 10010,
-        "name": "Materials Request",
-        "desc": "\"A Phoxhunter wants to wager with you — says there's no way you'll get hold of those supplies. Care to take the bet?\"",
-        "icon": "T_Head_Kami",
-        "exp": 20,
-        "weight": 20,
+        "name": "Urgent Commission",
+        "desc": "The night winds in Icelake have been dreadful lately. Even the flowers in the greenhouse are wilting, and the ladies coming to collect their orders won't be pleased. If it isn't too much trouble, could you gather some fresh flowers from the wild? I'll mix them in with what we have and make up the bouquets.",
+        "icon": "T_Fame_Head03",
+        "exp": 30,
+        "weight": 10,
         "items": [
           [
             "Resource",
             20002,
-            400
+            600
           ],
           [
             "Resource",
@@ -362,16 +362,16 @@
       },
       {
         "id": 10011,
-        "name": "Materials Request",
-        "desc": "\"A Phoxhunter wants to wager with you — says there's no way you'll get hold of those supplies. Care to take the bet?\"",
-        "icon": "T_Head_Kami",
-        "exp": 20,
-        "weight": 20,
+        "name": "Urgent Commission",
+        "desc": "I still can't get her out of my mind... I'd like to send her something unusual — not fruit from my own orchard, but something that grows wild. A Phoxhunter should know where to look. I do hope she likes it...",
+        "icon": "T_Fame_Head02",
+        "exp": 30,
+        "weight": 10,
         "items": [
           [
             "Resource",
             20012,
-            400
+            600
           ],
           [
             "Resource",
@@ -382,9 +382,9 @@
       },
       {
         "id": 10012,
-        "name": "Materials Request",
-        "desc": "\"A Phoxhunter wants to wager with you — says there's no way you'll get hold of those supplies. Care to take the bet?\"",
-        "icon": "T_Head_Kami",
+        "name": "Urgent Commission",
+        "desc": "Ahh... I'm so tired I could sleep for a week... But those merchants keep pestering me about stocking local specialities. How am I supposed to know where to find them? You wouldn't happen to know, would you?",
+        "icon": "T_Fame_Head04",
         "exp": 30,
         "weight": 10,
         "items": [
@@ -402,9 +402,9 @@
       },
       {
         "id": 10013,
-        "name": "Materials Request",
-        "desc": "\"A Phoxhunter wants to wager with you — says there's no way you'll get hold of those supplies. Care to take the bet?\"",
-        "icon": "T_Head_Kami",
+        "name": "Urgent Commission",
+        "desc": "Hypnos' House has taken in more children lately, so there's even more to see to. Some of them have been asking me to take them out — to see a little more of the world while they still can. But there's always so much that needs doing, and I just haven't had the time. Could you bring back a few things from outside for them? It might cheer them up a little.",
+        "icon": "T_Fame_Head03",
         "exp": 30,
         "weight": 10,
         "items": [
@@ -422,9 +422,9 @@
       },
       {
         "id": 10014,
-        "name": "Materials Request",
-        "desc": "\"A Phoxhunter wants to wager with you — says there's no way you'll get hold of those supplies. Care to take the bet?\"",
-        "icon": "T_Head_Kami",
+        "name": "Urgent Commission",
+        "desc": "My inspiration is gone! I am a fish without water! A flower without fragrance! A lover without love! A swordsman without a blade! So I beg you — bring me something new! Something astonishing! Help me find my muse again!",
+        "icon": "T_Fame_Head01",
         "exp": 30,
         "weight": 10,
         "items": [
@@ -442,16 +442,16 @@
       },
       {
         "id": 10015,
-        "name": "Supply Request",
-        "desc": "\"Wh—What!? I heard there's a genie in the rubbish bin who grants wishes if you ask nicely — is that true? Ha, just kidding~ But I really do need these supplies!\"",
-        "icon": "T_Head_Maer",
-        "exp": 30,
-        "weight": 10,
+        "name": "A Friend's Commission",
+        "desc": "Those bootleggers are like flies. Drive one swarm off and another soon takes its place... You want to help? No need. I can deal with that rabble. But if you insist on making yourself useful... keep Snow out of trouble. That job suits you better.",
+        "icon": "T_Head_Kami",
+        "exp": 40,
+        "weight": 5,
         "items": [
           [
             "Resource",
             20004,
-            100
+            150
           ],
           [
             "Resource",
@@ -462,16 +462,16 @@
       },
       {
         "id": 10016,
-        "name": "Supply Request",
-        "desc": "\"Wh—What!? I heard there's a genie in the rubbish bin who grants wishes if you ask nicely — is that true? Ha, just kidding~ But I really do need these supplies!\"",
+        "name": "A Friend's Commission",
+        "desc": "Agh... Uncle Sam cut his hand digging through a rubbish bin again! How many times have I told him to wear gloves? Oh, forget it — I'll have to ask you for help. Please, please! You're the only one I can count on!",
         "icon": "T_Head_Maer",
-        "exp": 30,
-        "weight": 10,
+        "exp": 40,
+        "weight": 5,
         "items": [
           [
             "Resource",
             20015,
-            100
+            150
           ],
           [
             "Resource",
@@ -482,16 +482,16 @@
       },
       {
         "id": 10017,
-        "name": "Supply Request",
-        "desc": "\"Wh—What!? I heard there's a genie in the rubbish bin who grants wishes if you ask nicely — is that true? Ha, just kidding~ But I really do need these supplies!\"",
-        "icon": "T_Head_Maer",
-        "exp": 30,
-        "weight": 10,
+        "name": "A Friend's Commission",
+        "desc": "Hello, {性别：Mr|Miss} Unicorn! I'm making a brand-new picture book, and I want to put your story in it! But before I can start, there's one more thing I need to do... {性别：Mr|Miss} Unicorn, will you help me?",
+        "icon": "T_Head_Feina",
+        "exp": 40,
+        "weight": 5,
         "items": [
           [
             "Resource",
             20016,
-            100
+            150
           ],
           [
             "Resource",
@@ -502,9 +502,9 @@
       },
       {
         "id": 10018,
-        "name": "Supply Request",
-        "desc": "\"Wh—What!? I heard there's a genie in the rubbish bin who grants wishes if you ask nicely — is that true? Ha, just kidding~ But I really do need these supplies!\"",
-        "icon": "T_Head_Maer",
+        "name": "A Friend's Commission",
+        "desc": "Outsider promised me he'd take me with him this time... but he lied to me. {性别：Mr|Miss} Unicorn, may I come with you instead? I promise I won't get in the way.",
+        "icon": "T_Head_Feina",
         "exp": 40,
         "weight": 5,
         "items": [
@@ -522,9 +522,9 @@
       },
       {
         "id": 10019,
-        "name": "Supply Request",
-        "desc": "\"Wh—What!? I heard there's a genie in the rubbish bin who grants wishes if you ask nicely — is that true? Ha, just kidding~ But I really do need these supplies!\"",
-        "icon": "T_Head_Maer",
+        "name": "A Friend's Commission",
+        "desc": "Have you seen Wells lately? He took on a commission, but the job is still unfinished and now he's vanished. My guess is he's passed out drunk in some back room. The client has already come by several times... Never mind. Why don't you take over the commission for him?",
+        "icon": "T_Head_Kami",
         "exp": 40,
         "weight": 5,
         "items": [
@@ -542,9 +542,9 @@
       },
       {
         "id": 10020,
-        "name": "Supply Request",
-        "desc": "\"Wh—What!? I heard there's a genie in the rubbish bin who grants wishes if you ask nicely — is that true? Ha, just kidding~ But I really do need these supplies!\"",
-        "icon": "T_Head_Maer",
+        "name": "A Friend's Commission",
+        "desc": "Have you seen Wells lately? He took on a commission, but the job is still unfinished and now he's vanished. My guess is he's passed out drunk in some back room. The client has already come by several times... Never mind. Why don't you take over the commission for him?",
+        "icon": "T_Head_Kami",
         "exp": 40,
         "weight": 5,
         "items": [
@@ -725,16 +725,16 @@
     "entrusts": [
       {
         "id": 11001,
-        "name": "Gathering Request",
-        "desc": "\"Snow says you lot pick up bits like this all the time while you're out adventuring... and most of it just ends up going to waste, right? If you can, could you spare me some?\"",
-        "icon": "T_Head_JinliJJ",
-        "exp": 30,
-        "weight": 10,
+        "name": "Daily Commission",
+        "desc": "These old legs aren't what they used to be. I wonder if a kind youngster might help me fetch a few things.",
+        "icon": "T_Fame_Head02",
+        "exp": 20,
+        "weight": 20,
         "items": [
           [
             "Resource",
             4010018,
-            10
+            6
           ],
           [
             "Resource",
@@ -745,16 +745,16 @@
       },
       {
         "id": 11002,
-        "name": "Gathering Request",
-        "desc": "\"Snow says you lot pick up bits like this all the time while you're out adventuring... and most of it just ends up going to waste, right? If you can, could you spare me some?\"",
-        "icon": "T_Head_JinliJJ",
-        "exp": 30,
-        "weight": 10,
+        "name": "Daily Commission",
+        "desc": "Mum won't let me go out alone. She says a big black Bi'an might gobble me up. But Bi'an are all nice, aren't they? Oh well... I'll just have to find someone kind enough to fetch those things for me!",
+        "icon": "T_Fame_Head01",
+        "exp": 20,
+        "weight": 20,
         "items": [
           [
             "Resource",
             4010018,
-            10
+            6
           ],
           [
             "Resource",
@@ -765,16 +765,16 @@
       },
       {
         "id": 11003,
-        "name": "Gathering Request",
-        "desc": "\"Snow says you lot pick up bits like this all the time while you're out adventuring... and most of it just ends up going to waste, right? If you can, could you spare me some?\"",
-        "icon": "T_Head_JinliJJ",
-        "exp": 30,
-        "weight": 10,
+        "name": "Daily Commission",
+        "desc": "Fine incense begins with the right ingredients and is perfected through skill. Without good materials, even the finest technique can only do so much.",
+        "icon": "T_Fame_Head02",
+        "exp": 20,
+        "weight": 20,
         "items": [
           [
             "Resource",
             4010018,
-            10
+            6
           ],
           [
             "Resource",
@@ -785,11 +785,11 @@
       },
       {
         "id": 11004,
-        "name": "Gathering Request",
-        "desc": "\"Snow says you lot pick up bits like this all the time while you're out adventuring... and most of it just ends up going to waste, right? If you can, could you spare me some?\"",
-        "icon": "T_Head_JinliJJ",
-        "exp": 30,
-        "weight": 10,
+        "name": "Daily Commission",
+        "desc": "What else can I do? A Sable Bi'an ruined the entire shipment, and the next batch won't be ready for months. And the customer keeps asking when I can deliver... I hate to trouble you, but could you find me something suitable to use in its place?",
+        "icon": "T_Fame_Head02",
+        "exp": 20,
+        "weight": 20,
         "items": [
           [
             "Resource",
@@ -805,11 +805,11 @@
       },
       {
         "id": 11005,
-        "name": "Gathering Request",
-        "desc": "\"Snow says you lot pick up bits like this all the time while you're out adventuring... and most of it just ends up going to waste, right? If you can, could you spare me some?\"",
-        "icon": "T_Head_JinliJJ",
-        "exp": 30,
-        "weight": 10,
+        "name": "Daily Commission",
+        "desc": "Mrrrow, meow meow. Meow meow meow... (It seems to be saying, \"Give me stuff!\")",
+        "icon": "T_Head_Cat",
+        "exp": 20,
+        "weight": 20,
         "items": [
           [
             "Resource",
@@ -825,9 +825,9 @@
       },
       {
         "id": 11006,
-        "name": "Materials Request",
-        "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
-        "icon": "T_Head_FameCommon",
+        "name": "Daily Commission",
+        "desc": "I want to build a real colossus — something unmistakably Huaxu, built using the secret Jishu techniques of our sect. Only problem is, I'm short on materials. Hehe... Think you could help me gather some?",
+        "icon": "T_Fame_Head01",
         "exp": 20,
         "weight": 20,
         "items": [
@@ -845,9 +845,9 @@
       },
       {
         "id": 11007,
-        "name": "Materials Request",
-        "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
-        "icon": "T_Head_FameCommon",
+        "name": "Daily Commission",
+        "desc": "The Starweaver handling these supplies still hasn't returned from sea. We don't know whether something has happened to him, but the households depending on this shipment cannot be left without supplies for much longer. If you are able, please help us secure replacements.",
+        "icon": "T_Fame_Head02",
         "exp": 20,
         "weight": 20,
         "items": [
@@ -865,9 +865,9 @@
       },
       {
         "id": 11008,
-        "name": "Materials Request",
-        "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
-        "icon": "T_Head_FameCommon",
+        "name": "Daily Commission",
+        "desc": "After days of mountain rain, the ground is waterlogged and the mechapuppets are beginning to rust. We could really use another shipment of maintenance supplies.",
+        "icon": "T_Fame_Head02",
         "exp": 20,
         "weight": 20,
         "items": [
@@ -885,9 +885,9 @@
       },
       {
         "id": 11009,
-        "name": "Materials Request",
-        "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
-        "icon": "T_Head_FameCommon",
+        "name": "Daily Commission",
+        "desc": "Why waste good money on a proper treasure hunter? Pick up a few cheap curios and sell them to some fool who can't tell the difference.",
+        "icon": "T_Fame_Head02",
         "exp": 20,
         "weight": 20,
         "items": [
@@ -905,9 +905,9 @@
       },
       {
         "id": 11010,
-        "name": "Materials Request",
-        "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
-        "icon": "T_Head_FameCommon",
+        "name": "Daily Commission",
+        "desc": "Trees grace the mountain, boughs grace every tree; and in my heart... there is only you... Ah! No, that's not what I meant! I'm asking for myself. It has nothing to do with him...",
+        "icon": "T_Fame_Head03",
         "exp": 20,
         "weight": 20,
         "items": [
@@ -925,16 +925,16 @@
       },
       {
         "id": 11011,
-        "name": "Materials Request",
-        "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
-        "icon": "T_Head_FameCommon",
-        "exp": 20,
-        "weight": 20,
+        "name": "Urgent Commission",
+        "desc": "I hear the incense ingredients beyond Yinyuan possess a character all their own. I came here seeking new inspiration for cultivation. If you could bring me a few varieties, I would be most grateful.",
+        "icon": "T_Fame_Head03",
+        "exp": 30,
+        "weight": 10,
         "items": [
           [
             "Resource",
             20012,
-            400
+            450
           ],
           [
             "Resource",
@@ -945,9 +945,9 @@
       },
       {
         "id": 11012,
-        "name": "Materials Request",
-        "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
-        "icon": "T_Head_FameCommon",
+        "name": "Urgent Commission",
+        "desc": "I wander freely between heaven and earth; where my path takes me is mine alone to know. Ask not how I found you — first, fetch me a few treasures!",
+        "icon": "T_Fame_Head02",
         "exp": 30,
         "weight": 10,
         "items": [
@@ -965,9 +965,9 @@
       },
       {
         "id": 11013,
-        "name": "Materials Request",
-        "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
-        "icon": "T_Head_FameCommon",
+        "name": "Urgent Commission",
+        "desc": "I was away for a time, and when I returned, my people told me that more than half the incense ingredients in the warehouse had vanished. They claim it was a ghost, though I won't draw any conclusions until I've looked into the matter myself. Ghost or no ghost, the missing stock still needs replacing, so I've come to ask for help.",
+        "icon": "T_Fame_Head02",
         "exp": 30,
         "weight": 10,
         "items": [
@@ -985,9 +985,9 @@
       },
       {
         "id": 11014,
-        "name": "Materials Request",
-        "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
-        "icon": "T_Head_FameCommon",
+        "name": "Urgent Commission",
+        "desc": "A traveller from overseas told us that, where he comes from, merchants sell wares aboard pleasure boats. We'd never heard of such a thing, so my brothers and I decided to stock up on some fine goods and try selling them from our own boats.",
+        "icon": "T_Fame_Head02",
         "exp": 30,
         "weight": 10,
         "items": [
@@ -1005,9 +1005,9 @@
       },
       {
         "id": 11015,
-        "name": "Materials Request",
-        "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
-        "icon": "T_Head_FameCommon",
+        "name": "Urgent Commission",
+        "desc": "Tongfu Eatery has never been busier! Our new dishes have been a great success — though, yes, the higher prices have drawn a few complaints. But what of it? Lower the prices, and we'd have to compromise on the ingredients. Better to pay more for good ingredients and serve food worth eating, don't you think?",
+        "icon": "T_Fame_Head02",
         "exp": 30,
         "weight": 10,
         "items": [
@@ -1025,16 +1025,16 @@
       },
       {
         "id": 11016,
-        "name": "Supply Request",
-        "desc": "\"No need to be tense. Lend me your hand today, and there will come a day when I repay the favour.\"",
-        "icon": "T_Head_Qiu",
-        "exp": 30,
-        "weight": 10,
+        "name": "A Friend's Commission",
+        "desc": "I know I've already asked a great deal of you, but Huaxu is rebuilding from the ground up, and countless matters still demand my attention. Some tasks I simply cannot entrust to anyone else. Rest assured — EverSpring has ample means. You will be well compensated.",
+        "icon": "T_Head_Zhiliu",
+        "exp": 40,
+        "weight": 5,
         "items": [
           [
             "Resource",
             20015,
-            100
+            150
           ],
           [
             "Resource",
@@ -1045,16 +1045,16 @@
       },
       {
         "id": 11017,
-        "name": "Supply Request",
-        "desc": "\"No need to be tense. Lend me your hand today, and there will come a day when I repay the favour.\"",
+        "name": "A Friend's Commission",
+        "desc": "My young friend, why such haste to avoid me? Surely you do not take me for some ravenous beast. I have a rather special commission. If you decline, I can think of no one else equal to the task. As for payment — you shall receive it in full when the work is done.",
         "icon": "T_Head_Qiu",
-        "exp": 30,
-        "weight": 10,
+        "exp": 40,
+        "weight": 5,
         "items": [
           [
             "Resource",
             20016,
-            100
+            150
           ],
           [
             "Resource",
@@ -1065,9 +1065,9 @@
       },
       {
         "id": 11018,
-        "name": "Supply Request",
-        "desc": "\"No need to be tense. Lend me your hand today, and there will come a day when I repay the favour.\"",
-        "icon": "T_Head_Qiu",
+        "name": "A Friend's Commission",
+        "desc": "A few days ago, when I returned to Outer Peaks, I noticed a boy training there. His discipline reminded me of myself at that age. I would like to buy him a few things, but official duties leave me little time. Might I trouble you...? If you cannot, I understand.",
+        "icon": "T_Head_Yuming",
         "exp": 40,
         "weight": 5,
         "items": [
@@ -1085,9 +1085,9 @@
       },
       {
         "id": 11019,
-        "name": "Supply Request",
-        "desc": "\"No need to be tense. Lend me your hand today, and there will come a day when I repay the favour.\"",
-        "icon": "T_Head_Qiu",
+        "name": "A Friend's Commission",
+        "desc": "Ha! I drank a little too much the other day and fell asleep in my great-aunt's mechapuppet warehouse. Turns out I'd left the bottle uncorked, and the wine soaked into those wooden blocks, making them swell up! Now Her Highness means to have my head. Before she catches me, you'll have to save my neck!",
+        "icon": "T_Head_Kezhou",
         "exp": 40,
         "weight": 5,
         "items": [
@@ -1105,9 +1105,9 @@
       },
       {
         "id": 11020,
-        "name": "Supply Request",
-        "desc": "\"No need to be tense. Lend me your hand today, and there will come a day when I repay the favour.\"",
-        "icon": "T_Head_Qiu",
+        "name": "A Friend's Commission",
+        "desc": "With the reforms to the Nine Chapters, the people of Huaxu are gradually taking up arms once more. Yet after so many years without martial training, few outside the Magistrates of Yingtian and the Drifters possess any real martial skill. If you're willing, a demonstration from you may inspire them more than any amount of urging from me.",
+        "icon": "T_Head_Zhiliu",
         "exp": 40,
         "weight": 5,
         "items": [
@@ -1119,6 +1119,26 @@
           [
             "Resource",
             4010016,
+            10
+          ]
+        ]
+      },
+      {
+        "id": 11021,
+        "name": "A Friend's Commission",
+        "desc": "Uncle Tang's got the children of Outer Peaks helping him with those dangerous mechapuppet experiments again. This time, he was the one who got hurt in the explosion — but what about next time? I can't just let him carry on like this, and there aren't many people around here I'd trust to keep an eye on him. Last time I asked Kezhou, he wandered off for a drink instead. Honestly, that man... If you could help, I'd feel a lot better.",
+        "icon": "T_Head_Suyi",
+        "exp": 40,
+        "weight": 5,
+        "items": [
+          [
+            "Resource",
+            20015,
+            100
+          ],
+          [
+            "Resource",
+            4010019,
             10
           ]
         ]

@@ -799,12 +799,13 @@ function Component:Effect_Disarm(EffectStruct, ParamentsTable)
         else
           local DisarmHitMontage
           if CauseHit and not Target:CheckCanEnterTag("LightHit") then
-            goto lbl_118
+            goto lbl_123
           else
             local HitMontageRule = Target:GetHitMontageRule()
             DisarmHitMontage = HitMontageRule.DisarmHitMontage and HitMontageRule.DisarmHitMontage[1]
           end
-          local WeaponObject = Target:GetCurrentWeapon()
+          local WeaponObject = Target:GetCurrentMonsterWeapon()
+          WeaponObject = WeaponObject or Target:GetCurrentWeapon()
           if not WeaponObject or WeaponObject and WeaponObject.WeaponId ~= WeaponList[ChangeWeaponParams.Disarm] then
             if CauseHit and DisarmHitMontage then
               local HitLogicComp = Target:GetOrAddHitLogicComp()
@@ -824,7 +825,7 @@ function Component:Effect_Disarm(EffectStruct, ParamentsTable)
         end
       end
     end
-    ::lbl_118::
+    ::lbl_123::
   end
   if TargetCount > 0 then
     self:TriggerBattleEvent(BattleEventName.OnDisarm, Source, TargetCount)
@@ -839,7 +840,7 @@ function Component:Effect_ChangeWeapon(EffectStruct, ParamentsTable)
   end
   for _, Eid in ipairs(HitTargets) do
     local Target = self:GetEntity(Eid)
-    if Target or Target:IsMonster() then
+    if Target and Target:IsMonster() then
       if 0 == WeaponIndex then
         Target:ChangeUsingWeaponById()
       else

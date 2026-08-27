@@ -1,3 +1,4 @@
+local MiscUtils = require("Utils.MiscUtils")
 local ForgeConst = require("Blueprints.UI.Forge.ForgeConst")
 local ForgeUtils = require("Blueprints.UI.Forge.ForgeUtils")
 local TimeUtils = require("Utils.TimeUtils")
@@ -106,19 +107,19 @@ function WBP_Forging_DialogBatch_PC_C:InitView()
     OwnerPanel = self
   })
   self.Text_Num:SetText("1")
-  self.Text_Total:SetText(FormatNumber(self.ForgeItemContent.MaxCanProduceNum, true))
+  self.Text_Total:SetText(MiscUtils.FormatNumber(self.ForgeItemContent.MaxCanProduceNum, true))
   self.Text_Name:SetText(string.format("%s x%d", self.ForgeItemContent.ProductName, self.ForgeItemContent.ProductNum))
   self.Text_ForgeNum:SetText(GText("UI_Forge_Num"))
   if self.DraftInfo.IsInfinity then
     self.Switch_Num:SetActiveWidgetIndex(1)
   else
     self.Switch_Num:SetActiveWidgetIndex(0)
-    self.Text_BluePrintsNum:SetText(FormatNumber(self.ForgeItemContent.Count, true))
+    self.Text_BluePrintsNum:SetText(MiscUtils.FormatNumber(self.ForgeItemContent.Count, true))
     self.Text_BluePrintsNum:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   end
   self.Text_BluePrintsNumName:SetText(GText("UI_FORGING_BLUEPRINT"))
   self.Text_ItemCurrentOwned:SetText(GText("UI_FORGING_CURRENT"))
-  self.Text_ItemOwnedNum:SetText(FormatNumber(self.ForgeItemContent.ProductCount, true))
+  self.Text_ItemOwnedNum:SetText(MiscUtils.FormatNumber(self.ForgeItemContent.ProductCount, true))
   self:UpdateMaterials()
   local CurInputDeviceType = UIUtils.UtilsGetCurrentInputType()
   if CurInputDeviceType == UE4.ECommonInputType.Gamepad then
@@ -177,7 +178,7 @@ end
 
 function WBP_Forging_DialogBatch_PC_C:OnProduceValueChange(NewValue)
   self.CurrentCount = NewValue
-  self.Text_Num:SetText(tostring(FormatNumber(NewValue, true)))
+  self.Text_Num:SetText(tostring(MiscUtils.FormatNumber(NewValue, true)))
   self.Text_Name:SetText(string.format("%s x%d", self.ForgeItemContent.ProductName, self.ForgeItemContent.ProductNum * NewValue))
   self:UpdateNeedCount(NewValue)
   if self.OnProduceValueChangeCallback then

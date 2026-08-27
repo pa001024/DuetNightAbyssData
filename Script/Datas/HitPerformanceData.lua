@@ -23,64 +23,65 @@ T.RT_17 = {HitFlyXY = 600, HitFlyZ = 500}
 T.RT_18 = {MoveDis = 500}
 T.RT_19 = {HitFlyXY = 1000, HitFlyZ = 400}
 T.RT_20 = {HitFlyXY = 0, HitFlyZ = 800}
-T.RT_21 = {HitFlyXY = 0, HitFlyZ = 3000}
-T.RT_22 = {HitFlyXY = 200, HitFlyZ = 100}
-T.RT_23 = {
+T.RT_21 = {HitFlyXY = 0, HitFlyZ = 2000}
+T.RT_22 = {HitFlyXY = 0, HitFlyZ = 3000}
+T.RT_23 = {HitFlyXY = 200, HitFlyZ = 100}
+T.RT_24 = {
   HitFlyXY = 200,
   HitFlyZ = 100,
   UseResourceDirection = "-X"
 }
-T.RT_24 = {HitFlyXY = 200, HitFlyZ = 300}
-T.RT_25 = {
+T.RT_25 = {HitFlyXY = 200, HitFlyZ = 300}
+T.RT_26 = {
   HitFlyXY = 200,
   HitFlyZ = 200,
   UseResourceDirection = "X"
 }
-T.RT_26 = {HitFlyXY = -200, HitFlyZ = 300}
-T.RT_27 = {MoveDis = -100}
-T.RT_28 = {HitFlyXY = 300, HitFlyZ = 800}
-T.RT_29 = {HitFlyXY = 400, HitFlyZ = 200}
-T.RT_30 = {
+T.RT_27 = {HitFlyXY = -200, HitFlyZ = 300}
+T.RT_28 = {MoveDis = -100}
+T.RT_29 = {HitFlyXY = 300, HitFlyZ = 800}
+T.RT_30 = {HitFlyXY = 400, HitFlyZ = 200}
+T.RT_31 = {
   HitFlyXY = 400,
   HitFlyZ = 300,
   UseResourceDirection = "X"
 }
-T.RT_31 = {
+T.RT_32 = {
   HitFlyXY = 400,
   HitFlyZ = 200,
   UseResourceDirection = "X"
 }
-T.RT_32 = {
+T.RT_33 = {
   HitFlyXY = 400,
   HitFlyZ = 400,
   UseResourceDirection = "X"
 }
-T.RT_33 = {HitFlyXY = 500, HitFlyZ = 300}
-T.RT_34 = {MoveDis = 300}
-T.RT_35 = {HitFlyXY = 600, HitFlyZ = 300}
-T.RT_36 = {
+T.RT_34 = {HitFlyXY = 500, HitFlyZ = 300}
+T.RT_35 = {MoveDis = 300}
+T.RT_36 = {HitFlyXY = 600, HitFlyZ = 300}
+T.RT_37 = {
   HitFlyXY = 600,
   HitFlyZ = 400,
   UseResourceDirection = "X"
 }
-T.RT_37 = {
+T.RT_38 = {
   Angle = 270,
   HitFlyXY = 200,
   HitFlyZ = 500
 }
-T.RT_38 = {
+T.RT_39 = {
   Angle = 90,
   HitFlyXY = 200,
   HitFlyZ = 500
 }
-T.RT_39 = {
+T.RT_40 = {
   HitFlyXY = 600,
   HitFlyZ = 500,
   UseTargetDirection = 1
 }
-T.RT_40 = {HitFlyXY = 50, HitFlyZ = 100}
-T.RT_41 = {MoveDis = 100, UseResourceDirection = "X"}
-T.RT_42 = {UseTargetDirection = 1}
+T.RT_41 = {HitFlyXY = 50, HitFlyZ = 100}
+T.RT_42 = {MoveDis = 100, UseResourceDirection = "X"}
+T.RT_43 = {UseTargetDirection = 1}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -323,6 +324,13 @@ return ReadOnly("HitPerformanceData", {
     HitId = "HitFly_XY0Z1000",
     TNZeroHeavyHitParam = T.RT_13
   },
+  HitFly_XY0Z2000 = {
+    CauseHit = "HitFly",
+    CauseHitParam = T.RT_21,
+    HitFlyComboParam = T.RT_21,
+    HitId = "HitFly_XY0Z2000",
+    TNZeroHeavyHitParam = T.RT_18
+  },
   HitFly_XY0Z300 = {
     CauseHit = "HitFly",
     CauseHitParam = T.RT_15,
@@ -332,8 +340,8 @@ return ReadOnly("HitPerformanceData", {
   },
   HitFly_XY0Z3000 = {
     CauseHit = "HitFly",
-    CauseHitParam = T.RT_21,
-    HitFlyComboParam = T.RT_21,
+    CauseHitParam = T.RT_22,
+    HitFlyComboParam = T.RT_22,
     HitId = "HitFly_XY0Z3000",
     TNZeroHeavyHitParam = T.RT_18
   },
@@ -396,22 +404,22 @@ return ReadOnly("HitPerformanceData", {
   },
   HitFly_XY200Z100 = {
     CauseHit = "HitFly",
-    CauseHitParam = T.RT_22,
-    HitFlyComboParam = T.RT_22,
+    CauseHitParam = T.RT_23,
+    HitFlyComboParam = T.RT_23,
     HitId = "HitFly_XY200Z100",
     TNZeroHeavyHitParam = T.RT_3
   },
   HitFly_XY200Z100_B = {
     CauseHit = "HitFly",
-    CauseHitParam = T.RT_23,
-    HitFlyComboParam = T.RT_23,
+    CauseHitParam = T.RT_24,
+    HitFlyComboParam = T.RT_24,
     HitId = "HitFly_XY200Z100_B",
     TNZeroHeavyHitParam = T.RT_3
   },
   HitFly_XY200Z300 = {
     CauseHit = "HitFly",
-    CauseHitParam = T.RT_24,
-    HitFlyComboParam = T.RT_24,
+    CauseHitParam = T.RT_25,
+    HitFlyComboParam = T.RT_25,
     HitId = "HitFly_XY200Z300",
     TNZeroHeavyHitParam = T.RT_3
   },
@@ -437,16 +445,16 @@ return ReadOnly("HitPerformanceData", {
       HitFlyZ = 300,
       UseResourceDirection = "X"
     },
-    HitFlyComboParam = T.RT_25,
+    HitFlyComboParam = T.RT_26,
     HitId = "HitFly_XY200Z300_F",
     TNZeroHeavyHitParam = T.RT_3
   },
   HitFly_XY200Z300_N = {
     CauseHit = "HitFly",
-    CauseHitParam = T.RT_26,
-    HitFlyComboParam = T.RT_26,
+    CauseHitParam = T.RT_27,
+    HitFlyComboParam = T.RT_27,
     HitId = "HitFly_XY200Z300_N",
-    TNZeroHeavyHitParam = T.RT_27
+    TNZeroHeavyHitParam = T.RT_28
   },
   HitFly_XY200Z500 = {
     CauseHit = "HitFly",
@@ -473,13 +481,13 @@ return ReadOnly("HitPerformanceData", {
   HitFly_XY300Z1000 = {
     CauseHit = "HitFly",
     CauseHitParam = {HitFlyXY = 300, HitFlyZ = 1000},
-    HitFlyComboParam = T.RT_28,
+    HitFlyComboParam = T.RT_29,
     HitId = "HitFly_XY300Z1000",
     TNZeroHeavyHitParam = T.RT_9
   },
   HitFly_XY300Z800 = {
     CauseHit = "HitFly",
-    CauseHitParam = T.RT_28,
+    CauseHitParam = T.RT_29,
     HitFlyComboParam = {HitFlyXY = 300, HitFlyZ = 700},
     HitId = "HitFly_XY300Z800",
     TNZeroHeavyHitParam = T.RT_9
@@ -487,21 +495,21 @@ return ReadOnly("HitPerformanceData", {
   HitFly_XY400Z300 = {
     CauseHit = "HitFly",
     CauseHitParam = {HitFlyXY = 400, HitFlyZ = 300},
-    HitFlyComboParam = T.RT_29,
+    HitFlyComboParam = T.RT_30,
     HitId = "HitFly_XY400Z300",
     TNZeroHeavyHitParam = T.RT_12
   },
   HitFly_XY400Z300_F = {
     CauseHit = "HitFly",
-    CauseHitParam = T.RT_30,
-    HitFlyComboParam = T.RT_31,
+    CauseHitParam = T.RT_31,
+    HitFlyComboParam = T.RT_32,
     HitId = "HitFly_XY400Z300_F",
     TNZeroHeavyHitParam = T.RT_12
   },
   HitFly_XY400Z400_F = {
     CauseHit = "HitFly",
-    CauseHitParam = T.RT_32,
-    HitFlyComboParam = T.RT_30,
+    CauseHitParam = T.RT_33,
+    HitFlyComboParam = T.RT_31,
     HitId = "HitFly_XY400Z400_F",
     TNZeroHeavyHitParam = T.RT_12
   },
@@ -512,7 +520,7 @@ return ReadOnly("HitPerformanceData", {
       HitFlyZ = 500,
       UseResourceDirection = "X"
     },
-    HitFlyComboParam = T.RT_32,
+    HitFlyComboParam = T.RT_33,
     HitId = "HitFly_XY400Z500_F",
     TNZeroHeavyHitParam = T.RT_12
   },
@@ -532,14 +540,14 @@ return ReadOnly("HitPerformanceData", {
   },
   HitFly_XY500Z300 = {
     CauseHit = "HitFly",
-    CauseHitParam = T.RT_33,
+    CauseHitParam = T.RT_34,
     HitFlyComboParam = {HitFlyXY = 500, HitFlyZ = 200},
     HitId = "HitFly_XY500Z300",
     TNZeroHeavyHitParam = T.RT_8
   },
   HitFly_XY500Z300_F = {
     CauseHit = "HitFly",
-    CauseHitParam = T.RT_33,
+    CauseHitParam = T.RT_34,
     HitFlyComboParam = {
       HitFlyXY = 500,
       HitFlyZ = 200,
@@ -553,35 +561,35 @@ return ReadOnly("HitPerformanceData", {
     CauseHitParam = {HitFlyXY = 600, HitFlyZ = 1000},
     HitFlyComboParam = {HitFlyXY = 600, HitFlyZ = 800},
     HitId = "HitFly_XY600Z1000",
-    TNZeroHeavyHitParam = T.RT_34
+    TNZeroHeavyHitParam = T.RT_35
   },
   HitFly_XY600Z300 = {
     CauseHit = "HitFly",
-    CauseHitParam = T.RT_35,
+    CauseHitParam = T.RT_36,
     HitFlyComboParam = {HitFlyXY = 600, HitFlyZ = 250},
     HitId = "HitFly_XY600Z300",
-    TNZeroHeavyHitParam = T.RT_34
+    TNZeroHeavyHitParam = T.RT_35
   },
   HitFly_XY600Z400 = {
     CauseHit = "HitFly",
     CauseHitParam = {HitFlyXY = 600, HitFlyZ = 400},
-    HitFlyComboParam = T.RT_35,
+    HitFlyComboParam = T.RT_36,
     HitId = "HitFly_XY600Z400",
-    TNZeroHeavyHitParam = T.RT_34
+    TNZeroHeavyHitParam = T.RT_35
   },
   HitFly_XY600Z400_F = {
     CauseHit = "HitFly",
-    CauseHitParam = T.RT_36,
-    HitFlyComboParam = T.RT_36,
+    CauseHitParam = T.RT_37,
+    HitFlyComboParam = T.RT_37,
     HitId = "HitFly_XY600Z400_F",
-    TNZeroHeavyHitParam = T.RT_34
+    TNZeroHeavyHitParam = T.RT_35
   },
   HitFly_XY600Z600 = {
     CauseHit = "HitFly",
     CauseHitParam = {HitFlyXY = 600, HitFlyZ = 600},
     HitFlyComboParam = T.RT_17,
     HitId = "HitFly_XY600Z600",
-    TNZeroHeavyHitParam = T.RT_34
+    TNZeroHeavyHitParam = T.RT_35
   },
   HitFly_XY800Z1000 = {
     CauseHit = "HitFly",
@@ -592,22 +600,22 @@ return ReadOnly("HitPerformanceData", {
   },
   HitFly_XY800Z300A270 = {
     CauseHit = "HitFly",
-    CauseHitParam = T.RT_37,
-    HitFlyComboParam = T.RT_37,
+    CauseHitParam = T.RT_38,
+    HitFlyComboParam = T.RT_38,
     HitId = "HitFly_XY800Z300A270",
     TNZeroHeavyHitParam = T.RT_12
   },
   HitFly_XY800Z300A90 = {
     CauseHit = "HitFly",
-    CauseHitParam = T.RT_38,
-    HitFlyComboParam = T.RT_38,
+    CauseHitParam = T.RT_39,
+    HitFlyComboParam = T.RT_39,
     HitId = "HitFly_XY800Z300A90",
     TNZeroHeavyHitParam = T.RT_12
   },
   HitFly_XY800Z400 = {
     CauseHit = "HitFly",
     CauseHitParam = {HitFlyXY = 800, HitFlyZ = 400},
-    HitFlyComboParam = T.RT_35,
+    HitFlyComboParam = T.RT_36,
     HitId = "HitFly_XY800Z400",
     TNZeroHeavyHitParam = T.RT_4
   },
@@ -643,20 +651,20 @@ return ReadOnly("HitPerformanceData", {
   },
   Hitfly_Laser = {
     CauseHit = "HitFly",
-    CauseHitParam = T.RT_39,
-    HitFlyComboParam = T.RT_39,
+    CauseHitParam = T.RT_40,
+    HitFlyComboParam = T.RT_40,
     HitId = "Hitfly_Laser",
     TNZeroHeavyHitParam = T.RT_18
   },
   LightHit = {
     CauseHit = "LightHit",
-    HitFlyComboParam = T.RT_40,
+    HitFlyComboParam = T.RT_41,
     HitId = "LightHit"
   },
   LightHit_100 = {
     CauseHit = "LightHit",
     CauseHitParam = T.RT_3,
-    HitFlyComboParam = T.RT_29,
+    HitFlyComboParam = T.RT_30,
     HitId = "LightHit_100",
     TNZeroHeavyHitParam = T.RT_3
   },
@@ -667,21 +675,21 @@ return ReadOnly("HitPerformanceData", {
   },
   LightHit_100_B = {
     CauseHit = "LightHit",
-    CauseHitParam = T.RT_27,
+    CauseHitParam = T.RT_28,
     HitFlyComboParam = {HitFlyXY = -400, HitFlyZ = 200},
     HitId = "LightHit_100_B"
   },
   LightHit_100_F = {
     CauseHit = "LightHit",
-    CauseHitParam = T.RT_41,
-    HitFlyComboParam = T.RT_31,
+    CauseHitParam = T.RT_42,
+    HitFlyComboParam = T.RT_32,
     HitId = "LightHit_100_F",
     TNZeroHeavyHitParam = T.RT_3
   },
   LightHit_120 = {
     CauseHit = "LightHit",
     CauseHitParam = T.RT_11,
-    HitFlyComboParam = T.RT_29,
+    HitFlyComboParam = T.RT_30,
     HitId = "LightHit_120",
     TNZeroHeavyHitParam = T.RT_3
   },
@@ -694,14 +702,14 @@ return ReadOnly("HitPerformanceData", {
   LightHit_150_F = {
     CauseHit = "LightHit",
     CauseHitParam = {MoveDis = 150, UseResourceDirection = "X"},
-    HitFlyComboParam = T.RT_30,
+    HitFlyComboParam = T.RT_31,
     HitId = "LightHit_150_F",
     TNZeroHeavyHitParam = T.RT_9
   },
   LightHit_150_Laser = {
     CauseHit = "LightHit",
     CauseHitParam = {MoveDis = 150, UseTargetDirection = 1},
-    HitFlyComboParam = T.RT_40,
+    HitFlyComboParam = T.RT_41,
     HitId = "LightHit_150_Laser"
   },
   LightHit_200 = {
@@ -712,7 +720,7 @@ return ReadOnly("HitPerformanceData", {
   },
   LightHit_300 = {
     CauseHit = "LightHit",
-    CauseHitParam = T.RT_34,
+    CauseHitParam = T.RT_35,
     HitId = "LightHit_300",
     TNZeroHeavyHitParam = T.RT_9
   },
@@ -743,7 +751,7 @@ return ReadOnly("HitPerformanceData", {
   LightHit_50_F = {
     CauseHit = "LightHit",
     CauseHitParam = {MoveDis = 50, UseResourceDirection = "X"},
-    HitFlyComboParam = T.RT_25,
+    HitFlyComboParam = T.RT_26,
     HitId = "LightHit_50_F",
     TNZeroHeavyHitParam = T.RT_14
   },
@@ -762,18 +770,18 @@ return ReadOnly("HitPerformanceData", {
   },
   LightHit_IceBomb = {
     CauseHit = "LightHit",
-    CauseHitParam = T.RT_42,
+    CauseHitParam = T.RT_43,
     HitId = "LightHit_IceBomb"
   },
   LightHit_Laser = {
     CauseHit = "LightHit",
-    CauseHitParam = T.RT_42,
-    HitFlyComboParam = T.RT_40,
+    CauseHitParam = T.RT_43,
+    HitFlyComboParam = T.RT_41,
     HitId = "LightHit_Laser"
   },
   LightHit_Tuosi = {
     CauseHit = "LightHit",
-    CauseHitParam = T.RT_41,
+    CauseHitParam = T.RT_42,
     HitFlyComboParam = {
       HitFlyXY = 300,
       HitFlyZ = 80,
@@ -785,13 +793,13 @@ return ReadOnly("HitPerformanceData", {
   RangedWeapon_Common = {
     CauseHit = "LightHitRanged",
     FirstHit = "LightHit",
-    HitFlyComboParam = T.RT_40,
+    HitFlyComboParam = T.RT_41,
     HitId = "RangedWeapon_Common",
     TNZeroHeavyHitParam = T.RT_3
   },
   RangedWeapon_Shotgun = {
     CauseDie = "HitFly",
-    CauseDieParam = T.RT_35,
+    CauseDieParam = T.RT_36,
     CauseHit = "LightHitRanged",
     FirstHit = "LightHit",
     FirstHitParam = T.RT_13,

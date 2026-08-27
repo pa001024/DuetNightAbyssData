@@ -130,6 +130,7 @@ end
 
 function WBP_InteractiveItem_C:InitInteractiveInfo(InteractiveInfo)
   if self.InteractiveInfo == InteractiveInfo then
+    self:UpdateStars()
     return
   end
   assert(InteractiveInfo)
@@ -614,13 +615,13 @@ function WBP_InteractiveItem_C:UpdateStars()
   end
   local Stars = self.InteractiveInfo:GetStars()
   local Visibility = Stars and ESlateVisibility.HitTestInvisible or ESlateVisibility.Collapsed
+  self.Group_Temple:SetVisibility(Visibility)
   self.HB_Star:SetVisibility(Visibility)
-  self.WS_Temple:SetVisibility(Visibility)
-  self.WS_TempleIcon:SetVisibility(Visibility)
+  self.WS_Temple:SetVisibility(ESlateVisibility.Collapsed)
+  self.WS_TempleIcon:SetVisibility(ESlateVisibility.Collapsed)
   if not Stars then
     return
   end
-  self.Group_Temple:SetVisibility(ESlateVisibility.HitTestInvisible)
   if -2 == Stars then
     self.HB_Star:SetVisibility(ESlateVisibility.Collapsed)
     self.WS_Temple:SetVisibility(ESlateVisibility.HitTestInvisible)
@@ -655,6 +656,7 @@ function WBP_InteractiveItem_C:UpdateInteractiveItemState()
   self:UpdateIcon()
   self:UpdateText()
   self:UpdateCondition()
+  self:UpdateStars()
   self:UpdateStateAnim()
   self:InitLongPressState()
   self:UpdateCostItemDetail()

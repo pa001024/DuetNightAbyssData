@@ -24,6 +24,12 @@ function ForgePathView:PreInit()
       self.Item_10,
       self.Item_11,
       self.Item_12
+    },
+    {
+      self.Item_13,
+      self.Item_14,
+      self.Item_15,
+      self.Item_16
     }
   }
   self.LineMap = {
@@ -45,13 +51,19 @@ function ForgePathView:PreInit()
       self.Line_09,
       self.Line_10,
       self.Line_11
+    },
+    {
+      self.Line_12,
+      self.Line_13,
+      self.Line_14
     }
   }
   self.RowMap = {
     self.Head,
     self.Level_1,
     self.Level_2,
-    self.Level_3
+    self.Level_3,
+    self.Level_4
   }
   self.LinePosMap = {
     {0},
@@ -70,13 +82,19 @@ function ForgePathView:PreInit()
       2,
       4,
       5
+    },
+    {
+      2,
+      4,
+      5
     }
   }
   self.LineAnimMap = {
     nil,
     nil,
     self.SecondRow,
-    self.ThirdRow
+    self.ThirdRow,
+    self.FourthRow
   }
   self.Text_ForgingPath:SetText(GText("UI_FORGING_PATH"))
   self.Text_Ok:SetText(GText("UI_FORGING_READY"))
@@ -89,7 +107,21 @@ function ForgePathView:PreInit()
   self.LastTargetColIndex = nil
 end
 
+function ForgePathView:ScrollRowIntoView(RowIndex, bAnimateScroll)
+  if not (RowIndex and self.RowMap) or not self.RowMap[RowIndex] then
+    return
+  end
+  local TargetRow = self.RowMap[RowIndex]
+  self.EMScrollBox_0:ScrollWidgetIntoView(TargetRow, true == bAnimateScroll)
+end
+
+function ForgePathView:ResetScrollPosition()
+  self.EMScrollBox_0:ScrollToStart()
+end
+
 function ForgePathView:InitView(DraftId, MaxLen)
+  self.LastTargetRowIndex = nil
+  self.LastTargetColIndex = nil
   self:PlayAnimation(self.In)
   self.Btn_Close:TryOverrideSoundFunc(function()
     AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_return", nil, nil)
@@ -112,7 +144,11 @@ function ForgePathView:InitView(DraftId, MaxLen)
     Obj = self,
     Callback = function()
       if UIUtils.IsGamepadInput() then
+        local LastFocusedRowIndex = self.LastTargetRowIndex
         self:OnItemSelected(1, 1)
+        if LastFocusedRowIndex and LastFocusedRowIndex > 1 then
+          self:ScrollRowIntoView(1, true)
+        end
         AudioManager(self):PlayItemSound(self, self.Item_Head.Id, "Click", self.Item_Head.ItemType)
       end
     end
@@ -340,6 +376,9 @@ function ForgePathView:OnBtnCloseClicked()
 end
 
 function ForgePathView:CloseView()
+  if self:IsAnimationPlaying(self.Out) then
+    return
+  end
   self:PlayAnimation(self.Out)
 end
 

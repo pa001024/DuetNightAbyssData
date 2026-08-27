@@ -47,7 +47,7 @@ function M:SpawnSpMonstersAlarm()
   if not self.IsRoundBegin then
     return
   end
-  self.GameMode:NotifyClientShowDungeonToast("", 2, EToastType.SabotageAlarm)
+  self.GameMode:NotifyClientShowDungeonToast("DUNGEON_SURVIVALMINIPRO_106", 2, EToastType.CombineWarning)
 end
 
 function M:SpawnSpMonsters()

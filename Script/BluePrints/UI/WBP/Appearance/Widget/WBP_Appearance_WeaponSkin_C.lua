@@ -1,5 +1,6 @@
 require("UnLua")
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
+local AppearanceUtils = require("BluePrints.UI.WBP.Appearance.AppearanceUtils")
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
@@ -137,6 +138,14 @@ function M:InitWeaponAppearanceSuits()
       self.CurrentFocusedWidget = Content.Entry
     end
     
+    AccessoryContent.bForbidden = false
+    if AccessoryType ~= CommonConst.WeaponAccessoryTypes.Accessory then
+      AccessoryContent.bForbidden = not AppearanceUtils.IsWeaponHasAnyStanceFX(Target.WeaponId)
+      
+      function AccessoryContent.OnForbiddenClicked(_self, Content)
+        UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_WeaponAccessory_NoAttackToast"))
+      end
+    end
     Widget:OnListItemObjectSet(AccessoryContent)
   end
 end

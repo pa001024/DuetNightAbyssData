@@ -70,10 +70,15 @@ return ReadOnly("MusicScore", {
     MusicScoreName = "MusicScoreName_1013",
     MusicScorePic = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Piano/T_Piano_Music13.T_Piano_Music13'"
   },
+  [1014] = {
+    MusicScoreId = 1014,
+    MusicScoreName = "MusicScoreName_1014",
+    MusicScorePic = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Piano/T_Piano_Music14.T_Piano_Music14'"
+  },
   [9001] = {
     IsDungeon = true,
     MusicScoreId = 9001,
     MusicScoreName = "MusicScoreName_9001",
-    MusicScorePic = "Texture2D'/Game/UI/Texture/Dynamic/Image/Piano/T_Piano_LevelSelect_01.T_Piano_LevelSelect_01'"
+    MusicScorePic = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Piano/T_Piano_Music01.T_Piano_Music01'"
   }
 })

@@ -3105,6 +3105,7 @@ return ReadOnly("CommonPopupUIContext", {
     Tip = {
       [1] = "UI_UnlockQuestAdvance_Tips"
     },
+    Title = "UI_COMMONPOP_TITLE_100010",
     YesButtonText = "UI_PATCH_ENSURE"
   },
   [100414] = {
@@ -3115,6 +3116,7 @@ return ReadOnly("CommonPopupUIContext", {
     Tip = {
       [1] = "UI_UnlockQuestForce_Tips"
     },
+    Title = "UI_COMMONPOP_TITLE_100010",
     YesButtonText = "UI_PATCH_ENSURE"
   },
   [100415] = {
@@ -3125,12 +3127,187 @@ return ReadOnly("CommonPopupUIContext", {
     Title = "UI_COMMONPOP_TITLE_100010",
     YesButtonText = "UI_PATCH_ENSURE"
   },
+  [100416] = {
+    ExtraParams = T.RT_1,
+    Id = 100416,
+    NotShowCloseButton = 1,
+    Style = "Freshmen_Gift_Dialog",
+    Tip = {
+      [1] = "Choose_Character",
+      [2] = "Will_Gain"
+    },
+    Title = "Freshmen_Gift",
+    YesButtonForbiddenToast = "UI_Consumable_NotChoose",
+    YesButtonText = "UI_Consumable_Get_Confirm"
+  },
+  [100417] = {
+    Id = 100417,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "Join_Team",
+    Style = "ShortTextDefault",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100418] = {
+    Id = 100418,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "GuildGarrisonRestoreConfirm",
+    Style = "AlertDefault",
+    Tip = {
+      [1] = "GuildGarrisonRestoreConfirm_2"
+    },
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100419] = {
+    Id = 100419,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_Watch_Quit_Cont",
+    Style = "AlertDefault",
+    Tip = {
+      [1] = "UI_Watch_Quit_Alert"
+    },
+    Title = "UI_Armory_Exit",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100420] = {
+    Id = 100420,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_Cont_Tree_Once",
+    Style = "ShortTextDefault",
+    Title = "UI_Title_Tree_Once",
+    YesButtonText = "UI_BTN_Tree_Once"
+  },
+  [100421] = {
+    Id = 100421,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_Cont_Tree_All",
+    Style = "AlertDefault",
+    Tip = {
+      [1] = "UI_Alert_Tree_All"
+    },
+    Title = "UI_Title_Tree_All",
+    YesButtonText = "UI_BTN_Tree_All"
+  },
+  [100422] = {
+    Id = 100422,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "Tips_Transport_YesOrNo",
+    Style = "ShortTextDefault",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100423] = {
+    Id = 100423,
+    Style = "Team_Recruit",
+    Title = "UI_TeamObjective",
+    YesButtonText = "UI_TeamPublish"
+  },
+  [100424] = {
+    Id = 100424,
+    Style = "Team_RecruitShare",
+    Title = "UI_TeamShareRecruit"
+  },
+  [100425] = {
+    ExtraParams = T.RT_5,
+    Id = 100425,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_TeamConfirmCancelRecruit",
+    Style = "AlertDefault",
+    Tip = {
+      [1] = "UI_TeamHall_RecruitmentCancelTip"
+    },
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100426] = {
+    ExtraParams = T.RT_5,
+    Id = 100426,
+    NoButtonText = "UI_PATCH_CANCEL",
+    Style = "common_dialog_input",
+    Title = "UI_TeamCustomTag",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100427] = {
+    Id = 100427,
+    NoButtonText = "UI_PATCH_CANCEL",
+    Style = "Armory_FXDialog",
+    Tip = {
+      [1] = "UI_Skin_Upgrade_Conetnt_2"
+    },
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100428] = {
+    Id = 100428,
+    PopoverText = "UI_ExpShootDes_1",
+    ShowQuitTip = 5,
+    Style = "LongTextDefault_1",
+    Title = "UI_ExpShootName_1"
+  },
+  [100429] = {
+    Id = 100429,
+    PopoverText = "UI_ExpShootDes_91",
+    ShowQuitTip = 5,
+    Style = "LongTextDefault_1",
+    Title = "UI_ExpShootName_91"
+  },
   [100430] = {
     Id = 100430,
     NoButtonText = "UI_PATCH_CANCEL",
     PopoverText = "UI_AutoChess_Popup_Content_LeaveChess",
     Style = "ShortTextDefault",
     Title = "UI_AutoChess_Popup_Title_LeaveChess",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100431] = {
+    Id = 100431,
+    Style = "Com_Dialog_CollectReward",
+    Title = "UI_LimitedPrizePool_CollectReward"
+  },
+  [100432] = {
+    Id = 100432,
+    PopoverText = "UI_Auto_Round_Tips_NotEndless",
+    ShowQuitTip = 1,
+    Style = "LongTextDefault_1",
+    Title = "UI_Common_Rule"
+  },
+  [100433] = {
+    Id = 100433,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_PopUp_ExtraExcelWeapon_ResourceConsume",
+    Style = "ResourceUseConfirm",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100434] = {
+    Id = 100434,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_AsyncCombat_ConfirmBecomeHost",
+    Style = "ShortTextDefault",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100435] = {
+    Id = 100435,
+    ShowQuitTip = 1,
+    Style = "MoneyTree_Dialog",
+    Title = "UI_DailyGoal_RewardView"
+  },
+  [100436] = {
+    Id = 100436,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_AutobuddyGuard_Popup_Content_LeaveChess",
+    Style = "ShortTextDefault",
+    Title = "UI_AutobuddyGuard_Popup_Title_LeaveChess",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100437] = {
+    Id = 100437,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_LEAVE_STAGE_CONFIRM",
+    Style = "ShortTextDefault",
+    Title = "UI_LEAVE_STAGE",
     YesButtonText = "UI_PATCH_ENSURE"
   }
 })

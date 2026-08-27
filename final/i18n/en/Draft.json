@@ -1746,6 +1746,27 @@
     "m": 50000
   },
   {
+    "id": 151317,
+    "n": "Overflow – Finesse",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51317,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41317,
+        "n": "Overflow – Finesse",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
     "id": 151321,
     "n": "Nihility·Wildfire",
     "r": 5,
@@ -3051,6 +3072,60 @@
     "m": 50000
   },
   {
+    "id": 151735,
+    "n": "Resolve",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51735,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41735,
+        "n": "Resolve",
+        "c": 5,
+        "t": "Mod"
+      },
+      {
+        "id": 201,
+        "n": "Track-Shift Module",
+        "c": 2,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151736,
+    "n": "Refinement",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51736,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41736,
+        "n": "Refinement",
+        "c": 5,
+        "t": "Mod"
+      },
+      {
+        "id": 201,
+        "n": "Track-Shift Module",
+        "c": 2,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
     "id": 151737,
     "n": "Volition",
     "r": 5,
@@ -3065,6 +3140,27 @@
       {
         "id": 41737,
         "n": "Volition",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151738,
+    "n": "Nirvana – Volition",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51738,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41738,
+        "n": "Nirvana – Volition",
         "c": 5,
         "t": "Mod"
       }
@@ -3570,6 +3666,27 @@
     "m": 50000
   },
   {
+    "id": 151768,
+    "n": "Blaze – Volition",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51768,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41768,
+        "n": "Blaze – Volition",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
     "id": 151801,
     "n": "Gleaming Sword",
     "r": 5,
@@ -3899,6 +4016,27 @@
       {
         "id": 41931,
         "n": "Devouring Wildfire",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151932,
+    "n": "Inferno Disruption",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51932,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41932,
+        "n": "Inferno Disruption",
         "c": 5,
         "t": "Mod"
       }
@@ -4290,6 +4428,87 @@
     "m": 50000
   },
   {
+    "id": 152111,
+    "n": "Edge·Trammel",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 52111,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 32101,
+        "n": "Edge",
+        "c": 1,
+        "t": "Mod"
+      },
+      {
+        "id": 42006,
+        "n": "Trammel",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 152112,
+    "n": "Penetration·Trammel",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 52112,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 32102,
+        "n": "Penetration",
+        "c": 1,
+        "t": "Mod"
+      },
+      {
+        "id": 42006,
+        "n": "Trammel",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 152113,
+    "n": "Crusher·Trammel",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 52113,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 32103,
+        "n": "Crusher",
+        "c": 1,
+        "t": "Mod"
+      },
+      {
+        "id": 42006,
+        "n": "Trammel",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
     "id": 152203,
     "n": "Continuity·Trammel",
     "r": 5,
@@ -4338,6 +4557,27 @@
         "id": 32005,
         "n": "Threshold",
         "c": 1,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 152801,
+    "n": "Trammel – Surplus",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 52801,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 42801,
+        "n": "Trammel – Surplus",
+        "c": 5,
         "t": "Mod"
       }
     ],
@@ -4676,6 +4916,108 @@
       {
         "id": 33103,
         "n": "Crusher",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 153111,
+    "n": "Edge·Trammel",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 53111,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 33101,
+        "n": "Edge",
+        "c": 1,
+        "t": "Mod"
+      },
+      {
+        "id": 43006,
+        "n": "Trammel",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 153112,
+    "n": "Penetration·Trammel",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 53112,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 33102,
+        "n": "Penetration",
+        "c": 1,
+        "t": "Mod"
+      },
+      {
+        "id": 43006,
+        "n": "Trammel",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 153113,
+    "n": "Crusher·Trammel",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 53113,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 33103,
+        "n": "Crusher",
+        "c": 1,
+        "t": "Mod"
+      },
+      {
+        "id": 43006,
+        "n": "Trammel",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 153801,
+    "n": "Trammel – Surplus",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 53801,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 43801,
+        "n": "Trammel – Surplus",
         "c": 5,
         "t": "Mod"
       }
@@ -5419,6 +5761,114 @@
     "x": [
       {
         "id": 56123,
+        "n": "Morale",
+        "c": 1,
+        "t": "Mod"
+      },
+      {
+        "id": 31301,
+        "n": "Wings·Inspo",
+        "c": 10,
+        "t": "Mod"
+      },
+      {
+        "id": 20024,
+        "n": "Filthoid Tentacle",
+        "c": 20,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 156131,
+    "n": "Volition",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 56131,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41002,
+        "n": "Nirvana",
+        "c": 10,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 156132,
+    "n": "Wings – Inspo – Volition",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 56132,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 56131,
+        "n": "Volition",
+        "c": 1,
+        "t": "Mod"
+      },
+      {
+        "id": 31301,
+        "n": "Wings·Inspo",
+        "c": 10,
+        "t": "Mod"
+      },
+      {
+        "id": 20021,
+        "n": "Sacred Candle",
+        "c": 20,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 156133,
+    "n": "Morale",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 56133,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41004,
+        "n": "Wings",
+        "c": 10,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 156134,
+    "n": "Wings – Inspo – Morale",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 56134,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 56133,
         "n": "Morale",
         "c": 1,
         "t": "Mod"
@@ -9057,6 +9507,44 @@
     "m": 280000
   },
   {
+    "id": 910405,
+    "n": "Stifled Howl",
+    "r": 5,
+    "v": "1.5",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10405,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Sharpening Potion",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12170,
+        "n": "Stifled Howl: Grip",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12171,
+        "n": "Stifled Howl: Blade (Left)",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12172,
+        "n": "Stifled Howl: Blade (Right)",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
     "id": 910501,
     "n": "Undying Oneiros",
     "r": 5,
@@ -9178,6 +9666,38 @@
       {
         "id": 12091,
         "n": "Viridis Reefs: Blade",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 910505,
+    "n": "Sanguis Sanctus – Whipblade",
+    "r": 5,
+    "v": "1.5",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10505,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Sharpening Potion",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12176,
+        "n": "Sanguis Sanctus – Whipblade: Grip",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12177,
+        "n": "Sanguis Sanctus – Whipblade: Blade",
         "c": 1,
         "t": "Resource"
       }
@@ -9615,6 +10135,32 @@
       }
     ],
     "m": 280000
+  },
+  {
+    "id": 920298,
+    "n": "Sanguine Plume",
+    "r": 5,
+    "v": "1.5",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20298,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 15016,
+        "n": "Forging Insight: Dual Pistols",
+        "c": 5,
+        "t": "Resource"
+      },
+      {
+        "id": 15004,
+        "n": "Prototype: Sanguine Plume",
+        "c": 50,
+        "t": "Resource"
+      }
+    ],
+    "m": 500000
   },
   {
     "id": 920301,

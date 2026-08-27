@@ -1,8 +1,8 @@
 local M = {}
 
-function M:New(TalkTask)
+function M:New(View)
   local Obj = setmetatable({}, {__index = M})
-  Obj.TalkTask = TalkTask
+  Obj.FlowView = View
   return Obj
 end
 
@@ -172,6 +172,15 @@ function M:RequestSkipDialogue()
   return Flow:RequestSkipDialogue()
 end
 
+function M:ResumePendingIterate()
+  local Flow = self.TalkFlow
+  if not Flow then
+    DebugPrint("FTalkFlowController:ResumePendingIterate: Flow不存在")
+    return false
+  end
+  return Flow:ResumePendingIterate()
+end
+
 function M:SkipToFinalOrOption()
   local FlowGraphComp = self.FlowGraphComp
   if FlowGraphComp and FlowGraphComp.SkipToFinalOrOption then
@@ -205,7 +214,6 @@ function M:SkipToEndOrOption()
   while Flow:IsInText() do
     Flow:Skip()
   end
-  self.TalkTask.UI:ToPageEnd()
   Flow:Start()
 end
 
@@ -221,7 +229,6 @@ function M:SkipToEnd()
   end
   while not Flow:IsEnd() and Flow:Skip() do
   end
-  self.TalkTask.UI:ToPageEnd()
   Flow:Start()
 end
 
@@ -239,7 +246,6 @@ function M:SkipToRestartTag()
       break
     end
   end
-  self.TalkTask.UI:ToPageEnd()
   Flow:Start()
 end
 

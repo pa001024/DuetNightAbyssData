@@ -1,4 +1,5 @@
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
+local SerializeUtils = require("Utils.SerializeUtils")
 local M = {}
 
 function M:Init(Params)
@@ -297,15 +298,15 @@ end
 M[ShowFXAccessoryPrefix .. CommonConst.CharAccessoryTypes.FX_HelixLeap] = function(self, Player, AccessoryId, AccessoryType)
   self:ChangeCharAccessory(AccessoryId, AccessoryType)
   
-  local function PlayBullutJump(PlayerCharacter)
+  local function PlayBulletJump(PlayerCharacter)
     if nil == PlayerCharacter then
       return
     end
     PlayerCharacter:SetArmoryTag(Const.ArmoryIdleTags.Armory_BullutJump)
   end
   
-  PlayBullutJump(self:GetPlayerActor())
-  PlayBullutJump(self:GetReflectionActor(self:GetPlayerActor()))
+  PlayBulletJump(self:GetPlayerActor())
+  PlayBulletJump(self:GetReflectionActor(self:GetPlayerActor()))
 end
 local MVPLocation = FVector(200000, 200000, 200000)
 
@@ -355,15 +356,7 @@ local function PlaySequenceByPath(self, Params)
   end
   Player:PlayActionMontage("Interactive", Params.MontagePath, {})
   Player:SetCharacterTag("LevelFinish")
-  local MVPSequencePath = Params.SequencePath
-  if CommonUtils.GetRuntimePlatform(self) == "Mobile" then
-    if string.find(MVPSequencePath, "Jisu_") then
-      MVPSequencePath = "/Game/Asset/Char/Player/Common/MVPShow/Jisu/Sequence/Jisu_MVPShow_Cam_Mobile.Jisu_MVPShow_Cam_Mobile"
-    elseif string.find(MVPSequencePath, "Zuirang_") then
-      MVPSequencePath = "/Game/Asset/Char/Player/Common/MVPShow/Zuirang/Sequence/Zuirang_MVPShow_Cam_Mobile.Zuirang_MVPShow_Cam_Mobile"
-    end
-  end
-  Player:PlayMVPSequence(MVPSequencePath, FTransform(FRotator(0, -90, 0):ToQuat(), Const.ZeroVector, Const.OneVector))
+  Player:PlayMVPSequence(Params.SequencePath, FTransform(FRotator(0, -90, 0):ToQuat(), Const.ZeroVector, Const.OneVector))
   if Player.MVPSequenceActor then
     local SequencePlayer = Player.MVPSequenceActor:GetSequencePlayer()
     if SequencePlayer then

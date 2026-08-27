@@ -135,6 +135,16 @@ return ReadOnly("CharVoice2Gacha", {
         VoiceText = {
           [1] = "voice_ch_char_Eve_vo_gain_01"
         }
+      },
+      [2] = {
+        GachaVoiceCondition = {
+          [1] = 110232
+        },
+        VoiceId = 11061,
+        VoiceRes = T.RT_2,
+        VoiceText = {
+          [1] = "voice_ch_char_Eve_vo_gain_02"
+        }
       }
     }
   },
@@ -189,6 +199,17 @@ return ReadOnly("CharVoice2Gacha", {
         VoiceRes = T.RT_1,
         VoiceText = {
           [1] = "voice_ch_char_Yeer_vo_gain"
+        }
+      }
+    }
+  },
+  [3104] = {
+    [1] = {
+      [1] = {
+        VoiceId = 11111,
+        VoiceRes = T.RT_1,
+        VoiceText = {
+          [1] = "voice_ch_char_Falu_vo_gain"
         }
       }
     }

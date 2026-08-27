@@ -1,3 +1,4 @@
+local MiscUtils = require("Utils.MiscUtils")
 require("UnLua")
 local InventoryController = require("BluePrints.UI.WBP.SoloTreasure.Widget.Inventory.InventoryController")
 local TimeUtils = require("Utils.TimeUtils")
@@ -115,7 +116,7 @@ end
 
 function M:PlayExtraRewardsAnim()
   if not self.IsStory and self.AddExtraResourceNum > 0 and self.ResourceUpperLimit ~= nil then
-    self.Text_Num_Coin:SetText(Utils.FormatNumber(0, false))
+    self.Text_Num_Coin:SetText(MiscUtils.FormatNumber(0, false))
     self:SetImage(self.AddExtraResourceId, self.Image_6)
     self.Panel_TransCoin:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     self:BindToAnimationFinished(self.TransCoin_In, {
@@ -264,9 +265,9 @@ function M:InitUIContent()
   self.Max.Text_Max:SetText(GText("UI_SoloTreasure_MaxExtraReward"))
   self.Text_Score01:SetText(GText("UI_Extraction_BattleScore"))
   self.Text_Score01_1:SetText(GText("UI_Extraction_TreasureScore"))
-  self.Text_Num:SetText(Utils.FormatNumber(self.KillMonsterScore + self.TreasureScore, false))
-  self.Text_Score01_Num:SetText(Utils.FormatNumber(self.KillMonsterScore, false))
-  self.Text_Score01_Num_1:SetText(Utils.FormatNumber(self.TreasureScore, false))
+  self.Text_Num:SetText(MiscUtils.FormatNumber(self.KillMonsterScore + self.TreasureScore, false))
+  self.Text_Score01_Num:SetText(MiscUtils.FormatNumber(self.KillMonsterScore, false))
+  self.Text_Score01_Num_1:SetText(MiscUtils.FormatNumber(self.TreasureScore, false))
   self.Btn_Continue:SetText(string.format(GText("Abyss_Battle_Again")))
   self.Btn_Continue:SetDefaultGamePadImg("X")
   self.Btn_Continue.Button_Area.OnClicked:Add(self, self.OnPlayAgain)

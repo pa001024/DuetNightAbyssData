@@ -4,7 +4,11 @@ function M:InitNpcCharacter(NpcCharacter)
   if not IsValid(NpcCharacter) then
     return
   end
-  NpcCharacter:PreEnterStory({}, false, true, true)
+  local PreEnterContext = FStoryPlayableContext()
+  PreEnterContext.bCacheMeshMaterials = false
+  PreEnterContext.bPauseBT = true
+  PreEnterContext.bReleaseFireOnEnter = true
+  NpcCharacter:PreEnterStory(PreEnterContext)
   NpcCharacter:AddTimer(0.01, function()
     NpcCharacter:StopBT("Talk")
     if IsValid(NpcCharacter.Controller) and IsValid(NpcCharacter.Controller.Blackboard) then

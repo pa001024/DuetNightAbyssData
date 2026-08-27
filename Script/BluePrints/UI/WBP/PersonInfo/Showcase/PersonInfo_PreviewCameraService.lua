@@ -47,7 +47,7 @@ function M:Init(Params)
   self.CameraComponent = nil
   self.ViewTargetEvents = nil
   self.ViewTargetEventObj = nil
-  self.IsControled = false
+  self.IsControlled = false
   self.EnableCameraScrolling = false
   self.StartPos = nil
   self.EndPos = nil
@@ -334,7 +334,7 @@ function M:ViewTarget()
   end
   self:SyncCameraComponentSettingsFromHelper()
   Controller:SetViewTargetWithBlend(CameraActor, 0, UE4.EViewTargetBlendFunction.VTBlend_Linear, 0, false)
-  self.IsControled = true
+  self.IsControlled = true
   local Events = self.ViewTargetEvents or nil
   if Events and Events.OnBecomeViewTarget then
     Events.OnBecomeViewTarget(self.ViewTargetEventObj, Controller)
@@ -343,10 +343,10 @@ function M:ViewTarget()
 end
 
 function M:EndViewTarget()
-  if not self.IsControled then
+  if not self.IsControlled then
     return
   end
-  self.IsControled = false
+  self.IsControlled = false
   local Controller = self.ViewUI and self.ViewUI:GetOwningPlayer() or UE4.UGameplayStatics.GetPlayerController(self.ViewUI, 0)
   local Events = self.ViewTargetEvents or nil
   if Events and Events.OnEndViewTarget then

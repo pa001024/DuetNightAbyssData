@@ -63,6 +63,34 @@
     "rarity": 4
   },
   {
+    "id": 10131,
+    "name": "餅住呼吸·杏黃",
+    "desc": "別噎著。",
+    "icon": "T_Fashion_Head76_01",
+    "rarity": 4
+  },
+  {
+    "id": 10132,
+    "name": "餅住呼吸·焦糖",
+    "desc": "別噎著。",
+    "icon": "T_Fashion_Head76_02",
+    "rarity": 4
+  },
+  {
+    "id": 10133,
+    "name": "餅住呼吸·涅白",
+    "desc": "別噎著。",
+    "icon": "T_Fashion_Head76_03",
+    "rarity": 4
+  },
+  {
+    "id": 10134,
+    "name": "餅住呼吸·碧綠",
+    "desc": "別噎著。",
+    "icon": "T_Fashion_Head76_04",
+    "rarity": 4
+  },
+  {
     "id": 110292,
     "name": "赦罪者",
     "icon": "T_Fashion_Fuluo_01",
@@ -98,11 +126,25 @@
     "charId": 2401
   },
   {
+    "id": 310491,
+    "name": "緘默獵手",
+    "icon": "T_Fashion_Falu_01",
+    "rarity": 0,
+    "charId": 3104
+  },
+  {
     "id": 410292,
     "name": "攜金宴夜",
     "icon": "T_Fashion_Zhiliu_01",
     "rarity": 5,
     "charId": 4102
+  },
+  {
+    "id": 410392,
+    "name": "UI_Skin_Name_410301",
+    "icon": "T_Fashion_Zhiliu_01",
+    "rarity": 5,
+    "charId": 4103
   },
   {
     "id": 530192,

@@ -12,7 +12,8 @@ Skin.__Props__ = {
   SpecialColor = prop.prop("IntList", "client save"),
   IsShowPartMesh = prop.prop("Bool", "client save", true),
   Level = prop.prop("Int", "client save", 1),
-  SelectedLevel = prop.prop("Int", "client save", 1)
+  SelectedLevel = prop.prop("Int", "client save", 1),
+  EffectInterval = prop.prop("Float", "client save", -1)
 }
 
 function Skin:Init(SkinId, SkinType)

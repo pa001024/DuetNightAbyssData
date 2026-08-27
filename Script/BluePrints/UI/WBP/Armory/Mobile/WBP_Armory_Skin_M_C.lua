@@ -51,4 +51,10 @@ function M:OpenAccessoryCustom(Content)
   self.Tab_Skin.Panel_Tab:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
 end
 
+function M:OnTopTabSelected(...)
+  M.Super.OnTopTabSelected(self, ...)
+  self.EnableMouseWheel = self.CurrentTopTabIdx ~= self.WeaponStanceFXTabIdx and self.CurrentTopTabIdx ~= self.MVPTabIdx
+  self.EnableDrag = self.EnableMouseWheel
+end
+
 return M

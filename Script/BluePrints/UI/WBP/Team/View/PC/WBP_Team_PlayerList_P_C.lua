@@ -44,8 +44,12 @@ function M:InitUIInfo(Name, bInUIMode, EventList, ...)
       }
     }
   })
+  self.Key_Leave:CreateCommonKey({
+    KeyInfoList = {
+      {Type = "Img", ImgShortPath = "X"}
+    }
+  })
   self.Btn_Invite:SetGamePadImg("Y")
-  self.Btn_Leave:SetGamePadImg("X")
   UIManager(self):GetGameInputModeSubsystem().OnInputMethodChanged:Add(self, self.OnInputDeviceChange)
   self.LastIsGamepad = TeamController:IsGamepad()
   self:OnInputDeviceChange()
@@ -62,8 +66,10 @@ end
 function M:OnInputDeviceChange()
   if TeamController:IsGamepad() then
     self.Panel_GamePad:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Function_Leave:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   elseif not TeamController:IsMobile() then
     self.Panel_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Function_Leave:SetVisibility(UIConst.VisibilityOp.Collapsed)
     if not self.bIniting and self.LastIsGamepad then
       self:Close()
     end
@@ -160,8 +166,7 @@ end
 function M:OnPreviewKeyDown(MyGeo, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  local InputAction = DataMgr.GamepadMap.ShowTeamInfo
-  if (InKeyName == "Gamepad_" .. InputAction.GamepadKey[1] or InKeyName == UIConst.GamePadKey.FaceButtonRight) and not self._bTeamDetailOpen then
+  if InKeyName == UIConst.GamePadKey.FaceButtonRight and not self._bTeamDetailOpen then
     DebugPrint(DebugTag, LXYTag, "关闭TeamInfoUI")
     self:StopAnimation(self.Auto_In)
     self.GameInputModeSubsystem:SetNavigateWidgetVisibility(false)

@@ -83,6 +83,10 @@ function LightTalkTask:PlayDialogue(bPauseResume)
   self:ProcessWaitTag_UIPlayDialogue(DialogueData, self.WaitQueue)
   self:ProcessWaitTag_PlayAudio(DialogueData, bPauseResume, nil, self.WaitQueue)
   self:ProcessWaitTag_PlayScript(DialogueData, self.WaitQueue)
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    Avatar:CompletedDialogue(DialogueData.DialogueId)
+  end
 end
 
 function LightTalkTask:EndDialogue()

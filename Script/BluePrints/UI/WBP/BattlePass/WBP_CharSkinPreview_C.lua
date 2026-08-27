@@ -1741,7 +1741,9 @@ function M:DoApplySkinOptReward(Content)
     DebugPrint("WBP_CharSkinPreview_C DoApplySkinOptReward 未找到对应皮肤索引", SkinId)
     return
   end
-  local OptIdxList = {ChooseIndex}
+  local OptIdxList = {
+    [ChooseIndex] = 1
+  }
   DebugPrint("WBP_CharSkinPreview_C DoApplySkinOptReward 调用RPC UseOptResourceInBag", ResourceId, ChooseIndex)
   
   local function OnFinish(ErrCode)
@@ -1795,7 +1797,9 @@ function M:DoApplyWeaponSkinOptReward(Content)
     DebugPrint("WBP_CharSkinPreview_C DoApplyWeaponSkinOptReward 未找到对应皮肤索引", SkinId)
     return
   end
-  local OptIdxList = {ChooseIndex}
+  local OptIdxList = {
+    [ChooseIndex] = 1
+  }
   DebugPrint("WBP_CharSkinPreview_C DoApplyWeaponSkinOptReward 调用RPC UseOptResourceInBag", ResourceId, ChooseIndex)
   
   local function OnFinish(ErrCode)
@@ -1849,7 +1853,9 @@ function M:DoApplyCharSkinOptReward(Content)
     DebugPrint("WBP_CharSkinPreview_C DoApplyWeaponSkinOptReward 未找到对应皮肤索引", SkinId)
     return
   end
-  local OptIdxList = {ChooseIndex}
+  local OptIdxList = {
+    [ChooseIndex] = 1
+  }
   DebugPrint("WBP_CharSkinPreview_C DoApplyWeaponSkinOptReward 调用RPC UseOptResourceInBag", ResourceId, ChooseIndex)
   
   local function OnFinish(ErrCode)
@@ -1904,7 +1910,9 @@ function M:DoApplyAccessoryOptReward(Content)
     DebugPrint("WBP_CharSkinPreview_C DoApplyAccessoryOptReward 未找到对应皮肤索引", SkinId)
     return
   end
-  local OptIdxList = {ChooseIndex}
+  local OptIdxList = {
+    [ChooseIndex] = 1
+  }
   DebugPrint("WBP_CharSkinPreview_C DoApplyAccessoryOptReward 调用RPC UseOptResourceInBag", ResourceId, ChooseIndex)
   
   local function OnFinish(ErrCode)
@@ -1959,7 +1967,9 @@ function M:DoApplyGestureOptReward(Content)
     DebugPrint("WBP_CharSkinPreview_C DoApplyAccessoryOptReward 未找到对应皮肤索引", SkinId)
     return
   end
-  local OptIdxList = {ChooseIndex}
+  local OptIdxList = {
+    [ChooseIndex] = 1
+  }
   DebugPrint("WBP_CharSkinPreview_C DoApplyAccessoryOptReward 调用RPC UseOptResourceInBag", ResourceId, ChooseIndex)
   
   local function OnFinish(ErrCode)

@@ -15,7 +15,7 @@ function SelectGenderAndNameNode:Start(Context)
     self:FinishAction()
   end
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
-  Player:SetESCMenuForbiddenState(true)
+  Player:SetESCMenuForbiddenStateByTag(true, "SelectGenderAndNameNode")
   local UIManager = GWorld.GameInstance:GetGameUIManager()
   UIManager:CloseResidentUI()
   EventManager:AddEvent(EventID.OnSelectRole, self, self.SwitchSequence)
@@ -44,7 +44,7 @@ function SelectGenderAndNameNode:FinishAction()
   UIManager:UnLoadUI("SelectRole")
   UIManager:OpenResidentUI()
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
-  Player:SetESCMenuForbiddenState(false)
+  Player:SetESCMenuForbiddenStateByTag(false, "SelectGenderAndNameNode")
   self:Finish()
 end
 

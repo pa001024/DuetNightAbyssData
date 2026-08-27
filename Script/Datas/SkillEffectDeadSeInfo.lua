@@ -15,6 +15,7 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("SkillEffectDeadSeInfo", {
+  [112] = T.RT_2,
   [110151] = T.RT_2,
   [110152] = T.RT_2,
   [110153] = T.RT_2,
@@ -74,6 +75,10 @@ return ReadOnly("SkillEffectDeadSeInfo", {
   [180116] = T.RT_3,
   [410115] = T.RT_1,
   [410126] = T.RT_1,
+  [410333] = T.RT_2,
+  [410334] = T.RT_2,
+  [410335] = T.RT_2,
+  [410336] = T.RT_2,
   [530114] = T.RT_2,
   [530115] = T.RT_1,
   [530124] = T.RT_1,
@@ -140,6 +145,7 @@ return ReadOnly("SkillEffectDeadSeInfo", {
   [1040214] = T.RT_2,
   [1040222] = T.RT_2,
   [1040242] = T.RT_1,
+  [1040323] = T.RT_2,
   [1050111] = T.RT_1,
   [1050112] = T.RT_1,
   [1050113] = T.RT_2,

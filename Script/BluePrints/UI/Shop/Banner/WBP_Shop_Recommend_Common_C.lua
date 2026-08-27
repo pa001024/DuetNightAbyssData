@@ -405,7 +405,7 @@ function M:ClearAndHideRewardView()
 end
 
 function M:InitPreviewInfo()
-  local PreviewBtn = self.Btn_Qa and self.Btn_Qa.Button_Area or self.Btn_Qa
+  local PreviewBtn = self.Btn_Qa and self.Btn_Qa.Btn_Click or self.Btn_Qa and self.Btn_Qa.Button_Area or self.Btn_Qa
   if PreviewBtn and PreviewBtn.OnClicked then
     PreviewBtn.OnClicked:Clear()
   end
@@ -488,7 +488,7 @@ function M:HidePreviewInfo()
   self:SafeSetVisibility(self.Group_BtnQA, UE4.ESlateVisibility.Collapsed)
   if self.Btn_Qa then
     self:SafeSetVisibility(self.Btn_Qa, UE4.ESlateVisibility.Collapsed)
-    local PreviewBtn = self.Btn_Qa and self.Btn_Qa.Button_Area or self.Btn_Qa
+    local PreviewBtn = self.Btn_Qa and self.Btn_Qa.Btn_Click or self.Btn_Qa and self.Btn_Qa.Button_Area or self.Btn_Qa
     if not PreviewBtn then
       local TitleRoot = self.WBP_Shop_Recommend_Common_TItle_C_0 or self.WBP_Shop_Recommend_Common_TItle
       if TitleRoot and TitleRoot.Button_Preview then

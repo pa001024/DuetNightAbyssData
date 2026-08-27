@@ -1,6 +1,7 @@
 require("UnLua")
 local RegionFameController = require("BluePrints.UI.WBP.Fame.RegionFameController")
 local RegionFameModel = RegionFameController:GetModel()
+local RegionFameMapUtils = require("BluePrints.UI.WBP.Fame.RegionFameMapUtils")
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
 })
@@ -9,13 +10,16 @@ function M:Construct()
   self.BtnAccept.Button_Area.OnClicked:Add(self, self.OnAcceptBtnClicked)
   self.BtnAbandon.Button_Area.OnClicked:Add(self, self.OnAbandonBtnClicked)
   self.BtnReward.Button_Area.OnClicked:Add(self, self.OnRewardBtnClicked)
+  self.Btn_Location.Button_Area.OnClicked:Add(self, self.OnLocationBtnClicked)
 end
 
 function M:Destruct()
+  self:RemoveTimer("UpdateRemainingTime", true)
   rawset(self, "InitedGamePadKey", nil)
   self.BtnAccept.Button_Area.OnClicked:Remove(self, self.OnAcceptBtnClicked)
   self.BtnAbandon.Button_Area.OnClicked:Remove(self, self.OnAbandonBtnClicked)
   self.BtnReward.Button_Area.OnClicked:Remove(self, self.OnRewardBtnClicked)
+  self.Btn_Location.Button_Area.OnClicked:Remove(self, self.OnLocationBtnClicked)
 end
 
 function M:Init(Content)
@@ -122,7 +126,38 @@ function M:InitTaskDetail()
   local bShowDone = not bShouldHideMask or bForceShowMask
   self.Done:SetVisibility(bShowDone and UIConst.VisibilityOp.Visible or UIConst.VisibilityOp.Collapsed)
   self:RefreshBtnState()
+  self:RefreshLocationBtn()
   self:RefreshCountdown()
+end
+
+function M:RefreshLocationBtn()
+  local bCanTrack = self:CanUseLocationBtn()
+  GWorld.logger.info("[FameTaskIndex]", "RefreshLocationBtn", self.TaskId, "RegionId", self.RegionId, "TaskState", self.TaskState, "DoingState", CommonConst.RecurringTaskState.Doing, "Visible", bCanTrack and "true" or "false")
+  self.Btn_Location:SetVisibility(bCanTrack and UIConst.VisibilityOp.Visible or UIConst.VisibilityOp.Collapsed)
+  self:RefreshLocationGamePadKey(bCanTrack)
+end
+
+function M:RefreshLocationGamePadKey(bCanTrack)
+  local bIsGamePad = self.Parent and self.Parent.CurInputDeviceType == ECommonInputType.Gamepad
+  if nil == bCanTrack then
+    bCanTrack = self:CanUseLocationBtn()
+  end
+  local bShowGamePadKey = bCanTrack and bIsGamePad and self.bFocused
+  if bShowGamePadKey then
+    self:UpdateMouseGamePadImage()
+  end
+  self.Key_Location_GamePad:SetVisibility(bShowGamePadKey and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
+end
+
+function M:CanUseLocationBtn()
+  local bIsDoing = self.TaskState == CommonConst.RecurringTaskState.Doing
+  if not bIsDoing then
+    GWorld.logger.info("[FameTaskIndex]", "CanUseLocationBtn=false: task is not Doing", self.TaskId, "TaskState", self.TaskState, "DoingState", CommonConst.RecurringTaskState.Doing)
+    return false
+  end
+  local bHasConfiguredPoint = RegionFameMapUtils.CanTrackRecurringTaskPoint(self.TaskId)
+  GWorld.logger.info("[FameTaskIndex]", "CanUseLocationBtn result", self.TaskId, "IsDoing", "true", "HasConfiguredPoint", bHasConfiguredPoint and "true" or "false")
+  return bHasConfiguredPoint
 end
 
 function M:RefreshCountdown()
@@ -182,6 +217,7 @@ function M:OnAcceptBtnClicked()
       if Ret == ErrorCode.RET_SUCCESS then
         self.Parent.RefreshRecurringTaskDetail(self.Parent)
         self:PlayAnimation(self.Click)
+        AudioManager(self):PlayUISound(nil, "event:/ui/common/light_refresh", nil, nil)
         return
       end
       local Error = DataMgr.ErrorCode[Ret]
@@ -200,7 +236,16 @@ function M:OnAbandonBtnClicked()
     local Params = {}
     
     function Params.RightCallbackFunction()
-      Avatar:CancelRecurringQuest(self.RegionId, self.TaskId, self.AbandonRecurringTaskCallback)
+      local TaskId = self.TaskId
+      local AbandonCallback = self.AbandonRecurringTaskCallback
+      Avatar:CancelRecurringQuest(self.RegionId, TaskId, function(Ret, ReputationId, QuestId)
+        if Ret == ErrorCode.RET_SUCCESS then
+          RegionFameMapUtils.TryStopTrackForRecurringQuest(TaskId)
+        end
+        if AbandonCallback then
+          AbandonCallback(Ret, ReputationId, QuestId)
+        end
+      end)
     end
     
     function Params.LeftCallbackFunction()
@@ -220,19 +265,34 @@ function M:OnRewardBtnClicked()
   end
 end
 
-function M:Destruct()
-  self:RemoveTimer("UpdateRemainingTime", true)
+function M:OnLocationBtnClicked()
+  GWorld.logger.info("[FameTaskIndex]", "Location button clicked", self.TaskId, "RegionId", self.RegionId, "TaskState", self.TaskState)
+  if not self:CanUseLocationBtn() then
+    GWorld.logger.info("[FameTaskIndex]", "Location click aborted by CanUseLocationBtn", self.TaskId)
+    return
+  end
+  local bSuccess, FailureReason = RegionFameMapUtils.JumpToRecurringTaskPointOnMap(self, self.TaskId, true)
+  GWorld.logger.info("[FameTaskIndex]", "Location click result", self.TaskId, "Success", bSuccess and "true" or "false", "FailureReason", FailureReason)
+  if not bSuccess and FailureReason == RegionFameMapUtils.JumpFailureReason.NoUnlockedPoint then
+    UIManager(self):ShowUITip(UIConst.Tip_CommonTop, GText("Poi_Locked"))
+  end
 end
 
 function M:HandleGamePadPressA()
   if self.TaskState == CommonConst.RecurringTaskState.NotAccept then
+    if self.DoingTaskId ~= nil or self.HasCanClaimTask or self.CurrentLevel < self.MaxLevel then
+      return false
+    end
     self:OnAcceptBtnClicked()
   elseif self.TaskState == CommonConst.RecurringTaskState.Doing then
     self:OnAbandonBtnClicked()
   elseif self.TaskState == CommonConst.RecurringTaskState.CanClaim then
     self:OnRewardBtnClicked()
+  else
+    return false
   end
   AudioManager(self):PlayUISound(self, "event:/ui/common/click", "", nil)
+  return true
 end
 
 function M:FocusReward()
@@ -243,10 +303,12 @@ end
 function M:Handle_OnGamePadButtonDown(InKeyName)
   local IsEventHandled = false
   if InKeyName == UIConst.GamePadKey.FaceButtonBottom then
-    self:HandleGamePadPressA()
-    IsEventHandled = true
+    IsEventHandled = self:HandleGamePadPressA()
   elseif InKeyName == UIConst.GamePadKey.LeftThumb then
     self:FocusReward()
+    IsEventHandled = true
+  elseif InKeyName == UIConst.GamePadKey.FaceButtonTop and self:CanUseLocationBtn() then
+    self:OnLocationBtnClicked()
     IsEventHandled = true
   elseif InKeyName == UIConst.GamePadKey.FaceButtonRight and self.bFocusReward then
     self:SetFocus()
@@ -327,12 +389,14 @@ function M:UpdateGamePadStyle()
     self.WBP_Com_KeyImg_10:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self:SetAllBtnPCVisibility(true)
   end
+  self:RefreshLocationGamePadKey()
 end
 
 function M:SetAllBtnPCVisibility(IsShow)
   self.BtnAccept:SetPCVisibility(IsShow)
   self.BtnAbandon:SetPCVisibility(IsShow)
   self.BtnReward:SetGamePadVisibility(IsShow and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.BtnDisable:SetGamePadVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
 function M:UpdateMouseGamePadImage()
@@ -353,6 +417,14 @@ function M:UpdateMouseGamePadImage()
       {
         Type = "Img",
         ImgLongPath = UIUtils.UtilsGetKeyIconPathInGamepad("LS", CurGamepadName)
+      }
+    }
+  })
+  self.Key_Location_GamePad:CreateCommonKey({
+    KeyInfoList = {
+      {
+        Type = "Img",
+        ImgLongPath = UIUtils.UtilsGetKeyIconPathInGamepad("Y", CurGamepadName)
       }
     }
   })

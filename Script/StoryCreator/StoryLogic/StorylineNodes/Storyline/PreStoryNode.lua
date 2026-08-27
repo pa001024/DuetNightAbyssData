@@ -3,26 +3,34 @@ local PreStoryNode = Class("StoryCreator.StoryLogic.StorylineNodes.Node")
 
 function PreStoryNode:Start(Context, NodeId)
   self.Questline = Questline(self.Data, Context, self)
+  local SuccessNode = self.Questline and self.Questline:GetSuccessNode()
+  if SuccessNode then
+    self.QuestDeliverId = SuccessNode.Id
+    self.QuestDeliverLoadingId = SuccessNode.LoadingId
+  end
   self.Questline:StartQuest(NodeId)
 end
 
 function PreStoryNode:FinishQuest(OutPortName, bSucceeded)
-  self.Questline = nil
   self:Finish(OutPortName, bSucceeded)
 end
 
-function PreStoryNode:StopQuest()
-  self.Questline:StopQuest()
-  self.Questline = nil
+function PreStoryNode:StopQuest(IgnoreFinishClear)
+  if self.Questline then
+    self.Questline:StopQuest(IgnoreFinishClear)
+  end
 end
 
 function PreStoryNode:SuccessQuest()
-  self.Questline:SuccessQuest()
-  self.Questline = nil
+  if self.Questline then
+    self.Questline:SuccessQuest()
+  end
 end
 
 function PreStoryNode:PrintInfo()
-  self.Questline:PrintInfo()
+  if self.Questline then
+    self.Questline:PrintInfo()
+  end
 end
 
 function PreStoryNode:ToString()
@@ -44,6 +52,20 @@ function PreStoryNode:StopStory()
   self.Context:StopStory()
 end
 
+function PreStoryNode:OnStop()
+  if self.Questline then
+    self.Questline:OnStop()
+  end
+  self.Questline = nil
+end
+
+function PreStoryNode:OnFinish()
+  if self.Questline then
+    self.Questline:OnFinish()
+  end
+  self.Questline = nil
+end
+
 function PreStoryNode:GetRunningNodeTableByType(NodeType, OutRunningNodeTable)
   if self.Type == NodeType then
     table.insert(OutRunningNodeTable, self)
@@ -58,6 +80,10 @@ function PreStoryNode:IsGuideNodeRunning()
     return self.Questline:IsGuideNodeRunning()
   end
   return false
+end
+
+function PreStoryNode:UpdateCurrentSTLData(SuitSubType, SuitKey, UpdateParam)
+  self.Context:UpdateCurrentSTLData(SuitSubType, SuitKey, UpdateParam)
 end
 
 return PreStoryNode

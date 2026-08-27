@@ -192,7 +192,11 @@ function M:SetupSequenceNpc(LevelSequenceActor, SequenceId)
       Context.OnUnitInitCreateReadyDynamic:Add(self, function(_, NewNpc)
         self.NpcActors[SequenceId] = self.NpcActors[SequenceId] or {}
         self.NpcActors[SequenceId][NpdId] = NewNpc
-        NewNpc:PreEnterStory(nil, true, true)
+        local PreEnterContext = FStoryPlayableContext()
+        PreEnterContext.bCacheMeshMaterials = true
+        PreEnterContext.bPauseBT = true
+        PreEnterContext.bReleaseFireOnEnter = true
+        NewNpc:PreEnterStory(PreEnterContext)
         NewNpc:EnableSkeletalMeshActorRules(true)
         LevelSequenceActor:AddBindingByTag(Tag, NewNpc, false)
         LevelSequenceActor.SequencePlayer.OnFinished:Add(LevelSequenceActor, function()
@@ -201,7 +205,10 @@ function M:SetupSequenceNpc(LevelSequenceActor, SequenceId)
           end
           LevelSequenceActor:RemoveBindingByTag(Tag, NewNpc)
           NewNpc:EnableSkeletalMeshActorRules(false)
-          NewNpc:PreExitStory(nil, false, false)
+          local PreExitContext = FStoryPlayableContext()
+          PreExitContext.bPauseBT = false
+          PreExitContext.bIsExternal = false
+          NewNpc:PreExitStory(PreExitContext)
         end)
       end)
       GameState.EventMgr:CreateUnitNew(Context, true)

@@ -1,6 +1,7 @@
 require("UnLua")
 local GameFlowUtils = require("Utils.GameFlowUtils")
 local HeroUSDKUtils = require("Utils.HeroUSDKUtils")
+local GLink = require("Utils.MiscUtils").GLink
 local M = {}
 
 function M.JumpToTaskPanelByQuestChainId(QuestChainId)

@@ -590,7 +590,7 @@ function M:OnNormalColorListContentCreated(Content)
   end
 end
 
-function M:OnNoramlDyeTabContentCreated(Content)
+function M:OnNormalDyeTabContentCreated(Content)
   function Content.OnAddedToFocusPath(_self, _Content)
     self.FSM:Push({
       Name = FocusAreas.NoramlDyeTab,

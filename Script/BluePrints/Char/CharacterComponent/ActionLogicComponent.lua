@@ -147,7 +147,7 @@ function ActionLogicComponent:PlayArmoryAction(ActionId, bHideUntilLoop)
 end
 
 function ActionLogicComponent:IsArmoryIdleTag(IdleTag)
-  if self.PlayerAnimInstance then
+  if self.PlayerAnimInstance and self.PlayerAnimInstance.IsArmoryIdleTag then
     return self.PlayerAnimInstance:IsArmoryIdleTag(IdleTag)
   end
   return false

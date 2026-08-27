@@ -1,14 +1,7 @@
 require("UnLua")
 local CommonUtils = require("Utils.CommonUtils")
 local TimeUtils = require("Utils.TimeUtils")
-local EMCache = require("EMCache.EMCache")
 local CoopModel = require("BluePrints.UI.WBP.Activity.PC.Coop.Model.CoopModel")
-local RoomState = {
-  Public = 1,
-  Friend = 2,
-  Guild = 3,
-  Private = 4
-}
 
 local function FormatPermille(value)
   local str = string.format("%.1f", value or 0)
@@ -27,8 +20,11 @@ function M:Construct()
   self.bAsyncCombat = true
   local SystemUIConfig = DataMgr.SystemUI[self.ConfigName or self.WidgetName] or {}
   self.IsChat = SystemUIConfig.IsChat
-  self.WeekLimit = DataMgr.AsyncCombatEventConstant.AsyncCombat_WeeklyLimit.ConstantValue
-  self.EventId = DataMgr.AsyncCombatEventConstant.AsyncCombat_EventId.ConstantValue
+  local AsyncCombatEventConstant = DataMgr.AsyncCombatEventConstant
+  self.WeekLimit = AsyncCombatEventConstant.AsyncCombat_WeeklyLimit.ConstantValue
+  self.EventId = AsyncCombatEventConstant.AsyncCombat_EventId.ConstantValue
+  self.WeekFreeLimit = AsyncCombatEventConstant.Async_FreeGiveNum.ConstantValue
+  self.ShowHintTime = AsyncCombatEventConstant.AsyncCombat_StoppageTimeRoomShowHintTime.ConstantValue * 60
   self:AddDispatcher(EventID.OnDisableEscOnDungeonLoading, self, self.DisableEscOnDungeonLoading)
   self:AddDispatcher(EventID.CurrentSquadChange, self, self.OnCurrentSquadChange)
   self:AddInputMethodChangedListen()
@@ -69,15 +65,21 @@ function M:Init(RoomData)
   self.TextReward:SetText(GText("UI_AsyncCombat_MultiTicketBonus"))
   self.TextTimeEnd:SetText(GText("UI_AsyncCombat_ForceEndInTime"))
   self:IconInit()
-  self.RoomRate = self.GetNeedNumber(DataMgr.Resource[self.RoomData.RateResId].UseParam / 100)
+  local AnimationName = "Lv_04"
+  if self.bFreeRoom then
+    self.RoomRate = DataMgr.AsyncCombatEventConstant.Async_FreeRoomBonusRate.ConstantValue * 100
+    AnimationName = "Personal"
+  else
+    self.RoomRate = self.GetNeedNumber(DataMgr.Resource[self.RoomData.RateResId].UseParam / 100)
+    AnimationName = CoopModel:GetRewardAnimationByDifficultyId(self.RoomData.RateResId)
+  end
   self.Tag_Reward.TextNum:SetText("+" .. self.RoomRate .. "%")
-  local AnimationName = CoopModel:GetRewardAnimationByDifficultyId(self.RoomData.RateResId)
   self.Tag_Reward:PlayAnimation(self.Tag_Reward[AnimationName])
   local RoomCapacityLimit = DataMgr.AsyncCombatEventConstant.AsyncCombat_RoomCapacityLimit.ConstantValue
   self.TextPeopleNum:SetText(self.RoomData.MemberCount .. "/" .. RoomCapacityLimit)
   self.bRoomFull = self.RoomData.MemberCount == RoomCapacityLimit
   self.TextPeopleDetails:SetText(string.format(GText("UI_AsyncCombat_CurrentHostCount"), self.RoomData.MasterCount))
-  self.TextProgress:SetText(GText("UI_AsyncCombat_ChallengeProgress"))
+  self.TextProgress:SetText(GText("UI_AsyncCombat_RemainProgress"))
   self.TextRemaining:SetText(GText("UI_AsyncCombat_RemainContribution"))
   self.TextMy:SetText(GText("UI_AsyncCombat_MyContribution"))
   self.Tag_Mvp.TextTag:SetText(GText("UI_AsyncCombat_MVP"))
@@ -99,7 +101,8 @@ function M:Init(RoomData)
   self.TextRewardTitle:SetText(GText("UI_AsyncCombat_RewardPreview"))
   self:RewardListInit()
   self.List:DisableScroll(true)
-  local bSquad = true
+  local DungeonConfig = DataMgr.Dungeon and DataMgr.Dungeon[self.DungeonId]
+  local bSquad = DungeonConfig and DungeonConfig.Squad or false
   if bSquad then
     self.DefaultList:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     local DungeonType = DataMgr.Dungeon[self.DungeonId].DungeonType
@@ -114,6 +117,13 @@ function M:Init(RoomData)
   end
   local RemainTimeDict, TimeCount = UIUtils.GetLeftTimeStrStyle2(self.RoomExpireTime)
   self.WBP_Com_Time:SetTimeText("", RemainTimeDict)
+  self.Hint.Text_Desc:SetText(GText("UI_AsyncCombat_StageEndReminder"))
+  if self:CheckNeedShowHint() then
+    self.Hint:SetVisibility(ESlateVisibility.HitTestInvisible)
+    self.Hint.Time:SetTimeText("", RemainTimeDict)
+  else
+    self.Hint:SetVisibility(ESlateVisibility.Collapsed)
+  end
   self.RoomExpireTimer = self:AddTimer(1.0, self.UpdateRoomExpireCountDown, true, 0, "UpdateCoop_RoomExpire", true)
   self.RoomInfoUpdateTimer = self:AddTimer(5.0, self.UpdateRoomInfo, true, 0, "UpdateCoop_RoomInfo", true)
   self:UpdatKeyDisplay("SelfWidget")
@@ -141,6 +151,14 @@ function M:IconInit()
 end
 
 function M:AttributesInit()
+  if self.bSelfOverTime then
+    self.Attributes:SetVisibility(ESlateVisibility.Collapsed)
+    return
+  end
+  self.DetailsTag01:SetVisibility(ESlateVisibility.Collapsed)
+  self.DetailsTag02:SetVisibility(ESlateVisibility.Collapsed)
+  self.TextTime:SetVisibility(ESlateVisibility.Collapsed)
+  self.WBP_Time:SetVisibility(ESlateVisibility.Collapsed)
   self.RoomPermission = {}
   for key, value in pairs(self.RoomData.Permission) do
     if type(value) == "number" and value > 0 then
@@ -149,10 +167,6 @@ function M:AttributesInit()
   end
   local StateNum = 0
   local Permission = CommonConst.AsyncCombatRoomPermission
-  self.DetailsTag01:SetVisibility(ESlateVisibility.Collapsed)
-  self.DetailsTag02:SetVisibility(ESlateVisibility.Collapsed)
-  self.TextTime:SetVisibility(ESlateVisibility.Collapsed)
-  self.WBP_Time:SetVisibility(ESlateVisibility.Collapsed)
   if self.RoomPermission[Permission.Public] then
     self.DetailsTag01.TextBlock_191:SetText(GText("UI_AsyncCombat_Public"))
     self.DetailsTag01:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
@@ -204,7 +218,7 @@ function M:RewardListInit()
   Content.Rate = BaseContributionReward
   Content.Count = math.floor(ResourceCount * RoomMult * (BaseContributionReward / 100))
   Content.ResourceIcon = ResourceIcon
-  self.list:AddItem(Content)
+  self.List:AddItem(Content)
   local Content = NewObject(UIUtils.GetCommonItemContentClass())
   Content.RewardText = "UI_AsyncCombat_HostBonus"
   Content.RewardTip = "UI_AsyncCombat_HostRewardTip"
@@ -212,7 +226,7 @@ function M:RewardListInit()
   Content.Rate = 100
   Content.Count = math.floor(ResourceCount * RoomMult)
   Content.ResourceIcon = ResourceIcon
-  self.list:AddItem(Content)
+  self.List:AddItem(Content)
   local Content = NewObject(UIUtils.GetCommonItemContentClass())
   local ExrtraRate = MVPRewardPerHomeOwner * self.RoomData.MasterCount
   Content.RewardText = "UI_AsyncCombat_MVPBonus"
@@ -222,7 +236,7 @@ function M:RewardListInit()
   Content.Count = math.floor(ResourceCount * RoomMult * (ExrtraRate + MVPContributionReward) / 100)
   Content.ResourceIcon = ResourceIcon
   Content.ExtraRate = ExrtraRate
-  self.list:AddItem(Content)
+  self.List:AddItem(Content)
 end
 
 function M:StartBtnInit()
@@ -233,17 +247,17 @@ function M:StartBtnInit()
   self.BtnStartDouble:SetVisibility(ESlateVisibility.Collapsed)
   self.BtnStartDouble.BtnRight.OnClicked:Add(self, self.OnStartBtnClick)
   self.BtnStartDouble.BtnLeft.OnClicked:Add(self, self.OnBeHostBtnClick)
-  local Avatar = GWorld:GetAvatar()
-  local Uid
-  if Avatar then
-    Uid = Avatar.Uid
+  local ShowWeekLimit = 0
+  local FreeCreateTimes = 0
+  if self.bFreeRoom then
+    FreeCreateTimes, ShowWeekLimit = CoopModel:AsyncCombatGetFreeCreateTimes()
+    self.RemainTimes = self.WeekFreeLimit - FreeCreateTimes
+  else
+    local CreateRoomTimes = CoopModel:AsyncCombatGetPlayerInfo()
+    self.RemainTimes = self.WeekLimit - CreateRoomTimes
+    ShowWeekLimit = self.WeekLimit
   end
-  local CreateRoomTimes = 0
-  if Avatar.AsyncCombats[self.EventId] then
-    CreateRoomTimes = Avatar.AsyncCombats[self.EventId].CreateRoomTimes
-  end
-  local RemainTimes = self.WeekLimit - CreateRoomTimes
-  self.bNoCreateTimes = 0 == RemainTimes
+  self.bNoCreateTimes = 0 == self.RemainTimes
   self.BtnStartDouble.BtnLeft:SetForbidden(self.bNoCreateTimes)
   if self.IsMember or self.RoomData.IsMaster then
     self.BtnCreateBig:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
@@ -261,28 +275,21 @@ function M:StartBtnInit()
   else
     self.BtnStartDouble:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   end
-  local CreateRoomTimes = 0
-  if Avatar then
-    local AsyncCombats = Avatar.AsyncCombats
-    CreateRoomTimes = AsyncCombats[self.EventId].CreateRoomTimes
-  end
   self.BtnCreateBig.TextCd:SetText(GText("UI_AsyncCombat_CoolDown"))
   self.BtnCreateBig.TextStart:SetText(GText("UI_AsyncCombat_GoToChallenge"))
   self.BtnStartDouble.TextLeft:SetText(GText("UI_AsyncCombat_BecomeHost"))
   self.BtnStartDouble.TextRight:SetText(GText("UI_AsyncCombat_JoinChallenge"))
   self.BtnStartDouble.TextWeek:SetText(GText("UI_AsyncCombat_WeeklyRemain"))
-  local RemainTimes = self.WeekLimit - CreateRoomTimes
   local WeekTimeText = ""
-  if 0 == RemainTimes then
-    WeekTimeText = string.format("<Highlight>%d</>/%d", RemainTimes, self.WeekLimit)
+  if 0 == self.RemainTimes then
+    WeekTimeText = string.format("<Highlight>%d</>/%d", self.RemainTimes, ShowWeekLimit)
   else
-    WeekTimeText = string.format("%d/%d", RemainTimes, self.WeekLimit)
+    WeekTimeText = string.format("%d/%d", self.RemainTimes, ShowWeekLimit)
   end
   self.BtnStartDouble.TextNum:SetText(WeekTimeText)
 end
 
 function M:BackgroundInit()
-  local DungeonData = DataMgr.Dungeon[self.DungeonId]
   local BossIdList = DataMgr.AsyncCombat[self.RoomData.RoomConfId].BossUnitID
   local FinalBossId = BossIdList[#BossIdList]
   local BossBg
@@ -389,19 +396,14 @@ function M:InitPageTab()
       bNeedLongPressInfo = true
     })
   end
-  local WeekLimit = DataMgr.AsyncCombatEventConstant.AsyncCombat_WeeklyLimit.ConstantValue
-  local CurrentNum = WeekLimit - CoopModel:AsyncCombatGetPlayerInfo()
-  local CurrentJoinRoomNum, LimitNum = CoopModel:AsyncCombatGetGoingRoomNum()
-  local NumText = string.format(": %d/%d", CurrentJoinRoomNum, LimitNum)
   self:RefreshGoingRoomNum()
 end
 
 function M:RefreshGoingRoomNum()
-  local CurrentNum = self.WeekLimit - CoopModel:AsyncCombatGetPlayerInfo()
   local CurrentJoinRoomNum, LimitNum = CoopModel:AsyncCombatGetGoingRoomNum()
   local NumText = string.format(": %d/%d", CurrentJoinRoomNum, LimitNum)
   self.JoinRoomLimit = false
-  if CurrentJoinRoomNum == LimitNum then
+  if LimitNum <= CurrentJoinRoomNum then
     self.JoinRoomLimit = true
     NumText = string.format(GText(": <Highlight>%d</>/%d"), CurrentJoinRoomNum, LimitNum)
   end
@@ -423,12 +425,19 @@ function M:GetRoomData(RoomData)
     self.RoomData = RoomData
   end
   self.DungeonId = DataMgr.AsyncCombat[self.RoomData.RoomConfId].DungeonID
+  self.bFreeRoom = 1 == DataMgr.AsyncCombat[self.RoomData.RoomConfId].RoomType
   local AsyncCombatConst = DataMgr.AsyncCombatEventConstant
   self.TotleDamage = 0
   self.IsMember = false
   self.IsCreator = false
   self.LastMvp = self.RoomData.IsMvp
-  self.RoomExpireTime = self.RoomData.CreateTime + AsyncCombatConst.AsyncCombat_RoomDuration.ConstantValue * 60
+  if self.RoomData.CloseTime ~= nil then
+    self.RoomExpireTime = self.RoomData.CloseTime + AsyncCombatConst.AsyncCombat_StoppageTimeRoomDuration.ConstantValue * 60
+    self.bSelfOverTime = true
+  else
+    self.RoomExpireTime = self.RoomData.CreateTime + AsyncCombatConst.AsyncCombat_RoomDuration.ConstantValue * 60
+    self.bSelfOverTime = false
+  end
   self.RoomPermission = {}
   for key, value in pairs(self.RoomData.Permission) do
     if type(value) == "number" and value > 0 then
@@ -471,6 +480,9 @@ function M:RefreshBtnState()
   end
   self.BtnRanking.Btn:SetForbidden(not self.bJumpRank)
   self.BtnShare.Btn:SetForbidden(not self.bJumpShare)
+  if self.bSelfOverTime then
+    self.BtnShare:SetVisibility(ESlateVisibility.Collapsed)
+  end
 end
 
 function M:RefreshStartBtnState()
@@ -512,9 +524,28 @@ end
 function M:UpdateRoomExpireCountDown()
   local RemainTimeDict, TimeCount = UIUtils.GetLeftTimeStrStyle2(self.RoomExpireTime)
   self.WBP_Com_Time:SetTimeText("", RemainTimeDict)
+  if self:CheckNeedShowHint() then
+    self.Hint:SetVisibility(ESlateVisibility.HitTestInvisible)
+    self.Hint.Time:SetTimeText("", RemainTimeDict)
+  end
   if 0 == TimeCount then
     self:OnRoomExpireCountDownEnd()
   end
+end
+
+function M:CheckNeedShowHint()
+  if not self.bSelfOverTime then
+    return false
+  end
+  if self.bNeedShowHint then
+    return true
+  end
+  local RamainTimeSecond = self.RoomExpireTime - TimeUtils.NowTime()
+  if RamainTimeSecond < self.ShowHintTime then
+    self.bNeedShowHint = true
+    return true
+  end
+  return false
 end
 
 function M:UpdateEnterRoomCountDown()
@@ -635,6 +666,11 @@ function M:OnBeHostBtnClick()
   local function Callback(Err)
     if Err == ErrorCode.RET_SUCCESS then
       self:RefreshHostInfo()
+      local Avatar = GWorld:GetAvatar()
+      if not Avatar then
+        return
+      end
+      Avatar:RefreshAsyncCombatNew()
     elseif Err == ErrorCode.RET_ASYNCCOMBAT_RATERES_NOT_ENOUGH then
       UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_AsyncCombat_ManualInsufficient"))
     elseif Err == ErrorCode.RET_ASYNCCOMBAT_OWNED_COUNT_LIMIT then
@@ -655,51 +691,47 @@ function M:OnBeHostBtnClick()
   end
   
   local Params = {}
-  local CreateRoomTimes = 0
-  local Avatar = GWorld:GetAvatar()
-  Params.ItemList = {}
-  local ItemCount = 0
-  if Avatar and Avatar.Resources[self.RoomData.RateResId] and Avatar.AsyncCombats[self.EventId] then
-    ItemCount = Avatar.Resources[self.RoomData.RateResId].Count
-    CreateRoomTimes = Avatar.AsyncCombats[self.EventId].CreateRoomTimes
-  end
-  table.insert(Params.ItemList, {
-    ItemId = self.RoomData.RateResId,
-    ItemType = CommonConst.ItemType.Resource,
-    ItemNum = ItemCount or 0,
-    ItemNeed = 1
-  })
-  Params.ShortTextParams = {
-    GText(DataMgr.Resource[self.RoomData.RateResId].ResourceName)
-  }
-  local RemainTimes = self.WeekLimit - CreateRoomTimes
-  local WeekTimeText = string.format(" %d", RemainTimes)
-  Params.Tips = {
-    GText("UI_AsyncCombat_WeeklyRemain") .. WeekTimeText
-  }
-  Params.ForbidRightBtn = 0 == ItemCount
-  
-  function Params.ForbiddenRightCallbackFunction()
-    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_AsyncCombat_ManualInsufficient"))
-  end
   
   function Params.RightCallbackFunction()
-    local Avatar = GWorld:GetAvatar()
-    if not Avatar then
-      return
-    end
     CoopModel:AsyncCombatJoinRoom(self.RoomData.RoomUniqueId, true, self.bInvite, Callback)
   end
   
-  UIManager(self):ShowCommonPopupUI(100351, Params, self)
+  if self.bFreeRoom then
+    UIManager(self):ShowCommonPopupUI(100434, Params, self)
+  else
+    local ItemCount = 0
+    local Avatar = GWorld:GetAvatar()
+    if Avatar and Avatar.Resources[self.RoomData.RateResId] and Avatar.AsyncCombats[self.EventId] then
+      ItemCount = Avatar.Resources[self.RoomData.RateResId].Count
+    end
+    Params.ShortTextParams = {
+      GText(DataMgr.Resource[self.RoomData.RateResId].ResourceName)
+    }
+    local WeekTimeText = string.format(" %d", self.RemainTimes)
+    Params.Tips = {
+      GText("UI_AsyncCombat_WeeklyRemain") .. WeekTimeText
+    }
+    Params.ItemList = {}
+    table.insert(Params.ItemList, {
+      ItemId = self.RoomData.RateResId,
+      ItemType = CommonConst.ItemType.Resource,
+      ItemNum = ItemCount or 0,
+      ItemNeed = 1
+    })
+    Params.ForbidRightBtn = 0 == ItemCount
+    
+    function Params.ForbiddenRightCallbackFunction()
+      UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_AsyncCombat_ManualInsufficient"))
+    end
+    
+    UIManager(self):ShowCommonPopupUI(100351, Params, self)
+  end
 end
 
 function M:RefreshHostInfo()
   self.Title.Tag_Room:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.RoomData.IsMaster = true
   self.IsMember = true
-  self.bJumpRank = true
-  self.BtnRanking.Btn:SetForbidden(not self.bJumpRank)
   self.RoomData.MasterCount = self.RoomData.MasterCount + 1
   self.RoomData.MemberCount = self.RoomData.MemberCount + 1
   self:RewardListInit()
@@ -707,12 +739,14 @@ function M:RefreshHostInfo()
   local Hall = UIManager(self):GetUIObj("AsyncCombat")
   if Hall then
     Hall:RefreshPlayerInfo()
+    Hall:RefreshRoomMasterInfo(self.RoomData.RoomUniqueId)
   end
   self:RefreshGoingRoomNum()
   local RoomCapacityLimit = DataMgr.AsyncCombatEventConstant.AsyncCombat_RoomCapacityLimit.ConstantValue
   self.TextPeopleNum:SetText(self.RoomData.MemberCount .. "/" .. RoomCapacityLimit)
   self.bRoomFull = self.RoomData.MemberCount == RoomCapacityLimit
   self.TextPeopleDetails:SetText(string.format(GText("UI_AsyncCombat_CurrentHostCount"), self.RoomData.MasterCount))
+  self:RefreshBtnState()
 end
 
 function M:OnStartBtnClick()
@@ -743,6 +777,7 @@ function M:TryJoinRoom()
       local Hall = UIManager(self):GetUIObj("AsyncCombat")
       if Hall then
         Hall:RefreshPlayerInfo()
+        Hall:RefreshRoomMasterInfo(self.RoomData.RoomUniqueId)
       end
       self:EnterStandalone()
     end
@@ -751,13 +786,15 @@ end
 
 function M:EnterStandalone()
   local ActivityMain = UIManager(self):GetUIObj("ActivityMain")
-  local CurTabIndex = 1
-  if ActivityMain then
-    CurTabIndex = ActivityMain.CurTabId
+  local CurTabId
+  if ActivityMain and ActivityMain.CurTabId then
+    CurTabId = ActivityMain.CurTabId
+  else
+    CurTabId = DataMgr.AsyncCombatEventConstant.AsyncCombat_EventId.ConstantValue
   end
   local ExitDungeonInfo = {
     Type = "AsyncCombat",
-    CurTabIndex = CurTabIndex
+    CurTabIndex = CurTabId
   }
   GWorld.GameInstance:SetExitDungeonData(ExitDungeonInfo)
   AudioManager(self):PlayUISound(self, "event:/ui/common/map_click_enter_level", nil, nil)
@@ -803,6 +840,9 @@ function M:HandleJoinRoomRetCode(RetCode, ...)
     return false
   elseif RetCode == ErrorCode.RET_ASYNCCOMBAT_NO_ROOM_ACCESS then
     UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_AsyncCombat_ConditionNotMet"))
+    return false
+  elseif RetCode == ErrorCode.RET_ASYNCCOMBAT_ROOM_FREE_TIMES_LIMIT then
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_AsyncCombat_NoFreeNum"))
     return false
   else
     UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_AsyncCombat_ConditionNotMet"))
@@ -993,13 +1033,16 @@ end
 
 function M:SetProgress()
   local CurProgress = self.RoomData.Progress
-  local CurProgressStr = FormatPermille(CurProgress)
-  self.TextProgressNum:SetText(CurProgressStr .. "%")
-  self.Bar_Progress:SetPercent(CurProgress / 100)
   local RemainContribution = 100 - CurProgress
   local RemainContributionStr = FormatPermille(RemainContribution)
+  self.TextProgressNum:SetText(RemainContributionStr .. "%")
+  self.Bar_Progress:SetPercent(RemainContribution / 100)
   self.TextRemainingNum:SetText(RemainContributionStr .. "%")
-  self.MyContribution = math.floor(self.RoomData.Damage * 1000 / self.RoomData.TotalHp) / 10
+  local TotalDamage = self.RoomData.Damage
+  if self.bSelfOverTime then
+    TotalDamage = TotalDamage + self.RoomData.SingleModeDamage
+  end
+  self.MyContribution = math.floor(TotalDamage * 1000 / self.RoomData.TotalHp) / 10
   local MyContributionStr = FormatPermille(self.MyContribution)
   self.TextMyNum:SetText(MyContributionStr .. "%")
 end
@@ -1206,14 +1249,12 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
     return
   end
   local IsUseKeyAndMouse = CurInputDevice == ECommonInputType.MouseAndKeyboard
-  local ActiveWidgetIndex = IsUseKeyAndMouse and 0 or 1
   if not IsUseKeyAndMouse and (self:HasFocusedDescendants() or self:HasAnyUserFocus()) then
     local isInvisible = self.DefaultList:GetVisibility() == ESlateVisibility.SelfHitTestInvisible
     local isNotShown = not self.DefaultList.IsShow
     if isInvisible and isNotShown or not isInvisible then
       self:SelectCellFocus()
     end
-  else
   end
   self:UpdateUIStyleInPlatform(IsUseKeyAndMouse)
 end

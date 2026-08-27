@@ -16,31 +16,45 @@ T.RT_9 = {
   [1] = T.RT_4,
   [2] = T.RT_8
 }
-T.RT_10 = {Name = "AltStart", Value = 1}
+T.RT_10 = {Name = "IQ11023101", Value = 1}
 T.RT_11 = {
   [1] = T.RT_10
 }
-T.RT_12 = {
-  Name = "FengxiangBoss",
-  Value = 1
-}
-T.RT_13 = {
-  Name = "ZhiliuA12020414",
-  Value = 1
-}
+T.RT_12 = {Name = "IQ11023101", Value = 0}
+T.RT_13 = {Name = "IQ11020302", Value = 1}
 T.RT_14 = {
   [1] = T.RT_13
 }
-T.RT_15 = {
+T.RT_15 = {Name = "IQ11020302", Value = 0}
+T.RT_16 = {
+  Name = "Scehutao_110220",
+  Value = 0
+}
+T.RT_17 = {Name = "AltStart", Value = 1}
+T.RT_18 = {
+  [1] = T.RT_17
+}
+T.RT_19 = {
+  Name = "FengxiangBoss",
+  Value = 1
+}
+T.RT_20 = {
+  Name = "ZhiliuA12020414",
+  Value = 1
+}
+T.RT_21 = {
+  [1] = T.RT_20
+}
+T.RT_22 = {
   Name = "ZhiliuA12020414",
   Value = 0
 }
-T.RT_16 = {
-  [1] = T.RT_15
+T.RT_23 = {
+  [1] = T.RT_22
 }
-T.RT_17 = {Name = "IQ200404", Value = 0}
-T.RT_18 = {
-  [1] = T.RT_17
+T.RT_24 = {Name = "IQ200404", Value = 0}
+T.RT_25 = {
+  [1] = T.RT_24
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
@@ -456,6 +470,177 @@ return ReadOnly("QuestSetVariable", {
       QuestStartorSuccess = "Success"
     }
   },
+  [11020102] = {
+    Start = {
+      Info = T.RT_11,
+      QuestId = 11020102,
+      QuestStartorSuccess = "Start"
+    }
+  },
+  [11020103] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ11020104", Value = 1}
+      },
+      QuestId = 11020103,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [11020104] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ11020104", Value = 0}
+      },
+      QuestId = 11020104,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [11020201] = {
+    Start = {
+      Info = T.RT_11,
+      QuestId = 11020201,
+      QuestStartorSuccess = "Start"
+    }
+  },
+  [11020202] = {
+    Start = {
+      Info = {
+        [1] = T.RT_12
+      },
+      QuestId = 11020202,
+      QuestStartorSuccess = "Start"
+    }
+  },
+  [11020301] = {
+    Start = {
+      Info = T.RT_14,
+      QuestId = 11020301,
+      QuestStartorSuccess = "Start"
+    }
+  },
+  [11020302] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ11022101", Value = 1}
+      },
+      QuestId = 11020302,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [11022001] = {
+    Start = {
+      Info = {
+        [1] = T.RT_15,
+        [2] = T.RT_16
+      },
+      QuestId = 11022001,
+      QuestStartorSuccess = "Start"
+    },
+    Success = {
+      Info = {
+        [1] = {
+          Name = "Scehutao_110220",
+          Value = 1
+        }
+      },
+      QuestId = 11022001,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [11022101] = {
+    Success = {
+      Info = T.RT_14,
+      QuestId = 11022101,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [11022201] = {
+    Success = {
+      Info = {
+        [1] = T.RT_15
+      },
+      QuestId = 11022201,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [11023101] = {
+    Start = {
+      Info = {
+        [1] = T.RT_12,
+        [2] = T.RT_15,
+        [3] = {Name = "IQ11022101", Value = 0},
+        [4] = T.RT_16
+      },
+      QuestId = 11023101,
+      QuestStartorSuccess = "Start"
+    }
+  },
+  [11023102] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ11023103", Value = 1}
+      },
+      QuestId = 11023102,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [11023103] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ11023103", Value = 0},
+        [2] = {Name = "IQ11023201", Value = 1}
+      },
+      QuestId = 11023103,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [11023201] = {
+    Start = {
+      Info = {
+        [1] = T.RT_16
+      },
+      QuestId = 11023201,
+      QuestStartorSuccess = "Start"
+    },
+    Success = {
+      Info = {
+        [1] = {Name = "IQ11023201", Value = 0}
+      },
+      QuestId = 11023201,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [11023205] = {
+    Success = {
+      Info = {
+        [1] = {
+          Name = "Ex02CustomNPC_show",
+          Value = 1
+        },
+        [2] = {Name = "IQ11023206", Value = 1}
+      },
+      QuestId = 11023205,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [11023301] = {
+    Start = {
+      Info = {
+        [1] = {Name = "IQ110233", Value = 1}
+      },
+      QuestId = 11023301,
+      QuestStartorSuccess = "Start"
+    }
+  },
+  [11023304] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ110233", Value = 0}
+      },
+      QuestId = 11023304,
+      QuestStartorSuccess = "Success"
+    }
+  },
   [12010307] = {
     Start = {
       Info = {
@@ -536,7 +721,7 @@ return ReadOnly("QuestSetVariable", {
   },
   [12010602] = {
     Success = {
-      Info = T.RT_11,
+      Info = T.RT_18,
       QuestId = 12010602,
       QuestStartorSuccess = "Success"
     }
@@ -568,7 +753,7 @@ return ReadOnly("QuestSetVariable", {
       QuestStartorSuccess = "Start"
     },
     Success = {
-      Info = T.RT_11,
+      Info = T.RT_18,
       QuestId = 12010606,
       QuestStartorSuccess = "Success"
     }
@@ -581,7 +766,7 @@ return ReadOnly("QuestSetVariable", {
           Value = 1
         },
         [2] = {Name = "IQ120315", Value = 0},
-        [3] = T.RT_12
+        [3] = T.RT_19
       },
       QuestId = 12020101,
       QuestStartorSuccess = "Start"
@@ -671,12 +856,12 @@ return ReadOnly("QuestSetVariable", {
   },
   [12020414] = {
     Start = {
-      Info = T.RT_14,
+      Info = T.RT_21,
       QuestId = 12020414,
       QuestStartorSuccess = "Start"
     },
     Success = {
-      Info = T.RT_16,
+      Info = T.RT_23,
       QuestId = 12020414,
       QuestStartorSuccess = "Success"
     }
@@ -716,12 +901,12 @@ return ReadOnly("QuestSetVariable", {
   },
   [12020612] = {
     Start = {
-      Info = T.RT_14,
+      Info = T.RT_21,
       QuestId = 12020612,
       QuestStartorSuccess = "Start"
     },
     Success = {
-      Info = T.RT_16,
+      Info = T.RT_23,
       QuestId = 12020612,
       QuestStartorSuccess = "Success"
     }
@@ -742,7 +927,7 @@ return ReadOnly("QuestSetVariable", {
           Name = "FengxiangBaoming",
           Value = 1
         },
-        [2] = T.RT_12
+        [2] = T.RT_19
       },
       QuestId = 12030101,
       QuestStartorSuccess = "Start"
@@ -864,14 +1049,14 @@ return ReadOnly("QuestSetVariable", {
   },
   [20040416] = {
     Success = {
-      Info = T.RT_18,
+      Info = T.RT_25,
       QuestId = 20040416,
       QuestStartorSuccess = "Success"
     }
   },
   [20040417] = {
     Success = {
-      Info = T.RT_18,
+      Info = T.RT_25,
       QuestId = 20040417,
       QuestStartorSuccess = "Success"
     }

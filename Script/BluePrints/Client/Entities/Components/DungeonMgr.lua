@@ -1,4 +1,5 @@
 local MiscUtils = require("Utils.MiscUtils")
+local SerializeUtils = require("Utils.SerializeUtils")
 local Component = {}
 
 function Component:EnterWorld()
@@ -59,7 +60,9 @@ end
 
 function Component:CancelEnterDungeon(DungeonNetMode)
   if self:IsInTeam() then
-    self:CallServer("TeamCancelEnterDungeon")
+    self:CallServer("TeamCancelEnterDungeon", function(Ret)
+      self.logger.debug("TeamCancelEnterDungeon callback, ", Ret)
+    end)
   else
     local function callback(Ret)
       self.logger.debug("CancelEnterDungeon callback, ", Ret)
@@ -305,6 +308,7 @@ end
 
 function Component:SetDungeonAutoProgress(DungeonId, AutoProgress)
   self:CallServerMethod("SetDungeonAutoProgress", DungeonId, AutoProgress)
+  GWorld.GameInstance:ResetAutoNextRoundProgress(DungeonId)
 end
 
 function Component:SelectTicket(Callback, DungeonId, TicketId)

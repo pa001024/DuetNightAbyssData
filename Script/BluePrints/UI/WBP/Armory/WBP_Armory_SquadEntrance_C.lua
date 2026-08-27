@@ -1,9 +1,11 @@
 require("UnLua")
+local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
 local WBP_Build_SquadEntrance_C = Class("BluePrints.UI.BP_UIState_C")
 
 function WBP_Build_SquadEntrance_C:Construct()
   self:InitDeviceInfo()
   self:InitListenEvent()
+  self:EMShowReddot(false, EReddotType.New)
   self:InitBtn()
   self.Btn_Click.OnClicked:Add(self, self.EnterSquadMainUI)
   local Avatar = GWorld:GetAvatar()
@@ -19,6 +21,7 @@ function WBP_Build_SquadEntrance_C:Construct()
     DebugPrint("thy   CheckSquadCondition false")
     return
   end
+  self:InitAutoAssistNewReddot()
   if Avatar.Weapons[Avatar.MeleeWeapon] and Avatar.Weapons[Avatar.RangedWeapon] then
     Avatar:TryCreateDefaultSquad()
   else
@@ -61,9 +64,22 @@ function WBP_Build_SquadEntrance_C:EnterSquadMainUI()
       Avatar:TryCreateDefaultSquad()
     end
     local SquadMainUI = UIManager(self):LoadUINew("SquadMainUINew")
+    ArmoryUtils:MarkAutoAssistReddotRead(ArmoryUtils.AutoAssistReddotNodeName.SquadEntranceNew)
   else
     GWorld.logger.error("创建默认的预设阵容失败了，创建默认预设阵容的条件是角色身上拥有一把近战武器和一把远程武器，看到这条信息表示Avatar里没找到你的两把武器")
   end
+end
+
+function WBP_Build_SquadEntrance_C:InitAutoAssistNewReddot()
+  if self.bAutoAssistReddotBound or not ArmoryUtils:EnsureAutoAssistReddotNodes() then
+    return
+  end
+  ReddotManager.AddListenerEx(ArmoryUtils.AutoAssistReddotNodeName.SquadEntranceNew, self, self.OnAutoAssistNewReddotChanged)
+  self.bAutoAssistReddotBound = true
+end
+
+function WBP_Build_SquadEntrance_C:OnAutoAssistNewReddotChanged(Count)
+  self:EMShowReddot(Count > 0, EReddotType.New)
 end
 
 function WBP_Build_SquadEntrance_C:InitBtn()

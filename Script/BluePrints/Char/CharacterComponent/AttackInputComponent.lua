@@ -1,6 +1,49 @@
 local SkillUtils = require("Utils.SkillUtils")
 local BattleEventName = require("BluePrints/Combat/BattleEvents/BattleEventName")
 local Component = {}
+local SkillTypeCache = {}
+local SkillNameCache = {}
+
+local function GetSkillTypeCache(SkillTypeName)
+  local SkillType = rawget(SkillTypeCache, SkillTypeName)
+  if nil == SkillType then
+    SkillType = UE.ESkillType[SkillTypeName]
+    if nil ~= SkillType then
+      rawset(SkillTypeCache, SkillTypeName, SkillType)
+    end
+  end
+  return SkillType
+end
+
+local function GetSkillNameCache(SkillNameStr)
+  local SkillNameEnum = rawget(SkillNameCache, SkillNameStr)
+  if nil == SkillNameEnum then
+    SkillNameEnum = ESkillName[SkillNameStr]
+    if nil ~= SkillNameEnum then
+      rawset(SkillNameCache, SkillNameStr, SkillNameEnum)
+    end
+  end
+  return SkillNameEnum
+end
+
+local SkillType = setmetatable({}, {
+  __index = function(self, SkillTypeName)
+    local SkillTypeEnum = GetSkillTypeCache(SkillTypeName)
+    if nil ~= SkillTypeEnum then
+      rawset(self, SkillTypeName, SkillTypeEnum)
+    end
+    return SkillTypeEnum
+  end
+})
+local SkillName = setmetatable({}, {
+  __index = function(self, SkillNameStr)
+    local SkillNameEnum = GetSkillNameCache(SkillNameStr)
+    if nil ~= SkillNameEnum then
+      rawset(self, SkillNameStr, SkillNameEnum)
+    end
+    return SkillNameEnum
+  end
+})
 local CanCheckShootTag = {
   Idle = 1,
   Crouch = 1,
@@ -8,17 +51,17 @@ local CanCheckShootTag = {
 }
 
 function Component:CheckHasHoldingShooting()
-  local HeavyShootingSkill = self:GetSkillByType(UE.ESkillType.HeavyShooting)
+  local HeavyShootingSkill = self:GetSkillByType(SkillType.HeavyShooting)
   return self.bHoldingShooting and self.CurrentSkillId ~= HeavyShootingSkill
 end
 
 function Component:CheckHasHoldingShootingSkill()
-  local HeavyShootingSkill = self:GetSkillByType(UE.ESkillType.HeavyShooting)
+  local HeavyShootingSkill = self:GetSkillByType(SkillType.HeavyShooting)
   return HeavyShootingSkill > 0 and self.bPressedFire
 end
 
 function Component:PressSkill3()
-  if self:CheckSkillOccupiedByProp(ESkillName.Skill3) and self.PropEffectComponent.CurrentPropEffect then
+  if self:CheckSkillOccupiedByProp(SkillName.Skill3) and self.PropEffectComponent.CurrentPropEffect then
     self.PropEffectComponent.CurrentPropEffect:OnSkill3Pressed()
     return
   end
@@ -32,15 +75,16 @@ function Component:PressSkill3()
       return
     end
   end
-  if self:CheckSkillIsBan(ESkillName.Skill3) then
+  if self:CheckSkillIsBan(SkillName.Skill3) then
     local _ = not self.CurrentMasterBan and UIManager(self):ShowUITip_BattleCommonTop(UIConst.Tip_CommonTop, GText("UI_SKILL_FORBIDDEN"))
     return
   end
-  if self:CheckForbidInput() or self:CheckSkillInActive(ESkillName.Skill3) then
+  if self:CheckForbidInput() or self:CheckSkillInActive(SkillName.Skill3) then
     return
   end
-  if self:IsDisableSkillType(ESkillType.Skill3) then
+  if self:IsDisableSkillType(SkillType.Skill3) then
     UIManager(self):ShowUITip_BattleCommonTop(UIConst.Tip_CommonTop, GText("UI_SKILL_FORBIDDEN"))
+    return
   end
   self:SupportSkill()
   if self.NeedSkill3Event then
@@ -62,7 +106,7 @@ function Component:CheckChangeRoleInMainCityNotInCdTime()
 end
 
 function Component:SupportSkill()
-  local SupportSKill = self:GetSkillByType(UE.ESkillType.Support)
+  local SupportSKill = self:GetSkillByType(SkillType.Support)
   if nil == SupportSKill then
     return false
   end
@@ -80,25 +124,25 @@ function Component:Reload()
   if self.NeedChargeBulletEvent then
     EventManager:FireEvent(EventID.OnChargeBulletPressed)
   end
-  local ReloadSkillId = self:GetSkillByType(UE.ESkillType.Reload)
+  local ReloadSkillId = self:GetSkillByType(SkillType.Reload)
   if nil == ReloadSkillId then
     return false
   end
   if not self:CheckCanSkillCancel(ReloadSkillId) and self:CheckForbidInput() then
     return
   end
-  if self:CheckSkillIsBan(ESkillName.Fire) then
+  if self:CheckSkillIsBan(SkillName.Fire) then
     local _ = not self.CurrentMasterBan and UIManager(self):ShowUITip_BattleCommonTop(UIConst.Tip_CommonTop, GText("UI_RANGED_FORBIDDEN"))
     return
   end
-  if not self:CheckCanShoot(true) or self:CheckSkillInActive(ESkillName.Fire) then
+  if not self:CheckCanShoot(true) or self:CheckSkillInActive(SkillName.Fire) then
     return
   end
   local ReloadSkill = self:GetSkill(ReloadSkillId)
   if not ReloadSkill then
     return
   end
-  local FireSkillId = self:GetSkillByType(UE.ESkillType.Shooting)
+  local FireSkillId = self:GetSkillByType(SkillType.Shooting)
   local FireSkill = self:GetSkill(FireSkillId)
   if FireSkill and FireSkill.Weapon ~= ReloadSkill.Weapon then
     return
@@ -120,7 +164,7 @@ function Component:IsSkillDown()
 end
 
 function Component:InputCacheUseHoldAttackSkill()
-  local HoldAttackSkill = self:GetSkillByType(UE.ESkillType.HeavyAttack)
+  local HoldAttackSkill = self:GetSkillByType(SkillType.HeavyAttack)
   if nil == HoldAttackSkill then
     self:RemoveInputCache("AttackHold")
     return
@@ -132,20 +176,22 @@ function Component:InputCacheUseHoldAttackSkill()
 end
 
 function Component:PressSkill1()
-  local NormalSKill = self:GetSkillByType(UE.ESkillType.Skill1)
+  local NormalSKill = self:GetSkillByType(SkillType.Skill1)
   if not NormalSKill then
     self:RemoveInputCache("Skill1")
     return
   end
-  if self:CheckSkillIsBan(ESkillName.Skill1) then
+  if self:CheckSkillIsBan(SkillName.Skill1) then
     local _ = not self.CurrentMasterBan and UIManager(self):ShowUITip_BattleCommonTop(UIConst.Tip_CommonTop, GText("UI_SKILL_FORBIDDEN"))
     self:RemoveInputCache("Skill1")
     return
   end
-  if self:IsDisableSkillType(ESkillType.Skill1) then
+  if self:IsDisableSkillType(SkillType.Skill1) then
     UIManager(self):ShowUITip_BattleCommonTop(UIConst.Tip_CommonTop, GText("UI_SKILL_FORBIDDEN"))
+    self:RemoveInputCache("Skill1")
+    return
   end
-  if not self:CheckCanSkillCancel(NormalSKill) and self:CheckForbidInput() or self:CheckSkillInActive(ESkillName.Skill1) then
+  if not self:CheckCanSkillCancel(NormalSKill) and self:CheckForbidInput() or self:CheckSkillInActive(SkillName.Skill1) then
     self:RemoveInputCache("Skill1")
     return
   end
@@ -156,20 +202,22 @@ function Component:PressSkill1()
 end
 
 function Component:PressSkill2()
-  local UltraSKill = self:GetSkillByType(UE.ESkillType.Skill2)
+  local UltraSKill = self:GetSkillByType(SkillType.Skill2)
   if not UltraSKill then
     self:RemoveInputCache("Skill2")
     return
   end
-  if self:CheckSkillIsBan(ESkillName.Skill2) and not self.CurrentMasterBan then
+  if self:CheckSkillIsBan(SkillName.Skill2) and not self.CurrentMasterBan then
     local _ = not self.CurrentMasterBan and UIManager(self):ShowUITip_BattleCommonTop(UIConst.Tip_CommonTop, GText("UI_SKILL_FORBIDDEN"))
     self:RemoveInputCache("Skill2")
     return
   end
-  if self:IsDisableSkillType(ESkillType.Skill2) then
+  if self:IsDisableSkillType(SkillType.Skill2) then
     UIManager(self):ShowUITip_BattleCommonTop(UIConst.Tip_CommonTop, GText("UI_SKILL_FORBIDDEN"))
+    self:RemoveInputCache("Skill2")
+    return
   end
-  if not self:CheckCanSkillCancel(UltraSKill) and self:CheckForbidInput() or self:CheckSkillInActive(ESkillName.Skill2) then
+  if not self:CheckCanSkillCancel(UltraSKill) and self:CheckForbidInput() or self:CheckSkillInActive(SkillName.Skill2) then
     self:RemoveInputCache("Skill2")
     return
   end
@@ -196,12 +244,12 @@ function Component:InputCacheUseHoldSkill(SkillId, SkillName)
 end
 
 function Component:ReleaseSkill1()
-  local NormalSKill = self:GetSkillByType(UE.ESkillType.Skill1)
+  local NormalSKill = self:GetSkillByType(SkillType.Skill1)
   if not NormalSKill then
     self:ResetAttackProperty("Skill1")
     return
   end
-  if not self:CheckCanSkillCancel(NormalSKill) and self:CheckForbidInput() or self:CheckSkillInActive(ESkillName.Skill1) then
+  if not self:CheckCanSkillCancel(NormalSKill) and self:CheckForbidInput() or self:CheckSkillInActive(SkillName.Skill1) then
     self:ResetAttackProperty("Skill1")
     return
   end
@@ -210,12 +258,12 @@ function Component:ReleaseSkill1()
 end
 
 function Component:ReleaseSkill2()
-  local UltraSKill = self:GetSkillByType(UE.ESkillType.Skill2)
+  local UltraSKill = self:GetSkillByType(SkillType.Skill2)
   if not UltraSKill then
     self:ResetAttackProperty("Skill2")
     return
   end
-  if not self:CheckCanSkillCancel(UltraSKill) and self:CheckForbidInput() or self:CheckSkillInActive(ESkillName.Skill2) then
+  if not self:CheckCanSkillCancel(UltraSKill) and self:CheckForbidInput() or self:CheckSkillInActive(SkillName.Skill2) then
     self:ResetAttackProperty("Skill2")
     return
   end
@@ -223,20 +271,20 @@ function Component:ReleaseSkill2()
   self:ReleaseSkill(UltraSKill, "Skill2")
 end
 
-function Component:InputCacheUseSkill(SkillId, SkillName)
-  if not SkillId or not self:CheckCanSkillCancel(SkillId) and self:CheckForbidInput() or self:CheckSkillInActive(ESkillName[SkillName]) then
-    self:RemoveInputCache(SkillName)
+function Component:InputCacheUseSkill(SkillId, InputSkillName)
+  if not SkillId or not self:CheckCanSkillCancel(SkillId) and self:CheckForbidInput() or self:CheckSkillInActive(GetSkillNameCache(InputSkillName)) then
+    self:RemoveInputCache(InputSkillName)
     return
   end
   local Success = self:UseSkill(SkillId, 0)
   if Success then
-    self:RemoveInputCache(SkillName)
+    self:RemoveInputCache(InputSkillName)
   end
 end
 
 function Component:UsePenalizeSkill(Eid)
   self.CondemnMonsterEid = Eid
-  local Success = self:UseSkill(self:GetSkillByType(UE.ESkillType.Condemn), 0)
+  local Success = self:UseSkill(self:GetSkillByType(SkillType.Condemn), 0)
   return Success
 end
 

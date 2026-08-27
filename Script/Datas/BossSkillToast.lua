@@ -302,61 +302,49 @@ return ReadOnly("BossSkillToast", {
   [8520001] = {
     Duration = 3,
     ID = 8520001,
-    TextMapKey = "摩天大厦（待包装）",
+    TextMapKey = "BossSkillToast_Aida_Skill06",
     TipsStyle = "Common"
   },
   [8520002] = {
     Duration = 6,
     ID = 8520002,
-    TextMapKey = "撼动大地（待包装）",
+    TextMapKey = "BossSkillToast_Aida_Skill07",
     TipsStyle = "Common"
   },
   [8520003] = {
-    Duration = 7,
+    Duration = 6,
     ID = 8520003,
-    TextMapKey = "列车来袭，注意躲避！（待包装）",
+    TextMapKey = "BossSkillToast_Aida_Skill08",
     TipsStyle = "Common"
   },
   [8520004] = {
     Duration = 3,
     ID = 8520004,
-    TextMapKey = "空间崩坏（待包装）",
+    TextMapKey = "BossSkillToast_Aida_Skill12",
     TipsStyle = "InSequence"
   },
   [8520005] = {
-    Duration = 3,
+    Duration = 28,
     ID = 8520005,
-    TextMapKey = "大地倒塌（待包装）",
-    TipsStyle = "InSequence"
-  },
-  [8520006] = {
-    Duration = 7,
-    ID = 8520006,
-    TextMapKey = "列车来袭，注意躲避！改（待包装）",
+    TextMapKey = "BossSkillToast_Aida_Skill12_Warning",
     TipsStyle = "Common"
   },
   [8520007] = {
     Duration = 3,
     ID = 8520007,
-    TextMapKey = "复制再生（待包装）",
+    TextMapKey = "BossSkillToast_Aida_Skill09",
     TipsStyle = "Common"
   },
   [8520008] = {
     Duration = 3,
     ID = 8520008,
-    TextMapKey = "摩天大厦·改（待包装）",
+    TextMapKey = "BossSkillToast_Aida_Skill13",
     TipsStyle = "InSequence"
   },
   [8520009] = {
-    Duration = 20,
+    Duration = 10,
     ID = 8520009,
-    TextMapKey = "寻找空中安全的地方！（待包装）",
-    TipsStyle = "Common"
-  },
-  [8520010] = {
-    Duration = 13,
-    ID = 8520010,
-    TextMapKey = "去往最高处，躲避陨石！（待包装）",
+    TextMapKey = "BossSkillToast_Aida_Skill12_Warning",
     TipsStyle = "Common"
   },
   [8524001] = {

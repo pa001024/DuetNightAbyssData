@@ -31,6 +31,10 @@ return ReadOnly("DataSetIgnore", {
   IsDestructPart = {
     ID = "IsDestructPart"
   },
+  Lili_Great = {ID = "Lili_Great"},
+  Lili_Perfect = {
+    ID = "Lili_Perfect"
+  },
   LinenSkill02Range = {
     ID = "LinenSkill02Range"
   },

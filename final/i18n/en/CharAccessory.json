@@ -1144,6 +1144,62 @@
     "unlock": "Available at Shop"
   },
   {
+    "id": 10155,
+    "name": "Silent Thorns: Dark Jade",
+    "desc": "No matter how unfamiliar the prey, a hunter can always find something worth claiming as a trophy.",
+    "icon": "T_Fashion_Head74_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10156,
+    "name": "Silent Thorns: Leaden Grey",
+    "desc": "No matter how unfamiliar the prey, a hunter can always find something worth claiming as a trophy.",
+    "icon": "T_Fashion_Head74_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10157,
+    "name": "Silent Thorns: Gilt",
+    "desc": "No matter how unfamiliar the prey, a hunter can always find something worth claiming as a trophy.",
+    "icon": "T_Fashion_Head74_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10158,
+    "name": "Silent Thorns: Celeste",
+    "desc": "No matter how unfamiliar the prey, a hunter can always find something worth claiming as a trophy.",
+    "icon": "T_Fashion_Head74_04",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10159,
+    "name": "Marionette Cross: Gilt",
+    "desc": "Take up the strings. Keep the marionette dancing.",
+    "icon": "T_Fashion_Head75_02",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 10160,
+    "name": "Marionette Cross: Dark Jade",
+    "desc": "Take up the strings. Keep the marionette dancing.",
+    "icon": "T_Fashion_Head75_01",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 10161,
+    "name": "Marionette Cross: Leaden Grey",
+    "desc": "Take up the strings. Keep the marionette dancing.",
+    "icon": "T_Fashion_Head75_03",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
     "id": 11001,
     "name": "UI_Accessory_Name_11001",
     "desc": "UI_Accessory_Desc_11001",
@@ -1196,6 +1252,14 @@
     "name": "Frost Fetter",
     "desc": "Life was never meant for the bitter cold.",
     "icon": "T_Fashion_Fx37",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 11009,
+    "name": "狱火狂燃",
+    "desc": "熊熊燃烧，直至一切化为灰烬。",
+    "icon": "T_Fashion_Fx40",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
@@ -1405,6 +1469,38 @@
     "desc": "Fate's threads tangle beyond the reach of foresight.",
     "icon": "T_Fashion_Hat20",
     "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 12027,
+    "name": "Guardian's Crown: Azure",
+    "desc": "A crown shaped by the promise of protection.",
+    "icon": "T_Fashion_Hat28",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 12028,
+    "name": "Guardian's Crown: Opaque White",
+    "desc": "A crown shaped by the promise of protection.",
+    "icon": "T_Fashion_Hat27",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 12029,
+    "name": "Guardian's Crown: Dark Jade",
+    "desc": "A crown shaped by the promise of protection.",
+    "icon": "T_Fashion_Hat26",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 12030,
+    "name": "Guardian's Crown: Leaden Grey",
+    "desc": "A crown shaped by the promise of protection.",
+    "icon": "T_Fashion_Hat25",
+    "rarity": 5,
     "unlock": "Available at Shop"
   },
   {
@@ -1813,7 +1909,7 @@
     "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of a feline tail.",
     "icon": "T_Fashion_Back51_02",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "Available at Shop"
   },
   {
     "id": 13050,
@@ -1821,7 +1917,7 @@
     "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of a feline tail.",
     "icon": "T_Fashion_Back51_03",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "Available at Shop"
   },
   {
     "id": 13051,
@@ -1829,7 +1925,7 @@
     "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of a feline tail.",
     "icon": "T_Fashion_Back51_04",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "Available at Shop"
   },
   {
     "id": 13052,
@@ -1837,7 +1933,63 @@
     "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of a feline tail.",
     "icon": "T_Fashion_Back51_01",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13053,
+    "name": "Wraithveil Principle: Celeste",
+    "desc": "Let all things burn, until nothing remains.",
+    "icon": "T_Fashion_Waist36_01",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 13054,
+    "name": "Wraithveil Principle: Violet",
+    "desc": "Let all things burn, until nothing remains.",
+    "icon": "T_Fashion_Waist36_02",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 13055,
+    "name": "Wraithveil Principle: Opaque White",
+    "desc": "Let all things burn, until nothing remains.",
+    "icon": "T_Fashion_Waist36_03",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 13056,
+    "name": "Wraithveil Principle: Gilt",
+    "desc": "Let all things burn, until nothing remains.",
+    "icon": "T_Fashion_Waist36_04",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 13057,
+    "name": "Mystic Clockwork: Gilt",
+    "desc": "Listen to the ticking of the clockwork.",
+    "icon": "T_Fashion_Back56_02",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 13058,
+    "name": "Mystic Clockwork: Dark Jade",
+    "desc": "Listen to the ticking of the clockwork.",
+    "icon": "T_Fashion_Back56_01",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 13059,
+    "name": "Mystic Clockwork: Leaden Grey",
+    "desc": "Listen to the ticking of the clockwork.",
+    "icon": "T_Fashion_Back56_03",
+    "rarity": 5,
+    "unlock": "Available from events"
   },
   {
     "id": 20001,
@@ -2544,6 +2696,38 @@
     "unlock": "Available from events"
   },
   {
+    "id": 20102,
+    "name": "Silent Guise: Azure",
+    "desc": "Embrace this wordless farewell.",
+    "icon": "T_Fashion_Face30_04",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20103,
+    "name": "Silent Guise: Rust Red",
+    "desc": "Embrace this wordless farewell.",
+    "icon": "T_Fashion_Face30_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20104,
+    "name": "Silent Guise: Dark Jade",
+    "desc": "Embrace this wordless farewell.",
+    "icon": "T_Fashion_Face30_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20105,
+    "name": "Silent Guise: Opaque White",
+    "desc": "Embrace this wordless farewell.",
+    "icon": "T_Fashion_Face30_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
     "id": 21001,
     "name": "UI_Accessory_Name_21001",
     "desc": "UI_Accessory_Desc_21001",
@@ -2628,6 +2812,14 @@
     "name": "Frostflake",
     "desc": "The aurora is nature's miracle.",
     "icon": "T_Fashion_Fx36",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 21015,
+    "name": "幽燃热浪",
+    "desc": "扭曲的热浪，如同烈火在空中划出的涟漪。",
+    "icon": "T_Fashion_Fx39",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
@@ -3156,6 +3348,14 @@
     "name": "Victory Posture: Snowfall Serenade",
     "desc": "Changes your Victory Posture.",
     "icon": "T_Fashion_SettlementAction_06",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 31007,
+    "name": "胜利·地狱咆哮",
+    "desc": "Changes your Victory Posture.",
+    "icon": "T_Fashion_SettlementAction_07",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
@@ -3744,6 +3944,46 @@
     "unlock": "Available from events"
   },
   {
+    "id": 40085,
+    "name": "Wraithveil Flame: Celeste",
+    "desc": "An undying flame clings to a pair of skeletal wings.",
+    "icon": "T_Fashion_Back55_04",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 40086,
+    "name": "Wraithveil Flame: Emerald Green",
+    "desc": "An undying flame clings to a pair of skeletal wings.",
+    "icon": "T_Fashion_Back55_02",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 40087,
+    "name": "Wraithveil Flame: Rust Red",
+    "desc": "An undying flame clings to a pair of skeletal wings.",
+    "icon": "T_Fashion_Back55_03",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 40088,
+    "name": "Wraithveil Flame: Opaque White",
+    "desc": "An undying flame clings to a pair of skeletal wings.",
+    "icon": "T_Fashion_Back55_01",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 40089,
+    "name": "Chiaroscuro Flare",
+    "desc": "Wings unfurl, gathering the brilliance of day and the depths of midnight.",
+    "icon": "T_Fashion_Back54",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
     "id": 50001,
     "name": "",
     "desc": "",
@@ -3800,6 +4040,14 @@
     "unlock": "Available through Myriad"
   },
   {
+    "id": 60005,
+    "name": "水墨盘龙",
+    "desc": "乾坤倒悬，阴阳流转。",
+    "icon": "T_Fashion_Fx46",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
     "id": 70001,
     "name": "Flow of Grace",
     "desc": "A butterfly flutters, stirring midsummer from its slumber.",
@@ -3844,6 +4092,14 @@
     "name": "Frostbloom: Mauve",
     "desc": "Freeze the world solid.",
     "icon": "T_Fashion_Fx35_03",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 70008,
+    "name": "Wraithveil Embers: Celeste",
+    "desc": "Anger is a flame that will not die — not until it has reduced everything to ash.",
+    "icon": "T_Fashion_Fx44_02",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
@@ -4012,6 +4268,30 @@
     "name": "Frostbloom: Gilt",
     "desc": "Freeze the world solid.",
     "icon": "T_Fashion_Fx35_02",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 70081,
+    "name": "Wraithveil Embers: Gilt",
+    "desc": "Anger is a flame that will not die — not until it has reduced everything to ash.",
+    "icon": "T_Fashion_Fx44_01",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 70082,
+    "name": "Wraithveil Embers: Rust Red",
+    "desc": "Anger is a flame that will not die — not until it has reduced everything to ash.",
+    "icon": "T_Fashion_Fx44_03",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 70083,
+    "name": "Wraithveil Embers: Violet",
+    "desc": "Anger is a flame that will not die — not until it has reduced everything to ash.",
+    "icon": "T_Fashion_Fx44_04",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
@@ -4206,5 +4486,61 @@
     "icon": "T_Fashion_Fx34_03",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 80059,
+    "name": "华彩谢幕",
+    "desc": "A cascade of cards and a lilting melody bring down the final curtain.",
+    "icon": "T_Fashion_Fx45_03",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 80060,
+    "name": "Wraithveil Echoes: Violet",
+    "desc": "A hunted soul screams defiance, its rage spilling forth as flame that will not die.",
+    "icon": "T_Fashion_Fx43_03",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 80061,
+    "name": "Wraithveil Echoes: Celeste",
+    "desc": "A hunted soul screams defiance, its rage spilling forth as flame that will not die.",
+    "icon": "T_Fashion_Fx43_04",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 80062,
+    "name": "Wraithveil Echoes: Gilt",
+    "desc": "A hunted soul screams defiance, its rage spilling forth as flame that will not die.",
+    "icon": "T_Fashion_Fx43_02",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 80063,
+    "name": "Wraithveil Echoes: Rust Red",
+    "desc": "A hunted soul screams defiance, its rage spilling forth as flame that will not die.",
+    "icon": "T_Fashion_Fx43_01",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 80064,
+    "name": "Lingering Aria",
+    "desc": "A tender melody hangs on the air.",
+    "icon": "T_Fashion_Fx45_01",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 80065,
+    "name": "Card Trick",
+    "desc": "A dazzling illusion dances across your fingertips.",
+    "icon": "T_Fashion_Fx45_02",
+    "rarity": 5,
+    "unlock": "Available from events"
   }
 ]

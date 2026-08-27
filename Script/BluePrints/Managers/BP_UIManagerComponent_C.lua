@@ -47,6 +47,8 @@ function BP_UIManagerComponent_C:Initialize(Initializer)
   self.SystemOpenFrameFlag = 0
   self:InitAllContainerData()
   self:InitUIConfigBySetting()
+  EventManager:AddEvent(EventID.OnNetDisconnect, self, self.ResetAllBlockReasons)
+  EventManager:AddEvent(EventID.OnConnectSuccess, self, self.ResetAllBlockReasons)
 end
 
 function BP_UIManagerComponent_C:InitUIConfigBySetting()
@@ -144,6 +146,11 @@ function BP_UIManagerComponent_C:_InitGameDPI()
     end
   end
   UE.UUIFunctionLibrary.SetGameDPI(HUDSizeVal)
+end
+
+function BP_UIManagerComponent_C:ReceiveEndPlay()
+  EventManager:RemoveEvent(EventID.OnNetDisconnect, self)
+  EventManager:RemoveEvent(EventID.OnConnectSuccess, self)
 end
 
 function BP_UIManagerComponent_C:AddWidgetComponentToList(ActorEid, WidgetName, WidgetComp)
@@ -2260,12 +2267,13 @@ local function CreateArmoryPlayerActor(self, Char, InAvatar, CreateParams)
     end
     local Avatar = InAvatar or GWorld:GetAvatar()
     Char = Char or Avatar.Chars[Avatar.CurrentChar]
-    local AvatarBattleInfo = AvatarUtils:GetDefaultBattleInfo(Avatar, {Char = Char})
+    local AvatarBattleInfo = AvatarUtils:BuildPreviewCharacterInitInfo(Avatar, {
+      Char = Char,
+      bLightweightPreview = CreateParams and true == CreateParams.bLightweightPreview
+    })
     local GameMode = UE4.UGameplayStatics.GetGameMode(self)
-    if GameMode then
+    if GameMode and AvatarBattleInfo then
       AvatarBattleInfo = GameMode:SimplifyInfoForInit(AvatarBattleInfo)
-      AvatarBattleInfo.FromOtherWorld = true
-      AvatarBattleInfo.FromArmory = true
       AvatarBattleInfo = ApplyPreviewPlayerInitParams(AvatarBattleInfo, CreateParams)
       actor:InitCharacterInfo(AvatarBattleInfo)
     end
@@ -2286,17 +2294,17 @@ local function CreateArmoryPlayerActor(self, Char, InAvatar, CreateParams)
   return actor
 end
 
-function BP_UIManagerComponent_C:CreateOrGetArmoryPlayerActor(Char, InAvatar)
+function BP_UIManagerComponent_C:CreateOrGetArmoryPlayerActor(Char, InAvatar, CreateParams)
   local IsCreated = false
   if not self.ArmoryPlayer or not self.ArmoryPlayer:IsValid() then
-    self.ArmoryPlayer = CreateArmoryPlayerActor(self, Char, InAvatar)
+    self.ArmoryPlayer = CreateArmoryPlayerActor(self, Char, InAvatar, CreateParams)
     IsCreated = true
   end
   return self.ArmoryPlayer, IsCreated
 end
 
-function BP_UIManagerComponent_C:CreatePreviewPlayerActor(Char, InAvatar)
-  return CreateArmoryPlayerActor(self, Char, InAvatar, BuildPreviewPlayerCreateParams())
+function BP_UIManagerComponent_C:CreatePreviewPlayerActor(Char, InAvatar, CreateParams)
+  return CreateArmoryPlayerActor(self, Char, InAvatar, CreateParams or BuildPreviewPlayerCreateParams())
 end
 
 function BP_UIManagerComponent_C:CreateOrGetPlayerReflection(Char, InAvatar)
@@ -2308,8 +2316,8 @@ function BP_UIManagerComponent_C:CreateOrGetPlayerReflection(Char, InAvatar)
   return self.PlayerReflection, IsCreated
 end
 
-function BP_UIManagerComponent_C:CreatePreviewPlayerReflection(Char, InAvatar)
-  return CreateArmoryPlayerActor(self, Char, InAvatar, BuildReflectionCreateParams(true))
+function BP_UIManagerComponent_C:CreatePreviewPlayerReflection(Char, InAvatar, CreateParams)
+  return CreateArmoryPlayerActor(self, Char, InAvatar, CreateParams or BuildReflectionCreateParams(true))
 end
 
 function BP_UIManagerComponent_C:CreateShowWeapon(Owner, Params, Callback)
@@ -2628,9 +2636,6 @@ function BP_UIManagerComponent_C:PlayUINpcAnimation(bInOut, UIName, NpcId, Param
         if type(UINpcActor.SetEmoIdleEnabled) == "function" then
           UINpcActor:SetEmoIdleEnabled(true)
         end
-        if "function" == type(UINpcActor.KawaiiSwitch) then
-          UINpcActor:KawaiiSwitch(true)
-        end
         UINpcActor.IsNeedSetPos = true
         UINpcActor:SetCharacterTag("Idle")
         UINpcActor:K2_SetActorLocation(FVector(-1000000, -1000000, -1000000), false, nil, false)
@@ -2712,15 +2717,15 @@ function BP_UIManagerComponent_C:SwitchUINpcCamera(bNpcCamera, UIName, NpcId, Pa
     self:SetTargetActorState(false, UINpcActorForCreate, UIName, IsHaveInOutAnim)
     self:PlayUINpcAnimation(false, UIName, NpcId, Params)
     if nil ~= RecoverTime then
-      local function OnRecorverCameraEnd()
+      local function OnRecoverCameraEnd()
         local TargetUI = self:GetUIObj(UIName)
         
-        if TargetUI and TargetUI.OnRecorverCameraEnd then
-          TargetUI:OnRecorverCameraEnd()
+        if TargetUI and TargetUI.OnRecoverCameraEnd then
+          TargetUI:OnRecoverCameraEnd()
         end
       end
       
-      UIActorCameraHelper:RecorverCamera(self, OnRecorverCameraEnd, RecoverTime)
+      UIActorCameraHelper:RecorverCamera(self, OnRecoverCameraEnd, RecoverTime)
     end
   end
 end
@@ -2928,9 +2933,6 @@ function BP_UIManagerComponent_C:SetTargetActorState(IsLoaded, TargetActor, Reas
     end
     if type(TargetActor.SetEmoIdleEnabled) == "function" then
       TargetActor:SetEmoIdleEnabled(not IsLoaded)
-    end
-    if "function" == type(TargetActor.KawaiiSwitch) then
-      TargetActor:KawaiiSwitch(IsLoaded)
     end
     TargetActor:SetActorHiddenInGame(not IsLoaded)
   end
@@ -3166,7 +3168,6 @@ function BP_UIManagerComponent_C:LaunchAfterLoadingMgr()
   self:DestroyAfterLoadingMgr()
   local AfterLoadingMgr = require("BluePrints.UI.Common.AfterLoadingMgr")
   self.AfterLoadingMgr = AfterLoadingMgr.New()
-  EventManager:RemoveEvent(EventID.OnGuideEnd, self)
   EventManager:AddEvent(EventID.OnGuideEnd, self.AfterLoadingMgr, function(_, GuidId)
     self.AfterLoadingMgr.bGuideEndPending = true
     self:TryResumeAfterLoadingMgr({
@@ -3176,10 +3177,6 @@ function BP_UIManagerComponent_C:LaunchAfterLoadingMgr()
     })
   end)
   self.BlockingReasons = {}
-  EventManager:RemoveEvent(EventID.OnNetDisconnect, self)
-  EventManager:AddEvent(EventID.OnNetDisconnect, self, self.ResetAllBlockReasons)
-  EventManager:RemoveEvent(EventID.OnConnectSuccess, self)
-  EventManager:AddEvent(EventID.OnConnectSuccess, self, self.ResetAllBlockReasons)
   self.AfterLoadingMgr:Continue()
 end
 

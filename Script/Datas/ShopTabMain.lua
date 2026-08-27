@@ -89,6 +89,13 @@ return ReadOnly("ShopTabMain", {
     MainTabId = 705,
     UnlockHide = true
   },
+  [706] = {
+    ConditionId = "FTShopTab",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Region_Playground.T_Tab_Region_Playground'",
+    MainName = "UI_SHOP_TAB_ExploreBadge_FT",
+    MainTabId = 706,
+    UnlockHide = true
+  },
   [801] = {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_IceLake.T_Tab_IceLake'",
     MainName = "UI_SHOP_Fishing_Chapter01",
@@ -179,6 +186,11 @@ return ReadOnly("ShopTabMain", {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Item.T_Tab_Item'",
     MainName = "UI_Play_IronModeShop",
     MainTabId = 10013
+  },
+  [10014] = {
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Item.T_Tab_Item'",
+    MainName = "UI_MonsterDuelShop",
+    MainTabId = 10014
   },
   [10015] = {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Item.T_Tab_Item'",

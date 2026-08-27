@@ -1,5 +1,6 @@
 require("UnLua")
 local UIUtils = require("Utils.UIUtils")
+local MiscUtils = require("Utils.MiscUtils")
 local GREY_TITLE_FONT_MATERIAL_PATH = "MaterialInstanceConstant'/Game/UI/WBP/Common/VX/Common/MI_Com_TagWord_Grey.MI_Com_TagWord_Grey'"
 local M = Class("BluePrints.UI.BP_EMUserWidget_C")
 M._components = {
@@ -1060,7 +1061,7 @@ end
 
 function M:PlayAnimation(AnimationName)
   self.Overridden.PlayAnimation(self, AnimationName)
-  GreenPrint(AnimationName:GetName())
+  MiscUtils.GreenPrint(AnimationName:GetName())
 end
 
 AssembleComponents(M)

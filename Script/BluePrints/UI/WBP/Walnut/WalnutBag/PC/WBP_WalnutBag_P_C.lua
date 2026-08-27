@@ -111,6 +111,16 @@ function M:InitTabInfo()
   end
   self.BottomKeyInfoList = {
     {
+      GamePadInfoList = {
+        {
+          Type = "Img",
+          ImgShortPath = "RV",
+          Owner = self
+        }
+      },
+      Desc = GText("UI_Controller_Slide")
+    },
+    {
       KeyInfoList = {
         {
           Type = "Text",
@@ -465,6 +475,10 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   else
     return UE4.UWidgetBlueprintLibrary.UnHandled()
   end
+end
+
+function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
+  return self.Walnut_Detail:Handle_OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
 end
 
 function M:OnGamePadButtonDown(InKeyName)

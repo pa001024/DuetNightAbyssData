@@ -736,11 +736,7 @@ function BP_TalkBaseUINew_C:IsAutoPlay()
 end
 
 function BP_TalkBaseUINew_C:IsRealAutoPlay()
-  if not self.bDefaultShowAutoPlayButton then
-    return false
-  else
-    return GWorld.GameInstance.bGlobalAutoPlay
-  end
+  return GWorld.GameInstance.bGlobalAutoPlay
 end
 
 function BP_TalkBaseUINew_C:SwitchAutoPlay()

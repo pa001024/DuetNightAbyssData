@@ -2,8 +2,10 @@ local Component = {}
 
 function Component:SetCollectionStar(bCollection)
   local function Callback(ColStarUI)
+    if not self.Content.bCollection then
+      return
+    end
     self.ColStarUI = UE.FWeakObjectPtr(ColStarUI)
-    
     self:AddWidgetToNode(nil, self.ColStarUI)
   end
   

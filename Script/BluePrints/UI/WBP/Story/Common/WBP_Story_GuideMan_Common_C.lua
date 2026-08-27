@@ -1,6 +1,7 @@
 local EMCache = require("EMCache.EMCache")
 local ForgeModel = require("Blueprints.UI.Forge.ForgeDataModel")
 local TalkUtils = require("BluePrints.Story.Talk.View.TalkUtils")
+local FacialUtils = require("BluePrints.Story.Talk.View.FacialUtils")
 local PlayDialogueTag = {Dialogue = "Dialogue", Forge = "Forge"}
 local GuideLogType = UE.EStoryLogType.Guide
 local MaxTipUINum = 3
@@ -84,7 +85,11 @@ function M:GetGuideFacialId(DialogueData)
     if DialogueData.HeadIconType == "Special" then
       return DialogueData.GuideFacialId
     elseif DialogueData.HeadIconType == "Npc" then
-      return self:GetNpcFacialId(DialogueData.DialogueId, DialogueData.TalkActorId, DialogueData.GuideFacialId)
+      local Prefix = FacialUtils:GetNpcFacialPrefix(DialogueData.DialogueId, DialogueData.TalkActorId)
+      if not Prefix then
+        return nil
+      end
+      return string.format("%s%s", Prefix, DialogueData.GuideFacialId)
     end
   end
   if not DialogueData.TalkActorId then
@@ -102,47 +107,6 @@ function M:GetNpcHeadId(DialogueId, NpcId)
     return
   end
   return NpcData.GuideHeadId
-end
-
-function M:GetNpcFacialId(DialogueId, NpcId, FacialId)
-  if not NpcId then
-    return nil
-  end
-  NpcId = URuntimeCommonFunctionLibrary.GetNPCIdByGender(self, NpcId)
-  if not NpcId then
-    local Message = string.format("获取Npc表情Id失败，NpcId无效，反馈策划检查配置，台本编号：%s，NpcId：%s", DialogueId, NpcId)
-    UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, GuideLogType, "获取Npc表情Id失败: NpcId无效", Message)
-    return
-  end
-  if not FacialId then
-    local Message = string.format("获取Npc表情Id失败，表情Id无效，反馈策划检查配置，台本编号：%s，表情Id：%s", DialogueId, FacialId)
-    UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, GuideLogType, "获取Npc表情Id失败: FacialId无效", Message)
-    return
-  end
-  local NpcData = DataMgr.Npc[NpcId]
-  if not NpcData then
-    local Message = string.format("获取Npc表情Id失败，Npc数据无效，反馈策划检查配置，台本编号：%s，Npc编号：%s", DialogueId, NpcId)
-    UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, GuideLogType, "获取Npc表情Id失败: NpcData无效", Message)
-    return
-  end
-  local ModelId = NpcData.ModelId
-  if not ModelId then
-    local Message = string.format("获取Npc表情Id失败，模型Id无效，反馈策划检查配置，台本编号：%s，Npc编号：%s", DialogueId, NpcId)
-    UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, GuideLogType, "获取Npc表情Id失败: ModelId无效", Message)
-    return
-  end
-  local ModelData = DataMgr.Model[ModelId]
-  if not ModelData then
-    local Message = string.format("获取Npc表情Id失败，模型数据无效，反馈策划检查配置，台本编号：%s，Npc编号：%s，模型Id：%s", DialogueId, NpcId, ModelId)
-    UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, GuideLogType, "获取Npc表情Id失败: ModelData无效", Message)
-    return
-  end
-  if not ModelData.AvatarExpressionPrefix then
-    local Message = string.format("获取Npc表情Id失败，模型数据中没有AvatarExpressionPrefix，反馈策划检查配置，台本编号：%s，Npc编号：%s，模型Id：%s", DialogueId, NpcId, ModelId)
-    UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, GuideLogType, "获取Npc表情Id失败: 未找到AvatarExpressionPrefix", Message)
-    return
-  end
-  return string.format("%s%s", ModelData.AvatarExpressionPrefix, FacialId)
 end
 
 function M:OnFinished(LambdaCallback)

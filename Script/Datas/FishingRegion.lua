@@ -47,5 +47,12 @@ return ReadOnly("FishingRegion", {
     },
     IconId = 4,
     IconPath = "/Game/UI/Texture/Dynamic/Image/Area/T_Area_06.T_Area_06"
+  },
+  [5] = {
+    FishingRegionId = 5,
+    FishingRegionName = "FishingRegion_Name_5",
+    FishingSpotList = {10700101, 10720101},
+    IconId = 5,
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Region_Playground.T_Tab_Region_Playground"
   }
 })

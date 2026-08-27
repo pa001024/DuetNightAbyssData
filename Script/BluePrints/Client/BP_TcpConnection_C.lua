@@ -7,10 +7,6 @@ local BP_TcpConnection_C = Class()
 function BP_TcpConnection_C:Initialize(Initializer)
 end
 
-local function errorHandler(err)
-  return err .. "\n" .. debug.traceback()
-end
-
 function BP_TcpConnection_C:InitSuccessLua()
   function _G.NetProxy(FuncName, ArgsTable)
     local ok, ret = xpcall(function()
@@ -24,7 +20,7 @@ function BP_TcpConnection_C:InitSuccessLua()
       else
         func(self)
       end
-    end, errorHandler)
+    end, debug.traceback)
     if not ok then
       DebugPrint(ErrorTag, "NetProxy error:", ret)
     end

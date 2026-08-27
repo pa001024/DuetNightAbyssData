@@ -31,10 +31,11 @@ end
 function M:Init(...)
   local ItemList, DrawCount, bIsBigPrize, CloseCallback, ConvertFlags = ...
   self.ConvertFlags = ConvertFlags
+  local bHasCollectReward = self:HasCollectReward(ItemList)
   self:PopulateList(ItemList)
   self.CloseCallback = CloseCallback
   self.bClosing = false
-  self:InitRewardText(DrawCount, bIsBigPrize)
+  self:InitRewardText(DrawCount, bIsBigPrize, bHasCollectReward)
   self:StopAllAnimations()
   if bIsBigPrize then
     AudioManager(self):PlayUISound(self, BigPrizeRewardSoundEvent, nil, nil)
@@ -48,32 +49,43 @@ function M:Init(...)
   end
 end
 
-function M:InitRewardText(DrawCount, bIsBigPrize)
+function M:HasCollectReward(ItemList)
+  for _, ItemData in ipairs(ItemList or {}) do
+    if true == ItemData[5] then
+      return true
+    end
+  end
+  return false
+end
+
+function M:InitRewardText(DrawCount, bIsBigPrize, bHasCollectReward)
   local DrawCount = DrawCount or 0
   self.Panel_Title:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Panel_Tips:SetVisibility(UE4.ESlateVisibility.Collapsed)
-  if not bIsBigPrize or not self.Text_Title then
-    return
+  if bIsBigPrize and self.Text_Title then
+    if DrawCount <= 3 then
+      self.Panel_Title:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
+      self.Text_Title:SetText(string.format(GText("UI_LimitedPrizePool_BestLuck"), DrawCount))
+    elseif DrawCount <= 5 then
+      self.Panel_Title:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
+      self.Text_Title:SetText(string.format(GText("UI_LimitedPrizePool_GoodLuck"), DrawCount))
+    end
   end
-  if DrawCount <= 3 then
-    self.Panel_Title:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
-    self.Text_Title:SetText(string.format(GText("UI_LimitedPrizePool_BestLuck"), DrawCount))
-  elseif DrawCount <= 5 then
-    self.Panel_Title:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
-    self.Text_Title:SetText(string.format(GText("UI_LimitedPrizePool_GoodLuck"), DrawCount))
-  end
-  if DrawCount < 8 then
+  if bIsBigPrize and bHasCollectReward then
+    self.Text_Tips:SetText(GText("UI_LimitedPrizePool_AllAndCollectBonus"))
+    self.Panel_Tips:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
+  elseif bHasCollectReward then
+    self.Text_Tips:SetText(GText("UI_LimitedPrizePool_CollectBonus"))
+    self.Panel_Tips:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
+  elseif bIsBigPrize and DrawCount < 8 then
+    self.Text_Tips:SetText(GText("UI_LimitedPrizePool_GetAllResult"))
     self.Panel_Tips:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
   end
 end
 
-function M:IsRewardConverted(ItemData)
-  if not ItemData then
-    return false
-  end
-  local Idx = ItemData[1]
-  if self.ConvertFlags and Idx and self.ConvertFlags[Idx] ~= nil then
-    return self.ConvertFlags[Idx]
+function M:IsRewardConverted(ResultIndex)
+  if self.ConvertFlags and ResultIndex and self.ConvertFlags[ResultIndex] ~= nil then
+    return self.ConvertFlags[ResultIndex]
   end
   return false
 end
@@ -102,7 +114,8 @@ function M:PopulateList(ItemList)
     Content.Rarity = ItemUtils.GetItemRarity(Content.Id, Content.ItemType)
     Content.Count = ItemData[4]
     Content.UIName = "LimitedPrizePoolReward"
-    local bConvert = self:IsRewardConverted(ItemData)
+    Content.BonusType = true == ItemData[5] and 1 or 0
+    local bConvert = self:IsRewardConverted(i)
     local bSkin = Content.ItemType == "Skin" or Content.ItemType == "WeaponSkin" or Content.ItemType == "Mount"
     Content.HandleMouseDown = bConvert or bSkin
     Content.IsShowDetails = not bConvert

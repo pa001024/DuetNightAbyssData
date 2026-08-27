@@ -1,7 +1,7 @@
 require("UnLua")
 local M = Class()
 
-function M:OnStateChanged(NewState)
+function M:OnStateChanged(OldState, NewState)
   local WidgetComp = self.WidgetComponent
   if not WidgetComp then
     return
@@ -11,7 +11,7 @@ function M:OnStateChanged(NewState)
     return
   end
   if UserWidget.OnStateChanged then
-    UserWidget:OnStateChanged(NewState)
+    UserWidget:OnStateChanged(OldState, NewState)
   end
 end
 

@@ -12,7 +12,6 @@ function PlayerCommonInterface:PlayerCharacterInitialize()
   self.fNoControlRotationInputTime = 0.0
   self:InitActionLogicParamas()
   self.LookAtTag = self:AddOneSwitchTag(self.OnSetLookAtTag)
-  self.bForbidInteractiveTrigger = false
   self:UpdateCameraSensitivityFromCache()
   self:SetPlayerCameraSensitivityByType("Normal")
 end
@@ -424,28 +423,6 @@ end
 
 function PlayerCommonInterface:SetDebugDrawTest(Debugable)
   _G.DrawDebugTest = Debugable
-end
-
-function PlayerCommonInterface:SetCanInteractiveTrigger(bIsCanTrigger, Tag)
-  local Tag = Tag or "Default"
-  self.DisableInteractiveTriggerTagMap = self.DisableInteractiveTriggerTagMap or {}
-  if bIsCanTrigger then
-    self.DisableInteractiveTriggerTagMap[Tag] = nil
-  else
-    self.DisableInteractiveTriggerTagMap[Tag] = true
-  end
-  local bForbidInteractiveTrigger = nil ~= next(self.DisableInteractiveTriggerTagMap)
-  if self.bForbidInteractiveTrigger == bForbidInteractiveTrigger then
-    return
-  end
-  self.bForbidInteractiveTrigger = bForbidInteractiveTrigger
-  if self.InteractiveTriggerComponent then
-    self.InteractiveTriggerComponent:SetIsCanTrigger(not bForbidInteractiveTrigger)
-  end
-end
-
-function PlayerCommonInterface:CheckCanInteractiveTrigger()
-  return not self.bForbidInteractiveTrigger
 end
 
 function PlayerCommonInterface:RefreshRegionNameInfo(UId, ObjId)

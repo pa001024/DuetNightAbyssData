@@ -7,6 +7,7 @@ local DisplayDraft = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_D
 local DisplayTypes = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_DisplayTypes")
 local GuildController = require("BluePrints.UI.WBP.Guild.Controller.GuildController")
 local GuildLogoInfo = require("BluePrints.UI.WBP.Guild.Common.GuildLogoInfo")
+local MiscUtils = require("Utils.MiscUtils")
 local PersonInfoModel = PersonInfoController:GetModel()
 local M = Class({})
 M._components = {
@@ -669,7 +670,7 @@ function M:ChangeWeaponView()
 end
 
 function M:_DeprecatedArmoryOnClickChangeSelectChar(index)
-  RedPrint("OnClickChangeSelectChar")
+  MiscUtils.RedPrint("OnClickChangeSelectChar")
   self["AvatarItem_" .. self.SelectCharIndex].Button_Area:SetForbidden(false)
   self:CancelSelectChar(self.SelectCharIndex)
   self.SelectCharIndex = index
@@ -1075,7 +1076,7 @@ function M:_DeprecatedDraftOnPersonalInfoOpened(CharData)
 end
 
 function M:_DeprecatedDraftOnClickChangeSelectChar(index)
-  RedPrint("OnClickChangeSelectChar")
+  MiscUtils.RedPrint("OnClickChangeSelectChar")
   self["AvatarItem_" .. self.SelectCharIndex].Button_Area:SetForbidden(false)
   self:CancelSelectChar(self.SelectCharIndex)
   self.SelectCharIndex = index

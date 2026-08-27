@@ -868,7 +868,8 @@ return ReadOnly("SubRegion", {
     SubRegionName = "保持跟上线版本数据一致"
   },
   [107001] = {
-    FlyLicense = -1,
+    FlyLicense = 1001,
+    PalForbidden = true,
     RegionId = 1070,
     SubRegionDes = "UI_SUBREGION_DES_107001",
     SubRegionId = 107001,
@@ -876,10 +877,12 @@ return ReadOnly("SubRegion", {
     SubRegionName = "UI_SUBREGION_NAME_107001",
     SubRegionType = "field",
     SwitchPlayer = "EXPlayer",
-    SyncPlayerInfo = 1
+    SyncPlayerInfo = 1,
+    TODSetting = true
   },
   [107101] = {
-    FlyLicense = -1,
+    FlyLicense = 1001,
+    PalForbidden = true,
     RegionId = 1071,
     SubRegionDes = "UI_SUBREGION_DES_107101",
     SubRegionId = 107101,
@@ -887,10 +890,12 @@ return ReadOnly("SubRegion", {
     SubRegionName = "UI_SUBREGION_NAME_107101",
     SubRegionType = "field",
     SwitchPlayer = "EXPlayer",
-    SyncPlayerInfo = 1
+    SyncPlayerInfo = 1,
+    TODSetting = true
   },
   [107201] = {
-    FlyLicense = -1,
+    FlyLicense = 1001,
+    PalForbidden = true,
     RegionId = 1072,
     SubRegionDes = "UI_SUBREGION_DES_107201",
     SubRegionId = 107201,
@@ -898,10 +903,12 @@ return ReadOnly("SubRegion", {
     SubRegionName = "UI_SUBREGION_NAME_107201",
     SubRegionType = "field",
     SwitchPlayer = "EXPlayer",
-    SyncPlayerInfo = 1
+    SyncPlayerInfo = 1,
+    TODSetting = true
   },
   [107301] = {
-    FlyLicense = -1,
+    FlyLicense = 1001,
+    PalForbidden = true,
     RegionId = 1073,
     SubRegionDes = "UI_SUBREGION_DES_107301",
     SubRegionId = 107301,
@@ -912,7 +919,8 @@ return ReadOnly("SubRegion", {
     SyncPlayerInfo = 1
   },
   [107401] = {
-    FlyLicense = -1,
+    FlyLicense = 1001,
+    PalForbidden = true,
     RegionId = 1074,
     SubRegionDes = "UI_SUBREGION_DES_107401",
     SubRegionId = 107401,
@@ -923,7 +931,10 @@ return ReadOnly("SubRegion", {
     SyncPlayerInfo = 1
   },
   [107501] = {
-    FlyLicense = -1,
+    DefaultQuestPoint = "-6624,-75596,-4525",
+    FlyLicense = 1001,
+    NotShowInRegionMap = true,
+    PalForbidden = true,
     RegionId = 1075,
     SubRegionDes = "UI_SUBREGION_DES_107501",
     SubRegionId = 107501,
@@ -931,10 +942,12 @@ return ReadOnly("SubRegion", {
     SubRegionName = "UI_SUBREGION_NAME_107501",
     SubRegionType = "field",
     SwitchPlayer = "EXPlayer",
-    SyncPlayerInfo = 1
+    SyncPlayerInfo = 1,
+    TODSetting = true
   },
   [107601] = {
-    FlyLicense = -1,
+    FlyLicense = 1001,
+    PalForbidden = true,
     RegionId = 1076,
     SubRegionDes = "UI_SUBREGION_DES_107601",
     SubRegionId = 107601,
@@ -945,7 +958,10 @@ return ReadOnly("SubRegion", {
     SyncPlayerInfo = 1
   },
   [107701] = {
-    FlyLicense = -1,
+    DefaultQuestPoint = "-20847,-88214,-3131",
+    FlyLicense = 1001,
+    NotShowInRegionMap = true,
+    PalForbidden = true,
     RegionId = 1077,
     SubRegionDes = "UI_SUBREGION_DES_107701",
     SubRegionId = 107701,
@@ -953,10 +969,12 @@ return ReadOnly("SubRegion", {
     SubRegionName = "UI_SUBREGION_NAME_107701",
     SubRegionType = "field",
     SwitchPlayer = "EXPlayer",
-    SyncPlayerInfo = 1
+    SyncPlayerInfo = 1,
+    TODSetting = true
   },
   [107801] = {
-    FlyLicense = -1,
+    FlyLicense = 1001,
+    PalForbidden = true,
     RegionId = 1078,
     SubRegionDes = "UI_SUBREGION_DES_107801",
     SubRegionId = 107801,
@@ -969,10 +987,8 @@ return ReadOnly("SubRegion", {
   [108101] = {
     FlyLicense = -1,
     RegionId = 1081,
-    SubRegionDes = "测试区域",
     SubRegionId = 108101,
-    SubRegionLevel = "Ailixian_Sailafei",
-    SubRegionName = "测试区域",
+    SubRegionLevel = "Ailixian_SLF",
     SubRegionType = "field",
     SwitchPlayer = "Player",
     SyncPlayerInfo = 1
@@ -980,10 +996,8 @@ return ReadOnly("SubRegion", {
   [108201] = {
     FlyLicense = -1,
     RegionId = 1082,
-    SubRegionDes = "测试区域",
     SubRegionId = 108201,
     SubRegionLevel = "Ailixian_Miandao",
-    SubRegionName = "测试区域",
     SubRegionType = "field",
     SwitchPlayer = "Player",
     SyncPlayerInfo = 1
@@ -991,10 +1005,26 @@ return ReadOnly("SubRegion", {
   [108301] = {
     FlyLicense = -1,
     RegionId = 1083,
-    SubRegionDes = "测试区域",
     SubRegionId = 108301,
-    SubRegionLevel = "Ailixian_DreamSailafei",
-    SubRegionName = "测试区域",
+    SubRegionLevel = "Ailixian_LLKWon",
+    SubRegionType = "field",
+    SwitchPlayer = "Player",
+    SyncPlayerInfo = 1
+  },
+  [108401] = {
+    FlyLicense = -1,
+    RegionId = 1084,
+    SubRegionId = 108401,
+    SubRegionLevel = "Ailixian_Miandao_Yyhf",
+    SubRegionType = "field",
+    SwitchPlayer = "Player",
+    SyncPlayerInfo = 1
+  },
+  [108501] = {
+    FlyLicense = -1,
+    RegionId = 1085,
+    SubRegionId = 108501,
+    SubRegionLevel = "Ailixian_Yidai_Boss",
     SubRegionType = "field",
     SwitchPlayer = "Player",
     SyncPlayerInfo = 1

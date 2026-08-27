@@ -215,6 +215,10 @@ function BP_EMGameState_C:CheckBodyAccessotyNeedCache(AccessoryId)
   return self:CheckActorNeedCache()
 end
 
+function BP_EMGameState_C:CheckMonsterWeaponNeedCache(WeaponId)
+  return self:CheckActorNeedCache() and Const.bUseMonsterWeaponPool
+end
+
 function BP_EMGameState_C:GetTargetPoint(DisplayName)
   if "" == DisplayName or nil == DisplayName then
     return
@@ -275,12 +279,6 @@ end
 function BP_EMGameState_C:GetNpcInfoAsync(InNpcId, CallBack)
   if not InNpcId and CallBack then
     CallBack(nil)
-  end
-  if InNpcId and DataMgr.Npc[InNpcId] and DataMgr.Npc[InNpcId].NpcType == "Show" then
-    GWorld.GameInstance.IsAutoFashionSwitch = true
-  else
-    local bUseSkin = EMCache:Get("AutoFashion")
-    GWorld.GameInstance.IsAutoFashionSwitch = bUseSkin
   end
   local NewInNpcId = URuntimeCommonFunctionLibrary.GetNPCIdByGender(self, InNpcId)
   if NewInNpcId ~= InNpcId then
@@ -580,34 +578,10 @@ function BP_EMGameState_C:RealShowContinuedPCGuide(IsHide)
   end
 end
 
-function BP_EMGameState_C:RealSetContinuedPCGuideVisibility(ActionName, IsHide)
-  local GuideInfoPanel = UIManager(self):GetUIObj("BattleMain").Guide_KeyTip
-  local Visibility = UE4.ESlateVisibility.Visible
-  if IsHide then
-    Visibility = UE4.ESlateVisibility.Collapsed
-  end
-  if GuideInfoPanel then
-    if "Attack" == ActionName then
-      GuideInfoPanel.Hint01:SetVisibility(Visibility)
-    elseif "Fire" == ActionName then
-      GuideInfoPanel.Hint02:SetVisibility(Visibility)
-    elseif "ESC" == ActionName then
-      GuideInfoPanel.Hint03:SetVisibility(Visibility)
-    elseif "Alt" == ActionName then
-      GuideInfoPanel.Hint04:SetVisibility(Visibility)
-    end
-  end
-  if "GuideBook" == ActionName then
-    local BattleMain = UIManager(self):GetUIObj("BattleMain")
-    BattleMain.Btn_GuideBook:SetVisibility(Visibility)
-  end
-  if "AimIndicator" == ActionName then
-    local BattleMain = UIManager(self):GetUIObj("BattleMain")
-    BattleMain.Pos_Aim:SetVisibility(Visibility)
-  end
+function BP_EMGameState_C:RealSetContinuedPCGuideVisibility(ActionName, IsHide, Tag)
   if ("SpiralLeap" == ActionName or "Dodge" == ActionName or "Skill1" == ActionName or "Skill2" == ActionName or "Skill2Attack" == ActionName) and CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
     local BattleMain = UIManager(self):GetUIObj("BattleMain")
-    BattleMain:ShowInstructionInfo(ActionName, IsHide)
+    BattleMain:ShowInstructionInfo(ActionName, IsHide, Tag)
   end
 end
 
@@ -678,7 +652,7 @@ function BP_EMGameState_C:RealPlayGuideTextFloatAnimation(MessageId)
   end
 end
 
-function BP_EMGameState_C:HideUIInScreen(UIPath, IsHide, ShowOrHideNode)
+function BP_EMGameState_C:HideUIInScreen(UIPath, IsHide, HideTag)
   if IsDedicatedServer(self) and IsAuthority(self) then
     print(_G.LogTag, "WARNING: 是服务器,不执行 HideUIInScreen 函数")
     return
@@ -687,92 +661,40 @@ function BP_EMGameState_C:HideUIInScreen(UIPath, IsHide, ShowOrHideNode)
     print(_G.LogTag, "ERROR: 输入的UI路径错误", UIPath)
     return
   end
-  local Visible = UE4.ESlateVisibility.SelfHitTestInvisible
-  local Visible1 = UE4.ESlateVisibility.Visible
-  if IsHide then
-    Visible = UE4.ESlateVisibility.Collapsed
-    Visible1 = UE4.ESlateVisibility.Hidden
-  end
   if "EnergySkill" == UIPath and CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
     UIPath = "SkillPhone"
   end
   if "Esc" == UIPath then
     local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
     if Player then
-      Player:SetESCMenuForbiddenState(IsHide)
+      Player:SetESCMenuForbiddenStateByTag(IsHide, HideTag)
     end
+    local BattleMain = UIManager(self):GetUIObj("BattleMain")
+    BattleMain:HideSubSystem("Btn_Esc", HideTag, IsHide)
+    return
   end
   if "GuideBook" == UIPath then
     local BattleMain = UIManager(self):GetUIObj("BattleMain")
-    BattleMain.Btn_GuideBook:SetVisibility(Visible)
+    BattleMain:HideSubSystem("Btn_GuideBook", HideTag, IsHide)
+    return
   end
   if "AimIndicator" == UIPath then
     local BattleMain = UIManager(self):GetUIObj("BattleMain")
-    BattleMain.Pos_Aim:SetVisibility(Visible)
+    BattleMain:HideSubSystem("Pos_Aim", HideTag, IsHide)
+    return
   end
   UIPath = UIConst[UIPath .. "Path"]
   if "TaskBar" == UIPath and UIManager(self) then
     local BattleMainUI = UIManager(self):GetUIObj("BattleMain")
     local TaskPanel
-    if nil ~= BattleMainUI and nil ~= BattleMainUI.Pos_TaskBar and 1 == BattleMainUI.Pos_TaskBar:GetChildrenCount() then
-      TaskPanel = BattleMainUI.Pos_TaskBar:GetChildAt(0)
-      if TaskPanel then
-        TaskPanel.IsHideByNode = false
-        DebugPrint("ShowOrHideUINode: GetVisibility", TaskPanel:GetName(), TaskPanel:GetVisibility())
-        if TaskPanel:GetVisibility() ~= Visible and TaskPanel:GetVisibility() ~= Visible1 then
-          TaskPanel:SetVisibility(Visible)
-          DebugPrint("ShowOrHideUINode: SetVisibility", TaskPanel:GetName(), Visible)
-          if ShowOrHideNode then
-            if type(ShowOrHideNode) == "table" then
-              ShowOrHideNode.RealSetVisibility = true
-              DebugPrint("ShowOrHideUINode: HideUIInScreen", ShowOrHideNode.Function, ShowOrHideNode.UIParam, ShowOrHideNode.ActionParam, ShowOrHideNode.ShowOrHide)
-            else
-              DebugPrint("ShowOrHideUINode:", ShowOrHideNode)
-            end
-          end
-        end
-        if ShowOrHideNode and IsHide then
-          TaskPanel.IsHideByNode = true
-        end
-        return
-      end
+    TaskPanel = BattleMainUI.Pos_TaskBar:GetChildAt(0)
+    if nil ~= BattleMainUI and BattleMainUI.Pos_TaskBar ~= nil and 1 == BattleMainUI.Pos_TaskBar:GetChildrenCount() and TaskPanel then
+      TaskPanel:SetUIVisibilityTag(HideTag, IsHide)
     end
+    return
   end
-  if UIManager(self) then
-    local UIPathes = UIManager(self):GetUIPathFromString(UIPath)
-    if UIPathes then
-      local root_ui = UIManager(self):GetUIObj(UIPathes[1])
-      if not root_ui then
-        print(_G.LogTag, "ERROR: 输入的UI路径错误,没有找到该UI", UIPath)
-        return
-      end
-      local len = #UIPathes
-      for i = 2, len do
-        root_ui = root_ui[UIPathes[i]]
-      end
-      if not root_ui then
-        print(_G.LogTag, "ERROR: 输入的UI路径错误,没有找到该UI", UIPath)
-        return
-      end
-      DebugPrint("ShowOrHideUINode: GetVisibility", root_ui:GetName(), root_ui:GetVisibility())
-      if root_ui:GetVisibility() ~= Visible and root_ui:GetVisibility() ~= Visible1 then
-        if UIPath == UIConst.BloodBarPath then
-          local BattleMainUI = UIManager(self):GetUIObj("BattleMain")
-          if BattleMainUI then
-            BattleMainUI:ShowOrHideMainPlayerBloodUI(false == IsHide, "HideUIInScreen")
-          end
-        else
-          root_ui:SetVisibility(Visible)
-        end
-        if ShowOrHideNode and type(ShowOrHideNode) == "table" then
-          ShowOrHideNode.RealSetVisibility = true
-          DebugPrint("ShowOrHideUINode: HideUIInScreen", ShowOrHideNode.Function, ShowOrHideNode.UIParam, ShowOrHideNode.ActionParam, ShowOrHideNode.ShowOrHide)
-        else
-          DebugPrint("ShowOrHideUINode:", ShowOrHideNode)
-        end
-      end
-    end
-  end
+  local BattleMain = UIManager(self):GetUIObj("BattleMain")
+  BattleMain:HideSubSystem(UIPath, HideTag, IsHide)
 end
 
 function BP_EMGameState_C:ShowUIAndCloseItAfterCertainTime(UIPath, UIName, Duration, ZOrder)
@@ -1168,9 +1090,15 @@ function BP_EMGameState_C:InActiveMechanismInteractiveByIds(bClose, Ids)
       if bClose then
         self.MechanismInteractiveClose[Eid] = true
         self.InActiveByIdsEidSet[Eid] = true
+        if Mechanism:IsA(UE4.AMechanismBase) and Mechanism.NotifyMechanismEffectActive then
+          Mechanism:NotifyMechanismEffectActive(false)
+        end
       elseif self.InActiveByIdsEidSet[Eid] then
         self.MechanismInteractiveClose[Eid] = nil
         self.InActiveByIdsEidSet[Eid] = nil
+        if Mechanism:IsA(UE4.AMechanismBase) and Mechanism.NotifyMechanismEffectActive then
+          Mechanism:NotifyMechanismEffectActive(true)
+        end
       end
     end
   end
@@ -1316,8 +1244,8 @@ end
 function BP_EMGameState_C:DungeonSafePlayTalk_Lua(TalkId)
   local LoadingUI = GWorld.GameInstance:GetLoadingUI()
   if LoadingUI then
-    EventManager:AddEvent(EventID.OnEnableStory, self, function()
-      EventManager:RemoveEvent(EventID.OnEnableStory, self)
+    EventManager:AddEvent(EventID.CloseLoading, self, function()
+      EventManager:RemoveEvent(EventID.CloseLoading, self)
       local TalkAsyncAction = UE4.UPlayTalkAsyncAction.PlayTalk(self, TalkId, nil)
       if IsValid(TalkAsyncAction) then
         TalkAsyncAction:Activate()
@@ -1334,8 +1262,8 @@ end
 function BP_EMGameState_C:ClientSafeRunStory(StorylinePath, STLCallback)
   local LoadingUI = GWorld.GameInstance:GetLoadingUI()
   if LoadingUI then
-    EventManager:AddEvent(EventID.OnEnableStory, self, function()
-      EventManager:RemoveEvent(EventID.OnEnableStory, self)
+    EventManager:AddEvent(EventID.CloseLoading, self, function()
+      EventManager:RemoveEvent(EventID.CloseLoading, self)
       GWorld.StoryMgr:RunStory(StorylinePath, nil, nil, STLCallback, STLCallback)
     end)
   else

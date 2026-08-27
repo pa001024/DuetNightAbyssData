@@ -39,10 +39,15 @@ function M:TryCompleteLimit()
   end
 end
 
+function M:GetCompleteStarLevel()
+  return -1
+end
+
 function M:TryComplete()
   local Avatar = GWorld:GetAvatar()
   if Avatar then
-    Avatar:ExploreIdComplete(self.ExploreGroupId, true)
+    local StarLevel = tonumber(self:GetCompleteStarLevel()) or -1
+    Avatar:ExploreIdComplete(self.ExploreGroupId, StarLevel)
   end
 end
 
@@ -573,7 +578,10 @@ function M:_PrepareMountTransfer(Player)
     return
   end
   if Player.StopRideFly and Player.IsFlying and Player:IsFlying() then
-    Player:StopRideFly()
+    local MountData = DataMgr.BattleMount[Player.CurrentMountId]
+    if not MountData or not MountData.FroceRideFly then
+      Player:StopRideFly()
+    end
   end
   local MoveComp = Player:GetMovementComponent()
   if MoveComp and MoveComp.StopMovementImmediately then
@@ -671,6 +679,9 @@ function M:BindExploreSpline(StaticCreator, SplineComponent)
     return
   end
   Mechanism:SetExploreSpline(SplineComponent)
+end
+
+function M:SwitchPerspective(bIsFirstPerson)
 end
 
 return M

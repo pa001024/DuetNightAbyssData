@@ -15,8 +15,10 @@ function M:OnListItemObjectSet(Content)
   self.TextNum:SetText(Content.Rate .. "%")
   local Texture = LoadObject(Content.ResourceIcon)
   if Content.ExtraRate then
+    local AnimationName = "Lv_01"
     self.Tag_Reward.TextNum:SetText("+" .. Content.ExtraRate .. "%")
     self.Tag_Reward:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Tag_Reward:PlayAnimation(self.Tag_Reward[AnimationName])
   else
     self.Tag_Reward:SetVisibility(ESlateVisibility.Collapsed)
   end

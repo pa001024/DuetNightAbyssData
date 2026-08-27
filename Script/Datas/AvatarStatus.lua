@@ -1,3 +1,5 @@
+local T = {}
+T.RT_1 = {-1}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -6,7 +8,7 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
 end
 return ReadOnly("AvatarStatus", {
   [1] = {
-    IncompatibleList = {-1},
+    IncompatibleList = T.RT_1,
     Priority = 1,
     StatusId = 1,
     StatusName = "Normal",
@@ -39,7 +41,8 @@ return ReadOnly("AvatarStatus", {
       13,
       14,
       15,
-      17
+      17,
+      18
     }
   },
   [3] = {
@@ -50,7 +53,8 @@ return ReadOnly("AvatarStatus", {
       6,
       11,
       12,
-      15
+      15,
+      18
     }
   },
   [4] = {
@@ -72,7 +76,8 @@ return ReadOnly("AvatarStatus", {
       1,
       4,
       5,
-      11
+      11,
+      18
     }
   },
   [5] = {
@@ -113,7 +118,11 @@ return ReadOnly("AvatarStatus", {
     Priority = 2,
     StatusId = 6,
     StatusName = "EnterBigWorld",
-    TurnList = {2, 6}
+    TurnList = {
+      2,
+      6,
+      18
+    }
   },
   [7] = {
     IncompatibleList = {
@@ -172,7 +181,11 @@ return ReadOnly("AvatarStatus", {
     Priority = 2,
     StatusId = 9,
     StatusName = "EnterRougeLike",
-    TurnList = {2, 10}
+    TurnList = {
+      2,
+      10,
+      18
+    }
   },
   [10] = {
     IncompatibleList = {
@@ -213,7 +226,8 @@ return ReadOnly("AvatarStatus", {
       4,
       6,
       7,
-      11
+      11,
+      18
     }
   },
   [12] = {
@@ -229,7 +243,8 @@ return ReadOnly("AvatarStatus", {
       11,
       13,
       14,
-      15
+      15,
+      18
     }
   },
   [13] = {
@@ -243,7 +258,8 @@ return ReadOnly("AvatarStatus", {
       9,
       11,
       14,
-      15
+      15,
+      18
     }
   },
   [14] = {
@@ -257,7 +273,8 @@ return ReadOnly("AvatarStatus", {
       11,
       12,
       15,
-      17
+      17,
+      18
     }
   },
   [15] = {
@@ -274,51 +291,25 @@ return ReadOnly("AvatarStatus", {
     TurnList = {
       2,
       6,
-      13
+      13,
+      18
     }
   },
   [16] = {
     StatusId = 16,
     StatusName = "InRegionOnline",
-    TurnList = {
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      11,
-      12,
-      13,
-      14,
-      15,
-      17
-    }
+    TurnList = T.RT_1
   },
   [17] = {
     Priority = 1,
     StatusId = 17,
     StatusName = "InTheaterPerform",
-    TurnList = {
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      12,
-      13,
-      14,
-      15,
-      16
-    }
+    TurnList = T.RT_1
+  },
+  [18] = {
+    Priority = 1,
+    StatusId = 18,
+    StatusName = "InTeamHall",
+    TurnList = T.RT_1
   }
 })

@@ -1,4 +1,5 @@
 local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
+local DeferCallUtils = require("Utils.DeferCallUtils")
 local JJGameController = require("BluePrints.UI.WBP.ActivityJJGame.JJGameController")
 local Component = {}
 local MidTermGoalEventId = DataMgr.MidTermGoalConstant.MidTermGoalEventId.ConstantValue
@@ -89,7 +90,7 @@ end
 
 function Component:DelayUpdateJJGameReddot()
   local WorldContextObject = GWorld and GWorld.GameInstance
-  UE4.UBattleFunctionLibrary.DeferredCall(WorldContextObject, "MidTermMgr_UpdateJJGameReddot", function()
+  DeferCallUtils.DeferredCall(WorldContextObject, "MidTermMgr_UpdateJJGameReddot", function()
     self:UpdateJJGameReddot()
   end)
 end

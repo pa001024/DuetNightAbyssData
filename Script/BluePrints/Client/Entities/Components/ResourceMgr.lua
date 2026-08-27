@@ -320,4 +320,56 @@ function Component:RemoveGestureItemPanel(InCallback, PageIndex, SlotIndex)
   self:CallServer("RemoveGestureItemPanel", Callback, PageIndex, SlotIndex)
 end
 
+function Component:OnAddRewardIdListPets(AllPetInfo)
+  self.logger.info(string.format("OnAddRewardIdListPets: %s", CommonUtils.TableToString3(AllPetInfo)))
+  local PetRewardInfos = {}
+  local PetRewardInfoGroups = {}
+  local PetRewardInfoGroupMap = {}
+  for Index, RewardInfo in ipairs(AllPetInfo or {}) do
+    local PetInfo = RewardInfo.Pet
+    local PetData = PetInfo and DataMgr.Pet[PetInfo.PetId]
+    if PetData and PetData.GUID then
+      local EntryIds = {}
+      local bValid = true
+      for _, EntryId in ipairs(PetInfo.EntryIds or {}) do
+        if 0 ~= EntryId then
+          if not DataMgr.PetEntry[EntryId] then
+            self.logger.error("OnAddRewardIdListPets invalid PetEntry", Index, EntryId)
+            bValid = false
+            break
+          end
+          table.insert(EntryIds, EntryId)
+        end
+      end
+      if bValid then
+        table.sort(EntryIds)
+        local GroupKey = string.format("%s:%s", PetData.GUID, table.concat(EntryIds, ","))
+        local PetRewardInfoGroup = PetRewardInfoGroupMap[GroupKey]
+        if not PetRewardInfoGroup then
+          PetRewardInfoGroup = {}
+          PetRewardInfoGroupMap[GroupKey] = PetRewardInfoGroup
+          table.insert(PetRewardInfoGroups, PetRewardInfoGroup)
+        end
+        table.insert(PetRewardInfoGroup, {
+          PetId = PetInfo.PetId,
+          GUID = PetData.GUID,
+          EntryIds = EntryIds
+        })
+      end
+    else
+      self.logger.error("OnAddRewardIdListPets invalid Pet reward", Index, PetInfo and PetInfo.PetId)
+    end
+  end
+  for _, PetRewardInfoGroup in ipairs(PetRewardInfoGroups) do
+    for _, PetRewardInfo in ipairs(PetRewardInfoGroup) do
+      table.insert(PetRewardInfos, PetRewardInfo)
+    end
+  end
+  if 0 == #PetRewardInfos then
+    self.logger.error("OnAddRewardIdListPets has no valid Pet reward")
+    return
+  end
+  UIUtils.ShowGetItemPage(nil, nil, nil, {PetRewardInfos = PetRewardInfos})
+end
+
 return Component

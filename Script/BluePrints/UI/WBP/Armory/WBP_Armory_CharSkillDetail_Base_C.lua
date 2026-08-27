@@ -54,9 +54,6 @@ function M:Construct()
 end
 
 function M:On_Image_Click_MouseButtonDown(MyGeometry, MouseEvent)
-  if self.IsHyperLinkTipOpened then
-    return UIUtils.Unhandled
-  end
   return self:OnPointerDown(MyGeometry, MouseEvent)
 end
 
@@ -82,8 +79,8 @@ end
 
 function M:OnCloseBtnClicked()
   if self.IsHyperLinkTipOpened then
-  elseif self.IsNexLevelInfoShowed then
-    self:ShowNextLevelInfo(not self.IsNexLevelInfoShowed)
+  elseif self.IsNextLevelInfoShowed then
+    self:ShowNextLevelInfo(not self.IsNextLevelInfoShowed)
   else
     AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_return", nil, nil)
     self:PlayOutAnim()
@@ -220,7 +217,7 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, Params)
   self.Target = Params.Target or Avatar.Chars[CharUuid]
   self:UpdateTargetInfo(self.Target)
   if not SelectedSkillId and not SelectedAttrId then
-    SelectedSkillId, SelectedAttrId = self:FindFirtSkillIdOrAttrId(self.Target)
+    SelectedSkillId, SelectedAttrId = self:FindFirstSkillIdOrAttrId(self.Target)
   end
   if not SelectedSkillId and not SelectedAttrId then
     self:Close()
@@ -280,7 +277,7 @@ function M:SetStars(StarNum)
   end
 end
 
-function M:FindFirtSkillIdOrAttrId(Char)
+function M:FindFirstSkillIdOrAttrId(Char)
   local SkillId, AttrId
   local SkillTreeData = DataMgr.SkillTree[Char.CharId]
   if SkillTreeData and SkillTreeData.Skill1 then
@@ -644,11 +641,11 @@ function M:OnSkillAttrBtnCLicked(Content)
 end
 
 function M:OnBtnChekClicked()
-  self:ShowNextLevelInfo(not self.IsNexLevelInfoShowed)
+  self:ShowNextLevelInfo(not self.IsNextLevelInfoShowed)
 end
 
 function M:ShowNextLevelInfo(bShow)
-  self.IsNexLevelInfoShowed = bShow
+  self.IsNextLevelInfoShowed = bShow
   if bShow then
     self.CharSkill:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     self.WidgetSwitcher_State:SetActiveWidgetIndex(1)
@@ -737,8 +734,8 @@ end
 function M:OnSkillTab1Clicked()
   self.WidgetSwitcher_Page:SetActiveWidgetIndex(0)
   self:UpdateBtnCheckVisibility()
-  if self.IsNexLevelInfoShowed then
-    self:ShowNextLevelInfo(not self.IsNexLevelInfoShowed)
+  if self.IsNextLevelInfoShowed then
+    self:ShowNextLevelInfo(not self.IsNextLevelInfoShowed)
   end
 end
 
@@ -920,7 +917,10 @@ function M:OnOutAnimationFinished()
 end
 
 function M:Destruct()
+  self.Image_Click.OnMouseButtonDownEvent:Unbind()
   self:UnbindAllFromAnimationFinished(self.Out)
+  self:UnbindAllFromAnimationFinished(self.Detail_Out)
+  self:UnbindAllFromAnimationFinished(self.Detail_In)
   self:RemoveReddotListener()
   if self.bDestroyDummyAvatarWhenClose then
     ArmoryUtils:DestroyDummyAvatar()

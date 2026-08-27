@@ -58,6 +58,11 @@ T.RT_9 = {
   [3] = "Lucky"
 }
 T.RT_10 = {
+  [1] = "Morality",
+  [2] = "Lucky",
+  [3] = "Lucky"
+}
+T.RT_11 = {
   [1] = "Wisdom",
   [2] = "Battle",
   [3] = "Workaholic"
@@ -113,7 +118,8 @@ return ReadOnly("Char", {
       [6] = 11010122,
       [7] = 11010131,
       [8] = 11010141,
-      [9] = 11010151
+      [9] = 11010151,
+      [10] = 11010161
     },
     SortPriority = 4006,
     Sound = "SOUND_ITEM_NORMAL",
@@ -161,7 +167,8 @@ return ReadOnly("Char", {
       [1] = 1102,
       [2] = 110201,
       [3] = 11020141,
-      [4] = 11020151
+      [4] = 11020151,
+      [5] = 11020161
     },
     SortPriority = 5009,
     Sound = "SOUND_ITEM_NORMAL",
@@ -244,7 +251,7 @@ return ReadOnly("Char", {
     DefaultAccessory = T.RT_5,
     DefaultHairId = 1201,
     DefaultSkinId = 1201,
-    DispatchTag = T.RT_10,
+    DispatchTag = T.RT_11,
     DispatchUnlock = T.RT_3,
     EscIcon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Nvzhu02",
     EscMenuBg = "/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_Nvzhu02",
@@ -377,7 +384,8 @@ return ReadOnly("Char", {
       [6] = 15020122,
       [7] = 15020131,
       [8] = 15020141,
-      [9] = 15020151
+      [9] = 15020151,
+      [10] = 15020161
     },
     SortPriority = 5011,
     Sound = "SOUND_ITEM_NORMAL",
@@ -456,7 +464,7 @@ return ReadOnly("Char", {
     DefaultAccessory = T.RT_5,
     DefaultHairId = 1504,
     DefaultSkinId = 1504,
-    DispatchTag = T.RT_10,
+    DispatchTag = T.RT_11,
     DispatchUnlock = T.RT_3,
     EscIcon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Suyi",
     EscMenuBg = "/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_Suyi",
@@ -479,7 +487,8 @@ return ReadOnly("Char", {
       [2] = 150401,
       [3] = 15040131,
       [4] = 15040141,
-      [5] = 15040151
+      [5] = 15040151,
+      [6] = 15040161
     },
     SortPriority = 5013,
     Sound = "SOUND_ITEM_NORMAL",
@@ -505,7 +514,7 @@ return ReadOnly("Char", {
     DefaultAccessory = T.RT_5,
     DefaultHairId = 1601,
     DefaultSkinId = 1601,
-    DispatchTag = T.RT_10,
+    DispatchTag = T.RT_11,
     DispatchUnlock = T.RT_3,
     EscIcon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Nvzhu",
     EscMenuBg = "/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_Nvzhu",
@@ -584,7 +593,8 @@ return ReadOnly("Char", {
       [6] = 18010122,
       [7] = 18010131,
       [8] = 18010141,
-      [9] = 18010151
+      [9] = 18010151,
+      [10] = 18010161
     },
     SortPriority = 5009,
     Sound = "SOUND_ITEM_NORMAL",
@@ -639,7 +649,8 @@ return ReadOnly("Char", {
       [7] = 21010122,
       [8] = 21010131,
       [9] = 21010141,
-      [10] = 21010151
+      [10] = 21010151,
+      [11] = 21010161
     },
     SortPriority = 5004,
     Sound = "SOUND_ITEM_NORMAL",
@@ -662,11 +673,7 @@ return ReadOnly("Char", {
     DefaultAccessory = T.RT_5,
     DefaultHairId = 2102,
     DefaultSkinId = 2102,
-    DispatchTag = {
-      [1] = "Morality",
-      [2] = "Lucky",
-      [3] = "Lucky"
-    },
+    DispatchTag = T.RT_10,
     DispatchUnlock = T.RT_3,
     EscIcon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Eve",
     EscMenuBg = "/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_Eve",
@@ -687,9 +694,53 @@ return ReadOnly("Char", {
     SkinId = {
       [1] = 2102,
       [2] = 210201,
-      [3] = 21020151
+      [3] = 21020151,
+      [4] = 21020161
     },
     SortPriority = 5005,
+    Sound = "SOUND_ITEM_NORMAL",
+    SpineBp = "WBP_Get_Avatar_WidgetEve"
+  },
+  [2201] = {
+    ArmoryCameraPosition = T.RT_7,
+    ArmoryCameraRotation = T.RT_6,
+    BigIcon = "/Game/UI/Texture/Dynamic/Image/Bust/Avatar/T_Bust_WeitaF",
+    BlockDispatch = 1,
+    Camp = "Diguo",
+    CharId = 2201,
+    CharMaxLevel = 80,
+    CharName = "UI_CHAR_NAME_2201",
+    CharPieceId = 1002201,
+    CharRarity = 5,
+    CharSubtitle = "UI_CHAR_SUBTITLE_2201",
+    CharUnlockRequiredPiece = 30,
+    CollectRewardExp = 500,
+    DefaultAccessory = T.RT_5,
+    DefaultHairId = 2201,
+    DefaultSkinId = 2201,
+    DispatchTag = T.RT_10,
+    DispatchUnlock = T.RT_3,
+    EscIcon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_WeitaF",
+    EscMenuBg = "/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_WeitaF",
+    FirstCharItemId = 1012201,
+    FirstCharItemNum = 1,
+    GUIPathVariable = "WeitaF",
+    GachaIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Avatar/T_Gacha_AvatarWeitaF",
+    GenderTag = 1,
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_WeitaF",
+    MeleeWeapon = 10201,
+    ModSlot = T.RT_2,
+    ModSlotUnlock = T.RT_1,
+    OpenVersion = 16,
+    RangedWeapon = 20201,
+    RegainCharItemId = 1002201,
+    RegainCharItemNum = 30,
+    ReleaseVersion = 160,
+    RoleId = 2201,
+    SkinId = {
+      [1] = 2201
+    },
+    SortPriority = 5008,
     Sound = "SOUND_ITEM_NORMAL",
     SpineBp = "WBP_Get_Avatar_WidgetEve"
   },
@@ -791,7 +842,8 @@ return ReadOnly("Char", {
       [5] = 24010122,
       [6] = 24010131,
       [7] = 24010141,
-      [8] = 24010151
+      [8] = 24010151,
+      [9] = 24010161
     },
     SortPriority = 5007,
     Sound = "SOUND_ITEM_NORMAL",
@@ -845,7 +897,8 @@ return ReadOnly("Char", {
       [6] = 31010122,
       [7] = 31010131,
       [8] = 31010141,
-      [9] = 31010151
+      [9] = 31010151,
+      [10] = 31010161
     },
     SortPriority = 5003,
     Sound = "SOUND_ITEM_NORMAL",
@@ -897,7 +950,8 @@ return ReadOnly("Char", {
       [1] = 3102,
       [2] = 310201,
       [3] = 31020141,
-      [4] = 31020151
+      [4] = 31020151,
+      [5] = 31020161
     },
     SortPriority = 5005,
     Sound = "SOUND_ITEM_NORMAL",
@@ -959,7 +1013,7 @@ return ReadOnly("Char", {
     ArmoryCameraRotation = T.RT_6,
     BigIcon = "/Game/UI/Texture/Dynamic/Image/Bust/Avatar/T_Bust_Falu",
     Camp = "Diguo",
-    CharColorVar = "Red",
+    CharColorVar = "Blue",
     CharId = 3104,
     CharMaxLevel = 80,
     CharName = "UI_CHAR_NAME_3104",
@@ -991,11 +1045,15 @@ return ReadOnly("Char", {
     RoleId = 3104,
     SkinId = {
       [1] = 3104,
-      [2] = 310401
+      [2] = 310401,
+      [3] = 31040161
     },
     SortPriority = 4005,
     Sound = "SOUND_ITEM_NORMAL",
-    SpineBp = "WBP_Get_Avatar_WidgetFalu"
+    SpineBp = "WBP_Get_Avatar_WidgetFalu",
+    VideoBp = "WidgetBlueprint'/Game/UI/WBP/Get/Widget/Avatar/WBP_Get_Avatar_WidgetFalu.WBP_Get_Avatar_WidgetFalu'",
+    VideoInPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/Activity/Get_Avatar_Falu_In.Get_Avatar_Falu_In'",
+    VideoLoopPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/Activity/Get_Avatar_Falu_Loop.Get_Avatar_Falu_Loop'"
   },
   [3201] = {
     ArmoryCameraPosition = T.RT_7,
@@ -1044,7 +1102,8 @@ return ReadOnly("Char", {
       [5] = 32010122,
       [6] = 32010131,
       [7] = 32010141,
-      [8] = 32010151
+      [8] = 32010151,
+      [9] = 32010161
     },
     SortPriority = 4004,
     Sound = "SOUND_ITEM_NORMAL",
@@ -1098,7 +1157,8 @@ return ReadOnly("Char", {
       [2] = 320201,
       [3] = 32020131,
       [4] = 32020141,
-      [5] = 32020151
+      [5] = 32020151,
+      [6] = 32020161
     },
     SortPriority = 4006,
     Sound = "SOUND_ITEM_NORMAL",
@@ -1147,7 +1207,8 @@ return ReadOnly("Char", {
       [5] = 33010122,
       [6] = 33010131,
       [7] = 33010141,
-      [8] = 33010151
+      [8] = 33010151,
+      [9] = 33010161
     },
     SortPriority = 4005,
     Sound = "SOUND_ITEM_NORMAL",
@@ -1197,7 +1258,8 @@ return ReadOnly("Char", {
       [6] = 41010122,
       [7] = 41010131,
       [8] = 41010141,
-      [9] = 41010151
+      [9] = 41010151,
+      [10] = 41010161
     },
     SortPriority = 4001,
     Sound = "SOUND_ITEM_NORMAL",
@@ -1249,11 +1311,55 @@ return ReadOnly("Char", {
       [4] = 41020122,
       [5] = 41020131,
       [6] = 41020141,
-      [7] = 41020151
+      [7] = 41020151,
+      [8] = 41020161
     },
     SortPriority = 5001,
     Sound = "SOUND_ITEM_NORMAL",
     SpineBp = "WBP_Get_Avatar_WidgetZhiliu"
+  },
+  [4103] = {
+    ArmoryCameraPosition = T.RT_7,
+    ArmoryCameraRotation = T.RT_6,
+    BigIcon = "/Game/UI/Texture/Dynamic/Image/Bust/Avatar/T_Bust_SpLise",
+    Camp = "Diguo",
+    CharColorVar = "Blue",
+    CharId = 4103,
+    CharMaxLevel = 80,
+    CharName = "UI_CHAR_NAME_4103",
+    CharPieceId = 1004103,
+    CharRarity = 5,
+    CharSubtitle = "UI_CHAR_SUBTITLE_4103",
+    CharUnlockRequiredPiece = 30,
+    CollectRewardExp = 500,
+    DefaultAccessory = T.RT_5,
+    DefaultHairId = 4103,
+    DefaultSkinId = 4103,
+    DispatchTag = T.RT_8,
+    DispatchUnlock = T.RT_3,
+    EscIcon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_SpLise",
+    EscMenuBg = "/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_SpLise",
+    FirstCharItemId = 1014103,
+    FirstCharItemNum = 1,
+    GUIPathVariable = "SpLise",
+    GachaIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Avatar/T_Gacha_AvatarSpLise",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_SpLise",
+    MeleeWeapon = 10101,
+    ModSlot = T.RT_2,
+    ModSlotUnlock = T.RT_1,
+    OpenVersion = 17,
+    RangedWeapon = 20201,
+    RegainCharItemId = 1004103,
+    RegainCharItemNum = 30,
+    ReleaseVersion = 170,
+    RoleId = 4103,
+    SkinId = {
+      [1] = 4103,
+      [2] = 410301
+    },
+    SortPriority = 4001,
+    Sound = "SOUND_ITEM_NORMAL",
+    SpineBp = "WBP_Get_Avatar_WidgetSpLise"
   },
   [4201] = {
     ArmoryCameraPosition = T.RT_7,
@@ -1402,7 +1508,8 @@ return ReadOnly("Char", {
       [5] = 43010122,
       [6] = 43010131,
       [7] = 43010141,
-      [8] = 43010151
+      [8] = 43010151,
+      [9] = 43010161
     },
     SortPriority = 5001,
     Sound = "SOUND_ITEM_NORMAL",
@@ -1563,7 +1670,8 @@ return ReadOnly("Char", {
       [7] = 53010122,
       [8] = 53010131,
       [9] = 53010141,
-      [10] = 53010151
+      [10] = 53010151,
+      [11] = 53010161
     },
     SortPriority = 5008,
     Sound = "SOUND_ITEM_NORMAL",
@@ -1615,7 +1723,8 @@ return ReadOnly("Char", {
       [5] = 54010122,
       [6] = 54010131,
       [7] = 54010141,
-      [8] = 54010151
+      [8] = 54010151,
+      [9] = 54010161
     },
     SortPriority = 4002,
     Sound = "SOUND_ITEM_NORMAL",
@@ -1681,7 +1790,7 @@ return ReadOnly("Char", {
     DefaultAccessory = T.RT_5,
     DefaultHairId = 120101,
     DefaultSkinId = 120101,
-    DispatchTag = T.RT_10,
+    DispatchTag = T.RT_11,
     DispatchUnlock = T.RT_3,
     EscIcon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Nanzhu02",
     EscMenuBg = "/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_Nanzhu02",
@@ -1729,7 +1838,7 @@ return ReadOnly("Char", {
     DefaultAccessory = T.RT_5,
     DefaultHairId = 160101,
     DefaultSkinId = 160101,
-    DispatchTag = T.RT_10,
+    DispatchTag = T.RT_11,
     DispatchUnlock = T.RT_3,
     EscIcon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Nanzhu",
     EscMenuBg = "/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_Nanzhu",
@@ -1759,5 +1868,48 @@ return ReadOnly("Char", {
     SortPriority = 5015,
     Sound = "SOUND_ITEM_NORMAL",
     SpineBp = "WBP_Get_Avatar_WidgetNifu"
+  },
+  [220101] = {
+    ArmoryCameraPosition = T.RT_7,
+    ArmoryCameraRotation = T.RT_6,
+    BigIcon = "/Game/UI/Texture/Dynamic/Image/Bust/Avatar/T_Bust_WeitaM",
+    BlockDispatch = 1,
+    Camp = "Diguo",
+    CharId = 220101,
+    CharMaxLevel = 80,
+    CharName = "UI_CHAR_NAME_220101",
+    CharPieceId = 1002201,
+    CharRarity = 5,
+    CharSubtitle = "UI_CHAR_SUBTITLE_220101",
+    CharUnlockRequiredPiece = 30,
+    CollectRewardExp = 500,
+    DefaultAccessory = T.RT_5,
+    DefaultHairId = 220101,
+    DefaultSkinId = 220101,
+    DispatchTag = T.RT_10,
+    DispatchUnlock = T.RT_3,
+    EscIcon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_WeitaM",
+    EscMenuBg = "/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_WeitaM",
+    FirstCharItemId = 101220101,
+    FirstCharItemNum = 1,
+    GUIPathVariable = "WeitaM",
+    GachaIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Avatar/T_Gacha_AvatarWeitaM",
+    GenderTag = 0,
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_WeitaM",
+    MeleeWeapon = 10201,
+    ModSlot = T.RT_2,
+    ModSlotUnlock = T.RT_1,
+    OpenVersion = 16,
+    RangedWeapon = 20201,
+    RegainCharItemId = 1002201,
+    RegainCharItemNum = 30,
+    ReleaseVersion = 160,
+    RoleId = 220101,
+    SkinId = {
+      [1] = 220101
+    },
+    SortPriority = 5008,
+    Sound = "SOUND_ITEM_NORMAL",
+    SpineBp = "WBP_Get_Avatar_WidgetEve"
   }
 })

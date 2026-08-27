@@ -23,21 +23,6 @@ function BP_DeliveryInteractiveComponent_C:IsCanInteractive(PlayerActor)
   end
 end
 
-function BP_DeliveryInteractiveComponent_C:TriggerEnter(PlayerActor)
-  self.Overridden.TriggerEnter(self, PlayerActor)
-  self.OnInteractiveTriggerEnter:Broadcast(PlayerActor)
-end
-
-function BP_DeliveryInteractiveComponent_C:TriggerTick(PlayerActor)
-  self.Overridden.TriggerTick(self, PlayerActor)
-  self.OnInteractiveTriggerTick:Broadcast(PlayerActor)
-end
-
-function BP_DeliveryInteractiveComponent_C:TriggerExit(PlayerActor)
-  self.Overridden.TriggerExit(self, PlayerActor)
-  self.OnInteractiveTriggerExit:Broadcast(PlayerActor)
-end
-
 function BP_DeliveryInteractiveComponent_C:NotDisplayInteractiveBtn(PlayerActor)
   BP_InteractiveBaseComponent_C.NotDisplayInteractiveBtn(self, PlayerActor)
   if PlayerActor and PlayerActor.MechanismEid == self:GetOwner().Eid and not self:IsCanInteractive(PlayerActor) then

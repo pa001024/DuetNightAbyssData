@@ -1,3 +1,4 @@
+local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
 local M = {}
 M.AppearanceMainTabNames = {
   Char = "Char",
@@ -142,6 +143,22 @@ function M.UpdateWeaponListReddot(Contents)
   for _, Content in ipairs(Contents) do
     M.UpdateSingleWeaponReddot(Content)
   end
+end
+
+function M.IsWeaponHasAnyStanceFX(WeaponId)
+  local WeaponStanceFXTag2ModId = ArmoryUtils:GetWeaponStanceFXTag2ModId(WeaponId)
+  if not WeaponStanceFXTag2ModId then
+    return false
+  end
+  local Avatar = GWorld:GetAvatar()
+  local HasStanceFX = false
+  for AccessoryId, Data in pairs(DataMgr.WeaponAccessory) do
+    if Data.StanceFXType and Data.StanceFXType ~= CommonConst.WeaponAccessoryTypes.Accessory and Data.StanceFXTag and WeaponStanceFXTag2ModId[tonumber(Data.StanceFXTag)] and (Avatar:IsWeaponAccessoryExist(AccessoryId) or UIUtils.ShouldDisplayItem(CommonConst.DataType.WeaponAccessory, AccessoryId)) then
+      HasStanceFX = true
+      break
+    end
+  end
+  return HasStanceFX
 end
 
 return M

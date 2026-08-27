@@ -305,10 +305,6 @@ return ReadOnly("DanmakuTemplate", {
     Type = 851904,
     Vars = {BPTime = 6, DanmakuRoot = 4}
   },
-  [852001] = {
-    BPPath = "/Game/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossAida_Skill1301.BP_Danmaku_BossAida_Skill1301",
-    Type = 852001
-  },
   [600000401] = {
     AttachToOwner = true,
     BPPath = "/Game/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_RandomAround.BP_Danmaku_RandomAround",

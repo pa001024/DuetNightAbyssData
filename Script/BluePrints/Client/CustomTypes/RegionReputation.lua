@@ -25,7 +25,8 @@ RegionReputation.__Props__ = {
   LastRefreshTime1 = prop.prop("Int", "client save", 0),
   LastRefreshTime2 = prop.prop("Int", "client save", 0),
   EntrustQuestRemainRefreshTimes = prop.prop("Int", "client save", 0),
-  WeekLimit = prop.getter("Data", "WeekLimit")
+  WeekLimit = prop.getter("Data", "WeekLimit"),
+  ExperienceQuestRewardRecord = prop.prop("Int2IntDict", "client save", {})
 }
 
 function RegionReputation:Init(ReputationId)

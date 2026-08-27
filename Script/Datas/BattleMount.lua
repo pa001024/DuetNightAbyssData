@@ -255,6 +255,15 @@ return ReadOnly("BattleMount", {
     MountDieSlotName = "MountDie09",
     MountId = 1014,
     MountLayerTag = 8,
+    MountPermanentVX = {
+      10067,
+      10068,
+      10069,
+      10070,
+      10071,
+      10072,
+      10073
+    },
     MountPrefix = "Mnt09"
   }
 })

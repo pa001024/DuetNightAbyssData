@@ -6,7 +6,7 @@ function M:CommonInitInfo(Info)
   M.Super.CommonInitInfo(self, Info)
   if not self.BpBorn then
     self.Rate = self.UnitParams.Rate
-    self.Duration = self.UnitParams.Duration
+    self.BuffLayer = self.UnitParams.BuffLayer
   end
 end
 
@@ -19,13 +19,10 @@ function M:OnBoxBeginOverlap(OverlappedComponent, OtherActor, OtherComp, OtherBo
   if not (OtherActor and OtherActor.IsPlayer) or not OtherActor:IsPlayer() then
     return
   end
-  if OtherActor.SlideMovingRate ~= nil then
-    OtherActor.SlideMovingRate = OtherActor.SlideMovingRate * (self.Rate + 1)
+  if IsAuthority(self) and OtherActor:AddSlideAccelerationBuff(self.Rate, self.BuffLayer) then
     self:OnTrigger(OtherActor)
-    OtherActor:AddTimer(self.Duration, function()
-      OtherActor.SlideMovingRate = 1
-    end, false, 0, "SlideAccDurationEnd")
   end
+  AudioManager(self):PlayFMODSound(self, nil, "event:/sfx/common/player/buff/huaxu_speed_up")
 end
 
 function M:ReceiveEndPlay(Reason)

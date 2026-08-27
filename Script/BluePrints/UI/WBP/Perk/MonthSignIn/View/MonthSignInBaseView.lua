@@ -358,11 +358,11 @@ function M:OnBuyBtnClickedForbid()
 end
 
 function M:OnSwitchBtnClicked()
-  AudioManager(self):PlayUISound(self, "event:/ui/activity/confirm_click", nil, nil)
   DebugPrint("Yihan@ OnSwitchBtnClicked: ", self.NowCard)
   if self.IsInSwitching then
     return
   end
+  AudioManager(self):PlayUISound(self, "event:/ui/activity/confirm_click", nil, nil)
   self.IsInSwitching = true
   if 1 == self.NowCard then
     self:PlayAnimation(self.Card02_In)

@@ -20,9 +20,16 @@ function Guide_Touch:GuideUIInit_Bubble(UIKey, MessageId, Time, DelayTime, Actio
 end
 
 function Guide_Touch:Init(MessageId, LastTime, DelayTime, Actions, IsForceClick, IsControlPlayer, IsTimePause, IsTimeDilation, IsShowCursor, HighLightUIPath, UICompName, UIShape, IsAdapted, UICompSizeOffset, UICompLocOffset, MessageParentLoc, MessageLoc, MessageLocOffset, IsResetPlayer, IsForbidInAnim, IsForbidOutAnim, GamePadWidgetName, IsAutoClick, IsAutoClickByGamepad, IsFindByMainUI, IsByToastButton)
+  self.MessageId = MessageId
+  self.HighLightUIPath = HighLightUIPath or ""
+  self.UICompName = UICompName or ""
+  self.GamePadWidgetName = GamePadWidgetName or ""
+  self.LocateFailure = nil
+  self.HasReportedLocateFailure = false
   local Message = DataMgr.Message[MessageId]
   if not Message then
-    UEPrint("Message Id Wrong")
+    self:RecordLocateFailure("消息配置表中找不到MessageId【" .. tostring(MessageId) .. "】。", "请检查STL节点填写的MessageId是否正确。")
+    self:ReportLocateFailure()
     return
   end
   local TextMapIndex = CommonUtils.ChooseOptionByPlatform(Message.MessageContentPC, Message.MessageContentPhone)
@@ -31,11 +38,9 @@ function Guide_Touch:Init(MessageId, LastTime, DelayTime, Actions, IsForceClick,
   self.IsAutoClick = IsAutoClick
   self.IsAutoClickByGamepad = IsAutoClickByGamepad
   self.IsFindByMainUI = IsFindByMainUI
-  self.HighLightUIPath = HighLightUIPath
-  self.UICompName = UICompName
-  self.GamePadWidgetName = GamePadWidgetName
-  if not self.UICompName and not self.HighLightUIPath then
-    UEPrint("Require UIPath!")
+  if self.HighLightUIPath == "" then
+    self:RecordLocateFailure("STL节点没有填写高亮UI路径。", "请检查节点的HighLightUIPath配置，路径第一段应为需要打开的界面名称。")
+    self:ReportLocateFailure()
     return
   end
   self:InitListenEvent()
@@ -46,7 +51,6 @@ function Guide_Touch:Init(MessageId, LastTime, DelayTime, Actions, IsForceClick,
   self.bIsFocusable = true
   self.IsForbidInAnim = IsForbidInAnim
   self.IsForbidOutAnim = IsForbidOutAnim
-  self.MessageId = MessageId
   self.UIComp = nil
   self.UICompPairs = TArray(UE4.UWidget)
   self.GuaranteeTime = 0
@@ -169,7 +173,9 @@ function Guide_Touch:SetSelfAppearance()
       self:AddTimer(0.3, self.SetSelfAppearance)
       self.GuaranteeTime = self.GuaranteeTime + 0.3
     else
-      DebugPrint("ERROR:GuideTouch path is not valid:" .. self.HighLightUIPath .. "." .. self.UICompName .. " -> " .. "Cant Find in 3s")
+      if not self.LocateFailure then
+        self:RecordLocateFailure("等待3秒后仍无法确定具体的控件定位失败原因。", "请检查测试流程是否已进入正确界面，以及STL节点中的控件路径配置。")
+      end
       self:ErrorExit()
     end
     return
@@ -314,7 +320,8 @@ end
 
 function Guide_Touch:SetWidgetParent(Widget, CildWidget, ChildWidgetName)
   if nil == CildWidget then
-    self:ErrorAndFinish(self.HighLightUIPath .. "." .. self.UICompName .. " -> " .. ChildWidgetName)
+    local ParentWidgetName = Widget and Widget:GetName() or "未知父控件"
+    self:RecordLocateFailure("已找到父控件【" .. tostring(ParentWidgetName) .. "】，但下面没有子控件【" .. tostring(ChildWidgetName) .. "】。", "请检查控件名、当前页签或子界面是否正确，并确认蓝图控件已开放为变量。")
     return false
   end
   Widget = CildWidget
@@ -340,13 +347,10 @@ function Guide_Touch:GetUIComp()
     self.UIComp = "PlayerVirtualJoysticks"
     return true
   end
-  local path = self.HighLightUIPath
-  if self.UICompName and self.UICompName ~= "" then
-    path = path .. "." .. self.UICompName
-  end
+  local path = self:GetConfiguredWidgetPath()
   local Parents = self:GetPathFromString(path)
-  if not Parents then
-    self:ErrorAndFinish(path)
+  if not (Parents and 0 ~= #Parents and Parents[1]) or "" == Parents[1] then
+    self:RecordLocateFailure("控件路径为空或无法解析。", "请检查STL节点的HighLightUIPath和UICompName配置。")
     return false
   end
   local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
@@ -354,11 +358,11 @@ function Guide_Touch:GetUIComp()
   local Widget = UIManger:GetUIObj(Parents[1])
   self.WidgetUIRoot = Widget
   if nil == Widget then
-    self:ErrorAndFinish(path)
+    self:RecordLocateFailure("目标界面【" .. tostring(Parents[1]) .. "】当前没有打开。", "请确认测试流程已经进入该界面，或检查控件路径第一段是否填写正确。")
     return false
   end
   if Widget:IsHide() then
-    self:ErrorAndFinish(path .. " => UI Is Hide")
+    self:RecordLocateFailure("目标界面【" .. tostring(Parents[1]) .. "】已经打开，但当前处于隐藏状态。", "请确认测试流程停留在正确页面，并检查是否有弹窗或界面切换导致其隐藏。")
     return false
   end
   self:SetWidgetParent(Widget, Widget, Parents[1])
@@ -368,7 +372,6 @@ function Guide_Touch:GetUIComp()
       local IsListView = false
       Widget = self:SetWidgetParent(Widget, Widget[Names[1]], Names[1])
       if nil == Widget or false == Widget then
-        self:ErrorAndFinish(path)
         return false
       end
       if Widget:Cast(UE4.UPanelWidget) then
@@ -376,7 +379,7 @@ function Guide_Touch:GetUIComp()
       elseif Widget:Cast(UE4.UListView) then
         IsListView = true
       else
-        self:ErrorAndFinish(path)
+        self:RecordLocateFailure("路径段【" .. tostring(Parents[i]) .. "】要求按序号查找，但控件【" .. tostring(Names[1]) .. "】不是列表或容器。", "请检查冒号和序号配置，或改为直接填写子控件名称。")
         return false
       end
       for j = 2, #Names do
@@ -384,6 +387,10 @@ function Guide_Touch:GetUIComp()
         if IsListView then
           if nil == tonumber(Names[j]) then
             Index = self:GetIndexByListItemName(Widget, Names[j])
+            if Index < 0 then
+              self:RecordLocateFailure("列表【" .. tostring(Widget:GetName()) .. "】中找不到名称匹配【" .. tostring(Names[j]) .. "】的列表项。", "请检查列表项名称和当前测试数据是否正确。")
+              return false
+            end
           else
             local Number = tonumber(Names[j])
             if Number > 0 then
@@ -396,27 +403,40 @@ function Guide_Touch:GetUIComp()
               self:DisableMapBtn()
               local BtnId = tonumber(Names[j])
               Index = self:GetIndexByBtnId(Widget, BtnId)
+              if Index < 0 then
+                self:RecordLocateFailure("列表【" .. tostring(Widget:GetName()) .. "】中找不到BtnId为【" .. tostring(BtnId) .. "】的入口。", "请检查入口配置是否存在、是否解锁，以及测试流程中的列表数据是否正确。")
+                return false
+              end
             elseif Index >= Widget:GetNumItems() or Index < 0 then
-              self:ErrorAndFinish(path)
+              self:RecordLocateFailure("列表【" .. tostring(Widget:GetName()) .. "】当前有【" .. tostring(Widget:GetNumItems()) .. "】项，配置要求的序号【" .. tostring(Names[j]) .. "】超出范围。", "请检查列表数据和STL节点序号；正数从1开始，负数从末尾开始，不能填写0。")
+              return false
             end
           end
           local Entry = UE4.URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(Widget, Index)
           if nil == Entry and Index >= 0 and Index < Widget:GetNumItems() and Widget:Cast(UE4.UEMListView) then
             local Item = Widget:GetItemAt(Index)
             if Item then
+              self:RecordLocateFailure("列表【" .. tostring(Widget:GetName()) .. "】的目标项存在，但控件尚未生成或尚未滚动到可见区域。", "请检查列表是否已完成刷新，以及测试流程是否为界面加载预留了足够时间。")
               DebugPrint("guidetouch EMListView ScrollItemIntoView Index:", Index, Widget:GetName())
               Widget:ScrollItemIntoViewWithAnim(Item, false, UE4.EDescendantScrollDestination.IntoView)
               return false
             end
           end
+          if nil == Entry then
+            self:RecordLocateFailure("列表【" .. tostring(Widget:GetName()) .. "】中序号为【" .. tostring(Names[j]) .. "】的控件尚未生成。", "请检查列表是否已完成刷新，以及目标项是否处于当前可显示范围。")
+            return false
+          end
           Widget = self:SetWidgetParent(Widget, Entry, Names[1] .. ":" .. Index)
           if nil == Widget or false == Widget then
-            self:ErrorAndFinish(path)
             return false
           end
         else
           if nil == tonumber(Names[j]) then
             Index = self:GetIndexByWidgetName(Widget, Names[j])
+            if Index < 0 then
+              self:RecordLocateFailure("容器【" .. tostring(Widget:GetName()) .. "】中找不到名称匹配【" .. tostring(Names[j]) .. "】的子控件。", "请检查子控件名称、当前页签和界面状态。")
+              return false
+            end
           else
             local Number = tonumber(Names[j])
             if Number > 0 then
@@ -425,7 +445,8 @@ function Guide_Touch:GetUIComp()
               Index = Widget:GetChildrenCount() + Number
             end
             if (Index >= Widget:GetChildrenCount() or Index < 0) and not Widget:Cast(UE4.UEMMenuAnchor) then
-              self:ErrorAndFinish(path)
+              self:RecordLocateFailure("容器【" .. tostring(Widget:GetName()) .. "】当前有【" .. tostring(Widget:GetChildrenCount()) .. "】个子控件，配置要求的序号【" .. tostring(Names[j]) .. "】超出范围。", "请检查当前界面内容和STL节点序号；正数从1开始，负数从末尾开始，不能填写0。")
+              return false
             end
           end
           if self.IsFindByMainUI and "Panel_Function" == Names[1] then
@@ -439,24 +460,28 @@ function Guide_Touch:GetUIComp()
             if Child then
               local FunctionScrollBox = self.WidgetUIRoot and self.WidgetUIRoot.ScrollBox_Function
               if FunctionScrollBox and not self:IsWidgetInsideScrollView(FunctionScrollBox, Child) then
+                self:RecordLocateFailure("主界面入口ID【" .. tostring(Names[2]) .. "】已经找到，但尚未滚动到可见区域。", "请检查主界面入口列表是否已完成刷新，以及测试流程是否为界面加载预留了足够时间。")
                 DebugPrint("guidetouch MainUI ScrollWidgetIntoView EnterId:", Names[2], Child:GetName())
                 FunctionScrollBox:ScrollWidgetIntoView(Child, false, UE4.EDescendantScrollDestination.IntoView)
                 return false
               end
               Widget = self:SetWidgetParent(Widget, Child, Child:GetName())
             else
+              self:RecordLocateFailure("主界面功能列表中找不到入口ID【" .. tostring(Names[2]) .. "】。", "请检查入口配置是否存在、是否解锁，以及当前测试账号是否满足显示条件。")
               return false
             end
           elseif Widget:Cast(UE4.UEMMenuAnchor) then
             local LastWidget = self.UICompPairs[i + 1]
-            if LastWidget.CommonItemDetails then
+            if LastWidget and LastWidget.CommonItemDetails then
               Widget = self:SetWidgetParent(Widget, LastWidget.CommonItemDetails, Names[1] .. ":" .. Index)
+            else
+              self:RecordLocateFailure("战术背包详情控件【CommonItemDetails】当前不存在。", "请确认测试流程已经展开目标道具详情，并检查对应控件是否开放为变量。")
+              return false
             end
           else
             Widget = self:SetWidgetParent(Widget, Widget:GetChildAt(Index), Names[1] .. ":" .. Index)
           end
           if nil == Widget or false == Widget then
-            self:ErrorAndFinish(path)
             return false
           end
         end
@@ -466,7 +491,7 @@ function Guide_Touch:GetUIComp()
           elseif Widget:Cast(UE4.UListView) then
             IsListView = true
           else
-            self:ErrorAndFinish(path)
+            self:RecordLocateFailure("已经找到控件【" .. tostring(Widget:GetName()) .. "】，但它不是列表或容器，无法继续查找路径后续内容。", "请检查路径中的冒号层级是否填写正确。")
             return false
           end
         end
@@ -474,24 +499,19 @@ function Guide_Touch:GetUIComp()
     else
       Widget = self:SetWidgetParent(Widget, Widget[Parents[i]], Parents[i])
       if nil == Widget or false == Widget then
-        self:ErrorAndFinish(path)
         return false
       end
-    end
-    if nil == Widget or false == Widget then
-      self:ErrorAndFinish(path)
-      return false
     end
   end
   self.UIComp = Widget
   local geometry = self.UIComp:GetTickSpaceGeometry()
   local size = UE4.USlateBlueprintLibrary.GetAbsoluteSize(geometry)
   if 0 == size.X or 0 == size.Y then
-    DebugPrint("ERROR:GuideTouch path is not valid:" .. self.HighLightUIPath .. "." .. self.UICompName .. " -> " .. "Widget Size Is Zero")
+    self:RecordLocateFailure("控件【" .. tostring(self.UIComp:GetName()) .. "】已经找到，但显示宽高仍为0。", "请检查控件及其父级是否已显示、布局是否完成，以及测试流程是否停留在正确页签。")
     return false
   end
   if self:IsUICompHide() then
-    self:ErrorAndFinish(path .. " => UIComp Is Hide")
+    self:RecordLocateFailure("控件【" .. tostring(self.UIComp:GetName()) .. "】已经找到，但它自身或某级父控件处于隐藏状态。", "请检查当前页签、折叠面板和界面切换状态。")
     return false
   end
   return true
@@ -546,12 +566,48 @@ function Guide_Touch:GetIndexByListItemName(ListView, WidgetName)
   return -1
 end
 
-function Guide_Touch:ErrorAndFinish(path)
-  DebugPrint("ERROR:GuideTouch path is not valid:" .. path)
+function Guide_Touch:GetConfiguredWidgetPath()
+  local HighLightUIPath = self.HighLightUIPath or ""
+  local UICompName = self.UICompName or ""
+  if "" ~= HighLightUIPath and "" ~= UICompName then
+    return HighLightUIPath .. "." .. UICompName
+  end
+  if "" ~= HighLightUIPath then
+    return HighLightUIPath
+  end
+  return UICompName
+end
+
+function Guide_Touch:RecordLocateFailure(Reason, Suggestion)
+  self.LocateFailure = {
+    Reason = Reason,
+    Suggestion = Suggestion,
+    Path = self:GetConfiguredWidgetPath()
+  }
+end
+
+function Guide_Touch:ReportLocateFailure()
+  if self.HasReportedLocateFailure then
+    return
+  end
+  self.HasReportedLocateFailure = true
+  local LocateFailure = self.LocateFailure or {}
+  local GuideContext
+  if SystemGuideManager and SystemGuideManager.GetRunningGuideDiagnosticContext then
+    GuideContext = SystemGuideManager:GetRunningGuideDiagnosticContext()
+  end
+  local GuideIdText = GuideContext and tostring(GuideContext.GuideId) or "非系统引导或无法识别"
+  local StorylineText = GuideContext and GuideContext.GuideStoryline or "未配置或无法识别"
+  local ConfiguredPath = LocateFailure.Path or self:GetConfiguredWidgetPath()
+  if "" == ConfiguredPath then
+    ConfiguredPath = "未填写"
+  end
+  local Message = "【引导终止】无法定位需要高亮或点击的控件" .. "\n原因：" .. tostring(LocateFailure.Reason or "未记录具体原因。") .. "\n检查建议：" .. tostring(LocateFailure.Suggestion or "请检查测试流程和STL节点配置。") .. "\n系统引导ID：" .. GuideIdText .. "\nSTL文件：" .. tostring(StorylineText) .. "\nMessageId：" .. tostring(self.MessageId or "未配置") .. "\n配置路径：" .. tostring(ConfiguredPath)
+  ScreenPrint(Message)
 end
 
 function Guide_Touch:ErrorExit()
-  DebugPrint("ERROR:GuideTouch path is not valid:" .. "ErrorExit")
+  self:ReportLocateFailure()
   self:RemoveTimer("GuideTouchRefreshPos")
   self:ChangePlayerInputable(true, true)
   if self.IsFromStl then

@@ -41,6 +41,7 @@ function BP_Cannon_C:SingleAttack(RoundNum)
   if self.RoundHandle[RoundNum].Num <= 0 then
     self:RemoveTimer(self.RoundHandle[RoundNum].Handle)
     self.RoundHandle[RoundNum].Handle = nil
+    self:OnRoundAttackEnd(RoundNum)
   end
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   self:PropUseSkill(self.SkillSavePos, Player)

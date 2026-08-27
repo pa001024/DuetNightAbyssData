@@ -32,7 +32,9 @@ function BossBattleFinishNode:Clear()
     DebugPrint("BossBattleFinishNode: Clear")
     local GameInstance = GWorld.GameInstance
     local GameMode = UE4.UGameplayStatics.GetGameMode(GameInstance)
-    GameMode.OnCustomEventDelegates:Remove(GameInstance, self.BossBattleCallback)
+    if GameMode then
+      GameMode.OnCustomEventDelegates:Remove(GameInstance, self.BossBattleCallback)
+    end
     self.BossBattleCallback = nil
   end
 end

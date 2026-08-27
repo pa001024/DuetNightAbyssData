@@ -16,7 +16,7 @@
   },
   {
     "type": "GACHA_SKIN_TYPE_SPECIAL_3",
-    "name": "活动限定",
+    "name": "限时复刻",
     "subTabId": 1401
   },
   {
@@ -31,6 +31,11 @@
   },
   {
     "type": "GACHA_SKIN_TYPE_SPECIAL_6",
+    "name": "活动限定",
+    "subTabId": 1401
+  },
+  {
+    "type": "GACHA_SKIN_TYPE_SPECIAL_7",
     "name": "活动限定",
     "subTabId": 1401
   }

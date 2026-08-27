@@ -81,6 +81,7 @@ function M:RefreshPageStaticView(ActivityConfigData, PageConfigData, InfoClickFu
   GrandPrizeData.NeedPoint = NeedPoints[#NeedPoints]
   GrandPrizeData.LastRewardTypeId = PageConfigData.LastRewardTypeId
   GrandPrizeData.LastRewardId = PageConfigData.LastRewardId
+  GrandPrizeData.LastRewardIcon = PageConfigData.LastRewardIcon
   GrandPrizeData.ParentWidget = self
   self.GrandPrize:FillWithData(GrandPrizeData)
   local BtnQaConfigData = {}

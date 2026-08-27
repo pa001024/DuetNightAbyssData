@@ -199,24 +199,24 @@ function TalkComp_PauseGame_C:Resume()
   end
 end
 
-local TalkComp_HideAllBattleEntity_C = CreateTalkComp()
+local TalkComp_HidePickup_C = CreateTalkComp()
 
-function TalkComp_HideAllBattleEntity_C.New(TalkContext)
-  local Obj = setmetatable({}, {__index = TalkComp_HideAllBattleEntity_C})
+function TalkComp_HidePickup_C.New(TalkContext)
+  local Obj = setmetatable({}, {__index = TalkComp_HidePickup_C})
   Obj.TalkContext = TalkContext
   return Obj
 end
 
-function TalkComp_HideAllBattleEntity_C:GetType()
-  return ETalkCompType.HideAllBattleEntity
+function TalkComp_HidePickup_C:GetType()
+  return ETalkCompType.HidePickup
 end
 
-function TalkComp_HideAllBattleEntity_C:Execute()
-  self.TalkContext:SetAllBattleEntityHidden(true)
+function TalkComp_HidePickup_C:Execute()
+  self.TalkContext:SetPickupHidden(true)
 end
 
-function TalkComp_HideAllBattleEntity_C:Resume()
-  self.TalkContext:SetAllBattleEntityHidden(false)
+function TalkComp_HidePickup_C:Resume()
+  self.TalkContext:SetPickupHidden(false)
 end
 
 local TalkComp_DisableInteractiveTrigger_C = CreateTalkComp()
@@ -318,7 +318,7 @@ return {
   TalkComp_PopMouse_C = TalkComp_PopMouse_C,
   TalkComp_StopPlayerAction_C = TalkComp_StopPlayerAction_C,
   TalkComp_PauseGame_C = TalkComp_PauseGame_C,
-  TalkComp_HideAllBattleEntity_C = TalkComp_HideAllBattleEntity_C,
+  TalkComp_HidePickup_C = TalkComp_HidePickup_C,
   TalkComp_DisableInteractiveTrigger_C = TalkComp_DisableInteractiveTrigger_C,
   TalkComp_HideElseCharacter_C = TalkComp_HideElseCharacter_C,
   TalkComp_SoundEffect_C = TalkComp_SoundEffect_C,

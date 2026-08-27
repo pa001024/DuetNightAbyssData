@@ -14,5 +14,10 @@ return ReadOnly("QTEPosition", {
     OffsetX = 350,
     OffsetY = 200,
     PositionId = 2
+  },
+  [3] = {
+    OffsetX = 350,
+    OffsetY = 100,
+    PositionId = 3
   }
 })

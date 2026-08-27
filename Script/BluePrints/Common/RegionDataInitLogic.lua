@@ -1,5 +1,6 @@
 require("UnLua")
 require("Const")
+local EMLuaConst = require("EMLuaConst")
 local M = Class()
 
 function M:SyncFullRegionStoreDataFromServer(FullRegionStoreData)
@@ -143,6 +144,9 @@ function M:InitSSDataFromDungeonServer(RegionBaseData)
       RealData = self.DataPool:GetRegionEntityDataNoCopy(LuaIndex)
       if RealData then
         RealData.ServerUniqueId = RegionBaseData.ServerUniqueId
+        if EMLuaConst.bEnableCreateUnitContextCache then
+          self:BuildAndCacheCreateUnitContext(LuaIndex)
+        end
       end
     else
       GWorld.logger.error("副本区域数据初始化没有找到StaticCreator!! 已跳过：" .. RegionBaseData.CreatorId)
@@ -168,6 +172,9 @@ function M:InitSSDataFromDungeonServer(RegionBaseData)
     RealData = self.DataPool:GetRegionEntityDataNoCopy(LuaIndex)
     if RealData then
       RealData.ServerUniqueId = RegionBaseData.ServerUniqueId
+      if EMLuaConst.bEnableCreateUnitContextCache then
+        self:BuildAndCacheCreateUnitContext(LuaIndex)
+      end
     end
   end
   if RealData then
@@ -215,6 +222,9 @@ function M:InitSSDataFromServer_StaticCreator_Lua(LuaTableIndex, CreatorId)
   self.LastState = nil
   self.LastBornLocation = nil
   self.DataPool:GetRegionEntityDataNoCopy(LuaTableIndex)
+  if EMLuaConst.bEnableCreateUnitContextCache then
+    self:BuildAndCacheCreateUnitContext(LuaTableIndex)
+  end
 end
 
 function M:InitSSDataFromServer_RandomCreator_Lua(LuaTableIndex, RandomCreatorId, RandomRuleId, RandomTableId, RandomIdxInRule, LevelName)
@@ -232,6 +242,9 @@ function M:InitSSDataFromServer_RandomCreator_Lua(LuaTableIndex, RandomCreatorId
   self.LastState = nil
   self.LastBornLocation = nil
   self.DataPool:GetRegionEntityDataNoCopy(LuaTableIndex)
+  if EMLuaConst.bEnableCreateUnitContextCache then
+    self:BuildAndCacheCreateUnitContext(LuaTableIndex)
+  end
 end
 
 function M:InitSSDataFromServer_Raw_Lua(LuaTableIndex, UnitType, UnitId, Location, Rotation, RegionDataType)
@@ -247,6 +260,9 @@ function M:InitSSDataFromServer_Raw_Lua(LuaTableIndex, UnitType, UnitId, Locatio
   self.LastState = nil
   self.LastBornLocation = nil
   self.DataPool:GetRegionEntityDataNoCopy(LuaTableIndex)
+  if EMLuaConst.bEnableCreateUnitContextCache then
+    self:BuildAndCacheCreateUnitContext(LuaTableIndex)
+  end
 end
 
 function M:CheckQuestLocked(RegionBaseData)

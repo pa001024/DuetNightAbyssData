@@ -197,6 +197,9 @@ function M:ClearInvitation()
   EventManager:RemoveEvent(EventID.InLoading, self)
   EventManager:RemoveEvent(EventID.OnNetDisconnect, self)
   local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
   Avatar:ExitSojourns(CharacterId, TopicLevel, function(bSuccess, Ret)
     if not bSuccess then
       UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, InviteLogType, "邀约结束服务器返回失败", string.format("邀约服务器返回失败 邀约ID: %d 邀约等级: %d 错误码 %d", CharacterId or -1, TopicLevel or -1, Ret))

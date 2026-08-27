@@ -78,6 +78,10 @@ function M:Open(MsgWrap, bSound)
   if AutoChessContent then
     Content = AutoChessContent
   end
+  local TeamInfoContent = ChatController:ParseTeamInfoText(MsgWrap)
+  if nil ~= TeamInfoContent then
+    Content = TeamInfoContent
+  end
   local RawContent = ChannelName .. RawSpacker .. Content
   local RawContentTable = StringUtils.Utf8ToTable(RawContent)
   local HalfLength = #RawContentTable

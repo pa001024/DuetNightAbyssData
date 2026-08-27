@@ -51,7 +51,7 @@ return ReadOnly("ErrorCode", {
     ContentJP = "該当するUIDのプレイヤーが見つからない、またはオフラインになっています",
     ContentKR = "유저가 오프라인이거나 존재하지 않습니다.",
     ContentTC = "UID不線上或不存在",
-    ErrorCodeContent = "UID不在线或不存在",
+    ErrorCodeContent = "玩家不在线或不存在",
     ErrorCodeId = 4
   },
   [5] = {
@@ -839,6 +839,51 @@ return ReadOnly("ErrorCode", {
     ContentTC = "角色已解鎖",
     ErrorCodeContent = "角色已解锁",
     ErrorCodeId = 2035
+  },
+  [2057] = {
+    ContentEN = "No more Additional Weapon Proficiencies can be activated",
+    ContentFR = "Nombre maximal d’armes de prédilection supplémentaires actives atteint",
+    ContentJP = "現在有効な追加熟練武器が上限を超えています",
+    ContentKR = "현재 활성화된 추가 마스터리 무기 최대치를 초과하였습니다.",
+    ContentTC = "當前激活的額外精通武器超過上限",
+    ErrorCodeContent = "当前激活的额外精通武器超过上限",
+    ErrorCodeId = 2057
+  },
+  [2058] = {
+    ContentEN = "This Additional Weapon Proficiency has not been unlocked",
+    ContentFR = "Cette arme de prédilection supplémentaire n’est pas débloquée",
+    ContentJP = "現在の追加熟練武器は未解放です",
+    ContentKR = "현재 추가 마스터리 무기가 해제되지 않았습니다.",
+    ContentTC = "當前額外精通武器未解鎖",
+    ErrorCodeContent = "当前额外精通武器未解锁",
+    ErrorCodeId = 2058
+  },
+  [2059] = {
+    ContentEN = "This Additional Weapon Proficiency does not exist",
+    ContentFR = "Cette arme de prédilection supplémentaire n’existe pas",
+    ContentJP = "現在の追加熟練武器が存在しません",
+    ContentKR = "현재 추가 마스터리 무기가 존재하지 않습니다.",
+    ContentTC = "當前額外精通武器不存在",
+    ErrorCodeContent = "当前额外精通武器不存在",
+    ErrorCodeId = 2059
+  },
+  [2060] = {
+    ContentEN = "Not enough resources to unlock this Additional Weapon Proficiency",
+    ContentFR = "Ressources insuffisantes pour le déblocage",
+    ContentJP = "現在の追加熟練武器を解放するための素材が不足しています",
+    ContentKR = "현재 추가 마스터리 무기 해제에 필요한 자원이 부족합니다.",
+    ContentTC = "解鎖當前額外精通武器所需資源不足",
+    ErrorCodeContent = "解锁当前额外精通武器所需资源不足",
+    ErrorCodeId = 2060
+  },
+  [2061] = {
+    ContentEN = "This Additional Weapon Proficiency is already unlocked",
+    ContentFR = "Cette arme de prédilection supplémentaire est déjà débloquée",
+    ContentJP = "現在の追加熟練武器はすでに解放済みです",
+    ContentKR = "현재 추가 마스터리 무기가 이미 해제되었습니다.",
+    ContentTC = "當前額外精通武器已解鎖",
+    ErrorCodeContent = "当前额外精通武器已解锁",
+    ErrorCodeId = 2061
   },
   [3001] = {
     ContentEN = "The weapon does not exist",
@@ -7790,6 +7835,51 @@ return ReadOnly("ErrorCode", {
     ErrorCodeContent = "当前无法投票",
     ErrorCodeId = 37019
   },
+  [37020] = {
+    ContentEN = "You are not the team leader",
+    ContentFR = "Vous n’êtes pas le chef d’équipe",
+    ContentJP = "チームリーダーではありません",
+    ContentKR = "파티장이 아닙니다.",
+    ContentTC = "不是隊長",
+    ErrorCodeContent = "不是队长",
+    ErrorCodeId = 37020
+  },
+  [37021] = {
+    ContentEN = "You have already applied to join this team",
+    ContentFR = "Demande déjà envoyée",
+    ContentJP = "すでに参加申請済みです",
+    ContentKR = "파티 가입을 이미 신청했습니다.",
+    ContentTC = "已申請過入隊",
+    ErrorCodeContent = "已申请过入队",
+    ErrorCodeId = 37021
+  },
+  [37022] = {
+    ContentEN = "Too many pending join requests",
+    ContentFR = "Nombre maximum de demandes atteint",
+    ContentJP = "参加申請リストが上限に達しています",
+    ContentKR = "가입 신청 대기열이 가득 찼습니다.",
+    ContentTC = "入隊申請列表已滿",
+    ErrorCodeContent = "入队申请列表已满",
+    ErrorCodeId = 37022
+  },
+  [37023] = {
+    ContentEN = "Join requests cannot be approved all at once",
+    ContentFR = "Impossible d’accepter plusieurs demandes à la fois",
+    ContentJP = "参加申請を一括承認できません",
+    ContentKR = "파티 가입 신청은 일괄 수락할 수 없습니다.",
+    ContentTC = "不可批量同意入隊申請",
+    ErrorCodeContent = "不可批量同意入队申请",
+    ErrorCodeId = 37023
+  },
+  [37024] = {
+    ContentEN = "Player not found among pending join requests",
+    ContentFR = "Ce joueur ne figure pas parmi les demandes reçues",
+    ContentJP = "プレイヤーは参加申請リストに存在しません",
+    ContentKR = "플레이어가 파티 가입 신청 리스트에 없습니다.",
+    ContentTC = "玩家不在入隊申請列表中",
+    ErrorCodeContent = "玩家不在入队申请列表中",
+    ErrorCodeId = 37024
+  },
   [38001] = {
     ContentEN = "Failed to trigger special monster spawn in this region",
     ContentES = "Error al activar la aparición de monstruos especiales en esta zona",
@@ -12814,6 +12904,105 @@ return ReadOnly("ErrorCode", {
     ContentTC = "本日回饋已領取",
     ErrorCodeContent = "本日回馈已领取",
     ErrorCodeId = 110009
+  },
+  [120001] = {
+    ContentEN = "Co-op lobby not found",
+    ContentFR = "Le salon multijoueur n’existe pas",
+    ContentJP = "マッチングロビーが存在しません",
+    ContentKR = "멀티 로비가 존재하지 않습니다.",
+    ContentTC = "聯機大廳不存在",
+    ErrorCodeContent = "联机大厅不存在",
+    ErrorCodeId = 120001
+  },
+  [120002] = {
+    ContentEN = "Recruitment is on cooldown",
+    ContentFR = "Veuillez patienter avant de publier une nouvelle annonce",
+    ContentJP = "募集の投稿はクールダウン中です",
+    ContentKR = "모집 게시 쿨타임 중입니다.",
+    ContentTC = "發布招募冷卻中",
+    ErrorCodeContent = "发布招募冷却中",
+    ErrorCodeId = 120002
+  },
+  [120003] = {
+    ContentEN = "Primary objective not found",
+    ContentFR = "L’objectif principal de l’équipe n’existe pas",
+    ContentJP = "チームのメイン目標が存在しません",
+    ContentKR = "파티 메인 목표가 존재하지 않습니다.",
+    ContentTC = "隊伍主目標不存在",
+    ErrorCodeContent = "队伍主目标不存在",
+    ErrorCodeId = 120003
+  },
+  [120004] = {
+    ContentEN = "Secondary objective not found",
+    ContentFR = "L’objectif secondaire de l’équipe n’existe pas",
+    ContentJP = "チームのサブ目標が存在しません",
+    ContentKR = "파티 서브 목표가 존재하지 않습니다.",
+    ContentTC = "隊伍子目標不存在",
+    ErrorCodeContent = "队伍子目标不存在",
+    ErrorCodeId = 120004
+  },
+  [120005] = {
+    ContentEN = "Invalid difficulty",
+    ContentFR = "La difficulté sélectionnée n’existe pas",
+    ContentJP = "チーム目標の難易度が存在しません",
+    ContentKR = "파티 목표 난이도가 존재하지 않습니다.",
+    ContentTC = "隊伍目標難度不存在",
+    ErrorCodeContent = "队伍目标难度不存在",
+    ErrorCodeId = 120005
+  },
+  [120006] = {
+    ContentEN = "Invalid recruitment tag",
+    ContentFR = "Le tag de recrutement n’existe pas",
+    ContentJP = "募集タグが存在しません",
+    ContentKR = "모집 태그가 존재하지 않습니다.",
+    ContentTC = "招募標籤不存在",
+    ErrorCodeContent = "招募标签不存在",
+    ErrorCodeId = 120006
+  },
+  [120007] = {
+    ContentEN = "Only the team leader can post a recruitment notice",
+    ContentFR = "Seul le chef d’équipe peut publier une annonce",
+    ContentJP = "募集を投稿できるのは隊長のみです",
+    ContentKR = "파티장만 게시할 수 있습니다.",
+    ContentTC = "僅隊長可發布招募",
+    ErrorCodeContent = "仅队长可发布招募",
+    ErrorCodeId = 120007
+  },
+  [120008] = {
+    ContentEN = "This recruitment notice has been cancelled",
+    ContentFR = "Ce recrutement a été annulé",
+    ContentJP = "この募集はキャンセルされました",
+    ContentKR = "해당 모집은 취소되었습니다.",
+    ContentTC = "該招募已取消",
+    ErrorCodeContent = "该招募已取消",
+    ErrorCodeId = 120008
+  },
+  [120009] = {
+    ContentEN = "Please wait before refreshing again",
+    ContentFR = "Actualisation trop fréquente",
+    ContentJP = "更新頻度が高すぎます",
+    ContentKR = "새로고침이 너무 빈번합니다.",
+    ContentTC = "刷新過於頻繁",
+    ErrorCodeContent = "刷新过于频繁",
+    ErrorCodeId = 120009
+  },
+  [120010] = {
+    ContentEN = "Invalid co-op lobby visibility setting",
+    ContentFR = "Visibilité du salon multijoueur invalide",
+    ContentJP = "マッチングロビーの公開設定が無効です",
+    ContentKR = "멀티 로비 가시성이 부적합합니다.",
+    ContentTC = "聯機大廳可見性不合法",
+    ErrorCodeContent = "联机大厅可见性不合法",
+    ErrorCodeId = 120010
+  },
+  [120011] = {
+    ContentEN = "This recruitment listing has expired",
+    ContentFR = "Cette annonce de recrutement n’est plus valide",
+    ContentJP = "募集情報の有効期限が切れました",
+    ContentKR = "모집 메시지가 만료되었습니다.",
+    ContentTC = "招募資訊已失效",
+    ErrorCodeContent = "招募信息已失效",
+    ErrorCodeId = 120011
   },
   [600003] = {
     ContentEN = "Demon Wedge loadout not found",

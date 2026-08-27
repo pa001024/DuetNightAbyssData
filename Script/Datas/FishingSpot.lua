@@ -695,6 +695,81 @@ return ReadOnly("FishingSpot", {
     ShowInFishMap = true,
     WaterType = 2
   },
+  [10700101] = {
+    ConditionId = 20021501,
+    ExtraReward = 301010,
+    ExtraRewardProb = 0.1,
+    FishCountLimit = 100,
+    FishId = {
+      [1] = 1101,
+      [2] = 1102,
+      [3] = 1103,
+      [4] = 3301,
+      [5] = 3302,
+      [6] = 3303,
+      [7] = 3304,
+      [8] = 3305
+    },
+    FishWeight = T.RT_2,
+    FishingSpotId = 10700101,
+    FishingSpotName = "FishingSpot_Name_10700101",
+    LimitDeviation = 0,
+    PetId = 4941,
+    PetProb = 0.5,
+    RegionPointId = 2856,
+    ReplenishDay = 24,
+    ShowFishId = {
+      3301,
+      3302,
+      3303,
+      3304,
+      3305
+    },
+    ShowInFishMap = true,
+    WaterType = 1
+  },
+  [10720101] = {
+    ConditionId = 20021501,
+    ExtraReward = 301011,
+    ExtraRewardProb = 0.1,
+    FishCountLimit = 100,
+    FishId = {
+      [1] = 1301,
+      [2] = 1302,
+      [3] = 1303,
+      [4] = 3401,
+      [5] = 3402,
+      [6] = 3403,
+      [7] = 3404,
+      [8] = 3405
+    },
+    FishWeight = {
+      [1] = 40,
+      [2] = 40,
+      [3] = 40,
+      [4] = 15,
+      [5] = 15,
+      [6] = 10,
+      [7] = 5,
+      [8] = 5
+    },
+    FishingSpotId = 10720101,
+    FishingSpotName = "FishingSpot_Name_10720101",
+    LimitDeviation = 0,
+    PetId = 4941,
+    PetProb = 0.5,
+    RegionPointId = 2857,
+    ReplenishDay = 24,
+    ShowFishId = {
+      3401,
+      3402,
+      3403,
+      3404,
+      3405
+    },
+    ShowInFishMap = true,
+    WaterType = 3
+  },
   [20021501] = {
     FishCountLimit = 3,
     FishId = {

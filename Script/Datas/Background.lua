@@ -26,5 +26,16 @@ return ReadOnly("Background", {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Menu_03.T_Icon_Menu_03'",
     Name = "UI_Background_Name_3",
     PersonalInfoWidget = "Texture2D'/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_03.T_Menu_03'"
+  },
+  [1004] = {
+    AccessText = "UI_LimitedPrizePool_Background16",
+    BackgroundId = 1004,
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_HeitaoSaiqi.T_Menu_HeitaoSaiqi'",
+    Des = "UI_Background_Des_1",
+    EscWidget = "Texture2D'/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_HeitaoSaiqi.T_Menu_HeitaoSaiqi'",
+    FriendWidget = "Texture2D'/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_HeitaoSaiqi.T_Menu_HeitaoSaiqi'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_HeitaoSaiqi.T_Head_HeitaoSaiqi'",
+    Name = "UI_Background_Name_4",
+    PersonalInfoWidget = "Texture2D'/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_HeitaoSaiqi.T_Menu_HeitaoSaiqi'"
   }
 })

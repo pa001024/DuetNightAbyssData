@@ -280,7 +280,7 @@ function M:OnTabSelected(TabWidget, TabItemInfo)
   if self.bInDungeonSettlement then
     Switch[ChatCommon.ChannelDef.SettlementOnline] = self.OnTabSelected_SettlementOnline
   end
-  self.MaxScrollOffset = 0
+  self.MaxScrollOffset = nil
   self.CanSelectChat = false
   self:SetFocusStateType(ChatFocusType.Default)
   Switch[self.CurrChannel](self, TabWidget, TabItemInfo)
@@ -342,7 +342,6 @@ function M:_AddReddotListenInner(ChannelName, ChannelType)
 end
 
 function M:ResetUI()
-  self:_Stop_SetUpChatMsgListTimer()
   self.CurrSelectPlayer = nil
   self.Group_NewMessage:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Group_BottomEmpty:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -379,37 +378,6 @@ function M:RefreshTeamMemberListInPC()
   end
   self.Text_PlayerNum:SetText(string.format("%d/%d", TeamNumber, TotalCount))
   return NowCount
-end
-
-function M:_SetUpChatMsgListTimerCallback(MsgList, Context)
-  if not self:_IsSetUpChatMsgListContextCurrent(Context) then
-    self:_Stop_SetUpChatMsgListTimer(Context and Context.Generation)
-    return
-  end
-  local Index = Context.Index or 0
-  if Index >= #MsgList then
-    local Generation = Context and Context.Generation
-    local Reconcile = self:_ReconcileChatListBuild(Context)
-    if not Reconcile then
-      self:_Stop_SetUpChatMsgListTimer(Generation)
-      return
-    end
-    if not self:_Stop_SetUpChatMsgListTimer(Generation) then
-      return
-    end
-    self:_ScheduleChatListBuildFinalAutoScroll(Context)
-    if 0 == Reconcile.FinalDisplayMessageCount then
-      self.Text_DialogEmptyText:SetText(self:_GetCurrentDialogEmptyText())
-      self.WS_Dialoglist:SetActiveWidgetIndex(1)
-    end
-    if ChatModel:GetChannelUnreadCount() > 0 then
-      ChatController:SendChatNewMsgRead()
-    end
-    return
-  end
-  Context.Index = Index + 1
-  self:_AddNewMsgToListView(MsgList[Context.Index], true)
-  self.bDialogListRefreshed = false
 end
 
 function M:CalcWrapTextAt()
@@ -477,6 +445,12 @@ function M:OnPreviewKeyDown(MyGeo, InKeyEvent)
         if self.Group_NewMessage:IsVisible() then
           self:BtnNewMsgOnClicked()
           self:NavigateToLastMsg()
+          ULTweenBPLibrary.DelayFrameCall(self, 2, function()
+            self:SetSelectChatFocus()
+          end)
+          return true
+        end
+        if self.FocusStateType == ChatFocusType.SelectChat then
           return true
         end
       end,
@@ -509,7 +483,9 @@ function M:OnPreviewKeyDown(MyGeo, InKeyEvent)
           self:BtnResetOnClicked()
           return true
         end
-        return false
+        if self.FocusStateType == ChatFocusType.SelectChat then
+          return true
+        end
       end,
       [Const.GamepadDPadLeft] = function()
         if not self.Group_ChatEmpty:IsVisible() and self.Group_QuickReplyKey:IsVisible() then
@@ -811,14 +787,15 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
     return
   end
   self.CurInputDeviceType = CurInputDevice
-  self.SB_Dialog:SetAlwaysShowScrollbar(self.CurInputDeviceType == ECommonInputType.Gamepad and self.MaxScrollOffset > 0)
+  if self.MaxScrollOffset then
+    self.List_Dialog:SetScrollbarVisibility(self.CurInputDeviceType == ECommonInputType.Gamepad and self.MaxScrollOffset > 0 and UIConst.VisibilityOp.Visible or UIConst.VisibilityOp.Collapsed)
+  end
   if self.CurInputDeviceType == ECommonInputType.Gamepad then
     if self:HasAnyFocus() or self:HasFocusedDescendants() then
       self:TryToDefaultFocusWidget()
     end
   else
     self.GameInputModeSubsystem:SetNavigateWidgetOpacity(1)
-    self.SB_Dialog:SetScrollWhenFocusChanges(UE4.EScrollWhenFocusChanges.NoScroll)
     if self.FocusStateType == ChatFocusType.SelectChat and self.CurrSelectChatItem then
       self.CurrSelectChatItem:SelectMessage(false)
     end
@@ -846,7 +823,6 @@ function M:CheckIsOpenHeadBtnList()
     if not IsOpenHead and self.FocusStateType == ChatFocusType.SelectChat then
       ScrollType = UE4.EScrollWhenFocusChanges.AnimatedScroll
     end
-    self.SB_Dialog:SetScrollWhenFocusChanges(ScrollType)
   end
   self.IsOpenHead = IsOpenHead
   return IsOpenHead
@@ -925,7 +901,7 @@ function M:UpdateUIStyleInPlatform()
           bLongPress = false
         })
       end
-      if SelectItem and self.MaxScrollOffset > 0 then
+      if SelectItem and self.MaxScrollOffset and self.MaxScrollOffset > 0 then
         table.insert(BottomKeyInfo, {
           KeyInfoList = {
             {
@@ -983,7 +959,7 @@ function M:UpdateUIStyleInPlatform()
         Desc = GText("UI_CTL_SelectMessages"),
         bLongPress = false
       })
-      if self.MaxScrollOffset > 0 then
+      if self.MaxScrollOffset and self.MaxScrollOffset > 0 then
         table.insert(BottomKeyInfo, {
           KeyInfoList = {
             {
@@ -1024,6 +1000,8 @@ function M:UpdateUIStyleInPlatform()
             TheDesc = GText("UI_Controller_Check")
           elseif self.CurrSelectChatItem.MsgWrap.AutoChessShareInfo then
             TheDesc = GText("UI_AutoChess_MissionEntry")
+          elseif self.CurrSelectChatItem.MsgWrap.TeamInfo then
+            TheDesc = GText("UI_Team_Join")
           end
           table.insert(BottomKeyInfo, {
             Desc = TheDesc,
@@ -1123,20 +1101,23 @@ function M:RefreshUIWithMenuChanged(bOpen)
 end
 
 function M:InitUIStyleInPlatform()
-  self:AddTimer(0.01, function()
-    self.Btn_Sent.Key_Text:CreateCommonKey({
-      KeyInfoList = {
-        {
-          Type = "Img",
-          ImgShortPath = "Y",
-          Owner = self
+  ULTweenBPLibrary.DelayFrameCall(self, 5, {
+    self,
+    function()
+      self.Btn_Sent.Key_Text:CreateCommonKey({
+        KeyInfoList = {
+          {
+            Type = "Img",
+            ImgShortPath = "Y",
+            Owner = self
+          }
         }
-      }
-    })
-    self.WBP_Com_TabSub01.CurInputDeviceType = nil
-    self.WBP_Com_TabSub01:RefreshOpInfoByInputDevice(self.CurInputDeviceType, UIUtils.UtilsGetCurrentGamepadName())
-    self:UpdateUIStyleInPlatform()
-  end)
+      })
+      self.WBP_Com_TabSub01.CurInputDeviceType = nil
+      self.WBP_Com_TabSub01:RefreshOpInfoByInputDevice(self.CurInputDeviceType, UIUtils.UtilsGetCurrentGamepadName())
+      self:UpdateUIStyleInPlatform()
+    end
+  })
   local bAllowForbid = false
   self.Key_Reset:CreateCommonKey({
     KeyInfoList = {
@@ -1259,7 +1240,6 @@ function M:InitFocusWidget()
   self:StopWidgetNavgationRuleBase(self.WBP_Com_TabSub01)
   self:StopWidgetNavgationRuleBase(self.List_Player)
   self:StopWidgetNavgationRuleBase(self.List_Dialog)
-  self:StopWidgetNavgationRuleBase(self.SB_Dialog)
 end
 
 function M:StopWidgetNavgationRuleBase(Widget)
@@ -1319,11 +1299,8 @@ function M:SetFocusStateType(FocusStateType)
   if self.FocusStateType == FocusStateType then
     return
   end
-  if self.FocusStateType == ChatFocusType.SelectChat then
-    self.SB_Dialog:SetScrollWhenFocusChanges(UE4.EScrollWhenFocusChanges.NoScroll)
-    if self.CurrSelectChatItem then
-      self.CurrSelectChatItem:SelectMessage(false)
-    end
+  if self.FocusStateType == ChatFocusType.SelectChat and self.CurrSelectChatItem then
+    self.CurrSelectChatItem:SelectMessage(false)
   end
   if self.FocusStateType == ChatFocusType.ScrollBox then
     self.GameInputModeSubsystem:SetNavigateWidgetOpacity(1)
@@ -1393,7 +1370,6 @@ function M:SetSelectChatFocus()
     return
   end
   self:UpdateUIStyleInPlatform()
-  self.SB_Dialog:SetScrollWhenFocusChanges(UE4.EScrollWhenFocusChanges.AnimatedScroll)
 end
 
 function M:SetInputFieldFocus()
@@ -1480,13 +1456,9 @@ function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
   end
   local InKey = UE4.UKismetInputLibrary.GetKey(InAnalogInputEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  local AddOffset = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent) * 10
   if "Gamepad_RightY" == InKeyName then
-    local CurScrollOffset = self.SB_Dialog:GetScrollOffset()
-    local ScrollOffset = math.clamp(CurScrollOffset - AddOffset, 0, self.MaxScrollOffset)
-    self.SB_Dialog:SetScrollOffset(ScrollOffset)
     local Visibility = "SelfHitTestInvisible"
-    if ScrollOffset + 100 >= self.MaxScrollOffset then
+    if self.List_Dialog.IsScrollAtBottom and self.List_Dialog:IsScrollAtBottom() then
       Visibility = "Collapsed"
       ChatController:SendChatNewMsgRead()
     end
@@ -1500,39 +1472,22 @@ function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
 end
 
 function M:FindCurrentDialogItem()
-  local ChatItemList = self._ChatItemList
-  if not ChatItemList then
-    return
-  end
-  local DialogStartY = self.SB_Dialog:GetScrollOffset()
-  local DialogEndY = DialogStartY + self.SB_Dialog:GetDesiredSize().Y - self.MaxScrollOffset
-  local SelectItem, MinDistance
-  local Num = #ChatItemList
+  local LastItem
+  local DisplayItemUIs = self.List_Dialog:GetDisplayedEntryWidgets()
+  local Num = DisplayItemUIs:Num()
+  DebugPrint("FindCurrentDialogItem .... ")
+  local MaxIndex = 0
   for k = Num, 1, -1 do
-    local Item = ChatItemList[k]
-    if Item.SelectMask then
-      local Y0 = Item.Content.ScrollOffset or 0
-      local Y1 = Y0 + Item:GetDesiredSize().Y
-      if DialogStartY <= Y0 and DialogEndY >= Y1 then
-        return Item, true
-      end
-      local Distance = 0
-      if DialogStartY > Y0 then
-        Distance = Distance + DialogStartY - Y0
-      end
-      if DialogEndY < Y1 then
-        Distance = Distance + Y1 - DialogEndY
-      end
-      if not MinDistance or MinDistance > Distance then
-        MinDistance = Distance
-        SelectItem = Item
-      end
-      if DialogStartY > Y1 then
-        return SelectItem, false
+    local ItemUI = DisplayItemUIs:Get(k)
+    if ItemUI.SelectMask then
+      local LastMinIndex = MaxIndex
+      MaxIndex = math.max(MaxIndex, ItemUI.Content.Index)
+      if LastMinIndex ~= MaxIndex then
+        LastItem = ItemUI
       end
     end
   end
-  return SelectItem, false
+  return LastItem, nil ~= LastItem
 end
 
 function M:NavigateToDialogIndex()
@@ -1541,20 +1496,17 @@ function M:NavigateToDialogIndex()
     self:SetFocusStateType(ChatFocusType.SelectChat)
     self.CurrSelectChatItem = SelectItem
     self.CurrSelectChatItem:SelectMessage(true)
-    if not IsInScroll then
-      local ScrollOffset = math.clamp(SelectItem.Content.ScrollOffset - 10, 0, self.MaxScrollOffset)
-      self.SB_Dialog:SetScrollOffset(ScrollOffset)
-    end
-    self.List_Dialog:NavigateToIndex(SelectItem.MsgWrap.Index - 1)
+    SelectItem:SetFocus()
   end
   return SelectItem
 end
 
 function M:NavigateToLastMsg()
-  if self.FocusStateType ~= ChatFocusType.SelectChat or not self._ChatItemList then
+  if self.FocusStateType ~= ChatFocusType.SelectChat then
     return
   end
-  self.List_Dialog:NavigateToIndex(#self._ChatItemList - 1)
+  local ItemNum = self.List_Dialog:GetNumItems()
+  self.List_Dialog:NavigateToIndex(ItemNum - 1)
 end
 
 return M

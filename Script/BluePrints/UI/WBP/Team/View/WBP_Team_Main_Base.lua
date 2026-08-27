@@ -8,6 +8,8 @@ Rule.Value = 1.0
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
 })
+local TeamHallController = require("BluePrints.UI.WBP.TeamHall.TeamHallController")
+local TeamHallCommon = require("BluePrints.UI.WBP.TeamHall.TeamHallCommon")
 
 function M:Construct()
   M.Super.Construct(self)
@@ -23,7 +25,46 @@ function M:Construct()
   if not self.IsAddingToParent then
     self:RegisterEvent()
   end
+  EventManager:AddEvent(EventID.OnAvatarStatusUpdate, self, self.OnAvatarStatusUpdate)
+  self:OnAvatarStatusUpdate(-1, -1)
   DebugPrint(LXYTag, "组队头像界面Construct , IsAddingToParent", self.IsAddingToParent)
+  TeamHallController:RegisterEvent(self, self.OnTeamHallUpdate)
+  local TeamRequestList = TeamHallController:GetTeamRequestList()
+  if TeamRequestList[1] then
+    local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(TeamHallCommon.ReddotName.TeamRequest)
+    if not next(CacheDetail) then
+      return
+    end
+    self.Head_TeamLooking.New:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  else
+    self.Head_TeamLooking.New:SetVisibility(ESlateVisibility.Collapsed)
+  end
+  self.Head_TeamLooking.Head_Team:SetGamepadCursor()
+end
+
+function M:OnTeamHallUpdate(EventId)
+  if EventId == TeamHallCommon.EventId.TeamRequestNew then
+    self.Head_TeamLooking.New:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  elseif EventId == TeamHallCommon.EventId.TeamRequestPanelClosed then
+    self.Head_TeamLooking.New:SetVisibility(ESlateVisibility.Collapsed)
+  end
+  local TeamRequestList = TeamHallController:GetTeamRequestList()
+  if TeamRequestList[1] then
+  else
+    self.Head_TeamLooking.New:SetVisibility(ESlateVisibility.Collapsed)
+  end
+end
+
+function M:OnAvatarStatusUpdate(OldStatus, NewStatus)
+  local Avatar = GWorld:GetAvatar()
+  if Avatar:InStatus(nil, CommonConst.AvatarStatus.InTeamHall) and not self.bBattle then
+    self.Head_TeamLooking:ShowTeamHall()
+    self.Head_TeamLooking:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Head_TeamLooking:PlayAnimation(self.Head_TeamLooking.Loop, 0, 0)
+  elseif self.Head_TeamLooking:IsVisible() then
+    self.Head_TeamLooking:StopAnimation(self.Head_TeamLooking.Loop)
+    self.Head_TeamLooking:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
 end
 
 function M:_UpdateMemberTag(Uid)
@@ -85,6 +126,14 @@ function M:InitUIInfo(Name, bInUIMode, EventList, ...)
   self.ParentWidget, self.bBattle = ...
   self:AppendToParent(self.ParentWidget)
   self:InitHeadItem(false)
+end
+
+function M:HandleAddButtonClick()
+  if type(self.OnOpenAddMember) == "function" then
+    self:OnOpenAddMember()
+    return true
+  end
+  return false
 end
 
 function M:RegisterEvent()
@@ -178,6 +227,7 @@ function M:InitHeadItem(bAnim)
   self:OnInitAddBtn()
   if self.bBattle then
     self.HB_My:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Head_TeamLooking:SetVisibility(UIConst.VisibilityOp.Collapsed)
     if not TeamData then
       return
     end
@@ -217,11 +267,13 @@ function M:Close()
 end
 
 function M:Destruct()
+  TeamHallController:UnRegisterEvent(self)
+  EventManager:RemoveEvent(EventID.OnAvatarStatusUpdate, self)
+  ReddotManager.RemoveListener(TeamHallCommon.ReddotName.TeamRequest, self)
   DebugPrint(LXYTag, "组队头像界面Destruct , IsAddingToParent", self.IsAddingToParent)
   if not self.IsAddingToParent then
     TeamController:ClearHeadUI(self.ParentWidget)
     TeamController:UnRegisterEvent(self)
-    self:RemoveFromParent()
     DebugPrint(LXYTag, "组队界面析构中....")
     PrintTable(self.ListenEvent, LXYTag, "事件列表")
     M.Super.Destruct(self)

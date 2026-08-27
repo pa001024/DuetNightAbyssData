@@ -119,7 +119,7 @@ function WBP_TaskIndicatorUI_C:SetGuideInfo(PointType, PointName, MapKey, QuestN
   if self.CurGuideChainId == TrackingQuestChainId and 0 ~= TrackingQuestChainId then
     EventManager:FireEvent(EventID.UpdateMiniMap, self:GetName(), "Task", "Add")
   end
-  if GuidePointChainId == TrackingQuestChainId and self.TargetPointType == "N" then
+  if GuidePointChainId == TrackingQuestChainId and (self.TargetPointType == "N" or self.TargetPointType == "NpcBubble") then
     TaskUtils:UpdateAllMissionNpcGuideMaps(true, self:GetName(), tonumber(PointName))
   end
   if GuidePointLocData[self.GuideInfoCache.PointOrStaticCreatorName] and GuidePointLocData[self.GuideInfoCache.PointOrStaticCreatorName].R and GuidePointLocData[self.GuideInfoCache.PointOrStaticCreatorName].R <= 0 then
@@ -127,6 +127,10 @@ function WBP_TaskIndicatorUI_C:SetGuideInfo(PointType, PointName, MapKey, QuestN
     if BattleMain.Battle_Map then
       BattleMain.Battle_Map.WildMap:EnterOrExitTaskRegion(self.GuideInfoCache.PointOrStaticCreatorName, false)
     end
+  end
+  if self.TargetPointType == "NpcBubble" then
+    self:Hide("NpcBubble")
+    EventManager:FireEvent(EventID.EnableNpcIndicator, tonumber(PointName), true, self.IconObject)
   end
 end
 
@@ -225,7 +229,7 @@ function WBP_TaskIndicatorUI_C:OnDeliverEnd()
   if 0 == self.CurGuideChainId then
     return
   end
-  if self.CurGuideChainId == self.AvatarTrackingId then
+  if self.CurGuideChainId == self.AvatarTrackingId and self.TargetPointType ~= "NpcBubble" then
     self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   end
   local TS = TalkSubsystem()
@@ -235,7 +239,7 @@ function WBP_TaskIndicatorUI_C:OnDeliverEnd()
 end
 
 function WBP_TaskIndicatorUI_C:ResetNpcIndicatorMiniMap(InUnitId)
-  if (self.TargetPointType == "N" or self.TargetPointType == "Npc") and self.GuideInfoCache.PointName == InUnitId and self.CurGuideChainId == self.AvatarTrackingId then
+  if (self.TargetPointType == "N" or self.TargetPointType == "Npc" or self.TargetPointType == "NpcBubble") and self.GuideInfoCache.PointName == InUnitId and self.CurGuideChainId == self.AvatarTrackingId then
     EventManager:FireEvent(EventID.UpdateMiniMap, self:GetName(), "Task", "Add")
   end
 end
@@ -443,7 +447,7 @@ function WBP_TaskIndicatorUI_C:CalculateTargetPointPos()
       self.TargetPointName = self.GuideInfoCache.PointName
     end
   end
-  if self.TargetPointType == "N" or self.TargetPointType == "Npc" then
+  if self.TargetPointType == "N" or self.TargetPointType == "Npc" or self.TargetPointType == "NpcBubble" then
     self:SetNpcGuideTargetPosition()
   elseif self.TargetPointType == "P" then
     self:SetTargetPositionByNewTargetPoint()
@@ -806,7 +810,7 @@ function WBP_TaskIndicatorUI_C:TryGetTargetGuidePointByRegionGraph(CurSubRegionI
   end
   local SourcePointTarget
   if RetWeight > 1 and DataMgr.RegionGraph[CurSubRegionId] and nil ~= DataMgr.RegionGraph[CurSubRegionId].RegionStart then
-    if self.GuideInfoCache.PointType == "N" or self.GuideInfoCache.PointType == "Npc" then
+    if self.GuideInfoCache.PointType == "N" or self.GuideInfoCache.PointType == "Npc" or self.GuideInfoCache.TargetPointType == "NpcBubble" then
       local TargetNpc = self.GameState:GetNpcInfo(tonumber(self.GuideInfoCache.PointName))
       if TargetNpc then
         SourcePointTarget = TargetNpc
@@ -852,6 +856,10 @@ function WBP_TaskIndicatorUI_C:CloseIndicator()
   TaskUtils:UpdateAllMissionNpcGuideMaps(false, self:GetName(), nil)
   EventManager:FireEvent(EventID.OnChangeTaskIndicator, TaskUtils.MissionNpcGuideMaps)
   EventManager:FireEvent(EventID.UpdateMiniMap, self:GetName(), "Task", "Delete")
+  if self.TargetPointType == "NpcBubble" then
+    self:Show("NpcBubble")
+    EventManager:FireEvent(EventID.EnableNpcIndicator, tonumber(self.GuideInfoCache.PointName), false, self.IconObject)
+  end
   self.Super.Close(self)
   MissionIndicatorManager:TryToArrangeIndicatorBySmartPointInfo()
 end

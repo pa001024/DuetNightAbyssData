@@ -34,5 +34,11 @@ return ReadOnly("EventId2RaidSeason", {
     EventId = 111005,
     EventStartTime = LocalTimeProxy(1787709600),
     RaidSeasonId = 1005
+  },
+  [111006] = {
+    EventEndTime = LocalTimeProxy(1792789200),
+    EventId = 111006,
+    EventStartTime = LocalTimeProxy(1791338400),
+    RaidSeasonId = 1006
   }
 })

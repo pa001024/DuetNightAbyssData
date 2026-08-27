@@ -3,6 +3,8 @@ local TeamData = TeamDatas.TeamData
 local StrLib = require("BluePrints.Common.DataStructure")
 local Deque = StrLib.Deque
 local GlobalConstant = DataMgr.GlobalConstant
+local table_insert = table.insert
+local table_sort = table.sort
 local M = Class("BluePrints.Common.MVC.Model")
 
 function M:Init()

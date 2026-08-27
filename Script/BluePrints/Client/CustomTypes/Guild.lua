@@ -45,9 +45,10 @@ local GuildAttr = {
   Level = prop.prop("Int", "client save", 1),
   DissolveApplyTime = prop.prop("Int", "client save", 0),
   ClosedPermission = prop.prop("Int2StrSetDict", "client save", {}),
+  OpenedPermission = prop.prop("Int2StrSetDict", "client save", {}),
   GuildMessages = prop.prop("GuildMessageList", "client save", {}),
-  GuildBossData = prop.prop("GuildBoss.GuildBossData", "client save"),
-  GuildHomeData = prop.prop("GuildHome.GuildHomeData", "client save")
+  Seats = prop.prop("GuildSeat.GuildSeatDict", "client save", {}),
+  SeatPlans = prop.prop("GuildSeat.GuildSeatPlanRefListDict", "client save", {})
 }
 local GuildInfo = Class("GuildInfo", CustomTypes.CustomAttr)
 GuildInfo.__Props__ = GuildAttr

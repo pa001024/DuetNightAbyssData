@@ -9,7 +9,8 @@ return ReadOnly("ArtLevelControl_RegionId2TaskVar", {
     [1] = "IQ1003",
     [2] = "IQ1002",
     [3] = "IQ100303",
-    [4] = "IQ10030498"
+    [4] = "IQ10030498",
+    [5] = "IQ13010101"
   },
   [1017] = {
     [1] = "IQ100304"
@@ -82,5 +83,28 @@ return ReadOnly("ArtLevelControl_RegionId2TaskVar", {
   [1063] = {
     [1] = "IQ200404",
     [2] = "IQ200405"
+  },
+  [1070] = {
+    [1] = "IQ11023103",
+    [2] = "Ex02CustomNPC_show",
+    [3] = "IQ11023201",
+    [4] = "IQ11023206",
+    [5] = "IQ11023101",
+    [6] = "IQ11020302",
+    [7] = "IQ11022101",
+    [8] = "Scehutao_110220"
+  },
+  [1071] = {
+    [1] = "Ex02CustomNPC_show",
+    [2] = "IQ110233",
+    [3] = "IQ11020104"
+  },
+  [1072] = {
+    [1] = "Ex02CustomNPC_show"
+  },
+  [1076] = {
+    [1] = "EX02_Boss03",
+    [2] = "EX02_Boss04_01",
+    [3] = "EX02_Boss04_02"
   }
 })

@@ -521,7 +521,7 @@
   },
   {
     "id": 10093,
-    "name": "\"Ada\"'s ",
+    "name": "Eve's ",
     "suf": false
   },
   {
@@ -670,6 +670,18 @@
     "name": "Flora's",
     "suf": false,
     "src": "成就「A Quiet Sojourn: Flora」"
+  },
+  {
+    "id": 10119,
+    "name": "Paradise's",
+    "suf": false,
+    "src": "成就「White Bunnies' Paradise」"
+  },
+  {
+    "id": 10120,
+    "name": "The Amnesiac",
+    "suf": false,
+    "src": "成就「Who Am I?」"
   },
   {
     "id": 20001,
@@ -1102,7 +1114,7 @@
   },
   {
     "id": 20077,
-    "name": " \"Ada\"",
+    "name": " Eve",
     "suf": true
   },
   {
@@ -1240,5 +1252,23 @@
     "name": " Flora",
     "suf": true,
     "src": "成就「A Little Get-Together: Flora」"
+  },
+  {
+    "id": 20101,
+    "name": " Target",
+    "suf": true,
+    "src": "成就「Right on Target」"
+  },
+  {
+    "id": 20102,
+    "name": " Chariot",
+    "suf": true,
+    "src": "成就「A Hero's Homecoming?」"
+  },
+  {
+    "id": 20103,
+    "name": " Paradise",
+    "suf": true,
+    "src": "成就「Beneath Paradise」"
   }
 ]

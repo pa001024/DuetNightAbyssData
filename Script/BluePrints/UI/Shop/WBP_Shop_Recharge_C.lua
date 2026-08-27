@@ -1,4 +1,5 @@
 require("UnLua")
+local GLink = require("Utils.MiscUtils").GLink
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C",
   "BluePrints.UI.BP_EMUserWidgetUtils_C"

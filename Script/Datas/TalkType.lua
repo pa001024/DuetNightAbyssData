@@ -89,6 +89,18 @@ return ReadOnly("TalkType", {
     UICanInteractive = true,
     UIName = "ImpressionMainUI"
   },
+  FixSimpleNew = {
+    BasicType = "FixSimple",
+    CameraType = "FixedCamera",
+    ExtraParams = T.RT_2,
+    GameInput = false,
+    SetPlayerInvincible = true,
+    ShowGameUI = false,
+    ShowInStoryReview = true,
+    TalkType = "FixSimpleNew",
+    UICanInteractive = true,
+    UIName = "SimpleTalkAvatarUI"
+  },
   ForgingGuide = {
     BasicType = "Guide",
     CameraType = "PlayerCamera",
@@ -109,6 +121,17 @@ return ReadOnly("TalkType", {
     TalkType = "FreeSimple",
     UICanInteractive = true,
     UIName = "ImpressionMainUI"
+  },
+  FreeSimpleNew = {
+    BasicType = "FreeSimple",
+    CameraType = "FreeCamera",
+    GameInput = false,
+    SetPlayerInvincible = true,
+    ShowGameUI = false,
+    ShowInStoryReview = true,
+    TalkType = "FreeSimpleNew",
+    UICanInteractive = true,
+    UIName = "SimpleTalkAvatarUI"
   },
   Guide = {
     BasicType = "Guide",

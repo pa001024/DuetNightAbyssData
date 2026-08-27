@@ -14,7 +14,15 @@ function M:Construct()
     OnMenuOpenChangedCallBack = self.OnMenuOpenChangedCallBack,
     OwnerWidget = self
   })
-  self.QAGamepadTip:CreateGamepadKey(UIConst.GamePadImgKey.SpecialLeft)
+  self.QAGamepadTip:CreateCommonKey({
+    KeyInfoList = {
+      {
+        Type = "Img",
+        ImgShortPath = UIConst.GamePadImgKey.SpecialLeft
+      }
+    },
+    bLongPress = false
+  })
   self.Text:SetText(GText("UI_LimitedPrizePool_Round"))
   self:SetInputType(UIUtils.UtilsGetCurrentInputType(), UIUtils.UtilsGetCurrentGamepadName())
   self:ListenInputTypeChanged()

@@ -15,7 +15,7 @@ return ReadOnly("RegionOnline", {
     HideCNPCOnline = true,
     ManuaSwitchPlayerNum = 150,
     MultiPlayerNum = 100,
-    OnlineCondition = 100208,
+    OnlineCondition = 10020105,
     Priority = 1,
     RegionChannelName = "UI_SUBREGION_NAME_101101",
     RegionChannelSwitchCD = 5,
@@ -181,6 +181,16 @@ return ReadOnly("RegionOnline", {
     RegionChannelName = "UI_REGION_NAME_1060",
     RegionChannelSwitchCD = 5,
     SubRegionId = 106001
+  },
+  [107001] = {
+    DefaultChannelNum = 2,
+    ManuaSwitchPlayerNum = 150,
+    MultiPlayerNum = 100,
+    OnlineCondition = 110232,
+    Priority = 1,
+    RegionChannelName = "UI_SUBREGION_NAME_107001",
+    RegionChannelSwitchCD = 5,
+    SubRegionId = 107001
   },
   [300101] = {
     ManuaSwitchPlayerNum = 50,

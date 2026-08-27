@@ -77,9 +77,6 @@ return ReadOnly("Condition2System", {
   [4180] = {
     [1] = "GuideBook"
   },
-  [4190] = {
-    [1] = "FriendMain"
-  },
   [4191] = {
     [1] = "OpenGuild"
   },
@@ -98,14 +95,10 @@ return ReadOnly("Condition2System", {
     [2] = "Temple"
   },
   [4240] = {
-    [1] = "Match",
-    [2] = "TimeRewardShopTab"
+    [1] = "TimeRewardShopTab"
   },
   [4250] = {
     [1] = "Entertainment"
-  },
-  [4260] = {
-    [1] = "Chat"
   },
   [4270] = {
     [1] = "PetSkill"
@@ -172,6 +165,15 @@ return ReadOnly("Condition2System", {
   },
   [8002] = {
     [1] = "Abyss"
+  },
+  [10020105] = {
+    [1] = "Chat",
+    [2] = "FriendMain",
+    [3] = "Match",
+    [4] = "TeamHall"
+  },
+  [10040501] = {
+    [1] = "FTShopTab"
   },
   [10101001] = {
     [1] = "ExploreBadgeShop"

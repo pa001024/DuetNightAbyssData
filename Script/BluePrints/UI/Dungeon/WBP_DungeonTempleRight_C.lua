@@ -1,4 +1,6 @@
 require("UnLua")
+local GameplayCompConfig = require("BluePrints.UI.Dungeon.RightUIComp.DungeonRightUICompConfig")
+local RightUIView = require("BluePrints.UI.Dungeon.RightUIComp.DungeonRightUIView")
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
 })
@@ -9,6 +11,8 @@ function M:Initialize(Initializer)
   self.CurTime = 0
   self.CurStar = 0
   self.IsStarTemple = false
+  self.GameplayComp = nil
+  self.RightUIView = nil
 end
 
 function M:InitListenEvent()
@@ -19,26 +23,34 @@ function M:InitListenEvent()
     self:AddDispatcher(EventID.OnTempleEnter, self, self.OnTempleEnter)
     self:AddDispatcher(EventID.OnUpdatePartyRightUI, self, self.OnUpdatePartyRightUI)
     self:AddDispatcher(EventID.OnUpdatePartyLeftUI, self, self.OnUpdatePartyTime)
-  elseif self.DungeonInfo.DungeonType == "WeaponVerify" then
-    self:AddDispatcher(EventID.OnUpdateWeaponVerifyTime, self, self.OnUpdateWeaponVerifyTime)
   end
 end
 
 function M:OnLoaded(...)
   self.Super.OnLoaded(self, ...)
-  self:InitInfo()
+  self:ConstructInfo()
 end
 
-function M:InitInfo()
+function M:BuildDungeonContext()
   local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
   if not GameInstance then
+    return nil
+  end
+  local DungeonId = GameInstance:GetCurrentDungeonId()
+  local DungeonInfo = DataMgr.Dungeon[DungeonId]
+  if not DungeonInfo then
+    return nil
+  end
+  return {DungeonId = DungeonId, DungeonInfo = DungeonInfo}
+end
+
+function M:InitInfo(Context)
+  Context = Context or self:BuildDungeonContext()
+  if not Context then
     return
   end
-  self.DungeonId = GameInstance:GetCurrentDungeonId()
-  self.DungeonInfo = DataMgr.Dungeon[self.DungeonId]
-  if not self.DungeonInfo then
-    return
-  end
+  self.DungeonId = Context.DungeonId
+  self.DungeonInfo = Context.DungeonInfo
   self:InitListenEvent()
   if self.DungeonInfo.DungeonType == "Temple" then
     self.TempleInfo = DataMgr.Temple[self.DungeonId]
@@ -51,8 +63,6 @@ function M:InitInfo()
     self.TempleInfo = DataMgr.Party[self.DungeonId]
     self.IsCountDown = false
     self:InitParty()
-  elseif self.DungeonInfo.DungeonType == "WeaponVerify" then
-    self:InitWeaponVerify()
   end
   for _, T in pairs(DataMgr.TempleEventLevel) do
     if T.TempleId == self.DungeonId and true == T.IsHardMode then
@@ -284,12 +294,84 @@ function M:OnTempleTimeChanged(CurrentTime, ThresholdTime)
   end
 end
 
-function M:ConstructInfo()
-  self:InitInfo()
+function M:ConstructInfo(GameplayCompKey, Context)
+  if GameplayCompKey then
+    return self:BindGameplayComponent(GameplayCompKey, Context)
+  end
+  Context = Context or self:BuildDungeonContext()
+  if not Context then
+    return nil
+  end
+  if not Context.DungeonInfo then
+    DebugPrint("WBP_DungeonTempleRight: 玩法上下文缺少 DungeonInfo")
+    return nil
+  end
+  local DefaultKey = Context.DungeonInfo.DungeonType
+  if GameplayCompConfig[DefaultKey] then
+    return self:BindGameplayComponent(DefaultKey, Context)
+  end
+  self:InitInfo(Context)
+  return nil
+end
+
+function M:BindGameplayComponent(GameplayCompKey, Context)
+  self:UnbindGameplayComponent()
+  local ModulePath = GameplayCompConfig[GameplayCompKey]
+  if not ModulePath then
+    DebugPrint("WBP_DungeonTempleRight: 未注册的玩法组件 Key", GameplayCompKey)
+    return nil
+  end
+  local CompModule = require(ModulePath)
+  self.RightUIView = self.RightUIView or RightUIView:New(self)
+  local Comp = CompModule:New({
+    View = self.RightUIView,
+    WorldContext = self
+  })
+  self.GameplayComp = Comp
+  self.GameplayCompKey = GameplayCompKey
+  if not Comp:Activate(Context) then
+    self.GameplayComp = nil
+    self.GameplayCompKey = nil
+    self.RightUIView:Reset()
+    return nil
+  end
+  return Comp
+end
+
+function M:UnbindGameplayComponent()
+  if self.GameplayComp then
+    self.GameplayComp:Deactivate()
+    self.GameplayComp = nil
+    self.GameplayCompKey = nil
+  end
+  if self.RightUIView then
+    self.RightUIView:Reset()
+  end
+end
+
+function M:GetGameplayComponent()
+  return self.GameplayComp
+end
+
+function M:Destruct()
+  self:UnbindGameplayComponent()
+  if self.RightUIView then
+    self.RightUIView:Release()
+    self.RightUIView = nil
+  end
+  if M.Super.Destruct then
+    M.Super.Destruct(self)
+  end
 end
 
 function M:GetCurrentScore()
+  if self.GameplayComp then
+    return self.GameplayComp:GetCurrentValue() or 0
+  end
   local Points = 0
+  if not self.TempleInfo then
+    return Points
+  end
   if self.TempleInfo.SucRule == "CountDown" then
     if 1 == self.TempleInfo.UIShowType then
       Points = self.TimeThreshold - self.CurTime
@@ -355,63 +437,6 @@ function M:SwitchStarType()
     local Tex_Empty = LoadObject(ButtonIconPath_Empty)
     self["TempleItem_" .. i].Image_Star:SetBrushFromTexture(Tex_Star)
     self["TempleItem_" .. i].Image_Empty:SetBrushFromTexture(Tex_Empty)
-  end
-end
-
-function M:InitWeaponVerify()
-  self.Group_Score:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  self.Group_Rank:SetVisibility(ESlateVisibility.Collapsed)
-  self.Group_TempleGoal:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  self.IsWeaponVerify = true
-  self:InitWeaponVerifyTargetInfo()
-end
-
-function M:InitWeaponVerifyTargetInfo()
-  self.Text_ScoreTitle:SetText(GText("UI_TEMPLE_LIMIT_TIME"))
-  self.WeaponVerifyTotalTime = DataMgr.WeaponVerify[self.DungeonId].TotalTime
-  self.Text_ScoreNum:SetText(self:GetTimeStr(self.WeaponVerifyTotalTime))
-  self.CurTime = self.WeaponVerifyTotalTime
-  self.WeaponVerifyLevelGoal = DataMgr.WeaponVerifyEventLevel[self.DungeonId].LevelGoalRequiredTime
-  for i = 1, 3 do
-    local GoalTime = self.WeaponVerifyLevelGoal[i]
-    if GoalTime < 0 then
-      self["TempleItem_" .. i]:SetTargetInfo(GText("WeaponVerify_Target_FinishLevel"))
-    else
-      self["TempleItem_" .. i]:SetTargetInfo(string.format(GText("WeaponVerify_Target_LevelLimitTime"), GoalTime))
-    end
-  end
-  self:InitWeaponVerifyStar()
-end
-
-function M:OnUpdateWeaponVerifyTime(RemainTime)
-  self.Text_ScoreNum:SetText(self:GetTimeStr(RemainTime))
-  self.CurTime = RemainTime
-  self:CheckWeaponVerifyStar()
-end
-
-function M:InitWeaponVerifyStar()
-  self.CurStar = 0
-  for i = 1, 3 do
-    local GoalTime = self.WeaponVerifyLevelGoal[i]
-    if GoalTime < 0 or GoalTime <= self.CurTime then
-      self.CurStar = i
-      self["TempleItem_" .. i]:PlayStarAnimationToWeaponVerify()
-    else
-      self["TempleItem_" .. i]:PlayNormalAnimationToWeaponVerify()
-    end
-  end
-end
-
-function M:CheckWeaponVerifyStar()
-  local RemainTime = self.CurTime
-  if self.CurStar > 0 and RemainTime < self.WeaponVerifyLevelGoal[self.CurStar] and self.WeaponVerifyLevelGoal[self.CurStar] > 0 then
-    self["TempleItem_" .. self.CurStar]:PlayLossAnimationToWeaponVerify()
-    self.CurStar = self.CurStar - 1
-    AudioManager(self):PlayUISound(self, "event:/ui/common/sp_goal_disable", nil, nil)
-  elseif self.CurStar < 3 and (RemainTime >= self.WeaponVerifyLevelGoal[self.CurStar + 1] or self.WeaponVerifyLevelGoal[self.CurStar + 1] < 0) then
-    self["TempleItem_" .. self.CurStar + 1]:PlayStarAnimationToWeaponVerify()
-    self.CurStar = self.CurStar + 1
-    AudioManager(self):PlayUISound(self, "event:/ui/common/sp_goal_enable", nil, nil)
   end
 end
 

@@ -120,6 +120,21 @@ function M:OnFashionSelected(index)
   end
 end
 
+function M:SetFashionSelectedSilently(index)
+  if index == self.SelectAppearanceIndex then
+    return
+  end
+  if self.SelectAppearanceIndex then
+    self["FashionType0" .. self.SelectAppearanceIndex]:PlayAnimation(self["FashionType0" .. self.SelectAppearanceIndex].Normal)
+    self["FashionType0" .. self.SelectAppearanceIndex].Btn_Check:SetChecked(false)
+    self["FashionType0" .. self.SelectAppearanceIndex]:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  end
+  self.SelectAppearanceIndex = index
+  self["FashionType0" .. self.SelectAppearanceIndex]:PlayAnimation(self["FashionType0" .. self.SelectAppearanceIndex].Click)
+  self["FashionType0" .. self.SelectAppearanceIndex]:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+  self:SetIsDealWithVirtualAccept(true)
+end
+
 function M:OnModSelected(index)
   if self.UseAppearanceOnlyMode == true then
     return
@@ -224,11 +239,11 @@ function M:FreahCharView(Name, Rarity, SelectFashionId, SelectModId, Uuid)
   self.Group_Tips.Slot:SetSize(FVector2D(currentSize.X, TargetHeight))
   self.Panel_Fashion:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   self.HB_FashionType:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-  if self.Text_FashionTypeTitle and self.Text_FashionTypeTitle.SetVisibility then
-    self.Text_FashionTypeTitle:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-  end
   if self.Text_ModTypeTitle and self.Text_ModTypeTitle.SetVisibility then
     self.Text_ModTypeTitle:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  if self.Text_FashionTypeTitle and self.Text_FashionTypeTitle.SetVisibility then
+    self.Text_FashionTypeTitle:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   end
   for i = 1, 3 do
     local ModItem = self["ModType0" .. i]
@@ -255,8 +270,9 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   if InKeyName == UIConst.GamePadKey.FaceButtonRight then
     if self.OnCloseByGamepadCallback then
       self.OnCloseByGamepadCallback(self.OnCloseByGamepadObj)
+      return UE4.UWidgetBlueprintLibrary.Handled()
     end
-    return UE4.UWidgetBlueprintLibrary.Handled()
+    return UE4.UWidgetBlueprintLibrary.UnHandled()
   end
   return UE4.UWidgetBlueprintLibrary.UnHandled()
 end

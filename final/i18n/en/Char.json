@@ -211,6 +211,10 @@
               0.39,
               0.41
             ],
+            "tag": [
+              "武器",
+              "普攻"
+            ],
             "削韧": 15
           },
           {
@@ -229,6 +233,10 @@
               0.47,
               0.5,
               0.53
+            ],
+            "tag": [
+              "武器",
+              "普攻"
             ],
             "削韧": 15,
             "Boss削韧": 20
@@ -250,6 +258,10 @@
               0.56,
               0.59
             ],
+            "tag": [
+              "武器",
+              "普攻"
+            ],
             "削韧": 25
           },
           {
@@ -268,6 +280,10 @@
               0.71,
               0.75,
               0.79
+            ],
+            "tag": [
+              "武器",
+              "普攻"
             ],
             "削韧": 30
           },
@@ -288,6 +304,10 @@
               0.82,
               0.86
             ],
+            "tag": [
+              "武器",
+              "普攻"
+            ],
             "削韧": 40,
             "Boss削韧": 35
           },
@@ -299,12 +319,18 @@
           },
           {
             "名称": "Charged Attack DMG",
-            "值": 1.13,
+            "值": 3.29,
+            "tag": [
+              "武器"
+            ],
             "削韧": 73
           },
           {
             "名称": "Sliding Attack DMG",
-            "值": 0.51,
+            "值": 1.53,
+            "tag": [
+              "武器"
+            ],
             "削韧": 33
           },
           {
@@ -323,6 +349,10 @@
               4.16,
               4.39,
               4.62
+            ],
+            "tag": [
+              "武器",
+              "普攻"
             ],
             "削韧": 15,
             "Boss削韧": 27
@@ -344,6 +374,10 @@
               5.49,
               5.78
             ],
+            "tag": [
+              "武器",
+              "普攻"
+            ],
             "削韧": 15,
             "Boss削韧": 32
           },
@@ -363,6 +397,10 @@
               5.88,
               6.21,
               6.54
+            ],
+            "tag": [
+              "武器",
+              "普攻"
             ],
             "削韧": 15,
             "Boss削韧": 37
@@ -384,6 +422,10 @@
               8.4,
               8.84
             ],
+            "tag": [
+              "武器",
+              "普攻"
+            ],
             "削韧": 15,
             "Boss削韧": 42
           },
@@ -404,6 +446,10 @@
               9.14,
               9.62
             ],
+            "tag": [
+              "武器",
+              "普攻"
+            ],
             "削韧": 15,
             "Boss削韧": 47
           },
@@ -423,6 +469,10 @@
               4.16,
               4.39,
               4.62
+            ],
+            "tag": [
+              "武器",
+              "普攻"
             ],
             "削韧": 15,
             "Boss削韧": 27
@@ -614,9 +664,32 @@
       "[Faintlight] Level +2; [Recuperation] Level +1.",
       "Increases Berenica's Attack by 20% per Combo Level.",
       "[Netherflames] Level +2; [Recuperation] Level +1.",
-      "When in [Netherflames] state, each attack has a chance to unleash 1 additional Swordwave. The probability equals to 25% of [Ymir]'s Trigger Probability."
+      "When in [Netherflames] state, each attack has a chance to unleash 1 additional Swordwave. The probability equals to 25% of [Ymir]'s Trigger Probability.",
+      "When the fifth sword wave from [Ymir] deals damage, consume 3 stacks of [Umbro Disruption] on the target to deal an additional instance of 1500% Umbro Overflow Damage, treated as Consonance Weapon Damage. Consuming these stacks grants 1 stack of [Wildfire] for 10s, stacking up to 5 times. Gaining a stack refreshes the duration.\nEach stack of [Wildfire] grants 10% PEN stats, 25% Skill Intensity, 15% Weapon ATK Speed, and 20% Weapon Trigger Probability."
     ],
     "碎片": 1001101,
+    "第七溯源消耗": [
+      [
+        1021101,
+        1
+      ],
+      [
+        1001101,
+        30
+      ],
+      [
+        10100,
+        2
+      ],
+      [
+        20030,
+        5
+      ],
+      [
+        10024,
+        20
+      ]
+    ],
     "同律武器": [
       {
         "id": 110101,
@@ -740,6 +813,9 @@
               0.9
             ],
             "格式": "{%}×2",
+            "tag": [
+              "武器"
+            ],
             "削韧": 25,
             "Boss削韧": 28,
             "取消": 1.3333
@@ -773,6 +849,9 @@
               0.9
             ],
             "格式": "{%}×5",
+            "tag": [
+              "武器"
+            ],
             "削韧": 25,
             "Boss削韧": 14
           },
@@ -797,6 +876,9 @@
               0.63,
               0.68,
               0.73
+            ],
+            "tag": [
+              "武器"
             ]
           },
           {
@@ -931,6 +1013,9 @@
               5.05,
               5.4
             ],
+            "tag": [
+              "武器"
+            ],
             "削韧": 5,
             "Boss削韧": 15,
             "取消": 2.6667
@@ -1059,6 +1144,9 @@
               0.18
             ],
             "格式": "{%}+{%}× [Thorns] Stacks",
+            "tag": [
+              "武器"
+            ],
             "削韧": 25,
             "Boss削韧": 105
           },
@@ -2216,6 +2304,10 @@
               7.44,
               7.95
             ],
+            "tag": [
+              "武器",
+              "普攻"
+            ],
             "削韧": 30
           },
           {
@@ -2309,6 +2401,10 @@
           {
             "名称": "DMG",
             "值": 9.42,
+            "tag": [
+              "武器",
+              "普攻"
+            ],
             "削韧": 20
           },
           {
@@ -2553,6 +2649,10 @@
               7.36,
               7.75
             ],
+            "tag": [
+              "武器",
+              "普攻"
+            ],
             "削韧": 25,
             "Boss削韧": 42,
             "取消": 2
@@ -2573,6 +2673,10 @@
               8.14,
               8.59,
               9.04
+            ],
+            "tag": [
+              "武器",
+              "普攻"
             ],
             "削韧": 25,
             "Boss削韧": 49,
@@ -2596,6 +2700,10 @@
               4.53
             ],
             "格式": "{%}×2",
+            "tag": [
+              "武器",
+              "普攻"
+            ],
             "削韧": 15,
             "Boss削韧": 24,
             "取消": 2
@@ -2632,6 +2740,10 @@
               12.59
             ],
             "格式": "{%}+{%}",
+            "tag": [
+              "武器",
+              "普攻"
+            ],
             "削韧": 80,
             "Boss削韧": 60,
             "取消": 2
@@ -2643,13 +2755,19 @@
           },
           {
             "名称": "[Samael]Plunge DMG",
-            "值": 0.51,
+            "值": 1.55,
+            "tag": [
+              "武器"
+            ],
             "削韧": 33,
             "取消": 2
           },
           {
             "名称": "[Samael]Sliding Attack DMG",
-            "值": 0.73,
+            "值": 2.25,
+            "tag": [
+              "武器"
+            ],
             "削韧": 47,
             "取消": 2
           },
@@ -2669,6 +2787,9 @@
               17.03,
               17.98,
               18.93
+            ],
+            "tag": [
+              "武器"
             ],
             "削韧": 80,
             "Boss削韧": 120,
@@ -2706,6 +2827,9 @@
               18.93
             ],
             "格式": "{%}+{%}",
+            "tag": [
+              "武器"
+            ],
             "削韧": 80,
             "Boss削韧": 120,
             "取消": 2
@@ -2989,9 +3113,32 @@
       "[In the Name of Patience] Level +2, [Hmph!!] Level +1",
       "When Combo Level increases, gains 5 additional combo points.",
       "[That's It!] Level +2, [Hmph!!] Level +1",
-      "After using [That's It!] or [Samael]'s Charged Attack, gains 30% additional Lumino Damage for 15 seconds."
+      "After using [That's It!] or [Samael]'s Charged Attack, gains 30% additional Lumino Damage for 15 seconds.",
+      "[Samael]'s Charged Attack restores 90% of the Combo Points consumed.\nAfter using [Samael]'s Charged Attack at Combo Level S, gain 1 stack of [Impulse] for 10s, stacking up to 5 times. Gaining a stack refreshes the duration.\nEach stack of [Impulse] grants 30% Skill Intensity and 12% PEN stats."
     ],
     "碎片": 1001501,
+    "第七溯源消耗": [
+      [
+        1021501,
+        1
+      ],
+      [
+        1001501,
+        30
+      ],
+      [
+        10100,
+        2
+      ],
+      [
+        20030,
+        5
+      ],
+      [
+        10020,
+        20
+      ]
+    ],
     "同律武器": [
       {
         "id": 150101,
@@ -3147,6 +3294,9 @@
               36.52,
               39.04
             ],
+            "tag": [
+              "召唤物"
+            ],
             "削韧": 100,
             "Boss削韧": 150,
             "取消": 1
@@ -3173,6 +3323,9 @@
               34,
               36.52,
               39.04
+            ],
+            "tag": [
+              "召唤物"
             ],
             "削韧": 100,
             "Boss削韧": 150,
@@ -3924,6 +4077,10 @@
               1.94,
               2.07
             ],
+            "tag": [
+              "武器",
+              "普攻"
+            ],
             "削韧": 15,
             "取消": 1.6346
           },
@@ -3942,6 +4099,10 @@
               2.06,
               2.21,
               2.36
+            ],
+            "tag": [
+              "武器",
+              "普攻"
             ],
             "削韧": 20,
             "取消": 1.6346
@@ -3962,6 +4123,10 @@
               2.03,
               2.17
             ],
+            "tag": [
+              "武器",
+              "普攻"
+            ],
             "削韧": 30,
             "取消": 1.6346
           },
@@ -3980,6 +4145,10 @@
               1.09,
               1.17,
               1.25
+            ],
+            "tag": [
+              "武器",
+              "普攻"
             ],
             "削韧": 20,
             "取消": 1.6346
@@ -4000,6 +4169,9 @@
               0.13,
               0.14
             ],
+            "tag": [
+              "武器"
+            ],
             "削韧": 80,
             "取消": 1.6346
           },
@@ -4018,6 +4190,10 @@
               3.8,
               4.08,
               4.36
+            ],
+            "tag": [
+              "武器",
+              "普攻"
             ],
             "削韧": 60,
             "取消": 1.6346
@@ -6217,7 +6393,7 @@
   {
     "id": 2102,
     "icon": "Eve",
-    "名称": "\"Ada\"",
+    "名称": "Eve",
     "版本": "1.5",
     "别名": "The Lone Bunny of Paradise",
     "出生地": "Hyperborean Empire",
@@ -6682,10 +6858,493 @@
       "[Paradise Blueprint] Level +2, [Hello, World!] Level +1.",
       "When this character's summons have more than 100% ATK Speed, the excess is converted into Skill DMG Multiplier at a 100% ratio.\nWhile [Summon: Judgment] is active, this character's summons gain 30% ATK Speed and 25 Auto-Pickup Range.",
       "[Let the Celebration Begin!] Level +2, [Hello, World!] Level +1.",
-      "While [Summon: Judgement] is active, \"Ada\" and her summons gain +40% PEN Stats.\nWhen [Summon: The Chariot] is destroyed, [Summon: Judgement] has a 50% chance to immediately cast [Parade] once. This effect can trigger once every 2.5s."
+      "While [Summon: Judgement] is active, Eve and her summons gain +40% PEN stats.\nWhen [Summon: The Chariot] is destroyed, [Summon: Judgement] has a 50% chance to immediately cast [Parade] once. This effect can trigger once every 2.5s."
     ],
     "碎片": 1002102,
     "专武": 20207
+  },
+  {
+    "id": 2201,
+    "icon": "WeitaF",
+    "名称": "主角-水",
+    "版本": "1.6",
+    "别名": "UI_CHAR_SUBTITLE_2201",
+    "阵营": "The Hyperborean Empire",
+    "属性": "水",
+    "精通": [
+      "Sword",
+      "Assault Rifle"
+    ],
+    "标签": [
+      "Support",
+      "Summon"
+    ],
+    "基础攻击": 20,
+    "基础生命": 100,
+    "基础防御": 300,
+    "基础护盾": 100,
+    "基础神智": 150,
+    "加成": {
+      "ATK": 0.5,
+      "Skill Efficiency": 0.125
+    },
+    "突破": [
+      {
+        "Coin": 5200,
+        "Stone Powder": 10,
+        "Azure Pearl": 5
+      },
+      {
+        "Coin": 10400,
+        "Insulation Coating": 5,
+        "Humectant": 7
+      },
+      {
+        "Coin": 16300,
+        "Insulation Coating": 10,
+        "Humectant": 15
+      },
+      {
+        "Coin": 34700,
+        "Insulation Coating": 20,
+        "Water Purifier": 6
+      },
+      {
+        "Coin": 81600,
+        "Insulation Coating": 40,
+        "Water Purifier": 12
+      },
+      {
+        "Coin": 243000,
+        "Insulation Coating": 80,
+        "Water Purifier": 25
+      }
+    ],
+    "技能": [
+      {
+        "id": 220101,
+        "名称": "Operation Decapitation",
+        "类型": "Summon",
+        "描述": "Lunge forward, dealing 1 instance of Hydro Damage to nearby enemies. Summon 1 [Summon: Legion Standard] at the starting position and 1 at the destination. Up to 12 [Summon: Legion Standard] can exist at the same time.",
+        "icon": "ExShuiZhu01",
+        "字段": [
+          {
+            "名称": "Sanity Cost",
+            "影响": "技能效益",
+            "值": 24,
+            "格式": "{}"
+          },
+          {
+            "名称": "DMG",
+            "影响": "技能威力",
+            "值": [
+              4.44,
+              5.42,
+              6.4,
+              7.38,
+              8.36,
+              9.34,
+              10.32,
+              11.3,
+              12.28,
+              13.26,
+              14.24,
+              15.22
+            ],
+            "削韧": 20
+          },
+          {
+            "名称": "DMG Radius",
+            "影响": "技能范围",
+            "值": 6,
+            "格式": "{}m"
+          },
+          {
+            "名称": "Summon Duration",
+            "影响": "技能耐久",
+            "值": 9,
+            "格式": "{}s"
+          },
+          {
+            "名称": "Summon DMG",
+            "影响": "技能威力",
+            "值": [
+              5.88,
+              7.18,
+              8.48,
+              9.78,
+              11.08,
+              12.38,
+              13.68,
+              14.98,
+              16.28,
+              17.58,
+              18.88,
+              20.18
+            ],
+            "削韧": 15,
+            "Boss削韧": 4
+          },
+          {
+            "名称": "Summon DMG Radius",
+            "影响": "技能范围",
+            "值": 6,
+            "格式": "{}m"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Stone Powder": 3,
+            "Insulation Coating": 1
+          },
+          {
+            "Coin": 2600,
+            "Stone Powder": 6,
+            "Insulation Coating": 2
+          },
+          {
+            "Coin": 3200,
+            "Stone Powder": 9,
+            "Insulation Coating": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Stone Powder": 15,
+            "Insulation Coating": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Stone Powder": 30,
+            "Insulation Coating": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          }
+        ],
+        "术语解释": {
+          "Summon: Legion Standard": "Inherits 100% of the summoner's stats. When summoned, deals 1 instance of Hydro Damage to nearby enemies."
+        },
+        "行为": "执行[CreateUnit];造成角色攻击444.0%的伤害(技能/战技);削减战姿20;触发被动功能[PassiveSummonAttack](被动效果220101·BP_WeitaF_Water_Passive)"
+      },
+      {
+        "id": 220102,
+        "名称": "Legion Formation",
+        "类型": "Buff",
+        "描述": "Deal 1 instance of Hydro Damage to nearby enemies and summon 6 [Summon: Legion Standard] units nearby.\nEnter [Battle Command], continuously draining Sanity. [Battle Command] ends when Sanity reaches 0 or when this skill is used again.",
+        "icon": "ExShuiZhu02_On",
+        "cd": 3,
+        "字段": [
+          {
+            "名称": "Sanity Cost",
+            "影响": "技能效益",
+            "值": 120,
+            "格式": "{}"
+          },
+          {
+            "名称": "Sanity Cost per second",
+            "影响": "技能效益,技能耐久",
+            "值": 12,
+            "格式": "{}"
+          },
+          {
+            "名称": "DMG",
+            "影响": "技能威力",
+            "值": [
+              35.14,
+              42.96,
+              50.78,
+              58.6,
+              66.42,
+              74.24,
+              82.06,
+              89.88,
+              97.7,
+              105.52,
+              113.34,
+              121.16
+            ],
+            "削韧": 100
+          },
+          {
+            "名称": "DMG Radius",
+            "影响": "技能范围",
+            "值": 10,
+            "格式": "{}m"
+          },
+          {
+            "名称": "[Battle Command] Skill Efficiency increased",
+            "值": [
+              0.06,
+              0.07,
+              0.08,
+              0.09,
+              0.1,
+              0.11,
+              0.12,
+              0.13,
+              0.14,
+              0.15,
+              0.16,
+              0.17
+            ],
+            "格式": "{}"
+          },
+          {
+            "名称": "[Battle Command] Effect Duration",
+            "影响": "技能耐久",
+            "值": 8,
+            "格式": "{}s"
+          },
+          {
+            "名称": "Summon Damage increased",
+            "值": [
+              0.012,
+              0.014,
+              0.016,
+              0.018,
+              0.02,
+              0.022,
+              0.024,
+              0.026,
+              0.028,
+              0.03,
+              0.032,
+              0.034
+            ]
+          },
+          {
+            "名称": "Summon Attack Speed increased",
+            "值": [
+              0.006,
+              0.007,
+              0.008,
+              0.009,
+              0.01,
+              0.011,
+              0.012,
+              0.013,
+              0.014,
+              0.015,
+              0.016,
+              0.017
+            ]
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Stone Powder": 3,
+            "Insulation Coating": 1
+          },
+          {
+            "Coin": 2600,
+            "Stone Powder": 6,
+            "Insulation Coating": 2
+          },
+          {
+            "Coin": 3200,
+            "Stone Powder": 9,
+            "Insulation Coating": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Stone Powder": 15,
+            "Insulation Coating": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Stone Powder": 30,
+            "Insulation Coating": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          }
+        ],
+        "术语解释": {
+          "Battle Command": "The whole team gains increased Skill Efficiency.\nWhile [Battle Command] is active, summoning a [Summon: Legion Standard] grants each allied summon 1 stack that increases Damage and Attack Speed. Stacks up to 24 times."
+        },
+        "子技能": [
+          {
+            "id": 220121,
+            "类型": "Buff",
+            "icon": "ExShuiZhu02_Off",
+            "cd": 3,
+            "名称": "Battle Command"
+          }
+        ],
+        "行为": "附加增益(220110)[每1秒消耗12神智, 激活技能];执行[CreateUnit];造成角色攻击3514.0%的伤害(技能/终结技);削减战姿100"
+      },
+      {
+        "id": 220103,
+        "名称": "The Pale Elegy",
+        "类型": "Passive",
+        "描述": "Damage dealt by the character's skills or [Summon: Legion Standard] units inflicts 1 stack of [Dread] on the target.\nEvery third use of [Operation Decapitation] causes all [Summon: Legion Standard] units on the field to deal 1 additional instance of damage.",
+        "icon": "ExShuiZhu03",
+        "字段": [
+          {
+            "名称": "[Dread] Duration",
+            "影响": "技能耐久",
+            "值": 9,
+            "格式": "{}s"
+          },
+          {
+            "名称": "Hydro Damage Taken increased",
+            "值": [
+              0.026,
+              0.032,
+              0.038,
+              0.044,
+              0.05,
+              0.056,
+              0.062,
+              0.068,
+              0.074,
+              0.08,
+              0.086,
+              0.092
+            ]
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Stone Powder": 3,
+            "Insulation Coating": 1
+          },
+          {
+            "Coin": 2600,
+            "Stone Powder": 6,
+            "Insulation Coating": 2
+          },
+          {
+            "Coin": 3200,
+            "Stone Powder": 9,
+            "Insulation Coating": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Stone Powder": 15,
+            "Insulation Coating": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Stone Powder": 30,
+            "Insulation Coating": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Chronal Reversion": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Chronal Reversion": 2,
+            "Twilight Tread": 1
+          }
+        ],
+        "术语解释": {
+          "Dread": "Increases Hydro Damage taken."
+        },
+        "行为": "被动效果(220101)(BP_WeitaF_Water_Passive)"
+      },
+      {
+        "id": 220104,
+        "名称": "Rallying Call",
+        "类型": "Passive",
+        "描述": "Whenever an ally summons a unit, 1 [Summon: Legion Standard] is summoned at the character's location.\nThis effect can trigger once every 2s.",
+        "icon": "ExtraPassive",
+        "行为": "被动效果(220102)(BP_WeitaF_Water_Passive2)"
+      },
+      {
+        "id": 210003,
+        "名称": "Seven-Day Spread",
+        "类型": "Support",
+        "描述": "[Available only when deployed as a Combat Partner]\n Increases ATK for self and Hydro allies.",
+        "icon": "PhantomPassive",
+        "字段": [
+          {
+            "名称": "ATK Boost",
+            "值": 0.5
+          }
+        ],
+        "行为": "被动效果(210003)(BP_Common_PhantomPassive)"
+      }
+    ],
+    "溯源": [
+      "Summoning a unit restores 1 Sanity.",
+      "[Dread] can stack up to 3 times.",
+      "[Operation Decapitation] Lv. +2; [The Pale Elegy] Lv. +1.",
+      "When a [Summon: Legion Standard] leaves the field, it deals 1 additional instance of its on-summon damage.",
+      "[Legion Formation] Lv. +2; [The Pale Elegy] Lv. +1.",
+      "[Summon: Legion Standard] units gain 40% PEN Stats."
+    ],
+    "碎片": 1002201
   },
   {
     "id": 2301,
@@ -9066,21 +9725,32 @@
     "名称": "Falsi",
     "版本": "1.6",
     "别名": "A Heart Tempered into a Blade",
+    "出生地": "Hyperborean Empire",
+    "势力": "The 13th Legion",
+    "生日": "12-02",
+    "中文CV": "施燕燕",
+    "日文CV": "今井麻美",
+    "英文CV": "Rae Lim",
+    "韩文CV": "민아",
     "阵营": "The Hyperborean Empire",
     "属性": "火",
     "精通": [
       "Dual Blades",
-      "Grenade Launcher"
+      "Dual Pistols"
     ],
     "标签": [
       "DPS",
       "Skill DMG"
     ],
-    "基础攻击": 21,
-    "基础生命": 96,
-    "基础防御": 288,
-    "基础护盾": 96,
-    "基础神智": 180,
+    "基础攻击": 16,
+    "基础生命": 200,
+    "基础防御": 355,
+    "基础护盾": 0,
+    "基础神智": 160,
+    "加成": {
+      "HP": 0.5,
+      "Skill Duration": 0.15
+    },
     "突破": [
       {
         "Coin": 4160,
@@ -9116,40 +9786,487 @@
     "技能": [
       {
         "id": 310401,
+        "名称": "Nightmeld",
         "类型": "Buff",
-        "icon": "Heitao02_On",
+        "描述": "Falsi enters [Ambush]. Sanity is continuously consumed while the state is active, and [Ambush] ends when Sanity reaches 0.\nWhile [Ambush] is active, this skill is replaced by [Shadowpierce], which deals 1 instance of Pyro Damage to enemies ahead.",
+        "icon": "Falu01_On",
         "cd": 2,
+        "字段": [
+          {
+            "名称": "Sanity Cost",
+            "影响": "技能效益",
+            "值": 10,
+            "格式": "{}"
+          },
+          {
+            "名称": "Sanity Cost per second",
+            "影响": "技能效益,技能耐久",
+            "值": 10,
+            "格式": "{}"
+          },
+          {
+            "名称": "Movement SPD Boost",
+            "值": [
+              0.12,
+              0.14,
+              0.16,
+              0.18,
+              0.2,
+              0.22,
+              0.24,
+              0.26,
+              0.28,
+              0.3,
+              0.32,
+              0.34
+            ]
+          },
+          {
+            "名称": "[Shadowpierce] Damage",
+            "影响": "技能威力",
+            "值": [
+              0.55,
+              0.67,
+              0.79,
+              0.91,
+              1.03,
+              1.15,
+              1.27,
+              1.39,
+              1.51,
+              1.63,
+              1.75,
+              1.87
+            ],
+            "格式": "{%}Max HP",
+            "削韧": 35
+          },
+          {
+            "名称": "[Shadowstrike] Damage",
+            "影响": "技能威力",
+            "值": [
+              2.12,
+              2.6,
+              3.08,
+              3.56,
+              4.04,
+              4.52,
+              5,
+              5.48,
+              5.96,
+              6.44,
+              6.92,
+              7.4
+            ],
+            "格式": "{%}Max HP",
+            "削韧": 35
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Damaged Sal Volatile": 3,
+            "Fuel Reagent": 1
+          },
+          {
+            "Coin": 2080,
+            "Damaged Sal Volatile": 6,
+            "Fuel Reagent": 2
+          },
+          {
+            "Coin": 2560,
+            "Damaged Sal Volatile": 9,
+            "Fuel Reagent": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Damaged Sal Volatile": 15,
+            "Fuel Reagent": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Damaged Sal Volatile": 30,
+            "Fuel Reagent": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 72000,
+            "Serum Syringe": 1,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Serum Syringe": 2,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          }
+        ],
+        "术语解释": {
+          "Ambush": "While [Ambush] is active, Falsi cannot be detected by enemies, gains increased Movement Speed, and does not exit [Ambush] upon taking damage."
+        },
         "子技能": [
           {
             "id": 310411,
             "类型": "Buff",
-            "icon": "Heitao02_Off",
+            "icon": "Falu01_Off",
             "cd": 2,
-            "行为": "移除增益(310411)[移动速度+0.5, 每1秒消耗10神智, 激活技能, 禁用[普攻, 下落攻击, 重击, 射击, 蓄力射击, 装填, 滑行攻击]]"
+            "行为": "移除增益(310411)[移动速度+#1, 每1秒消耗10神智, 激活技能, 禁用[普攻, 下落攻击, 重击, 射击, 蓄力射击, 装填, 滑行攻击]];造成目标最大生命55%的火属性伤害(技能/战技);削减战姿35",
+            "名称": "Ambush"
+          },
+          {
+            "id": 310412,
+            "类型": "Buff",
+            "icon": "Falu01_SP",
+            "cd": 2,
+            "行为": "召唤实体(310411);执行[RemoveSkillCreature]"
           }
         ],
-        "行为": "附加增益(310411)[移动速度+0.5, 每1秒消耗10神智, 激活技能, 禁用[普攻, 下落攻击, 重击, 射击, 蓄力射击, 装填, 滑行攻击]];触发被动功能[法露茜战技开启](被动效果310401·BP_Falu_Passive);召唤实体(310411)"
+        "行为": "附加增益(310411)[移动速度+#1, 每1秒消耗10神智, 激活技能, 禁用[普攻, 下落攻击, 重击, 射击, 蓄力射击, 装填, 滑行攻击]];触发被动功能[法露茜战技开启](被动效果310401·BP_Falu_Passive)"
       },
       {
         "id": 310402,
+        "名称": "Abyss Descent",
         "类型": "DMG",
-        "icon": "Heitao02_On",
-        "行为": "造成角色攻击50%的伤害(近战/武器);削减战姿30;造成角色攻击100.0%的伤害(近战/武器);削减战姿15;附加增益(120221)[激活技能](持续20秒)"
+        "描述": "Falsi marks up to 5 enemies as [Execution Targets] and enters [Executioner]. Extreme-threat enemies are prioritised.",
+        "icon": "Falu02",
+        "字段": [
+          {
+            "名称": "Sanity Cost",
+            "影响": "技能效益",
+            "值": 50,
+            "格式": "{}"
+          },
+          {
+            "名称": "[Shadowstrike] Sanity Cost",
+            "影响": "技能效益",
+            "值": 20,
+            "格式": "{}"
+          },
+          {
+            "名称": "[Executioner] Duration",
+            "影响": "技能耐久",
+            "值": 20,
+            "格式": "{}s"
+          },
+          {
+            "名称": "ATK Cost per conversion reduced",
+            "值": 100,
+            "格式": "{}"
+          },
+          {
+            "名称": "Max HP Gain per conversion increased",
+            "值": 1000,
+            "格式": "{}"
+          },
+          {
+            "名称": "DMG",
+            "影响": "技能威力",
+            "值": [
+              1.09,
+              1.33,
+              1.57,
+              1.81,
+              2.05,
+              2.29,
+              2.53,
+              2.77,
+              3.01,
+              3.25,
+              3.49,
+              3.73
+            ],
+            "格式": "{%}Max HP",
+            "削韧": 30
+          },
+          {
+            "名称": "Disruption Damage",
+            "影响": "技能威力",
+            "值": [
+              0.16,
+              0.19,
+              0.22,
+              0.25,
+              0.28,
+              0.31,
+              0.34,
+              0.37,
+              0.4,
+              0.43,
+              0.46,
+              0.49
+            ],
+            "格式": "{%}Max HP",
+            "tag": [
+              "充盈"
+            ]
+          },
+          {
+            "名称": "Bonus Damage",
+            "影响": "技能威力",
+            "值": [
+              0.04,
+              0.05,
+              0.06,
+              0.07,
+              0.08,
+              0.09,
+              0.1,
+              0.11,
+              0.12,
+              0.13,
+              0.14,
+              0.15
+            ],
+            "格式": "{%}Max HP",
+            "tag": [
+              "充盈"
+            ]
+          },
+          {
+            "名称": "[Executioner] Resolve increased",
+            "值": [
+              0.07,
+              0.09,
+              0.11,
+              0.13,
+              0.15,
+              0.17,
+              0.19,
+              0.21,
+              0.23,
+              0.25,
+              0.27,
+              0.29
+            ]
+          },
+          {
+            "名称": "Damage against [Execution Targets] increased",
+            "值": [
+              0.24,
+              0.28,
+              0.32,
+              0.36,
+              0.4,
+              0.44,
+              0.48,
+              0.52,
+              0.56,
+              0.6,
+              0.64,
+              0.68
+            ]
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Damaged Sal Volatile": 3,
+            "Fuel Reagent": 1
+          },
+          {
+            "Coin": 2080,
+            "Damaged Sal Volatile": 6,
+            "Fuel Reagent": 2
+          },
+          {
+            "Coin": 2560,
+            "Damaged Sal Volatile": 9,
+            "Fuel Reagent": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Damaged Sal Volatile": 15,
+            "Fuel Reagent": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Damaged Sal Volatile": 30,
+            "Fuel Reagent": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 72000,
+            "Serum Syringe": 1,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Serum Syringe": 2,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          }
+        ],
+        "术语解释": {
+          "Executioner": "While in [Executioner], increases [Resolve], and [Nightmeld] is replaced by [Shadowstrike]. Every 3s, converts a portion of ATK into Max HP.\nWhile in [Executioner], when dealing DMG with Dual Blades, if it is not Additional DMG, consumes 5% Max HP to deal additional DMG based on Max HP. This DMG is guaranteed to trigger its Bonus Effect.\nThe HP cost is deducted over 5s, down to a minimum of 30% Max HP.",
+          "Shadowstrike": "Falsi dashes through enemies ahead, dealing Pyro Damage.",
+          "Execution Target": "When marked, the target takes 1 instance of Disruption Damage from Falsi and gains 1 stack of [Pyro Disruption].\nFalsi deals increased damage to [Execution Targets]. While in [Executioner] and an [Execution Target] dies, choose a new [Execution Target]."
+        },
+        "行为": "造成目标最大生命109.0%的火属性伤害(技能/终结技);削减战姿30;附加增益(310421)[激活技能](持续20秒);附加增益(310423)[Resolve+#1](持续20秒);触发被动功能[Falu_Skill02_Target](被动效果310401·BP_Falu_Passive)"
       },
       {
         "id": 310403,
+        "名称": "Awakening",
         "类型": "Passive",
-        "icon": "",
-        "行为": "被动效果(310401)(BP_Falu_Passive);增益(120232)[每层+0.1Damage Dealt(最多240层)];增益(120231)"
+        "描述": "When Falsi loses HP, she gains the same amount of [Conviction], up to 100,000.\n[Shadowstrike] consumes [Conviction] to increase its damage multiplier.",
+        "icon": "Falu03",
+        "字段": [
+          {
+            "名称": "Minimum [Conviction] Required",
+            "值": 15000,
+            "格式": "{}"
+          },
+          {
+            "名称": "[Shadowstrike] Damage Multiplier increased",
+            "值": [
+              6.46,
+              7.89,
+              9.32,
+              10.75,
+              12.18,
+              13.61,
+              15.04,
+              16.47,
+              17.9,
+              19.33,
+              20.76,
+              22.19
+            ],
+            "格式": "{%}Max HP"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Damaged Sal Volatile": 3,
+            "Fuel Reagent": 1
+          },
+          {
+            "Coin": 2080,
+            "Damaged Sal Volatile": 6,
+            "Fuel Reagent": 2
+          },
+          {
+            "Coin": 2560,
+            "Damaged Sal Volatile": 9,
+            "Fuel Reagent": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Damaged Sal Volatile": 15,
+            "Fuel Reagent": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Damaged Sal Volatile": 30,
+            "Fuel Reagent": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 72000,
+            "Serum Syringe": 1,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Serum Syringe": 2,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          }
+        ],
+        "行为": "被动效果(310401)(BP_Falu_Passive)"
       },
       {
         "id": 310404,
-        "类型": "",
-        "icon": "",
+        "名称": "Bloodbath",
+        "类型": "Passive",
+        "描述": "When an [Execution Target] is hit by [Shadowstrike], Falsi consumes 3 stacks of [Pyro Disruption] to trigger an instance of Pyro AoE DMG and restore HP.",
+        "icon": "ExtraPassive",
+        "字段": [
+          {
+            "名称": "DMG",
+            "影响": "技能威力",
+            "值": 6.6,
+            "格式": "{%}Max HP",
+            "削韧": 20
+          },
+          {
+            "名称": "Healing",
+            "值": 0.5,
+            "格式": "{%}Max HP"
+          }
+        ],
         "行为": "被动效果(310403)(BP_Falu_Passive2)"
+      },
+      {
+        "id": 100004,
+        "名称": "Novelty",
+        "类型": "Support",
+        "描述": "[Available only when deployed as a Combat Partner]\n Increases Skill DMG for the user and allies.",
+        "icon": "PhantomPassive",
+        "字段": [
+          {
+            "名称": "Skill DMG Boost",
+            "值": 0.1
+          }
+        ],
+        "行为": "被动效果(100004)(BP_Common_PhantomPassive)"
       }
     ],
-    "碎片": 1003104
+    "溯源": [
+      "While [Executioner] is active, the interval between ATK-to-Max-HP conversions is reduced by 50%.",
+      "When [Shadowstrike] is cast while only 1 [Execution Target] is present, damage dealt to that target increases by 100%.",
+      "[Nightmeld] Lv. +2; [Awakening] Lv. +1.",
+      "Consuming 3 stacks of [Pyro Disruption] with [Shadowstrike] extends [Executioner]'s duration by 5s and grants 15% [Resolve] for 5s.",
+      "[Abyss Descent] Lv. +2; [Awakening] Lv. +1.",
+      "[Executioner] grants 50% PEN Stats while active."
+    ],
+    "碎片": 1003104,
+    "专武": 10405
   },
   {
     "id": 3201,
@@ -10086,9 +11203,32 @@
       "[Scarlet Banquet] Level +2. [Deadly Sip] Level +1.",
       "Damage from [Crimson Wound] +30%. [Sommelier's Blades] Launch Speed is increased to 25m/s.",
       "[Claret Waltz] Level +2. [Deadly Sip] Level +1.",
-      "While orbited by [Sommelier's Blades], Camilla's PEN stats increases by 45%. When [Crimson Wound] is removed, 1 additional stack is removed, dealing 1 additional instance of damage."
+      "While orbited by [Sommelier's Blades], Camilla's PEN stats increases by 45%. When [Crimson Wound] is removed, 1 additional stack is removed, dealing 1 additional instance of damage.",
+      "Damage dealt by [Sommelier's Blade] applies 3 additional stacks of [Crimson Wound]. Whenever stacks of [Crimson Wound] are removed, 6 additional stacks are removed and 6 additional instances of damage are dealt. Up to 150 stacks of [Crimson Wound] can now be removed from each target every 3s.\nWhen [Revelry] is removed, allies recover 5 Sanity. For 10s, Pyro Damage dealt by all team members is increased by 35%, while their Skill Damage ignores 30% of the target's DEF."
     ],
     "碎片": 1003202,
+    "第七溯源消耗": [
+      [
+        1023202,
+        1
+      ],
+      [
+        1003202,
+        30
+      ],
+      [
+        10100,
+        2
+      ],
+      [
+        20031,
+        5
+      ],
+      [
+        10008,
+        20
+      ]
+    ],
     "专武": 20512
   },
   {
@@ -11160,6 +12300,9 @@
               6.7,
               7.16
             ],
+            "tag": [
+              "召唤物"
+            ],
             "削韧": 100,
             "Boss削韧": 40,
             "取消": 5.6339
@@ -11784,6 +12927,248 @@
     "专武": 10304
   },
   {
+    "id": 4103,
+    "icon": "SpLise",
+    "名称": "SP黎瑟",
+    "版本": "1.7",
+    "别名": "UI_CHAR_SUBTITLE_4103",
+    "阵营": "The Hyperborean Empire",
+    "属性": "雷",
+    "精通": [
+      "Katana",
+      "Assault Rifle"
+    ],
+    "标签": [
+      "DPS",
+      "Skill DMG"
+    ],
+    "基础攻击": 22,
+    "基础生命": 94,
+    "基础防御": 276,
+    "基础护盾": 94,
+    "基础神智": 150,
+    "突破": [
+      {
+        "Coin": 5200,
+        "Chain": 10,
+        "Lightning Rod": 5
+      },
+      {
+        "Coin": 10400,
+        "Vehicle Armour": 5,
+        "Stormfall Jade": 7
+      },
+      {
+        "Coin": 16300,
+        "Vehicle Armour": 10,
+        "Stormfall Jade": 15
+      },
+      {
+        "Coin": 34700,
+        "Vehicle Armour": 20,
+        "Golden Wool": 6
+      },
+      {
+        "Coin": 81600,
+        "Vehicle Armour": 40,
+        "Golden Wool": 12
+      },
+      {
+        "Coin": 243000,
+        "Vehicle Armour": 80,
+        "Golden Wool": 25
+      }
+    ],
+    "技能": [
+      {
+        "id": 410301,
+        "类型": "DMG",
+        "icon": "Linen01",
+        "升级": [
+          {
+            "Coin": 1120,
+            "Chain": 3,
+            "Vehicle Armour": 1
+          },
+          {
+            "Coin": 2080,
+            "Chain": 6,
+            "Vehicle Armour": 2
+          },
+          {
+            "Coin": 2560,
+            "Chain": 9,
+            "Vehicle Armour": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Chain": 15,
+            "Vehicle Armour": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Chain": 30,
+            "Vehicle Armour": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 72000,
+            "Serum Syringe": 1,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Serum Syringe": 2,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          }
+        ],
+        "行为": "造成角色攻击100.0%的伤害(技能/战技);削减战姿15;附加增益(113);附加增益(410311)"
+      },
+      {
+        "id": 410302,
+        "类型": "Buff",
+        "icon": "Linen02_On",
+        "升级": [
+          {
+            "Coin": 1120,
+            "Chain": 3,
+            "Vehicle Armour": 1
+          },
+          {
+            "Coin": 2080,
+            "Chain": 6,
+            "Vehicle Armour": 2
+          },
+          {
+            "Coin": 2560,
+            "Chain": 9,
+            "Vehicle Armour": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Chain": 15,
+            "Vehicle Armour": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Chain": 30,
+            "Vehicle Armour": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 72000,
+            "Serum Syringe": 1,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Serum Syringe": 2,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          }
+        ],
+        "行为": "附加增益(410321)[激活技能, 召唤武器, 禁用[下落攻击, 重击, 蓄力射击, 滑行攻击]];附加增益(410322)[每0.2秒执行技能效果(410326)];附加增益(410323)[替换动作]"
+      },
+      {
+        "id": 410303,
+        "类型": "Passive",
+        "icon": "Linen03",
+        "升级": [
+          {
+            "Coin": 1120,
+            "Chain": 3,
+            "Vehicle Armour": 1
+          },
+          {
+            "Coin": 2080,
+            "Chain": 6,
+            "Vehicle Armour": 2
+          },
+          {
+            "Coin": 2560,
+            "Chain": 9,
+            "Vehicle Armour": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Chain": 15,
+            "Vehicle Armour": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Chain": 30,
+            "Vehicle Armour": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Sacred Candle": 6,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Sacred Candle": 8,
+            "Ring of Justice Rekindled": 1
+          },
+          {
+            "Coin": 72000,
+            "Serum Syringe": 1,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Serum Syringe": 2,
+            "Ring of Justice Rekindled": 2,
+            "Twilight Tread": 1
+          }
+        ],
+        "行为": "被动效果(410301)(BP_SPLise_Passive)"
+      },
+      {
+        "id": 410304,
+        "类型": "Passive",
+        "icon": "ExtraPassive"
+      }
+    ],
+    "碎片": 1004103
+  },
+  {
     "id": 4201,
     "icon": "Yuming",
     "名称": "Yuming",
@@ -11879,6 +13264,9 @@
               4.23,
               4.46
             ],
+            "tag": [
+              "武器"
+            ],
             "削韧": 50
           },
           {
@@ -11896,6 +13284,9 @@
               19.99,
               21.47,
               22.95
+            ],
+            "tag": [
+              "武器"
             ],
             "削韧": 50
           },
@@ -13895,7 +15286,7 @@
             "类型": "Buff",
             "icon": "Songlu02_Off",
             "cd": 3.4,
-            "行为": "执行[RemoveUnit];移除增益(510121)[移动速度+0.6, Jump Speed+30%, 激活技能, 召唤武器, 禁用[重击, 滑行攻击, 射击, 蓄力射击, 装填]]",
+            "行为": "执行[RemoveUnit];移除",
             "名称": "Passion For Work"
           }
         ],
@@ -14749,6 +16140,9 @@
               1.404,
               1.478
             ],
+            "tag": [
+              "武器"
+            ],
             "削韧": 15,
             "Boss削韧": 14
           },
@@ -15524,7 +16918,7 @@
             "cd": 1
           }
         ],
-        "行为": "移除增益(540221)[激活技能];延迟1.5秒后附加增益(540221)[激活技能](持续16秒);延迟1.5秒后附加增益(540201)[激活技能, 替换动作, 启用飞行, 召唤武器, 禁用[下落攻击, 重击, 滑行攻击, 普攻]]"
+        "行为": "移除增益(540221)[激活技能];延迟3秒后附加增益(540221)[激活技能](持续16秒);延迟3秒后附加增益(540201)[激活技能, 替换动作, 启用飞行, 召唤武器, 禁用[下落攻击, 重击, 滑行攻击, 普攻]]"
       },
       {
         "id": 540203,

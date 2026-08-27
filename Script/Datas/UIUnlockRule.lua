@@ -14,7 +14,8 @@ T.RT_6 = {1, 5}
 T.RT_7 = {
   "UI_Locked_Des_NewMap"
 }
-T.RT_8 = {
+T.RT_8 = {2}
+T.RT_9 = {
   "UI_Locked_Des_Shop"
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
@@ -172,7 +173,7 @@ return ReadOnly("UIUnlockRule", {
   },
   Chat = {
     AfterUIUnlockDesc = "System_Des_Chat",
-    ConditionId = 4260,
+    ConditionId = 10020105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Chat.T_Entrance_Chat",
     IsHideUnlockPopup = 1,
     OpenConditionId = T.RT_4,
@@ -248,6 +249,14 @@ return ReadOnly("UIUnlockRule", {
     UIUnlockRuleId = "ExploreBadgeShop",
     UnlockPopupType = "Normal"
   },
+  FTShopTab = {
+    ConditionId = 10040501,
+    IsHideUnlockPopup = 1,
+    OpenConditionId = T.RT_1,
+    OpenSystemDesc = T.RT_7,
+    UIUnlockName = "UI_SHOP_TAB_ExploreBadge_EXChapter01",
+    UIUnlockRuleId = "FTShopTab"
+  },
   Forging = {
     AfterUIUnlockDesc = "System_Des_Forging",
     ConditionId = 4080,
@@ -264,7 +273,7 @@ return ReadOnly("UIUnlockRule", {
   },
   FriendMain = {
     AfterUIUnlockDesc = "System_Des_Friend",
-    ConditionId = 4190,
+    ConditionId = 10020105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Friend.T_Entrance_Friend",
     OpenConditionId = T.RT_1,
     OpenSystemDesc = {
@@ -425,7 +434,7 @@ return ReadOnly("UIUnlockRule", {
   },
   Match = {
     AfterUIUnlockDesc = "System_Des_Match",
-    ConditionId = 4240,
+    ConditionId = 10020105,
     IsHideUnlockPopup = 1,
     OpenSystemDesc = {
       "UI_Disabled_Des_Match"
@@ -566,7 +575,7 @@ return ReadOnly("UIUnlockRule", {
     AfterUIUnlockDesc = "System_Des_PhotoCamera_CBT3",
     ConditionId = 4200,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Camera.T_Entrance_Camera",
-    OpenConditionId = {2},
+    OpenConditionId = T.RT_8,
     OpenSystemDesc = {
       "UI_Disabled_Des_PhotoCamera"
     },
@@ -625,7 +634,7 @@ return ReadOnly("UIUnlockRule", {
     AfterUIUnlockDesc = "System_Des_Quest",
     ConditionId = 4130,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Task.T_Entrance_Task",
-    OpenConditionId = T.RT_1,
+    OpenConditionId = T.RT_8,
     OpenSystemDesc = {
       "UI_Disabled_Des_Quest",
       "UI_Disabled_InStoryMode"
@@ -653,7 +662,7 @@ return ReadOnly("UIUnlockRule", {
     ConditionId = 12010306,
     IsHideUnlockPopup = 1,
     OpenConditionId = T.RT_1,
-    OpenSystemDesc = T.RT_8,
+    OpenSystemDesc = T.RT_9,
     UIUnlockName = "UI_SHOP_MAINTAB_COMPLEX_3",
     UIUnlockRuleId = "RegionalShopTab"
   },
@@ -776,6 +785,20 @@ return ReadOnly("UIUnlockRule", {
     IsHideUnlockPopup = 1,
     UIUnlockRuleId = "TODSetting"
   },
+  TeamHall = {
+    AfterUIUnlockDesc = "System_Des_TeamHall",
+    ConditionId = 10020105,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Chat.T_Entrance_Chat",
+    IsHideUnlockPopup = 1,
+    OpenConditionId = T.RT_1,
+    OpenSystemDesc = {
+      "UI_Disabled_Des_TeamHall"
+    },
+    UIUnlockDesc = "UI_Locked_Des_TeamHall",
+    UIUnlockName = "MAIN_UI_TEAMHALL",
+    UIUnlockRuleId = "TeamHall",
+    UnlockPopupType = "Normal"
+  },
   Temple = {
     AfterUIUnlockDesc = "System_Des_Temple_CBT3",
     ConditionId = 4230,
@@ -794,7 +817,7 @@ return ReadOnly("UIUnlockRule", {
     ConditionId = 4240,
     IsHideUnlockPopup = 1,
     OpenConditionId = T.RT_1,
-    OpenSystemDesc = T.RT_8,
+    OpenSystemDesc = T.RT_9,
     UIUnlockName = "UI_SHOP_MAINTAB_COMPLEX_2",
     UIUnlockRuleId = "TimeRewardShopTab"
   },

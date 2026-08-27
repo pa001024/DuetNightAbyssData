@@ -52,6 +52,18 @@ function Menu_Level_PC_C:Initialize(Initializer)
   self.GamePadGiveUpKeyName = "UI_Esc_Challenge"
 end
 
+function Menu_Level_PC_C:Construct()
+  self.Super.Construct(self)
+  self.TileView_Prop.OnCreateEmptyContent:Bind(self, self.CreateEmptyContent)
+  self.TileView_Reward.OnCreateEmptyContent:Bind(self, self.CreateEmptyContent)
+end
+
+function Menu_Level_PC_C:CreateEmptyContent()
+  local Content = NewObject(UIUtils.GetCommonItemContentClass())
+  Content.ParentWidget = self
+  return Content
+end
+
 function Menu_Level_PC_C:OnLoaded()
   self.Super.OnLoaded(self)
   AudioManager(self):PlayUISound(self, "event:/ui/common/esc_menu_open", "EscMenuOpen", nil)
@@ -74,7 +86,7 @@ function Menu_Level_PC_C:Init()
   self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
   self:RefreshOpInfoByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
   local BattleMainUI = UIManager(self):GetUI("BattleMain")
-  if nil ~= BattleMainUI then
+  if nil ~= BattleMainUI and not self.InShootTarget then
     BattleMainUI:SetRenderOpacity(0)
   end
   local FeinaHud = UIManager(self):GetUI("FeinaEventHUD")
@@ -89,12 +101,19 @@ end
 
 function Menu_Level_PC_C:InitByType()
   local Avatar = GWorld:GetAvatar()
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
   self.InHardBoss = false
   self.InGuildBoss = false
   self.InTemple = false
   self.InTraining = false
   self.InRougeLike = false
+  self.InShootTarget = false
   self.IsInCommonDungeon = false
+  if GameMode and GameMode:IsShootTargetGameActive() then
+    self.InShootTarget = true
+    self:InitShootTarget()
+    return
+  end
   if Avatar and Avatar:IsInHardBoss() then
     self.InHardBoss = true
     self:InitHardBoss()
@@ -115,7 +134,6 @@ function Menu_Level_PC_C:InitByType()
     self.InSpecialQuest = true
     return
   end
-  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
   local GameState = UE4.UGameplayStatics.GetGameState(self)
   local Widget = self.Coop_PauseRound.EMScrollBox_176
   if nil ~= GameMode and nil ~= GameState then
@@ -169,6 +187,17 @@ function Menu_Level_PC_C:InitByType()
   self.IsInCommonDungeon = true
   table.insert(self.BtnName, "UI_HardBoss_TabName_2")
   table.insert(self.ClickFunction, "OnClickExitGame")
+end
+
+function Menu_Level_PC_C:InitShootTarget()
+  self.WidgetSwitcher_Type:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.WidgetSwitcher_Show:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Panel_ExpGain:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  table.remove(self.BtnName, 3)
+  table.remove(self.ClickFunction, 3)
+  table.insert(self.BtnName, "UI_SpecialQuest_GiveUp")
+  table.insert(self.ClickFunction, "OnClickExitGame")
+  self.GamePadGiveUpKeyName = "UI_SpecialQuest_GiveUp"
 end
 
 function Menu_Level_PC_C:InitSoloTreasure()
@@ -435,11 +464,6 @@ function Menu_Level_PC_C:InitContractHeatPanel()
 end
 
 function Menu_Level_PC_C:InitAsyncCombat()
-  self.WidgetSwitcher_Type:SetActiveWidgetIndex(4)
-  self.WidgetSwitcher_Show:SetActiveWidgetIndex(0)
-  self.SizeBox_HeatBtn:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  table.insert(self.BtnName, "UI_AsyncCombat_LeaveStage")
-  table.insert(self.ClickFunction, "OnClickExitGame")
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
   if not GameMode then
     return
@@ -448,13 +472,22 @@ function Menu_Level_PC_C:InitAsyncCombat()
   if not AsyncCombatComponent then
     return
   end
-  local CurRound = AsyncCombatComponent.BossCurStep
   self.Ws_Tips:SetActiveWidgetIndex(1)
   local GTextDebuffTitle = CoopUtils.GetGTextDebuffTitle(AsyncCombatComponent)
   if GTextDebuffTitle then
     self.Coop_Debuff.TextTitle:SetText(GTextDebuffTitle)
   end
   self.Coop_Debuff.TextDebuff:SetText(GText("AsyncCombatDebuffDesc"))
+  if UIUtils.IsInAsyncPersonalRoom() then
+    self:InitHardBoss()
+    return
+  end
+  self.WidgetSwitcher_Type:SetActiveWidgetIndex(4)
+  self.WidgetSwitcher_Show:SetActiveWidgetIndex(0)
+  self.SizeBox_HeatBtn:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  table.insert(self.BtnName, "UI_AsyncCombat_LeaveStage")
+  table.insert(self.ClickFunction, "OnClickExitGame")
+  local CurRound = AsyncCombatComponent.BossCurStep
   self.Coop_PauseRound.TextNow:SetText(tostring(CurRound))
   self.Coop_PauseRound.TextTitle:SetText(GText("UI_AsyncCombat_TotalStages"))
   self.Coop_PauseRound:InitAsyncCombat(AsyncCombatComponent.AsyncCombatInfo)
@@ -508,7 +541,7 @@ function Menu_Level_PC_C:InitSetupList()
 end
 
 function Menu_Level_PC_C:InitRoleItemInfos()
-  if self.InAbyss or self.InFeinaEvent or self.InTemple or self.InParty then
+  if self.InAbyss or self.InFeinaEvent or self.InTemple or self.InParty or self.InShootTarget then
     return
   end
   self.RoleItemInfos = {
@@ -537,7 +570,6 @@ function Menu_Level_PC_C:CalcRoleAndRewardsInfo()
   if self.WidgetSwitcher_Type:GetVisibility() == UIConst.VisibilityOp.Collapsed then
     return
   end
-  self.ScrollBox_RewardDrop:SetControlScrollbarInside(true)
   self:PreInitPropInfo()
   self:CalcPropInfo(Avatar)
 end
@@ -699,6 +731,13 @@ function Menu_Level_PC_C:CreateOneReward(RewardType, RewardTypeValue, Id, Num, I
   local RewardInfo = DataMgr[RewardType][tonumber(Id)]
   if RewardInfo then
     local ResourceData = {}
+    if "UpgradeMod" == RewardType then
+      ResourceData.ModLevel = RewardInfo.ModLevel
+      local ModId = RewardInfo.ModId
+      RewardInfo = DataMgr.Mod[ModId]
+      RewardType = "Mod"
+      Id = ModId
+    end
     ResourceData.Priority = RewardTypeValue.DungeonRewardSeq or 0
     ResourceData.Id = Id
     ResourceData.Count = Num
@@ -717,6 +756,19 @@ function Menu_Level_PC_C:CreateOneReward(RewardType, RewardTypeValue, Id, Num, I
 end
 
 function Menu_Level_PC_C:CalcRoleInfo(Avatar)
+  local Player = self.Player
+  if not IsValid(Player) then
+    self.Panel_ExpGain:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    return
+  end
+  local bUseQuestRole = Player.AvatarQuestRoleID and 0 ~= Player.AvatarQuestRoleID
+  local bUseSlideRole = Player.AvatarSlideRoleID and 0 ~= Player.AvatarSlideRoleID
+  local CurrentRoleId = not (bUseQuestRole or bUseSlideRole) and (tonumber(Player.CurrentRoleId) or Player.CurrentRoleId) or nil
+  if CurrentRoleId and not DataMgr.Char[CurrentRoleId] then
+    DebugPrint("Menu_Level_PC_C CalcRoleInfo skip unconfigured role", CurrentRoleId)
+    self.Panel_ExpGain:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    return
+  end
   local NowExps = self:SetNowExps()
   local InitSuccess = false
   for RoleName, Widget in pairs(self.RoleItemInfos) do
@@ -866,16 +918,6 @@ function Menu_Level_PC_C:PreInitPropInfo()
   self.TileView_Prop:SetVisibility(UIConst.VisibilityOp.Visible)
   self.TileView_Reward:SetVisibility(UIConst.VisibilityOp.Visible)
   self.Text_None:SetText(GText("UI_NONE"))
-  self.TileView_Reward.OnCreateEmptyContent:Bind(self, function()
-    local Content = NewObject(UIUtils.GetCommonItemContentClass())
-    Content.ParentWidget = self
-    return Content
-  end)
-  self.TileView_Reward.OnCreateEmptyContent:Bind(self, function()
-    local Content = NewObject(UIUtils.GetCommonItemContentClass())
-    Content.ParentWidget = self
-    return Content
-  end)
 end
 
 function Menu_Level_PC_C:GetDungeonInfo(DungeonId)
@@ -930,7 +972,6 @@ function Menu_Level_PC_C:InitDungeonClearanceTime()
 end
 
 function Menu_Level_PC_C:InitRewardsInfo(RewardArr, RewardViewWidget)
-  local DropItemNumEachRow, DropRowNum = UIUtils.GetTileViewContentMaxCount(RewardViewWidget, "XY", true)
   local RewardTotalNum = #RewardArr
   if RewardTotalNum < 1 and 0 == #self.SpRewardsArray and 0 == #self.RewardsArray then
     self.WidgetSwitcher_State:SetActiveWidgetIndex(1)
@@ -938,26 +979,16 @@ function Menu_Level_PC_C:InitRewardsInfo(RewardArr, RewardViewWidget)
       self:ShowOrHideGamepadRewardKey(false)
     end
   else
-    if 0 == #self.SpRewardsArray then
-      DropRowNum = math.max(DropRowNum, 2)
-    end
-    local MaxItemNum = DropRowNum * DropItemNumEachRow
-    if RewardTotalNum > MaxItemNum then
-      local RealRowNum = RewardTotalNum // DropItemNumEachRow
-      if 0 ~= RewardTotalNum % DropItemNumEachRow then
-        RealRowNum = RealRowNum + 1
-      end
-      MaxItemNum = RealRowNum * DropItemNumEachRow
-      DebugPrint("@@@Esc Init RewardsInfo,Show all Item and AddEmpty Content: Maxitemnum, Realrownum, Dropitemnumeachrow", MaxItemNum, RealRowNum, DropItemNumEachRow)
-    end
-    DebugPrint("@@@Esc Init RewardsInfo: RewardTotalNum, Maxitemnum", RewardTotalNum, MaxItemNum)
-    for i = 1, MaxItemNum do
+    for i = 1, #RewardArr do
       RewardViewWidget:AddItem(self:NewPropContent(RewardArr[i]))
     end
-    RewardViewWidget:SetEmptyGridItemCount(math.max(0, MaxItemNum - RewardTotalNum))
     RewardViewWidget:DisableScroll(true)
     RewardViewWidget:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   end
+  self:AddTimer(0.01, function()
+    self.ScrollBox_RewardDrop:ForceLayoutPrepass()
+    RewardViewWidget:RequestFillEmptyContent()
+  end)
 end
 
 function Menu_Level_PC_C:NewPropContent(Content)
@@ -996,6 +1027,9 @@ function Menu_Level_PC_C:NewPropContent(Content)
       Obj.BonusType = 2
     end
     Obj.UIName = "MenuLevel"
+    if Content.ModLevel then
+      Obj.ModLevel = Content.ModLevel
+    end
   end
   return Obj
 end
@@ -1248,8 +1282,29 @@ function Menu_Level_PC_C:OnClickExitGame()
   end
   if self.IsInAsyncCombat then
     PopupId = 100350
+    local Progress = CoopUtils.GetMyProgress()
+    if Progress and type(Progress) == "number" and Progress < 3 then
+      PopupId = 100437
+    end
+  end
+  if self.InShootTarget then
+    Params.RightCallbackFunction = self.ExitShootTargetGame
+    PopupId = 100120
   end
   UIManager(self):ShowCommonPopupUI(PopupId, Params, self)
+end
+
+function Menu_Level_PC_C:ExitShootTargetGame()
+  local CommonDialog = UIManager(self):GetUIObj("CommonDialog")
+  if CommonDialog then
+    CommonDialog:Close()
+  end
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  if not GameMode or not GameMode:AbortShootTargetGameByGameMode() then
+    DebugPrint("Menu_Level_PC_C ExitShootTargetGame failed")
+    return
+  end
+  self:CloseSelf()
 end
 
 function Menu_Level_PC_C:OnClickHalfwayOut()

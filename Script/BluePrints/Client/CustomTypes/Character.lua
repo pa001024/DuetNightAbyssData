@@ -42,7 +42,10 @@ Char.__Props__ = {
   DispatchUnlock = prop.getter("Data", "DispatchUnlock"),
   DefaultSkinId = prop.getter("Data", "DispatchUnlock"),
   DefaultAccessory = prop.getter("Data", "DefaultAccessory"),
-  IsStar = prop.prop("Bool", "client save", false)
+  IsStar = prop.prop("Bool", "client save", false),
+  UnlockedExcelWeaponExpand = prop.prop("Str2IntDict", "client save"),
+  CurrentExcelWeaponExpand = prop.prop("Str2IntDict", "client save"),
+  IsWarLike = prop.prop("Bool", "client save", false)
 }
 
 function Char:Init(Uuid, CharId, Level)
@@ -462,7 +465,8 @@ function Char:BattleDump(Avatar, ExtraInfo)
     AppearanceSuit = self:DumpAppearanceSuit(Avatar),
     ModData = AvatarUtils:DumpModData(ExtraInfo),
     SlotData = ExtraInfo.SlotData,
-    ModSuitIndex = ExtraInfo.ModSuit
+    ModSuitIndex = ExtraInfo.ModSuit,
+    CurrentExcelWeaponExpand = self:DumpCurrentExcelWeaponExpand()
   }
   return Result
 end
@@ -560,6 +564,15 @@ function Char:DumpSkillTreeInfos(Avatar, ExtraInfo)
   return SkillTreeInfos
 end
 
+function Char:DumpCurrentExcelWeaponExpand()
+  local Result = {}
+  for WeaponTag in pairs(self.CurrentExcelWeaponExpand or {}) do
+    Result[#Result + 1] = WeaponTag
+  end
+  table.sort(Result)
+  return Result
+end
+
 function Char:DumpPassiveEffects(Avatar, ExtraInfo)
   local ModData = ExtraInfo.ModData
   if not ModData then
@@ -634,8 +647,21 @@ function Char:DumpAppearanceSuit(Avatar, AppearanceIndex)
     HairId = HairId,
     Colors = self:DumpColors(Avatar, SkinId),
     HairColors = self:DumpHairColors(Avatar, HairId),
-    CharId = self.CharId
+    CharId = self.CharId,
+    EffectInterval = self:DumpSkinEffectInterval(Avatar, SkinId)
   }
+end
+
+function Char:DumpSkinEffectInterval(Avatar, SkinId)
+  if not Avatar or not Avatar.CommonChars then
+    return 1
+  end
+  local CommonChar = Avatar.CommonChars[self.CharId]
+  local Skin = CommonChar and CommonChar.OwnedSkins[SkinId]
+  if not Skin then
+    return 1
+  end
+  return Skin.EffectInterval
 end
 
 function Char:DumpSkinLevel(Avatar, SkinId)

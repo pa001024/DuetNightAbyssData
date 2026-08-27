@@ -99,7 +99,9 @@ function M:SaveEditAndClose()
     self.IsSaving = false
     if ErrorCode and ErrorCode.Check and ErrorCode:Check(Ret) then
       UIManager(self.OwnerWidget):ShowUITip("CommonToastMain", GText("UI_PersonInfo_Saved"))
-      PersonInfoController:CloseEditView()
+      if self.OwnerWidget and self.OwnerWidget.Close then
+        self.OwnerWidget:Close()
+      end
     end
   end)
   if not bStarted then

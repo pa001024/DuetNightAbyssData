@@ -71,7 +71,8 @@ function GM_Command_Region:Init_Region_Command()
     AIPN = "AddImpressionPreNode",
     CreateRegionPet = "CreateRegionPet",
     TSS = "TestSojournsSystem",
-    SetViewTargetWithWC = "SetViewTargetWithWC"
+    SetViewTargetWithWC = "SetViewTargetWithWC",
+    SRC = "SpawnRandomChar"
   }
 end
 
@@ -995,6 +996,54 @@ function GM_Command_Region:CreateRegionPet(UnitId)
   local GameInstance = self:GetGameInstance()
   local GMFunctionLibrary = require("BluePrints.UI.GMInterface.GMFunctionLibrary")
   GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm crp " .. UnitId .. " " .. LevelName)
+end
+
+function GM_Command_Region:SpawnRandomChar(resourceID)
+  local PlayerCharacter = UE4.UGameplayStatics.GetPlayerCharacter(self.Player, 0)
+  if not PlayerCharacter then
+    ScreenPrint("SpawnRandomChar: PlayerCharacter is nil")
+    return
+  end
+  local CharTable = DataMgr.Char
+  local Keys = {}
+  for Key, _ in pairs(CharTable) do
+    Keys[#Keys + 1] = Key
+  end
+  if 0 == #Keys then
+    ScreenPrint("SpawnRandomChar: Char table is empty")
+    return
+  end
+  local RandomKey = Keys[math.random(1, #Keys)]
+  local CharData = CharTable[RandomKey]
+  local RoleId = CharData.RoleId
+  local SkinId = CharData.DefaultSkinId or CharData.SkinId and CharData.SkinId[1] or RoleId
+  local HairId = CharData.DefaultHairId or RoleId
+  local Location = PlayerCharacter:K2_GetActorLocation() + PlayerCharacter:GetActorForwardVector() * 200
+  local Rotation = PlayerCharacter:K2_GetActorRotation()
+  local BPPath = "/Game/BluePrints/Char/BP_PlayerCharacter.BP_PlayerCharacter_C"
+  local PlayerBPClass = LoadClass(BPPath)
+  local SpawnTransform = UE4.FTransform(Rotation, Location)
+  local SpawnChar = self.Player:GetWorld():SpawnActor(PlayerBPClass, SpawnTransform, UE4.ESpawnActorCollisionHandlingMethod.AlwaysSpawn)
+  if not SpawnChar then
+    ScreenPrint("SpawnRandomChar: SpawnActor failed")
+    return
+  end
+  local RoleInfo = {
+    RoleId = RoleId,
+    SkinId = SkinId,
+    HairId = HairId,
+    AppearanceSuit = {SkinId = SkinId, HairId = HairId},
+    FromOtherWorld = true
+  }
+  SpawnChar.CacheInfo = RoleInfo
+  SpawnChar:PreInitInfo(RoleInfo)
+  SpawnChar:RegionPlayerPendingInit()
+  SpawnChar:K2_SetActorLocationAndRotation(Location, Rotation, false, nil, false)
+  ScreenPrint("SpawnRandomChar: Success RoleId=" .. tostring(RoleId))
+  local ResourceId = tonumber(resourceID)
+  if ResourceId then
+    SpawnChar:InvokeResourceBPFunction(ResourceId)
+  end
 end
 
 return GM_Command_Region

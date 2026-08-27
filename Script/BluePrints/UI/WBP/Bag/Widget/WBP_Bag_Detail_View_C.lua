@@ -1,3 +1,4 @@
+local MiscUtils = require("Utils.MiscUtils")
 require("UnLua")
 local SkillUtils = require("Utils.SkillUtils")
 local TimeUtils = require("Utils.TimeUtils")
@@ -287,7 +288,7 @@ function WBP_Bag_Detail_View_C:RefreshInfoWithMod(PlayerAvatar, StuffServerData,
     self.Panel_LongDescribe:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
   self.Text_Hold01:SetText(GText("UI_Bag_Sellconfirm_Hold"))
-  self.Text_Hold02:SetText(Utils.FormatNumber(StuffServerData.Count, true))
+  self.Text_Hold02:SetText(MiscUtils.FormatNumber(StuffServerData.Count, true))
   self.Swtich02:SetActiveWidgetIndex(1)
   self.Panel_TimeLimit:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Text_SubTitle:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -332,11 +333,11 @@ function WBP_Bag_Detail_View_C:RefreshInfoWithResource(PlayerAvatar, StuffServer
       FishWeight = math.tointeger(StuffUnitIdList[2]) / CommonConst.FishSizeScale
     end
     self.Num_FishWeight:SetText(string.format("%.1f cm", FishWeight))
-    self.Text_Hold02:SetText(Utils.FormatNumber(self.OwnerContent.Count, true))
+    self.Text_Hold02:SetText(MiscUtils.FormatNumber(self.OwnerContent.Count, true))
     self.Panel_Fish:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self:UpdateFishTimeTag(StuffConfigData.ResourceId)
   else
-    self.Text_Hold02:SetText(Utils.FormatNumber(StuffServerData.Count, true))
+    self.Text_Hold02:SetText(MiscUtils.FormatNumber(StuffServerData.Count, true))
   end
   self.Swtich02:SetActiveWidgetIndex(1)
   if StuffConfigData.DetailDes ~= nil then
@@ -441,7 +442,7 @@ function WBP_Bag_Detail_View_C:RefreshInfoWithOther(PlayerAvatar, StuffServerDat
   self.Text_SubTitle:SetText(GText(DataMgr.BagTab[StuffConfigData.MaterialClassify].TabName))
   self.Text_SubTitle:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self.Text_Hold01:SetText(GText("UI_Bag_Sellconfirm_Hold"))
-  self.Text_Hold02:SetText(Utils.FormatNumber(self.OwnerContent.Count, true))
+  self.Text_Hold02:SetText(MiscUtils.FormatNumber(self.OwnerContent.Count, true))
   self.Swtich02:SetActiveWidgetIndex(1)
   if StuffConfigData.Description ~= nil then
     self.Text_Describe:SetText(GText(StuffConfigData.Description))
@@ -635,7 +636,7 @@ end
 
 function WBP_Bag_Detail_View_C:UpdateItemNumber()
   if self.OwnerContent then
-    self.Text_Hold02:SetText(Utils.FormatNumber(self.OwnerContent.Count, true))
+    self.Text_Hold02:SetText(MiscUtils.FormatNumber(self.OwnerContent.Count, true))
   end
 end
 

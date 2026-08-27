@@ -22,6 +22,9 @@ end
 
 function M:ShowTextPC(PCMessage, GamePadMessage)
   self:OnUpdateUIStyleByInputTypeChange(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
+  if self:IsAnimationPlaying(self.Out) then
+    self:StopAnimation(self.Out)
+  end
   local VisibleType = self:GetVisibility()
   self:SetVisibility(UE4.ESlateVisibility.Visible)
   self.PCMessage = PCMessage
@@ -36,6 +39,9 @@ function M:ShowTextPC(PCMessage, GamePadMessage)
 end
 
 function M:HideTextPC()
+  if self:IsAnimationPlaying(self.In) then
+    self:StopAnimation(self.In)
+  end
   local VisibleType = self:GetVisibility()
   
   local function End()

@@ -1,5 +1,6 @@
 require("UnLua")
 local EMCache = require("EMCache.EMCache")
+local GLink = require("Utils.MiscUtils").GLink
 local Menu_Function_Button_PC_C = Class({
   "BluePrints.UI.BP_EMUserWidget_C",
   "BluePrints.UI.BP_EMUserWidgetUtils_C"

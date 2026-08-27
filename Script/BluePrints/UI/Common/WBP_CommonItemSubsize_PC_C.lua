@@ -1,3 +1,4 @@
+local MiscUtils = require("Utils.MiscUtils")
 require("UnLua")
 local WBP_CommonItemSubsize_C = Class({
   "BluePrints.Common.TimerMgr",
@@ -288,10 +289,10 @@ function WBP_CommonItemSubsize_C:RefreshItemsByStateTag(StateTagInfo, Content)
       self.Select:AddChild(self.SelectWidget)
     end
     if StateTagInfo.ExtraData ~= nil then
-      self.SelectNumWidget.Num_Select:SetText(Utils.FormatNumber(StateTagInfo.ExtraData[1], true))
-      self.SelectNumWidget.Num_Max:SetText(Utils.FormatNumber(StateTagInfo.ExtraData[2], true))
+      self.SelectNumWidget.Num_Select:SetText(MiscUtils.FormatNumber(StateTagInfo.ExtraData[1], true))
+      self.SelectNumWidget.Num_Max:SetText(MiscUtils.FormatNumber(StateTagInfo.ExtraData[2], true))
       if Content.StuffType ~= "Weapon" then
-        self.SaleMoneyWidget.Text_Cost:SetText(Utils.FormatNumber(math.floor(StateTagInfo.ExtraData[3] + 0.5), true))
+        self.SaleMoneyWidget.Text_Cost:SetText(MiscUtils.FormatNumber(math.floor(StateTagInfo.ExtraData[3] + 0.5), true))
         local CoinIcon = LoadObject(DataMgr.Resource[StateTagInfo.ExtraData[4]].Icon)
         self.SaleMoneyWidget.Img_Coin:SetBrushResourceObject(CoinIcon)
       end
@@ -311,10 +312,10 @@ function WBP_CommonItemSubsize_C:RefreshItemsByStateTag(StateTagInfo, Content)
     end
     if StateTagInfo.ExtraData ~= nil then
       self.MinusWidget.Button_Minus.OnClicked:Add(self, self.CancelSelectClick)
-      self.SelectNumWidget.Num_Select:SetText(Utils.FormatNumber(StateTagInfo.ExtraData[1], true))
-      self.SelectNumWidget.Num_Max:SetText(Utils.FormatNumber(StateTagInfo.ExtraData[2], true))
+      self.SelectNumWidget.Num_Select:SetText(MiscUtils.FormatNumber(StateTagInfo.ExtraData[1], true))
+      self.SelectNumWidget.Num_Max:SetText(MiscUtils.FormatNumber(StateTagInfo.ExtraData[2], true))
       if Content.StuffType ~= "Weapon" then
-        self.SaleMoneyWidget.Text_Cost:SetText(Utils.FormatNumber(math.floor(StateTagInfo.ExtraData[3] + 0.5), true))
+        self.SaleMoneyWidget.Text_Cost:SetText(MiscUtils.FormatNumber(math.floor(StateTagInfo.ExtraData[3] + 0.5), true))
         local CoinIcon = LoadObject(DataMgr.Resource[StateTagInfo.ExtraData[4]].Icon)
         self.SaleMoneyWidget.Img_Coin:SetBrushResourceObject(CoinIcon)
       end
@@ -329,9 +330,9 @@ function WBP_CommonItemSubsize_C:RefreshItemsByStateTag(StateTagInfo, Content)
   elseif StateTagInfo.Name == "Normal" then
     if StateTagInfo.ExtraData ~= nil then
       self.SelectNumWidget.Num_Select:SetText("0")
-      self.SelectNumWidget.Num_Max:SetText(Utils.FormatNumber(StateTagInfo.ExtraData[1], true))
+      self.SelectNumWidget.Num_Max:SetText(MiscUtils.FormatNumber(StateTagInfo.ExtraData[1], true))
       if Content.StuffType ~= "Weapon" then
-        self.SaleMoneyWidget.Text_Cost:SetText(Utils.FormatNumber(math.floor(StateTagInfo.ExtraData[2] + 0.5), true))
+        self.SaleMoneyWidget.Text_Cost:SetText(MiscUtils.FormatNumber(math.floor(StateTagInfo.ExtraData[2] + 0.5), true))
         if StateTagInfo.ExtraData[3] ~= nil then
           local CoinIcon = LoadObject(DataMgr.Resource[StateTagInfo.ExtraData[3]].Icon)
           self.SaleMoneyWidget.Img_Coin:SetBrushResourceObject(CoinIcon)

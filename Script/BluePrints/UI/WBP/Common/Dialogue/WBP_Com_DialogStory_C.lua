@@ -61,6 +61,7 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputType, CurGamepadName)
     self:InitGamepadAfterOpen()
   else
     self.WS:SetActiveWidgetIndex(0)
+    self.ScrollBox_Content:SetVisibility(UE4.ESlateVisibility.Visible)
     self.IsOpenItemMenu = false
     self.IsInRewardFocusMode = false
   end
@@ -324,6 +325,7 @@ function M:InitGamepadAfterOpen()
     return
   end
   self.WS:SetActiveWidgetIndex(1)
+  self.ScrollBox_Content:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self.IsInRewardFocusMode = false
   self.IsOpenItemMenu = false
   if self:HasRewardList() and self.List_Reward.BP_ClearSelection then

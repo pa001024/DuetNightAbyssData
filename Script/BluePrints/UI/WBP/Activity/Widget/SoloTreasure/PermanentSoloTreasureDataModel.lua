@@ -1,6 +1,7 @@
 require("UnLua")
 local TimeUtils = require("Utils.TimeUtils")
 local EMCache = require("EMCache.EMCache")
+local SoloTreasurePermanentDataModel = require("BluePrints.UI.UI_PC.SoloTreasure.SoloTreasurePermanentDataModel")
 local PermanentSoloTreasureDataModel = {}
 PermanentSoloTreasureDataModel.REDDOT_NODE_LEVEL_LIST = "SoloTreasure_Permanent_LevelListView"
 PermanentSoloTreasureDataModel.REDDOT_NODE_SHOP_NEW = "SoloTreasure_Permanent_Shop_New"
@@ -71,6 +72,10 @@ function PermanentSoloTreasureDataModel:SetLevelEntryRead(EventId, LevelIndex, b
 end
 
 function PermanentSoloTreasureDataModel:RefreshLevelListNewReddot(SeasonId)
+  if not SoloTreasurePermanentDataModel:IsPlaySubtabUnlocked() then
+    ReddotManager.ClearLeafNodeCount(self.REDDOT_NODE_LEVEL_LIST)
+    return
+  end
   local EventId = self:GetSeasonEventId(SeasonId)
   if not EventId then
     ReddotManager.ClearLeafNodeCount(self.REDDOT_NODE_LEVEL_LIST)
@@ -121,6 +126,10 @@ function PermanentSoloTreasureDataModel:SetShopEntryRead(EventId, bRead)
 end
 
 function PermanentSoloTreasureDataModel:RefreshShopNewReddot(SeasonId)
+  if not SoloTreasurePermanentDataModel:IsPlaySubtabUnlocked() then
+    ReddotManager.ClearLeafNodeCount(self.REDDOT_NODE_SHOP_NEW)
+    return
+  end
   local EventId = self:GetSeasonEventId(SeasonId)
   local SeasonRow = self:GetSeasonRow(SeasonId)
   local ShopId = SeasonRow and tonumber(SeasonRow.SeasonShop)
@@ -159,7 +168,19 @@ function PermanentSoloTreasureDataModel:RefreshReddotWithConditionUnlock(Conditi
   end
   self:RefreshLevelListNewReddot(SeasonId)
   self:RefreshShopNewReddot(SeasonId)
-  local SoloTreasurePermanentDataModel = require("BluePrints.UI.UI_PC.SoloTreasure.SoloTreasurePermanentDataModel")
+  SoloTreasurePermanentDataModel:InitReddotTree()
+end
+
+function PermanentSoloTreasureDataModel:RefreshReddotWithSystemUnlock(SystemIds)
+  if not (SystemIds and SystemIds.Contains) or not SystemIds:Contains(SoloTreasurePermanentDataModel.PLAYSUBTAB_UNLOCK_RULE) then
+    return
+  end
+  local SeasonId = self:GetCurrentSeasonId()
+  if not SeasonId then
+    return
+  end
+  self:RefreshLevelListNewReddot(SeasonId)
+  self:RefreshShopNewReddot(SeasonId)
   SoloTreasurePermanentDataModel:InitReddotTree()
 end
 
@@ -169,6 +190,7 @@ function PermanentSoloTreasureDataModel:BindUnlockReddotRefresh()
   end
   self.bUnlockReddotRefreshBinded = true
   EventManager:AddEvent(EventID.ConditionComplete, self, self.RefreshReddotWithConditionUnlock)
+  EventManager:AddEvent(EventID.OnSystemUnlockEnding, self, self.RefreshReddotWithSystemUnlock)
 end
 
 function PermanentSoloTreasureDataModel:UnBindUnlockReddotRefresh()
@@ -177,6 +199,7 @@ function PermanentSoloTreasureDataModel:UnBindUnlockReddotRefresh()
   end
   self.bUnlockReddotRefreshBinded = false
   EventManager:RemoveEvent(EventID.ConditionComplete, self)
+  EventManager:RemoveEvent(EventID.OnSystemUnlockEnding, self)
 end
 
 function PermanentSoloTreasureDataModel:MarkLevelEntryRead(SeasonId, LevelIndex)

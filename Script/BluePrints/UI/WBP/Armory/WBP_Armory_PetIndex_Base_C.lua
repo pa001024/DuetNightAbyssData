@@ -223,25 +223,25 @@ function M:CreateContents()
   local PetEntryLockSetting = Avatar.PetEntryLockSetting
   for key, value in pairs(DataMgr.PetEntry) do
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
-    Content.Id = value.PetEntryID
-    Content.Rarity = value.Rarity
-    Content.ItemName = GText(value.PetEntryName)
-    Content.BattlePetID = value.BattlePetID
-    Content.IconPath = value.Icon
-    Content.Icon = value.Icon
-    Content.ItemType = "PetEntry"
-    Content.Desc = SkillUtils.CalcPetEntryDesc(value.PetEntryID)
-    Content.OnAddedToFocusPathEvent = {
+    rawset(Content, "Id", value.PetEntryID)
+    rawset(Content, "Rarity", value.Rarity)
+    rawset(Content, "ItemName", GText(value.PetEntryName))
+    rawset(Content, "BattlePetID", value.BattlePetID)
+    rawset(Content, "IconPath", value.Icon)
+    rawset(Content, "Icon", value.Icon)
+    rawset(Content, "ItemType", "PetEntry")
+    rawset(Content, "Desc", SkillUtils.CalcPetEntryDesc(value.PetEntryID))
+    rawset(Content, "OnAddedToFocusPathEvent", {
       Obj = self,
       Callback = self.OnAddedToFocusPathEvent,
       Params = Content
-    }
+    })
     if PetEntryLockSetting[key] then
-      Content.IsLocked = true
-      Content.LockType = 1
+      rawset(Content, "IsLocked", true)
+      rawset(Content, "LockType", 1)
     else
-      Content.IsLocked = false
-      Content.LockType = 0
+      rawset(Content, "IsLocked", false)
+      rawset(Content, "LockType", 0)
     end
     table.insert(self.ContentArray, Content)
     self.ContentMap[Content.Id] = Content
@@ -257,16 +257,16 @@ function M:CreateContents()
   for key, value in pairs(Avatar.PetUnlockedEntrys) do
     local Content = self.ContentMap[key]
     if Content then
-      Content.IsOwned = true
-      Content.EntryCount = EntryCount[key]
+      rawset(Content, "IsOwned", true)
+      rawset(Content, "EntryCount", EntryCount[key])
       if Content.IsOwned and not CacheDetail[Content.Id] then
-        Content.RedDotType = UIConst.RedDotType.NewRedDot
+        rawset(Content, "RedDotType", UIConst.RedDotType.NewRedDot)
       end
     end
   end
   for _, Content in pairs(self.ContentMap) do
     if not Content.IsOwned then
-      Content.bShadow = true
+      rawset(Content, "bShadow", true)
     end
   end
 end

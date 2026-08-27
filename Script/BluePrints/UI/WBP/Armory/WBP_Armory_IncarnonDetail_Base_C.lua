@@ -70,7 +70,7 @@ function M:RefreshDetailPanelByLastSelectedItem()
     return Widget and Widget.TalentId
   end
   
-  local Widget = self.LastSelecedItem
+  local Widget = self.LastSelectedItem
   if IsTalentWisget(Widget) then
     self:RefreshTalentDetailPanel(Widget, Widget.TalentId)
   else
@@ -83,7 +83,6 @@ function M:OnResourcesChanged(ResourceId)
     return
   end
   local IsChanged = false
-  self:BlockAllUIInput(true)
   for CardLevel = 1, self.MaxCardLevel do
     local CardWidget = self.Armory_Incarnon:GetCardLevelWidget(CardLevel)
     if not CardWidget then
@@ -105,7 +104,6 @@ function M:OnResourcesChanged(ResourceId)
     end
   end
   self:RefreshDetailPanelByLastSelectedItem()
-  self:BlockAllUIInput(false)
 end
 
 function M:InitWeaponIconAndName()
@@ -265,14 +263,14 @@ function M:InitCardDetailTalents(CardWidget)
 end
 
 function M:ProcessSelectedAnimation(Widget)
-  if self.LastSelecedItem == Widget then
+  if self.LastSelectedItem == Widget then
     return false
   end
-  if self.LastSelecedItem then
-    self.LastSelecedItem:PlayNormalAnimation()
+  if self.LastSelectedItem then
+    self.LastSelectedItem:PlayNormalAnimation()
   end
   Widget:PlaySelectedAnimation()
-  self.LastSelecedItem = Widget
+  self.LastSelectedItem = Widget
   return true
 end
 
@@ -526,7 +524,7 @@ end
 
 function M:UnlockCardLevel(CardLevel)
   local function OnAnimationFinished()
-    for _, Widget in pairs(self.LastSelecedItem.TalentsMap) do
+    for _, Widget in pairs(self.LastSelectedItem.TalentsMap) do
       Widget:PlayActInAnimation()
     end
     local NextWidget = self.Armory_Incarnon:GetCardLevelWidget(CardLevel + 1)
@@ -541,7 +539,7 @@ function M:UnlockCardLevel(CardLevel)
       self.IsAnimationPlaying = false
       return
     end
-    local Widget = self.LastSelecedItem
+    local Widget = self.LastSelectedItem
     if Widget then
       Widget:UnlockCardLevel(self, OnAnimationFinished)
       self:RefreshCardDetailPanel(Widget, CardLevel)
@@ -556,7 +554,7 @@ end
 
 function M:UnlockHyperTalent(TalentId)
   local function OnAnimationFinished()
-    local CardWidget = self.LastSelecedItem.Parent
+    local CardWidget = self.LastSelectedItem.Parent
     
     local CardLevel = CardWidget.CardLevel
     local NextWidget = self.Armory_Incarnon:GetCardLevelWidget(CardLevel + 1)
@@ -574,12 +572,12 @@ function M:UnlockHyperTalent(TalentId)
       self.IsAnimationPlaying = false
       return
     end
-    local CardWidget = self.LastSelecedItem.Parent
+    local CardWidget = self.LastSelectedItem.Parent
     local TalentWidget = CardWidget.TalentsMap[TalentId]
     if TalentWidget then
       TalentWidget:UnlockTalent(self, OnAnimationFinished)
     end
-    self:RefreshTalentDetailPanel(self.LastSelecedItem, self.LastSelecedItem.TalentId)
+    self:RefreshTalentDetailPanel(self.LastSelectedItem, self.LastSelectedItem.TalentId)
     self.Armory_Incarnon:RefreshProgressUI()
   end
   
@@ -638,8 +636,8 @@ end
 
 function M:OnCloseBtnClicked()
   self:StopAllAnimations()
-  if self.LastSelecedItem then
-    self.LastSelecedItem:PlayNormalAnimation()
+  if self.LastSelectedItem then
+    self.LastSelectedItem:PlayNormalAnimation()
   end
   self:BindToAnimationFinished(self.Detail_Out, {
     self,
@@ -689,7 +687,7 @@ function M:OnOutAnimFinished()
   local ArmoryMain = UIManager(self):GetArmoryUIObj()
   if ArmoryMain and ArmoryMain.BackgroundBlurWithMask_39 then
     ArmoryMain.BackgroundBlurWithMask_39:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    ArmoryMain.CurrentSubUI:SetFocusWidget(self.LastSelecedItem.CardLevel, self.LastSelecedItem.TalentId)
+    ArmoryMain.CurrentSubUI:SetFocusWidget(self.LastSelectedItem.CardLevel, self.LastSelectedItem.TalentId)
   end
   self:Close()
 end

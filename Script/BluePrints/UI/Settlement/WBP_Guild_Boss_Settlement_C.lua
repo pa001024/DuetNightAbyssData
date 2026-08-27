@@ -1,3 +1,4 @@
+local MiscUtils = require("Utils.MiscUtils")
 require("UnLua")
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
@@ -160,7 +161,7 @@ function M:InitUIContent()
   self.Text_Title:SetText(GText("UI_GuildBoss_End"))
   self.Text_Title_1:SetText(GText("UI_GuildBoss_End"))
   self.Text_TotalScore:SetText(GText("UI_GuildBoss_EarnedPoints"))
-  self.Num_Score:SetText(Utils.FormatNumber(self.Score, false))
+  self.Num_Score:SetText(MiscUtils.FormatNumber(self.Score, false))
   self.Text_NewRecord:SetText(GText("UI_GuildBoss_NewRecord"))
   if self.bIsWeekMaxScore then
     self.Panel_NewRecord:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
@@ -236,9 +237,9 @@ function M:InitTrialDataUI()
       local TrialData = self.CombatData[TrialId]
       if TrialData then
         if TrialCalType == ETrialCalculationType.Damage then
-          TrialWidget.Text_Num:SetText(Utils.FormatNumber(TrialData.MatchDamage, false))
+          TrialWidget.Text_Num:SetText(MiscUtils.FormatNumber(TrialData.MatchDamage, false))
         elseif TrialCalType == ETrialCalculationType.Hit then
-          TrialWidget.Text_Num:SetText(Utils.FormatNumber(TrialData.MatchHit, false))
+          TrialWidget.Text_Num:SetText(MiscUtils.FormatNumber(TrialData.MatchHit, false))
         end
         if nil ~= TrialWidget.bFinished then
           TrialWidget.bFinished = TrialData.Broken

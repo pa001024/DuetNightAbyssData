@@ -201,7 +201,7 @@
     "id": 304,
     "icon": "Skill",
     "n": "Allegro féroce : Archives hors de contrôle",
-    "d": "Pour chaque 15 points de Lucidité dépensés au total par les alliés, ceux-ci gagnent +20% de Puissance de compétence pendant 15 s, cumulable jusqu’à 5 fois. À plein cumul, ils deviennent immunisés aux interruptions.",
+    "d": "Chaque fois que les alliés consomment un total de 15 de Lucidité, ils gagnent 1 cumul augmentant leur Puissance de compétence de 20% pendant 15 s, jusqu’à 5 cumuls. Au cumul maximal, les dégâts subis ne provoquent plus d’interruption.",
     "t": 1,
     "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
   },
@@ -532,6 +532,30 @@
     "icon": "Common",
     "n": "Allegro féroce : Astres resplendissants",
     "d": "Lorsqu’un allié effectue une invocation, tous les alliés obtiennent un effet augmentant les dégâts infligés de 5% pendant 10 s, jusqu’à 10 cumuls.",
+    "t": 1,
+    "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
+  },
+  {
+    "id": 16121,
+    "icon": "Skill",
+    "n": "Andante furioso : Le courage du défi",
+    "d": "Toutes les 20 instances de Dégâts de compétence infligées par un allié confèrent 1 cumul augmentant les dégâts infligés de 5% pendant 10 s, cumulable jusqu’à 10 fois.",
+    "t": 1,
+    "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
+  },
+  {
+    "id": 16211,
+    "icon": "Skill",
+    "n": "Allegro féroce : Pièce divine",
+    "d": "Lorsqu’un allié utilise une Compétence de combat ou une Compétence ultime, il gagne un cumul augmentant la Chance de déclenchement de 30% pendant 18 s, cumulable jusqu’à 6 fois.",
+    "t": 1,
+    "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
+  },
+  {
+    "id": 16221,
+    "icon": "Range",
+    "n": "Andante furioso : Le courage du défi",
+    "d": "Toutes les 20 instances de DGT d’arme infligées par un allié confèrent 1 cumul augmentant les dégâts infligés de 5% pendant 10 s, cumulable jusqu’à 10 fois.",
     "t": 1,
     "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
   }

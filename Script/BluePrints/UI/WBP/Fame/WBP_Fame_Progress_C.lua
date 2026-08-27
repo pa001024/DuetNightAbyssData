@@ -5,7 +5,6 @@ local M = Class({
 
 function M:Construct()
   self.IsPC = CommonUtils.GetRuntimePlatform(self) == "PC"
-  self.Text_Level:SetText(GText("ReputationLevel_Title"))
   self.Text_Limit:SetText(GText("ReputationExp_WeekLimit"))
   self.Button_Area.OnClicked:Add(self, self.OnClicked)
   self.Button_Area.OnPressed:Add(self, self.OnPressed)
@@ -39,14 +38,30 @@ function M:Init(CurRegionTabId, AvatarReputation)
     self.Num_Total_1:SetText(MaxLevelExp)
     self.Num_Now_1:SetText(AvatarReputation.ReputationExp or 0)
     self.Num_Fame:SetText(CurLevel)
+    self.TextLevelNum:SetText(CurLevel)
     self.ProgressBar_Fame:SetPercent(CurLevelExp / MaxLevelExp)
+    self.Text_Level:SetText(string.format(GText("LevelUP_Need_Reputation"), CurLevel + 1))
   else
     self.Num_Fame:SetText(CurLevel)
+    self.TextLevelNum:SetText(CurLevel)
     self.WidgetSwitcher_0:SetActiveWidgetIndex(1)
     self.TextBlock_206:SetText(GText("Reputation_MaxLevel"))
     self.ProgressBar_Fame:SetPercent(1)
+    self.Text_Level:SetText(GText("LevelUP_Full_Reputation"))
   end
   self:PlayAnimation(self.Normal)
+  if CurRegionTabId then
+    local resourceID
+    if 1001 == CurRegionTabId then
+      resourceID = 2015
+    elseif 1002 == CurRegionTabId then
+      resourceID = 2016
+    end
+    local resourceData = DataMgr.Resource[resourceID]
+    if resourceData then
+      self.Image_94:SetBrushResourceObject(LoadObject(resourceData.Icon))
+    end
+  end
 end
 
 function M:BindEventOnClicked(Obj, Func, ...)

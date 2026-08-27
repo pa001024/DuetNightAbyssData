@@ -1728,7 +1728,7 @@
   {
     "id": 89012,
     "name": "Perdue et retrouvée",
-    "desc": "Rendre les objets perdus au Chasseur de Phoxène distrait",
+    "desc": "Récupérer l’arme perdue par la Chasseuse de Phoxène",
     "regionId": 1011,
     "subRegionId": 101103,
     "cd": 300,
@@ -7021,7 +7021,7 @@
   {
     "id": 89062,
     "name": "Souvenir de Givrelac",
-    "desc": "Aider le touriste à prendre une photo",
+    "desc": "Aider la touriste à prendre une photo",
     "regionId": 1011,
     "subRegionId": 101101,
     "cd": 600,
@@ -15249,7 +15249,7 @@
   {
     "id": 89106,
     "name": "Avis de recherche",
-    "desc": "Aider un voyageur à retrouver son billet de train",
+    "desc": "Aider la voyageuse à retrouver son billet de train",
     "regionId": 1060,
     "subRegionId": 106001,
     "cd": 450,
@@ -15782,6 +15782,597 @@
         ],
         "demand": {
           "Mine": 2
+        },
+        "level": [
+          60,
+          65
+        ]
+      }
+    ]
+  },
+  {
+    "id": 89109,
+    "name": "Ombres aguerries",
+    "desc": "Vaincre les Souillés venus attaquer",
+    "regionId": 1071,
+    "subRegionId": 107101,
+    "cd": 450,
+    "person": 2,
+    "type": "Battle",
+    "rarity": 2,
+    "ttk": 600,
+    "weight": 1,
+    "pos": [
+      -75170,
+      -10530
+    ],
+    "nodes": [
+      {
+        "id": "17830610926631405",
+        "type": "TalkNode",
+        "name": "历战者出现开车",
+        "next": [
+          "17830611978911082025"
+        ],
+        "dialogues": [
+          {
+            "id": 71009002,
+            "content": "Le bruit du combat a attiré davantage de Souillés. Repoussez-les.",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17823743482854326468",
+        "type": "TalkNode",
+        "name": "历战者出现开车",
+        "next": [
+          "17830610926631405",
+          "17830611978911082025"
+        ],
+        "dialogues": [
+          {
+            "id": 71009001,
+            "content": "L’incarnation de la destruction est enfin arrivée. Abattez-la, comme vous l’avez déjà fait d’innombrables fois.",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17830611978911082025",
+        "type": "TalkNode",
+        "name": "历战者出现开车",
+        "dialogues": [
+          {
+            "id": 71009003,
+            "content": "Avec la disparition des Souillés, l’aura maléfique se dissipe à son tour. Pour l’instant, la zone est sûre.",
+            "npc": 800006
+          }
+        ]
+      }
+    ],
+    "levels": [
+      {
+        "id": 210904,
+        "reward": [
+          40676,
+          40677,
+          40678,
+          40000
+        ],
+        "demand": {
+          "Battle": 2
+        },
+        "level": [
+          50,
+          59
+        ]
+      },
+      {
+        "id": 210905,
+        "reward": [
+          40679,
+          40680,
+          40681,
+          40000
+        ],
+        "demand": {
+          "Battle": 2
+        },
+        "level": [
+          60,
+          65
+        ]
+      }
+    ]
+  },
+  {
+    "id": 89110,
+    "name": "Sauvetage de Géniemon !",
+    "desc": "Vaincre les ennemis et secourir le Géniemon",
+    "regionId": 1071,
+    "subRegionId": 107101,
+    "cd": 600,
+    "person": 3,
+    "type": "Collect",
+    "rarity": 3,
+    "ttk": 600,
+    "weight": 1,
+    "pos": [
+      -67600,
+      -55770
+    ],
+    "nodes": [
+      {
+        "id": "1782376173109592882",
+        "type": "TalkNode",
+        "name": "解救宠物开车",
+        "next": [
+          "1782376173109592888",
+          "1782376173109592889"
+        ],
+        "dialogues": [
+          {
+            "id": 71009101,
+            "content": "Des ennemis errent dans les environs. Repoussez-les d’abord, puis allez secourir le Géniemon.",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "1782376173109592888",
+        "type": "TalkNode",
+        "name": "击杀秽兽开车",
+        "next": [
+          "1782376173109592889"
+        ],
+        "dialogues": [
+          {
+            "id": 71009102,
+            "content": "Le bruit du combat a attiré davantage d’ennemis.",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "1782376173109592889",
+        "type": "TalkNode",
+        "name": "击杀怪物开车",
+        "dialogues": [
+          {
+            "id": 71009103,
+            "content": "La zone est sécurisée pour le moment. Profitez-en pour secourir le Géniemon.",
+            "npc": 800006
+          }
+        ]
+      }
+    ],
+    "levels": [
+      {
+        "id": 311004,
+        "reward": [
+          40682,
+          40683,
+          40684,
+          40000
+        ],
+        "demand": {
+          "Pet": 3
+        },
+        "level": [
+          50,
+          59
+        ]
+      },
+      {
+        "id": 311005,
+        "reward": [
+          40685,
+          40686,
+          40687,
+          40000
+        ],
+        "demand": {
+          "Pet": 3
+        },
+        "level": [
+          60,
+          65
+        ]
+      }
+    ]
+  },
+  {
+    "id": 89111,
+    "name": "Tir accidentel",
+    "desc": "Éviter les bombardements et vaincre les ennemis",
+    "regionId": 1071,
+    "subRegionId": 107101,
+    "cd": 450,
+    "person": 2,
+    "type": "Battle",
+    "rarity": 2,
+    "ttk": 600,
+    "weight": 1,
+    "pos": [
+      -65960,
+      -9020
+    ],
+    "nodes": [
+      {
+        "id": "17830613856413243167",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17830614052443243617",
+          "17830614162003243914",
+          "17830614106323243777"
+        ],
+        "dialogues": [
+          {
+            "id": 71009201,
+            "content": "Les Souillés errants poussent des rugissements inquiétants. Repoussez-les au plus vite.",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17830614052443243617",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "dialogues": [
+          {
+            "id": 71009202,
+            "content": "Dans la mêlée, un Souillé a accidentellement déclenché des armes militaires abandonnées dans les environs. Évitez les bombardements.",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17830614106323243777",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "dialogues": [
+          {
+            "id": 71009203,
+            "content": "Les bombardements s’intensifient.",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17830614162003243914",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "dialogues": [
+          {
+            "id": 71009204,
+            "content": "Tous les ennemis sont tombés. Le silence revient enfin dans les environs.",
+            "npc": 800006
+          }
+        ]
+      }
+    ],
+    "levels": [
+      {
+        "id": 211104,
+        "reward": [
+          40688,
+          40689,
+          40690,
+          40000
+        ],
+        "demand": {
+          "Battle": 2
+        },
+        "level": [
+          50,
+          59
+        ]
+      },
+      {
+        "id": 211105,
+        "reward": [
+          40691,
+          40692,
+          40693,
+          40000
+        ],
+        "demand": {
+          "Battle": 2
+        },
+        "level": [
+          60,
+          65
+        ]
+      }
+    ]
+  },
+  {
+    "id": 89112,
+    "name": "Cache surprise",
+    "desc": "Fouiller les caisses pour trouver des provisions",
+    "regionId": 1070,
+    "subRegionId": 107001,
+    "cd": 450,
+    "person": 2,
+    "type": "Collect",
+    "rarity": 2,
+    "ttk": 600,
+    "weight": 1,
+    "pos": [
+      -4340,
+      -28520
+    ],
+    "nodes": [
+      {
+        "id": "17827191384701670783",
+        "type": "TalkNode",
+        "name": "开始开车",
+        "next": [
+          "17827191384701670785",
+          "17827191384701670787",
+          "17827191384701670789",
+          "17827191384701670791",
+          "17827191384701670793",
+          "17827191384701670786",
+          "17827191384701670788",
+          "17827191384701670790",
+          "17827191384701670792",
+          "17827191384701670794"
+        ],
+        "dialogues": [
+          {
+            "id": 71009301,
+            "content": "De nombreuses caisses de ravitaillement se trouvent devant vous. Ouvrez-les pour récupérer des provisions utiles.",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670785",
+        "type": "TalkNode",
+        "name": "电池开车",
+        "dialogues": [
+          {
+            "id": 71009302,
+            "content": "Vous avez trouvé des provisions utiles dans les caisses.",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670786",
+        "type": "TalkNode",
+        "name": "秽兽开车",
+        "dialogues": [
+          {
+            "id": 71009303,
+            "content": "Vous saviez déjà que certains Souillés se cachaient dans des caisses plongées dans l’obscurité pour attaquer ceux qui passaient à proximité. Mais cette fois, ils sont tombés sur vous. Battez-les et récupérez le butin qui vous revient.",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670787",
+        "type": "TalkNode",
+        "name": "电池开车",
+        "dialogues": [
+          {
+            "id": 71009302,
+            "content": "Vous avez trouvé des provisions utiles dans les caisses.",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670788",
+        "type": "TalkNode",
+        "name": "秽兽开车",
+        "dialogues": [
+          {
+            "id": 71009303,
+            "content": "Vous saviez déjà que certains Souillés se cachaient dans des caisses plongées dans l’obscurité pour attaquer ceux qui passaient à proximité. Mais cette fois, ils sont tombés sur vous. Battez-les et récupérez le butin qui vous revient.",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670789",
+        "type": "TalkNode",
+        "name": "电池开车",
+        "dialogues": [
+          {
+            "id": 71009302,
+            "content": "Vous avez trouvé des provisions utiles dans les caisses.",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670790",
+        "type": "TalkNode",
+        "name": "秽兽开车",
+        "dialogues": [
+          {
+            "id": 71009303,
+            "content": "Vous saviez déjà que certains Souillés se cachaient dans des caisses plongées dans l’obscurité pour attaquer ceux qui passaient à proximité. Mais cette fois, ils sont tombés sur vous. Battez-les et récupérez le butin qui vous revient.",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670791",
+        "type": "TalkNode",
+        "name": "电池开车",
+        "dialogues": [
+          {
+            "id": 71009302,
+            "content": "Vous avez trouvé des provisions utiles dans les caisses.",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670792",
+        "type": "TalkNode",
+        "name": "秽兽开车",
+        "dialogues": [
+          {
+            "id": 71009303,
+            "content": "Vous saviez déjà que certains Souillés se cachaient dans des caisses plongées dans l’obscurité pour attaquer ceux qui passaient à proximité. Mais cette fois, ils sont tombés sur vous. Battez-les et récupérez le butin qui vous revient.",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670793",
+        "type": "TalkNode",
+        "name": "电池开车",
+        "dialogues": [
+          {
+            "id": 71009302,
+            "content": "Vous avez trouvé des provisions utiles dans les caisses.",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17827191384701670794",
+        "type": "TalkNode",
+        "name": "秽兽开车",
+        "dialogues": [
+          {
+            "id": 71009303,
+            "content": "Vous saviez déjà que certains Souillés se cachaient dans des caisses plongées dans l’obscurité pour attaquer ceux qui passaient à proximité. Mais cette fois, ils sont tombés sur vous. Battez-les et récupérez le butin qui vous revient.",
+            "npc": 800006
+          }
+        ]
+      }
+    ],
+    "levels": [
+      {
+        "id": 211204,
+        "reward": [
+          40694,
+          40695,
+          40696,
+          40000
+        ],
+        "demand": {
+          "Collect": 2
+        },
+        "level": [
+          50,
+          59
+        ]
+      },
+      {
+        "id": 211205,
+        "reward": [
+          40697,
+          40698,
+          40699,
+          40000
+        ],
+        "demand": {
+          "Collect": 2
+        },
+        "level": [
+          60,
+          65
+        ]
+      }
+    ]
+  },
+  {
+    "id": 89113,
+    "name": "Falaise des Souillés",
+    "desc": "Repousser les Souillés et sécuriser la falaise",
+    "regionId": 1071,
+    "subRegionId": 107101,
+    "cd": 450,
+    "person": 2,
+    "type": "Battle",
+    "rarity": 2,
+    "ttk": 600,
+    "weight": 1,
+    "pos": [
+      -64028,
+      -16234
+    ],
+    "nodes": [
+      {
+        "id": "17830615326795406630",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17830646891498652733",
+          "17830615663685407551"
+        ],
+        "dialogues": [
+          {
+            "id": 71009401,
+            "content": "Des Souillés errants surgissent sans cesse sur la falaise. Repoussez-les.",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17830615663685407551",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "dialogues": [
+          {
+            "id": 71009403,
+            "content": "Tous les Souillés des environs ont été éliminés. La zone est temporairement sécurisée.",
+            "npc": 800006
+          }
+        ]
+      },
+      {
+        "id": "17830646891498652733",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17830615663685407551"
+        ],
+        "dialogues": [
+          {
+            "id": 71009402,
+            "content": "Le bruit du combat attire davantage de Souillés qui escaladent la falaise. Repoussez-les.",
+            "npc": 800006
+          }
+        ]
+      }
+    ],
+    "levels": [
+      {
+        "id": 211304,
+        "reward": [
+          40700,
+          40701,
+          40702,
+          40000
+        ],
+        "demand": {
+          "Battle": 2
+        },
+        "level": [
+          50,
+          59
+        ]
+      },
+      {
+        "id": 211305,
+        "reward": [
+          40703,
+          40704,
+          40705,
+          40000
+        ],
+        "demand": {
+          "Battle": 2
         },
         "level": [
           60,

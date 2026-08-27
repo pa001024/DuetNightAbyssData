@@ -144,6 +144,7 @@ function ReddotTreeNode:UpdateRdType()
     local bFoundOneNormal = false
     local bFoundOneNew = false
     local bFoundOneGray = false
+    local bFoundOneRec = false
     for Name, Node in pairs(self.LeafChildrens) do
       if 0 == Node.Count then
       else
@@ -159,6 +160,9 @@ function ReddotTreeNode:UpdateRdType()
         if Node.ReddotType == EReddotType.Gray then
           bFoundOneGray = true
         end
+        if Node.ReddotType == EReddotType.Rec then
+          bFoundOneRec = true
+        end
       end
     end
     local LastRdType = self.ReddotType
@@ -168,6 +172,8 @@ function ReddotTreeNode:UpdateRdType()
       self.ReddotType = EReddotType.Normal
     elseif bFoundOneNew then
       self.ReddotType = EReddotType.New
+    elseif bFoundOneRec then
+      self.ReddotType = EReddotType.Rec
     elseif bFoundOneGray then
       self.ReddotType = EReddotType.Gray
     end

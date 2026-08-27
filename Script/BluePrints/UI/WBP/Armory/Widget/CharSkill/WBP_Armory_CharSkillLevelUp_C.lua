@@ -106,12 +106,12 @@ function M:UpdataAttrListView(Attrs, ComparedAttrs)
   for i, Attr in ipairs(self.Attrs) do
     if Attr.Value ~= self.ComparedAttrs[i].Value then
       Obj = NewObject(UIUtils.GetCommonItemContentClass())
-      Obj.Name = Attr.Desc
-      Obj.Value = Attr.Value or 0
-      Obj.CmpValue = self.ComparedAttrs[i].Value or 0
-      Obj.Desc = Attr.Desc
-      Obj.Idx = Idx
-      Obj.Style = self.ComparedAttrs[i].Style or "ShowValue"
+      rawset(Obj, "Name", Attr.Desc)
+      rawset(Obj, "Value", Attr.Value or 0)
+      rawset(Obj, "CmpValue", self.ComparedAttrs[i].Value or 0)
+      rawset(Obj, "Desc", Attr.Desc)
+      rawset(Obj, "Idx", Idx)
+      rawset(Obj, "Style", self.ComparedAttrs[i].Style or "ShowValue")
       self.List_Atrr:AddItem(Obj)
       Idx = Idx + 1
     end
@@ -127,6 +127,7 @@ function M:PlayInAnim()
 end
 
 function M:SequenceEvent_PlayAttrAnim()
+  self.List_Atrr:SetRenderOpacity(1)
   self.List_Atrr:RequestPlayEntriesAnim()
 end
 

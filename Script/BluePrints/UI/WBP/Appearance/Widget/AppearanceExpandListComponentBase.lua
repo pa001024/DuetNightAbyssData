@@ -23,12 +23,9 @@ end
 
 function M:ResetMainTabStyle(IsListExpanded)
   if IsListExpanded then
-    local TitleName = ""
+    local TitleName = GText("UI_Armory_Appearance") .. "/"
     local Content = self.MainModel:GetCurrentTabSelectedContent()
     local RoleName = Content and Content.UnitName or ""
-    if self.IsPreviewMode then
-      TitleName = GText("UI_Preview_Switch") .. "/"
-    end
     self.TitleName = TitleName .. RoleName
     self.Parent:UpdateMainTabs({})
     self.Parent.Com_Tab:UpdateTopTitle(self.TitleName)
@@ -176,9 +173,6 @@ function M:OnExpandListItemClicked(Content)
 end
 
 function M:OnListItemClicked(Content)
-  if Content == self.MainModel:GetSelectedCharContent() then
-    return
-  end
   if not self.IsListExpanded then
     return
   end

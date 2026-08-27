@@ -350,6 +350,76 @@
     ]
   },
   {
+    "gachaId": 9008,
+    "rewards": [
+      {
+        "rewardId": 7601,
+        "target": 20,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 5,
+            "n": "영롱한 모래시계·한정"
+          }
+        ],
+        "mode": "Fixed"
+      },
+      {
+        "rewardId": 7602,
+        "target": 40,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 5,
+            "n": "영롱한 모래시계·한정"
+          }
+        ],
+        "mode": "Fixed"
+      },
+      {
+        "rewardId": 7603,
+        "target": 60,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 5,
+            "n": "영롱한 모래시계·한정"
+          }
+        ],
+        "mode": "Fixed"
+      },
+      {
+        "rewardId": 7604,
+        "target": 80,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 5,
+            "n": "영롱한 모래시계·한정"
+          }
+        ],
+        "mode": "Fixed"
+      },
+      {
+        "rewardId": 7605,
+        "target": 100,
+        "items": [
+          {
+            "id": 1004,
+            "t": "Resource",
+            "c": 10,
+            "n": "영롱한 모래시계·한정"
+          }
+        ],
+        "mode": "Fixed"
+      }
+    ]
+  },
+  {
     "gachaId": 90021,
     "rewards": [
       {

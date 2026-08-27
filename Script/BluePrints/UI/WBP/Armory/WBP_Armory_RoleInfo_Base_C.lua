@@ -76,7 +76,7 @@ function M:BindEvents(EventReceiver, Events)
   self.EventReceiver = EventReceiver
   self.Event_OnBtnIntensifyClicked = Events.OnBtnIntensifyClicked
   self.Event_OnBtnReplaceClicked = Events.OnBtnReplaceClicked
-  self.Event_OnForbiddenBtnIntensifyClickedd = Events.OnForbiddenBtnIntensifyClicked
+  self.Event_OnForbiddenBtnIntensifyClicked = Events.OnForbiddenBtnIntensifyClicked
   self.Event_OnForbiddenBtnReplaceClicked = Events.OnForbiddenBtnReplaceClicked
 end
 
@@ -93,8 +93,8 @@ function M:OnReplaceBtnClicked()
 end
 
 function M:OnForbiddenIntensifyBtnClicked()
-  if self.Event_OnForbiddenBtnIntensifyClickedd then
-    self.Event_OnForbiddenBtnIntensifyClickedd(self.EventReceiver)
+  if self.Event_OnForbiddenBtnIntensifyClicked then
+    self.Event_OnForbiddenBtnIntensifyClicked(self.EventReceiver)
   end
 end
 
@@ -457,7 +457,7 @@ function M:UpdateAttrInfo(Target, Type)
   self.Attrs = self.Attrs or {}
   local TargetId = Target[Type .. "Id"]
   if self.Type == "Weapon" then
-    self:InsertWeaponType(Target.WeaponId, self.Attrs)
+    ArmoryUtils:InsertWeaponTypeImpl(Target.WeaponId, self.Attrs)
     local WeaponTypeKey = "WeaponType"
     if self.Attrs[WeaponTypeKey] then
       self.AttrCount = self.AttrCount + 1
@@ -474,7 +474,7 @@ function M:UpdateAttrInfo(Target, Type)
       end
     end
   else
-    self:InsertExcelWeaponTag(Target.CharId, self.Attrs)
+    ArmoryUtils:ExtraProcessCharAttrs(self.Attrs, MeleeWeapon, RangedWeapon, Target)
     self.PosItem:Init({
       Type = Type,
       Owner = self,

@@ -267,5 +267,29 @@ return ReadOnly("SurvivalMiniPro", {
     MonsterSpawnId = {300602, 6151040},
     SpMonsterSpawnId = {615104},
     SpMonsterSpawnTime = 1
+  },
+  [616006] = {
+    DungeonId = 616006,
+    MonsterSpawnId = T.RT_8,
+    SpMonsterSpawnId = {616006},
+    SpMonsterSpawnTime = 1
+  },
+  [616007] = {
+    DungeonId = 616007,
+    MonsterSpawnId = T.RT_9,
+    SpMonsterSpawnId = {616007},
+    SpMonsterSpawnTime = 1
+  },
+  [616106] = {
+    DungeonId = 616106,
+    MonsterSpawnId = {300601, 6161060},
+    SpMonsterSpawnId = {616106},
+    SpMonsterSpawnTime = 1
+  },
+  [616107] = {
+    DungeonId = 616107,
+    MonsterSpawnId = {300602, 6161070},
+    SpMonsterSpawnId = {616107},
+    SpMonsterSpawnTime = 1
   }
 })

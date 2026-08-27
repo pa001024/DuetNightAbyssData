@@ -208,7 +208,7 @@ function M:UpdateSlotUIPolarityEdit(SlotUIData)
     local Polarity = SlotUIData:GetPolarity()
     if Polarity ~= CommonConst.NonePolarity then
       self.Text_Polarity:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-      self.Text_Polarity:SetText(ModModel:GetPolarityText(Polarity))
+      self.Text_Polarity:SetText(ModModel:GetSlotPolarityText(Polarity))
     end
   end
 end
@@ -618,10 +618,8 @@ function M:ChangeSlotOutlines(ModUuid)
   self.WidgetSwitcher_State:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   if SlotPolarity == NonePolarity then
     self.WidgetSwitcher_State:SetActiveWidgetIndex(0)
-  elseif Mod.Polarity == SlotPolarity then
-    self.WidgetSwitcher_State:SetActiveWidgetIndex(1)
   elseif Mod.Polarity ~= NonePolarity then
-    self.WidgetSwitcher_State:SetActiveWidgetIndex(2)
+    self.WidgetSwitcher_State:SetActiveWidgetIndex(1)
   else
     self.WidgetSwitcher_State:SetActiveWidgetIndex(0)
   end

@@ -14,6 +14,10 @@ return ReadOnly("Player2RoleId", {
     [0] = 114,
     [1] = 113
   },
+  EXPlayerWater = {
+    [0] = 220101,
+    [1] = 2201
+  },
   Player = T.RT_1,
   PlayerDark = {
     [0] = 120101,

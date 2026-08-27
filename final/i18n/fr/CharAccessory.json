@@ -1144,6 +1144,62 @@
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 10155,
+    "name": "Silence mordant – Jade noir",
+    "desc": "Même face à une proie inconnue, le chasseur sait toujours en tirer son propre trophée.",
+    "icon": "T_Fashion_Head74_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10156,
+    "name": "Silence mordant – Gris plomb",
+    "desc": "Même face à une proie inconnue, le chasseur sait toujours en tirer son propre trophée.",
+    "icon": "T_Fashion_Head74_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10157,
+    "name": "Silence mordant – Doré",
+    "desc": "Même face à une proie inconnue, le chasseur sait toujours en tirer son propre trophée.",
+    "icon": "T_Fashion_Head74_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10158,
+    "name": "Silence mordant – Bleu céleste",
+    "desc": "Même face à une proie inconnue, le chasseur sait toujours en tirer son propre trophée.",
+    "icon": "T_Fashion_Head74_04",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10159,
+    "name": "Marionnette à fils – Doré",
+    "desc": "Soulevez la marionnette et faites-la danser sans fin.",
+    "icon": "T_Fashion_Head75_02",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 10160,
+    "name": "Marionnette à fils – Jade noir",
+    "desc": "Soulevez la marionnette et faites-la danser sans fin.",
+    "icon": "T_Fashion_Head75_01",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 10161,
+    "name": "Marionnette à fils – Gris plomb",
+    "desc": "Soulevez la marionnette et faites-la danser sans fin.",
+    "icon": "T_Fashion_Head75_03",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
     "id": 11001,
     "name": "UI_Accessory_Name_11001",
     "desc": "UI_Accessory_Desc_11001",
@@ -1196,6 +1252,14 @@
     "name": "Entraves glacées",
     "desc": "Le froid extrême est un tabou pour toute forme de vie.",
     "icon": "T_Fashion_Fx37",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 11009,
+    "name": "Flammes infernales déchaînées",
+    "desc": "Brûler sans fin, jusqu’à ce que tout soit réduit en cendres.",
+    "icon": "T_Fashion_Fx40",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
@@ -1405,6 +1469,38 @@
     "desc": "Les fils du destin s’entrelacent comme une toile d’araignée, impossibles à prévoir.",
     "icon": "T_Fashion_Hat20",
     "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 12027,
+    "name": "Couronne protectrice – Bleu indigo",
+    "desc": "Dessine les contours de la paix.",
+    "icon": "T_Fashion_Hat28",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 12028,
+    "name": "Couronne protectrice – Blanc ivoire",
+    "desc": "Dessine les contours de la paix.",
+    "icon": "T_Fashion_Hat27",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 12029,
+    "name": "Couronne protectrice – Jade noir",
+    "desc": "Dessine les contours de la paix.",
+    "icon": "T_Fashion_Hat26",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 12030,
+    "name": "Couronne protectrice – Gris plomb",
+    "desc": "Dessine les contours de la paix.",
+    "icon": "T_Fashion_Hat25",
+    "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },
   {
@@ -1813,7 +1909,7 @@
     "desc": "Vif, adorable, espiègle, splendide... Tous les mots du monde pâlissent face à l’irrésistible magie de cette queue féline.",
     "icon": "T_Fashion_Back51_02",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "Disponible dans la boutique"
   },
   {
     "id": 13050,
@@ -1821,7 +1917,7 @@
     "desc": "Vif, adorable, espiègle, splendide... Tous les mots du monde pâlissent face à l’irrésistible magie de cette queue féline.",
     "icon": "T_Fashion_Back51_03",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "Disponible dans la boutique"
   },
   {
     "id": 13051,
@@ -1829,7 +1925,7 @@
     "desc": "Vif, adorable, espiègle, splendide... Tous les mots du monde pâlissent face à l’irrésistible magie de cette queue féline.",
     "icon": "T_Fashion_Back51_04",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "Disponible dans la boutique"
   },
   {
     "id": 13052,
@@ -1837,7 +1933,63 @@
     "desc": "Vif, adorable, espiègle, splendide... Tous les mots du monde pâlissent face à l’irrésistible magie de cette queue féline.",
     "icon": "T_Fashion_Back51_01",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13053,
+    "name": "Loi du feu spectral – Bleu céleste",
+    "desc": "Tout réduire en cendres, puis retourner au néant.",
+    "icon": "T_Fashion_Waist36_01",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 13054,
+    "name": "Loi du feu spectral – Pourpre profond",
+    "desc": "Tout réduire en cendres, puis retourner au néant.",
+    "icon": "T_Fashion_Waist36_02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 13055,
+    "name": "Loi du feu spectral – Blanc ivoire",
+    "desc": "Tout réduire en cendres, puis retourner au néant.",
+    "icon": "T_Fashion_Waist36_03",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 13056,
+    "name": "Loi du feu spectral – Doré",
+    "desc": "Tout réduire en cendres, puis retourner au néant.",
+    "icon": "T_Fashion_Waist36_04",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 13057,
+    "name": "Remontoir magique – Doré",
+    "desc": "Écouter l’écho du remontoir.",
+    "icon": "T_Fashion_Back56_02",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 13058,
+    "name": "Remontoir magique – Jade noir",
+    "desc": "Écouter l’écho du remontoir.",
+    "icon": "T_Fashion_Back56_01",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 13059,
+    "name": "Remontoir magique – Gris plomb",
+    "desc": "Écouter l’écho du remontoir.",
+    "icon": "T_Fashion_Back56_03",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
   },
   {
     "id": 20001,
@@ -2544,6 +2696,38 @@
     "unlock": "Disponible via les événements"
   },
   {
+    "id": 20102,
+    "name": "Parure frontale du silence – Bleu indigo",
+    "desc": "Accueillir un adieu silencieux.",
+    "icon": "T_Fashion_Face30_04",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20103,
+    "name": "Parure frontale du silence – Rouille",
+    "desc": "Accueillir un adieu silencieux.",
+    "icon": "T_Fashion_Face30_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20104,
+    "name": "Parure frontale du silence – Jade noir",
+    "desc": "Accueillir un adieu silencieux.",
+    "icon": "T_Fashion_Face30_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20105,
+    "name": "Parure frontale du silence – Blanc ivoire",
+    "desc": "Accueillir un adieu silencieux.",
+    "icon": "T_Fashion_Face30_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
     "id": 21001,
     "name": "UI_Accessory_Name_21001",
     "desc": "UI_Accessory_Desc_21001",
@@ -2628,6 +2812,14 @@
     "name": "Éclat figé dans la glace",
     "desc": "Les aurores polaires sont un miracle de la nature.",
     "icon": "T_Fashion_Fx36",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 21015,
+    "name": "Onde de chaleur spectrale",
+    "desc": "Une onde de chaleur déformée, telle une ondulation tracée dans l’air par les flammes.",
+    "icon": "T_Fashion_Fx39",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
@@ -3156,6 +3348,14 @@
     "name": "Animation de victoire : Sérénade des premières neiges",
     "desc": "Permet de modifier l’animation de victoire.",
     "icon": "T_Fashion_SettlementAction_06",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 31007,
+    "name": "Animation de victoire : Hurlement de Cerbère",
+    "desc": "Permet de modifier l’animation de victoire.",
+    "icon": "T_Fashion_SettlementAction_07",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
@@ -3744,6 +3944,46 @@
     "unlock": "Disponible via les événements"
   },
   {
+    "id": 40085,
+    "name": "Ailes brisées de feu spectral – Bleu céleste",
+    "desc": "Sur son ossature brisée brûle encore une flamme ardente que rien ne parvient à dissiper.",
+    "icon": "T_Fashion_Back55_04",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 40086,
+    "name": "Ailes brisées de feu spectral – Émeraude",
+    "desc": "Sur son ossature brisée brûle encore une flamme ardente que rien ne parvient à dissiper.",
+    "icon": "T_Fashion_Back55_02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 40087,
+    "name": "Ailes brisées de feu spectral – Rouille",
+    "desc": "Sur son ossature brisée brûle encore une flamme ardente que rien ne parvient à dissiper.",
+    "icon": "T_Fashion_Back55_03",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 40088,
+    "name": "Ailes brisées de feu spectral – Blanc ivoire",
+    "desc": "Sur son ossature brisée brûle encore une flamme ardente que rien ne parvient à dissiper.",
+    "icon": "T_Fashion_Back55_01",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 40089,
+    "name": "Éclat d’éclipse",
+    "desc": "Les ailes se déploient, recueillant tout l’éclat tranchant du jour et les profondeurs de minuit.",
+    "icon": "T_Fashion_Back54",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
     "id": 50001,
     "name": "",
     "desc": "",
@@ -3800,6 +4040,14 @@
     "unlock": "Disponible via la Myriade"
   },
   {
+    "id": 60005,
+    "name": "Spirale des dragons d’encre",
+    "desc": "Le ciel et la terre s’inversent, le yin et le yang poursuivent leur cycle.",
+    "icon": "T_Fashion_Fx46",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
     "id": 70001,
     "name": "Trace ondoyante",
     "desc": "Les ondulations laissées par le passage d’un papillon éveillent tout le cœur de l’été.",
@@ -3844,6 +4092,14 @@
     "name": "Floraison figée dans la glace – Lavande",
     "desc": "Geler le monde.",
     "icon": "T_Fashion_Fx35_03",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 70008,
+    "name": "Braises du feu spectral – Bleu céleste",
+    "desc": "La colère est semblable aux flammes : elle ne connaît aucun répit avant d’avoir réduit toutes choses en cendres.",
+    "icon": "T_Fashion_Fx44_02",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
@@ -4012,6 +4268,30 @@
     "name": "Floraison figée dans la glace – Doré",
     "desc": "Geler le monde.",
     "icon": "T_Fashion_Fx35_02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 70081,
+    "name": "Braises du feu spectral – Doré",
+    "desc": "La colère est semblable aux flammes : elle ne connaît aucun répit avant d’avoir réduit toutes choses en cendres.",
+    "icon": "T_Fashion_Fx44_01",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 70082,
+    "name": "Braises du feu spectral – Rouille",
+    "desc": "La colère est semblable aux flammes : elle ne connaît aucun répit avant d’avoir réduit toutes choses en cendres.",
+    "icon": "T_Fashion_Fx44_03",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 70083,
+    "name": "Braises du feu spectral – Pourpre profond",
+    "desc": "La colère est semblable aux flammes : elle ne connaît aucun répit avant d’avoir réduit toutes choses en cendres.",
+    "icon": "T_Fashion_Fx44_04",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
@@ -4206,5 +4486,61 @@
     "icon": "T_Fashion_Fx34_03",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80059,
+    "name": "华彩谢幕",
+    "desc": "Les cartes virevoltantes et la douce mélodie composent un ultime salut.",
+    "icon": "T_Fashion_Fx45_03",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 80060,
+    "name": "Spectres du feu spectral – Pourpre profond",
+    "desc": "Les âmes traquées hurlent en crachant les flammes de leur ressentiment.",
+    "icon": "T_Fashion_Fx43_03",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80061,
+    "name": "Spectres du feu spectral – Bleu céleste",
+    "desc": "Les âmes traquées hurlent en crachant les flammes de leur ressentiment.",
+    "icon": "T_Fashion_Fx43_04",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80062,
+    "name": "Spectres du feu spectral – Doré",
+    "desc": "Les âmes traquées hurlent en crachant les flammes de leur ressentiment.",
+    "icon": "T_Fashion_Fx43_02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80063,
+    "name": "Spectres du feu spectral – Rouille",
+    "desc": "Les âmes traquées hurlent en crachant les flammes de leur ressentiment.",
+    "icon": "T_Fashion_Fx43_01",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80064,
+    "name": "Échos mélodieux",
+    "desc": "Une douce mélodie résonne encore à vos oreilles.",
+    "icon": "T_Fashion_Fx45_01",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 80065,
+    "name": "Cartes d’illusion",
+    "desc": "Une magie éclatante danse au bout des doigts.",
+    "icon": "T_Fashion_Fx45_02",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
   }
 ]

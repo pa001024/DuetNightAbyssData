@@ -1841,6 +1841,22 @@
     "rarity": 5
   },
   {
+    "id": 226,
+    "name": "A Geniemon's Ballad",
+    "icon": "T_Resource_PetboxIconPro",
+    "rarity": 5,
+    "desc": "Arduous commissions and extraordinary adventures have shaped the legend of the Phoxhunters — a tale sung even by Geniemons.",
+    "desc2": "\"Beep-bee-bap-bap-bap-boop-boop! (All hail our hardworking, ever-lucky master!)\"\n\n— An excited Geniemon"
+  },
+  {
+    "id": 227,
+    "name": "魔灵之歌·一",
+    "icon": "T_Resource_PetboxIcon",
+    "rarity": 5,
+    "desc": "艰难的委托与超凡的冒险共同谱写出狩月人的传说，连魔灵也为之传唱。\n可用于购买魔灵惊喜礼箱。",
+    "desc2": "\"Beep-bee-bap-bap-bap-boop-boop! (All hail our hardworking, ever-lucky master!)\"\n\n— An excited Geniemon"
+  },
+  {
     "id": 301,
     "name": "Reputation Perk: Icelake",
     "icon": "T_Fame_0101",
@@ -1854,6 +1870,14 @@
     "icon": "T_Fame_0201",
     "rarity": 4,
     "desc": "This item lets you ride mounts and fly within Mistwharf.",
+    "desc2": "Once you've amassed enough reputation, society will turn a blind eye — even to the most unreasonable behaviour."
+  },
+  {
+    "id": 303,
+    "name": "RESOURCE_NAME_303",
+    "icon": "T_Fame_0201",
+    "rarity": 4,
+    "desc": "This item lets you ride mounts and fly within Bloomfield Station.",
     "desc2": "Once you've amassed enough reputation, society will turn a blind eye — even to the most unreasonable behaviour."
   },
   {
@@ -7510,6 +7534,70 @@
     "desc2": "\"The essence of swordsmanship lies in the unity of the wielder's spirit. With utmost focus, one can cleave through the mightiest foes, be they ocean waves or leviathans.\"\n\n— Excerpt from The Art of the Sword, by a nameless swordsman from Huaxu"
   },
   {
+    "id": 12170,
+    "name": "Stifled Howl: Grip",
+    "icon": "T_Melee_Weapon_Part01",
+    "rarity": 5,
+    "desc": "Crafted with precision from the blueprint of Stifled Howl. As the component closest to the wielder, the essence of its design is to ensure optimal handling.",
+    "desc2": "\"He is advancing,\nHe is advancing!\nI hear his thunderous steps resound,\nI hear the Sword of Torrent scrape on the ground!\nHe shall claim the lives of the unjust,\nNo one here can escape the tempest!\nNone can resist death's looming tonight,\nNor wrest the sword from his grasp so tight!\"\n\n— Excerpt from Le Rhapsodie de Torrent, by Alexandre Thomas, a mourning faction playwright"
+  },
+  {
+    "id": 12171,
+    "name": "Stifled Howl: Blade (Left)",
+    "icon": "T_Melee_Weapon_Part02",
+    "rarity": 5,
+    "desc": "Crafted with precision from the blueprint of Stifled Howl. Whether the blade is curved or straight, light or heavy, its edge is honed exclusively for battle.",
+    "desc2": "\"The essence of swordsmanship lies in the unity of the wielder's spirit. With utmost focus, one can cleave through the mightiest foes, be they ocean waves or leviathans.\"\n\n— Excerpt from The Art of the Sword, by a nameless swordsman from Huaxu"
+  },
+  {
+    "id": 12172,
+    "name": "Stifled Howl: Blade (Right)",
+    "icon": "T_Melee_Weapon_Part02",
+    "rarity": 5,
+    "desc": "Crafted with precision from the blueprint of Stifled Howl. Whether the blade is curved or straight, light or heavy, its edge is honed exclusively for battle.",
+    "desc2": "\"The essence of swordsmanship lies in the unity of the wielder's spirit. With utmost focus, one can cleave through the mightiest foes, be they ocean waves or leviathans.\"\n\n— Excerpt from The Art of the Sword, by a nameless swordsman from Huaxu"
+  },
+  {
+    "id": 12173,
+    "name": "The Hatter's Banquet: Bowstring",
+    "icon": "T_Melee_Weapon_Part03",
+    "rarity": 5,
+    "desc": "Crafted with precision from the blueprint of The Hatter's Banquet. Like a tightly coiled spring, a mere touch on the string is enough to unleash a torrent of pent-up energy.",
+    "desc2": "\"Sturdy, with just the right amount of give. I daresay it'd make quite the stylish weapon in the hands of an assassin.\"\n\n— An unnamed novelist in search of inspiration"
+  },
+  {
+    "id": 12174,
+    "name": "The Hatter's Banquet: Upper Limb",
+    "icon": "T_Melee_Weapon_Part01",
+    "rarity": 5,
+    "desc": "Crafted with precision from the blueprint of The Hatter's Banquet. The graceful curve not only withstands immense stress but also enhances the bow's resilience, ensuring efficient and precise energy transfer.",
+    "desc2": "\"Supple, yet strong — just what you need for a proper bow.\"\n\n— Lunosmith"
+  },
+  {
+    "id": 12175,
+    "name": "The Hatter's Banquet: Lower Limb",
+    "icon": "T_Melee_Weapon_Part01",
+    "rarity": 5,
+    "desc": "Crafted with precision from the blueprint of The Hatter's Banquet. The graceful curve not only withstands immense stress but also enhances the bow's resilience, ensuring efficient and precise energy transfer.",
+    "desc2": "\"Supple, yet strong — just what you need for a proper bow.\"\n\n— Lunosmith"
+  },
+  {
+    "id": 12176,
+    "name": "Sanguis Sanctus – Whipblade: Grip",
+    "icon": "T_Melee_Weapon_Part01",
+    "rarity": 5,
+    "desc": "Crafted with precision from the blueprint of Sanguis Sanctus – Whipblade. As the component closest to the wielder, the essence of its design is to ensure optimal handling.",
+    "desc2": "\"He is advancing,\nHe is advancing!\nI hear his thunderous steps resound,\nI hear the Sword of Torrent scrape on the ground!\nHe shall claim the lives of the unjust,\nNo one here can escape the tempest!\nNone can resist death's looming tonight,\nNor wrest the sword from his grasp so tight!\"\n\n— Excerpt from Le Rhapsodie de Torrent, by Alexandre Thomas, a mourning faction playwright"
+  },
+  {
+    "id": 12177,
+    "name": "Sanguis Sanctus – Whipblade: Blade",
+    "icon": "T_Melee_Weapon_Part02",
+    "rarity": 5,
+    "desc": "Crafted with precision from the blueprint of Sanguis Sanctus – Whipblade. Whether the blade is curved or straight, light or heavy, its edge is honed exclusively for battle.",
+    "desc2": "\"The essence of swordsmanship lies in the unity of the wielder's spirit. With utmost focus, one can cleave through the mightiest foes, be they ocean waves or leviathans.\"\n\n— Excerpt from The Art of the Sword, by a nameless swordsman from Huaxu"
+  },
+  {
     "id": 15001,
     "name": "Used to craft and upgrade Calamity Weapons",
     "icon": "T_Range_Weapon_Part03",
@@ -8342,6 +8430,13 @@
     ]
   },
   {
+    "id": 20526,
+    "name": "Bang-Bang Pass",
+    "icon": "T_Resource_ShootingItem",
+    "rarity": 4,
+    "desc": "An old ticket from Arcano's shooting gallery. Present it at the gallery and fire away."
+  },
+  {
     "id": 20602,
     "name": "Purgatorio Island: Volume Ⅰ",
     "icon": "T_TreasureMap_Prologue",
@@ -8910,6 +9005,46 @@
         ]
       }
     ]
+  },
+  {
+    "id": 20660,
+    "name": "Arcano (Ⅰ)",
+    "icon": "T_TreasureMap_EXChapter01",
+    "rarity": 4,
+    "desc": "A collection of enigmatic pages discovered by chance. Some are delicate scrolls of fine parchment; others, freshly printed sheets with ink still crisp and dark. A few are no more than torn scraps from half-used notebooks. Whether neatly penned or barely legible, they all share one thing in common — each contains a hint pointing to the whereabouts of a hidden treasure.",
+    "desc2": "Chase a deer and bring it to Mother Bunny, dear as a mother;\nChase a deer and bring it to Mother Bunny, sacred as a god.\nTake its cloven hooves, cut away its defiant horns;\nTeach its stubborn heart to yield.\nPeel the soft hide, stitch it with thread and bone;\nSpread the skin across the stony road.\nMother Bunny, come to us!\nReach out your gentle hand—\nUnder the gaze of the <H>Golden Deer</>—\nGrant me a second life.\n\n— Hymn to Mother Bunny: The Deer Hunt"
+  },
+  {
+    "id": 20661,
+    "name": "Arcano (Ⅱ)",
+    "icon": "T_TreasureMap_EXChapter01",
+    "rarity": 4,
+    "desc": "A collection of enigmatic pages discovered by chance. Some are delicate scrolls of fine parchment; others, freshly printed sheets with ink still crisp and dark. A few are no more than torn scraps from half-used notebooks. Whether neatly penned or barely legible, they all share one thing in common — each contains a hint pointing to the whereabouts of a hidden treasure.",
+    "desc2": "Why won't you believe me? You keep saying it's just a rabbit-shaped stone, but it's Mother Bunny's incarnation! Can't you hear Her voice?\nIt's not a hallucination, it's real... If you go there now, you can still see the gift She left for me, <H>right at Her feet</>!\nShe chose me! She acknowledged me! She forgave me! She's invited me to Her world, to serve by Her side — a paradise, a land where rivers flow with honey... It's paradise, paradise! Her paradise!"
+  },
+  {
+    "id": 20662,
+    "name": "Arcano (Ⅲ)",
+    "icon": "T_TreasureMap_EXChapter01",
+    "rarity": 4,
+    "desc": "A collection of enigmatic pages discovered by chance. Some are delicate scrolls of fine parchment; others, freshly printed sheets with ink still crisp and dark. A few are no more than torn scraps from half-used notebooks. Whether neatly penned or barely legible, they all share one thing in common — each contains a hint pointing to the whereabouts of a hidden treasure.",
+    "desc2": "Congratulations to the 99th lucky player of the spinning teacup! You've hit the jackpot!\nCome down now and head to the room, there's a lucky gift waiting for you. A reward truly worthy of your fortune.\nI don't know who you are, my guess is, maybe the most playful little Ada? Haha, it doesn't really matter. After all, this paradise exists to bring joy, and whoever receives that joy, it's a good thing. This is our shared town of Arcano. This is our home, our paradise.\nYou don't need to thank anyone for this unexpected gift. Thank yourself. It was your luck that brought you here, your attentiveness that found this note, and that's how you earned this gift. Arcano is growing better and better, it's thanks to everyone, and the rewards should be shared by everyone.\nNow, go to <H>the room with the golden sign</> right in front of you, and claim it! Have a wonderful day!\nTo the future of Arcano! To our future!"
+  },
+  {
+    "id": 20663,
+    "name": "Arcano (Ⅳ)",
+    "icon": "T_TreasureMap_EXChapter01",
+    "rarity": 4,
+    "desc": "A collection of enigmatic pages discovered by chance. Some are delicate scrolls of fine parchment; others, freshly printed sheets with ink still crisp and dark. A few are no more than torn scraps from half-used notebooks. Whether neatly penned or barely legible, they all share one thing in common — each contains a hint pointing to the whereabouts of a hidden treasure.",
+    "desc2": "The crash landing failed. Half of my body has gone numb. I don't think I'll make it until rescue arrives.\nThere's still some supplies left in the <H>airship</>. Take them, my comrade, may your battles go well.\nIf you can, please go to the rear cabin. Find a photo of a girl with long golden hair, and  bury it with me, resting on my chest. That... is my only wish."
+  },
+  {
+    "id": 20664,
+    "name": "Arcano (Ⅴ)",
+    "icon": "T_TreasureMap_EXChapter01",
+    "rarity": 4,
+    "desc": "A collection of enigmatic pages discovered by chance. Some are delicate scrolls of fine parchment; others, freshly printed sheets with ink still crisp and dark. A few are no more than torn scraps from half-used notebooks. Whether neatly penned or barely legible, they all share one thing in common — each contains a hint pointing to the whereabouts of a hidden treasure.",
+    "desc2": "Dear Rosalia:\n\nI'm nearly at Arcano. As I mentioned before, I'll record my experiences here and send them to you. I've heard the local folklore is quite unique, and for a fantasy novelist like me, it's the perfect place to gather material!\nYou know I've been struggling with writer's block lately, and it's been bothering me a lot. I believe that visiting the place in person will spark some fresh ideas.\nI've already come up with a story: a girl who accidentally obtains a pair of red dancing shoes that grant wishes. But in truth, every wish comes at a price. When she can no longer bear the cost and tries to get rid of the shoes, she finds that her feet have already grown into them...\nWhat do you think of this slightly horror-tinged story? I've already written over a dozen pages of manuscript. As expected, a new environment really does get the creativity flowing. Once I return from this trip and finish sorting out these drafts, I'll submit them to the publisher again.\n...\nThe townsfolk are warm and welcoming, not as frightening as the rumours said. I knew most of those urban legends were exaggerated, and there was nothing to worry about after all. A bit of a shame, though — this won't be giving me much material for my horror stories.\nI've had a bit too much to drink, and I'm feeling dizzy... Huh, where did I put my luggage? Oh, there it is — <H>by the pillar in the corner of the room</>.\nStill feeling lightheaded... I should get some proper rest.\n\n...\n\nIs this... a letter I wrote?\nWho is Rosalia...?\nAnd... who am I...?\n\n(The rest has been burned away, the edges charred and uneven.)"
   },
   {
     "id": 29001,
@@ -11408,6 +11543,14 @@
     ]
   },
   {
+    "id": 29007,
+    "name": "Advensphere: Mount Arcano",
+    "icon": "T_ExploreBadge_Beibao_EXChapter02",
+    "rarity": 5,
+    "desc": "Tokens said to lie scattered across Mount Arcano. They stand as proof of courage, wisdom, and patience — virtues forged through the trials of adventure. Gather enough of them and present them to the Lunoxplorer in Icelake's town square to earn valuable rewards.",
+    "desc2": "A land scarred by war. Remote mountains where few dare tread.\nThere, the \"survivors\" rebuilt a village cut off from the world, piecing together a \"paradise\" of their own while turmoil raged beyond.\nExplore Mount Arcano. Listen, look around, and watch the summer fireworks bloom."
+  },
+  {
     "id": 30001,
     "name": "Essence Gelatin",
     "icon": "T_Resource_PolarityPart01",
@@ -11574,6 +11717,46 @@
     "rarity": 5,
     "desc": "A dye made by blending various rare materials, capable of colouring hair in a wide array of shades.",
     "desc2": "It is said that a fugitive in Icelake, once pursued so relentlessly by The Escort that he turned his hair white overnight from sheer distress. Ironically, it was this very change that allowed him to slip straight through their fingers. Thereafter, he took to wandering, frequently altering his hair with dye, until he inspired a whole crowd of ordinary folk to follow suit. From a distance, they looked rather like the signboard above The Asphodel — positively blinding.\n\n— Camilla, exceedingly pleased with her own hair colour"
+  },
+  {
+    "id": 30120,
+    "name": "中级染剂·深海",
+    "icon": "T_Dye_19",
+    "rarity": 4,
+    "desc": "多种原料调和而成的染剂，可染出如深海般的颜色。",
+    "desc2": "“人们总觉得颜色是有情绪的，红色热情，绿色平和，蓝色忧郁，连带花也是一样，明明是同样种类的花，颜色不一样的话，也会被当做不一样的。所以每当有客人来光顾的时候，我都会根据他们的心情去推荐花的颜色。你也来挑一个喜欢的颜色吧。”\n\n——冰湖城市民 赛琪"
+  },
+  {
+    "id": 30121,
+    "name": "中级染剂·丁香",
+    "icon": "T_Dye_21",
+    "rarity": 4,
+    "desc": "多种原料调和而成的染剂，可染出如丁香般的颜色。",
+    "desc2": "“人们总觉得颜色是有情绪的，红色热情，绿色平和，蓝色忧郁，连带花也是一样，明明是同样种类的花，颜色不一样的话，也会被当做不一样的。所以每当有客人来光顾的时候，我都会根据他们的心情去推荐花的颜色。你也来挑一个喜欢的颜色吧。”\n\n——冰湖城市民 赛琪"
+  },
+  {
+    "id": 30122,
+    "name": "中级染剂·桔梗",
+    "icon": "T_Dye_20",
+    "rarity": 4,
+    "desc": "多种原料调和而成的染剂，可染出如桔梗般的颜色。",
+    "desc2": "“人们总觉得颜色是有情绪的，红色热情，绿色平和，蓝色忧郁，连带花也是一样，明明是同样种类的花，颜色不一样的话，也会被当做不一样的。所以每当有客人来光顾的时候，我都会根据他们的心情去推荐花的颜色。你也来挑一个喜欢的颜色吧。”\n\n——冰湖城市民 赛琪"
+  },
+  {
+    "id": 30123,
+    "name": "中级染剂·松果",
+    "icon": "T_Dye_22",
+    "rarity": 4,
+    "desc": "多种原料调和而成的染剂，可染出如松果般的颜色。",
+    "desc2": "“人们总觉得颜色是有情绪的，红色热情，绿色平和，蓝色忧郁，连带花也是一样，明明是同样种类的花，颜色不一样的话，也会被当做不一样的。所以每当有客人来光顾的时候，我都会根据他们的心情去推荐花的颜色。你也来挑一个喜欢的颜色吧。”\n\n——冰湖城市民 赛琪"
+  },
+  {
+    "id": 30124,
+    "name": "中级染剂·翡翠",
+    "icon": "T_Dye_18",
+    "rarity": 4,
+    "desc": "多种原料调和而成的染剂，可染出如翡翠般的颜色。",
+    "desc2": "“人们总觉得颜色是有情绪的，红色热情，绿色平和，蓝色忧郁，连带花也是一样，明明是同样种类的花，颜色不一样的话，也会被当做不一样的。所以每当有客人来光顾的时候，我都会根据他们的心情去推荐花的颜色。你也来挑一个喜欢的颜色吧。”\n\n——冰湖城市民 赛琪"
   },
   {
     "id": 40001,
@@ -12114,7 +12297,7 @@
   {
     "id": 41065,
     "name": "Crystal Heart",
-    "icon": "T_Resource_Gesture_Liuli",
+    "icon": "T_Resource_Gesture_09",
     "rarity": 5,
     "desc": "Eternity, captured at the moment of bloom."
   },
@@ -12140,6 +12323,48 @@
     "desc": "A tiny snowflake drifts into a young girl's dream, joining her in an enchanting serenade."
   },
   {
+    "id": 41069,
+    "name": "Hellborne Roar: Azure",
+    "icon": "T_Resource_Gesture_Cerberus_Normal",
+    "rarity": 6,
+    "desc": "Guard the inferno. Make death itself tremble."
+  },
+  {
+    "id": 41070,
+    "name": "Hellborne Roar: Rust Red",
+    "icon": "T_Resource_Gesture_Cerberus_Red",
+    "rarity": 6,
+    "desc": "Guard the inferno. Make death itself tremble."
+  },
+  {
+    "id": 41071,
+    "name": "Hellborne Roar: Gilt",
+    "icon": "T_Resource_Gesture_Cerberus_Gold",
+    "rarity": 6,
+    "desc": "Guard the inferno. Make death itself tremble."
+  },
+  {
+    "id": 41072,
+    "name": "RESOURCE_NAME_41072",
+    "icon": "T_Resource_Gesture_Eve03",
+    "rarity": 6,
+    "desc": "RESOURCE_DESC_41072"
+  },
+  {
+    "id": 41073,
+    "name": "RESOURCE_NAME_41073",
+    "icon": "T_Resource_Gesture_Eve03",
+    "rarity": 6,
+    "desc": "RESOURCE_DESC_41073"
+  },
+  {
+    "id": 41074,
+    "name": "RESOURCE_NAME_41074",
+    "icon": "T_Resource_Gesture_Eve03",
+    "rarity": 6,
+    "desc": "RESOURCE_DESC_41074"
+  },
+  {
     "id": 42001,
     "name": "Mechanical Nexus: The Bane",
     "icon": "T_Icon_CentralSquare_Equip01",
@@ -12157,17 +12382,17 @@
   },
   {
     "id": 49985,
-    "name": "RESOURCE_NAME_49985",
-    "icon": "T_Mounts_Gesture_0701",
+    "name": "灾厄使者",
+    "icon": "T_Mounts_Gesture_1001",
     "rarity": 6,
-    "desc": "RESOURCE_DESC_49985"
+    "desc": "所行之处，灾厄丛生。\n飞行速度提高50%，无需持有声名许可也能进行飞行。"
   },
   {
     "id": 49986,
-    "name": "RESOURCE_NAME_49986",
-    "icon": "T_Mounts_Gesture_0701",
-    "rarity": 6,
-    "desc": "RESOURCE_DESC_49986"
+    "name": "榛子冲冲冲·鎏金",
+    "icon": "T_Mounts_Gesture_11",
+    "rarity": 4,
+    "desc": "Oink oink? Oink oink. Oink oink!"
   },
   {
     "id": 49987,
@@ -12475,15 +12700,17 @@
   },
   {
     "id": 110038,
-    "name": "Portrait: Miss Nightingale – Dappled Shade",
-    "icon": "T_Head_Other0014",
-    "rarity": 1
+    "name": "Inactive Geniemon Surprise Chest",
+    "icon": "T_Pack_PetBox01",
+    "rarity": 5,
+    "pack": 351010
   },
   {
     "id": 110039,
-    "name": "Portrait: The Light Chaser – Distant Gaze",
-    "icon": "T_Head_Other0016",
-    "rarity": 1
+    "name": "Active Geniemon Surprise Chest",
+    "icon": "T_Pack_PetBox02",
+    "rarity": 5,
+    "pack": 351000
   },
   {
     "id": 110040,
@@ -12525,7 +12752,7 @@
     "name": "Pyro Covenanter Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_16",
     "rarity": 5,
-    "pack": 350020
+    "pack": 350031
   },
   {
     "id": 110047,
@@ -12546,7 +12773,7 @@
     "name": "Lumino Covenanter Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_14",
     "rarity": 5,
-    "pack": 350023
+    "pack": 350032
   },
   {
     "id": 110050,
@@ -12644,45 +12871,85 @@
   },
   {
     "id": 110062,
+    "name": "Crystal Selection Chest Ⅲ",
+    "icon": "T_Pack_ZaieRes02",
+    "rarity": 5,
+    "desc": "Grants 1 of the following: Pyro Crystal, Lumino Crystal, Hydro Crystal, or Umbro Crystal.",
+    "select": 4007
+  },
+  {
+    "id": 110063,
+    "name": "Character Skin Selection – Aegis",
+    "icon": "T_Pack_Police",
+    "rarity": 5,
+    "desc": "Grants a character skin from: Su Yi, Fina, Eve, Fushu, Lynn, Margie, Rhythm, Sibylle, or Daphne.",
+    "select": 5010
+  },
+  {
+    "id": 110064,
     "name": "Covenanter Demon Wedge: Anemo",
     "icon": "T_Pack_RandomMod_11",
     "rarity": 5,
     "pack": 350031
   },
   {
-    "id": 110063,
+    "id": 110065,
     "name": "Covenanter Demon Wedge: Pyro",
     "icon": "T_Pack_RandomMod_16",
     "rarity": 5,
-    "pack": 350032
+    "pack": 350037
   },
   {
-    "id": 110064,
+    "id": 110066,
     "name": "Covenanter Demon Wedge: Electro",
     "icon": "T_Pack_RandomMod_12",
     "rarity": 5,
     "pack": 350033
   },
   {
-    "id": 110065,
+    "id": 110067,
     "name": "Covenanter Demon Wedge: Hydro",
     "icon": "T_Pack_RandomMod_13",
     "rarity": 5,
     "pack": 350034
   },
   {
-    "id": 110066,
+    "id": 110068,
     "name": "Covenanter Demon Wedge: Lumino",
     "icon": "T_Pack_RandomMod_14",
     "rarity": 5,
-    "pack": 350035
+    "pack": 350038
   },
   {
-    "id": 110067,
+    "id": 110069,
     "name": "Covenanter Demon Wedge: Umbro",
     "icon": "T_Pack_RandomMod_15",
     "rarity": 5,
     "pack": 350036
+  },
+  {
+    "id": 110070,
+    "name": "A Gift in Return",
+    "icon": "T_Pack_Fame",
+    "rarity": 4,
+    "desc": "The pack may contain:\n\nGold Sand\nFilthoid Tentacle\nPropulsion Unit\nContact Index\nSharpening Potion\nBomb\nWeaponholder\nSerum Syringe\nFilthoid Polymer\nCoolant\nSacred Candle\nRepulsive Crystal",
+    "pack": 220009
+  },
+  {
+    "id": 110071,
+    "name": "Inactive Geniemon Selection Chest",
+    "icon": "T_Pack_ChoosePetBox01",
+    "rarity": 5,
+    "desc": "Choose an Inactive Geniemon with any of the following Potentials: Tenacious, Deft, At Peace, Disciplined, Desirous, Fleeing, or Veteran.",
+    "select": 4009
+  },
+  {
+    "id": 110072,
+    "name": "Active Geniemon Selection Chest",
+    "icon": "T_Pack_ChoosePetBox02",
+    "rarity": 5,
+    "desc": "Choose 1 of the following Active Geniemons: Shiny Bro Boxie, Shiny Pearabbit, or Shiny Mr Goodnight.",
+    "select": 4008
   },
   {
     "id": 120001,
@@ -12720,6 +12987,13 @@
     "desc": "Spend 300 Phoxene Plumules to save 240"
   },
   {
+    "id": 120006,
+    "name": "第22只乐园的白兔装饰代金券",
+    "icon": "T_Resource_DiscountTicket_01",
+    "rarity": 5,
+    "desc": "商品满480月石晶胚减360月石晶胚"
+  },
+  {
     "id": 1001101,
     "name": "Thought: Berenica",
     "icon": "T_CharPiece_Heitao",
@@ -12745,7 +13019,7 @@
   },
   {
     "id": 1001201,
-    "name": "Thought: Phoxhunter – Umbro",
+    "name": "Thought: {nickname} – Umbro",
     "icon": "T_CharPiece_Protagonist02",
     "rarity": 5,
     "desc": "Thoughts sifted from the drifting sands of remembrance. They carry the memory of someone — from the past, or from what is yet to come.",
@@ -12785,7 +13059,7 @@
   },
   {
     "id": 1001601,
-    "name": "Thought: Phoxhunter - Lumino",
+    "name": "Thought: {nickname} – Lumino",
     "icon": "T_CharPiece_Protagonist",
     "rarity": 5,
     "desc": "Thoughts sifted from the drifting sands of remembrance. They carry the memory of someone — from the past, or from what is yet to come.",
@@ -12809,8 +13083,16 @@
   },
   {
     "id": 1002102,
-    "name": "Thought: \"Ada\"",
+    "name": "Thought: Eve",
     "icon": "T_CharPiece_Eve",
+    "rarity": 5,
+    "desc": "Thoughts sifted from the drifting sands of remembrance. They carry the memory of someone — from the past, or from what is yet to come.",
+    "desc2": "\"You have three lives.\n\nYour first life is breath and heartbeat. You measure and perceive the world with your flesh and blood.\nYour second life is connection and bond. Your soul dwells in the nourishment of family, a lover's kiss, and the embrace of friends.\nYour third life is thought and memory. When a reader sees your name upon a page, when a traveler hears it in a bard's song, when a child draws wisdom and courage from your story—your life echoes once more in this world.\n\nAll return to the Misty Sea, but not all truly die.\"\n\n— Lady Nifle, Ferrywoman of the Misty Sea"
+  },
+  {
+    "id": 1002201,
+    "name": "Thought: {nickname2} – Hydro",
+    "icon": "T_CharPiece_EXProtagonist",
     "rarity": 5,
     "desc": "Thoughts sifted from the drifting sands of remembrance. They carry the memory of someone — from the past, or from what is yet to come.",
     "desc2": "\"You have three lives.\n\nYour first life is breath and heartbeat. You measure and perceive the world with your flesh and blood.\nYour second life is connection and bond. Your soul dwells in the nourishment of family, a lover's kiss, and the embrace of friends.\nYour third life is thought and memory. When a reader sees your name upon a page, when a traveler hears it in a bard's song, when a child draws wisdom and courage from your story—your life echoes once more in this world.\n\nAll return to the Misty Sea, but not all truly die.\"\n\n— Lady Nifle, Ferrywoman of the Misty Sea"
@@ -12899,6 +13181,14 @@
     "id": 1004102,
     "name": "Thought: Zhiliu",
     "icon": "T_CharPiece_Zhiliu",
+    "rarity": 5,
+    "desc": "Thoughts sifted from the drifting sands of remembrance. They carry the memory of someone — from the past, or from what is yet to come.",
+    "desc2": "\"You have three lives.\n\nYour first life is breath and heartbeat. You measure and perceive the world with your flesh and blood.\nYour second life is connection and bond. Your soul dwells in the nourishment of family, a lover's kiss, and the embrace of friends.\nYour third life is thought and memory. When a reader sees your name upon a page, when a traveler hears it in a bard's song, when a child draws wisdom and courage from your story—your life echoes once more in this world.\n\nAll return to the Misty Sea, but not all truly die.\"\n\n— Lady Nifle, Ferrywoman of the Misty Sea"
+  },
+  {
+    "id": 1004103,
+    "name": "RESOURCE_NAME_1004103",
+    "icon": "T_CharPiece_SpLise",
     "rarity": 5,
     "desc": "Thoughts sifted from the drifting sands of remembrance. They carry the memory of someone — from the past, or from what is yet to come.",
     "desc2": "\"You have three lives.\n\nYour first life is breath and heartbeat. You measure and perceive the world with your flesh and blood.\nYour second life is connection and bond. Your soul dwells in the nourishment of family, a lover's kiss, and the embrace of friends.\nYour third life is thought and memory. When a reader sees your name upon a page, when a traveler hears it in a bard's song, when a child draws wisdom and courage from your story—your life echoes once more in this world.\n\nAll return to the Misty Sea, but not all truly die.\"\n\n— Lady Nifle, Ferrywoman of the Misty Sea"
@@ -12993,7 +13283,7 @@
   },
   {
     "id": 1011201,
-    "name": "Sigil: Phoxhunter – Umbro",
+    "name": "Sigil: {nickname} – Umbro",
     "icon": "T_Phantom_Nvzhu02",
     "rarity": 5,
     "desc": "A sigil for summoning Combat Partners. It is a staff to lean on in a battle, a pact of companionship, and an oath unspoken.\nHeartfelt prayers shall be answered, and the desired one shall appear by your side.",
@@ -13033,7 +13323,7 @@
   },
   {
     "id": 1011601,
-    "name": "Sigil: Phoxhunter - Lumino",
+    "name": "Sigil: {nickname} – Lumino",
     "icon": "T_Phantom_Nvzhu",
     "rarity": 5,
     "desc": "A sigil for summoning Combat Partners. It is a staff to lean on in a battle, a pact of companionship, and an oath unspoken.\nHeartfelt prayers shall be answered, and the desired one shall appear by your side.",
@@ -13057,8 +13347,16 @@
   },
   {
     "id": 1012102,
-    "name": "Sigil: \"Ada\"",
+    "name": "Sigil: Eve",
     "icon": "T_Phantom_Eve",
+    "rarity": 5,
+    "desc": "A sigil for summoning Combat Partners. It is a staff to lean on in a battle, a pact of companionship, and an oath unspoken.\nHeartfelt prayers shall be answered, and the desired one shall appear by your side.",
+    "desc2": "\"Our tale spans over two millennia: a saga of embrace and massacre, of furore and mercy. History ebbs and flows like the celestial dance of the sun and the moon – constant and cyclical. In the grand tapestry of time recounted in these pages, I am but a mere observer, as insignificant as a flake of Hyperborean snow, a leaf from Aethyrie, a drop in Luca's waters, or a grain from Khemet's sands. Yet, in this immense cosmos, I harbour the hope that snowflakes will forge snowfields, leaves will form forests, drops of water will coalesce into rivers, and grains will gather to sculpt deserts. As all singular entities unite, history shall pivot in our favour.\"\n\n— Betwixt Leaves And Branches — History of Atlasia, by Comnena, Chief Librarian of the Aethyrie Cloud Cavern Library"
+  },
+  {
+    "id": 1012201,
+    "name": "Sigil: {nickname2} – Hydro",
+    "icon": "T_Phantom_WeitaF",
     "rarity": 5,
     "desc": "A sigil for summoning Combat Partners. It is a staff to lean on in a battle, a pact of companionship, and an oath unspoken.\nHeartfelt prayers shall be answered, and the desired one shall appear by your side.",
     "desc2": "\"Our tale spans over two millennia: a saga of embrace and massacre, of furore and mercy. History ebbs and flows like the celestial dance of the sun and the moon – constant and cyclical. In the grand tapestry of time recounted in these pages, I am but a mere observer, as insignificant as a flake of Hyperborean snow, a leaf from Aethyrie, a drop in Luca's waters, or a grain from Khemet's sands. Yet, in this immense cosmos, I harbour the hope that snowflakes will forge snowfields, leaves will form forests, drops of water will coalesce into rivers, and grains will gather to sculpt deserts. As all singular entities unite, history shall pivot in our favour.\"\n\n— Betwixt Leaves And Branches — History of Atlasia, by Comnena, Chief Librarian of the Aethyrie Cloud Cavern Library"
@@ -13152,6 +13450,14 @@
     "desc2": "\"Our tale spans over two millennia: a saga of embrace and massacre, of furore and mercy. History ebbs and flows like the celestial dance of the sun and the moon – constant and cyclical. In the grand tapestry of time recounted in these pages, I am but a mere observer, as insignificant as a flake of Hyperborean snow, a leaf from Aethyrie, a drop in Luca's waters, or a grain from Khemet's sands. Yet, in this immense cosmos, I harbour the hope that snowflakes will forge snowfields, leaves will form forests, drops of water will coalesce into rivers, and grains will gather to sculpt deserts. As all singular entities unite, history shall pivot in our favour.\"\n\n— Betwixt Leaves And Branches — History of Atlasia, by Comnena, Chief Librarian of the Aethyrie Cloud Cavern Library"
   },
   {
+    "id": 1014103,
+    "name": "RESOURCE_NAME_1014103",
+    "icon": "T_Phantom_SpLise",
+    "rarity": 5,
+    "desc": "A sigil for summoning Combat Partners. It is a staff to lean on in a battle, a pact of companionship, and an oath unspoken.\nHeartfelt prayers shall be answered, and the desired one shall appear by your side.",
+    "desc2": "\"Our tale spans over two millennia: a saga of embrace and massacre, of furore and mercy. History ebbs and flows like the celestial dance of the sun and the moon – constant and cyclical. In the grand tapestry of time recounted in these pages, I am but a mere observer, as insignificant as a flake of Hyperborean snow, a leaf from Aethyrie, a drop in Luca's waters, or a grain from Khemet's sands. Yet, in this immense cosmos, I harbour the hope that snowflakes will forge snowfields, leaves will form forests, drops of water will coalesce into rivers, and grains will gather to sculpt deserts. As all singular entities unite, history shall pivot in our favour.\"\n\n— Betwixt Leaves And Branches — History of Atlasia, by Comnena, Chief Librarian of the Aethyrie Cloud Cavern Library"
+  },
+  {
     "id": 1014201,
     "name": "Sigil: Yuming",
     "icon": "T_Phantom_Yuming",
@@ -13216,6 +13522,22 @@
     "desc2": "\"Our tale spans over two millennia: a saga of embrace and massacre, of furore and mercy. History ebbs and flows like the celestial dance of the sun and the moon – constant and cyclical. In the grand tapestry of time recounted in these pages, I am but a mere observer, as insignificant as a flake of Hyperborean snow, a leaf from Aethyrie, a drop in Luca's waters, or a grain from Khemet's sands. Yet, in this immense cosmos, I harbour the hope that snowflakes will forge snowfields, leaves will form forests, drops of water will coalesce into rivers, and grains will gather to sculpt deserts. As all singular entities unite, history shall pivot in our favour.\"\n\n— Betwixt Leaves And Branches — History of Atlasia, by Comnena, Chief Librarian of the Aethyrie Cloud Cavern Library"
   },
   {
+    "id": 1021101,
+    "name": "Essence Thought: Berenica",
+    "icon": "T_CharPiece_Heitao01",
+    "rarity": 5,
+    "desc": "Plucked from the shifting sands of memory, a complete thread of thought carries echoes of someone, from a past yet to come, or a future long forgotten.",
+    "desc2": "\"You have three lives.\n\nYour first life is breath and heartbeat. You measure and perceive the world with your flesh and blood.\nYour second life is connection and bond. Your soul dwells in the nourishment of family, a lover's kiss, and the embrace of friends.\nYour third life is thought and memory. When a reader sees your name upon a page, when a traveler hears it in a bard's song, when a child draws wisdom and courage from your story—your life echoes once more in this world.\n\nAll return to the Misty Sea, but not all truly die.\"\n\n— Lady Nifle, Ferrywoman of the Misty Sea"
+  },
+  {
+    "id": 1021501,
+    "name": "Essence Thought: Lisbell",
+    "icon": "T_CharPiece_Baonu01",
+    "rarity": 5,
+    "desc": "Plucked from the shifting sands of memory, a complete thread of thought carries echoes of someone, from a past yet to come, or a future long forgotten.",
+    "desc2": "\"You have three lives.\n\nYour first life is breath and heartbeat. You measure and perceive the world with your flesh and blood.\nYour second life is connection and bond. Your soul dwells in the nourishment of family, a lover's kiss, and the embrace of friends.\nYour third life is thought and memory. When a reader sees your name upon a page, when a traveler hears it in a bard's song, when a child draws wisdom and courage from your story—your life echoes once more in this world.\n\nAll return to the Misty Sea, but not all truly die.\"\n\n— Lady Nifle, Ferrywoman of the Misty Sea"
+  },
+  {
     "id": 1022101,
     "name": "Essence Thought: Rebecca",
     "icon": "T_CharPiece_Shuimu01",
@@ -13227,6 +13549,14 @@
     "id": 1023201,
     "name": "Essence Thought: Hellfire",
     "icon": "T_CharPiece_Haier01",
+    "rarity": 5,
+    "desc": "Plucked from the shifting sands of memory, a complete thread of thought carries echoes of someone, from a past yet to come, or a future long forgotten.",
+    "desc2": "\"You have three lives.\n\nYour first life is breath and heartbeat. You measure and perceive the world with your flesh and blood.\nYour second life is connection and bond. Your soul dwells in the nourishment of family, a lover's kiss, and the embrace of friends.\nYour third life is thought and memory. When a reader sees your name upon a page, when a traveler hears it in a bard's song, when a child draws wisdom and courage from your story—your life echoes once more in this world.\n\nAll return to the Misty Sea, but not all truly die.\"\n\n— Lady Nifle, Ferrywoman of the Misty Sea"
+  },
+  {
+    "id": 1023202,
+    "name": "Essence Thought: Camilla",
+    "icon": "T_CharPiece_Kami01",
     "rarity": 5,
     "desc": "Plucked from the shifting sands of memory, a complete thread of thought carries echoes of someone, from a past yet to come, or a future long forgotten.",
     "desc2": "\"You have three lives.\n\nYour first life is breath and heartbeat. You measure and perceive the world with your flesh and blood.\nYour second life is connection and bond. Your soul dwells in the nourishment of family, a lover's kiss, and the embrace of friends.\nYour third life is thought and memory. When a reader sees your name upon a page, when a traveler hears it in a bard's song, when a child draws wisdom and courage from your story—your life echoes once more in this world.\n\nAll return to the Misty Sea, but not all truly die.\"\n\n— Lady Nifle, Ferrywoman of the Misty Sea"
@@ -15592,6 +15922,110 @@
     ]
   },
   {
+    "id": 2000127,
+    "name": "Safety Instructions",
+    "icon": "T_Read_01",
+    "rarity": 3,
+    "desc": "Safety instructions posted beside an amusement attraction. After brushing away the soot and ash, parts of the text can still just be made out.",
+    "desc2": "Please follow the instructions below when operating this attraction (<H>especially you, Ada!!!</>):\n\n1. For safety, make sure at least two people are present before use.\n2. Before use, check that all connections are secure. If anything needs fixing, the toolbox is behind the attraction. (If Ada is sent to fetch it, make sure she puts every tool back where it belongs.)\n3. Once everything is secure, start it up. Loud noises during startup and a longer-than-usual startup time are both normal. (Hopefully it won't scare the children.)\n4. If you run into a problem you can't fix, ask Morgana to handle it. (Do NOT let Ada try to fix anything by herself! Unless the problem seems too easy and you feel like unlocking hard mode.)\n5...\n...\n\n(The rest of the text is illegible.)"
+  },
+  {
+    "id": 2000128,
+    "name": "A Fallen Legionary's Recording",
+    "icon": "T_Read_02",
+    "rarity": 3,
+    "desc": "A damaged recording device. Based on its contents, it seems to have belonged to an airship commander from the war four years ago.",
+    "desc2": "...\nWe've reached the border.\nStrikes confirmed. Elysian forward units are retreating. Hold formation. Keep the pressure on... Wait. What did they just launch from that position? Hard left! All units, hard left!\n...\n*cough* ...Airship Unit Four is hit! The Elysian Heralds are counterattacking! Heavy casualties! Requesting reinforcements. Repeat, requesting reinforcements...\n...\nBrothers... the Elysian Divine Heralds have launched a full counteroffensive on every front. They've broken through our lines and advanced deep into Hyperborean territory. Our losses are catastrophic.\n...\nWe've received our final order. Crash-land near Mount Arcano. Hold the position there, and keep the enemy inside artillery range... Hahaha... Look on the bright side, brothers. We're dead either way. But if we can drag this many Elysian soldiers down with us, that's not such a bad deal..."
+  },
+  {
+    "id": 2000129,
+    "name": "An Elysian Soldier's Final Notes",
+    "icon": "T_Read_02",
+    "rarity": 3,
+    "desc": "A handwritten note left by an Elysian soldier. The script is crooked and unsteady; whoever wrote it must have been barely able to hold the pen.",
+    "desc2": "\"If you're reading this, take these notes with you. Expose the Empire's crimes. Don't let the Children of the Gods suffer any longer.\n\nThe Legion turned on its own allies and shelled civilian towns without mercy. We survived only because the Divine Heralds protected us, and by the grace of the gods. But...\n...\nEvery step drains what little strength we have left. No one says it aloud, but we all know this is as far as we go. The mines we laid during our retreat may slow their pursuit for a while, but our supplies ran out long ago.\nNo one is leaving this valley alive...\nGods, forgive us. We failed to cleanse those damned blasphemers. Take my comrades back into your embrace. They whispered prayers to you until their final breaths. Please... hear them...\"\n\n(The rest of the entry is smeared with dark blood. Only a few words remain legible at the bottom.)\n\n\"...I don't want to die.\""
+  },
+  {
+    "id": 2000130,
+    "name": "A Nameless Soldier's Recording",
+    "icon": "T_Read_02",
+    "rarity": 3,
+    "desc": "An audio log left behind by a soldier. He survived the horrors of the war four years ago longer than most, but death caught up with him in the end.",
+    "desc2": "Fire... fire everywhere... Alarms blaring. Screams all around me... I remember now. The <H>Hammerhead</> tried to make an emergency landing... but it failed.\nRed. All I can see is red... So hot. Burning red...\n...\nThe commander dragged me out of the Hammerhead... The Elysian assault still hasn't let up. Comms say our main force crash-landed in the valley to the south. We need to find a way down there and regroup with them... We have to keep the Elysian army tied down here...\n...\nDamn it. Those Elysian bastards have sealed every mountain pass. The commander took a round covering my retreat... No reinforcements. No supplies. No hope... We're on our own...\n...\nThe bombardment woke me. I know those guns. They're ours.\nI can feel the whole mountain range shaking. Haha... hahaha... That's what you get for crossing the Legions. Hah... *cough*...\nI don't know how long the shelling went on. When it finally stopped, my commander went out to look for survivors...\nNow the whole world is quiet... So peaceful. So... cold...\nGood night, world."
+  },
+  {
+    "id": 2000131,
+    "name": "Rules of Arcano",
+    "icon": "T_Read_02",
+    "rarity": 3,
+    "desc": "Rules posted throughout Paradise. All residents are required to follow them.",
+    "desc2": "Rule Ⅰ\nMount Arcano is our Paradise, and we are all Mother Bunny's White Bunnies.\nRule Ⅱ\nWhite Bunnies must love one another. Violence between White Bunnies is forbidden. When conflicts arise, they must be settled through games.\nRule Ⅲ\nBunnies come in many colors. White Bunnies are friends. Red Bunnies are dangerous. If you see a Red Bunny, report it to the chief at once.\nRule Ⅳ\nThe Parade is Arcano's monthly grand celebration. During the Parade, all Bunnies must complete one game together.\nRule Ⅴ\nThe toys of Mount Arcano are our friends. You may accept their help and protection.\nRule Ⅵ\nAll White Bunnies must remember their Arcana names. They reveal our essence. We must never act against it.\nRule Ⅶ\nThe giant metal man in the sky is the enemy of Paradise. If the giant metal man appears, stop whatever you are doing and proceed at once to the Pond of Slumber.\nRule Ⅷ\nFor those who have broken the rules, the Pond of Slumber will help them find peace again.\nRule Ⅸ\nUnless the giant metal man appears, no one may approach the Pond of Slumber without the chief's permission.\nRule Ⅹ\nTo keep our lives from being disturbed by the outside world, no White Bunny may leave Paradise without permission."
+  },
+  {
+    "id": 2000132,
+    "name": "The Never-Ending Tea Party",
+    "icon": "T_Read_01",
+    "rarity": 3,
+    "desc": "A fairy-tale book by an unknown author. Read closely, and something faintly unsettling seems to stir beneath the tale.",
+    "desc2": "The tea party has begun. There are dazzling fireworks, beautiful finery, endless sweets, dear little animals, and merry laughter.\nThe tea party has begun. There are raging storms, dazzling fireworks, beautiful finery, endless sweets, dear little animals, and merry laughter.\nThe tea party has begun. There is a burning stage, dazzling fireworks, beautiful finery, endless sweets, dear little animals, and merry laughter.\nThe tea party has begun. There is creeping moss, dazzling fireworks, beautiful finery, endless sweets, dear little animals, and merry laughter.\nThe tea party has begun. There are dazzling fireworks, beautiful finery, endless sweets, dear little animals, and merry laughter.\nCome now. The rabbits will pour us mead, and the flowers will dust us with sugar.\nCome now. Take your seats beneath the summer-night fireworks, and raise a blessing to this beautiful hour — one that shall never fade."
+  },
+  {
+    "id": 2000133,
+    "name": "A Letter in the Emperor's Hand",
+    "icon": "T_Read_03",
+    "rarity": 3,
+    "desc": "A confidential letter from His Majesty Julius to {nickname2}. It must not fall into anyone else's hands.",
+    "desc2": "Destroy this letter after reading.\nEnsure Vergilius's safety.\nWithin six months, eliminate Duke Servius. Leave no trace."
+  },
+  {
+    "id": 2000134,
+    "name": "A Bloodstained Letter",
+    "icon": "T_Read_03",
+    "rarity": 3,
+    "desc": "A letter found beside the remains of a carrier pigeon. Scraps of flesh still cling to the bird's bones; it seems to have been torn apart by a bird of prey not long ago, then discarded here. The letter never made it out of Mount Arcano.",
+    "desc2": "I don't know where this letter will end up, or who will find it. But please, kind stranger... I beg you. Save me. I am in a village called Arcano, on Mount Arcano. This carrier pigeon should be able to lead you here...\nI was once an ordinary housewife from Scarletriver. Fred, the explorer who vanished on Mount Arcano several years ago, was my husband. I came to Mount Arcano to look for him, only to find a new village here, also called Arcano.\nBut this New Arcano is nothing like the tourist village we knew. It is a sealed-off hell full of madmen.\nTo avoid being killed by the village's master, \"Mother Bunny\", everyone who enters the village is forced to play whatever role she assigns them. My husband... was killed by that madwoman.\nI want to avenge him, but I have no weapon, no strength, and no way to fight her. How are ordinary people like us supposed to fight power like hers?\nI want to run, but I don't know who here is still in their right mind, and who is spying for Mother Bunny. I saw two close friends turn on each other. One gave away the other's escape plan, and the one who tried to run was drowned alive in front of us all. The worst part was that no one mourned. They just stood there, murmuring about eternal sleep beneath the water, rebirth, and reunion...\nTo survive, I can only play along and pretend to be the kind, gentle \"Teresa\". But familiar faces keep vanishing, one after another, and strangers take their place. I can't go on like this... I don't know if I will be the next to disappear, or if tomorrow there will be a new \"Teresa\" in my place... I'm so afraid. So afraid that sometimes I forget how to breathe. Panic closes around my throat. I feel as if I could break at any moment...\nBefore I lose myself completely, I have to write this. If you find this letter, please get me out of Mount Arcano. If you help me escape, I will do anything for you...\nPlease..."
+  },
+  {
+    "id": 2000135,
+    "name": "Testimony of Eric Woodville",
+    "icon": "T_Read_02",
+    "rarity": 3,
+    "desc": "An interrogation report on an Arcano survivor, delivered to Vergilius by a Legion soldier. It contains Eric Woodville's testimony.",
+    "desc2": "I am Eric Woodville, a folklorist from Aethyrie. Three years ago, I came to Mount Arcano with my assistant to investigate whether any of Arcano's villagers had survived.\nLater, we both fell under Mother Bunny's control and were forced to stay on Mount Arcano. At first, under the influence of drugs, I believed for a while that I was a villager named Isaac. It was my assistant, Catherine, who brought me back to myself. She had been assigned the role of \"The Magician\", Morgana.\nShe is my finest and most brilliant student. She was also the one who persuaded me to play along with Mother Bunny's demands. Against power like hers, all we could do was endure in silence and wait for a real chance to escape.\nSo we devoted ourselves to our roles and tried to blend into life in \"Paradise\". In doing so, we stood by and watched others die.\nPlease forgive Catherine and me for our selfishness. We acted as we did because we feared for our lives...\nI doubt we will have another chance to see that young officer. Sir, if possible, please pass on my thanks to him.\n\n(This testimony is broadly consistent with the account given by \"The Magician\". Further identity verification should be sought through Aethyrie's diplomatic channels.)"
+  },
+  {
+    "id": 2000136,
+    "name": "Testimony of \"Temperance\"",
+    "icon": "T_Read_02",
+    "rarity": 3,
+    "desc": "An interrogation report on an Arcano survivor, delivered to Vergilius by a Legion soldier. It contains the testimony of \"Temperance\", whose real name is unknown.",
+    "desc2": "I... I don't remember who I am anymore...\nI think I wrote my name down in a notebook a long time ago. My name, and how many days I had been in Paradise.\nBut after drinking the water a few times, I even forgot where I hid it...\nWhere are you taking me after this? If I leave Paradise... what am I supposed to be then?\nNo, no, I don't blame you. I just don't know... I don't know... I don't know anything anymore...\n\n(Recording terminated. The victim was highly emotionally unstable and deemed unfit for further questioning.)"
+  },
+  {
+    "id": 2000137,
+    "name": "Testimony of \"The Tower\"",
+    "icon": "T_Read_02",
+    "rarity": 3,
+    "desc": "An interrogation report on an Arcano survivor, delivered to Vergilius by a Legion soldier. It contains the testimony of \"The Tower\", whose real name is unknown.",
+    "desc2": "Everyone else was running, so... so I ran too.\n...Sir, everyone says weapons are dangerous. Then why do you have them?\n\nVictor asked me about them too... the Forsakens... What does that even mean...? Why did you hit me...?\n\nUm... do you like this cool design...? I can draw it on your uniforms too. It'll look really nice, so... could you please stop hitting me...? Mother Bunny is scary... and all of you are scary too...\n\n(No useful information obtained. Initial assessment: the drugs have erased the subject's memories related to the Forsakens. Transferred to the Royal Military Prison for further interrogation.)"
+  },
+  {
+    "id": 2000138,
+    "name": "Testimony of Tom",
+    "icon": "T_Read_02",
+    "rarity": 3,
+    "desc": "An interrogation report on an Arcano survivor, delivered to Vergilius by a Legion soldier. It contains Tom's testimony.",
+    "desc2": "Hahaha... I finally got out! Holy ****, I actually got out! Hahahaha! Sorry, sorry, officers, I'm just a little excited... Heh... ahahaha!\n(A stream of incoherent profanity follows.)\nAhem... Mm. All right. Ask away, officers. Anything I know, I'll tell you. All of it. Hahaha!\nDamn, it feels good to talk like a person again. ****, hell yeah!\n(A stream of incoherent profanity follows.)\nOh, right. My name's Tom. Don't know my last name. I didn't lose my memory or anything. I've just been scraping by on the streets for as long as I can remember, and I never knew who my parents were. People usually called me street rat, little bastard, filthy little beggar... that sort of thing. Pick whichever one you like, officers. Heh.\n\n(The victim remained highly agitated throughout the interrogation. Little useful information was obtained.)"
+  },
+  {
+    "id": 2000139,
+    "name": "Testimony of Jenny Blount",
+    "icon": "T_Read_02",
+    "rarity": 3,
+    "desc": "An interrogation report on an Arcano survivor, delivered to Vergilius by a Legion soldier. It contains Jenny Blount's testimony.",
+    "desc2": "My name is Jenny Blount. I'm just an ordinary citizen from Scarletriver. If there was anything unusual about me, it was that I was reckless when I was young, and cared far too much about my pride.\nTwo years ago, I was having tea at a café when I overheard some people spinning tales about Mount Arcano. I mocked them for it and said only children would be scared by stories like that.\nThen they bet me the stories were true. Of course, I didn't believe a word of it, so I took the bet and came to Mount Arcano myself.\nAnd then... well, you can see how that turned out. The moment I arrived, Mother Bunny forced me into one of her roles and wouldn't let me leave. I've been stuck here for two years. *sigh*... Two years of my life, gone... all because I couldn't swallow my pride over a stupid bet. *sigh*...\n\n(The victim provided several local legends concerning Mount Arcano. Little useful information was obtained.)"
+  },
+  {
     "id": 3000001,
     "name": "A Box of Paper Stars",
     "icon": "T_Impression_Star",
@@ -15868,6 +16302,94 @@
         ]
       }
     ]
+  },
+  {
+    "id": 3101401,
+    "name": "Bloomfield Station",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "A piece of sheet music — its notes trace a story like footprints in the sand.",
+    "desc2": "\"When your fingers brush the keys, the notes awaken — the wind's whispers, time's soft sigh, the hush of new shoots breaking soil. They give voice to ancient histories, to heroes' unspoken vows, to tales never etched on any page. They stand as testament to all that has ever been upon this land.\"\n \n— Lirico, the Wandering Bard"
+  },
+  {
+    "id": 3101402,
+    "name": "Tea Time",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "A piece of sheet music — its notes trace a story like footprints in the sand.",
+    "desc2": "\"When your fingers brush the keys, the notes awaken — the wind's whispers, time's soft sigh, the hush of new shoots breaking soil. They give voice to ancient histories, to heroes' unspoken vows, to tales never etched on any page. They stand as testament to all that has ever been upon this land.\"\n \n— Lirico, the Wandering Bard"
+  },
+  {
+    "id": 3101403,
+    "name": "Graceful Steps",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "A piece of sheet music — its notes trace a story like footprints in the sand.",
+    "desc2": "\"When your fingers brush the keys, the notes awaken — the wind's whispers, time's soft sigh, the hush of new shoots breaking soil. They give voice to ancient histories, to heroes' unspoken vows, to tales never etched on any page. They stand as testament to all that has ever been upon this land.\"\n \n— Lirico, the Wandering Bard"
+  },
+  {
+    "id": 3101404,
+    "name": "Hilda — A Maid's Virtue",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "A piece of sheet music — its notes trace a story like footprints in the sand.",
+    "desc2": "\"When your fingers brush the keys, the notes awaken — the wind's whispers, time's soft sigh, the hush of new shoots breaking soil. They give voice to ancient histories, to heroes' unspoken vows, to tales never etched on any page. They stand as testament to all that has ever been upon this land.\"\n \n— Lirico, the Wandering Bard"
+  },
+  {
+    "id": 3101405,
+    "name": "Bloomfield Waltz",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "A piece of sheet music — its notes trace a story like footprints in the sand.",
+    "desc2": "\"When your fingers brush the keys, the notes awaken — the wind's whispers, time's soft sigh, the hush of new shoots breaking soil. They give voice to ancient histories, to heroes' unspoken vows, to tales never etched on any page. They stand as testament to all that has ever been upon this land.\"\n \n— Lirico, the Wandering Bard"
+  },
+  {
+    "id": 3101406,
+    "name": "Explosion Art",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "A piece of sheet music — its notes trace a story like footprints in the sand.",
+    "desc2": "\"When your fingers brush the keys, the notes awaken — the wind's whispers, time's soft sigh, the hush of new shoots breaking soil. They give voice to ancient histories, to heroes' unspoken vows, to tales never etched on any page. They stand as testament to all that has ever been upon this land.\"\n \n— Lirico, the Wandering Bard"
+  },
+  {
+    "id": 3101407,
+    "name": "Flora — In the Golden Cage",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "A piece of sheet music — its notes trace a story like footprints in the sand.",
+    "desc2": "\"When your fingers brush the keys, the notes awaken — the wind's whispers, time's soft sigh, the hush of new shoots breaking soil. They give voice to ancient histories, to heroes' unspoken vows, to tales never etched on any page. They stand as testament to all that has ever been upon this land.\"\n \n— Lirico, the Wandering Bard"
+  },
+  {
+    "id": 3101408,
+    "name": "The Crown",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "A piece of sheet music — its notes trace a story like footprints in the sand.",
+    "desc2": "\"When your fingers brush the keys, the notes awaken — the wind's whispers, time's soft sigh, the hush of new shoots breaking soil. They give voice to ancient histories, to heroes' unspoken vows, to tales never etched on any page. They stand as testament to all that has ever been upon this land.\"\n \n— Lirico, the Wandering Bard"
+  },
+  {
+    "id": 3101409,
+    "name": "The Reaper's Feast",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "A piece of sheet music — its notes trace a story like footprints in the sand.",
+    "desc2": "\"When your fingers brush the keys, the notes awaken — the wind's whispers, time's soft sigh, the hush of new shoots breaking soil. They give voice to ancient histories, to heroes' unspoken vows, to tales never etched on any page. They stand as testament to all that has ever been upon this land.\"\n \n— Lirico, the Wandering Bard"
+  },
+  {
+    "id": 3101410,
+    "name": "Our Sacred Oath",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "A piece of sheet music — its notes trace a story like footprints in the sand.",
+    "desc2": "\"When your fingers brush the keys, the notes awaken — the wind's whispers, time's soft sigh, the hush of new shoots breaking soil. They give voice to ancient histories, to heroes' unspoken vows, to tales never etched on any page. They stand as testament to all that has ever been upon this land.\"\n \n— Lirico, the Wandering Bard"
+  },
+  {
+    "id": 3101411,
+    "name": "Rebirth",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "A piece of sheet music — its notes trace a story like footprints in the sand.",
+    "desc2": "\"When your fingers brush the keys, the notes awaken — the wind's whispers, time's soft sigh, the hush of new shoots breaking soil. They give voice to ancient histories, to heroes' unspoken vows, to tales never etched on any page. They stand as testament to all that has ever been upon this land.\"\n \n— Lirico, the Wandering Bard"
   },
   {
     "id": 4010001,
@@ -21831,6 +22353,166 @@
     "desc2": "\"Lake monster legends exist all over the world. More often than not, they turn out to be nothing more than some fast-growing local fish. The so-called Cocytus Monster is no exception.\"\n\n— An unnamed scholar, leafing through a collection of eerie folktales"
   },
   {
+    "id": 5033010,
+    "name": "Two-Faced Fish",
+    "icon": "T_Fish_FreshWater_EX02_1",
+    "rarity": 3,
+    "desc": "A freshwater fish native to Flagson, named for the sail-like dorsal fins at either end of its body. Prized for its delicious flesh, it tempts many anglers to brave its razor-sharp teeth for the chance to land one.",
+    "desc2": "\"Don't let that docile face fool you. See these bite marks on my hand? Every one of them came from a single Two-Faced Fish. Guess you really can't judge a fish by its face.\"\n\n— An angler bandaging his wounds"
+  },
+  {
+    "id": 5033011,
+    "name": "Two-Faced Fish Variant",
+    "icon": "T_Fish_FreshWater_EX02_1_1",
+    "rarity": 3,
+    "desc": "A freshwater fish native to Flagson, named for the sail-like dorsal fins at either end of its body. Prized for its delicious flesh, it tempts many anglers to brave its razor-sharp teeth for the chance to land one.",
+    "desc2": "\"Don't let that docile face fool you. See these bite marks on my hand? Every one of them came from a single Two-Faced Fish. Guess you really can't judge a fish by its face.\"\n\n— An angler bandaging his wounds"
+  },
+  {
+    "id": 5033020,
+    "name": "Sackfish",
+    "icon": "T_Fish_FreshWater_EX02_2",
+    "rarity": 3,
+    "desc": "A freshwater fish native to Flagson. It spends most of its time lying motionless on the riverbed, but when predators approach, it lets the current carry it away. Its brown colouring and limp, drifting posture make it easy to mistake for a sack floating downstream.",
+    "desc2": "\"What kind of slob throws sacks into the river!? Huh... Wait, wait, wait — it's a fish! A huge one! I'm finally going home with something in my bucket!!!\"\n\n— An angler on a long dry spell"
+  },
+  {
+    "id": 5033021,
+    "name": "Sackfish Variant",
+    "icon": "T_Fish_FreshWater_EX02_2_1",
+    "rarity": 3,
+    "desc": "A freshwater fish native to Flagson. It spends most of its time lying motionless on the riverbed, but when predators approach, it lets the current carry it away. Its brown colouring and limp, drifting posture make it easy to mistake for a sack floating downstream.",
+    "desc2": "\"What kind of slob throws sacks into the river!? Huh... Wait, wait, wait — it's a fish! A huge one! I'm finally going home with something in my bucket!!!\"\n\n— An angler on a long dry spell"
+  },
+  {
+    "id": 5033030,
+    "name": "Glimmerfish",
+    "icon": "T_Fish_FreshWater_EX02_3",
+    "rarity": 4,
+    "desc": "A freshwater fish native to Flagson. When caught in the light, its body shimmers red and blue. It is prized far more as an ornament than as food.",
+    "desc2": "\"It's smaller than my palm. It'd barely make a snack for a cat. You know what? Forget cooking it. I'll keep it in the kitchen and enjoy looking at it instead.\"\n\n— A cook, mulling it over"
+  },
+  {
+    "id": 5033031,
+    "name": "Glimmerfish Variant",
+    "icon": "T_Fish_FreshWater_EX02_3_1",
+    "rarity": 4,
+    "desc": "A freshwater fish native to Flagson. When caught in the light, its body shimmers red and blue. It is prized far more as an ornament than as food.",
+    "desc2": "\"It's smaller than my palm. It'd barely make a snack for a cat. You know what? Forget cooking it. I'll keep it in the kitchen and enjoy looking at it instead.\"\n\n— A cook, mulling it over"
+  },
+  {
+    "id": 5033040,
+    "name": "Red Beaver",
+    "icon": "T_Fish_FreshWater_EX02_4",
+    "rarity": 4,
+    "desc": "A subspecies of beaver native to Flagson, named for its reddish-brown fur. It may look slow and docile, but it is astonishingly agile and can dart through the water in a flash, making it extremely difficult to catch.",
+    "desc2": "\"If I'd known there were Red Beavers in this river, I never would've set my keepnet here. One day — that's all it took them to chew it to shreds. Completely ruined.\"\n\n— A disgruntled angler"
+  },
+  {
+    "id": 5033041,
+    "name": "Red Beaver Variant",
+    "icon": "T_Fish_FreshWater_EX02_4_1",
+    "rarity": 4,
+    "desc": "A subspecies of beaver native to Flagson, named for its reddish-brown fur. It may look slow and docile, but it is astonishingly agile and can dart through the water in a flash, making it extremely difficult to catch.",
+    "desc2": "\"If I'd known there were Red Beavers in this river, I never would've set my keepnet here. One day — that's all it took them to chew it to shreds. Completely ruined.\"\n\n— A disgruntled angler"
+  },
+  {
+    "id": 5033050,
+    "name": "Redwater Jewel",
+    "icon": "T_Fish_FreshWater_EX02_5",
+    "rarity": 5,
+    "desc": "A freshwater fish found in the waters around Scarletriver. Its scales gleam like rubies against the crimson water. Though it has been spotted in several tributaries across Flagson, the species is rare, with few recorded catches.",
+    "desc2": "\"I asked for fine rubies! What am I supposed to do with a fish!?\"\n\n— An angry gem merchant"
+  },
+  {
+    "id": 5033051,
+    "name": "Redwater Jewel Variant",
+    "icon": "T_Fish_FreshWater_EX02_5_1",
+    "rarity": 5,
+    "desc": "A freshwater fish found in the waters around Scarletriver. Its scales gleam like rubies against the crimson water. Though it has been spotted in several tributaries across Flagson, the species is rare, with few recorded catches.",
+    "desc2": "\"I asked for fine rubies! What am I supposed to do with a fish!?\"\n\n— An angry gem merchant"
+  },
+  {
+    "id": 5034010,
+    "name": "Waterlogged Sack",
+    "icon": "T_Fish_DirtyWater_EX02_1",
+    "rarity": 3,
+    "desc": "A cloth sack of unknown origin, fished out of the water. Whatever it once held is long gone, leaving behind nothing but a sodden, tattered bag.",
+    "desc2": "\"What kind of slob throws sacks into the river!?\"\n\n— An angler on a long dry spell"
+  },
+  {
+    "id": 5034011,
+    "name": "Waterlogged Sack Variant",
+    "icon": "T_Fish_DirtyWater_EX02_1_1",
+    "rarity": 3,
+    "desc": "A cloth sack of unknown origin, fished out of the water. Whatever it once held is long gone, leaving behind nothing but a sodden, tattered bag.",
+    "desc2": "\"What kind of slob throws sacks into the river!?\"\n\n— An angler on a long dry spell"
+  },
+  {
+    "id": 5034020,
+    "name": "Wreckage Fragment",
+    "icon": "T_Fish_DirtyWater_EX02_2",
+    "rarity": 3,
+    "desc": "A fragment of metal wreckage recovered from a lake in the Mount Arcano Rift. Whether it came from a crashed airship or an artillery shell fired during the fighting is impossible to tell. Given its unknown origin, it is best sealed away and turned over to specialists for disposal or recycling.",
+    "desc2": "\"Still this well preserved after years underwater. That's Alchemy Academy engineering for you.\"\n\n— An alchemist examining the fragment"
+  },
+  {
+    "id": 5034021,
+    "name": "Wreckage Fragment Variant",
+    "icon": "T_Fish_DirtyWater_EX02_2_1",
+    "rarity": 3,
+    "desc": "A fragment of metal wreckage recovered from a lake in the Mount Arcano Rift. Whether it came from a crashed airship or an artillery shell fired during the fighting is impossible to tell. Given its unknown origin, it is best sealed away and turned over to specialists for disposal or recycling.",
+    "desc2": "\"Still this well preserved after years underwater. That's Alchemy Academy engineering for you.\"\n\n— An alchemist examining the fragment"
+  },
+  {
+    "id": 5034030,
+    "name": "Standard-Issue Legion Boot",
+    "icon": "T_Fish_DirtyWater_EX02_3",
+    "rarity": 4,
+    "desc": "A standard-issue legionnaire's boot recovered from a toxic lake in the Mount Arcano Rift. Its owner died long ago. All that remains is this waterlogged boot — the last trace of an unnamed Imperial soldier.",
+    "desc2": "\"May you rest in peace.\"\n\n— An Imperial soldier searching Mount Arcano"
+  },
+  {
+    "id": 5034031,
+    "name": "Standard-Issue Legion Boot Variant",
+    "icon": "T_Fish_DirtyWater_EX02_3_1",
+    "rarity": 4,
+    "desc": "A standard-issue legionnaire's boot recovered from a toxic lake in the Mount Arcano Rift. Its owner died long ago. All that remains is this waterlogged boot — the last trace of an unnamed Imperial soldier.",
+    "desc2": "\"May you rest in peace.\"\n\n— An Imperial soldier searching Mount Arcano"
+  },
+  {
+    "id": 5034040,
+    "name": "Corroded Sword",
+    "icon": "T_Fish_DirtyWater_EX02_4",
+    "rarity": 4,
+    "desc": "A sword once carried by an Elysian soldier, recovered from a lake in the Mount Arcano Rift. Prayers and blessings are etched into its corroded surface, preserving a trace of the unknown soldier's faith. Yet neither prayer nor blessing was enough to save the man who carried it.",
+    "desc2": "\"I am not alone, for the Great Nine are ever with me;\nI am not brave, yet their strength sustains me;\nAll souls may stray, but the Nine shall show us the way;\nMay this sword guard my body. May this sword guide my soul.\"\n\n— A praying Elysian soldier"
+  },
+  {
+    "id": 5034041,
+    "name": "Corroded Sword Variant",
+    "icon": "T_Fish_DirtyWater_EX02_4_1",
+    "rarity": 4,
+    "desc": "A sword once carried by an Elysian soldier, recovered from a lake in the Mount Arcano Rift. Prayers and blessings are etched into its corroded surface, preserving a trace of the unknown soldier's faith. Yet neither prayer nor blessing was enough to save the man who carried it.",
+    "desc2": "\"I am not alone, for the Great Nine are ever with me;\nI am not brave, yet their strength sustains me;\nAll souls may stray, but the Nine shall show us the way;\nMay this sword guard my body. May this sword guide my soul.\"\n\n— A praying Elysian soldier"
+  },
+  {
+    "id": 5034050,
+    "name": "Unidentified Alchemical Substance",
+    "icon": "T_Fish_DirtyWater_EX02_5",
+    "rarity": 5,
+    "desc": "An unidentified alchemical substance recovered from a lake in the Mount Arcano Rift. Most of the vessels containing it have shattered, and an eerie, gleaming substance continues to seep from the broken containers. Even to an untrained eye, it looks highly toxic.",
+    "desc2": "\"Tools checked. Protective gear checked. Beginning recovery.\"\n\n— An alchemist preparing to recover the substance"
+  },
+  {
+    "id": 5034051,
+    "name": "Unidentified Alchemical Substance Variant",
+    "icon": "T_Fish_DirtyWater_EX02_5_1",
+    "rarity": 5,
+    "desc": "An unidentified alchemical substance recovered from a lake in the Mount Arcano Rift. Most of the vessels containing it have shattered, and an eerie, gleaming substance continues to seep from the broken containers. Even to an untrained eye, it looks highly toxic.",
+    "desc2": "\"Tools checked. Protective gear checked. Beginning recovery.\"\n\n— An alchemist preparing to recover the substance"
+  },
+  {
     "id": 5110100,
     "name": "Training Rod",
     "icon": "T_FishingRod_Normal_1",
@@ -23606,7 +24288,7 @@
   },
   {
     "id": 101120101,
-    "name": "Sigil: Phoxhunter – Umbro",
+    "name": "Sigil: {nickname} – Umbro",
     "icon": "T_Phantom_Nanzhu02",
     "rarity": 5,
     "desc": "A sigil for summoning Combat Partners. It is a staff to lean on in a battle, a pact of companionship, and an oath unspoken.\nHeartfelt prayers shall be answered, and the desired one shall appear by your side.",
@@ -23614,8 +24296,16 @@
   },
   {
     "id": 101160101,
-    "name": "Sigil: Phoxhunter - Lumino",
+    "name": "Sigil: {nickname} – Lumino",
     "icon": "T_Phantom_Nanzhu",
+    "rarity": 5,
+    "desc": "A sigil for summoning Combat Partners. It is a staff to lean on in a battle, a pact of companionship, and an oath unspoken.\nHeartfelt prayers shall be answered, and the desired one shall appear by your side.",
+    "desc2": "\"Our tale spans over two millennia: a saga of embrace and massacre, of furore and mercy. History ebbs and flows like the celestial dance of the sun and the moon – constant and cyclical. In the grand tapestry of time recounted in these pages, I am but a mere observer, as insignificant as a flake of Hyperborean snow, a leaf from Aethyrie, a drop in Luca's waters, or a grain from Khemet's sands. Yet, in this immense cosmos, I harbour the hope that snowflakes will forge snowfields, leaves will form forests, drops of water will coalesce into rivers, and grains will gather to sculpt deserts. As all singular entities unite, history shall pivot in our favour.\"\n\n— Betwixt Leaves And Branches — History of Atlasia, by Comnena, Chief Librarian of the Aethyrie Cloud Cavern Library"
+  },
+  {
+    "id": 101220101,
+    "name": "Sigil: {nickname2} – Hydro",
+    "icon": "T_Phantom_WeitaM",
     "rarity": 5,
     "desc": "A sigil for summoning Combat Partners. It is a staff to lean on in a battle, a pact of companionship, and an oath unspoken.\nHeartfelt prayers shall be answered, and the desired one shall appear by your side.",
     "desc2": "\"Our tale spans over two millennia: a saga of embrace and massacre, of furore and mercy. History ebbs and flows like the celestial dance of the sun and the moon – constant and cyclical. In the grand tapestry of time recounted in these pages, I am but a mere observer, as insignificant as a flake of Hyperborean snow, a leaf from Aethyrie, a drop in Luca's waters, or a grain from Khemet's sands. Yet, in this immense cosmos, I harbour the hope that snowflakes will forge snowfields, leaves will form forests, drops of water will coalesce into rivers, and grains will gather to sculpt deserts. As all singular entities unite, history shall pivot in our favour.\"\n\n— Betwixt Leaves And Branches — History of Atlasia, by Comnena, Chief Librarian of the Aethyrie Cloud Cavern Library"

@@ -19,6 +19,34 @@ function M:Init(Content)
   rawset(self, "CurrentFameLevel", Content.CurrentFameLevel)
   self:InitBigReward()
   self:InitRewardList()
+  self:InitExpPanel()
+  if self.CurRegionId then
+    local resourceID
+    if self.CurRegionId == 1001 then
+      resourceID = 2015
+    elseif self.CurRegionId == 1002 then
+      resourceID = 2016
+    end
+    local resourceData = DataMgr.Resource[resourceID]
+    if resourceData then
+      self.Image_94:SetBrushResourceObject(LoadObject(resourceData.Icon))
+    end
+    local regionReputationData = DataMgr.RegionReputation[self.CurRegionId]
+    local RegionUIIcon = regionReputationData and regionReputationData.RegionUIIcon
+    if self.RegionUIIcon and self.RegionUIIcon == RegionUIIcon then
+      return
+    end
+    self.RegionUIIcon = RegionUIIcon
+    local Icon = LoadObject(self.RegionUIIcon)
+    if not Icon then
+      return
+    end
+    local DynamicMaterial = self.Image_Region:GetDynamicMaterial()
+    if not IsValid(DynamicMaterial) then
+      return
+    end
+    DynamicMaterial:SetTextureParameterValue("IconTex", Icon)
+  end
 end
 
 function M:GetNeedShowBigRewardLevel()
@@ -142,6 +170,31 @@ function M:UpdateUIStyleInPlatform()
     self.WBP_Com_KeyImg_13:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   else
     self.WBP_Com_KeyImg_13:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+end
+
+function M:InitExpPanel()
+  local CurRegionTabId = self.CurRegionId
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar or not CurRegionTabId then
+    return
+  end
+  local AvatarReputation = Avatar.RegionReputations[CurRegionTabId]
+  local RegionLevelCfg = DataMgr.ReputationLevel[CurRegionTabId] and DataMgr.ReputationLevel[CurRegionTabId][AvatarReputation.ReputationLevel + 1]
+  local CurLevel = AvatarReputation.ReputationLevel or 0
+  if RegionLevelCfg then
+    local CurLevelExp = AvatarReputation.ReputationExp or 0
+    local MaxLevelExp = RegionLevelCfg.ReputationLevelMaxExp
+    self.Text_Level:SetText(string.format(GText("LevelUP_Need_Reputation"), CurLevel + 1))
+    self.WS_State:SetActiveWidgetIndex(0)
+    self.TextTotal:SetText(MaxLevelExp)
+    self.TextNow:SetText(AvatarReputation.ReputationExp or 0)
+    self.ProgressBar_Fame:SetPercent(CurLevelExp / MaxLevelExp)
+  else
+    self.Text_Level:SetText(GText("LevelUP_Full_Reputation"))
+    self.WS_State:SetActiveWidgetIndex(1)
+    self.TextNow_1:SetText(GText("Reputation_MaxLevel"))
+    self.ProgressBar_Fame:SetPercent(1)
   end
 end
 

@@ -4,9 +4,9 @@ require("DataMgr")
 local M = Class("BluePrints.UI.BP_EMUserWidget_C")
 
 function M:Init(UserData, CommonKeyDatas)
-  self.GuildItemCount = UserData.GuildItems
   self.ItemPlacedCallBack = UserData.ItemPlacedCallBack
   self.GuildManager = UserData.GuildManager
+  self.OperatorSave = UserData.OperatorSave
   local Config = {
     Owner = self,
     HintText = GText("UI_SearchComponent"),
@@ -19,6 +19,60 @@ function M:Init(UserData, CommonKeyDatas)
   self:InitButton()
   self:RefreshTabsData("")
   self.Key_List:InitKey(CommonKeyDatas)
+  self.ComponentWidgetMap = {}
+  self.List_Component.BP_OnEntryInitialized:Clear()
+  self.List_Component.BP_OnEntryInitialized:Add(self, self.OnEntryInitialized)
+  self:InitGuildEvents()
+end
+
+function M:InitGuildEvents()
+  if self.GuildManager and self.GuildManager.OnBuyItemChanged then
+    self.GuildManager.OnBuyItemChanged:Add(self, self.OnGuildItemCountChanged)
+  end
+end
+
+function M:OnGuildItemCountChanged(ChangedItemIds)
+  if not ChangedItemIds then
+    return
+  end
+  local GuildItemCount = self.GuildManager and self.GuildManager.GuildItemCount
+  local IdList = ChangedItemIds.ToTable and ChangedItemIds:ToTable() or nil
+  if not IdList then
+    IdList = {}
+    for Index = 1, ChangedItemIds:Num() do
+      IdList[#IdList + 1] = ChangedItemIds:Get(Index)
+    end
+  end
+  local ListItems = self.List_Component and self.List_Component.GetListItems and self.List_Component:GetListItems() or nil
+  for _, ItemID in ipairs(IdList) do
+    local ItemCount = GuildItemCount and GuildItemCount[ItemID]
+    local Count = ItemCount and ItemCount.TotalCount or 0
+    if ListItems then
+      for _, Item in pairs(ListItems:ToTable()) do
+        if Item and Item.UnitId == ItemID then
+          Item.Count = Count
+          break
+        end
+      end
+    end
+    local Widget = self.ComponentWidgetMap and self.ComponentWidgetMap[ItemID]
+    if Widget and IsValid(Widget) and Widget.RefreshCount then
+      Widget:RefreshCount(Count)
+    end
+  end
+end
+
+function M:OnEntryInitialized(Content, Widget)
+  if not (Content and Content.UnitId) or not Widget then
+    return
+  end
+  for UnitId, EntryWidget in pairs(self.ComponentWidgetMap or {}) do
+    if EntryWidget == Widget and UnitId ~= Content.UnitId then
+      self.ComponentWidgetMap[UnitId] = nil
+      break
+    end
+  end
+  self.ComponentWidgetMap[Content.UnitId] = Widget
 end
 
 function M:RefreshTabsData(FilterText)
@@ -42,8 +96,8 @@ function M:RefreshTabsData(FilterText)
   local Level2Index = {}
   for _, K in ipairs(SortedKeys) do
     local Item = GuildItems[K]
-    local Level1 = Item.FirstCategory
-    local Level2 = Item.SecondCategory
+    local Level1 = DataMgr.GuildFirstCategory[Item.FirstCategory].Name
+    local Level2 = DataMgr.GuildSecondCategory[Item.SecondCategory].Name
     if not Level1Index[Level1] then
       Level1Index[Level1] = #CategoryMap + 1
       CategoryMap[Level1Index[Level1]] = {
@@ -136,6 +190,7 @@ function M:SwitchSubTabIndex(TabIndex, SubTabIndex)
   if not self.GuildItemCategory or TabIndex > #self.GuildItemCategory or SubTabIndex > #self.GuildItemCategory[TabIndex].Subs then
     return
   end
+  self.ComponentWidgetMap = {}
   local ItemList = self.GuildItemCategory[TabIndex].Subs[SubTabIndex].Items
   self.List_Component:ClearListItems()
   for _, UnitId in ipairs(ItemList) do
@@ -146,10 +201,9 @@ function M:SwitchSubTabIndex(TabIndex, SubTabIndex)
     Item.Icon = self.GuildManager:GetAssetObjectIconStringPath(UnitId)
     Item.Name = Name
     Item.UnitId = UnitId
-    Item.Count = self.GuildItemCount[UnitId] or 0
+    Item.Count = self.GuildManager.GuildItemCount and self.GuildManager.GuildItemCount[UnitId] and self.GuildManager.GuildItemCount[UnitId].TotalCount or 0
     Item.PlacedCallBack = self.ItemPlacedCallBack
     self.List_Component:AddItem(Item)
-    DebugPrint("chenxiaokang", UnitId, Item.Icon, Item.Name)
   end
 end
 

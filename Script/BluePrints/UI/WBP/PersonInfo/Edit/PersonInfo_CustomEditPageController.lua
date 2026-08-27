@@ -3,7 +3,6 @@ local PersonInfoController = require("BluePrints.UI.WBP.PersonInfo.PersonInfoCon
 local PersonInfoModel = PersonInfoController:GetModel()
 local DisplayConfig = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_DisplayConfig")
 local DisplayDraft = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_DisplayDraft")
-local DisplayRules = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_DisplayRules")
 local RootState = require("BluePrints.UI.WBP.PersonInfo.Edit.PersonInfo_CustomEditState_Root")
 local CharacterEditState = require("BluePrints.UI.WBP.PersonInfo.Edit.PersonInfo_CustomEditState_CharacterEdit")
 local ChooseState = require("BluePrints.UI.WBP.PersonInfo.Edit.PersonInfo_CustomEditState_Choose")
@@ -1124,7 +1123,6 @@ function M:ConfirmCharacterChoosePage()
   end
   self.PendingCharacterChoosePreview = nil
   local Draft = self:_BuildCharacterChooseSlotDraft()
-  DisplayRules:NormalizeCharacterSlots(Draft)
   if not self:_ApplyCharacterChooseDraftToScene(Draft) then
     return false
   end

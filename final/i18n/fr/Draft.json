@@ -1746,6 +1746,27 @@
     "m": 50000
   },
   {
+    "id": 151317,
+    "n": "Surabondance · Adresse",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51317,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41317,
+        "n": "Surabondance · Adresse",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
     "id": 151321,
     "n": "Néant · Conflagration",
     "r": 5,
@@ -3051,6 +3072,60 @@
     "m": 50000
   },
   {
+    "id": 151735,
+    "n": "Ténacité",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51735,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41735,
+        "n": "Ténacité",
+        "c": 5,
+        "t": "Mod"
+      },
+      {
+        "id": 201,
+        "n": "Module de transfert d’affinité",
+        "c": 2,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151736,
+    "n": "Raffinement",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51736,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41736,
+        "n": "Raffinement",
+        "c": 5,
+        "t": "Mod"
+      },
+      {
+        "id": 201,
+        "n": "Module de transfert d’affinité",
+        "c": 2,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
     "id": 151737,
     "n": "Décision",
     "r": 5,
@@ -3065,6 +3140,27 @@
       {
         "id": 41737,
         "n": "Décision",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151738,
+    "n": "Nirvana · Décision",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51738,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41738,
+        "n": "Nirvana · Décision",
         "c": 5,
         "t": "Mod"
       }
@@ -3570,6 +3666,27 @@
     "m": 50000
   },
   {
+    "id": 151768,
+    "n": "Ardeur · Décision",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51768,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41768,
+        "n": "Ardeur · Décision",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
     "id": 151801,
     "n": "Épée affûtée",
     "r": 5,
@@ -3899,6 +4016,27 @@
       {
         "id": 41931,
         "n": "Brasier dévorant",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151932,
+    "n": "Désordre infernal",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51932,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41932,
+        "n": "Désordre infernal",
         "c": 5,
         "t": "Mod"
       }
@@ -4290,6 +4428,87 @@
     "m": 50000
   },
   {
+    "id": 152111,
+    "n": "Tranchant · Entrave",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 52111,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 32101,
+        "n": "Tranchant",
+        "c": 1,
+        "t": "Mod"
+      },
+      {
+        "id": 42006,
+        "n": "Entrave",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 152112,
+    "n": "Pénétration · Entrave",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 52112,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 32102,
+        "n": "Pénétration",
+        "c": 1,
+        "t": "Mod"
+      },
+      {
+        "id": 42006,
+        "n": "Entrave",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 152113,
+    "n": "Écrasement · Entrave",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 52113,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 32103,
+        "n": "Écrasement",
+        "c": 1,
+        "t": "Mod"
+      },
+      {
+        "id": 42006,
+        "n": "Entrave",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
     "id": 152203,
     "n": "Cycle · Entrave",
     "r": 5,
@@ -4338,6 +4557,27 @@
         "id": 32005,
         "n": "Limite",
         "c": 1,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 152801,
+    "n": "Entrave · Débordement",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 52801,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 42801,
+        "n": "Entrave · Débordement",
+        "c": 5,
         "t": "Mod"
       }
     ],
@@ -4676,6 +4916,108 @@
       {
         "id": 33103,
         "n": "Écrasement",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 153111,
+    "n": "Tranchant · Entrave",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 53111,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 33101,
+        "n": "Tranchant",
+        "c": 1,
+        "t": "Mod"
+      },
+      {
+        "id": 43006,
+        "n": "Entrave",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 153112,
+    "n": "Pénétration · Entrave",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 53112,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 33102,
+        "n": "Pénétration",
+        "c": 1,
+        "t": "Mod"
+      },
+      {
+        "id": 43006,
+        "n": "Entrave",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 153113,
+    "n": "Écrasement · Entrave",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 53113,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 33103,
+        "n": "Écrasement",
+        "c": 1,
+        "t": "Mod"
+      },
+      {
+        "id": 43006,
+        "n": "Entrave",
+        "c": 3,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 153801,
+    "n": "Entrave · Débordement",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 53801,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 43801,
+        "n": "Entrave · Débordement",
         "c": 5,
         "t": "Mod"
       }
@@ -5419,6 +5761,114 @@
     "x": [
       {
         "id": 56123,
+        "n": "Vigueur",
+        "c": 1,
+        "t": "Mod"
+      },
+      {
+        "id": 31301,
+        "n": "Ailes · Inspiration",
+        "c": 10,
+        "t": "Mod"
+      },
+      {
+        "id": 20024,
+        "n": "Tentacule de Souillé",
+        "c": 20,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 156131,
+    "n": "Décision",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 56131,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41002,
+        "n": "Nirvana",
+        "c": 10,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 156132,
+    "n": "Ailes · Inspiration · Décision",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 56132,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 56131,
+        "n": "Décision",
+        "c": 1,
+        "t": "Mod"
+      },
+      {
+        "id": 31301,
+        "n": "Ailes · Inspiration",
+        "c": 10,
+        "t": "Mod"
+      },
+      {
+        "id": 20021,
+        "n": "Bougie sacrée",
+        "c": 20,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 156133,
+    "n": "Vigueur",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 56133,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41004,
+        "n": "Ailes",
+        "c": 10,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 156134,
+    "n": "Ailes · Inspiration · Vigueur",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 56134,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 56133,
         "n": "Vigueur",
         "c": 1,
         "t": "Mod"
@@ -9057,6 +9507,44 @@
     "m": 280000
   },
   {
+    "id": 910405,
+    "n": "Hurlement muet",
+    "r": 5,
+    "v": "1.5",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10405,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12170,
+        "n": "Hurlement muet : Poignée",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12171,
+        "n": "Hurlement muet : Lame gauche",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12172,
+        "n": "Hurlement muet : Lame droite",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
     "id": 910501,
     "n": "Oneiros éternel",
     "r": 5,
@@ -9178,6 +9666,38 @@
       {
         "id": 12091,
         "n": "Vagues sinueuses : Lame",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 910505,
+    "n": "Sanguis Sanctus – Épée-fouet",
+    "r": 5,
+    "v": "1.5",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10505,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12176,
+        "n": "Sanguis Sanctus – Épée-fouet : Poignée",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12177,
+        "n": "Sanguis Sanctus – Épée-fouet : Lame",
         "c": 1,
         "t": "Resource"
       }
@@ -9615,6 +10135,32 @@
       }
     ],
     "m": 280000
+  },
+  {
+    "id": 920298,
+    "n": "Plume sanguine",
+    "r": 5,
+    "v": "1.5",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20298,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 15016,
+        "n": "Éveil de forge : Doubles pistolets",
+        "c": 5,
+        "t": "Resource"
+      },
+      {
+        "id": 15004,
+        "n": "Prototype : Plume sanguine",
+        "c": 50,
+        "t": "Resource"
+      }
+    ],
+    "m": 500000
   },
   {
     "id": 920301,

@@ -11,7 +11,7 @@ function M:Initialize()
 end
 
 function M:Construct()
-  self.Text_Score_Now:SetText("00")
+  self.Text_Score_Now:SetText("0")
 end
 
 function M:SetupCountDown(EndTime)

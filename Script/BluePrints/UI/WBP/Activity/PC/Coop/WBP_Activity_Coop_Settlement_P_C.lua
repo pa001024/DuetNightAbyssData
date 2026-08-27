@@ -26,6 +26,7 @@ function M:OnLoaded(...)
   self:InitDeviceInfo()
   self:InitListenEvent()
   local LogicServerInfo = (...)
+  PrintTable(LogicServerInfo, 5, "yly LogicServerInfo ")
   self.IsWin, self.DungeonId, self.Rewards, self.DungeonRewards, self.PlayerTime, self.GameTime, self.ClientRes = table.unpack(LogicServerInfo)
   self.RoomSettleInfo = self.ClientRes.RoomSettleInfo
   if not self.RoomSettleInfo then
@@ -38,16 +39,44 @@ function M:OnLoaded(...)
     self:ShowEventEndUI()
     return
   end
+  self.bExtraRoom = self.RoomSettleInfo.bSingleMode or false
+  self.SingleModeDamage = self.RoomSettleInfo.SingleModeDamage or 0
+  self.RoomUniId = self.RoomSettleInfo.RoomUniId
+  if self.RoomUniId == nil then
+    DebugPrint("yly WBP_Activity_Coop_Settlement_P_C OnLoaded: self.RoomUniId is nil. Try to get from GameMode and RoomState.")
+    local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+    local PreInitInfo = GameMode and GameMode.PreInitInfo
+    local RoomState = GWorld.GameInstance and GWorld.GameInstance[CommonConst.DungeonSyncMsg.AsyncCombatRoomStateUpdate]
+    self.RoomUniId = PreInitInfo and PreInitInfo.RoomUniId or RoomState and RoomState.RoomUniId or nil
+    if self.RoomUniId == nil then
+      DebugPrint("yly WBP_Activity_Coop_Settlement_P_C OnLoaded: self.RoomUniId is nil")
+      return
+    end
+  end
+  self.bExtraRoomPass = self.RoomSettleInfo.bSingleModePass
   self.bAllPassed = self.RoomSettleInfo.bAllPassed
+  if self.bExtraRoom then
+    self.bAllPassed = self.bExtraRoomPass or false
+  end
   self.CurRound = self.RoomSettleInfo.CurRound
   self.TotalRound = #DataMgr.AsyncCombat[self.RoomSettleInfo.RoomConfId].BossUnitID
   self.CurRoundBossLifeRemain = self.RoomSettleInfo.BossRemainHp
   self.CurRoundBossTotalHp = self.RoomSettleInfo.BossTotalHp
-  self.CurDevote = (self.RoomSettleInfo.Damage or 0) / self.RoomSettleInfo.RoomTotalHp * 10000
+  self.CurDevote = ((self.RoomSettleInfo.Damage or 0) + self.SingleModeDamage) / self.RoomSettleInfo.RoomTotalHp * 10000
   self.bRoomOwner = self.RoomSettleInfo.bRoomOwner
   self.bMVP = self.RoomSettleInfo.bMvp
   self.MVPDevote = (self.RoomSettleInfo.MvpDamage or 0) / self.RoomSettleInfo.RoomTotalHp * 10000
   self.BaseRewardNeedDevote = DataMgr.AsyncCombatEventConstant.AsyncCombat_BaseContributionRequire.ConstantValue
+  if self.bExtraRoom and self.bExtraRoomPass then
+    ReddotManager.IncreaseLeafNodeCount("AsyncCombatReward", 1, {CacheKey = "Red"})
+    ReddotManager.DecreaseLeafNodeCount("AsyncCombatStoppageNew", 1, {
+      CacheKey = "New",
+      Type = "StoppageRoom",
+      RoomIds = {
+        self.RoomUniId
+      }
+    })
+  end
   self:InitUIContent()
   if self.bAllPassed then
     self:PlayAnimation(self.In)
@@ -57,12 +86,10 @@ function M:OnLoaded(...)
 end
 
 function M:OnInAnimationStarted()
-  DebugPrint("yly WBP_Activity_Coop_Settlement_P_C OnInAnimationStarted")
   AudioManager(self):PlayUISound(nil, "event:/ui/activity/lianmeiyanyi_level_success", nil, nil)
 end
 
 function M:OnFailInAnimationStarted()
-  DebugPrint("yly WBP_Activity_Coop_Settlement_P_C OnFailInAnimationStarted")
   AudioManager(self):PlayUISound(nil, "event:/ui/activity/lianmeiyanyi_level_finish", nil, nil)
 end
 
@@ -78,6 +105,7 @@ function M:ShowEventEndUI()
   self.BtnExit.TextCreate:SetText(GText("UI_AsyncCombat_LeaveStage"))
   self.BtnExit.Btn.OnClicked:Add(self, self.ExitCoopSettlement)
   self.BtnExit.Btn.AudioEventPath = "event:/ui/activity/lianmeiyanyi_btn_common_click"
+  self.BtnAgainPanel:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self:InitExitCountDown()
   self:PlayAnimation(self.Fail_In)
 end
@@ -95,9 +123,13 @@ function M:InitUIContent()
   end
   self.TextEnd:SetText(GText("UI_AsyncCombat_ChallengeEnd2"))
   self.TextLevel:SetVisibility(UIConst.VisibilityOp.Visible)
-  local CurStageText = string.format(GText("UI_AsyncCombat_SettleCurrentStages"), self.CurRound)
-  local TotalStageText = string.format(GText("UI_AsyncCombat_SettleTotalStages"), self.TotalRound)
-  self.TextLevel:SetText(CurStageText .. "/" .. TotalStageText)
+  if self.bExtraRoom then
+    self.TextLevel:SetText(GText("UI_AsyncCombat_CombatRoom"))
+  else
+    local CurStageText = string.format(GText("UI_AsyncCombat_SettleCurrentStages"), self.CurRound)
+    local TotalStageText = string.format(GText("UI_AsyncCombat_SettleTotalStages"), self.TotalRound)
+    self.TextLevel:SetText(CurStageText .. "/" .. TotalStageText)
+  end
   self.VerticalBox_0:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.TextNow:SetText(GText("UI_AsyncCombat_CurrentContribution"))
   local text = self:FormatPercent(self.CurDevote, "floor")
@@ -114,17 +146,90 @@ function M:InitUIContent()
     self.Ws_Tag:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
   self.TextFail:SetVisibility(UIConst.VisibilityOp.Visible)
-  self.TextFail:SetText(GText("UI_AsyncCombat_ContributionNotEnough"))
+  self.TextFail:SetText(GText("UI_AsyncCombat_ContributionNotMetRePerform"))
   self.BtnExit.TextCreate:SetText(GText("UI_AsyncCombat_LeaveStage"))
   self.BtnExit.Btn.OnClicked:Add(self, self.ExitCoopSettlement)
   self.BtnExit.Btn.AudioEventPath = "event:/ui/activity/lianmeiyanyi_btn_common_click"
+  self.BtnAgain.TextCreate:SetText(GText("UI_AsyncCombat_RePerform"))
+  if self:ShouldBtnAgainEnabled() then
+    self.BtnAgainPanel:SetVisibility(UIConst.VisibilityOp.Visible)
+    self.BtnAgain.Btn.OnClicked:Add(self, self.PlayAgain)
+    self.BtnAgain.Btn.AudioEventPath = "event:/ui/activity/lianmeiyanyi_btn_common_click"
+  else
+    self.BtnAgainPanel:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
   self:InitExitCountDown()
   self:InitRewardsUI()
 end
 
+function M:PlayAgain()
+  DebugPrint("yly WBP_Activity_Coop_Settlement_P_C PlayAgain")
+  if self._IsPlayingAgain or self._IsExitingCoopSettlement then
+    return
+  end
+  local Avatar = GWorld and GWorld:GetAvatar() or nil
+  if not Avatar or not Avatar.EnterEventDungeon then
+    DebugPrint("yly PlayAgain: Avatar invalid or no EnterEventDungeon")
+    return
+  end
+  if not self.RoomUniId then
+    DebugPrint("yly PlayAgain: RoomUniId is nil")
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_AsyncCombat_ConditionNotMet"))
+    return
+  end
+  local DungeonId = self.DungeonId
+  if not DungeonId and self.RoomSettleInfo and self.RoomSettleInfo.RoomConfId then
+    local RoomConf = DataMgr.AsyncCombat[self.RoomSettleInfo.RoomConfId]
+    DungeonId = RoomConf and RoomConf.DungeonID
+  end
+  local EventId = DataMgr.AsyncCombatEventConstant.AsyncCombat_EventId.ConstantValue
+  if not DungeonId or not EventId then
+    DebugPrint("yly PlayAgain: DungeonId/EventId invalid.")
+    return
+  end
+  self._IsPlayingAgain = true
+  if self.RemoveTimer then
+    self:RemoveTimer("CoopSettlementCountDown")
+  end
+  if self.BlockAllUIInput then
+    self:BlockAllUIInput(true)
+  end
+  local SquadId = 0
+  local DungeonInfo = DataMgr.Dungeon and DataMgr.Dungeon[DungeonId]
+  local DungeonType = DungeonInfo and DungeonInfo.DungeonType
+  if DungeonType and Avatar.DungeonSquad then
+    SquadId = Avatar.DungeonSquad[DungeonType] or 0
+  end
+  DebugPrint("yly PlayAgain: DungeonId=", DungeonId, "DungeonType=", DungeonType, "SquadId=", SquadId)
+  Avatar:EnterEventDungeon(function(Ret)
+    self._IsPlayingAgain = false
+    if self.BlockAllUIInput then
+      self:BlockAllUIInput(false)
+    end
+    if Ret == ErrorCode.RET_SUCCESS then
+      self:Close()
+      return
+    end
+    if Ret == ErrorCode.RET_ASYNCCOMBAT_DUNGEON_ROOM_CLOSED then
+      UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_AsyncCombat_RoomEndedRefresh"))
+    elseif Ret == ErrorCode.RET_ASYNCCOMBAT_PLAYER_ENTER_DUNGEON_CD then
+      UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_AsyncCombat_RoomCoolDownRetry"))
+    else
+      UIManager(self):ShowError(Ret, 1.5, "CommonToastMain")
+    end
+    DebugPrint("yly PlayAgain failed, Ret=", Ret)
+    if self.InitExitCountDown then
+      self:InitExitCountDown()
+    end
+  end, DungeonId, SquadId, EventId, {
+    RoomUniId = self.RoomUniId,
+    EventId = EventId
+  })
+end
+
 function M:ExitCoopSettlement()
   DebugPrint("yly WBP_Activity_Coop_Settlement_P_C ExitCoopSettlement")
-  if self._IsExitingCoopSettlement then
+  if self._IsExitingCoopSettlement or self._IsPlayingAgain then
     return
   end
   self._IsExitingCoopSettlement = true
@@ -184,9 +289,39 @@ function M:UpdateCountDownUI()
   self.TextTime:SetText(string.format(GText("UI_Text_ExitTime"), self.exitTimeleft))
 end
 
-function M:InitRewardsUI()
-  local bMVPorRoomOwner = self.bMVP or self.bRoomOwner
+function M:ShouldBtnAgainEnabled()
+  if self.CurDevote == nil or nil == self.BaseRewardNeedDevote then
+    DebugPrint("yly WBP_Activity_Coop_Settlement_P_C ShouldBtnAgainEnabled: self.CurDevote/self.BaseRewardNeedDevote is nil")
+    return false
+  end
+  if not self.bExtraRoom and self.bRoomOwner then
+    return false
+  end
   local bSatisfyBaseDevote = self.CurDevote >= self.BaseRewardNeedDevote
+  return not bSatisfyBaseDevote
+end
+
+function M:InitRewardsUI()
+  local bSatisfyBaseDevote = self.CurDevote >= self.BaseRewardNeedDevote
+  if self.bExtraRoom then
+    self.Progress_Node_1:SetVisibility(UIConst.VisibilityOp.Visible)
+    self.Reward01.TextReward:SetText(GText("UI_AsyncComcast_BaseContributionReward"))
+    self.Reward02:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Image_722:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.TextFail:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.TextWait:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    if bSatisfyBaseDevote then
+      self.Reward01.TextDone:SetText(GText("UI_AsyncCombat_MetRequirement"))
+      self.Reward01:PlayAnimation(self.Reward01.Done)
+    else
+      local DeltaDevote = self.BaseRewardNeedDevote - self.CurDevote
+      local DeltaPercentText = self:FormatPercent(DeltaDevote, "ceil")
+      self.Reward01.TextDone:SetText(string.format(GText("UI_AsyncCombat_NeedMoreContribution"), DeltaPercentText))
+      self.Reward01:PlayAnimation(self.Reward01.Lock)
+    end
+    return
+  end
+  local bMVPorRoomOwner = self.bMVP or self.bRoomOwner
   if self.bAllPassed and not bMVPorRoomOwner and not bSatisfyBaseDevote then
     self.Progress_Node_1:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.TextFail:SetVisibility(UIConst.VisibilityOp.Visible)
@@ -336,8 +471,12 @@ function M:UpdateBtnUI()
   if self.BtnExit == nil or nil == self.BtnExit.WBP_Com_KeyImg then
     return
   end
+  if nil == self.BtnAgain or nil == self.BtnAgain.WBP_Com_KeyImg then
+    return
+  end
   if self.CurInputDeviceType == ECommonInputType.MouseAndKeyboard or self.CurInputDeviceType == ECommonInputType.Touch then
     self.BtnExit.WBP_Com_KeyImg:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.BtnAgain.WBP_Com_KeyImg:SetVisibility(UIConst.VisibilityOp.Collapsed)
   else
     self.BtnExit.WBP_Com_KeyImg:CreateCommonKey({
       KeyInfoList = {
@@ -347,8 +486,17 @@ function M:UpdateBtnUI()
         }
       }
     })
+    self.BtnAgain.WBP_Com_KeyImg:CreateCommonKey({
+      KeyInfoList = {
+        {
+          Type = "Img",
+          ImgShortPath = UIConst.GamePadImgKey.FaceButtonTop
+        }
+      }
+    })
     self:AddTimer(0.1, function()
       self.BtnExit.WBP_Com_KeyImg:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      self.BtnAgain.WBP_Com_KeyImg:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     end)
   end
 end
@@ -357,6 +505,11 @@ function M:Handle_OnGamePadDown(InKeyName)
   if "Gamepad_FaceButton_Right" == InKeyName then
     if self.BtnExit:IsVisible() then
       self.BtnExit.Btn.OnClicked:Broadcast()
+    end
+    return true
+  elseif "Gamepad_FaceButton_Top" == InKeyName then
+    if self.BtnAgainPanel:IsVisible() and self:ShouldBtnAgainEnabled() then
+      self.BtnAgain.Btn.OnClicked:Broadcast()
     end
     return true
   end

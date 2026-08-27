@@ -484,12 +484,12 @@ function M:RefreshItemsViewWithStateTag(Content)
   local StateTagInfo = Content.StateTagInfo or {}
   if StateTagInfo.Name == "IsToChoose" then
     if StateTagInfo.ExtraData ~= nil then
-      self:SetSelectNum(Utils.FormatNumber(StateTagInfo.ExtraData[1], true))
+      self:SetSelectNum(MiscUtils.FormatNumber(StateTagInfo.ExtraData[1], true))
       self:SetItemMinus(true)
       self.MinusWidget.Btn_Minus:UnBindEventOnClicked(self, self.CancelSelectClick)
       self.MinusWidget.Btn_Minus:BindEventOnClicked(self, self.CancelSelectClick)
       if Content.ItemType ~= CommonConst.DataType.Weapon then
-        self:SetItemMoney(StateTagInfo.ExtraData[4], Utils.FormatNumber(math.floor(StateTagInfo.ExtraData[3] + 0.5), true), true)
+        self:SetItemMoney(StateTagInfo.ExtraData[4], MiscUtils.FormatNumber(math.floor(StateTagInfo.ExtraData[3] + 0.5), true), true)
       end
     end
     self:CheckAndSetVisibility(self.SelectWidget, UIConst.VisibilityOp.SelfHitTestInvisible)
@@ -501,13 +501,13 @@ function M:RefreshItemsViewWithStateTag(Content)
     end
   elseif StateTagInfo.Name == "InSelectList" then
     if StateTagInfo.ExtraData ~= nil then
-      self:SetSelectNum(Utils.FormatNumber(StateTagInfo.ExtraData[1], true))
+      self:SetSelectNum(MiscUtils.FormatNumber(StateTagInfo.ExtraData[1], true))
       self:SetItemMinus(true)
       self.MinusWidget.Btn_Minus.AudioEventPath = "event:/ui/common/click_btn_minusMulti"
       self.MinusWidget.Btn_Minus:UnBindEventOnClicked(self, self.CancelSelectClick)
       self.MinusWidget.Btn_Minus:BindEventOnClicked(self, self.CancelSelectClick)
       if Content.ItemType ~= CommonConst.DataType.Weapon then
-        self:SetItemMoney(StateTagInfo.ExtraData[4], Utils.FormatNumber(math.floor(StateTagInfo.ExtraData[3] + 0.5), true), true)
+        self:SetItemMoney(StateTagInfo.ExtraData[4], MiscUtils.FormatNumber(math.floor(StateTagInfo.ExtraData[3] + 0.5), true), true)
       end
     end
     self:CheckAndSetVisibility(self.MinusWidget, UIConst.VisibilityOp.SelfHitTestInvisible)
@@ -519,9 +519,9 @@ function M:RefreshItemsViewWithStateTag(Content)
     end
   elseif StateTagInfo.Name == "Normal" then
     if StateTagInfo.ExtraData ~= nil then
-      self:SetSelectNum(0, Utils.FormatNumber(StateTagInfo.ExtraData[1], true))
+      self:SetSelectNum(0, MiscUtils.FormatNumber(StateTagInfo.ExtraData[1], true))
       if Content.StuffType ~= CommonConst.DataType.Weapon then
-        self:SetItemMoney(StateTagInfo.ExtraData[3], Utils.FormatNumber(math.floor(StateTagInfo.ExtraData[2] + 0.5), true), true)
+        self:SetItemMoney(StateTagInfo.ExtraData[3], MiscUtils.FormatNumber(math.floor(StateTagInfo.ExtraData[2] + 0.5), true), true)
       end
       self:CheckAndSetVisibility(self.MinusWidget, UIConst.VisibilityOp.Collapsed)
       self:CheckAndSetVisibility(self.SelectWidget, UIConst.VisibilityOp.Collapsed)

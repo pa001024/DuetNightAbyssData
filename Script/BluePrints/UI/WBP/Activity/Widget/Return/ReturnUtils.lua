@@ -1,6 +1,7 @@
 require("UnLua")
 local ActivityReddotHelper = require("BluePrints.UI.WBP.Activity.ActivityReddotHelper")
 local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
+local HeroUSDKUtils = require("Utils.HeroUSDKUtils")
 local ReturnUtils = {}
 ReturnUtils.ReddotTaskNewKey = "ComeBackTaskNew"
 ReturnUtils.ReddotTaskQuestKey = "ComeBackTaskQuest"
@@ -20,8 +21,18 @@ function ReturnUtils.GetCurrentEventSchemeId()
 end
 
 function ReturnUtils.CanParticipateInvite()
+  if HeroUSDKUtils.IsSpecialChannel(nil, true) then
+    return false
+  end
   local CurrentEventSchemeId = ReturnUtils.GetCurrentEventSchemeId()
-  local InviteEventSchemeId = DataMgr.ComeBackEvent[CurrentEventSchemeId].InviteEventSchemeId
+  if not CurrentEventSchemeId then
+    return false
+  end
+  local ComeBackEventData = DataMgr.ComeBackEvent[CurrentEventSchemeId]
+  if not ComeBackEventData then
+    return false
+  end
+  local InviteEventSchemeId = ComeBackEventData.InviteEventSchemeId
   if not InviteEventSchemeId then
     return false
   end

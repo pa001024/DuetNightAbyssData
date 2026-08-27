@@ -5,6 +5,7 @@ local prop = require("NetworkEngine.Common.Prop")
 local FormatProperties = require("NetworkEngine.Common.Assemble").FormatProperties
 local CommonConst = require("CommonConst")
 local QuestUtils = require("Utils.QuestUtils")
+local SerializeUtils = require("Utils.SerializeUtils")
 local QuestBacktrackNodeData = Class("QuestBacktrackNodeData", CustomTypes.CustomAttr)
 QuestBacktrackNodeData.__Props__ = {
   QuestId = prop.prop("Int", "client save"),

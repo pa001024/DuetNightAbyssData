@@ -4,7 +4,7 @@ local CommonConst = require("CommonConst")
 local ForgeConst = require("Blueprints.UI.Forge.ForgeConst")
 local UIUtils = require("Utils.UIUtils")
 local ForgePathModel = require("BluePrints.UI.Forge.ForgePathModel")
-local MaxRowNum = 4
+local MaxRowNum = 5
 local MaxColNum = 4
 local ForgePathController = Class()
 ForgePathController._components = {
@@ -27,6 +27,7 @@ function ForgePathController:Init(DraftId, Owner, ForgeModel)
   local PathMaxLen = self.PathModel:GetPathMaxLen(DraftId)
   self:InitView(DraftId, PathMaxLen)
   self:OnItemSelected(1, 1)
+  self:ResetScrollPosition()
   self:RefreshOpInfoByInputDevice()
   if self.IsInCompendiumMode then
     self:InitCompendiumView()
@@ -289,6 +290,11 @@ function ForgePathController:OnItemSelected(RowIndex, ColIndex, bSelectedByGamep
       local RightmostPos = math.max(ForgeNodeData.Pos, self.PathModel.RowInfos[RowIndex + 1][NextLineItemNum].Pos)
       self:UpdateRowLinesView(RowIndex + 1, RightmostPos)
     end
+  end
+  if RowIndex + 1 <= MaxRowNum and self.PathModel.RowInfos[RowIndex + 1] and #self.PathModel.RowInfos[RowIndex + 1] > 0 then
+    self:ScrollRowIntoView(RowIndex + 1, true)
+  else
+    self:ScrollRowIntoView(RowIndex, true)
   end
   if CurRowSelectedIndex then
     self:UnselectNode(RowIndex, CurRowSelectedIndex)

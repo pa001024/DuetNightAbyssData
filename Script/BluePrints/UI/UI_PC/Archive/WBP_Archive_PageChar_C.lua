@@ -214,15 +214,24 @@ end
 
 function WBP_Archive_PageChar_C:GetCharacterData(TabId)
   local Avatar = GWorld:GetAvatar()
-  local Sex = Avatar.Sex or 0
+  local Sex = 0
+  if Avatar then
+    Sex = Avatar.Sex or 0
+  end
   self.AllCharacterIds = {}
   local PlayerCharacterIds = {}
+  local GroupId2PlayerCharacterIds = {}
+  local CharacterAttributeSwitch = DataMgr.CharacterAttributeSwitch
   local CurrentVersion = DataMgr.GlobalConstant.CurrentVersion.ConstantValue
   for Id, Data in pairs(DataMgr.Char) do
     if not Data.IsNotOpen and (not Data.ReleaseVersion or CurrentVersion >= Data.ReleaseVersion) then
       table.insert(self.AllCharacterIds, Data.CharId)
-      if Data.GenderTag and Data.GenderTag == Sex then
-        PlayerCharacterIds[Data.CharId] = 0
+      if Data.GenderTag and CharacterAttributeSwitch[Data.CharId] then
+        local CharGroupId = CharacterAttributeSwitch[Data.CharId].CharGroupId
+        if not GroupId2PlayerCharacterIds[CharGroupId] then
+          GroupId2PlayerCharacterIds[CharGroupId] = {}
+        end
+        GroupId2PlayerCharacterIds[CharGroupId][Data.CharId] = 1
       end
     end
   end
@@ -241,8 +250,20 @@ function WBP_Archive_PageChar_C:GetCharacterData(TabId)
   for Uuid, CharInfo in pairs(CharsInfo) do
     CharId2CharInfo[CharInfo.CharId] = CharInfo
   end
-  if PlayerCharacterIds[CurrentMainCharacterId] then
-    PlayerCharacterIds[CurrentMainCharacterId] = 1
+  for GroupId, CharIds in pairs(GroupId2PlayerCharacterIds) do
+    if CharIds[CurrentMainCharacterId] then
+      PlayerCharacterIds[CurrentMainCharacterId] = 1
+    else
+      local MinCharId
+      for CharId, _ in pairs(CharIds) do
+        if ArchiveList[CharId] and (not MinCharId or CharId < MinCharId) then
+          MinCharId = CharId
+        end
+      end
+      if MinCharId then
+        PlayerCharacterIds[MinCharId] = 1
+      end
+    end
   end
   for Index, Id in pairs(self.AllCharacterIds) do
     local Data = DataMgr.Char[Id]

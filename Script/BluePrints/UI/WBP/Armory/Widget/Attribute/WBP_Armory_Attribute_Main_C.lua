@@ -67,6 +67,7 @@ function M:Init(Params)
     ArmoryUI.ActorController:BindViewUI(self.Parent)
     ArmoryUI.ActorController:SetCurrentViewUI(self.Parent)
     ArmoryUI.ActorController:SetArmoryMontageTag("Armory_ChangeAttr")
+    ArmoryUI.ActorController:SetArmoryCameraTag("Char_AttrChange")
   end
 end
 

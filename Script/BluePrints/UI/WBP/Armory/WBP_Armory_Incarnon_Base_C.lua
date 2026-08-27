@@ -79,8 +79,9 @@ end
 function M:InitWeaponCardProgress()
   local Percent1, Percent2 = 0, 0
   local ServerWeaponInfo = self.Avatar.Weapons[self.WeaponUuid]
+  local CardLevel = 0
   if ServerWeaponInfo then
-    local CardLevel = ServerWeaponInfo.HyperCardLevel
+    CardLevel = ServerWeaponInfo.HyperCardLevel
     local CardLevel01 = math.clamp(CardLevel + 1, 0, self.MaxCardLevel)
     Percent1 = CardLevel01 / self.MaxCardLevel
     local CardLevel02 = math.clamp(CardLevel + 1, 0, self.MaxCardLevel + 1)

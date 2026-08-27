@@ -581,5 +581,162 @@ return ReadOnly("ArtLevelControl", {
     OutTime = 0,
     RegionId = 1063,
     VarName = "IQ200405"
+  },
+  [55] = {
+    Id = 55,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Lxzs01_Main/Task_Data/Haiboliya_Thc_Lxzs01_IQ11023103_Task.Haiboliya_Thc_Lxzs01_IQ11023103_Task"
+    },
+    OutTime = 0,
+    RegionId = 1070,
+    VarName = "IQ11023103"
+  },
+  [56] = {
+    Id = 56,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Lxzs01_Main/Task_Data/Haiboliya_Thc_Lxzs01_Task_Deco.Haiboliya_Thc_Lxzs01_Task_Deco"
+    },
+    OutTime = 0,
+    RegionId = 1070,
+    VarName = "Ex02CustomNPC_show"
+  },
+  [57] = {
+    Id = 57,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Lxzs02_Main/Task_Data/Haiboliya_Thc_Lxzs02_Deco_Task.Haiboliya_Thc_Lxzs02_Deco_Task"
+    },
+    OutTime = 0,
+    RegionId = 1071,
+    VarName = "Ex02CustomNPC_show"
+  },
+  [58] = {
+    Id = 58,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Lxzx_Main/Task_Data/Haiboliya_Thc_Lxzx_Task_Deco.Haiboliya_Thc_Lxzx_Task_Deco"
+    },
+    OutTime = 0,
+    RegionId = 1072,
+    VarName = "Ex02CustomNPC_show"
+  },
+  [59] = {
+    Id = 59,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Lxzs02_Main/Task_Data/Haiboliya_Thc_Lxzs02_IQ110233_Task.Haiboliya_Thc_Lxzs02_IQ110233_Task"
+    },
+    OutTime = 0,
+    RegionId = 1071,
+    VarName = "IQ110233"
+  },
+  [60] = {
+    Id = 60,
+    InTime = 0,
+    OutTime = 0,
+    RegionId = 1076,
+    VarName = "EX02_Boss03"
+  },
+  [61] = {
+    Id = 61,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Boss/Task_Data/Haiboliya_Thc_Boss04_01_Task.Haiboliya_Thc_Boss04_01_Task"
+    },
+    OutTime = 0,
+    RegionId = 1076,
+    VarName = "EX02_Boss04_01"
+  },
+  [62] = {
+    Id = 62,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Boss/Task_Data/Haiboliya_Thc_Boss04_02_Task.Haiboliya_Thc_Boss04_02_Task"
+    },
+    OutTime = 0,
+    RegionId = 1076,
+    VarName = "EX02_Boss04_02"
+  },
+  [63] = {
+    Id = 63,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Lxzs01_Main/Task_Data/Haiboliya_Thc_Lxzs01_IQ11023201_Task.Haiboliya_Thc_Lxzs01_IQ11023201_Task"
+    },
+    OutTime = 0,
+    RegionId = 1070,
+    VarName = "IQ11023201"
+  },
+  [64] = {
+    Id = 64,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Lxzs01_Main/Task_Data/Haiboliya_Thc_Lxzs01_IQ11023206_Task.Haiboliya_Thc_Lxzs01_IQ11023206_Task"
+    },
+    OutTime = 0,
+    RegionId = 1070,
+    VarName = "IQ11023206"
+  },
+  [65] = {
+    Id = 65,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Chapter01/Chapter01_Main/Task_Data/Chapter01_IcelakeCIty_IQ130101_Task.Chapter01_IcelakeCIty_IQ130101_Task"
+    },
+    OutTime = 0,
+    RegionId = 1011,
+    VarName = "IQ13010101"
+  },
+  [66] = {
+    Id = 66,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Lxzs01_Main/Task_Data/Haiboliya_Thc_Lxzs01_IQ11023101_Task.Haiboliya_Thc_Lxzs01_IQ11023101_Task"
+    },
+    OutTime = 0,
+    RegionId = 1070,
+    VarName = "IQ11023101"
+  },
+  [67] = {
+    Id = 67,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Lxzs01_Main/Task_Data/Haiboliya_Thc_Lxzs01_IQ11020302_Task.Haiboliya_Thc_Lxzs01_IQ11020302_Task"
+    },
+    OutTime = 0,
+    RegionId = 1070,
+    VarName = "IQ11020302"
+  },
+  [68] = {
+    Id = 68,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Lxzs01_Main/Task_Data/Haiboliya_Thc_Lxzs01_IQ11022101_Task.Haiboliya_Thc_Lxzs01_IQ11022101_Task"
+    },
+    OutTime = 0,
+    RegionId = 1070,
+    VarName = "IQ11022101"
+  },
+  [69] = {
+    Id = 69,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Lxzs02_Main/Task_Data/Haiboliya_Thc_Lxzs02_IQ11020104_Task.Haiboliya_Thc_Lxzs02_IQ11020104_Task"
+    },
+    OutTime = 0,
+    RegionId = 1071,
+    VarName = "IQ11020104"
+  },
+  [70] = {
+    Id = 70,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Lxzs01_Main/Task_Data/Haiboliya_Thc_Lxzs01_IQ110220_Deco_Task.Haiboliya_Thc_Lxzs01_IQ110220_Deco_Task"
+    },
+    OutTime = 0,
+    RegionId = 1070,
+    VarName = "Scehutao_110220"
   }
 })

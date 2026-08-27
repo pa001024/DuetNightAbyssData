@@ -104,12 +104,6 @@ return {
           {
             startQuest = "17822146841431190",
             startPort = "Out",
-            endQuest = "1783438661347300",
-            endPort = "In"
-          },
-          {
-            startQuest = "1783438661347300",
-            startPort = "Out",
             endQuest = "1782214656063354",
             endPort = "In"
           }
@@ -140,7 +134,7 @@ return {
             key = "1782214656063354",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 934.8947890254137, y = 108.59834249977264},
+            pos = {x = 656.3233604539851, y = 94.31262821405835},
             propsData = {}
           },
           ["1782214663510469"] = {
@@ -202,13 +196,6 @@ return {
                 242480655
               }
             }
-          },
-          ["1783438661347300"] = {
-            key = "1783438661347300",
-            type = "WaitOfTimeNode",
-            name = "延迟等待",
-            pos = {x = 551.6608617131063, y = 181.5222983930414},
-            propsData = {WaitTime = 2}
           }
         },
         commentData = {}

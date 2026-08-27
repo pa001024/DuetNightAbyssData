@@ -41,10 +41,22 @@ end
 function M:BP_OnEntryReleased()
   self.Text_LeftDialog:SetText("")
   self.Text_LeftDialog:SetText("")
+  self:_ResetTeamInfoCards()
   self.Content.UI = nil
 end
 
+function M:_ResetTeamInfoCards()
+  if self.TeamInfo_L and self.TeamInfo_L.Reset then
+    self.TeamInfo_L:Reset()
+  end
+  if self.TeamInfo_R and self.TeamInfo_R.Reset then
+    self.TeamInfo_R:Reset()
+  end
+  self.TeamInfo = nil
+end
+
 function M:OnListItemObjectSet(Content)
+  self:_ResetTeamInfoCards()
   Content.UI = self
   self.Content = Content
   self.MsgWrap = Content.Data
@@ -61,7 +73,6 @@ function M:OnListItemObjectSet(Content)
     Switch[self.MsgWrap.MsgType](self, Content)
   end
   if CommonUtils.GetDeviceTypeByPlatformName(self) ~= "Mobile" then
-    self:OnCreateChatItem(self.Owner, Content)
     self:SetNavigationRuleCustom(UE4.EUINavigation.Up, {
       self,
       self.OnNavigateUp
@@ -94,6 +105,7 @@ function M:OnListItemObjectSet_Other(Content)
   self.ChatCardCoop = self.ChatCardCoop_L
   self.TitleWidget = self.TitleLeft
   self.GuildInvite = self.GuildInvite_L
+  self.TeamInfo = self.TeamInfo_L
   self:InitSelectMask(self.Image_LeftControllerLight)
   self:_SetUpChatContent(self.MsgWrap)
 end
@@ -127,6 +139,7 @@ function M:OnListItemObjectSet_Self(Content)
   self.ChatCardCoop = self.ChatCardCoop_R
   self.TitleWidget = self.TitleRight
   self.GuildInvite = self.GuildInvite_R
+  self.TeamInfo = self.TeamInfo_R
   self:InitSelectMask(self.Image_RightControllerLight)
   self:_SetUpChatContent(self.MsgWrap)
 end
@@ -190,18 +203,8 @@ function M:_SetUpChatContent(MsgWrap)
   self:_ParseModSuitInfo(MsgWrap)
   self:_ParseAsyncCombatShareInfo(MsgWrap)
   self:_ParseGuildInviteInfo(MsgWrap)
-  self:_ApplyMergedDisplayState(MsgWrap)
+  self:_ParseTeamInfo(MsgWrap)
   self:_UpdateHeadClickableState()
-end
-
-function M:_ApplyMergedDisplayState(MsgWrap)
-  local Visibility = MsgWrap.bMergedDisplay and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.SelfHitTestInvisible
-  if self.NameTitleGroup then
-    self.NameTitleGroup:SetVisibility(Visibility)
-  end
-  if self.HeadGroup then
-    self.HeadGroup:SetVisibility(Visibility)
-  end
 end
 
 function M:_ShowNormalContent(Content)
@@ -324,6 +327,21 @@ function M:_ParseAsyncCombatShareInfo(MsgWrap)
   end
 end
 
+function M:_ParseTeamInfo(MsgWrap)
+  local TeamInfo = MsgWrap.TeamInfo
+  if TeamInfo and self.TeamInfo and self.TeamInfo.InitTeamInfo then
+    local bSelfMsg = MsgWrap.MsgType == ChatCommon.MsgType.Self
+    if self.TeamInfo:InitTeamInfo(TeamInfo, bSelfMsg) then
+      self:_SetBubbleWidget(self.TeamInfo, 0)
+      return
+    end
+  end
+  if TeamInfo or MsgWrap.bInvalidTeamInfo then
+    self:_SetBubbleWidget(self.TextDialog:GetParent(), 0)
+    self:_ShowNormalContent(ChatController:ParseTeamInfoText(MsgWrap) or GText("UI_RecruitMembers"))
+  end
+end
+
 function M:InitSelectMask(Widget)
   self.SelectMask = Widget
   if self.Owner.OnInitSelectMask then
@@ -349,7 +367,8 @@ function M:IsShowCheckPlan(InKeyName)
   if not MsgWrap then
     return false
   end
-  return MsgWrap.ModSuitInfo or MsgWrap.DyePlanInfo or MsgWrap.AppearancePlanInfo or MsgWrap.GuildRecruitInfo or MsgWrap.AsyncCombatRoomInfo or MsgWrap.AutoChessShareInfo
+  local bOtherTeamInfo = MsgWrap.TeamInfo and MsgWrap.MsgType == ChatCommon.MsgType.Other
+  return MsgWrap.ModSuitInfo or MsgWrap.DyePlanInfo or MsgWrap.AppearancePlanInfo or MsgWrap.GuildRecruitInfo or MsgWrap.AsyncCombatRoomInfo or MsgWrap.AutoChessShareInfo or bOtherTeamInfo
 end
 
 function M:OnCheckPlanGamePadDown()
@@ -387,30 +406,13 @@ function M:OnCheckPlanGamePadDown()
       self.AutoChessShareBubble:OnBtnClick()
     end
     IsEventHandled = true
+  elseif self.MsgWrap.TeamInfo and self.MsgWrap.MsgType == ChatCommon.MsgType.Other then
+    if self.TeamInfo and self.TeamInfo.OnClicked then
+      self.TeamInfo:OnClicked()
+    end
+    IsEventHandled = true
   end
   return IsEventHandled
-end
-
-function M:_GetAvatarMenuSourceItem()
-  if not self.MsgWrap.bMergedDisplay then
-    return self
-  end
-  local ChatItemList = self.Owner and self.Owner._ChatItemList
-  local Index = self.MsgWrap and self.MsgWrap.Index
-  local SenderUid = self.MsgWrap and self.MsgWrap.Message and self.MsgWrap.Message.Sender and self.MsgWrap.Message.Sender.Uid
-  if not (ChatItemList and Index) or nil == SenderUid then
-    return
-  end
-  for i = Index - 1, 1, -1 do
-    local Item = ChatItemList[i]
-    local ItemSenderUid = Item and Item.MsgWrap and Item.MsgWrap.Message and Item.MsgWrap.Message.Sender and Item.MsgWrap.Message.Sender.Uid
-    if ItemSenderUid ~= SenderUid then
-      break
-    end
-    if not Item.MsgWrap.bMergedDisplay then
-      return Item
-    end
-  end
 end
 
 function M:OnGamePadDown(InKeyName)
@@ -424,7 +426,7 @@ function M:OnGamePadDown(InKeyName)
     end
   elseif InKeyName == Const.GamepadFaceButtonDown then
     if not self.IsOpen and self.Owner.FocusStateType == ChatFocusType.SelectChat then
-      local SourceItem = self:_GetAvatarMenuSourceItem()
+      local SourceItem = self
       if SourceItem then
         SourceItem.MenuInvoker = SourceItem ~= self and self or nil
         SourceItem:GetCardGuildInfo(SourceItem.CardGuildInfoParams.GuildId, SourceItem.CardGuildInfoParams.Uid)
@@ -487,40 +489,56 @@ function M:OnHeadMenuOpenChanged(bOpen)
   self:SetFocus()
 end
 
-function M:OnCreateChatItem(Owner, Content)
-  if not Owner or not Owner._ChatItemList then
-    return
-  end
-  local Index = Content.Data.Index
-  if not Index or 0 == Index then
-    Index = #Owner._ChatItemList + 1
-    Content.Data.Index = Index
-  end
-  Owner._ChatItemList[Index] = self
-end
-
 function M:OnNavigateUp()
-  local Index = self.MsgWrap.Index
-  local ChatItemList = self.Owner._ChatItemList
+  local Index = self.Content.Index
   local FocusStateType = self.Owner.FocusStateType
   for i = Index - 1, 1, -1 do
-    local Widget = ChatItemList[i]
-    if Widget.SelectMask or FocusStateType ~= ChatFocusType.SelectChat then
-      return Widget
+    local Content = self.Owner.List_Dialog:GetListItems():Get(i)
+    local Widget = Content.UI
+    if IsValid(Widget) then
+      if Widget.SelectMask or FocusStateType ~= ChatFocusType.SelectChat then
+        return Widget
+      end
+    else
+      break
+    end
+  end
+  if Index > 1 then
+    for i = Index - 2, 1, -1 do
+      local Content = self.Owner.List_Dialog:GetItemAt(i)
+      local MsgType = Content.Data.MsgType
+      if MsgType == ChatCommon.MsgType.Self or MsgType == ChatCommon.MsgType.Other then
+        self.Owner.List_Dialog:NavigateToIndex(i)
+        break
+      end
     end
   end
   return self
 end
 
 function M:OnNavigateDown()
-  local Index = self.MsgWrap.Index
-  local ChatItemList = self.Owner._ChatItemList
+  local Index = self.Content.Index
   local FocusStateType = self.Owner.FocusStateType
-  local MaxIndex = #ChatItemList
-  for i = Index + 1, MaxIndex do
-    local Widget = ChatItemList[i]
-    if Widget.SelectMask or FocusStateType ~= ChatFocusType.SelectChat then
-      return Widget
+  local ItemLists = self.Owner.List_Dialog:GetListItems()
+  for i = Index + 1, ItemLists:Num() do
+    local Content = ItemLists:Get(i)
+    local Widget = Content.UI
+    if IsValid(Widget) then
+      if Widget.SelectMask or FocusStateType ~= ChatFocusType.SelectChat then
+        return Widget
+      end
+    else
+      break
+    end
+  end
+  if Index < ItemLists:Num() then
+    for i = Index, ItemLists:Num() - 1 do
+      local Content = self.Owner.List_Dialog:GetItemAt(i)
+      local MsgType = Content.Data.MsgType
+      if MsgType == ChatCommon.MsgType.Self or MsgType == ChatCommon.MsgType.Other then
+        self.Owner.List_Dialog:NavigateToIndex(i)
+        break
+      end
     end
   end
   return self

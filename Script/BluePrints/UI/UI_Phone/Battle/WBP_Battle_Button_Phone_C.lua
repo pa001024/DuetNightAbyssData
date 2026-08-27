@@ -3,6 +3,7 @@ local EMCache = require("EMCache.EMCache")
 local BattleHUDCommonConst = require("BluePrints.UI.UI_Phone.Battle.BattleHUDCommonConst")
 local UltimateAttackGuideHelper = require("BluePrints.UI.UI_Phone.Battle.UltimateAttackGuideHelper")
 local FOLD_FEATURE_UNLOCK_QUEST_ID = 10020203
+local FOLD_FEATURE_SETTING_CACHE_NAME = "AutoFold"
 local LEFT_AUTO_BTN_UNLOCK_QUEST_ID = 10020101
 
 local function GetMappedLayout(Layout)
@@ -41,6 +42,7 @@ function WBP_Battle_Button_Phone:Construct()
   self.SettingDisabledTags = {}
   self.FoldPressedSkillInputs = {}
   self.bFoldBlockedByJetFly = false
+  self.bFoldBlockedByBattleWheel = false
   self.TripleBulletJumpLockStates = {}
 end
 
@@ -50,6 +52,7 @@ function WBP_Battle_Button_Phone:ForceInit()
   self.IsFolded = false
   self.FoldPressedSkillInputs = {}
   self.bFoldBlockedByJetFly = false
+  self.bFoldBlockedByBattleWheel = false
   self:OnLoaded()
   self.OwnerPlayer = UGameplayStatics.GetPlayerCharacter(self, 0)
   self:InitUnlockInfo()
@@ -70,6 +73,8 @@ function WBP_Battle_Button_Phone:ForceInit()
     self:RestoreFoldHitBlock()
     EMUIAnimationSubsystem:EMPlayAnimation(self, self:GetFoldAnim(), EUMGSequencePlayMode.Reverse)
   end
+  self:RefreshFoldStateBySettingState()
+  self:RefreshFoldStateByHardBossState()
   self:TryStartFoldTimer()
 end
 
@@ -105,15 +110,21 @@ function WBP_Battle_Button_Phone:InitListenEvent()
   self:AddDispatcher(EventID.OnStopMountFly, self, self.OnStopMountFly)
   self:AddDispatcher(EventID.OnSkillInfosRep, self, self.OnSkillInfosRep)
   self:AddDispatcher(EventID.OnMobileHookShow, self, self.OnMobileHookShow)
+  self:AddDispatcher(EventID.OnMobileSlideSplineShow, self, self.OnMobileSlideSplineShow)
   self:AddDispatcher(EventID.OnSkill1InAirChanged, self, self.OnSkill1InAirChanged)
   self:AddDispatcher(EventID.OnSkill2InAirChanged, self, self.OnSkill2InAirChanged)
   self:AddDispatcher(EventID.OnLockOnButtonShowChanged, self, self.OnLockOnButtonShowChanged)
   self:AddDispatcher(EventID.OnCameraLockOnChanged, self, self.OnCameraLockOnChanged)
   self:AddDispatcher(EventID.OnRecordButtonOptionChanged, self, self.OnRecordButtonOptionChanged)
+  self:AddDispatcher(EventID.OnFoldFeatureOptionChanged, self, self.OnFoldFeatureOptionChanged)
   self:AddDispatcher(EventID.OnAutoAttackEnabledChanged, self, self.OnAutoAttackEnabledChanged)
   self:AddDispatcher(EventID.OnAutoShootEnabledChanged, self, self.OnAutoShootEnabledChanged)
   self:AddDispatcher(EventID.QuestFinished, self, self.OnQuestFinished)
   self:AddDispatcher(EventID.OnNpcEnterOrQuitSpecialQuest, self, self.RefreshFoldStateBySpecialQuestState)
+  self:AddDispatcher(EventID.OnShootTargetStart, self, self.RefreshFoldStateByShootTarget)
+  self:AddDispatcher(EventID.OnAvatarStatusUpdate, self, self.OnAvatarStatusUpdate)
+  self:AddDispatcher(EventID.LoadUI, self, self.OnUILoad)
+  self:AddDispatcher(EventID.UnLoadUI, self, self.OnUIUnLoad)
   self:AddDispatcher(EventID.OnAttackPressed, self, self.OnFoldAttackPressed)
   self:AddDispatcher(EventID.OnFirePressed, self, self.OnFoldFirePressed)
   self:AddDispatcher(EventID.OnSkill1Pressed, self, self.OnFoldSkillPressed)
@@ -1370,6 +1381,12 @@ function WBP_Battle_Button_Phone:OnSwitchRole()
   end
 end
 
+function WBP_Battle_Button_Phone:OnSlideMechStateChanged(IsInSlideMech, Player, SlideMechEid, Reason)
+  if IsValid(Player) and IsValid(self.OwnerPlayer) and Player ~= self.OwnerPlayer then
+    return
+  end
+end
+
 function WBP_Battle_Button_Phone:OnSwitchPet()
   self.SupportSkill:RefreshSupportSkillIcon()
 end
@@ -1571,6 +1588,20 @@ function WBP_Battle_Button_Phone:OnMobileHookShow(Hook)
   Hook.InteractiveUI:Init(Hook)
 end
 
+function WBP_Battle_Button_Phone:OnMobileSlideSplineShow(SlideSpline, Player)
+  local BattleMainUI = UIManager(self):GetUIObj("BattleMain")
+  if not BattleMainUI or not BattleMainUI.Char_Skill then
+    return
+  end
+  if BattleMainUI.Char_Skill.Execute.IsShow then
+    BattleMainUI.Char_Skill.Switch_Type:SetActiveWidgetIndex(0)
+    return
+  end
+  BattleMainUI.Char_Skill.Switch_Type:SetActiveWidgetIndex(1)
+  SlideSpline.SlideInteractiveUI = BattleMainUI.Char_Skill.HookLock
+  SlideSpline.SlideInteractiveUI:InitSlideSpline(SlideSpline, Player)
+end
+
 function WBP_Battle_Button_Phone:OnRecordButtonOptionChanged(bShow)
   local RecordNode = self.RecordPos or self.Record
   if bShow then
@@ -1683,6 +1714,24 @@ function WBP_Battle_Button_Phone:ForceExitFoldStateNoRestart()
     EMUIAnimationSubsystem:EMPlayAnimation(self, self:GetFoldAnim(), EUMGSequencePlayMode.Reverse)
   end
   self:RestoreFoldHitBlock()
+end
+
+function WBP_Battle_Button_Phone:IsFoldEnabledBySetting()
+  local bEnabled = EMCache:Get(FOLD_FEATURE_SETTING_CACHE_NAME)
+  if nil == bEnabled then
+    return true
+  end
+  return true == bEnabled
+end
+
+function WBP_Battle_Button_Phone:IsInHardBoss()
+  local Avatar = GWorld:GetAvatar()
+  return nil ~= Avatar and Avatar:IsInHardBoss() == true
+end
+
+function WBP_Battle_Button_Phone:IsSystemUIOpened()
+  local GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
+  return nil ~= GameInputModeSubsystem and GameInputModeSubsystem:GetCurrentInputMode() == EGameInputMode.UI
 end
 
 function WBP_Battle_Button_Phone:IsFoldFeatureUnlocked()
@@ -1810,6 +1859,86 @@ function WBP_Battle_Button_Phone:RefreshFoldStateBySpecialQuestState()
   self:TryStartFoldTimer()
 end
 
+function WBP_Battle_Button_Phone:IsInShootTargetGame()
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  return nil ~= GameMode and nil ~= GameMode.IsShootTargetGameActive and GameMode:IsShootTargetGameActive()
+end
+
+function WBP_Battle_Button_Phone:RefreshFoldStateByShootTarget()
+  if not self:IsInShootTargetGame() then
+    return
+  end
+  self:ForceExitFoldStateNoRestart()
+end
+
+function WBP_Battle_Button_Phone:RefreshFoldStateBySettingState()
+  if not self:IsFoldEnabledBySetting() then
+    self:StopFoldTimer()
+    if self.IsFolded then
+      self:ExitFoldState()
+    end
+    return
+  end
+  self:TryStartFoldTimer()
+end
+
+function WBP_Battle_Button_Phone:OnFoldFeatureOptionChanged(bEnabled)
+  self:RefreshFoldStateBySettingState()
+end
+
+function WBP_Battle_Button_Phone:RefreshFoldStateByHardBossState()
+  if self:IsInHardBoss() then
+    self:StopFoldTimer()
+    if self.IsFolded then
+      self:ExitFoldState()
+    end
+    return
+  end
+  self:TryStartFoldTimer()
+end
+
+function WBP_Battle_Button_Phone:OnAvatarStatusUpdate(OldStatus, NewStatus)
+  self:RefreshFoldStateByHardBossState()
+end
+
+function WBP_Battle_Button_Phone:OnBattleWheelOpened()
+  self.bFoldBlockedByBattleWheel = true
+  self:StopFoldTimer()
+  if self.IsFolded then
+    self:ExitFoldState()
+  end
+end
+
+function WBP_Battle_Button_Phone:OnBattleWheelClosed()
+  self.bFoldBlockedByBattleWheel = false
+  self:TryStartFoldTimer()
+end
+
+function WBP_Battle_Button_Phone:OnUILoad(UIName)
+  if "InBattleWheelMenu" == UIName then
+    self:OnBattleWheelOpened()
+    return
+  end
+  if self:IsSystemUIOpened() then
+    self:PauseFoldTimer()
+  end
+end
+
+function WBP_Battle_Button_Phone:OnUIUnLoad(UIName)
+  if "InBattleWheelMenu" == UIName then
+    self:OnBattleWheelClosed()
+    return
+  end
+  self:AddTimer(0.1, function()
+    if not IsValid(self) then
+      return
+    end
+    if not self:IsSystemUIOpened() then
+      self:ResumeFoldTimer()
+    end
+  end, false, 0, "ResumeFoldAfterSystemUIUnLoad", false)
+end
+
 function WBP_Battle_Button_Phone:CanEnterFoldState()
   if self:IsInMountState() then
     DebugPrint("[Fold] CanEnter=false: in Mount")
@@ -1822,6 +1951,11 @@ function WBP_Battle_Button_Phone:CanEnterFoldState()
   local Avatar = GWorld:GetAvatar()
   if Avatar and Avatar.InSpecialQuest then
     DebugPrint("[Fold] CanEnter=false: in SpecialQuest")
+    self:ForceExitFoldStateNoRestart()
+    return false
+  end
+  if self:IsInShootTargetGame() then
+    DebugPrint("[Fold] CanEnter=false: in ShootTarget")
     self:ForceExitFoldStateNoRestart()
     return false
   end
@@ -1864,6 +1998,22 @@ function WBP_Battle_Button_Phone:CanEnterFoldState()
   end
   if self:IsInJetFlyState() then
     DebugPrint("[Fold] CanEnter=false: JetRush/JetState active")
+    return false
+  end
+  if not self:IsFoldEnabledBySetting() then
+    DebugPrint("[Fold] CanEnter=false: AutoFold setting disabled")
+    return false
+  end
+  if self:IsInHardBoss() then
+    DebugPrint("[Fold] CanEnter=false: in HardBoss")
+    return false
+  end
+  if self.bFoldBlockedByBattleWheel then
+    DebugPrint("[Fold] CanEnter=false: BattleWheel opened")
+    return false
+  end
+  if self:IsSystemUIOpened() then
+    DebugPrint("[Fold] CanEnter=false: system UI opened")
     return false
   end
   return true
@@ -1916,6 +2066,24 @@ function WBP_Battle_Button_Phone:StopFoldTimer()
   if self.FoldTimer then
     self:RemoveTimer(self.FoldTimer)
     self.FoldTimer = nil
+  end
+end
+
+function WBP_Battle_Button_Phone:PauseFoldTimer()
+  if self.FoldTimer then
+    self:PauseTimer(self.FoldTimer)
+  end
+end
+
+function WBP_Battle_Button_Phone:ResumeFoldTimer()
+  if self.FoldTimer then
+    if not self:CanEnterFoldState() then
+      self:StopFoldTimer()
+      return
+    end
+    self:UnPauseTimer(self.FoldTimer)
+  else
+    self:TryStartFoldTimer()
   end
 end
 

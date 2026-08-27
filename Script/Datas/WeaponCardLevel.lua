@@ -5,6 +5,11 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("WeaponCardLevel", {
+  [41] = {
+    CardLevelMax = 5,
+    CollectRewardExp = 0,
+    WeaponId = 41
+  },
   [10101] = {
     CardLevelMax = 5,
     CollectRewardExp = 200,
@@ -115,6 +120,11 @@ return ReadOnly("WeaponCardLevel", {
     CollectRewardExp = 200,
     WeaponId = 10404
   },
+  [10405] = {
+    CardLevelMax = 5,
+    CollectRewardExp = 200,
+    WeaponId = 10405
+  },
   [10501] = {
     CardLevelMax = 5,
     CollectRewardExp = 200,
@@ -134,6 +144,11 @@ return ReadOnly("WeaponCardLevel", {
     CardLevelMax = 5,
     CollectRewardExp = 200,
     WeaponId = 10504
+  },
+  [10505] = {
+    CardLevelMax = 5,
+    CollectRewardExp = 200,
+    WeaponId = 10505
   },
   [10601] = {
     CardLevelMax = 5,
@@ -324,5 +339,10 @@ return ReadOnly("WeaponCardLevel", {
     CardLevelMax = 5,
     CollectRewardExp = 200,
     WeaponId = 20604
+  },
+  [20605] = {
+    CardLevelMax = 5,
+    CollectRewardExp = 200,
+    WeaponId = 20605
   }
 })

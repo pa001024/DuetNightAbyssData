@@ -45,12 +45,12 @@ function FTalkTriggerComponent:CheckDialogueCondition(DialogueId)
   return StorySubsystem:CheckDialogueCondition(DialogueId)
 end
 
-function FTalkTriggerComponent:CheckFlowCondition(Guid, Index)
+function FTalkTriggerComponent:CheckFlowCondition(Node, Index)
   local StorySubsystem = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UStorySubsystem:StaticClass())
   if not StorySubsystem then
     return false
   end
-  return StorySubsystem:CheckFlowCondition(Guid, Index)
+  return StorySubsystem:CheckFlowCondition(Node, Index)
 end
 
 return FTalkTriggerComponent

@@ -50,11 +50,16 @@ function M:RefreshUI()
     return
   end
   self.Text_ItemName:SetText(GText(self.ItemData.Name))
-  if self.ItemData.Icon then
-    local IconTexture = LoadObject(self.ItemData.Icon)
-    if IconTexture then
-      self.Icon_Item:SetBrushFromTexture(IconTexture)
-    end
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  local GuildManager = GameMode:GetGuildConstructManager()
+  local IconPath = GuildManager and GuildManager:GetAssetObjectIconStringPath(self.ItemData.ItemID)
+  if IconPath then
+    UResourceLibrary.LoadObjectAsync(self, IconPath, {
+      self,
+      function(_, IconTexture)
+        self.Icon_Item:SetBrushResourceObject(IconTexture)
+      end
+    })
   end
   self.WS_Btn:SetActiveWidgetIndex(self.IsUnLock and 0 or 1)
   self.WS_Show:SetActiveWidgetIndex(self.IsUnLock and 0 or 1)
@@ -116,25 +121,21 @@ function M:InitScrollDesc(DescDesiredHeight)
 end
 
 function M:InitPlacedLine()
-  if not self.Content.PlacedNum or 0 == self.Content.PlacedNum then
+  local Catetory = DataMgr.GuildSecondCategory[self.ItemData.SecondCategory]
+  local LimitNum = Catetory and Catetory.LimitNum or 0
+  self.Line:SetVisibility(LimitNum > 0 and ESlateVisibility.SelfHitTestInvisible or ESlateVisibility.Collapsed)
+  local LeftNum = self.Content.LeftNum or 0
+  if 0 == LimitNum then
+    self.CanPlaced = LeftNum > 0
     return
   end
-  local PlacedNum = self.Content.PlacedNum
-  local ComponentTypeObj
-  for _, v in pairs(DataMgr.GuildEntranceCompType or {}) do
-    if PlacedNum < v.LimitNum then
-      ComponentTypeObj = v
-      break
-    end
-  end
-  if not ComponentTypeObj or not ComponentTypeObj.LimitNum then
-    return
-  end
-  local IsLimited = PlacedNum >= ComponentTypeObj.LimitNum
-  local Text_PlacedLine = string.format(GText("UI_ComponentCount"), tostring(ComponentTypeObj.TypeName or "")) .. PlacedNum .. "/" .. ComponentTypeObj.LimitNum
+  local PlacedNum = self.Content.PlacedNum or 0
+  local IsLimited = LimitNum <= PlacedNum
+  local Text_PlacedLine = string.format(GText("UI_ComponentCount"), GText(Catetory and Catetory.Name)) .. PlacedNum .. "/" .. LimitNum
   local Text_Widget = IsLimited and self.Line.Text_Max or self.Line.Text_Level
   self.Line.Switch_Text:SetActiveWidgetIndex(IsLimited and 2 or 0)
   Text_Widget:SetText(GText(Text_PlacedLine))
+  self.CanPlaced = LeftNum > 0 and not IsLimited
 end
 
 function M:InitDataDetails()
@@ -254,21 +255,16 @@ end
 
 function M:OnShopClicked()
   local Params = {}
-  Params.ItemData = {
-    ID = self.ItemData.ItemID or self.ItemData.ID or self.ItemId,
-    ComponentName = self.ItemData.Name,
-    ComponentDesc = self.ItemData.Desc,
-    PicAlbum = self.ItemData.Icon,
-    ConsumeCurrency = CommonConst.GuildFundsCoin,
-    ConsumeNum = self.ItemData.Cost or self.ItemData.PerformanceCost or self.ItemData.ConsumeValue,
-    SourceData = self.ItemData
-  }
+  Params.ItemData = self.ItemData
   UIManager(self):ShowCommonPopupUI(100384, Params, self)
 end
 
 function M:OnPlaceClicked()
+  if not self.CanPlaced then
+    return
+  end
   if self.Content and self.Content.PlaceCallback then
-    self.Content.PlaceCallback(self, self.ItemId)
+    self.Content.PlaceCallback(self.ItemId)
   end
 end
 

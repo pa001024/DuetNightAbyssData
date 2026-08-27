@@ -485,7 +485,7 @@ function WBP_ModArchive_Main_C:RefreshOpInfoByInputDevice(CurInputDevice, CurGam
   self.CurInputDeviceType = CurInputDevice
   self.CurGamepadName = CurGamepadName
   self:InitBtnTipsUI()
-  if self.CurInputDeviceType == ECommonInputType.GamePad and self.TabMain and self.TabMain[self.CurTab] and self.TabMain[self.CurTab].OnSwitchToGamepad then
+  if self.CurInputDeviceType == ECommonInputType.GamePad and self:CheckNeedAutoFocusWithInputType() and self.TabMain and self.TabMain[self.CurTab] and self.TabMain[self.CurTab].OnSwitchToGamepad then
     self.TabMain[self.CurTab]:OnSwitchToGamepad()
   end
 end

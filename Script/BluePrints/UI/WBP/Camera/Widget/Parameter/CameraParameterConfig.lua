@@ -41,7 +41,29 @@ local Config = {
         OptionId = "DepthOfField",
         WidgetType = "Switch",
         Default = false,
-        NeedRedDot = true
+        NeedRedDot = true,
+        HideOnMobile = true
+      },
+      {
+        Title = "UI_CameraSystem_LensParam_DOF_Distance",
+        OptionId = "FocusDistance",
+        WidgetType = "Slide",
+        Min = 0,
+        Max = 300,
+        Step = 1,
+        Default = 300,
+        EditCondition = "DepthOfField"
+      },
+      {
+        Title = "UI_CameraSystem_LensParam_DOF_Aperture",
+        OptionId = "Aperture",
+        WidgetType = "Slide",
+        Min = 22,
+        Max = 220,
+        Step = 1,
+        Default = 28,
+        DividedBy = 10,
+        EditCondition = "DepthOfField"
       }
     }
   },

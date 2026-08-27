@@ -530,5 +530,37 @@ return ReadOnly("MessageGroup", {
   [10630102] = {
     MessageGroupId = 10630102,
     MessageList = {900429}
+  },
+  [10700101] = {
+    MessageGroupId = 10700101,
+    MessageList = {900437}
+  },
+  [10700102] = {
+    MessageGroupId = 10700102,
+    MessageList = {900438}
+  },
+  [10710101] = {
+    MessageGroupId = 10710101,
+    MessageList = {900439}
+  },
+  [10720101] = {
+    MessageGroupId = 10720101,
+    MessageList = {900440}
+  },
+  [10730101] = {
+    MessageGroupId = 10730101,
+    MessageList = {900441}
+  },
+  [10740101] = {
+    MessageGroupId = 10740101,
+    MessageList = {900443}
+  },
+  [10760101] = {
+    MessageGroupId = 10760101,
+    MessageList = {900444}
+  },
+  [10770101] = {
+    MessageGroupId = 10770101,
+    MessageList = {900442}
   }
 })

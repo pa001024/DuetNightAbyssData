@@ -417,6 +417,42 @@
                 ]
               },
               {
+                "id": 1041072,
+                "itemType": "Resource",
+                "typeId": 3101408,
+                "typeName": "《冠冕》",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1001,
+                "sequence": 1,
+                "unlock": [
+                  1011,
+                  "Benefit",
+                  10
+                ]
+              },
+              {
+                "id": 1041073,
+                "itemType": "Resource",
+                "typeId": 3101409,
+                "typeName": "《死亡歡宴》",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1001,
+                "sequence": 1,
+                "unlock": [
+                  1011,
+                  "Benefit",
+                  10
+                ]
+              },
+              {
                 "id": 1410006,
                 "itemType": "Resource",
                 "typeId": 31004001,
@@ -982,6 +1018,42 @@
                 ]
               },
               {
+                "id": 1041074,
+                "itemType": "Resource",
+                "typeId": 3101410,
+                "typeName": "《永恆誓約》",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1002,
+                "sequence": 1,
+                "unlock": [
+                  1011,
+                  "Morality",
+                  10
+                ]
+              },
+              {
+                "id": 1041075,
+                "itemType": "Resource",
+                "typeId": 3101411,
+                "typeName": "《涉過霧海》",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1002,
+                "sequence": 1,
+                "unlock": [
+                  1011,
+                  "Morality",
+                  10
+                ]
+              },
+              {
                 "id": 1410008,
                 "itemType": "Resource",
                 "typeId": 31004007,
@@ -1490,6 +1562,24 @@
                   1011,
                   "Wisdom",
                   20
+                ]
+              },
+              {
+                "id": 1041069,
+                "itemType": "Resource",
+                "typeId": 3101405,
+                "typeName": "《百花圓舞曲》",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1003,
+                "sequence": 1,
+                "unlock": [
+                  1011,
+                  "Wisdom",
+                  10
                 ]
               },
               {
@@ -2073,6 +2163,78 @@
                   1011,
                   "Empathy",
                   20
+                ]
+              },
+              {
+                "id": 1041067,
+                "itemType": "Resource",
+                "typeId": 3101402,
+                "typeName": "《茶歇時間》",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1004,
+                "sequence": 1,
+                "unlock": [
+                  1011,
+                  "Empathy",
+                  10
+                ]
+              },
+              {
+                "id": 1041068,
+                "itemType": "Resource",
+                "typeId": 3101404,
+                "typeName": "《希爾妲：女僕的美德》",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1004,
+                "sequence": 1,
+                "unlock": [
+                  1011,
+                  "Empathy",
+                  10
+                ]
+              },
+              {
+                "id": 1041070,
+                "itemType": "Resource",
+                "typeId": 3101406,
+                "typeName": "《爆炸藝術》",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1004,
+                "sequence": 1,
+                "unlock": [
+                  1011,
+                  "Empathy",
+                  10
+                ]
+              },
+              {
+                "id": 1041071,
+                "itemType": "Resource",
+                "typeId": 3101407,
+                "typeName": "《芙羅拉：黃金的囚徒》",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1004,
+                "sequence": 1,
+                "unlock": [
+                  1011,
+                  "Empathy",
+                  10
                 ]
               },
               {
@@ -2807,7 +2969,7 @@
                 "id": 1011140,
                 "itemType": "Resource",
                 "typeId": 1001201,
-                "typeName": "思緒片段·狩月人·暗",
+                "typeName": "思緒片段·{nickname}·暗",
                 "price": 1,
                 "priceType": 3001,
                 "priceName": "十面骰",

@@ -135,6 +135,13 @@ return ReadOnly("RewardType", {
     RewardType = "TitleFrame",
     UniqueType = true
   },
+  UpgradeMod = {
+    DungeonRewardSeq = 50,
+    DungeonRewardType = true,
+    OperationGM = true,
+    Remark = "等级魔之楔",
+    RewardType = "UpgradeMod"
+  },
   Walnut = {
     DungeonRewardSeq = 40,
     DungeonRewardType = true,

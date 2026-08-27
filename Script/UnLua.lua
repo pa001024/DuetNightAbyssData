@@ -367,7 +367,6 @@ _G.ReddotManager = require("BluePrints.UI.Reddot.ReddotManager")
 _G.I18nUtils = require("Utils.I18nUtils")
 _G.PageJumpUtils = require("Utils.PageJumpUtils")
 _G.ShopUtils = require("Utils.ShopUtils")
-_G.SerializeUtils = require("Utils.SerializeUtils")
 _G.EMGlobalLuaTable = require("EMGlobalLuaTable")
 _G.ServerConfig = require("ServerConfig")
 _G.Json = require("rapidjson")
@@ -376,10 +375,6 @@ _G.Utils = require("Utils")
 _G.TimeUtils = require("Utils.TimeUtils")
 _G.StubInfos = require("StubInfos")
 _G.EMCache = require("EMCache.EMCache")
-local Utils = require("Utils")
-for k, v in pairs(Utils) do
-  rawset(_G, k, v)
-end
 local FEffectStruct = UE.FEffectStruct
 local FEffectSkillInfo = UE.FSkillEffectInfo
 local FMonsterSpawnPointParam = UE.FMonsterSpawnPointParam

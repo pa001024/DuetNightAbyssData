@@ -40,7 +40,7 @@ ActivityCommon.NeedRefreshInNextDay = {
 ActivityCommon.GlobalPakForbidTabId = {
   [105001] = 1
 }
-ActivityCommon.AccessoryDropActivityIds = {10302002}
+ActivityCommon.AccessoryDropActivityIds = {10302003}
 ActivityCommon.AccessoryDropResources = {
   221,
   223,

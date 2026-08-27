@@ -21,6 +21,10 @@ function M:InitPage(EventId)
   self:InitPhotoProgress(EventId)
 end
 
+function M:Init()
+  self:InitPage()
+end
+
 function M:InitPhotoProgress(EventId)
   local CurCount, TotalCount = CameraGameUtils.GetPhotoProgress()
   self.Text_Num01:SetText(CurCount)

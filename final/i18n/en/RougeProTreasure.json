@@ -1,14 +1,14 @@
 [
   {
     "id": 10101,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       10
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_01",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "unique": true,
     "rarity": 1,
@@ -16,160 +16,160 @@
   },
   {
     "id": 10102,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       10
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_02",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 10103,
-    "desc": "（待包装）每隔x秒，生命恢复最大值的y%",
+    "desc": "RLPTreasure_Desc_10103",
     "endPoints": [
       10
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_05",
     "modEquip": "Role",
-    "name": "Sacred Curing Soap",
-    "simpleDesc": "（待包装简）每隔x秒，生命恢复最大值的y%",
+    "name": "RLPTreasure_Name_10103",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10103",
     "treasureGroup": 1,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 10104,
-    "desc": "（待包装）每隔x秒，神智恢复y",
+    "desc": "RLPTreasure_Desc_10104",
     "endPoints": [
       10
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_06",
     "modEquip": "Role",
-    "name": "Sacred Revitalizing Soap",
-    "simpleDesc": "（待包装简）每隔x秒，神智恢复y",
+    "name": "RLPTreasure_Name_10104",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10104",
     "treasureGroup": 1,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 10105,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       10
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_07",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 10106,
-    "desc": "When HP falls below <Highlight>30.0%</>, grants Hitstun immunity and -<Highlight>100.0%</> Damage Taken for <Highlight>2.0</>s. Can trigger once every <Highlight>30.0</>s.",
+    "desc": "RLPTreasure_Desc_10106",
     "endPoints": [
       10
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_21",
     "modEquip": "Role",
-    "name": "Ascetic's Shackles",
-    "simpleDesc": "When HP drops low, grants Hitstun immunity and reduces Damage Taken.",
+    "name": "RLPTreasure_Name_10106",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10106",
     "treasureGroup": 1,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 10107,
-    "desc": "After using Geniemon Support, grants +<Highlight>30.0%</>Damage Dealt for <Highlight>8.0</>s.",
+    "desc": "RLPTreasure_Desc_10107",
     "endPoints": [
       10
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_28",
     "modEquip": "Role",
-    "name": "Pocket Companion's Snack",
-    "simpleDesc": "Using Geniemon Support increases Damage Dealt.",
+    "name": "RLPTreasure_Name_10107",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10107",
     "treasureGroup": 1,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 10108,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       10
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_03",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 10109,
-    "desc": "Max Dodge Attempts +<Highlight>2.0</>.",
+    "desc": "RLPTreasure_Desc_10109",
     "endPoints": [
       10
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_19",
     "modEquip": "Role",
-    "name": "Pioneer Scout's Boots",
-    "simpleDesc": "Increases the character's Max Dodge Attempts.",
+    "name": "RLPTreasure_Name_10109",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10109",
     "treasureGroup": 1,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 10110,
-    "desc": "After each revival, grants 1 stack of +<Highlight>40.0%</> Damage Dealt.",
+    "desc": "RLPTreasure_Desc_10110",
     "endPoints": [
       10
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_24",
     "modEquip": "Role",
-    "name": "Fanatic's Ring",
-    "simpleDesc": "Each revival increases Damage Dealt.",
+    "name": "RLPTreasure_Name_10110",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10110",
     "treasureGroup": 1,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 10111,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       10
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_04",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 10112,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       10
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_04",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "unique": true,
     "rarity": 1,
@@ -177,29 +177,29 @@
   },
   {
     "id": 10113,
-    "desc": "Dealing damage with a Ranged Weapon spawns an [Ammo Supply Chest]. Can trigger once every <Highlight>30.0%</>s.",
+    "desc": "RLPTreasure_Desc_10113",
     "endPoints": [
       10
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_04",
     "modEquip": "Role",
-    "name": "Windhunter's Silver Bullet",
-    "simpleDesc": "Dealing damage with a Ranged Weapon spawns [Ammo Supply Chests].",
+    "name": "RLPTreasure_Name_10113",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10113",
     "treasureGroup": 1,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 10201,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_09",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "unique": true,
     "rarity": 2,
@@ -207,29 +207,29 @@
   },
   {
     "id": 10202,
-    "desc": "Restores Sanity after using skills.",
+    "desc": "RLPTreasure_Desc_10202",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_22",
     "modEquip": "Role",
-    "name": "Holy Grail of the Noclunism Believer",
-    "simpleDesc": "Restores Sanity after using skills.",
+    "name": "RLPTreasure_Name_10202",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10202",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10203,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_23",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "unique": true,
     "rarity": 2,
@@ -237,14 +237,14 @@
   },
   {
     "id": 10204,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_17",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "unique": true,
     "rarity": 2,
@@ -252,14 +252,14 @@
   },
   {
     "id": 10205,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_20",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "unique": true,
     "rarity": 2,
@@ -267,266 +267,266 @@
   },
   {
     "id": 10206,
-    "desc": "When a weapon attack lands a CRIT, one of the following effects triggers: <Highlight>25%</> chance to decrease CRIT Damage by <Highlight>20%</>, <Highlight>70%</> chance to increase CRIT Damage by <Highlight>30%</>, or <Highlight>5%</> chance to increase CRIT Damage by <Highlight>100%</>. Each effect can stack up to 5 times.",
+    "desc": "RLPTreasure_Desc_10206",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_30",
     "modEquip": "Role",
-    "name": "A Lucky Fool's Cheer",
-    "simpleDesc": "Weapon CRITs can randomly increase or decrease CRIT Damage.",
+    "name": "RLPTreasure_Name_10206",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10206",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10207,
-    "desc": "Sanity Auto-Recovery +<Highlight>4.0</>.",
+    "desc": "RLPTreasure_Desc_10207",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_10",
     "modEquip": "Role",
-    "name": "Healer Priest's Earrings",
-    "simpleDesc": "Increases Sanity Auto-Recovery.",
+    "name": "RLPTreasure_Name_10207",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10207",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10208,
-    "desc": "When you take damage and HP falls below <Highlight>50%</>, restore <Highlight>100%</> Sanity.\nWhen Sanity falls below <Highlight>50%</>, restore <Highlight>100%</> HP.\nThese effects share a cooldown and can trigger no more than once every <Highlight>120</>s.",
+    "desc": "RLPTreasure_Desc_10208",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_15",
     "modEquip": "Role",
-    "name": "Bird-Masked Freak's Game",
-    "simpleDesc": "Restores Sanity at low HP and HP at low Sanity.",
+    "name": "RLPTreasure_Name_10208",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10208",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10209,
-    "desc": "Charged Attacks summon an additional Holy Sword strike, dealing damage equal to <Highlight>50%</> of ATK. Cooldown: <Highlight>5</>s.\nAfter 20 Holy Sword summons, an additional strike is triggered, dealing damage equal to <Highlight>50%</> of ATK.\nAfter 50 Holy Sword summons, an additional strike is triggered, dealing damage equal to <Highlight>150%</> of ATK.",
+    "desc": "RLPTreasure_Desc_10209",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_04",
     "modEquip": "Role",
-    "name": "The Dread Knight's Holy Sword",
-    "simpleDesc": "Charged Attacks can summon a Holy Sword to strike enemies.",
+    "name": "RLPTreasure_Name_10209",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10209",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10210,
-    "desc": "While in mid-air, Shooting DMG increases by <Highlight>200%</>. After triggering <Highlight>10</> times, this effect enters a <Highlight>5</>s cooldown.",
+    "desc": "RLPTreasure_Desc_10210",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_27",
     "modEquip": "Role",
-    "name": "Windhunter's Magazine",
-    "simpleDesc": "Increases Shooting DMG in mid-air.",
+    "name": "RLPTreasure_Name_10210",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10210",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10211,
-    "desc": "Increases damage dealt to Primanders and Boss enemies by <Highlight>80%</>.",
+    "desc": "RLPTreasure_Desc_10211",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_29",
     "modEquip": "Role",
-    "name": "Vanguard Commander's Gauntlet",
-    "simpleDesc": "Increases damage dealt to Primanders and Boss enemies.",
+    "name": "RLPTreasure_Name_10211",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10211",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10212,
-    "desc": "The more types of Bonus Effects affecting an enemy, the more damage it takes, up to <Highlight>60%</>.",
+    "desc": "RLPTreasure_Desc_10212",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_04",
     "modEquip": "Role",
-    "name": "Rotblood Zealot's Confession",
-    "simpleDesc": "The more types of Bonus Effects affecting an enemy, the more damage it takes.",
+    "name": "RLPTreasure_Name_10212",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10212",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10213,
-    "desc": "Deals <Highlight>additional</> damage when an attack lowers a target's HP <Highlight>below a certain threshold</>.",
+    "desc": "RLPTreasure_Desc_10213",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_04",
     "modEquip": "Role",
-    "name": "Prayer's Echo: Core Flame",
-    "simpleDesc": "Deals <Highlight>additional</> damage when an attack lowers a target's HP <Highlight>below a certain threshold</>.",
+    "name": "RLPTreasure_Name_10213",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10213",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10214,
-    "desc": "Ranged Weapons deal gradually increasing damage to distant targets.",
+    "desc": "RLPTreasure_Desc_10214",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_04",
     "modEquip": "Role",
-    "name": "Prayer's Echo: Seaborne Moon",
-    "simpleDesc": "Ranged Weapons deal gradually increasing damage to distant targets.",
+    "name": "RLPTreasure_Name_10214",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10214",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10215,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_04",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10216,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_04",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10217,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_04",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10218,
-    "desc": "After creating a summon, PEN Stats increase by <Highlight>30%</>.",
+    "desc": "RLPTreasure_Desc_10218",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_04",
     "modEquip": "Role",
-    "name": "Prayer's Echo: Glimmerfly",
-    "simpleDesc": "Increases PEN Stats after creating a summon.",
+    "name": "RLPTreasure_Name_10218",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10218",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10219,
-    "desc": "For Morale and Resolve calculations, your HP percentage is treated as <Highlight>1%</>. This effect is inactive while Morale is above <Highlight>30%</>.",
+    "desc": "RLPTreasure_Desc_10219",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_04",
     "modEquip": "Role",
-    "name": "Prayer's Echo: Vamprose",
-    "simpleDesc": "For Morale and Resolve calculations, your HP percentage is treated as <Highlight>1%</>. This effect is inactive while Morale is above <Highlight>30%</>.",
+    "name": "RLPTreasure_Name_10219",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10219",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10220,
-    "desc": "Dealing Melee Weapon DMG increases the target's Damage Taken by <Highlight>2.5%</> for <Highlight>5</>s, stacking up to <Highlight>10</> times.",
+    "desc": "RLPTreasure_Desc_10220",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_04",
     "modEquip": "Role",
-    "name": "Vanguard Commander's Blade",
-    "simpleDesc": "Dealing Melee Weapon DMG increases the target's Damage Taken.",
+    "name": "RLPTreasure_Name_10220",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10220",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10301,
-    "desc": "Each time you use a Combat Skill, roll a die. Higher rolls grant a greater damage boost, up to <Highlight>120%</>. The roll does not change until you use another Combat Skill. The initial roll is 1.",
+    "desc": "RLPTreasure_Desc_10301",
     "endPoints": [
       40
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_16",
     "modEquip": "Role",
-    "name": "Bird-Masked Freak's Magic Tricks",
-    "simpleDesc": "Using a Combat Skill rolls a die. Higher rolls grant a greater damage boost.",
+    "name": "RLPTreasure_Name_10301",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10301",
     "treasureGroup": 1,
     "rarity": 3,
     "weight": 200
   },
   {
     "id": 10302,
-    "desc": "Damage Dealt +<Highlight>5.0%</> for each Artefact owned.",
+    "desc": "RLPTreasure_Desc_10302",
     "endPoints": [
       40
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_18",
     "modEquip": "Role",
-    "name": "Charity of Lord \"Generous\"",
-    "simpleDesc": "The more Artefacts owned, the higher the Damage Dealt.",
+    "name": "RLPTreasure_Name_10302",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10302",
     "treasureGroup": 1,
     "rarity": 3,
     "weight": 200
   },
   {
     "id": 10303,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       40
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_08",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "unique": true,
     "rarity": 3,
@@ -534,29 +534,29 @@
   },
   {
     "id": 10304,
-    "desc": "When damage dealt is below <Highlight>500.0</>, triggers an additional <Highlight>500.0</> True Damage.",
+    "desc": "RLPTreasure_Desc_10304",
     "endPoints": [
       40
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_54",
     "modEquip": "Role",
-    "name": "Wandering Knight's Last Dream",
-    "simpleDesc": "Dealing low damage triggers bonus True Damage.",
+    "name": "RLPTreasure_Name_10304",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10304",
     "treasureGroup": 1,
     "rarity": 3,
     "weight": 200
   },
   {
     "id": 10305,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       40
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_04",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "unique": true,
     "rarity": 3,
@@ -564,15 +564,15 @@
   },
   {
     "id": 10306,
-    "desc": "When granting a buff to an ally, that ally additionally gains <Highlight>+50%</> Damage Dealt and <Highlight>-30%</> Damage Taken.",
+    "desc": "RLPTreasure_Desc_10306",
     "endPoints": [
       40
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_04",
     "modEquip": "Role",
-    "name": "Warm Bread on a Cold Night",
-    "simpleDesc": "Granting a buff to an ally also increases their Damage Dealt and reduces their Damage Taken.",
+    "name": "RLPTreasure_Name_10306",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10306",
     "treasureGroup": 1,
     "unique": true,
     "rarity": 3,
@@ -580,14 +580,14 @@
   },
   {
     "id": 10307,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       40
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_31",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "unique": true,
     "rarity": 3,
@@ -595,14 +595,14 @@
   },
   {
     "id": 11201,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_13",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 11,
     "unique": true,
     "rarity": 2,
@@ -610,14 +610,14 @@
   },
   {
     "id": 11202,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_14",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 11,
     "unique": true,
     "rarity": 2,
@@ -625,14 +625,14 @@
   },
   {
     "id": 12201,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_13",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 12,
     "unique": true,
     "rarity": 2,
@@ -640,14 +640,14 @@
   },
   {
     "id": 12202,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_14",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 12,
     "unique": true,
     "rarity": 2,
@@ -655,14 +655,14 @@
   },
   {
     "id": 13201,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_13",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 13,
     "unique": true,
     "rarity": 2,
@@ -670,14 +670,14 @@
   },
   {
     "id": 13202,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_14",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 13,
     "unique": true,
     "rarity": 2,
@@ -685,14 +685,14 @@
   },
   {
     "id": 14201,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_13",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 14,
     "unique": true,
     "rarity": 2,
@@ -700,14 +700,14 @@
   },
   {
     "id": 14202,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_14",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 14,
     "unique": true,
     "rarity": 2,
@@ -715,14 +715,14 @@
   },
   {
     "id": 15201,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_13",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 15,
     "unique": true,
     "rarity": 2,
@@ -730,14 +730,14 @@
   },
   {
     "id": 15202,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_14",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 15,
     "unique": true,
     "rarity": 2,
@@ -745,14 +745,14 @@
   },
   {
     "id": 16201,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_13",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 16,
     "unique": true,
     "rarity": 2,
@@ -760,14 +760,14 @@
   },
   {
     "id": 16202,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_14",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 16,
     "unique": true,
     "rarity": 2,
@@ -775,45 +775,45 @@
   },
   {
     "id": 17101,
-    "desc": "Dealing damage with a Consonance Weapon restores <Highlight>1</> Sanity.",
+    "desc": "RLPTreasure_Desc_17101",
     "endPoints": [
       10
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_04",
     "modEquip": "Role",
-    "name": "Reverie of the Crimson Beast",
-    "simpleDesc": "Dealing damage with a Consonance Weapon restores Sanity.",
+    "name": "RLPTreasure_Name_17101",
+    "simpleDesc": "RLPTreasure_SimpleDesc_17101",
     "treasureGroup": 17,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 17201,
-    "desc": "Dealing damage with a Consonance Weapon increases Skill DMG by <Highlight>30%</> for <Highlight>5</>s. Cooldown: <Highlight>5</>s.",
+    "desc": "RLPTreasure_Desc_17201",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_04",
     "modEquip": "Role",
-    "name": "Lament of the Crimson Beast",
-    "simpleDesc": "Dealing damage with a Consonance Weapon increases Skill DMG.",
+    "name": "RLPTreasure_Name_17201",
+    "simpleDesc": "RLPTreasure_SimpleDesc_17201",
     "treasureGroup": 17,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 18101,
-    "desc": "Restores <Highlight>1</> Sanity every <Highlight>2</>s while an ally is within <Highlight>20</>m.",
+    "desc": "RLPTreasure_Desc_18101",
     "endPoints": [
       10
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_04",
     "modEquip": "Role",
-    "name": "Song of Plumes Entwined",
-    "simpleDesc": "Continuously restores Sanity while an ally is nearby.",
+    "name": "RLPTreasure_Name_18101",
+    "simpleDesc": "RLPTreasure_SimpleDesc_18101",
     "treasureGroup": 18,
     "unique": true,
     "rarity": 1,
@@ -821,15 +821,15 @@
   },
   {
     "id": 18201,
-    "desc": "Restores HP equal to <Highlight>3%</> of Max HP every <Highlight>2</>s while an ally is within <Highlight>20</>m.",
+    "desc": "RLPTreasure_Desc_18201",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_04",
     "modEquip": "Role",
-    "name": "Shade of Plumes Entwined",
-    "simpleDesc": "Continuously restores HP while an ally is nearby.",
+    "name": "RLPTreasure_Name_18201",
+    "simpleDesc": "RLPTreasure_SimpleDesc_18201",
     "treasureGroup": 18,
     "unique": true,
     "rarity": 2,
@@ -837,15 +837,15 @@
   },
   {
     "id": 18301,
-    "desc": "Grants <Highlight>5</> Embers every <Highlight>2</>s while an ally is within <Highlight>20</>m.",
+    "desc": "RLPTreasure_Desc_18301",
     "endPoints": [
       40
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_04",
     "modEquip": "Role",
-    "name": "Nurture of Plumes Entwined",
-    "simpleDesc": "Continuously grants Embers while an ally is nearby.",
+    "name": "RLPTreasure_Name_18301",
+    "simpleDesc": "RLPTreasure_SimpleDesc_18301",
     "treasureGroup": 18,
     "unique": true,
     "rarity": 3,
@@ -853,187 +853,187 @@
   },
   {
     "id": 19101,
-    "desc": "While shielded, Damage Taken -<Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_19101",
     "endPoints": [
       10
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_34",
     "modEquip": "Role",
-    "name": "Guardian Knight's Shield",
-    "simpleDesc": "Reduces Damage Taken while shielded.",
+    "name": "RLPTreasure_Name_19101",
+    "simpleDesc": "RLPTreasure_SimpleDesc_19101",
     "treasureGroup": 19,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 19201,
-    "desc": "While shielded, Damage Dealt +<Highlight>10.0%</>.",
+    "desc": "RLPTreasure_Desc_19201",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_33",
     "modEquip": "Role",
-    "name": "Guardian Knight's Sword",
-    "simpleDesc": "Increases Damage Dealt while shielded.",
+    "name": "RLPTreasure_Name_19201",
+    "simpleDesc": "RLPTreasure_SimpleDesc_19201",
     "treasureGroup": 19,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 20001,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       10
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_02",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 20001,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 20002,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       10
     ],
     "ipDesc": "It is a hymn known to all—praising the merciful gods who guide lost souls. Devout believers of Elysium hum its heart-wrenching melody in the abyss, begging the gods to lead them from suffering to the promised land. The gilded melody carries them into eternal slumber, still dreaming of salvation.",
     "icon": "T_Rouge_Treasure_07",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 20002,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 20003,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       10
     ],
     "ipDesc": "Abyssoids close in from all sides. The Knight charges alone into the darkness, carving a path of hope. After the Abyssoids recede, the Healer Priest drags the Knight's broken body from the black void. \n\"I will save her,\" the Healer Priest vows. To mend the wounds of the valiant is a healer's duty.",
     "icon": "T_Rouge_Treasure_09",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 20003,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 20004,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       10
     ],
     "ipDesc": "The road ahead is arduous, and the truth always hurts. When the evening bell rings, why does the wandering bird refuse to return to its nest? \nBecause he knows no tower marks the Continent's center, no gods hold all the answers. He chooses to walk his own path, even if it means wearing shackles for life.",
     "icon": "T_Rouge_Treasure_21",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 20004,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 20005,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       10
     ],
     "ipDesc": "\"Every gain comes at a cost.\" This cliché becomes intriguing in a game setting. \nThe Illusionist tosses his toy ball into the box. \"Good news or bad news first?\"",
     "icon": "T_Rouge_Treasure_32",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 20005,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 20006,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       10
     ],
     "ipDesc": "Since childhood, she idolized her sister—the brilliant Knight who could conquer any challenge. \nWhile legends warned that none return alive from the abyss beneath the sacred lake, her sister proved them wrong. \nShe lived… in terrible silence.",
     "icon": "T_Rouge_Treasure_42",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 20006,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 20007,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "Grown-ups whisper that my sister offended the gods in the sacred lake, so they took a piece of her soul as punishment. \nNo, my sister is a true Knight, devout and honorable. Her soul was lost there by accident. If no one else will believe, I'll make them see. \nThe abyss awaits, but I will return with the piece missing.",
     "icon": "T_Rouge_Treasure_43",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 20007,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 20101,
-    "desc": "Each time you use a Skill, Melee Weapon DMG increases by 20%. This effect stacks up to 20 times and loses 1 stack every 5s.\nSkill DMG and Ranged Weapon DMG are reduced by 50%.",
+    "desc": "RLPTreasure_Desc_20101",
     "endPoints": [
       10
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_32",
     "modEquip": "Role",
-    "name": "Bird-Masked Freak's Toy (Ⅰ)",
-    "simpleDesc": "Using a Skill increases Melee Weapon DMG.",
+    "name": "RLPTreasure_Name_20101",
+    "simpleDesc": "RLPTreasure_SimpleDesc_20101",
     "treasureGroup": 20,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 20102,
-    "desc": "Each time you use a Skill, Ranged Weapon DMG increases by 20%. This effect stacks up to 20 times and loses 1 stack every 5s.\nSkill DMG and Melee Weapon DMG are reduced by 50%.",
+    "desc": "RLPTreasure_Desc_20102",
     "endPoints": [
       10
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_32",
     "modEquip": "Role",
-    "name": "Bird-Masked Freak's Toy (Ⅱ)",
-    "simpleDesc": "Using a Skill increases Ranged Weapon DMG.",
+    "name": "RLPTreasure_Name_20102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_20102",
     "treasureGroup": 20,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 20201,
-    "desc": "Each time you use a Skill, Skill DMG increases by 20%. This effect stacks up to 20 times and loses 1 stack every 5s.\nMelee Weapon DMG and Ranged Weapon DMG are reduced by 50%.",
+    "desc": "RLPTreasure_Desc_20201",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_32",
     "modEquip": "Role",
-    "name": "Bird-Masked Freak's Toy (Ⅲ)",
-    "simpleDesc": "Using a Skill increases Skill DMG.",
+    "name": "RLPTreasure_Name_20201",
+    "simpleDesc": "RLPTreasure_SimpleDesc_20201",
     "treasureGroup": 20,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 21101,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       10
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_35",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 21,
     "unique": true,
     "rarity": 1,
@@ -1041,14 +1041,14 @@
   },
   {
     "id": 21201,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_36",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 21,
     "unique": true,
     "rarity": 2,
@@ -1056,14 +1056,14 @@
   },
   {
     "id": 21301,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       40
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_37",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 21,
     "unique": true,
     "rarity": 3,
@@ -1071,135 +1071,135 @@
   },
   {
     "id": 22101,
-    "desc": "When dealing damage, there's a <Highlight>25.0%</> chance to deal bonus Pyro Damage equal to <Highlight>20.0%</> of Character ATK.",
+    "desc": "RLPTreasure_Desc_22101",
     "endPoints": [
       10
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_38",
     "modEquip": "Role",
-    "name": "Blazing Seal",
-    "simpleDesc": "Damage dealt may trigger bonus Pyro Damage.",
+    "name": "RLPTreasure_Name_22101",
+    "simpleDesc": "RLPTreasure_SimpleDesc_22101",
     "treasureGroup": 22,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 22102,
-    "desc": "When dealing damage, there's a <Highlight>25.0%</> chance to deal bonus Hydro Damage equal to <Highlight>20.0%</> of Character ATK.",
+    "desc": "RLPTreasure_Desc_22102",
     "endPoints": [
       10
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_39",
     "modEquip": "Role",
-    "name": "Flowing Seal",
-    "simpleDesc": "Damage dealt may trigger bonus Hydro Damage.",
+    "name": "RLPTreasure_Name_22102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_22102",
     "treasureGroup": 22,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 22103,
-    "desc": "When dealing damage, there's a <Highlight>25.0%</> chance to deal bonus Anemo Damage equal to <Highlight>20.0%</> of Character ATK.",
+    "desc": "RLPTreasure_Desc_22103",
     "endPoints": [
       10
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_40",
     "modEquip": "Role",
-    "name": "Gale-Etched Seal",
-    "simpleDesc": "Damage dealt may trigger bonus Anemo Damage.",
+    "name": "RLPTreasure_Name_22103",
+    "simpleDesc": "RLPTreasure_SimpleDesc_22103",
     "treasureGroup": 22,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 22104,
-    "desc": "When dealing damage, there's a <Highlight>25.0%</> chance to deal bonus Electro Damage equal to <Highlight>20.0%</> of Character ATK.",
+    "desc": "RLPTreasure_Desc_22104",
     "endPoints": [
       10
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_41",
     "modEquip": "Role",
-    "name": "Thunderstruck Seal",
-    "simpleDesc": "Damage dealt may trigger bonus Electro Damage.",
+    "name": "RLPTreasure_Name_22104",
+    "simpleDesc": "RLPTreasure_SimpleDesc_22104",
     "treasureGroup": 22,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 23101,
-    "desc": "Grants +<Highlight>50.0%</> Damage Dealt at the cost of -<Highlight>50.0%</> Skill Efficiency.",
+    "desc": "RLPTreasure_Desc_23101",
     "endPoints": [
       10
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_42",
     "modEquip": "Role",
-    "name": "Penitent Knight's Gauntlets",
-    "simpleDesc": "Increases Damage Dealt at the cost of reduced Skill Efficiency.",
+    "name": "RLPTreasure_Name_23101",
+    "simpleDesc": "RLPTreasure_SimpleDesc_23101",
     "treasureGroup": 23,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 23201,
-    "desc": "Grants +<Highlight>75.0%</> Damage Dealt at the cost of -<Highlight>50.0%</> Melee Weapon DMG.",
+    "desc": "RLPTreasure_Desc_23201",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_43",
     "modEquip": "Role",
-    "name": "Penitent Knight's Rusted Sword",
-    "simpleDesc": "Increases Damage Dealt at the cost of reduced Melee Weapon DMG.",
+    "name": "RLPTreasure_Name_23201",
+    "simpleDesc": "RLPTreasure_SimpleDesc_23201",
     "treasureGroup": 23,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 23202,
-    "desc": "Grants +<Highlight>75.0%</> Damage Dealt at the cost of -<Highlight>50.0%</> Ranged Weapon DMG.",
+    "desc": "RLPTreasure_Desc_23202",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_44",
     "modEquip": "Role",
-    "name": "Penitent Knight's Worn Rifle",
-    "simpleDesc": "Increases Damage Dealt at the cost of reduced Ranged Weapon DMG.",
+    "name": "RLPTreasure_Name_23202",
+    "simpleDesc": "RLPTreasure_SimpleDesc_23202",
     "treasureGroup": 23,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 23301,
-    "desc": "Grants +<Highlight>100.0%</> Damage Dealt at the cost of +<Highlight>50.0%</> Damage Taken.",
+    "desc": "RLPTreasure_Desc_23301",
     "endPoints": [
       40
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_45",
     "modEquip": "Role",
-    "name": "Penitent Knight's Pendant",
-    "simpleDesc": "Increases Damage Dealt at the cost of increased Damage Taken.",
+    "name": "RLPTreasure_Name_23301",
+    "simpleDesc": "RLPTreasure_SimpleDesc_23301",
     "treasureGroup": 23,
     "rarity": 3,
     "weight": 200
   },
   {
     "id": 24101,
-    "desc": "When an enemy's [Stance] is above <Highlight>50.0%</>, your character restores <Highlight>3.0</> Sanity upon dealing damage. Cooldown: <Highlight>5.0</>s.",
+    "desc": "RLPTreasure_Desc_24101",
     "endPoints": [
       10
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_53",
     "modEquip": "Role",
-    "name": "Longbow of the Forlorn Sorceress",
-    "simpleDesc": "Restores Sanity when dealing damage to enemies with high [Stance].",
+    "name": "RLPTreasure_Name_24101",
+    "simpleDesc": "RLPTreasure_SimpleDesc_24101",
     "treasureGroup": 24,
     "unique": true,
     "rarity": 1,
@@ -1207,15 +1207,15 @@
   },
   {
     "id": 24201,
-    "desc": "When an enemy's [Stance] falls below <Highlight>50.0%</>, your character gains +<Highlight>30.0%</> Damage Dealt.",
+    "desc": "RLPTreasure_Desc_24201",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_52",
     "modEquip": "Role",
-    "name": "Broken Arrow of the Forlorn Sorceress",
-    "simpleDesc": "Increases Damage Dealt against enemies with low [Stance].",
+    "name": "RLPTreasure_Name_24201",
+    "simpleDesc": "RLPTreasure_SimpleDesc_24201",
     "treasureGroup": 24,
     "unique": true,
     "rarity": 2,
@@ -1223,15 +1223,15 @@
   },
   {
     "id": 25301,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       40
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_46",
     "modEquip": "Role",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 25,
     "unique": true,
     "rarity": 3,
@@ -1239,15 +1239,15 @@
   },
   {
     "id": 25302,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       40
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_47",
     "modEquip": "Role",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 25,
     "unique": true,
     "rarity": 3,
@@ -1255,15 +1255,15 @@
   },
   {
     "id": 25303,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       40
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_48",
     "modEquip": "Role",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 25,
     "unique": true,
     "rarity": 3,
@@ -1271,15 +1271,15 @@
   },
   {
     "id": 25304,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       40
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_49",
     "modEquip": "Role",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 25,
     "unique": true,
     "rarity": 3,
@@ -1287,15 +1287,15 @@
   },
   {
     "id": 25305,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       40
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_50",
     "modEquip": "Role",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 25,
     "unique": true,
     "rarity": 3,
@@ -1303,15 +1303,15 @@
   },
   {
     "id": 25306,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       40
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_51",
     "modEquip": "Role",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 25,
     "unique": true,
     "rarity": 3,
@@ -1319,14 +1319,14 @@
   },
   {
     "id": 26101,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       10
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_04",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 26,
     "unique": true,
     "rarity": 1,
@@ -1334,14 +1334,14 @@
   },
   {
     "id": 26201,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_04",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 26,
     "unique": true,
     "rarity": 2,
@@ -1349,14 +1349,14 @@
   },
   {
     "id": 26202,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_04",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 26,
     "unique": true,
     "rarity": 2,
@@ -1364,14 +1364,14 @@
   },
   {
     "id": 26301,
-    "desc": "Grants a <Highlight>20.0%</> discount at the Abyssal Merchant's stall.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       40
     ],
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "icon": "T_Rouge_Treasure_04",
-    "name": "Abyssal Merchant's Coupon",
-    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 26,
     "unique": true,
     "rarity": 3,

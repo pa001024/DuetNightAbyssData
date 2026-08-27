@@ -167,11 +167,15 @@ function M:GetButtonStyleInfo()
 end
 
 function M:Init(Params)
+  self.bFromOptRewardPreview = Params.bFromOptRewardPreview == true
   self.Parent = Params.Parent
   self.Pet = Params.Target
   self.IsPreviewMode = Params.IsPreviewMode
   self.bHideDeployBtn = Params.bHideDeployBtn
   self.bNeedPreviewSwitcher = Params.bNeedPreviewSwitcher
+  if self.bFromOptRewardPreview and self.Panel_Invisible then
+    self.Panel_Invisible:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
   self.Parent.ActorController:BindEvent(self, {
     OnPlayPetFresnel = self.OnPlayPetFresnel,
     OnCharModelChanged = self.OnCharModelChanged
@@ -228,30 +232,30 @@ function M:UpdateSkillInfos(Pet)
   if Data.SupportSkillId then
     local SkillDesc = SkillUtils.GetSkillDesc(Data.SupportSkillId, ArmoryUtils:GetPetSkillLevel(CurPetSkillLevel))
     local Obj = NewObject(UIUtils.GetCommonItemContentClass())
-    Obj.Owner = self
-    Obj.Pet = Pet
-    Obj.SkillId = Data.SupportSkillId
-    Obj.SkillName = GText("UI_Armory_Pet_Positive")
-    Obj.SkillDesc = SkillDesc
-    Obj.SkillLevel = Pet.BreakNum + 1
-    Obj.ExtraLevel = AdditionalLevel
+    rawset(Obj, "Owner", self)
+    rawset(Obj, "Pet", Pet)
+    rawset(Obj, "SkillId", Data.SupportSkillId)
+    rawset(Obj, "SkillName", GText("UI_Armory_Pet_Positive"))
+    rawset(Obj, "SkillDesc", SkillDesc)
+    rawset(Obj, "SkillLevel", Pet.BreakNum + 1)
+    rawset(Obj, "ExtraLevel", AdditionalLevel)
     local SkillData = DataMgr.Skill[Data.SupportSkillId]
     if SkillData and SkillData[1] and SkillData[1][0] then
       SkillData = SkillData[1][0]
-      Obj.SkillData = SkillData
-      Obj.SkillBtnDesc = GText(SkillData.SkillBtnDesc)
+      rawset(Obj, "SkillData", SkillData)
+      rawset(Obj, "SkillBtnDesc", GText(SkillData.SkillBtnDesc))
     end
     self.List_Skill:AddItem(Obj)
   end
   local PassiveEffectDesc = ArmoryUtils:GenPetPassiveEffectDesc(Data, ArmoryUtils:GetPetSkillLevel(CurPetSkillLevel))
   if PassiveEffectDesc and "" ~= PassiveEffectDesc then
     local Obj = NewObject(UIUtils.GetCommonItemContentClass())
-    Obj.Owner = self
-    Obj.Pet = Pet
-    Obj.SkillLevel = Pet.BreakNum + 1
-    Obj.SkillName = GText("UI_Armory_Pet_Passive")
-    Obj.SkillDesc = PassiveEffectDesc
-    Obj.ExtraLevel = AdditionalLevel
+    rawset(Obj, "Owner", self)
+    rawset(Obj, "Pet", Pet)
+    rawset(Obj, "SkillLevel", Pet.BreakNum + 1)
+    rawset(Obj, "SkillName", GText("UI_Armory_Pet_Passive"))
+    rawset(Obj, "SkillDesc", PassiveEffectDesc)
+    rawset(Obj, "ExtraLevel", AdditionalLevel)
     self.List_Skill:AddItem(Obj)
   end
 end
@@ -368,8 +372,8 @@ end
 function M:Destruct()
   if self.Btn_Invisible_Area then
     self.Btn_Invisible_Area.OnClicked:Remove(self, self.BtnInvisibleArea)
-    self.Btn_Invisible_Area.OnClicked:Remove(self, self.OnUnHovered)
-    self.Btn_Invisible_Area.OnClicked:Remove(self, self.OnHovered)
+    self.Btn_Invisible_Area.OnHovered:Remove(self, self.OnHovered)
+    self.Btn_Invisible_Area.OnUnHovered:Remove(self, self.OnUnHovered)
   end
 end
 

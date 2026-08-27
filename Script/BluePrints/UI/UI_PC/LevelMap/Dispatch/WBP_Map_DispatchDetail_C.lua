@@ -353,12 +353,10 @@ function M:OnClickPack()
         self:ShowPadUI(true)
         self.Owner.DispatchAgentList.Key_Controller_Desc:SetVisibility(ESlateVisibility.Visible)
       end
-    elseif self.Owner.DispatchList then
+    elseif self.Owner.DispatchList and self.UsingGamepad then
       self:InitPadKeyInfo()
-      if self.UsingGamepad then
-        self:ShowPadUI(true)
-        self.Owner.DispatchList.List_Sort:HideGamePadIcon(false, "DispatchDetail")
-      end
+      self:ShowPadUI(true)
+      self.Owner.DispatchList.List_Sort:HideGamePadIcon(false, "DispatchDetail")
     end
   end
   

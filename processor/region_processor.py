@@ -4,6 +4,7 @@ import re
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
+import uasset_client
 from processor.base_processor import BaseProcessor
 
 
@@ -17,8 +18,10 @@ class RegionProcessor(BaseProcessor):
         self.regionmap_dir = self._resolve_regionmap_dir()
         self.exports_root = self._resolve_exports_root(self.regionmap_dir)
         self.splice_grid_name = os.getenv("DNA_MAP_SPLICE_GRID_NAME", "Main")
-        self.widget_size_cache: Dict[str, Tuple[int, int]] = {}
-        self.splice_slot_cache: Dict[str, Optional[dict]] = {}
+        # UAssetCLI server 直连（惰性启动，解析完所有 item 后由 process_all_items 关闭）
+        self._server: Optional[uasset_client.UAssetServer] = None
+        # 包相对路径 -> (data_list, source_path) 缓存，避免重复解析同一 uasset/json
+        self._widget_data_cache: Dict[str, tuple] = {}
 
     def _resolve_regionmap_dir(self) -> Optional[Path]:
         """解析 RegionMap Widget JSON 根目录。"""
@@ -57,6 +60,60 @@ class RegionProcessor(BaseProcessor):
             return regionmap_dir.parents[6]
         except Exception:
             return None
+
+    def _ensure_server(self) -> Optional[uasset_client.UAssetServer]:
+        """惰性启动 UAssetCLI server（仅当 exe 与 Exports 根可用时），失败返回 None。"""
+        if self._server is None:
+            exe = uasset_client.get_uasset_exe()
+            if exe is None or self.exports_root is None:
+                return None
+            try:
+                self._server = uasset_client.UAssetServer(exe=exe)
+                self._server.start()
+            except Exception:
+                self._server = None
+        return self._server
+
+    def _close_server(self) -> None:
+        """关闭 UAssetCLI server 子进程。"""
+        if self._server is not None:
+            try:
+                self._server.close()
+            except Exception:
+                pass
+            self._server = None
+
+    def _load_widget_data(self, rel_path: Path):
+        """按包相对路径加载 Widget 数据，返回 (data_list, source_path)。
+
+        优先 UAssetCLI server 直连解析 .uasset（对应上一提交的“UAssetCLI 直连支持”），
+        无 uasset/exe 时回退静态 JSON。两者皆不可用时返回 (None, None)。
+        rel_path 例: EM/Content/UI/WBP/Map/Widget/RegionMap/EX02/WBP_Map_Reg_EXChapter02_Lxzs02
+        """
+        cache_key = str(rel_path).replace("\\", "/")
+        if cache_key in self._widget_data_cache:
+            return self._widget_data_cache[cache_key]
+
+        data = None
+        source = None
+        if self.exports_root is not None:
+            ua = (self.exports_root / cache_key).with_suffix(".uasset")
+            server = self._ensure_server()
+            if server is not None and ua.is_file():
+                parsed = server.fmodel(ua, self.exports_root)
+                if isinstance(parsed, list):
+                    data, source = parsed, ua
+            if data is None:
+                js = (self.exports_root / cache_key).with_suffix(".json")
+                if js.is_file():
+                    try:
+                        data = json.loads(js.read_text(encoding="utf-8"))
+                        source = js
+                    except Exception:
+                        data, source = None, None
+
+        self._widget_data_cache[cache_key] = (data, source)
+        return data, source
 
     @staticmethod
     def _is_empty_value(value) -> bool:
@@ -254,22 +311,12 @@ class RegionProcessor(BaseProcessor):
                 by_path[object_path] = obj
         return by_outer_name, by_name, by_path
 
-    def _extract_splice_grid_slot_props(self, widget_json_path: Path, grid_name: str) -> Optional[dict]:
+    def _extract_splice_grid_slot_props(self, arr: List[dict], grid_name: str) -> Optional[dict]:
         """
         提取 Map_Splice 中承载 UniformGridPanel 的 CanvasPanelSlot 属性。
         这一步与 export_region_maps.py 一致，用于修正子图在外层槽位中的真实区域。
         """
-        cache_key = str(widget_json_path.resolve())
-        if cache_key in self.splice_slot_cache:
-            return self.splice_slot_cache[cache_key]
-
-        try:
-            arr = json.loads(widget_json_path.read_text(encoding="utf-8"))
-        except Exception:
-            self.splice_slot_cache[cache_key] = None
-            return None
         if not isinstance(arr, list):
-            self.splice_slot_cache[cache_key] = None
             return None
 
         by_outer_name, by_name, by_path = self._build_object_maps(arr)
@@ -294,7 +341,6 @@ class RegionProcessor(BaseProcessor):
                     root_panel = obj
                     break
         if root_panel is None:
-            self.splice_slot_cache[cache_key] = None
             return None
 
         first_props: Optional[dict] = None
@@ -316,11 +362,9 @@ class RegionProcessor(BaseProcessor):
                 if first_props is None:
                     first_props = slot_props
                 if content_obj.get("Name") == grid_name:
-                    self.splice_slot_cache[cache_key] = slot_props
                     return slot_props
 
         if first_props is not None:
-            self.splice_slot_cache[cache_key] = first_props
             return first_props
 
         for obj in arr:
@@ -335,11 +379,7 @@ class RegionProcessor(BaseProcessor):
                 by_path,
             )
             if slot_obj and slot_obj.get("Type") == "CanvasPanelSlot":
-                slot_props = slot_obj.get("Properties", {})
-                self.splice_slot_cache[cache_key] = slot_props
-                return slot_props
-
-        self.splice_slot_cache[cache_key] = None
+                return slot_obj.get("Properties", {})
         return None
 
     @staticmethod
@@ -358,25 +398,11 @@ class RegionProcessor(BaseProcessor):
         height = int(round(max_h)) if max_h > 0 else 4096
         return width, height
 
-    def _estimate_widget_canvas_size(self, widget_json_path: Path) -> Tuple[int, int]:
+    def _estimate_widget_canvas_size(self, arr: Optional[List[dict]]) -> Tuple[int, int]:
         """估算子 Widget 画布尺寸，用于 AutoSize 场景。"""
-        cache_key = str(widget_json_path.resolve())
-        cached = self.widget_size_cache.get(cache_key)
-        if cached is not None:
-            return cached
-
-        try:
-            arr = json.loads(widget_json_path.read_text(encoding="utf-8"))
-        except Exception:
-            self.widget_size_cache[cache_key] = (0, 0)
-            return 0, 0
         if not isinstance(arr, list):
-            self.widget_size_cache[cache_key] = (0, 0)
             return 0, 0
-
-        size = self._infer_base_canvas_size(arr)
-        self.widget_size_cache[cache_key] = size
-        return size
+        return self._infer_base_canvas_size(arr)
 
     def _is_map_splice_widget(self, content_obj: dict) -> bool:
         ctype = content_obj.get("Type", "")
@@ -507,13 +533,8 @@ class RegionProcessor(BaseProcessor):
         widget_rel = class_path.split(".")[0]
         widget_name = Path(widget_rel).name
 
-        widget_json_path = None
-        fallback_size = (0, 0)
-        if self.exports_root is not None:
-            candidate = (self.exports_root / widget_rel).with_suffix(".json")
-            if candidate.is_file():
-                widget_json_path = candidate
-                fallback_size = self._estimate_widget_canvas_size(candidate)
+        child_data, _child_source = self._load_widget_data(Path(widget_rel))
+        fallback_size = self._estimate_widget_canvas_size(child_data)
 
         x, y, w, h = self._slot_geometry(
             parent_rect=parent_rect,
@@ -521,9 +542,9 @@ class RegionProcessor(BaseProcessor):
             fallback_size=fallback_size,
         )
 
-        if widget_json_path is not None:
+        if child_data is not None:
             inner_slot_props = self._extract_splice_grid_slot_props(
-                widget_json_path,
+                child_data,
                 self.splice_grid_name,
             )
             if inner_slot_props is not None:
@@ -647,12 +668,8 @@ class RegionProcessor(BaseProcessor):
         finally:
             panel_stack.discard(panel_key)
 
-    def _collect_region_sub_maps(self, region_widget_json_path: Path) -> List[Dict]:
-        """解析 RegionMap Widget，提取所有 Map_Splice 子图布局。"""
-        try:
-            arr = json.loads(region_widget_json_path.read_text(encoding="utf-8"))
-        except Exception:
-            return []
+    def _collect_region_sub_maps(self, arr: List[dict]) -> List[Dict]:
+        """解析 RegionMap Widget 数据（FModel 数组，可来自 uasset 直连或静态 JSON），提取所有 Map_Splice 子图布局。"""
         if not isinstance(arr, list):
             return []
 
@@ -795,19 +812,21 @@ class RegionProcessor(BaseProcessor):
         return sub_maps
 
     def _build_map_mapping(self, map_image_path: str) -> List[Dict]:
-        """构建 RegionMap 子图映射列表。"""
+        """构建 RegionMap 子图映射列表（UAssetCLI 直连 uasset 优先，回退静态 JSON）。"""
         region_map_rel = self._extract_region_map_rel(map_image_path)
         if region_map_rel is None:
             return []
 
-        if self.regionmap_dir is None:
+        if self.regionmap_dir is None and self.exports_root is None:
             return []
 
-        region_widget_json = (self.regionmap_dir / region_map_rel).with_suffix(".json")
-        if not region_widget_json.is_file():
+        # region_map_rel 是相对 RegionMap 目录的路径，需转成相对 Exports 根的完整包路径
+        widget_rel = Path("EM/Content/UI/WBP/Map/Widget/RegionMap") / region_map_rel
+        region_data, _source = self._load_widget_data(widget_rel)
+        if not region_data:
             return []
 
-        sub_maps = self._collect_region_sub_maps(region_widget_json)
+        sub_maps = self._collect_region_sub_maps(region_data)
         return sub_maps or []
 
     def _extract_region_map_name(self, map_image_path: str) -> str:
@@ -847,3 +866,10 @@ class RegionProcessor(BaseProcessor):
         if map_image_name and "mapMapping" not in cleaned:
             cleaned["mapMapping"] = []
         return cleaned
+
+    def process_all_items(self, items, language):
+        """处理所有项目，结束后回收 UAssetCLI server 子进程。"""
+        try:
+            return super().process_all_items(items, language)
+        finally:
+            self._close_server()

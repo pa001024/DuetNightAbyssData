@@ -6,9 +6,9 @@
       11202
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "（待包装）米笛奥伦之索求的描述",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_11",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "미디올룬의 요구"
+    "name": "RLPTreasureGroup_Name_11"
   },
   {
     "id": 12,
@@ -17,9 +17,9 @@
       12202
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "（待包装）艾伊基斯之勇猛的描述",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_12",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "아이기스의 용맹"
+    "name": "RLPTreasureGroup_Name_12"
   },
   {
     "id": 13,
@@ -28,9 +28,9 @@
       13202
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "（待包装）狄欧普拉之巧艺的描述",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_13",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "디오프라의 기교"
+    "name": "RLPTreasureGroup_Name_13"
   },
   {
     "id": 14,
@@ -39,9 +39,9 @@
       14202
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "（待包装）塞库勒姆之开创的描述",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_14",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "세쿨렘의 개척"
+    "name": "RLPTreasureGroup_Name_14"
   },
   {
     "id": 15,
@@ -50,9 +50,9 @@
       15202
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "（待包装）德拉克玛之精明的描述",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_15",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "드라크마의 총명"
+    "name": "RLPTreasureGroup_Name_15"
   },
   {
     "id": 16,
@@ -61,9 +61,9 @@
       16202
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "（待包装）逻各斯之洞见的描述",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_16",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "로고스의 통찰"
+    "name": "RLPTreasureGroup_Name_16"
   },
   {
     "id": 17,
@@ -72,9 +72,9 @@
       17201
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "동조 무기가 입히는 대미지가 <Highlight>100%</> 상승한다.",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_17",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "진홍의 짐승"
+    "name": "RLPTreasureGroup_Name_17"
   },
   {
     "id": 18,
@@ -84,9 +84,9 @@
       18301
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "모든 팀원의 상호 거리가 <Highlight>30</> 이하일 시 전원이 입히는 대미지가 <Highlight>100%</> 상승한다.",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_18",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "새들의 비상"
+    "name": "RLPTreasureGroup_Name_18"
   },
   {
     "id": 19,
@@ -95,9 +95,9 @@
       19201
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "[호위 기사]의 모든 유물 <Highlight>2</>개를 수집한 후, <Highlight>10</>초마다 자신 최대 HP의 <Highlight>10%</>에 해당하는 오버로드 실드를 획득한다.",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_19",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "호위 기사"
+    "name": "RLPTreasureGroup_Name_19"
   },
   {
     "id": 20,
@@ -107,9 +107,9 @@
       20201
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "스킬, 근접 무기, 원거리 무기 대미지가 더는 감소하지 않는다.",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_20",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "괴짜 버드맨"
+    "name": "RLPTreasureGroup_Name_20"
   },
   {
     "id": 21,
@@ -119,9 +119,9 @@
       21301
     ],
     "bigIcon": "T_Rouge_TreasureGroup_2",
-    "groupEffectDesc": "（待包装）繁荣之神的描述",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_21",
     "icon": "T_Rouge_TreasureGroup_2_1",
-    "name": "번영의 신"
+    "name": "RLPTreasureGroup_Name_21"
   },
   {
     "id": 22,
@@ -132,9 +132,9 @@
       22104
     ],
     "bigIcon": "T_Rouge_TreasureGroup_3",
-    "groupEffectDesc": "[사상명인]의 모든 유물 <Highlight>4</>개를 수집한 후, 발동 확률이 <Highlight>50%</>까지, 대미지 배율이 <Highlight>100%</>까지 상승하고 입히는 대미지가 고정 대미지로 변경된다.",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_22",
     "icon": "T_Rouge_TreasureGroup_3_1",
-    "name": "사상명인"
+    "name": "RLPTreasureGroup_Name_22"
   },
   {
     "id": 23,
@@ -145,9 +145,9 @@
       23301
     ],
     "bigIcon": "T_Rouge_TreasureGroup_4",
-    "groupEffectDesc": "[속죄하는 기사]의 모든 유물 <Highlight>4</>개를 수집한 후, 더 이상 대가를 치르지 않으며, 총 상승하는 대미지가 <Highlight>400%</>로 변경된다.",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_23",
     "icon": "T_Rouge_TreasureGroup_4_1",
-    "name": "속죄하는 기사"
+    "name": "RLPTreasureGroup_Name_23"
   },
   {
     "id": 24,
@@ -156,9 +156,9 @@
       24201
     ],
     "bigIcon": "T_Rouge_TreasureGroup_5",
-    "groupEffectDesc": "[유망술사]의 모든 유물 <Highlight>2</>개를 수집한 후, [전투 태세]의 약화 효율이 <Highlight>100%</> 상승하고, 적이 [아스크의 징벌] 진입 후 대미지가 <Highlight>100%</> 상승한다.",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_24",
     "icon": "T_Rouge_TreasureGroup_5_1",
-    "name": "유망술사"
+    "name": "RLPTreasureGroup_Name_24"
   },
   {
     "id": 25,
@@ -171,9 +171,9 @@
       25306
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "（待包装）圣迹残像的描述",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_25",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "성스러운 잔상"
+    "name": "RLPTreasureGroup_Name_25"
   },
   {
     "id": 26,
@@ -184,8 +184,8 @@
       26301
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "（待包装）闲逸学者的描述",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_26",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "한가한 학자"
+    "name": "RLPTreasureGroup_Name_26"
   }
 ]

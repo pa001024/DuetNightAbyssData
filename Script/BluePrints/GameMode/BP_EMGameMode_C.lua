@@ -20,6 +20,7 @@ local BP_EMGameMode_C = Class({
   "BluePrints.GameMode.Components.RougeLikeComponent",
   "BluePrints.GameMode.Components.GameModeRegionMgr",
   "BluePrints.GameMode.Components.GameModeQuestMgr",
+  "BluePrints.GameMode.Components.ShootTargetComponent",
   "BluePrints.GameMode.Components.WalnutComponent",
   "BluePrints.GameMode.Components.IronComponent",
   "BluePrints.GameMode.Components.TicketComponent",
@@ -126,11 +127,7 @@ function BP_EMGameMode_C:InitTacMapManager()
   end
   local TacMapManagerClass = LoadClass("/Game/BluePrints/Common/Level/BP_TacmapManagerNew.BP_TacmapManagerNew_C")
   self.TacMapManager = NewObject(TacMapManagerClass, self)
-  if self.EMGameState and self.EMGameState.GameModeType == "RougePro" then
-    self.TacMapManager:InitFromTemplate(self.levelLoader)
-  else
-    self.TacMapManager:Init(self.levelLoader)
-  end
+  self.TacMapManager:Init(self.levelLoader)
 end
 
 function BP_EMGameMode_C:TryRegisterPlayerToTacmap()
@@ -184,7 +181,6 @@ function BP_EMGameMode_C:TryCreateDungeonObject()
         ActorClass = LoadClass(ActorClassOrPath)
       end
       self:CreateDungeonObject(ActorClass)
-      DebugPrint("TryCreateDungeonObject: Create ARougePro ")
     else
       self:CreateDungeonObject()
     end
@@ -197,6 +193,7 @@ function BP_EMGameMode_C:ReceiveEndPlay(EndPlayReason)
   if self:IsSubGameMode() then
     return
   end
+  self:CleanupShootTargetGame()
   self.Overridden.ReceiveEndPlay(self, EndPlayReason)
   self.OnDestroyDelegates:Broadcast()
   self:UnbindTalkSubsystem()
@@ -433,6 +430,13 @@ function BP_EMGameMode_C:MainGameModeOnBigWorldActive()
   end
   if Avatar then
     Avatar:ExploreIdsActive(ActiveExploreInfo)
+  end
+  if self.EMGameState and self.EMGameState.MissionGroups then
+    for _, MissionGroup in pairs(self.EMGameState.MissionGroups:ToTable()) do
+      if IsValid(MissionGroup) and MissionGroup.SyncMissionStateFromQuest then
+        MissionGroup:SyncMissionStateFromQuest()
+      end
+    end
   end
   self:TriggerOnQuestCompleteComponent()
 end
@@ -929,7 +933,7 @@ function BP_EMGameMode_C:GetCurrentQuestId()
   return QuestIdArr
 end
 
-function BP_EMGameMode_C:SwitchToQuestRole(QuestRoleID, bPlayFX)
+function BP_EMGameMode_C:SwitchToQuestRole(QuestRoleID, bPlayFX, bForceDead)
   local Avatar = GWorld:GetAvatar()
   if nil == Avatar then
     return
@@ -951,6 +955,9 @@ function BP_EMGameMode_C:SwitchToQuestRole(QuestRoleID, bPlayFX)
     local CharacterUuid = Avatar.CurrentChar
     local CharacterID = Avatar.Chars[CharacterUuid].CharId
     local AvatarInfo = AvatarUtils:GetDefaultBattleInfo(Avatar)
+    if bForceDead and AvatarInfo.RoleInfo then
+      AvatarInfo.RoleInfo.PlayerHp = 0
+    end
     PlayerCharacter:ChangeRole(CharacterID, AvatarInfo)
     if bPlayFX then
       PlayChangeRoleEffect()
@@ -970,6 +977,9 @@ function BP_EMGameMode_C:SwitchToQuestRole(QuestRoleID, bPlayFX)
   local AvatarInfo = AvatarUtils:GetBattleInfoByQuestRoleId(QuestRoleID, Avatar)
   if AvatarInfo.RoleInfo then
     AvatarInfo.RoleInfo.AvatarQuestRoleID = QuestRoleID
+    if bForceDead then
+      AvatarInfo.RoleInfo.PlayerHp = 0
+    end
   end
   PlayerCharacter:ChangeRole(nil, AvatarInfo)
   if bPlayFX then
@@ -991,12 +1001,14 @@ function BP_EMGameMode_C:SetNpcPatrol(NpcId, PatrolId)
 end
 
 function BP_EMGameMode_C:TriggerMechanism(StaticCreatorId, StateId, PrivateEnable, QuestId)
+  DebugPrint("BP_EMGameMode_C TriggerMechanism")
   if true == PrivateEnable and not self:IsSubGameMode() then
     self.EMGameState:ShowDungeonError("TriggerMechanism PrivateEnable is true but IsSubGameMode:" .. self:GetName(), Const.DungeonErrorType.GameMode, Const.DungeonErrorTitle.Other)
     return
   end
   local StaticCreator = self.EMGameState:GetStaticCreatorInfo(StaticCreatorId, PrivateEnable, self.LevelName)
   if not IsValid(StaticCreator) then
+    DebugPrint("BP_EMGameMode_C TriggerMechanism StaticCreator not found")
     return
   end
   local NeedUpdateRegionData = true
@@ -1004,6 +1016,30 @@ function BP_EMGameMode_C:TriggerMechanism(StaticCreatorId, StateId, PrivateEnabl
     DebugPrint("Warning: 这个StaticCreator刷新了多个机关", StaticCreator.ChildEids:Length())
   end
   local bCanChange = false
+  
+  local function ChangeRegionDataState()
+    local LuaTableIndex, HasData = self:GetRegionDataMgrSubSystem():TryGetLuaDataIndex(StaticCreator.CreatedWorldRegionEid)
+    if HasData then
+      local NowStateId = self:GetRegionDataMgrSubSystem():GetStateIdByWorldRegionEid(LuaTableIndex)
+      if -1 == NowStateId then
+        NowStateId = DataMgr.Mechanism[StaticCreator.UnitId].FirstStateId
+      end
+      local MechanismStateData = DataMgr.MechanismState[NowStateId]
+      if MechanismStateData then
+        if not MechanismStateData.StateEvent then
+          GWorld.logger.error("GameMode切换机关状态，表里未配置切换方式,UnitId:" .. StaticCreator.UnitId .. ",StateId:" .. NowStateId)
+        end
+        if MechanismStateData.StateEvent then
+          for i, v in pairs(MechanismStateData.StateEvent) do
+            if v.NextStateId == StateId and v.TypeNextState.Type == "Manual" then
+              bCanChange = true
+            end
+          end
+        end
+      end
+    end
+  end
+  
   if StaticCreator.ChildEids:Length() > 0 then
     for i = 1, StaticCreator.ChildEids:Length() do
       local Info = Battle(self):GetEntity(StaticCreator.ChildEids:GetRef(i))
@@ -1017,36 +1053,23 @@ function BP_EMGameMode_C:TriggerMechanism(StaticCreatorId, StateId, PrivateEnabl
         end
       else
         local NowStateId = self.EMGameState.MechanismStateIdMap:Find(StaticCreatorId)
-        local MechanismStateData = DataMgr.MechanismState[NowStateId]
-        if MechanismStateData and MechanismStateData.StateEvent then
-          for i, v in pairs(MechanismStateData.StateEvent) do
-            if v.NextStateId == StateId and "Manual" == v.TypeNextState.Type then
-              bCanChange = true
-              break
+        if NowStateId then
+          local MechanismStateData = DataMgr.MechanismState[NowStateId]
+          if MechanismStateData and MechanismStateData.StateEvent then
+            for i, v in pairs(MechanismStateData.StateEvent) do
+              if v.NextStateId == StateId and "Manual" == v.TypeNextState.Type then
+                bCanChange = true
+                break
+              end
             end
           end
+        elseif StaticCreator.CreatedWorldRegionEid ~= "" then
+          ChangeRegionDataState()
         end
       end
     end
   elseif StaticCreator.CreatedWorldRegionEid ~= "" then
-    local LuaTableIndex, HasData = self:GetRegionDataMgrSubSystem():TryGetLuaDataIndex(StaticCreator.CreatedWorldRegionEid)
-    if HasData then
-      local NowStateId = self:GetRegionDataMgrSubSystem():GetStateIdByWorldRegionEid(LuaTableIndex)
-      if -1 == NowStateId then
-        NowStateId = DataMgr.Mechanism[StaticCreator.UnitId].FirstStateId
-      end
-      local MechanismStateData = DataMgr.MechanismState[NowStateId]
-      if MechanismStateData then
-        if not MechanismStateData.StateEvent then
-          GWorld.logger.error("GameMode切换机关状态，表里未配置切换方式,UnitId:" .. StaticCreator.UnitId .. ",StateId:" .. NowStateId)
-        end
-        for i, v in pairs(MechanismStateData.StateEvent) do
-          if v.NextStateId == StateId and "Manual" == v.TypeNextState.Type then
-            bCanChange = true
-          end
-        end
-      end
-    end
+    ChangeRegionDataState()
   end
   if StaticCreator.CreatedWorldRegionEid ~= "" and bCanChange then
     self:GetRegionDataMgrSubSystem():ChangeState(StaticCreator.CreatedWorldRegionEid, StateId)
@@ -1072,6 +1095,127 @@ function BP_EMGameMode_C:SetRollerCoasterSpeed(Id, TargetSpeed, TransitionTime)
     RollerCoaster:StartSpeedTransition(TargetSpeed, TransitionTime or 0)
     DebugPrint("yly BP_EMGameMode_C SetRollerCoasterSpeed: Id =", Id, "TargetSpeed =", TargetSpeed, "TransitionTime =", TransitionTime)
   end
+end
+
+local NPCFollowComponentClass
+
+local function GetNPCFollowComponentClass()
+  if not NPCFollowComponentClass then
+    NPCFollowComponentClass = LoadClass("/Game/BluePrints/Item/Mechanism/BP_NPCFollowComponent.BP_NPCFollowComponent_C"):StaticClass()
+  end
+  return NPCFollowComponentClass
+end
+
+function BP_EMGameMode_C:RegisterSlideSplineStartPoint(StartPoint)
+  if not (IsStandAlone(self) and IsValid(StartPoint) and StartPoint.StartPointName) or StartPoint.StartPointName == "" then
+    return false
+  end
+  local RegistryOwner = IsValid(self.LevelGameMode) and self.LevelGameMode or self
+  RegistryOwner.SlideSplineStartPointMap = RegistryOwner.SlideSplineStartPointMap or {}
+  local Existing = RegistryOwner.SlideSplineStartPointMap[StartPoint.StartPointName]
+  if IsValid(Existing) and Existing ~= StartPoint then
+    GWorld.logger.error("滑轨起滑点名称重复：" .. StartPoint.StartPointName)
+    return false
+  end
+  RegistryOwner.SlideSplineStartPointMap[StartPoint.StartPointName] = StartPoint
+  return true
+end
+
+function BP_EMGameMode_C:UnregisterSlideSplineStartPoint(StartPoint)
+  if not StartPoint or not StartPoint.StartPointName then
+    return
+  end
+  local RegistryOwner = IsValid(self.LevelGameMode) and self.LevelGameMode or self
+  local StartPointMap = RegistryOwner.SlideSplineStartPointMap
+  if StartPointMap and StartPointMap[StartPoint.StartPointName] == StartPoint then
+    StartPointMap[StartPoint.StartPointName] = nil
+  end
+end
+
+function BP_EMGameMode_C:StartSlideFromPoint(StartPointName)
+  if not (IsStandAlone(self) and StartPointName) or "" == StartPointName then
+    return false
+  end
+  local RegistryOwner = IsValid(self.LevelGameMode) and self.LevelGameMode or self
+  local StartPointMap = RegistryOwner.SlideSplineStartPointMap
+  local StartPoint = StartPointMap and StartPointMap[StartPointName]
+  if not IsValid(StartPoint) then
+    if StartPointMap then
+      StartPointMap[StartPointName] = nil
+    end
+    return false
+  end
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
+  return IsValid(Player) and StartPoint:StartSlide(Player) or false
+end
+
+function BP_EMGameMode_C:TriggerPlayerLeaveSlideSpline(Launch)
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
+  if not IsValid(Player) or not Player.GetCurrentSlideMech then
+    return
+  end
+  local SlideMech = Player:GetCurrentSlideMech()
+  if not IsValid(SlideMech) then
+    return
+  end
+  Launch = tonumber(Launch) or 0
+  if 0 == Launch then
+    if SlideMech.ForceReleaseForFlow then
+      SlideMech:ForceReleaseForFlow()
+    end
+    return
+  end
+  if SlideMech.ClearSlideTurnState then
+    SlideMech:ClearSlideTurnState()
+  end
+  if 1 == Launch then
+    SlideMech:LeaveSlideMechanism(true)
+  elseif 2 == Launch then
+    SlideMech:LeaveSlideMechanism(false)
+  end
+end
+
+function BP_EMGameMode_C:FindNpcFollowComponent(MechanismActor, FollowComponentId)
+  if not IsValid(MechanismActor) then
+    return nil
+  end
+  FollowComponentId = tonumber(FollowComponentId)
+  if not FollowComponentId or FollowComponentId <= 0 then
+    DebugPrint("BP_EMGameMode_C FindNpcFollowComponent: invalid FollowComponentId =", FollowComponentId)
+    return nil
+  end
+  local Components = MechanismActor:K2_GetComponentsByClass(GetNPCFollowComponentClass())
+  for i = 1, Components:Length() do
+    local Comp = Components:Get(i)
+    if IsValid(Comp) then
+      local CompId = Comp.CachedFollowComponentId or Comp.FollowComponentId
+      if tonumber(CompId) == FollowComponentId then
+        return Comp
+      end
+    end
+  end
+  DebugPrint("BP_EMGameMode_C FindNpcFollowComponent: component not found,", "Mechanism =", MechanismActor:GetName(), "FollowComponentId =", FollowComponentId)
+  return nil
+end
+
+function BP_EMGameMode_C:SetMechanismFollowNpc(MechanismId, FollowComponentId, bSpawn)
+  local Mechanism = self.EMGameState:GetMechanismActorById(MechanismId)
+  if not IsValid(Mechanism) then
+    DebugPrint("BP_EMGameMode_C SetMechanismFollowNpc: Mechanism not found, Id =", MechanismId)
+    return
+  end
+  local Comp = self:FindNpcFollowComponent(Mechanism, FollowComponentId)
+  if not Comp then
+    return
+  end
+  if bSpawn then
+    if Comp.TrySpawnNpc then
+      Comp:TrySpawnNpc()
+    end
+  elseif Comp.DestroyNpc then
+    Comp:DestroyNpc()
+  end
+  DebugPrint("BP_EMGameMode_C SetMechanismFollowNpc: Id =", MechanismId, "FollowComponentId =", FollowComponentId, "bSpawn =", bSpawn)
 end
 
 function BP_EMGameMode_C:TriggerPetStateChange(StaticCreatorId, TargetState, PrivateEnable)
@@ -1756,13 +1900,50 @@ function BP_EMGameMode_C:NotifyClientGameEnd(IsWin, AvatarEids, PlayerEndReason)
   end
 end
 
-function BP_EMGameMode_C:SimplifyInfoForInit(InfoForInit)
+local EM_INIT_SIMPLIFY_NONE = 0
+local EM_INIT_SIMPLIFY_SETTLEMENT = 1
+
+local function BuildSettlementWeapon(w)
+  if type(w) ~= "table" then
+    return w
+  end
+  return {
+    WeaponId = w.WeaponId,
+    AppearanceInfo = w.AppearanceInfo
+  }
+end
+
+function BP_EMGameMode_C:SimplifyInfoForInit(InfoForInit, SimplifyLevel)
   if nil == InfoForInit then
     DebugPrint("Error SimplifyInfoForInit InfoForInit is nil")
     return InfoForInit
   end
-  InfoForInit.FromOtherWorld = true
-  return InfoForInit
+  if not SimplifyLevel or SimplifyLevel == EM_INIT_SIMPLIFY_NONE then
+    InfoForInit.FromOtherWorld = true
+    return InfoForInit
+  end
+  local RoleInfo = InfoForInit.RoleInfo
+  
+  local function pick(key)
+    return not InfoForInit[key] and RoleInfo and RoleInfo[key]
+  end
+  
+  local MeleeW = InfoForInit.MeleeWeapon or RoleInfo and RoleInfo.MeleeWeapon
+  local RangedW = InfoForInit.RangedWeapon or RoleInfo and RoleInfo.RangedWeapon
+  local Simplified = {
+    RoleId = pick("RoleId"),
+    AppearanceSuit = pick("AppearanceSuit"),
+    SkinId = pick("SkinId"),
+    ShadowModelId = pick("ShadowModelId"),
+    Camp = pick("Camp"),
+    Pet = pick("Pet"),
+    UltraWeapons = pick("UltraWeapons"),
+    MeleeWeapon = BuildSettlementWeapon(MeleeW),
+    RangedWeapon = BuildSettlementWeapon(RangedW),
+    ReplaceAttrs = {},
+    FromOtherWorld = true
+  }
+  return Simplified
 end
 
 function BP_EMGameMode_C:GetScenePlayersInfo(MainPlayer)
@@ -1773,7 +1954,7 @@ function BP_EMGameMode_C:GetScenePlayersInfo(MainPlayer)
       local TargetCharacter = Battle(self):GetEntity(TargetEid)
       if TargetCharacter then
         local bIsPhantom = TargetCharacter:IsPhantom()
-        PlayersInfo[#PlayersInfo + 1] = self:SimplifyInfoForInit(TargetCharacter.InfoForInit)
+        PlayersInfo[#PlayersInfo + 1] = self:SimplifyInfoForInit(TargetCharacter.InfoForInit, EM_INIT_SIMPLIFY_SETTLEMENT)
         PlayersInfo[#PlayersInfo].IsDungeonEnd = true
         PlayersInfo[#PlayersInfo].IsPhantom = bIsPhantom
         if bIsPhantom then
@@ -1801,7 +1982,7 @@ function BP_EMGameMode_C:GetScenePlayersInfo(MainPlayer)
       end
     end
   else
-    PlayersInfo[1] = self:SimplifyInfoForInit(MainPlayer.InfoForInit)
+    PlayersInfo[1] = self:SimplifyInfoForInit(MainPlayer.InfoForInit, EM_INIT_SIMPLIFY_SETTLEMENT)
     PlayersInfo[1].IsDungeonEnd = true
     PlayersInfo[1].IsMainPlayer = true
     PlayersInfo[1].IsDead = MainPlayer:IsDead()
@@ -1820,7 +2001,7 @@ function BP_EMGameMode_C:GetScenePlayersInfo(MainPlayer)
           local Context = v.CreateUnitContextCopy
           InitInfo = Context:GetLuaTable("AvatarInfo")
         end
-        PlayersInfo[#PlayersInfo + 1] = self:SimplifyInfoForInit(InitInfo)
+        PlayersInfo[#PlayersInfo + 1] = self:SimplifyInfoForInit(InitInfo, EM_INIT_SIMPLIFY_SETTLEMENT)
         PlayersInfo[#PlayersInfo].IsDungeonEnd = true
         local bIsPhantom = v:IsPhantom()
         PlayersInfo[#PlayersInfo].IsPhantom = bIsPhantom
@@ -2253,18 +2434,18 @@ function BP_EMGameMode_C:TriggerMechanismFieldCreature(TrapArrayId, Grade, TrapS
   end
 end
 
-function BP_EMGameMode_C:HideUIInScreen(UIPath, IsHide, HideUIInScreenSuitRecover)
+function BP_EMGameMode_C:HideUIInScreen(UIPath, IsHide, HideTag)
   if not self.EMGameState then
     return
   end
-  self.EMGameState:HideUIInScreen(UIPath, IsHide, HideUIInScreenSuitRecover)
+  self.EMGameState:HideUIInScreen(UIPath, IsHide, HideTag)
 end
 
-function BP_EMGameMode_C:SetContinuedPCGuideVisibility(ActionName, IsHide)
+function BP_EMGameMode_C:SetContinuedPCGuideVisibility(ActionName, IsHide, Tag)
   if not self.EMGameState then
     return
   end
-  self.EMGameState:RealSetContinuedPCGuideVisibility(ActionName, IsHide)
+  self.EMGameState:RealSetContinuedPCGuideVisibility(ActionName, IsHide, Tag)
 end
 
 function BP_EMGameMode_C:UpdatePlayerCharacterEndPointInfo(PlayerControllerIndex, PlayerController)
@@ -3093,6 +3274,15 @@ function BP_EMGameMode_C:InvokeWorldTravelDelegate()
     return true
   end
   return false
+end
+
+function BP_EMGameMode_C:StartShootTargetGameByGameMode(GameId)
+  local SessionId = self:StartShootTargetGame(GameId, nil)
+  if not SessionId then
+    DebugPrint("BP_EMGameMode_C: StartShootTargetGameByGameMode failed, GameId:", GameId)
+    return 0
+  end
+  return SessionId
 end
 
 AssembleComponents(BP_EMGameMode_C)

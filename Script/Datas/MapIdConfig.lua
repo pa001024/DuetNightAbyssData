@@ -5,10 +5,6 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("MapIdConfig", {
-  ["/Haiboliya_Thc_Zchj_Design"] = {
-    MapID = 282,
-    MapName = "/Haiboliya_Thc_Zchj_Design"
-  },
   Ailixian_Anzhixin_Design = {
     ExploreID = 7095,
     MapID = 298,
@@ -19,9 +15,9 @@ return ReadOnly("MapIdConfig", {
     MapID = 295,
     MapName = "Ailixian_Chenmian_Design"
   },
-  Ailixian_DreamSailafei_Design = {
+  Ailixian_LLKWon_Design = {
     MapID = 292,
-    MapName = "Ailixian_DreamSailafei_Design"
+    MapName = "Ailixian_LLKWon_Design"
   },
   Ailixian_LizibeierHJ_Design = {
     ExploreID = 7096,
@@ -37,9 +33,9 @@ return ReadOnly("MapIdConfig", {
     MapID = 290,
     MapName = "Ailixian_Miandao_Design"
   },
-  Ailixian_Sailafei_Design = {
+  Ailixian_SLF_Design = {
     MapID = 291,
-    MapName = "Ailixian_Sailafei_Design"
+    MapName = "Ailixian_SLF_Design"
   },
   Ailixian_Shendianfeixu_Design = {
     ExploreID = 7093,
@@ -475,6 +471,10 @@ return ReadOnly("MapIdConfig", {
     ExploreID = 7087,
     MapID = 280,
     MapName = "Haiboliya_Thc_Lxzx_Design"
+  },
+  Haiboliya_Thc_Zchj_Design = {
+    MapID = 282,
+    MapName = "Haiboliya_Thc_Zchj_Design"
   },
   Haiboliya_Thc_Zjfj_Design = {
     MapID = 283,

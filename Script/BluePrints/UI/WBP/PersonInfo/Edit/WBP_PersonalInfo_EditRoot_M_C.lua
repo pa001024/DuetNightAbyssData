@@ -16,6 +16,11 @@ local function GetMobileJoystickRoamSpeed()
   return CameraInputConfig.MobileJoystickRoamSpeed or 20
 end
 
+function M:Construct()
+  self.bHasScriptImplementedTick = true
+  self.Super.Construct(self)
+end
+
 function M:OnLoaded(OpenArg)
   self.Super.OnLoaded(self, OpenArg)
   self.TouchInfo = self.TouchInfo or {}

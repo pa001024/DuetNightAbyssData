@@ -53,7 +53,14 @@ function M:Construct()
   self.Btn_Pay.Btn_Buy.OnClicked:Add(self, self.OnGoToInterface)
   self.Btn_Pay.Btn_Buy.OnHovered:Add(self, self.OnGoToHovered)
   if self.Btn_Qa then
-    self.Btn_Qa.Button_Area.OnClicked:Add(self, self.GoToPreview)
+    if self.Btn_Qa.Btn_Click then
+      self.Btn_Qa:Init({
+        ClickCallback = self.GoToPreview,
+        OwnerWidget = self
+      })
+    elseif self.Btn_Qa.Button_Area then
+      self.Btn_Qa.Button_Area.OnClicked:Add(self, self.GoToPreview)
+    end
   end
   self.Text_RewardTitle:SetText(GText("UI_Banner_Pack_All"))
   self:InitTime()
@@ -123,6 +130,10 @@ function M:UpdateBuyBtn()
 end
 
 function M:Destruct()
+  if self.Btn_Qa and self.Btn_Qa.Button_Area then
+    self.Btn_Qa.Button_Area.OnClicked:Clear()
+  end
+  M.Super.Destruct(self)
 end
 
 function M:InitTime()

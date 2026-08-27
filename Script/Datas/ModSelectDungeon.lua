@@ -87,7 +87,10 @@ return ReadOnly("ModSelectDungeon", {
       6013,
       6014,
       6015,
-      6016
+      6016,
+      6017,
+      6018,
+      6019
     },
     Name = "UI_DungeonMod_Tab_60",
     Sequence = 70
@@ -103,7 +106,8 @@ return ReadOnly("ModSelectDungeon", {
       6506,
       6507,
       6508,
-      6509
+      6509,
+      6510
     },
     Name = "UI_DungeonMod_Tab_65",
     Sequence = 80
@@ -124,7 +128,9 @@ return ReadOnly("ModSelectDungeon", {
       7011,
       7012,
       7013,
-      7014
+      7014,
+      7015,
+      7016
     },
     Name = "UI_DungeonMod_Tab_70",
     Sequence = 90
@@ -148,7 +154,11 @@ return ReadOnly("ModSelectDungeon", {
       8014,
       8015,
       8016,
-      8017
+      8017,
+      8018,
+      8019,
+      8020,
+      8021
     },
     Name = "UI_DungeonMod_Tab_75",
     Sequence = 100
@@ -156,10 +166,10 @@ return ReadOnly("ModSelectDungeon", {
   UI_DungeonMod_Tab_80 = {
     Condition = T.RT_1,
     MonRewardIdList = {
-      8018,
-      8019,
-      8020,
-      8021
+      8022,
+      8023,
+      8024,
+      8025
     },
     Name = "UI_DungeonMod_Tab_80",
     Sequence = 110

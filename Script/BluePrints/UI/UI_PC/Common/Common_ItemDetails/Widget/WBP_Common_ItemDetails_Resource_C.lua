@@ -139,15 +139,12 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
           else
             PageJumpUtils:CloseFrontDialog()
             if "WeaponAccessory" == ItemType and CharAccessoryInfo and CharAccessoryInfo.StanceFXType ~= "Accessory" then
-              local SkinVideo = UIManager(self):LoadUINew("ArmorySkinVideo", {
-                Path = CharAccessoryInfo.Video,
-                SoundPath = CharAccessoryInfo.GetSoundPath,
-                DestructCB = function()
-                end
+              PageJumpUtils:JumpToSkinPreview({
+                ItemType = ItemType,
+                TypeId = ItemId,
+                SinglePreview = true,
+                HidePurchase = true
               })
-              if SkinVideo then
-                SkinVideo:SetFocus()
-              end
             else
               UIManager(self):LoadUINew("ArmorySkin", {
                 IsPreviewMode = true,
@@ -252,8 +249,10 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
         Desc = "RLTreasure_Desc_Unknown"
       end
     end
-    self.ParentWidget.Text_ItemDescribe:SetText(GText(Desc))
-    self.Text_LongDescribe:SetVisibility(ESlateVisibility.Collapsed)
+    self.Text_Describe:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Text_Describe:SetText(GText(Desc))
+    self.ParentWidget.Panel_Describe:SetVisibility(ESlateVisibility.Collapsed)
+    self.Panel_LongDescribe:SetVisibility(ESlateVisibility.Collapsed)
     return
   end
   if "Background" == ItemType then
@@ -414,15 +413,12 @@ function M:InitItemInfoInBag(ItemType, ItemId, UnitId, Content)
           else
             PageJumpUtils:CloseFrontDialog()
             if "WeaponAccessory" == ItemType and CharAccessoryInfo and CharAccessoryInfo.StanceFXType ~= "Accessory" then
-              local SkinVideo = UIManager(self):LoadUINew("ArmorySkinVideo", {
-                Path = CharAccessoryInfo.Video,
-                SoundPath = CharAccessoryInfo.GetSoundPath,
-                DestructCB = function()
-                end
+              PageJumpUtils:JumpToSkinPreview({
+                ItemType = ItemType,
+                TypeId = ItemId,
+                SinglePreview = true,
+                HidePurchase = true
               })
-              if SkinVideo then
-                SkinVideo:SetFocus()
-              end
             else
               UIManager(self):LoadUINew("ArmorySkin", {
                 IsPreviewMode = true,

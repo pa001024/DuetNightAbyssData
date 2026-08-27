@@ -77,10 +77,15 @@ function WBP_ModArchive_TaskItem_C:InitTaskItem()
       Info.Id = ResourceId
       Info.Count = Reward.Count[j][1]
       Info.ItemName = ItemData.ResourceName
-      Info.ItemType = "Resource"
+      Info.ItemType = Reward.Type[j]
       Info.Rarity = ItemData.Rarity or ItemData.WeaponRarity or 1
       Info.Icon = ItemData.Icon
       Info.IsShowDetails = true
+      if Info.ItemType == "UpgradeMod" then
+        Info.ItemType = "Mod"
+        Info.Id = ItemData.ModId
+        Info.ModLevel = ItemData.ModLevel
+      end
       table.insert(Rewards, Info)
     end
   end
@@ -291,7 +296,7 @@ function WBP_ModArchive_TaskItem_C:OnGamePadUnSelected()
 end
 
 function WBP_ModArchive_TaskItem_C:OnEntryInitialized(Item, Widget)
-  Widget.WidgetMap = nil
+  Widget.WidgetMap = {}
 end
 
 function WBP_ModArchive_TaskItem_C:OnFocusReceived(MyGeometry, InFocusEvent)

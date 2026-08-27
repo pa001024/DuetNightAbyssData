@@ -8,7 +8,12 @@ function Component:GMDedicatedServerCommand_Lua(Func, ArgsMessage)
   local Args = msgpack.unpack(MessageStr)
   if self[func] then
     self[func](self, Args)
+    return
   end
+  local DSEntity = GWorld:GetDSEntity()
+  local DSEntityFunc = DSEntity and DSEntity[Func]
+  assert(DSEntityFunc, "没找到函数:GM_" .. Func .. " 或 DSEntity:" .. Func)
+  DSEntityFunc(DSEntity, table.unpack(Args))
 end
 
 function Component:GM_DungeonWin(Args)
@@ -380,15 +385,6 @@ function Component:GM_PrintActorSCLoc(Args)
     local Rot = Actor:K2_GetActorRotation()
     DebugPrint("PrintActorSCLoc Actor Eid:", Eid, "Name:", ActorName, " Loc:", Loc, "Rot:", Rot)
   end, true)
-end
-
-function Component:GM_RougeProCmd(Args)
-  if not Args or #Args < 2 then
-    return
-  end
-  local AvatarEid, Cmd = table.unpack(Args)
-  local GameMode = UE.UGameplayStatics.GetGameMode(self)
-  GameMode:NotifyServerDungeonEvent("RougeProCmd", AvatarEid, Cmd, select(3, table.unpack(Args)))
 end
 
 return Component

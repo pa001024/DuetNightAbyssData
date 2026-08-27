@@ -2,6 +2,7 @@ require("UnLua")
 local ActivityCommon = require("BluePrints.UI.WBP.Activity.ActivityCommon")
 local ActivityReddotHelper = require("BluePrints.UI.WBP.Activity.ActivityReddotHelper")
 local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
+local TaskUtils = require("BluePrints.UI.TaskPanel.TaskUtils")
 local CommonVideoBgBPPath = "/Game/UI/WBP/Activity/Widget/WBP_Activity_CommonVideoBG.WBP_Activity_CommonVideoBG_C"
 local RefreshActivityEntryVideoTimerName = "RefreshActivityEntryVideoTimer"
 local M = {}
@@ -301,6 +302,9 @@ function M:RefreshViewAfterPageDataSet(ActivityConfigData, PageConfigData)
       OverSlot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
       OverSlot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
       local IsLock = ActivityUtils.CheckIsActivityLock(PageConfigData)
+      if TaskUtils:IsQuestChainAdvanceUnlock(ActivityConfigData.QuestChainIdToUnlock) then
+        IsLock = false
+      end
       if IsLock and nil ~= NewBgWidget.Lock_In then
         NewBgWidget:PlayAnimationForward(NewBgWidget.Lock_In)
       elseif nil ~= NewBgWidget.In then

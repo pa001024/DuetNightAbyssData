@@ -91,7 +91,7 @@ end
 function Jump_Phone_C.ButtonJumpDown(Battle_Button_Phone, Index, StartPos)
   local Jump_M = Battle_Button_Phone.Jump
   DebugPrint("[LAYOUT_DBG][Jump] ButtonJumpDown fired! OwnerPanel.CurrentLayout=", Battle_Button_Phone.CurrentLayout, "Jump.CurrentLayout=", Jump_M.CurrentLayout, "Jump:GetVisibility=", Jump_M:GetVisibility())
-  if Battle_Button_Phone.CurrentLayout >= 7 then
+  if (Battle_Button_Phone.CurrentLayout or 2) >= 7 then
     return
   end
   if Jump_M.OwnerPlayer:CheckSkillInActive(ESkillName.Jump) then
@@ -106,7 +106,7 @@ end
 
 function Jump_Phone_C.ButtonJumpMove(Battle_Button_Phone, TouchFingerCount, Index, LastPos, TotalDeltaDis, LastDeltaDis)
   local Jump_M = Battle_Button_Phone.Jump
-  if Battle_Button_Phone.CurrentLayout >= 7 then
+  if (Battle_Button_Phone.CurrentLayout or 2) >= 7 then
     return
   end
   if Jump_M.OwnerPlayer.CurMount then
@@ -148,7 +148,7 @@ end
 
 function Jump_Phone_C.ButtonJumpUp(Battle_Button_Phone, Index, WidgetLocalPos, LastWidgetTouchPos, EndTouchPos, TotalDeltaDis)
   local Jump_M = Battle_Button_Phone.Jump
-  if Battle_Button_Phone.CurrentLayout >= 7 then
+  if (Battle_Button_Phone.CurrentLayout or 2) >= 7 then
     return
   end
   if Jump_M.OwnerPlayer:CheckSkillInActive(ESkillName.Jump) then

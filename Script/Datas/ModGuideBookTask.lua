@@ -198,5 +198,241 @@ return ReadOnly("ModGuideBookTask", {
     TaskName = "UI_ModGuideBook_Task_Title_Collect_10",
     TaskReward = {7313},
     TaskType = "Collect"
+  },
+  [15] = {
+    CollectTaskTypeParam = {
+      41952,
+      41325,
+      41452,
+      41751,
+      41752,
+      41753,
+      41754
+    },
+    DisplayId = "15",
+    NoRepeatField = "ModId",
+    QuestPhaseId = 4,
+    Target = 7,
+    TargetId = {30211},
+    TaskDes = "UI_ModGuideBook_Task_Des_15",
+    TaskId = 15,
+    TaskName = "UI_ModGuideBook_Task_Title_Collect_11",
+    TaskReward = {7315},
+    TaskType = "Collect"
+  },
+  [16] = {
+    CollectTaskTypeParam = {
+      41922,
+      41332,
+      41424,
+      41721,
+      41722,
+      41723,
+      41724
+    },
+    DisplayId = "16",
+    NoRepeatField = "ModId",
+    QuestPhaseId = 4,
+    Target = 7,
+    TargetId = {30212},
+    TaskDes = "UI_ModGuideBook_Task_Des_16",
+    TaskId = 16,
+    TaskName = "UI_ModGuideBook_Task_Title_Collect_12",
+    TaskReward = {7316},
+    TaskType = "Collect"
+  },
+  [17] = {
+    CollectTaskTypeParam = {
+      41931,
+      41333,
+      41431,
+      41731,
+      41732,
+      41733,
+      41734
+    },
+    DisplayId = "17",
+    NoRepeatField = "ModId",
+    QuestPhaseId = 4,
+    Target = 7,
+    TargetId = {30213},
+    TaskDes = "UI_ModGuideBook_Task_Des_17",
+    TaskId = 17,
+    TaskName = "UI_ModGuideBook_Task_Title_Collect_13",
+    TaskReward = {7317},
+    TaskType = "Collect"
+  },
+  [18] = {
+    CollectTaskTypeParam = {
+      41941,
+      41334,
+      41441,
+      41741,
+      41742,
+      41743,
+      41744
+    },
+    DisplayId = "18",
+    NoRepeatField = "ModId",
+    QuestPhaseId = 4,
+    Target = 7,
+    TargetId = {30214},
+    TaskDes = "UI_ModGuideBook_Task_Des_18",
+    TaskId = 18,
+    TaskName = "UI_ModGuideBook_Task_Title_Collect_14",
+    TaskReward = {7318},
+    TaskType = "Collect"
+  },
+  [19] = {
+    CollectTaskTypeParam = {
+      41962,
+      41326,
+      41461,
+      41761,
+      41762,
+      41763,
+      41764
+    },
+    DisplayId = "19",
+    NoRepeatField = "ModId",
+    QuestPhaseId = 4,
+    Target = 7,
+    TargetId = {30215},
+    TaskDes = "UI_ModGuideBook_Task_Des_19",
+    TaskId = 19,
+    TaskName = "UI_ModGuideBook_Task_Title_Collect_15",
+    TaskReward = {7319},
+    TaskType = "Collect"
+  },
+  [20] = {
+    CollectTaskTypeParam = {
+      41911,
+      41331,
+      41411,
+      41711,
+      41712,
+      41713,
+      41714
+    },
+    DisplayId = "20",
+    NoRepeatField = "ModId",
+    QuestPhaseId = 4,
+    Target = 7,
+    TargetId = {30216},
+    TaskDes = "UI_ModGuideBook_Task_Des_20",
+    TaskId = 20,
+    TaskName = "UI_ModGuideBook_Task_Title_Collect_16",
+    TaskReward = {7320},
+    TaskType = "Collect"
+  },
+  [21] = {
+    CollectTaskTypeParam = {
+      42001,
+      42002,
+      42003,
+      42006
+    },
+    DisplayId = "21",
+    NoRepeatField = "ModId",
+    QuestPhaseId = 5,
+    Target = 4,
+    TargetId = {30217},
+    TaskDes = "UI_ModGuideBook_Task_Des_21",
+    TaskId = 21,
+    TaskName = "UI_ModGuideBook_Task_Title_Collect_17",
+    TaskReward = {7321},
+    TaskType = "Collect"
+  },
+  [22] = {
+    CollectTaskTypeParam = {
+      42203,
+      42311,
+      42312,
+      42321,
+      42322
+    },
+    DisplayId = "22",
+    NoRepeatField = "ModId",
+    QuestPhaseId = 5,
+    Target = 5,
+    TargetId = {30218},
+    TaskDes = "UI_ModGuideBook_Task_Des_22",
+    TaskId = 22,
+    TaskName = "UI_ModGuideBook_Task_Title_Collect_18",
+    TaskReward = {7322},
+    TaskType = "Collect"
+  },
+  [23] = {
+    CollectTaskTypeParam = {
+      42401,
+      42403,
+      42411,
+      42412
+    },
+    DisplayId = "23",
+    NoRepeatField = "ModId",
+    QuestPhaseId = 5,
+    Target = 4,
+    TargetId = {30219},
+    TaskDes = "UI_ModGuideBook_Task_Des_23",
+    TaskId = 23,
+    TaskName = "UI_ModGuideBook_Task_Title_Collect_19",
+    TaskReward = {7323},
+    TaskType = "Collect"
+  },
+  [24] = {
+    CollectTaskTypeParam = {
+      43001,
+      43002,
+      43003,
+      43006
+    },
+    DisplayId = "24",
+    NoRepeatField = "ModId",
+    QuestPhaseId = 5,
+    Target = 4,
+    TargetId = {30220},
+    TaskDes = "UI_ModGuideBook_Task_Des_24",
+    TaskId = 24,
+    TaskName = "UI_ModGuideBook_Task_Title_Collect_20",
+    TaskReward = {7324},
+    TaskType = "Collect"
+  },
+  [25] = {
+    CollectTaskTypeParam = {
+      43401,
+      43402,
+      43403,
+      43404,
+      43405
+    },
+    DisplayId = "25",
+    NoRepeatField = "ModId",
+    QuestPhaseId = 5,
+    Target = 5,
+    TargetId = {30221},
+    TaskDes = "UI_ModGuideBook_Task_Des_25",
+    TaskId = 25,
+    TaskName = "UI_ModGuideBook_Task_Title_Collect_21",
+    TaskReward = {7325},
+    TaskType = "Collect"
+  },
+  [26] = {
+    CollectTaskTypeParam = {
+      43601,
+      43602,
+      43603,
+      43604
+    },
+    DisplayId = "26",
+    NoRepeatField = "ModId",
+    QuestPhaseId = 5,
+    Target = 4,
+    TargetId = {30222},
+    TaskDes = "UI_ModGuideBook_Task_Des_26",
+    TaskId = 26,
+    TaskName = "UI_ModGuideBook_Task_Title_Collect_22",
+    TaskReward = {7326},
+    TaskType = "Collect"
   }
 })

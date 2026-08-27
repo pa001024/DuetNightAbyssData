@@ -80,6 +80,7 @@ function BP_DeliveryMechanism_C:ClientInitInfo(Info)
       self.BubbleWidgetComponent:GetWidget().IconDisplayDistance = self.IconDisplayDistance
       self.BubbleWidgetComponent:GetWidget().MechanismLoc = self:K2_GetActorLocation()
       self.BubbleWidgetComponent:GetWidget().Img_Entrance:SetBrushResourceObject(self.BubbleIconTexture)
+      self.BubbleWidgetComponent:GetWidget().MechanismEid = self.Eid
     end
   end
 end
@@ -103,6 +104,7 @@ function BP_DeliveryMechanism_C:SetBubbleWidgetShowOrHide(InIsShow)
       self.BubbleWidgetComponent:GetWidget().IconDisplayDistance = self.IconDisplayDistance
       self.BubbleWidgetComponent:GetWidget().MechanismLoc = self:K2_GetActorLocation()
       self.BubbleWidgetComponent:GetWidget().Img_Entrance:SetBrushResourceObject(self.BubbleIconTexture)
+      self.BubbleWidgetComponent:GetWidget().MechanismEid = self.Eid
     end
   end
   if self.BubbleWidgetComponent ~= nil then

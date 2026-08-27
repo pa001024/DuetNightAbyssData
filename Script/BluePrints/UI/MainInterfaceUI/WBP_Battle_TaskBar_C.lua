@@ -52,6 +52,8 @@ function M:Initialize(Initializer)
   self.ListenNewQuestChainDataTimer = nil
   self.Platform = "PC"
   self.IsInLoading = false
+  self.UninitializedText_Tips01Text = nil
+  self.UninitializedText_Tips02Text = nil
 end
 
 function M:Construct()
@@ -86,6 +88,12 @@ function M:Construct()
     self:RefreshOpInfoByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
   end
   self:InitDungeonProgressDisplay()
+  if self.Text_Tips01 and self.Text_Tips01.GetText then
+    self.UninitializedText_Tips01Text = self.Text_Tips01:GetText()
+  end
+  if self.Text_Tips02 and self.Text_Tips02.GetText then
+    self.UninitializedText_Tips02Text = self.Text_Tips02:GetText()
+  end
 end
 
 function M:Destruct()
@@ -789,7 +797,7 @@ function M:PlayTaskBarAnimByState(State)
     if self.Panel_Tips.Visibility == UE4.ESlateVisibility.SelfHitTestInvisible and self.Platform == "Mobile" then
       self.Panel_Tips:SetVisibility(UE4.ESlateVisibility.Collapsed)
     end
-    if not self:IsAnimationPlaying(self.TaskBar_In) and not self:IsAnimationPlaying(self.TaskBar_Out) and not self.IsHideByNode then
+    if not self:IsAnimationPlaying(self.TaskBar_In) and not self:IsAnimationPlaying(self.TaskBar_Out) and not self:IsHideWithDesireTag("ShowOrHideUINode") then
       self:PlayAnimation(self.TaskBar_In)
       self:BindToAnimationFinished(self.TaskBar_In, {
         self,
@@ -1081,8 +1089,10 @@ function M:SwitchTaskBarContentByTracking(IsTrack, IsPlayTextAnim)
     end
     if TrackTaskInfo and not GameMode:IsInDungeon() then
       AudioManager(self):UpdateQuestChainIdAndQuestId(TrackingQuestId, DoingQuestId)
-      self:SetCurTaskBarInfo(CurQuestChainId)
-      self:SetTaskBarTextContent()
+      if not Avatar.InSpecialQuest then
+        self:SetCurTaskBarInfo(CurQuestChainId)
+        self:SetTaskBarTextContent()
+      end
       self:SetExtraText(self.CurTaskInfo.QuestChainId, self.CurTaskInfo.QuestId)
       local Info = TaskUtils:GetQuestExtraInfo(self.CurTaskInfo.QuestChainId, self.CurTaskInfo.QuestId)
       if Info then
@@ -1180,8 +1190,8 @@ end
 
 function M:SetVisibilityEx(Visibility)
   DebugPrint("WBP_Battle_TaskBar_C SetVisibilityEx", Visibility)
-  if self.IsHideByNode then
-    DebugPrint("WBP_Battle_TaskBar_C IsHideByNode")
+  if self:IsHideWithDesireTag("ShowOrHideUINode") then
+    DebugPrint("WBP_Battle_TaskBar_C IsHideByShowOrHideUINode")
     self:SetVisibility(ESlateVisibility.Collapsed)
     return
   end
@@ -1323,7 +1333,7 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
       })
     end
   end
-  if self.IsHideByNode then
+  if self:IsHideWithDesireTag("ShowOrHideUINode") then
     self:SetVisibilityEx(ESlateVisibility.Collapsed)
   end
 end
@@ -1559,6 +1569,13 @@ end
 
 function M:UpdateDungeonProgressDisplay(DungeonProgress)
   self.Num_Wave:SetText(DungeonProgress)
+end
+
+function M:CanPlayToolTipIn()
+  if self.Text_Tips01 and self.Text_Tips01.GetVisibility and self.Text_Tips01:GetVisibility() ~= UIConst.VisibilityOp.Collapsed and self.Text_Tips01.GetText and self.Text_Tips01:GetText() == self.UninitializedText_Tips01Text or self.Text_Tips02 and self.Text_Tips02.GetVisibility and self.Text_Tips02:GetVisibility() ~= UIConst.VisibilityOp.Collapsed and self.Text_Tips02.GetText and self.Text_Tips02:GetText() == self.UninitializedText_Tips02Text then
+    return false
+  end
+  return true
 end
 
 return M

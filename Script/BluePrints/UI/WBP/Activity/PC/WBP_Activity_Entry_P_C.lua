@@ -104,6 +104,9 @@ function M:ReceiveEnterState(StackAction)
   if nil ~= self.CurrentActiveBg and self.CurrentActiveBg.ReceiveEnterStateSelf and "function" == type(self.CurrentActiveBg.ReceiveEnterStateSelf) then
     self.CurrentActiveBg:ReceiveEnterStateSelf(StackAction)
   end
+  if 1 == StackAction then
+    self:RefreshCurrentBGVideo()
+  end
 end
 
 function M:Close()
@@ -208,6 +211,14 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   else
     return UE4.UWidgetBlueprintLibrary.UnHandled()
   end
+end
+
+function M:OnKeyUp(MyGeometry, InKeyEvent)
+  local CurrentActivePage = self.AllCurrentActivityPage[self.CurTabId]
+  if nil ~= CurrentActivePage and type(CurrentActivePage.HandleKeyUpInPage) == "function" and CurrentActivePage:HandleKeyUpInPage(MyGeometry, InKeyEvent) then
+    return UE4.UWidgetBlueprintLibrary.Handled()
+  end
+  return M.Super.OnKeyUp(self, MyGeometry, InKeyEvent)
 end
 
 function M:OnGamePadDown(InKeyName)

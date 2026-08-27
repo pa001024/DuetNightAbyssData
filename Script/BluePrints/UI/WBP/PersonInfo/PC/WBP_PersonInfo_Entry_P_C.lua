@@ -251,10 +251,16 @@ function M:RefreshBaseInfo()
     end
   end
   self.PersonInfoMainPage.RootPage = self
-  if PersonInfoController:IsMainPageUIHidden() then
-    self:Hideui()
+  if PersonInfoController:NeedHideUI() then
+    PersonInfoController.bAutoHideUIOnNextOpen = nil
+    self:HideUIInstant()
   else
-    self:Recoverui()
+    PersonInfoController.bAutoHideUIOnNextOpen = nil
+    if PersonInfoController:IsMainPageUIHidden() then
+      self:Hideui()
+    else
+      self:Recoverui()
+    end
   end
   self:OnMainPageLoaded()
 end

@@ -8,6 +8,7 @@ M._DelayNextKey = "InviteQueueManager_DelayNext"
 M._WaitLoadingKey = "InviteQueueManager_WaitLoading"
 M.InviteType = {
   Team = "Team",
+  TeamHall = "TeamHall",
   Friend = "Friend",
   Guild = "Guild"
 }

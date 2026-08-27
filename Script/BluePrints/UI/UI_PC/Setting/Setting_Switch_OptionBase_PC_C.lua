@@ -2,6 +2,10 @@ require("UnLua")
 local SettingUtils = require("Utils.SettingUtils")
 local S = Class("BluePrints.UI.BP_EMUserWidget_C")
 
+function S:Destruct()
+  EventManager:RemoveEvent(EventID.UnLoadUI, self)
+end
+
 function S:Construct()
   self.Button_Area.OnClicked:Add(self, self.OnBtnAreaClicked)
   self.Button_Area.OnHovered:Add(self, self.OnBtnAreaHover)
@@ -40,6 +44,9 @@ function S:Init(Parent, CacheName, CacheInfo, Content)
   end
   if self.CacheName == "MoveModel" then
     ReddotManager.AddListenerEx("Setting_Control_Setting_MoveModelBtn", self, self.RedDotChange)
+  end
+  if self.CacheName == "AutoFold" then
+    ReddotManager.AddListenerEx("Setting_Control_AutoFoldBtn", self, self.RedDotChange)
   end
 end
 
@@ -217,8 +224,8 @@ end
 function S:SaveOptionSetting()
   if self["Save" .. self.CacheName .. "OptionSetting"] then
     self["Save" .. self.CacheName .. "OptionSetting"](self)
-    if self.EMCacheName == "GameUserSettings" or self.EMCacheName == "ConsoleVariable" then
-      GWorld.GameInstance.SetOverallScalabilityLevelSimple(CommonConst.OverallPerformanceCustom)
+    if self.EMCacheName == "GameUserSettings" or self.EMCacheName == "ConsoleVariable" or self.EMCacheName == "RealtimeSunlight" then
+      SettingUtils.EnterCustomTier()
       if self.Parent.OverallPreset then
         self.Parent.OverallPreset:RefreshOverallPreset()
       end
@@ -912,9 +919,9 @@ end
 function S:SaveRealtimeSunlightOptionSetting()
   SettingUtils.SaveEMCache(self.EMCacheName, self.EMCacheKey, self.NowValue)
   if self.NowValue then
-    URuntimeCommonFunctionLibrary.SetConsoleVariableIntValue("EM.FixedSunlightDirection", 0, 2)
+    GWorld.GameInstance:SetGameScalabilityLevelByName("EM.FixedSunlightDirection", 0)
   else
-    URuntimeCommonFunctionLibrary.SetConsoleVariableIntValue("EM.FixedSunlightDirection", 1, 2)
+    GWorld.GameInstance:SetGameScalabilityLevelByName("EM.FixedSunlightDirection", 1)
   end
 end
 
@@ -928,14 +935,14 @@ end
 
 function S:SaveAntiAliasingMobileOptionSetting()
   if self.OldValue then
-    UKismetSystemLibrary.ExecuteConsoleCommand(self, "r.DefaultFeature.AntiAliasing 2")
+    URuntimeCommonFunctionLibrary.SetConsoleVariableIntValue("r.DefaultFeature.AntiAliasing", 2, 3)
     SettingUtils.SaveEMCache(self.EMCacheName, self.EMCacheKey, self.NowValue)
     EventManager:FireEvent(EventID.OnSwitchAntiAliasing, 4)
   else
     local Params = {}
     
     function Params.RightCallbackFunction()
-      UKismetSystemLibrary.ExecuteConsoleCommand(self, "r.DefaultFeature.AntiAliasing 2")
+      URuntimeCommonFunctionLibrary.SetConsoleVariableIntValue("r.DefaultFeature.AntiAliasing", 2, 3)
       SettingUtils.SaveEMCache(self.EMCacheName, self.EMCacheKey, self.NowValue)
       EventManager:FireEvent(EventID.OnSwitchAntiAliasing, 2)
     end
@@ -994,6 +1001,22 @@ end
 
 function S:SaveAutoApproveOptionSetting()
   SettingUtils.SaveEMCache(self.EMCacheName, self.EMCacheKey, self.NowValue)
+end
+
+function S:SetAutoFoldOldValue()
+  self.OldValue = SettingUtils.GetEMCache(self.EMCacheName, self.EMCacheKey, self.DefaultValue)
+end
+
+function S:RestoreDefaultAutoFoldOptionSet()
+  self:SaveAutoFoldOptionSetting()
+end
+
+function S:SaveAutoFoldOptionSetting()
+  SettingUtils.SaveEMCache(self.EMCacheName, self.EMCacheKey, self.NowValue)
+  self.OldValue = self.NowValue
+  EMCache:Set("HasClickedAutoFold", true, true)
+  ReddotManager.ClearLeafNodeCount("Setting_Control_AutoFoldBtn")
+  EventManager:FireEvent(EventID.OnFoldFeatureOptionChanged, self.NowValue)
 end
 
 function S:SetAutoBackgroundOldValue()

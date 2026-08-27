@@ -180,13 +180,22 @@ function M:InithomeLevel2IDInfo(streamLevel, temp, SubStr)
   if WorldTravelSubsystem(self):IsDungeonWorld() then
     return
   end
-  self.homeLevel2ID[streamLevel:GetLoadedLevel()] = string.gsub(temp, SubStr, "")
+  local Level = streamLevel:GetLoadedLevel()
+  if not Level then
+    if "" == SubStr then
+      error("Design关卡未加载，请检查Design关卡的图层和流送距离！！！")
+    else
+      error("不应再存在Gameplay关卡！")
+    end
+    return
+  end
+  self.homeLevel2ID[Level] = string.gsub(temp, SubStr, "")
   if not self.enterLevelID then
     self.enterLevelID = temp
   end
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
   if nil ~= GameMode then
-    GameMode:AddSubGameModeInfo(string.gsub(temp, SubStr, ""), streamLevel:GetLoadedLevel())
+    GameMode:AddSubGameModeInfo(string.gsub(temp, SubStr, ""), Level)
   end
 end
 

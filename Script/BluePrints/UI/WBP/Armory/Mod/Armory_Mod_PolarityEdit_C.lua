@@ -169,8 +169,18 @@ function M:SetUpWhenSelectSlot(SelectedStuff)
     Widget:InitSelectedState()
   end
   self.Text_Num:SetText(SlotUIData:GetSlotIdStr())
-  local Polarity = -1 == SlotUIData:GetPolarity() and 0 or SlotUIData:GetPolarity()
-  self.List_Polarity:SetSelectedIndex(Polarity)
+  local SlotPolarity = SlotUIData:GetPolarity()
+  local SelectedIndex = 0
+  if SlotPolarity ~= CommonConst.NonePolarity then
+    local Displayed = self.List_Polarity:GetDisplayedEntryWidgets()
+    for i = 1, Displayed:Num() do
+      if Displayed:GetRef(i).Content.Polarity == SlotPolarity then
+        SelectedIndex = i - 1
+        break
+      end
+    end
+  end
+  self.List_Polarity:SetSelectedIndex(SelectedIndex)
 end
 
 function M:_GetResourceIds()
@@ -251,7 +261,7 @@ function M:SetUpButtonWidget()
 end
 
 function M:SetUpPolarityList()
-  local SortedConfs = ModModel:GetSortedPolarityConfs()
+  local SortedConfs = ModModel:GetSortedSlotPolarityConfs()
   for _, Conf in pairs(SortedConfs) do
     local Obj = NewObject(UIUtils.GetCommonItemContentClass())
     Obj.Polarity = Conf.Id

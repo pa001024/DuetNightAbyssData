@@ -7,6 +7,8 @@ function M:New(DialogueId, Context, NodeEvents, FlowChecker, Comps, NodeMaps)
   rawset(TalkFlowNode, "Comps", Comps)
   rawset(TalkFlowNode, "NodeMaps", NodeMaps)
   rawset(TalkFlowNode, "FlowChecker", FlowChecker)
+  rawset(TalkFlowNode, "Flow", Context and Context.Flow)
+  rawset(TalkFlowNode, "TalkTask", Context and Context.FlowOwner)
   TalkFlowNode:BindNodeEvents(NodeEvents)
   TalkFlowNode:BuildNode(DialogueId, Comps)
   return TalkFlowNode

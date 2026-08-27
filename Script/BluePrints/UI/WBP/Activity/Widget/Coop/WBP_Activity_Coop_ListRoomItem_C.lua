@@ -2,6 +2,7 @@ require("UnLua")
 local WBP_Activity_Coop_ListRoomItem_C = Class({
   "BluePrints.UI.BP_UIState_C"
 })
+local ActivityReddotHelper = require("BluePrints.UI.WBP.Activity.ActivityReddotHelper")
 
 function WBP_Activity_Coop_ListRoomItem_C:Construct()
   self.TextReward:SetText(GText("UI_AsyncCombat_RewardRate"))
@@ -18,6 +19,7 @@ function WBP_Activity_Coop_ListRoomItem_C:Construct()
 end
 
 function WBP_Activity_Coop_ListRoomItem_C:Destruct()
+  ActivityReddotHelper.RemoveReddotListenByEventId(self.EventId, self)
   self.RoomData = nil
   self:RemoveTimer("UpdateShopItemEndRefreshTime")
 end
@@ -50,8 +52,17 @@ end
 
 function WBP_Activity_Coop_ListRoomItem_C:OnBtnGoClicked()
   local RoomData = self.RoomData
-  if RoomData and RoomData.RoomUniqueId then
-    self.Content.JoinRoomCallback(RoomData.RoomUniqueId)
+  local RoomUniqueId = RoomData.RoomUniqueId
+  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(self.StoppageNodeName)
+  if CacheDetail and CacheDetail.New and CacheDetail and CacheDetail[self.StoppageNodeType] and CacheDetail[self.StoppageNodeType][RoomUniqueId] then
+    ReddotManager.DecreaseLeafNodeCount(self.StoppageNodeName, 1, {
+      CacheKey = "New",
+      Type = self.StoppageNodeType,
+      RoomIds = {RoomUniqueId}
+    })
+  end
+  if RoomData and RoomUniqueId then
+    self.Content.JoinRoomCallback(RoomUniqueId)
   end
 end
 
@@ -80,14 +91,22 @@ function WBP_Activity_Coop_ListRoomItem_C:OnListItemObjectSet(Content)
   end
   self.RoomData = Content.RoomData
   self.ReddotNodeName = Content.ReddotNodeName
+  self.EventId = DataMgr.AsyncCombatEventConstant.AsyncCombat_EventId.ConstantValue
+  self.StoppageNodeName = "AsyncCombatStoppageNew"
+  self.StoppageNodeType = "StoppageRoom"
   self:SetUsingGamepad(false)
   local RoomData = self.RoomData
   local RoomCfg = DataMgr.AsyncCombat[RoomData.RoomConfId]
   local Level = RoomCfg.Level
-  local RateResData = DataMgr.Resource[RoomData.RateResId]
-  self.Tag_Reward.TextNum:SetText(string.format("+%d%%", RateResData.UseParam / 100))
-  local AnimationName = Content.CoopModel:GetRewardAnimationByDifficultyId(RoomData.RateResId)
-  self.Tag_Reward:PlayAnimation(self.Tag_Reward[AnimationName])
+  if RoomCfg.RoomType and 1 == RoomCfg.RoomType then
+    self.Tag_Reward.TextNum:SetText(string.format("+%d%%", DataMgr.AsyncCombatEventConstant.Async_FreeRoomBonusRate.ConstantValue * 100))
+    self.Tag_Reward:PlayAnimation(self.Tag_Reward.Personal)
+  else
+    local RateResData = DataMgr.Resource[RoomData.RateResId]
+    self.Tag_Reward.TextNum:SetText(string.format("+%d%%", RateResData.UseParam / 100))
+    local AnimationName = Content.CoopModel:GetRewardAnimationByDifficultyId(RoomData.RateResId)
+    self.Tag_Reward:PlayAnimation(self.Tag_Reward[AnimationName])
+  end
   self.TextLv:SetText(GText("UI_LEVEL_NAME") .. Level)
   local RoomNumberLimitCount = DataMgr.AsyncCombatEventConstant.AsyncCombat_RoomCapacityLimit.ConstantValue
   if RoomData.MemberCount == RoomNumberLimitCount then
@@ -114,24 +133,58 @@ function WBP_Activity_Coop_ListRoomItem_C:RefreshWsBtnState()
   if not RoomData then
     return
   end
+  local CurrentTimeStamp = TimeUtils.NowTime()
   local CreateTime = URuntimeCommonFunctionLibrary.GetDateTimeFromUnixTime(RoomData.CreateTime or 0)
-  local CurTime = URuntimeCommonFunctionLibrary.GetDateTimeFromUnixTime(TimeUtils.NowTime())
+  local CurTime = URuntimeCommonFunctionLibrary.GetDateTimeFromUnixTime(CurrentTimeStamp)
   local RemainTime = UKismetMathLibrary.Subtract_DateTimeDateTime(CurTime, CreateTime)
   local elapsedSeconds = UKismetMathLibrary.GetTotalSeconds(RemainTime)
   local MaxDurationSeconds = DataMgr.AsyncCombatEventConstant.AsyncCombat_RoomDuration.ConstantValue * 60
   if elapsedSeconds >= MaxDurationSeconds then
     RoomData.IsPass = true
   end
+  if RoomData.CloseTime then
+    local Dration = DataMgr.AsyncCombatEventConstant.AsyncCombat_StoppageTimeRoomDuration.ConstantValue * 60
+    local ContributionRoomCloseTime = RoomData.CloseTime + Dration
+    if CurrentTimeStamp >= ContributionRoomCloseTime and 0 == RoomData.RewardState then
+      RoomData.RewardState = 2
+    end
+  end
+  if RoomData.IsPass and RoomData.IsMaster and 0 == RoomData.RewardState then
+    RoomData.RewardState = 2
+  end
+  if self.Btn_Go.New then
+    self.Btn_Go.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+  local Style = 0
   if RoomData.IsPass == true then
     if 1 == RoomData.RewardState then
       self.RoomState = 0
       self.Ws_Btn:SetActiveWidgetIndex(0)
-    else
-      self.RoomState = 1
+      self.TextNum:SetText("")
+      self.TextState:SetText(GText("UI_AsyncCombat_ChallengeEnd"))
+    elseif 2 == RoomData.RewardState then
+      self.RoomState = 2
       self.Ws_Btn:SetActiveWidgetIndex(2)
+      self.TextNum:SetText("")
+      self.TextState:SetText(GText("UI_AsyncCombat_ChallengeEnd"))
+    else
+      Style = 1
+      self.RoomState = 1
+      self.Ws_Btn:SetActiveWidgetIndex(1)
+      
+      local function FormatPermille(value)
+        local truncatedValue = math.floor((value or 0) * 10) / 10
+        local str = string.format("%.1f", truncatedValue)
+        if str:sub(-2) == ".0" then
+          str = str:sub(1, -3)
+        end
+        return CommonUtils.FormatNumInFrench(str)
+      end
+      
+      self.TextNum:SetText("<Highlight>" .. FormatPermille(RoomData.Contribution / 100) .. "%</>")
+      self.TextState:SetText(GText("UI_AsyncCombat_IndividualContribution"))
+      self:AddReddotListen()
     end
-    self.TextNum:SetText("")
-    self.TextState:SetText(GText("UI_AsyncCombat_ChallengeEnd"))
   else
     self.RoomState = 1
     self.Ws_Btn:SetActiveWidgetIndex(1)
@@ -153,6 +206,11 @@ function WBP_Activity_Coop_ListRoomItem_C:RefreshWsBtnState()
     else
       self.TextNum:SetText(LastProgressStr .. "%")
     end
+  end
+  if 0 == Style then
+    self:Style_Public()
+  else
+    self:Style_Personal()
   end
 end
 
@@ -296,6 +354,31 @@ function WBP_Activity_Coop_ListRoomItem_C:UpdateLimitTime()
   else
     self.Ws_State_Cd:SetActiveWidgetIndex(1)
     self:RemoveTimer("UpdateShopItemEndRefreshTime")
+  end
+end
+
+function WBP_Activity_Coop_ListRoomItem_C:AddReddotListen()
+  ActivityReddotHelper.AddReddotListenByTabId(self.EventId, {
+    Obj = self,
+    Func = function(self, Count, RdType, RdName)
+      local NewCacheDetail = ReddotManager.GetLeafNodeCacheDetail(self.StoppageNodeName) or {}
+      self:RefreshNewState(NewCacheDetail)
+    end
+  })
+end
+
+function WBP_Activity_Coop_ListRoomItem_C:RefreshNewState(NewCacheDetail)
+  if not self.RoomData then
+    ActivityReddotHelper.RemoveReddotListenByEventId(self.EventId, self)
+    return
+  end
+  if self.Btn_Go.New then
+    if NewCacheDetail and NewCacheDetail[self.StoppageNodeType] and NewCacheDetail[self.StoppageNodeType][self.RoomData.RoomUniqueId] then
+      self.Btn_Go.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    else
+      self.Btn_Go.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      ActivityReddotHelper.RemoveReddotListenByEventId(self.EventId, self)
+    end
   end
 end
 

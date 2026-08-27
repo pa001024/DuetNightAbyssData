@@ -262,10 +262,22 @@ function WBP_Build_Character_P_C:SetTitleName()
     self:SetModTextBgVisbile(false)
     return
   end
+  local ModSuit = tonumber(self.ModSuit)
+  if not ModSuit or ModSuit <= 0 then
+    self.Panel_Text:SetVisibility(ESlateVisibility.Collapsed)
+    self:SetModTextBgVisbile(false)
+    return
+  end
+  ModController:SyncTarget(self.Uuid)
+  local SuitNameKey = string.format("Mod_SuitName_%s", ModSuit)
+  local SuitName = tostring(ModController:GetModel():GetSuitName(ModSuit) or "")
+  if "" == SuitName or SuitName == SuitNameKey then
+    self.Panel_Text:SetVisibility(ESlateVisibility.Collapsed)
+    self:SetModTextBgVisbile(false)
+    return
+  end
   self.Panel_Text:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self:SetModTextBgVisbile(true)
-  ModController:SyncTarget(self.Uuid)
-  local SuitName = ModController:GetModel():GetSuitName(self.ModSuit)
   self.Text_Name:SetText(SuitName)
 end
 

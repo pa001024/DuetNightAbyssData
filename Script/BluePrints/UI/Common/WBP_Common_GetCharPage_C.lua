@@ -87,9 +87,20 @@ function M:RefreshCommonShowUI()
   self.WS_BG:SetActiveWidgetIndex(0)
   self.Btn_FullClose:SetVisibility(UE4.ESlateVisibility.Visible)
   self.bSpaceBarSkip = false
+  self.CantClick = true
   self.bPlayVideo = false
+  self.IsLoopingVideo = false
   self:SetCharImgRole()
   self:SetTargetNew()
+  self.SpineContent:ClearChildren()
+  self.IsCharVideo = false
+  self.bCharInVideoFinished = false
+  self.CharVideoUI = nil
+  self.CharSpineUI = nil
+  if self:IsExistTimer("ResumeCharVideoPlayback") then
+    self:RemoveTimer("ResumeCharVideoPlayback")
+  end
+  self.bWasPlayingBeforeBackground = false
   if self.Group_Skip then
     self.Group_Skip:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
@@ -115,7 +126,14 @@ function M:InitCharDetails()
   self.Text_AvatarName:SetText(GText(CharInfo.CharName))
   self.Group_SkinInfo:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Group_Detail:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-  if CharInfo and CharInfo.SpineBp then
+  if CharInfo and CharInfo.VideoBp then
+    self.IsCharVideo = true
+    self:GetCharVideoUI(CharInfo.VideoBp)
+    local IsPCPlatform = CommonUtils.GetDeviceTypeByPlatformName(self) == "PC"
+    if IsPCPlatform then
+      self:InitLongPressEvent()
+    end
+  elseif CharInfo and CharInfo.SpineBp then
     self:GetCharSpineUI(CharInfo.SpineBp)
     local IsPCPlatform = CommonUtils.GetDeviceTypeByPlatformName(self) == "PC"
     if IsPCPlatform then
@@ -232,6 +250,9 @@ function M:PlayResourceVideo(VideoPath)
 end
 
 function M:OnVideoPlayEnd()
+  if self.IsLoopingVideo then
+    return
+  end
   self:OnBtnFullCloseClicked()
 end
 
@@ -243,7 +264,15 @@ end
 
 function M:PlayCharSpine()
   self.SpineContent:SetVisibility(UE4.ESlateVisibility.Collapsed)
-  if self.IsSpineAnimation and self.CharSpineUI then
+  if self.IsCharVideo and self.CharVideoUI then
+    local IsPCPlatform = CommonUtils.GetDeviceTypeByPlatformName(self) == "PC"
+    if IsPCPlatform then
+      self:PlayCharInVideo()
+    else
+      self:PlayCharLoopVideo()
+    end
+    self:PlayCharUISound()
+  elseif self.IsSpineAnimation and self.CharSpineUI then
     self.SpineContent:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     if self.CharSpineUI.Spine_Char then
       local IsPCPlatform = CommonUtils.GetDeviceTypeByPlatformName(self) == "PC"
@@ -259,6 +288,95 @@ function M:PlayCharSpine()
       self.CharSpineUI.CharTitle:SetVisibility(UE4.ESlateVisibility.Collapsed)
     end
     self:PlayCharUISound()
+  end
+end
+
+function M:PlayCharInVideo()
+  self.SpineContent:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  local CharInfo = DataMgr.Char[self.TargetId]
+  if CharInfo and CharInfo.VideoInPath and self.CharVideoUI.WBP_VideoPlayer and self.CharVideoUI.WBP_LoopVideoPlayer then
+    self.CharVideoUI.WBP_VideoPlayer:HideSkipButton(true)
+    self.CharVideoUI.WBP_VideoPlayer:BindEventToMediaPlayEnd(self, self.OnCharInVideoEnd)
+    self.CharVideoUI.WBP_VideoPlayer:Stop()
+    self.CharVideoUI.WBP_LoopVideoPlayer:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.CharVideoUI.WBP_VideoPlayer:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    local VideoIn = LoadObject(CharInfo.VideoInPath)
+    if not VideoIn then
+      self.CantClick = false
+      self:OnBtnFullCloseClicked()
+      return
+    end
+    self.CharVideoUI.WBP_VideoPlayer:SetUrlByMediaSource(VideoIn)
+    self.CharVideoUI.WBP_VideoPlayer:SetLooping(false)
+    self.CharVideoUI.WBP_VideoPlayer:Play()
+  end
+end
+
+function M:PlayCharLoopVideo()
+  self.SpineContent:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  local CharInfo = DataMgr.Char[self.TargetId]
+  self:SetFocus()
+  self.bCanSkip = false
+  if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
+    self:InitGamepadView()
+  else
+    self:InitKeyboardView()
+  end
+  self.bCharInVideoFinished = true
+  if self.CharVideoUI and self.CharVideoUI.WBP_VideoPlayer then
+    self.CharVideoUI.WBP_VideoPlayer:Stop()
+    self.CharVideoUI.WBP_VideoPlayer:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  if CharInfo and CharInfo.VideoLoopPath and self.CharVideoUI and self.CharVideoUI.WBP_LoopVideoPlayer then
+    self.CharVideoUI.WBP_LoopVideoPlayer:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.CharVideoUI.WBP_LoopVideoPlayer:HideSkipButton(true)
+    self.CharVideoUI.WBP_LoopVideoPlayer:Stop()
+    local VideoLoop = LoadObject(CharInfo.VideoLoopPath)
+    if not VideoLoop then
+      self.CantClick = false
+      self:OnBtnFullCloseClicked()
+      return
+    end
+    self.CharVideoUI.WBP_LoopVideoPlayer:SetUrlByMediaSource(VideoLoop)
+    self.CharVideoUI.WBP_LoopVideoPlayer:SetLooping(true)
+    self.CharVideoUI.WBP_LoopVideoPlayer:Play()
+    if self.CharVideoUI.In then
+      self.CharVideoUI:PlayAnimation(self.CharVideoUI.In)
+    end
+  end
+end
+
+function M:OnCharInVideoEnd()
+  local CharInfo = DataMgr.Char[self.TargetId]
+  self:SetFocus()
+  self.bCanSkip = false
+  self.CantClick = false
+  if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
+    self:InitGamepadView()
+  else
+    self:InitKeyboardView()
+  end
+  self.bCharInVideoFinished = true
+  if self.CharVideoUI and self.CharVideoUI.WBP_VideoPlayer then
+    self.CharVideoUI.WBP_VideoPlayer:Stop()
+    self.CharVideoUI.WBP_VideoPlayer:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  if CharInfo and CharInfo.VideoLoopPath and self.CharVideoUI and self.CharVideoUI.WBP_LoopVideoPlayer then
+    self.CharVideoUI.WBP_LoopVideoPlayer:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.CharVideoUI.WBP_LoopVideoPlayer:HideSkipButton(true)
+    self.CharVideoUI.WBP_LoopVideoPlayer:Stop()
+    local VideoLoop = LoadObject(CharInfo.VideoLoopPath)
+    if not VideoLoop then
+      self.CantClick = false
+      self:OnBtnFullCloseClicked()
+      return
+    end
+    self.CharVideoUI.WBP_LoopVideoPlayer:SetUrlByMediaSource(VideoLoop)
+    self.CharVideoUI.WBP_LoopVideoPlayer:SetLooping(true)
+    self.CharVideoUI.WBP_LoopVideoPlayer:Play()
+    if self.CharVideoUI.In then
+      self.CharVideoUI:PlayAnimation(self.CharVideoUI.In)
+    end
   end
 end
 
@@ -288,6 +406,24 @@ function M:GetCharSpineUI(SpineName, SpineResource)
   OverlaySlot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
   self.CharSpineUI = CharSpineUI
   return self.CharSpineUI
+end
+
+function M:GetCharVideoUI(VideoBpPath)
+  self.SpineContent:ClearChildren()
+  local BgPath = VideoBpPath
+  local CharVideoUI = UIManager(self):CreateWidget(BgPath, false)
+  if not CharVideoUI then
+    self.IsCharVideo = false
+    DebugPrint(ErrorTag, "---wyt---Char---Video---error---", self.TargetId, VideoBpPath)
+    return
+  end
+  self.SpineContent:AddChild(CharVideoUI)
+  local OverlaySlot = UE4.UWidgetLayoutLibrary.SlotAsOverlaySlot(CharVideoUI)
+  OverlaySlot:SetPadding(FMargin(0, 0, 0, 0))
+  OverlaySlot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+  OverlaySlot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
+  self.CharVideoUI = CharVideoUI
+  return self.CharVideoUI
 end
 
 function M:SetCharImgRole()
@@ -521,7 +657,15 @@ function M:PlayInAnim()
       self.bCanSkip = true
       self:SetFocus()
     end
-    if self:IsChar() then
+    if self:IsChar() and self.IsCharVideo then
+      self:PlayAnimation(self.In)
+      local IsPCPlatform = CommonUtils.GetDeviceTypeByPlatformName(self) == "PC"
+      if IsPCPlatform then
+        AnimTime = nil
+      else
+        AnimTime = self.In:GetEndTime()
+      end
+    elseif self:IsChar() then
       self:PlayAnimation(self.In)
       AnimTime = self.In:GetEndTime()
     elseif self.bSpaceBarSkip then
@@ -545,7 +689,7 @@ function M:PlayInAnim()
   
   self.Icon_Group:SetVisibility(ESlateVisibility.HitTestInvisible)
   if self:IsSkin() then
-    self:UnbindAllFromAnimationFinished(self.Icon_In)
+    self:UnbindAllFromAnimationFinished(self.Skin_Icon_In)
     self:PlayAnimation(self.Skin_Icon_In)
     AudioManager(self):PlayUISound(self, "event:/ui/common/gacha_get_skin", nil, nil)
     self:BindToAnimationFinished(self.Skin_Icon_In, {self, IconInFinish})
@@ -703,9 +847,10 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   end
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  if (InKeyName == UIConst.GamePadKey.FaceButtonBottom or InKeyName == UIConst.GamePadKey.FaceButtonRight) and not self.bPlayVideo then
+  local CanDirectClose = not self.bPlayVideo or self.bPlayVideo and self.IsLoopingVideo
+  if (InKeyName == UIConst.GamePadKey.FaceButtonBottom or InKeyName == UIConst.GamePadKey.FaceButtonRight) and CanDirectClose then
     self:OnBtnFullCloseClicked()
-  elseif "Escape" == InKeyName and not self.bPlayVideo then
+  elseif "Escape" == InKeyName and CanDirectClose then
     self:OnBtnFullCloseClicked()
   end
   return UE4.UWidgetBlueprintLibrary.Unhandled()
@@ -789,25 +934,18 @@ function M:OnGamepad_FaceButton_Bottom_LongPressEnd()
   self:OnBtnSkipClicked()
 end
 
-function M:OnBtnSkipClicked()
-  if self.CantClick then
-    return
-  end
-  local CommonDialogParams = {}
-  
-  function CommonDialogParams.RightCallbackFunction()
-    self:OnBtnSkipClicked()
-  end
-  
-  UIManager(self):ShowCommonPopupUI(100253, CommonDialogParams)
-end
-
 function M:OnBtnFullCloseClicked()
   if self.CantClick then
     return
   end
   CommonUtils:CloseGuideTouchIfExist(self)
   AudioManager(self):StopSound(self, "ShowTarget")
+  if self:IsExistTimer("PlaySkinInfoIn") then
+    self:RemoveTimer("PlaySkinInfoIn")
+  end
+  if self.VideoPlayer and self.VideoPlayer:IsPlaying() then
+    self.VideoPlayer:Stop()
+  end
   if self.CurShowIndex < self.ShowTimes then
     self:RefreshCommonShowUI()
   else
@@ -827,6 +965,15 @@ function M:OnBtnSkipClicked()
       self.CharSpineUI.Spine_Char:SetAnimation(0, "In", false)
       self.CharSpineUI.Spine_Char:AddAnimation(0, "Loop", true, 0)
       self.CantClick = false
+      if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
+        self:InitGamepadView()
+      else
+        self:InitKeyboardView()
+      end
+      self:StopAnimation(self.In)
+      self:PlayAnimation(self.Info_In)
+    elseif self.CharVideoUI then
+      self:OnCharInVideoEnd()
       if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
         self:InitGamepadView()
       else
@@ -880,12 +1027,21 @@ function M:OnApplicationWillEnterBackground()
     self:RemoveTimer("PlaySkinInfoIn")
     DebugPrint("JLY Removed PlaySkinInfoIn timer")
   end
+  self.bWasPlayingBeforeBackground = false
   if self.VideoPlayer and self.VideoPlayer:IsPlaying() then
     self.bWasPlayingBeforeBackground = true
     self.VideoPlayer:Pause()
     DebugPrint("JLY Paused video playback")
-  else
-    self.bWasPlayingBeforeBackground = false
+  elseif self.CharVideoUI then
+    if self.CharVideoUI.WBP_VideoPlayer and self.CharVideoUI.WBP_VideoPlayer:IsPlaying() then
+      self.bWasPlayingBeforeBackground = true
+      self.CharVideoUI.WBP_VideoPlayer:Pause()
+      DebugPrint("WYT Paused video playback")
+    elseif self.CharVideoUI.WBP_LoopVideoPlayer and self.CharVideoUI.WBP_LoopVideoPlayer:IsPlaying() then
+      self.bWasPlayingBeforeBackground = true
+      self.CharVideoUI.WBP_LoopVideoPlayer:Pause()
+      DebugPrint("WYT Paused loop video playback")
+    end
   end
   self.Group_SkinInfo:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Image_AvatarIcon:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -893,7 +1049,15 @@ end
 
 function M:OnApplicationHasEnteredForeground()
   DebugPrint("JLY OnApplicationHasEnteredForeground")
-  if self.bWasPlayingBeforeBackground and self.VideoPlayer then
+  if self.bWasPlayingBeforeBackground and self.CharVideoUI and self.CharVideoUI then
+    self:AddTimer(0.5, function()
+      if self.bCharInVideoFinished then
+        self:PlayCharLoopVideo()
+      else
+        self:PlayCharSpine()
+      end
+    end, false, 0, "ResumeCharVideoPlayback")
+  elseif self.bWasPlayingBeforeBackground and self.VideoPlayer then
     self:AddTimer(0.5, function()
       if self.VideoPlayer and self.TargetId then
         if self:IsSkin() then
@@ -904,7 +1068,7 @@ function M:OnApplicationHasEnteredForeground()
             self:PlayResourceVideo(ResourceInfo.DisplayPath)
           end
         end
-        if self.UIDisplayTime then
+        if self.UIDisplayTime and not self:IsChar() then
           self:AddTimer(self.UIDisplayTime, self.PlaySkinInfoIn, false, 0, "PlaySkinInfoIn")
           DebugPrint("JLY Re-added PlaySkinInfoIn timer")
         end

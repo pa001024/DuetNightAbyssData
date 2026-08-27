@@ -11,6 +11,7 @@ function M:OpenUI(PlayerId, NextStateId)
   self.CacheControllerPausedParam = Controller.bShouldPerformFullTickWhenPaused
   Controller.bShouldPerformFullTickWhenPaused = true
   Player.CharSpringArmComponent:SetTickableWhenPaused(true)
+  self:SetVariableBool("bIsSuccess", true, PlayerId)
 end
 
 function M:CloseMechanism(PlayerId, IsSuccess)

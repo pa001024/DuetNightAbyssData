@@ -156,6 +156,7 @@ end
 function M:InitUIInfo(Name, IsInUIMode, EventList, ...)
   M.Super.InitUIInfo(self, Name, IsInUIMode, EventList, ...)
   self.bNeedRequest, self.HostId, self.ShowTag, self.CurrTabIdx = ...
+  ReddotManager.ClearLeafNodeCount("AnnouncementDirty")
   self:SetUpTabs()
   self:AddDispatcher(EventID.GameViewportSizeChanged, self, function()
     if self.CurContent then

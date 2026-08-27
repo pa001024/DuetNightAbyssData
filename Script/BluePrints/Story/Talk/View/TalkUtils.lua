@@ -197,4 +197,29 @@ function TalkUtils:TryResolveStoryPanel(DialoguePanelType)
   return
 end
 
+function TalkUtils:GetAllTalkActors(FirstDialogueId, TalkActors)
+  TalkActors = TalkActors or {}
+  local TalkActorsSet = {}
+  for _, Actor in pairs(TalkActors) do
+    TalkActorsSet[Actor.TalkActorId] = true
+  end
+  local Dialogue = DataMgr.Dialogue[FirstDialogueId]
+  if not Dialogue then
+    return TalkActors
+  end
+  while Dialogue do
+    local UnitId = Dialogue.SpeakNpcId
+    if UnitId and not TalkActorsSet[UnitId] then
+      TalkActorsSet[UnitId] = true
+      table.insert(TalkActors, {
+        TalkActorType = "Npc",
+        TalkActorId = UnitId,
+        TalkActorVisible = true
+      })
+    end
+    Dialogue = Dialogue.NextDialogue and DataMgr.Dialogue[Dialogue.NextDialogue] or nil
+  end
+  return TalkActors
+end
+
 return TalkUtils

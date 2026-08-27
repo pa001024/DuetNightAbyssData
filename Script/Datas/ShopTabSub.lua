@@ -1,10 +1,11 @@
 local T = {}
 T.RT_1 = {210, 101}
 T.RT_2 = {215}
-T.RT_3 = {99, 100}
-T.RT_4 = {111, 110}
-T.RT_5 = {99}
-T.RT_6 = {211}
+T.RT_3 = {101}
+T.RT_4 = {99, 100}
+T.RT_5 = {111, 110}
+T.RT_6 = {99}
+T.RT_7 = {211}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -16,7 +17,7 @@ return ReadOnly("ShopTabSub", {
     MainTabId = 110,
     SubName = "UI_SHOP_MAINTAB_PAY",
     SubTabId = 1101,
-    TabCoin = T.RT_3,
+    TabCoin = T.RT_4,
     TabType = "Pay"
   },
   [1208] = {
@@ -24,7 +25,7 @@ return ReadOnly("ShopTabSub", {
     ReddotNode = "Shop_Skin_1",
     SubName = "UI_SHOP_SUBTAB_SKIN",
     SubTabId = 1208,
-    TabCoin = T.RT_3,
+    TabCoin = T.RT_4,
     TabType = "Skin"
   },
   [1209] = {
@@ -32,7 +33,7 @@ return ReadOnly("ShopTabSub", {
     ReddotNode = "Shop_Skin_2",
     SubName = "UI_Mount",
     SubTabId = 1209,
-    TabCoin = T.RT_3,
+    TabCoin = T.RT_4,
     TabType = "Normal"
   },
   [1210] = {
@@ -40,7 +41,7 @@ return ReadOnly("ShopTabSub", {
     ReddotNode = "Shop_Skin_3",
     SubName = "UI_SHOP_MAINTAB_ACCESSORY_Head",
     SubTabId = 1210,
-    TabCoin = T.RT_3,
+    TabCoin = T.RT_4,
     TabType = "Skin"
   },
   [1211] = {
@@ -48,7 +49,7 @@ return ReadOnly("ShopTabSub", {
     ReddotNode = "Shop_Skin_4",
     SubName = "UI_SHOP_MAINTAB_ACCESSORY_Body",
     SubTabId = 1211,
-    TabCoin = T.RT_3,
+    TabCoin = T.RT_4,
     TabType = "Skin"
   },
   [1212] = {
@@ -56,7 +57,7 @@ return ReadOnly("ShopTabSub", {
     ReddotNode = "Shop_Skin_6",
     SubName = "UI_SHOP_MAINTAB_ACCESSORY_WEAPON",
     SubTabId = 1212,
-    TabCoin = T.RT_3,
+    TabCoin = T.RT_4,
     TabType = "Skin"
   },
   [1213] = {
@@ -64,7 +65,7 @@ return ReadOnly("ShopTabSub", {
     ReddotNode = "Shop_Skin_5",
     SubName = "UI_SHOP_MAINTAB_ACCESSORY_EFFECT",
     SubTabId = 1213,
-    TabCoin = T.RT_3,
+    TabCoin = T.RT_4,
     TabType = "Skin"
   },
   [1401] = {
@@ -72,7 +73,7 @@ return ReadOnly("ShopTabSub", {
     ReddotNode = "Shop_Gacha_Higth",
     SubName = "UI_SHOP_SUBTAB_NAME_SPPrism",
     SubTabId = 1401,
-    TabCoin = T.RT_4,
+    TabCoin = T.RT_5,
     TabType = "Normal"
   },
   [1402] = {
@@ -80,7 +81,7 @@ return ReadOnly("ShopTabSub", {
     ReddotNode = "Shop_Gacha_Mid",
     SubName = "UI_SHOP_SUBTAB_NAME_ReSPPrism",
     SubTabId = 1402,
-    TabCoin = T.RT_4,
+    TabCoin = T.RT_5,
     TabType = "Normal"
   },
   [1403] = {
@@ -96,7 +97,7 @@ return ReadOnly("ShopTabSub", {
     ReddotNode = "Shop_Item_Yueshijingpei",
     SubName = "UI_SHOP_SUBTAB_NAME_YUESHIJINGPEI",
     SubTabId = 1500,
-    TabCoin = T.RT_5,
+    TabCoin = T.RT_6,
     TabType = "Normal"
   },
   [1501] = {
@@ -112,7 +113,7 @@ return ReadOnly("ShopTabSub", {
     ReddotNode = "Shop_Item_CharPiece",
     SubName = "UI_SHOP_SUBTAB_NAME_CHARPIECE",
     SubTabId = 1502,
-    TabCoin = T.RT_5,
+    TabCoin = T.RT_6,
     TabType = "Normal"
   },
   [1503] = {
@@ -120,7 +121,7 @@ return ReadOnly("ShopTabSub", {
     ReddotNode = "Shop_Item_Weapon",
     SubName = "UI_SHOP_SUBTAB_NAME_WEAPON",
     SubTabId = 1503,
-    TabCoin = T.RT_5,
+    TabCoin = T.RT_6,
     TabType = "Normal"
   },
   [1601] = {
@@ -128,7 +129,7 @@ return ReadOnly("ShopTabSub", {
     ReddotNode = "Shop_Pack_Limit",
     SubName = "UI_SHOP_MAINTAB_PACK_LIMIT",
     SubTabId = 1601,
-    TabCoin = T.RT_3,
+    TabCoin = T.RT_4,
     TabType = "Pack"
   },
   [1604] = {
@@ -136,7 +137,7 @@ return ReadOnly("ShopTabSub", {
     ReddotNode = "Shop_Pack_Month",
     SubName = "UI_SHOP_MAINTAB_PACK_MONTH",
     SubTabId = 1604,
-    TabCoin = T.RT_3,
+    TabCoin = T.RT_4,
     TabType = "Pack"
   },
   [1605] = {
@@ -144,7 +145,7 @@ return ReadOnly("ShopTabSub", {
     ReddotNode = "Shop_Pack_Week",
     SubName = "UI_SHOP_MAINTAB_PACK_WEEK",
     SubTabId = 1605,
-    TabCoin = T.RT_3,
+    TabCoin = T.RT_4,
     TabType = "Pack"
   },
   [1606] = {
@@ -152,14 +153,14 @@ return ReadOnly("ShopTabSub", {
     ReddotNode = "Shop_Pack_Item",
     SubName = "UI_SHOP_MAINTAB_PACK_ITEM",
     SubTabId = 1606,
-    TabCoin = T.RT_3,
+    TabCoin = T.RT_4,
     TabType = "Pack"
   },
   [1701] = {
     MainTabId = 170,
     SubName = "UI_SHOP_MAINTAB_BANNER",
     SubTabId = 1701,
-    TabCoin = T.RT_3,
+    TabCoin = T.RT_4,
     TabType = "Banner"
   },
   [1801] = {
@@ -168,7 +169,7 @@ return ReadOnly("ShopTabSub", {
     ReddotNode = "Shop_Walnut_1",
     SubName = "UI_Armory_Char",
     SubTabId = 1801,
-    TabCoin = T.RT_6,
+    TabCoin = T.RT_7,
     TabType = "CharWalnut"
   },
   [1802] = {
@@ -177,7 +178,7 @@ return ReadOnly("ShopTabSub", {
     ReddotNode = "Shop_Walnut_2",
     SubName = "UI_SHOP_SUBTAB_NAME_WEAPON",
     SubTabId = 1802,
-    TabCoin = T.RT_6,
+    TabCoin = T.RT_7,
     TabType = "WeaponWalnut"
   },
   [1803] = {
@@ -186,14 +187,14 @@ return ReadOnly("ShopTabSub", {
     ReddotNode = "Shop_Walnut_3",
     SubName = "UI_Armory_Mod",
     SubTabId = 1803,
-    TabCoin = T.RT_6,
+    TabCoin = T.RT_7,
     TabType = "ModWalnut"
   },
   [2001] = {
     MainTabId = 200,
     SubName = "UI_SHOP_MAINTAB_COMPLEX_1",
     SubTabId = 2001,
-    TabCoin = T.RT_3,
+    TabCoin = T.RT_4,
     TabType = "Complex"
   },
   [2002] = {
@@ -201,7 +202,7 @@ return ReadOnly("ShopTabSub", {
     MainTabId = 200,
     SubName = "UI_SHOP_MAINTAB_COMPLEX_2",
     SubTabId = 2002,
-    TabCoin = T.RT_3,
+    TabCoin = T.RT_4,
     TabType = "Complex",
     UnlockHide = true
   },
@@ -210,7 +211,7 @@ return ReadOnly("ShopTabSub", {
     MainTabId = 200,
     SubName = "UI_SHOP_MAINTAB_COMPLEX_3",
     SubTabId = 2003,
-    TabCoin = T.RT_3,
+    TabCoin = T.RT_4,
     TabType = "Complex",
     UnlockHide = true
   },
@@ -255,6 +256,15 @@ return ReadOnly("ShopTabSub", {
     TabType = "Normal",
     UnlockHide = true
   },
+  [7060] = {
+    ConditionId = "FTShopTab",
+    MainTabId = 706,
+    SubName = "UI_SHOP_TAB_ExploreBadge_FT",
+    SubTabId = 7060,
+    TabCoin = {29007},
+    TabType = "Normal",
+    UnlockHide = true
+  },
   [8010] = {
     MainTabId = 801,
     SubName = "UI_SHOP_SUBTAB_NAME_FISHING",
@@ -291,7 +301,7 @@ return ReadOnly("ShopTabSub", {
     MainTabId = 9901,
     SubName = "MAIN_UI_SHOP",
     SubTabId = 99010,
-    TabCoin = {101},
+    TabCoin = T.RT_3,
     TabType = "Normal"
   },
   [100001] = {
@@ -331,9 +341,16 @@ return ReadOnly("ShopTabSub", {
   },
   [100031] = {
     MainTabId = 10003,
-    SubName = "WeeklyDungeonShop",
+    SubName = "UI_SHOP_MAINTAB_MOD",
     SubTabId = 100031,
     TabCoin = {216},
+    TabType = "Normal"
+  },
+  [100032] = {
+    MainTabId = 10003,
+    SubName = "UI_Pet",
+    SubTabId = 100032,
+    TabCoin = {226, 227},
     TabType = "Normal"
   },
   [100041] = {
@@ -415,6 +432,13 @@ return ReadOnly("ShopTabSub", {
     TabCoin = {15040},
     TabType = "Normal"
   },
+  [100141] = {
+    MainTabId = 10014,
+    SubName = "UI_MonsterDuelShop",
+    SubTabId = 100141,
+    TabCoin = T.RT_3,
+    TabType = "Normal"
+  },
   [100151] = {
     MainTabId = 10015,
     SubName = "Event_FreeAppearance_tittle01",
@@ -426,42 +450,42 @@ return ReadOnly("ShopTabSub", {
     MainTabId = 90001,
     SubName = "UI_SHOP_SUBTAB_SKIN",
     SubTabId = 900011,
-    TabCoin = T.RT_3,
+    TabCoin = T.RT_4,
     TabType = "Skin"
   },
   [900012] = {
     MainTabId = 90002,
     SubName = "UI_Mount",
     SubTabId = 900012,
-    TabCoin = T.RT_3,
+    TabCoin = T.RT_4,
     TabType = "Skin"
   },
   [900013] = {
     MainTabId = 90003,
     SubName = "UI_SHOP_MAINTAB_ACCESSORY_Head",
     SubTabId = 900013,
-    TabCoin = T.RT_3,
+    TabCoin = T.RT_4,
     TabType = "Skin"
   },
   [900014] = {
     MainTabId = 90004,
     SubName = "UI_SHOP_MAINTAB_ACCESSORY_Body",
     SubTabId = 900014,
-    TabCoin = T.RT_3,
+    TabCoin = T.RT_4,
     TabType = "Skin"
   },
   [900015] = {
     MainTabId = 90005,
     SubName = "UI_SHOP_MAINTAB_ACCESSORY_WEAPON",
     SubTabId = 900015,
-    TabCoin = T.RT_3,
+    TabCoin = T.RT_4,
     TabType = "Normal"
   },
   [900016] = {
     MainTabId = 90006,
     SubName = "UI_SHOP_MAINTAB_ACCESSORY_EFFECT",
     SubTabId = 900016,
-    TabCoin = T.RT_3,
+    TabCoin = T.RT_4,
     TabType = "Skin"
   }
 })

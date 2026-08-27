@@ -132,17 +132,6 @@ function WBP_ForgeMain_C:OnLoaded(...)
   self.Super.OnLoaded(self, ...)
   local Params = (...)
   self:ParseLoadParams(Params)
-  self.Sort:Init(self, {
-    GText("UI_Select_Kind"),
-    GText("UI_Select_Unique")
-  }, CommonConst.DESC, {
-    OnGetBackFocusWidget = function()
-      self.ControllerFSM:Enter(ForgeConst.ControllerFSMStates.NormalPage_FocusItem)
-      return self.ForgeContent
-    end
-  })
-  self.Sort:BindEventOnSelectionsChanged(self, self.OnSortMethodChanged)
-  self.Sort:BindEventOnSortTypeChanged(self, self.OnSortMethodChanged)
   self:InitListenEvent()
   self:InitKeySetting()
   self:InitTabContent()
@@ -150,12 +139,13 @@ function WBP_ForgeMain_C:OnLoaded(...)
   self:EnableTickWhenPaused(true)
   self:HideDraftPathView()
   self:CheckScrollbarVisibility(self.ForgeContent:GetNumItems())
+  self.bForgeCloseCleanupDone = false
+  local Avatar = GWorld:GetAvatar()
+  self.IsForgeInHome = Avatar:CheckSubRegionType(nil, CommonConst.SubRegionType.Home)
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   Player:SetActorHideTag("Forge", true)
   self:SwitchCamera(true)
-  local Avatar = GWorld:GetAvatar()
-  local IsHome = Avatar:CheckSubRegionType(nil, CommonConst.SubRegionType.Home)
-  if IsHome then
+  if self.IsForgeInHome then
     local ForgeNPC = UE4.ANpcCharacter.GetNpc(self, ForgeNPCId)
     if ForgeNPC then
       if ForgeNPC.NPCNameWidgetComponent then
@@ -182,7 +172,6 @@ function WBP_ForgeMain_C:OnLoaded(...)
       self:TickRefreshItemsView(ForgeConst.DraftState.InProgress)
     end, true)
   end
-  self.Text_Sift:SetText(GText("ModFilter_Title"))
   self.Sift:SetSiftPreviewSideWidget(true)
   self.Sift:SetSiftModelId(1005)
   self.Sift:BindEventOnSelectionsChanged(self, self.OnModFilterChanged)
@@ -326,14 +315,21 @@ function WBP_ForgeMain_C:NavigateToFirstEntry()
 end
 
 function WBP_ForgeMain_C:OnEnterState_NormalPage_FocusItem()
-  self:UpdateGamepadBottomKeyInfo({
-    ForgeConst.BottomKeyTypes.BottomKey_ShowItem,
-    ForgeConst.BottomKeyTypes.BottomKey_Back
-  })
+  if self.IsEmpty then
+    self:UpdateGamepadBottomKeyInfo({
+      ForgeConst.BottomKeyTypes.BottomKey_Back
+    })
+  else
+    self:UpdateGamepadBottomKeyInfo({
+      ForgeConst.BottomKeyTypes.BottomKey_ShowItem,
+      ForgeConst.BottomKeyTypes.BottomKey_Back
+    })
+  end
 end
 
 function WBP_ForgeMain_C:OnEnterState_NormalPage_ShowItem()
   if self.CurrentGamepadSelectedItem then
+    self.Controller:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self:UpdateGamepadBottomKeyInfo({
       ForgeConst.BottomKeyTypes.BottomKey_ShowDetails,
       ForgeConst.BottomKeyTypes.BottomKey_Back
@@ -349,6 +345,7 @@ function WBP_ForgeMain_C:OnEnterState_NormalPage_ShowItem()
 end
 
 function WBP_ForgeMain_C:OnLeaveState_NormalPage_ShowItem(NewStateName)
+  self.Controller:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
   local CurrentGamepadSelectedEntry = self:GetEntryFromItem(self.CurrentGamepadSelectedItem)
   if CurrentGamepadSelectedEntry then
     CurrentGamepadSelectedEntry:LeaveShowItemView()
@@ -362,7 +359,7 @@ function WBP_ForgeMain_C:OnEnterState_NormalPage_FocusSort()
   self.Sort:SetFocus()
   self.Sort:SetControllerKeyHidden(true)
   self.Tab.WBP_Com_Tab_ResourceBar:HideGamePadKey(true)
-  self.Controller:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
+  self.Controller:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Btn_Receive:SetGamePadIconVisible(false)
   self:UpdateGamepadBottomKeyInfo({
     ForgeConst.BottomKeyTypes.BottomKey_Confirm,
@@ -373,7 +370,7 @@ end
 function WBP_ForgeMain_C:OnLeaveState_NormalPage_FocusSort(NewStateName)
   self.Sort:SetControllerKeyHidden(false)
   self.Tab.WBP_Com_Tab_ResourceBar:HideGamePadKey(false)
-  self.Controller:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Controller:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
   self.Btn_Receive:SetGamePadIconVisible(true)
 end
 
@@ -501,7 +498,8 @@ function WBP_ForgeMain_C:OnMenuOpenChanged(bIsOpen)
     self.SubTab_List:UpdateUIStyleInPlatform(not bIsOpen)
     self.Sort:SetControllerKeyHidden(bIsOpen)
     self.Btn_Receive:SetGamePadIconVisible(not bIsOpen)
-    self.Controller:SetVisibility(bIsOpen and UE4.ESlateVisibility.HitTestInvisible or UE4.ESlateVisibility.Collapsed)
+    local IsShowingItem = self.ControllerFSM:Current() == ForgeConst.ControllerFSMStates.NormalPage_ShowItem
+    self.Controller:SetVisibility((bIsOpen or IsShowingItem) and UE4.ESlateVisibility.Collapsed or UE4.ESlateVisibility.HitTestInvisible)
   end
 end
 
@@ -570,7 +568,7 @@ function WBP_ForgeMain_C:RefreshSingleItemData(ForgeItemContent)
     end
     local TabType = self:GetCurrentTabType()
     local DraftInfo = ForgeModel:CheckState(ForgeItemContent.Id)
-    if not DraftInfo or TabType == ForgeConst.TabType.Producing and DraftInfo.State == ForgeConst.DraftState.NotStarted or DraftInfo.State == ForgeConst.DraftState.NotStarted and DraftInfo.Count <= 0 and not DraftInfo.IsInfinity then
+    if not DraftInfo or TabType == ForgeConst.TabType.Producing and DraftInfo.State == ForgeConst.DraftState.NotStarted or DraftInfo.State == ForgeConst.DraftState.NotStarted and DraftInfo.Count <= 0 and not DraftInfo.IsInfinity and not ForgeModel:IsPreShowDraft(DraftInfo.Id, DraftInfo) then
       ForgeItemContent.State = nil
       self.ForgeContent:RemoveItem(ForgeItemContent)
     else
@@ -616,7 +614,8 @@ function WBP_ForgeMain_C:RefreshItemsView()
       end
       ForgeItemWidget:RefreshView()
     end
-    local DraftInfos, FilterResult = ForgeModel:GetDatasByFilter(self:GetCurrentTabType(), self:GetCurrentSubTabType(), self.CommonFilterData)
+    local CurSortBy = self.Sort:GetSortInfos()
+    local DraftInfos, FilterResult = ForgeModel:GetDatasByFilter(self:GetCurrentTabType(), self:GetCurrentSubTabType(), self.CommonFilterData, CurSortBy)
     self:ShowEmptyPage(#DraftInfos <= 0, FilterResult)
     self:CheckScrollbarVisibility(#DraftInfos)
     self:CheckShouldAddEmptyItem()
@@ -663,6 +662,30 @@ function WBP_ForgeMain_C:UpdateSiftButton()
   else
     self.Panel_Sift:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
+end
+
+function WBP_ForgeMain_C:InitSortBtn()
+  local BtnList
+  if self:GetCurrentTabType() == ForgeConst.TabType.Mod or self:GetCurrentTabType() == ForgeConst.TabType.Weapon or self:GetCurrentTabType() == ForgeConst.TabType.CharAccessory then
+    BtnList = {
+      GText("UI_Select_Kind"),
+      GText("UI_Select_Unique"),
+      GText("MoZhiXie_HaveNot")
+    }
+  else
+    BtnList = {
+      GText("UI_Select_Kind"),
+      GText("UI_Select_Unique")
+    }
+  end
+  self.Sort:Init(self, BtnList, CommonConst.DESC, {
+    OnGetBackFocusWidget = function()
+      self.ControllerFSM:Enter(ForgeConst.ControllerFSMStates.NormalPage_FocusItem)
+      return self.ForgeContent
+    end
+  })
+  self.Sort:BindEventOnSelectionsChanged(self, self.OnSortMethodChanged)
+  self.Sort:BindEventOnSortTypeChanged(self, self.OnSortMethodChanged)
 end
 
 function WBP_ForgeMain_C:InitListenEvent()
@@ -805,8 +828,12 @@ function WBP_ForgeMain_C:Handle_KeyDownOnGamePad(InKeyName)
       end
       IsEventHandled = true
     elseif InKeyName == Const.GamepadLeftThumbstick then
-      self.ControllerFSM:Enter(ForgeConst.ControllerFSMStates.NormalPage_FocusSort)
-      IsEventHandled = true
+      if not self.IsEmpty then
+        self.ControllerFSM:Enter(ForgeConst.ControllerFSMStates.NormalPage_FocusSort)
+        IsEventHandled = true
+      else
+        IsEventHandled = false
+      end
     elseif InKeyName == Const.GamepadSpecialRight then
       self.ControllerFSM:Enter(ForgeConst.ControllerFSMStates.NormalPage_FocusCompendium)
       self.Entrance_Compendium:SetFocus()
@@ -826,7 +853,11 @@ function WBP_ForgeMain_C:Handle_KeyDownOnGamePad(InKeyName)
   elseif CurrentState == ForgeConst.ControllerFSMStates.NormalPage_FocusCompendium then
     if InKeyName == Const.GamepadFaceButtonRight then
       self.ControllerFSM:Enter(ForgeConst.ControllerFSMStates.NormalPage_FocusItem)
-      self.ForgeContent:SetFocus()
+      if self.IsEmpty then
+        self.Panel_Empty:SetFocus()
+      else
+        self.ForgeContent:SetFocus()
+      end
       IsEventHandled = true
     end
   elseif CurrentState == ForgeConst.ControllerFSMStates.PathPage_Normal and InKeyName == Const.GamepadFaceButtonUp then
@@ -988,7 +1019,11 @@ function WBP_ForgeMain_C:InitTabContent()
   local SubTabConfigData = {
     LeftKey = "A",
     RightKey = "D",
-    Tabs = {}
+    Tabs = {},
+    SoundFunc = function(Owner)
+      AudioManager(Owner):PlayUISound(Owner, "event:/ui/common/click_level_02", nil, nil)
+    end,
+    SoundFuncReceiver = self
   }
   self.SubTab_List:Init(SubTabConfigData)
   self.SubTab_List:BindEventOnTabSelected(self, self.OnSubTabItemSelected)
@@ -1007,6 +1042,7 @@ end
 function WBP_ForgeMain_C:OnTabItemSelected(TabWidget)
   local PrevTabType = self:GetCurrentTabType()
   self.TabIndex = TabWidget.Idx
+  self:InitSortBtn()
   if self.TabIdx2SubTabType[self.TabIndex] then
     local AllSubTabInfo = {}
     for Index, SubTabType in ipairs(self.TabIdx2SubTabType[self.TabIndex]) do
@@ -1030,14 +1066,12 @@ function WBP_ForgeMain_C:OnTabItemSelected(TabWidget)
     else
       self.SubTab_List:SelectTab(1)
     end
-    self:AddWidgetHiddenTag(self.Panel_SubTab, false, "ShowSubTab")
-    self:AddWidgetHiddenTag(self.Spacer_Up, false, "ShowSubTab")
+    self.WS_Tab:SetActiveWidgetIndex(0)
   else
     self.SubTabIndex = nil
     self.SubTab_List:UpdateTabs({})
     self:UpdateForgeContent()
-    self:AddWidgetHiddenTag(self.Panel_SubTab, true, "ShowSubTab")
-    self:AddWidgetHiddenTag(self.Spacer_Up, true, "ShowSubTab")
+    self.WS_Tab:SetActiveWidgetIndex(1)
   end
   if self.IsShowingDraftPathView then
     self.Forging_Path_PC:OnClose()
@@ -1059,10 +1093,10 @@ function WBP_ForgeMain_C:UpdateForgeContent()
     if TabType == ForgeConst.TabType.Mod then
       FilterData = self.CommonFilterData
     end
-    local DraftInfos, FilterResult = ForgeModel:GetDatasByFilter(TabType, SubTabType, FilterData)
+    local CurSortBy, SortType = self.Sort:GetSortInfos()
+    local DraftInfos, FilterResult = ForgeModel:GetDatasByFilter(TabType, SubTabType, FilterData, CurSortBy)
     self.IsDraftInfosEmpty = #DraftInfos <= 0
     if not self.IsDraftInfosEmpty then
-      local CurSortBy, SortType = self.Sort:GetSortInfos()
       ForgeModel:SortDraftDatas(DraftInfos, TabType, SubTabType, CurSortBy, SortType)
     end
     self:ShowEmptyPage(self.IsDraftInfosEmpty, FilterResult)
@@ -1118,10 +1152,9 @@ function WBP_ForgeMain_C:ShowEmptyPage(bShow, FilterResult)
   if bShow then
     self.ForgeContent:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.Panel_Empty:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.IsEmpty = true
     if not FilterResult.HasFilterItem then
       self:AddWidgetHiddenTag(self.Panel_Bottom, true, "EmptyPage")
-      self:AddWidgetHiddenTag(self.Panel_SubTab, true, "EmptyPage")
-      self:AddWidgetHiddenTag(self.Spacer_Up, true, "EmptyPage")
       self:AddWidgetHiddenTag(self.Spacer_Down, true, "EmptyPage")
     end
     local TabType = self:GetCurrentTabType()
@@ -1143,11 +1176,10 @@ function WBP_ForgeMain_C:ShowEmptyPage(bShow, FilterResult)
     end
   else
     self:AddWidgetHiddenTag(self.Panel_Bottom, false, "EmptyPage")
-    self:AddWidgetHiddenTag(self.Panel_SubTab, false, "EmptyPage")
-    self:AddWidgetHiddenTag(self.Spacer_Up, false, "EmptyPage")
     self:AddWidgetHiddenTag(self.Spacer_Down, false, "EmptyPage")
     self.Panel_Empty:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.ForgeContent:SetVisibility(UE4.ESlateVisibility.Visible)
+    self.IsEmpty = false
     if IsGamepad then
       self.GameInputModeSubsystem:SetNavigateWidgetVisibility(true)
     end
@@ -1913,30 +1945,24 @@ function WBP_ForgeMain_C:OnReturnKeyDown()
 end
 
 function WBP_ForgeMain_C:SwitchCamera(bNpcCamera)
-  local Avatar = GWorld:GetAvatar()
-  local IsHome = Avatar:CheckSubRegionType(nil, CommonConst.SubRegionType.Home)
-  if IsHome then
+  if self.IsForgeInHome then
     UIManager(self):SwitchFixedCamera(bNpcCamera, ForgeNPCId, "Forge", self, "ForgeMain")
   else
     UIManager(self):SwitchUINpcCamera(bNpcCamera, "ForgeMain", ForgeNPCRegionId, {bDestroyNpc = true, IsHaveInOutAnim = false})
   end
 end
 
-function WBP_ForgeMain_C:OnClose()
-  if self:IsAnimationPlaying(self.In) then
+function WBP_ForgeMain_C:CleanupBeforeClose()
+  if self.bForgeCloseCleanupDone then
     return
   end
-  if self.IsClosing then
-    return
-  end
-  self.IsClosing = true
-  self:PlayAnimation(self.Out)
+  self.bForgeCloseCleanupDone = true
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
-  Player:SetActorHideTag("Forge", false)
-  local Avatar = GWorld:GetAvatar()
-  local IsHome = Avatar:CheckSubRegionType(nil, CommonConst.SubRegionType.Home)
-  if IsHome then
-    self:SwitchCamera()
+  if IsValid(Player) then
+    Player:SetActorHideTag("Forge", false)
+  end
+  self:SwitchCamera(false)
+  if self.IsForgeInHome then
     local ForgeNPC = UE4.ANpcCharacter.GetNpc(self, ForgeNPCId)
     if ForgeNPC then
       if ForgeNPC.NPCNameWidgetComponent then
@@ -1953,17 +1979,25 @@ function WBP_ForgeMain_C:OnClose()
       end
       ForgeNPC:PlayUITalkAction(21000202)
     end
-  else
-    self:SwitchCamera()
   end
   AudioManager(self):SetEventSoundParam(self, "ForgeMainIn", {ToEnd = 1})
   ForgeModel:ClearNewRedDots()
 end
 
+function WBP_ForgeMain_C:OnClose()
+  if self:IsAnimationPlaying(self.In) then
+    return
+  end
+  if self.IsClosing then
+    return
+  end
+  self.IsClosing = true
+  self:PlayAnimation(self.Out)
+  self:CleanupBeforeClose()
+end
+
 function WBP_ForgeMain_C:OnAnimationFinished(InAnimation)
   if InAnimation == self.Out then
-    local Avatar = GWorld:GetAvatar()
-    local IsHome = Avatar:CheckSubRegionType(nil, CommonConst.SubRegionType.Home)
     self:Close()
   end
 end
@@ -1977,6 +2011,7 @@ function WBP_ForgeMain_C:OnModFilterChanged(SelectedItems, ItemDatas)
 end
 
 function WBP_ForgeMain_C:Close()
+  self:CleanupBeforeClose()
   self:RemoveDispatcher(EventID.OnStartProduce)
   self:RemoveDispatcher(EventID.OnCompleteProduce)
   self:RemoveDispatcher(EventID.OnAccerateProduce)

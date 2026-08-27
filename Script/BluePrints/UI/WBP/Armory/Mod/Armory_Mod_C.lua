@@ -965,7 +965,7 @@ end
 function M:SetUpFilterUI()
   if not self.PolarityFilterConf then
     self.PolarityFilterConf = {}
-    local SortedConfs = ModModel:GetSortedPolarityConfs()
+    local SortedConfs = ModModel:GetSortedModPolarityConfs()
     for _, PolarityInfo in pairs(SortedConfs) do
       table.insert(self.PolarityFilterConf, {
         Polarity = PolarityInfo.Id

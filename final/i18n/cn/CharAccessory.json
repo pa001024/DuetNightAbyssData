@@ -1144,6 +1144,62 @@
     "unlock": "通过商店获得"
   },
   {
+    "id": 10155,
+    "name": "缄默刺骨·墨玉",
+    "desc": "即使面对未知的猎物，猎人也能从它身上取下属于自己的战利品。",
+    "icon": "T_Fashion_Head74_01",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10156,
+    "name": "缄默刺骨·铅灰",
+    "desc": "即使面对未知的猎物，猎人也能从它身上取下属于自己的战利品。",
+    "icon": "T_Fashion_Head74_02",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10157,
+    "name": "缄默刺骨·鎏金",
+    "desc": "即使面对未知的猎物，猎人也能从它身上取下属于自己的战利品。",
+    "icon": "T_Fashion_Head74_03",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10158,
+    "name": "缄默刺骨·晴蓝",
+    "desc": "即使面对未知的猎物，猎人也能从它身上取下属于自己的战利品。",
+    "icon": "T_Fashion_Head74_04",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10159,
+    "name": "提线人偶·鎏金",
+    "desc": "提起木偶，不断舞动。",
+    "icon": "T_Fashion_Head75_02",
+    "rarity": 5,
+    "unlock": "通过活动获得"
+  },
+  {
+    "id": 10160,
+    "name": "提线人偶·墨玉",
+    "desc": "提起木偶，不断舞动。",
+    "icon": "T_Fashion_Head75_01",
+    "rarity": 5,
+    "unlock": "通过活动获得"
+  },
+  {
+    "id": 10161,
+    "name": "提线人偶·铅灰",
+    "desc": "提起木偶，不断舞动。",
+    "icon": "T_Fashion_Head75_03",
+    "rarity": 5,
+    "unlock": "通过活动获得"
+  },
+  {
     "id": 11001,
     "name": "UI_Accessory_Name_11001",
     "desc": "UI_Accessory_Desc_11001",
@@ -1196,6 +1252,14 @@
     "name": "冰封桎梏",
     "desc": "极寒，是生命的禁忌。",
     "icon": "T_Fashion_Fx37",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 11009,
+    "name": "狱火狂燃",
+    "desc": "熊熊燃烧，直至一切化为灰烬。",
+    "icon": "T_Fashion_Fx40",
     "rarity": 5,
     "unlock": "通过棱镜兑换获得"
   },
@@ -1405,6 +1469,38 @@
     "desc": "命运的脉络如蛛网般纠缠，无人能够预测。",
     "icon": "T_Fashion_Hat20",
     "rarity": 4,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 12027,
+    "name": "守护之冕·黛蓝",
+    "desc": "勾勒平安的轮廓。",
+    "icon": "T_Fashion_Hat28",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 12028,
+    "name": "守护之冕·涅白",
+    "desc": "勾勒平安的轮廓。",
+    "icon": "T_Fashion_Hat27",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 12029,
+    "name": "守护之冕·墨玉",
+    "desc": "勾勒平安的轮廓。",
+    "icon": "T_Fashion_Hat26",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 12030,
+    "name": "守护之冕·铅灰",
+    "desc": "勾勒平安的轮廓。",
+    "icon": "T_Fashion_Hat25",
+    "rarity": 5,
     "unlock": "通过商店获得"
   },
   {
@@ -1813,7 +1909,7 @@
     "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在猫尾巴的面前都会显得黯淡无光，这就是猫尾巴那让人无法拒绝的魔力。",
     "icon": "T_Fashion_Back51_02",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "通过商店获得"
   },
   {
     "id": 13050,
@@ -1821,7 +1917,7 @@
     "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在猫尾巴的面前都会显得黯淡无光，这就是猫尾巴那让人无法拒绝的魔力。",
     "icon": "T_Fashion_Back51_03",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "通过商店获得"
   },
   {
     "id": 13051,
@@ -1829,7 +1925,7 @@
     "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在猫尾巴的面前都会显得黯淡无光，这就是猫尾巴那让人无法拒绝的魔力。",
     "icon": "T_Fashion_Back51_04",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "通过商店获得"
   },
   {
     "id": 13052,
@@ -1837,7 +1933,63 @@
     "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在猫尾巴的面前都会显得黯淡无光，这就是猫尾巴那让人无法拒绝的魔力。",
     "icon": "T_Fashion_Back51_01",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 13053,
+    "name": "幽燃之理·晴蓝",
+    "desc": "烧烬一切，回归虚无。",
+    "icon": "T_Fashion_Waist36_01",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 13054,
+    "name": "幽燃之理·绛紫",
+    "desc": "烧烬一切，回归虚无。",
+    "icon": "T_Fashion_Waist36_02",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 13055,
+    "name": "幽燃之理·涅白",
+    "desc": "烧烬一切，回归虚无。",
+    "icon": "T_Fashion_Waist36_03",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 13056,
+    "name": "幽燃之理·鎏金",
+    "desc": "烧烬一切，回归虚无。",
+    "icon": "T_Fashion_Waist36_04",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 13057,
+    "name": "魔法发条·鎏金",
+    "desc": "聆听发条的回响。",
+    "icon": "T_Fashion_Back56_02",
+    "rarity": 5,
+    "unlock": "通过活动获得"
+  },
+  {
+    "id": 13058,
+    "name": "魔法发条·墨玉",
+    "desc": "聆听发条的回响。",
+    "icon": "T_Fashion_Back56_01",
+    "rarity": 5,
+    "unlock": "通过活动获得"
+  },
+  {
+    "id": 13059,
+    "name": "魔法发条·铅灰",
+    "desc": "聆听发条的回响。",
+    "icon": "T_Fashion_Back56_03",
+    "rarity": 5,
+    "unlock": "通过活动获得"
   },
   {
     "id": 20001,
@@ -2544,6 +2696,38 @@
     "unlock": "通过活动获得"
   },
   {
+    "id": 20102,
+    "name": "缄默覆面·黛蓝",
+    "desc": "迎接沉默的告别。",
+    "icon": "T_Fashion_Face30_04",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 20103,
+    "name": "缄默覆面·锈红",
+    "desc": "迎接沉默的告别。",
+    "icon": "T_Fashion_Face30_03",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 20104,
+    "name": "缄默覆面·墨玉",
+    "desc": "迎接沉默的告别。",
+    "icon": "T_Fashion_Face30_02",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 20105,
+    "name": "缄默覆面·涅白",
+    "desc": "迎接沉默的告别。",
+    "icon": "T_Fashion_Face30_01",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
     "id": 21001,
     "name": "UI_Accessory_Name_21001",
     "desc": "UI_Accessory_Desc_21001",
@@ -2628,6 +2812,14 @@
     "name": "冰封流光",
     "desc": "极光，是自然的奇迹。",
     "icon": "T_Fashion_Fx36",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 21015,
+    "name": "幽燃热浪",
+    "desc": "扭曲的热浪，如同烈火在空中划出的涟漪。",
+    "icon": "T_Fashion_Fx39",
     "rarity": 5,
     "unlock": "通过棱镜兑换获得"
   },
@@ -3113,7 +3305,7 @@
   },
   {
     "id": 31001,
-    "name": "胜利动作·悠游水岸",
+    "name": "胜利·悠游水岸",
     "desc": "可变更胜利动作。",
     "icon": "T_Fashion_SettlementAction_01",
     "rarity": 5,
@@ -3121,7 +3313,7 @@
   },
   {
     "id": 31002,
-    "name": "胜利动作·睥睨山河",
+    "name": "胜利·睥睨山河",
     "desc": "可变更胜利动作。",
     "icon": "T_Fashion_SettlementAction_02",
     "rarity": 5,
@@ -3129,7 +3321,7 @@
   },
   {
     "id": 31003,
-    "name": "胜利动作·极速定格",
+    "name": "胜利·极速定格",
     "desc": "可变更胜利动作。",
     "icon": "T_Fashion_SettlementAction_05",
     "rarity": 5,
@@ -3137,7 +3329,7 @@
   },
   {
     "id": 31004,
-    "name": "胜利动作·机枢幻想",
+    "name": "胜利·机枢幻想",
     "desc": "可变更胜利动作。",
     "icon": "T_Fashion_SettlementAction_03",
     "rarity": 5,
@@ -3145,7 +3337,7 @@
   },
   {
     "id": 31005,
-    "name": "胜利动作·罪壤",
+    "name": "胜利·罪壤",
     "desc": "可变更胜利动作。",
     "icon": "T_Fashion_SettlementAction_04",
     "rarity": 5,
@@ -3153,9 +3345,17 @@
   },
   {
     "id": 31006,
-    "name": "胜利动作·初雪小夜曲",
+    "name": "胜利·初雪小夜曲",
     "desc": "可变更胜利动作。",
     "icon": "T_Fashion_SettlementAction_06",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 31007,
+    "name": "胜利·地狱咆哮",
+    "desc": "可变更胜利动作。",
+    "icon": "T_Fashion_SettlementAction_07",
     "rarity": 5,
     "unlock": "通过棱镜兑换获得"
   },
@@ -3744,6 +3944,46 @@
     "unlock": "通过活动获得"
   },
   {
+    "id": 40085,
+    "name": "幽燃残翼·晴蓝",
+    "desc": "残缺的骨架上，仍旧燃烧着无法消散的炽焰。",
+    "icon": "T_Fashion_Back55_04",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 40086,
+    "name": "幽燃残翼·碧绿",
+    "desc": "残缺的骨架上，仍旧燃烧着无法消散的炽焰。",
+    "icon": "T_Fashion_Back55_02",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 40087,
+    "name": "幽燃残翼·锈红",
+    "desc": "残缺的骨架上，仍旧燃烧着无法消散的炽焰。",
+    "icon": "T_Fashion_Back55_03",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 40088,
+    "name": "幽燃残翼·涅白",
+    "desc": "残缺的骨架上，仍旧燃烧着无法消散的炽焰。",
+    "icon": "T_Fashion_Back55_01",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 40089,
+    "name": "光影耀斑",
+    "desc": "羽翼舒展，敛尽白昼的锋芒与午夜的深邃。",
+    "icon": "T_Fashion_Back54",
+    "rarity": 5,
+    "unlock": "通过活动获得"
+  },
+  {
     "id": 50001,
     "name": "",
     "desc": "",
@@ -3800,6 +4040,14 @@
     "unlock": "通过万华获得"
   },
   {
+    "id": 60005,
+    "name": "水墨盘龙",
+    "desc": "乾坤倒悬，阴阳流转。",
+    "icon": "T_Fashion_Fx46",
+    "rarity": 5,
+    "unlock": "通过活动获得"
+  },
+  {
     "id": 70001,
     "name": "摇曳轨迹",
     "desc": "蝴蝶飞过的涟漪唤醒了整个仲夏。",
@@ -3844,6 +4092,14 @@
     "name": "冰封盛放·藕紫",
     "desc": "将世界冻结。",
     "icon": "T_Fashion_Fx35_03",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 70008,
+    "name": "幽燃余烬·晴蓝",
+    "desc": "愤怒如同火焰，将一切烧成灰烬之前永远也不会停歇。",
+    "icon": "T_Fashion_Fx44_02",
     "rarity": 5,
     "unlock": "通过棱镜兑换获得"
   },
@@ -4012,6 +4268,30 @@
     "name": "冰封盛放·鎏金",
     "desc": "将世界冻结。",
     "icon": "T_Fashion_Fx35_02",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 70081,
+    "name": "幽燃余烬·鎏金",
+    "desc": "愤怒如同火焰，将一切烧成灰烬之前永远也不会停歇。",
+    "icon": "T_Fashion_Fx44_01",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 70082,
+    "name": "幽燃余烬·锈红",
+    "desc": "愤怒如同火焰，将一切烧成灰烬之前永远也不会停歇。",
+    "icon": "T_Fashion_Fx44_03",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 70083,
+    "name": "幽燃余烬·绛紫",
+    "desc": "愤怒如同火焰，将一切烧成灰烬之前永远也不会停歇。",
+    "icon": "T_Fashion_Fx44_04",
     "rarity": 5,
     "unlock": "通过棱镜兑换获得"
   },
@@ -4206,5 +4486,61 @@
     "icon": "T_Fashion_Fx34_03",
     "rarity": 5,
     "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 80059,
+    "name": "华彩谢幕",
+    "desc": "流动的卡牌与悠扬的旋律，谱写着最后的谢幕。",
+    "icon": "T_Fashion_Fx45_03",
+    "rarity": 5,
+    "unlock": "通过活动获得"
+  },
+  {
+    "id": 80060,
+    "name": "幽燃怨灵·绛紫",
+    "desc": "被狩猎的灵魂，哀嚎着喷吐出不甘的烈火。",
+    "icon": "T_Fashion_Fx43_03",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 80061,
+    "name": "幽燃怨灵·晴蓝",
+    "desc": "被狩猎的灵魂，哀嚎着喷吐出不甘的烈火。",
+    "icon": "T_Fashion_Fx43_04",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 80062,
+    "name": "幽燃怨灵·鎏金",
+    "desc": "被狩猎的灵魂，哀嚎着喷吐出不甘的烈火。",
+    "icon": "T_Fashion_Fx43_02",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 80063,
+    "name": "幽燃怨灵·锈红",
+    "desc": "被狩猎的灵魂，哀嚎着喷吐出不甘的烈火。",
+    "icon": "T_Fashion_Fx43_01",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 80064,
+    "name": "绕梁之音",
+    "desc": "耳边回响的悠扬旋律。",
+    "icon": "T_Fashion_Fx45_01",
+    "rarity": 5,
+    "unlock": "通过活动获得"
+  },
+  {
+    "id": 80065,
+    "name": "魔术卡牌",
+    "desc": "指尖流动的绮丽魔术。",
+    "icon": "T_Fashion_Fx45_02",
+    "rarity": 5,
+    "unlock": "通过活动获得"
   }
 ]

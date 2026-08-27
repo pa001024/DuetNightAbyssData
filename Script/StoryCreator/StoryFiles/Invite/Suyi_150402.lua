@@ -92,20 +92,20 @@ return {
           {
             startQuest = "17736618156576515607",
             startPort = "Out",
+            endQuest = "1773740183423401",
+            endPort = "Input"
+          },
+          {
+            startQuest = "17839321126113309357",
+            startPort = "Out",
             endQuest = "17731442507236771702",
             endPort = "In"
           },
           {
             startQuest = "17736618156576515607",
             startPort = "Out",
-            endQuest = "17737295688935202063",
-            endPort = "Input"
-          },
-          {
-            startQuest = "17736618156576515607",
-            startPort = "Out",
-            endQuest = "1773740183423401",
-            endPort = "Input"
+            endQuest = "17839321126113309357",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -120,7 +120,7 @@ return {
             key = "17730375406313285419",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 1819.4615384615386, y = 339.25961538461536},
+            pos = {x = 1970.4615384615386, y = 320.25961538461536},
             propsData = {ModeType = 0}
           },
           ["17730375406313285422"] = {
@@ -134,7 +134,7 @@ return {
             key = "17731442507236771702",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1409.1487351657631, y = 313.16307544364827},
+            pos = {x = 1602.1487351657631, y = 312.16307544364827},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -152,10 +152,10 @@ return {
               ProceduralCameraId = 1,
               HideNpcs = false,
               HideMonsters = true,
-              HideAllBattleEntity = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
               HideMechanismsFX = true,
               ShowSkipButton = true,
-              ShowAutoPlayButton = true,
               ShowReviewButton = true,
               ShowWikiButton = true,
               SkipToOption = false,
@@ -193,23 +193,11 @@ return {
               IsWhite = false
             }
           },
-          ["17737295688935202063"] = {
-            key = "17737295688935202063",
-            type = "StandAloneBlackScreenNode",
-            name = "独立黑屏节点",
-            pos = {x = 1398.8881578947367, y = 503.5592105263158},
-            propsData = {
-              FadeInSeconds = 0,
-              FadeOutSeconds = 0,
-              DurationSeconds = 2,
-              IsStandAlone = true
-            }
-          },
           ["1773740183423401"] = {
             key = "1773740183423401",
             type = "SetTimeOfDayNode",
             name = "设置TOD",
-            pos = {x = 1393.9692412850306, y = 713.3052232854865},
+            pos = {x = 1361.241968557758, y = 510.57795055821373},
             propsData = {
               TargetTime = 24,
               NeedLerp = false,
@@ -217,6 +205,35 @@ return {
               StopTimeElapse = false,
               RevertToDefaultWeather = false,
               ForceWeatherType = -1
+            }
+          },
+          ["17839321126113309357"] = {
+            key = "17839321126113309357",
+            type = "TalkNode",
+            name = "对话节点",
+            pos = {x = 1354.1254940711465, y = 314.18475432695055},
+            propsData = {
+              IsNpcNode = false,
+              FirstDialogueId = 80240201,
+              FlowAssetPath = "",
+              TalkType = "Black",
+              BlendInTime = 0,
+              BlendOutTime = 0,
+              ShowFadeDetail = false,
+              BlendEaseExp = 2,
+              ForceAutoPlay = false,
+              ShowSkipButton = true,
+              ShowReviewButton = true,
+              ShowWikiButton = true,
+              BeginNewTargetPointName = "",
+              EndNewTargetPointName = "",
+              CameraLookAtTartgetPoint = "",
+              RestoreStand = false,
+              TalkActors = {},
+              FreezeWorldComposition = false,
+              bTravelFullLoadWorldComposition = false,
+              SwitchToMaster = "None",
+              OverrideFailBlend = false
             }
           }
         },

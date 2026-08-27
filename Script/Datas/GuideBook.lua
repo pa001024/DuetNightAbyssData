@@ -1036,6 +1036,46 @@ return ReadOnly("GuideBook", {
     MechanismTag = "ExpMountFly",
     RewardId = 7000
   },
+  [170] = {
+    CompleteUIGuideId = 159,
+    GuideId = 159,
+    GuideNoteId = 170,
+    GuideNoteTab = 5,
+    RewardId = 7000,
+    SysGuideId = 2126
+  },
+  [171] = {
+    CompleteUIGuideId = 160,
+    GuideId = 160,
+    GuideNoteId = 171,
+    GuideNoteTab = 5,
+    RewardId = 7000,
+    SysGuideId = 2125
+  },
+  [172] = {
+    CompleteUIGuideId = 161,
+    GuideId = 161,
+    GuideNoteId = 172,
+    GuideNoteTab = 3,
+    MechanismTag = "EX02Hammer",
+    RewardId = 7000
+  },
+  [173] = {
+    CompleteUIGuideId = 162,
+    GuideId = 162,
+    GuideNoteId = 173,
+    GuideNoteTab = 3,
+    MechanismTag = "targetboard",
+    RewardId = 7000
+  },
+  [174] = {
+    CompleteUIGuideId = 163,
+    FinishQuest = 11020201,
+    GuideId = 163,
+    GuideNoteId = 174,
+    GuideNoteTab = 3,
+    RewardId = 7000
+  },
   [1001] = {
     CompleteUIGuideId = 10011,
     GuideId = 10011,

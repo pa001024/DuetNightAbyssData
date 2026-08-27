@@ -1841,6 +1841,22 @@
     "rarity": 5
   },
   {
+    "id": 226,
+    "name": "Chant des Géniemon II",
+    "icon": "T_Resource_PetboxIconPro",
+    "rarity": 5,
+    "desc": "Des missions éprouvantes et des aventures extraordinaires ont tissé la légende des Chasseurs de Phoxène, que même les Géniemon chantent à présent.\nPeut être utilisé pour acheter des Coffrets de sélection de Géniemon.",
+    "desc2": "« Bip bip, ba ba ba ba, dou dou dou ! (Hommage à notre maître diligent et chanceux !) »\n \n— Cri enthousiaste d’un Géniemon"
+  },
+  {
+    "id": 227,
+    "name": "Chant des Géniemon I",
+    "icon": "T_Resource_PetboxIcon",
+    "rarity": 5,
+    "desc": "Des missions éprouvantes et des aventures extraordinaires ont tissé la légende des Chasseurs de Phoxène, que même les Géniemon chantent à présent.\nPeut être utilisé pour acheter des Coffrets surprise de Géniemon.",
+    "desc2": "« Bip bip, ba ba ba ba, dou dou dou ! (Hommage à notre maître diligent et chanceux !) »\n \n— Cri enthousiaste d’un Géniemon"
+  },
+  {
     "id": 301,
     "name": "Avantages de réputation : Givrelac",
     "icon": "T_Fame_0101",
@@ -1854,6 +1870,14 @@
     "icon": "T_Fame_0201",
     "rarity": 4,
     "desc": "Permet d’utiliser des montures et de voler dans Port-des-Brumes.",
+    "desc2": "Lorsqu’une personne acquiert suffisamment de réputation, même les comportements les plus inacceptables trouvent une forme de tolérance."
+  },
+  {
+    "id": 303,
+    "name": "RESOURCE_NAME_303",
+    "icon": "T_Fame_0201",
+    "rarity": 4,
+    "desc": "Permet d’utiliser des montures et de voler dans la Gare des Cent-Fleurs.",
     "desc2": "Lorsqu’une personne acquiert suffisamment de réputation, même les comportements les plus inacceptables trouvent une forme de tolérance."
   },
   {
@@ -7510,6 +7534,70 @@
     "desc2": "« Le sabre, c’est l’union du corps et de l’esprit.\nQuand l’âme s’y consacre tout entière, le fil d’acier peut trancher la foudre, fendre les flots, et abattre les monstres des mers. »\n\n— Un bretteur anonyme de Huaxu, <I>Par-delà la Lame</>"
   },
   {
+    "id": 12170,
+    "name": "Hurlement muet : Poignée",
+    "icon": "T_Melee_Weapon_Part01",
+    "rarity": 5,
+    "desc": "Conçue selon les plans de Hurlement muet, cette poignée a été pensée pour ne faire qu’un avec son porteur — dans le creux de la main, le silence devient une prise stable, précise et instinctive.",
+    "desc2": "« Il avance,\nIl avance !\nJ’entends gronder ses pas,\nJ’entends l’Épée du Torrent racler le sol !\nIl vient réclamer la vie des injustes,\nNul ici n’échappera à la tempête !\nCe soir, nul ne résistera à la mort descendue des cieux,\nPas plus qu’on ne saurait lui arracher l’épée des mains ! »\n\n— Extrait de <I>Sous le Courroux des Flots</>, par Alexandre Dumas, dramaturge de la faction du Deuil"
+  },
+  {
+    "id": 12171,
+    "name": "Hurlement muet : Lame gauche",
+    "icon": "T_Melee_Weapon_Part02",
+    "rarity": 5,
+    "desc": "Forgée selon les plans de Hurlement muet, cette lame n’a qu’une vocation : frapper. Peu importe sa forme ou son poids, son fil demeure tendu vers l’instant où le silence se brise.",
+    "desc2": "« Le sabre, c’est l’union du corps et de l’esprit.\nQuand l’âme s’y consacre tout entière, le fil d’acier peut trancher la foudre, fendre les flots, et abattre les monstres des mers. »\n\n— Un bretteur anonyme de Huaxu, <I>Par-delà la Lame</>"
+  },
+  {
+    "id": 12172,
+    "name": "Hurlement muet : Lame droite",
+    "icon": "T_Melee_Weapon_Part02",
+    "rarity": 5,
+    "desc": "Forgée selon les plans de Hurlement muet, cette lame n’a qu’une vocation : frapper. Peu importe sa forme ou son poids, son fil demeure tendu vers l’instant où le silence se brise.",
+    "desc2": "« Le sabre, c’est l’union du corps et de l’esprit.\nQuand l’âme s’y consacre tout entière, le fil d’acier peut trancher la foudre, fendre les flots, et abattre les monstres des mers. »\n\n— Un bretteur anonyme de Huaxu, <I>Par-delà la Lame</>"
+  },
+  {
+    "id": 12173,
+    "name": "Banquet du Chapelier : Corde d’arc",
+    "icon": "T_Melee_Weapon_Part03",
+    "rarity": 5,
+    "desc": "Façonnée selon les plans du Banquet du Chapelier, cette corde d’arc possède une élasticité redoutable. Telle un ressort prêt à bondir, elle libère au moindre contact toute la tension accumulée.",
+    "desc2": "« Assez solide, avec juste ce qu’il faut de souplesse. Dans les mains d’un assassin, cela ferait une arme d’un chic... redoutable. »\n\n— Un romancier anonyme en quête d’inspiration"
+  },
+  {
+    "id": 12174,
+    "name": "Banquet du Chapelier : Bras d’arc supérieur",
+    "icon": "T_Melee_Weapon_Part01",
+    "rarity": 5,
+    "desc": "Façonné selon les plans du Banquet du Chapelier, ce bras d’arc allie souplesse et résistance. Sa courbure harmonieuse canalise la tension comme si chaque tir invitait au début d’un festin absurde.",
+    "desc2": "« Souple, mais robuste — exactement ce qu’il faut pour fabriquer un bon arc. »\n\n— Luno, la forgeronne"
+  },
+  {
+    "id": 12175,
+    "name": "Banquet du Chapelier : Bras d’arc inférieur",
+    "icon": "T_Melee_Weapon_Part01",
+    "rarity": 5,
+    "desc": "Façonné selon les plans du Banquet du Chapelier, ce bras d’arc allie souplesse et résistance. Sa courbure harmonieuse canalise la tension comme si chaque tir invitait au début d’un festin absurde.",
+    "desc2": "« Souple, mais robuste — exactement ce qu’il faut pour fabriquer un bon arc. »\n\n— Luno, la forgeronne"
+  },
+  {
+    "id": 12176,
+    "name": "Sanguis Sanctus – Épée-fouet : Poignée",
+    "icon": "T_Melee_Weapon_Part01",
+    "rarity": 5,
+    "desc": "Conçue selon les plans de Sanguis Sanctus – Épée-fouet, cette poignée a été pensée pour offrir une prise ferme et naturelle — assez proche du porteur pour transmettre le moindre battement du combat.",
+    "desc2": "« Il avance,\nIl avance !\nJ’entends gronder ses pas,\nJ’entends l’Épée du Torrent racler le sol !\nIl vient réclamer la vie des injustes,\nNul ici n’échappera à la tempête !\nCe soir, nul ne résistera à la mort descendue des cieux,\nPas plus qu’on ne saurait lui arracher l’épée des mains ! »\n\n— Extrait de <I>Sous le Courroux des Flots</>, par Alexandre Dumas, dramaturge de la faction du Deuil"
+  },
+  {
+    "id": 12177,
+    "name": "Sanguis Sanctus – Épée-fouet : Lame",
+    "icon": "T_Melee_Weapon_Part02",
+    "rarity": 5,
+    "desc": "Forgée selon les plans de Sanguis Sanctus – Épée-fouet, cette lame existe pour le champ de bataille — droite ou courbe, légère ou pesante, son éclat semble suivre la trace d’un sang que la foi refuse de laisser sécher.",
+    "desc2": "« Le sabre, c’est l’union du corps et de l’esprit.\nQuand l’âme s’y consacre tout entière, le fil d’acier peut trancher la foudre, fendre les flots, et abattre les monstres des mers. »\n\n— Un bretteur anonyme de Huaxu, <I>Par-delà la Lame</>"
+  },
+  {
     "id": 15001,
     "name": "Utilisé pour fabriquer et améliorer les Armes de calamité",
     "icon": "T_Range_Weapon_Part03",
@@ -8342,6 +8430,13 @@
     ]
   },
   {
+    "id": 20526,
+    "name": "Ticket pan-pan",
+    "icon": "T_Resource_ShootingItem",
+    "rarity": 4,
+    "desc": "Ancien ticket de stand de tir autrefois émis à Arcano. Présentez-le pour profiter librement du stand de tir."
+  },
+  {
     "id": 20602,
     "name": "Île du Purgatoire — Tome I",
     "icon": "T_TreasureMap_Prologue",
@@ -8910,6 +9005,46 @@
         ]
       }
     ]
+  },
+  {
+    "id": 20660,
+    "name": "Arcano — Tome I",
+    "icon": "T_TreasureMap_EXChapter01",
+    "rarity": 4,
+    "desc": "Une collection de feuillets énigmatiques trouvés au hasard de vos pérégrinations.\nCertains sont de délicats rouleaux de parchemin, d’autres encore portent l’odeur fraîche d’une encre à peine sèche ; quelques-uns ne sont que des lambeaux arrachés à la hâte d’un vieux carnet.\nOrdonnées ou illisibles, détaillées ou brouillonnes, toutes partagent pourtant un même trait manifeste : chacune indique, à sa manière, l’emplacement d’un \"trésor\".",
+    "desc2": "Poursuis un cerf et offre-le à Maman Lapin, aimée comme une mère ;\nPoursuis un cerf et offre-le à Maman Lapin, vénérée comme une divinité ;\nArrache-lui ses sabots fendus, tranche ses bois indomptés ;\nChâtie son entêtement obstiné !\nDépouille-le de sa douce fourrure et recouds-la de fil et d’aiguille ;\nRecouvre de peau de cerf le sentier jonché de pierres.\nMaman Lapin, viens jusqu’ici !\nTends ta main bienveillante,\nSous le témoignage du <H>Cerf d’Or</>,\nAccorde-moi une seconde vie.\n \n— <I>Hymne à Maman Lapin – Chapitre de la Chasse au Cerf</>"
+  },
+  {
+    "id": 20661,
+    "name": "Arcano — Tome II",
+    "icon": "T_TreasureMap_EXChapter01",
+    "rarity": 4,
+    "desc": "Une collection de feuillets énigmatiques trouvés au hasard de vos pérégrinations.\nCertains sont de délicats rouleaux de parchemin, d’autres encore portent l’odeur fraîche d’une encre à peine sèche ; quelques-uns ne sont que des lambeaux arrachés à la hâte d’un vieux carnet.\nOrdonnées ou illisibles, détaillées ou brouillonnes, toutes partagent pourtant un même trait manifeste : chacune indique, à sa manière, l’emplacement d’un \"trésor\".",
+    "desc2": "Pourquoi refuses-tu de me croire ? Tu t’obstines à dire que ce n’est qu’une <H>Pierre Lapin</> !\nC’est pourtant l’incarnation de Maman Lapin. Tu n’entends donc pas Sa voix ?\n \nCe n’est pas une hallucination, vraiment... Si tu y vas maintenant, tu pourras encore voir Son cadeau. Il est juste <H>à Ses pieds</> !\n \nElle m’a choisi ! Elle m’a reconnu ! Elle m’a pardonné ! Elle m’a invité à rejoindre Son monde, pour La servir à Ses côtés. Là-bas, c’est le paradis, c’est le Paradis, c’est la terre où coule le Fleuve de Miel... C’est le Paradis... le Paradis... le Paradis ! Son Paradis !"
+  },
+  {
+    "id": 20662,
+    "name": "Arcano — Tome III",
+    "icon": "T_TreasureMap_EXChapter01",
+    "rarity": 4,
+    "desc": "Une collection de feuillets énigmatiques trouvés au hasard de vos pérégrinations.\nCertains sont de délicats rouleaux de parchemin, d’autres encore portent l’odeur fraîche d’une encre à peine sèche ; quelques-uns ne sont que des lambeaux arrachés à la hâte d’un vieux carnet.\nOrdonnées ou illisibles, détaillées ou brouillonnes, toutes partagent pourtant un même trait manifeste : chacune indique, à sa manière, l’emplacement d’un \"trésor\".",
+    "desc2": "Félicitations au quatre-vingt-dix-neuvième heureux gagnant des tasses tournantes ! Vous avez décroché le gros lot !\nDescendez d’ici et rendez-vous dans la pièce où un cadeau exceptionnel vous attend. Une récompense à la hauteur de votre incroyable chance.\nJe ne sais pas lequel des habitants d’Arcano vous êtes. Peut-être la petite Ada, toujours prête à s’amuser ? Hahaha ! Enfin, peu importe qui vous êtes. Le Paradis existe avant tout pour rendre les gens heureux. Peu importe à qui cette joie est offerte, c’est une bonne chose.\n \nIci, c’est notre Arcano à tous. Ici, c’est notre foyer, notre Paradis à tous.\nPour ce cadeau inattendu, ne remerciez personne. La seule personne que vous devez remercier, c’est vous-même. C’est votre bonne étoile qui vous a conduit jusqu’ici, et c’est grâce à votre sens de l’observation que vous avez trouvé ce billet et obtenu cette récompense.\nArcano devient chaque jour un endroit meilleur grâce aux efforts de chacun. Il est donc naturel que chacun puisse profiter des fruits de ces efforts.\nAllez maintenant récupérer votre cadeau dans <H>la pièce juste en face, à l’enseigne dorée</> !\n \nJe vous souhaite une merveilleuse journée !\nÀ l’avenir d’Arcano ! À notre avenir !"
+  },
+  {
+    "id": 20663,
+    "name": "Arcano — Tome IV",
+    "icon": "T_TreasureMap_EXChapter01",
+    "rarity": 4,
+    "desc": "Une collection de feuillets énigmatiques trouvés au hasard de vos pérégrinations.\nCertains sont de délicats rouleaux de parchemin, d’autres encore portent l’odeur fraîche d’une encre à peine sèche ; quelques-uns ne sont que des lambeaux arrachés à la hâte d’un vieux carnet.\nOrdonnées ou illisibles, détaillées ou brouillonnes, toutes partagent pourtant un même trait manifeste : chacune indique, à sa manière, l’emplacement d’un \"trésor\".",
+    "desc2": "L’atterrissage d’urgence a échoué. La moitié de mon corps ne répond plus. Je ne pense pas survivre jusqu’à l’arrivée des secours.\nIl reste encore des provisions dans le <H>dirigeable</>. Mes camarades, emportez-les avec vous. Puisse votre mission se dérouler sans encombre.\nSi vous le pouvez, allez dans la soute arrière du dirigeable et trouvez la photo d’une jeune fille aux longs cheveux blonds. Déposez-la sur ma poitrine et enterrez-la avec moi...\nC’est le seul souvenir auquel je tiens encore."
+  },
+  {
+    "id": 20664,
+    "name": "Arcano — Tome V",
+    "icon": "T_TreasureMap_EXChapter01",
+    "rarity": 4,
+    "desc": "Une collection de feuillets énigmatiques trouvés au hasard de vos pérégrinations.\nCertains sont de délicats rouleaux de parchemin, d’autres encore portent l’odeur fraîche d’une encre à peine sèche ; quelques-uns ne sont que des lambeaux arrachés à la hâte d’un vieux carnet.\nOrdonnées ou illisibles, détaillées ou brouillonnes, toutes partagent pourtant un même trait manifeste : chacune indique, à sa manière, l’emplacement d’un \"trésor\".",
+    "desc2": "Ma chère Rosalia,\nJ’arrive bientôt à Arcano. Comme je te l’avais promis, je consignerai toutes mes observations sur cette ville et je te les enverrai par courrier.\nIl paraît que les coutumes locales y sont très particulières. Pour un auteur de romans fantastiques comme moi, c’est tout simplement un lieu rêvé pour trouver l’inspiration !\nTu le sais, je traverse une période où l’inspiration me fait défaut et cela me désespère. Je suis persuadé que venir ici en personne me donnera quantité de nouvelles idées.\nJ’ai déjà trouvé mon histoire. Elle parlera d’une jeune fille qui obtient par hasard une paire de chaussures de danse rouges capables d’exaucer les vœux. Mais en réalité, chaque vœu réalisé exige un prix. Et lorsqu’elle voudra enfin s’en débarrasser, incapable de continuer à en payer le prix, elle découvrira que les chaussures ont fusionné avec ses pieds...\nQu’en penses-tu ? Un conte avec une petite touche d’horreur, ça te plaît ? J’ai déjà rempli une bonne quinzaine de pages de brouillons. Comme je m’y attendais, changer d’environnement stimule vraiment l’inspiration. Une fois ce voyage terminé, je mettrai tout cela au propre avant de l’envoyer de nouveau à une maison d’édition.\n...\nLes habitants sont chaleureux et accueillants, bien loin de l’image effrayante que leur prêtent les rumeurs. J’en étais sûr : la plupart de ces légendes urbaines ne sont que des histoires déformées de bouche à oreille. Il n’y avait vraiment aucune raison de s’inquiéter.\nC’est un peu dommage, finalement... Je comptais justement y puiser de l’inspiration pour mon histoire d’horreur.\nJ’ai un peu trop bu... J’ai la tête qui tourne...\nHein ? Où est-ce que j’ai posé mes bagages déjà ?\nAh... je les vois. <H>À côté du pilier, dans le coin de la pièce</>.\nJ’ai vraiment la tête qui tourne...\nJe ferais mieux d’aller dormir un peu.\n...\n...\nC’est... moi qui ai écrit cette lettre ?\nQui est Rosalia... ?\nEt moi...\nQui suis-je... ?\n \n(La suite de la lettre a été détruite par les flammes. Les bords noircis sont irréguliers et entièrement carbonisés.)"
   },
   {
     "id": 29001,
@@ -11408,6 +11543,14 @@
     ]
   },
   {
+    "id": 29007,
+    "name": "Sphère d’exploration — Montagnes d’Arcano",
+    "icon": "T_ExploreBadge_Beibao_EXChapter02",
+    "rarity": 5,
+    "desc": "Sphères d’exploration recueillies dans les Montagnes d’Arcano. Une fois un certain nombre rassemblé, vous pouvez les remettre à Luno, l’exploratrice, sur la place de Givrelac. Elles témoignent du courage, de la sagesse et de la patience dont vous avez fait preuve en chemin, et peuvent être échangées contre diverses récompenses.",
+    "desc2": "C’étaient des terres brûlées, ravagées par la guerre ; des montagnes reculées où personne ne voulait mettre les pieds.\nC’est là que ces « survivants » ont rebâti une ville coupée du monde, érigeant brique après brique, au milieu du tumulte, le « paradis » qui leur appartenait.\nPartez explorer. Allez voir, allez écouter, et gagnez les Montagnes d’Arcano, là où s’épanouissent les feux d’artifice de l’été."
+  },
+  {
     "id": 30001,
     "name": "Essence vitale",
     "icon": "T_Resource_PolarityPart01",
@@ -11517,7 +11660,7 @@
     "icon": "T_Dye_12",
     "rarity": 5,
     "desc": "Un colorant obtenu par le mélange de diverses essences, capable de produire n’importe quelle teinte fondamentale.",
-    "desc2": "« On dit souvent que les couleurs portent des émotions : le rouge passionné, le vert apaisant, le bleu mélancolique... Les fleurs n’y échappent pas. Une même fleur n’a plus du tout la même âme quand sa teinte change. Alors, lorsque mes clients franchissent la porte, je choisis toujours une couleur selon leur humeur.\n Et vous... laquelle appellera votre cœur ? »\n\n— Psyche, citoyenne de Givrelac"
+    "desc2": "« On dit souvent que les couleurs portent des émotions : le rouge passionné, le vert apaisant, le bleu mélancolique... Les fleurs n’y échappent pas. Une même fleur n’a plus du tout la même âme quand sa teinte change. Alors, lorsque mes clients franchissent la porte, je choisis toujours une couleur selon leur humeur.\nEt vous... laquelle appellera votre cœur ? »\n\n— Psyche, citoyenne de Givrelac"
   },
   {
     "id": 30113,
@@ -11525,7 +11668,7 @@
     "icon": "T_Dye_15",
     "rarity": 4,
     "desc": "Un colorant obtenu par le mélange de diverses essences, capable de produire une teinte rappelant le sirop d’érable.",
-    "desc2": "« On dit souvent que les couleurs portent des émotions : le rouge passionné, le vert apaisant, le bleu mélancolique... Les fleurs n’y échappent pas. Une même fleur n’a plus du tout la même âme quand sa teinte change. Alors, lorsque mes clients franchissent la porte, je choisis toujours une couleur selon leur humeur.\n Et vous... laquelle appellera votre cœur ? »\n\n— Psyche, citoyenne de Givrelac"
+    "desc2": "« On dit souvent que les couleurs portent des émotions : le rouge passionné, le vert apaisant, le bleu mélancolique... Les fleurs n’y échappent pas. Une même fleur n’a plus du tout la même âme quand sa teinte change. Alors, lorsque mes clients franchissent la porte, je choisis toujours une couleur selon leur humeur.\nEt vous... laquelle appellera votre cœur ? »\n\n— Psyche, citoyenne de Givrelac"
   },
   {
     "id": 30114,
@@ -11533,7 +11676,7 @@
     "icon": "T_Dye_15_01",
     "rarity": 4,
     "desc": "Un colorant obtenu par le mélange de diverses essences, capable de produire une teinte évoquant le cacao.",
-    "desc2": "« On dit souvent que les couleurs portent des émotions : le rouge passionné, le vert apaisant, le bleu mélancolique... Les fleurs n’y échappent pas. Une même fleur n’a plus du tout la même âme quand sa teinte change. Alors, lorsque mes clients franchissent la porte, je choisis toujours une couleur selon leur humeur.\n Et vous... laquelle appellera votre cœur ? »\n\n— Psyche, citoyenne de Givrelac"
+    "desc2": "« On dit souvent que les couleurs portent des émotions : le rouge passionné, le vert apaisant, le bleu mélancolique... Les fleurs n’y échappent pas. Une même fleur n’a plus du tout la même âme quand sa teinte change. Alors, lorsque mes clients franchissent la porte, je choisis toujours une couleur selon leur humeur.\nEt vous... laquelle appellera votre cœur ? »\n\n— Psyche, citoyenne de Givrelac"
   },
   {
     "id": 30115,
@@ -11541,7 +11684,7 @@
     "icon": "T_Dye_14",
     "rarity": 4,
     "desc": "Un colorant obtenu par le mélange de diverses essences, capable de produire une teinte semblable aux flots d’azur.",
-    "desc2": "« On dit souvent que les couleurs portent des émotions : le rouge passionné, le vert apaisant, le bleu mélancolique... Les fleurs n’y échappent pas. Une même fleur n’a plus du tout la même âme quand sa teinte change. Alors, lorsque mes clients franchissent la porte, je choisis toujours une couleur selon leur humeur.\n Et vous... laquelle appellera votre cœur ? »\n\n— Psyche, citoyenne de Givrelac"
+    "desc2": "« On dit souvent que les couleurs portent des émotions : le rouge passionné, le vert apaisant, le bleu mélancolique... Les fleurs n’y échappent pas. Une même fleur n’a plus du tout la même âme quand sa teinte change. Alors, lorsque mes clients franchissent la porte, je choisis toujours une couleur selon leur humeur.\nEt vous... laquelle appellera votre cœur ? »\n\n— Psyche, citoyenne de Givrelac"
   },
   {
     "id": 30116,
@@ -11549,7 +11692,7 @@
     "icon": "T_Dye_14_01",
     "rarity": 4,
     "desc": "Un colorant obtenu par le mélange de diverses essences, capable de produire une teinte rappelant les pins anciens.",
-    "desc2": "« On dit souvent que les couleurs portent des émotions : le rouge passionné, le vert apaisant, le bleu mélancolique... Les fleurs n’y échappent pas. Une même fleur n’a plus du tout la même âme quand sa teinte change. Alors, lorsque mes clients franchissent la porte, je choisis toujours une couleur selon leur humeur.\n Et vous... laquelle appellera votre cœur ? »\n\n— Psyche, citoyenne de Givrelac"
+    "desc2": "« On dit souvent que les couleurs portent des émotions : le rouge passionné, le vert apaisant, le bleu mélancolique... Les fleurs n’y échappent pas. Une même fleur n’a plus du tout la même âme quand sa teinte change. Alors, lorsque mes clients franchissent la porte, je choisis toujours une couleur selon leur humeur.\nEt vous... laquelle appellera votre cœur ? »\n\n— Psyche, citoyenne de Givrelac"
   },
   {
     "id": 30117,
@@ -11557,7 +11700,7 @@
     "icon": "T_Dye_13",
     "rarity": 5,
     "desc": "Un colorant obtenu par le mélange de diverses essences, capable de produire une teinte inspirée des fleurs de pêcher.",
-    "desc2": "« On dit souvent que les couleurs portent des émotions : le rouge passionné, le vert apaisant, le bleu mélancolique... Les fleurs n’y échappent pas. Une même fleur n’a plus du tout la même âme quand sa teinte change. Alors, lorsque mes clients franchissent la porte, je choisis toujours une couleur selon leur humeur.\n Et vous... laquelle appellera votre cœur ? »\n\n— Psyche, citoyenne de Givrelac"
+    "desc2": "« On dit souvent que les couleurs portent des émotions : le rouge passionné, le vert apaisant, le bleu mélancolique... Les fleurs n’y échappent pas. Une même fleur n’a plus du tout la même âme quand sa teinte change. Alors, lorsque mes clients franchissent la porte, je choisis toujours une couleur selon leur humeur.\nEt vous... laquelle appellera votre cœur ? »\n\n— Psyche, citoyenne de Givrelac"
   },
   {
     "id": 30118,
@@ -11574,6 +11717,46 @@
     "rarity": 5,
     "desc": "Un colorant obtenu par le mélange de diverses essences rares, permettant de teindre les cheveux de multiples couleurs.",
     "desc2": "On raconte qu’un fugitif de Givrelac, traqué sans relâche par les Veilleurs, aurait tant souffert qu’il en serait devenu aux cheveux blancs en une seule nuit. Ironiquement, ce changement lui permit de leur échapper sous leurs yeux. Par la suite, il erra en modifiant sans cesse la couleur de sa chevelure à l’aide de teintures, jusqu’à inspirer toute une foule de gens ordinaires à en faire autant. De loin, ils ressemblaient à l’enseigne des Asphodèles, au point d’en éblouir la vue.\n\n— Camilla, très satisfaite de sa couleur de cheveux"
+  },
+  {
+    "id": 30120,
+    "name": "Teinture intermédiaire : Profondeurs marines",
+    "icon": "T_Dye_19",
+    "rarity": 4,
+    "desc": "Un colorant obtenu par le mélange de diverses essences, capable de produire une teinte rappelant les profondeurs marines.",
+    "desc2": "« On dit souvent que les couleurs portent des émotions : le rouge passionné, le vert apaisant, le bleu mélancolique... Les fleurs n’y échappent pas. Une même fleur n’a plus du tout la même âme quand sa teinte change. Alors, lorsque mes clients franchissent la porte, je choisis toujours une couleur selon leur humeur.\nEt vous... laquelle appellera votre cœur ? »\n\n— Psyche, citoyenne de Givrelac"
+  },
+  {
+    "id": 30121,
+    "name": "Teinture intermédiaire : Lilas",
+    "icon": "T_Dye_21",
+    "rarity": 4,
+    "desc": "Un colorant obtenu par le mélange de diverses essences, capable de produire une teinte évoquant le lilas.",
+    "desc2": "« On dit souvent que les couleurs portent des émotions : le rouge passionné, le vert apaisant, le bleu mélancolique... Les fleurs n’y échappent pas. Une même fleur n’a plus du tout la même âme quand sa teinte change. Alors, lorsque mes clients franchissent la porte, je choisis toujours une couleur selon leur humeur.\nEt vous... laquelle appellera votre cœur ? »\n\n— Psyche, citoyenne de Givrelac"
+  },
+  {
+    "id": 30122,
+    "name": "Teinture intermédiaire : Campanule",
+    "icon": "T_Dye_20",
+    "rarity": 4,
+    "desc": "Un colorant obtenu par le mélange de diverses essences, capable de produire une teinte inspirée des campanules.",
+    "desc2": "« On dit souvent que les couleurs portent des émotions : le rouge passionné, le vert apaisant, le bleu mélancolique... Les fleurs n’y échappent pas. Une même fleur n’a plus du tout la même âme quand sa teinte change. Alors, lorsque mes clients franchissent la porte, je choisis toujours une couleur selon leur humeur.\nEt vous... laquelle appellera votre cœur ? »\n\n— Psyche, citoyenne de Givrelac"
+  },
+  {
+    "id": 30123,
+    "name": "Teinture intermédiaire : Pomme de pin",
+    "icon": "T_Dye_22",
+    "rarity": 4,
+    "desc": "Un colorant obtenu par le mélange de diverses essences, capable de produire une teinte rappelant les pommes de pin.",
+    "desc2": "« On dit souvent que les couleurs portent des émotions : le rouge passionné, le vert apaisant, le bleu mélancolique... Les fleurs n’y échappent pas. Une même fleur n’a plus du tout la même âme quand sa teinte change. Alors, lorsque mes clients franchissent la porte, je choisis toujours une couleur selon leur humeur.\nEt vous... laquelle appellera votre cœur ? »\n\n— Psyche, citoyenne de Givrelac"
+  },
+  {
+    "id": 30124,
+    "name": "Teinture intermédiaire : Jade",
+    "icon": "T_Dye_18",
+    "rarity": 4,
+    "desc": "Un colorant obtenu par le mélange de diverses essences, capable de produire une teinte évoquant le jade.",
+    "desc2": "« On dit souvent que les couleurs portent des émotions : le rouge passionné, le vert apaisant, le bleu mélancolique... Les fleurs n’y échappent pas. Une même fleur n’a plus du tout la même âme quand sa teinte change. Alors, lorsque mes clients franchissent la porte, je choisis toujours une couleur selon leur humeur.\nEt vous... laquelle appellera votre cœur ? »\n\n— Psyche, citoyenne de Givrelac"
   },
   {
     "id": 40001,
@@ -11857,7 +12040,7 @@
     "name": "Déhanchement fantasque",
     "icon": "T_Resource_Gesture_SkillGomoku",
     "rarity": 4,
-    "desc": "Utiliser la compétence « Posture spéciale »."
+    "desc": "Permet d’utiliser l’animation « Posture spéciale »."
   },
   {
     "id": 41029,
@@ -12114,7 +12297,7 @@
   {
     "id": 41065,
     "name": "Cœur de cristal",
-    "icon": "T_Resource_Gesture_Liuli",
+    "icon": "T_Resource_Gesture_09",
     "rarity": 5,
     "desc": "Figé pour l’éternité à l’instant de son éclosion."
   },
@@ -12140,6 +12323,48 @@
     "desc": "De minuscules flocons tombent dans les rêves d’une jeune fille et jouent avec elle une somptueuse sérénade nocturne."
   },
   {
+    "id": 41069,
+    "name": "Hurlement de Cerbère – Bleu indigo",
+    "icon": "T_Resource_Gesture_Cerberus_Normal",
+    "rarity": 6,
+    "desc": "Veille sur le purgatoire et tient la mort en respect."
+  },
+  {
+    "id": 41070,
+    "name": "Hurlement de Cerbère – Rouille",
+    "icon": "T_Resource_Gesture_Cerberus_Red",
+    "rarity": 6,
+    "desc": "Veille sur le purgatoire et tient la mort en respect."
+  },
+  {
+    "id": 41071,
+    "name": "Hurlement de Cerbère – Doré",
+    "icon": "T_Resource_Gesture_Cerberus_Gold",
+    "rarity": 6,
+    "desc": "Veille sur le purgatoire et tient la mort en respect."
+  },
+  {
+    "id": 41072,
+    "name": "RESOURCE_NAME_41072",
+    "icon": "T_Resource_Gesture_Eve03",
+    "rarity": 6,
+    "desc": "RESOURCE_DESC_41072"
+  },
+  {
+    "id": 41073,
+    "name": "RESOURCE_NAME_41073",
+    "icon": "T_Resource_Gesture_Eve03",
+    "rarity": 6,
+    "desc": "RESOURCE_DESC_41073"
+  },
+  {
+    "id": 41074,
+    "name": "RESOURCE_NAME_41074",
+    "icon": "T_Resource_Gesture_Eve03",
+    "rarity": 6,
+    "desc": "RESOURCE_DESC_41074"
+  },
+  {
     "id": 42001,
     "name": "Nexus mécanique : Fléau des Souillures",
     "icon": "T_Icon_CentralSquare_Equip01",
@@ -12157,17 +12382,17 @@
   },
   {
     "id": 49985,
-    "name": "RESOURCE_NAME_49985",
-    "icon": "T_Mounts_Gesture_0701",
+    "name": "Héraut de la calamité",
+    "icon": "T_Mounts_Gesture_1001",
     "rarity": 6,
-    "desc": "RESOURCE_DESC_49985"
+    "desc": "Là où il passe, la calamité prolifère.\nVitesse de vol +50 %. Aucun avantage de réputation n’est requis pour le vol."
   },
   {
     "id": 49986,
-    "name": "RESOURCE_NAME_49986",
-    "icon": "T_Mounts_Gesture_0701",
-    "rarity": 6,
-    "desc": "RESOURCE_DESC_49986"
+    "name": "Filbert, fonce fonce fonce ! – Doré",
+    "icon": "T_Mounts_Gesture_11",
+    "rarity": 4,
+    "desc": "Groin groin ? Groin groin !"
   },
   {
     "id": 49987,
@@ -12475,15 +12700,17 @@
   },
   {
     "id": 110038,
-    "name": "Portrait : Mademoiselle Rossignol – Ombre feuillue",
-    "icon": "T_Head_Other0014",
-    "rarity": 1
+    "name": "Coffret surprise – Géniemon inactif",
+    "icon": "T_Pack_PetBox01",
+    "rarity": 5,
+    "pack": 351010
   },
   {
     "id": 110039,
-    "name": "Portrait : Chasseuse de lumière – Regard lointain",
-    "icon": "T_Head_Other0016",
-    "rarity": 1
+    "name": "Coffret surprise – Géniemon actif",
+    "icon": "T_Pack_PetBox02",
+    "rarity": 5,
+    "pack": 351000
   },
   {
     "id": 110040,
@@ -12525,7 +12752,7 @@
     "name": "Coffre de Sceau démoniaque — Pactisant Pyro",
     "icon": "T_Pack_RandomMod_16",
     "rarity": 5,
-    "pack": 350020
+    "pack": 350031
   },
   {
     "id": 110047,
@@ -12546,7 +12773,7 @@
     "name": "Coffre de Sceau démoniaque — Pactisant Lumino",
     "icon": "T_Pack_RandomMod_14",
     "rarity": 5,
-    "pack": 350023
+    "pack": 350032
   },
   {
     "id": 110050,
@@ -12644,45 +12871,85 @@
   },
   {
     "id": 110062,
+    "name": "Coffret de sélection de cristaux III",
+    "icon": "T_Pack_ZaieRes02",
+    "rarity": 5,
+    "desc": "Après utilisation, permet de choisir un matériau parmi Cristal Pyro, Cristal Lumino, Cristal Hydro et Cristal Umbro.",
+    "select": 4007
+  },
+  {
+    "id": 110063,
+    "name": "Coffret de sélection d’apparence – Gardien",
+    "icon": "T_Pack_Police",
+    "rarity": 5,
+    "desc": "Permet de choisir une apparence parmi les personnages suivants : Su Yi, Fina, Eve, Fushu, Lynn, Margie, Rhythm, Sibylle ou Daphne.",
+    "select": 5010
+  },
+  {
+    "id": 110064,
     "name": "Sceau démoniaque — Pactisant Anémo",
     "icon": "T_Pack_RandomMod_11",
     "rarity": 5,
     "pack": 350031
   },
   {
-    "id": 110063,
+    "id": 110065,
     "name": "Sceau démoniaque — Pactisant Pyro",
     "icon": "T_Pack_RandomMod_16",
     "rarity": 5,
-    "pack": 350032
+    "pack": 350037
   },
   {
-    "id": 110064,
+    "id": 110066,
     "name": "Sceau démoniaque — Pactisant Électro",
     "icon": "T_Pack_RandomMod_12",
     "rarity": 5,
     "pack": 350033
   },
   {
-    "id": 110065,
+    "id": 110067,
     "name": "Sceau démoniaque — Pactisant Hydro",
     "icon": "T_Pack_RandomMod_13",
     "rarity": 5,
     "pack": 350034
   },
   {
-    "id": 110066,
+    "id": 110068,
     "name": "Sceau démoniaque — Pactisant Lumino",
     "icon": "T_Pack_RandomMod_14",
     "rarity": 5,
-    "pack": 350035
+    "pack": 350038
   },
   {
-    "id": 110067,
+    "id": 110069,
     "name": "Sceau démoniaque — Pactisant Umbro",
     "icon": "T_Pack_RandomMod_15",
     "rarity": 5,
     "pack": 350036
+  },
+  {
+    "id": 110070,
+    "name": "Cadeau en retour",
+    "icon": "T_Pack_Fame",
+    "rarity": 4,
+    "desc": "À l’ouverture, vous pouvez obtenir les objets suivants :\nSable d’or\nTentacule de Souillé\nModule de propulsion\nManuel de communication\nÉlixir d’aiguisage\nBombe\nSupport d’ajustement\nInjecteur de sérum\nPolymère de Souillé\nLiquide de refroidissement\nBougie sacrée\nCristal répulsif",
+    "pack": 220009
+  },
+  {
+    "id": 110071,
+    "name": "Coffret de sélection de Géniemon inactif",
+    "icon": "T_Pack_ChoosePetBox01",
+    "rarity": 5,
+    "desc": "Après utilisation, permet de choisir un Géniemon inactif possédant l’un des traits suivants : Tenace, Habile, Sérénité, Discipliné, Avide, Fugitif ou Vétéran.",
+    "select": 4009
+  },
+  {
+    "id": 110072,
+    "name": "Coffret de sélection de Géniemon actif",
+    "icon": "T_Pack_ChoosePetBox02",
+    "rarity": 5,
+    "desc": "Après utilisation, permet de choisir un Géniemon actif parmi Poto Carta scintillant, Périnou scintillant ou M. Bonne Nuit scintillant.",
+    "select": 4008
   },
   {
     "id": 120001,
@@ -12693,7 +12960,7 @@
   },
   {
     "id": 120002,
-    "name": "Bon d’accessoires Souffle du vent",
+    "name": "Bon d’accessoires – Souffle du vent",
     "icon": "T_Resource_DiscountTicket_01",
     "rarity": 5,
     "desc": "Réduction de 300 Gemmes de Phoxène pour tout achat d’au moins 480 Gemmes de Phoxène"
@@ -12707,17 +12974,24 @@
   },
   {
     "id": 120004,
-    "name": "Bon d’accessoires Étoile d’argent",
+    "name": "Bon d’accessoires – Étoile d’argent",
     "icon": "T_Resource_DiscountTicket_01",
     "rarity": 5,
     "desc": "Réduction de 300 Gemmes de Phoxène pour tout achat d’au moins 480 Gemmes de Phoxène"
   },
   {
     "id": 120005,
-    "name": "Bon d’accessoires du Paradis",
+    "name": "Bon d’accessoires – Paradis",
     "icon": "T_Resource_DiscountTicket_01",
     "rarity": 5,
     "desc": "Réduction de 240 Gemmes de Phoxène pour tout achat d’au moins 300 Gemmes de Phoxène"
+  },
+  {
+    "id": 120006,
+    "name": "Bon d’accessoires – 22ᵉ Lapin blanc",
+    "icon": "T_Resource_DiscountTicket_01",
+    "rarity": 5,
+    "desc": "Réduction de 360 Gemmes de Phoxène pour tout achat d’au moins 480 Gemmes de Phoxène"
   },
   {
     "id": 1001101,
@@ -12745,7 +13019,7 @@
   },
   {
     "id": 1001201,
-    "name": "Fragment de pensée : Chasseur de Phoxène — Umbro",
+    "name": "Fragment de pensée : {nickname} — Umbro",
     "icon": "T_CharPiece_Protagonist02",
     "rarity": 5,
     "desc": "Fragment de pensée extrait des sables mouvants de la mémoire. Il renferme les souvenirs d’une personne — du passé, ou peut-être de l’avenir.",
@@ -12785,7 +13059,7 @@
   },
   {
     "id": 1001601,
-    "name": "Fragment de pensée : Chasseur de Phoxène — Lumino",
+    "name": "Fragment de pensée : {nickname} — Lumino",
     "icon": "T_CharPiece_Protagonist",
     "rarity": 5,
     "desc": "Fragment de pensée extrait des sables mouvants de la mémoire. Il renferme les souvenirs d’une personne — du passé, ou peut-être de l’avenir.",
@@ -12809,8 +13083,16 @@
   },
   {
     "id": 1002102,
-    "name": "Fragment de pensée : Ada (?)",
+    "name": "Fragment de pensée : Eve",
     "icon": "T_CharPiece_Eve",
+    "rarity": 5,
+    "desc": "Fragment de pensée extrait des sables mouvants de la mémoire. Il renferme les souvenirs d’une personne — du passé, ou peut-être de l’avenir.",
+    "desc2": "« Tu portes en toi trois vies.\nLa première est faite de souffle et de battements — c’est avec ta chair et ton sang que tu arpentes la terre et découvres le monde.\nLa deuxième est celle des liens et des attaches — ton âme s’abrite dans la chaleur d’un foyer, dans le baiser d’un être aimé, dans l’étreinte silencieuse d’un ami.\nLa troisième, enfin, est celle de la pensée et du souvenir — lorsqu’un lecteur découvre ton nom sur une page, lorsqu’un voyageur l’entend résonner dans le chant d’un ménestrel, lorsqu’un enfant puise sagesse et courage dans ton histoire... alors ta vie reprend voix dans ce monde.\nTous retournent un jour à la Mer du Silence... mais tous ne connaissent pas la mort véritable. »\n\n— Dame Nifle, Passeuse de la Mer du Silence"
+  },
+  {
+    "id": 1002201,
+    "name": "Fragment de pensée : {nickname2} – Hydro",
+    "icon": "T_CharPiece_EXProtagonist",
     "rarity": 5,
     "desc": "Fragment de pensée extrait des sables mouvants de la mémoire. Il renferme les souvenirs d’une personne — du passé, ou peut-être de l’avenir.",
     "desc2": "« Tu portes en toi trois vies.\nLa première est faite de souffle et de battements — c’est avec ta chair et ton sang que tu arpentes la terre et découvres le monde.\nLa deuxième est celle des liens et des attaches — ton âme s’abrite dans la chaleur d’un foyer, dans le baiser d’un être aimé, dans l’étreinte silencieuse d’un ami.\nLa troisième, enfin, est celle de la pensée et du souvenir — lorsqu’un lecteur découvre ton nom sur une page, lorsqu’un voyageur l’entend résonner dans le chant d’un ménestrel, lorsqu’un enfant puise sagesse et courage dans ton histoire... alors ta vie reprend voix dans ce monde.\nTous retournent un jour à la Mer du Silence... mais tous ne connaissent pas la mort véritable. »\n\n— Dame Nifle, Passeuse de la Mer du Silence"
@@ -12899,6 +13181,14 @@
     "id": 1004102,
     "name": "Fragment de pensée : Zhiliu",
     "icon": "T_CharPiece_Zhiliu",
+    "rarity": 5,
+    "desc": "Fragment de pensée extrait des sables mouvants de la mémoire. Il renferme les souvenirs d’une personne — du passé, ou peut-être de l’avenir.",
+    "desc2": "« Tu portes en toi trois vies.\nLa première est faite de souffle et de battements — c’est avec ta chair et ton sang que tu arpentes la terre et découvres le monde.\nLa deuxième est celle des liens et des attaches — ton âme s’abrite dans la chaleur d’un foyer, dans le baiser d’un être aimé, dans l’étreinte silencieuse d’un ami.\nLa troisième, enfin, est celle de la pensée et du souvenir — lorsqu’un lecteur découvre ton nom sur une page, lorsqu’un voyageur l’entend résonner dans le chant d’un ménestrel, lorsqu’un enfant puise sagesse et courage dans ton histoire... alors ta vie reprend voix dans ce monde.\nTous retournent un jour à la Mer du Silence... mais tous ne connaissent pas la mort véritable. »\n\n— Dame Nifle, Passeuse de la Mer du Silence"
+  },
+  {
+    "id": 1004103,
+    "name": "RESOURCE_NAME_1004103",
+    "icon": "T_CharPiece_SpLise",
     "rarity": 5,
     "desc": "Fragment de pensée extrait des sables mouvants de la mémoire. Il renferme les souvenirs d’une personne — du passé, ou peut-être de l’avenir.",
     "desc2": "« Tu portes en toi trois vies.\nLa première est faite de souffle et de battements — c’est avec ta chair et ton sang que tu arpentes la terre et découvres le monde.\nLa deuxième est celle des liens et des attaches — ton âme s’abrite dans la chaleur d’un foyer, dans le baiser d’un être aimé, dans l’étreinte silencieuse d’un ami.\nLa troisième, enfin, est celle de la pensée et du souvenir — lorsqu’un lecteur découvre ton nom sur une page, lorsqu’un voyageur l’entend résonner dans le chant d’un ménestrel, lorsqu’un enfant puise sagesse et courage dans ton histoire... alors ta vie reprend voix dans ce monde.\nTous retournent un jour à la Mer du Silence... mais tous ne connaissent pas la mort véritable. »\n\n— Dame Nifle, Passeuse de la Mer du Silence"
@@ -12993,7 +13283,7 @@
   },
   {
     "id": 1011201,
-    "name": "Emblème : Chasseur de Phoxène — Umbro",
+    "name": "Emblème : {nickname} — Umbro",
     "icon": "T_Phantom_Nvzhu02",
     "rarity": 5,
     "desc": "Emblème utilisé pour invoquer un compagnon. Il représente un soutien indéfectible au combat, un pacte de camaraderie et une promesse silencieuse.\nQuand la prière porte la pensée, l’être désiré apparaîtra à vos côtés.",
@@ -13033,7 +13323,7 @@
   },
   {
     "id": 1011601,
-    "name": "Emblème : Chasseur de Phoxène — Lumino",
+    "name": "Emblème : {nickname} — Lumino",
     "icon": "T_Phantom_Nvzhu",
     "rarity": 5,
     "desc": "Emblème utilisé pour invoquer un compagnon. Il représente un soutien indéfectible au combat, un pacte de camaraderie et une promesse silencieuse.\nQuand la prière porte la pensée, l’être désiré apparaîtra à vos côtés.",
@@ -13057,8 +13347,16 @@
   },
   {
     "id": 1012102,
-    "name": "Emblème : Ada (?)",
+    "name": "Emblème : Eve",
     "icon": "T_Phantom_Eve",
+    "rarity": 5,
+    "desc": "Emblème utilisé pour invoquer un compagnon. Il représente un soutien indéfectible au combat, un pacte de camaraderie et une promesse silencieuse.\nQuand la prière porte la pensée, l’être désiré apparaîtra à vos côtés.",
+    "desc2": "« Voici notre histoire, vieille de plus de deux millénaires : une épopée faite d’étreintes et de massacres, d’élans de ferveur et d’élans de compassion. L’Histoire, tel le ballet céleste du soleil et de la lune, s’élève et s’abaisse, éternelle et cyclique.\nDans la grande tapisserie du temps relatée dans ces pages, je ne suis qu’une simple observatrice, insignifiante comme un flocon d’Hyperborea, une feuille d’Aethyrie, une goutte des eaux de Luca ou un grain des sables de Khemet.\nEt pourtant, dans cet immense cosmos, j’espère que les flocons se rassembleront en une vaste étendue de neige, que les feuilles formeront des forêts, que les gouttes se joindront pour devenir fleuves, et que les grains s’uniront pour façonner des déserts. Car lorsque toutes les individualités se relient, l’Histoire s’incline en notre faveur. »\n\n— Comnena, conservatrice en chef de la Bibliothèque des Nuages d’Aethyrie, <I>Feuilles et Lune - Chroniques d’Atlasia</>"
+  },
+  {
+    "id": 1012201,
+    "name": "Emblème : {nickname2} – Hydro",
+    "icon": "T_Phantom_WeitaF",
     "rarity": 5,
     "desc": "Emblème utilisé pour invoquer un compagnon. Il représente un soutien indéfectible au combat, un pacte de camaraderie et une promesse silencieuse.\nQuand la prière porte la pensée, l’être désiré apparaîtra à vos côtés.",
     "desc2": "« Voici notre histoire, vieille de plus de deux millénaires : une épopée faite d’étreintes et de massacres, d’élans de ferveur et d’élans de compassion. L’Histoire, tel le ballet céleste du soleil et de la lune, s’élève et s’abaisse, éternelle et cyclique.\nDans la grande tapisserie du temps relatée dans ces pages, je ne suis qu’une simple observatrice, insignifiante comme un flocon d’Hyperborea, une feuille d’Aethyrie, une goutte des eaux de Luca ou un grain des sables de Khemet.\nEt pourtant, dans cet immense cosmos, j’espère que les flocons se rassembleront en une vaste étendue de neige, que les feuilles formeront des forêts, que les gouttes se joindront pour devenir fleuves, et que les grains s’uniront pour façonner des déserts. Car lorsque toutes les individualités se relient, l’Histoire s’incline en notre faveur. »\n\n— Comnena, conservatrice en chef de la Bibliothèque des Nuages d’Aethyrie, <I>Feuilles et Lune - Chroniques d’Atlasia</>"
@@ -13152,6 +13450,14 @@
     "desc2": "« Voici notre histoire, vieille de plus de deux millénaires : une épopée faite d’étreintes et de massacres, d’élans de ferveur et d’élans de compassion. L’Histoire, tel le ballet céleste du soleil et de la lune, s’élève et s’abaisse, éternelle et cyclique.\nDans la grande tapisserie du temps relatée dans ces pages, je ne suis qu’une simple observatrice, insignifiante comme un flocon d’Hyperborea, une feuille d’Aethyrie, une goutte des eaux de Luca ou un grain des sables de Khemet.\nEt pourtant, dans cet immense cosmos, j’espère que les flocons se rassembleront en une vaste étendue de neige, que les feuilles formeront des forêts, que les gouttes se joindront pour devenir fleuves, et que les grains s’uniront pour façonner des déserts. Car lorsque toutes les individualités se relient, l’Histoire s’incline en notre faveur. »\n\n— Comnena, conservatrice en chef de la Bibliothèque des Nuages d’Aethyrie, <I>Feuilles et Lune - Chroniques d’Atlasia</>"
   },
   {
+    "id": 1014103,
+    "name": "RESOURCE_NAME_1014103",
+    "icon": "T_Phantom_SpLise",
+    "rarity": 5,
+    "desc": "Emblème utilisé pour invoquer un compagnon. Il représente un soutien indéfectible au combat, un pacte de camaraderie et une promesse silencieuse.\nQuand la prière porte la pensée, l’être désiré apparaîtra à vos côtés.",
+    "desc2": "« Voici notre histoire, vieille de plus de deux millénaires : une épopée faite d’étreintes et de massacres, d’élans de ferveur et d’élans de compassion. L’Histoire, tel le ballet céleste du soleil et de la lune, s’élève et s’abaisse, éternelle et cyclique.\nDans la grande tapisserie du temps relatée dans ces pages, je ne suis qu’une simple observatrice, insignifiante comme un flocon d’Hyperborea, une feuille d’Aethyrie, une goutte des eaux de Luca ou un grain des sables de Khemet.\nEt pourtant, dans cet immense cosmos, j’espère que les flocons se rassembleront en une vaste étendue de neige, que les feuilles formeront des forêts, que les gouttes se joindront pour devenir fleuves, et que les grains s’uniront pour façonner des déserts. Car lorsque toutes les individualités se relient, l’Histoire s’incline en notre faveur. »\n\n— Comnena, conservatrice en chef de la Bibliothèque des Nuages d’Aethyrie, <I>Feuilles et Lune - Chroniques d’Atlasia</>"
+  },
+  {
     "id": 1014201,
     "name": "Emblème : Yuming",
     "icon": "T_Phantom_Yuming",
@@ -13216,8 +13522,24 @@
     "desc2": "« Voici notre histoire, vieille de plus de deux millénaires : une épopée faite d’étreintes et de massacres, d’élans de ferveur et d’élans de compassion. L’Histoire, tel le ballet céleste du soleil et de la lune, s’élève et s’abaisse, éternelle et cyclique.\nDans la grande tapisserie du temps relatée dans ces pages, je ne suis qu’une simple observatrice, insignifiante comme un flocon d’Hyperborea, une feuille d’Aethyrie, une goutte des eaux de Luca ou un grain des sables de Khemet.\nEt pourtant, dans cet immense cosmos, j’espère que les flocons se rassembleront en une vaste étendue de neige, que les feuilles formeront des forêts, que les gouttes se joindront pour devenir fleuves, et que les grains s’uniront pour façonner des déserts. Car lorsque toutes les individualités se relient, l’Histoire s’incline en notre faveur. »\n\n— Comnena, conservatrice en chef de la Bibliothèque des Nuages d’Aethyrie, <I>Feuilles et Lune - Chroniques d’Atlasia</>"
   },
   {
+    "id": 1021101,
+    "name": "Pensée condensée : Berenica",
+    "icon": "T_CharPiece_Heitao01",
+    "rarity": 5,
+    "desc": "Pensée intacte extraite des sables mouvants de la mémoire. Elle renferme les souvenirs d’une personne — du passé, ou peut-être de l’avenir.",
+    "desc2": "« Tu portes en toi trois vies.\nLa première est faite de souffle et de battements — c’est avec ta chair et ton sang que tu arpentes la terre et découvres le monde.\nLa deuxième est celle des liens et des attaches — ton âme s’abrite dans la chaleur d’un foyer, dans le baiser d’un être aimé, dans l’étreinte silencieuse d’un ami.\nLa troisième, enfin, est celle de la pensée et du souvenir — lorsqu’un lecteur découvre ton nom sur une page, lorsqu’un voyageur l’entend résonner dans le chant d’un ménestrel, lorsqu’un enfant puise sagesse et courage dans ton histoire... alors ta vie reprend voix dans ce monde.\nTous retournent un jour à la Mer du Silence... mais tous ne connaissent pas la mort véritable. »\n\n— Dame Nifle, Passeuse de la Mer du Silence"
+  },
+  {
+    "id": 1021501,
+    "name": "Pensée condensée : Lisbell",
+    "icon": "T_CharPiece_Baonu01",
+    "rarity": 5,
+    "desc": "Pensée intacte extraite des sables mouvants de la mémoire. Elle renferme les souvenirs d’une personne — du passé, ou peut-être de l’avenir.",
+    "desc2": "« Tu portes en toi trois vies.\nLa première est faite de souffle et de battements — c’est avec ta chair et ton sang que tu arpentes la terre et découvres le monde.\nLa deuxième est celle des liens et des attaches — ton âme s’abrite dans la chaleur d’un foyer, dans le baiser d’un être aimé, dans l’étreinte silencieuse d’un ami.\nLa troisième, enfin, est celle de la pensée et du souvenir — lorsqu’un lecteur découvre ton nom sur une page, lorsqu’un voyageur l’entend résonner dans le chant d’un ménestrel, lorsqu’un enfant puise sagesse et courage dans ton histoire... alors ta vie reprend voix dans ce monde.\nTous retournent un jour à la Mer du Silence... mais tous ne connaissent pas la mort véritable. »\n\n— Dame Nifle, Passeuse de la Mer du Silence"
+  },
+  {
     "id": 1022101,
-    "name": "Pensée condensée — Rebecca",
+    "name": "Pensée condensée : Rebecca",
     "icon": "T_CharPiece_Shuimu01",
     "rarity": 5,
     "desc": "Pensée intacte extraite des sables mouvants de la mémoire. Elle renferme les souvenirs d’une personne — du passé, ou peut-être de l’avenir.",
@@ -13225,8 +13547,16 @@
   },
   {
     "id": 1023201,
-    "name": "Pensée condensée — Vulcera",
+    "name": "Pensée condensée : Vulcera",
     "icon": "T_CharPiece_Haier01",
+    "rarity": 5,
+    "desc": "Pensée intacte extraite des sables mouvants de la mémoire. Elle renferme les souvenirs d’une personne — du passé, ou peut-être de l’avenir.",
+    "desc2": "« Tu portes en toi trois vies.\nLa première est faite de souffle et de battements — c’est avec ta chair et ton sang que tu arpentes la terre et découvres le monde.\nLa deuxième est celle des liens et des attaches — ton âme s’abrite dans la chaleur d’un foyer, dans le baiser d’un être aimé, dans l’étreinte silencieuse d’un ami.\nLa troisième, enfin, est celle de la pensée et du souvenir — lorsqu’un lecteur découvre ton nom sur une page, lorsqu’un voyageur l’entend résonner dans le chant d’un ménestrel, lorsqu’un enfant puise sagesse et courage dans ton histoire... alors ta vie reprend voix dans ce monde.\nTous retournent un jour à la Mer du Silence... mais tous ne connaissent pas la mort véritable. »\n\n— Dame Nifle, Passeuse de la Mer du Silence"
+  },
+  {
+    "id": 1023202,
+    "name": "Pensée condensée : Camilla",
+    "icon": "T_CharPiece_Kami01",
     "rarity": 5,
     "desc": "Pensée intacte extraite des sables mouvants de la mémoire. Elle renferme les souvenirs d’une personne — du passé, ou peut-être de l’avenir.",
     "desc2": "« Tu portes en toi trois vies.\nLa première est faite de souffle et de battements — c’est avec ta chair et ton sang que tu arpentes la terre et découvres le monde.\nLa deuxième est celle des liens et des attaches — ton âme s’abrite dans la chaleur d’un foyer, dans le baiser d’un être aimé, dans l’étreinte silencieuse d’un ami.\nLa troisième, enfin, est celle de la pensée et du souvenir — lorsqu’un lecteur découvre ton nom sur une page, lorsqu’un voyageur l’entend résonner dans le chant d’un ménestrel, lorsqu’un enfant puise sagesse et courage dans ton histoire... alors ta vie reprend voix dans ce monde.\nTous retournent un jour à la Mer du Silence... mais tous ne connaissent pas la mort véritable. »\n\n— Dame Nifle, Passeuse de la Mer du Silence"
@@ -15592,6 +15922,110 @@
     ]
   },
   {
+    "id": 2000127,
+    "name": "Manuel d’utilisation",
+    "icon": "T_Read_01",
+    "rarity": 3,
+    "desc": "Consignes placées près des attractions. En balayant les cendres noircies, on parvient encore à distinguer quelques fragments de texte.",
+    "desc2": "Veuillez respecter scrupuleusement les étapes suivantes lors de l’utilisation (<H>surtout Ada !</>) :\n1) Afin d’éviter tout accident, l’attraction ne doit être utilisée qu’en présence d’au moins deux personnes.\n2) Avant de jouer, vérifiez que les raccords de l’appareil ne sont pas desserrés. Le cas échéant, vous trouverez des outils de réparation dans la boîte située à l’arrière. (Si c’est Ada qui va les chercher, surveillez-la bien pour qu’elle les remette correctement à leur place.)\n3) Une fois l’appareil solidement fixé, vous pouvez tenter de le démarrer. Un bruit important au lancement et un temps de démarrage prolongé sont des phénomènes normaux. (Espérons que cela ne fera pas peur aux enfants.)\n4) En cas de problème technique impossible à résoudre, demandez à Morgana de s’en charger. (Ne laissez surtout jamais Ada s’occuper seule d’un problème technique ! À moins de trouver les pannes existantes trop faciles à réparer et de vouloir vous ajouter un défi.)\n5) ...\n(Le texte qui suit est illisible.)"
+  },
+  {
+    "id": 2000128,
+    "name": "Enregistrement d’un légionnaire tombé au combat",
+    "icon": "T_Read_02",
+    "rarity": 3,
+    "desc": "Appareil d’enregistrement endommagé. D’après son contenu, il appartenait sans doute à un commandant d’unité de dirigeables durant la guerre d’il y a quatre ans.",
+    "desc2": "...\nNous avons atteint la ligne frontalière.\n \nLe raid aérien porte ses fruits. Les forces avancées d’Élysium battent en retraite. Continuez à ce rythme... Attendez, qu’est-ce que c’est que ce truc lancé depuis leurs positions ?! Virez à gauche, tous les appareils, manœuvre d’évitement immédiate !\n ...\nKhh... L’unité de dirigeables n° 4 a subi une contre-attaque des Émissaires Célestes d’Élysium ! Pertes sévères ! Demande de renforts, je répète : demande de renforts...\n...\nLes gars... les Émissaires Célestes d’Élysium ont lancé une contre-offensive totale sur toutes les lignes de front. Ils ont déjà franchi la zone de combat avancée et pénètrent au cœur même de l’Empire ! Nos pertes sont catastrophiques !\n...\nJe viens de recevoir le dernier ordre. Atterrissage forcé dans le secteur des Montagnes d’Arcano. Tenir cette position coûte que coûte et maintenir l’ennemi dans la zone de bombardement de notre artillerie... Hahaha... allez, les gars, voyez le bon côté des choses : mourir en emportant autant de soldats de l’Église Élyséenne avec nous... ce n’est pas une si mauvaise affaire..."
+  },
+  {
+    "id": 2000129,
+    "name": "Carnet d’un soldat de l’Église Élyséenne",
+    "icon": "T_Read_02",
+    "rarity": 3,
+    "desc": "Carnet d’un soldat de l’Église Élyséenne. L’écriture est tremblante et irrégulière ; son propriétaire était manifestement déjà très affaibli au moment de rédiger ces lignes.",
+    "desc2": "Si quelqu’un retrouve ce carnet, qu’il révèle au monde les crimes de l’Empire. Il ne faut pas laisser les enfants des dieux souffrir davantage.\n \nCes salauds de la Légion impériale ont abandonné les forces alliées ainsi que les villes civiles, puis ont lancé un bombardement à grande échelle sans la moindre hésitation. Grâce à la protection des Émissaires Célestes et aux bénédictions divines, nous avons survécu de justesse. Mais...\n ...\nSans qu’aucun de nous ait besoin de le dire à voix haute, nous avons tous compris la même chose : notre fuite s’arrêterait ici... Même si nous avions posé des mines durant notre retraite, elles ne retiendraient sans doute les poursuivants qu’un court instant, et nos réserves étaient déjà épuisées.\n \nPlus personne ne quitterait jamais cette vallée...\n \nÔ Dieux, pardonnez notre échec. Nous n’avons pas réussi à exterminer ces maudits blasphémateurs. Ô Dieux, guidez mes frères d’armes vers votre royaume. Jusqu’à leur dernier souffle, ils ont continué à réciter vos prières. Ô Dieux, je vous en supplie...\n \n(Le reste du texte est recouvert d’un sang noirci. Seuls quelques mots, griffonnés tout en bas de la page, restent encore lisibles.)\n \nJe... ne veux pas mourir..."
+  },
+  {
+    "id": 2000130,
+    "name": "Enregistrement d’un soldat anonyme",
+    "icon": "T_Read_02",
+    "rarity": 3,
+    "desc": "Enregistrement d’un soldat. Bien qu’il ait survécu plus longtemps que la plupart des soldats d’il y a quatre ans, et qu’il ait consigné les horreurs de cette époque sur cet appareil, il n’a finalement pas échappé à la mort.",
+    "desc2": "Du feu... Il y a du feu partout... Des alarmes stridentes et des hurlements partout... Je me souviens maintenant : le <H>Marteau</> a raté son atterrissage forcé...\nDu rouge. Je ne vois plus que du rouge... Un rouge brûlant...\n...\nLe commandant m’a tiré hors du Marteau... Les attaques d’Élysium n’avaient pas cessé. Dans le communicateur, il me semble avoir entendu que le gros des troupes avait été contraint d’atterrir d’urgence dans la vallée au sud. Nous devons trouver un moyen de les rejoindre... Nous devons retenir l’armée d’Élysium ici...\n...\nCes maudits chiens de l’Église Élyséenne ont bloqué tous les chemins de montagne. Le commandant a été touché en couvrant ma retraite... Pas de renforts. Pas de ravitaillement. Pas d’espoir...\n \nNous ne pouvons compter que sur nous-mêmes.\n...\nLe vacarme assourdissant des bombardements m’a tiré de mon sommeil. Je le reconnaissais : c’était le tonnerre de l’artillerie de notre Empire...\nJe sentais toute la chaîne de montagnes trembler. Haha... Hahaha... Voilà ce qu’il en coûte de provoquer la Légion, haha, khh... khh, khh...\nAprès je ne sais combien de vagues de bombardements, le commandant est parti à la recherche d’autres survivants...\n \nMaintenant... Le monde entier est silencieux.\nC’est rassurant... Si calme... Si froid...\nBonne nuit... monde..."
+  },
+  {
+    "id": 2000131,
+    "name": "Règlement d’Arcano",
+    "icon": "T_Read_02",
+    "rarity": 3,
+    "desc": "Règlement affiché dans tout le village du Paradis. Tous les habitants sont tenus de s’y conformer.",
+    "desc2": "- Première règle : les Montagnes d’Arcano sont notre Paradis. Nous sommes tous les Lapins Blancs de Maman Lapin. \n- Deuxième règle : tous les Lapins Blancs doivent s’aimer les uns les autres. Toute violence entre Lapins Blancs est interdite. En cas de conflit, celui-ci doit être résolu par le jeu.\n- Troisième règle : il existe de nombreuses couleurs de lapins. Les lapins blancs sont nos amis. Les lapins rouges sont dangereux. Si vous apercevez un lapin rouge, signalez-le immédiatement au chef du village.\n- Quatrième règle : la Parade du Paradis est la plus grande fête d’Arcano. Lors de cette célébration, une partie doit avoir lieu.\n- Cinquième règle : les jouets des Montagnes d’Arcano sont nos compagnons bienveillants. Vous pouvez accepter leur protection et leur aide.\n- Sixième règle : tous les Lapins Blancs doivent se souvenir de leur nom d’arcane. Il représente leur essence. N’agissez jamais contre votre essence.\n- Septième règle : les grands hommes de métal qui flottent dans le ciel sont les ennemis du Paradis. Si vous en voyez un, abandonnez immédiatement ce que vous êtes en train de faire et rendez-vous à l’Étang du Repos.\n- Huitième règle : si vous enfreignez une règle, l’Étang du Repos vous aidera à retrouver la paix intérieure.\n- Neuvième règle : en l’absence d’un grand homme de métal dans le ciel, il est interdit d’approcher l’Étang du Repos sans l’autorisation du chef du village.\n- Dixième règle : afin que notre quotidien ne soit pas perturbé par les troubles du monde extérieur, aucun Lapin Blanc ne doit quitter notre Paradis sans raison valable."
+  },
+  {
+    "id": 2000132,
+    "name": "Le Goûter sans fin",
+    "icon": "T_Read_01",
+    "rarity": 3,
+    "desc": "Livre de contes rédigé par un auteur inconnu. En le feuilletant attentivement, on sent poindre une étrange inquiétude derrière ces histoires.",
+    "desc2": "L’heure du goûter a sonné. Ici vous attendent des feux d’artifice éclatants, des parures somptueuses, des friandises sans fin, d’adorables animaux et les rires des convives ;\nL’heure du goûter a sonné. Ici vous attendent des tempêtes déchaînées, des feux d’artifice éclatants, des parures somptueuses, des friandises sans fin, d’adorables animaux et les rires des convives ;\nL’heure du goûter a sonné. Ici vous attendent une scène en flammes, des feux d’artifice éclatants, des parures somptueuses, des friandises sans fin, d’adorables animaux et les rires des convives ;\nL’heure du goûter a sonné. Ici vous attendent de la mousse luxuriante, des feux d’artifice éclatants, des parures somptueuses, des friandises sans fin, d’adorables animaux et les rires des convives ;\nL’heure du goûter a sonné. Ici vous attendent des feux d’artifice éclatants, des parures somptueuses, des friandises sans fin, d’adorables animaux et les rires des convives ;\nVenez, les lapins nous serviront l’hydromel, les fleurs nous couvriront de glaçage ;\nVenez prendre place sous les feux d’artifice d’une nuit d’été, et offrir à ces instants merveilleux une bénédiction qui ne connaîtra jamais de fin."
+  },
+  {
+    "id": 2000133,
+    "name": "Lettre manuscrite de l’Empereur",
+    "icon": "T_Read_03",
+    "rarity": 3,
+    "desc": "Lettre secrète de Sa Majesté Julius adressée à {nickname2}. Elle ne doit absolument être vue par personne d’autre.",
+    "desc2": "À brûler après lecture.\nProtège Vergilius.\nDans les six mois à venir, assassine le duc Servius sans laisser la moindre trace."
+  },
+  {
+    "id": 2000134,
+    "name": "Lettre de détresse ensanglantée",
+    "icon": "T_Read_03",
+    "rarity": 3,
+    "desc": "Lettre de détresse retrouvée près des ossements d’un pigeon. Quelques traces de sang et de chair adhèrent encore aux os, preuve qu’il a récemment été dévoré par un rapace avant d’être abandonné ici. Cette lettre, elle, n’a jamais pu quitter les Montagnes d’Arcano.",
+    "desc2": "Je ne sais pas jusqu’où cette lettre ira, ni qui la lira, mais vous qui lisez ces mots, je vous en supplie... sauvez-moi... Je me trouve dans le nouveau village d’Arcano, au cœur des Montagnes d’Arcano. Ce pigeon devrait pouvoir vous mener jusqu’ici...\n \nJ’étais une simple femme au foyer de Rougerive. Mon mari, Fred, était un explorateur disparu il y a plusieurs années dans les Montagnes d’Arcano. Pour le retrouver, je suis venue à mon tour jusqu’ici... mais je ne m’attendais pas à découvrir un tout nouveau village d’Arcano.\n \nSeulement, ce nouveau village d’Arcano n’a rien de la ville touristique que nous connaissions. C’est un endroit coupé du monde extérieur, rempli de fous !\n \nPour ne pas être tués par la maîtresse du village, « Maman Lapin », tous ceux qui y entrent doivent jouer le rôle qu’elle leur impose. Mon mari, Fred... a été tué par cette folle...\n \nJe voulais venger mon mari, mais je n’ai ni arme ni force. Face au pouvoir terrifiant de Maman Lapin, de simples gens comme nous ne peuvent même pas se défendre.\n \nJe voulais fuir, mais je ne sais pas combien d’habitants sont encore lucides, ni combien sont les yeux et les oreilles de Maman Lapin. J’ai vu de mes propres yeux deux amis proches se trahir : l’un a dénoncé le projet de fuite de l’autre, et celui qui avait été dénoncé a été noyé vivant sous nos yeux à tous. Le plus terrifiant, c’est que les autres n’ont montré aucune tristesse. Ils répétaient sans cesse des mots comme sommeil dans l’eau, renaissance et retrouvailles...\n \nPour survivre, je n’ai eu d’autre choix que de jouer le jeu et d’incarner « Teresa », douce et bienveillante. Mais en voyant les visages familiers disparaître un à un, puis être remplacés par d’autres, je ne peux plus tenir... Je ne sais pas si je serai la prochaine à disparaître. Je ne sais pas si, demain, « Teresa » sera remplacée par quelqu’un d’autre... J’ai peur. Si peur que j’en oublie parfois comment respirer... Cette sensation d’étouffement née de la panique pourrait me faire perdre la raison à tout instant...\n \nAvant de m’effondrer, j’ai enfin écrit cette lettre de détresse... Si vous la lisez, je vous en supplie, faites-moi sortir des Montagnes d’Arcano. Si vous m’aidez à fuir, je ferai tout ce que vous voudrez... Je vous en supplie..."
+  },
+  {
+    "id": 2000135,
+    "name": "Déposition d’Eric Woodville",
+    "icon": "T_Read_02",
+    "rarity": 3,
+    "desc": "Rapport d’interrogatoire d’un habitant remis à Vergilius par un soldat de la Légion. Il s’agit de la déposition d’Eric Woodville.",
+    "desc2": "Je suis Eric Woodville, folkloriste d’Aethyrie. Il y a trois ans, afin de découvrir s’il restait des habitants survivants à Arcano, je suis venu dans les Montagnes d’Arcano avec mon assistante.\n \nPar la suite, nous avons tous deux été placés sous l’emprise de Maman Lapin et retenus de force dans les montagnes. Au début, sous l’effet des drogues, j’ai même cru être Isaac, un habitant du village. C’est mon assistante Catherine qui m’a réveillé. Ici, elle jouait le rôle du « Magicien », Morgana.\n \nElle est mon élève la plus brillante et la plus talentueuse. C’est aussi elle qui m’a convaincu de continuer à jouer le rôle exigé par Maman Lapin, car face à une force absolue, nous ne pouvions qu’endurer en silence et attendre l’occasion idéale, celle qui nous permettrait à coup sûr de nous échapper.\n \nNous nous sommes donc appliqués à incarner nos rôles respectifs et à nous fondre dans la vie du Paradis. Bien sûr, nous avons aussi regardé froidement les autres mourir sans intervenir.\n \nJe vous demande de pardonner mon égoïsme et celui de Catherine, mais pour notre propre sécurité, nous ne pouvions agir autrement...\n \nNous aurons sans doute bien du mal à revoir {性别2:ce jeune officier|cette jeune officière}. Officier, si cela vous est possible, je vous prie de lui transmettre mes remerciements.\n \n(La déposition concorde globalement avec celle du « Magicien ». Contacter les représentants diplomatiques d’Aethyrie pour procéder à une vérification d’identité approfondie.)"
+  },
+  {
+    "id": 2000136,
+    "name": "Déposition de « La Tempérance »",
+    "icon": "T_Read_02",
+    "rarity": 3,
+    "desc": "Rapport d’interrogatoire d’un habitant remis à Vergilius par un soldat de la Légion. Il s’agit de la déposition de « La Tempérance » (véritable identité inconnue).",
+    "desc2": "Je... je ne me souviens plus de qui je suis...\n \nIl y a longtemps, je crois que j’avais noté dans un carnet comment je m’appelais, et combien de jours j’avais passés au Paradis.\n \nMais après avoir bu cette eau plusieurs fois, j’ai même oublié où j’avais rangé ce carnet...\n \nMessieurs les officiers, où va-t-on m’emmener maintenant ? Sans le Paradis, sous quelle identité suis-je censé vivre ?\n \nNon, non, je ne vous accuse pas, messieurs les officiers. C’est juste que je ne sais pas... Je ne sais pas... Je ne sais plus rien du tout...\n \n(Fin de l’enregistrement. La victime présente de fortes fluctuations émotionnelles et n’est pas en état de poursuivre l’interrogatoire.)"
+  },
+  {
+    "id": 2000137,
+    "name": "Déposition de « La Tour »",
+    "icon": "T_Read_02",
+    "rarity": 3,
+    "desc": "Rapport d’interrogatoire d’un habitant remis à Vergilius par un soldat de la Légion. Il s’agit de la déposition de « La Tour » (véritable identité inconnue).",
+    "desc2": "Tout le monde s’est mis à courir, alors j’ai couru aussi.\n \n... Monsieur l’officier, tout le monde dit que les armes sont dangereuses. Pourquoi est-ce que vous en portez ?\n \nVictor aussi m’a posé des questions... Les Déchus, ou je ne sais quoi... Qu’est-ce que ça veut dire, exactement... ? Pourquoi est-ce qu’on m’a frappé... ?\n \nEuh... Vous voulez ce symbole super cool, messieurs les officiers... ? Je peux aussi vous le dessiner sur vos vêtements. Vous arrêterez de me frapper, après... ? Maman Lapin fait peur, mais vous aussi, vous faites très peur...\n \n(Aucune information utile obtenue. Première hypothèse : les effets de la substance lui ont fait perdre les souvenirs liés aux Déchus. Transféré à la Prison Militaire Royale pour interrogatoire approfondi.)"
+  },
+  {
+    "id": 2000138,
+    "name": "Déposition de Tom",
+    "icon": "T_Read_02",
+    "rarity": 3,
+    "desc": "Rapport d’interrogatoire d’un habitant remis à Vergilius par un soldat de la Légion. Il s’agit de la déposition de Tom.",
+    "desc2": "Hahahahahaha ! Je me suis enfin tiré de là, hahahahaha ! Pardon, pardon, messieurs les officiers, je suis un peu trop excité... Héhé, hahahahahaha !\n \n(Une série d’insultes incohérentes.)\n \nKhh... Hum, ça y est. Posez vos questions, messieurs les officiers. Je vous dirai tout ce que je sais, hahahaha !\n \nÇa fait un bien fou de pouvoir parler comme un être humain, ******, putain que c’est bon !\n \n(Une série d’insultes incohérentes.)\n \nAh, je m’appelle Tom. Mon nom de famille, j’en sais rien. Je n’ai pas perdu la mémoire, pourtant. C’est juste que depuis que je suis gosse, j’ai toujours vécu dehors. Je ne sais même pas qui étaient mes parents. En général, on m’appelait petit mendiant, sale bâtard, ce genre de trucs. Choisissez celui qui vous plaît le plus, messieurs les officiers, héhé.\n \n(La victime est en état d’excitation intense. Peu d’informations utiles obtenues.)"
+  },
+  {
+    "id": 2000139,
+    "name": "Déposition de Jenny Blount",
+    "icon": "T_Read_02",
+    "rarity": 3,
+    "desc": "Rapport d’interrogatoire d’un habitant remis à Vergilius par un soldat de la Légion. Il s’agit de la déposition de Jenny Blount.",
+    "desc2": "Je m’appelle Jenny Blount. Je ne suis qu’une simple citoyenne de Rougerive. S’il fallait vraiment citer quelque chose de particulier chez moi, je dirais que, dans ma jeunesse, j’étais téméraire... et que je tenais beaucoup trop à ma fierté.\n \nIl y a deux ans, alors que je prenais le thé dans un café, j’ai entendu des gens raconter avec force détails des légendes sur les Montagnes d’Arcano. Je n’ai pas pu m’empêcher de me moquer d’eux : se laisser effrayer par des légendes urbaines bonnes à faire peur aux enfants, franchement...\n \nAlors ils ont insisté en disant que ces rumeurs étaient vraies, et ont voulu parier avec moi. Naturellement, je n’y croyais pas. J’ai donc accepté leur pari et je suis venue faire un voyage dans les Montagnes d’Arcano.\n \nLe résultat, vous l’avez sous les yeux, messieurs les officiers... À peine arrivée, j’ai été piégée ici par Maman Lapin pendant deux ans. Ah... À mon âge, pourquoi est-ce que j’ai absolument voulu avoir le dernier mot ce jour-là... Ah...\n \n(La victime nous a communiqué plusieurs rumeurs au sujet des Montagnes d’Arcano. Peu d’informations utiles obtenues.)"
+  },
+  {
     "id": 3000001,
     "name": "Boîte d’étoiles en papier",
     "icon": "T_Impression_Star",
@@ -15868,6 +16302,94 @@
         ]
       }
     ]
+  },
+  {
+    "id": 3101401,
+    "name": "Gare des Cent-Fleurs",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "Une feuille de musique dont les notes tracent une histoire, comme des pas laissés dans le sable.",
+    "desc2": "« Lorsque vos doigts effleurent les touches, les notes s’éveillent — chuchotement du vent, soupir du temps, bruissement secret des pousses nouvelles sous la terre.\nElles donnent voix aux histoires anciennes, aux vœux inachevés des héros, aux récits jamais confiés au papier.\nElles témoignent de tout ce qui a un jour existé sur cette terre. »\n\n— Lirico, la ménestrelle"
+  },
+  {
+    "id": 3101402,
+    "name": "L’Heure du goûter",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "Une feuille de musique dont les notes tracent une histoire, comme des pas laissés dans le sable.",
+    "desc2": "« Lorsque vos doigts effleurent les touches, les notes s’éveillent — chuchotement du vent, soupir du temps, bruissement secret des pousses nouvelles sous la terre.\nElles donnent voix aux histoires anciennes, aux vœux inachevés des héros, aux récits jamais confiés au papier.\nElles témoignent de tout ce qui a un jour existé sur cette terre. »\n\n— Lirico, la ménestrelle"
+  },
+  {
+    "id": 3101403,
+    "name": "Pas glissés légers",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "Une feuille de musique dont les notes tracent une histoire, comme des pas laissés dans le sable.",
+    "desc2": "« Lorsque vos doigts effleurent les touches, les notes s’éveillent — chuchotement du vent, soupir du temps, bruissement secret des pousses nouvelles sous la terre.\nElles donnent voix aux histoires anciennes, aux vœux inachevés des héros, aux récits jamais confiés au papier.\nElles témoignent de tout ce qui a un jour existé sur cette terre. »\n\n— Lirico, la ménestrelle"
+  },
+  {
+    "id": 3101404,
+    "name": "Hilda : Les Vertus d’une servante",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "Une feuille de musique dont les notes tracent une histoire, comme des pas laissés dans le sable.",
+    "desc2": "« Lorsque vos doigts effleurent les touches, les notes s’éveillent — chuchotement du vent, soupir du temps, bruissement secret des pousses nouvelles sous la terre.\nElles donnent voix aux histoires anciennes, aux vœux inachevés des héros, aux récits jamais confiés au papier.\nElles témoignent de tout ce qui a un jour existé sur cette terre. »\n\n— Lirico, la ménestrelle"
+  },
+  {
+    "id": 3101405,
+    "name": "Valse des Cent-Fleurs",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "Une feuille de musique dont les notes tracent une histoire, comme des pas laissés dans le sable.",
+    "desc2": "« Lorsque vos doigts effleurent les touches, les notes s’éveillent — chuchotement du vent, soupir du temps, bruissement secret des pousses nouvelles sous la terre.\nElles donnent voix aux histoires anciennes, aux vœux inachevés des héros, aux récits jamais confiés au papier.\nElles témoignent de tout ce qui a un jour existé sur cette terre. »\n\n— Lirico, la ménestrelle"
+  },
+  {
+    "id": 3101406,
+    "name": "L’Art de l’explosion",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "Une feuille de musique dont les notes tracent une histoire, comme des pas laissés dans le sable.",
+    "desc2": "« Lorsque vos doigts effleurent les touches, les notes s’éveillent — chuchotement du vent, soupir du temps, bruissement secret des pousses nouvelles sous la terre.\nElles donnent voix aux histoires anciennes, aux vœux inachevés des héros, aux récits jamais confiés au papier.\nElles témoignent de tout ce qui a un jour existé sur cette terre. »\n\n— Lirico, la ménestrelle"
+  },
+  {
+    "id": 3101407,
+    "name": "Flora : La Captive dorée",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "Une feuille de musique dont les notes tracent une histoire, comme des pas laissés dans le sable.",
+    "desc2": "« Lorsque vos doigts effleurent les touches, les notes s’éveillent — chuchotement du vent, soupir du temps, bruissement secret des pousses nouvelles sous la terre.\nElles donnent voix aux histoires anciennes, aux vœux inachevés des héros, aux récits jamais confiés au papier.\nElles témoignent de tout ce qui a un jour existé sur cette terre. »\n\n— Lirico, la ménestrelle"
+  },
+  {
+    "id": 3101408,
+    "name": "Couronne",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "Une feuille de musique dont les notes tracent une histoire, comme des pas laissés dans le sable.",
+    "desc2": "« Lorsque vos doigts effleurent les touches, les notes s’éveillent — chuchotement du vent, soupir du temps, bruissement secret des pousses nouvelles sous la terre.\nElles donnent voix aux histoires anciennes, aux vœux inachevés des héros, aux récits jamais confiés au papier.\nElles témoignent de tout ce qui a un jour existé sur cette terre. »\n\n— Lirico, la ménestrelle"
+  },
+  {
+    "id": 3101409,
+    "name": "Festin de mort",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "Une feuille de musique dont les notes tracent une histoire, comme des pas laissés dans le sable.",
+    "desc2": "« Lorsque vos doigts effleurent les touches, les notes s’éveillent — chuchotement du vent, soupir du temps, bruissement secret des pousses nouvelles sous la terre.\nElles donnent voix aux histoires anciennes, aux vœux inachevés des héros, aux récits jamais confiés au papier.\nElles témoignent de tout ce qui a un jour existé sur cette terre. »\n\n— Lirico, la ménestrelle"
+  },
+  {
+    "id": 3101410,
+    "name": "Pacte éternel",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "Une feuille de musique dont les notes tracent une histoire, comme des pas laissés dans le sable.",
+    "desc2": "« Lorsque vos doigts effleurent les touches, les notes s’éveillent — chuchotement du vent, soupir du temps, bruissement secret des pousses nouvelles sous la terre.\nElles donnent voix aux histoires anciennes, aux vœux inachevés des héros, aux récits jamais confiés au papier.\nElles témoignent de tout ce qui a un jour existé sur cette terre. »\n\n— Lirico, la ménestrelle"
+  },
+  {
+    "id": 3101411,
+    "name": "Traversée de la Mer du Silence",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "Une feuille de musique dont les notes tracent une histoire, comme des pas laissés dans le sable.",
+    "desc2": "« Lorsque vos doigts effleurent les touches, les notes s’éveillent — chuchotement du vent, soupir du temps, bruissement secret des pousses nouvelles sous la terre.\nElles donnent voix aux histoires anciennes, aux vœux inachevés des héros, aux récits jamais confiés au papier.\nElles témoignent de tout ce qui a un jour existé sur cette terre. »\n\n— Lirico, la ménestrelle"
   },
   {
     "id": 4010001,
@@ -21831,6 +22353,166 @@
     "desc2": "« Chaque région possède ses légendes de monstres aquatiques. Mais au bout du compte, il s’agit presque toujours d’un grand poisson local à la croissance anormale. Le prétendu monstre des eaux de Cocytus ne fait pas exception. »\n \n— Un érudit anonyme feuilletant un recueil de légendes urbaines"
   },
   {
+    "id": 5033010,
+    "name": "Double-face",
+    "icon": "T_Fish_FreshWater_EX02_1",
+    "rarity": 3,
+    "desc": "Poisson d’eau douce vivant dans la province de Flagson. Il doit son nom à ses deux nageoires dorsales, semblables à des voiles dressées à l’avant et à l’arrière de son corps. Sa chair est si savoureuse que de nombreux pêcheurs continuent de le capturer au risque de se faire mordre par ses dents acérées.",
+    "desc2": "« Ne te fie pas à son air paisible. Tu vois toutes ces traces de dents sur ma main ? C’est un Double-face qui me les a faites. Comme quoi, on peut connaître la face d’un poisson sans savoir ce qu’il a dans le cœur. »\n \n— Un pêcheur pansant ses blessures"
+  },
+  {
+    "id": 5033011,
+    "name": "Double-face variant",
+    "icon": "T_Fish_FreshWater_EX02_1_1",
+    "rarity": 3,
+    "desc": "Poisson d’eau douce vivant dans la province de Flagson. Il doit son nom à ses deux nageoires dorsales, semblables à des voiles dressées à l’avant et à l’arrière de son corps. Sa chair est si savoureuse que de nombreux pêcheurs continuent de le capturer au risque de se faire mordre par ses dents acérées.",
+    "desc2": "« Ne te fie pas à son air paisible. Tu vois toutes ces traces de dents sur ma main ? C’est un Double-face qui me les a faites. Comme quoi, on peut connaître la face d’un poisson sans savoir ce qu’il a dans le cœur. »\n \n— Un pêcheur pansant ses blessures"
+  },
+  {
+    "id": 5033020,
+    "name": "Pochon",
+    "icon": "T_Fish_FreshWater_EX02_2",
+    "rarity": 3,
+    "desc": "Poisson d’eau douce vivant dans la province de Flagson. Il passe le plus clair de son temps immobile, tapi au fond des rivières. À l’approche d’un prédateur, il se laisse emporter par le courant pour s’éloigner à toute vitesse. Sa couleur brunâtre et son étrange façon de dériver lui valent d’être souvent confondu avec un vieux pochon flottant dans l’eau.",
+    "desc2": "« Qui est assez mal élevé pour jeter des sacs dans la rivière ?! Hein... Attendez, attendez, attendez ! C’est un poisson ! Et il est énorme ! Je vais enfin pouvoir rentrer avec autre chose qu’un seau vide ! »\n \n— Un pêcheur qui rentre toujours bredouille"
+  },
+  {
+    "id": 5033021,
+    "name": "Pochon variant",
+    "icon": "T_Fish_FreshWater_EX02_2_1",
+    "rarity": 3,
+    "desc": "Poisson d’eau douce vivant dans la province de Flagson. Il passe le plus clair de son temps immobile, tapi au fond des rivières. À l’approche d’un prédateur, il se laisse emporter par le courant pour s’éloigner à toute vitesse. Sa couleur brunâtre et son étrange façon de dériver lui valent d’être souvent confondu avec un vieux pochon flottant dans l’eau.",
+    "desc2": "« Qui est assez mal élevé pour jeter des sacs dans la rivière ?! Hein... Attendez, attendez, attendez ! C’est un poisson ! Et il est énorme ! Je vais enfin pouvoir rentrer avec autre chose qu’un seau vide ! »\n \n— Un pêcheur qui rentre toujours bredouille"
+  },
+  {
+    "id": 5033030,
+    "name": "Lampion nageur",
+    "icon": "T_Fish_FreshWater_EX02_3",
+    "rarity": 4,
+    "desc": "Poisson d’eau douce vivant dans la province de Flagson. Lorsqu’il baigne dans la lumière, son corps émet des lueurs fluorescentes rouges et bleues. Son intérêt réside donc bien davantage dans sa beauté que dans ses qualités gustatives.",
+    "desc2": "« Il n’est même pas grand comme la paume de ma main... Peu importe comment je le cuisine, ça ne donnera rien. Même un chat ou un chien n’en ferait qu’une bouchée. Tant pis, je vais le garder dans la cuisine et arrêter de chercher comment le manger. »\n \n— Un cuisinier plongé dans ses réflexions"
+  },
+  {
+    "id": 5033031,
+    "name": "Lampion nageur variant",
+    "icon": "T_Fish_FreshWater_EX02_3_1",
+    "rarity": 4,
+    "desc": "Poisson d’eau douce vivant dans la province de Flagson. Lorsqu’il baigne dans la lumière, son corps émet des lueurs fluorescentes rouges et bleues. Son intérêt réside donc bien davantage dans sa beauté que dans ses qualités gustatives.",
+    "desc2": "« Il n’est même pas grand comme la paume de ma main... Peu importe comment je le cuisine, ça ne donnera rien. Même un chat ou un chien n’en ferait qu’une bouchée. Tant pis, je vais le garder dans la cuisine et arrêter de chercher comment le manger. »\n \n— Un cuisinier plongé dans ses réflexions"
+  },
+  {
+    "id": 5033040,
+    "name": "Castor roux",
+    "icon": "T_Fish_FreshWater_EX02_4",
+    "rarity": 4,
+    "desc": "Sous-espèce de castor vivant dans la province de Flagson, reconnaissable à son pelage brun-roux. Malgré son apparence pataude et placide, il fait preuve d’une agilité remarquable et peut parcourir une grande distance en un éclair dans l’eau, ce qui le rend extrêmement difficile à capturer.",
+    "desc2": "« Si j’avais su qu’il y avait des castors roux dans cette rivière, je n’y aurais jamais placé mes nasses. Il ne leur a fallu qu’une journée pour toutes les ronger. Elles sont complètement inutilisables... »\n \n— Un pêcheur dépité"
+  },
+  {
+    "id": 5033041,
+    "name": "Castor roux variant",
+    "icon": "T_Fish_FreshWater_EX02_4_1",
+    "rarity": 4,
+    "desc": "Sous-espèce de castor vivant dans la province de Flagson, reconnaissable à son pelage brun-roux. Malgré son apparence pataude et placide, il fait preuve d’une agilité remarquable et peut parcourir une grande distance en un éclair dans l’eau, ce qui le rend extrêmement difficile à capturer.",
+    "desc2": "« Si j’avais su qu’il y avait des castors roux dans cette rivière, je n’y aurais jamais placé mes nasses. Il ne leur a fallu qu’une journée pour toutes les ronger. Elles sont complètement inutilisables... »\n \n— Un pêcheur dépité"
+  },
+  {
+    "id": 5033050,
+    "name": "Rubis d’eau",
+    "icon": "T_Fish_FreshWater_EX02_5",
+    "rarity": 5,
+    "desc": "Poisson d’eau douce vivant aux alentours de Rougerive. Son corps tout entier brille tel un splendide rubis, ajoutant de nouvelles lueurs éclatantes aux eaux rouges de la région. Bien que quelques spécimens aient été observés dans plusieurs affluents de la province de Flagson, l’espèce reste globalement rare et les captures demeurent exceptionnelles.",
+    "desc2": "« Je vous ai demandé des rubis de grande qualité ! Qu’est-ce que vous voulez que je fasse de ce poisson ?! »\n \n— Un marchand de pierres précieuses furieux"
+  },
+  {
+    "id": 5033051,
+    "name": "Rubis d’eau variant",
+    "icon": "T_Fish_FreshWater_EX02_5_1",
+    "rarity": 5,
+    "desc": "Poisson d’eau douce vivant aux alentours de Rougerive. Son corps tout entier brille tel un splendide rubis, ajoutant de nouvelles lueurs éclatantes aux eaux rouges de la région. Bien que quelques spécimens aient été observés dans plusieurs affluents de la province de Flagson, l’espèce reste globalement rare et les captures demeurent exceptionnelles.",
+    "desc2": "« Je vous ai demandé des rubis de grande qualité ! Qu’est-ce que vous voulez que je fasse de ce poisson ?! »\n \n— Un marchand de pierres précieuses furieux"
+  },
+  {
+    "id": 5034010,
+    "name": "Sac détrempé",
+    "icon": "T_Fish_DirtyWater_EX02_1",
+    "rarity": 3,
+    "desc": "Un sac tombé dans l’eau on ne sait comment. Quels que soient les objets précieux qu’il ait pu contenir autrefois, il ne s’agit plus aujourd’hui que d’une loque détrempée, déchirée et parfaitement inutilisable.",
+    "desc2": "« Qui est assez mal élevé pour jeter des sacs dans la rivière ?! »\n \n— Un pêcheur qui rentre toujours bredouille"
+  },
+  {
+    "id": 5034011,
+    "name": "Sac détrempé variant",
+    "icon": "T_Fish_DirtyWater_EX02_1_1",
+    "rarity": 3,
+    "desc": "Un sac tombé dans l’eau on ne sait comment. Quels que soient les objets précieux qu’il ait pu contenir autrefois, il ne s’agit plus aujourd’hui que d’une loque détrempée, déchirée et parfaitement inutilisable.",
+    "desc2": "« Qui est assez mal élevé pour jeter des sacs dans la rivière ?! »\n \n— Un pêcheur qui rentre toujours bredouille"
+  },
+  {
+    "id": 5034020,
+    "name": "Débris métalliques",
+    "icon": "T_Fish_DirtyWater_EX02_2",
+    "rarity": 3,
+    "desc": "Débris métalliques retrouvés dans les lacs de la Faille des Montagnes d’Arcano. Impossible de savoir s’ils proviennent de l’un des dirigeables qui s’y sont écrasés autrefois ou d’un obus. Par précaution, mieux vaut les isoler et en confier la récupération à des spécialistes.",
+    "desc2": "« Après toutes ces années sous l’eau, ces pièces sont encore remarquablement bien conservées. Voilà toute la fiabilité du matériel produit par l’Académie d’Alchimie. »\n \n— Un alchimiste examinant les débris"
+  },
+  {
+    "id": 5034021,
+    "name": "Débris métalliques variants",
+    "icon": "T_Fish_DirtyWater_EX02_2_1",
+    "rarity": 3,
+    "desc": "Débris métalliques retrouvés dans les lacs de la Faille des Montagnes d’Arcano. Impossible de savoir s’ils proviennent de l’un des dirigeables qui s’y sont écrasés autrefois ou d’un obus. Par précaution, mieux vaut les isoler et en confier la récupération à des spécialistes.",
+    "desc2": "« Après toutes ces années sous l’eau, ces pièces sont encore remarquablement bien conservées. Voilà toute la fiabilité du matériel produit par l’Académie d’Alchimie. »\n \n— Un alchimiste examinant les débris"
+  },
+  {
+    "id": 5034030,
+    "name": "Botte militaire réglementaire",
+    "icon": "T_Fish_DirtyWater_EX02_3",
+    "rarity": 4,
+    "desc": "Une botte appartenant à un soldat de la Légion, retrouvée dans les lacs de la Faille des Montagnes d’Arcano. Son propriétaire a péri depuis longtemps sans même laisser de dépouille derrière lui. Seule demeure cette botte, immergée dans les eaux contaminées, ultime témoin du destin d’un soldat anonyme.",
+    "desc2": "« Puissiez-vous reposer en paix. »\n \n— Un soldat de la Légion fouillant les Montagnes d’Arcano"
+  },
+  {
+    "id": 5034031,
+    "name": "Botte militaire réglementaire variante",
+    "icon": "T_Fish_DirtyWater_EX02_3_1",
+    "rarity": 4,
+    "desc": "Une botte appartenant à un soldat de la Légion, retrouvée dans les lacs de la Faille des Montagnes d’Arcano. Son propriétaire a péri depuis longtemps sans même laisser de dépouille derrière lui. Seule demeure cette botte, immergée dans les eaux contaminées, ultime témoin du destin d’un soldat anonyme.",
+    "desc2": "« Puissiez-vous reposer en paix. »\n \n— Un soldat de la Légion fouillant les Montagnes d’Arcano"
+  },
+  {
+    "id": 5034040,
+    "name": "Épée longue corrodée",
+    "icon": "T_Fish_DirtyWater_EX02_4",
+    "rarity": 4,
+    "desc": "Une épée longue appartenant à un soldat de l’Église Élyséenne, retrouvée dans les lacs de la Faille des Montagnes d’Arcano. Sa lame est couverte de prières et de bénédictions témoignant de la foi fervente de son propriétaire. Une foi qui, pourtant, ne put sauver sa fragile existence.",
+    "desc2": "« Je ne suis point seul, car les Dieux demeurent toujours à mes côtés ;\nje ne suis point vaillant, car Ils m’accordent toujours Leur force ;\ntous les êtres sont égarés, et Eux seuls peuvent nous guider.\nPuisse cette épée protéger ma chair et guider mon âme. »\n \n— Un soldat de l’Église Élyséenne en prière"
+  },
+  {
+    "id": 5034041,
+    "name": "Épée longue corrodée variante",
+    "icon": "T_Fish_DirtyWater_EX02_4_1",
+    "rarity": 4,
+    "desc": "Une épée longue appartenant à un soldat de l’Église Élyséenne, retrouvée dans les lacs de la Faille des Montagnes d’Arcano. Sa lame est couverte de prières et de bénédictions témoignant de la foi fervente de son propriétaire. Une foi qui, pourtant, ne put sauver sa fragile existence.",
+    "desc2": "« Je ne suis point seul, car les Dieux demeurent toujours à mes côtés ;\nje ne suis point vaillant, car Ils m’accordent toujours Leur force ;\ntous les êtres sont égarés, et Eux seuls peuvent nous guider.\nPuisse cette épée protéger ma chair et guider mon âme. »\n \n— Un soldat de l’Église Élyséenne en prière"
+  },
+  {
+    "id": 5034050,
+    "name": "Substance alchimique inconnue",
+    "icon": "T_Fish_DirtyWater_EX02_5",
+    "rarity": 5,
+    "desc": "Une substance alchimique inconnue retrouvée dans les lacs de la Faille des Montagnes d’Arcano. La plupart des enveloppes qui servaient à la contenir sont désormais gravement endommagées, laissant s’écouler une matière aux reflets inquiétants. Même un profane comprendrait au premier regard à quel point elle est dangereuse.",
+    "desc2": "« Vérification des outils : aucun problème. Vérification de l’équipement de protection : aucun problème. Début de l’opération de récupération. »\n \n— Un alchimiste s’apprêtant à récupérer la substance"
+  },
+  {
+    "id": 5034051,
+    "name": "Substance alchimique inconnue variante",
+    "icon": "T_Fish_DirtyWater_EX02_5_1",
+    "rarity": 5,
+    "desc": "Une substance alchimique inconnue retrouvée dans les lacs de la Faille des Montagnes d’Arcano. La plupart des enveloppes qui servaient à la contenir sont désormais gravement endommagées, laissant s’écouler une matière aux reflets inquiétants. Même un profane comprendrait au premier regard à quel point elle est dangereuse.",
+    "desc2": "« Vérification des outils : aucun problème. Vérification de l’équipement de protection : aucun problème. Début de l’opération de récupération. »\n \n— Un alchimiste s’apprêtant à récupérer la substance"
+  },
+  {
     "id": 5110100,
     "name": "Canne d’entraînement",
     "icon": "T_FishingRod_Normal_1",
@@ -22362,7 +23044,7 @@
     "name": "Insigne de Géniemon",
     "icon": "T_Coin_ActivityRacing",
     "rarity": 5,
-    "desc": "Insigne métallique spécialement conçu par la gare pour chaque Géniemon participant. Le nom de son propriétaire et ses résultats sont gravés au dos. Leurs maîtres en sont ravis... et les Géniemons semblent tout aussi enchantés par ces petits objets brillants !"
+    "desc": "Insigne métallique spécialement conçu par la gare pour chaque Géniemon participant. Le nom de son propriétaire et ses résultats sont gravés au dos. Leurs maîtres en sont ravis... et les Géniemon semblent tout aussi enchantés par ces petits objets brillants !"
   },
   {
     "id": 31001001,
@@ -23606,7 +24288,7 @@
   },
   {
     "id": 101120101,
-    "name": "Emblème : Chasseur de Phoxène — Umbro",
+    "name": "Emblème : {nickname} — Umbro",
     "icon": "T_Phantom_Nanzhu02",
     "rarity": 5,
     "desc": "Emblème utilisé pour invoquer un compagnon. Il représente un soutien indéfectible au combat, un pacte de camaraderie et une promesse silencieuse.\nQuand la prière porte la pensée, l’être désiré apparaîtra à vos côtés.",
@@ -23614,8 +24296,16 @@
   },
   {
     "id": 101160101,
-    "name": "Emblème : Chasseur de Phoxène — Lumino",
+    "name": "Emblème : {nickname} — Lumino",
     "icon": "T_Phantom_Nanzhu",
+    "rarity": 5,
+    "desc": "Emblème utilisé pour invoquer un compagnon. Il représente un soutien indéfectible au combat, un pacte de camaraderie et une promesse silencieuse.\nQuand la prière porte la pensée, l’être désiré apparaîtra à vos côtés.",
+    "desc2": "« Voici notre histoire, vieille de plus de deux millénaires : une épopée faite d’étreintes et de massacres, d’élans de ferveur et d’élans de compassion. L’Histoire, tel le ballet céleste du soleil et de la lune, s’élève et s’abaisse, éternelle et cyclique.\nDans la grande tapisserie du temps relatée dans ces pages, je ne suis qu’une simple observatrice, insignifiante comme un flocon d’Hyperborea, une feuille d’Aethyrie, une goutte des eaux de Luca ou un grain des sables de Khemet.\nEt pourtant, dans cet immense cosmos, j’espère que les flocons se rassembleront en une vaste étendue de neige, que les feuilles formeront des forêts, que les gouttes se joindront pour devenir fleuves, et que les grains s’uniront pour façonner des déserts. Car lorsque toutes les individualités se relient, l’Histoire s’incline en notre faveur. »\n\n— Comnena, conservatrice en chef de la Bibliothèque des Nuages d’Aethyrie, <I>Feuilles et Lune - Chroniques d’Atlasia</>"
+  },
+  {
+    "id": 101220101,
+    "name": "Emblème : {nickname2} – Hydro",
+    "icon": "T_Phantom_WeitaM",
     "rarity": 5,
     "desc": "Emblème utilisé pour invoquer un compagnon. Il représente un soutien indéfectible au combat, un pacte de camaraderie et une promesse silencieuse.\nQuand la prière porte la pensée, l’être désiré apparaîtra à vos côtés.",
     "desc2": "« Voici notre histoire, vieille de plus de deux millénaires : une épopée faite d’étreintes et de massacres, d’élans de ferveur et d’élans de compassion. L’Histoire, tel le ballet céleste du soleil et de la lune, s’élève et s’abaisse, éternelle et cyclique.\nDans la grande tapisserie du temps relatée dans ces pages, je ne suis qu’une simple observatrice, insignifiante comme un flocon d’Hyperborea, une feuille d’Aethyrie, une goutte des eaux de Luca ou un grain des sables de Khemet.\nEt pourtant, dans cet immense cosmos, j’espère que les flocons se rassembleront en une vaste étendue de neige, que les feuilles formeront des forêts, que les gouttes se joindront pour devenir fleuves, et que les grains s’uniront pour façonner des déserts. Car lorsque toutes les individualités se relient, l’Histoire s’incline en notre faveur. »\n\n— Comnena, conservatrice en chef de la Bibliothèque des Nuages d’Aethyrie, <I>Feuilles et Lune - Chroniques d’Atlasia</>"

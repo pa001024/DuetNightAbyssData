@@ -1,3 +1,7 @@
+local T = {}
+T.RT_1 = {
+  [1] = 16
+}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -47,12 +51,22 @@ return ReadOnly("BoxDrop", {
       1030200205,
       1030200206
     },
-    RewardCount = {
-      [1] = 16
-    },
+    RewardCount = T.RT_1,
     RewardId = {
       [1] = 114107,
       [2] = 114104
+    }
+  },
+  [10302003] = {
+    BoxCoinId = 223,
+    BoxMaximum = 36,
+    BoxPerDay = 2,
+    CoinPerBox = 3,
+    EventId = 10302003,
+    RewardCount = T.RT_1,
+    RewardId = {
+      [1] = 114109,
+      [2] = 114108
     }
   }
 })

@@ -59,7 +59,7 @@ function Account:SdkLogin()
   }
   local BDC_Info = {
     appkey = HeroUSDKSubsystem:GetAppKey(),
-    channel_id = HeroUSDKSubsystem:GetChannelId(),
+    channel_id = HeroUSDKSubsystem:GetCachedChannelIdForReport(),
     app_channel_id = HeroUSDKSubsystem:GetAppChannelId(),
     device_id = HeroUSDKSubsystem:GetBDCDeviceID(),
     img_channel_id = HeroUSDKSubsystem:GetMirrorChannelId(),

@@ -33,6 +33,33 @@ function Menu_Portrait_List_PC_C:InitContent(Params, PopupData, Owner)
   local GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
   if IsValid(GameInputModeSubsystem) then
     GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.RefreshOpInfoByInputDevice)
+    if GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then
+      self:RefreshScrollBoxGamepadView()
+    else
+      self:RefreshScrollBoxKeyboardView()
+    end
+  end
+end
+
+function Menu_Portrait_List_PC_C:RefreshScrollBoxGamepadView()
+  if self.Scroll_Box then
+    self.Scroll_Box:SetControlScrollbarInside(false)
+    self.Scroll_Box:SetScrollBarVisibility(ESlateVisibility.Visible)
+    self:AddTimer(0.1, function()
+      local ScrollBoxOffsetEnd = self.Scroll_Box:GetScrollOffsetOfEnd()
+      if ScrollBoxOffsetEnd > 0 then
+        self:ShowGamepadScrollBtn(true)
+      else
+        self:ShowGamepadScrollBtn(false)
+      end
+    end)
+  end
+end
+
+function Menu_Portrait_List_PC_C:RefreshScrollBoxKeyboardView()
+  if self.Scroll_Box then
+    self.Scroll_Box:SetScrollBarVisibility(ESlateVisibility.Collapsed)
+    self.Scroll_Box:SetControlScrollbarInside(true)
   end
 end
 
@@ -171,11 +198,34 @@ function Menu_Portrait_List_PC_C:SetHeadFrameInfo(Id)
       self.Head_Frame:SetVisibility(UIConst.VisibilityOp.Visible)
     end
   end
+  local bIsShowScrollBox = false
   if -1 ~= Id then
-    local Name = GText(DataMgr.HeadFrame[Id].Name)
+    local PortraitConfigData = DataMgr.HeadFrame[Id]
+    local Name = GText(PortraitConfigData.Name)
     if self.IsHeadFrame then
       self.Text_RoleName:SetText(Name)
+      local DesText = PortraitConfigData.Des
+      if DesText then
+        bIsShowScrollBox = true
+        self.Text_Unlock:SetText(GText(DesText))
+      else
+        bIsShowScrollBox = false
+      end
     end
+  end
+  if bIsShowScrollBox then
+    self.Scroll_Box:SetScrollOffset(0)
+    self.Scroll_Box:SetVisibility(UIConst.VisibilityOp.Visible)
+    local GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
+    if IsValid(GameInputModeSubsystem) then
+      if GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then
+        self:RefreshScrollBoxGamepadView()
+      else
+        self:RefreshScrollBoxKeyboardView()
+      end
+    end
+  else
+    self.Scroll_Box:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
 end
 
@@ -471,6 +521,7 @@ end
 function Menu_Portrait_List_PC_C:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   local IsUseKeyAndMouse = CurInputDevice == ECommonInputType.MouseAndKeyboard
   if IsUseKeyAndMouse then
+    self:RefreshScrollBoxKeyboardView()
   else
     local UsedList = self.List_Item
     if self.IsHeadFrame then
@@ -483,7 +534,21 @@ function Menu_Portrait_List_PC_C:RefreshOpInfoByInputDevice(CurInputDevice, CurG
         Item.SelfWidget:SetGamePadFocus()
       end
     end
+    self:RefreshScrollBoxGamepadView()
   end
+end
+
+function Menu_Portrait_List_PC_C:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
+  local InKey = UE4.UKismetInputLibrary.GetKey(InAnalogInputEvent)
+  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  local AddOffset = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent) * 5
+  if "Gamepad_RightY" == InKeyName then
+    local CurScrollOffset = self.Scroll_Box:GetScrollOffset()
+    local ScrollOffset = math.clamp(CurScrollOffset - AddOffset, 0, self.Scroll_Box:GetScrollOffsetOfEnd())
+    self.Scroll_Box:SetScrollOffset(ScrollOffset)
+    return UIUtils.Handled
+  end
+  return UIUtils.UnHandled
 end
 
 function Menu_Portrait_List_PC_C:Destruct()

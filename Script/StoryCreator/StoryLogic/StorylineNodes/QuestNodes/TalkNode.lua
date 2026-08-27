@@ -61,14 +61,15 @@ function TalkNode:CreateTalkNodeData()
     BlendOutType = self.OutType,
     ForceAutoPlay = self.ForceAutoPlay,
     ShowSkipButton = self.ShowSkipButton,
-    ShowAutoPlayButton = self.ShowAutoPlayButton,
+    ShowAutoPlayButton = true,
     ShowReviewButton = self.ShowReviewButton,
     ShowWikiButton = self.ShowWikiButton,
     bOpenDefaultSkinKawaii = self.bOpenDefaultSkinKawaii,
     PauseGameGlobal = self.PauseGameGlobal,
     DisableMonsterAI = self.DisableMonsterAI,
     DisableNPCAI = self.DisableNPCAI,
-    HideAllBattleEntity = self.HideAllBattleEntity,
+    bHidePickup = self.bHidePickup,
+    bHideSkillCreature = self.bHideSkillCreature,
     HideElseCharacter = self.HideElseCharacter,
     RestoreStand = self.RestoreStand,
     TalkActors = self.TalkActors or {},
@@ -93,7 +94,7 @@ function TalkNode:CreateTalkNodeData()
     IsPlayStartSound = self.IsPlayStartSound,
     GuideTalkStyle = self.GuideTalkStyle,
     Name = self.Name,
-    HideEffectCreature = self.HideEffectCreature,
+    bHideSceneEffects = self.bHideSceneEffects,
     HideNpcs = self.HideNpcs,
     HideMonsters = self.HideMonsters,
     bHideMechanismsFX = self.HideMechanismsFX,
@@ -160,7 +161,10 @@ function TalkNode:SwitchStart()
   if self.IsNpcNode then
     local BindId
     local NpcIdWithGender = self.NpcId
-    NpcIdWithGender = NpcIdWithGender and URuntimeCommonFunctionLibrary.GetNPCIdByGender(GWorld.GameInstance, NpcIdWithGender)
+    if NpcIdWithGender then
+      local NpcIdWithAttribute = URuntimeCommonFunctionLibrary.GetNPCIdByLightDarkPlayer(GWorld.GameInstance, NpcIdWithGender)
+      NpcIdWithGender = URuntimeCommonFunctionLibrary.GetNPCIdByGender(GWorld.GameInstance, NpcIdWithAttribute)
+    end
     self.NpcIdWithGender = NpcIdWithGender
     if string.isempty(self.NpcNodeInteractiveName) then
     end

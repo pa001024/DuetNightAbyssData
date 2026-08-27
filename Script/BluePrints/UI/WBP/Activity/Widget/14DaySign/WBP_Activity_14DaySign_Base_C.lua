@@ -376,11 +376,16 @@ function M:RefreshPageDynamicView(IsForceRefresh, KeepCurrentBigReward)
   end
   self:SetBigRewardPreview(TargetIndex, nil, IsForceRefresh)
   self:RefreshGetAllRewardState()
+  local HasUnreceivedRewards = false
   for _, State in pairs(self.AllSignInfo or {}) do
     if State == EnumPlayerSignRewardState.SignedNotRecv then
+      HasUnreceivedRewards = true
       ActivityUtils.TryAddActivityReddotCommon("Red", self.CurActivityId)
       break
     end
+  end
+  if not HasUnreceivedRewards then
+    ActivityUtils.TrySubActivityReddotCommon("Red", self.CurActivityId)
   end
 end
 

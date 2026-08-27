@@ -85,13 +85,6 @@ function BP_NpcTalkInteractiveComponent_C:RefreshDisplayName(PlayerActor, bForce
   self:UpdateDisplayName(PlayerActor, bDisplayNameRes, bForce)
 end
 
-function BP_NpcTalkInteractiveComponent_C:TriggerEnter(PlayerActor)
-  if self.bIsInit == false then
-    return
-  end
-  self.Overridden.TriggerEnter(self, PlayerActor)
-end
-
 function BP_NpcTalkInteractiveComponent_C:TriggerTick(PlayerActor)
   if self.bIsInit == false then
     self.Overridden.TriggerTick(self, PlayerActor)
@@ -219,6 +212,10 @@ end
 
 function BP_NpcTalkInteractiveComponent_C:StartInteractive(PlayerActor)
   DebugPrint("BP_NpcTalkInteractiveComponent_C:StartInteractive")
+  local NpcData = self:GetNpcCharData(self.UnitType, self.UnitId)
+  if NpcData and NpcData.NpcType == "Show" then
+    PlayerActor:SetESCMenuForbiddenStateByTag(true, "TalkInteractive")
+  end
   PlayerActor:AddForbidTag("TalkInteractive")
   PlayerActor:SetCharacterTag("Idle")
   PlayerActor:StopSlide()
@@ -237,6 +234,10 @@ function BP_NpcTalkInteractiveComponent_C:EndInteractive()
   TalkUtils:RemovePlayerInvincible()
   if not self:IsInInteractive() then
     return
+  end
+  local NpcData = self:GetNpcCharData(self.UnitType, self.UnitId)
+  if NpcData and NpcData.NpcType == "Show" then
+    self.PlayerActor:SetESCMenuForbiddenStateByTag(false, "TalkInteractive")
   end
   self.PlayerActor:MinusForbidTag("TalkInteractive")
   self.PlayerActor:SetCharacterTag("Idle")

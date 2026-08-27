@@ -1,6 +1,7 @@
 require("UnLua")
 require("Utils")
 local EMLuaConst = require("EMLuaConst")
+local MinSkinLevelUpPlayInterval = 2
 local BP_CharacterFashion_C = Class({
   "BluePrints.Common.FashionComponent_C",
   "BluePrints.Common.TimerMgr"
@@ -104,6 +105,7 @@ function BP_CharacterFashion_C:InitAppearanceSuit(Info)
     end
     return
   end
+  rawset(self, "EffectInterval", Info and Info.EffectInterval)
   if not Info then
     print(_G.LogTag, "BP_CharacterFashion_C:InitAppearanceSuit execute with nil Info", Owner:GetName(), Owner.Eid, Owner.CurrentRoleId, Owner.InfoForInit and Owner.InfoForInit.AppearanceSuit, Owner.CacheInfo and Owner.CacheInfo.AppearanceSuit)
   end
@@ -119,10 +121,8 @@ function BP_CharacterFashion_C:InitAppearanceSuit(Info)
   end
   self.Type2PartId = nil
   self.InitWithCombinePart = true
-  print(_G.LogTag, "BP_CharacterFashion_C:InitAppearanceSuit Show Cloak", Info.IsShowPartMesh)
   if EMLuaConst.ShouldCombinePartMesh then
     self.InitWithCombinePart = true
-    print(_G.LogTag, "BP_CharacterFashion_C:InitAppearanceSuit combine", self.InitWithCombinePart, Owner.FromArmory)
   end
   self:ChangeCharSkin(Info.SkinId)
   local DefaultFacePart = Owner.DefaultCharPartId:Find("Body")
@@ -133,12 +133,8 @@ function BP_CharacterFashion_C:InitAppearanceSuit(Info)
   end
   self:CheckShouldHideHair(Info.AccessorySuit)
   self:ChangeCharHair(Info.HairId)
-  print(_G.LogTag, "BP_CharacterFashion_C:InitAppearanceSuit hair", Info.HairId, #self.InitPartIds)
   local AccessorySuit = Info.AccessorySuit or self:GetDefaultAccessorySuit()
   local AccessoryCustomParams = Info.AccessoryCustomParams or {}
-  for i, v in pairs(Owner.DefaultCharPartId) do
-    print(_G.LogTag, "BP_CharacterFashion_C:InitAppearanceSuit part", v, i)
-  end
   for AccessoryType, AccessoryTypeIdx in pairs(CommonConst.NewCharAccessoryTypes) do
     local AccessoryId = AccessorySuit[AccessoryTypeIdx]
     local Transform = CommonUtils.UnSerializeAccessoryCustomParams(AccessoryCustomParams[AccessoryId], AccessoryType)
@@ -148,7 +144,6 @@ function BP_CharacterFashion_C:InitAppearanceSuit(Info)
     else
       Owner:RecoverDefaultPartMesh(AccessoryType)
     end
-    print(_G.LogTag, "BP_CharacterFashion_C:InitAppearanceSuit acc", AccessoryId, AccessoryType)
   end
   if Owner and self.InitWithCombinePart then
     if #self.InitPartIds > 0 then
@@ -193,6 +188,10 @@ function BP_CharacterFashion_C:ChangeCharSkin(SkinId)
   if Owner.ChangeSkinModel then
     Owner:ChangeSkinModel(SkinId)
   end
+  local _, PartMeshAccessoryType = self:GetOwnerPartMeshInfo(Owner.CurrentSkinId)
+  rawset(self, "PartMeshAccessoryType", PartMeshAccessoryType)
+  rawset(self, "PartMeshAccessorySkinId", Owner.CurrentSkinId)
+  rawset(self, "HasPartMeshAccessoryCache", true)
   self:InitSkinLevelUpVisEffect(SkinId)
 end
 
@@ -203,9 +202,34 @@ function BP_CharacterFashion_C:InitSkinLevelUpVisEffect(SkinId)
   self:CreateSkinLevelUpEffect(SkinId)
 end
 
+function BP_CharacterFashion_C:OnEffectIntervalRefreshed(NewEffectInterval)
+  if nil ~= NewEffectInterval then
+    rawset(self, "EffectInterval", NewEffectInterval)
+    if self.AppearanceSuitInfo then
+      rawset(self.AppearanceSuitInfo, "EffectInterval", NewEffectInterval)
+    end
+  end
+  local AppearanceSuitInfo = self.AppearanceSuitInfo
+  local SkinId = AppearanceSuitInfo and AppearanceSuitInfo.SkinId
+  if not SkinId then
+    return
+  end
+  self:InitSkinLevelUpVisEffect(SkinId)
+  self:InitColorsWithInfo()
+end
+
 function BP_CharacterFashion_C:StopCreateEffectTimer(ForceRemove)
   local Owner = self:GetOwner()
   if not ForceRemove and Owner.FromArmory then
+    return
+  end
+  Owner:RemoveTimer("FirstCreateEffect")
+  Owner:RemoveTimer("SecondCreateEffect")
+end
+
+function BP_CharacterFashion_C:StopNPCCreateEffectTimer()
+  local Owner = self:GetOwner()
+  if not Owner:IsNPC() then
     return
   end
   Owner:RemoveTimer("FirstCreateEffect")
@@ -222,35 +246,48 @@ function BP_CharacterFashion_C:SetTimerForCreateEffectOnSkillLevelUp(SkinId)
     return
   end
   self:StopCreateEffectTimer(true)
-  local TimerInterval = SkinConfig.TimerInterval
-  local FirstTime = Owner.FromArmory and TimerInterval[1] or TimerInterval[2]
-  if FirstTime then
-    Owner:AddTimer(FirstTime, function()
-      local NotAlwaysVisualEffect = self.NotAlwaysVisualEffect or {}
-      for Id, Data in pairs(NotAlwaysVisualEffect) do
-        Owner.FXComponent:PlayEffectByIDParams(Id, {
-          NotAttached = not Data.IsAttach
-        })
-      end
-      local NotAlwaysEffectCreature = self.NotAlwaysEffectCreature or {}
-      for Id, Data in pairs(NotAlwaysEffectCreature) do
+  local TimerIntervals = SkinConfig.TimerInterval
+  local MinInterval = SkinConfig.MinInterval or 0
+  local EffectInterval = self.EffectInterval or -1
+  local PlayInterval = TimerIntervals[2]
+  local LoopInterval = TimerIntervals[3]
+  if EffectInterval >= 0 and math.abs(MinInterval + EffectInterval) >= 1.0E-5 then
+    PlayInterval = math.max(EffectInterval, MinSkinLevelUpPlayInterval)
+    LoopInterval = MinInterval + EffectInterval
+  end
+  local FirstDelay = Owner.FromArmory and TimerIntervals[1] or PlayInterval
+  if not FirstDelay then
+    return
+  end
+  
+  local function PlayNotAlwaysEffects(VisualEffects, EffectCreatures)
+    local _Owner = self:GetOwner()
+    if not _Owner or _Owner.bHidden then
+      return
+    end
+    for Id, Data in pairs(VisualEffects) do
+      Owner.FXComponent:PlayEffectByIDParams(Id, {
+        NotAttached = not Data.IsAttach
+      })
+    end
+    for Id, Data in pairs(EffectCreatures) do
+      local ExistingEffectCreatures = Owner:GetEffectCreatureById(Id)
+      if 0 == ExistingEffectCreatures:Num() then
         Owner:AsyncCreateEffectCreature(Id, FTransform(), not not Data.IsAttach, "")
       end
-      local SecondTime = TimerInterval[3]
-      if SecondTime then
-        Owner:AddTimer(SecondTime, function()
-          for Id, Data in pairs(NotAlwaysVisualEffect) do
-            Owner.FXComponent:PlayEffectByIDParams(Id, {
-              NotAttached = not Data.IsAttach
-            })
-          end
-          for Id, Data in pairs(NotAlwaysEffectCreature) do
-            Owner:AsyncCreateEffectCreature(Id, FTransform(), not not Data.IsAttach, "")
-          end
-        end, true, 0, "SecondCreateEffect", Owner.FromArmory)
-      end
-    end, false, 0, "FirstCreateEffect", Owner.FromArmory)
+    end
   end
+  
+  Owner:AddTimer(FirstDelay, function()
+    local VisualEffects = self.NotAlwaysVisualEffect or {}
+    local EffectCreatures = self.NotAlwaysEffectCreature or {}
+    PlayNotAlwaysEffects(VisualEffects, EffectCreatures)
+    if LoopInterval then
+      Owner:AddTimer(LoopInterval, function()
+        PlayNotAlwaysEffects(VisualEffects, EffectCreatures)
+      end, true, 0, "SecondCreateEffect", Owner.FromArmory)
+    end
+  end, false, 0, "FirstCreateEffect", Owner.FromArmory)
 end
 
 function BP_CharacterFashion_C:CreateSkinLevelUpEffect(SkinId)
@@ -299,13 +336,12 @@ function BP_CharacterFashion_C:RemoveAllSkinLevelUpEffectCreature()
 end
 
 function BP_CharacterFashion_C:CreateSkinLevelUpVisualEffect(SkinId)
-  local SkinConfig = DataMgr.Skin[SkinId]
-  if not SkinConfig or not SkinConfig.LevelUpVisualEffects then
+  local LevelUpVisualEffects = DataMgr.Skin2LevelUpVisualEffects[SkinId]
+  if not LevelUpVisualEffects then
     return {}
   end
   local NotAlwaysVisualEffect = {}
   local Owner = self:GetOwner()
-  local LevelUpVisualEffects = SkinConfig.LevelUpVisualEffects
   self.LevelUpVisualEffects = {}
   for VisualEffectId, LevelUpVisualEffect in pairs(LevelUpVisualEffects) do
     if self:IsContainsLevel(LevelUpVisualEffect.Level) then
@@ -326,13 +362,12 @@ function BP_CharacterFashion_C:CreateSkinLevelUpVisualEffect(SkinId)
 end
 
 function BP_CharacterFashion_C:CreateSkinLevelUpEffectCreature(SkinId)
-  local SkinConfig = DataMgr.Skin[SkinId]
-  if not SkinConfig or not SkinConfig.LevelUpEffectCreatures then
+  local LevelUpEffectCreatures = DataMgr.Skin2LevelUpEffectCreature[SkinId]
+  if not LevelUpEffectCreatures then
     return {}
   end
   local NotAlwaysEffectCreature = {}
   local Owner = self:GetOwner()
-  local LevelUpEffectCreatures = SkinConfig.LevelUpEffectCreatures
   self.LevelUpEffectCreatures = {}
   for EffectCreatureId, LevelUpEffectCreature in pairs(LevelUpEffectCreatures) do
     if self:IsContainsLevel(LevelUpEffectCreature.Level) then
@@ -503,7 +538,6 @@ function BP_CharacterFashion_C:ChangeCharHair(HairId)
 end
 
 function BP_CharacterFashion_C:ReInitPartMesh()
-  print(_G.LogTag, "BP_CharacterFashion_C:ReInitPartMesh", self:IsHideHiarByAnyAccessory())
   local Owner = self:GetOwner()
   if not Owner then
     return
@@ -531,8 +565,7 @@ function BP_CharacterFashion_C:ReInitPartMesh()
   end
   ModelComp:LoadFullModel(ModelPath)
   local CurrentPartIds = {}
-  for i, v in pairs(self.Type2PartId) do
-    print(_G.LogTag, "BP_CharacterFashion_C:InitAppearanceSuit part", v, i)
+  for _, v in pairs(self.Type2PartId) do
     table.insert(CurrentPartIds, v)
   end
   local OldFromArmory = Owner.FromArmory
@@ -641,8 +674,8 @@ function BP_CharacterFashion_C:RefreshUncoloredSkinColors(Colors)
   if not _Owner then
     return
   end
+  local SkinId = self.AppearanceSuitInfo and self.AppearanceSuitInfo.SkinId
   local DefaultSkinId = self:GetDefaultSkinId(_Owner, SkinId)
-  local SkinId = self.AppearanceSuitInfo and self.AppearanceSuitInfo.SkinId or DefaultSkinId
   local IsOriginalSkin = DefaultSkinId and SkinId == DefaultSkinId
   if IsOriginalSkin then
     return
@@ -763,7 +796,7 @@ function BP_CharacterFashion_C:InitHairColors(Colors)
   local SwatchData = DataMgr.Swatch
   local Color = FLinearColor()
   local DefaultColors = {
-    self:GetHiarDefaultColors()
+    self:GetHairDefaultColors()
   }
   for i = 1, DataMgr.GlobalConstant.HairColorPart.ConstantValue do
     local ColorId = Colors[i]
@@ -826,7 +859,6 @@ function BP_CharacterFashion_C:ChangeAccessory(AccessoryId, AccessoryType, Trans
   end
   local Owner = self:GetOwner()
   Owner:DetachSuitItem(AccessoryType)
-  print(_G.LogTag, "Bp_CharacterFashion_C:InitAppearanceSuit ChangeAccessory", AccessoryId, AccessoryType, self:IsHideHiarByAccessory(AccessoryType))
   if self:IsHideHiarByAccessory(AccessoryType) then
     self:SetHideHiarByAccessory(AccessoryType, false)
     self:RecoverHairMesh()
@@ -840,7 +872,6 @@ function BP_CharacterFashion_C:ChangeAccessory(AccessoryId, AccessoryType, Trans
     end
     return
   end
-  print(_G.LogTag, "Bp_CharacterFashion_C:InitAppearanceSuit ChangeAccessory", self.InitWithCombinePart, AccessoryId, AccessoryType)
   if not self.InitWithCombinePart then
     Owner:RecoverDefaultPartMesh(AccessoryType)
   end
@@ -848,7 +879,14 @@ function BP_CharacterFashion_C:ChangeAccessory(AccessoryId, AccessoryType, Trans
   local LastAccessoryData = DataMgr.CharAccessory[LastId]
   RemoveType2Id(self, AccessoryType)
   if AccessoryId == DataMgr.GlobalConstant.EmptyCharAccessoryID.ConstantValue or AccessoryId <= 0 then
-    local PartMeshAccessoryId, PartMeshAccessoryType = self:GetOwnerPartMeshInfo(Owner.CurrentSkinId)
+    local PartMeshAccessoryType = rawget(self, "PartMeshAccessoryType")
+    if not rawget(self, "HasPartMeshAccessoryCache") or rawget(self, "PartMeshAccessorySkinId") ~= Owner.CurrentSkinId then
+      local _, NewPartMeshAccessoryType = self:GetOwnerPartMeshInfo(Owner.CurrentSkinId)
+      PartMeshAccessoryType = NewPartMeshAccessoryType
+      rawset(self, "PartMeshAccessoryType", PartMeshAccessoryType)
+      rawset(self, "PartMeshAccessorySkinId", Owner.CurrentSkinId)
+      rawset(self, "HasPartMeshAccessoryCache", true)
+    end
     if PartMeshAccessoryType == AccessoryType and not InValidAccId then
       Owner:DeactivatePartMeshComp(AccessoryType)
       if self.Type2PartId then
@@ -860,7 +898,6 @@ function BP_CharacterFashion_C:ChangeAccessory(AccessoryId, AccessoryType, Trans
         if self.Type2PartId then
           self.Type2PartId[AccessoryType] = DefaultPartId
         else
-          print(_G.LogTag, "Bp_CharacterFashion_C:InitAppearanceSuit 3333", DefaultPartId)
           table.insert(self.InitPartIds, DefaultPartId)
         end
       end
@@ -872,13 +909,11 @@ function BP_CharacterFashion_C:ChangeAccessory(AccessoryId, AccessoryType, Trans
         else
           table.insert(self.InitPartIds, DefaultPartId)
         end
-        print(_G.LogTag, "BP_CharacterFashion_C:InitAppearanceSuit acc11", #self.InitPartIds, DefaultPartId, AccessoryType)
       end
     end
     if LastAccessoryData and LastAccessoryData.CreatureId and self.UpdateFxAccessory then
       self.UpdateFxAccessory(self, AccessoryType)
     end
-    print(_G.LogTag, "Bp_CharacterFashion_C:ChangeAccessory", self.Type2PartId)
     if self.Type2PartId then
       self:ReInitPartMesh()
     end
@@ -895,12 +930,10 @@ function BP_CharacterFashion_C:ChangeAccessory(AccessoryId, AccessoryType, Trans
     if self.Type2PartId then
       self.Type2PartId[AccessoryType] = CharPartId
     else
-      print(_G.LogTag, "Bp_CharacterFashion_C:InitAppearanceSuit  Info", CharPartId)
       table.insert(self.InitPartIds, CharPartId)
     end
   end
   AddType2Id(self, AccessoryType, AccessoryId)
-  print(_G.LogTag, "Bp_CharacterFashion_C:ChangeAccessory", self.Type2PartId)
   local Data = DataMgr.CharAccessory[AccessoryId]
   if not Data then
     if self.UpdateFxAccessory then
@@ -942,6 +975,32 @@ function BP_CharacterFashion_C:ChangeAccessory(AccessoryId, AccessoryType, Trans
   end
   if self.UpdateFxAccessory then
     self.UpdateFxAccessory(self, AccessoryType)
+  end
+  if Owner.SuitMeshComponentsMap then
+    local SuitMeshArray = Owner.SuitMeshComponentsMap:FindRef(AccessoryType)
+    local BaseFxColor = Data.BaseFxColor
+    local AllFxObjs, AllVFXObjs
+    if BaseFxColor then
+      local LinearColor = FLinearColor(BaseFxColor[1] or 0, BaseFxColor[2] or 0, BaseFxColor[3] or 0, BaseFxColor[4] or 1)
+      AllFxObjs = SuitMeshArray.FXObjArray:ToTable()
+      for index, FXObj in ipairs(AllFxObjs) do
+        FXObj:SetColorParameter("Color", LinearColor)
+      end
+      AllVFXObjs = SuitMeshArray.VisualEffectObjs:ToTable()
+      for index, VFXObj in ipairs(AllVFXObjs) do
+        VFXObj:SetColorParameter("Color", LinearColor)
+      end
+    end
+    if Data.AdvanceFxColor then
+      AllFxObjs = AllFxObjs or SuitMeshArray.FXObjArray:ToTable()
+      for index, FXObj in ipairs(AllFxObjs) do
+        FXObj:SetFloatParameter("User_Color", Data.AdvanceFxColor)
+      end
+      AllVFXObjs = AllVFXObjs or SuitMeshArray.VisualEffectObjs:ToTable()
+      for index, VFXObj in ipairs(AllVFXObjs) do
+        VFXObj:SetFloatParameter("User_Color", Data.AdvanceFxColor)
+      end
+    end
   end
 end
 
@@ -1043,7 +1102,7 @@ function BP_CharacterFashion_C:GetCurrentHairMeshName()
   end
 end
 
-function BP_CharacterFashion_C:GetHiarDefaultColors()
+function BP_CharacterFashion_C:GetHairDefaultColors()
   local HairMeshName = self:GetCurrentHairMeshName()
   if HairMeshName then
     return self:GetHairDefaultColorsFromDataTable(HairMeshName)

@@ -1,5 +1,6 @@
 require("UnLua")
 local CoroutineUtils = require("CoroutineUtils")
+local RegionFameMapUtils = require("BluePrints.UI.WBP.Fame.RegionFameMapUtils")
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
 })
@@ -498,16 +499,6 @@ function M:InitInRegionMap()
   self.Panel_Point:SetRenderTranslation(self.CurrentDragOffset)
   self.FloorWidget = self.ModeComp:GetFloorWidget()
   self.FloorWidget:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  if not self.TureHardBoss_MapTips then
-    self.TureHardBoss_MapTips = self:CreateWidgetAsync("HardBossMapTips", self.CoroutineInitObj)
-    self.ModeComp:AddChildToConveyHardBoss(self.TureHardBoss_MapTips)
-    self.TureHardBoss_MapTips:BindToAnimationFinished(self.TureHardBoss_MapTips.Out, {
-      self.TureHardBoss_MapTips,
-      self.TureHardBoss_MapTips.PlayOutAnimFinished
-    })
-    self.TureHardBoss_MapTips.Common_Button_Text_PC:BindEventOnClicked(self, self.OnConveyClicked)
-    self.TureHardBoss_MapTips.Parent = self
-  end
   if not self.ChanllengeTips then
     local TipsBpPath = "WidgetBlueprint'/Game/UI/WBP/AreaCoop/Widget/WBP_AreaCoop_MapTips.WBP_AreaCoop_MapTips'"
     self.ChanllengeTips = UIManager(self):CreateWidgetAsync(nil, self.CoroutineInitObj, TipsBpPath)
@@ -515,13 +506,6 @@ function M:InitInRegionMap()
     self.ChanllengeTips:SetVisibility(ESlateVisibility.Collapsed)
     self.ChanllengeTips.Parent = self
   end
-  if self.RegionIcon then
-    local Icon = LoadObject(self.RegionIcon)
-    if Icon then
-      self.TureHardBoss_MapTips.Icon_Camp:SetBrushResourceObject(Icon)
-    end
-  end
-  self.TureHardBoss_MapTips:SetVisibility(ESlateVisibility.Collapsed)
   self:InitConveyWidget()
   if not self.InteractivePanel then
     self.InteractivePanel = self.ModeComp:GetInteractiveLocatePanel()
@@ -590,14 +574,18 @@ function M:InitConveyWidget()
     self.ModeComp:AddChildToConvey(self.LevelMap_Convey_Widget_PC)
     self.LevelMap_Convey_Widget_PC.Text_LockTips:SetText(GText("UI_TELEPORTPOINT_UNLOCK"))
     self.LevelMap_Convey_Widget_PC.Btn_Go:SetText(GText("UI_MECHANISM_105"))
+    self.LevelMap_Convey_Widget_PC.Btn_CancelGo:SetText(GText("UI_QUEST_STOPTRACK"))
     self.LevelMap_Convey_Widget_PC.Btn_Track:SetText(GText("UI_RegionMap_Track"))
     self.LevelMap_Convey_Widget_PC.Btn_Go:BindEventOnClicked(self, self.OnConveyClicked)
+    self.LevelMap_Convey_Widget_PC.Btn_CancelGo:BindEventOnClicked(self, self.OnRecurringTaskCancelTrack)
+    self.LevelMap_Convey_Widget_PC.Btn_CancelGo:TryOverrideSoundFunc(self.OnTraceSound)
     self.LevelMap_Convey_Widget_PC.Btn_Track:BindEventOnClicked(self, self.OnConveyTrace)
     self.LevelMap_Convey_Widget_PC.Btn_Track:TryOverrideSoundFunc(self.OnTraceSound)
     self.LevelMap_Convey_Widget_PC.Btn_Go_Track:BindEventOnClicked(self, self.OnConveyGoTrace)
     self.LevelMap_Convey_Widget_PC.Btn_Go_Track:TryOverrideSoundFunc(self.OnTraceSound)
     self.LevelMap_Convey_Widget_PC.Btn_Go_Track:SetText(GText("UI_RegionMap_Track"))
     self.LevelMap_Convey_Widget_PC:InitWildMap(self)
+    self:SetRecurringTaskConveyMode(false)
   end
   self.LevelMap_Convey_Widget_PC:SetVisibility(ESlateVisibility.Collapsed)
 end
@@ -606,6 +594,34 @@ function M:OnConveyGoTrace()
   if self.OnConveyGoTrace_Component then
     self.OnConveyGoTrace_Component(self)
   end
+end
+
+function M:UpdateRecurringTaskConveyVisibility(bVisible)
+  self.bRecurringTaskConveyMode = bVisible
+  if bVisible then
+    self.LevelMap_Convey_Widget_PC.Switch_Button:SetActiveWidgetIndex(0)
+  end
+  self.LevelMap_Convey_Widget_PC.Btn_CancelGo:SetVisibility(bVisible and ESlateVisibility.SelfHitTestInvisible or ESlateVisibility.Collapsed)
+  self.LevelMap_Convey_Widget_PC.Btn_Go:SetText(GText(bVisible and "UI_Dispatch_GotoNear" or "UI_MECHANISM_105"))
+  self.LevelMap_Convey_Widget_PC:UpdateButtonGamepadHints(self.GameInputModeSubsystem:GetCurrentInputType())
+end
+
+function M:SetRecurringTaskConveyMode(bEnabled)
+  self:UpdateRecurringTaskConveyVisibility(bEnabled)
+end
+
+function M:RefreshRecurringTaskConveyMode(PointType, PointId)
+  self.CurrentConveyPointType = PointType
+  self:UpdateRecurringTaskConveyVisibility(RegionFameMapUtils.IsRecurringTaskPointTracked(PointType, PointId))
+end
+
+function M:OnRecurringTaskCancelTrack()
+  if not self.bRecurringTaskConveyMode then
+    return
+  end
+  RegionFameMapUtils.StopMapTrack()
+  self:SetRecurringTaskConveyMode(false)
+  self:ClosePanel(false)
 end
 
 function M:InitDispatchCondition()
@@ -751,10 +767,12 @@ function M:UpdateMapImageFog()
       end
     end
   end
-  local Avatar = GWorld:GetAvatar()
-  for Id, Data in pairs(DataMgr.MapFogCondition) do
-    if Data.RegionId == self.RegionID and ConditionUtils.CheckCondition(Avatar, Id) or Const.UnlockRegionTeleport then
-      self:UpdateSingleMapFogByTeleport(Data.Block, true, nil)
+  if not self.IsInDungeon then
+    local Avatar = GWorld:GetAvatar()
+    for Id, Data in pairs(DataMgr.MapFogCondition) do
+      if Data.RegionId == self.RegionID and (ConditionUtils.CheckCondition(Avatar, Id) or Const.UnlockRegionTeleport) then
+        self:UpdateSingleMapFogByTeleport(Data.Block, true, nil)
+      end
     end
   end
   for _, ShowAnimId in pairs(AnimId) do
@@ -1028,7 +1046,7 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
         return UWidgetBlueprintLibrary.Handled()
       end
     end
-  elseif InKeyName == UIConst.GamePadKey.FaceButtonLeft or "L" == InKeyName then
+  elseif "L" == InKeyName then
     self.ModeComp:OnClickDispatch()
     if self.KeyLocPanel then
       self.KeyLocPanel:OnOpenClick()
@@ -1442,7 +1460,9 @@ function M:OnPanelOpen(panel)
   self.ModeComp:UpdateWildMapKeys()
   if 0 == panel then
     self.LevelMap_Convey_Widget_PC:SetVisibility(ESlateVisibility.Collapsed)
-    self.TureHardBoss_MapTips:SetVisibility(ESlateVisibility.Collapsed)
+    if self.TureHardBoss_MapTips then
+      self.TureHardBoss_MapTips:SetVisibility(ESlateVisibility.Collapsed)
+    end
     self.RegionInfo:Close()
     self.FloorWidget:SetVisibility(ESlateVisibility.Collapsed)
     self.ModeComp:SetEntranceDispatchVisible(false)
@@ -1455,7 +1475,9 @@ function M:OnPanelOpen(panel)
       self.MarkPanel:SetVisibility(ESlateVisibility.Collapsed)
     end
     self.LevelMap_Convey_Widget_PC:SetVisibility(ESlateVisibility.Collapsed)
-    self.TureHardBoss_MapTips:SetVisibility(ESlateVisibility.Collapsed)
+    if self.TureHardBoss_MapTips then
+      self.TureHardBoss_MapTips:SetVisibility(ESlateVisibility.Collapsed)
+    end
     self.FloorWidget:SetVisibility(ESlateVisibility.Collapsed)
     self.ModeComp:SetEntranceDispatchVisible(false)
     self:RefreshAllDispatchPoint()
@@ -1495,7 +1517,9 @@ function M:OnPanelOpen(panel)
       self.MarkPanel:SetVisibility(ESlateVisibility.Collapsed)
     end
     self.LevelMap_Convey_Widget_PC:SetVisibility(ESlateVisibility.Collapsed)
-    self.TureHardBoss_MapTips:SetVisibility(ESlateVisibility.Collapsed)
+    if self.TureHardBoss_MapTips then
+      self.TureHardBoss_MapTips:SetVisibility(ESlateVisibility.Collapsed)
+    end
     self.RegionInfo:Close()
     self.FloorWidget:SetVisibility(ESlateVisibility.Collapsed)
     self.ModeComp:SetEntranceDispatchVisible(false)
@@ -1641,6 +1665,27 @@ function M:JumpToTaskPosition()
   end
   local SubRegionId = MissionIndicatorManager:GetTargetTaskSubRegionId(TrackingQuestChainId, TrackingQuestId)
   if not SubRegionId or 0 == SubRegionId then
+    return
+  end
+  local TrackingQuestData = TaskUtils:GetTrackingQuestDetailInfo()
+  local IsFairyLand = TrackingQuestData and TrackingQuestData.IsFairyLand
+  if IsFairyLand then
+    local function DoDeliverTo()
+      local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
+      
+      if IsValid(GameMode) then
+        GameMode:HandleLevelDeliver(UE4.EModeType.ModeRegion, SubRegionId, TrackingQuestData.FairyLandDeliverIndex, true)
+      end
+    end
+    
+    local TaskName = DataMgr.QuestChain[Avatar.TrackingQuestChainId].QuestChainName
+    local Params
+    Params = {
+      ShortText = string.format(GText("UI_Prompt_QuestTrans"), GText(TaskName)),
+      RightCallbackObj = self,
+      RightCallbackFunction = DoDeliverTo
+    }
+    UIManager(self):ShowCommonPopupUI(100160, Params)
     return
   end
   self:ChangeRegionForSmartIndicator(SubRegionId, TrackingQuestChainId)
@@ -1867,6 +1912,10 @@ function M:OnRegionClick(RegionId)
   self:AddTimer(0.01, function()
     self.ModeComp:SetEntranceDispatchVisible(false)
   end)
+  if self.MainMap and self.MainMap.FamePreview then
+    self.MainMap.FamePreview:SetRegionName(self.MainMap)
+    self.MainMap.ImpressionPreview:Init(RegionId)
+  end
 end
 
 function M:ChangeRegion(RegionId, InitCompleteFunc)
@@ -1995,6 +2044,9 @@ function M:OnCommonTrack(TrackingType, Id, IsAdd)
   else
     GWorld.GameInstance.TrackingPack = nil
   end
+  if self.bRecurringTaskConveyMode then
+    self:RefreshRecurringTaskConveyMode(self.CurrentConveyPointType, self.CurrentConveyId)
+  end
   local trackTarget = self:GetTrackingTarget(TrackingType, Id)
   if not trackTarget then
     return
@@ -2016,9 +2068,9 @@ function M:OnCommonTrack(TrackingType, Id, IsAdd)
       else
         local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
         if GameMode then
-          local ManualItemId = Data.ManualItemId
-          TargetActor = GameMode.BPBornRegionActor:FindRef(ManualItemId)
-          ManualItemId:Add(ManualItemId)
+          local RegionManualItemId = Data.ManualItemId
+          TargetActor = GameMode.BPBornRegionActor:FindRef(RegionManualItemId)
+          ManualItemId:Add(RegionManualItemId)
         end
       end
     elseif TrackingType == CommonConst.RegionMapTrackingType.MiniDispatchPoint then
@@ -2076,8 +2128,8 @@ function M:OnCommonTrack(TrackingType, Id, IsAdd)
       else
         local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
         if GameMode then
-          local ManualItemId = Data.ManualItemId
-          ManualItemId:Add(ManualItemId)
+          local RegionManualItemId = Data.ManualItemId
+          ManualItemId:Add(RegionManualItemId)
         end
       end
     elseif TrackingType == CommonConst.RegionMapTrackingType.MiniDispatchPoint then

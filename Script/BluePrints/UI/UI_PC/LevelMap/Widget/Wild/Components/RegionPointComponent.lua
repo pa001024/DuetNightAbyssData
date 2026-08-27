@@ -253,6 +253,7 @@ function Component:OnRegionPointClick(Id, IgnoreCheckSelect)
   end
   self:MoveMapToRegionPoint(Id)
   self.CurrentSelectPoint:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  self:RefreshRecurringTaskConveyMode(CommonConst.RegionMapTrackingType.RegionPoint, Id)
 end
 
 function Component:OnRegionPointTeleportClicked()

@@ -40,19 +40,9 @@ return ReadOnly("CharPartModel", {
     PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Hair/Mesh/Player_Hair05_SM.Player_Hair05_SM'",
     PartType = "Hair"
   },
-  [10128] = {
-    CharPartId = 10128,
-    PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Hair/Mesh/Player_Hair05_SM.Player_Hair05_SM'",
-    PartType = "Hair"
-  },
-  [10129] = {
-    CharPartId = 10129,
-    PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Hair/Mesh/Player_Hair05_SM.Player_Hair05_SM'",
-    PartType = "Hair"
-  },
-  [10130] = {
-    CharPartId = 10130,
-    PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Hair/Mesh/Player_Hair05_SM.Player_Hair05_SM'",
+  [10131] = {
+    CharPartId = 10131,
+    PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Hair/Mesh/Player_Hair06_SM.Player_Hair06_SM'",
     PartType = "Hair"
   },
   [110101] = {
@@ -341,6 +331,36 @@ return ReadOnly("CharPartModel", {
     PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Char035_Eve/Mesh/Eve_SP01_Hair_SM.Eve_SP01_Hair_SM'",
     PartType = "Hair"
   },
+  [220101] = {
+    CharPartId = 220101,
+    PartPath = "SkeletalMesh'/Game/Asset/Char/Player/NPC004_WeitaF/Mesh/WeitaF_Body_SM.WeitaF_Body_SM'",
+    PartType = "Body"
+  },
+  [220102] = {
+    CharPartId = 220102,
+    PartPath = "SkeletalMesh'/Game/Asset/Char/Player/NPC004_WeitaF/Mesh/WeitaF_Hair_SM.WeitaF_Hair_SM'",
+    PartType = "Hair"
+  },
+  [220103] = {
+    CharPartId = 220103,
+    PartPath = "SkeletalMesh'/Game/Asset/Char/Player/NPC004_WeitaF/Mesh/WeitaF_Cloak_SM.WeitaF_Cloak_SM'",
+    PartType = "Back"
+  },
+  [220104] = {
+    CharPartId = 220104,
+    PartPath = "SkeletalMesh'/Game/Asset/Char/Player/NPC005_WeitaM/Mesh/WeitaM_Body_SM.WeitaM_Body_SM'",
+    PartType = "Body"
+  },
+  [220105] = {
+    CharPartId = 220105,
+    PartPath = "SkeletalMesh'/Game/Asset/Char/Player/NPC005_WeitaM/Mesh/WeitaM_Hair_SM.WeitaM_Hair_SM'",
+    PartType = "Hair"
+  },
+  [220106] = {
+    CharPartId = 220106,
+    PartPath = "SkeletalMesh'/Game/Asset/Char/Player/NPC005_WeitaM/Mesh/WeitaM_Cloak_SM.WeitaM_Cloak_SM'",
+    PartType = "Back"
+  },
   [230101] = {
     CharPartId = 230101,
     PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Char004_Zhangyu/Mesh/Zhangyu_Body_SM.Zhangyu_Body_SM'",
@@ -456,7 +476,13 @@ return ReadOnly("CharPartModel", {
     PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Char036_Falu/Mesh/Falu_Hair_SM.Falu_Hair_SM'",
     PartType = "Hair"
   },
+  [310403] = {
+    CharPartId = 310403,
+    PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Char036_Falu/Mesh/Falu_Part01_SM.Falu_Part01_SM'",
+    PartType = "Back"
+  },
   [310491] = {
+    AdditionalFXID = {310462},
     CharPartId = 310491,
     PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Char036_Falu/Mesh/Falu_SP01_Hair_SM.Falu_SP01_Hair_SM'",
     PartType = "Hair"
@@ -510,6 +536,16 @@ return ReadOnly("CharPartModel", {
     CharPartId = 320203,
     PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Char014_Kami/Mesh/Kami_New_Part04_SM.Kami_New_Part04_SM'",
     PartType = "Back"
+  },
+  [320301] = {
+    CharPartId = 320301,
+    PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Char028_Kajia/Mesh/Kajia_Body_SM.Kajia_Body_SM'",
+    PartType = "Body"
+  },
+  [320302] = {
+    CharPartId = 320302,
+    PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Char028_Kajia/Mesh/Kajia_Hair_SM.Kajia_Hair_SM'",
+    PartType = "Hair"
   },
   [330101] = {
     CharPartId = 330101,
@@ -585,6 +621,26 @@ return ReadOnly("CharPartModel", {
     CharPartId = 410293,
     PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Char029_Zhiliu/Mesh/Zhiliu_SP01_Cloak_SM.Zhiliu_SP01_Cloak_SM'",
     PartType = "Back"
+  },
+  [410301] = {
+    CharPartId = 410301,
+    PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Char039_SpLise/Mesh/SpLise_Body_SM.SpLise_Body_SM'",
+    PartType = "Body"
+  },
+  [410302] = {
+    CharPartId = 410302,
+    PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Char039_SpLise/Mesh/Splise_Hair_SM.Splise_Hair_SM'",
+    PartType = "Hair"
+  },
+  [410391] = {
+    CharPartId = 410391,
+    PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Body/SP15/Mesh/QNF_SP15_Body_SM.QNF_SP15_Body_SM'",
+    PartType = "Body"
+  },
+  [410392] = {
+    CharPartId = 410392,
+    PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Char039_SpLise/Mesh/Splise_SP01_Hair_SM.Splise_SP01_Hair_SM'",
+    PartType = "Hair"
   },
   [420101] = {
     CharPartId = 420101,
@@ -1020,5 +1076,25 @@ return ReadOnly("CharPartModel", {
     CharPartId = 1016002,
     PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Hat/Mesh/SP14_Hat01_SM.SP14_Hat01_SM'",
     PartType = "Hat"
+  },
+  [1016101] = {
+    CharPartId = 1016101,
+    PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Body/TP08/Mesh/QNF01_TP08_SM.QNF01_TP08_SM'",
+    PartType = "Body"
+  },
+  [1016102] = {
+    CharPartId = 1016102,
+    PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Body/TP08/Mesh/ZNF00_TP08_SM.ZNF00_TP08_SM'",
+    PartType = "Body"
+  },
+  [1016103] = {
+    CharPartId = 1016103,
+    PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Body/TP08/Mesh/ZNF01_TP08_SM.ZNF01_TP08_SM'",
+    PartType = "Body"
+  },
+  [1016104] = {
+    CharPartId = 1016104,
+    PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Body/TP08/Mesh/ZNF03_TP08_SM.ZNF03_TP08_SM'",
+    PartType = "Body"
   }
 })

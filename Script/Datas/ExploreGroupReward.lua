@@ -1,3 +1,9 @@
+local T = {}
+T.RT_1 = {
+  7107,
+  7108,
+  7109
+}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -459,6 +465,91 @@ return ReadOnly("ExploreGroupReward", {
     ExploreGroupId = 7073028,
     IfOnlyOnce = true,
     RewardId = 3025
+  },
+  [7085013] = {
+    ExploreGroupId = 7085013,
+    IfOnlyOnce = true,
+    RewardId = 3011
+  },
+  [7085014] = {
+    ExploreGroupId = 7085014,
+    IfOnlyOnce = true,
+    RewardId = 3011
+  },
+  [7085015] = {
+    ExploreGroupId = 7085015,
+    IfOnlyOnce = true,
+    RewardId = 3011
+  },
+  [7085016] = {
+    ExploreGroupId = 7085016,
+    IfOnlyOnce = true,
+    RewardId = 3011
+  },
+  [7085029] = {
+    ExploreGroupId = 7085029,
+    IfOnlyOnce = true,
+    RewardId = 3011
+  },
+  [7085030] = {
+    ExploreGroupId = 7085030,
+    IfOnlyOnce = true,
+    RewardId = 3011
+  },
+  [7086014] = {
+    ExploreGroupId = 7086014,
+    IfOnlyOnce = true,
+    RewardId = 3011
+  },
+  [7086017] = {
+    ExploreGroupId = 7086017,
+    IfOnlyOnce = true,
+    RewardId = 3011
+  },
+  [7086018] = {
+    ExploreGroupId = 7086018,
+    IfOnlyOnce = true,
+    RewardId = 3011
+  },
+  [7086020] = {
+    ExploreGroupId = 7086020,
+    IfOnlyOnce = true,
+    RewardId = 3011
+  },
+  [7086022] = {
+    ExploreGroupId = 7086022,
+    IfOnlyOnce = true,
+    RewardId = 3011
+  },
+  [7086046] = {
+    ExploreGroupId = 7086046,
+    IfOnlyOnce = true,
+    RewardIdList = T.RT_1
+  },
+  [7086047] = {
+    ExploreGroupId = 7086047,
+    IfOnlyOnce = true,
+    RewardIdList = T.RT_1
+  },
+  [7086051] = {
+    ExploreGroupId = 7086051,
+    IfOnlyOnce = true,
+    RewardIdList = T.RT_1
+  },
+  [7087012] = {
+    ExploreGroupId = 7087012,
+    IfOnlyOnce = true,
+    RewardId = 3011
+  },
+  [7087016] = {
+    ExploreGroupId = 7087016,
+    IfOnlyOnce = true,
+    RewardId = 3011
+  },
+  [7087017] = {
+    ExploreGroupId = 7087017,
+    IfOnlyOnce = true,
+    RewardId = 3011
   },
   [7090063] = {
     ExploreGroupId = 7090063,

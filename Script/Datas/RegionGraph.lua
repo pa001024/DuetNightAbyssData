@@ -579,6 +579,102 @@ return ReadOnly("RegionGraph", {
       }
     }
   },
+  [107001] = {
+    RegionStart = {107001},
+    SubRegionStart = 107001,
+    SubRegionTarget = {
+      RegionTarget = {
+        {
+          107101,
+          "TargetPoint_Lxzs01ToLxzs02_Bridge",
+          1,
+          11023205
+        },
+        {
+          107101,
+          "TargetPoint_Lxzs01ToLxzs02_Forest",
+          1,
+          11020302
+        },
+        {
+          107201,
+          "TargetPoint_Lxzs01ToLxzx",
+          1,
+          11020302
+        },
+        {
+          107501,
+          "TargetPoint_Lxzs01ToZZJ",
+          1
+        },
+        {
+          107701,
+          "TargetPoint_Lxzs01ToJhs",
+          1,
+          11023101
+        }
+      }
+    }
+  },
+  [107101] = {
+    RegionStart = {107101},
+    SubRegionStart = 107101,
+    SubRegionTarget = {
+      RegionTarget = {
+        {
+          107001,
+          "TargetPoint_Lxzs02ToLxzs01_Forest",
+          1,
+          11020302
+        },
+        {
+          107001,
+          "TargetPoint_Lxzs02ToLxzs01_Bridge",
+          1,
+          11023205
+        }
+      }
+    }
+  },
+  [107201] = {
+    RegionStart = {107201},
+    SubRegionStart = 107201,
+    SubRegionTarget = {
+      RegionTarget = {
+        {
+          107001,
+          "TargetPoint_LxzxToLxzs01",
+          1,
+          11020302
+        }
+      }
+    }
+  },
+  [107501] = {
+    SubRegionStart = 107501,
+    SubRegionTarget = {
+      RegionTarget = {
+        {
+          107001,
+          "TargetPoint_ZZJToLxzs01",
+          1
+        }
+      }
+    }
+  },
+  [107701] = {
+    SubRegionStart = 107701,
+    SubRegionTarget = {
+      RegionTarget = {
+        {
+          107001,
+          "TargetPoint_JHSToLxzs01",
+          1,
+          11023101
+        }
+      }
+    }
+  },
   [210101] = {
     SubRegionStart = 210101,
     SubRegionTarget = {

@@ -233,6 +233,9 @@ function WBP_Forging_Convert_C:UpdateConfirmButtonState()
 end
 
 function WBP_Forging_Convert_C:UpdateForingConvertContent(Item)
+  if not Item then
+    return
+  end
   DebugPrint("Yihan@ UpdateForingConvertContent", Item.Id, Item.Idx)
   self.ConvertContent = NewObject(UIUtils.GetCommonItemContentClass())
   local ResourceData = DataMgr.Resource[Item.Id]

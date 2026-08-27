@@ -267,7 +267,7 @@ return ReadOnly("ModDungeonMonReward", {
     DungeonRewardView = 136001,
     MonRewardId = 6001,
     MonsterUnitId = 7001015,
-    Sequence = 11
+    Sequence = 14
   },
   [6002] = {
     Condition = T.RT_5,
@@ -276,7 +276,7 @@ return ReadOnly("ModDungeonMonReward", {
     DungeonRewardView = 136002,
     MonRewardId = 6002,
     MonsterUnitId = 7002018,
-    Sequence = 12
+    Sequence = 15
   },
   [6003] = {
     Condition = T.RT_5,
@@ -285,7 +285,7 @@ return ReadOnly("ModDungeonMonReward", {
     DungeonRewardView = 136003,
     MonRewardId = 6003,
     MonsterUnitId = 7003016,
-    Sequence = 13
+    Sequence = 16
   },
   [6004] = {
     Condition = T.RT_5,
@@ -294,7 +294,7 @@ return ReadOnly("ModDungeonMonReward", {
     DungeonRewardView = 136004,
     MonRewardId = 6004,
     MonsterUnitId = 7004020,
-    Sequence = 14
+    Sequence = 17
   },
   [6005] = {
     Condition = T.RT_5,
@@ -303,7 +303,7 @@ return ReadOnly("ModDungeonMonReward", {
     DungeonRewardView = 136005,
     MonRewardId = 6005,
     MonsterUnitId = 7015011,
-    Sequence = 15
+    Sequence = 18
   },
   [6006] = {
     Condition = T.RT_5,
@@ -312,7 +312,7 @@ return ReadOnly("ModDungeonMonReward", {
     DungeonRewardView = 136006,
     MonRewardId = 6006,
     MonsterUnitId = 7010022,
-    Sequence = 16
+    Sequence = 19
   },
   [6007] = {
     Condition = T.RT_5,
@@ -321,7 +321,7 @@ return ReadOnly("ModDungeonMonReward", {
     DungeonRewardView = 136007,
     MonRewardId = 6007,
     MonsterUnitId = 6017014,
-    Sequence = 9
+    Sequence = 12
   },
   [6008] = {
     Condition = T.RT_5,
@@ -330,7 +330,7 @@ return ReadOnly("ModDungeonMonReward", {
     DungeonRewardView = 136008,
     MonRewardId = 6008,
     MonsterUnitId = 6016021,
-    Sequence = 10
+    Sequence = 13
   },
   [6009] = {
     Condition = T.RT_5,
@@ -339,7 +339,7 @@ return ReadOnly("ModDungeonMonReward", {
     DungeonRewardView = 136009,
     MonRewardId = 6009,
     MonsterUnitId = 6015021,
-    Sequence = 7
+    Sequence = 10
   },
   [6010] = {
     Condition = T.RT_5,
@@ -348,7 +348,7 @@ return ReadOnly("ModDungeonMonReward", {
     DungeonRewardView = 136010,
     MonRewardId = 6010,
     MonsterUnitId = 10005024,
-    Sequence = 8
+    Sequence = 11
   },
   [6011] = {
     Condition = T.RT_5,
@@ -357,7 +357,7 @@ return ReadOnly("ModDungeonMonReward", {
     DungeonRewardView = 136011,
     MonRewardId = 6011,
     MonsterUnitId = 6017012,
-    Sequence = 5
+    Sequence = 8
   },
   [6012] = {
     Condition = T.RT_5,
@@ -366,7 +366,7 @@ return ReadOnly("ModDungeonMonReward", {
     DungeonRewardView = 136012,
     MonRewardId = 6012,
     MonsterUnitId = 6016022,
-    Sequence = 6
+    Sequence = 9
   },
   [6013] = {
     Condition = T.RT_5,
@@ -375,7 +375,7 @@ return ReadOnly("ModDungeonMonReward", {
     DungeonRewardView = 136013,
     MonRewardId = 6013,
     MonsterUnitId = 7018020,
-    Sequence = 3
+    Sequence = 6
   },
   [6014] = {
     Condition = T.RT_5,
@@ -384,7 +384,7 @@ return ReadOnly("ModDungeonMonReward", {
     DungeonRewardView = 136014,
     MonRewardId = 6014,
     MonsterUnitId = 7019016,
-    Sequence = 4
+    Sequence = 7
   },
   [6015] = {
     Condition = T.RT_5,
@@ -393,7 +393,7 @@ return ReadOnly("ModDungeonMonReward", {
     DungeonRewardView = 136015,
     MonRewardId = 6015,
     MonsterUnitId = 9007012,
-    Sequence = 1
+    Sequence = 4
   },
   [6016] = {
     Condition = T.RT_5,
@@ -402,7 +402,34 @@ return ReadOnly("ModDungeonMonReward", {
     DungeonRewardView = 136016,
     MonRewardId = 6016,
     MonsterUnitId = 9002015,
+    Sequence = 5
+  },
+  [6017] = {
+    Condition = T.RT_5,
+    DungeonDropReward = 136017,
+    DungeonList = {616001},
+    DungeonRewardView = 136017,
+    MonRewardId = 6017,
+    MonsterUnitId = 6001021,
+    Sequence = 1
+  },
+  [6018] = {
+    Condition = T.RT_5,
+    DungeonDropReward = 136018,
+    DungeonList = {616002},
+    DungeonRewardView = 136018,
+    MonRewardId = 6018,
+    MonsterUnitId = 6002021,
     Sequence = 2
+  },
+  [6019] = {
+    Condition = T.RT_5,
+    DungeonDropReward = 136019,
+    DungeonList = {616003},
+    DungeonRewardView = 136019,
+    MonRewardId = 6019,
+    MonsterUnitId = 6004021,
+    Sequence = 3
   },
   [6501] = {
     Condition = T.RT_6,
@@ -485,6 +512,15 @@ return ReadOnly("ModDungeonMonReward", {
     MonsterUnitId = 9007019,
     Sequence = 509
   },
+  [6510] = {
+    Condition = T.RT_6,
+    DungeonDropReward = 136510,
+    DungeonList = {616010},
+    DungeonRewardView = 136510,
+    MonRewardId = 6510,
+    MonsterUnitId = 9002017,
+    Sequence = 505
+  },
   [7001] = {
     Condition = T.RT_7,
     DungeonDropReward = 137001,
@@ -492,7 +528,7 @@ return ReadOnly("ModDungeonMonReward", {
     DungeonRewardView = 137001,
     MonRewardId = 7001,
     MonsterUnitId = 7009020,
-    Sequence = 10
+    Sequence = 15
   },
   [7002] = {
     Condition = T.RT_7,
@@ -546,7 +582,7 @@ return ReadOnly("ModDungeonMonReward", {
     DungeonRewardView = 137007,
     MonRewardId = 7007,
     MonsterUnitId = 10005011,
-    Sequence = 8
+    Sequence = 10
   },
   [7008] = {
     Condition = T.RT_7,
@@ -555,7 +591,7 @@ return ReadOnly("ModDungeonMonReward", {
     DungeonRewardView = 137008,
     MonRewardId = 7008,
     MonsterUnitId = 7018014,
-    Sequence = 7
+    Sequence = 9
   },
   [7009] = {
     Condition = T.RT_7,
@@ -564,7 +600,7 @@ return ReadOnly("ModDungeonMonReward", {
     DungeonRewardView = 91149,
     MonRewardId = 7009,
     MonsterUnitId = 9002022,
-    Sequence = 1
+    Sequence = 3
   },
   [7010] = {
     Condition = T.RT_7,
@@ -573,7 +609,7 @@ return ReadOnly("ModDungeonMonReward", {
     DungeonRewardView = 91150,
     MonRewardId = 7010,
     MonsterUnitId = 9001011,
-    Sequence = 2
+    Sequence = 4
   },
   [7011] = {
     Condition = T.RT_7,
@@ -582,7 +618,7 @@ return ReadOnly("ModDungeonMonReward", {
     DungeonRewardView = 91151,
     MonRewardId = 7011,
     MonsterUnitId = 9007017,
-    Sequence = 3
+    Sequence = 5
   },
   [7012] = {
     Condition = T.RT_7,
@@ -591,7 +627,7 @@ return ReadOnly("ModDungeonMonReward", {
     DungeonRewardView = 91152,
     MonRewardId = 7012,
     MonsterUnitId = 9002021,
-    Sequence = 4
+    Sequence = 6
   },
   [7013] = {
     Condition = T.RT_7,
@@ -600,7 +636,7 @@ return ReadOnly("ModDungeonMonReward", {
     DungeonRewardView = 91153,
     MonRewardId = 7013,
     MonsterUnitId = 9001020,
-    Sequence = 5
+    Sequence = 7
   },
   [7014] = {
     Condition = T.RT_7,
@@ -609,7 +645,25 @@ return ReadOnly("ModDungeonMonReward", {
     DungeonRewardView = 91154,
     MonRewardId = 7014,
     MonsterUnitId = 9007016,
-    Sequence = 6
+    Sequence = 8
+  },
+  [7015] = {
+    Condition = T.RT_7,
+    DungeonDropReward = 137009,
+    DungeonList = {616004},
+    DungeonRewardView = 137009,
+    MonRewardId = 7015,
+    MonsterUnitId = 7001022,
+    Sequence = 2
+  },
+  [7016] = {
+    Condition = T.RT_7,
+    DungeonDropReward = 137010,
+    DungeonList = {616005},
+    DungeonRewardView = 137010,
+    MonRewardId = 7016,
+    MonsterUnitId = 7001019,
+    Sequence = 1
   },
   [8001] = {
     Condition = T.RT_8,
@@ -799,6 +853,42 @@ return ReadOnly("ModDungeonMonReward", {
     MonRewardId = 8021,
     MonsterUnitId = 9006019,
     Sequence = 40
+  },
+  [8022] = {
+    Condition = T.RT_8,
+    DungeonDropReward = 139009,
+    DungeonList = {616006},
+    DungeonRewardView = 139009,
+    MonRewardId = 8022,
+    MonsterUnitId = 7009013,
+    Sequence = 1
+  },
+  [8023] = {
+    Condition = T.RT_8,
+    DungeonDropReward = 139010,
+    DungeonList = {616007},
+    DungeonRewardView = 139010,
+    MonRewardId = 8023,
+    MonsterUnitId = 7008013,
+    Sequence = 2
+  },
+  [8024] = {
+    Condition = T.RT_8,
+    DungeonDropReward = 139011,
+    DungeonList = {616008},
+    DungeonRewardView = 139011,
+    MonRewardId = 8024,
+    MonsterUnitId = 6007018,
+    Sequence = 3
+  },
+  [8025] = {
+    Condition = T.RT_8,
+    DungeonDropReward = 139012,
+    DungeonList = {616009},
+    DungeonRewardView = 139012,
+    MonRewardId = 8025,
+    MonsterUnitId = 6003015,
+    Sequence = 4
   },
   [11001] = {
     DungeonDropReward = 131001,
@@ -1190,6 +1280,33 @@ return ReadOnly("ModDungeonMonReward", {
     MonsterUnitId = 9002015,
     Sequence = 2
   },
+  [16017] = {
+    Condition = T.RT_5,
+    DungeonDropReward = 136017,
+    DungeonList = {616101},
+    DungeonRewardView = 136017,
+    MonRewardId = 16017,
+    MonsterUnitId = 6001021,
+    Sequence = 1
+  },
+  [16018] = {
+    Condition = T.RT_5,
+    DungeonDropReward = 136018,
+    DungeonList = {616102},
+    DungeonRewardView = 136018,
+    MonRewardId = 16018,
+    MonsterUnitId = 6002021,
+    Sequence = 2
+  },
+  [16019] = {
+    Condition = T.RT_5,
+    DungeonDropReward = 136019,
+    DungeonList = {616103},
+    DungeonRewardView = 136019,
+    MonRewardId = 16019,
+    MonsterUnitId = 6004021,
+    Sequence = 1
+  },
   [16501] = {
     Condition = T.RT_6,
     DungeonDropReward = 136501,
@@ -1271,6 +1388,15 @@ return ReadOnly("ModDungeonMonReward", {
     MonsterUnitId = 9007019,
     Sequence = 509
   },
+  [16510] = {
+    Condition = T.RT_6,
+    DungeonDropReward = 136510,
+    DungeonList = {616110},
+    DungeonRewardView = 136510,
+    MonRewardId = 16510,
+    MonsterUnitId = 9002017,
+    Sequence = 505
+  },
   [17001] = {
     Condition = T.RT_7,
     DungeonDropReward = 137001,
@@ -1341,6 +1467,24 @@ return ReadOnly("ModDungeonMonReward", {
     DungeonRewardView = 137008,
     MonRewardId = 17008,
     MonsterUnitId = 7018014,
+    Sequence = 1
+  },
+  [17015] = {
+    Condition = T.RT_7,
+    DungeonDropReward = 137009,
+    DungeonList = {616104},
+    DungeonRewardView = 137009,
+    MonRewardId = 17015,
+    MonsterUnitId = 7001022,
+    Sequence = 2
+  },
+  [17016] = {
+    Condition = T.RT_7,
+    DungeonDropReward = 137010,
+    DungeonList = {616105},
+    DungeonRewardView = 137010,
+    MonRewardId = 17016,
+    MonsterUnitId = 7001019,
     Sequence = 1
   },
   [18001] = {
@@ -1531,5 +1675,41 @@ return ReadOnly("ModDungeonMonReward", {
     MonRewardId = 18021,
     MonsterUnitId = 9006019,
     Sequence = 40
+  },
+  [18022] = {
+    Condition = T.RT_8,
+    DungeonDropReward = 139009,
+    DungeonList = {616106},
+    DungeonRewardView = 139009,
+    MonRewardId = 18022,
+    MonsterUnitId = 7009013,
+    Sequence = 1
+  },
+  [18023] = {
+    Condition = T.RT_8,
+    DungeonDropReward = 139010,
+    DungeonList = {616107},
+    DungeonRewardView = 139010,
+    MonRewardId = 18023,
+    MonsterUnitId = 7008013,
+    Sequence = 2
+  },
+  [18024] = {
+    Condition = T.RT_8,
+    DungeonDropReward = 139011,
+    DungeonList = {616108},
+    DungeonRewardView = 139011,
+    MonRewardId = 18024,
+    MonsterUnitId = 6007018,
+    Sequence = 3
+  },
+  [18025] = {
+    Condition = T.RT_8,
+    DungeonDropReward = 139012,
+    DungeonList = {616109},
+    DungeonRewardView = 139012,
+    MonRewardId = 18025,
+    MonsterUnitId = 6003015,
+    Sequence = 4
   }
 })

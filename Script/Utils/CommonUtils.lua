@@ -1,3 +1,4 @@
+local SerializeUtils = require("Utils.SerializeUtils")
 local CommonUtils = {}
 local this = CommonUtils
 
@@ -1897,6 +1898,24 @@ function CommonUtils.NormalizeInt(Value, DefaultValue, MinValue, MaxValue)
     Value = MaxValue
   end
   return Value
+end
+
+function CommonUtils.IsInteger(Value)
+  return type(Value) == "number" and Value == math.floor(Value)
+end
+
+function CommonUtils.CalcAsyncCombatContribution(Damage, TotalHp)
+  if not TotalHp or TotalHp <= 0 then
+    return 0
+  end
+  if not Damage or Damage <= 0 then
+    return 0
+  end
+  return math.max(0, math.min(10000, math.floor(Damage * 10000 / TotalHp)))
+end
+
+function CommonUtils.IsReachBaseContribution(Damage, TotalHp)
+  return CommonUtils.CalcAsyncCombatContribution(Damage, TotalHp) >= DataMgr.AsyncCombatEventConstant.AsyncCombat_BaseContributionRequire.ConstantValue
 end
 
 return CommonUtils

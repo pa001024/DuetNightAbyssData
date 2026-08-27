@@ -3,6 +3,7 @@ local PersonInfoController = require("BluePrints.UI.WBP.PersonInfo.PersonInfoCon
 local GuildBaseInfo = require("BluePrints.UI.WBP.Guild.Common.GuildBaseInfo")
 local GuildLogoInfo = require("BluePrints.UI.WBP.Guild.Common.GuildLogoInfo")
 local UIUtils = require("Utils.UIUtils")
+local MiscUtils = require("Utils.MiscUtils")
 
 local function EnsurePersonalInfoSceneReddotTree()
   if not ReddotManager.GetTreeNode("PersonalInfoCustomizeEntry") then
@@ -284,6 +285,7 @@ function Component:CheckOtherPlayerPersonallInfo(PlayerUuid, bForceUsedServerDat
     MergePlayerInfoFromAvatarInfo(PlayerInfo, AvatarInfo, PlayerUuid)
     MergePlayerInfoFromGuildInfo(PlayerInfo, GuildInfo)
     TryRequestOtherGuildSimpleInfo(self, PlayerInfo, PlayerUuid)
+    PersonInfoController.bAutoHideUIOnNextOpen = true
     PersonInfoController:HandleOpenOtherPlayerView(PlayerInfo, bForceUsedServerData)
     DebugPrint("yklua Had Received Server Open PersonInfo")
   end
@@ -372,7 +374,7 @@ function Component:SetCustomDisplay(Callback, CustomDisplay)
   end
   
   local function cb(ret)
-    GreenPrint("SetCustomDisplay上传RPC发送成功")
+    MiscUtils.GreenPrint("SetCustomDisplay上传RPC发送成功")
     if not ErrorCode:Check(ret) then
       return
     end
@@ -381,7 +383,7 @@ function Component:SetCustomDisplay(Callback, CustomDisplay)
     end
   end
   
-  GreenPrint("SetCustomDisplay上传RPC已发送")
+  MiscUtils.GreenPrint("SetCustomDisplay上传RPC已发送")
   self:CallServer("SetCustomDisplay", cb, CustomDisplay)
 end
 

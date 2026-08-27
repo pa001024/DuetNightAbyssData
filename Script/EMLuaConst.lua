@@ -1,10 +1,12 @@
 local EMLuaConst = {
   EMRandomSubSystem_MaxNumber = 10000,
   EMRandomSubSystem_MaxNumberPerTick = 1000,
-  EMRandomSubSystem_TickInterval = 5
+  EMRandomSubSystem_TickInterval = 5,
+  WindowMinimizedFrameRate = 15
 }
 local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName()
 EMLuaConst.EnableClientRpcDelay = Const.EnableClientRpcDelay
+EMLuaConst.HideNormalMonsterBuffIcon = Const.HideNormalMonsterBuffIcon
 EMLuaConst.PushMonsterOptimizationLevel = Const.PushMonsterOptimizationLevel
 EMLuaConst.BeginRagdollExecutePreFrame_PC = Const.BeginRagdollExecutePreFrame_PC
 EMLuaConst.BeginRagdollExecutePreFrame_IOS = Const.BeginRagdollExecutePreFrame_IOS
@@ -12,6 +14,7 @@ EMLuaConst.BeginRagdollExecutePreFrame_Android = Const.BeginRagdollExecutePreFra
 EMLuaConst.bPlayerMoveDefferUpdateOverlap = true
 EMLuaConst.bEnableAsyncTravelDelay = false
 EMLuaConst.bDisableOcclusionInTalk = false
+EMLuaConst.KawaiiPhysicsUseSIMD = 0
 EMLuaConst.bAIDebugLog = false
 if "Android" == PlatformName or "OpenHarmony" == PlatformName then
   EMLuaConst.bPlayerPreloadSummon = Const.PlayerPreloadSummon_Android
@@ -30,14 +33,14 @@ end
 EMLuaConst.bALSameLM = Const.bALSameLM
 EMLuaConst.bCNPCDelHide = Const.CNPCDelHide
 EMLuaConst.bPhantomWCDungeonBornAdjust = false
-EMLuaConst.bCNPCCreateAsync = true
-EMLuaConst.bCNPCUpdateAsync = true
 EMLuaConst.UpdateAllMonsterDead = true
 EMLuaConst.bEnablePhysBodyCrashCheck = true
+EMLuaConst.bEnableCreateUnitContextCache = true
 if "Android" == PlatformName or "IOS" == PlatformName or "OpenHarmony" == PlatformName then
   EMLuaConst.bCustomNPCUseSignificanceOpt = false
 end
 EMLuaConst.bCustomNPCMoveBalanceTick = Const.bCustomNPCMoveBalanceTick
+EMLuaConst.bSingleLoadCNPCHair = true
 EMLuaConst.AndroidPreloadCoefficient = 1.2
 EMLuaConst.PcPreloadCoefficient = 1.0
 EMLuaConst.IosPreloadCoefficient = 1.0
@@ -70,7 +73,7 @@ EMLuaConst.CNPCOptimizeSpecialLevelName2 = Const.CNPCOptimizeSpecialLevelName2
 EMLuaConst.CNPCOptimizeSpecialLevelName3 = Const.CNPCOptimizeSpecialLevelName3
 EMLuaConst.IsOpenCustomNPCDisableCollision = Const.IsOpenCustomNPCDisableCollision
 EMLuaConst.IsOpenEXStationCNPCSignifance = Const.IsOpenEXStationCNPCSignifance
-EMLuaConst.IsOpenNpcLoadBTAsync = Const.IsOpenNpcLoadBTAsyn
+EMLuaConst.IsOpenNpcLoadBTAsync = Const.IsOpenNpcLoadBTAsync
 EMLuaConst.IsOpenNpcGetPatrolTrigger = Const.IsOpenNpcGetPatrolTrigger
 EMLuaConst.EnableDynamicAIController = Const.EnableDynamicAIController
 EMLuaConst.EnableMonDeathOptimization = Const.bEnableMonDeathOptimization
@@ -120,7 +123,6 @@ EMLuaConst.PCInterativeTickCount = 5
 EMLuaConst.MobileInterativeTickCount = 3
 EMLuaConst.bEnableHideRegionPlayer = true
 EMLuaConst.RagdollClientMotorsAngularDriveParams = 1000
-EMLuaConst.LowMemoryDeviceNPCOptimize = Const.LowMemoryDeviceNPCOptimize
 EMLuaConst.RagdollForceExitTime = 15
 EMLuaConst.RagdollForceExitTimeShort = 5
 EMLuaConst.RagdollForceExitTimeShortUnitId = 10005001
@@ -130,10 +132,11 @@ EMLuaConst.FootstepFXFastSpeed = Const.FootstepFXFastSpeed
 EMLuaConst.FootstepDeepWaterRatio = Const.WaterDepth
 EMLuaConst.SkillPlaySeUseHitLocation = true
 EMLuaConst.EventCallbackStop = true
-EMLuaConst.OnlineNPCCreateOptimize = Const.OnlineNPCCreateOptimize
-EMLuaConst.LimitCreateCharacterNum_Low = 0
 EMLuaConst.HighFrequencyCheckGCInterval = 2
 EMLuaConst.bEnableClientMonsterOptimization = true
+EMLuaConst.bEnableRegionDeferredDestroy = false
+EMLuaConst.RegionDeferredDestroyMaxPerFrame = 8
+EMLuaConst.RegionDeferredDestroyTimeBudgetMs = 2.0
 EMLuaConst.bSplitFrame_RefreshBloodBar = true
 EMLuaConst.SplitFrame_RefreshBloodBar_MaxTimes = 16
 EMLuaConst.bEnableRagdollBudgetSubsystem = true
@@ -171,7 +174,6 @@ EMLuaConst.bMoveOpt_SweepIgnoreStatic = false
 EMLuaConst.bAsyncMonMovement = false
 EMLuaConst.bAsyncMonMoveTickInPhysThread = false
 EMLuaConst.bEnableRegionPlayerUnitBudget = true
-EMLuaConst.bEnableLimitCreateCharacterNumDefault = false
 EMLuaConst.HookEllipsePCX = 0.74
 EMLuaConst.HookEllipsePCY = 0.82
 EMLuaConst.HookEllipseMoblieX = 0.82
@@ -182,6 +184,25 @@ EMLuaConst.MapMobileReplacePath = "Maps_Phone"
 EMLuaConst.bConditionalSkipMonsterReplication = true
 EMLuaConst.RegionOnlineNearbyMaxCount = 50
 EMLuaConst.RegionOnlineNearbyMaxDist = 10000
+EMLuaConst.MaxKawaiiMember = 20
+EMLuaConst.KawaiiLevelMap = {
+  FromOtherWorld = 0,
+  Phantom = 0,
+  OtherPlayer = 0,
+  Npc = 0
+}
+local KawaiiLODLevelArray = TArray(0)
+KawaiiLODLevelArray:Add(4)
+KawaiiLODLevelArray:Add(4)
+KawaiiLODLevelArray:Add(3)
+KawaiiLODLevelArray:Add(1)
+EMLuaConst.KawaiiLODLevelArray = KawaiiLODLevelArray
+EMLuaConst.bEnableCommonUROFromOtherWorld = true
+EMLuaConst.bEnableCommonUROPhantom = true
+EMLuaConst.bEnableCommonURONormalMonster = true
+EMLuaConst.bEnableCommonURONPC = true
+EMLuaConst.bEnableCommonUROSummonMonster = true
+EMLuaConst.bEnableCommonUROOtherPlayer = true
 EMLuaConst.bShowGuildConstructActorDebug = true
 EMLuaConst.bOpenComputeDotBuff = false
 EMLuaConst.OpenComputeJumpWord = true
@@ -204,7 +225,7 @@ EMLuaConst.WindowMinHeightMinPx = 200
 EMLuaConst.WindowResizeDebounceDelay = 0.3
 EMLuaConst.WindowMovedDebounceDelay = 0.3
 EMLuaConst.bUseLineTraceForSkillMove = true
-EMLuaConst.bSupportPreloadFromLua = true
+EMLuaConst.bSupportPreloadFromLua = false
 EMLuaConst.bTacmapUseTopN = true
 EMLuaConst.EveCopyCreatureMaxCount = 5
 EMLuaConst.CopyModeScanRadius = 3000.0
@@ -212,6 +233,39 @@ EMLuaConst.CopyModeMaxMeshHalfExtent = 500.0
 EMLuaConst.CopyModeRayALength = 10000.0
 EMLuaConst.CopyModeRayBLength = 2000.0
 EMLuaConst.bEnableMountPassenger = false
+local MonsterOptConfig = UE4.FMonsterOptConfig()
+MonsterOptConfig.bUseMonsterWeaponBase = true
+MonsterOptConfig.bOptCloseAccessories = true
+MonsterOptConfig.bOptCloseRagdoll = false
+MonsterOptConfig.bUseSimpleAnimGraph = false
+MonsterOptConfig.bUseMonsterWeaponPool = Const.bUseMonsterWeaponPool
+MonsterOptConfig.bBillboardHiddenWhileOccluded = true
+EMLuaConst.MonsterOptConfig = MonsterOptConfig
+local PlayerAnimUpdateRateConfig = UE4.FPlayerAnimUpdateRateConfig()
+PlayerAnimUpdateRateConfig.bEnable = true
+PlayerAnimUpdateRateConfig.bUseLODMap = false
+PlayerAnimUpdateRateConfig.bUseMinLOD = false
+PlayerAnimUpdateRateConfig.bUseDistanceMap = true
+PlayerAnimUpdateRateConfig.bSleepSkip = false
+PlayerAnimUpdateRateConfig.NonRenderedUpdateRate = 8
+PlayerAnimUpdateRateConfig.MaxEvalRateForInterpolation = 9
+local DistanceRule025 = UE4.FPlayerURODistanceRateRule()
+DistanceRule025.ScreenSizeThreshold = 0.015625
+DistanceRule025.FrameSkipCount = 1
+PlayerAnimUpdateRateConfig.DistanceRules:Add(DistanceRule025)
+local DistanceRule020 = UE4.FPlayerURODistanceRateRule()
+DistanceRule020.ScreenSizeThreshold = 0.01
+DistanceRule020.FrameSkipCount = 3
+PlayerAnimUpdateRateConfig.DistanceRules:Add(DistanceRule020)
+local DistanceRule010 = UE4.FPlayerURODistanceRateRule()
+DistanceRule010.ScreenSizeThreshold = 0.0025
+DistanceRule010.FrameSkipCount = 5
+PlayerAnimUpdateRateConfig.DistanceRules:Add(DistanceRule010)
+local DistanceRule005 = UE4.FPlayerURODistanceRateRule()
+DistanceRule005.ScreenSizeThreshold = 6.25E-4
+DistanceRule005.FrameSkipCount = 7
+PlayerAnimUpdateRateConfig.DistanceRules:Add(DistanceRule005)
+EMLuaConst.PlayerAnimUpdateRateConfig = PlayerAnimUpdateRateConfig
 return setmetatable({}, {
   __index = function(t, k)
     local v = rawget(EMLuaConst, k)

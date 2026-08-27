@@ -101,7 +101,7 @@ function M:RefreshList(bAnimation, FromSrc)
     self.List_Item:SetVisibility(UE4.ESlateVisibility.Visible)
   end
   if self.BagSellState and self.CurSelectContent and self.CurSelectContent.Count > 0 then
-  else
+  elseif not self.NeedSelectItemId then
     self:AddTimer(0.05, function()
       if self.List_Item:GetNumItems() > 0 then
         local FirstItem = self.List_Item:GetItemAt(0)

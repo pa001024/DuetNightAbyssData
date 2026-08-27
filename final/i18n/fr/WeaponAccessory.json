@@ -464,10 +464,42 @@
     "unlock": "Disponible via l’échange de Prismes"
   },
   {
+    "id": 10059,
+    "name": "Cage du feu spectral – Blanc ivoire",
+    "desc": "Aucune cage ne peut retenir les flammes.",
+    "icon": "T_Fashion_Weapon43_03",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10060,
+    "name": "Cage du feu spectral – Jade noir",
+    "desc": "Aucune cage ne peut retenir les flammes.",
+    "icon": "T_Fashion_Weapon43_02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10061,
+    "name": "Cage du feu spectral – Doré",
+    "desc": "Aucune cage ne peut retenir les flammes.",
+    "icon": "T_Fashion_Weapon43_01",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
     "id": 20001,
     "name": "Graffiti détonant",
     "desc": "Utilisable avec la Variante d’attaque — Sceau démoniaque : Entaille rugissante.",
     "icon": "T_Fashion_Fx20",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 20004,
+    "name": "Spirale d’épines",
+    "desc": "Utilisable avec la Variante d’attaque — Sceau démoniaque : Ombre perce-ciel.",
+    "icon": "T_Fashion_Fx42",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
@@ -477,7 +509,7 @@
     "desc": "Utilisable avec la Variante d’attaque — Sceau démoniaque : Résonance transperçante.",
     "icon": "T_Fashion_Fx21",
     "rarity": 5,
-    "unlock": "Disponible via l’échange de Prismes"
+    "unlock": "Disponible dans la boutique"
   },
   {
     "id": 40001,

@@ -1,14 +1,14 @@
 [
   {
     "id": 10101,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       10
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_01",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "unique": true,
     "rarity": 1,
@@ -16,160 +16,160 @@
   },
   {
     "id": 10102,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       10
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_02",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 10103,
-    "desc": "（待包装）每隔x秒，生命恢复最大值的y%",
+    "desc": "RLPTreasure_Desc_10103",
     "endPoints": [
       10
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_05",
     "modEquip": "Role",
-    "name": "Savon purificateur du fidèle béni",
-    "simpleDesc": "（待包装简）每隔x秒，生命恢复最大值的y%",
+    "name": "RLPTreasure_Name_10103",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10103",
     "treasureGroup": 1,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 10104,
-    "desc": "（待包装）每隔x秒，神智恢复y",
+    "desc": "RLPTreasure_Desc_10104",
     "endPoints": [
       10
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_06",
     "modEquip": "Role",
-    "name": "Savon vivifiant du fidèle béni",
-    "simpleDesc": "（待包装简）每隔x秒，神智恢复y",
+    "name": "RLPTreasure_Name_10104",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10104",
     "treasureGroup": 1,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 10105,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       10
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_07",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 10106,
-    "desc": "Lorsque les PV tombent sous <Highlight>30.0%</>, confère une immunité à l’interruption et réduit les dégâts subis de <Highlight>100.0%</> pendant <Highlight>2.0</> s. Peut se déclencher une fois toutes les <Highlight>30.0</> s.",
+    "desc": "RLPTreasure_Desc_10106",
     "endPoints": [
       10
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_21",
     "modEquip": "Role",
-    "name": "Chaînes de l’abnégation",
-    "simpleDesc": "Lorsque les PV diminuent, confère une immunité aux interruptions et réduit les dégâts subis.",
+    "name": "RLPTreasure_Name_10106",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10106",
     "treasureGroup": 1,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 10107,
-    "desc": "Après avoir utilisé [Soutien de Géniemon], augmente les dégâts infligés de <Highlight>30.0%</> pendant <Highlight>8.0</> s.",
+    "desc": "RLPTreasure_Desc_10107",
     "endPoints": [
       10
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_28",
     "modEquip": "Role",
-    "name": "Rations du compagnon de voyage",
-    "simpleDesc": "Après l’activation du Soutien de Géniemon, les dégâts infligés augmentent.",
+    "name": "RLPTreasure_Name_10107",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10107",
     "treasureGroup": 1,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 10108,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       10
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_03",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 10109,
-    "desc": "Nombre maximum d’esquives +<Highlight>2.0</>.",
+    "desc": "RLPTreasure_Desc_10109",
     "endPoints": [
       10
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_19",
     "modEquip": "Role",
-    "name": "Bottes de l’éclaireur pionnier",
-    "simpleDesc": "Augmentation du nombre maximal d’esquives du personnage.",
+    "name": "RLPTreasure_Name_10109",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10109",
     "treasureGroup": 1,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 10110,
-    "desc": "Après avoir obtenu cet Artéfact, confère un cumul de +<Highlight>40.0%</> de dégâts infligés après chaque réanimation.",
+    "desc": "RLPTreasure_Desc_10110",
     "endPoints": [
       10
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_24",
     "modEquip": "Role",
-    "name": "Anneau du fanatique",
-    "simpleDesc": "Chaque réanimation augmente les dégâts infligés.",
+    "name": "RLPTreasure_Name_10110",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10110",
     "treasureGroup": 1,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 10111,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       10
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_04",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 10112,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       10
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_04",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "unique": true,
     "rarity": 1,
@@ -177,29 +177,29 @@
   },
   {
     "id": 10113,
-    "desc": "Infliger des dégâts avec une arme à distance fait apparaître des [Caisses de munitions]. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>30.0%</> s.",
+    "desc": "RLPTreasure_Desc_10113",
     "endPoints": [
       10
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_04",
     "modEquip": "Role",
-    "name": "Balle d’argent du rôdeur chasse-vent",
-    "simpleDesc": "Infliger des dégâts avec une arme à distance fait apparaître des [Caisses de munitions].",
+    "name": "RLPTreasure_Name_10113",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10113",
     "treasureGroup": 1,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 10201,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_09",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "unique": true,
     "rarity": 2,
@@ -207,29 +207,29 @@
   },
   {
     "id": 10202,
-    "desc": "Restaure <Highlight>15.0</> de Lucidité après l’utilisation d’une compétence. Temps de recharge : <Highlight>10.0</> s.",
+    "desc": "RLPTreasure_Desc_10202",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_22",
     "modEquip": "Role",
-    "name": "Calice du fidèle du Noctilunisme",
-    "simpleDesc": "Restaure de la Lucidité après l’utilisation d’une compétence.",
+    "name": "RLPTreasure_Name_10202",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10202",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10203,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_23",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "unique": true,
     "rarity": 2,
@@ -237,14 +237,14 @@
   },
   {
     "id": 10204,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_17",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "unique": true,
     "rarity": 2,
@@ -252,14 +252,14 @@
   },
   {
     "id": 10205,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_20",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "unique": true,
     "rarity": 2,
@@ -267,266 +267,266 @@
   },
   {
     "id": 10206,
-    "desc": "Lorsqu’une arme inflige un coup critique, les DGT CRIT ont <Highlight>25 %</> de chances de diminuer de <Highlight>20 %</>, <Highlight>70 %</> de chances d’augmenter de <Highlight>30 %</> et <Highlight>5 %</> de chances d’augmenter de <Highlight>100 %</>. Chaque effet peut se cumuler jusqu’à <Highlight>5</> fois.",
+    "desc": "RLPTreasure_Desc_10206",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_30",
     "modEquip": "Role",
-    "name": "Encouragement du Fou chanceux",
-    "simpleDesc": "Les coups critiques d’arme peuvent augmenter les DGT CRIT.",
+    "name": "RLPTreasure_Name_10206",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10206",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10207,
-    "desc": "Régénération auto de Lucidité +<Highlight>4.0</>.",
+    "desc": "RLPTreasure_Desc_10207",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_10",
     "modEquip": "Role",
-    "name": "Boucles d’oreilles de la prêtresse guérisseuse",
-    "simpleDesc": "Augmentation de la Régénération auto de Lucidité.",
+    "name": "RLPTreasure_Name_10207",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10207",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10208,
-    "desc": "Lorsque vous subissez des dégâts et que vos PV tombent sous <Highlight>50 %</>, récupère <Highlight>100 %</> de Lucidité.\nLorsque votre Lucidité tombe sous <Highlight>50 %</>, récupère <Highlight>100 %</> de PV.\nCes effets peuvent se déclencher au maximum une fois toutes les <Highlight>120</> s et partagent le même temps de recharge.",
+    "desc": "RLPTreasure_Desc_10208",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_15",
     "modEquip": "Role",
-    "name": "Partie de cartes de l’Homme au masque d’oiseau",
-    "simpleDesc": "Récupère de la Lucidité lorsque les PV sont faibles, et des PV lorsque la Lucidité est faible.",
+    "name": "RLPTreasure_Name_10208",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10208",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10209,
-    "desc": "Les Attaques chargées déclenchent une frappe supplémentaire invoquant une épée sacrée, infligeant des dégâts équivalents à <Highlight>50 %</> de l’ATQ. Temps de recharge : <Highlight>5</> s.\nAprès <Highlight>20</> invocations d’épée sacrée, déclenche une frappe supplémentaire infligeant des dégâts équivalents à <Highlight>50 %</> de l’ATQ.\nAprès <Highlight>50</> invocations d’épée sacrée, déclenche une frappe supplémentaire infligeant des dégâts équivalents à <Highlight>150 %</> de l’ATQ.",
+    "desc": "RLPTreasure_Desc_10209",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_04",
     "modEquip": "Role",
-    "name": "Épée sacrée du chevalier redouté",
-    "simpleDesc": "Les Attaques chargées peuvent invoquer une épée sacrée.",
+    "name": "RLPTreasure_Name_10209",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10209",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10210,
-    "desc": "Lorsque vous êtes en l’air, les dégâts de tir augmentent de <Highlight>200 %</>. Après <Highlight>10</> déclenchements, cet effet entre en recharge pendant <Highlight>5</> s.",
+    "desc": "RLPTreasure_Desc_10210",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_27",
     "modEquip": "Role",
-    "name": "Chargeur du rôdeur chasse-vent",
-    "simpleDesc": "Augmente les dégâts de tir en l’air.",
+    "name": "RLPTreasure_Name_10210",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10210",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10211,
-    "desc": "Augmente de <Highlight>80 %</> les dégâts infligés aux Ordonnateurs et aux Boss.",
+    "desc": "RLPTreasure_Desc_10211",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_29",
     "modEquip": "Role",
-    "name": "Gantelet de l’avant-garde conquérante",
-    "simpleDesc": "Augmente les dégâts infligés aux Ordonnateurs et aux Boss.",
+    "name": "RLPTreasure_Name_10211",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10211",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10212,
-    "desc": "Plus un monstre subit d’Effets supplémentaires de différents attributs élémentaires, plus les dégâts qu’il reçoit augmentent, jusqu’à un maximum de <Highlight>60 %</>.",
+    "desc": "RLPTreasure_Desc_10212",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_04",
     "modEquip": "Role",
-    "name": "Repentance du fidèle au sang corrompu",
-    "simpleDesc": "Plus un monstre subit d’Effets supplémentaires de différents attributs élémentaires, plus les dégâts qu’il reçoit augmentent.",
+    "name": "RLPTreasure_Name_10212",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10212",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10213,
-    "desc": "Infliger des <Highlight>dégâts supplémentaires</> lorsque la vie de la cible devient <Highlight>faible</>.",
+    "desc": "RLPTreasure_Desc_10213",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_04",
     "modEquip": "Role",
-    "name": "Résonance de prière – Cœur de feu",
-    "simpleDesc": "Infliger des <Highlight>dégâts supplémentaires</> lorsque la vie de la cible devient <Highlight>faible</>.",
+    "name": "RLPTreasure_Name_10213",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10213",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10214,
-    "desc": "Les armes à distance infligent davantage de dégâts plus la cible est éloignée.",
+    "desc": "RLPTreasure_Desc_10214",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_04",
     "modEquip": "Role",
-    "name": "Résonance de prière – Lune marine",
-    "simpleDesc": "Les armes à distance infligent davantage de dégâts plus la cible est éloignée.",
+    "name": "RLPTreasure_Name_10214",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10214",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10215,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_04",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10216,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_04",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10217,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_04",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10218,
-    "desc": "Après avoir effectué une invocation, augmente la Pénétration de tous les attributs de <Highlight>30 %</>.",
+    "desc": "RLPTreasure_Desc_10218",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_04",
     "modEquip": "Role",
-    "name": "Résonance de prière – Luciole brillante",
-    "simpleDesc": "Augmente la Pénétration de tous les attributs après avoir effectué une invocation.",
+    "name": "RLPTreasure_Name_10218",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10218",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10219,
-    "desc": "Pour le calcul des effets de Vigueur et de Ténacité, vos PV sont considérés comme étant à <Highlight>1 %</>. Cet effet ne s’applique pas lorsque la Vigueur dépasse <Highlight>30 %</>.",
+    "desc": "RLPTreasure_Desc_10219",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_04",
     "modEquip": "Role",
-    "name": "Résonance de prière – Fleur vampirique",
-    "simpleDesc": "Pour le calcul des effets de Vigueur et de Ténacité, vos PV sont considérés comme étant à <Highlight>1 %</>. Cet effet ne s’applique pas lorsque la Vigueur dépasse <Highlight>30 %</>.",
+    "name": "RLPTreasure_Name_10219",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10219",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10220,
-    "desc": "Les dégâts infligés avec une arme de mêlée augmentent les dégâts subis par la cible de <Highlight>2,5 %</> pendant <Highlight>5</> s. Cet effet peut se cumuler jusqu’à <Highlight>10</> fois.",
+    "desc": "RLPTreasure_Desc_10220",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_04",
     "modEquip": "Role",
-    "name": "Lame de l’avant-garde conquérante",
-    "simpleDesc": "Les dégâts de mêlée augmentent les dégâts subis par la cible.",
+    "name": "RLPTreasure_Name_10220",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10220",
     "treasureGroup": 1,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 10301,
-    "desc": "Chaque utilisation d’une compétence de combat lance un dé. Plus le résultat est élevé, plus le bonus de dégâts obtenu est important, jusqu’à un maximum de <Highlight>120 %</>. Si aucune compétence de combat n’est utilisée, le résultat du dé ne change pas. Le résultat initial est de 1.",
+    "desc": "RLPTreasure_Desc_10301",
     "endPoints": [
       40
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_16",
     "modEquip": "Role",
-    "name": "Tours de magie de l’Homme au masque d’oiseau",
-    "simpleDesc": "Chaque utilisation d’une compétence de combat lance un dé et peut augmenter les dégâts.",
+    "name": "RLPTreasure_Name_10301",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10301",
     "treasureGroup": 1,
     "rarity": 3,
     "weight": 200
   },
   {
     "id": 10302,
-    "desc": "Augmente les dégâts infligés de <Highlight>5.0%</> pour chaque Artéfact possédé.",
+    "desc": "RLPTreasure_Desc_10302",
     "endPoints": [
       40
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_18",
     "modEquip": "Role",
-    "name": "Grâce du Seigneur « Générosité »",
-    "simpleDesc": "Plus vous possédez d’Artéfacts, plus les dégâts infligés augmentent.",
+    "name": "RLPTreasure_Name_10302",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10302",
     "treasureGroup": 1,
     "rarity": 3,
     "weight": 200
   },
   {
     "id": 10303,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       40
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_08",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "unique": true,
     "rarity": 3,
@@ -534,29 +534,29 @@
   },
   {
     "id": 10304,
-    "desc": "Si les dégâts infligés sont inférieurs à <Highlight>500.0</>, inflige en plus <Highlight>500.0</> Dégâts purs.",
+    "desc": "RLPTreasure_Desc_10304",
     "endPoints": [
       40
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_54",
     "modEquip": "Role",
-    "name": "Dernier songe du chevalier errant",
-    "simpleDesc": "Infliger de faibles dégâts déclenche des Dégâts purs supplémentaires.",
+    "name": "RLPTreasure_Name_10304",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10304",
     "treasureGroup": 1,
     "rarity": 3,
     "weight": 200
   },
   {
     "id": 10305,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       40
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_04",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "unique": true,
     "rarity": 3,
@@ -564,15 +564,15 @@
   },
   {
     "id": 10306,
-    "desc": "Lorsque vous accordez un effet bénéfique à un allié, celui-ci obtient également <Highlight>50 %</> de dégâts supplémentaires et <Highlight>30 %</> de réduction des dégâts.",
+    "desc": "RLPTreasure_Desc_10306",
     "endPoints": [
       40
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_04",
     "modEquip": "Role",
-    "name": "Pain de la chaleur persistante",
-    "simpleDesc": "Les effets bénéfiques accordés aux alliés leur confèrent aussi un bonus de dégâts et une réduction des dégâts.",
+    "name": "RLPTreasure_Name_10306",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10306",
     "treasureGroup": 1,
     "unique": true,
     "rarity": 3,
@@ -580,14 +580,14 @@
   },
   {
     "id": 10307,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       40
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_31",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 1,
     "unique": true,
     "rarity": 3,
@@ -595,14 +595,14 @@
   },
   {
     "id": 11201,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_13",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 11,
     "unique": true,
     "rarity": 2,
@@ -610,14 +610,14 @@
   },
   {
     "id": 11202,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_14",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 11,
     "unique": true,
     "rarity": 2,
@@ -625,14 +625,14 @@
   },
   {
     "id": 12201,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_13",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 12,
     "unique": true,
     "rarity": 2,
@@ -640,14 +640,14 @@
   },
   {
     "id": 12202,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_14",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 12,
     "unique": true,
     "rarity": 2,
@@ -655,14 +655,14 @@
   },
   {
     "id": 13201,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_13",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 13,
     "unique": true,
     "rarity": 2,
@@ -670,14 +670,14 @@
   },
   {
     "id": 13202,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_14",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 13,
     "unique": true,
     "rarity": 2,
@@ -685,14 +685,14 @@
   },
   {
     "id": 14201,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_13",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 14,
     "unique": true,
     "rarity": 2,
@@ -700,14 +700,14 @@
   },
   {
     "id": 14202,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_14",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 14,
     "unique": true,
     "rarity": 2,
@@ -715,14 +715,14 @@
   },
   {
     "id": 15201,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_13",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 15,
     "unique": true,
     "rarity": 2,
@@ -730,14 +730,14 @@
   },
   {
     "id": 15202,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_14",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 15,
     "unique": true,
     "rarity": 2,
@@ -745,14 +745,14 @@
   },
   {
     "id": 16201,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_13",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 16,
     "unique": true,
     "rarity": 2,
@@ -760,14 +760,14 @@
   },
   {
     "id": 16202,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_14",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 16,
     "unique": true,
     "rarity": 2,
@@ -775,45 +775,45 @@
   },
   {
     "id": 17101,
-    "desc": "Les dégâts infligés avec une Arme de Consonance restaurent <Highlight>1</> de Lucidité.",
+    "desc": "RLPTreasure_Desc_17101",
     "endPoints": [
       10
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_04",
     "modEquip": "Role",
-    "name": "Souvenir de la Bête écarlate acculée",
-    "simpleDesc": "Les dégâts infligés avec une Arme de Consonance restaurent de la Lucidité.",
+    "name": "RLPTreasure_Name_17101",
+    "simpleDesc": "RLPTreasure_SimpleDesc_17101",
     "treasureGroup": 17,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 17201,
-    "desc": "Lorsque vous infligez des dégâts avec une Arme de Consonance, les Dégâts de compétence augmentent de <Highlight>30 %</> pendant <Highlight>5</> s. Temps de recharge : <Highlight>5</> s.",
+    "desc": "RLPTreasure_Desc_17201",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_04",
     "modEquip": "Role",
-    "name": "Lamentation de la Bête écarlate acculée",
-    "simpleDesc": "Les dégâts infligés avec une Arme de Consonance augmentent les Dégâts de compétence.",
+    "name": "RLPTreasure_Name_17201",
+    "simpleDesc": "RLPTreasure_SimpleDesc_17201",
     "treasureGroup": 17,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 18101,
-    "desc": "Lorsqu’un allié se trouve dans un rayon de <Highlight>20</> m, récupère <Highlight>1</> de Lucidité toutes les <Highlight>2</> s.",
+    "desc": "RLPTreasure_Desc_18101",
     "endPoints": [
       10
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_04",
     "modEquip": "Role",
-    "name": "Chant partagé des Plumes entrelacées",
-    "simpleDesc": "Récupère continuellement de la Lucidité lorsqu’un allié est à proximité.",
+    "name": "RLPTreasure_Name_18101",
+    "simpleDesc": "RLPTreasure_SimpleDesc_18101",
     "treasureGroup": 18,
     "unique": true,
     "rarity": 1,
@@ -821,15 +821,15 @@
   },
   {
     "id": 18201,
-    "desc": "Lorsqu’un allié se trouve dans un rayon de <Highlight>20</> m, récupère <Highlight>3 %</> des PV max toutes les <Highlight>2</> s.",
+    "desc": "RLPTreasure_Desc_18201",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_04",
     "modEquip": "Role",
-    "name": "Protection des Plumes entrelacées",
-    "simpleDesc": "Récupère continuellement des PV lorsqu’un allié est à proximité.",
+    "name": "RLPTreasure_Name_18201",
+    "simpleDesc": "RLPTreasure_SimpleDesc_18201",
     "treasureGroup": 18,
     "unique": true,
     "rarity": 2,
@@ -837,15 +837,15 @@
   },
   {
     "id": 18301,
-    "desc": "Lorsqu’un allié se trouve dans un rayon de <Highlight>20</> m, obtient <Highlight>5</> Braises toutes les <Highlight>2</> s.",
+    "desc": "RLPTreasure_Desc_18301",
     "endPoints": [
       40
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_04",
     "modEquip": "Role",
-    "name": "Nourricière des Plumes entrelacées",
-    "simpleDesc": "Obtient continuellement des Braises lorsqu’un allié est à proximité.",
+    "name": "RLPTreasure_Name_18301",
+    "simpleDesc": "RLPTreasure_SimpleDesc_18301",
     "treasureGroup": 18,
     "unique": true,
     "rarity": 3,
@@ -853,187 +853,187 @@
   },
   {
     "id": 19101,
-    "desc": "Tant qu’un bouclier est actif, réduit les dégâts subis de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_19101",
     "endPoints": [
       10
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_34",
     "modEquip": "Role",
-    "name": "Bouclier inébranlable du chevalier gardien",
-    "simpleDesc": "Réduit les dégâts subis lorsqu’un bouclier est actif.",
+    "name": "RLPTreasure_Name_19101",
+    "simpleDesc": "RLPTreasure_SimpleDesc_19101",
     "treasureGroup": 19,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 19201,
-    "desc": "Tant qu’un bouclier est actif, augmente les dégâts infligés de <Highlight>10.0%</>.",
+    "desc": "RLPTreasure_Desc_19201",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_33",
     "modEquip": "Role",
-    "name": "Épée affûtée du chevalier gardien",
-    "simpleDesc": "Augmente les dégâts infligés lorsqu’un bouclier est actif.",
+    "name": "RLPTreasure_Name_19201",
+    "simpleDesc": "RLPTreasure_SimpleDesc_19201",
     "treasureGroup": 19,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 20001,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       10
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_02",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 20001,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 20002,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       10
     ],
     "ipDesc": "C’est un hymne que tous connaissent, louant les dieux compatissants qui guident les âmes égarées.\nDans l’Abysse, les fidèles d’Élysium fredonnent cette mélodie brisée, implorant les dieux de les mener hors de la souffrance, vers le Paradis des Paradis.\nLa musique dorée s’écoule, et dans l’attente du bonheur, leurs yeux se ferment à jamais.",
     "icon": "T_Rouge_Treasure_07",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 20002,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 20003,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       10
     ],
     "ipDesc": "Les Umbrés surgirent de toutes parts, encerclant le groupe. Le chevalier s’élança seul dans les ténèbres, ouvrant un passage vers l’espoir.\nLorsque les Umbrés se dissipèrent, la prêtresse guérisseuse traîna hors du brouillard noir le corps meurtri du chevalier.\n« Je la sauverai », se jura-t-elle en silence.\nCar le sens de la guérison est de ne jamais laisser les braves mourir en vain.",
     "icon": "T_Rouge_Treasure_09",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 20003,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 20004,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       10
     ],
     "ipDesc": "La route est longue, et la vérité s’accompagne toujours de souffrance. Lorsque la cloche du soir retentit, oiseau errant, pourquoi refuses-tu de rentrer au nid ? Parce que la tour n’est pas le centre du continent. Parce que les dieux ne sont pas l’origine de toute chose.\nIl croyait que le monde ne pouvait être mesuré qu’à la force de ses propres pas, même si cela devait l’enchaîner pour la vie.",
     "icon": "T_Rouge_Treasure_21",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 20004,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 20005,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       10
     ],
     "ipDesc": "« Toute récompense a un prix » — une maxime rabâchée jusqu’à l’usure, qui, observée sous l’angle du jeu, retrouve soudain un certain attrait.\nLe magicien au masque d’oiseau lança sa balle dans la boîte, puis demanda avec un sourire en coin : « La bonne nouvelle ou la mauvaise ? Laquelle souhaitez-vous entendre en premier ? »",
     "icon": "T_Rouge_Treasure_32",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 20005,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 20006,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       10
     ],
     "ipDesc": "Depuis l’enfance, elle admirait sa sœur chevalier. Forte, brillante, aucune mission ne semblait hors de sa portée.\nOn disait que l’Abysse sous le Lac Sacré était le champ de bataille le plus funeste : même les plus vaillants n’en revenaient pas.\nPourtant, sa sœur est revenue vivante. Vivante... mais muette à jamais.",
     "icon": "T_Rouge_Treasure_42",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 20006,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 20007,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "Les adultes murmuraient que sa sœur avait offensé les dieux dans le Lac Sacré, et qu’ils lui avaient arraché une part de son âme en châtiment.\nNon. Sa sœur était droite et pieuse. Elle n’avait rien offensé : elle avait seulement égaré son âme, là-bas. Si personne n’y croit... alors je le prouverai.\nJ’entrerai dans l’Abysse et je ramènerai l’âme que ma sœur y a perdue.",
     "icon": "T_Rouge_Treasure_43",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 20007,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 20101,
-    "desc": "Chaque utilisation d’une compétence augmente les DGT d’arme de mêlée de 20 %. Cet effet peut se cumuler jusqu’à 20 fois et perd 1 cumul toutes les 5 s.\nLes Dégâts de compétence et les DGT d’arme à distance diminuent de 50 %.",
+    "desc": "RLPTreasure_Desc_20101",
     "endPoints": [
       10
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_32",
     "modEquip": "Role",
-    "name": "Jouet de l’Homme au masque d’oiseau (I)",
-    "simpleDesc": "L’utilisation d’une compétence augmente les DGT d’arme de mêlée.",
+    "name": "RLPTreasure_Name_20101",
+    "simpleDesc": "RLPTreasure_SimpleDesc_20101",
     "treasureGroup": 20,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 20102,
-    "desc": "Chaque utilisation d’une compétence augmente les DGT d’arme à distance de 20 %. Cet effet peut se cumuler jusqu’à 20 fois et perd 1 cumul toutes les 5 s.\nLes Dégâts de compétence et les DGT d’arme de mêlée diminuent de 50 %.",
+    "desc": "RLPTreasure_Desc_20102",
     "endPoints": [
       10
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_32",
     "modEquip": "Role",
-    "name": "Jouet de l’Homme au masque d’oiseau (II)",
-    "simpleDesc": "L’utilisation d’une compétence augmente les DGT d’arme à distance.",
+    "name": "RLPTreasure_Name_20102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_20102",
     "treasureGroup": 20,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 20201,
-    "desc": "Chaque utilisation d’une compétence augmente les Dégâts de compétence de 20 %. Cet effet peut se cumuler jusqu’à 20 fois et perd 1 cumul toutes les 5 s.\nLes DGT d’arme de mêlée et les DGT d’arme à distance diminuent de 50 %.",
+    "desc": "RLPTreasure_Desc_20201",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_32",
     "modEquip": "Role",
-    "name": "Jouet de l’Homme au masque d’oiseau (III)",
-    "simpleDesc": "L’utilisation d’une compétence augmente les Dégâts de compétence.",
+    "name": "RLPTreasure_Name_20201",
+    "simpleDesc": "RLPTreasure_SimpleDesc_20201",
     "treasureGroup": 20,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 21101,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       10
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_35",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 21,
     "unique": true,
     "rarity": 1,
@@ -1041,14 +1041,14 @@
   },
   {
     "id": 21201,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_36",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 21,
     "unique": true,
     "rarity": 2,
@@ -1056,14 +1056,14 @@
   },
   {
     "id": 21301,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       40
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_37",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 21,
     "unique": true,
     "rarity": 3,
@@ -1071,135 +1071,135 @@
   },
   {
     "id": 22101,
-    "desc": "Lors des attaques, a <Highlight>25.0%</> de chance d’infliger des Dégâts Pyro supplémentaires équivalents à <Highlight>20.0%</> de l’ATQ du personnage.",
+    "desc": "RLPTreasure_Desc_22101",
     "endPoints": [
       10
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_38",
     "modEquip": "Role",
-    "name": "Sceau de la fournaise ardente",
-    "simpleDesc": "Infliger des dégâts peut déclencher des Dégâts Pyro supplémentaires.",
+    "name": "RLPTreasure_Name_22101",
+    "simpleDesc": "RLPTreasure_SimpleDesc_22101",
     "treasureGroup": 22,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 22102,
-    "desc": "Lors des attaques, a <Highlight>25.0%</> de chance d’infliger des Dégâts Hydro supplémentaires équivalents à <Highlight>20.0%</> de l’ATQ du personnage.",
+    "desc": "RLPTreasure_Desc_22102",
     "endPoints": [
       10
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_39",
     "modEquip": "Role",
-    "name": "Sceau des flots déchaînés",
-    "simpleDesc": "Infliger des dégâts peut déclencher des Dégâts Hydro supplémentaires.",
+    "name": "RLPTreasure_Name_22102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_22102",
     "treasureGroup": 22,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 22103,
-    "desc": "Lors des attaques, a <Highlight>25.0%</> de chance d’infliger des Dégâts Anémo supplémentaires équivalents à <Highlight>20.0%</> de l’ATQ du personnage.",
+    "desc": "RLPTreasure_Desc_22103",
     "endPoints": [
       10
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_40",
     "modEquip": "Role",
-    "name": "Sceau gravé par les vents",
-    "simpleDesc": "Infliger des dégâts peut déclencher des Dégâts Anémo supplémentaires.",
+    "name": "RLPTreasure_Name_22103",
+    "simpleDesc": "RLPTreasure_SimpleDesc_22103",
     "treasureGroup": 22,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 22104,
-    "desc": "Lors des attaques, a <Highlight>25.0%</> de chance d’infliger des Dégâts Électro supplémentaires équivalents à <Highlight>20.0%</> de l’ATQ du personnage.",
+    "desc": "RLPTreasure_Desc_22104",
     "endPoints": [
       10
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_41",
     "modEquip": "Role",
-    "name": "Sceau frappé par le tonnerre",
-    "simpleDesc": "Infliger des dégâts peut déclencher des Dégâts Électro supplémentaires.",
+    "name": "RLPTreasure_Name_22104",
+    "simpleDesc": "RLPTreasure_SimpleDesc_22104",
     "treasureGroup": 22,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 23101,
-    "desc": "Augmente les dégâts infligés de <Highlight>50.0%</> au prix d’une réduction de <Highlight>50.0%</> en Efficacité de compétence.",
+    "desc": "RLPTreasure_Desc_23101",
     "endPoints": [
       10
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_42",
     "modEquip": "Role",
-    "name": "Gantelets du chevalier pénitent",
-    "simpleDesc": "Augmente les dégâts infligés au prix d’une Efficacité de compétence réduite.",
+    "name": "RLPTreasure_Name_23101",
+    "simpleDesc": "RLPTreasure_SimpleDesc_23101",
     "treasureGroup": 23,
     "rarity": 1,
     "weight": 1000
   },
   {
     "id": 23201,
-    "desc": "Augmente les dégâts infligés de <Highlight>75.0%</> au prix d’une réduction de <Highlight>50.0%</> des dégâts des armes de mêlée.",
+    "desc": "RLPTreasure_Desc_23201",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_43",
     "modEquip": "Role",
-    "name": "Lame rouillée du chevalier pénitent",
-    "simpleDesc": "Augmente les dégâts infligés au prix de dégâts réduits pour les armes de mêlée.",
+    "name": "RLPTreasure_Name_23201",
+    "simpleDesc": "RLPTreasure_SimpleDesc_23201",
     "treasureGroup": 23,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 23202,
-    "desc": "Augmente les dégâts infligés de <Highlight>75.0%</> au prix d’une réduction de <Highlight>50.0%</> des dégâts des armes à distance.",
+    "desc": "RLPTreasure_Desc_23202",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_44",
     "modEquip": "Role",
-    "name": "Pistolet usé du chevalier pénitent",
-    "simpleDesc": "Augmente les dégâts infligés au prix de dégâts réduits pour les armes à distance.",
+    "name": "RLPTreasure_Name_23202",
+    "simpleDesc": "RLPTreasure_SimpleDesc_23202",
     "treasureGroup": 23,
     "rarity": 2,
     "weight": 500
   },
   {
     "id": 23301,
-    "desc": "Augmente les dégâts infligés de <Highlight>100.0%</> au prix d’une augmentation de <Highlight>50.0%</> des dégâts subis.",
+    "desc": "RLPTreasure_Desc_23301",
     "endPoints": [
       40
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_45",
     "modEquip": "Role",
-    "name": "Pendentif du chevalier pénitent",
-    "simpleDesc": "Augmente les dégâts infligés au prix d’une augmentation des dégâts subis.",
+    "name": "RLPTreasure_Name_23301",
+    "simpleDesc": "RLPTreasure_SimpleDesc_23301",
     "treasureGroup": 23,
     "rarity": 3,
     "weight": 200
   },
   {
     "id": 24101,
-    "desc": "Lorsque la valeur de Posture de l’ennemi est supérieure à <Highlight>50.0%</>, infliger des dégâts restaure <Highlight>3.0</> de Lucidité. Temps de recharge : <Highlight>5.0</> s.",
+    "desc": "RLPTreasure_Desc_24101",
     "endPoints": [
       10
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_53",
     "modEquip": "Role",
-    "name": "Arc long de la Sorcière éplorée",
-    "simpleDesc": "Infliger des dégâts restaure de la Lucidité lorsque la valeur de Posture de l’ennemi est élevée.",
+    "name": "RLPTreasure_Name_24101",
+    "simpleDesc": "RLPTreasure_SimpleDesc_24101",
     "treasureGroup": 24,
     "unique": true,
     "rarity": 1,
@@ -1207,15 +1207,15 @@
   },
   {
     "id": 24201,
-    "desc": "Lorsque la valeur de Posture de l’ennemi est inférieure à <Highlight>50.0%</>, les dégâts infligés augmentent de <Highlight>30.0%</>.",
+    "desc": "RLPTreasure_Desc_24201",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_52",
     "modEquip": "Role",
-    "name": "Flèche brisée de la Sorcière éplorée",
-    "simpleDesc": "Les dégâts infligés augmentent lorsque la valeur de Posture de l’ennemi est faible.",
+    "name": "RLPTreasure_Name_24201",
+    "simpleDesc": "RLPTreasure_SimpleDesc_24201",
     "treasureGroup": 24,
     "unique": true,
     "rarity": 2,
@@ -1223,15 +1223,15 @@
   },
   {
     "id": 25301,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       40
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_46",
     "modEquip": "Role",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 25,
     "unique": true,
     "rarity": 3,
@@ -1239,15 +1239,15 @@
   },
   {
     "id": 25302,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       40
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_47",
     "modEquip": "Role",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 25,
     "unique": true,
     "rarity": 3,
@@ -1255,15 +1255,15 @@
   },
   {
     "id": 25303,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       40
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_48",
     "modEquip": "Role",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 25,
     "unique": true,
     "rarity": 3,
@@ -1271,15 +1271,15 @@
   },
   {
     "id": 25304,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       40
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_49",
     "modEquip": "Role",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 25,
     "unique": true,
     "rarity": 3,
@@ -1287,15 +1287,15 @@
   },
   {
     "id": 25305,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       40
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_50",
     "modEquip": "Role",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 25,
     "unique": true,
     "rarity": 3,
@@ -1303,15 +1303,15 @@
   },
   {
     "id": 25306,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       40
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_51",
     "modEquip": "Role",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 25,
     "unique": true,
     "rarity": 3,
@@ -1319,14 +1319,14 @@
   },
   {
     "id": 26101,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       10
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_04",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 26,
     "unique": true,
     "rarity": 1,
@@ -1334,14 +1334,14 @@
   },
   {
     "id": 26201,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_04",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 26,
     "unique": true,
     "rarity": 2,
@@ -1349,14 +1349,14 @@
   },
   {
     "id": 26202,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       20
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_04",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 26,
     "unique": true,
     "rarity": 2,
@@ -1364,14 +1364,14 @@
   },
   {
     "id": 26301,
-    "desc": "Réduit les prix de tous les articles du Marchand abyssal de <Highlight>20.0%</>.",
+    "desc": "RLPTreasure_Desc_10102",
     "endPoints": [
       40
     ],
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "icon": "T_Rouge_Treasure_04",
-    "name": "Coupon de réduction du Marchand abyssal",
-    "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
+    "name": "RLPTreasure_Name_10102",
+    "simpleDesc": "RLPTreasure_SimpleDesc_10102",
     "treasureGroup": 26,
     "unique": true,
     "rarity": 3,

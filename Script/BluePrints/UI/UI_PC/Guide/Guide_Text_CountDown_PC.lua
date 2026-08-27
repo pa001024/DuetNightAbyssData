@@ -193,7 +193,7 @@ function Guide_Text_CountDown_PC:InitStartPetRaceCountDown(Duration, bShowZeroTe
     if IsValid(Player) then
       Player:RemoveDisableInputTag("PetRace")
       Player:SetCanInteractiveTrigger(true, "PetRace")
-      Player:SetESCMenuForbiddenState(false)
+      Player:SetESCMenuForbiddenStateByTag(false, "PetRace")
     end
     if Spline then
       Spline:StartRaceLottery()

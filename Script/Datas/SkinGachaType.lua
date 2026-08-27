@@ -26,7 +26,7 @@ return ReadOnly("SkinGachaType", {
   GACHA_SKIN_TYPE_SPECIAL_3 = {
     GachaGuaranteeDes = "UI_SkinGacha_Guarantee_Normal",
     GachaType = "GACHA_SKIN_TYPE_SPECIAL_3",
-    GachaTypeName = "UI_SkinGacha_Special",
+    GachaTypeName = "UI_SkinGacha_ReSpecial",
     SubTabId = 1401
   },
   GACHA_SKIN_TYPE_SPECIAL_4 = {
@@ -44,6 +44,12 @@ return ReadOnly("SkinGachaType", {
   GACHA_SKIN_TYPE_SPECIAL_6 = {
     GachaGuaranteeDes = "UI_SkinGacha_Guarantee_Normal",
     GachaType = "GACHA_SKIN_TYPE_SPECIAL_6",
+    GachaTypeName = "UI_SkinGacha_Special",
+    SubTabId = 1401
+  },
+  GACHA_SKIN_TYPE_SPECIAL_7 = {
+    GachaGuaranteeDes = "UI_SkinGacha_Guarantee_Normal",
+    GachaType = "GACHA_SKIN_TYPE_SPECIAL_7",
     GachaTypeName = "UI_SkinGacha_Special",
     SubTabId = 1401
   }

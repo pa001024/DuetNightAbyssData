@@ -133,6 +133,7 @@ function M:OnListItemSelected(Content, NotAddToSellList, bDefaultSelect)
       self:AddItemToSaleList(Content.Id, 1)
     end
     if self.ListRefreshed then
+      self.ListRefreshed = false
       self:RefreshDetailPanelView()
     end
     return

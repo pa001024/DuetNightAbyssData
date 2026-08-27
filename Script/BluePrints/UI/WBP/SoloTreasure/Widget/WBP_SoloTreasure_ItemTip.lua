@@ -1,3 +1,4 @@
+local MiscUtils = require("Utils.MiscUtils")
 local InventoryController = require("BluePrints.UI.WBP.SoloTreasure.Widget.Inventory.InventoryController")
 local InventoryCommonConst = require("BluePrints.UI.WBP.SoloTreasure.Widget.Inventory.InventoryCommonConst")
 local M = Class({
@@ -17,7 +18,7 @@ function M:RefreshItemInfo(Content)
     return
   end
   self.Text_Name:SetText(GText(TreasureInfo.Name))
-  local FormattedTreasureValue = Utils.FormatNumber(TreasureInfo.TreasureValue, false)
+  local FormattedTreasureValue = MiscUtils.FormatNumber(TreasureInfo.TreasureValue, false)
   self.Text_Value:SetText(GText(FormattedTreasureValue))
   self:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
   self:PlayAnimation(self.In)

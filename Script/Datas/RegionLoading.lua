@@ -370,5 +370,59 @@ return ReadOnly("RegionLoading", {
     LoadingId = 10630101,
     MessageGroup = 10630101,
     WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
+  },
+  [10700101] = {
+    BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_EX02_01.LevelSelect_Bg_EX02_01'",
+    LoadingId = 10700101,
+    MessageGroup = 10700101,
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/EX02/WBP_Com_ChangeScence_EX02_01_01.WBP_Com_ChangeScence_EX02_01_01'",
+    WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
+  },
+  [10700102] = {
+    BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_EX02_02.LevelSelect_Bg_EX02_02'",
+    LoadingId = 10700102,
+    MessageGroup = 10700102,
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/EX02/WBP_Com_ChangeScence_EX02_02_01.WBP_Com_ChangeScence_EX02_02_01'",
+    WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
+  },
+  [10710101] = {
+    BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_EX02_03.LevelSelect_Bg_EX02_03'",
+    LoadingId = 10710101,
+    MessageGroup = 10710101,
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/EX02/WBP_Com_ChangeScence_EX02_03_01.WBP_Com_ChangeScence_EX02_03_01'",
+    WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
+  },
+  [10720101] = {
+    BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_EX02_04.LevelSelect_Bg_EX02_04'",
+    LoadingId = 10720101,
+    MessageGroup = 10720101,
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/EX02/WBP_Com_ChangeScence_EX02_04_01.WBP_Com_ChangeScence_EX02_04_01'",
+    WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
+  },
+  [10730101] = {
+    BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_CommonBlack.LevelSelect_Bg_CommonBlack'",
+    LoadingId = 10730101,
+    MessageGroup = 10730101,
+    WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
+  },
+  [10740101] = {
+    BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_EX02_06.LevelSelect_Bg_EX02_06'",
+    LoadingId = 10740101,
+    MessageGroup = 10740101,
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/EX02/WBP_Com_ChangeScence_EX02_06_01.WBP_Com_ChangeScence_EX02_06_01'",
+    WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
+  },
+  [10760101] = {
+    BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_CommonBlack.LevelSelect_Bg_CommonBlack'",
+    LoadingId = 10760101,
+    MessageGroup = 10760101,
+    WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
+  },
+  [10770101] = {
+    BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_EX02_05.LevelSelect_Bg_EX02_05'",
+    LoadingId = 10770101,
+    MessageGroup = 10770101,
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/EX02/WBP_Com_ChangeScence_EX02_05_01.WBP_Com_ChangeScence_EX02_05_01'",
+    WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
   }
 })

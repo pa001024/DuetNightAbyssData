@@ -16,6 +16,13 @@ end
 function M:OnListItemObjectSet(Content)
   self.Content = Content
   self.Content.UI = self
+  self.WS_Type:SetActiveWidgetIndex(Content.IsEmpty and 1 or 0)
+  if Content.IsEmpty then
+    self:StopAllAnimations()
+    self.bIsFocusable = false
+    return
+  end
+  self.bIsFocusable = true
   if Content.Rec ~= "Entrust" then
     self:StopAllAnimations()
     if Content.bClick then

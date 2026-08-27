@@ -220,6 +220,17 @@ function RewardUtils:HandleRewardGender(Reward, RewardId, RewardData, Avatar)
   end
 end
 
+function RewardUtils:HandleRewardExGender(Reward, RewardId, RewardData, Avatar)
+  if not Avatar then
+    return
+  end
+  for Index, Param in ipairs(RewardData.Param) do
+    if Avatar.WeitaSex == Param then
+      self:HandleTypeByChooseIndex(Reward, RewardData, Index, Avatar)
+    end
+  end
+end
+
 function RewardUtils:GetMod(ModId)
   local Mods = {}
   local ModData = DataMgr.Mod[ModId]
@@ -341,6 +352,14 @@ function RewardUtils:GetRewardViewInfoById(RewardViewId)
       RewardContent.DropType = RewardDropTypes[i]
     end
     local ItemInfo = DataMgr[RewardContent.Type][RewardContent.Id]
+    if ItemInfo and RewardContent.Type == "UpgradeMod" then
+      RewardContent.Level = ItemInfo.ModLevel
+      RewardContent.ProductType = "Mod"
+      local ModId = ItemInfo.ModId
+      ItemInfo = DataMgr.Mod[ModId]
+      RewardContent.Type = "Mod"
+      RewardContent.Id = ModId
+    end
     if ItemInfo then
       RewardContent.Name = ItemInfo.Name or ItemInfo[RewardContent.Type .. "Name"]
       RewardContent.Rarity = ItemInfo.Rarity or ItemInfo[RewardContent.Type .. "Rarity"]

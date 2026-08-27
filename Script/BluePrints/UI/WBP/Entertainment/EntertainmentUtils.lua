@@ -1,4 +1,5 @@
 local M = {}
+local ConcernedResourceIdsCache
 local EEntertainmentState = {
   None = -1,
   Main = 0,
@@ -150,6 +151,28 @@ function M:IsPartyTopicShowRedDot(CharacterId, PartyTopicLevel, PartyTopicId)
     return false
   end
   return true
+end
+
+function M:GetConcernedResourceIds()
+  if ConcernedResourceIdsCache then
+    return ConcernedResourceIdsCache
+  end
+  local ResourceSet = {}
+  local PartyTopicTable = DataMgr.PartyTopic
+  if PartyTopicTable then
+    for _, PartyTopicData in pairs(PartyTopicTable) do
+      local Consume = PartyTopicData and PartyTopicData.PartyTopicConsume
+      if Consume then
+        for ResourceId in pairs(Consume) do
+          ResourceSet[ResourceId] = true
+        end
+      end
+    end
+  end
+  local HighLevelResourceId = 19000
+  ResourceSet[HighLevelResourceId] = true
+  ConcernedResourceIdsCache = ResourceSet
+  return ResourceSet
 end
 
 M.EEntertainmentState = EEntertainmentState

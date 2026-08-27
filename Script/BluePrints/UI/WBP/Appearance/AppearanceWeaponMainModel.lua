@@ -67,35 +67,35 @@ function M:SetSelectedWeaponContent(Content)
     ArmoryUtils:SetItemIsSelected(OldSelectedContent, false)
   end
   if self:GetCurrentMainTabName() == AppearanceUtils.AppearanceMainTabNames.Melee then
-    self:SetSelectedMeleeWeaponContent(Content)
+    self:SetSelectedMeleeContent(Content)
   elseif self:GetCurrentMainTabName() == AppearanceUtils.AppearanceMainTabNames.Ranged then
-    self:SetSelectedRangedWeaponContent(Content)
+    self:SetSelectedRangedContent(Content)
   end
   ArmoryUtils:SetItemIsSelected(Content, true)
 end
 
 function M:GetSelectedWeaponContent()
   if self:GetCurrentMainTabName() == AppearanceUtils.AppearanceMainTabNames.Melee then
-    return self:GetSelectedMeleeWeaponContent()
+    return self:GetSelectedMeleeContent()
   elseif self:GetCurrentMainTabName() == AppearanceUtils.AppearanceMainTabNames.Ranged then
-    return self:GetSelectedRangedWeaponContent()
+    return self:GetSelectedRangedContent()
   end
 end
 
-function M:SetSelectedMeleeWeaponContent(Content)
-  self.SelectedMeleeWeaponContent = Content
+function M:SetSelectedMeleeContent(Content)
+  self.SelectedMeleeContent = Content
 end
 
-function M:GetSelectedMeleeWeaponContent()
-  return self.SelectedMeleeWeaponContent
+function M:GetSelectedMeleeContent()
+  return self.SelectedMeleeContent
 end
 
-function M:SetSelectedRangedWeaponContent(Content)
-  self.SelectedRangedWeaponContent = Content
+function M:SetSelectedRangedContent(Content)
+  self.SelectedRangedContent = Content
 end
 
-function M:GetSelectedRangedWeaponContent()
-  return self.SelectedRangedWeaponContent
+function M:GetSelectedRangedContent()
+  return self.SelectedRangedContent
 end
 
 function M:GetSelectedWeapon()
@@ -109,14 +109,14 @@ function M:GetSelectedWeapon()
 end
 
 function M:GetSelectedMeleeWeapon()
-  local Content = self:GetSelectedMeleeWeaponContent()
+  local Content = self:GetSelectedMeleeContent()
   local Avatar = ArmoryUtils:GetAvatar()
   local Uuid = Content and Content.Uuid or Avatar.MeleeWeapon
   return Avatar.Weapons[Uuid]
 end
 
 function M:GetSelectedRangedWeapon()
-  local Content = self:GetSelectedRangedWeaponContent()
+  local Content = self:GetSelectedRangedContent()
   local Avatar = ArmoryUtils:GetAvatar()
   local Uuid = Content and Content.Uuid or Avatar.RangeWeapon
   return Avatar.Weapons[Uuid]
@@ -279,12 +279,12 @@ function M:CreateWeaponContents(Params)
   local CurMeleeWeaponContent = self.MeleeItemContentsMap[Avatar.MeleeWeapon]
   if CurMeleeWeaponContent then
     CurMeleeWeaponContent.bInGear = true
-    self:SetSelectedMeleeWeaponContent(CurMeleeWeaponContent)
+    self:SetSelectedMeleeContent(CurMeleeWeaponContent)
   end
   local CurRangedWeaponContent = self.RangedItemContentsMap[Avatar.RangedWeapon]
   if CurRangedWeaponContent then
     CurRangedWeaponContent.bInGear = true
-    self:SetSelectedRangedWeaponContent(CurRangedWeaponContent)
+    self:SetSelectedRangedContent(CurRangedWeaponContent)
   end
   self:SortWeaponContents({
     MainTabName = AppearanceUtils.AppearanceMainTabNames.Melee
@@ -302,9 +302,9 @@ function M:SortWeaponContents(Params)
   }
   local MainTabName = Params.MainTabName or self:GetCurrentMainTabName()
   if MainTabName == AppearanceUtils.AppearanceMainTabNames.Melee then
-    ArmoryUtils:SortItemContents(self.MeleeItemContentsArray, AttrNames, CommonConst.DESC, self:GetSelectedMeleeWeaponContent(), ArmoryUtils.IsOwnedCmpFunc)
+    ArmoryUtils:SortItemContents(self.MeleeItemContentsArray, AttrNames, CommonConst.DESC, self:GetSelectedMeleeContent(), ArmoryUtils.IsOwnedCmpFunc)
   else
-    ArmoryUtils:SortItemContents(self.RangedItemContentsArray, AttrNames, CommonConst.DESC, self:GetSelectedRangedWeaponContent(), ArmoryUtils.IsOwnedCmpFunc)
+    ArmoryUtils:SortItemContents(self.RangedItemContentsArray, AttrNames, CommonConst.DESC, self:GetSelectedRangedContent(), ArmoryUtils.IsOwnedCmpFunc)
   end
 end
 

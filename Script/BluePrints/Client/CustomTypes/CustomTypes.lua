@@ -682,7 +682,7 @@ function CustomDict:_OnCollectionChange()
   local owner = rawget(self, "__Owner")
   local owner_prop = rawget(self, "__Prop")
   if owner and owner_prop and owner._OnAttrPropChange then
-    owner:_OnAttrPropChange(owner_prop, nil, self)
+    owner:_OnAttrPropChange(owner_prop, nil, self._inner)
   end
 end
 

@@ -1,6 +1,7 @@
 require("UnLua")
 local RegionFameController = require("BluePrints.UI.WBP.Fame.RegionFameController")
 local RegionFameModel = RegionFameController:GetModel()
+local PageJumpUtils = require("Utils.PageJumpUtils")
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
 })
@@ -12,6 +13,7 @@ function M:Destruct()
   ReddotManager.RemoveListener(self.UIName, self)
   ReddotManager.RemoveListener("RecurringFameTask", self)
   ReddotManager.RemoveListener("EntrustFameTask", self)
+  ReddotManager.RemoveListener("ExperienceFameTask", self)
   ReddotManager.RemoveListener("MountLicense_Item", self)
   self:RemoveTimer("UpdateRefreshRemainingTime", true)
 end
@@ -19,20 +21,22 @@ end
 function M:OnLoaded(...)
   self.Super.OnLoaded(self, ...)
   self.UIName = "FameMain"
-  self.Btn_Conquer.TextName:SetText(GText("RecurringTask_Title"))
-  self.Btn_Gift.TextName:SetText(GText("ReputationEntrust_Title"))
-  self.Btn_Conquer_Huaxu.TextName:SetText(GText("RecurringTask_Title"))
-  self.Btn_Gift_Huaxu.TextName:SetText(GText("ReputationEntrust_Title"))
-  self.Btn_Conquer:BindEventOnClicked(self, self.OnConquer)
-  self.Btn_Gift:BindEventOnClicked(self, self.OnGift)
-  self.Btn_Conquer_Huaxu:BindEventOnClicked(self, self.OnConquer)
-  self.Btn_Gift_Huaxu:BindEventOnClicked(self, self.OnGift)
+  self.CachedTaskButtonName = nil
+  self:InitRegionButtonGroups()
+  for _, ButtonGroup in pairs(self.RegionButtonGroups) do
+    ButtonGroup.Conquer.TextName:SetText(GText("RecurringTask_Title"))
+    ButtonGroup.Gift.TextName:SetText(GText("ReputationEntrust_Title"))
+    ButtonGroup.Task.TextName:SetText(GText("Reigion_Task"))
+    ButtonGroup.Conquer:BindEventOnClicked(self, self.OnConquer)
+    ButtonGroup.Gift:BindEventOnClicked(self, self.OnGift)
+    ButtonGroup.Task:BindEventOnClicked(self, self.OnRegionTask)
+    ButtonGroup.Conquer.SoundFunc = self.ButtonClickSoundFunc
+    ButtonGroup.Gift.SoundFunc = self.ButtonClickSoundFunc
+    ButtonGroup.Task.SoundFunc = self.ButtonClickSoundFunc
+  end
   self.Fame_Progress:BindEventOnClicked(self, self.OnOpenReward)
-  self.Btn_Conquer.SoundFunc = self.ButtonClickSoundFunc
-  self.Btn_Gift.SoundFunc = self.ButtonClickSoundFunc
-  self.Btn_Conquer_Huaxu.SoundFunc = self.ButtonClickSoundFunc
-  self.Btn_Gift_Huaxu.SoundFunc = self.ButtonClickSoundFunc
-  self:InitRegionTab()
+  local InReputationID = (...)
+  self:InitRegionTab(InReputationID)
   self:InitLicenseUI()
   ReddotManager.AddListenerEx(self.UIName, self, self.OnFameMainReddotChange)
   ReddotManager.AddListenerEx(self.UIName, self, self.FameMainTabReddotChange)
@@ -40,8 +44,35 @@ function M:OnLoaded(...)
   ReddotManager.AddListenerEx("RecurringFameTask", self, self.FameMainTabReddotChange)
   ReddotManager.AddListenerEx("EntrustFameTask", self, self.OnFameMainReddotChange)
   ReddotManager.AddListenerEx("EntrustFameTask", self, self.FameMainTabReddotChange)
+  ReddotManager.AddListenerEx("ExperienceFameTask", self, self.OnFameMainReddotChange)
+  ReddotManager.AddListenerEx("ExperienceFameTask", self, self.FameMainTabReddotChange)
   EventManager:AddEvent(EventID.RegionReputationsChange, self, self.RefreshUI)
   AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "Fame_Main", nil)
+end
+
+function M:InitRegionButtonGroups()
+  self.RegionButtonGroups = {
+    [0] = {
+      Conquer = self.Btn_Conquer,
+      Gift = self.Btn_Gift,
+      Task = self.Btn_Task
+    },
+    [1] = {
+      Conquer = self.Btn_Conquer_Huaxu,
+      Gift = self.Btn_Gift_Huaxu,
+      Task = self.Btn_Task_Huaxu
+    }
+  }
+  self.RegionButtonSwitchers = {
+    self.Ws_BtnConquer,
+    self.Ws_BtnGift,
+    self.Ws_BtnTask
+  }
+end
+
+function M:GetActiveRegionButtonGroup()
+  local RegionUIButtonBGIndex = self.CurRegionData and self.CurRegionData.RegionUIButtonBGIndex or 0
+  return self.RegionButtonGroups[RegionUIButtonBGIndex] or self.RegionButtonGroups[0]
 end
 
 function M:InitLicenseUI()
@@ -63,7 +94,7 @@ function M:OnGetLicense()
 end
 
 function M:OnLicenseBtn_OnClicked()
-  UIManager(self):LoadUINew("MountLicense")
+  UIManager(self):LoadUINew("MountLicense", self)
 end
 
 function M:InitLicenseRedDot()
@@ -99,10 +130,33 @@ function M:UpdateRefreshRemainingTime()
   if self.EntrustTaskRefreshTimestamp and self.RecurringTaskRefreshTimestamp then
     local RemainingTimeText1 = UIUtils.GetRemainingTimeByTimestamp(self.RecurringTaskRefreshTimestamp)
     local RemainingTimeText2 = UIUtils.GetRemainingTimeByTimestamp(self.EntrustTaskRefreshTimestamp)
-    self.Btn_Conquer:SetTextRefresTime(RemainingTimeText1)
-    self.Btn_Gift:SetTextRefresTime(RemainingTimeText2)
-    self.Btn_Conquer_Huaxu:SetTextRefresTime(RemainingTimeText1)
-    self.Btn_Gift_Huaxu:SetTextRefresTime(RemainingTimeText2)
+    local AlreadyClaimedCount = 0
+    local TotalCount = 0
+    do
+      local avatar = GWorld:GetAvatar()
+      if avatar then
+        local reputation = avatar.RegionReputations[self.CurRegionTabId]
+        if not reputation or reputation.ExperienceQuestRewardRecord then
+        end
+        for _, Data in pairs(DataMgr.ReputationExperience) do
+          if self.CurRegionTabId == Data.ReputationId then
+            local questChain = avatar.QuestChains[Data.QuestId]
+            if not questChain or not questChain:IsFinish() then
+              AlreadyClaimedCount = AlreadyClaimedCount + 1
+            end
+          end
+        end
+        if self.CurRegionTabId then
+          TotalCount = #DataMgr.ReputationId2ExperienceQuestId[self.CurRegionTabId]
+        end
+      end
+    end
+    for _, ButtonGroup in pairs(self.RegionButtonGroups) do
+      ButtonGroup.Conquer:SetTextRefresTime(RemainingTimeText1)
+      ButtonGroup.Gift:SetTextRefresTime(RemainingTimeText2)
+      ButtonGroup.Task:SetTextRefresTime_1(GText("UI_Party_Parkour_FinishingRate"))
+      ButtonGroup.Task:SetTextRefresTime(TotalCount - AlreadyClaimedCount .. "/" .. TotalCount)
+    end
   end
 end
 
@@ -124,6 +178,10 @@ end
 
 function M:FindRegionReputationIndexByRegionId()
   local TargetRegionId = WorldTravelSubsystem():GetCurrentSceneId()
+  local MainMap = UIManager(self):GetUIObj("LevelMapMain")
+  if MainMap and MainMap.CurrentMainRegionId then
+    TargetRegionId = MainMap.CurrentMainRegionId
+  end
   for repKey, repData in pairs(DataMgr.RegionReputation) do
     local regionList = repData.RegionId
     if regionList then
@@ -137,7 +195,7 @@ function M:FindRegionReputationIndexByRegionId()
   return nil
 end
 
-function M:InitRegionTab()
+function M:InitRegionTab(InReputationID)
   self:InitRegionTabInfo()
   self.Com_Tab:Init({
     LeftKey = "Q",
@@ -201,6 +259,9 @@ function M:InitRegionTab()
     end
   end
   self:TrySelectRegionTabById(SelectId)
+  if InReputationID then
+    self:TrySelectRegionTabById(InReputationID)
+  end
   if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
     self.Com_Tab:Play_Com_Tab_M_In()
   else
@@ -288,8 +349,12 @@ function M:RefreshUIBG()
     self:UpdateUIStyleInPlatform(true)
   end
   local RegionUIButtonBGIndex = self.CurRegionData.RegionUIButtonBGIndex or 0
-  self.Ws_BtnConquer:SetActiveWidgetIndex(RegionUIButtonBGIndex)
-  self.Ws_BtnGift:SetActiveWidgetIndex(RegionUIButtonBGIndex)
+  for _, ButtonSwitcher in ipairs(self.RegionButtonSwitchers) do
+    ButtonSwitcher:SetActiveWidgetIndex(RegionUIButtonBGIndex)
+  end
+  if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
+    self:SetDefaultTaskButtonFocus()
+  end
 end
 
 function M:ButtonClickSoundFunc()
@@ -298,16 +363,19 @@ end
 
 function M:OnConquer()
   DebugPrint("SL OnConquer")
-  local GameInstance = self:GetGameInstance()
-  local UIManager = GameInstance:GetGameUIManager()
-  return UIManager:LoadUINew("FameTask", self.CurRegionTabId, FameTaskType.RecurringTask)
+  self.CachedTaskButtonName = "Conquer"
+  return PageJumpUtils:JumpToFameTask(self.CurRegionTabId, FameTaskType.RecurringTask)
 end
 
 function M:OnGift()
   DebugPrint("SL OnGift")
-  local GameInstance = self:GetGameInstance()
-  local UIManager = GameInstance:GetGameUIManager()
-  return UIManager:LoadUINew("FameTask", self.CurRegionTabId, FameTaskType.ReputationEntrust)
+  self.CachedTaskButtonName = "Gift"
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    Avatar:MarkEntrustFameTaskReddotRead(self.CurRegionTabId)
+    self:RefreshAllTabReddots()
+  end
+  return PageJumpUtils:JumpToFameTask(self.CurRegionTabId, FameTaskType.ReputationEntrust)
 end
 
 function M:OnOpenReward()
@@ -347,6 +415,16 @@ function M:RefreshCurRewardReddot()
   end
   self:RefreshRecurringTaskReddot()
   self:RefreshEntrustTaskReddot()
+  self:RefreshExperienceTaskReddot()
+end
+
+function M:RefreshExperienceTaskReddot()
+  local bHasCanClaim = RegionFameModel:HasTargetRegionCanClaimExperienceTask(self.CurRegionTabId)
+  for _, ButtonGroup in pairs(self.RegionButtonGroups) do
+    if ButtonGroup.Task and ButtonGroup.Task.Reddot then
+      ButtonGroup.Task.Reddot:SetVisibility(bHasCanClaim and UE4.ESlateVisibility.SelfHitTestInvisible or UE4.ESlateVisibility.Collapsed)
+    end
+  end
 end
 
 function M:RefreshRecurringTaskReddot()
@@ -355,21 +433,19 @@ function M:RefreshRecurringTaskReddot()
   if AllCanClaimTasks and #AllCanClaimTasks > 0 then
     bHasCanClaim = true
   end
-  if self.Btn_Conquer and self.Btn_Conquer.Reddot then
-    self.Btn_Conquer.Reddot:SetVisibility(bHasCanClaim and UE4.ESlateVisibility.SelfHitTestInvisible or UE4.ESlateVisibility.Collapsed)
-  end
-  if self.Btn_Conquer_Huaxu and self.Btn_Conquer_Huaxu.Reddot then
-    self.Btn_Conquer_Huaxu.Reddot:SetVisibility(bHasCanClaim and UE4.ESlateVisibility.SelfHitTestInvisible or UE4.ESlateVisibility.Collapsed)
+  for _, ButtonGroup in pairs(self.RegionButtonGroups) do
+    if ButtonGroup.Conquer and ButtonGroup.Conquer.Reddot then
+      ButtonGroup.Conquer.Reddot:SetVisibility(bHasCanClaim and UE4.ESlateVisibility.SelfHitTestInvisible or UE4.ESlateVisibility.Collapsed)
+    end
   end
 end
 
 function M:RefreshEntrustTaskReddot()
   local bHasCanClaim = RegionFameModel:GetTargetRegionEntrustTaskCanSubmit(self.CurRegionTabId)
-  if self.Btn_Gift and self.Btn_Gift.Reddot then
-    self.Btn_Gift.Reddot:SetVisibility(bHasCanClaim and UE4.ESlateVisibility.SelfHitTestInvisible or UE4.ESlateVisibility.Collapsed)
-  end
-  if self.Btn_Gift_Huaxu and self.Btn_Gift_Huaxu.Reddot then
-    self.Btn_Gift_Huaxu.Reddot:SetVisibility(bHasCanClaim and UE4.ESlateVisibility.SelfHitTestInvisible or UE4.ESlateVisibility.Collapsed)
+  for _, ButtonGroup in pairs(self.RegionButtonGroups) do
+    if ButtonGroup.Gift and ButtonGroup.Gift.Reddot then
+      ButtonGroup.Gift.Reddot:SetVisibility(bHasCanClaim and UE4.ESlateVisibility.SelfHitTestInvisible or UE4.ESlateVisibility.Collapsed)
+    end
   end
 end
 
@@ -394,8 +470,9 @@ function M:RefreshAllTabReddots()
   for _, RegionCfg in pairs(DataMgr.RegionReputation) do
     local TabRed, _ = Avatar:HasAnyRewardUpToCurLevel(RegionCfg.ReputationID)
     local AllCanClaimTasks = RegionFameModel:GetTargetRegionAllCanClaimRecurringTasks(RegionCfg.ReputationID)
-    local CanSubmitEntrustTask = RegionFameModel:GetTargetRegionEntrustTaskCanSubmit(RegionCfg.ReputationID)
-    TabRed = TabRed or AllCanClaimTasks and #AllCanClaimTasks > 0 or CanSubmitEntrustTask
+    local HasUnreadEntrustTask = Avatar:HasUnreadEntrustFameTaskReddot(RegionCfg.ReputationID)
+    local CanClaimExperienceTask = RegionFameModel:HasTargetRegionCanClaimExperienceTask(RegionCfg.ReputationID)
+    TabRed = TabRed or AllCanClaimTasks and #AllCanClaimTasks > 0 or HasUnreadEntrustTask or CanClaimExperienceTask
     self.Com_Tab:ShowTabRedDotByTabId(RegionCfg.ReputationID, false, TabRed, false)
   end
 end
@@ -451,14 +528,8 @@ function M:OnGamePadDown(InKeyName)
       self.Com_Tab:Handle_KeyEventOnGamePad(InKeyName)
       IsEventHandled = true
     end
-  elseif "Gamepad_Special_Left" == InKeyName then
+  elseif InKeyName == UIConst.GamePadKey.FaceButtonTop then
     self.Fame_Progress:OnClicked()
-    IsEventHandled = true
-  elseif "Gamepad_FaceButton_Left" == InKeyName then
-    self.Btn_Conquer:OnClicked()
-    IsEventHandled = true
-  elseif "Gamepad_FaceButton_Top" == InKeyName then
-    self.Btn_Gift:OnClicked()
     IsEventHandled = true
   end
   return IsEventHandled
@@ -470,61 +541,70 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   end
   local IsUseKeyAndMouse = CurInputDevice == ECommonInputType.MouseAndKeyboard
   if not IsUseKeyAndMouse and (self:HasFocusedDescendants() or self:HasAnyUserFocus()) then
-    self:SetFocus()
+    self:SetDefaultTaskButtonFocus()
   end
   self:UpdateUIStyleInPlatform(IsUseKeyAndMouse)
 end
 
 function M:UpdateUIStyleInPlatform(IsUseKeyAndMouse)
+  self:SetRegionButtonKeyVisibility(UE4.ESlateVisibility.Collapsed)
   if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
-    self.Btn_Conquer.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    self.Btn_Gift.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    self.Btn_Conquer_Huaxu.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    self.Btn_Gift_Huaxu.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.Fame_Progress.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.Mounts_License.Key_License:SetVisibility(UIConst.VisibilityOp.Collapsed)
     return
   end
   if IsUseKeyAndMouse then
     self.Fame_Progress.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    self.Btn_Conquer.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    self.Btn_Gift.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    self.Btn_Conquer_Huaxu.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    self.Btn_Gift_Huaxu.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.Mounts_License.Key_License:SetVisibility(UIConst.VisibilityOp.Collapsed)
   else
     self.Fame_Progress.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self.Fame_Progress.WBP_Com_KeyImg:CreateCommonKey({
-      KeyInfoList = {
-        {Type = "Img", ImgShortPath = "View"}
-      }
-    })
-    self.Btn_Conquer.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    self.Btn_Conquer.WBP_Com_KeyImg:CreateCommonKey({
-      KeyInfoList = {
-        {Type = "Img", ImgShortPath = "X"}
-      }
-    })
-    self.Btn_Gift.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    self.Btn_Gift.WBP_Com_KeyImg:CreateCommonKey({
-      KeyInfoList = {
-        {Type = "Img", ImgShortPath = "Y"}
-      }
-    })
-    self.Btn_Conquer_Huaxu.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    self.Btn_Conquer_Huaxu.WBP_Com_KeyImg:CreateCommonKey({
-      KeyInfoList = {
-        {Type = "Img", ImgShortPath = "X"}
-      }
-    })
-    self.Btn_Gift_Huaxu.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    self.Btn_Gift_Huaxu.WBP_Com_KeyImg:CreateCommonKey({
       KeyInfoList = {
         {Type = "Img", ImgShortPath = "Y"}
       }
     })
     self.Mounts_License.Key_License:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   end
+end
+
+function M:SetRegionButtonKeyVisibility(Visibility)
+  for _, ButtonGroup in pairs(self.RegionButtonGroups) do
+    for _, Button in pairs(ButtonGroup) do
+      if Button and Button.WBP_Com_KeyImg then
+        Button.WBP_Com_KeyImg:SetVisibility(Visibility)
+      end
+    end
+  end
+end
+
+function M:SetDefaultTaskButtonFocus()
+  local ButtonGroup = self:GetActiveRegionButtonGroup()
+  local DefaultButton = ButtonGroup and (ButtonGroup[self.CachedTaskButtonName] or ButtonGroup.Conquer)
+  local TargetWidget = DefaultButton and DefaultButton.Button_Area
+  if IsValid(TargetWidget) then
+    TargetWidget:SetFocus()
+  end
+end
+
+function M:SetFocus_Lua()
+  if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
+    self:SetDefaultTaskButtonFocus()
+  end
+end
+
+function M:OnRegionTask()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_large", nil, nil)
+  self.CachedTaskButtonName = "Task"
+  local GameInstance = self:GetGameInstance()
+  local UIManager = GameInstance:GetGameUIManager()
+  return UIManager:LoadUINew("FameRegionTask", self.CurRegionTabId)
+end
+
+function M:OnFocusReceived(MyGeometry, InFocusEvent)
+  if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
+    self:SetDefaultTaskButtonFocus()
+  end
+  return UE4.UWidgetBlueprintLibrary.Handled()
 end
 
 return M

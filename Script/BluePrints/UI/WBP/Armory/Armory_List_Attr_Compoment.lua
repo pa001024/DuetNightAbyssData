@@ -93,37 +93,37 @@ function Component:UpdateAttrListView(IsMod, ListView, bShowSign)
     local Data = DataMgr.AttrConfig[Key]
     local attr = self.Attrs[Key] or 0
     Obj = NewObject(UIUtils.GetCommonItemContentClass())
-    Obj.AttrName = GText(Data.Name)
-    Obj.AttrDesc = GText(Data.AttrDesc)
+    rawset(Obj, "AttrName", GText(Data.Name))
+    rawset(Obj, "AttrDesc", GText(Data.AttrDesc))
     if Obj.AttrDesc and Obj.AttrDesc ~= "" then
       table.insert(self.AttrDetails, Obj)
     end
     if self.Attrs[Key] and type(self.Attrs[Key]) == "string" or self.ComparedAttrs and "string" == type(self.ComparedAttrs[Key]) then
-      Obj.AttrValue = self.Attrs and self.Attrs[Key] or ""
-      Obj.CmpValue = self.ComparedAttrs and self.ComparedAttrs[Key] or ""
-      Obj.Style = "Normal"
+      rawset(Obj, "AttrValue", self.Attrs and self.Attrs[Key] or "")
+      rawset(Obj, "CmpValue", self.ComparedAttrs and self.ComparedAttrs[Key] or "")
+      rawset(Obj, "Style", "Normal")
     else
       attr = self:TryLimitAttr(Data, attr)
-      Obj.AttrValue = CommonUtils.AttrValueToString(Data, attr)
+      rawset(Obj, "AttrValue", CommonUtils.AttrValueToString(Data, attr))
       if bShowSign then
-        Obj.AttrValue = (attr > 0 and "+" or "") .. Obj.AttrValue
+        rawset(Obj, "AttrValue", (attr > 0 and "+" or "") .. Obj.AttrValue)
       end
       if not self.ComparedTarget then
-        Obj.Style = "None"
+        rawset(Obj, "Style", "None")
       else
         local cmp_attr = self.ComparedAttrs[Key] or 0
         cmp_attr = self:TryLimitAttr(Data, cmp_attr)
-        Obj.CmpValue = CommonUtils.AttrValueToString(Data, cmp_attr)
+        rawset(Obj, "CmpValue", CommonUtils.AttrValueToString(Data, cmp_attr))
         if bShowSign then
-          Obj.CmpValue = (cmp_attr > 0 and "+" or "") .. Obj.CmpValue
+          rawset(Obj, "CmpValue", (cmp_attr > 0 and "+" or "") .. Obj.CmpValue)
         end
         if attr < cmp_attr then
-          Obj.Style = "Positive"
+          rawset(Obj, "Style", "Positive")
         elseif attr > cmp_attr then
-          Obj.Style = "Negative"
+          rawset(Obj, "Style", "Negative")
         else
-          Obj.AttrValue = ""
-          Obj.Style = "Normal"
+          rawset(Obj, "AttrValue", "")
+          rawset(Obj, "Style", "Normal")
         end
       end
     end
@@ -179,14 +179,6 @@ function Component:UpdateSkillPanel(Target, Type)
   elseif self.Describe then
     self.Describe:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
-end
-
-function Component:InsertWeaponType(WeaponId, AttrTable)
-  ArmoryUtils:InsertWeaponTypeImpl(WeaponId, AttrTable)
-end
-
-function Component:InsertExcelWeaponTag(CharId, AttrTable)
-  AttrTable.ExcelWeaponTag = UIUtils.GetExcelWeaponTagString(CharId)
 end
 
 return Component

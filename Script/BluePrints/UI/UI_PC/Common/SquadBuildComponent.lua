@@ -1266,7 +1266,7 @@ function Component:UpdateSquadModels()
         CharId = CharId,
         Uuid = Content.Uuid
       }
-      ActorController:ChangeCharModel(ProtagonistInfo, false, false, false, true)
+      ActorController:ChangeCharModel(ProtagonistInfo, false, false, true, true)
       if Content.IsTryout then
         ActorController:ChangeCharAppearance({})
       end

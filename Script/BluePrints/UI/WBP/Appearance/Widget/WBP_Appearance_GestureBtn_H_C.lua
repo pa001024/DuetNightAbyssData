@@ -120,7 +120,6 @@ function M:OnBtnClick()
     AudioManager(self):PlayUISound(nil, "event:/ui/common/click_mid", nil, nil)
     return
   end
-  AudioManager(self):PlayItemSound(self, self.ResourceId, "Click", CommonConst.DataType.Resource)
   local GameInstance = GWorld.GameInstance
   local PlayerController = UE4.UGameplayStatics.GetPlayerController(GameInstance, 0)
   local PlayerCharacter = PlayerController:GetMyPawn():Cast(UE4.APlayerCharacter)
@@ -130,6 +129,7 @@ function M:OnBtnClick()
     if Avatar then
       self.SelectCallback.Func(self.SelectCallback.Obj, self.ResourceId, self.SlotIndex)
       self:PlayAnimation(self.Click)
+      Avatar:ServerTargetFinish(CommonConst.TargetTypeCostResourceForBattleItem, -1, 1, "InfiniteBattleItem", "GestureItem")
       Avatar:UseItemInBattle(Avatar.Eid, self.ResourceId, nil, DataMgr.ReasonTypeConsume.RESOURCE_WHEEL_USE_CONSUME)
     end
   elseif ToastTextId then

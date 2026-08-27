@@ -46,7 +46,8 @@ return ReadOnly("Shop", {
       702,
       703,
       704,
-      705
+      705,
+      706
     },
     ShopBgBPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/BG/WBP_Shop_BG_Area.WBP_Shop_BG_Area'",
     ShopName = "UI_SHOP_ExploreBadge",
@@ -104,6 +105,13 @@ return ReadOnly("Shop", {
     ShopName = "UI_Play_IronModeShop",
     ShopUIName = "ShopActivity",
     SystemName = "IronModeShop"
+  },
+  MonsterDuelShop = {
+    MainTabId = {10014},
+    ShopBgBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/AutoChess/WBP_Activity_AutoChess_OverViewBG.WBP_Activity_AutoChess_OverViewBG'",
+    ShopName = "UI_MonsterDuelShop",
+    ShopUIName = "ShopActivity",
+    SystemName = "MonsterDuelShop"
   },
   RaceLotteryShop = {
     MainTabId = {10011},

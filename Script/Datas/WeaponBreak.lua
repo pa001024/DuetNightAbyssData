@@ -243,6 +243,56 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("WeaponBreak", {
+  [41] = {
+    [1] = {
+      CollectRewardExp = 0,
+      ItemId = T.RT_1,
+      ItemNum = T.RT_2,
+      WeaponBreakLevel = 20,
+      WeaponBreakNum = 1,
+      WeaponId = 41
+    },
+    [2] = {
+      CollectRewardExp = 0,
+      ItemId = T.RT_3,
+      ItemNum = T.RT_4,
+      WeaponBreakLevel = 30,
+      WeaponBreakNum = 2,
+      WeaponId = 41
+    },
+    [3] = {
+      CollectRewardExp = 0,
+      ItemId = T.RT_5,
+      ItemNum = T.RT_6,
+      WeaponBreakLevel = 40,
+      WeaponBreakNum = 3,
+      WeaponId = 41
+    },
+    [4] = {
+      CollectRewardExp = 0,
+      ItemId = T.RT_7,
+      ItemNum = T.RT_8,
+      WeaponBreakLevel = 50,
+      WeaponBreakNum = 4,
+      WeaponId = 41
+    },
+    [5] = {
+      CollectRewardExp = 0,
+      ItemId = T.RT_7,
+      ItemNum = T.RT_9,
+      WeaponBreakLevel = 60,
+      WeaponBreakNum = 5,
+      WeaponId = 41
+    },
+    [6] = {
+      CollectRewardExp = 0,
+      ItemId = T.RT_7,
+      ItemNum = T.RT_10,
+      WeaponBreakLevel = 70,
+      WeaponBreakNum = 6,
+      WeaponId = 41
+    }
+  },
   [10101] = {
     [1] = {
       CollectRewardExp = 40,
@@ -1621,6 +1671,59 @@ return ReadOnly("WeaponBreak", {
       WeaponId = 10404
     }
   },
+  [10405] = {
+    [1] = {
+      CollectRewardExp = 40,
+      ItemId = T.RT_19,
+      ItemNum = T.RT_2,
+      WeaponBreakLevel = 20,
+      WeaponBreakNum = 1,
+      WeaponId = 10405
+    },
+    [2] = {
+      CollectReward = 61004,
+      CollectRewardExp = 80,
+      ItemId = T.RT_20,
+      ItemNum = T.RT_4,
+      WeaponBreakLevel = 30,
+      WeaponBreakNum = 2,
+      WeaponId = 10405
+    },
+    [3] = {
+      CollectRewardExp = 160,
+      ItemId = T.RT_21,
+      ItemNum = T.RT_6,
+      WeaponBreakLevel = 40,
+      WeaponBreakNum = 3,
+      WeaponId = 10405
+    },
+    [4] = {
+      CollectReward = 61005,
+      CollectRewardExp = 320,
+      ItemId = T.RT_22,
+      ItemNum = T.RT_8,
+      WeaponBreakLevel = 50,
+      WeaponBreakNum = 4,
+      WeaponId = 10405
+    },
+    [5] = {
+      CollectRewardExp = 640,
+      ItemId = T.RT_22,
+      ItemNum = T.RT_9,
+      WeaponBreakLevel = 60,
+      WeaponBreakNum = 5,
+      WeaponId = 10405
+    },
+    [6] = {
+      CollectReward = 61006,
+      CollectRewardExp = 1280,
+      ItemId = T.RT_22,
+      ItemNum = T.RT_10,
+      WeaponBreakLevel = 70,
+      WeaponBreakNum = 6,
+      WeaponId = 10405
+    }
+  },
   [10501] = {
     [1] = {
       CollectRewardExp = 40,
@@ -1831,6 +1934,59 @@ return ReadOnly("WeaponBreak", {
       WeaponBreakLevel = 70,
       WeaponBreakNum = 6,
       WeaponId = 10504
+    }
+  },
+  [10505] = {
+    [1] = {
+      CollectRewardExp = 40,
+      ItemId = T.RT_1,
+      ItemNum = T.RT_2,
+      WeaponBreakLevel = 20,
+      WeaponBreakNum = 1,
+      WeaponId = 10505
+    },
+    [2] = {
+      CollectReward = 61004,
+      CollectRewardExp = 80,
+      ItemId = T.RT_3,
+      ItemNum = T.RT_4,
+      WeaponBreakLevel = 30,
+      WeaponBreakNum = 2,
+      WeaponId = 10505
+    },
+    [3] = {
+      CollectRewardExp = 160,
+      ItemId = T.RT_5,
+      ItemNum = T.RT_6,
+      WeaponBreakLevel = 40,
+      WeaponBreakNum = 3,
+      WeaponId = 10505
+    },
+    [4] = {
+      CollectReward = 61005,
+      CollectRewardExp = 320,
+      ItemId = T.RT_7,
+      ItemNum = T.RT_8,
+      WeaponBreakLevel = 50,
+      WeaponBreakNum = 4,
+      WeaponId = 10505
+    },
+    [5] = {
+      CollectRewardExp = 640,
+      ItemId = T.RT_7,
+      ItemNum = T.RT_9,
+      WeaponBreakLevel = 60,
+      WeaponBreakNum = 5,
+      WeaponId = 10505
+    },
+    [6] = {
+      CollectReward = 61006,
+      CollectRewardExp = 1280,
+      ItemId = T.RT_7,
+      ItemNum = T.RT_10,
+      WeaponBreakLevel = 70,
+      WeaponBreakNum = 6,
+      WeaponId = 10505
     }
   },
   [10601] = {
@@ -3951,6 +4107,59 @@ return ReadOnly("WeaponBreak", {
       WeaponBreakLevel = 70,
       WeaponBreakNum = 6,
       WeaponId = 20604
+    }
+  },
+  [20605] = {
+    [1] = {
+      CollectRewardExp = 40,
+      ItemId = T.RT_31,
+      ItemNum = T.RT_2,
+      WeaponBreakLevel = 20,
+      WeaponBreakNum = 1,
+      WeaponId = 20605
+    },
+    [2] = {
+      CollectReward = 61004,
+      CollectRewardExp = 80,
+      ItemId = T.RT_39,
+      ItemNum = T.RT_4,
+      WeaponBreakLevel = 30,
+      WeaponBreakNum = 2,
+      WeaponId = 20605
+    },
+    [3] = {
+      CollectRewardExp = 160,
+      ItemId = T.RT_40,
+      ItemNum = T.RT_6,
+      WeaponBreakLevel = 40,
+      WeaponBreakNum = 3,
+      WeaponId = 20605
+    },
+    [4] = {
+      CollectReward = 61005,
+      CollectRewardExp = 320,
+      ItemId = T.RT_41,
+      ItemNum = T.RT_8,
+      WeaponBreakLevel = 50,
+      WeaponBreakNum = 4,
+      WeaponId = 20605
+    },
+    [5] = {
+      CollectRewardExp = 640,
+      ItemId = T.RT_41,
+      ItemNum = T.RT_9,
+      WeaponBreakLevel = 60,
+      WeaponBreakNum = 5,
+      WeaponId = 20605
+    },
+    [6] = {
+      CollectReward = 61006,
+      CollectRewardExp = 1280,
+      ItemId = T.RT_41,
+      ItemNum = T.RT_10,
+      WeaponBreakLevel = 70,
+      WeaponBreakNum = 6,
+      WeaponId = 20605
     }
   }
 })

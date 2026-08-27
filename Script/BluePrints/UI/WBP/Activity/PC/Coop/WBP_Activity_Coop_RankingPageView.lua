@@ -1,4 +1,5 @@
 require("UnLua")
+local SerializeUtils = require("Utils.SerializeUtils")
 local M = Class({})
 
 local function IsEmptyTable(T)

@@ -22,6 +22,7 @@ function M:CleanUp()
   self.ItemCount = nil
   self.Duration = -1
   self.bShowing = false
+  self.CachedDropName = nil
   self:StopListeningForAllInputActions()
   if self.Parent and self.Parent.ListView_Box then
     self.Parent.ListView_Box:RemoveItem(self.Content)
@@ -60,7 +61,10 @@ function M:UpdateTips(ItemId, ItemCount, Duration, TableName)
   local ItemInfo = DataMgr[TableName][ItemId]
   assert(ItemInfo, "掉落物不存在：" .. TableName .. ItemId)
   self.ICON:SetVisibility(ESlateVisibility.Collapsed)
-  local DisName = ItemUtils:GetDropName(ItemId, TableName) .. string.format(" ×%d", ItemCount)
+  if not self.CachedDropName then
+    self.CachedDropName = ItemUtils:GetDropName(ItemId, TableName)
+  end
+  local DisName = self.CachedDropName .. string.format(" ×%d", ItemCount)
   self.Text_Reward:SetText(DisName)
   local ImagePath = ItemInfo.Icon
   if string.find(ImagePath, "/Game/") == nil then
@@ -82,10 +86,15 @@ function M:AddItemCount(AddItemCount, Duration)
   Duration = Duration or 2.5
   AddItemCount = AddItemCount or 1
   self.Content.ItemCount = self.Content.ItemCount + AddItemCount
-  local DisName = ItemUtils:GetDropName(self.Content.ItemId, self.Content.TableName) .. string.format(" ×%d", self.Content.ItemCount)
+  local DropName = self.CachedDropName
+  if not DropName then
+    DropName = ItemUtils:GetDropName(self.Content.ItemId, self.Content.TableName)
+    self.CachedDropName = DropName
+  end
+  local DisName = DropName .. string.format(" ×%d", self.Content.ItemCount)
   self.Text_Reward:SetText(DisName)
   self.Content.Duration = Duration
-  self:AddTimer(self.Content.Duration, function()
+  self:AddTimerWithoutRemove(self.Content.Duration, function()
     self:PlayOutAnimation()
   end, false, 0, "PlayOutAnim", true)
 end

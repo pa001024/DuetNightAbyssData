@@ -48,7 +48,8 @@ T.RT_6 = {
   "Tag_BulletConver",
   "Tag_AtkMode",
   "Tag_SpecialEffect",
-  "Tag_Stackable"
+  "Tag_Stackable",
+  "Tag_HyperTrigger"
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
@@ -333,7 +334,8 @@ return ReadOnly("SiftDimens", {
       "1026",
       "1027",
       "1028",
-      "1029"
+      "1029",
+      "1030"
     },
     SelectionField = {"PetEntry"},
     SelectionText = {

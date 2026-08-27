@@ -44,6 +44,7 @@ function M:OpenJumpShopTips()
 end
 
 function M:OnListItemObjectSet(Content)
+  self:RemoveTimer("RefreshTimeTimer")
   self.JumpShopData = Content.JumpShopData
   self:InitJumpShopInfo()
 end
@@ -56,6 +57,15 @@ function M:InitJumpShopInfo()
     self.WS_Item:SetActiveWidgetIndex(1)
     self.WBP_Com_EmptyBg.Slot_Text:SetVisibility(ESlateVisibility.Collapsed)
     return
+  end
+  if self.Vx then
+    self.Vx:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    local BackgroundVxs = self.Vx:GetAllChildren():ToTable() or {}
+    for _, BackgroundVx in ipairs(BackgroundVxs) do
+      if IsValid(BackgroundVx) then
+        BackgroundVx:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      end
+    end
   end
   self.WS_Item:SetActiveWidgetIndex(0)
   self:SetCoin()

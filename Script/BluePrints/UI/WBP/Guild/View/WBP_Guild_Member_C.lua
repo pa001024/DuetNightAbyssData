@@ -306,6 +306,7 @@ function M:SortGuildMemberInfo()
 end
 
 function M:InitMemberList(NeedNavigate)
+  self.List_Member:ScrollToTop()
   self.List_Member:ClearListItems()
   local IsOnline = self.CheckBox_Online:IsChecked()
   for i, MemberInfo in pairs(self.GuildMemberInfo or {}) do

@@ -130,7 +130,7 @@ end
 
 function M:EndDialogue()
   DebugPrint("BubbleTalkTask: End")
-  if self.TalkTaskData.BubblePlayType == EBubblePlayType.Once then
+  if self.TalkTaskData.BubblePlayType == nil or self.TalkTaskData.BubblePlayType == EBubblePlayType.Once then
     self:Finish(ETalkNodeFinishType.Out)
   elseif self.TalkTaskData.BubblePlayType == EBubblePlayType.StayOnLast then
   elseif self.TalkTaskData.BubblePlayType == EBubblePlayType.DelayLoop then

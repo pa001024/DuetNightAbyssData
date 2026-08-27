@@ -29,13 +29,8 @@ function AvatarUtils:GetModSlotCost(Target, ModSlotId, Mod)
 end
 
 function AvatarUtils:GetModSlotCostImpl(ModPolarity, ModCost, SlotPolarity)
-  if SlotPolarity <= 0 then
-    return ModCost
-  end
-  if ModPolarity == SlotPolarity then
+  if ModPolarity and ModPolarity > 0 and SlotPolarity and SlotPolarity > 0 then
     return CommonUtils:PerfectPolarityCost(ModCost)
-  elseif ModPolarity > 0 then
-    return CommonUtils:WrongPolarityCost(ModCost)
   else
     return ModCost
   end
@@ -288,7 +283,7 @@ function AvatarUtils:GetAttrNameFromAttrData(AttrData, UniqueName)
     if AttrData.IndividualRateZone then
       AttrName = AttrName .. "_NoTag_" .. UniqueName
     else
-      local Tag = AttrData.DamageTag or "NoTag"
+      local Tag = AttrData.DamageTag or AttrData.Tag or "NoTag"
       local RateZone = AttrData.RateZone or "Normal"
       AttrName = AttrName .. "_" .. tostring(Tag) .. "_" .. tostring(RateZone)
     end
@@ -320,6 +315,50 @@ function AvatarUtils:GetDefaultBattleInfo(...)
     Info.Camp = "Player"
   end
   return Info
+end
+
+function AvatarUtils:GetPreviewInitInfo(Avatar, ExtraInfo)
+  if not Avatar then
+    return nil
+  end
+  ExtraInfo = ExtraInfo or {}
+  local Char = ExtraInfo.Char or Avatar.Chars[Avatar.CurrentChar]
+  if not Char then
+    return nil
+  end
+  local RoleInfo = {
+    RoleId = Char.RoleId,
+    Level = Char.Level,
+    Exp = Char.Exp,
+    GradeLevel = Char.GradeLevel,
+    ExtraGradeLevel = Char.ExtraGradeLevel,
+    EnhanceLevel = Char.EnhanceLevel,
+    AppearanceSuit = Char:DumpAppearanceSuit(Avatar),
+    ModSuitIndex = Char.ModSuitIndex
+  }
+  return {
+    AvatarInfo = {RoleInfo = RoleInfo, Camp = "Player"},
+    FromOtherWorld = true,
+    FromArmory = true
+  }
+end
+
+function AvatarUtils:GetPreviewInitInfoLegacy(Avatar, ExtraInfo)
+  local AvatarBattleInfo = self:GetDefaultBattleInfo(Avatar, ExtraInfo)
+  if not AvatarBattleInfo then
+    return nil
+  end
+  AvatarBattleInfo = {AvatarInfo = AvatarBattleInfo}
+  AvatarBattleInfo.FromOtherWorld = true
+  AvatarBattleInfo.FromArmory = true
+  return AvatarBattleInfo
+end
+
+function AvatarUtils:BuildPreviewCharacterInitInfo(Avatar, ExtraInfo)
+  if ExtraInfo and ExtraInfo.bLightweightPreview == true then
+    return self:GetPreviewInitInfo(Avatar, ExtraInfo)
+  end
+  return self:GetPreviewInitInfoLegacy(Avatar, ExtraInfo)
 end
 
 function AvatarUtils:GetCurrentBattleInfo(...)
@@ -408,9 +447,13 @@ function AvatarUtils:ReShapeSquadInfo(Avatar, Squad)
     Pet = Avatar.Pets[Squad.Pet],
     WheelIndex = Squad.WheelIndex,
     Phantom1 = Squad.Phantom1,
+    PhantomModSuit1 = Squad.PhantomModSuit1,
     PhantomWeapon1 = Squad.PhantomWeapon1,
+    PhantomWeaponModSuit1 = Squad.PhantomWeaponModSuit1,
     Phantom2 = Squad.Phantom2,
-    PhantomWeapon2 = Squad.PhantomWeapon2
+    PhantomModSuit2 = Squad.PhantomModSuit2,
+    PhantomWeapon2 = Squad.PhantomWeapon2,
+    PhantomWeaponModSuit2 = Squad.PhantomWeaponModSuit2
   }
   if Info.Char then
     Info.UltraWeapons = BattleDumpUtils:GetDefaultUltraWeaponInfo(Avatar, Info.Char)
@@ -426,11 +469,15 @@ function AvatarUtils:GetSquadBattleInfo(Avatar, Squad, bNotUseUWeapon)
   local AvatarBattleInfo = {}
   AvatarBattleInfo.CharacterInfo = BattleDumpUtils:GetBattleInfoByInfo(Avatar, Squad, bNotUseUWeapon)
   local PhantomChar1 = Avatar.Chars[Squad.Phantom1]
+  local PhantomModSuit1 = Squad.PhantomModSuit1
   local PhantomWeapon1 = Avatar.Weapons[Squad.PhantomWeapon1]
-  AvatarBattleInfo.PhantomInfo1 = self:GetPhantomBattleInfo(Avatar, PhantomChar1, PhantomWeapon1, Pet, bNotUseUWeapon)
+  local PhantomWeaponModSuit1 = Squad.PhantomWeaponModSuit1
+  AvatarBattleInfo.PhantomInfo1 = self:GetPhantomBattleInfo(Avatar, PhantomChar1, PhantomWeapon1, Pet, bNotUseUWeapon, PhantomModSuit1, PhantomWeaponModSuit1)
   local PhantomChar2 = Avatar.Chars[Squad.Phantom2]
+  local PhantomModSuit2 = Squad.PhantomModSuit2
   local PhantomWeapon2 = Avatar.Weapons[Squad.PhantomWeapon2]
-  AvatarBattleInfo.PhantomInfo2 = self:GetPhantomBattleInfo(Avatar, PhantomChar2, PhantomWeapon2, Pet, bNotUseUWeapon)
+  local PhantomWeaponModSuit2 = Squad.PhantomWeaponModSuit2
+  AvatarBattleInfo.PhantomInfo2 = self:GetPhantomBattleInfo(Avatar, PhantomChar2, PhantomWeapon2, Pet, bNotUseUWeapon, PhantomModSuit2, PhantomWeaponModSuit2)
   return AvatarBattleInfo
 end
 
@@ -713,7 +760,8 @@ function AvatarUtils:GetPlayerPersonalInfoCharAppearance(Avatar, Char, Appearanc
     SkinLevel = CharSkin.Level or 1,
     SkinSelectedLevel = CharSkin.SelectedLevel or 1,
     Accessory = AppearanceSuit and AppearanceSuit.Accessory or {},
-    CurrentPlanIndex = CharSkin.CurrentPlanIndex or 1
+    CurrentPlanIndex = CharSkin.CurrentPlanIndex or 1,
+    IsShowPartMesh = CharSkin.IsShowPartMesh
   }
   for key, value in pairs(CharSkin.Colors) do
     if not Appearance.SkinColors then
@@ -1084,13 +1132,16 @@ function AvatarUtils:IsAchvFinished(Achv, FromDb)
 end
 
 function AvatarUtils:IsAchvLocked(Avatar, AchvId, FromDb)
-  local AchvInfo = DataMgr.Achievement[AchvId]
-  if not AchvInfo.AchievementRequire then
+  if not FromDb then
+    return Avatar.Achvs:IsAchvLocked(AchvId)
+  end
+  local deps = Avatar.Achvs.GetTransitiveRequires(AchvId)
+  if 0 == #deps then
     return false
   end
-  for _, preId in pairs(AchvInfo.AchievementRequire) do
+  for _, preId in ipairs(deps) do
     local achievePre = Avatar.Achvs[preId]
-    if not (achievePre and AvatarUtils:IsAchvFinished(achievePre, FromDb)) or AvatarUtils:IsAchvLocked(Avatar, preId, FromDb) then
+    if not achievePre or not AvatarUtils:IsAchvFinished(achievePre, FromDb) then
       return true
     end
   end
@@ -1335,6 +1386,73 @@ function AvatarUtils:IsCharacterAttributeSwitchSameGroup(CharId_1, CharId_2)
   return DataMgr.CharacterAttributeSwitch[CharId_1] and DataMgr.CharacterAttributeSwitch[CharId_2] and DataMgr.CharacterAttributeSwitch[CharId_1].CharGroupId == DataMgr.CharacterAttributeSwitch[CharId_2].CharGroupId
 end
 
+function AvatarUtils:GetFirstTwoCharOrWeapon(Avatar, Info, Tag, CheckEqual)
+  local rarityTag = Tag .. "Rarity"
+  local idTag = Tag .. "Id"
+  
+  local function IsConflicCharFunc(eid_1, eid_2)
+    if "Char" ~= Tag then
+      return false
+    end
+    local char_1 = Info[eid_1]
+    local char_2 = Info[eid_2]
+    return char_1 and char_2 and self:IsCharacterAttributeSwitchSameGroup(char_1.CharId, char_2.CharId)
+  end
+  
+  local function IsForbidJoinSortListFunc(eid)
+    if "Char" ~= Tag then
+      return false
+    end
+    local ThisChar = Info[eid]
+    local ThisCharId = ThisChar.CharId
+    if DataMgr.CharacterAttributeSwitch[ThisCharId] == nil then
+      return false
+    end
+    local CharGroupId = DataMgr.CharacterAttributeSwitch[ThisCharId].CharGroupId
+    return Avatar.CharacterAttributeSwitch[CharGroupId] and Avatar.CharacterAttributeSwitch[CharGroupId] ~= ThisCharId
+  end
+  
+  local sortlist = {}
+  local sortInfo = {}
+  for Eid, EInfo in pairs(Info) do
+    if not IsForbidJoinSortListFunc(Eid) and false == CheckEqual(Eid) then
+      table.insert(sortlist, Eid)
+      sortInfo[Eid] = {
+        Level = EInfo.Level,
+        Rarity = EInfo[rarityTag],
+        Id = EInfo[idTag],
+        IsWarLike = EInfo.IsWarLike == true
+      }
+    end
+  end
+  table.sort(sortlist, function(eid_1, eid_2)
+    local first = sortInfo[eid_1]
+    local second = sortInfo[eid_2]
+    if first.IsWarLike ~= second.IsWarLike then
+      return first.IsWarLike
+    end
+    if first.Level ~= second.Level then
+      return first.Level > second.Level
+    end
+    if first.Rarity ~= second.Rarity then
+      return first.Rarity > second.Rarity
+    end
+    if first.Id ~= second.Id then
+      return first.Id > second.Id
+    end
+    return false
+  end)
+  local First, Second
+  for i = 1, #sortlist do
+    if nil == First then
+      First = sortlist[i]
+    elseif nil == Second and not IsConflicCharFunc(First, sortlist[i]) then
+      Second = sortlist[i]
+    end
+  end
+  return First, Second
+end
+
 function AvatarUtils:GetPlayerRankCharAccessory(Avatar, FromDb)
   if not Avatar then
     return {}
@@ -1498,6 +1616,14 @@ function AvatarUtils:GetPlayerRankWeaponAccessory(Avatar, FromDb)
     WeaponId = Weapon.WeaponId,
     Appearance = Appearance
   }
+end
+
+function AvatarUtils:GetPlayerDisplayAppearanceInfo(Avatar)
+  local AppearanceInfo = {
+    Char = AvatarUtils:GetPlayerRankCharAccessory(Avatar),
+    Weapon = AvatarUtils:GetPlayerRankWeaponAccessory(Avatar)
+  }
+  return AppearanceInfo
 end
 
 function AvatarUtils:GetPersonalInfoBgIds(Avatar, FromDB)

@@ -800,8 +800,18 @@ function M:CheckIsAutoMode()
     return
   end
   local DungeonId = GWorld.GameInstance:GetCurrentDungeonId()
+  local DungeonInfo = DataMgr.Dungeon[DungeonId]
+  if not DungeonInfo then
+    return
+  end
   local IsAutoMode = Avatar.Dungeons[DungeonId].AutoProgress
-  local Progress = GameState.DungeonProgress or 0
+  local IsEndlessDungeon = DungeonInfo.DungeonWinMode == CommonConst.DungeonWinMode.Endless
+  local Progress = 0
+  if IsEndlessDungeon then
+    Progress = GameState.DungeonProgress or 0
+  else
+    Progress = GWorld.GameInstance:GetAutoNextRoundProgress(DungeonId) or 0
+  end
   if IsAutoMode and Progress <= IsAutoMode + 1 and 0 ~= IsAutoMode then
     if self.RewardList and #self.RewardList > 0 and self:IsWeaponWalnut(self.WalnutId) then
       self:InitAutoSelectedReward(self:GetWeaponWalnutAutoRewardIndex())

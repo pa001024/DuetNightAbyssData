@@ -58,6 +58,17 @@ function M:RefreshBaseInfo()
   if self.PersonInfoMainPage then
     self.PersonInfoMainPage:PlayAnimation(self.PersonInfoMainPage.In)
   end
+  if PersonInfoController:NeedHideUI() then
+    PersonInfoController.bAutoHideUIOnNextOpen = nil
+    self:HideUIInstant()
+  else
+    PersonInfoController.bAutoHideUIOnNextOpen = nil
+    if PersonInfoController:IsMainPageUIHidden() then
+      self:Hideui()
+    else
+      self:Recoverui()
+    end
+  end
   self.Com_BtnCamera:SetVisibility(PersonInfoModel:IsOwener() and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
   self.Com_BtnVisible:SetVisibility(PersonInfoModel:IsOwener() and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
   self:SetFocus()
@@ -84,6 +95,7 @@ end
 
 function M:Recoverui()
   PersonInfoController:SetMainPageUIHidden(false)
+  self.Com_Tab_M:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.MainPageItem:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self:PlayAnimation(self.ShowUi)
 end

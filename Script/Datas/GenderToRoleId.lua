@@ -64,5 +64,17 @@ return ReadOnly("GenderToRoleId", {
     GenderToRoleId = 10,
     RoleId = 120101,
     SwitchPlayer = "PlayerDark"
+  },
+  [11] = {
+    Gender = 1,
+    GenderToRoleId = 11,
+    RoleId = 2201,
+    SwitchPlayer = "EXPlayerWater"
+  },
+  [12] = {
+    Gender = 0,
+    GenderToRoleId = 12,
+    RoleId = 220101,
+    SwitchPlayer = "EXPlayerWater"
   }
 })

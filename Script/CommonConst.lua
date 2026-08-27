@@ -155,7 +155,6 @@ local CommonConst = {
     GuildBoss = "GuildBoss",
     AutoChess = "AutoChess",
     SoloTreasure = "SoloTreasure",
-    RougePro = "RougePro",
     AsyncCombat = "AsyncCombat",
     WeaponVerify = "WeaponVerify"
   },
@@ -184,7 +183,8 @@ local CommonConst = {
     InTeam = 14,
     InSpecialQuest = 15,
     InRegionOnline = 16,
-    InTheaterPerform = 17
+    InTheaterPerform = 17,
+    InTeamHall = 18
   },
   CommonStatus = {UnLock = 0, Lock = 1},
   AllType = {
@@ -193,6 +193,14 @@ local CommonConst = {
     Resource = 3,
     Mod = 4
   },
+  GuildSeatType = {
+    Character = 1,
+    Weapon = 2,
+    Action = 3
+  },
+  GuildSeatPlanMaxCount = 3,
+  GuildSeatActionRarity = 6,
+  GuildSeatCreateType = {Score = 1, Occupy = 2},
   ActorType = {
     Player = 1,
     Monster = 2,
@@ -380,6 +388,7 @@ local CommonConst = {
   RaidDungeonType = {Pre = 1, Formal = 2},
   DynamicQuest_Probability_Head = 1,
   DynamicQuest_Probability_Tail = 100,
+  DefaultNotExistQuestChainId = 0,
   ChangeCharQuestChainId = 100201,
   SignBoardUnset = -1,
   SignBoardThird = 3,
@@ -452,6 +461,7 @@ local CommonConst = {
   TargetTypeSpecialTemple = 10518,
   TargetTypeCreatorIdAndStateId = 10520,
   TargetTypeModDungeon = 10523,
+  TargetTypeDungeonsCharAttr = 10524,
   TargetTypeCharLevel = 10601,
   TargetTypeCharEnchance = 10602,
   TargetTypeCharId = 10603,
@@ -481,11 +491,11 @@ local CommonConst = {
   TargetDispatchCompleteCount = 10519,
   TargetDispatchCompleteGrade = 10521,
   TargetPetCaptureSuccessDungeon = 10522,
+  TargetTypeFishInFishingSpot = 10525,
   TargetPetCaptureSuccessCount = 14001,
   TargetPetBreakCount = 14002,
   TargetPetBreaknumCount = 14003,
   TargetGetWeapon = 14008,
-  TargetTakePhotoCount = 21001,
   TargetTypePassAbyssTypeTimes = 15001,
   TargetTypeWikiEntryUnlockCount = 16001,
   TargetTypeStarterQuestPhaseFinish = 18001,
@@ -498,6 +508,8 @@ local CommonConst = {
   TargetTypeWalnutType = 19001,
   TargetTypeWalnutId = 19002,
   TargetTypeChangeColor = 20001,
+  TargetTakePhotoCount = 21001,
+  TargetTakePhotoCountAtPhotoSpot = 21002,
   TargetTypeTempleStarsGet = 22001,
   TargetTypeWYSStarsGet = 22002,
   TargetTypeCommonQuestFinish = 22004,
@@ -564,6 +576,7 @@ local CommonConst = {
     12003,
     10519,
     10520,
+    10525,
     14003,
     18001,
     19001,
@@ -572,6 +585,7 @@ local CommonConst = {
     22005,
     10704,
     10802,
+    21002,
     22013,
     22206,
     22207
@@ -620,7 +634,8 @@ local CommonConst = {
     13003,
     14008,
     22204,
-    22205
+    22205,
+    10524
   },
   TargetCheckFisrtAndLess = {10503, 10507},
   TargetCheckFisrtAndMore = {
@@ -647,9 +662,7 @@ local CommonConst = {
     JP = "ContentJP",
     KR = "ContentKR",
     TC = "ContentTC",
-    DE = "ContentDE",
-    FR = "ContentFR",
-    ES = "ContentES"
+    FR = "ContentFR"
   },
   SystemLanguage = "TextMapContent",
   SystemVoices = {
@@ -682,7 +695,8 @@ local CommonConst = {
   },
   SuitType = {
     GameModeSuit = "GameModeSuit",
-    PlayerCharacterSuit = "PlayerCharacterSuit"
+    PlayerCharacterSuit = "PlayerCharacterSuit",
+    QuestSuit = "QuestSuit"
   },
   GameModeSuit = {DropRule = "DropRule"},
   PlayerCharacterSuit = {
@@ -696,6 +710,29 @@ local CommonConst = {
     NpcHideShowTag = "NpcHideShowTag",
     BGMParams = "BGMParams",
     NpcExpression = "NpcExpression"
+  },
+  SuitFunctionName = {
+    UpdateSuitKey2Value = "UpdateSuitKey2Value",
+    UpdateSuitKey2Table = "UpdateSuitKey2Table",
+    UpdateSuitTable2Value = "UpdateSuitTable2Value",
+    UpdateSuitTable2Table = "UpdateSuitTable2Table"
+  },
+  QuestSuit = {
+    BGM = "BGM",
+    CustomBGM = "CustomBGM",
+    BGMParams = "BGMParams",
+    HideUIInScreen = "HideUIInScreen",
+    ContinuedGuide = "ContinuedGuide",
+    SwitchStoryMode = "SwitchStoryMode"
+  },
+  DefaultTag = {
+    HideUIInScreen = "ShowOrHideUINode",
+    ContinuedGuide = "ShowOrHideUINode"
+  },
+  BGMSoundType = {
+    SOUND_BGM = 0,
+    SOUND_NOISE = 1,
+    SOUND_SNAPSHOT = 2
   },
   ImpressionType = {
     Benefit = "Benefit",
@@ -1066,6 +1103,11 @@ local CommonConst = {
     Doing = 1,
     Complete = 2
   },
+  DraftResourceType = {
+    Weapon = "Weapon",
+    Mod = "Mod",
+    IronTicket = "IronTicket"
+  },
   SkinType = {
     Char = 0,
     Weapon = 1,
@@ -1093,6 +1135,7 @@ local CommonConst = {
     Start = "SetEventStartVariable",
     End = "SetEventEndVariable"
   },
+  ServerEventType = {MoneyTree = "MoneyTree"},
   StoryVariableOverrideSourceType = {CutSceneReview = 1},
   QuestChainState = {
     lock = 0,
@@ -1119,6 +1162,12 @@ local CommonConst = {
     Finish = 2
   },
   QuestEndType = {False = 0, True = 1},
+  EventReviewState = {
+    WaitExplore = 0,
+    Exploring = 1,
+    Explored = 2
+  },
+  DefaultNoReviewChainSequenceId = -1,
   ClueContentState = {
     Locked = 0,
     Unlocked = 1,
@@ -1209,7 +1258,8 @@ local CommonConst = {
     "GuildId",
     "GuildSimpleInfo",
     "GuildActivityLevel",
-    "AvatarStatus"
+    "AvatarStatus",
+    "TeamHallId"
   },
   RMN2GiftQuota = 10,
   GIFT_MAIL_CONTENT_MAX_LEN = 500,
@@ -1421,6 +1471,22 @@ local CommonConst = {
     RANK3 = 2,
     RANK2_UPGRADE_RANK3 = 3
   },
+  MoneyTreePayType = {Single = 1, All = 2},
+  MoneyTreeRewardClaimStatus = {
+    FreeOnly = 0,
+    DoubleOnly = 1,
+    FreeAndDouble = 2
+  },
+  MoneyTreeRewardReason = {
+    Free = "free",
+    AllUnlockAuto = "all_unlock_auto",
+    SingleDouble = "single_double",
+    AllUnlockToday = "all_unlock_today"
+  },
+  MoneyTreeChargeItemType = {
+    SingleDouble = "MoneyTreeSingleDouble",
+    AllDouble = "MoneyTreeAllDouble"
+  },
   QueryPayRetType = {
     Normal = 0,
     First = 1,
@@ -1504,6 +1570,7 @@ local CommonConst = {
   DefaultPersonalInfoScene = {101, 102},
   DefaultPersonalInfoGesture = {1001, 1002},
   DeliveryAnchorMechanismUnitId = 90100,
+  MechanismPointType = {StaticCreator = 1, ManualItem = 2},
   AutoChess = {
     CubeState = {
       CanPutin = "CanPutin",
@@ -1527,7 +1594,13 @@ local CommonConst = {
     MaxChessNum = 24,
     GamepadMoveMinDeltaTime = 0.3,
     JoystickThreshold = 0.5
-  }
+  },
+  TeamHallVisibleType = {
+    Public = 1,
+    Friend = 2,
+    Guild = 3
+  },
+  DisplayAppearanceSourceType = {Default = 1, PersonalInfoCustom = 2}
 }
 CommonConst.IndependentModMultiplier = {"Normal"}
 CommonConst.CONFIG = {
@@ -1680,6 +1753,7 @@ CommonConst.AsyncCombatRewardState = {
   CanClaim = 1,
   Claimed = 2
 }
+CommonConst.AsyncCombatExtraRoomState = {Open = 1, Close = 2}
 CommonConst.DungeonSyncMsg = {
   AsyncCombatBossDamage = "AsyncCombatBossDamage",
   AsyncCombatQueryState = "AsyncCombatQueryState",
@@ -1705,6 +1779,6 @@ CommonConst.AutoChessBuffType = {Daily = 1, Challenge = 2}
 CommonConst.AsyncCombatCheatCheckDungeons = {
   [40604] = true
 }
-CommonConst.AsyncCombatCheatCheckDuration = 30
 CommonConst.AsyncCombatCheatAutoBan = 1
+CommonConst.AsyncCombatSysRoomOpen = true
 return CommonConst

@@ -20,6 +20,10 @@ function M:Construct()
   })
 end
 
+function M:Destruct()
+  self:UnbindAllFromAnimationFinished(self.Out)
+end
+
 function M:Init(Params)
   self.Parent = Params.Parent
   self.Target = Params.Target
@@ -112,6 +116,7 @@ end
 
 function M:LoadSkillDetailsUI(TreeNodeInfo)
   TreeNodeInfo = TreeNodeInfo or {}
+  local OnClose, OnDestruct = ArmoryUtils:GetArmoryMainInAnimFromSecondaryPage()
   local UIConfig = DataMgr.SystemUI.SkillDetails
   UIManager(self):LoadUI(UIConst.LoadInConfig, UIConfig.UIName, self.Parent:GetZOrder(), {
     CharUuid = self.Target.Uuid,
@@ -120,33 +125,16 @@ function M:LoadSkillDetailsUI(TreeNodeInfo)
     SelectedAttrId = TreeNodeInfo.AttrId,
     OutAnimStyle = 2,
     OnClosedObj = self,
-    OnClosedCallback = self.OnSkillDetailsClosed,
+    OnClosedCallback = function()
+      self:UpdateSkillInfos(self.Target)
+      OnClose()
+    end,
     OnDestructObj = self,
-    OnDestructCallback = self.OnSkillDetailsDestruct,
+    OnDestructCallback = function()
+      OnDestruct()
+    end,
     IsPreviewMode = self.IsPreviewMode
   })
-end
-
-function M:OnSkillDetailsClosed()
-  self:UpdateSkillInfos(self.Target)
-  local ArmoryMain = UIManager(self):GetArmoryUIObj()
-  if ArmoryMain then
-    ArmoryMain:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-    ArmoryMain.Panel_SubUI:SetVisibility(UIConst.VisibilityOp.Hidden)
-    ArmoryMain:PlayAnimation(ArmoryMain.RoleList_In)
-    ArmoryMain:PlayAnimation(ArmoryMain.BG_BackFirst)
-    ArmoryMain.Tab_Arm:PlayInAnim()
-    ArmoryMain.ReceiveEnterStateNoAnim = true
-    ArmoryMain:UpdateMontageAndCamera()
-  end
-end
-
-function M:OnSkillDetailsDestruct()
-  local ArmoryMain = UIManager(self):GetArmoryUIObj()
-  if ArmoryMain then
-    ArmoryMain:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    ArmoryMain.Panel_SubUI:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-  end
 end
 
 AssembleComponents(M)

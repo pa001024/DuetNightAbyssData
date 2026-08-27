@@ -102,7 +102,7 @@ end
 
 local function ExportCharacterParamGroup(Draft)
   local CharParamGroup = {}
-  for _, Slot in ipairs(Draft and Draft.CharacterSlots or {}) do
+  for SlotIndex, Slot in ipairs(Draft and Draft.CharacterSlots or {}) do
     if DisplayDraft:IsCharacterSlotOccupied(Slot) and Slot.CharData and Slot.CharData.CharId then
       local TransformInfo = ExportTransform(Slot.Transform, Slot.TransformRotation)
       local PoseId = ResolveExportPoseId(Slot.Action)
@@ -112,7 +112,8 @@ local function ExportCharacterParamGroup(Draft)
         CharId = Slot.CharData.CharId,
         AppearancePlan = AppearancePlan and AppearancePlan > 0 and AppearancePlan or 1,
         Position = TransformInfo.Position,
-        Rotation = TransformInfo.Rotation
+        Rotation = TransformInfo.Rotation,
+        SlotIndex = Slot.SlotIndex or SlotIndex
       }
       if PoseId then
         CharParam.PoseId = PoseId

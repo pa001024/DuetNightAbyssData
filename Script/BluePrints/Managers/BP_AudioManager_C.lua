@@ -57,6 +57,9 @@ function BP_AudioManager_C:PlayFMODSoundByID(WorldContext, SoundID, LogicEventPl
     if ExtraParams.bPlayAs2D then
       PlayExtraParams.bPlayAs2D = ExtraParams.bPlayAs2D
     end
+    if ExtraParams.SourceActor then
+      PlayExtraParams.SourceActor = ExtraParams.SourceActor
+    end
   end
   self:PlayFMODSoundByID_CPP(WorldContext, SoundID, LogicEventPlayer, FollowedSocketName, PlayExtraParams)
 end
@@ -67,6 +70,7 @@ function BP_AudioManager_C:PlaySeByIdGetExtraParams(LogicEventPlayer)
     PlayExtraParams.KeyValueGroups:Add("Material", LogicEventPlayer.HitedMaterial)
   end
   PlayExtraParams.SaveLocation = LogicEventPlayer.OverlapLocation or LogicEventPlayer:GetSaveLoc("")
+  return PlayExtraParams
 end
 
 function BP_AudioManager_C:Test()

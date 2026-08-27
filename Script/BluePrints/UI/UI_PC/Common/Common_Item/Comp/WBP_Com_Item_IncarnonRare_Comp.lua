@@ -2,8 +2,10 @@ local Component = {}
 
 function Component:SetIncarnonRare(bIncarnon)
   local function Callback(IncarnonRare)
+    if not self.Content.bIncarnon then
+      return
+    end
     self.IncarnonRare = UE.FWeakObjectPtr(IncarnonRare)
-    
     self:AddWidgetToNode(nil, self.IncarnonRare)
   end
   

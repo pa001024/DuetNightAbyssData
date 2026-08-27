@@ -16,7 +16,13 @@ function M:InitAsyncCombatComponent()
   end
   self.RoomConfId = self.GameMode.PreInitInfo.RoomConfId or 0
   self.BossCurStep = self.GameMode.PreInitInfo.CurStep or 0
-  DebugPrint("AsyncCombatComponent: Init_BossCurStep", self.BossCurStep)
+  self.IsSingleMode = self.GameMode.PreInitInfo.bSingleMode or false
+  self.SingleModeInheritedDamage = (self.GameMode.PreInitInfo.Damage or 0) + (self.GameMode.PreInitInfo.SingleModeDamage or 0)
+  self.SingleModeTotalHp = self.GameMode.PreInitInfo.RoomTotalHp or 0
+  self.SingleModeDamage = 0
+  self.IsSingleModeContributionReached = false
+  DebugPrint("AsyncCombatComponent: Init_BossCurStep", self.BossCurStep, "RoomConfId", self.RoomConfId, "IsSingleMode", self.IsSingleMode)
+  self.IsSingleModeBossSpawned = false
   self.AsyncCombatInfo = DataMgr.AsyncCombat[self.RoomConfId]
   if not self.AsyncCombatInfo then
     DebugPrint("AsyncCombatComponent: 读表数据为空！RoomConfId", self.RoomConfId)
@@ -24,6 +30,7 @@ function M:InitAsyncCombatComponent()
   end
   self.BossCreatorId = self.AsyncCombatInfo.BossCreatorID
   self.BossUnitIds = self.AsyncCombatInfo.BossUnitID
+  self.SingleModeBossUnitId = self.AsyncCombatInfo.SingleModeBossUnitID
   EventManager:AddEvent(EventID.OnRepClientDungeonMessage, self, self.OnRepClientDungeonMessage)
   self.BossIsDead = false
   self.CurBossEid = nil
@@ -38,7 +45,7 @@ function M:InitAsyncCombatComponent()
   self.MatchStartTime = nil
   self.CurTimeBuffId = nil
   self:ParseTimeBuffConfig()
-  DebugPrint("lgc@ AsyncCombat Init", "RoomConfId", self.RoomConfId, "BossCurStep", self.BossCurStep)
+  self:PublishSingleModeProgress()
 end
 
 function M:InitAsyncCombatBaseInfo()
@@ -46,13 +53,27 @@ function M:InitAsyncCombatBaseInfo()
   self:TryStartMatchTimer()
 end
 
+function M:CustomFinishInfo(_, IsWin)
+  if self.IsSingleMode then
+    self:StopBossDamageTracking(false)
+  end
+  return {
+    SingleModeDamage = self.SingleModeDamage or 0
+  }
+end
+
 function M:CreateBoss()
-  local CurUnitId = self.BossUnitIds[self.BossCurStep]
-  if not CurUnitId then
-    DebugPrint("lgc@ AsyncCombat CreateBoss skipped", "BossCurStep", self.BossCurStep)
+  if self.IsSingleMode and self.IsSingleModeBossSpawned then
+    DebugPrint("ljl@ AsyncCombat CreateBoss skipped single mode already spawned")
     return
   end
-  DebugPrint("lgc@ AsyncCombat CreateBoss", "BossCurStep", self.BossCurStep, "CreatorId", self.BossCreatorId, "UnitId", CurUnitId)
+  local CurUnitId = self.BossUnitIds[self.BossCurStep]
+  if self.IsSingleMode then
+    CurUnitId = self.SingleModeBossUnitId
+  end
+  if not CurUnitId then
+    return
+  end
   local Creator = self.GameMode.EMGameState.StaticCreatorMap:Find(self.BossCreatorId)
   if not IsValid(Creator) then
     DebugPrint("ljl@ AsyncCombat CreateBoss failed to find creator", "CreatorId", self.BossCreatorId)
@@ -62,21 +83,24 @@ function M:CreateBoss()
   local CreatorIdArray = TArray(0)
   CreatorIdArray:Add(self.BossCreatorId)
   self.GameMode:TriggerActiveStaticCreator(CreatorIdArray, "AsyncCombatBoss")
+  if self.IsSingleMode then
+    self.IsSingleModeBossSpawned = true
+  end
 end
 
 function M:OnRepClientDungeonMessage(MessageName, ...)
   DebugPrint("AsyncCombatComponent:OnRepClientDungeonMessage", MessageName)
+  if self.IsSingleMode and (MessageName == AsyncMsg.AsyncCombatBattleStateUpdate or MessageName == AsyncMsg.AsyncCombatBossDead or MessageName == AsyncMsg.AsyncCombatRoomStateUpdate) then
+    return
+  end
   if MessageName == AsyncMsg.AsyncCombatBattleStateUpdate then
     local Data = (...)
-    DebugPrint("lgc@ AsyncCombat BattleStateUpdate", "BossRemainHp", Data and Data.BossRemainHp)
     self:ApplyBossHP(Data.BossRemainHp)
   elseif MessageName == AsyncMsg.AsyncCombatBossDead then
     local Data = (...)
-    DebugPrint("lgc@ AsyncCombat BossDead message", "NextStep", Data and Data.NextStep, "NextBossId", Data and Data.NextBossId)
     self:OnBossDeadFromServer()
     self:OnRep_CurStep(Data.NextStep)
   elseif MessageName == AsyncMsg.AsyncCombatRoomStateUpdate then
-    DebugPrint("lgc@ AsyncCombat: RoomStateUpdate", ...)
     local Data = (...)
     self:OnRep_CurStep(Data.CurStep)
   elseif MessageName == AsyncMsg.AsyncCombatRoomPass then
@@ -84,7 +108,6 @@ function M:OnRepClientDungeonMessage(MessageName, ...)
       self:OnRoomPass()
     elseif not self.IsPendingRoomEnd then
       self.IsPendingRoomEnd = true
-      DebugPrint("lgc@ AsyncCombat: AsyncCombatRoomPass, Register to OnInit")
       self.GameMode.EMGameState:RegisterGameModeEvent("OnInit", self, function()
         self:OnRoomPass()
       end)
@@ -94,7 +117,6 @@ function M:OnRepClientDungeonMessage(MessageName, ...)
       self:OnRoomClose()
     elseif not self.IsPendingRoomEnd then
       self.IsPendingRoomEnd = true
-      DebugPrint("lgc@ AsyncCombat: AsyncCombatRoomClose, Register to OnInit")
       self.GameMode.EMGameState:RegisterGameModeEvent("OnInit", self, function()
         self:OnRoomClose()
       end)
@@ -104,10 +126,8 @@ end
 
 function M:OnRep_CurStep(NewCurStep)
   if NewCurStep <= self.BossCurStep then
-    DebugPrint("lgc@ AsyncCombat OnRep_CurStep ignored NewStep", NewCurStep, "CurStep", self.BossCurStep)
     return
   end
-  DebugPrint("lgc@ AsyncCombat OnRep_CurStep", "OldStep", self.BossCurStep, "NewStep", NewCurStep)
   self.BossCurStep = NewCurStep
   DebugPrint("AsyncCombatComponent: Update BossCurStep", self.BossCurStep)
   if not self.GameMode.AlreadyInit then
@@ -120,7 +140,6 @@ function M:OnStaticCreatorEvent(EventName, Eid, UnitId, UnitType, CreatorId)
   if "AsyncCombatBoss" == EventName then
     local SpawnStep = self:GetBossStepByUnitId(UnitId)
     if SpawnStep and SpawnStep < self.ActiveBossStep then
-      DebugPrint("lgc@ AsyncCombat OnStaticCreatorEvent kill stale boss", "Eid", Eid, "SpawnStep", SpawnStep, "ActiveBossStep", self.ActiveBossStep)
       self:KillBossByDeath(Eid)
       return
     end
@@ -135,15 +154,15 @@ function M:OnStaticCreatorEvent(EventName, Eid, UnitId, UnitType, CreatorId)
     self.BossIsDead = false
     self.ReportedDamageTotal = 0
     self.AppliedOthersDamage = 0
-    DebugPrint("lgc@ AsyncCombat BossCreated", "Eid", Eid, "UnitId", UnitId, "UnitType", UnitType, "CreatorId", CreatorId, "BossCurStep", self.BossCurStep)
     local BossEntity = Battle(self):GetEntity(Eid)
     if not IsValid(BossEntity) then
-      DebugPrint("lgc@ AsyncCombat BossCreated invalid entity", "Eid", Eid)
       return
     end
     self:StartBossDamageTracking(Eid)
+    if self.IsSingleMode then
+      return
+    end
     local Avatar = GWorld:GetAvatar()
-    DebugPrint("lgc@ AsyncCombat QueryState", "BossEid", self.CurBossEid, "BossId", self.CurBossId, "BossCurStep", self.BossCurStep)
     Avatar:SyncToServerDungeonMessage(AsyncMsg.AsyncCombatQueryState, {Type = "Battle"})
   end
 end
@@ -163,7 +182,6 @@ end
 function M:KillBossByDeath(BossEid)
   local BossEntity = Battle(self):GetEntity(BossEid)
   if not IsValid(BossEntity) then
-    DebugPrint("lgc@ AsyncCombat KillBossByDeath skip invalid", "BossEid", BossEid)
     return false
   end
   local CurHp = BossEntity:GetAttr("Hp")
@@ -171,7 +189,6 @@ function M:KillBossByDeath(BossEid)
     BossEntity:AddHp(-CurHp)
   end
   Battle(self):BattleOnDead(BossEid, self:GetMainControlPlayerEid(), 0, EDeathReason.AsyncCombatServer)
-  DebugPrint("lgc@ AsyncCombat KillBossByDeath", "BossEid", BossEid)
   return true
 end
 
@@ -179,16 +196,21 @@ function M:OnUnitDeadEvent(MonsterC, KillMineRoleEid, KillMineSkillId, DeathReas
   if not IsValid(MonsterC) then
     return
   end
-  local CurUnitId = self.BossUnitIds[self.BossCurStep]
-  if CurUnitId == MonsterC.UnitId then
-    DebugPrint("lgc@ AsyncCombat OnUnitDeadEvent", "MonsterEid", MonsterC.Eid, "UnitId", MonsterC.UnitId, "BossCurStep", self.BossCurStep, "DeathReason", DeathReason)
+  local IsCurrentBoss = self.IsSingleMode and MonsterC.Eid == self.CurBossEid
+  if not self.IsSingleMode then
+    local CurUnitId = self.BossUnitIds[self.BossCurStep]
+    IsCurrentBoss = CurUnitId == MonsterC.UnitId
+  end
+  if IsCurrentBoss then
     self.BossIsDead = true
     self:StopBossDamageTracking(false)
+    if self.IsSingleMode and not self.IsSingleModeContributionReached then
+      self:OnRoomPass()
+    end
   end
 end
 
 function M:ReceiveEndPlay(...)
-  DebugPrint("lgc@ AsyncCombat ReceiveEndPlay", "CurBossEid", self.CurBossEid, "TrackingEid", self.BossDamageTrackingEid)
   self.Overridden.ReceiveEndPlay(self, ...)
   EventManager:RemoveEvent(EventID.OnRepClientDungeonMessage, self)
   EventManager:RemoveEvent(EventID.CloseLoading, self)
@@ -198,12 +220,10 @@ end
 
 function M:ApplyBossHP(BossRemainHp)
   if self.BossIsDead then
-    DebugPrint("lgc@ AsyncCombat ApplyBossHP skipped dead", "BossRemainHp", BossRemainHp, "CurBossEid", self.CurBossEid)
     return
   end
   local BossEntity = Battle(self):GetEntity(self.CurBossEid)
   if not IsValid(BossEntity) then
-    DebugPrint("lgc@ AsyncCombat ApplyBossHP invalid entity", "CurBossEid", self.CurBossEid, "BossRemainHp", BossRemainHp)
     return
   end
   local LocalMaxHp = BossEntity:GetAttr("MaxHp")
@@ -218,21 +238,16 @@ function M:ApplyBossHP(BossRemainHp)
     end
     BossEntity:AddHp(-OthersDelta)
     self.AppliedOthersDamage = OthersTotal
-    DebugPrint("lgc@ AsyncCombat ApplyBossHP", "BossRemainHp", BossRemainHp, "LocalMaxHp", LocalMaxHp, "ReportedDamageTotal", self.ReportedDamageTotal, "AppliedOthersDamage", self.AppliedOthersDamage, "OthersDelta", OthersDelta)
-  else
-    DebugPrint("lgc@ AsyncCombat ApplyBossHP no delta", "BossRemainHp", BossRemainHp, "ReportedDamageTotal", self.ReportedDamageTotal, "AppliedOthersDamage", self.AppliedOthersDamage)
   end
 end
 
 function M:StartBossDamageTracking(BossEid)
   if not BossEid or 0 == BossEid then
-    DebugPrint("lgc@ AsyncCombat StartBossDamageTracking skipped", "BossEid", BossEid)
     return
   end
   self.BossDamageTrackingEid = BossEid
   self.BossDamageTrackingBossId = self.BossUnitIds[self.BossCurStep or 1] or 0
   self.BossDamageTrackingStep = self.BossCurStep
-  DebugPrint("lgc@ AsyncCombat StartBossDamageTracking", "BossEid", BossEid, "BossId", self.BossDamageTrackingBossId, "BossCurStep", self.BossDamageTrackingStep, "Interval", DAMAGE_REPORT_INTERVAL)
   Battle(self):ActivateAsyncCombatDamageTracker(BossEid)
   self:AddTimer(DAMAGE_REPORT_INTERVAL, function()
     self:ReportAccumulatedDamage()
@@ -241,47 +256,102 @@ end
 
 function M:ReportAccumulatedDamage(bIgnoreBossDead)
   if self.BossIsDead and not bIgnoreBossDead then
-    DebugPrint("lgc@ AsyncCombat ReportAccumulatedDamage skipped dead", "TrackingEid", self.BossDamageTrackingEid)
     return
   end
   local TrackingEid = self.BossDamageTrackingEid
   if not TrackingEid then
-    DebugPrint("lgc@ AsyncCombat ReportAccumulatedDamage skipped no tracking eid")
+    return
+  end
+  if self.IsSingleMode then
+    self:ConsumeSingleModeDamage(true)
     return
   end
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
-    DebugPrint("lgc@ AsyncCombat ReportAccumulatedDamage skipped no avatar", "TrackingEid", TrackingEid)
     return
   end
   local Damage = Battle(self):ConsumeAsyncCombatDamage(TrackingEid)
   if Damage <= 0 then
-    DebugPrint("lgc@ AsyncCombat ReportAccumulatedDamage empty", "TrackingEid", TrackingEid, "BossId", self.BossDamageTrackingBossId, "BossCurStep", self.BossDamageTrackingStep)
     return
   end
-  DebugPrint("lgc@ AsyncCombat ReportAccumulatedDamage send", "TrackingEid", TrackingEid, "Damage", Damage, "BossId", self.BossDamageTrackingBossId, "BossCurStep", self.BossDamageTrackingStep, "IgnoreBossDead", bIgnoreBossDead)
   Avatar:SyncToServerDungeonMessage(AsyncMsg.AsyncCombatBossDamage, {
     Damage = Damage,
     BossId = self.BossDamageTrackingBossId,
     CurStep = self.BossDamageTrackingStep
   })
   self.ReportedDamageTotal = self.ReportedDamageTotal + Damage
-  DebugPrint("lgc@ AsyncCombat ReportAccumulatedDamage done", "TrackingEid", TrackingEid, "ReportedDamageTotal", self.ReportedDamageTotal)
+end
+
+function M:GetSingleModeProgressSnapshot()
+  if not self.IsSingleMode then
+    return nil
+  end
+  local MyDamage = (self.SingleModeInheritedDamage or 0) + (self.SingleModeDamage or 0)
+  local RoomTotalHp = self.SingleModeTotalHp or 0
+  local Progress = RoomTotalHp > 0 and math.min(100, MyDamage / RoomTotalHp * 100) or 0
+  local RequiredProgress = DataMgr.AsyncCombatEventConstant.AsyncCombat_BaseContributionRequire.ConstantValue / 100
+  return {
+    MyDamage = MyDamage,
+    RoomTotalHp = RoomTotalHp,
+    Progress = Progress,
+    RequiredProgress = RequiredProgress
+  }
+end
+
+function M:PublishSingleModeProgress()
+  local Snapshot = self:GetSingleModeProgressSnapshot()
+  if not Snapshot then
+    return
+  end
+  EventManager:FireEvent(EventID.OnAsyncCombatSingleModeProgressUpdate, Snapshot)
+end
+
+function M:ConsumeSingleModeDamage(bCheckContribution)
+  if not self.IsSingleMode or not self.BossDamageTrackingEid then
+    return 0
+  end
+  local Damage = Battle(self):ConsumeAsyncCombatDamage(self.BossDamageTrackingEid)
+  if Damage <= 0 then
+    return 0
+  end
+  self.SingleModeDamage = (self.SingleModeDamage or 0) + Damage
+  self:PublishSingleModeProgress()
+  if bCheckContribution then
+    self:TryFinishSingleMode()
+  end
+  return Damage
+end
+
+function M:TryFinishSingleMode()
+  if not self.IsSingleMode or self.IsSingleModeContributionReached then
+    return
+  end
+  if not self.SingleModeTotalHp or self.SingleModeTotalHp <= 0 then
+    return
+  end
+  local TotalDamage = (self.SingleModeInheritedDamage or 0) + (self.SingleModeDamage or 0)
+  if not CommonUtils.IsReachBaseContribution(TotalDamage, self.SingleModeTotalHp) then
+    return
+  end
+  self.IsSingleModeContributionReached = true
+  self:StopBossDamageTracking(true)
+  self:OnRoomPass()
 end
 
 function M:StopBossDamageTracking(bSkipFlush)
-  DebugPrint("lgc@ AsyncCombat StopBossDamageTracking", "TrackingEid", self.BossDamageTrackingEid, "BossId", self.BossDamageTrackingBossId, "BossCurStep", self.BossDamageTrackingStep, "SkipFlush", bSkipFlush)
   self:RemoveTimer(DAMAGE_REPORT_TIMER_KEY)
   local TrackingEid = self.BossDamageTrackingEid
   if not TrackingEid then
-    DebugPrint("lgc@ AsyncCombat StopBossDamageTracking skipped no tracking eid")
     return
   end
   if not bSkipFlush then
-    self:ReportAccumulatedDamage(true)
+    if self.IsSingleMode then
+      self:ConsumeSingleModeDamage(false)
+    else
+      self:ReportAccumulatedDamage(true)
+    end
   end
   Battle(self):DeactivateAsyncCombatDamageTracker(TrackingEid)
-  DebugPrint("lgc@ AsyncCombat StopBossDamageTracking done", "TrackingEid", TrackingEid)
   self.BossDamageTrackingEid = nil
   self.BossDamageTrackingBossId = nil
   self.BossDamageTrackingStep = nil
@@ -297,19 +367,15 @@ end
 
 function M:OnBossDeadFromServer()
   if self.BossIsDead then
-    DebugPrint("lgc@ AsyncCombat OnBossDeadFromServer ignored", "CurBossEid", self.CurBossEid)
     return
   end
-  DebugPrint("lgc@ AsyncCombat OnBossDeadFromServer", "CurBossEid", self.CurBossEid, "CurBossId", self.CurBossId, "BossCurStep", self.BossCurStep)
   local BossEntity = Battle(self):GetEntity(self.CurBossEid)
   if not IsValid(BossEntity) then
-    DebugPrint("lgc@ AsyncCombat OnBossDeadFromServer invalid entity", "CurBossEid", self.CurBossEid)
     self:StopBossDamageTracking(false)
     self.BossIsDead = true
     return
   end
   if BossEntity:IsDead() or BossEntity:GetAttr("Hp") <= 0 then
-    DebugPrint("lgc@ AsyncCombat OnBossDeadFromServer local already dead", "CurBossEid", self.CurBossEid)
     self:StopBossDamageTracking(false)
     self.BossIsDead = true
     return
@@ -320,19 +386,16 @@ function M:OnBossDeadFromServer()
   if CurHp > 0 then
     BossEntity:AddHp(-CurHp)
   end
-  DebugPrint("lgc@ AsyncCombat BattleOnDead", "CurBossEid", self.CurBossEid, "KillerEid", self:GetMainControlPlayerEid())
   Battle(self):BattleOnDead(self.CurBossEid, self:GetMainControlPlayerEid(), 0, EDeathReason.AsyncCombatServer)
 end
 
 function M:OnRoomPass()
   self.GameMode:TriggerDungeonWin()
-  DebugPrint("lgc@ AsyncCombat OnRoomPass", "CurBossEid", self.CurBossEid, "BossCurStep", self.BossCurStep)
   self:StopBossDamageTracking(false)
 end
 
 function M:OnRoomClose()
   self.GameMode:TriggerDungeonFailed()
-  DebugPrint("lgc@ AsyncCombat OnRoomClose", "CurBossEid", self.CurBossEid, "BossCurStep", self.BossCurStep)
   self:StopBossDamageTracking(false)
   self:StopTimeBuff()
 end

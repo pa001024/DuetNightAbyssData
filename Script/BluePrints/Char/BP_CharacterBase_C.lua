@@ -492,7 +492,9 @@ function BP_CharacterBase_C:SetArmoryTag(ArmoryTag, bKeepWeapon, bHideUntilLoop)
   self.IsEnterArmory = ArmoryTag
   if self.PlayerAnimInstance then
     self.PlayerAnimInstance.IsEnterArmory = ArmoryTag
-    self.PlayerAnimInstance:EnterArmoryIdle()
+    if self.PlayerAnimInstance.EnterArmoryIdle then
+      self.PlayerAnimInstance:EnterArmoryIdle()
+    end
   end
   if "None" ~= self.IsEnterArmory then
     self:SetArmoryIdleTag(bHideUntilLoop)
@@ -852,17 +854,6 @@ function BP_CharacterBase_C:HandleStuck(Hit)
   local ActorLocation = self:K2_GetActorLocation()
   local FixedLocation = ActorLocation + FVector(Hit.Normal.X, Hit.Normal.Y, Hit.Normal.Z) * Hit.PenetrationDepth
   self:K2_SetActorLocation(FixedLocation, false, nil, false)
-end
-
-function BP_CharacterBase_C:AddInteractiveTrigger()
-  if self.InteractiveTriggerComponent == nil then
-    local BPClass = LoadClass("/Game/BluePrints/Story/Interactive/Base/BP_InteractiveTriggerComponent.BP_InteractiveTriggerComponent")
-    self.InteractiveTriggerComponent = self:AddComponentByClass(BPClass, false, FTransform(), false)
-    self.InteractiveTriggerComponent:InitOnPlayerPossessed()
-    if self.bForbidInteractiveTrigger then
-      self.InteractiveTriggerComponent:SetIsCanTrigger(false)
-    end
-  end
 end
 
 function BP_CharacterBase_C:GetHeadWidgetComponent()

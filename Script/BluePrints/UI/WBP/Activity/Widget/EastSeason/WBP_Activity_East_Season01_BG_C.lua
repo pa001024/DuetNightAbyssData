@@ -5,6 +5,7 @@ local M = Class({
 local ActivityReddotHelper = require("BluePrints.UI.WBP.Activity.ActivityReddotHelper")
 local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 local EastSeasonQuestUtils = require("BluePrints.UI.WBP.Activity.Widget.EastSeason.EastSeasonQuestUtils")
+local TaskUtils = require("BluePrints.UI.TaskPanel.TaskUtils")
 
 function M:InitUI(ActivityConfigData, PageConfigData)
   self.FocusWidgetName = "SelectView"
@@ -12,6 +13,9 @@ function M:InitUI(ActivityConfigData, PageConfigData)
   local PlayerAvatar = GWorld:GetAvatar()
   if PageConfigData.JumpUnlockCondition and not ConditionUtils.CheckCondition(PlayerAvatar, PageConfigData.JumpUnlockCondition) then
     self.IsLock = true
+  end
+  if TaskUtils:IsQuestChainAdvanceUnlock(ActivityConfigData.QuestChainIdToUnlock) then
+    self.IsLock = false
   end
   self.EventId = ActivityConfigData.EventId
   for i = 1, 4 do

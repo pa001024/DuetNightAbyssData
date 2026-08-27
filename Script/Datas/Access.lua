@@ -11,6 +11,16 @@ return ReadOnly("Access", {
     AccessText = "Abyss_entry",
     UIUnlockRuleId = "Abyss"
   },
+  Convert = {
+    AccessKey = "Convert",
+    AccessText = "UI_Convert_Discription",
+    UIUnlockRuleId = "Forging"
+  },
+  Convert_For_WP = {
+    AccessKey = "Convert_For_WP",
+    AccessText = "UI_Convert",
+    UIUnlockRuleId = "Forging"
+  },
   Dungeon = {
     AccessKey = "Dungeon",
     AccessRule = "Return",
@@ -62,6 +72,12 @@ return ReadOnly("Access", {
   Dungeon_ModTab_70 = {
     AccessKey = "Dungeon_ModTab_70",
     AccessParam = "UI_DungeonMod_Tab_70",
+    AccessText = "UI_Dungeon_Tab_ModDungeon",
+    UIUnlockRuleId = "ModDungeon"
+  },
+  Dungeon_ModTab_75 = {
+    AccessKey = "Dungeon_ModTab_75",
+    AccessParam = "UI_DungeonMod_Tab_75",
     AccessText = "UI_Dungeon_Tab_ModDungeon",
     UIUnlockRuleId = "ModDungeon"
   },
@@ -239,6 +255,18 @@ return ReadOnly("Access", {
     AccessKey = "Text_Collecting_Kuangkeng",
     AccessText = "Access_Collecting_Kuangkeng"
   },
+  Text_Collecting_Lxzs01 = {
+    AccessKey = "Text_Collecting_Lxzs01",
+    AccessText = "Access_Collecting_Lxzs01"
+  },
+  Text_Collecting_Lxzs02 = {
+    AccessKey = "Text_Collecting_Lxzs02",
+    AccessText = "Access_Collecting_Lxzs02"
+  },
+  Text_Collecting_Lxzx = {
+    AccessKey = "Text_Collecting_Lxzx",
+    AccessText = "Access_Collecting_Lxzx"
+  },
   Text_Collecting_Prologue01 = {
     AccessKey = "Text_Collecting_Prologue01",
     AccessText = "Access_Collecting_Prologue01"
@@ -375,6 +403,14 @@ return ReadOnly("Access", {
   Text_Task = {
     AccessKey = "Text_Task",
     AccessText = "MAIN_UI_QUEST"
+  },
+  Text_WeeklyDungeon = {
+    AccessKey = "Text_WeeklyDungeon",
+    AccessText = "Text_WeeklyDungeon"
+  },
+  Text_WeeklyDungeon_Pet = {
+    AccessKey = "Text_WeeklyDungeon_Pet",
+    AccessText = "Text_WeeklyDungeon_Pet"
   },
   Walnut = {
     AccessKey = "Walnut",

@@ -57,5 +57,6 @@ return ReadOnly("Party", {
     RewardCoin = T.RT_2,
     RewardId = T.RT_3
   },
-  [70301] = {DungeonId = 70301, RespawnRule = 0}
+  [70301] = {DungeonId = 70301, RespawnRule = 0},
+  [70401] = {DungeonId = 70401, RespawnRule = 0}
 })

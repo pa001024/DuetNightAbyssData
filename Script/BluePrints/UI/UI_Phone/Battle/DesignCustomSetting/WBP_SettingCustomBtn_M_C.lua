@@ -562,12 +562,11 @@ function M:SetEditPlanName()
   if not Avatar then
     return
   end
-  local PlanData = Avatar:GetMobileHudPlan(self.CurEditPlan)
-  if not PlanData then
-    return
-  end
   local DefaultPlanName = Avatar:GetDefaultMobileHudPlanName(self.CurEditPlan)
-  local PlanName = PlanData.HudPlanName or DefaultPlanName
+  local PlanData = Avatar:GetMobileHudPlan(self.CurEditPlan)
+  local SavedPlanName = PlanData and PlanData.HudPlanName
+  local IsInvalidSavedName = nil == SavedPlanName or "" == SavedPlanName or "Default" == SavedPlanName
+  local PlanName = IsInvalidSavedName and DefaultPlanName or SavedPlanName
   self.PlanName = PlanName
   self.Text_PlanName:SetText(PlanName)
 end

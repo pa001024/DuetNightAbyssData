@@ -61,16 +61,78 @@ function Component:ReCreatePhantom(RoleId, BTIndex, Info, ExtraInfo, Level)
   self:UseNewCreatePhantom(RoleId, BTIndex, IsHostage, Info, ExtraInfo, Level)
 end
 
+function Component:CreateAutoAssistPhantoms(bIgnoreCondition)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  if Avatar:GetAutoPhantomForBigWorldState() then
+    return
+  end
+  if not bIgnoreCondition and not ConditionUtils.CheckCondition(Avatar, 4490) then
+    return false
+  end
+  local UpdateInfo = Avatar:GetFirstTwoPhantomAndWeapon()
+  if not UpdateInfo then
+    return
+  end
+  local AvatarUtils = require("BluePrints.Client.AvatarUtils")
+  local Pet = Avatar.CurrentPet and Avatar.Pets[Avatar.CurrentPet] or nil
+  
+  local function CreateDefaultPhantom(CharEid, WeaponEid, WeaponModSuit, TeamIndex)
+    if not CharEid or not WeaponEid then
+      return
+    end
+    local Char = Avatar.Chars[CharEid]
+    local Weapon = Avatar.Weapons[WeaponEid]
+    if not Char or not Weapon then
+      return
+    end
+    local PhantomInfo = AvatarUtils:GetPhantomBattleInfo(Avatar, Char, Weapon, Pet, false, nil, WeaponModSuit)
+    local RoleId = PhantomInfo and PhantomInfo.RoleInfo and PhantomInfo.RoleInfo.RoleId
+    if not RoleId then
+      return
+    end
+    self:CreatePhantom(RoleId, 1, PhantomInfo, {IsSpawnBySquad = 1, TeamIndex = TeamIndex})
+  end
+  
+  CreateDefaultPhantom(UpdateInfo.Phantom1, UpdateInfo.PhantomWeapon1, UpdateInfo.PhantomWeaponModSuit1, 1)
+  CreateDefaultPhantom(UpdateInfo.Phantom2, UpdateInfo.PhantomWeapon2, UpdateInfo.PhantomWeaponModSuit2, 2)
+end
+
+function Component:TryCreateAutoAssistPhantomsForBigWorld()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar or Avatar:GetAutoPhantomForBigWorldState() then
+    return false
+  end
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  if not IsValid(GameMode) or GameMode:IsGamePaused() then
+    return false
+  end
+  local PhantomTeammates = self:GetPhantomTeammates(false, true)
+  for _, Phantom in pairs(PhantomTeammates) do
+    if IsValid(Phantom) then
+      return false
+    end
+  end
+  self:CreateAutoAssistPhantoms()
+  return true
+end
+
 function Component:CreatePhantomOnLevelTransition()
   local Avatar = GWorld:GetAvatar()
-  if not Avatar or not Avatar.PhantomCreateInfo then
+  if not Avatar then
     return
   end
   local PhantomCreateInfo = Avatar.PhantomCreateInfo
-  for PhantomRoleId, CreateInfo in pairs(PhantomCreateInfo) do
-    local CurrentCharId = BattleUtils.GetCurrentCharacterAttributeCharId(PhantomRoleId)
-    self:ReCreatePhantom(CurrentCharId, CreateInfo.BTIndex, CreateInfo.Info, CreateInfo.ExtraInfo, CreateInfo.Level)
+  if PhantomCreateInfo and next(PhantomCreateInfo) then
+    for PhantomRoleId, CreateInfo in pairs(PhantomCreateInfo) do
+      local CurrentCharId = BattleUtils.GetCurrentCharacterAttributeCharId(PhantomRoleId)
+      self:ReCreatePhantom(CurrentCharId, CreateInfo.BTIndex, CreateInfo.Info, CreateInfo.ExtraInfo, CreateInfo.Level)
+    end
+    return
   end
+  self:CreateAutoAssistPhantoms()
 end
 
 return Component

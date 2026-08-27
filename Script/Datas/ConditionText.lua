@@ -181,6 +181,10 @@ return ReadOnly("ConditionText", {
     ConditionLogic = "DS",
     ConditionType = "MechanismState"
   },
+  ModArchiveReward = {
+    ConditionLogic = "S",
+    ConditionType = "ModArchiveReward"
+  },
   OwnCharIdAndLevel = {
     AutoTrigger = true,
     ConditionLogic = "S",

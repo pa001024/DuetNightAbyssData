@@ -49,7 +49,7 @@ return {
       name = "开场剧情",
       pos = {x = 379.15384615384613, y = 128.84615384615384},
       propsData = {
-        QuestId = 10100,
+        QuestId = 0,
         QuestDescriptionComment = "",
         QuestDescription = "",
         QuestDeatil = "",

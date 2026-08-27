@@ -24,6 +24,9 @@ end
 function Component:NotifyTeamMemberPropChange(ChangeData, Uid)
   DebugPrint("NotifyTeamMemberPropChange", Uid, CommonUtils.TableToString(ChangeData))
   TeamController:RecvTeamMemberPropChange(ChangeData, Uid)
+  if self.OnTeamMemberPropChangedForTeamHall then
+    self:OnTeamMemberPropChangedForTeamHall(ChangeData, Uid)
+  end
 end
 
 function Component:TeamInvite(Uid)
@@ -62,7 +65,7 @@ function Component:TeamLeave()
   
   local function Cb(ErrCode)
     DebugPrint("TeamLeave Callback", ErrorCode:Name(ErrCode))
-    TeamController:RecvTeamLeave(ErrCode)
+    TeamController:RecvTeamLeave(ErrCode, false, true)
   end
   
   self:CallServer("TeamLeave", Cb)
@@ -357,6 +360,76 @@ function Component:TeamBattleEvent_SelectTicket()
     YesButtonText = GText("UI_CONFIRM_SELECTION")
   }
   local CommonDialog = UIManager(self):ShowCommonPopupUI(100123, DialogParams, self)
+end
+
+function Component:RequestEnterTeam(Callback, Uid, Complete, TeamHallId)
+  DebugPrint("RequestEnterTeam", Uid)
+  assert(Uid)
+  assert(TeamHallId)
+  local Avatar = GWorld:GetAvatar()
+  if Avatar and Avatar:IsInTeam() then
+    UIManager(self):ShowUITip("CommonToastMain", GText("UI_TeamHallAlreadyInTeam"), 1.5)
+    if Complete then
+      Complete(false, ErrorCode.RET_TEAM_ALREADY_IN_TEAM)
+    end
+    return
+  end
+  
+  local function cb(ret)
+    if ret == ErrorCode.RET_TEAM_ALREADY_IN_TEAM then
+      UIManager(self):ShowUITip("CommonToastMain", GText("UI_TeamHallAlreadyInTeam"), 1.5)
+      if Complete then
+        Complete(false, ret)
+      end
+      return
+    end
+    local bSuccess = ErrorCode:Check(ret)
+    if bSuccess and Callback then
+      Callback()
+    end
+    if Complete then
+      Complete(true == bSuccess, ret)
+    end
+  end
+  
+  self:CallServer("RequestEnterTeam", cb, Uid, TeamHallId)
+end
+
+function Component:ApprovalTeamRequest(Callback, Uid, bAgree, bAutoIgnore)
+  DebugPrint("ApprovalTeamRequest", Uid, bAgree)
+  assert(Uid)
+  assert(nil ~= bAgree)
+  bAutoIgnore = bAutoIgnore or false
+  
+  local function cb(ret)
+    if ret == ErrorCode.RET_AVATAR_STATUS_INVALID then
+      UIManager(self):ShowUITip("CommonToastMain", GText("StatusNotAllowJoiningTeam"), 1.5)
+      return
+    end
+    if not ErrorCode:Check(ret) then
+      return
+    end
+    if Callback then
+      Callback()
+    end
+  end
+  
+  self:CallServer("ApprovalTeamRequest", cb, Uid, bAgree, bAutoIgnore)
+end
+
+function Component:GetSelfTeamHallRecruitment(Callback)
+  DebugPrint("GetSelfTeamHallRecruitment")
+  
+  local function cb(ret, info)
+    if not ErrorCode:Check(ret) then
+      return
+    end
+    if Callback then
+      Callback(info)
+    end
+  end
+  
+  self:CallServer("GetSelfTeamHallRecruitment", cb)
 end
 
 return Component

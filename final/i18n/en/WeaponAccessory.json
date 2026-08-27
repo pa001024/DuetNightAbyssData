@@ -464,10 +464,42 @@
     "unlock": "Available through Prism Exchange"
   },
   {
+    "id": 10059,
+    "name": "Wraithveil Cage: Opaque White",
+    "desc": "No cage can hold a flame.",
+    "icon": "T_Fashion_Weapon43_03",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 10060,
+    "name": "Wraithveil Cage: Dark Jade",
+    "desc": "No cage can hold a flame.",
+    "icon": "T_Fashion_Weapon43_02",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 10061,
+    "name": "Wraithveil Cage: Gilt",
+    "desc": "No cage can hold a flame.",
+    "icon": "T_Fashion_Weapon43_01",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
     "id": 20001,
     "name": "Paint Pop",
     "desc": "Used for Move-Variant Demon Wedge: Savage Cleave.",
     "icon": "T_Fashion_Fx20",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 20004,
+    "name": "Briar Helix",
+    "desc": "Used for Move-Variant Demon Wedge: Voidpiercer.",
+    "icon": "T_Fashion_Fx42",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
@@ -477,7 +509,7 @@
     "desc": "Used for Move-Variant Demon Wedge: Piercing Ascent",
     "icon": "T_Fashion_Fx21",
     "rarity": 5,
-    "unlock": "Available through Prism Exchange"
+    "unlock": "Available at Shop"
   },
   {
     "id": 40001,

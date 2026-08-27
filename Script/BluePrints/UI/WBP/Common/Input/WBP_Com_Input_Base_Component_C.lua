@@ -231,7 +231,7 @@ function M:CheckTextLegality(Text, NeedLengthTips)
   local bLegal = true
   local ResText = Text
   local Len = self:Utf8StrLen(Text)
-  if Len < self.TextLimit then
+  if Len <= self.TextLimit then
     self:HideTips()
   else
     if NeedLengthTips then

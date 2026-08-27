@@ -593,6 +593,14 @@ return ReadOnly("Mail", {
     MailTimeLimit = -1,
     MailTitle = "Mail_Title_10085"
   },
+  [10086] = {
+    Condition = 10302103,
+    MailContent = "Mail_Content_10086",
+    MailId = 10086,
+    MailReward = 1030210300,
+    MailTimeLimit = -1,
+    MailTitle = "Mail_Title_10086"
+  },
   [19101] = {
     MailContent = "Mail_Content_19101",
     MailId = 19101,

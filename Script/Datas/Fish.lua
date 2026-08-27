@@ -176,41 +176,74 @@ T.RT_68 = {
   12
 }
 T.RT_69 = {6, 20}
-T.RT_70 = {10, 15}
+T.RT_70 = {
+  70,
+  5,
+  2
+}
 T.RT_71 = {
+  105,
+  5,
+  2
+}
+T.RT_72 = {10, 15}
+T.RT_73 = {
   500,
   5,
   4
 }
-T.RT_72 = {28, 33}
-T.RT_73 = {6, 16}
-T.RT_74 = {30, 100}
-T.RT_75 = {
+T.RT_74 = {28, 33}
+T.RT_75 = {6, 16}
+T.RT_76 = {30, 100}
+T.RT_77 = {
   500,
   5,
   14
 }
-T.RT_76 = {9, 11}
-T.RT_77 = {40, 60}
-T.RT_78 = {225, 275}
-T.RT_79 = {8, 40}
-T.RT_80 = {
+T.RT_78 = {9, 11}
+T.RT_79 = {40, 60}
+T.RT_80 = {225, 275}
+T.RT_81 = {8, 40}
+T.RT_82 = {
   500,
   5,
   6
 }
-T.RT_81 = {5, 25}
-T.RT_82 = {4, 8}
-T.RT_83 = {26, 49}
-T.RT_84 = {30, 60}
-T.RT_85 = {40, 80}
-T.RT_86 = {25, 35}
-T.RT_87 = {70, 90}
-T.RT_88 = {60, 150}
-T.RT_89 = {
+T.RT_83 = {5, 25}
+T.RT_84 = {4, 8}
+T.RT_85 = {26, 49}
+T.RT_86 = {30, 60}
+T.RT_87 = {
+  70,
+  5,
+  6
+}
+T.RT_88 = {
+  105,
+  5,
+  6
+}
+T.RT_89 = {40, 80}
+T.RT_90 = {25, 35}
+T.RT_91 = {70, 90}
+T.RT_92 = {60, 150}
+T.RT_93 = {
   500,
   5,
   18
+}
+T.RT_94 = {70, 80}
+T.RT_95 = {24, 34}
+T.RT_96 = {3, 6}
+T.RT_97 = {80, 150}
+T.RT_98 = {10, 30}
+T.RT_99 = {40, 70}
+T.RT_100 = {80, 140}
+T.RT_101 = {18, 22}
+T.RT_102 = {
+  500,
+  5,
+  0
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
@@ -1049,11 +1082,7 @@ return ReadOnly("Fish", {
     FishSmall2BigMinLength = 14.4,
     FishType = 1,
     IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_East_2",
-    PriceOnWeight = {
-      70,
-      5,
-      2
-    },
+    PriceOnWeight = T.RT_70,
     ResourceId = 5028020,
     Small2BigFishId = 2805,
     VariationFishId = {280201},
@@ -1081,7 +1110,7 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 2804,
-    FishLength = T.RT_70,
+    FishLength = T.RT_72,
     FishLevel = 5,
     FishMoveId = 506,
     FishType = 1,
@@ -1102,7 +1131,7 @@ return ReadOnly("Fish", {
     FishMoveId = 608,
     FishType = 3,
     IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_East_5",
-    PriceOnWeight = T.RT_71,
+    PriceOnWeight = T.RT_73,
     ResourceId = 5028050,
     VariationFishId = {280501},
     VariationProb = 0.1
@@ -1149,7 +1178,7 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 2903,
-    FishLength = T.RT_72,
+    FishLength = T.RT_74,
     FishLevel = 5,
     FishMoveId = 311,
     FishType = 1,
@@ -1165,7 +1194,7 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 2904,
-    FishLength = T.RT_73,
+    FishLength = T.RT_75,
     FishLevel = 5,
     FishMoveId = 507,
     FishType = 1,
@@ -1181,12 +1210,12 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 2905,
-    FishLength = T.RT_74,
+    FishLength = T.RT_76,
     FishLevel = 6,
     FishMoveId = 609,
     FishType = 3,
     IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_East_15",
-    PriceOnWeight = T.RT_75,
+    PriceOnWeight = T.RT_77,
     ResourceId = 5029050,
     VariationFishId = {290501},
     VariationProb = 0.1
@@ -1197,7 +1226,7 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 3001,
-    FishLength = T.RT_76,
+    FishLength = T.RT_78,
     FishLevel = 4,
     FishMoveId = 108,
     FishType = 1,
@@ -1235,7 +1264,7 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 3003,
-    FishLength = T.RT_77,
+    FishLength = T.RT_79,
     FishLevel = 5,
     FishMoveId = 410,
     FishSmall2BigMinLength = 55,
@@ -1253,7 +1282,7 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 3004,
-    FishLength = T.RT_78,
+    FishLength = T.RT_80,
     FishLevel = 5,
     FishMoveId = 508,
     FishType = 1,
@@ -1269,12 +1298,12 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 3005,
-    FishLength = T.RT_79,
+    FishLength = T.RT_81,
     FishLevel = 6,
     FishMoveId = 610,
     FishType = 3,
     IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_East_15",
-    PriceOnWeight = T.RT_80,
+    PriceOnWeight = T.RT_82,
     ResourceId = 5030050,
     VariationFishId = {300501},
     VariationProb = 0.1
@@ -1319,7 +1348,7 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 3103,
-    FishLength = T.RT_81,
+    FishLength = T.RT_83,
     FishLevel = 5,
     FishMoveId = 411,
     FishSmall2BigMinLength = 20,
@@ -1337,7 +1366,7 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 3104,
-    FishLength = T.RT_82,
+    FishLength = T.RT_84,
     FishLevel = 5,
     FishMoveId = 509,
     FishType = 1,
@@ -1353,12 +1382,12 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 3105,
-    FishLength = T.RT_83,
+    FishLength = T.RT_85,
     FishLevel = 6,
     FishMoveId = 611,
     FishType = 3,
     IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_East_10",
-    PriceOnWeight = T.RT_71,
+    PriceOnWeight = T.RT_73,
     ResourceId = 5031050,
     VariationFishId = {310501},
     VariationProb = 0.1
@@ -1369,17 +1398,13 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 3201,
-    FishLength = T.RT_84,
+    FishLength = T.RT_86,
     FishLevel = 4,
     FishMoveId = 207,
     FishSmall2BigMinLength = 48,
     FishType = 1,
     IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_Chapter03_1",
-    PriceOnWeight = {
-      70,
-      5,
-      6
-    },
+    PriceOnWeight = T.RT_87,
     ResourceId = 5032010,
     Small2BigFishId = 3204,
     VariationFishId = {320101},
@@ -1391,7 +1416,7 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 3202,
-    FishLength = T.RT_85,
+    FishLength = T.RT_89,
     FishLevel = 4,
     FishMoveId = 305,
     FishSmall2BigMinLength = 64,
@@ -1413,7 +1438,7 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 3203,
-    FishLength = T.RT_86,
+    FishLength = T.RT_90,
     FishLevel = 5,
     FishMoveId = 407,
     FishType = 1,
@@ -1429,7 +1454,7 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 3204,
-    FishLength = T.RT_87,
+    FishLength = T.RT_91,
     FishLevel = 5,
     FishMoveId = 503,
     FishType = 1,
@@ -1445,14 +1470,186 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 3205,
-    FishLength = T.RT_88,
+    FishLength = T.RT_92,
     FishLevel = 6,
     FishMoveId = 604,
     FishType = 3,
     IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_Chapter03_5",
-    PriceOnWeight = T.RT_89,
+    PriceOnWeight = T.RT_93,
     ResourceId = 5032050,
     VariationFishId = {320501},
+    VariationProb = 0.1
+  },
+  [3301] = {
+    FishAppearPeriod = T.RT_1,
+    FishGetDuration = 10,
+    FishHookDuration = 5,
+    FishHookOffset = 1.5,
+    FishId = 3301,
+    FishLength = T.RT_94,
+    FishLevel = 4,
+    FishMoveId = 107,
+    FishSmall2BigMinLength = 76,
+    FishType = 1,
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_EX02_1",
+    PriceOnWeight = T.RT_70,
+    ResourceId = 5033010,
+    Small2BigFishId = 3304,
+    VariationFishId = {330101},
+    VariationProb = 0.2
+  },
+  [3302] = {
+    FishAppearPeriod = T.RT_1,
+    FishGetDuration = 10,
+    FishHookDuration = 5,
+    FishHookOffset = 1.5,
+    FishId = 3302,
+    FishLength = T.RT_95,
+    FishLevel = 4,
+    FishMoveId = 213,
+    FishSmall2BigMinLength = 30,
+    FishType = 1,
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_EX02_2",
+    PriceOnWeight = T.RT_70,
+    ResourceId = 5033020,
+    Small2BigFishId = 3305,
+    VariationFishId = {330201},
+    VariationProb = 0.2
+  },
+  [3303] = {
+    FishAppearPeriod = T.RT_1,
+    FishGetDuration = 10,
+    FishHookDuration = 5,
+    FishHookOffset = 1.5,
+    FishId = 3303,
+    FishLength = T.RT_96,
+    FishLevel = 5,
+    FishMoveId = 311,
+    FishType = 1,
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_EX02_3",
+    PriceOnWeight = T.RT_63,
+    ResourceId = 5033030,
+    VariationFishId = {330301},
+    VariationProb = 0.2
+  },
+  [3304] = {
+    FishAppearPeriod = T.RT_27,
+    FishGetDuration = 10,
+    FishHookDuration = 5,
+    FishHookOffset = 1.5,
+    FishId = 3304,
+    FishLength = T.RT_97,
+    FishLevel = 5,
+    FishMoveId = 507,
+    FishType = 1,
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_EX02_4",
+    PriceOnWeight = {
+      120,
+      5,
+      14
+    },
+    ResourceId = 5033040,
+    VariationFishId = {330401},
+    VariationProb = 0.1
+  },
+  [3305] = {
+    FishAppearPeriod = T.RT_29,
+    FishGetDuration = 10,
+    FishHookDuration = 5,
+    FishHookOffset = 1.5,
+    FishId = 3305,
+    FishLength = T.RT_98,
+    FishLevel = 6,
+    FishMoveId = 609,
+    FishType = 3,
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_EX02_5",
+    PriceOnWeight = T.RT_73,
+    ResourceId = 5033050,
+    VariationFishId = {330501},
+    VariationProb = 0.1
+  },
+  [3401] = {
+    FishAppearPeriod = T.RT_1,
+    FishGetDuration = 10,
+    FishHookDuration = 5,
+    FishHookOffset = 1.5,
+    FishId = 3401,
+    FishLength = T.RT_99,
+    FishLevel = 4,
+    FishMoveId = 110,
+    FishType = 1,
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_EX02_1",
+    PriceOnWeight = T.RT_87,
+    ResourceId = 5034010,
+    VariationFishId = {340101},
+    VariationProb = 0.2
+  },
+  [3402] = {
+    FishAppearPeriod = T.RT_1,
+    FishGetDuration = 10,
+    FishHookDuration = 5,
+    FishHookOffset = 1.5,
+    FishId = 3402,
+    FishLength = T.RT_79,
+    FishLevel = 4,
+    FishMoveId = 111,
+    FishType = 1,
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_EX02_2",
+    PriceOnWeight = T.RT_48,
+    ResourceId = 5034020,
+    VariationFishId = {340201},
+    VariationProb = 0.2
+  },
+  [3403] = {
+    FishAppearPeriod = T.RT_1,
+    FishGetDuration = 10,
+    FishHookDuration = 5,
+    FishHookOffset = 1.5,
+    FishId = 3403,
+    FishLength = T.RT_2,
+    FishLevel = 5,
+    FishMoveId = 112,
+    FishType = 1,
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_EX02_3",
+    PriceOnWeight = T.RT_43,
+    ResourceId = 5034030,
+    VariationFishId = {340301},
+    VariationProb = 0.2
+  },
+  [3404] = {
+    FishAppearPeriod = T.RT_1,
+    FishGetDuration = 10,
+    FishHookDuration = 5,
+    FishHookOffset = 1.5,
+    FishId = 3404,
+    FishLength = T.RT_100,
+    FishLevel = 5,
+    FishMoveId = 113,
+    FishType = 1,
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_EX02_4",
+    PriceOnWeight = {
+      120,
+      5,
+      12
+    },
+    ResourceId = 5034040,
+    VariationFishId = {340401},
+    VariationProb = 0.1
+  },
+  [3405] = {
+    FishAppearPeriod = T.RT_1,
+    FishGetDuration = 10,
+    FishHookDuration = 5,
+    FishHookOffset = 1.5,
+    FishId = 3405,
+    FishLength = T.RT_101,
+    FishLevel = 6,
+    FishMoveId = 114,
+    FishType = 3,
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_EX02_5",
+    PriceOnWeight = T.RT_102,
+    ResourceId = 5034050,
+    VariationFishId = {340501},
     VariationProb = 0.1
   },
   [110101] = {
@@ -2195,11 +2392,7 @@ return ReadOnly("Fish", {
     FishSmall2BigMinLength = 14.4,
     FishType = 2,
     IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_East_2_1",
-    PriceOnWeight = {
-      105,
-      5,
-      2
-    },
+    PriceOnWeight = T.RT_71,
     ResourceId = 5028021,
     Small2BigFishId = 280501
   },
@@ -2223,7 +2416,7 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 280401,
-    FishLength = T.RT_70,
+    FishLength = T.RT_72,
     FishLevel = 5,
     FishMoveId = 506,
     FishType = 2,
@@ -2242,7 +2435,7 @@ return ReadOnly("Fish", {
     FishMoveId = 608,
     FishType = 4,
     IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_East_5_1",
-    PriceOnWeight = T.RT_71,
+    PriceOnWeight = T.RT_73,
     ResourceId = 5028051
   },
   [290101] = {
@@ -2283,7 +2476,7 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 290301,
-    FishLength = T.RT_72,
+    FishLength = T.RT_74,
     FishLevel = 5,
     FishMoveId = 311,
     FishType = 2,
@@ -2297,7 +2490,7 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 290401,
-    FishLength = T.RT_73,
+    FishLength = T.RT_75,
     FishLevel = 5,
     FishMoveId = 507,
     FishType = 2,
@@ -2311,12 +2504,12 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 290501,
-    FishLength = T.RT_74,
+    FishLength = T.RT_76,
     FishLevel = 6,
     FishMoveId = 609,
     FishType = 4,
     IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_Sea_East_15_1",
-    PriceOnWeight = T.RT_75,
+    PriceOnWeight = T.RT_77,
     ResourceId = 5029051
   },
   [300101] = {
@@ -2325,7 +2518,7 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 300101,
-    FishLength = T.RT_76,
+    FishLength = T.RT_78,
     FishLevel = 4,
     FishMoveId = 108,
     FishType = 2,
@@ -2359,7 +2552,7 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 300301,
-    FishLength = T.RT_77,
+    FishLength = T.RT_79,
     FishLevel = 5,
     FishMoveId = 410,
     FishSmall2BigMinLength = 55,
@@ -2375,7 +2568,7 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 300401,
-    FishLength = T.RT_78,
+    FishLength = T.RT_80,
     FishLevel = 5,
     FishMoveId = 508,
     FishType = 2,
@@ -2389,12 +2582,12 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 300501,
-    FishLength = T.RT_79,
+    FishLength = T.RT_81,
     FishLevel = 6,
     FishMoveId = 610,
     FishType = 4,
     IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_East_15_1",
-    PriceOnWeight = T.RT_80,
+    PriceOnWeight = T.RT_82,
     ResourceId = 5030051
   },
   [310101] = {
@@ -2433,7 +2626,7 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 310301,
-    FishLength = T.RT_81,
+    FishLength = T.RT_83,
     FishLevel = 5,
     FishMoveId = 411,
     FishSmall2BigMinLength = 20,
@@ -2449,7 +2642,7 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 310401,
-    FishLength = T.RT_82,
+    FishLength = T.RT_84,
     FishLevel = 5,
     FishMoveId = 509,
     FishType = 2,
@@ -2463,12 +2656,12 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 310501,
-    FishLength = T.RT_83,
+    FishLength = T.RT_85,
     FishLevel = 6,
     FishMoveId = 611,
     FishType = 4,
     IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_East_10_1",
-    PriceOnWeight = T.RT_71,
+    PriceOnWeight = T.RT_73,
     ResourceId = 5031051
   },
   [320101] = {
@@ -2477,17 +2670,13 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 320101,
-    FishLength = T.RT_84,
+    FishLength = T.RT_86,
     FishLevel = 4,
     FishMoveId = 207,
     FishSmall2BigMinLength = 48,
     FishType = 2,
     IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_Chapter03_1_1",
-    PriceOnWeight = {
-      105,
-      5,
-      6
-    },
+    PriceOnWeight = T.RT_88,
     ResourceId = 5032011,
     Small2BigFishId = 320401
   },
@@ -2497,7 +2686,7 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 320201,
-    FishLength = T.RT_85,
+    FishLength = T.RT_89,
     FishLevel = 4,
     FishMoveId = 305,
     FishSmall2BigMinLength = 64,
@@ -2517,7 +2706,7 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 320301,
-    FishLength = T.RT_86,
+    FishLength = T.RT_90,
     FishLevel = 5,
     FishMoveId = 407,
     FishType = 2,
@@ -2531,7 +2720,7 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 320401,
-    FishLength = T.RT_87,
+    FishLength = T.RT_91,
     FishLevel = 5,
     FishMoveId = 503,
     FishType = 2,
@@ -2545,12 +2734,164 @@ return ReadOnly("Fish", {
     FishHookDuration = 5,
     FishHookOffset = 1.5,
     FishId = 320501,
-    FishLength = T.RT_88,
+    FishLength = T.RT_92,
     FishLevel = 6,
     FishMoveId = 604,
     FishType = 4,
     IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_Chapter03_5_1",
-    PriceOnWeight = T.RT_89,
+    PriceOnWeight = T.RT_93,
     ResourceId = 5032051
+  },
+  [330101] = {
+    FishAppearPeriod = T.RT_1,
+    FishGetDuration = 10,
+    FishHookDuration = 5,
+    FishHookOffset = 1.5,
+    FishId = 330101,
+    FishLength = T.RT_94,
+    FishLevel = 4,
+    FishMoveId = 107,
+    FishSmall2BigMinLength = 76,
+    FishType = 2,
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_EX02_1_1",
+    PriceOnWeight = T.RT_71,
+    ResourceId = 5033011,
+    Small2BigFishId = 330401
+  },
+  [330201] = {
+    FishAppearPeriod = T.RT_1,
+    FishGetDuration = 10,
+    FishHookDuration = 5,
+    FishHookOffset = 1.5,
+    FishId = 330201,
+    FishLength = T.RT_95,
+    FishLevel = 4,
+    FishMoveId = 213,
+    FishSmall2BigMinLength = 30,
+    FishType = 2,
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_EX02_2_1",
+    PriceOnWeight = T.RT_71,
+    ResourceId = 5033021,
+    Small2BigFishId = 330501
+  },
+  [330301] = {
+    FishAppearPeriod = T.RT_1,
+    FishGetDuration = 10,
+    FishHookDuration = 5,
+    FishHookOffset = 1.5,
+    FishId = 330301,
+    FishLength = T.RT_96,
+    FishLevel = 5,
+    FishMoveId = 311,
+    FishType = 2,
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_EX02_3_1",
+    PriceOnWeight = T.RT_64,
+    ResourceId = 5033031
+  },
+  [330401] = {
+    FishAppearPeriod = T.RT_27,
+    FishGetDuration = 10,
+    FishHookDuration = 5,
+    FishHookOffset = 1.5,
+    FishId = 330401,
+    FishLength = T.RT_97,
+    FishLevel = 5,
+    FishMoveId = 507,
+    FishType = 2,
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_EX02_4_1",
+    PriceOnWeight = {
+      240,
+      5,
+      14
+    },
+    ResourceId = 5033041
+  },
+  [330501] = {
+    FishAppearPeriod = T.RT_29,
+    FishGetDuration = 10,
+    FishHookDuration = 5,
+    FishHookOffset = 1.5,
+    FishId = 330501,
+    FishLength = T.RT_98,
+    FishLevel = 6,
+    FishMoveId = 609,
+    FishType = 4,
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_FreshWater_EX02_5_1",
+    PriceOnWeight = T.RT_73,
+    ResourceId = 5033051
+  },
+  [340101] = {
+    FishAppearPeriod = T.RT_1,
+    FishGetDuration = 10,
+    FishHookDuration = 5,
+    FishHookOffset = 1.5,
+    FishId = 340101,
+    FishLength = T.RT_99,
+    FishLevel = 4,
+    FishMoveId = 110,
+    FishType = 2,
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_EX02_1_1",
+    PriceOnWeight = T.RT_88,
+    ResourceId = 5034011
+  },
+  [340201] = {
+    FishAppearPeriod = T.RT_1,
+    FishGetDuration = 10,
+    FishHookDuration = 5,
+    FishHookOffset = 1.5,
+    FishId = 340201,
+    FishLength = T.RT_79,
+    FishLevel = 4,
+    FishMoveId = 111,
+    FishType = 2,
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_EX02_2_1",
+    PriceOnWeight = T.RT_49,
+    ResourceId = 5034021
+  },
+  [340301] = {
+    FishAppearPeriod = T.RT_1,
+    FishGetDuration = 10,
+    FishHookDuration = 5,
+    FishHookOffset = 1.5,
+    FishId = 340301,
+    FishLength = T.RT_2,
+    FishLevel = 5,
+    FishMoveId = 112,
+    FishType = 2,
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_EX02_3_1",
+    PriceOnWeight = T.RT_44,
+    ResourceId = 5034031
+  },
+  [340401] = {
+    FishAppearPeriod = T.RT_1,
+    FishGetDuration = 10,
+    FishHookDuration = 5,
+    FishHookOffset = 1.5,
+    FishId = 340401,
+    FishLength = T.RT_100,
+    FishLevel = 5,
+    FishMoveId = 113,
+    FishType = 2,
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_EX02_4_1",
+    PriceOnWeight = {
+      240,
+      5,
+      12
+    },
+    ResourceId = 5034041
+  },
+  [340501] = {
+    FishAppearPeriod = T.RT_1,
+    FishGetDuration = 10,
+    FishHookDuration = 5,
+    FishHookOffset = 1.5,
+    FishId = 340501,
+    FishLength = T.RT_101,
+    FishLevel = 6,
+    FishMoveId = 114,
+    FishType = 4,
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/AngLingFish/T_Fish_DirtyWater_EX02_5_1",
+    PriceOnWeight = T.RT_102,
+    ResourceId = 5034051
   }
 })

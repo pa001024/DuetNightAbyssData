@@ -4,7 +4,57 @@ local GMVariable = require("BluePrints.UI.GMInterface.GMVariable")
 local GMObjectUtils = require("BluePrints.UI.GMInterface.GMObjectUtils")
 local EMCache = require("EMCache.EMCache")
 local MiscUtils = require("Utils.MiscUtils")
+local SettingUtils = require("Utils.SettingUtils")
+local TeamHallController = require("BluePrints.UI.WBP.TeamHall.TeamHallController")
 local GMFunctionLibrary = {}
+local TeamHallRecruitmentStatusCallback = "RefreshTeamHallRecruitmentState"
+
+function GMFunctionLibrary.GetTeamHallRecruitmentStatusText()
+  if TeamHallController and TeamHallController.GetModel and TeamHallController:GetModel():IsRecruiting() then
+    return "当前状态：招募中"
+  end
+  return "当前状态：未招募"
+end
+
+function GMFunctionLibrary.RefreshTeamHallRecruitmentMenu(Command)
+  if not Command or not Command.Commands then
+    return
+  end
+  local Length = Command.Commands:Length()
+  for i = 1, Length do
+    local MenuCommand = Command.Commands[i]
+    if MenuCommand.Callback == TeamHallRecruitmentStatusCallback then
+      MenuCommand.Text = GMFunctionLibrary.GetTeamHallRecruitmentStatusText()
+      return
+    end
+  end
+end
+
+function GMFunctionLibrary.FindTeamHallRecruitmentMenuWidget(WorldContext)
+  local CurrentWidget = WorldContext
+  while CurrentWidget do
+    local CurrentCommand = CurrentWidget.Command
+    if CurrentCommand and CurrentCommand.Commands then
+      local Length = CurrentCommand.Commands:Length()
+      for i = 1, Length do
+        if CurrentCommand.Commands[i].Callback == TeamHallRecruitmentStatusCallback then
+          return CurrentWidget, CurrentCommand
+        end
+      end
+    end
+    CurrentWidget = CurrentCommand and CurrentCommand.ParentWidget or nil
+  end
+  return nil, nil
+end
+
+function GMFunctionLibrary.TryRefreshTeamHallRecruitmentMenu(WorldContext)
+  local MenuWidget, MenuCommand = GMFunctionLibrary.FindTeamHallRecruitmentMenuWidget(WorldContext)
+  if not MenuWidget or not MenuCommand then
+    return
+  end
+  GMFunctionLibrary.RefreshTeamHallRecruitmentMenu(MenuCommand)
+  MenuWidget:RefreshItems()
+end
 
 function GMFunctionLibrary.Exec(WorldContext, Command)
   if not Command or Command.Callback == "" then
@@ -44,6 +94,75 @@ end
 
 function GMFunctionLibrary.ExecConsoleCommand(WorldContext, CommandStr)
   UE4.UKismetSystemLibrary.ExecuteConsoleCommand(WorldContext, CommandStr, nil)
+end
+
+function GMFunctionLibrary.OpenTeamHallUI(WorldContext)
+  local UIManager = GWorld and GWorld.GameInstance and GWorld.GameInstance:GetGameUIManager()
+  if not UIManager then
+    ScreenPrint("OpenTeamHallUI failed: UIManager not found")
+    return
+  end
+  UIManager:LoadUINew("TeamHall")
+end
+
+function GMFunctionLibrary.OpenTeamHallRecruitShare(WorldContext)
+  TeamHallController:OpenRecruitShare(nil)
+end
+
+function GMFunctionLibrary.OpenTeamHallRecruit(WorldContext)
+  TeamHallController:OpenRecruit(nil)
+end
+
+function GMFunctionLibrary.OpenTeamHallRecruitment(WorldContext, FirstType, SecondType, DungeonLevel)
+  local FinalFirstType = tonumber(FirstType) or 0
+  local FinalSecondType = tonumber(SecondType) or 0
+  local FinalDungeonLevel = GMFunctionLibrary._GetValidTeamHallDungeonLevelIndex(FinalSecondType, DungeonLevel)
+  GMFunctionLibrary.ExecConsoleCommand(WorldContext, string.format("gm TeamHallRecruitment on %s %s %s", tostring(FinalFirstType), tostring(FinalSecondType), tostring(FinalDungeonLevel)))
+  GMFunctionLibrary.TryRefreshTeamHallRecruitmentMenu(WorldContext)
+end
+
+function GMFunctionLibrary.CloseTeamHallRecruitment(WorldContext)
+  GMFunctionLibrary.ExecConsoleCommand(WorldContext, "gm TeamHallRecruitment off")
+  GMFunctionLibrary.TryRefreshTeamHallRecruitmentMenu(WorldContext)
+end
+
+function GMFunctionLibrary.QueryTeamHallRecruitmentList(WorldContext, FirstType, SecondType)
+  local CommandStr = "gm QueryTeamHallList"
+  local FinalSecondType = tonumber(SecondType)
+  FinalSecondType = FinalSecondType or tonumber(FirstType)
+  if FinalSecondType and FinalSecondType > 0 then
+    CommandStr = CommandStr .. " " .. tostring(FinalSecondType)
+  end
+  GMFunctionLibrary.ExecConsoleCommand(WorldContext, CommandStr)
+  GMFunctionLibrary.TryRefreshTeamHallRecruitmentMenu(WorldContext)
+end
+
+function GMFunctionLibrary.PrintTeamHallRecruitmentState(WorldContext)
+  GMFunctionLibrary.ExecConsoleCommand(WorldContext, "gm PrintTeamHallRecruitmentState")
+  GMFunctionLibrary.TryRefreshTeamHallRecruitmentMenu(WorldContext)
+end
+
+function GMFunctionLibrary.RefreshTeamHallRecruitmentState(WorldContext)
+  GMFunctionLibrary.ExecConsoleCommand(WorldContext, "gm PrintTeamHallRecruitmentState")
+  GMFunctionLibrary.TryRefreshTeamHallRecruitmentMenu(WorldContext)
+end
+
+function GMFunctionLibrary._GetValidTeamHallDungeonLevelIndex(SecondType, DungeonLevel)
+  local FinalDungeonLevel = tonumber(DungeonLevel) or 0
+  local TeamSecondTypeData = DataMgr and DataMgr.TeamSecondType and DataMgr.TeamSecondType[SecondType]
+  local ValidDungeonLevels = TeamSecondTypeData and TeamSecondTypeData.DungeonLevel
+  if not ValidDungeonLevels or #ValidDungeonLevels <= 0 then
+    return FinalDungeonLevel
+  end
+  if nil ~= ValidDungeonLevels[FinalDungeonLevel] then
+    return FinalDungeonLevel
+  end
+  for Index, ValidLevel in ipairs(ValidDungeonLevels) do
+    if ValidLevel == FinalDungeonLevel then
+      return Index
+    end
+  end
+  return 1
 end
 
 function GMFunctionLibrary.ShowUIData(WorldContext, IsEnable)
@@ -743,7 +862,11 @@ function GMFunctionLibrary.SetCurrentCharGrade(WorldContext, GradeLevel)
 end
 
 function GMFunctionLibrary.ChangeQualityLevel(WorldContext, Level)
-  UEMGameInstance.SetOverallScalabilityLevel(Level and tonumber(Level) or -1)
+  local ScalabilityLevel = Level and tonumber(Level) or -1
+  if ScalabilityLevel >= 0 then
+    SettingUtils.SetPlatformPerformanceLevel(ScalabilityLevel, true)
+    GWorld.GameInstance:SetScalabilityLevel(ScalabilityLevel)
+  end
 end
 
 function GMFunctionLibrary.ReuseSkill(WorldContext, Id, Index)
@@ -964,7 +1087,7 @@ end
 
 function GMFunctionLibrary.OpenPreviewArmory(WorldContext)
   local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
-  UIManager(self):LoadUINew("ArmoryMain", {
+  UIManager(WorldContext):LoadUINew("ArmoryMain", {
     MainTabName = ArmoryUtils.ArmoryMainTabNames.BattleWheel
   })
 end

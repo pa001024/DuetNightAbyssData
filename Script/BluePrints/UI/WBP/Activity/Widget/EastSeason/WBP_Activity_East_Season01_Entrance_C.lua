@@ -15,7 +15,13 @@ function M:InitUI()
     return
   end
   local CompletedQuestCount, TotalQuestCount = EastSeasonQuestUtils:GetQuestPhaseInfo(self.EventId, QuestPhaseId)
-  self.Text_Progress:SetText(CompletedQuestCount .. "/" .. TotalQuestCount)
+  if IsValid(self.Text_Split) and IsValid(self.Text_total) then
+    self.Text_Progress:SetText(CompletedQuestCount)
+    self.Text_Split:SetText("/")
+    self.Text_total:SetText(TotalQuestCount)
+  else
+    self.Text_Progress:SetText(CompletedQuestCount .. "/" .. TotalQuestCount)
+  end
   if EastSeasonQuestUtils:IsQuestPhaseCanGetReward(self.EventId, QuestPhaseId) then
     self.Reddot:SetVisibility(UIConst.VisibilityOp.Visible)
     self:PlayAnimation(self.Able)

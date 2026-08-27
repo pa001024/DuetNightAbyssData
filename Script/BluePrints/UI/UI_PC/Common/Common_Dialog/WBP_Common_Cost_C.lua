@@ -1,3 +1,4 @@
+local MiscUtils = require("Utils.MiscUtils")
 require("UnLua")
 local M = Class("BluePrints.UI.BP_EMUserWidget_C")
 
@@ -45,11 +46,11 @@ function M:InitContent(Params)
       NotInteractive = Params.NotInteractive
     })
   end
-  self.Text_Possess:SetText(FormatNumber(Params.Numerator, false))
+  self.Text_Possess:SetText(MiscUtils.FormatNumber(Params.Numerator, false))
   if Params.bShowDenominator then
     self.Group_Expend:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Text_Expend:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    self.Text_Expend:SetText(FormatNumber(Params.Denominator, false))
+    self.Text_Expend:SetText(MiscUtils.FormatNumber(Params.Denominator, false))
   else
     self.Group_Expend:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end

@@ -1,5 +1,93 @@
 [
   {
+    "id": 101401,
+    "name": "Flodia Bloomfield Station",
+    "desc": "The station takes its name from the Princess of Blossoms.",
+    "scoreId": 1014,
+    "rId": 3101401,
+    "music": "/bgm/1_4/musicbox/0161_scene_train_station"
+  },
+  {
+    "id": 101402,
+    "name": "Tea Time",
+    "desc": "Everyone knows that little accidents have a way of happening at tea time.",
+    "scoreId": 1014,
+    "rId": 3101402,
+    "music": "/bgm/1_4/musicbox/0166_story_danger"
+  },
+  {
+    "id": 101403,
+    "name": "Graceful Steps",
+    "desc": "On tiptoe, glide — then slip quietly inside.",
+    "scoreId": 1014,
+    "rId": 3101403,
+    "music": "/bgm/1_4/musicbox/0162_story_jazz_sneak_into"
+  },
+  {
+    "id": 101404,
+    "name": "Hilda — A Maid's Virtue",
+    "desc": "Every stain must be cleansed, and every unexpected visitor driven out. Such is a maid's virtue.",
+    "scoreId": 1014,
+    "rId": 3101404,
+    "music": "/bgm/1_4/musicbox/0165_story_xier_theme"
+  },
+  {
+    "id": 101405,
+    "name": "Bloomfield Waltz",
+    "desc": "Beneath the gilded dome, she has a date with the Red-clad Sentinels — and their bullets.",
+    "scoreId": 1014,
+    "rId": 3101405,
+    "music": "/bgm/1_4/musicbox/0163_combat_jazz_01"
+  },
+  {
+    "id": 101406,
+    "name": "Explosion Art",
+    "desc": "Grind malice and deceit into gunpowder, then ignite it in one spectacular blast.",
+    "scoreId": 1014,
+    "rId": 3101406,
+    "music": "/bgm/1_4/musicbox/0168_boss_haluoji"
+  },
+  {
+    "id": 101407,
+    "name": "Flora — In the Golden Cage",
+    "desc": "A bird in a golden cage, fated never to soar above the endless wheatfields.",
+    "scoreId": 1014,
+    "rId": 3101407,
+    "music": "/bgm/1_4/musicbox/0167_story_fuluo_theme"
+  },
+  {
+    "id": 101408,
+    "name": "The Crown",
+    "desc": "A melody flows from her fingertips, carrying elegance, dignity — and the weight of a crown.",
+    "scoreId": 1014,
+    "rId": 3101408,
+    "music": "/bgm/1_4/musicbox/0170_story_fuluo_play_piano"
+  },
+  {
+    "id": 101409,
+    "name": "The Reaper's Feast",
+    "desc": "Come! Erupt in a blaze and dance at the Reaper's feast!",
+    "scoreId": 1014,
+    "rId": 3101409,
+    "music": "/bgm/1_4/musicbox/0171_combat_lieche_loop"
+  },
+  {
+    "id": 101410,
+    "name": "Our Sacred Oath",
+    "desc": "Where fate fractures, swear an oath that endures through life and death.",
+    "scoreId": 1014,
+    "rId": 3101410,
+    "music": "/bgm/1_4/musicbox/0172_story_counter_attack"
+  },
+  {
+    "id": 101411,
+    "name": "Rebirth",
+    "desc": "Cross the Misty Sea and journey to the far shore of a new life.",
+    "scoreId": 1014,
+    "rId": 3101411,
+    "music": "/bgm/1_4/musicbox/0173_story_main_theme_choir"
+  },
+  {
     "id": 1001001,
     "name": "Duet Night Abyss Main Theme",
     "desc": "Bathed in twilight, we sailed through the boundless dark — together, ever onward, toward the dawn.",

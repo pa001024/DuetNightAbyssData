@@ -14,6 +14,7 @@ local RarityAnim = {
   "Purple",
   "Yellow"
 }
+local AUTO_CLOSE_TIMER_KEY = "AnglingFishUnlockAutoClose"
 
 function M:OnLoaded(...)
   local Info = (...)
@@ -25,13 +26,21 @@ function M:OnLoaded(...)
   self.FishingSpotId = Info.FishingSpotId
   self.bIsNew = Info.IsNew
   self.ExtraRewards = Info.Rewards
+  self.AutoSessionId = Info.AutoSessionId
+  self.AutoCloseRemainTime = 3
+  self.bClosing = false
   self:BindToAnimationFinished(self.Out, {
     self,
     self.OnOutEnd
   })
   self.Btn_Empty.OnClicked:Add(self, self.OnClickEmpty)
   self.Btn_Empty:SetFocus()
-  self.Text_Tips:SetText(GText("UI_TRAIN_CLOSE"))
+  if Info.AutoClose then
+    self.Text_Tips:SetText(string.format(GText("UI_AutoClose"), self.AutoCloseRemainTime))
+    self:AddTimer(1, self.OnAutoCloseTick, true, 0, AUTO_CLOSE_TIMER_KEY, true)
+  else
+    self.Text_Tips:SetText(GText("UI_TRAIN_CLOSE"))
+  end
   if self.DeviceInPc then
     self.Key_Continue_Gamepad:CreateCommonKey({
       KeyInfoList = {
@@ -74,23 +83,40 @@ function M:OnLoaded(...)
   self.GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.RefreshInfoByInputTypeChange)
   self.CurMode = self.GameInputModeSubsystem:GetCurrentInputType()
   self:RefreshInfoByInputTypeChange(self.CurMode)
-  self:BindToAnimationFinished(self.Get_In, {
-    self,
-    self.OnINEnd
-  })
   self.VX_Waterwave:SetVisibility(ESlateVisibility.HitTestInvisible)
 end
 
-function M:OnClickEmpty()
-  if self:IsPlayingAnimation(self.Get_In) then
+function M:OnAutoCloseTick()
+  self.AutoCloseRemainTime = self.AutoCloseRemainTime - 1
+  if self.AutoCloseRemainTime <= 0 then
+    self:RequestClose()
+    return
+  end
+  self.Text_Tips:SetText(string.format(GText("UI_AutoClose"), self.AutoCloseRemainTime))
+end
+
+function M:RequestClose()
+  if self.bClosing or self:IsBeingRemoveState() then
+    return
+  end
+  self:RemoveTimer(AUTO_CLOSE_TIMER_KEY)
+  self.bClosing = true
+  if self.EntryAnimation and self:IsPlayingAnimation(self.EntryAnimation) then
     return
   end
   self:PlayAnimation(self.Out)
 end
 
+function M:OnClickEmpty()
+  self:RequestClose()
+end
+
 function M:OnINEnd()
   if not UIUtils.CheckScrollBoxCanScroll(self.Scroll_Box) then
     self.Key_Check_Gamepad:SetVisibility(ESlateVisibility.Collapsed)
+  end
+  if self.bClosing then
+    self:PlayAnimation(self.Out)
   end
 end
 
@@ -105,6 +131,16 @@ function M:OnOutEnd()
     }
   })
   self:Close()
+end
+
+function M:OnEndClose()
+  if self.AutoSessionId == nil then
+    return
+  end
+  local FishingPage = self.FishingPage
+  if IsValid(FishingPage) then
+    FishingPage:OnAutoFishRewardClosed(self.AutoSessionId)
+  end
 end
 
 function M:InitUnLockWidget()
@@ -147,13 +183,18 @@ function M:InitUnLockWidget()
   self:PlayAnimation(self[RarityAnim[Rarity]])
   if self.bIsNew then
     if Rarity > 3 then
-      self:PlayAnimation(self.Unlock_SSR)
+      self.EntryAnimation = self.Unlock_SSR
     else
-      self:PlayAnimation(self.Unlock_R)
+      self.EntryAnimation = self.Unlock_R
     end
   else
-    self:PlayAnimation(self.Get_In)
+    self.EntryAnimation = self.Get_In
   end
+  self:BindToAnimationFinished(self.EntryAnimation, {
+    self,
+    self.OnINEnd
+  })
+  self:PlayAnimation(self.EntryAnimation)
   if 5 ~= Rarity then
     AudioManager(self):PlayUISound(self, "event:/ui/minigame/fish_info_unlock", nil, nil)
   else
@@ -382,6 +423,13 @@ function M:OnClickFaceButtonBottom()
   if 1 == self.Switcher_Text:GetActiveWidgetIndex() then
     self:OnClickEmpty()
   end
+end
+
+function M:Destruct()
+  if self.GameInputModeSubsystem then
+    self.GameInputModeSubsystem.OnInputMethodChanged:Remove(self, self.RefreshInfoByInputTypeChange)
+  end
+  self.Super.Destruct(self)
 end
 
 return M

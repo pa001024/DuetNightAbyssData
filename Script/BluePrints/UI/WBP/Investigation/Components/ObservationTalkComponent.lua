@@ -1,6 +1,5 @@
 local TalkFlow_C = require("BluePrints.Story.Talk.TalkFlow.TalkFlow")
 local TalkFlowController_C = require("BluePrints.Story.Talk.TalkFlow.TalkFlowController")
-local TalkFlowUtils = require("BluePrints.Story.Talk.TalkFlow.TalkFlowUtils")
 local ObservationTalkComponent = {}
 
 function ObservationTalkComponent:PlayDialogue(DialogueId)
@@ -8,12 +7,12 @@ function ObservationTalkComponent:PlayDialogue(DialogueId)
     return
   end
   self:StopTalkFlow()
+  self.bObserveTalkFlowEnded = nil
   local TalkFlowController, TalkFlow = self:CreateObserveTalkFlow(DialogueId)
   if not TalkFlowController or not TalkFlow then
     return
   end
-  self:SetPanelState(self.PanelState.Dialog)
-  self:UpdateKeyState("Dialog")
+  GWorld.GameInstance.bTalkContextTickable = true
   self.CurrentFlow = TalkFlow
   self.CurrentFlowController = TalkFlowController
   TalkFlowController:Start()
@@ -25,7 +24,8 @@ function ObservationTalkComponent:CreateObserveTalkFlow(DialogueId)
   if not TalkFlow then
     return nil
   end
-  TalkFlow:BindOnFlowCreatedEvent(self, self.OnObserveSubFlowCreated)
+  TalkFlow:BindOnCheckAutoIterateEvent(self, self.IsAutoIterateDialogue)
+  TalkFlow:BindOnDialogueEndEvent(self, self.OnObserveTalkFlowFinished)
   TalkFlow:BindOnFlowEndEvent(self, self.OnObserveTalkFlowEnded)
   TalkFlow:BuildFlow()
   if not TalkFlow.StartNode then
@@ -36,50 +36,54 @@ function ObservationTalkComponent:CreateObserveTalkFlow(DialogueId)
   return TalkFlowController, TalkFlow
 end
 
-function ObservationTalkComponent:OnObserveSubFlowCreated(SubFlow, ParallelNode, WaitAllNode)
-  local DialogueData = DataMgr.Dialogue[SubFlow.DialogueId]
-  if not DialogueData then
+function ObservationTalkComponent:IsAutoIterateDialogue()
+  return self:IsAutoPlay()
+end
+
+function ObservationTalkComponent:OnAutoPlayEnabled()
+  if self.CurrentFlowController then
+    self.CurrentFlowController:ResumePendingIterate()
+  end
+end
+
+function ObservationTalkComponent:OnObserveTalkFlowFinished()
+  if self.bObserveTalkFlowEnded then
     return
   end
-  local TypingNode = TalkFlowUtils:TypingTextNode(SubFlow, self, {
-    DialogueData = DialogueData,
-    NameWidget = self.NpcNameText,
-    TypingWidget = self.TypingText
-  })
-  if TypingNode then
-    TalkFlowUtils:LinkChain({
-      ParallelNode,
-      TypingNode,
-      WaitAllNode
-    })
-  end
+  self.bObserveTalkFlowEnded = true
+  self:OnObserveCompleted()
 end
 
 function ObservationTalkComponent:OnObserveTalkFlowEnded()
   self.CurrentFlow = nil
   self.CurrentFlowController = nil
-  self:OnObserveCompleted()
-  self:UpdateKeyState("Normal")
 end
 
-function ObservationTalkComponent:EndDialogue()
-  if self.CurrentFlow then
-    self.CurrentFlow:End()
+function ObservationTalkComponent:SkipTalkFlow()
+  if self.CurrentFlowController then
+    self.CurrentFlowController:SkipToEnd()
   end
 end
 
 function ObservationTalkComponent:StopTalkFlow()
+  self.bObserveTalkFlowEnded = nil
   if self.CurrentFlowController then
     self.CurrentFlowController:Stop()
-    return
-  end
-  if self.CurrentFlow then
-    self.CurrentFlow:Stop()
   end
 end
 
 function ObservationTalkComponent:ClearTalkFlow()
   self:StopTalkFlow()
+  GWorld.GameInstance.bTalkContextTickable = false
+end
+
+function ObservationTalkComponent:SkipCurrentDialogue()
+  local FlowController = self.CurrentFlowController
+  local CurrentFlow = FlowController and FlowController.TalkFlow
+  local CurrentNode = CurrentFlow and CurrentFlow:GetCurrentNode()
+  if CurrentFlow and CurrentFlow:GetCurrentNode() == CurrentNode then
+    FlowController:RequestSkipDialogue()
+  end
 end
 
 return ObservationTalkComponent

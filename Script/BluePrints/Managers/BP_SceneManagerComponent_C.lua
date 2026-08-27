@@ -87,6 +87,14 @@ function BP_SceneManagerComponent_C:NotifyOnWindowMoved()
   EventManager:FireEvent(EventID.OnWindowMoved)
 end
 
+function BP_SceneManagerComponent_C:OnWindowMinimizedChanged(bIsMinimized)
+  EventManager:FireEvent(EventID.WindowMinimizedChanged, bIsMinimized)
+end
+
+function BP_SceneManagerComponent_C:IsWindowMinimized()
+  return UE4.UWindowTitleBarFunctionLibrary.IsGameWindowMinimized()
+end
+
 function BP_SceneManagerComponent_C:OnOtherPlayerEntityChange(Avatars)
   DebugPrint("LHQ_BP_SceneManagerComponent_C:OnOtherPlayerEntityChange")
   PrintTable(Avatars)

@@ -13,10 +13,6 @@ local function ApplyAppearanceToCharacter(Character, AppearanceInfo)
   if Character.CurrentCompositeMesh then
     Character.CurrentCompositeMesh = nil
   end
-  local ModelComp = Character:GetCharModelComponent()
-  if ModelComp then
-    ModelComp:LoadCurrentModel()
-  end
   if Character.EMAnimInstance and Character.EMAnimInstance.CharacterTag ~= Character:GetCharacterTag() then
     Character.EMAnimInstance.CharacterTag = Character:GetCharacterTag()
   end

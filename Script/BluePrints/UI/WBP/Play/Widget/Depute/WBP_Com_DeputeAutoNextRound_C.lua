@@ -9,9 +9,9 @@ function M:Construct()
   self.SwitchCheckBox:AddEventOnCheckStateChanged(self, self.OnSwitchPreview)
   self.Btn_Qa:Init({
     OwnerWidget = self,
-    PopupID = 100297,
     ClickCallback = function()
-      UIManager(self):ShowCommonPopupUI(100297)
+      local PopUpId = self:GetPopUpId()
+      UIManager(self):ShowCommonPopupUI(PopUpId)
     end
   })
   self.SwitchCheckBox:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
@@ -38,6 +38,16 @@ function M:Init(DungeonData)
   self.CurrentCount = Avatar.Dungeons[DungeonData.DungeonID] and Avatar.Dungeons[DungeonData.DungeonID].AutoProgress or 0
   self.SelectCount = self.CurrentCount
   self:RefreshCommonWidget()
+  local IsEndlessDungeon = DungeonData.DungeonWinMode == CommonConst.DungeonWinMode.Endless
+  if IsEndlessDungeon then
+    self.PopUpId = 100297
+  else
+    self.PopUpId = 100432
+  end
+end
+
+function M:GetPopUpId()
+  return self.PopUpId or 0
 end
 
 function M:InitCommonWidget()

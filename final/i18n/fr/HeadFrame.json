@@ -301,5 +301,33 @@
     "desc": "Permet de modifier votre cadre d’avatar.",
     "icon": "T_Head_Frame40",
     "access": "Disponible dans la boutique"
+  },
+  {
+    "id": 10047,
+    "name": "发条旋舞·绣红",
+    "desc": "Permet de modifier votre cadre d’avatar.",
+    "icon": "T_Head_Frame41",
+    "access": "Disponible via les événements"
+  },
+  {
+    "id": 10048,
+    "name": "发条旋舞·墨玉",
+    "desc": "Permet de modifier votre cadre d’avatar.",
+    "icon": "T_Head_Frame40",
+    "access": "Disponible via les événements"
+  },
+  {
+    "id": 10049,
+    "name": "鹅啊——",
+    "desc": "Permet de modifier votre cadre d’avatar.",
+    "icon": "T_Head_Frame43",
+    "access": "Disponible dans la boutique"
+  },
+  {
+    "id": 10050,
+    "name": "来自幽冥",
+    "desc": "Permet de modifier votre cadre d’avatar.",
+    "icon": "T_Head_Frame40",
+    "access": "Disponible via le Pass mensuel"
   }
 ]

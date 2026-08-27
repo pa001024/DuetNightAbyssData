@@ -10,26 +10,36 @@ T.RT_2 = {
   40
 }
 T.RT_3 = {
+  -150,
   0,
-  0,
-  25
+  75
 }
 T.RT_4 = {
   0,
   0,
-  120
+  25
 }
 T.RT_5 = {
   0,
   0,
-  60
+  120
 }
 T.RT_6 = {
+  0,
+  0,
+  60
+}
+T.RT_7 = {
+  0,
+  -10,
+  10
+}
+T.RT_8 = {
   50,
   0,
   20
 }
-T.RT_7 = {
+T.RT_9 = {
   4,
   0,
   10
@@ -82,9 +92,42 @@ return ReadOnly("CameraControlData", {
     bIncrementArmPos = true,
     bIncrementSocketOffset = true
   },
+  BossAidaFushi = {
+    ArmLength = 0,
+    ArmPos = T.RT_1,
+    CameraName = "BossAidaFushi",
+    ProbeSize = 12,
+    SocketOffset = T.RT_3,
+    TimelineFloatCurve = "CameraCurve",
+    bIncrementArmLength = true,
+    bIncrementArmPos = true,
+    bIncrementSocketOffset = true
+  },
+  BossAidaLayuan = {
+    ArmLength = 0,
+    ArmPos = T.RT_1,
+    CameraName = "BossAidaLayuan",
+    ProbeSize = 12,
+    SocketOffset = T.RT_1,
+    TimelineFloatCurve = "CameraCurve",
+    bIncrementArmLength = true,
+    bIncrementArmPos = true,
+    bIncrementSocketOffset = true
+  },
+  BossAidaTaitou = {
+    ArmLength = 0,
+    ArmPos = T.RT_1,
+    CameraName = "BossAidaTaitou",
+    ProbeSize = 12,
+    SocketOffset = T.RT_1,
+    TimelineFloatCurve = "CameraCurve",
+    bIncrementArmLength = true,
+    bIncrementArmPos = true,
+    bIncrementSocketOffset = true
+  },
   BossHeilongDefault = {
     ArmLength = 3600,
-    ArmPos = T.RT_3,
+    ArmPos = T.RT_4,
     CameraName = "BossHeilongDefault",
     ProbeSize = 12,
     SocketOffset = {
@@ -99,7 +142,7 @@ return ReadOnly("CameraControlData", {
   },
   BossJuqueDefault = {
     ArmLength = 4500,
-    ArmPos = T.RT_3,
+    ArmPos = T.RT_4,
     CameraName = "BossJuqueDefault",
     ProbeSize = 12,
     SocketOffset = {
@@ -128,11 +171,7 @@ return ReadOnly("CameraControlData", {
     ArmPos = T.RT_1,
     CameraName = "BossLiecheMCoreSkill01",
     ProbeSize = 12,
-    SocketOffset = {
-      -150,
-      0,
-      75
-    },
+    SocketOffset = T.RT_3,
     TimelineFloatCurve = "CameraCurve",
     bIncrementArmLength = true,
     bIncrementArmPos = true,
@@ -140,10 +179,10 @@ return ReadOnly("CameraControlData", {
   },
   BossLinenDefault = {
     ArmLength = 550,
-    ArmPos = T.RT_3,
+    ArmPos = T.RT_4,
     CameraName = "BossLinenDefault",
     ProbeSize = 12,
-    SocketOffset = T.RT_4,
+    SocketOffset = T.RT_5,
     TimelineFloatCurve = "CameraCurve",
     bIncrementArmLength = false,
     bIncrementArmPos = false,
@@ -151,7 +190,7 @@ return ReadOnly("CameraControlData", {
   },
   BossMapSkill = {
     ArmLength = 0,
-    ArmPos = T.RT_5,
+    ArmPos = T.RT_6,
     CameraName = "BossMapSkill",
     ProbeSize = 12,
     SocketOffset = T.RT_2,
@@ -162,10 +201,10 @@ return ReadOnly("CameraControlData", {
   },
   BossShijingzheSkill15 = {
     ArmLength = 800,
-    ArmPos = T.RT_3,
+    ArmPos = T.RT_4,
     CameraName = "BossShijingzheSkill15",
     ProbeSize = 12,
-    SocketOffset = T.RT_4,
+    SocketOffset = T.RT_5,
     TimelineFloatCurve = "CameraCurve",
     bIncrementArmLength = false,
     bIncrementArmPos = false,
@@ -173,10 +212,10 @@ return ReadOnly("CameraControlData", {
   },
   BossYidaiDefault = {
     ArmLength = 800,
-    ArmPos = T.RT_3,
+    ArmPos = T.RT_4,
     CameraName = "BossYidaiDefault",
     ProbeSize = 12,
-    SocketOffset = T.RT_4,
+    SocketOffset = T.RT_5,
     TimelineFloatCurve = "CameraCurve",
     bIncrementArmLength = false,
     bIncrementArmPos = false,
@@ -199,7 +238,7 @@ return ReadOnly("CameraControlData", {
   },
   Default = {
     ArmLength = 360,
-    ArmPos = T.RT_3,
+    ArmPos = T.RT_4,
     CameraName = "Default",
     ProbeSize = 12,
     SocketOffset = {
@@ -207,6 +246,17 @@ return ReadOnly("CameraControlData", {
       35,
       55
     },
+    TimelineFloatCurve = "CameraCurve",
+    bIncrementArmLength = false,
+    bIncrementArmPos = false,
+    bIncrementSocketOffset = false
+  },
+  FPS01 = {
+    ArmLength = -17,
+    ArmPos = T.RT_1,
+    CameraName = "FPS01",
+    ProbeSize = 12,
+    SocketOffset = T.RT_7,
     TimelineFloatCurve = "CameraCurve",
     bIncrementArmLength = false,
     bIncrementArmPos = false,
@@ -241,8 +291,8 @@ return ReadOnly("CameraControlData", {
       50
     },
     CameraName = "FuluoSkill02",
-    LagMaxDistance = T.RT_6,
-    LagSpeed = T.RT_7,
+    LagMaxDistance = T.RT_8,
+    LagSpeed = T.RT_9,
     ProbeSize = 12,
     SocketOffset = {
       0,
@@ -270,7 +320,7 @@ return ReadOnly("CameraControlData", {
     ArmPos = T.RT_1,
     CameraName = "KezhouSkill02",
     ProbeSize = 12,
-    SocketOffset = T.RT_3,
+    SocketOffset = T.RT_4,
     TimelineFloatCurve = "CameraCurve",
     bIncrementArmLength = true,
     bIncrementArmPos = true,
@@ -291,12 +341,31 @@ return ReadOnly("CameraControlData", {
     bIncrementArmPos = false,
     bIncrementSocketOffset = false
   },
+  SlideSpline01 = {
+    ArmLength = -50,
+    ArmPos = {
+      0,
+      20,
+      10
+    },
+    CameraName = "SlideSpline01",
+    ProbeSize = 12,
+    SocketOffset = {
+      0,
+      100,
+      0
+    },
+    TimelineFloatCurve = "CameraCurve",
+    bIncrementArmLength = true,
+    bIncrementArmPos = false,
+    bIncrementSocketOffset = false
+  },
   SongluSkill02 = {
     ArmLength = 0,
-    ArmPos = T.RT_5,
+    ArmPos = T.RT_6,
     CameraName = "SongluSkill02",
-    LagMaxDistance = T.RT_6,
-    LagSpeed = T.RT_7,
+    LagMaxDistance = T.RT_8,
+    LagSpeed = T.RT_9,
     ProbeSize = 12,
     SocketOffset = {
       0,
@@ -307,6 +376,17 @@ return ReadOnly("CameraControlData", {
     bIncrementArmLength = true,
     bIncrementArmPos = true,
     bIncrementSocketOffset = true
+  },
+  SpLiseSkill02 = {
+    ArmLength = -200,
+    ArmPos = T.RT_1,
+    CameraName = "SpLiseSkill02",
+    ProbeSize = 12,
+    SocketOffset = T.RT_7,
+    TimelineFloatCurve = "CameraCurve",
+    bIncrementArmLength = true,
+    bIncrementArmPos = false,
+    bIncrementSocketOffset = false
   },
   SpringArm200 = {
     ArmLength = 200,
@@ -422,14 +502,14 @@ return ReadOnly("CameraControlData", {
   },
   Temple01 = {
     ArmLength = 200,
-    ArmPos = T.RT_1,
+    ArmPos = {
+      0,
+      0,
+      -60
+    },
     CameraName = "Temple01",
     ProbeSize = 12,
-    SocketOffset = {
-      0,
-      35,
-      -25
-    },
+    SocketOffset = T.RT_1,
     TimelineFloatCurve = "CameraCurve",
     bIncrementArmLength = false,
     bIncrementArmPos = false,
@@ -439,8 +519,8 @@ return ReadOnly("CameraControlData", {
     ArmLength = 150,
     ArmPos = T.RT_1,
     CameraName = "TuosiSkill02",
-    LagMaxDistance = T.RT_6,
-    LagSpeed = T.RT_7,
+    LagMaxDistance = T.RT_8,
+    LagSpeed = T.RT_9,
     ProbeSize = 12,
     SocketOffset = T.RT_2,
     TimelineFloatCurve = "CameraCurve",

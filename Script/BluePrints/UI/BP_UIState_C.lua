@@ -184,7 +184,7 @@ function BP_UIState_C:SetUIVisibilityTag(VisibiltyTag, Invisible, EDesireVisibil
     self.HideTags[VisibiltyTag] = nil
   end
   local IsHide = not IsEmptyTable(self.HideTags)
-  if IsHide or self.IsHideByNode then
+  if IsHide then
     EDesireVisibilty = EDesireVisibilty or UE4.ESlateVisibility.Collapsed
     if self:GetVisibility() ~= EDesireVisibilty then
       if self.bIsActive then
@@ -210,6 +210,9 @@ function BP_UIState_C:SetUIVisibilityTag(VisibiltyTag, Invisible, EDesireVisibil
       SystemGuideManager:ShowUIEvent(self.WidgetName)
       IsVisibilityChange = true
     end
+  end
+  if IsVisibilityChange then
+    self:EMSetManagedLuaWidgetTickActive(not IsHide)
   end
   return IsVisibilityChange
 end
@@ -563,11 +566,12 @@ function BP_UIState_C:HideComponentUI(HideTag)
   HideTag = HideTag or UIConst.CommonHideTagName.DefaultTag
   self.HideTags = self.HideTags or {}
   self.HideTags[HideTag] = 1
-  local IsHidden = not IsEmptyTable(self.HideTags) or self.IsHideByNode
+  local IsHidden = not IsEmptyTable(self.HideTags)
   if IsHidden then
     local Visibility = UE4.ESlateVisibility.Collapsed
     if self:GetVisibility() ~= Visibility then
       self:SetVisibility(Visibility)
+      self:EMSetManagedLuaWidgetTickActive(false)
       self:OnHide(HideTag)
     end
   end
@@ -580,11 +584,12 @@ function BP_UIState_C:ShowComponentUI(ShowTag)
   ShowTag = ShowTag or UIConst.CommonHideTagName.DefaultTag
   self.HideTags = self.HideTags or {}
   self.HideTags[ShowTag] = nil
-  local IsHidden = not IsEmptyTable(self.HideTags) or self.IsHideByNode
+  local IsHidden = not IsEmptyTable(self.HideTags)
   if not IsHidden then
     local Visibility = UE4.ESlateVisibility.SelfHitTestInvisible
     if self:GetVisibility() ~= Visibility then
       self:SetVisibility(Visibility)
+      self:EMSetManagedLuaWidgetTickActive(true)
       self:OnShow(ShowTag)
     end
   end

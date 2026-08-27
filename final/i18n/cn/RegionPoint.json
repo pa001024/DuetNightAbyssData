@@ -447,6 +447,166 @@
     "singleCreate": false
   },
   {
+    "id": 2024,
+    "name": "阿尔卡诺镇旧址",
+    "icon": "T_Gp_EX02_LXZS",
+    "pos": [
+      -11100,
+      -29528
+    ],
+    "subRegion": 107001,
+    "targetSubRegion": [
+      107101
+    ],
+    "telepointId": 1700,
+    "teleportPointPos": 4,
+    "teleportSubRegion": 107001,
+    "unlockConditionId": 11020302,
+    "manualItemId": 29278001,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2025,
+    "name": "阿尔卡诺镇旧址",
+    "icon": "T_Gp_EX02_LXZS",
+    "pos": [
+      -29933,
+      -58905
+    ],
+    "subRegion": 107001,
+    "targetSubRegion": [
+      107101
+    ],
+    "telepointId": 1702,
+    "teleportPointPos": 5,
+    "teleportSubRegion": 107001,
+    "unlockConditionId": 11023205,
+    "manualItemId": 29278002,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2026,
+    "name": "阿尔卡诺镇",
+    "icon": "T_Gp_EX02_LXZS",
+    "pos": [
+      -18788,
+      -33285
+    ],
+    "subRegion": 107101,
+    "targetSubRegion": [
+      107001
+    ],
+    "telepointId": 1705,
+    "teleportPointPos": 4,
+    "teleportSubRegion": 107101,
+    "unlockConditionId": 11020302,
+    "manualItemId": 29279001,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2027,
+    "name": "阿尔卡诺镇",
+    "icon": "T_Gp_EX02_LXZS",
+    "pos": [
+      -45563,
+      -54903
+    ],
+    "subRegion": 107101,
+    "targetSubRegion": [
+      107001
+    ],
+    "telepointId": 1703,
+    "teleportPointPos": 5,
+    "teleportSubRegion": 107101,
+    "unlockConditionId": 11023205,
+    "manualItemId": 29279002,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2028,
+    "name": "阿尔卡诺山裂隙",
+    "icon": "T_Gp_EX02_LXZX",
+    "pos": [
+      -21304,
+      -65937
+    ],
+    "subRegion": 107001,
+    "targetSubRegion": [
+      107201
+    ],
+    "telepointId": 1702,
+    "teleportPointPos": 7,
+    "teleportSubRegion": 107001,
+    "unlockConditionId": 11020302,
+    "manualItemId": 29278004,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2029,
+    "name": "阿尔卡诺镇",
+    "icon": "T_Gp_EX02_LXZS",
+    "pos": [
+      24821,
+      -80946
+    ],
+    "subRegion": 107201,
+    "targetSubRegion": [
+      107001
+    ],
+    "telepointId": 1708,
+    "teleportPointPos": 4,
+    "teleportSubRegion": 107201,
+    "unlockConditionId": 11020302,
+    "manualItemId": 29280001,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2030,
+    "name": "UI_SUBREGION_NAME_107701",
+    "icon": "T_Gp_EX02_JHS",
+    "pos": [
+      -20847,
+      -88214
+    ],
+    "subRegion": 107001,
+    "targetSubRegion": [
+      107701
+    ],
+    "telepointId": 1702,
+    "teleportPointPos": 6,
+    "teleportSubRegion": 107001,
+    "unlockConditionId": 11023101,
+    "manualItemId": 29278003,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2031,
+    "name": "UI_SUBREGION_NAME_107501",
+    "icon": "T_Gp_EX02_ZZJ",
+    "pos": [
+      -6624,
+      -75596
+    ],
+    "subRegion": 107001,
+    "targetSubRegion": [
+      107501
+    ],
+    "telepointId": 1702,
+    "teleportPointPos": 9,
+    "teleportSubRegion": 107001,
+    "unlockConditionId": null,
+    "manualItemId": 29278016,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
     "id": 2501,
     "name": "集结",
     "icon": "T_Gp_Gathering",
@@ -459,7 +619,7 @@
     "telepointId": 1011,
     "teleportPointPos": 1,
     "teleportSubRegion": 101101,
-    "unlockConditionId": 100208,
+    "unlockConditionId": 10020105,
     "manualItemId": null,
     "staticId": null,
     "singleCreate": false
@@ -514,6 +674,24 @@
     "teleportPointPos": 16,
     "teleportSubRegion": 106001,
     "unlockConditionId": 332,
+    "manualItemId": null,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2505,
+    "name": "集结",
+    "icon": "T_Gp_Gathering",
+    "pos": [
+      -19450,
+      -78420
+    ],
+    "subRegion": 107001,
+    "targetSubRegion": [],
+    "telepointId": 1702,
+    "teleportPointPos": 3,
+    "teleportSubRegion": 107001,
+    "unlockConditionId": 110232,
     "manualItemId": null,
     "staticId": null,
     "singleCreate": false
@@ -1243,7 +1421,7 @@
   {
     "id": 2855,
     "name": "黄金旅途·魔灵竞速",
-    "icon": "",
+    "icon": "T_Gp_Racing",
     "pos": [
       -18687,
       2
@@ -1259,5 +1437,391 @@
     "manualItemId": null,
     "staticId": 332480620,
     "singleCreate": true
+  },
+  {
+    "id": 2856,
+    "name": "乐园镇钓鱼点",
+    "icon": "T_Gp_Angling",
+    "pos": [
+      -34129,
+      -71879
+    ],
+    "subRegion": 107001,
+    "targetSubRegion": [
+      107001
+    ],
+    "telepointId": 1700,
+    "teleportPointPos": 8,
+    "teleportSubRegion": 107001,
+    "unlockConditionId": 20021514,
+    "manualItemId": 15278006,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2857,
+    "name": "阿尔卡诺山裂隙钓鱼点",
+    "icon": "T_Gp_Angling",
+    "pos": [
+      18735,
+      -61739
+    ],
+    "subRegion": 107201,
+    "targetSubRegion": [
+      107201
+    ],
+    "telepointId": 1702,
+    "teleportPointPos": 5,
+    "teleportSubRegion": 107201,
+    "unlockConditionId": 20021515,
+    "manualItemId": 15280002,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2858,
+    "name": "站前穹顶",
+    "icon": "T_Gp_Camera",
+    "pos": [
+      -4552,
+      15
+    ],
+    "subRegion": 106001,
+    "targetSubRegion": [],
+    "telepointId": 1600,
+    "teleportPointPos": 23,
+    "teleportSubRegion": 106001,
+    "unlockConditionId": null,
+    "manualItemId": null,
+    "staticId": 2480700,
+    "singleCreate": true
+  },
+  {
+    "id": 2859,
+    "name": "站外空地",
+    "icon": "T_Gp_Camera",
+    "pos": [
+      -42679,
+      -1136
+    ],
+    "subRegion": 106001,
+    "targetSubRegion": [],
+    "telepointId": 1603,
+    "teleportPointPos": 24,
+    "teleportSubRegion": 106001,
+    "unlockConditionId": null,
+    "manualItemId": null,
+    "staticId": 2480702,
+    "singleCreate": true
+  },
+  {
+    "id": 2860,
+    "name": "锻铁厂",
+    "icon": "T_Gp_Camera",
+    "pos": [
+      -13366,
+      8034
+    ],
+    "subRegion": 106301,
+    "targetSubRegion": [],
+    "telepointId": 1063,
+    "teleportPointPos": 9,
+    "teleportSubRegion": 106301,
+    "unlockConditionId": null,
+    "manualItemId": null,
+    "staticId": 2890221,
+    "singleCreate": true
+  },
+  {
+    "id": 2861,
+    "name": "废墟游乐场",
+    "icon": "T_Gp_Camera",
+    "pos": [
+      -25203,
+      -29482
+    ],
+    "subRegion": 107101,
+    "targetSubRegion": [],
+    "telepointId": 1705,
+    "teleportPointPos": 10,
+    "teleportSubRegion": 107101,
+    "unlockConditionId": null,
+    "manualItemId": null,
+    "staticId": 2790454,
+    "singleCreate": true
+  },
+  {
+    "id": 2862,
+    "name": "乐园镇",
+    "icon": "T_Gp_Camera",
+    "pos": [
+      -11900,
+      -74820
+    ],
+    "subRegion": 107001,
+    "targetSubRegion": [],
+    "telepointId": 1702,
+    "teleportPointPos": 11,
+    "teleportSubRegion": 107001,
+    "unlockConditionId": null,
+    "manualItemId": null,
+    "staticId": 2780662,
+    "singleCreate": true
+  },
+  {
+    "id": 2863,
+    "name": "乐园镇",
+    "icon": "T_Gp_Camera",
+    "pos": [
+      -21510,
+      -76030
+    ],
+    "subRegion": 107001,
+    "targetSubRegion": [],
+    "telepointId": 1702,
+    "teleportPointPos": 12,
+    "teleportSubRegion": 107001,
+    "unlockConditionId": null,
+    "manualItemId": null,
+    "staticId": 2780664,
+    "singleCreate": true
+  },
+  {
+    "id": 2864,
+    "name": "山谷裂隙",
+    "icon": "T_Gp_Camera",
+    "pos": [
+      -33280,
+      -12150
+    ],
+    "subRegion": 107201,
+    "targetSubRegion": [],
+    "telepointId": 1707,
+    "teleportPointPos": 6,
+    "teleportSubRegion": 107201,
+    "unlockConditionId": null,
+    "manualItemId": null,
+    "staticId": 2800327,
+    "singleCreate": true
+  },
+  {
+    "id": 2865,
+    "name": "留影地·冰湖城广场",
+    "icon": "T_Gp_Camera",
+    "pos": [
+      -5117,
+      -4284
+    ],
+    "subRegion": 101101,
+    "targetSubRegion": [
+      101101
+    ],
+    "telepointId": 1011,
+    "teleportPointPos": 39,
+    "teleportSubRegion": 101101,
+    "unlockConditionId": null,
+    "manualItemId": 119006,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2866,
+    "name": "留影地·泪湖",
+    "icon": "T_Gp_Camera",
+    "pos": [
+      -52190,
+      41000
+    ],
+    "subRegion": 101103,
+    "targetSubRegion": [
+      101103
+    ],
+    "telepointId": 1016,
+    "teleportPointPos": 41,
+    "teleportSubRegion": 101103,
+    "unlockConditionId": null,
+    "manualItemId": 124021,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2867,
+    "name": "留影地·枯荣阁",
+    "icon": "T_Gp_Camera",
+    "pos": [
+      17489,
+      -37970
+    ],
+    "subRegion": 104104,
+    "targetSubRegion": [
+      104104
+    ],
+    "telepointId": 1110,
+    "teleportPointPos": 10,
+    "teleportSubRegion": 104104,
+    "unlockConditionId": null,
+    "manualItemId": 205007,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2868,
+    "name": "留影地·幽明涧",
+    "icon": "T_Gp_Camera",
+    "pos": [
+      6408,
+      -2469
+    ],
+    "subRegion": 104104,
+    "targetSubRegion": [
+      104104
+    ],
+    "telepointId": 1109,
+    "teleportPointPos": 9,
+    "teleportSubRegion": 104104,
+    "unlockConditionId": null,
+    "manualItemId": 205006,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2869,
+    "name": "留影地·百年春",
+    "icon": "T_Gp_Camera",
+    "pos": [
+      39258,
+      5329
+    ],
+    "subRegion": 104104,
+    "targetSubRegion": [
+      104104
+    ],
+    "telepointId": 1102,
+    "teleportPointPos": 8,
+    "teleportSubRegion": 104104,
+    "unlockConditionId": null,
+    "manualItemId": 205003,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2870,
+    "name": "留影地·浮星埠",
+    "icon": "T_Gp_Camera",
+    "pos": [
+      32354,
+      54041
+    ],
+    "subRegion": 104104,
+    "targetSubRegion": [
+      104104
+    ],
+    "telepointId": 1100,
+    "teleportPointPos": 7,
+    "teleportSubRegion": 104104,
+    "unlockConditionId": null,
+    "manualItemId": 205009,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2871,
+    "name": "留影地·微茫市",
+    "icon": "T_Gp_Camera",
+    "pos": [
+      -18481,
+      15712
+    ],
+    "subRegion": 104104,
+    "targetSubRegion": [
+      104104
+    ],
+    "telepointId": 1105,
+    "teleportPointPos": 6,
+    "teleportSubRegion": 104104,
+    "unlockConditionId": null,
+    "manualItemId": 205008,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2872,
+    "name": "留影地·蓼风岭",
+    "icon": "T_Gp_Camera",
+    "pos": [
+      28956,
+      27042
+    ],
+    "subRegion": 104104,
+    "targetSubRegion": [
+      104104
+    ],
+    "telepointId": 1112,
+    "teleportPointPos": 5,
+    "teleportSubRegion": 104104,
+    "unlockConditionId": null,
+    "manualItemId": 205010,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2874,
+    "name": "留影地·泪湖湖畔",
+    "icon": "T_Gp_Camera",
+    "pos": [
+      -38853,
+      27042
+    ],
+    "subRegion": 101103,
+    "targetSubRegion": [
+      101103
+    ],
+    "telepointId": 1016,
+    "teleportPointPos": 40,
+    "teleportSubRegion": 101103,
+    "unlockConditionId": null,
+    "manualItemId": 124022,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2875,
+    "name": "留影地·听鸦原",
+    "icon": "T_Gp_Camera",
+    "pos": [
+      -44803,
+      7630
+    ],
+    "subRegion": 104104,
+    "targetSubRegion": [
+      104104
+    ],
+    "telepointId": 1106,
+    "teleportPointPos": 4,
+    "teleportSubRegion": 104104,
+    "unlockConditionId": null,
+    "manualItemId": 205011,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2876,
+    "name": "留影地·净界岛",
+    "icon": "T_Gp_Camera",
+    "pos": [
+      761,
+      9252
+    ],
+    "subRegion": 100101,
+    "targetSubRegion": [
+      100101
+    ],
+    "telepointId": 1001,
+    "teleportPointPos": 9,
+    "teleportSubRegion": 100101,
+    "unlockConditionId": null,
+    "manualItemId": 159007,
+    "staticId": null,
+    "singleCreate": false
   }
 ]

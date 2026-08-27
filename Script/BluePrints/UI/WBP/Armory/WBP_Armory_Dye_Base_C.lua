@@ -944,8 +944,8 @@ function M:CreateNormalColorContents()
   for index, value in ipairs(self.ColorContents) do
     if 1 == index % self.ColorPerRow then
       Obj = NewObject(UIUtils.GetCommonItemContentClass())
-      Obj.Owner = self
-      Obj.ColorContents = {}
+      rawset(Obj, "Owner", self)
+      rawset(Obj, "ColorContents", {})
       self.BP_NormalColorContents:Add(Obj)
       table.insert(self.ListContents, Obj)
       self:OnNormalColorListContentCreated(Obj)
@@ -1023,7 +1023,7 @@ function M:CreateNormalDefaultColor()
   if self.Type == CommonConst.ArmoryType.Char then
     if self.SkinType == CommonConst.DataType.Hair then
       self.DefaultColors = {
-        self.ArmoryPlayer.CharacterFashion:GetHiarDefaultColors()
+        self.ArmoryPlayer.CharacterFashion:GetHairDefaultColors()
       }
       return
     end
@@ -1084,18 +1084,18 @@ function M:InitNormalDyeTabs(JumpToTabIdx)
       UKismetMathLibrary.LinearColor_SetFromSRGB(Color, FColor(ColorData[1] or 0, ColorData[2] or 0, ColorData[3] or 0))
     end
     local Obj = NewObject(UIUtils.GetCommonItemContentClass())
-    Obj.Owner = self
-    Obj.Text = i
-    Obj.Color = Color
-    Obj.Idx = i
-    Obj.IsSelected = i == (JumpToTabIdx or 1)
+    rawset(Obj, "Owner", self)
+    rawset(Obj, "Text", i)
+    rawset(Obj, "Color", Color)
+    rawset(Obj, "Idx", i)
+    rawset(Obj, "IsSelected", i == (JumpToTabIdx or 1))
     table.insert(self.NormalDyeTabs, Obj)
-    self:OnNoramlDyeTabContentCreated(Obj)
+    self:OnNormalDyeTabContentCreated(Obj)
     self.List_Tab:AddItem(Obj)
   end
 end
 
-function M:OnNoramlDyeTabContentCreated(Content)
+function M:OnNormalDyeTabContentCreated(Content)
 end
 
 function M:OnNormalDyeTabInitialized(Content, Widget)
@@ -1351,13 +1351,13 @@ function M:CreateSpecialColorContents()
   self.SpecialColorContentsMap = {}
   for key, value in pairs(SpecialSwatchData) do
     local Obj = NewObject(UIUtils.GetCommonItemContentClass())
-    Obj.ColorId = key
-    Obj.MaterialName = value.LinkedMaterial
-    Obj.ResourceId = value.ResourceID
-    Obj.Event_OnClicked = self.OnColorListItemClicked
-    Obj.Event_OnHovered = self.OnColorListItemHovered
-    Obj.Event_OnUnhovered = self.OnColorListItemUnhovered
-    Obj.Owner = self
+    rawset(Obj, "ColorId", key)
+    rawset(Obj, "MaterialName", value.LinkedMaterial)
+    rawset(Obj, "ResourceId", value.ResourceID)
+    rawset(Obj, "Event_OnClicked", self.OnColorListItemClicked)
+    rawset(Obj, "Event_OnHovered", self.OnColorListItemHovered)
+    rawset(Obj, "Event_OnUnhovered", self.OnColorListItemUnhovered)
+    rawset(Obj, "Owner", self)
     table.insert(self.SpecialColorContents, Obj)
     self:OnSpecialColorContentCreated(Obj)
     self.SpecialColorContentsMap[Obj.ColorId] = Obj

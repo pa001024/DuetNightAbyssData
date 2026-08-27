@@ -1,48 +1,53 @@
 local T = {}
 T.RT_1 = {1, 3}
-T.RT_2 = {610010, 610011}
-T.RT_3 = {610018, 610019}
-T.RT_4 = {
+T.RT_2 = {
+  100,
+  101,
+  102
+}
+T.RT_3 = {610010, 610011}
+T.RT_4 = {610018, 610019}
+T.RT_5 = {
   ActiveCommonUI = 1,
   HiddenWhileOccluded = true,
   UIStyleNodeName = "TN"
 }
-T.RT_5 = {610016, 610017}
-T.RT_6 = {610032, 610033}
-T.RT_7 = {610040, 610041}
-T.RT_8 = {
+T.RT_6 = {610016, 610017}
+T.RT_7 = {610032, 610033}
+T.RT_8 = {610040, 610041}
+T.RT_9 = {
   104010,
   104011,
   104012,
   104013
 }
-T.RT_9 = {104070, 104071}
-T.RT_10 = {ActiveCommonUI = 1, ScaleRateX = 3.0}
-T.RT_11 = {0, 1000}
-T.RT_12 = {
+T.RT_10 = {104070, 104071}
+T.RT_11 = {ActiveCommonUI = 1, ScaleRateX = 3.0}
+T.RT_12 = {0, 1000}
+T.RT_13 = {
   12,
   13,
   14,
   15
 }
-T.RT_13 = {
+T.RT_14 = {
   105010,
   105011,
   105012
 }
-T.RT_14 = {SkillEffect = 900010, SkillRadius = 800}
-T.RT_15 = {
+T.RT_15 = {SkillEffect = 900010, SkillRadius = 800}
+T.RT_16 = {
   "Prop42002Ray"
 }
-T.RT_16 = {
-  Tag = T.RT_15
-}
 T.RT_17 = {
+  Tag = T.RT_16
+}
+T.RT_18 = {
   1060800,
   1060801,
   1060802
 }
-T.RT_18 = {
+T.RT_19 = {
   1061200,
   1061201,
   1061202,
@@ -52,23 +57,23 @@ T.RT_18 = {
   1061206,
   1061207
 }
-T.RT_19 = {
+T.RT_20 = {
   ActiveStateId = 501,
   Difficulty = 2,
   FiniStateId = 500,
   GameTime = 60
 }
-T.RT_20 = {
+T.RT_21 = {
   1062100,
   1062101,
   1062102
 }
-T.RT_21 = {
+T.RT_22 = {
   1070100,
   1070101,
   1070102
 }
-T.RT_22 = {
+T.RT_23 = {
   ActiveRange = 3000,
   AttackCD = 0.2,
   GasHeight = 1400,
@@ -80,7 +85,7 @@ T.RT_22 = {
   RotateSpeed = 0,
   WarningTime = 2
 }
-T.RT_23 = {
+T.RT_24 = {
   1070200,
   1070201,
   1070202,
@@ -88,7 +93,7 @@ T.RT_23 = {
   1070204,
   1070205
 }
-T.RT_24 = {
+T.RT_25 = {
   ActiveRange = 3000,
   AttackCD = 0.2,
   GasHeight = 1400,
@@ -100,71 +105,82 @@ T.RT_24 = {
   RotateSpeed = 0,
   WarningTime = 2
 }
-T.RT_25 = {
+T.RT_26 = {
   "Weapon20508Bullut"
 }
-T.RT_26 = {
-  Tag = T.RT_25
-}
 T.RT_27 = {
+  Tag = T.RT_26
+}
+T.RT_28 = {
   109010,
   109011,
   109012
 }
-T.RT_28 = {
+T.RT_29 = {
   109010,
   109013,
   109014
 }
-T.RT_29 = {ConstantEffectId = 900010, DynamicEffectId = 900011}
-T.RT_30 = {
+T.RT_30 = {ConstantEffectId = 900010, DynamicEffectId = 900011}
+T.RT_31 = {
   111010,
   111011,
   111012
 }
-T.RT_31 = {
+T.RT_32 = {
   111010,
   111012,
   111013,
   111014,
   111015
 }
-T.RT_32 = {
+T.RT_33 = {
   111030,
   111031,
   111032,
   111033,
   111034
 }
-T.RT_33 = {ActiveCommonUI = 1}
-T.RT_34 = {9041, 9042}
-T.RT_35 = {ActiveCommonUI = 1, UIStyleNodeName = "TN"}
-T.RT_36 = {610028, 610029}
-T.RT_37 = {10, 11}
-T.RT_38 = {
+T.RT_34 = {ActiveCommonUI = 1}
+T.RT_35 = {
+  112010,
+  112011,
+  112012,
+  112013
+}
+T.RT_36 = {
+  112010,
+  112011,
+  112012
+}
+T.RT_37 = {9041, 9042}
+T.RT_38 = {ActiveCommonUI = 1, UIStyleNodeName = "TN"}
+T.RT_39 = {610028, 610029}
+T.RT_40 = {10, 11}
+T.RT_41 = {
   ActiveCommonUI = 1,
   ScaleRateX = 4.0,
   UIStyleNodeName = "TN"
 }
-T.RT_39 = {
+T.RT_42 = {
   1170100,
   1170101,
   1170102
 }
-T.RT_40 = {
+T.RT_43 = {
   1170140,
   1170141,
   1170142
 }
-T.RT_41 = {
+T.RT_44 = {
   118001,
   118002,
   118003,
   118004,
   118005
 }
-T.RT_42 = {1210022, 1210023}
-T.RT_43 = {
+T.RT_45 = {1210022, 1210023}
+T.RT_46 = {
   118010,
   118011,
   118012,
@@ -173,72 +189,72 @@ T.RT_43 = {
   118015,
   118026
 }
-T.RT_44 = {"Vacuum"}
-T.RT_45 = {
+T.RT_47 = {"Vacuum"}
+T.RT_48 = {
   118023,
   118024,
   118025
 }
-T.RT_46 = {1210121, 1210122}
-T.RT_47 = {
+T.RT_49 = {1210121, 1210122}
+T.RT_50 = {
   1210140,
   1210141,
   1210142
 }
-T.RT_48 = {1210150, 1210151}
-T.RT_49 = {
+T.RT_51 = {1210150, 1210151}
+T.RT_52 = {
   1210170,
   1210171,
   1210172
 }
-T.RT_50 = {
+T.RT_53 = {
   1210200,
   1210201,
   1210202
 }
-T.RT_51 = {
+T.RT_54 = {
   RotateCreatorId = -1,
   SequenceId = 1,
-  Tag = T.RT_15
+  Tag = T.RT_16
 }
-T.RT_52 = {
+T.RT_55 = {
   1210250,
   1210251,
   1210252,
   1210253,
   1210254
 }
-T.RT_53 = {
+T.RT_56 = {
   BuffId = 5000101,
   Duration = 8,
   RecoverTime = 5
 }
-T.RT_54 = {1210320, 1210321}
-T.RT_55 = {
+T.RT_57 = {1210320, 1210321}
+T.RT_58 = {
   1210340,
   1210341,
   1210342,
   1210343,
   1210344
 }
-T.RT_56 = {
+T.RT_59 = {
   "Prop42001Ray"
 }
-T.RT_57 = {
+T.RT_60 = {
   1210550,
   1210551,
   1210552,
   1210553
 }
-T.RT_58 = {1310014, 1310015}
-T.RT_59 = {
+T.RT_61 = {1310014, 1310015}
+T.RT_62 = {
   CanRestorePlayer = true,
   IsRedLight = true,
   RestoreHpCD = 5,
   SkillEffectHp = 900026
 }
-T.RT_60 = {1310030, 1310031}
-T.RT_61 = {
+T.RT_63 = {1310030, 1310031}
+T.RT_64 = {
   1310090,
   1310091,
   1310092,
@@ -247,179 +263,249 @@ T.RT_61 = {
   1310095,
   1310096
 }
-T.RT_62 = {0, 3000}
-T.RT_63 = {
+T.RT_65 = {0, 3000}
+T.RT_66 = {
   701000,
   701001,
   701002,
   701003
 }
-T.RT_64 = {1310150, 1310151}
-T.RT_65 = {
+T.RT_67 = {1310150, 1310151}
+T.RT_68 = {
   1310170,
   1310171,
   1310172,
   1310173,
   1310174
 }
-T.RT_66 = {
+T.RT_69 = {
   "DongGuoWysSkill01"
 }
-T.RT_67 = {
-  Tag = T.RT_66
+T.RT_70 = {
+  Tag = T.RT_69
 }
-T.RT_68 = {
+T.RT_71 = {
   1310211,
   1310212,
   1310213,
   1310214,
   1310217
 }
-T.RT_69 = {
-  RotateAxis = "Z",
-  Tag = T.RT_56
-}
-T.RT_70 = {
-  RotateAxis = "X",
-  Tag = T.RT_56
-}
-T.RT_71 = {
-  RotateAxis = "Y",
-  Tag = T.RT_56
-}
 T.RT_72 = {
+  RotateAxis = "Z",
+  Tag = T.RT_59
+}
+T.RT_73 = {
+  RotateAxis = "X",
+  Tag = T.RT_59
+}
+T.RT_74 = {
+  RotateAxis = "Y",
+  Tag = T.RT_59
+}
+T.RT_75 = {
   1310215,
   1310216,
   1310217
 }
-T.RT_73 = {1310220}
-T.RT_74 = {1310220, 1310221}
-T.RT_75 = {
+T.RT_76 = {1310220}
+T.RT_77 = {1310220, 1310221}
+T.RT_78 = {
   1310175,
   1310176,
   1310173,
   1310174,
   1310177
 }
-T.RT_76 = {1310290, 1310291}
-T.RT_77 = {
+T.RT_79 = {1310290, 1310291}
+T.RT_80 = {
   1310661,
   1310662,
   1310663,
   1310664
 }
-T.RT_78 = {MaxTime = 0, ReduceTime = 0}
-T.RT_79 = {
+T.RT_81 = {MaxTime = 0, ReduceTime = 0}
+T.RT_82 = {
   1310701,
   1310702,
   1310703
 }
-T.RT_80 = {Difficulty = 0, GameTime = 60}
-T.RT_81 = {Difficulty = 1, GameTime = 60}
-T.RT_82 = {0, 5000}
-T.RT_83 = {1610011, 1610012}
-T.RT_84 = {66, 67}
-T.RT_85 = {
+T.RT_83 = {Difficulty = 0, GameTime = 60}
+T.RT_84 = {Difficulty = 1, GameTime = 60}
+T.RT_85 = {0, 5000}
+T.RT_86 = {1610011, 1610012}
+T.RT_87 = {66, 67}
+T.RT_88 = {
   1610050,
   1610051,
   1610052
 }
-T.RT_86 = {
+T.RT_89 = {
   542,
   552,
   562,
   572,
   582
 }
-T.RT_87 = {
+T.RT_90 = {
+  3903000,
+  3903001,
+  3903002,
+  3903003
+}
+T.RT_91 = {
   1701011,
   1701012,
   1701013,
   1701014,
-  1701015
+  1701015,
+  1701016
 }
-T.RT_88 = {Difficulty = 1, MiniGameType = "Hammer"}
-T.RT_89 = {
+T.RT_92 = {Difficulty = 1, MiniGameType = "Hammer"}
+T.RT_93 = {
   1701021,
   1701022,
   1701023,
   1701024,
-  1701025
+  1701025,
+  1701026,
+  1701027
 }
-T.RT_90 = {
+T.RT_94 = {1702040, 1702041}
+T.RT_95 = {
+  BlackScreenText = "UI_TEXT_FOGWALL"
+}
+T.RT_96 = {
+  1703010,
+  1703011,
+  1703012,
+  1703013,
+  1703014,
+  1703015
+}
+T.RT_97 = {
+  1703010,
+  1703011,
+  1703012,
+  1703013,
+  1703014
+}
+T.RT_98 = {
+  1704010,
+  1704011,
+  1704012,
+  1704013,
+  1704014
+}
+T.RT_99 = {Condition = "Jump", SkillEffect = 900091}
+T.RT_100 = {Condition = "Slide", SkillEffect = 900091}
+T.RT_101 = {
+  1705040,
+  1705041,
+  1705042
+}
+T.RT_102 = {IsBoss = 1}
+T.RT_103 = {1706010, 1706011}
+T.RT_104 = {
   1799010,
   1799011,
   1799012,
   1799013,
   1799014
 }
-T.RT_91 = {Condition = "Jump", SkillEffect = 900040}
-T.RT_92 = {26, 27}
-T.RT_93 = {1800200, 1800201}
-T.RT_94 = {
+T.RT_105 = {26, 27}
+T.RT_106 = {1800200, 1800201}
+T.RT_107 = {
   2514,
   26,
   27
 }
-T.RT_95 = {
+T.RT_108 = {
+  1900020,
+  1900021,
+  1900022,
+  1900023
+}
+T.RT_109 = {
+  ActiveStateId = 542,
+  Difficulty = 1,
+  FiniStateId = 582,
+  GameTime = 60,
+  MiniGameType = "TiaoPin"
+}
+T.RT_110 = {
+  1900300,
+  1900301,
+  1900302,
+  1900303,
+  1900304
+}
+T.RT_111 = {
+  RayConnectTime = 2,
+  RayDisDuration = 2,
+  RayFixAngle = 10,
+  RayMaxLength = 3500,
+  RayMinLength = 500
+}
+T.RT_112 = {
   541,
   551,
   561,
   571,
   581
 }
-T.RT_96 = {
+T.RT_113 = {
   543,
   553,
   563,
   573,
   583
 }
-T.RT_97 = {
+T.RT_114 = {
   ActiveStateId = 543,
   Difficulty = 1,
   FiniStateId = 583,
   GameTime = 60
 }
-T.RT_98 = {
+T.RT_115 = {
   500,
   501,
   502,
   503,
   504
 }
-T.RT_99 = {65}
-T.RT_100 = {64, 65}
-T.RT_101 = {0, 4000}
-T.RT_102 = {
+T.RT_116 = {65}
+T.RT_117 = {64, 65}
+T.RT_118 = {0, 4000}
+T.RT_119 = {
   380041,
   380042,
   380043,
   380044
 }
-T.RT_103 = {380051, 380052}
-T.RT_104 = {390011, 390012}
-T.RT_105 = {ActiveRange = 1000}
-T.RT_106 = {-1000, 0}
-T.RT_107 = {
+T.RT_120 = {380051, 380052}
+T.RT_121 = {390011, 390012}
+T.RT_122 = {ActiveRange = 1000}
+T.RT_123 = {-1000, 0}
+T.RT_124 = {
   3900111,
   3900112,
   3900113
 }
-T.RT_108 = {
+T.RT_125 = {
   3900121,
   3900122,
   3900123
 }
-T.RT_109 = {-1500, 0}
-T.RT_110 = {
+T.RT_126 = {-1500, 0}
+T.RT_127 = {
   3900130,
   3900131,
   3900132,
   3900133
 }
-T.RT_111 = {6, 7}
-T.RT_112 = {
+T.RT_128 = {6, 7}
+T.RT_129 = {
   ActiveRange = 1000,
   BombDelay = 0.5,
   BombRadius = 500,
@@ -427,7 +513,7 @@ T.RT_112 = {
   MonEffect = 900005,
   PlayerEffect = 900083
 }
-T.RT_113 = {
+T.RT_130 = {
   InitSpeed = 2000,
   SetupTime = 1.5,
   ShakeRange = 1500,
@@ -436,37 +522,37 @@ T.RT_113 = {
   WarningEffect = 900005,
   WarningTime = 2
 }
-T.RT_114 = {3900700, 3900701}
-T.RT_115 = {
+T.RT_131 = {3900700, 3900701}
+T.RT_132 = {
   AttackCD = 0.2,
   MonAttackCD = 0.2,
   MonEffect = 900021,
   PlayerEffect = 900022
 }
-T.RT_116 = {ReplacingTime = 10, WarningTime = 3}
-T.RT_117 = {
+T.RT_133 = {ReplacingTime = 10, WarningTime = 3}
+T.RT_134 = {
   700307,
   700308,
   700309,
   700310,
   700311
 }
-T.RT_118 = {
-  Random = T.RT_117,
+T.RT_135 = {
+  Random = T.RT_134,
   RandomNum = 3
 }
-T.RT_119 = {
+T.RT_136 = {
   3901700,
   3901701,
   3901702
 }
-T.RT_120 = {
+T.RT_137 = {
   3901800,
   3901801,
   3901802,
   3901803
 }
-T.RT_121 = {
+T.RT_138 = {
   InitSpeed = 2000,
   SetupTime = 0.5,
   ShakeRange = 1500,
@@ -475,19 +561,19 @@ T.RT_121 = {
   WarningEffect = 900005,
   WarningTime = 1
 }
-T.RT_122 = {
+T.RT_139 = {
   3902300,
   3902301,
   3902302,
   3902303
 }
-T.RT_123 = {
+T.RT_140 = {
   3902400,
   3902401,
   3902402
 }
-T.RT_124 = {Range = 800, Speed = 300}
-T.RT_125 = {
+T.RT_141 = {Range = 800, Speed = 300}
+T.RT_142 = {
   3902700,
   3902701,
   3902702,
@@ -496,21 +582,21 @@ T.RT_125 = {
   3902705,
   3902706
 }
-T.RT_126 = {
+T.RT_143 = {
   "FeinaColorRed",
   "FeinaColorBlue",
   "FeinaColorGreen"
 }
-T.RT_127 = {
-  Tag = T.RT_126
+T.RT_144 = {
+  Tag = T.RT_143
 }
-T.RT_128 = {
+T.RT_145 = {
   3902800,
   3902801,
   3902802,
   3902803
 }
-T.RT_129 = {
+T.RT_146 = {
   3902700,
   3902701,
   3902702,
@@ -521,7 +607,7 @@ T.RT_129 = {
   3902707,
   3902708
 }
-T.RT_130 = {
+T.RT_147 = {
   3903600,
   3903601,
   3903602,
@@ -529,154 +615,171 @@ T.RT_130 = {
   3903604,
   3903605
 }
-T.RT_131 = {
+T.RT_148 = {
   3904500,
   3904501,
   3904502
 }
-T.RT_132 = {
+T.RT_149 = {
   120,
   100,
   0
 }
-T.RT_133 = {
+T.RT_150 = {
   120,
   -100,
   0
 }
-T.RT_134 = {
-  T.RT_132,
-  T.RT_133
+T.RT_151 = {
+  T.RT_149,
+  T.RT_150
 }
-T.RT_135 = {
-  InterPoint = T.RT_134
+T.RT_152 = {
+  InterPoint = T.RT_151
 }
-T.RT_136 = {ActiveCommonUI = 1, HeightOffset = 50}
-T.RT_137 = {
+T.RT_153 = {
+  0,
+  100,
+  0
+}
+T.RT_154 = {
+  0,
+  -100,
+  0
+}
+T.RT_155 = {
+  T.RT_153,
+  T.RT_154
+}
+T.RT_156 = {
+  InterPoint = T.RT_155
+}
+T.RT_157 = {ActiveCommonUI = 1, HeightOffset = 50}
+T.RT_158 = {
   4900101,
   4900102,
   4900103,
   4900104
 }
-T.RT_138 = {ActiveCommonUI = 1, HeightOffset = 100}
-T.RT_139 = {
+T.RT_159 = {ActiveCommonUI = 1, HeightOffset = 100}
+T.RT_160 = {
   ActiveStateId = 542,
   Difficulty = 3,
   FiniStateId = 582,
   GameTime = 60
 }
-T.RT_140 = {
+T.RT_161 = {
   ActiveStateId = 542,
   Difficulty = 2,
   FiniStateId = 582,
   GameTime = 60,
   MiniGameType = "ZhuanQuanQuan"
 }
-T.RT_141 = {
+T.RT_162 = {
   ActiveStateId = 542,
   Difficulty = 1,
   FiniStateId = 582,
   GameTime = 60,
   MiniGameType = "ZhuanQuanQuan"
 }
-T.RT_142 = {
+T.RT_163 = {
   ActiveStateId = 542,
   Difficulty = 2,
   FiniStateId = 582,
   GameTime = 60,
   MiniGameType = "TiaoPin"
 }
-T.RT_143 = {
+T.RT_164 = {
   ActiveStateId = 542,
   Difficulty = 1,
   FiniStateId = 582,
   GameTime = 60
 }
-T.RT_144 = {
+T.RT_165 = {
   ActiveStateId = 542,
   Difficulty = 2,
   FiniStateId = 582,
   GameTime = 60
 }
-T.RT_145 = {
+T.RT_166 = {
   ActiveStateId = 542,
   Difficulty = 2,
   FiniStateId = 582,
   GameTime = 60,
   MiniGameType = "ShuiFa"
 }
-T.RT_146 = {
+T.RT_167 = {
   ActiveStateId = 542,
   Difficulty = 0,
   FiniStateId = 582,
   GameTime = 60
 }
-T.RT_147 = {
+T.RT_168 = {
   Difficulty = 2,
   GameTime = 60,
   MiniGameType = "ZhuanQuanQuan"
 }
-T.RT_148 = {
+T.RT_169 = {
   ActiveStateId = 501,
   Difficulty = 1,
   FiniStateId = 500,
   GameTime = 60,
   MiniGameType = "ShuiFa"
 }
-T.RT_149 = {
+T.RT_170 = {
   ActiveStateId = 501,
   Difficulty = 2,
   FiniStateId = 500,
   GameTime = 60,
   MiniGameType = "ShuiFa"
 }
-T.RT_150 = {
+T.RT_171 = {
   ActiveStateId = 501,
   Difficulty = 3,
   FiniStateId = 500,
   GameTime = 60,
   MiniGameType = "ShuiFa"
 }
-T.RT_151 = {
+T.RT_172 = {
   ActiveStateId = 501,
   Difficulty = 0,
   FiniStateId = 500,
   GameTime = 60,
   MiniGameType = "ShuiFa"
 }
-T.RT_152 = {
+T.RT_173 = {
   ActiveStateId = 543,
   Difficulty = 3,
   FiniStateId = 583,
   GameTime = 60,
   MiniGameType = "TiaoPin"
 }
-T.RT_153 = {
+T.RT_174 = {
   600,
   601,
   602,
   603,
   604
 }
-T.RT_154 = {
+T.RT_175 = {
   ActiveStateId = 541,
   Difficulty = 2,
   FiniStateId = 581,
   GameTime = 60,
   MiniGameType = "ZhuanQuanQuan"
 }
-T.RT_155 = {
+T.RT_176 = {
   5431,
   5531,
   5731
 }
-T.RT_156 = {
+T.RT_177 = {
   494000,
   494001,
   494002
 }
-T.RT_157 = {4900801, 4900802}
-T.RT_158 = {
+T.RT_178 = {4900801, 4900802}
+T.RT_179 = {
   BuffBase = 100,
   BuffId = 5000012,
   EliteEnergy = 30,
@@ -686,7 +789,7 @@ T.RT_158 = {
   RecoverEnergy = 0,
   StageTime = 180
 }
-T.RT_159 = {
+T.RT_180 = {
   BuffBase = 100,
   BuffId = 5000014,
   EliteEnergy = 30,
@@ -696,7 +799,7 @@ T.RT_159 = {
   RecoverEnergy = 0,
   StageTime = 180
 }
-T.RT_160 = {
+T.RT_181 = {
   BuffBase = 100,
   BuffId = 5000016,
   EliteEnergy = 30,
@@ -706,104 +809,120 @@ T.RT_160 = {
   RecoverEnergy = 0,
   StageTime = 180
 }
-T.RT_161 = {
+T.RT_182 = {
+  BuffBase = 20,
+  EliteEnergy = 30,
+  EnergyLimit = 100,
+  MaxEnergyChange = 20,
+  MiniMapPath = "/Game/UI/Texture/Dynamic/Atlas/Map/T_Map_Range.T_Map_Range",
+  NormalEnergy = 1,
+  RecoverEnergy = 0,
+  StageTime = 180
+}
+T.RT_183 = {
   FirstRefresh = 5,
   NeedAttach = false,
   RefreshCD = 8
 }
-T.RT_162 = {
+T.RT_184 = {ActiveCommonUI = 1, HeightOffset = 200}
+T.RT_185 = {
+  493011,
+  493012,
+  493013
+}
+T.RT_186 = {
   495000,
   495001,
   495002,
   495003,
   495004
 }
-T.RT_163 = {MaxTime = 2, ReduceTime = 0}
-T.RT_164 = {MaxTime = 3, ReduceTime = 0.5}
-T.RT_165 = {MaxTime = 2, ReduceTime = 0.5}
-T.RT_166 = {
+T.RT_187 = {MaxTime = 2, ReduceTime = 0}
+T.RT_188 = {MaxTime = 3, ReduceTime = 0.5}
+T.RT_189 = {MaxTime = 2, ReduceTime = 0.5}
+T.RT_190 = {
   495030,
   495031,
   495032,
   495033
 }
-T.RT_167 = {
+T.RT_191 = {
   5,
   "Target",
   "Target",
   "Self"
 }
-T.RT_168 = {
+T.RT_192 = {
   7,
   "Target",
   "Target",
   "Self"
 }
-T.RT_169 = {
+T.RT_193 = {
   4,
   "Target",
   "Target",
   "Self"
 }
-T.RT_170 = {
+T.RT_194 = {
   1,
   "Self",
   "Target",
   "Self"
 }
-T.RT_171 = {
+T.RT_195 = {
   1,
   "Target",
   "Target",
   "Self"
 }
-T.RT_172 = {
+T.RT_196 = {
   2,
   "Target",
   "Target",
   "Self"
 }
-T.RT_173 = {
-  [0] = T.RT_167,
-  [500000301] = T.RT_168,
-  [500000302] = T.RT_169,
-  [500000303] = T.RT_170,
-  [500000304] = T.RT_171,
-  [500000305] = T.RT_172
+T.RT_197 = {
+  [0] = T.RT_191,
+  [500000301] = T.RT_192,
+  [500000302] = T.RT_193,
+  [500000303] = T.RT_194,
+  [500000304] = T.RT_195,
+  [500000305] = T.RT_196
 }
-T.RT_174 = {
-  SkillId = T.RT_173
+T.RT_198 = {
+  SkillId = T.RT_197
 }
-T.RT_175 = {
+T.RT_199 = {
   701030,
   701031,
   701032,
   701033
 }
-T.RT_176 = {
+T.RT_200 = {
   701059,
   701060,
   701061,
   701062,
   701063
 }
-T.RT_177 = {
+T.RT_201 = {
   701060,
   701061,
   701062,
   701063
 }
-T.RT_178 = {
+T.RT_202 = {
   701310,
   701311,
   701312
 }
-T.RT_179 = {
+T.RT_203 = {
   701004,
   701002,
   701003
 }
-T.RT_180 = {
+T.RT_204 = {
   702020,
   702021,
   702022,
@@ -811,89 +930,87 @@ T.RT_180 = {
   702024,
   702025
 }
-T.RT_181 = {
+T.RT_205 = {
   702030,
   702031,
   702032
 }
-T.RT_182 = {
-  RayConnectTime = 2,
-  RayDisDuration = 2,
-  RayFixAngle = 10,
-  RayMaxLength = 3500,
-  RayMinLength = 500
-}
-T.RT_183 = {
+T.RT_206 = {
   705060,
   705061,
   705062
 }
-T.RT_184 = {705060, 705061}
-T.RT_185 = {
+T.RT_207 = {705060, 705061}
+T.RT_208 = {
   707040,
   707041,
   707042
 }
-T.RT_186 = {
+T.RT_209 = {
   708000,
   708001,
   708002
 }
-T.RT_187 = {
+T.RT_210 = {
   710030,
   710031,
   710032,
   710033
 }
-T.RT_188 = {
+T.RT_211 = {
   780110,
   780111,
   780112,
   780113
 }
-T.RT_189 = {780420, 780421}
-T.RT_190 = {780580, 780581}
-T.RT_191 = {
+T.RT_212 = {780420, 780421}
+T.RT_213 = {780580, 780581}
+T.RT_214 = {
   780670,
   780671,
   780672
 }
-T.RT_192 = {780060, 780061}
-T.RT_193 = {
+T.RT_215 = {780060, 780061}
+T.RT_216 = {
   801130,
   801131,
   801132
 }
-T.RT_194 = {
+T.RT_217 = {
   MonEffect = 900043,
   MoveSpeed = 3000,
   PlayerEffect = 900042
 }
-T.RT_195 = {
+T.RT_218 = {
   MonEffect = 900047,
   MoveSpeed = 3000,
   OnHitMonsterEffect = 900044,
   PlayerEffect = 900046
 }
-T.RT_196 = {900000, 900001}
-T.RT_197 = {FirstRefresh = 20, RefreshCD = 20}
-T.RT_198 = {
+T.RT_219 = {900000, 900001}
+T.RT_220 = {FirstRefresh = 20, RefreshCD = 20}
+T.RT_221 = {
   9020001,
   9020002,
   9020003
 }
-T.RT_199 = {
+T.RT_222 = {
   UIName = "AnglingMain"
 }
-T.RT_200 = {
+T.RT_223 = {
   9020001,
   9020002,
   9020004
 }
-T.RT_201 = {
+T.RT_224 = {
   9020001,
   9020002,
   9020005
+}
+T.RT_225 = {
+  950000,
+  950001,
+  950002
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
@@ -924,7 +1041,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 100,
     ModelId = 918,
     RewardId = 2010,
-    StateIdList = T.RT_100,
+    StateIdList = T.RT_117,
     UnitBPPath = "/Game/BluePrints/Item/Chest/BP_Chest.BP_Chest",
     UnitId = 6,
     UnitRealType = "Chest"
@@ -975,7 +1092,7 @@ return ReadOnly("Mechanism", {
   [18] = {
     FirstStateId = 26,
     InteractiveId = 105,
-    StateIdList = T.RT_92,
+    StateIdList = T.RT_105,
     UnitBPPath = "/Game/BluePrints/Item/Delivery/DeliveryMechanism",
     UnitId = 18,
     UnitRealType = "Delivery"
@@ -983,7 +1100,7 @@ return ReadOnly("Mechanism", {
   [19] = {
     FirstStateId = 10,
     InteractiveId = 901,
-    StateIdList = T.RT_37,
+    StateIdList = T.RT_40,
     UnitBPPath = "/Game/BluePrints/Item/Mechanism/Seat/BP_SeatChair01.BP_SeatChair01",
     UnitId = 19,
     UnitRealType = "Seat"
@@ -991,7 +1108,7 @@ return ReadOnly("Mechanism", {
   [20] = {
     FirstStateId = 10,
     InteractiveId = 902,
-    StateIdList = T.RT_37,
+    StateIdList = T.RT_40,
     UnitBPPath = "/Game/BluePrints/Item/Mechanism/Seat/BP_SeatChair02.BP_SeatChair02",
     UnitId = 20,
     UnitRealType = "Seat"
@@ -1034,7 +1151,7 @@ return ReadOnly("Mechanism", {
   },
   [24] = {
     FirstStateId = 65,
-    StateIdList = T.RT_99,
+    StateIdList = T.RT_116,
     UnitBPPath = "/Game/BluePrints/Item/Chest/BP_Chest.BP_Chest",
     UnitId = 24,
     UnitRealType = "OpenChest"
@@ -1044,7 +1161,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 100,
     ModelId = 907,
     RewardId = 2010,
-    StateIdList = T.RT_100,
+    StateIdList = T.RT_117,
     UnitBPPath = "/Game/BluePrints/Item/Chest/BP_Ailan_Chest.BP_Ailan_Chest",
     UnitId = 32,
     UnitRealType = "Chest"
@@ -1052,7 +1169,7 @@ return ReadOnly("Mechanism", {
   [37] = {
     FirstStateId = 65,
     ModelId = 907,
-    StateIdList = T.RT_99,
+    StateIdList = T.RT_116,
     UnitBPPath = "/Game/BluePrints/Item/Chest/BP_Ailan_Chest.BP_Ailan_Chest",
     UnitId = 37,
     UnitRealType = "OpenChest"
@@ -1074,7 +1191,7 @@ return ReadOnly("Mechanism", {
   },
   [41] = {
     FirstStateId = 66,
-    StateIdList = T.RT_84,
+    StateIdList = T.RT_87,
     UnitBPPath = "/Game/BluePrints/Item/Mechanism/BP_SwitchMechanism.BP_SwitchMechanism",
     UnitId = 41,
     UnitRealType = "Mechanism"
@@ -1093,11 +1210,7 @@ return ReadOnly("Mechanism", {
   [100] = {
     FirstStateId = 100,
     InteractiveId = 120,
-    StateIdList = {
-      100,
-      101,
-      102
-    },
+    StateIdList = T.RT_2,
     UnitBPPath = "/Game/AssetDesign/Item/HomeBase/BP_Piano.BP_Piano",
     UnitId = 100,
     UnitParams = {
@@ -1140,16 +1253,16 @@ return ReadOnly("Mechanism", {
   },
   [105] = {
     BattleRoleId = 39013,
-    BloodUIParmas = T.RT_10,
+    BloodUIParmas = T.RT_11,
     Camp = "Player",
     FirstSeenTag = "Paotai",
     FirstStateId = 12,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
-    GuideInfo = T.RT_11,
+    GuideInfo = T.RT_12,
     InteractiveId = 99,
     ModelId = 999,
-    StateIdList = T.RT_12,
+    StateIdList = T.RT_13,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_Paotai_Chapter01.BP_Paotai_Chapter01",
     UnitId = 105,
     UnitRealType = "Mechanism"
@@ -1159,7 +1272,7 @@ return ReadOnly("Mechanism", {
     Camp = "Monster",
     UnitBPPath = "/Game/AssetDesign/Test/BP_Dongguo_106.BP_Dongguo_106",
     UnitId = 106,
-    UnitParams = T.RT_16,
+    UnitParams = T.RT_17,
     UnitRealType = "Mechanism"
   },
   [107] = {
@@ -1167,7 +1280,7 @@ return ReadOnly("Mechanism", {
     Camp = "Monster",
     UnitBPPath = "/Game/AssetDesign/Test/BP_Dongguo_107.BP_Dongguo_107",
     UnitId = 107,
-    UnitParams = T.RT_16,
+    UnitParams = T.RT_17,
     UnitRealType = "Mechanism"
   },
   [108] = {
@@ -1175,7 +1288,7 @@ return ReadOnly("Mechanism", {
     Camp = "Monster",
     UnitBPPath = "/Game/AssetDesign/Test/BP_Dongguo_108.BP_Dongguo_108",
     UnitId = 108,
-    UnitParams = T.RT_16,
+    UnitParams = T.RT_17,
     UnitRealType = "Mechanism"
   },
   [109] = {
@@ -1183,7 +1296,7 @@ return ReadOnly("Mechanism", {
     Camp = "Monster",
     UnitBPPath = "/Game/AssetDesign/Test/BP_Dongguo_109.BP_Dongguo_109",
     UnitId = 109,
-    UnitParams = T.RT_26,
+    UnitParams = T.RT_27,
     UnitRealType = "Mechanism"
   },
   [110] = {
@@ -1191,7 +1304,7 @@ return ReadOnly("Mechanism", {
     Camp = "Monster",
     UnitBPPath = "/Game/AssetDesign/Test/BP_Dongguo_110.BP_Dongguo_110",
     UnitId = 110,
-    UnitParams = T.RT_16,
+    UnitParams = T.RT_17,
     UnitRealType = "Mechanism"
   },
   [111] = {
@@ -1200,63 +1313,71 @@ return ReadOnly("Mechanism", {
     RewardId = 2120101,
     UnitBPPath = "/Game/AssetDesign/Test/BP_Dongguo_111.BP_Dongguo_111",
     UnitId = 111,
-    UnitParams = T.RT_16,
+    UnitParams = T.RT_17,
     UnitRealType = "Mechanism"
   },
   [112] = {
     BattleRoleId = 390131,
-    BloodUIParmas = T.RT_10,
+    BloodUIParmas = T.RT_11,
     Camp = "Player",
     FirstSeenTag = "Paotai",
     FirstStateId = 12,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
-    GuideInfo = T.RT_11,
+    GuideInfo = T.RT_12,
     InteractiveId = 99,
     ModelId = 999,
-    StateIdList = T.RT_12,
+    StateIdList = T.RT_13,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_Paotai_Rouge01.BP_Paotai_Rouge01",
     UnitId = 112,
     UnitRealType = "Mechanism"
   },
   [113] = {
     BattleRoleId = 390132,
-    BloodUIParmas = T.RT_10,
+    BloodUIParmas = T.RT_11,
     Camp = "Player",
     FirstSeenTag = "Paotai",
     FirstStateId = 13,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
-    GuideInfo = T.RT_11,
+    GuideInfo = T.RT_12,
     InteractiveId = 99,
     ModelId = 999,
-    StateIdList = T.RT_12,
+    StateIdList = T.RT_13,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_Paotai_Activity01.BP_Paotai_Activity01",
     UnitId = 113,
     UnitRealType = "Mechanism"
   },
   [114] = {
     BattleRoleId = 390132,
-    BloodUIParmas = T.RT_10,
+    BloodUIParmas = T.RT_11,
     Camp = "Player",
     FirstSeenTag = "Paotai",
     FirstStateId = 12,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
-    GuideInfo = T.RT_11,
+    GuideInfo = T.RT_12,
     InteractiveId = 99,
     ModelId = 999,
-    StateIdList = T.RT_12,
+    StateIdList = T.RT_13,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_Paotai_YW.BP_Paotai_YW",
     UnitId = 114,
     UnitRealType = "Mechanism"
   },
   [115] = {
-    BattleRoleId = 39013,
-    BloodUIParmas = T.RT_10,
+    BattleRoleId = 390133,
+    BloodUIParmas = T.RT_11,
     Camp = "Player",
     FirstSeenTag = "Paotai",
+    FirstStateId = 1153,
     ModelId = 999,
+    StateIdList = {
+      1150,
+      1151,
+      1152,
+      1153,
+      1154
+    },
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_Paotai_Auto.BP_Paotai_Auto",
     UnitId = 115,
     UnitRealType = "Mechanism"
@@ -1264,7 +1385,7 @@ return ReadOnly("Mechanism", {
   [201] = {
     FirstStateId = 104010,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
-    StateIdList = T.RT_8,
+    StateIdList = T.RT_9,
     UnitBPPath = "/Game/BluePrints/Item/Door/BP_AbyssAutoDoor.BP_AbyssAutoDoor",
     UnitId = 201,
     UnitRealType = "ConditionalGate"
@@ -1294,7 +1415,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 610010,
     InteractiveId = 915,
     RewardId = 4010001,
-    StateIdList = T.RT_2,
+    StateIdList = T.RT_3,
     UnitBPPath = "/Game/BluePrints/Item/Harvest/BP_HarvestBase.BP_HarvestBase",
     UnitId = 1001,
     UnitRealType = "Collection"
@@ -1304,14 +1425,14 @@ return ReadOnly("Mechanism", {
     InteractiveId = 91501,
     ModelId = 92601,
     RewardId = 4010001,
-    StateIdList = T.RT_3,
+    StateIdList = T.RT_4,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_Butterfly.BP_Butterfly",
     UnitId = 1002,
     UnitRealType = "Collection"
   },
   [1003] = {
     BattleRoleId = 41002,
-    BloodUIParmas = T.RT_4,
+    BloodUIParmas = T.RT_5,
     Camp = "Monster",
     FirstStateId = 610024,
     ModelId = 92602,
@@ -1326,7 +1447,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 91507,
     ModelId = 92603,
     RewardId = 4010007,
-    StateIdList = T.RT_2,
+    StateIdList = T.RT_3,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_Shell.BP_Shell",
     UnitId = 1004,
     UnitRealType = "Collection"
@@ -1336,7 +1457,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 91503,
     ModelId = 92604,
     RewardId = 4010003,
-    StateIdList = T.RT_5,
+    StateIdList = T.RT_6,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_Fountain.BP_Fountain",
     UnitId = 1005,
     UnitRealType = "Collection"
@@ -1346,7 +1467,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 91502,
     ModelId = 92605,
     RewardId = 4010002,
-    StateIdList = T.RT_3,
+    StateIdList = T.RT_4,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_SnowButterfly.BP_SnowButterfly",
     UnitId = 1006,
     UnitRealType = "Collection"
@@ -1356,14 +1477,14 @@ return ReadOnly("Mechanism", {
     InteractiveId = 91506,
     ModelId = 926,
     RewardId = 4010006,
-    StateIdList = T.RT_2,
+    StateIdList = T.RT_3,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_PurpleFlower.BP_PurpleFlower",
     UnitId = 1007,
     UnitRealType = "Collection"
   },
   [1008] = {
     BattleRoleId = 41001,
-    BloodUIParmas = T.RT_4,
+    BloodUIParmas = T.RT_5,
     Camp = "Monster",
     FirstStateId = 610012,
     InteractiveId = 91510,
@@ -1382,7 +1503,7 @@ return ReadOnly("Mechanism", {
   },
   [1009] = {
     BattleRoleId = 41001,
-    BloodUIParmas = T.RT_4,
+    BloodUIParmas = T.RT_5,
     Camp = "Monster",
     FirstStateId = 610026,
     ModelId = 92607,
@@ -1398,7 +1519,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 91508,
     ModelId = 92608,
     RewardId = 4010008,
-    StateIdList = T.RT_2,
+    StateIdList = T.RT_3,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_Icegrass.BP_Icegrass",
     UnitId = 1010,
     UnitRealType = "Collection"
@@ -1408,7 +1529,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 91504,
     ModelId = 92610,
     RewardId = 4010004,
-    StateIdList = T.RT_2,
+    StateIdList = T.RT_3,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_Mushroom.BP_Mushroom",
     UnitId = 1012,
     UnitRealType = "Collection"
@@ -1434,7 +1555,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 91512,
     ModelId = 92609,
     RewardId = 4010009,
-    StateIdList = T.RT_5,
+    StateIdList = T.RT_6,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_Yuesuiye2.BP_Yuesuiye2",
     UnitId = 1017,
     UnitRealType = "Collection"
@@ -1444,7 +1565,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 91512,
     ModelId = 92609,
     RewardId = 4010010,
-    StateIdList = T.RT_5,
+    StateIdList = T.RT_6,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_Yuesuiye4.BP_Yuesuiye4",
     UnitId = 1018,
     UnitRealType = "Collection"
@@ -1464,7 +1585,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 91514,
     ModelId = 92611,
     RewardId = 4010011,
-    StateIdList = T.RT_6,
+    StateIdList = T.RT_7,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_EmergencyBattery.BP_EmergencyBattery",
     UnitId = 1020,
     UnitRealType = "Collection"
@@ -1474,7 +1595,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 91515,
     ModelId = 92613,
     RewardId = 4010012,
-    StateIdList = T.RT_6,
+    StateIdList = T.RT_7,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_WallFlowerBlue.BP_WallFlowerBlue",
     UnitId = 1021,
     UnitRealType = "Collection"
@@ -1484,7 +1605,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 91516,
     ModelId = 92614,
     RewardId = 4010013,
-    StateIdList = T.RT_6,
+    StateIdList = T.RT_7,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_WallFlowerRed.BP_WallFlowerRed",
     UnitId = 1022,
     UnitRealType = "Collection"
@@ -1494,7 +1615,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 91517,
     ModelId = 92612,
     RewardId = 4010014,
-    StateIdList = T.RT_6,
+    StateIdList = T.RT_7,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_BirdNest.BP_BirdNest",
     UnitId = 1023,
     UnitRealType = "Collection"
@@ -1504,7 +1625,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 91518,
     ModelId = 92615,
     RewardId = 4010015,
-    StateIdList = T.RT_2,
+    StateIdList = T.RT_3,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_RedMushroom.BP_RedMushroom",
     UnitId = 1024,
     UnitRealType = "Collection"
@@ -1514,7 +1635,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 91506,
     ModelId = 926,
     RewardId = 4010006,
-    StateIdList = T.RT_7,
+    StateIdList = T.RT_8,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_PurpleFlower.BP_PurpleFlower",
     UnitId = 1025,
     UnitRealType = "Collection"
@@ -1524,7 +1645,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 91508,
     ModelId = 92608,
     RewardId = 4010008,
-    StateIdList = T.RT_7,
+    StateIdList = T.RT_8,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_Icegrass.BP_Icegrass",
     UnitId = 1026,
     UnitRealType = "Collection"
@@ -1534,7 +1655,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 91504,
     ModelId = 92610,
     RewardId = 4010004,
-    StateIdList = T.RT_7,
+    StateIdList = T.RT_8,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_Mushroom.BP_Mushroom",
     UnitId = 1027,
     UnitRealType = "Collection"
@@ -1544,7 +1665,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 91519,
     ModelId = 92616,
     RewardId = 4010016,
-    StateIdList = T.RT_2,
+    StateIdList = T.RT_3,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_HX_Vesperleaf.BP_HX_Vesperleaf",
     UnitId = 1028,
     UnitRealType = "Collection"
@@ -1554,14 +1675,14 @@ return ReadOnly("Mechanism", {
     InteractiveId = 91520,
     ModelId = 92617,
     RewardId = 4010017,
-    StateIdList = T.RT_2,
+    StateIdList = T.RT_3,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_HX_PollutedStone.BP_HX_PollutedStone",
     UnitId = 1029,
     UnitRealType = "Collection"
   },
   [1030] = {
     BattleRoleId = 41001,
-    BloodUIParmas = T.RT_4,
+    BloodUIParmas = T.RT_5,
     Camp = "Monster",
     FirstStateId = 610035,
     ModelId = 92618,
@@ -1576,7 +1697,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 91522,
     ModelId = 92624,
     RewardId = 4010018,
-    StateIdList = T.RT_2,
+    StateIdList = T.RT_3,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_HX_AncientWeapon.BP_HX_AncientWeapon",
     UnitId = 1036,
     UnitRealType = "Collection"
@@ -1586,7 +1707,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 91523,
     ModelId = 92625,
     RewardId = 4010019,
-    StateIdList = T.RT_2,
+    StateIdList = T.RT_3,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_HX_Grasshopper.BP_HX_Grasshopper",
     UnitId = 1037,
     UnitRealType = "Collection"
@@ -1596,7 +1717,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 91524,
     ModelId = 92626,
     RewardId = 4010020,
-    StateIdList = T.RT_2,
+    StateIdList = T.RT_3,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_HX_Lizard.BP_HX_Lizard",
     UnitId = 1038,
     UnitRealType = "Collection"
@@ -1606,7 +1727,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 91525,
     ModelId = 92627,
     RewardId = 4010021,
-    StateIdList = T.RT_2,
+    StateIdList = T.RT_3,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_HX_TreeFrog.BP_HX_TreeFrog",
     UnitId = 1039,
     UnitRealType = "Collection"
@@ -1615,7 +1736,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 610010,
     InteractiveId = 91526,
     RewardId = 4010022,
-    StateIdList = T.RT_2,
+    StateIdList = T.RT_3,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_HX_DustButterfly.BP_HX_DustButterfly",
     UnitId = 1040,
     UnitRealType = "Collection"
@@ -1625,7 +1746,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 91514,
     ModelId = 92611,
     RewardId = 4010011,
-    StateIdList = T.RT_7,
+    StateIdList = T.RT_8,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_EmergencyBattery.BP_EmergencyBattery",
     UnitId = 1041,
     UnitRealType = "Collection"
@@ -1635,7 +1756,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 91506,
     ModelId = 926,
     RewardId = 4010006,
-    StateIdList = T.RT_2,
+    StateIdList = T.RT_3,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_RogueRock.BP_RogueRock",
     UnitId = 1042,
     UnitRealType = "Collection"
@@ -1645,7 +1766,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 91506,
     ModelId = 926,
     RewardId = 4010006,
-    StateIdList = T.RT_2,
+    StateIdList = T.RT_3,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_RogueGrass.BP_RogueGrass",
     UnitId = 1043,
     UnitParams = {
@@ -1802,7 +1923,7 @@ return ReadOnly("Mechanism", {
   [1813] = {
     FirstStateId = 2514,
     InteractiveId = 105,
-    StateIdList = T.RT_94,
+    StateIdList = T.RT_107,
     UnitBPPath = "/Game/BluePrints/Item/Delivery/DeliveryMechanism",
     UnitId = 1813,
     UnitRealType = "Delivery"
@@ -1810,7 +1931,7 @@ return ReadOnly("Mechanism", {
   [1814] = {
     FirstStateId = 2514,
     InteractiveId = 105,
-    StateIdList = T.RT_94,
+    StateIdList = T.RT_107,
     UnitBPPath = "/Game/BluePrints/Item/Delivery/DeliveryMechanism",
     UnitId = 1814,
     UnitRealType = "Delivery"
@@ -2007,51 +2128,99 @@ return ReadOnly("Mechanism", {
     UnitId = 1830,
     UnitRealType = "Delivery"
   },
+  [1831] = {
+    FirstStateId = 2530,
+    InteractiveId = 105,
+    StateIdList = {
+      2530,
+      26,
+      27
+    },
+    UnitBPPath = "/Game/BluePrints/Item/Delivery/DeliveryMechanism",
+    UnitId = 1831,
+    UnitRealType = "Delivery"
+  },
+  [1832] = {
+    FirstStateId = 2531,
+    InteractiveId = 105,
+    StateIdList = {
+      2531,
+      26,
+      27
+    },
+    UnitBPPath = "/Game/BluePrints/Item/Delivery/DeliveryMechanism",
+    UnitId = 1832,
+    UnitRealType = "Delivery"
+  },
+  [1833] = {
+    FirstStateId = 2532,
+    InteractiveId = 105,
+    StateIdList = {
+      2532,
+      26,
+      27
+    },
+    UnitBPPath = "/Game/BluePrints/Item/Delivery/DeliveryMechanism",
+    UnitId = 1833,
+    UnitRealType = "Delivery"
+  },
+  [1834] = {
+    FirstStateId = 2533,
+    InteractiveId = 105,
+    StateIdList = {
+      2533,
+      26,
+      27
+    },
+    UnitBPPath = "/Game/BluePrints/Item/Delivery/DeliveryMechanism",
+    UnitId = 1834,
+    UnitRealType = "Delivery"
+  },
   [10401] = {
     FirstStateId = 104010,
-    StateIdList = T.RT_8,
+    StateIdList = T.RT_9,
     UnitBPPath = "/Game/AssetDesign/Item/Door/BP_ConditionalGate_Prologue.BP_ConditionalGate_Prologue",
     UnitId = 10401,
     UnitRealType = "ConditionalGate"
   },
   [10402] = {
     FirstStateId = 104010,
-    StateIdList = T.RT_8,
+    StateIdList = T.RT_9,
     UnitBPPath = "/Game/AssetDesign/Item/Door/BP_ConditionalGate_Quarry.BP_ConditionalGate_Quarry",
     UnitId = 10402,
     UnitRealType = "ConditionalGate"
   },
   [10403] = {
     FirstStateId = 104070,
-    StateIdList = T.RT_9,
+    StateIdList = T.RT_10,
     UnitBPPath = "/Game/AssetDesign/Item/Door/BP_ConditionalGate_Quarry.BP_ConditionalGate_Quarry",
     UnitId = 10403,
     UnitRealType = "ConditionalGate"
   },
   [10404] = {
     FirstStateId = 104010,
-    StateIdList = T.RT_8,
+    StateIdList = T.RT_9,
     UnitBPPath = "/Game/AssetDesign/Item/Door/BP_ConditionalGate_FortA.BP_ConditionalGate_FortA",
     UnitId = 10404,
     UnitRealType = "ConditionalGate"
   },
   [10405] = {
     FirstStateId = 104010,
-    StateIdList = T.RT_8,
+    StateIdList = T.RT_9,
     UnitBPPath = "/Game/AssetDesign/Item/Door/BP_ConditionalGate_SanatoriumA.BP_ConditionalGate_SanatoriumA",
     UnitId = 10405,
     UnitRealType = "ConditionalGate"
   },
   [10406] = {
     FirstStateId = 104070,
-    StateIdList = T.RT_9,
+    StateIdList = T.RT_10,
     UnitBPPath = "/Game/AssetDesign/Item/Door/BP_ConditionalGate_SanatoriumB.BP_ConditionalGate_SanatoriumB",
     UnitId = 10406,
     UnitRealType = "ConditionalGate"
   },
   [10407] = {
     FirstStateId = 104070,
-    StateIdList = T.RT_9,
+    StateIdList = T.RT_10,
     UnitBPPath = "/Game/AssetDesign/Item/Door/BP_ConditionalGate_PrologueB.BP_ConditionalGate_PrologueB",
     UnitId = 10407,
     UnitRealType = "ConditionalGate"
@@ -2061,35 +2230,35 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     GuideType = 1,
-    StateIdList = T.RT_8,
+    StateIdList = T.RT_9,
     UnitBPPath = "/Game/AssetDesign/Item/Door/BP_ConditionalGate_Rescue.BP_ConditionalGate_Rescue",
     UnitId = 10408,
     UnitRealType = "ConditionalGate"
   },
   [10409] = {
     FirstStateId = 104010,
-    StateIdList = T.RT_8,
+    StateIdList = T.RT_9,
     UnitBPPath = "/Game/AssetDesign/Item/Door/BP_ConditionalGate_FortB.BP_ConditionalGate_FortB",
     UnitId = 10409,
     UnitRealType = "ConditionalGate"
   },
   [10410] = {
     FirstStateId = 104010,
-    StateIdList = T.RT_8,
+    StateIdList = T.RT_9,
     UnitBPPath = "/Game/AssetDesign/Item/Door/BP_ConditionalGate_FortC.BP_ConditionalGate_FortC",
     UnitId = 10410,
     UnitRealType = "ConditionalGate"
   },
   [10411] = {
     FirstStateId = 104010,
-    StateIdList = T.RT_8,
+    StateIdList = T.RT_9,
     UnitBPPath = "/Game/AssetDesign/Item/Door/BP_ConditionalGate_SewerA.BP_ConditionalGate_SewerA",
     UnitId = 10411,
     UnitRealType = "ConditionalGate"
   },
   [10412] = {
     FirstStateId = 104010,
-    StateIdList = T.RT_8,
+    StateIdList = T.RT_9,
     UnitBPPath = "/Game/AssetDesign/Item/Door/BP_ConditionalGate_SewerB.BP_ConditionalGate_SewerB",
     UnitId = 10412,
     UnitRealType = "ConditionalGate"
@@ -2099,28 +2268,28 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     GuideType = 1,
-    StateIdList = T.RT_8,
+    StateIdList = T.RT_9,
     UnitBPPath = "/Game/AssetDesign/Item/Door/BP_ConditionalGate_Sew_Rescue.BP_ConditionalGate_Sew_Rescue",
     UnitId = 10413,
     UnitRealType = "ConditionalGate"
   },
   [10414] = {
     FirstStateId = 104010,
-    StateIdList = T.RT_8,
+    StateIdList = T.RT_9,
     UnitBPPath = "/Game/AssetDesign/Item/Door/BP_ConditionalGate_Temple_01.BP_ConditionalGate_Temple_01",
     UnitId = 10414,
     UnitRealType = "ConditionalGate"
   },
   [10415] = {
     FirstStateId = 104010,
-    StateIdList = T.RT_8,
+    StateIdList = T.RT_9,
     UnitBPPath = "/Game/AssetDesign/Item/Door/BP_ConditionalGate_Temple_02.BP_ConditionalGate_Temple_02",
     UnitId = 10415,
     UnitRealType = "ConditionalGate"
   },
   [10416] = {
     FirstStateId = 104010,
-    StateIdList = T.RT_8,
+    StateIdList = T.RT_9,
     UnitBPPath = "/Game/AssetDesign/Item/Door/BP_ConditionalGate_Train.BP_ConditionalGate_Train",
     UnitId = 10416,
     UnitRealType = "ConditionalGate"
@@ -2128,7 +2297,7 @@ return ReadOnly("Mechanism", {
   [10501] = {
     FirstStateId = 105010,
     ModelId = 902,
-    StateIdList = T.RT_13,
+    StateIdList = T.RT_14,
     UnitBPPath = "/Game/AssetDesign/Level/Prop/BP_RockBlock_Prologue.BP_RockBlock_Prologue",
     UnitId = 10501,
     UnitRealType = "RockBlock"
@@ -2136,7 +2305,7 @@ return ReadOnly("Mechanism", {
   [10502] = {
     FirstStateId = 105010,
     ModelId = 9021,
-    StateIdList = T.RT_13,
+    StateIdList = T.RT_14,
     UnitBPPath = "/Game/AssetDesign/Level/Prop/BP_RockBlock_Fort.BP_RockBlock_Fort",
     UnitId = 10502,
     UnitRealType = "RockBlock"
@@ -2146,10 +2315,10 @@ return ReadOnly("Mechanism", {
     Camp = "Hostile",
     FirstStateId = 105010,
     ModelId = 9021,
-    StateIdList = T.RT_13,
+    StateIdList = T.RT_14,
     UnitBPPath = "/Game/AssetDesign/Level/Prop/BP_RockBlock_FortB.BP_RockBlock_FortB",
     UnitId = 10503,
-    UnitParams = T.RT_14,
+    UnitParams = T.RT_15,
     UnitRealType = "RockBlock"
   },
   [10504] = {
@@ -2157,10 +2326,10 @@ return ReadOnly("Mechanism", {
     Camp = "Hostile",
     FirstStateId = 105010,
     ModelId = 9021,
-    StateIdList = T.RT_13,
+    StateIdList = T.RT_14,
     UnitBPPath = "/Game/AssetDesign/Level/Prop/BP_RockBlock_FortC.BP_RockBlock_FortC",
     UnitId = 10504,
-    UnitParams = T.RT_14,
+    UnitParams = T.RT_15,
     UnitRealType = "RockBlock"
   },
   [10601] = {
@@ -2232,7 +2401,7 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     NeedBuffManager = false,
-    StateIdList = T.RT_17,
+    StateIdList = T.RT_18,
     UnitBPPath = "/Game/AssetDesign/Level/EN002_Imperial/BP_Ail_Feiting.BP_Ail_Feiting",
     UnitId = 10608,
     UnitRealType = "Mechanism"
@@ -2280,7 +2449,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 916,
     ModelId = 9143,
     NeedBuffManager = false,
-    StateIdList = T.RT_18,
+    StateIdList = T.RT_19,
     UnitBPPath = "/Game/AssetDesign/Item/InteractiveItems/BP_Computer_Fort.BP_Computer_Fort",
     UnitId = 10612,
     UnitRealType = "Mechanism"
@@ -2375,7 +2544,7 @@ return ReadOnly("Mechanism", {
   [10621] = {
     FirstStateId = 1062100,
     InteractiveId = 10563,
-    StateIdList = T.RT_20,
+    StateIdList = T.RT_21,
     UnitBPPath = "/Game/AssetDesign/Level/EN002_Imperial/BP_KuangKengCystal_S.BP_KuangKengCystal_S",
     UnitId = 10621,
     UnitRealType = "Mechanism"
@@ -2394,7 +2563,7 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     ModelId = 925,
     NeedBuffManager = true,
-    StateIdList = T.RT_21,
+    StateIdList = T.RT_22,
     UnitBPPath = "/Game/AssetDesign/Item/CombatProp/BP_CombatProp_SteamA.BP_CombatProp_SteamA",
     UnitId = 10701,
     UnitParams = {
@@ -2419,10 +2588,10 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     ModelId = 925,
     NeedBuffManager = true,
-    StateIdList = T.RT_23,
+    StateIdList = T.RT_24,
     UnitBPPath = "/Game/AssetDesign/Item/CombatProp/BP_CombatProp_SteamB.BP_CombatProp_SteamB",
     UnitId = 10702,
-    UnitParams = T.RT_24,
+    UnitParams = T.RT_25,
     UnitRealType = "SteamMechanism"
   },
   [10801] = {
@@ -2440,7 +2609,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 101,
     ModelId = 919,
     NeedBuffManager = true,
-    StateIdList = T.RT_27,
+    StateIdList = T.RT_28,
     UnitBPPath = "/Game/AssetDesign/Item/InteractiveItems/BP_ABSwitch_Fort.BP_ABSwitch_Fort",
     UnitId = 10901,
     UnitRealType = "LogicMechanism"
@@ -2448,19 +2617,19 @@ return ReadOnly("Mechanism", {
   [11001] = {
     UnitBPPath = "/Game/BluePrints/Item/AirWall/BP_AirDoorCylinder.BP_AirDoorCylinder",
     UnitId = 11001,
-    UnitParams = T.RT_29,
+    UnitParams = T.RT_30,
     UnitRealType = "AOITriggerBox"
   },
   [11002] = {
     UnitBPPath = "/Game/BluePrints/Item/AirWall/BP_AirDoorBox.BP_AirDoorBox",
     UnitId = 11002,
-    UnitParams = T.RT_29,
+    UnitParams = T.RT_30,
     UnitRealType = "AOITriggerBox"
   },
   [11003] = {
     UnitBPPath = "/Game/BluePrints/Item/AirWall/BP_AirDoor.BP_AirDoor",
     UnitId = 11003,
-    UnitParams = T.RT_29,
+    UnitParams = T.RT_30,
     UnitRealType = "AOITriggerBox"
   },
   [11004] = {
@@ -2503,7 +2672,7 @@ return ReadOnly("Mechanism", {
   [11011] = {
     UnitBPPath = "/Game/BluePrints/Item/AirWall/BP_AirDoorCylinder_RemoveNavi.BP_AirDoorCylinder_RemoveNavi",
     UnitId = 11011,
-    UnitParams = T.RT_29,
+    UnitParams = T.RT_30,
     UnitRealType = "AOITriggerBox"
   },
   [11012] = {
@@ -2520,7 +2689,7 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     ModelId = 920,
     NeedBuffManager = true,
-    StateIdList = T.RT_30,
+    StateIdList = T.RT_31,
     UnitBPPath = "/Game/AssetDesign/Item/CombatProp/BP_HitSwitch_Fort.BP_HitSwitch_Fort",
     UnitId = 11101,
     UnitRealType = "LogicMechanism"
@@ -2551,7 +2720,7 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     ModelId = 920,
     NeedBuffManager = true,
-    StateIdList = T.RT_32,
+    StateIdList = T.RT_33,
     UnitBPPath = "/Game/AssetDesign/Item/CombatProp/BP_HitSwitch_Fort.BP_HitSwitch_Fort",
     UnitId = 11103,
     UnitRealType = "LogicMechanism"
@@ -2599,18 +2768,13 @@ return ReadOnly("Mechanism", {
   },
   [11201] = {
     BattleRoleId = 39014,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "Monster",
     FirstStateId = 112010,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     NeedBuffManager = true,
-    StateIdList = {
-      112010,
-      112011,
-      112012,
-      112013
-    },
+    StateIdList = T.RT_35,
     UnitBPPath = "/Game/AssetDesign/Item/MonsterSpawn/BP_MonsterNest_Fort.BP_MonsterNest_Fort",
     UnitId = 11201,
     UnitRealType = "MonsterNest"
@@ -2655,12 +2819,12 @@ return ReadOnly("Mechanism", {
   },
   [11701] = {
     BattleRoleId = 11701,
-    BloodUIParmas = T.RT_38,
+    BloodUIParmas = T.RT_41,
     Camp = "Monster",
     FirstStateId = 1170100,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
-    StateIdList = T.RT_39,
+    StateIdList = T.RT_42,
     UnitBPPath = "/Game/AssetDesign/Item/CombatProp/BP_ToughnessWall.BP_ToughnessWall",
     UnitId = 11701,
     UnitRealType = "ToughnessWall"
@@ -2670,11 +2834,11 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_101,
+    GuideInfo = T.RT_118,
     GuideType = 1,
     InteractiveId = 70000,
     ModelId = 910,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/BluePrints/Item/Chest/BP_Chest_RougePro_Low.BP_Chest_RougePro_Low",
     UnitId = 37001,
     UnitRealType = "Chest"
@@ -2684,11 +2848,11 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_101,
+    GuideInfo = T.RT_118,
     GuideType = 1,
     InteractiveId = 70000,
     ModelId = 911,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/BluePrints/Item/Chest/BP_Chest_RougePro_Mid.BP_Chest_RougePro_Mid",
     UnitId = 37002,
     UnitRealType = "Chest"
@@ -2698,11 +2862,11 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_101,
+    GuideInfo = T.RT_118,
     GuideType = 1,
     InteractiveId = 70000,
     ModelId = 912,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/BluePrints/Item/Chest/BP_Chest_RougePro_High.BP_Chest_RougePro_High",
     UnitId = 37003,
     UnitRealType = "Chest"
@@ -2712,11 +2876,11 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_101,
+    GuideInfo = T.RT_118,
     GuideType = 1,
     InteractiveId = 70000,
     ModelId = 912,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/BluePrints/Item/Chest/BP_Chest_Rougepro_Final.BP_Chest_Rougepro_Final",
     UnitId = 37004,
     UnitRealType = "Chest"
@@ -2726,7 +2890,7 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_101,
+    GuideInfo = T.RT_118,
     GuideType = 1,
     InteractiveId = 70000,
     ModelId = 912,
@@ -2745,13 +2909,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_82,
+    GuideInfo = T.RT_85,
     GuideType = 1,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 910,
     RewardId = 1501,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Explore_Chest_Low.BP_Explore_Chest_Low",
     UnitId = 38001,
     UnitRealType = "Chest"
@@ -2761,13 +2925,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_82,
+    GuideInfo = T.RT_85,
     GuideType = 1,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 911,
     RewardId = 1502,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Explore_Chest_Mid.BP_Explore_Chest_Mid",
     UnitId = 38002,
     UnitRealType = "Chest"
@@ -2777,13 +2941,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_82,
+    GuideInfo = T.RT_85,
     GuideType = 1,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 912,
     RewardId = 1503,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Explore_Chest_High.BP_Explore_Chest_High",
     UnitId = 38003,
     UnitRealType = "Chest"
@@ -2796,7 +2960,7 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     GuideVisibility = true,
     RewardId = 1504,
-    StateIdList = T.RT_102,
+    StateIdList = T.RT_119,
     UnitBPPath = "/Game/AssetDesign/Item/BreakableItems/BP_BreakableMechanism_RE.BP_BreakableMechanism_RE",
     UnitId = 38004,
     UnitRealType = "Mechanism"
@@ -2805,14 +2969,14 @@ return ReadOnly("Mechanism", {
     BattleRoleId = 40001,
     Camp = "Monster",
     FirstStateId = 380051,
-    StateIdList = T.RT_103,
+    StateIdList = T.RT_120,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/BreakableItem/DungeonRandomEvent/BP_BreakableItem_RE01.BP_BreakableItem_RE01",
     UnitId = 38005,
     UnitRealType = "BreakableItem"
   },
   [39001] = {
     BattleRoleId = 39001,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "DefenceCore",
     FirstStateId = 390012,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
@@ -2821,21 +2985,21 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     ModelId = 922,
     NeedBuffManager = true,
-    StateIdList = T.RT_104,
+    StateIdList = T.RT_121,
     UnitBPPath = "/Game/BluePrints/Item/DefenceCore/BP_DefenceMechanism.BP_DefenceMechanism",
     UnitId = 39001,
     UnitName = "UI_DUNGEON_HOSTAGE",
-    UnitParams = T.RT_105,
+    UnitParams = T.RT_122,
     UnitRealType = "DefenceCore"
   },
   [39002] = {
     BattleRoleId = 39002,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "Hostile",
     FirstStateId = 7,
     ModelId = 999,
     NeedBuffManager = true,
-    StateIdList = T.RT_111,
+    StateIdList = T.RT_128,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_Laser_New.BP_Laser_New",
     UnitId = 39002,
     UnitParams = {
@@ -2850,12 +3014,12 @@ return ReadOnly("Mechanism", {
   },
   [39003] = {
     BattleRoleId = 39003,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "Hostile",
     FirstStateId = 7,
     ModelId = 999,
     NeedBuffManager = true,
-    StateIdList = T.RT_111,
+    StateIdList = T.RT_128,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_Laser_New.BP_Laser_New",
     UnitId = 39003,
     UnitParams = {
@@ -2870,7 +3034,7 @@ return ReadOnly("Mechanism", {
   },
   [39004] = {
     BattleRoleId = 39004,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "Hostile",
     FirstStateId = 5,
     ModelId = 999,
@@ -2911,7 +3075,7 @@ return ReadOnly("Mechanism", {
     StateIdList = {390060, 390061},
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_RockTrap.BP_RockTrap",
     UnitId = 39006,
-    UnitParams = T.RT_113,
+    UnitParams = T.RT_130,
     UnitRealType = "RockTrap"
   },
   [39007] = {
@@ -2919,7 +3083,7 @@ return ReadOnly("Mechanism", {
     Camp = "Hostile",
     FirstStateId = 3900700,
     NeedBuffManager = true,
-    StateIdList = T.RT_114,
+    StateIdList = T.RT_131,
     UnitBPPath = "/Game/AssetDesign/Item/FieldCreature/BP_FieldCreature_Slow.BP_FieldCreature_Slow",
     UnitId = 39007,
     UnitParams = {SkillEnter = 900006, SkillLeave = 900007},
@@ -2927,7 +3091,7 @@ return ReadOnly("Mechanism", {
   },
   [39008] = {
     BattleRoleId = 39008,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "DefenceCore",
     FirstStateId = 390012,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
@@ -2935,11 +3099,11 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     ModelId = 922,
     NeedBuffManager = true,
-    StateIdList = T.RT_104,
+    StateIdList = T.RT_121,
     UnitBPPath = "/Game/BluePrints/Item/DefenceCore/BP_DefenceMechanism.BP_DefenceMechanism",
     UnitId = 39008,
     UnitName = "UI_DUNGEON_HOSTAGE",
-    UnitParams = T.RT_105,
+    UnitParams = T.RT_122,
     UnitRealType = "DefenceCore"
   },
   [39009] = {
@@ -2961,11 +3125,11 @@ return ReadOnly("Mechanism", {
   [39010] = {
     UnitBPPath = "/Game/BluePrints/Item/Trap/BP_FallingPlatform.BP_FallingPlatform",
     UnitId = 39010,
-    UnitParams = T.RT_116,
+    UnitParams = T.RT_133,
     UnitRealType = "FallingPlatform"
   },
   [39011] = {
-    AccessoryIds = T.RT_118,
+    AccessoryIds = T.RT_135,
     BattleRoleId = 40003,
     Camp = "DefenceCore",
     ModelId = 917,
@@ -3013,14 +3177,14 @@ return ReadOnly("Mechanism", {
     },
     UnitBPPath = "/Game/BluePrints/Item/AirWall/BP_TrapArea.BP_TrapArea",
     UnitId = 39016,
-    UnitParams = T.RT_115,
+    UnitParams = T.RT_132,
     UnitRealType = "FieldTrap"
   },
   [39017] = {
     BattleRoleId = 39017,
     Camp = "Monster",
     FirstStateId = 3901700,
-    StateIdList = T.RT_119,
+    StateIdList = T.RT_136,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_ElectricGrid.BP_ElectricGrid",
     UnitId = 39017,
     UnitParams = {
@@ -3034,22 +3198,22 @@ return ReadOnly("Mechanism", {
     BattleRoleId = 39006,
     Camp = "Hostile",
     FirstStateId = 3901800,
-    GuideInfo = T.RT_106,
+    GuideInfo = T.RT_123,
     GuideText = "UI_DUNGEON_GUIDE_DEFENCEMECHANISM",
     GuideType = 0,
     ModelId = 999,
     NeedBuffManager = true,
-    StateIdList = T.RT_120,
+    StateIdList = T.RT_137,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_NewRockTrap.BP_NewRockTrap",
     UnitId = 39018,
-    UnitParams = T.RT_113,
+    UnitParams = T.RT_130,
     UnitRealType = "Mechanism"
   },
   [39019] = {
     BattleRoleId = 39017,
     Camp = "Monster",
     FirstStateId = 3901700,
-    StateIdList = T.RT_119,
+    StateIdList = T.RT_136,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_ElectricGrid.BP_ElectricGrid",
     UnitId = 39019,
     UnitParams = {
@@ -3061,7 +3225,7 @@ return ReadOnly("Mechanism", {
   },
   [39020] = {
     BattleRoleId = 39020,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "Hostile",
     FirstStateId = 3902001,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
@@ -3101,28 +3265,28 @@ return ReadOnly("Mechanism", {
     Camp = "Hostile",
     FirstStateId = 3901800,
     ModelId = 999,
-    StateIdList = T.RT_120,
+    StateIdList = T.RT_137,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_NewRockTrap_Ice.BP_NewRockTrap_Ice",
     UnitId = 39022,
-    UnitParams = T.RT_113,
+    UnitParams = T.RT_130,
     UnitRealType = "Mechanism"
   },
   [39023] = {
     FirstStateId = 3902300,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Alert.WBP_GuidePoint_Alert",
-    StateIdList = T.RT_122,
+    StateIdList = T.RT_139,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_RegionDrone.BP_RegionDrone",
     UnitId = 39023,
     UnitRealType = "Mechanism"
   },
   [39024] = {
     BattleRoleId = 39004,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "Hostile",
     FirstStateId = 3902401,
     ModelId = 999,
     NeedBuffManager = true,
-    StateIdList = T.RT_123,
+    StateIdList = T.RT_140,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_LaserAndShock.BP_LaserAndShock",
     UnitId = 39024,
     UnitParams = {
@@ -3143,21 +3307,21 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     UnitBPPath = "/Game/BluePrints/Item/FeinaEvent/BP_Bird_Feina.BP_Bird_Feina",
     UnitId = 39026,
-    UnitParams = T.RT_124,
+    UnitParams = T.RT_141,
     UnitRealType = "Mechanism"
   },
   [39027] = {
     BattleRoleId = 11101,
     Camp = "Monster",
     FirstStateId = 3902700,
-    StateIdList = T.RT_125,
+    StateIdList = T.RT_142,
     UnitBPPath = "/Game/BluePrints/Item/FeinaEvent/BP_FeinaEventChangeColorBase.BP_FeinaEventChangeColorBase",
     UnitId = 39027,
     UnitRealType = "Mechanism"
   },
   [39028] = {
     FirstStateId = 3902803,
-    StateIdList = T.RT_128,
+    StateIdList = T.RT_145,
     UnitBPPath = "/Game/BluePrints/Item/FeinaEvent/BP_Feina_Feather.BP_Feina_Feather",
     UnitId = 39028,
     UnitRealType = "Mechanism"
@@ -3182,12 +3346,7 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/UI_PC/World/ExploreToast/Explore_GuidePoint_PC.Explore_GuidePoint_PC",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DynQuest.T_Gp_DynQuest",
     InteractiveId = 10566,
-    StateIdList = {
-      3903000,
-      3903001,
-      3903002,
-      3903003
-    },
+    StateIdList = T.RT_90,
     UnitBPPath = "/Game/BluePrints/Item/FeinaEvent/BP_InteractivePoint.BP_InteractivePoint",
     UnitId = 39030,
     UnitRealType = "Mechanism"
@@ -3226,27 +3385,27 @@ return ReadOnly("Mechanism", {
     },
     UnitBPPath = "/Game/BluePrints/Item/FeinaEvent/BP_FeinaEventChangeColor_FogLight.BP_FeinaEventChangeColor_FogLight",
     UnitId = 39032,
-    UnitParams = T.RT_127,
+    UnitParams = T.RT_144,
     UnitRealType = "Mechanism"
   },
   [39033] = {
     BattleRoleId = 11101,
     Camp = "Monster",
     FirstStateId = 3902700,
-    StateIdList = T.RT_129,
+    StateIdList = T.RT_146,
     UnitBPPath = "/Game/BluePrints/Item/FeinaEvent/BP_FeinaEventChangeColor_Vine1.BP_FeinaEventChangeColor_Vine1",
     UnitId = 39033,
-    UnitParams = T.RT_127,
+    UnitParams = T.RT_144,
     UnitRealType = "Mechanism"
   },
   [39034] = {
     BattleRoleId = 11101,
     Camp = "Monster",
     FirstStateId = 3902700,
-    StateIdList = T.RT_129,
+    StateIdList = T.RT_146,
     UnitBPPath = "/Game/BluePrints/Item/FeinaEvent/BP_FeinaEventChangeColor_Vine2.BP_FeinaEventChangeColor_Vine2",
     UnitId = 39034,
-    UnitParams = T.RT_127,
+    UnitParams = T.RT_144,
     UnitRealType = "Mechanism"
   },
   [39035] = {
@@ -3268,7 +3427,7 @@ return ReadOnly("Mechanism", {
     NeedBuffManager = true,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_FeinaBuffItem.BP_FeinaBuffItem",
     UnitId = 39040,
-    UnitParams = T.RT_53,
+    UnitParams = T.RT_56,
     UnitRealType = "Mechanism"
   },
   [39041] = {
@@ -3319,7 +3478,7 @@ return ReadOnly("Mechanism", {
   [39045] = {
     FirstStateId = 3904500,
     InteractiveId = 10565,
-    StateIdList = T.RT_131,
+    StateIdList = T.RT_148,
     UnitBPPath = "/Game/BluePrints/Item/FeinaEvent/BP_FeinaEvacuation.BP_FeinaEvacuation",
     UnitId = 39045,
     UnitRealType = "Mechanism"
@@ -3332,7 +3491,7 @@ return ReadOnly("Mechanism", {
   [41014] = {
     FirstStateId = 10,
     InteractiveId = 916,
-    StateIdList = T.RT_37,
+    StateIdList = T.RT_40,
     UnitBPPath = "/Game/BluePrints/Item/RegionOnline/BP_ROMechanism_41014.BP_ROMechanism_41014",
     UnitId = 41014,
     UnitParams = {
@@ -3354,7 +3513,7 @@ return ReadOnly("Mechanism", {
   [41020] = {
     FirstStateId = 10,
     InteractiveId = 916,
-    StateIdList = T.RT_37,
+    StateIdList = T.RT_40,
     UnitBPPath = "/Game/BluePrints/Item/RegionOnline/BP_ROMechanism_41020.BP_ROMechanism_41020",
     UnitId = 41020,
     UnitParams = {
@@ -3376,7 +3535,7 @@ return ReadOnly("Mechanism", {
   [41032] = {
     FirstStateId = 10,
     InteractiveId = 916,
-    StateIdList = T.RT_37,
+    StateIdList = T.RT_40,
     UnitBPPath = "/Game/BluePrints/Item/RegionOnline/BP_ROMechanism_41032.BP_ROMechanism_41032",
     UnitId = 41032,
     UnitParams = {
@@ -3398,7 +3557,7 @@ return ReadOnly("Mechanism", {
   [41049] = {
     FirstStateId = 10,
     InteractiveId = 916,
-    StateIdList = T.RT_37,
+    StateIdList = T.RT_40,
     UnitBPPath = "/Game/BluePrints/Item/RegionOnline/BP_ROMechanism_41049.BP_ROMechanism_41049",
     UnitId = 41049,
     UnitParams = {
@@ -3425,7 +3584,7 @@ return ReadOnly("Mechanism", {
   [41050] = {
     FirstStateId = 10,
     InteractiveId = 916,
-    StateIdList = T.RT_37,
+    StateIdList = T.RT_40,
     UnitBPPath = "/Game/BluePrints/Item/RegionOnline/BP_ROMechanism_41050.BP_ROMechanism_41050",
     UnitId = 41050,
     UnitParams = {
@@ -3442,7 +3601,7 @@ return ReadOnly("Mechanism", {
   [41051] = {
     FirstStateId = 10,
     InteractiveId = 916,
-    StateIdList = T.RT_37,
+    StateIdList = T.RT_40,
     UnitBPPath = "/Game/BluePrints/Item/RegionOnline/BP_ROMechanism_41051.BP_ROMechanism_41051",
     UnitId = 41051,
     UnitParams = {
@@ -3464,24 +3623,42 @@ return ReadOnly("Mechanism", {
   [41052] = {
     FirstStateId = 10,
     InteractiveId = 916,
-    StateIdList = T.RT_37,
+    StateIdList = T.RT_40,
     UnitBPPath = "/Game/BluePrints/Item/RegionOnline/BP_ROMechanism_41052.BP_ROMechanism_41052",
     UnitId = 41052,
-    UnitParams = T.RT_135,
+    UnitParams = T.RT_152,
     UnitRealType = "Seat"
   },
   [41064] = {
     FirstStateId = 10,
     InteractiveId = 916,
-    StateIdList = T.RT_37,
+    StateIdList = T.RT_40,
     UnitBPPath = "/Game/BluePrints/Item/RegionOnline/BP_ROMechanism_41064.BP_ROMechanism_41064",
     UnitId = 41064,
-    UnitParams = T.RT_135,
+    UnitParams = T.RT_152,
+    UnitRealType = "Seat"
+  },
+  [41069] = {
+    FirstStateId = 10,
+    InteractiveId = 916,
+    StateIdList = T.RT_40,
+    UnitBPPath = "/Game/BluePrints/Item/RegionOnline/BP_ROMechanism_41069.BP_ROMechanism_41069",
+    UnitId = 41069,
+    UnitParams = T.RT_156,
+    UnitRealType = "Seat"
+  },
+  [41072] = {
+    FirstStateId = 10,
+    InteractiveId = 916,
+    StateIdList = T.RT_40,
+    UnitBPPath = "/Game/BluePrints/Item/RegionOnline/BP_ROMechanism_41072.BP_ROMechanism_41072",
+    UnitId = 41072,
+    UnitParams = T.RT_156,
     UnitRealType = "Seat"
   },
   [49001] = {
     BattleRoleId = 49001,
-    BloodUIParmas = T.RT_136,
+    BloodUIParmas = T.RT_157,
     Camp = "DefenceCore",
     FirstStateId = 4900104,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Level3.WBP_GuidePoint_Level3",
@@ -3489,7 +3666,7 @@ return ReadOnly("Mechanism", {
     ModelId = 923,
     NeedBuffManager = true,
     RepeatRewardCount = 12,
-    StateIdList = T.RT_137,
+    StateIdList = T.RT_158,
     UnitBPPath = "/Game/BluePrints/Item/DefenceCore/BP_Excavation_Small.BP_Excavation_Small",
     UnitId = 49001,
     UnitParams = {
@@ -3504,7 +3681,7 @@ return ReadOnly("Mechanism", {
   },
   [49002] = {
     BattleRoleId = 49002,
-    BloodUIParmas = T.RT_136,
+    BloodUIParmas = T.RT_157,
     Camp = "DefenceCore",
     FirstStateId = 4900104,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Level3.WBP_GuidePoint_Level3",
@@ -3512,7 +3689,7 @@ return ReadOnly("Mechanism", {
     ModelId = 923,
     NeedBuffManager = true,
     RepeatRewardCount = 12,
-    StateIdList = T.RT_137,
+    StateIdList = T.RT_158,
     UnitBPPath = "/Game/BluePrints/Item/DefenceCore/BP_Excavation_Middle.BP_Excavation_Middle",
     UnitId = 49002,
     UnitParams = {
@@ -3527,7 +3704,7 @@ return ReadOnly("Mechanism", {
   },
   [49003] = {
     BattleRoleId = 49003,
-    BloodUIParmas = T.RT_138,
+    BloodUIParmas = T.RT_159,
     Camp = "DefenceCore",
     FirstStateId = 4900104,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Level3.WBP_GuidePoint_Level3",
@@ -3535,7 +3712,7 @@ return ReadOnly("Mechanism", {
     ModelId = 923,
     NeedBuffManager = true,
     RepeatRewardCount = 12,
-    StateIdList = T.RT_137,
+    StateIdList = T.RT_158,
     UnitBPPath = "/Game/BluePrints/Item/DefenceCore/BP_Excavation_High.BP_Excavation_High",
     UnitId = 49003,
     UnitParams = {
@@ -3570,10 +3747,10 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_95,
+    StateIdList = T.RT_112,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame.BP_MiniGame",
     UnitId = 49005,
-    UnitParams = T.RT_81,
+    UnitParams = T.RT_84,
     UnitRealType = "MiniGame"
   },
   [49006] = {
@@ -3585,7 +3762,7 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_95,
+    StateIdList = T.RT_112,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame.BP_MiniGame",
     UnitId = 49006,
     UnitParams = {
@@ -3602,10 +3779,10 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_37,
+    StateIdList = T.RT_40,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame.BP_MiniGame",
     UnitId = 49007,
-    UnitParams = T.RT_80,
+    UnitParams = T.RT_83,
     UnitRealType = "Controller"
   },
   [49008] = {
@@ -3617,10 +3794,10 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     InteractiveId = 900,
     NeedBuffManager = true,
-    StateIdList = T.RT_157,
+    StateIdList = T.RT_178,
     UnitBPPath = "/Game/BluePrints/Item/Supply/BP_EnergySupply.BP_EnergySupply",
     UnitId = 49008,
-    UnitParams = T.RT_158,
+    UnitParams = T.RT_179,
     UnitRealType = "Supply"
   },
   [49010] = {
@@ -3632,10 +3809,10 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     InteractiveId = 900,
     NeedBuffManager = true,
-    StateIdList = T.RT_157,
+    StateIdList = T.RT_178,
     UnitBPPath = "/Game/BluePrints/Item/Supply/BP_EnergySupply.BP_EnergySupply",
     UnitId = 49010,
-    UnitParams = T.RT_159,
+    UnitParams = T.RT_180,
     UnitRealType = "Supply"
   },
   [49011] = {
@@ -3647,10 +3824,10 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     InteractiveId = 900,
     NeedBuffManager = true,
-    StateIdList = T.RT_157,
+    StateIdList = T.RT_178,
     UnitBPPath = "/Game/BluePrints/Item/Supply/BP_EnergySupply.BP_EnergySupply",
     UnitId = 49011,
-    UnitParams = T.RT_160,
+    UnitParams = T.RT_181,
     UnitRealType = "Supply"
   },
   [49012] = {
@@ -3662,16 +3839,7 @@ return ReadOnly("Mechanism", {
     NeedBuffManager = true,
     UnitBPPath = "/Game/BluePrints/Item/Supply/BP_EnergySupplyMini.BP_EnergySupplyMini",
     UnitId = 49012,
-    UnitParams = {
-      BuffBase = 20,
-      EliteEnergy = 30,
-      EnergyLimit = 100,
-      MaxEnergyChange = 20,
-      MiniMapPath = "/Game/UI/Texture/Dynamic/Atlas/Map/T_Map_Range.T_Map_Range",
-      NormalEnergy = 1,
-      RecoverEnergy = 0,
-      StageTime = 180
-    },
+    UnitParams = T.RT_182,
     UnitRealType = "Supply"
   },
   [49013] = {
@@ -3705,7 +3873,7 @@ return ReadOnly("Mechanism", {
     RewardId = 3021,
     UnitBPPath = "/Game/BluePrints/Item/Mechanism/BP_ResourcePoint.BP_ResourcePoint",
     UnitId = 49016,
-    UnitParams = T.RT_161,
+    UnitParams = T.RT_183,
     UnitRealType = "ResourcePoint"
   },
   [49017] = {
@@ -3713,7 +3881,7 @@ return ReadOnly("Mechanism", {
     RewardId = 3022,
     UnitBPPath = "/Game/BluePrints/Item/Mechanism/BP_ResourcePoint.BP_ResourcePoint",
     UnitId = 49017,
-    UnitParams = T.RT_161,
+    UnitParams = T.RT_183,
     UnitRealType = "ResourcePoint"
   },
   [49018] = {
@@ -3747,12 +3915,12 @@ return ReadOnly("Mechanism", {
   },
   [49200] = {
     BattleRoleId = 39010,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "DefenceCore",
     FirstStateId = 242,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
-    GuideInfo = T.RT_106,
+    GuideInfo = T.RT_123,
     GuideType = 1,
     ModelId = 924,
     NeedBuffManager = true,
@@ -3776,7 +3944,7 @@ return ReadOnly("Mechanism", {
   },
   [49201] = {
     BattleRoleId = 39011,
-    BloodUIParmas = T.RT_38,
+    BloodUIParmas = T.RT_41,
     Camp = "Monster",
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
@@ -3786,7 +3954,7 @@ return ReadOnly("Mechanism", {
   },
   [49202] = {
     BattleRoleId = 39011,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "Monster",
     UnitBPPath = "/Game/BluePrints/Item/AirWall/BP_HiddenTrollyWall.BP_HiddenTrollyWall",
     UnitId = 49202,
@@ -3838,25 +4006,51 @@ return ReadOnly("Mechanism", {
   },
   [49301] = {
     BattleRoleId = 390121,
-    BloodUIParmas = {ActiveCommonUI = 1, HeightOffset = 200},
+    BloodUIParmas = T.RT_184,
     Camp = "Monster",
     FirstStateId = 493011,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     NeedBuffManager = true,
-    StateIdList = {
-      493011,
-      493012,
-      493013
-    },
+    StateIdList = T.RT_185,
     UnitBPPath = "/Game/AssetDesign/Level/EN002_Imperial/BP_SabotageProTarget.BP_SabotageProTarget",
     UnitId = 49301,
+    UnitRealType = "Mechanism"
+  },
+  [49302] = {
+    BattleRoleId = 390121,
+    BloodUIParmas = T.RT_184,
+    Camp = "Monster",
+    FirstStateId = 493011,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
+    NeedBuffManager = true,
+    StateIdList = T.RT_185,
+    UnitBPPath = "/Game/AssetDesign/Item/CombatProp/BP_SabotageProTarget_RouPro.BP_SabotageProTarget_RouPro",
+    UnitId = 49302,
+    UnitRealType = "Mechanism"
+  },
+  [49303] = {
+    BattleRoleId = 390121,
+    BloodUIParmas = T.RT_184,
+    Camp = "Monster",
+    FirstStateId = 493031,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
+    NeedBuffManager = true,
+    StateIdList = {
+      493031,
+      493032,
+      493033
+    },
+    UnitBPPath = "/Game/AssetDesign/Level/EN002_Imperial/BP_SabotageProTarget.BP_SabotageProTarget",
+    UnitId = 49303,
     UnitRealType = "Mechanism"
   },
   [49400] = {
     FirstStateId = 494000,
     InteractiveId = 200,
-    StateIdList = T.RT_156,
+    StateIdList = T.RT_177,
     UnitBPPath = "/Game/BluePrints/Item/Delivery/BP_TrainingDelivery.BP_TrainingDelivery",
     UnitId = 49400,
     UnitRealType = "Delivery"
@@ -3867,15 +4061,15 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     InteractiveId = 925,
     ModelId = 938,
-    StateIdList = T.RT_162,
+    StateIdList = T.RT_186,
     UnitBPPath = "/Game/AssetDesign/Item/InteractiveItems/BP_CIMechanism_Sew.BP_CIMechanism_Sew",
     UnitId = 49500,
-    UnitParams = T.RT_163,
+    UnitParams = T.RT_187,
     UnitRealType = "Mechanism"
   },
   [49600] = {
     BattleRoleId = 390081,
-    BloodUIParmas = T.RT_138,
+    BloodUIParmas = T.RT_159,
     Camp = "DefenceCore",
     FirstStateId = 496001,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
@@ -3915,38 +4109,38 @@ return ReadOnly("Mechanism", {
     InteractiveId = 70000,
     ModelId = 912,
     RewardId = 6666,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Chest_High_Synthesis.BP_Chest_High_Synthesis",
     UnitId = 49602,
     UnitRealType = "Chest"
   },
   [49603] = {
     BattleRoleId = 40006,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "Hostile",
     FirstStateId = 496031,
     ModelId = 943,
     StateIdList = {496031, 496032},
     UnitBPPath = "/Game/BluePrints/Item/DefenceCore/BP_GoldBox.BP_GoldBox",
     UnitId = 49603,
-    UnitParams = T.RT_174,
+    UnitParams = T.RT_198,
     UnitRealType = "DefenceCore"
   },
   [49604] = {
     BattleRoleId = 40005,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "Hostile",
     FirstStateId = 496033,
     ModelId = 943,
     StateIdList = {496033},
     UnitBPPath = "/Game/BluePrints/Item/DefenceCore/BP_SilverBox.BP_SilverBox",
     UnitId = 49604,
-    UnitParams = T.RT_174,
+    UnitParams = T.RT_198,
     UnitRealType = "DefenceCore"
   },
   [49605] = {
     BattleRoleId = 40005,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "Monster",
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Weekly_Key.T_Gp_Weekly_Key",
@@ -3964,7 +4158,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 70000,
     ModelId = 912,
     RewardId = 6666,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Chest_High_SynthesisII.BP_Chest_High_SynthesisII",
     UnitId = 49700,
     UnitRealType = "Chest"
@@ -4019,7 +4213,7 @@ return ReadOnly("Mechanism", {
     GuideInactive = true,
     GuideType = 1,
     InteractiveId = 90200,
-    StateIdList = T.RT_92,
+    StateIdList = T.RT_105,
     UnitBPPath = "/Game/BluePrints/Item/Delivery/BP_RougeLikeDelivery_Battle.BP_RougeLikeDelivery_Battle",
     UnitId = 60001,
     UnitRealType = "RougeLikeDelivery"
@@ -4031,7 +4225,7 @@ return ReadOnly("Mechanism", {
     GuideInactive = true,
     GuideType = 1,
     InteractiveId = 90201,
-    StateIdList = T.RT_92,
+    StateIdList = T.RT_105,
     UnitBPPath = "/Game/BluePrints/Item/Delivery/BP_RougeLikeDelivery_EliteBattle.BP_RougeLikeDelivery_EliteBattle",
     UnitId = 60002,
     UnitRealType = "RougeLikeDelivery"
@@ -4043,7 +4237,7 @@ return ReadOnly("Mechanism", {
     GuideInactive = true,
     GuideType = 1,
     InteractiveId = 90204,
-    StateIdList = T.RT_92,
+    StateIdList = T.RT_105,
     UnitBPPath = "/Game/BluePrints/Item/Delivery/BP_RougeLikeDelivery_Event.BP_RougeLikeDelivery_Event",
     UnitId = 60003,
     UnitRealType = "RougeLikeDelivery"
@@ -4055,7 +4249,7 @@ return ReadOnly("Mechanism", {
     GuideInactive = true,
     GuideType = 1,
     InteractiveId = 90203,
-    StateIdList = T.RT_92,
+    StateIdList = T.RT_105,
     UnitBPPath = "/Game/BluePrints/Item/Delivery/BP_RougeLikeDelivery_Shop.BP_RougeLikeDelivery_Shop",
     UnitId = 60004,
     UnitRealType = "RougeLikeDelivery"
@@ -4067,7 +4261,7 @@ return ReadOnly("Mechanism", {
     GuideInactive = true,
     GuideType = 1,
     InteractiveId = 90202,
-    StateIdList = T.RT_92,
+    StateIdList = T.RT_105,
     UnitBPPath = "/Game/BluePrints/Item/Delivery/BP_RougeLikeDelivery_Boss.BP_RougeLikeDelivery_Boss",
     UnitId = 60005,
     UnitRealType = "RougeLikeDelivery"
@@ -4130,7 +4324,7 @@ return ReadOnly("Mechanism", {
     GuideInactive = true,
     GuideType = 1,
     InteractiveId = 90206,
-    StateIdList = T.RT_92,
+    StateIdList = T.RT_105,
     UnitBPPath = "/Game/BluePrints/Item/Delivery/BP_RougeLikeDelivery_Battle_2.BP_RougeLikeDelivery_Battle_2",
     UnitId = 60010,
     UnitRealType = "RougeLikeDelivery"
@@ -4142,7 +4336,7 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_95,
+    StateIdList = T.RT_112,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame.BP_MiniGame",
     UnitId = 60020,
     UnitParams = {
@@ -4159,7 +4353,7 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_95,
+    StateIdList = T.RT_112,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame.BP_MiniGame",
     UnitId = 60021,
     UnitParams = {
@@ -4176,7 +4370,7 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_95,
+    StateIdList = T.RT_112,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame.BP_MiniGame",
     UnitId = 60022,
     UnitParams = {
@@ -4191,13 +4385,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 910,
     RewardId = 3004,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Explore_Chest_Low.BP_Explore_Chest_Low",
     UnitId = 70100,
     UnitRealType = "Chest"
@@ -4207,13 +4401,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 911,
     RewardId = 3005,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Explore_Chest_Mid.BP_Explore_Chest_Mid",
     UnitId = 70101,
     UnitRealType = "Chest"
@@ -4223,13 +4417,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 912,
     RewardId = 3006,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Explore_Chest_High.BP_Explore_Chest_High",
     UnitId = 70102,
     UnitRealType = "Chest"
@@ -4239,7 +4433,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 70001,
     ModelId = 910,
     RewardId = 3200,
-    StateIdList = T.RT_175,
+    StateIdList = T.RT_199,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Explore_Chest_Empty.BP_Explore_Chest_Empty",
     UnitId = 70103,
     UnitRealType = "TreasureChest"
@@ -4249,13 +4443,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 911,
     RewardId = 3018,
-    StateIdList = T.RT_176,
+    StateIdList = T.RT_200,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Explore_Chest_Mid.BP_Explore_Chest_Mid",
     UnitId = 70104,
     UnitRealType = "Chest"
@@ -4265,13 +4459,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 1,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 912,
     RewardId = 3100,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Explore_Chest_High.BP_Explore_Chest_High",
     UnitId = 70105,
     UnitRealType = "Chest"
@@ -4281,13 +4475,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 907,
     RewardId = 3007,
-    StateIdList = T.RT_177,
+    StateIdList = T.RT_201,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Ailan_ChestMid.BP_Ailan_ChestMid",
     UnitId = 70106,
     UnitRealType = "Chest"
@@ -4297,13 +4491,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 911,
     RewardId = 3007,
-    StateIdList = T.RT_177,
+    StateIdList = T.RT_201,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Explore_Chest_Mid.BP_Explore_Chest_Mid",
     UnitId = 70107,
     UnitRealType = "Chest"
@@ -4313,12 +4507,12 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 912,
-    StateIdList = T.RT_177,
+    StateIdList = T.RT_201,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Explore_Chest_High.BP_Explore_Chest_High",
     UnitId = 70108,
     UnitRealType = "Chest"
@@ -4328,13 +4522,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 1,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 907,
     RewardId = 3100,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Ailan_ChestHigh.BP_Ailan_ChestHigh",
     UnitId = 70109,
     UnitRealType = "Chest"
@@ -4344,7 +4538,7 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     ModelId = 913,
@@ -4364,13 +4558,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 911,
     RewardId = 3010,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Explore_Chest_Mid.BP_Explore_Chest_Mid",
     UnitId = 70111,
     UnitRealType = "Chest"
@@ -4380,13 +4574,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 907,
     RewardId = 3004,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Ailan_ChestLow.BP_Ailan_ChestLow",
     UnitId = 70112,
     UnitRealType = "Chest"
@@ -4396,13 +4590,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 907,
     RewardId = 3005,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Ailan_ChestMid.BP_Ailan_ChestMid",
     UnitId = 70113,
     UnitRealType = "Chest"
@@ -4412,13 +4606,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 907,
     RewardId = 3006,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Ailan_ChestHigh.BP_Ailan_ChestHigh",
     UnitId = 70114,
     UnitRealType = "Chest"
@@ -4428,13 +4622,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 907,
     RewardId = 3010,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Ailan_ChestMid.BP_Ailan_ChestMid",
     UnitId = 70115,
     UnitRealType = "Chest"
@@ -4444,13 +4638,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 948,
     RewardId = 3015,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_East_Chest_Low.BP_East_Chest_Low",
     UnitId = 70116,
     UnitRealType = "Chest"
@@ -4460,13 +4654,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 949,
     RewardId = 3016,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_East_Chest_Mid.BP_East_Chest_Mid",
     UnitId = 70117,
     UnitRealType = "Chest"
@@ -4476,13 +4670,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 950,
     RewardId = 3017,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_East_Chest_High.BP_East_Chest_High",
     UnitId = 70118,
     UnitRealType = "Chest"
@@ -4492,13 +4686,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 949,
     RewardId = 3018,
-    StateIdList = T.RT_177,
+    StateIdList = T.RT_201,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_East_Chest_Mid.BP_East_Chest_Mid",
     UnitId = 70119,
     UnitRealType = "Chest"
@@ -4508,13 +4702,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 950,
     RewardId = 3017,
-    StateIdList = T.RT_177,
+    StateIdList = T.RT_201,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_East_Chest_High.BP_East_Chest_High",
     UnitId = 70120,
     UnitRealType = "Chest"
@@ -4524,13 +4718,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 949,
     RewardId = 3016,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_East_Chest_Mid.BP_East_Chest_Mid",
     UnitId = 70121,
     UnitRealType = "Chest"
@@ -4540,13 +4734,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 950,
     RewardId = 3017,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_East_Chest_High.BP_East_Chest_High",
     UnitId = 70122,
     UnitRealType = "Chest"
@@ -4556,13 +4750,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 949,
     RewardId = 3018,
-    StateIdList = T.RT_176,
+    StateIdList = T.RT_200,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_East_Chest_Mid.BP_East_Chest_Mid",
     UnitId = 70123,
     UnitRealType = "Chest"
@@ -4572,7 +4766,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 70001,
     ModelId = 910,
     RewardId = 3019,
-    StateIdList = T.RT_175,
+    StateIdList = T.RT_199,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Explore_Chest_Empty.BP_Explore_Chest_Empty",
     UnitId = 70124,
     UnitRealType = "TreasureChest"
@@ -4582,7 +4776,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 70001,
     ModelId = 910,
     RewardId = 3020,
-    StateIdList = T.RT_175,
+    StateIdList = T.RT_199,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Explore_Chest_Empty.BP_Explore_Chest_Empty",
     UnitId = 70125,
     UnitRealType = "TreasureChest"
@@ -4592,13 +4786,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 949,
     RewardId = 3018,
-    StateIdList = T.RT_176,
+    StateIdList = T.RT_200,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_East_Chest_High.BP_East_Chest_High",
     UnitId = 70126,
     UnitRealType = "Chest"
@@ -4608,13 +4802,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 1,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 950,
     RewardId = 3017,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_East_Chest_High.BP_East_Chest_High",
     UnitId = 70127,
     UnitRealType = "Chest"
@@ -4624,13 +4818,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 950,
     RewardId = 3017,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_East_Chest_High_YYG.BP_East_Chest_High_YYG",
     UnitId = 70128,
     UnitRealType = "Chest"
@@ -4656,7 +4850,7 @@ return ReadOnly("Mechanism", {
     GuideInactive = true,
     GuideType = 1,
     PreviewNiagara = "NiagaraSystem'/Game/Asset/Effect/Niagara/Scene/Common/NS_Trap_Loop.NS_Trap_Loop'",
-    StateIdList = T.RT_178,
+    StateIdList = T.RT_202,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Explore_Paoku.BP_Explore_Paoku",
     UnitId = 70131,
     UnitRealType = "ExploreMechanism"
@@ -4671,7 +4865,7 @@ return ReadOnly("Mechanism", {
   },
   [70135] = {
     FirstStateId = 701310,
-    StateIdList = T.RT_178,
+    StateIdList = T.RT_202,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Explore_Paoku_Rush.BP_Explore_Paoku_Rush",
     UnitId = 70135,
     UnitRealType = "ExploreMechanism"
@@ -4694,7 +4888,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 70001,
     ModelId = 910,
     RewardId = 3201,
-    StateIdList = T.RT_175,
+    StateIdList = T.RT_199,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Explore_Chest_Empty.BP_Explore_Chest_Empty",
     UnitId = 70150,
     UnitRealType = "TreasureChest"
@@ -4704,7 +4898,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 70001,
     ModelId = 910,
     RewardId = 3202,
-    StateIdList = T.RT_175,
+    StateIdList = T.RT_199,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Explore_Chest_Empty.BP_Explore_Chest_Empty",
     UnitId = 70151,
     UnitRealType = "TreasureChest"
@@ -4714,7 +4908,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 70001,
     ModelId = 910,
     RewardId = 3203,
-    StateIdList = T.RT_175,
+    StateIdList = T.RT_199,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Explore_Chest_Empty.BP_Explore_Chest_Empty",
     UnitId = 70152,
     UnitRealType = "TreasureChest"
@@ -4724,13 +4918,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 907,
     RewardId = 3015,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Ailan_ChestLow.BP_Ailan_ChestLow",
     UnitId = 70154,
     UnitRealType = "Chest"
@@ -4740,13 +4934,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 907,
     RewardId = 3016,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Ailan_ChestMid.BP_Ailan_ChestMid",
     UnitId = 70155,
     UnitRealType = "Chest"
@@ -4756,13 +4950,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 907,
     RewardId = 3017,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Ailan_ChestHigh.BP_Ailan_ChestHigh",
     UnitId = 70156,
     UnitRealType = "Chest"
@@ -4772,15 +4966,95 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 1,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 907,
     RewardId = 3017,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Ailan_ChestHigh.BP_Ailan_ChestHigh",
     UnitId = 70157,
+    UnitRealType = "Chest"
+  },
+  [70158] = {
+    FirstStateId = 701001,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
+    GuideInactive = true,
+    GuideInfo = T.RT_65,
+    GuideType = 0,
+    GuideVisibility = true,
+    InteractiveId = 70000,
+    ModelId = 910,
+    RewardId = 3015,
+    StateIdList = T.RT_66,
+    UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Explore_Chest_Low.BP_Explore_Chest_Low",
+    UnitId = 70158,
+    UnitRealType = "Chest"
+  },
+  [70159] = {
+    FirstStateId = 701001,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
+    GuideInactive = true,
+    GuideInfo = T.RT_65,
+    GuideType = 0,
+    GuideVisibility = true,
+    InteractiveId = 70000,
+    ModelId = 911,
+    RewardId = 3016,
+    StateIdList = T.RT_66,
+    UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Explore_Chest_Mid.BP_Explore_Chest_Mid",
+    UnitId = 70159,
+    UnitRealType = "Chest"
+  },
+  [70160] = {
+    FirstStateId = 701001,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
+    GuideInactive = true,
+    GuideInfo = T.RT_65,
+    GuideType = 0,
+    GuideVisibility = true,
+    InteractiveId = 70000,
+    ModelId = 912,
+    RewardId = 3017,
+    StateIdList = T.RT_66,
+    UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Explore_Chest_High.BP_Explore_Chest_High",
+    UnitId = 70160,
+    UnitRealType = "Chest"
+  },
+  [70161] = {
+    FirstStateId = 701001,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
+    GuideInactive = true,
+    GuideInfo = T.RT_65,
+    GuideType = 1,
+    GuideVisibility = true,
+    InteractiveId = 70000,
+    ModelId = 912,
+    RewardId = 3017,
+    StateIdList = T.RT_66,
+    UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Explore_Chest_High.BP_Explore_Chest_High",
+    UnitId = 70161,
+    UnitRealType = "Chest"
+  },
+  [70162] = {
+    FirstStateId = 701060,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
+    GuideInactive = true,
+    GuideInfo = T.RT_65,
+    GuideType = 0,
+    GuideVisibility = true,
+    InteractiveId = 70000,
+    ModelId = 911,
+    RewardId = 3016,
+    StateIdList = T.RT_201,
+    UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Explore_Chest_Mid.BP_Explore_Chest_Mid",
+    UnitId = 70162,
     UnitRealType = "Chest"
   },
   [70196] = {
@@ -4802,12 +5076,12 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     ModelId = 910,
     RewardId = 3004,
-    StateIdList = T.RT_179,
+    StateIdList = T.RT_203,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Explore_Chest_Low.BP_Explore_Chest_Low",
     UnitId = 70197,
     UnitRealType = "ExploreMechanism"
@@ -4817,7 +5091,7 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70003,
@@ -4853,7 +5127,7 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
@@ -4868,7 +5142,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 702020,
     InteractiveId = 111,
     PreviewNiagara = "NiagaraSystem'/Game/Asset/Effect/Niagara/Scene/Common/NS_Explore_Mount_Start01.NS_Explore_Mount_Start01'",
-    StateIdList = T.RT_180,
+    StateIdList = T.RT_204,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Mount.BP_Mount",
     UnitId = 70202,
     UnitRealType = "ExploreMechanism"
@@ -4876,7 +5150,7 @@ return ReadOnly("Mechanism", {
   [70203] = {
     FirstStateId = 702030,
     GuideIconAni = "/Game/UI/UI_PC/World/ExploreToast/Explore_GuidePoint_PC.Explore_GuidePoint_PC",
-    StateIdList = T.RT_181,
+    StateIdList = T.RT_205,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_MountTouchRing.BP_MountTouchRing",
     UnitId = 70203,
     UnitRealType = "ExploreMechanism"
@@ -4899,7 +5173,7 @@ return ReadOnly("Mechanism", {
     },
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_MirrorPuzzle_Start.BP_MirrorPuzzle_Start",
     UnitId = 70301,
-    UnitParams = T.RT_182,
+    UnitParams = T.RT_111,
     UnitRealType = "MirrorExploreMechanism"
   },
   [70302] = {
@@ -4919,7 +5193,7 @@ return ReadOnly("Mechanism", {
     },
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_MirrorPuzzle_Reflection.BP_MirrorPuzzle_Reflection",
     UnitId = 70302,
-    UnitParams = T.RT_182,
+    UnitParams = T.RT_111,
     UnitRealType = "MirrorExploreMechanism"
   },
   [70303] = {
@@ -4933,7 +5207,7 @@ return ReadOnly("Mechanism", {
     },
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_MirrorPuzzle_End.BP_MirrorPuzzle_End",
     UnitId = 70303,
-    UnitParams = T.RT_182,
+    UnitParams = T.RT_111,
     UnitRealType = "MirrorExploreMechanism"
   },
   [70403] = {
@@ -4957,7 +5231,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 10,
     InteractiveId = 917,
     ModelId = 916,
-    StateIdList = T.RT_37,
+    StateIdList = T.RT_40,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Common_Chair.BP_Common_Chair",
     UnitId = 70500,
     UnitRealType = "AchievementMechanism"
@@ -4993,7 +5267,7 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     ModelId = 912,
@@ -5024,7 +5298,7 @@ return ReadOnly("Mechanism", {
   },
   [70506] = {
     FirstStateId = 705060,
-    StateIdList = T.RT_183,
+    StateIdList = T.RT_206,
     UnitBPPath = "/Game/BluePrints/Item/Trap/BP_FallingPlatformMechanism.BP_FallingPlatformMechanism",
     UnitId = 70506,
     UnitRealType = "Mechanism"
@@ -5091,7 +5365,7 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     ModelId = 920,
-    StateIdList = T.RT_32,
+    StateIdList = T.RT_33,
     UnitBPPath = "/Game/AssetDesign/Item/CombatProp/BP_HitSwitch_Fort.BP_HitSwitch_Fort",
     UnitId = 70701,
     UnitRealType = "PanMechanism"
@@ -5103,7 +5377,7 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     ModelId = 920,
-    StateIdList = T.RT_32,
+    StateIdList = T.RT_33,
     UnitBPPath = "/Game/AssetDesign/Item/CombatProp/BP_HitSwitch_Fort.BP_HitSwitch_Fort",
     UnitId = 70702,
     UnitRealType = "PanMechanism"
@@ -5132,7 +5406,7 @@ return ReadOnly("Mechanism", {
     Camp = "Monster",
     FirstStateId = 707040,
     ModelId = 933,
-    StateIdList = T.RT_185,
+    StateIdList = T.RT_208,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Light_Village_Pan.BP_Light_Village_Pan",
     UnitId = 70704,
     UnitRealType = "PanMechanism"
@@ -5152,7 +5426,7 @@ return ReadOnly("Mechanism", {
     Camp = "Monster",
     FirstStateId = 707040,
     ModelId = 934,
-    StateIdList = T.RT_185,
+    StateIdList = T.RT_208,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Cei_Icelake_Pan.BP_Cei_Icelake_Pan",
     UnitId = 70706,
     UnitRealType = "PanMechanism"
@@ -5209,7 +5483,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 708000,
     InteractiveId = 70800,
     PreviewNiagara = "NiagaraSystem'/Game/Asset/Effect/Niagara/Pet/NS_PetPan_FootPrints.NS_PetPan_FootPrints'",
-    StateIdList = T.RT_186,
+    StateIdList = T.RT_209,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Pan_DecalSwitch.BP_Pan_DecalSwitch",
     UnitId = 70800,
     UnitRealType = "PanMechanism"
@@ -5218,7 +5492,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 708002,
     InteractiveId = 70800,
     PreviewNiagara = "NiagaraSystem'/Game/Asset/Effect/Niagara/Pet/NS_PetPan_FootPrints.NS_PetPan_FootPrints'",
-    StateIdList = T.RT_186,
+    StateIdList = T.RT_209,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Pan_DecalSwitch.BP_Pan_DecalSwitch",
     UnitId = 70801,
     UnitRealType = "PanMechanism"
@@ -5228,7 +5502,7 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
@@ -5252,7 +5526,7 @@ return ReadOnly("Mechanism", {
     BattleRoleId = 11101,
     Camp = "Monster",
     FirstStateId = 707040,
-    StateIdList = T.RT_185,
+    StateIdList = T.RT_208,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Light_Kuangkeng_Pan.BP_Light_Kuangkeng_Pan",
     UnitId = 70803,
     UnitRealType = "PanMechanism"
@@ -5284,37 +5558,37 @@ return ReadOnly("Mechanism", {
     UnitRealType = "WuyouMechanism"
   },
   [71003] = {
-    BeFindTags = T.RT_44,
+    BeFindTags = T.RT_47,
     FirstStateId = 710030,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_EastScan.T_Gp_EastScan",
     InteractiveId = 71001,
     ModelId = 961,
-    StateIdList = T.RT_187,
+    StateIdList = T.RT_210,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_WuyouDecal1.BP_WuyouDecal1",
     UnitId = 71003,
     UnitRealType = "WuyouMechanism"
   },
   [71004] = {
-    BeFindTags = T.RT_44,
+    BeFindTags = T.RT_47,
     FirstStateId = 710030,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_EastScan.T_Gp_EastScan",
     InteractiveId = 71001,
     ModelId = 962,
-    StateIdList = T.RT_187,
+    StateIdList = T.RT_210,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_WuyouDecal2.BP_WuyouDecal2",
     UnitId = 71004,
     UnitRealType = "WuyouMechanism"
   },
   [71005] = {
-    BeFindTags = T.RT_44,
+    BeFindTags = T.RT_47,
     FirstStateId = 710030,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_EastScan.T_Gp_EastScan",
     InteractiveId = 71001,
     ModelId = 963,
-    StateIdList = T.RT_187,
+    StateIdList = T.RT_210,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_WuyouHat.BP_WuyouHat",
     UnitId = 71005,
     UnitRealType = "WuyouMechanism"
@@ -5350,7 +5624,7 @@ return ReadOnly("Mechanism", {
     UnitId = 71101,
     UnitParams = {
       FlashTime = 2,
-      Tag = T.RT_15
+      Tag = T.RT_16
     },
     UnitRealType = "Mechanism"
   },
@@ -5364,7 +5638,7 @@ return ReadOnly("Mechanism", {
   [71200] = {
     FirstStateId = 118005,
     ModelId = 91801,
-    StateIdList = T.RT_41,
+    StateIdList = T.RT_44,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_EastQiZi2.BP_EastQiZi2",
     UnitId = 71200,
     UnitRealType = "OrderedStone"
@@ -5430,7 +5704,7 @@ return ReadOnly("Mechanism", {
     },
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/DynQuest/BP_MiniGameControl.BP_MiniGameControl",
     UnitId = 78004,
-    UnitParams = T.RT_154,
+    UnitParams = T.RT_175,
     UnitRealType = "DynMechanism"
   },
   [78005] = {
@@ -5457,7 +5731,7 @@ return ReadOnly("Mechanism", {
   },
   [78008] = {
     BattleRoleId = 39002,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "Hostile",
     FirstStateId = 780081,
     ModelId = 999,
@@ -5485,7 +5759,7 @@ return ReadOnly("Mechanism", {
   },
   [78010] = {
     BattleRoleId = 39004,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "Hostile",
     FirstStateId = 780101,
     ModelId = 999,
@@ -5512,7 +5786,7 @@ return ReadOnly("Mechanism", {
     GuideType = 0,
     InteractiveId = 80003,
     ModelId = 914,
-    StateIdList = T.RT_188,
+    StateIdList = T.RT_211,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/DynQuest/BP_MiniGameControl.BP_MiniGameControl",
     UnitId = 78011,
     UnitParams = {
@@ -5530,7 +5804,7 @@ return ReadOnly("Mechanism", {
     GuideType = 0,
     InteractiveId = 80003,
     ModelId = 914,
-    StateIdList = T.RT_188,
+    StateIdList = T.RT_211,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/DynQuest/BP_MiniGameControl.BP_MiniGameControl",
     UnitId = 78012,
     UnitParams = {
@@ -5571,15 +5845,15 @@ return ReadOnly("Mechanism", {
     Camp = "Hostile",
     FirstStateId = 3901800,
     ModelId = 999,
-    StateIdList = T.RT_120,
+    StateIdList = T.RT_137,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_ParkourRockTrap.BP_ParkourRockTrap",
     UnitId = 78014,
-    UnitParams = T.RT_113,
+    UnitParams = T.RT_130,
     UnitRealType = "DynMechanism"
   },
   [78015] = {
     BattleRoleId = 39001,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "DefenceCore",
     FirstStateId = 780150,
     GuideIconAni = "/Game/UI/UI_PC/World/ExploreToast/Explore_GuidePoint_PC.Explore_GuidePoint_PC",
@@ -5597,7 +5871,7 @@ return ReadOnly("Mechanism", {
   },
   [78016] = {
     BattleRoleId = 39001,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "DefenceCore",
     FirstStateId = 780160,
     GuideIconAni = "/Game/UI/UI_PC/World/ExploreToast/Explore_GuidePoint_PC.Explore_GuidePoint_PC",
@@ -5665,7 +5939,7 @@ return ReadOnly("Mechanism", {
     },
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/DynQuest/BP_MiniGameControl_Empty.BP_MiniGameControl_Empty",
     UnitId = 78021,
-    UnitParams = T.RT_149,
+    UnitParams = T.RT_170,
     UnitRealType = "DynMechanism"
   },
   [78022] = {
@@ -5673,10 +5947,10 @@ return ReadOnly("Mechanism", {
     Camp = "Hostile",
     FirstStateId = 3901800,
     ModelId = 999,
-    StateIdList = T.RT_120,
+    StateIdList = T.RT_137,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_NewRockTrap.BP_NewRockTrap",
     UnitId = 78022,
-    UnitParams = T.RT_121,
+    UnitParams = T.RT_138,
     UnitRealType = "DynMechanism"
   },
   [78023] = {
@@ -5843,7 +6117,7 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DynQuest.T_Gp_DynQuest",
     GuideType = 1,
     InteractiveId = 80004,
-    StateIdList = T.RT_189,
+    StateIdList = T.RT_212,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/DynQuest/BP_Dyn_PhotoMechanism.BP_Dyn_PhotoMechanism",
     UnitId = 78042,
     UnitRealType = "DynMechanism"
@@ -5856,7 +6130,7 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_86,
+    StateIdList = T.RT_89,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_NoSM.BP_MiniGame_NoSM",
     UnitId = 78043,
     UnitParams = {
@@ -5871,11 +6145,11 @@ return ReadOnly("Mechanism", {
     FirstStateId = 701004,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     ModelId = 910,
-    StateIdList = T.RT_179,
+    StateIdList = T.RT_203,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Explore_Chest_Low.BP_Explore_Chest_Low",
     UnitId = 78044,
     UnitRealType = "ExploreMechanism"
@@ -5888,7 +6162,7 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 80003,
     ModelId = 9141,
-    StateIdList = T.RT_86,
+    StateIdList = T.RT_89,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_NoSM.BP_MiniGame_NoSM",
     UnitId = 78045,
     UnitParams = {
@@ -5991,12 +6265,12 @@ return ReadOnly("Mechanism", {
   },
   [78055] = {
     BattleRoleId = 39004,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "Hostile",
     FirstStateId = 3902401,
     ModelId = 999,
     NeedBuffManager = false,
-    StateIdList = T.RT_123,
+    StateIdList = T.RT_140,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_LaserAndShock_NoHit.BP_LaserAndShock_NoHit",
     UnitId = 78055,
     UnitParams = {
@@ -6017,7 +6291,7 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/UI_PC/World/ExploreToast/Explore_GuidePoint_PC.Explore_GuidePoint_PC",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DynQuest.T_Gp_DynQuest",
     InteractiveId = 80001,
-    StateIdList = T.RT_189,
+    StateIdList = T.RT_212,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/DynQuest/BP_Dyn_PhotoMechanism.BP_Dyn_PhotoMechanism",
     UnitId = 78056,
     UnitRealType = "DynMechanism"
@@ -6027,7 +6301,7 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/UI_PC/World/ExploreToast/Explore_GuidePoint_PC.Explore_GuidePoint_PC",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DynQuest.T_Gp_DynQuest",
     InteractiveId = 80005,
-    StateIdList = T.RT_189,
+    StateIdList = T.RT_212,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/DynQuest/BP_Dyn_PhotoMechanism.BP_Dyn_PhotoMechanism",
     UnitId = 78057,
     UnitRealType = "DynMechanism"
@@ -6037,7 +6311,7 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/UI_PC/World/ExploreToast/Explore_GuidePoint_PC.Explore_GuidePoint_PC",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DynQuest.T_Gp_DynQuest",
     InteractiveId = 80001,
-    StateIdList = T.RT_190,
+    StateIdList = T.RT_213,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/DynQuest/BP_Dyn_PhotoMechanism.BP_Dyn_PhotoMechanism",
     UnitId = 78058,
     UnitRealType = "DynMechanism"
@@ -6062,13 +6336,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 948,
     RewardId = 2011,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_East_Chest_Low.BP_East_Chest_Low",
     UnitId = 78062,
     UnitRealType = "DynMechanism"
@@ -6078,13 +6352,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 949,
     RewardId = 2011,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_East_Chest_Mid.BP_East_Chest_Mid",
     UnitId = 78063,
     UnitRealType = "DynMechanism"
@@ -6094,13 +6368,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 950,
     RewardId = 2011,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_East_Chest_High.BP_East_Chest_High",
     UnitId = 78064,
     UnitRealType = "DynMechanism"
@@ -6124,7 +6398,7 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/UI_PC/World/ExploreToast/Explore_GuidePoint_PC.Explore_GuidePoint_PC",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DynQuest.T_Gp_DynQuest",
     InteractiveId = 70001,
-    StateIdList = T.RT_190,
+    StateIdList = T.RT_213,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/DynQuest/BP_Dyn_PhotoMechanism.BP_Dyn_PhotoMechanism",
     UnitId = 78066,
     UnitRealType = "DynMechanism"
@@ -6134,7 +6408,7 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/UI_PC/World/ExploreToast/Explore_GuidePoint_PC.Explore_GuidePoint_PC",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DynQuest.T_Gp_DynQuest",
     InteractiveId = 80006,
-    StateIdList = T.RT_191,
+    StateIdList = T.RT_214,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/DynQuest/BP_Dyn_Muxiang1.BP_Dyn_Muxiang1",
     UnitId = 78067,
     UnitRealType = "DynMechanism"
@@ -6194,7 +6468,7 @@ return ReadOnly("Mechanism", {
   },
   [80109] = {
     FirstStateId = 780060,
-    StateIdList = T.RT_192,
+    StateIdList = T.RT_215,
     UnitBPPath = "/Game/BluePrints/Item/Temple/BP_TempleRotator.BP_TempleRotator",
     UnitId = 80109,
     UnitRealType = "Mechanism"
@@ -6217,7 +6491,7 @@ return ReadOnly("Mechanism", {
     Camp = "Hostile",
     FirstStateId = 801130,
     InteractiveId = 400,
-    StateIdList = T.RT_193,
+    StateIdList = T.RT_216,
     UnitBPPath = "/Game/BluePrints/Item/Temple/BP_TouchBomb.BP_TouchBomb",
     UnitId = 80113,
     UnitParams = {
@@ -6232,7 +6506,7 @@ return ReadOnly("Mechanism", {
     Camp = "Hostile",
     FirstStateId = 801130,
     InteractiveId = 400,
-    StateIdList = T.RT_193,
+    StateIdList = T.RT_216,
     UnitBPPath = "/Game/BluePrints/Item/Temple/BP_TimerTouchBomb.BP_TimerTouchBomb",
     UnitId = 80114,
     UnitParams = {
@@ -6266,7 +6540,7 @@ return ReadOnly("Mechanism", {
     Camp = "Hostile",
     FirstStateId = 801130,
     InteractiveId = 400,
-    StateIdList = T.RT_193,
+    StateIdList = T.RT_216,
     UnitBPPath = "/Game/BluePrints/Item/Temple/BP_BucketBomb.BP_BucketBomb",
     UnitId = 80117,
     UnitParams = {
@@ -6282,7 +6556,7 @@ return ReadOnly("Mechanism", {
     Camp = "Hostile",
     FirstStateId = 801130,
     InteractiveId = 400,
-    StateIdList = T.RT_193,
+    StateIdList = T.RT_216,
     UnitBPPath = "/Game/BluePrints/Item/Temple/BP_ReboundBomb.BP_ReboundBomb",
     UnitId = 80118,
     UnitParams = {
@@ -6298,7 +6572,7 @@ return ReadOnly("Mechanism", {
     Camp = "Player",
     FirstStateId = 4900801,
     InteractiveId = 900,
-    StateIdList = T.RT_157,
+    StateIdList = T.RT_178,
     UnitBPPath = "/Game/BluePrints/Item/Supply/BP_TempleEnergySupply.BP_TempleEnergySupply",
     UnitId = 80119,
     UnitParams = {
@@ -6314,7 +6588,7 @@ return ReadOnly("Mechanism", {
   [80120] = {
     FirstStateId = 801130,
     InteractiveId = 400,
-    StateIdList = T.RT_193,
+    StateIdList = T.RT_216,
     UnitBPPath = "/Game/BluePrints/Item/Temple/BP_BombLaunchPad.BP_BombLaunchPad",
     UnitId = 80120,
     UnitRealType = "Mechanism"
@@ -6354,12 +6628,12 @@ return ReadOnly("Mechanism", {
   },
   [80125] = {
     BattleRoleId = 390132,
-    BloodUIParmas = T.RT_10,
+    BloodUIParmas = T.RT_11,
     Camp = "Player",
     FirstStateId = 12,
     InteractiveId = 99,
     ModelId = 999,
-    StateIdList = T.RT_12,
+    StateIdList = T.RT_13,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_Paotai_Temple.BP_Paotai_Temple",
     UnitId = 80125,
     UnitRealType = "Mechanism"
@@ -6446,7 +6720,7 @@ return ReadOnly("Mechanism", {
     },
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Temple_Retriggerable.BP_MiniGame_Temple_Retriggerable",
     UnitId = 80201,
-    UnitParams = T.RT_80,
+    UnitParams = T.RT_83,
     UnitRealType = "Controller"
   },
   [80901] = {
@@ -6454,6 +6728,17 @@ return ReadOnly("Mechanism", {
     StateIdList = {809010, 809010},
     UnitBPPath = "/Game/BluePrints/Item/Temple/BP_SpotLIghtController.BP_SpotLIghtController",
     UnitId = 80901,
+    UnitRealType = "Mechanism"
+  },
+  [80902] = {
+    FirstStateId = 809021,
+    StateIdList = {
+      809021,
+      809022,
+      809023
+    },
+    UnitBPPath = "/Game/AssetDesign/Test/BP_Indicator_Test.BP_Indicator_Test",
+    UnitId = 80902,
     UnitRealType = "Mechanism"
   },
   [81001] = {
@@ -6473,7 +6758,7 @@ return ReadOnly("Mechanism", {
     GuideVisibility = true,
     InteractiveId = 90000,
     ShowConditionId = 2001,
-    StateIdList = T.RT_196,
+    StateIdList = T.RT_219,
     UnitBPPath = "/Game/BluePrints/Item/MiniGame/BP_HardBossOpenMechanism.BP_HardBossOpenMechanism",
     UnitId = 90000,
     UnitParams = {
@@ -6487,7 +6772,7 @@ return ReadOnly("Mechanism", {
     GuideVisibility = true,
     InteractiveId = 90000,
     ShowConditionId = 2011,
-    StateIdList = T.RT_196,
+    StateIdList = T.RT_219,
     UnitBPPath = "/Game/BluePrints/Item/MiniGame/BP_HardBossOpenMechanism.BP_HardBossOpenMechanism",
     UnitId = 90001,
     UnitParams = {
@@ -6501,7 +6786,7 @@ return ReadOnly("Mechanism", {
     GuideVisibility = true,
     InteractiveId = 90000,
     ShowConditionId = 2021,
-    StateIdList = T.RT_196,
+    StateIdList = T.RT_219,
     UnitBPPath = "/Game/BluePrints/Item/MiniGame/BP_HardBossOpenMechanism.BP_HardBossOpenMechanism",
     UnitId = 90002,
     UnitParams = {
@@ -6515,7 +6800,7 @@ return ReadOnly("Mechanism", {
     GuideVisibility = true,
     InteractiveId = 90000,
     ShowConditionId = 2031,
-    StateIdList = T.RT_196,
+    StateIdList = T.RT_219,
     UnitBPPath = "/Game/BluePrints/Item/MiniGame/BP_HardBossOpenMechanism.BP_HardBossOpenMechanism",
     UnitId = 90003,
     UnitParams = {
@@ -6529,7 +6814,7 @@ return ReadOnly("Mechanism", {
     GuideVisibility = true,
     InteractiveId = 90000,
     ShowConditionId = 2041,
-    StateIdList = T.RT_196,
+    StateIdList = T.RT_219,
     UnitBPPath = "/Game/BluePrints/Item/MiniGame/BP_HardBossOpenMechanism.BP_HardBossOpenMechanism",
     UnitId = 90004,
     UnitParams = {
@@ -6543,7 +6828,7 @@ return ReadOnly("Mechanism", {
     GuideVisibility = true,
     InteractiveId = 90000,
     ShowConditionId = 2051,
-    StateIdList = T.RT_196,
+    StateIdList = T.RT_219,
     UnitBPPath = "/Game/BluePrints/Item/MiniGame/BP_HardBossOpenMechanism.BP_HardBossOpenMechanism",
     UnitId = 90005,
     UnitParams = {
@@ -6557,11 +6842,25 @@ return ReadOnly("Mechanism", {
     GuideVisibility = true,
     InteractiveId = 90000,
     ShowConditionId = 2061,
-    StateIdList = T.RT_196,
+    StateIdList = T.RT_219,
     UnitBPPath = "/Game/BluePrints/Item/MiniGame/BP_HardBossOpenMechanism.BP_HardBossOpenMechanism",
     UnitId = 90006,
     UnitParams = {
       HardBossId = 7,
+      UIName = "HardBossLevelChoose"
+    },
+    UnitRealType = "HardBossOpenMechanism"
+  },
+  [90007] = {
+    FirstStateId = 900000,
+    GuideVisibility = true,
+    InteractiveId = 90000,
+    ShowConditionId = 99,
+    StateIdList = T.RT_219,
+    UnitBPPath = "/Game/BluePrints/Item/MiniGame/BP_HardBossOpenMechanism.BP_HardBossOpenMechanism",
+    UnitId = 90007,
+    UnitParams = {
+      HardBossId = 8,
       UIName = "HardBossLevelChoose"
     },
     UnitRealType = "HardBossOpenMechanism"
@@ -6571,7 +6870,7 @@ return ReadOnly("Mechanism", {
     RewardId = 3002,
     UnitBPPath = "/Game/BluePrints/Item/Mechanism/BP_ResourcePoint.BP_ResourcePoint",
     UnitId = 90081,
-    UnitParams = T.RT_197,
+    UnitParams = T.RT_220,
     UnitRealType = "ResourcePoint"
   },
   [90082] = {
@@ -6579,7 +6878,7 @@ return ReadOnly("Mechanism", {
     RewardId = 3002,
     UnitBPPath = "/Game/BluePrints/Item/Mechanism/BP_ResourcePoint.BP_ResourcePoint",
     UnitId = 90082,
-    UnitParams = T.RT_197,
+    UnitParams = T.RT_220,
     UnitRealType = "ResourcePoint"
   },
   [90083] = {
@@ -6587,7 +6886,7 @@ return ReadOnly("Mechanism", {
     RewardId = 3002,
     UnitBPPath = "/Game/BluePrints/Item/Mechanism/BP_ResourcePoint.BP_ResourcePoint",
     UnitId = 90083,
-    UnitParams = T.RT_197,
+    UnitParams = T.RT_220,
     UnitRealType = "ResourcePoint"
   },
   [90091] = {
@@ -6595,7 +6894,7 @@ return ReadOnly("Mechanism", {
     RewardId = 3003,
     UnitBPPath = "/Game/BluePrints/Item/Mechanism/BP_ResourcePoint.BP_ResourcePoint",
     UnitId = 90091,
-    UnitParams = T.RT_197,
+    UnitParams = T.RT_220,
     UnitRealType = "ResourcePoint"
   },
   [90092] = {
@@ -6603,7 +6902,7 @@ return ReadOnly("Mechanism", {
     RewardId = 3003,
     UnitBPPath = "/Game/BluePrints/Item/Mechanism/BP_ResourcePoint.BP_ResourcePoint",
     UnitId = 90092,
-    UnitParams = T.RT_197,
+    UnitParams = T.RT_220,
     UnitRealType = "ResourcePoint"
   },
   [90100] = {
@@ -6629,28 +6928,28 @@ return ReadOnly("Mechanism", {
   [90200] = {
     FirstStateId = 9020003,
     InteractiveId = 100024,
-    StateIdList = T.RT_198,
+    StateIdList = T.RT_221,
     UnitBPPath = "/Game/BluePrints/Item/Fishing/BP_FishingSpot.BP_FishingSpot",
     UnitId = 90200,
-    UnitParams = T.RT_199,
+    UnitParams = T.RT_222,
     UnitRealType = "FishingMechanism"
   },
   [90201] = {
     FirstStateId = 9020004,
     InteractiveId = 100024,
-    StateIdList = T.RT_200,
+    StateIdList = T.RT_223,
     UnitBPPath = "/Game/BluePrints/Item/Fishing/BP_FishingSpot.BP_FishingSpot",
     UnitId = 90201,
-    UnitParams = T.RT_199,
+    UnitParams = T.RT_222,
     UnitRealType = "FishingMechanism"
   },
   [90202] = {
     FirstStateId = 9020005,
     InteractiveId = 100024,
-    StateIdList = T.RT_201,
+    StateIdList = T.RT_224,
     UnitBPPath = "/Game/BluePrints/Item/Fishing/BP_FishingSpot.BP_FishingSpot",
     UnitId = 90202,
-    UnitParams = T.RT_199,
+    UnitParams = T.RT_222,
     UnitRealType = "FishingMechanism"
   },
   [90203] = {
@@ -6800,7 +7099,7 @@ return ReadOnly("Mechanism", {
   [90212] = {
     FirstStateId = 9020004,
     InteractiveId = 100024,
-    StateIdList = T.RT_200,
+    StateIdList = T.RT_223,
     UnitBPPath = "/Game/BluePrints/Item/Fishing/BP_FishingSpot_Chapter02.BP_FishingSpot_Chapter02",
     UnitId = 90212,
     UnitParams = {
@@ -6821,6 +7120,38 @@ return ReadOnly("Mechanism", {
     UnitId = 90213,
     UnitParams = {
       FishingSpotId = 10600101,
+      UIName = "AnglingMain"
+    },
+    UnitRealType = "FishingMechanism"
+  },
+  [90214] = {
+    FirstStateId = 9020016,
+    InteractiveId = 100024,
+    StateIdList = {
+      9020001,
+      9020002,
+      9020016
+    },
+    UnitBPPath = "/Game/BluePrints/Item/Fishing/BP_FishingSpot.BP_FishingSpot",
+    UnitId = 90214,
+    UnitParams = {
+      FishingSpotId = 10700101,
+      UIName = "AnglingMain"
+    },
+    UnitRealType = "FishingMechanism"
+  },
+  [90215] = {
+    FirstStateId = 9020017,
+    InteractiveId = 10002401,
+    StateIdList = {
+      9020001,
+      9020002,
+      9020017
+    },
+    UnitBPPath = "/Game/BluePrints/Item/Fishing/BP_FishingSpot.BP_FishingSpot",
+    UnitId = 90215,
+    UnitParams = {
+      FishingSpotId = 10720101,
       UIName = "AnglingMain"
     },
     UnitRealType = "FishingMechanism"
@@ -6847,7 +7178,7 @@ return ReadOnly("Mechanism", {
     GuideVisibility = true,
     InteractiveId = 90000,
     ShowConditionId = 120106,
-    StateIdList = T.RT_196,
+    StateIdList = T.RT_219,
     UnitBPPath = "/Game/AssetDesign/Item/OpenUIMechanism/BP_MultiplayerChallengeOpenMechanism.BP_MultiplayerChallengeOpenMechanism",
     UnitId = 91000,
     UnitParams = {
@@ -6861,7 +7192,7 @@ return ReadOnly("Mechanism", {
     GuideVisibility = true,
     InteractiveId = 90000,
     ShowConditionId = 120106,
-    StateIdList = T.RT_196,
+    StateIdList = T.RT_219,
     UnitBPPath = "/Game/AssetDesign/Item/OpenUIMechanism/BP_MultiplayerChallengeOpenMechanism.BP_MultiplayerChallengeOpenMechanism",
     UnitId = 91001,
     UnitParams = {
@@ -6875,7 +7206,7 @@ return ReadOnly("Mechanism", {
     GuideVisibility = true,
     InteractiveId = 90000,
     ShowConditionId = 120106,
-    StateIdList = T.RT_196,
+    StateIdList = T.RT_219,
     UnitBPPath = "/Game/AssetDesign/Item/OpenUIMechanism/BP_MultiplayerChallengeOpenMechanism.BP_MultiplayerChallengeOpenMechanism",
     UnitId = 91002,
     UnitParams = {
@@ -6889,7 +7220,7 @@ return ReadOnly("Mechanism", {
     GuideVisibility = true,
     InteractiveId = 90000,
     ShowConditionId = 120106,
-    StateIdList = T.RT_196,
+    StateIdList = T.RT_219,
     UnitBPPath = "/Game/AssetDesign/Item/OpenUIMechanism/BP_MultiplayerChallengeOpenMechanism.BP_MultiplayerChallengeOpenMechanism",
     UnitId = 91003,
     UnitParams = {
@@ -6903,7 +7234,7 @@ return ReadOnly("Mechanism", {
     GuideVisibility = true,
     InteractiveId = 90000,
     ShowConditionId = 120106,
-    StateIdList = T.RT_196,
+    StateIdList = T.RT_219,
     UnitBPPath = "/Game/AssetDesign/Item/OpenUIMechanism/BP_MultiplayerChallengeOpenMechanism.BP_MultiplayerChallengeOpenMechanism",
     UnitId = 91004,
     UnitParams = {
@@ -6917,7 +7248,7 @@ return ReadOnly("Mechanism", {
     GuideVisibility = true,
     InteractiveId = 90000,
     ShowConditionId = 120106,
-    StateIdList = T.RT_196,
+    StateIdList = T.RT_219,
     UnitBPPath = "/Game/AssetDesign/Item/OpenUIMechanism/BP_MultiplayerChallengeOpenMechanism.BP_MultiplayerChallengeOpenMechanism",
     UnitId = 91005,
     UnitParams = {
@@ -6931,7 +7262,7 @@ return ReadOnly("Mechanism", {
     GuideVisibility = true,
     InteractiveId = 90000,
     ShowConditionId = 120106,
-    StateIdList = T.RT_196,
+    StateIdList = T.RT_219,
     UnitBPPath = "/Game/AssetDesign/Item/OpenUIMechanism/BP_MultiplayerChallengeOpenMechanism.BP_MultiplayerChallengeOpenMechanism",
     UnitId = 91006,
     UnitParams = {
@@ -6944,7 +7275,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 900000,
     GuideVisibility = true,
     InteractiveId = 90000,
-    StateIdList = T.RT_196,
+    StateIdList = T.RT_219,
     UnitBPPath = "/Game/AssetDesign/Item/OpenUIMechanism/BP_MultiplayerChallengeOpenMechanism.BP_MultiplayerChallengeOpenMechanism",
     UnitId = 91007,
     UnitParams = {
@@ -6957,7 +7288,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 900000,
     GuideVisibility = true,
     InteractiveId = 90000,
-    StateIdList = T.RT_196,
+    StateIdList = T.RT_219,
     UnitBPPath = "/Game/AssetDesign/Item/OpenUIMechanism/BP_MultiplayerChallengeOpenMechanism.BP_MultiplayerChallengeOpenMechanism",
     UnitId = 91008,
     UnitParams = {
@@ -6970,7 +7301,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 900000,
     GuideVisibility = true,
     InteractiveId = 90000,
-    StateIdList = T.RT_196,
+    StateIdList = T.RT_219,
     UnitBPPath = "/Game/AssetDesign/Item/OpenUIMechanism/BP_MultiplayerChallengeOpenMechanism.BP_MultiplayerChallengeOpenMechanism",
     UnitId = 91009,
     UnitParams = {
@@ -6983,7 +7314,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 900000,
     GuideVisibility = true,
     InteractiveId = 90000,
-    StateIdList = T.RT_196,
+    StateIdList = T.RT_219,
     UnitBPPath = "/Game/AssetDesign/Item/OpenUIMechanism/BP_MultiplayerChallengeOpenMechanism.BP_MultiplayerChallengeOpenMechanism",
     UnitId = 91010,
     UnitParams = {
@@ -6996,7 +7327,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 900000,
     GuideVisibility = true,
     InteractiveId = 90000,
-    StateIdList = T.RT_196,
+    StateIdList = T.RT_219,
     UnitBPPath = "/Game/AssetDesign/Item/OpenUIMechanism/BP_MultiplayerChallengeOpenMechanism.BP_MultiplayerChallengeOpenMechanism",
     UnitId = 91011,
     UnitParams = {
@@ -7009,7 +7340,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 900000,
     GuideVisibility = true,
     InteractiveId = 90000,
-    StateIdList = T.RT_196,
+    StateIdList = T.RT_219,
     UnitBPPath = "/Game/AssetDesign/Item/OpenUIMechanism/BP_MultiplayerChallengeOpenMechanism.BP_MultiplayerChallengeOpenMechanism",
     UnitId = 91012,
     UnitParams = {
@@ -7022,7 +7353,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 900000,
     GuideVisibility = true,
     InteractiveId = 90000,
-    StateIdList = T.RT_196,
+    StateIdList = T.RT_219,
     UnitBPPath = "/Game/BluePrints/Item/MiniGame/BP_GuildBossMechanism.BP_GuildBossMechanism",
     UnitId = 92000,
     UnitParams = {
@@ -7064,13 +7395,36 @@ return ReadOnly("Mechanism", {
     UnitId = 94001,
     UnitRealType = "Mechanism"
   },
+  [95001] = {
+    FirstSeenTag = "targetboard",
+    FirstStateId = 950001,
+    InteractiveId = 100024,
+    StateIdList = T.RT_225,
+    UnitBPPath = "/Game/AssetDesign/Item/TargetBoard/BP_EX02TargetMechanism.BP_EX02TargetMechanism",
+    UnitId = 95001,
+    UnitParams = {
+      GameIds = T.RT_2
+    },
+    UnitRealType = "Mechanism"
+  },
+  [95002] = {
+    FirstStateId = 950020,
+    StateIdList = {
+      950020,
+      950021,
+      950022
+    },
+    UnitBPPath = "/Game/AssetDesign/Item/TargetBoard/BP_ExpShoot_Clock.BP_ExpShoot_Clock",
+    UnitId = 95002,
+    UnitRealType = "Mechanism"
+  },
   [99200] = {
     FirstStateId = 9020001,
     InteractiveId = 100024,
-    StateIdList = T.RT_198,
+    StateIdList = T.RT_221,
     UnitBPPath = "/Game/BluePrints/Item/Fishing/BP_FishingSpot.BP_FishingSpot",
     UnitId = 99200,
-    UnitParams = T.RT_199,
+    UnitParams = T.RT_222,
     UnitRealType = "FishingMechanism"
   },
   [100001] = {
@@ -7112,7 +7466,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 916,
     ModelId = 9143,
     NeedBuffManager = false,
-    StateIdList = T.RT_18,
+    StateIdList = T.RT_19,
     UnitBPPath = "/Game/AssetDesign/Item/InteractiveItems/BP_Computer_Fort.BP_Computer_Fort",
     UnitId = 106120,
     UnitRealType = "Mechanism"
@@ -7184,7 +7538,7 @@ return ReadOnly("Mechanism", {
     },
     UnitBPPath = "/Game/AssetDesign/Item/InteractiveItems/BP_Computer_FortLift_Play.BP_Computer_FortLift_Play",
     UnitId = 106124,
-    UnitParams = T.RT_19,
+    UnitParams = T.RT_20,
     UnitRealType = "Mechanism"
   },
   [106125] = {
@@ -7266,10 +7620,24 @@ return ReadOnly("Mechanism", {
     UnitId = 106132,
     UnitRealType = "Mechanism"
   },
+  [106133] = {
+    FirstStateId = 1061311,
+    NeedBuffManager = false,
+    StateIdList = {
+      1061310,
+      1061311,
+      1061312,
+      1061313,
+      1061314
+    },
+    UnitBPPath = "/Game/AssetDesign/Item/FairyTown/BP_ConeLight_BattleField.BP_ConeLight_BattleField",
+    UnitId = 106133,
+    UnitRealType = "Mechanism"
+  },
   [106211] = {
     FirstStateId = 1062100,
     InteractiveId = 10563,
-    StateIdList = T.RT_20,
+    StateIdList = T.RT_21,
     UnitBPPath = "/Game/AssetDesign/Level/EN002_Imperial/BP_KuangKengCystal_M.BP_KuangKengCystal_M",
     UnitId = 106211,
     UnitRealType = "Mechanism"
@@ -7282,10 +7650,10 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     ModelId = 925,
     NeedBuffManager = true,
-    StateIdList = T.RT_21,
+    StateIdList = T.RT_22,
     UnitBPPath = "/Game/AssetDesign/Item/CombatProp/BP_CombatProp_SteamA.BP_CombatProp_SteamA",
     UnitId = 107011,
-    UnitParams = T.RT_22,
+    UnitParams = T.RT_23,
     UnitRealType = "SteamMechanism"
   },
   [107012] = {
@@ -7296,7 +7664,7 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     ModelId = 925,
     NeedBuffManager = true,
-    StateIdList = T.RT_21,
+    StateIdList = T.RT_22,
     UnitBPPath = "/Game/AssetDesign/Item/CombatProp/BP_CombatProp_SteamA.BP_CombatProp_SteamA",
     UnitId = 107012,
     UnitParams = {
@@ -7321,7 +7689,7 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     ModelId = 925,
     NeedBuffManager = true,
-    StateIdList = T.RT_21,
+    StateIdList = T.RT_22,
     UnitBPPath = "/Game/AssetDesign/Item/CombatProp/BP_CombatProp_SteamA.BP_CombatProp_SteamA",
     UnitId = 107013,
     UnitParams = {
@@ -7346,7 +7714,7 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     ModelId = 925,
     NeedBuffManager = true,
-    StateIdList = T.RT_21,
+    StateIdList = T.RT_22,
     UnitBPPath = "/Game/AssetDesign/Item/CombatProp/BP_CombatProp_SteamA.BP_CombatProp_SteamA",
     UnitId = 107014,
     UnitParams = {
@@ -7379,7 +7747,7 @@ return ReadOnly("Mechanism", {
     },
     UnitBPPath = "/Game/AssetDesign/Item/CombatProp/BP_CombatProp_SteamA.BP_CombatProp_SteamA",
     UnitId = 107016,
-    UnitParams = T.RT_22,
+    UnitParams = T.RT_23,
     UnitRealType = "SteamMechanism"
   },
   [107021] = {
@@ -7390,10 +7758,10 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     ModelId = 925,
     NeedBuffManager = true,
-    StateIdList = T.RT_23,
+    StateIdList = T.RT_24,
     UnitBPPath = "/Game/AssetDesign/Item/CombatProp/BP_CombatProp_SteamB.BP_CombatProp_SteamB",
     UnitId = 107021,
-    UnitParams = T.RT_24,
+    UnitParams = T.RT_25,
     UnitRealType = "SteamMechanism"
   },
   [109010] = {
@@ -7404,7 +7772,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 101,
     ModelId = 919,
     NeedBuffManager = true,
-    StateIdList = T.RT_27,
+    StateIdList = T.RT_28,
     UnitBPPath = "/Game/AssetDesign/Item/InteractiveItems/BP_ABSwitch_Fort.BP_ABSwitch_Fort",
     UnitId = 109010,
     UnitRealType = "LogicMechanism"
@@ -7417,7 +7785,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 101,
     ModelId = 919,
     NeedBuffManager = true,
-    StateIdList = T.RT_27,
+    StateIdList = T.RT_28,
     UnitBPPath = "/Game/AssetDesign/Item/InteractiveItems/BP_ABSwitch_Fort.BP_ABSwitch_Fort",
     UnitId = 109011,
     UnitRealType = "LogicMechanism"
@@ -7430,7 +7798,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 101,
     ModelId = 919,
     NeedBuffManager = true,
-    StateIdList = T.RT_28,
+    StateIdList = T.RT_29,
     UnitBPPath = "/Game/AssetDesign/Item/InteractiveItems/BP_ABSwitch_Fort.BP_ABSwitch_Fort",
     UnitId = 109012,
     UnitRealType = "LogicMechanism"
@@ -7443,7 +7811,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 101,
     ModelId = 919,
     NeedBuffManager = true,
-    StateIdList = T.RT_28,
+    StateIdList = T.RT_29,
     UnitBPPath = "/Game/AssetDesign/Item/InteractiveItems/BP_ABSwitch_Fort.BP_ABSwitch_Fort",
     UnitId = 109013,
     UnitRealType = "LogicMechanism"
@@ -7451,13 +7819,13 @@ return ReadOnly("Mechanism", {
   [110011] = {
     UnitBPPath = "/Game/BluePrints/Item/AirWall/BP_AirDoorCylinder_Huaxu_RemoveNavi.BP_AirDoorCylinder_Huaxu_RemoveNavi",
     UnitId = 110011,
-    UnitParams = T.RT_29,
+    UnitParams = T.RT_30,
     UnitRealType = "AOITriggerBox"
   },
   [110021] = {
     UnitBPPath = "/Game/BluePrints/Item/AirWall/BP_AirDoorBox_Huaxu.BP_AirDoorBox_Huaxu",
     UnitId = 110021,
-    UnitParams = T.RT_29,
+    UnitParams = T.RT_30,
     UnitRealType = "AOITriggerBox"
   },
   [110022] = {
@@ -7467,7 +7835,7 @@ return ReadOnly("Mechanism", {
   [110031] = {
     UnitBPPath = "/Game/BluePrints/Item/AirWall/BP_AirDoor_Huaxu.BP_AirDoor_Huaxu",
     UnitId = 110031,
-    UnitParams = T.RT_29,
+    UnitParams = T.RT_30,
     UnitRealType = "AOITriggerBox"
   },
   [110111] = {
@@ -7484,7 +7852,7 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     ModelId = 920,
     NeedBuffManager = true,
-    StateIdList = T.RT_30,
+    StateIdList = T.RT_31,
     UnitBPPath = "/Game/AssetDesign/Item/CombatProp/BP_HitSwitch_Fort.BP_HitSwitch_Fort",
     UnitId = 111010,
     UnitRealType = "LogicMechanism"
@@ -7497,7 +7865,7 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     ModelId = 92001,
     NeedBuffManager = true,
-    StateIdList = T.RT_31,
+    StateIdList = T.RT_32,
     UnitBPPath = "/Game/AssetDesign/Item/CombatProp/BP_HitSwitch_FortB.BP_HitSwitch_FortB",
     UnitId = 111011,
     UnitParams = {
@@ -7531,7 +7899,7 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     ModelId = 92001,
     NeedBuffManager = true,
-    StateIdList = T.RT_31,
+    StateIdList = T.RT_32,
     UnitBPPath = "/Game/AssetDesign/Item/CombatProp/BP_HitSwitch_FortB.BP_HitSwitch_FortB",
     UnitId = 111013,
     UnitParams = {
@@ -7550,7 +7918,7 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     ModelId = 92001,
     NeedBuffManager = true,
-    StateIdList = T.RT_31,
+    StateIdList = T.RT_32,
     UnitBPPath = "/Game/AssetDesign/Item/CombatProp/BP_HitSwitch_FortB.BP_HitSwitch_FortB",
     UnitId = 111014,
     UnitParams = {
@@ -7569,7 +7937,7 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     ModelId = 92001,
     NeedBuffManager = true,
-    StateIdList = T.RT_31,
+    StateIdList = T.RT_32,
     UnitBPPath = "/Game/AssetDesign/Item/CombatProp/BP_HitSwitch_FortB.BP_HitSwitch_FortB",
     UnitId = 111015,
     UnitParams = {
@@ -7588,7 +7956,7 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     ModelId = 92001,
     NeedBuffManager = true,
-    StateIdList = T.RT_31,
+    StateIdList = T.RT_32,
     UnitBPPath = "/Game/AssetDesign/Item/CombatProp/BP_HitSwitch_FortB.BP_HitSwitch_FortB",
     UnitId = 111016,
     UnitParams = {
@@ -7607,7 +7975,7 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     ModelId = 92001,
     NeedBuffManager = true,
-    StateIdList = T.RT_31,
+    StateIdList = T.RT_32,
     UnitBPPath = "/Game/AssetDesign/Item/CombatProp/BP_HitSwitch_FortB.BP_HitSwitch_FortB",
     UnitId = 111017,
     UnitParams = {
@@ -7621,70 +7989,104 @@ return ReadOnly("Mechanism", {
   [112011] = {
     FirstStateId = 112010,
     NeedBuffManager = true,
-    StateIdList = {
-      112010,
-      112011,
-      112012
-    },
+    StateIdList = T.RT_36,
     UnitBPPath = "/Game/AssetDesign/Item/MonsterSpawn/BP_MonsterNest_Sew.BP_MonsterNest_Sew",
     UnitId = 112011,
     UnitRealType = "MonsterNest"
   },
+  [112012] = {
+    BattleRoleId = 39014,
+    BloodUIParmas = T.RT_34,
+    Camp = "Monster",
+    FirstStateId = 112010,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
+    NeedBuffManager = true,
+    StateIdList = T.RT_35,
+    UnitBPPath = "/Game/AssetDesign/Item/MonsterSpawn/BP_MonsterNest_Dyn.BP_MonsterNest_Dyn",
+    UnitId = 112012,
+    UnitRealType = "MonsterNest"
+  },
+  [112013] = {
+    FirstStateId = 112010,
+    NeedBuffManager = true,
+    StateIdList = T.RT_36,
+    UnitBPPath = "/Game/AssetDesign/Item/MonsterSpawn/BP_MonsterNest_Nomesh_Dyn.BP_MonsterNest_Nomesh_Dyn",
+    UnitId = 112013,
+    UnitRealType = "MonsterNest"
+  },
+  [112014] = {
+    FirstStateId = 1120140,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
+    InteractiveId = 125,
+    NeedBuffManager = true,
+    StateIdList = {
+      1120140,
+      1120141,
+      1120142,
+      1120143,
+      1120144
+    },
+    UnitBPPath = "/Game/AssetDesign/Item/MonsterSpawn/BP_MonsterNest_LXZX.BP_MonsterNest_LXZX",
+    UnitId = 112014,
+    UnitRealType = "MonsterNest"
+  },
   [114011] = {
     BattleRoleId = 41002,
-    BloodUIParmas = T.RT_35,
+    BloodUIParmas = T.RT_38,
     Camp = "Monster",
     FirstStateId = 610028,
-    StateIdList = T.RT_36,
+    StateIdList = T.RT_39,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_Gem_Switch.BP_Gem_Switch",
     UnitId = 114011
   },
   [114012] = {
     BattleRoleId = 41002,
-    BloodUIParmas = T.RT_35,
+    BloodUIParmas = T.RT_38,
     Camp = "Monster",
     FirstStateId = 610028,
     RewardId = 50574,
-    StateIdList = T.RT_36,
+    StateIdList = T.RT_39,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_Gem_Switch.BP_Gem_Switch",
     UnitId = 114012
   },
   [114013] = {
     BattleRoleId = 41002,
-    BloodUIParmas = T.RT_35,
+    BloodUIParmas = T.RT_38,
     Camp = "Monster",
     FirstStateId = 610028,
     GuideIconAni = "/Game/UI/UI_PC/World/ExploreToast/Explore_GuidePoint_PC.Explore_GuidePoint_PC",
     GuideType = 1,
-    StateIdList = T.RT_36,
+    StateIdList = T.RT_39,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_Gem_Switch.BP_Gem_Switch",
     UnitId = 114013
   },
   [114014] = {
     BattleRoleId = 41001,
-    BloodUIParmas = T.RT_35,
+    BloodUIParmas = T.RT_38,
     Camp = "Monster",
     FirstStateId = 610028,
-    StateIdList = T.RT_36,
+    StateIdList = T.RT_39,
     UnitBPPath = "/Game/AssetDesign/Item/Harvest/BP_Gem_Switch.BP_Gem_Switch",
     UnitId = 114014
   },
   [115010] = {
     FirstStateId = 10,
     InteractiveId = 902,
-    StateIdList = T.RT_37,
+    StateIdList = T.RT_40,
     UnitBPPath = "/Game/Asset/Scene/EN002_Haiboliya/Longsha/LS_Fortress/Mesh/BP_Fort_Cha02.BP_Fort_Cha02",
     UnitId = 115010,
     UnitRealType = "Seat"
   },
   [117011] = {
     BattleRoleId = 117011,
-    BloodUIParmas = T.RT_38,
+    BloodUIParmas = T.RT_41,
     Camp = "Monster",
     FirstStateId = 1170100,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
-    StateIdList = T.RT_39,
+    StateIdList = T.RT_42,
     UnitBPPath = "/Game/AssetDesign/Item/CombatProp/BP_ToughnessWall_Fort.BP_ToughnessWall_Fort",
     UnitId = 117011,
     UnitRealType = "ToughnessWall"
@@ -7701,39 +8103,39 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     ModelId = 95502,
-    StateIdList = T.RT_39,
+    StateIdList = T.RT_42,
     UnitBPPath = "/Game/AssetDesign/Item/CombatProp/BP_ToughnessWall_Sew.BP_ToughnessWall_Sew",
     UnitId = 117012,
     UnitRealType = "ToughnessWall"
   },
   [117013] = {
     BattleRoleId = 117013,
-    BloodUIParmas = T.RT_38,
+    BloodUIParmas = T.RT_41,
     Camp = "Monster",
     FirstStateId = 1170100,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
-    StateIdList = T.RT_39,
+    StateIdList = T.RT_42,
     UnitBPPath = "/Game/AssetDesign/Item/CombatProp/BP_ToughnessWall_Fort_Ch2.BP_ToughnessWall_Fort_Ch2",
     UnitId = 117013,
     UnitRealType = "ToughnessWall"
   },
   [117014] = {
     BattleRoleId = 117014,
-    BloodUIParmas = T.RT_38,
+    BloodUIParmas = T.RT_41,
     Camp = "Monster",
     FirstStateId = 1170141,
-    StateIdList = T.RT_40,
+    StateIdList = T.RT_43,
     UnitBPPath = "/Game/AssetDesign/Test/BP_ToughnessWall_Temple1.BP_ToughnessWall_Temple1",
     UnitId = 117014,
     UnitRealType = "ToughnessWall"
   },
   [117015] = {
     BattleRoleId = 117015,
-    BloodUIParmas = T.RT_38,
+    BloodUIParmas = T.RT_41,
     Camp = "Monster",
     FirstStateId = 1170141,
-    StateIdList = T.RT_40,
+    StateIdList = T.RT_43,
     UnitBPPath = "/Game/AssetDesign/Test/BP_ToughnessWall_Temple1.BP_ToughnessWall_Temple1",
     UnitId = 117015,
     UnitRealType = "ToughnessWall"
@@ -7742,7 +8144,7 @@ return ReadOnly("Mechanism", {
     FirstSeenTag = "EastQiZi",
     FirstStateId = 118001,
     ModelId = 91801,
-    StateIdList = T.RT_41,
+    StateIdList = T.RT_44,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_EastQiZi.BP_EastQiZi",
     UnitId = 121001,
     UnitRealType = "OrderedStone"
@@ -7759,14 +8161,14 @@ return ReadOnly("Mechanism", {
     },
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_XiangTai.BP_XiangTai",
     UnitId = 121002,
-    UnitParams = T.RT_26,
+    UnitParams = T.RT_27,
     UnitRealType = "AromaTrigger"
   },
   [121003] = {
     BattleRoleId = 11101,
     Camp = "Monster",
     FirstStateId = 1210022,
-    StateIdList = T.RT_42,
+    StateIdList = T.RT_45,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_XiangTing.BP_XiangTing",
     UnitId = 121003,
     UnitRealType = "Pavilion"
@@ -7776,10 +8178,10 @@ return ReadOnly("Mechanism", {
     Camp = "Monster",
     FirstStateId = 1210022,
     ModelId = 91804,
-    StateIdList = T.RT_42,
+    StateIdList = T.RT_45,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_SweetPlant.BP_SweetPlant",
     UnitId = 121004,
-    UnitParams = T.RT_16,
+    UnitParams = T.RT_17,
     UnitRealType = "SweetPlant"
   },
   [121005] = {
@@ -7787,7 +8189,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 118026,
     InteractiveId = 118003,
     ModelId = 91802,
-    StateIdList = T.RT_43,
+    StateIdList = T.RT_46,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_XingShiBei.BP_XingShiBei",
     UnitId = 121005,
     UnitRealType = "Mechanism"
@@ -7802,7 +8204,7 @@ return ReadOnly("Mechanism", {
   },
   [121007] = {
     BattleRoleId = 39015,
-    BeFindTags = T.RT_44,
+    BeFindTags = T.RT_47,
     Camp = "Monster",
     FirstStateId = 118021,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
@@ -7816,7 +8218,7 @@ return ReadOnly("Mechanism", {
     },
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_JingGou.BP_JingGou",
     UnitId = 121007,
-    UnitParams = T.RT_16,
+    UnitParams = T.RT_17,
     UnitRealType = "Mechanism"
   },
   [121008] = {
@@ -7826,15 +8228,15 @@ return ReadOnly("Mechanism", {
     StateIdList = {118021, 118022},
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_JingGou_Rock.BP_JingGou_Rock",
     UnitId = 121008,
-    UnitParams = T.RT_16,
+    UnitParams = T.RT_17,
     UnitRealType = "Mechanism"
   },
   [121009] = {
     BattleRoleId = 41002,
-    BloodUIParmas = T.RT_38,
+    BloodUIParmas = T.RT_41,
     Camp = "Monster",
     FirstStateId = 118024,
-    StateIdList = T.RT_45,
+    StateIdList = T.RT_48,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_BreakableRock.BP_BreakableRock",
     UnitId = 121009,
     UnitRealType = "Mechanism"
@@ -7846,7 +8248,7 @@ return ReadOnly("Mechanism", {
   },
   [121011] = {
     BattleRoleId = 39015,
-    BeFindTags = T.RT_44,
+    BeFindTags = T.RT_47,
     Camp = "Monster",
     FirstStateId = 118018,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
@@ -7861,7 +8263,7 @@ return ReadOnly("Mechanism", {
     },
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_JingGou_HLL.BP_JingGou_HLL",
     UnitId = 121011,
-    UnitParams = T.RT_16,
+    UnitParams = T.RT_17,
     UnitRealType = "Mechanism"
   },
   [121012] = {
@@ -7869,10 +8271,10 @@ return ReadOnly("Mechanism", {
     Camp = "Monster",
     FirstStateId = 1210121,
     RewardId = 118011,
-    StateIdList = T.RT_46,
+    StateIdList = T.RT_49,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_Dongguo_CrystalRunes.BP_Dongguo_CrystalRunes",
     UnitId = 121012,
-    UnitParams = T.RT_16,
+    UnitParams = T.RT_17,
     UnitRealType = "Runes"
   },
   [121013] = {
@@ -7882,12 +8284,12 @@ return ReadOnly("Mechanism", {
     StateIdList = {1210130, 1210131},
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_HuaBao.BP_HuaBao",
     UnitId = 121013,
-    UnitParams = T.RT_26,
+    UnitParams = T.RT_27,
     UnitRealType = "Mechanism"
   },
   [121014] = {
     BattleRoleId = 39015,
-    BeFindTags = T.RT_44,
+    BeFindTags = T.RT_47,
     Camp = "Monster",
     FirstSeenTag = "GravityBall",
     FirstStateId = 1210141,
@@ -7895,37 +8297,37 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_EastScan.T_Gp_EastScan",
     GuideType = 0,
     ModelId = 91818,
-    StateIdList = T.RT_47,
+    StateIdList = T.RT_50,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_GravityBall.BP_GravityBall",
     UnitId = 121014,
-    UnitParams = T.RT_16,
+    UnitParams = T.RT_17,
     UnitRealType = "Mechanism"
   },
   [121015] = {
     FirstSeenTag = "MoInteractive",
     FirstStateId = 1210150,
     ModelId = 91819,
-    StateIdList = T.RT_48,
+    StateIdList = T.RT_51,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_BallSensor.BP_BallSensor",
     UnitId = 121015,
     UnitRealType = "Mechanism"
   },
   [121016] = {
     BattleRoleId = 39015,
-    BeFindTags = T.RT_44,
+    BeFindTags = T.RT_47,
     Camp = "Monster",
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_EastScan.T_Gp_EastScan",
     GuideType = 0,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_RingRock.BP_RingRock",
     UnitId = 121016,
-    UnitParams = T.RT_16,
+    UnitParams = T.RT_17,
     UnitRealType = "Mechanism"
   },
   [121017] = {
     FirstStateId = 1210170,
     ModelId = 91810,
-    StateIdList = T.RT_49,
+    StateIdList = T.RT_52,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_RockGroup.BP_RockGroup",
     UnitId = 121017,
     UnitRealType = "Mechanism"
@@ -7946,44 +8348,44 @@ return ReadOnly("Mechanism", {
   },
   [121019] = {
     BattleRoleId = 39015,
-    BeFindTags = T.RT_44,
+    BeFindTags = T.RT_47,
     Camp = "Monster",
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_EastScan.T_Gp_EastScan",
     GuideType = 0,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_RingRock_2.BP_RingRock_2",
     UnitId = 121019,
-    UnitParams = T.RT_16,
+    UnitParams = T.RT_17,
     UnitRealType = "Mechanism"
   },
   [121020] = {
     BattleRoleId = 39015,
-    BeFindTags = T.RT_44,
+    BeFindTags = T.RT_47,
     Camp = "Monster",
     FirstStateId = 1210200,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_EastScan.T_Gp_EastScan",
     GuideType = 0,
     ModelId = 91820,
-    StateIdList = T.RT_50,
+    StateIdList = T.RT_53,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_RotateFan.BP_RotateFan",
     UnitId = 121020,
-    UnitParams = T.RT_51,
+    UnitParams = T.RT_54,
     UnitRealType = "Mechanism"
   },
   [121021] = {
     BattleRoleId = 39015,
-    BeFindTags = T.RT_44,
+    BeFindTags = T.RT_47,
     Camp = "Monster",
     FirstStateId = 1210201,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_EastScan.T_Gp_EastScan",
     GuideType = 0,
     ModelId = 91820,
-    StateIdList = T.RT_50,
+    StateIdList = T.RT_53,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_RotateFan.BP_RotateFan",
     UnitId = 121021,
-    UnitParams = T.RT_51,
+    UnitParams = T.RT_54,
     UnitRealType = "Mechanism"
   },
   [121022] = {
@@ -8024,7 +8426,7 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
     NeedBuffManager = true,
-    StateIdList = T.RT_52,
+    StateIdList = T.RT_55,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_Dongguo_Charge_Mo.BP_Dongguo_Charge_Mo",
     UnitId = 121025,
     UnitName = "UI_DUNGEON_DONGGUOCHARGE_MO",
@@ -8041,7 +8443,7 @@ return ReadOnly("Mechanism", {
     NeedBuffManager = true,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_DongguoBuffItem.BP_DongGuoBuffItem",
     UnitId = 121026,
-    UnitParams = T.RT_53,
+    UnitParams = T.RT_56,
     UnitRealType = "Mechanism"
   },
   [121027] = {
@@ -8052,7 +8454,7 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
     NeedBuffManager = true,
-    StateIdList = T.RT_52,
+    StateIdList = T.RT_55,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_Dongguo_Charge_Fa.BP_Dongguo_Charge_Fa",
     UnitId = 121027,
     UnitName = "UI_DUNGEON_DONGGUOCHARGE_FA",
@@ -8126,7 +8528,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 1210320,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
-    StateIdList = T.RT_54,
+    StateIdList = T.RT_57,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_TeleportGate.BP_TeleportGate",
     UnitId = 121032,
     UnitParams = {Opacity = 0},
@@ -8141,16 +8543,16 @@ return ReadOnly("Mechanism", {
   },
   [121034] = {
     BattleRoleId = 39015,
-    BeFindTags = T.RT_44,
+    BeFindTags = T.RT_47,
     Camp = "Monster",
     FirstStateId = 1210340,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_EastScan.T_Gp_EastScan",
     ModelId = 91839,
-    StateIdList = T.RT_55,
+    StateIdList = T.RT_58,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_WuYouShengItem_Box.BP_WuYouShengItem_Box",
     UnitId = 121034,
-    UnitParams = T.RT_16,
+    UnitParams = T.RT_17,
     UnitRealType = "Mechanism"
   },
   [121035] = {
@@ -8352,7 +8754,7 @@ return ReadOnly("Mechanism", {
     BattleRoleId = 39015,
     Camp = "Monster",
     FirstStateId = 1210550,
-    StateIdList = T.RT_57,
+    StateIdList = T.RT_60,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_EnergyCube_Blue.BP_EnergyCube_Blue",
     UnitId = 121055,
     UnitParams = {
@@ -8361,7 +8763,7 @@ return ReadOnly("Mechanism", {
       Color = "Blue",
       Duration = 4,
       ReturnSpeed = 10,
-      Tag = T.RT_56
+      Tag = T.RT_59
     },
     UnitRealType = "Mechanism"
   },
@@ -8442,28 +8844,28 @@ return ReadOnly("Mechanism", {
     FirstSeenTag = "FlowerLantern",
     FirstStateId = 1310014,
     ModelId = 91806,
-    StateIdList = T.RT_58,
+    StateIdList = T.RT_61,
     UnitBPPath = "/Game/BluePrints/Item/Fushu/BP_FlowerLanternLand.BP_FlowerLanternLand",
     UnitId = 131001,
-    UnitParams = T.RT_59,
+    UnitParams = T.RT_62,
     UnitRealType = "Mechanism"
   },
   [131002] = {
     FirstStateId = 1310014,
     ModelId = 91806,
-    StateIdList = T.RT_58,
+    StateIdList = T.RT_61,
     UnitBPPath = "/Game/BluePrints/Item/Fushu/BP_FlowerWater.BP_FlowerWater",
     UnitId = 131002,
-    UnitParams = T.RT_59,
+    UnitParams = T.RT_62,
     UnitRealType = "Mechanism"
   },
   [131003] = {
     FirstStateId = 1310014,
     ModelId = 91806,
-    StateIdList = T.RT_58,
+    StateIdList = T.RT_61,
     UnitBPPath = "/Game/BluePrints/Item/Fushu/BP_FlowerLanternStart.BP_FlowerLanternStart",
     UnitId = 131003,
-    UnitParams = T.RT_59,
+    UnitParams = T.RT_62,
     UnitRealType = "Mechanism"
   },
   [131004] = {
@@ -8472,7 +8874,7 @@ return ReadOnly("Mechanism", {
     FirstSeenTag = "KongmingLantern",
     FirstStateId = 1310030,
     ModelId = 91816,
-    StateIdList = T.RT_60,
+    StateIdList = T.RT_63,
     UnitBPPath = "/Game/BluePrints/Item/Fushu/BP_KongmingLantern.BP_KongmingLantern",
     UnitId = 131004,
     UnitParams = {
@@ -8490,7 +8892,7 @@ return ReadOnly("Mechanism", {
     FirstSeenTag = "KongmingLantern",
     FirstStateId = 1310030,
     ModelId = 91816,
-    StateIdList = T.RT_60,
+    StateIdList = T.RT_63,
     UnitBPPath = "/Game/BluePrints/Item/Fushu/BP_KongmingLantern.BP_KongmingLantern",
     UnitId = 131005,
     UnitParams = {
@@ -8563,7 +8965,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 1310090,
     InteractiveId = 301,
     ModelId = 91809,
-    StateIdList = T.RT_61,
+    StateIdList = T.RT_64,
     UnitBPPath = "/Game/BluePrints/Item/Fushu/BP_LanternShipCyan.BP_LanternShipCyan",
     UnitId = 131009,
     UnitParams = {
@@ -8594,13 +8996,13 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_EastScan.T_Gp_EastScan",
     GuideInactive = true,
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 118002,
     ModelId = 911,
     RewardId = 3005,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Explore_Chest_Mid.BP_Explore_Chest_Mid",
     UnitId = 131012,
     UnitRealType = "Chest"
@@ -8614,7 +9016,7 @@ return ReadOnly("Mechanism", {
   [131015] = {
     FirstStateId = 1310150,
     ModelId = 91811,
-    StateIdList = T.RT_64,
+    StateIdList = T.RT_67,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_Pingfeng1.BP_Pingfeng1",
     UnitId = 131015,
     UnitRealType = "Mechanism"
@@ -8622,7 +9024,7 @@ return ReadOnly("Mechanism", {
   [131016] = {
     FirstStateId = 1310150,
     ModelId = 91812,
-    StateIdList = T.RT_64,
+    StateIdList = T.RT_67,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_Pingfeng2.BP_Pingfeng2",
     UnitId = 131016,
     UnitRealType = "Mechanism"
@@ -8632,7 +9034,7 @@ return ReadOnly("Mechanism", {
     Camp = "Monster",
     FirstStateId = 1310174,
     ModelId = 91824,
-    StateIdList = T.RT_65,
+    StateIdList = T.RT_68,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_SweetPlantBreakable.BP_SweetPlantBreakable",
     UnitId = 131017,
     UnitRealType = "Mechanism"
@@ -8667,7 +9069,7 @@ return ReadOnly("Mechanism", {
     StateIdList = {1310190, 1310191},
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_GongMing.BP_GongMing",
     UnitId = 131019,
-    UnitParams = T.RT_67,
+    UnitParams = T.RT_70,
     UnitRealType = "Mechanism"
   },
   [131020] = {
@@ -8682,7 +9084,7 @@ return ReadOnly("Mechanism", {
     },
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_GongMingShi.BP_GongMingShi",
     UnitId = 131020,
-    UnitParams = T.RT_67,
+    UnitParams = T.RT_70,
     UnitRealType = "Mechanism"
   },
   [131021] = {
@@ -8692,17 +9094,17 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     ModelId = 918130,
-    StateIdList = T.RT_68,
+    StateIdList = T.RT_71,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoRotateCenter_Z_Shape01.BP_DongGuoRotateCenter_Z_Shape01",
     UnitId = 131021,
-    UnitParams = T.RT_69,
+    UnitParams = T.RT_72,
     UnitRealType = "Mechanism"
   },
   [131022] = {
     FirstSeenTag = "YYGPanel",
     FirstStateId = 1310220,
     ModelId = 918140,
-    StateIdList = T.RT_73,
+    StateIdList = T.RT_76,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoRotatePanel.BP_DongGuoRotatePanel",
     UnitId = 131022,
     UnitParams = {SkipDetection = true},
@@ -8739,7 +9141,7 @@ return ReadOnly("Mechanism", {
   },
   [131026] = {
     BattleRoleId = 39015,
-    BeFindTags = T.RT_44,
+    BeFindTags = T.RT_47,
     Camp = "Monster",
     FirstSeenTag = "Petal",
     FirstStateId = 1310260,
@@ -8749,7 +9151,7 @@ return ReadOnly("Mechanism", {
     StateIdList = {1310260, 1310261},
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_Petal.BP_Petal",
     UnitId = 131026,
-    UnitParams = T.RT_16,
+    UnitParams = T.RT_17,
     UnitRealType = "Mechanism"
   },
   [131027] = {
@@ -8757,7 +9159,7 @@ return ReadOnly("Mechanism", {
     Camp = "Monster",
     FirstStateId = 1310174,
     ModelId = 91825,
-    StateIdList = T.RT_65,
+    StateIdList = T.RT_68,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_SweetPlantBreakable2.BP_SweetPlantBreakable2",
     UnitId = 131027,
     UnitRealType = "Mechanism"
@@ -8767,7 +9169,7 @@ return ReadOnly("Mechanism", {
     Camp = "Monster",
     FirstStateId = 1310174,
     ModelId = 91826,
-    StateIdList = T.RT_65,
+    StateIdList = T.RT_68,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_SweetPlantBreakable3.BP_SweetPlantBreakable3",
     UnitId = 131028,
     UnitRealType = "Mechanism"
@@ -8775,7 +9177,7 @@ return ReadOnly("Mechanism", {
   [131029] = {
     FirstStateId = 1310290,
     ModelId = 91827,
-    StateIdList = T.RT_76,
+    StateIdList = T.RT_79,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_SweetPlantVine.BP_SweetPlantVine",
     UnitId = 131029,
     UnitRealType = "Mechanism"
@@ -8783,7 +9185,7 @@ return ReadOnly("Mechanism", {
   [131030] = {
     FirstStateId = 1310290,
     ModelId = 91828,
-    StateIdList = T.RT_76,
+    StateIdList = T.RT_79,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_SweetPlantVine2.BP_SweetPlantVine2",
     UnitId = 131030,
     UnitRealType = "Mechanism"
@@ -8854,7 +9256,7 @@ return ReadOnly("Mechanism", {
   [131040] = {
     FirstStateId = 1310150,
     ModelId = 91812,
-    StateIdList = T.RT_64,
+    StateIdList = T.RT_67,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_Pingfeng3.BP_Pingfeng3",
     UnitId = 131040,
     UnitRealType = "Mechanism"
@@ -8863,28 +9265,28 @@ return ReadOnly("Mechanism", {
     BattleRoleId = 41002,
     Camp = "Monster",
     FirstStateId = 118023,
-    StateIdList = T.RT_45,
+    StateIdList = T.RT_48,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_BreakableRock.BP_BreakableRock",
     UnitId = 131041,
     UnitRealType = "Mechanism"
   },
   [131042] = {
     FirstStateId = 1310290,
-    StateIdList = T.RT_76,
+    StateIdList = T.RT_79,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_FuShu_DecVine1.BP_FuShu_DecVine1",
     UnitId = 131042,
     UnitRealType = "Mechanism"
   },
   [131043] = {
     FirstStateId = 1310290,
-    StateIdList = T.RT_76,
+    StateIdList = T.RT_79,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_FuShu_DecVine2.BP_FuShu_DecVine2",
     UnitId = 131043,
     UnitRealType = "Mechanism"
   },
   [131044] = {
     FirstStateId = 1310290,
-    StateIdList = T.RT_76,
+    StateIdList = T.RT_79,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_FuShu_DecVine3.BP_FuShu_DecVine3",
     UnitId = 131044,
     UnitRealType = "Mechanism"
@@ -8940,7 +9342,7 @@ return ReadOnly("Mechanism", {
   },
   [131052] = {
     FirstStateId = 1310290,
-    StateIdList = T.RT_76,
+    StateIdList = T.RT_79,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_FuShuUltraVine.BP_FuShuUltraVine",
     UnitId = 131052,
     UnitRealType = "Mechanism"
@@ -8964,7 +9366,7 @@ return ReadOnly("Mechanism", {
     UnitRealType = "Mechanism"
   },
   [131055] = {
-    UnitBPPath = "/Game/Asset/Scene/EN001_Ailixian/Common/Mesh/BP_Boxgroup_01.BP_Boxgroup_01",
+    UnitBPPath = "/Game/Asset/Scene/EN001_Ailixian/Common/Mesh/Prop/BP_Boxgroup_01.BP_Boxgroup_01",
     UnitId = 131055,
     UnitRealType = "Mechanism"
   },
@@ -9004,7 +9406,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 1310661,
     InteractiveId = 118009,
     ModelId = 91830,
-    StateIdList = T.RT_77,
+    StateIdList = T.RT_80,
     UnitBPPath = "/Game/AssetDesign/Item/East_GoldRush/BP_Container_Small1.BP_Container_Small1",
     UnitId = 131059,
     UnitRealType = "Mechanism"
@@ -9014,7 +9416,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 1310661,
     InteractiveId = 118010,
     ModelId = 91831,
-    StateIdList = T.RT_77,
+    StateIdList = T.RT_80,
     UnitBPPath = "/Game/AssetDesign/Item/East_GoldRush/BP_Container_Small2.BP_Container_Small2",
     UnitId = 131060,
     UnitRealType = "Mechanism"
@@ -9024,7 +9426,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 1310661,
     InteractiveId = 118011,
     ModelId = 91832,
-    StateIdList = T.RT_77,
+    StateIdList = T.RT_80,
     UnitBPPath = "/Game/AssetDesign/Item/East_GoldRush/BP_Container_Small3.BP_Container_Small3",
     UnitId = 131061,
     UnitRealType = "Mechanism"
@@ -9034,7 +9436,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 1310661,
     InteractiveId = 118012,
     ModelId = 91833,
-    StateIdList = T.RT_77,
+    StateIdList = T.RT_80,
     UnitBPPath = "/Game/AssetDesign/Item/East_GoldRush/BP_Container_Medium1.BP_Container_Medium1",
     UnitId = 131062,
     UnitRealType = "Mechanism"
@@ -9044,7 +9446,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 1310661,
     InteractiveId = 118013,
     ModelId = 91834,
-    StateIdList = T.RT_77,
+    StateIdList = T.RT_80,
     UnitBPPath = "/Game/AssetDesign/Item/East_GoldRush/BP_Container_Medium2.BP_Container_Medium2",
     UnitId = 131063,
     UnitRealType = "Mechanism"
@@ -9054,7 +9456,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 1310661,
     InteractiveId = 118014,
     ModelId = 91835,
-    StateIdList = T.RT_77,
+    StateIdList = T.RT_80,
     UnitBPPath = "/Game/AssetDesign/Item/East_GoldRush/BP_Container_Medium3.BP_Container_Medium3",
     UnitId = 131064,
     UnitRealType = "Mechanism"
@@ -9066,7 +9468,7 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_HighValueItem.T_Gp_HighValueItem",
     InteractiveId = 118015,
     ModelId = 91836,
-    StateIdList = T.RT_77,
+    StateIdList = T.RT_80,
     UnitBPPath = "/Game/AssetDesign/Item/East_GoldRush/BP_Container_Big.BP_Container_Big",
     UnitId = 131065,
     UnitRealType = "Mechanism"
@@ -9078,7 +9480,7 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_HighValueItem.T_Gp_HighValueItem",
     InteractiveId = 118016,
     ModelId = 91837,
-    StateIdList = T.RT_77,
+    StateIdList = T.RT_80,
     UnitBPPath = "/Game/AssetDesign/Item/East_GoldRush/BP_Container_Big2.BP_Container_Big2",
     UnitId = 131066,
     UnitRealType = "Mechanism"
@@ -9105,7 +9507,7 @@ return ReadOnly("Mechanism", {
     UnitBPPath = "/Game/AssetDesign/Item/East_GoldRush/GameplayMech/BP_GuardMech.BP_GuardMech",
     UnitId = 131067,
     UnitName = "UI_Extraction_TM_49",
-    UnitParams = T.RT_78,
+    UnitParams = T.RT_81,
     UnitRealType = "Mechanism"
   },
   [131068] = {
@@ -9150,7 +9552,7 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_TreasureRoom.T_Gp_TreasureRoom",
     InteractiveId = 118008,
-    StateIdList = T.RT_79,
+    StateIdList = T.RT_82,
     UnitBPPath = "/Game/AssetDesign/Item/East_GoldRush/GameplayMech/BP_TreasureRoom.BP_TreasureRoom",
     UnitId = 131070,
     UnitParams = {TimeOutTime = 5, TreasureId = 131070},
@@ -9165,7 +9567,7 @@ return ReadOnly("Mechanism", {
     StateIdList = {1310711, 1310712},
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_MoInteractive_SoloTreasure.BP_MoInteractive_SoloTreasure",
     UnitId = 131071,
-    UnitParams = T.RT_80,
+    UnitParams = T.RT_83,
     UnitRealType = "Mechanism"
   },
   [131072] = {
@@ -9175,7 +9577,7 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_RainyHighValueItem.T_Gp_RainyHighValueItem",
     InteractiveId = 118015,
     ModelId = 91836,
-    StateIdList = T.RT_77,
+    StateIdList = T.RT_80,
     UnitBPPath = "/Game/AssetDesign/Item/East_GoldRush/BP_Container_Big.BP_Container_Big",
     UnitId = 131072,
     UnitRealType = "Mechanism"
@@ -9194,7 +9596,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 1310661,
     InteractiveId = 118009,
     ModelId = 91830,
-    StateIdList = T.RT_77,
+    StateIdList = T.RT_80,
     UnitBPPath = "/Game/AssetDesign/Item/East_GoldRush/BP_Container_Small1.BP_Container_Small1",
     UnitId = 131074,
     UnitRealType = "Mechanism"
@@ -9204,7 +9606,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 1310661,
     InteractiveId = 118010,
     ModelId = 91831,
-    StateIdList = T.RT_77,
+    StateIdList = T.RT_80,
     UnitBPPath = "/Game/AssetDesign/Item/East_GoldRush/BP_Container_Small2.BP_Container_Small2",
     UnitId = 131075,
     UnitRealType = "Mechanism"
@@ -9214,7 +9616,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 1310661,
     InteractiveId = 118011,
     ModelId = 91832,
-    StateIdList = T.RT_77,
+    StateIdList = T.RT_80,
     UnitBPPath = "/Game/AssetDesign/Item/East_GoldRush/BP_Container_Small3.BP_Container_Small3",
     UnitId = 131076,
     UnitRealType = "Mechanism"
@@ -9224,7 +9626,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 1310661,
     InteractiveId = 118012,
     ModelId = 91833,
-    StateIdList = T.RT_77,
+    StateIdList = T.RT_80,
     UnitBPPath = "/Game/AssetDesign/Item/East_GoldRush/BP_Container_Medium1.BP_Container_Medium1",
     UnitId = 131077,
     UnitRealType = "Mechanism"
@@ -9234,7 +9636,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 1310661,
     InteractiveId = 118013,
     ModelId = 91834,
-    StateIdList = T.RT_77,
+    StateIdList = T.RT_80,
     UnitBPPath = "/Game/AssetDesign/Item/East_GoldRush/BP_Container_Medium2.BP_Container_Medium2",
     UnitId = 131078,
     UnitRealType = "Mechanism"
@@ -9244,7 +9646,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 1310661,
     InteractiveId = 118014,
     ModelId = 91835,
-    StateIdList = T.RT_77,
+    StateIdList = T.RT_80,
     UnitBPPath = "/Game/AssetDesign/Item/East_GoldRush/BP_Container_Medium3.BP_Container_Medium3",
     UnitId = 131079,
     UnitRealType = "Mechanism"
@@ -9256,7 +9658,7 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_HighValueItem.T_Gp_HighValueItem",
     InteractiveId = 118015,
     ModelId = 91836,
-    StateIdList = T.RT_77,
+    StateIdList = T.RT_80,
     UnitBPPath = "/Game/AssetDesign/Item/East_GoldRush/BP_Container_Big.BP_Container_Big",
     UnitId = 131080,
     UnitRealType = "Mechanism"
@@ -9268,7 +9670,7 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_HighValueItem.T_Gp_HighValueItem",
     InteractiveId = 118016,
     ModelId = 91837,
-    StateIdList = T.RT_77,
+    StateIdList = T.RT_80,
     UnitBPPath = "/Game/AssetDesign/Item/East_GoldRush/BP_Container_Big2.BP_Container_Big2",
     UnitId = 131081,
     UnitRealType = "Mechanism"
@@ -9279,7 +9681,7 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_TreasureRoom.T_Gp_TreasureRoom",
     InteractiveId = 118025,
-    StateIdList = T.RT_79,
+    StateIdList = T.RT_82,
     UnitBPPath = "/Game/AssetDesign/Item/East_GoldRush/GameplayMech/BP_TreasureRoom.BP_TreasureRoom",
     UnitId = 131082,
     UnitParams = {TimeOutTime = 5, TreasureId = 131082},
@@ -9291,7 +9693,7 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_TreasureRoom.T_Gp_TreasureRoom",
     InteractiveId = 118026,
-    StateIdList = T.RT_79,
+    StateIdList = T.RT_82,
     UnitBPPath = "/Game/AssetDesign/Item/East_GoldRush/GameplayMech/BP_TreasureRoom.BP_TreasureRoom",
     UnitId = 131083,
     UnitParams = {TimeOutTime = 5, TreasureId = 131083},
@@ -9302,7 +9704,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 1310661,
     InteractiveId = 118021,
     ModelId = 91830,
-    StateIdList = T.RT_77,
+    StateIdList = T.RT_80,
     UnitBPPath = "/Game/AssetDesign/Item/East_GoldRush/BP_Container_Small1.BP_Container_Small1",
     UnitId = 131084,
     UnitRealType = "Mechanism"
@@ -9312,7 +9714,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 1310661,
     InteractiveId = 118022,
     ModelId = 91831,
-    StateIdList = T.RT_77,
+    StateIdList = T.RT_80,
     UnitBPPath = "/Game/AssetDesign/Item/East_GoldRush/BP_Container_Small2.BP_Container_Small2",
     UnitId = 131085,
     UnitRealType = "Mechanism"
@@ -9322,7 +9724,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 1310661,
     InteractiveId = 118023,
     ModelId = 91835,
-    StateIdList = T.RT_77,
+    StateIdList = T.RT_80,
     UnitBPPath = "/Game/AssetDesign/Item/East_GoldRush/BP_Container_Medium3.BP_Container_Medium3",
     UnitId = 131086,
     UnitRealType = "Mechanism"
@@ -9332,7 +9734,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 1310661,
     InteractiveId = 118024,
     ModelId = 91833,
-    StateIdList = T.RT_77,
+    StateIdList = T.RT_80,
     UnitBPPath = "/Game/AssetDesign/Item/East_GoldRush/BP_Container_Medium1.BP_Container_Medium1",
     UnitId = 131087,
     UnitRealType = "Mechanism"
@@ -9351,7 +9753,7 @@ return ReadOnly("Mechanism", {
     },
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_QuestHaoJing.BP_MiniGame_QuestHaoJing",
     UnitId = 132001,
-    UnitParams = T.RT_81,
+    UnitParams = T.RT_84,
     UnitRealType = "MiniGame"
   },
   [141001] = {
@@ -9389,10 +9791,10 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     GuideInactive = true,
-    GuideInfo = T.RT_82,
+    GuideInfo = T.RT_85,
     GuideType = 1,
     NeedBuffManager = true,
-    StateIdList = T.RT_83,
+    StateIdList = T.RT_86,
     UnitBPPath = "/Game/AssetDesign/Item/Station/BP_Breakable_Carrige.BP_Breakable_Carrige",
     UnitId = 161001,
     UnitRealType = "Mechanism"
@@ -9405,7 +9807,7 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     NeedBuffManager = true,
-    StateIdList = T.RT_83,
+    StateIdList = T.RT_86,
     UnitBPPath = "/Game/AssetDesign/Item/Station/BP_Conveyor.BP_Conveyor",
     UnitId = 161002,
     UnitRealType = "Mechanism"
@@ -9418,7 +9820,7 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     NeedBuffManager = true,
-    StateIdList = T.RT_83,
+    StateIdList = T.RT_86,
     UnitBPPath = "/Game/AssetDesign/Item/Station/BP_Conveyor.BP_Conveyor",
     UnitId = 161003,
     UnitRealType = "Mechanism"
@@ -9430,7 +9832,7 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     GuideInactive = true,
-    StateIdList = T.RT_84,
+    StateIdList = T.RT_87,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/BreakableItem/Sew/BP_BreakableItem_Sew_Comb01_Design.BP_BreakableItem_Sew_Comb01_Design",
     UnitId = 161004,
     UnitRealType = "BreakableItem"
@@ -9439,7 +9841,7 @@ return ReadOnly("Mechanism", {
     BattleRoleId = 8519510,
     Camp = "Player",
     FirstStateId = 1610050,
-    StateIdList = T.RT_85,
+    StateIdList = T.RT_88,
     UnitBPPath = "/Game/AssetDesign/Item/Station/BP_SplineTrain_A.BP_SplineTrain_A",
     UnitId = 161005,
     UnitRealType = "Mechanism"
@@ -9448,7 +9850,7 @@ return ReadOnly("Mechanism", {
     BattleRoleId = 8519511,
     Camp = "Player",
     FirstStateId = 1610050,
-    StateIdList = T.RT_85,
+    StateIdList = T.RT_88,
     UnitBPPath = "/Game/AssetDesign/Item/Station/BP_SplineTrain_B.BP_SplineTrain_B",
     UnitId = 161006,
     UnitRealType = "Mechanism"
@@ -9457,7 +9859,7 @@ return ReadOnly("Mechanism", {
     BattleRoleId = 8519512,
     Camp = "Player",
     FirstStateId = 1610052,
-    StateIdList = T.RT_85,
+    StateIdList = T.RT_88,
     UnitBPPath = "/Game/AssetDesign/Item/Station/BP_SplineTrain_D.BP_SplineTrain_D",
     UnitId = 161007,
     UnitRealType = "Mechanism"
@@ -9481,7 +9883,7 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     InteractiveId = 101,
-    StateIdList = T.RT_86,
+    StateIdList = T.RT_89,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_NoSM.BP_MiniGame_NoSM",
     UnitId = 161009,
     UnitParams = {
@@ -9496,21 +9898,21 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     NeedBuffManager = false,
-    StateIdList = T.RT_17,
+    StateIdList = T.RT_18,
     UnitBPPath = "/Game/AssetDesign/Level/EN002_Imperial/BP_Chapter03_Feiting.BP_Chapter03_Feiting",
     UnitId = 161010,
     UnitRealType = "Mechanism"
   },
   [161011] = {
     FirstStateId = 66,
-    StateIdList = T.RT_84,
+    StateIdList = T.RT_87,
     UnitBPPath = "/Game/AssetDesign/Item/Station/BP_Lieche_Sum.BP_Lieche_Sum",
     UnitId = 161011,
     UnitRealType = "Mechanism"
   },
   [161012] = {
     FirstStateId = 66,
-    StateIdList = T.RT_84,
+    StateIdList = T.RT_87,
     UnitBPPath = "/Game/AssetDesign/Item/Station/BP_CameraShake_YW.BP_CameraShake_YW",
     UnitId = 161012,
     UnitRealType = "Mechanism"
@@ -9520,22 +9922,49 @@ return ReadOnly("Mechanism", {
     UnitId = 170001,
     UnitRealType = "Mechanism"
   },
+  [170005] = {
+    FirstStateId = 10,
+    InteractiveId = 929,
+    StateIdList = T.RT_40,
+    UnitBPPath = "/Game/AssetDesign/Item/FairyTown/BP_Chair_Bench.BP_Chair_Bench",
+    UnitId = 170005,
+    UnitRealType = "Seat"
+  },
+  [170006] = {
+    FirstStateId = 3903003,
+    GuideIconAni = "/Game/UI/UI_PC/World/ExploreToast/Explore_GuidePoint_PC.Explore_GuidePoint_PC",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DynQuest.T_Gp_DynQuest",
+    InteractiveId = 100174,
+    StateIdList = T.RT_90,
+    UnitBPPath = "/Game/BluePrints/Item/FeinaEvent/BP_InteractivePoint.BP_InteractivePoint",
+    UnitId = 170006,
+    UnitRealType = "Mechanism"
+  },
+  [170007] = {
+    FirstStateId = 1700071,
+    StateIdList = {1700071, 1700072},
+    UnitBPPath = "/Game/AssetDesign/Item/FairyTown/BP_Ex02SoliderNPC.BP_Ex02SoliderNPC",
+    UnitId = 170007,
+    UnitRealType = "Mechanism"
+  },
   [170101] = {
+    FirstSeenTag = "EX02Hammer",
     FirstStateId = 1701012,
     InteractiveId = 123,
-    StateIdList = T.RT_87,
+    StateIdList = T.RT_91,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Hammer.BP_MiniGame_Hammer",
     UnitId = 170101,
-    UnitParams = T.RT_88,
+    UnitParams = T.RT_92,
     UnitRealType = "Mechanism"
   },
   [170102] = {
+    FirstSeenTag = "EX02Hammer",
     FirstStateId = 1701022,
     InteractiveId = 124,
-    StateIdList = T.RT_89,
+    StateIdList = T.RT_93,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_HammerChest.BP_MiniGame_HammerChest",
     UnitId = 170102,
-    UnitParams = T.RT_88,
+    UnitParams = T.RT_92,
     UnitRealType = "Mechanism"
   },
   [170201] = {
@@ -9554,13 +9983,153 @@ return ReadOnly("Mechanism", {
   [170202] = {
     UnitBPPath = "/Game/AssetDesign/Item/FairyTown/BP_FogWall.BP_FogWall",
     UnitId = 170202,
+    UnitParams = {FogOffset = 400},
+    UnitRealType = "Mechanism"
+  },
+  [170203] = {
+    FirstStateId = 1702030,
+    StateIdList = {
+      1702030,
+      1702031,
+      1702032,
+      1702033
+    },
+    UnitBPPath = "/Game/AssetDesign/Item/FairyTown/BP_Drawbridge.BP_Drawbridge",
+    UnitId = 170203,
+    UnitRealType = "Mechanism"
+  },
+  [170204] = {
+    FirstStateId = 1702041,
+    StateIdList = T.RT_94,
+    UnitBPPath = "/Game/BluePrints/Item/Mechanism/BP_TeleportTriggerMechanism.BP_TeleportTriggerMechanism",
+    UnitId = 170204,
+    UnitParams = T.RT_95,
+    UnitRealType = "Mechanism"
+  },
+  [170301] = {
+    BattleRoleId = 11101,
+    Camp = "Monster",
+    FirstStateId = 1703012,
+    StateIdList = T.RT_96,
+    UnitBPPath = "/Game/AssetDesign/Item/TargetBoard/BP_TargetBoard_Static_Base.BP_TargetBoard_Static_Base",
+    UnitId = 170301,
+    UnitRealType = "Mechanism"
+  },
+  [170302] = {
+    BattleRoleId = 11101,
+    Camp = "Monster",
+    FirstStateId = 1703011,
+    StateIdList = T.RT_97,
+    UnitBPPath = "/Game/AssetDesign/Item/TargetBoard/BP_TargetBoard_Move_Base.BP_TargetBoard_Move_Base",
+    UnitId = 170302,
+    UnitRealType = "Mechanism"
+  },
+  [170303] = {
+    BattleRoleId = 11101,
+    Camp = "Monster",
+    FirstStateId = 1703012,
+    StateIdList = T.RT_97,
+    UnitBPPath = "/Game/AssetDesign/Item/TargetBoard/BP_TargetBoard_Static_Nul.BP_TargetBoard_Static_Nul",
+    UnitId = 170303,
+    UnitRealType = "Mechanism"
+  },
+  [170401] = {
+    FirstStateId = 1704011,
+    StateIdList = T.RT_98,
+    UnitBPPath = "/Game/AssetDesign/Item/FairyTown/BossCube/BP_EX02BossCube_Wall_Door.BP_EX02BossCube_Wall_Door",
+    UnitId = 170401,
+    UnitRealType = "Mechanism"
+  },
+  [170402] = {
+    FirstStateId = 112010,
+    StateIdList = T.RT_35,
+    UnitBPPath = "/Game/AssetDesign/Item/MonsterSpawn/BP_MonsterNest_Rubic_Window.BP_MonsterNest_Rubic_Window",
+    UnitId = 170402,
+    UnitRealType = "MonsterNest"
+  },
+  [170403] = {
+    FirstStateId = 112010,
+    StateIdList = T.RT_35,
+    UnitBPPath = "/Game/AssetDesign/Item/MonsterSpawn/BP_MonsterNest_Rubic_MultiDoor.BP_MonsterNest_Rubic_MultiDoor",
+    UnitId = 170403,
+    UnitRealType = "MonsterNest"
+  },
+  [170404] = {
+    UnitBPPath = "/Game/BluePrints/Item/FairyTown/BP_Ex02Rubic.BP_Ex02Rubic",
+    UnitId = 170404,
+    UnitRealType = "Mechanism"
+  },
+  [170501] = {
+    UnitBPPath = "/Game/BluePrints/Item/CombatProp/Slide/BP_SlideObstacle.BP_SlideObstacle",
+    UnitId = 170501,
+    UnitParams = T.RT_99,
+    UnitRealType = "Mechanism"
+  },
+  [170502] = {
+    UnitBPPath = "/Game/AssetDesign/Item/Slide/BP_SlideObstacleBoss_Air.BP_SlideObstacleBoss_Air",
+    UnitId = 170502,
+    UnitRealType = "Mechanism"
+  },
+  [170503] = {
+    UnitBPPath = "/Game/AssetDesign/Item/Slide/BP_SlideObstacleBoss_Ground.BP_SlideObstacleBoss_Ground",
+    UnitId = 170503,
+    UnitRealType = "Mechanism"
+  },
+  [170504] = {
+    FirstStateId = 1705040,
+    StateIdList = T.RT_101,
+    UnitBPPath = "/Game/AssetDesign/Item/Slide/BP_SplineTrain_Dynamic_FTown.BP_SplineTrain_Dynamic_FTown",
+    UnitId = 170504,
+    UnitRealType = "Mechanism"
+  },
+  [170601] = {
+    FirstStateId = 1706010,
+    StateIdList = T.RT_103,
+    UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_SlideTarget_KepDis.BP_SlideTarget_KepDis",
+    UnitId = 170601,
+    UnitRealType = "Mechanism"
+  },
+  [170602] = {
+    UnitBPPath = "/Game/AssetDesign/Item/Slide/BP_SplineTrain_Dynamic_FTown.BP_SplineTrain_Dynamic_FTown",
+    UnitId = 170602,
+    UnitRealType = "Mechanism"
+  },
+  [170603] = {
+    BattleRoleId = 117015,
+    Camp = "Monster",
+    UnitBPPath = "/Game/AssetDesign/Item/Slide/BP_SlideBullet_1.BP_SlideBullet_1",
+    UnitId = 170603,
+    UnitParams = {SkillEffect = 900040},
+    UnitRealType = "Mechanism"
+  },
+  [170604] = {
+    UnitBPPath = "/Game/AssetDesign/Item/Slide/BP_SlideObstacleBoss_Meteor.BP_SlideObstacleBoss_Meteor",
+    UnitId = 170604,
+    UnitRealType = "Mechanism"
+  },
+  [170605] = {
+    UnitBPPath = "/Game/AssetDesign/Item/Slide/BP_SlideWitchTimeBox_In.BP_SlideWitchTimeBox_In",
+    UnitId = 170605,
+    UnitRealType = "Mechanism"
+  },
+  [170701] = {
+    FirstStateId = 1707011,
+    InteractiveId = 124,
+    StateIdList = {
+      1707010,
+      1707011,
+      1707012,
+      1707013
+    },
+    UnitBPPath = "/Game/BluePrints/Item/Mechanism/BP_MinigameRingLock.BP_MinigameRingLock",
+    UnitId = 170701,
     UnitRealType = "Mechanism"
   },
   [179901] = {
     BattleRoleId = 11101,
     Camp = "Monster",
     FirstStateId = 1799010,
-    StateIdList = T.RT_90,
+    StateIdList = T.RT_104,
     UnitBPPath = "/Game/AssetDesign/Item/Item_Test/BP_EX02Target.BP_EX02Target",
     UnitId = 179901,
     UnitRealType = "Mechanism"
@@ -9569,14 +10138,22 @@ return ReadOnly("Mechanism", {
     BattleRoleId = 11101,
     Camp = "Monster",
     FirstStateId = 1799010,
-    StateIdList = T.RT_90,
+    StateIdList = T.RT_104,
     UnitBPPath = "/Game/AssetDesign/Item/Item_Test/BP_EX02TargetGate.BP_EX02TargetGate",
     UnitId = 179902,
     UnitRealType = "Mechanism"
   },
   [179910] = {
-    FirstStateId = 1799100,
-    StateIdList = {1799100, 1799101},
+    FirstStateId = 1799103,
+    StateIdList = {
+      1799100,
+      1799101,
+      1799102,
+      1799103,
+      1799104,
+      1799105,
+      1799106
+    },
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_SlideSpline.BP_SlideSpline",
     UnitId = 179910,
     UnitRealType = "Mechanism"
@@ -9584,13 +10161,25 @@ return ReadOnly("Mechanism", {
   [179911] = {
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_SlideAccBox.BP_SlideAccBox",
     UnitId = 179911,
-    UnitParams = {Duration = 3, Rate = 0.5},
+    UnitParams = {BuffLayer = 3, Rate = 0.5},
     UnitRealType = "Mechanism"
   },
   [179912] = {
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/Slide/BP_SlideObstacle.BP_SlideObstacle",
     UnitId = 179912,
-    UnitParams = T.RT_91,
+    UnitParams = T.RT_99,
+    UnitRealType = "Mechanism"
+  },
+  [179913] = {
+    FirstStateId = 1799130,
+    StateIdList = {
+      1799130,
+      1799131,
+      1799132
+    },
+    UnitBPPath = "/Game/AssetDesign/Item/FairyTown/BP_FairyTown_Eve_ConditionalGate.BP_FairyTown_Eve_ConditionalGate",
+    UnitId = 179913,
+    UnitParams = {CountdownTime = 45},
     UnitRealType = "Mechanism"
   },
   [180001] = {
@@ -9602,24 +10191,306 @@ return ReadOnly("Mechanism", {
   },
   [180020] = {
     FirstStateId = 1800200,
-    InteractiveId = 100,
-    StateIdList = T.RT_93,
+    InteractiveId = 80004,
+    StateIdList = T.RT_106,
     UnitBPPath = "/Game/BluePrints/Item/Mechanism/BP_PhotoAtMech.BP_PhotoAtMech",
     UnitId = 180020,
     UnitRealType = "PhotoSpot"
   },
   [180021] = {
     FirstStateId = 1800200,
-    InteractiveId = 100,
-    StateIdList = T.RT_93,
+    InteractiveId = 80004,
+    StateIdList = T.RT_106,
     UnitBPPath = "/Game/BluePrints/Item/Mechanism/BP_PhotoAtMech.BP_PhotoAtMech",
     UnitId = 180021,
     UnitParams = {PhotoSpotId = 1},
     UnitRealType = "PhotoSpot"
   },
+  [190001] = {
+    FirstStateId = 1900010,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
+    GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
+    InteractiveId = 103,
+    ModelId = 9143,
+    StateIdList = {
+      1900010,
+      1900011,
+      1900012,
+      1900013
+    },
+    UnitBPPath = "/Game/AssetDesign/Item/InteractiveItems/BP_Mechanism_SailafeiOrgan.BP_Mechanism_SailafeiOrgan",
+    UnitId = 190001,
+    UnitRealType = "Mechanism"
+  },
+  [190002] = {
+    FirstStateId = 1900014,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
+    GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
+    InteractiveId = 103,
+    ModelId = 9143,
+    StateIdList = {
+      1900010,
+      1900011,
+      1900012,
+      1900013,
+      1900014
+    },
+    UnitBPPath = "/Game/AssetDesign/Item/InteractiveItems/BP_Mechanism_SailafeiOrgan_NightMare.BP_Mechanism_SailafeiOrgan_NightMare",
+    UnitId = 190002,
+    UnitParams = {EntangleStateId = 1900014},
+    UnitRealType = "Mechanism"
+  },
+  [190003] = {
+    FirstStateId = 1900021,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
+    GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
+    InteractiveId = 103,
+    ModelId = 91845,
+    StateIdList = T.RT_108,
+    UnitBPPath = "/Game/AssetDesign/Item/Ailixian/InteractiveItems/BP_InteractiveItem_ChoiceDoor_Black.BP_InteractiveItem_ChoiceDoor_Black",
+    UnitId = 190003,
+    UnitRealType = "Mechanism"
+  },
+  [190004] = {
+    FirstStateId = 1900021,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
+    GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
+    InteractiveId = 103,
+    ModelId = 91845,
+    StateIdList = T.RT_108,
+    UnitBPPath = "/Game/AssetDesign/Item/Ailixian/InteractiveItems/BP_InteractiveItem_ChoiceDoor_Burning.BP_InteractiveItem_ChoiceDoor_Burning",
+    UnitId = 190004,
+    UnitRealType = "Mechanism"
+  },
+  [190005] = {
+    UnitBPPath = "/Game/BluePrints/Common/Triggers/BP_AOITriggerBox_GravityVolume.BP_AOITriggerBox_GravityVolume",
+    UnitId = 190005,
+    UnitRealType = "Mechanism"
+  },
+  [190006] = {
+    FirstStateId = 1900060,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
+    GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
+    InteractiveId = 103,
+    ModelId = 91846,
+    StateIdList = {
+      1900060,
+      1900061,
+      1900062
+    },
+    UnitBPPath = "/Game/AssetDesign/Item/Ailixian/InteractiveItems/BP_InteractiveItem_VillagerStatue.BP_InteractiveItem_VillagerStatue",
+    UnitId = 190006,
+    UnitRealType = "Mechanism"
+  },
+  [190007] = {
+    BattleRoleId = 39001,
+    BloodUIParmas = T.RT_34,
+    Camp = "DefenceCore",
+    FirstStateId = 1900071,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
+    GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
+    InteractiveId = 111,
+    ModelId = 999,
+    NeedBuffManager = true,
+    StateIdList = {
+      1900070,
+      1900071,
+      1900072
+    },
+    UnitBPPath = "/Game/AssetDesign/Item/Ailixian/CombatProp/BP_DefenceMechanism_Resonus.BP_DefenceMechanism_Resonus",
+    UnitId = 190007,
+    UnitRealType = "DefenceCore"
+  },
+  [190010] = {
+    FirstStateId = 1900100,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
+    GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
+    StateIdList = {
+      1900100,
+      1900101,
+      1900102
+    },
+    UnitBPPath = "/Game/BluePrints/Item/Mechanism/BP_MovableShelf.BP_MovableShelf",
+    UnitId = 190010,
+    UnitRealType = "Mechanism"
+  },
+  [190020] = {
+    FirstStateId = 1900200,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
+    GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
+    InteractiveId = 904,
+    ModelId = 92613,
+    StateIdList = {
+      1900200,
+      1900201,
+      1900202,
+      1900203
+    },
+    UnitBPPath = "/Game/AssetDesign/Item/Ailixian/InteractiveItems/BP_InteractiveItem_DreamLock.BP_InteractiveItem_DreamLock",
+    UnitId = 190020,
+    UnitRealType = "Mechanism"
+  },
+  [190021] = {
+    FirstStateId = 1900205,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
+    GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
+    InteractiveId = 904,
+    StateIdList = {
+      1900204,
+      1900205,
+      1900206,
+      1900207
+    },
+    UnitBPPath = "/Game/AssetDesign/Item/Ailixian/InteractiveItems/BP_InteractiveItem_LibraryBook.BP_InteractiveItem_LibraryBook",
+    UnitId = 190021,
+    UnitRealType = "Mechanism"
+  },
+  [190022] = {
+    FirstSeenTag = "GameLine",
+    FirstStateId = 1900221,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
+    GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
+    InteractiveId = 103,
+    ModelId = 9145,
+    StateIdList = {
+      1900220,
+      1900221,
+      1900222,
+      1900223,
+      1900224
+    },
+    UnitBPPath = "/Game/AssetDesign/Item/Ailixian/Minigame/BP_MiniGame_SLF_Console.BP_MiniGame_SLF_Console",
+    UnitId = 190022,
+    UnitParams = T.RT_109,
+    UnitRealType = "MiniGame"
+  },
+  [190030] = {
+    FirstStateId = 1900300,
+    GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
+    InteractiveId = 103,
+    StateIdList = T.RT_110,
+    UnitBPPath = "/Game/BluePrints/Item/Mechanism/BP_EscapeBread.BP_EscapeBread",
+    UnitId = 190030,
+    UnitParams = {
+      AlertRadius = 600,
+      MoveSpeed = 10,
+      ObstacleTag = "BreadObstacle",
+      PathLoopType = "Loop"
+    },
+    UnitRealType = "EscapeBread"
+  },
+  [190031] = {
+    FirstStateId = 1900300,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
+    GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
+    InteractiveId = 103,
+    StateIdList = T.RT_110,
+    UnitBPPath = "/Game/AssetDesign/Item/Ailixian/Mechanism/BP_EscapeBread_OneWay.BP_EscapeBread_OneWay",
+    UnitId = 190031,
+    UnitParams = {
+      ObstacleTag = "BreadObstacle",
+      PathLoopType = "OneWay"
+    },
+    UnitRealType = "EscapeBread"
+  },
+  [190032] = {
+    FirstStateId = 1900300,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
+    GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
+    InteractiveId = 103,
+    StateIdList = T.RT_110,
+    UnitBPPath = "/Game/AssetDesign/Item/Ailixian/Mechanism/BP_EscapeBread_Loop.BP_EscapeBread_Loop",
+    UnitId = 190032,
+    UnitParams = {
+      ObstacleTag = "BreadObstacle",
+      PathLoopType = "Loop"
+    },
+    UnitRealType = "EscapeBread"
+  },
+  [190040] = {
+    FirstSeenTag = "MirrorPuzzle",
+    FirstStateId = 1900400,
+    ModelId = 960,
+    StateIdList = {
+      1900400,
+      1900401,
+      1900402
+    },
+    UnitBPPath = "/Game/AssetDesign/Item/Ailixian/Mechanism/BP_Miandao_MirrorPuzzle_Start.BP_Miandao_MirrorPuzzle_Start",
+    UnitId = 190040,
+    UnitParams = T.RT_111,
+    UnitRealType = "MirrorExploreMechanism"
+  },
+  [190041] = {
+    FirstSeenTag = "MirrorPuzzle",
+    FirstStateId = 1900403,
+    ModelId = 960,
+    StateIdList = {
+      1900403,
+      1900404,
+      1900405,
+      1900406,
+      1900402
+    },
+    UnitBPPath = "/Game/AssetDesign/Item/Ailixian/Mechanism/BP_Miandao_MirrorPuzzle_Reflection.BP_Miandao_MirrorPuzzle_Reflection",
+    UnitId = 190041,
+    UnitParams = T.RT_111,
+    UnitRealType = "MirrorExploreMechanism"
+  },
+  [190042] = {
+    FirstSeenTag = "MirrorPuzzle",
+    FirstStateId = 1900407,
+    ModelId = 960,
+    StateIdList = {
+      1900407,
+      1900408,
+      1900409,
+      1900410,
+      1900411,
+      1900412,
+      1900413,
+      1900414,
+      1900402
+    },
+    UnitBPPath = "/Game/AssetDesign/Item/Ailixian/Mechanism/BP_Miandao_MirrorPuzzle_Reflection.BP_Miandao_MirrorPuzzle_Reflection",
+    UnitId = 190042,
+    UnitParams = T.RT_111,
+    UnitRealType = "MirrorExploreMechanism"
+  },
+  [190043] = {
+    FirstSeenTag = "MirrorPuzzle",
+    FirstStateId = 1900415,
+    ModelId = 960,
+    StateIdList = {
+      1900415,
+      1900416,
+      1900402
+    },
+    UnitBPPath = "/Game/AssetDesign/Item/Ailixian/Mechanism/BP_Miandao_MirrorPuzzle_End.BP_Miandao_MirrorPuzzle_End",
+    UnitId = 190043,
+    UnitParams = T.RT_111,
+    UnitRealType = "MirrorExploreMechanism"
+  },
   [200001] = {
     UnitBPPath = "/Game/BluePrints/Common/Triggers/BP_AOITriggerBox_GravityVolume.BP_AOITriggerBox_GravityVolume",
     UnitId = 200001,
+    UnitRealType = "Mechanism"
+  },
+  [200002] = {
+    UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_Hook_Gravity.BP_Hook_Gravity",
+    UnitId = 200002,
     UnitRealType = "Mechanism"
   },
   [201001] = {
@@ -9631,10 +10502,10 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_95,
+    StateIdList = T.RT_112,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame.BP_MiniGame",
     UnitId = 201001,
-    UnitParams = T.RT_81,
+    UnitParams = T.RT_84,
     UnitRealType = "MiniGame"
   },
   [201002] = {
@@ -9646,10 +10517,10 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     InteractiveId = 101,
     ModelId = 914,
-    StateIdList = T.RT_96,
+    StateIdList = T.RT_113,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Quarry.BP_MiniGame_Quarry",
     UnitId = 201002,
-    UnitParams = T.RT_97,
+    UnitParams = T.RT_114,
     UnitRealType = "MiniGame"
   },
   [201003] = {
@@ -9661,10 +10532,10 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_95,
+    StateIdList = T.RT_112,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame.BP_MiniGame",
     UnitId = 201003,
-    UnitParams = T.RT_80,
+    UnitParams = T.RT_83,
     UnitRealType = "MiniGame"
   },
   [201004] = {
@@ -9676,10 +10547,10 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     InteractiveId = 101,
     ModelId = 914,
-    StateIdList = T.RT_96,
+    StateIdList = T.RT_113,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Quarry.BP_MiniGame_Quarry",
     UnitId = 201004,
-    UnitParams = T.RT_80,
+    UnitParams = T.RT_83,
     UnitRealType = "MiniGame"
   },
   [201005] = {
@@ -9691,10 +10562,10 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     InteractiveId = 101,
     ModelId = 9143,
-    StateIdList = T.RT_98,
+    StateIdList = T.RT_115,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Quarry.BP_MiniGame_Quarry",
     UnitId = 201005,
-    UnitParams = T.RT_80,
+    UnitParams = T.RT_83,
     UnitRealType = "MiniGame"
   },
   [380041] = {
@@ -9704,7 +10575,7 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     GuideVisibility = true,
     RewardId = 1504,
-    StateIdList = T.RT_102,
+    StateIdList = T.RT_119,
     UnitBPPath = "/Game/AssetDesign/Item/BreakableItems/BP_BreakableMechanism_RE_01.BP_BreakableMechanism_RE_01",
     UnitId = 380041,
     UnitRealType = "Mechanism"
@@ -9716,7 +10587,7 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     GuideVisibility = true,
     RewardId = 1504,
-    StateIdList = T.RT_102,
+    StateIdList = T.RT_119,
     UnitBPPath = "/Game/AssetDesign/Item/BreakableItems/BP_BreakableMechanism_RE_02.BP_BreakableMechanism_RE_02",
     UnitId = 380042,
     UnitRealType = "Mechanism"
@@ -9728,7 +10599,7 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     GuideVisibility = true,
     RewardId = 1504,
-    StateIdList = T.RT_102,
+    StateIdList = T.RT_119,
     UnitBPPath = "/Game/AssetDesign/Item/BreakableItems/BP_BreakableMechanism_RE_03.BP_BreakableMechanism_RE_03",
     UnitId = 380043,
     UnitRealType = "Mechanism"
@@ -9740,7 +10611,7 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     GuideVisibility = true,
     RewardId = 1504,
-    StateIdList = T.RT_102,
+    StateIdList = T.RT_119,
     UnitBPPath = "/Game/AssetDesign/Item/BreakableItems/BP_BreakableMechanism_RE_04.BP_BreakableMechanism_RE_04",
     UnitId = 380044,
     UnitRealType = "Mechanism"
@@ -9752,7 +10623,7 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     GuideVisibility = true,
     RewardId = 1504,
-    StateIdList = T.RT_102,
+    StateIdList = T.RT_119,
     UnitBPPath = "/Game/AssetDesign/Item/BreakableItems/BP_BreakableMechanism_RE_05.BP_BreakableMechanism_RE_05",
     UnitId = 380045,
     UnitRealType = "Mechanism"
@@ -9764,7 +10635,7 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     GuideVisibility = true,
     RewardId = 1504,
-    StateIdList = T.RT_102,
+    StateIdList = T.RT_119,
     UnitBPPath = "/Game/AssetDesign/Item/BreakableItems/BP_BreakableMechanism_RE_06.BP_BreakableMechanism_RE_06",
     UnitId = 380046,
     UnitRealType = "Mechanism"
@@ -9776,7 +10647,7 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     GuideVisibility = true,
     RewardId = 1504,
-    StateIdList = T.RT_102,
+    StateIdList = T.RT_119,
     UnitBPPath = "/Game/AssetDesign/Item/BreakableItems/BP_BreakableMechanism_RE_07.BP_BreakableMechanism_RE_07",
     UnitId = 380047,
     UnitRealType = "Mechanism"
@@ -9788,7 +10659,7 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     GuideVisibility = true,
     RewardId = 1504,
-    StateIdList = T.RT_102,
+    StateIdList = T.RT_119,
     UnitBPPath = "/Game/AssetDesign/Item/BreakableItems/BP_BreakableMechanism_RE_08.BP_BreakableMechanism_RE_08",
     UnitId = 380048,
     UnitRealType = "Mechanism"
@@ -9800,7 +10671,7 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     GuideVisibility = true,
     RewardId = 1504,
-    StateIdList = T.RT_102,
+    StateIdList = T.RT_119,
     UnitBPPath = "/Game/AssetDesign/Item/BreakableItems/BP_BreakableMechanism_RE_09.BP_BreakableMechanism_RE_09",
     UnitId = 380049,
     UnitRealType = "Mechanism"
@@ -9810,7 +10681,7 @@ return ReadOnly("Mechanism", {
     Camp = "Monster",
     FirstStateId = 380051,
     RewardId = 1505,
-    StateIdList = T.RT_103,
+    StateIdList = T.RT_120,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/BreakableItem/DungeonRandomEvent/BP_BreakableItem_Reward_RE01.BP_BreakableItem_Reward_RE01",
     UnitId = 380051,
     UnitRealType = "BreakableItem"
@@ -9820,7 +10691,7 @@ return ReadOnly("Mechanism", {
     Camp = "Monster",
     FirstStateId = 380051,
     RewardId = 1506,
-    StateIdList = T.RT_103,
+    StateIdList = T.RT_120,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/BreakableItem/DungeonRandomEvent/BP_BreakableItem_Reward_RE02.BP_BreakableItem_Reward_RE02",
     UnitId = 380052,
     UnitRealType = "BreakableItem"
@@ -9829,7 +10700,7 @@ return ReadOnly("Mechanism", {
     BattleRoleId = 40001,
     Camp = "Monster",
     FirstStateId = 380051,
-    StateIdList = T.RT_103,
+    StateIdList = T.RT_120,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/BreakableItem/DungeonRandomEvent/BP_BreakableItem_Mon_RE01.BP_BreakableItem_Mon_RE01",
     UnitId = 380053,
     UnitRealType = "BreakableItem"
@@ -9838,7 +10709,7 @@ return ReadOnly("Mechanism", {
     BattleRoleId = 40001,
     Camp = "Monster",
     FirstStateId = 380051,
-    StateIdList = T.RT_103,
+    StateIdList = T.RT_120,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/BreakableItem/DungeonRandomEvent/BP_BreakableItem_Mon_RE02.BP_BreakableItem_Mon_RE02",
     UnitId = 380054,
     UnitRealType = "BreakableItem"
@@ -9847,24 +10718,24 @@ return ReadOnly("Mechanism", {
     BattleRoleId = 40001,
     Camp = "Monster",
     FirstStateId = 380051,
-    StateIdList = T.RT_103,
+    StateIdList = T.RT_120,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/BreakableItem/DungeonRandomEvent/BP_BreakableItem_Mon_RE03.BP_BreakableItem_Mon_RE03",
     UnitId = 380055,
     UnitRealType = "BreakableItem"
   },
   [390011] = {
     BattleRoleId = 390011,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "DefenceCore",
     FirstStateId = 3900113,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
-    GuideInfo = T.RT_106,
+    GuideInfo = T.RT_123,
     GuideText = "UI_DUNGEON_GUIDE_DEFENCEMECHANISM",
     GuideType = 0,
     ModelId = 922,
     NeedBuffManager = true,
-    StateIdList = T.RT_107,
+    StateIdList = T.RT_124,
     UnitBPPath = "/Game/BluePrints/Item/DefenceCore/BP_DefenceMechanism_Maer.BP_DefenceMechanism_Maer",
     UnitId = 390011,
     UnitName = "UI_DUNGEON_HOSTAGE",
@@ -9872,17 +10743,17 @@ return ReadOnly("Mechanism", {
   },
   [390012] = {
     BattleRoleId = 390012,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "DefenceCore",
     FirstStateId = 3900123,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
-    GuideInfo = T.RT_106,
+    GuideInfo = T.RT_123,
     GuideText = "UI_DUNGEON_GUIDE_DEFENCEMECHANISM",
     GuideType = 0,
     ModelId = 922,
     NeedBuffManager = true,
-    StateIdList = T.RT_108,
+    StateIdList = T.RT_125,
     UnitBPPath = "/Game/BluePrints/Item/DefenceCore/BP_DefenceMechanism_FortDoor.BP_DefenceMechanism_FortDoor",
     UnitId = 390012,
     UnitName = "UI_DUNGEON_HOSTAGE",
@@ -9890,17 +10761,17 @@ return ReadOnly("Mechanism", {
   },
   [390013] = {
     BattleRoleId = 390013,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "DefenceCore",
     FirstStateId = 3900130,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
-    GuideInfo = T.RT_109,
+    GuideInfo = T.RT_126,
     GuideText = "UI_DUNGEON_GUIDE_DEFENCEMECHANISM",
     GuideType = 0,
     ModelId = 92201,
     NeedBuffManager = true,
-    StateIdList = T.RT_110,
+    StateIdList = T.RT_127,
     UnitBPPath = "/Game/BluePrints/Item/DefenceCore/BP_DefenceMechanism_Sew.BP_DefenceMechanism_Sew",
     UnitId = 390013,
     UnitName = "UI_DUNGEON_HOSTAGE",
@@ -9908,7 +10779,7 @@ return ReadOnly("Mechanism", {
   },
   [390014] = {
     BattleRoleId = 39001,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "DefenceCore",
     FirstStateId = 3900141,
     GuideIconAni = "/Game/UI/UI_PC/World/ExploreToast/Explore_GuidePoint_PC.Explore_GuidePoint_PC",
@@ -9928,7 +10799,7 @@ return ReadOnly("Mechanism", {
   },
   [390015] = {
     BattleRoleId = 39001,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "DefenceCore",
     FirstStateId = 390012,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
@@ -9937,26 +10808,26 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     ModelId = 922,
     NeedBuffManager = true,
-    StateIdList = T.RT_104,
+    StateIdList = T.RT_121,
     UnitBPPath = "/Game/BluePrints/Item/DefenceCore/BP_DefenceMechanism_Platform.BP_DefenceMechanism_Platform",
     UnitId = 390015,
     UnitName = "UI_DUNGEON_HOSTAGE",
-    UnitParams = T.RT_105,
+    UnitParams = T.RT_122,
     UnitRealType = "DefenceCore"
   },
   [390016] = {
     BattleRoleId = 39001,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "DefenceCore",
     FirstStateId = 3900113,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
-    GuideInfo = T.RT_106,
+    GuideInfo = T.RT_123,
     GuideText = "UI_DUNGEON_GUIDE_DEFENCEMECHANISM",
     GuideType = 0,
     ModelId = 922,
     NeedBuffManager = true,
-    StateIdList = T.RT_107,
+    StateIdList = T.RT_124,
     UnitBPPath = "/Game/BluePrints/Item/DefenceCore/BP_DefenceMechanism_Maer.BP_DefenceMechanism_Maer",
     UnitId = 390016,
     UnitName = "UI_DUNGEON_HOSTAGE",
@@ -9964,7 +10835,7 @@ return ReadOnly("Mechanism", {
   },
   [390017] = {
     BattleRoleId = 39001,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "DefenceCore",
     FirstStateId = 3900123,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
@@ -9973,7 +10844,7 @@ return ReadOnly("Mechanism", {
     GuideType = 0,
     ModelId = 999,
     NeedBuffManager = true,
-    StateIdList = T.RT_108,
+    StateIdList = T.RT_125,
     UnitBPPath = "/Game/BluePrints/Item/DefenceCore/BP_DefenceMechanism_Empty.BP_DefenceMechanism_Empty",
     UnitId = 390017,
     UnitName = "UI_DUNGEON_HOSTAGE",
@@ -9981,7 +10852,7 @@ return ReadOnly("Mechanism", {
   },
   [390018] = {
     BattleRoleId = 390018,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "DefenceCore",
     FirstStateId = 3900180,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
@@ -10008,12 +10879,12 @@ return ReadOnly("Mechanism", {
     FirstStateId = 3900130,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
-    GuideInfo = T.RT_109,
+    GuideInfo = T.RT_126,
     GuideText = "UI_DUNGEON_GUIDE_DEFENCEMECHANISM",
     GuideType = 0,
     ModelId = 92201,
     NeedBuffManager = true,
-    StateIdList = T.RT_110,
+    StateIdList = T.RT_127,
     UnitBPPath = "/Game/BluePrints/Item/DefenceCore/BP_DefenceMechanism_Sew_Small2.BP_DefenceMechanism_Sew_Small2",
     UnitId = 390019,
     UnitName = "UI_DUNGEON_HOSTAGE",
@@ -10021,7 +10892,7 @@ return ReadOnly("Mechanism", {
   },
   [390020] = {
     BattleRoleId = 39001,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "DefenceCore",
     FirstStateId = 3900200,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
@@ -10043,12 +10914,12 @@ return ReadOnly("Mechanism", {
   },
   [390021] = {
     BattleRoleId = 39002,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "Hostile",
     FirstStateId = 7,
     ModelId = 999,
     NeedBuffManager = true,
-    StateIdList = T.RT_111,
+    StateIdList = T.RT_128,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_Laser_New.BP_Laser_New",
     UnitId = 390021,
     UnitParams = {
@@ -10063,7 +10934,7 @@ return ReadOnly("Mechanism", {
   },
   [390022] = {
     BattleRoleId = 39001,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "DefenceCore",
     FirstStateId = 3900221,
     GuideIconAni = "/Game/UI/UI_PC/World/ExploreToast/Explore_GuidePoint_PC.Explore_GuidePoint_PC",
@@ -10082,9 +10953,9 @@ return ReadOnly("Mechanism", {
     UnitId = 390022,
     UnitRealType = "DefenceCore"
   },
-  [390025] = {
-    BattleRoleId = 390025,
-    BloodUIParmas = T.RT_33,
+  [390023] = {
+    BattleRoleId = 39001,
+    BloodUIParmas = T.RT_34,
     Camp = "DefenceCore",
     FirstStateId = 390012,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
@@ -10093,11 +10964,29 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     ModelId = 922,
     NeedBuffManager = true,
-    StateIdList = T.RT_104,
+    StateIdList = T.RT_121,
+    UnitBPPath = "/Game/BluePrints/Item/DefenceCore/BP_DefenceMechanism_RouPro.BP_DefenceMechanism_RouPro",
+    UnitId = 390023,
+    UnitName = "UI_DUNGEON_HOSTAGE",
+    UnitParams = T.RT_122,
+    UnitRealType = "DefenceCore"
+  },
+  [390025] = {
+    BattleRoleId = 390025,
+    BloodUIParmas = T.RT_34,
+    Camp = "DefenceCore",
+    FirstStateId = 390012,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
+    GuideText = "UI_DUNGEON_GUIDE_DEFENCEMECHANISM",
+    GuideType = 1,
+    ModelId = 922,
+    NeedBuffManager = true,
+    StateIdList = T.RT_121,
     UnitBPPath = "/Game/BluePrints/Item/DefenceCore/BP_DefenceMechanism.BP_DefenceMechanism",
     UnitId = 390025,
     UnitName = "UI_DUNGEON_HOSTAGE",
-    UnitParams = T.RT_105,
+    UnitParams = T.RT_122,
     UnitRealType = "DefenceCore"
   },
   [390051] = {
@@ -10122,7 +11011,7 @@ return ReadOnly("Mechanism", {
     ModelId = 909,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_Bomb.BP_Bomb",
     UnitId = 390052,
-    UnitParams = T.RT_112,
+    UnitParams = T.RT_129,
     UnitRealType = "Bomb"
   },
   [390053] = {
@@ -10134,7 +11023,7 @@ return ReadOnly("Mechanism", {
     ModelId = 909,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_Bomb.BP_Bomb",
     UnitId = 390053,
-    UnitParams = T.RT_112,
+    UnitParams = T.RT_129,
     UnitRealType = "Bomb"
   },
   [390059] = {
@@ -10158,7 +11047,7 @@ return ReadOnly("Mechanism", {
     Camp = "Hostile",
     FirstStateId = 3900700,
     NeedBuffManager = true,
-    StateIdList = T.RT_114,
+    StateIdList = T.RT_131,
     UnitBPPath = "/Game/AssetDesign/Item/FieldCreature/BP_FieldCreature_Rock.BP_FieldCreature_Rock",
     UnitId = 390071,
     UnitParams = {AttackCD = 0.6, PlayerEffect = 900001},
@@ -10169,10 +11058,10 @@ return ReadOnly("Mechanism", {
     Camp = "Hostile",
     FirstStateId = 3900700,
     NeedBuffManager = true,
-    StateIdList = T.RT_114,
+    StateIdList = T.RT_131,
     UnitBPPath = "/Game/AssetDesign/Item/FieldCreature/BP_FieldCreature_Fire.BP_FieldCreature_Fire",
     UnitId = 390072,
-    UnitParams = T.RT_115,
+    UnitParams = T.RT_132,
     UnitRealType = "FieldTrap"
   },
   [390073] = {
@@ -10180,7 +11069,7 @@ return ReadOnly("Mechanism", {
     Camp = "Hostile",
     FirstStateId = 3900701,
     NeedBuffManager = true,
-    StateIdList = T.RT_114,
+    StateIdList = T.RT_131,
     UnitBPPath = "/Game/AssetDesign/Item/FieldCreature/BP_FieldCreature_Poison.BP_FieldCreature_Poison",
     UnitId = 390073,
     UnitParams = {AttackCD = 0.2, PlayerEffect = 900075},
@@ -10191,7 +11080,7 @@ return ReadOnly("Mechanism", {
     Camp = "Hostile",
     FirstStateId = 3900700,
     NeedBuffManager = true,
-    StateIdList = T.RT_114,
+    StateIdList = T.RT_131,
     UnitBPPath = "/Game/AssetDesign/Item/FieldCreature/BP_FieldCreature_Accelerate.BP_FieldCreature_Accelerate",
     UnitId = 390074,
     UnitParams = {SkillEnter = 900076, SkillLeave = 900077},
@@ -10199,7 +11088,7 @@ return ReadOnly("Mechanism", {
   },
   [390081] = {
     BattleRoleId = 39001,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "DefenceCore",
     FirstStateId = 390012,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
@@ -10208,16 +11097,16 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     ModelId = 922,
     NeedBuffManager = true,
-    StateIdList = T.RT_104,
+    StateIdList = T.RT_121,
     UnitBPPath = "/Game/BluePrints/Item/DefenceCore/BP_DefenceMechanism_Quarry.BP_DefenceMechanism_Quarry",
     UnitId = 390081,
     UnitName = "UI_DUNGEON_HOSTAGE",
-    UnitParams = T.RT_105,
+    UnitParams = T.RT_122,
     UnitRealType = "DefenceCore"
   },
   [390082] = {
     BattleRoleId = 39008,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "DefenceCore",
     FirstStateId = 390012,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
@@ -10225,11 +11114,11 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     ModelId = 922,
     NeedBuffManager = true,
-    StateIdList = T.RT_104,
+    StateIdList = T.RT_121,
     UnitBPPath = "/Game/BluePrints/Item/DefenceCore/BP_DefenceMechanism_Quarry.BP_DefenceMechanism_Quarry",
     UnitId = 390082,
     UnitName = "UI_DUNGEON_HOSTAGE",
-    UnitParams = T.RT_105,
+    UnitParams = T.RT_122,
     UnitRealType = "DefenceCore"
   },
   [390091] = {
@@ -10264,10 +11153,42 @@ return ReadOnly("Mechanism", {
     },
     UnitRealType = "Cannon"
   },
+  [390093] = {
+    BattleRoleId = 39009,
+    Camp = "Hostile",
+    ModelId = 999,
+    UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_Cannon.BP_Cannon",
+    UnitId = 390093,
+    UnitParams = {
+      BulletNum = 5,
+      FillingTime = 10,
+      IntervalTime = 1,
+      SkillCauesDamage = 900034,
+      SkillSavePos = 900035,
+      WarningEffect = 900009
+    },
+    UnitRealType = "Cannon"
+  },
+  [390094] = {
+    BattleRoleId = 39009,
+    Camp = "Hostile",
+    ModelId = 999,
+    UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_Cannon.BP_Cannon",
+    UnitId = 390094,
+    UnitParams = {
+      BulletNum = 5,
+      FillingTime = 10,
+      IntervalTime = 1,
+      SkillCauesDamage = 900037,
+      SkillSavePos = 900035,
+      WarningEffect = 900009
+    },
+    UnitRealType = "Cannon"
+  },
   [390101] = {
     UnitBPPath = "/Game/AssetDesign/Item/Trap/BP_FallingPlatform_Icelake.BP_FallingPlatform_Icelake",
     UnitId = 390101,
-    UnitParams = T.RT_116,
+    UnitParams = T.RT_133,
     UnitRealType = "FallingPlatform"
   },
   [390102] = {
@@ -10277,7 +11198,7 @@ return ReadOnly("Mechanism", {
     UnitRealType = "FallingPlatform"
   },
   [390111] = {
-    AccessoryIds = T.RT_118,
+    AccessoryIds = T.RT_135,
     BattleRoleId = 40003,
     Camp = "DefenceCore",
     ModelId = 917,
@@ -10336,7 +11257,7 @@ return ReadOnly("Mechanism", {
     },
     UnitBPPath = "/Game/BluePrints/Item/AirWall/BP_TrapArea.BP_TrapArea",
     UnitId = 390161,
-    UnitParams = T.RT_115,
+    UnitParams = T.RT_132,
     UnitRealType = "FieldTrap"
   },
   [390162] = {
@@ -10355,52 +11276,52 @@ return ReadOnly("Mechanism", {
     },
     UnitBPPath = "/Game/BluePrints/Item/AirWall/BP_TrapArea.BP_TrapArea",
     UnitId = 390162,
-    UnitParams = T.RT_115,
+    UnitParams = T.RT_132,
     UnitRealType = "FieldTrap"
   },
   [390181] = {
     BattleRoleId = 39006,
     Camp = "Hostile",
     FirstStateId = 3901800,
-    GuideInfo = T.RT_106,
+    GuideInfo = T.RT_123,
     GuideText = "UI_DUNGEON_GUIDE_DEFENCEMECHANISM",
     GuideType = 0,
     ModelId = 999,
     NeedBuffManager = true,
-    StateIdList = T.RT_120,
+    StateIdList = T.RT_137,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_NewRockTrap_Ice.BP_NewRockTrap_Ice",
     UnitId = 390181,
-    UnitParams = T.RT_113,
+    UnitParams = T.RT_130,
     UnitRealType = "Mechanism"
   },
   [390182] = {
     BattleRoleId = 39006,
     Camp = "Hostile",
     FirstStateId = 3901800,
-    GuideInfo = T.RT_106,
+    GuideInfo = T.RT_123,
     GuideText = "UI_DUNGEON_GUIDE_DEFENCEMECHANISM",
     GuideType = 0,
     ModelId = 999,
     NeedBuffManager = true,
-    StateIdList = T.RT_120,
+    StateIdList = T.RT_137,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_NewRockTrap_Fort.BP_NewRockTrap_Fort",
     UnitId = 390182,
-    UnitParams = T.RT_113,
+    UnitParams = T.RT_130,
     UnitRealType = "Mechanism"
   },
   [390183] = {
     BattleRoleId = 39006,
     Camp = "Hostile",
     FirstStateId = 3901800,
-    GuideInfo = T.RT_106,
+    GuideInfo = T.RT_123,
     GuideText = "UI_DUNGEON_GUIDE_DEFENCEMECHANISM",
     GuideType = 0,
     ModelId = 999,
     NeedBuffManager = true,
-    StateIdList = T.RT_120,
+    StateIdList = T.RT_137,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_NewRockTrapB.BP_NewRockTrapB",
     UnitId = 390183,
-    UnitParams = T.RT_113,
+    UnitParams = T.RT_130,
     UnitRealType = "Mechanism"
   },
   [390184] = {
@@ -10410,14 +11331,14 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     GuideInactive = true,
-    GuideInfo = T.RT_82,
+    GuideInfo = T.RT_85,
     GuideType = 1,
     ModelId = 999,
     NeedBuffManager = true,
-    StateIdList = T.RT_120,
+    StateIdList = T.RT_137,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_BoxTrap_Station.BP_BoxTrap_Station",
     UnitId = 390184,
-    UnitParams = T.RT_121,
+    UnitParams = T.RT_138,
     UnitRealType = "Mechanism"
   },
   [390231] = {
@@ -10437,7 +11358,7 @@ return ReadOnly("Mechanism", {
     Camp = "Hostile",
     FirstStateId = 3902300,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Alert.WBP_GuidePoint_Alert",
-    StateIdList = T.RT_122,
+    StateIdList = T.RT_139,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_RegionDrone_GRPiaoFu.BP_RegionDrone_GRPiaoFu",
     UnitId = 390232,
     UnitParams = {CanAttack = true},
@@ -10448,7 +11369,7 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     UnitBPPath = "/Game/BluePrints/Item/FeinaEvent/BP_Bird_Feina_Fog.BP_Bird_Feina_Fog",
     UnitId = 390261,
-    UnitParams = T.RT_124,
+    UnitParams = T.RT_141,
     UnitRealType = "Mechanism"
   },
   [390271] = {
@@ -10462,7 +11383,7 @@ return ReadOnly("Mechanism", {
     },
     UnitBPPath = "/Game/BluePrints/Item/FeinaEvent/BP_FeinaEventChangeColor_RedFlower.BP_FeinaEventChangeColor_RedFlower",
     UnitId = 390271,
-    UnitParams = T.RT_127,
+    UnitParams = T.RT_144,
     UnitRealType = "Mechanism"
   },
   [390272] = {
@@ -10476,7 +11397,7 @@ return ReadOnly("Mechanism", {
     },
     UnitBPPath = "/Game/BluePrints/Item/FeinaEvent/BP_FeinaEventChangeColor_GreenFlower.BP_FeinaEventChangeColor_GreenFlower",
     UnitId = 390272,
-    UnitParams = T.RT_127,
+    UnitParams = T.RT_144,
     UnitRealType = "Mechanism"
   },
   [390273] = {
@@ -10490,17 +11411,17 @@ return ReadOnly("Mechanism", {
     },
     UnitBPPath = "/Game/BluePrints/Item/FeinaEvent/BP_FeinaEventChangeColor_BlueFlower.BP_FeinaEventChangeColor_BlueFlower",
     UnitId = 390273,
-    UnitParams = T.RT_127,
+    UnitParams = T.RT_144,
     UnitRealType = "Mechanism"
   },
   [390274] = {
     BattleRoleId = 11101,
     Camp = "Monster",
     FirstStateId = 3902700,
-    StateIdList = T.RT_125,
+    StateIdList = T.RT_142,
     UnitBPPath = "/Game/BluePrints/Item/FeinaEvent/BP_FeinaEventChangeColor_Basin.BP_FeinaEventChangeColor_Basin",
     UnitId = 390274,
-    UnitParams = T.RT_127,
+    UnitParams = T.RT_144,
     UnitRealType = "Mechanism"
   },
   [390275] = {
@@ -10520,7 +11441,7 @@ return ReadOnly("Mechanism", {
     },
     UnitBPPath = "/Game/BluePrints/Item/FeinaEvent/BP_FeinaEventChangeColor_BadgeRed.BP_FeinaEventChangeColor_BadgeRed",
     UnitId = 390275,
-    UnitParams = T.RT_127,
+    UnitParams = T.RT_144,
     UnitRealType = "Mechanism"
   },
   [390276] = {
@@ -10540,7 +11461,7 @@ return ReadOnly("Mechanism", {
     },
     UnitBPPath = "/Game/BluePrints/Item/FeinaEvent/BP_FeinaEventChangeColor_BadgeBlue.BP_FeinaEventChangeColor_BadgeBlue",
     UnitId = 390276,
-    UnitParams = T.RT_127,
+    UnitParams = T.RT_144,
     UnitRealType = "Mechanism"
   },
   [390279] = {
@@ -10563,14 +11484,14 @@ return ReadOnly("Mechanism", {
     },
     UnitBPPath = "/Game/BluePrints/Item/FeinaEvent/BP_FeinaEventChangeColor_Universal.BP_FeinaEventChangeColor_Universal",
     UnitId = 390279,
-    UnitParams = T.RT_127,
+    UnitParams = T.RT_144,
     UnitRealType = "Mechanism"
   },
   [390281] = {
     FirstStateId = 3902800,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
-    StateIdList = T.RT_128,
+    StateIdList = T.RT_145,
     UnitBPPath = "/Game/BluePrints/Item/FeinaEvent/BP_Feina_Feather.BP_Feina_Feather",
     UnitId = 390281,
     UnitRealType = "Mechanism"
@@ -10592,35 +11513,35 @@ return ReadOnly("Mechanism", {
   },
   [390351] = {
     FirstStateId = 3903600,
-    StateIdList = T.RT_130,
+    StateIdList = T.RT_147,
     UnitBPPath = "/Game/BluePrints/Item/FeinaEvent/BP_Feina_AnimalSaiqi_States.BP_Feina_AnimalSaiqi_States",
     UnitId = 390351,
     UnitRealType = "Mechanism"
   },
   [390361] = {
     FirstStateId = 3903600,
-    StateIdList = T.RT_130,
+    StateIdList = T.RT_147,
     UnitBPPath = "/Game/BluePrints/Item/FeinaEvent/BP_Feina_AnimalNvzhu_States.BP_Feina_AnimalNvzhu_States",
     UnitId = 390361,
     UnitRealType = "Mechanism"
   },
   [390362] = {
     FirstStateId = 3903605,
-    StateIdList = T.RT_130,
+    StateIdList = T.RT_147,
     UnitBPPath = "/Game/BluePrints/Item/FeinaEvent/BP_Feina_AnimalNvzhu_StatesStaticCreator.BP_Feina_AnimalNvzhu_StatesStaticCreator",
     UnitId = 390362,
     UnitRealType = "Mechanism"
   },
   [390371] = {
     FirstStateId = 3903600,
-    StateIdList = T.RT_130,
+    StateIdList = T.RT_147,
     UnitBPPath = "/Game/BluePrints/Item/FeinaEvent/BP_Feina_AnimalAote_States.BP_Feina_AnimalAote_States",
     UnitId = 390371,
     UnitRealType = "Mechanism"
   },
   [390372] = {
     FirstStateId = 3903605,
-    StateIdList = T.RT_130,
+    StateIdList = T.RT_147,
     UnitBPPath = "/Game/BluePrints/Item/FeinaEvent/BP_Feina_AnimalAote_StatesStaticCreator.BP_Feina_AnimalAote_StatesStaticCreator",
     UnitId = 390372,
     UnitRealType = "Mechanism"
@@ -10642,7 +11563,7 @@ return ReadOnly("Mechanism", {
   [390451] = {
     FirstStateId = 3904500,
     InteractiveId = 1190,
-    StateIdList = T.RT_131,
+    StateIdList = T.RT_148,
     UnitBPPath = "/Game/BluePrints/Item/FeinaEvent/BP_FeinaEvacuation_Interact.BP_FeinaEvacuation_Interact",
     UnitId = 390451,
     UnitRealType = "Mechanism"
@@ -10656,7 +11577,7 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_95,
+    StateIdList = T.RT_112,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame.BP_MiniGame",
     UnitId = 490051,
     UnitParams = {Difficulty = 2, GameTime = 60},
@@ -10671,7 +11592,7 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_95,
+    StateIdList = T.RT_112,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame.BP_MiniGame",
     UnitId = 490052,
     UnitParams = {Difficulty = 3, GameTime = 60},
@@ -10685,7 +11606,7 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_95,
+    StateIdList = T.RT_112,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame.BP_MiniGame",
     UnitId = 490053,
     UnitParams = {
@@ -10704,7 +11625,7 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_95,
+    StateIdList = T.RT_112,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame.BP_MiniGame",
     UnitId = 490054,
     UnitParams = {
@@ -10723,7 +11644,7 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_95,
+    StateIdList = T.RT_112,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame.BP_MiniGame",
     UnitId = 490055,
     UnitParams = {
@@ -10742,10 +11663,10 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 914,
-    StateIdList = T.RT_96,
+    StateIdList = T.RT_113,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Quarry.BP_MiniGame_Quarry",
     UnitId = 490056,
-    UnitParams = T.RT_97,
+    UnitParams = T.RT_114,
     UnitRealType = "MiniGame"
   },
   [490057] = {
@@ -10756,7 +11677,7 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 914,
-    StateIdList = T.RT_96,
+    StateIdList = T.RT_113,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Quarry.BP_MiniGame_Quarry",
     UnitId = 490057,
     UnitParams = {
@@ -10775,7 +11696,7 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 914,
-    StateIdList = T.RT_96,
+    StateIdList = T.RT_113,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Quarry.BP_MiniGame_Quarry",
     UnitId = 490058,
     UnitParams = {
@@ -10794,10 +11715,10 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_86,
+    StateIdList = T.RT_89,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_NoSM.BP_MiniGame_NoSM",
     UnitId = 490059,
-    UnitParams = T.RT_139,
+    UnitParams = T.RT_160,
     UnitRealType = "MiniGame"
   },
   [490061] = {
@@ -10809,10 +11730,10 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_95,
+    StateIdList = T.RT_112,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame.BP_MiniGame",
     UnitId = 490061,
-    UnitParams = T.RT_147,
+    UnitParams = T.RT_168,
     UnitRealType = "MiniGame"
   },
   [490062] = {
@@ -10824,7 +11745,7 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_95,
+    StateIdList = T.RT_112,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame.BP_MiniGame",
     UnitId = 490062,
     UnitParams = {
@@ -10842,7 +11763,7 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_95,
+    StateIdList = T.RT_112,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame.BP_MiniGame",
     UnitId = 490063,
     UnitParams = {
@@ -10862,10 +11783,10 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_95,
+    StateIdList = T.RT_112,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame.BP_MiniGame",
     UnitId = 490064,
-    UnitParams = T.RT_154,
+    UnitParams = T.RT_175,
     UnitRealType = "MiniGame"
   },
   [490065] = {
@@ -10876,7 +11797,7 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_95,
+    StateIdList = T.RT_112,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame.BP_MiniGame",
     UnitId = 490065,
     UnitParams = {
@@ -10896,7 +11817,7 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_95,
+    StateIdList = T.RT_112,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame.BP_MiniGame",
     UnitId = 490066,
     UnitParams = {
@@ -10918,10 +11839,10 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     InteractiveId = 905,
     ModelId = 9141,
-    StateIdList = T.RT_96,
+    StateIdList = T.RT_113,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Quarry.BP_MiniGame_Quarry",
     UnitId = 490067,
-    UnitParams = T.RT_147,
+    UnitParams = T.RT_168,
     UnitRealType = "MiniGame"
   },
   [490068] = {
@@ -10932,7 +11853,7 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 914,
-    StateIdList = T.RT_96,
+    StateIdList = T.RT_113,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Quarry.BP_MiniGame_Quarry",
     UnitId = 490068,
     UnitParams = {
@@ -10952,7 +11873,7 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 914,
-    StateIdList = T.RT_96,
+    StateIdList = T.RT_113,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Quarry.BP_MiniGame_Quarry",
     UnitId = 490069,
     UnitParams = {
@@ -10971,10 +11892,10 @@ return ReadOnly("Mechanism", {
     GuideType = 0,
     InteractiveId = 101,
     ModelId = 914,
-    StateIdList = T.RT_155,
+    StateIdList = T.RT_176,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Quarry.BP_MiniGame_Quarry",
     UnitId = 490070,
-    UnitParams = T.RT_80,
+    UnitParams = T.RT_83,
     UnitRealType = "Controller"
   },
   [490071] = {
@@ -10991,7 +11912,7 @@ return ReadOnly("Mechanism", {
     },
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame.BP_MiniGame",
     UnitId = 490071,
-    UnitParams = T.RT_80,
+    UnitParams = T.RT_83,
     UnitRealType = "Controller"
   },
   [490072] = {
@@ -11001,10 +11922,10 @@ return ReadOnly("Mechanism", {
     GuideType = 0,
     InteractiveId = 101,
     ModelId = 914,
-    StateIdList = T.RT_155,
+    StateIdList = T.RT_176,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Quarry.BP_MiniGame_Quarry",
     UnitId = 490072,
-    UnitParams = T.RT_80,
+    UnitParams = T.RT_83,
     UnitRealType = "Controller"
   },
   [490073] = {
@@ -11021,7 +11942,7 @@ return ReadOnly("Mechanism", {
     },
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Quarry.BP_MiniGame_Quarry",
     UnitId = 490073,
-    UnitParams = T.RT_80,
+    UnitParams = T.RT_83,
     UnitRealType = "Controller"
   },
   [490074] = {
@@ -11030,7 +11951,7 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     InteractiveId = 90301,
     ModelId = 9141,
-    StateIdList = T.RT_156,
+    StateIdList = T.RT_177,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Training.BP_MiniGame_Training",
     UnitId = 490074,
     UnitParams = {
@@ -11055,7 +11976,7 @@ return ReadOnly("Mechanism", {
     },
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame.BP_MiniGame",
     UnitId = 490075,
-    UnitParams = T.RT_80,
+    UnitParams = T.RT_83,
     UnitRealType = "Controller"
   },
   [490076] = {
@@ -11073,7 +11994,7 @@ return ReadOnly("Mechanism", {
     },
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame.BP_MiniGame",
     UnitId = 490076,
-    UnitParams = T.RT_80,
+    UnitParams = T.RT_83,
     UnitRealType = "Controller"
   },
   [490077] = {
@@ -11101,10 +12022,10 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     InteractiveId = 900,
     NeedBuffManager = true,
-    StateIdList = T.RT_157,
+    StateIdList = T.RT_178,
     UnitBPPath = "/Game/BluePrints/Item/Supply/BP_EnergySupplyJuntuan.BP_EnergySupplyJuntuan",
     UnitId = 490081,
-    UnitParams = T.RT_158,
+    UnitParams = T.RT_179,
     UnitRealType = "Supply"
   },
   [490101] = {
@@ -11116,10 +12037,10 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     InteractiveId = 900,
     NeedBuffManager = true,
-    StateIdList = T.RT_157,
+    StateIdList = T.RT_178,
     UnitBPPath = "/Game/BluePrints/Item/Supply/BP_EnergySupplyJuntuan.BP_EnergySupplyJuntuan",
     UnitId = 490101,
-    UnitParams = T.RT_159,
+    UnitParams = T.RT_180,
     UnitRealType = "Supply"
   },
   [490111] = {
@@ -11131,10 +12052,10 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     InteractiveId = 900,
     NeedBuffManager = true,
-    StateIdList = T.RT_157,
+    StateIdList = T.RT_178,
     UnitBPPath = "/Game/BluePrints/Item/Supply/BP_EnergySupplyJuntuan.BP_EnergySupplyJuntuan",
     UnitId = 490111,
-    UnitParams = T.RT_160,
+    UnitParams = T.RT_181,
     UnitRealType = "Supply"
   },
   [490112] = {
@@ -11146,10 +12067,22 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     InteractiveId = 900,
     NeedBuffManager = true,
-    StateIdList = T.RT_157,
+    StateIdList = T.RT_178,
     UnitBPPath = "/Game/BluePrints/Item/Supply/BP_EnergySupplyHuishou.BP_EnergySupplyHuishou",
     UnitId = 490112,
-    UnitParams = T.RT_160,
+    UnitParams = T.RT_181,
+    UnitRealType = "Supply"
+  },
+  [490121] = {
+    AllowBuffType = 5000010,
+    Camp = "Player",
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Level1.WBP_GuidePoint_Level1",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
+    GuideType = 1,
+    NeedBuffManager = true,
+    UnitBPPath = "/Game/BluePrints/Item/Supply/BP_EnergySupplyMini_RouPro.BP_EnergySupplyMini_RouPro",
+    UnitId = 490121,
+    UnitParams = T.RT_182,
     UnitRealType = "Supply"
   },
   [490181] = {
@@ -11166,7 +12099,7 @@ return ReadOnly("Mechanism", {
   },
   [492001] = {
     BattleRoleId = 39010,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "DefenceCore",
     FirstStateId = 4920012,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
@@ -11209,10 +12142,10 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     InteractiveId = 925,
     ModelId = 938,
-    StateIdList = T.RT_162,
+    StateIdList = T.RT_186,
     UnitBPPath = "/Game/AssetDesign/Item/InteractiveItems/BP_CIMechanism_Sew.BP_CIMechanism_Sew",
     UnitId = 495001,
-    UnitParams = T.RT_163,
+    UnitParams = T.RT_187,
     UnitRealType = "Mechanism"
   },
   [495011] = {
@@ -11221,10 +12154,10 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     InteractiveId = 92501,
     ModelId = 938,
-    StateIdList = T.RT_162,
+    StateIdList = T.RT_186,
     UnitBPPath = "/Game/AssetDesign/Item/InteractiveItems/BP_CIMechanism_NoSM.BP_CIMechanism_NoSM",
     UnitId = 495011,
-    UnitParams = T.RT_78,
+    UnitParams = T.RT_81,
     UnitRealType = "Mechanism"
   },
   [495012] = {
@@ -11233,10 +12166,10 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     InteractiveId = 92502,
     ModelId = 938,
-    StateIdList = T.RT_162,
+    StateIdList = T.RT_186,
     UnitBPPath = "/Game/AssetDesign/Item/InteractiveItems/BP_CIMechanism_Void.BP_CIMechanism_Void",
     UnitId = 495012,
-    UnitParams = T.RT_164,
+    UnitParams = T.RT_188,
     UnitRealType = "Mechanism"
   },
   [495021] = {
@@ -11244,7 +12177,7 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     InteractiveId = 925,
-    StateIdList = T.RT_162,
+    StateIdList = T.RT_186,
     UnitBPPath = "/Game/AssetDesign/Item/InteractiveItems/BP_CIMechanism_Temple_theft_Small.BP_CIMechanism_Temple_theft_Small",
     UnitId = 495021,
     UnitParams = {MaxTime = 0.6, ReduceTime = 0},
@@ -11255,7 +12188,7 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     InteractiveId = 925,
-    StateIdList = T.RT_162,
+    StateIdList = T.RT_186,
     UnitBPPath = "/Game/AssetDesign/Item/InteractiveItems/BP_CIMechanism_Temple_theft_Medium.BP_CIMechanism_Temple_theft_Medium",
     UnitId = 495022,
     UnitParams = {MaxTime = 2, ReduceTime = 2},
@@ -11266,10 +12199,10 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     InteractiveId = 925,
-    StateIdList = T.RT_162,
+    StateIdList = T.RT_186,
     UnitBPPath = "/Game/AssetDesign/Item/InteractiveItems/BP_CIMechanism_Station.BP_CIMechanism_Station",
     UnitId = 495031,
-    UnitParams = T.RT_165,
+    UnitParams = T.RT_189,
     UnitRealType = "Mechanism"
   },
   [495032] = {
@@ -11277,10 +12210,10 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     InteractiveId = 925,
-    StateIdList = T.RT_162,
+    StateIdList = T.RT_186,
     UnitBPPath = "/Game/AssetDesign/Item/InteractiveItems/BP_CIMechanism_Station.BP_CIMechanism_Station",
     UnitId = 495032,
-    UnitParams = T.RT_165,
+    UnitParams = T.RT_189,
     UnitRealType = "Mechanism"
   },
   [495033] = {
@@ -11288,10 +12221,10 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     InteractiveId = 925,
-    StateIdList = T.RT_166,
+    StateIdList = T.RT_190,
     UnitBPPath = "/Game/AssetDesign/Item/InteractiveItems/BP_CIMechanism_NoSM.BP_CIMechanism_NoSM",
     UnitId = 495033,
-    UnitParams = T.RT_164,
+    UnitParams = T.RT_188,
     UnitRealType = "Mechanism"
   },
   [495034] = {
@@ -11299,10 +12232,10 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     InteractiveId = 119001,
-    StateIdList = T.RT_166,
+    StateIdList = T.RT_190,
     UnitBPPath = "/Game/AssetDesign/Item/InteractiveItems/BP_CIMechanism_Chahu.BP_CIMechanism_Chahu",
     UnitId = 495034,
-    UnitParams = T.RT_164,
+    UnitParams = T.RT_188,
     UnitRealType = "Mechanism"
   },
   [495035] = {
@@ -11310,10 +12243,10 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     InteractiveId = 119002,
-    StateIdList = T.RT_166,
+    StateIdList = T.RT_190,
     UnitBPPath = "/Game/AssetDesign/Item/InteractiveItems/BP_CIMechanism_Chabei.BP_CIMechanism_Chabei",
     UnitId = 495035,
-    UnitParams = T.RT_164,
+    UnitParams = T.RT_188,
     UnitRealType = "Mechanism"
   },
   [495036] = {
@@ -11321,10 +12254,10 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     InteractiveId = 119003,
-    StateIdList = T.RT_166,
+    StateIdList = T.RT_190,
     UnitBPPath = "/Game/AssetDesign/Item/InteractiveItems/BP_CIMechanism_Bomb.BP_CIMechanism_Bomb",
     UnitId = 495036,
-    UnitParams = T.RT_164,
+    UnitParams = T.RT_188,
     UnitRealType = "Mechanism"
   },
   [495037] = {
@@ -11332,10 +12265,10 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     InteractiveId = 119006,
-    StateIdList = T.RT_162,
+    StateIdList = T.RT_186,
     UnitBPPath = "/Game/AssetDesign/Item/InteractiveItems/BP_CIMechanism_Station.BP_CIMechanism_Station",
     UnitId = 495037,
-    UnitParams = T.RT_163,
+    UnitParams = T.RT_187,
     UnitRealType = "Mechanism"
   },
   [495038] = {
@@ -11343,10 +12276,10 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     InteractiveId = 119007,
-    StateIdList = T.RT_166,
+    StateIdList = T.RT_190,
     UnitBPPath = "/Game/AssetDesign/Item/InteractiveItems/BP_CIMechanism_StationGlass.BP_CIMechanism_StationGlass",
     UnitId = 495038,
-    UnitParams = T.RT_163,
+    UnitParams = T.RT_187,
     UnitRealType = "Mechanism"
   },
   [495039] = {
@@ -11354,10 +12287,10 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     InteractiveId = 119007,
-    StateIdList = T.RT_166,
+    StateIdList = T.RT_190,
     UnitBPPath = "/Game/AssetDesign/Item/InteractiveItems/BP_CIMechanism_StationGlass2.BP_CIMechanism_StationGlass2",
     UnitId = 495039,
-    UnitParams = T.RT_163,
+    UnitParams = T.RT_187,
     UnitRealType = "Mechanism"
   },
   [495040] = {
@@ -11365,10 +12298,10 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     InteractiveId = 119007,
-    StateIdList = T.RT_166,
+    StateIdList = T.RT_190,
     UnitBPPath = "/Game/AssetDesign/Item/InteractiveItems/BP_CIMechanism_StationGlass3.BP_CIMechanism_StationGlass3",
     UnitId = 495040,
-    UnitParams = T.RT_163,
+    UnitParams = T.RT_187,
     UnitRealType = "Mechanism"
   },
   [496021] = {
@@ -11379,7 +12312,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 70000,
     ModelId = 912,
     RewardId = 6002,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Chest_High_Synthesis.BP_Chest_High_Synthesis",
     UnitId = 496021,
     UnitRealType = "Chest"
@@ -11392,7 +12325,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 70000,
     ModelId = 912,
     RewardId = 6004,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Chest_High_Synthesis.BP_Chest_High_Synthesis",
     UnitId = 496022,
     UnitRealType = "Chest"
@@ -11405,7 +12338,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 70000,
     ModelId = 912,
     RewardId = 6006,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Chest_High_Synthesis.BP_Chest_High_Synthesis",
     UnitId = 496023,
     UnitRealType = "Chest"
@@ -11418,7 +12351,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 70000,
     ModelId = 912,
     RewardId = 6007,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Chest_High_Synthesis.BP_Chest_High_Synthesis",
     UnitId = 496024,
     UnitRealType = "Chest"
@@ -11431,7 +12364,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 70000,
     ModelId = 912,
     RewardId = 6008,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Chest_High_Synthesis.BP_Chest_High_Synthesis",
     UnitId = 496025,
     UnitRealType = "Chest"
@@ -11444,7 +12377,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 70000,
     ModelId = 912,
     RewardId = 6002,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Chest_High_SynthesisII.BP_Chest_High_SynthesisII",
     UnitId = 497001,
     UnitRealType = "Chest"
@@ -11457,7 +12390,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 70000,
     ModelId = 912,
     RewardId = 6004,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Chest_High_SynthesisII.BP_Chest_High_SynthesisII",
     UnitId = 497002,
     UnitRealType = "Chest"
@@ -11470,7 +12403,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 70000,
     ModelId = 912,
     RewardId = 6006,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Chest_High_SynthesisII.BP_Chest_High_SynthesisII",
     UnitId = 497003,
     UnitRealType = "Chest"
@@ -11483,7 +12416,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 70000,
     ModelId = 912,
     RewardId = 6007,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Chest_High_SynthesisII.BP_Chest_High_SynthesisII",
     UnitId = 497004,
     UnitRealType = "Chest"
@@ -11496,7 +12429,7 @@ return ReadOnly("Mechanism", {
     InteractiveId = 70000,
     ModelId = 912,
     RewardId = 6008,
-    StateIdList = T.RT_63,
+    StateIdList = T.RT_66,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Chest_High_SynthesisII.BP_Chest_High_SynthesisII",
     UnitId = 497005,
     UnitRealType = "Chest"
@@ -11590,7 +12523,7 @@ return ReadOnly("Mechanism", {
     GuideInactive = true,
     GuideType = 0,
     PreviewNiagara = "NiagaraSystem'/Game/Asset/Effect/Niagara/Scene/Common/NS_Trap_Loop.NS_Trap_Loop'",
-    StateIdList = T.RT_178,
+    StateIdList = T.RT_202,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Explore_Paoku.BP_Explore_Paoku",
     UnitId = 701311,
     UnitRealType = "ExploreMechanism"
@@ -11600,7 +12533,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 702020,
     InteractiveId = 111,
     PreviewNiagara = "NiagaraSystem'/Game/Asset/Effect/Niagara/Scene/Common/NS_Explore_Mount_Start02.NS_Explore_Mount_Start02'",
-    StateIdList = T.RT_180,
+    StateIdList = T.RT_204,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_Mount_Fly.BP_Mount_Fly",
     UnitId = 702021,
     UnitRealType = "ExploreMechanism"
@@ -11609,7 +12542,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 702030,
     GuideIconAni = "/Game/UI/UI_PC/World/ExploreToast/Explore_GuidePoint_PC.Explore_GuidePoint_PC",
     PreviewNiagara = "NiagaraSystem'/Game/Asset/Effect/Niagara/Scene/Common/NS_Explore_Mount_RingBlue.NS_Explore_Mount_RingBlue'",
-    StateIdList = T.RT_181,
+    StateIdList = T.RT_205,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_MountTouchRing_Blue.BP_MountTouchRing_Blue",
     UnitId = 702031,
     UnitRealType = "ExploreMechanism"
@@ -11618,7 +12551,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 702030,
     GuideIconAni = "/Game/UI/UI_PC/World/ExploreToast/Explore_GuidePoint_PC.Explore_GuidePoint_PC",
     PreviewNiagara = "NiagaraSystem'/Game/Asset/Effect/Niagara/Scene/Common/NS_Explore_Mount_RingPurple.NS_Explore_Mount_RingPurple'",
-    StateIdList = T.RT_181,
+    StateIdList = T.RT_205,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_MountTouchRing_Purple.BP_MountTouchRing_Purple",
     UnitId = 702032,
     UnitRealType = "ExploreMechanism"
@@ -11627,7 +12560,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 702030,
     GuideIconAni = "/Game/UI/UI_PC/World/ExploreToast/Explore_GuidePoint_PC.Explore_GuidePoint_PC",
     PreviewNiagara = "NiagaraSystem'/Game/Asset/Effect/Niagara/Scene/Common/NS_Explore_Mount_RingYellow.NS_Explore_Mount_RingYellow'",
-    StateIdList = T.RT_181,
+    StateIdList = T.RT_205,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_MountTouchRing_Gold.BP_MountTouchRing_Gold",
     UnitId = 702033,
     UnitRealType = "ExploreMechanism"
@@ -11636,7 +12569,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 702030,
     GuideIconAni = "/Game/UI/UI_PC/World/ExploreToast/Explore_GuidePoint_PC.Explore_GuidePoint_PC",
     PreviewNiagara = "NiagaraSystem'/Game/Asset/Effect/Niagara/Scene/Common/NS_Explore_Mount_RingYellow.NS_Explore_Mount_RingYellow'",
-    StateIdList = T.RT_181,
+    StateIdList = T.RT_205,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_MountTouchRing_Gold_Sprint.BP_MountTouchRing_Gold_Sprint",
     UnitId = 702034,
     UnitRealType = "ExploreMechanism"
@@ -11645,42 +12578,42 @@ return ReadOnly("Mechanism", {
     FirstStateId = 702030,
     GuideIconAni = "/Game/UI/UI_PC/World/ExploreToast/Explore_GuidePoint_PC.Explore_GuidePoint_PC",
     PreviewNiagara = "NiagaraSystem'/Game/Asset/Effect/Niagara/Scene/Common/NS_Explore_Mount_End.NS_Explore_Mount_End'",
-    StateIdList = T.RT_181,
+    StateIdList = T.RT_205,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/Explore_BP/BP_MountTouchRing_End.BP_MountTouchRing_End",
     UnitId = 702035,
     UnitRealType = "ExploreMechanism"
   },
   [705061] = {
     FirstStateId = 705060,
-    StateIdList = T.RT_183,
+    StateIdList = T.RT_206,
     UnitBPPath = "/Game/BluePrints/Item/Trap/BP_FallingPlatformMechanism_ParkourPlatform.BP_FallingPlatformMechanism_ParkourPlatform",
     UnitId = 705061,
     UnitRealType = "Mechanism"
   },
   [705062] = {
     FirstStateId = 705060,
-    StateIdList = T.RT_184,
+    StateIdList = T.RT_207,
     UnitBPPath = "/Game/BluePrints/Item/Trap/BP_FallingPlatformMechanism_GamemodeControl",
     UnitId = 705062,
     UnitRealType = "Mechanism"
   },
   [705063] = {
     FirstStateId = 705060,
-    StateIdList = T.RT_184,
+    StateIdList = T.RT_207,
     UnitBPPath = "/Game/BluePrints/Item/Trap/BP_FallingPlatformMechanism_GamemodeControl_Sides",
     UnitId = 705063,
     UnitRealType = "Mechanism"
   },
   [705064] = {
     FirstStateId = 705060,
-    StateIdList = T.RT_184,
+    StateIdList = T.RT_207,
     UnitBPPath = "/Game/BluePrints/Item/Trap/BP_FallingPlatformMechanism_GamemodeControl_Backcourt",
     UnitId = 705064,
     UnitRealType = "Mechanism"
   },
   [705065] = {
     FirstStateId = 705060,
-    StateIdList = T.RT_183,
+    StateIdList = T.RT_206,
     UnitBPPath = "/Game/BluePrints/Item/Trap/BP_FallingPlatformMechanism_GamemodeControl_Center",
     UnitId = 705065,
     UnitRealType = "Mechanism"
@@ -11728,12 +12661,12 @@ return ReadOnly("Mechanism", {
   },
   [780551] = {
     BattleRoleId = 39004,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "Hostile",
     FirstStateId = 3902401,
     ModelId = 999,
     NeedBuffManager = false,
-    StateIdList = T.RT_123,
+    StateIdList = T.RT_140,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_LaserAndShock_NoHit.BP_LaserAndShock_NoHit",
     UnitId = 780551,
     UnitParams = {
@@ -11751,12 +12684,12 @@ return ReadOnly("Mechanism", {
   },
   [780552] = {
     BattleRoleId = 39004,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "Hostile",
     FirstStateId = 3902401,
     ModelId = 999,
     NeedBuffManager = false,
-    StateIdList = T.RT_123,
+    StateIdList = T.RT_140,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_LaserAndShock_NoHit.BP_LaserAndShock_NoHit",
     UnitId = 780552,
     UnitParams = {
@@ -11777,7 +12710,7 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/UI_PC/World/ExploreToast/Explore_GuidePoint_PC.Explore_GuidePoint_PC",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DynQuest.T_Gp_DynQuest",
     InteractiveId = 80006,
-    StateIdList = T.RT_191,
+    StateIdList = T.RT_214,
     UnitBPPath = "/Game/AssetDesign/Level/BluePrints/Mechanism/DynQuest/BP_Dyn_Muxiang2.BP_Dyn_Muxiang2",
     UnitId = 780671,
     UnitRealType = "DynMechanism"
@@ -11826,7 +12759,7 @@ return ReadOnly("Mechanism", {
     BattleRoleId = 39017,
     Camp = "Monster",
     FirstStateId = 780060,
-    StateIdList = T.RT_192,
+    StateIdList = T.RT_215,
     UnitBPPath = "/Game/AssetDesign/Item/PlatForm/BP_TempleHitDice.BP_TempleHitDice",
     UnitId = 801091,
     UnitRealType = "Mechanism"
@@ -11851,7 +12784,7 @@ return ReadOnly("Mechanism", {
     Camp = "Hostile",
     FirstStateId = 801130,
     InteractiveId = 401,
-    StateIdList = T.RT_193,
+    StateIdList = T.RT_216,
     UnitBPPath = "/Game/BluePrints/Item/Temple/BP_TouchBombWind.BP_TouchBombWind",
     UnitId = 801131,
     UnitParams = {
@@ -11866,10 +12799,10 @@ return ReadOnly("Mechanism", {
     Camp = "Hostile",
     FirstStateId = 801130,
     InteractiveId = 401,
-    StateIdList = T.RT_193,
+    StateIdList = T.RT_216,
     UnitBPPath = "/Game/AssetDesign/Level/Temple/BP_TouchAttachBomb.BP_TouchAttachBomb",
     UnitId = 801132,
-    UnitParams = T.RT_194,
+    UnitParams = T.RT_217,
     UnitRealType = "Mechanism"
   },
   [801133] = {
@@ -11877,7 +12810,7 @@ return ReadOnly("Mechanism", {
     Camp = "Hostile",
     FirstStateId = 801130,
     InteractiveId = 401,
-    StateIdList = T.RT_193,
+    StateIdList = T.RT_216,
     UnitBPPath = "/Game/AssetDesign/Level/Temple/BP_TouchAttachBombIce.BP_TouchAttachBombIce",
     UnitId = 801133,
     UnitParams = {
@@ -11893,10 +12826,10 @@ return ReadOnly("Mechanism", {
     Camp = "Hostile",
     FirstStateId = 801130,
     InteractiveId = 401,
-    StateIdList = T.RT_193,
+    StateIdList = T.RT_216,
     UnitBPPath = "/Game/AssetDesign/Level/Temple/BP_TouchAttachBomb.BP_TouchAttachBomb",
     UnitId = 801134,
-    UnitParams = T.RT_194,
+    UnitParams = T.RT_217,
     UnitRealType = "Mechanism"
   },
   [801171] = {
@@ -11904,10 +12837,10 @@ return ReadOnly("Mechanism", {
     Camp = "Hostile",
     FirstStateId = 801130,
     InteractiveId = 401,
-    StateIdList = T.RT_193,
+    StateIdList = T.RT_216,
     UnitBPPath = "/Game/AssetDesign/Level/Temple/BP_BucketAttachBomb.BP_BucketAttachBomb",
     UnitId = 801171,
-    UnitParams = T.RT_195,
+    UnitParams = T.RT_218,
     UnitRealType = "Mechanism"
   },
   [801172] = {
@@ -11915,10 +12848,10 @@ return ReadOnly("Mechanism", {
     Camp = "Hostile",
     FirstStateId = 801130,
     InteractiveId = 401,
-    StateIdList = T.RT_193,
+    StateIdList = T.RT_216,
     UnitBPPath = "/Game/AssetDesign/Level/Temple/BP_BucketAttachBomb.BP_BucketAttachBomb",
     UnitId = 801172,
-    UnitParams = T.RT_195,
+    UnitParams = T.RT_218,
     UnitRealType = "Mechanism"
   },
   [801231] = {
@@ -11965,10 +12898,27 @@ return ReadOnly("Mechanism", {
     UnitId = 801291,
     UnitRealType = "Mechanism"
   },
+  [802011] = {
+    FirstStateId = 8020111,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
+    GuideType = 0,
+    InteractiveId = 101,
+    ModelId = 9141,
+    StateIdList = {
+      8020110,
+      8020111,
+      8020112
+    },
+    UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Temple_Retriggerable.BP_MiniGame_Temple_Retriggerable",
+    UnitId = 802011,
+    UnitParams = T.RT_83,
+    UnitRealType = "Controller"
+  },
   [902011] = {
     FirstStateId = 9020004,
     InteractiveId = 100024,
-    StateIdList = T.RT_200,
+    StateIdList = T.RT_223,
     UnitBPPath = "/Game/BluePrints/Item/Fishing/BP_FishingSpot_Dyn.BP_FishingSpot_Dyn",
     UnitId = 902011,
     UnitParams = {
@@ -11980,7 +12930,7 @@ return ReadOnly("Mechanism", {
   [902012] = {
     FirstStateId = 9020004,
     InteractiveId = 100024,
-    StateIdList = T.RT_200,
+    StateIdList = T.RT_223,
     UnitBPPath = "/Game/BluePrints/Item/Fishing/BP_FishingSpot_Dyn.BP_FishingSpot_Dyn",
     UnitId = 902012,
     UnitParams = {
@@ -11992,7 +12942,7 @@ return ReadOnly("Mechanism", {
   [902013] = {
     FirstStateId = 9020004,
     InteractiveId = 100024,
-    StateIdList = T.RT_200,
+    StateIdList = T.RT_223,
     UnitBPPath = "/Game/BluePrints/Item/Fishing/BP_FishingSpot_Dyn.BP_FishingSpot_Dyn",
     UnitId = 902013,
     UnitParams = {
@@ -12004,7 +12954,7 @@ return ReadOnly("Mechanism", {
   [902031] = {
     FirstStateId = 9020005,
     InteractiveId = 100024,
-    StateIdList = T.RT_201,
+    StateIdList = T.RT_224,
     UnitBPPath = "/Game/BluePrints/Item/Fishing/BP_FishingSpot_Dyn.BP_FishingSpot_Dyn",
     UnitId = 902031,
     UnitParams = {
@@ -12016,7 +12966,7 @@ return ReadOnly("Mechanism", {
   [902032] = {
     FirstStateId = 9020005,
     InteractiveId = 100024,
-    StateIdList = T.RT_201,
+    StateIdList = T.RT_224,
     UnitBPPath = "/Game/BluePrints/Item/Fishing/BP_FishingSpot_Dyn.BP_FishingSpot_Dyn",
     UnitId = 902032,
     UnitParams = {
@@ -12028,7 +12978,7 @@ return ReadOnly("Mechanism", {
   [902033] = {
     FirstStateId = 9020005,
     InteractiveId = 100024,
-    StateIdList = T.RT_201,
+    StateIdList = T.RT_224,
     UnitBPPath = "/Game/BluePrints/Item/Fishing/BP_FishingSpot_Dyn.BP_FishingSpot_Dyn",
     UnitId = 902033,
     UnitParams = {
@@ -12040,7 +12990,7 @@ return ReadOnly("Mechanism", {
   [902034] = {
     FirstStateId = 9020005,
     InteractiveId = 100024,
-    StateIdList = T.RT_201,
+    StateIdList = T.RT_224,
     UnitBPPath = "/Game/BluePrints/Item/Fishing/BP_FishingSpot_Dyn.BP_FishingSpot_Dyn",
     UnitId = 902034,
     UnitParams = {
@@ -12052,7 +13002,7 @@ return ReadOnly("Mechanism", {
   [902041] = {
     FirstStateId = 9020004,
     InteractiveId = 100024,
-    StateIdList = T.RT_200,
+    StateIdList = T.RT_223,
     UnitBPPath = "/Game/BluePrints/Item/Fishing/BP_FishingSpot_Chapter02.BP_FishingSpot_Chapter02",
     UnitId = 902041,
     UnitParams = {
@@ -12064,7 +13014,7 @@ return ReadOnly("Mechanism", {
   [902042] = {
     FirstStateId = 9020004,
     InteractiveId = 100024,
-    StateIdList = T.RT_200,
+    StateIdList = T.RT_223,
     UnitBPPath = "/Game/BluePrints/Item/Fishing/BP_FishingSpot_Chapter02.BP_FishingSpot_Chapter02",
     UnitId = 902042,
     UnitParams = {
@@ -12073,37 +13023,55 @@ return ReadOnly("Mechanism", {
     },
     UnitRealType = "FishingMechanism"
   },
+  [950011] = {
+    FirstSeenTag = "targetboard",
+    FirstStateId = 950000,
+    InteractiveId = 100024,
+    StateIdList = T.RT_225,
+    UnitBPPath = "/Game/AssetDesign/Item/TargetBoard/BP_EX02TargetMechanism.BP_EX02TargetMechanism",
+    UnitId = 950011,
+    UnitParams = {GameIds = 92},
+    UnitRealType = "Mechanism"
+  },
+  [950012] = {
+    FirstSeenTag = "targetboard",
+    FirstStateId = 950001,
+    StateIdList = T.RT_225,
+    UnitBPPath = "/Game/AssetDesign/Item/TargetBoard/BP_EX02TargetMechanism.BP_EX02TargetMechanism",
+    UnitId = 950012,
+    UnitRealType = "Mechanism"
+  },
   [1130100] = {
     FirstStateId = 9041,
-    StateIdList = T.RT_34,
+    StateIdList = T.RT_37,
     UnitBPPath = "/Game/AssetDesign/Level/Prop/BP_Door_Won_1.BP_Door_Won_1",
     UnitId = 1130100,
     UnitRealType = "Mechanism"
   },
   [1130101] = {
     FirstStateId = 9041,
-    StateIdList = T.RT_34,
+    StateIdList = T.RT_37,
     UnitBPPath = "/Game/AssetDesign/Level/Prop/BP_Door_Won_2.BP_Door_Won_2",
     UnitId = 1130101,
     UnitRealType = "Mechanism"
   },
   [1130102] = {
     FirstStateId = 9041,
-    StateIdList = T.RT_34,
+    StateIdList = T.RT_37,
     UnitBPPath = "/Game/AssetDesign/Level/Prop/BP_Door_Won_3.BP_Door_Won_3",
     UnitId = 1130102,
     UnitRealType = "Mechanism"
   },
   [1130103] = {
     FirstStateId = 9041,
-    StateIdList = T.RT_34,
+    StateIdList = T.RT_37,
     UnitBPPath = "/Game/AssetDesign/Level/Prop/BP_Door_Won_4.BP_Door_Won_4",
     UnitId = 1130103,
     UnitRealType = "Mechanism"
   },
   [1130104] = {
     FirstStateId = 9041,
-    StateIdList = T.RT_34,
+    StateIdList = T.RT_37,
     UnitBPPath = "/Game/AssetDesign/Level/Prop/BP_Door_Won_5.BP_Door_Won_5",
     UnitId = 1130104,
     UnitRealType = "Mechanism"
@@ -12311,7 +13279,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 118010,
     InteractiveId = 118003,
     ModelId = 91802,
-    StateIdList = T.RT_43,
+    StateIdList = T.RT_46,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_XingShiBei.BP_XingShiBei",
     UnitId = 1210051,
     UnitRealType = "Mechanism"
@@ -12321,7 +13289,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 118011,
     InteractiveId = 118003,
     ModelId = 91802,
-    StateIdList = T.RT_43,
+    StateIdList = T.RT_46,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_XingShiBei.BP_XingShiBei",
     UnitId = 1210052,
     UnitRealType = "Mechanism"
@@ -12330,7 +13298,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 118011,
     InteractiveId = 118003,
     ModelId = 91802,
-    StateIdList = T.RT_43,
+    StateIdList = T.RT_46,
     UnitBPPath = "/Game/AssetDesign/Item/East_02/BP_XingShiBei_Huge.BP_XingShiBei_Huge",
     UnitId = 1210053,
     UnitRealType = "Mechanism"
@@ -12340,15 +13308,15 @@ return ReadOnly("Mechanism", {
     Camp = "Monster",
     FirstStateId = 1210121,
     RewardId = 118011,
-    StateIdList = T.RT_46,
+    StateIdList = T.RT_49,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_Dongguo_CrystalRunes_Undestroyed.BP_Dongguo_CrystalRunes_Undestroyed",
     UnitId = 1210121,
-    UnitParams = T.RT_16,
+    UnitParams = T.RT_17,
     UnitRealType = "Runes"
   },
   [1210141] = {
     BattleRoleId = 39015,
-    BeFindTags = T.RT_44,
+    BeFindTags = T.RT_47,
     Camp = "Monster",
     FirstSeenTag = "GravityBall",
     FirstStateId = 1210141,
@@ -12356,22 +13324,22 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_EastScan.T_Gp_EastScan",
     GuideType = 0,
     ModelId = 91818,
-    StateIdList = T.RT_47,
+    StateIdList = T.RT_50,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_GravityBall_HugeResetRange.BP_GravityBall_HugeResetRange",
     UnitId = 1210141,
-    UnitParams = T.RT_16,
+    UnitParams = T.RT_17,
     UnitRealType = "Mechanism"
   },
   [1210142] = {
     BattleRoleId = 39015,
-    BeFindTags = T.RT_44,
+    BeFindTags = T.RT_47,
     Camp = "Monster",
     FirstStateId = 1210141,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_EastScan.T_Gp_EastScan",
     GuideType = 0,
     ModelId = 91818,
-    StateIdList = T.RT_47,
+    StateIdList = T.RT_50,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_BigGravityBall_YYG.BP_BigGravityBall_YYG",
     UnitId = 1210142,
     UnitRealType = "Mechanism"
@@ -12380,7 +13348,7 @@ return ReadOnly("Mechanism", {
     FirstSeenTag = "MoInteractive",
     FirstStateId = 1210150,
     ModelId = 91819,
-    StateIdList = T.RT_48,
+    StateIdList = T.RT_51,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_BallSensor_YYG.BP_BallSensor_YYG",
     UnitId = 1210151,
     UnitRealType = "Mechanism"
@@ -12388,7 +13356,7 @@ return ReadOnly("Mechanism", {
   [1210171] = {
     FirstStateId = 1210170,
     ModelId = 91810,
-    StateIdList = T.RT_49,
+    StateIdList = T.RT_52,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_RockGroup2.BP_RockGroup2",
     UnitId = 1210171,
     UnitRealType = "Mechanism"
@@ -12396,7 +13364,7 @@ return ReadOnly("Mechanism", {
   [1210172] = {
     FirstStateId = 1210170,
     ModelId = 91810,
-    StateIdList = T.RT_49,
+    StateIdList = T.RT_52,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_RockGroup3.BP_RockGroup3",
     UnitId = 1210172,
     UnitRealType = "Mechanism"
@@ -12404,7 +13372,7 @@ return ReadOnly("Mechanism", {
   [1210173] = {
     FirstStateId = 1210170,
     ModelId = 91810,
-    StateIdList = T.RT_49,
+    StateIdList = T.RT_52,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_RockGroup4.BP_RockGroup4",
     UnitId = 1210173,
     UnitRealType = "Mechanism"
@@ -12412,48 +13380,48 @@ return ReadOnly("Mechanism", {
   [1210174] = {
     FirstStateId = 1210170,
     ModelId = 91810,
-    StateIdList = T.RT_49,
+    StateIdList = T.RT_52,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_RockGroup5.BP_RockGroup5",
     UnitId = 1210174,
     UnitRealType = "Mechanism"
   },
   [1210201] = {
     BattleRoleId = 39015,
-    BeFindTags = T.RT_44,
+    BeFindTags = T.RT_47,
     Camp = "Monster",
     FirstStateId = 1210200,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_EastScan.T_Gp_EastScan",
     GuideType = 0,
     ModelId = 91820,
-    StateIdList = T.RT_50,
+    StateIdList = T.RT_53,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_RotateFan.BP_RotateFan",
     UnitId = 1210201,
     UnitParams = {
       RotateCreatorId = -1,
       SequenceId = 5,
-      Tag = T.RT_15
+      Tag = T.RT_16
     },
     UnitRealType = "Mechanism"
   },
   [1210202] = {
     BattleRoleId = 39015,
-    BeFindTags = T.RT_44,
+    BeFindTags = T.RT_47,
     Camp = "Monster",
     FirstStateId = 1210200,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_EastScan.T_Gp_EastScan",
     GuideType = 0,
     ModelId = 91820,
-    StateIdList = T.RT_50,
+    StateIdList = T.RT_53,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_RotateFan.BP_RotateFan",
     UnitId = 1210202,
-    UnitParams = T.RT_51,
+    UnitParams = T.RT_54,
     UnitRealType = "Mechanism"
   },
   [1210203] = {
     BattleRoleId = 39015,
-    BeFindTags = T.RT_44,
+    BeFindTags = T.RT_47,
     Camp = "Monster",
     FirstSeenTag = "YYGFan",
     FirstStateId = 1210201,
@@ -12461,13 +13429,13 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_EastScan.T_Gp_EastScan",
     GuideType = 0,
     ModelId = 91820,
-    StateIdList = T.RT_50,
+    StateIdList = T.RT_53,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_RotateFan_YYG.BP_RotateFan_YYG",
     UnitId = 1210203,
     UnitParams = {
       RotateCreatorId = 2310111,
       SequenceId = 1,
-      Tag = T.RT_15
+      Tag = T.RT_16
     },
     UnitRealType = "Mechanism"
   },
@@ -12485,7 +13453,7 @@ return ReadOnly("Mechanism", {
   },
   [1210321] = {
     FirstStateId = 1210320,
-    StateIdList = T.RT_54,
+    StateIdList = T.RT_57,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_TeleportGate.BP_TeleportGate",
     UnitId = 1210321,
     UnitParams = {
@@ -12496,7 +13464,7 @@ return ReadOnly("Mechanism", {
   },
   [1210322] = {
     FirstStateId = 1210320,
-    StateIdList = T.RT_54,
+    StateIdList = T.RT_57,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_TeleportGate.BP_TeleportGate",
     UnitId = 1210322,
     UnitParams = {
@@ -12507,7 +13475,7 @@ return ReadOnly("Mechanism", {
   },
   [1210323] = {
     FirstStateId = 1210320,
-    StateIdList = T.RT_54,
+    StateIdList = T.RT_57,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_TeleportGate.BP_TeleportGate",
     UnitId = 1210323,
     UnitParams = {
@@ -12518,7 +13486,7 @@ return ReadOnly("Mechanism", {
   },
   [1210324] = {
     FirstStateId = 1210320,
-    StateIdList = T.RT_54,
+    StateIdList = T.RT_57,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_TeleportGate.BP_TeleportGate",
     UnitId = 1210324,
     UnitParams = {
@@ -12529,7 +13497,7 @@ return ReadOnly("Mechanism", {
   },
   [1210325] = {
     FirstStateId = 1210320,
-    StateIdList = T.RT_54,
+    StateIdList = T.RT_57,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_TeleportGate.BP_TeleportGate",
     UnitId = 1210325,
     UnitParams = {
@@ -12540,7 +13508,7 @@ return ReadOnly("Mechanism", {
   },
   [1210326] = {
     FirstStateId = 1210320,
-    StateIdList = T.RT_54,
+    StateIdList = T.RT_57,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_TeleportGate.BP_TeleportGate",
     UnitId = 1210326,
     UnitParams = {
@@ -12551,7 +13519,7 @@ return ReadOnly("Mechanism", {
   },
   [1210327] = {
     FirstStateId = 1210320,
-    StateIdList = T.RT_54,
+    StateIdList = T.RT_57,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_TeleportGate.BP_TeleportGate",
     UnitId = 1210327,
     UnitParams = {
@@ -12562,59 +13530,59 @@ return ReadOnly("Mechanism", {
   },
   [1210341] = {
     BattleRoleId = 39015,
-    BeFindTags = T.RT_44,
+    BeFindTags = T.RT_47,
     Camp = "Monster",
     FirstStateId = 1210340,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_EastScan.T_Gp_EastScan",
     ModelId = 91840,
-    StateIdList = T.RT_55,
+    StateIdList = T.RT_58,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_WuYouShengItem_Chair.BP_WuYouShengItem_Chair",
     UnitId = 1210341,
-    UnitParams = T.RT_16,
+    UnitParams = T.RT_17,
     UnitRealType = "Mechanism"
   },
   [1210342] = {
     BattleRoleId = 39015,
-    BeFindTags = T.RT_44,
+    BeFindTags = T.RT_47,
     Camp = "Monster",
     FirstStateId = 1210340,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_EastScan.T_Gp_EastScan",
     ModelId = 91841,
-    StateIdList = T.RT_55,
+    StateIdList = T.RT_58,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_WuYouShengItem_Lamp.BP_WuYouShengItem_Lamp",
     UnitId = 1210342,
-    UnitParams = T.RT_16,
+    UnitParams = T.RT_17,
     UnitRealType = "Mechanism"
   },
   [1210343] = {
     BattleRoleId = 39015,
-    BeFindTags = T.RT_44,
+    BeFindTags = T.RT_47,
     Camp = "Monster",
     FirstStateId = 1210340,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_EastScan.T_Gp_EastScan",
     ModelId = 91839,
-    StateIdList = T.RT_55,
+    StateIdList = T.RT_58,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_WuYouShengItem_Box1.BP_WuYouShengItem_Box1",
     UnitId = 1210343,
-    UnitParams = T.RT_16,
+    UnitParams = T.RT_17,
     UnitRealType = "Mechanism"
   },
   [1210344] = {
     BattleRoleId = 39015,
-    BeFindTags = T.RT_44,
+    BeFindTags = T.RT_47,
     Camp = "Monster",
     FirstStateId = 1210340,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_EastScan.T_Gp_EastScan",
     ModelId = 91839,
-    StateIdList = T.RT_55,
+    StateIdList = T.RT_58,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_WuYouShengItem_Box2.BP_WuYouShengItem_Box2",
     UnitId = 1210344,
     UnitParams = {
-      Tag = T.RT_56
+      Tag = T.RT_59
     },
     UnitRealType = "Mechanism"
   },
@@ -12627,7 +13595,7 @@ return ReadOnly("Mechanism", {
     BattleRoleId = 39015,
     Camp = "Monster",
     FirstStateId = 1210550,
-    StateIdList = T.RT_57,
+    StateIdList = T.RT_60,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_EnergyCube_Red.BP_EnergyCube_Red",
     UnitId = 1210551,
     UnitParams = {
@@ -12636,7 +13604,7 @@ return ReadOnly("Mechanism", {
       DecelerationDuration = 3,
       DecelerationSpeed = 1,
       ReturnSpeed = 10,
-      Tag = T.RT_56
+      Tag = T.RT_59
     },
     UnitRealType = "Mechanism"
   },
@@ -12644,7 +13612,7 @@ return ReadOnly("Mechanism", {
     BattleRoleId = 39015,
     Camp = "Monster",
     FirstStateId = 1210550,
-    StateIdList = T.RT_57,
+    StateIdList = T.RT_60,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_EnergyCube_Green.BP_EnergyCube_Green",
     UnitId = 1210552,
     UnitParams = {
@@ -12652,17 +13620,17 @@ return ReadOnly("Mechanism", {
       Color = "Green",
       Energy = 75,
       ReturnSpeed = 10,
-      Tag = T.RT_56
+      Tag = T.RT_59
     },
     UnitRealType = "Mechanism"
   },
   [1310031] = {
     FirstStateId = 1310014,
     ModelId = 91806,
-    StateIdList = T.RT_58,
+    StateIdList = T.RT_61,
     UnitBPPath = "/Game/BluePrints/Item/Fushu/BP_FlowerLanternStart2.BP_FlowerLanternStart2",
     UnitId = 1310031,
-    UnitParams = T.RT_59,
+    UnitParams = T.RT_62,
     UnitRealType = "Mechanism"
   },
   [1310041] = {
@@ -12671,7 +13639,7 @@ return ReadOnly("Mechanism", {
     FirstSeenTag = "KongmingLantern",
     FirstStateId = 1310031,
     ModelId = 91816,
-    StateIdList = T.RT_60,
+    StateIdList = T.RT_63,
     UnitBPPath = "/Game/BluePrints/Item/Fushu/BP_KongmingLantern.BP_KongmingLantern",
     UnitId = 1310041,
     UnitParams = {
@@ -12690,7 +13658,7 @@ return ReadOnly("Mechanism", {
     FirstSeenTag = "KongmingLantern",
     FirstStateId = 1310031,
     ModelId = 91816,
-    StateIdList = T.RT_60,
+    StateIdList = T.RT_63,
     UnitBPPath = "/Game/BluePrints/Item/Fushu/BP_KongmingLantern.BP_KongmingLantern",
     UnitId = 1310051,
     UnitParams = {
@@ -12708,7 +13676,7 @@ return ReadOnly("Mechanism", {
     FirstStateId = 1310090,
     InteractiveId = 301,
     ModelId = 91809,
-    StateIdList = T.RT_61,
+    StateIdList = T.RT_64,
     UnitBPPath = "/Game/BluePrints/Item/Fushu/BP_LanternShipCyanNew.BP_LanternShipCyanNew",
     UnitId = 1310091,
     UnitParams = {
@@ -12731,10 +13699,10 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     ModelId = 918130,
-    StateIdList = T.RT_68,
+    StateIdList = T.RT_71,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoRotateCenter_X_Shape01.BP_DongGuoRotateCenter_X_Shape01",
     UnitId = 1310211,
-    UnitParams = T.RT_70,
+    UnitParams = T.RT_73,
     UnitRealType = "Mechanism"
   },
   [1310212] = {
@@ -12744,10 +13712,10 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     ModelId = 918130,
-    StateIdList = T.RT_68,
+    StateIdList = T.RT_71,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoRotateCenter_Y_Shape01.BP_DongGuoRotateCenter_Y_Shape01",
     UnitId = 1310212,
-    UnitParams = T.RT_71,
+    UnitParams = T.RT_74,
     UnitRealType = "Mechanism"
   },
   [1310213] = {
@@ -12755,10 +13723,10 @@ return ReadOnly("Mechanism", {
     Camp = "Monster",
     FirstStateId = 1310215,
     ModelId = 918130,
-    StateIdList = T.RT_72,
+    StateIdList = T.RT_75,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoRotateCenter_TimeLimit.BP_DongGuoRotateCenter_TimeLimit",
     UnitId = 1310213,
-    UnitParams = T.RT_70,
+    UnitParams = T.RT_73,
     UnitRealType = "Mechanism"
   },
   [1310214] = {
@@ -12766,10 +13734,10 @@ return ReadOnly("Mechanism", {
     Camp = "Monster",
     FirstStateId = 1310215,
     ModelId = 918130,
-    StateIdList = T.RT_72,
+    StateIdList = T.RT_75,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoRotateCenter_TimeLimit_Reverse.BP_DongGuoRotateCenter_TimeLimit_Reverse",
     UnitId = 1310214,
-    UnitParams = T.RT_70,
+    UnitParams = T.RT_73,
     UnitRealType = "Mechanism"
   },
   [1310215] = {
@@ -12779,10 +13747,10 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     ModelId = 918131,
-    StateIdList = T.RT_68,
+    StateIdList = T.RT_71,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoRotateCenter_Z_Shape02.BP_DongGuoRotateCenter_Z_Shape02",
     UnitId = 1310215,
-    UnitParams = T.RT_69,
+    UnitParams = T.RT_72,
     UnitRealType = "Mechanism"
   },
   [1310216] = {
@@ -12792,10 +13760,10 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     ModelId = 918132,
-    StateIdList = T.RT_68,
+    StateIdList = T.RT_71,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoRotateCenter_Z_Shape03.BP_DongGuoRotateCenter_Z_Shape03",
     UnitId = 1310216,
-    UnitParams = T.RT_69,
+    UnitParams = T.RT_72,
     UnitRealType = "Mechanism"
   },
   [1310217] = {
@@ -12805,10 +13773,10 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     ModelId = 918131,
-    StateIdList = T.RT_68,
+    StateIdList = T.RT_71,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoRotateCenter_X_Shape02.BP_DongGuoRotateCenter_X_Shape02",
     UnitId = 1310217,
-    UnitParams = T.RT_70,
+    UnitParams = T.RT_73,
     UnitRealType = "Mechanism"
   },
   [1310218] = {
@@ -12818,10 +13786,10 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     ModelId = 918131,
-    StateIdList = T.RT_68,
+    StateIdList = T.RT_71,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoRotateCenter_Y_Shape02.BP_DongGuoRotateCenter_Y_Shape02",
     UnitId = 1310218,
-    UnitParams = T.RT_71,
+    UnitParams = T.RT_74,
     UnitRealType = "Mechanism"
   },
   [1310219] = {
@@ -12831,17 +13799,17 @@ return ReadOnly("Mechanism", {
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     ModelId = 918131,
-    StateIdList = T.RT_68,
+    StateIdList = T.RT_71,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoRotateCenter_X_Shape03.BP_DongGuoRotateCenter_X_Shape03",
     UnitId = 1310219,
-    UnitParams = T.RT_70,
+    UnitParams = T.RT_73,
     UnitRealType = "Mechanism"
   },
   [1310221] = {
     FirstSeenTag = "YYGPanel",
     FirstStateId = 1310220,
     ModelId = 918141,
-    StateIdList = T.RT_73,
+    StateIdList = T.RT_76,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoRotatePanel_Medium.BP_DongGuoRotatePanel_Medium",
     UnitId = 1310221,
     UnitRealType = "Mechanism"
@@ -12850,7 +13818,7 @@ return ReadOnly("Mechanism", {
     FirstSeenTag = "YYGPanel",
     FirstStateId = 1310220,
     ModelId = 918142,
-    StateIdList = T.RT_73,
+    StateIdList = T.RT_76,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoRoatatePanel_Small.BP_DongGuoRoatatePanel_Small",
     UnitId = 1310222,
     UnitRealType = "Mechanism"
@@ -12859,7 +13827,7 @@ return ReadOnly("Mechanism", {
     FirstSeenTag = "YYGPinTu",
     FirstStateId = 1310220,
     ModelId = 918143,
-    StateIdList = T.RT_74,
+    StateIdList = T.RT_77,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoRotatePanel_Puzzle01_a.BP_DongGuoRotatePanel_Puzzle01_a",
     UnitId = 1310223,
     UnitRealType = "Mechanism"
@@ -12868,7 +13836,7 @@ return ReadOnly("Mechanism", {
     FirstSeenTag = "YYGPinTu",
     FirstStateId = 1310220,
     ModelId = 918144,
-    StateIdList = T.RT_73,
+    StateIdList = T.RT_76,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoRotatePanel_Puzzle01_b.BP_DongGuoRotatePanel_Puzzle01_b",
     UnitId = 1310224,
     UnitRealType = "Mechanism"
@@ -12877,7 +13845,7 @@ return ReadOnly("Mechanism", {
     FirstSeenTag = "YYGPinTu",
     FirstStateId = 1310220,
     ModelId = 918145,
-    StateIdList = T.RT_74,
+    StateIdList = T.RT_77,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoRotatePanel_Puzzle02_a.BP_DongGuoRotatePanel_Puzzle02_a",
     UnitId = 1310225,
     UnitRealType = "Mechanism"
@@ -12886,7 +13854,7 @@ return ReadOnly("Mechanism", {
     FirstSeenTag = "YYGPinTu",
     FirstStateId = 1310220,
     ModelId = 918146,
-    StateIdList = T.RT_73,
+    StateIdList = T.RT_76,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoRotatePanel_Puzzle02_b.BP_DongGuoRotatePanel_Puzzle02_b",
     UnitId = 1310226,
     UnitRealType = "Mechanism"
@@ -12895,7 +13863,7 @@ return ReadOnly("Mechanism", {
     FirstSeenTag = "YYGPinTu",
     FirstStateId = 1310220,
     ModelId = 918147,
-    StateIdList = T.RT_74,
+    StateIdList = T.RT_77,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoRotatePanel_Puzzle03_a.BP_DongGuoRotatePanel_Puzzle03_a",
     UnitId = 1310227,
     UnitRealType = "Mechanism"
@@ -12904,7 +13872,7 @@ return ReadOnly("Mechanism", {
     FirstSeenTag = "YYGPinTu",
     FirstStateId = 1310220,
     ModelId = 918148,
-    StateIdList = T.RT_73,
+    StateIdList = T.RT_76,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoRotatePanel_Puzzle03_b.BP_DongGuoRotatePanel_Puzzle03_b",
     UnitId = 1310228,
     UnitRealType = "Mechanism"
@@ -12913,7 +13881,7 @@ return ReadOnly("Mechanism", {
     FirstSeenTag = "YYGPinTu",
     FirstStateId = 1310220,
     ModelId = 918149,
-    StateIdList = T.RT_74,
+    StateIdList = T.RT_77,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoRotatePanel_Puzzle04_a.BP_DongGuoRotatePanel_Puzzle04_a",
     UnitId = 1310229,
     UnitRealType = "Mechanism"
@@ -12922,7 +13890,7 @@ return ReadOnly("Mechanism", {
     FirstSeenTag = "YYGPinTu",
     FirstStateId = 1310220,
     ModelId = 918150,
-    StateIdList = T.RT_73,
+    StateIdList = T.RT_76,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoRotatePanel_Puzzle04_b.BP_DongGuoRotatePanel_Puzzle04_b",
     UnitId = 1310230,
     UnitRealType = "Mechanism"
@@ -12931,7 +13899,7 @@ return ReadOnly("Mechanism", {
     FirstSeenTag = "YYGPinTu",
     FirstStateId = 1310220,
     ModelId = 918151,
-    StateIdList = T.RT_73,
+    StateIdList = T.RT_76,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoRotatePanel_Puzzle05_a.BP_DongGuoRotatePanel_Puzzle05_a",
     UnitId = 1310231,
     UnitRealType = "Mechanism"
@@ -12940,7 +13908,7 @@ return ReadOnly("Mechanism", {
     FirstSeenTag = "YYGPinTu",
     FirstStateId = 1310220,
     ModelId = 918152,
-    StateIdList = T.RT_74,
+    StateIdList = T.RT_77,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoRotatePanel_Puzzle05_b.BP_DongGuoRotatePanel_Puzzle05_b",
     UnitId = 1310232,
     UnitRealType = "Mechanism"
@@ -12949,7 +13917,7 @@ return ReadOnly("Mechanism", {
     FirstSeenTag = "YYGPinTu",
     FirstStateId = 1310220,
     ModelId = 918153,
-    StateIdList = T.RT_73,
+    StateIdList = T.RT_76,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoRotatePanel_Puzzle05_e.BP_DongGuoRotatePanel_Puzzle05_e",
     UnitId = 1310233,
     UnitRealType = "Mechanism"
@@ -12958,7 +13926,7 @@ return ReadOnly("Mechanism", {
     FirstSeenTag = "YYGPinTu",
     FirstStateId = 1310220,
     ModelId = 918154,
-    StateIdList = T.RT_73,
+    StateIdList = T.RT_76,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoRotatePanel_Puzzle05_d.BP_DongGuoRotatePanel_Puzzle05_d",
     UnitId = 1310234,
     UnitRealType = "Mechanism"
@@ -12967,7 +13935,7 @@ return ReadOnly("Mechanism", {
     FirstSeenTag = "YYGPinTu",
     FirstStateId = 1310220,
     ModelId = 918140,
-    StateIdList = T.RT_73,
+    StateIdList = T.RT_76,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoRotatePanel_Extra.BP_DongGuoRotatePanel_Extra",
     UnitId = 1310235,
     UnitRealType = "Mechanism"
@@ -12976,7 +13944,7 @@ return ReadOnly("Mechanism", {
     FirstSeenTag = "YYGPinTu",
     FirstStateId = 1310220,
     ModelId = 918141,
-    StateIdList = T.RT_73,
+    StateIdList = T.RT_76,
     UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoRotatePanel_Medium_Extra.BP_DongGuoRotatePanel_Medium_Extra",
     UnitId = 1310236,
     UnitRealType = "Mechanism"
@@ -13001,7 +13969,7 @@ return ReadOnly("Mechanism", {
     Camp = "Monster",
     FirstStateId = 1310174,
     ModelId = 91824,
-    StateIdList = T.RT_75,
+    StateIdList = T.RT_78,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_SweetPlantBreakable4.BP_SweetPlantBreakable4",
     UnitId = 1310281,
     UnitRealType = "Mechanism"
@@ -13011,7 +13979,7 @@ return ReadOnly("Mechanism", {
     Camp = "Monster",
     FirstStateId = 1310174,
     ModelId = 91825,
-    StateIdList = T.RT_75,
+    StateIdList = T.RT_78,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_SweetPlantBreakable5.BP_SweetPlantBreakable5",
     UnitId = 1310282,
     UnitRealType = "Mechanism"
@@ -13021,7 +13989,7 @@ return ReadOnly("Mechanism", {
     Camp = "Monster",
     FirstStateId = 1310174,
     ModelId = 91826,
-    StateIdList = T.RT_75,
+    StateIdList = T.RT_78,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_SweetPlantBreakable6.BP_SweetPlantBreakable6",
     UnitId = 1310283,
     UnitRealType = "Mechanism"
@@ -13041,43 +14009,263 @@ return ReadOnly("Mechanism", {
     UnitId = 1700012,
     UnitRealType = "Mechanism"
   },
+  [1700013] = {
+    UnitBPPath = "/Game/AssetDesign/Item/FairyTown/StoryDisplay/BP_FTown_StoryDisplay_Tree.BP_FTown_StoryDisplay_Tree",
+    UnitId = 1700013,
+    UnitRealType = "Mechanism"
+  },
+  [1700014] = {
+    UnitBPPath = "/Game/AssetDesign/Item/FairyTown/StoryDisplay/BP_FTown_StoryDisplay_Rabbit.BP_FTown_StoryDisplay_Rabbit",
+    UnitId = 1700014,
+    UnitRealType = "Mechanism"
+  },
+  [1700015] = {
+    UnitBPPath = "/Game/AssetDesign/Item/FairyTown/StoryDisplay/BP_FTown_StoryDisplay_RollerCoaster.BP_FTown_StoryDisplay_RollerCoaster",
+    UnitId = 1700015,
+    UnitRealType = "Mechanism"
+  },
   [1701010] = {
+    FirstSeenTag = "EX02Hammer",
     FirstStateId = 1701012,
     InteractiveId = 123,
-    StateIdList = T.RT_87,
+    StateIdList = T.RT_91,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Hammer.BP_MiniGame_Hammer",
     UnitId = 1701010,
-    UnitParams = T.RT_88,
+    UnitParams = {Difficulty = 2, MiniGameType = "Hammer"},
+    UnitRealType = "Mechanism"
+  },
+  [1701011] = {
+    FirstSeenTag = "EX02Hammer",
+    FirstStateId = 1701011,
+    InteractiveId = 123,
+    StateIdList = T.RT_91,
+    UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Hammer.BP_MiniGame_Hammer",
+    UnitId = 1701011,
+    UnitParams = T.RT_92,
     UnitRealType = "Mechanism"
   },
   [1701020] = {
+    FirstSeenTag = "EX02Hammer",
     FirstStateId = 1701022,
     InteractiveId = 124,
-    StateIdList = T.RT_89,
+    RewardId = 3026,
+    StateIdList = T.RT_93,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_HammerChest.BP_MiniGame_HammerChest",
     UnitId = 1701020,
-    UnitParams = T.RT_88,
+    UnitParams = {Difficulty = 801, MiniGameType = "Hammer"},
+    UnitRealType = "Mechanism"
+  },
+  [1701021] = {
+    FirstSeenTag = "EX02Hammer",
+    FirstStateId = 1701022,
+    InteractiveId = 124,
+    RewardId = 3026,
+    StateIdList = T.RT_93,
+    UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_HammerChest.BP_MiniGame_HammerChest",
+    UnitId = 1701021,
+    UnitParams = {Difficulty = 802, MiniGameType = "Hammer"},
+    UnitRealType = "Mechanism"
+  },
+  [1701022] = {
+    FirstSeenTag = "EX02Hammer",
+    FirstStateId = 1701022,
+    InteractiveId = 124,
+    RewardId = 3026,
+    StateIdList = T.RT_93,
+    UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_HammerChest.BP_MiniGame_HammerChest",
+    UnitId = 1701022,
+    UnitParams = {Difficulty = 803, MiniGameType = "Hammer"},
+    UnitRealType = "Mechanism"
+  },
+  [1701023] = {
+    FirstSeenTag = "EX02Hammer",
+    FirstStateId = 1701022,
+    InteractiveId = 124,
+    RewardId = 3026,
+    StateIdList = T.RT_93,
+    UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_HammerChest.BP_MiniGame_HammerChest",
+    UnitId = 1701023,
+    UnitParams = {Difficulty = 804, MiniGameType = "Hammer"},
+    UnitRealType = "Mechanism"
+  },
+  [1702041] = {
+    FirstStateId = 1702041,
+    StateIdList = T.RT_94,
+    UnitBPPath = "/Game/AssetDesign/Item/FairyTown/BP_TeleportTriggerMechanism_Cleansing.BP_TeleportTriggerMechanism_Cleansing",
+    UnitId = 1702041,
+    UnitParams = T.RT_95,
+    UnitRealType = "Mechanism"
+  },
+  [1703011] = {
+    BattleRoleId = 11101,
+    Camp = "Monster",
+    FirstStateId = 1703012,
+    StateIdList = T.RT_96,
+    UnitBPPath = "/Game/AssetDesign/Item/TargetBoard/BP_TargetBoard_Static_Monster.BP_TargetBoard_Static_Monster",
+    UnitId = 1703011,
+    UnitRealType = "Mechanism"
+  },
+  [1703012] = {
+    BattleRoleId = 11101,
+    Camp = "Monster",
+    FirstStateId = 1703012,
+    StateIdList = T.RT_96,
+    UnitBPPath = "/Game/AssetDesign/Item/TargetBoard/BP_TargetBoard_Static_Solider.BP_TargetBoard_Static_Solider",
+    UnitId = 1703012,
+    UnitRealType = "Mechanism"
+  },
+  [1703013] = {
+    BattleRoleId = 11101,
+    Camp = "Monster",
+    FirstStateId = 1703012,
+    StateIdList = T.RT_96,
+    UnitBPPath = "/Game/AssetDesign/Item/TargetBoard/BP_TargetBoard_Static_Balloon.BP_TargetBoard_Static_Balloon",
+    UnitId = 1703013,
+    UnitRealType = "Mechanism"
+  },
+  [1703021] = {
+    BattleRoleId = 11101,
+    Camp = "Monster",
+    FirstStateId = 1703011,
+    StateIdList = T.RT_97,
+    UnitBPPath = "/Game/AssetDesign/Item/TargetBoard/BP_TargetBoard_Move_Monster.BP_TargetBoard_Move_Monster",
+    UnitId = 1703021,
+    UnitRealType = "Mechanism"
+  },
+  [1703022] = {
+    BattleRoleId = 11101,
+    Camp = "Monster",
+    FirstStateId = 1703011,
+    StateIdList = T.RT_97,
+    UnitBPPath = "/Game/AssetDesign/Item/TargetBoard/BP_TargetBoard_Move_Solider.BP_TargetBoard_Move_Solider",
+    UnitId = 1703022,
+    UnitRealType = "Mechanism"
+  },
+  [1703023] = {
+    BattleRoleId = 11101,
+    Camp = "Monster",
+    FirstStateId = 1703011,
+    StateIdList = T.RT_97,
+    UnitBPPath = "/Game/AssetDesign/Item/TargetBoard/BP_TargetBoard_Move_Balloon.BP_TargetBoard_Move_Balloon",
+    UnitId = 1703023,
+    UnitRealType = "Mechanism"
+  },
+  [1704011] = {
+    FirstStateId = 1704011,
+    StateIdList = T.RT_98,
+    UnitBPPath = "/Game/AssetDesign/Item/FairyTown/BossCube/BP_EX02BossCube_Wall_Window.BP_EX02BossCube_Wall_Window",
+    UnitId = 1704011,
+    UnitRealType = "Mechanism"
+  },
+  [1704012] = {
+    FirstStateId = 1704011,
+    StateIdList = T.RT_98,
+    UnitBPPath = "/Game/AssetDesign/Item/FairyTown/BossCube/BP_EX02BossCube_Wall_WindowThick.BP_EX02BossCube_Wall_WindowThick",
+    UnitId = 1704012,
+    UnitRealType = "Mechanism"
+  },
+  [1705011] = {
+    ModelId = 91842,
+    UnitBPPath = "/Game/AssetDesign/Item/Slide/BP_SlideObstacle_Slide.BP_SlideObstacle_Slide",
+    UnitId = 1705011,
+    UnitParams = T.RT_100,
+    UnitRealType = "Mechanism"
+  },
+  [1705012] = {
+    ModelId = 91843,
+    UnitBPPath = "/Game/AssetDesign/Item/Slide/BP_SlideObstacle_Jump_1.BP_SlideObstacle_Jump_1",
+    UnitId = 1705012,
+    UnitParams = T.RT_99,
+    UnitRealType = "Mechanism"
+  },
+  [1705013] = {
+    ModelId = 91844,
+    UnitBPPath = "/Game/AssetDesign/Item/Slide/BP_SlideObstacle_Jump_2.BP_SlideObstacle_Jump_2",
+    UnitId = 1705013,
+    UnitParams = T.RT_99,
+    UnitRealType = "Mechanism"
+  },
+  [1705021] = {
+    UnitBPPath = "/Game/AssetDesign/Item/Slide/BP_SlideObstacleBoss_Air_Wide.BP_SlideObstacleBoss_Air_Wide",
+    UnitId = 1705021,
+    UnitRealType = "Mechanism"
+  },
+  [1705031] = {
+    UnitBPPath = "/Game/AssetDesign/Item/Slide/BP_SlideObstacleBoss_Ground_Wide.BP_SlideObstacleBoss_Ground_Wide",
+    UnitId = 1705031,
+    UnitRealType = "Mechanism"
+  },
+  [1705041] = {
+    FirstStateId = 1705040,
+    StateIdList = T.RT_101,
+    UnitBPPath = "/Game/AssetDesign/Item/Slide/BP_SplineTrain_Static.BP_SplineTrain_Static",
+    UnitId = 1705041,
+    UnitParams = {IsStatic = 1},
+    UnitRealType = "Mechanism"
+  },
+  [1705042] = {
+    FirstStateId = 1705040,
+    StateIdList = T.RT_101,
+    UnitBPPath = "/Game/AssetDesign/Item/Slide/BP_SplineTrain_Dynamic_FTownBoss.BP_SplineTrain_Dynamic_FTownBoss",
+    UnitId = 1705042,
+    UnitParams = T.RT_102,
+    UnitRealType = "Mechanism"
+  },
+  [1705043] = {
+    FirstStateId = 1705040,
+    StateIdList = T.RT_101,
+    UnitBPPath = "/Game/AssetDesign/Item/Slide/BP_SplineTrain_Dynamic_FTownBoss_4.BP_SplineTrain_Dynamic_FTownBoss_4",
+    UnitId = 1705043,
+    UnitParams = T.RT_102,
+    UnitRealType = "Mechanism"
+  },
+  [1705044] = {
+    FirstStateId = 1705040,
+    StateIdList = T.RT_101,
+    UnitBPPath = "/Game/AssetDesign/Item/Slide/BP_SplineTrain_Dynamic_FTownBoss_8.BP_SplineTrain_Dynamic_FTownBoss_8",
+    UnitId = 1705044,
+    UnitParams = T.RT_102,
+    UnitRealType = "Mechanism"
+  },
+  [1705045] = {
+    FirstStateId = 1705040,
+    StateIdList = T.RT_101,
+    UnitBPPath = "/Game/AssetDesign/Item/Slide/BP_SplineTrain_Dynamic_FTownBoss_12.BP_SplineTrain_Dynamic_FTownBoss_12",
+    UnitId = 1705045,
+    UnitParams = T.RT_102,
+    UnitRealType = "Mechanism"
+  },
+  [1706011] = {
+    FirstStateId = 1706010,
+    StateIdList = T.RT_103,
+    UnitBPPath = "/Game/AssetDesign/Item/Slide/BP_SlideTarget_KepDis_EX02.BP_SlideTarget_KepDis_EX02",
+    UnitId = 1706011,
+    UnitRealType = "Mechanism"
+  },
+  [1706051] = {
+    UnitBPPath = "/Game/AssetDesign/Item/Slide/BP_SlideWitchTimeBox_Out.BP_SlideWitchTimeBox_Out",
+    UnitId = 1706051,
     UnitRealType = "Mechanism"
   },
   [1799121] = {
     ModelId = 91842,
     UnitBPPath = "/Game/AssetDesign/Item/Slide/BP_SlideObstacle_Slide.BP_SlideObstacle_Slide",
     UnitId = 1799121,
-    UnitParams = {Condition = "Slide", SkillEffect = 900040},
+    UnitParams = T.RT_100,
     UnitRealType = "Mechanism"
   },
   [1799122] = {
     ModelId = 91843,
     UnitBPPath = "/Game/AssetDesign/Item/Slide/BP_SlideObstacle_Jump_1.BP_SlideObstacle_Jump_1",
     UnitId = 1799122,
-    UnitParams = T.RT_91,
+    UnitParams = T.RT_99,
     UnitRealType = "Mechanism"
   },
   [1799123] = {
     ModelId = 91844,
     UnitBPPath = "/Game/AssetDesign/Item/Slide/BP_SlideObstacle_Jump_2.BP_SlideObstacle_Jump_2",
     UnitId = 1799123,
-    UnitParams = T.RT_91,
+    UnitParams = T.RT_99,
     UnitRealType = "Mechanism"
   },
   [3900151] = {
@@ -13087,7 +14275,7 @@ return ReadOnly("Mechanism", {
   },
   [3900152] = {
     BattleRoleId = 39001,
-    BloodUIParmas = T.RT_33,
+    BloodUIParmas = T.RT_34,
     Camp = "DefenceCore",
     FirstStateId = 390012,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
@@ -13096,11 +14284,11 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     ModelId = 922,
     NeedBuffManager = true,
-    StateIdList = T.RT_104,
+    StateIdList = T.RT_121,
     UnitBPPath = "/Game/BluePrints/Item/DefenceCore/BP_DefenceMechanism_Quarry_Move.BP_DefenceMechanism_Quarry_Move",
     UnitId = 3900152,
     UnitName = "UI_DUNGEON_HOSTAGE",
-    UnitParams = T.RT_105,
+    UnitParams = T.RT_122,
     UnitRealType = "DefenceCore"
   },
   [3900153] = {
@@ -13121,7 +14309,7 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_86,
+    StateIdList = T.RT_89,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_NoSM.BP_MiniGame_NoSM",
     UnitId = 4900590,
     UnitParams = {
@@ -13141,16 +14329,10 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_86,
+    StateIdList = T.RT_89,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_NoSM.BP_MiniGame_NoSM",
     UnitId = 4900591,
-    UnitParams = {
-      ActiveStateId = 542,
-      Difficulty = 1,
-      FiniStateId = 582,
-      GameTime = 60,
-      MiniGameType = "TiaoPin"
-    },
+    UnitParams = T.RT_109,
     UnitRealType = "MiniGame"
   },
   [4900592] = {
@@ -13161,7 +14343,7 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_86,
+    StateIdList = T.RT_89,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_NoSM.BP_MiniGame_NoSM",
     UnitId = 4900592,
     UnitParams = {
@@ -13181,7 +14363,7 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_86,
+    StateIdList = T.RT_89,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_NoSM.BP_MiniGame_NoSM",
     UnitId = 4900593,
     UnitParams = {
@@ -13201,10 +14383,10 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_86,
+    StateIdList = T.RT_89,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_NoSM.BP_MiniGame_NoSM",
     UnitId = 4900594,
-    UnitParams = T.RT_143,
+    UnitParams = T.RT_164,
     UnitRealType = "MiniGame"
   },
   [4900595] = {
@@ -13215,10 +14397,10 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_86,
+    StateIdList = T.RT_89,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_NoSM.BP_MiniGame_NoSM",
     UnitId = 4900595,
-    UnitParams = T.RT_144,
+    UnitParams = T.RT_165,
     UnitRealType = "MiniGame"
   },
   [4900596] = {
@@ -13229,10 +14411,10 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_86,
+    StateIdList = T.RT_89,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_NoSM.BP_MiniGame_NoSM",
     UnitId = 4900596,
-    UnitParams = T.RT_141,
+    UnitParams = T.RT_162,
     UnitRealType = "MiniGame"
   },
   [4900597] = {
@@ -13243,10 +14425,10 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_86,
+    StateIdList = T.RT_89,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_NoSM.BP_MiniGame_NoSM",
     UnitId = 4900597,
-    UnitParams = T.RT_140,
+    UnitParams = T.RT_161,
     UnitRealType = "MiniGame"
   },
   [4900598] = {
@@ -13257,10 +14439,10 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_86,
+    StateIdList = T.RT_89,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_NoSM.BP_MiniGame_NoSM",
     UnitId = 4900598,
-    UnitParams = T.RT_142,
+    UnitParams = T.RT_163,
     UnitRealType = "MiniGame"
   },
   [4900599] = {
@@ -13271,10 +14453,10 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 903,
     ModelId = 9141,
-    StateIdList = T.RT_86,
+    StateIdList = T.RT_89,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_NoSM.BP_MiniGame_NoSM",
     UnitId = 4900599,
-    UnitParams = T.RT_140,
+    UnitParams = T.RT_161,
     UnitRealType = "MiniGame"
   },
   [4900610] = {
@@ -13285,7 +14467,7 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 914,
-    StateIdList = T.RT_96,
+    StateIdList = T.RT_113,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Quarry.BP_MiniGame_Quarry",
     UnitId = 4900610,
     UnitParams = {
@@ -13306,10 +14488,10 @@ return ReadOnly("Mechanism", {
     GuideType = 0,
     InteractiveId = 101,
     ModelId = 9142,
-    StateIdList = T.RT_98,
+    StateIdList = T.RT_115,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_SewA.BP_MiniGame_SewA",
     UnitId = 4900611,
-    UnitParams = T.RT_148,
+    UnitParams = T.RT_169,
     UnitRealType = "MiniGame"
   },
   [4900612] = {
@@ -13321,10 +14503,10 @@ return ReadOnly("Mechanism", {
     GuideType = 0,
     InteractiveId = 101,
     ModelId = 9142,
-    StateIdList = T.RT_98,
+    StateIdList = T.RT_115,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_SewA.BP_MiniGame_SewA",
     UnitId = 4900612,
-    UnitParams = T.RT_149,
+    UnitParams = T.RT_170,
     UnitRealType = "MiniGame"
   },
   [4900613] = {
@@ -13336,10 +14518,10 @@ return ReadOnly("Mechanism", {
     GuideType = 0,
     InteractiveId = 101,
     ModelId = 9142,
-    StateIdList = T.RT_98,
+    StateIdList = T.RT_115,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_SewA.BP_MiniGame_SewA",
     UnitId = 4900613,
-    UnitParams = T.RT_150,
+    UnitParams = T.RT_171,
     UnitRealType = "MiniGame"
   },
   [4900614] = {
@@ -13351,10 +14533,10 @@ return ReadOnly("Mechanism", {
     GuideType = 0,
     InteractiveId = 101,
     ModelId = 9142,
-    StateIdList = T.RT_98,
+    StateIdList = T.RT_115,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_SewA.BP_MiniGame_SewA",
     UnitId = 4900614,
-    UnitParams = T.RT_148,
+    UnitParams = T.RT_169,
     UnitRealType = "MiniGame"
   },
   [4900615] = {
@@ -13366,10 +14548,10 @@ return ReadOnly("Mechanism", {
     GuideType = 0,
     InteractiveId = 101,
     ModelId = 9143,
-    StateIdList = T.RT_98,
+    StateIdList = T.RT_115,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Fort.BP_MiniGame_Fort",
     UnitId = 4900615,
-    UnitParams = T.RT_80,
+    UnitParams = T.RT_83,
     UnitRealType = "Controller"
   },
   [4900621] = {
@@ -13381,7 +14563,7 @@ return ReadOnly("Mechanism", {
     GuideType = 0,
     InteractiveId = 926,
     ModelId = 914,
-    StateIdList = T.RT_96,
+    StateIdList = T.RT_113,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Quarry.BP_MiniGame_Quarry",
     UnitId = 4900621,
     UnitParams = {
@@ -13402,11 +14584,40 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_96,
+    StateIdList = T.RT_113,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Quarry.BP_MiniGame_Quarry",
     UnitId = 4900671,
-    UnitParams = T.RT_147,
+    UnitParams = T.RT_168,
     UnitRealType = "MiniGame"
+  },
+  [4900672] = {
+    FirstSeenTag = "GameWhirl",
+    FirstStateId = 543,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
+    GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
+    GuideType = 1,
+    InteractiveId = 101,
+    ModelId = 9141,
+    StateIdList = T.RT_113,
+    UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Quarry_RouPro.BP_MiniGame_Quarry_RouPro",
+    UnitId = 4900672,
+    UnitParams = T.RT_168,
+    UnitRealType = "MiniGame"
+  },
+  [12103280] = {
+    FirstStateId = 12103280,
+    StateIdList = {12103280, 12103281},
+    UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_TeleportGate_Nia.BP_TeleportGate_Nia",
+    UnitId = 12103280,
+    UnitRealType = "Mechanism"
+  },
+  [12103281] = {
+    FirstStateId = 12103280,
+    StateIdList = {12103280, 12103282},
+    UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_TeleportGate_Nia.BP_TeleportGate_Nia",
+    UnitId = 12103281,
+    UnitRealType = "Mechanism"
   },
   [49005931] = {
     FirstSeenTag = "GameLine",
@@ -13416,10 +14627,10 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_86,
+    StateIdList = T.RT_89,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_NoSM.BP_MiniGame_NoSM",
     UnitId = 49005931,
-    UnitParams = T.RT_140,
+    UnitParams = T.RT_161,
     UnitRealType = "MiniGame"
   },
   [49005932] = {
@@ -13430,10 +14641,10 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_86,
+    StateIdList = T.RT_89,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_NoSM.BP_MiniGame_NoSM",
     UnitId = 49005932,
-    UnitParams = T.RT_141,
+    UnitParams = T.RT_162,
     UnitRealType = "MiniGame"
   },
   [49005933] = {
@@ -13444,10 +14655,10 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_86,
+    StateIdList = T.RT_89,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_NoSM.BP_MiniGame_NoSM",
     UnitId = 49005933,
-    UnitParams = T.RT_142,
+    UnitParams = T.RT_163,
     UnitRealType = "MiniGame"
   },
   [49005934] = {
@@ -13458,10 +14669,10 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_86,
+    StateIdList = T.RT_89,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_NoSM.BP_MiniGame_NoSM",
     UnitId = 49005934,
-    UnitParams = T.RT_143,
+    UnitParams = T.RT_164,
     UnitRealType = "MiniGame"
   },
   [49005935] = {
@@ -13472,10 +14683,10 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_86,
+    StateIdList = T.RT_89,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_NoSM.BP_MiniGame_NoSM",
     UnitId = 49005935,
-    UnitParams = T.RT_144,
+    UnitParams = T.RT_165,
     UnitRealType = "MiniGame"
   },
   [49005936] = {
@@ -13486,7 +14697,7 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_86,
+    StateIdList = T.RT_89,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_NoSM.BP_MiniGame_NoSM",
     UnitId = 49005936,
     UnitParams = {
@@ -13506,10 +14717,10 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_86,
+    StateIdList = T.RT_89,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_NoSM.BP_MiniGame_NoSM",
     UnitId = 49005937,
-    UnitParams = T.RT_145,
+    UnitParams = T.RT_166,
     UnitRealType = "MiniGame"
   },
   [49005938] = {
@@ -13520,7 +14731,7 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_86,
+    StateIdList = T.RT_89,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_NoSM.BP_MiniGame_NoSM",
     UnitId = 49005938,
     UnitParams = {
@@ -13540,10 +14751,10 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_86,
+    StateIdList = T.RT_89,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_NoSM.BP_MiniGame_NoSM",
     UnitId = 49005939,
-    UnitParams = T.RT_146,
+    UnitParams = T.RT_167,
     UnitRealType = "MiniGame"
   },
   [49005940] = {
@@ -13554,10 +14765,10 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 103,
     ModelId = 9141,
-    StateIdList = T.RT_86,
+    StateIdList = T.RT_89,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_NoNavMesh.BP_MiniGame_NoNavMesh",
     UnitId = 49005940,
-    UnitParams = T.RT_146,
+    UnitParams = T.RT_167,
     UnitRealType = "MiniGame"
   },
   [49005941] = {
@@ -13568,10 +14779,10 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_86,
+    StateIdList = T.RT_89,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Smoke.BP_MiniGame_Smoke",
     UnitId = 49005941,
-    UnitParams = T.RT_145,
+    UnitParams = T.RT_166,
     UnitRealType = "MiniGame"
   },
   [49005942] = {
@@ -13582,10 +14793,10 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
     ModelId = 9141,
-    StateIdList = T.RT_86,
+    StateIdList = T.RT_89,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_LightSound.BP_MiniGame_LightSound",
     UnitId = 49005942,
-    UnitParams = T.RT_144,
+    UnitParams = T.RT_165,
     UnitRealType = "MiniGame"
   },
   [49005951] = {
@@ -13595,10 +14806,10 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
-    StateIdList = T.RT_86,
+    StateIdList = T.RT_89,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_NoSM.BP_MiniGame_NoSM",
     UnitId = 49005951,
-    UnitParams = T.RT_139,
+    UnitParams = T.RT_160,
     UnitRealType = "MiniGame"
   },
   [49005981] = {
@@ -13608,10 +14819,10 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     InteractiveId = 101,
-    StateIdList = T.RT_86,
+    StateIdList = T.RT_89,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_NoSM.BP_MiniGame_NoSM",
     UnitId = 49005981,
-    UnitParams = T.RT_142,
+    UnitParams = T.RT_163,
     UnitRealType = "MiniGame"
   },
   [49006111] = {
@@ -13619,15 +14830,15 @@ return ReadOnly("Mechanism", {
     FirstStateId = 501,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
-    GuideInfo = T.RT_62,
+    GuideInfo = T.RT_65,
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     GuideType = 1,
     InteractiveId = 101,
     ModelId = 9142,
-    StateIdList = T.RT_98,
+    StateIdList = T.RT_115,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_SewA.BP_MiniGame_SewA",
     UnitId = 49006111,
-    UnitParams = T.RT_148,
+    UnitParams = T.RT_169,
     UnitRealType = "MiniGame"
   },
   [49006112] = {
@@ -13640,10 +14851,10 @@ return ReadOnly("Mechanism", {
     GuideType = 1,
     InteractiveId = 101,
     ModelId = 9142,
-    StateIdList = T.RT_98,
+    StateIdList = T.RT_115,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_SewA.BP_MiniGame_SewA",
     UnitId = 49006112,
-    UnitParams = T.RT_148,
+    UnitParams = T.RT_169,
     UnitRealType = "MiniGame"
   },
   [49006141] = {
@@ -13665,7 +14876,7 @@ return ReadOnly("Mechanism", {
     },
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_SewA.BP_MiniGame_SewA",
     UnitId = 49006141,
-    UnitParams = T.RT_148,
+    UnitParams = T.RT_169,
     UnitRealType = "MiniGame"
   },
   [49006142] = {
@@ -13677,10 +14888,10 @@ return ReadOnly("Mechanism", {
     GuideType = 0,
     InteractiveId = 101,
     ModelId = 9144,
-    StateIdList = T.RT_98,
+    StateIdList = T.RT_115,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_SewB.BP_MiniGame_SewB",
     UnitId = 49006142,
-    UnitParams = T.RT_148,
+    UnitParams = T.RT_169,
     UnitRealType = "MiniGame"
   },
   [49006143] = {
@@ -13692,10 +14903,10 @@ return ReadOnly("Mechanism", {
     GuideType = 0,
     InteractiveId = 101,
     ModelId = 9144,
-    StateIdList = T.RT_98,
+    StateIdList = T.RT_115,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_SewB.BP_MiniGame_SewB",
     UnitId = 49006143,
-    UnitParams = T.RT_149,
+    UnitParams = T.RT_170,
     UnitRealType = "MiniGame"
   },
   [49006144] = {
@@ -13707,10 +14918,10 @@ return ReadOnly("Mechanism", {
     GuideType = 0,
     InteractiveId = 101,
     ModelId = 9144,
-    StateIdList = T.RT_98,
+    StateIdList = T.RT_115,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_SewB.BP_MiniGame_SewB",
     UnitId = 49006144,
-    UnitParams = T.RT_150,
+    UnitParams = T.RT_171,
     UnitRealType = "MiniGame"
   },
   [49006145] = {
@@ -13722,10 +14933,10 @@ return ReadOnly("Mechanism", {
     GuideType = 0,
     InteractiveId = 101,
     ModelId = 9144,
-    StateIdList = T.RT_98,
+    StateIdList = T.RT_115,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_SewB.BP_MiniGame_SewB",
     UnitId = 49006145,
-    UnitParams = T.RT_151,
+    UnitParams = T.RT_172,
     UnitRealType = "Controller"
   },
   [49006146] = {
@@ -13737,10 +14948,10 @@ return ReadOnly("Mechanism", {
     GuideType = 0,
     InteractiveId = 101,
     ModelId = 9144,
-    StateIdList = T.RT_98,
+    StateIdList = T.RT_115,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_SewB.BP_MiniGame_SewB",
     UnitId = 49006146,
-    UnitParams = T.RT_151,
+    UnitParams = T.RT_172,
     UnitRealType = "Controller"
   },
   [49006150] = {
@@ -13752,10 +14963,10 @@ return ReadOnly("Mechanism", {
     GuideType = 0,
     InteractiveId = 101,
     ModelId = 9143,
-    StateIdList = T.RT_98,
+    StateIdList = T.RT_115,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Fort.BP_MiniGame_Fort",
     UnitId = 49006150,
-    UnitParams = T.RT_80,
+    UnitParams = T.RT_83,
     UnitRealType = "Controller"
   },
   [49006151] = {
@@ -13767,7 +14978,7 @@ return ReadOnly("Mechanism", {
     GuideType = 0,
     InteractiveId = 101,
     ModelId = 9143,
-    StateIdList = T.RT_98,
+    StateIdList = T.RT_115,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Fort.BP_MiniGame_Fort",
     UnitId = 49006151,
     UnitParams = {
@@ -13787,10 +14998,10 @@ return ReadOnly("Mechanism", {
     GuideType = 0,
     InteractiveId = 101,
     ModelId = 9143,
-    StateIdList = T.RT_98,
+    StateIdList = T.RT_115,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Fort.BP_MiniGame_Fort",
     UnitId = 49006152,
-    UnitParams = T.RT_19,
+    UnitParams = T.RT_20,
     UnitRealType = "MiniGame"
   },
   [49006153] = {
@@ -13802,7 +15013,7 @@ return ReadOnly("Mechanism", {
     GuideType = 0,
     InteractiveId = 101,
     ModelId = 9143,
-    StateIdList = T.RT_98,
+    StateIdList = T.RT_115,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Fort.BP_MiniGame_Fort",
     UnitId = 49006153,
     UnitParams = {
@@ -13822,10 +15033,10 @@ return ReadOnly("Mechanism", {
     GuideType = 0,
     InteractiveId = 101,
     ModelId = 9143,
-    StateIdList = T.RT_98,
+    StateIdList = T.RT_115,
     UnitBPPath = "Game/AssetDesign/Item/MiniGame/BP_MiniGame_Station.BP_MiniGame_Station",
     UnitId = 49006154,
-    UnitParams = T.RT_80,
+    UnitParams = T.RT_83,
     UnitRealType = "MiniGame"
   },
   [49006210] = {
@@ -13837,7 +15048,7 @@ return ReadOnly("Mechanism", {
     GuideType = 0,
     InteractiveId = 926,
     ModelId = 914,
-    StateIdList = T.RT_96,
+    StateIdList = T.RT_113,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Quarry.BP_MiniGame_Quarry",
     UnitId = 49006210,
     UnitParams = {
@@ -13858,10 +15069,10 @@ return ReadOnly("Mechanism", {
     GuideType = 0,
     InteractiveId = 926,
     ModelId = 914,
-    StateIdList = T.RT_96,
+    StateIdList = T.RT_113,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Quarry.BP_MiniGame_Quarry",
     UnitId = 49006211,
-    UnitParams = T.RT_152,
+    UnitParams = T.RT_173,
     UnitRealType = "MiniGame"
   },
   [49006212] = {
@@ -13872,7 +15083,7 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     GuideType = 0,
     InteractiveId = 926,
-    StateIdList = T.RT_153,
+    StateIdList = T.RT_174,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Radio.BP_MiniGame_Radio",
     UnitId = 49006212,
     UnitParams = {
@@ -13892,7 +15103,7 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     GuideType = 0,
     InteractiveId = 926,
-    StateIdList = T.RT_153,
+    StateIdList = T.RT_174,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Radio.BP_MiniGame_Radio",
     UnitId = 49006213,
     UnitParams = {
@@ -13912,7 +15123,7 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     GuideType = 0,
     InteractiveId = 926,
-    StateIdList = T.RT_153,
+    StateIdList = T.RT_174,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Radio.BP_MiniGame_Radio",
     UnitId = 49006214,
     UnitParams = {
@@ -13932,7 +15143,7 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     GuideType = 0,
     InteractiveId = 101,
-    StateIdList = T.RT_98,
+    StateIdList = T.RT_115,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_MoInteractive_Reb_Minigame.BP_MoInteractive_Reb_Minigame",
     UnitId = 49006215,
     UnitParams = {
@@ -13952,7 +15163,7 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     GuideType = 0,
     InteractiveId = 101,
-    StateIdList = T.RT_98,
+    StateIdList = T.RT_115,
     UnitBPPath = "/Game/AssetDesign/Item/East/BP_MoInteractive_Reb_Minigame.BP_MoInteractive_Reb_Minigame",
     UnitId = 49006216,
     UnitParams = {
@@ -13971,7 +15182,7 @@ return ReadOnly("Mechanism", {
     GuideText = "UI_DUNGEON_GUIDE_MECHANISM",
     GuideType = 0,
     InteractiveId = 101,
-    StateIdList = T.RT_98,
+    StateIdList = T.RT_115,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_Yanque.BP_MiniGame_Yanque",
     UnitId = 49006217,
     UnitParams = {
@@ -13992,10 +15203,10 @@ return ReadOnly("Mechanism", {
     GuideType = 0,
     InteractiveId = 119004,
     ModelId = 914,
-    StateIdList = T.RT_86,
+    StateIdList = T.RT_89,
     UnitBPPath = "/Game/AssetDesign/Item/MiniGame/BP_MiniGame_NoSM.BP_MiniGame_NoSM",
     UnitId = 49006218,
-    UnitParams = T.RT_152,
+    UnitParams = T.RT_173,
     UnitRealType = "MiniGame"
   }
 })

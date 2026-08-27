@@ -97,24 +97,21 @@ def _is_image_hidden(image_obj: dict) -> bool:
 
 
 def _parse_layout_placements(
-    layout_json_path: Path,
+    layout_data,
     grid_name: str,
     tile_path_by_stem: dict,
 ) -> Tuple[List[Placement], int, Optional[GridBounds]]:
     """
-    从 UMG JSON 中读取 UniformGridPanel 的 Slots 顺序与 Row/Column，构造拼接坐标。
+    从 UMG 布局数据（FModel 导出数组，或 UAssetCLI fmodel 返回的数组）读取
+    UniformGridPanel 的 Slots 顺序与 Row/Column，构造拼接坐标。
 
     返回:
     - placements: [(row, col, tile_path), ...]，顺序与 Slots 一致
     - slot_count: UniformGridPanel 的槽位总数
     """
-    try:
-        raw = json.loads(layout_json_path.read_text(encoding="utf-8"))
-    except Exception as exc:
-        raise SystemExit(f"读取布局 JSON 失败: {layout_json_path} / {exc}") from exc
-
+    raw = layout_data
     if not isinstance(raw, list):
-        raise SystemExit(f"布局 JSON 顶层不是数组: {layout_json_path}")
+        raise SystemExit("布局 JSON 顶层不是数组")
 
     name_map = {}
     for obj in raw:
@@ -134,11 +131,11 @@ def _parse_layout_placements(
                 grid_obj = obj
                 break
     if grid_obj is None:
-        raise SystemExit(f"布局 JSON 中未找到 UniformGridPanel: {layout_json_path}")
+        raise SystemExit("布局数据中未找到 UniformGridPanel")
 
     slots = grid_obj.get("Properties", {}).get("Slots", [])
     if not isinstance(slots, list):
-        raise SystemExit(f"UniformGridPanel Slots 不是数组: {layout_json_path}")
+        raise SystemExit("UniformGridPanel Slots 不是数组")
 
     placements: List[Placement] = []
     missing_tiles: List[str] = []
@@ -455,8 +452,12 @@ def main() -> None:
         layout_json_path = Path(args.layout_json)
         if not layout_json_path.is_file():
             raise SystemExit(f"布局 JSON 不存在: {layout_json_path}")
+        try:
+            layout_data = json.loads(layout_json_path.read_text(encoding="utf-8"))
+        except Exception as exc:
+            raise SystemExit(f"读取布局 JSON 失败: {layout_json_path} / {exc}") from exc
         placements, slot_count, grid_bounds = _parse_layout_placements(
-            layout_json_path=layout_json_path,
+            layout_data=layout_data,
             grid_name=args.grid_name,
             tile_path_by_stem=tile_path_by_stem,
         )

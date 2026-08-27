@@ -6,9 +6,9 @@
       11202
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "（待包装）米笛奥伦之索求的描述",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_11",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "米笛奧倫之索求"
+    "name": "RLPTreasureGroup_Name_11"
   },
   {
     "id": 12,
@@ -17,9 +17,9 @@
       12202
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "（待包装）艾伊基斯之勇猛的描述",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_12",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "艾伊基斯之勇猛"
+    "name": "RLPTreasureGroup_Name_12"
   },
   {
     "id": 13,
@@ -28,9 +28,9 @@
       13202
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "（待包装）狄欧普拉之巧艺的描述",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_13",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "狄歐普拉之巧藝"
+    "name": "RLPTreasureGroup_Name_13"
   },
   {
     "id": 14,
@@ -39,9 +39,9 @@
       14202
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "（待包装）塞库勒姆之开创的描述",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_14",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "塞庫勒姆之開創"
+    "name": "RLPTreasureGroup_Name_14"
   },
   {
     "id": 15,
@@ -50,9 +50,9 @@
       15202
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "（待包装）德拉克玛之精明的描述",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_15",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "德拉克瑪之精明"
+    "name": "RLPTreasureGroup_Name_15"
   },
   {
     "id": 16,
@@ -61,9 +61,9 @@
       16202
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "（待包装）逻各斯之洞见的描述",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_16",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "邏各斯之洞見"
+    "name": "RLPTreasureGroup_Name_16"
   },
   {
     "id": 17,
@@ -72,9 +72,9 @@
       17201
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "同律武器造成的傷害提高<Highlight>100%</>。",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_17",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "殷紅困獸"
+    "name": "RLPTreasureGroup_Name_17"
   },
   {
     "id": 18,
@@ -84,9 +84,9 @@
       18301
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "全隊互相距離不超過<Highlight>30</>時，全員造成的傷害提高<Highlight>100%</>。",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_18",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "群鳥連翎"
+    "name": "RLPTreasureGroup_Name_18"
   },
   {
     "id": 19,
@@ -95,9 +95,9 @@
       19201
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "收集[護衛騎士]的全部<Highlight>2</>件遺物後，每<Highlight>10</>秒獲得自身最大生命<Highlight>10%</>的超限護盾。",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_19",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "護衛騎士"
+    "name": "RLPTreasureGroup_Name_19"
   },
   {
     "id": 20,
@@ -107,9 +107,9 @@
       20201
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "技能、近戰武器、遠端武器傷害不再下降。",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_20",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "鳥面怪人"
+    "name": "RLPTreasureGroup_Name_20"
   },
   {
     "id": 21,
@@ -119,9 +119,9 @@
       21301
     ],
     "bigIcon": "T_Rouge_TreasureGroup_2",
-    "groupEffectDesc": "（待包装）繁荣之神的描述",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_21",
     "icon": "T_Rouge_TreasureGroup_2_1",
-    "name": "繁榮之神"
+    "name": "RLPTreasureGroup_Name_21"
   },
   {
     "id": 22,
@@ -132,9 +132,9 @@
       22104
     ],
     "bigIcon": "T_Rouge_TreasureGroup_3",
-    "groupEffectDesc": "收集[四象銘印]的全部<Highlight>4</>件遺物後，觸發概率提高至<Highlight>50%</>，傷害倍率提高至<Highlight>100%</>，且造成傷害變為真實傷害。",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_22",
     "icon": "T_Rouge_TreasureGroup_3_1",
-    "name": "四象銘印"
+    "name": "RLPTreasureGroup_Name_22"
   },
   {
     "id": 23,
@@ -145,9 +145,9 @@
       23301
     ],
     "bigIcon": "T_Rouge_TreasureGroup_4",
-    "groupEffectDesc": "收集[贖罪騎士]的全部<Highlight>4</>件遺物後不再需要代價，且總共提高傷害變為<Highlight>400%</>。",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_23",
     "icon": "T_Rouge_TreasureGroup_4_1",
-    "name": "贖罪騎士"
+    "name": "RLPTreasureGroup_Name_23"
   },
   {
     "id": 24,
@@ -156,9 +156,9 @@
       24201
     ],
     "bigIcon": "T_Rouge_TreasureGroup_5",
-    "groupEffectDesc": "收集[幽惘術士]的全部<Highlight>2</>件遺物後，[戰姿]削減效率提高<Highlight>100%</>，敵人進入[埃斯刻懲戒]後傷害提高<Highlight>100%</>。",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_24",
     "icon": "T_Rouge_TreasureGroup_5_1",
-    "name": "幽惘術士"
+    "name": "RLPTreasureGroup_Name_24"
   },
   {
     "id": 25,
@@ -171,9 +171,9 @@
       25306
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "（待包装）圣迹残像的描述",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_25",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "聖蹟殘像"
+    "name": "RLPTreasureGroup_Name_25"
   },
   {
     "id": 26,
@@ -184,8 +184,8 @@
       26301
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
-    "groupEffectDesc": "（待包装）闲逸学者的描述",
+    "groupEffectDesc": "RLPTreasureGroup_Desc_26",
     "icon": "T_Rouge_TreasureGroup_1_1",
-    "name": "閒逸學者"
+    "name": "RLPTreasureGroup_Name_26"
   }
 ]

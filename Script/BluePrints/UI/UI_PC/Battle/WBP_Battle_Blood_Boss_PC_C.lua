@@ -48,6 +48,7 @@ function WBP_Battle_Blood_Boss_PC_C:InitBossUI(Owner, IsBossInPart, BossUIType)
   else
     DoInit()
   end
+  self.LastChaosLayerByBuffId = nil
 end
 
 function WBP_Battle_Blood_Boss_PC_C:InitBossComponent()
@@ -227,7 +228,9 @@ function WBP_Battle_Blood_Boss_PC_C:ResetBossPart()
       self["Split_" .. i]:SetVisibility(UE4.ESlateVisibility.Visible)
       local CanvasSlot_Split = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(self["Split_" .. i])
       local Position = CanvasSlot_Split:GetPosition()
-      Position.X = Length_Blood * SplitPercent[i] - CanvasSlot_Split:GetSize().X / 2
+      local Size = CanvasSlot_Split:GetSize()
+      local Alignment = CanvasSlot_Split:GetAlignment()
+      Position.X = Length_Blood * SplitPercent[i] + Size.X * (Alignment.X - 0.5)
       CanvasSlot_Split:SetPosition(Position)
     end
     for j = self.Part_Count, CommonConst.BOSS_BLOOD_PART_MAX - 1 do
@@ -388,9 +391,10 @@ function WBP_Battle_Blood_Boss_PC_C:OnMultiHpBarLayerChange(bAdd, ChangeNum, Cal
   if self.HpBar ~= Caller then
     return
   end
-  local NewHpLayer = math.ceil(self.Hp / self.MaxHp * self.MaxHpLayer)
-  NewHpLayer = math.max(NewHpLayer, 1)
-  ChangeNum = math.abs(NewHpLayer - self.CurHpLayer)
+  ChangeNum = math.abs(ChangeNum)
+  if not bAdd and self.Hp <= 0 then
+    ChangeNum = math.max(self.CurHpLayer - 1, 0)
+  end
   DebugPrint("WBP_Battle_Blood_Boss_PC_C:OnMultiHpBarLayerChange ChangeNum: ", ChangeNum)
   if bAdd then
     self.CurHpLayer = self.CurHpLayer + ChangeNum
@@ -953,6 +957,82 @@ function WBP_Battle_Blood_Boss_PC_C:InterruptBossRecover()
   if not Res then
     return
   end
+end
+
+local ChaosBuffOrder = {
+  112,
+  113,
+  115,
+  114,
+  116,
+  111
+}
+
+function WBP_Battle_Blood_Boss_PC_C:EnsureChaosBuffWidgets()
+  if self.ChaosBuffWidgetsById then
+    return
+  end
+  self.ChaosBuffWidgetsById = {}
+  self.ChaosBuff:ClearChildren()
+  for _, BuffId in ipairs(ChaosBuffOrder) do
+    local BuffWidget = self:CreateWidgetNew("ChaosBuff")
+    if BuffWidget then
+      BuffWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.ChaosBuff:AddChildToWrapBox(BuffWidget)
+      self.ChaosBuffWidgetsById[BuffId] = BuffWidget
+    end
+  end
+end
+
+function WBP_Battle_Blood_Boss_PC_C:RefreshChaosBuffUI_Lua(ChaosBuffs)
+  if not self.ChaosBuff then
+    return
+  end
+  self:EnsureChaosBuffWidgets()
+  local LastLayers = self.LastChaosLayerByBuffId or {}
+  local CurrentLayers = {}
+  local CurrentBuffsById = {}
+  local HasVisibleBuff = false
+  for Index = 1, ChaosBuffs:Num() do
+    local BuffData = ChaosBuffs:GetRef(Index)
+    CurrentBuffsById[BuffData.BuffId] = BuffData
+    CurrentLayers[BuffData.BuffId] = BuffData.Layer or 0
+  end
+  for _, BuffId in ipairs(ChaosBuffOrder) do
+    local BuffWidget = self.ChaosBuffWidgetsById[BuffId]
+    local BuffData = CurrentBuffsById[BuffId]
+    local LastLayer = LastLayers[BuffId]
+    if BuffWidget then
+      if BuffData then
+        local CurrentLayer = BuffData.Layer or 0
+        local IsLayerReduced = nil ~= LastLayer and LastLayer > CurrentLayer
+        local IsLayerIncreased = nil ~= LastLayer and LastLayer < CurrentLayer
+        local IsNewBuff = nil == LastLayer
+        HasVisibleBuff = true
+        BuffWidget:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+        BuffWidget:RefreshChaosBuff(BuffData, IsNewBuff, IsLayerReduced, IsLayerIncreased)
+      elseif nil ~= LastLayer then
+        HasVisibleBuff = true
+        BuffWidget:OnChaosBuffRemoved(function()
+          self:RefreshChaosBuffContainerVisibility()
+        end)
+      else
+        BuffWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      end
+    end
+  end
+  self.LastChaosLayerByBuffId = CurrentLayers
+  self.ChaosBuff:SetVisibility(HasVisibleBuff and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
+end
+
+function WBP_Battle_Blood_Boss_PC_C:RefreshChaosBuffContainerVisibility()
+  for _, BuffWidget in pairs(self.ChaosBuffWidgetsById or {}) do
+    if BuffWidget:GetVisibility() ~= UIConst.VisibilityOp.Collapsed then
+      self.ChaosBuff:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      return
+    end
+  end
+  self.ChaosBuff:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
 return WBP_Battle_Blood_Boss_PC_C

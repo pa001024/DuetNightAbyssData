@@ -23,7 +23,7 @@ function M:Construct()
   self.LayoutState = UIConst.ButtonState.None
   self:PlayAnimation(self.Normal)
   EventManager:AddEvent(EventID.OnSwitchMobileHUDLayout, self, self.OnSwitchMobileHUDLayout)
-  ReddotManager.AddListener("Setting_Control_LayOutBtn", self, self.RefreshReddot)
+  ReddotManager.AddListener("Setting_Control_CustomLayoutBtn", self, self.RefreshReddot)
 end
 
 function M:Destruct()
@@ -33,7 +33,7 @@ function M:Destruct()
   self.Btn_Area.OnUnhovered:Clear()
   self.Btn_Area.OnClicked:Clear()
   EventManager:RemoveEvent(EventID.OnSwitchMobileHUDLayout, self)
-  ReddotManager.RemoveListener("Setting_Control_LayOutBtn", self)
+  ReddotManager.RemoveListener("Setting_Control_CustomLayoutBtn", self)
 end
 
 function M:OnClickedCustomLayout()
@@ -54,7 +54,7 @@ function M:OnPressedCustomLayout()
 end
 
 function M:RefreshReddot()
-  local RedDot = ReddotManager.GetTreeNode("Setting_Control_LayOutBtn")
+  local RedDot = ReddotManager.GetTreeNode("Setting_Control_CustomLayoutBtn")
   if 1 == self.Index then
     RedDot = ReddotManager.GetTreeNode("Setting_Control_TrailBtn")
   end

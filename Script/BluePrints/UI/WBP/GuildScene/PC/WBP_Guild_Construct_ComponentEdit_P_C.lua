@@ -33,7 +33,7 @@ function M:Construct()
   self.Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   self.Controller = self.Player.Controller
   self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self.Controller)
-  self.RotationInterval = 5.0
+  self.RotationInterval = 5
   self.Controller_Recycle:AddExecuteLogic(self, self.OnRecycleBtnClicked)
   if IsValid(self.GameInputModeSubsystem) then
     self.GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.RefreshOpInfoByInputDevice)
@@ -42,50 +42,34 @@ function M:Construct()
   self.OnVisibilityChanged:Add(self, self.OnVisibilityChangedCallback)
   self:InitParameters()
   self:InitButtons()
-  self:CreateDragWidget()
-  self:CreateCopyWidget()
+  self:CreateDragCopyWidget()
 end
 
-function M:DestroyDragAndCopyWidget()
+function M:DestroyDragCopyWidget()
   if self.GuildManager and self.GuildManager.OnActorCreateComplete then
-    self.GuildManager.OnActorCreateComplete:Remove(self, self.ShowDragAndCopyWidget)
+    self.GuildManager.OnActorCreateComplete:Remove(self, self.ShowDragCopyWidget)
   end
   if IsValid(self.DragWidget) then
     self.DragWidget:RemoveFromParent()
   end
   self.DragWidget = nil
   self.DragWidget_Slot = nil
-  if IsValid(self.CopyWidget) then
-    self.CopyWidget:RemoveFromParent()
-  end
-  self.CopyWidget = nil
-  self.CopyWidget_Slot = nil
 end
 
-function M:CreateDragWidget()
-  if IsValid(self.DragWidget) then
+function M:CreateDragCopyWidget()
+  if IsValid(self.DragCopyWidget) then
     return
   end
-  self.DragWidget = UIManager(self):CreateWidget("WidgetBlueprint'/Game/UI/WBP/Guild/Widget/Construct/WBP_Guild_Construct_BtnDrag.WBP_Guild_Construct_BtnDrag'")
-  self.DragWidget_Slot = self.Main:AddChildToCanvas(self.DragWidget)
-  self.DragWidget.Slot = self.DragWidget_Slot
-  self.DragWidget_Slot:SetAlignment(UE4.FVector2D(0.5, 0.5))
-  self.DragWidget:SetVisibility(UE4.ESlateVisibility.Hidden)
-  self.DragWidget:InitParent(self)
-end
-
-function M:CreateCopyWidget()
-  if IsValid(self.CopyWidget) then
-    return
-  end
-  self.CopyWidget = UIManager(self):CreateWidget("WidgetBlueprint'/Game/UI/WBP/Guild/Widget/Construct/WBP_Guild_Construct_BtnCopy.WBP_Guild_Construct_BtnCopy'")
-  self.CopyWidget_Slot = self.Main:AddChildToCanvas(self.CopyWidget)
-  self.CopyWidget_Slot:SetAlignment(UE4.FVector2D(0.5, 0.5))
-  self.CopyWidget:SetVisibility(UE4.ESlateVisibility.Hidden)
+  self.DragCopyWidget = UIManager(self):CreateWidget("WidgetBlueprint'/Game/UI/WBP/Guild/Widget/Construct/WBP_Guild_Construct_Drag.WBP_Guild_Construct_Drag'")
+  self.DragCopyWidget_Slot = self.Main:AddChildToCanvas(self.DragCopyWidget)
+  self.DragCopyWidget.Slot = self.DragCopyWidget_Slot
+  self.DragCopyWidget_Slot:SetAlignment(UE4.FVector2D(0.5, 0.5))
+  self.DragCopyWidget:SetVisibility(UE4.ESlateVisibility.Hidden)
+  self.DragCopyWidget:InitParent(self)
 end
 
 function M:Destruct()
-  self:DestroyDragAndCopyWidget()
+  self:DestroyDragCopyWidget()
   if IsValid(self.GameInputModeSubsystem) then
     self.GameInputModeSubsystem.OnInputMethodChanged:Remove(self, self.RefreshOpInfoByInputDevice)
   end
@@ -222,7 +206,7 @@ function M:InitParameterRotation(Rotation)
 end
 
 function M:InitParameterScale(Scale)
-  local Value = Scale and Scale.X or 1
+  local Value = Scale or 1
   self.Parameter_Scale.bIsFocusable = true
   self.Parameter_Scale.Text_Name:SetText(GText("缩放"))
   self.Parameter_Scale.Text_Parameter:SetText(GText(string.format("%.1f", Value)))
@@ -266,9 +250,9 @@ function M:InitParameters(ActorState)
     self:InitParameterScale()
     self:InitParameterHeight()
   else
-    self:InitParameterRotation(ActorState.Rotation)
-    self:InitParameterScale(ActorState.Scale)
-    self:InitParameterHeight(ActorState.Height)
+    self:InitParameterRotation(ActorState.LocalRotation)
+    self:InitParameterScale(ActorState.LocalScale)
+    self:InitParameterHeight(ActorState.LocalHeight)
   end
 end
 
@@ -360,7 +344,7 @@ function M:UpdateHeight(InHeight)
 end
 
 function M:OnCancelSelect()
-  self:DestroyDragAndCopyWidget()
+  self:DestroyDragCopyWidget()
   self:SetVisibility(UIConst.VisibilityOp.Collapsed)
   local Main = UIManager(self):GetUIObj("GuildConstructionMain")
   if Main then
@@ -468,43 +452,37 @@ function M:OnHeightAddClicked()
   self:UpdateHeight(1)
 end
 
-function M:GetCopyBtnPosByDragBtnPos(DragBtnPos)
-  return FVector2D(DragBtnPos.X, DragBtnPos.Y - 100)
-end
-
-function M:ShowDragAndCopyWidget(Id, Actor)
+function M:ShowDragCopyWidget(Id, Actor)
   if not Actor or self.GuildManager:GetSelectedActorGuild() ~= Id then
     return
   end
-  self:CreateDragWidget()
-  self:CreateCopyWidget()
-  local ActorOrigin = UE4.FVector()
-  local BoxExtent = UE4.FVector()
-  Actor:GetActorBounds(false, ActorOrigin, BoxExtent, false)
-  self:UpdateWidgetPositionByActorPosition(ActorOrigin)
+  if not self.DragCopyWidget then
+    self:CreateDragCopyWidget()
+  end
+  local Center = self:GetActorCenter(Actor)
+  self:UpdateWidgetPositionByActorPosition(Center)
   self.GuildManager:SetSelectedActorGuild(Id)
-  self.DragWidget:SetVisibility(UE4.ESlateVisibility.Visible)
-  self.DragWidget:RefreshData()
-  self.CopyWidget:SetVisibility(UE4.ESlateVisibility.Visible)
-  self.CopyWidget:RefreshData()
-  self.DragWidget_Slot:SetZOrder(999)
-  self.CopyWidget_Slot:SetZOrder(999)
+  self.DragCopyWidget:SetVisibility(UE4.ESlateVisibility.Visible)
+  self.DragCopyWidget:RefreshData()
+  self.DragCopyWidget_Slot:SetZOrder(999)
 end
 
 function M:InitializeWidgetByActorId(Id)
   local Actor = self.GuildManager:GetActorByGuid(Id)
   if not Actor then
-    self:CreateDragWidget()
-    if IsValid(self.DragWidget) then
-      self.DragWidget:SetVisibility(UE4.ESlateVisibility.Hidden)
+    if not self.DragCopyWidget then
+      self:CreateDragCopyWidget()
+    end
+    if IsValid(self.DragCopyWidget) then
+      self.DragCopyWidget:SetVisibility(UE4.ESlateVisibility.Hidden)
     end
     if self.GuildManager.OnActorCreateComplete then
-      self.GuildManager.OnActorCreateComplete:Remove(self, self.ShowDragAndCopyWidget)
-      self.GuildManager.OnActorCreateComplete:Add(self, self.ShowDragAndCopyWidget)
+      self.GuildManager.OnActorCreateComplete:Remove(self, self.ShowDragCopyWidget)
+      self.GuildManager.OnActorCreateComplete:Add(self, self.ShowDragCopyWidget)
     end
     return
   end
-  self:ShowDragAndCopyWidget(Id, Actor)
+  self:ShowDragCopyWidget(Id, Actor)
 end
 
 function M:SelectActor(Id)
@@ -670,7 +648,7 @@ function M:OnMouseButtonDown(MyGeometry, MouseEvent)
     local bOK = UE4.UGameplayStatics.DeprojectScreenToWorld(PlayerController, PixelPos, WorldOrigin, WorldDir)
     if bOK then
       local Hit = UE4.FHitResult()
-      local bHit = UE4.UKismetSystemLibrary.LineTraceSingle(self, WorldOrigin, WorldOrigin + WorldDir * 100000.0, UE4.ETraceTypeQuery.TraceTypeQuery1, true, {}, UE4.EDrawDebugTrace.ForDuration, Hit, true)
+      local bHit = UE4.UKismetSystemLibrary.LineTraceSingle(self, WorldOrigin, WorldOrigin + WorldDir * 100000.0, UE4.ETraceTypeQuery.TraceTypeQuery1, true, {}, UE4.EDrawDebugTrace.None, Hit, true)
       local Ret = self.GuildManager:GetActorGuid(Hit.Actor)
       if UE4.UGuildConstructFunctionLibrary.IsValidGuid(Ret) then
         self.GuildManager:BeginExecuteOperation()
@@ -741,9 +719,7 @@ end
 function M:UpdateWidgetPositionByActorPosition(ActorPosition)
   local ScreenPosition = UE4.FVector2D()
   UWidgetLayoutLibrary.ProjectWorldLocationToWidgetPosition(self.Controller, ActorPosition, ScreenPosition, false)
-  self.DragWidget_Slot:SetPosition(ScreenPosition)
-  local CopyBtnPos = self:GetCopyBtnPosByDragBtnPos(ScreenPosition)
-  self.CopyWidget_Slot:SetPosition(CopyBtnPos)
+  self.DragCopyWidget_Slot:SetPosition(ScreenPosition)
 end
 
 function M:ComputeMouseAtZ(Z)
@@ -761,6 +737,17 @@ end
 
 function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
   return UIUtils.Unhandled
+end
+
+function M:UpdateWidgetPosition()
+  if self.GuildManager then
+    local Actor = self.GuildManager:GetSelectedActor()
+    if not Actor then
+      return
+    end
+    local Center = self:GetActorCenter(Actor)
+    self:UpdateWidgetPositionByActorPosition(Center)
+  end
 end
 
 return M

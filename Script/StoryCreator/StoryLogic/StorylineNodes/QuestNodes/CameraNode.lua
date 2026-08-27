@@ -16,6 +16,7 @@ function M:Init()
   self.BlackScreenHandle = "CameraNode"
   self.CameraUIName = "PhotoCameraMain"
   self.StartPos = ""
+  self.StartRotation = ""
   self.bLockCameraPos = false
   self.bStartHiddenRole = false
   self.bLockHiddenRole = false
@@ -33,8 +34,9 @@ end
 
 function M:Execute(Callback)
   local function ExecuteLogic()
-    self.Callback = Callback
+    self:DisablePlayerInput(false)
     
+    self.Callback = Callback
     DebugPrint("------------ CameraNode Execute------------------")
     local UIManager = GWorld.GameInstance:GetGameUIManager()
     if not UIManager then
@@ -46,7 +48,7 @@ function M:Execute(Callback)
       local function OpenCamera()
         UIManager:HideCommonBlackScreen(self.BlackScreenHandle)
         
-        UIManager:LoadUINew(self.CameraUIName)
+        UIManager:LoadUINew(self.CameraUIName, {FromSTL = true})
       end
       
       if self.bFadeInOut then
@@ -64,7 +66,8 @@ function M:Execute(Callback)
   end
   
   if self.ForceMaxLodStaticPointList and next(self.ForceMaxLodStaticPointList) then
-    self:HandleStaticPointActorsLOD(true)
+    self:HandleStaticPointActorsLOD(true, self.ForceMaxLodStaticPointList)
+    self:DisablePlayerInput(true)
     GWorld.GameInstance:AddTimer(0.05, ExecuteLogic)
   else
     ExecuteLogic()
@@ -87,6 +90,7 @@ function M:DisablePlayerInput(bDisable)
 end
 
 function M:OnInitScreenshotParams(InOutParams)
+  InOutParams.From = "CameraNode"
   InOutParams.TargetPointNames = self.TargetPointList
   InOutParams.EventId = self.EventId
   InOutParams.EventParams = self.EventParams
@@ -98,8 +102,15 @@ function M:OnInitScreenshotParams(InOutParams)
   if not self.Text_TargetNotFound or "" == self.Text_TargetNotFound then
     InOutParams.Text_TargetNotFound = GText("UI_CameraSystem_QuestFailed_Default")
   end
-  InOutParams.StartPos = self.StartPos
-  InOutParams.bLockCameraPos = self.bLockCameraPos
+  if self.bIsForceOpenCamera and InOutParams.FromSTL and self.bShouldSetCameraParams then
+    InOutParams.FocalLength = self.FocalLength
+    if self.LookAtTargetName and "" ~= self.LookAtTargetName then
+      InOutParams.LookAtTargetName = self.LookAtTargetName
+    end
+    InOutParams.StartPos = self.StartPos
+    InOutParams.StartRotation = self.StartRotation
+    InOutParams.bLockCameraPos = self.bLockCameraPos
+  end
   InOutParams.LockHiddenList = {
     self.bLockHiddenRole and UIConst.PhotoCameraHiddenButton.Role or nil,
     self.bLockHiddenPlayer and UIConst.PhotoCameraHiddenButton.Player or nil,
@@ -123,12 +134,6 @@ function M:OnInitScreenshotParams(InOutParams)
         TaskIndicator:Show("UIPopUp")
       end
     end
-  end
-  if self.bShouldSetCameraParams then
-    InOutParams.FocalLength = self.FocalLength
-  end
-  if self.LookAtTargetName and "" ~= self.LookAtTargetName then
-    InOutParams.LookAtTargetName = self.LookAtTargetName
   end
   InOutParams.bDisableCustom = self.bIsForceOpenCamera
   InOutParams.bDisableCameraParameter = self.bIsForceOpenCamera
@@ -155,7 +160,7 @@ end
 
 function M:OnCameraUIClosed(Params)
   self:DisablePlayerInput(false)
-  self:HandleStaticPointActorsLOD(false)
+  self:HandleStaticPointActorsLOD(false, self.ForceMaxLodStaticPointList)
   local UIManager = GWorld.GameInstance:GetGameUIManager()
   if UIManager then
     local TaskIndicator = UIManager:GetUIObj("TaskIndicator_" .. self.Key)
@@ -163,7 +168,7 @@ function M:OnCameraUIClosed(Params)
       TaskIndicator:Hide("UIPopUp")
     end
   end
-  if not Params.IsSucceeded then
+  if not Params.IsSucceeded or Params.From ~= "CameraNode" then
     return
   end
   self.Callback("Success")
@@ -182,9 +187,9 @@ function M:Clear()
   end
 end
 
-function M:HandleStaticPointActorsLOD(bSetMaxLOD)
+function M:HandleStaticPointActorsLOD(bSetMaxLOD, ForceMaxLodStaticPointList)
   if bSetMaxLOD then
-    if not self.ForceMaxLodStaticPointList or not next(self.ForceMaxLodStaticPointList) then
+    if not ForceMaxLodStaticPointList or not next(ForceMaxLodStaticPointList) then
       return
     end
     self.SavedLodActors = {}
@@ -193,7 +198,7 @@ function M:HandleStaticPointActorsLOD(bSetMaxLOD)
       return
     end
     local MaxLod = CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" and 1 or 1
-    for _, StaticCreatorId in pairs(self.ForceMaxLodStaticPointList) do
+    for _, StaticCreatorId in pairs(ForceMaxLodStaticPointList) do
       local CreatorInfo = GameState:GetStaticCreatorInfo(StaticCreatorId)
       if IsValid(CreatorInfo) then
         local Actors = UE4.URuntimeCommonFunctionLibrary.GetStaticCreatorChildActors(GWorld.GameInstance, CreatorInfo)

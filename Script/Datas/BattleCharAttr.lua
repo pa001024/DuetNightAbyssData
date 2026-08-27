@@ -137,7 +137,7 @@ return ReadOnly("BattleCharAttr", {
   HyperTriggerRate = {
     AttrName = "HyperTriggerRate",
     DefaultValue = 1,
-    RoleAttrDisplay = "OnlyModified"
+    RoleAttrDisplay = "AlwaysTrue"
   },
   InitSp = {
     AttrName = "InitSp",

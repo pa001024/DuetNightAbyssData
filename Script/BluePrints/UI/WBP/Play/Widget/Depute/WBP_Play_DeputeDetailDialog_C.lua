@@ -56,6 +56,10 @@ function M:InitContent(Params, PopupData, Owner)
     Data.Quantity = ItemData.Quantity
     Data.ItemCount = ItemData.ItemCount
     Data.FirstRewardFlag = ItemData.bFirst
+    if ItemData.ProductType then
+      Data.ProductType = ItemData.ProductType
+      Data.Level = ItemData.Level
+    end
     table.insert(DropTypeMap[ItemData.DropType], Data)
   end
   for Index, DropType in ipairs(self.DropTypeOrder) do

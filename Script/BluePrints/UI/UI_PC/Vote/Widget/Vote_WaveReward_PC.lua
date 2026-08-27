@@ -269,6 +269,18 @@ function M:NewItemContent(ItemType, ItemId, Count, BonusType, NeedAdd, Uid)
   else
     Obj = self.RewardList:GetItemAt(self.ResourceNum)
   end
+  if "UpgradeMod" == ItemType then
+    Obj.ProductType = "Mod"
+    Obj.Level = ItemData.ModLevel
+    local ModId = ItemData.ModId
+    ItemData = DataMgr.Mod[ModId]
+    if not ItemData then
+      print(_G.LogTag, "Error: UpgradeMod Item Data is nil, ModId:", ModId, "ItemId", ItemId)
+      return nil
+    end
+    ItemType = "Mod"
+    ItemId = ModId
+  end
   Obj.ItemType = ItemType:gsub("^%l", string.upper)
   Obj.Id = ItemId
   Obj.Rarity = ItemData.Rarity or ItemData.WeaponRarity or 1

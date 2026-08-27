@@ -20,9 +20,16 @@ function M:Construct()
   self.Btn_GiftPay:BindEventOnClicked(self, self.OnClickBuy)
   self:AddDispatcher(EventID.OnPurchaseShopItem, self, self.OnPurchaseShopItem)
   self:AddDispatcher(EventID.OnRechargeFinished, self, self.OnRechargeFinished)
+  self.List_Item.OnCreateEmptyContent:Bind(self, self.CreateEmptyItemContent)
   self:InitNavigation()
   self:InitGamepadKeyImg()
   self:SetFocus()
+end
+
+function M:CreateEmptyItemContent()
+  local Content = NewObject(UIUtils.GetCommonItemContentClass())
+  Content.IsEmpty = true
+  return Content
 end
 
 function M:InitGamepadKeyImg()
@@ -206,34 +213,34 @@ end
 
 function M:RefreshItemList(RewardData)
   self.List_Item:ClearListItems()
-  if not RewardData or not RewardData.Id then
-    return
-  end
   local FirstItem
-  for i = 1, #RewardData.Id do
-    local ItemId = RewardData.Id[i]
-    local ItemType = RewardData.Type[i]
-    local Count = RewardUtils:GetCount(RewardData.Count[i])
-    local Icon = ItemUtils.GetItemIconPath(ItemId, ItemType)
-    local ItemData = DataMgr[ItemType] and DataMgr[ItemType][ItemId]
-    local Item = NewObject(UIUtils.GetCommonItemContentClass())
-    Item.Id = ItemId
-    Item.ItemType = ItemType
-    Item.Count = Count
-    Item.Icon = Icon
-    Item.Rarity = ItemData and (ItemData.Rarity or ItemData.WeaponRarity) or 1
-    Item.UIName = "GachaGiftPopup"
-    Item.IsShowDetails = true
-    Item.MenuPlacement = EMenuPlacement.MenuPlacement_MenuRight
-    Item.OnMenuOpenChangedEvents = {
-      Obj = self,
-      Callback = self.OnItemMenuOpenChanged
-    }
-    self.List_Item:AddItem(Item)
-    if 1 == i then
-      FirstItem = Item
+  if RewardData and RewardData.Id then
+    for i = 1, #RewardData.Id do
+      local ItemId = RewardData.Id[i]
+      local ItemType = RewardData.Type[i]
+      local Count = RewardUtils:GetCount(RewardData.Count[i])
+      local Icon = ItemUtils.GetItemIconPath(ItemId, ItemType)
+      local ItemData = DataMgr[ItemType] and DataMgr[ItemType][ItemId]
+      local Item = NewObject(UIUtils.GetCommonItemContentClass())
+      Item.Id = ItemId
+      Item.ItemType = ItemType
+      Item.Count = Count
+      Item.Icon = Icon
+      Item.Rarity = ItemData and (ItemData.Rarity or ItemData.WeaponRarity) or 1
+      Item.UIName = "GachaGiftPopup"
+      Item.IsShowDetails = true
+      Item.MenuPlacement = EMenuPlacement.MenuPlacement_MenuRight
+      Item.OnMenuOpenChangedEvents = {
+        Obj = self,
+        Callback = self.OnItemMenuOpenChanged
+      }
+      self.List_Item:AddItem(Item)
+      if 1 == i then
+        FirstItem = Item
+      end
     end
   end
+  self.List_Item:RequestFillEmptyContent()
   if FirstItem then
     if not self.bAfterPurchase then
       self.List_Item:NavigateToIndex(0)

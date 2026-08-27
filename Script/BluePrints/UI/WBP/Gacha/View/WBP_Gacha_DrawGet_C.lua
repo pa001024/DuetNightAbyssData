@@ -189,7 +189,7 @@ function M:InitRewardList()
     end
   end
   self.Group_SkinInfo:SetVisibility(UE4.ESlateVisibility.Collapsed)
-  self:SetGachaResBG(GachaInfo.Star5ItemId)
+  self:SetGachaResBG()
 end
 
 function M:CreateItemContent(Data, ItemType, ItemData, bNew, bConvert, Options)
@@ -426,6 +426,12 @@ function M:PlayOutAnim()
   if self:IsAnimationPlaying(self.Out) then
     return
   end
+  if self.GachaResultVideoPlayer then
+    self.GachaResultVideoPlayer:Stop()
+    self.GachaResultVideoPlayer = nil
+  end
+  self.bVideoPlaying = false
+  self.GachaResultVideoPath = nil
   self:BlockAllUIInput(true, "SP_DisplayOnly")
   if self.OnClosedFun then
     self.OnClosedFun(self.Parent)
@@ -453,19 +459,25 @@ function M:CloseSelf()
   self:SetVisibility(UE4.ESlateVisibility.Collapsed)
 end
 
-function M:LoadAvatarSpineWidget()
+function M:ShowSkinBaseInfo()
   local ShowSkinData = DataMgr[self.ShowSkinType][self.ShowSkinId]
   local SkinName = ShowSkinData.Name or ShowSkinData.SkinName
   self.Text_SkinName:SetText(GText(SkinName))
   self.Com_QualityTag:Init(ShowSkinData.Rarity)
   self:UpdateSkinNameStyleByRarity(ShowSkinData.Rarity)
   self.Group_SkinInfo:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+end
+
+function M:LoadAvatarSpineWidget()
+  self:ShowSkinBaseInfo()
   if self.ShowSkinType == "WeaponSkin" then
+    local ShowSkinData = DataMgr[self.ShowSkinType][self.ShowSkinId]
     local IconObj = LoadObject(ShowSkinData.BigIcon)
     self.WS_Icon:SetActiveWidgetIndex(1)
     self.Image_WeaponIcon:SetBrushResourceObject(IconObj)
     return
   end
+  local ShowSkinData = DataMgr[self.ShowSkinType][self.ShowSkinId]
   local AvatarWidgetPath = ShowSkinData and ShowSkinData.SkinSpine
   self.Avatar:ClearChildren()
   self.WS_Icon:SetActiveWidgetIndex(0)
@@ -542,9 +554,24 @@ function M:SetGachaResBG()
   local BgPath = GachaCommon.BgWidget[1]
   local Seq = 0
   for i, RewardData in ipairs(self.RewardLst) do
-    if GachaCommon.GachaItemTypeMap[RewardData.Sign] == "Skin" or GachaCommon.GachaItemTypeMap[RewardData.Sign] == "WeaponSkin" then
+    local ItemType = GachaCommon.GachaItemTypeMap[RewardData.Sign]
+    if "Skin" == ItemType then
+      local ItemData = DataMgr.Skin[RewardData.ResultId]
+      if ItemData and ItemData.GachaResultDisplayPath and ItemData.GachaResultDisplayPath ~= "" then
+        self.ShowSkinId = RewardData.ResultId
+        self.ShowSkinType = ItemType
+        self.bHasSkin = true
+        self:PlayGachaResultVideo(ItemData.GachaResultDisplayPath)
+        return
+      end
       self.ShowSkinId = RewardData.ResultId
-      self.ShowSkinType = GachaCommon.GachaItemTypeMap[RewardData.Sign]
+      self.ShowSkinType = ItemType
+      self:LoadAvatarSpineWidget()
+      self.bHasSkin = true
+      return
+    elseif "WeaponSkin" == ItemType then
+      self.ShowSkinId = RewardData.ResultId
+      self.ShowSkinType = ItemType
       self:LoadAvatarSpineWidget()
       self.bHasSkin = true
       return
@@ -568,6 +595,36 @@ function M:SetGachaResBG()
   if Slot then
     Slot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
     Slot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+  end
+end
+
+function M:PlayGachaResultVideo(VideoPath)
+  self:ShowSkinBaseInfo()
+  self.WS_Icon:SetActiveWidgetIndex(3)
+  local VideoPlayer = self.VideoPlayer
+  if not VideoPlayer and self.Video then
+    VideoPlayer = self.Video.VideoPlayer
+  end
+  if not VideoPlayer then
+    DebugPrint("WBP_Gacha_DrawGet_C:PlayGachaResultVideo 未找到 VideoPlayer")
+    return
+  end
+  VideoPlayer:Stop()
+  VideoPlayer:SetUrlByMediaSource(LoadObject(VideoPath))
+  VideoPlayer:SetLooping(true)
+  VideoPlayer:Play()
+  self.GachaResultVideoPlayer = VideoPlayer
+  self.bVideoPlaying = true
+  self.GachaResultVideoPath = VideoPath
+end
+
+function M:OnPageReShown()
+  if self.bVideoPlaying and self.GachaResultVideoPath then
+    self:AddTimer(0.1, function()
+      if self.bVideoPlaying and self.GachaResultVideoPath then
+        self:PlayGachaResultVideo(self.GachaResultVideoPath)
+      end
+    end)
   end
 end
 

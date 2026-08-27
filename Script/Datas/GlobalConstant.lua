@@ -307,7 +307,7 @@ return ReadOnly("GlobalConstant", {
   },
   CurrentVersion = {
     ConstantName = "CurrentVersion",
-    ConstantValue = 150
+    ConstantValue = 160
   },
   Daily_Goal_RandomTaskNum = {
     ConstantName = "Daily_Goal_RandomTaskNum",
@@ -331,7 +331,7 @@ return ReadOnly("GlobalConstant", {
   },
   DefenceWaveInterval = {
     ConstantName = "DefenceWaveInterval",
-    ConstantValue = 5
+    ConstantValue = 0
   },
   DeliveryBlackCurtainTime = {
     ConstantName = "DeliveryBlackCurtainTime",
@@ -507,7 +507,7 @@ return ReadOnly("GlobalConstant", {
   },
   FriendHoldMax = {
     ConstantName = "FriendHoldMax",
-    ConstantValue = 100
+    ConstantValue = 200
   },
   FriendMatchDuration = {
     ConstantName = "FriendMatchDuration",
@@ -768,6 +768,30 @@ return ReadOnly("GlobalConstant", {
   GuildRecruitmentMessageCD = {
     ConstantName = "GuildRecruitmentMessageCD",
     ConstantValue = 60
+  },
+  GuildSeatAppearanceScoreFactor = {
+    ConstantName = "GuildSeatAppearanceScoreFactor",
+    ConstantValue = 1
+  },
+  GuildSeatGuaranteeScoreDailyAdd = {
+    ConstantName = "GuildSeatGuaranteeScoreDailyAdd",
+    ConstantValue = 1
+  },
+  GuildSeatGuaranteeScoreFactor = {
+    ConstantName = "GuildSeatGuaranteeScoreFactor",
+    ConstantValue = 10
+  },
+  GuildSeatLeaseExtendSeconds = {
+    ConstantName = "GuildSeatLeaseExtendSeconds",
+    ConstantValue = 3600
+  },
+  GuildSeatMaxExtendCount = {
+    ConstantName = "GuildSeatMaxExtendCount",
+    ConstantValue = 2
+  },
+  GuildSeatOccupyLeaseSeconds = {
+    ConstantName = "GuildSeatOccupyLeaseSeconds",
+    ConstantValue = 180
   },
   GuildSetTitleMail = {
     ConstantName = "GuildSetTitleMail",
@@ -1124,6 +1148,10 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "Prologue_HideReward",
     ConstantValue = 10010102
   },
+  PublishResidenceTime = {
+    ConstantName = "PublishResidenceTime",
+    ConstantValue = 30
+  },
   PunishmentMailId = {
     ConstantName = "PunishmentMailId",
     ConstantValue = 10060
@@ -1148,13 +1176,13 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "ReconnectTimeout",
     ConstantValue = 30
   },
-  RegionOnlineMax = {
-    ConstantName = "RegionOnlineMax",
-    ConstantValue = 80
-  },
   RegionOnlineShowHigh = {
     ConstantName = "RegionOnlineShowHigh",
     ConstantValue = 30
+  },
+  RegionOnlineShowIOS = {
+    ConstantName = "RegionOnlineShowIOS",
+    ConstantValue = 10
   },
   RegionOnlineShowLow = {
     ConstantName = "RegionOnlineShowLow",
@@ -1162,7 +1190,7 @@ return ReadOnly("GlobalConstant", {
   },
   RegionOnlineShowMemory = {
     ConstantName = "RegionOnlineShowMemory",
-    ConstantValue = 5
+    ConstantValue = 2
   },
   RegionOnlineShowMiddle = {
     ConstantName = "RegionOnlineShowMiddle",
@@ -1215,6 +1243,18 @@ return ReadOnly("GlobalConstant", {
   SignatureMaxLen = {
     ConstantName = "SignatureMaxLen",
     ConstantValue = 40
+  },
+  SkinIntervalMax = {
+    ConstantName = "SkinIntervalMax",
+    ConstantValue = 8
+  },
+  SkinIntervalMin = {
+    ConstantName = "SkinIntervalMin",
+    ConstantValue = 0
+  },
+  SkinIntervalUnit = {
+    ConstantName = "SkinIntervalUnit",
+    ConstantValue = 0.5
   },
   SoloTreasureAllFinish = {
     ConstantName = "SoloTreasureAllFinish",
@@ -1337,6 +1377,22 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "TeamApplyMax",
     ConstantValue = 5
   },
+  TeamApplyMaxNum = {
+    ConstantName = "TeamApplyMaxNum",
+    ConstantValue = 10
+  },
+  TeamHallMaxNum = {
+    ConstantName = "TeamHallMaxNum",
+    ConstantValue = 100
+  },
+  TeamHallTagCharacterMaxNum = {
+    ConstantName = "TeamHallTagCharacterMaxNum",
+    ConstantValue = 8
+  },
+  TeamHallTagMaxNum = {
+    ConstantName = "TeamHallTagMaxNum",
+    ConstantValue = 15
+  },
   TeamInviteMax = {
     ConstantName = "TeamInviteMax",
     ConstantValue = 3
@@ -1344,6 +1400,18 @@ return ReadOnly("GlobalConstant", {
   TeamInviteStayTime = {
     ConstantName = "TeamInviteStayTime",
     ConstantValue = 15
+  },
+  TeamListRefreshCD = {
+    ConstantName = "TeamListRefreshCD",
+    ConstantValue = 1
+  },
+  TeamRecruitmentCD = {
+    ConstantName = "TeamRecruitmentCD",
+    ConstantValue = 15
+  },
+  TeamRecruitmentShareCD = {
+    ConstantName = "TeamRecruitmentShareCD",
+    ConstantValue = 30
   },
   TeleportMinDistance = {
     ConstantName = "TeleportMinDistance",

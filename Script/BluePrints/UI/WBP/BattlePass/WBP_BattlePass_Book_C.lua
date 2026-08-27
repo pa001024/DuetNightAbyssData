@@ -156,14 +156,17 @@ function WBP_BattlePass_Book_C:InitSkinOrAccessoryInfo()
     local Id = BattlePassController:GetModelData("TargetSkinId")
     Name = GText(DataMgr.Skin[Id].SkinName)
     Rarity = DataMgr.Skin[Id].Rarity
+    self:SetFenghua("Skin", Id, Rarity)
   elseif BattlePassController:GetModelData("BPRewardTyppe") == "WeaponSkin" then
     local Id = BattlePassController:GetModelData("WeaponSkinId")
     Name = GText(DataMgr.WeaponSkin[Id].Name)
     Rarity = DataMgr.WeaponSkin[Id].Rarity
+    self:SetFenghua("WeaponSkin", Id, Rarity)
   elseif BattlePassController:GetModelData("BPRewardTyppe") == "Accessory" then
     local Id = BattlePassController:GetModelData("AccessoryId")
     Name = GText(DataMgr.CharAccessory[Id].Name)
     Rarity = DataMgr.CharAccessory[Id].Rarity
+    self:SetFenghua("CharAccessory", Id, Rarity)
   end
   if Name then
     self.Text_ShowTitle:SetText(Name)
@@ -172,6 +175,27 @@ function WBP_BattlePass_Book_C:InitSkinOrAccessoryInfo()
     self:UpdateShowTitleFontByRarity(Rarity)
     self.Tag_Quality:Init(Rarity)
   end
+end
+
+function WBP_BattlePass_Book_C:SetFenghua(Type, Id, Rarity)
+  self.Text_Fenghua:SetText(GText("UI_AppearanceScore_ScoreName"))
+  local Score
+  for _, Info in pairs(DataMgr.AppearanceSingleScore) do
+    if Info.Type == Type and Info.Id == Id then
+      Score = Info.Score
+      break
+    end
+  end
+  if not Score then
+    for _, Info in pairs(DataMgr.AppearanceScore) do
+      if Info.Type == Type and Info.Rarity == Rarity then
+        Score = Info.Score
+        break
+      end
+    end
+  end
+  Score = Score or 0
+  self.Num_Fenghua:SetText(Score)
 end
 
 function WBP_BattlePass_Book_C:UpdateShowTitleFontByRarity(Rarity)

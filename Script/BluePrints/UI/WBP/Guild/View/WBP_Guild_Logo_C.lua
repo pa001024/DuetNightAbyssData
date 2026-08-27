@@ -1,5 +1,6 @@
 require("UnLua")
 local GuildLogoInfo = require("BluePrints.UI.WBP.Guild.Common.GuildLogoInfo")
+local MiscUtils = require("Utils.MiscUtils")
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
@@ -38,7 +39,7 @@ function M:LoadGuildLogoResources(Parsed)
       self.LogoTextureObj = LoadObject(LogoPath)
     end
     if not self.LogoTextureObj then
-      RedPrint(string.format("公会Logo没有找到对应资源路径，路径为%s", tostring(LogoPath)))
+      MiscUtils.RedPrint(string.format("公会Logo没有找到对应资源路径，路径为%s", tostring(LogoPath)))
     end
   end
   if FlagData then
@@ -46,7 +47,7 @@ function M:LoadGuildLogoResources(Parsed)
       self.FlagTextureObj = LoadObject(FlagPath)
     end
     if not self.FlagTextureObj then
-      RedPrint(string.format("公会旗帜没有找到对应资源路径，路径为%s", tostring(FlagPath)))
+      MiscUtils.RedPrint(string.format("公会旗帜没有找到对应资源路径，路径为%s", tostring(FlagPath)))
     end
   end
   self.T_LogoType = self.LogoTextureObj

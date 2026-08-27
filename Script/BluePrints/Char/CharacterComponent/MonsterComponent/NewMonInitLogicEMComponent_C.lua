@@ -26,6 +26,9 @@ function M:NewMonInitComponent_HardBossBTRunning(GameMode)
 end
 
 function M:NewMonInitComponent_SyncServerBornInfo(Owner)
+  if not Owner.BornInfo or Owner.BornInfo.IsEmpty then
+    return
+  end
   Owner.ServerBornInfo = Owner.BornInfo:ToEffectStruct()
 end
 
