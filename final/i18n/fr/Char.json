@@ -3114,7 +3114,7 @@
       "Lorsque le niveau de Combo augmente, obtient 5 points de combo supplémentaires.",
       "[J’en peux plus !] niveau +2 ; [Hmpf !] niveau +1.",
       "Après avoir utilisé [J’en peux plus !] ou l’Attaque chargée de [Samaël], obtient +30% Dégâts Lumino pendant 15 s.",
-      "Lorsque l’Attaque chargée de [Samaël] consomme des points de Combo, elle récupère 90% de la quantité consommée.\nAprès avoir utilisé l’Attaque chargée de [Samaël] au niveau de Combo S, vous obtenez 1 cumul d’[Impulsion] pendant 10 s, jusqu’à 5 cumuls. Cumuler cet effet réinitialise sa durée restante.\nChaque cumul d’[Impulsion] augmente votre Puissance de compétence de 30% et votre Pénétration de tous les attributs de 12%."
+      "Lorsque l’Attaque chargée de [Samaël] consomme des points de Combo, elle récupère 90% de la quantité consommée.\nAprès avoir utilisé l’Attaque chargée de [Samaël] au niveau de Combo S, vous obtenez 1 cumul d’[Impulsion] pendant 10 s, jusqu’à 5 cumuls. Cumuler cet effet réinitialise sa durée restante.\nChaque cumul d’[Impulsion] augmente votre Puissance de compétence de 12% et votre Pénétration de tous les attributs de 5%."
     ],
     "碎片": 1001501,
     "第七溯源消耗": [
@@ -7340,7 +7340,7 @@
       "Lorsque vous effectuez une invocation, vous récupérez 1 de Lucidité.",
       "[Frisson] peut se cumuler jusqu’à 3 fois.",
       "[Opération décapitation] niveau +2 ; [Élégie pâle] niveau +1.",
-      "Lorsqu’un [Étendard de la Légion] quitte le terrain, il inflige 1 instance supplémentaire de dégâts d’invocation.",
+      "Lorsqu’un [Étendard] quitte le terrain, il inflige 1 instance supplémentaire de dégâts d’invocation.",
       "[Formation de combat de la Légion] niveau +2 ; [Élégie pâle] niveau +1.",
       "[Étendard] obtient 40% de Pénétration de tous les attributs."
     ],

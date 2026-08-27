@@ -304,30 +304,30 @@
   },
   {
     "id": 10047,
-    "name": "发条旋舞·绣红",
+    "name": "ゼンマイロンド・ペルシアンレッド",
     "desc": "アイコンフレームに使用できる。",
-    "icon": "T_Head_Frame41",
+    "icon": "T_Head_Frame46",
     "access": "イベントで入手"
   },
   {
     "id": 10048,
-    "name": "发条旋舞·墨玉",
+    "name": "ゼンマイロンド・ジェットブラック",
     "desc": "アイコンフレームに使用できる。",
-    "icon": "T_Head_Frame40",
+    "icon": "T_Head_Frame45",
     "access": "イベントで入手"
   },
   {
     "id": 10049,
-    "name": "鹅啊——",
+    "name": "ガチョウよ——",
     "desc": "アイコンフレームに使用できる。",
     "icon": "T_Head_Frame43",
     "access": "ショップで獲得"
   },
   {
     "id": 10050,
-    "name": "来自幽冥",
+    "name": "幽冥より",
     "desc": "アイコンフレームに使用できる。",
-    "icon": "T_Head_Frame40",
+    "icon": "T_Head_Frame44",
     "access": "月間オーダーで獲得可能"
   }
 ]

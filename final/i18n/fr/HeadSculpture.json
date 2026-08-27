@@ -187,7 +187,7 @@
   },
   {
     "id": 10033,
-    "name": "复仇者的肖像",
+    "name": "Portrait : La vengeresse",
     "desc": "UI_PlayerHead_Des_10031",
     "icon": "T_Head_Falu"
   },
@@ -265,19 +265,19 @@
   },
   {
     "id": 20013,
-    "name": "播种之人的肖像·旋舞",
+    "name": "Portrait : La semeuse – Valse",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Saiqi02"
   },
   {
     "id": 20014,
-    "name": "回忆中的肖像·旋舞",
+    "name": "Portrait : Souvenir – Valse",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Heitao01"
   },
   {
     "id": 20015,
-    "name": "复仇者的肖像·缄言",
+    "name": "Portrait : La vengeresse – Silence",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Falu01"
   },
@@ -1315,43 +1315,43 @@
   },
   {
     "id": 30173,
-    "name": "追猎·晴蓝",
+    "name": "Traque – Bleu céleste",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Other0061"
   },
   {
     "id": 30174,
-    "name": "追猎·绣红",
+    "name": "Traque – Rouille",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Other0060"
   },
   {
     "id": 30175,
-    "name": "追猎·鎏金",
+    "name": "Traque – Doré",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Other0059"
   },
   {
     "id": 30176,
-    "name": "布豪",
+    "name": "Lulu",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Other0062"
   },
   {
     "id": 30177,
-    "name": "睿智",
+    "name": "Sagesse",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Other0063"
   },
   {
     "id": 30178,
-    "name": "虚实之兔",
+    "name": "Lapin entre réalité et illusion",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Other0057"
   },
   {
     "id": 30179,
-    "name": "白兔的餐刀",
+    "name": "Couteau du Lapin blanc",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Other0058"
   },
@@ -1375,7 +1375,7 @@
   },
   {
     "id": 40004,
-    "name": "凝视",
+    "name": "Regard perçant",
     "desc": "Utilisable comme avatar.",
     "icon": ""
   }

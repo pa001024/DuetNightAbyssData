@@ -187,7 +187,7 @@
   },
   {
     "id": 10033,
-    "name": "复仇者的肖像",
+    "name": "Portrait: The Avenger",
     "desc": "UI_PlayerHead_Des_10031",
     "icon": "T_Head_Falu"
   },
@@ -265,19 +265,19 @@
   },
   {
     "id": 20013,
-    "name": "播种之人的肖像·旋舞",
+    "name": "Portrait: The Sower – Rondo",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Saiqi02"
   },
   {
     "id": 20014,
-    "name": "回忆中的肖像·旋舞",
+    "name": "Portrait: Memory – Rondo",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Heitao01"
   },
   {
     "id": 20015,
-    "name": "复仇者的肖像·缄言",
+    "name": "Portrait: The Avenger – Silent",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Falu01"
   },
@@ -1315,43 +1315,43 @@
   },
   {
     "id": 30173,
-    "name": "追猎·晴蓝",
+    "name": "Hunt: Celeste",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Other0061"
   },
   {
     "id": 30174,
-    "name": "追猎·绣红",
+    "name": "Hunt: Rust Red",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Other0060"
   },
   {
     "id": 30175,
-    "name": "追猎·鎏金",
+    "name": "Hunt: Gilt",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Other0059"
   },
   {
     "id": 30176,
-    "name": "布豪",
+    "name": "Uh-oh...",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Other0062"
   },
   {
     "id": 30177,
-    "name": "睿智",
+    "name": "Big Brain!",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Other0063"
   },
   {
     "id": 30178,
-    "name": "虚实之兔",
+    "name": "Dream-Bound Bunnies",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Other0057"
   },
   {
     "id": 30179,
-    "name": "白兔的餐刀",
+    "name": "The White Bunny's Blade",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Other0058"
   },

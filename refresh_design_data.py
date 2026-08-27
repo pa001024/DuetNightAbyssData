@@ -15,6 +15,7 @@ Maps/**/*_Design* 包重新导出到 Exports 目录，覆盖旧版/不完整导�
 可用环境变量:
     FMODEL_CLI_BIN   fmodel-cli.exe 的绝对路径（默认自动探测）
 """
+
 import argparse
 import json
 import os
@@ -30,9 +31,9 @@ def _find_cli() -> Optional[Path]:
     if env_bin and Path(env_bin).is_file():
         return Path(env_bin)
     candidates = [
-        Path(__file__).resolve().parent / "dna-unpack" / "fmodel-cli.exe",
-        Path("D:/dev/fmodel-mcp/fmodel-mcp-main/Cli/bin/publish/fmodel-cli.exe"),
-        Path("D:/dev/dna-unpack/fmodel-cli.exe"),
+        Path(__file__).resolve().parent
+        / "fmodel-mcp"
+        / "Cli/bin/publish/fmodel-cli.exe",
     ]
     for candidate in candidates:
         if candidate.is_file():
@@ -70,7 +71,9 @@ def _list_design_packages(cli: Path) -> List[str]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--dry-run", action="store_true", help="只列出待刷新包，不实际导出")
+    parser.add_argument(
+        "--dry-run", action="store_true", help="只列出待刷新包，不实际导出"
+    )
     parser.add_argument(
         "--package", default="", help="只刷新包路径包含该前缀的包（如 Huaxu_Yanjindu）"
     )

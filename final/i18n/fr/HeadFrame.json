@@ -304,30 +304,30 @@
   },
   {
     "id": 10047,
-    "name": "发条旋舞·绣红",
+    "name": "Valse mécanique – Rouille",
     "desc": "Permet de modifier votre cadre d’avatar.",
-    "icon": "T_Head_Frame41",
+    "icon": "T_Head_Frame46",
     "access": "Disponible via les événements"
   },
   {
     "id": 10048,
-    "name": "发条旋舞·墨玉",
+    "name": "Valse mécanique – Jade noir",
     "desc": "Permet de modifier votre cadre d’avatar.",
-    "icon": "T_Head_Frame40",
+    "icon": "T_Head_Frame45",
     "access": "Disponible via les événements"
   },
   {
     "id": 10049,
-    "name": "鹅啊——",
+    "name": "Gaa—",
     "desc": "Permet de modifier votre cadre d’avatar.",
     "icon": "T_Head_Frame43",
     "access": "Disponible dans la boutique"
   },
   {
     "id": 10050,
-    "name": "来自幽冥",
+    "name": "Venu de l’au-delà",
     "desc": "Permet de modifier votre cadre d’avatar.",
-    "icon": "T_Head_Frame40",
+    "icon": "T_Head_Frame44",
     "access": "Disponible via le Pass mensuel"
   }
 ]

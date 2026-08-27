@@ -394,7 +394,7 @@
   {
     "id": 3010615,
     "name": "Infernal Heartcleave",
-    "desc": "以心饲火，焚烬万物。",
+    "desc": "Let your soul feed the flame. Burn everything to ash.",
     "icon": "T_Head_Dualblade_Fenxin",
     "rarity": 5,
     "unlock": "Available at Shop"
@@ -546,7 +546,7 @@
   {
     "id": 3010904,
     "name": "Emberfrost – Grenade Launcher",
-    "desc": "UI_WeaponSkin_Des_3010111",
+    "desc": "只有寂静的白雪记得，被焚成灰烬的那个长夜。",
     "icon": "T_Head_Cannon_Yejin",
     "rarity": 5,
     "unlock": "Available at Shop"

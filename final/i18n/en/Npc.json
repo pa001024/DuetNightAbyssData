@@ -24816,7 +24816,7 @@
   },
   {
     "id": 700501,
-    "name": "克拉拉",
+    "name": "Clara",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -62559,6 +62559,7 @@
       {
         "id": 51301302,
         "content": "It's fine. We're not hungry yet. Do you know how we can see Mother Bunny?",
+        "speakerName": "\"'The Chariot' Victor\"",
         "next": 51301303
       },
       {
@@ -62613,6 +62614,7 @@
       {
         "id": 51301407,
         "content": "That faded mark is... the Forsakens?!",
+        "speakerName": "\"'The Chariot' Victor\"",
         "next": 51301408
       },
       {
@@ -62624,6 +62626,7 @@
       {
         "id": 51301409,
         "content": "Ambitio might be a member of the Forsakens. Step back.",
+        "speakerName": "\"'The Chariot' Victor\"",
         "next": 51301410
       },
       {
@@ -62647,6 +62650,7 @@
       {
         "id": 51301413,
         "content": "No, thanks...",
+        "speakerName": "\"'The Chariot' Victor\"",
         "next": 51301414
       },
       {
@@ -62664,11 +62668,13 @@
       {
         "id": 51301416,
         "content": "...",
+        "speakerName": "\"'The Chariot' Victor\"",
         "next": 51301417
       },
       {
         "id": 51301417,
-        "content": "(He really doesn't seem like a Forsakens member. The clothes don't fit him well either. Maybe I'm overthinking this...)"
+        "content": "(He really doesn't seem like a Forsakens member. The clothes don't fit him well either. Maybe I'm overthinking this...)",
+        "speakerName": "\"'The Chariot' Victor\""
       }
     ]
   },
@@ -62766,6 +62772,7 @@
       {
         "id": 51301709,
         "content": "It's alright.",
+        "speakerName": "\"'The Chariot' Victor\"",
         "next": 51301710
       },
       {
@@ -62820,6 +62827,7 @@
       {
         "id": 51301407,
         "content": "That faded mark is... the Forsakens?!",
+        "speakerName": "\"'The Chariot' Victor\"",
         "next": 51301408
       },
       {
@@ -62831,6 +62839,7 @@
       {
         "id": 51301409,
         "content": "Ambitio might be a member of the Forsakens. Step back.",
+        "speakerName": "\"'The Chariot' Victor\"",
         "next": 51301410
       },
       {
@@ -62854,6 +62863,7 @@
       {
         "id": 51301413,
         "content": "No, thanks...",
+        "speakerName": "\"'The Chariot' Victor\"",
         "next": 51301414
       },
       {
@@ -62871,11 +62881,13 @@
       {
         "id": 51301416,
         "content": "...",
+        "speakerName": "\"'The Chariot' Victor\"",
         "next": 51301417
       },
       {
         "id": 51301417,
-        "content": "(He really doesn't seem like a Forsakens member. The clothes don't fit him well either. Maybe I'm overthinking this...)"
+        "content": "(He really doesn't seem like a Forsakens member. The clothes don't fit him well either. Maybe I'm overthinking this...)",
+        "speakerName": "\"'The Chariot' Victor\""
       }
     ]
   },
@@ -62894,6 +62906,7 @@
       {
         "id": 51301502,
         "content": "Hello?",
+        "speakerName": "\"'The Chariot' Victor\"",
         "next": 51301503
       },
       {
@@ -62911,12 +62924,14 @@
       {
         "id": 51301505,
         "content": "(I haven't even asked anything yet...)",
+        "speakerName": "\"'The Chariot' Victor\"",
         "next": 51301506
       },
       {
         "id": 51301506,
         "content": "Grandma Tacita doesn't talk much. Let's look around somewhere else.",
-        "npc": 703137,
+        "npc": 111001,
+        "speakerName": "\"The High Priestess\" Ada",
         "next": 51301507
       },
       {
@@ -62975,6 +62990,7 @@
       {
         "id": 51301002,
         "content": "The airship hasn't been converted for civilian use yet. Soldiers don't have much to complain about.",
+        "speakerName": "\"'The Chariot' Victor\"",
         "next": 51301003
       },
       {

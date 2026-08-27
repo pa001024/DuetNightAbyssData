@@ -304,30 +304,30 @@
   },
   {
     "id": 10047,
-    "name": "发条旋舞·绣红",
+    "name": "Mainspring Rondo: Rust Red",
     "desc": "Used as an avatar frame.",
-    "icon": "T_Head_Frame41",
+    "icon": "T_Head_Frame46",
     "access": "Available from events"
   },
   {
     "id": 10048,
-    "name": "发条旋舞·墨玉",
+    "name": "Mainspring Rondo: Dark Jade",
     "desc": "Used as an avatar frame.",
-    "icon": "T_Head_Frame40",
+    "icon": "T_Head_Frame45",
     "access": "Available from events"
   },
   {
     "id": 10049,
-    "name": "鹅啊——",
+    "name": "HOOONK!",
     "desc": "Used as an avatar frame.",
     "icon": "T_Head_Frame43",
     "access": "Available at Shop"
   },
   {
     "id": 10050,
-    "name": "来自幽冥",
+    "name": "From the Wraith",
     "desc": "Used as an avatar frame.",
-    "icon": "T_Head_Frame40",
+    "icon": "T_Head_Frame44",
     "access": "Available through Monthly Pass"
   }
 ]

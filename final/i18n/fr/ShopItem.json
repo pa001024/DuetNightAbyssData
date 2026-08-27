@@ -14652,7 +14652,7 @@
           },
           {
             "id": 1604,
-            "name": "Coffret mensuel",
+            "name": "Mensuel",
             "items": [
               {
                 "id": 160201,
@@ -14827,7 +14827,7 @@
           },
           {
             "id": 1605,
-            "name": "Coffret hebdomadaire",
+            "name": "Hebdomadaire",
             "items": [
               {
                 "id": 160204,
@@ -15046,7 +15046,7 @@
           },
           {
             "id": 1606,
-            "name": "Coffrets divers",
+            "name": "Divers",
             "items": [
               {
                 "id": 160301,
@@ -20394,7 +20394,7 @@
                 "id": 140267,
                 "itemType": "CharAccessory",
                 "typeId": 31001,
-                "typeName": "Animation de victoire : Rives paisibles",
+                "typeName": "Victoire : Rives paisibles",
                 "price": 6,
                 "priceType": 111,
                 "priceName": "Prisme iridescent",
@@ -20404,14 +20404,14 @@
                 "sequence": 293,
                 "startTime": 1770602400,
                 "endTime": 1776027600,
-                "cond": "Débloqué après l’obtention de n’importe quelle Posture radieuse",
+                "cond": "Débloqué après l’obtention de n’importe quelle Posture rayonnante",
                 "isSpPopup": 1
               },
               {
                 "id": 140268,
                 "itemType": "CharAccessory",
                 "typeId": 31002,
-                "typeName": "Animation de victoire : Dominer monts et fleuves",
+                "typeName": "Victoire : Dominer monts et fleuves",
                 "price": 6,
                 "priceType": 111,
                 "priceName": "Prisme iridescent",
@@ -20421,7 +20421,7 @@
                 "sequence": 292,
                 "startTime": 1770602400,
                 "endTime": 1776027600,
-                "cond": "Débloqué après l’obtention de n’importe quelle Posture radieuse",
+                "cond": "Débloqué après l’obtention de n’importe quelle Posture rayonnante",
                 "isSpPopup": 1
               },
               {
@@ -20958,7 +20958,7 @@
                 "id": 140302,
                 "itemType": "CharAccessory",
                 "typeId": 31004,
-                "typeName": "Animation de victoire : Fantaisie Jishu ",
+                "typeName": "Victoire : Fantaisie Jishu",
                 "price": 6,
                 "priceType": 111,
                 "priceName": "Prisme iridescent",
@@ -21621,7 +21621,7 @@
                 "id": 140367,
                 "itemType": "CharAccessory",
                 "typeId": 31005,
-                "typeName": "Animation de victoire : Terre du péché",
+                "typeName": "Victoire : Terre du péché",
                 "price": 6,
                 "priceType": 111,
                 "priceName": "Prisme iridescent",
@@ -22104,7 +22104,7 @@
                 "id": 140397,
                 "itemType": "CharAccessory",
                 "typeId": 31006,
-                "typeName": "Animation de victoire : Sérénade des premières neiges",
+                "typeName": "Victoire : Sérénade des premières neiges",
                 "price": 6,
                 "priceType": 111,
                 "priceName": "Prisme iridescent",
@@ -22616,7 +22616,7 @@
                 "id": 140459,
                 "itemType": "HeadSculpture",
                 "typeId": 30173,
-                "typeName": "追猎·晴蓝",
+                "typeName": "Traque – Bleu céleste",
                 "price": 0,
                 "priceType": 111,
                 "priceName": "Prisme iridescent",
@@ -22632,7 +22632,7 @@
                 "id": 140460,
                 "itemType": "HeadSculpture",
                 "typeId": 30174,
-                "typeName": "追猎·绣红",
+                "typeName": "Traque – Rouille",
                 "price": 0,
                 "priceType": 111,
                 "priceName": "Prisme iridescent",
@@ -22648,7 +22648,7 @@
                 "id": 140461,
                 "itemType": "HeadSculpture",
                 "typeId": 30175,
-                "typeName": "追猎·鎏金",
+                "typeName": "Traque – Doré",
                 "price": 0,
                 "priceType": 111,
                 "priceName": "Prisme iridescent",
@@ -22680,7 +22680,7 @@
                 "id": 140463,
                 "itemType": "HeadSculpture",
                 "typeId": 40004,
-                "typeName": "凝视",
+                "typeName": "Regard perçant",
                 "price": 0,
                 "priceType": 111,
                 "priceName": "Prisme iridescent",
@@ -22728,7 +22728,7 @@
                 "id": 140466,
                 "itemType": "WeaponAccessory",
                 "typeId": 10059,
-                "typeName": "Cage du feu spectral – Blanc ivoire",
+                "typeName": "Cage du feu spectral – Bleu indigo",
                 "price": 20,
                 "priceType": 110,
                 "priceName": "Prisme azuré",
@@ -22744,7 +22744,7 @@
                 "id": 140467,
                 "itemType": "WeaponAccessory",
                 "typeId": 10061,
-                "typeName": "Cage du feu spectral – Doré",
+                "typeName": "Cage du feu spectral – Blanc ivoire",
                 "price": 20,
                 "priceType": 110,
                 "priceName": "Prisme azuré",
@@ -22760,7 +22760,7 @@
                 "id": 140468,
                 "itemType": "WeaponAccessory",
                 "typeId": 10060,
-                "typeName": "Cage du feu spectral – Jade noir",
+                "typeName": "Cage du feu spectral – Rouille",
                 "price": 20,
                 "priceType": 110,
                 "priceName": "Prisme azuré",
@@ -22984,7 +22984,7 @@
                 "id": 140482,
                 "itemType": "CharAccessory",
                 "typeId": 31007,
-                "typeName": "Animation de victoire : Hurlement de Cerbère",
+                "typeName": "Victoire : Hurlement de Cerbère",
                 "price": 6,
                 "priceType": 111,
                 "priceName": "Prisme iridescent",
@@ -23489,7 +23489,7 @@
                 "id": 140352,
                 "itemType": "CharAccessory",
                 "typeId": 31003,
-                "typeName": "Animation de victoire : Instant figé",
+                "typeName": "Victoire : Instant figé",
                 "price": 6,
                 "priceType": 111,
                 "priceName": "Prisme iridescent",
@@ -23973,7 +23973,7 @@
                 "id": 140451,
                 "itemType": "CharAccessory",
                 "typeId": 31001,
-                "typeName": "Animation de victoire : Rives paisibles",
+                "typeName": "Victoire : Rives paisibles",
                 "price": 6,
                 "priceType": 111,
                 "priceName": "Prisme iridescent",
@@ -23983,7 +23983,7 @@
                 "sequence": 196,
                 "startTime": 1785117600,
                 "endTime": 1789333200,
-                "cond": "Débloqué après l’obtention de n’importe quelle Posture radieuse",
+                "cond": "Débloqué après l’obtention de n’importe quelle Posture rayonnante",
                 "isSpPopup": 1
               },
               {
@@ -24118,7 +24118,7 @@
                 "id": 140494,
                 "itemType": "CharAccessory",
                 "typeId": 31001,
-                "typeName": "Animation de victoire : Rives paisibles",
+                "typeName": "Victoire : Rives paisibles",
                 "price": 6,
                 "priceType": 111,
                 "priceName": "Prisme iridescent",
@@ -24128,14 +24128,14 @@
                 "sequence": 293,
                 "startTime": 1780279200,
                 "endTime": 1780365600,
-                "cond": "Débloqué après l’obtention de n’importe quelle Posture radieuse",
+                "cond": "Débloqué après l’obtention de n’importe quelle Posture rayonnante",
                 "isSpPopup": 1
               },
               {
                 "id": 140495,
                 "itemType": "CharAccessory",
                 "typeId": 31002,
-                "typeName": "Animation de victoire : Dominer monts et fleuves",
+                "typeName": "Victoire : Dominer monts et fleuves",
                 "price": 6,
                 "priceType": 111,
                 "priceName": "Prisme iridescent",
@@ -24145,7 +24145,7 @@
                 "sequence": 292,
                 "startTime": 1788746400,
                 "endTime": 1793005200,
-                "cond": "Débloqué après l’obtention de n’importe quelle Posture radieuse",
+                "cond": "Débloqué après l’obtention de n’importe quelle Posture rayonnante",
                 "isSpPopup": 1
               },
               {
@@ -24467,7 +24467,7 @@
                 "sequence": 10002,
                 "startTime": 1788746400,
                 "endTime": 1793005200,
-                "require": 140270,
+                "require": 140497,
                 "isSpPopup": 1
               },
               {
@@ -24484,7 +24484,7 @@
                 "sequence": 10000,
                 "startTime": 1788746400,
                 "endTime": 1793005200,
-                "require": 140271,
+                "require": 140498,
                 "isSpPopup": 1
               },
               {
@@ -24501,7 +24501,7 @@
                 "sequence": 10001,
                 "startTime": 1788746400,
                 "endTime": 1793005200,
-                "require": 140272,
+                "require": 140499,
                 "isSpPopup": 1
               },
               {
@@ -26436,7 +26436,7 @@
                 "sequence": 1451,
                 "startTime": 1782784800,
                 "endTime": 1785142800,
-                "cond": "Obtenir toutes les apparences d’armes du Cri",
+                "cond": "Obtenir toutes les apparences d’arme à distance « Le Cri »",
                 "isSpPopup": 1
               },
               {
@@ -26669,7 +26669,7 @@
                 "id": 120184,
                 "itemType": "HeadFrame",
                 "typeId": 10049,
-                "typeName": "鹅啊——",
+                "typeName": "Gaa—",
                 "price": 0,
                 "priceType": 99,
                 "priceName": "Gemme de Phoxène",
@@ -26679,7 +26679,7 @@
                 "sequence": 1457,
                 "startTime": 1788746400,
                 "endTime": 1792400400,
-                "cond": "获得所有近战呐喊武器形象",
+                "cond": "Obtenir toutes les apparences d’arme de mêlée « Le Cri »",
                 "isSpPopup": 1
               },
               {

@@ -3305,7 +3305,7 @@
   },
   {
     "id": 31001,
-    "name": "勝利動作·悠遊水岸",
+    "name": "勝利·悠遊水岸",
     "desc": "可變更勝利動作。",
     "icon": "T_Fashion_SettlementAction_01",
     "rarity": 5,
@@ -3313,7 +3313,7 @@
   },
   {
     "id": 31002,
-    "name": "勝利動作·睥睨山河",
+    "name": "勝利·睥睨山河",
     "desc": "可變更勝利動作。",
     "icon": "T_Fashion_SettlementAction_02",
     "rarity": 5,
@@ -3321,7 +3321,7 @@
   },
   {
     "id": 31003,
-    "name": "勝利動作·極速定格",
+    "name": "勝利·極速定格",
     "desc": "可變更勝利動作。",
     "icon": "T_Fashion_SettlementAction_05",
     "rarity": 5,
@@ -3329,7 +3329,7 @@
   },
   {
     "id": 31004,
-    "name": "勝利動作·機樞幻想",
+    "name": "勝利·機樞幻想",
     "desc": "可變更勝利動作。",
     "icon": "T_Fashion_SettlementAction_03",
     "rarity": 5,
@@ -3337,7 +3337,7 @@
   },
   {
     "id": 31005,
-    "name": "勝利動作·罪壤",
+    "name": "勝利·罪壤",
     "desc": "可變更勝利動作。",
     "icon": "T_Fashion_SettlementAction_04",
     "rarity": 5,
@@ -3345,7 +3345,7 @@
   },
   {
     "id": 31006,
-    "name": "勝利動作·初雪小夜曲",
+    "name": "勝利·初雪小夜曲",
     "desc": "可變更勝利動作。",
     "icon": "T_Fashion_SettlementAction_06",
     "rarity": 5,
@@ -3353,7 +3353,7 @@
   },
   {
     "id": 31007,
-    "name": "勝利動作·地獄咆哮",
+    "name": "勝利·地獄咆哮",
     "desc": "可變更勝利動作。",
     "icon": "T_Fashion_SettlementAction_07",
     "rarity": 5,
@@ -4489,7 +4489,7 @@
   },
   {
     "id": 80059,
-    "name": "华彩谢幕",
+    "name": "華彩謝幕",
     "desc": "流動的卡牌與悠揚的旋律，譜寫著最後的謝幕。",
     "icon": "T_Fashion_Fx45_03",
     "rarity": 5,

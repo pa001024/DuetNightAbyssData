@@ -3114,7 +3114,7 @@
       "When Combo Level increases, gains 5 additional combo points.",
       "[That's It!] Level +2, [Hmph!!] Level +1",
       "After using [That's It!] or [Samael]'s Charged Attack, gains 30% additional Lumino Damage for 15 seconds.",
-      "[Samael]'s Charged Attack restores 90% of the Combo Points consumed.\nAfter using [Samael]'s Charged Attack at Combo Level S, gain 1 stack of [Impulse] for 10s, stacking up to 5 times. Gaining a stack refreshes the duration.\nEach stack of [Impulse] grants 30% Skill Intensity and 12% PEN stats."
+      "[Samael]'s Charged Attack restores 90% of the Combo Points consumed.\nAfter using [Samael]'s Charged Attack at Combo Level S, gain 1 stack of [Impulse] for 10s, stacking up to 5 times. Gaining a stack refreshes the duration.\nEach stack of [Impulse] grants 12% Skill Intensity and 5% PEN stats."
     ],
     "碎片": 1001501,
     "第七溯源消耗": [
@@ -9994,7 +9994,7 @@
             "削韧": 30
           },
           {
-            "名称": "Disruption Damage",
+            "名称": "Overflow Damage",
             "影响": "技能威力",
             "值": [
               0.16,
@@ -10129,7 +10129,7 @@
         "术语解释": {
           "Executioner": "While in [Executioner], increases [Resolve], and [Nightmeld] is replaced by [Shadowstrike]. Every 3s, converts a portion of ATK into Max HP.\nWhile in [Executioner], when dealing DMG with Dual Blades, if it is not Additional DMG, consumes 5% Max HP to deal additional DMG based on Max HP. This DMG is guaranteed to trigger its Bonus Effect.\nThe HP cost is deducted over 5s, down to a minimum of 30% Max HP.",
           "Shadowstrike": "Falsi dashes through enemies ahead, dealing Pyro Damage.",
-          "Execution Target": "When marked, the target takes 1 instance of Disruption Damage from Falsi and gains 1 stack of [Pyro Disruption].\nFalsi deals increased damage to [Execution Targets]. While in [Executioner] and an [Execution Target] dies, choose a new [Execution Target]."
+          "Execution Target": "When marked, the target takes 1 instance of Overflow Damage from Falsi and gains 1 stack of [Pyro Disruption].\nFalsi deals increased damage to [Execution Targets]. If an [Execution Target] dies while Falsi is in [Executioner], a new one is selected."
         },
         "行为": "造成目标最大生命109.0%的火属性伤害(技能/终结技);削减战姿30;附加增益(310421)[激活技能](持续20秒);附加增益(310423)[Resolve+#1](持续20秒);触发被动功能[Falu_Skill02_Target](被动效果310401·BP_Falu_Passive)"
       },

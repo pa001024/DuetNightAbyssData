@@ -1257,8 +1257,8 @@
   },
   {
     "id": 11009,
-    "name": "狱火狂燃",
-    "desc": "熊熊燃烧，直至一切化为灰烬。",
+    "name": "Inferno Frenzy",
+    "desc": "Burn until nothing remains but ash.",
     "icon": "T_Fashion_Fx40",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
@@ -2817,8 +2817,8 @@
   },
   {
     "id": 21015,
-    "name": "幽燃热浪",
-    "desc": "扭曲的热浪，如同烈火在空中划出的涟漪。",
+    "name": "Wraithveil Surge",
+    "desc": "Heat shimmers through the air like ripples of flame.",
     "icon": "T_Fashion_Fx39",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
@@ -3305,7 +3305,7 @@
   },
   {
     "id": 31001,
-    "name": "Victory Posture: Shore Leisure",
+    "name": "Victory: Shore Leisure",
     "desc": "Changes your Victory Posture.",
     "icon": "T_Fashion_SettlementAction_01",
     "rarity": 5,
@@ -3313,7 +3313,7 @@
   },
   {
     "id": 31002,
-    "name": "Victory Posture: Throne Above All",
+    "name": "Victory: Throne Above All",
     "desc": "Changes your Victory Posture.",
     "icon": "T_Fashion_SettlementAction_02",
     "rarity": 5,
@@ -3321,7 +3321,7 @@
   },
   {
     "id": 31003,
-    "name": "Victory Posture – Snapfreeze",
+    "name": "Victory: Snapfreeze",
     "desc": "Changes your Victory Posture.",
     "icon": "T_Fashion_SettlementAction_05",
     "rarity": 5,
@@ -3329,7 +3329,7 @@
   },
   {
     "id": 31004,
-    "name": "Victory Posture: Jishu Phantasia",
+    "name": "Victory: Jishu Phantasia",
     "desc": "Changes your Victory Posture.",
     "icon": "T_Fashion_SettlementAction_03",
     "rarity": 5,
@@ -3337,7 +3337,7 @@
   },
   {
     "id": 31005,
-    "name": "Victory Posture: Miserere Ground",
+    "name": "Victory: Miserere Ground",
     "desc": "Changes your Victory Posture.",
     "icon": "T_Fashion_SettlementAction_04",
     "rarity": 5,
@@ -3345,7 +3345,7 @@
   },
   {
     "id": 31006,
-    "name": "Victory Posture: Snowfall Serenade",
+    "name": "Victory: Snowfall Serenade",
     "desc": "Changes your Victory Posture.",
     "icon": "T_Fashion_SettlementAction_06",
     "rarity": 5,
@@ -3353,7 +3353,7 @@
   },
   {
     "id": 31007,
-    "name": "胜利·地狱咆哮",
+    "name": "Victory: Hellborne Roar",
     "desc": "Changes your Victory Posture.",
     "icon": "T_Fashion_SettlementAction_07",
     "rarity": 5,
@@ -4041,8 +4041,8 @@
   },
   {
     "id": 60005,
-    "name": "水墨盘龙",
-    "desc": "乾坤倒悬，阴阳流转。",
+    "name": "Inkweave Ascension",
+    "desc": "Heaven and earth are reversed; yin and yang shift and flow.",
     "icon": "T_Fashion_Fx46",
     "rarity": 5,
     "unlock": "Available from events"

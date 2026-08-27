@@ -163,7 +163,7 @@
           761,
           9252
         ],
-        "name": "留影地·净界岛",
+        "name": "Photo Spot: Purgatorio Island",
         "icon": "T_Gp_Camera"
       }
     ]
@@ -733,7 +733,7 @@
           -5117,
           -4284
         ],
-        "name": "留影地·冰湖城广场",
+        "name": "Photo Spot: Icelake Square",
         "icon": "T_Gp_Camera"
       }
     ]
@@ -1467,7 +1467,7 @@
           -38853,
           27042
         ],
-        "name": "留影地·泪湖湖畔",
+        "name": "Photo Spot: Lakeside of Lamenting Lake",
         "icon": "T_Gp_Camera"
       },
       {
@@ -1476,7 +1476,7 @@
           -52190,
           41000
         ],
-        "name": "留影地·泪湖",
+        "name": "Photo Spot: Lamenting Lake",
         "icon": "T_Gp_Camera"
       }
     ]
@@ -3101,7 +3101,7 @@
           -44803,
           7630
         ],
-        "name": "留影地·听鸦原",
+        "name": "Photo Spot: Crowsong Hollow",
         "icon": "T_Gp_Camera"
       },
       {
@@ -3110,7 +3110,7 @@
           28956,
           27042
         ],
-        "name": "留影地·蓼风岭",
+        "name": "Photo Spot: Liaofeng Ridge",
         "icon": "T_Gp_Camera"
       },
       {
@@ -3119,7 +3119,7 @@
           -18481,
           15712
         ],
-        "name": "留影地·微茫市",
+        "name": "Photo Spot: Haze Market",
         "icon": "T_Gp_Camera"
       },
       {
@@ -3128,7 +3128,7 @@
           32354,
           54041
         ],
-        "name": "留影地·浮星埠",
+        "name": "Photo Spot: Starwharf",
         "icon": "T_Gp_Camera"
       },
       {
@@ -3137,7 +3137,7 @@
           39258,
           5329
         ],
-        "name": "留影地·百年春",
+        "name": "Photo Spot: EverSpring",
         "icon": "T_Gp_Camera"
       },
       {
@@ -3146,7 +3146,7 @@
           6408,
           -2469
         ],
-        "name": "留影地·幽明涧",
+        "name": "Photo Spot: Twilight Ravine",
         "icon": "T_Gp_Camera"
       },
       {
@@ -3155,7 +3155,7 @@
           17489,
           -37970
         ],
-        "name": "留影地·枯荣阁",
+        "name": "Photo Spot: Hall of Ephemerality",
         "icon": "T_Gp_Camera"
       }
     ]
@@ -6356,7 +6356,7 @@
           -20847,
           -88214
         ],
-        "name": "UI_SUBREGION_NAME_107701",
+        "name": "酣梦池",
         "icon": "T_Gp_EX02_JHS"
       },
       {
@@ -6383,7 +6383,7 @@
           -6624,
           -75596
         ],
-        "name": "UI_SUBREGION_NAME_107501",
+        "name": "维克托的家",
         "icon": "T_Gp_EX02_ZZJ"
       },
       {
@@ -6698,42 +6698,42 @@
   {
     "id": 107301,
     "rid": 1073,
-    "name": "UI_SUBREGION_NAME_107301",
+    "name": "？？？",
     "desc": "UI_SUBREGION_DES_107301",
     "map": "Haiboliya_Thc_Emyly"
   },
   {
     "id": 107401,
     "rid": 1074,
-    "name": "UI_SUBREGION_NAME_107401",
+    "name": "龙莎要塞",
     "desc": "UI_SUBREGION_DES_107401",
     "map": "Haiboliya_Thc_Zchj"
   },
   {
     "id": 107501,
     "rid": 1075,
-    "name": "UI_SUBREGION_NAME_107501",
+    "name": "维克托的家",
     "desc": "UI_SUBREGION_DES_107501",
     "map": "Haiboliya_Thc_Zjfj"
   },
   {
     "id": 107601,
     "rid": 1076,
-    "name": "UI_SUBREGION_NAME_107601",
+    "name": "失控的乐园",
     "desc": "UI_SUBREGION_DES_107601",
     "map": "Haiboliya_Thc_Boss"
   },
   {
     "id": 107701,
     "rid": 1077,
-    "name": "UI_SUBREGION_NAME_107701",
+    "name": "酣梦池",
     "desc": "UI_SUBREGION_DES_107701",
     "map": "Haiboliya_Thc_Jhs"
   },
   {
     "id": 107801,
     "rid": 1078,
-    "name": "UI_SUBREGION_NAME_107801",
+    "name": "乐园镇",
     "desc": "UI_SUBREGION_DES_107801",
     "map": "Haiboliya_Thc_Ck"
   },

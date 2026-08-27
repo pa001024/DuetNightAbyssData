@@ -304,30 +304,30 @@
   },
   {
     "id": 10047,
-    "name": "发条旋舞·绣红",
+    "name": "태엽의 춤·러스트 레드",
     "desc": "프로필 프레임에 사용된다.",
-    "icon": "T_Head_Frame41",
+    "icon": "T_Head_Frame46",
     "access": "이벤트를 통해 획득"
   },
   {
     "id": 10048,
-    "name": "发条旋舞·墨玉",
+    "name": "태엽의 춤·제트 블랙",
     "desc": "프로필 프레임에 사용된다.",
-    "icon": "T_Head_Frame40",
+    "icon": "T_Head_Frame45",
     "access": "이벤트를 통해 획득"
   },
   {
     "id": 10049,
-    "name": "鹅啊——",
+    "name": "꺼아악——",
     "desc": "프로필 프레임에 사용된다.",
     "icon": "T_Head_Frame43",
     "access": "상점을 통해 획득"
   },
   {
     "id": 10050,
-    "name": "来自幽冥",
+    "name": "저승에서 온 자",
     "desc": "프로필 프레임에 사용된다.",
-    "icon": "T_Head_Frame40",
+    "icon": "T_Head_Frame44",
     "access": "월간 주문을 통해 획득"
   }
 ]

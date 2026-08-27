@@ -3305,7 +3305,7 @@
   },
   {
     "id": 31001,
-    "name": "클리어 동작·여유로운 바닷가",
+    "name": "클리어·여유로운 바닷가",
     "desc": "클리어 동작을 변경할 수 있다.",
     "icon": "T_Fashion_SettlementAction_01",
     "rarity": 5,
@@ -3313,7 +3313,7 @@
   },
   {
     "id": 31002,
-    "name": "클리어 동작·\n천하를 굽어보기",
+    "name": "클리어·천하를 굽어보기",
     "desc": "클리어 동작을 변경할 수 있다.",
     "icon": "T_Fashion_SettlementAction_02",
     "rarity": 5,
@@ -3321,7 +3321,7 @@
   },
   {
     "id": 31003,
-    "name": "클리어 동작·프리즈 프레임",
+    "name": "클리어·프리즈 프레임",
     "desc": "클리어 동작을 변경할 수 있다.",
     "icon": "T_Fashion_SettlementAction_05",
     "rarity": 5,
@@ -3329,7 +3329,7 @@
   },
   {
     "id": 31004,
-    "name": "클리어 동작·메카닉 판타지",
+    "name": "클리어·메카닉 판타지",
     "desc": "클리어 동작을 변경할 수 있다.",
     "icon": "T_Fashion_SettlementAction_03",
     "rarity": 5,
@@ -3337,7 +3337,7 @@
   },
   {
     "id": 31005,
-    "name": "클리어 동작·죄악의 땅",
+    "name": "클리어·죄악의 땅",
     "desc": "클리어 동작을 변경할 수 있다.",
     "icon": "T_Fashion_SettlementAction_04",
     "rarity": 5,
@@ -3345,7 +3345,7 @@
   },
   {
     "id": 31006,
-    "name": "클리어 동작·첫눈의 세레나데",
+    "name": "클리어·첫눈의 세레나데",
     "desc": "클리어 동작을 변경할 수 있다.",
     "icon": "T_Fashion_SettlementAction_06",
     "rarity": 5,
@@ -3353,7 +3353,7 @@
   },
   {
     "id": 31007,
-    "name": "클리어 동작·지옥의 포효",
+    "name": "클리어·지옥의 포효",
     "desc": "클리어 동작을 변경할 수 있다.",
     "icon": "T_Fashion_SettlementAction_07",
     "rarity": 5,
@@ -4489,7 +4489,7 @@
   },
   {
     "id": 80059,
-    "name": "华彩谢幕",
+    "name": "화려한 커튼콜",
     "desc": "물결 치는 카드와 멜로디 아래, 무대는 최후의 막을 고한다.",
     "icon": "T_Fashion_Fx45_03",
     "rarity": 5,

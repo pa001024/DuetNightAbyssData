@@ -13815,7 +13815,7 @@
         "id": 310401,
         "t": "Skin",
         "c": 1,
-        "n": "缄默猎手"
+        "n": "Stalking Silence"
       },
       {
         "id": 3010615,
@@ -60310,7 +60310,7 @@
         "id": 227,
         "t": "Resource",
         "c": 30,
-        "n": "魔灵之歌·一"
+        "n": "A Geniemon's Ballad Ⅰ"
       }
     ]
   },
@@ -60333,7 +60333,7 @@
         "id": 227,
         "t": "Resource",
         "c": 40,
-        "n": "魔灵之歌·一"
+        "n": "A Geniemon's Ballad Ⅰ"
       }
     ]
   },
@@ -60356,7 +60356,7 @@
         "id": 227,
         "t": "Resource",
         "c": 50,
-        "n": "魔灵之歌·一"
+        "n": "A Geniemon's Ballad Ⅰ"
       }
     ]
   },
@@ -60379,7 +60379,7 @@
         "id": 227,
         "t": "Resource",
         "c": 60,
-        "n": "魔灵之歌·一"
+        "n": "A Geniemon's Ballad Ⅰ"
       }
     ]
   },
@@ -60402,7 +60402,7 @@
         "id": 227,
         "t": "Resource",
         "c": 70,
-        "n": "魔灵之歌·一"
+        "n": "A Geniemon's Ballad Ⅰ"
       }
     ]
   },
@@ -60425,7 +60425,7 @@
         "id": 227,
         "t": "Resource",
         "c": 80,
-        "n": "魔灵之歌·一"
+        "n": "A Geniemon's Ballad Ⅰ"
       }
     ]
   },
@@ -60448,7 +60448,7 @@
         "id": 227,
         "t": "Resource",
         "c": 90,
-        "n": "魔灵之歌·一"
+        "n": "A Geniemon's Ballad Ⅰ"
       }
     ]
   },
@@ -60471,7 +60471,7 @@
         "id": 227,
         "t": "Resource",
         "c": 100,
-        "n": "魔灵之歌·一"
+        "n": "A Geniemon's Ballad Ⅰ"
       }
     ]
   },
@@ -60489,7 +60489,7 @@
         "id": 227,
         "t": "Resource",
         "c": 30,
-        "n": "魔灵之歌·一"
+        "n": "A Geniemon's Ballad Ⅰ"
       }
     ]
   },
@@ -60507,7 +60507,7 @@
         "id": 227,
         "t": "Resource",
         "c": 40,
-        "n": "魔灵之歌·一"
+        "n": "A Geniemon's Ballad Ⅰ"
       }
     ]
   },
@@ -60525,7 +60525,7 @@
         "id": 227,
         "t": "Resource",
         "c": 50,
-        "n": "魔灵之歌·一"
+        "n": "A Geniemon's Ballad Ⅰ"
       }
     ]
   },
@@ -60543,7 +60543,7 @@
         "id": 227,
         "t": "Resource",
         "c": 60,
-        "n": "魔灵之歌·一"
+        "n": "A Geniemon's Ballad Ⅰ"
       }
     ]
   },
@@ -60561,7 +60561,7 @@
         "id": 227,
         "t": "Resource",
         "c": 70,
-        "n": "魔灵之歌·一"
+        "n": "A Geniemon's Ballad Ⅰ"
       }
     ]
   },
@@ -60579,7 +60579,7 @@
         "id": 227,
         "t": "Resource",
         "c": 80,
-        "n": "魔灵之歌·一"
+        "n": "A Geniemon's Ballad Ⅰ"
       }
     ]
   },
@@ -60597,7 +60597,7 @@
         "id": 227,
         "t": "Resource",
         "c": 90,
-        "n": "魔灵之歌·一"
+        "n": "A Geniemon's Ballad Ⅰ"
       }
     ]
   },
@@ -60615,7 +60615,7 @@
         "id": 227,
         "t": "Resource",
         "c": 100,
-        "n": "魔灵之歌·一"
+        "n": "A Geniemon's Ballad Ⅰ"
       }
     ]
   },
@@ -66945,7 +66945,7 @@
         "id": 10047,
         "t": "HeadFrame",
         "c": 1,
-        "n": "发条旋舞·绣红"
+        "n": "Mainspring Rondo: Rust Red"
       }
     ]
   },
@@ -66957,7 +66957,7 @@
         "id": 10048,
         "t": "HeadFrame",
         "c": 1,
-        "n": "发条旋舞·墨玉"
+        "n": "Mainspring Rondo: Dark Jade"
       }
     ]
   },
@@ -66969,7 +66969,7 @@
         "id": 10049,
         "t": "HeadFrame",
         "c": 1,
-        "n": "鹅啊——"
+        "n": "HOOONK!"
       }
     ]
   },
@@ -66981,7 +66981,7 @@
         "id": 10050,
         "t": "HeadFrame",
         "c": 1,
-        "n": "来自幽冥"
+        "n": "From the Wraith"
       }
     ]
   },
@@ -72787,7 +72787,7 @@
         "t": "Skin",
         "c": 1,
         "p": 1,
-        "n": "城市守则"
+        "n": "Civic Ordinance"
       },
       {
         "id": 10134,
@@ -90215,31 +90215,31 @@
         "id": 10049,
         "t": "TitleFrame",
         "c": 1,
-        "n": "SSS级狩月人·6"
+        "n": "SSS-Rank Phoxhunter Ⅵ"
       },
       {
         "id": 10050,
         "t": "TitleFrame",
         "c": 1,
-        "n": "SS级狩月人·6"
+        "n": "SS-Rank Phoxhunter Ⅵ"
       },
       {
         "id": 10051,
         "t": "TitleFrame",
         "c": 1,
-        "n": "S级狩月人·6"
+        "n": "S-Rank Phoxhunter Ⅵ"
       },
       {
         "id": 10052,
         "t": "TitleFrame",
         "c": 1,
-        "n": "A级狩月人·6"
+        "n": "A-Rank Phoxhunter Ⅵ"
       },
       {
         "id": 10053,
         "t": "TitleFrame",
         "c": 1,
-        "n": "B级狩月人·6"
+        "n": "B-Rank Phoxhunter Ⅵ"
       }
     ]
   },
@@ -90269,25 +90269,25 @@
         "id": 10050,
         "t": "TitleFrame",
         "c": 1,
-        "n": "SS级狩月人·6"
+        "n": "SS-Rank Phoxhunter Ⅵ"
       },
       {
         "id": 10051,
         "t": "TitleFrame",
         "c": 1,
-        "n": "S级狩月人·6"
+        "n": "S-Rank Phoxhunter Ⅵ"
       },
       {
         "id": 10052,
         "t": "TitleFrame",
         "c": 1,
-        "n": "A级狩月人·6"
+        "n": "A-Rank Phoxhunter Ⅵ"
       },
       {
         "id": 10053,
         "t": "TitleFrame",
         "c": 1,
-        "n": "B级狩月人·6"
+        "n": "B-Rank Phoxhunter Ⅵ"
       }
     ]
   },
@@ -90317,19 +90317,19 @@
         "id": 10051,
         "t": "TitleFrame",
         "c": 1,
-        "n": "S级狩月人·6"
+        "n": "S-Rank Phoxhunter Ⅵ"
       },
       {
         "id": 10052,
         "t": "TitleFrame",
         "c": 1,
-        "n": "A级狩月人·6"
+        "n": "A-Rank Phoxhunter Ⅵ"
       },
       {
         "id": 10053,
         "t": "TitleFrame",
         "c": 1,
-        "n": "B级狩月人·6"
+        "n": "B-Rank Phoxhunter Ⅵ"
       }
     ]
   },
@@ -90359,13 +90359,13 @@
         "id": 10052,
         "t": "TitleFrame",
         "c": 1,
-        "n": "A级狩月人·6"
+        "n": "A-Rank Phoxhunter Ⅵ"
       },
       {
         "id": 10053,
         "t": "TitleFrame",
         "c": 1,
-        "n": "B级狩月人·6"
+        "n": "B-Rank Phoxhunter Ⅵ"
       }
     ]
   },
@@ -90395,7 +90395,7 @@
         "id": 10053,
         "t": "TitleFrame",
         "c": 1,
-        "n": "B级狩月人·6"
+        "n": "B-Rank Phoxhunter Ⅵ"
       }
     ]
   },
@@ -98279,7 +98279,7 @@
         "id": 226,
         "t": "Resource",
         "c": 3,
-        "n": "A Geniemon's Ballad"
+        "n": "A Geniemon's Ballad Ⅱ"
       }
     ]
   },
@@ -98716,7 +98716,7 @@
         "id": 226,
         "t": "Resource",
         "c": 1,
-        "n": "A Geniemon's Ballad"
+        "n": "A Geniemon's Ballad Ⅱ"
       }
     ]
   },
@@ -98774,7 +98774,7 @@
         "t": "Pet",
         "c": 1,
         "p": 1,
-        "n": "灿烂摇摇冻·顽强"
+        "n": "Luminous Jellomon: Tenacious"
       },
       {
         "id": 510063,
@@ -98851,21 +98851,21 @@
         "t": "Pet",
         "c": 1,
         "p": 1,
-        "n": "灿烂摇摇冻·巧手"
+        "n": "Luminous Jellomon: Deft"
       },
       {
         "id": 510171,
         "t": "Pet",
         "c": 1,
         "p": 1,
-        "n": "灿烂摇摇冻·悠闲"
+        "n": "Luminous Jellomon: At Peace"
       },
       {
         "id": 510181,
         "t": "Pet",
         "c": 1,
         "p": 1,
-        "n": "灿烂摇摇冻·自律"
+        "n": "Luminous Jellomon: Disciplined"
       },
       {
         "id": 510193,
@@ -98935,21 +98935,21 @@
         "t": "Pet",
         "c": 1,
         "p": 1,
-        "n": "灿烂摇摇冻·渴求"
+        "n": "Luminous Jellomon: Desirous"
       },
       {
         "id": 510291,
         "t": "Pet",
         "c": 1,
         "p": 1,
-        "n": "灿烂摇摇冻·遁逃"
+        "n": "Luminous Jellomon: Fleeing"
       },
       {
         "id": 510301,
         "t": "Pet",
         "c": 1,
         "p": 1,
-        "n": "灿烂摇摇冻·老道"
+        "n": "Luminous Jellomon: Veteran"
       }
     ]
   },
@@ -99401,7 +99401,7 @@
         "id": 120006,
         "t": "Resource",
         "c": 1,
-        "n": "第22只乐园的白兔装饰代金券"
+        "n": "Paradise's 22nd White Bunny Accessory Coupon"
       }
     ]
   },
@@ -107224,7 +107224,7 @@
         "id": 60005,
         "t": "CharAccessory",
         "c": 1,
-        "n": "水墨盘龙"
+        "n": "Inkweave Ascension"
       },
       {
         "id": 202,

@@ -6356,7 +6356,7 @@
           -20847,
           -88214
         ],
-        "name": "UI_SUBREGION_NAME_107701",
+        "name": "酣梦池",
         "icon": "T_Gp_EX02_JHS"
       },
       {
@@ -6383,7 +6383,7 @@
           -6624,
           -75596
         ],
-        "name": "UI_SUBREGION_NAME_107501",
+        "name": "维克托的家",
         "icon": "T_Gp_EX02_ZZJ"
       },
       {
@@ -6698,42 +6698,42 @@
   {
     "id": 107301,
     "rid": 1073,
-    "name": "UI_SUBREGION_NAME_107301",
+    "name": "？？？",
     "desc": "UI_SUBREGION_DES_107301",
     "map": "Haiboliya_Thc_Emyly"
   },
   {
     "id": 107401,
     "rid": 1074,
-    "name": "UI_SUBREGION_NAME_107401",
+    "name": "龙莎要塞",
     "desc": "UI_SUBREGION_DES_107401",
     "map": "Haiboliya_Thc_Zchj"
   },
   {
     "id": 107501,
     "rid": 1075,
-    "name": "UI_SUBREGION_NAME_107501",
+    "name": "维克托的家",
     "desc": "UI_SUBREGION_DES_107501",
     "map": "Haiboliya_Thc_Zjfj"
   },
   {
     "id": 107601,
     "rid": 1076,
-    "name": "UI_SUBREGION_NAME_107601",
+    "name": "失控的乐园",
     "desc": "UI_SUBREGION_DES_107601",
     "map": "Haiboliya_Thc_Boss"
   },
   {
     "id": 107701,
     "rid": 1077,
-    "name": "UI_SUBREGION_NAME_107701",
+    "name": "酣梦池",
     "desc": "UI_SUBREGION_DES_107701",
     "map": "Haiboliya_Thc_Jhs"
   },
   {
     "id": 107801,
     "rid": 1078,
-    "name": "UI_SUBREGION_NAME_107801",
+    "name": "乐园镇",
     "desc": "UI_SUBREGION_DES_107801",
     "map": "Haiboliya_Thc_Ck"
   },

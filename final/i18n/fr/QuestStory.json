@@ -49853,13 +49853,13 @@
     "quests": [
       {
         "id": 11020101,
-        "name": "前往阿尔卡诺山",
-        "desc": "告别维吉尔之后，你独自踏上了前往阿尔卡诺山的旅途，你必须在这里找到富尔维斯，阻止富尔维斯，洗刷老师与战友们身上的冤屈。"
+        "name": "Se rendre aux Montagnes d’Arcano",
+        "desc": "Après avoir pris congé de Vergilius, vous partez seul vers les Montagnes d’Arcano. Vous devez retrouver Fulvis, mettre fin à ses plans et laver le nom de votre professeur ainsi que celui de vos camarades tombés au combat."
       },
       {
         "id": 11020102,
-        "name": "前往阿尔卡诺山",
-        "desc": "告别维吉尔之后，你独自踏上了前往阿尔卡诺山的旅途，你必须在这里找到富尔维斯，阻止富尔维斯，洗刷老师与战友们身上的冤屈。",
+        "name": "Se rendre aux Montagnes d’Arcano",
+        "desc": "Après avoir pris congé de Vergilius, vous partez seul vers les Montagnes d’Arcano. Vous devez retrouver Fulvis, mettre fin à ses plans et laver le nom de votre professeur ainsi que celui de vos camarades tombés au combat.",
         "nodes": [
           {
             "id": "1780315440322308",
@@ -50619,8 +50619,8 @@
       },
       {
         "id": 11020103,
-        "name": "废墟游乐场",
-        "desc": "你跟着艾达来到了阿尔卡诺镇废墟，稍事休息，再继续朝着阿尔卡诺镇前进吧。",
+        "name": "Parc d’attractions en ruines",
+        "desc": "Vous suivez Ada jusqu’aux ruines d’Arcano. Reposez-vous un moment avant de poursuivre votre route vers Arcano.",
         "nodes": [
           {
             "id": "1780920816035374",
@@ -51402,8 +51402,8 @@
       },
       {
         "id": 11020104,
-        "name": "废墟中的枪响",
-        "desc": "跟艾达在废墟游乐场玩了一会儿后，你们听到了从废墟深处传来的枪声，循着枪响方向小心前进吧。",
+        "name": "Des coups de feu dans les ruines",
+        "desc": "Après avoir joué un moment avec Ada dans le parc d’attractions en ruines, vous entendez des coups de feu provenant des profondeurs des ruines. Avancez prudemment en suivant leur direction.",
         "nodes": [
           {
             "id": "17815218418292099598",
@@ -51502,8 +51502,8 @@
     "quests": [
       {
         "id": 11020201,
-        "name": "裂隙之下",
-        "desc": "你们追到了枪响的位置，却中了埋伏坠下了山崖，是谁在伏击你们？",
+        "name": "Sous la faille",
+        "desc": "Vous avez suivi les coups de feu jusqu’à leur origine, mais vous êtes tombés dans une embuscade et avez chuté du haut de la falaise. Qui vous attaque ?",
         "nodes": [
           {
             "id": "17815778711223149814",
@@ -51996,7 +51996,7 @@
             "dialogues": [
               {
                 "id": 11125101,
-                "content": "Les Souillés les ont repérés !"
+                "content": "Évitez les Souillés et avancez avec prudence !"
               }
             ]
           },
@@ -52010,7 +52010,7 @@
             "dialogues": [
               {
                 "id": 11125101,
-                "content": "Les Souillés les ont repérés !"
+                "content": "Évitez les Souillés et avancez avec prudence !"
               }
             ]
           },
@@ -52024,7 +52024,7 @@
             "dialogues": [
               {
                 "id": 11125101,
-                "content": "Les Souillés les ont repérés !"
+                "content": "Évitez les Souillés et avancez avec prudence !"
               }
             ]
           },
@@ -52039,7 +52039,7 @@
             "dialogues": [
               {
                 "id": 11125101,
-                "content": "Les Souillés les ont repérés !"
+                "content": "Évitez les Souillés et avancez avec prudence !"
               }
             ]
           },
@@ -52073,14 +52073,14 @@
             "type": "TalkNode",
             "name": "对话节点",
             "next": [
-              "178471153317614402595",
               "17842692488716667604",
+              "178471153317614402595",
               "178168140058312614716"
             ],
             "dialogues": [
               {
                 "id": 11125101,
-                "content": "Les Souillés les ont repérés !"
+                "content": "Évitez les Souillés et avancez avec prudence !"
               }
             ]
           },
@@ -52095,7 +52095,7 @@
             "dialogues": [
               {
                 "id": 11125101,
-                "content": "Les Souillés les ont repérés !"
+                "content": "Évitez les Souillés et avancez avec prudence !"
               }
             ]
           },
@@ -52520,8 +52520,8 @@
       },
       {
         "id": 11020202,
-        "name": "逃出生天？",
-        "desc": "法露茜在渡过湖泊时意外掉了下去，你为了这个关键人证不得不冒险跳下去救她。印象中你成功救下了她并游向了岸边，但是接下来……",
+        "name": "S’échapper ?",
+        "desc": "Lorsque Falsi tombe accidentellement dans le lac pendant la traversée, vous plongez à votre tour pour sauver ce témoin essentiel. Vous vous souvenez l’avoir sauvée et avoir nagé jusqu’à la rive... Mais ensuite...",
         "nodes": [
           {
             "id": "1781686084680531",
@@ -52660,8 +52660,8 @@
     "quests": [
       {
         "id": 11020301,
-        "name": "篝火夜话",
-        "desc": "从噩梦中惊醒，刚才的梦到底预示着什么？",
+        "name": "Veillée au coin du feu",
+        "desc": "Vous vous réveillez en sursaut après un cauchemar. Que pouvait bien annoncer ce rêve ?",
         "nodes": [
           {
             "id": "1781781035455495",
@@ -53312,7 +53312,7 @@
               {
                 "id": 11105837,
                 "content": "Je suis juste... un peu étourdi. Ça devrait passer.",
-                "voice": "story/1102/111058/1BCD6362",
+                "voice": "story/1102/111008/1BCA297E",
                 "npc": 111126,
                 "next": 11105838
               },
@@ -53326,28 +53326,28 @@
               {
                 "id": 11105839,
                 "content": "Tu l’as vu ? Mon insecte — une énorme bestiole, super jolie ! Je viens juste de l’attraper... mais il a disparu je sais pas où...",
-                "voice": "story/1102/111058/1BCD63B6",
+                "voice": "story/1102/111004/1BC9E78A",
                 "npc": 111001,
                 "next": 11105840
               },
               {
                 "id": 11105840,
                 "content": "<blue>Toi... oui, toi, là. Tu as vraiment perdu la mémoire, pas vrai ?</>",
-                "voice": "story/1102/111058/1BCD63E0",
+                "voice": "story/1102/111014/1BCA8D92",
                 "npc": 111001,
                 "next": 11105841
               },
               {
                 "id": 11105841,
                 "content": "Tu disais pourtant que l’eau était dangereuse ! Alors pourquoi tu as sauté dedans comme ça ? Ouin ouin... J’ai cru que tu ne te réveillerais jamais.",
-                "voice": "story/1102/111058/1BCD640A",
+                "voice": "story/1102/111054/1BCD1C2E",
                 "npc": 111001,
                 "next": 11105842
               },
               {
                 "id": 11105842,
                 "content": "<W>Petit lapin... rentre à la maison... retourne dans ce paradis paisible et merveilleux...</>",
-                "voice": "story/1102/111058/1BCD6434",
+                "voice": "story/1102/111053/1BCD0C1A",
                 "npc": 111001,
                 "next": 11105843
               },
@@ -53455,8 +53455,8 @@
       },
       {
         "id": 11020302,
-        "name": "继续前进",
-        "desc": "历经一番周折，你们总算来到了阿尔卡诺镇，了解一下镇子，调查一下触媒与富尔维斯的情报吧。",
+        "name": "Continuer d’avancer",
+        "desc": "Après toutes ces péripéties, vous arrivez enfin à Arcano. Renseignez-vous sur le village et enquêtez sur le Catalyseur ainsi que sur Fulvis.",
         "nodes": [
           {
             "id": "17821403733844282032",
@@ -54146,8 +54146,8 @@
     "quests": [
       {
         "id": 11021101,
-        "name": "四处转转",
-        "desc": "告别镇民之后，你决定在镇子上四处转转，调查一些情报。",
+        "name": "Faire un tour",
+        "desc": "Après avoir quitté les habitants, vous décidez de faire un tour dans le village afin de recueillir quelques informations.",
         "nodes": [
           {
             "id": "1782291976792705",
@@ -54785,6 +54785,9 @@
               -15967,
               -72753
             ],
+            "next": [
+              "17833446070941632775"
+            ],
             "dialogues": [
               {
                 "id": 11108401,
@@ -54840,6 +54843,38 @@
                 "content": "Oui oui~ Jouons !",
                 "voice": "story/1102/111084/1BCF0930",
                 "npc": 111001
+              }
+            ]
+          },
+          {
+            "id": "17833446070941632775",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "srId": 107001,
+            "pos": [
+              -15967,
+              -72753
+            ],
+            "dialogues": [
+              {
+                "id": 11108501,
+                "content": "Le Glouton... Quel genre de jeu est-ce ?",
+                "voice": "story/1102/111085/1BCF1872",
+                "npc": 111126,
+                "next": 11108502
+              },
+              {
+                "id": 11108502,
+                "content": "Nous sommes les Gloutons. Stella et Elio sont les patates grillées. Si les Gloutons trouvent toutes les patates grillées, ils gagnent.",
+                "voice": "story/1102/111085/1BCF189C",
+                "npc": 111166,
+                "next": 11108503
+              },
+              {
+                "id": 11108503,
+                "content": "Je vois.",
+                "voice": "story/1102/111085/1BCF18C6",
+                "npc": 111126
               }
             ]
           }
@@ -57929,8 +57964,8 @@
     "quests": [
       {
         "id": 11022101,
-        "name": "通过吊桥",
-        "desc": "今天需要与法露茜调查一下山谷中的剩余区域，现在先通过吊桥，去吊桥对面的山林看看吧。",
+        "name": "Traverser le pont-levis",
+        "desc": "Aujourd’hui, vous devez enquêter avec Falsi sur les dernières zones encore inexplorées de la vallée. Commencez par traverser le pont-levis et rendez-vous dans la forêt de l’autre côté.",
         "nodes": [
           {
             "id": "17821958639931120",
@@ -58222,8 +58257,8 @@
       },
       {
         "id": 11022102,
-        "name": "通过吊桥",
-        "desc": "今天需要与法露茜调查一下山谷中的剩余区域，现在先通过吊桥，去吊桥对面的山林看看吧。",
+        "name": "调查山林",
+        "desc": "Aujourd’hui, vous devez enquêter avec Falsi sur les dernières zones encore inexplorées de la vallée. Commencez par traverser le pont-levis et rendez-vous dans la forêt de l’autre côté.",
         "nodes": [
           {
             "id": "1783433088942130",
@@ -58404,18 +58439,18 @@
       },
       {
         "id": 11022103,
-        "name": "通过吊桥",
-        "desc": "今天需要与法露茜调查一下山谷中的剩余区域，现在先通过吊桥，去吊桥对面的山林看看吧。"
+        "name": "Traverser le pont-levis",
+        "desc": "Aujourd’hui, vous devez enquêter avec Falsi sur les dernières zones encore inexplorées de la vallée. Commencez par traverser le pont-levis et rendez-vous dans la forêt de l’autre côté."
       },
       {
         "id": 11022104,
-        "name": "通过吊桥",
-        "desc": "今天需要与法露茜调查一下山谷中的剩余区域，现在先通过吊桥，去吊桥对面的山林看看吧。"
+        "name": "Traverser le pont-levis",
+        "desc": "Aujourd’hui, vous devez enquêter avec Falsi sur les dernières zones encore inexplorées de la vallée. Commencez par traverser le pont-levis et rendez-vous dans la forêt de l’autre côté."
       },
       {
         "id": 11022105,
-        "name": "通过吊桥",
-        "desc": "今天需要与法露茜调查一下山谷中的剩余区域，现在先通过吊桥，去吊桥对面的山林看看吧。"
+        "name": "Traverser le pont-levis",
+        "desc": "Aujourd’hui, vous devez enquêter avec Falsi sur les dernières zones encore inexplorées de la vallée. Commencez par traverser le pont-levis et rendez-vous dans la forêt de l’autre côté."
       }
     ]
   },
@@ -58424,8 +58459,8 @@
     "quests": [
       {
         "id": 11022201,
-        "name": "寻找物资",
-        "desc": "为了对付藏在暗处的富尔维斯，你需要补充一些物资，前往当年的战场废墟，寻找一些能用的东西吧。",
+        "name": "Chercher des provisions",
+        "desc": "Pour affronter Fulvis qui se cache dans l’ombre, vous devez récupérer quelques ressources. Rendez-vous sur l’ancien champ de bataille et cherchez tout ce qui pourrait encore vous être utile.",
         "nodes": [
           {
             "id": "17822716431658133",
@@ -58458,8 +58493,8 @@
       },
       {
         "id": 11022202,
-        "name": "逃离爆炸区域",
-        "desc": "完全落入一角鲸小队手中的龙莎要塞不知为何发生了爆炸，先离开这里，找队友了解一下情况。",
+        "name": "Fuir la zone d’explosion",
+        "desc": "La Forteresse de Lonza, entièrement tombée aux mains des Narvals, vient soudainement d’exploser pour une raison inconnue. Quittez d’abord les lieux et retrouvez vos camarades pour comprendre ce qui s’est passé.",
         "nodes": [
           {
             "id": "17872811041401471",
@@ -58488,6 +58523,10 @@
             "id": "17872815199363224",
             "type": "TalkNode",
             "name": "（爆炸还在继续，得快点逃出去！）",
+            "next": [
+              "17872814200922459",
+              "17822886801162827"
+            ],
             "dialogues": [
               {
                 "id": 11113201,
@@ -58795,8 +58834,8 @@
       },
       {
         "id": 11022203,
-        "name": "与法露茜聊聊",
-        "desc": "法露茜从昏迷中转醒，与她聊聊，查看一下她的伤势吧。",
+        "name": "Parler à Falsi",
+        "desc": "Falsi reprend connaissance. Parlez-lui et vérifiez l’état de ses blessures.",
         "nodes": [
           {
             "id": "178236949314315153426",
@@ -58924,18 +58963,18 @@
       },
       {
         "id": 11022204,
-        "name": "通过吊桥",
-        "desc": "今天需要与法露茜调查一下山谷中的剩余区域，现在先通过吊桥，去吊桥对面的山林看看吧。"
+        "name": "Traverser le pont-levis",
+        "desc": "Aujourd’hui, vous devez enquêter avec Falsi sur les dernières zones encore inexplorées de la vallée. Commencez par traverser le pont-levis et rendez-vous dans la forêt de l’autre côté."
       },
       {
         "id": 11022205,
-        "name": "通过吊桥",
-        "desc": "今天需要与法露茜调查一下山谷中的剩余区域，现在先通过吊桥，去吊桥对面的山林看看吧。"
+        "name": "Traverser le pont-levis",
+        "desc": "Aujourd’hui, vous devez enquêter avec Falsi sur les dernières zones encore inexplorées de la vallée. Commencez par traverser le pont-levis et rendez-vous dans la forêt de l’autre côté."
       },
       {
         "id": 11022206,
-        "name": "通过吊桥",
-        "desc": "今天需要与法露茜调查一下山谷中的剩余区域，现在先通过吊桥，去吊桥对面的山林看看吧。"
+        "name": "Traverser le pont-levis",
+        "desc": "Aujourd’hui, vous devez enquêter avec Falsi sur les dernières zones encore inexplorées de la vallée. Commencez par traverser le pont-levis et rendez-vous dans la forêt de l’autre côté."
       }
     ]
   },
@@ -59541,7 +59580,7 @@
               {
                 "id": 11115015,
                 "content": "Quoi qu’il en soit, je suis allée inspecter ce bâtiment qu’ils appellent l’Étang du Repos. Hier, j’ai remarqué que Justus se montrait particulièrement discret à propos de cet endroit. J’ai donc décidé d’aller voir moi-même.",
-                "voice": "story/1102/111096/1BD34526",
+                "voice": "story/1102/111096/1BD0B9D2",
                 "npc": 111110,
                 "next": 11115016
               },
@@ -60692,63 +60731,63 @@
               {
                 "id": 11117215,
                 "content": "Fallait le dire plus tôt ! J’ai une gourde sur moi. Tiens, bois donc une gorgée !",
-                "voice": "story/1102/111096/1BD4AE16",
+                "voice": "story/1102/111002/1BC9CB52",
                 "speakerName": "« La Force » Bernard",
                 "next": 11117216
               },
               {
                 "id": 11117216,
                 "content": "Petit Victor, tu arrives au moment idéal. Après-demain aura lieu la <H>Parade du Paradis</>.",
-                "voice": "story/1102/111096/1BD4AE40",
+                "voice": "story/1102/111002/1BC9CB7C",
                 "speakerName": "« La Force » Bernard",
                 "next": 11117217
               },
               {
                 "id": 11117217,
                 "content": "<W>Même si tu as tout oublié... Maman Lapin te fera retrouver la mémoire.</>",
-                "voice": "story/1102/111096/1BD4AE6A",
+                "voice": "story/1102/111002/1BC9CBA6",
                 "speakerName": "« La Force » Bernard",
                 "next": 11117218
               },
               {
                 "id": 11117218,
                 "content": "... !",
-                "voice": "story/1102/111096/1BD4AE94",
+                "voice": "story/1102/111002/1BC9CBD0",
                 "speakerName": "« Le Chariot » Victor ?",
                 "next": 11117219
               },
               {
                 "id": 11117219,
                 "content": "C’est un distributeur de boissons. E-en fait... j’y ai caché quelques boissons en secret. Elles sont super sucrées, tu veux en goûter une ?",
-                "voice": "story/1102/111096/1BD4AEBE",
+                "voice": "story/1102/111017/1BCABCFC",
                 "speakerName": "« La Papesse » Ada",
                 "next": 11117220
               },
               {
                 "id": 11117220,
                 "content": "Non merci. Les boissons trop sucrées donnent encore plus soif.",
-                "voice": "story/1102/111096/1BD4AEE8",
+                "voice": "story/1102/111017/1BCABD26",
                 "speakerName": "« Le Chariot » Victor ?",
                 "next": 11117221
               },
               {
                 "id": 11117221,
                 "content": "A-ah... d’accord. Je comprends...",
-                "voice": "story/1102/111096/1BD4AF12",
+                "voice": "story/1102/111017/1BCABD50",
                 "speakerName": "« La Papesse » Ada",
                 "next": 11117222
               },
               {
                 "id": 11117222,
                 "content": "... Tant mieux, alors.",
-                "voice": "story/1102/111096/1BD4AF3C",
+                "voice": "story/1102/111017/1BCABD7A",
                 "speakerName": "« La Papesse » Ada",
                 "next": 11117223
               },
               {
                 "id": 11117223,
                 "content": "Plus tard. Vous avez passé toute la nuit dehors. Vous devez être épuisés. Buvez déjà un peu d’eau et reposez-vous.",
-                "voice": "story/1102/111096/1BD4AF66",
+                "voice": "story/1102/111065/1BCDD496",
                 "speakerName": "« L’Empereur » Cesare",
                 "next": 11117224
               },
@@ -63248,7 +63287,7 @@
               {
                 "id": 11120619,
                 "content": "Cesare. Laissez-nous partir.",
-                "voice": "story/1102/111096/1BD6DC8E",
+                "voice": "story/1102/111096/1BD4B428",
                 "npc": 110022,
                 "next": 11120620
               },
@@ -63505,12 +63544,6 @@
             "type": "TalkNode",
             "name": "对话节点",
             "dialogues": [
-              {
-                "id": 11121001,
-                "content": "Attends ! Falsi ! Où vas-tu ?!",
-                "voice": "story/1102/111096/1BD71B3A",
-                "npc": 111002
-              },
               {
                 "id": 11121002,
                 "content": "<I>Kof...</> L’enregistreur... Pendant le combat contre Maman Lapin... il a été projeté plus loin...",

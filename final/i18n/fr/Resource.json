@@ -20258,7 +20258,7 @@
     "name": "Scinque de pierre",
     "icon": "T_Pickup_Skink",
     "rarity": 2,
-    "desc": "Également appelé dragon de terre, il affectionne les surfaces rocheuses baignées de soleil. D’une vigilance extrême, il disparaît instantanément dans les fissures dès qu’il perçoit la moindre vibration à travers la pierre.\n Certains en font des animaux de compagnie, et l’on dit que la texture de leur queue d’un bleu éclatant est étonnamment agréable au toucher.",
+    "desc": "Également appelé dragon de terre, il affectionne les surfaces rocheuses baignées de soleil. D’une vigilance extrême, il disparaît instantanément dans les fissures dès qu’il perçoit la moindre vibration à travers la pierre.\nCertains en font des animaux de compagnie, et l’on dit que la texture de leur queue d’un bleu éclatant est étonnamment agréable au toucher.",
     "desc2": "« Scinque sur la roche figé,\n au moindre son, déjà envolé.\n Tu peux bien t’user les yeux,\n il ne reste qu’une queue rieuse. »\n\n— Comptine populaire du Marché Voilé",
     "source": [
       {
@@ -21189,7 +21189,7 @@
     "name": "Coralithe",
     "icon": "T_Pickup_03",
     "rarity": 2,
-    "desc": "Stalactite d’un blanc laiteux, connue des Huaxiens sous le nom de coralithe. Sa présence silencieuse témoigne d’innombrables cycles de métamorphoses entre montagnes et mers, accumulés au fil des âges.\n Réduite en poudre et ingérée, elle est réputée soulager la faiblesse pulmonaire, la toux chronique et l’épuisement du corps. Son seul défaut : une texture rêche qui a tendance à irriter la gorge.",
+    "desc": "Stalactite d’un blanc laiteux, connue des Huaxiens sous le nom de coralithe. Sa présence silencieuse témoigne d’innombrables cycles de métamorphoses entre montagnes et mers, accumulés au fil des âges.\nRéduite en poudre et ingérée, elle est réputée soulager la faiblesse pulmonaire, la toux chronique et l’épuisement du corps. Son seul défaut : une texture rêche qui a tendance à irriter la gorge.",
     "desc2": "« Voici le broyeur commandé par la Pharmacie Zesheng. Avant que je ne mette cet engin au point, ils n’avaient d’autre choix que d’engager des Descendants draconiques pour réduire à la main les ingrédients médicinaux les plus coriaces. Mais un Descendant draconique respectable a toujours sa propre activité... ceux qui acceptaient ce genre de besogne étaient souvent de provenance douteuse. À Zesheng, on fermait donc les yeux. L’un d’eux est même devenu célèbre récemment... Ke... Ke quelque chose, non ? »\n\n— Maître Gongshang, mécanicien de la Secte Jishu"
   },
   {

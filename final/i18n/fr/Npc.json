@@ -24816,7 +24816,7 @@
   },
   {
     "id": 700501,
-    "name": "克拉拉",
+    "name": "Clara",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -25005,7 +25005,7 @@
   },
   {
     "id": 700502,
-    "name": "Carter",
+    "name": "Kate",
     "camp": "NPC",
     "type": "Normal",
     "srId": 106001,
@@ -62559,6 +62559,7 @@
       {
         "id": 51301302,
         "content": "Ce n’est pas grave, nous n’avons pas encore faim. Est-ce que vous savez comment rencontrer Maman Lapin ?",
+        "speakerName": "« Le Chariot » Victor ?",
         "next": 51301303
       },
       {
@@ -62613,6 +62614,7 @@
       {
         "id": 51301407,
         "content": "Ce motif sombre... c’est le symbole des Déchus ?!",
+        "speakerName": "« Le Chariot » Victor ?",
         "next": 51301408
       },
       {
@@ -62624,6 +62626,7 @@
       {
         "id": 51301409,
         "content": "Ambitio pourrait être membre des Déchus. Reculez.",
+        "speakerName": "« Le Chariot » Victor ?",
         "next": 51301410
       },
       {
@@ -62647,6 +62650,7 @@
       {
         "id": 51301413,
         "content": "Non merci...",
+        "speakerName": "« Le Chariot » Victor ?",
         "next": 51301414
       },
       {
@@ -62664,11 +62668,13 @@
       {
         "id": 51301416,
         "content": "...",
+        "speakerName": "« Le Chariot » Victor ?",
         "next": 51301417
       },
       {
         "id": 51301417,
-        "content": "<I>En effet, sa réaction ne ressemble vraiment pas à celle d’un membre des Déchus. Ses vêtements ne semblent pas non plus être à sa taille... Je me suis peut-être vraiment fait des idées...</>"
+        "content": "<I>En effet, sa réaction ne ressemble vraiment pas à celle d’un membre des Déchus. Ses vêtements ne semblent pas non plus être à sa taille... Je me suis peut-être vraiment fait des idées...</>",
+        "speakerName": "« Le Chariot » Victor ?"
       }
     ]
   },
@@ -62766,6 +62772,7 @@
       {
         "id": 51301709,
         "content": "Ce n’est rien.",
+        "speakerName": "« Le Chariot » Victor ?",
         "next": 51301710
       },
       {
@@ -62820,6 +62827,7 @@
       {
         "id": 51301407,
         "content": "Ce motif sombre... c’est le symbole des Déchus ?!",
+        "speakerName": "« Le Chariot » Victor ?",
         "next": 51301408
       },
       {
@@ -62831,6 +62839,7 @@
       {
         "id": 51301409,
         "content": "Ambitio pourrait être membre des Déchus. Reculez.",
+        "speakerName": "« Le Chariot » Victor ?",
         "next": 51301410
       },
       {
@@ -62854,6 +62863,7 @@
       {
         "id": 51301413,
         "content": "Non merci...",
+        "speakerName": "« Le Chariot » Victor ?",
         "next": 51301414
       },
       {
@@ -62871,11 +62881,13 @@
       {
         "id": 51301416,
         "content": "...",
+        "speakerName": "« Le Chariot » Victor ?",
         "next": 51301417
       },
       {
         "id": 51301417,
-        "content": "<I>En effet, sa réaction ne ressemble vraiment pas à celle d’un membre des Déchus. Ses vêtements ne semblent pas non plus être à sa taille... Je me suis peut-être vraiment fait des idées...</>"
+        "content": "<I>En effet, sa réaction ne ressemble vraiment pas à celle d’un membre des Déchus. Ses vêtements ne semblent pas non plus être à sa taille... Je me suis peut-être vraiment fait des idées...</>",
+        "speakerName": "« Le Chariot » Victor ?"
       }
     ]
   },
@@ -62894,6 +62906,7 @@
       {
         "id": 51301502,
         "content": "Bonjour ?",
+        "speakerName": "« Le Chariot » Victor ?",
         "next": 51301503
       },
       {
@@ -62911,12 +62924,14 @@
       {
         "id": 51301505,
         "content": "<I>Je n’ai encore rien demandé pourtant...</>",
+        "speakerName": "« Le Chariot » Victor ?",
         "next": 51301506
       },
       {
         "id": 51301506,
         "content": "Mamie Tacita n’est pas très bavarde. Allons plutôt voir ailleurs.",
-        "npc": 703137,
+        "npc": 111001,
+        "speakerName": "« La Papesse » Ada",
         "next": 51301507
       },
       {
@@ -62975,6 +62990,7 @@
       {
         "id": 51301002,
         "content": "C’est sûrement parce que les dirigeables n’ont pas encore été adaptés à un usage civil. Les soldats n’ont pas vraiment de raison de se plaindre.",
+        "speakerName": "« Le Chariot » Victor ?",
         "next": 51301003
       },
       {

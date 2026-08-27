@@ -3305,7 +3305,7 @@
   },
   {
     "id": 31001,
-    "name": "Animation de victoire : Rives paisibles",
+    "name": "Victoire : Rives paisibles",
     "desc": "Permet de modifier l’animation de victoire.",
     "icon": "T_Fashion_SettlementAction_01",
     "rarity": 5,
@@ -3313,7 +3313,7 @@
   },
   {
     "id": 31002,
-    "name": "Animation de victoire : Dominer monts et fleuves",
+    "name": "Victoire : Dominer monts et fleuves",
     "desc": "Permet de modifier l’animation de victoire.",
     "icon": "T_Fashion_SettlementAction_02",
     "rarity": 5,
@@ -3321,7 +3321,7 @@
   },
   {
     "id": 31003,
-    "name": "Animation de victoire : Instant figé",
+    "name": "Victoire : Instant figé",
     "desc": "Permet de modifier l’animation de victoire.",
     "icon": "T_Fashion_SettlementAction_05",
     "rarity": 5,
@@ -3329,7 +3329,7 @@
   },
   {
     "id": 31004,
-    "name": "Animation de victoire : Fantaisie Jishu ",
+    "name": "Victoire : Fantaisie Jishu",
     "desc": "Permet de modifier l’animation de victoire.",
     "icon": "T_Fashion_SettlementAction_03",
     "rarity": 5,
@@ -3337,7 +3337,7 @@
   },
   {
     "id": 31005,
-    "name": "Animation de victoire : Terre du péché",
+    "name": "Victoire : Terre du péché",
     "desc": "Permet de modifier l’animation de victoire.",
     "icon": "T_Fashion_SettlementAction_04",
     "rarity": 5,
@@ -3345,7 +3345,7 @@
   },
   {
     "id": 31006,
-    "name": "Animation de victoire : Sérénade des premières neiges",
+    "name": "Victoire : Sérénade des premières neiges",
     "desc": "Permet de modifier l’animation de victoire.",
     "icon": "T_Fashion_SettlementAction_06",
     "rarity": 5,
@@ -3353,7 +3353,7 @@
   },
   {
     "id": 31007,
-    "name": "Animation de victoire : Hurlement de Cerbère",
+    "name": "Victoire : Hurlement de Cerbère",
     "desc": "Permet de modifier l’animation de victoire.",
     "icon": "T_Fashion_SettlementAction_07",
     "rarity": 5,
@@ -3434,7 +3434,7 @@
   {
     "id": 40013,
     "name": "Ailes d’émeraude – Menthe",
-    "desc": "激活，运转，推进。",
+    "desc": "Activation. Fonctionnement. Propulsion.",
     "icon": "T_Fashion_Back41_04",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
@@ -3538,7 +3538,7 @@
   {
     "id": 40026,
     "name": "Ailes d’émeraude – Rouille",
-    "desc": "激活，运转，推进。",
+    "desc": "Activation. Fonctionnement. Propulsion.",
     "icon": "T_Fashion_Back41_02",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
@@ -3546,7 +3546,7 @@
   {
     "id": 40027,
     "name": "Ailes d’émeraude – Doré",
-    "desc": "激活，运转，推进。",
+    "desc": "Activation. Fonctionnement. Propulsion.",
     "icon": "T_Fashion_Back41_03",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
@@ -3554,7 +3554,7 @@
   {
     "id": 40028,
     "name": "Ailes d’émeraude – Blanc ivoire",
-    "desc": "激活，运转，推进。",
+    "desc": "Activation. Fonctionnement. Propulsion.",
     "icon": "T_Fashion_Back41_01",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
@@ -4489,7 +4489,7 @@
   },
   {
     "id": 80059,
-    "name": "华彩谢幕",
+    "name": "Apothéose prismatique",
     "desc": "Les cartes virevoltantes et la douce mélodie composent un ultime salut.",
     "icon": "T_Fashion_Fx45_03",
     "rarity": 5,

@@ -1842,18 +1842,18 @@
   },
   {
     "id": 226,
-    "name": "A Geniemon's Ballad",
+    "name": "A Geniemon's Ballad Ⅱ",
     "icon": "T_Resource_PetboxIconPro",
     "rarity": 5,
-    "desc": "Arduous commissions and extraordinary adventures have shaped the legend of the Phoxhunters — a tale sung even by Geniemons.",
+    "desc": "Arduous commissions and extraordinary adventures have shaped the legend of the Phoxhunters — a tale sung even by Geniemons.\nUsed to purchase Geniemon Selection Chests.",
     "desc2": "\"Beep-bee-bap-bap-bap-boop-boop! (All hail our hardworking, ever-lucky master!)\"\n\n— An excited Geniemon"
   },
   {
     "id": 227,
-    "name": "魔灵之歌·一",
+    "name": "A Geniemon's Ballad Ⅰ",
     "icon": "T_Resource_PetboxIcon",
     "rarity": 5,
-    "desc": "艰难的委托与超凡的冒险共同谱写出狩月人的传说，连魔灵也为之传唱。\n可用于购买魔灵惊喜礼箱。",
+    "desc": "Arduous commissions and extraordinary adventures have shaped the legend of the Phoxhunters — a tale sung even by Geniemons.\nUsed to purchase Geniemon Surprise Chests.",
     "desc2": "\"Beep-bee-bap-bap-bap-boop-boop! (All hail our hardworking, ever-lucky master!)\"\n\n— An excited Geniemon"
   },
   {
@@ -11720,43 +11720,43 @@
   },
   {
     "id": 30120,
-    "name": "中级染剂·深海",
+    "name": "Intermediate Dye: Oceanic",
     "icon": "T_Dye_19",
     "rarity": 4,
-    "desc": "多种原料调和而成的染剂，可染出如深海般的颜色。",
-    "desc2": "“人们总觉得颜色是有情绪的，红色热情，绿色平和，蓝色忧郁，连带花也是一样，明明是同样种类的花，颜色不一样的话，也会被当做不一样的。所以每当有客人来光顾的时候，我都会根据他们的心情去推荐花的颜色。你也来挑一个喜欢的颜色吧。”\n\n——冰湖城市民 赛琪"
+    "desc": "A dye made by blending various raw materials, capable of producing hues akin to those of the ocean depths.",
+    "desc2": "\"People often believe colours carry emotion — red for passion, green for calm, blue for sorrow. Flowers are much the same: the very same bloom can feel different when its hue changes. So, when customers arrive, I suggest a colour to suit their mood. Now then... which shade will you choose?\"\n\n— Psyche, Icelake"
   },
   {
     "id": 30121,
-    "name": "中级染剂·丁香",
+    "name": "Intermediate Dye: Lilac",
     "icon": "T_Dye_21",
     "rarity": 4,
-    "desc": "多种原料调和而成的染剂，可染出如丁香般的颜色。",
-    "desc2": "“人们总觉得颜色是有情绪的，红色热情，绿色平和，蓝色忧郁，连带花也是一样，明明是同样种类的花，颜色不一样的话，也会被当做不一样的。所以每当有客人来光顾的时候，我都会根据他们的心情去推荐花的颜色。你也来挑一个喜欢的颜色吧。”\n\n——冰湖城市民 赛琪"
+    "desc": "A dye made by blending various raw materials, capable of producing hues akin to those of lilac blossoms.",
+    "desc2": "\"People often believe colours carry emotion — red for passion, green for calm, blue for sorrow. Flowers are much the same: the very same bloom can feel different when its hue changes. So, when customers arrive, I suggest a colour to suit their mood. Now then... which shade will you choose?\"\n\n— Psyche, Icelake"
   },
   {
     "id": 30122,
-    "name": "中级染剂·桔梗",
+    "name": "Intermediate Dye: Bellflower",
     "icon": "T_Dye_20",
     "rarity": 4,
-    "desc": "多种原料调和而成的染剂，可染出如桔梗般的颜色。",
-    "desc2": "“人们总觉得颜色是有情绪的，红色热情，绿色平和，蓝色忧郁，连带花也是一样，明明是同样种类的花，颜色不一样的话，也会被当做不一样的。所以每当有客人来光顾的时候，我都会根据他们的心情去推荐花的颜色。你也来挑一个喜欢的颜色吧。”\n\n——冰湖城市民 赛琪"
+    "desc": "A dye made by blending various raw materials, capable of producing hues akin to those of bellflowers.",
+    "desc2": "\"People often believe colours carry emotion — red for passion, green for calm, blue for sorrow. Flowers are much the same: the very same bloom can feel different when its hue changes. So, when customers arrive, I suggest a colour to suit their mood. Now then... which shade will you choose?\"\n\n— Psyche, Icelake"
   },
   {
     "id": 30123,
-    "name": "中级染剂·松果",
+    "name": "Intermediate Dye: Pine Cone",
     "icon": "T_Dye_22",
     "rarity": 4,
-    "desc": "多种原料调和而成的染剂，可染出如松果般的颜色。",
-    "desc2": "“人们总觉得颜色是有情绪的，红色热情，绿色平和，蓝色忧郁，连带花也是一样，明明是同样种类的花，颜色不一样的话，也会被当做不一样的。所以每当有客人来光顾的时候，我都会根据他们的心情去推荐花的颜色。你也来挑一个喜欢的颜色吧。”\n\n——冰湖城市民 赛琪"
+    "desc": "A dye made by blending various raw materials, capable of producing hues akin to those of pine cones.",
+    "desc2": "\"People often believe colours carry emotion — red for passion, green for calm, blue for sorrow. Flowers are much the same: the very same bloom can feel different when its hue changes. So, when customers arrive, I suggest a colour to suit their mood. Now then... which shade will you choose?\"\n\n— Psyche, Icelake"
   },
   {
     "id": 30124,
-    "name": "中级染剂·翡翠",
+    "name": "Intermediate Dye: Emerald",
     "icon": "T_Dye_18",
     "rarity": 4,
-    "desc": "多种原料调和而成的染剂，可染出如翡翠般的颜色。",
-    "desc2": "“人们总觉得颜色是有情绪的，红色热情，绿色平和，蓝色忧郁，连带花也是一样，明明是同样种类的花，颜色不一样的话，也会被当做不一样的。所以每当有客人来光顾的时候，我都会根据他们的心情去推荐花的颜色。你也来挑一个喜欢的颜色吧。”\n\n——冰湖城市民 赛琪"
+    "desc": "A dye made by blending various raw materials, capable of producing hues akin to those of an emerald.",
+    "desc2": "\"People often believe colours carry emotion — red for passion, green for calm, blue for sorrow. Flowers are much the same: the very same bloom can feel different when its hue changes. So, when customers arrive, I suggest a colour to suit their mood. Now then... which shade will you choose?\"\n\n— Psyche, Icelake"
   },
   {
     "id": 40001,
@@ -12382,14 +12382,14 @@
   },
   {
     "id": 49985,
-    "name": "灾厄使者",
+    "name": "Calamity Harbinger",
     "icon": "T_Mounts_Gesture_1001",
     "rarity": 6,
-    "desc": "所行之处，灾厄丛生。\n飞行速度提高50%，无需持有声名许可也能进行飞行。"
+    "desc": "Disaster follows in its wake.\nFly Speed ＋50%. No Reputation Perk is required to pilot this vehicle."
   },
   {
     "id": 49986,
-    "name": "榛子冲冲冲·鎏金",
+    "name": "Filbert, let's go go go: Gilt",
     "icon": "T_Mounts_Gesture_11",
     "rarity": 4,
     "desc": "Oink oink? Oink oink. Oink oink!"
@@ -12988,10 +12988,10 @@
   },
   {
     "id": 120006,
-    "name": "第22只乐园的白兔装饰代金券",
+    "name": "Paradise's 22nd White Bunny Accessory Coupon",
     "icon": "T_Resource_DiscountTicket_01",
     "rarity": 5,
-    "desc": "商品满480月石晶胚减360月石晶胚"
+    "desc": "Spend 480 Phoxene Plumules to save 360"
   },
   {
     "id": 1001101,
