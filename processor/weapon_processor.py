@@ -48,6 +48,9 @@ class WeaponProcessor(BaseProcessor):
     def process_item(self, item_data, language):
         weapon_data = item_data
         weapon_id = weapon_data.get("WeaponId", 0)
+        # 门限
+        if weapon_id < 1000:
+            return None
 
         # 获取BattleWeapon数据
         battle_weapon = self.battle_weapon_data.get(str(weapon_id), {})
@@ -647,7 +650,9 @@ class WeaponProcessor(BaseProcessor):
                                 pass
                     end_link = notify.get("EndLink")
                     end_value = (
-                        end_link.get("LinkValue") if isinstance(end_link, dict) else None
+                        end_link.get("LinkValue")
+                        if isinstance(end_link, dict)
+                        else None
                     )
                     link_number = self._parse_anim_link_value(link_value)
                     end_number = self._parse_anim_link_value(end_value)
@@ -669,7 +674,9 @@ class WeaponProcessor(BaseProcessor):
                             except ValueError:
                                 pass
                     end_value = (
-                        end_link.get("LinkValue") if isinstance(end_link, dict) else None
+                        end_link.get("LinkValue")
+                        if isinstance(end_link, dict)
+                        else None
                     )
                     link_number = self._parse_anim_link_value(link_value)
                     end_number = self._parse_anim_link_value(end_value)
@@ -1078,9 +1085,9 @@ class WeaponProcessor(BaseProcessor):
                     )
                     continue
 
-                if (
-                    attr_name == "DamageRate"
-                    and skill_tree.get("WeaponCardLevel") in (2, 4)
+                if attr_name == "DamageRate" and skill_tree.get("WeaponCardLevel") in (
+                    2,
+                    4,
                 ):
                     attr_config = self._get_attr_config(attr, buff_id)
                     attr_name_key = attr_config.get("Name", "")
