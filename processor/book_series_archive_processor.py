@@ -4,6 +4,7 @@ import re
 import threading
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Set, Tuple
+import uasset_client
 from processor.base_processor import BaseProcessor
 
 
@@ -20,6 +21,8 @@ class BookSeriesArchiveProcessor(BaseProcessor):
     def __init__(self, data_loader):
         super().__init__(data_loader)
         self.file_type = "BookSeriesArchive"
+        # UAssetCLI server 直连（惰性启动，解析完所有 item 后由 process_all_items 关闭）
+        self._server: Optional[uasset_client.UAssetServer] = None
         self.book_series_to_resource_ids = data_loader.load_json(
             "BookSeriesId2ResourceId.json"
         )
@@ -218,10 +221,23 @@ class BookSeriesArchiveProcessor(BaseProcessor):
             item["mId"] = m_id
         item["srId"] = sr_id
         if pos:
-            item["pos"] = pos
+            item["pos"] = self._round_vec2(pos)
         if treasure_pos:
-            item["treasurePos"] = treasure_pos
+            item["treasurePos"] = self._round_vec2(treasure_pos)
         entries.append(item)
+
+    @staticmethod
+    def _round_vec2(v: Any) -> Any:
+        """坐标保留整数（不保留小数）：对 [x, y] 逐分量四舍五入。"""
+        if not isinstance(v, (list, tuple)) or len(v) < 2:
+            return v
+        result = []
+        for x in v[:2]:
+            try:
+                result.append(int(round(float(x))))
+            except Exception:
+                result.append(x)
+        return result
 
     def _append_resource_fallback_entry(
         self,
@@ -309,8 +325,41 @@ class BookSeriesArchiveProcessor(BaseProcessor):
         except Exception:
             return str(self.exports_root)
 
+    def _ensure_server(self) -> Optional[uasset_client.UAssetServer]:
+        """惰性启动 UAssetCLI server（仅当 exe 与 Exports 根可用时），失败返回 None。"""
+        if self._server is None:
+            exe = uasset_client.get_uasset_exe()
+            if exe is None or self.exports_root is None:
+                return None
+            try:
+                self._server = uasset_client.UAssetServer(exe=exe)
+                self._server.start()
+            except Exception:
+                self._server = None
+        return self._server
+
+    def _close_server(self) -> None:
+        """关闭 UAssetCLI server 子进程。"""
+        if self._server is not None:
+            try:
+                self._server.close()
+            except Exception:
+                pass
+            self._server = None
+
+    def process_all_items(self, items, language):
+        """处理所有项目，结束后回收 UAssetCLI server 子进程。"""
+        try:
+            return super().process_all_items(items, language)
+        finally:
+            self._close_server()
+
     def _get_or_build_design_map_paths(self) -> List[Path]:
-        """缓存所有 Design.json 路径。"""
+        """缓存所有关卡蓝图（.umap/.uasset）路径。
+
+        纯 server 模式：只索引蓝图文件，由 UAssetCLI server（fmodel）直接解析，
+        不再读取任何静态 JSON 导出。
+        """
         cache_key = self._get_exports_root_cache_key()
         cached = self._design_map_index_cache_by_base.get(cache_key)
         if cached is not None:
@@ -325,32 +374,70 @@ class BookSeriesArchiveProcessor(BaseProcessor):
             if self.exports_root is not None:
                 maps_root = self.exports_root / "EM" / "Content" / "Maps" / "Levels"
                 if maps_root.is_dir():
-                    for json_path in maps_root.rglob("*_Design.json"):
-                        if json_path.is_file():
-                            design_map_paths.append(json_path)
+                    for pattern in ("*.umap", "*.uasset"):
+                        for map_path in maps_root.rglob(pattern):
+                            if map_path.is_file() and map_path.stem.endswith("_Design"):
+                                design_map_paths.append(map_path)
 
             design_map_paths.sort()
             self._design_map_index_cache_by_base[cache_key] = design_map_paths
             return design_map_paths
 
     def _load_design_map_json(self, design_map_path: Path) -> List[dict]:
-        """加载 Design.json 文件并缓存。"""
+        """加载关卡蓝图（.umap/.uasset）数据并缓存。
+
+        server 优先：先通过 UAssetCLI server（fmodel 命令）直接解析蓝图；
+        当 server 解析不出本处理器需要的数据（如 UAssetAPI 无法解码某些地图的
+        自定义序列化导出）时，回退读取同目录同名 FModel 导出的 .json 兜底。
+        无 exe / 无 Exports 根 / 两种来源都失败时返回空列表。
+        """
         cache_key = str(design_map_path)
         cached = self._design_map_json_cache.get(cache_key)
         if cached is not None:
             return cached
 
-        try:
-            data = json.loads(design_map_path.read_text(encoding="utf-8"))
-        except Exception:
-            self._design_map_json_cache[cache_key] = []
-            return []
+        data: List[dict] = []
+        server = self._ensure_server()
+        if server is not None and self.exports_root is not None:
+            try:
+                parsed = server.fmodel(design_map_path, self.exports_root)
+            except Exception:
+                parsed = None
+            if isinstance(parsed, list):
+                data = parsed
 
-        if not isinstance(data, list):
-            data = []
+        # 解析不了就读 JSON：server 结果缺少藏宝/投放对象时，回退 FModel 静态导出。
+        if not self._design_data_has_treasure_objs(data):
+            json_data = self._load_design_json_fallback(design_map_path)
+            if json_data is not None and self._design_data_has_treasure_objs(json_data):
+                data = json_data
 
         self._design_map_json_cache[cache_key] = data
         return data
+
+    @staticmethod
+    def _design_data_has_treasure_objs(arr: List[dict]) -> bool:
+        """server 数据中是否已有可用的藏宝/投放对象（Explore_Drop / Explore_Treasure）。"""
+        for obj in arr:
+            if not isinstance(obj, dict):
+                continue
+            if obj.get("Type") not in {"Explore_Drop_C", "Explore_Treasure_C"}:
+                continue
+            props = obj.get("Properties")
+            if isinstance(props, dict) and props.get("ResourceId") is not None:
+                return True
+        return False
+
+    def _load_design_json_fallback(self, design_map_path: Path) -> Optional[List[dict]]:
+        """加载同目录同名的 FModel 导出 .json（server 解析失败的兜底）。"""
+        json_path = design_map_path.with_suffix(".json")
+        if not json_path.is_file():
+            return None
+        try:
+            data = json.loads(json_path.read_text(encoding="utf-8"))
+        except Exception:
+            return None
+        return data if isinstance(data, list) else None
 
     @staticmethod
     def _ref_outer_and_name(object_name: Optional[str]) -> Tuple[Optional[str], Optional[str]]:
@@ -481,10 +568,18 @@ class BookSeriesArchiveProcessor(BaseProcessor):
         by_outer_name: Dict[Tuple[str, str], dict],
         by_name: Dict[str, List[dict]],
         by_path: Optional[Dict[str, dict]] = None,
+        prefer_root_first: bool = False,
+        accumulate_attach_parent: bool = False,
     ) -> Optional[List[float]]:
         """从引用对象中直接解析坐标。"""
         return BaseProcessor._extract_ref_location(
-            self, ref_obj, by_outer_name, by_name, by_path
+            self,
+            ref_obj,
+            by_outer_name,
+            by_name,
+            by_path,
+            prefer_root_first=prefer_root_first,
+            accumulate_attach_parent=accumulate_attach_parent,
         )
 
     def _extract_resource_position_from_arr(

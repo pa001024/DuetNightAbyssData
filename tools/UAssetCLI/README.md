@@ -42,6 +42,8 @@ FModel 的 JSON 导出只有属性签名、不含编译后的字节码（`Script
   （`result` 为数组，每个对象含 `Type`/`Name`/`Flags`/`Class`/`Outer`/`Properties` 等），
   `package` 为包路径（如 `EM/Content/UI/WBP/Map/Widget/Map_Splice/Chapter01/...`），
   `mount` 用于把 `/Game/` 重写为解包挂载路径（本游戏为 `EM/Content`）。
+  支持 `TMap` 属性（如蓝图 `RandomActorInfos`），按 FModel 风格输出为
+  `[{Key, Value}, ...]` 数组。
 - `fmodel_dir`：递归导出目录下所有 uasset，返回 `{"Files":{包路径: [数组]}}`，
   供地图导出脚本一次性取回整棵 Widget 树。
 

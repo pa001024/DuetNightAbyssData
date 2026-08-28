@@ -3,6 +3,7 @@ import os
 import threading
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Set, Tuple
+import uasset_client
 from processor.base_processor import BaseProcessor
 
 
@@ -46,6 +47,8 @@ class ResourceProcessor(BaseProcessor):
         self.random_rule_to_resource_ids = None
         self.draft_resource_ids = None
         self.design_level_unit_ids = None
+        # UAssetCLI server 直连（惰性启动，解析完所有 item 后由 process_all_items 关闭）
+        self._server: Optional[uasset_client.UAssetServer] = None
 
     def process_item(self, resource_data, language):
         """处理单个资源数据
@@ -167,6 +170,86 @@ class ResourceProcessor(BaseProcessor):
             return str(self.exports_root.resolve())
         except Exception:
             return str(self.exports_root)
+
+    def _ensure_server(self) -> Optional[uasset_client.UAssetServer]:
+        """惰性启动 UAssetCLI server（仅当 exe 与 Exports 根可用时），失败返回 None。"""
+        if self._server is None:
+            exe = uasset_client.get_uasset_exe()
+            if exe is None or self.exports_root is None:
+                return None
+            try:
+                self._server = uasset_client.UAssetServer(exe=exe)
+                self._server.start()
+            except Exception:
+                self._server = None
+        return self._server
+
+    def _close_server(self) -> None:
+        """关闭 UAssetCLI server 子进程。"""
+        if self._server is not None:
+            try:
+                self._server.close()
+            except Exception:
+                pass
+            self._server = None
+
+    def process_all_items(self, items, language):
+        """处理所有项目，结束后回收 UAssetCLI server 子进程。"""
+        try:
+            return super().process_all_items(items, language)
+        finally:
+            self._close_server()
+
+    def _read_design_file_data(self, path: Path):
+        """读取设计层蓝图：server 优先，仅由 UAssetCLI server（fmodel）直接解析
+        .umap/.uasset；当 server 解析不出随机生成器数据（RandomActorInfos，如
+        UAssetAPI 无法解码某些地图的自定义序列化导出）时，回退读取同目录同名
+        FModel 导出的 .json 兜底。无 exe / 无 Exports 根 / 两种来源都失败返回空列表。"""
+        if path.suffix.lower() in (".umap", ".uasset"):
+            server = self._ensure_server()
+            if server is not None and self.exports_root is not None:
+                try:
+                    parsed = server.fmodel(path, self.exports_root)
+                except Exception:
+                    parsed = None
+                if isinstance(parsed, list):
+                    # 解析不了就读 JSON：server 结果缺少随机生成器数据时，回退 FModel 静态导出。
+                    if not self._design_data_has_random_actor_infos(parsed):
+                        json_data = self._load_design_json_fallback(path)
+                        if (
+                            json_data is not None
+                            and self._design_data_has_random_actor_infos(json_data)
+                        ):
+                            return json_data
+                    return parsed
+        return []
+
+    @staticmethod
+    def _design_data_has_random_actor_infos(arr) -> bool:
+        """server 数据中是否已有可用的随机生成器数据（RandomActorInfos）。"""
+        if not isinstance(arr, list):
+            return False
+        for obj in arr:
+            if not isinstance(obj, dict):
+                continue
+            props = obj.get("Properties")
+            if not isinstance(props, dict):
+                continue
+            rai = props.get("RandomActorInfos")
+            if isinstance(rai, list) and rai:
+                return True
+        return False
+
+    def _load_design_json_fallback(self, path: Path):
+        """加载同目录同名的 FModel 导出 .json（server 解析失败的兜底）。"""
+        json_path = path.with_suffix(".json")
+        if not json_path.is_file():
+            return None
+        try:
+            data = json.loads(json_path.read_text(encoding="utf-8"))
+        except Exception:
+            return None
+        return data if isinstance(data, list) else None
 
     def _get_or_build_resource_sources(self) -> Dict[int, List[Dict[str, Any]]]:
         """构建资源来源坐标索引。"""
@@ -311,7 +394,7 @@ class ResourceProcessor(BaseProcessor):
         return ("resource_processor", self._get_exports_root_cache_key(), suffix)
 
     def _load_design_level_json(self, json_path: Path) -> list:
-        """加载设计层 JSON。"""
+        """加载设计层蓝图（.umap/.uasset）数据。纯 server 模式，仅由 UAssetCLI server 解析。"""
         resolved_path = json_path.resolve()
         cache_key = str(resolved_path)
         with self._shared_build_locks_lock:
@@ -325,7 +408,7 @@ class ResourceProcessor(BaseProcessor):
                 if cached is not None:
                     return cached
         try:
-            data = json.loads(resolved_path.read_text(encoding="utf-8"))
+            data = self._read_design_file_data(resolved_path)
         except Exception:
             data = {}
         if not isinstance(data, (list, dict)):
@@ -485,6 +568,7 @@ class ResourceProcessor(BaseProcessor):
                         continue
                     matched_paths.append(json_path)
 
+            # 纯 server 模式：全部为蓝图 .umap/.uasset，仅按路径排序，无静态 JSON。
             matched_paths.sort(key=lambda p: (len(str(p)), str(p)))
             with self._shared_build_locks_lock:
                 cached = self._shared_design_map_paths_cache.get(cache_key)
@@ -576,9 +660,15 @@ class ResourceProcessor(BaseProcessor):
 
         design_files: List[Path] = []
         try:
-            for json_path in design_dir.iterdir():
-                if json_path.is_file() and json_path.name.endswith("_Design.json"):
-                    design_files.append(json_path)
+            for entry in design_dir.iterdir():
+                if not entry.is_file():
+                    continue
+                if entry.suffix.lower() in (".umap", ".uasset") and entry.stem.endswith(
+                    "_Design"
+                ):
+                    # 纯 server 模式：蓝图 .umap/.uasset 由 UAssetCLI server 直连解析，
+                    # 不再读取任何静态 JSON 导出。
+                    design_files.append(entry)
         except Exception:
             design_files = []
 
@@ -958,10 +1048,18 @@ class ResourceProcessor(BaseProcessor):
         return mapping
 
     def _build_mechanism_to_reward_ids(self) -> Dict[int, List[int]]:
-        """构建 Mechanism(UnitId) -> RewardId 列表映射。"""
+        """构建 Mechanism(UnitId) -> RewardId 列表映射。
+
+        小游戏类机制（UnitParams.MiniGameType 非空）不纳入：它们的 RewardId 不是
+        地图拾取奖励，实际奖励由小游戏配置（如 HammerID）发放，扩展该字段会造成
+        幽灵奖励包误挂到地图（如 Reward 3026 被挂到锤子宝箱位置）。
+        """
         mapping: Dict[int, List[int]] = {}
         for mechanism in self.mechanism_data.values():
             if not isinstance(mechanism, dict):
+                continue
+            unit_params = mechanism.get("UnitParams")
+            if isinstance(unit_params, dict) and unit_params.get("MiniGameType"):
                 continue
             unit_id = self._to_int(mechanism.get("UnitId"))
             reward_id = self._to_int(mechanism.get("RewardId"))
@@ -1130,7 +1228,7 @@ class ResourceProcessor(BaseProcessor):
         return random_rule_ids
 
     def _load_design_map_json(self, json_path: Path) -> list:
-        """加载地图 JSON。"""
+        """加载地图蓝图（.umap/.uasset）数据。纯 server 模式，仅由 UAssetCLI server 解析。"""
         resolved_path = json_path.resolve()
         cache_key = str(resolved_path)
         with self._shared_build_locks_lock:
@@ -1146,7 +1244,7 @@ class ResourceProcessor(BaseProcessor):
                 if cached is not None:
                     return cached
         try:
-            data = json.loads(resolved_path.read_text(encoding="utf-8"))
+            data = self._read_design_file_data(resolved_path)
         except Exception:
             data = []
         if not isinstance(data, list):
@@ -1344,10 +1442,8 @@ class ResourceProcessor(BaseProcessor):
 
     @staticmethod
     def _format_num(value: float):
-        rounded = round(float(value), 6)
-        if abs(rounded - round(rounded)) < 1e-6:
-            return int(round(rounded))
-        return rounded
+        # 坐标统一取整（不保留小数）
+        return int(round(float(value)))
 
     def _format_vec3(self, vec: List[float]) -> List:
         return [
@@ -1651,10 +1747,8 @@ class ResourceProcessor(BaseProcessor):
 
     @staticmethod
     def _format_source_pos_value(value: float) -> float:
-        """保留 source 坐标的整数外观。"""
-        if abs(value - round(value)) < 1e-6:
-            return int(round(value))
-        return round(value, 6)
+        """source 坐标统一取整（不保留小数）。"""
+        return int(round(float(value)))
 
     def get_draft_resource_ids(self):
         """获取所有需要导出的资源ID

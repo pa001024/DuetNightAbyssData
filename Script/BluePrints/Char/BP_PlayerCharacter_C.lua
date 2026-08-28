@@ -2493,6 +2493,7 @@ function BP_PlayerCharacter_C:ImmersionModel()
   self.Overridden.ImmersionModel(self)
   GMVariable.EnableShowBillboard = false
   local UIManager = UIManager(self)
+  self:SetActorHideTag(Const.ImmersionModelHideTag, self.IsImmersionModel)
   UIManager:HideAllComponentUI(self.IsImmersionModel, Const.ImmersionModelHideTag)
   local HeadUISubsystem = USubsystemBlueprintLibrary.GetWorldSubsystem(self, UNpcHeadUISubsystem)
   if self.IsImmersionModel then

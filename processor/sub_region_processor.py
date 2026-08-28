@@ -4,6 +4,7 @@ import os
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
+import uasset_client
 from processor.base_processor import BaseProcessor
 
 
@@ -39,6 +40,8 @@ class SubRegionProcessor(BaseProcessor):
         self.region_map_transform_cache: Dict[str, dict] = {}
         self.teleport_points_cache: Dict[int, List[dict]] = {}
         self.hard_boss_name_key_by_teleport_id = self._build_hard_boss_name_key_by_teleport_id()
+        # UAssetCLI server 直连（惰性启动，解析完所有 item 后由 process_all_items 关闭）
+        self._server: Optional[uasset_client.UAssetServer] = None
 
     @staticmethod
     def _resolve_base_cache_key() -> str:
@@ -185,6 +188,35 @@ class SubRegionProcessor(BaseProcessor):
                 return candidate
         return None
 
+    def _ensure_server(self) -> Optional[uasset_client.UAssetServer]:
+        """惰性启动 UAssetCLI server（仅当 exe 与 Exports 根可用时），失败返回 None。"""
+        if self._server is None:
+            exe = uasset_client.get_uasset_exe()
+            if exe is None or self.exports_root is None:
+                return None
+            try:
+                self._server = uasset_client.UAssetServer(exe=exe)
+                self._server.start()
+            except Exception:
+                self._server = None
+        return self._server
+
+    def _close_server(self) -> None:
+        """关闭 UAssetCLI server 子进程。"""
+        if self._server is not None:
+            try:
+                self._server.close()
+            except Exception:
+                pass
+            self._server = None
+
+    def process_all_items(self, items, language):
+        """处理所有项目，结束后回收 UAssetCLI server 子进程。"""
+        try:
+            return super().process_all_items(items, language)
+        finally:
+            self._close_server()
+
     def _get_exports_root_cache_key(self) -> str:
         """获取当前 Exports 根目录对应的缓存键。"""
         if self.exports_root is None:
@@ -207,7 +239,7 @@ class SubRegionProcessor(BaseProcessor):
         return 30.0
 
     def _normalize_level_map_key(self, json_path: Path) -> Optional[str]:
-        """从地图 JSON 路径提取用于匹配 SubRegionLevel 的键。"""
+        """从地图 JSON / 蓝图 .umap 路径提取用于匹配 SubRegionLevel 的键。"""
         if not isinstance(json_path, Path):
             return None
 
@@ -226,7 +258,11 @@ class SubRegionProcessor(BaseProcessor):
         return stem.lower() if stem else None
 
     def _build_design_map_index(self) -> Dict[str, List[Path]]:
-        """构建 SubRegionLevel -> 地图 JSON 文件索引。"""
+        """构建 SubRegionLevel -> 关卡蓝图（.umap/.uasset）索引。
+
+        纯 server 模式：只索引蓝图文件，由 UAssetCLI server（fmodel）直接解析，
+        不再读取任何静态 JSON 导出。
+        """
         if self.design_map_index is not None:
             return self.design_map_index
         exports_root_cache_key = self._get_exports_root_cache_key()
@@ -245,23 +281,27 @@ class SubRegionProcessor(BaseProcessor):
             self.design_map_index = index
             return index
 
-        for json_path in maps_root.rglob("*.json"):
-            if not json_path.is_file():
-                continue
-            if not (
-                json_path.name.endswith("_Design.json")
-                or json_path.name.endswith("_BuiltData.json")
-            ):
-                continue
-            key = self._normalize_level_map_key(json_path)
+        def _is_design_built_data(path: Path) -> bool:
+            """文件名以 _Design / _BuiltData 结尾。"""
+            return path.stem.endswith("_Design") or path.stem.endswith("_BuiltData")
+
+        candidates: List[Path] = []
+        for pattern in ("*.umap", "*.uasset"):
+            for map_path in maps_root.rglob(pattern):
+                if not map_path.is_file() or not _is_design_built_data(map_path):
+                    continue
+                candidates.append(map_path)
+
+        for candidate in candidates:
+            key = self._normalize_level_map_key(candidate)
             if not key:
                 continue
-            index.setdefault(key, []).append(json_path)
+            index.setdefault(key, []).append(candidate)
 
         for key, path_list in index.items():
             path_list.sort(
                 key=lambda p: (
-                    0 if p.name.endswith("_Design.json") else 1,
+                    0 if p.stem.endswith("_Design") else 1,
                     len(str(p)),
                     str(p),
                 )
@@ -292,7 +332,13 @@ class SubRegionProcessor(BaseProcessor):
         return paths[0] if paths else None
 
     def _load_design_map_json(self, design_map_path: Path) -> List[dict]:
-        """读取关卡 Design JSON（带缓存）。"""
+        """读取关卡蓝图（.umap/.uasset）数据（带缓存）。
+
+        server 优先：先通过 UAssetCLI server（fmodel 命令）直接解析蓝图；
+        当 server 解析不出随机生成器数据（RandomActorInfos，如 UAssetAPI 无法
+        解码某些地图的自定义序列化导出）时，回退读取同目录同名 FModel 导出的
+        .json 兜底。无 exe / 无 Exports 根 / 两种来源都失败时返回空列表。
+        """
         cache_key = str(design_map_path)
         if cache_key in self.design_map_json_cache:
             return self.design_map_json_cache[cache_key]
@@ -301,19 +347,52 @@ class SubRegionProcessor(BaseProcessor):
             self.design_map_json_cache[cache_key] = shared
             return shared
 
-        try:
-            arr = json.loads(design_map_path.read_text(encoding="utf-8"))
-        except Exception:
-            self.design_map_json_cache[cache_key] = []
-            return []
-
+        arr: Optional[List[dict]] = None
+        server = self._ensure_server()
+        if server is not None and self.exports_root is not None:
+            try:
+                parsed = server.fmodel(design_map_path, self.exports_root)
+            except Exception:
+                parsed = None
+            if isinstance(parsed, list):
+                arr = parsed
         if not isinstance(arr, list):
-            self.design_map_json_cache[cache_key] = []
-            return []
+            arr = []
+
+        # 解析不了就读 JSON：server 结果缺少随机生成器数据时，回退 FModel 静态导出。
+        if not self._design_data_has_random_actor_infos(arr):
+            json_data = self._load_design_json_fallback(design_map_path)
+            if json_data is not None and self._design_data_has_random_actor_infos(json_data):
+                arr = json_data
 
         self.design_map_json_cache[cache_key] = arr
         self._shared_design_map_json_cache[cache_key] = arr
         return arr
+
+    @staticmethod
+    def _design_data_has_random_actor_infos(arr: List[dict]) -> bool:
+        """server 数据中是否已有可用的随机生成器数据（RandomActorInfos）。"""
+        for obj in arr:
+            if not isinstance(obj, dict):
+                continue
+            props = obj.get("Properties")
+            if not isinstance(props, dict):
+                continue
+            rai = props.get("RandomActorInfos")
+            if isinstance(rai, list) and rai:
+                return True
+        return False
+
+    def _load_design_json_fallback(self, design_map_path: Path) -> Optional[List[dict]]:
+        """加载同目录同名的 FModel 导出 .json（server 解析失败的兜底）。"""
+        json_path = design_map_path.with_suffix(".json")
+        if not json_path.is_file():
+            return None
+        try:
+            data = json.loads(json_path.read_text(encoding="utf-8"))
+        except Exception:
+            return None
+        return data if isinstance(data, list) else None
 
     @staticmethod
     def _ref_outer_and_name(object_name: Optional[str]) -> Tuple[Optional[str], Optional[str]]:
@@ -418,10 +497,8 @@ class SubRegionProcessor(BaseProcessor):
 
     @staticmethod
     def _format_num(value: float):
-        rounded = round(float(value), 6)
-        if abs(rounded - round(rounded)) < 1e-6:
-            return int(round(rounded))
-        return rounded
+        # 坐标统一取整（不保留小数）
+        return int(round(float(value)))
 
     def _format_vec3(self, vec: List[float]) -> List:
         return [self._format_num(vec[0]), self._format_num(vec[1]), self._format_num(vec[2])]
@@ -528,14 +605,22 @@ class SubRegionProcessor(BaseProcessor):
         return projected
 
     def _to_vec2_list(self, points: List[List]) -> List[List]:
-        """将三维点列表裁剪为二维坐标列表。"""
+        """将三维点列表裁剪为二维坐标列表（坐标取整）。"""
         if not isinstance(points, list):
             return []
         result: List[List] = []
         for point in points:
             if not isinstance(point, list) or len(point) < 2:
                 continue
-            result.append([point[0], point[1]])
+            try:
+                result.append(
+                    [
+                        self._format_num(float(point[0])),
+                        self._format_num(float(point[1])),
+                    ]
+                )
+            except Exception:
+                result.append([point[0], point[1]])
         return result
 
     def _build_range(
@@ -920,8 +1005,8 @@ class SubRegionProcessor(BaseProcessor):
 
         rule_points: Dict[str, List[List]] = {}
         rule_point_set: Dict[str, set] = {}
-        design_paths = [path for path in design_map_paths if path.name.endswith("_Design.json")]
-        built_paths = [path for path in design_map_paths if path.name.endswith("_BuiltData.json")]
+        design_paths = [path for path in design_map_paths if path.stem.endswith("_Design")]
+        built_paths = [path for path in design_map_paths if path.stem.endswith("_BuiltData")]
 
         def collect_random_actor_points(design_map_path: Path, skip_existing_rules: bool = False) -> None:
             arr = self._load_design_map_json(design_map_path)

@@ -46,6 +46,7 @@ from processor.npc_processor import NpcProcessor
 from processor.char_accessory_processor import CharAccessoryProcessor
 from processor.weapon_accessory_processor import WeaponAccessoryProcessor
 from processor.weapon_skin_processor import WeaponSkinProcessor
+from processor.extra_excel_weapon_processor import ExtraExcelWeaponProcessor
 from processor.head_sculpture_processor import HeadSculptureProcessor
 from processor.head_frame_processor import HeadFrameProcessor
 from processor.hair_processor import HairProcessor
@@ -307,6 +308,7 @@ class FinalProcessor:
             "Event": "EventMain",
             "BackpackPuzzleItem": "PuzzleItemAttr",
             "IronSurvivalMonsterSpawn": "MonsterSpawn",
+            "ExtraExcelWeapon": "ExcelWeaponExpandItem",
             "RougeLikeBlessingGroup": "BlessingGroup",
             "RougeLikeTreasureGroup": "TreasureGroup",
             "RougeLikeTalentBranch": "RougeLikeTalentBranch",
@@ -360,6 +362,7 @@ class FinalProcessor:
             "CharAccessory": CharAccessoryProcessor,
             "WeaponAccessory": WeaponAccessoryProcessor,
             "WeaponSkin": WeaponSkinProcessor,
+            "ExtraExcelWeapon": ExtraExcelWeaponProcessor,
             "Skin": SkinProcessor,
             "HeadSculpture": HeadSculptureProcessor,
             "HeadFrame": HeadFrameProcessor,
@@ -679,6 +682,7 @@ if __name__ == "__main__":
         "CharAccessory",
         "WeaponAccessory",
         "WeaponSkin",
+        "ExtraExcelWeapon",
         "HyperWeaponCardLevel",
         "Skin",
         "HeadSculpture",

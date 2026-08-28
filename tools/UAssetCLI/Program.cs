@@ -735,6 +735,29 @@ class Program
                     }
                 return arr;
             }
+            if (p is MapPropertyData mpi)
+            {
+                // TMap<K,V>：FModel 输出为 [{Key, Value}, ...] 数组（如 RandomActorInfos）
+                var mapArr = new JArray();
+                try
+                {
+                    for (int mi = 0; mi < mpi.Value.Count; mi++)
+                    {
+                        var kv = mpi.Value.GetItem(mi);
+                        var pair = new JObject();
+                        var kt = PropertyToToken(kv.Key, asset, package, mount);
+                        if (kt != null) pair["Key"] = kt;
+                        var vt = PropertyToToken(kv.Value, asset, package, mount);
+                        if (vt != null) pair["Value"] = vt;
+                        mapArr.Add(pair);
+                    }
+                }
+                catch (Exception e)
+                {
+                    return new JValue("(map-error:" + e.Message + ")");
+                }
+                return mapArr;
+            }
             if (p is EnumPropertyData ep)
                 return SafeStr(ep.RawValue);
             if (p is BytePropertyData bp)
