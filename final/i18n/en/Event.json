@@ -561,7 +561,23 @@
     "name": "Opulent Rebate",
     "desc": "Claim rewards based on your total top-up amount during the event",
     "startTime": 1788746400,
-    "endTime": 1792400400
+    "endTime": 1792400400,
+    "topUpDetail": {
+      "eventDes": "Total Points",
+      "eventId": 113001,
+      "eventRule": "During the event, purchasing Lunotress's Monthly Pass, Bard's Tomes, Phoxene Plumules, and Top-up Gift Packs grants event points. Reach point milestones to earn rewards. After the event ends, any unclaimed rewards will be delivered via in-game mail. \nThe list below shows how many points each item awards:",
+      "jumpId": 85,
+      "scoreRankReward": {
+        "300": 11300101,
+        "1000": 11300102,
+        "2000": 11300103,
+        "4000": 11300104,
+        "8000": 11300105,
+        "12000": 11300106,
+        "18000": 11300107,
+        "25000": 11300108
+      }
+    }
   },
   {
     "id": 114001,

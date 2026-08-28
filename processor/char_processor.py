@@ -8,8 +8,13 @@ import re
 import os
 import json
 import glob
+import threading
 from datetime import datetime, timedelta
 from typing import Any
+
+# 召唤单位自身 BP 字节码的效果提取结果(规则C)，按进程缓存，避免多语言重复解包
+_SUMMON_BP_EFFECTS_CACHE = frozenset()
+_SUMMON_BP_EFFECTS_LOCK = threading.Lock()
 
 
 class CharProcessor(BaseProcessor):
@@ -850,23 +855,8 @@ class CharProcessor(BaseProcessor):
         "Default": "无属性",
     }
 
-    # 伤害标签 → 中文
-    _DAMAGE_TAG_CN = {
-        "Skill": "技能",
-        "Skill1": "战技",
-        "Skill2": "终结技",
-        "Ultra": "终结技",
-        "Weapon": "武器",
-        "Attack": "普攻",
-        "Melee": "近战",
-        "Ranged": "远程",
-        "Dot": "持续",
-        "Explode": "爆炸",
-        "BonusDamage": "追加",
-        # 充盈伤害：由数据 DamageTag 标记(见 DamageTag.json 的 HyperTrigger)，
-        # 不依赖描述文本解析，用于与普通伤害区分
-        "HyperTrigger": "充盈",
-    }
+    # 伤害标签 → 中文：见 BaseProcessor._DAMAGE_TAG_CN / _damage_tag_cn()
+    # (与 Weapon 等技能处理器共用一套 DamageTag 解析)
 
     # 伤害基值属性 → 中文
     _BASE_ATTR_CN = {
@@ -987,9 +977,7 @@ class CharProcessor(BaseProcessor):
             dict(attr_data) if isinstance(attr_data, dict) else {"AttrName": attr_name}
         )
         lookup_attr["AttrName"] = attr_name
-        attr_key = get_attr_config_key_from_attr_data(
-            lookup_attr, self.attr_config
-        )
+        attr_key = get_attr_config_key_from_attr_data(lookup_attr, self.attr_config)
         cfg = (
             self.attr_config.get(attr_key)
             if isinstance(self.attr_config, dict)
@@ -1179,7 +1167,7 @@ class CharProcessor(BaseProcessor):
             tags = task_effect.get("DamageTag") or []
             tag_names = []
             for tag in tags:
-                tag_cn = self._DAMAGE_TAG_CN.get(tag)
+                tag_cn = self._damage_tag_cn(tag)
                 if tag_cn and tag_cn not in tag_names:
                     tag_names.append(tag_cn)
             # 小倍率(0<x<1)用整数百分比，如 ×0.24 -> "近战武器攻击24%"
@@ -2575,17 +2563,6 @@ class CharProcessor(BaseProcessor):
 
         return skill_effect_ids, skill_node_ids
 
-    # 伤害字段的额外 tag：由引用 SkillEffects 的 Damage DamageTag 解析(见 DamageTag.json)，
-    # 不解析描述文本；配合召唤物(实体)自带攻击效果标记区分伤害来源与类型。
-    _FIELD_DAMAGE_TAG_CN = {
-        "HyperTrigger": "充盈",
-        "Weapon": "武器",
-        "Attack": "普攻",
-        "Dot": "持续",
-        "Explode": "爆炸",
-        "BonusDamage": "追加",
-    }
-
     def _walk_skill_effects(self, skill_id: int, visited_nodes: set) -> set:
         """从技能起始节点沿节点链收集全部 SkillNodeEffects(含分支)。
 
@@ -2626,39 +2603,27 @@ class CharProcessor(BaseProcessor):
         return effects
 
     def _build_summon_effect_ids(self) -> set:
-        """收集"召唤物"伤害效果ID集合(数据驱动，不解析描述文本)。
+        """收集"召唤物"伤害效果ID集合(数据驱动，不解析描述文本/图标命名)。
 
         召唤物 = 游戏"召唤物伤害提高"属性(如 mod 唤醒 56121)作用的对象，即
         Monster.json 带 GamePlayTags "Player.Summon" 的召唤单位(海月水母/触手/
-        云螭/玄蛟/幻象/小可爱等)、MechanismSummon.json 的召唤单位(浮游炮/清扫机
-        等)以及 BattleChar.SummonId 对应的同伴召唤物实体。
-        其伤害效果来自：
-        - Monster BluePrintParams.SkillEffectID(小可爱)
-        - SkillCreature 的攻击效果字段(CreatureEffects/HitEnemy/
-          LoopExecuteSkillEffects/DelayEffect；清扫机/皇帝等)
-        - BattleMonster.SkillList 的自带攻击技能节点效果(战车/皇后等)
-        非攻击效果(如 DestroyEffects 生命周期效果)不计入，避免误标。
+        云螭/雷球/小可爱等)、MechanismSummon.json 的召唤单位(清扫机等)以及
+        BattleChar.SummonId 对应的同伴召唤物实体。
+        只有"召唤单位自身执行"的伤害才算，来自两类数据链路：
+        A) 表内执行链路：
+           - Monster BluePrintParams.SkillEffectID(小可爱)
+           - SkillCreature.HitEnemy(召唤物发射的投射物，如 清扫机/皇帝；
+             AttachOwner 的吸附/坐骑实体如 松露骑乘[榛子] 除外)
+           - BattleMonster.SkillList 自带攻击技能节点效果(战车/皇帝/皇后等)
+        C) 召唤单位自身 BP 字节码的执行效果(用 UAssetCLI export 解包)：
+           - 单位 BP(如 BP_Xibi_Summon 含 430122/430125/430123 雷球伤害)
+           - 其自带攻击技能触发的攻击被动 BP(BattleMonster.SkillList →
+             skill.PassiveEffects → PassiveEffect.BPPath，如
+             BP_Baiheng_Summoned_Skill01 含 240141 云螭伤害)
+        角色自己执行的效果(如 玄蛟[酣战]420123 在角色被动 BP、珂州影刃伤害在
+        角色技能、战旗 220131 的单位 BP 未导出)不来自上述执行链路，不计入。
         """
-        summon_ids: set = set()
-
-        def add_id(uid):
-            if isinstance(uid, (int, str)) and str(uid).isdigit():
-                summon_ids.add(int(uid))
-
-        # 1) Player.Summon 标签的召唤单位
-        for m in self.monster_data.values():
-            if isinstance(m, dict) and "Player.Summon" in (m.get("GamePlayTags") or []):
-                add_id(m.get("UnitId"))
-        # 2) MechanismSummon 召唤单位
-        for m in self.mechanism_summon_data.values():
-            if isinstance(m, dict):
-                add_id(m.get("UnitId"))
-        # 3) BattleChar.SummonId 同伴召唤物
-        for char_data in self.battle_char_data.values():
-            if not isinstance(char_data, dict):
-                continue
-            for sid in char_data.get("SummonId") or []:
-                add_id(sid)
+        genuine_ids = self._genuine_summon_ids()
 
         def collect(value, ids):
             if isinstance(value, (int, str)) and str(value).isdigit():
@@ -2671,8 +2636,8 @@ class CharProcessor(BaseProcessor):
                     collect(item, ids)
 
         effect_ids: set = set()
-        for mid in summon_ids:
-            # 直接效果引用：Monster 的 BluePrintParams.SkillEffectID
+        for mid in genuine_ids:
+            # --- A) 直接效果引用：Monster 的 BluePrintParams.SkillEffectID ---
             monster = self.monster_data.get(str(mid))
             if isinstance(monster, dict):
                 bpp = monster.get("BluePrintParams") or {}
@@ -2680,26 +2645,299 @@ class CharProcessor(BaseProcessor):
                     v = bpp.get(key)
                     if isinstance(v, (int, str)) and str(v).isdigit():
                         effect_ids.add(int(v))
-            # 实体的攻击效果字段：只取 HitEnemy(召唤物发射的投射物命中敌人时造成伤害，
-            # 如 清扫机/皇帝)；LoopExecuteSkillEffects(周期性伤害) 与 CreatureEffects
-            # 是领域/震波等技能机制表现(如 解天机·震/天地演绎的泉符)，非召唤物攻击，不计入。
+            # --- A) 实体的攻击效果字段：只取 HitEnemy(召唤物发射的投射物命中敌人时
+            # 造成伤害，如 清扫机/皇帝)；LoopExecuteSkillEffects(周期性伤害) 与
+            # CreatureEffects 是领域/震波等技能机制表现(解天机·震/天地演绎泉符)，
+            # 非召唤物攻击，不计入 ---
             creature = self.skill_creature_data.get(str(mid))
             if not isinstance(creature, dict):
                 creature = self.skill_creature_data.get(mid)
-            if isinstance(creature, dict):
-                # AttachOwner 的实体是吸附在角色身上的区域/坐骑(如松露骑乘[榛子]的
-                # 路径区域)，其 HitEnemy 是角色自身的移动伤害，不是召唤物的独立攻击
-                if not creature.get("AttachOwner"):
-                    collect(creature.get("HitEnemy"), effect_ids)
-            # 召唤单位自带攻击技能(BattleMonster.SkillList)的效果
+            if isinstance(creature, dict) and not creature.get("AttachOwner"):
+                collect(creature.get("HitEnemy"), effect_ids)
+            # --- A) 召唤单位自带攻击技能(BattleMonster.SkillList)的效果 ---
             battle_monster = self.battle_monster_data.get(str(mid))
             if isinstance(battle_monster, dict):
                 visited_nodes: set = set()
                 for skill_id in battle_monster.get("SkillList") or []:
                     if isinstance(skill_id, (int, str)) and str(skill_id).isdigit():
-                        effect_ids |= self._walk_skill_effects(int(skill_id), visited_nodes)
+                        effect_ids |= self._walk_skill_effects(
+                            int(skill_id), visited_nodes
+                        )
+
+        # --- C) 召唤单位自身 BP 字节码的执行效果(UAssetCLI export 解包) ---
+        effect_ids |= self._extract_summon_bp_effects()
+
+        # --- B') 真实召唤物(Player.RealSummon)创建技能的召唤伤害(如 战旗 220131) ---
+        effect_ids |= self._collect_real_summon_skill_damage_effects()
 
         return effect_ids
+
+    def _genuine_summon_ids(self) -> set:
+        """真实召唤单位ID集合(排除 AttachOwner 的吸附/坐骑实体，如 松露[榛子])。
+
+        召唤单位注册表 = Monster.json 带 GamePlayTags "Player.Summon" 的召唤单位
+        (海月水母/触手/云螭/雷球/小可爱等) ∪ MechanismSummon.json 的召唤单位
+        (清扫机等) ∪ BattleChar.SummonId 对应的同伴召唤物实体。
+        """
+        summon_ids: set = set()
+
+        def add_id(uid):
+            if isinstance(uid, (int, str)) and str(uid).isdigit():
+                summon_ids.add(int(uid))
+
+        for m in self.monster_data.values():
+            if isinstance(m, dict) and "Player.Summon" in (m.get("GamePlayTags") or []):
+                add_id(m.get("UnitId"))
+        for m in self.mechanism_summon_data.values():
+            if isinstance(m, dict):
+                add_id(m.get("UnitId"))
+        for char_data in self.battle_char_data.values():
+            if not isinstance(char_data, dict):
+                continue
+            for sid in char_data.get("SummonId") or []:
+                add_id(sid)
+
+        genuine: set = set()
+        for mid in summon_ids:
+            creature = self.skill_creature_data.get(str(mid))
+            if not isinstance(creature, dict):
+                creature = self.skill_creature_data.get(mid)
+            if isinstance(creature, dict) and creature.get("AttachOwner"):
+                continue
+            genuine.add(mid)
+        return genuine
+
+    def _real_summon_ids(self) -> set:
+        """带 Player.RealSummon 标签的召唤单位(真实独立召唤物，如 战旗/海月水母/云螭)。
+
+        用于规则B'：只有"真实召唤物"创建技能的召唤伤害才回退命中，避免把角色附体/
+        伴生(玄蛟)或机制召唤(珂州影刃)的角色自身伤害误标为召唤物。
+        """
+        real: set = set()
+        for m in self.monster_data.values():
+            if isinstance(m, dict) and "Player.RealSummon" in (
+                m.get("GamePlayTags") or []
+            ):
+                u = m.get("UnitId")
+                if isinstance(u, (int, str)) and str(u).isdigit():
+                    real.add(int(u))
+        return real
+
+    def _walk_skill_chain_with_units(
+        self, begin_node_id, visited_nodes: set
+    ) -> tuple[set, set]:
+        """沿技能节点链收集全部效果ID与 CreateUnit 创建的单位ID(含分支)。
+
+        返回 (effects, units)，供规则B'判断"技能链创建了真实召唤单位且效果不由
+        该技能链执行"。
+        """
+        effects: set = set()
+        units: set = set()
+        if not begin_node_id:
+            return effects, units
+        queue = [begin_node_id]
+        while queue:
+            node_id = queue.pop(0)
+            if node_id in visited_nodes:
+                continue
+            visited_nodes.add(node_id)
+            node = self.skill_node_data.get(str(node_id))
+            if not isinstance(node, dict):
+                continue
+            for effect_id in node.get("SkillNodeEffects") or []:
+                if isinstance(effect_id, int):
+                    effects.add(effect_id)
+                    skill_effect = self.skill_effects_data.get(str(effect_id)) or {}
+                    for task in skill_effect.get("TaskEffects") or []:
+                        if (
+                            isinstance(task, dict)
+                            and task.get("Function") == "CreateUnit"
+                        ):
+                            units.add(task.get("UnitId"))
+            next_id = node.get("NextNodeId")
+            if next_id:
+                queue.append(next_id)
+            branches = node.get("BranchNodeIds") or node.get("ChildNodeIds")
+            if isinstance(branches, dict):
+                queue.extend(branches.values())
+            elif isinstance(branches, list):
+                queue.extend(branches)
+        return effects, units
+
+    def _is_character_own_damage(self, skill_effect: dict) -> bool:
+        """该伤害效果是否属于角色自身(非召唤物)：本源(RootSource)或武器/近战攻击。
+
+        武器/近战(Weapon/Melee)是角色普攻等自身攻击；RootSource 本源效果复刻
+        角色自身伤害(如 芙罗拉路径伤害 110242)。
+        """
+        if not isinstance(skill_effect, dict):
+            return False
+        if skill_effect.get("SkillEffectSourceFlag") == "RootSource":
+            return True
+        for task in skill_effect.get("TaskEffects") or []:
+            if not isinstance(task, dict):
+                continue
+            if task.get("Function") == "Damage":
+                tags = task.get("DamageTag") or []
+                if "Weapon" in tags or "Melee" in tags:
+                    return True
+        return False
+
+    def _collect_real_summon_skill_damage_effects(self) -> set:
+        """收集"真实召唤物"创建技能的召唤伤害效果(规则B')。
+
+        技能链路 CreateUnit 了 Player.RealSummon(真实独立召唤单位，如 战旗)时，
+        其描述字段引用的、不由该技能链执行的伤害效果即该召唤单位执行(如 战旗
+        220131，其单位 BP 未导出、无表内执行链路，仅此一条数据链接)。非
+        RealSummon 的召唤技能(玄蛟 420123 在角色被动 BP、珂州影刃伤害在角色
+        技能)不满足门控，不计入；角色自身武器攻击与 RootSource 本源效果不计入。
+        """
+        import re
+
+        real_ids = self._real_summon_ids()
+        if not real_ids:
+            return set()
+        out: set = set()
+        for entry_list in self.skill_data.values():
+            if not isinstance(entry_list, list) or not entry_list:
+                continue
+            entry = entry_list[0]
+            if isinstance(entry, list) and entry:
+                entry = entry[0]
+            if not isinstance(entry, dict):
+                continue
+            chain_effects, created_units = self._walk_skill_chain_with_units(
+                entry.get("BeginNodeId"), set()
+            )
+            if not (created_units & real_ids):
+                continue
+            for value in entry.get("SkillDescValues") or []:
+                if not isinstance(value, str):
+                    continue
+                for m in re.finditer(r"SkillEffects\[(\d+)\]", value):
+                    effect_id = int(m.group(1))
+                    if effect_id in chain_effects:
+                        # 技能链自身执行 = 角色直接伤害(如 战旗技能 220101 的 220113)
+                        continue
+                    skill_effect = self.skill_effects_data.get(str(effect_id))
+                    if not isinstance(skill_effect, dict):
+                        skill_effect = self.skill_effects_data.get(effect_id)
+                    if not isinstance(skill_effect, dict):
+                        continue
+                    is_damage = any(
+                        isinstance(t, dict) and t.get("Function") == "Damage"
+                        for t in (skill_effect.get("TaskEffects") or [])
+                    )
+                    if not is_damage:
+                        continue
+                    if self._is_character_own_damage(skill_effect):
+                        continue
+                    out.add(effect_id)
+        return out
+
+    def _uassetcli_exe(self):
+        """定位 UAssetCLI 可执行文件(缺省返回 None)。"""
+        project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        exe = os.path.join(project_root, "tools", "UAssetCLI", "UAssetCLI.exe")
+        return exe if os.path.isfile(exe) else None
+
+    def _unpack_exports_root(self):
+        """定位解包目录 Exports 根(环境变量 DNA_UNPACK_DIR，缺省仓库同级 dna-unpack)。"""
+        unpack = os.environ.get("DNA_UNPACK_DIR", "").strip()
+        if not unpack:
+            sibling = os.path.normpath(
+                os.path.join(
+                    os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                    "..",
+                    "dna-unpack",
+                )
+            )
+            if os.path.isdir(sibling):
+                unpack = sibling
+        if not unpack:
+            return None
+        root = os.path.join(unpack, "Fmodel", "Output", "Exports")
+        return root if os.path.isdir(root) else None
+
+    def _summon_bp_files(self) -> set:
+        """定位召唤单位自身 BP 与其攻击被动 BP 的 uasset 文件路径。"""
+        exports_root = self._unpack_exports_root()
+        if not exports_root:
+            return set()
+        files: set = set()
+
+        def add_bp_path(bp_path):
+            if not isinstance(bp_path, str) or not bp_path.startswith("/Game/"):
+                return
+            rel = bp_path[len("/Game/") :].split(".")[0]
+            for game in os.listdir(exports_root):
+                cand = os.path.join(exports_root, game, "Content", rel + ".uasset")
+                if os.path.isfile(cand):
+                    files.add(cand)
+
+        for mid in self._genuine_summon_ids():
+            monster = self.monster_data.get(str(mid)) or {}
+            add_bp_path(monster.get("UnitBPPath"))
+            if not monster:
+                mech = self.mechanism_summon_data.get(str(mid)) or {}
+                add_bp_path(mech.get("UnitBPPath"))
+            # 自带攻击技能触发的攻击被动 BP(BattleMonster.SkillList →
+            # skill.PassiveEffects → PassiveEffect.BPPath)
+            battle_monster = self.battle_monster_data.get(str(mid)) or {}
+            for skill_id in battle_monster.get("SkillList") or []:
+                if not (isinstance(skill_id, (int, str)) and str(skill_id).isdigit()):
+                    continue
+                entry_list = self.skill_data.get(str(skill_id))
+                if not isinstance(entry_list, list) or not entry_list:
+                    continue
+                entry = entry_list[0]
+                if isinstance(entry, list) and entry:
+                    entry = entry[0]
+                if not isinstance(entry, dict):
+                    continue
+                for pid in entry.get("PassiveEffects") or []:
+                    passive = self.passive_effect_data.get(str(pid)) or {}
+                    add_bp_path(passive.get("BPPath"))
+        return files
+
+    def _extract_summon_bp_effects(self) -> set:
+        """从召唤单位自身 BP 字节码提取其执行的效果ID(规则C)。
+
+        用 UAssetCLI export 模式解包各召唤单位 BP(含攻击被动 BP)，只取
+        SkillEffects 表中真实存在的效果ID。结果按进程缓存，避免多语言重复解包。
+        无解包目录/exe 时返回空集(不影响其它规则)。
+        """
+        import subprocess
+
+        global _SUMMON_BP_EFFECTS_CACHE
+        if _SUMMON_BP_EFFECTS_CACHE:
+            return set(_SUMMON_BP_EFFECTS_CACHE)
+        with _SUMMON_BP_EFFECTS_LOCK:
+            if _SUMMON_BP_EFFECTS_CACHE:
+                return set(_SUMMON_BP_EFFECTS_CACHE)
+            result: set = set()
+            exe = self._uassetcli_exe()
+            if exe:
+                for bp_file in sorted(self._summon_bp_files()):
+                    try:
+                        proc = subprocess.run(
+                            [exe, "export", bp_file],
+                            capture_output=True,
+                            text=True,
+                            encoding="utf-8",
+                            errors="replace",
+                            timeout=60,
+                        )
+                    except Exception:
+                        continue
+                    if proc.returncode != 0:
+                        continue
+                    for v in re.findall(r"\b([0-9]{6,7})\b", proc.stdout):
+                        n = int(v)
+                        if str(n) in self.skill_effects_data:
+                            result.add(n)
+            _SUMMON_BP_EFFECTS_CACHE = frozenset(result)
+        return set(result)
 
     def _resolve_field_damage_tags(self, desc_value, desc_key="") -> list[str]:
         """按字段引用的 SkillEffects 任务解析伤害字段的额外 tag(如 充盈/武器/召唤物)。
@@ -2707,16 +2945,12 @@ class CharProcessor(BaseProcessor):
         充盈/武器/普攻/持续/爆炸/追加 等由数据 Damage 任务的 DamageTag 标记(见
         DamageTag.json)；召唤物 指该效果属于游戏"召唤物"单位(Player.Summon /
         MechanismSummon / BattleChar.SummonId，见 _build_summon_effect_ids)的
-        攻击效果，或字段描述键本身标明召唤物(SkillDesc 的 SKILL_DESC_*Summon*，
-        如 SKILL_DESC_SummonedDamage 召唤物伤害)。
+        攻击效果。
         只对字段实际引用的任务(TaskEffects[N])判定，避免把同效果的增益时长等
         非伤害字段误标；全部由数据驱动，不解析描述文本(如"充盈伤害"字段名)。
         """
         if not isinstance(desc_value, str):
             return []
-
-        # 召唤物字段描述键(游戏数据结构命名约定，如 SKILL_DESC_SummonedDamage)
-        is_summon_desc_key = "summon" in (desc_key or "").lower()
 
         tags = []
         for m in re.finditer(
@@ -2738,9 +2972,7 @@ class CharProcessor(BaseProcessor):
                 else:
                     task_effects = []
 
-            is_summon_effect = (
-                effect_id in self.summon_effect_ids or is_summon_desc_key
-            )
+            is_summon_effect = effect_id in self.summon_effect_ids
             # 幻象等"RootSource"镜像效果：NotifyName 标 RootSource 表示伤害归属角色
             # 本身(如 塞琪的[幻象]伤害，DamageTag Skill1 复刻角色攻击)，非召唤物伤害
             notify_names = skill_effect.get("NotifyName")
@@ -2754,7 +2986,7 @@ class CharProcessor(BaseProcessor):
                     continue
                 referenced_damage = True
                 for tag in task_effect.get("DamageTag") or []:
-                    tag_cn = self._FIELD_DAMAGE_TAG_CN.get(tag)
+                    tag_cn = self._damage_tag_cn(tag)
                     if tag_cn and tag_cn not in tags:
                         tags.append(tag_cn)
             # 召唤物伤害：字段引用的是该召唤单位的伤害任务

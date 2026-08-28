@@ -17,6 +17,115 @@ class BaseProcessor:
     _shared_guide_point_loc_index_cache = {}
     _shared_guide_point_loc_index_cache_lock = Lock()
 
+    # 伤害标签 → 中文
+    # 覆盖 out/DamageTag.json 的全部标签，保证任意 DamageTag 标注的伤害都能翻译出来；
+    # 未收录的未知标签由 _damage_tag_cn() 兜底原样输出，不静默丢弃。
+    # 由 Char/Weapon 等技能处理器共用(见各处理器 _parse_skill_effects / _resolve_field_damage_tags)。
+    _DAMAGE_TAG_CN = {
+        # --- 通用机制标签 ---
+        "Attack": "普攻",
+        "Skill": "技能",
+        "Skill1": "战技",
+        "Skill2": "终结技",
+        "Ultra": "终结技",
+        "Weapon": "武器",
+        "Melee": "近战",
+        "Ranged": "远程",
+        "MeleeWord": "近战词条",
+        "HeavyAttack": "蓄力攻击",
+        "FallAttack": "下落攻击",
+        "SlideAttack": "滑行攻击",
+        "Dodge": "闪避",
+        "Dot": "持续",
+        "Hot": "治疗",
+        "Explode": "爆炸",
+        "BonusDamage": "追加",
+        # 充盈伤害：由数据 DamageTag 标记(见 DamageTag.json 的 HyperTrigger)，
+        # 不依赖描述文本解析，用于与普通伤害区分
+        "HyperTrigger": "充盈",
+        # 其余类型保留原文
+        "PhantomAvoid": "PhantomAvoid",
+        "MajoDodge": "MajoDodge",
+        "Burst": "Burst",
+        "Catch": "Catch",
+        "Cyclone": "Cyclone",
+        "Fade": "Fade",
+        "Blood": "Blood",
+        "Poison": "Poison",
+        "Reflect": "Reflect",
+        "Ray": "Ray",
+        "ThunderLaser": "ThunderLaser",
+        "Shred": "Shred",
+        "LandMine": "LandMine",
+        "MagicMissile": "MagicMissile",
+        "SpiritualFire": "SpiritualFire",
+        "IceOrb": "IceOrb",
+        "Mod": "Mod",
+        "Support": "Support",
+        "NoCombo": "NoCombo",
+        "UnlockChest": "UnlockChest",
+        "RaidLink": "RaidLink",
+        "WVEventNotTrigger": "WVEventNotTrigger",
+        # --- 角色/武器专属标签 ---
+        "DongGuoWysSkill01": "DongGuoWysSkill01",
+        "Falu_Skill1": "Falu_Skill1",
+        "Falu_Skill02": "Falu_Skill02",
+        "FeinaColorBlue": "FeinaColorBlue",
+        "FeinaColorGreen": "FeinaColorGreen",
+        "FeinaColorRed": "FeinaColorRed",
+        "HaierUltra": "HaierUltra",
+        "KamiCrack": "KamiCrack",
+        "KamiPassive": "KamiPassive",
+        "KezhouShadowSword": "KezhouShadowSword",
+        "NifuDark": "NifuDark",
+        "NifuLight": "NifuLight",
+        "NifuSpLight": "NifuSpLight",
+        "Prop42001Ray": "Prop42001Ray",
+        "Prop42002Ray": "Prop42002Ray",
+        "QiuxianSpSkill1": "QiuxianSpSkill1",
+        "Ranged20502": "Ranged20502",
+        "Saiqi": "Saiqi",
+        "SaiqiSkill01": "SaiqiSkill01",
+        "Shotgun20406": "Shotgun20406",
+        "ShuimuSummonAttack": "ShuimuSummonAttack",
+        "SuyiGrade6": "SuyiGrade6",
+        "SuyiSkill02Creature": "SuyiSkill02Creature",
+        "SuyiWeapon": "SuyiWeapon",
+        "TuosiCombo": "TuosiCombo",
+        "TuosiFinish": "TuosiFinish",
+        "WeaponVerify15": "WeaponVerify15",
+        "WeeklyPaoTai": "WeeklyPaoTai",
+        "WeitaWater": "WeitaWater",
+        "XibiSkill01": "XibiSkill01",
+        "XibiSkill01SP": "XibiSkill01SP",
+        "XierGrade6Laser": "XierGrade6Laser",
+        "XierSkill1Laser": "XierSkill1Laser",
+        "XierSkill2": "XierSkill2",
+        "YeerGrade1": "YeerGrade1",
+        "YeerSkill2Bomb": "YeerSkill2Bomb",
+        "YumingExtra": "YumingExtra",
+        "Zhangyu": "Zhangyu",
+        "Zhouben_5000003": "Zhouben_5000003",
+        "ZhujueDark": "ZhujueDark",
+        "ZhujueDarkPassive": "ZhujueDarkPassive",
+        "BaihengSkill01HpConsume": "BaihengSkill01HpConsume",
+        "LandiGrade6": "LandiGrade6",
+        # 周本/Rou 系列机制标签(按拼音直译)
+        "RouB101": "RouB101",
+        "RouB102": "RouB102",
+        "RouB103": "RouB103",
+        "RouB104": "RouB104",
+        "RouB105": "RouB105",
+        "RouB105Group4": "RouB105Group4",
+        "RouB106": "RouB106",
+        "RouB107106": "RouB107106",
+        "RouT103": "RouT103",
+        # 斯普利斯(SpLise)武器机制标签
+        "SPliseGun01": "SPliseGun01",
+        "SPliseGun02": "SPliseGun02",
+        "SPlisePower": "SPlisePower",
+    }
+
     def __init__(self, data_loader):
         self.data_loader = data_loader
         self.file_type = "Base"
@@ -986,6 +1095,12 @@ class BaseProcessor:
                 rst.append(self.get_translated_text(t["Name"]))
         return rst
 
+    def _damage_tag_cn(self, tag):
+        """伤害标签转中文，未知标签原样输出(不丢弃，保证 DamageTag 标注全部可见)。"""
+        if not tag:
+            return ""
+        return self._DAMAGE_TAG_CN.get(tag, str(tag))
+
     def _inline_impr_check(self, condition_id):
         """将ImprCheckId转换为印象检定数组。"""
         check_data = self.impression_check_data.get(str(condition_id), {})
@@ -1043,9 +1158,7 @@ class BaseProcessor:
         # 从i18n_data中查找
         text_entry = self.i18n_data.get(text_key, {})
         if not text_entry:
-            content = self.i18n_data_cn_alt.get(text_key, {}).get(
-                "TextMapContent", ""
-            )
+            content = self.i18n_data_cn_alt.get(text_key, {}).get("TextMapContent", "")
             # T_FALLBACK 按文本 key 兜底（如未实装/占位文本）
             return content or T_FALLBACK.get(text_key, text_key)
 

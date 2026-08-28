@@ -308,6 +308,9 @@ class ModProcessor(BaseProcessor):
                     item["延迟"] = delay
                 if hit_stop:
                     item["卡肉"] = hit_stop
+                # 伤害字段带 DamageTag 翻译(与 Char/Weapon 共用一套解析)
+                if skill_effects_info.get("tag"):
+                    item["tag"] = skill_effects_info["tag"]
 
             result.append(item)
 
@@ -485,6 +488,13 @@ class ModProcessor(BaseProcessor):
                     value = task_effect.get("Value")
                     if value is not None:
                         result["削韧"] = value
+                if func == "Damage":
+                    # 解析 Damage 任务的 DamageTag(与 Char/Weapon 共用
+                    # BaseProcessor 的 _DAMAGE_TAG_CN / _damage_tag_cn 一套解析)
+                    for tag in task_effect.get("DamageTag") or []:
+                        tag_cn = self._damage_tag_cn(tag)
+                        if tag_cn and tag_cn not in result.setdefault("tag", []):
+                            result["tag"].append(tag_cn)
 
         return result
 

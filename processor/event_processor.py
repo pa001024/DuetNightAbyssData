@@ -18,6 +18,20 @@ class EventProcessor(BaseProcessor):
             if event_id:
                 self.box_drop_index[str(event_id)] = item
 
+        # 累计充值活动明细表（CumulativeTopUpEvent），按 EventId 关联
+        self.cumulative_top_up_data = data_loader.load_json("CumulativeTopUpEvent.json")
+        self.cumulative_top_up_index = {}
+
+        if isinstance(self.cumulative_top_up_data, dict):
+            top_up_items = self.cumulative_top_up_data.values()
+        else:
+            top_up_items = self.cumulative_top_up_data
+
+        for item in top_up_items:
+            event_id = item.get("EventId", 0)
+            if event_id:
+                self.cumulative_top_up_index[str(event_id)] = item
+
     def process_all_items(self, items, language):
         """按 EventId 排序输出活动数据。"""
         processed_items = []
@@ -49,7 +63,29 @@ class EventProcessor(BaseProcessor):
         if box_drop:
             processed["boxDrop"] = self._lower_first_keys(box_drop)
 
+        # 内联活动明细表（累计充值活动）
+        top_up = self.cumulative_top_up_index.get(str(event_id))
+        if top_up:
+            processed["topUpDetail"] = self._process_cumulative_top_up(top_up, language)
+
         return processed
+
+    def _process_cumulative_top_up(self, top_up, language):
+        """处理累计充值活动明细表，内联进活动数据。
+
+        文本字段（EventDes / EventRule）按当前语言翻译，其余字段沿用原值。
+        """
+        result = self._lower_first_keys(top_up)
+        # 去除末尾大奖相关字段（lastReward*）
+        for key in ("lastRewardIcon", "lastRewardId", "lastRewardTypeId"):
+            result.pop(key, None)
+        event_des = top_up.get("EventDes", "")
+        if event_des:
+            result["eventDes"] = self.get_translated_text(event_des, language)
+        event_rule = top_up.get("EventRule", "")
+        if event_rule:
+            result["eventRule"] = self.get_translated_text(event_rule, language)
+        return result
 
     def _normalize_time(self, value):
         if hasattr(value, "GetTime"):

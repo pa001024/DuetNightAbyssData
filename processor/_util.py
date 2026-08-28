@@ -74,6 +74,7 @@ P_MAP = {
 T_FALLBACK = {
     "UI_CHAR_NAME_5402": "莉莉蔻",
     "UI_CHAR_NAME_4103": "SP黎瑟",
+    "UI_ChapterNumber_Ex02": "第二章",
 }
 
 

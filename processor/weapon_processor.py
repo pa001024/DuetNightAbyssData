@@ -393,6 +393,10 @@ class WeaponProcessor(BaseProcessor):
                 if hit_stop:
                     item["卡肉"] = hit_stop
 
+            # 伤害字段带 DamageTag 翻译(近战/远程/普攻等，与 Char 共用一套解析)
+            if is_damage_field and skill_effects_info.get("tag"):
+                item["tag"] = skill_effects_info["tag"]
+
             item["_is_damage"] = is_damage_field
 
             rst.append(item)
@@ -1400,5 +1404,11 @@ class WeaponProcessor(BaseProcessor):
                             result.pop("Boss削韧", None)
                 if task_effect.get("Function") == "Damage":
                     result["is_damage"] = True
+                    # 解析 Damage 任务的 DamageTag(与 Char 共用 BaseProcessor 的
+                    # _DAMAGE_TAG_CN / _damage_tag_cn 一套解析)
+                    for tag in task_effect.get("DamageTag") or []:
+                        tag_cn = self._damage_tag_cn(tag)
+                        if tag_cn and tag_cn not in result.setdefault("tag", []):
+                            result["tag"].append(tag_cn)
 
         return result
