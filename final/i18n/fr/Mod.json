@@ -9316,5 +9316,22 @@
         ]
       }
     }
+  },
+  {
+    "id": 510101,
+    "icon": "Songlu",
+    "名称": "Impact majeur",
+    "版本": "1.6",
+    "系列": "Filbert",
+    "品质": "金",
+    "极性": "O",
+    "耐受": 27,
+    "类型": "Personnages",
+    "消耗": [
+      51951,
+      51952
+    ],
+    "技能威力": 0.88,
+    "效果": "Lorsque vous chevauchez [Filbert], votre Ténacité et celle de vos alliés augmentent de 22.0%. Vous perdez 15.0% de vos PV actuels toutes les 2.0 s et déclenchez 1 fois les soins et bonus de [Pas de panique, c’est Filbert !], avec 30.0% de chances de générer 1 [Sel volatil stimulant] ou 1 [Goutte de rosée apaisante]. Si équipé par un Partenaire de combat, déclenche [À plein régime]."
   }
 ]

@@ -9316,5 +9316,22 @@
         ]
       }
     }
+  },
+  {
+    "id": 510101,
+    "icon": "Songlu",
+    "名称": "Bumpity-Bump!",
+    "版本": "1.6",
+    "系列": "Filbert",
+    "品质": "金",
+    "极性": "O",
+    "耐受": 27,
+    "类型": "Characters",
+    "消耗": [
+      51951,
+      51952
+    ],
+    "技能威力": 0.88,
+    "效果": "While Truffle is riding [Filbert], all team members gain 22.0% Resolve. Every 2.0s, Truffle loses 15.0% of her current HP, triggering one instance of [Trotters Trot-Trot]'s healing and buff effects and granting a 30.0% chance to generate 1 [Activated Sal Volatile] or [Tranquilizer Dewdrop]. When Truffle is deployed as a combat partner, she automatically casts [Tummy Full, Hands Full]."
   }
 ]
