@@ -27,7 +27,7 @@ class BaseProcessor:
         "Skill": "技能",
         "Skill1": "战技",
         "Skill2": "终结技",
-        "Ultra": "终结技",
+        "Ultra": "同律",
         "Weapon": "武器",
         "Melee": "近战",
         "Ranged": "远程",
