@@ -105,6 +105,236 @@ __materialize = function(name)
   end
   return m
 end
+__find_keys_by_path = function(name, path, expected)
+  local out = {}
+  local root = DataMgr[name]
+  if type(root) ~= "table" then return out end
+  for key, value in pairs(root) do
+    local current = value
+    for _, segment in ipairs(path or {}) do
+      if type(current) ~= "table" then current = nil; break end
+      current = current[segment]
+    end
+    if current == expected then out[#out + 1] = key end
+  end
+  return out
+end
+__task_field_indexes = {}
+__find_keys_by_task_field = function(name, field, expected)
+  local byName = __task_field_indexes[name]
+  if not byName then byName = {}; __task_field_indexes[name] = byName end
+  local index = byName[field]
+  if not index then
+    index = {}
+    local root = DataMgr[name]
+    if type(root) == "table" then
+      for key, value in pairs(root) do
+        if type(value) == "table" and type(value.TaskEffects) == "table" then
+          for _, task in pairs(value.TaskEffects) do
+            if type(task) == "table" and task[field] ~= nil then
+              local expectedKey = tostring(task[field])
+              local keys = index[expectedKey]
+              if not keys then keys = {}; index[expectedKey] = keys end
+              local seen = false
+              for _, existing in ipairs(keys) do
+                if existing == key then seen = true; break end
+              end
+              if not seen then keys[#keys + 1] = key end
+            end
+          end
+        end
+      end
+    end
+    byName[field] = index
+  end
+  return index[tostring(expected)] or {}
+end
+__find_summon_effect_ids = function()
+  if __summon_effect_ids_cache then return __summon_effect_ids_cache end
+  local monsters = DataMgr.Monster or {}
+  local mechanisms = DataMgr.MechanismSummon or {}
+  local battleChars = DataMgr.BattleChar or {}
+  local battleMonsters = DataMgr.BattleMonster or {}
+  local creatures = DataMgr.SkillCreature or {}
+  local skills = DataMgr.Skill or {}
+  local nodes = DataMgr.SkillNode or {}
+  local effects = DataMgr.SkillEffects or {}
+
+  local function number(value)
+    if type(value) == "number" then return value end
+    if type(value) == "string" then return tonumber(value) end
+    return nil
+  end
+  local function integer(value)
+    local n = number(value)
+    if n and n == math.floor(n) then return n end
+    return nil
+  end
+  local function entry(tableValue, id)
+    return tableValue[id] or tableValue[tostring(id)]
+  end
+  local function addId(set, value)
+    local id = integer(value)
+    if id then set[id] = true end
+  end
+  local function contains(tableValue, expected)
+    if type(tableValue) ~= "table" then return false end
+    for _, value in pairs(tableValue) do
+      if value == expected then return true end
+    end
+    return false
+  end
+  local function collectValues(set, value)
+    if type(value) == "table" then
+      for _, child in pairs(value) do collectValues(set, child) end
+      return
+    end
+    local id = integer(value)
+    if id and entry(effects, id) then set[id] = true end
+  end
+  local function unwrapSkill(info)
+    if type(info) ~= "table" then return nil end
+    local first = info[1] or info[0]
+    if type(first) ~= "table" then return nil end
+    local nested = first[0] or first[1]
+    if type(nested) == "table" then first = nested end
+    if first.BeginNodeId == nil then return nil end
+    return first
+  end
+  local function listValue(value)
+    if value == nil then return {} end
+    if type(value) ~= "table" then return {value} end
+    local result = {}
+    for _, child in pairs(value) do result[#result + 1] = child end
+  __summon_effect_ids_cache = result
+  return result
+end
+
+  local summonIds = {}
+  for _, row in pairs(monsters) do
+    if type(row) == "table" and (contains(row.GamePlayTags, "Player.Summon") or contains(row.GamePlayTags, "Player.RealSummon") or contains(row.GamePlayTags, "Mon.Summon")) then
+      addId(summonIds, row.UnitId)
+    end
+  end
+  for _, row in pairs(mechanisms) do
+    if type(row) == "table" then addId(summonIds, row.UnitId) end
+  end
+  for _, row in pairs(battleChars) do
+    if type(row) == "table" then
+      for _, id in pairs(listValue(row.SummonId)) do addId(summonIds, id) end
+    end
+  end
+
+  local effectIds = {}
+  for id in pairs(summonIds) do
+    local monster = entry(monsters, id) or entry(mechanisms, id)
+    if type(monster) == "table" and type(monster.BluePrintParams) == "table" then
+      collectValues(effectIds, monster.BluePrintParams.SkillEffectID)
+      collectValues(effectIds, monster.BluePrintParams.SkillEffectId)
+      collectValues(effectIds, monster.BluePrintParams.Grade6SkillEffectID)
+    end
+    local creature = entry(creatures, id)
+    if type(creature) == "table" and not creature.AttachOwner then collectValues(effectIds, creature.HitEnemy) end
+    local battleMonster = entry(battleMonsters, id)
+    local queue = listValue(type(battleMonster) == "table" and battleMonster.SkillList or nil)
+    local head = 1
+    local seenNodes = {}
+    while head <= #queue do
+      local skillId = integer(queue[head]); head = head + 1
+      local skillInfo = unwrapSkill(entry(skills, skillId))
+      if skillInfo then
+        local nodeId = integer(skillInfo.BeginNodeId)
+        while nodeId and nodeId > 0 and not seenNodes[nodeId] do
+          seenNodes[nodeId] = true
+          local node = entry(nodes, nodeId)
+          if type(node) ~= "table" then break end
+          collectValues(effectIds, node.SkillNodeEffects)
+          for _, branch in pairs(listValue(node.BranchNodeIds)) do
+            local branchId = integer(branch)
+            if branchId and branchId > 0 and not seenNodes[branchId] then queue[#queue + 1] = branchId end
+          end
+          nodeId = integer(node.NextNodeId)
+        end
+      end
+    end
+  end
+
+  local realSummonIds = {}
+  for _, row in pairs(monsters) do
+    if type(row) == "table" and contains(row.GamePlayTags, "Player.RealSummon") then
+      local id = integer(row.UnitId)
+      if id then realSummonIds[id] = true end
+    end
+  end
+  local function walkChain(beginNode)
+    local foundEffects, foundUnits = {}, {}
+    local queue = {number(beginNode)}
+    local head, seen = 1, {}
+    while head <= #queue do
+      local nodeId = integer(queue[head]); head = head + 1
+      if nodeId and nodeId > 0 and not seen[nodeId] then
+        seen[nodeId] = true
+        local node = entry(nodes, nodeId)
+        if type(node) == "table" then
+          for _, effectId in pairs(listValue(node.SkillNodeEffects)) do
+            local eid = integer(effectId)
+            if eid then
+              foundEffects[eid] = true
+              local effect = entry(effects, eid)
+              if type(effect) == "table" then
+                for _, task in pairs(listValue(effect.TaskEffects)) do
+                  if type(task) == "table" and task.Function == "CreateUnit" then addId(foundUnits, task.UnitId) end
+                end
+              end
+            end
+          end
+          local nextId = integer(node.NextNodeId)
+          if nextId then queue[#queue + 1] = nextId end
+          for _, branch in pairs(listValue(node.BranchNodeIds)) do
+            local branchId = integer(branch)
+            if branchId then queue[#queue + 1] = branchId end
+          end
+        end
+      end
+    end
+    return foundEffects, foundUnits
+  end
+  local function ownDamage(effect)
+    if effect.SkillEffectSourceFlag == "RootSource" then return true end
+    for _, task in pairs(listValue(effect.TaskEffects)) do
+      if type(task) == "table" and task.Function == "Damage" and (contains(task.DamageTag, "Weapon") or contains(task.DamageTag, "Melee")) then return true end
+    end
+    return false
+  end
+  for _, info in pairs(skills) do
+    local skill = unwrapSkill(info)
+    if skill then
+      local chainEffects, chainUnits = walkChain(skill.BeginNodeId)
+      local hasRealSummon = false
+      for id in pairs(chainUnits) do if realSummonIds[id] then hasRealSummon = true; break end end
+      if hasRealSummon then
+        for _, value in pairs(listValue(skill.SkillDescValues)) do
+          if type(value) == "string" then
+            for effectIdText in string.gmatch(value, "SkillEffects%[(%d+)%]") do
+              local effectId = integer(effectIdText)
+              local effect = effectId and entry(effects, effectId)
+              if effectId and not chainEffects[effectId] and type(effect) == "table" and not ownDamage(effect) then
+                for _, task in pairs(listValue(effect.TaskEffects)) do
+                  if type(task) == "table" and task.Function == "Damage" then effectIds[effectId] = true; break end
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+
+  local out = {}
+  for id in pairs(effectIds) do out[#out + 1] = id end
+  table.sort(out)
+  return out
+end
     `)
     )
 }
@@ -116,12 +346,12 @@ end
 export function preloadFile(L: LuaState, root: string, name: string, relPath: string, extraSetup?: string): boolean {
     const full = joinPath(root, relPath)
     if (!existsSyncSafe(full)) return false
-    const code = readFileSafe(full)
     const setup = extraSetup ?? ""
 
     lua.lua_getglobal(L, "package")
     lua.lua_getfield(L, -1, "preload")
     lua.lua_pushcfunction(L, (LL: LuaState) => {
+        const code = readFileSafe(full)
         if (setup) {
             if (lauxlib.luaL_dostring(LL, to_luastring(setup)) !== 0) {
                 lua.lua_pop(LL, 1)
@@ -147,10 +377,10 @@ export function preloadFile(L: LuaState, root: string, name: string, relPath: st
 export function registerDatasPreload(L: LuaState, root: string, name: string): void {
     const file = joinPath(root, "Script", "Datas", `${name}.lua`)
     if (!existsSyncSafe(file)) return
-    const code = readFileSafe(file)
     lua.lua_getglobal(L, "package")
     lua.lua_getfield(L, -1, "preload")
     lua.lua_pushcfunction(L, (LL: LuaState) => {
+        const code = readFileSafe(file)
         if (lauxlib.luaL_loadstring(LL, to_luastring(code)) !== 0) {
             lua.lua_pop(LL, 1) // 错误信息
             lua.lua_pushnil(LL)

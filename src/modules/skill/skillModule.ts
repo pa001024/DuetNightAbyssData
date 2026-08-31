@@ -298,12 +298,9 @@ export interface SkillArtifacts {
 export function skillModule(ctx: ModuleContext) {
     const dm = ctx.dm
     // 原始表（懒加载）
-    const skillData = (id?: number | string) =>
-        id === undefined ? ((dm.getTable("Skill") as Record<string, any>) || {}) : dm.getTableItem("Skill", id)
-    const skillNodeData = (id?: number | string) =>
-        id === undefined ? ((dm.getTable("SkillNode") as Record<string, any>) || {}) : dm.getTableItem("SkillNode", id)
-    const skillEffectsData = (id?: number | string) =>
-        id === undefined ? ((dm.getTable("SkillEffects") as Record<string, any>) || {}) : dm.getTableItem("SkillEffects", id)
+    const skillData = (id: number | string) => dm.getTableItem("Skill", id)
+    const skillNodeData = (id: number | string) => dm.getTableItem("SkillNode", id)
+    const skillEffectsData = (id: number | string) => dm.getTableItem("SkillEffects", id)
 
     const _getEntry = (id: number | string, table: Record<string, any>): any => {
         let e = table[String(id)]
@@ -324,7 +321,7 @@ export function skillModule(ctx: ModuleContext) {
         descValue: string,
         skillEffects?: Record<string, any>
     ): { isDamage: boolean; 削韧?: number; Boss削韧?: number; tag?: string[]; 延迟?: number; 卡肉?: number } =>
-        resolveFieldCombatMetaImpl(descValue, skillEffects ?? skillEffectsData, getSummonEffectIds())
+        resolveFieldCombatMetaImpl(descValue, skillEffects ?? skillEffectsData, getSummonEffectIds)
 
     /** 技能字段解释（对齐 char.process_skill_desc 的核心路径） */
     const explainSkillFields = (skillEntry: Record<string, unknown>, _tableId: number, _maxLevel?: number): unknown[] => {
@@ -380,10 +377,9 @@ export function skillModule(ctx: ModuleContext) {
                 skillData,
                 skillNodeData,
                 skillEffectsData,
-                allSkillData: () => skillData() as Record<string, any>,
-                allSkillEffectsData: () => skillEffectsData() as Record<string, any>,
-                creatureData: (id?: number | string) =>
-                    id === undefined ? ((dm.getTable("SkillCreature") as Record<string, any>) || {}) : dm.getTableItem("SkillCreature", id),
+                findRelatedSkillIds: rootSkillId => dm.findTableKeysByPath("Skill", [1, 0, "ClientSkillLogicId"], rootSkillId),
+                findLoopEffectIds: rootSkillId => dm.findTableKeysByTaskField("SkillEffects", "LoopShootId", rootSkillId),
+                creatureData: (id: number | string) => dm.getTableItem("SkillCreature", id),
             })
         },
         parseWeaponLikeSkillField: (descKey, descValue, tableId, skillEntry) => {
@@ -425,12 +421,12 @@ function parseWeaponLikeSkillFieldImpl(
 // ---------- 实体提取（port skill_creature_utils） ----------
 
 interface CreatureDeps {
-    skillData: (id?: number | string) => any
-    skillNodeData: (id?: number | string) => any
-    skillEffectsData: (id?: number | string) => any
-    allSkillData: () => Record<string, any>
-    allSkillEffectsData: () => Record<string, any>
-    creatureData: (id?: number | string) => any
+    skillData: (id: number | string) => any
+    skillNodeData: (id: number | string) => any
+    skillEffectsData: (id: number | string) => any
+    findRelatedSkillIds?: (skillId: number) => Array<number | string>
+    findLoopEffectIds?: (skillId: number) => Array<number | string>
+    creatureData: (id: number | string) => any
 }
 
 function getEntry2(table: Record<string, any>, id: number | string): any {
@@ -492,7 +488,7 @@ function simplifySkillCreature(creatureId: number | string, creatureData: any, k
 }
 
 function extractCreaturesImpl(skillId: number, keepHidden: boolean, deps: CreatureDeps): unknown[] {
-    const { skillData, skillNodeData, skillEffectsData, creatureData } = deps
+    const { skillData, skillNodeData, skillEffectsData, findRelatedSkillIds, findLoopEffectIds, creatureData } = deps
     const skillInfo = skillData(skillId)
     if (!Array.isArray(skillInfo) || skillInfo.length === 0) return []
     const skillEntry = unwrapSkillEntry(skillInfo)
@@ -530,7 +526,7 @@ function extractCreaturesImpl(skillId: number, keepHidden: boolean, deps: Creatu
                 const creatureKey = `${creatureId}|${sourceLoopShootId}`
                 if (creatureId === null || creatureId === undefined || creatureId === "" || seenCreatureKeys.has(creatureKey)) continue
                 seenCreatureKeys.add(creatureKey)
-            const creature = simplifySkillCreature(creatureId, creatureData(creatureId), keepHidden)
+                const creature = simplifySkillCreature(creatureId, creatureData(creatureId), keepHidden)
                 if (creature && inheritedInterval !== undefined && inheritedInterval !== null) creature.射击间隔 = inheritedInterval
                 if (creature) creatures.push(creature)
                 continue
@@ -606,16 +602,16 @@ function extractCreaturesImpl(skillId: number, keepHidden: boolean, deps: Creatu
 
     // Skill2 的关联技能（ClientSkillLogicId 反向）
     if (rootSkillType === "Skill2") {
-        for (const [relatedSkillId, relatedEntries] of Object.entries(allSkillData())) {
+        for (const relatedSkillId of findRelatedSkillIds?.(skillId) ?? []) {
             if (String(relatedSkillId) === String(skillId)) continue
-            if (!Array.isArray(relatedEntries) || relatedEntries.length === 0) continue
-            const relatedEntry = unwrapSkillEntry(relatedEntries)
+            const relatedEntry = unwrapSkillEntry(skillData(relatedSkillId))
             if (!relatedEntry || typeof relatedEntry !== "object") continue
             if (relatedEntry.ClientSkillLogicId !== skillId) continue
             collectFromSkill(relatedSkillId, null, skillId)
         }
         // Skill2 的 StartLoopShoot 效果
-        for (const [_effectIdStr, effect] of Object.entries(allSkillEffectsData())) {
+        for (const effectId of findLoopEffectIds?.(skillId) ?? []) {
+            const effect = skillEffectsData(effectId) as Record<string, any>
             if (!effect || typeof effect !== "object") continue
             const taskEffects = effect.TaskEffects
             if (!Array.isArray(taskEffects)) continue
@@ -640,7 +636,7 @@ function extractCreaturesImpl(skillId: number, keepHidden: boolean, deps: Creatu
 export function resolveFieldCombatMetaImpl(
     descValue: string,
     skillEffects: Record<string, any> | ((id: number | string) => any),
-    summonEffectIds?: ReadonlySet<number>
+    summonEffectIds?: ReadonlySet<number> | (() => ReadonlySet<number>)
 ): { isDamage: boolean; 削韧?: number; Boss削韧?: number; tag?: string[]; 延迟?: number; 卡肉?: number } {
     const references: Array<{ effectId: number; taskIndex?: number }> = []
     const seenReferences = new Set<string>()
@@ -656,6 +652,15 @@ export function resolveFieldCombatMetaImpl(
     if (references.length === 0) return { isDamage: false }
     const result: { isDamage: boolean; 削韧?: number; Boss削韧?: number; tag?: string[]; 延迟?: number; 卡肉?: number } = {
         isDamage: false,
+    }
+
+    let summonEffectSet: ReadonlySet<number> | undefined
+    const isSummonEffect = (effectId: number): boolean => {
+        if (summonEffectIds === undefined) return false
+        if (summonEffectSet === undefined) {
+            summonEffectSet = typeof summonEffectIds === "function" ? summonEffectIds() : summonEffectIds
+        }
+        return summonEffectSet.has(effectId)
     }
 
     for (const { effectId, taskIndex } of references) {
@@ -697,8 +702,8 @@ export function resolveFieldCombatMetaImpl(
             }
         }
         if (
-            summonEffectIds?.has(effectId) &&
             (selectedTasks as Array<Record<string, any>>).some((task: Record<string, any>) => task.Function === "Damage") &&
+            isSummonEffect(effectId) &&
             !(result.tag ?? []).includes("召唤物")
         ) {
             ;(result.tag ??= []).push("召唤物")
@@ -709,153 +714,7 @@ export function resolveFieldCombatMetaImpl(
 
 /** 从召唤单位的数据链收集其 SkillEffects 伤害 ID。 */
 function buildSummonEffectIds(dm: ModuleContext["dm"]): ReadonlySet<number> {
-    const toTable = (name: string): Record<string, any> => (dm.getTable(name) as Record<string, any>) || {}
-    const monsters = toTable("Monster")
-    const mechanisms = toTable("MechanismSummon")
-    const battleChars = toTable("BattleChar")
-    const battleMonsters = toTable("BattleMonster")
-    const creatures = toTable("SkillCreature")
-    const skills = toTable("Skill")
-    const nodes = toTable("SkillNode")
-    const effects = toTable("SkillEffects")
-    const summonIds = new Set<number>()
-    const addId = (value: unknown) => {
-        const id = Number(value)
-        if (Number.isInteger(id)) summonIds.add(id)
-    }
-    for (const row of Object.values(monsters)) {
-        if (!row || typeof row !== "object") continue
-        const tags = Array.isArray(row.GamePlayTags) ? row.GamePlayTags : []
-        if (tags.includes("Player.Summon") || tags.includes("Player.RealSummon") || tags.includes("Mon.Summon")) addId(row.UnitId)
-    }
-    for (const row of Object.values(mechanisms)) {
-        if (row && typeof row === "object") addId(row.UnitId)
-    }
-    for (const row of Object.values(battleChars)) {
-        if (!row || typeof row !== "object") continue
-        for (const id of Array.isArray(row.SummonId) ? row.SummonId : []) addId(id)
-    }
-
-    const effectIds = new Set<number>()
-    const collectValues = (value: unknown) => {
-        if (Array.isArray(value)) {
-            for (const item of value) collectValues(item)
-            return
-        }
-        const id = Number(value)
-        if (Number.isInteger(id) && effects[String(id)]) effectIds.add(id)
-    }
-    for (const id of summonIds) {
-        const monster = monsters[String(id)] ?? mechanisms[String(id)]
-        if (monster?.BluePrintParams && typeof monster.BluePrintParams === "object") {
-            collectValues(monster.BluePrintParams.SkillEffectID)
-            collectValues(monster.BluePrintParams.SkillEffectId)
-            collectValues(monster.BluePrintParams.Grade6SkillEffectID)
-        }
-        const creature = creatures[String(id)] ?? creatures[id]
-        if (creature && typeof creature === "object" && !creature.AttachOwner) collectValues(creature.HitEnemy)
-        const battleMonster = battleMonsters[String(id)] ?? battleMonsters[id]
-        const queue = Array.isArray(battleMonster?.SkillList) ? [...battleMonster.SkillList] : []
-        const seenNodes = new Set<number>()
-        while (queue.length > 0) {
-            const skillId = Number(queue.shift())
-            const skillInfo = skills[String(skillId)] ?? skills[skillId]
-            const entry = unwrapSkillEntry(skillInfo)
-            if (!entry) continue
-            let nodeId = Number(entry.BeginNodeId)
-            while (Number.isInteger(nodeId) && nodeId > 0 && !seenNodes.has(nodeId)) {
-                seenNodes.add(nodeId)
-                const node = nodes[String(nodeId)] ?? nodes[nodeId]
-                if (!node || typeof node !== "object") break
-                collectValues(node.SkillNodeEffects)
-                const branches = Array.isArray(node.BranchNodeIds)
-                    ? node.BranchNodeIds
-                    : node.BranchNodeIds && typeof node.BranchNodeIds === "object"
-                      ? Object.values(node.BranchNodeIds)
-                      : []
-                for (const branch of branches) {
-                    const branchId = Number(branch)
-                    if (Number.isInteger(branchId) && branchId > 0 && !seenNodes.has(branchId)) queue.push(branchId)
-                }
-                nodeId = Number(node.NextNodeId)
-            }
-        }
-    }
-
-    // 真实召唤物的创建技能可能在描述中引用召唤物后续执行的伤害 effect，
-    // 但该 effect 不在创建技能自身的节点链上（例如战旗、云螭）。
-    const realSummonIds = new Set<number>()
-    for (const row of Object.values(monsters)) {
-        if (row && typeof row === "object" && Array.isArray(row.GamePlayTags) && row.GamePlayTags.includes("Player.RealSummon")) {
-            addId(row.UnitId)
-            realSummonIds.add(Number(row.UnitId))
-        }
-    }
-    const walkChain = (begin: unknown): { effects: Set<number>; units: Set<number> } => {
-        const effectsFound = new Set<number>()
-        const unitsFound = new Set<number>()
-        const queue = [Number(begin)]
-        const seen = new Set<number>()
-        while (queue.length > 0) {
-            const nodeId = queue.shift() as number
-            if (!Number.isInteger(nodeId) || nodeId <= 0 || seen.has(nodeId)) continue
-            seen.add(nodeId)
-            const node = nodes[String(nodeId)] ?? nodes[nodeId]
-            if (!node || typeof node !== "object") continue
-            const ids = Array.isArray(node.SkillNodeEffects) ? node.SkillNodeEffects : [node.SkillNodeEffects]
-            for (const effectId of ids) {
-                const eid = Number(effectId)
-                if (!Number.isInteger(eid)) continue
-                effectsFound.add(eid)
-                const effect = effects[String(eid)]
-                for (const task of Array.isArray(effect?.TaskEffects) ? effect.TaskEffects : []) {
-                    if (task?.Function === "CreateUnit") {
-                        const uid = Number(task.UnitId)
-                        if (Number.isInteger(uid)) unitsFound.add(uid)
-                    }
-                }
-            }
-            if (node.NextNodeId !== undefined) queue.push(Number(node.NextNodeId))
-            const branches = Array.isArray(node.BranchNodeIds)
-                ? node.BranchNodeIds
-                : node.BranchNodeIds && typeof node.BranchNodeIds === "object"
-                  ? Object.values(node.BranchNodeIds)
-                  : []
-            for (const branch of branches) queue.push(Number(branch))
-        }
-        return { effects: effectsFound, units: unitsFound }
-    }
-    const isOwnDamage = (effect: Record<string, any>): boolean => {
-        if (effect.SkillEffectSourceFlag === "RootSource") return true
-        return (Array.isArray(effect.TaskEffects) ? effect.TaskEffects : []).some(
-            (task: Record<string, any>) =>
-                task.Function === "Damage" &&
-                Array.isArray(task.DamageTag) &&
-                (task.DamageTag.includes("Weapon") || task.DamageTag.includes("Melee"))
-        )
-    }
-    for (const entryList of Object.values(skills)) {
-        const entry = unwrapSkillEntry(entryList)
-        if (!entry || typeof entry !== "object") continue
-        const chain = walkChain(entry.BeginNodeId)
-        if (![...chain.units].some(id => realSummonIds.has(id))) continue
-        for (const value of Array.isArray(entry.SkillDescValues) ? entry.SkillDescValues : []) {
-            if (typeof value !== "string") continue
-            for (const match of value.matchAll(/SkillEffects\[(\d+)\]/g)) {
-                const effectId = Number(match[1])
-                if (chain.effects.has(effectId)) continue
-                const effect = effects[String(effectId)]
-                if (!effect || typeof effect !== "object" || isOwnDamage(effect)) continue
-                if (
-                    (Array.isArray(effect.TaskEffects) ? effect.TaskEffects : []).some(
-                        (task: Record<string, any>) => task.Function === "Damage"
-                    )
-                )
-                    effectIds.add(effectId)
-            }
-        }
-    }
-    return effectIds
+    return new Set(dm.findSummonEffectIds())
 }
 
 function asArray(v: unknown): unknown[] {

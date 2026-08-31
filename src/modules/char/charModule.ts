@@ -500,7 +500,7 @@ export async function charModule(ctx: ModuleContext) {
 
             // 削韧/Boss削韧/tag（char 不含 HitStop 的延迟/卡肉——那是 weapon 专属，
             // 对齐老代码 char._resolve_field_combat_meta 只解析削韧/Boss削韧）
-            const meta = skillArtifacts.resolveFieldCombatMeta(String(descValue), skillEffectsTable(dm))
+            const meta = skillArtifacts.resolveFieldCombatMeta(String(descValue))
             if (meta.isDamage && meta.tag) item.tag = meta.tag
             if (meta.削韧) item.削韧 = meta.削韧
             if (meta.Boss削韧 !== undefined) item.Boss削韧 = meta.Boss削韧
@@ -515,9 +515,8 @@ export async function charModule(ctx: ModuleContext) {
     /** 对齐旧 Python：字段直接引用的 SkillNode 优先，随后按 SkillDescGroups 的段落节点补全。 */
     async function applySkillTiming(skillInfo: Record<string, any>, fields: Array<Record<string, any>>): Promise<void> {
         if (fields.length === 0) return
-        const nodeData = (dm.getTable("SkillNode") as Record<string, any>) || {}
         const getNode = (id: unknown): Record<string, any> | null => {
-            const node = nodeData[String(id)] ?? nodeData[id as number]
+            const node = dm.getTableItem("SkillNode", String(id)) as Record<string, any> | undefined
             return node && typeof node === "object" ? node : null
         }
         const timing = async (beginNodeId: unknown): Promise<{ cancel: number; combo: number }> => {
@@ -898,9 +897,7 @@ function resourceNameKey(dm: ModuleContext["dm"], resourceId: number): string | 
 
 /** 技能条目：skill[skillId][0]["0"]（兼容数组/对象 grade） */
 function getSkillEntry(dm: ModuleContext["dm"], skillId: number): Record<string, any> | null {
-    const skill = dm.getTable("Skill") as Record<string, any> | undefined
-    if (!skill) return null
-    const info = skill[String(skillId)] ?? skill[skillId]
+    const info = dm.getTableItem("Skill", skillId) as any
     if (!Array.isArray(info) || info.length === 0) return null
     const gradeTable = info[0]
     if (!gradeTable || typeof gradeTable !== "object") return null
@@ -910,14 +907,8 @@ function getSkillEntry(dm: ModuleContext["dm"], skillId: number): Record<string,
 
 /** 技能等级数 */
 function skillInfoLevels(dm: ModuleContext["dm"], skillId: number): number {
-    const skill = dm.getTable("Skill") as Record<string, any> | undefined
-    const info = skill?.[String(skillId)] ?? skill?.[skillId]
+    const info = dm.getTableItem("Skill", skillId) as any
     return Array.isArray(info) ? info.length : 1
-}
-
-/** 技能字段的 SkillEffects 表 */
-function skillEffectsTable(dm: ModuleContext["dm"]): Record<string, any> {
-    return (dm.getTable("SkillEffects") as Record<string, any>) || {}
 }
 
 /** SkillDescGroups 使用 1-based 字段索引；返回该字段所属段名的 TextMap key。 */
@@ -954,11 +945,10 @@ function generateSkillBehavior(
     inheritedDescValues?: unknown[],
     textmap?: ModuleContext["textmap"]
 ): string {
-    const _skillData = (dm.getTable("Skill") as Record<string, any>) || {}
-    const nodeData = (dm.getTable("SkillNode") as Record<string, any>) || {}
-    const effectData = (dm.getTable("SkillEffects") as Record<string, any>) || {}
-    const buffData = (dm.getTable("Buff") as Record<string, any>) || {}
-    const passiveData = (dm.getTable("PassiveEffect") as Record<string, any>) || {}
+    const nodeData = (id: number | string) => dm.getTableItem("SkillNode", id) as Record<string, any> | undefined
+    const effectData = (id: number | string) => dm.getTableItem("SkillEffects", id) as Record<string, any> | undefined
+    const buffData = (id: number | string) => dm.getTableItem("Buff", id) as Record<string, any> | undefined
+    const passiveData = (id: number | string) => dm.getTableItem("PassiveEffect", id) as Record<string, any> | undefined
     const attrConfig = () => (dm.getTable("AttrConfig") as Record<string, any>) || {}
     let bpAddBuff = BP_ADD_BUFF_CACHE.get(dm.root)
     if (!bpAddBuff) {
@@ -1037,7 +1027,7 @@ function generateSkillBehavior(
 
     const buffSummary = (buffId: unknown): string => {
         const id = String(buffId ?? "")
-        const buff = buffData[id]
+        const buff = buffData(id)
         if (!buff || typeof buff !== "object") return `增益(${id})`
         const bits: string[] = []
         for (const attr of Array.isArray(buff.AddAttrs) ? buff.AddAttrs : []) {
@@ -1086,7 +1076,7 @@ function generateSkillBehavior(
         const key = String(effectId)
         if (seenEffects.has(key)) return
         seenEffects.add(key)
-        const effect = effectData[key]
+        const effect = effectData(key)
         if (!effect || typeof effect !== "object") return
         for (const task of Array.isArray(effect.TaskEffects) ? effect.TaskEffects : []) {
             if (!task || typeof task !== "object") continue
@@ -1129,7 +1119,7 @@ function generateSkillBehavior(
                 const functionName = String(task.FunctionName ?? "")
                 let summary = `触发被动功能[${PASSIVE_FUNCTION_CN[functionName] ?? functionName}]`
                 const passiveId = task.PassiveEffectId
-                const passive = passiveId !== undefined ? passiveData[String(passiveId)] : undefined
+                const passive = passiveId !== undefined ? passiveData(String(passiveId)) : undefined
                 if (passive && typeof passive === "object") {
                     const bpPath = String(passive.BPPath ?? "")
                     const bpName = bpPath.split("/").pop()?.split(".")[0] ?? ""
@@ -1169,7 +1159,7 @@ function generateSkillBehavior(
         const inner = getSkillEntry(dm, Number(innerSkillId))
         if (!inner) return
         for (const passiveId of Array.isArray(inner.PassiveEffects) ? inner.PassiveEffects : []) {
-            const passive = passiveData[String(passiveId)]
+            const passive = passiveData(String(passiveId))
             if (!passive || typeof passive !== "object") continue
             const path = String(passive.BPPath ?? "")
             const bpName = path.split("/").pop()?.split(".")[0] ?? ""
@@ -1180,7 +1170,7 @@ function generateSkillBehavior(
         let nodeId = inner.BeginNodeId
         while (nodeId && !seenNodes.has(String(nodeId)) && seenNodes.size < 8) {
             seenNodes.add(String(nodeId))
-            const node = nodeData[String(nodeId)]
+            const node = nodeData(String(nodeId))
             if (!node || typeof node !== "object") break
             const effects = Array.isArray(node.SkillNodeEffects) ? node.SkillNodeEffects : [node.SkillNodeEffects]
             for (const effectId of effects) walkEffect(effectId)
@@ -1190,7 +1180,7 @@ function generateSkillBehavior(
                 let branchNodeId = branchId
                 while (branchNodeId && !seenNodes.has(String(branchNodeId)) && seenNodes.size < 64) {
                     seenNodes.add(String(branchNodeId))
-                    const branchNode = nodeData[String(branchNodeId)]
+                    const branchNode = nodeData(String(branchNodeId))
                     if (!branchNode || typeof branchNode !== "object") break
                     const branchEffects = Array.isArray(branchNode.SkillNodeEffects)
                         ? branchNode.SkillNodeEffects

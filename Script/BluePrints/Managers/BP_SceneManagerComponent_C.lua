@@ -45,7 +45,6 @@ function BP_SceneManagerComponent_C:Initialize(Initializer)
   self.IsInLoading = false
   self.NowLoadResourceHandle = nil
   self.CurSceneGuideEids = {}
-  self.NearestPetGuideEid = 0
   self.IsSceneGuideShow = true
   self.LevelLoader = nil
   self.SpecialMonsterInfo = {}
@@ -805,14 +804,8 @@ function BP_SceneManagerComponent_C:UpdateSceneGuideIcon(TargetEid, TargetActor,
   end
   if "Add" == OpType or "Modify" == OpType then
     DebugPrint("LHQ_UpdateSceneGuideIcon Add or Modify Guide:", TargetEid, "IsPlayerEid:", IsPlayerEid, "IsDataStruct", IsDataStruct)
-    if UKismetSystemLibrary.IsValid(TargetActor) and TargetActor.IsPetNpc and TargetActor:IsPetNpc() then
-      self.NearestPetGuideEid = TargetEid
-    end
   elseif "Delete" == OpType then
     DebugPrint("LHQ_UpdateSceneGuideIcon Delete Guide:", TargetEid, "IsPlayerEid:", IsPlayerEid, "IsDataStruct", IsDataStruct)
-    if self.NearestPetGuideEid == TargetEid then
-      self.NearestPetGuideEid = 0
-    end
     if self:IsExistInGuideEidArrays(TargetEid) then
       return
     end

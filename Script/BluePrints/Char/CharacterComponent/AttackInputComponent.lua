@@ -117,19 +117,6 @@ function Component:SupportSkill()
     local BattlePet = self:GetBattlePet()
     Battle(self):TriggerBattleEvent(BattleEventName.AfterSupportSkill, self)
     EventManager:FireEvent(EventID.OnTheaterPerform, BattlePet.PetId)
-    if BattlePet then
-      local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
-      local SceneMgrComponent = GameInstance:GetSceneManager()
-      if IsValid(SceneMgrComponent) and SceneMgrComponent.NearestPetGuideEid and SceneMgrComponent.NearestPetGuideEid > 0 then
-        local TargetEid = SceneMgrComponent.NearestPetGuideEid
-        local TargetActor = Battle(self):GetEntity(TargetEid)
-        if IsValid(TargetActor) then
-          local TargetLocation = TargetActor:K2_GetActorLocation()
-          local TargetRotation = TargetActor:K2_GetActorRotation()
-          self:K2_TeleportTo(TargetLocation, TargetRotation, false, nil, false)
-        end
-      end
-    end
   end
 end
 

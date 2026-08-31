@@ -26,14 +26,18 @@ import { extraExcelWeaponModule } from "./modules/extraExcelWeapon/extraExcelWea
 import { fishingSpotModule, fishModule } from "./modules/fish/fishModule.ts"
 import { forgeLevelQuestModule } from "./modules/forgeLevelQuest/forgeLevelQuestModule.ts"
 import { hardBossModule } from "./modules/hardBoss/hardBossModule.ts"
-import { ironTicketModule } from "./modules/ironTicket/ironTicketModule.ts"
 import { impressionShopModule } from "./modules/impressionShop/impressionShopModule.ts"
+import { ironTicketModule } from "./modules/ironTicket/ironTicketModule.ts"
 import { mountModule } from "./modules/mount/mountModule.ts"
 import { musicModule, musicScoreModule } from "./modules/music/musicModule.ts"
+import { petEntryModule } from "./modules/pet/petEntryModule.ts"
+import { questChainModule } from "./modules/questChain/questChainModule.ts"
+import { raidBuffModule } from "./modules/raidBuff/raidBuffModule.ts"
 import { regionPointModule } from "./modules/regionPoint/regionPointModule.ts"
 import { regionReputationModule } from "./modules/regionReputation/regionReputationModule.ts"
 import { optRewardModule, rewardModule } from "./modules/reward/rewardModule.ts"
-import { petEntryModule } from "./modules/pet/petEntryModule.ts"
+import { rewardViewModule } from "./modules/rewardView/rewardViewModule.ts"
+import { robotEquipModule } from "./modules/robotEquip/robotEquipModule.ts"
 import {
     hairModule,
     headFrameModule,
@@ -42,8 +46,9 @@ import {
     weaponSkinModule,
 } from "./modules/simple/simpleModules.ts"
 import { skillModule } from "./modules/skill/skillModule.ts"
-import { titleModule } from "./modules/title/titleModule.ts"
+import { skinModule } from "./modules/skin/skinModule.ts"
 import { soloTreasureGamePlayModule, soloTreasureModule } from "./modules/soloTreasure/soloTreasureModule.ts"
+import { titleModule } from "./modules/title/titleModule.ts"
 import {
     treasureHuntProgressModule,
     treasureHuntRepeatDungeonModule,
@@ -74,6 +79,9 @@ const REGISTRY: ModuleReg[] = [
     { name: "walnut", deps: [], outputs: true, build: ctx => ({ Walnut: walnutModule(ctx) }) },
     { name: "reward", deps: [], outputs: true, build: ctx => ({ Reward: rewardModule(ctx) }) },
     { name: "optreward", deps: [], outputs: true, build: ctx => ({ OptReward: optRewardModule(ctx) }) },
+    { name: "rewardview", deps: [], outputs: true, build: ctx => ({ RewardView: rewardViewModule(ctx) }) },
+    { name: "skin", deps: [], outputs: true, build: ctx => ({ Skin: skinModule(ctx) }) },
+    { name: "questchain", deps: [], outputs: true, build: ctx => ({ QuestChain: questChainModule(ctx) }) },
     { name: "weaponaccessory", deps: [], outputs: true, build: ctx => ({ WeaponAccessory: weaponAccessoryModule(ctx) }) },
     { name: "weaponskin", deps: [], outputs: true, build: ctx => ({ WeaponSkin: weaponSkinModule(ctx) }) },
     { name: "hair", deps: [], outputs: true, build: ctx => ({ Hair: hairModule(ctx) }) },
@@ -110,6 +118,8 @@ const REGISTRY: ModuleReg[] = [
     { name: "title", deps: [], outputs: true, build: ctx => ({ Title: titleModule(ctx) }) },
     { name: "event", deps: [], outputs: true, build: ctx => ({ Event: eventModule(ctx) }) },
     { name: "impressionshop", deps: [], outputs: true, build: ctx => ({ ImpressionShop: impressionShopModule(ctx) }) },
+    { name: "robotequip", deps: [], outputs: true, build: ctx => ({ RobotEquip: robotEquipModule(ctx) }) },
+    { name: "raidbuff", deps: [], outputs: true, build: ctx => ({ RaidBuff: raidBuffModule(ctx) }) },
 ]
 
 interface CliArgs {

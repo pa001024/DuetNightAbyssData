@@ -143,10 +143,11 @@ export async function weaponModule(ctx: ModuleContext) {
     const hyperSkillTreeData = () => (dm.getTable("HyperWeaponSkillTree") as Record<string, any>) || {}
     const attrConfig = () => (dm.getTable("AttrConfig") as Record<string, any>) || {}
     const attributeData = () => (dm.getTable("Attribute") as Record<string, any>) || {}
-    const skillData = () => (dm.getTable("Skill") as Record<string, any>) || {}
-    const skillEffectsData = () => (dm.getTable("SkillEffects") as Record<string, any>) || {}
-    const buffData = () => (dm.getTable("Buff") as Record<string, any>) || {}
-    const skillNodeData = () => (dm.getTable("SkillNode") as Record<string, any>) || {}
+    const skillData = (id: number | string) => dm.getTableItem("Skill", id) as any
+    const skillEffectsData = (id: number | string) => dm.getTableItem("SkillEffects", id) as any
+    const buffData = (id?: number | string) =>
+        id === undefined ? (dm.getTable("Buff") as Record<string, any>) || {} : (dm.getTableItem("Buff", id) as any)
+    const skillNodeData = (id: number | string) => dm.getTableItem("SkillNode", id) as any
 
     const _getWeapon = (id: number): any => weaponData()[String(id)] ?? weaponData()[id]
     const getBattleWeapon = (id: number): any => battleWeaponData()[String(id)] ?? battleWeaponData()[id]
@@ -305,7 +306,7 @@ export async function weaponModule(ctx: ModuleContext) {
             for (const parameter of Array.isArray(tree.SkillDescParameter) ? tree.SkillDescParameter : []) {
                 const match = String(parameter).match(/Buff\[(\d+)\]/)
                 if (!match) continue
-                const buff = buffData()[match[1]]
+                const buff = buffData(match[1])
                 for (const attr of Array.isArray(buff?.AddAttrs) ? buff.AddAttrs : []) {
                     const attrName = String(attr?.AttrName ?? "")
                     const value = Number(attr?.Rate ?? attr?.Value)
@@ -377,7 +378,7 @@ export async function weaponModule(ctx: ModuleContext) {
             if (descKey === null || descKey === undefined || descValue === null || descValue === undefined) continue
 
             const computed = skillArtifacts.calcSkillDesc(String(descValue), 1)
-            const meta = resolveFieldCombatMetaImpl(String(descValue), skillEffectsData())
+            const meta = resolveFieldCombatMetaImpl(String(descValue), skillEffectsData)
 
             const item: Record<string, any> = {
                 名称: T(String(descKey)),
@@ -409,7 +410,7 @@ export async function weaponModule(ctx: ModuleContext) {
         const visited = new Set<number>()
         let current = beginNodeId
         while (current && !visited.has(current) && nodeChain.length < Math.max(fields.length, 1)) {
-            const node = skillNodeData()[String(current)] ?? skillNodeData()[current]
+            const node = skillNodeData(String(current))
             if (!node) break
             nodeChain.push(node)
             visited.add(current)
@@ -442,7 +443,7 @@ export async function weaponModule(ctx: ModuleContext) {
         const loopIntervalMap = collectLoopIntervalMap(weaponSkillList, weaponId)
 
         for (const skillId of weaponSkillList) {
-            const skillInfo = skillData()[String(skillId)] ?? skillData()[skillId]
+            const skillInfo = skillData(skillId)
             if (!Array.isArray(skillInfo) || skillInfo.length === 0) continue
             // Lua 形状: skill[skillId][0][grade] — grade 表键 "0"/"1"...，grade 0 是技能条目
             // (对齐 char 处理器 _process_single_skill 的 skill_info[0][0])
@@ -504,18 +505,21 @@ export async function weaponModule(ctx: ModuleContext) {
         const map = new Map<number, number>()
         const targetIds = new Set(weaponSkillList.map(String))
         targetIds.add(String(weaponId))
-        for (const effect of Object.values(skillEffectsData())) {
-            if (!effect || typeof effect !== "object") continue
-            for (const task of effect.TaskEffects ?? []) {
-                if (!task || typeof task !== "object") continue
-                if (!["StartLoopShoot", "UpdateLoopShoot"].includes(task.Function)) continue
-                const loopShootId = task.LoopShootId
-                if (!targetIds.has(String(loopShootId))) continue
-                const interval = task.LoopInterval
-                if (typeof interval === "number") {
-                    const r = roundValue(interval)
-                    const cur = map.get(loopShootId)
-                    map.set(loopShootId, cur === undefined ? r : Math.min(cur, r))
+        for (const targetId of targetIds) {
+            for (const effectId of dm.findTableKeysByTaskField("SkillEffects", "LoopShootId", Number(targetId))) {
+                const effect = skillEffectsData(effectId) as Record<string, any> | undefined
+                if (!effect || typeof effect !== "object") continue
+                for (const task of effect.TaskEffects ?? []) {
+                    if (!task || typeof task !== "object") continue
+                    if (!["StartLoopShoot", "UpdateLoopShoot"].includes(task.Function)) continue
+                    const loopShootId = task.LoopShootId
+                    if (!targetIds.has(String(loopShootId))) continue
+                    const interval = task.LoopInterval
+                    if (typeof interval === "number") {
+                        const r = roundValue(interval)
+                        const cur = map.get(loopShootId)
+                        map.set(loopShootId, cur === undefined ? r : Math.min(cur, r))
+                    }
                 }
             }
         }
@@ -525,13 +529,13 @@ export async function weaponModule(ctx: ModuleContext) {
     async function extractReload(skillEntry: Record<string, any>): Promise<number> {
         const begin = skillEntry.BeginNodeId
         if (!begin) return 0
-        let node = skillNodeData()[String(begin)] ?? skillNodeData()[begin]
+        let node = skillNodeData(String(begin))
         let steps = 0
         let reload = 0
         while (node && steps < 8) {
             const meta = await assetReader.animMetaForNode(node)
             if (meta.skillEffectLink) reload = Math.max(reload, meta.skillEffectLink)
-            node = node.NextNodeId ? (skillNodeData()[String(node.NextNodeId)] ?? skillNodeData()[node.NextNodeId]) : null
+            node = node.NextNodeId ? skillNodeData(String(node.NextNodeId)) : null
             steps++
         }
         return roundValue(reload)
@@ -540,13 +544,13 @@ export async function weaponModule(ctx: ModuleContext) {
     async function extractShootingInterval(skillEntry: Record<string, any>): Promise<number> {
         const begin = skillEntry.BeginNodeId
         if (!begin) return 0
-        let node = skillNodeData()[String(begin)] ?? skillNodeData()[begin]
+        let node = skillNodeData(String(begin))
         let steps = 0
         let interval = 0
         while (node && steps < 8) {
             const meta = await assetReader.animMetaForNode(node)
             interval = Math.max(interval, meta.shootingInterval)
-            node = node.NextNodeId ? (skillNodeData()[String(node.NextNodeId)] ?? skillNodeData()[node.NextNodeId]) : null
+            node = node.NextNodeId ? skillNodeData(String(node.NextNodeId)) : null
             steps++
         }
         return interval

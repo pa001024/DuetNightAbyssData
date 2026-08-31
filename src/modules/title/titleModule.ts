@@ -1,7 +1,7 @@
 /** Title module - 称号及获取来源。 */
 
 import type { ModuleContext } from "../../core/Graph.ts"
-import { LTemplate, T, seq, type VNodeTree } from "../../i18n/vnode.ts"
+import { LTemplate, seq, T, type VNodeTree } from "../../i18n/vnode.ts"
 
 function table(ctx: ModuleContext, name: string): Record<string, any> {
     const value = ctx.dm.getTable(name)
@@ -61,7 +61,8 @@ export function titleModule(ctx: ModuleContext): VNodeTree {
         if (item && typeof item === "object") addRewards("Quest", id, (item as Record<string, any>).QuestChainReward)
     }
     for (const item of Object.values(table(ctx, "TheaterTask"))) {
-        if (item && typeof item === "object") addRewards("TheaterTask", (item as Record<string, any>).TheaterTaskID, (item as Record<string, any>).RewardId)
+        if (item && typeof item === "object")
+            addRewards("TheaterTask", (item as Record<string, any>).TheaterTaskID, (item as Record<string, any>).RewardId)
     }
 
     const result: VNodeTree[] = []

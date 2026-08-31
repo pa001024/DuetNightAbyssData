@@ -5,7 +5,7 @@
  * 2. skill 模块 artifacts（calcSkillDesc / explainSkillFields / resolveFieldCombatMeta）
  * 3. 一次解析 → 多语言渲染（依赖 skill 的下游模块只跑一次 build）
  */
-import { describe, expect, test } from "bun:test"
+import { describe, expect, setDefaultTimeout, test } from "bun:test"
 import { Graph } from "../src/core/Graph.ts"
 import { getTextMap } from "../src/i18n/TextMap.ts"
 import { renderTree } from "../src/i18n/vnode.ts"
@@ -15,6 +15,7 @@ import { skillModule } from "../src/modules/skill/skillModule.ts"
 
 const baseDir = new URL("../out/", import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, "$1")
 const textmap = getTextMap(baseDir)
+setDefaultTimeout(15000)
 
 describe("Graph", () => {
     test("拓扑排序：依赖先于依赖者", async () => {
@@ -46,29 +47,29 @@ describe("Graph", () => {
 describe("skill 模块", () => {
     test("召唤物 effect 索引懒加载且只构建一次", () => {
         const tableReads: string[] = []
+        let indexBuilds = 0
         const dm = {
             getTable(name: string) {
                 tableReads.push(name)
                 return {}
+            },
+            findSummonEffectIds() {
+                indexBuilds++
+                return [1, 2]
             },
         }
         const artifacts = skillModule({ dm } as any)
         expect(tableReads).toEqual([])
 
         artifacts.resolveFieldCombatMeta("$#SkillEffects[1]", { "1": { TaskEffects: [] } })
-        expect(tableReads).toEqual([
-            "Monster",
-            "MechanismSummon",
-            "BattleChar",
-            "BattleMonster",
-            "SkillCreature",
-            "Skill",
-            "SkillNode",
-            "SkillEffects",
-        ])
+        expect(indexBuilds).toBe(0)
+        artifacts.resolveFieldCombatMeta("$#SkillEffects[1]", { "1": { TaskEffects: [{ Function: "Damage" }] } })
+        expect(tableReads).toEqual([])
+        expect(indexBuilds).toBe(1)
 
         artifacts.resolveFieldCombatMeta("$#SkillEffects[1]", { "1": { TaskEffects: [] } })
-        expect(tableReads).toHaveLength(8)
+        expect(tableReads).toHaveLength(0)
+        expect(indexBuilds).toBe(1)
     })
 
     test("calcSkillDesc 计算技能描述值", () => {

@@ -46,7 +46,7 @@ export class LuaDataManager {
         const L = lauxlib.luaL_newstate()
         lualib.luaL_openlibs(L)
 
-        // 预注册常见热表（缓存到 package.loaded，避免首次访问时重新读文件+执行大表）
+        // 仅注册常见热表的 loader；文件内容在真正 require/访问时才读取。
         const datasNames = [
             "Skill",
             "SkillGrow",
@@ -213,6 +213,57 @@ export class LuaDataManager {
         lua.lua_pop(L, 3) // value + table + DataMgr
         if (result !== undefined) this.jsCache.set(cacheKey, result)
         return result
+    }
+
+    /** 在 Lua VM 内按嵌套字段反向查找顶层键，只返回匹配键，不物化整张表。 */
+    findTableKeysByPath(name: string, path: Array<number | string>, expected: unknown): Array<number | string> {
+        const L = this.ensureState()
+        lua.lua_getglobal(L, "__find_keys_by_path")
+        lua.lua_pushstring(L, to_luastring(name))
+        this.pushJsValue(L, path)
+        this.pushJsValue(L, expected)
+        if (lua.lua_pcall(L, 3, 1, 0) !== 0) {
+            const message = to_jsstring(lua.lua_tostring(L, -1)!)
+            lua.lua_pop(L, 1)
+            throw new Error(`按路径查询 Lua 表失败: ${message}`)
+        }
+        const result = luaValueToJs(L, -1)
+        lua.lua_pop(L, 1)
+        if (!Array.isArray(result)) return []
+        return result.filter((value): value is number | string => typeof value === "number" || typeof value === "string")
+    }
+
+    /** 在含 TaskEffects 的表中按任务字段筛选顶层键，避免把整张效果表读回 JS。 */
+    findTableKeysByTaskField(name: string, field: string, expected: unknown): Array<number | string> {
+        const L = this.ensureState()
+        lua.lua_getglobal(L, "__find_keys_by_task_field")
+        lua.lua_pushstring(L, to_luastring(name))
+        lua.lua_pushstring(L, to_luastring(field))
+        this.pushJsValue(L, expected)
+        if (lua.lua_pcall(L, 3, 1, 0) !== 0) {
+            const message = to_jsstring(lua.lua_tostring(L, -1)!)
+            lua.lua_pop(L, 1)
+            throw new Error(`按任务字段查询 Lua 表失败: ${message}`)
+        }
+        const result = luaValueToJs(L, -1)
+        lua.lua_pop(L, 1)
+        if (!Array.isArray(result)) return []
+        return result.filter((value): value is number | string => typeof value === "number" || typeof value === "string")
+    }
+
+    /** 在 Lua VM 内构建召唤物伤害 effect 索引，只把 ID 数组返回到 TS。 */
+    findSummonEffectIds(): number[] {
+        const L = this.ensureState()
+        lua.lua_getglobal(L, "__find_summon_effect_ids")
+        if (lua.lua_pcall(L, 0, 1, 0) !== 0) {
+            const message = to_jsstring(lua.lua_tostring(L, -1)!)
+            lua.lua_pop(L, 1)
+            throw new Error(`查询召唤物效果索引失败: ${message}`)
+        }
+        const result = luaValueToJs(L, -1)
+        lua.lua_pop(L, 1)
+        if (!Array.isArray(result)) return []
+        return result.filter((value): value is number => typeof value === "number" && Number.isInteger(value))
     }
 
     /** 已加载的 Datas 表名（供调试/统计） */

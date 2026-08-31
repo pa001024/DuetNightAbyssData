@@ -42,9 +42,9 @@ export function petEntryModule(ctx: ModuleContext): VNodeTree {
         const battlePet = battlePets[String(item.BattlePetID)] ?? battlePets[item.BattlePetID]
         const descKey = battlePet?.PassiveEffectDesc
         const params = Array.isArray(battlePet?.PassiveEffectDescParameter)
-            ? battlePet.PassiveEffectDescParameter
-                  .filter((value: unknown): value is string => typeof value === "string")
-                  .map((value: string) => formatValue(ctx.dm.calcSkillDesc(value, Number(item.BattlePetLevel ?? 1))))
+            ? battlePet.PassiveEffectDescParameter.filter((value: unknown): value is string => typeof value === "string").map(
+                  (value: string) => formatValue(ctx.dm.calcSkillDesc(value, Number(item.BattlePetLevel ?? 1)))
+              )
             : []
         if (descKey) row.desc = LTemplate(String(descKey), params)
         for (const key of Object.keys(row)) {

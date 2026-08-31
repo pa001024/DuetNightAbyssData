@@ -11,7 +11,8 @@ function table(ctx: ModuleContext, name: string): Record<string, any> {
 function lowerFirstKeys(value: unknown): unknown {
     if (!value || typeof value !== "object" || Array.isArray(value)) return value
     const result: Record<string, unknown> = {}
-    for (const [key, item] of Object.entries(value as Record<string, unknown>)) result[key ? key[0].toLowerCase() + key.slice(1) : key] = item
+    for (const [key, item] of Object.entries(value as Record<string, unknown>))
+        result[key ? key[0].toLowerCase() + key.slice(1) : key] = item
     return result
 }
 

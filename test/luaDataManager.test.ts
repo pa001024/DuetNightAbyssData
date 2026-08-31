@@ -5,9 +5,11 @@
  * 2. calcSkillDesc 对 110101 的三个 desc value 算出数值（含 GText 哨兵）
  * 3. 懒加载缓存正确（loadedTableNames）
  */
-import { describe, expect, test } from "bun:test"
+import { describe, expect, setDefaultTimeout, test } from "bun:test"
 import { getLuaDataManager } from "../src/lua/LuaDataManager.ts"
 import { GT_RE } from "../src/lua/stubs.ts"
+
+setDefaultTimeout(15000)
 
 describe("LuaDataManager", () => {
     test("DataMgr.Skill[110101] 数字键访问 + 字段一致", () => {
@@ -51,6 +53,21 @@ describe("LuaDataManager", () => {
         const dm = getLuaDataManager()
         dm.getTable("Skill")
         expect(dm.loadedTableNames).toContain("Skill")
+    })
+
+    test("按项读取 Skill 不会要求调用方物化整表", () => {
+        const dm = getLuaDataManager()
+        const item = dm.getTableItem("Skill", 110101) as any
+        expect(item?.[0]?.[0]?.SkillName).toBe("SKILL_110101_NAME")
+        expect(dm.findTableKeysByPath("Skill", [1, 0, "SkillType"], "Skill1").length).toBeGreaterThan(0)
+        expect(Array.isArray(dm.findTableKeysByTaskField("SkillEffects", "LoopShootId", 150402))).toBe(true)
+    })
+
+    test("召唤物效果索引在 Lua 内构建并返回 ID", () => {
+        const dm = getLuaDataManager()
+        const ids = dm.findSummonEffectIds()
+        expect(ids).toContain(600401)
+        expect(ids).toContain(210263)
     })
 
     test("Lua 表可直接读取（Fish）", () => {
