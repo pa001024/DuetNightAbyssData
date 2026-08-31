@@ -256,6 +256,8 @@ class CharProcessor(BaseProcessor):
             del processed["第七溯源消耗"]
         if not processed.get("同律武器"):
             processed.pop("同律武器", None)
+        if not processed.get("额外精通"):
+            del processed["额外精通"]
         for field in [
             "出生地",
             "生日",

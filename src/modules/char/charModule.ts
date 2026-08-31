@@ -723,6 +723,7 @@ export async function charModule(ctx: ModuleContext) {
         }
         if (!Object.keys(processed.加成 ?? {}).length) delete processed.加成
         if (!(processed.标签 as VNodeTree[])?.length) delete processed.标签
+        if (!(processed.额外精通 as string[])?.length) delete processed.额外精通
 
         items.push(processed)
     }

@@ -31,6 +31,7 @@ import { impressionShopModule } from "./modules/impressionShop/impressionShopMod
 import { ironTicketModule } from "./modules/ironTicket/ironTicketModule.ts"
 import { modModule } from "./modules/mod/modModule.ts"
 import { monsterModule } from "./modules/monster/monsterModule.ts"
+import { monsterStrongAffixesModule } from "./modules/monsterStrongAffixes/monsterStrongAffixesModule.ts"
 import { mountModule } from "./modules/mount/mountModule.ts"
 import { musicModule, musicScoreModule } from "./modules/music/musicModule.ts"
 import { petEntryModule } from "./modules/pet/petEntryModule.ts"
@@ -96,6 +97,7 @@ const REGISTRY: ModuleReg[] = [
     { name: "mount", deps: [], outputs: true, build: ctx => ({ Mount: mountModule(ctx) }) },
     { name: "mod", deps: ["skill"], outputs: true, build: ctx => ({ Mod: modModule(ctx) }) },
     { name: "monster", deps: [], outputs: true, build: ctx => ({ Monster: monsterModule(ctx) }) },
+    { name: "monsterstrongaffixes", deps: [], outputs: true, build: ctx => ({ MonsterStrongAffixes: monsterStrongAffixesModule(ctx) }) },
     { name: "fish", deps: [], outputs: true, build: ctx => ({ Fish: fishModule(ctx) }) },
     { name: "fishingspot", deps: [], outputs: true, build: ctx => ({ FishingSpot: fishingSpotModule(ctx) }) },
     { name: "music", deps: [], outputs: true, build: ctx => ({ Music: musicModule(ctx) }) },
