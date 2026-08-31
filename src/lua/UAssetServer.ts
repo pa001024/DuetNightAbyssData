@@ -15,6 +15,7 @@
 import { type ChildProcess, spawn } from "node:child_process"
 import { existsSync, readFileSync } from "node:fs"
 import { join } from "node:path"
+import { closeUAssetCache as closeCache, getUAssetCache, type UAssetCache } from "./UAssetCache.ts"
 
 // import.meta.dir 在 bun 下是 src/lua 的绝对路径（Windows 无前导盘符问题）
 const PROJECT_ROOT = join(import.meta.dir, "..", "..")
@@ -78,29 +79,37 @@ export function getUassetExe(): string | null {
     }
 }
 
-/** uasset 绝对路径 → FModel 包路径（相对 Exports 根、正斜杠、去 .uasset） */
+/** 资产绝对路径 → FModel 包路径（相对 Exports 根、正斜杠、去 .uasset/.umap） */
 export function packagePathFor(uassetFile: string, exportsRoot: string): string {
     try {
         const rel = uassetFile.replace(/\\/g, "/").split(`${exportsRoot.replace(/\\/g, "/")}/`)[1]
-        if (rel) return rel.replace(/\.uasset$/i, "")
+        if (rel) return rel.replace(/\.(?:uasset|umap)$/i, "")
     } catch {
         /* fall through */
     }
-    return uassetFile.replace(/\\/g, "/").replace(/\.uasset$/i, "")
+    return uassetFile.replace(/\\/g, "/").replace(/\.(?:uasset|umap)$/i, "")
 }
 
 export class UAssetServer {
     private proc: ChildProcess | null = null
     private buffer = ""
+    private readonly cache: UAssetCache
 
     constructor(
         private exe: string = getUassetExe() ?? "",
-        private mount = "EM/Content"
+        private mount = "EM/Content",
+        cache: UAssetCache = getUAssetCache()
     ) {
-        if (!exe || !existsSync(exe)) throw new Error(`找不到 UAssetCLI.exe（tools/UAssetCLI/UAssetCLI.exe）: ${exe}`)
+        this.cache = cache
     }
 
     start(): void {
+        // 进程只在缓存未命中、真正需要解析资产时启动。
+    }
+
+    private ensureProcess(): ChildProcess {
+        if (this.proc && this.proc.exitCode === null) return this.proc
+        if (!this.exe || !existsSync(this.exe)) throw new Error(`找不到 UAssetCLI.exe（tools/UAssetCLI/UAssetCLI.exe）: ${this.exe}`)
         this.proc = spawn(this.exe, ["server"], {
             stdio: ["pipe", "pipe", "pipe"],
             windowsHide: true,
@@ -108,14 +117,12 @@ export class UAssetServer {
         this.proc.stderr?.on("data", () => {
             /* 忽略 stderr（调试时可打开） */
         })
+        return this.proc
     }
 
     /** 发送一行 JSON 命令，读一行 JSON 响应（按行缓冲解析） */
     private requestRaw(cmd: Record<string, unknown>): Promise<Record<string, unknown>> {
-        if (!this.proc || this.proc.exitCode !== null) {
-            return Promise.reject(new Error("UAssetCLI server 未运行"))
-        }
-        const proc = this.proc
+        const proc = this.ensureProcess()
         const writeOk = proc.stdin?.write(`${JSON.stringify(cmd)}\n`)
         if (!writeOk) return Promise.reject(new Error("UAssetCLI stdin 写入失败"))
 
@@ -150,6 +157,8 @@ export class UAssetServer {
                 if (resp.ok) return resp
                 if (attempt >= retries - 1) return resp
             } catch {
+                if (!this.exe || !existsSync(this.exe))
+                    throw new Error(`找不到 UAssetCLI.exe（tools/UAssetCLI/UAssetCLI.exe）: ${this.exe}`)
                 if (attempt >= retries - 1) throw new Error(`UAssetCLI 请求失败: ${cmd.cmd}`)
             }
             await sleep(50 * 2 ** attempt)
@@ -159,15 +168,20 @@ export class UAssetServer {
 
     /** fmodel：导出单个 uasset 为 FModel 数组格式；失败返回 null */
     async fmodel(uassetFile: string, exportsRoot: string, mount?: string): Promise<unknown[] | null> {
-        const resp = await this.request({
-            cmd: "fmodel",
-            path: uassetFile,
-            package: packagePathFor(uassetFile, exportsRoot),
-            mount: mount ?? this.mount,
+        const resolvedMount = mount ?? this.mount
+        const packagePath = packagePathFor(uassetFile, exportsRoot)
+        const cacheKey = JSON.stringify([uassetFile.replace(/\\/g, "/"), packagePath, resolvedMount])
+        return this.cache.getOrLoad(cacheKey, async () => {
+            const resp = await this.request({
+                cmd: "fmodel",
+                path: uassetFile,
+                package: packagePath,
+                mount: resolvedMount,
+            })
+            if (!resp.ok) return null
+            const result = resp.result
+            return Array.isArray(result) ? result : null
         })
-        if (!resp.ok) return null
-        const result = resp.result
-        return Array.isArray(result) ? result : null
     }
 
     async close(): Promise<void> {
@@ -198,7 +212,6 @@ function sleep(ms: number): Promise<void> {
 /** 单例（懒建，复用进程） */
 let _server: UAssetServer | null = null
 export async function getUAssetServer(): Promise<UAssetServer | null> {
-    if (!getUassetExe()) return null
     if (!_server) {
         _server = new UAssetServer()
         _server.start()
@@ -211,4 +224,9 @@ export async function closeUAssetServer(): Promise<void> {
         await _server.close()
         _server = null
     }
+    await closeCache()
+}
+
+export async function clearUAssetCache(): Promise<void> {
+    await getUAssetCache().clear()
 }

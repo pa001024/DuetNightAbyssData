@@ -2,6 +2,7 @@
 
 import type { ModuleContext } from "../../core/Graph.ts"
 import { compile, LTemplate, T, type VNode, type VNodeTree } from "../../i18n/vnode.ts"
+import { AssetReader } from "../../lua/AssetReader.ts"
 import type { SkillArtifacts } from "../skill/skillModule.ts"
 import { P_MAP } from "../skill/skillModule.ts"
 
@@ -77,7 +78,7 @@ function skillDisplayName(id: number, entry: Row | undefined): VNodeTree {
     return TYPE_MAP[String(entry?.SkillType ?? "")] ?? String(id)
 }
 
-function skillReplacements(ctx: ModuleContext, mod: Row, skill: SkillArtifacts): Row | undefined {
+async function skillReplacements(ctx: ModuleContext, mod: Row, skill: SkillArtifacts, assetReader: AssetReader): Promise<Row | undefined> {
     if (!mod.ModActivateSkills || typeof mod.ModActivateSkills !== "object") return undefined
     const out: Row = {}
     for (const [oldId, newIdValue] of Object.entries(mod.ModActivateSkills)) {
@@ -85,13 +86,20 @@ function skillReplacements(ctx: ModuleContext, mod: Row, skill: SkillArtifacts):
         const newId = Number(newIdValue)
         const entry = skillEntry(ctx, newId)
         if (!entry) continue
-        const fields: VNodeTree[] = []
+        const fields: Array<Record<string, any>> = []
         const keys = sequence(entry.SkillDescKeys)
         const values = sequence(entry.SkillDescValues)
         for (let i = 0; i < Math.min(keys.length, values.length); i++) {
             if (typeof keys[i] !== "string" || typeof values[i] !== "string") continue
-            fields.push(skill.parseWeaponLikeSkillField(String(keys[i]), String(values[i]), newId, entry) as VNodeTree)
+            fields.push(skill.parseWeaponLikeSkillField(String(keys[i]), String(values[i]), newId, entry))
         }
+        await skill.applySkillTiming(entry, fields, {
+            skillNodeData: nodeId => {
+                const node = ctx.dm.getTableItem("SkillNode", nodeId) as Row | undefined
+                return node && typeof node === "object" ? node : undefined
+            },
+            animMetaForNode: node => assetReader.animMetaForNode(node),
+        })
         const replacement: Row = { id: newId, 名称: skillDisplayName(oldIdNum, skillEntry(ctx, oldIdNum)), 类型: "武器伤害" }
         if (fields.length > 0) replacement.字段 = fields
         out[oldId] = replacement
@@ -99,8 +107,10 @@ function skillReplacements(ctx: ModuleContext, mod: Row, skill: SkillArtifacts):
     return Object.keys(out).length > 0 ? out : undefined
 }
 
-export function modModule(ctx: ModuleContext): VNodeTree {
-    const skill = ctx.getArtifact<SkillArtifacts>("skill")!
+export async function modModule(ctx: ModuleContext): Promise<VNodeTree> {
+    const skill = ctx.getArtifact<SkillArtifacts>("Skill")!
+    const assetReader = new AssetReader(ctx.dm.root, true)
+    await assetReader.ensureServer()
     const config = table(ctx, "AttrConfig")
     const tags = table(ctx, "ModTag")
     const mods = table(ctx, "Mod")
@@ -122,12 +132,12 @@ export function modModule(ctx: ModuleContext): VNodeTree {
             版本: release(mod.ReleaseVersion ?? 100),
             系列: String(ctx.textmap.get(String(mod.TypeName ?? ""), "cn")).replace("之", ""),
             品质: QUALITY[Math.max(0, Math.min(QUALITY.length - 1, Number(mod.Rarity ?? 1) - 1))],
-            耐受: Number(mod.Cost ?? 0) + level * Number(mod.CostChange ?? 1),
-            类型: type,
         }
         const polarity = POLARITY[Math.max(0, Math.min(POLARITY.length - 1, Number(mod.Polarity ?? -1)))]
         if (polarity) output.极性 = polarity
         if (tagTexts.length >= 2) output.属性 = String(tagTexts[1]).replace("属性", "").trim()
+        output.耐受 = Number(mod.Cost ?? 0) + level * Number(mod.CostChange ?? 1)
+        output.类型 = type
         if (mod.CardLevelNeedModId) output.消耗 = mod.CardLevelNeedModId
         for (const [attrIndex, attr] of sequence(mod.AddAttrs).entries()) {
             const attrRow = attr as Row
@@ -143,10 +153,11 @@ export function modModule(ctx: ModuleContext): VNodeTree {
         }
         const desc = passiveDescription(ctx, mod, id, level)
         if (desc) output.效果 = desc
-        const replacements = skillReplacements(ctx, mod, skill)
+        const replacements = await skillReplacements(ctx, mod, skill, assetReader)
         if (replacements) output.技能替换 = replacements
         result.push(output)
     }
     result.sort((a, b) => Number((a as Row).id) - Number((b as Row).id))
+    await assetReader.close()
     return result
 }

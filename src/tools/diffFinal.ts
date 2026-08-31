@@ -5,11 +5,12 @@
  * 用法：
  *   bun run src/tools/diffFinal.ts --lang cn
  *   bun run src/tools/diffFinal.ts --lang cn --file Weapon   # 只看某文件
+ *   bun run src/tools/diffFinal.ts --lang cn --detail       # 展开首个完整差异
  *
- * 输出每个文件的首个差异（字段级），统计一致率。
+ * 默认自动发现 final_ts 中的 JSON 文件，每个文件输出一行一致性结果。
  * 这是新架构的回归基准：cn 应与老输出一致（同一文本源）。
  */
-import { existsSync, readFileSync } from "node:fs"
+import { existsSync, readdirSync, readFileSync } from "node:fs"
 import { join } from "node:path"
 
 const baseDir = join(import.meta.dir, "..", "..")
@@ -24,12 +25,12 @@ function parseArgs(argv: string[]) {
     return out
 }
 
-/** 深比较两个 JSON，收集差异路径（返回首个差异描述） */
+/** 深比较两个 JSON，返回首个差异描述。 */
 function firstDiff(oldV: unknown, newV: unknown, path = ""): string | null {
     if (typeof oldV !== typeof newV)
-        return `${path}: 类型 ${typeof oldV} vs ${typeof newV} (${JSON.stringify(oldV)?.slice(0, 40)} vs ${JSON.stringify(newV)?.slice(0, 40)})`
+        return `${path}: 类型 ${typeof oldV} vs ${typeof newV} (${JSON.stringify(oldV)} vs ${JSON.stringify(newV)})`
     if (oldV === null || newV === null) {
-        return oldV === newV ? null : `${path}: null vs ${JSON.stringify(newV)}`
+        return oldV === newV ? null : `${path}: ${JSON.stringify(oldV)} vs ${JSON.stringify(newV)}`
     }
     if (typeof oldV !== "object") {
         return oldV === newV ? null : `${path}: ${JSON.stringify(oldV)} vs ${JSON.stringify(newV)}`
@@ -62,11 +63,17 @@ function main() {
     const args = parseArgs(process.argv.slice(2))
     const lang = args.lang || "cn"
     const onlyFile = args.file
+    const detail = "detail" in args
 
     const oldDir = join(baseDir, "final", "i18n", lang)
     const newDir = join(baseDir, "final_ts", "i18n", lang)
 
-    const files = onlyFile ? [onlyFile.endsWith(".json") ? onlyFile : `${onlyFile}.json`] : ["Weapon.json", "Char.json"]
+    const files = onlyFile
+        ? [onlyFile.endsWith(".json") ? onlyFile : `${onlyFile}.json`]
+        : readdirSync(newDir, { withFileTypes: true })
+              .filter(entry => entry.isFile() && entry.name.endsWith(".json"))
+              .map(entry => entry.name)
+              .sort()
 
     let total = 0
     let matched = 0
@@ -86,7 +93,7 @@ function main() {
             console.log(`${f}: ✅ 完全一致 (${(Array.isArray(oldData) ? oldData : Object.keys(oldData)).length} 项)`)
             matched++
         } else {
-            console.log(`${f}: ❌ ${d}`)
+            console.log(`${f}: ❌ 不一致${detail ? `: ${d}` : ""}`)
         }
     }
     console.log(`\n一致率: ${matched}/${total}`)

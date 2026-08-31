@@ -12,7 +12,7 @@
 
 import { existsSync, readdirSync, readFileSync } from "node:fs"
 import { basename, join } from "node:path"
-import { closeUAssetServer, getExportsRoot, getUAssetServer, getUassetExe, type UAssetServer } from "./UAssetServer.ts"
+import { closeUAssetServer, getExportsRoot, getUAssetServer, type UAssetServer } from "./UAssetServer.ts"
 
 export interface AnimMeta {
     cancel: number
@@ -109,15 +109,14 @@ export class AssetReader {
     private server: UAssetServer | null = null
     private exportsRoot: string | null = null
     private metaCache = new Map<string, AnimMeta>()
-    private hasUassetCli = false
     private jsonMetaCache = new Map<string, AnimMeta>()
+    private fmodelCache = new Map<string, unknown[] | null>()
 
     constructor(
         private root: string,
         private preferJson = false
     ) {
         this.exportsRoot = getExportsRoot()
-        this.hasUassetCli = getUassetExe() !== null
     }
 
     private get legacyAssetRoot(): string {
@@ -132,7 +131,7 @@ export class AssetReader {
 
     async ensureServer(): Promise<UAssetServer | null> {
         if (this.server) return this.server
-        if (!this.hasUassetCli || (!this.exportsRoot && !existsSync(this.legacyAssetRoot))) return null
+        if (!this.exportsRoot && !existsSync(this.legacyAssetRoot)) return null
         try {
             this.server = await getUAssetServer()
         } catch {
@@ -150,6 +149,33 @@ export class AssetReader {
             }
             this.server = null
         }
+    }
+
+    /**
+     * 按路径读取一个 BP/uasset 的 FModel 结构。
+     * server 只在第一次真正请求资产时启动；结果按绝对路径缓存。
+     * 该接口不读取同名 JSON，调用方需要明确处理 server 不可用的情况。
+     */
+    async readFModelAsset(assetPath: string): Promise<unknown[] | null> {
+        const key = assetPath.replace(/\\/g, "/")
+        if (this.fmodelCache.has(key)) return this.fmodelCache.get(key) ?? null
+        if (!existsSync(assetPath)) {
+            this.fmodelCache.set(key, null)
+            return null
+        }
+        const server = await this.ensureServer()
+        if (!server || !this.exportsRoot) {
+            this.fmodelCache.set(key, null)
+            return null
+        }
+        let result: unknown[] | null = null
+        try {
+            result = await server.fmodel(assetPath, this.exportsRoot)
+        } catch {
+            result = null
+        }
+        this.fmodelCache.set(key, result)
+        return result
     }
 
     /**

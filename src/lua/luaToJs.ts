@@ -11,7 +11,7 @@
  */
 
 import type { LuaState } from "fengari"
-import { lua, to_jsstring } from "fengari"
+import { lauxlib, lua, to_jsstring } from "fengari"
 
 const LUA_TNIL = lua.LUA_TNIL
 const LUA_TNUMBER = lua.LUA_TNUMBER
@@ -62,8 +62,8 @@ function tableToJs(L: LuaState, idx: number, depth: number): LuaValue {
     const abs = lua.lua_absindex(L, idx)
     const n = lua.lua_rawlen(L, abs)
 
-    // 第一遍：统计键，判断是否数组（1..n 连续整数键且数量==n）
-    const keys: Array<number | string> = []
+    // 先把值移入 registry，再递归读取；否则父表迭代栈会和嵌套表同时增长，深故事数据会撑爆 Fengari 栈。
+    const entries: Array<{ key: number | string; ref: number }> = []
     let isArray = true
     lua.lua_pushnil(L)
     while (lua.lua_next(L, abs) !== 0) {
@@ -72,27 +72,32 @@ function tableToJs(L: LuaState, idx: number, depth: number): LuaValue {
         if (!(t === LUA_TNUMBER && Number.isInteger(k) && (k as number) >= 1)) {
             isArray = false
         }
-        keys.push(k)
+        lua.lua_pushvalue(L, -1)
+        const ref = lauxlib.luaL_ref(L, lua.LUA_REGISTRYINDEX)
+        entries.push({ key: k, ref })
         lua.lua_pop(L, 1)
     }
 
     const hasContinuousIntegerKeys =
-        isArray && n > 0 && keys.length === n && keys.every(key => Number.isInteger(key) && (key as number) >= 1 && (key as number) <= n)
+        isArray && n > 0 && entries.length === n && entries.every(({ key }) => Number.isInteger(key) && (key as number) >= 1 && (key as number) <= n)
     if (hasContinuousIntegerKeys) {
         const arr: LuaValue[] = new Array(n)
         for (let i = 1; i <= n; i++) {
-            lua.lua_rawgeti(L, abs, i)
+            const entry = entries.find(item => item.key === i)!
+            lua.lua_rawgeti(L, lua.LUA_REGISTRYINDEX, entry.ref)
             arr[i - 1] = valueToJs(L, -1, depth + 1)
             lua.lua_pop(L, 1)
+            lauxlib.luaL_unref(L, lua.LUA_REGISTRYINDEX, entry.ref)
         }
         return arr
     }
 
     const obj: { [k: string]: LuaValue } = {}
-    lua.lua_pushnil(L)
-    while (lua.lua_next(L, abs) !== 0) {
-        obj[String(keyToJs(L, -2))] = valueToJs(L, -1, depth + 1)
+    for (const entry of entries) {
+        lua.lua_rawgeti(L, lua.LUA_REGISTRYINDEX, entry.ref)
+        obj[String(entry.key)] = valueToJs(L, -1, depth + 1)
         lua.lua_pop(L, 1)
+        lauxlib.luaL_unref(L, lua.LUA_REGISTRYINDEX, entry.ref)
     }
     return obj
 }

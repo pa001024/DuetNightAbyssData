@@ -32,18 +32,11 @@ class ModProcessor(BaseProcessor):
         self.p_map = P_MAP
 
     def _format_desc_numeric(self, value):
-        """格式化描述数值，避免固定1位小数导致精度丢失"""
+        """按 SkillUtils.FormatDescValue1 的默认规则格式化描述数值"""
         if not isinstance(value, (int, float)):
             return "0.0"
 
-        rounded = self.round_value(float(value))
-        if isinstance(rounded, int):
-            return f"{rounded:.1f}"
-
-        text = f"{rounded:.4f}".rstrip("0").rstrip(".")
-        if "." not in text:
-            text = f"{text}.0"
-        return text
+        return f"{float(value):.1f}"
 
     def process_item(self, item_data, language):
         mod_data = item_data
@@ -139,6 +132,8 @@ class ModProcessor(BaseProcessor):
             attr_value = self._calc_mod_attr_by_level(
                 attr, mod_data.get("Id", 0), max_level
             )
+            if "Rate" not in attr and isinstance(attr_value, float) and attr_value.is_integer():
+                attr_value = int(attr_value)
 
             if attr_chinese_name == "攻击范围":
                 attr_value /= 100

@@ -44,6 +44,9 @@ export interface LTemplateNode {
     readonly values: VNode[]
     /** 是否按 SkillUtils.FormatDescValue1 规则格式化替换值 */
     readonly formatValues: boolean
+    readonly preserveHighlight?: boolean
+    readonly dollarOffset?: number
+    readonly groups?: { hash?: VNode[]; dollar?: VNode[]; at?: VNode[] }
 }
 /** 固定语言文本 key（如 CV 名：日文CV 始终用 jp 文本，不随输出语言变） */
 export interface TFixedNode {
@@ -97,8 +100,15 @@ export function record(entries: Array<[VNode, VNode]>): RecordNode {
 }
 
 /** TextMap 模板 + 数值替换（模板含 #N 占位，按语言取模板，逐级替换值） */
-export function LTemplate(key: string, values: VNode[], formatValues = false): LTemplateNode {
-    return { __t: "lt", key, values, formatValues }
+export function LTemplate(
+    key: string,
+    values: VNode[],
+    formatValues = false,
+    preserveHighlight = false,
+    dollarOffset = 0,
+    groups?: { hash?: VNode[]; dollar?: VNode[]; at?: VNode[] }
+): LTemplateNode {
+    return { __t: "lt", key, values, formatValues, preserveHighlight, dollarOffset, groups }
 }
 
 /** 固定语言文本 key（CV 名等始终用指定语言文本，不随输出语言变） */
@@ -179,6 +189,22 @@ function renderVNode(v: VNode, lang: string, textmap: TextMap): unknown {
             // TextMap 模板（含 #N 占位）+ 值替换
             let template = textmap.get(v.key, lang)
             if (template === v.key) template = textmap.get(v.key, "cn")
+            if (v.groups) {
+                for (const [marker, values] of [
+                    ["#", v.groups.hash],
+                    ["\\$", v.groups.dollar],
+                    ["@", v.groups.at],
+                ] as const) {
+                    if (!values) continue
+                    for (let i = 0; i < values.length; i++) {
+                        let value = String(renderVNode(values[i], lang, textmap) ?? "")
+                        if (v.formatValues && marker !== "#") value = formatDescValue1(value, descValueCast(template, i + 1).cast)
+                        template = template.replace(new RegExp(`${marker}${i + 1}(?!\\d)`, "g"), value)
+                    }
+                }
+                if (v.preserveHighlight) return template.replace(/\{int\}/gi, "")
+                return template.replace(/<[^>]*>/g, "").replace(/\{int\}/gi, "")
+            }
             for (let i = 0; i < v.values.length; i++) {
                 let val = String(renderVNode(v.values[i], lang, textmap) ?? "")
                 if (v.formatValues) {
@@ -187,8 +213,11 @@ function renderVNode(v: VNode, lang: string, textmap: TextMap): unknown {
                     val = formatDescValue1(val, cast.cast)
                 }
                 template = template.replace(new RegExp(`#${i + 1}(?!\\d)`, "g"), val)
+                template = template.replace(new RegExp(`\\$${i + 1 + (v.dollarOffset ?? 0)}(?!\\d)`, "g"), val)
+                template = template.replace(new RegExp(`@${i + 1}(?!\\d)`, "g"), val)
             }
             // 移除高亮标签（对齐老代码）
+            if (v.preserveHighlight) return template.replace(/\{int\}/gi, "")
             return template.replace(/<[^>]*>/g, "").replace(/\{int\}/gi, "")
         }
     }
@@ -198,9 +227,10 @@ type DescCast = { kind: "int" } | { kind: "float"; decimals: number } | null
 
 /** 对齐 Script/Utils/SkillUtils.lua 的 ReplaceAndChekDescValueCast。 */
 function descValueCast(template: string, index: number): { template: string; cast: DescCast } {
-    const intRe = new RegExp(`\\{int\\}#${index}(?!\\d)`, "i")
+    const marker = "[#@$]"
+    const intRe = new RegExp(`\\{int\\}${marker}${index}(?!\\d)`, "i")
     if (intRe.test(template)) return { template: template.replace(intRe, `#${index}`), cast: { kind: "int" } }
-    const floatRe = new RegExp(`\\{float(\\d+)\\}#${index}(?!\\d)`, "i")
+    const floatRe = new RegExp(`\\{float(\\d+)\\}${marker}${index}(?!\\d)`, "i")
     const match = template.match(floatRe)
     if (match) {
         return {

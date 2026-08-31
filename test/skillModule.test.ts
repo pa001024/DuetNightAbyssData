@@ -11,7 +11,7 @@ import { getTextMap } from "../src/i18n/TextMap.ts"
 import { renderTree } from "../src/i18n/vnode.ts"
 import { getLuaDataManager } from "../src/lua/LuaDataManager.ts"
 import type { SkillArtifacts } from "../src/modules/skill/skillModule.ts"
-import { skillModule } from "../src/modules/skill/skillModule.ts"
+import { applySkillTiming, skillModule } from "../src/modules/skill/skillModule.ts"
 
 const baseDir = new URL("../out/", import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, "$1")
 const textmap = getTextMap(baseDir)
@@ -45,6 +45,33 @@ describe("Graph", () => {
 })
 
 describe("skill 模块", () => {
+    test("共享技能时序按节点对应字段且清理内部伤害标记", async () => {
+        const fields: Array<Record<string, any>> = [{ __isDamage: true }, { __isDamage: true }, { __isDamage: false }]
+        const nodes: Record<string, Record<string, any>> = {
+            "1": { nodeId: 1, NextNodeId: 2 },
+            "2": { nodeId: 2, NextNodeId: 3 },
+            "3": { nodeId: 3 },
+        }
+        const metas = [
+            { cancel: 0.9, combo: 1.1 },
+            { cancel: 0, combo: 2.2 },
+            { cancel: 3.3, combo: 0 },
+        ]
+        await applySkillTiming(
+            { BeginNodeId: 1 },
+            fields,
+            {
+                skillNodeData: id => nodes[String(id)],
+                animMetaForNode: async node => metas[node.nodeId - 1],
+            }
+        )
+        expect(fields).toEqual([
+            { 取消: 0.9, 连段: 1.1 },
+            { 连段: 2.2 },
+            {},
+        ])
+    })
+
     test("召唤物 effect 索引懒加载且只构建一次", () => {
         const tableReads: string[] = []
         let indexBuilds = 0

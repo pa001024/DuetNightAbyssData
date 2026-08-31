@@ -61,6 +61,11 @@ export const P_MAP: Record<string, string> = {
     Def: "防御",
     Sp: "神智",
     SpRate: "神智比例",
+    触发贯穿额外效果时对生命伤害: "触发倍率",
+    触发切割额外效果时对护盾伤害: "触发倍率",
+    ExplodeBulletRate: "爆炸伤害",
+    RayCreatureRate: "射线伤害",
+    // CutTNRate: "削韧倍率",
     SkillSpeed: "技能速度",
     MoveSpeedAddRate: "移动速度加成",
     WalkSpeedModifier: "移动速度",
@@ -293,6 +298,55 @@ export interface SkillArtifacts {
         tableId: number,
         skillEntry: Record<string, unknown>
     ): Record<string, unknown>
+    /** 为伤害字段补全动画取消/连段信息，并清理内部标记。 */
+    applySkillTiming(skillEntry: Record<string, any>, fields: Array<Record<string, any>>, deps: SkillTimingDeps): Promise<void>
+}
+
+export interface SkillTimingDeps {
+    skillNodeData: (id: number | string) => Record<string, any> | undefined
+    animMetaForNode: (node: Record<string, any>) => Promise<{ cancel: number; combo: number }>
+}
+
+/** 为伤害字段补全动画取消/连段信息，并移除只用于内部判断的伤害标记。 */
+export async function applySkillTiming(
+    skillEntry: Record<string, any>,
+    fields: Array<Record<string, any>>,
+    deps: SkillTimingDeps
+): Promise<void> {
+    const clearMarkers = () => {
+        for (const field of fields) delete field.__isDamage
+    }
+    if (fields.length === 0) return
+
+    const beginNodeId = skillEntry.BeginNodeId
+    if (!beginNodeId) {
+        clearMarkers()
+        return
+    }
+
+    const nodeChain: Array<Record<string, any>> = []
+    const visited = new Set<number>()
+    let current = beginNodeId
+    while (current && !visited.has(Number(current)) && nodeChain.length < Math.max(fields.length, 1)) {
+        const node = deps.skillNodeData(current)
+        if (!node) break
+        nodeChain.push(node)
+        visited.add(Number(current))
+        current = node.NextNodeId
+    }
+
+    const metas = []
+    for (const node of nodeChain) metas.push(await deps.animMetaForNode(node))
+    for (let i = 0; i < fields.length; i++) {
+        const field = fields[i]
+        if (!field.__isDamage) continue
+        // 节点与字段按顺序对应；字段多于节点时复用最后一个节点，
+        // 但不能把前一节点的非零取消窗口传播到当前节点。
+        const meta = metas[i] ?? metas[metas.length - 1] ?? { cancel: 0, combo: 0 }
+        if (meta.cancel) field.取消 = roundValue(meta.cancel)
+        if (meta.combo) field.连段 = roundValue(meta.combo)
+    }
+    clearMarkers()
 }
 
 export function skillModule(ctx: ModuleContext) {
@@ -388,6 +442,7 @@ export function skillModule(ctx: ModuleContext) {
                 skillEffects: skillEffectsData,
             })
         },
+        applySkillTiming,
     }
     return artifacts
 }
@@ -414,7 +469,7 @@ function parseWeaponLikeSkillFieldImpl(
     if (meta.延迟) item.延迟 = meta.延迟
     if (meta.卡肉) item.卡肉 = meta.卡肉
     if (isDamage && meta.tag) item.tag = meta.tag
-    if (isDamage) (item as any).isDamage = true
+    if (isDamage) item.__isDamage = true
     return item
 }
 

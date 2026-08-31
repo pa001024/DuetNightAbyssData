@@ -85,7 +85,7 @@ function resourceNameKey(dm: ModuleContext["dm"], resourceId: number): string | 
 
 export async function weaponModule(ctx: ModuleContext) {
     const dm = ctx.dm
-    const skillArtifacts = ctx.getArtifact<SkillArtifacts>("skill")!
+    const skillArtifacts = ctx.getArtifact<SkillArtifacts>("Skill")!
 
     // 资产读取（uassetcli server 优先，json 回退）
     const assetReader = new AssetReader(dm.root, true)
@@ -353,40 +353,12 @@ export async function weaponModule(ctx: ModuleContext) {
             if (meta.isDamage) (item as any).__isDamage = true
             out.push(item)
         }
-        // 取消/连段（uassetcli server 解析动画）
-        await applySkillTiming(skillEntry, out)
+        // 取消/连段（由 skill 模块统一解析动画节点链）
+        await skillArtifacts.applySkillTiming(skillEntry, out as Array<Record<string, any>>, {
+            skillNodeData,
+            animMetaForNode: node => assetReader.animMetaForNode(node),
+        })
         return out
-    }
-
-    /** 技能节点链 → 动画元数据（取消/连段） */
-    async function applySkillTiming(skillEntry: Record<string, any>, fields: VNodeTree[]): Promise<void> {
-        if (fields.length === 0) return
-        const beginNodeId = skillEntry.BeginNodeId
-        if (!beginNodeId) return
-        const nodeChain: Array<Record<string, any>> = []
-        const visited = new Set<number>()
-        let current = beginNodeId
-        while (current && !visited.has(current) && nodeChain.length < Math.max(fields.length, 1)) {
-            const node = skillNodeData(String(current))
-            if (!node) break
-            nodeChain.push(node)
-            visited.add(current)
-            current = node.NextNodeId
-        }
-        const metas = []
-        for (const n of nodeChain) metas.push(await assetReader.animMetaForNode(n))
-        let lastCancel = 0
-        let lastCombo = 0
-        for (let i = 0; i < fields.length; i++) {
-            const f = fields[i] as Record<string, any>
-            if (!f.__isDamage) continue
-            const meta = metas[i] ?? { cancel: 0, combo: 0, skillEffectLink: 0, shootingInterval: 0 }
-            if (meta.cancel) lastCancel = meta.cancel
-            if (meta.combo) lastCombo = meta.combo
-            if (lastCancel) f.取消 = roundValue(lastCancel)
-            if (lastCombo) f.连段 = roundValue(lastCombo)
-            delete f.__isDamage
-        }
     }
 
     /** 技能列表 */

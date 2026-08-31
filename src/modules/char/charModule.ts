@@ -59,7 +59,7 @@ const BP_ADD_BUFF_CACHE = new Map<string, Record<string, number[]>>()
 
 export async function charModule(ctx: ModuleContext) {
     const dm = ctx.dm
-    const skillArtifacts = ctx.getArtifact<SkillArtifacts>("skill")!
+    const skillArtifacts = ctx.getArtifact<SkillArtifacts>("Skill")!
     // Char 的旧导出基于 FModel JSON；优先读取同一份 JSON，避免 UAsset 解析的时间线舍入差异。
     const assetReader = new AssetReader(dm.root, true)
     await assetReader.ensureServer()

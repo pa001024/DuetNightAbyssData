@@ -1405,7 +1405,7 @@
     "极性": "O",
     "耐受": 7,
     "类型": "Characters",
-    "闪避次数": 1.0
+    "闪避次数": 1
   },
   {
     "id": 31532,
@@ -3604,7 +3604,7 @@
     "耐受": 24,
     "类型": "Characters",
     "技能威力": 0.3,
-    "效果": "When a Pyro character deals damage, gains 1 stack that increases ATK by 0.96% for 15.0s, up to 120.0 stacks."
+    "效果": "When a Pyro character deals damage, gains 1 stack that increases ATK by 1.0% for 15.0s, up to 120.0 stacks."
   },
   {
     "id": 41932,
@@ -3674,7 +3674,7 @@
     "耐受": 24,
     "类型": "Characters",
     "技能耐久": 0.24,
-    "效果": "When enemies near a Lumino character take Weapon DMG, CRIT Chance increases by 32.7%. Gains an additional +8.16% against targets with debuffs."
+    "效果": "When enemies near a Lumino character take Weapon DMG, CRIT Chance increases by 32.7%. Gains an additional +8.2% against targets with debuffs."
   },
   {
     "id": 41962,
@@ -6622,7 +6622,7 @@
       51931
     ],
     "技能威力": 0.55,
-    "效果": "When a Pyro character deals damage, gains 1 stack that increases ATK by 1.76% for 15.0s, up to 120.0 stacks."
+    "效果": "When a Pyro character deals damage, gains 1 stack that increases ATK by 1.8% for 15.0s, up to 120.0 stacks."
   },
   {
     "id": 51932,

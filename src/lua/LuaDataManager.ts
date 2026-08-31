@@ -186,6 +186,123 @@ export class LuaDataManager {
         return result
     }
 
+    /** 在同一 Fengari state 中执行一个 Script 下的 Lua 文件并读取其返回值。 */
+    loadScriptFile(relativePath: string): LuaValue | undefined {
+        const file = join(this.root, relativePath)
+        if (!existsSync(file)) return undefined
+        const L = this.ensureState()
+        const code = readFileSync(file, "utf8")
+        if (lauxlib.luaL_loadstring(L, to_luastring(code)) !== 0) {
+            lua.lua_pop(L, 1)
+            return undefined
+        }
+        if (lua.lua_pcall(L, 0, 1, 0) !== 0) {
+            lua.lua_pop(L, 1)
+            return undefined
+        }
+        const result = lua.lua_type(L, -1) === lua.LUA_TNIL ? undefined : (luaValueToJs(L, -1) as LuaValue)
+        lua.lua_pop(L, 1)
+        return result
+    }
+
+    /** 读取剧情 Lua，并只投影 QuestStory/PartyTopic 所需字段，避免大型节点元数据递归物化。 */
+    loadStoryFile(relativePath: string): LuaValue | undefined {
+        const file = join(this.root, relativePath)
+        if (!existsSync(file)) return undefined
+        const L = this.ensureState()
+        if (lauxlib.luaL_dostring(L, to_luastring(`
+            __project_story = function(value)
+                local function props(value)
+                    local out = {}
+                    local fields = {"FirstDialogueId", "FlowAssetPath", "GuidePointName", "StoryGuidePointName", "UnitBPPath", "UnitName", "QuestId", "QuestDescription", "QuestDeatil", "SubRegionId", "QuestionIds", "AnswerIds", "SpecialConfigId"}
+                    for _, field in ipairs(fields) do if value and value[field] ~= nil then out[field] = value[field] end end
+                    return out
+                end
+                local function edge(value)
+                    if type(value) ~= "table" then return nil end
+                    return {startQuest = value.startQuest, startPort = value.startPort, endQuest = value.endQuest, endPort = value.endPort, startStory = value.startStory, endStory = value.endStory}
+                end
+                local function nodes(value)
+                    local out = {}
+                    for key, node in pairs(value or {}) do
+                        if type(node) == "table" then
+                            local copy = {key = node.key or key, type = node.type, name = node.name, propsData = props(node.propsData)}
+                            if type(node.questNodeData) == "table" then
+                                local q = {lineData = {}, nodeData = {}}
+                                for _, item in pairs(node.questNodeData.lineData or {}) do local e = edge(item); if e then q.lineData[#q.lineData + 1] = e end end
+                                for childKey, child in pairs(node.questNodeData.nodeData or {}) do
+                                    if type(child) == "table" then q.nodeData[childKey] = {key = child.key or childKey, type = child.type, name = child.name, propsData = props(child.propsData)} end
+                                end
+                                copy.questNodeData = q
+                            end
+                            out[key] = copy
+                        end
+                    end
+                    return out
+                end
+                return {storyName = value and value.storyName or "", storyDescription = value and value.storyDescription or "", storyNodeData = nodes(value and value.storyNodeData), lineData = value and value.lineData or {}}
+            end
+        `)) !== 0) {
+            lua.lua_settop(L, 0)
+            return undefined
+        }
+        const code = readFileSync(file, "utf8")
+        if (lauxlib.luaL_loadstring(L, to_luastring(code)) !== 0 || lua.lua_pcall(L, 0, 1, 0) !== 0) {
+            lua.lua_settop(L, 0)
+            return undefined
+        }
+        const valueIndex = lua.lua_gettop(L)
+        lua.lua_getglobal(L, "__project_story")
+        lua.lua_pushvalue(L, valueIndex)
+        if (lua.lua_pcall(L, 1, 1, 0) !== 0) {
+            lua.lua_settop(L, 0)
+            return undefined
+        }
+        const result = lua.lua_type(L, -1) === lua.LUA_TNIL ? undefined : (luaValueToJs(L, -1) as LuaValue)
+        lua.lua_settop(L, 0)
+        return result
+    }
+
+    /** 读取返回表的浅层记录，适合大型平面索引文件，避免递归物化整张表。 */
+    loadScriptTableRows(relativePath: string, fields: string[]): Array<Record<string, string | number | boolean | null>> {
+        const file = join(this.root, relativePath)
+        if (!existsSync(file)) return []
+        const L = this.ensureState()
+        const code = readFileSync(file, "utf8")
+        if (lauxlib.luaL_loadstring(L, to_luastring(code)) !== 0 || lua.lua_pcall(L, 0, 1, 0) !== 0) {
+            lua.lua_settop(L, 0)
+            return []
+        }
+        if (lua.lua_type(L, -1) !== lua.LUA_TTABLE) {
+            lua.lua_pop(L, 1)
+            return []
+        }
+        const result: Array<Record<string, string | number | boolean | null>> = []
+        const root = lua.lua_absindex(L, -1)
+        lua.lua_pushnil(L)
+        while (lua.lua_next(L, root) !== 0) {
+            if (lua.lua_type(L, -1) === lua.LUA_TTABLE) {
+                const item: Record<string, string | number | boolean | null> = {}
+                for (const field of fields) {
+                    lua.lua_getfield(L, -1, field)
+                    const type = lua.lua_type(L, -1)
+                    if (type === lua.LUA_TSTRING) item[field] = to_jsstring(lua.lua_tostring(L, -1)!)
+                    else if (type === lua.LUA_TNUMBER) item[field] = lua.lua_tonumber(L, -1)
+                    else if (type === lua.LUA_TBOOLEAN) item[field] = lua.lua_toboolean(L, -1)
+                    else if (type === lua.LUA_TNIL) item[field] = null
+                    lua.lua_pop(L, 1)
+                }
+                const keyType = lua.lua_type(L, -2)
+                const key = keyType === lua.LUA_TSTRING ? to_jsstring(lua.lua_tostring(L, -2)!) : String(lua.lua_tonumber(L, -2))
+                item.__key = key
+                result.push(item)
+            }
+            lua.lua_pop(L, 1)
+        }
+        lua.lua_pop(L, 1)
+        return result
+    }
+
     /**
      * 读取单个 Lua 表项并转换为 JS。
      * 与 getTable 不同，这里只物化指定 key 的子树，适合 Skill/SkillNode/SkillEffects

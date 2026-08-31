@@ -19,3 +19,4 @@ out_ts/
 *.tsbuildinfo
 src/_probe.ts
 .tmp/
+.cache/

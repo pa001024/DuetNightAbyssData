@@ -7,10 +7,12 @@
     "test": "bun test",
     "diff:cn": "bun run src/tools/diffFinal.ts --lang cn",
     "out": "bun run src/cli.ts",
+    "warmup": "bun run src/cli.ts --warmup",
     "lint": "biome check --write && tsc --noEmit",
     "fmt": "biome check --write --linter-enabled=false"
   },
   "dependencies": {
+    "@duckdb/node-api": "1.5.5-r.4",
     "@vue/reactivity": "^3.5.42",
     "fengari": "^0.1.5"
   },
