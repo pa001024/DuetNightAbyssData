@@ -116,7 +116,7 @@ export class UAssetServer {
             return Promise.reject(new Error("UAssetCLI server 未运行"))
         }
         const proc = this.proc
-        const writeOk = proc.stdin?.write(JSON.stringify(cmd) + "\n")
+        const writeOk = proc.stdin?.write(`${JSON.stringify(cmd)}\n`)
         if (!writeOk) return Promise.reject(new Error("UAssetCLI stdin 写入失败"))
 
         return new Promise((resolve, reject) => {

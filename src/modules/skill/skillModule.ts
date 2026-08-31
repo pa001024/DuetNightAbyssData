@@ -13,9 +13,8 @@
  * 输出结构里的可翻译部分一律 vnode（T/TL/compile），语言无关；多语言渲染在下游。
  */
 
-import { join } from "node:path"
 import type { ModuleContext } from "../../core/Graph.ts"
-import { compile, seq, T, TL, type VNode } from "../../i18n/vnode.ts"
+import { compile, T, type VNode } from "../../i18n/vnode.ts"
 import { GT_RE } from "../../lua/stubs.ts"
 
 // ---------- 常量映射（port 老代码） ----------
@@ -108,6 +107,7 @@ export const DAMAGE_TYPE_CN: Record<string, string> = {
 /** 伤害基值属性 → 中文（port char_processor._BASE_ATTR_CN） */
 export const BASE_ATTR_CN: Record<string, string> = {
     ATK: "攻击",
+    DEF: "防御",
     ATK_Char: "角色攻击",
     ATK_Melee: "近战武器攻击",
     ATK_Ultra: "终结攻击",
@@ -229,6 +229,30 @@ export function extractFieldValueAndFormat(
     return [value, value2, valueFormat]
 }
 
+/** 按旧处理器的原始表达式规则修正字段百分比：只有表达式含 *100 且带 % 后缀时才存为小数。 */
+export function extractFieldValueAndFormatFromSource(
+    source: string,
+    calculatedValue: string | number | null | undefined
+): [number | string, number | string | null, string | null] {
+    const extracted = extractFieldValueAndFormat(calculatedValue)
+    if (typeof source !== "string" || typeof calculatedValue !== "string") return extracted
+    const percentExpressions = [...source.matchAll(/\$([^$]+)\$\s*%/g)]
+    if (percentExpressions.length === 0 || !extracted[2]) return extracted
+    const values = [extracted[0], extracted[1]].map(value => (typeof value === "number" ? value : Number(value)))
+    let correctedFormat = extracted[2]
+    let valueIndex = 0
+    for (const match of percentExpressions) {
+        if (valueIndex >= values.length) break
+        const expression = match[1]
+        if (!expression.includes("*100") && Number.isFinite(values[valueIndex]) && correctedFormat.includes("{%}")) {
+            values[valueIndex] = roundValue((values[valueIndex] as number) * 100)
+            correctedFormat = correctedFormat.replace("{%}", "{}%")
+        }
+        valueIndex++
+    }
+    return [values[0], extracted[1] === null ? null : values[1], correctedFormat]
+}
+
 // ---------- 技能模块 ----------
 
 export interface SkillArtifacts {
@@ -278,7 +302,7 @@ export function skillModule(ctx: ModuleContext) {
     const skillNodeData = () => (dm.getTable("SkillNode") as Record<string, any>) || {}
     const skillEffectsData = () => (dm.getTable("SkillEffects") as Record<string, any>) || {}
 
-    const getEntry = (id: number | string, table: Record<string, any>): any => {
+    const _getEntry = (id: number | string, table: Record<string, any>): any => {
         let e = table[String(id)]
         if (!e) e = table[id as number]
         return e
@@ -287,14 +311,16 @@ export function skillModule(ctx: ModuleContext) {
     const damageTagCn = (tag: string): string => DAMAGE_TAG_CN[tag] ?? tag
 
     /** 从 SkillEffects 解析字段的削韧/Boss削韧/tag/延迟/卡肉 */
+    const summonEffectIds = buildSummonEffectIds(dm)
+
     const resolveFieldCombatMeta = (
         descValue: string,
         skillEffects: Record<string, any>
     ): { isDamage: boolean; 削韧?: number; Boss削韧?: number; tag?: string[]; 延迟?: number; 卡肉?: number } =>
-        resolveFieldCombatMetaImpl(descValue, skillEffects)
+        resolveFieldCombatMetaImpl(descValue, skillEffects, summonEffectIds)
 
     /** 技能字段解释（对齐 char.process_skill_desc 的核心路径） */
-    const explainSkillFields = (skillEntry: Record<string, unknown>, tableId: number, maxLevel?: number): unknown[] => {
+    const explainSkillFields = (skillEntry: Record<string, unknown>, _tableId: number, _maxLevel?: number): unknown[] => {
         const descKeys = asArray(skillEntry.SkillDescKeys)
         const descValues = asArray(skillEntry.SkillDescValues)
         if (descKeys.length === 0 || descValues.length === 0) return []
@@ -311,16 +337,16 @@ export function skillModule(ctx: ModuleContext) {
             // 计算值（遍历 max_level 取数组 / 常量）
             const computed = dm.calcSkillDesc(asString(descValue), 1)
             // 用 extractFieldValueAndFormat 拆数值与格式（computed 已含数值，哨兵仅文本段）
-            const [value, value2, format] = extractFieldValueAndFormat(computed)
-            item["值"] = value
-            if (value2 !== null) item["值2"] = value2
-            if (format && format !== "{%}") item["格式"] = format
+            const [value, value2, format] = extractFieldValueAndFormatFromSource(asString(descValue), computed)
+            item.值 = value
+            if (value2 !== null) item.值2 = value2
+            if (format && format !== "{%}") item.格式 = format
 
             // 削韧/Boss削韧（引用 SkillEffects）
             const meta = resolveFieldCombatMeta(asString(descValue), skillEffectsData())
-            if (meta.削韧) item["削韧"] = meta.削韧
-            if (meta.Boss削韧 !== undefined) item["Boss削韧"] = meta.Boss削韧
-            if (meta.isDamage) item["is_damage"] = true
+            if (meta.削韧) item.削韧 = meta.削韧
+            if (meta.Boss削韧 !== undefined) item.Boss削韧 = meta.Boss削韧
+            if (meta.isDamage) item.is_damage = true
 
             result.push(item)
         }
@@ -365,23 +391,23 @@ export function skillModule(ctx: ModuleContext) {
 function parseWeaponLikeSkillFieldImpl(
     descKey: string,
     descValue: string,
-    tableId: number,
-    skillEntry: Record<string, unknown>,
+    _tableId: number,
+    _skillEntry: Record<string, unknown>,
     deps: { calcSkillDesc: (d: string, lvl?: number) => string; skillEffects: Record<string, any> }
 ): Record<string, unknown> {
     const computed = deps.calcSkillDesc(descValue, 1)
-    const [value, value2, format] = extractFieldValueAndFormat(computed)
+    const [value, value2, format] = extractFieldValueAndFormatFromSource(descValue, computed)
     const item: Record<string, unknown> = { 名称: T(descKey), 值: value }
-    if (value2 !== null) item["值2"] = value2
-    if (format && format !== "{%}") item["格式"] = format
+    if (value2 !== null) item.值2 = value2
+    if (format && format !== "{%}") item.格式 = format
 
     const meta = resolveFieldCombatMetaImpl(descValue, deps.skillEffects)
     const isDamage = meta.isDamage
-    if (meta.削韧) item["削韧"] = meta.削韧
-    if (meta.Boss削韧 !== undefined) item["Boss削韧"] = meta.Boss削韧
-    if (meta.延迟) item["延迟"] = meta.延迟
-    if (meta.卡肉) item["卡肉"] = meta.卡肉
-    if (isDamage && meta.tag) item["tag"] = meta.tag
+    if (meta.削韧) item.削韧 = meta.削韧
+    if (meta.Boss削韧 !== undefined) item.Boss削韧 = meta.Boss削韧
+    if (meta.延迟) item.延迟 = meta.延迟
+    if (meta.卡肉) item.卡肉 = meta.卡肉
+    if (isDamage && meta.tag) item.tag = meta.tag
     if (isDamage) (item as any).isDamage = true
     return item
 }
@@ -420,13 +446,13 @@ function simplifySkillCreature(creatureId: number | string, creatureData: any, k
     const shape = creatureData.ShapeInfo
     if (shape && typeof shape === "object") {
         const simplified: Record<string, any> = {}
-        if (shape.ShapeType) simplified["类型"] = shape.ShapeType
+        if (shape.ShapeType) simplified.类型 = shape.ShapeType
         for (const [k, v] of Object.entries(shape)) {
             if (k === "ShapeType") continue
             if (v === null || v === "") continue
             simplified[k] = v
         }
-        if (Object.keys(simplified).length > 0) result["形状"] = simplified
+        if (Object.keys(simplified).length > 0) result.形状 = simplified
     }
     for (const [sourceKey, targetKey] of [
         ["TimeLife", "时长"],
@@ -444,11 +470,11 @@ function simplifySkillCreature(creatureId: number | string, creatureData: any, k
         result[targetKey] = value
     }
     const vars = creatureData.Vars
-    if (vars && typeof vars === "object" && Object.keys(vars).length > 0) result["Vars"] = vars
+    if (vars && typeof vars === "object" && Object.keys(vars).length > 0) result.Vars = vars
     const loopEffects = creatureData.LoopExecuteSkillEffects
     if (loopEffects && typeof loopEffects === "object") {
         const interval = loopEffects.Interval
-        if (typeof interval === "number") result["特效循环间隔"] = interval
+        if (typeof interval === "number") result.特效循环间隔 = interval
     }
     return result
 }
@@ -493,7 +519,7 @@ function extractCreaturesImpl(skillId: number, keepHidden: boolean, deps: Creatu
                 if (creatureId === null || creatureId === undefined || creatureId === "" || seenCreatureKeys.has(creatureKey)) continue
                 seenCreatureKeys.add(creatureKey)
                 const creature = simplifySkillCreature(creatureId, getEntry2(creatureData, creatureId), keepHidden)
-                if (creature && inheritedInterval !== undefined && inheritedInterval !== null) creature["射击间隔"] = inheritedInterval
+                if (creature && inheritedInterval !== undefined && inheritedInterval !== null) creature.射击间隔 = inheritedInterval
                 if (creature) creatures.push(creature)
                 continue
             }
@@ -577,7 +603,7 @@ function extractCreaturesImpl(skillId: number, keepHidden: boolean, deps: Creatu
             collectFromSkill(relatedSkillId, null, skillId)
         }
         // Skill2 的 StartLoopShoot 效果
-        for (const [effectIdStr, effect] of Object.entries(skillEffectsData)) {
+        for (const [_effectIdStr, effect] of Object.entries(skillEffectsData)) {
             if (!effect || typeof effect !== "object") continue
             const taskEffects = effect.TaskEffects
             if (!Array.isArray(taskEffects)) continue
@@ -601,29 +627,32 @@ function extractCreaturesImpl(skillId: number, keepHidden: boolean, deps: Creatu
 /** 从 SkillEffects 解析字段的削韧/Boss削韧/tag/延迟/卡肉（独立实现，供多处共用） */
 export function resolveFieldCombatMetaImpl(
     descValue: string,
-    skillEffects: Record<string, any>
+    skillEffects: Record<string, any>,
+    summonEffectIds?: ReadonlySet<number>
 ): { isDamage: boolean; 削韧?: number; Boss削韧?: number; tag?: string[]; 延迟?: number; 卡肉?: number } {
-    const { effectIds } = extractReferencedIds(descValue)
-    if (effectIds.length === 0) return { isDamage: false }
+    const references: Array<{ effectId: number; taskIndex?: number }> = []
+    const seenReferences = new Set<string>()
+    for (const match of descValue.matchAll(/\$#SkillEffects\[(\d+)\](?:\.TaskEffects\[(\d+)\])?/g)) {
+        const effectId = Number(match[1])
+        const taskIndex = match[2] === undefined ? undefined : Number(match[2]) - 1
+        const key = `${effectId}:${taskIndex ?? "all"}`
+        if (!seenReferences.has(key)) {
+            seenReferences.add(key)
+            references.push({ effectId, taskIndex })
+        }
+    }
+    if (references.length === 0) return { isDamage: false }
     const result: { isDamage: boolean; 削韧?: number; Boss削韧?: number; tag?: string[]; 延迟?: number; 卡肉?: number } = {
         isDamage: false,
     }
 
-    for (const eid of effectIds) {
-        const effect = getEntry2(skillEffects, eid)
+    for (const { effectId, taskIndex } of references) {
+        const effect = getEntry2(skillEffects, effectId)
         if (!effect) continue
-        for (const task of effect.TaskEffects ?? []) {
+        const tasks = Array.isArray(effect.TaskEffects) ? effect.TaskEffects : []
+        const selectedTasks = taskIndex === undefined ? tasks : taskIndex >= 0 && taskIndex < tasks.length ? [tasks[taskIndex]] : []
+        for (const task of tasks) {
             const func = task.Function
-            if (func === "Damage") {
-                result.isDamage = true
-                // DamageTask 的 DamageTag（port weapon._parse_skill_effects）
-                for (const tag of task.DamageTag ?? []) {
-                    const tagCn = DAMAGE_TAG_CN[tag] ?? tag
-                    if (tagCn && !(result.tag ?? []).includes(tagCn)) {
-                        ;(result.tag ??= []).push(tagCn)
-                    }
-                }
-            }
             if (func === "CutToughness") {
                 result.isDamage = true
                 const value = asNumber(task.Value)
@@ -644,8 +673,177 @@ export function resolveFieldCombatMetaImpl(
                 if (duration !== null) result.卡肉 = duration
             }
         }
+        // DamageTag 属于字段实际引用的 Damage 任务；削韧/卡肉仍按整个 effect 解析。
+        for (const task of selectedTasks as Array<Record<string, any>>) {
+            if (task.Function === "Damage" || task.Function === "CutToughness") result.isDamage = true
+            if (task.Function !== "Damage") continue
+            for (const tag of task.DamageTag ?? []) {
+                const tagCn = DAMAGE_TAG_CN[tag] ?? tag
+                if (tagCn && !(result.tag ?? []).includes(tagCn)) {
+                    ;(result.tag ??= []).push(tagCn)
+                }
+            }
+        }
+        if (
+            summonEffectIds?.has(effectId) &&
+            (selectedTasks as Array<Record<string, any>>).some((task: Record<string, any>) => task.Function === "Damage") &&
+            !(result.tag ?? []).includes("召唤物")
+        ) {
+            ;(result.tag ??= []).push("召唤物")
+        }
     }
     return result
+}
+
+/** 从召唤单位的数据链收集其 SkillEffects 伤害 ID。 */
+function buildSummonEffectIds(dm: ModuleContext["dm"]): ReadonlySet<number> {
+    const toTable = (name: string): Record<string, any> => (dm.getTable(name) as Record<string, any>) || {}
+    const monsters = toTable("Monster")
+    const mechanisms = toTable("MechanismSummon")
+    const battleChars = toTable("BattleChar")
+    const battleMonsters = toTable("BattleMonster")
+    const creatures = toTable("SkillCreature")
+    const skills = toTable("Skill")
+    const nodes = toTable("SkillNode")
+    const effects = toTable("SkillEffects")
+    const summonIds = new Set<number>()
+    const addId = (value: unknown) => {
+        const id = Number(value)
+        if (Number.isInteger(id)) summonIds.add(id)
+    }
+    for (const row of Object.values(monsters)) {
+        if (!row || typeof row !== "object") continue
+        const tags = Array.isArray(row.GamePlayTags) ? row.GamePlayTags : []
+        if (tags.includes("Player.Summon") || tags.includes("Player.RealSummon") || tags.includes("Mon.Summon")) addId(row.UnitId)
+    }
+    for (const row of Object.values(mechanisms)) {
+        if (row && typeof row === "object") addId(row.UnitId)
+    }
+    for (const row of Object.values(battleChars)) {
+        if (!row || typeof row !== "object") continue
+        for (const id of Array.isArray(row.SummonId) ? row.SummonId : []) addId(id)
+    }
+
+    const effectIds = new Set<number>()
+    const collectValues = (value: unknown) => {
+        if (Array.isArray(value)) {
+            for (const item of value) collectValues(item)
+            return
+        }
+        const id = Number(value)
+        if (Number.isInteger(id) && effects[String(id)]) effectIds.add(id)
+    }
+    for (const id of summonIds) {
+        const monster = monsters[String(id)] ?? mechanisms[String(id)]
+        if (monster?.BluePrintParams && typeof monster.BluePrintParams === "object") {
+            collectValues(monster.BluePrintParams.SkillEffectID)
+            collectValues(monster.BluePrintParams.SkillEffectId)
+            collectValues(monster.BluePrintParams.Grade6SkillEffectID)
+        }
+        const creature = creatures[String(id)] ?? creatures[id]
+        if (creature && typeof creature === "object" && !creature.AttachOwner) collectValues(creature.HitEnemy)
+        const battleMonster = battleMonsters[String(id)] ?? battleMonsters[id]
+        const queue = Array.isArray(battleMonster?.SkillList) ? [...battleMonster.SkillList] : []
+        const seenNodes = new Set<number>()
+        while (queue.length > 0) {
+            const skillId = Number(queue.shift())
+            const skillInfo = skills[String(skillId)] ?? skills[skillId]
+            const entry = unwrapSkillEntry(skillInfo)
+            if (!entry) continue
+            let nodeId = Number(entry.BeginNodeId)
+            while (Number.isInteger(nodeId) && nodeId > 0 && !seenNodes.has(nodeId)) {
+                seenNodes.add(nodeId)
+                const node = nodes[String(nodeId)] ?? nodes[nodeId]
+                if (!node || typeof node !== "object") break
+                collectValues(node.SkillNodeEffects)
+                const branches = Array.isArray(node.BranchNodeIds)
+                    ? node.BranchNodeIds
+                    : node.BranchNodeIds && typeof node.BranchNodeIds === "object"
+                      ? Object.values(node.BranchNodeIds)
+                      : []
+                for (const branch of branches) {
+                    const branchId = Number(branch)
+                    if (Number.isInteger(branchId) && branchId > 0 && !seenNodes.has(branchId)) queue.push(branchId)
+                }
+                nodeId = Number(node.NextNodeId)
+            }
+        }
+    }
+
+    // 真实召唤物的创建技能可能在描述中引用召唤物后续执行的伤害 effect，
+    // 但该 effect 不在创建技能自身的节点链上（例如战旗、云螭）。
+    const realSummonIds = new Set<number>()
+    for (const row of Object.values(monsters)) {
+        if (row && typeof row === "object" && Array.isArray(row.GamePlayTags) && row.GamePlayTags.includes("Player.RealSummon")) {
+            addId(row.UnitId)
+            realSummonIds.add(Number(row.UnitId))
+        }
+    }
+    const walkChain = (begin: unknown): { effects: Set<number>; units: Set<number> } => {
+        const effectsFound = new Set<number>()
+        const unitsFound = new Set<number>()
+        const queue = [Number(begin)]
+        const seen = new Set<number>()
+        while (queue.length > 0) {
+            const nodeId = queue.shift() as number
+            if (!Number.isInteger(nodeId) || nodeId <= 0 || seen.has(nodeId)) continue
+            seen.add(nodeId)
+            const node = nodes[String(nodeId)] ?? nodes[nodeId]
+            if (!node || typeof node !== "object") continue
+            const ids = Array.isArray(node.SkillNodeEffects) ? node.SkillNodeEffects : [node.SkillNodeEffects]
+            for (const effectId of ids) {
+                const eid = Number(effectId)
+                if (!Number.isInteger(eid)) continue
+                effectsFound.add(eid)
+                const effect = effects[String(eid)]
+                for (const task of Array.isArray(effect?.TaskEffects) ? effect.TaskEffects : []) {
+                    if (task?.Function === "CreateUnit") {
+                        const uid = Number(task.UnitId)
+                        if (Number.isInteger(uid)) unitsFound.add(uid)
+                    }
+                }
+            }
+            if (node.NextNodeId !== undefined) queue.push(Number(node.NextNodeId))
+            const branches = Array.isArray(node.BranchNodeIds)
+                ? node.BranchNodeIds
+                : node.BranchNodeIds && typeof node.BranchNodeIds === "object"
+                  ? Object.values(node.BranchNodeIds)
+                  : []
+            for (const branch of branches) queue.push(Number(branch))
+        }
+        return { effects: effectsFound, units: unitsFound }
+    }
+    const isOwnDamage = (effect: Record<string, any>): boolean => {
+        if (effect.SkillEffectSourceFlag === "RootSource") return true
+        return (Array.isArray(effect.TaskEffects) ? effect.TaskEffects : []).some(
+            (task: Record<string, any>) =>
+                task.Function === "Damage" &&
+                Array.isArray(task.DamageTag) &&
+                (task.DamageTag.includes("Weapon") || task.DamageTag.includes("Melee"))
+        )
+    }
+    for (const entryList of Object.values(skills)) {
+        const entry = unwrapSkillEntry(entryList)
+        if (!entry || typeof entry !== "object") continue
+        const chain = walkChain(entry.BeginNodeId)
+        if (![...chain.units].some(id => realSummonIds.has(id))) continue
+        for (const value of Array.isArray(entry.SkillDescValues) ? entry.SkillDescValues : []) {
+            if (typeof value !== "string") continue
+            for (const match of value.matchAll(/SkillEffects\[(\d+)\]/g)) {
+                const effectId = Number(match[1])
+                if (chain.effects.has(effectId)) continue
+                const effect = effects[String(effectId)]
+                if (!effect || typeof effect !== "object" || isOwnDamage(effect)) continue
+                if (
+                    (Array.isArray(effect.TaskEffects) ? effect.TaskEffects : []).some(
+                        (task: Record<string, any>) => task.Function === "Damage"
+                    )
+                )
+                    effectIds.add(effectId)
+            }
+        }
+    }
+    return effectIds
 }
 
 function asArray(v: unknown): unknown[] {

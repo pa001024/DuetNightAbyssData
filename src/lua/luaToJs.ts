@@ -76,7 +76,9 @@ function tableToJs(L: LuaState, idx: number, depth: number): LuaValue {
         lua.lua_pop(L, 1)
     }
 
-    if (isArray && n > 0 && keys.length === n) {
+    const hasContinuousIntegerKeys =
+        isArray && n > 0 && keys.length === n && keys.every(key => Number.isInteger(key) && (key as number) >= 1 && (key as number) <= n)
+    if (hasContinuousIntegerKeys) {
         const arr: LuaValue[] = new Array(n)
         for (let i = 1; i <= n; i++) {
             lua.lua_rawgeti(L, abs, i)

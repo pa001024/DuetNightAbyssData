@@ -16,7 +16,7 @@ import type { ModuleContext } from "../../core/Graph.ts"
 import { compile, LTemplate, record, T, type VNode, type VNodeTree } from "../../i18n/vnode.ts"
 import { AssetReader } from "../../lua/AssetReader.ts"
 import type { SkillArtifacts } from "../skill/skillModule.ts"
-import { extractFieldValueAndFormat, resolveFieldCombatMetaImpl, roundValue } from "../skill/skillModule.ts"
+import { extractFieldValueAndFormatFromSource, resolveFieldCombatMetaImpl, roundValue } from "../skill/skillModule.ts"
 
 const TYPE_MAP: Record<string, string> = {
     Shooting: "射击",
@@ -94,6 +94,16 @@ const P_MAP: Record<string, string> = {
 function attrConfigKey(attr: Record<string, any>, attrConfig: Record<string, any>): string {
     const attrName = attr.AttrName
     if (!attrName) return ""
+    if (attrName === "DamageRate" || attrName === "DamagedRate") {
+        const tag = attr.IndividualRateZone ? "NoTag" : (attr.DamageTag ?? attr.Tag)
+        const zone = attr.RateZone
+        if (tag || zone) {
+            const clientKey = `${attrName}_${tag ?? "NoTag"}_${zone ?? "Normal"}`
+            if (clientKey in attrConfig) return clientKey
+            const zoneKey = `${attrName}_${zone ?? "Normal"}`
+            if (zoneKey in attrConfig) return zoneKey
+        }
+    }
     if (attrName in attrConfig) return attrName
     const normalKey = `${attrName}_Normal`
     if (normalKey in attrConfig) return normalKey
@@ -116,14 +126,6 @@ function resourceNameKey(dm: ModuleContext["dm"], resourceId: number): string | 
     return undefined
 }
 
-/** 动画元数据（取消/连段/装填/射击间隔）——见 AssetReader */
-interface AnimMeta {
-    cancel: number
-    combo: number
-    skillEffectLink: number
-    shootingInterval: number
-}
-
 export async function weaponModule(ctx: ModuleContext) {
     const dm = ctx.dm
     const skillArtifacts = ctx.getArtifact<SkillArtifacts>("skill")!
@@ -136,7 +138,7 @@ export async function weaponModule(ctx: ModuleContext) {
     const weaponData = () => (dm.getTable("Weapon") as Record<string, any>) || {}
     const battleWeaponData = () => (dm.getTable("BattleWeapon") as Record<string, any>) || {}
     const weaponBreakData = () => (dm.getTable("WeaponBreak") as Record<string, any>) || {}
-    const weaponCardLevelData = () => (dm.getTable("WeaponCardLevel") as Record<string, any>) || {}
+    const _weaponCardLevelData = () => (dm.getTable("WeaponCardLevel") as Record<string, any>) || {}
     const hyperCardLevelData = () => (dm.getTable("HyperWeaponCardLevel") as Record<string, any>) || {}
     const hyperSkillTreeData = () => (dm.getTable("HyperWeaponSkillTree") as Record<string, any>) || {}
     const attrConfig = () => (dm.getTable("AttrConfig") as Record<string, any>) || {}
@@ -146,7 +148,7 @@ export async function weaponModule(ctx: ModuleContext) {
     const buffData = () => (dm.getTable("Buff") as Record<string, any>) || {}
     const skillNodeData = () => (dm.getTable("SkillNode") as Record<string, any>) || {}
 
-    const getWeapon = (id: number): any => weaponData()[String(id)] ?? weaponData()[id]
+    const _getWeapon = (id: number): any => weaponData()[String(id)] ?? weaponData()[id]
     const getBattleWeapon = (id: number): any => battleWeaponData()[String(id)] ?? battleWeaponData()[id]
 
     /** 武器标签 → 类型列表 */
@@ -176,24 +178,24 @@ export async function weaponModule(ctx: ModuleContext) {
             const attrKey = `ATK_${attrName}`
             if (battleWeapon[attrKey] !== undefined && battleWeapon[attrKey] !== null) {
                 if (attrName === "Psionic") {
-                    attributes["伤害类型"] = "灾厄"
-                    attributes["攻击"] = battleWeapon[attrKey]
+                    attributes.伤害类型 = "灾厄"
+                    attributes.攻击 = battleWeapon[attrKey]
                     continue
                 }
                 const cfg = attrConfig()[attrKey] ?? {}
                 const atkType = ctx.textmap.get(cfg.Name ?? "", "cn")
                 if (!atkType) continue
-                attributes["伤害类型"] = atkType.slice(0, 2)
+                attributes.伤害类型 = atkType.slice(0, 2)
                 attributes[atkType.slice(2)] = battleWeapon[attrKey]
             }
         }
-        attributes["暴击"] = battleWeapon.CRI ?? 0
-        attributes["暴伤"] = battleWeapon.CRD ?? 0
-        attributes["触发"] = battleWeapon.TriggerProbability ?? 0
-        if (battleWeapon.MagazineCapacity !== undefined) attributes["弹匣"] = battleWeapon.MagazineCapacity
-        if (battleWeapon.BulletMax !== undefined) attributes["最大弹药"] = battleWeapon.BulletMax
-        if (battleWeapon.BulletConver !== undefined) attributes["弹药转化率"] = battleWeapon.BulletConver
-        if (battleWeapon.MaxDistance !== undefined) attributes["最大射程"] = battleWeapon.MaxDistance
+        attributes.暴击 = battleWeapon.CRI ?? 0
+        attributes.暴伤 = battleWeapon.CRD ?? 0
+        attributes.触发 = battleWeapon.TriggerProbability ?? 0
+        if (battleWeapon.MagazineCapacity !== undefined) attributes.弹匣 = battleWeapon.MagazineCapacity
+        if (battleWeapon.BulletMax !== undefined) attributes.最大弹药 = battleWeapon.BulletMax
+        if (battleWeapon.BulletConver !== undefined) attributes.弹药转化率 = battleWeapon.BulletConver
+        if (battleWeapon.MaxDistance !== undefined) attributes.最大射程 = battleWeapon.MaxDistance
         return attributes
     }
 
@@ -206,7 +208,10 @@ export async function weaponModule(ctx: ModuleContext) {
             const cfg = attrConfig()[key] ?? {}
             const nameKey = cfg.Name ?? ""
             if (!nameKey) {
-                out[attr.AttrName] = attr.AttrName
+                out[P_MAP[String(attr.AttrName)] ?? String(attr.AttrName)] = calcAttrByLevelLua(
+                    { ...attr, tableId: battleWeapon.WeaponId },
+                    ctx
+                )
                 continue
             }
             let an = ctx.textmap.get(nameKey, "cn")
@@ -349,7 +354,7 @@ export async function weaponModule(ctx: ModuleContext) {
     }
 
     /** 技能字段（武器技能风格：名称/值/削韧/tag/延迟/卡肉） */
-    async function processWeaponSkillFields(skillEntry: Record<string, any>, weaponId: number): Promise<VNodeTree[]> {
+    async function processWeaponSkillFields(skillEntry: Record<string, any>, _weaponId: number): Promise<VNodeTree[]> {
         const descKeys = skillEntry.SkillDescKeys ?? []
         const descValues = skillEntry.SkillDescValues ?? []
         if (!Array.isArray(descKeys) || !Array.isArray(descValues) || descKeys.length === 0) return []
@@ -367,7 +372,7 @@ export async function weaponModule(ctx: ModuleContext) {
                 名称: T(String(descKey)),
             }
             // 数值（用 skill 模块的 extractFieldValueAndFormat：保留 GText 哨兵在格式段）
-            const [value, value2, format] = extractFieldValueAndFormat(computed)
+            const [value, value2, format] = extractFieldValueAndFormatFromSource(String(descValue), computed)
             item.值 = value
             if (value2 !== null) item.值2 = value2
             if (format && format !== "{%}") item.格式 = compile(format)
@@ -451,10 +456,10 @@ export async function weaponModule(ctx: ModuleContext) {
             const descKeys = skillEntry.SkillDescKeys
             if (Array.isArray(descKeys) && descKeys.length > 0) {
                 const fields = await processWeaponSkillFields(skillEntry, weaponId)
-                if (fields.length > 0) item["字段"] = fields
+                if (fields.length > 0) item.字段 = fields
             }
             const creatures = skillArtifacts.extractCreatures(skillId)
-            if (creatures && creatures.length > 0) item["实体"] = creatures
+            if (creatures && creatures.length > 0) item.实体 = creatures
             skills.push(item)
         }
 
@@ -462,11 +467,11 @@ export async function weaponModule(ctx: ModuleContext) {
         const rst: VNodeTree[] = []
         for (const skill of skills as Array<Record<string, any>>) {
             const outItem: Record<string, VNodeTree> = {}
-            if (skill.id !== undefined) outItem["id"] = skill.id
-            outItem["名称"] = TYPE_MAP[String(skill.名称)] ?? skill.名称
-            outItem["类型"] = "武器伤害"
-            if (skill.字段) outItem["字段"] = skill.字段
-            if (skill.实体) outItem["实体"] = skill.实体
+            if (skill.id !== undefined) outItem.id = skill.id
+            outItem.名称 = TYPE_MAP[String(skill.名称)] ?? skill.名称
+            outItem.类型 = "武器伤害"
+            if (skill.字段) outItem.字段 = skill.字段
+            if (skill.实体) outItem.实体 = skill.实体
             if (skill.字段 || skill.实体) rst.push(outItem)
         }
         return { skills: rst, reload: roundValue(reloadValue), interval: roundValue(shootingInterval) }
@@ -560,11 +565,11 @@ export async function weaponModule(ctx: ModuleContext) {
             熔炼: processSmelting(battleWeapon),
         }
         Object.assign(item.加成, furnace.addon)
-        if (furnace.rows.length > 0) item["熔炉"] = furnace.rows
+        if (furnace.rows.length > 0) item.熔炉 = furnace.rows
         const { skills, reload, interval } = await processSkills(battleWeapon, weaponId)
-        item["技能"] = skills
-        if (reload) item["装填"] = reload
-        if (interval) item["射击间隔"] = interval
+        item.技能 = skills
+        if (reload) item.装填 = reload
+        if (interval) item.射击间隔 = interval
         items.push(item)
     }
 

@@ -58,4 +58,12 @@ describe("LuaDataManager", () => {
         const fish = dm.getTable("Fish") as any
         expect(fish).toBeDefined()
     })
+
+    test("稀疏数字键表保持对象形状", () => {
+        const dm = getLuaDataManager()
+        const skill = dm.getTable("Skill") as { [k: string]: any }
+        const hints = skill[120102][0][0].SkillDescHints
+        expect(Array.isArray(hints)).toBe(false)
+        expect(hints["9"]).toEqual(["SkillSustain"])
+    })
 })

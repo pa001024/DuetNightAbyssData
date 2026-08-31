@@ -44,20 +44,32 @@ export function animMetaFromFModelData(data: unknown): AnimMeta {
         }
     }
 
+    const cancelWindows: Array<[number, number]> = []
+    const comboWindows: Array<[number, number]> = []
     for (const notify of props.Notifies ?? []) {
         if (notify?.NotifyName === "BP_SkillCancel_C") {
             const num = toNum(notify.LinkValue)
             if (num !== null) result.cancel = Math.max(result.cancel, num)
+            const end = toNum(notify.EndLink?.LinkValue)
+            if (num !== null && end !== null) cancelWindows.push([num, end])
         }
         if (notify?.NotifyName === "BP_NextCombo_C") {
             const lv = notify.LinkValue
             const val = lv === null || lv === undefined || lv === "" ? notify.EndLink?.LinkValue : lv
             const num = toNum(val)
             if (num !== null) result.combo = Math.max(result.combo, num)
+            const end = toNum(notify.EndLink?.LinkValue)
+            if (num !== null && end !== null) comboWindows.push([num, end])
         }
         if (notify?.NotifyName === "BP_SkillEffect_C") {
             const num = toNum(notify.LinkValue)
             if (num !== null) result.skillEffectLink = Math.max(result.skillEffectLink, num)
+        }
+    }
+    for (const [combo, comboEnd] of comboWindows) {
+        if (comboEnd >= combo) continue
+        if (cancelWindows.some(([start, end]) => start <= combo && combo < end)) {
+            result.shootingInterval = result.shootingInterval ? Math.min(result.shootingInterval, combo) : combo
         }
     }
     return result

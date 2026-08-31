@@ -4,7 +4,7 @@ import { T, type VNodeTree } from "../../i18n/vnode.ts"
 
 function rows(ctx: ModuleContext): Record<string, any>[] {
     const table = ctx.dm.getTable("ForgeLevelQuest")
-    return table && typeof table === "object" ? Object.values(table).filter(v => v && typeof v === "object") as Record<string, any>[] : []
+    return table && typeof table === "object" ? (Object.values(table).filter(v => v && typeof v === "object") as Record<string, any>[]) : []
 }
 
 function normalizeArray(value: unknown): VNodeTree[] {

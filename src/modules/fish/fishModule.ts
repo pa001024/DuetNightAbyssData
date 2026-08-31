@@ -4,7 +4,7 @@ import { T, type VNodeTree } from "../../i18n/vnode.ts"
 
 function rows(ctx: ModuleContext, name: string): Record<string, any>[] {
     const table = ctx.dm.getTable(name)
-    return table && typeof table === "object" ? Object.values(table).filter(v => v && typeof v === "object") as Record<string, any>[] : []
+    return table && typeof table === "object" ? (Object.values(table).filter(v => v && typeof v === "object") as Record<string, any>[]) : []
 }
 
 export function fishModule(ctx: ModuleContext): VNodeTree {

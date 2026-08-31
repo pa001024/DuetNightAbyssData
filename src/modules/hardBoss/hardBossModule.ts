@@ -4,7 +4,7 @@ import { T, type VNodeTree } from "../../i18n/vnode.ts"
 
 function rows(ctx: ModuleContext, name: string): Record<string, any>[] {
     const table = ctx.dm.getTable(name)
-    return table && typeof table === "object" ? Object.values(table).filter(v => v && typeof v === "object") as Record<string, any>[] : []
+    return table && typeof table === "object" ? (Object.values(table).filter(v => v && typeof v === "object") as Record<string, any>[]) : []
 }
 
 function iconName(...values: unknown[]): string {
@@ -31,7 +31,14 @@ export function hardBossModule(ctx: ModuleContext): VNodeTree {
             const info = difficulty.get(Number(diffId))
             if (info) diff.push({ id: diffId, lv: info.DifficultyLevel ?? 0, r: info.DifficultyReward ?? 0 })
         }
-        result.push({ id, name: T(item.HardBossName ?? ""), icon: iconName(item.MonsterIcon, item.BossIcon, item.MainIcon), desc: T(item.HardBossDes ?? ""), diff, mid: item.MonsterId })
+        result.push({
+            id,
+            name: T(item.HardBossName ?? ""),
+            icon: iconName(item.MonsterIcon, item.BossIcon, item.MainIcon),
+            desc: T(item.HardBossDes ?? ""),
+            diff,
+            mid: item.MonsterId,
+        })
     }
     result.sort((a, b) => Number((a as any).id) - Number((b as any).id))
     return result

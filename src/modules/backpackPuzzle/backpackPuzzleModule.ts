@@ -4,11 +4,11 @@ import { T, type VNodeTree } from "../../i18n/vnode.ts"
 
 function rows(ctx: ModuleContext, name: string): Record<string, any>[] {
     const table = ctx.dm.getTable(name)
-    return table && typeof table === "object" ? Object.values(table).filter(v => v && typeof v === "object") as Record<string, any>[] : []
+    return table && typeof table === "object" ? (Object.values(table).filter(v => v && typeof v === "object") as Record<string, any>[]) : []
 }
 
 function grid(value: unknown): number[][] {
-    if (Array.isArray(value)) return value.filter(Array.isArray).map(row => (row as unknown[]).map(v => v == null ? 0 : Number(v)))
+    if (Array.isArray(value)) return value.filter(Array.isArray).map(row => (row as unknown[]).map(v => (v == null ? 0 : Number(v))))
     if (typeof value !== "string") return []
     const clean = value.replaceAll("\\n", "").replaceAll("/n", "").replaceAll("\r", "").replaceAll("\n", "")
     const result: number[][] = []
@@ -20,7 +20,7 @@ function grid(value: unknown): number[][] {
 }
 
 function icon(value: unknown): string {
-    return typeof value === "string" ? value.match(/(T_[^./']+)/)?.[1] ?? "" : ""
+    return typeof value === "string" ? (value.match(/(T_[^./']+)/)?.[1] ?? "") : ""
 }
 
 export function backpackPuzzleItemModule(ctx: ModuleContext): VNodeTree {
@@ -33,10 +33,19 @@ export function backpackPuzzleItemModule(ctx: ModuleContext): VNodeTree {
     for (const item of rows(ctx, "PuzzleItemAttr")) {
         const id = Number(item.ItemId ?? 0)
         if (!id) continue
-        const row: Record<string, VNodeTree> = { id, name: T(item.ItemName ?? ""), type: item.ItemType ?? "", itemGrid: grid(item.ItemGrid) }
+        const row: Record<string, VNodeTree> = {
+            id,
+            name: T(item.ItemName ?? ""),
+            type: item.ItemType ?? "",
+            itemGrid: grid(item.ItemGrid),
+        }
         const itemIcon = icon(item.GUIPath)
         if (itemIcon) row.icon = itemIcon
-        for (const [source, target] of [["BasicPoint", "basicPoint"], ["MaxAmmo", "maxAmmo"], ["MaxStack", "maxStack"]] as const) {
+        for (const [source, target] of [
+            ["BasicPoint", "basicPoint"],
+            ["MaxAmmo", "maxAmmo"],
+            ["MaxStack", "maxStack"],
+        ] as const) {
             if (item[source] !== undefined && item[source] !== null) row[target] = item[source]
         }
         if (item.IsMirror) row.isMirror = true

@@ -1,6 +1,6 @@
 /** CharDataTarget module - 角色档案目标。 */
 import type { ModuleContext } from "../../core/Graph.ts"
-import { T, seq, type VNodeTree } from "../../i18n/vnode.ts"
+import { seq, T, type VNodeTree } from "../../i18n/vnode.ts"
 
 export function charDataTargetModule(ctx: ModuleContext): VNodeTree {
     const table = ctx.dm.getTable("CharacterDataTarget")
@@ -13,7 +13,11 @@ export function charDataTargetModule(ctx: ModuleContext): VNodeTree {
             const id = Number(target.CharDataTarget ?? 0)
             const charId = Number(target.CharId ?? 0)
             if (!id || !charId) continue
-            const keys = Array.isArray(target.CharDataName) ? target.CharDataName.filter(Boolean) : target.CharDataName ? [target.CharDataName] : []
+            const keys = Array.isArray(target.CharDataName)
+                ? target.CharDataName.filter(Boolean)
+                : target.CharDataName
+                  ? [target.CharDataName]
+                  : []
             const name = seq(keys.map((key: string) => T(key)))
             result.push({ id, charId, name, unlock: T(target.CharDataTargetDescribe ?? ""), text: T(target.CharText ?? "") })
         }

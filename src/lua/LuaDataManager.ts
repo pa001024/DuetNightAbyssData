@@ -96,7 +96,7 @@ export class LuaDataManager {
      */
     private loadDatasIntoState(L: LuaState, key: string): void {
         // 1. 命中缓存
-        const loadedName = "Datas." + key
+        const loadedName = `Datas.${key}`
         lua.lua_getglobal(L, "package")
         lua.lua_getfield(L, -1, "loaded")
         lua.lua_getfield(L, -1, loadedName)
@@ -110,7 +110,7 @@ export class LuaDataManager {
         lua.lua_pop(L, 3) // 弹出 package/loaded/nil
 
         // 2. 读文件执行
-        const file = join(this.root, "Script", "Datas", key + ".lua")
+        const file = join(this.root, "Script", "Datas", `${key}.lua`)
         if (!existsSync(file)) {
             lua.lua_pushnil(L)
             return

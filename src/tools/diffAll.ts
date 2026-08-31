@@ -76,7 +76,7 @@ function main() {
     const args = parseArgs(process.argv.slice(2))
     const lang = args.lang || "cn"
     const onlyFile = args.file
-    const max = args.max ? Number.parseInt(args.max) : Infinity
+    const max = args.max ? Number.parseInt(args.max, 10) : Infinity
 
     const oldDir = join(baseDir, "final", "i18n", lang)
     const newDir = join(baseDir, "final_ts", "i18n", lang)

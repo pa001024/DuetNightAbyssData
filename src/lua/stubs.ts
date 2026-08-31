@@ -145,7 +145,7 @@ export function preloadFile(L: LuaState, root: string, name: string, relPath: st
 
 /** 注册 Datas.<name> 的 preload（数据文件，执行后返回其 return 值；失败返回 nil 不抛错） */
 export function registerDatasPreload(L: LuaState, root: string, name: string): void {
-    const file = joinPath(root, "Script", "Datas", name + ".lua")
+    const file = joinPath(root, "Script", "Datas", `${name}.lua`)
     if (!existsSyncSafe(file)) return
     const code = readFileSafe(file)
     lua.lua_getglobal(L, "package")
@@ -163,7 +163,7 @@ export function registerDatasPreload(L: LuaState, root: string, name: string): v
         }
         return 1 // return ReadOnly(...) 的表
     })
-    lua.lua_setfield(L, -2, "Datas." + name)
+    lua.lua_setfield(L, -2, `Datas.${name}`)
     lua.lua_pop(L, 2)
 }
 
