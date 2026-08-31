@@ -131,7 +131,7 @@ export async function weaponModule(ctx: ModuleContext) {
     const skillArtifacts = ctx.getArtifact<SkillArtifacts>("skill")!
 
     // 资产读取（uassetcli server 优先，json 回退）
-    const assetReader = new AssetReader(dm.root)
+    const assetReader = new AssetReader(dm.root, true)
     await assetReader.ensureServer()
 
     // 原始表
@@ -355,9 +355,20 @@ export async function weaponModule(ctx: ModuleContext) {
 
     /** 技能字段（武器技能风格：名称/值/削韧/tag/延迟/卡肉） */
     async function processWeaponSkillFields(skillEntry: Record<string, any>, _weaponId: number): Promise<VNodeTree[]> {
-        const descKeys = skillEntry.SkillDescKeys ?? []
-        const descValues = skillEntry.SkillDescValues ?? []
-        if (!Array.isArray(descKeys) || !Array.isArray(descValues) || descKeys.length === 0) return []
+        const normalize = (value: unknown): unknown[] => {
+            if (Array.isArray(value)) return value
+            if (!value || typeof value !== "object") return []
+            const entries = Object.entries(value as Record<string, unknown>)
+                .filter(([key]) => /^\d+$/.test(key))
+                .sort(([a], [b]) => Number(a) - Number(b))
+            if (entries.length === 0) return []
+            const result: unknown[] = []
+            for (const [key, item] of entries) result[Number(key) - 1] = item
+            return result
+        }
+        const descKeys = normalize(skillEntry.SkillDescKeys)
+        const descValues = normalize(skillEntry.SkillDescValues)
+        if (descKeys.length === 0 || descValues.length === 0) return []
 
         const out: VNodeTree[] = []
         for (let i = 0; i < descKeys.length; i++) {

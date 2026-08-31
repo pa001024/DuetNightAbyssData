@@ -44,6 +44,33 @@ describe("Graph", () => {
 })
 
 describe("skill 模块", () => {
+    test("召唤物 effect 索引懒加载且只构建一次", () => {
+        const tableReads: string[] = []
+        const dm = {
+            getTable(name: string) {
+                tableReads.push(name)
+                return {}
+            },
+        }
+        const artifacts = skillModule({ dm } as any)
+        expect(tableReads).toEqual([])
+
+        artifacts.resolveFieldCombatMeta("$#SkillEffects[1]", { "1": { TaskEffects: [] } })
+        expect(tableReads).toEqual([
+            "Monster",
+            "MechanismSummon",
+            "BattleChar",
+            "BattleMonster",
+            "SkillCreature",
+            "Skill",
+            "SkillNode",
+            "SkillEffects",
+        ])
+
+        artifacts.resolveFieldCombatMeta("$#SkillEffects[1]", { "1": { TaskEffects: [] } })
+        expect(tableReads).toHaveLength(8)
+    })
+
     test("calcSkillDesc 计算技能描述值", () => {
         const g = new Graph()
         g.defineModule({ name: "skill", deps: [], outputs: false, build: ctx => skillModule(ctx) })

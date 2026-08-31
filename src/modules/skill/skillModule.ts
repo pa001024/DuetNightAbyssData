@@ -310,14 +310,18 @@ export function skillModule(ctx: ModuleContext) {
 
     const damageTagCn = (tag: string): string => DAMAGE_TAG_CN[tag] ?? tag
 
-    /** 从 SkillEffects 解析字段的削韧/Boss削韧/tag/延迟/卡肉 */
-    const summonEffectIds = buildSummonEffectIds(dm)
+    /** 从 SkillEffects 解析字段的削韧/Boss削韧/tag/延迟/卡肉。召唤物索引只在首次使用时构建。 */
+    let summonEffectIds: ReadonlySet<number> | undefined
+    const getSummonEffectIds = (): ReadonlySet<number> => {
+        if (summonEffectIds === undefined) summonEffectIds = buildSummonEffectIds(dm)
+        return summonEffectIds
+    }
 
     const resolveFieldCombatMeta = (
         descValue: string,
         skillEffects: Record<string, any>
     ): { isDamage: boolean; 削韧?: number; Boss削韧?: number; tag?: string[]; 延迟?: number; 卡肉?: number } =>
-        resolveFieldCombatMetaImpl(descValue, skillEffects, summonEffectIds)
+        resolveFieldCombatMetaImpl(descValue, skillEffects, getSummonEffectIds())
 
     /** 技能字段解释（对齐 char.process_skill_desc 的核心路径） */
     const explainSkillFields = (skillEntry: Record<string, unknown>, _tableId: number, _maxLevel?: number): unknown[] => {

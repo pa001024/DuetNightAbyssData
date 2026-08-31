@@ -61,7 +61,7 @@ export async function charModule(ctx: ModuleContext) {
     const dm = ctx.dm
     const skillArtifacts = ctx.getArtifact<SkillArtifacts>("skill")!
     // Char 的旧导出基于 FModel JSON；优先读取同一份 JSON，避免 UAsset 解析的时间线舍入差异。
-    const assetReader = new AssetReader(dm.root)
+    const assetReader = new AssetReader(dm.root, true)
     await assetReader.ensureServer()
 
     // 原始表
@@ -289,6 +289,7 @@ export async function charModule(ctx: ModuleContext) {
         const traces: VNode[] = []
         for (const key of gradeDescKeys) {
             const k = String(key)
+            if (ctx.textmap.get(k, "cn") === k) continue
             const paramValues: VNode[] = []
             for (const p of gradeParams) {
                 if (typeof p === "number") paramValues.push(formatTraceValue(String(p)))
@@ -977,12 +978,21 @@ function generateSkillBehavior(
     const effectRate = (effectId: number, rate: unknown): number | null => {
         if (typeof rate === "number") return rate
         const text = String(rate ?? "")
-        if (!text.startsWith("#")) return Number.isFinite(Number(text)) ? Number(text) : null
+        if (!text.startsWith("#")) {
+            if (text.includes("$") || text.includes("#")) {
+                const computed = skillArtifacts.calcSkillDesc(text, 1)
+                const number = computed.match(/-?\d+(?:\.\d+)?/)?.[0]
+                return number === undefined ? null : Number(number)
+            }
+            return Number.isFinite(Number(text)) ? Number(text) : null
+        }
         const source =
             descValues.find(value => typeof value === "string" && value.includes(`SkillEffects[${effectId}]`) && value.includes("*100")) ??
             descValues.find(value => typeof value === "string" && value.includes("SkillEffects[") && value.includes("*100"))
         if (typeof source !== "string") return null
-        const ref = source.match(new RegExp(`\\$#SkillEffects\\[${effectId}\\][^$]*\\$`))?.[0]
+        const ref =
+            source.match(new RegExp(`\\$#SkillEffects\\[${effectId}\\][^$]*\\$`))?.[0] ??
+            source.match(/\$[^$]+\$/)?.[0]
         if (!ref) return null
         const computed = skillArtifacts.calcSkillDesc(ref, 1)
         const number = computed.match(/-?\d+(?:\.\d+)?/)?.[0]
@@ -991,18 +1001,6 @@ function generateSkillBehavior(
 
     const add = (part: string) => {
         if (part && !parts.includes(part)) parts.push(part)
-    }
-
-    const addOrdered = (part: string, before?: string) => {
-        if (!part || parts.includes(part)) return
-        if (before) {
-            const index = parts.findIndex(existing => existing === before || existing.startsWith(before))
-            if (index >= 0) {
-                parts.splice(index, 0, part)
-                return
-            }
-        }
-        parts.push(part)
     }
 
     const attrConfigKey = (attrName: string, attr: Record<string, any>): string => {
@@ -1110,7 +1108,7 @@ function generateSkillBehavior(
                         .filter((tag: string, index: number, list: string[]) => tag && list.indexOf(tag) === index)
                     if (tags.length > 0) text += `(${tags.join("/")})`
                     if (typeof task.Value === "string" && task.Value.startsWith("#")) text += `+${task.Value}`
-                    addOrdered(text, `削减战姿${String(task.Value ?? "")}`)
+                    add(text)
                 }
             } else if (fn === "CutToughness" && task.Value !== undefined) {
                 add(`削减战姿${task.Value}`)

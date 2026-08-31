@@ -186,7 +186,7 @@ function renderVNode(v: VNode, lang: string, textmap: TextMap): unknown {
                     template = cast.template
                     val = formatDescValue1(val, cast.cast)
                 }
-                template = template.replace(new RegExp(`#${i + 1}`, "g"), val)
+                template = template.replace(new RegExp(`#${i + 1}(?!\\d)`, "g"), val)
             }
             // 移除高亮标签（对齐老代码）
             return template
@@ -201,9 +201,9 @@ type DescCast = { kind: "int" } | { kind: "float"; decimals: number } | null
 
 /** 对齐 Script/Utils/SkillUtils.lua 的 ReplaceAndChekDescValueCast。 */
 function descValueCast(template: string, index: number): { template: string; cast: DescCast } {
-    const intRe = new RegExp(`\\{int\\}#${index}`, "i")
+    const intRe = new RegExp(`\\{int\\}#${index}(?!\\d)`, "i")
     if (intRe.test(template)) return { template: template.replace(intRe, `#${index}`), cast: { kind: "int" } }
-    const floatRe = new RegExp(`\\{float(\\d+)\\}#${index}`, "i")
+    const floatRe = new RegExp(`\\{float(\\d+)\\}#${index}(?!\\d)`, "i")
     const match = template.match(floatRe)
     if (match) {
         return {
@@ -225,8 +225,22 @@ function formatDescValue1(value: string, cast: DescCast): string {
     if (cast?.kind === "int") decimals = 0
     else if (cast?.kind === "float") decimals = isPercent ? Math.max(cast.decimals - 2, 0) : cast.decimals
     else decimals = 1
-    const formatted = numeric.toFixed(decimals)
+    const formatted = formatLuaFixed(numeric, decimals)
     return `${value.slice(0, match.index)}${formatted}${value.slice((match.index ?? 0) + match[0].length)}`
+}
+
+/** Lua/C printf uses round-to-nearest-even for exact halfway values. */
+function formatLuaFixed(value: number, decimals: number): string {
+    const factor = 10 ** decimals
+    const scaled = value * factor
+    const sign = scaled < 0 ? -1 : 1
+    const magnitude = Math.abs(scaled)
+    const lower = Math.floor(magnitude)
+    const fraction = magnitude - lower
+    const epsilon = 1e-10
+    let rounded = lower
+    if (fraction > 0.5 + epsilon || (Math.abs(fraction - 0.5) <= epsilon && lower % 2 === 1)) rounded++
+    return (sign * rounded / factor).toFixed(decimals)
 }
 
 /** 判断是否为 VNode 节点（含 __t 标记） */

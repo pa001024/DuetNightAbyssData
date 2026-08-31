@@ -179,6 +179,9 @@ export class AssetReader {
                         if (c.endsWith(`_${animResource}.uasset`)) {
                             candidates.push({ uasset: join(cur, c), json: join(cur, c.replace(/\.uasset$/, ".json")) })
                         }
+                        if (c.endsWith(`_${animResource}.json`)) {
+                            candidates.push({ uasset: join(cur, c.replace(/\.json$/, ".uasset")), json: join(cur, c) })
+                        }
                     }
                 }
             }
@@ -205,6 +208,19 @@ export class AssetReader {
      */
     async animMetaForNode(node: Record<string, any>): Promise<AnimMeta> {
         const { uasset, json } = this.resolveNodeSources(node)
+
+        if (this.preferJson && json && existsSync(json)) {
+            const cached = this.jsonMetaCache.get(json)
+            if (cached) return cached
+            try {
+                const data = JSON.parse(readFileSync(json, "utf8"))
+                const meta = animMetaFromFModelData(data)
+                this.jsonMetaCache.set(json, meta)
+                return meta
+            } catch {
+                /* continue with the uasset source */
+            }
+        }
 
         // 尝试 uasset（优先）
         if (uasset && existsSync(uasset)) {

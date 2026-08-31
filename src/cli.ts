@@ -20,6 +20,7 @@ import { charDataTargetModule } from "./modules/charDataTarget/charDataTargetMod
 import { charVoiceModule } from "./modules/charVoice/charVoiceModule.ts"
 import { cutoffModule } from "./modules/cutoff/cutoffModule.ts"
 import { draftModule } from "./modules/draft/draftModule.ts"
+import { extraExcelWeaponModule } from "./modules/extraExcelWeapon/extraExcelWeaponModule.ts"
 import { fishingSpotModule, fishModule } from "./modules/fish/fishModule.ts"
 import { forgeLevelQuestModule } from "./modules/forgeLevelQuest/forgeLevelQuestModule.ts"
 import { hardBossModule } from "./modules/hardBoss/hardBossModule.ts"
@@ -37,6 +38,11 @@ import {
     weaponSkinModule,
 } from "./modules/simple/simpleModules.ts"
 import { skillModule } from "./modules/skill/skillModule.ts"
+import {
+    treasureHuntProgressModule,
+    treasureHuntRepeatDungeonModule,
+    treasureHuntStoryDungeonModule,
+} from "./modules/treasureHunt/treasureHuntModule.ts"
 import { walnutModule } from "./modules/walnut/walnutModule.ts"
 import { weaponModule } from "./modules/weapon/weaponModule.ts"
 import { OutputCollector } from "./output/OutputCollector.ts"
@@ -56,6 +62,7 @@ const REGISTRY: ModuleReg[] = [
     { name: "charvoice", deps: [], outputs: true, build: ctx => ({ CharVoice: charVoiceModule(ctx) }) },
     { name: "characcessory", deps: [], outputs: true, build: ctx => ({ CharAccessory: charAccessoryModule(ctx) }) },
     { name: "draft", deps: [], outputs: true, build: ctx => ({ Draft: draftModule(ctx) }) },
+    { name: "extraexcelweapon", deps: [], outputs: true, build: ctx => ({ ExtraExcelWeapon: extraExcelWeaponModule(ctx) }) },
     { name: "ironticket", deps: [], outputs: true, build: ctx => ({ IronTicket: ironTicketModule(ctx) }) },
     { name: "walnut", deps: [], outputs: true, build: ctx => ({ Walnut: walnutModule(ctx) }) },
     { name: "reward", deps: [], outputs: true, build: ctx => ({ Reward: rewardModule(ctx) }) },
@@ -77,6 +84,9 @@ const REGISTRY: ModuleReg[] = [
     { name: "regionreputation", deps: [], outputs: true, build: ctx => ({ RegionReputation: regionReputationModule(ctx) }) },
     { name: "hardboss", deps: [], outputs: true, build: ctx => ({ HardBoss: hardBossModule(ctx) }) },
     { name: "chardatatarget", deps: [], outputs: true, build: ctx => ({ CharDataTarget: charDataTargetModule(ctx) }) },
+    { name: "treasurehuntprogress", deps: [], outputs: true, build: ctx => ({ TreasureHuntProgress: treasureHuntProgressModule(ctx) }) },
+    { name: "treasurehuntrepeatdungeon", deps: [], outputs: true, build: ctx => ({ TreasureHuntRepeatDungeon: treasureHuntRepeatDungeonModule(ctx) }) },
+    { name: "treasurehuntstorydungeon", deps: [], outputs: true, build: ctx => ({ TreasureHuntStoryDungeon: treasureHuntStoryDungeonModule(ctx) }) },
 ]
 
 interface CliArgs {

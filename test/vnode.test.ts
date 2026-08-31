@@ -149,4 +149,23 @@ describe("reactive 派生", () => {
         const intNode = LTemplate("SKILL_10102_DESC", ["75%", "{int}3", "6"], true)
         expect(renderTree(intNode, "cn", tm)).not.toContain("{int}")
     })
+
+    test("LTemplate 不会把 #10 当作 #1 替换", () => {
+        const values = Array.from({ length: 10 }, (_, index) => `value-${index + 1}`)
+        values[0] = "first"
+        values[9] = "tenth"
+        const node = LTemplate("GRADEUP_4201_06", values)
+        const rendered = renderTree(node, "cn", makeTextMap()) as string
+
+        expect(rendered).toContain("效果每tenth秒最多触发1次")
+        expect(rendered).not.toContain("效果每first0秒最多触发1次")
+    })
+
+    test("LTemplate 格式化也按完整占位符索引", () => {
+        const values = Array.from({ length: 10 }, () => "0")
+        values[9] = "1.6"
+        const textmap = { get: () => "每{int}#10秒" } as unknown as TextMap
+
+        expect(renderTree(LTemplate("placeholder", values, true), "cn", textmap)).toBe("每2秒")
+    })
 })
