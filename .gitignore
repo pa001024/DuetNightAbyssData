@@ -11,3 +11,10 @@ final/i18n/*/translation.json
 .omx/
 .workbuddy/
 tools/UAssetCLI/obj/
+# --- TS/Bun 重构项目 ---
+node_modules/
+dist/
+final_ts/
+out_ts/
+*.tsbuildinfo
+src/_probe.ts

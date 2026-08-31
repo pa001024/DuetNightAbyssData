@@ -1,0 +1,23 @@
+{
+  "name": "duet-night-abyss-data-ts",
+  "module": "src/cli.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "bun run src/cli.ts",
+    "test": "bun test",
+    "diff:cn": "bun run src/tools/diffFinal.ts --lang cn",
+    "out": "bun run src/cli.ts",
+    "lint": "biome check --write && tsc --noEmit",
+    "fmt": "biome check --write --linter-enabled=false"
+  },
+  "dependencies": {
+    "@vue/reactivity": "^3.5.42",
+    "fengari": "^0.1.5"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.10",
+    "@types/bun": "1.4.0",
+    "typescript": "^7.0.2"
+  }
+}

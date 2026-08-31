@@ -1227,7 +1227,12 @@ class WeaponProcessor(BaseProcessor):
         return result_desc
 
     def _format_float_templates(self, text):
-        """展开文本中的 {floatN} 模板，保留指定小数位格式。"""
+        """展开文本中的 {floatN} 模板，保留指定小数位格式。
+
+        对齐 lua SkillUtils.FormatDescValue1 规则（以 lua 为准）：
+        - 值带 % 后缀：保留 N-2 位小数（如 {float4}0.2% → 0.20%）
+        - 值无 % 后缀：保留 N 位小数（如 {float4}0.25 → 0.2500）
+        """
         if not isinstance(text, str) or "{float" not in text:
             return text
 
@@ -1235,7 +1240,7 @@ class WeaponProcessor(BaseProcessor):
             digits = int(match.group(1))
             number = match.group(2)
             suffix = match.group(3) or ""
-            decimals = max(digits - 1, 0)
+            decimals = max(digits - 2, 0) if suffix == "%" else digits
             try:
                 formatted = f"{float(number):.{decimals}f}"
             except (TypeError, ValueError):

@@ -975,12 +975,12 @@
       }
     ],
     "熔炼": [
-      "Vigueur +15.0%. Lorsque les personnages Umbro infligent des dégâts, les dégâts augmentent de 0.200% par point de Combo. Après avoir consommé des points de Combo, la valeur de Vigueur augmente de [0.250% × points consommés] pendant 8.0 s.",
-      "Vigueur +18.0%. Lorsque les personnages Umbro infligent des dégâts, les dégâts augmentent de 0.240% par point de Combo. Après avoir consommé des points de Combo, la valeur de Vigueur augmente de [0.300% × points consommés] pendant 8.0 s.",
-      "Vigueur +21.0%. Lorsque les personnages Umbro infligent des dégâts, les dégâts augmentent de 0.280% par point de Combo. Après avoir consommé des points de Combo, la valeur de Vigueur augmente de [0.350% × points consommés] pendant 8.0 s.",
-      "Vigueur +24.0%. Lorsque les personnages Umbro infligent des dégâts, les dégâts augmentent de 0.320% par point de Combo. Après avoir consommé des points de Combo, la valeur de Vigueur augmente de [0.400% × points consommés] pendant 8.0 s.",
-      "Vigueur +27.0%. Lorsque les personnages Umbro infligent des dégâts, les dégâts augmentent de 0.360% par point de Combo. Après avoir consommé des points de Combo, la valeur de Vigueur augmente de [0.450% × points consommés] pendant 8.0 s.",
-      "Vigueur +30.0%. Lorsque les personnages Umbro infligent des dégâts, les dégâts augmentent de 0.400% par point de Combo. Après avoir consommé des points de Combo, la valeur de Vigueur augmente de [0.500% × points consommés] pendant 8.0 s."
+      "Vigueur +15.0%. Lorsque les personnages Umbro infligent des dégâts, les dégâts augmentent de 0.20% par point de Combo. Après avoir consommé des points de Combo, la valeur de Vigueur augmente de [0.25% × points consommés] pendant 8.0 s.",
+      "Vigueur +18.0%. Lorsque les personnages Umbro infligent des dégâts, les dégâts augmentent de 0.24% par point de Combo. Après avoir consommé des points de Combo, la valeur de Vigueur augmente de [0.30% × points consommés] pendant 8.0 s.",
+      "Vigueur +21.0%. Lorsque les personnages Umbro infligent des dégâts, les dégâts augmentent de 0.28% par point de Combo. Après avoir consommé des points de Combo, la valeur de Vigueur augmente de [0.35% × points consommés] pendant 8.0 s.",
+      "Vigueur +24.0%. Lorsque les personnages Umbro infligent des dégâts, les dégâts augmentent de 0.32% par point de Combo. Après avoir consommé des points de Combo, la valeur de Vigueur augmente de [0.40% × points consommés] pendant 8.0 s.",
+      "Vigueur +27.0%. Lorsque les personnages Umbro infligent des dégâts, les dégâts augmentent de 0.36% par point de Combo. Après avoir consommé des points de Combo, la valeur de Vigueur augmente de [0.45% × points consommés] pendant 8.0 s.",
+      "Vigueur +30.0%. Lorsque les personnages Umbro infligent des dégâts, les dégâts augmentent de 0.40% par point de Combo. Après avoir consommé des points de Combo, la valeur de Vigueur augmente de [0.50% × points consommés] pendant 8.0 s."
     ],
     "技能": [
       {
@@ -9718,12 +9718,12 @@
       }
     ],
     "熔炼": [
-      "Munitions max +90.0%. Lorsqu’un personnage Lumino consomme de la Lucidité en utilisant une compétence de combat ou une compétence ultime, il obtient un bonus de Puissance de compétence en fonction de la quantité consommée. Chaque point de Lucidité consommé augmente la Puissance de compétence de 0.250%, jusqu’à un maximum de 75.0%, pendant 24.0 s.",
-      "Munitions max +108.0%. Lorsqu’un personnage Lumino consomme de la Lucidité en utilisant une compétence de combat ou une compétence ultime, il obtient un bonus de Puissance de compétence en fonction de la quantité consommée. Chaque point de Lucidité consommé augmente la Puissance de compétence de 0.300%, jusqu’à un maximum de 90.0%, pendant 24.0 s.",
-      "Munitions max +126.0%. Lorsqu’un personnage Lumino consomme de la Lucidité en utilisant une compétence de combat ou une compétence ultime, il obtient un bonus de Puissance de compétence en fonction de la quantité consommée. Chaque point de Lucidité consommé augmente la Puissance de compétence de 0.350%, jusqu’à un maximum de 105.0%, pendant 24.0 s.",
-      "Munitions max +144.0%. Lorsqu’un personnage Lumino consomme de la Lucidité en utilisant une compétence de combat ou une compétence ultime, il obtient un bonus de Puissance de compétence en fonction de la quantité consommée. Chaque point de Lucidité consommé augmente la Puissance de compétence de 0.400%, jusqu’à un maximum de 120.0%, pendant 24.0 s.",
-      "Munitions max +162.0%. Lorsqu’un personnage Lumino consomme de la Lucidité en utilisant une compétence de combat ou une compétence ultime, il obtient un bonus de Puissance de compétence en fonction de la quantité consommée. Chaque point de Lucidité consommé augmente la Puissance de compétence de 0.450%, jusqu’à un maximum de 135.0%, pendant 24.0 s.",
-      "Munitions max +180.0%. Lorsqu’un personnage Lumino consomme de la Lucidité en utilisant une compétence de combat ou une compétence ultime, il obtient un bonus de Puissance de compétence en fonction de la quantité consommée. Chaque point de Lucidité consommé augmente la Puissance de compétence de 0.500%, jusqu’à un maximum de 150.0%, pendant 24.0 s."
+      "Munitions max +90.0%. Lorsqu’un personnage Lumino consomme de la Lucidité en utilisant une compétence de combat ou une compétence ultime, il obtient un bonus de Puissance de compétence en fonction de la quantité consommée. Chaque point de Lucidité consommé augmente la Puissance de compétence de 0.25%, jusqu’à un maximum de 75.0%, pendant 24.0 s.",
+      "Munitions max +108.0%. Lorsqu’un personnage Lumino consomme de la Lucidité en utilisant une compétence de combat ou une compétence ultime, il obtient un bonus de Puissance de compétence en fonction de la quantité consommée. Chaque point de Lucidité consommé augmente la Puissance de compétence de 0.30%, jusqu’à un maximum de 90.0%, pendant 24.0 s.",
+      "Munitions max +126.0%. Lorsqu’un personnage Lumino consomme de la Lucidité en utilisant une compétence de combat ou une compétence ultime, il obtient un bonus de Puissance de compétence en fonction de la quantité consommée. Chaque point de Lucidité consommé augmente la Puissance de compétence de 0.35%, jusqu’à un maximum de 105.0%, pendant 24.0 s.",
+      "Munitions max +144.0%. Lorsqu’un personnage Lumino consomme de la Lucidité en utilisant une compétence de combat ou une compétence ultime, il obtient un bonus de Puissance de compétence en fonction de la quantité consommée. Chaque point de Lucidité consommé augmente la Puissance de compétence de 0.40%, jusqu’à un maximum de 120.0%, pendant 24.0 s.",
+      "Munitions max +162.0%. Lorsqu’un personnage Lumino consomme de la Lucidité en utilisant une compétence de combat ou une compétence ultime, il obtient un bonus de Puissance de compétence en fonction de la quantité consommée. Chaque point de Lucidité consommé augmente la Puissance de compétence de 0.45%, jusqu’à un maximum de 135.0%, pendant 24.0 s.",
+      "Munitions max +180.0%. Lorsqu’un personnage Lumino consomme de la Lucidité en utilisant une compétence de combat ou une compétence ultime, il obtient un bonus de Puissance de compétence en fonction de la quantité consommée. Chaque point de Lucidité consommé augmente la Puissance de compétence de 0.50%, jusqu’à un maximum de 150.0%, pendant 24.0 s."
     ],
     "技能": [
       {

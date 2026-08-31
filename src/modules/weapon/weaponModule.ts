@@ -1,0 +1,506 @@
+/**
+ * weaponModule — 输出 Weapon.json。
+ *
+ * 对齐老 processor/weapon_processor.py 的核心输出路径：
+ * - 基础信息（id/icon/名称/版本/描述/类型）
+ * - 属性（伤害类型/攻击/暴击/暴伤/触发/弹匣…）
+ * - 加成 / 突破 / 熔炼 / 熔炉
+ * - 技能（字段/削韧/tag/取消/连段/实体）
+ *
+ * 翻译部分一律 vnode；数值/结构普通 JS。语言无关，一次 build 多语言渲染。
+ * 数据源：Script/Datas/*.lua（懒加载），回退 out/*.json。
+ * 动画 JSON（取消/连段）来自 out/Asset（= 解包目录符号链接）。
+ */
+
+import type { ModuleContext } from "../../core/Graph.ts"
+import { compile, LTemplate, record, T, type VNode, type VNodeTree } from "../../i18n/vnode.ts"
+import { AssetReader } from "../../lua/AssetReader.ts"
+import type { SkillArtifacts } from "../skill/skillModule.ts"
+import { extractFieldValueAndFormat, resolveFieldCombatMetaImpl, roundValue } from "../skill/skillModule.ts"
+
+const TYPE_MAP: Record<string, string> = {
+    Shooting: "射击",
+    Attack: "普通攻击",
+    HeavyAttack: "蓄力攻击",
+    FallAttack: "下落攻击",
+    SlideAttack: "滑行攻击",
+}
+
+/** 武器标签映射（对齐 BaseProcessor.process_tags 的 WeaponType_* 部分） */
+const WEAPON_TYPE_KEY: Record<string, string> = {
+    Ultra: "同律",
+    Melee: "近战",
+    Ranged: "远程",
+    Bow: "WeaponType_Bow",
+    Bow01: "WeaponType_Bow01",
+    Bow02: "WeaponType_Bow02",
+    Cannon: "WeaponType_Cannon",
+    Claymore: "WeaponType_Claymore",
+    Crossbow: "WeaponType_Crossbow",
+    Dualblade: "WeaponType_Dualblade",
+    Katana: "WeaponType_Katana",
+    Machinegun: "WeaponType_Machinegun",
+    Pistol: "WeaponType_Pistol",
+    Polearm: "WeaponType_Polearm",
+    Shotgun: "WeaponType_Shotgun",
+    Sword: "WeaponType_Sword",
+    Swordwhip: "WeaponType_Swordwhip",
+}
+
+/** P_MAP 属性名缩写（port processor/_util.py） */
+const P_MAP: Record<string, string> = {
+    最大神智: "神智",
+    造成的伤害: "增伤",
+    造成技能伤害: "技能伤害",
+    暴击率: "暴击",
+    暴击伤害: "暴伤",
+    触发概率: "触发",
+    切割攻击: "物理",
+    贯穿攻击: "物理",
+    震荡攻击: "物理",
+    攻击速度: "攻速",
+    远程武器: "远程",
+    近战武器: "近战",
+    近战同律武器: "同律近战",
+    远程同律武器: "同律远程",
+    角色: "角色",
+    暗属性攻击: "属性攻击",
+    水属性攻击: "属性攻击",
+    火属性攻击: "属性攻击",
+    雷属性攻击: "属性攻击",
+    风属性攻击: "属性攻击",
+    光属性攻击: "属性攻击",
+    ExtraComboProb: "额外连击",
+    多重射击: "多重",
+    最大弹药: "弹药",
+    弹匣容量: "弹匣",
+    子弹装填速度: "装填",
+    GrRate: "歧视",
+    JtRate: "歧视",
+    JhRate: "歧视",
+    SqRate: "歧视",
+    全属性穿透: "属性穿透",
+    普通攻击伤害: "普攻增伤",
+    蓄力攻击伤害: "蓄力增伤",
+    下落攻击伤害: "下落增伤",
+    HyperTriggerCovertRate: "充盈转化",
+    WeaponCRDModifierRate: "暴伤",
+    WeaponCRDModifierValue: "暴伤",
+    Def: "防御",
+    Sp: "神智",
+}
+
+/** AttrConfig 键拼接（port get_attr_config_key_from_attr_data 核心分支） */
+function attrConfigKey(attr: Record<string, any>, attrConfig: Record<string, any>): string {
+    const attrName = attr.AttrName
+    if (!attrName) return ""
+    if (attrName in attrConfig) return attrName
+    const normalKey = `${attrName}_Normal`
+    if (normalKey in attrConfig) return normalKey
+    return attrName
+}
+
+function processRelease(v: unknown): string {
+    const release = Number(v) || 0
+    if (!release) return "1.0"
+    return `${Math.floor(release / 100)}.${Math.floor((release % 100) / 10)}`
+}
+
+/** 资源名（Resource.json → ResourceName 翻译 key） */
+function resourceNameKey(dm: ModuleContext["dm"], resourceId: number): string | undefined {
+    const res = dm.getTable("Resource") as Record<string, any> | undefined
+    if (!res) return undefined
+    for (const v of Object.values(res)) {
+        if (v && v.ResourceId === resourceId && v.ResourceName) return v.ResourceName
+    }
+    return undefined
+}
+
+/** 动画元数据（取消/连段/装填/射击间隔）——见 AssetReader */
+interface AnimMeta {
+    cancel: number
+    combo: number
+    skillEffectLink: number
+    shootingInterval: number
+}
+
+export async function weaponModule(ctx: ModuleContext) {
+    const dm = ctx.dm
+    const skillArtifacts = ctx.getArtifact<SkillArtifacts>("skill")!
+
+    // 资产读取（uassetcli server 优先，json 回退）
+    const assetReader = new AssetReader(dm.root)
+    await assetReader.ensureServer()
+
+    // 原始表
+    const weaponData = () => (dm.getTable("Weapon") as Record<string, any>) || {}
+    const battleWeaponData = () => (dm.getTable("BattleWeapon") as Record<string, any>) || {}
+    const weaponBreakData = () => (dm.getTable("WeaponBreak") as Record<string, any>) || {}
+    const weaponCardLevelData = () => (dm.getTable("WeaponCardLevel") as Record<string, any>) || {}
+    const attrConfig = () => (dm.getTable("AttrConfig") as Record<string, any>) || {}
+    const attributeData = () => (dm.getTable("Attribute") as Record<string, any>) || {}
+    const skillData = () => (dm.getTable("Skill") as Record<string, any>) || {}
+    const skillEffectsData = () => (dm.getTable("SkillEffects") as Record<string, any>) || {}
+    const skillNodeData = () => (dm.getTable("SkillNode") as Record<string, any>) || {}
+
+    const getWeapon = (id: number): any => weaponData()[String(id)] ?? weaponData()[id]
+    const getBattleWeapon = (id: number): any => battleWeaponData()[String(id)] ?? battleWeaponData()[id]
+
+    /** 武器标签 → 类型列表 */
+    function processTags(tags: unknown): VNodeTree {
+        if (!Array.isArray(tags)) return []
+        const out: VNodeTree[] = []
+        for (const tag of tags) {
+            const direct = WEAPON_TYPE_KEY[String(tag)]
+            if (direct === "同律" || direct === "近战" || direct === "远程") {
+                out.push(direct)
+            } else if (direct) {
+                out.push(T(direct)) // WeaponType_* 是 TextMap key
+            } else {
+                // Positioning 表兜底
+                const pos = (dm.getTable("Positioning") as Record<string, any>)?.[String(tag)]
+                if (pos?.Name) out.push(T(pos.Name))
+            }
+        }
+        return out
+    }
+
+    /** 属性（伤害类型/攻击/暴击/暴伤/触发） */
+    function processAttributes(battleWeapon: Record<string, any>): Record<string, any> {
+        const attributes: Record<string, unknown> = {}
+        const attrData = attributeData()
+        for (const attrName of Object.keys(attrData)) {
+            const attrKey = `ATK_${attrName}`
+            if (battleWeapon[attrKey] !== undefined && battleWeapon[attrKey] !== null) {
+                if (attrName === "Psionic") {
+                    attributes["伤害类型"] = "灾厄"
+                    attributes["攻击"] = battleWeapon[attrKey]
+                    continue
+                }
+                const cfg = attrConfig()[attrKey] ?? {}
+                const atkType = ctx.textmap.get(cfg.Name ?? "", "cn")
+                if (!atkType) continue
+                attributes["伤害类型"] = atkType.slice(0, 2)
+                attributes[atkType.slice(2)] = battleWeapon[attrKey]
+            }
+        }
+        attributes["暴击"] = battleWeapon.CRI ?? 0
+        attributes["暴伤"] = battleWeapon.CRD ?? 0
+        attributes["触发"] = battleWeapon.TriggerProbability ?? 0
+        if (battleWeapon.MagazineCapacity !== undefined) attributes["弹匣"] = battleWeapon.MagazineCapacity
+        if (battleWeapon.BulletMax !== undefined) attributes["最大弹药"] = battleWeapon.BulletMax
+        if (battleWeapon.BulletConver !== undefined) attributes["弹药转化率"] = battleWeapon.BulletConver
+        if (battleWeapon.MaxDistance !== undefined) attributes["最大射程"] = battleWeapon.MaxDistance
+        return attributes
+    }
+
+    /** 加成（AddAttrs → 属性名: 值） */
+    function processAddAttr(battleWeapon: Record<string, any>): Record<string, any> {
+        const out: Record<string, unknown> = {}
+        for (const attr of battleWeapon.AddAttrs ?? []) {
+            if (!attr?.AttrName) continue
+            const key = attrConfigKey(attr, attrConfig())
+            const cfg = attrConfig()[key] ?? {}
+            const nameKey = cfg.Name ?? ""
+            if (!nameKey) {
+                out[attr.AttrName] = attr.AttrName
+                continue
+            }
+            let an = ctx.textmap.get(nameKey, "cn")
+            const attrCopy = { ...attr, tableId: battleWeapon.WeaponId }
+            if (!("Type" in attrCopy)) attrCopy.Type = "BattleWeapon"
+            if (an in P_MAP) an = P_MAP[an]
+            out[an] = calcAttrByLevelLua(attrCopy, ctx)
+        }
+        return out
+    }
+
+    /** 突破材料 */
+    function processBreak(weaponId: number): VNodeTree {
+        const breakList = weaponBreakData()[String(weaponId)] ?? weaponBreakData()[weaponId]
+        if (!Array.isArray(breakList)) return []
+        const out: VNodeTree[] = []
+        for (const stage of breakList) {
+            const itemIds = stage.ItemId ?? []
+            const itemNums = stage.ItemNum ?? []
+            // 可翻译键对象：{ 资源名: 数量 }
+            const entries: Array<[VNode, VNode]> = []
+            for (let i = 0; i < itemIds.length; i++) {
+                if (i >= itemNums.length) continue
+                const rid = itemIds[i]
+                const nameKey = resourceNameKey(dm, rid)
+                const key: VNode = nameKey ? T(nameKey) : String(rid)
+                entries.push([key, itemNums[i]])
+            }
+            out.push(record(entries))
+        }
+        return out
+    }
+
+    /** 熔炼（TextMap 模板 + 逐级值替换） */
+    function processSmelting(battleWeapon: Record<string, any>): VNodeTree {
+        const passiveDesc = battleWeapon.PassiveEffectsDesc
+        const descValues = battleWeapon.PassiveEffectsDescValues ?? []
+        if (!passiveDesc) return []
+        const out: VNode[] = []
+        for (let grade = 1; grade <= 6; grade++) {
+            // 每个占位 #N 用 Lua CalcSkillDesc 计算该等级的值
+            const values: VNode[] = []
+            for (const dv of descValues) {
+                if (typeof dv !== "string") continue
+                values.push(compile(dm.calcSkillDesc(dv, grade)))
+            }
+            out.push(LTemplate(String(passiveDesc), values))
+        }
+        return out
+    }
+
+    /** 技能字段（武器技能风格：名称/值/削韧/tag/延迟/卡肉） */
+    async function processWeaponSkillFields(skillEntry: Record<string, any>, weaponId: number): Promise<VNodeTree[]> {
+        const descKeys = skillEntry.SkillDescKeys ?? []
+        const descValues = skillEntry.SkillDescValues ?? []
+        if (!Array.isArray(descKeys) || !Array.isArray(descValues) || descKeys.length === 0) return []
+
+        const out: VNodeTree[] = []
+        for (let i = 0; i < descKeys.length; i++) {
+            const descKey = descKeys[i]
+            const descValue = descValues[i]
+            if (descKey === null || descKey === undefined || descValue === null || descValue === undefined) continue
+
+            const computed = skillArtifacts.calcSkillDesc(String(descValue), 1)
+            const meta = resolveFieldCombatMetaImpl(String(descValue), skillEffectsData())
+
+            const item: Record<string, any> = {
+                名称: T(String(descKey)),
+            }
+            // 数值（用 skill 模块的 extractFieldValueAndFormat：保留 GText 哨兵在格式段）
+            const [value, value2, format] = extractFieldValueAndFormat(computed)
+            item.值 = value
+            if (value2 !== null) item.值2 = value2
+            if (format && format !== "{%}") item.格式 = compile(format)
+            if (meta.削韧) item.削韧 = meta.削韧
+            if (meta.Boss削韧 !== undefined) item.Boss削韧 = meta.Boss削韧
+            if (meta.延迟) item.延迟 = meta.延迟
+            if (meta.卡肉) item.卡肉 = meta.卡肉
+            if (meta.isDamage && meta.tag) item.tag = meta.tag
+            if (meta.isDamage) (item as any).__isDamage = true
+            out.push(item)
+        }
+        // 取消/连段（uassetcli server 解析动画）
+        await applySkillTiming(skillEntry, out)
+        return out
+    }
+
+    /** 技能节点链 → 动画元数据（取消/连段） */
+    async function applySkillTiming(skillEntry: Record<string, any>, fields: VNodeTree[]): Promise<void> {
+        if (fields.length === 0) return
+        const beginNodeId = skillEntry.BeginNodeId
+        if (!beginNodeId) return
+        const nodeChain: Array<Record<string, any>> = []
+        const visited = new Set<number>()
+        let current = beginNodeId
+        while (current && !visited.has(current) && nodeChain.length < Math.max(fields.length, 1)) {
+            const node = skillNodeData()[String(current)] ?? skillNodeData()[current]
+            if (!node) break
+            nodeChain.push(node)
+            visited.add(current)
+            current = node.NextNodeId
+        }
+        const metas = []
+        for (const n of nodeChain) metas.push(await assetReader.animMetaForNode(n))
+        for (let i = 0; i < fields.length; i++) {
+            const f = fields[i] as Record<string, any>
+            if (!f.__isDamage) continue
+            const meta = metas[i] ?? { cancel: 0, combo: 0, skillEffectLink: 0, shootingInterval: 0 }
+            if (meta.cancel) f.取消 = roundValue(meta.cancel)
+            if (meta.combo) f.连段 = roundValue(meta.combo)
+            delete f.__isDamage
+        }
+    }
+
+    /** 技能列表 */
+    async function processSkills(battleWeapon: Record<string, any>, weaponId: number) {
+        const weaponSkillList = battleWeapon.WeaponSkillList
+        if (!Array.isArray(weaponSkillList) || weaponSkillList.length === 0) return { skills: [], reload: 0, interval: 0 }
+        const isRanged = isRangedWeapon(battleWeapon)
+        const skills: VNodeTree[] = []
+        let reloadValue = 0
+        let shootingInterval = 0
+        const loopIntervalMap = collectLoopIntervalMap(weaponSkillList, weaponId)
+
+        for (const skillId of weaponSkillList) {
+            const skillInfo = skillData()[String(skillId)] ?? skillData()[skillId]
+            if (!Array.isArray(skillInfo) || skillInfo.length === 0) continue
+            // Lua 形状: skill[skillId][0][grade] — grade 表键 "0"/"1"...，grade 0 是技能条目
+            // (对齐 char 处理器 _process_single_skill 的 skill_info[0][0])
+            const gradeTable = skillInfo[0]
+            const skillEntry = gradeTable && typeof gradeTable === "object" ? (gradeTable["0"] ?? gradeTable[0]) : gradeTable
+            if (!skillEntry || typeof skillEntry !== "object") continue
+
+            const skillType = skillEntry.SkillType ?? ""
+            const item: Record<string, any> = {
+                id: skillId,
+                名称: skillType,
+            }
+            if (skillType === "Reload") {
+                const r = await extractReload(skillEntry)
+                if (r) reloadValue = Math.max(reloadValue, r)
+            }
+            if (isRanged && skillType === "Shooting") {
+                const candidate =
+                    loopIntervalMap.get(weaponId) ?? loopIntervalMap.get(skillId) ?? (await extractShootingInterval(skillEntry))
+                if (candidate) shootingInterval = shootingInterval ? Math.min(shootingInterval, candidate) : candidate
+            }
+            const descKeys = skillEntry.SkillDescKeys
+            if (Array.isArray(descKeys) && descKeys.length > 0) {
+                const fields = await processWeaponSkillFields(skillEntry, weaponId)
+                if (fields.length > 0) item["字段"] = fields
+            }
+            const creatures = skillArtifacts.extractCreatures(skillId)
+            if (creatures && creatures.length > 0) item["实体"] = creatures
+            skills.push(item)
+        }
+
+        // 归一化名称 + 类型
+        const rst: VNodeTree[] = []
+        for (const skill of skills as Array<Record<string, any>>) {
+            const outItem: Record<string, VNodeTree> = {}
+            if (skill.id !== undefined) outItem["id"] = skill.id
+            outItem["名称"] = TYPE_MAP[String(skill.名称)] ?? skill.名称
+            outItem["类型"] = "武器伤害"
+            if (skill.字段) outItem["字段"] = skill.字段
+            if (skill.实体) outItem["实体"] = skill.实体
+            if (skill.字段 || skill.实体) rst.push(outItem)
+        }
+        return { skills: rst, reload: roundValue(reloadValue), interval: roundValue(shootingInterval) }
+    }
+
+    function isRangedWeapon(battleWeapon: Record<string, any>): boolean {
+        for (const key of ["MagazineCapacity", "BulletMax", "BulletConver"]) {
+            if (battleWeapon[key] !== undefined && battleWeapon[key] !== null) return true
+        }
+        const tags = Array.isArray(battleWeapon.WeaponTag) ? battleWeapon.WeaponTag : []
+        for (const tag of tags) {
+            const lower = String(tag).toLowerCase()
+            if (lower.includes("range") || lower.includes("shoot") || lower.includes("gun")) return true
+        }
+        return false
+    }
+
+    function collectLoopIntervalMap(weaponSkillList: number[], weaponId: number): Map<number, number> {
+        const map = new Map<number, number>()
+        const targetIds = new Set(weaponSkillList.map(String))
+        targetIds.add(String(weaponId))
+        for (const effect of Object.values(skillEffectsData())) {
+            if (!effect || typeof effect !== "object") continue
+            for (const task of effect.TaskEffects ?? []) {
+                if (!task || typeof task !== "object") continue
+                if (!["StartLoopShoot", "UpdateLoopShoot"].includes(task.Function)) continue
+                const loopShootId = task.LoopShootId
+                if (!targetIds.has(String(loopShootId))) continue
+                const interval = task.LoopInterval
+                if (typeof interval === "number") {
+                    const r = roundValue(interval)
+                    const cur = map.get(loopShootId)
+                    map.set(loopShootId, cur === undefined ? r : Math.min(cur, r))
+                }
+            }
+        }
+        return map
+    }
+
+    async function extractReload(skillEntry: Record<string, any>): Promise<number> {
+        const begin = skillEntry.BeginNodeId
+        if (!begin) return 0
+        let node = skillNodeData()[String(begin)] ?? skillNodeData()[begin]
+        let steps = 0
+        let reload = 0
+        while (node && steps < 8) {
+            const meta = await assetReader.animMetaForNode(node)
+            if (meta.skillEffectLink) reload = Math.max(reload, meta.skillEffectLink)
+            node = node.NextNodeId ? (skillNodeData()[String(node.NextNodeId)] ?? skillNodeData()[node.NextNodeId]) : null
+            steps++
+        }
+        return roundValue(reload)
+    }
+
+    async function extractShootingInterval(skillEntry: Record<string, any>): Promise<number> {
+        const begin = skillEntry.BeginNodeId
+        if (!begin) return 0
+        let node = skillNodeData()[String(begin)] ?? skillNodeData()[begin]
+        let steps = 0
+        let interval = 0
+        while (node && steps < 8) {
+            const meta = await assetReader.animMetaForNode(node)
+            interval = Math.max(interval, meta.shootingInterval)
+            node = node.NextNodeId ? (skillNodeData()[String(node.NextNodeId)] ?? skillNodeData()[node.NextNodeId]) : null
+            steps++
+        }
+        return interval
+    }
+
+    // ---------- 主输出 ----------
+    const items: any[] = []
+    const weapons = weaponData()
+    for (const [idStr, weapon] of Object.entries(weapons)) {
+        if (!weapon || typeof weapon !== "object") continue
+        const weaponId = weapon.WeaponId ?? Number(idStr)
+        if (typeof weaponId === "number" && weaponId < 1000) continue
+        const battleWeapon = getBattleWeapon(weaponId)
+        if (!battleWeapon) continue
+
+        const item: Record<string, any> = {
+            id: weaponId,
+            icon: String(weapon.Icon ?? "").replace("/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_", ""),
+            名称: T(weapon.WeaponName ?? ""),
+            版本: processRelease(weapon.ReleaseVersion),
+            描述: T(weapon.WeaponDescribe ?? ""),
+            类型: processTags(battleWeapon.WeaponTag),
+            ...processAttributes(battleWeapon),
+            加成: processAddAttr(battleWeapon),
+            突破: processBreak(weaponId),
+            熔炼: processSmelting(battleWeapon),
+        }
+        const { skills, reload, interval } = await processSkills(battleWeapon, weaponId)
+        item["技能"] = skills
+        if (reload) item["装填"] = reload
+        if (interval) item["射击间隔"] = interval
+        items.push(item)
+    }
+
+    // 关闭 uasset server（构建结束回收子进程）
+    await assetReader.close()
+
+    return {
+        Weapon: items,
+    }
+}
+
+/** 按老代码规则计算属性值（BattleWeapon 表，level=1）——通过 SkillGrow 表查找 */
+function calcAttrByLevelLua(attr: Record<string, any>, ctx: ModuleContext): number | string {
+    const value = attr.Rate !== undefined ? attr.Rate : attr.Value
+    if (typeof value === "number") {
+        const levelGrow = Number(attr.LevelGrow ?? 0)
+        return roundValue(value + levelGrow * 0)
+    }
+    const strVal = String(value ?? 0)
+    if (strVal.startsWith("#")) {
+        const growIndex = Number(strVal.slice(1))
+        const growType = attr.Type ?? "Skill"
+        const tableIdStr = String(attr.tableId ?? "")
+        const skillGrow = (ctx.dm.getTable("SkillGrow") as Record<string, any>)?.[growType]
+        const idData = skillGrow?.[tableIdStr] ?? skillGrow?.[attr.tableId]
+        if (Array.isArray(idData) && idData.length > 0) {
+            const levelData = idData[0]
+            if (Array.isArray(levelData)) {
+                for (const entry of levelData) {
+                    if (entry && typeof entry === "object" && entry.Index === growIndex) {
+                        return roundValue(Number(entry.Value ?? 0))
+                    }
+                }
+            }
+        }
+        return 0
+    }
+    return roundValue(Number(strVal ?? 0))
+}

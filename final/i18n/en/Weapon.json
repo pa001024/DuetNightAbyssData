@@ -975,12 +975,12 @@
       }
     ],
     "熔炼": [
-      "Morale +15.0%. When an Umbro character deals damage, Damage Dealt increases by 0.200% for each Combo Point. After Combo Points are consumed, Morale increases by [0.250% × Combo Points consumed] for 8.0s.",
-      "Morale +18.0%. When an Umbro character deals damage, Damage Dealt increases by 0.240% for each Combo Point. After Combo Points are consumed, Morale increases by [0.300% × Combo Points consumed] for 8.0s.",
-      "Morale +21.0%. When an Umbro character deals damage, Damage Dealt increases by 0.280% for each Combo Point. After Combo Points are consumed, Morale increases by [0.350% × Combo Points consumed] for 8.0s.",
-      "Morale +24.0%. When an Umbro character deals damage, Damage Dealt increases by 0.320% for each Combo Point. After Combo Points are consumed, Morale increases by [0.400% × Combo Points consumed] for 8.0s.",
-      "Morale +27.0%. When an Umbro character deals damage, Damage Dealt increases by 0.360% for each Combo Point. After Combo Points are consumed, Morale increases by [0.450% × Combo Points consumed] for 8.0s.",
-      "Morale +30.0%. When an Umbro character deals damage, Damage Dealt increases by 0.400% for each Combo Point. After Combo Points are consumed, Morale increases by [0.500% × Combo Points consumed] for 8.0s."
+      "Morale +15.0%. When an Umbro character deals damage, Damage Dealt increases by 0.20% for each Combo Point. After Combo Points are consumed, Morale increases by [0.25% × Combo Points consumed] for 8.0s.",
+      "Morale +18.0%. When an Umbro character deals damage, Damage Dealt increases by 0.24% for each Combo Point. After Combo Points are consumed, Morale increases by [0.30% × Combo Points consumed] for 8.0s.",
+      "Morale +21.0%. When an Umbro character deals damage, Damage Dealt increases by 0.28% for each Combo Point. After Combo Points are consumed, Morale increases by [0.35% × Combo Points consumed] for 8.0s.",
+      "Morale +24.0%. When an Umbro character deals damage, Damage Dealt increases by 0.32% for each Combo Point. After Combo Points are consumed, Morale increases by [0.40% × Combo Points consumed] for 8.0s.",
+      "Morale +27.0%. When an Umbro character deals damage, Damage Dealt increases by 0.36% for each Combo Point. After Combo Points are consumed, Morale increases by [0.45% × Combo Points consumed] for 8.0s.",
+      "Morale +30.0%. When an Umbro character deals damage, Damage Dealt increases by 0.40% for each Combo Point. After Combo Points are consumed, Morale increases by [0.50% × Combo Points consumed] for 8.0s."
     ],
     "技能": [
       {
