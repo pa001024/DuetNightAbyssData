@@ -210,7 +210,10 @@ export class LuaDataManager {
         const file = join(this.root, relativePath)
         if (!existsSync(file)) return undefined
         const L = this.ensureState()
-        if (lauxlib.luaL_dostring(L, to_luastring(`
+        if (
+            lauxlib.luaL_dostring(
+                L,
+                to_luastring(`
             __project_story = function(value)
                 local function props(value)
                     local out = {}
@@ -242,7 +245,9 @@ export class LuaDataManager {
                 end
                 return {storyName = value and value.storyName or "", storyDescription = value and value.storyDescription or "", storyNodeData = nodes(value and value.storyNodeData), lineData = value and value.lineData or {}}
             end
-        `)) !== 0) {
+        `)
+            ) !== 0
+        ) {
             lua.lua_settop(L, 0)
             return undefined
         }

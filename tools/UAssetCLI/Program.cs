@@ -39,9 +39,30 @@ using UAssetAPI.Kismet.Bytecode.Expressions;
 using UAssetAPI.PropertyTypes.Objects;
 using UAssetAPI.PropertyTypes.Structs;
 using UAssetAPI.UnrealTypes;
+using UAssetAPI.Unversioned;
 
 class Program
 {
+    private static Usmap? mappings;
+    private static bool mappingsLoaded;
+
+    static Usmap? GetMappings()
+    {
+        if (mappingsLoaded) return mappings;
+        mappingsLoaded = true;
+        var unpackDir = Environment.GetEnvironmentVariable("DNA_UNPACK_DIR");
+        if (string.IsNullOrWhiteSpace(unpackDir) || !Directory.Exists(unpackDir)) return null;
+        var path = Directory.EnumerateFiles(unpackDir, "*.usmap", SearchOption.TopDirectoryOnly).OrderBy(x => x).FirstOrDefault();
+        if (path == null) return null;
+        mappings = new Usmap(path);
+        return mappings;
+    }
+
+    static UAsset ReadAsset(string path)
+    {
+        return new UAsset(path, EngineVersion.VER_UE4_27, GetMappings());
+    }
+
     static int Main(string[] args)
     {
         if (args.Length > 0 && args[0] == "server")
@@ -216,7 +237,7 @@ class Program
 
     static JObject ParseFile(string path)
     {
-        var asset = new UAsset(path, EngineVersion.VER_UE4_27);
+        var asset = ReadAsset(path);
         var calls = new JObject(); // 函数名 -> [调用汇总...]
         foreach (var ex in asset.Exports)
         {
@@ -379,7 +400,7 @@ class Program
     {
         try
         {
-            var asset = new UAsset(path, EngineVersion.VER_UE4_27);
+            var asset = ReadAsset(path);
             var json = JObject.Parse(asset.SerializeJson());
             // 去掉 UAssetAPI round-trip 元数据($type/$id/$ref)，得到干净的 FModel 式 JSON
             StripTypeAnnotations(json);
@@ -455,7 +476,7 @@ class Program
     // 例: WBP_Map_Reg_Chapter01_KK.json 的结构。
     static JArray ExportFileFModel(string path, string package, string mount)
     {
-        var asset = new UAsset(path, EngineVersion.VER_UE4_27);
+        var asset = ReadAsset(path);
         var arr = new JArray();
         for (int i = 0; i < asset.Exports.Count; i++)
             arr.Add(BuildObjectJson(asset, asset.Exports[i], i, package, mount));
@@ -667,7 +688,15 @@ class Program
             }
         }
         if (ex is NormalExport ne)
+        {
+            if (SafeStr(ex.ObjectName) == "BP_RandomActorDataManager1")
+            {
+                Console.Error.WriteLine($"DEBUG random data count={ne.Data?.Count}");
+                foreach (var p in ne.Data)
+                    Console.Error.WriteLine($"DEBUG prop={p?.Name} type={p?.GetType().Name} zero={p?.IsZero}");
+            }
             jo["Properties"] = BuildProperties(ne.Data, asset, package, mount);
+        }
         return jo;
     }
 

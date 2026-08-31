@@ -68,8 +68,10 @@ Const = {}
         L,
         to_luastring(`
 DataMgr.BinarySearch = function(Key, DataIndexTable)
+  local NumericKey = tonumber(Key)
+  if NumericKey == nil then return nil end
   for _, Entry in ipairs(DataIndexTable or {}) do
-    if Entry and Key >= Entry.MinKey and Key <= Entry.MaxKey then
+    if Entry and NumericKey >= Entry.MinKey and NumericKey <= Entry.MaxKey then
       local Loader = Entry.Loader
       if type(Loader) == "function" then
         return Loader(), Entry.MinKey, Entry.MaxKey
@@ -81,14 +83,16 @@ DataMgr.BinarySearch = function(Key, DataIndexTable)
 end
 DataMgr.QueryTable = function(Key, FileName, Data)
   local PartitionData = DataMgr.BinarySearch(Key, Data)
-  if not PartitionData or not PartitionData[Key] then
+  local NumericKey = tonumber(Key)
+  if not PartitionData or not NumericKey or not PartitionData[NumericKey] then
     return nil
   end
-  return PartitionData[Key]
+  return PartitionData[NumericKey]
 end
 DataMgr.GetPartitionData = function(Key, Data)
   local PartitionData = DataMgr.BinarySearch(Key, Data)
-  if not PartitionData or not PartitionData[Key] then
+  local NumericKey = tonumber(Key)
+  if not PartitionData or not NumericKey or not PartitionData[NumericKey] then
     return nil
   end
   return PartitionData

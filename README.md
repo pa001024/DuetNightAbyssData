@@ -37,7 +37,8 @@ python export_region_maps.py   # 合成 RegionMap 全图 -> out/region_map_merge
 “DuckDB 命中 → 未命中时请求 UAssetCLI → 成功后写入 DuckDB”的顺序读取；命中缓存时不会启动
 UAssetCLI server。
 
-解包资产更新后，用一条命令清空并按实际导出流程重新预热缓存：
+解包资产更新后，用一条命令清空并按实际资产导出流程重新预热缓存（默认重放
+`Resource`、`Weapon`、`Char`、`Mod`）：
 
 ```bash
 bun run warmup

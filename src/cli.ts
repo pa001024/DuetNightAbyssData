@@ -230,6 +230,8 @@ const REGISTRY: ModuleReg[] = [
     { name: "RaidBuff", deps: [], outputs: true, build: ctx => ({ RaidBuff: raidBuffModule(ctx) }) },
 ]
 
+const UASSET_MODULES = ["Resource", "Weapon", "Char", "Mod"]
+
 interface CliArgs {
     files: string[]
     langs: string[]
@@ -322,7 +324,9 @@ async function main() {
     const requested =
         args.files.length > 0
             ? args.files.map(name => moduleNames.get(name.toLowerCase()) ?? name)
-            : REGISTRY.filter(m => m.outputs).map(m => m.name)
+            : args.warmup
+              ? UASSET_MODULES
+              : REGISTRY.filter(m => m.outputs).map(m => m.name)
     const langs = (args.langs.length > 0 ? args.langs : LANGS) as any[]
 
     const g = new Graph()

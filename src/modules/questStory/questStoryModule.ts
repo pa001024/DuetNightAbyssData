@@ -41,7 +41,6 @@ export function questStoryModule(ctx: ModuleContext): VNodeTree {
     for (const chain of Object.values(chains)) {
         const chainRow = row(chain)
         const chainId = id(chainRow?.QuestChainId)
-        console.log("quest-story", chainId)
         if (!chainRow || chainId === undefined || !chainRow.StoryPath) continue
         const story = dialogue.story(chainRow.StoryPath)
         const questRows = row(stl[String(chainId)])?.Quests

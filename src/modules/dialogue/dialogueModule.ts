@@ -276,7 +276,7 @@ class DialogueServiceImpl implements DialogueService {
         const relative = path.replace(/\.story$/i, ".lua").replaceAll("\\", "/")
         const key = relative
         if (!this.storyCache.has(key))
-            this.storyCache.set(key, row(this.ctx.dm.loadScriptFile(join("Script", "StoryCreator", "StoryFiles", relative))))
+            this.storyCache.set(key, row(this.ctx.dm.loadStoryFile(join("Script", "StoryCreator", "StoryFiles", relative))))
         return this.storyCache.get(key)
     }
 
