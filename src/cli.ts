@@ -14,7 +14,30 @@ import { join } from "node:path"
 import { Graph } from "./core/Graph.ts"
 import { getTextMap, LANGS } from "./i18n/TextMap.ts"
 import { charModule } from "./modules/char/charModule.ts"
+import { charAccessoryModule } from "./modules/charAccessory/charAccessoryModule.ts"
+import { charVoiceModule } from "./modules/charVoice/charVoiceModule.ts"
+import { cutoffModule } from "./modules/cutoff/cutoffModule.ts"
+import { draftModule } from "./modules/draft/draftModule.ts"
+import { ironTicketModule } from "./modules/ironTicket/ironTicketModule.ts"
+import { optRewardModule, rewardModule } from "./modules/reward/rewardModule.ts"
+import { mountModule } from "./modules/mount/mountModule.ts"
+import { fishModule, fishingSpotModule } from "./modules/fish/fishModule.ts"
+import { musicModule, musicScoreModule } from "./modules/music/musicModule.ts"
+import { backpackPuzzleItemModule, backpackPuzzleLevelModule } from "./modules/backpackPuzzle/backpackPuzzleModule.ts"
+import { forgeLevelQuestModule } from "./modules/forgeLevelQuest/forgeLevelQuestModule.ts"
+import { regionPointModule } from "./modules/regionPoint/regionPointModule.ts"
+import { regionReputationModule } from "./modules/regionReputation/regionReputationModule.ts"
+import { hardBossModule } from "./modules/hardBoss/hardBossModule.ts"
+import { charDataTargetModule } from "./modules/charDataTarget/charDataTargetModule.ts"
+import {
+    hairModule,
+    headFrameModule,
+    headSculptureModule,
+    weaponAccessoryModule,
+    weaponSkinModule,
+} from "./modules/simple/simpleModules.ts"
 import { skillModule } from "./modules/skill/skillModule.ts"
+import { walnutModule } from "./modules/walnut/walnutModule.ts"
 import { weaponModule } from "./modules/weapon/weaponModule.ts"
 import { OutputCollector } from "./output/OutputCollector.ts"
 
@@ -29,6 +52,31 @@ const REGISTRY: ModuleReg[] = [
     { name: "skill", deps: [], outputs: false, build: ctx => skillModule(ctx) },
     { name: "weapon", deps: ["skill"], outputs: true, build: ctx => weaponModule(ctx) },
     { name: "char", deps: ["skill"], outputs: true, build: ctx => charModule(ctx) },
+    { name: "cutoff", deps: [], outputs: true, build: ctx => ({ Cutoff: cutoffModule(ctx) }) },
+    { name: "charvoice", deps: [], outputs: true, build: ctx => ({ CharVoice: charVoiceModule(ctx) }) },
+    { name: "characcessory", deps: [], outputs: true, build: ctx => ({ CharAccessory: charAccessoryModule(ctx) }) },
+    { name: "draft", deps: [], outputs: true, build: ctx => ({ Draft: draftModule(ctx) }) },
+    { name: "ironticket", deps: [], outputs: true, build: ctx => ({ IronTicket: ironTicketModule(ctx) }) },
+    { name: "walnut", deps: [], outputs: true, build: ctx => ({ Walnut: walnutModule(ctx) }) },
+    { name: "reward", deps: [], outputs: true, build: ctx => ({ Reward: rewardModule(ctx) }) },
+    { name: "optreward", deps: [], outputs: true, build: ctx => ({ OptReward: optRewardModule(ctx) }) },
+    { name: "weaponaccessory", deps: [], outputs: true, build: ctx => ({ WeaponAccessory: weaponAccessoryModule(ctx) }) },
+    { name: "weaponskin", deps: [], outputs: true, build: ctx => ({ WeaponSkin: weaponSkinModule(ctx) }) },
+    { name: "hair", deps: [], outputs: true, build: ctx => ({ Hair: hairModule(ctx) }) },
+    { name: "headframe", deps: [], outputs: true, build: ctx => ({ HeadFrame: headFrameModule(ctx) }) },
+    { name: "headsculpture", deps: [], outputs: true, build: ctx => ({ HeadSculpture: headSculptureModule(ctx) }) },
+    { name: "mount", deps: [], outputs: true, build: ctx => ({ Mount: mountModule(ctx) }) },
+    { name: "fish", deps: [], outputs: true, build: ctx => ({ Fish: fishModule(ctx) }) },
+    { name: "fishingspot", deps: [], outputs: true, build: ctx => ({ FishingSpot: fishingSpotModule(ctx) }) },
+    { name: "music", deps: [], outputs: true, build: ctx => ({ Music: musicModule(ctx) }) },
+    { name: "musicscore", deps: [], outputs: true, build: ctx => ({ MusicScore: musicScoreModule(ctx) }) },
+    { name: "backpackpuzzleitem", deps: [], outputs: true, build: ctx => ({ BackpackPuzzleItem: backpackPuzzleItemModule(ctx) }) },
+    { name: "backpackpuzzlelevel", deps: [], outputs: true, build: ctx => ({ BackpackPuzzleLevel: backpackPuzzleLevelModule(ctx) }) },
+    { name: "forgelevelquest", deps: [], outputs: true, build: ctx => ({ ForgeLevelQuest: forgeLevelQuestModule(ctx) }) },
+    { name: "regionpoint", deps: [], outputs: true, build: ctx => ({ RegionPoint: regionPointModule(ctx) }) },
+    { name: "regionreputation", deps: [], outputs: true, build: ctx => ({ RegionReputation: regionReputationModule(ctx) }) },
+    { name: "hardboss", deps: [], outputs: true, build: ctx => ({ HardBoss: hardBossModule(ctx) }) },
+    { name: "chardatatarget", deps: [], outputs: true, build: ctx => ({ CharDataTarget: charDataTargetModule(ctx) }) },
 ]
 
 interface CliArgs {
@@ -120,7 +168,7 @@ async function main() {
 
     console.log(`构建模块: ${requested.join(", ")}`)
     const t0 = performance.now()
-    const artifacts = await g.build({}, msg => console.log(msg))
+    const artifacts = await g.build({}, msg => console.log(msg), requested)
 
     // 收集输出（产出文件的模块）：模块返回 { 文件名(可含.json): vnode树 }
     const collector = new OutputCollector()
@@ -134,7 +182,7 @@ async function main() {
         }
     }
 
-    const textmap = getTextMap(join(baseDir, "out"))
+    const textmap = getTextMap()
     const written = collector.writeAll(outputRoot, langs, textmap)
     console.log(`\n完成: ${(performance.now() - t0).toFixed(0)}ms, ${written.length} 个文件`)
     console.log(`输出目录: ${outputRoot}`)

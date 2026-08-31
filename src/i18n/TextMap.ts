@@ -12,8 +12,6 @@
  *   fr→ContentFR, es→ContentES, tc→ContentTC
  */
 
-import { existsSync, readFileSync } from "node:fs"
-import { join } from "node:path"
 import { getLuaDataManager } from "../lua/LuaDataManager.ts"
 import type { LuaValue } from "../lua/luaToJs.ts"
 
@@ -32,6 +30,13 @@ export const LANG_FIELD_MAP: Record<string, string> = {
     de: "ContentDE",
 }
 
+/** 旧 Python 导出保留的未实装/占位文本。 */
+export const TEXT_FALLBACK: Record<string, string> = {
+    UI_CHAR_NAME_5402: "莉莉蔻",
+    UI_CHAR_NAME_4103: "SP黎瑟",
+    UI_ChapterNumber_Ex02: "第二章",
+}
+
 /** 回退字段优先顺序（对齐老代码 translate） */
 const FALLBACK_FIELDS = ["TextMapContent", "ContentEN", "ContentJP", "ContentKR", "ContentFR", "ContentES", "ContentTC"]
 
@@ -44,10 +49,7 @@ export class TextMap {
     /** 从 Lua 还是 JSON 加载（调试信息） */
     source = ""
 
-    constructor(
-        /** out 目录（仅作回退；主源是 Script/Datas lua） */
-        private baseDir: string = join(import.meta.dir, "..", "..", "out")
-    ) {}
+    constructor(_baseDir?: string) {}
 
     private load(): void {
         if (this.loaded) return
@@ -70,26 +72,6 @@ export class TextMap {
             }
         }
 
-        // 回退：out/*.json（lua 源缺失时）
-        if (this.data.size === 0) {
-            const i18nFile = join(this.baseDir, "TextMap_I18n.json")
-            if (existsSync(i18nFile)) {
-                const raw = JSON.parse(readFileSync(i18nFile, "utf8")) as Record<string, TextMapEntry>
-                for (const [k, v] of Object.entries(raw)) this.data.set(k, v)
-                this.source = "json"
-            }
-        }
-        if (this.cnAlt.size === 0) {
-            const altFile = join(this.baseDir, "TextMap_TextMapContent.json")
-            if (existsSync(altFile)) {
-                const raw = JSON.parse(readFileSync(altFile, "utf8")) as Array<{ Loader: Record<string, { TextMapContent: string }> }>
-                for (const item of raw) {
-                    for (const [k, v] of Object.entries(item.Loader)) {
-                        this.cnAlt.set(k, v.TextMapContent ?? "")
-                    }
-                }
-            }
-        }
         this.loaded = true
     }
 
@@ -112,7 +94,7 @@ export class TextMap {
         if (!entry) {
             const alt = this.cnAlt.get(key)
             if (alt) return alt
-            return tFallback?.[key] || key
+            return tFallback?.[key] || TEXT_FALLBACK[key] || key
         }
         if (lang === "cn") {
             const alt = this.cnAlt.get(key)
@@ -128,7 +110,7 @@ export class TextMap {
                 }
             }
         }
-        return content || key
+        return (content || tFallback?.[key] || TEXT_FALLBACK[key] || key).replace(/\{空格\}/g, " ")
     }
 
     /** 是否有该 key */
@@ -144,7 +126,7 @@ export class TextMap {
 }
 
 let _instance: TextMap | null = null
-export function getTextMap(baseDir?: string): TextMap {
-    if (!_instance) _instance = new TextMap(baseDir)
+export function getTextMap(_baseDir?: string): TextMap {
+    if (!_instance) _instance = new TextMap()
     return _instance
 }

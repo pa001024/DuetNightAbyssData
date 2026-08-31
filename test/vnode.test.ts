@@ -5,7 +5,7 @@
 import { describe, expect, test } from "bun:test"
 import { TextMap } from "../src/i18n/TextMap.ts"
 import { deriveLangViews } from "../src/i18n/textmapReactive.ts"
-import { compile, renderTree, seq, T, TL } from "../src/i18n/vnode.ts"
+import { compile, LTemplate, renderTree, seq, T, TL } from "../src/i18n/vnode.ts"
 import { getLuaDataManager } from "../src/lua/LuaDataManager.ts"
 import { sentinelOf } from "../src/lua/stubs.ts"
 
@@ -31,6 +31,13 @@ describe("TextMap", () => {
     test("不存在的 key 兜底返回原 key", () => {
         const tm = makeTextMap()
         expect(tm.get("NO_SUCH_KEY_XYZ", "cn")).toBe("NO_SUCH_KEY_XYZ")
+    })
+
+    test("旧 Python 文本 fallback", () => {
+        const tm = makeTextMap()
+        expect(tm.get("UI_CHAR_NAME_4103", "cn")).toBe("SP黎瑟")
+        expect(tm.get("UI_CHAR_NAME_5402", "cn")).toBe("莉莉蔻")
+        expect(tm.get("UI_ChapterNumber_Ex02", "cn")).toBe("第二章")
     })
 })
 
@@ -129,5 +136,17 @@ describe("reactive 派生", () => {
         expect(en).toContain("3")
         expect(cn).not.toBe(en)
         expect(cn).not.toContain("GT{")
+    })
+
+    test("LTemplate 按 Lua cast 和默认精度渲染", () => {
+        const tm = makeTextMap()
+        const floatNode = LTemplate("SKILL_10102_DESC", ["75%", "33%", "6"], true)
+        const rendered = renderTree(floatNode, "cn", tm) as string
+        expect(rendered).toContain("75.0%")
+        expect(rendered).toContain("33.0%")
+        expect(rendered).toContain("6.0秒")
+
+        const intNode = LTemplate("SKILL_10102_DESC", ["75%", "{int}3", "6"], true)
+        expect(renderTree(intNode, "cn", tm)).not.toContain("{int}")
     })
 })

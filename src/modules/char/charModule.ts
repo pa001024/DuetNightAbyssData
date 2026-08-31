@@ -9,10 +9,22 @@
  * 翻译部分一律 vnode；数值/结构普通 JS。语言无关，一次 build 多语言渲染。
  * 技能字段/值计算走游戏 SkillUtils（skill 模块 artifacts）。
  */
+import { readFileSync } from "node:fs"
+import { join } from "node:path"
 import type { ModuleContext } from "../../core/Graph.ts"
 import { compile, LTemplate, record, seq, T, TFixed, TL, type VNode, type VNodeTree } from "../../i18n/vnode.ts"
+import { AssetReader } from "../../lua/AssetReader.ts"
 import type { SkillArtifacts } from "../skill/skillModule.ts"
-import { extractFieldValueAndFormat, resolveFieldCombatMetaImpl, roundValue } from "../skill/skillModule.ts"
+import {
+    ACTION_CN,
+    BASE_ATTR_CN,
+    DAMAGE_TAG_CN,
+    DAMAGE_TYPE_CN,
+    extractFieldValueAndFormat,
+    P_MAP,
+    resolveFieldCombatMetaImpl,
+    roundValue,
+} from "../skill/skillModule.ts"
 
 /** 阵营：Camp 表 */
 /** 属性缩写 */
@@ -44,10 +56,14 @@ const WEAPON_TYPE_CN: Record<string, string> = {
 }
 /** WeaponType_* 是翻译 key（非直接中文） */
 const WEAPON_TYPE_DIRECT = new Set(["同律", "近战", "远程"])
+const BP_ADD_BUFF_CACHE = new Map<string, Record<string, number[]>>()
 
-export function charModule(ctx: ModuleContext) {
+export async function charModule(ctx: ModuleContext) {
     const dm = ctx.dm
     const skillArtifacts = ctx.getArtifact<SkillArtifacts>("skill")!
+    // Char 的旧导出基于 FModel JSON；优先读取同一份 JSON，避免 UAsset 解析的时间线舍入差异。
+    const assetReader = new AssetReader(dm.root)
+    await assetReader.ensureServer()
 
     // 原始表
     const charData = () => (dm.getTable("Char") as Record<string, any>) || {}
@@ -67,6 +83,52 @@ export function charModule(ctx: ModuleContext) {
     const weaponData = () => (dm.getTable("Weapon") as Record<string, any>) || {}
     const battleWeaponData = () => (dm.getTable("BattleWeapon") as Record<string, any>) || {}
     const uWeaponData = () => (dm.getTable("UWeapon") as Record<string, any>) || {}
+    const abyssSeasonList = () => (dm.getTable("AbyssSeasonList") as Record<string, any>) || {}
+    const shopItemData = () => (dm.getTable("ShopItem") as Record<string, any>) || {}
+    const shopItem2ShopSubId = () => (dm.getTable("ShopItem2ShopSubId") as Record<string, any>) || {}
+    const walnutData = () => (dm.getTable("Walnut") as Record<string, any>) || {}
+    const draftData = () => (dm.getTable("Draft") as Record<string, any>) || {}
+
+    function processAbyssSpecialWeapon(charId: number): number | undefined {
+        const abyssShop = shopItem2ShopSubId().Walnut?.AbyssShop
+        if (!abyssShop || typeof abyssShop !== "object") return undefined
+        const shopItemIds = new Set<number>()
+        for (const entries of Object.values(abyssShop)) {
+            if (!Array.isArray(entries)) continue
+            for (const entry of entries) {
+                const id = Number(entry?.ShopItemId)
+                if (Number.isFinite(id) && id) shopItemIds.add(id)
+            }
+        }
+        if (shopItemIds.size === 0) return undefined
+
+        for (const season of Object.values(abyssSeasonList())) {
+            if (!season || Number(season.CharId) !== Number(charId)) continue
+            const start = Number(season.AbyssStartTime)
+            const end = Number(season.AbyssEndTime)
+            if (!Number.isFinite(start) || !Number.isFinite(end)) continue
+            const walnutIds = new Set<number>()
+            for (const shopItem of Object.values(shopItemData())) {
+                if (shopItem?.ItemType !== "Walnut" || !shopItemIds.has(Number(shopItem.ItemId))) continue
+                const shopStart = Number(shopItem.StartTime)
+                const shopEnd = shopItem.EndTime === undefined || shopItem.EndTime === null ? undefined : Number(shopItem.EndTime)
+                if (!Number.isFinite(shopStart) || shopStart >= end) continue
+                if (shopEnd !== undefined && Number.isFinite(shopEnd) && shopEnd <= start) continue
+                const typeId = Number(shopItem.TypeId)
+                if (Number.isFinite(typeId)) walnutIds.add(typeId)
+            }
+            if (walnutIds.size !== 1) continue
+            const walnut = getEntry(walnutData(), [...walnutIds][0])
+            const draftId = Array.isArray(walnut?.Id) ? walnut.Id[0] : undefined
+            const weaponId = Number(walnut?.MainRewardId)
+            if (!draftId || !Number.isFinite(weaponId)) continue
+            const draft = getEntry(draftData(), draftId)
+            if (draft?.ProductType !== "Weapon" || Number(draft.ProductId) !== weaponId) continue
+            if (!getEntry(weaponData(), weaponId)) continue
+            return weaponId
+        }
+        return undefined
+    }
 
     const getEntry = (table: Record<string, any>, id: number | string): any => table[String(id)] ?? table[id as number]
 
@@ -238,6 +300,18 @@ export function charModule(ctx: ModuleContext) {
             }
             traces.push(LTemplate(k, paramValues))
         }
+        const ultraPassiveId = ultraPassiveMap()[String(charId)] ?? ultraPassiveMap()[charId]
+        if (ultraPassiveId !== undefined && ultraPassiveId !== null) {
+            const ultraEntry = getSkillEntry(dm, Number(ultraPassiveId))
+            if (ultraEntry?.SkillDesc) {
+                const values = normalizeMapOrArray(ultraEntry.SkillDescValues).map(value => {
+                    if (typeof value === "number") return formatTraceValue(value)
+                    if (typeof value === "string") return formatTraceValue(skillArtifacts.calcSkillDesc(value, 1))
+                    return String(value ?? "")
+                })
+                traces.push(LTemplate(String(ultraEntry.SkillDesc), values))
+            }
+        }
         return traces
     }
 
@@ -273,16 +347,13 @@ export function charModule(ctx: ModuleContext) {
     // ---------- 技能 ----------
 
     /** 单个技能 */
-    function processSingleSkill(skillId: number): Record<string, unknown> | null {
+    async function processSingleSkill(skillId: number, inheritedDescValues?: unknown[]): Promise<Record<string, unknown> | null> {
         const skillInfo = getSkillEntry(dm, skillId)
         if (!skillInfo) return null
 
-        const result: Record<string, unknown> = {
-            id: skillId,
-            名称: T(skillInfo.SkillName ?? ""),
-            类型: T(skillInfo.SkillBtnDesc ?? ""),
-            icon: extractIconName(skillInfo.SkillBtnIcon),
-        }
+        const result: Record<string, unknown> = { id: skillId }
+        if (skillInfo.SkillName) result.名称 = T(skillInfo.SkillName)
+        result.类型 = T(skillInfo.SkillBtnDesc ?? "")
         // 描述：TextMap 模板 + #N 值替换
         const descKey = skillInfo.SkillDesc
         if (descKey) {
@@ -291,17 +362,37 @@ export function charModule(ctx: ModuleContext) {
             for (const dv of descValues) {
                 if (typeof dv === "string") values.push(compile(skillArtifacts.calcSkillDesc(dv, 1)))
             }
-            result["描述"] = LTemplate(String(descKey), values)
+            result["描述"] = LTemplate(String(descKey), values, true)
         }
+        result.icon = extractIconName(skillInfo.SkillBtnIcon)
         if (skillInfo.CD !== undefined && skillInfo.CD !== null) result["cd"] = skillInfo.CD
 
         // 实体
         const creatures = skillArtifacts.extractCreatures(skillId)
         if (creatures && creatures.length > 0) result["实体"] = creatures
 
+        const behavior = generateSkillBehavior(dm, skillArtifacts, skillId, inheritedDescValues)
+
+        const subSkills = Array.isArray(skillInfo.SubSkills) ? skillInfo.SubSkills : []
+        const explanationNames = Array.isArray(skillInfo.ExplanationId)
+            ? skillInfo.ExplanationId.map((termId: unknown) => {
+                  const term = combatTerm()[String(termId)]
+                  return term?.CombatTerm ? T(term.CombatTerm) : ""
+              })
+            : []
+        const childSkills = (await Promise.all(subSkills
+            .filter((subSkillId: unknown) => String(subSkillId) !== String(skillId))
+            .map((subSkillId: unknown, index: number) => processChildSkill(Number(subSkillId), explanationNames[index], skillInfo.SkillDescValues))))
+            .filter((child): child is Record<string, unknown> => {
+                if (!child) return false
+                return Object.entries(child).some(([key, value]) => {
+                    if (key === "id" || key === "子技能" || key === "行为" || key === "__childNameAppended") return false
+                    return Boolean(value) && JSON.stringify(value) !== JSON.stringify(result[key])
+                })
+            })
         // 字段
         const maxLevel = Math.min(skillInfoLevels(dm, skillId), 12)
-        const fields = processSkillDesc(skillInfo, skillId, maxLevel)
+        const fields = await processSkillDesc(skillInfo, skillId, maxLevel)
         if (fields.length > 0) result["字段"] = fields
 
         // 升级材料
@@ -316,11 +407,25 @@ export function charModule(ctx: ModuleContext) {
             result["术语解释"] = terms
         }
 
+        if (childSkills.length > 0) result["子技能"] = childSkills
+
+        if (behavior) result["行为"] = behavior
+
         return result
     }
 
+    async function processChildSkill(skillId: number, explanationName?: VNode, inheritedDescValues?: unknown[]): Promise<Record<string, unknown> | null> {
+        const child = await processSingleSkill(skillId, inheritedDescValues)
+        if (child && explanationName) {
+            const info = getSkillEntry(dm, skillId)
+            child.名称 = explanationName
+            if (!info?.SkillName) child.__childNameAppended = true
+        }
+        return child
+    }
+
     /** 技能字段（char 风格：影响/值数组/值2/格式/tag/削韧/取消/连段） */
-    function processSkillDesc(skillInfo: Record<string, any>, skillId: number, maxLevel: number): any[] {
+    async function processSkillDesc(skillInfo: Record<string, any>, skillId: number, maxLevel: number): Promise<any[]> {
         const descKeys = normalizeMapOrArray(skillInfo.SkillDescKeys)
         const descValues = normalizeMapOrArray(skillInfo.SkillDescValues)
         if (descKeys.length === 0 || descValues.length === 0) return []
@@ -331,8 +436,15 @@ export function charModule(ctx: ModuleContext) {
             const descKey = descKeys[i]
             const descValue = descValues[i]
             if (descKey === null || descKey === undefined || descValue === null || descValue === undefined) continue
+            // 与旧处理器一致：没有数值引用（#...）的纯文本/常量项不作为字段输出。
+            if (typeof descValue !== "string" || !descValue.includes("#")) continue
 
-            const item: Record<string, any> = { 名称: T(String(descKey)) }
+            const groupName = skillSectionName(skillInfo.SkillDescGroups, i)
+            const descTextCn = ctx.textmap.get(String(descKey), "cn")
+            const item: Record<string, any> = {
+                名称: groupName && !descTextCn.startsWith("[") ? seq(["[", T(groupName), "]", T(String(descKey))]) : T(String(descKey)),
+                __descIndex: i,
+            }
 
             // 影响（SkillDescHints → 技能效益/技能威力/技能范围/技能耐久）
             const hints = Array.isArray(descHints) ? descHints[i] : undefined
@@ -343,28 +455,89 @@ export function charModule(ctx: ModuleContext) {
 
             // 逐级计算值（1..maxLevel）
             const values: number[] = []
+            const values2: number[] = []
+            let hasValue2 = false
             const computedFirst = skillArtifacts.calcSkillDesc(String(descValue), 1)
             for (let lv = 1; lv <= maxLevel; lv++) {
                 const computed = lv === 1 ? computedFirst : skillArtifacts.calcSkillDesc(String(descValue), lv)
-                const [v] = extractFieldValueAndFormat(computed)
+                const [v, v2] = extractFieldValueAndFormat(computed)
                 values.push(typeof v === "number" ? v : Number(v) || 0)
+                if (v2 !== null) {
+                    hasValue2 = true
+                    values2.push(typeof v2 === "number" ? v2 : Number(v2) || 0)
+                } else if (hasValue2) {
+                    values2.push(0)
+                }
             }
-            const [, , format] = extractFieldValueAndFormat(computedFirst)
+            const [, firstValue2, format] = extractFieldValueAndFormat(computedFirst)
             const isConstant = values.every(v => Math.abs(v - values[0]) < 0.0001)
             item["值"] = isConstant ? values[0] : values.map(v => roundValue(v))
+            if (firstValue2 !== null && values2.length > 0) {
+                const isConstant2 = values2.every(v => Math.abs(v - values2[0]) < 0.0001)
+                item["值2"] = isConstant2 ? values2[0] : values2.map(v => roundValue(v))
+            }
             if (format && format !== "{%}") item["格式"] = compile(format)
 
             // 削韧/Boss削韧/tag（char 不含 HitStop 的延迟/卡肉——那是 weapon 专属，
             // 对齐老代码 char._resolve_field_combat_meta 只解析削韧/Boss削韧）
             const meta = resolveFieldCombatMetaImpl(String(descValue), skillEffectsTable(dm))
+            if (meta.isDamage && meta.tag) item["tag"] = meta.tag
             if (meta.削韧) item["削韧"] = meta.削韧
             if (meta.Boss削韧 !== undefined) item["Boss削韧"] = meta.Boss削韧
-            if (meta.isDamage && meta.tag) item["tag"] = meta.tag
             if (meta.isDamage) (item as any).__isDamage = true
 
             out.push(item)
         }
+        await applySkillTiming(skillInfo, out)
         return out
+    }
+
+    /** 对齐旧 Python：字段直接引用的 SkillNode 优先，随后按 SkillDescGroups 的段落节点补全。 */
+    async function applySkillTiming(skillInfo: Record<string, any>, fields: Array<Record<string, any>>): Promise<void> {
+        if (fields.length === 0) return
+        const nodeData = (dm.getTable("SkillNode") as Record<string, any>) || {}
+        const getNode = (id: unknown): Record<string, any> | null => {
+            const node = nodeData[String(id)] ?? nodeData[id as number]
+            return node && typeof node === "object" ? node : null
+        }
+        const timing = async (beginNodeId: unknown): Promise<{ cancel: number; combo: number }> => {
+            const node = getNode(beginNodeId)
+            if (!node) return { cancel: 0, combo: 0 }
+            const meta = await assetReader.animMetaForNode(node)
+            return { cancel: meta.cancel, combo: meta.combo }
+        }
+        const groupTiming = new Map<number, { cancel: number; combo: number }>()
+        const mainTiming = await timing(skillInfo.BeginNodeId)
+        groupTiming.set(0, mainTiming)
+        const subSkills = Array.isArray(skillInfo.SubSkills) ? skillInfo.SubSkills : []
+        for (let i = 1; i < fields.length + 1; i++) {
+            const subId = subSkills[i - 1]
+            if (subId === undefined) continue
+            const sub = getSkillEntry(dm, Number(subId))
+            if (sub) groupTiming.set(i, await timing(sub.BeginNodeId))
+        }
+        for (let i = 0; i < fields.length; i++) {
+            const field = fields[i]
+            const descIndex = Number(field.__descIndex)
+            delete field.__descIndex
+            if (!field.__isDamage) continue
+            const descValue = String(normalizeMapOrArray(skillInfo.SkillDescValues)[descIndex] ?? "")
+            let resolved = { cancel: 0, combo: 0 }
+            for (const match of descValue.matchAll(/\$#SkillNode\[(\d+)\]/g)) {
+                const direct = await timing(Number(match[1]))
+                if (direct.cancel || direct.combo) {
+                    resolved = direct
+                    break
+                }
+            }
+            if (!resolved.cancel && !resolved.combo) {
+                const group = skillSectionIndex(skillInfo.SkillDescGroups, descIndex)
+                if (group !== undefined) resolved = groupTiming.get(group) ?? resolved
+            }
+            if (resolved.cancel) field.取消 = roundValue(resolved.cancel)
+            if (resolved.combo) field.连段 = roundValue(resolved.combo)
+            delete field.__isDamage
+        }
     }
 
     /** 技能升级材料 */
@@ -454,7 +627,8 @@ export function charModule(ctx: ModuleContext) {
         const elm = processElement(charId)
         const cdata = characterData()[String(charId)] ?? {}
         let name: VNode = T(char.CharName ?? "")
-        if (char.CharName === "{nickname}" || char.CharName === "{nickname2}") {
+        const translatedName = ctx.textmap.get(String(char.CharName ?? ""), "cn")
+        if (translatedName === "{nickname}" || translatedName === "{nickname2}") {
             name = seq([`主角-${elm}`])
         }
 
@@ -489,7 +663,7 @@ export function charModule(ctx: ModuleContext) {
         const skills: any[] = []
         for (const skillId of battleChar.SkillList ?? []) {
             if (skillId === ultraPassiveId) continue
-            const info = processSingleSkill(skillId)
+            const info = await processSingleSkill(skillId)
             if (info) skills.push(info)
         }
         processed["技能"] = skills
@@ -503,6 +677,8 @@ export function charModule(ctx: ModuleContext) {
         if (piece) processed["碎片"] = piece
         const seventh = processSeventhTraceCost(charId)
         if (seventh.length > 0) processed["第七溯源消耗"] = seventh
+        const specialWeapon = processAbyssSpecialWeapon(charId)
+        if (specialWeapon !== undefined) processed["专武"] = specialWeapon
         const uWeapons = processUWeapon(char.UWeapon)
         if (uWeapons) processed["同律武器"] = uWeapons
 
@@ -516,7 +692,8 @@ export function charModule(ctx: ModuleContext) {
         items.push(processed)
     }
 
-    return { Char: items }
+    await assetReader.close()
+    return { Char: items.map(item => orderCharTree(item)) }
 }
 
 // ---------- 模块级辅助 ----------
@@ -526,6 +703,63 @@ const HINT_MAP: Record<string, string> = {
     SkillIntensity: "技能威力",
     SkillRange: "技能范围",
     SkillSustain: "技能耐久",
+}
+
+const CHAR_KEY_ORDER = [
+    "id",
+    "icon",
+    "名称",
+    "版本",
+    "别名",
+    "出生地",
+    "势力",
+    "生日",
+    "中文CV",
+    "日文CV",
+    "英文CV",
+    "韩文CV",
+    "阵营",
+    "属性",
+    "精通",
+    "标签",
+    "基础攻击",
+    "基础生命",
+    "基础防御",
+    "基础护盾",
+    "基础神智",
+    "加成",
+    "突破",
+    "技能",
+    "溯源",
+    "碎片",
+    "第七溯源消耗",
+    "专武",
+    "同律武器",
+]
+const SKILL_KEY_ORDER = ["id", "名称", "类型", "描述", "icon", "cd", "实体", "字段", "升级", "术语解释", "子技能", "行为"]
+const FIELD_KEY_ORDER = ["名称", "影响", "值", "值2", "格式", "tag", "削韧", "Boss削韧", "取消", "连段"]
+const U_WEAPON_KEY_ORDER = ["id", "名称", "类型", "icon", "伤害类型", "攻击", "暴击", "暴伤", "触发"]
+
+/** 保持生成 JSON 的字段顺序与旧 Char 导出一致；vnode 自身顺序不能改。 */
+function orderCharTree(value: any, parentKey = ""): any {
+    if (Array.isArray(value)) return value.map(item => orderCharTree(item, parentKey))
+    if (!value || typeof value !== "object" || "__t" in value) return value
+
+    const keys = Object.keys(value).filter(key => key !== "__childNameAppended")
+    let order = CHAR_KEY_ORDER
+    if (parentKey === "字段") order = FIELD_KEY_ORDER
+    else if (parentKey === "同律武器") order = U_WEAPON_KEY_ORDER
+    else if (parentKey === "技能" || parentKey === "子技能") order = SKILL_KEY_ORDER
+    const childNameAppended = value.__childNameAppended === true
+    if (childNameAppended) order = [...SKILL_KEY_ORDER.filter(key => key !== "名称"), "名称"]
+    const rank = new Map(order.map((key, index) => [key, index]))
+    const sortedKeys = keys
+        .map((key, index) => ({ key, index }))
+        .sort((a, b) => (rank.get(a.key) ?? order.length + a.index) - (rank.get(b.key) ?? order.length + b.index))
+        .map(item => item.key)
+    const out: Record<string, any> = {}
+    for (const key of sortedKeys) out[key] = orderCharTree(value[key], key)
+    return out
 }
 
 function resourceNameKey(dm: ModuleContext["dm"], resourceId: number): string | undefined {
@@ -559,6 +793,175 @@ function skillInfoLevels(dm: ModuleContext["dm"], skillId: number): number {
 /** 技能字段的 SkillEffects 表 */
 function skillEffectsTable(dm: ModuleContext["dm"]): Record<string, any> {
     return (dm.getTable("SkillEffects") as Record<string, any>) || {}
+}
+
+/** SkillDescGroups 使用 1-based 字段索引；返回该字段所属段名的 TextMap key。 */
+function skillSectionName(groups: unknown, index: number): string | undefined {
+    if (!Array.isArray(groups)) return undefined
+    const fieldIndex = index + 1
+    for (const group of groups) {
+        if (!group || typeof group !== "object" || Array.isArray(group)) continue
+        for (const [nameKey, indices] of Object.entries(group as Record<string, unknown>)) {
+            if (Array.isArray(indices) && indices.some(value => Number(value) === fieldIndex)) return nameKey
+        }
+    }
+    return undefined
+}
+
+function skillSectionIndex(groups: unknown, index: number): number | undefined {
+    if (!Array.isArray(groups)) return undefined
+    const fieldIndex = index + 1
+    for (let groupIndex = 0; groupIndex < groups.length; groupIndex++) {
+        const group = groups[groupIndex]
+        if (!group || typeof group !== "object" || Array.isArray(group)) continue
+        for (const indices of Object.values(group as Record<string, unknown>)) {
+            if (Array.isArray(indices) && indices.some(value => Number(value) === fieldIndex)) return groupIndex
+        }
+    }
+    return undefined
+}
+
+/** 生成老导出中的技能行为摘要；只读技能链，不参与翻译或数值解析。 */
+function generateSkillBehavior(dm: ModuleContext["dm"], skillArtifacts: SkillArtifacts, skillId: number, inheritedDescValues?: unknown[]): string {
+    const skillData = (dm.getTable("Skill") as Record<string, any>) || {}
+    const nodeData = (dm.getTable("SkillNode") as Record<string, any>) || {}
+    const effectData = (dm.getTable("SkillEffects") as Record<string, any>) || {}
+    const buffData = (dm.getTable("Buff") as Record<string, any>) || {}
+    const passiveData = (dm.getTable("PassiveEffect") as Record<string, any>) || {}
+    let bpAddBuff = BP_ADD_BUFF_CACHE.get(dm.root)
+    if (!bpAddBuff) {
+        bpAddBuff = JSON.parse(readFileSync(join(dm.root, "processor", "BPAddBuff.json"), "utf8")) as Record<string, number[]>
+        BP_ADD_BUFF_CACHE.set(dm.root, bpAddBuff)
+    }
+    const entry = getSkillEntry(dm, skillId)
+    if (!entry) return ""
+
+    const ownDescValues = normalizeMapOrArray(entry.SkillDescValues)
+    const descValues = ownDescValues.length > 0 ? ownDescValues : inheritedDescValues ?? []
+    const parts: string[] = []
+    const seenEffects = new Set<string>()
+    const seenNodes = new Set<string>()
+    const seenSkills = new Set<string>()
+
+    const effectRate = (effectId: number, rate: unknown): number | null => {
+        if (typeof rate === "number") return rate
+        const text = String(rate ?? "")
+        if (!text.startsWith("#")) return Number.isFinite(Number(text)) ? Number(text) : null
+        const ref =
+            descValues.find(value => typeof value === "string" && value.includes(`SkillEffects[${effectId}]`) && value.includes("*100")) ??
+            descValues.find(value => typeof value === "string" && value.includes("SkillEffects[") && value.includes("*100"))
+        if (typeof ref !== "string") return null
+        const computed = skillArtifacts.calcSkillDesc(ref, 1)
+        const number = computed.match(/-?\d+(?:\.\d+)?/)?.[0]
+        return number === undefined ? null : Number(number) / (ref.includes("*100") ? 100 : 1)
+    }
+
+    const add = (part: string) => {
+        if (part && !parts.includes(part)) parts.push(part)
+    }
+
+    const buffSummary = (buffId: unknown): string => {
+        const id = String(buffId ?? "")
+        const buff = buffData[id]
+        if (!buff || typeof buff !== "object") return `增益(${id})`
+        const bits: string[] = []
+        for (const attr of Array.isArray(buff.AddAttrs) ? buff.AddAttrs : []) {
+            if (!attr || typeof attr !== "object") continue
+            const name =
+                ({ SkillEfficiency: "技能效益", ATK: "攻击" } as Record<string, string>)[String(attr.AttrName)] ??
+                String(attr.AttrName ?? "")
+            const value = Number(attr.Rate ?? attr.Value)
+            if (!name || !Number.isFinite(value)) continue
+            const valueText = `${roundValue(value * 100)}%`
+            if (attr.Stackable) {
+                bits.push(`每层+${value}${name}(最多${buff.MaxLayer ?? ""}层)`)
+            } else {
+                bits.push(`${name}+${valueText}`)
+            }
+        }
+        for (const dot of Array.isArray(buff.DotDatas) ? buff.DotDatas : []) {
+            if (dot?.Type === "SpChange" && typeof dot.Value === "number") {
+                const verb = dot.Value < 0 ? "消耗" : "回复"
+                bits.push(`每${dot.Interval ?? 1}秒${verb}${Math.abs(dot.Value)}神智`)
+            }
+        }
+        if (buff.ActivateSkills) bits.push("激活技能")
+        if (buff.UseSummonWeapon) bits.push("召唤武器")
+        if (Array.isArray(buff.DisableSkills) && buff.DisableSkills.length > 0) {
+            bits.push(`禁用[${buff.DisableSkills.map((skill: unknown) => ACTION_CN[String(skill)] ?? String(skill)).join(",")}]`)
+        }
+        return bits.length > 0 ? `增益(${id})[${bits.join(", ")}]` : `增益(${id})`
+    }
+
+    const walkEffect = (effectId: unknown): void => {
+        const key = String(effectId)
+        if (seenEffects.has(key)) return
+        seenEffects.add(key)
+        const effect = effectData[key]
+        if (!effect || typeof effect !== "object") return
+        for (const task of Array.isArray(effect.TaskEffects) ? effect.TaskEffects : []) {
+            if (!task || typeof task !== "object") continue
+            const fn = String(task.Function ?? "")
+            if (fn === "Damage") {
+                const rate = effectRate(Number(effectId), task.Rate)
+                const base = BASE_ATTR_CN[String(task.BaseAttr)] ?? String(task.BaseAttr ?? "基础伤害")
+                let text = "造成" + base
+                if (rate !== null && rate > 0 && rate < 1) text += `${roundValue(rate * 100)}%`
+                else if (rate !== null) text += `${(rate * 100).toFixed(1)}%`
+                if (rate !== null) {
+                    text += "的"
+                    text += task.DamageType ? `${DAMAGE_TYPE_CN[String(task.DamageType)] ?? task.DamageType}属性` : ""
+                    text += "伤害"
+                    const tags = (Array.isArray(task.DamageTag) ? task.DamageTag : [])
+                        .map((tag: unknown) => DAMAGE_TAG_CN[String(tag)] ?? String(tag))
+                        .filter((tag: string, index: number, list: string[]) => tag && list.indexOf(tag) === index)
+                    if (tags.length > 0) text += `(${tags.join("/")})`
+                    add(text)
+                }
+            } else if (fn === "CutToughness" && task.Value !== undefined) {
+                add(`削减战姿${task.Value}`)
+            } else if (fn === "AddBuff") {
+                add(`附加${buffSummary(task.BuffId)}`)
+            } else if (fn === "RemoveBuff") {
+                add(`移除${buffSummary(task.BuffId)}`)
+            } else if (fn === "CreateSkillCreature" && task.CreatureId !== undefined) {
+                add(`召唤实体(${task.CreatureId})`)
+            }
+            for (const childKey of ["SkillEffect", "EffectIds"]) {
+                const children = Array.isArray(task[childKey]) ? task[childKey] : task[childKey] === undefined ? [] : [task[childKey]]
+                for (const child of children) walkEffect(child)
+            }
+        }
+    }
+
+    const walkSkill = (innerSkillId: unknown): void => {
+        const key = String(innerSkillId)
+        if (seenSkills.has(key)) return
+        seenSkills.add(key)
+        const inner = getSkillEntry(dm, Number(innerSkillId))
+        if (!inner) return
+        for (const passiveId of Array.isArray(inner.PassiveEffects) ? inner.PassiveEffects : []) {
+            const passive = passiveData[String(passiveId)]
+            if (!passive || typeof passive !== "object") continue
+            const path = String(passive.BPPath ?? "")
+            const bpName = path.split("/").pop()?.split(".")[0] ?? ""
+            const label = bpName ? `被动效果(${passiveId})(${bpName})` : `被动效果(${passiveId})`
+            add(label)
+            for (const buffId of bpAddBuff[bpName] ?? []) add(buffSummary(buffId))
+        }
+        let nodeId = inner.BeginNodeId
+        while (nodeId && !seenNodes.has(String(nodeId)) && seenNodes.size < 8) {
+            seenNodes.add(String(nodeId))
+            const node = nodeData[String(nodeId)]
+            if (!node || typeof node !== "object") break
+            const effects = Array.isArray(node.SkillNodeEffects) ? node.SkillNodeEffects : [node.SkillNodeEffects]
+            for (const effectId of effects) walkEffect(effectId)
+            nodeId = node.NextNodeId
+        }
+    }
+
+    walkSkill(skillId)
+    return parts.join(";")
 }
 
 /**

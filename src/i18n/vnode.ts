@@ -42,6 +42,8 @@ export interface LTemplateNode {
     readonly __t: "lt"
     readonly key: string
     readonly values: VNode[]
+    /** 是否按 SkillUtils.FormatDescValue1 规则格式化替换值 */
+    readonly formatValues: boolean
 }
 /** 固定语言文本 key（如 CV 名：日文CV 始终用 jp 文本，不随输出语言变） */
 export interface TFixedNode {
@@ -49,8 +51,26 @@ export interface TFixedNode {
     readonly key: string
     readonly lang: string
 }
+/** 翻译文本去除首尾空白（仅用于老处理器明确 trim 的字段）。 */
+export interface TTrimNode {
+    readonly __t: "ttrim"
+    readonly key: string
+}
 
-export type VNode = TVNode | TLNode | SeqNode | IntNode | RecordNode | LTemplateNode | TFixedNode | string | number | null | undefined
+export type VNode =
+    | TVNode
+    | TLNode
+    | SeqNode
+    | IntNode
+    | RecordNode
+    | LTemplateNode
+    | TFixedNode
+    | TTrimNode
+    | string
+    | number
+    | boolean
+    | null
+    | undefined
 export type VNodeTree = VNode | VNodeTree[] | { [k: string]: VNodeTree }
 
 // ---------- 构造器 ----------
@@ -77,14 +97,19 @@ export function record(entries: Array<[VNode, VNode]>): RecordNode {
 }
 
 /** TextMap 模板 + 数值替换（模板含 #N 占位，按语言取模板，逐级替换值） */
-export function LTemplate(key: string, values: VNode[]): LTemplateNode {
-    return { __t: "lt", key, values }
+export function LTemplate(key: string, values: VNode[], formatValues = false): LTemplateNode {
+    return { __t: "lt", key, values, formatValues }
 }
 
 /** 固定语言文本 key（CV 名等始终用指定语言文本，不随输出语言变） */
 export function TFixed(key: string | null | undefined, lang: string): VNode {
     if (!key) return ""
     return { __t: "tf", key, lang }
+}
+
+export function TTrim(key: string | null | undefined): VNode {
+    if (!key) return ""
+    return { __t: "ttrim", key }
 }
 
 /** 片段序列 */
@@ -127,7 +152,7 @@ export function compile(computedStr: string | number | null | undefined): VNode 
 
 function renderVNode(v: VNode, lang: string, textmap: TextMap): unknown {
     if (v === null || v === undefined) return null
-    if (typeof v === "string" || typeof v === "number") return v
+    if (typeof v === "string" || typeof v === "number" || typeof v === "boolean") return v
     switch (v.__t) {
         case "t":
             return textmap.get(v.key, lang)
@@ -148,18 +173,60 @@ function renderVNode(v: VNode, lang: string, textmap: TextMap): unknown {
         }
         case "tf":
             return textmap.get(v.key, v.lang)
+        case "ttrim":
+            return textmap.get(v.key, lang).trim()
         case "lt": {
             // TextMap 模板（含 #N 占位）+ 值替换
             let template = textmap.get(v.key, lang)
             if (template === v.key) template = textmap.get(v.key, "cn")
             for (let i = 0; i < v.values.length; i++) {
-                const val = renderVNode(v.values[i], lang, textmap)
-                template = template.replace(new RegExp(`#${i + 1}`, "g"), String(val))
+                let val = String(renderVNode(v.values[i], lang, textmap) ?? "")
+                if (v.formatValues) {
+                    const cast = descValueCast(template, i + 1)
+                    template = cast.template
+                    val = formatDescValue1(val, cast.cast)
+                }
+                template = template.replace(new RegExp(`#${i + 1}`, "g"), val)
             }
             // 移除高亮标签（对齐老代码）
-            return template.replace(/<H>/g, "").replace(/<\/>/g, "")
+            return template
+                .replace(/<H>/g, "")
+                .replace(/<\/>/g, "")
+                .replace(/\{int\}/gi, "")
         }
     }
+}
+
+type DescCast = { kind: "int" } | { kind: "float"; decimals: number } | null
+
+/** 对齐 Script/Utils/SkillUtils.lua 的 ReplaceAndChekDescValueCast。 */
+function descValueCast(template: string, index: number): { template: string; cast: DescCast } {
+    const intRe = new RegExp(`\\{int\\}#${index}`, "i")
+    if (intRe.test(template)) return { template: template.replace(intRe, `#${index}`), cast: { kind: "int" } }
+    const floatRe = new RegExp(`\\{float(\\d+)\\}#${index}`, "i")
+    const match = template.match(floatRe)
+    if (match) {
+        return {
+            template: template.replace(floatRe, `#${index}`),
+            cast: { kind: "float", decimals: Number(match[1]) },
+        }
+    }
+    return { template, cast: null }
+}
+
+/** 对齐 Lua FormatDescValue1：默认 1 位小数，int/float 标记覆盖默认精度。 */
+function formatDescValue1(value: string, cast: DescCast): string {
+    const match = value.match(/-?\d+\.?\d*/)
+    if (!match) return value
+    const numeric = Number(match[0])
+    if (!Number.isFinite(numeric)) return value
+    const isPercent = value.endsWith("%")
+    let decimals: number
+    if (cast?.kind === "int") decimals = 0
+    else if (cast?.kind === "float") decimals = isPercent ? Math.max(cast.decimals - 2, 0) : cast.decimals
+    else decimals = 1
+    const formatted = numeric.toFixed(decimals)
+    return `${value.slice(0, match.index)}${formatted}${value.slice((match.index ?? 0) + match[0].length)}`
 }
 
 /** 判断是否为 VNode 节点（含 __t 标记） */
@@ -176,7 +243,7 @@ function isVNode(v: unknown): v is VNode {
  */
 export function renderTree(tree: VNodeTree, lang: string, textmap: TextMap): unknown {
     if (tree === null || tree === undefined) return null
-    if (typeof tree === "string" || typeof tree === "number") return tree
+    if (typeof tree === "string" || typeof tree === "number" || typeof tree === "boolean") return tree
     if (isVNode(tree)) return renderVNode(tree, lang, textmap)
     if (Array.isArray(tree)) return tree.map(t => renderTree(t, lang, textmap))
     const out: Record<string, unknown> = {}

@@ -38,10 +38,7 @@ export class LuaDataManager {
     private calcDescCache = new Map<string, string>()
 
     /** 项目根（Script/Datas、Utils 所在） */
-    constructor(
-        public root: string = PROJECT_ROOT,
-        public fallbackOutDir: string = join(PROJECT_ROOT, "out")
-    ) {}
+    constructor(public root: string = PROJECT_ROOT) {}
 
     /** 获取（惰性创建）state，并安装全部环境 */
     private ensureState(): LuaState {
@@ -178,22 +175,8 @@ export class LuaDataManager {
         }
         lua.lua_pop(L, 2) // value + DataMgr
 
-        if (result === undefined) {
-            // 回退 out json
-            result = this.loadFallbackJson(name)
-        }
         if (result !== undefined) this.jsCache.set(name, result)
         return result
-    }
-
-    private loadFallbackJson(name: string): LuaValue | undefined {
-        try {
-            const file = join(this.fallbackOutDir, `${name}.json`)
-            if (!existsSync(file)) return undefined
-            return JSON.parse(readFileSync(file, "utf8")) as LuaValue
-        } catch {
-            return undefined
-        }
     }
 
     /** 已加载的 Datas 表名（供调试/统计） */
@@ -438,9 +421,9 @@ export class LuaDataManager {
 
 /** 单例 */
 let _instance: LuaDataManager | null = null
-export function getLuaDataManager(root?: string, fallbackOutDir?: string): LuaDataManager {
+export function getLuaDataManager(root?: string, _fallbackOutDir?: string): LuaDataManager {
     if (!_instance) {
-        _instance = new LuaDataManager(root, fallbackOutDir)
+        _instance = new LuaDataManager(root)
     }
     return _instance
 }

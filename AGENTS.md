@@ -1,194 +1,84 @@
-# DuetNightAbyssData - Agent Guidelines
+# DuetNightAbyssData TypeScript Agent Guide
 
-This repository contains Python tools for converting, processing, and translating game data for Duet Night Abyss. This guide helps agentic coding agents work effectively in this codebase.
+本仓库当前的重构主线使用 Bun + TypeScript。修改代码前先确认需求、数据来源和期望输出；不要用旧 Python 目录结构或惯例推断 TypeScript 代码的行为。
 
-## Build, Lint, and Test Commands
+## 项目边界
 
-### Running Tests
+- `src/cli.ts` 是导出入口，负责解析参数、构建模块依赖图并写入 `final_ts/i18n/<lang>/`。
+- `src/core/Graph.ts` 管理模块注册、依赖拓扑、构建产物和环检测。
+- `src/modules/` 放领域模块：`skill` 提供共享技能产物，`weapon` 和 `char` 生成可输出数据。
+- `src/lua/` 是 Lua/Fengari 数据访问层；`LuaDataManager` 从 `Script/Datas/*.lua` 取数并调用 `Script/Utils` 中的游戏函数。
+- `src/i18n/` 保存 TextMap 和 vnode。模块构建阶段保持语言无关，输出阶段再按语言渲染。
+- `src/output/` 负责将 vnode 树写成 JSON。
+- `src/tools/` 提供 `final` 与 `final_ts` 的差异比较工具。
+- `test/` 使用 Bun test；`final_ts/`、`out/` 是生成物，不应手工编辑。
+- `tools/UAssetCLI/` 是可选的 .NET 10 uasset 解析器；只有需要动画或蓝图资产时才依赖它。
 
-```bash
-# Run all tests
-python -m unittest discover -s . -p "test_*.py"
+仓库仍保留旧的 Python 转换脚本和 `AGENTS.py.md`，但它们不是 TypeScript 主流程的编码约定。除非需求明确涉及旧流水线，否则不要把 Python 处理器规则迁移到 `src/`。
 
-# Run a single test file
-python test_char_processor.py
-python test_mod_processor.py
+## 常用命令
 
-# Run a specific test class
-python -m unittest test_char_processor.TestCharProcessor
+需要 Bun 1.4+。在仓库根目录执行：
 
-# Run a specific test method
-python -m unittest test_char_processor.TestCharProcessor.test_process_char_1101
+```sh
+# 安装依赖（按 bun.lock 安装）
+bun install --frozen-lockfile
 
-# Run tests with verbose output
-python -m unittest test_char_processor.py -v
+# 运行全部 TypeScript 测试
+bun test
+
+# 运行单个测试文件或匹配测试名
+bun test test/luaDataManager.test.ts
+bun test --test-name-pattern "LuaDataManager"
+
+# 默认构建 Char、Weapon，并生成六种语言到 final_ts/
+bun run src/cli.ts
+
+# 也可使用 package.json 别名
+bun out -f Weapon Char --langs cn,en
+
+# 查看已注册模块
+bun run src/cli.ts --list
+
+# 与旧输出比较（先生成 final_ts）
+bun run src/tools/diffFinal.ts --lang cn
+bun run src/tools/diffFinal.ts --lang cn --file Weapon
+bun run src/tools/diffAll.ts --file Char --max 200
+
+# Biome 格式化/检查和 TypeScript 检查
+bun run fmt
+bun run lint
 ```
 
-### Main Data Processing Pipeline
+`bun run lint` 当前脚本会执行 `biome check --write && tsc --noEmit`，因此可能修改格式；需要只做不写入的 Biome 检查时使用 `bunx biome check src test`。如果 `tsc` 报 Node/Bun 类型、探针文件或其他已有基线错误，应记录具体错误并与本次改动造成的错误分开，不要声称检查通过。
 
-```bash
-# Step 1: Convert Lua data files to JSON
-python step1_convert.py
+## 数据与运行前提
 
-# Step 2: Translate data (optional)
-python step2_translate.py
+- 默认数据根是仓库内的 `Script/`；`Script/Datas` 和 `Script/Utils` 缺失时，Lua 相关测试或导出无法代表正常运行。
+- `TextMap` 主源是 Lua；代码中已有的 `out/*.json` 回退只用于兼容旧环境。新增数据读取路径时，不得擅自增加新的 fallback、静默吞错或改变优先级；需要 fallback 时先确认需求。
+- 动画资产优先读取解包目录中的 `.uasset`，由 `tools/UAssetCLI/UAssetCLI.exe` 解析；`.env` 中可设置 `DNA_UNPACK_DIR`。该 exe 需要 .NET 10 运行时。
+- 资产路径、Lua 表键和游戏字段名是外部数据契约。修改解析逻辑时，先用真实样本确认字段形状，再检查相邻正例和负例。
+- `final/` 是旧 Python 输出，`final_ts/` 是新输出。迁移或行为修改至少运行一个聚焦导出和对应 `diffFinal`；不要直接修改生成 JSON 来“修复”差异。
 
-# Step 3: Output processed data
-python step3_output.py
+## 编码约定
 
-# partial output
-python step3_output.py -f Char Weapon Mod
-```
+- 使用 TypeScript ESM，导入本地模块时保留 `.ts` 扩展名，遵循 `tsconfig.json` 的严格模式。
+- 使用 4 个空格缩进；Biome 是格式和 lint 的唯一基准，行宽配置为 140。
+- Node 内置模块使用 `node:` 前缀；优先使用现有 Bun/TypeScript API 和仓库已有 helper，不为单次调用新增抽象。
+- 公共接口和复杂数据结构写清楚类型；避免无依据地把 `unknown` 扩成 `any`。现有 `any` 只有在外部 Lua/JSON 边界确有必要时才沿用。
+- 模块 build 应保持语言无关：文本使用 vnode/翻译 key，数值和结构保持普通 JS；不要在模块内部提前固定某种语言文本。
+- `Graph` 中通过 artifacts 共享已构建结果；不要绕过依赖图重新解析同一模块。
+- 保持现有错误语义。只有确实可恢复且已有调用方约定时才返回 `undefined`/空值；不要为了“健壮”吞掉可诊断错误。
+- 注释只解释数据契约、算法原因或非显然约束；不要把开发过程、推测或功能说明写进用户可见输出。
+- 所有临时文件均放在 `.tmp` 下，并确保在退出时删除。
 
-- 修改导出相关代码后，必须重跑对应导出命令验证结果，例如 `python step3_output.py -f Monster`
+## 修改与验证流程
 
-### UAssetCLI — uasset 字节码解析工具
+1. 先定位调用链和真实数据样本，明确成功条件；需求或数据语义不清时先询问，不猜测。
+2. 只修改实现所需文件，保留其他工作区变更；不要重排无关格式或删除旧脚本。
+3. 对解析、字段映射和输出差异先添加/更新最小回归测试，再实现修改。
+4. 运行相关 Bun 测试；涉及公共模块、vnode、Lua 数据层或 CLI 时，再运行完整 `bun test`。
+5. 涉及导出时运行对应 CLI 和 `diffFinal`/`diffAll`。确认生成物内容后再报告结果。
+6. 最后运行 `bunx biome check src test`；能修复的 lint/类型错误要修复，无法修复的基线错误要明确列出。
 
-`tools/UAssetCLI/`（.NET 10，基于 UAssetAPI）用于直接从 `.uasset/.uexp` 读取蓝图
-编译后的字节码（Kismet 表达式树），FModel 的 JSON 导出不含这部分。编译产物
-`tools/UAssetCLI/UAssetCLI.exe`（framework-dependent 单文件，约 5MB）已提交进 git，
-依赖 .NET 10 运行时。
-
-- 用法：`UAssetCLI server`（stdio JSON 行协议，供 step3 自动调用）或 `UAssetCLI <文件|目录>`（一次性）。
-  server 命令：`{"cmd":"parse","path":...}` / `{"cmd":"parse_dir","path":...}` /
-  `{"cmd":"export","path":...}`（FModel 式整体 JSON）/ `{"cmd":"export_dir","path":...,"out":...}`
-  （写文件批量导出） / `{"cmd":"fmodel","path":...,"package":...,"mount":"EM/Content"}` /
-  `{"cmd":"fmodel_dir","path":...,"root":...,"mount":"EM/Content"}`（按 FModel Output/Exports
-  数组格式在内存导出，供地图导出脚本用） / `{"cmd":"shutdown"}`。
-- step3 集成：`python step3_output.py -f Char` 自动以 server 模式批量解析
-  `PassiveEffect/DesignerBP/Player/` 下的被动 BP，提取 `AddBuffToTarget` 的 buff id
-  （需解包目录，见 `DNA_UNPACK_DIR` 环境变量，缺省尝试仓库同级 `../dna-unpack`），
-  提取完自动 `shutdown` 关闭；无 uasset/exe 时回退 `processor/BPAddBuff.json`。
-- 地图导出集成：`export_all_maps.py` / `export_region_maps.py` 默认以 `fmodel`/`fmodel_dir`
-  server 模式直接解析 `UI/WBP/Map/Widget/Map_Splice` 与 `RegionMap` 下的 uasset，
-  解包目录可用 `.env` 的 `DNA_UNPACK_DIR` 指定（见 `uasset_client.py`）；无 uasset/exe
-  或 `--force-static-json` 时回退静态 JSON。修改地图导出代码后必须重跑
-  `python export_all_maps.py` 与 `python export_region_maps.py` 验证。
-- 重新构建 exe 与重新生成 `processor/BPAddBuff.json` 见 `tools/UAssetCLI/README.md`。
-
-### Development
-
-- No formal linting or type checking configured
-- Follow Python conventions and existing code style
-
-## Code Style Guidelines
-
-### Imports
-
-Order imports by type, with no blank lines between groups of the same type:
-
-1. Standard library imports: `import os`, `import json`, `from collections import OrderedDict`
-2. Third-party imports: `from lupa import LuaRuntime`
-3. Local imports: `from processor.base_processor import BaseProcessor`, `from ast_parser import parse_ast`
-
-### Formatting
-
-- Use 4 spaces for indentation
-- All files use UTF-8 encoding
-- JSON files: indent=2, ensure_ascii=False
-- Use `OrderedDict` for JSON data when order preservation matters
-
-### Type Hints
-
-- Use type hints when defining new classes and public methods
-- Import from `typing`: `Union`, `List`, `Optional`, `Dict`
-- Use `@dataclass` for simple data structures (see ast_parser.py)
-- Example: `def process_item(self, item_data, language) -> Dict:`
-
-### Naming Conventions
-
-- Classes: PascalCase - `BaseProcessor`, `CharProcessor`, `DataLoader`
-- Functions/Methods: snake_case - `process_item`, `load_json`, `get_translated_text`
-- Variables: snake_case - `char_id`, `battle_char`, `skill_data`
-- Private methods: prefix with underscore - `_process_skills`, `_get_table_data`
-- File names: snake_case - `char_processor.py`, `test_char_processor.py`
-
-### Error Handling
-
-- Use try-except blocks with specific exceptions where possible
-- Print errors with `flush=True` for immediate output: `print(f"Error: {e}", flush=True)`
-- Provide graceful fallbacks: return `None`, `{}`, or `0.0` instead of raising
-- Import rarely-used modules inside try-except blocks: `import math` in `_execute_function`
-- Use `traceback.print_exc()` for debugging complex errors
-
-### Code Organization
-
-- Inherit from `BaseProcessor` for all data processors (char_processor.py, weapon_processor.py, etc.)
-- Use `DataLoader` for all JSON file access (caching, i18n support)
-- Each processor handles one data type (Char, Weapon, Mod, etc.)
-- Processors follow pattern: `load_json()` → `process_item()` → `save_processed_items()`
-
-### Documentation
-
-- Add docstrings to public methods and classes
-- Use Chinese for docstrings and comments (matching existing code)
-- Example: `"""处理单个项目，子类必须实现"""`
-
-### Testing
-
-- Use standard `unittest.TestCase` for all tests
-- Test files: `test_<module>_processor.py`
-- Test classes: `Test<Module>Processor`
-- Test methods: `test_<feature>_with_<condition>`
-- Mock external dependencies using `unittest.mock.MagicMock`
-
-### Special Patterns
-
-- **I18n**: Always use `get_translated_text()` instead of hardcoded strings
-- **AST Parsing**: Use `ast_parser.parse_ast()` for expression evaluation
-- **Lua Conversion**: Files in `Datas/*.lua` → `out/*.json` via `step1_convert.py`
-- **Expression Evaluation**: Use `_calculate_expr_value()` for game data expressions
-- **Skill Growth**: Access via `skill_grow_data` using `table_type` and `table_id`
-- **Deep Sort JSON**: Use `deep_sort_json()` for mixed-type keys (numeric, string digit, string)
-- **Cyclic Reference Handling**: When processing JSON, use `seen` set with `id()` to prevent infinite loops
-
-### Adding New Processors
-
-1. Create `processor/<name>_processor.py` inheriting from `BaseProcessor`
-2. Implement `process_item(self, item_data, language)` method
-3. Override `_calc_attr_by_level()` if custom attribute calculation needed
-4. Load necessary JSON data in `__init__` via `data_loader.load_json()`
-5. Follow pattern: `load_json()` → `process_item()` → `save_processed_items()`
-
-### File Paths
-
-- Input data: `./Datas/*.lua` (Lua game data files)
-- Converted data: `./out/*.json` (intermediate JSON)
-- Processors: `./processor/*_processor.py`
-- Tests: `./test_*_processor.py`
-
-## Key Components
-
-### Processor Classes
-
-All processors inherit from `BaseProcessor` and implement:
-
-- `process_item(item_data, language)` - Process single data item
-- Optional: Override `_calc_attr_by_level()` for custom attribute calculation
-
-### DataLoader
-
-Centralized JSON data loading with:
-
-- Caching to avoid repeated file reads
-- i18n support (TextMap_I18n.json with cn, en, jp, kr, fr, es, tc fields)
-- Language switching via `set_language(language)`
-
-### AST Parser
-
-Handles game data expression evaluation (e.g., "#SkillEffects[310313].Value")
-
-- Supports: binary ops, member access, index access, function calls
-- Math functions: math.abs, math.floor, math.ceil, math.max, math.min, math.sqrt
-- Node types: IDENTIFIER, MEMBER_ACCESS, INDEX_ACCESS, BINARY_EXPR, UNARY_EXPR, LITERAL, ARRAY_ACCESS, FUNCTION_CALL
-
-### Dependencies
-
-- `lupa`: Python-Lua bridge for parsing game data files
-- Standard library: os, json, sys, collections.OrderedDict, typing, unittest
-
-### Common Data Structures
-
-- `OrderedDict`: Preserves insertion order for JSON output
-- `TextMap_I18n.json`: i18n data with fields: cn, en, jp, kr, fr, es, tc
-- Game data expressions: "#TableName[id].Property" pattern
+不要在没有用户确认的情况下新增 fallback 策略、改变数据源优先级、批量重生成无关输出，或把诊断信息变成前端/导出文案。

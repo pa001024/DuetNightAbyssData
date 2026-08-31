@@ -53,10 +53,9 @@ describe("LuaDataManager", () => {
         expect(dm.loadedTableNames).toContain("Skill")
     })
 
-    test("不存在表回退 out json（Skill.json 太大，用 Fish 验证小表）", () => {
+    test("Lua 表可直接读取（Fish）", () => {
         const dm = getLuaDataManager()
         const fish = dm.getTable("Fish") as any
-        // Fish.lua 应该存在，若不存在则走回退；这里只验证不抛错且为对象
         expect(fish).toBeDefined()
     })
 })

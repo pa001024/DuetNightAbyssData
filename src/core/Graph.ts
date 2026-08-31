@@ -81,7 +81,7 @@ export class Graph {
     }
 
     /** 构建全部（按拓扑序）；返回 { name → artifact } */
-    async build(args: Record<string, unknown> = {}, onLog?: (msg: string) => void): Promise<Map<string, unknown>> {
+    async build(args: Record<string, unknown> = {}, onLog?: (msg: string) => void, targets?: string[]): Promise<Map<string, unknown>> {
         this.resolveOrder()
         const dm = getLuaDataManager()
         const textmap = getTextMap()
@@ -93,7 +93,9 @@ export class Graph {
             args,
             log: msg => (onLog ? onLog(msg) : console.log(msg)),
         }
-        for (const name of this.order) {
+        const buildTargets = targets && targets.length > 0 ? targets : this.order
+        for (const name of buildTargets) {
+            if (!this.modules.has(name)) throw new Error(`目标模块不存在: ${name}`)
             await this.buildOne(name, ctx)
         }
         const result = new Map<string, unknown>()

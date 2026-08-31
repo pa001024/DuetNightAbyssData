@@ -6,7 +6,8 @@ const template = "昂扬+<H>#1</>。暗属性角色造成伤害时，每有1点�
 
 // 测 ReplaceAndChekDescValueCast 对每个 index
 for (let i = 1; i <= 4; i++) {
-    const [newDesc, castTo] = dm.callSkillUtilsTableFn("ReplaceAndChekDescValueCast", [template, i])
+    const result = dm.callSkillUtilsTableFn("ReplaceAndChekDescValueCast", [template, i])
+    const [newDesc, castTo] = Array.isArray(result) ? result : [undefined, undefined]
     console.log(`idx${i}: castTo=${JSON.stringify(castTo)}`)
     if (i === 2) console.log(`  newDesc(含idx2剥离):`, JSON.stringify(newDesc))
 }

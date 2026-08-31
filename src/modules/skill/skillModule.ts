@@ -179,7 +179,10 @@ export function extractFieldValueAndFormat(
 ): [number | string, number | string | null, string | null] {
     if (calculatedValue === null || calculatedValue === undefined) return [0, null, null]
     const text = String(calculatedValue)
-    const matches = [...text.matchAll(/-?\d+(?:\.\d+)?/g)]
+    // GText 哨兵只是单位/说明文本，不应被误识别为值（例如 key 中的 1102）。
+    // 用等长掩码扫描，保留哨兵本身供格式 vnode 后续翻译。
+    const scanText = text.replace(GT_RE, match => match.replace(/\d/g, " "))
+    const matches = [...scanText.matchAll(/-?\d+(?:\.\d+)?/g)]
     if (matches.length === 0) return [text, null, null]
 
     const prevSignificant = (src: string, index: number): string => {
@@ -398,6 +401,14 @@ function getEntry2(table: Record<string, any>, id: number | string): any {
     return e
 }
 
+function unwrapSkillEntry(info: any): any {
+    if (!Array.isArray(info) || info.length === 0) return null
+    let entry = info[0]
+    if (Array.isArray(entry)) entry = entry[0]
+    if (entry && typeof entry === "object" && entry.BeginNodeId === undefined) entry = entry["0"] ?? entry[0]
+    return entry && typeof entry === "object" ? entry : null
+}
+
 function simplifySkillCreature(creatureId: number | string, creatureData: any, keepHidden = false): any {
     if (!creatureData || typeof creatureData !== "object") return { id: creatureId }
     let skipTimeLife = false
@@ -446,8 +457,7 @@ function extractCreaturesImpl(skillId: number, keepHidden: boolean, deps: Creatu
     const { skillData, skillNodeData, skillEffectsData, creatureData } = deps
     const skillInfo = getEntry2(skillData, skillId)
     if (!Array.isArray(skillInfo) || skillInfo.length === 0) return []
-    let skillEntry = skillInfo[0]
-    if (Array.isArray(skillEntry) && skillEntry.length > 0) skillEntry = skillEntry[0]
+    const skillEntry = unwrapSkillEntry(skillInfo)
     if (!skillEntry || typeof skillEntry !== "object") return []
     const rootSkillType = skillEntry.SkillType
     const beginNodeId = skillEntry.BeginNodeId
@@ -519,8 +529,7 @@ function extractCreaturesImpl(skillId: number, keepHidden: boolean, deps: Creatu
 
         const innerInfo = getEntry2(skillData, innerSkillId)
         if (!Array.isArray(innerInfo) || innerInfo.length === 0) return
-        let innerEntry = innerInfo[0]
-        if (Array.isArray(innerEntry) && innerEntry.length > 0) innerEntry = innerEntry[0]
+        const innerEntry = unwrapSkillEntry(innerInfo)
         if (!innerEntry || typeof innerEntry !== "object") return
         const innerBegin = innerEntry.BeginNodeId
         if (!innerBegin) return
@@ -541,13 +550,28 @@ function extractCreaturesImpl(skillId: number, keepHidden: boolean, deps: Creatu
 
     collectFromSkill(skillId, null, skillId)
 
+    // 主技能的 SubSkills 也属于同一条技能链（例如 Skill2 的实体在子技能节点中创建）。
+    const rootEntry = getEntry2(skillData, skillId)
+    if (Array.isArray(rootEntry) && rootEntry.length > 0) {
+        const rootSkillEntry = unwrapSkillEntry(rootEntry)
+        if (rootSkillEntry && typeof rootSkillEntry === "object") {
+            const subSkills = rootSkillEntry.SubSkills
+            if (Array.isArray(subSkills)) {
+                for (const subSkillId of subSkills) {
+                    if (subSkillId !== null && subSkillId !== undefined && String(subSkillId) !== String(skillId)) {
+                        collectFromSkill(subSkillId, null, skillId)
+                    }
+                }
+            }
+        }
+    }
+
     // Skill2 的关联技能（ClientSkillLogicId 反向）
     if (rootSkillType === "Skill2") {
         for (const [relatedSkillId, relatedEntries] of Object.entries(skillData)) {
             if (String(relatedSkillId) === String(skillId)) continue
             if (!Array.isArray(relatedEntries) || relatedEntries.length === 0) continue
-            let relatedEntry = relatedEntries[0]
-            if (Array.isArray(relatedEntry) && relatedEntry.length > 0) relatedEntry = relatedEntry[0]
+            const relatedEntry = unwrapSkillEntry(relatedEntries)
             if (!relatedEntry || typeof relatedEntry !== "object") continue
             if (relatedEntry.ClientSkillLogicId !== skillId) continue
             collectFromSkill(relatedSkillId, null, skillId)

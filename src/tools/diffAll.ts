@@ -33,7 +33,9 @@ function collectDiffs(oldV: unknown, newV: unknown, path = "", out: string[] = [
         return out
     }
     if (typeof oldV !== typeof newV) {
-        out.push(`${path}: 类型 ${typeof oldV} vs ${typeof newV} (${JSON.stringify(oldV)?.slice(0, 50)} vs ${JSON.stringify(newV)?.slice(0, 50)})`)
+        out.push(
+            `${path}: 类型 ${typeof oldV} vs ${typeof newV} (${JSON.stringify(oldV)?.slice(0, 50)} vs ${JSON.stringify(newV)?.slice(0, 50)})`
+        )
         return out
     }
     if (typeof oldV !== "object") {

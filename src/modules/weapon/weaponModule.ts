@@ -137,10 +137,13 @@ export async function weaponModule(ctx: ModuleContext) {
     const battleWeaponData = () => (dm.getTable("BattleWeapon") as Record<string, any>) || {}
     const weaponBreakData = () => (dm.getTable("WeaponBreak") as Record<string, any>) || {}
     const weaponCardLevelData = () => (dm.getTable("WeaponCardLevel") as Record<string, any>) || {}
+    const hyperCardLevelData = () => (dm.getTable("HyperWeaponCardLevel") as Record<string, any>) || {}
+    const hyperSkillTreeData = () => (dm.getTable("HyperWeaponSkillTree") as Record<string, any>) || {}
     const attrConfig = () => (dm.getTable("AttrConfig") as Record<string, any>) || {}
     const attributeData = () => (dm.getTable("Attribute") as Record<string, any>) || {}
     const skillData = () => (dm.getTable("Skill") as Record<string, any>) || {}
     const skillEffectsData = () => (dm.getTable("SkillEffects") as Record<string, any>) || {}
+    const buffData = () => (dm.getTable("Buff") as Record<string, any>) || {}
     const skillNodeData = () => (dm.getTable("SkillNode") as Record<string, any>) || {}
 
     const getWeapon = (id: number): any => weaponData()[String(id)] ?? weaponData()[id]
@@ -250,9 +253,99 @@ export async function weaponModule(ctx: ModuleContext) {
                 if (typeof dv !== "string") continue
                 values.push(compile(dm.calcSkillDesc(dv, grade)))
             }
-            out.push(LTemplate(String(passiveDesc), values))
+            out.push(LTemplate(String(passiveDesc), values, true))
         }
         return out
+    }
+
+    function processFurnace(weaponId: number, battleWeapon: Record<string, any>): { rows: VNodeTree[]; addon: Record<string, number> } {
+        const cards = hyperCardLevelData()[String(weaponId)]
+        if (!Array.isArray(cards)) return { rows: [], addon: {} }
+        const trees = Object.values(hyperSkillTreeData()).filter(
+            (tree: any) => tree && Number(tree.WeaponId) === Number(weaponId) && Number(tree.WeaponCardLevel ?? 0) >= 0
+        ) as Array<Record<string, any>>
+        trees.sort(
+            (a, b) =>
+                Number(a.WeaponCardLevel ?? 0) - Number(b.WeaponCardLevel ?? 0) || Number(a.SkillIndex ?? 0) - Number(b.SkillIndex ?? 0)
+        )
+        const rows: VNodeTree[] = []
+        const addon: Record<string, number> = {}
+        const formatFurnaceValue = (value: string): string => {
+            const match = value.match(/-?\d+(?:\.\d+)?/)
+            if (!match) return value
+            const number = Number(match[0])
+            if (!Number.isFinite(number)) return value
+            const formatted = Number.isInteger(number) ? number.toFixed(1) : number.toFixed(2).replace(/0+$/, "")
+            return `${value.slice(0, match.index)}${formatted}${value.slice((match.index ?? 0) + match[0].length)}`
+        }
+        const buildSkill = (tree: Record<string, any>): Record<string, VNodeTree> => {
+            const params = Array.isArray(tree.SkillDescParameter)
+                ? tree.SkillDescParameter.filter((value: unknown) => typeof value === "string").map((value: string) =>
+                      compile(formatFurnaceValue(dm.calcSkillDesc(value, 1)))
+                  )
+                : []
+            const skill: Record<string, VNodeTree> = {
+                id: tree.WeaponSkillId ?? tree.SkillId,
+                名称: T(tree.WeaponSkillName ?? ""),
+                icon: String(tree.SkillIcon ?? "").match(/(T_[^.'"]+)/)?.[1] ?? "",
+            }
+            if (tree.SkillDescription) skill.描述 = LTemplate(String(tree.SkillDescription), params)
+            const treeId = tree.WeaponSkillId ?? tree.SkillId
+            const treeAttrs = (battleWeapon.AddAttrs ?? []).filter((attr: any) => Number(attr?.HyperWeaponSkillTreeID) === Number(treeId))
+            if (treeAttrs.length > 0) {
+                const directAddon = processAddAttr({ ...battleWeapon, AddAttrs: treeAttrs })
+                if (Object.keys(directAddon).length > 0) skill.加成 = directAddon
+            }
+            const descAddon: Record<string, number> = {}
+            for (const parameter of Array.isArray(tree.SkillDescParameter) ? tree.SkillDescParameter : []) {
+                const match = String(parameter).match(/Buff\[(\d+)\]/)
+                if (!match) continue
+                const buff = buffData()[match[1]]
+                for (const attr of Array.isArray(buff?.AddAttrs) ? buff.AddAttrs : []) {
+                    const attrName = String(attr?.AttrName ?? "")
+                    const value = Number(attr?.Rate ?? attr?.Value)
+                    if (!Number.isFinite(value)) continue
+                    if (attrName === "BonusDamage") descAddon.追加伤害 = value
+                    else if (attrName === "DamageRate" && String(attr?.RateZone ?? "") === "Almighty") descAddon.属性穿透 = value
+                }
+            }
+            if (Object.keys(descAddon).length > 0) {
+                skill.加成 = { ...(skill.加成 as Record<string, number> | undefined), ...descAddon }
+                if (descAddon.追加伤害 && ctx.textmap.get(String(tree.SkillDescription ?? ""), "cn").includes("追加伤害")) {
+                    delete skill.描述
+                    addon.追加伤害 = descAddon.追加伤害
+                }
+                if (descAddon.属性穿透) addon.属性穿透 = descAddon.属性穿透
+            }
+            const resourceIds = Array.isArray(tree.ResourceId) ? tree.ResourceId : []
+            const resourceNums = Array.isArray(tree.ResourceNum) ? tree.ResourceNum : []
+            const unlock: Array<[VNode, VNode]> = []
+            for (let i = 0; i < resourceIds.length; i++) {
+                const key = resourceNameKey(dm, resourceIds[i])
+                unlock.push([key ? T(key) : String(resourceIds[i]), resourceNums[i]])
+            }
+            if (unlock.length > 0) skill.解锁 = record(unlock)
+            return skill
+        }
+        const baseSkills = trees.filter(tree => Number(tree.WeaponCardLevel ?? 0) === 0).map(buildSkill)
+        if (baseSkills.length > 0) rows.push({ lv: 0, 技能: baseSkills })
+        for (const card of cards) {
+            const level = Number(card?.WeaponCardLevel ?? 0)
+            if (level <= 0) continue
+            const levelSkills = trees.filter(tree => Number(tree.WeaponCardLevel ?? 0) === level).map(buildSkill)
+            const resourceIds = Array.isArray(card.ResourceId) ? card.ResourceId : []
+            const resourceNums = Array.isArray(card.ResourceNum) ? card.ResourceNum : []
+            const unlock: Array<[VNode, VNode]> = []
+            for (let i = 0; i < resourceIds.length; i++) {
+                const key = resourceNameKey(dm, resourceIds[i])
+                unlock.push([key ? T(key) : String(resourceIds[i]), resourceNums[i]])
+            }
+            const row: Record<string, VNodeTree> = { lv: level }
+            if (unlock.length > 0) row.解锁 = record(unlock)
+            if (levelSkills.length > 0) row.技能 = levelSkills
+            rows.push(row)
+        }
+        return { rows, addon }
     }
 
     /** 技能字段（武器技能风格：名称/值/削韧/tag/延迟/卡肉） */
@@ -308,12 +401,16 @@ export async function weaponModule(ctx: ModuleContext) {
         }
         const metas = []
         for (const n of nodeChain) metas.push(await assetReader.animMetaForNode(n))
+        let lastCancel = 0
+        let lastCombo = 0
         for (let i = 0; i < fields.length; i++) {
             const f = fields[i] as Record<string, any>
             if (!f.__isDamage) continue
             const meta = metas[i] ?? { cancel: 0, combo: 0, skillEffectLink: 0, shootingInterval: 0 }
-            if (meta.cancel) f.取消 = roundValue(meta.cancel)
-            if (meta.combo) f.连段 = roundValue(meta.combo)
+            if (meta.cancel) lastCancel = meta.cancel
+            if (meta.combo) lastCombo = meta.combo
+            if (lastCancel) f.取消 = roundValue(lastCancel)
+            if (lastCombo) f.连段 = roundValue(lastCombo)
             delete f.__isDamage
         }
     }
@@ -449,6 +546,7 @@ export async function weaponModule(ctx: ModuleContext) {
         const battleWeapon = getBattleWeapon(weaponId)
         if (!battleWeapon) continue
 
+        const furnace = processFurnace(weaponId, battleWeapon)
         const item: Record<string, any> = {
             id: weaponId,
             icon: String(weapon.Icon ?? "").replace("/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_", ""),
@@ -461,6 +559,8 @@ export async function weaponModule(ctx: ModuleContext) {
             突破: processBreak(weaponId),
             熔炼: processSmelting(battleWeapon),
         }
+        Object.assign(item.加成, furnace.addon)
+        if (furnace.rows.length > 0) item["熔炉"] = furnace.rows
         const { skills, reload, interval } = await processSkills(battleWeapon, weaponId)
         item["技能"] = skills
         if (reload) item["装填"] = reload

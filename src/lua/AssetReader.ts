@@ -12,7 +12,7 @@
 
 import { existsSync, readdirSync, readFileSync } from "node:fs"
 import { basename, join } from "node:path"
-import { getExportsRoot, getUAssetServer, getUassetExe, type UAssetServer } from "./UAssetServer.ts"
+import { closeUAssetServer, getExportsRoot, getUAssetServer, getUassetExe, type UAssetServer } from "./UAssetServer.ts"
 
 export interface AnimMeta {
     cancel: number
@@ -85,19 +85,27 @@ export class AssetReader {
     private hasUassetCli = false
     private jsonMetaCache = new Map<string, AnimMeta>()
 
-    constructor(private root: string) {
+    constructor(
+        private root: string,
+        private preferJson = false
+    ) {
         this.exportsRoot = getExportsRoot()
         this.hasUassetCli = getUassetExe() !== null
     }
 
+    private get legacyAssetRoot(): string {
+        return join(this.root, "out", "Asset")
+    }
+
     /** 资产根（uasset 与 fmodel json 同源：Exports/EM/Content/Asset） */
     private get assetRoot(): string | null {
-        return this.exportsRoot ? join(this.exportsRoot, "EM", "Content", "Asset") : null
+        if (this.exportsRoot) return join(this.exportsRoot, "EM", "Content", "Asset")
+        return existsSync(this.legacyAssetRoot) ? this.legacyAssetRoot : null
     }
 
     async ensureServer(): Promise<UAssetServer | null> {
         if (this.server) return this.server
-        if (!this.hasUassetCli || !this.exportsRoot) return null
+        if (!this.hasUassetCli || (!this.exportsRoot && !existsSync(this.legacyAssetRoot))) return null
         try {
             this.server = await getUAssetServer()
         } catch {
@@ -109,7 +117,7 @@ export class AssetReader {
     async close(): Promise<void> {
         if (this.server) {
             try {
-                await this.server.close()
+                await closeUAssetServer()
             } catch {
                 /* ignore */
             }
@@ -134,7 +142,7 @@ export class AssetReader {
         const marker = "/Game/Asset/"
         if (normalized.includes(marker)) {
             const rel = normalized.split(marker)[1].replace(/^\/+|\/+$/g, "")
-            const base = join(root, ...rel.split("/").filter(Boolean))
+            const base = join(root, ...rel.split("/").filter(Boolean), String(animResource))
             candidates.push({ uasset: `${base}.uasset`, json: `${base}.json` })
         }
 
@@ -165,6 +173,11 @@ export class AssetReader {
         } catch {
             /* ignore */
         }
+        if (this.preferJson) {
+            for (const c of candidates) {
+                if (c.json && existsSync(c.json)) return c
+            }
+        }
         // 返回第一个存在的候选（uasset 优先，其次 json）
         for (const c of candidates) {
             if (c.uasset && existsSync(c.uasset)) return c
@@ -186,9 +199,9 @@ export class AssetReader {
             const cached = this.metaCache.get(uasset)
             if (cached) return cached
             const server = await this.ensureServer()
-            if (server && this.exportsRoot) {
+            if (server && (this.exportsRoot || this.assetRoot)) {
                 try {
-                    const data = await server.fmodel(uasset, this.exportsRoot)
+                    const data = await server.fmodel(uasset, this.exportsRoot ?? this.assetRoot ?? this.root)
                     if (data) {
                         const meta = animMetaFromFModelData(data)
                         this.metaCache.set(uasset, meta)
