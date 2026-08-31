@@ -45,7 +45,6 @@ interface ModuleInstance {
 export class Graph {
     private modules = new Map<string, ModuleInstance>()
     private order: string[] = []
-    private buildSeq = 0
 
     defineModule(def: ModuleDefinition): this {
         if (this.modules.has(def.name)) throw new Error(`模块重复定义: ${def.name}`)
@@ -113,7 +112,6 @@ export class Graph {
         inst.artifact = await inst.def.build(ctx)
         inst.built = true
         inst.building = false
-        this.buildSeq++
     }
 
     /** 读取已构建模块产物（未构建返回 undefined） */

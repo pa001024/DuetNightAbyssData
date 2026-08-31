@@ -10,7 +10,10 @@ function rows(ctx: ModuleContext, tableName: string): Record<string, any>[] {
 
 function iconName(value: unknown): string {
     if (typeof value !== "string" || !value) return ""
-    const normalized = value.replaceAll("\\", "/").trim().replace(/^'+|'+$/g, "")
+    const normalized = value
+        .replaceAll("\\", "/")
+        .trim()
+        .replace(/^'+|'+$/g, "")
     const base = normalized.split("/").pop() ?? ""
     return (base.split(".", 1)[0] ?? "").replace(/^'+|'+$/g, "")
 }

@@ -990,9 +990,7 @@ function generateSkillBehavior(
             descValues.find(value => typeof value === "string" && value.includes(`SkillEffects[${effectId}]`) && value.includes("*100")) ??
             descValues.find(value => typeof value === "string" && value.includes("SkillEffects[") && value.includes("*100"))
         if (typeof source !== "string") return null
-        const ref =
-            source.match(new RegExp(`\\$#SkillEffects\\[${effectId}\\][^$]*\\$`))?.[0] ??
-            source.match(/\$[^$]+\$/)?.[0]
+        const ref = source.match(new RegExp(`\\$#SkillEffects\\[${effectId}\\][^$]*\\$`))?.[0] ?? source.match(/\$[^$]+\$/)?.[0]
         if (!ref) return null
         const computed = skillArtifacts.calcSkillDesc(ref, 1)
         const number = computed.match(/-?\d+(?:\.\d+)?/)?.[0]

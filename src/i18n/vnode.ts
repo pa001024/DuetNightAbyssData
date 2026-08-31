@@ -189,10 +189,7 @@ function renderVNode(v: VNode, lang: string, textmap: TextMap): unknown {
                 template = template.replace(new RegExp(`#${i + 1}(?!\\d)`, "g"), val)
             }
             // 移除高亮标签（对齐老代码）
-            return template
-                .replace(/<H>/g, "")
-                .replace(/<\/>/g, "")
-                .replace(/\{int\}/gi, "")
+            return template.replace(/<[^>]*>/g, "").replace(/\{int\}/gi, "")
         }
     }
 }
@@ -240,7 +237,7 @@ function formatLuaFixed(value: number, decimals: number): string {
     const epsilon = 1e-10
     let rounded = lower
     if (fraction > 0.5 + epsilon || (Math.abs(fraction - 0.5) <= epsilon && lower % 2 === 1)) rounded++
-    return (sign * rounded / factor).toFixed(decimals)
+    return ((sign * rounded) / factor).toFixed(decimals)
 }
 
 /** 判断是否为 VNode 节点（含 __t 标记） */

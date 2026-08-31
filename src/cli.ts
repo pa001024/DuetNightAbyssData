@@ -13,6 +13,7 @@ import { join } from "node:path"
  */
 import { Graph } from "./core/Graph.ts"
 import { getTextMap, LANGS } from "./i18n/TextMap.ts"
+import { abyssBuffModule } from "./modules/abyssBuff/abyssBuffModule.ts"
 import { backpackPuzzleItemModule, backpackPuzzleLevelModule } from "./modules/backpackPuzzle/backpackPuzzleModule.ts"
 import { charModule } from "./modules/char/charModule.ts"
 import { charAccessoryModule } from "./modules/charAccessory/charAccessoryModule.ts"
@@ -30,6 +31,7 @@ import { musicModule, musicScoreModule } from "./modules/music/musicModule.ts"
 import { regionPointModule } from "./modules/regionPoint/regionPointModule.ts"
 import { regionReputationModule } from "./modules/regionReputation/regionReputationModule.ts"
 import { optRewardModule, rewardModule } from "./modules/reward/rewardModule.ts"
+import { petEntryModule } from "./modules/pet/petEntryModule.ts"
 import {
     hairModule,
     headFrameModule,
@@ -38,6 +40,8 @@ import {
     weaponSkinModule,
 } from "./modules/simple/simpleModules.ts"
 import { skillModule } from "./modules/skill/skillModule.ts"
+import { titleModule } from "./modules/title/titleModule.ts"
+import { soloTreasureGamePlayModule, soloTreasureModule } from "./modules/soloTreasure/soloTreasureModule.ts"
 import {
     treasureHuntProgressModule,
     treasureHuntRepeatDungeonModule,
@@ -56,6 +60,7 @@ interface ModuleReg {
 
 const REGISTRY: ModuleReg[] = [
     { name: "skill", deps: [], outputs: false, build: ctx => skillModule(ctx) },
+    { name: "abyssbuff", deps: [], outputs: true, build: ctx => ({ AbyssBuff: abyssBuffModule(ctx) }) },
     { name: "weapon", deps: ["skill"], outputs: true, build: ctx => weaponModule(ctx) },
     { name: "char", deps: ["skill"], outputs: true, build: ctx => charModule(ctx) },
     { name: "cutoff", deps: [], outputs: true, build: ctx => ({ Cutoff: cutoffModule(ctx) }) },
@@ -85,8 +90,22 @@ const REGISTRY: ModuleReg[] = [
     { name: "hardboss", deps: [], outputs: true, build: ctx => ({ HardBoss: hardBossModule(ctx) }) },
     { name: "chardatatarget", deps: [], outputs: true, build: ctx => ({ CharDataTarget: charDataTargetModule(ctx) }) },
     { name: "treasurehuntprogress", deps: [], outputs: true, build: ctx => ({ TreasureHuntProgress: treasureHuntProgressModule(ctx) }) },
-    { name: "treasurehuntrepeatdungeon", deps: [], outputs: true, build: ctx => ({ TreasureHuntRepeatDungeon: treasureHuntRepeatDungeonModule(ctx) }) },
-    { name: "treasurehuntstorydungeon", deps: [], outputs: true, build: ctx => ({ TreasureHuntStoryDungeon: treasureHuntStoryDungeonModule(ctx) }) },
+    {
+        name: "treasurehuntrepeatdungeon",
+        deps: [],
+        outputs: true,
+        build: ctx => ({ TreasureHuntRepeatDungeon: treasureHuntRepeatDungeonModule(ctx) }),
+    },
+    {
+        name: "treasurehuntstorydungeon",
+        deps: [],
+        outputs: true,
+        build: ctx => ({ TreasureHuntStoryDungeon: treasureHuntStoryDungeonModule(ctx) }),
+    },
+    { name: "solotreasure", deps: [], outputs: true, build: ctx => ({ SoloTreasure: soloTreasureModule(ctx) }) },
+    { name: "solotreasuregameplay", deps: [], outputs: true, build: ctx => ({ SoloTreasureGamePlay: soloTreasureGamePlayModule(ctx) }) },
+    { name: "petentry", deps: [], outputs: true, build: ctx => ({ PetEntry: petEntryModule(ctx) }) },
+    { name: "title", deps: [], outputs: true, build: ctx => ({ Title: titleModule(ctx) }) },
 ]
 
 interface CliArgs {

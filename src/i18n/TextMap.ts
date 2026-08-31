@@ -49,7 +49,9 @@ export class TextMap {
     /** 从 Lua 还是 JSON 加载（调试信息） */
     source = ""
 
-    constructor(_baseDir?: string) {}
+    constructor(_baseDir?: string) {
+        void _baseDir
+    }
 
     private load(): void {
         if (this.loaded) return
