@@ -1,7 +1,7 @@
 /** MonsterStrongAffixes module - 强词条说明及语义参数。 */
 
 import type { ModuleContext } from "../../core/Graph.ts"
-import { compile, LTemplate, seq, T, type VNode, type VNodeTree } from "../../i18n/vnode.ts"
+import { compile, LTemplate, seq, type VNode, type VNodeTree } from "../../i18n/vnode.ts"
 
 type Row = Record<string, any>
 
@@ -92,9 +92,9 @@ export function monsterStrongAffixesModule(ctx: ModuleContext): VNodeTree {
                 typeof value === "string" ? compile(ctx.dm.calcSkillDesc(value, 1)) : String(value ?? "")
             ) as VNode[]
             if (parts.length > 0) parts.push("\n")
-            parts.push(values.length > 0 ? LTemplate(String(descKey), values) : T(String(descKey)))
+            parts.push(LTemplate(String(descKey), values))
         }
-        return { name: T(titleKey), desc: seq(parts) }
+        return { name: LTemplate(titleKey, []), desc: seq(parts) }
     }
 
     const processBuff = (buffId: number, seenBuffs: Set<number>, seenEffects: Set<number>): Row => {
@@ -102,6 +102,7 @@ export function monsterStrongAffixesModule(ctx: ModuleContext): VNodeTree {
         const buff = entry(ctx, "Buff", buffId)
         if (!buff || seenBuffs.has(buffId)) return result
         const nextBuffs = new Set(seenBuffs).add(buffId)
+        putFirst(result, "时间膨胀倍率", buff.TimeDilation)
         const attrs = translateAttrs(buff.AddAttrs)
         if (Object.keys(attrs).length > 0) result.加成 = attrs
         putFirst(result, "最大层数", buff.MaxLayer)
@@ -159,12 +160,12 @@ export function monsterStrongAffixesModule(ctx: ModuleContext): VNodeTree {
         const effect = entry(ctx, "SkillEffects", effectId)
         if (!effect) return
         const nextEffects = new Set(seenEffects).add(effectId)
-        putFirst(target, "半径", radius(effect.TargetFilter))
         for (const task of list(effect.TaskEffects)) {
             if (!task || typeof task !== "object") continue
             const row = task as Row
             switch (row.Function) {
                 case "Damage":
+                    putFirst(target, "半径", radius(effect.TargetFilter))
                     putFirst(target, "伤害倍率", row.Rate)
                     putFirst(target, "伤害类型", row.DamageTag)
                     break
@@ -173,11 +174,11 @@ export function monsterStrongAffixesModule(ctx: ModuleContext): VNodeTree {
                     putFirst(target, "受击类型", row.CauseHit)
                     break
                 case "CreateUnit":
-                    putFirst(target, "持续时间", row.LifeTime)
-                    putFirst(target, "最大召唤数量", row.MaxSummonCount)
-                    putFirst(target, "每次召唤数量", row.SingleSummonCount)
-                    putFirst(target, "召唤延迟", row.CreateDelay)
                     if (row.UnitType === "MechanismSummon") {
+                        putFirst(target, "持续时间", row.LifeTime)
+                        putFirst(target, "最大召唤数量", row.MaxSummonCount)
+                        putFirst(target, "每次召唤数量", row.SingleSummonCount)
+                        putFirst(target, "召唤延迟", row.CreateDelay)
                         const summon = entry(ctx, "MechanismSummon", row.UnitId)
                         processRefs(summon?.BluePrintParams, target, seenBuffs, nextEffects)
                     }
@@ -253,10 +254,35 @@ export function monsterStrongAffixesModule(ctx: ModuleContext): VNodeTree {
         const bid = String((b as Row).id)
         const abase = aid.split(".")[2] ?? aid
         const bbase = bid.split(".")[2] ?? bid
-        const baseOrder = (order.indexOf(abase) - order.indexOf(bbase))
+        const baseOrder = order.indexOf(abase) - order.indexOf(bbase)
         if (baseOrder !== 0) return baseOrder
         const variant = (id: string) => (id.endsWith(".Double") ? 1 : id.endsWith(".Triple") ? 2 : 0)
         return variant(aid) - variant(bid)
     })
-    return output
+    const baseRows = new Map<string, Record<string, VNodeTree>>()
+    const deduplicated: VNodeTree[] = []
+    const stripId = (value: unknown): unknown => {
+        if (Array.isArray(value)) return value.map(stripId)
+        if (value && typeof value === "object") {
+            const out: Record<string, unknown> = {}
+            for (const [key, item] of Object.entries(value as Record<string, unknown>)) {
+                if (key !== "id") out[key] = stripId(item)
+            }
+            return out
+        }
+        return value
+    }
+    for (const item of output) {
+        const row = item as Record<string, VNodeTree>
+        const id = String(row.id)
+        const base = id.replace(/\.(Double|Triple)$/, "")
+        if (base === id) {
+            baseRows.set(id, row)
+            deduplicated.push(item)
+            continue
+        }
+        const baseRow = baseRows.get(base)
+        if (!baseRow || JSON.stringify(stripId(row)) !== JSON.stringify(stripId(baseRow))) deduplicated.push(item)
+    }
+    return deduplicated
 }

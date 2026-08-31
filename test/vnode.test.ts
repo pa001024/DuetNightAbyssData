@@ -168,4 +168,12 @@ describe("reactive 派生", () => {
 
         expect(renderTree(LTemplate("placeholder", values, true), "cn", textmap)).toBe("每2秒")
     })
+
+    test("LTemplate 小数格式与旧导出舍入一致", () => {
+        const textmap = { get: () => "#1/#2" } as unknown as TextMap
+
+        expect(renderTree(LTemplate("placeholder", ["0.35", "0.45"], true), "cn", textmap)).toBe("0.3/0.5")
+        const singleTextmap = { get: () => "#1" } as unknown as TextMap
+        expect(renderTree(LTemplate("placeholder", ["6.25"], true), "cn", singleTextmap)).toBe("6.2")
+    })
 })

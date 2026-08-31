@@ -23,6 +23,11 @@ import { charVoiceModule } from "./modules/charVoice/charVoiceModule.ts"
 import { cutoffModule } from "./modules/cutoff/cutoffModule.ts"
 import { draftModule } from "./modules/draft/draftModule.ts"
 import { eventModule } from "./modules/event/eventModule.ts"
+import {
+    extractionTreasureBagModule,
+    extractionTreasureMechanismModule,
+    extractionTreasureModule,
+} from "./modules/extractionTreasure/extractionTreasureModules.ts"
 import { extraExcelWeaponModule } from "./modules/extraExcelWeapon/extraExcelWeaponModule.ts"
 import { fishingSpotModule, fishModule } from "./modules/fish/fishModule.ts"
 import { forgeLevelQuestModule } from "./modules/forgeLevelQuest/forgeLevelQuestModule.ts"
@@ -43,6 +48,16 @@ import { regionReputationModule } from "./modules/regionReputation/regionReputat
 import { optRewardModule, rewardModule } from "./modules/reward/rewardModule.ts"
 import { rewardViewModule } from "./modules/rewardView/rewardViewModule.ts"
 import { robotEquipModule } from "./modules/robotEquip/robotEquipModule.ts"
+import {
+    rougeLikeBlessingGroupModule,
+    rougeLikeBlessingModule,
+    rougeLikeContractModule,
+    rougeLikeTalentBranchModule,
+    rougeLikeTalentModule,
+    rougeLikeTreasureGroupModule,
+    rougeLikeTreasureModule,
+    rougeProClassModule,
+} from "./modules/rouge/rougeSimpleModules.ts"
 import { shopItemModule } from "./modules/shopItem/shopItemModule.ts"
 import {
     hairModule,
@@ -107,6 +122,24 @@ const REGISTRY: ModuleReg[] = [
     { name: "forgelevelquest", deps: [], outputs: true, build: ctx => ({ ForgeLevelQuest: forgeLevelQuestModule(ctx) }) },
     { name: "regionpoint", deps: [], outputs: true, build: ctx => ({ RegionPoint: regionPointModule(ctx) }) },
     { name: "regionreputation", deps: [], outputs: true, build: ctx => ({ RegionReputation: regionReputationModule(ctx) }) },
+    { name: "rougeliketalentbranch", deps: [], outputs: true, build: ctx => ({ RougeLikeTalentBranch: rougeLikeTalentBranchModule(ctx) }) },
+    {
+        name: "rougelikeblessinggroup",
+        deps: [],
+        outputs: true,
+        build: ctx => ({ RougeLikeBlessingGroup: rougeLikeBlessingGroupModule(ctx) }),
+    },
+    {
+        name: "rougeliketreasuregroup",
+        deps: [],
+        outputs: true,
+        build: ctx => ({ RougeLikeTreasureGroup: rougeLikeTreasureGroupModule(ctx) }),
+    },
+    { name: "rougelikeblessing", deps: ["mod"], outputs: true, build: ctx => ({ RougeLikeBlessing: rougeLikeBlessingModule(ctx) }) },
+    { name: "rougelikecontract", deps: [], outputs: true, build: ctx => ({ RougeLikeContract: rougeLikeContractModule(ctx) }) },
+    { name: "rougeliketalent", deps: ["mod"], outputs: true, build: ctx => ({ RougeLikeTalent: rougeLikeTalentModule(ctx) }) },
+    { name: "rougeliketreasure", deps: ["mod"], outputs: true, build: ctx => ({ RougeLikeTreasure: rougeLikeTreasureModule(ctx) }) },
+    { name: "rougeproclass", deps: [], outputs: true, build: ctx => ({ RougeProClass: rougeProClassModule(ctx) }) },
     { name: "hardboss", deps: [], outputs: true, build: ctx => ({ HardBoss: hardBossModule(ctx) }) },
     { name: "chardatatarget", deps: [], outputs: true, build: ctx => ({ CharDataTarget: charDataTargetModule(ctx) }) },
     { name: "treasurehuntprogress", deps: [], outputs: true, build: ctx => ({ TreasureHuntProgress: treasureHuntProgressModule(ctx) }) },
@@ -129,6 +162,14 @@ const REGISTRY: ModuleReg[] = [
     { name: "shopitem", deps: [], outputs: true, build: ctx => ({ ShopItem: shopItemModule(ctx) }) },
     { name: "title", deps: [], outputs: true, build: ctx => ({ Title: titleModule(ctx) }) },
     { name: "event", deps: [], outputs: true, build: ctx => ({ Event: eventModule(ctx) }) },
+    { name: "extractiontreasure", deps: [], outputs: true, build: ctx => ({ ExtractionTreasure: extractionTreasureModule(ctx) }) },
+    { name: "extractiontreasurebag", deps: [], outputs: true, build: ctx => ({ ExtractionTreasureBag: extractionTreasureBagModule(ctx) }) },
+    {
+        name: "extractiontreasuremechanism",
+        deps: [],
+        outputs: true,
+        build: ctx => ({ ExtractionTreasureMechanism: extractionTreasureMechanismModule(ctx) }),
+    },
     { name: "impressionshop", deps: [], outputs: true, build: ctx => ({ ImpressionShop: impressionShopModule(ctx) }) },
     { name: "robotequip", deps: [], outputs: true, build: ctx => ({ RobotEquip: robotEquipModule(ctx) }) },
     { name: "raidbuff", deps: [], outputs: true, build: ctx => ({ RaidBuff: raidBuffModule(ctx) }) },

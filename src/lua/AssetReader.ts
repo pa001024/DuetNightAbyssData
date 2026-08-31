@@ -33,7 +33,22 @@ export function animMetaFromFModelData(data: unknown): AnimMeta {
     for (const slot of props.SlotAnimTracks ?? []) {
         const segments = slot?.AnimTrack?.AnimSegments ?? []
         if (segments.length === 0) continue
-        const seg = segments[segments.length - 1]
+        let seg = segments[segments.length - 1]
+        const firstRef = segments[0]?.AnimReference
+        if (firstRef && typeof firstRef === "object") {
+            const firstRefKey = firstRef.ObjectPath || firstRef.ObjectName
+            if (firstRefKey) {
+                for (let i = segments.length - 1; i >= 0; i--) {
+                    const candidateRef = segments[i]?.AnimReference
+                    if (!candidateRef || typeof candidateRef !== "object") continue
+                    const candidateRefKey = candidateRef.ObjectPath || candidateRef.ObjectName
+                    if (candidateRefKey === firstRefKey) {
+                        seg = segments[i]
+                        break
+                    }
+                }
+            }
+        }
         const start = Number(seg?.AnimStartTime ?? 0)
         const end = Number(seg?.AnimEndTime ?? 0)
         const playRate = Number(seg?.AnimPlayRate ?? 1)

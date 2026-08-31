@@ -226,18 +226,38 @@ function formatDescValue1(value: string, cast: DescCast): string {
     return `${value.slice(0, match.index)}${formatted}${value.slice((match.index ?? 0) + match[0].length)}`
 }
 
-/** Lua/C printf uses round-to-nearest-even for exact halfway values. */
+/** Match the legacy formatter: round the actual binary value to nearest, ties to even. */
 function formatLuaFixed(value: number, decimals: number): string {
-    const factor = 10 ** decimals
-    const scaled = value * factor
-    const sign = scaled < 0 ? -1 : 1
-    const magnitude = Math.abs(scaled)
-    const lower = Math.floor(magnitude)
-    const fraction = magnitude - lower
-    const epsilon = 1e-10
-    let rounded = lower
-    if (fraction > 0.5 + epsilon || (Math.abs(fraction - 0.5) <= epsilon && lower % 2 === 1)) rounded++
-    return ((sign * rounded) / factor).toFixed(decimals)
+    const bits = new DataView(new ArrayBuffer(8))
+    bits.setFloat64(0, value)
+    const raw = bits.getBigUint64(0)
+    const sign = raw >> 63n
+    const exponentBits = Number((raw >> 52n) & 0x7ffn)
+    const fraction = raw & ((1n << 52n) - 1n)
+    const mantissa = exponentBits === 0 ? fraction : (1n << 52n) | fraction
+    const binaryExponent = exponentBits === 0 ? -1074 : exponentBits - 1023 - 52
+    const decimalFactor = 10n ** BigInt(decimals)
+    const numerator = mantissa * 5n ** BigInt(decimals)
+    const shift = binaryExponent + decimals
+
+    let rounded: bigint
+    if (shift >= 0) {
+        rounded = numerator << BigInt(shift)
+    } else {
+        const divisor = 1n << BigInt(-shift)
+        const quotient = numerator / divisor
+        const remainder = numerator % divisor
+        const doubledRemainder = remainder * 2n
+        rounded = quotient
+        if (doubledRemainder > divisor || (doubledRemainder === divisor && quotient % 2n === 1n)) rounded++
+    }
+
+    const absolute = rounded
+    const whole = absolute / decimalFactor
+    const fractionPart = absolute % decimalFactor
+    const signPrefix = sign === 1n && rounded !== 0n ? "-" : ""
+    if (decimals === 0) return `${signPrefix}${whole}`
+    return `${signPrefix}${whole}.${fractionPart.toString().padStart(decimals, "0")}`
 }
 
 /** 判断是否为 VNode 节点（含 __t 标记） */
