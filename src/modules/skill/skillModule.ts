@@ -275,7 +275,7 @@ export interface SkillArtifacts {
     /** 从 SkillEffects 取字段的削韧/Boss削韧/tag/延迟/卡肉 */
     resolveFieldCombatMeta(
         descValue: string,
-        skillEffects: Record<string, any>
+        skillEffects?: Record<string, any>
     ): {
         isDamage: boolean
         削韧?: number
@@ -298,9 +298,12 @@ export interface SkillArtifacts {
 export function skillModule(ctx: ModuleContext) {
     const dm = ctx.dm
     // 原始表（懒加载）
-    const skillData = () => (dm.getTable("Skill") as Record<string, any>) || {}
-    const skillNodeData = () => (dm.getTable("SkillNode") as Record<string, any>) || {}
-    const skillEffectsData = () => (dm.getTable("SkillEffects") as Record<string, any>) || {}
+    const skillData = (id?: number | string) =>
+        id === undefined ? ((dm.getTable("Skill") as Record<string, any>) || {}) : dm.getTableItem("Skill", id)
+    const skillNodeData = (id?: number | string) =>
+        id === undefined ? ((dm.getTable("SkillNode") as Record<string, any>) || {}) : dm.getTableItem("SkillNode", id)
+    const skillEffectsData = (id?: number | string) =>
+        id === undefined ? ((dm.getTable("SkillEffects") as Record<string, any>) || {}) : dm.getTableItem("SkillEffects", id)
 
     const _getEntry = (id: number | string, table: Record<string, any>): any => {
         let e = table[String(id)]
@@ -319,9 +322,9 @@ export function skillModule(ctx: ModuleContext) {
 
     const resolveFieldCombatMeta = (
         descValue: string,
-        skillEffects: Record<string, any>
+        skillEffects?: Record<string, any>
     ): { isDamage: boolean; 削韧?: number; Boss削韧?: number; tag?: string[]; 延迟?: number; 卡肉?: number } =>
-        resolveFieldCombatMetaImpl(descValue, skillEffects, getSummonEffectIds())
+        resolveFieldCombatMetaImpl(descValue, skillEffects ?? skillEffectsData, getSummonEffectIds())
 
     /** 技能字段解释（对齐 char.process_skill_desc 的核心路径） */
     const explainSkillFields = (skillEntry: Record<string, unknown>, _tableId: number, _maxLevel?: number): unknown[] => {
@@ -347,7 +350,7 @@ export function skillModule(ctx: ModuleContext) {
             if (format && format !== "{%}") item.格式 = format
 
             // 削韧/Boss削韧（引用 SkillEffects）
-            const meta = resolveFieldCombatMeta(asString(descValue), skillEffectsData())
+            const meta = resolveFieldCombatMeta(asString(descValue))
             if (meta.削韧) item.削韧 = meta.削韧
             if (meta.Boss削韧 !== undefined) item.Boss削韧 = meta.Boss削韧
             if (meta.isDamage) item.is_damage = true
@@ -374,16 +377,19 @@ export function skillModule(ctx: ModuleContext) {
         resolveFieldCombatMeta,
         extractCreatures: (skillId, keepHidden = false) => {
             return extractCreaturesImpl(skillId, keepHidden, {
-                skillData: skillData(),
-                skillNodeData: skillNodeData(),
-                skillEffectsData: skillEffectsData(),
-                creatureData: (dm.getTable("SkillCreature") as Record<string, any>) || {},
+                skillData,
+                skillNodeData,
+                skillEffectsData,
+                allSkillData: () => skillData() as Record<string, any>,
+                allSkillEffectsData: () => skillEffectsData() as Record<string, any>,
+                creatureData: (id?: number | string) =>
+                    id === undefined ? ((dm.getTable("SkillCreature") as Record<string, any>) || {}) : dm.getTableItem("SkillCreature", id),
             })
         },
         parseWeaponLikeSkillField: (descKey, descValue, tableId, skillEntry) => {
             return parseWeaponLikeSkillFieldImpl(descKey, descValue, tableId, skillEntry, {
                 calcSkillDesc: (d, lvl = 1) => dm.calcSkillDesc(d, lvl),
-                skillEffects: skillEffectsData(),
+                skillEffects: skillEffectsData,
             })
         },
     }
@@ -397,7 +403,7 @@ function parseWeaponLikeSkillFieldImpl(
     descValue: string,
     _tableId: number,
     _skillEntry: Record<string, unknown>,
-    deps: { calcSkillDesc: (d: string, lvl?: number) => string; skillEffects: Record<string, any> }
+    deps: { calcSkillDesc: (d: string, lvl?: number) => string; skillEffects: (id: number | string) => any }
 ): Record<string, unknown> {
     const computed = deps.calcSkillDesc(descValue, 1)
     const [value, value2, format] = extractFieldValueAndFormatFromSource(descValue, computed)
@@ -419,10 +425,12 @@ function parseWeaponLikeSkillFieldImpl(
 // ---------- 实体提取（port skill_creature_utils） ----------
 
 interface CreatureDeps {
-    skillData: Record<string, any>
-    skillNodeData: Record<string, any>
-    skillEffectsData: Record<string, any>
-    creatureData: Record<string, any>
+    skillData: (id?: number | string) => any
+    skillNodeData: (id?: number | string) => any
+    skillEffectsData: (id?: number | string) => any
+    allSkillData: () => Record<string, any>
+    allSkillEffectsData: () => Record<string, any>
+    creatureData: (id?: number | string) => any
 }
 
 function getEntry2(table: Record<string, any>, id: number | string): any {
@@ -485,7 +493,7 @@ function simplifySkillCreature(creatureId: number | string, creatureData: any, k
 
 function extractCreaturesImpl(skillId: number, keepHidden: boolean, deps: CreatureDeps): unknown[] {
     const { skillData, skillNodeData, skillEffectsData, creatureData } = deps
-    const skillInfo = getEntry2(skillData, skillId)
+    const skillInfo = skillData(skillId)
     if (!Array.isArray(skillInfo) || skillInfo.length === 0) return []
     const skillEntry = unwrapSkillEntry(skillInfo)
     if (!skillEntry || typeof skillEntry !== "object") return []
@@ -509,7 +517,7 @@ function extractCreaturesImpl(skillId: number, keepHidden: boolean, deps: Creatu
         if (visitedEffects.has(visitKey)) return
         visitedEffects.add(visitKey)
 
-        const effect = getEntry2(skillEffectsData, effectId)
+        const effect = skillEffectsData(effectId)
         if (!effect || typeof effect !== "object") return
         const taskEffects = effect.TaskEffects
         if (!Array.isArray(taskEffects)) return
@@ -522,7 +530,7 @@ function extractCreaturesImpl(skillId: number, keepHidden: boolean, deps: Creatu
                 const creatureKey = `${creatureId}|${sourceLoopShootId}`
                 if (creatureId === null || creatureId === undefined || creatureId === "" || seenCreatureKeys.has(creatureKey)) continue
                 seenCreatureKeys.add(creatureKey)
-                const creature = simplifySkillCreature(creatureId, getEntry2(creatureData, creatureId), keepHidden)
+            const creature = simplifySkillCreature(creatureId, creatureData(creatureId), keepHidden)
                 if (creature && inheritedInterval !== undefined && inheritedInterval !== null) creature.射击间隔 = inheritedInterval
                 if (creature) creatures.push(creature)
                 continue
@@ -557,7 +565,7 @@ function extractCreaturesImpl(skillId: number, keepHidden: boolean, deps: Creatu
         if (visitedSkills.has(visitKey)) return
         visitedSkills.add(visitKey)
 
-        const innerInfo = getEntry2(skillData, innerSkillId)
+        const innerInfo = skillData(innerSkillId)
         if (!Array.isArray(innerInfo) || innerInfo.length === 0) return
         const innerEntry = unwrapSkillEntry(innerInfo)
         if (!innerEntry || typeof innerEntry !== "object") return
@@ -569,7 +577,7 @@ function extractCreaturesImpl(skillId: number, keepHidden: boolean, deps: Creatu
         while (current && !visitedNodes.has(current) && steps < 8) {
             visitedNodes.add(current)
             steps++
-            const node = getEntry2(skillNodeData, current)
+            const node = skillNodeData(current)
             if (!node || typeof node !== "object") break
             let effectIds = node.SkillNodeEffects
             if (!Array.isArray(effectIds)) effectIds = effectIds === undefined ? [] : [effectIds]
@@ -581,7 +589,7 @@ function extractCreaturesImpl(skillId: number, keepHidden: boolean, deps: Creatu
     collectFromSkill(skillId, null, skillId)
 
     // 主技能的 SubSkills 也属于同一条技能链（例如 Skill2 的实体在子技能节点中创建）。
-    const rootEntry = getEntry2(skillData, skillId)
+    const rootEntry = skillData(skillId)
     if (Array.isArray(rootEntry) && rootEntry.length > 0) {
         const rootSkillEntry = unwrapSkillEntry(rootEntry)
         if (rootSkillEntry && typeof rootSkillEntry === "object") {
@@ -598,7 +606,7 @@ function extractCreaturesImpl(skillId: number, keepHidden: boolean, deps: Creatu
 
     // Skill2 的关联技能（ClientSkillLogicId 反向）
     if (rootSkillType === "Skill2") {
-        for (const [relatedSkillId, relatedEntries] of Object.entries(skillData)) {
+        for (const [relatedSkillId, relatedEntries] of Object.entries(allSkillData())) {
             if (String(relatedSkillId) === String(skillId)) continue
             if (!Array.isArray(relatedEntries) || relatedEntries.length === 0) continue
             const relatedEntry = unwrapSkillEntry(relatedEntries)
@@ -607,7 +615,7 @@ function extractCreaturesImpl(skillId: number, keepHidden: boolean, deps: Creatu
             collectFromSkill(relatedSkillId, null, skillId)
         }
         // Skill2 的 StartLoopShoot 效果
-        for (const [_effectIdStr, effect] of Object.entries(skillEffectsData)) {
+        for (const [_effectIdStr, effect] of Object.entries(allSkillEffectsData())) {
             if (!effect || typeof effect !== "object") continue
             const taskEffects = effect.TaskEffects
             if (!Array.isArray(taskEffects)) continue
@@ -631,7 +639,7 @@ function extractCreaturesImpl(skillId: number, keepHidden: boolean, deps: Creatu
 /** 从 SkillEffects 解析字段的削韧/Boss削韧/tag/延迟/卡肉（独立实现，供多处共用） */
 export function resolveFieldCombatMetaImpl(
     descValue: string,
-    skillEffects: Record<string, any>,
+    skillEffects: Record<string, any> | ((id: number | string) => any),
     summonEffectIds?: ReadonlySet<number>
 ): { isDamage: boolean; 削韧?: number; Boss削韧?: number; tag?: string[]; 延迟?: number; 卡肉?: number } {
     const references: Array<{ effectId: number; taskIndex?: number }> = []
@@ -651,7 +659,7 @@ export function resolveFieldCombatMetaImpl(
     }
 
     for (const { effectId, taskIndex } of references) {
-        const effect = getEntry2(skillEffects, effectId)
+        const effect = typeof skillEffects === "function" ? skillEffects(effectId) : getEntry2(skillEffects, effectId)
         if (!effect) continue
         const tasks = Array.isArray(effect.TaskEffects) ? effect.TaskEffects : []
         const selectedTasks = taskIndex === undefined ? tasks : taskIndex >= 0 && taskIndex < tasks.length ? [tasks[taskIndex]] : []

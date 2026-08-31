@@ -21,11 +21,13 @@ import { charDataTargetModule } from "./modules/charDataTarget/charDataTargetMod
 import { charVoiceModule } from "./modules/charVoice/charVoiceModule.ts"
 import { cutoffModule } from "./modules/cutoff/cutoffModule.ts"
 import { draftModule } from "./modules/draft/draftModule.ts"
+import { eventModule } from "./modules/event/eventModule.ts"
 import { extraExcelWeaponModule } from "./modules/extraExcelWeapon/extraExcelWeaponModule.ts"
 import { fishingSpotModule, fishModule } from "./modules/fish/fishModule.ts"
 import { forgeLevelQuestModule } from "./modules/forgeLevelQuest/forgeLevelQuestModule.ts"
 import { hardBossModule } from "./modules/hardBoss/hardBossModule.ts"
 import { ironTicketModule } from "./modules/ironTicket/ironTicketModule.ts"
+import { impressionShopModule } from "./modules/impressionShop/impressionShopModule.ts"
 import { mountModule } from "./modules/mount/mountModule.ts"
 import { musicModule, musicScoreModule } from "./modules/music/musicModule.ts"
 import { regionPointModule } from "./modules/regionPoint/regionPointModule.ts"
@@ -106,6 +108,8 @@ const REGISTRY: ModuleReg[] = [
     { name: "solotreasuregameplay", deps: [], outputs: true, build: ctx => ({ SoloTreasureGamePlay: soloTreasureGamePlayModule(ctx) }) },
     { name: "petentry", deps: [], outputs: true, build: ctx => ({ PetEntry: petEntryModule(ctx) }) },
     { name: "title", deps: [], outputs: true, build: ctx => ({ Title: titleModule(ctx) }) },
+    { name: "event", deps: [], outputs: true, build: ctx => ({ Event: eventModule(ctx) }) },
+    { name: "impressionshop", deps: [], outputs: true, build: ctx => ({ ImpressionShop: impressionShopModule(ctx) }) },
 ]
 
 interface CliArgs {

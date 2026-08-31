@@ -179,6 +179,42 @@ export class LuaDataManager {
         return result
     }
 
+    /**
+     * 读取单个 Lua 表项并转换为 JS。
+     * 与 getTable 不同，这里只物化指定 key 的子树，适合 Skill/SkillNode/SkillEffects
+     * 这类大表的按引用访问。结果按表名+key 缓存，避免同一项重复跨 VM 转换。
+     */
+    getTableItem(name: string, key: number | string): LuaValue | undefined {
+        const cacheKey = `${name}\x00${String(key)}`
+        const cached = this.jsCache.get(cacheKey)
+        if (cached !== undefined) return cached
+
+        const L = this.ensureState()
+        lua.lua_getglobal(L, "DataMgr")
+        lua.lua_pushstring(L, to_luastring(name))
+        lua.lua_gettable(L, -2)
+        if (lua.lua_type(L, -1) !== lua.LUA_TTABLE) {
+            lua.lua_pop(L, 2)
+            return undefined
+        }
+
+        const numericKey = typeof key === "number" || /^-?\d+(?:\.\d+)?$/.test(String(key))
+        if (numericKey) lua.lua_pushnumber(L, Number(key))
+        else lua.lua_pushstring(L, to_luastring(String(key)))
+        lua.lua_gettable(L, -2)
+        if (lua.lua_type(L, -1) === lua.LUA_TNIL && numericKey) {
+            lua.lua_pop(L, 1)
+            lua.lua_pushstring(L, to_luastring(String(key)))
+            lua.lua_gettable(L, -2)
+        }
+
+        const type = lua.lua_type(L, -1)
+        const result = type === lua.LUA_TNIL ? undefined : (luaValueToJs(L, -1) as LuaValue)
+        lua.lua_pop(L, 3) // value + table + DataMgr
+        if (result !== undefined) this.jsCache.set(cacheKey, result)
+        return result
+    }
+
     /** 已加载的 Datas 表名（供调试/统计） */
     get loadedTableNames(): string[] {
         return [...this.loadedTables]
