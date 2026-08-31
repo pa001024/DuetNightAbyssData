@@ -67,6 +67,15 @@ describe("LuaDataManager", () => {
         expect(Array.isArray(dm.findTableKeysByTaskField("SkillEffects", "LoopShootId", 150402))).toBe(true)
     })
 
+    test("按 key 批量读取 Skill 只物化请求项", () => {
+        const dm = new LuaDataManager()
+        const rows = dm.getTableItems("Skill", ["110101", 110102, 999999999])
+        expect(rows.get("110101")).toBeDefined()
+        expect(rows.get("110102")).toBeDefined()
+        expect(rows.has("999999999")).toBe(false)
+        expect(dm.materializedTableNames).not.toContain("Skill")
+    })
+
     test("召唤物效果索引在 Lua 内构建并返回 ID", () => {
         const dm = getLuaDataManager()
         const ids = dm.findSummonEffectIds()
@@ -86,5 +95,11 @@ describe("LuaDataManager", () => {
         const hints = skill[120102][0][0].SkillDescHints
         expect(Array.isArray(hints)).toBe(false)
         expect(hints["9"]).toEqual(["SkillSustain"])
+    })
+
+    test("按任务字段查询支持整数 ID", () => {
+        const dm = new LuaDataManager()
+        const keys = dm.findTableKeysByTaskField("SkillEffects", "LoopShootId", 20305)
+        expect(keys).toContain(2030519)
     })
 })

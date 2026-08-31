@@ -5,7 +5,7 @@
  * - TextMap_I18n.lua（Script/Datas，24MB，各语言字段）→ 主索引
  * - TextMap_TextMapContent.lua（分片懒加载表，用 __materialize 物化）→ cn 回退
  *
- * 仅在 Lua 源缺失/失败时回退 out/*.json（兼容旧环境）。
+ * Lua 源缺失时仅使用已有的内置文本回退，不读取旧的 out JSON。
  *
  * 语言字段映射（对齐老代码）：
  *   cn→TextMapContent, en→ContentEN, jp→ContentJP, kr→ContentKR,

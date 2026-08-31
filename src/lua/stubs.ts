@@ -105,6 +105,23 @@ __materialize = function(name)
   end
   return m
 end
+-- 按需读取一组顶层键。返回值只包含请求的子树，避免调用方为了批量
+-- 读取而把 Skill/SkillNode 等大表整体物化到 JS。
+__get_table_items = function(name, keys)
+  local root = DataMgr[name]
+  if type(root) ~= "table" then return {} end
+  local out = {}
+  for _, key in ipairs(keys or {}) do
+    local value = root[key]
+    if value == nil and type(key) == "string" then
+      local numericKey = tonumber(key)
+      if numericKey ~= nil then value = root[numericKey] end
+    end
+    if value == nil then value = root[tostring(key)] end
+    if value ~= nil then out[key] = value end
+  end
+  return out
+end
 __path_indexes = {}
 __find_keys_by_path = function(name, path, expected)
   -- 反向查询通常会被多个角色/武器重复调用；索引留在 Lua，避免每次
@@ -138,6 +155,12 @@ __find_keys_by_path = function(name, path, expected)
 end
 __task_field_indexes = {}
 __find_keys_by_task_field = function(name, field, expected)
+  local function indexKey(value)
+    if type(value) == "number" and value == math.floor(value) then
+      return tostring(math.floor(value))
+    end
+    return tostring(value)
+  end
   local byName = __task_field_indexes[name]
   if not byName then byName = {}; __task_field_indexes[name] = byName end
   local index = byName[field]
@@ -149,7 +172,7 @@ __find_keys_by_task_field = function(name, field, expected)
         if type(value) == "table" and type(value.TaskEffects) == "table" then
           for _, task in pairs(value.TaskEffects) do
             if type(task) == "table" and task[field] ~= nil then
-              local expectedKey = tostring(task[field])
+              local expectedKey = indexKey(task[field])
               local keys = index[expectedKey]
               if not keys then keys = {}; index[expectedKey] = keys end
               local seen = false
@@ -164,7 +187,7 @@ __find_keys_by_task_field = function(name, field, expected)
     end
     byName[field] = index
   end
-  return index[tostring(expected)] or {}
+  return index[indexKey(expected)] or {}
 end
 __find_summon_effect_ids = function()
   if __summon_effect_ids_cache then return __summon_effect_ids_cache end

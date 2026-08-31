@@ -402,7 +402,7 @@ export async function charModule(ctx: ModuleContext) {
         ).filter((child): child is Record<string, unknown> => {
             if (!child) return false
             return Object.entries(child).some(([key, value]) => {
-                if (key === "id" || key === "子技能" || key === "行为" || key === "__childNameAppended") return false
+                if (key === "id" || key === "子技能" || key === "行为") return false
                 return Boolean(value) && JSON.stringify(value) !== JSON.stringify(result[key])
             })
         })
@@ -437,9 +437,9 @@ export async function charModule(ctx: ModuleContext) {
     ): Promise<Record<string, unknown> | null> {
         const child = await processSingleSkill(skillId, inheritedDescValues)
         if (child && explanationName) {
-            const info = getSkillEntry(dm, skillId)
+            // 无自有名称的子技能：名称在 processSingleSkill 之后追加，天然落在对象末尾，
+            // 与旧导出固定顺序一致（名称列在最后）。
             child.名称 = explanationName
-            if (!info?.SkillName) child.__childNameAppended = true
         }
         return child
     }
@@ -728,7 +728,8 @@ export async function charModule(ctx: ModuleContext) {
     }
 
     await assetReader.close()
-    return { Char: items.map(item => orderCharTree(item)) }
+    // 字段顺序由各构建点的插入顺序固定（对齐旧 Python 导出），不做写入后排序。
+    return { Char: items }
 }
 
 // ---------- 模块级辅助 ----------
@@ -830,62 +831,18 @@ const PASSIVE_FUNCTION_CN: Record<string, string> = {
     StopDash: "停止冲刺",
 }
 
-const CHAR_KEY_ORDER = [
-    "id",
-    "icon",
-    "名称",
-    "版本",
-    "别名",
-    "出生地",
-    "势力",
-    "生日",
-    "中文CV",
-    "日文CV",
-    "英文CV",
-    "韩文CV",
-    "阵营",
-    "属性",
-    "精通",
-    "标签",
-    "基础攻击",
-    "基础生命",
-    "基础防御",
-    "基础护盾",
-    "基础神智",
-    "加成",
-    "突破",
-    "技能",
-    "溯源",
-    "碎片",
-    "第七溯源消耗",
-    "专武",
-    "同律武器",
-]
-const SKILL_KEY_ORDER = ["id", "名称", "类型", "描述", "icon", "cd", "实体", "字段", "升级", "术语解释", "子技能", "行为"]
-const FIELD_KEY_ORDER = ["名称", "影响", "值", "值2", "格式", "tag", "削韧", "Boss削韧", "取消", "连段"]
-const U_WEAPON_KEY_ORDER = ["id", "名称", "类型", "icon", "伤害类型", "攻击", "暴击", "暴伤", "触发"]
-
-/** 保持生成 JSON 的字段顺序与旧 Char 导出一致；vnode 自身顺序不能改。 */
-function orderCharTree(value: any, parentKey = ""): any {
-    if (Array.isArray(value)) return value.map(item => orderCharTree(item, parentKey))
-    if (!value || typeof value !== "object" || "__t" in value) return value
-
-    const keys = Object.keys(value).filter(key => key !== "__childNameAppended")
-    let order = CHAR_KEY_ORDER
-    if (parentKey === "字段") order = FIELD_KEY_ORDER
-    else if (parentKey === "同律武器") order = U_WEAPON_KEY_ORDER
-    else if (parentKey === "技能" || parentKey === "子技能") order = SKILL_KEY_ORDER
-    const childNameAppended = value.__childNameAppended === true
-    if (childNameAppended) order = [...SKILL_KEY_ORDER.filter(key => key !== "名称"), "名称"]
-    const rank = new Map(order.map((key, index) => [key, index]))
-    const sortedKeys = keys
-        .map((key, index) => ({ key, index }))
-        .sort((a, b) => (rank.get(a.key) ?? order.length + a.index) - (rank.get(b.key) ?? order.length + b.index))
-        .map(item => item.key)
-    const out: Record<string, any> = {}
-    for (const key of sortedKeys) out[key] = orderCharTree(value[key], key)
-    return out
-}
+/**
+ * 输出对象的字段顺序由各构建点的对象字面量/属性赋值顺序直接固定（对齐旧 Python 导出），
+ * 不做写入后排序。各类对象的固定顺序：
+ * - 角色：id/icon/名称/版本/别名/出生地/势力/生日/中文CV/日文CV/英文CV/韩文CV/
+ *   阵营/属性/精通/额外精通/标签/基础攻击/基础生命/基础防御/基础护盾/基础神智/
+ *   加成/突破/技能/溯源/碎片/第七溯源消耗/专武/同律武器
+ * - 技能：id/名称/类型/描述/icon/cd/实体/字段/升级/术语解释/子技能/行为
+ *   （无自有名称的子技能，名称追加在对象末尾）
+ * - 字段：名称/影响/值/值2/格式/tag/削韧/Boss削韧/取消/连段
+ * - 同律武器：id/名称/类型/icon/伤害类型/攻击/暴击/暴伤/触发
+ * 新增字段时必须按上述顺序插入，保持与旧导出一致。
+ */
 
 function resourceNameKey(dm: ModuleContext["dm"], resourceId: number): string | undefined {
     const res = dm.getTable("Resource") as Record<string, any> | undefined

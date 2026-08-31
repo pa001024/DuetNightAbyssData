@@ -32,6 +32,8 @@ export class LuaDataManager {
     private loadedTables = new Set<string>()
     /** TS 侧读回缓存：name → JS 值 */
     private jsCache = new Map<string, LuaValue>()
+    /** 记录按项读取的空结果，避免对不存在的 ID 重复访问 Lua 表。 */
+    private missingItems = new Set<string>()
     /** 已完整物化到 JS 的表名（与 Lua VM 内 loadedTables 分开统计）。 */
     private materializedTables = new Set<string>()
     /** 计算封装引用 */
@@ -193,6 +195,7 @@ export class LuaDataManager {
         const cacheKey = `${name}\x00${String(key)}`
         const cached = this.jsCache.get(cacheKey)
         if (cached !== undefined) return cached
+        if (this.missingItems.has(cacheKey)) return undefined
 
         const L = this.ensureState()
         lua.lua_getglobal(L, "DataMgr")
@@ -200,6 +203,7 @@ export class LuaDataManager {
         lua.lua_gettable(L, -2)
         if (lua.lua_type(L, -1) !== lua.LUA_TTABLE) {
             lua.lua_pop(L, 2)
+            this.missingItems.add(cacheKey)
             return undefined
         }
 
@@ -217,6 +221,56 @@ export class LuaDataManager {
         const result = type === lua.LUA_TNIL ? undefined : (luaValueToJs(L, -1) as LuaValue)
         lua.lua_pop(L, 3) // value + table + DataMgr
         if (result !== undefined) this.jsCache.set(cacheKey, result)
+        else this.missingItems.add(cacheKey)
+        return result
+    }
+
+    /**
+     * 按需读取多个顶层键，只把请求的子树转换为 JS。
+     * 返回 Map 的 key 使用调用方传入的字符串形式，适合一次读取角色/武器的技能列表。
+     */
+    getTableItems(name: string, keys: Array<number | string>): Map<string, LuaValue> {
+        const result = new Map<string, LuaValue>()
+        const pending: Array<number | string> = []
+        const pendingCacheKeys = new Set<string>()
+        for (const key of keys) {
+            const normalized = String(key)
+            const cacheKey = `${name}\x00${normalized}`
+            const cached = this.jsCache.get(cacheKey)
+            if (cached !== undefined) {
+                result.set(normalized, cached)
+                continue
+            }
+            if (this.missingItems.has(cacheKey) || pendingCacheKeys.has(cacheKey)) continue
+            pending.push(key)
+            pendingCacheKeys.add(cacheKey)
+        }
+        if (pending.length === 0) return result
+
+        const L = this.ensureState()
+        lua.lua_getglobal(L, "__get_table_items")
+        lua.lua_pushstring(L, to_luastring(name))
+        this.pushJsValue(L, pending)
+        if (lua.lua_pcall(L, 2, 1, 0) !== 0) {
+            lua.lua_pop(L, 1)
+            return result
+        }
+        const values = luaValueToJs(L, -1)
+        lua.lua_pop(L, 1)
+        if (!values || typeof values !== "object" || Array.isArray(values)) return result
+
+        const rows = values as Record<string, LuaValue>
+        for (const key of pending) {
+            const normalized = String(key)
+            const cacheKey = `${name}\x00${normalized}`
+            const value = rows[normalized]
+            if (value === undefined) {
+                this.missingItems.add(cacheKey)
+                continue
+            }
+            this.jsCache.set(cacheKey, value)
+            result.set(normalized, value)
+        }
         return result
     }
 

@@ -8,15 +8,15 @@
  * - 技能（字段/削韧/tag/取消/连段/实体）
  *
  * 翻译部分一律 vnode；数值/结构普通 JS。语言无关，一次 build 多语言渲染。
- * 数据源：Script/Datas/*.lua（懒加载），回退 out/*.json。
- * 动画 JSON（取消/连段）来自 out/Asset（= 解包目录符号链接）。
+ * 数据源：Script/Datas/*.lua（按需加载）。
+ * 动画资源由 AssetReader 通过 UAssetCLI 读取；仅保留既有静态资源目录兼容路径。
  */
 
 import type { ModuleContext } from "../../core/Graph.ts"
 import { compile, LTemplate, record, T, type VNode, type VNodeTree } from "../../i18n/vnode.ts"
 import { AssetReader } from "../../lua/AssetReader.ts"
 import type { SkillArtifacts } from "../skill/skillModule.ts"
-import { extractFieldValueAndFormatFromSource, resolveFieldCombatMetaImpl, roundValue } from "../skill/skillModule.ts"
+import { extractFieldValueAndFormatFromSource, P_MAP, resolveFieldCombatMetaImpl, roundValue } from "../skill/skillModule.ts"
 
 const TYPE_MAP: Record<string, string> = {
     Shooting: "射击",
@@ -45,49 +45,6 @@ const WEAPON_TYPE_KEY: Record<string, string> = {
     Shotgun: "WeaponType_Shotgun",
     Sword: "WeaponType_Sword",
     Swordwhip: "WeaponType_Swordwhip",
-}
-
-/** P_MAP 属性名缩写（port processor/_util.py） */
-const P_MAP: Record<string, string> = {
-    最大神智: "神智",
-    造成的伤害: "增伤",
-    造成技能伤害: "技能伤害",
-    暴击率: "暴击",
-    暴击伤害: "暴伤",
-    触发概率: "触发",
-    切割攻击: "物理",
-    贯穿攻击: "物理",
-    震荡攻击: "物理",
-    攻击速度: "攻速",
-    远程武器: "远程",
-    近战武器: "近战",
-    近战同律武器: "同律近战",
-    远程同律武器: "同律远程",
-    角色: "角色",
-    暗属性攻击: "属性攻击",
-    水属性攻击: "属性攻击",
-    火属性攻击: "属性攻击",
-    雷属性攻击: "属性攻击",
-    风属性攻击: "属性攻击",
-    光属性攻击: "属性攻击",
-    ExtraComboProb: "额外连击",
-    多重射击: "多重",
-    最大弹药: "弹药",
-    弹匣容量: "弹匣",
-    子弹装填速度: "装填",
-    GrRate: "歧视",
-    JtRate: "歧视",
-    JhRate: "歧视",
-    SqRate: "歧视",
-    全属性穿透: "属性穿透",
-    普通攻击伤害: "普攻增伤",
-    蓄力攻击伤害: "蓄力增伤",
-    下落攻击伤害: "下落增伤",
-    HyperTriggerCovertRate: "充盈转化",
-    WeaponCRDModifierRate: "暴伤",
-    WeaponCRDModifierValue: "暴伤",
-    Def: "防御",
-    Sp: "神智",
 }
 
 /** AttrConfig 键拼接（port get_attr_config_key_from_attr_data 核心分支） */
@@ -441,6 +398,8 @@ export async function weaponModule(ctx: ModuleContext) {
         let reloadValue = 0
         let shootingInterval = 0
         const loopIntervalMap = collectLoopIntervalMap(weaponSkillList, weaponId)
+        // 只预取武器声明的根技能；实体链上的其他技能由 getTableItem 懒加载。
+        dm.getTableItems("Skill", weaponSkillList)
 
         for (const skillId of weaponSkillList) {
             const skillInfo = skillData(skillId)
