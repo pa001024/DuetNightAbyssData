@@ -18,6 +18,12 @@
       "Sword",
       "Dual Pistols"
     ],
+    "额外精通": [
+      "Polearm",
+      "Greatsword",
+      "Dual Blades",
+      "Katana"
+    ],
     "标签": [
       "DPS",
       "Consonance Weapon",
@@ -757,6 +763,12 @@
       "Sword",
       "Assault Rifle"
     ],
+    "额外精通": [
+      "Pistol",
+      "Dual Pistols",
+      "Grenade Launcher",
+      "Shotgun"
+    ],
     "标签": [
       "DPS",
       "Weapon DMG"
@@ -1305,6 +1317,12 @@
     "精通": [
       "Greatsword",
       "Shotgun"
+    ],
+    "额外精通": [
+      "Sword",
+      "Polearm",
+      "Dual Blades",
+      "Katana"
     ],
     "标签": [
       "DPS",
@@ -2014,6 +2032,12 @@
       "Sword",
       "Assault Rifle"
     ],
+    "额外精通": [
+      "Polearm",
+      "Greatsword",
+      "Dual Pistols",
+      "Shotgun"
+    ],
     "标签": [
       "DPS",
       "Weapon DMG"
@@ -2549,6 +2573,12 @@
     "精通": [
       "Greatsword",
       "Shotgun"
+    ],
+    "额外精通": [
+      "Sword",
+      "Polearm",
+      "Dual Blades",
+      "Katana"
     ],
     "标签": [
       "DPS",
@@ -3295,6 +3325,12 @@
       "Katana",
       "Pistol"
     ],
+    "额外精通": [
+      "Sword",
+      "Polearm",
+      "Greatsword",
+      "Whipblade"
+    ],
     "标签": [
       "DPS",
       "Skill DMG"
@@ -3891,6 +3927,7 @@
     "精通": [
       "All Types"
     ],
+    "额外精通": "",
     "标签": [
       "DPS",
       "Weapon DMG"
@@ -4624,6 +4661,12 @@
       "Polearm",
       "Shotgun"
     ],
+    "额外精通": [
+      "Sword",
+      "Greatsword",
+      "Whipblade",
+      "Katana"
+    ],
     "标签": [
       "DPS",
       "Skill DMG"
@@ -5185,6 +5228,12 @@
       "Sword",
       "Assault Rifle"
     ],
+    "额外精通": [
+      "Polearm",
+      "Greatsword",
+      "Dual Pistols",
+      "Shotgun"
+    ],
     "标签": [
       "Support"
     ],
@@ -5648,6 +5697,12 @@
     "精通": [
       "Sword",
       "Assault Rifle"
+    ],
+    "额外精通": [
+      "Polearm",
+      "Greatsword",
+      "Whipblade",
+      "Katana"
     ],
     "标签": [
       "Support"
@@ -6146,6 +6201,12 @@
       "Polearm",
       "Grenade Launcher"
     ],
+    "额外精通": [
+      "Pistol",
+      "Dual Pistols",
+      "Shotgun",
+      "Bow"
+    ],
     "标签": [
       "DPS",
       "Summon",
@@ -6608,6 +6669,12 @@
     "精通": [
       "Polearm",
       "Dual Pistols"
+    ],
+    "额外精通": [
+      "Sword",
+      "Greatsword",
+      "Dual Blades",
+      "Whipblade"
     ],
     "标签": [
       "DPS",
@@ -7083,6 +7150,12 @@
     "精通": [
       "Sword",
       "Assault Rifle"
+    ],
+    "额外精通": [
+      "Polearm",
+      "Greatsword",
+      "Dual Pistols",
+      "Shotgun"
     ],
     "标签": [
       "Support",
@@ -7589,6 +7662,12 @@
       "Sword",
       "Bow"
     ],
+    "额外精通": [
+      "Pistol",
+      "Dual Pistols",
+      "Shotgun",
+      "Assault Rifle"
+    ],
     "标签": [
       "Support",
       "Summon",
@@ -8029,6 +8108,12 @@
     "精通": [
       "Whipblade",
       "Bow"
+    ],
+    "额外精通": [
+      "Pistol",
+      "Dual Pistols",
+      "Shotgun",
+      "Assault Rifle"
     ],
     "标签": [
       "Support",
@@ -8544,6 +8629,12 @@
       "Greatsword",
       "Dual Pistols"
     ],
+    "额外精通": [
+      "Sword",
+      "Polearm",
+      "Dual Blades",
+      "Katana"
+    ],
     "标签": [
       "DPS",
       "Consonance Weapon",
@@ -9004,6 +9095,12 @@
     "精通": [
       "Dual Blades",
       "Grenade Launcher"
+    ],
+    "额外精通": [
+      "Polearm",
+      "Greatsword",
+      "Whipblade",
+      "Katana"
     ],
     "标签": [
       "DPS",
@@ -9467,6 +9564,12 @@
     "精通": [
       "Sword",
       "Shotgun"
+    ],
+    "额外精通": [
+      "Pistol",
+      "Dual Pistols",
+      "Grenade Launcher",
+      "Bow"
     ],
     "标签": [
       "DPS",
@@ -10034,6 +10137,12 @@
     "精通": [
       "Dual Blades",
       "Dual Pistols"
+    ],
+    "额外精通": [
+      "Pistol",
+      "Grenade Launcher",
+      "Shotgun",
+      "Assault Rifle"
     ],
     "标签": [
       "DPS",
@@ -10609,6 +10718,12 @@
       "Greatsword",
       "Grenade Launcher"
     ],
+    "额外精通": [
+      "Pistol",
+      "Dual Pistols",
+      "Shotgun",
+      "Assault Rifle"
+    ],
     "标签": [
       "DPS",
       "Max HP",
@@ -11102,6 +11217,12 @@
       "Whipblade",
       "Assault Rifle"
     ],
+    "额外精通": [
+      "Sword",
+      "Polearm",
+      "Dual Blades",
+      "Katana"
+    ],
     "标签": [
       "DPS",
       "Skill DMG",
@@ -11594,6 +11715,12 @@
     "精通": [
       "Polearm",
       "Shotgun"
+    ],
+    "额外精通": [
+      "Pistol",
+      "Dual Pistols",
+      "Assault Rifle",
+      "Bow"
     ],
     "标签": [
       "DPS",
@@ -12106,6 +12233,12 @@
       "Katana",
       "Assault Rifle"
     ],
+    "额外精通": [
+      "Sword",
+      "Greatsword",
+      "Dual Blades",
+      "Whipblade"
+    ],
     "标签": [
       "DPS",
       "Skill DMG"
@@ -12601,6 +12734,12 @@
     "精通": [
       "Greatsword",
       "Dual Pistols"
+    ],
+    "额外精通": [
+      "Pistol",
+      "Grenade Launcher",
+      "Assault Rifle",
+      "Bow"
     ],
     "标签": [
       "DPS",
@@ -13348,6 +13487,7 @@
       "Katana",
       "Assault Rifle"
     ],
+    "额外精通": "",
     "标签": [
       "DPS",
       "Skill DMG"
@@ -13596,6 +13736,12 @@
     "精通": [
       "Polearm",
       "Assault Rifle"
+    ],
+    "额外精通": [
+      "Pistol",
+      "Grenade Launcher",
+      "Shotgun",
+      "Bow"
     ],
     "标签": [
       "DPS",
@@ -14111,6 +14257,12 @@
     "精通": [
       "Sword",
       "Pistol"
+    ],
+    "额外精通": [
+      "Dual Pistols",
+      "Grenade Launcher",
+      "Assault Rifle",
+      "Bow"
     ],
     "标签": [
       "Support",
@@ -14635,6 +14787,12 @@
     "精通": [
       "Whipblade",
       "Pistol"
+    ],
+    "额外精通": [
+      "Grenade Launcher",
+      "Shotgun",
+      "Assault Rifle",
+      "Bow"
     ],
     "标签": [
       "DPS",
@@ -15215,6 +15373,12 @@
     "精通": [
       "Polearm",
       "Bow"
+    ],
+    "额外精通": [
+      "Sword",
+      "Greatsword",
+      "Dual Blades",
+      "Whipblade"
     ],
     "标签": [
       "Support",
@@ -15940,6 +16104,12 @@
       "Dual Blades",
       "Dual Pistols"
     ],
+    "额外精通": [
+      "Pistol",
+      "Grenade Launcher",
+      "Shotgun",
+      "Assault Rifle"
+    ],
     "标签": [
       "DPS",
       "Weapon DMG"
@@ -16377,6 +16547,12 @@
     "精通": [
       "Polearm",
       "Assault Rifle"
+    ],
+    "额外精通": [
+      "Pistol",
+      "Grenade Launcher",
+      "Shotgun",
+      "Bow"
     ],
     "标签": [
       "DPS",
@@ -16948,6 +17124,12 @@
       "Whipblade",
       "Assault Rifle"
     ],
+    "额外精通": [
+      "Sword",
+      "Polearm",
+      "Dual Blades",
+      "Katana"
+    ],
     "标签": [
       "Support",
       "Crowd Control",
@@ -17389,6 +17571,7 @@
       "Polearm",
       "Assault Rifle"
     ],
+    "额外精通": "",
     "基础攻击": 28,
     "基础生命": 70,
     "基础防御": 252,

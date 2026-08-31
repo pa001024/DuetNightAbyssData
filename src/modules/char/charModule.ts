@@ -681,6 +681,7 @@ export async function charModule(ctx: ModuleContext) {
             阵营: processCamp(char.Camp ?? "None"),
             属性: elm,
             精通: processMastery(battleChar.ExcelWeaponTags),
+            额外精通: processMastery(battleChar.ExcelWeaponTagsExpand),
             标签: processTags(battleChar.Positioning),
             基础攻击: baseAttr.攻击 ?? 0,
             基础生命: baseAttr.生命 ?? 0,
@@ -1245,19 +1246,20 @@ function normalizeMapOrArray(v: unknown): any[] {
  * 溯源参数格式化（对齐老代码 _process_traces 的数值格式化）：
  * - 整数不显示小数点：8.0 → "8"
  * - 带 % 后缀：8.0% → "8%"
- * - 否则保留原值
+ * - 含 GText 单位时保留哨兵，交由 compile 在渲染阶段展开
  */
-function formatTraceValue(computed: string | number): VNode {
+export function formatTraceValue(computed: string | number): VNode {
     const str = String(computed)
-    // 去掉 GText 哨兵（溯源参数通常纯数值）
+    // 含 GText 哨兵时不能走纯数字快捷分支，否则单位会丢失。
+    const hasGText = /\x01GT\{[^}]*\}\x01/.test(str)
     const clean = str.replace(/\x01GT\{[^}]*\}\x01/g, "")
     const percentMatch = clean.match(/^(-?\d+(?:\.\d+)?)%$/)
-    if (percentMatch) {
+    if (percentMatch && !hasGText) {
         const num = roundValue(Number(percentMatch[1]))
         return `${num}%`
     }
     const numMatch = clean.match(/^(-?\d+(?:\.\d+)?)$/)
-    if (numMatch) {
+    if (numMatch && !hasGText) {
         const num = roundValue(Number(numMatch[1]))
         return `${num}`
     }

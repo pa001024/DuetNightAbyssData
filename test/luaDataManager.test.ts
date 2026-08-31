@@ -6,7 +6,7 @@
  * 3. 懒加载缓存正确（loadedTableNames）
  */
 import { describe, expect, setDefaultTimeout, test } from "bun:test"
-import { getLuaDataManager } from "../src/lua/LuaDataManager.ts"
+import { LuaDataManager, getLuaDataManager } from "../src/lua/LuaDataManager.ts"
 import { GT_RE } from "../src/lua/stubs.ts"
 
 setDefaultTimeout(15000)
@@ -56,9 +56,13 @@ describe("LuaDataManager", () => {
     })
 
     test("按项读取 Skill 不会要求调用方物化整表", () => {
-        const dm = getLuaDataManager()
+        const dm = new LuaDataManager()
+        expect(dm.loadedTableNames).toEqual([])
+        expect(dm.materializedTableNames).toEqual([])
         const item = dm.getTableItem("Skill", 110101) as any
         expect(item?.[0]?.[0]?.SkillName).toBe("SKILL_110101_NAME")
+        expect(dm.loadedTableNames).toContain("Skill")
+        expect(dm.materializedTableNames).not.toContain("Skill")
         expect(dm.findTableKeysByPath("Skill", [1, 0, "SkillType"], "Skill1").length).toBeGreaterThan(0)
         expect(Array.isArray(dm.findTableKeysByTaskField("SkillEffects", "LoopShootId", 150402))).toBe(true)
     })

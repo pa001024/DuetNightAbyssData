@@ -14,6 +14,7 @@ import { join } from "node:path"
 import { Graph } from "./core/Graph.ts"
 import { getTextMap, LANGS } from "./i18n/TextMap.ts"
 import { abyssBuffModule } from "./modules/abyssBuff/abyssBuffModule.ts"
+import { achievementModule } from "./modules/achievement/achievementModule.ts"
 import { backpackPuzzleItemModule, backpackPuzzleLevelModule } from "./modules/backpackPuzzle/backpackPuzzleModule.ts"
 import { charModule } from "./modules/char/charModule.ts"
 import { charAccessoryModule } from "./modules/charAccessory/charAccessoryModule.ts"
@@ -28,9 +29,12 @@ import { forgeLevelQuestModule } from "./modules/forgeLevelQuest/forgeLevelQuest
 import { hardBossModule } from "./modules/hardBoss/hardBossModule.ts"
 import { impressionShopModule } from "./modules/impressionShop/impressionShopModule.ts"
 import { ironTicketModule } from "./modules/ironTicket/ironTicketModule.ts"
+import { modModule } from "./modules/mod/modModule.ts"
+import { monsterModule } from "./modules/monster/monsterModule.ts"
 import { mountModule } from "./modules/mount/mountModule.ts"
 import { musicModule, musicScoreModule } from "./modules/music/musicModule.ts"
 import { petEntryModule } from "./modules/pet/petEntryModule.ts"
+import { petModule } from "./modules/pet/petModule.ts"
 import { questChainModule } from "./modules/questChain/questChainModule.ts"
 import { raidBuffModule } from "./modules/raidBuff/raidBuffModule.ts"
 import { regionPointModule } from "./modules/regionPoint/regionPointModule.ts"
@@ -38,6 +42,7 @@ import { regionReputationModule } from "./modules/regionReputation/regionReputat
 import { optRewardModule, rewardModule } from "./modules/reward/rewardModule.ts"
 import { rewardViewModule } from "./modules/rewardView/rewardViewModule.ts"
 import { robotEquipModule } from "./modules/robotEquip/robotEquipModule.ts"
+import { shopItemModule } from "./modules/shopItem/shopItemModule.ts"
 import {
     hairModule,
     headFrameModule,
@@ -68,6 +73,7 @@ interface ModuleReg {
 const REGISTRY: ModuleReg[] = [
     { name: "skill", deps: [], outputs: false, build: ctx => skillModule(ctx) },
     { name: "abyssbuff", deps: [], outputs: true, build: ctx => ({ AbyssBuff: abyssBuffModule(ctx) }) },
+    { name: "achievement", deps: [], outputs: true, build: ctx => ({ Achievement: achievementModule(ctx) }) },
     { name: "weapon", deps: ["skill"], outputs: true, build: ctx => weaponModule(ctx) },
     { name: "char", deps: ["skill"], outputs: true, build: ctx => charModule(ctx) },
     { name: "cutoff", deps: [], outputs: true, build: ctx => ({ Cutoff: cutoffModule(ctx) }) },
@@ -88,6 +94,8 @@ const REGISTRY: ModuleReg[] = [
     { name: "headframe", deps: [], outputs: true, build: ctx => ({ HeadFrame: headFrameModule(ctx) }) },
     { name: "headsculpture", deps: [], outputs: true, build: ctx => ({ HeadSculpture: headSculptureModule(ctx) }) },
     { name: "mount", deps: [], outputs: true, build: ctx => ({ Mount: mountModule(ctx) }) },
+    { name: "mod", deps: ["skill"], outputs: true, build: ctx => ({ Mod: modModule(ctx) }) },
+    { name: "monster", deps: [], outputs: true, build: ctx => ({ Monster: monsterModule(ctx) }) },
     { name: "fish", deps: [], outputs: true, build: ctx => ({ Fish: fishModule(ctx) }) },
     { name: "fishingspot", deps: [], outputs: true, build: ctx => ({ FishingSpot: fishingSpotModule(ctx) }) },
     { name: "music", deps: [], outputs: true, build: ctx => ({ Music: musicModule(ctx) }) },
@@ -115,6 +123,8 @@ const REGISTRY: ModuleReg[] = [
     { name: "solotreasure", deps: [], outputs: true, build: ctx => ({ SoloTreasure: soloTreasureModule(ctx) }) },
     { name: "solotreasuregameplay", deps: [], outputs: true, build: ctx => ({ SoloTreasureGamePlay: soloTreasureGamePlayModule(ctx) }) },
     { name: "petentry", deps: [], outputs: true, build: ctx => ({ PetEntry: petEntryModule(ctx) }) },
+    { name: "pet", deps: ["skill"], outputs: true, build: ctx => ({ Pet: petModule(ctx) }) },
+    { name: "shopitem", deps: [], outputs: true, build: ctx => ({ ShopItem: shopItemModule(ctx) }) },
     { name: "title", deps: [], outputs: true, build: ctx => ({ Title: titleModule(ctx) }) },
     { name: "event", deps: [], outputs: true, build: ctx => ({ Event: eventModule(ctx) }) },
     { name: "impressionshop", deps: [], outputs: true, build: ctx => ({ ImpressionShop: impressionShopModule(ctx) }) },

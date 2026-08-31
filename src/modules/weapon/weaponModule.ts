@@ -466,7 +466,10 @@ export async function weaponModule(ctx: ModuleContext) {
                 if (candidate) shootingInterval = shootingInterval ? Math.min(shootingInterval, candidate) : candidate
             }
             const descKeys = skillEntry.SkillDescKeys
-            if (Array.isArray(descKeys) && descKeys.length > 0) {
+            const hasDescKeys = Array.isArray(descKeys)
+                ? descKeys.length > 0
+                : !!descKeys && typeof descKeys === "object" && Object.keys(descKeys).length > 0
+            if (hasDescKeys) {
                 const fields = await processWeaponSkillFields(skillEntry, weaponId)
                 if (fields.length > 0) item.字段 = fields
             }

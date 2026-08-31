@@ -32,6 +32,8 @@ export class LuaDataManager {
     private loadedTables = new Set<string>()
     /** TS 侧读回缓存：name → JS 值 */
     private jsCache = new Map<string, LuaValue>()
+    /** 已完整物化到 JS 的表名（与 Lua VM 内 loadedTables 分开统计）。 */
+    private materializedTables = new Set<string>()
     /** 计算封装引用 */
     private skillUtilsReady = false
     /** calcSkillDesc memo 缓存：`${level}\x00${desc}` → 结果串 */
@@ -154,7 +156,7 @@ export class LuaDataManager {
 
     /**
      * 获取某张表为 JS 值（TS 侧结构化遍历/数据解释用）。
-     * 优先 Lua 源（懒加载），失败回退 out/<name>.json。带缓存。
+     * 只读取 Lua 源（懒加载），失败返回 undefined。带缓存。
      */
     getTable(name: string): LuaValue | undefined {
         const cached = this.jsCache.get(name)
@@ -175,7 +177,10 @@ export class LuaDataManager {
         }
         lua.lua_pop(L, 2) // value + DataMgr
 
-        if (result !== undefined) this.jsCache.set(name, result)
+        if (result !== undefined) {
+            this.jsCache.set(name, result)
+            this.materializedTables.add(name)
+        }
         return result
     }
 
@@ -271,6 +276,11 @@ export class LuaDataManager {
         return [...this.loadedTables]
     }
 
+    /** 已完整转换到 JS 的表名（按项读取不会出现在此列表）。 */
+    get materializedTableNames(): string[] {
+        return [...this.materializedTables]
+    }
+
     /**
      * 物化一张"分区懒加载表"（如 TextMap_TextMapContent，用 metatable.__pairs 惰性展开）。
      * 调 Lua 全局 __materialize(name)（内部 pairs() 触发 __pairs 展开全部键值），再读回 JS。
@@ -291,6 +301,7 @@ export class LuaDataManager {
         const result = luaValueToJs(L, -1) as LuaValue
         lua.lua_pop(L, 1)
         this.jsCache.set(name, result)
+        this.materializedTables.add(name)
         this.loadedTables.add(name)
         return result
     }
@@ -420,6 +431,18 @@ export class LuaDataManager {
         return undefined
     }
 
+    /** ArmoryUtils Mod 被动描述单个占位值（Lua 内处理 GetModValue/Polarity）。 */
+    calcModDescValue(desc: string, modId: number, level: number): string {
+        const r = this.callGlobalFn("__calc_mod_desc_value", [desc, modId, level])
+        return typeof r === "string" ? r : desc
+    }
+
+    /** ArmoryUtils.CalcModAttrByLevel（Lua 内执行 SkillUtils.GrowProxy）。 */
+    calcModAttr(modId: number, level: number, attrIndex: number, valueType?: string): number {
+        const r = this.callGlobalFn("__calc_mod_attr", [modId, level, attrIndex, valueType])
+        return typeof r === "number" ? r : 0
+    }
+
     /**
      * 技能名（返回翻译 key，非文本）。在 Lua 侧取单个字段，不触发全表读回。
      * 直接读数据层字段 SkillName（它本身就是 TextMap key）。
@@ -435,6 +458,29 @@ export class LuaDataManager {
     getSkillMaxLevel(skillId: number): number | undefined {
         const r = this.callSkillUtilsTableFn("GetMaxLevel", [skillId])
         return typeof r === "number" ? r : undefined
+    }
+
+    private callGlobalFn(fn: string, args: Array<unknown>): unknown {
+        const L = this.ensureState()
+        lua.lua_getglobal(L, fn)
+        if (lua.lua_type(L, -1) !== lua.LUA_TFUNCTION) {
+            lua.lua_pop(L, 1)
+            return undefined
+        }
+        for (const arg of args) this.pushJsValue(L, arg)
+        if (lua.lua_pcall(L, args.length, 1, 0) !== 0) {
+            lua.lua_pop(L, 1)
+            return undefined
+        }
+        const t = lua.lua_type(L, -1)
+        let result: unknown
+        if (t === lua.LUA_TNUMBER) result = lua.lua_tonumber(L, -1)
+        else if (t === lua.LUA_TSTRING) result = to_jsstring(lua.lua_tostring(L, -1)!)
+        else if (t === lua.LUA_TBOOLEAN) result = lua.lua_toboolean(L, -1)
+        else if (t === lua.LUA_TTABLE) result = luaValueToJs(L, -1)
+        else result = undefined
+        lua.lua_pop(L, 1)
+        return result
     }
 
     // ---------- Lua 侧字段访问（避免全表读回大表） ----------

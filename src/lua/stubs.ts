@@ -105,10 +105,26 @@ __materialize = function(name)
   end
   return m
 end
+__path_indexes = {}
 __find_keys_by_path = function(name, path, expected)
+  -- 反向查询通常会被多个角色/武器重复调用；索引留在 Lua，避免每次
+  -- 都重新遍历 Skill/SkillNode 等大表，也避免把整表物化到 JS。
+  local byName = __path_indexes[name]
+  if not byName then byName = {}; __path_indexes[name] = byName end
+  local pathParts = {}
+  for _, segment in ipairs(path or {}) do
+    pathParts[#pathParts + 1] = type(segment) .. ":" .. tostring(segment)
+  end
+  local indexKey = table.concat(pathParts, "|") .. "=>" .. type(expected) .. ":" .. tostring(expected)
+  local cached = byName[indexKey]
+  if cached then return cached end
+
   local out = {}
   local root = DataMgr[name]
-  if type(root) ~= "table" then return out end
+  if type(root) ~= "table" then
+    byName[indexKey] = out
+    return out
+  end
   for key, value in pairs(root) do
     local current = value
     for _, segment in ipairs(path or {}) do
@@ -117,6 +133,7 @@ __find_keys_by_path = function(name, path, expected)
     end
     if current == expected then out[#out + 1] = key end
   end
+  byName[indexKey] = out
   return out
 end
 __task_field_indexes = {}
@@ -204,9 +221,8 @@ __find_summon_effect_ids = function()
   local function listValue(value)
     if value == nil then return {} end
     if type(value) ~= "table" then return {value} end
-    local result = {}
-    for _, child in pairs(value) do result[#result + 1] = child end
-  __summon_effect_ids_cache = result
+  local result = {}
+  for _, child in pairs(value) do result[#result + 1] = child end
   return result
 end
 
@@ -333,7 +349,44 @@ end
   local out = {}
   for id in pairs(effectIds) do out[#out + 1] = id end
   table.sort(out)
+  __summon_effect_ids_cache = out
   return out
+end
+
+-- ArmoryUtils 的 Mod 专用成长/描述计算，保留在 Lua VM 内执行。
+__calc_mod_attr = function(modId, modLevel, attrIdx, valueType)
+  local mod = DataMgr.Mod and DataMgr.Mod[modId]
+  local attrs = mod and mod.AddAttrs
+  local conf = attrs and attrs[attrIdx]
+  if not conf then return 0 end
+  local isRate = conf.Rate ~= nil
+  local base = isRate and conf.Rate or conf.Value
+  if valueType ~= nil then
+    local kind = string.lower(tostring(valueType))
+    if kind == "rate" then base = conf.Rate; isRate = true end
+    if kind == "value" then base = conf.Value; isRate = false end
+  end
+  if type(base) ~= "number" then
+    local source = { GetSkillLevelInfo = function() return { SkillLevel = modLevel } end }
+    local proxy = __SkillUtils.GrowProxy("Mod", modId, source, conf)
+    return tonumber(proxy[isRate and "Rate" or "Value"]) or 0
+  end
+  return base + (conf.LevelGrow or 0) * modLevel
+end
+
+__calc_mod_desc_value = function(descValue, modId, modLevel)
+  local function getModValue(targetId, attrIdx, valueType)
+    return __calc_mod_attr(targetId, modLevel, attrIdx, valueType)
+  end
+  local function getModPolarity(targetId)
+    local mod = DataMgr.Mod and DataMgr.Mod[targetId]
+    local chars = { [0] = "", [1] = "A", [2] = "D", [3] = "V", [4] = "O" }
+    return chars[mod and mod.Polarity] or ""
+  end
+  if string.find(descValue, "GetModValue") or string.find(descValue, "GetModPolarity") then
+    return __SkillUtils.SplitEval(descValue, "$", { GetModValue = getModValue, GetModPolarity = getModPolarity })
+  end
+  return __SkillUtils.CalcSkillDesc(descValue, modLevel, nil, true)
 end
     `)
     )

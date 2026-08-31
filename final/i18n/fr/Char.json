@@ -18,6 +18,12 @@
       "Épée",
       "Doubles pistolets"
     ],
+    "额外精通": [
+      "Arme d’hast",
+      "Espadon",
+      "Doubles lames",
+      "Katana"
+    ],
     "标签": [
       "DPS",
       "Arme de Consonance",
@@ -757,6 +763,12 @@
       "Épée",
       "Fusil d’assaut"
     ],
+    "额外精通": [
+      "Pistolet",
+      "Doubles pistolets",
+      "Lance-grenades",
+      "Fusil à pompe"
+    ],
     "标签": [
       "DPS",
       "DGT d’arme"
@@ -1305,6 +1317,12 @@
     "精通": [
       "Espadon",
       "Fusil à pompe"
+    ],
+    "额外精通": [
+      "Épée",
+      "Arme d’hast",
+      "Doubles lames",
+      "Katana"
     ],
     "标签": [
       "DPS",
@@ -2014,6 +2032,12 @@
       "Épée",
       "Fusil d’assaut"
     ],
+    "额外精通": [
+      "Arme d’hast",
+      "Espadon",
+      "Doubles pistolets",
+      "Fusil à pompe"
+    ],
     "标签": [
       "DPS",
       "DGT d’arme"
@@ -2549,6 +2573,12 @@
     "精通": [
       "Espadon",
       "Fusil à pompe"
+    ],
+    "额外精通": [
+      "Épée",
+      "Arme d’hast",
+      "Doubles lames",
+      "Katana"
     ],
     "标签": [
       "DPS",
@@ -3295,6 +3325,12 @@
       "Katana",
       "Pistolet"
     ],
+    "额外精通": [
+      "Épée",
+      "Arme d’hast",
+      "Espadon",
+      "Épée-fouet"
+    ],
     "标签": [
       "DPS",
       "Dégâts de compétence"
@@ -3891,6 +3927,7 @@
     "精通": [
       "Tous types"
     ],
+    "额外精通": "",
     "标签": [
       "DPS",
       "DGT d’arme"
@@ -4624,6 +4661,12 @@
       "Arme d’hast",
       "Fusil à pompe"
     ],
+    "额外精通": [
+      "Épée",
+      "Espadon",
+      "Épée-fouet",
+      "Katana"
+    ],
     "标签": [
       "DPS",
       "Dégâts de compétence"
@@ -5185,6 +5228,12 @@
       "Épée",
       "Fusil d’assaut"
     ],
+    "额外精通": [
+      "Arme d’hast",
+      "Espadon",
+      "Doubles pistolets",
+      "Fusil à pompe"
+    ],
     "标签": [
       "Soutien"
     ],
@@ -5648,6 +5697,12 @@
     "精通": [
       "Épée",
       "Fusil d’assaut"
+    ],
+    "额外精通": [
+      "Arme d’hast",
+      "Espadon",
+      "Épée-fouet",
+      "Katana"
     ],
     "标签": [
       "Soutien"
@@ -6146,6 +6201,12 @@
       "Arme d’hast",
       "Lance-grenades"
     ],
+    "额外精通": [
+      "Pistolet",
+      "Doubles pistolets",
+      "Fusil à pompe",
+      "Arc"
+    ],
     "标签": [
       "DPS",
       "Invocation",
@@ -6608,6 +6669,12 @@
     "精通": [
       "Arme d’hast",
       "Doubles pistolets"
+    ],
+    "额外精通": [
+      "Épée",
+      "Espadon",
+      "Doubles lames",
+      "Épée-fouet"
     ],
     "标签": [
       "DPS",
@@ -7083,6 +7150,12 @@
     "精通": [
       "Épée",
       "Fusil d’assaut"
+    ],
+    "额外精通": [
+      "Arme d’hast",
+      "Espadon",
+      "Doubles pistolets",
+      "Fusil à pompe"
     ],
     "标签": [
       "Soutien",
@@ -7589,6 +7662,12 @@
       "Épée",
       "Arc"
     ],
+    "额外精通": [
+      "Pistolet",
+      "Doubles pistolets",
+      "Fusil à pompe",
+      "Fusil d’assaut"
+    ],
     "标签": [
       "Soutien",
       "Invocation",
@@ -8029,6 +8108,12 @@
     "精通": [
       "Épée-fouet",
       "Arc"
+    ],
+    "额外精通": [
+      "Pistolet",
+      "Doubles pistolets",
+      "Fusil à pompe",
+      "Fusil d’assaut"
     ],
     "标签": [
       "Soutien",
@@ -8544,6 +8629,12 @@
       "Espadon",
       "Doubles pistolets"
     ],
+    "额外精通": [
+      "Épée",
+      "Arme d’hast",
+      "Doubles lames",
+      "Katana"
+    ],
     "标签": [
       "DPS",
       "Arme de Consonance",
@@ -9004,6 +9095,12 @@
     "精通": [
       "Doubles lames",
       "Lance-grenades"
+    ],
+    "额外精通": [
+      "Arme d’hast",
+      "Espadon",
+      "Épée-fouet",
+      "Katana"
     ],
     "标签": [
       "DPS",
@@ -9467,6 +9564,12 @@
     "精通": [
       "Épée",
       "Fusil à pompe"
+    ],
+    "额外精通": [
+      "Pistolet",
+      "Doubles pistolets",
+      "Lance-grenades",
+      "Arc"
     ],
     "标签": [
       "DPS",
@@ -10034,6 +10137,12 @@
     "精通": [
       "Doubles lames",
       "Doubles pistolets"
+    ],
+    "额外精通": [
+      "Pistolet",
+      "Lance-grenades",
+      "Fusil à pompe",
+      "Fusil d’assaut"
     ],
     "标签": [
       "DPS",
@@ -10609,6 +10718,12 @@
       "Espadon",
       "Lance-grenades"
     ],
+    "额外精通": [
+      "Pistolet",
+      "Doubles pistolets",
+      "Fusil à pompe",
+      "Fusil d’assaut"
+    ],
     "标签": [
       "DPS",
       "PV max",
@@ -11102,6 +11217,12 @@
       "Épée-fouet",
       "Fusil d’assaut"
     ],
+    "额外精通": [
+      "Épée",
+      "Arme d’hast",
+      "Doubles lames",
+      "Katana"
+    ],
     "标签": [
       "DPS",
       "Dégâts de compétence",
@@ -11594,6 +11715,12 @@
     "精通": [
       "Arme d’hast",
       "Fusil à pompe"
+    ],
+    "额外精通": [
+      "Pistolet",
+      "Doubles pistolets",
+      "Fusil d’assaut",
+      "Arc"
     ],
     "标签": [
       "DPS",
@@ -12106,6 +12233,12 @@
       "Katana",
       "Fusil d’assaut"
     ],
+    "额外精通": [
+      "Épée",
+      "Espadon",
+      "Doubles lames",
+      "Épée-fouet"
+    ],
     "标签": [
       "DPS",
       "Dégâts de compétence"
@@ -12601,6 +12734,12 @@
     "精通": [
       "Espadon",
       "Doubles pistolets"
+    ],
+    "额外精通": [
+      "Pistolet",
+      "Lance-grenades",
+      "Fusil d’assaut",
+      "Arc"
     ],
     "标签": [
       "DPS",
@@ -13348,6 +13487,7 @@
       "Katana",
       "Fusil d’assaut"
     ],
+    "额外精通": "",
     "标签": [
       "DPS",
       "Dégâts de compétence"
@@ -13596,6 +13736,12 @@
     "精通": [
       "Arme d’hast",
       "Fusil d’assaut"
+    ],
+    "额外精通": [
+      "Pistolet",
+      "Lance-grenades",
+      "Fusil à pompe",
+      "Arc"
     ],
     "标签": [
       "DPS",
@@ -14111,6 +14257,12 @@
     "精通": [
       "Épée",
       "Pistolet"
+    ],
+    "额外精通": [
+      "Doubles pistolets",
+      "Lance-grenades",
+      "Fusil d’assaut",
+      "Arc"
     ],
     "标签": [
       "Soutien",
@@ -14635,6 +14787,12 @@
     "精通": [
       "Épée-fouet",
       "Pistolet"
+    ],
+    "额外精通": [
+      "Lance-grenades",
+      "Fusil à pompe",
+      "Fusil d’assaut",
+      "Arc"
     ],
     "标签": [
       "DPS",
@@ -15215,6 +15373,12 @@
     "精通": [
       "Arme d’hast",
       "Arc"
+    ],
+    "额外精通": [
+      "Épée",
+      "Espadon",
+      "Doubles lames",
+      "Épée-fouet"
     ],
     "标签": [
       "Soutien",
@@ -15940,6 +16104,12 @@
       "Doubles lames",
       "Doubles pistolets"
     ],
+    "额外精通": [
+      "Pistolet",
+      "Lance-grenades",
+      "Fusil à pompe",
+      "Fusil d’assaut"
+    ],
     "标签": [
       "DPS",
       "DGT d’arme"
@@ -16377,6 +16547,12 @@
     "精通": [
       "Arme d’hast",
       "Fusil d’assaut"
+    ],
+    "额外精通": [
+      "Pistolet",
+      "Lance-grenades",
+      "Fusil à pompe",
+      "Arc"
     ],
     "标签": [
       "DPS",
@@ -16948,6 +17124,12 @@
       "Épée-fouet",
       "Fusil d’assaut"
     ],
+    "额外精通": [
+      "Épée",
+      "Arme d’hast",
+      "Doubles lames",
+      "Katana"
+    ],
     "标签": [
       "Soutien",
       "Contrôle",
@@ -17389,6 +17571,7 @@
       "Arme d’hast",
       "Fusil d’assaut"
     ],
+    "额外精通": "",
     "基础攻击": 28,
     "基础生命": 70,
     "基础防御": 252,

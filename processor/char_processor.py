@@ -213,6 +213,7 @@ class CharProcessor(BaseProcessor):
             "阵营": self._process_camp(char_data.get("Camp", "None")),
             "属性": elm,
             "精通": self._process_mastery(battle_char.get("ExcelWeaponTags", [])),
+            "额外精通": self._process_mastery(battle_char.get("ExcelWeaponTagsExpand", [])),
             "标签": self.process_tags(battle_char.get("Positioning", [])),
             "基础攻击": base_attr.get("攻击", 0),
             "基础生命": base_attr.get("生命", 0),
