@@ -8,7 +8,15 @@ import { AssetReader } from "../../lua/AssetReader.ts"
 import { getExportsRoot } from "../../lua/UAssetServer.ts"
 
 type Row = Record<string, any>
-type SourceItem = { srId: number; rewardId?: number; pos: number[][] }
+export type ResourceSourceItem = { srId: number; rewardId?: number; unitId?: number; pos: number[][] }
+export type ResourcePosition = { pos?: number[]; treasurePos?: number[] }
+export interface ResourceDataArtifact {
+    output: VNodeTree[]
+    resourceMap: Map<number, Row>
+    sources: Map<number, ResourceSourceItem[]>
+    placements: Map<number, ResourceSourceItem[]>
+    positions: Map<number, ResourcePosition>
+}
 type ResourcePair = [number, number | undefined]
 
 function rows(table: unknown): Row[] {
@@ -111,6 +119,46 @@ function buildDesignLevelUnitIds(dm: ModuleContext["dm"]): Map<number, number> {
         collectCreatorIds(data, result)
     }
     return result
+}
+
+function collectExploreUnitIds(value: unknown, result: Set<number>): void {
+    if (Array.isArray(value)) {
+        for (const item of value) collectExploreUnitIds(item, result)
+        return
+    }
+    if (!value || typeof value !== "object") return
+    const row = value as Row
+    const unitId = toInt(row.UnitId)
+    if (unitId !== undefined) result.add(unitId)
+    for (const item of Object.values(row)) collectExploreUnitIds(item, result)
+}
+
+function buildBookPlacements(dm: ModuleContext["dm"], links: ReturnType<typeof buildLinkMaps>): Map<number, ResourceSourceItem[]> {
+    const placements = new Map<number, ResourceSourceItem[]>()
+    const levelToSubRegion = new Map<string, number>()
+    for (const subRegion of rows(dm.getTable("SubRegion"))) {
+        const level = typeof subRegion.SubRegionLevel === "string" ? subRegion.SubRegionLevel : undefined
+        const subRegionId = toInt(subRegion.SubRegionId)
+        if (level && subRegionId !== undefined) levelToSubRegion.set(level, subRegionId)
+    }
+
+    const dir = join(dm.root, "Script", "Datas", "DesignLevel_data")
+    if (!existsSync(dir)) return placements
+    for (const file of readdirSync(dir)) {
+        if (!file.endsWith(".lua")) continue
+        const level = file.slice(0, -4)
+        const subRegionId = levelToSubRegion.get(level)
+        if (subRegionId === undefined) continue
+        const data = dm.getTable(`DesignLevel_data/${level}`) as Row
+        const unitIds = new Set<number>()
+        collectExploreUnitIds(data.Explore, unitIds)
+        for (const unitId of unitIds) {
+            for (const resourceId of links.dropToResource.get(unitId) ?? []) appendSource(placements, resourceId, subRegionId, [])
+            for (const [resourceId, rewardId] of links.mechanismToResource.get(unitId) ?? [])
+                appendSource(placements, resourceId, subRegionId, [], rewardId, unitId)
+        }
+    }
+    return placements
 }
 
 function collectCreatorIds(value: unknown, result: Map<number, number>): void {
@@ -280,6 +328,23 @@ function refLocation(ref: unknown, maps: ReturnType<typeof buildObjectMaps>, see
     return undefined
 }
 
+function accumulatedRefLocation(ref: unknown, maps: ReturnType<typeof buildObjectMaps>, seen = new Set<Row>()): number[] | undefined {
+    const obj = resolveRef(ref, maps)
+    if (!obj || seen.has(obj)) return undefined
+    seen.add(obj)
+    const props = obj.Properties && typeof obj.Properties === "object" ? (obj.Properties as Row) : {}
+    let local = toVec3(props.RelativeLocation) ?? toVec3(props.Location)
+    const transform = props.RelativeTransform
+    if (transform && typeof transform === "object") local = toVec3((transform as Row).Translation) ?? local
+    if (local) {
+        const parent = accumulatedRefLocation(props.AttachParent, maps, seen)
+        if (parent) return local.map((value, index) => value + parent[index])
+        const outer = objectLocation(resolveRef(obj.Outer, maps) ?? {}, maps, true)
+        return outer ?? local
+    }
+    return accumulatedRefLocation(props.AttachParent, maps, seen)
+}
+
 function objectLocation(obj: Row, maps: ReturnType<typeof buildObjectMaps>, rootFirst: boolean): number[] | undefined {
     const props = obj.Properties && typeof obj.Properties === "object" ? (obj.Properties as Row) : {}
     const direct = () => {
@@ -334,12 +399,19 @@ function resourcePairs(
     return result
 }
 
-function appendSource(sources: Map<number, SourceItem[]>, resourceId: number, srId: number, pos: number[], rewardId?: number): void {
+function appendSource(
+    sources: Map<number, ResourceSourceItem[]>,
+    resourceId: number,
+    srId: number,
+    pos: number[],
+    rewardId?: number,
+    unitId?: number
+): void {
     if (srId === 210101) return
     const list = sources.get(resourceId) ?? []
-    let item = list.find(source => source.srId === srId && source.rewardId === rewardId)
+    let item = list.find(source => source.srId === srId && source.rewardId === rewardId && source.unitId === unitId)
     if (!item) {
-        item = { srId, ...(rewardId === undefined ? {} : { rewardId }), pos: [] }
+        item = { srId, ...(rewardId === undefined ? {} : { rewardId }), ...(unitId === undefined ? {} : { unitId }), pos: [] }
         list.push(item)
         sources.set(resourceId, list)
     }
@@ -353,10 +425,27 @@ function collectAssetSources(
     resourceMap: Map<number, Row>,
     links: ReturnType<typeof buildLinkMaps>,
     unitIds: Map<number, number>,
-    sources: Map<number, SourceItem[]>
+    sources: Map<number, ResourceSourceItem[]>,
+    positions: Map<number, ResourcePosition>
 ): void {
     const nodes = iterNodes(data)
     const maps = buildObjectMaps(nodes)
+    for (const node of nodes) {
+        if (node.Type !== "Explore_Drop_C" && node.Type !== "Explore_Treasure_C") continue
+        const props = node.Properties && typeof node.Properties === "object" ? (node.Properties as Row) : {}
+        const resourceId = toInt(props.ResourceId)
+        if (resourceId === undefined) continue
+        const current = positions.get(resourceId) ?? {}
+        if (!current.pos) {
+            const position = extractPosition(node, maps)
+            if (position) current.pos = [roundEven(position[0]), roundEven(position[1])]
+        }
+        if (node.Type === "Explore_Treasure_C" && !current.treasurePos) {
+            const position = accumulatedRefLocation(props.Chest, maps)
+            if (position) current.treasurePos = [roundEven(position[0]), roundEven(position[1])]
+        }
+        if (current.pos || current.treasurePos) positions.set(resourceId, current)
+    }
     const treasureNames = new Set(
         nodes
             .filter(node => node.Type === "Explore_Treasure_C")
@@ -392,7 +481,9 @@ function collectAssetSources(
             continue
         const position = extractPosition(candidate.node, maps)
         if (!position) continue
-        for (const [resourceId, rewardId] of candidate.pairs) appendSource(sources, resourceId, srId, position, rewardId)
+        for (const [resourceId, rewardId] of candidate.pairs) {
+            appendSource(sources, resourceId, srId, position, rewardId)
+        }
     }
 }
 
@@ -427,7 +518,7 @@ function collectRandomPoints(data: unknown[], maps: ReturnType<typeof buildObjec
     return result
 }
 
-function sortSources(items: SourceItem[]): SourceItem[] {
+function sortSources(items: ResourceSourceItem[]): ResourceSourceItem[] {
     return [...items].sort((a, b) => {
         const aReward = a.rewardId === undefined
         const bReward = b.rewardId === undefined
@@ -446,11 +537,17 @@ async function buildSources(
     resourceMap: Map<number, Row>,
     links: ReturnType<typeof buildLinkMaps>,
     unitIds: Map<number, number>
-): Promise<Map<number, SourceItem[]>> {
-    const sources = new Map<number, SourceItem[]>()
+): Promise<{
+    sources: Map<number, ResourceSourceItem[]>
+    placements: Map<number, ResourceSourceItem[]>
+    positions: Map<number, ResourcePosition>
+}> {
+    const sources = new Map<number, ResourceSourceItem[]>()
+    const placements = buildBookPlacements(ctx.dm, links)
+    const positions = new Map<number, ResourcePosition>()
     const exportsRoot = getExportsRoot()
     const mapsRoot = exportsRoot ? join(exportsRoot, "EM", "Content", "Maps", "Levels") : undefined
-    if (!mapsRoot || !existsSync(mapsRoot)) return sources
+    if (!mapsRoot || !existsSync(mapsRoot)) return { sources, placements, positions }
     const subRegions = rows(ctx.dm.getTable("SubRegion"))
     const levels: Array<[string, number]> = []
     const seen = new Set<string>()
@@ -468,7 +565,7 @@ async function buildSources(
             for (const assetPath of collectDesignFiles(mapsRoot, level)) {
                 const data = await reader.readFModelAsset(assetPath)
                 if (!data) continue
-                collectAssetSources(data, srId, resourceMap, links, unitIds, sources)
+                collectAssetSources(data, srId, resourceMap, links, unitIds, sources, positions)
                 const nodes = iterNodes(data)
                 const maps = buildObjectMaps(nodes)
                 const randomPoints = collectRandomPoints(nodes, maps)
@@ -482,10 +579,10 @@ async function buildSources(
     } finally {
         await reader.close()
     }
-    return sources
+    return { sources, placements, positions }
 }
 
-export async function resourceModule(ctx: ModuleContext): Promise<VNodeTree> {
+export async function resourceDataModule(ctx: ModuleContext): Promise<ResourceDataArtifact> {
     const resourceTable = ctx.dm.getTable("Resource") as Record<string, unknown> | undefined
     const resourceMap = new Map<number, Row>()
     for (const resource of rows(resourceTable)) {
@@ -494,7 +591,7 @@ export async function resourceModule(ctx: ModuleContext): Promise<VNodeTree> {
     }
     const links = buildLinkMaps(ctx.dm, resourceMap)
     const unitIds = buildDesignLevelUnitIds(ctx.dm)
-    const sources = await buildSources(ctx, resourceMap, links, unitIds)
+    const { sources, placements, positions } = await buildSources(ctx, resourceMap, links, unitIds)
     const result: VNodeTree[] = []
     for (const resource of [...resourceMap.values()].sort((a, b) => Number(a.ResourceId) - Number(b.ResourceId))) {
         const resourceId = toInt(resource.ResourceId)
@@ -519,8 +616,19 @@ export async function resourceModule(ctx: ModuleContext): Promise<VNodeTree> {
             if (select !== undefined) item.select = select
         }
         const source = sources.get(resourceId)
-        if (source && source.length > 0) item.source = sortSources(source)
+        if (source && source.length > 0)
+            item.source = sortSources(source).map(({ srId, rewardId, pos }) => ({
+                srId,
+                ...(rewardId === undefined ? {} : { rewardId }),
+                pos,
+            }))
         result.push(item)
     }
-    return result
+    return { output: result, resourceMap, sources, placements, positions }
+}
+
+export function resourceModule(ctx: ModuleContext): VNodeTree {
+    const data = ctx.getArtifact<ResourceDataArtifact>("ResourceData")
+    if (!data) throw new Error("ResourceData artifact is required")
+    return data.output
 }

@@ -59,6 +59,11 @@ export interface TTrimNode {
     readonly __t: "ttrim"
     readonly key: string
 }
+export interface TUnlessEqualNode {
+    readonly __t: "tne"
+    readonly key: string
+    readonly otherKey: string
+}
 
 export type VNode =
     | TVNode
@@ -69,6 +74,7 @@ export type VNode =
     | LTemplateNode
     | TFixedNode
     | TTrimNode
+    | TUnlessEqualNode
     | string
     | number
     | boolean
@@ -122,6 +128,10 @@ export function TTrim(key: string | null | undefined): VNode {
     return { __t: "ttrim", key }
 }
 
+export function TUnlessEqual(key: string, otherKey: string): TUnlessEqualNode {
+    return { __t: "tne", key, otherKey }
+}
+
 /** 片段序列 */
 export function seq(parts: VNode[]): VNode {
     const flat = parts.flatMap(p => {
@@ -160,6 +170,8 @@ export function compile(computedStr: string | number | null | undefined): VNode 
 
 // ---------- 渲染 ----------
 
+const OMIT = Symbol("omit")
+
 function renderVNode(v: VNode, lang: string, textmap: TextMap): unknown {
     if (v === null || v === undefined) return null
     if (typeof v === "string" || typeof v === "number" || typeof v === "boolean") return v
@@ -185,6 +197,10 @@ function renderVNode(v: VNode, lang: string, textmap: TextMap): unknown {
             return textmap.get(v.key, v.lang)
         case "ttrim":
             return textmap.get(v.key, lang).trim()
+        case "tne": {
+            const value = textmap.get(v.key, lang)
+            return value === textmap.get(v.otherKey, lang) ? OMIT : value
+        }
         case "lt": {
             // TextMap 模板（含 #N 占位）+ 值替换
             let template = textmap.get(v.key, lang)
@@ -306,12 +322,21 @@ export function renderTree(tree: VNodeTree, lang: string, textmap: TextMap): unk
     if (tree === null || tree === undefined) return null
     if (typeof tree === "string" || typeof tree === "number" || typeof tree === "boolean") return tree
     if (isVNode(tree)) return renderVNode(tree, lang, textmap)
-    if (Array.isArray(tree)) return tree.map(t => renderTree(t, lang, textmap))
+    if (Array.isArray(tree)) {
+        const out: unknown[] = []
+        for (const item of tree) {
+            const rendered = renderTree(item, lang, textmap)
+            if (rendered !== OMIT) out.push(rendered)
+        }
+        return out
+    }
+    if (Array.isArray(tree.__langs) && !tree.__langs.includes(lang)) return OMIT
     const out: Record<string, unknown> = {}
     for (const [k, v] of Object.entries(tree)) {
         // __ 前缀键是内部标记（如 __isDamage），不出现在最终输出
         if (k.startsWith("__")) continue
-        out[k] = renderTree(v, lang, textmap)
+        const rendered = renderTree(v, lang, textmap)
+        if (rendered !== OMIT) out[k] = rendered
     }
     return out
 }

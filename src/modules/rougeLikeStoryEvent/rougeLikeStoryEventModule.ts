@@ -1,11 +1,13 @@
 import type { ModuleContext } from "../../core/Graph.ts"
 import { T, type VNodeTree } from "../../i18n/vnode.ts"
 import { camelCase, iconName, rows } from "../shared/dataHelpers.ts"
-import { storylineNodes } from "../storyline/storyline.ts"
+import { eventStorylineNodes } from "../storyline/storyline.ts"
 
-export function rougeLikeStoryEventModule(ctx: ModuleContext): VNodeTree {
+export async function rougeLikeStoryEventModule(ctx: ModuleContext): Promise<VNodeTree> {
     const dialogue = ctx.getArtifact<any>("Dialogue")
-    return rows(ctx, "RougeLikeStoryEvent").map(item => ({
+    const items = rows(ctx, "RougeLikeStoryEvent")
+    await dialogue?.prepareStoryFlows(items.map(item => item.EventStoryline))
+    return items.map(item => ({
         id: item.Id ?? item.StoryEventId,
         name: T(item.StoryEventName ?? ""),
         type: T(item.StoryEventType ?? ""),
@@ -17,7 +19,7 @@ export function rougeLikeStoryEventModule(ctx: ModuleContext): VNodeTree {
         rlArchiveSubId: item.RLArchiveSubId ?? 0,
         cutOffEvent: item.CutOffEvent ?? false,
         ...(item.EventStoryline && dialogue?.storyTalks(item.EventStoryline).length
-            ? { eventStoryline: storylineNodes(ctx, item.EventStoryline) }
+            ? { eventStoryline: eventStorylineNodes(ctx, item.EventStoryline) }
             : {}),
     }))
 }

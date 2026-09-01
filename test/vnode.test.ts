@@ -5,7 +5,7 @@
 import { describe, expect, test } from "bun:test"
 import { TextMap } from "../src/i18n/TextMap.ts"
 import { deriveLangViews } from "../src/i18n/textmapReactive.ts"
-import { compile, LTemplate, renderTree, seq, T, TL } from "../src/i18n/vnode.ts"
+import { compile, LTemplate, renderTree, seq, T, TL, TUnlessEqual } from "../src/i18n/vnode.ts"
 import { getLuaDataManager } from "../src/lua/LuaDataManager.ts"
 import { sentinelOf } from "../src/lua/stubs.ts"
 
@@ -107,6 +107,26 @@ describe("vnode", () => {
         expect(en.tags[0]).toBe("DPS")
         expect(en.desc).toContain("20")
         expect(en.desc).not.toContain("\x01GT{")
+    })
+
+    test("TUnlessEqual 仅在当前语言翻译不同时保留字段", () => {
+        const textmap = {
+            get: (key: string, lang: string) => ({
+                cn: { name: "同名", series: "同名" },
+                en: { name: "Resource", series: "Series" },
+            })[lang as "cn" | "en"][key as "name" | "series"],
+        } as unknown as TextMap
+        const tree = { name: TUnlessEqual("name", "series") }
+
+        expect(renderTree(tree, "cn", textmap)).toEqual({})
+        expect(renderTree(tree, "en", textmap)).toEqual({ name: "Resource" })
+    })
+
+    test("renderTree filters array items by internal language metadata", () => {
+        const tree = [{ id: 1, __langs: ["en"], name: "English" }, { id: 2 }]
+
+        expect(renderTree(tree, "cn", makeTextMap())).toEqual([{ id: 2 }])
+        expect(renderTree(tree, "en", makeTextMap())).toEqual([{ id: 1, name: "English" }, { id: 2 }])
     })
 })
 

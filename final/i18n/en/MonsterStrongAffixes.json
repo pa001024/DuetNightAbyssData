@@ -4,7 +4,7 @@
     "name": "Primander - Decay",
     "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nPrimander – Decay periodically creates a [Decaying Swamp] around itself.\n[Decaying Swamp]: Deals periodic damage to enemies within its radius, while simultaneously healing allies inside.",
     "vars": {
-      "间隔时间": 10.0,
+      "间隔时间": 10,
       "持续时间": 10,
       "最大召唤数量": 3,
       "每次召唤数量": 3,

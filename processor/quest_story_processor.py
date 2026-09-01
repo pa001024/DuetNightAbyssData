@@ -84,7 +84,13 @@ class QuestStoryProcessor(BaseProcessor):
         # 保存结果
         output_file = os.path.join(output_path, file_name)
         with open(output_file, "w", encoding="utf-8") as f:
-            json.dump(items, f, ensure_ascii=False, indent=2, sort_keys=False)
+            json.dump(
+                self._normalize_json_numbers(items),
+                f,
+                ensure_ascii=False,
+                indent=2,
+                sort_keys=False,
+            )
 
         return output_file
 
@@ -1516,7 +1522,13 @@ class QuestStoryProcessor(BaseProcessor):
         # 保存结果
         output_file = os.path.join(output_path, "QuestStory.json")
         with open(output_file, "w", encoding="utf-8") as f:
-            json.dump(quest_stories, f, ensure_ascii=False, indent=2, sort_keys=False)
+            json.dump(
+                self._normalize_json_numbers(quest_stories),
+                f,
+                ensure_ascii=False,
+                indent=2,
+                sort_keys=False,
+            )
 
         print(f"任务故事数据已保存到: {output_file}", flush=True)
 

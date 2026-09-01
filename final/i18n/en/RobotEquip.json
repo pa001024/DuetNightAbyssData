@@ -277,10 +277,10 @@
     "extraBuffDesc": "Buff Effect: Grants Primander Ability – Blast. Trigger an explosion centered on self at intervals, knocking back nearby enemy targets.",
     "extraBuffId": 4020302,
     "unlockQuestId": 10300135,
-    "atk": 1.0,
-    "def": 1.0,
-    "hp": 1.0,
-    "shield": 1.0
+    "atk": 1,
+    "def": 1,
+    "hp": 1,
+    "shield": 1
   },
   {
     "id": 26,
@@ -307,10 +307,10 @@
     "extraBuffDesc": "Buff Effect: Grants Primander Ability – Thunderbolt. Fire [Electric Orbs] outward from self at intervals, releasing chain lightning to deal DMG to enemies within a small area. The orbs disappear after being attacked.",
     "extraBuffId": 4020304,
     "unlockQuestId": 10300147,
-    "atk": 1.0,
-    "def": 1.0,
-    "hp": 1.0,
-    "shield": 1.0
+    "atk": 1,
+    "def": 1,
+    "hp": 1,
+    "shield": 1
   },
   {
     "id": 28,
@@ -322,10 +322,10 @@
     "extraBuffDesc": "Buff Effect: Grants Primander Ability – Decay. Create a [Decaying Swamp] around self at intervals, dealing continuous damage to enemies within the area and restoring HP to allies within it.",
     "extraBuffId": 4020305,
     "unlockQuestId": 10300133,
-    "atk": 1.0,
-    "def": 1.0,
-    "hp": 1.0,
-    "shield": 1.0
+    "atk": 1,
+    "def": 1,
+    "hp": 1,
+    "shield": 1
   },
   {
     "id": 29,
@@ -337,10 +337,10 @@
     "extraBuffDesc": "Buff Effect: Grants Primander Ability – Wither. Fire [Withering Beam] outward at intervals. The rays rotate continuously for a duration, dealing damage to enemies hit and reducing their Sanity.",
     "extraBuffId": 4020306,
     "unlockQuestId": 10300147,
-    "atk": 1.0,
-    "def": 1.0,
-    "hp": 1.0,
-    "shield": 1.0
+    "atk": 1,
+    "def": 1,
+    "hp": 1,
+    "shield": 1
   },
   {
     "id": 31,
@@ -364,10 +364,10 @@
     "extraBuffDesc": "Buff Effect: Grants Primander Ability – Glimmer. Apply [Glimmer] to self at intervals. Upon taking damage while the state is active, end the state and trigger an explosion, dealing damage to enemies within range.",
     "extraBuffId": 4020310,
     "unlockQuestId": 10300138,
-    "atk": 1.0,
-    "def": 1.0,
-    "hp": 1.0,
-    "shield": 1.0
+    "atk": 1,
+    "def": 1,
+    "hp": 1,
+    "shield": 1
   },
   {
     "id": 34,
@@ -391,10 +391,10 @@
     "extraBuffDesc": "Buff Effect: Grants Primander Ability – Bloodbath. Restore HP when dealing damage.",
     "extraBuffId": 4020313,
     "unlockQuestId": 10300131,
-    "atk": 1.0,
-    "def": 1.0,
-    "hp": 1.0,
-    "shield": 1.0
+    "atk": 1,
+    "def": 1,
+    "hp": 1,
+    "shield": 1
   },
   {
     "id": 37,

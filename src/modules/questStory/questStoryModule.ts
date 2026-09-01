@@ -23,6 +23,37 @@ function id(value: unknown): number | undefined {
     return Number.isInteger(n) && n > 0 ? n : undefined
 }
 
+function sortedKeys(value: Row): string[] {
+    return Object.keys(value).sort((left, right) => {
+        const leftNumeric = /^\d+$/.test(left)
+        const rightNumeric = /^\d+$/.test(right)
+        if (leftNumeric !== rightNumeric) return leftNumeric ? -1 : 1
+        if (leftNumeric) return BigInt(left) < BigInt(right) ? -1 : BigInt(left) > BigInt(right) ? 1 : 0
+        return left.localeCompare(right)
+    })
+}
+
+export function collectSpecialStoryPaths(story: Row, configs: Row): string[] {
+    const result: string[] = []
+    const seen = new Set<string>()
+    const parents = row(story.storyNodeData) ?? {}
+    for (const parentKey of sortedKeys(parents)) {
+        const parent = row(parents[parentKey])
+        const nodes = row(row(parent?.questNodeData)?.nodeData) ?? {}
+        for (const nodeKey of sortedKeys(nodes)) {
+            const node = row(nodes[nodeKey])
+            if (node?.type !== "WaitingSpecialQuestStartAndFinishNode") continue
+            const specialConfigId = id(row(node.propsData)?.SpecialConfigId)
+            if (specialConfigId === undefined) continue
+            const path = row(configs[String(specialConfigId)])?.StoryPath
+            if (typeof path !== "string" || !path || seen.has(path)) continue
+            seen.add(path)
+            result.push(path)
+        }
+    }
+    return result
+}
+
 function guideToken(value: unknown): string {
     if (typeof value !== "string") return ""
     return value.replace(/[^0-9A-Za-z]/g, "").toLowerCase()
@@ -33,16 +64,17 @@ function iconName(value: unknown): string {
     return value.split("_").at(-1)?.replaceAll(".", "") ?? ""
 }
 
-export function questStoryModule(ctx: ModuleContext): VNodeTree {
+export async function questStoryModule(ctx: ModuleContext): Promise<VNodeTree> {
     const dialogue = ctx.getArtifact<DialogueService>("Dialogue")
     if (!dialogue) throw new Error("QuestStory 需要 Dialogue 依赖")
     const chains = table(ctx, "QuestChain")
     const stl = table(ctx, "STLExportQuestChain")
     const detectiveQuestions = table(ctx, "DetectiveQuestion")
     const detectiveAnswers = table(ctx, "DetectiveAnswer")
+    const specialConfigs = table(ctx, "SpecialQuestConfig")
     const guidePoints = loadGuidePoints(ctx)
     const output: VNodeTree[] = []
-    const entries: Array<{ chainId: number; story: Row; questRows: Row }> = []
+    const entries: Array<{ chainId: number; storyPath: unknown; story: Row; questRows: Row }> = []
 
     for (const chain of Object.values(chains)) {
         const chainRow = row(chain)
@@ -51,9 +83,18 @@ export function questStoryModule(ctx: ModuleContext): VNodeTree {
         const story = dialogue.story(chainRow.StoryPath)
         const questRows = row(stl[String(chainId)])?.Quests
         if (!story || !questRows || typeof questRows !== "object" || Array.isArray(questRows)) continue
-        entries.push({ chainId, story, questRows: questRows as Row })
+        entries.push({ chainId, storyPath: chainRow.StoryPath, story, questRows: questRows as Row })
     }
-    dialogue.prefetchReachable(entries.flatMap(entry => collectDialogueStarts(entry.story)))
+    const specialStories = new Map<string, Row>()
+    for (const path of entries.flatMap(entry => collectSpecialStoryPaths(entry.story, specialConfigs))) {
+        const story = dialogue.story(path)
+        if (story) specialStories.set(path, story)
+    }
+    await dialogue.prepareStoryFlows([...entries.map(entry => entry.storyPath), ...specialStories.keys()])
+    dialogue.prefetchReachable([
+        ...entries.flatMap(entry => collectDialogueStarts(entry.story)),
+        ...[...specialStories.values()].flatMap(collectDialogueStarts),
+    ])
 
     for (const entry of entries) {
         const { chainId, story, questRows } = entry
@@ -68,14 +109,22 @@ export function questStoryModule(ctx: ModuleContext): VNodeTree {
             const ownerProps = row(owner?.propsData) ?? {}
             const nameKey = typeof ownerProps.QuestDescription === "string" ? ownerProps.QuestDescription : ""
             const descKey = typeof ownerProps.QuestDeatil === "string" ? ownerProps.QuestDeatil : ""
-            const nodes = processNodes(ctx, dialogue, parents, guidePoints, detectiveQuestions, detectiveAnswers)
+            const specialParents = collectSpecialStoryPaths(
+                { storyNodeData: Object.fromEntries(parents.map(parent => [parent.key, parent])) },
+                specialConfigs
+            ).flatMap(path => indexStory(specialStories.get(path) ?? {}).parents)
+            let mainNodes = processNodes(ctx, dialogue, parents, guidePoints, detectiveQuestions, detectiveAnswers)
+            if (mainNodes.length === 0) mainNodes = scanNodes(ctx, dialogue, parents, guidePoints, detectiveQuestions, detectiveAnswers)
+            const specialNodes = processNodes(ctx, dialogue, specialParents, guidePoints, detectiveQuestions, detectiveAnswers)
+            const nodes = dedupeNodes([...mainNodes, ...specialNodes])
+            const allParents = [...parents, ...specialParents]
             if (nodes.length === 0 && !nameKey && !descKey) continue
             const quest: Record<string, VNodeTree> = { id: questId }
             if (nameKey) quest.name = T(nameKey)
             if (descKey && descKey !== nameKey) quest.desc = T(descKey)
             if (nodes.length > 0) {
                 quest.nodes = nodes
-                const starts = startIds(parents, nodes)
+                const starts = startIds(allParents, nodes)
                 if (starts.length > 1) quest.startIds = starts
             }
             quests.push(quest)
@@ -106,7 +155,9 @@ function collectDialogueStarts(story: Row): number[] {
 function indexStory(story: Row): StoryIndex {
     const parents: Row[] = []
     const byQuest = new Map<number, Row[]>()
-    for (const value of Object.values(row(story.storyNodeData) ?? {})) {
+    const storyNodeData = row(story.storyNodeData) ?? {}
+    for (const key of sortedKeys(storyNodeData)) {
+        const value = storyNodeData[key]
         const parent = row(value)
         if (!parent) continue
         parents.push(parent)
@@ -192,7 +243,7 @@ function processNodes(
     guidePoints: Row,
     questions: Row,
     answers: Row
-): VNodeTree[] {
+): Row[] {
     const result: Row[] = []
     const nextMap = new Map<string, string[]>()
     const incoming = new Map<string, string[]>()
@@ -267,9 +318,42 @@ function processNodes(
         }
         if (resolved.length > 0) node.next = [...new Set(resolved)]
     }
+    return dedupeNodes(result)
+}
+
+function scanNodes(ctx: ModuleContext, dialogue: DialogueService, parents: Row[], guidePoints: Row, questions: Row, answers: Row): Row[] {
+    const result: Row[] = []
+    for (const parent of parents) {
+        const nodeData = row(row(parent.questNodeData)?.nodeData) ?? {}
+        for (const key of sortedKeys(nodeData)) {
+            const node = row(nodeData[key])
+            if (!node) continue
+            const props = row(node.propsData) ?? {}
+            if (node.type === "TalkNode" && !("FirstDialogueId" in props)) continue
+            const built = buildNode(ctx, dialogue, String(node.key ?? key), node, parent, guidePoints, questions, answers)
+            if (built) result.push(built)
+        }
+        if (parent.type === "TalkNode" && "FirstDialogueId" in (row(parent.propsData) ?? {})) {
+            const built = buildNode(
+                ctx,
+                dialogue,
+                String(parent.key ?? parent.name ?? ""),
+                parent,
+                undefined,
+                guidePoints,
+                questions,
+                answers
+            )
+            if (built) result.push(built)
+        }
+    }
+    return dedupeNodes(result)
+}
+
+function dedupeNodes(nodes: Row[]): Row[] {
     const deduped: Row[] = []
     const seen = new Set<string>()
-    for (const node of result) {
+    for (const node of nodes) {
         const key = JSON.stringify(Object.fromEntries(Object.entries(node).filter(([name]) => name !== "id")))
         if (seen.has(key)) continue
         seen.add(key)
@@ -298,7 +382,6 @@ function buildNode(
     if (type === "TalkNode") {
         const chain = props.FlowAssetPath ? dialogue.flowChain(props.FlowAssetPath) : dialogue.chain(props.FirstDialogueId)
         if (chain.length > 0) output.dialogues = chain
-        else return undefined
     } else if (type === "UnlockDetectiveQuestionNode") {
         const values: Row[] = []
         for (const qid of Array.isArray(props.QuestionIds) ? props.QuestionIds : []) {

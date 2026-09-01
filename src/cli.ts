@@ -58,7 +58,7 @@ import { raidBuffModule } from "./modules/raidBuff/raidBuffModule.ts"
 import { regionModule } from "./modules/region/regionModule.ts"
 import { regionPointModule } from "./modules/regionPoint/regionPointModule.ts"
 import { regionReputationModule } from "./modules/regionReputation/regionReputationModule.ts"
-import { resourceModule } from "./modules/resource/resourceModule.ts"
+import { resourceDataModule, resourceModule } from "./modules/resource/resourceModule.ts"
 import { optRewardModule, rewardModule } from "./modules/reward/rewardModule.ts"
 import { rewardViewModule } from "./modules/rewardView/rewardViewModule.ts"
 import { robotEquipModule } from "./modules/robotEquip/robotEquipModule.ts"
@@ -131,7 +131,8 @@ const REGISTRY: ModuleReg[] = [
     { name: "Reward", deps: [], outputs: true, build: ctx => ({ Reward: rewardModule(ctx) }) },
     { name: "OptReward", deps: [], outputs: true, build: ctx => ({ OptReward: optRewardModule(ctx) }) },
     { name: "RewardView", deps: [], outputs: true, build: ctx => ({ RewardView: rewardViewModule(ctx) }) },
-    { name: "Resource", deps: [], outputs: true, build: async ctx => ({ Resource: await resourceModule(ctx) }) },
+    { name: "ResourceData", deps: [], outputs: false, build: ctx => resourceDataModule(ctx) },
+    { name: "Resource", deps: ["ResourceData"], outputs: true, build: ctx => ({ Resource: resourceModule(ctx) }) },
     { name: "Skin", deps: [], outputs: true, build: ctx => ({ Skin: skinModule(ctx) }) },
     { name: "SkinGacha", deps: [], outputs: true, build: ctx => ({ SkinGacha: skinGachaModule(ctx) }) },
     { name: "SkinGachaTab", deps: [], outputs: true, build: ctx => ({ SkinGachaTab: skinGachaTabModule(ctx) }) },
@@ -139,8 +140,8 @@ const REGISTRY: ModuleReg[] = [
     { name: "SkinGachaItem", deps: [], outputs: true, build: ctx => ({ SkinGachaItem: skinGachaItemModule(ctx) }) },
     { name: "SkinGachaCumulative", deps: [], outputs: true, build: ctx => ({ SkinGachaCumulative: skinGachaCumulativeModule(ctx) }) },
     { name: "QuestChain", deps: [], outputs: true, build: ctx => ({ QuestChain: questChainModule(ctx) }) },
-    { name: "QuestStory", deps: ["Dialogue"], outputs: true, build: ctx => ({ QuestStory: questStoryModule(ctx) }) },
-    { name: "PartyTopic", deps: ["Dialogue"], outputs: true, build: ctx => ({ PartyTopic: partyTopicModule(ctx) }) },
+    { name: "QuestStory", deps: ["Dialogue"], outputs: true, build: async ctx => ({ QuestStory: await questStoryModule(ctx) }) },
+    { name: "PartyTopic", deps: ["Dialogue"], outputs: true, build: async ctx => ({ PartyTopic: await partyTopicModule(ctx) }) },
     { name: "WeaponAccessory", deps: [], outputs: true, build: ctx => ({ WeaponAccessory: weaponAccessoryModule(ctx) }) },
     { name: "WeaponSkin", deps: [], outputs: true, build: ctx => ({ WeaponSkin: weaponSkinModule(ctx) }) },
     { name: "Hair", deps: [], outputs: true, build: ctx => ({ Hair: hairModule(ctx) }) },
@@ -240,9 +241,14 @@ const REGISTRY: ModuleReg[] = [
     { name: "RobotEquip", deps: [], outputs: true, build: ctx => ({ RobotEquip: robotEquipModule(ctx) }) },
     { name: "RaidBuff", deps: [], outputs: true, build: ctx => ({ RaidBuff: raidBuffModule(ctx) }) },
     { name: "AbyssDungeon", deps: [], outputs: true, build: ctx => ({ AbyssDungeon: abyssDungeonModule(ctx) }) },
-    { name: "BookSeriesArchive", deps: [], outputs: true, build: ctx => ({ BookSeriesArchive: bookSeriesArchiveModule(ctx) }) },
-    { name: "Dispatch", deps: ["Dialogue"], outputs: true, build: ctx => ({ Dispatch: dispatchModule(ctx) }) },
-    { name: "DynQuest", deps: ["Dialogue"], outputs: true, build: ctx => ({ DynQuest: dynQuestModule(ctx) }) },
+    {
+        name: "BookSeriesArchive",
+        deps: ["ResourceData"],
+        outputs: true,
+        build: ctx => ({ BookSeriesArchive: bookSeriesArchiveModule(ctx) }),
+    },
+    { name: "Dispatch", deps: ["Dialogue"], outputs: true, build: async ctx => ({ Dispatch: await dispatchModule(ctx) }) },
+    { name: "DynQuest", deps: ["Dialogue"], outputs: true, build: async ctx => ({ DynQuest: await dynQuestModule(ctx) }) },
     { name: "Dungeon", deps: [], outputs: true, build: ctx => ({ Dungeon: dungeonModule(ctx) }) },
     {
         name: "IronSurvivalMonsterSpawn",
@@ -251,14 +257,14 @@ const REGISTRY: ModuleReg[] = [
         build: ctx => ({ IronSurvivalMonsterSpawn: ironSurvivalMonsterSpawnModule(ctx) }),
     },
     { name: "Npc", deps: ["Dialogue"], outputs: true, build: ctx => ({ Npc: npcModule(ctx) }) },
-    { name: "Region", deps: [], outputs: true, build: ctx => ({ Region: regionModule(ctx) }) },
-    { name: "SubRegion", deps: [], outputs: true, build: ctx => ({ SubRegion: subRegionModule(ctx) }) },
-    { name: "RougeLikeRoom", deps: ["Dialogue"], outputs: true, build: ctx => ({ RougeLikeRoom: rougeLikeRoomModule(ctx) }) },
+    { name: "Region", deps: [], outputs: true, build: async ctx => ({ Region: await regionModule(ctx) }) },
+    { name: "SubRegion", deps: [], outputs: true, build: async ctx => ({ SubRegion: await subRegionModule(ctx) }) },
+    { name: "RougeLikeRoom", deps: ["Dialogue"], outputs: true, build: async ctx => ({ RougeLikeRoom: await rougeLikeRoomModule(ctx) }) },
     {
         name: "RougeLikeStoryEvent",
         deps: ["Dialogue"],
         outputs: true,
-        build: ctx => ({ RougeLikeStoryEvent: rougeLikeStoryEventModule(ctx) }),
+        build: async ctx => ({ RougeLikeStoryEvent: await rougeLikeStoryEventModule(ctx) }),
     },
 ]
 
@@ -394,4 +400,8 @@ async function main() {
     console.log(`输出目录: ${outputRoot}`)
 }
 
-await main()
+try {
+    await main()
+} finally {
+    await closeUAssetServer()
+}

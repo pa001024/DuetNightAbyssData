@@ -2,6 +2,7 @@ import { existsSync, readFileSync } from "node:fs"
 import { join } from "node:path"
 import type { ModuleContext } from "../../core/Graph.ts"
 import { T, TL, type VNode, type VNodeTree } from "../../i18n/vnode.ts"
+import { AssetReader } from "../../lua/AssetReader.ts"
 import { getExportsRoot } from "../../lua/UAssetServer.ts"
 
 type Row = Record<string, any>
@@ -23,6 +24,67 @@ function row(value: unknown): Row | undefined {
 function idOf(value: unknown): number | undefined {
     const id = Number(value)
     return Number.isInteger(id) && id > 0 ? id : undefined
+}
+
+function sortedKeys(value: Row): string[] {
+    return Object.keys(value).sort((left, right) => {
+        const leftNumeric = /^\d+$/.test(left)
+        const rightNumeric = /^\d+$/.test(right)
+        if (leftNumeric !== rightNumeric) return leftNumeric ? -1 : 1
+        if (leftNumeric) return BigInt(left) < BigInt(right) ? -1 : BigInt(left) > BigInt(right) ? 1 : 0
+        return left.localeCompare(right)
+    })
+}
+
+function guidOf(value: unknown): string | undefined {
+    if (typeof value === "string" && value) return value
+    const nested = row(value)?.NodeGuid
+    return typeof nested === "string" && nested ? nested : undefined
+}
+
+export function flowDialogueIds(flow: unknown): number[] {
+    if (!Array.isArray(flow)) return []
+    const nodes = new Map<string, Row>()
+    const starts: string[] = []
+    const next = new Map<string, string[]>()
+    for (const value of flow) {
+        const item = row(value)
+        const props = row(item?.Properties)
+        const guid = guidOf(props?.NodeGuid)
+        if (!guid || !item) continue
+        nodes.set(guid, item)
+        if (item.Type === "FlowNode_Start") starts.push(guid)
+        for (const connection of Array.isArray(props?.Connections) ? props.Connections : []) {
+            const target = guidOf(row(row(connection)?.Value)?.NodeGuid)
+            if (target) {
+                const list = next.get(guid) ?? []
+                list.push(target)
+                next.set(guid, list)
+            }
+        }
+    }
+    const dialogueIds: number[] = []
+    const seenGuid = new Set<string>()
+    const seenDialogue = new Set<number>()
+    const queue = [...starts]
+    while (queue.length > 0) {
+        const guid = queue.shift()!
+        if (seenGuid.has(guid)) continue
+        seenGuid.add(guid)
+        const item = nodes.get(guid)
+        const props = row(item?.Properties)
+        if (item?.Type === "FlowNode_Dialogue") {
+            for (const entry of Array.isArray(props?.DialogueData) ? props.DialogueData : []) {
+                const id = idOf(row(entry)?.DialogueId)
+                if (id !== undefined && !seenDialogue.has(id)) {
+                    seenDialogue.add(id)
+                    dialogueIds.push(id)
+                }
+            }
+        }
+        for (const child of next.get(guid) ?? []) queue.push(child)
+    }
+    return dialogueIds
 }
 
 function simplifyVoice(value: unknown): string {
@@ -81,6 +143,7 @@ function inlineImpressionPlus(table: Row, id: unknown): VNodeTree | undefined {
 }
 
 export interface DialogueService {
+    prepareStoryFlows(paths: unknown[]): Promise<void>
     prefetch(firstIds: unknown[]): void
     prefetchReachable(firstIds: unknown[]): void
     chain(firstId: unknown, includeContentlessNodes?: boolean): VNodeTree[]
@@ -97,8 +160,10 @@ class DialogueServiceImpl implements DialogueService {
     private readonly dataCache = new Map<number, { base: Row; localized: Record<string, Row> } | undefined>()
     private readonly chainCache = new Map<string, VNodeTree[]>()
     private readonly flowChainCache = new Map<string, VNodeTree[]>()
+    private readonly assetReader: AssetReader
 
     constructor(private readonly ctx: ModuleContext) {
+        this.assetReader = new AssetReader(ctx.dm.root)
         this.impressionCheck = (ctx.dm.getTable("ImpressionCheck") as Row | undefined) ?? {}
         this.impressionPlus = (ctx.dm.getTable("ImpressionPlus") as Row | undefined) ?? {}
     }
@@ -152,7 +217,7 @@ class DialogueServiceImpl implements DialogueService {
         }
     }
 
-    private content(data: { base: Row; localized: Record<string, Row> }): VNode | undefined {
+    private content(data: { base: Row; localized: Record<string, Row> }): { node: VNode; onlyLangs?: string[] } | undefined {
         const values: Partial<Record<"en" | "jp" | "kr" | "fr" | "tc", string>> = {}
         const read = (lang: string): string => {
             const item = data.localized[lang]
@@ -164,10 +229,12 @@ class DialogueServiceImpl implements DialogueService {
             const value = read(lang)
             if (value) values[lang] = value
         }
-        if (cn) return TL(cn, values)
+        if (cn) return { node: TL(cn, values) }
+        const onlyLangs = Object.keys(values)
+        if (onlyLangs.length > 0) return { node: TL("", values), onlyLangs }
 
         const optionTopic = typeof data.base.OptionTopic === "string" ? data.base.OptionTopic : ""
-        return optionTopic ? optionTopic : undefined
+        return optionTopic ? { node: optionTopic } : undefined
     }
 
     chain(firstId: unknown, includeContentlessNodes = true): VNodeTree[] {
@@ -198,7 +265,10 @@ class DialogueServiceImpl implements DialogueService {
                 }
 
                 const item: Record<string, VNodeTree> = { id: current }
-                if (content !== undefined) item.content = content
+                if (content !== undefined) {
+                    item.content = content.node
+                    if (content.onlyLangs) item.__langs = content.onlyLangs
+                }
                 if (voice) item.voice = voice
                 if (base.SpeakNpcId) item.npc = base.SpeakNpcId
                 if (base.SpeakNpcName) item.speakerName = T(base.SpeakNpcName)
@@ -217,7 +287,10 @@ class DialogueServiceImpl implements DialogueService {
                         const optionVoice = simplifyVoice(optionLoaded.base.VoiceName)
                         if (optionContent === undefined && !optionVoice) continue
                         const option: Record<string, VNodeTree> = { id: idOf(optionId) ?? optionId }
-                        if (optionContent !== undefined) option.content = optionContent
+                        if (optionContent !== undefined) {
+                            option.content = optionContent.node
+                            if (optionContent.onlyLangs) option.__langs = optionContent.onlyLangs
+                        }
                         if (optionVoice) option.voice = optionVoice
                         const optionNext = idOf(optionLoaded.base.NextDialogue)
                         if (optionNext !== undefined && !Array.isArray(optionLoaded.base.NextOptions)) {
@@ -244,30 +317,38 @@ class DialogueServiceImpl implements DialogueService {
     }
 
     private copyItems(items: VNodeTree[]): VNodeTree[] {
-        return items.map(item => (item && typeof item === "object" && !Array.isArray(item) ? { ...(item as Row) } : item))
+        return structuredClone(items)
     }
 
     private flowFile(path: unknown): unknown[] | undefined {
+        const file = this.flowFilePath(path)
+        return file ? this.flowCache.get(file) : undefined
+    }
+
+    private flowFilePath(path: unknown, extension = ".uasset"): string | undefined {
         if (typeof path !== "string" || !path) return undefined
         const match = path.match(/\/Game\/Dialogue\/([^']+)/)
         if (!match) return undefined
-        const relative = match[1].split(".")[0].replaceAll("/", "\\")
+        const relative = match[1].split(".")[0]
         const exportsRoot = getExportsRoot()
         if (!exportsRoot) return undefined
-        const file = join(exportsRoot, "EM", "Content", "Dialogue", `${relative}.json`)
-        if (this.flowCache.has(file)) return this.flowCache.get(file)
-        if (!existsSync(file)) {
-            this.flowCache.set(file, undefined)
-            return undefined
-        }
-        try {
-            const value = JSON.parse(readFileSync(file, "utf8"))
-            const data = Array.isArray(value) ? value : undefined
-            this.flowCache.set(file, data)
-            return data
-        } catch {
-            this.flowCache.set(file, undefined)
-            return undefined
+        return join(exportsRoot, "EM", "Content", "Dialogue", `${relative}${extension}`)
+    }
+
+    async prepareStoryFlows(paths: unknown[]): Promise<void> {
+        const flowPaths = paths.flatMap(path => this.storyTalks(path).map(talk => talk.flowAssetPath)).filter(path => path)
+        for (const path of new Set(flowPaths)) {
+            const file = this.flowFilePath(path)
+            if (!file || this.flowCache.has(file)) continue
+            let data = await this.assetReader.readFModelAsset(file)
+            if (!data) {
+                const jsonFile = this.flowFilePath(path, ".json")
+                if (jsonFile && existsSync(jsonFile)) {
+                    const parsed = JSON.parse(readFileSync(jsonFile, "utf8"))
+                    data = Array.isArray(parsed) ? parsed : null
+                }
+            }
+            this.flowCache.set(file, data ?? undefined)
         }
     }
 
@@ -277,47 +358,7 @@ class DialogueServiceImpl implements DialogueService {
         const cacheKey = String(flowAssetPath)
         const cached = this.flowChainCache.get(cacheKey)
         if (cached) return this.copyItems(cached)
-        const nodes = new Map<string, Row>()
-        const starts: string[] = []
-        const next = new Map<string, string[]>()
-        for (const value of flow) {
-            const item = row(value)
-            const props = row(item?.Properties)
-            const guid = props?.NodeGuid
-            if (!guid || !item) continue
-            const key = String(guid)
-            nodes.set(key, item)
-            if (item.Type === "FlowNode_Start") starts.push(key)
-            for (const connection of Array.isArray(props.Connections) ? props.Connections : []) {
-                const target = row(row(connection)?.Value)?.NodeGuid
-                if (target) {
-                    const list = next.get(key) ?? []
-                    list.push(String(target))
-                    next.set(key, list)
-                }
-            }
-        }
-        const dialogueIds: number[] = []
-        const seenGuid = new Set<string>()
-        const seenDialogue = new Set<number>()
-        const queue = [...starts]
-        while (queue.length > 0) {
-            const guid = queue.shift()!
-            if (seenGuid.has(guid)) continue
-            seenGuid.add(guid)
-            const item = nodes.get(guid)
-            const props = row(item?.Properties)
-            if (item?.Type === "FlowNode_Dialogue") {
-                for (const entry of Array.isArray(props?.DialogueData) ? props.DialogueData : []) {
-                    const id = idOf(row(entry)?.DialogueId)
-                    if (id !== undefined && !seenDialogue.has(id)) {
-                        seenDialogue.add(id)
-                        dialogueIds.push(id)
-                    }
-                }
-            }
-            for (const child of next.get(guid) ?? []) queue.push(child)
-        }
+        const dialogueIds = flowDialogueIds(flow)
         const result: VNodeTree[] = []
         const emitted = new Set<number>()
         this.loadData(dialogueIds)
@@ -359,14 +400,15 @@ class DialogueServiceImpl implements DialogueService {
             seen.add(key)
             result.push({ firstDialogueId, flowAssetPath })
         }
-        const data = row(story?.storyNodeData)
-        for (const node of Object.values(data ?? {})) {
+        const data = row(story?.storyNodeData) ?? {}
+        for (const key of sortedKeys(data)) {
+            const node = data[key]
             const parent = row(node)
             if (!parent) continue
             append(parent)
             const questData = row(parent.questNodeData)
-            const nodeData = row(questData?.nodeData)
-            for (const subNode of Object.values(nodeData ?? {})) append(subNode)
+            const nodeData = row(questData?.nodeData) ?? {}
+            for (const childKey of sortedKeys(nodeData)) append(nodeData[childKey])
         }
         return result
     }

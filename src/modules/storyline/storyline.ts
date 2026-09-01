@@ -8,6 +8,18 @@ export interface StorylineOptions {
     linkUnimportDialogueNext?: boolean
     linkDialogueNext?: boolean
     pruneSequentialNodeNext?: boolean
+    questStartThenKeyOrder?: boolean
+    includeSelfNodeNext?: boolean
+}
+
+function sortedKeys(value: Row): string[] {
+    return Object.keys(value).sort((left, right) => {
+        const leftNumeric = /^\d+$/.test(left)
+        const rightNumeric = /^\d+$/.test(right)
+        if (leftNumeric !== rightNumeric) return leftNumeric ? -1 : 1
+        if (leftNumeric) return BigInt(left) < BigInt(right) ? -1 : BigInt(left) > BigInt(right) ? 1 : 0
+        return left.localeCompare(right)
+    })
 }
 
 export function storylineNodes(ctx: ModuleContext, path: unknown, options: StorylineOptions = {}): VNodeTree[] {
@@ -16,8 +28,9 @@ export function storylineNodes(ctx: ModuleContext, path: unknown, options: Story
     if (!story || !dialogue) return []
     const result: Row[] = []
     const data = story.storyNodeData && typeof story.storyNodeData === "object" ? story.storyNodeData : {}
-    for (const parentValue of Object.values(data as Row)) {
-        const parent = parentValue as Row
+    const parentKeys = sortedKeys(data as Row)
+    for (const parentKey of parentKeys) {
+        const parent = (data as Row)[parentKey] as Row
         if (parent?.type === "TalkNode") {
             const props = parent.propsData ?? {}
             const chain = props.FlowAssetPath ? dialogue.flowChain(props.FlowAssetPath) : dialogue.chain(props.FirstDialogueId)
@@ -57,27 +70,31 @@ export function storylineNodes(ctx: ModuleContext, path: unknown, options: Story
             }
         }
         const orderedKeys: string[] = []
-        const visited = new Set<string>()
-        const queue = [...starts]
-        const visitQueue = (): void => {
-            while (queue.length) {
-                const key = queue.shift()!
-                if (visited.has(key)) continue
-                visited.add(key)
-                orderedKeys.push(key)
-                const children = [...(next.get(key) ?? [])].sort(child =>
-                    (nodeData[child] as Row | undefined)?.propsData?.TalkType === "UnimportGuide" ? -1 : 0
-                )
-                for (const child of children) if (!visited.has(child) && !queue.includes(child)) queue.push(child)
+        if (options.questStartThenKeyOrder) {
+            for (const key of [...starts, ...sortedKeys(nodeData as Row)]) if (!orderedKeys.includes(key)) orderedKeys.push(key)
+        } else {
+            const visited = new Set<string>()
+            const queue = [...starts]
+            const visitQueue = (): void => {
+                while (queue.length) {
+                    const key = queue.shift()!
+                    if (visited.has(key)) continue
+                    visited.add(key)
+                    orderedKeys.push(key)
+                    const priority = (child: string): number =>
+                        (nodeData[child] as Row | undefined)?.propsData?.TalkType === "UnimportGuide" ? 0 : 1
+                    const children = [...(next.get(key) ?? [])].sort((left, right) => priority(left) - priority(right))
+                    for (const child of children) if (!visited.has(child) && !queue.includes(child)) queue.push(child)
+                }
             }
-        }
-        visitQueue()
-        for (const key of appearance) {
-            if (visited.has(key)) continue
-            queue.push(key)
             visitQueue()
+            for (const key of appearance) {
+                if (visited.has(key)) continue
+                queue.push(key)
+                visitQueue()
+            }
+            if (orderedKeys.length === 0) orderedKeys.push(...sortedKeys(nodeData as Row))
         }
-        for (const key of Object.keys(nodeData)) if (!visited.has(key)) orderedKeys.push(key)
         const resolveTalkTargets = (startIds: string[]): string[] => {
             const pending = [...startIds]
             const visited = new Set<string>()
@@ -114,6 +131,7 @@ export function storylineNodes(ctx: ModuleContext, path: unknown, options: Story
             const id = String(node.key ?? key)
             const out: Row = { id, type: "TalkNode", name: node.name ?? "" }
             let successors = resolveTalkTargets(next.get(id) ?? [])
+            if (!options.includeSelfNodeNext) successors = successors.filter(value => value !== id)
             let siblingTarget: string | undefined
             if (!successors.length && props.TalkType === "UnimportGuide") {
                 const siblings: string[] = []
@@ -139,13 +157,15 @@ export function storylineNodes(ctx: ModuleContext, path: unknown, options: Story
                 const tail = chain.at(-1) as Row | undefined
                 if (target && tail && tail.next === undefined) tail.next = target.id
             }
-            if (chain.length || !props.FirstDialogueId) result.push(out)
-            if (chain.length || !props.FirstDialogueId) parentResults.push(out)
+            result.push(out)
+            parentResults.push(out)
         }
         const outputIds = new Set(parentResults.map(node => String(node.id)))
         for (const out of parentResults) {
             if (!Array.isArray(out.next)) continue
-            const filtered = [...new Set(out.next.map(String))].filter(value => value !== String(out.id) && outputIds.has(value))
+            const filtered = [...new Set(out.next.map(String))].filter(
+                value => (options.includeSelfNodeNext || value !== String(out.id)) && outputIds.has(value)
+            )
             if (filtered.length) out.next = filtered
             else delete out.next
         }
@@ -165,4 +185,51 @@ export function storylineNodes(ctx: ModuleContext, path: unknown, options: Story
 export function storylineDialogues(ctx: ModuleContext, path: unknown): Row[] {
     const nodes = storylineNodes(ctx, path)
     return nodes.flatMap(node => sequence((node as Row).dialogues) as Row[])
+}
+
+export function eventStorylineNodes(ctx: ModuleContext, path: unknown): VNodeTree[] {
+    const dialogue = ctx.getArtifact<DialogueService>("Dialogue")
+    const story = dialogue?.story(path)
+    if (!story || !dialogue) return []
+    const result: Row[] = []
+    const parents = story.storyNodeData && typeof story.storyNodeData === "object" ? (story.storyNodeData as Row) : {}
+    for (const parentKey of sortedKeys(parents)) {
+        const quest = parents[parentKey]?.questNodeData
+        const nodeData = quest?.nodeData && typeof quest.nodeData === "object" ? (quest.nodeData as Row) : {}
+        const edges = Array.isArray(quest?.lineData) ? (quest.lineData as Row[]) : []
+        const starts: string[] = []
+        const next = new Map<string, string[]>()
+        for (const edge of edges) {
+            const start = String(edge.startQuest ?? "")
+            const end = String(edge.endQuest ?? "")
+            const port = String(edge.startPort ?? "").toLowerCase()
+            if (port === "queststart") {
+                if (end) starts.push(end)
+                continue
+            }
+            if (!start || !end || port === "fail" || port === "passivefail" || port === "false") continue
+            const children = next.get(start) ?? []
+            if (!children.includes(end)) children.push(end)
+            next.set(start, children)
+        }
+        const queue = [...starts]
+        const visited = new Set<string>()
+        while (queue.length) {
+            const key = queue.shift()!
+            if (visited.has(key)) continue
+            visited.add(key)
+            const node = nodeData[key] as Row | undefined
+            if (node?.type === "TalkNode") {
+                const props = node.propsData ?? {}
+                const out: Row = { id: key, type: "TalkNode", name: node.name ?? "" }
+                const children = next.get(key)
+                if (children?.length) out.next = children
+                const chain = props.FirstDialogueId ? dialogue.chain(props.FirstDialogueId) : []
+                if (chain.length) out.dialogues = chain
+                result.push(out)
+            }
+            for (const child of next.get(key) ?? []) if (!visited.has(child)) queue.push(child)
+        }
+    }
+    return result
 }

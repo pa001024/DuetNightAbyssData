@@ -17,7 +17,7 @@ function nonEmpty(row: Row, key: string, value: unknown): void {
     row[key] = value
 }
 
-export function partyTopicModule(ctx: ModuleContext): VNodeTree {
+export async function partyTopicModule(ctx: ModuleContext): Promise<VNodeTree> {
     const dialogue = ctx.getArtifact<DialogueService>("Dialogue")
     if (!dialogue) throw new Error("PartyTopic 需要 Dialogue 依赖")
     const charByTopic = new Map<number, number>()
@@ -34,8 +34,10 @@ export function partyTopicModule(ctx: ModuleContext): VNodeTree {
     // 310204 is present in game data although it is omitted from PartyNpc.PartyTopicList.
     if (!charByTopic.has(310204)) charByTopic.set(310204, 3102)
 
+    const topicItems = Object.values(table(ctx, "PartyTopic")).filter((value): value is Row => !!value && typeof value === "object")
+    await dialogue.prepareStoryFlows(topicItems.map(item => item.PartyTopicTalkId))
     const result: VNodeTree[] = []
-    for (const value of Object.values(table(ctx, "PartyTopic"))) {
+    for (const value of topicItems) {
         if (!value || typeof value !== "object") continue
         const item = value as Row
         const topicId = Number(item.PartyTopicId)
@@ -52,12 +54,16 @@ export function partyTopicModule(ctx: ModuleContext): VNodeTree {
         nonEmpty(output, "conditionId", item.ConditionId)
 
         const talks = dialogue.storyTalks(item.PartyTopicTalkId)
+        const standaloneFirstIds = new Set(
+            talks.filter(talk => !talk.flowAssetPath && Number(talk.firstDialogueId) > 0).map(talk => String(Number(talk.firstDialogueId)))
+        )
         const dialogues: VNodeTree[] = []
         const seen = new Set<string>()
         for (const talk of talks) {
             const chain = talk.flowAssetPath ? dialogue.flowChain(talk.flowAssetPath) : dialogue.chain(talk.firstDialogueId)
             for (const entry of chain) {
                 const entryId = String((entry as Row).id)
+                if (talk.flowAssetPath && standaloneFirstIds.has(entryId)) continue
                 if (!seen.has(entryId)) {
                     seen.add(entryId)
                     dialogues.push(entry)

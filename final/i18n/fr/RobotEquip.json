@@ -277,10 +277,10 @@
     "extraBuffDesc": "Effet du trait : l’unité obtient la capacité d’Ordonnateur — Déflagration. Elle déclenche périodiquement une explosion autour d’elle, projetant les cibles ennemies alentour.",
     "extraBuffId": 4020302,
     "unlockQuestId": 10300135,
-    "atk": 1.0,
-    "def": 1.0,
-    "hp": 1.0,
-    "shield": 1.0
+    "atk": 1,
+    "def": 1,
+    "hp": 1,
+    "shield": 1
   },
   {
     "id": 26,
@@ -307,10 +307,10 @@
     "extraBuffDesc": "Effet du trait : l’unité obtient la capacité d’Ordonnateur — Éclair foudroyant. Elle projette périodiquement des [Orbes électriques] autour d’elle. Ceux-ci libèrent régulièrement une décharge infligeant des dégâts aux cibles ennemies dans une petite zone, puis disparaissent lorsqu’ils subissent une attaque.",
     "extraBuffId": 4020304,
     "unlockQuestId": 10300147,
-    "atk": 1.0,
-    "def": 1.0,
-    "hp": 1.0,
-    "shield": 1.0
+    "atk": 1,
+    "def": 1,
+    "hp": 1,
+    "shield": 1
   },
   {
     "id": 28,
@@ -322,10 +322,10 @@
     "extraBuffDesc": "Effet du trait : l’unité obtient la capacité d’Ordonnateur — Pourriture cramoisie. Elle génère périodiquement un [Marais putride] autour d’elle. Les cibles ennemies dans la zone subissent des dégâts sur la durée, tandis que les cibles alliées récupèrent progressivement des PV.",
     "extraBuffId": 4020305,
     "unlockQuestId": 10300133,
-    "atk": 1.0,
-    "def": 1.0,
-    "hp": 1.0,
-    "shield": 1.0
+    "atk": 1,
+    "def": 1,
+    "hp": 1,
+    "shield": 1
   },
   {
     "id": 29,
@@ -337,10 +337,10 @@
     "extraBuffDesc": "Effet du trait : l’unité obtient la capacité d’Ordonnateur — Flétrissure. Elle projette périodiquement des [Rayons flétrissants] autour d’elle. Ceux-ci persistent un certain temps, tournent en continu, infligent des dégâts aux cibles ennemies touchées et réduisent leur Lucidité.",
     "extraBuffId": 4020306,
     "unlockQuestId": 10300147,
-    "atk": 1.0,
-    "def": 1.0,
-    "hp": 1.0,
-    "shield": 1.0
+    "atk": 1,
+    "def": 1,
+    "hp": 1,
+    "shield": 1
   },
   {
     "id": 31,
@@ -364,10 +364,10 @@
     "extraBuffDesc": "Effet du trait : l’unité obtient la capacité d’Ordonnateur — Feu résiduel. Elle entre périodiquement en [État de Feu résiduel]. Si elle subit des dégâts pendant la durée de l’effet, celui-ci prend fin et déclenche une explosion infligeant des dégâts aux cibles ennemies dans la zone.",
     "extraBuffId": 4020310,
     "unlockQuestId": 10300138,
-    "atk": 1.0,
-    "def": 1.0,
-    "hp": 1.0,
-    "shield": 1.0
+    "atk": 1,
+    "def": 1,
+    "hp": 1,
+    "shield": 1
   },
   {
     "id": 34,
@@ -391,10 +391,10 @@
     "extraBuffDesc": "Effet du trait : l’unité obtient la capacité d’Ordonnateur — Bain de sang. Lorsqu’elle inflige des dégâts, elle récupère des PV.",
     "extraBuffId": 4020313,
     "unlockQuestId": 10300131,
-    "atk": 1.0,
-    "def": 1.0,
-    "hp": 1.0,
-    "shield": 1.0
+    "atk": 1,
+    "def": 1,
+    "hp": 1,
+    "shield": 1
   },
   {
     "id": 37,

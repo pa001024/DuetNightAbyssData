@@ -1034,6 +1034,22 @@ class BaseProcessor:
             processed_items.append(processed)
         return processed_items
 
+    @staticmethod
+    def _normalize_json_numbers(value):
+        """将 JSON 数据中的整数浮点数收敛为整数。"""
+        if isinstance(value, float) and value.is_integer():
+            return int(value)
+        if isinstance(value, list):
+            return [BaseProcessor._normalize_json_numbers(item) for item in value]
+        if isinstance(value, tuple):
+            return [BaseProcessor._normalize_json_numbers(item) for item in value]
+        if isinstance(value, dict):
+            return {
+                key: BaseProcessor._normalize_json_numbers(item)
+                for key, item in value.items()
+            }
+        return value
+
     def save_processed_items(self, processed_items, output_path, file_name):
         """保存处理后的项目"""
         import os
@@ -1047,7 +1063,13 @@ class BaseProcessor:
         with open(output_file, "w", encoding="utf-8") as f:
             import json
 
-            json.dump(processed_items, f, ensure_ascii=False, indent=2, sort_keys=False)
+            json.dump(
+                self._normalize_json_numbers(processed_items),
+                f,
+                ensure_ascii=False,
+                indent=2,
+                sort_keys=False,
+            )
 
         return output_file
 

@@ -9,6 +9,7 @@ function row(value: unknown): Row | undefined {
 }
 
 function impression(ctx: ModuleContext, value: unknown): VNodeTree | undefined {
+    if (typeof value !== "string" && typeof value !== "number") return undefined
     const item = ctx.dm.getTableItem("ImpressionPlus", value) as Row | undefined
     if (!item) return undefined
     for (const [field, name] of [
@@ -44,11 +45,19 @@ function applyDynamicImpression(ctx: ModuleContext, nodes: VNodeTree[], values: 
     }
 }
 
-function storyGraph(ctx: ModuleContext, path: unknown, nodes: VNodeTree[]): Row | undefined {
+function storyGraph(ctx: ModuleContext, path: unknown, nodes: VNodeTree[], linkUnimportGuideNext: boolean): Row | undefined {
     const dialogue = ctx.getArtifact<DialogueService>("Dialogue")
     const story = dialogue?.story(path)
     if (!story) return undefined
     const outputNodes = nodes as Row[]
+    const dialogueMap = new Map<string, Row>()
+    const optionMap = new Map<string, Row>()
+    for (const output of outputNodes) {
+        for (const item of Array.isArray(output.dialogues) ? (output.dialogues as Row[]) : []) {
+            dialogueMap.set(String(item.id), item)
+            for (const option of Array.isArray(item.options) ? (item.options as Row[]) : []) optionMap.set(String(option.id), option)
+        }
+    }
 
     for (const parentValue of Object.values(row(story.storyNodeData) ?? {})) {
         const parent = row(parentValue)
@@ -111,10 +120,10 @@ function storyGraph(ctx: ModuleContext, path: unknown, nodes: VNodeTree[]): Row 
                     orderedOptions.push(option)
                 }
             }
-            const terminals = (start: unknown): Row[] => {
+            const terminals = (start: unknown): string[] => {
                 const queue = [String(start)]
                 const visited = new Set<string>()
-                const result: Row[] = []
+                const result: string[] = []
                 while (queue.length) {
                     const key = queue.shift()!
                     if (visited.has(key)) continue
@@ -130,14 +139,17 @@ function storyGraph(ctx: ModuleContext, path: unknown, nodes: VNodeTree[]): Row 
                         if (entries.has(String(item.next))) queue.push(String(item.next))
                         continue
                     }
-                    result.push(item)
+                    result.push(key)
                 }
                 return result
             }
-            const mergeNext = (items: Row[], targets: number[]): void => {
+            const mergeNext = (ids: string[], targets: number[]): void => {
                 const target = targets[0]
                 if (target === undefined) return
-                for (const item of items) if (item.next === undefined) item.next = target
+                for (const id of ids) {
+                    const item = optionMap.get(id) ?? dialogueMap.get(id)
+                    if (item && item.next === undefined) item.next = target
+                }
             }
 
             for (let index = 0; index < orderedOptions.length; index++) {
@@ -152,7 +164,7 @@ function storyGraph(ctx: ModuleContext, path: unknown, nodes: VNodeTree[]): Row 
             }
             mergeNext(terminals(first), ordinaryTargets)
 
-            if (props.TalkType === "UnimportGuide") {
+            if (linkUnimportGuideNext && props.TalkType === "UnimportGuide") {
                 const siblingTargets: number[] = []
                 for (const [source, port] of incoming.get(nodeKey) ?? []) {
                     const siblings = (byPort.get(`${source}\x00${port}`) ?? []).filter(value => value !== nodeKey)
@@ -180,9 +192,25 @@ function nodeStartIds(story: Row, nodes: VNodeTree[]): VNodeTree[] {
     return nodes.filter(node => !incoming.has(String((node as Row).id))).map(node => (node as Row).id)
 }
 
-export function dynQuestModule(ctx: ModuleContext): VNodeTree {
+export function enhanceDynamicStory(
+    ctx: ModuleContext,
+    path: unknown,
+    nodes: VNodeTree[],
+    values: unknown,
+    linkUnimportGuideNext = true
+): VNodeTree[] {
+    const story = storyGraph(ctx, path, nodes, linkUnimportGuideNext)
+    applyDynamicImpression(ctx, nodes, values)
+    return story ? nodeStartIds(story, nodes) : []
+}
+
+export async function dynQuestModule(ctx: ModuleContext): Promise<VNodeTree> {
+    const items = rows(ctx, "DynQuest")
+    const dialogue = ctx.getArtifact<import("../dialogue/dialogueModule.ts").DialogueService>("Dialogue")
+    if (!dialogue) throw new Error("DynQuest 需要 Dialogue 依赖")
+    await dialogue.prepareStoryFlows(items.map(item => item.StoryPath))
     const result: Row[] = []
-    for (const item of rows(ctx, "DynQuest")) {
+    for (const item of items) {
         const id = Number(item.DynQuestId)
         if (!id) continue
         const output: Row = {
@@ -197,15 +225,11 @@ export function dynQuestModule(ctx: ModuleContext): VNodeTree {
             reward: item.Reward ?? [],
         }
         if (item.StoryPath) {
-            const nodes = storylineNodes(ctx, item.StoryPath, { linkUnimportDialogueNext: true, linkDialogueNext: true })
-            const story = storyGraph(ctx, item.StoryPath, nodes)
-            applyDynamicImpression(ctx, nodes, item.DynImpression)
+            const nodes = storylineNodes(ctx, item.StoryPath)
+            const starts = enhanceDynamicStory(ctx, item.StoryPath, nodes, item.DynImpression)
             if (nodes.length) {
                 output.nodes = nodes
-                if (story) {
-                    const starts = nodeStartIds(story, nodes)
-                    if (starts.length > 1) output.startIds = starts
-                }
+                if (starts.length > 1) output.startIds = starts
             }
         }
         result.push(output)

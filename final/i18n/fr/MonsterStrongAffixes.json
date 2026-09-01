@@ -4,7 +4,7 @@
     "name": "Ordonnateur — Pourriture cramoisie",
     "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nL’Ordonnateur — Pourriture cramoisie crée périodiquement une zone de [Marais putride] autour de lui.\n[Marais putride] : inflige des dégâts continus aux ennemis dans la zone, tout en soignant les alliés se trouvant dans la même aire.",
     "vars": {
-      "间隔时间": 10.0,
+      "间隔时间": 10,
       "持续时间": 10,
       "最大召唤数量": 3,
       "每次召唤数量": 3,

@@ -1,13 +1,19 @@
 import type { ModuleContext } from "../../core/Graph.ts"
 import { T, type VNodeTree } from "../../i18n/vnode.ts"
+import type { DialogueService } from "../dialogue/dialogueModule.ts"
+import { enhanceDynamicStory } from "../dynQuest/dynQuestModule.ts"
 import { type Row, rows, table } from "../shared/dataHelpers.ts"
 import { storylineNodes } from "../storyline/storyline.ts"
 
-export function dispatchModule(ctx: ModuleContext): VNodeTree {
+export async function dispatchModule(ctx: ModuleContext): Promise<VNodeTree> {
     const ui = table(ctx, "DispatchUI")
     const dyn = table(ctx, "DynQuest")
     const grouped = new Map<string, Row>()
-    for (const item of rows(ctx, "Dispatch")) {
+    const items = rows(ctx, "Dispatch")
+    const dialogue = ctx.getArtifact<DialogueService>("Dialogue")
+    if (!dialogue) throw new Error("Dispatch 需要 Dialogue 依赖")
+    await dialogue.prepareStoryFlows(items.map(item => dyn[String(item.DispatchId)]?.StoryPath))
+    for (const item of items) {
         const id = Number(item.DispatchId)
         if (!id) continue
         const key = String(item.DispatchCondition ?? "")
@@ -34,8 +40,18 @@ export function dispatchModule(ctx: ModuleContext): VNodeTree {
         }
         if (!(group.nodes as Row[] | undefined)?.length) {
             const storyPath = dyn[String(id)]?.StoryPath
-            const nodes = storyPath ? storylineNodes(ctx, storyPath, { pruneSequentialNodeNext: false }) : []
-            if (nodes.length) group.nodes = nodes
+            const nodes = storyPath
+                ? storylineNodes(ctx, storyPath, {
+                      pruneSequentialNodeNext: false,
+                      questStartThenKeyOrder: true,
+                      includeSelfNodeNext: true,
+                  })
+                : []
+            if (nodes.length) {
+                const starts = enhanceDynamicStory(ctx, storyPath, nodes, dyn[String(id)]?.DynImpression, false)
+                group.nodes = nodes
+                if (starts.length > 1) group.startIds = starts
+            }
         }
         ;(group.levels as Row[]).push({ id, reward: item.RewardId ?? [], demand: item.DispatchDemand, level: item.PlayerLevel ?? [] })
     }
