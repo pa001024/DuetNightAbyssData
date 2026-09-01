@@ -11,7 +11,7 @@
  */
 
 import type { LuaState } from "fengari"
-import { lauxlib, lua, to_jsstring } from "fengari"
+import { lua, to_jsstring } from "fengari"
 
 const LUA_TNIL = lua.LUA_TNIL
 const LUA_TNUMBER = lua.LUA_TNUMBER

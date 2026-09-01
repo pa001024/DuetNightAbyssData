@@ -50,6 +50,19 @@ import { questStoryModule } from "./modules/questStory/questStoryModule.ts"
 import { raidBuffModule } from "./modules/raidBuff/raidBuffModule.ts"
 import { regionPointModule } from "./modules/regionPoint/regionPointModule.ts"
 import { regionReputationModule } from "./modules/regionReputation/regionReputationModule.ts"
+import {
+    abyssDungeonModule,
+    bookSeriesArchiveModule,
+    dispatchModule,
+    dungeonModule,
+    dynQuestModule,
+    ironSurvivalMonsterSpawnModule,
+    npcModule,
+    regionModule,
+    rougeLikeRoomModule,
+    rougeLikeStoryEventModule,
+    subRegionModule,
+} from "./modules/remainingModules.ts"
 import { resourceModule } from "./modules/resource/resourceModule.ts"
 import { optRewardModule, rewardModule } from "./modules/reward/rewardModule.ts"
 import { rewardViewModule } from "./modules/rewardView/rewardViewModule.ts"
@@ -228,6 +241,27 @@ const REGISTRY: ModuleReg[] = [
     { name: "ImpressionShop", deps: [], outputs: true, build: ctx => ({ ImpressionShop: impressionShopModule(ctx) }) },
     { name: "RobotEquip", deps: [], outputs: true, build: ctx => ({ RobotEquip: robotEquipModule(ctx) }) },
     { name: "RaidBuff", deps: [], outputs: true, build: ctx => ({ RaidBuff: raidBuffModule(ctx) }) },
+    { name: "AbyssDungeon", deps: [], outputs: true, build: ctx => ({ AbyssDungeon: abyssDungeonModule(ctx) }) },
+    { name: "BookSeriesArchive", deps: [], outputs: true, build: ctx => ({ BookSeriesArchive: bookSeriesArchiveModule(ctx) }) },
+    { name: "Dispatch", deps: ["Dialogue"], outputs: true, build: ctx => ({ Dispatch: dispatchModule(ctx) }) },
+    { name: "DynQuest", deps: ["Dialogue"], outputs: true, build: ctx => ({ DynQuest: dynQuestModule(ctx) }) },
+    { name: "Dungeon", deps: [], outputs: true, build: ctx => ({ Dungeon: dungeonModule(ctx) }) },
+    {
+        name: "IronSurvivalMonsterSpawn",
+        deps: [],
+        outputs: true,
+        build: ctx => ({ IronSurvivalMonsterSpawn: ironSurvivalMonsterSpawnModule(ctx) }),
+    },
+    { name: "Npc", deps: ["Dialogue"], outputs: true, build: ctx => ({ Npc: npcModule(ctx) }) },
+    { name: "Region", deps: [], outputs: true, build: ctx => ({ Region: regionModule(ctx) }) },
+    { name: "SubRegion", deps: [], outputs: true, build: ctx => ({ SubRegion: subRegionModule(ctx) }) },
+    { name: "RougeLikeRoom", deps: [], outputs: true, build: ctx => ({ RougeLikeRoom: rougeLikeRoomModule(ctx) }) },
+    {
+        name: "RougeLikeStoryEvent",
+        deps: ["Dialogue"],
+        outputs: true,
+        build: ctx => ({ RougeLikeStoryEvent: rougeLikeStoryEventModule(ctx) }),
+    },
 ]
 
 const UASSET_MODULES = ["Resource", "Weapon", "Char", "Mod"]

@@ -119,19 +119,14 @@ export class AssetReader {
         this.exportsRoot = getExportsRoot()
     }
 
-    private get legacyAssetRoot(): string {
-        return join(this.root, "out", "Asset")
-    }
-
     /** 资产根（uasset 与 fmodel json 同源：Exports/EM/Content/Asset） */
     private get assetRoot(): string | null {
-        if (this.exportsRoot) return join(this.exportsRoot, "EM", "Content", "Asset")
-        return existsSync(this.legacyAssetRoot) ? this.legacyAssetRoot : null
+        return this.exportsRoot ? join(this.exportsRoot, "EM", "Content", "Asset") : null
     }
 
     async ensureServer(): Promise<UAssetServer | null> {
         if (this.server) return this.server
-        if (!this.exportsRoot && !existsSync(this.legacyAssetRoot)) return null
+        if (!this.exportsRoot) return null
         try {
             this.server = await getUAssetServer()
         } catch {
@@ -216,14 +211,6 @@ export class AssetReader {
                     }
                     if (!ok) continue
                     candidates.push({ uasset: join(cur, `${animResource}.uasset`), json: join(cur, `${animResource}.json`) })
-                    for (const c of readdirSync(cur)) {
-                        if (c.endsWith(`_${animResource}.uasset`)) {
-                            candidates.push({ uasset: join(cur, c), json: join(cur, c.replace(/\.uasset$/, ".json")) })
-                        }
-                        if (c.endsWith(`_${animResource}.json`)) {
-                            candidates.push({ uasset: join(cur, c.replace(/\.json$/, ".uasset")), json: join(cur, c) })
-                        }
-                    }
                 }
             }
         } catch {

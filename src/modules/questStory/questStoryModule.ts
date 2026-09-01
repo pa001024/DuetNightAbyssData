@@ -61,7 +61,7 @@ export function questStoryModule(ctx: ModuleContext): VNodeTree {
             if (descKey && descKey !== nameKey) quest.desc = T(descKey)
             if (nodes.length > 0) {
                 quest.nodes = nodes
-                const starts = startIds(nodes)
+                const starts = startIds(story, questId, nodes)
                 if (starts.length > 1) quest.startIds = starts
             }
             quests.push(quest)
@@ -247,6 +247,7 @@ function buildNode(
     if (type === "TalkNode") {
         const chain = props.FlowAssetPath ? dialogue.flowChain(props.FlowAssetPath) : dialogue.chain(props.FirstDialogueId)
         if (chain.length > 0) output.dialogues = chain
+        else return undefined
     } else if (type === "UnlockDetectiveQuestionNode") {
         const values: Row[] = []
         for (const qid of Array.isArray(props.QuestionIds) ? props.QuestionIds : []) {
@@ -278,11 +279,17 @@ function buildNode(
     return output
 }
 
-function startIds(nodes: VNodeTree[]): VNodeTree[] {
+function startIds(story: Row, questId: number, nodes: VNodeTree[]): VNodeTree[] {
     const ids = new Set(nodes.map(node => String((node as Row).id)))
     const incoming = new Set<string>()
-    for (const node of nodes)
-        for (const next of Array.isArray((node as Row).next) ? (node as Row).next : [])
-            if (ids.has(String(next))) incoming.add(String(next))
+    for (const parent of Object.values(row(story.storyNodeData) ?? {}).map(row)) {
+        if (!parent || !matchesQuest(parent, questId)) continue
+        const questData = row(parent.questNodeData)
+        for (const edge of Array.isArray(questData?.lineData) ? questData.lineData.map(row).filter((v): v is Row => !!v) : []) {
+            if (String(edge.startPort ?? "").toLowerCase() === "queststart") continue
+            const end = String(edge.endQuest ?? "")
+            if (ids.has(end)) incoming.add(end)
+        }
+    }
     return nodes.filter(node => !incoming.has(String((node as Row).id))).map(node => (node as Row).id)
 }

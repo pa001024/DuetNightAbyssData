@@ -2,6 +2,7 @@ import { existsSync, readFileSync } from "node:fs"
 import { join } from "node:path"
 import type { ModuleContext } from "../../core/Graph.ts"
 import { T, TL, type VNode, type VNodeTree } from "../../i18n/vnode.ts"
+import { getExportsRoot } from "../../lua/UAssetServer.ts"
 
 type Row = Record<string, any>
 type Story = Row
@@ -91,6 +92,7 @@ class DialogueServiceImpl implements DialogueService {
     private readonly flowCache = new Map<string, unknown[] | undefined>()
     private readonly impressionCheck: Row
     private readonly impressionPlus: Row
+    private readonly dataCache = new Map<number, { base: Row; localized: Record<string, Row> } | undefined>()
 
     constructor(private readonly ctx: ModuleContext) {
         this.impressionCheck = (ctx.dm.getTable("ImpressionCheck") as Row | undefined) ?? {}
@@ -100,13 +102,25 @@ class DialogueServiceImpl implements DialogueService {
     private data(id: unknown): { base: Row; localized: Record<string, Row> } | undefined {
         const numericId = idOf(id)
         if (numericId === undefined) return undefined
-        const localized: Record<string, Row> = {}
-        for (const [lang, table] of Object.entries(DIALOGUE_TABLES)) {
-            const item = row(this.ctx.dm.getTableItem(table, numericId))
-            if (item) localized[lang] = item
+        if (this.dataCache.has(numericId)) return this.dataCache.get(numericId)
+        this.loadData([numericId])
+        return this.dataCache.get(numericId)
+    }
+
+    private loadData(ids: number[]): void {
+        const pending = [...new Set(ids)].filter(id => !this.dataCache.has(id))
+        if (pending.length === 0) return
+        const tables = Object.values(DIALOGUE_TABLES)
+        const loaded = this.ctx.dm.getDialogueItems(tables, pending)
+        for (const numericId of pending) {
+            const localized: Record<string, Row> = {}
+            for (const [lang, table] of Object.entries(DIALOGUE_TABLES)) {
+                const item = row(loaded.get(table)?.get(String(numericId)))
+                if (item) localized[lang] = item
+            }
+            const base = localized.cn
+            this.dataCache.set(numericId, base ? { base, localized } : undefined)
         }
-        const base = localized.cn
-        return base ? { base, localized } : undefined
     }
 
     private content(data: { base: Row; localized: Record<string, Row> }): VNode | undefined {
@@ -134,60 +148,64 @@ class DialogueServiceImpl implements DialogueService {
         const queue: number[] = [first]
         const visited = new Set<number>()
         while (queue.length > 0) {
-            const current = queue.shift()!
-            if (visited.has(current)) continue
-            visited.add(current)
-            const loaded = this.data(current)
-            if (!loaded) continue
-            const { base } = loaded
-            const content = this.content(loaded)
-            const voice = simplifyVoice(base.VoiceName)
-            const nextOptions = Array.isArray(base.NextOptions) ? base.NextOptions : []
-            const next = idOf(base.NextDialogue)
-            if (!content && !voice && !(includeContentlessNodes && nextOptions.length > 0)) {
-                if (next !== undefined) queue.push(next)
-                continue
-            }
+            const batch = [...new Set(queue.splice(0))]
+            this.loadData(batch)
+            for (const current of batch) {
+                if (visited.has(current)) continue
+                visited.add(current)
+                const loaded = this.data(current)
+                if (!loaded) continue
+                const { base } = loaded
+                const content = this.content(loaded)
+                const voice = simplifyVoice(base.VoiceName)
+                const nextOptions = Array.isArray(base.NextOptions) ? base.NextOptions : []
+                const next = idOf(base.NextDialogue)
+                if (!content && !voice && !(includeContentlessNodes && nextOptions.length > 0)) {
+                    if (next !== undefined) queue.push(next)
+                    continue
+                }
 
-            const item: Record<string, VNodeTree> = { id: current }
-            if (content !== undefined) item.content = content
-            if (voice) item.voice = voice
-            if (base.SpeakNpcId) item.npc = base.SpeakNpcId
-            if (base.SpeakNpcName) item.speakerName = T(base.SpeakNpcName)
-            if (nextOptions.length === 0) {
-                if (next !== undefined) {
-                    item.next = next
-                    queue.push(next)
-                }
-            } else {
-                const options: VNodeTree[] = []
-                for (const optionId of nextOptions) {
-                    const optionLoaded = this.data(optionId)
-                    if (!optionLoaded) continue
-                    const optionContent = this.content(optionLoaded)
-                    const optionVoice = simplifyVoice(optionLoaded.base.VoiceName)
-                    if (optionContent === undefined && !optionVoice) continue
-                    const option: Record<string, VNodeTree> = { id: idOf(optionId) ?? optionId }
-                    if (optionContent !== undefined) option.content = optionContent
-                    if (optionVoice) option.voice = optionVoice
-                    const optionNext = idOf(optionLoaded.base.NextDialogue)
-                    if (optionNext !== undefined && !Array.isArray(optionLoaded.base.NextOptions)) {
-                        option.next = optionNext
-                        queue.push(optionNext)
+                const item: Record<string, VNodeTree> = { id: current }
+                if (content !== undefined) item.content = content
+                if (voice) item.voice = voice
+                if (base.SpeakNpcId) item.npc = base.SpeakNpcId
+                if (base.SpeakNpcName) item.speakerName = T(base.SpeakNpcName)
+                if (nextOptions.length === 0) {
+                    if (next !== undefined) {
+                        item.next = next
+                        queue.push(next)
                     }
-                    const impr = inlineImpressionPlus(this.impressionPlus, optionLoaded.base.ImprPlusId)
-                    if (impr !== undefined) option.impr = impr
-                    const imprCheck = inlineImpressionCheck(this.impressionCheck, optionLoaded.base.ImprCheckId)
-                    if (imprCheck !== undefined) option.imprCheck = imprCheck
-                    options.push(option)
+                } else {
+                    this.loadData(nextOptions.map(id => idOf(id)).filter((id): id is number => id !== undefined))
+                    const options: VNodeTree[] = []
+                    for (const optionId of nextOptions) {
+                        const optionLoaded = this.data(optionId)
+                        if (!optionLoaded) continue
+                        const optionContent = this.content(optionLoaded)
+                        const optionVoice = simplifyVoice(optionLoaded.base.VoiceName)
+                        if (optionContent === undefined && !optionVoice) continue
+                        const option: Record<string, VNodeTree> = { id: idOf(optionId) ?? optionId }
+                        if (optionContent !== undefined) option.content = optionContent
+                        if (optionVoice) option.voice = optionVoice
+                        const optionNext = idOf(optionLoaded.base.NextDialogue)
+                        if (optionNext !== undefined && !Array.isArray(optionLoaded.base.NextOptions)) {
+                            option.next = optionNext
+                            queue.push(optionNext)
+                        }
+                        const impr = inlineImpressionPlus(this.impressionPlus, optionLoaded.base.ImprPlusId)
+                        if (impr !== undefined) option.impr = impr
+                        const imprCheck = inlineImpressionCheck(this.impressionCheck, optionLoaded.base.ImprCheckId)
+                        if (imprCheck !== undefined) option.imprCheck = imprCheck
+                        options.push(option)
+                    }
+                    if (options.length > 0) item.options = options
                 }
-                if (options.length > 0) item.options = options
+                const impr = inlineImpressionPlus(this.impressionPlus, base.ImprPlusId)
+                if (impr !== undefined) item.impr = impr
+                const imprCheck = inlineImpressionCheck(this.impressionCheck, base.ImprCheckId)
+                if (imprCheck !== undefined) item.imprCheck = imprCheck
+                result.push(item)
             }
-            const impr = inlineImpressionPlus(this.impressionPlus, base.ImprPlusId)
-            if (impr !== undefined) item.impr = impr
-            const imprCheck = inlineImpressionCheck(this.impressionCheck, base.ImprCheckId)
-            if (imprCheck !== undefined) item.imprCheck = imprCheck
-            result.push(item)
         }
         return result
     }
@@ -197,7 +215,9 @@ class DialogueServiceImpl implements DialogueService {
         const match = path.match(/\/Game\/Dialogue\/([^']+)/)
         if (!match) return undefined
         const relative = match[1].split(".")[0].replaceAll("/", "\\")
-        const file = join(this.ctx.dm.root, "out", "Dialogue", `${relative}.json`)
+        const exportsRoot = getExportsRoot()
+        if (!exportsRoot) return undefined
+        const file = join(exportsRoot, "EM", "Content", "Dialogue", `${relative}.json`)
         if (this.flowCache.has(file)) return this.flowCache.get(file)
         if (!existsSync(file)) {
             this.flowCache.set(file, undefined)
@@ -273,7 +293,8 @@ class DialogueServiceImpl implements DialogueService {
 
     story(path: unknown): Story | undefined {
         if (typeof path !== "string" || !path) return undefined
-        const relative = path.replace(/\.story$/i, ".lua").replaceAll("\\", "/")
+        let relative = path.replace(/\.story$/i, ".lua").replaceAll("\\", "/")
+        if (!relative.toLowerCase().endsWith(".lua")) relative += ".lua"
         const key = relative
         if (!this.storyCache.has(key))
             this.storyCache.set(key, row(this.ctx.dm.loadStoryFile(join("Script", "StoryCreator", "StoryFiles", relative))))
@@ -298,9 +319,36 @@ class DialogueServiceImpl implements DialogueService {
         }
         const data = row(story?.storyNodeData)
         for (const node of Object.values(data ?? {})) {
-            append(node)
-            const nested = row(row(node)?.questNodeData)?.nodeData
-            for (const subNode of Object.values(row(nested) ?? {})) append(subNode)
+            const parent = row(node)
+            if (!parent) continue
+            append(parent)
+            const questData = row(parent.questNodeData)
+            const nodeData = row(questData?.nodeData)
+            const lineData = Array.isArray(questData?.lineData) ? questData.lineData.map(row).filter((v): v is Row => !!v) : []
+            if (!nodeData || lineData.length === 0) {
+                for (const subNode of Object.values(nodeData ?? {})) append(subNode)
+                continue
+            }
+            const edges = new Map<string, string[]>()
+            const starts: string[] = []
+            for (const edge of lineData) {
+                const start = String(edge.startQuest ?? "")
+                const end = String(edge.endQuest ?? "")
+                if (!start || !end) continue
+                if (String(edge.startPort ?? "").toLowerCase() === "queststart") starts.push(end)
+                const list = edges.get(start) ?? []
+                if (!list.includes(end)) list.push(end)
+                edges.set(start, list)
+            }
+            const queue = starts.length > 0 ? starts : Object.keys(nodeData)
+            const visited = new Set<string>()
+            while (queue.length > 0) {
+                const key = queue.shift()!
+                if (visited.has(key)) continue
+                visited.add(key)
+                append(nodeData[key])
+                for (const next of edges.get(key) ?? []) queue.push(next)
+            }
         }
         return result
     }

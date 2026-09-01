@@ -232,7 +232,7 @@ export class LuaDataManager {
                             local copy = {key = node.key or key, type = node.type, name = node.name, propsData = props(node.propsData)}
                             if type(node.questNodeData) == "table" then
                                 local q = {lineData = {}, nodeData = {}}
-                                for _, item in pairs(node.questNodeData.lineData or {}) do local e = edge(item); if e then q.lineData[#q.lineData + 1] = e end end
+                                for _, item in ipairs(node.questNodeData.lineData or {}) do local e = edge(item); if e then q.lineData[#q.lineData + 1] = e end end
                                 for childKey, child in pairs(node.questNodeData.nodeData or {}) do
                                     if type(child) == "table" then q.nodeData[childKey] = {key = child.key or childKey, type = child.type, name = child.name, propsData = props(child.propsData)} end
                                 end
@@ -392,6 +392,38 @@ export class LuaDataManager {
             }
             this.jsCache.set(cacheKey, value)
             result.set(normalized, value)
+        }
+        return result
+    }
+
+    /** 一次 VM 调用读取多张对白表的同一批键，减少剧情导出中的跨 VM 往返。 */
+    getDialogueItems(names: string[], keys: Array<number | string>): Map<string, Map<string, LuaValue>> {
+        const result = new Map<string, Map<string, LuaValue>>()
+        if (names.length === 0 || keys.length === 0) return result
+        const L = this.ensureState()
+        lua.lua_getglobal(L, "__get_dialogue_items")
+        this.pushJsValue(L, names)
+        this.pushJsValue(L, keys)
+        if (lua.lua_pcall(L, 2, 1, 0) !== 0) {
+            lua.lua_pop(L, 1)
+            return result
+        }
+        const values = luaValueToJs(L, -1)
+        lua.lua_pop(L, 1)
+        if (!values || typeof values !== "object" || Array.isArray(values)) return result
+        for (const name of names) {
+            const rows = (values as Record<string, LuaValue>)[name]
+            if (!rows || typeof rows !== "object" || Array.isArray(rows)) continue
+            const map = new Map<string, LuaValue>()
+            for (const key of keys) {
+                const normalized = String(key)
+                const value = (rows as Record<string, LuaValue>)[normalized] ?? (rows as Record<string, LuaValue>)[`${normalized}.0`]
+                if (value !== undefined) {
+                    this.jsCache.set(`${name}\x00${normalized}`, value)
+                    map.set(normalized, value)
+                }
+            }
+            result.set(name, map)
         }
         return result
     }

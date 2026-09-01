@@ -126,6 +126,35 @@ __get_table_items = function(name, keys)
   end
   return out
 end
+__dialogue_cache = {}
+__get_dialogue_items = function(names, keys)
+  local out = {}
+  for _, name in ipairs(names or {}) do
+    local root = __dialogue_cache[name]
+    if not root then
+      local source = DataMgr[name]
+      root = {}
+      if type(source) == "table" then
+        for key, value in pairs(source) do root[key] = value end
+      end
+      __dialogue_cache[name] = root
+    end
+    local rows = {}
+    if root then
+      for _, key in ipairs(keys or {}) do
+        local value = root[key]
+        if value == nil and type(key) == "string" then
+          local numericKey = tonumber(key)
+          if numericKey ~= nil then value = root[numericKey] end
+        end
+        if value == nil then value = root[tostring(key)] end
+        if value ~= nil then rows[key] = value end
+      end
+    end
+    out[name] = rows
+  end
+  return out
+end
 __path_indexes = {}
 __find_keys_by_path = function(name, path, expected)
   -- 反向查询通常会被多个角色/武器重复调用；索引留在 Lua，避免每次
