@@ -1527,16 +1527,6 @@ return {
       UnitType = "Mechanism",
       UnitId = 18
     },
-    ["1720102"] = {
-      ManualItemId = 1720102,
-      UnitType = "Mechanism",
-      UnitId = 70403
-    },
-    ["172008"] = {
-      ManualItemId = 172008,
-      UnitType = "Mechanism",
-      UnitId = 70403
-    },
     ["172009"] = {
       ManualItemId = 172009,
       UnitType = "Mechanism",
@@ -1561,11 +1551,6 @@ return {
       ManualItemId = 172013,
       UnitType = "Mechanism",
       UnitId = 39021
-    },
-    ["172039"] = {
-      ManualItemId = 172039,
-      UnitType = "Mechanism",
-      UnitId = 70403
     },
     ["172026"] = {
       ManualItemId = 172026,

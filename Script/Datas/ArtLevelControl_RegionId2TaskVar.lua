@@ -100,7 +100,8 @@ return ReadOnly("ArtLevelControl_RegionId2TaskVar", {
     [3] = "IQ11020104"
   },
   [1072] = {
-    [1] = "Ex02CustomNPC_show"
+    [1] = "Ex02CustomNPC_show",
+    [2] = "IQ11020201"
   },
   [1076] = {
     [1] = "EX02_Boss03",

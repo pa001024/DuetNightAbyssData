@@ -6142,7 +6142,8 @@ T.RT_1367 = {
 }
 T.RT_1368 = {
   [1] = T.RT_887,
-  [2] = T.RT_1325
+  [2] = T.RT_1325,
+  [3] = T.RT_1366
 }
 T.RT_1369 = {
   CreatureId = 85200111,
@@ -47753,7 +47754,8 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Target",
     TaskEffects = {
       [1] = T.RT_671,
-      [2] = T.RT_10
+      [2] = T.RT_10,
+      [3] = T.RT_1366
     },
     TaskId = 85200104
   },
@@ -47762,7 +47764,8 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = T.RT_671,
       [2] = T.RT_10,
-      [3] = {FXId = 852003, Function = "PlayFX"}
+      [3] = {FXId = 852003, Function = "PlayFX"},
+      [4] = T.RT_1366
     },
     TaskId = 85200105
   },
@@ -47795,7 +47798,8 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Target",
     TaskEffects = {
       [1] = T.RT_16,
-      [2] = T.RT_10
+      [2] = T.RT_10,
+      [3] = T.RT_1366
     },
     TaskId = 85200108
   },
@@ -47815,7 +47819,8 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = T.RT_671,
       [2] = T.RT_10,
-      [3] = {FXId = 852004, Function = "PlayFX"}
+      [3] = {FXId = 852004, Function = "PlayFX"},
+      [4] = T.RT_1366
     },
     TaskId = 85200110
   },
@@ -48064,7 +48069,8 @@ return ReadOnly("SkillEffects", {
         CauseHit = "HitFly_XY0Z2000",
         Function = "CutToughness"
       },
-      [3] = T.RT_1284
+      [3] = T.RT_1284,
+      [4] = T.RT_1366
     },
     TaskId = 85200129
   },
@@ -48138,7 +48144,8 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = T.RT_1080,
       [2] = T.RT_1325,
-      [3] = T.RT_1284
+      [3] = T.RT_1284,
+      [4] = T.RT_1366
     },
     TaskId = 85200133
   },
@@ -48177,7 +48184,8 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Target",
     TaskEffects = {
       [1] = T.RT_33,
-      [2] = T.RT_1325
+      [2] = T.RT_1325,
+      [3] = T.RT_1366
     },
     TaskId = 85200136
   },
@@ -48402,7 +48410,8 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Target",
     TaskEffects = {
       [1] = T.RT_3,
-      [2] = T.RT_1379
+      [2] = T.RT_1379,
+      [3] = T.RT_1366
     },
     TaskId = 85200149
   },
@@ -48901,7 +48910,8 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = T.RT_671,
       [2] = T.RT_10,
-      [3] = {FXId = 852005, Function = "PlayFX"}
+      [3] = {FXId = 852005, Function = "PlayFX"},
+      [4] = T.RT_1366
     },
     TaskId = 85200183
   },

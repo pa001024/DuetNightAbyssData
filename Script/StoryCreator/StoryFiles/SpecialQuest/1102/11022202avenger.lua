@@ -292,6 +292,36 @@ return {
             startPort = "Out",
             endQuest = "17877462168484480618",
             endPort = "In"
+          },
+          {
+            startQuest = "1782285108495165",
+            startPort = "QuestStart",
+            endQuest = "178805982701435786622",
+            endPort = "In"
+          },
+          {
+            startQuest = "17822874495942351",
+            startPort = "Out",
+            endQuest = "178805989507535787383",
+            endPort = "In"
+          },
+          {
+            startQuest = "17822892397504936",
+            startPort = "Out",
+            endQuest = "178805994227035788045",
+            endPort = "In"
+          },
+          {
+            startQuest = "17822901740956196",
+            startPort = "Out",
+            endQuest = "178805997632336905215",
+            endPort = "In"
+          },
+          {
+            startQuest = "1782285108495165",
+            startPort = "QuestStart",
+            endQuest = "17881786858365610019",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -424,7 +454,7 @@ return {
             key = "17822892397504936",
             type = "TalkNode",
             name = "【Ex02_FixSimple_C7_03】富尔维斯",
-            pos = {x = 2490.9696229063698, y = 215.67884170726762},
+            pos = {x = 2490.9696229063698, y = 213.53598456441048},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -933,7 +963,7 @@ return {
             key = "17850694393334446547",
             type = "SendMessageNode",
             name = "发送消息",
-            pos = {x = 2740.334477957543, y = 164.00264724955125},
+            pos = {x = 2742.209477957543, y = 164.00264724955125},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "FaluxiWar2_Start",
@@ -1089,6 +1119,81 @@ return {
               NewDescription = "Description_110222_02a",
               NewDetail = "Content_110222_02a",
               SubTaskTargetIndex = 0
+            }
+          },
+          ["178805982701435786622"] = {
+            key = "178805982701435786622",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 648, y = 76},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/cbt02/0061_scene_ex01_escape",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107401},
+              bStoreToServer = true
+            }
+          },
+          ["178805989507535787383"] = {
+            key = "178805989507535787383",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2545.3532360312547, y = 436.6819991154357},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/mute",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107401},
+              bStoreToServer = true
+            }
+          },
+          ["178805994227035788045"] = {
+            key = "178805994227035788045",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2800.5091957835766, y = 478.0113334807604},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/cbt02/0061_scene_ex01_escape",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107401},
+              bStoreToServer = true
+            }
+          },
+          ["178805997632336905215"] = {
+            key = "178805997632336905215",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 3742.725552182596, y = -199.75537774918604},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/mute",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107401},
+              bStoreToServer = true
+            }
+          },
+          ["17881786858365610019"] = {
+            key = "17881786858365610019",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 605.7142857142858, y = 442.5714285714285},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "FaluxiWar1_Enter",
+              UnitId = -1
             }
           }
         },

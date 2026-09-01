@@ -514,7 +514,19 @@ return {
             endPort = "In"
           },
           {
+            startQuest = "178236937773715151992",
+            startPort = "QuestStart",
+            endQuest = "17880600227053352327",
+            endPort = "In"
+          },
+          {
             startQuest = "178236949314315153426",
+            startPort = "Out",
+            endQuest = "17880600727063352854",
+            endPort = "In"
+          },
+          {
+            startQuest = "17880600727063352854",
             startPort = "Out",
             endQuest = "178236937773815151995",
             endPort = "Success"
@@ -532,7 +544,7 @@ return {
             key = "178236937773815151995",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 2161.4285714285716, y = 345.42857142857144},
+            pos = {x = 2431.4285714285716, y = 310.42857142857144},
             propsData = {ModeType = 0}
           },
           ["178236937773815151998"] = {
@@ -620,6 +632,33 @@ return {
               bGuideUIEnable = false,
               GuideType = "P",
               GuideName = ""
+            }
+          },
+          ["17880600227053352327"] = {
+            key = "17880600227053352327",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 900.3333333333333, y = 72.00000000000004},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/mute",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107201},
+              bStoreToServer = true
+            }
+          },
+          ["17880600727063352854"] = {
+            key = "17880600727063352854",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2027, y = 325.33333333333366},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },

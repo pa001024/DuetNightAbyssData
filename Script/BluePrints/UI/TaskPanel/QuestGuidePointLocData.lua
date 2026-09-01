@@ -151571,7 +151571,7 @@ local QuestGuidePointLoc = {
   TargetPoint_fuchong = {
     X = -57728.21875,
     Y = -34433.570312,
-    Z = -8545.691406,
+    Z = -8545.69043,
     R = 0.0,
     SubRegionId = 107301,
     FloorId = 0,
@@ -152525,7 +152525,7 @@ local QuestGuidePointLoc = {
   TargetPoint_fuchong2 = {
     X = -50361.828125,
     Y = -35131.660156,
-    Z = -3104.173828,
+    Z = -3104.169922,
     R = 0.0,
     SubRegionId = 107301,
     FloorId = 0,
@@ -152674,6 +152674,51 @@ local QuestGuidePointLoc = {
     SubRegionId = 107201,
     FloorId = 0,
     TeleportPointName = "UI_TELEPORTPOINT_NAME_107201_2"
+  },
+  BP_StaticCreateActor_Trigger_405 = {
+    X = -34734.65625,
+    Y = -29201.775391,
+    Z = -2350.0,
+    R = 0.0,
+    SubRegionId = 107301,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  TargetPoint_Shoot = {
+    X = -39009.988281,
+    Y = -17380.662109,
+    Z = -3514.739014,
+    R = 0.0,
+    SubRegionId = 107301,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Npc_Aida_312940014 = {
+    X = 12095.782227,
+    Y = -92994.101562,
+    Z = -10328.101562,
+    R = 0.0,
+    SubRegionId = 107801,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Npc_Faluxi_312940015 = {
+    X = 11962.652344,
+    Y = -92972.796875,
+    Z = -10327.879883,
+    R = 0.0,
+    SubRegionId = 107801,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Npc_Weiketuo_312940016 = {
+    X = 12029.992188,
+    Y = -93004.539062,
+    Z = -10327.879883,
+    R = 0.0,
+    SubRegionId = 107801,
+    FloorId = 0,
+    TeleportPointName = ""
   }
 }
 return QuestGuidePointLoc

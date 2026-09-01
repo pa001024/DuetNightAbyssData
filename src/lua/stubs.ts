@@ -67,14 +67,30 @@ Const = {}
     lauxlib.luaL_dostring(
         L,
         to_luastring(`
+__partition_cache = setmetatable({}, {__mode = "k"})
 DataMgr.BinarySearch = function(Key, DataIndexTable)
   local NumericKey = tonumber(Key)
   if NumericKey == nil then return nil end
-  for _, Entry in ipairs(DataIndexTable or {}) do
-    if Entry and NumericKey >= Entry.MinKey and NumericKey <= Entry.MaxKey then
+  local low, high = 1, #(DataIndexTable or {})
+  while low <= high do
+    local middle = math.floor((low + high) / 2)
+    local Entry = DataIndexTable[middle]
+    if not Entry then break end
+    if NumericKey < Entry.MinKey then
+      high = middle - 1
+    elseif NumericKey > Entry.MaxKey then
+      low = middle + 1
+    else
       local Loader = Entry.Loader
       if type(Loader) == "function" then
-        return Loader(), Entry.MinKey, Entry.MaxKey
+        local cache = __partition_cache[DataIndexTable]
+        if not cache then cache = {}; __partition_cache[DataIndexTable] = cache end
+        local partition = cache[middle]
+        if partition == nil then
+          partition = Loader()
+          cache[middle] = partition
+        end
+        return partition, Entry.MinKey, Entry.MaxKey
       end
       return Loader, Entry.MinKey, Entry.MaxKey
     end
@@ -126,7 +142,24 @@ __get_table_items = function(name, keys)
   end
   return out
 end
+-- 对白表第一次使用时物化一次，后续批量查询只访问 JS 请求的键。
+-- 分区表本身仍由 BinarySearch 按区间懒加载并缓存。
 __dialogue_cache = {}
+__project_dialogue = function(value)
+  if type(value) ~= "table" then return nil end
+  local out = {}
+  local fields = {"Content", "ContentEN", "ContentJP", "ContentKR", "ContentFR", "ContentTC", "OptionTopic", "VoiceName", "SpeakNpcId", "SpeakNpcName", "NextDialogue", "NextOptions", "ImprPlusId", "ImprCheckId"}
+  for _, field in ipairs(fields) do if value[field] ~= nil then out[field] = value[field] end end
+  return out
+end
+__project_dialogue_localized = function(value, name)
+  if type(value) ~= "table" then return nil end
+  local suffix = string.sub(name, string.len("Dialogue_Content") + 1)
+  local field = suffix == "" and "Content" or "Content" .. suffix
+  local out = {}
+  if value[field] ~= nil then out[field] = value[field] end
+  return out
+end
 __get_dialogue_items = function(names, keys)
   local out = {}
   for _, name in ipairs(names or {}) do
@@ -148,7 +181,53 @@ __get_dialogue_items = function(names, keys)
           if numericKey ~= nil then value = root[numericKey] end
         end
         if value == nil then value = root[tostring(key)] end
-        if value ~= nil then rows[key] = value end
+        if value ~= nil then
+          rows[key] = name == "Dialogue_TextMapContent" and __project_dialogue(value) or __project_dialogue_localized(value, name)
+        end
+      end
+    end
+    out[name] = rows
+  end
+  return out
+end
+__get_dialogue_reachable = function(names, starts)
+  local function lookup(root, key)
+    if type(root) ~= "table" then return nil end
+    local value = root[key]
+    if value == nil and type(key) == "string" then
+      local numericKey = tonumber(key)
+      if numericKey ~= nil then value = root[numericKey] end
+    end
+    if value == nil then value = root[tostring(key)] end
+    return value
+  end
+  local base = DataMgr[names[1]]
+  local order, seen, queue = {}, {}, {}
+  for _, key in ipairs(starts or {}) do queue[#queue + 1] = key end
+  local head = 1
+  while head <= #queue do
+    local key = queue[head]; head = head + 1
+    local normalized = tostring(key)
+    if not seen[normalized] then
+      seen[normalized] = true
+      order[#order + 1] = key
+      local value = lookup(base, key)
+      if type(value) == "table" then
+        if value.NextDialogue ~= nil then queue[#queue + 1] = value.NextDialogue end
+        if type(value.NextOptions) == "table" then
+          for _, option in pairs(value.NextOptions) do queue[#queue + 1] = option end
+        end
+      end
+    end
+  end
+  local out = {}
+  for _, name in ipairs(names or {}) do
+    local root = DataMgr[name]
+    local rows = {}
+    for _, key in ipairs(order) do
+      local value = lookup(root, key)
+      if value ~= nil then
+        rows[key] = name == "Dialogue_TextMapContent" and __project_dialogue(value) or __project_dialogue_localized(value, name)
       end
     end
     out[name] = rows

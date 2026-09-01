@@ -156,12 +156,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17822716431658133",
-            startPort = "Out",
-            endQuest = "17834423528144372900",
-            endPort = "In"
-          },
-          {
             startQuest = "17822255448411615",
             startPort = "Out",
             endQuest = "17868031519467802",
@@ -256,6 +250,18 @@ return {
             startPort = "Out",
             endQuest = "17834418777411092898",
             endPort = "In"
+          },
+          {
+            startQuest = "1782224647789153",
+            startPort = "QuestStart",
+            endQuest = "178805945679632429592",
+            endPort = "In"
+          },
+          {
+            startQuest = "17822716431658133",
+            startPort = "Out",
+            endQuest = "17834423528144372900",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -270,7 +276,7 @@ return {
             key = "1782224647789161",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 4220.545454545455, y = 276.1136363636364},
+            pos = {x = 4419.492822966507, y = 28.218899521531085},
             propsData = {ModeType = 0}
           },
           ["1782224647790169"] = {
@@ -359,7 +365,7 @@ return {
             key = "17822716431658133",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 3623.6382127983607, y = 325.92432473586445},
+            pos = {x = 3623.6382127983607, y = 324.04932473586445},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -576,7 +582,7 @@ return {
             key = "17834423528144372900",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 3950.241106719367, y = 294.2549407114621},
+            pos = {x = 4009.81817438854, y = 331.9147151475523},
             propsData = {}
           },
           ["17868031519467802"] = {
@@ -652,6 +658,22 @@ return {
               Duration = 1,
               EasingFunc = 4,
               bDisableUserInput = true
+            }
+          },
+          ["178805945679632429592"] = {
+            key = "178805945679632429592",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = -135.99999999999983, y = 468.28571428571445},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_6/0177_story_investigate",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107201},
+              bStoreToServer = true
             }
           }
         },

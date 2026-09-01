@@ -101939,6 +101939,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
           VoiceName = "voice/$Locale$/story/1102/111085/1BCF18C6"
         },
         [11108601] = {
+          Camera = "-377.890625,201.789062,305.854492,0.00005,-28.141293,-33.166599,20.0,100000.0,false,Manual,2.8,16:9 Digital Film",
           Content = "虽然维克托{性别2：哥丨姐}找到我了，但是你没喊“嗷呜”！所以不算数不算数！",
           ContentTC = "雖然維克托{性别2：哥|姐}找到我了，但是你沒喊「嗷嗚」！所以不算數不算數！",
           DialogueId = 11108601,
@@ -366749,7 +366750,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270308] = {
           Content = "{性别：他丨她}总是先把设备翻来覆去检查一遍，确保安全带万无一失，才让你去玩。",
-          ContentTC = "{性别：他丨她}總是先把設備翻來覆去檢查一遍，確保安全帶萬無一失，才讓你去玩。",
+          ContentTC = "{性别：他|她}總是先把設備翻來覆去檢查一遍，確保安全帶萬無一失，才讓你去玩。",
           DialogueId = 80270308,
           GUID = "C8F2C368",
           NextDialogue = 80270309,
@@ -366781,7 +366782,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270312] = {
           Content = "对了对了，维克托这次来好像是有什么任务来着，等{性别2：他丨她}做完任务，能让{性别2：他丨她}先回军团吗？",
-          ContentTC = "對了對了，維克托這次來好像是有什麼任務來著，等{性别2：他丨她}做完任務，能讓{性别2：他丨她}先回軍團嗎？",
+          ContentTC = "對了對了，維克托這次來好像是有什麼任務來著，等{性别2：他|她}做完任務，能讓{性别2：他|她}先回軍團嗎？",
           DialogueId = 80270312,
           GUID = "C8F2C410",
           NextDialogue = 80270313,
@@ -366805,7 +366806,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270315] = {
           Content = "军团那种地方维克托当年就不应该去。拥抱我们的乐园，{性别2：他丨她}才能获得幸福。",
-          ContentTC = "軍團那種地方維克托當年就不應該去。擁抱我們的樂園，{性别2：他丨她}才能獲得幸福。",
+          ContentTC = "軍團那種地方維克托當年就不應該去。擁抱我們的樂園，{性别2：他|她}才能獲得幸福。",
           DialogueId = 80270315,
           GUID = "C8F2C48E",
           NextDialogue = 80270316,
@@ -366973,7 +366974,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
       return {
         [80270334] = {
           Content = "（但今天遇到{nickname2}之后，{性别2：他丨她}告诉我，我可以搞砸，我们不用害怕失败。）",
-          ContentTC = "（但今天遇到{nickname2}之後，{性别2：他丨她}告訴我，我可以搞砸，我們不用害怕失敗。）",
+          ContentTC = "（但今天遇到{nickname2}之後，{性别2：他|她}告訴我，我可以搞砸，我們不用害怕失敗。）",
           DialogueId = 80270334,
           GUID = "C8F2C7AC",
           NextDialogue = 80270335,

@@ -35,11 +35,6 @@ return {
       UnitType = "Mechanism",
       UnitId = 42
     },
-    ["312940006"] = {
-      CreatorId = 312940006,
-      UnitType = "Npc",
-      UnitId = 111162
-    },
     ["312940007"] = {
       CreatorId = 312940007,
       UnitType = "Npc",
@@ -64,6 +59,26 @@ return {
       CreatorId = 312940013,
       UnitType = "Mechanism",
       UnitId = 1
+    },
+    ["312940006"] = {
+      CreatorId = 312940006,
+      UnitType = "Npc",
+      UnitId = 111162
+    },
+    ["312940014"] = {
+      CreatorId = 312940014,
+      UnitType = "Npc",
+      UnitId = 111001
+    },
+    ["312940015"] = {
+      CreatorId = 312940015,
+      UnitType = "Npc",
+      UnitId = 111110
+    },
+    ["312940016"] = {
+      CreatorId = 312940016,
+      UnitType = "Npc",
+      UnitId = 111126
     }
   },
   ManualItem = {},

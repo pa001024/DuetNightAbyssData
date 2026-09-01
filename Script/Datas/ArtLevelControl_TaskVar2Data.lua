@@ -487,6 +487,18 @@ return ReadOnly("ArtLevelControl_TaskVar2Data", {
       VarName = "IQ11020104"
     }
   },
+  IQ11020201 = {
+    [1072] = {
+      Id = 71,
+      InTime = 0,
+      LoadLevel = {
+        [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Lxzx_Main/Task_Data/Haiboliya_Thc_Lxzs01_IQ11020104_Task.Haiboliya_Thc_Lxzs01_IQ11020104_Task"
+      },
+      OutTime = 0,
+      RegionId = 1072,
+      VarName = "IQ11020201"
+    }
+  },
   IQ11020302 = {
     [1070] = {
       Id = 67,

@@ -1,4 +1,5 @@
 local M = Class()
+local SettingUtils = require("Utils.SettingUtils")
 
 function M:OnInitializeEvent()
   EventManager:AddEvent(EventID.GameViewportSizeChanged, self, self.OnViewportSizeChanged)
@@ -64,9 +65,39 @@ function M:SetCamTransUIOffset(MinX, MinY, Width, Height, ScaleX, ScaleY)
   self.CamTransWidget.SizeBox.Slot:SetOffsets(Offsets)
 end
 
+function M:GetMobileResolutionSettings()
+  local GameInstance = GWorld.GameInstance
+  if 0 ~= CommonUtils.TableLength(GameInstance.DynamicResolutionTags) then
+    return GameInstance.DynamicResolution[1]
+  end
+  local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName(self)
+  if "Android" == PlatformName or "OpenHarmony" == PlatformName then
+    return {
+      80,
+      65,
+      576
+    }
+  elseif "IOS" == PlatformName then
+    return {
+      48,
+      48,
+      0
+    }
+  end
+  return nil
+end
+
 function M:GetMobileRenderTargetSize(Width, Height)
-  local ScreenPercentage = UE4.UKismetSystemLibrary.GetConsoleVariableFloatValue("r.ScreenPercentage")
-  local MaxViewSize = UE4.UKismetSystemLibrary.GetConsoleVariableFloatValue("r.MaxViewSize")
+  local ResolutionInfo = self:GetMobileResolutionSettings()
+  if not ResolutionInfo then
+    return
+  end
+  local ScreenPercentage = ResolutionInfo[1]
+  local bUseLowLevelScreenPercentage = UE4.UKismetSystemLibrary.GetConsoleVariableFloatValue("r.UseLowLevelScreenPercentage") > 0
+  if bUseLowLevelScreenPercentage then
+    ScreenPercentage = ResolutionInfo[2]
+  end
+  local MaxViewSize = ResolutionInfo[3]
   local RenderWidth = Width
   local RenderHeight = Height
   if ScreenPercentage > 0 then

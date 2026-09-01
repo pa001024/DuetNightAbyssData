@@ -102,21 +102,9 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1780315440322308",
-            startPort = "Out",
-            endQuest = "1780315440323310",
-            endPort = "In"
-          },
-          {
             startQuest = "17803997129705034775",
             startPort = "true",
             endQuest = "1780315440323314",
-            endPort = "In"
-          },
-          {
-            startQuest = "1780315440322308",
-            startPort = "Out",
-            endQuest = "17804009481207050409",
             endPort = "In"
           },
           {
@@ -154,12 +142,6 @@ return {
             startPort = "true",
             endQuest = "17851555502116670426",
             endPort = "In"
-          },
-          {
-            startQuest = "17851555172566669160",
-            startPort = "false",
-            endQuest = "1780315440322306",
-            endPort = "Success"
           },
           {
             startQuest = "17851555172566669161",
@@ -256,6 +238,42 @@ return {
             startPort = "Out",
             endQuest = "178694828349211164392",
             endPort = "Input"
+          },
+          {
+            startQuest = "17878172730435714",
+            startPort = "Out",
+            endQuest = "1780315440323310",
+            endPort = "In"
+          },
+          {
+            startQuest = "17878172730435714",
+            startPort = "Out",
+            endQuest = "17804009481207050409",
+            endPort = "In"
+          },
+          {
+            startQuest = "1780315440322308",
+            startPort = "Out",
+            endQuest = "17878172730435714",
+            endPort = "In"
+          },
+          {
+            startQuest = "17878172730435714",
+            startPort = "Out",
+            endQuest = "17879124295713699",
+            endPort = "In"
+          },
+          {
+            startQuest = "17851555172566669162",
+            startPort = "Out",
+            endQuest = "17879138468782237814",
+            endPort = "In"
+          },
+          {
+            startQuest = "17851555172566669160",
+            startPort = "false",
+            endQuest = "1780315440322306",
+            endPort = "Success"
           }
         },
         nodeData = {
@@ -283,8 +301,8 @@ return {
           ["1780315440322308"] = {
             key = "1780315440322308",
             type = "TalkNode",
-            name = "【Ex02_FixSimple_01】",
-            pos = {x = -250.58108346645065, y = 49.979263685456075},
+            name = "【Ex02_FixSimple_01】上半",
+            pos = {x = -429.1525120378792, y = 47.12212082831322},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -630,7 +648,7 @@ return {
             key = "17858525242943076",
             type = "ChangeStaticCreatorNode",
             name = "生成/销毁节点",
-            pos = {x = -301.1343700159491, y = -218.29361561398156},
+            pos = {x = -678.2772271588062, y = -302.57932989969584},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -688,7 +706,7 @@ return {
             key = "17869341417102235602",
             type = "StandAloneBlackScreenNode",
             name = "独立黑屏节点",
-            pos = {x = -592.4668433262796, y = 34.100697329547074},
+            pos = {x = -708.1811290405653, y = 38.38641161526136},
             propsData = {
               FadeInSeconds = 0,
               FadeOutSeconds = 0,
@@ -718,6 +736,100 @@ return {
               FadeOutSeconds = 0,
               DurationSeconds = 1,
               IsStandAlone = true
+            }
+          },
+          ["17878172730435714"] = {
+            key = "17878172730435714",
+            type = "TalkNode",
+            name = "【Ex02_FixSimple_01】下半",
+            pos = {x = -166.00482744751105, y = 29.428571428571466},
+            propsData = {
+              IsNpcNode = false,
+              bUseFlowAssetActors = true,
+              FirstDialogueId = 0,
+              FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1102/110201/11020101_chai.11020101_chai'",
+              TalkType = "FixSimple",
+              TalkStageName = "Ex02_FixSimple_01",
+              BlendInTime = 0,
+              BlendOutTime = 0,
+              InType = "FadeIn",
+              OutType = "FadeOut",
+              ShowFadeDetail = false,
+              BlendEaseExp = 2,
+              UseProceduralCamera = false,
+              ProceduralCameraId = 1,
+              HideNpcs = true,
+              HideMonsters = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
+              HideMechanismsFX = false,
+              ShowSkipButton = false,
+              ShowReviewButton = true,
+              ShowWikiButton = true,
+              SkipToOption = false,
+              DisableNpcOptimization = false,
+              DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
+              PauseTimeElapse = false,
+              BeginNewTargetPointName = "",
+              EndNewTargetPointName = "",
+              CameraLookAtTartgetPoint = "",
+              RestoreStand = false,
+              PauseNpcBT = true,
+              bLockNpcSpawn = false,
+              OptionType = "normal",
+              bLockHighestLOD = false,
+              FreezeWorldComposition = false,
+              bTravelFullLoadWorldComposition = false,
+              SwitchToMaster = "None",
+              bNpcActionKeepIn = false,
+              bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
+              NormalOptions = {},
+              OverrideFailBlend = false
+            }
+          },
+          ["17879124295713699"] = {
+            key = "17879124295713699",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 90.52014652014645, y = -309.67773892773903},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["17879138468782237814"] = {
+            key = "17879138468782237814",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2677.348984774816, y = -251.82079419436377},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/cbt01/0033_story_humour",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107001},
+              bStoreToServer = true
+            }
+          },
+          ["17879141680384472999"] = {
+            key = "17879141680384472999",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2422.445010456857, y = -575.4191340695909},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/cbt01/0033_story_humour",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107001},
+              bStoreToServer = true
             }
           }
         },
@@ -814,15 +926,27 @@ return {
             endPort = "In"
           },
           {
+            startQuest = "17870194581832434",
+            startPort = "Out",
+            endQuest = "17811837939997207157",
+            endPort = "In"
+          },
+          {
             startQuest = "1780315440331371",
+            startPort = "Out",
+            endQuest = "17879140978703355733",
+            endPort = "In"
+          },
+          {
+            startQuest = "17879140978703355733",
             startPort = "Out",
             endQuest = "17870194581832434",
             endPort = "Input"
           },
           {
-            startQuest = "17870194581832434",
-            startPort = "Out",
-            endQuest = "17811837939997207157",
+            startQuest = "17804134442759078507",
+            startPort = "true",
+            endQuest = "17882320138931126819",
             endPort = "In"
           }
         },
@@ -831,7 +955,7 @@ return {
             key = "1780315440331368",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 318.2823529411765, y = 250.68235294117648},
+            pos = {x = 284.2823529411765, y = 262.6823529411765},
             propsData = {ModeType = 0}
           },
           ["1780315440331369"] = {
@@ -954,7 +1078,7 @@ return {
             key = "178041481421810090715",
             type = "SetVarNode",
             name = "设置变量值",
-            pos = {x = 2396.0252313475994, y = 158.59504677244965},
+            pos = {x = 2714.0252313475994, y = 34.09504677244965},
             propsData = {
               VarName = "ex02_11020102",
               VarValue = 3
@@ -964,7 +1088,7 @@ return {
             key = "17811837939997207157",
             type = "ChangeStaticCreatorNode",
             name = "生成/销毁节点",
-            pos = {x = 2131.6885660442667, y = 101.88491288964087},
+            pos = {x = 2400.1885660442667, y = 34.38491288964087},
             propsData = {
               ActiveEnable = false,
               EnableBlackScreenSync = false,
@@ -1033,12 +1157,39 @@ return {
             key = "17870194581832434",
             type = "StandAloneBlackScreenNode",
             name = "独立黑屏节点",
-            pos = {x = 1850.9943066712, y = 95.92630978184995},
+            pos = {x = 2119.4943066712003, y = 28.42630978184995},
             propsData = {
               FadeInSeconds = 0,
               FadeOutSeconds = 0,
               DurationSeconds = 1,
               IsStandAlone = true
+            }
+          },
+          ["17879140978703355733"] = {
+            key = "17879140978703355733",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1839.0828437797506, y = 47.688237767650776},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["17882320138931126819"] = {
+            key = "17882320138931126819",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 805.6213369963377, y = -111.75031795054643},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/cbt01/0033_story_humour",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107001},
+              bStoreToServer = true
             }
           }
         },
@@ -1876,7 +2027,7 @@ return {
               FadeIn = false,
               FadeOut = false,
               bResetCamera = true,
-              bForceAsyncLoading = true,
+              bForceAsyncLoading = false,
               IsWhite = false
             }
           },

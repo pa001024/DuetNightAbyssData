@@ -40,6 +40,8 @@ export class LuaDataManager {
     private skillUtilsReady = false
     /** calcSkillDesc memo 缓存：`${level}\x00${desc}` → 结果串 */
     private calcDescCache = new Map<string, string>()
+    /** Story 投影函数只需在常驻 VM 中定义一次。 */
+    private storyProjectorReady = false
 
     /** 项目根（Script/Datas、Utils 所在） */
     constructor(public root: string = PROJECT_ROOT) {}
@@ -210,14 +212,15 @@ export class LuaDataManager {
         const file = join(this.root, relativePath)
         if (!existsSync(file)) return undefined
         const L = this.ensureState()
-        if (
-            lauxlib.luaL_dostring(
-                L,
-                to_luastring(`
+        if (!this.storyProjectorReady) {
+            if (
+                lauxlib.luaL_dostring(
+                    L,
+                    to_luastring(`
             __project_story = function(value)
                 local function props(value)
                     local out = {}
-                    local fields = {"FirstDialogueId", "FlowAssetPath", "GuidePointName", "StoryGuidePointName", "UnitBPPath", "UnitName", "QuestId", "QuestDescription", "QuestDeatil", "SubRegionId", "QuestionIds", "AnswerIds", "SpecialConfigId"}
+                    local fields = {"FirstDialogueId", "FlowAssetPath", "TalkType", "GuidePointName", "StoryGuidePointName", "UnitBPPath", "UnitName", "QuestId", "QuestDescription", "QuestDeatil", "SubRegionId", "QuestionIds", "AnswerIds", "SpecialConfigId"}
                     for _, field in ipairs(fields) do if value and value[field] ~= nil then out[field] = value[field] end end
                     return out
                 end
@@ -246,10 +249,12 @@ export class LuaDataManager {
                 return {storyName = value and value.storyName or "", storyDescription = value and value.storyDescription or "", storyNodeData = nodes(value and value.storyNodeData), lineData = value and value.lineData or {}}
             end
         `)
-            ) !== 0
-        ) {
-            lua.lua_settop(L, 0)
-            return undefined
+                ) !== 0
+            ) {
+                lua.lua_settop(L, 0)
+                return undefined
+            }
+            this.storyProjectorReady = true
         }
         const code = readFileSync(file, "utf8")
         if (lauxlib.luaL_loadstring(L, to_luastring(code)) !== 0 || lua.lua_pcall(L, 0, 1, 0) !== 0) {
@@ -422,6 +427,33 @@ export class LuaDataManager {
                     this.jsCache.set(`${name}\x00${normalized}`, value)
                     map.set(normalized, value)
                 }
+            }
+            result.set(name, map)
+        }
+        return result
+    }
+
+    getDialogueReachableItems(names: string[], starts: Array<number | string>): Map<string, Map<string, LuaValue>> {
+        const result = new Map<string, Map<string, LuaValue>>()
+        if (names.length === 0 || starts.length === 0) return result
+        const L = this.ensureState()
+        lua.lua_getglobal(L, "__get_dialogue_reachable")
+        this.pushJsValue(L, names)
+        this.pushJsValue(L, starts)
+        if (lua.lua_pcall(L, 2, 1, 0) !== 0) {
+            lua.lua_pop(L, 1)
+            return result
+        }
+        const values = luaValueToJs(L, -1)
+        lua.lua_pop(L, 1)
+        if (!values || typeof values !== "object" || Array.isArray(values)) return result
+        for (const name of names) {
+            const rows = (values as Record<string, LuaValue>)[name]
+            if (!rows || typeof rows !== "object" || Array.isArray(rows)) continue
+            const map = new Map<string, LuaValue>()
+            for (const [key, value] of Object.entries(rows as Record<string, LuaValue>)) {
+                this.jsCache.set(`${name}\x00${key}`, value)
+                map.set(key, value)
             }
             result.set(name, map)
         }

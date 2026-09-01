@@ -19,6 +19,7 @@ function M:Construct()
   self.Btn_CopyCode.BP_OnAddedToFocusPath:Add(self, self.OnBtnAddedToFocusPath)
   self.Btn_CopyCode.BP_OnRemovedFromFocusPath:Add(self, self.OnBtnRemovedFromFocusPath)
   self.Btn_CopyCode:SetGamepadIconVisibility(false)
+  self.Text_DyeCode:SetText(GText("UI_Dye_Output_Build"))
   self.CommunityShareCode = ""
   self:ResetCommunityCodeState()
   self:SetVisibility(UIConst.VisibilityOp.Collapsed)

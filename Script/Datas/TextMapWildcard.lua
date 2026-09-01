@@ -265,10 +265,6 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "Impression_UI_CheckSuccRate",
     WildcardClassification = "Story"
   },
-  LevelUP_Need_Reputation = {
-    TextMapId = "LevelUP_Need_Reputation",
-    WildcardClassification = "Story"
-  },
   MESSAGE_LOADING_312_PC = {
     TextMapId = "MESSAGE_LOADING_312_PC",
     WildcardClassification = "Story"
@@ -363,6 +359,10 @@ return ReadOnly("TextMapWildcard", {
   },
   Mail_Title_101001 = {
     TextMapId = "Mail_Title_101001",
+    WildcardClassification = "Story"
+  },
+  MoneyTree_Dialog_Today = {
+    TextMapId = "MoneyTree_Dialog_Today",
     WildcardClassification = "Story"
   },
   MonsterRushEvent_Wuyou_DungeonDes03 = {
@@ -1801,6 +1801,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_Npc_Name_ZhuJueBai",
     WildcardClassification = "Story"
   },
+  UI_Observation_InfoTitle = {
+    TextMapId = "UI_Observation_InfoTitle",
+    WildcardClassification = "Story"
+  },
   UI_Pet_Skill_CD = {
     TextMapId = "UI_Pet_Skill_CD",
     WildcardClassification = "Story"
@@ -1979,6 +1983,10 @@ return ReadOnly("TextMapWildcard", {
   },
   UI_Squad_Save = {
     TextMapId = "UI_Squad_Save",
+    WildcardClassification = "Story"
+  },
+  UI_StringBoard_Total = {
+    TextMapId = "UI_StringBoard_Total",
     WildcardClassification = "Story"
   },
   UI_TELEPORTPOINT_INTERACTIVE = {

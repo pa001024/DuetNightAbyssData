@@ -162,12 +162,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1783433088941125",
-            startPort = "QuestStart",
-            endQuest = "17834381190073279784",
-            endPort = "Input"
-          },
-          {
             startQuest = "17834381190073279783",
             startPort = "Out",
             endQuest = "1783433088942129",
@@ -256,6 +250,18 @@ return {
             startPort = "Success",
             endQuest = "17871429874553358591",
             endPort = "In"
+          },
+          {
+            startQuest = "178805923415329077655",
+            startPort = "Out",
+            endQuest = "17834381190073279784",
+            endPort = "Input"
+          },
+          {
+            startQuest = "1783433088941125",
+            startPort = "QuestStart",
+            endQuest = "178805923415329077655",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -263,7 +269,7 @@ return {
             key = "1783433088941125",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = -582.7747252747256, y = 252.88063385889475},
+            pos = {x = -957.9806076276667, y = 76.32181032948299},
             propsData = {ModeType = 0}
           },
           ["1783433088941126"] = {
@@ -660,6 +666,22 @@ return {
               NewDescription = "Description_110221_01h",
               NewDetail = "Content_110221_01h",
               SubTaskTargetIndex = 0
+            }
+          },
+          ["178805923415329077655"] = {
+            key = "178805923415329077655",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = -588.5000000000005, y = 70.27272727272725},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_6/0177_story_investigate",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107101},
+              bStoreToServer = true
             }
           }
         },
@@ -1900,7 +1922,7 @@ return {
       key = "1783433088937105",
       type = "StoryNode",
       name = "前往山洞",
-      pos = {x = 2247.5346677893604, y = 316.7783654751048},
+      pos = {x = 2246.0346677893604, y = 316.7783654751048},
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
@@ -1973,12 +1995,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1783433088982367",
-            startPort = "Out",
-            endQuest = "1783433088983375",
-            endPort = "In"
-          },
-          {
             startQuest = "1783433088981362",
             startPort = "QuestStart",
             endQuest = "17850576730676670317",
@@ -2013,6 +2029,12 @@ return {
             startPort = "Out",
             endQuest = "1783433088983373",
             endPort = "Input_1"
+          },
+          {
+            startQuest = "1783433088982367",
+            startPort = "Out",
+            endQuest = "1783433088983375",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -2197,7 +2219,7 @@ return {
             key = "1783433088983375",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 2875.7523504617157, y = 339.81694543846294},
+            pos = {x = 2933.2523504617157, y = 339.06694543846294},
             propsData = {}
           },
           ["17850576730676670317"] = {

@@ -1668,7 +1668,8 @@ return ReadOnly("VisualEffect", {
     EffectId = 273,
     EffectPath = "/Game/Asset/Effect/Niagara/GamePlay/Railway/NS_Railway_body.NS_Railway_body",
     FXPriorityType = 90,
-    PlayLocation = T.RT_78
+    PlayLocation = T.RT_78,
+    SoundID = 232
   },
   [274] = {
     EffectId = 274,
@@ -11701,8 +11702,7 @@ return ReadOnly("VisualEffect", {
       scale = T.RT_156
     },
     EffectPath = "/Game/Asset/Effect/Niagara/Boss/Aida/Skill04/NS_Boss_Aida_Skill04_Explosion_01.NS_Boss_Aida_Skill04_Explosion_01",
-    FXPriorityType = 100,
-    SoundID = 852005
+    FXPriorityType = 100
   },
   [852005] = {
     EffectId = 852005,

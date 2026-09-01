@@ -259,6 +259,10 @@ return ReadOnly("SoundEffect", {
     SoundId = 231,
     SoundPath = "event:/sfx/common/scene/ex02/rail_glide_loop"
   },
+  [232] = {
+    SoundId = 232,
+    SoundPath = "event:/sfx/common/scene/ex02/rail_glide_fast_loop"
+  },
   [301] = {
     NumLimit = 5,
     SoundId = 301,
@@ -4069,11 +4073,11 @@ return ReadOnly("SoundEffect", {
   },
   [852019] = {
     SoundId = 852019,
-    SoundPath = "event:/sfx/boss/Aida/skill13_fx_"
+    SoundPath = "event:/sfx/boss/Aida/skill13_fx_stop"
   },
   [852021] = {
     SoundId = 852021,
-    SoundPath = "event:/sfx/boss/Aida/skill13_fx_"
+    SoundPath = "event:/sfx/boss/Aida/skill13_fx_exp"
   },
   [852101] = {
     SoundId = 852101,

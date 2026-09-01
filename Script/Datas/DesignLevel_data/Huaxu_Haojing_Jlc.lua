@@ -938,12 +938,6 @@ return {
     },
     ["7072001"] = {
       AutoReset = 0,
-      ["2420037"] = {
-        CreatorId = 2420037,
-        UnitType = "Mechanism",
-        UnitId = 70118,
-        RarelyId = 7072001
-      },
       ["2420038"] = {
         CreatorId = 2420038,
         UnitType = "Mechanism",
@@ -954,6 +948,12 @@ return {
         CreatorId = 2420039,
         UnitType = "Mechanism",
         UnitId = 1210171,
+        RarelyId = 7072001
+      },
+      ["2420037"] = {
+        CreatorId = 2420037,
+        UnitType = "Mechanism",
+        UnitId = 70118,
         RarelyId = 7072001
       }
     },

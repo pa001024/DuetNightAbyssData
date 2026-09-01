@@ -168,12 +168,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1780920816035374",
-            startPort = "Out",
-            endQuest = "178704365008212288070",
-            endPort = "Input"
-          },
-          {
             startQuest = "178704365008212288070",
             startPort = "Out",
             endQuest = "1780920816036377",
@@ -182,13 +176,25 @@ return {
           {
             startQuest = "1780920816034370",
             startPort = "QuestStart",
-            endQuest = "17877299493202278",
+            endQuest = "178291481094815105531",
+            endPort = "Input"
+          },
+          {
+            startQuest = "17827173667691078753",
+            startPort = "Out",
+            endQuest = "17879144202635591143",
             endPort = "In"
           },
           {
-            startQuest = "17877299493202278",
+            startQuest = "1780920816035374",
             startPort = "Out",
-            endQuest = "178291481094815105531",
+            endQuest = "17879150304767825018",
+            endPort = "In"
+          },
+          {
+            startQuest = "17879150304767825018",
+            startPort = "Out",
+            endQuest = "178704365008212288070",
             endPort = "Input"
           }
         },
@@ -337,7 +343,7 @@ return {
             key = "1780920816036377",
             type = "ChangeStaticCreatorNode",
             name = "销毁伊薇",
-            pos = {x = 2189.2064984852077, y = 40.979225069055495},
+            pos = {x = 2354.858672398251, y = -47.71642710485755},
             propsData = {
               ActiveEnable = false,
               EnableBlackScreenSync = false,
@@ -438,7 +444,7 @@ return {
             key = "178704365008212288070",
             type = "StandAloneBlackScreenNode",
             name = "独立黑屏节点",
-            pos = {x = 1876.0895573332311, y = 17.445457473607448},
+            pos = {x = 2074.3504268984484, y = -52.98932513508821},
             propsData = {
               FadeInSeconds = 0,
               FadeOutSeconds = 0,
@@ -460,15 +466,31 @@ return {
               StaticCreatorIdList = {142790445}
             }
           },
-          ["17877299493202278"] = {
-            key = "17877299493202278",
-            type = "SendMessageNode",
-            name = "发送消息",
-            pos = {x = -855.5154968870149, y = 159.31483686592034},
+          ["17879144202635591143"] = {
+            key = "17879144202635591143",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 970.5630252100826, y = -180.29946524064124},
             propsData = {
-              MessageType = "GameMode",
-              MessageContent = "Hammer_Spawn",
-              UnitId = -1
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_6/0183_scene_park",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107101},
+              bStoreToServer = true
+            }
+          },
+          ["17879150304767825018"] = {
+            key = "17879150304767825018",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1816.6782697268618, y = -25.305277842361704},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },
@@ -1292,12 +1314,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1780920816056475",
-            startPort = "QuestStart",
-            endQuest = "17809973755635132965",
-            endPort = "In"
-          },
-          {
             startQuest = "17809973755635132965",
             startPort = "false",
             endQuest = "1780920816056476",
@@ -1457,6 +1473,12 @@ return {
             startQuest = "178126636428716681193",
             startPort = "Out",
             endQuest = "178731993819615695330",
+            endPort = "In"
+          },
+          {
+            startQuest = "17865226696382490",
+            startPort = "Out",
+            endQuest = "17809973755635132965",
             endPort = "In"
           }
         },
@@ -1776,7 +1798,7 @@ return {
             pos = {x = 1825.9527746001022, y = 361.75353524184834},
             propsData = {
               CreateType = "StaticCreator",
-              CreateId = 142790445,
+              CreateId = 162790506,
               StateId = 1701014,
               IsGuideEnable = false,
               GuidePointName = ""
@@ -1789,7 +1811,7 @@ return {
             pos = {x = 1827.3813460286735, y = 503.1821066704198},
             propsData = {
               CreateType = "StaticCreator",
-              CreateId = 142790445,
+              CreateId = 162790506,
               StateId = 1701015,
               IsGuideEnable = false,
               GuidePointName = ""
@@ -1822,15 +1844,15 @@ return {
             propsData = {
               IsShow = false,
               bOpenRangeEffect = false,
-              GuideType = "M",
-              GuideName = "Mechanism_dachuiji_142790445"
+              GuideType = "P",
+              GuideName = "Target_dachuiji"
             }
           },
           ["17865226696382490"] = {
             key = "17865226696382490",
             type = "SendMessageNode",
             name = "发送消息",
-            pos = {x = 75.17307692307702, y = 357.49038461538476},
+            pos = {x = -40.82692307692298, y = 513.4903846153848},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "Dachui_interactive",

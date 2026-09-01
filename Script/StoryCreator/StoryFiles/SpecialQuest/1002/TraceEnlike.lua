@@ -1914,6 +1914,18 @@ return {
             startPort = "Out",
             endQuest = "1755857147213632607",
             endPort = "In"
+          },
+          {
+            startQuest = "17561324681308864848",
+            startPort = "Out",
+            endQuest = "17881596892565034950",
+            endPort = "In"
+          },
+          {
+            startQuest = "17561314356234429810",
+            startPort = "Out",
+            endQuest = "17881597748256153072",
+            endPort = "Input"
           }
         },
         nodeData = {
@@ -2157,7 +2169,7 @@ return {
             key = "17561314356234429810",
             type = "TalkNode",
             name = "看恩里克",
-            pos = {x = 648.2838383838383, y = 327.98181818181814},
+            pos = {x = 558.2838383838383, y = 329.3454545454545},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 10129301,
@@ -2165,7 +2177,7 @@ return {
               TalkType = "FixSimple",
               TalkStageName = "Stage_101293",
               BlendInTime = 1,
-              BlendOutTime = 1,
+              BlendOutTime = 0,
               InType = "FadeIn",
               OutType = "FadeOut",
               ShowFadeDetail = false,
@@ -2186,7 +2198,7 @@ return {
               CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
-              EndNewTargetPointName = "101293Nvzhu1",
+              EndNewTargetPointName = "",
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
@@ -2253,7 +2265,7 @@ return {
             key = "17561324681308864848",
             type = "ChangeStaticCreatorNode",
             name = "生成/销毁节点",
-            pos = {x = 1031.7937279954306, y = -157.53027406030483},
+            pos = {x = 644.5210007227033, y = 42.92427139424061},
             propsData = {
               ActiveEnable = false,
               EnableBlackScreenSync = false,
@@ -2330,6 +2342,33 @@ return {
               StaticCreatorId = 1191293,
               GuideType = "M",
               GuidePointName = "Mechanism_1191293"
+            }
+          },
+          ["17881596892565034950"] = {
+            key = "17881596892565034950",
+            type = "AsyncSetActorLocationAndRotationNode",
+            name = "异步设置玩家位置旋转",
+            pos = {x = 899.524720893142, y = 39.18241626794248},
+            propsData = {
+              UnitId = 0,
+              NewTargetPointName = "101293Nvzhu1",
+              FadeIn = false,
+              FadeOut = false,
+              bResetCamera = true,
+              bForceAsyncLoading = false,
+              IsWhite = false
+            }
+          },
+          ["17881597748256153072"] = {
+            key = "17881597748256153072",
+            type = "StandAloneBlackScreenNode",
+            name = "独立黑屏节点",
+            pos = {x = 535.4338118022331, y = -88.9994019138757},
+            propsData = {
+              FadeInSeconds = 0,
+              FadeOutSeconds = 1,
+              DurationSeconds = 1,
+              IsStandAlone = true
             }
           }
         },

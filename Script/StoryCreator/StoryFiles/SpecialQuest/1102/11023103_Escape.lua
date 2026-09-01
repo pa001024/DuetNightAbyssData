@@ -180,21 +180,9 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17817737025571064067",
-            startPort = "Out",
-            endQuest = "1781772565042123",
-            endPort = "Fail"
-          },
-          {
             startQuest = "17821359497585359094",
             startPort = "Out",
             endQuest = "17821360167205359773",
-            endPort = "In"
-          },
-          {
-            startQuest = "17821360167205359773",
-            startPort = "Out",
-            endQuest = "17817736936691063846",
             endPort = "In"
           },
           {
@@ -262,6 +250,42 @@ return {
             startPort = "Out",
             endQuest = "17870718338998942176",
             endPort = "In"
+          },
+          {
+            startQuest = "1781772565041107",
+            startPort = "QuestStart",
+            endQuest = "178816670599623496873",
+            endPort = "In"
+          },
+          {
+            startQuest = "17817737025571064067",
+            startPort = "Out",
+            endQuest = "178816675643123497401",
+            endPort = "In"
+          },
+          {
+            startQuest = "178816675643123497401",
+            startPort = "Out",
+            endQuest = "1781772565042123",
+            endPort = "Fail"
+          },
+          {
+            startQuest = "17821360167205359773",
+            startPort = "Out",
+            endQuest = "178816676839023497775",
+            endPort = "In"
+          },
+          {
+            startQuest = "178816676839023497775",
+            startPort = "Out",
+            endQuest = "17817736936691063846",
+            endPort = "In"
+          },
+          {
+            startQuest = "17821359497585359094",
+            startPort = "Out",
+            endQuest = "178817214795045880206",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -269,7 +293,7 @@ return {
             key = "1781772565041107",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 800, y = 300},
+            pos = {x = 680, y = 42},
             propsData = {ModeType = 0}
           },
           ["1781772565041115"] = {
@@ -525,7 +549,12 @@ return {
                 312780816,
                 312780817,
                 312780818,
-                312780819
+                312780819,
+                312780839,
+                312780840,
+                312780841,
+                312780842,
+                312780843
               }
             }
           },
@@ -799,7 +828,12 @@ return {
                 312780816,
                 312780817,
                 312780818,
-                312780819
+                312780819,
+                312780839,
+                312780840,
+                312780841,
+                312780842,
+                312780843
               }
             }
           },
@@ -859,6 +893,60 @@ return {
               MessageType = "GameMode",
               MessageContent = "HutaoWave2_End",
               UnitId = -1
+            }
+          },
+          ["178816670599623496873"] = {
+            key = "178816670599623496873",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1092, y = -486.2758620840852},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_6/0184_story_curse_echoes",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107001},
+              bStoreToServer = true
+            }
+          },
+          ["178816675643123497401"] = {
+            key = "178816675643123497401",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2104, y = 690},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["178816676839023497775"] = {
+            key = "178816676839023497775",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 6540, y = 2},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["178817214795045880206"] = {
+            key = "178817214795045880206",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 6302.265611426231, y = 182.369092867128},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_6/0189_cs_eve_defend_on_bridge",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107001},
+              bStoreToServer = true
             }
           }
         },

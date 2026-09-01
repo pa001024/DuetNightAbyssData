@@ -96,12 +96,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1784987126285806",
-            startPort = "Out",
-            endQuest = "1784987086358101",
-            endPort = "Fail"
-          },
-          {
             startQuest = "1784987112510555",
             startPort = "Out",
             endQuest = "17849871835811277",
@@ -150,12 +144,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17849878632343580",
-            startPort = "Out",
-            endQuest = "17850681848301112433",
-            endPort = "In"
-          },
-          {
             startQuest = "17849881507584266",
             startPort = "Out",
             endQuest = "17849878632343580",
@@ -166,6 +154,36 @@ return {
             startPort = "Out",
             endQuest = "178748401144824097227",
             endPort = "Input"
+          },
+          {
+            startQuest = "17849878632343580",
+            startPort = "Out",
+            endQuest = "178816683631024615867",
+            endPort = "In"
+          },
+          {
+            startQuest = "178816683631024615867",
+            startPort = "Out",
+            endQuest = "17850681848301112433",
+            endPort = "In"
+          },
+          {
+            startQuest = "1784987126285806",
+            startPort = "Out",
+            endQuest = "178816684847824616307",
+            endPort = "In"
+          },
+          {
+            startQuest = "178816684847824616307",
+            startPort = "Out",
+            endQuest = "1784987086358101",
+            endPort = "Fail"
+          },
+          {
+            startQuest = "178498708635785",
+            startPort = "QuestStart",
+            endQuest = "178816685404624616503",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -414,6 +432,44 @@ return {
               StopTimeElapse = true,
               RevertToDefaultWeather = false,
               ForceWeatherType = -1
+            }
+          },
+          ["178816683631024615867"] = {
+            key = "178816683631024615867",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2486, y = 328},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["178816684847824616307"] = {
+            key = "178816684847824616307",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1790, y = 828},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["178816685404624616503"] = {
+            key = "178816685404624616503",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1096, y = -248},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_6/0184_story_curse_echoes",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107101},
+              bStoreToServer = true
             }
           }
         },

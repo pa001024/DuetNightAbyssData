@@ -406,6 +406,36 @@ return {
             startPort = "Out",
             endQuest = "17830709542381085970",
             endPort = "In"
+          },
+          {
+            startQuest = "178454326055128746200",
+            startPort = "Out",
+            endQuest = "17879072307791288",
+            endPort = "In"
+          },
+          {
+            startQuest = "17879072307791288",
+            startPort = "Out",
+            endQuest = "17879084775761118721",
+            endPort = "In"
+          },
+          {
+            startQuest = "178453895596527637967",
+            startPort = "Out",
+            endQuest = "17879084775761118721",
+            endPort = "Stop"
+          },
+          {
+            startQuest = "1781686084680526",
+            startPort = "QuestStart",
+            endQuest = "178791732498220129344",
+            endPort = "In"
+          },
+          {
+            startQuest = "178454900531729863148",
+            startPort = "Out",
+            endQuest = "178791736993120130270",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -1055,8 +1085,8 @@ return {
           ["178454900531729863148"] = {
             key = "178454900531729863148",
             type = "SendMessageNode",
-            name = "通知打靶游戏开始",
-            pos = {x = 3116.9080442740465, y = 339.5866729777129},
+            name = "通知过山车开始",
+            pos = {x = 3135.479472845475, y = 312.44381583485574},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "Rollercoaster_Start",
@@ -1418,6 +1448,62 @@ return {
               Duration = 0.5,
               EasingFunc = 9,
               bDisableUserInput = true
+            }
+          },
+          ["17879072307791288"] = {
+            key = "17879072307791288",
+            type = "BossBattleFinishNode",
+            name = "收到强制瞄准消息",
+            pos = {x = 1244.630935113756, y = 484.3976873081974},
+            propsData = {
+              SendMessage = "",
+              FinishCondition = "EM_Shoot_Force"
+            }
+          },
+          ["17879084775761118721"] = {
+            key = "17879084775761118721",
+            type = "CameraLookAtNode",
+            name = "CameraLookAt",
+            pos = {x = 1585.5872682854822, y = 506.26185867634086},
+            propsData = {
+              TargetType = "Point",
+              PointName = "TargetPoint_Shoot",
+              ActorId = 0,
+              Duration = 2,
+              EasingFunc = 0,
+              bDisableUserInput = false
+            }
+          },
+          ["178791732498220129344"] = {
+            key = "178791732498220129344",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = -545.4805194805195, y = 86.62337662337688},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_6/0176_story_horror",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107301},
+              bStoreToServer = true
+            }
+          },
+          ["178791736993120130270"] = {
+            key = "178791736993120130270",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 3186.1358568835876, y = -172.428858426723},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/mute",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107301},
+              bStoreToServer = true
             }
           }
         },

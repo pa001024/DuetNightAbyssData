@@ -20,6 +20,11 @@ return {
       UnitType = "Mechanism",
       UnitId = 1
     },
+    ["405"] = {
+      CreatorId = 405,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
     ["142810004"] = {
       CreatorId = 142810004,
       UnitType = "Mechanism",
@@ -74,11 +79,6 @@ return {
       CreatorId = 142810001,
       UnitType = "Npc",
       UnitId = 111215
-    },
-    ["405"] = {
-      CreatorId = 405,
-      UnitType = "Mechanism",
-      UnitId = 1
     }
   },
   ManualItem = {},

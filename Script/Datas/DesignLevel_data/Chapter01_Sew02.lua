@@ -582,11 +582,6 @@ return {
       UnitType = "Mechanism",
       UnitId = 10411
     },
-    ["1730005"] = {
-      ManualItemId = 1730005,
-      UnitType = "Mechanism",
-      UnitId = 70403
-    },
     ["1730004"] = {
       ManualItemId = 1730004,
       UnitType = "Mechanism",

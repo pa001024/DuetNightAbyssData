@@ -101940,6 +101940,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
           VoiceName = "voice/$Locale$/story/1102/111085/1BCF18C6"
         },
         [11108601] = {
+          Camera = "-377.890625,201.789062,305.854492,0.00005,-28.141293,-33.166599,20.0,100000.0,false,Manual,2.8,16:9 Digital Film",
           Content = "虽然维克托{性别2：哥丨姐}找到我了，但是你没喊“嗷呜”！所以不算数不算数！",
           ContentJP = "見つかっちゃったけど、「がおーっ」って言ってない！だから今のはなし、なしだよ！",
           DialogueId = 11108601,
@@ -365920,7 +365921,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270102] = {
           Content = "小动物们陪她一起玩贪吃鬼，饿了就有小鸟给她叼来水果，困了就跟小动物们抱在一起睡大觉，小朋友在森林里玩得十分开心！",
-          ContentJP = "森のみんなは、女の子を遊びに誘ってくれました。おなかがすけば小鳥が木の実を運び、眠くなれば動物たちにくるまれてひと休み。女の子は、森で過ごす毎日が大好きになりました。",
+          ContentJP = "森のみんなは、女の子を「くいしんぼ鬼」に誘ってくれました。おなかがすけば小鳥が木の実を運び、眠くなれば動物たちにくるまれてひと休み。女の子は、森で過ごす毎日が大好きになりました。",
           DialogueId = 80270102,
           GUID = "C8F2A19C",
           IsBlack = 1,
@@ -365938,7 +365939,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270104] = {
           Content = "咿呜~故事讲完了，兔妈妈，你觉得怎么样？",
-          ContentJP = "あぅ～、おしまい！ウサギママ、どうだった？",
+          ContentJP = "ひぅ～、おしまい！ウサギママ、どうだった？",
           DialogueId = 80270104,
           GUID = "C8F2A1F0",
           NextDialogue = 80270105,
@@ -365962,7 +365963,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270107] = {
           Content = "咿呜……我光是编故事就编了好久，轮到起名字的时候感觉整个脑袋都空空的了，一点想法都没有！",
-          ContentJP = "あぅ……最後まで書き上げるので精いっぱいだったの。おしまいまでたどり着いたら安心しちゃって、名前をつけるのをすっかり忘れてた……",
+          ContentJP = "ひぅぅ……最後まで書き上げるので精いっぱいだったの。いざ名前をつけようとしたら、頭の中が真っ白になっちゃって、何も思いつかなかったの。",
           DialogueId = 80270107,
           GUID = "C8F2A26E",
           NextDialogue = 80270108,
@@ -365978,7 +365979,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270109] = {
           Content = "咿呜？兔妈妈的故事吗，那我得竖起耳朵好好听了。",
-          ContentJP = "あぅ？ウサギママのお話？じゃあ、耳をぴんってして聞くね。",
+          ContentJP = "ひぅ？ウサギママのお話？じゃあ、耳をぴんってして聞くね。",
           DialogueId = 80270109,
           GUID = "C8F2A2C2",
           NextDialogue = 80270110,
@@ -366010,7 +366011,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270113] = {
           Content = "咿呜！那不是很危险吗？",
-          ContentJP = "あぅ！それ、すごく危ないよ……！",
+          ContentJP = "ひぅ！それ、すごく危ないよ……！",
           DialogueId = 80270113,
           GUID = "C8F2A36A",
           NextDialogue = 80270114,
@@ -366130,7 +366131,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270128] = {
           Content = "咿呜，我明白了！",
-          ContentJP = "あぅ……うん！すっごく嬉しい！",
+          ContentJP = "ひぅ……うん！すっごく嬉しい！",
           DialogueId = 80270128,
           GUID = "C8F2A5E0",
           NextDialogue = 80270129,
@@ -366170,7 +366171,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270133] = {
           Content = "那……最近「死神」爷爷总是念叨一些贵族、帝都之类我听不懂的词，镇长叔叔觉得他不适合继续扮演「死神」了，想把他送进酣梦池……",
-          ContentJP = "じゃあね……最近、「死神」のおじいちゃんが、貴族とか帝都とか、役にはない話をするようになったの。それで町長さんが、「死神」はもう続けられないから、うつつ池へ送るって……",
+          ContentJP = "じゃあね……最近、「<up text=\"デス\">死神</>」のおじいちゃんが、貴族とか帝都とか、役にはない話をするようになったの。それで町長さんが、「死神」はもう続けられないから、うつつ池へ送るって……",
           DialogueId = 80270133,
           GUID = "C8F2A6B2",
           NextDialogue = 80270134,
@@ -366202,7 +366203,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270137] = {
           Content = "嗯，我允许他继续扮演「死神」……<H>现在允许</>。",
-          ContentJP = "ええ。「死神」の役は続けていいわ……<H>今は、ね</>。",
+          ContentJP = "ええ。「<up text=\"デス\">死神</>」の役は続けていいわ……<H>今は、ね</>。",
           DialogueId = 80270137,
           GUID = "C8F2A75A",
           NextDialogue = 80270138,
@@ -366234,7 +366235,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270141] = {
           Content = "这两天「恶魔」叔叔给我讲了好多童话，但有的结局太悲伤了，全是生离死别的，我不喜欢。所以，我就想自己来写个幸福快乐的结局。",
-          ContentJP = "ここ何日か、「悪魔」のおじさんが童話をいっぱい聞かせてくれたの。でも、別れたり、死んじゃったり……悲しい終わりばっかりで。だったらわたしが、みんなが笑える終わりを書こうって思ったんだ。",
+          ContentJP = "ここ何日か、「<up text=\"デビル\">悪魔</>」のおじさんが童話をいっぱい聞かせてくれたの。でも、別れたり、死んじゃったり……悲しい終わりばっかりで。だったらわたしが、みんなが笑える終わりを書こうって思ったんだ。",
           DialogueId = 80270141,
           GUID = "C8F2A802",
           NextDialogue = 80270142,
@@ -366274,7 +366275,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270146] = {
           Content = "但正是这些东西，构成了「女祭司」艾达的本质。",
-          ContentJP = "それでも、みんなを笑わせようとした。その心こそ、「<up text=\"ハイ・プリーステス\">女教皇</>」エイダの本質よ。",
+          ContentJP = "それでも、みんなを笑わせようとした。その心こそ、「<up text=\"ハイ・プリーステス\">女教皇</>」のエイダの本質よ。",
           DialogueId = 80270146,
           GUID = "C8F2A8D4",
           NextDialogue = 80270147,
@@ -366282,7 +366283,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270147] = {
           Content = "咿呜……我的本质吗……",
-          ContentJP = "あぅ……わたしの、本質……？",
+          ContentJP = "ひぅ……わたしの、本質……？",
           DialogueId = 80270147,
           GUID = "C8F2A8FE",
           NextDialogue = 80270148,
@@ -366322,7 +366323,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270152] = {
           Content = "喜欢分享故事的「恶魔」亚蒙啊……看来他也终于找回了自己的本质。",
-          ContentJP = "人に物語を聞かせるようになった「悪魔」のアモン……あの子もようやく、自分の本質を思い出したのね。",
+          ContentJP = "人に物語を聞かせるようになった「<up text=\"デビル\">悪魔</>」のアモン……あの子もようやく、自分の本質を思い出したのね。",
           DialogueId = 80270152,
           GUID = "C8F2A9D0",
           NextDialogue = 80270153,
@@ -366337,7 +366338,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270201] = {
           Content = "从前，森林中生活着一群小兔子，它们聪明又活泼，用灵巧的小手在森林里搭起了一座美丽的草房子，一座可爱的木房子和一座结实的石头房子。",
-          ContentJP = "昔々、森に元気な子ウサギたちが暮らしていました。みんなで力を合わせ、草の家、木の家、そして頑丈な石の家を建てました。",
+          ContentJP = "昔々、森に賢くて元気な子ウサギたちが暮らしていました。みんなで力を合わせ、草の家、木の家、そして頑丈な石の家を建てました。",
           DialogueId = 80270201,
           GUID = "C8F2B1DA",
           IsBlack = 1,
@@ -366407,7 +366408,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270209] = {
           Content = "咿呜，我也这么觉得~尤其是大灰狼和小兔子成为好朋友的那一段，我最喜欢啦。",
-          ContentJP = "あぅ、でしょう？オオカミと子ウサギが友達になるところ、わたしもいちばん気に入ってるの。",
+          ContentJP = "ひぅ、でしょう？オオカミと子ウサギが友達になるところ、わたしもいちばん気に入ってるの。",
           DialogueId = 80270209,
           GUID = "C8F2B32A",
           NextDialogue = 80270210,
@@ -366471,7 +366472,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270217] = {
           Content = "你——是在指责我为乐园所做的一切吗？！",
-          ContentJP = "あなた――私が楽園のためにしてきたことまで、間違いだと言うの！？",
+          ContentJP = "あなた――私が<up text=\"ワンダーランド\">楽園</>のためにしてきたことまで、間違いだと言うの！？",
           DialogueId = 80270217,
           GUID = "C8F2B47A",
           NextDialogue = 80270218,
@@ -366503,7 +366504,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270221] = {
           Content = "咿呜？！我还以为兔妈妈不喜欢我的故事，不会像上次那样给我奖励呢。",
-          ContentJP = "あぅ？怒らせちゃったし、今日はもうご褒美なしだと思ってた……",
+          ContentJP = "ひぅ？怒らせちゃったし、今日はもうご褒美なしだと思ってた……",
           DialogueId = 80270221,
           GUID = "C8F2B522",
           NextDialogue = 80270222,
@@ -366511,7 +366512,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270222] = {
           Content = "其实我听到了镇长叔叔和「正义」叔叔的聊天。他们说「恶魔」有点奇怪，一直在阿尔卡诺山外围晃悠，并且怀疑之前闯入酣梦池的就是他。",
-          ContentJP = "実は、町長さんと「正義」のおじさんが話してるのを聞いたの。「悪魔」のおじさんが、アルカノ山の周りをずっとうろついてるって。前にうつつ池へ忍び込んだのも、あの人じゃないかって……",
+          ContentJP = "実は、町長さんと「<up text=\"ジャスティス\">正義</>」のおじさんが話してるのを聞いたの。「<up text=\"デビル\">悪魔</>」のおじさんが、アルカノ山の周りをずっとうろついてるって。前にうつつ池へ忍び込んだのも、あの人じゃないかって……",
           DialogueId = 80270222,
           GUID = "C8F2B54C",
           NextDialogue = 80270223,
@@ -366519,7 +366520,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270223] = {
           Content = "兔妈妈能不能也给「恶魔」叔叔一次机会呢？",
-          ContentJP = "だから……「悪魔」のおじさんにも、もう一度だけチャンスをあげてくれない？",
+          ContentJP = "だから……「<up text=\"デビル\">悪魔</>」のおじさんにも、もう一度だけチャンスをあげてくれない？",
           DialogueId = 80270223,
           GUID = "C8F2B576",
           NextDialogue = 80270224,
@@ -366551,7 +366552,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270227] = {
           Content = "结果真如我所料，你果然为「恶魔」求情了。看来，即使是我最完美的小兔子也要背叛我了。",
-          ContentJP = "やっぱりね。最初から、この願いを口にすると思っていたわ。「悪魔」をかばうために。私の完璧なうさぎちゃんまで、ママを裏切るのね。",
+          ContentJP = "やっぱりね。最初から、この願いを口にすると思っていたわ。「<up text=\"デビル\">悪魔</>」をかばうために。私の完璧なうさぎちゃんまで、ママを裏切るのね。",
           DialogueId = 80270227,
           GUID = "C8F2B61E",
           NextDialogue = 80270228,
@@ -366575,7 +366576,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270230] = {
           Content = "算了，不重要。不论你说什么做什么，「恶魔」已经不再是我们的伙伴，注定无法在乐园生存了。",
-          ContentJP = "もう結構。理由など関係ないわ。「悪魔」は私たちの家族ではなくなった。あの子に、楽園で生きる資格はない。",
+          ContentJP = "もう結構。理由など関係ないわ。「<up text=\"デビル\">悪魔</>」は私たちの家族ではなくなった。あの子に、<up text=\"ワンダーランド\">楽園</>で生きる資格はない。",
           DialogueId = 80270230,
           GUID = "C8F2B69C",
           NextDialogue = 80270231,
@@ -366705,7 +366706,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270302] = {
           Content = "我们一起去林子里玩了游戏，就是之前「太阳」都嫌太幼稚的游戏。维克托居然愿意陪我玩，运气真好。",
-          ContentJP = "一緒に森へ行って、前に「太陽」から「子供っぽい」って笑われた遊びをしたの。ヴィクターが付き合ってくれるなんて、今日はついてたなぁ。",
+          ContentJP = "一緒に森へ行って、前に「<up text=\"サン\">太陽</>」から「子供っぽい」って笑われた遊びをしたの。ヴィクターが付き合ってくれるなんて、今日はついてたなぁ。",
           DialogueId = 80270302,
           GUID = "C8F2C26C",
           IsBlack = 1,
@@ -366723,7 +366724,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270304] = {
           Content = "另外兔妈妈一定想不到今天「命运之轮」哥哥居然醒着，他把我和维克托送上了摩天轮，要不是维克托，不知道我多久才会去坐一次摩天轮呢。",
-          ContentJP = "それからね、今日は「運命の輪」のお兄さんが起きてたんだよ！私とヴィクターを観覧車に乗せてくれたの。ヴィクターが誘ってくれなかったら、あるのすら忘れるとこだったよ。",
+          ContentJP = "それからね、今日は「<up text=\"ホイール・オブ・フォーチュン\">運命の輪</>」のお兄さんが起きてたんだよ！私とヴィクターを観覧車に乗せてくれたの。ヴィクターが誘ってくれなかったら、あるのすら忘れるとこだったよ。",
           DialogueId = 80270304,
           GUID = "C8F2C2C0",
           IsBlack = 1,
@@ -366732,7 +366733,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270305] = {
           Content = "咿呜……还有什么来着……对了，我和维克托帮大家准备了明天的乐园巡游，又是帮忙拿东西又是送酒，还给小朋友讲了故事，累死我们了。",
-          ContentJP = "あぅ……あとは何だっけ。そうだ、明日のパレードの準備も手伝ったよ。荷物を運んで、お酒を届けて、子供たちにお話もして……二人とも、もうくたくた。",
+          ContentJP = "あぅ……あとは何だっけ。そうだ、明日の<up text=\"ワンダーランド・パレード\">楽園巡遊</>の準備も手伝ったよ。荷物を運んで、お酒を届けて、子供たちにお話もして……二人とも、もうくたくた。",
           DialogueId = 80270305,
           GUID = "C8F2C2EA",
           NextDialogue = 80270306,
@@ -366796,7 +366797,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270313] = {
           Content = "反正维克托本来就是军人，做完任务回军团应该也算认真扮演「战车」吧？",
-          ContentJP = "だってヴィクターは軍人だもん。任務を終えて帝国軍へ戻るのも、ちゃんと「戦車」の役目になるよね？",
+          ContentJP = "だってヴィクターは軍人だもん。任務を終えて帝国軍へ戻るのも、ちゃんと「<up text=\"チャリオット\">戦車</>」の役目になるよね？",
           DialogueId = 80270313,
           GUID = "C8F2C43A",
           NextDialogue = 80270314,
@@ -366804,7 +366805,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270314] = {
           Content = "这么合适的扮演者，就应该永远留在乐园，将快乐延续下去。",
-          ContentJP = "あれほど役にふさわしい子を、外へ返す必要がどこにあるの。楽園に永遠に残り、幸せをつないでもらうわ。",
+          ContentJP = "あれほど役にふさわしい子を、外へ返す必要がどこにあるの。<up text=\"ワンダーランド\">楽園</>に永遠に残り、幸せをつないでもらうわ。",
           DialogueId = 80270314,
           GUID = "C8F2C464",
           NextDialogue = 80270315,
@@ -366876,7 +366877,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270323] = {
           Content = "（「恶魔」叔叔，不，阿瓦尔叔叔。我还记得你跟我讲的最后一个故事。）",
-          ContentJP = "（「悪魔」のおじさん――ううん、アヴァールおじさん。最後に聞かせてくれたお話、今も覚えてるよ。）",
+          ContentJP = "（「<up text=\"デビル\">悪魔</>」のおじさん――ううん、アヴァールおじさん。最後に聞かせてくれたお話、今も覚えてるよ。）",
           DialogueId = 80270323,
           GUID = "C8F2C5DE",
           NextDialogue = 80270324,
@@ -366964,7 +366965,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270333] = {
           Content = "（虽然结果都算不上太好，不论是你还是「死神」爷爷，我最后都没救下来……）",
-          ContentJP = "（うまくはいかなかったけど……あなたも「死神」のおじいちゃんも、結局、助けられなかったけど。）",
+          ContentJP = "（うまくはいかなかったけど……あなたも「<up text=\"デス\">死神</>」のおじいちゃんも、結局、助けられなかったけど。）",
           DialogueId = 80270333,
           GUID = "C8F2C782",
           NextDialogue = 80270334,
@@ -367156,7 +367157,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80280114] = {
           Content = "我儿子……列兵班杰明，也是一角鲸小队的成员。长官，您……您或许认得他？",
-          ContentJP = "息子は、兵卒のベンジャミン。「角鯨」隊の一員です。副官殿なら……ご存じではありませんか？",
+          ContentJP = "息子は、兵卒のベンジャミン。「<up text=\"ナーファル\">一角鯨</>」隊の一員です。副官殿なら……ご存じではありませんか？",
           DialogueId = 80280114,
           GUID = "C8F90C34",
           NextDialogue = 80280115,
@@ -367164,7 +367165,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80280115] = {
           Content = "我的下属里没有这号人。至于整个“一角鲸”，重名的人有很多，我不知道你具体说的是哪位。",
-          ContentJP = "直属の部下に、その名はありません。「角鯨」隊全体なら、同名の兵も複数いるでしょう。今の情報だけでは、特定できません。",
+          ContentJP = "直属の部下に、その名はありません。「<up text=\"ナーファル\">一角鯨</>」隊全体なら、同名の兵も複数いるでしょう。今の情報だけでは、特定できません。",
           DialogueId = 80280115,
           GUID = "C8F90C5E",
           NextDialogue = 80280116,
@@ -367521,7 +367522,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80280217] = {
           Content = "太遗憾了。帝国和军团会铭记他的牺牲。",
-          ContentJP = "お悔やみを。帝国と帝国軍は、彼の犠牲を記録に残します。",
+          ContentJP = "お悔やみを。帝国と軍団は、彼の犠牲を記録に残します。",
           DialogueId = 80280217,
           GUID = "C8F91D1A",
           NextDialogue = 80280218,
@@ -367633,7 +367634,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80280231] = {
           Content = "我听闻在“雪狼”小队，那里的长官可以稍微通融一下，让亲属领走一些不值钱的私人物品。您看看，能不能也……",
-          ContentJP = "「雪狼」隊では、軍に価値のない私物なら、遺族へ返すこともあると聞きました。こちらでも、どうか……",
+          ContentJP = "「<up text=\"スノーウルフ\">雪狼</>」隊では、軍に価値のない私物なら、遺族へ返すこともあると聞きました。こちらでも、どうか……",
           DialogueId = 80280231,
           GUID = "C8F91F66",
           NextDialogue = 80280232,
@@ -367641,7 +367642,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80280232] = {
           Content = "其他小队的军官违反纪律是他们的事，这不是让“一角鲸”小队违反规定的借口。",
-          ContentJP = "他隊の士官が規律を逸脱しているなら、それは彼らの問題です。「角鯨」隊が同じ違反をする理由にはなりません。",
+          ContentJP = "他隊の士官が規律を逸脱しているなら、それは彼らの問題です。「<up text=\"ナーファル\">一角鯨</>」隊が同じ違反をする理由にはなりません。",
           DialogueId = 80280232,
           GUID = "C8F91F90",
           NextDialogue = 80280233,
@@ -367829,7 +367830,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80280308] = {
           Content = "一周前，一位老兵在索要儿子的遗物无果后的次日，在一位“一角鲸”士官的办公室引爆了制式手雷。那位士官……",
-          ContentJP = "一週間前、息子の遺品を返してもらえなかった老兵が、その翌日、「角鯨」隊士官の執務室で制式手榴弾を爆発させた。その士官は――",
+          ContentJP = "一週間前、息子の遺品を返してもらえなかった老兵が、その翌日、「<up text=\"ナーファル\">一角鯨</>」隊士官の執務室で制式手榴弾を爆発させた。その士官は――",
           DialogueId = 80280308,
           GUID = "C8F92C08",
           NextDialogue = 80280309,
@@ -367893,7 +367894,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80280316] = {
           Content = "你说的这些全都是生者该考虑的事。但对于求死的人，自然都无所谓了。",
-          ContentJP = "今お前が挙げたものは、全部、生きるつもりの人間が守るものだ。死ぬつもりの人間には、どれも意味がない。",
+          ContentJP = "今お前が挙げたものは、全部、生きるつもりの人が守るものだ。死ぬつもりの人には、どれも意味がない。",
           DialogueId = 80280316,
           GUID = "C8F92D58",
           NextDialogue = 80280317,
@@ -368052,7 +368053,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80280336] = {
           Content = "但不是每个人都像你一样了解规则，比如那位老妇人，海芙·佩缇。",
-          ContentJP = "誰もがお前のように、規則を熟知しているわけじゃない。ハイフ・ペティのような、ごく普通の人間はな。",
+          ContentJP = "誰もがお前のように、規則を熟知しているわけじゃない。ハイフ・ペティのような、ごく普通の人はな。",
           DialogueId = 80280336,
           GUID = "C8F930A0",
           NextDialogue = 80280337,
@@ -368076,7 +368077,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80280339] = {
           Content = "那些平凡普通的人，他们不是法官，不会理性而冷静地翻阅着帝国军律，一条条比对规则，来判断你是否做了错事。",
-          ContentJP = "普通の人間は裁判官じゃない。軍規を一条ずつ照らし合わせて、お前に過失があったかなんて判定しない。",
+          ContentJP = "普通の人は裁判官じゃない。軍規を一条ずつ照らし合わせて、お前に過失があったかなんて判定しない。",
           DialogueId = 80280339,
           GUID = "C8F9311E",
           NextDialogue = 80280340,
@@ -368132,7 +368133,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80280346] = {
           Content = "军团为了防止伤亡，才会禁止秽蚀者与外面的人有所接触。但对于那位心碎的母亲，你是否可以让她隔着玻璃远远地看孩子几眼？这些都不违反军律。",
-          ContentJP = "穢蝕者との接触を禁じるのは、犠牲を増やさないためだ。なら安全を確保した上で、母親にガラス越しに息子の姿を見せることはできなかったか。どちらも、軍規には反しない。",
+          ContentJP = "穢蝕者との接触を禁じるのは、犠牲を増やさないためだ。なら安全を確保した上で、傷心の母親にガラス越しに息子の姿を見せることはできなかったか。どちらも、軍規には反しない。",
           DialogueId = 80280346,
           GUID = "C8F93244",
           NextDialogue = 80280347,
@@ -368148,7 +368149,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80280348] = {
           Content = "但，在铁律的围墙里，我们仍有稍微伸出一只援手的自由。",
-          ContentJP = "だが、壁の内側で、ほんの少し手を伸ばすことまでは禁じられていない。",
+          ContentJP = "だが、壁の内側でも、手を伸ばす自由は残されている。",
           DialogueId = 80280348,
           GUID = "C8F93298",
           NextDialogue = 80280349,

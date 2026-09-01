@@ -78,12 +78,6 @@ return {
       questNodeData = {
         lineData = {
           {
-            startQuest = "17822920767321809",
-            startPort = "Out",
-            endQuest = "17822921502133685",
-            endPort = "In"
-          },
-          {
             startQuest = "1782291976792705",
             startPort = "Out",
             endQuest = "17832440575652729",
@@ -154,6 +148,24 @@ return {
             startPort = "Out",
             endQuest = "1786872443222987",
             endPort = "In"
+          },
+          {
+            startQuest = "17832452356631091738",
+            startPort = "Out",
+            endQuest = "178805893466127957541",
+            endPort = "In"
+          },
+          {
+            startQuest = "17832440575652729",
+            startPort = "Out",
+            endQuest = "178805897136627957918",
+            endPort = "In"
+          },
+          {
+            startQuest = "17822920767321809",
+            startPort = "Out",
+            endQuest = "17822921502133685",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -168,7 +180,7 @@ return {
             key = "1782291940538212",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 3161.875, y = 296.25},
+            pos = {x = 3450.8223684210525, y = 310.4605263157895},
             propsData = {ModeType = 0}
           },
           ["1782291940538220"] = {
@@ -284,7 +296,7 @@ return {
             key = "17822921502133685",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 2856.6652186732817, y = 315.9074630264963},
+            pos = {x = 3079.29679762065, y = 300.1179893422858},
             propsData = {}
           },
           ["17832440575652729"] = {
@@ -445,6 +457,38 @@ return {
               IsPlayStartSound = false,
               GuideTalkStyle = "Normal",
               OverrideFailBlend = false
+            }
+          },
+          ["178805893466127957541"] = {
+            key = "178805893466127957541",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1119.0824191232557, y = 147.33639004801017},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/mute",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107001},
+              bStoreToServer = true
+            }
+          },
+          ["178805897136627957918"] = {
+            key = "178805897136627957918",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1656.9085060797772, y = -125.2723056041638},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/mute",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107001},
+              bStoreToServer = true
             }
           }
         },

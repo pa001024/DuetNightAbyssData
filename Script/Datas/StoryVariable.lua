@@ -583,6 +583,7 @@ return ReadOnly("StoryVariable", {
   IQ110103 = {IsGlobal = true, VarName = "IQ110103"},
   IQ110107 = {IsGlobal = true, VarName = "IQ110107"},
   IQ11020104 = {IsGlobal = true, VarName = "IQ11020104"},
+  IQ11020201 = {IsGlobal = true, VarName = "IQ11020201"},
   IQ11020302 = {IsGlobal = true, VarName = "IQ11020302"},
   IQ11022101 = {IsGlobal = true, VarName = "IQ11022101"},
   IQ11023101 = {IsGlobal = true, VarName = "IQ11023101"},

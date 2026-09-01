@@ -16,15 +16,20 @@ import { Graph } from "./core/Graph.ts"
 import { getTextMap, LANGS } from "./i18n/TextMap.ts"
 import { clearUAssetCache, closeUAssetServer } from "./lua/UAssetServer.ts"
 import { abyssBuffModule } from "./modules/abyssBuff/abyssBuffModule.ts"
+import { abyssDungeonModule } from "./modules/abyssDungeon/abyssDungeonModule.ts"
 import { achievementModule } from "./modules/achievement/achievementModule.ts"
 import { backpackPuzzleItemModule, backpackPuzzleLevelModule } from "./modules/backpackPuzzle/backpackPuzzleModule.ts"
+import { bookSeriesArchiveModule } from "./modules/bookSeriesArchive/bookSeriesArchiveModule.ts"
 import { charModule } from "./modules/char/charModule.ts"
 import { charAccessoryModule } from "./modules/charAccessory/charAccessoryModule.ts"
 import { charDataTargetModule } from "./modules/charDataTarget/charDataTargetModule.ts"
 import { charVoiceModule } from "./modules/charVoice/charVoiceModule.ts"
 import { cutoffModule } from "./modules/cutoff/cutoffModule.ts"
 import { dialogueModule } from "./modules/dialogue/dialogueModule.ts"
+import { dispatchModule } from "./modules/dispatch/dispatchModule.ts"
 import { draftModule } from "./modules/draft/draftModule.ts"
+import { dungeonModule } from "./modules/dungeon/dungeonModule.ts"
+import { dynQuestModule } from "./modules/dynQuest/dynQuestModule.ts"
 import { eventModule } from "./modules/event/eventModule.ts"
 import {
     extractionTreasureBagModule,
@@ -36,33 +41,23 @@ import { fishingSpotModule, fishModule } from "./modules/fish/fishModule.ts"
 import { forgeLevelQuestModule } from "./modules/forgeLevelQuest/forgeLevelQuestModule.ts"
 import { hardBossModule } from "./modules/hardBoss/hardBossModule.ts"
 import { impressionShopModule } from "./modules/impressionShop/impressionShopModule.ts"
+import { ironSurvivalMonsterSpawnModule } from "./modules/ironSurvivalMonsterSpawn/ironSurvivalMonsterSpawnModule.ts"
 import { ironTicketModule } from "./modules/ironTicket/ironTicketModule.ts"
 import { modModule } from "./modules/mod/modModule.ts"
 import { monsterModule } from "./modules/monster/monsterModule.ts"
 import { monsterStrongAffixesModule } from "./modules/monsterStrongAffixes/monsterStrongAffixesModule.ts"
 import { mountModule } from "./modules/mount/mountModule.ts"
 import { musicModule, musicScoreModule } from "./modules/music/musicModule.ts"
+import { npcModule } from "./modules/npc/npcModule.ts"
 import { partyTopicModule } from "./modules/partyTopic/partyTopicModule.ts"
 import { petEntryModule } from "./modules/pet/petEntryModule.ts"
 import { petModule } from "./modules/pet/petModule.ts"
 import { questChainModule } from "./modules/questChain/questChainModule.ts"
 import { questStoryModule } from "./modules/questStory/questStoryModule.ts"
 import { raidBuffModule } from "./modules/raidBuff/raidBuffModule.ts"
+import { regionModule } from "./modules/region/regionModule.ts"
 import { regionPointModule } from "./modules/regionPoint/regionPointModule.ts"
 import { regionReputationModule } from "./modules/regionReputation/regionReputationModule.ts"
-import {
-    abyssDungeonModule,
-    bookSeriesArchiveModule,
-    dispatchModule,
-    dungeonModule,
-    dynQuestModule,
-    ironSurvivalMonsterSpawnModule,
-    npcModule,
-    regionModule,
-    rougeLikeRoomModule,
-    rougeLikeStoryEventModule,
-    subRegionModule,
-} from "./modules/remainingModules.ts"
 import { resourceModule } from "./modules/resource/resourceModule.ts"
 import { optRewardModule, rewardModule } from "./modules/reward/rewardModule.ts"
 import { rewardViewModule } from "./modules/rewardView/rewardViewModule.ts"
@@ -81,6 +76,8 @@ import {
     rougeProTalentModule,
     rougeProTreasureModule,
 } from "./modules/rouge/rougeSimpleModules.ts"
+import { rougeLikeRoomModule } from "./modules/rougeLikeRoom/rougeLikeRoomModule.ts"
+import { rougeLikeStoryEventModule } from "./modules/rougeLikeStoryEvent/rougeLikeStoryEventModule.ts"
 import { shopItemModule } from "./modules/shopItem/shopItemModule.ts"
 import {
     hairModule,
@@ -99,6 +96,7 @@ import {
     skinGachaTypeModule,
 } from "./modules/skinGacha/skinGachaModule.ts"
 import { soloTreasureGamePlayModule, soloTreasureModule } from "./modules/soloTreasure/soloTreasureModule.ts"
+import { subRegionModule } from "./modules/subRegion/subRegionModule.ts"
 import { titleModule } from "./modules/title/titleModule.ts"
 import {
     treasureHuntProgressModule,
@@ -255,7 +253,7 @@ const REGISTRY: ModuleReg[] = [
     { name: "Npc", deps: ["Dialogue"], outputs: true, build: ctx => ({ Npc: npcModule(ctx) }) },
     { name: "Region", deps: [], outputs: true, build: ctx => ({ Region: regionModule(ctx) }) },
     { name: "SubRegion", deps: [], outputs: true, build: ctx => ({ SubRegion: subRegionModule(ctx) }) },
-    { name: "RougeLikeRoom", deps: [], outputs: true, build: ctx => ({ RougeLikeRoom: rougeLikeRoomModule(ctx) }) },
+    { name: "RougeLikeRoom", deps: ["Dialogue"], outputs: true, build: ctx => ({ RougeLikeRoom: rougeLikeRoomModule(ctx) }) },
     {
         name: "RougeLikeStoryEvent",
         deps: ["Dialogue"],

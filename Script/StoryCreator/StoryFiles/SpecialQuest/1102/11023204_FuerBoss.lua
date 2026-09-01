@@ -78,12 +78,6 @@ return {
       questNodeData = {
         lineData = {
           {
-            startQuest = "17854903023401105082",
-            startPort = "Out",
-            endQuest = "1785490062784392",
-            endPort = "Fail"
-          },
-          {
             startQuest = "1785490062784376",
             startPort = "QuestStart",
             endQuest = "17854903023401105082",
@@ -126,10 +120,34 @@ return {
             endPort = "In"
           },
           {
+            startQuest = "1785490062784376",
+            startPort = "QuestStart",
+            endQuest = "178816922932830216504",
+            endPort = "In"
+          },
+          {
             startQuest = "17859247645146681323",
+            startPort = "Out",
+            endQuest = "178816927906530216900",
+            endPort = "In"
+          },
+          {
+            startQuest = "178816927906530216900",
             startPort = "Out",
             endQuest = "17854908754711106009",
             endPort = "In"
+          },
+          {
+            startQuest = "17854903023401105082",
+            startPort = "Out",
+            endQuest = "178816928996930217224",
+            endPort = "In"
+          },
+          {
+            startQuest = "178816928996930217224",
+            startPort = "Out",
+            endQuest = "1785490062784392",
+            endPort = "Fail"
           }
         },
         nodeData = {
@@ -198,7 +216,7 @@ return {
             key = "17854908754711106009",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 2610.695969773156, y = 475.31134550334525},
+            pos = {x = 2794.695969773156, y = 501.31134550334525},
             propsData = {}
           },
           ["17854933367641106404"] = {
@@ -232,6 +250,44 @@ return {
               IsClearOtherPhantom = true,
               IsSync = false,
               StaticCreatorIdList = {312790453}
+            }
+          },
+          ["178816922932830216504"] = {
+            key = "178816922932830216504",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1178, y = -146},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_6/0187_boss_fuerweisi",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107101},
+              bStoreToServer = true
+            }
+          },
+          ["178816927906530216900"] = {
+            key = "178816927906530216900",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2502, y = 500},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["178816928996930217224"] = {
+            key = "178816928996930217224",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1640, y = 968},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },

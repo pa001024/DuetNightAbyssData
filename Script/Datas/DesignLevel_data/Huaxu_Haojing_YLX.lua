@@ -148,26 +148,26 @@ return {
     },
     ["7064002"] = {
       AutoReset = 0,
-      ["2340019"] = {
-        CreatorId = 2340019,
-        UnitType = "Mechanism",
-        UnitId = 121046,
-        RarelyId = 7064002
-      },
-      ["2340020"] = {
-        CreatorId = 2340020,
-        UnitType = "Mechanism",
-        UnitId = 121045,
-        RarelyId = 7064002
-      },
       ["2340021"] = {
         CreatorId = 2340021,
         UnitType = "Mechanism",
         UnitId = 121046,
         RarelyId = 7064002
       },
+      ["2340019"] = {
+        CreatorId = 2340019,
+        UnitType = "Mechanism",
+        UnitId = 121046,
+        RarelyId = 7064002
+      },
       ["2340022"] = {
         CreatorId = 2340022,
+        UnitType = "Mechanism",
+        UnitId = 121045,
+        RarelyId = 7064002
+      },
+      ["2340020"] = {
+        CreatorId = 2340020,
         UnitType = "Mechanism",
         UnitId = 121045,
         RarelyId = 7064002

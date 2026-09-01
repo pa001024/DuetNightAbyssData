@@ -4,6 +4,11 @@ import type { DialogueService } from "../dialogue/dialogueModule.ts"
 
 type Row = Record<string, any>
 
+interface StoryIndex {
+    parents: Row[]
+    byQuest: Map<number, Row[]>
+}
+
 function table(ctx: ModuleContext, name: string): Row {
     const value = ctx.dm.getTable(name)
     return value && typeof value === "object" && !Array.isArray(value) ? (value as Row) : {}
@@ -37,6 +42,7 @@ export function questStoryModule(ctx: ModuleContext): VNodeTree {
     const detectiveAnswers = table(ctx, "DetectiveAnswer")
     const guidePoints = loadGuidePoints(ctx)
     const output: VNodeTree[] = []
+    const entries: Array<{ chainId: number; story: Row; questRows: Row }> = []
 
     for (const chain of Object.values(chains)) {
         const chainRow = row(chain)
@@ -45,23 +51,31 @@ export function questStoryModule(ctx: ModuleContext): VNodeTree {
         const story = dialogue.story(chainRow.StoryPath)
         const questRows = row(stl[String(chainId)])?.Quests
         if (!story || !questRows || typeof questRows !== "object" || Array.isArray(questRows)) continue
+        entries.push({ chainId, story, questRows: questRows as Row })
+    }
+    dialogue.prefetchReachable(entries.flatMap(entry => collectDialogueStarts(entry.story)))
+
+    for (const entry of entries) {
+        const { chainId, story, questRows } = entry
+        const storyIndex = indexStory(story)
 
         const quests: VNodeTree[] = []
         for (const questKey of Object.keys(questRows)) {
             const questId = id(questKey)
             if (questId === undefined) continue
-            const owner = findQuestOwner(story, questId)
+            const parents = storyIndex.byQuest.get(questId) ?? []
+            const owner = parents[0]
             const ownerProps = row(owner?.propsData) ?? {}
             const nameKey = typeof ownerProps.QuestDescription === "string" ? ownerProps.QuestDescription : ""
             const descKey = typeof ownerProps.QuestDeatil === "string" ? ownerProps.QuestDeatil : ""
-            const nodes = processNodes(ctx, dialogue, story, questId, guidePoints, detectiveQuestions, detectiveAnswers)
+            const nodes = processNodes(ctx, dialogue, parents, guidePoints, detectiveQuestions, detectiveAnswers)
             if (nodes.length === 0 && !nameKey && !descKey) continue
             const quest: Record<string, VNodeTree> = { id: questId }
             if (nameKey) quest.name = T(nameKey)
             if (descKey && descKey !== nameKey) quest.desc = T(descKey)
             if (nodes.length > 0) {
                 quest.nodes = nodes
-                const starts = startIds(story, questId, nodes)
+                const starts = startIds(parents, nodes)
                 if (starts.length > 1) quest.startIds = starts
             }
             quests.push(quest)
@@ -69,6 +83,51 @@ export function questStoryModule(ctx: ModuleContext): VNodeTree {
         if (quests.length > 0) output.push({ id: chainId, quests })
     }
     return output
+}
+
+function collectDialogueStarts(story: Row): number[] {
+    const result: number[] = []
+    const visit = (value: unknown): void => {
+        const node = row(value)
+        if (!node) return
+        if (node.type === "TalkNode") {
+            const props = row(node.propsData) ?? {}
+            const first = id(props.FirstDialogueId)
+            if (first !== undefined) result.push(first)
+        }
+        const quest = row(node.questNodeData)
+        const children = row(quest?.nodeData)
+        for (const child of Object.values(children ?? {})) visit(child)
+    }
+    for (const node of Object.values(row(story.storyNodeData) ?? {})) visit(node)
+    return result
+}
+
+function indexStory(story: Row): StoryIndex {
+    const parents: Row[] = []
+    const byQuest = new Map<number, Row[]>()
+    for (const value of Object.values(row(story.storyNodeData) ?? {})) {
+        const parent = row(value)
+        if (!parent) continue
+        parents.push(parent)
+        const props = row(parent.propsData) ?? {}
+        const questIds = new Set<number>()
+        const explicit = id(props.QuestId)
+        if (explicit !== undefined) questIds.add(explicit)
+        if (props.QuestId === undefined || Number(props.QuestId) === 0) {
+            for (const key of ["QuestDescription", "QuestDeatil"]) {
+                const match = typeof props[key] === "string" ? props[key].match(/_(\d+)_/) : null
+                const parsed = id(match?.[1])
+                if (parsed !== undefined) questIds.add(parsed)
+            }
+        }
+        for (const questId of questIds) {
+            const list = byQuest.get(questId) ?? []
+            list.push(parent)
+            byQuest.set(questId, list)
+        }
+    }
+    return { parents, byQuest }
 }
 
 function loadGuidePoints(ctx: ModuleContext): Row {
@@ -121,24 +180,6 @@ function pointForNode(points: Row, node: Row | undefined, context: Row | undefin
     return { ...resolve(context), ...resolve(node) }
 }
 
-function matchesQuest(node: Row, questId: number): boolean {
-    const props = row(node.propsData) ?? {}
-    if (Number(props.QuestId) === questId) return true
-    if (props.QuestId !== undefined && Number(props.QuestId) !== 0) return false
-    for (const key of ["QuestDescription", "QuestDeatil"]) {
-        const match = typeof props[key] === "string" ? props[key].match(/_(\d+)_/) : null
-        if (match && Number(match[1]) === questId) return true
-    }
-    return false
-}
-
-function findQuestOwner(story: Row, questId: number): Row | undefined {
-    const data = row(story.storyNodeData)
-    return Object.values(data ?? {})
-        .map(row)
-        .find((node): node is Row => !!node && matchesQuest(node, questId))
-}
-
 function validEdge(edge: Row): boolean {
     const port = String(edge.startPort ?? "").toLowerCase()
     return port !== "queststart" && port !== "fail" && port !== "passivefail" && port !== "false"
@@ -147,8 +188,7 @@ function validEdge(edge: Row): boolean {
 function processNodes(
     ctx: ModuleContext,
     dialogue: DialogueService,
-    story: Row,
-    questId: number,
+    parents: Row[],
     guidePoints: Row,
     questions: Row,
     answers: Row
@@ -156,21 +196,32 @@ function processNodes(
     const result: Row[] = []
     const nextMap = new Map<string, string[]>()
     const incoming = new Map<string, string[]>()
-    const data = row(story.storyNodeData)
-    for (const parent of Object.values(data ?? {}).map(row)) {
-        if (!parent || !matchesQuest(parent, questId)) continue
+    for (const parent of parents) {
         const questData = row(parent.questNodeData)
         const nodeData = row(questData?.nodeData) ?? {}
         const edges = Array.isArray(questData?.lineData) ? questData.lineData.map(row).filter((v): v is Row => !!v) : []
         const nodeMap = new Map(Object.entries(nodeData))
-        const starts = edges.filter(edge => String(edge.startPort ?? "").toLowerCase() === "queststart").map(edge => String(edge.endQuest))
+        const outgoingByStart = new Map<string, string[]>()
+        const starts: string[] = []
+        for (const edge of edges) {
+            const start = String(edge.startQuest ?? "")
+            const end = String(edge.endQuest ?? "")
+            if (String(edge.startPort ?? "").toLowerCase() === "queststart") {
+                if (end) starts.push(end)
+                continue
+            }
+            if (!start || !end || !validEdge(edge)) continue
+            const outgoing = outgoingByStart.get(start) ?? []
+            outgoing.push(end)
+            outgoingByStart.set(start, outgoing)
+        }
         const queue = [...starts]
         const visited = new Set<string>()
         while (queue.length > 0) {
             const key = queue.shift()!
             if (visited.has(key)) continue
             visited.add(key)
-            const outgoing = edges.filter(edge => String(edge.startQuest) === key && validEdge(edge)).map(edge => String(edge.endQuest))
+            const outgoing = outgoingByStart.get(key) ?? []
             nextMap.set(key, outgoing)
             for (const child of outgoing) {
                 const list = incoming.get(child) ?? []
@@ -184,8 +235,8 @@ function processNodes(
             if (built) result.push(built)
         }
     }
-    for (const parent of Object.values(data ?? {}).map(row)) {
-        if (!parent || !matchesQuest(parent, questId) || parent.type !== "TalkNode") continue
+    for (const parent of parents) {
+        if (parent.type !== "TalkNode") continue
         const props = row(parent.propsData) ?? {}
         if (props.FirstDialogueId || props.FlowAssetPath) {
             const built = buildNode(
@@ -279,17 +330,20 @@ function buildNode(
     return output
 }
 
-function startIds(story: Row, questId: number, nodes: VNodeTree[]): VNodeTree[] {
+function startIds(parents: Row[], nodes: VNodeTree[]): VNodeTree[] {
     const ids = new Set(nodes.map(node => String((node as Row).id)))
-    const incoming = new Set<string>()
-    for (const parent of Object.values(row(story.storyNodeData) ?? {}).map(row)) {
-        if (!parent || !matchesQuest(parent, questId)) continue
+    const incoming = new Map<string, string[]>()
+    for (const parent of parents) {
         const questData = row(parent.questNodeData)
         for (const edge of Array.isArray(questData?.lineData) ? questData.lineData.map(row).filter((v): v is Row => !!v) : []) {
             if (String(edge.startPort ?? "").toLowerCase() === "queststart") continue
             const end = String(edge.endQuest ?? "")
-            if (ids.has(end)) incoming.add(end)
+            if (!ids.has(end)) continue
+            const start = String(edge.startQuest ?? "")
+            const sources = incoming.get(end) ?? []
+            if (!sources.includes(start)) sources.push(start)
+            incoming.set(end, sources)
         }
     }
-    return nodes.filter(node => !incoming.has(String((node as Row).id))).map(node => (node as Row).id)
+    return nodes.filter(node => (incoming.get(String((node as Row).id)) ?? []).length === 0).map(node => (node as Row).id)
 }

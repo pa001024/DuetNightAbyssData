@@ -19,7 +19,10 @@ T.RT_6 = {
 }
 T.RT_7 = {"Convert"}
 T.RT_8 = {"Dungeon", "Shop_Main"}
-T.RT_9 = {"HardBoss", "Convert"}
+T.RT_9 = {
+  "HardBoss",
+  "Convert_For_WP"
+}
 T.RT_10 = {
   [1] = 911,
   [2] = 912,

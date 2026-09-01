@@ -24,22 +24,6 @@ function M:RefreshBaseInfo()
   self:RefreshOpInfoByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
 end
 
-function M:SetObservationInputMode(bLockMouse)
-  if not self.GameInputModeSubsystem then
-    return
-  end
-  if bLockMouse then
-    local Params = FGameInputModeParams()
-    Params.WidgetToFocus = self
-    Params.MouseLockMode = EMouseLockMode.LockAlways
-    Params.bHideCursorDuringCapture = true
-    Params.bShowMouseCursor = false
-    self.GameInputModeSubsystem:EnableInputMode(InputModeTag, EGameInputMode.GameAndUI, Params)
-    return
-  end
-  self.GameInputModeSubsystem:DisableInputMode(InputModeTag)
-end
-
 function M:RefreshOpInfoByInputDevice(CurInputType, CurGamepadName)
   local IsGamepad = CurInputType == ECommonInputType.Gamepad
   self.UsingGamepad = IsGamepad
@@ -265,7 +249,6 @@ function M:LockObservationMouse()
     return
   end
   self:SetFocus()
-  self:SetObservationInputMode(true)
   self.HasMoveDelta = false
   self.LastRealMousePos = nil
   self:SetCursor(EMouseCursor.None)
@@ -277,7 +260,6 @@ function M:UnlockObservationMouse()
     return
   end
   self:ResetCursor()
-  self:SetObservationInputMode(false)
   self.MouseCaptured = false
 end
 

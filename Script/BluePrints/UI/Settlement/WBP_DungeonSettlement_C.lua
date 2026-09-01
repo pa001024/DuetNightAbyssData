@@ -602,7 +602,8 @@ function M:SetAllUIVisibility(IsHide)
   if UIManger then
     UIManger:HideAllUI_EX({
       self:GetName(),
-      "DungeonMatchTimingBar"
+      "DungeonMatchTimingBar",
+      "CommonDialog"
     }, IsHide, self.HideUITag, false)
   end
   local BattleWarningUI = UIManger:GetUIObj(UIConst.DestroyAlarmName)

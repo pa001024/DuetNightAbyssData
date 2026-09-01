@@ -1198,6 +1198,30 @@ return {
             startPort = "Out",
             endQuest = "17877589254143503",
             endPort = "In"
+          },
+          {
+            startQuest = "178316537716121108616",
+            startPort = "Out",
+            endQuest = "17880075424638944107",
+            endPort = "In"
+          },
+          {
+            startQuest = "17880075424638944107",
+            startPort = "Out",
+            endQuest = "17880062440585593464",
+            endPort = "In"
+          },
+          {
+            startQuest = "178645650739335741346",
+            startPort = "Out",
+            endQuest = "17881611859534473325",
+            endPort = "In"
+          },
+          {
+            startQuest = "1782903776923998",
+            startPort = "Out",
+            endQuest = "178816530785713427630",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -1542,7 +1566,7 @@ return {
             key = "17829042439722162841",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 3035.0436610157094, y = -834.7336599579653},
+            pos = {x = 3037.0436610157094, y = -834.7336599579653},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 11107101,
@@ -2127,7 +2151,7 @@ return {
             key = "178316463264720026279",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 4394.360160038156, y = 1627.2718266964823},
+            pos = {x = 4386.360160078846, y = 1627.2718266964823},
             propsData = {
               GuideUIEnable = false,
               StaticCreatorId = 312780366,
@@ -2170,7 +2194,7 @@ return {
             key = "178316537716121108616",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 5144.360132350837, y = 1646.6266646916486},
+            pos = {x = 5142.36013236101, y = 1648.626664681476},
             propsData = {
               GuideUIEnable = false,
               StaticCreatorId = 312780367,
@@ -2378,7 +2402,7 @@ return {
             key = "178316678714425440020",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 3748.780109781999, y = 1235.4499184936985},
+            pos = {x = 3746.780109781999, y = 1235.4499184936985},
             propsData = {
               GuideUIEnable = false,
               StaticCreatorId = 312780342,
@@ -3213,7 +3237,8 @@ return {
                 312780413,
                 312780836,
                 312780837,
-                312780838
+                312780838,
+                312780844
               }
             }
           },
@@ -3228,7 +3253,7 @@ return {
             key = "17877583971822468",
             type = "ChangeStaticCreatorNode",
             name = "生成空气墙",
-            pos = {x = 4763.104384578723, y = 1495.3135832135827},
+            pos = {x = 4763.104384578723, y = 1497.3135832034102},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -3242,7 +3267,7 @@ return {
             key = "17877584619602721",
             type = "ChangeStaticCreatorNode",
             name = "生成空气墙",
-            pos = {x = 5464.61952528148, y = 1521.071158574159},
+            pos = {x = 5514.619525027167, y = 1545.0711584520886},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -3270,14 +3295,67 @@ return {
             key = "17877589254143503",
             type = "ChangeStaticCreatorNode",
             name = "生成空气墙",
-            pos = {x = 6827.310360679107, y = 1492.7123745980182},
+            pos = {x = 6825.31036068928, y = 1492.7123745980182},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
               EnableFadeIn = false,
               EnableFadeOut = false,
               NewTargetPointName = "",
-              StaticCreatorIdList = {312780364}
+              StaticCreatorIdList = {312780364, 312780844}
+            }
+          },
+          ["17880062440585593464"] = {
+            key = "17880062440585593464",
+            type = "ChangeStaticCreatorNode",
+            name = "生成空气墙",
+            pos = {x = 5652.188634102436, y = 1422.5096341820667},
+            propsData = {
+              ActiveEnable = true,
+              EnableBlackScreenSync = false,
+              EnableFadeIn = false,
+              EnableFadeOut = false,
+              NewTargetPointName = "",
+              StaticCreatorIdList = {312780356}
+            }
+          },
+          ["17880075424638944107"] = {
+            key = "17880075424638944107",
+            type = "GoToNode",
+            name = "前往",
+            pos = {x = 5360.188635078998, y = 1410.5096334801624},
+            propsData = {
+              GuideUIEnable = false,
+              StaticCreatorId = 312780345,
+              GuideType = "N",
+              GuidePointName = ""
+            }
+          },
+          ["17881611859534473325"] = {
+            key = "17881611859534473325",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2492, y = -1174},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_6/0182_jingle_scared",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107001},
+              bStoreToServer = true
+            }
+          },
+          ["178816530785713427630"] = {
+            key = "178816530785713427630",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1243.4247380146903, y = 1166.9231057026004},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },

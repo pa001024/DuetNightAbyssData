@@ -212,11 +212,9 @@ function SettingUtils.InitAntiAliasingCache(GameOverallPerformance)
   if URuntimeCommonFunctionLibrary.IsDLSSSupported() and UDLSSLibrary and 0 ~= UDLSSLibrary.GetDLSSMode() then
     InitAntiAliasing = 2
   end
-  if USRMBlueprintLibrary and USRMBlueprintLibrary.GetActiveSRTypeAndQualityMode then
-    local ActiveSRType = USRMBlueprintLibrary.GetActiveSRTypeAndQualityMode()
-    if ActiveSRType == ESuperResolutionType.XeSS then
-      InitAntiAliasing = 2
-    end
+  local CachedSRType = EMCache:Get("UpscalingMethodValue")
+  if nil ~= CachedSRType and 0 ~= CachedSRType then
+    InitAntiAliasing = 2
   end
   URuntimeCommonFunctionLibrary.SetAntiAliasingMethodType(InitAntiAliasing)
 end

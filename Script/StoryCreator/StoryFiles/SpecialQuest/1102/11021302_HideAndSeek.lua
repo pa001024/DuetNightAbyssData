@@ -47,7 +47,7 @@ return {
       key = "178100714094398",
       type = "StoryNode",
       name = "任务节点",
-      pos = {x = 1414, y = 328},
+      pos = {x = 1412, y = 328},
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
@@ -486,12 +486,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "178600389148522277275",
-            startPort = "Out",
-            endQuest = "178101052154720047",
-            endPort = "In"
-          },
-          {
             startQuest = "17810086937653827",
             startPort = "Out",
             endQuest = "178101035102115679",
@@ -506,7 +500,49 @@ return {
           {
             startQuest = "178101144210522173",
             startPort = "Out",
-            endQuest = "178600365393622276137",
+            endQuest = "178101052154720047",
+            endPort = "In"
+          },
+          {
+            startQuest = "178101144210522173",
+            startPort = "Out",
+            endQuest = "17879928728411865",
+            endPort = "In"
+          },
+          {
+            startQuest = "17879928728411865",
+            startPort = "Out",
+            endQuest = "17879928264361479",
+            endPort = "In"
+          },
+          {
+            startQuest = "178101052154720047",
+            startPort = "Out",
+            endQuest = "17879928728411865",
+            endPort = "Stop"
+          },
+          {
+            startQuest = "178101052154720047",
+            startPort = "Out",
+            endQuest = "17879928962422377",
+            endPort = "In"
+          },
+          {
+            startQuest = "178101052154720047",
+            startPort = "Out",
+            endQuest = "17881592475741521",
+            endPort = "In"
+          },
+          {
+            startQuest = "17810115358291040402",
+            startPort = "Out",
+            endQuest = "17881593132961936",
+            endPort = "In"
+          },
+          {
+            startQuest = "17833485945538720198",
+            startPort = "Out",
+            endQuest = "178816534264614545926",
             endPort = "In"
           }
         },
@@ -529,7 +565,7 @@ return {
             key = "1781007140944115",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 2575.6928877918003, y = 2059.1538867060253},
+            pos = {x = 2447.6928877918003, y = 2467.1538867060253},
             propsData = {}
           },
           ["1781007495632753"] = {
@@ -576,12 +612,10 @@ return {
               GuideType = "N",
               GuidePointName = "Npc_Ailiou_312940006",
               DelayShowGuideTime = 0,
-              IsPlayerTurnToNPC = true,
-              IsNPCTurnToPlayer = true,
-              AllowSurroundDialogue = true,
               FirstDialogueId = 11108601,
               FlowAssetPath = "",
-              TalkType = "FreeSimple",
+              TalkType = "FixSimple",
+              TalkStageName = "TalkStageNew11108601",
               BlendInTime = 0,
               BlendOutTime = 0,
               InType = "FadeIn",
@@ -619,6 +653,21 @@ return {
                   TalkActorType = "Npc",
                   TalkActorId = 111001,
                   TalkActorVisible = true
+                },
+                {
+                  TalkActorType = "Player",
+                  TalkActorId = 0,
+                  TalkActorVisible = false
+                },
+                {
+                  TalkActorType = "Npc",
+                  TalkActorId = 111162,
+                  TalkActorVisible = true
+                },
+                {
+                  TalkActorType = "Npc",
+                  TalkActorId = 111126,
+                  TalkActorVisible = true
                 }
               },
               OptionType = "normal",
@@ -626,7 +675,9 @@ return {
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "EXPlayer",
-              PlayerSwitchEmoIdle = true,
+              bNpcActionKeepIn = false,
+              bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
             }
@@ -735,7 +786,7 @@ return {
             key = "178101042707816987",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1914.3185805625249, y = 531.8175121833041},
+            pos = {x = 1870.7701940016343, y = 456.0110615032352},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 11108701,
@@ -788,9 +839,9 @@ return {
             key = "178101052154720047",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 1505.7021264762432, y = 1150.6259914551702},
+            pos = {x = 1507.7021264762432, y = 1145.7872818372934},
             propsData = {
-              GuideUIEnable = true,
+              GuideUIEnable = false,
               StaticCreatorId = 312940008,
               GuideType = "M",
               GuidePointName = "Mechanism_QuestTrigger_312940008"
@@ -811,7 +862,7 @@ return {
             key = "17810115358291040402",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1781.1908066143822, y = 1156.5250712006641},
+            pos = {x = 1781.1908066143822, y = 1153.6863615827874},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -862,7 +913,7 @@ return {
             key = "17810116189121042686",
             type = "ChangeStaticCreatorNode",
             name = "生成观察机关",
-            pos = {x = 2585.7343357461787, y = 1142.1592226892624},
+            pos = {x = 2585.7343357461787, y = 1137.3205130713857},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -876,7 +927,7 @@ return {
             key = "17810116674041043164",
             type = "FirstObservationCompleteNode",
             name = "首次观察完成",
-            pos = {x = 2892.5330496438005, y = 1131.0966945517425},
+            pos = {x = 2892.5330496438005, y = 1126.2579849338658},
             propsData = {
               StaticCreatorId = 312940009,
               ObservationPointName = "Mechanism_TalkInteractiveItem_312940009"
@@ -886,7 +937,7 @@ return {
             key = "17810116771071043512",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 3190.966472318823, y = 1117.1578955262166},
+            pos = {x = 3190.966472318823, y = 1112.31918590834},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -944,7 +995,7 @@ return {
             key = "17810131289813081201",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示任务指引点节点",
-            pos = {x = 2333.4093619755295, y = 1156.8227508504974},
+            pos = {x = 2333.4093619755295, y = 1151.9840412326207},
             propsData = {
               IsShow = true,
               bOpenRangeEffect = false,
@@ -956,7 +1007,7 @@ return {
             key = "17810131559023082099",
             type = "UpdateTaskBarAndTaskMainNode",
             name = "更新任务目标节点",
-            pos = {x = 2046.562075543827, y = 1165.3941792973646},
+            pos = {x = 2046.562075543827, y = 1160.555469679488},
             propsData = {
               NewDescription = "Description_110213_5",
               NewDetail = "Content_110213_5",
@@ -1116,14 +1167,14 @@ return {
             key = "17833485945538720198",
             type = "WaitingSpecialQuestFailNode",
             name = "等待特殊任务失败",
-            pos = {x = 717.0900886676206, y = 2057.1856693222594},
+            pos = {x = 589.0900886676206, y = 2465.1856693222594},
             propsData = {}
           },
           ["17833485945538720199"] = {
             key = "17833485945538720199",
             type = "ForbidWeaponByWeaponTagNode",
             name = "禁用/启用武器节点",
-            pos = {x = 1135.6041624870068, y = 1599.4445912375218},
+            pos = {x = 1007.6041624870068, y = 2007.4445912375218},
             propsData = {
               WeaponTags = {"Melee", "Ranged"},
               bForbid = false,
@@ -1135,7 +1186,7 @@ return {
             key = "17833485945538720200",
             type = "ActivePlayerSkillsNode",
             name = "激活/失效 玩家技能",
-            pos = {x = 1169.5361249286898, y = 1772.8378698493839},
+            pos = {x = 1041.5361249286898, y = 2180.837869849384},
             propsData = {
               PlayerId = 0,
               bActiveEnable = true,
@@ -1158,7 +1209,7 @@ return {
             key = "17833485945538720201",
             type = "ShowOrHideUINode",
             name = "显示或隐藏UI",
-            pos = {x = 1149.6837608025994, y = 1930.660232536491},
+            pos = {x = 1021.6837608025994, y = 2338.660232536491},
             propsData = {
               Function = "HideUIInScreen",
               UIParam = "BloodBar",
@@ -1170,7 +1221,7 @@ return {
             key = "17833485945538720202",
             type = "ShowOrHideUINode",
             name = "显示或隐藏UI",
-            pos = {x = 1151.4725806783758, y = 2046.7720337787277},
+            pos = {x = 1023.4725806783758, y = 2454.7720337787277},
             propsData = {
               Function = "HideUIInScreen",
               UIParam = "EnergySkill",
@@ -1182,7 +1233,7 @@ return {
             key = "17833485945538720203",
             type = "ShowOrHideUINode",
             name = "显示或隐藏UI",
-            pos = {x = 1146.2752031766508, y = 2338.346567940218},
+            pos = {x = 1018.2752031766508, y = 2746.346567940218},
             propsData = {
               Function = "HideUIInScreen",
               UIParam = "Entrance",
@@ -1194,7 +1245,7 @@ return {
             key = "17833485945538720204",
             type = "ShowOrHideUINode",
             name = "显示或隐藏UI",
-            pos = {x = 1151.2903860854358, y = 2470.790322325649},
+            pos = {x = 1023.2903860854358, y = 2878.790322325649},
             propsData = {
               Function = "HideUIInScreen",
               UIParam = "BattleWheel",
@@ -1206,7 +1257,7 @@ return {
             key = "17833485945538720205",
             type = "ShowOrHideUINode",
             name = "显示或隐藏UI",
-            pos = {x = 1143.6237194668442, y = 2597.109162761136},
+            pos = {x = 1015.6237194668442, y = 3005.109162761136},
             propsData = {
               Function = "HideUIInScreen",
               UIParam = "GuideBook",
@@ -1218,7 +1269,7 @@ return {
             key = "17833485945538720206",
             type = "ShowOrHideUINode",
             name = "显示或隐藏UI",
-            pos = {x = 1146.0628331711773, y = 2742.2400975026435},
+            pos = {x = 1018.0628331711773, y = 3150.2400975026435},
             propsData = {
               Function = "HideUIInScreen",
               UIParam = "AimIndicator",
@@ -1230,14 +1281,14 @@ return {
             key = "17833485945538720207",
             type = "WaitQuestFinishedNode",
             name = "等待任务完成",
-            pos = {x = 1842.3100806529549, y = 2084.318570838745},
+            pos = {x = 1714.3100806529549, y = 2492.318570838745},
             propsData = {ListenCount = 9, NeedFinishCount = 9}
           },
           ["17833485945538720208"] = {
             key = "17833485945538720208",
             type = "CameraControlClearNode",
             name = "镜头恢复",
-            pos = {x = 1126.8805813395277, y = 2221.957114526111},
+            pos = {x = 998.8805813395277, y = 2629.957114526111},
             propsData = {Duration = 0}
           },
           ["17833486144648720663"] = {
@@ -1365,9 +1416,9 @@ return {
             key = "178600365393622276137",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 1903.2634550518712, y = 709.940084380645},
+            pos = {x = 2167.7795808291326, y = 548.6497637847539},
             propsData = {
-              GuideUIEnable = true,
+              GuideUIEnable = false,
               StaticCreatorId = 312940011,
               GuideType = "M",
               GuidePointName = "Mechanism_QuestTrigger_312940011"
@@ -1377,9 +1428,9 @@ return {
             key = "178600383809922276953",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 2307.5491605248562, y = 665.6543710602825},
+            pos = {x = 2572.065286302118, y = 504.3640504643914},
             propsData = {
-              GuideUIEnable = true,
+              GuideUIEnable = false,
               StaticCreatorId = 312940012,
               GuideType = "M",
               GuidePointName = "Mechanism_QuestTrigger_312940012"
@@ -1389,12 +1440,81 @@ return {
             key = "178600389148522277275",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 2668.9777240749104, y = 668.5115138551446},
+            pos = {x = 2933.493849852172, y = 509.2211932592535},
             propsData = {
-              GuideUIEnable = true,
+              GuideUIEnable = false,
               StaticCreatorId = 312940013,
               GuideType = "M",
               GuidePointName = "Mechanism_QuestTrigger_312940013"
+            }
+          },
+          ["17879928264361479"] = {
+            key = "17879928264361479",
+            type = "ShowOrHideTaskIndicatorNode",
+            name = "显示/隐藏任务指引点节点",
+            pos = {x = 2139.7419334197266, y = 721.1612922279445},
+            propsData = {
+              IsShow = true,
+              bOpenRangeEffect = false,
+              GuideType = "M",
+              GuideName = "Mechanism_QuestTrigger_312940008"
+            }
+          },
+          ["17879928728411865"] = {
+            key = "17879928728411865",
+            type = "WaitOfTimeNode",
+            name = "延迟等待",
+            pos = {x = 1806.8552776360737, y = 713.5390800037744},
+            propsData = {WaitTime = 30}
+          },
+          ["17879928962422377"] = {
+            key = "17879928962422377",
+            type = "ShowOrHideTaskIndicatorNode",
+            name = "显示/隐藏任务指引点节点",
+            pos = {x = 1763.3068898446352, y = 1345.7971348938465},
+            propsData = {
+              IsShow = false,
+              bOpenRangeEffect = false,
+              GuideType = "M",
+              GuideName = "Mechanism_QuestTrigger_312940008"
+            }
+          },
+          ["17881592475741521"] = {
+            key = "17881592475741521",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1692, y = 1794},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/mute",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107801},
+              bStoreToServer = true
+            }
+          },
+          ["17881593132961936"] = {
+            key = "17881593132961936",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2246, y = 1832},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["178816534264614545926"] = {
+            key = "178816534264614545926",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 986, y = 1606},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },
@@ -1414,7 +1534,7 @@ return {
           ["17810115971221042036"] = {
             key = "17810115971221042036",
             name = "找到异常点",
-            position = {x = 1455.4332346224628, y = 994.403860953523},
+            position = {x = 1455.4332346224628, y = 989.5651513356463},
             size = {width = 2021.1288215935651, height = 506.7046013592939}
           }
         }

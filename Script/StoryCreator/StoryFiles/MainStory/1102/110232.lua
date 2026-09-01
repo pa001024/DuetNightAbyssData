@@ -559,7 +559,7 @@ return {
       key = "17835140737247108229",
       type = "StoryNode",
       name = "了解兔妈妈的真相",
-      pos = {x = 1813.2243559521687, y = 307.61271107556956},
+      pos = {x = 1814.5064072049597, y = 308.8947623283606},
       propsData = {
         QuestId = 11023203,
         QuestDescriptionComment = "",
@@ -762,7 +762,7 @@ return {
               bHidePickup = true,
               bHideSkillCreature = true,
               HideMechanismsFX = false,
-              ShowSkipButton = true,
+              ShowSkipButton = false,
               ShowReviewButton = true,
               ShowWikiButton = true,
               SkipToOption = false,
@@ -862,7 +862,7 @@ return {
               bHidePickup = true,
               bHideSkillCreature = true,
               HideMechanismsFX = false,
-              ShowSkipButton = true,
+              ShowSkipButton = false,
               ShowReviewButton = true,
               ShowWikiButton = true,
               SkipToOption = false,
@@ -1718,6 +1718,12 @@ return {
             startPort = "Success",
             endQuest = "178774954478431316303",
             endPort = "Input"
+          },
+          {
+            startQuest = "178352951395643287729",
+            startPort = "Out",
+            endQuest = "17881705712221684689",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -1971,6 +1977,17 @@ return {
               FadeOutSeconds = 0,
               DurationSeconds = 1,
               IsStandAlone = true
+            }
+          },
+          ["17881705712221684689"] = {
+            key = "17881705712221684689",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2934.90321395747, y = -447.74193895719054},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },

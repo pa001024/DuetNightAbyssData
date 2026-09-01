@@ -44,9 +44,8 @@ local function StartMobilePanMediaRateTick(TalkTask, SequenceActor, Sequence)
   if 0 == #SectionInfos then
     return
   end
-  local bForcePlayingRate = UE4.UGameplayStatics.GetPlatformName() == "IOS"
   local RateTickTimer
-  RateTickTimer = TalkTask.TalkTimerManager:AddTimer(TalkTask, 0.2, true, 0.01, TalkTask, function(Task)
+  RateTickTimer = TalkTask.TalkTimerManager:AddTimer(TalkTask, 0.01, true, 0.01, TalkTask, function(Task)
     if not IsValid(SequenceActor) then
       Task.TalkTimerManager:DestroyTimer(Task, RateTickTimer)
       return
@@ -57,6 +56,7 @@ local function StartMobilePanMediaRateTick(TalkTask, SequenceActor, Sequence)
     end
     local CurrentTime = SequencePlayer:GetCurrentTime()
     local CurrentFrame = CurrentTime.Time.FrameNumber.Value
+    local bHasPendingSection = false
     for _, SectionInfo in pairs(SectionInfos) do
       local bAfterStart = SectionInfo.StartFrame == nil or CurrentFrame >= SectionInfo.StartFrame
       local bBeforeEnd = nil == SectionInfo.EndFrame or CurrentFrame < SectionInfo.EndFrame
@@ -69,6 +69,12 @@ local function StartMobilePanMediaRateTick(TalkTask, SequenceActor, Sequence)
         SectionInfo.bSetRateRequested = false
       end
       SectionInfo.bWasActive = bIsActive
+      if bIsActive and not SectionInfo.bPlaybackObserved then
+        bHasPendingSection = true
+      end
+    end
+    if not bHasPendingSection then
+      return
     end
     local PoolSystem = UE4.USubsystemBlueprintLibrary.GetWorldSubsystem(SequenceActor, UE4.UMediaPlayerPoolSubsystem)
     if not IsValid(PoolSystem) or not PoolSystem.Pool then
@@ -76,21 +82,17 @@ local function StartMobilePanMediaRateTick(TalkTask, SequenceActor, Sequence)
     end
     local PoolEntries = PoolSystem.Pool:ToTable()
     for _, SectionInfo in pairs(SectionInfos) do
-      if SectionInfo.bWasActive then
+      if SectionInfo.bWasActive and not SectionInfo.bPlaybackObserved then
         local PoolEntry = PoolEntries[SectionInfo.MediaSource]
         local MediaPlayer = PoolEntry and PoolEntry.Player or nil
         if IsValid(MediaPlayer) then
           local PlaybackRate = SequencePlayer:IsReversed() and -SectionInfo.Rate or SectionInfo.Rate
           if MediaPlayer:IsPlaying() then
-            if bForcePlayingRate then
-              MediaPlayer:SetRate(PlaybackRate)
-            end
             SectionInfo.bPlaybackObserved = true
             if SectionInfo.bSetRateRequested then
               DebugPrint("Mobile PanMedia resumed by Lua SetRate", PlaybackRate, MediaPlayer)
-              SectionInfo.bSetRateRequested = false
             end
-          elseif not SectionInfo.bPlaybackObserved and MediaPlayer:SetRate(PlaybackRate) then
+          elseif MediaPlayer:SetRate(PlaybackRate) then
             SectionInfo.bSetRateRequested = true
           end
         end

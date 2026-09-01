@@ -322,6 +322,30 @@ return {
             startPort = "Out",
             endQuest = "17811943834347165121",
             endPort = "In"
+          },
+          {
+            startQuest = "17811939365485121484",
+            startPort = "true",
+            endQuest = "17881636563286716512",
+            endPort = "In"
+          },
+          {
+            startQuest = "17811856045637236",
+            startPort = "Out",
+            endQuest = "17881637006036717005",
+            endPort = "In"
+          },
+          {
+            startQuest = "17859171300142976",
+            startPort = "Out",
+            endQuest = "17881637448937834876",
+            endPort = "In"
+          },
+          {
+            startQuest = "17812449570128188206",
+            startPort = "Out",
+            endQuest = "178816541192016784377",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -786,6 +810,65 @@ return {
               SwitchToMaster = "None",
               OverrideFailBlend = false
             }
+          },
+          ["17881636563286716512"] = {
+            key = "17881636563286716512",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 3790, y = 254},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/mute",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107001},
+              bStoreToServer = true
+            }
+          },
+          ["17881637006036717005"] = {
+            key = "17881637006036717005",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 4160, y = 218},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_6/0176_story_horror",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107001},
+              bStoreToServer = true
+            }
+          },
+          ["17881637448937834876"] = {
+            key = "17881637448937834876",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 4690.275862084085, y = 262},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/mute",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107001},
+              bStoreToServer = true
+            }
+          },
+          ["178816541192016784377"] = {
+            key = "178816541192016784377",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1400, y = 934},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
           }
         },
         commentData = {
@@ -1071,6 +1154,12 @@ return {
             startQuest = "17865491803004479611",
             startPort = "Out",
             endQuest = "178124842525010288107",
+            endPort = "In"
+          },
+          {
+            startQuest = "17812463969339238567",
+            startPort = "Out",
+            endQuest = "178816541791316784555",
             endPort = "In"
           }
         },
@@ -1474,6 +1563,17 @@ return {
               bForceAsyncLoading = false,
               IsWhite = false
             }
+          },
+          ["178816541791316784555"] = {
+            key = "178816541791316784555",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1206, y = 568},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
           }
         },
         commentData = {
@@ -1855,6 +1955,12 @@ return {
             startQuest = "178125627164618654883",
             startPort = "Fail",
             endQuest = "17847134160583326420",
+            endPort = "In"
+          },
+          {
+            startQuest = "178124866206512375300",
+            startPort = "Out",
+            endQuest = "178816543186416784875",
             endPort = "In"
           }
         },
@@ -2586,6 +2692,17 @@ return {
               VarName = "ex02_11023102_Dinner",
               VarValue = 2
             }
+          },
+          ["178816543186416784875"] = {
+            key = "178816543186416784875",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1526, y = 520},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
           }
         },
         commentData = {
@@ -2805,6 +2922,24 @@ return {
             startQuest = "17847258108229974955",
             startPort = "Out",
             endQuest = "178126107419621795655",
+            endPort = "In"
+          },
+          {
+            startQuest = "178126096830321794247",
+            startPort = "Out",
+            endQuest = "17881648053188954624",
+            endPort = "In"
+          },
+          {
+            startQuest = "178126190350721796997",
+            startPort = "Out",
+            endQuest = "178816484746110072315",
+            endPort = "In"
+          },
+          {
+            startQuest = "178125692353521790900",
+            startPort = "Out",
+            endQuest = "178816543875216785055",
             endPort = "In"
           }
         },
@@ -3165,6 +3300,49 @@ return {
                 312780034,
                 312780032
               }
+            }
+          },
+          ["17881648053188954624"] = {
+            key = "17881648053188954624",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1809.5654750589354, y = -124.82724786636055},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/mute",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107001},
+              bStoreToServer = true
+            }
+          },
+          ["178816484746110072315"] = {
+            key = "178816484746110072315",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2800.105995174545, y = 64.36193742175053},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/mute",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107001},
+              bStoreToServer = true
+            }
+          },
+          ["178816543875216785055"] = {
+            key = "178816543875216785055",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1544, y = 470},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },
@@ -3595,6 +3773,24 @@ return {
             startQuest = "178332436985225003484",
             startPort = "Out",
             endQuest = "17858566459992232671",
+            endPort = "In"
+          },
+          {
+            startQuest = "178332436985225003484",
+            startPort = "Out",
+            endQuest = "178816522223011190354",
+            endPort = "In"
+          },
+          {
+            startQuest = "178126933042232254708",
+            startPort = "Out",
+            endQuest = "178816525229512308085",
+            endPort = "In"
+          },
+          {
+            startQuest = "178126933042132254692",
+            startPort = "Out",
+            endQuest = "178816526562112308440",
             endPort = "In"
           }
         },
@@ -4332,6 +4528,44 @@ return {
               MessageType = "GameMode",
               MessageContent = "JhsTPDeactive_11023101",
               UnitId = -1
+            }
+          },
+          ["178816522223011190354"] = {
+            key = "178816522223011190354",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 3466.2936834372563, y = -601.156276837598},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_6/0177_story_investigate",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107001},
+              bStoreToServer = true
+            }
+          },
+          ["178816525229512308085"] = {
+            key = "178816525229512308085",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 7171.08166308284, y = -948.4954079324638},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["178816526562112308440"] = {
+            key = "178816526562112308440",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1507.3249771973663, y = 631.4367521145639},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },

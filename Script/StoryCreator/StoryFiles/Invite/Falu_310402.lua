@@ -102,7 +102,19 @@ return {
             endPort = "In"
           },
           {
+            startQuest = "17878158817825610447",
+            startPort = "Out",
+            endQuest = "17881667279959505938",
+            endPort = "In"
+          },
+          {
             startQuest = "17878158874655610668",
+            startPort = "Out",
+            endQuest = "17881667337449506140",
+            endPort = "In"
+          },
+          {
+            startQuest = "17881667337449506140",
             startPort = "Out",
             endQuest = "17846211321905171672",
             endPort = "Success"
@@ -120,7 +132,7 @@ return {
             key = "17846211321905171672",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 1932.3333333333335, y = 290.33333333333337},
+            pos = {x = 2201.0289855072465, y = 285.11594202898556},
             propsData = {ModeType = 0}
           },
           ["17846211321905171673"] = {
@@ -217,6 +229,32 @@ return {
               SoundStateType = 3,
               SoundPriority = 1,
               SoundType = 2
+            }
+          },
+          ["17881667279959505938"] = {
+            key = "17881667279959505938",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1648, y = 504},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 1,
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_6/0180_cs_intro_loop_ver",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {}
+            }
+          },
+          ["17881667337449506140"] = {
+            key = "17881667337449506140",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1920.883581235698, y = 281.9513729977116},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 1,
+              SoundType = 0
             }
           }
         },

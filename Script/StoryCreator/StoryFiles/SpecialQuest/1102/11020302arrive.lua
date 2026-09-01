@@ -1051,6 +1051,12 @@ return {
             startPort = "Out",
             endQuest = "17864392174922810762",
             endPort = "Input"
+          },
+          {
+            startQuest = "1782138091925573",
+            startPort = "Out",
+            endQuest = "178805885874426840203",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -1091,7 +1097,7 @@ return {
             key = "1782138091925573",
             type = "TalkNode",
             name = "【Ex02_FixSimple_27】：到达广场",
-            pos = {x = 1879.4499300642517, y = 293.36122721746625},
+            pos = {x = 1840.4499300642517, y = 252.86122721746625},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -1291,7 +1297,7 @@ return {
             key = "178214257330311766302",
             type = "ChangeStaticCreatorNode",
             name = "生成伊薇&法露茜",
-            pos = {x = 2168.5128530278535, y = 284.47834805277535},
+            pos = {x = 2165.5128530278535, y = 287.47834805277535},
             propsData = {
               ActiveEnable = false,
               EnableBlackScreenSync = false,
@@ -1389,6 +1395,17 @@ return {
               IsAsync = false,
               UIName = "StringBoardMain",
               IsInterfaceJump = false
+            }
+          },
+          ["178805885874426840203"] = {
+            key = "178805885874426840203",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2151.8766917293233, y = 111.29318885448924},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },

@@ -108752,7 +108752,7 @@ local Data = {
   },
   {
     MinKey = 11019116,
-    MaxKey = 12001370,
+    MaxKey = 12001362,
     Loader = function()
       return {
         [11019116] = {
@@ -109186,6 +109186,20 @@ local Data = {
               PlayNormalSound = {
                 EventPath = "event:/sfx/common/story/ex02/task_enemybark_04",
                 PlayAs2D = true
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [11108601] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "-377.890625,201.789062,305.854492,0.00005,-28.141293,-33.166599,20.0,100000.0,false,Manual,2.8,16:9 Digital Film"
+                  }
+                }
               }
             }
           },
@@ -116309,7 +116323,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12001370,
+    MaxKey = 12010307,
+    Loader = function()
+      return {
         [12001370] = {
           Operations = {
             [1] = {
@@ -116332,15 +116354,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12001401,
-    MaxKey = 12010308,
-    Loader = function()
-      return {
+        },
         [12001401] = {
           Operations = {
             [1] = {
@@ -121783,7 +121797,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12010308,
+    MaxKey = 12013410,
+    Loader = function()
+      return {
         [12010308] = {
           Operations = {
             [1] = {
@@ -121800,15 +121822,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12010309,
-    MaxKey = 12013411,
-    Loader = function()
-      return {
+        },
         [12010309] = {
           Operations = {
             [1] = {
@@ -127372,7 +127386,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12013411,
+    MaxKey = 12020701,
+    Loader = function()
+      return {
         [12013411] = {
           Operations = {
             [1] = {
@@ -127380,15 +127402,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12013412,
-    MaxKey = 12020901,
-    Loader = function()
-      return {
+        },
         [12013412] = {
           Operations = {
             [1] = {
@@ -133889,7 +133903,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12020901,
+    MaxKey = 12032308,
+    Loader = function()
+      return {
         [12020901] = {
           Operations = {
             [1] = {
@@ -133903,15 +133925,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12022101,
-    MaxKey = 12032309,
-    Loader = function()
-      return {
+        },
         [12022101] = {
           Operations = {
             [1] = {
@@ -141198,7 +141212,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12032309,
+    MaxKey = 12034303,
+    Loader = function()
+      return {
         [12032309] = {
           Operations = {
             [1] = {
@@ -141246,15 +141268,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12032310,
-    MaxKey = 12034304,
-    Loader = function()
-      return {
+        },
         [12032310] = {
           Operations = {
             [1] = {
@@ -149095,7 +149109,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12034304,
+    MaxKey = 20000601,
+    Loader = function()
+      return {
         [12034304] = {
           Operations = {
             [1] = {
@@ -149132,15 +149154,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12034305,
-    MaxKey = 20000602,
-    Loader = function()
-      return {
+        },
         [12034305] = {
           Operations = {
             [1] = {
@@ -153927,7 +153941,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 20000602,
+    MaxKey = 20006004,
+    Loader = function()
+      return {
         [20000602] = {
           Operations = {
             [1] = {
@@ -153982,15 +154004,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 20000603,
-    MaxKey = 20006005,
-    Loader = function()
-      return {
+        },
         [20000603] = {
           Operations = {
             [1] = {
@@ -162486,7 +162500,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 20006005,
+    MaxKey = 51001205,
+    Loader = function()
+      return {
         [20006005] = {
           Operations = {
             [1] = {
@@ -162512,15 +162534,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 20006007,
-    MaxKey = 51001206,
-    Loader = function()
-      return {
+        },
         [20006007] = {
           Operations = {
             [1] = {
@@ -166277,7 +166291,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51001206,
+    MaxKey = 51003412,
+    Loader = function()
+      return {
         [51001206] = {
           Operations = {
             [1] = {
@@ -166288,15 +166310,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51001207,
-    MaxKey = 51003413,
-    Loader = function()
-      return {
+        },
         [51001207] = {
           Operations = {
             [1] = {
@@ -169746,7 +169760,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51003413,
+    MaxKey = 51005302,
+    Loader = function()
+      return {
         [51003413] = {
           Operations = {
             [1] = {
@@ -169771,15 +169793,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51003501,
-    MaxKey = 51005303,
-    Loader = function()
-      return {
+        },
         [51003501] = {
           Operations = {
             [1] = {
@@ -172581,7 +172595,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51005303,
+    MaxKey = 51006908,
+    Loader = function()
+      return {
         [51005303] = {
           Operations = {
             [1] = {
@@ -172589,15 +172611,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51005310,
-    MaxKey = 51007001,
-    Loader = function()
-      return {
+        },
         [51005310] = {
           Operations = {
             [1] = {
@@ -177535,7 +177549,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51007001,
+    MaxKey = 51009216,
+    Loader = function()
+      return {
         [51007001] = {
           Operations = {
             [1] = {
@@ -177554,15 +177576,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51007002,
-    MaxKey = 51009217,
-    Loader = function()
-      return {
+        },
         [51007002] = {
           Operations = {
             [1] = {
@@ -180593,7 +180607,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51009217,
+    MaxKey = 51009722,
+    Loader = function()
+      return {
         [51009217] = {
           Operations = {
             [1] = {
@@ -180616,15 +180638,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51009218,
-    MaxKey = 51009723,
-    Loader = function()
-      return {
+        },
         [51009218] = {
           Operations = {
             [1] = {
@@ -184746,7 +184760,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51009723,
+    MaxKey = 51010105,
+    Loader = function()
+      return {
         [51009723] = {
           Operations = {
             [1] = {
@@ -184780,15 +184802,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51009724,
-    MaxKey = 51010106,
-    Loader = function()
-      return {
+        },
         [51009724] = {
           Operations = {
             [1] = {
@@ -188309,7 +188323,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51010106,
+    MaxKey = 51102047,
+    Loader = function()
+      return {
         [51010106] = {
           Operations = {
             [1] = {
@@ -188326,15 +188348,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51010107,
-    MaxKey = 51102048,
-    Loader = function()
-      return {
+        },
         [51010107] = {
           Operations = {
             [1] = {
@@ -191004,7 +191018,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51102048,
+    MaxKey = 51105087,
+    Loader = function()
+      return {
         [51102048] = {
           Operations = {
             [1] = {
@@ -191021,15 +191043,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51102049,
-    MaxKey = 51105088,
-    Loader = function()
-      return {
+        },
         [51102049] = {
           Operations = {
             [1] = {
@@ -194851,7 +194865,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51105088,
+    MaxKey = 51106019,
+    Loader = function()
+      return {
         [51105088] = {
           Operations = {
             [1] = {
@@ -194871,15 +194893,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51105089,
-    MaxKey = 51106023,
-    Loader = function()
-      return {
+        },
         [51105089] = {
           Operations = {
             [1] = {
@@ -198567,7 +198581,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51106023,
+    MaxKey = 51120023,
+    Loader = function()
+      return {
         [51106023] = {
           Operations = {
             [1] = {
@@ -198578,15 +198600,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51106026,
-    MaxKey = 51120025,
-    Loader = function()
-      return {
+        },
         [51106026] = {
           Operations = {
             [1] = {
@@ -201684,7 +201698,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51120025,
+    MaxKey = 51150008,
+    Loader = function()
+      return {
         [51120025] = {
           Operations = {
             [1] = {
@@ -201695,15 +201717,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51120028,
-    MaxKey = 51150009,
-    Loader = function()
-      return {
+        },
         [51120028] = {
           Operations = {
             [1] = {
@@ -205233,7 +205247,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51150009,
+    MaxKey = 51153053,
+    Loader = function()
+      return {
         [51150009] = {
           Operations = {
             [1] = {
@@ -205257,15 +205279,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51150010,
-    MaxKey = 51153056,
-    Loader = function()
-      return {
+        },
         [51150010] = {
           Operations = {
             [1] = {
@@ -209534,7 +209548,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51153056,
+    MaxKey = 51200511,
+    Loader = function()
+      return {
         [51153056] = {
           Operations = {
             [1] = {
@@ -209557,15 +209579,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51153057,
-    MaxKey = 51200512,
-    Loader = function()
-      return {
+        },
         [51153057] = {
           Operations = {
             [1] = {
@@ -211746,7 +211760,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51200512,
+    MaxKey = 51213082,
+    Loader = function()
+      return {
         [51200512] = {
           Operations = {
             [1] = {
@@ -211757,15 +211779,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51200514,
-    MaxKey = 51213083,
-    Loader = function()
-      return {
+        },
         [51200514] = {
           Operations = {
             [1] = {
@@ -213963,7 +213977,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51213083,
+    MaxKey = 72000701,
+    Loader = function()
+      return {
         [51213083] = {
           Operations = {
             [1] = {
@@ -213974,15 +213996,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51213085,
-    MaxKey = 72000702,
-    Loader = function()
-      return {
+        },
         [51213085] = {
           Operations = {
             [1] = {
@@ -216797,7 +216811,15 @@ local Data = {
             }
           },
           bAllowClick = false
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 72000702,
+    MaxKey = 72005604,
+    Loader = function()
+      return {
         [72000702] = {
           Operations = {
             [1] = {
@@ -216808,15 +216830,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 72000703,
-    MaxKey = 72005605,
-    Loader = function()
-      return {
+        },
         [72000703] = {
           Operations = {
             [1] = {
@@ -220291,7 +220305,15 @@ local Data = {
             }
           },
           bAllowClick = false
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 72005605,
+    MaxKey = 72201901,
+    Loader = function()
+      return {
         [72005605] = {
           Operations = {
             [1] = {
@@ -220308,15 +220330,7 @@ local Data = {
             }
           },
           bAllowClick = false
-        }
-      }
-    end
-  },
-  {
-    MinKey = 72005606,
-    MaxKey = 72201903,
-    Loader = function()
-      return {
+        },
         [72005606] = {
           Operations = {
             [1] = {
@@ -223564,7 +223578,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 72201903,
+    MaxKey = 80040220,
+    Loader = function()
+      return {
         [72201903] = {
           Operations = {
             [1] = {
@@ -223575,15 +223597,7 @@ local Data = {
             }
           },
           bAllowClick = false
-        }
-      }
-    end
-  },
-  {
-    MinKey = 72201904,
-    MaxKey = 80040221,
-    Loader = function()
-      return {
+        },
         [72201904] = {
           Operations = {
             [1] = {
@@ -228264,7 +228278,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80040221,
+    MaxKey = 80060120,
+    Loader = function()
+      return {
         [80040221] = {
           Operations = {
             [1] = {
@@ -228299,15 +228321,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80040222,
-    MaxKey = 80060121,
-    Loader = function()
-      return {
+        },
         [80040222] = {
           Operations = {
             [1] = {
@@ -232592,7 +232606,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80060121,
+    MaxKey = 80070328,
+    Loader = function()
+      return {
         [80060121] = {
           Operations = {
             [1] = {
@@ -232600,15 +232622,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80060123,
-    MaxKey = 80070330,
-    Loader = function()
-      return {
+        },
         [80060123] = {
           Operations = {
             [1] = {
@@ -235792,7 +235806,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80070330,
+    MaxKey = 80100102,
+    Loader = function()
+      return {
         [80070330] = {
           Operations = {
             [1] = {
@@ -235815,15 +235837,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80070331,
-    MaxKey = 80100103,
-    Loader = function()
-      return {
+        },
         [80070331] = {
           Operations = {
             [1] = {
@@ -239923,7 +239937,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80100103,
+    MaxKey = 80120118,
+    Loader = function()
+      return {
         [80100103] = {
           Operations = {
             [1] = {
@@ -239937,15 +239959,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80100104,
-    MaxKey = 80120119,
-    Loader = function()
-      return {
+        },
         [80100104] = {
           Operations = {
             [1] = {
@@ -242761,7 +242775,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80120119,
+    MaxKey = 80130307,
+    Loader = function()
+      return {
         [80120119] = {
           Operations = {
             [1] = {
@@ -242787,15 +242809,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80120120,
-    MaxKey = 80130308,
-    Loader = function()
-      return {
+        },
         [80120120] = {
           Operations = {
             [1] = {
@@ -246190,7 +246204,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80130308,
+    MaxKey = 80140323,
+    Loader = function()
+      return {
         [80130308] = {
           Operations = {
             [1] = {
@@ -246201,15 +246223,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80130309,
-    MaxKey = 80140326,
-    Loader = function()
-      return {
+        },
         [80130309] = {
           Operations = {
             [1] = {
@@ -250606,7 +250620,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80140326,
+    MaxKey = 80160306,
+    Loader = function()
+      return {
         [80140326] = {
           Operations = {
             [1] = {
@@ -250638,15 +250660,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80140328,
-    MaxKey = 80160307,
-    Loader = function()
-      return {
+        },
         [80140328] = {
           Operations = {
             [1] = {
@@ -255203,7 +255217,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80160307,
+    MaxKey = 80180331,
+    Loader = function()
+      return {
         [80160307] = {
           Operations = {
             [1] = {
@@ -255211,15 +255233,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80160308,
-    MaxKey = 80180332,
-    Loader = function()
-      return {
+        },
         [80160308] = {
           Operations = {
             [1] = {
@@ -258695,7 +258709,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80180332,
+    MaxKey = 80200237,
+    Loader = function()
+      return {
         [80180332] = {
           Operations = {
             [1] = {
@@ -258721,15 +258743,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80180333,
-    MaxKey = 80200238,
-    Loader = function()
-      return {
+        },
         [80180333] = {
           Operations = {
             [1] = {
@@ -263816,7 +263830,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80200238,
+    MaxKey = 90030101,
+    Loader = function()
+      return {
         [80200238] = {
           Operations = {
             [1] = {
@@ -263839,15 +263861,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80200239,
-    MaxKey = 90030103,
-    Loader = function()
-      return {
+        },
         [80200239] = {
           Operations = {
             [1] = {
@@ -268660,7 +268674,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 90030103,
+    MaxKey = 90180106,
+    Loader = function()
+      return {
         [90030103] = {
           Operations = {
             [1] = {
@@ -268671,15 +268693,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 90030104,
-    MaxKey = 90180201,
-    Loader = function()
-      return {
+        },
         [90030104] = {
           Operations = {
             [1] = {
@@ -271337,7 +271351,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 90180201,
+    MaxKey = 710050022,
+    Loader = function()
+      return {
         [90180201] = {
           Operations = {
             [1] = {
@@ -271355,15 +271377,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 90180204,
-    MaxKey = 710054041,
-    Loader = function()
-      return {
+        },
         [90180204] = {
           Operations = {
             [1] = {
@@ -274139,7 +274153,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 710054041,
+    MaxKey = 741147111,
+    Loader = function()
+      return {
         [710054041] = {
           Operations = {
             [1] = {
@@ -274147,15 +274169,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 710054042,
-    MaxKey = 741147112,
-    Loader = function()
-      return {
+        },
         [710054042] = {
           Operations = {
             [1] = {
@@ -277016,7 +277030,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741147112,
+    MaxKey = 741147332,
+    Loader = function()
+      return {
         [741147112] = {
           Operations = {
             [1] = {
@@ -277039,15 +277061,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741147113,
-    MaxKey = 741147333,
-    Loader = function()
-      return {
+        },
         [741147113] = {
           Operations = {
             [1] = {
@@ -280949,7 +280963,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741147333,
+    MaxKey = 741147813,
+    Loader = function()
+      return {
         [741147333] = {
           Operations = {
             [1] = {
@@ -280963,15 +280985,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741147334,
-    MaxKey = 741147814,
-    Loader = function()
-      return {
+        },
         [741147334] = {
           Operations = {
             [1] = {
@@ -284719,7 +284733,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741147814,
+    MaxKey = 741148524,
+    Loader = function()
+      return {
         [741147814] = {
           Operations = {
             [1] = {
@@ -284739,15 +284761,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741147815,
-    MaxKey = 741148525,
-    Loader = function()
-      return {
+        },
         [741147815] = {
           Operations = {
             [1] = {
@@ -288583,7 +288597,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741148525,
+    MaxKey = 741149309,
+    Loader = function()
+      return {
         [741148525] = {
           Operations = {
             [1] = {
@@ -288600,15 +288622,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741148526,
-    MaxKey = 741149310,
-    Loader = function()
-      return {
+        },
         [741148526] = {
           Operations = {
             [1] = {
@@ -292426,7 +292440,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741149310,
+    MaxKey = 760000102,
+    Loader = function()
+      return {
         [741149310] = {
           Operations = {
             [1] = {
@@ -292443,15 +292465,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741149311,
-    MaxKey = 760000103,
-    Loader = function()
-      return {
+        },
         [741149311] = {
           Operations = {
             [1] = {
@@ -296123,7 +296137,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 760000103,
+    MaxKey = 1101930901,
+    Loader = function()
+      return {
         [760000103] = {
           Operations = {
             [1] = {
@@ -296143,15 +296165,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 800205121,
-    MaxKey = 1101930901,
-    Loader = function()
-      return {
+        },
         [800205121] = {
           Operations = {
             [1] = {

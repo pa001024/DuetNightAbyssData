@@ -102,12 +102,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1785769663505933",
-            startPort = "Out",
-            endQuest = "1783943195820241",
-            endPort = "Fail"
-          },
-          {
             startQuest = "17857723733453338787",
             startPort = "Out",
             endQuest = "17857738455844453424",
@@ -207,12 +201,6 @@ return {
             startQuest = "178594267003015597084",
             startPort = "true",
             endQuest = "1785769657065779",
-            endPort = "In"
-          },
-          {
-            startQuest = "17839443189324407582",
-            startPort = "Out",
-            endQuest = "17857745357015575491",
             endPort = "In"
           },
           {
@@ -406,6 +394,42 @@ return {
             startPort = "Out",
             endQuest = "17868082416863353532",
             endPort = "In"
+          },
+          {
+            startQuest = "17839432685751102628",
+            startPort = "Out",
+            endQuest = "178817238201650360433",
+            endPort = "In"
+          },
+          {
+            startQuest = "178652485019410080609",
+            startPort = "Out",
+            endQuest = "178817241514951478719",
+            endPort = "In"
+          },
+          {
+            startQuest = "17839443189324407582",
+            startPort = "Out",
+            endQuest = "178817244971452597011",
+            endPort = "In"
+          },
+          {
+            startQuest = "178817244971452597011",
+            startPort = "Out",
+            endQuest = "17857745357015575491",
+            endPort = "In"
+          },
+          {
+            startQuest = "1785769663505933",
+            startPort = "Out",
+            endQuest = "178817246454252597430",
+            endPort = "In"
+          },
+          {
+            startQuest = "178817246454252597430",
+            startPort = "Out",
+            endQuest = "1783943195820241",
+            endPort = "Fail"
           }
         },
         nodeData = {
@@ -1011,6 +1035,60 @@ return {
               MessageType = "GameMode",
               MessageContent = "Boss_04_Start",
               UnitId = -1
+            }
+          },
+          ["178817238201650360433"] = {
+            key = "178817238201650360433",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2256.010218649475, y = -255.72413528508906},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_6/0191_boss_aida_stage_1",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107601},
+              bStoreToServer = true
+            }
+          },
+          ["178817241514951478719"] = {
+            key = "178817241514951478719",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 3833.5964117115122, y = 2.8965521021302365},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_6/0192_boss_aida_stage_2",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107601},
+              bStoreToServer = true
+            }
+          },
+          ["178817244971452597011"] = {
+            key = "178817244971452597011",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2866.3550408833125, y = 1233.931024065294},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["178817246454252597430"] = {
+            key = "178817246454252597430",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1257.734365334809, y = 1430.4827464795806},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },
@@ -2105,12 +2183,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17860920326522233943",
-            startPort = "Out",
-            endQuest = "17863762797611119408",
-            endPort = "In"
-          },
-          {
             startQuest = "178619522798417871677",
             startPort = "Out",
             endQuest = "17862055158821671",
@@ -2270,6 +2342,30 @@ return {
             startQuest = "17860920326522233943",
             startPort = "Out",
             endQuest = "178731923724013450624",
+            endPort = "In"
+          },
+          {
+            startQuest = "17860424800981526",
+            startPort = "QuestStart",
+            endQuest = "178817222085747000699",
+            endPort = "In"
+          },
+          {
+            startQuest = "17860424800981529",
+            startPort = "Out",
+            endQuest = "178817228353648119074",
+            endPort = "In"
+          },
+          {
+            startQuest = "17860920326522233943",
+            startPort = "Out",
+            endQuest = "17881782257373368500",
+            endPort = "In"
+          },
+          {
+            startQuest = "17881782257373368500",
+            startPort = "Out",
+            endQuest = "17863762797611119408",
             endPort = "In"
           }
         },
@@ -2530,7 +2626,7 @@ return {
             key = "17863762797611119408",
             type = "SendMessageNode",
             name = "发送消息",
-            pos = {x = 5512.339027676633, y = -132.62876986511745},
+            pos = {x = 5813.558532398187, y = -43.60438183000258},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "Boss_01_End",
@@ -2541,14 +2637,14 @@ return {
             key = "178637829263811163102",
             type = "WaitOfTimeNode",
             name = "延迟等待",
-            pos = {x = 5839.49863892195, y = 88.23843685184094},
+            pos = {x = 6080.962047565138, y = 93.11648551129929},
             propsData = {WaitTime = 1}
           },
           ["17865065276022696"] = {
             key = "17865065276022696",
             type = "StandAloneBlackScreenNode",
             name = "独立黑屏节点",
-            pos = {x = 5834.663840869982, y = -178.39627979133772},
+            pos = {x = 6061.493103534795, y = -172.2987189670148},
             propsData = {
               FadeInSeconds = 0,
               FadeOutSeconds = 0,
@@ -2729,6 +2825,81 @@ return {
               UIParam = "BattleWheel",
               ActionParam = "None",
               ShowOrHide = false
+            }
+          },
+          ["178817222085747000699"] = {
+            key = "178817222085747000699",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 918, y = -284},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_6/0190_story_aida_dream_land",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107601},
+              bStoreToServer = true
+            }
+          },
+          ["178817228353648119074"] = {
+            key = "178817228353648119074",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1548, y = 782},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["17881782257373368500"] = {
+            key = "17881782257373368500",
+            type = "TalkNode",
+            name = "对话节点",
+            pos = {x = 5515.464566640356, y = 73.65558212173242},
+            propsData = {
+              IsNpcNode = false,
+              TalkType = "LevelSequence",
+              TalkStageName = "",
+              ShowFilePath = "LevelSequence'/Game/AssetDesign/Story/DialogueSequence/MainStory/1102/110201/SQ_EX02_SpecialShow_07.SQ_EX02_SpecialShow_07'",
+              BlendInTime = 0,
+              BlendOutTime = 0,
+              InType = "FadeIn",
+              OutType = "FadeOut",
+              ShowFadeDetail = false,
+              ShowSkipButton = false,
+              ShowReviewButton = true,
+              ShowWikiButton = true,
+              PauseGameGlobal = false,
+              bOpenDefaultSkinKawaii = false,
+              HideNpcs = false,
+              HideMonsters = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
+              bHideSceneEffects = true,
+              HideMechanismsFX = false,
+              DisableNpcOptimization = false,
+              DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
+              PauseTimeElapse = false,
+              BeginNewTargetPointName = "",
+              EndNewTargetPointName = "",
+              CameraLookAtTartgetPoint = "",
+              RestoreStand = false,
+              TalkActors = {
+                {
+                  TalkActorType = "Player",
+                  TalkActorId = 0,
+                  TalkActorVisible = false
+                }
+              },
+              bLockHighestLOD = false,
+              FreezeWorldComposition = true,
+              bTravelFullLoadWorldComposition = false,
+              SwitchToMaster = "None",
+              OverrideFailBlend = false
             }
           }
         },

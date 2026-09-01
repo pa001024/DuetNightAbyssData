@@ -950,6 +950,31 @@ return {
       UnitType = "Monster",
       UnitId = 9511001
     },
+    ["312780839"] = {
+      CreatorId = 312780839,
+      UnitType = "Monster",
+      UnitId = 9511001
+    },
+    ["312780840"] = {
+      CreatorId = 312780840,
+      UnitType = "Monster",
+      UnitId = 9511001
+    },
+    ["312780841"] = {
+      CreatorId = 312780841,
+      UnitType = "Monster",
+      UnitId = 9511001
+    },
+    ["312780842"] = {
+      CreatorId = 312780842,
+      UnitType = "Monster",
+      UnitId = 9511001
+    },
+    ["312780843"] = {
+      CreatorId = 312780843,
+      UnitType = "Monster",
+      UnitId = 9511001
+    },
     ["312780679"] = {
       CreatorId = 312780679,
       UnitType = "Monster",
@@ -2214,6 +2239,11 @@ return {
       CreatorId = 142780560,
       UnitType = "Phantom",
       UnitId = 0
+    },
+    ["312780844"] = {
+      CreatorId = 312780844,
+      UnitType = "Mechanism",
+      UnitId = 170202
     }
   },
   ManualItem = {

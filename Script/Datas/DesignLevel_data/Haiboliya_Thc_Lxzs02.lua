@@ -80,11 +80,6 @@ return {
       UnitType = "Mechanism",
       UnitId = 1
     },
-    ["142790445"] = {
-      CreatorId = 142790445,
-      UnitType = "Mechanism",
-      UnitId = 1701011
-    },
     ["142790006"] = {
       CreatorId = 142790006,
       UnitType = "Mechanism",
@@ -1066,34 +1061,10 @@ return {
     },
     ["7086027"] = {
       AutoReset = 0,
-      ["362790341"] = {
-        CreatorId = 362790341,
-        UnitType = "Monster",
-        UnitId = 6001001,
-        RarelyId = 7086027
-      },
-      ["362790342"] = {
-        CreatorId = 362790342,
-        UnitType = "Monster",
-        UnitId = 6001001,
-        RarelyId = 7086027
-      },
-      ["362790343"] = {
-        CreatorId = 362790343,
-        UnitType = "Monster",
-        UnitId = 6001001,
-        RarelyId = 7086027
-      },
-      ["362790344"] = {
-        CreatorId = 362790344,
-        UnitType = "Monster",
-        UnitId = 6003001,
-        RarelyId = 7086027
-      },
-      ["362790345"] = {
-        CreatorId = 362790345,
-        UnitType = "Mechanism",
-        UnitId = 70162,
+      ["292790341"] = {
+        CreatorId = 292790341,
+        UnitType = "Drop",
+        UnitId = 2000127,
         RarelyId = 7086027
       }
     },
@@ -1296,6 +1267,39 @@ return {
         UnitType = "Mechanism",
         UnitId = 70162,
         RarelyId = 7086032
+      }
+    },
+    ["7086052"] = {
+      AutoReset = 0,
+      ["362790341"] = {
+        CreatorId = 362790341,
+        UnitType = "Monster",
+        UnitId = 6001001,
+        RarelyId = 7086052
+      },
+      ["362790342"] = {
+        CreatorId = 362790342,
+        UnitType = "Monster",
+        UnitId = 6001001,
+        RarelyId = 7086052
+      },
+      ["362790343"] = {
+        CreatorId = 362790343,
+        UnitType = "Monster",
+        UnitId = 6001001,
+        RarelyId = 7086052
+      },
+      ["362790344"] = {
+        CreatorId = 362790344,
+        UnitType = "Monster",
+        UnitId = 6003001,
+        RarelyId = 7086052
+      },
+      ["362790345"] = {
+        CreatorId = 362790345,
+        UnitType = "Mechanism",
+        UnitId = 70162,
+        RarelyId = 7086052
       }
     },
     ["7086024"] = {
@@ -2888,5 +2892,17 @@ return {
     ["9080104"] = {RandomRuleId = 9080104},
     ["9080105"] = {RandomRuleId = 9080105}
   },
-  MissionGroup = {}
+  MissionGroup = {
+    BP_MissionGroup_Dachui_2 = {
+      QuestID = 11020103,
+      StaticCreator = {
+        ["162790506"] = {
+          CreatorId = 162790506,
+          UnitType = "Mechanism",
+          UnitId = 1701011
+        }
+      },
+      ManualItem = {}
+    }
+  }
 }

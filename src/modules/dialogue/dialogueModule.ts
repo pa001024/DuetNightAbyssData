@@ -81,6 +81,8 @@ function inlineImpressionPlus(table: Row, id: unknown): VNodeTree | undefined {
 }
 
 export interface DialogueService {
+    prefetch(firstIds: unknown[]): void
+    prefetchReachable(firstIds: unknown[]): void
     chain(firstId: unknown, includeContentlessNodes?: boolean): VNodeTree[]
     flowChain(flowAssetPath: unknown): VNodeTree[]
     story(path: unknown): Story | undefined
@@ -93,6 +95,8 @@ class DialogueServiceImpl implements DialogueService {
     private readonly impressionCheck: Row
     private readonly impressionPlus: Row
     private readonly dataCache = new Map<number, { base: Row; localized: Record<string, Row> } | undefined>()
+    private readonly chainCache = new Map<string, VNodeTree[]>()
+    private readonly flowChainCache = new Map<string, VNodeTree[]>()
 
     constructor(private readonly ctx: ModuleContext) {
         this.impressionCheck = (ctx.dm.getTable("ImpressionCheck") as Row | undefined) ?? {}
@@ -123,6 +127,31 @@ class DialogueServiceImpl implements DialogueService {
         }
     }
 
+    prefetch(firstIds: unknown[]): void {
+        this.loadData(firstIds.map(idOf).filter((id): id is number => id !== undefined))
+    }
+
+    prefetchReachable(firstIds: unknown[]): void {
+        const pending = [...new Set(firstIds.map(idOf).filter((id): id is number => id !== undefined))].filter(
+            id => !this.dataCache.has(id)
+        )
+        if (pending.length === 0) return
+        const tables = Object.values(DIALOGUE_TABLES)
+        const loaded = this.ctx.dm.getDialogueReachableItems(tables, pending)
+        for (const map of loaded.values()) {
+            for (const key of map.keys()) {
+                const numericId = idOf(key)
+                if (numericId === undefined || this.dataCache.has(numericId)) continue
+                const localized: Record<string, Row> = {}
+                for (const [lang, table] of Object.entries(DIALOGUE_TABLES)) {
+                    const item = row(loaded.get(table)?.get(String(numericId)))
+                    if (item) localized[lang] = item
+                }
+                this.dataCache.set(numericId, localized.cn ? { base: localized.cn, localized } : undefined)
+            }
+        }
+    }
+
     private content(data: { base: Row; localized: Record<string, Row> }): VNode | undefined {
         const values: Partial<Record<"en" | "jp" | "kr" | "fr" | "tc", string>> = {}
         const read = (lang: string): string => {
@@ -144,11 +173,14 @@ class DialogueServiceImpl implements DialogueService {
     chain(firstId: unknown, includeContentlessNodes = true): VNodeTree[] {
         const first = idOf(firstId)
         if (first === undefined) return []
+        const cacheKey = `${first}\x00${includeContentlessNodes ? 1 : 0}`
+        const cached = this.chainCache.get(cacheKey)
+        if (cached) return this.copyItems(cached)
         const result: VNodeTree[] = []
         const queue: number[] = [first]
         const visited = new Set<number>()
         while (queue.length > 0) {
-            const batch = [...new Set(queue.splice(0))]
+            const batch = [...new Set(queue.splice(0, 64))]
             this.loadData(batch)
             for (const current of batch) {
                 if (visited.has(current)) continue
@@ -207,7 +239,12 @@ class DialogueServiceImpl implements DialogueService {
                 result.push(item)
             }
         }
-        return result
+        this.chainCache.set(cacheKey, result)
+        return this.copyItems(result)
+    }
+
+    private copyItems(items: VNodeTree[]): VNodeTree[] {
+        return items.map(item => (item && typeof item === "object" && !Array.isArray(item) ? { ...(item as Row) } : item))
     }
 
     private flowFile(path: unknown): unknown[] | undefined {
@@ -237,6 +274,9 @@ class DialogueServiceImpl implements DialogueService {
     flowChain(flowAssetPath: unknown): VNodeTree[] {
         const flow = this.flowFile(flowAssetPath)
         if (!flow) return []
+        const cacheKey = String(flowAssetPath)
+        const cached = this.flowChainCache.get(cacheKey)
+        if (cached) return this.copyItems(cached)
         const nodes = new Map<string, Row>()
         const starts: string[] = []
         const next = new Map<string, string[]>()
@@ -280,6 +320,7 @@ class DialogueServiceImpl implements DialogueService {
         }
         const result: VNodeTree[] = []
         const emitted = new Set<number>()
+        this.loadData(dialogueIds)
         for (const id of dialogueIds) {
             for (const item of this.chain(id, false)) {
                 const itemId = idOf(row(item)?.id)
@@ -288,7 +329,8 @@ class DialogueServiceImpl implements DialogueService {
                 result.push(item)
             }
         }
-        return result
+        this.flowChainCache.set(cacheKey, result)
+        return this.copyItems(result)
     }
 
     story(path: unknown): Story | undefined {
@@ -324,31 +366,7 @@ class DialogueServiceImpl implements DialogueService {
             append(parent)
             const questData = row(parent.questNodeData)
             const nodeData = row(questData?.nodeData)
-            const lineData = Array.isArray(questData?.lineData) ? questData.lineData.map(row).filter((v): v is Row => !!v) : []
-            if (!nodeData || lineData.length === 0) {
-                for (const subNode of Object.values(nodeData ?? {})) append(subNode)
-                continue
-            }
-            const edges = new Map<string, string[]>()
-            const starts: string[] = []
-            for (const edge of lineData) {
-                const start = String(edge.startQuest ?? "")
-                const end = String(edge.endQuest ?? "")
-                if (!start || !end) continue
-                if (String(edge.startPort ?? "").toLowerCase() === "queststart") starts.push(end)
-                const list = edges.get(start) ?? []
-                if (!list.includes(end)) list.push(end)
-                edges.set(start, list)
-            }
-            const queue = starts.length > 0 ? starts : Object.keys(nodeData)
-            const visited = new Set<string>()
-            while (queue.length > 0) {
-                const key = queue.shift()!
-                if (visited.has(key)) continue
-                visited.add(key)
-                append(nodeData[key])
-                for (const next of edges.get(key) ?? []) queue.push(next)
-            }
+            for (const subNode of Object.values(nodeData ?? {})) append(subNode)
         }
         return result
     }

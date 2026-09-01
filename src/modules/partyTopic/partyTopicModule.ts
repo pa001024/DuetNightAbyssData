@@ -53,9 +53,9 @@ export function partyTopicModule(ctx: ModuleContext): VNodeTree {
 
         const talks = dialogue.storyTalks(item.PartyTopicTalkId)
         const dialogues: VNodeTree[] = []
+        const seen = new Set<string>()
         for (const talk of talks) {
             const chain = talk.flowAssetPath ? dialogue.flowChain(talk.flowAssetPath) : dialogue.chain(talk.firstDialogueId)
-            const seen = new Set(dialogues.map(entry => String((entry as Row).id)))
             for (const entry of chain) {
                 const entryId = String((entry as Row).id)
                 if (!seen.has(entryId)) {

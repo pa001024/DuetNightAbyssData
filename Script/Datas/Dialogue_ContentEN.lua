@@ -102406,6 +102406,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
           VoiceName = "voice/$Locale$/story/1102/111085/1BCF18C6"
         },
         [11108601] = {
+          Camera = "-377.890625,201.789062,305.854492,0.00005,-28.141293,-33.166599,20.0,100000.0,false,Manual,2.8,16:9 Digital Film",
           Content = "虽然维克托{性别2：哥丨姐}找到我了，但是你没喊“嗷呜”！所以不算数不算数！",
           ContentEN = "You found me, but you didn't shout \"Chomp!\" That doesn't count!",
           DialogueId = 11108601,
@@ -102680,7 +102681,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11108810] = {
           Content = "还有这些面包。只看外形跟我们印象中的面包没有区别。但咬一口就会发现，它们根本不是食物的味道。",
-          ContentEN = "And these loaves. They look real. But put one in your mouth, and you'll know it isn't food.",
+          ContentEN = "And the bread. It looks real. But put one in your mouth, and you'll know it isn't food.",
           DialogueId = 11108810,
           ExStoryInfo = "EXPlayer",
           GUID = "1BCF4B24",
@@ -367472,7 +367473,7 @@ A flash of steel cuts through the biting wind. From the shadows, a dark figure m
         },
         [80270307] = {
           Content = "旋转茶杯你们玩过了吗？小时候维克托从来不让你一个人去坐旋转茶杯，总是说“太危险了”。",
-          ContentEN = "Have you ridden the spinning teacups yet? When you were little, Victor never let you ride them alone. Too dangerous, {性别2：he丨she} would say.",
+          ContentEN = "Have you ridden the spinning teacups yet? When you were little, Victor never let you ride them alone. Too dangerous, {性别2：he|she} would say.",
           DialogueId = 80270307,
           GUID = "C8F2C33E",
           NextDialogue = 80270308,
@@ -367480,7 +367481,7 @@ A flash of steel cuts through the biting wind. From the shadows, a dark figure m
         },
         [80270308] = {
           Content = "{性别：他丨她}总是先把设备翻来覆去检查一遍，确保安全带万无一失，才让你去玩。",
-          ContentEN = "{性别2：He丨She} would check the whole ride over and over, and only let you on once the safety belt was fastened just right.",
+          ContentEN = "{性别2：He|She} would check the whole ride over and over, and only let you on once the safety belt was fastened just right.",
           DialogueId = 80270308,
           GUID = "C8F2C368",
           NextDialogue = 80270309,
@@ -367512,7 +367513,7 @@ A flash of steel cuts through the biting wind. From the shadows, a dark figure m
         },
         [80270312] = {
           Content = "对了对了，维克托这次来好像是有什么任务来着，等{性别2：他丨她}做完任务，能让{性别2：他丨她}先回军团吗？",
-          ContentEN = "Oh, right. Victor said {性别2：he丨she} came back this time for a mission. So once it's over... could you let {性别2：him丨her} go back to the Legion?",
+          ContentEN = "Oh, right. Victor said {性别2：he|she} came back this time for a mission. So once it's over... could you let {性别2：him|her} go back to the Legion?",
           DialogueId = 80270312,
           GUID = "C8F2C410",
           NextDialogue = 80270313,
@@ -367536,7 +367537,7 @@ A flash of steel cuts through the biting wind. From the shadows, a dark figure m
         },
         [80270315] = {
           Content = "军团那种地方维克托当年就不应该去。拥抱我们的乐园，{性别2：他丨她}才能获得幸福。",
-          ContentEN = "Victor should never have gone to the Legion in the first place. {性别2：He丨She} belongs here, in our Paradise. This is the only place {性别2：he丨she} can be happy.",
+          ContentEN = "Victor should never have gone to the Legion in the first place. {性别2：He|She} belongs here, in our Paradise. This is the only place {性别2：he|she} can be happy.",
           DialogueId = 80270315,
           GUID = "C8F2C48E",
           NextDialogue = 80270316,

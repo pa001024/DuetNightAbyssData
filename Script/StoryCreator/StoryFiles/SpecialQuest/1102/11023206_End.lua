@@ -370,6 +370,30 @@ return {
             startPort = "Out",
             endQuest = "17835269374091102790",
             endPort = "In"
+          },
+          {
+            startQuest = "17835260241381098051",
+            startPort = "Out",
+            endQuest = "178817036069341401355",
+            endPort = "In"
+          },
+          {
+            startQuest = "17835266045061099231",
+            startPort = "Out",
+            endQuest = "178817040914942519642",
+            endPort = "In"
+          },
+          {
+            startQuest = "17835260335371098314",
+            startPort = "Out",
+            endQuest = "178817041895242519881",
+            endPort = "In"
+          },
+          {
+            startQuest = "17835268384651101749",
+            startPort = "Out",
+            endQuest = "178817049672543638333",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -927,6 +951,60 @@ return {
             name = "打开章节开始UI",
             pos = {x = 4331.911782718004, y = 526.8876699452522},
             propsData = {ChapterUIId = 110201, UIType = "End"}
+          },
+          ["178817036069341401355"] = {
+            key = "178817036069341401355",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1888, y = -40},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/cbt03/0073_story_virgil_theme",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107001},
+              bStoreToServer = true
+            }
+          },
+          ["178817040914942519642"] = {
+            key = "178817040914942519642",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2320, y = 7.058823441414132},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["178817041895242519881"] = {
+            key = "178817041895242519881",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1346, y = 574},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["178817049672543638333"] = {
+            key = "178817049672543638333",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 3880.5780856819547, y = 882.593361195738},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/mute",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107001},
+              bStoreToServer = true
+            }
           }
         },
         commentData = {}

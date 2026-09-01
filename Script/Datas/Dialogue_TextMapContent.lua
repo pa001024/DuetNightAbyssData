@@ -94017,6 +94017,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
           VoiceName = "voice/$Locale$/story/1102/111085/1BCF18C6"
         },
         [11108601] = {
+          Camera = "-377.890625,201.789062,305.854492,0.00005,-28.141293,-33.166599,20.0,100000.0,false,Manual,2.8,16:9 Digital Film",
           Content = "虽然维克托{性别2：哥丨姐}找到我了，但是你没喊“嗷呜”！所以不算数不算数！",
           DialogueId = 11108601,
           ExStoryInfo = "EXPlayer",

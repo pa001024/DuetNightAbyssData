@@ -185344,6 +185344,11 @@ return ReadOnly("Talk_SoundEditor", {
     SelectKey = "voice_en_story_1102_111096_1BD0A400",
     SoundLength = 1640
   },
+  voice_en_story_1102_111096_1BD0A42A = {
+    ProgrammerSoundPath = "event:/voice/en/story/1102",
+    SelectKey = "voice_en_story_1102_111096_1BD0A42A",
+    SoundLength = 1680
+  },
   voice_en_story_1102_111096_1BD0A42A_1 = {
     ProgrammerSoundPath = "event:/voice/en/story/1102",
     SelectKey = "voice_en_story_1102_111096_1BD0A42A_1",
@@ -399595,6 +399600,11 @@ return ReadOnly("Talk_SoundEditor", {
     ProgrammerSoundPath = "event:/voice/kr/story/1102",
     SelectKey = "voice_kr_story_1102_111096_1BD365A2",
     SoundLength = 12910
+  },
+  voice_kr_story_1102_111096_1BD365CC = {
+    ProgrammerSoundPath = "event:/voice/kr/story/1102",
+    SelectKey = "voice_kr_story_1102_111096_1BD365CC",
+    SoundLength = 5760
   },
   voice_kr_story_1102_111096_1BD365CC_1 = {
     ProgrammerSoundPath = "event:/voice/kr/story/1102",

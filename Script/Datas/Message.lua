@@ -478,6 +478,20 @@ return ReadOnly("Message", {
     MessageId = 200045,
     MessageType = "Guide"
   },
+  [200046] = {
+    MessageContentGamePad = "Message_1102320204",
+    MessageContentPC = "Message_1102320204",
+    MessageContentPhone = "Message_1102320204",
+    MessageId = 200046,
+    MessageType = "Guide"
+  },
+  [200047] = {
+    MessageContentGamePad = "Message_1102320205",
+    MessageContentPC = "Message_1102320205",
+    MessageContentPhone = "Message_1102320205",
+    MessageId = 200047,
+    MessageType = "Guide"
+  },
   [203001] = {
     MessageContentGamePad = "Message_Guide_Pet_01",
     MessageContentPC = "Message_Guide_Pet_01",
