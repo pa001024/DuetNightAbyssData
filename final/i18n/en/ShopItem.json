@@ -20404,7 +20404,7 @@
                 "sequence": 293,
                 "startTime": 1770602400,
                 "endTime": 1776027600,
-                "cond": "Unlocks after obtaining a Radiant Posture",
+                "cond": "Unlocks upon obtaining any of the following Postures: Throne Above All, Shore Leisure, or Snapfreeze.",
                 "isSpPopup": 1
               },
               {
@@ -20421,7 +20421,7 @@
                 "sequence": 292,
                 "startTime": 1770602400,
                 "endTime": 1776027600,
-                "cond": "Unlocks after obtaining a Radiant Posture",
+                "cond": "Unlocks upon obtaining any of the following Postures: Throne Above All, Shore Leisure, or Snapfreeze.",
                 "isSpPopup": 1
               },
               {
@@ -22680,7 +22680,7 @@
                 "id": 140463,
                 "itemType": "HeadSculpture",
                 "typeId": 40004,
-                "typeName": "凝视",
+                "typeName": "I See You",
                 "price": 0,
                 "priceType": 111,
                 "priceName": "Iridescent Prism",
@@ -23983,7 +23983,7 @@
                 "sequence": 196,
                 "startTime": 1785117600,
                 "endTime": 1789333200,
-                "cond": "Unlocks after obtaining a Radiant Posture",
+                "cond": "Unlocks upon obtaining any of the following Postures: Throne Above All, Shore Leisure, or Snapfreeze.",
                 "isSpPopup": 1
               },
               {
@@ -24128,7 +24128,7 @@
                 "sequence": 293,
                 "startTime": 1780279200,
                 "endTime": 1780365600,
-                "cond": "Unlocks after obtaining a Radiant Posture",
+                "cond": "Unlocks upon obtaining any of the following Postures: Throne Above All, Shore Leisure, or Snapfreeze.",
                 "isSpPopup": 1
               },
               {
@@ -24145,7 +24145,7 @@
                 "sequence": 292,
                 "startTime": 1788746400,
                 "endTime": 1793005200,
-                "cond": "Unlocks after obtaining a Radiant Posture",
+                "cond": "Unlocks upon obtaining any of the following Postures: Throne Above All, Shore Leisure, or Snapfreeze.",
                 "isSpPopup": 1
               },
               {
@@ -26436,7 +26436,7 @@
                 "sequence": 1451,
                 "startTime": 1782784800,
                 "endTime": 1785142800,
-                "cond": "Obtain all [The Scream] series weapon skins",
+                "cond": "Obtain all [The Scream] series ranged weapon skins",
                 "isSpPopup": 1
               },
               {
@@ -26679,7 +26679,7 @@
                 "sequence": 1457,
                 "startTime": 1788746400,
                 "endTime": 1792400400,
-                "cond": "获得所有近战呐喊武器形象",
+                "cond": "Obtain all [The Scream] series melee weapon skins",
                 "isSpPopup": 1
               },
               {

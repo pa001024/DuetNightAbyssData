@@ -7438,21 +7438,21 @@
     "charId": 3104,
     "name": "Discussion : À propos de la LégionII",
     "res": "char_Falu_vo_topic_02_2",
-    "text": "Les affaires internes de la Légion ne m’intéressaient pas, et je ne me mêlais jamais de la vie privée de mes camarades. Je ne maintenais avec eux que des relations superficielles. Ainsi, lorsqu’il fallait les utiliser... ou les trahir... je n’en éprouvais aucun remords."
+    "text": "Quant aux documents confidentiels passés entre mes mains, je ne faisais que les transmettre ou les détruire selon les ordres reçus. Les informations auxquelles j’avais accès n’étaient, la plupart du temps, que des banalités."
   },
   {
     "id": 11119,
     "charId": 3104,
     "name": "Discussion : À propos de la LégionIII",
     "res": "char_Falu_vo_topic_02_3",
-    "text": "Quant aux documents confidentiels passés entre mes mains, je ne faisais que les transmettre ou les détruire selon les ordres reçus. Les informations auxquelles j’avais accès n’étaient, la plupart du temps, que des banalités."
+    "text": "Si vous en avez le temps, je peux au moins vous parler des opérations que j’ai menées au sein de la XIIIᵉ Légion. Chacune d’elles est gravée dans ma mémoire."
   },
   {
     "id": 11120,
     "charId": 3104,
     "name": "Discussion : À propos de la LégionIV",
     "res": "char_Falu_vo_topic_02_4",
-    "text": "Si vous en avez le temps, je peux au moins vous parler des opérations que j’ai menées au sein de la XIIIᵉ Légion. Chacune d’elles est gravée dans ma mémoire."
+    "text": "Je préfère vous prévenir : si le contenu de ces missions vous révulse, ou si le simple fait de les connaître vous attire des ennuis... je n’en assumerai pas la responsabilité."
   },
   {
     "id": 11121,

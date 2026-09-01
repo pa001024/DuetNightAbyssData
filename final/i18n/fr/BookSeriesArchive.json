@@ -2530,8 +2530,13 @@
     "res": [
       {
         "id": 2000127,
-        "type": "Read",
-        "text": "Veuillez respecter scrupuleusement les étapes suivantes lors de l’utilisation (<H>surtout Ada !</>) :\n1) Afin d’éviter tout accident, l’attraction ne doit être utilisée qu’en présence d’au moins deux personnes.\n2) Avant de jouer, vérifiez que les raccords de l’appareil ne sont pas desserrés. Le cas échéant, vous trouverez des outils de réparation dans la boîte située à l’arrière. (Si c’est Ada qui va les chercher, surveillez-la bien pour qu’elle les remette correctement à leur place.)\n3) Une fois l’appareil solidement fixé, vous pouvez tenter de le démarrer. Un bruit important au lancement et un temps de démarrage prolongé sont des phénomènes normaux. (Espérons que cela ne fera pas peur aux enfants.)\n4) En cas de problème technique impossible à résoudre, demandez à Morgana de s’en charger. (Ne laissez surtout jamais Ada s’occuper seule d’un problème technique ! À moins de trouver les pannes existantes trop faciles à réparer et de vouloir vous ajouter un défi.)\n5) ...\n(Le texte qui suit est illisible.)"
+        "type": "Drop",
+        "text": "Veuillez respecter scrupuleusement les étapes suivantes lors de l’utilisation (<H>surtout Ada !</>) :\n1) Afin d’éviter tout accident, l’attraction ne doit être utilisée qu’en présence d’au moins deux personnes.\n2) Avant de jouer, vérifiez que les raccords de l’appareil ne sont pas desserrés. Le cas échéant, vous trouverez des outils de réparation dans la boîte située à l’arrière. (Si c’est Ada qui va les chercher, surveillez-la bien pour qu’elle les remette correctement à leur place.)\n3) Une fois l’appareil solidement fixé, vous pouvez tenter de le démarrer. Un bruit important au lancement et un temps de démarrage prolongé sont des phénomènes normaux. (Espérons que cela ne fera pas peur aux enfants.)\n4) En cas de problème technique impossible à résoudre, demandez à Morgana de s’en charger. (Ne laissez surtout jamais Ada s’occuper seule d’un problème technique ! À moins de trouver les pannes existantes trop faciles à réparer et de vouloir vous ajouter un défi.)\n5) ...\n(Le texte qui suit est illisible.)",
+        "srId": 107101,
+        "pos": [
+          -27230,
+          -27890
+        ]
       }
     ]
   },

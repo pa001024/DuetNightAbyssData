@@ -876,7 +876,7 @@
   },
   {
     "id": 1070,
-    "name": "아르카노 마을",
+    "name": "아르카노 산",
     "type": "EX",
     "mapId": 600,
     "mapImage": "WBP_Map_Reg_EXChapter02_Lxzs01",
@@ -940,7 +940,7 @@
   },
   {
     "id": 1072,
-    "name": "아르카노 산의 균열",
+    "name": "골짜기의 균열",
     "type": "EX",
     "mapId": 602,
     "mapImage": "WBP_Map_Reg_EXChapter02_Lxzx",
@@ -972,7 +972,7 @@
   },
   {
     "id": 1073,
-    "name": "？？？",
+    "name": "???",
     "type": "EX",
     "mapScale": [
       0.5,
@@ -984,7 +984,7 @@
   },
   {
     "id": 1074,
-    "name": "龙莎要塞",
+    "name": "론샤 요새",
     "type": "EX",
     "mapScale": [
       0.5,
@@ -996,7 +996,7 @@
   },
   {
     "id": 1075,
-    "name": "维克托的家",
+    "name": "빅토르의 집",
     "type": "EX",
     "mapId": 600,
     "mapScale": [
@@ -1010,7 +1010,7 @@
   },
   {
     "id": 1076,
-    "name": "失控的乐园",
+    "name": "폭주한 낙원",
     "type": "EX",
     "mapScale": [
       0.5,
@@ -1022,7 +1022,7 @@
   },
   {
     "id": 1077,
-    "name": "酣梦池",
+    "name": "꿈의 연못",
     "type": "EX",
     "mapId": 600,
     "mapScale": [
@@ -1036,7 +1036,7 @@
   },
   {
     "id": 1078,
-    "name": "乐园镇",
+    "name": "낙원 마을",
     "type": "EX",
     "mapScale": [
       0.5,

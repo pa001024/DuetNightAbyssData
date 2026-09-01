@@ -20404,7 +20404,7 @@
                 "sequence": 293,
                 "startTime": 1770602400,
                 "endTime": 1776027600,
-                "cond": "Débloqué après l’obtention de n’importe quelle Posture rayonnante",
+                "cond": "Débloqué avec l’une des postures suivantes : Dominer monts et fleuves, Rives paisibles ou Instant figé",
                 "isSpPopup": 1
               },
               {
@@ -20421,7 +20421,7 @@
                 "sequence": 292,
                 "startTime": 1770602400,
                 "endTime": 1776027600,
-                "cond": "Débloqué après l’obtention de n’importe quelle Posture rayonnante",
+                "cond": "Débloqué avec l’une des postures suivantes : Dominer monts et fleuves, Rives paisibles ou Instant figé",
                 "isSpPopup": 1
               },
               {
@@ -23983,7 +23983,7 @@
                 "sequence": 196,
                 "startTime": 1785117600,
                 "endTime": 1789333200,
-                "cond": "Débloqué après l’obtention de n’importe quelle Posture rayonnante",
+                "cond": "Débloqué avec l’une des postures suivantes : Dominer monts et fleuves, Rives paisibles ou Instant figé",
                 "isSpPopup": 1
               },
               {
@@ -24128,7 +24128,7 @@
                 "sequence": 293,
                 "startTime": 1780279200,
                 "endTime": 1780365600,
-                "cond": "Débloqué après l’obtention de n’importe quelle Posture rayonnante",
+                "cond": "Débloqué avec l’une des postures suivantes : Dominer monts et fleuves, Rives paisibles ou Instant figé",
                 "isSpPopup": 1
               },
               {
@@ -24145,7 +24145,7 @@
                 "sequence": 292,
                 "startTime": 1788746400,
                 "endTime": 1793005200,
-                "cond": "Débloqué après l’obtention de n’importe quelle Posture rayonnante",
+                "cond": "Débloqué avec l’une des postures suivantes : Dominer monts et fleuves, Rives paisibles ou Instant figé",
                 "isSpPopup": 1
               },
               {

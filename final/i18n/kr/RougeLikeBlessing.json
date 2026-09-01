@@ -259,7 +259,7 @@
   {
     "id": 112,
     "name": "종횡 칼날",
-    "desc": "근접 무기 <Highlight>공격 속도</>가 <Highlight>60.0%</> 상승하고, <Highlight>공격 범위</>가 <Highlight>2.25</> 증가한다.",
+    "desc": "근접 무기 <Highlight>공격 속도</>가 <Highlight>60.0%</> 상승하고, <Highlight>공격 범위</>가 <Highlight>2.2</> 증가한다.",
     "simpleDesc": "근접 무기 <Highlight>공격 속도</>와 <Highlight>공격 범위</> 증가",
     "blessingGroup": 1,
     "rarity": 3,

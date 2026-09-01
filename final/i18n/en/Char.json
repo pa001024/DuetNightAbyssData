@@ -10676,7 +10676,7 @@
         "id": 100004,
         "名称": "Novelty",
         "类型": "Support",
-        "描述": "[Available only when deployed as a Combat Partner]\n Increases Skill DMG for the user and allies.",
+        "描述": "[Available only when deployed as a Combat Partner]\nIncreases Skill DMG for the user and allies.",
         "icon": "PhantomPassive",
         "字段": [
           {

@@ -2530,8 +2530,13 @@
     "res": [
       {
         "id": 2000127,
-        "type": "Read",
-        "text": "Please follow the instructions below when operating this attraction (<H>especially you, Ada!!!</>):\n\n1. For safety, make sure at least two people are present before use.\n2. Before use, check that all connections are secure. If anything needs fixing, the toolbox is behind the attraction. (If Ada is sent to fetch it, make sure she puts every tool back where it belongs.)\n3. Once everything is secure, start it up. Loud noises during startup and a longer-than-usual startup time are both normal. (Hopefully it won't scare the children.)\n4. If you run into a problem you can't fix, ask Morgana to handle it. (Do NOT let Ada try to fix anything by herself! Unless the problem seems too easy and you feel like unlocking hard mode.)\n5...\n...\n\n(The rest of the text is illegible.)"
+        "type": "Drop",
+        "text": "Please follow the instructions below when operating this attraction (<H>especially you, Ada!!!</>):\n\n1. For safety, make sure at least two people are present before use.\n2. Before use, check that all connections are secure. If anything needs fixing, the toolbox is behind the attraction. (If Ada is sent to fetch it, make sure she puts every tool back where it belongs.)\n3. Once everything is secure, start it up. Loud noises during startup and a longer-than-usual startup time are both normal. (Hopefully it won't scare the children.)\n4. If you run into a problem you can't fix, ask Morgana to handle it. (Do NOT let Ada try to fix anything by herself! Unless the problem seems too easy and you feel like unlocking hard mode.)\n5...\n...\n\n(The rest of the text is illegible.)",
+        "srId": 107101,
+        "pos": [
+          -27230,
+          -27890
+        ]
       }
     ]
   },

@@ -259,7 +259,7 @@
   {
     "id": 112,
     "name": "Unbound Blade",
-    "desc": "Increases Melee Weapon <Highlight>ATK Speed</> by <Highlight>60.0%</> and <Highlight>ATK Range</> by <Highlight>2.25</>.",
+    "desc": "Increases Melee Weapon <Highlight>ATK Speed</> by <Highlight>60.0%</> and <Highlight>ATK Range</> by <Highlight>2.2</>.",
     "simpleDesc": "Increases Melee Weapon <Highlight>ATK Speed</> and <Highlight>ATK Range</>.",
     "blessingGroup": 1,
     "rarity": 3,

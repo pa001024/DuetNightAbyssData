@@ -5176,12 +5176,12 @@
       }
     ],
     "熔炼": [
-      "ATK Speed +25.0%. When the character's HP recovers to above 80% of Max HP, their HP percentage is treated as 30.0% when calculating Morale and Resolve for 6.0s. During this time, Resolve is increased by 20.0%.",
-      "ATK Speed +30.0%. When the character's HP recovers to above 80% of Max HP, their HP percentage is treated as 30.0% when calculating Morale and Resolve for 6.0s. During this time, Resolve is increased by 24.0%.",
-      "ATK Speed +35.0%. When the character's HP recovers to above 80% of Max HP, their HP percentage is treated as 30.0% when calculating Morale and Resolve for 6.0s. During this time, Resolve is increased by 28.0%.",
-      "ATK Speed +40.0%. When the character's HP recovers to above 80% of Max HP, their HP percentage is treated as 30.0% when calculating Morale and Resolve for 6.0s. During this time, Resolve is increased by 32.0%.",
-      "ATK Speed +45.0%. When the character's HP recovers to above 80% of Max HP, their HP percentage is treated as 30.0% when calculating Morale and Resolve for 6.0s. During this time, Resolve is increased by 36.0%.",
-      "ATK Speed +50.0%. When the character's HP recovers to above 80% of Max HP, their HP percentage is treated as 30.0% when calculating Morale and Resolve for 6.0s. During this time, Resolve is increased by 40.0%."
+      "ATK Speed +25.0%. When a Pyro character's HP recovers to above 80% of Max HP, the HP percentage is treated as 30.0% when calculating Morale and Resolve for 6.0s. During this time, Resolve is increased by 20.0%.",
+      "ATK Speed +30.0%. When a Pyro character's HP recovers to above 80% of Max HP, the HP percentage is treated as 30.0% when calculating Morale and Resolve for 6.0s. During this time, Resolve is increased by 24.0%.",
+      "ATK Speed +35.0%. When a Pyro character's HP recovers to above 80% of Max HP, the HP percentage is treated as 30.0% when calculating Morale and Resolve for 6.0s. During this time, Resolve is increased by 28.0%.",
+      "ATK Speed +40.0%. When a Pyro character's HP recovers to above 80% of Max HP, the HP percentage is treated as 30.0% when calculating Morale and Resolve for 6.0s. During this time, Resolve is increased by 32.0%.",
+      "ATK Speed +45.0%. When a Pyro character's HP recovers to above 80% of Max HP, the HP percentage is treated as 30.0% when calculating Morale and Resolve for 6.0s. During this time, Resolve is increased by 36.0%.",
+      "ATK Speed +50.0%. When a Pyro character's HP recovers to above 80% of Max HP, the HP percentage is treated as 30.0% when calculating Morale and Resolve for 6.0s. During this time, Resolve is increased by 40.0%."
     ],
     "技能": [
       {

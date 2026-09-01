@@ -6116,7 +6116,7 @@
   {
     "id": 107001,
     "rid": 1070,
-    "name": "Arcano",
+    "name": "Mount Arcano",
     "desc": "UI_SUBREGION_DES_107001",
     "map": "Haiboliya_Thc_Lxzs01",
     "pos": [
@@ -6412,7 +6412,7 @@
           -20847,
           -88214
         ],
-        "name": "酣梦池",
+        "name": "Pond of Slumber",
         "icon": "T_Gp_EX02_JHS"
       },
       {
@@ -6421,7 +6421,7 @@
           -21304,
           -65937
         ],
-        "name": "Mount Arcano Rift",
+        "name": "Arcano Rift",
         "icon": "T_Gp_EX02_LXZX"
       },
       {
@@ -6439,7 +6439,7 @@
           -6624,
           -75596
         ],
-        "name": "维克托的家",
+        "name": "Victor's Home",
         "icon": "T_Gp_EX02_ZZJ"
       },
       {
@@ -6620,7 +6620,7 @@
           -18788,
           -33285
         ],
-        "name": "Arcano",
+        "name": "Mount Arcano",
         "icon": "T_Gp_EX02_LXZS"
       },
       {
@@ -6629,7 +6629,7 @@
           -45563,
           -54903
         ],
-        "name": "Arcano",
+        "name": "Mount Arcano",
         "icon": "T_Gp_EX02_LXZS"
       },
       {
@@ -6655,7 +6655,7 @@
   {
     "id": 107201,
     "rid": 1072,
-    "name": "Mount Arcano Rift",
+    "name": "Arcano Rift",
     "desc": "UI_SUBREGION_DES_107201",
     "map": "Haiboliya_Thc_Lxzx",
     "pos": [
@@ -6792,7 +6792,7 @@
           24821,
           -80946
         ],
-        "name": "Arcano",
+        "name": "Mount Arcano",
         "icon": "T_Gp_EX02_LXZS"
       },
       {
@@ -6818,7 +6818,7 @@
   {
     "id": 107301,
     "rid": 1073,
-    "name": "？？？",
+    "name": "???",
     "desc": "UI_SUBREGION_DES_107301",
     "map": "Haiboliya_Thc_Emyly",
     "pos": [
@@ -6829,14 +6829,14 @@
   {
     "id": 107401,
     "rid": 1074,
-    "name": "龙莎要塞",
+    "name": "Lonza Fortress",
     "desc": "UI_SUBREGION_DES_107401",
     "map": "Haiboliya_Thc_Zchj"
   },
   {
     "id": 107501,
     "rid": 1075,
-    "name": "维克托的家",
+    "name": "Victor's Home",
     "desc": "UI_SUBREGION_DES_107501",
     "map": "Haiboliya_Thc_Zjfj",
     "pos": [
@@ -6847,14 +6847,14 @@
   {
     "id": 107601,
     "rid": 1076,
-    "name": "失控的乐园",
+    "name": "Paradise Unravels",
     "desc": "UI_SUBREGION_DES_107601",
     "map": "Haiboliya_Thc_Boss"
   },
   {
     "id": 107701,
     "rid": 1077,
-    "name": "酣梦池",
+    "name": "Pond of Slumber",
     "desc": "UI_SUBREGION_DES_107701",
     "map": "Haiboliya_Thc_Jhs",
     "pos": [
@@ -6865,7 +6865,7 @@
   {
     "id": 107801,
     "rid": 1078,
-    "name": "乐园镇",
+    "name": "Paradise Village",
     "desc": "UI_SUBREGION_DES_107801",
     "map": "Haiboliya_Thc_Ck"
   },

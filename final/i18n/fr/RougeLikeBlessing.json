@@ -259,7 +259,7 @@
   {
     "id": 112,
     "name": "Lame déchaînée",
-    "desc": "Augmentation de la <Highlight>Vitesse d’attaque</> des armes de mêlée de <Highlight>60.0%</> et de leur <Highlight>Portée d’attaque</> de <Highlight>2.25</>.",
+    "desc": "Augmentation de la <Highlight>Vitesse d’attaque</> des armes de mêlée de <Highlight>60.0%</> et de leur <Highlight>Portée d’attaque</> de <Highlight>2.2</>.",
     "simpleDesc": "Augmentation de la <Highlight>Vitesse d’attaque</> et de la <Highlight>Portée d’attaque</> des armes de mêlée.",
     "blessingGroup": 1,
     "rarity": 3,
