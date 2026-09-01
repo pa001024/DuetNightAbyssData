@@ -93,4 +93,31 @@ describe("DialogueService", () => {
         expect(renderTree(chain, "cn", textmap)).toEqual([])
         expect(renderTree(chain, "en", textmap)).toEqual([{ id: 1, content: "localized" }])
     })
+
+    test("keeps localized-only dialogue with voice in every language", () => {
+        const ctx = {
+            dm: {
+                getTable: () => ({}),
+                getDialogueItems: (tables: string[]) =>
+                    new Map(
+                        tables.map(table => [
+                            table,
+                            new Map([
+                                [
+                                    "1",
+                                    table === "Dialogue_ContentEN"
+                                        ? { DialogueId: 1, ContentEN: "localized" }
+                                        : { DialogueId: 1, VoiceName: "voice/$Locale$/story/voice" },
+                                ],
+                            ]),
+                        ])
+                    ),
+            },
+        } as unknown as ModuleContext
+        const chain = dialogueModule(ctx).chain(1)
+        const textmap = {} as never
+
+        expect(renderTree(chain, "cn", textmap)).toEqual([{ id: 1, voice: "story/voice" }])
+        expect(renderTree(chain, "en", textmap)).toEqual([{ id: 1, content: "localized", voice: "story/voice" }])
+    })
 })

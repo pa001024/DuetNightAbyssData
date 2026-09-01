@@ -128,6 +128,13 @@ describe("vnode", () => {
         expect(renderTree(tree, "cn", makeTextMap())).toEqual([{ id: 2 }])
         expect(renderTree(tree, "en", makeTextMap())).toEqual([{ id: 1, name: "English" }, { id: 2 }])
     })
+
+    test("renderTree filters an individual field by internal language metadata", () => {
+        const tree = { id: 1, name: "English", voice: "voice", __fieldLangs: { name: ["en"] } }
+
+        expect(renderTree(tree, "cn", makeTextMap())).toEqual({ id: 1, voice: "voice" })
+        expect(renderTree(tree, "en", makeTextMap())).toEqual({ id: 1, name: "English", voice: "voice" })
+    })
 })
 
 describe("reactive 派生", () => {

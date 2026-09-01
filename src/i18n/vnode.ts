@@ -331,10 +331,12 @@ export function renderTree(tree: VNodeTree, lang: string, textmap: TextMap): unk
         return out
     }
     if (Array.isArray(tree.__langs) && !tree.__langs.includes(lang)) return OMIT
+    const fieldLangs = (tree as { __fieldLangs?: Record<string, string[]> }).__fieldLangs
     const out: Record<string, unknown> = {}
     for (const [k, v] of Object.entries(tree)) {
         // __ 前缀键是内部标记（如 __isDamage），不出现在最终输出
         if (k.startsWith("__")) continue
+        if (Array.isArray(fieldLangs?.[k]) && !fieldLangs[k].includes(lang)) continue
         const rendered = renderTree(v, lang, textmap)
         if (rendered !== OMIT) out[k] = rendered
     }

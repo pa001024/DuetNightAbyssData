@@ -113,8 +113,10 @@ export async function questStoryModule(ctx: ModuleContext): Promise<VNodeTree> {
                 { storyNodeData: Object.fromEntries(parents.map(parent => [parent.key, parent])) },
                 specialConfigs
             ).flatMap(path => indexStory(specialStories.get(path) ?? {}).parents)
-            let mainNodes = processNodes(ctx, dialogue, parents, guidePoints, detectiveQuestions, detectiveAnswers)
-            if (mainNodes.length === 0) mainNodes = scanNodes(ctx, dialogue, parents, guidePoints, detectiveQuestions, detectiveAnswers)
+            const mainNodes = processNodes(ctx, dialogue, parents, guidePoints, detectiveQuestions, detectiveAnswers)
+            if (mainNodes.length === 0) {
+                mainNodes.push(...collectUnreachableNodes(ctx, dialogue, parents, guidePoints, detectiveQuestions, detectiveAnswers))
+            }
             const specialNodes = processNodes(ctx, dialogue, specialParents, guidePoints, detectiveQuestions, detectiveAnswers)
             const nodes = dedupeNodes([...mainNodes, ...specialNodes])
             const allParents = [...parents, ...specialParents]
@@ -321,29 +323,21 @@ function processNodes(
     return dedupeNodes(result)
 }
 
-function scanNodes(ctx: ModuleContext, dialogue: DialogueService, parents: Row[], guidePoints: Row, questions: Row, answers: Row): Row[] {
+function collectUnreachableNodes(
+    ctx: ModuleContext,
+    dialogue: DialogueService,
+    parents: Row[],
+    guidePoints: Row,
+    questions: Row,
+    answers: Row
+): Row[] {
     const result: Row[] = []
     for (const parent of parents) {
         const nodeData = row(row(parent.questNodeData)?.nodeData) ?? {}
         for (const key of sortedKeys(nodeData)) {
             const node = row(nodeData[key])
             if (!node) continue
-            const props = row(node.propsData) ?? {}
-            if (node.type === "TalkNode" && !("FirstDialogueId" in props)) continue
             const built = buildNode(ctx, dialogue, String(node.key ?? key), node, parent, guidePoints, questions, answers)
-            if (built) result.push(built)
-        }
-        if (parent.type === "TalkNode" && "FirstDialogueId" in (row(parent.propsData) ?? {})) {
-            const built = buildNode(
-                ctx,
-                dialogue,
-                String(parent.key ?? parent.name ?? ""),
-                parent,
-                undefined,
-                guidePoints,
-                questions,
-                answers
-            )
             if (built) result.push(built)
         }
     }
@@ -382,6 +376,7 @@ function buildNode(
     if (type === "TalkNode") {
         const chain = props.FlowAssetPath ? dialogue.flowChain(props.FlowAssetPath) : dialogue.chain(props.FirstDialogueId)
         if (chain.length > 0) output.dialogues = chain
+        else return undefined
     } else if (type === "UnlockDetectiveQuestionNode") {
         const values: Row[] = []
         for (const qid of Array.isArray(props.QuestionIds) ? props.QuestionIds : []) {

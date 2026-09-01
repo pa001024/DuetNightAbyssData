@@ -267,7 +267,8 @@ class DialogueServiceImpl implements DialogueService {
                 const item: Record<string, VNodeTree> = { id: current }
                 if (content !== undefined) {
                     item.content = content.node
-                    if (content.onlyLangs) item.__langs = content.onlyLangs
+                    if (content.onlyLangs && !voice) item.__langs = content.onlyLangs
+                    if (content.onlyLangs && voice) item.__fieldLangs = { content: content.onlyLangs }
                 }
                 if (voice) item.voice = voice
                 if (base.SpeakNpcId) item.npc = base.SpeakNpcId
@@ -289,7 +290,8 @@ class DialogueServiceImpl implements DialogueService {
                         const option: Record<string, VNodeTree> = { id: idOf(optionId) ?? optionId }
                         if (optionContent !== undefined) {
                             option.content = optionContent.node
-                            if (optionContent.onlyLangs) option.__langs = optionContent.onlyLangs
+                            if (optionContent.onlyLangs && !optionVoice) option.__langs = optionContent.onlyLangs
+                            if (optionContent.onlyLangs && optionVoice) option.__fieldLangs = { content: optionContent.onlyLangs }
                         }
                         if (optionVoice) option.voice = optionVoice
                         const optionNext = idOf(optionLoaded.base.NextDialogue)
