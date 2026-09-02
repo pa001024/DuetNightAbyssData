@@ -331,7 +331,7 @@ export function rougeProTalentModule(ctx: ModuleContext): VNodeTree {
 
 export function rougeProTreasureModule(ctx: ModuleContext): VNodeTree {
     return genericRows(ctx, "RougeProTreasure", "TreasureId").map(item => {
-        const row = {
+        const row: Record<string, VNodeTree> = {
             id: Number(item.TreasureId),
             desc: T(item.Desc ?? ""),
             endPoints: camelize(item.EndPoints ?? []) as VNodeTree,
@@ -344,6 +344,7 @@ export function rougeProTreasureModule(ctx: ModuleContext): VNodeTree {
             rarity: item.TreasureRarity ?? 0,
             weight: item.TreasureWeight ?? 0,
         }
+        if (item.ModEquip) row.modEquip = item.ModEquip
         if (!row.unique) delete row.unique
         return row
     })

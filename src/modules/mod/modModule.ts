@@ -109,7 +109,7 @@ async function skillReplacements(ctx: ModuleContext, mod: Row, skill: SkillArtif
 
 export async function modModule(ctx: ModuleContext): Promise<VNodeTree> {
     const skill = ctx.getArtifact<SkillArtifacts>("Skill")!
-    const assetReader = new AssetReader(ctx.dm.root, true)
+    const assetReader = new AssetReader(ctx.dm.root, true, true)
     await assetReader.ensureServer()
     const config = table(ctx, "AttrConfig")
     const tags = table(ctx, "ModTag")

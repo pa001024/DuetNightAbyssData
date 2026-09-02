@@ -360,9 +360,44 @@ class DialogueServiceImpl implements DialogueService {
         const cacheKey = String(flowAssetPath)
         const cached = this.flowChainCache.get(cacheKey)
         if (cached) return this.copyItems(cached)
+        const nodes = new Map<string, Row>()
+        const incoming = new Map<string, string[]>()
+        const startGuids: string[] = []
+        for (const value of flow) {
+            const item = row(value)
+            const props = row(item?.Properties)
+            const guid = guidOf(props?.NodeGuid)
+            if (!item || !guid) continue
+            nodes.set(guid, item)
+            if (item.Type === "FlowNode_Start") startGuids.push(guid)
+            for (const connection of Array.isArray(props?.Connections) ? props.Connections : []) {
+                const target = guidOf(row(row(connection)?.Value)?.NodeGuid)
+                if (!target) continue
+                const parents = incoming.get(target) ?? []
+                if (!parents.includes(guid)) parents.push(guid)
+                incoming.set(target, parents)
+            }
+        }
+        const optionGuids: string[] = []
+        const visitedGuids = new Set<string>()
+        const guidQueue = [...startGuids]
+        while (guidQueue.length > 0) {
+            const guid = guidQueue.shift()!
+            if (visitedGuids.has(guid)) continue
+            visitedGuids.add(guid)
+            const item = nodes.get(guid)
+            if (!item) continue
+            if (item.Type === "FlowNode_Option" || item.Type === "FlowNode_ImpressingOption") optionGuids.push(guid)
+            const props = row(item.Properties)
+            for (const connection of Array.isArray(props?.Connections) ? props.Connections : []) {
+                const target = guidOf(row(row(connection)?.Value)?.NodeGuid)
+                if (target && !visitedGuids.has(target)) guidQueue.push(target)
+            }
+        }
         const dialogueIds = flowDialogueIds(flow)
         const result: VNodeTree[] = []
         const emitted = new Set<number>()
+        const itemMap = new Map<number, Record<string, VNodeTree>>()
         this.loadData(dialogueIds)
         for (const id of dialogueIds) {
             for (const item of this.chain(id, false)) {
@@ -370,10 +405,111 @@ class DialogueServiceImpl implements DialogueService {
                 if (itemId === undefined || emitted.has(itemId)) continue
                 emitted.add(itemId)
                 result.push(item)
+                itemMap.set(itemId, item as Record<string, VNodeTree>)
             }
         }
-        this.flowChainCache.set(cacheKey, result)
-        return this.copyItems(result)
+
+        const attachedOptionIds = new Set<number>()
+        const markAttachedOptions = (value: unknown): void => {
+            const item = row(value)
+            const itemId = idOf(item?.id)
+            if (itemId !== undefined) attachedOptionIds.add(itemId)
+            for (const option of Array.isArray(item?.options) ? item.options : []) markAttachedOptions(option)
+        }
+        for (const optionGuid of optionGuids) {
+            const optionNode = nodes.get(optionGuid)
+            const optionProps = row(optionNode?.Properties) ?? {}
+            const optionIds = (Array.isArray(optionProps.OptionData) ? optionProps.OptionData : [])
+                .map(value => idOf(row(value)?.DialogueId))
+                .filter((id): id is number => id !== undefined)
+            if (optionIds.length === 0) continue
+
+            let parent: Record<string, VNodeTree> | undefined
+            const parentQueue = [...(incoming.get(optionGuid) ?? [])]
+            const parentVisited = new Set<string>()
+            while (parentQueue.length > 0 && !parent) {
+                const guid = parentQueue.shift()!
+                if (parentVisited.has(guid)) continue
+                parentVisited.add(guid)
+                const candidate = nodes.get(guid)
+                const candidateProps = row(candidate?.Properties)
+                const ids = (Array.isArray(candidateProps?.DialogueData) ? candidateProps.DialogueData : [])
+                    .map(value => idOf(row(value)?.DialogueId))
+                    .filter((id): id is number => id !== undefined)
+                for (const id of ids.reverse()) {
+                    parent = itemMap.get(id)
+                    if (parent) break
+                }
+                if (!parent) parentQueue.push(...(incoming.get(guid) ?? []).filter(value => !parentVisited.has(value)))
+            }
+            if (!parent) continue
+
+            const pinByOption = new Map<number, string>()
+            for (const value of Array.isArray(optionProps.OptionPinName) ? optionProps.OptionPinName : []) {
+                const item = row(value)
+                const id = idOf(item?.Key)
+                if (id !== undefined && typeof item?.Value === "string") pinByOption.set(id, item.Value)
+            }
+            const targetByPin = new Map<string, string>()
+            for (const value of Array.isArray(optionProps.Connections) ? optionProps.Connections : []) {
+                const item = row(value)
+                const target = guidOf(row(item?.Value)?.NodeGuid)
+                if (typeof item?.Key === "string" && target) targetByPin.set(item.Key, target)
+            }
+            const existingOptions = Array.isArray(parent.options) ? parent.options : []
+            const existingById = new Map<number, Record<string, VNodeTree>>()
+            for (const value of existingOptions) {
+                const item = row(value)
+                const id = idOf(item?.id)
+                if (id !== undefined && item) existingById.set(id, item as Record<string, VNodeTree>)
+            }
+
+            this.loadData(optionIds)
+            for (const optionId of optionIds) {
+                const option = row(this.chain(optionId, false)[0]) as Record<string, VNodeTree> | undefined
+                if (!option) continue
+                const pin = pinByOption.get(optionId)
+                if (option.next === undefined && pin) {
+                    const nextQueue = [targetByPin.get(pin)].filter((value): value is string => !!value)
+                    const nextVisited = new Set<string>()
+                    while (nextQueue.length > 0 && option.next === undefined) {
+                        const guid = nextQueue.shift()!
+                        if (nextVisited.has(guid)) continue
+                        nextVisited.add(guid)
+                        const nextNode = nodes.get(guid)
+                        const nextProps = row(nextNode?.Properties)
+                        const nextId = idOf(row(Array.isArray(nextProps?.DialogueData) ? nextProps.DialogueData[0] : undefined)?.DialogueId)
+                        if (nextId !== undefined) {
+                            option.next = nextId
+                            break
+                        }
+                        for (const connection of Array.isArray(nextProps?.Connections) ? nextProps.Connections : []) {
+                            const target = guidOf(row(row(connection)?.Value)?.NodeGuid)
+                            if (target && !nextVisited.has(target)) nextQueue.push(target)
+                        }
+                    }
+                }
+
+                const existing = existingById.get(optionId)
+                if (existing) {
+                    for (const field of ["next", "impr", "imprCheck", "voice", "content"] as const) {
+                        if (existing[field] === undefined && option[field] !== undefined) existing[field] = option[field]
+                    }
+                } else {
+                    existingOptions.push(option)
+                    existingById.set(optionId, option)
+                }
+                markAttachedOptions(option)
+            }
+            if (existingOptions.length > 0) {
+                parent.options = existingOptions
+                delete parent.next
+            }
+        }
+
+        const output = attachedOptionIds.size > 0 ? result.filter(item => !attachedOptionIds.has(idOf(row(item)?.id) ?? 0)) : result
+        this.flowChainCache.set(cacheKey, output)
+        return this.copyItems(output)
     }
 
     story(path: unknown): Story | undefined {

@@ -924,16 +924,11 @@ function generateSkillBehavior(
     const seenNodes = new Set<string>()
     const seenSkills = new Set<string>()
 
-    const effectRate = (effectId: number, rate: unknown): number | null => {
+    const effectRate = (effectId: number, rate: unknown): number | string | null => {
         if (typeof rate === "number") return rate
         const text = String(rate ?? "")
         if (!text.startsWith("#")) {
-            if (text.includes("$") || text.includes("#")) {
-                const computed = skillArtifacts.calcSkillDesc(text, 1)
-                const number = computed.match(/-?\d+(?:\.\d+)?/)?.[0]
-                return number === undefined ? null : Number(number)
-            }
-            return Number.isFinite(Number(text)) ? Number(text) : null
+            return Number.isFinite(Number(text)) ? Number(text) : text || null
         }
         const source =
             descValues.find(value => typeof value === "string" && value.includes(`SkillEffects[${effectId}]`) && value.includes("*100")) ??
@@ -1044,8 +1039,9 @@ function generateSkillBehavior(
                 const rate = effectRate(Number(effectId), task.Rate)
                 const base = BASE_ATTR_CN[String(task.BaseAttr)] ?? String(task.BaseAttr ?? "基础伤害")
                 let text = `造成${base}`
-                if (rate !== null && rate > 0 && rate < 1) text += `${roundValue(rate * 100)}%`
-                else if (rate !== null) text += `${(rate * 100).toFixed(1)}%`
+                if (typeof rate === "number" && rate > 0 && rate < 1) text += `${roundValue(rate * 100)}%`
+                else if (typeof rate === "number") text += `${(rate * 100).toFixed(1)}%`
+                else if (typeof task.Rate === "string") text += `×${task.Rate}`
                 if (rate !== null) {
                     text += "的"
                     text += task.DamageType ? `${DAMAGE_TYPE_CN[String(task.DamageType)] ?? task.DamageType}属性` : ""

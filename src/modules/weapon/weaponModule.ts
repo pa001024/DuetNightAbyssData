@@ -88,7 +88,7 @@ export async function weaponModule(ctx: ModuleContext) {
     const skillArtifacts = ctx.getArtifact<SkillArtifacts>("Skill")!
 
     // 资产读取（uassetcli server 优先，json 回退）
-    const assetReader = new AssetReader(dm.root, true)
+    const assetReader = new AssetReader(dm.root, true, true)
     await assetReader.ensureServer()
 
     // 原始表

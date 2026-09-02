@@ -203,4 +203,15 @@ describe("reactive 派生", () => {
         const singleTextmap = { get: () => "#1" } as unknown as TextMap
         expect(renderTree(LTemplate("placeholder", ["6.25"], true), "cn", singleTextmap)).toBe("6.2")
     })
+
+    test("LTemplate 分组占位符统一使用 Lua 小数格式", () => {
+        const textmap = { get: () => "#1/$1/@1" } as unknown as TextMap
+        const node = LTemplate("placeholder", [], true, false, 0, {
+            hash: ["6.25"],
+            dollar: ["0.35"],
+            at: ["0.45"],
+        })
+
+        expect(renderTree(node, "cn", textmap)).toBe("6.2/0.3/0.5")
+    })
 })

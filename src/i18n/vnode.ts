@@ -214,7 +214,7 @@ function renderVNode(v: VNode, lang: string, textmap: TextMap): unknown {
                     if (!values) continue
                     for (let i = 0; i < values.length; i++) {
                         let value = String(renderVNode(values[i], lang, textmap) ?? "")
-                        if (v.formatValues && marker !== "#") value = formatDescValue1(value, descValueCast(template, i + 1).cast)
+                        if (v.formatValues) value = formatDescValue1(value, descValueCast(template, i + 1).cast)
                         template = template.replace(new RegExp(`${marker}${i + 1}(?!\\d)`, "g"), value)
                     }
                 }

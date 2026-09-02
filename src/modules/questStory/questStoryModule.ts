@@ -1,5 +1,5 @@
 import type { ModuleContext } from "../../core/Graph.ts"
-import { T, type VNodeTree } from "../../i18n/vnode.ts"
+import { T, TUnlessEqual, type VNodeTree } from "../../i18n/vnode.ts"
 import type { DialogueService } from "../dialogue/dialogueModule.ts"
 
 type Row = Record<string, any>
@@ -64,6 +64,14 @@ function iconName(value: unknown): string {
     return value.split("_").at(-1)?.replaceAll(".", "") ?? ""
 }
 
+function roundTiesToEven(value: number): number {
+    const lower = Math.floor(value)
+    const fraction = value - lower
+    if (fraction < 0.5) return lower
+    if (fraction > 0.5) return lower + 1
+    return lower % 2 === 0 ? lower : lower + 1
+}
+
 export async function questStoryModule(ctx: ModuleContext): Promise<VNodeTree> {
     const dialogue = ctx.getArtifact<DialogueService>("Dialogue")
     if (!dialogue) throw new Error("QuestStory 需要 Dialogue 依赖")
@@ -121,9 +129,8 @@ export async function questStoryModule(ctx: ModuleContext): Promise<VNodeTree> {
             const nodes = dedupeNodes([...mainNodes, ...specialNodes])
             const allParents = [...parents, ...specialParents]
             if (nodes.length === 0 && !nameKey && !descKey) continue
-            const quest: Record<string, VNodeTree> = { id: questId }
-            if (nameKey) quest.name = T(nameKey)
-            if (descKey && descKey !== nameKey) quest.desc = T(descKey)
+            const quest: Record<string, VNodeTree> = { id: questId, name: nameKey ? T(nameKey) : "" }
+            if (descKey && descKey !== nameKey) quest.desc = TUnlessEqual(descKey, nameKey)
             if (nodes.length > 0) {
                 quest.nodes = nodes
                 const starts = startIds(allParents, nodes)
@@ -218,16 +225,13 @@ function pointForNode(points: Row, node: Row | undefined, context: Row | undefin
         if (!token) token = props.UnitBPPath || props.UnitName
         if (typeof token === "string" && (token.includes("/") || token.includes("\\"))) token = token.split(/[\\/]/).at(-1)?.split(".")[0]
         const point = findGuidePoint(points, token)
-        if (!point) {
-            const srId = id(props.SubRegionId)
-            return srId === undefined ? {} : { srId }
-        }
-        const srId = id(point.SubRegionId) ?? id(props.SubRegionId)
+        if (!point) return {}
+        const srId = id(point.SubRegionId)
         const x = Number(point.X)
         const y = Number(point.Y)
         const result: { srId?: number; pos?: number[] } = {}
         if (srId !== undefined) result.srId = srId
-        if (Number.isFinite(x) && Number.isFinite(y)) result.pos = [Math.round(x), Math.round(y)]
+        if (Number.isFinite(x) && Number.isFinite(y)) result.pos = [roundTiesToEven(x), roundTiesToEven(y)]
         return result
     }
     return { ...resolve(context), ...resolve(node) }
@@ -320,7 +324,7 @@ function processNodes(
         }
         if (resolved.length > 0) node.next = [...new Set(resolved)]
     }
-    return dedupeNodes(result)
+    return result
 }
 
 function collectUnreachableNodes(
@@ -341,17 +345,33 @@ function collectUnreachableNodes(
             if (built) result.push(built)
         }
     }
-    return dedupeNodes(result)
+    return result
 }
 
 function dedupeNodes(nodes: Row[]): Row[] {
     const deduped: Row[] = []
-    const seen = new Set<string>()
+    const contentToId = new Map<string, string>()
+    const duplicateToKept = new Map<string, string>()
     for (const node of nodes) {
         const key = JSON.stringify(Object.fromEntries(Object.entries(node).filter(([name]) => name !== "id")))
-        if (seen.has(key)) continue
-        seen.add(key)
+        const keptId = contentToId.get(key)
+        if (keptId !== undefined) {
+            duplicateToKept.set(String(node.id), keptId)
+            continue
+        }
+        contentToId.set(key, String(node.id))
         deduped.push(node)
+    }
+    for (const node of deduped) {
+        if (!Array.isArray(node.next)) continue
+        const remapped: string[] = []
+        for (const value of node.next) {
+            let nextId = String(value)
+            while (duplicateToKept.has(nextId)) nextId = duplicateToKept.get(nextId)!
+            if (!remapped.includes(nextId)) remapped.push(nextId)
+        }
+        if (remapped.length > 0) node.next = remapped
+        else delete node.next
     }
     return deduped
 }
@@ -374,9 +394,9 @@ function buildNode(
     if (point.pos) output.pos = point.pos
     const props = row(node.propsData) ?? {}
     if (type === "TalkNode") {
+        if (!("FirstDialogueId" in props) && !props.FlowAssetPath) return undefined
         const chain = props.FlowAssetPath ? dialogue.flowChain(props.FlowAssetPath) : dialogue.chain(props.FirstDialogueId)
         if (chain.length > 0) output.dialogues = chain
-        else return undefined
     } else if (type === "UnlockDetectiveQuestionNode") {
         const values: Row[] = []
         for (const qid of Array.isArray(props.QuestionIds) ? props.QuestionIds : []) {
@@ -414,7 +434,7 @@ function startIds(parents: Row[], nodes: VNodeTree[]): VNodeTree[] {
     for (const parent of parents) {
         const questData = row(parent.questNodeData)
         for (const edge of Array.isArray(questData?.lineData) ? questData.lineData.map(row).filter((v): v is Row => !!v) : []) {
-            if (String(edge.startPort ?? "").toLowerCase() === "queststart") continue
+            if (!validEdge(edge)) continue
             const end = String(edge.endQuest ?? "")
             if (!ids.has(end)) continue
             const start = String(edge.startQuest ?? "")

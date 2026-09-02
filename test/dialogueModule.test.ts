@@ -46,6 +46,114 @@ describe("DialogueService", () => {
         expect(second[0].options[0].next).toBeUndefined()
     })
 
+    test("attaches FlowAsset option branches to the upstream dialogue", () => {
+        const data = new Map([
+            ["10", { DialogueId: 10, Content: "root" }],
+            ["20", { DialogueId: 20, Content: "option" }],
+            ["30", { DialogueId: 30, Content: "next" }],
+        ])
+        const ctx = {
+            dm: {
+                getTable: () => ({}),
+                getDialogueItems: (tables: string[]) => new Map(tables.map(table => [table, data])),
+            },
+        } as unknown as ModuleContext
+        const dialogue = dialogueModule(ctx)
+        const flow = [
+            {
+                Type: "FlowNode_Start",
+                Properties: { NodeGuid: "start", Connections: [{ Value: { NodeGuid: "dialogue" } }] },
+            },
+            {
+                Type: "FlowNode_Dialogue",
+                Properties: {
+                    NodeGuid: "dialogue",
+                    DialogueData: [{ DialogueId: 10 }],
+                    Connections: [{ Value: { NodeGuid: "option" } }],
+                },
+            },
+            {
+                Type: "FlowNode_Option",
+                Properties: {
+                    NodeGuid: "option",
+                    OptionData: [{ DialogueId: 20 }],
+                    OptionPinName: [{ Key: "20", Value: "Option_20" }],
+                    Connections: [{ Key: "Option_20", Value: { NodeGuid: "next" } }],
+                },
+            },
+            {
+                Type: "FlowNode_Dialogue",
+                Properties: { NodeGuid: "next", DialogueData: [{ DialogueId: 30 }] },
+            },
+        ]
+        ;(dialogue as any).flowFile = () => flow
+
+        expect(renderTree(dialogue.flowChain("flow"), "cn", {} as never)).toEqual([
+            { id: 10, content: "root", options: [{ id: 20, content: "option", next: 30 }] },
+            { id: 30, content: "next" },
+        ])
+    })
+
+    test("removes nested FlowAsset options from the top-level dialogue list", () => {
+        const data = new Map([
+            ["10", { DialogueId: 10, Content: "root" }],
+            ["20", { DialogueId: 20, Content: "outer option", NextOptions: [21] }],
+            ["21", { DialogueId: 21, Content: "nested option", NextDialogue: 30 }],
+            ["30", { DialogueId: 30, Content: "next" }],
+        ])
+        const ctx = {
+            dm: {
+                getTable: () => ({}),
+                getDialogueItems: (tables: string[]) => new Map(tables.map(table => [table, data])),
+            },
+        } as unknown as ModuleContext
+        const dialogue = dialogueModule(ctx)
+        const flow = [
+            {
+                Type: "FlowNode_Start",
+                Properties: { NodeGuid: "start", Connections: [{ Value: { NodeGuid: "dialogue" } }] },
+            },
+            {
+                Type: "FlowNode_Dialogue",
+                Properties: {
+                    NodeGuid: "dialogue",
+                    DialogueData: [{ DialogueId: 10 }],
+                    Connections: [{ Value: { NodeGuid: "option" } }],
+                },
+            },
+            {
+                Type: "FlowNode_Option",
+                Properties: {
+                    NodeGuid: "option",
+                    OptionData: [{ DialogueId: 20 }],
+                    OptionPinName: [{ Key: "20", Value: "Option_20" }],
+                    Connections: [{ Key: "Option_20", Value: { NodeGuid: "next" } }],
+                },
+            },
+            {
+                Type: "FlowNode_Dialogue",
+                Properties: { NodeGuid: "next", DialogueData: [{ DialogueId: 21 }, { DialogueId: 30 }] },
+            },
+        ]
+        ;(dialogue as any).flowFile = () => flow
+
+        expect(renderTree(dialogue.flowChain("flow"), "cn", {} as never)).toEqual([
+            {
+                id: 10,
+                content: "root",
+                options: [
+                    {
+                        id: 20,
+                        content: "outer option",
+                        next: 21,
+                        options: [{ id: 21, content: "nested option", next: 30 }],
+                    },
+                ],
+            },
+            { id: 30, content: "next" },
+        ])
+    })
+
     test("story talks use numeric StoryCreator key order", () => {
         const ctx = {
             dm: {

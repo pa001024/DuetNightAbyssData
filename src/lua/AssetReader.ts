@@ -114,7 +114,8 @@ export class AssetReader {
 
     constructor(
         private root: string,
-        private preferJson = false
+        private preferJson = false,
+        private allowPrefixedName = false
     ) {
         this.exportsRoot = getExportsRoot()
     }
@@ -197,9 +198,10 @@ export class AssetReader {
         // AnimSubPath 兜底：Char/Player/*/Animation/Montage/<subpath>/<AnimResource>
         const subDir = String(animSubPath).replace(/\\/g, "/").split("/").filter(Boolean)
         const playersRoot = join(root, "Char", "Player")
+        const prefixedCandidates: Array<{ uasset: string; json: string }> = []
         try {
             if (existsSync(playersRoot)) {
-                for (const charName of readdirSync(playersRoot)) {
+                for (const charName of readdirSync(playersRoot).sort()) {
                     let cur = join(playersRoot, charName, "Animation", "Montage")
                     let ok = true
                     for (const seg of subDir) {
@@ -211,11 +213,21 @@ export class AssetReader {
                     }
                     if (!ok) continue
                     candidates.push({ uasset: join(cur, `${animResource}.uasset`), json: join(cur, `${animResource}.json`) })
+                    if (this.allowPrefixedName) {
+                        for (const name of readdirSync(cur).sort()) {
+                            if (!name.endsWith(`_${animResource}.json`) && !name.endsWith(`_${animResource}.uasset`)) continue
+                            const base = join(cur, name.replace(/\.(?:json|uasset)$/i, ""))
+                            if (!prefixedCandidates.some(candidate => candidate.uasset === `${base}.uasset`)) {
+                                prefixedCandidates.push({ uasset: `${base}.uasset`, json: `${base}.json` })
+                            }
+                        }
+                    }
                 }
             }
         } catch {
             /* ignore */
         }
+        candidates.push(...prefixedCandidates)
         if (this.preferJson) {
             for (const c of candidates) {
                 if (c.json && existsSync(c.json)) return c
