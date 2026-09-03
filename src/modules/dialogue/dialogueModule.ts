@@ -2,8 +2,6 @@ import { existsSync, readFileSync } from "node:fs"
 import { join } from "node:path"
 import type { ModuleContext } from "../../core/Graph.ts"
 import { T, TL, type VNode, type VNodeTree } from "../../i18n/vnode.ts"
-import { AssetReader } from "../../lua/AssetReader.ts"
-import { getExportsRoot } from "../../lua/UAssetServer.ts"
 
 type Row = Record<string, any>
 type Story = Row
@@ -160,10 +158,8 @@ class DialogueServiceImpl implements DialogueService {
     private readonly dataCache = new Map<number, { base: Row; localized: Record<string, Row> } | undefined>()
     private readonly chainCache = new Map<string, VNodeTree[]>()
     private readonly flowChainCache = new Map<string, VNodeTree[]>()
-    private readonly assetReader: AssetReader
 
     constructor(private readonly ctx: ModuleContext) {
-        this.assetReader = new AssetReader(ctx.dm.root)
         this.impressionCheck = (ctx.dm.getTable("ImpressionCheck") as Row | undefined) ?? {}
         this.impressionPlus = (ctx.dm.getTable("ImpressionPlus") as Row | undefined) ?? {}
     }
@@ -230,11 +226,11 @@ class DialogueServiceImpl implements DialogueService {
             if (value) values[lang] = value
         }
         if (cn) return { node: TL(cn, values) }
+        const optionTopic = typeof data.base.OptionTopic === "string" ? data.base.OptionTopic : ""
+        if (optionTopic) return { node: TL(optionTopic, values) }
         const onlyLangs = Object.keys(values)
         if (onlyLangs.length > 0) return { node: TL("", values), onlyLangs }
-
-        const optionTopic = typeof data.base.OptionTopic === "string" ? data.base.OptionTopic : ""
-        return optionTopic ? { node: optionTopic } : undefined
+        return undefined
     }
 
     chain(firstId: unknown, includeContentlessNodes = true): VNodeTree[] {
@@ -327,14 +323,12 @@ class DialogueServiceImpl implements DialogueService {
         return file ? this.flowCache.get(file) : undefined
     }
 
-    private flowFilePath(path: unknown, extension = ".uasset"): string | undefined {
+    private flowFilePath(path: unknown): string | undefined {
         if (typeof path !== "string" || !path) return undefined
         const match = path.match(/\/Game\/Dialogue\/([^']+)/)
         if (!match) return undefined
         const relative = match[1].split(".")[0]
-        const exportsRoot = getExportsRoot()
-        if (!exportsRoot) return undefined
-        return join(exportsRoot, "EM", "Content", "Dialogue", `${relative}${extension}`)
+        return join(this.ctx.dm.root, "out", "Dialogue", `${relative}.json`)
     }
 
     async prepareStoryFlows(paths: unknown[]): Promise<void> {
@@ -342,15 +336,12 @@ class DialogueServiceImpl implements DialogueService {
         for (const path of new Set(flowPaths)) {
             const file = this.flowFilePath(path)
             if (!file || this.flowCache.has(file)) continue
-            let data = await this.assetReader.readFModelAsset(file)
-            if (!data) {
-                const jsonFile = this.flowFilePath(path, ".json")
-                if (jsonFile && existsSync(jsonFile)) {
-                    const parsed = JSON.parse(readFileSync(jsonFile, "utf8"))
-                    data = Array.isArray(parsed) ? parsed : null
-                }
+            let data: unknown[] | undefined
+            if (existsSync(file)) {
+                const parsed = JSON.parse(readFileSync(file, "utf8"))
+                if (Array.isArray(parsed)) data = parsed
             }
-            this.flowCache.set(file, data ?? undefined)
+            this.flowCache.set(file, data)
         }
     }
 

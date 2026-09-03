@@ -90,7 +90,7 @@ export class TextMap {
      * - cn 优先 cnAlt（Loader 里的最新中文）
      * - 目标字段为空时按 FALLBACK_FIELDS 顺序回退
      */
-    get(key: string, lang: string = "cn", tFallback?: Record<string, string>): string {
+    get(key: string, lang: string = "cn", tFallback?: Record<string, string>, replaceSpaceMarker = true): string {
         this.load()
         const entry = this.data.get(key)
         if (!entry) {
@@ -112,7 +112,8 @@ export class TextMap {
                 }
             }
         }
-        return (content || tFallback?.[key] || TEXT_FALLBACK[key] || key).replace(/\{空格\}/g, " ")
+        const result = content || tFallback?.[key] || TEXT_FALLBACK[key] || key
+        return replaceSpaceMarker ? result.replace(/\{空格\}/g, " ") : result
     }
 
     /** 是否有该 key */

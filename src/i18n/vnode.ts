@@ -19,6 +19,11 @@ export interface TVNode {
     readonly __t: "t"
     readonly key: string
 }
+/** 翻译文本 key，占位标记（如 {空格}）保持原样。 */
+export interface TRawNode {
+    readonly __t: "traw"
+    readonly key: string
+}
 export interface TLNode {
     readonly __t: "tl"
     readonly cn: string
@@ -67,6 +72,7 @@ export interface TUnlessEqualNode {
 
 export type VNode =
     | TVNode
+    | TRawNode
     | TLNode
     | SeqNode
     | IntNode
@@ -88,6 +94,12 @@ export type VNodeTree = VNode | VNodeTree[] | { [k: string]: VNodeTree }
 export function T(key: string | null | undefined): VNode {
     if (!key) return ""
     return { __t: "t", key }
+}
+
+/** 翻译文本 key，但保留 TextMap 中的原始占位标记。 */
+export function TRaw(key: string | null | undefined): VNode {
+    if (!key) return ""
+    return { __t: "traw", key }
 }
 
 /** 显式多语言映射（cn 兜底） */
@@ -178,6 +190,8 @@ function renderVNode(v: VNode, lang: string, textmap: TextMap): unknown {
     switch (v.__t) {
         case "t":
             return textmap.get(v.key, lang)
+        case "traw":
+            return textmap.get(v.key, lang, undefined, false)
         case "tl":
             return (v.map as Record<string, string>)[lang] ?? v.cn
         case "seq":

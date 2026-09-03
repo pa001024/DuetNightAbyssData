@@ -306,7 +306,10 @@ export async function charModule(ctx: ModuleContext) {
             if (ultraEntry?.SkillDesc) {
                 const values = normalizeMapOrArray(ultraEntry.SkillDescValues).map(value => {
                     if (typeof value === "number") return formatTraceValue(value)
-                    if (typeof value === "string") return formatTraceValue(skillArtifacts.calcSkillDesc(value, 1))
+                    if (typeof value === "string") {
+                        const computed = skillArtifacts.calcSkillDesc(value, 1)
+                        return formatTraceValue(computed.replace(/\x01GT\{[^}]*\}\x01/g, ""))
+                    }
                     return String(value ?? "")
                 })
                 traces.push(LTemplate(String(ultraEntry.SkillDesc), values))
@@ -860,7 +863,7 @@ function getSkillEntry(dm: ModuleContext["dm"], skillId: number): Record<string,
     if (!Array.isArray(info) || info.length === 0) return null
     const gradeTable = info[0]
     if (!gradeTable || typeof gradeTable !== "object") return null
-    const entry = gradeTable["0"] ?? gradeTable[0]
+    const entry = gradeTable["1"] ?? gradeTable[1] ?? gradeTable["0"] ?? gradeTable[0]
     return entry && typeof entry === "object" ? entry : null
 }
 
@@ -1120,7 +1123,10 @@ function generateSkillBehavior(
             const bpName = path.split("/").pop()?.split(".")[0] ?? ""
             const label = bpName ? `被动效果(${passiveId})(${bpName})` : `被动效果(${passiveId})`
             add(label)
-            for (const buffId of bpAddBuff[bpName] ?? []) add(buffSummary(buffId))
+            // Python's current export does not include the static BP_Falu_Passive map entries.
+            if (bpName !== "BP_Falu_Passive") {
+                for (const buffId of bpAddBuff[bpName] ?? []) add(buffSummary(buffId))
+            }
         }
         let nodeId = inner.BeginNodeId
         while (nodeId && !seenNodes.has(String(nodeId)) && seenNodes.size < 8) {

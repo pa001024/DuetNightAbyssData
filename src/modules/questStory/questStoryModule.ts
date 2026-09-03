@@ -1,5 +1,5 @@
 import type { ModuleContext } from "../../core/Graph.ts"
-import { T, TUnlessEqual, type VNodeTree } from "../../i18n/vnode.ts"
+import { T, TRaw, TUnlessEqual, type VNodeTree } from "../../i18n/vnode.ts"
 import type { DialogueService } from "../dialogue/dialogueModule.ts"
 
 type Row = Record<string, any>
@@ -7,6 +7,17 @@ type Row = Record<string, any>
 interface StoryIndex {
     parents: Row[]
     byQuest: Map<number, Row[]>
+}
+
+interface ProcessedNodes {
+    nodes: Row[]
+    nextMap: Map<string, string[]>
+    incomingMap: Map<string, string[]>
+}
+
+interface GuidePoints {
+    values: Row
+    ambiguous: Set<string>
 }
 
 function table(ctx: ModuleContext, name: string): Row {
@@ -39,11 +50,12 @@ export function collectSpecialStoryPaths(story: Row, configs: Row): string[] {
     const parents = row(story.storyNodeData) ?? {}
     for (const parentKey of sortedKeys(parents)) {
         const parent = row(parents[parentKey])
+        const questId = id(row(parent?.propsData)?.QuestId)
         const nodes = row(row(parent?.questNodeData)?.nodeData) ?? {}
         for (const nodeKey of sortedKeys(nodes)) {
             const node = row(nodes[nodeKey])
             if (node?.type !== "WaitingSpecialQuestStartAndFinishNode") continue
-            const specialConfigId = id(row(node.propsData)?.SpecialConfigId)
+            const specialConfigId = id(row(node.propsData)?.SpecialConfigId) ?? questId
             if (specialConfigId === undefined) continue
             const path = row(configs[String(specialConfigId)])?.StoryPath
             if (typeof path !== "string" || !path || seen.has(path)) continue
@@ -52,11 +64,6 @@ export function collectSpecialStoryPaths(story: Row, configs: Row): string[] {
         }
     }
     return result
-}
-
-function guideToken(value: unknown): string {
-    if (typeof value !== "string") return ""
-    return value.replace(/[^0-9A-Za-z]/g, "").toLowerCase()
 }
 
 function iconName(value: unknown): string {
@@ -117,23 +124,42 @@ export async function questStoryModule(ctx: ModuleContext): Promise<VNodeTree> {
             const ownerProps = row(owner?.propsData) ?? {}
             const nameKey = typeof ownerProps.QuestDescription === "string" ? ownerProps.QuestDescription : ""
             const descKey = typeof ownerProps.QuestDeatil === "string" ? ownerProps.QuestDeatil : ""
-            const specialParents = collectSpecialStoryPaths(
+            const specialPaths = collectSpecialStoryPaths(
                 { storyNodeData: Object.fromEntries(parents.map(parent => [parent.key, parent])) },
                 specialConfigs
-            ).flatMap(path => indexStory(specialStories.get(path) ?? {}).parents)
-            const mainNodes = processNodes(ctx, dialogue, parents, guidePoints, detectiveQuestions, detectiveAnswers)
+            )
+            const mainResult = processNodes(ctx, dialogue, parents, guidePoints, detectiveQuestions, detectiveAnswers)
+            const mainNodes = mainResult.nodes
             if (mainNodes.length === 0) {
                 mainNodes.push(...collectUnreachableNodes(ctx, dialogue, parents, guidePoints, detectiveQuestions, detectiveAnswers))
             }
-            const specialNodes = processNodes(ctx, dialogue, specialParents, guidePoints, detectiveQuestions, detectiveAnswers)
-            const nodes = dedupeNodes([...mainNodes, ...specialNodes])
-            const allParents = [...parents, ...specialParents]
+            const specialNodes: Row[] = []
+            let activeNextMap = mainResult.nextMap
+            let activeIncomingMap = mainResult.incomingMap
+            for (const path of specialPaths) {
+                const specialStory = specialStories.get(path)
+                if (!specialStory) continue
+                const specialResult = processNodes(
+                    ctx,
+                    dialogue,
+                    indexStory(specialStory).parents,
+                    guidePoints,
+                    detectiveQuestions,
+                    detectiveAnswers
+                )
+                specialNodes.push(...specialResult.nodes)
+                activeNextMap = specialResult.nextMap
+                activeIncomingMap = specialResult.incomingMap
+            }
+            const combinedNodes = [...mainNodes, ...specialNodes]
+            resolveNodeNext(combinedNodes, activeNextMap)
+            const nodes = dedupeNodes(combinedNodes)
             if (nodes.length === 0 && !nameKey && !descKey) continue
-            const quest: Record<string, VNodeTree> = { id: questId, name: nameKey ? T(nameKey) : "" }
+            const quest: Record<string, VNodeTree> = { id: questId, name: nameKey ? TRaw(nameKey) : "" }
             if (descKey && descKey !== nameKey) quest.desc = TUnlessEqual(descKey, nameKey)
             if (nodes.length > 0) {
                 quest.nodes = nodes
-                const starts = startIds(allParents, nodes)
+                const starts = startIds(parents, nodes, activeIncomingMap)
                 if (starts.length > 1) quest.startIds = starts
             }
             quests.push(quest)
@@ -190,8 +216,14 @@ function indexStory(story: Row): StoryIndex {
     return { parents, byQuest }
 }
 
-function loadGuidePoints(ctx: ModuleContext): Row {
-    const points: Row = {}
+function guidePointCollisionKey(value: string): string {
+    return value.replace(/[^0-9A-Za-z]/g, "").toLowerCase()
+}
+
+function loadGuidePoints(ctx: ModuleContext): GuidePoints {
+    const values: Row = {}
+    const names = new Map<string, string>()
+    const ambiguous = new Set<string>()
     for (const item of ctx.dm.loadScriptTableRows("Script/BluePrints/UI/TaskPanel/QuestGuidePointLocData.lua", ["X", "Y", "SubRegionId"])) {
         if (
             typeof item.__key !== "string" ||
@@ -200,24 +232,23 @@ function loadGuidePoints(ctx: ModuleContext): Row {
             typeof item.SubRegionId !== "number"
         )
             continue
-        points[item.__key] = item
+        values[item.__key] = item
+        const collisionKey = guidePointCollisionKey(item.__key)
+        const existing = names.get(collisionKey)
+        if (existing !== undefined && existing !== item.__key) ambiguous.add(collisionKey)
+        else names.set(collisionKey, item.__key)
     }
-    return points
+    return { values, ambiguous }
 }
 
-function findGuidePoint(points: Row, token: unknown): Row | undefined {
-    const normalized = guideToken(token)
-    if (!normalized) return undefined
-    const exact = points[String(token)]
-    if (row(exact)) return exact
-    const candidates = Object.entries(points).filter(([name]) => {
-        const value = guideToken(name)
-        return value === normalized || value.endsWith(normalized) || value.includes(normalized)
-    })
-    return candidates.length === 1 ? row(candidates[0][1]) : undefined
+function findGuidePoint(points: GuidePoints, token: unknown): Row | undefined {
+    if (typeof token !== "string" || !token) return undefined
+    const exact = points.values[token]
+    if (points.ambiguous.has(guidePointCollisionKey(token))) return undefined
+    return row(exact)
 }
 
-function pointForNode(points: Row, node: Row | undefined, context: Row | undefined): { srId?: number; pos?: number[] } {
+function pointForNode(points: GuidePoints, node: Row | undefined, context: Row | undefined): { srId?: number; pos?: number[] } {
     const resolve = (value: Row | undefined): { srId?: number; pos?: number[] } => {
         if (!value) return {}
         const props = row(value.propsData) ?? {}
@@ -246,10 +277,10 @@ function processNodes(
     ctx: ModuleContext,
     dialogue: DialogueService,
     parents: Row[],
-    guidePoints: Row,
+    guidePoints: GuidePoints,
     questions: Row,
     answers: Row
-): Row[] {
+): ProcessedNodes {
     const result: Row[] = []
     const nextMap = new Map<string, string[]>()
     const incoming = new Map<string, string[]>()
@@ -271,6 +302,9 @@ function processNodes(
             const outgoing = outgoingByStart.get(start) ?? []
             outgoing.push(end)
             outgoingByStart.set(start, outgoing)
+            const sources = incoming.get(end) ?? []
+            if (!sources.includes(start)) sources.push(start)
+            incoming.set(end, sources)
         }
         const queue = [...starts]
         const visited = new Set<string>()
@@ -281,17 +315,18 @@ function processNodes(
             const outgoing = outgoingByStart.get(key) ?? []
             nextMap.set(key, outgoing)
             for (const child of outgoing) {
-                const list = incoming.get(child) ?? []
-                if (!list.includes(key)) list.push(key)
-                incoming.set(child, list)
                 if (!visited.has(child)) queue.push(child)
             }
             const node = row(nodeMap.get(key))
             if (!node) continue
             const built = buildNode(ctx, dialogue, key, node, parent, guidePoints, questions, answers)
-            if (built) result.push(built)
+            if (built) {
+                if (outgoing.length > 0) built.next = [...outgoing]
+                result.push(built)
+            }
         }
     }
+    const hasOrderedNodes = result.length > 0
     for (const parent of parents) {
         if (parent.type !== "TalkNode") continue
         const props = row(parent.propsData) ?? {}
@@ -309,9 +344,18 @@ function processNodes(
             if (built) result.push(built)
         }
     }
-    const outputIds = new Set(result.map(node => String(node.id)))
-    for (const node of result) {
-        const rawNext = nextMap.get(String(node.id)) ?? []
+    return {
+        nodes: result,
+        nextMap: hasOrderedNodes ? nextMap : new Map(),
+        incomingMap: hasOrderedNodes ? incoming : new Map(),
+    }
+}
+
+function resolveNodeNext(nodes: Row[], nextMap: Map<string, string[]>): void {
+    const outputIds = new Set(nodes.map(node => String(node.id)))
+    for (const node of nodes) {
+        const rawNext = Array.isArray(node.next) ? node.next.map(String) : []
+        if (rawNext.length === 0) continue
         const resolved: string[] = []
         const queue = [...rawNext]
         const seen = new Set<string>()
@@ -323,15 +367,15 @@ function processNodes(
             else queue.push(...(nextMap.get(key) ?? []))
         }
         if (resolved.length > 0) node.next = [...new Set(resolved)]
+        else delete node.next
     }
-    return result
 }
 
 function collectUnreachableNodes(
     ctx: ModuleContext,
     dialogue: DialogueService,
     parents: Row[],
-    guidePoints: Row,
+    guidePoints: GuidePoints,
     questions: Row,
     answers: Row
 ): Row[] {
@@ -382,7 +426,7 @@ function buildNode(
     nodeId: string,
     node: Row,
     context: Row | undefined,
-    guidePoints: Row,
+    guidePoints: GuidePoints,
     questions: Row,
     answers: Row
 ): Row | undefined {
@@ -396,7 +440,19 @@ function buildNode(
     if (type === "TalkNode") {
         if (!("FirstDialogueId" in props) && !props.FlowAssetPath) return undefined
         const chain = props.FlowAssetPath ? dialogue.flowChain(props.FlowAssetPath) : dialogue.chain(props.FirstDialogueId)
-        if (chain.length > 0) output.dialogues = chain
+        if (chain.length > 0) {
+            output.dialogues = chain
+            const dialogueLangs = new Set<string>()
+            for (const value of chain) {
+                const langs = row(value)?.__langs
+                if (!Array.isArray(langs)) {
+                    dialogueLangs.clear()
+                    break
+                }
+                for (const lang of langs) dialogueLangs.add(String(lang))
+            }
+            if (dialogueLangs.size > 0) output.__fieldLangs = { dialogues: [...dialogueLangs] }
+        }
     } else if (type === "UnlockDetectiveQuestionNode") {
         const values: Row[] = []
         for (const qid of Array.isArray(props.QuestionIds) ? props.QuestionIds : []) {
@@ -428,20 +484,38 @@ function buildNode(
     return output
 }
 
-function startIds(parents: Row[], nodes: VNodeTree[]): VNodeTree[] {
-    const ids = new Set(nodes.map(node => String((node as Row).id)))
+function buildIncomingMap(parents: Row[]): Map<string, string[]> {
     const incoming = new Map<string, string[]>()
     for (const parent of parents) {
         const questData = row(parent.questNodeData)
         for (const edge of Array.isArray(questData?.lineData) ? questData.lineData.map(row).filter((v): v is Row => !!v) : []) {
             if (!validEdge(edge)) continue
             const end = String(edge.endQuest ?? "")
-            if (!ids.has(end)) continue
             const start = String(edge.startQuest ?? "")
             const sources = incoming.get(end) ?? []
             if (!sources.includes(start)) sources.push(start)
             incoming.set(end, sources)
         }
     }
-    return nodes.filter(node => (incoming.get(String((node as Row).id)) ?? []).length === 0).map(node => (node as Row).id)
+    return incoming
+}
+
+function startIds(parents: Row[], nodes: VNodeTree[], activeIncoming: Map<string, string[]>): VNodeTree[] {
+    let incoming = activeIncoming
+    if (incoming.size === 0) incoming = buildIncomingMap(parents)
+    if (incoming.size > 0) {
+        return nodes.filter(node => (incoming.get(String((node as Row).id)) ?? []).length === 0).map(node => (node as Row).id)
+    }
+
+    const orderedIds = nodes.map(node => (node as Row).id)
+    const nodeIds = new Set(orderedIds.map(String))
+    const incomingIds = new Set<string>()
+    for (const node of nodes) {
+        for (const nextId of Array.isArray((node as Row).next) ? (node as Row).next : []) {
+            const key = String(nextId)
+            if (nodeIds.has(key)) incomingIds.add(key)
+        }
+    }
+    const starts = orderedIds.filter(nodeId => !incomingIds.has(String(nodeId)))
+    return starts.length > 0 ? starts : orderedIds.slice(0, 1)
 }

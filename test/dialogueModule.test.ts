@@ -1,9 +1,46 @@
 import { describe, expect, test } from "bun:test"
+import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from "node:fs"
+import { join } from "node:path"
+import { tmpdir } from "node:os"
 import type { ModuleContext } from "../src/core/Graph.ts"
 import { renderTree } from "../src/i18n/vnode.ts"
 import { dialogueModule, flowDialogueIds } from "../src/modules/dialogue/dialogueModule.ts"
 
 describe("DialogueService", () => {
+    test("loads FlowAsset data from the Python out/Dialogue JSON source", async () => {
+        const data = new Map([["1", { DialogueId: 1, Content: "line" }]])
+        const flowAssetPath = "DialogueAsset'/Game/Dialogue/Test/flow.flow'"
+        const root = mkdtempSync(join(tmpdir(), "dna-dialogue-test-"))
+        const flowFile = join(root, "out", "Dialogue", "Test", "flow.json")
+        mkdirSync(join(root, "out", "Dialogue", "Test"), { recursive: true })
+        writeFileSync(
+            flowFile,
+            JSON.stringify([
+                { Type: "FlowNode_Start", Properties: { NodeGuid: "start", Connections: [{ Value: { NodeGuid: "dialogue" } }] } },
+                { Type: "FlowNode_Dialogue", Properties: { NodeGuid: "dialogue", DialogueData: [{ DialogueId: 1 }] } },
+            ])
+        )
+        const ctx = {
+            dm: {
+                root,
+                getTable: () => ({}),
+                loadStoryFile: () => ({
+                    storyNodeData: {
+                        talk: { type: "TalkNode", propsData: { FlowAssetPath: flowAssetPath } },
+                    },
+                }),
+                getDialogueItems: (tables: string[]) => new Map(tables.map(table => [table, data])),
+            },
+        } as unknown as ModuleContext
+        try {
+            const dialogue = dialogueModule(ctx)
+            await dialogue.prepareStoryFlows(["story"])
+            expect(renderTree(dialogue.flowChain(flowAssetPath), "cn", {} as never)).toEqual([{ id: 1, content: "line" }])
+        } finally {
+            rmSync(root, { recursive: true, force: true })
+        }
+    })
+
     test("reads flat FModel and nested UAssetCLI GUIDs", () => {
         const flow = (nested: boolean) => [
             {
@@ -199,6 +236,35 @@ describe("DialogueService", () => {
         const textmap = {} as never
 
         expect(renderTree(chain, "cn", textmap)).toEqual([])
+        expect(renderTree(chain, "en", textmap)).toEqual([{ id: 1, content: "localized" }])
+    })
+
+    test("uses OptionTopic for cn when only localized Content fields exist", () => {
+        const ctx = {
+            dm: {
+                getTable: () => ({}),
+                getDialogueItems: (tables: string[]) =>
+                    new Map(
+                        tables.map(table => [
+                            table,
+                            new Map([
+                                [
+                                    "1",
+                                    table === "Dialogue_TextMapContent"
+                                        ? { DialogueId: 1, OptionTopic: "cn option" }
+                                        : table === "Dialogue_ContentEN"
+                                          ? { DialogueId: 1, ContentEN: "localized" }
+                                          : { DialogueId: 1 },
+                                ],
+                            ]),
+                        ])
+                    ),
+            },
+        } as unknown as ModuleContext
+        const chain = dialogueModule(ctx).chain(1)
+        const textmap = {} as never
+
+        expect(renderTree(chain, "cn", textmap)).toEqual([{ id: 1, content: "cn option" }])
         expect(renderTree(chain, "en", textmap)).toEqual([{ id: 1, content: "localized" }])
     })
 

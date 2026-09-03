@@ -5,7 +5,7 @@
 import { describe, expect, test } from "bun:test"
 import { TextMap } from "../src/i18n/TextMap.ts"
 import { deriveLangViews } from "../src/i18n/textmapReactive.ts"
-import { compile, LTemplate, renderTree, seq, T, TL, TUnlessEqual } from "../src/i18n/vnode.ts"
+import { compile, LTemplate, renderTree, seq, T, TL, TUnlessEqual, TRaw } from "../src/i18n/vnode.ts"
 import { getLuaDataManager } from "../src/lua/LuaDataManager.ts"
 import { sentinelOf } from "../src/lua/stubs.ts"
 
@@ -51,6 +51,10 @@ describe("vnode", () => {
         expect(typeof cn).toBe("string")
         expect(cn.length).toBeGreaterThan(0)
         expect(en.length).toBeGreaterThan(0)
+    })
+
+    test("TRaw 保留翻译文本中的空格标记", () => {
+        expect(renderTree(TRaw("Description_120205_5"), "en", tm)).toBe("Look for Kezhou{空格}")
     })
 
     test("TL 显式多语言映射", () => {
