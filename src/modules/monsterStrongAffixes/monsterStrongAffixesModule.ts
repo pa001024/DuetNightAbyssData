@@ -133,14 +133,10 @@ export function monsterStrongAffixesModule(ctx: ModuleContext): VNodeTree {
         putFirst(target, "追踪速度", creature.TraceSpeed)
         putFirst(target, "追踪范围", creature.TraceRange?.Range)
         putFirst(target, "生效延迟", creature.Vars?.Delay)
-        processRefs(creature.Vars, target, seenBuffs, seenEffects)
+        processRefs(creature.Vars, target, seenBuffs, seenEffects, true)
         for (const hitId of [...list(creature.HitEnemy), ...list(creature.HitScene)]) {
             const n = number(hitId)
-            if (n) {
-                const effect = entry(ctx, "SkillEffects", n)
-                putFirst(target, "半径", radius(effect?.TargetFilter))
-                processEffect(n, target, seenBuffs, seenEffects)
-            }
+            if (n) processEffect(n, target, seenBuffs, seenEffects)
         }
     }
 
@@ -206,7 +202,13 @@ export function monsterStrongAffixesModule(ctx: ModuleContext): VNodeTree {
         }
     }
 
-    const processRefs = (value: unknown, target: Row, seenBuffs: Set<number>, seenEffects: Set<number>): void => {
+    const processRefs = (
+        value: unknown,
+        target: Row,
+        seenBuffs: Set<number>,
+        seenEffects: Set<number>,
+        insertEffectRadius = false
+    ): void => {
         if (!value || typeof value !== "object") return
         const refs = Object.entries(value as Row)
             .map(([key, raw]) => ({ order: key.match(/^SkillEffectId(\d*)$/), raw }))
@@ -214,7 +216,13 @@ export function monsterStrongAffixesModule(ctx: ModuleContext): VNodeTree {
             .sort((a, b) => Number(a.order?.[1] || 1) - Number(b.order?.[1] || 1))
         for (const ref of refs) {
             const id = number(ref.raw)
-            if (id) processEffect(id, target, seenBuffs, seenEffects)
+            if (id) {
+                if (insertEffectRadius) {
+                    const effect = entry(ctx, "SkillEffects", id)
+                    putFirst(target, "半径", radius(effect?.TargetFilter))
+                }
+                processEffect(id, target, seenBuffs, seenEffects)
+            }
         }
     }
 
