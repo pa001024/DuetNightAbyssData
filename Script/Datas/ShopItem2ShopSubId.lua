@@ -2671,6 +2671,9 @@ return ReadOnly("ShopItem2ShopSubId", {
       [102004] = {
         [1] = {ShopItemId = 10000503, SubTabId = 100001}
       },
+      [104004] = {
+        [1] = {ShopItemId = 10000517, SubTabId = 100001}
+      },
       [105001] = {
         [1] = {ShopItemId = 10000511, SubTabId = 100001}
       },
@@ -4433,7 +4436,7 @@ return ReadOnly("ShopItem2ShopSubId", {
         [2] = {ShopItemId = 120176, SubTabId = 1208},
         [3] = {ShopItemId = 120177, SubTabId = 1208}
       },
-      [110063] = {
+      [110074] = {
         [1] = {ShopItemId = 120178, SubTabId = 1208},
         [2] = {ShopItemId = 120179, SubTabId = 1208},
         [3] = {ShopItemId = 120180, SubTabId = 1208}
@@ -4557,8 +4560,9 @@ return ReadOnly("ShopItem2ShopSubId", {
         [1] = {ShopItemId = 10012135, SubTabId = 100121}
       },
       [6000007] = {
-        [1] = {ShopItemId = 10012137, SubTabId = 100121},
-        [2] = {ShopItemId = 10012138, SubTabId = 100121}
+        [1] = {ShopItemId = 10012126, SubTabId = 100121},
+        [2] = {ShopItemId = 10012137, SubTabId = 100121},
+        [3] = {ShopItemId = 10012138, SubTabId = 100121}
       },
       [60000052] = {
         [1] = {ShopItemId = 10012121, SubTabId = 100121}

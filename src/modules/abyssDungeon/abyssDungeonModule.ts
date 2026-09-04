@@ -41,7 +41,6 @@ export function abyssDungeonModule(ctx: ModuleContext): VNodeTree {
                 .map(v => v.trim())
                 .filter(Boolean))
                 if (!monsterBuff[attributeNames[attr] ?? attr]) monsterBuff[attributeNames[attr] ?? attr] = 4
-            if (Object.keys(monsterBuff).length) out.mb = monsterBuff
         }
         const season = seasons.find(v => sequence(v.AbyssLevelId).map(Number).includes(Number(level?.LevelId)))
         const seasonList = season ? seasonLists[String(season.AbyssSeasonId)] : undefined
@@ -65,6 +64,7 @@ export function abyssDungeonModule(ctx: ModuleContext): VNodeTree {
             if (seasonName && ctx.textmap.has(seasonName)) out.sn = T(seasonName)
             putIfPresent(out, "cid", seasonList.CharId)
         }
+        if (!out.mb && Object.keys(monsterBuff).length) out.mb = monsterBuff
         result.push(out)
     }
     return result

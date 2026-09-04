@@ -215,6 +215,23 @@ function M:_GenerateCharMountsParams(ItemData, Avatar)
   return Params
 end
 
+function M:ApplyCharAccessoryPreviewAfterSceneLoaded(AccessoryId)
+  local ActorController = self.ActorController
+  if not ActorController then
+    return
+  end
+  
+  local function ApplyPreview()
+    local bSuccess = ActorController:WaitForPreviewSceneLoadFinished()
+    if not (bSuccess and not ActorController.bDestructed and self.ActorController == ActorController and self.Params) or self.Params.AccessoryId ~= AccessoryId then
+      return
+    end
+    self:ApplyAccessoryPreview("CharAccessory")
+  end
+  
+  ActorController:DoSomethingWithScene("SkinPreviewApplyCharAccessory", ApplyPreview)
+end
+
 function M:InitializePreviewActor(ItemData)
   self.ActorController = self:CreatePreviewActor(self.Params)
   local itemType = ItemData.ItemType
@@ -248,7 +265,16 @@ function M:InitializePreviewActor(ItemData)
     end
   elseif "Mount" == itemType then
     self:SetupInitialMountsPreview(ItemData)
-  elseif "CharAccessory" == itemType or "WeaponAccessory" == itemType then
+  elseif "CharAccessory" == itemType then
+    local AccessoryData = DataMgr.CharAccessory[ItemData.TypeId]
+    local VisualEffectData = AccessoryData and DataMgr.VisualEffect[AccessoryData.VisualEffectId]
+    if AccessoryData and AccessoryData.AccessoryType == CommonConst.CharAccessoryTypes.FX_Body and VisualEffectData and VisualEffectData.EffectColor then
+      self:SetupDefaultCharacterModel()
+      self:ApplyCharAccessoryPreviewAfterSceneLoaded(AccessoryData.AccessoryId)
+    else
+      self:ApplyAccessoryPreview(itemType)
+    end
+  elseif "WeaponAccessory" == itemType then
     self:ApplyAccessoryPreview(itemType)
   end
 end

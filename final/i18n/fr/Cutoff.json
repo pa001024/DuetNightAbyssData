@@ -2259,6 +2259,19 @@
     "priceName": "Prisme iridescent"
   },
   {
+    "id": 166,
+    "itemId": 10000517,
+    "price": 1000,
+    "discount": 20,
+    "startTime": 1672545600,
+    "originalPrice": 5000,
+    "itemType": "Mod",
+    "typeId": 104004,
+    "subTabId": 100001,
+    "priceType": 214,
+    "priceName": "Billet de spectacle"
+  },
+  {
     "id": 173,
     "itemId": 120427,
     "price": 300,
@@ -5029,7 +5042,7 @@
     "endTime": 1792400400,
     "originalPrice": 1280,
     "itemType": "Resource",
-    "typeId": 110063,
+    "typeId": 110074,
     "subTabId": 1208,
     "priceType": 99,
     "priceName": "Gemme de Phoxène"
@@ -5043,7 +5056,7 @@
     "endTime": 1792400400,
     "originalPrice": 1280,
     "itemType": "Resource",
-    "typeId": 110063,
+    "typeId": 110074,
     "subTabId": 1208,
     "priceType": 99,
     "priceName": "Gemme de Phoxène"

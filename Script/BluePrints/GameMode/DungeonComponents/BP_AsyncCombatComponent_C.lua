@@ -21,6 +21,7 @@ function M:InitAsyncCombatComponent()
   self.SingleModeTotalHp = self.GameMode.PreInitInfo.RoomTotalHp or 0
   self.SingleModeDamage = 0
   self.IsSingleModeContributionReached = false
+  self.IsRoomFinished = false
   DebugPrint("AsyncCombatComponent: Init_BossCurStep", self.BossCurStep, "RoomConfId", self.RoomConfId, "IsSingleMode", self.IsSingleMode)
   self.IsSingleModeBossSpawned = false
   self.AsyncCombatInfo = DataMgr.AsyncCombat[self.RoomConfId]
@@ -113,6 +114,21 @@ function M:OnRepClientDungeonMessage(MessageName, ...)
       end)
     end
   elseif MessageName == AsyncMsg.AsyncCombatRoomClose then
+    if self.GameMode.AlreadyInit then
+      self:OnRoomClose()
+    elseif not self.IsPendingRoomEnd then
+      self.IsPendingRoomEnd = true
+      self.GameMode.EMGameState:RegisterGameModeEvent("OnInit", self, function()
+        self:OnRoomClose()
+      end)
+    end
+  elseif MessageName == AsyncMsg.AsyncCombatExtraRoomClose then
+    local Data = (...)
+    local CurrentRoomUniId = self.GameMode.PreInitInfo and self.GameMode.PreInitInfo.RoomUniId
+    if not (Data and CurrentRoomUniId) or Data.RoomUniId ~= CurrentRoomUniId then
+      return
+    end
+    DebugPrint("AsyncCombatComponent: Extra room closed", "RoomUniId", Data.RoomUniId)
     if self.GameMode.AlreadyInit then
       self:OnRoomClose()
     elseif not self.IsPendingRoomEnd then
@@ -390,11 +406,23 @@ function M:OnBossDeadFromServer()
 end
 
 function M:OnRoomPass()
+  if self.IsSingleMode then
+    if self.IsRoomFinished then
+      return
+    end
+    self.IsRoomFinished = true
+  end
   self.GameMode:TriggerDungeonWin()
   self:StopBossDamageTracking(false)
 end
 
 function M:OnRoomClose()
+  if self.IsSingleMode then
+    if self.IsRoomFinished then
+      return
+    end
+    self.IsRoomFinished = true
+  end
   self.GameMode:TriggerDungeonFailed()
   self:StopBossDamageTracking(false)
   self:StopTimeBuff()

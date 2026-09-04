@@ -278,8 +278,8 @@
   },
   {
     "id": 2201,
-    "name": "UI_Skin_Name_2201",
-    "desc": "UI_Skin_Des_2201",
+    "name": "{nickname2}의 의상",
+    "desc": "검 한 자루에 흰 옷 걸치고 홀로 걷는다. 거친 바다와 차디찬 밤을 건너, 새벽의 끝과 만나기 위해.",
     "icon": "T_Head_WeitaF",
     "rarity": 5,
     "charId": 2201,
@@ -1038,8 +1038,8 @@
   },
   {
     "id": 220101,
-    "name": "UI_Skin_Name_2201",
-    "desc": "UI_Skin_Des_2201",
+    "name": "{nickname2}의 의상",
+    "desc": "검 한 자루에 흰 옷 걸치고 홀로 걷는다. 거친 바다와 차디찬 밤을 건너, 새벽의 끝과 만나기 위해.",
     "icon": "T_Head_WeitaM",
     "rarity": 5,
     "charId": 220101,

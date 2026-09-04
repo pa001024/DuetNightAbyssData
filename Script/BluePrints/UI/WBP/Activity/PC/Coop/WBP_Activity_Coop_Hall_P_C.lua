@@ -835,15 +835,23 @@ function View:CheckDifficultyIsSelected(RoomCfgRatResId)
 end
 
 function View:CheckRoomIsEnd(roomData)
-  if roomData.IsPass and roomData.RewardState and 1 ~= roomData.RewardState then
-    return true
+  local CurrentTime = TimeUtils.NowTime()
+  if roomData.IsPass == true then
+    local ContributionRequire = DataMgr.AsyncCombatEventConstant.AsyncCombat_BaseContributionRequire.ConstantValue
+    local StoppageRoomDuration = DataMgr.AsyncCombatEventConstant.AsyncCombat_StoppageTimeRoomDuration.ConstantValue * 60
+    local IsInStoppageWindow = roomData.CloseTime and CurrentTime < roomData.CloseTime + StoppageRoomDuration
+    local CanEnterStoppageRoom = roomData.IsMaster == false and true ~= roomData.IsMvp and 0 == roomData.RewardState and roomData.Contribution and ContributionRequire > roomData.Contribution and IsInStoppageWindow
+    if CanEnterStoppageRoom then
+      return false
+    end
+    return 1 ~= roomData.RewardState
   end
   local CreateTime = URuntimeCommonFunctionLibrary.GetDateTimeFromUnixTime(roomData.CreateTime or 0)
-  local CurTime = URuntimeCommonFunctionLibrary.GetDateTimeFromUnixTime(TimeUtils.NowTime())
+  local CurTime = URuntimeCommonFunctionLibrary.GetDateTimeFromUnixTime(CurrentTime)
   local RemainTime = UKismetMathLibrary.Subtract_DateTimeDateTime(CurTime, CreateTime)
   local elapsedSeconds = UKismetMathLibrary.GetTotalSeconds(RemainTime)
   if elapsedSeconds >= self.MaxDurationSeconds then
-    return 1 ~= roomData.RewardState
+    return true
   end
   return false
 end
@@ -1023,37 +1031,27 @@ function View:RefreshList()
             IsStopageRoomTimeDown = false
           end
         end
+        local CanEnterStoppageRoom = roomData.IsPass == true and roomData.IsMaster == false and true ~= roomData.IsMvp and 0 == roomData.RewardState and roomData.Contribution and ContributionRequire > roomData.Contribution and roomData.CloseTime and false == IsStopageRoomTimeDown
         if roomData.IsPass == false then
           if 1 == self.SelectedSubTabIdx then
             if false == IsRoomTimeDown then
               table.insert(ShowList, roomData)
-            elseif true == IsRoomTimeDown and 1 == roomData.RewardState then
-              table.insert(ShowList, roomData)
-              RewardCount = RewardCount + 1
-            elseif 0 == roomData.RewardState and false == roomData.IsMaster and false == IsStopageRoomTimeDown and roomData.Contribution and ContributionRequire > roomData.Contribution then
-              table.insert(ShowList, roomData)
             end
-          elseif 2 == self.SelectedSubTabIdx then
-            if true == IsRoomTimeDown and 2 == roomData.RewardState then
-              table.insert(ShowList, roomData)
-            elseif true == IsRoomTimeDown and true == IsStopageRoomTimeDown and 1 ~= roomData.RewardState then
-              table.insert(ShowList, roomData)
-            elseif true == IsRoomTimeDown and true == roomData.IsMaster and 0 == roomData.RewardState then
-              table.insert(ShowList, roomData)
-            end
+          elseif 2 == self.SelectedSubTabIdx and true == IsRoomTimeDown then
+            table.insert(ShowList, roomData)
           end
         elseif roomData.IsPass == true then
           if 1 == self.SelectedSubTabIdx then
             if 1 == roomData.RewardState then
               table.insert(ShowList, roomData)
               RewardCount = RewardCount + 1
-            elseif 0 == roomData.RewardState and false == IsStopageRoomTimeDown and 0 == roomData.RewardState and ContributionRequire > roomData.Contribution then
+            elseif CanEnterStoppageRoom then
               table.insert(ShowList, roomData)
             end
           elseif 2 == self.SelectedSubTabIdx then
             if 2 == roomData.RewardState then
               table.insert(ShowList, roomData)
-            elseif true == IsRoomTimeDown and true == IsStopageRoomTimeDown and 1 ~= roomData.RewardState then
+            elseif 0 == roomData.RewardState and not CanEnterStoppageRoom then
               table.insert(ShowList, roomData)
             end
           end

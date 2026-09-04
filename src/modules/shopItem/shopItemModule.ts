@@ -111,9 +111,9 @@ function itemNode(ctx: ModuleContext, source: Record<string, any>): Record<strin
         priceType,
         priceName: typeName(ctx, "Resource", priceType),
         num: source.TypeNum,
+        ...(source.PurchaseLimit ? { limit: source.PurchaseLimit } : {}),
         subTabId: source.SubTabId,
     }
-    if (source.PurchaseLimit) output.limit = source.PurchaseLimit
     const pay = payData(ctx, id)
     if (pay) output.pay = pay
     if (source.Sequence !== undefined) output.sequence = source.Sequence

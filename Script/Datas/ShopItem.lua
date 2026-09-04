@@ -3869,7 +3869,7 @@ return ReadOnly("ShopItem", {
     Sequence = 5007,
     StartTime = LocalTimeProxy(1788746400),
     SubTabId = 99010,
-    TypeId = 110063,
+    TypeId = 110074,
     TypeNum = 1
   },
   [100205] = {
@@ -5868,7 +5868,7 @@ return ReadOnly("ShopItem", {
     Sequence = 5007,
     StartTime = LocalTimeProxy(1788746400),
     SubTabId = 1208,
-    TypeId = 110063,
+    TypeId = 110074,
     TypeNum = 1
   },
   [120179] = {
@@ -5884,7 +5884,7 @@ return ReadOnly("ShopItem", {
     Sequence = 5007,
     StartTime = LocalTimeProxy(1788746400),
     SubTabId = 1208,
-    TypeId = 110063,
+    TypeId = 110074,
     TypeNum = 1
   },
   [120180] = {
@@ -5898,7 +5898,7 @@ return ReadOnly("ShopItem", {
     Sequence = 5007,
     StartTime = LocalTimeProxy(1788746400),
     SubTabId = 1208,
-    TypeId = 110063,
+    TypeId = 110074,
     TypeNum = 1
   },
   [120181] = {
@@ -25558,6 +25558,19 @@ return ReadOnly("ShopItem", {
     TypeNum = 1,
     UnlockLevel = 50
   },
+  [10000517] = {
+    ItemId = 10000517,
+    ItemType = "Mod",
+    Price = 5000,
+    PriceType = 214,
+    PurchaseLimit = 1,
+    Sequence = 98,
+    StartTime = LocalTimeProxy(1761512400),
+    SubTabId = 100001,
+    TypeId = 104004,
+    TypeNum = 1,
+    UnlockLevel = 50
+  },
   [10000601] = {
     EndTime = LocalTimeProxy(1770688800),
     ItemId = 10000601,
@@ -32593,6 +32606,20 @@ return ReadOnly("ShopItem", {
     StartTime = LocalTimeProxy(1672545600),
     SubTabId = 100121,
     TypeId = 60000056,
+    TypeNum = 1
+  },
+  [10012126] = {
+    EndTime = LocalTimeProxy(1788814800),
+    ItemId = 10012126,
+    ItemType = "Resource",
+    Price = 0,
+    PriceType = 101,
+    PurchaseLimit = 9,
+    RefreshTime = T.RT_3,
+    Sequence = 95,
+    StartTime = LocalTimeProxy(1672545600),
+    SubTabId = 100121,
+    TypeId = 6000007,
     TypeNum = 1
   },
   [10012127] = {

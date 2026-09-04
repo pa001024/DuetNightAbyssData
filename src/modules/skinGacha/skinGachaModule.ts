@@ -92,11 +92,11 @@ export function skinGachaItemModule(ctx: ModuleContext): VNodeTree {
                 if (mappedType) out.t = mappedType
                 const resolved = itemName(ctx, id)
                 if (resolved.type) out.t = resolved.type
-                if (resolved.name) out.n = resolved.name
                 const probability = pick(item.Probability, index)
                 const count = pick(item.Count, index)
                 if (probability) out.p = probability
                 if (typeof count === "number" && count > 0) out.c = count
+                if (resolved.name) out.n = resolved.name
                 return out
             }),
         }))

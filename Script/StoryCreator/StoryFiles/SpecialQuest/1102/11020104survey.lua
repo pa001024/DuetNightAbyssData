@@ -226,6 +226,12 @@ return {
             startPort = "Out",
             endQuest = "17854033656314310",
             endPort = "In"
+          },
+          {
+            startQuest = "1781515622223322",
+            startPort = "QuestStart",
+            endQuest = "17882754818631137018",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -561,6 +567,22 @@ return {
               MessageType = "BehaviorTree",
               MessageContent = "jc_survey02",
               UnitId = 111212
+            }
+          },
+          ["17882754818631137018"] = {
+            key = "17882754818631137018",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 532, y = -136},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_6/0184_story_curse_echoes",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107101},
+              bStoreToServer = true
             }
           }
         },

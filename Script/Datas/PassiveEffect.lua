@@ -1077,7 +1077,7 @@ return ReadOnly("PassiveEffect", {
       AddSp11 = 4,
       AddSp12 = 5,
       BaseAddSp = 1,
-      BaseBullet11 = 5,
+      BaseBullet11 = 1,
       BulletNum50 = 3,
       CD50 = 0.3,
       ChargeSuperBullet = 1,

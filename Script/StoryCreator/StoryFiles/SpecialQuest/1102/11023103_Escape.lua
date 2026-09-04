@@ -180,12 +180,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17821359497585359094",
-            startPort = "Out",
-            endQuest = "17821360167205359773",
-            endPort = "In"
-          },
-          {
             startQuest = "17817744815753187609",
             startPort = "Out",
             endQuest = "17821190727261073449",
@@ -285,6 +279,12 @@ return {
             startQuest = "17821359497585359094",
             startPort = "Out",
             endQuest = "178817214795045880206",
+            endPort = "In"
+          },
+          {
+            startQuest = "178817214795045880206",
+            startPort = "Out",
+            endQuest = "17821360167205359773",
             endPort = "In"
           }
         },
@@ -634,7 +634,7 @@ return {
             key = "17821359497585359094",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 5810.174007130512, y = -35.39892209806979},
+            pos = {x = 5714.719461675967, y = -70.85346755261524},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -685,7 +685,7 @@ return {
             key = "17821360167205359773",
             type = "TalkNode",
             name = "过场",
-            pos = {x = 6106.419683678715, y = -54.56133640543018},
+            pos = {x = 6300.056047315079, y = -43.652245496339276},
             propsData = {
               IsNpcNode = false,
               TalkType = "Cinematic",
@@ -937,7 +937,7 @@ return {
             key = "178817214795045880206",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 6302.265611426231, y = 182.369092867128},
+            pos = {x = 6010.447429608049, y = -57.63090713287198},
             propsData = {
               SoundStateType = 0,
               SoundPriority = 0,

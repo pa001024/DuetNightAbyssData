@@ -13799,47 +13799,45 @@
   },
   {
     "id": 110062,
-    "name": "Coffret de sélection de cristaux III",
-    "icon": "T_Pack_ZaieRes02",
-    "rarity": 5,
-    "desc": "Après utilisation, permet de choisir un matériau parmi Cristal Pyro, Cristal Lumino, Cristal Hydro et Cristal Umbro.",
-    "select": 4007
-  },
-  {
-    "id": 110063,
-    "name": "Coffret de sélection d’apparence – Gardien",
-    "icon": "T_Pack_Police",
-    "rarity": 5,
-    "desc": "Permet de choisir une apparence parmi les personnages suivants : Su Yi, Fina, Eve, Fushu, Lynn, Margie, Rhythm, Sibylle ou Daphne.",
-    "select": 5010
-  },
-  {
-    "id": 110064,
     "name": "Sceau démoniaque — Pactisant Anémo",
     "icon": "T_Pack_RandomMod_11",
     "rarity": 5,
     "pack": 350031
   },
   {
-    "id": 110065,
+    "id": 110063,
     "name": "Sceau démoniaque — Pactisant Pyro",
     "icon": "T_Pack_RandomMod_16",
     "rarity": 5,
     "pack": 350037
   },
   {
-    "id": 110066,
+    "id": 110064,
     "name": "Sceau démoniaque — Pactisant Électro",
     "icon": "T_Pack_RandomMod_12",
     "rarity": 5,
     "pack": 350033
   },
   {
-    "id": 110067,
+    "id": 110065,
     "name": "Sceau démoniaque — Pactisant Hydro",
     "icon": "T_Pack_RandomMod_13",
     "rarity": 5,
     "pack": 350034
+  },
+  {
+    "id": 110066,
+    "name": "Sceau démoniaque — Pactisant Lumino",
+    "icon": "T_Pack_RandomMod_14",
+    "rarity": 5,
+    "pack": 350038
+  },
+  {
+    "id": 110067,
+    "name": "Sceau démoniaque — Pactisant Umbro",
+    "icon": "T_Pack_RandomMod_15",
+    "rarity": 5,
+    "pack": 350036
   },
   {
     "id": 110068,
@@ -13878,6 +13876,22 @@
     "rarity": 5,
     "desc": "Après utilisation, permet de choisir un Géniemon actif parmi Poto Carta scintillant, Périnou scintillant ou M. Bonne Nuit scintillant.",
     "select": 4008
+  },
+  {
+    "id": 110073,
+    "name": "Coffret de sélection de cristaux III",
+    "icon": "T_Pack_ZaieRes02",
+    "rarity": 5,
+    "desc": "Après utilisation, permet de choisir un matériau parmi Cristal Pyro, Cristal Lumino, Cristal Hydro et Cristal Umbro.",
+    "select": 4007
+  },
+  {
+    "id": 110074,
+    "name": "Coffret de sélection d’apparence – Gardien",
+    "icon": "T_Pack_Police",
+    "rarity": 5,
+    "desc": "Permet de choisir une apparence parmi les personnages suivants : Su Yi, Fina, Eve, Fushu, Lynn, Margie, Rhythm, Sibylle ou Daphne.",
+    "select": 5010
   },
   {
     "id": 120001,

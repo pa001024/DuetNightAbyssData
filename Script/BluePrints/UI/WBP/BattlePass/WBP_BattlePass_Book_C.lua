@@ -764,6 +764,7 @@ function WBP_BattlePass_Book_C:OpenMissionList(Tab, IsForce)
   self.List_Mission:ScrollToTop()
   self:AddTimer(0.01, function()
     self.List_Mission:RequestFillEmptyContent()
+    self.List_Mission:SetRenderOpacity(1)
     self.List_Mission:RequestPlayEntriesAnim()
   end, false, 0, nil, true)
 end

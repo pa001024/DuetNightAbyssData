@@ -372,7 +372,7 @@
     "desc": "Lulu, pilleuse de loot, sort déjà du Phoxène pour implorer pitié... On la laisse filer ?",
     "startTime": 1788746400,
     "endTime": 1790629200,
-    "rule": "1) Pendant l’événement, les joueurs peuvent récupérer gratuitement une quantité définie de Phoxène une fois par jour. Après l’avoir récupérée, vous pouvez acheter « Bonus quotidien » pour augmenter la quantité de Phoxène du jour, ou acheter « Bonus global » pour augmenter la quantité de Phoxène du jour ainsi que celle des jours restants.\n2) Effet du bonus : après achat, le total de Phoxène obtenu pour le jour concerné équivaut à 5 fois la quantité gratuite du jour.\n3) Après le premier achat de « Bonus quotidien », vous ne pourrez plus acheter « Bonus global »."
+    "rule": "1) Pendant l’événement, vous pouvez récupérer gratuitement une quantité définie de Phoxène une fois par jour. Après l’avoir récupérée, vous pouvez acheter « Bonus quotidien » pour multiplier par 5 la quantité de Phoxène du jour, ou « Bonus global » pour multiplier par 5 la quantité de Phoxène du jour ainsi que celle des jours restants.\n2) Effet du bonus : après achat, la quantité totale de Phoxène obtenue ce jour-là équivaut à 5 fois la quantité gratuite du jour.\n3) Après le premier achat de « Bonus quotidien », vous ne pourrez plus acheter « Bonus global »."
   },
   {
     "id": 103030,
@@ -589,21 +589,21 @@
   {
     "id": 121001,
     "name": "Théâtre immersif",
-    "desc": "Ensemble, nous déciderons de la direction que prendra l’histoire. Plongez dans notre représentation et menons ensemble ce récit vers son dénouement parfait.",
+    "desc": "Ensemble, nous déciderons de la direction que prendra l’histoire. Plongeons dans notre représentation et menons ensemble ce récit vers son dénouement parfait.",
     "startTime": 1781748000,
     "endTime": 1785142800
   },
   {
     "id": 121002,
     "name": "Théâtre immersif",
-    "desc": "Ensemble, nous déciderons de la direction que prendra l’histoire. Plongez dans notre représentation et menons ensemble ce récit vers son dénouement parfait.",
+    "desc": "Ensemble, nous déciderons de la direction que prendra l’histoire. Plongeons dans notre représentation et menons ensemble ce récit vers son dénouement parfait.",
     "startTime": 1785981600,
     "endTime": 1788685200
   },
   {
     "id": 121003,
     "name": "Théâtre immersif",
-    "desc": "Ensemble, nous déciderons de la direction que prendra l’histoire. Plongez dans notre représentation et menons ensemble ce récit vers son dénouement parfait.",
+    "desc": "Ensemble, nous déciderons de la direction que prendra l’histoire. Plongeons dans notre représentation et menons ensemble ce récit vers son dénouement parfait.",
     "startTime": 1789610400,
     "endTime": 1792314000
   },

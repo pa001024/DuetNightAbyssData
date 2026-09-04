@@ -29,6 +29,9 @@ local SLOW_TIME_BUFF_ID = 68
 local SLOW_END_DEBOUNCE = 0.15
 
 local function PlayRailTrainMoveSound(self)
+  if self.SoundTriggerOn then
+    return
+  end
   if self._RailTrainSfxPlayed then
     return
   end

@@ -1194,7 +1194,7 @@ return ReadOnly("ShopItem2RewardPack", {
       [6] = T.RT_52
     },
     [110060] = T.RT_55,
-    [110062] = {
+    [110073] = {
       [1] = T.RT_49,
       [2] = T.RT_48,
       [3] = T.RT_47

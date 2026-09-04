@@ -589,6 +589,14 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "RaidDungeon_Max_Point",
     WildcardClassification = "Story"
   },
+  RaidDungeon_NextRank_Point = {
+    TextMapId = "RaidDungeon_NextRank_Point",
+    WildcardClassification = "Story"
+  },
+  RaidDungeon_Raid_Rank_Title = {
+    TextMapId = "RaidDungeon_Raid_Rank_Title",
+    WildcardClassification = "Story"
+  },
   RaidDungeon_Shop_UnlockPoint = {
     TextMapId = "RaidDungeon_Shop_UnlockPoint",
     WildcardClassification = "Story"
@@ -1969,6 +1977,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_Skin_Name_1601",
     WildcardClassification = "Story"
   },
+  UI_Skin_Name_2201 = {
+    TextMapId = "UI_Skin_Name_2201",
+    WildcardClassification = "Story"
+  },
   UI_Skin_Upgrade_Interval = {
     TextMapId = "UI_Skin_Upgrade_Interval",
     WildcardClassification = "Story"
@@ -2015,6 +2027,10 @@ return ReadOnly("TextMapWildcard", {
   },
   UI_TeamOperationOnCooldown = {
     TextMapId = "UI_TeamOperationOnCooldown",
+    WildcardClassification = "Story"
+  },
+  UI_TempleEvent_RewardTarget = {
+    TextMapId = "UI_TempleEvent_RewardTarget",
     WildcardClassification = "Story"
   },
   UI_Time_Day = {

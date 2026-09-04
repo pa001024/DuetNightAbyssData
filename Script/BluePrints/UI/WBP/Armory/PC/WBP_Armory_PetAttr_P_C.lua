@@ -37,6 +37,11 @@ function M:Init(Params)
   self:UpdateGamepadKeyStyle()
 end
 
+function M:UpdateButtonStyle(CurPet, Pet)
+  M.Super.UpdateButtonStyle(self, CurPet, Pet)
+  self.Btn_Replace.Key_GamePad:EnableKey()
+end
+
 function M:Destruct()
   if self.Btn_Invisible_Area then
     self.Btn_Invisible_Area.OnClicked:Remove(self, self.BtnInvisibleArea)

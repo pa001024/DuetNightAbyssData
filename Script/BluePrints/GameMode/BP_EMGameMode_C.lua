@@ -758,11 +758,11 @@ function BP_EMGameMode_C:BpOnTimerEnd(TimerHandleName)
 end
 
 function BP_EMGameMode_C:BpGetRemainTime(TimerHandleName)
-  local RawRemainTime = CommonUtils.GetClientTimerStructRemainTime(TimerHandleName)
-  if not RawRemainTime then
+  local RemainTime = self:GetTimerRemainingTime(TimerHandleName)
+  if not RemainTime or RemainTime < 0 then
     return 0
   end
-  return RawRemainTime
+  return RemainTime
 end
 
 function BP_EMGameMode_C:SetClientDungeonUIState(DungeonUIState)

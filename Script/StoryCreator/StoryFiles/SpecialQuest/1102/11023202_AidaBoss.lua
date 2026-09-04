@@ -756,7 +756,7 @@ return {
             key = "178594267003015597084",
             type = "ExecuteBlueprintFunctionCheckVarNode",
             name = "变量=0",
-            pos = {x = 1328.8322402322362, y = 153.5251378923217},
+            pos = {x = 1328.8322402322362, y = 151.5251378923217},
             propsData = {
               FunctionName = "Equal",
               VarName = "ex02_11023202_Ada_4",
@@ -1041,7 +1041,7 @@ return {
             key = "178817238201650360433",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 2256.010218649475, y = -255.72413528508906},
+            pos = {x = 2206.010218649475, y = -301.72413528508906},
             propsData = {
               SoundStateType = 0,
               SoundPriority = 0,
@@ -1306,12 +1306,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "178594159313310031115",
-            startPort = "Out",
-            endQuest = "178594065924210026806",
-            endPort = "Success"
-          },
-          {
             startQuest = "17862111489628946419",
             startPort = "Out",
             endQuest = "17862112932718948418",
@@ -1471,6 +1465,72 @@ return {
             startQuest = "178594154900810030274",
             startPort = "Out",
             endQuest = "17872990060418400754",
+            endPort = "In"
+          },
+          {
+            startQuest = "17862099875534471270",
+            startPort = "Out",
+            endQuest = "17884364063825102",
+            endPort = "In"
+          },
+          {
+            startQuest = "178594159313310031115",
+            startPort = "Out",
+            endQuest = "17884366428821127041",
+            endPort = "In"
+          },
+          {
+            startQuest = "17884366428821127041",
+            startPort = "Out",
+            endQuest = "178594065924210026806",
+            endPort = "Success"
+          },
+          {
+            startQuest = "178594069409110027370",
+            startPort = "Out",
+            endQuest = "17884371075912248895",
+            endPort = "In"
+          },
+          {
+            startQuest = "17862106808996706852",
+            startPort = "Out",
+            endQuest = "17884365527346196",
+            endPort = "In"
+          },
+          {
+            startQuest = "17862111489628946419",
+            startPort = "Out",
+            endQuest = "17884381077828967919",
+            endPort = "In"
+          },
+          {
+            startQuest = "178594069409110027370",
+            startPort = "Out",
+            endQuest = "178843813946710087174",
+            endPort = "In"
+          },
+          {
+            startQuest = "17862106808996706852",
+            startPort = "Out",
+            endQuest = "178843989476113446750",
+            endPort = "In"
+          },
+          {
+            startQuest = "17862059191322237593",
+            startPort = "Out",
+            endQuest = "178844110558216805376",
+            endPort = "In"
+          },
+          {
+            startQuest = "178844110558216805376",
+            startPort = "Out",
+            endQuest = "178844112266216805868",
+            endPort = "In"
+          },
+          {
+            startQuest = "17884381077828967919",
+            startPort = "Out",
+            endQuest = "178844260233420164426",
             endPort = "In"
           }
         },
@@ -1823,7 +1883,7 @@ return {
             key = "17863768663015583861",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 3621.1899682133253, y = -504.2219823818534},
+            pos = {x = 3360.845142910191, y = -843.8771518170681},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 11119501,
@@ -1911,7 +1971,7 @@ return {
             key = "17865247052108961312",
             type = "BossBattleFinishNode",
             name = "完成BOSS战阶段",
-            pos = {x = 3227.188311619198, y = -481.92419522256444},
+            pos = {x = 2958.2227967364897, y = -830.200054237353},
             propsData = {
               SendMessage = "",
               FinishCondition = "Boss_02_Talk01"
@@ -2067,7 +2127,7 @@ return {
             key = "17872990060418400754",
             type = "CameraLookAtNode",
             name = "CameraLookAt",
-            pos = {x = 3050.727242426877, y = -795.8787775159358},
+            pos = {x = 2740.382417562214, y = -932.0856728732045},
             propsData = {
               TargetType = "Point",
               PointName = "LookatPoint_05",
@@ -2075,6 +2135,142 @@ return {
               Duration = 2,
               EasingFunc = 6,
               bDisableUserInput = false
+            }
+          },
+          ["17884364063825102"] = {
+            key = "17884364063825102",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 4150.141472277808, y = -669.6095834714894},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/cbt02/0059_scene_ex01_encounter",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107601},
+              bStoreToServer = true
+            }
+          },
+          ["17884365527346196"] = {
+            key = "17884365527346196",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 5236.873236147235, y = -637.2271429939918},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 2,
+              SoundPath = "event:/snapshot/story/ex02_bgm_dec_in_boss",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107601},
+              bStoreToServer = true
+            }
+          },
+          ["17884366428821127041"] = {
+            key = "17884366428821127041",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 7844.271104532124, y = 561.6691254681007},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/mute",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107601},
+              bStoreToServer = true
+            }
+          },
+          ["17884371075912248895"] = {
+            key = "17884371075912248895",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2121.972906299297, y = 1186.407401621038},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["17884381077828967919"] = {
+            key = "17884381077828967919",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 7444.551761688016, y = -959.3354255055089},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 2
+            }
+          },
+          ["178843813946710087174"] = {
+            key = "178843813946710087174",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2084.761263915356, y = 964.7919234839245},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 2
+            }
+          },
+          ["178843989476113446750"] = {
+            key = "178843989476113446750",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 5219.171245070437, y = -846.8103467897242},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["178844110558216805376"] = {
+            key = "178844110558216805376",
+            type = "GoToNode",
+            name = "前往",
+            pos = {x = 3554.2797215066344, y = -554.1454273578853},
+            propsData = {
+              GuideUIEnable = false,
+              StaticCreatorId = 312840060,
+              GuideType = "N",
+              GuidePointName = ""
+            }
+          },
+          ["178844112266216805868"] = {
+            key = "178844112266216805868",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 3841.9486121781765, y = -559.2271125917657},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/mute",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107601},
+              bStoreToServer = true
+            }
+          },
+          ["178844260233420164426"] = {
+            key = "178844260233420164426",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 7783.049582666895, y = -1003.178060427357},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/cbt02/0059_scene_ex01_encounter",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107601},
+              bStoreToServer = true
             }
           }
         },
@@ -2086,7 +2282,7 @@ return {
       key = "17860424800981521",
       type = "StoryNode",
       name = "阶段1-滑轨",
-      pos = {x = 703.4129032059589, y = 80.80000000000007},
+      pos = {x = 702.1308519531678, y = 80.80000000000007},
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
@@ -2132,12 +2328,6 @@ return {
             startQuest = "17860424800981533",
             startPort = "Out",
             endQuest = "17861020334603351118",
-            endPort = "In"
-          },
-          {
-            startQuest = "17860424800981526",
-            startPort = "QuestStart",
-            endQuest = "17860424800981530",
             endPort = "In"
           },
           {
@@ -2345,12 +2535,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17860424800981526",
-            startPort = "QuestStart",
-            endQuest = "178817222085747000699",
-            endPort = "In"
-          },
-          {
             startQuest = "17860424800981529",
             startPort = "Out",
             endQuest = "178817228353648119074",
@@ -2366,6 +2550,18 @@ return {
             startQuest = "17881782257373368500",
             startPort = "Out",
             endQuest = "17863762797611119408",
+            endPort = "In"
+          },
+          {
+            startQuest = "17860424800981526",
+            startPort = "QuestStart",
+            endQuest = "178817222085747000699",
+            endPort = "In"
+          },
+          {
+            startQuest = "178817222085747000699",
+            startPort = "Out",
+            endQuest = "17860424800981530",
             endPort = "In"
           }
         },
@@ -2831,7 +3027,7 @@ return {
             key = "178817222085747000699",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 918, y = -284},
+            pos = {x = 690.4137941013477, y = 352.20689376214165},
             propsData = {
               SoundStateType = 0,
               SoundPriority = 0,
@@ -3120,6 +3316,18 @@ return {
             startPort = "Out",
             endQuest = "17865195845944482531",
             endPort = "Input_1"
+          },
+          {
+            startQuest = "17860426452922233773",
+            startPort = "Out",
+            endQuest = "17884371122622249052",
+            endPort = "In"
+          },
+          {
+            startQuest = "17860426452922233777",
+            startPort = "Out",
+            endQuest = "17884371384452249825",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -3141,7 +3349,7 @@ return {
             key = "17860426452922233772",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 2972, y = 1452},
+            pos = {x = 2934.962963137389, y = 1792.7407391360211},
             propsData = {}
           },
           ["17860426452922233773"] = {
@@ -3217,7 +3425,7 @@ return {
             key = "17861022810575582390",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 2316.527430991896, y = -667.4457886388448},
+            pos = {x = 2664.6755775004394, y = -380.40875295360945},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 11119701,
@@ -3400,7 +3608,7 @@ return {
             key = "17865195845944482529",
             type = "ActivePlayerSkillsNode",
             name = "激活/失效 玩家技能",
-            pos = {x = 1750.215674422891, y = 1433.7191525636508},
+            pos = {x = 1713.1786375602799, y = 1774.459891699672},
             propsData = {
               PlayerId = 0,
               bActiveEnable = true,
@@ -3423,7 +3631,7 @@ return {
             key = "17865195845944482530",
             type = "ForbidWeaponByWeaponTagNode",
             name = "禁用/启用武器节点",
-            pos = {x = 1750.8039136977288, y = 1672.7387690376938},
+            pos = {x = 1713.7668768351177, y = 2013.4795081737152},
             propsData = {
               WeaponTags = {"Melee", "Ranged"},
               bForbid = false,
@@ -3435,7 +3643,7 @@ return {
             key = "17865195845944482531",
             type = "WaitQuestFinishedNode",
             name = "等待任务完成",
-            pos = {x = 2463.1008559777138, y = 1389.685530538503},
+            pos = {x = 2426.063819115103, y = 1730.426269674524},
             propsData = {ListenCount = 4, NeedFinishCount = 4}
           },
           ["17866191197094472074"] = {
@@ -3464,7 +3672,7 @@ return {
             key = "17866230233792326",
             type = "HighlightButtonNode",
             name = "HighlightButton显示/隐藏信息",
-            pos = {x = 1853.753948678083, y = 841.4058251046334},
+            pos = {x = 1816.7169118154718, y = 1182.1465642406547},
             propsData = {
               ShowEnable = false,
               SkillType = "Jump",
@@ -3475,11 +3683,38 @@ return {
             key = "17866230233792327",
             type = "HighlightButtonNode",
             name = "HighlightButton显示/隐藏信息",
-            pos = {x = 1802.2460513219175, y = 1166.5941748953667},
+            pos = {x = 1765.2090144593064, y = 1507.334914031388},
             propsData = {
               ShowEnable = false,
               SkillType = "Slide",
               DescriptionTextMapId = ""
+            }
+          },
+          ["17884371122622249052"] = {
+            key = "17884371122622249052",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1750.4675807567394, y = 938.4906189454933},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["17884371384452249825"] = {
+            key = "17884371384452249825",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2588.245336620676, y = -666.3356028191167},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_6/0191_boss_aida_stage_1",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107601},
+              bStoreToServer = true
             }
           }
         },

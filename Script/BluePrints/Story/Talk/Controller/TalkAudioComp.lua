@@ -153,12 +153,12 @@ function TalkAudioComp_C:PlaySoundWithOral(AudioManager, VoiceName, VoiceActor, 
   local GameInstance = GWorld.GameInstance
   local RealEventPath, SelectKey, OralPath, EventExist = AudioManager:GetEventData(VoiceName, ExStoryInfo)
   local PlayStruct = FPlayFMODSoundStruct()
-  DebugPrint("TalkAudioComp_C:PlaySoundWithOral", RealEventPath, SelectKey, bIsPlay2D, AttachActor)
   PlayStruct.FMODEvent = AudioManager:GetFMODEventByPath_Sync(RealEventPath)
   PlayStruct.EventKey = self:GetEventKey()
+  PlayStruct.SelectKey = SelectKey
   PlayStruct.bStopWhenAttachedToDestoryed = true
   PlayStruct.bPlayAs2D = bIsPlay2D
-  PlayStruct.SelectKey = SelectKey
+  PlayStruct.bFollowSocket = IsValid(AttachActor)
   PlayStruct = UE4.UAudioManager.SetObjectToFPlayFMODSoundStruct(PlayStruct, AttachActor)
   PlayStruct.DynamicSoundStop = {
     GameInstance,

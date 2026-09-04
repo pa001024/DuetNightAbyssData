@@ -25,6 +25,7 @@ function TalkCameraManager_C.New(TalkContext, Player, PlayerController)
   Obj.TalkPawn = nil
   Obj.CineCamera = nil
   Obj.CurrentCamera = nil
+  Obj.CurrentCameraOwner = nil
   Obj.BlendRunTime = 0
   Obj.BlendType = nil
   Obj.BlendTime = 0
@@ -147,7 +148,7 @@ function TalkCameraManager_C:ReceiveTick(DeltaTime)
 end
 
 function TalkCameraManager_C:_CameraBreathe(DeltaTime)
-  if self.IsCameraTransforming and self:GetCurrentCamera() and not self.bBreathePaused then
+  if self.IsCameraTransforming and self.CurrentCamera and not self.bBreathePaused then
     if self.bUseFinalCameraBlend then
       self:_CameraBreathe_ByFinalCameraBlendConfig(DeltaTime)
     else
@@ -321,7 +322,7 @@ function TalkCameraManager_C:CameraBlendToNew(Instigator, TargetCamera, BlendTim
   
   local function OnBlendEndCallback()
     USequenceFunctionLibrary.SetViewTarget(self.PlayerController, TargetCamera)
-    self:SetCurrentCamera(TargetCamera)
+    self:SetCurrentCamera(TargetCamera, Instigator)
     self:SwitchCameraRole(TalkPawnSwitch)
     self.TalkContext:TryFireCallback(Callback)
     local PlayerController = UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
@@ -374,7 +375,7 @@ function TalkCameraManager_C:FreeSimpleCameraBlendOutTo(Callback, TalkTaskData, 
     end
     self.TalkContext.TalkTimerManager:AddTimer("FreeSimpleCameraBlendOut", BlendTime, false, nil, nil, function()
       self.TalkContext.TalkTimerManager:ClearTimer("FreeSimpleCameraBlendOut")
-      self:SetCurrentCamera(TargetCamera)
+      self:SetCurrentCamera(TargetCamera, TalkTaskData and TalkTaskData.Key)
       OverrideCallback()
     end)
   end
@@ -384,8 +385,9 @@ function TalkCameraManager_C:KeepCurrentCamera()
   USequenceFunctionLibrary.SetViewTarget(self.PlayerController, self:GetCurrentCamera())
 end
 
-function TalkCameraManager_C:SetCurrentCamera(Camera)
+function TalkCameraManager_C:SetCurrentCamera(Camera, CameraOwner)
   self.CurrentCamera = Camera
+  self.CurrentCameraOwner = CameraOwner
   if self.CachedPPInfo then
     self:SetPostProcess_Internal(self.CachedPPInfo)
   end
@@ -842,9 +844,14 @@ function TalkCameraManager_C:ClearSingleCameraPP(CameraComponent)
   end
 end
 
-function TalkCameraManager_C:ClearTalkCamera()
+function TalkCameraManager_C:ClearTalkCamera(Instigator)
+  if self.CurrentCameraOwner and Instigator and self.CurrentCameraOwner ~= Instigator then
+    DebugPrint("TalkCameraManager_C:ClearTalkCamera 跳过：相机不属于该清理方", Instigator, self.CurrentCameraOwner, self.CurrentCamera and self.CurrentCamera:GetName())
+    return
+  end
   DebugPrint("TalkCameraManager_C:ClearTalkCamera", self.CurrentCamera and self.CurrentCamera:GetName())
   self.CurrentCamera = nil
+  self.CurrentCameraOwner = nil
   self:ClearCineCamera()
   self:ClearPostProcess()
 end

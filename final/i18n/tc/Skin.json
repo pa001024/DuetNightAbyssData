@@ -278,8 +278,8 @@
   },
   {
     "id": 2201,
-    "name": "UI_Skin_Name_2201",
-    "desc": "UI_Skin_Des_2201",
+    "name": "{nickname2}的衣飾",
+    "desc": "一人，一劍，一襲白衣。跨過汪洋與寒夜，只為在黎明的盡頭相逢。",
     "icon": "T_Head_WeitaF",
     "rarity": 5,
     "charId": 2201,
@@ -1038,8 +1038,8 @@
   },
   {
     "id": 220101,
-    "name": "UI_Skin_Name_2201",
-    "desc": "UI_Skin_Des_2201",
+    "name": "{nickname2}的衣飾",
+    "desc": "一人，一劍，一襲白衣。跨過汪洋與寒夜，只為在黎明的盡頭相逢。",
     "icon": "T_Head_WeitaM",
     "rarity": 5,
     "charId": 220101,

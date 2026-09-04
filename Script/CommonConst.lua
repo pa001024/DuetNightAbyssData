@@ -1761,7 +1761,8 @@ CommonConst.DungeonSyncMsg = {
   AsyncCombatBattleStateUpdate = "AsyncCombatBattleStateUpdate",
   AsyncCombatRoomStateUpdate = "AsyncCombatRoomStateUpdate",
   AsyncCombatRoomPass = "AsyncCombatRoomPass",
-  AsyncCombatRoomClose = "AsyncCombatRoomClose"
+  AsyncCombatRoomClose = "AsyncCombatRoomClose",
+  AsyncCombatExtraRoomClose = "AsyncCombatExtraRoomClose"
 }
 CommonConst.PersonalInfoBgType = {
   PersonalInfo = 1,

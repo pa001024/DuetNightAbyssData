@@ -319,9 +319,8 @@ function processNodes(
             }
             const node = row(nodeMap.get(key))
             if (!node) continue
-            const built = buildNode(ctx, dialogue, key, node, parent, guidePoints, questions, answers)
+            const built = buildNode(ctx, dialogue, key, node, parent, guidePoints, questions, answers, outgoing)
             if (built) {
-                if (outgoing.length > 0) built.next = [...outgoing]
                 result.push(built)
             }
         }
@@ -428,7 +427,8 @@ function buildNode(
     context: Row | undefined,
     guidePoints: GuidePoints,
     questions: Row,
-    answers: Row
+    answers: Row,
+    next: string[] = []
 ): Row | undefined {
     const type = node.type
     if (type !== "TalkNode" && type !== "UnlockDetectiveQuestionNode" && type !== "UnlockDetectiveAnswerNode") return undefined
@@ -436,6 +436,7 @@ function buildNode(
     const point = pointForNode(guidePoints, node, context)
     if (point.srId !== undefined) output.srId = point.srId
     if (point.pos) output.pos = point.pos
+    if (next.length > 0) output.next = [...next]
     const props = row(node.propsData) ?? {}
     if (type === "TalkNode") {
         if (!("FirstDialogueId" in props) && !props.FlowAssetPath) return undefined

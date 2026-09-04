@@ -8117,7 +8117,7 @@
             "id": 20299002,
             "名称": "Sanguine – Fil tiré",
             "icon": "T_Rouge_Talent_Crossbow_Zaie",
-            "描述": "Au début du combat, vous obtenez 5.0 cumuls d’[Éclosion]. Lorsque vous consommez du Désordre élémentaire, vous obtenez nombre de cumuls consommés × 4.0 points de calamité.",
+            "描述": "Au début du combat, vous obtenez 1.0 cumuls d’[Éclosion]. Lorsque vous consommez du Désordre élémentaire, vous obtenez nombre de cumuls consommés × 4.0 points de calamité.",
             "解锁": {
               "Prototype : Plume sanguine": 30,
               "Cristal Pyro": 90,

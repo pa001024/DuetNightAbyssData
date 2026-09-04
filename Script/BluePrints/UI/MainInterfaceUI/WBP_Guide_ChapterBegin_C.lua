@@ -135,8 +135,11 @@ function WBP_Guide_ChapterBegin_C:PlayOutAudio()
 end
 
 function WBP_Guide_ChapterBegin_C:OnTipRealEnd()
+  EventManager:RemoveEvent(EventID.OnLevelDeliverBlackCurtainStart, self)
+  EventManager:RemoveEvent(EventID.InLoading, self)
+  EventManager:RemoveEvent(EventID.CloseLoading, self)
   local UIManager = UE4.UGameplayStatics.GetGameInstance(self):GetGameUIManager()
-  if nil ~= UIManager then
+  if nil ~= UIManager and self.IsInit then
     local BattleMainUI = UIManager:GetUIObj("BattleMain")
     if BattleMainUI then
       BattleMainUI.Pos_TaskBar:GetChildAt(0):OnTipEndPlayTaskBarAnim(self.QuestChainId, self.QuestId, self.IsBegin)

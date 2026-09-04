@@ -208,6 +208,10 @@ function M:RemoveQuestChainData(QuestChainId, DestroyReason)
 end
 
 function M:AddQuestChainData(DataTable)
+  if DataTable.RegionDataType ~= ERegionDataType.RDT_QuestData then
+    DebugPrint("AddQuestChainData Worng RegionDataType:", DataTable.WorldRegionEid, DataTable.RegionDataType)
+    return
+  end
   local QuestChainId = DataTable.QuestChainId
   if not self.QuestChainId2Data[QuestChainId] then
     self.QuestChainId2Data[QuestChainId] = {}

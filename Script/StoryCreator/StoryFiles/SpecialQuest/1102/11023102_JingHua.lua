@@ -264,12 +264,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "178159206323210528317",
-            startPort = "Out",
-            endQuest = "17814406595511060963",
-            endPort = "In"
-          },
-          {
             startQuest = "17814406595511060963",
             startPort = "Out",
             endQuest = "178159331749510530945",
@@ -498,12 +492,6 @@ return {
             endPort = "Input_9"
           },
           {
-            startQuest = "178160129203713695502",
-            startPort = "Out",
-            endQuest = "17814408294801064002",
-            endPort = "In"
-          },
-          {
             startQuest = "178160804667818952431",
             startPort = "Out",
             endQuest = "178160807403818952713",
@@ -591,12 +579,6 @@ return {
             startQuest = "17825719739896460371",
             startPort = "Out",
             endQuest = "178257401259210762180",
-            endPort = "In"
-          },
-          {
-            startQuest = "17814407914931063417",
-            startPort = "Out",
-            endQuest = "17814407998871063602",
             endPort = "In"
           },
           {
@@ -882,9 +864,45 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17814407998871063602",
+            startQuest = "178159206323210528317",
+            startPort = "Out",
+            endQuest = "17884435443075609674",
+            endPort = "In"
+          },
+          {
+            startQuest = "17884441323446730457",
+            startPort = "Out",
+            endQuest = "17884438480115610761",
+            endPort = "In"
+          },
+          {
+            startQuest = "178159535807910534456",
+            startPort = "Out",
+            endQuest = "17884441323446730457",
+            endPort = "In"
+          },
+          {
+            startQuest = "178160129203713695502",
             startPort = "Out",
             endQuest = "178816652701821260814",
+            endPort = "In"
+          },
+          {
+            startQuest = "178816652701821260814",
+            startPort = "Out",
+            endQuest = "17814408294801064002",
+            endPort = "In"
+          },
+          {
+            startQuest = "17884435443075609674",
+            startPort = "Out",
+            endQuest = "17814406595511060963",
+            endPort = "In"
+          },
+          {
+            startQuest = "178816630155820142921",
+            startPort = "Out",
+            endQuest = "17814407998871063602",
             endPort = "In"
           }
         },
@@ -1213,7 +1231,7 @@ return {
             key = "17814406595511060963",
             type = "TalkNode",
             name = "站桩对话节点",
-            pos = {x = 3855.920744111829, y = 213.207021837768},
+            pos = {x = 4083.289165164461, y = 189.52281131145222},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -1295,7 +1313,7 @@ return {
             key = "17814407914931063417",
             type = "TalkNode",
             name = "站桩对话节点",
-            pos = {x = 8339.133769839222, y = 362.1347285875072},
+            pos = {x = 8144.923243523433, y = 374.76630753487564},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -1394,7 +1412,7 @@ return {
             key = "17814408294801064002",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 10856.406936492032, y = 520.9007662567228},
+            pos = {x = 11014.978365063462, y = 531.6150519710085},
             propsData = {}
           },
           ["17815109646162358"] = {
@@ -2702,7 +2720,7 @@ return {
             key = "178816630155820142921",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 8348.171109954346, y = 890.7953096386356},
+            pos = {x = 8427.1184783754, y = 374.4795201649513},
             propsData = {
               SoundStateType = 0,
               SoundPriority = 0,
@@ -2718,12 +2736,51 @@ return {
             key = "178816652701821260814",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 9618.284971606668, y = -469.2841895397215},
+            pos = {x = 10646.856400178098, y = 535.7158104602789},
             propsData = {
               SoundStateType = 3,
               SoundPriority = 0,
               SoundType = 0
             }
+          },
+          ["17884435443075609674"] = {
+            key = "17884435443075609674",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 3774.650168176826, y = 199.2660056093319},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/mute",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107701},
+              bStoreToServer = true
+            }
+          },
+          ["17884438480115610761"] = {
+            key = "17884438480115610761",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 6025.100032274227, y = 496.06837371119104},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_6/0176_story_horror",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107701},
+              bStoreToServer = true
+            }
+          },
+          ["17884441323446730457"] = {
+            key = "17884441323446730457",
+            type = "WaitOfTimeNode",
+            name = "延迟等待",
+            pos = {x = 5774.74758351479, y = 479.01105139956337},
+            propsData = {WaitTime = 2}
           }
         },
         commentData = {

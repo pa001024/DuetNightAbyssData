@@ -157,6 +157,7 @@ function Component:OnAsyncCombatExtraRoomNotify(RoomUid, State)
       Type = "StoppageRoom",
       RoomIds = {RoomUid}
     })
+    EventManager:FireEvent(EventID.OnRepClientDungeonMessage, CommonConst.DungeonSyncMsg.AsyncCombatExtraRoomClose, {RoomUniId = RoomUid})
   end
 end
 
@@ -246,7 +247,7 @@ function Component:RefreshAsyncCombatRewardRedDot()
       end
       local RewardCount = 0
       local StoppageRoom = {}
-      local RoomDuration = DataMgr.AsyncCombatEventConstant.AsyncCombat_RoomDuration.ConstantValue * 60
+      local ContributionRequire = DataMgr.AsyncCombatEventConstant.AsyncCombat_BaseContributionRequire.ConstantValue
       local StoppageRoomDuration = DataMgr.AsyncCombatEventConstant.AsyncCombat_StoppageTimeRoomDuration.ConstantValue * 60
       local StoppageRoomCache = EMCache:Get("AsynccombatStoppageRoomClickTime" .. ActivityID, true)
       local CurrentTime = TimeUtils.NowTime()
@@ -254,22 +255,11 @@ function Component:RefreshAsyncCombatRewardRedDot()
         if 1 == roomData.RewardState then
           RewardCount = RewardCount + 1
         end
-        if roomData.IsPass and roomData.IsPass == true then
-          if roomData.IsMaster == false and 0 == roomData.RewardState and roomData.CloseTime and CurrentTime < roomData.CloseTime + StoppageRoomDuration then
-            if not StoppageRoomCache then
-              table.insert(StoppageRoom, roomData.RoomUniqueId)
-            elseif StoppageRoomCache and not StoppageRoomCache[roomData.RoomUniqueId] then
-              table.insert(StoppageRoom, roomData.RoomUniqueId)
-            end
-          end
-        else
-          local CreateTime = roomData.CreateTime or 0
-          if roomData.IsMaster == false and CurrentTime >= CreateTime + RoomDuration and 0 == roomData.RewardState and roomData.CloseTime and CurrentTime < roomData.CloseTime + StoppageRoomDuration then
-            if not StoppageRoomCache then
-              table.insert(StoppageRoom, roomData.RoomUniqueId)
-            elseif StoppageRoomCache and not StoppageRoomCache[roomData.RoomUniqueId] then
-              table.insert(StoppageRoom, roomData.RoomUniqueId)
-            end
+        if roomData.IsPass == true and roomData.IsMaster == false and true ~= roomData.IsMvp and roomData.Contribution and ContributionRequire > roomData.Contribution and 0 == roomData.RewardState and roomData.CloseTime and CurrentTime < roomData.CloseTime + StoppageRoomDuration then
+          if not StoppageRoomCache then
+            table.insert(StoppageRoom, roomData.RoomUniqueId)
+          elseif StoppageRoomCache and not StoppageRoomCache[roomData.RoomUniqueId] then
+            table.insert(StoppageRoom, roomData.RoomUniqueId)
           end
         end
       end

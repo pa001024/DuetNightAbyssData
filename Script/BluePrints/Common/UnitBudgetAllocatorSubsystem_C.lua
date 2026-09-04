@@ -41,7 +41,7 @@ function M:InitOptParams()
     self.bEnableMeshLODBiasOpt = false
   end
   if PlatformName == CommonConst.CHANNEL_OS.ANDROID or PlatformName == CommonConst.CHANNEL_OS.IOS then
-    self.bEnableNoneDynamicShadowNumOpt = true
+    self.bEnableNoneDynamicShadowNumOpt = false
   else
     self.bEnableNoneDynamicShadowNumOpt = false
   end

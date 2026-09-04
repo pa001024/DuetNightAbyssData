@@ -34,7 +34,6 @@ export async function dispatchModule(ctx: ModuleContext): Promise<VNodeTree> {
                 ttk: item.Ttk,
                 weight: item.Weight,
                 pos: u.UIPos,
-                levels: [],
             }
             grouped.set(key, group)
         }
@@ -53,7 +52,9 @@ export async function dispatchModule(ctx: ModuleContext): Promise<VNodeTree> {
                 if (starts.length > 1) group.startIds = starts
             }
         }
-        ;(group.levels as Row[]).push({ id, reward: item.RewardId ?? [], demand: item.DispatchDemand, level: item.PlayerLevel ?? [] })
+        const level = { id, reward: item.RewardId ?? [], demand: item.DispatchDemand, level: item.PlayerLevel ?? [] }
+        if (Array.isArray(group.levels)) group.levels.push(level)
+        else group.levels = [level]
     }
     return [...grouped.values()].sort((a, b) => (a.id === 4330 ? -1 : b.id === 4330 ? 1 : Number(a.id) - Number(b.id)))
 }

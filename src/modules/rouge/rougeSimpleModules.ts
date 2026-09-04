@@ -297,6 +297,9 @@ export function rougeProTableModule(ctx: ModuleContext, tableName: string): VNod
         const row: Record<string, VNodeTree> = { id }
         for (const [source, value] of Object.entries(item)) {
             if (source === config.id || drop.has(source)) continue
+            if (tableName === "RougeProDifficulty" && source === "RoomLevel") row.unlockLevel = camelize(item.UnlockLevel) as VNodeTree
+            if (tableName === "RougeProDifficulty" && source === "UnlockLevel") continue
+            if (tableName === "RougePro_Room" && source === "RoomWeight") continue
             let key = camelCase(source)
             if (key === "id") continue
             if (config.rename?.[key]) key = config.rename[key]
@@ -304,6 +307,7 @@ export function rougeProTableModule(ctx: ModuleContext, tableName: string): VNod
             else if (source === "Icon" || source === "BigIcon") row[key] = icon(value)
             else row[key] = camelize(value) as VNodeTree
         }
+        if (tableName === "RougePro_Room") row.weight = camelize(item.RoomWeight) as VNodeTree
         if (tableName === "RougeProContract" && row.desc) row.desc = serverBuildDescription(ctx, item.Desc, item.DescValues, 0)
         return row
     })
@@ -317,15 +321,15 @@ export function rougeProConvertModule(ctx: ModuleContext): VNodeTree {
 export function rougeProTalentModule(ctx: ModuleContext): VNodeTree {
     return genericRows(ctx, "RougeProTalent", "TalentId").map(item => ({
         id: Number(item.TalentId),
-        name: T(item.Name ?? ""),
-        desc: linkedDescription(ctx, item.Desc, item.TalentMod, 0),
         branch: item.Branch ?? 0,
-        type: item.Type ?? 0,
-        maxLevel: item.MaxLevel ?? 0,
-        point: item.LevelUpPoint ?? 0,
-        modEquip: item.ModEquip ?? "",
-        mod: item.TalentMod ?? 0,
+        desc: linkedDescription(ctx, item.Desc, item.TalentMod, 0),
         icon: icon(item.Icon),
+        maxLevel: item.MaxLevel ?? 0,
+        modEquip: item.ModEquip ?? "",
+        name: T(item.Name ?? ""),
+        type: item.Type ?? 0,
+        point: item.LevelUpPoint ?? 0,
+        mod: item.TalentMod ?? 0,
     }))
 }
 
@@ -337,6 +341,7 @@ export function rougeProTreasureModule(ctx: ModuleContext): VNodeTree {
             endPoints: camelize(item.EndPoints ?? []) as VNodeTree,
             ipDesc: T(item.IPDesc ?? ""),
             icon: icon(item.Icon),
+            ...(item.ModEquip ? { modEquip: item.ModEquip } : {}),
             name: T(item.Name ?? ""),
             simpleDesc: T(item.SimpleDesc ?? ""),
             treasureGroup: item.TreasureGroup ?? 0,
@@ -344,7 +349,6 @@ export function rougeProTreasureModule(ctx: ModuleContext): VNodeTree {
             rarity: item.TreasureRarity ?? 0,
             weight: item.TreasureWeight ?? 0,
         }
-        if (item.ModEquip) row.modEquip = item.ModEquip
         if (!row.unique) delete row.unique
         return row
     })

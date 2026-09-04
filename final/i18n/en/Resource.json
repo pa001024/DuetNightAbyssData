@@ -13799,47 +13799,45 @@
   },
   {
     "id": 110062,
-    "name": "Crystal Selection Chest Ⅲ",
-    "icon": "T_Pack_ZaieRes02",
-    "rarity": 5,
-    "desc": "Grants 1 of the following: Pyro Crystal, Lumino Crystal, Hydro Crystal, or Umbro Crystal.",
-    "select": 4007
-  },
-  {
-    "id": 110063,
-    "name": "Character Skin Selection – Aegis",
-    "icon": "T_Pack_Police",
-    "rarity": 5,
-    "desc": "Grants a character skin from: Su Yi, Fina, Eve, Fushu, Lynn, Margie, Rhythm, Sibylle, or Daphne.",
-    "select": 5010
-  },
-  {
-    "id": 110064,
     "name": "Covenanter Demon Wedge: Anemo",
     "icon": "T_Pack_RandomMod_11",
     "rarity": 5,
     "pack": 350031
   },
   {
-    "id": 110065,
+    "id": 110063,
     "name": "Covenanter Demon Wedge: Pyro",
     "icon": "T_Pack_RandomMod_16",
     "rarity": 5,
     "pack": 350037
   },
   {
-    "id": 110066,
+    "id": 110064,
     "name": "Covenanter Demon Wedge: Electro",
     "icon": "T_Pack_RandomMod_12",
     "rarity": 5,
     "pack": 350033
   },
   {
-    "id": 110067,
+    "id": 110065,
     "name": "Covenanter Demon Wedge: Hydro",
     "icon": "T_Pack_RandomMod_13",
     "rarity": 5,
     "pack": 350034
+  },
+  {
+    "id": 110066,
+    "name": "Covenanter Demon Wedge: Lumino",
+    "icon": "T_Pack_RandomMod_14",
+    "rarity": 5,
+    "pack": 350038
+  },
+  {
+    "id": 110067,
+    "name": "Covenanter Demon Wedge: Umbro",
+    "icon": "T_Pack_RandomMod_15",
+    "rarity": 5,
+    "pack": 350036
   },
   {
     "id": 110068,
@@ -13878,6 +13876,22 @@
     "rarity": 5,
     "desc": "Choose 1 of the following Active Geniemons: Shiny Bro Boxie, Shiny Pearabbit, or Shiny Mr Goodnight.",
     "select": 4008
+  },
+  {
+    "id": 110073,
+    "name": "Crystal Selection Chest Ⅲ",
+    "icon": "T_Pack_ZaieRes02",
+    "rarity": 5,
+    "desc": "Grants 1 of the following: Pyro Crystal, Lumino Crystal, Hydro Crystal, or Umbro Crystal.",
+    "select": 4007
+  },
+  {
+    "id": 110074,
+    "name": "Character Skin Selection – Aegis",
+    "icon": "T_Pack_Police",
+    "rarity": 5,
+    "desc": "Grants a character skin from: Su Yi, Fina, Eve, Fushu, Lynn, Margie, Rhythm, Sibylle, or Daphne.",
+    "select": 5010
   },
   {
     "id": 120001,

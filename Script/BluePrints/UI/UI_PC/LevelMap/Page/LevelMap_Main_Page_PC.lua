@@ -29,6 +29,9 @@ function M:Construct()
   self.DispatchId = -1
   self.DispatchAgentList = nil
   ReddotManager.AddListener(DataMgr.ReddotNode.Dispatch.Name, self, self.OnReddotChange)
+  self.Panel_RegionName:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.ImpressionPreview:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.FamePreview:SetVisibility(UE4.ESlateVisibility.Collapsed)
 end
 
 function M:Destruct()

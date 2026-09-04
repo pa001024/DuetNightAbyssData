@@ -257,7 +257,7 @@ return ReadOnly("SoundEffect", {
   },
   [231] = {
     SoundId = 231,
-    SoundPath = "event:/sfx/common/scene/ex02/rail_glide_loop"
+    SoundPath = "event:/sfx/common/player/hit/weapon/dualbladeHit_heavy"
   },
   [232] = {
     SoundId = 232,
@@ -302,6 +302,10 @@ return ReadOnly("SoundEffect", {
     NumLimit = 5,
     SoundId = 505,
     SoundPath = "event:/sfx/common/enemy/hit/heavySwordHit_$MeleeHitLevel$"
+  },
+  [506] = {
+    SoundId = 506,
+    SoundPath = "event:/sfx/common/enemy/special/appear"
   },
   [601] = {
     NumLimit = 5,

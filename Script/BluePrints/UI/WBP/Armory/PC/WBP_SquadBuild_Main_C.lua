@@ -1449,6 +1449,9 @@ function WBP_SquadBuild_Main_P_C:WeakClearAllSlots()
 end
 
 function WBP_SquadBuild_Main_P_C:SwitchToSelectItemList(CurSlot, ItemType)
+  if self.Pos_Tips and self.Pos_Tips:GetChildAt(0) then
+    self:CloseTips(true)
+  end
   if self.CurSlot and self.CurSlot ~= CurSlot then
     if self.CurSlot.PlayNormalAnimation then
       self.CurSlot:PlayNormalAnimation()
@@ -1869,7 +1872,7 @@ function WBP_SquadBuild_Main_P_C:CloseTips(IsChoose)
     if self.CurClickItemInfo and self.CurClickItemInfo.SelfWidget then
       self.CurClickItemInfo.SelfWidget:SetSelected(false)
     end
-    if self.CurSlot.ItemInfo and self.CurSlot.ItemInfo.SelfWidget then
+    if self.CurSlot and self.CurSlot.ItemInfo and self.CurSlot.ItemInfo.SelfWidget then
       self.CurSlot.ItemInfo.SelfWidget:SetSelected(true)
     end
     if self.CurInputDeviceType == ECommonInputType.Gamepad then
@@ -2028,6 +2031,13 @@ function WBP_SquadBuild_Main_P_C:HideOrShowModel(bHide)
 end
 
 function WBP_SquadBuild_Main_P_C:MakeSureCallback(ModIndex)
+  if self.Pos_Tips:GetChildAt(0) and self.SquadItemTip and self.SquadItemTip.ItemInfo then
+    self.CurClickItemInfo = self.SquadItemTip.ItemInfo
+  end
+  if not self.CurClickItemInfo or not self.CurSlot then
+    self:CloseTips(true)
+    return
+  end
   local IsNeedPhantomIconTmp, NumTmp = self:IsNeedPhantomIcon()
   local Parmas = {
     ItemInfo = self.CurClickItemInfo,

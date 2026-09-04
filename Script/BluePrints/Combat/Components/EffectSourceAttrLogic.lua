@@ -83,6 +83,9 @@ function Component:SetTableAttr(ReplaceAttrs)
     self:FillLevelAttrs()
   end
   self:AfterSetTableAttr()
+  if self and self.RefreshDirtyAttrs then
+    self:RefreshDirtyAttrs()
+  end
 end
 
 function Component:InitAllWeaponModifier(ReplaceAttrs)

@@ -40,7 +40,7 @@ export class OutputCollector {
     }
 
     /**
-     * 写入 final_ts/i18n/<lang>/<name>.json。
+     * 写入 final/i18n/<lang>/<name>.json。
      * 文件名把 .json 后缀交给调用方（name 含或不含均可）。
      */
     writeAll(outputRoot: string, langs: LangCode[], textmap: TextMap): string[] {

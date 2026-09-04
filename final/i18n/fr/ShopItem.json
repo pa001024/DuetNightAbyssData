@@ -848,6 +848,21 @@
                 "lv": 50
               },
               {
+                "id": 10000517,
+                "itemType": "Mod",
+                "typeId": 104004,
+                "typeName": "de FenrirDanse tempétueuse",
+                "price": 5000,
+                "priceType": 214,
+                "priceName": "Billet de spectacle",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 100001,
+                "sequence": 98,
+                "startTime": 1761512400,
+                "lv": 50
+              },
+              {
                 "id": 10000601,
                 "itemType": "Resource",
                 "typeId": 2013,
@@ -26571,7 +26586,7 @@
               {
                 "id": 120178,
                 "itemType": "Resource",
-                "typeId": 110063,
+                "typeId": 110074,
                 "typeName": "Coffret de sélection d’apparence – Gardien",
                 "price": 1280,
                 "priceType": 99,
@@ -26587,7 +26602,7 @@
               {
                 "id": 120179,
                 "itemType": "Resource",
-                "typeId": 110063,
+                "typeId": 110074,
                 "typeName": "Coffret de sélection d’apparence – Gardien",
                 "price": 1280,
                 "priceType": 99,
@@ -26604,7 +26619,7 @@
               {
                 "id": 120180,
                 "itemType": "Resource",
-                "typeId": 110063,
+                "typeId": 110074,
                 "typeName": "Coffret de sélection d’apparence – Gardien",
                 "price": 1280,
                 "priceType": 99,
@@ -32095,6 +32110,21 @@
                 "sequence": 100,
                 "startTime": 1672545600,
                 "cond": "Débloqué après l’achat d’un certificat d’amélioration du Sac aux trésors"
+              },
+              {
+                "id": 10012126,
+                "itemType": "Resource",
+                "typeId": 6000007,
+                "typeName": "Invitation à l’épreuve",
+                "price": 0,
+                "priceType": 101,
+                "priceName": "Pièce",
+                "num": 1,
+                "limit": 9,
+                "subTabId": 100121,
+                "sequence": 95,
+                "startTime": 1672545600,
+                "endTime": 1788814800
               },
               {
                 "id": 10012127,

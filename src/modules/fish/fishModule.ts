@@ -63,12 +63,12 @@ export function fishingSpotModule(ctx: ModuleContext): VNodeTree {
             showFishIds: item.ShowFishId ?? [],
             weights: item.FishWeight ?? [],
             extraReward: item.ExtraReward,
+            ...(item.ExtraRewardProb ? { extraRewardProb: item.ExtraRewardProb } : {}),
             petId: item.PetId,
+            ...(item.PetProb ? { petProb: item.PetProb } : {}),
         }
-        if (item.ExtraRewardProb) row.extraRewardProb = item.ExtraRewardProb
-        else delete row.extraReward
-        if (item.PetProb) row.petProb = item.PetProb
-        else delete row.petId
+        if (!item.ExtraRewardProb) delete row.extraReward
+        if (!item.PetProb) delete row.petId
         result.push(row)
     }
     return result

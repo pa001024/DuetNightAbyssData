@@ -517,15 +517,6 @@ return ReadOnly("QuestSetVariable", {
       QuestStartorSuccess = "Start"
     }
   },
-  [11020302] = {
-    Success = {
-      Info = {
-        [1] = {Name = "IQ11022101", Value = 1}
-      },
-      QuestId = 11020302,
-      QuestStartorSuccess = "Success"
-    }
-  },
   [11022001] = {
     Start = {
       Info = {
@@ -543,6 +534,15 @@ return ReadOnly("QuestSetVariable", {
         }
       },
       QuestId = 11022001,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [11022002] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ11022101", Value = 1}
+      },
+      QuestId = 11022002,
       QuestStartorSuccess = "Success"
     }
   },

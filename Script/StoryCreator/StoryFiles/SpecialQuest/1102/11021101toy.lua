@@ -156,15 +156,21 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17832440575652729",
+            startQuest = "1782291976792705",
             startPort = "Out",
-            endQuest = "178805897136627957918",
+            endQuest = "17884422879004486477",
             endPort = "In"
           },
           {
             startQuest = "17822920767321809",
             startPort = "Out",
             endQuest = "17822921502133685",
+            endPort = "In"
+          },
+          {
+            startQuest = "17832447398594619",
+            startPort = "Out",
+            endQuest = "17884370068921826",
             endPort = "In"
           }
         },
@@ -424,7 +430,7 @@ return {
             key = "17866355022711117592",
             type = "UpdateTaskBarAndTaskMainNode",
             name = "更新任务目标节点",
-            pos = {x = 1684.2857142857142, y = -6.785714285714242},
+            pos = {x = 1684.2857142857142, y = -7.985714285714242},
             propsData = {
               NewDescription = "Description_110211_01a",
               NewDetail = "Content_110211_01a",
@@ -475,16 +481,27 @@ return {
               bStoreToServer = true
             }
           },
-          ["178805897136627957918"] = {
-            key = "178805897136627957918",
+          ["17884370068921826"] = {
+            key = "17884370068921826",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 1656.9085060797772, y = -125.2723056041638},
+            pos = {x = 2200.488095238095, y = 458.7142857142856},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["17884422879004486477"] = {
+            key = "17884422879004486477",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1406.9999294184076, y = 100.67473178994918},
             propsData = {
               SoundStateType = 0,
               SoundPriority = 0,
               SoundType = 0,
-              SoundPath = "event:/bgm/mute",
+              SoundPath = "event:/bgm/1_6/0177_story_investigate",
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {107001},

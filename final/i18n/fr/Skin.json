@@ -278,8 +278,8 @@
   },
   {
     "id": 2201,
-    "name": "UI_Skin_Name_2201",
-    "desc": "UI_Skin_Des_2201",
+    "name": "Tenue de {nickname2}",
+    "desc": "Un être, une lame, une robe immaculée. Traverser l’océan et la nuit glacée, pour enfin se retrouver à l’orée de l’aube.",
     "icon": "T_Head_WeitaF",
     "rarity": 5,
     "charId": 2201,
@@ -1038,8 +1038,8 @@
   },
   {
     "id": 220101,
-    "name": "UI_Skin_Name_2201",
-    "desc": "UI_Skin_Des_2201",
+    "name": "Tenue de {nickname2}",
+    "desc": "Un être, une lame, une robe immaculée. Traverser l’océan et la nuit glacée, pour enfin se retrouver à l’orée de l’aube.",
     "icon": "T_Head_WeitaM",
     "rarity": 5,
     "charId": 220101,

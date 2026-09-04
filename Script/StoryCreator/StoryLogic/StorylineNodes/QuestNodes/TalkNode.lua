@@ -224,7 +224,7 @@ function TalkNode:TalkNodeFinishInternal(TalkNodeFinishType, OptionIndex)
   TalkNodeFinishType = TalkNodeFinishType or ETalkNodeFinishType.Out
   TalkSubsystem():UnregisterTalkData(self.TalkTaskKey)
   if self.TalkContext.TalkCameraManager then
-    self.TalkContext.TalkCameraManager:ClearTalkCamera()
+    self.TalkContext.TalkCameraManager:ClearTalkCamera(self.Key)
   end
   self.TalkTaskKey = nil
   if TalkNodeFinishType == ETalkNodeFinishType.Stop then

@@ -102926,7 +102926,6 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
           RelatedWikiId = {
             [1] = 407001
           },
-          SnapShot = "MEMORY",
           SpeakNpcId = 111126,
           VoiceName = "voice/$Locale$/story/1102/111089/1BCF5CDC"
         },
@@ -102937,7 +102936,6 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
           ExStoryInfo = "EXPlayer",
           GUID = "1BCF5D06",
           NextDialogue = 11108920,
-          SnapShot = "MEMORY",
           SpeakNpcId = 111126,
           VoiceName = "voice/$Locale$/story/1102/111089/1BCF5D06"
         },
@@ -102948,7 +102946,6 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
           ExStoryInfo = "EXPlayer",
           GUID = "1BCF5D30",
           NextDialogue = 11108921,
-          SnapShot = "MEMORY",
           SpeakNpcId = 111126,
           VoiceName = "voice/$Locale$/story/1102/111089/1BCF5D30"
         },
@@ -102959,7 +102956,6 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
           ExStoryInfo = "EXPlayer",
           GUID = "1BCF5D5A",
           NextDialogue = 11108922,
-          SnapShot = "MEMORY",
           SpeakNpcId = 111126,
           VoiceName = "voice/$Locale$/story/1102/111089/1BCF5D5A"
         },
@@ -102970,7 +102966,6 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
           ExStoryInfo = "EXPlayer",
           GUID = "1BCF5D84",
           NextDialogue = 11108923,
-          SnapShot = "MEMORY",
           SpeakNpcId = 111126,
           VoiceName = "voice/$Locale$/story/1102/111089/1BCF5D84"
         },
@@ -102991,7 +102986,6 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
           ExStoryInfo = "EXPlayer",
           GUID = "1BCF5DD8",
           NextDialogue = 11108925,
-          SnapShot = "MEMORY",
           SpeakNpcId = 111126,
           VoiceName = "voice/$Locale$/story/1102/111089/1BCF5DD8"
         },
@@ -103002,7 +102996,6 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
           ExStoryInfo = "EXPlayer",
           GUID = "1BCF5E02",
           NextDialogue = 11108926,
-          SnapShot = "MEMORY",
           SpeakNpcId = 111126,
           VoiceName = "voice/$Locale$/story/1102/111089/1BCF5E02"
         },
@@ -103026,7 +103019,6 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
           RelatedWikiId = {
             [1] = 201013
           },
-          SnapShot = "MEMORY",
           SpeakNpcId = 111126,
           VoiceName = "voice/$Locale$/story/1102/111089/1BCF5E56"
         },
@@ -107332,7 +107324,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11114301] = {
           Content = "第一条 阿尔卡诺山是我们的乐园，我们都是兔妈妈的白兔。",
-          ContentEN = "Rule Ⅰ\n Mount Arcano is our Paradise, and we are all Mother Bunny's White Bunnies.",
+          ContentEN = "Rule Ⅰ\nMount Arcano is our Paradise, and we are all Mother Bunny's White Bunnies.",
           DialogueId = 11114301,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD2D002",
@@ -107340,7 +107332,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11114302] = {
           Content = "第二条 全体白兔必须相亲相爱，禁止对白兔使用暴力。彼此之间若有矛盾，可以通过游戏的方式解决。",
-          ContentEN = "Rule Ⅱ\n White Bunnies must love one another. Violence between White Bunnies is forbidden. When conflicts arise, they must be settled through games.",
+          ContentEN = "Rule Ⅱ\nWhite Bunnies must love one another. Violence between White Bunnies is forbidden. When conflicts arise, they must be settled through games.",
           DialogueId = 11114302,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD2D02C",
@@ -107348,7 +107340,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11114303] = {
           Content = "第三条 兔子有很多种颜色。白色兔子是我们的朋友，红色兔子是危险的。如果看到红色兔子，请立刻报告镇长。",
-          ContentEN = "Rule Ⅲ\n Bunnies come in many colors. White Bunnies are friends. Red Bunnies are dangerous. If you see a Red Bunny, report it to the chief at once.",
+          ContentEN = "Rule Ⅲ\nBunnies come in many colors. White Bunnies are friends. Red Bunnies are dangerous. If you see a Red Bunny, report it to the chief at once.",
           DialogueId = 11114303,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD2D056",
@@ -107356,7 +107348,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11114304] = {
           Content = "第四条 乐园巡游是阿尔卡诺镇的盛事，在乐园巡游庆典上，需要完成一局游戏。",
-          ContentEN = "Rule Ⅳ\n The Parade is Arcano's monthly grand celebration. During the Parade, all Bunnies must complete one game together.",
+          ContentEN = "Rule Ⅳ\nThe Parade is Arcano's monthly grand celebration. During the Parade, all Bunnies must complete one game together.",
           DialogueId = 11114304,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD2D080",
@@ -107364,7 +107356,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11114305] = {
           Content = "第五条 阿尔卡诺山的玩具是我们友好的同伴，可以接受它们的护卫与帮助。",
-          ContentEN = "Rule Ⅴ\n The toys of Mount Arcano are our friends. You may accept their help and protection.",
+          ContentEN = "Rule Ⅴ\nThe toys of Mount Arcano are our friends. You may accept their help and protection.",
           DialogueId = 11114305,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD2D0AA",
@@ -107372,7 +107364,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11114306] = {
           Content = "第六条 请所有白兔牢记我们的名牌，它代表着我们的本质。不得违反我们的本质。",
-          ContentEN = "Rule Ⅵ\n All White Bunnies must remember their Arcana names. They reveal our essence. We must never act against it.",
+          ContentEN = "Rule Ⅵ\nAll White Bunnies must remember their Arcana names. They reveal our essence. We must never act against it.",
           DialogueId = 11114306,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD2D0D4",
@@ -107380,7 +107372,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11114307] = {
           Content = "第七条 天上的巨大铁皮人是乐园的敌人。如果见到巨大铁皮人，请立即放下手上的一切，前往酣梦池。",
-          ContentEN = "Rule Ⅶ\n The giant metal man in the sky is the enemy of Paradise. If the giant metal man appears, stop whatever you are doing and proceed at once to the Pond of Slumber.",
+          ContentEN = "Rule Ⅶ\nThe giant metal man in the sky is the enemy of Paradise. If the giant metal man appears, stop whatever you are doing and proceed at once to the Pond of Slumber.",
           DialogueId = 11114307,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD2D0FE",
@@ -107388,7 +107380,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11114308] = {
           Content = "第八条 如果触犯规则，酣梦池能帮我们找回内心的宁静。",
-          ContentEN = "Rule Ⅷ\n For those who have broken the rules, the Pond of Slumber will help them find peace again.",
+          ContentEN = "Rule Ⅷ\nFor those who have broken the rules, the Pond of Slumber will help them find peace again.",
           DialogueId = 11114308,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD2D128",
@@ -107396,7 +107388,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11114309] = {
           Content = "第九条 没有巨大铁皮人的情况下，未经镇长允许，禁止靠近酣梦池。",
-          ContentEN = "Rule Ⅸ\n Unless the giant metal man appears, no one may approach the Pond of Slumber without the chief's permission.",
+          ContentEN = "Rule Ⅸ\nUnless the giant metal man appears, no one may approach the Pond of Slumber without the chief's permission.",
           DialogueId = 11114309,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD2D152",
@@ -107404,7 +107396,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11114310] = {
           Content = "第十条 为了我们的生活不被外界的纷扰所打破，任何白兔不得轻易离开我们的乐园。",
-          ContentEN = "Rule Ⅹ\n To keep our lives from being disturbed by the outside world, no White Bunny may leave Paradise without permission.",
+          ContentEN = "Rule Ⅹ\nTo keep our lives from being disturbed by the outside world, no White Bunny may leave Paradise without permission.",
           DialogueId = 11114310,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD2D17C",
@@ -108664,9 +108656,8 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         [11115214] = {
           Content = "幸好兔妈妈在。\n就是说啊。\n乔伊，没受伤吧。",
           ContentEN = [[
-Good thing Mother Bunny was here.
- Exactly.
- Joy, you're not hurt, are you?]],
+Good thing Mother Bunny was here. Exactly.
+Joy, you're not hurt, are you?]],
           DialogueId = 11115214,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD365CC",
@@ -111372,7 +111363,6 @@ Good thing Mother Bunny was here.
           ExStoryInfo = "EXPlayer",
           GUID = "1BD593C6",
           NextDialogue = 11118616,
-          SnapShot = "MEMORY",
           SpeakNpcId = 111002,
           SpeakNpcName = "UI_Npc_Name_Ada",
           VoiceName = "voice/$Locale$/story/1102/111096/1BD593C6"
@@ -112496,7 +112486,7 @@ SetVisibility{ActorId{111163},Visibility{"Hide"}}
         },
         [11120305] = {
           Content = "不……她是我的造物。最贴近<H>真正艾达</>的复制体——<H>我</>的复制体。",
-          ContentEN = "No... I made her. She is the replica closest to the<H>real Ada</>. The closest replica of <H>me</>.",
+          ContentEN = "No... I made her. She is the replica closest to the <H>real Ada</>. The closest replica of <H>me</>.",
           DialogueId = 11120305,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD6A90A",
@@ -315581,25 +315571,28 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B442AE2A",
           NextDialogue = 72006402,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{820000},AnimationId{\"Wuyou_Born\"}}",
           bAllowClickSkipScript = false
         },
         [72006402] = {
-          Content = "兄弟，你好（待包装）",
+          Content = "咿呀，被你找到了。",
           DialogueId = 72006402,
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B442AE54",
           NextDialogue = 72006403,
           SpeakNpcId = 820000
         },
         [72006403] = {
-          Content = "很高兴见到你（待包装）",
+          Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
           DialogueId = 72006403,
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B442AE7E",
           NextDialogue = 72006404,
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Agree\"}}",
           SpeakNpcId = 820000,
@@ -315612,6 +315605,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B442AEA8",
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
@@ -315622,25 +315616,28 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B442BE92",
           NextDialogue = 72006502,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{820000},AnimationId{\"Wuyou_Born\"}}",
           bAllowClickSkipScript = false
         },
         [72006502] = {
-          Content = "兄弟，你好（待包装）",
+          Content = "咿呀，被你找到了。",
           DialogueId = 72006502,
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B442BEBC",
           NextDialogue = 72006503,
           SpeakNpcId = 820000
         },
         [72006503] = {
-          Content = "很高兴见到你（待包装）",
+          Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
           DialogueId = 72006503,
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B442BEE6",
           NextDialogue = 72006504,
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Agree\"}}",
           SpeakNpcId = 820000,
@@ -315653,6 +315650,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B442BF10",
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
@@ -315663,25 +315661,28 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B442CEFA",
           NextDialogue = 72006602,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{820000},AnimationId{\"Wuyou_Born\"}}",
           bAllowClickSkipScript = false
         },
         [72006602] = {
-          Content = "兄弟，你好（待包装）",
+          Content = "咿呀，被你找到了。",
           DialogueId = 72006602,
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B442CF24",
           NextDialogue = 72006603,
           SpeakNpcId = 820000
         },
         [72006603] = {
-          Content = "很高兴见到你（待包装）",
+          Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
           DialogueId = 72006603,
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B442CF4E",
           NextDialogue = 72006604,
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Agree\"}}",
           SpeakNpcId = 820000,
@@ -315694,6 +315695,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B442CF78",
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
@@ -315704,25 +315706,28 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B442DF62",
           NextDialogue = 72006702,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{820000},AnimationId{\"Wuyou_Born\"}}",
           bAllowClickSkipScript = false
         },
         [72006702] = {
-          Content = "兄弟，你好（待包装）",
+          Content = "咿呀，被你找到了。",
           DialogueId = 72006702,
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B442DF8C",
           NextDialogue = 72006703,
           SpeakNpcId = 820000
         },
         [72006703] = {
-          Content = "很高兴见到你（待包装）",
+          Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
           DialogueId = 72006703,
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B442DFB6",
           NextDialogue = 72006704,
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Agree\"}}",
           SpeakNpcId = 820000,
@@ -315735,6 +315740,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B442DFE0",
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
@@ -315745,25 +315751,28 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B442EFCA",
           NextDialogue = 72006802,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{820000},AnimationId{\"Wuyou_Born\"}}",
           bAllowClickSkipScript = false
         },
         [72006802] = {
-          Content = "兄弟，你好（待包装）",
+          Content = "咿呀，被你找到了。",
           DialogueId = 72006802,
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B442EFF4",
           NextDialogue = 72006803,
           SpeakNpcId = 820000
         },
         [72006803] = {
-          Content = "很高兴见到你（待包装）",
+          Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
           DialogueId = 72006803,
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B442F01E",
           NextDialogue = 72006804,
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Agree\"}}",
           SpeakNpcId = 820000,
@@ -315776,6 +315785,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B442F048",
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
@@ -315786,25 +315796,28 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B4430032",
           NextDialogue = 72006902,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{820000},AnimationId{\"Wuyou_Born\"}}",
           bAllowClickSkipScript = false
         },
         [72006902] = {
-          Content = "兄弟，你好（待包装）",
+          Content = "咿呀，被你找到了。",
           DialogueId = 72006902,
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B443005C",
           NextDialogue = 72006903,
           SpeakNpcId = 820000
         },
         [72006903] = {
-          Content = "很高兴见到你（待包装）",
+          Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
           DialogueId = 72006903,
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B4430086",
           NextDialogue = 72006904,
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Agree\"}}",
           SpeakNpcId = 820000,
@@ -315817,6 +315830,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B44300B0",
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
@@ -315827,25 +315841,28 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B443109A",
           NextDialogue = 72007002,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{820000},AnimationId{\"Wuyou_Born\"}}",
           bAllowClickSkipScript = false
         },
         [72007002] = {
-          Content = "兄弟，你好（待包装）",
+          Content = "咿呀，被你找到了。",
           DialogueId = 72007002,
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B44310C4",
           NextDialogue = 72007003,
           SpeakNpcId = 820000
         },
         [72007003] = {
-          Content = "很高兴见到你（待包装）",
+          Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
           DialogueId = 72007003,
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B44310EE",
           NextDialogue = 72007004,
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Agree\"}}",
           SpeakNpcId = 820000,
@@ -315858,6 +315875,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B4431118",
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
@@ -315868,25 +315886,28 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B4432102",
           NextDialogue = 72007102,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{820000},AnimationId{\"Wuyou_Born\"}}",
           bAllowClickSkipScript = false
         },
         [72007102] = {
-          Content = "兄弟，你好（待包装）",
+          Content = "咿呀，被你找到了。",
           DialogueId = 72007102,
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B443212C",
           NextDialogue = 72007103,
           SpeakNpcId = 820000
         },
         [72007103] = {
-          Content = "很高兴见到你（待包装）",
+          Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
           DialogueId = 72007103,
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B4432156",
           NextDialogue = 72007104,
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Agree\"}}",
           SpeakNpcId = 820000,
@@ -315899,6 +315920,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B4432180",
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
@@ -315909,25 +315931,28 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B443316A",
           NextDialogue = 72007202,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{820000},AnimationId{\"Wuyou_Born\"}}",
           bAllowClickSkipScript = false
         },
         [72007202] = {
-          Content = "兄弟，你好（待包装）",
+          Content = "咿呀，被你找到了。",
           DialogueId = 72007202,
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B4433194",
           NextDialogue = 72007203,
           SpeakNpcId = 820000
         },
         [72007203] = {
-          Content = "很高兴见到你（待包装）",
+          Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
           DialogueId = 72007203,
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B44331BE",
           NextDialogue = 72007204,
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Agree\"}}",
           SpeakNpcId = 820000,
@@ -315940,6 +315965,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B44331E8",
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
@@ -315950,25 +315976,28 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B44341D2",
           NextDialogue = 72007302,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{820000},AnimationId{\"Wuyou_Born\"}}",
           bAllowClickSkipScript = false
         },
         [72007302] = {
-          Content = "兄弟，你好（待包装）",
+          Content = "咿呀，被你找到了。",
           DialogueId = 72007302,
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B44341FC",
           NextDialogue = 72007303,
           SpeakNpcId = 820000
         },
         [72007303] = {
-          Content = "很高兴见到你（待包装）",
+          Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
           DialogueId = 72007303,
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B4434226",
           NextDialogue = 72007304,
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Agree\"}}",
           SpeakNpcId = 820000,
@@ -315981,6 +316010,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B4434250",
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
@@ -315991,25 +316021,28 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B443523A",
           NextDialogue = 72007402,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{820000},AnimationId{\"Wuyou_Born\"}}",
           bAllowClickSkipScript = false
         },
         [72007402] = {
-          Content = "兄弟，你好（待包装）",
+          Content = "咿呀，被你找到了。",
           DialogueId = 72007402,
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B4435264",
           NextDialogue = 72007403,
           SpeakNpcId = 820000
         },
         [72007403] = {
-          Content = "很高兴见到你（待包装）",
+          Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
           DialogueId = 72007403,
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B443528E",
           NextDialogue = 72007404,
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Agree\"}}",
           SpeakNpcId = 820000,
@@ -316022,6 +316055,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B44352B8",
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
@@ -316032,25 +316066,28 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B44362A2",
           NextDialogue = 72007502,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{820000},AnimationId{\"Wuyou_Born\"}}",
           bAllowClickSkipScript = false
         },
         [72007502] = {
-          Content = "兄弟，你好（待包装）",
+          Content = "咿呀，被你找到了。",
           DialogueId = 72007502,
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B44362CC",
           NextDialogue = 72007503,
           SpeakNpcId = 820000
         },
         [72007503] = {
-          Content = "很高兴见到你（待包装）",
+          Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
           DialogueId = 72007503,
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B44362F6",
           NextDialogue = 72007504,
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Agree\"}}",
           SpeakNpcId = 820000,
@@ -316063,6 +316100,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B4436320",
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
@@ -316073,25 +316111,28 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B443730A",
           NextDialogue = 72007602,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{820000},AnimationId{\"Wuyou_Born\"}}",
           bAllowClickSkipScript = false
         },
         [72007602] = {
-          Content = "兄弟，你好（待包装）",
+          Content = "咿呀，被你找到了。",
           DialogueId = 72007602,
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B4437334",
           NextDialogue = 72007603,
           SpeakNpcId = 820000
         },
         [72007603] = {
-          Content = "很高兴见到你（待包装）",
+          Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
           DialogueId = 72007603,
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B443735E",
           NextDialogue = 72007604,
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Agree\"}}",
           SpeakNpcId = 820000,
@@ -316104,6 +316145,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B4437388",
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
@@ -316114,25 +316156,28 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B4438372",
           NextDialogue = 72007702,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{820000},AnimationId{\"Wuyou_Born\"}}",
           bAllowClickSkipScript = false
         },
         [72007702] = {
-          Content = "兄弟，你好（待包装）",
+          Content = "咿呀，被你找到了。",
           DialogueId = 72007702,
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B443839C",
           NextDialogue = 72007703,
           SpeakNpcId = 820000
         },
         [72007703] = {
-          Content = "很高兴见到你（待包装）",
+          Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
           DialogueId = 72007703,
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B44383C6",
           NextDialogue = 72007704,
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Agree\"}}",
           SpeakNpcId = 820000,
@@ -316145,6 +316190,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
           FacialId = {
             [1] = "820000:PetPan_Common"
           },
+          GUID = "B44383F0",
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },

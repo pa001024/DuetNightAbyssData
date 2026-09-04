@@ -9532,7 +9532,10 @@ T.RT_1122 = {
 }
 T.RT_1123 = {
   AllowSkillIntensity = true,
+  AllowUseSkillInAir = true,
   BeginNodeId = 310421,
+  CD = 1,
+  CDType = 310402,
   ExplanationId = T.RT_1119,
   ResetVelocity = true,
   SkillBtnDesc = "SKILL_ICON_Damage",
@@ -9655,10 +9658,10 @@ T.RT_1137 = {
   [6] = T.RT_1136
 }
 T.RT_1138 = {
+  AllowEightOrient = "OptionalLockOrient",
   AllowSkillIntensity = true,
+  AllowUseSkillInAir = true,
   BeginNodeId = 310413,
-  CD = 2,
-  CDType = 310412,
   ResetVelocity = true,
   SkillBtnDesc = "SKILL_ICON_Enhance",
   SkillBtnIcon = "Skill_Falu01_SP",

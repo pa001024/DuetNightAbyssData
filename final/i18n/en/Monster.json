@@ -4690,6 +4690,21 @@
     ]
   },
   {
+    "id": 8516701,
+    "n": "Emperor's Roar – Thunderstorm",
+    "t": "Boss",
+    "atk": 75,
+    "def": 1000,
+    "hp": 112500,
+    "tn": 1000,
+    "icon": "Boss16_Fuer",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A",
+      "Mon.Strong.ThunderLaser"
+    ]
+  },
+  {
     "id": 8518001,
     "n": "Terracolossus",
     "t": "Boss",

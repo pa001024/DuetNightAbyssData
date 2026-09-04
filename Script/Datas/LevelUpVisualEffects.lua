@@ -230,5 +230,19 @@ return ReadOnly("LevelUpVisualEffects", {
     },
     SkinID = 310401,
     VisualEffectId = 310457
+  },
+  [310458] = {
+    IsAlways = true,
+    IsAttach = true,
+    Level = T.RT_1,
+    SkinID = 310401,
+    VisualEffectId = 310458
+  },
+  [310459] = {
+    IsAlways = true,
+    IsAttach = true,
+    Level = T.RT_1,
+    SkinID = 310401,
+    VisualEffectId = 310459
   }
 })

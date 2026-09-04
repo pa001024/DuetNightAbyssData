@@ -52,13 +52,13 @@ return ReadOnly("PayGoodsToScore", {
       EventId = 113001,
       GoodsId = "com.hero.dna.Pay_108",
       GoodsName = "GoodsName_108",
-      PayGoodsScore = 12800
+      PayGoodsScore = 12880
     },
     ["com.hero.dna.Pay_109"] = {
       EventId = 113001,
       GoodsId = "com.hero.dna.Pay_109",
       GoodsName = "GoodsName_109",
-      PayGoodsScore = 32800
+      PayGoodsScore = 32980
     },
     ["com.hero.dna.Pay_BaituWanhua1"] = {
       EventId = 113001,

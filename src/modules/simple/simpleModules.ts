@@ -86,8 +86,13 @@ export function hairModule(ctx: ModuleContext): VNodeTree {
         const nameKey = item.Name || fallback.get(String(id))
         const icon = iconName(item.Icon)
         if (!nameKey || !icon) continue
-        const row: Record<string, VNodeTree> = { id, name: T(nameKey), icon, rarity: item.Rarity ?? 0 }
-        if (item.HairDescribe) row.desc = T(item.HairDescribe)
+        const row: Record<string, VNodeTree> = {
+            id,
+            name: T(nameKey),
+            ...(item.HairDescribe ? { desc: T(item.HairDescribe) } : {}),
+            icon,
+            rarity: item.Rarity ?? 0,
+        }
         if (item.CharId !== undefined && item.CharId !== "") row.charId = item.CharId
         result.push(row)
     }

@@ -16820,7 +16820,7 @@
         "n": "Radiant Crystal"
       },
       {
-        "id": 110062,
+        "id": 110073,
         "t": "Resource",
         "c": 40,
         "n": "Crystal Selection Chest Ⅲ"
@@ -16839,7 +16839,7 @@
         "n": "Radiant Crystal"
       },
       {
-        "id": 110062,
+        "id": 110073,
         "t": "Resource",
         "c": 64,
         "n": "Crystal Selection Chest Ⅲ"
@@ -16858,7 +16858,7 @@
         "n": "Radiant Crystal"
       },
       {
-        "id": 110062,
+        "id": 110073,
         "t": "Resource",
         "c": 90,
         "n": "Crystal Selection Chest Ⅲ"
@@ -67026,7 +67026,7 @@
     "m": "Fixed",
     "child": [
       {
-        "id": 110067,
+        "id": 110065,
         "t": "Resource",
         "c": 1,
         "n": "Covenanter Demon Wedge: Hydro"
@@ -67038,7 +67038,7 @@
     "m": "Fixed",
     "child": [
       {
-        "id": 110065,
+        "id": 110063,
         "t": "Resource",
         "c": 1,
         "n": "Covenanter Demon Wedge: Pyro"
@@ -67050,7 +67050,7 @@
     "m": "Fixed",
     "child": [
       {
-        "id": 110066,
+        "id": 110064,
         "t": "Resource",
         "c": 1,
         "n": "Covenanter Demon Wedge: Electro"
@@ -67062,7 +67062,7 @@
     "m": "Fixed",
     "child": [
       {
-        "id": 110064,
+        "id": 110062,
         "t": "Resource",
         "c": 1,
         "n": "Covenanter Demon Wedge: Anemo"
@@ -67074,7 +67074,7 @@
     "m": "Fixed",
     "child": [
       {
-        "id": 110069,
+        "id": 110067,
         "t": "Resource",
         "c": 1,
         "n": "Covenanter Demon Wedge: Umbro"
@@ -67086,7 +67086,7 @@
     "m": "Fixed",
     "child": [
       {
-        "id": 110068,
+        "id": 110066,
         "t": "Resource",
         "c": 1,
         "n": "Covenanter Demon Wedge: Lumino"
@@ -75233,28 +75233,28 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 41725,
+        "id": 41726,
         "t": "Mod",
         "c": 1,
         "p": 10,
         "dp": 1,
-        "n": "Awakening"
+        "n": "Eternity"
       },
       {
-        "id": 42413,
+        "id": 42421,
         "t": "Mod",
         "c": 1,
         "p": 45,
         "dp": 1,
-        "n": "Flash Strike"
+        "n": "Afterimage"
       },
       {
-        "id": 43405,
+        "id": 42403,
         "t": "Mod",
         "c": 1,
         "p": 45,
         "dp": 1,
-        "n": "Stall"
+        "n": "Blitz"
       }
     ]
   },
@@ -88999,7 +88999,7 @@
     "m": "Fixed",
     "child": [
       {
-        "id": 110067,
+        "id": 110065,
         "t": "Resource",
         "c": 1,
         "n": "Covenanter Demon Wedge: Hydro"
@@ -89011,7 +89011,7 @@
     "m": "Fixed",
     "child": [
       {
-        "id": 110065,
+        "id": 110063,
         "t": "Resource",
         "c": 1,
         "n": "Covenanter Demon Wedge: Pyro"
@@ -89023,7 +89023,7 @@
     "m": "Fixed",
     "child": [
       {
-        "id": 110066,
+        "id": 110064,
         "t": "Resource",
         "c": 1,
         "n": "Covenanter Demon Wedge: Electro"
@@ -89035,7 +89035,7 @@
     "m": "Fixed",
     "child": [
       {
-        "id": 110064,
+        "id": 110062,
         "t": "Resource",
         "c": 1,
         "n": "Covenanter Demon Wedge: Anemo"
@@ -89047,7 +89047,7 @@
     "m": "Fixed",
     "child": [
       {
-        "id": 110069,
+        "id": 110067,
         "t": "Resource",
         "c": 1,
         "n": "Covenanter Demon Wedge: Umbro"
@@ -89059,7 +89059,7 @@
     "m": "Fixed",
     "child": [
       {
-        "id": 110068,
+        "id": 110066,
         "t": "Resource",
         "c": 1,
         "n": "Covenanter Demon Wedge: Lumino"
@@ -98159,12 +98159,12 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 51737,
+        "id": 51738,
         "t": "Mod",
         "c": 1,
         "p": 1,
         "d": 1,
-        "n": "Volition"
+        "n": "Nirvana – Volition"
       },
       {
         "id": 41737,
@@ -98207,6 +98207,13 @@
         "c": 88,
         "p": 49,
         "n": "Carmine Globule"
+      },
+      {
+        "id": 41738,
+        "t": "Mod",
+        "c": 1,
+        "p": 10,
+        "n": "Nirvana – Volition"
       }
     ]
   },
@@ -98215,12 +98222,12 @@
     "m": "Sequence",
     "child": [
       {
-        "id": 51767,
+        "id": 51768,
         "t": "Mod",
         "c": 1,
         "p": 1,
         "d": 1,
-        "n": "Volition – Refinement"
+        "n": "Blaze – Volition"
       },
       {
         "id": 41767,
@@ -98263,6 +98270,13 @@
         "c": 88,
         "p": 49,
         "n": "Carmine Globule"
+      },
+      {
+        "id": 41768,
+        "t": "Mod",
+        "c": 1,
+        "p": 10,
+        "n": "Blaze – Volition"
       }
     ]
   },

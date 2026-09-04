@@ -8117,7 +8117,7 @@
             "id": 20299002,
             "名称": "Bloodstain: Unfurling",
             "icon": "T_Rouge_Talent_Crossbow_Zaie",
-            "描述": "At the start of combat, gain 5.0 stacks of [Eclosion]. Triggering Element Disruption grants 4.0 Calamity.",
+            "描述": "At the start of combat, gain 1.0 stacks of [Eclosion]. Triggering Element Disruption grants 4.0 Calamity.",
             "解锁": {
               "Prototype: Sanguine Plume": 30,
               "Pyro Crystal": 90,

@@ -310,7 +310,6 @@ return ReadOnly("SystemGuide", {
     GuideStoryline = "Guide/Guide_GroupOnlineRule.story",
     IsInRegion = 1,
     PlayerInControl = 1,
-    PreSysGuideId = 2074,
     SysGuideId = 2039,
     UIUnlockRule = "FriendMain"
   },

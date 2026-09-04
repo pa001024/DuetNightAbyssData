@@ -103,9 +103,9 @@ export function monsterStrongAffixesModule(ctx: ModuleContext): VNodeTree {
         if (!buff || seenBuffs.has(buffId)) return result
         const nextBuffs = new Set(seenBuffs).add(buffId)
         putFirst(result, "时间膨胀倍率", buff.TimeDilation)
+        putFirst(result, "最大层数", buff.MaxLayer)
         const attrs = translateAttrs(buff.AddAttrs)
         if (Object.keys(attrs).length > 0) result.加成 = attrs
-        putFirst(result, "最大层数", buff.MaxLayer)
         const dot = list(buff.DotDatas).find(item => item && typeof item === "object" && (item as Row).Type === "Dot") as Row | undefined
         const hot = list(buff.DotDatas).find(item => item && typeof item === "object" && (item as Row).Type === "Hot") as Row | undefined
         if (dot) {
@@ -136,7 +136,11 @@ export function monsterStrongAffixesModule(ctx: ModuleContext): VNodeTree {
         processRefs(creature.Vars, target, seenBuffs, seenEffects)
         for (const hitId of [...list(creature.HitEnemy), ...list(creature.HitScene)]) {
             const n = number(hitId)
-            if (n) processEffect(n, target, seenBuffs, seenEffects)
+            if (n) {
+                const effect = entry(ctx, "SkillEffects", n)
+                putFirst(target, "半径", radius(effect?.TargetFilter))
+                processEffect(n, target, seenBuffs, seenEffects)
+            }
         }
     }
 
@@ -165,9 +169,9 @@ export function monsterStrongAffixesModule(ctx: ModuleContext): VNodeTree {
             const row = task as Row
             switch (row.Function) {
                 case "Damage":
-                    putFirst(target, "半径", radius(effect.TargetFilter))
                     putFirst(target, "伤害倍率", row.Rate)
                     putFirst(target, "伤害类型", row.DamageTag)
+                    putFirst(target, "半径", radius(effect.TargetFilter))
                     break
                 case "CutToughness":
                     putFirst(target, "削韧值", row.Value)

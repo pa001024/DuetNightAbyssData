@@ -372,7 +372,7 @@
     "desc": "Holding up her Phoxenes, Lulu Lunoloot surrenders and begs for mercy. What's your call?",
     "startTime": 1788746400,
     "endTime": 1790629200,
-    "rule": "1. During the event, you can claim a set amount of Phoxene for free once per day. After claiming the daily reward, you can purchase [Daily Boost] to increase the total amount of Phoxene received that day, or [Boost All] to apply the boost to that day and all remaining days.\n2. Boost Effect: The total Phoxene received for a boosted day is five times the daily free amount.\n3. Once [Daily Boost] has been purchased, [Boost All] will no longer be available."
+    "rule": "1. During the event, you can claim a set amount of Phoxene for free once per day. After claiming your daily reward, you can purchase [Daily Boost] to quintuple (5x) the Phoxene received that day, or [Boost All] to apply the 5x boost to the current day and all remaining days.\n2. Boost Effect: The total Phoxene received for a boosted day is five times the daily free amount.\n3. Once [Daily Boost] has been purchased, [Boost All] will no longer be available."
   },
   {
     "id": 103030,

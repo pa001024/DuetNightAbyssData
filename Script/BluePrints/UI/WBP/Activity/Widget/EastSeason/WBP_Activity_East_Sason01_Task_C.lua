@@ -2,9 +2,24 @@ require("UnLua")
 local M = Class("BluePrints.UI.BP_UIState_C")
 local EastSeasonQuestUtils = require("BluePrints.UI.WBP.Activity.Widget.EastSeason.EastSeasonQuestUtils")
 
+function M:EnforceSelfFocusTarget()
+  self.bIsFocusable = true
+  if self:GetVisibility() == UE4.ESlateVisibility.SelfHitTestInvisible then
+    self:SetVisibility(UE4.ESlateVisibility.Visible)
+  end
+end
+
 function M:ReceiveEnterState(StackAction)
   M.Super.ReceiveEnterState(self, StackAction)
+  self:EnforceSelfFocusTarget()
   self:RefreshTabReddot()
+end
+
+function M:OnShow(ShowTag)
+  if M.Super.OnShow then
+    M.Super.OnShow(self, ShowTag)
+  end
+  self:EnforceSelfFocusTarget()
 end
 
 function M:OnLoaded(...)
@@ -16,6 +31,7 @@ function M:OnLoaded(...)
 end
 
 function M:Construct()
+  self:EnforceSelfFocusTarget()
   self.Tab:BindEventOnTabSelected(self, self.OnTabChange)
   local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
   self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(PlayerController)
@@ -306,6 +322,7 @@ function M:InitQuestPhaseContent(TabId)
 end
 
 function M:OnAddedToFocusPath(InFocusEvent)
+  self:EnforceSelfFocusTarget()
   self:UpdateListItemState()
   self:UpdateGetAllBtn()
 end

@@ -165,6 +165,14 @@ return ReadOnly("RegionPatchCondition", {
     NecessaryPatch = T.RT_1,
     RegionID = 1076
   },
+  [1077] = {
+    NecessaryPatch = T.RT_1,
+    RegionID = 1077
+  },
+  [1078] = {
+    NecessaryPatch = T.RT_1,
+    RegionID = 1078
+  },
   [2001] = {
     NecessaryPatch = T.RT_1,
     RegionID = 2001

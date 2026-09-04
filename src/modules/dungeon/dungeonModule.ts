@@ -144,10 +144,11 @@ class DungeonBuilder {
         const weights = list(groupSpawn.GroupWeight)
         const levels = list(groupSpawn.GroupLevel)
         const groups = ids.map((id, index) => {
-            const group: Record<string, VNodeTree> = { id, m: this.groupMembers(id) }
+            const group: Record<string, VNodeTree> = { id }
             if (index < numbers.length) group.num = numbers[index]
             if (index < weights.length) group.w = weights[index]
             if (index < levels.length) group.lv = levels[index]
+            group.m = this.groupMembers(id)
             for (const [field, short] of Object.entries(GROUP_FIELDS)) if (has(groupSpawn, field)) group[short] = groupSpawn[field]
             return group
         })
@@ -291,6 +292,9 @@ class DungeonBuilder {
         const nameKey = typeof dungeon.DungeonName === "string" ? dungeon.DungeonName : ""
         if (this.ctx.textmap.get(nameKey, "cn").startsWith("DUNGEON_NAME_")) return undefined
         const type = dungeon.DungeonType ?? ""
+        const element = ELEMENTS[dungeon.AttributeType]
+        const typeShowKey = typeof dungeon.DungeonTypeShow === "string" ? dungeon.DungeonTypeShow : ""
+        const cnTypeShow = typeShowKey ? this.ctx.textmap.get(typeShowKey, "cn") : ""
         const item: Record<string, VNodeTree> = {
             id: dungeonId,
             n:
@@ -304,14 +308,11 @@ class DungeonBuilder {
                       })
                     : T(nameKey),
             t: type,
+            ...(element ? { e: element } : {}),
+            ...(cnTypeShow && !cnTypeShow.startsWith("DUNGEON_NAME_") ? { ts: T(typeShowKey) } : {}),
             lv: dungeon.DungeonLevel ?? 0,
             rd: dungeon.IsRandom ?? 0,
         }
-        const element = ELEMENTS[dungeon.AttributeType]
-        if (element) item.e = element
-        const typeShowKey = typeof dungeon.DungeonTypeShow === "string" ? dungeon.DungeonTypeShow : ""
-        const cnTypeShow = typeShowKey ? this.ctx.textmap.get(typeShowKey, "cn") : ""
-        if (cnTypeShow && !cnTypeShow.startsWith("DUNGEON_NAME_")) item.ts = T(typeShowKey)
 
         const condition = this.modConditions.get(dungeonId) ?? this.directModConditions.get(dungeonId)
         if (condition !== undefined) {

@@ -11894,11 +11894,11 @@ return ReadOnly("Resource", {
     UseParam = 350025
   },
   [110062] = {
-    DetailDes = "RESOURCE_DESC_110062",
+    AccessKey = T.RT_23,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
-    FunctionDes = "RESOURCE_FUNCTION_110056",
-    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_ZaieRes02.T_Pack_ZaieRes02'",
+    FunctionDes = "RESOURCE_FUNCTION_110045",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_RandomMod_11.T_Pack_RandomMod_11'",
     MaterialClassify = 7,
     Rarity = 5,
     ResourceId = 110062,
@@ -11906,15 +11906,15 @@ return ReadOnly("Resource", {
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Rare",
-    UseEffectType = "SelectResource",
-    UseParam = 4007
+    UseEffectType = "RandomSelectPack",
+    UseParam = 350031
   },
   [110063] = {
-    DetailDes = "RESOURCE_DESC_GENERALSKIN_8",
+    AccessKey = T.RT_23,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
-    FunctionDes = "RESOURCE_FUNCTION_GENERALSKIN_1",
-    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_Police.T_Pack_Police'",
+    FunctionDes = "RESOURCE_FUNCTION_110046",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_RandomMod_16.T_Pack_RandomMod_16'",
     MaterialClassify = 7,
     Rarity = 5,
     ResourceId = 110063,
@@ -11922,15 +11922,15 @@ return ReadOnly("Resource", {
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Rare",
-    UseEffectType = "SelectGeneralSkin",
-    UseParam = 5010
+    UseEffectType = "RandomSelectPack",
+    UseParam = 350037
   },
   [110064] = {
     AccessKey = T.RT_23,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
-    FunctionDes = "RESOURCE_FUNCTION_110045",
-    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_RandomMod_11.T_Pack_RandomMod_11'",
+    FunctionDes = "RESOURCE_FUNCTION_110047",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_RandomMod_12.T_Pack_RandomMod_12'",
     MaterialClassify = 7,
     Rarity = 5,
     ResourceId = 110064,
@@ -11939,14 +11939,14 @@ return ReadOnly("Resource", {
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Rare",
     UseEffectType = "RandomSelectPack",
-    UseParam = 350031
+    UseParam = 350033
   },
   [110065] = {
     AccessKey = T.RT_23,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
-    FunctionDes = "RESOURCE_FUNCTION_110046",
-    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_RandomMod_16.T_Pack_RandomMod_16'",
+    FunctionDes = "RESOURCE_FUNCTION_110048",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_RandomMod_13.T_Pack_RandomMod_13'",
     MaterialClassify = 7,
     Rarity = 5,
     ResourceId = 110065,
@@ -11955,14 +11955,14 @@ return ReadOnly("Resource", {
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Rare",
     UseEffectType = "RandomSelectPack",
-    UseParam = 350037
+    UseParam = 350034
   },
   [110066] = {
     AccessKey = T.RT_23,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
-    FunctionDes = "RESOURCE_FUNCTION_110047",
-    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_RandomMod_12.T_Pack_RandomMod_12'",
+    FunctionDes = "RESOURCE_FUNCTION_110049",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_RandomMod_14.T_Pack_RandomMod_14'",
     MaterialClassify = 7,
     Rarity = 5,
     ResourceId = 110066,
@@ -11971,14 +11971,14 @@ return ReadOnly("Resource", {
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Rare",
     UseEffectType = "RandomSelectPack",
-    UseParam = 350033
+    UseParam = 350038
   },
   [110067] = {
     AccessKey = T.RT_23,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
-    FunctionDes = "RESOURCE_FUNCTION_110048",
-    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_RandomMod_13.T_Pack_RandomMod_13'",
+    FunctionDes = "RESOURCE_FUNCTION_110050",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_RandomMod_15.T_Pack_RandomMod_15'",
     MaterialClassify = 7,
     Rarity = 5,
     ResourceId = 110067,
@@ -11987,7 +11987,7 @@ return ReadOnly("Resource", {
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Rare",
     UseEffectType = "RandomSelectPack",
-    UseParam = 350034
+    UseParam = 350036
   },
   [110068] = {
     AccessKey = T.RT_23,
@@ -12068,6 +12068,38 @@ return ReadOnly("Resource", {
     Type = "Rare",
     UseEffectType = "SelectPet",
     UseParam = 4008
+  },
+  [110073] = {
+    DetailDes = "RESOURCE_DESC_110062",
+    ExcludeCollect = true,
+    ExcludeCollectServer = true,
+    FunctionDes = "RESOURCE_FUNCTION_110056",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_ZaieRes02.T_Pack_ZaieRes02'",
+    MaterialClassify = 7,
+    Rarity = 5,
+    ResourceId = 110073,
+    ResourceName = "RESOURCE_NAME_110073",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Rare",
+    UseEffectType = "SelectResource",
+    UseParam = 4007
+  },
+  [110074] = {
+    DetailDes = "RESOURCE_DESC_GENERALSKIN_8",
+    ExcludeCollect = true,
+    ExcludeCollectServer = true,
+    FunctionDes = "RESOURCE_FUNCTION_GENERALSKIN_1",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_Police.T_Pack_Police'",
+    MaterialClassify = 7,
+    Rarity = 5,
+    ResourceId = 110074,
+    ResourceName = "RESOURCE_NAME_110074",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Rare",
+    UseEffectType = "SelectGeneralSkin",
+    UseParam = 5010
   },
   [120001] = {
     DetailDes = "RESOURCE_DESC_VOUCHER_1",

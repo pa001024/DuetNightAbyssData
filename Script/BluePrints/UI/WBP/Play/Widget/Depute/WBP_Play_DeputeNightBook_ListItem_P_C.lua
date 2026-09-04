@@ -66,7 +66,9 @@ end
 
 function M:OnRemovedFromFocusPath(MyGeometry, MouseEvent)
   self.ListRewardMouseBeginPos = nil
-  self.Com_Reward:SetVisibility(ESlateVisibility.Collapsed)
+  if self.Com_Reward then
+    self.Com_Reward:SetVisibility(ESlateVisibility.Collapsed)
+  end
   return UIUtils.Unhandled
 end
 
@@ -88,7 +90,9 @@ function M:InitItemContent()
   self.List_Reward:SetWheelScrollMultiplier(0)
   self.Mobile = "Mobile" == CommonUtils.GetDeviceTypeByPlatformName(self)
   self.IsEnter = false
-  self.Com_Reward:SetVisibility(ESlateVisibility.Collapsed)
+  if self.Com_Reward then
+    self.Com_Reward:SetVisibility(ESlateVisibility.Collapsed)
+  end
   if self.IsEmpty then
     self.WS_Item:SetActiveWidgetIndex(1)
     self.bIsFocusable = false
@@ -296,7 +300,9 @@ function M:OnMouseLeave(MyGeometry, MouseEvent)
   self:StopAllAnimations()
   self:PlayAnimation(self.Unhover)
   if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad and not self.IsEmpty then
-    self.Com_Reward:SetVisibility(ESlateVisibility.Collapsed)
+    if self.Com_Reward then
+      self.Com_Reward:SetVisibility(ESlateVisibility.Collapsed)
+    end
     self.Btn_Goto:SetPCVisibility(true)
     self.Btn_DoubleMod:SetPCVisibility(true)
   end
@@ -476,7 +482,9 @@ function M:UpdatKeyDisplay(FocusTypeName)
         Desc = GText("UI_BACK")
       }
     }
-    self.Com_Reward:SetVisibility(ESlateVisibility.Collapsed)
+    if self.Com_Reward then
+      self.Com_Reward:SetVisibility(ESlateVisibility.Collapsed)
+    end
     StyleOfPlay.ComTab.Left_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)
     StyleOfPlay.ComTab.Right_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)
     StyleOfPlay.ComTab.WBP_Com_Tab_ResourceBar.KeyImg_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)

@@ -4501,7 +4501,7 @@ return ReadOnly("RewardView", {
   [91149] = {
     DropType = T.RT_191,
     Id = {
-      [1] = 110067
+      [1] = 110065
     },
     RewardViewId = 91149,
     Type = T.RT_22
@@ -4509,7 +4509,7 @@ return ReadOnly("RewardView", {
   [91150] = {
     DropType = T.RT_191,
     Id = {
-      [1] = 110065
+      [1] = 110063
     },
     RewardViewId = 91150,
     Type = T.RT_22
@@ -4517,7 +4517,7 @@ return ReadOnly("RewardView", {
   [91151] = {
     DropType = T.RT_191,
     Id = {
-      [1] = 110066
+      [1] = 110064
     },
     RewardViewId = 91151,
     Type = T.RT_22
@@ -4525,7 +4525,7 @@ return ReadOnly("RewardView", {
   [91152] = {
     DropType = T.RT_191,
     Id = {
-      [1] = 110064
+      [1] = 110062
     },
     RewardViewId = 91152,
     Type = T.RT_22
@@ -4533,7 +4533,7 @@ return ReadOnly("RewardView", {
   [91153] = {
     DropType = T.RT_191,
     Id = {
-      [1] = 110069
+      [1] = 110067
     },
     RewardViewId = 91153,
     Type = T.RT_22
@@ -4541,7 +4541,7 @@ return ReadOnly("RewardView", {
   [91154] = {
     DropType = T.RT_191,
     Id = {
-      [1] = 110068
+      [1] = 110066
     },
     RewardViewId = 91154,
     Type = T.RT_22

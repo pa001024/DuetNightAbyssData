@@ -247,6 +247,11 @@ function M:StartBtnInit()
   self.BtnStartDouble:SetVisibility(ESlateVisibility.Collapsed)
   self.BtnStartDouble.BtnRight.OnClicked:Add(self, self.OnStartBtnClick)
   self.BtnStartDouble.BtnLeft.OnClicked:Add(self, self.OnBeHostBtnClick)
+  if self.bSelfOverTime and not self.bCanEnterStoppageRoom then
+    self.BtnCreateBig.Btn:SetForbidden(true)
+    self.BtnStartDouble.BtnRight:SetForbidden(true)
+    return
+  end
   local ShowWeekLimit = 0
   local FreeCreateTimes = 0
   if self.bFreeRoom then
@@ -434,9 +439,12 @@ function M:GetRoomData(RoomData)
   if self.RoomData.CloseTime ~= nil then
     self.RoomExpireTime = self.RoomData.CloseTime + AsyncCombatConst.AsyncCombat_StoppageTimeRoomDuration.ConstantValue * 60
     self.bSelfOverTime = true
+    local ContributionRequire = AsyncCombatConst.AsyncCombat_BaseContributionRequire.ConstantValue
+    self.bCanEnterStoppageRoom = true == self.RoomData.IsPass and false == self.RoomData.IsMaster and self.RoomData.IsMvp ~= true and nil ~= self.RoomData.Contribution and ContributionRequire > self.RoomData.Contribution and self.RoomData.RewardState == CommonConst.AsyncCombatRewardState.CannotClaim and TimeUtils.NowTime() < self.RoomExpireTime
   else
     self.RoomExpireTime = self.RoomData.CreateTime + AsyncCombatConst.AsyncCombat_RoomDuration.ConstantValue * 60
     self.bSelfOverTime = false
+    self.bCanEnterStoppageRoom = false
   end
   self.RoomPermission = {}
   for key, value in pairs(self.RoomData.Permission) do
@@ -453,6 +461,9 @@ function M:GetRoomData(RoomData)
   else
     self.bCanEnterDungeon = true
     self.CanEnterRoomTime = 0
+  end
+  if self.bSelfOverTime and not self.bCanEnterStoppageRoom then
+    self.bCanEnterDungeon = false
   end
   local Avatar = GWorld:GetAvatar()
   if Avatar then
@@ -486,6 +497,12 @@ function M:RefreshBtnState()
 end
 
 function M:RefreshStartBtnState()
+  if self.bSelfOverTime and not self.bCanEnterStoppageRoom then
+    self.BtnCreateBig.Btn:SetForbidden(true)
+    self.BtnCreateBig:SetVisibility(ESlateVisibility.Collapsed)
+    self.BtnStartDouble:SetVisibility(ESlateVisibility.Collapsed)
+    return
+  end
   if self.IsComMissing then
     self.BtnCreateBig.Btn:SetForbidden(true)
     return
@@ -581,6 +598,11 @@ function M:OnRoomExpireCountDownEnd()
     self:RemoveTimer(self.RoomExpireTimer)
   end
   self.IsRoomExpire = true
+  if self.bSelfOverTime then
+    self.bCanEnterStoppageRoom = false
+    self.bCanEnterDungeon = false
+    self:RefreshStartBtnState()
+  end
   if self:IsExistTimer(self.RoomInfoUpdateTimer) then
     self:RemoveTimer(self.RoomInfoUpdateTimer)
   end
@@ -589,6 +611,10 @@ end
 function M:OnEnterRoomCountDownEnd()
   if self:IsExistTimer(self.EnterRoomTimer) then
     self:RemoveTimer(self.EnterRoomTimer)
+  end
+  if self.bSelfOverTime and not self.bCanEnterStoppageRoom then
+    self:RefreshStartBtnState()
+    return
   end
   self.BtnCreateBig.Btn:SetForbidden(false)
   self.BtnCreateBig.Cd_Node:SetVisibility(ESlateVisibility.Collapsed)
@@ -750,6 +776,10 @@ function M:RefreshHostInfo()
 end
 
 function M:OnStartBtnClick()
+  if self.bSelfOverTime and not self.bCanEnterStoppageRoom then
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_AsyncCombat_RoomEndedRefresh"))
+    return
+  end
   if self.IsComMissing then
     self:OnForbiddenStartBtnClicked()
   end
@@ -939,8 +969,19 @@ function M:OnRoomInfoChange()
     end
     self:RewardListInit()
   end
+  if self.RoomData.CloseTime ~= nil then
+    local AsyncCombatConst = DataMgr.AsyncCombatEventConstant
+    local ContributionRequire = AsyncCombatConst.AsyncCombat_BaseContributionRequire.ConstantValue
+    self.RoomExpireTime = self.RoomData.CloseTime + AsyncCombatConst.AsyncCombat_StoppageTimeRoomDuration.ConstantValue * 60
+    self.bSelfOverTime = true
+    self.bCanEnterStoppageRoom = true == self.RoomData.IsPass and self.RoomData.IsMaster == false and self.RoomData.IsMvp ~= true and nil ~= self.RoomData.Contribution and ContributionRequire > self.RoomData.Contribution and self.RoomData.RewardState == CommonConst.AsyncCombatRewardState.CannotClaim and TimeUtils.NowTime() < self.RoomExpireTime
+    if not self.bCanEnterStoppageRoom then
+      self.bCanEnterDungeon = false
+    end
+  end
   self:SetProgress()
   self:AttributesInit()
+  self:RefreshStartBtnState()
 end
 
 function M:ItemMenuAnchorChanged(bIsOpen)

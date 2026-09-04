@@ -241,6 +241,7 @@ function M:BoardLocalPlayer()
   self:UpdateRidingCameraYawAndPitchLimit(Player)
   self.RidingPlayer = Player
   self:PlayerSitDown(Player)
+  Player:SetActorHideTag("RollerCoaster", true)
   DebugPrint("yly BP_RollerCoasterBase_C BoardLocalPlayer: 玩家已上车")
 end
 
@@ -483,6 +484,7 @@ function M:DisembarkLocalPlayer()
     self:ExitFirstPerson(Player)
   end
   self:PlayerStandUp(Player)
+  Player:SetActorHideTag("RollerCoaster", false)
   self.RidingPlayer = nil
   DebugPrint("yly BP_RollerCoasterBase_C DisembarkLocalPlayer: 玩家已下车")
 end

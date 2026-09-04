@@ -168,12 +168,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17809261569091031281",
-            startPort = "Out",
-            endQuest = "17809262416051032733",
-            endPort = "In"
-          },
-          {
             startQuest = "178091594910086",
             startPort = "QuestStart",
             endQuest = "17809263798713058660",
@@ -244,6 +238,24 @@ return {
             startPort = "Out",
             endQuest = "1780915949100102",
             endPort = "Fail"
+          },
+          {
+            startQuest = "17809257736041026167",
+            startPort = "Out",
+            endQuest = "17884410795291124372",
+            endPort = "In"
+          },
+          {
+            startQuest = "17809261569091031281",
+            startPort = "Out",
+            endQuest = "17884412472392243448",
+            endPort = "In"
+          },
+          {
+            startQuest = "17884412472392243448",
+            startPort = "Out",
+            endQuest = "17809262416051032733",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -530,7 +542,7 @@ return {
             key = "17809258930871028060",
             type = "UpdateTaskBarAndTaskMainNode",
             name = "更新任务目标节点",
-            pos = {x = 2693.8869077205977, y = -397.020188354103},
+            pos = {x = 2893.8869077205977, y = -439.020188354103},
             propsData = {
               NewDescription = "Description_110214_7",
               NewDetail = "Content_110214_7",
@@ -562,7 +574,7 @@ return {
             key = "17809261569091031281",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 2693.504711994455, y = -231.76980794760144},
+            pos = {x = 2849.504711994455, y = -267.7698079476014},
             propsData = {
               IsNpcNode = true,
               NpcNodeInteractiveName = "",
@@ -619,7 +631,7 @@ return {
             key = "17809262416051032733",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 2707.1506637232856, y = 19.106043097895203},
+            pos = {x = 2901.1506637232856, y = 49.1060430978952},
             propsData = {}
           },
           ["17809263798713058660"] = {
@@ -755,6 +767,33 @@ return {
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
             pos = {x = 796, y = 1180},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["17884410795291124372"] = {
+            key = "17884410795291124372",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2540.225514934856, y = -135.8689331577557},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/mute",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107001},
+              bStoreToServer = true
+            }
+          },
+          ["17884412472392243448"] = {
+            key = "17884412472392243448",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2859.725514934856, y = -88.36893315775569},
             propsData = {
               SoundStateType = 3,
               SoundPriority = 0,

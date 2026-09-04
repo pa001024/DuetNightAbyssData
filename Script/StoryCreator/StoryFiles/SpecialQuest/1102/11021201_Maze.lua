@@ -630,12 +630,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "178316696673826523905",
-            startPort = "Out",
-            endQuest = "17830724201418127375",
-            endPort = "In"
-          },
-          {
             startQuest = "1782903746877665",
             startPort = "Out",
             endQuest = "17835336916662198238",
@@ -1221,6 +1215,42 @@ return {
             startQuest = "1782903776923998",
             startPort = "Out",
             endQuest = "178816530785713427630",
+            endPort = "In"
+          },
+          {
+            startQuest = "17830649915295951851",
+            startPort = "Out",
+            endQuest = "178835277782110092232",
+            endPort = "In"
+          },
+          {
+            startQuest = "17830663411745953241",
+            startPort = "Out",
+            endQuest = "178835281295810092400",
+            endPort = "In"
+          },
+          {
+            startQuest = "17830669744555955437",
+            startPort = "Out",
+            endQuest = "178835290106010092596",
+            endPort = "In"
+          },
+          {
+            startQuest = "178316540714621109016",
+            startPort = "Out",
+            endQuest = "178835291585210092792",
+            endPort = "In"
+          },
+          {
+            startQuest = "178316696673826523905",
+            startPort = "Out",
+            endQuest = "17884403628943063",
+            endPort = "In"
+          },
+          {
+            startQuest = "17884403628943063",
+            startPort = "Out",
+            endQuest = "17830724201418127375",
             endPort = "In"
           }
         },
@@ -1959,7 +1989,7 @@ return {
             key = "17830724201418127375",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 10611.494778693434, y = 1713.7847205626815},
+            pos = {x = 11101.494778693434, y = 1710.4513872293483},
             propsData = {}
           },
           ["178315436304213532500"] = {
@@ -3242,13 +3272,6 @@ return {
               }
             }
           },
-          ["178773013524614561357"] = {
-            key = "178773013524614561357",
-            type = "QuestConditionNode",
-            name = "QuestCondition",
-            pos = {x = 6613.674007147019, y = 2395.253909296946},
-            propsData = {PortName = ""}
-          },
           ["17877583971822468"] = {
             key = "17877583971822468",
             type = "ChangeStaticCreatorNode",
@@ -3352,6 +3375,65 @@ return {
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
             pos = {x = 1243.4247380146903, y = 1166.9231057026004},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["178835277782110092232"] = {
+            key = "178835277782110092232",
+            type = "PlayNormalSoundNode",
+            name = "播放普通音效",
+            pos = {x = 3382.4270818888917, y = 680.546576601429},
+            propsData = {
+              EventPath = "event:/sfx/common/scene/ex02/character_headdizzy",
+              TargetPointName = "",
+              EventKey = "",
+              PlayAs2D = false
+            }
+          },
+          ["178835281295810092400"] = {
+            key = "178835281295810092400",
+            type = "PlayNormalSoundNode",
+            name = "播放普通音效",
+            pos = {x = 4319.46405055093, y = 680.546566711474},
+            propsData = {
+              EventPath = "event:/sfx/common/scene/ex02/character_headdizzy",
+              TargetPointName = "",
+              EventKey = "",
+              PlayAs2D = false
+            }
+          },
+          ["178835290106010092596"] = {
+            key = "178835290106010092596",
+            type = "PlayNormalSoundNode",
+            name = "播放普通音效",
+            pos = {x = 6519.463905038517, y = 629.2238187261332},
+            propsData = {
+              EventPath = "event:/sfx/common/scene/ex02/character_headdizzy",
+              TargetPointName = "",
+              EventKey = "",
+              PlayAs2D = false
+            }
+          },
+          ["178835291585210092792"] = {
+            key = "178835291585210092792",
+            type = "PlayNormalSoundNode",
+            name = "播放普通音效",
+            pos = {x = 5304.087998620135, y = 2246.149143864329},
+            propsData = {
+              EventPath = "event:/sfx/common/scene/ex02/character_headdizzy",
+              TargetPointName = "",
+              EventKey = "",
+              PlayAs2D = false
+            }
+          },
+          ["17884403628943063"] = {
+            key = "17884403628943063",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 10501.65830802536, y = 1679.2450547363858},
             propsData = {
               SoundStateType = 3,
               SoundPriority = 0,

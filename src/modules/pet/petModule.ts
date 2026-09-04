@@ -91,6 +91,7 @@ export function petModule(ctx: ModuleContext): VNodeTree {
         if (!id) continue
         const output: Record<string, VNodeTree> = {
             id,
+            ...(pet.GUID ? { uid: pet.GUID } : {}),
             名称: T(pet.Name ?? ""),
             描述: T(pet.IpDes ?? ""),
             icon: iconName(pet.Icon),
@@ -101,8 +102,6 @@ export function petModule(ctx: ModuleContext): VNodeTree {
             捕获经验: pet.CollectRewardExp ?? 0,
             经验: pet.PetExp ?? 0,
         }
-        if (!pet.GUID) delete output.uid
-        else output.uid = pet.GUID
         if (!pet.PremiumTransform) delete output.异化
 
         const battle = row(ctx, "BattlePet", pet.BattlePetId ?? 0)

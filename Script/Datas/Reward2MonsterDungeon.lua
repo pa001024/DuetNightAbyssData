@@ -639,22 +639,22 @@ return ReadOnly("Reward2MonsterDungeon", {
   Mount = T.RT_1,
   Pet = T.RT_1,
   Resource = {
-    [110064] = {
+    [110062] = {
       [1] = {DungeonId = 615010, MonsterId = 7012}
     },
-    [110065] = {
+    [110063] = {
       [1] = {DungeonId = 615008, MonsterId = 7010}
     },
-    [110066] = {
+    [110064] = {
       [1] = {DungeonId = 615009, MonsterId = 7011}
     },
-    [110067] = {
+    [110065] = {
       [1] = {DungeonId = 615007, MonsterId = 7009}
     },
-    [110068] = {
+    [110066] = {
       [1] = {DungeonId = 615012, MonsterId = 7014}
     },
-    [110069] = {
+    [110067] = {
       [1] = {DungeonId = 615011, MonsterId = 7013}
     }
   },

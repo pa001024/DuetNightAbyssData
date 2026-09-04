@@ -7847,16 +7847,18 @@ return ReadOnly("VisualEffect", {
   },
   [310458] = {
     EffectId = 310458,
-    EffectPath = "NiagaraSystem'/Game/Asset/Effect/Niagara/Player/Falu01/NS_QNF_SP13_root.NS_QNF_SP13_root'",
+    EffectParam = T.RT_197,
+    EffectPath = "NiagaraSystem'/Game/Asset/Effect/Niagara/Player/Falu01/NS_QNF_SP13_hand02.NS_QNF_SP13_hand02'",
     FXPriorityType = 100,
-    PlayLocation = T.RT_11,
+    PlayLocation = T.RT_26,
     TickInArmory = true
   },
-  [310460] = {
-    EffectId = 310460,
-    EffectPath = "NiagaraSystem'/Game/Asset/Effect/Niagara/Player/Falu01/NS_QNF_SP13_light.NS_QNF_SP13_light'",
+  [310459] = {
+    EffectId = 310459,
+    EffectParam = T.RT_197,
+    EffectPath = "NiagaraSystem'/Game/Asset/Effect/Niagara/Player/Falu01/NS_QNF_SP13_hand02.NS_QNF_SP13_hand02'",
     FXPriorityType = 100,
-    PlayLocation = T.RT_11,
+    PlayLocation = T.RT_27,
     TickInArmory = true
   },
   [310461] = {
@@ -9097,7 +9099,8 @@ return ReadOnly("VisualEffect", {
     EffectParam = T.RT_96,
     EffectPath = "/Game/Asset/Effect/Niagara/Monster/A_Common/NS_Common_Spawn.NS_Common_Spawn",
     NotFollowRotation = true,
-    PlayLocation = T.RT_11
+    PlayLocation = T.RT_11,
+    SoundID = 506
   },
   [600100] = {
     EffectId = 600100,

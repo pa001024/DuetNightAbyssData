@@ -76,7 +76,9 @@ function FStoryIterationGraph:GetNode(NodeType, DialogueId)
 end
 
 function FStoryIterationGraph:Iterate(...)
-  self.CurrentNode:Iterate(...)
+  if self.CurrentNode then
+    self.CurrentNode:Iterate(...)
+  end
 end
 
 function FStoryIterationGraph:OnNodeEnter(Node)

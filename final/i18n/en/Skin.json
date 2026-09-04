@@ -278,8 +278,8 @@
   },
   {
     "id": 2201,
-    "name": "UI_Skin_Name_2201",
-    "desc": "UI_Skin_Des_2201",
+    "name": "{nickname2}'s Accessory",
+    "desc": "Drifting through night and sea, in robes of white, to meet the dawn.",
     "icon": "T_Head_WeitaF",
     "rarity": 5,
     "charId": 2201,
@@ -1038,8 +1038,8 @@
   },
   {
     "id": 220101,
-    "name": "UI_Skin_Name_2201",
-    "desc": "UI_Skin_Des_2201",
+    "name": "{nickname2}'s Accessory",
+    "desc": "Drifting through night and sea, in robes of white, to meet the dawn.",
     "icon": "T_Head_WeitaM",
     "rarity": 5,
     "charId": 220101,

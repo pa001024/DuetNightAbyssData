@@ -294,11 +294,26 @@ function M:ShouldBtnAgainEnabled()
     DebugPrint("yly WBP_Activity_Coop_Settlement_P_C ShouldBtnAgainEnabled: self.CurDevote/self.BaseRewardNeedDevote is nil")
     return false
   end
-  if not self.bExtraRoom and self.bRoomOwner then
+  if self.CurDevote >= self.BaseRewardNeedDevote then
     return false
   end
-  local bSatisfyBaseDevote = self.CurDevote >= self.BaseRewardNeedDevote
-  return not bSatisfyBaseDevote
+  local RoomIsPassed = self.RoomSettleInfo and self.RoomSettleInfo.bAllPassed == true
+  if self.bExtraRoom then
+    return true
+  end
+  if self.bRoomOwner then
+    return false
+  end
+  if self.bMVP then
+    return false
+  end
+  if RoomIsPassed then
+    return true
+  end
+  if self.RoomSettleInfo and self.RoomSettleInfo.CloseTime then
+    return false
+  end
+  return true
 end
 
 function M:InitRewardsUI()

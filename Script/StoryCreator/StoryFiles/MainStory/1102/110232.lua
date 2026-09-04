@@ -190,6 +190,12 @@ return {
             startPort = "Out",
             endQuest = "17851419620673336489",
             endPort = "In"
+          },
+          {
+            startQuest = "1782202017679269",
+            startPort = "QuestStart",
+            endQuest = "17884494733591623",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -393,6 +399,22 @@ return {
               FadeOutSeconds = 0,
               DurationSeconds = 0.5,
               IsStandAlone = true
+            }
+          },
+          ["17884494733591623"] = {
+            key = "17884494733591623",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = -651.8090815273479, y = 82.91627966976262},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_6/0176_story_horror",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107001},
+              bStoreToServer = true
             }
           }
         },
@@ -1642,12 +1664,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "178352951395643287729",
-            startPort = "Out",
-            endQuest = "178548648289713250858",
-            endPort = "Input"
-          },
-          {
             startQuest = "178352096637131754166",
             startPort = "Fail",
             endQuest = "178548650861013251598",
@@ -1724,6 +1740,12 @@ return {
             startPort = "Out",
             endQuest = "17881705712221684689",
             endPort = "In"
+          },
+          {
+            startQuest = "17881705712221684689",
+            startPort = "Out",
+            endQuest = "178548648289713250858",
+            endPort = "Input"
           }
         },
         nodeData = {
@@ -1815,7 +1837,7 @@ return {
             key = "178352951395643287729",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 2636.562183308991, y = -370.62232836579676},
+            pos = {x = 2387.812183308991, y = -379.37232836579676},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -1983,7 +2005,7 @@ return {
             key = "17881705712221684689",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 2934.90321395747, y = -447.74193895719054},
+            pos = {x = 2662.40321395747, y = -348.99193895719054},
             propsData = {
               SoundStateType = 3,
               SoundPriority = 0,

@@ -10,7 +10,7 @@ import { join } from "node:path"
  *   bun run warmup                                # 清空并预热 UAsset DuckDB 缓存
  *
  * 流程：建图 → 拓扑序执行 build（Lua 混合层取数+计算，产出 vnode 树）→
- *       逐语言渲染 → 写 final_ts/i18n/<lang>/<file>.json
+ *       逐语言渲染 → 写 final/i18n/<lang>/<file>.json
  */
 import { Graph } from "./core/Graph.ts"
 import { getTextMap, LANGS } from "./i18n/TextMap.ts"
@@ -342,7 +342,7 @@ function parseArgs(argv: string[]): CliArgs {
 async function main() {
     const args = parseArgs(process.argv.slice(2))
     const baseDir = join(import.meta.dir, "..")
-    const outputRoot = join(baseDir, "final_ts")
+    const outputRoot = join(baseDir, "final")
 
     if (args.list) {
         console.log("已注册模块:")

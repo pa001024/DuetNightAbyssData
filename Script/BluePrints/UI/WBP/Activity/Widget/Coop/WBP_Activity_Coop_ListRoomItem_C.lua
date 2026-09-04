@@ -134,40 +134,25 @@ function WBP_Activity_Coop_ListRoomItem_C:RefreshWsBtnState()
     return
   end
   local CurrentTimeStamp = TimeUtils.NowTime()
-  local CreateTime = URuntimeCommonFunctionLibrary.GetDateTimeFromUnixTime(RoomData.CreateTime or 0)
-  local CurTime = URuntimeCommonFunctionLibrary.GetDateTimeFromUnixTime(CurrentTimeStamp)
-  local RemainTime = UKismetMathLibrary.Subtract_DateTimeDateTime(CurTime, CreateTime)
-  local elapsedSeconds = UKismetMathLibrary.GetTotalSeconds(RemainTime)
-  local MaxDurationSeconds = DataMgr.AsyncCombatEventConstant.AsyncCombat_RoomDuration.ConstantValue * 60
-  if elapsedSeconds >= MaxDurationSeconds then
-    RoomData.IsPass = true
+  local IsRoomClosed = RoomData.CloseTime ~= nil
+  local IsStoppageRoomTimeOpen = false
+  if IsRoomClosed then
+    local Duration = DataMgr.AsyncCombatEventConstant.AsyncCombat_StoppageTimeRoomDuration.ConstantValue * 60
+    IsStoppageRoomTimeOpen = CurrentTimeStamp < RoomData.CloseTime + Duration
   end
-  if RoomData.CloseTime then
-    local Dration = DataMgr.AsyncCombatEventConstant.AsyncCombat_StoppageTimeRoomDuration.ConstantValue * 60
-    local ContributionRoomCloseTime = RoomData.CloseTime + Dration
-    if CurrentTimeStamp >= ContributionRoomCloseTime and 0 == RoomData.RewardState then
-      RoomData.RewardState = 2
-    end
-  end
-  if RoomData.IsPass and RoomData.IsMaster and 0 == RoomData.RewardState then
-    RoomData.RewardState = 2
-  end
+  local ContributionRequire = DataMgr.AsyncCombatEventConstant.AsyncCombat_BaseContributionRequire.ConstantValue
+  local CanEnterStoppageRoom = RoomData.IsPass == true and RoomData.IsMaster == false and true ~= RoomData.IsMvp and nil ~= RoomData.Contribution and ContributionRequire > RoomData.Contribution and RoomData.RewardState == CommonConst.AsyncCombatRewardState.CannotClaim and IsStoppageRoomTimeOpen
   if self.Btn_Go.New then
     self.Btn_Go.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
   local Style = 0
   if RoomData.IsPass == true then
-    if 1 == RoomData.RewardState then
+    if RoomData.RewardState == CommonConst.AsyncCombatRewardState.CanClaim then
       self.RoomState = 0
       self.Ws_Btn:SetActiveWidgetIndex(0)
       self.TextNum:SetText("")
       self.TextState:SetText(GText("UI_AsyncCombat_ChallengeEnd"))
-    elseif 2 == RoomData.RewardState then
-      self.RoomState = 2
-      self.Ws_Btn:SetActiveWidgetIndex(2)
-      self.TextNum:SetText("")
-      self.TextState:SetText(GText("UI_AsyncCombat_ChallengeEnd"))
-    else
+    elseif CanEnterStoppageRoom then
       Style = 1
       self.RoomState = 1
       self.Ws_Btn:SetActiveWidgetIndex(1)
@@ -184,7 +169,17 @@ function WBP_Activity_Coop_ListRoomItem_C:RefreshWsBtnState()
       self.TextNum:SetText("<Highlight>" .. FormatPermille(RoomData.Contribution / 100) .. "%</>")
       self.TextState:SetText(GText("UI_AsyncCombat_IndividualContribution"))
       self:AddReddotListen()
+    else
+      self.RoomState = 2
+      self.Ws_Btn:SetActiveWidgetIndex(2)
+      self.TextNum:SetText("")
+      self.TextState:SetText(GText("UI_AsyncCombat_ChallengeEnd"))
     end
+  elseif IsRoomClosed then
+    self.RoomState = 2
+    self.Ws_Btn:SetActiveWidgetIndex(2)
+    self.TextNum:SetText("")
+    self.TextState:SetText(GText("UI_AsyncCombat_ChallengeEnd"))
   else
     self.RoomState = 1
     self.Ws_Btn:SetActiveWidgetIndex(1)
@@ -290,6 +285,10 @@ end
 function WBP_Activity_Coop_ListRoomItem_C:UpdateCDState()
   local RoomData = self.RoomData
   if not RoomData then
+    self.Ws_State_Cd:SetActiveWidgetIndex(1)
+    return
+  end
+  if 1 ~= self.RoomState then
     self.Ws_State_Cd:SetActiveWidgetIndex(1)
     return
   end

@@ -848,6 +848,21 @@
                 "lv": 50
               },
               {
+                "id": 10000517,
+                "itemType": "Mod",
+                "typeId": 104004,
+                "typeName": "펜리르의 폭풍의 광륜",
+                "price": 5000,
+                "priceType": 214,
+                "priceName": "공연 티켓 부본",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 100001,
+                "sequence": 98,
+                "startTime": 1761512400,
+                "lv": 50
+              },
+              {
                 "id": 10000601,
                 "itemType": "Resource",
                 "typeId": 2013,
@@ -26571,7 +26586,7 @@
               {
                 "id": 120178,
                 "itemType": "Resource",
-                "typeId": 110063,
+                "typeId": 110074,
                 "typeName": "선택 코스튬 패키지·수호",
                 "price": 1280,
                 "priceType": 99,
@@ -26587,7 +26602,7 @@
               {
                 "id": 120179,
                 "itemType": "Resource",
-                "typeId": 110063,
+                "typeId": 110074,
                 "typeName": "선택 코스튬 패키지·수호",
                 "price": 1280,
                 "priceType": 99,
@@ -26604,7 +26619,7 @@
               {
                 "id": 120180,
                 "itemType": "Resource",
-                "typeId": 110063,
+                "typeId": 110074,
                 "typeName": "선택 코스튬 패키지·수호",
                 "price": 1280,
                 "priceType": 99,
@@ -32095,6 +32110,21 @@
                 "sequence": 100,
                 "startTime": 1672545600,
                 "cond": "이전 단계의 보물 주머니 레벨업 증표 구매 후 해제"
+              },
+              {
+                "id": 10012126,
+                "itemType": "Resource",
+                "typeId": 6000007,
+                "typeName": "훈련 초대장",
+                "price": 0,
+                "priceType": 101,
+                "priceName": "쿠퍼",
+                "num": 1,
+                "limit": 9,
+                "subTabId": 100121,
+                "sequence": 95,
+                "startTime": 1672545600,
+                "endTime": 1788814800
               },
               {
                 "id": 10012127,

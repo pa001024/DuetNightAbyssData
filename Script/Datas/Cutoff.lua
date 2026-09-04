@@ -1274,6 +1274,13 @@ return ReadOnly("Cutoff", {
     CutoffStartTime = LocalTimeProxy(1788746400),
     ItemId = 140495
   },
+  [166] = {
+    CutoffId = 166,
+    CutoffPrice = 1000,
+    CutoffShow = 20,
+    CutoffStartTime = LocalTimeProxy(1672545600),
+    ItemId = 10000517
+  },
   [173] = {
     CutoffEndTime = LocalTimeProxy(1785142800),
     CutoffId = 173,

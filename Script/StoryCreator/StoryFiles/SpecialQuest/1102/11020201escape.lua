@@ -266,7 +266,7 @@ return {
             key = "1781531329388535",
             type = "TalkNode",
             name = "【Ver0105_SC003】法露茜出现过场",
-            pos = {x = 1136.8819338031808, y = 198.359873054599},
+            pos = {x = 1135.9444338031808, y = 198.359873054599},
             propsData = {
               IsNpcNode = false,
               TalkType = "Cinematic",
@@ -955,6 +955,12 @@ return {
             startPort = "false",
             endQuest = "1781531329391554",
             endPort = "Success"
+          },
+          {
+            startQuest = "178304776717511888499",
+            startPort = "Out",
+            endQuest = "17884366014902252429",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -1513,6 +1519,22 @@ return {
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
             pos = {x = 182.70896754230588, y = 199.68779985550475},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/mute",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107201},
+              bStoreToServer = true
+            }
+          },
+          ["17884366014902252429"] = {
+            key = "17884366014902252429",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1326.6398489503326, y = 653.8021313364056},
             propsData = {
               SoundStateType = 0,
               SoundPriority = 0,
@@ -2686,6 +2708,12 @@ return {
             startQuest = "17842640019196666909",
             startPort = "Out",
             endQuest = "178791638100313419147",
+            endPort = "In"
+          },
+          {
+            startQuest = "1781531329403621",
+            startPort = "QuestStart",
+            endQuest = "17882756375182259628",
             endPort = "In"
           }
         },
@@ -4457,6 +4485,22 @@ return {
               RelatedRegionId = {107201},
               bStoreToServer = true
             }
+          },
+          ["17882756375182259628"] = {
+            key = "17882756375182259628",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = -6361.147186147189, y = 905.1428571428572},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_6/0177_story_investigate",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107201},
+              bStoreToServer = true
+            }
           }
         },
         commentData = {
@@ -5348,6 +5392,12 @@ return {
             startPort = "Out",
             endQuest = "178645071833856993902",
             endPort = "Branch_2"
+          },
+          {
+            startQuest = "178168239272414715985",
+            startPort = "QuestStart",
+            endQuest = "17882756839082260292",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -6144,6 +6194,22 @@ return {
               DurationSeconds = 1,
               IsStandAlone = true
             }
+          },
+          ["17882756839082260292"] = {
+            key = "17882756839082260292",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = -892.0449550449548, y = -178.10489510489518},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/cbt02/0061_scene_ex01_escape",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107201},
+              bStoreToServer = true
+            }
           }
         },
         commentData = {
@@ -6213,12 +6279,6 @@ return {
             startQuest = "178168239272614716015",
             startPort = "Out",
             endQuest = "178168239272714716018",
-            endPort = "In"
-          },
-          {
-            startQuest = "178168239272714716018",
-            startPort = "Out",
-            endQuest = "178306391502027020127",
             endPort = "In"
           },
           {
@@ -6297,6 +6357,24 @@ return {
             startQuest = "178168239272614716015",
             startPort = "Out",
             endQuest = "178791719474819009526",
+            endPort = "In"
+          },
+          {
+            startQuest = "178168239272614716012",
+            startPort = "QuestStart",
+            endQuest = "17882758206632262720",
+            endPort = "In"
+          },
+          {
+            startQuest = "178168239272714716018",
+            startPort = "Out",
+            endQuest = "17884368208303372595",
+            endPort = "In"
+          },
+          {
+            startQuest = "17884368208303372595",
+            startPort = "Out",
+            endQuest = "178306391502027020127",
             endPort = "In"
           }
         },
@@ -6626,7 +6704,34 @@ return {
             key = "178791719474819009526",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 1776.9440905652875, y = 455.5381652661064},
+            pos = {x = 1755.9440905652875, y = 461.5381652661064},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["17882758206632262720"] = {
+            key = "17882758206632262720",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 760.0257242757245, y = 529.842782217782},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/cbt02/0061_scene_ex01_escape",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107201},
+              bStoreToServer = true
+            }
+          },
+          ["17884368208303372595"] = {
+            key = "17884368208303372595",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1873.9849277915064, y = 282.9098971204236},
             propsData = {
               SoundStateType = 3,
               SoundPriority = 0,

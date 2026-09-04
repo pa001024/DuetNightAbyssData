@@ -51,12 +51,12 @@ export function draftModule(ctx: ModuleContext): VNodeTree {
             c: draft.ProductNum ?? 1,
             p: draft.ProductId ?? 0,
             d: draft.Time ?? 0,
+            ...(draft.Batch ? { b: 1 } : {}),
+            ...(draft.IsInfinity ? { i: 1 } : {}),
+            ...(draft.ShowInDraftArchive ? { s: 1 } : {}),
             x: processResources(ctx, draft.Resource),
             m: foundry.length > 0 ? (foundry[0] as VNodeTree) : undefined,
         }
-        if (draft.Batch) item.b = 1
-        if (draft.IsInfinity) item.i = 1
-        if (draft.ShowInDraftArchive) item.s = 1
         items.push(item)
     }
     items.sort((a, b) => Number((a as Record<string, unknown>).id ?? 0) - Number((b as Record<string, unknown>).id ?? 0))

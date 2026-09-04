@@ -278,8 +278,8 @@
   },
   {
     "id": 2201,
-    "name": "UI_Skin_Name_2201",
-    "desc": "UI_Skin_Des_2201",
+    "name": "{nickname2}のコスチューム",
+    "desc": "白い衣に身を包み、剣を持って、夜の海を越える。夜明けの果てにまた会おう。",
     "icon": "T_Head_WeitaF",
     "rarity": 5,
     "charId": 2201,
@@ -1038,8 +1038,8 @@
   },
   {
     "id": 220101,
-    "name": "UI_Skin_Name_2201",
-    "desc": "UI_Skin_Des_2201",
+    "name": "{nickname2}のコスチューム",
+    "desc": "白い衣に身を包み、剣を持って、夜の海を越える。夜明けの果てにまた会おう。",
     "icon": "T_Head_WeitaM",
     "rarity": 5,
     "charId": 220101,

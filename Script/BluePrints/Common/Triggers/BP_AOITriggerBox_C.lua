@@ -168,6 +168,9 @@ function BP_AOITriggerBox_C:CheckRuleUnitId(TriggerActor, UnitId)
 end
 
 function BP_AOITriggerBox_C:CheckRuleUnitType(TriggerActor, UnitType)
+  if not TriggerActor.UnitType then
+    return false
+  end
   return string.lower(TriggerActor.UnitType) == string.lower(UnitType)
 end
 
