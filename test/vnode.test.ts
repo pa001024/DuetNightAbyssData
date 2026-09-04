@@ -5,7 +5,7 @@
 import { describe, expect, test } from "bun:test"
 import { TextMap } from "../src/i18n/TextMap.ts"
 import { deriveLangViews } from "../src/i18n/textmapReactive.ts"
-import { compile, LTemplate, renderTree, seq, T, TL, TUnlessEqual, TRaw } from "../src/i18n/vnode.ts"
+import { compile, LTemplate, LTemplateValueOrder, record, renderTree, seq, T, TLang, TL, TMap, TReplace, TSection, TUnlessEqual, TRaw } from "../src/i18n/vnode.ts"
 import { getLuaDataManager } from "../src/lua/LuaDataManager.ts"
 import { sentinelOf } from "../src/lua/stubs.ts"
 
@@ -126,6 +126,40 @@ describe("vnode", () => {
         expect(renderTree(tree, "en", textmap)).toEqual({ name: "Resource" })
     })
 
+    test("TMap 仅替换当前语言的精确译文", () => {
+        const textmap = { get: (_key: string, lang: string) => (lang === "cn" ? "武器暴击率" : "Weapon CRIT Chance") } as unknown as TextMap
+        const node = TMap("attr", { 武器暴击率: "暴击" })
+
+        expect(renderTree(node, "cn", textmap)).toBe("暴击")
+        expect(renderTree(node, "en", textmap)).toBe("Weapon CRIT Chance")
+    })
+
+    test("TSection 仅在当前语言字段名未自带段名时添加段名", () => {
+        const textmap = {
+            get: (key: string, lang: string) => {
+                if (key === "section") return lang === "en" ? "Samael" : "レチタティーヴォ"
+                return lang === "en" ? "Reduced Damage" : "「アダージョ」持続時間"
+            },
+        } as unknown as TextMap
+
+        expect(renderTree(TSection("section", "field"), "en", textmap)).toBe("[Samael]Reduced Damage")
+        expect(renderTree(TSection("section", "field"), "jp", textmap)).toBe("[レチタティーヴォ]「アダージョ」持続時間")
+    })
+
+    test("TLang 可省略语言相关的对象键", () => {
+        const tree = record([[TLang("仅中文", ["cn"]), 1]])
+
+        expect(renderTree(tree, "cn", makeTextMap())).toEqual({ 仅中文: 1 })
+        expect(renderTree(tree, "en", makeTextMap())).toEqual({})
+    })
+
+    test("TReplace 在翻译后应用已有字符处理", () => {
+        const textmap = { get: (_key: string, lang: string) => (lang === "tc" ? "不死鳥之" : "Phoenix's ") } as unknown as TextMap
+
+        expect(renderTree(TReplace("series", "之", ""), "tc", textmap)).toBe("不死鳥")
+        expect(renderTree(TReplace("series", "之", ""), "en", textmap)).toBe("Phoenix's ")
+    })
+
     test("renderTree filters array items by internal language metadata", () => {
         const tree = [{ id: 1, __langs: ["en"], name: "English" }, { id: 2 }]
 
@@ -200,6 +234,12 @@ describe("reactive 派生", () => {
         expect(renderTree(LTemplate("placeholder", values, true), "cn", textmap)).toBe("每2秒")
     })
 
+    test("LTemplate 对非紧邻 float 标记保留旧流程的原始精度", () => {
+        const node = LTemplate("SKILL_20407_DESC", ["90.0%", "0.25%", "75.0%", "24"], true)
+
+        expect(renderTree(node, "en", makeTextMap())).toContain("{float4}+0.25% Skill Intensity per Sanity spent for 24.0s")
+    })
+
     test("LTemplate 小数格式与旧导出舍入一致", () => {
         const textmap = { get: () => "#1/#2" } as unknown as TextMap
 
@@ -217,5 +257,15 @@ describe("reactive 派生", () => {
         })
 
         expect(renderTree(node, "cn", textmap)).toBe("6.2/0.3/0.5")
+    })
+
+    test("LTemplateValueOrder 按当前语言模板重排值", () => {
+        const textmap = {
+            get: (_key: string, lang: string) => (lang === "en" ? "#2 then #1" : "#1 再 #2"),
+        } as unknown as TextMap
+        const node = LTemplateValueOrder("placeholder", [[10], [20]])
+
+        expect(renderTree(node, "cn", textmap)).toEqual([[10], [20]])
+        expect(renderTree(node, "en", textmap)).toEqual([[20], [10]])
     })
 })

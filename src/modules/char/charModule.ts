@@ -12,8 +12,9 @@
 import { readFileSync } from "node:fs"
 import { join } from "node:path"
 import type { ModuleContext } from "../../core/Graph.ts"
-import { compile, LTemplate, record, seq, T, TFixed, type VNode, type VNodeTree } from "../../i18n/vnode.ts"
+import { compile, LTemplate, record, seq, T, TFixed, TMap, TSection, type VNode, type VNodeTree } from "../../i18n/vnode.ts"
 import { AssetReader } from "../../lua/AssetReader.ts"
+import { GT_RE } from "../../lua/stubs.ts"
 import type { SkillArtifacts } from "../skill/skillModule.ts"
 import {
     ACTION_CN,
@@ -38,23 +39,21 @@ const WEAPON_TYPE_CN: Record<string, string> = {
     Ultra: "同律",
     Melee: "近战",
     Ranged: "远程",
-    Bow: "WeaponType_Bow",
-    Bow01: "WeaponType_Bow01",
-    Bow02: "WeaponType_Bow02",
-    Cannon: "WeaponType_Cannon",
-    Claymore: "WeaponType_Claymore",
-    Crossbow: "WeaponType_Crossbow",
-    Dualblade: "WeaponType_Dualblade",
-    Katana: "WeaponType_Katana",
-    Machinegun: "WeaponType_Machinegun",
-    Pistol: "WeaponType_Pistol",
-    Polearm: "WeaponType_Polearm",
-    Shotgun: "WeaponType_Shotgun",
-    Sword: "WeaponType_Sword",
-    Swordwhip: "WeaponType_Swordwhip",
+    Bow: "弓",
+    Bow01: "弓（短弓）",
+    Bow02: "弓（长弓）",
+    Cannon: "榴炮",
+    Claymore: "重剑",
+    Crossbow: "双枪",
+    Dualblade: "双刀",
+    Katana: "太刀",
+    Machinegun: "突击枪",
+    Pistol: "手枪",
+    Polearm: "长柄",
+    Shotgun: "霰弹枪",
+    Sword: "单手剑",
+    Swordwhip: "鞭刃",
 }
-/** WeaponType_* 是翻译 key（非直接中文） */
-const WEAPON_TYPE_DIRECT = new Set(["同律", "近战", "远程"])
 const BP_ADD_BUFF_CACHE = new Map<string, Record<string, number[]>>()
 
 export async function charModule(ctx: ModuleContext) {
@@ -190,10 +189,8 @@ export async function charModule(ctx: ModuleContext) {
         const out: VNodeTree[] = []
         for (const tag of tags) {
             const mapped = WEAPON_TYPE_CN[String(tag)]
-            if (mapped && WEAPON_TYPE_DIRECT.has(mapped)) {
+            if (mapped) {
                 out.push(mapped)
-            } else if (mapped) {
-                out.push(T(mapped)) // WeaponType_* 是翻译 key
             } else {
                 const positioning = dm.getTable("Positioning") as Record<string, any> | undefined
                 const row = positioning?.[String(tag)]
@@ -239,10 +236,10 @@ export async function charModule(ctx: ModuleContext) {
     }
 
     /** 加成 */
-    function processAddon(_charId: number, battleChar: Record<string, any>): Record<string, unknown> {
-        const out: Record<string, unknown> = {}
+    function processAddon(_charId: number, battleChar: Record<string, any>): VNodeTree {
+        const out = new Map<string, number>()
         const addonAttrs = battleChar.CharAddonAttr ?? []
-        if (!Array.isArray(addonAttrs)) return out
+        if (!Array.isArray(addonAttrs)) return record([])
         for (const attrId of addonAttrs) {
             const row = charAddonAttrData()[String(attrId)]
             const attr = row?.AddAttrs
@@ -250,13 +247,11 @@ export async function charModule(ctx: ModuleContext) {
             const key = attrConfig()[attr.AttrName] ? attr.AttrName : `${attr.AttrName}_Normal`
             const cfg = attrConfig()[key] ?? {}
             const nameKey = cfg.Name ?? ""
-            let fkey = ctx.textmap.get(nameKey, "cn")
-            fkey = ATTR_NAME_MAP[fkey] ?? fkey
+            if (!nameKey) continue
             const value = roundValue(attr.Rate ?? attr.Value ?? 0)
-            if (out[fkey]) out[fkey] = (out[fkey] as number) + value
-            else out[fkey] = value
+            out.set(nameKey, (out.get(nameKey) ?? 0) + value)
         }
-        return out
+        return record([...out].map(([key, value]) => [TMap(key, ATTR_NAME_MAP), value]))
     }
 
     /** 突破材料 */
@@ -385,7 +380,7 @@ export async function charModule(ctx: ModuleContext) {
             if (merged.length > 0) result.实体 = merged
         }
 
-        const behavior = generateSkillBehavior(dm, skillArtifacts, skillId, inheritedDescValues, ctx.textmap)
+        const behavior = generateSkillBehavior(dm, skillArtifacts, skillId, inheritedDescValues)
 
         const subSkills = Array.isArray(skillInfo.SubSkills) ? skillInfo.SubSkills : []
         const explanationNames = Array.isArray(skillInfo.ExplanationId)
@@ -463,9 +458,8 @@ export async function charModule(ctx: ModuleContext) {
             if (typeof descValue !== "string" || !descValue.includes("#")) continue
 
             const groupName = skillSectionName(skillInfo.SkillDescGroups, i)
-            const descTextCn = ctx.textmap.get(String(descKey), "cn")
             const item: Record<string, any> = {
-                名称: groupName && !descTextCn.startsWith("[") ? seq(["[", T(groupName), "]", T(String(descKey))]) : T(String(descKey)),
+                名称: groupName ? TSection(groupName, String(descKey)) : T(String(descKey)),
                 __descIndex: i,
             }
 
@@ -724,7 +718,7 @@ export async function charModule(ctx: ModuleContext) {
         for (const field of ["出生地", "生日", "中文CV", "日文CV", "英文CV", "韩文CV", "势力", "别名", "专武"]) {
             if (!processed[field]) delete processed[field]
         }
-        if (!Object.keys(processed.加成 ?? {}).length) delete processed.加成
+        if ((processed.加成 as { entries?: unknown[] } | undefined)?.entries?.length === 0) delete processed.加成
         if (!(processed.标签 as VNodeTree[])?.length) delete processed.标签
         if (!(processed.额外精通 as string[])?.length) delete processed.额外精通
 
@@ -746,32 +740,7 @@ const HINT_MAP: Record<string, string> = {
 }
 
 const BEHAVIOR_ATTR_CN: Record<string, string> = {
-    DamagedRate: "受到伤害",
-    WeaponCRDModifierRate: "暴伤",
-    WeaponCRDModifierValue: "暴伤",
-    WeaponCRIModifierRate: "武器暴击率",
-    WeaponCRIModifierValue: "武器暴击率",
-    AttackSpeedModifierRate: "攻速加成",
-    WalkSpeedModifier: "移动速度",
-    MoveSpeedAddRate: "移动速度加成",
-    FlySpeedModifier: "飞行速度",
-    SlideVelocityModifier: "滑移速度",
-    BulletJumpVelocityModifier: "螺旋飞跃速度",
-    JumpVelocityModifier: "跳跃速度",
-    SkillSpeed: "技能速度",
     SkillIntensity: "技能威力",
-    SkillEfficiency: "技能效益",
-    StrongValue: "昂扬",
-    BonusDamage: "追加伤害",
-    Sp: "神智",
-    SpRate: "神智比例",
-    TriggerProbModifierRate: "触发概率加成",
-    DropDistance: "拾取范围",
-    AttackRangeModifierValue: "攻击范围加成",
-    OverShieldLevelGrow: "过载护盾等级成长",
-    MaxAvoidExecuteTimes: "闪避次数",
-    Def: "防御",
-    SkillRange: "技能范围",
 }
 
 const PASSIVE_FUNCTION_CN: Record<string, string> = {
@@ -904,9 +873,8 @@ function generateSkillBehavior(
     dm: ModuleContext["dm"],
     skillArtifacts: SkillArtifacts,
     skillId: number,
-    inheritedDescValues?: unknown[],
-    textmap?: ModuleContext["textmap"]
-): string {
+    inheritedDescValues?: unknown[]
+): VNodeTree {
     const nodeData = (id: number | string) => dm.getTableItem("SkillNode", id) as Record<string, any> | undefined
     const effectData = (id: number | string) => dm.getTableItem("SkillEffects", id) as Record<string, any> | undefined
     const buffData = (id: number | string) => dm.getTableItem("Buff", id) as Record<string, any> | undefined
@@ -970,8 +938,8 @@ function generateSkillBehavior(
         const direct = BEHAVIOR_ATTR_CN[attrName]
         if (direct) return direct
         const config = attrConfig()[attrConfigKey(attrName, attr)]
-        const translated = config?.Name && textmap ? textmap.get(String(config.Name), "cn") : ""
-        return ATTR_NAME_MAP[translated] ?? P_MAP[translated] ?? P_MAP[attrName] ?? (translated || attrName)
+        if (config?.Name) return `\x01GT{${config.Name}}\x01`
+        return P_MAP[attrName] ?? attrName
     }
 
     const formatBuffValue = (attrName: string, attr: Record<string, any>, value: unknown): string => {
@@ -1040,7 +1008,8 @@ function generateSkillBehavior(
             const fn = String(task.Function ?? "")
             if (fn === "Damage") {
                 const rate = effectRate(Number(effectId), task.Rate)
-                const base = BASE_ATTR_CN[String(task.BaseAttr)] ?? String(task.BaseAttr ?? "基础伤害")
+                const baseAttr = String(task.BaseAttr ?? "基础伤害")
+                const base = BASE_ATTR_CN[baseAttr] ?? attrSummaryName(baseAttr, { AttrName: baseAttr })
                 let text = `造成${base}`
                 if (typeof rate === "number" && rate > 0 && rate < 1) text += `${roundValue(rate * 100)}%`
                 else if (typeof rate === "number") text += `${(rate * 100).toFixed(1)}%`
@@ -1155,7 +1124,19 @@ function generateSkillBehavior(
     }
 
     walkSkill(skillId)
-    return parts.join(";")
+    const text = parts.join(";")
+    const matches = [...text.matchAll(GT_RE)]
+    if (matches.length === 0) return text
+    const nodes: VNode[] = []
+    let last = 0
+    for (const match of matches) {
+        const index = match.index!
+        if (index > last) nodes.push(text.slice(last, index))
+        nodes.push(TMap(match[1], P_MAP))
+        last = index + match[0].length
+    }
+    if (last < text.length) nodes.push(text.slice(last))
+    return seq(nodes)
 }
 
 /**

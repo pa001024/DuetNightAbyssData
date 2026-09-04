@@ -68,7 +68,7 @@ function titleLabel(ctx: ModuleContext, id: unknown, frame: boolean): VNode {
         ? TL("“", { en: "Title Frame: ", jp: "「", kr: "", tc: "“", fr: "Title Frame: " })
         : TL("“", { en: "Title: ", jp: "「", kr: "", tc: "“", fr: "Title: " })
     const closing = frame
-        ? TL("”样式", { en: " Style", jp: "」スタイル", kr: " 스타일", tc: "”樣式", fr: " Style" })
+        ? TL("”样式", { en: " Style", jp: "」スタイル", kr: " 스타일", tc: "”样式", fr: " Style" })
         : TL("”称号", { en: "", jp: "」称号", kr: " 칭호", tc: "”称号", fr: "" })
     // 英文/法文前缀包含冒号，不能将其放在名称后；中文/日文/韩文仍保持包裹格式。
     if (frame || nameKey) {
@@ -152,7 +152,7 @@ export function achievementModule(ctx: ModuleContext): VNodeTree {
             名称: T(item.AchievementName ?? ""),
             分类: T(row(ctx, "AchievementType", item.AchievementType)?.AchievementTypeName ?? ""),
             品质: item.AchievementRarity ?? 0,
-            描述: describe ? LTemplate(describe, [String(completion)]) : "",
+            描述: describe ? LTemplate(describe, [String(completion)], false, "capitalized") : "",
             版本: versionOf(id),
             奖励: record(rewardEntries(ctx, Number(item.AchievementReward ?? 0))),
         })

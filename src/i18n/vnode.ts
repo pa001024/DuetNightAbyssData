@@ -49,9 +49,15 @@ export interface LTemplateNode {
     readonly values: VNode[]
     /** 是否按 SkillUtils.FormatDescValue1 规则格式化替换值 */
     readonly formatValues: boolean
-    readonly preserveHighlight?: boolean
+    readonly preserveHighlight?: boolean | "capitalized"
     readonly dollarOffset?: number
     readonly groups?: { hash?: VNode[]; dollar?: VNode[]; at?: VNode[] }
+}
+/** 按当前语言模板中 #N 的出现顺序输出对应值，用于描述与值数组必须同步排序的导出。 */
+export interface LTemplateValueOrderNode {
+    readonly __t: "ltValues"
+    readonly key: string
+    readonly values: VNodeTree[]
 }
 /** 固定语言文本 key（如 CV 名：日文CV 始终用 jp 文本，不随输出语言变） */
 export interface TFixedNode {
@@ -63,6 +69,31 @@ export interface TFixedNode {
 export interface TTrimNode {
     readonly __t: "ttrim"
     readonly key: string
+}
+/** 翻译后按精确映射替换文本，仅用于兼容已发布的字段名缩写。 */
+export interface TMapNode {
+    readonly __t: "tmap"
+    readonly key: string
+    readonly map: Readonly<Record<string, string>>
+}
+/** 字段段名：仅在当前语言的字段名尚未自带 [] 段名时补上。 */
+export interface TSectionNode {
+    readonly __t: "tsection"
+    readonly sectionKey: string
+    readonly key: string
+}
+/** 仅在指定语言渲染的片段，可用于语言相关的对象键。 */
+export interface TLangNode {
+    readonly __t: "tlang"
+    readonly value: VNode
+    readonly langs: readonly string[]
+}
+/** 翻译后替换文本，保留原始字符级处理规则。 */
+export interface TReplaceNode {
+    readonly __t: "treplace"
+    readonly key: string
+    readonly search: string
+    readonly replacement: string
 }
 export interface TUnlessEqualNode {
     readonly __t: "tne"
@@ -78,8 +109,13 @@ export type VNode =
     | IntNode
     | RecordNode
     | LTemplateNode
+    | LTemplateValueOrderNode
     | TFixedNode
     | TTrimNode
+    | TMapNode
+    | TSectionNode
+    | TLangNode
+    | TReplaceNode
     | TUnlessEqualNode
     | string
     | number
@@ -122,11 +158,16 @@ export function LTemplate(
     key: string,
     values: VNode[],
     formatValues = false,
-    preserveHighlight = false,
+    preserveHighlight: boolean | "capitalized" = false,
     dollarOffset = 0,
     groups?: { hash?: VNode[]; dollar?: VNode[]; at?: VNode[] }
 ): LTemplateNode {
     return { __t: "lt", key, values, formatValues, preserveHighlight, dollarOffset, groups }
+}
+
+/** 按渲染语言的 #N 占位符出现顺序输出值数组。 */
+export function LTemplateValueOrder(key: string, values: VNodeTree[]): LTemplateValueOrderNode {
+    return { __t: "ltValues", key, values }
 }
 
 /** 固定语言文本 key（CV 名等始终用指定语言文本，不随输出语言变） */
@@ -138,6 +179,27 @@ export function TFixed(key: string | null | undefined, lang: string): VNode {
 export function TTrim(key: string | null | undefined): VNode {
     if (!key) return ""
     return { __t: "ttrim", key }
+}
+
+/** 翻译后应用精确文本映射。 */
+export function TMap(key: string | null | undefined, map: Readonly<Record<string, string>>): VNode {
+    if (!key) return ""
+    return { __t: "tmap", key, map }
+}
+
+/** 对齐旧 Char 导出：字段译文未以 [ 开头时，才拼接所属 SkillDescGroups 段名。 */
+export function TSection(sectionKey: string, key: string): TSectionNode {
+    return { __t: "tsection", sectionKey, key }
+}
+
+export function TLang(value: VNode, langs: readonly string[]): TLangNode {
+    return { __t: "tlang", value, langs }
+}
+
+/** 翻译后替换首次出现的精确文本。 */
+export function TReplace(key: string | null | undefined, search: string, replacement: string): VNode {
+    if (!key) return ""
+    return { __t: "treplace", key, search, replacement }
 }
 
 export function TUnlessEqual(key: string, otherKey: string): TUnlessEqualNode {
@@ -203,6 +265,7 @@ function renderVNode(v: VNode, lang: string, textmap: TextMap): unknown {
             const out: Record<string, unknown> = {}
             for (const [k, val] of v.entries) {
                 const key = renderVNode(k, lang, textmap)
+                if (key === OMIT) continue
                 out[String(key)] = renderVNode(val, lang, textmap)
             }
             return out
@@ -211,6 +274,18 @@ function renderVNode(v: VNode, lang: string, textmap: TextMap): unknown {
             return textmap.get(v.key, v.lang)
         case "ttrim":
             return textmap.get(v.key, lang).trim()
+        case "tmap": {
+            const value = textmap.get(v.key, lang)
+            return v.map[value] ?? value
+        }
+        case "tsection": {
+            const value = textmap.get(v.key, lang)
+            return value.startsWith("[") ? value : `[${textmap.get(v.sectionKey, lang)}]${value}`
+        }
+        case "tlang":
+            return v.langs.includes(lang) ? renderVNode(v.value, lang, textmap) : OMIT
+        case "treplace":
+            return textmap.get(v.key, lang).replace(v.search, v.replacement)
         case "tne": {
             const value = textmap.get(v.key, lang)
             return value === textmap.get(v.otherKey, lang) ? OMIT : value
@@ -219,6 +294,7 @@ function renderVNode(v: VNode, lang: string, textmap: TextMap): unknown {
             // TextMap 模板（含 #N 占位）+ 值替换
             let template = textmap.get(v.key, lang)
             if (template === v.key) template = textmap.get(v.key, "cn")
+            const originalTemplate = template
             if (v.groups) {
                 for (const [marker, values] of [
                     ["#", v.groups.hash],
@@ -232,13 +308,14 @@ function renderVNode(v: VNode, lang: string, textmap: TextMap): unknown {
                         template = template.replace(new RegExp(`${marker}${i + 1}(?!\\d)`, "g"), value)
                     }
                 }
-                if (v.preserveHighlight) return template.replace(/\{int\}/gi, "")
+                if (v.preserveHighlight === true) return template.replace(/\{int\}/gi, "")
+                if (v.preserveHighlight === "capitalized") return template.replace(/<(?!Highlight>)[^>]*>/g, "").replace(/\{int\}/gi, "")
                 return template.replace(/<[^>]*>/g, "").replace(/\{int\}/gi, "")
             }
             for (let i = 0; i < v.values.length; i++) {
                 let val = String(renderVNode(v.values[i], lang, textmap) ?? "")
                 if (v.formatValues) {
-                    const cast = descValueCast(template, i + 1)
+                    const cast = descValueCast(template, i + 1, originalTemplate)
                     template = cast.template
                     val = formatDescValue1(val, cast.cast)
                 }
@@ -247,16 +324,25 @@ function renderVNode(v: VNode, lang: string, textmap: TextMap): unknown {
                 template = template.replace(new RegExp(`@${i + 1}(?!\\d)`, "g"), val)
             }
             // 移除高亮标签（对齐老代码）
-            if (v.preserveHighlight) return template.replace(/\{int\}/gi, "")
+            if (v.preserveHighlight === true) return template.replace(/\{int\}/gi, "")
+            if (v.preserveHighlight === "capitalized") return template.replace(/<(?!Highlight>)[^>]*>/g, "").replace(/\{int\}/gi, "")
             return template.replace(/<[^>]*>/g, "").replace(/\{int\}/gi, "")
+        }
+        case "ltValues": {
+            const values: unknown[] = []
+            for (const match of textmap.get(v.key, lang).matchAll(/#(\d+)(?!\d)/g)) {
+                const value = v.values[Number(match[1]) - 1]
+                if (value !== undefined) values.push(renderTree(value, lang, textmap))
+            }
+            return values
         }
     }
 }
 
-type DescCast = { kind: "int" } | { kind: "float"; decimals: number } | null
+type DescCast = { kind: "int" } | { kind: "float"; decimals: number } | { kind: "preserve" } | null
 
 /** 对齐 Script/Utils/SkillUtils.lua 的 ReplaceAndChekDescValueCast。 */
-function descValueCast(template: string, index: number): { template: string; cast: DescCast } {
+function descValueCast(template: string, index: number, originalTemplate = template): { template: string; cast: DescCast } {
     const marker = "[#@$]"
     const intRe = new RegExp(`\\{int\\}${marker}${index}(?!\\d)`, "i")
     if (intRe.test(template)) return { template: template.replace(intRe, `#${index}`), cast: { kind: "int" } }
@@ -268,11 +354,16 @@ function descValueCast(template: string, index: number): { template: string; cas
             cast: { kind: "float", decimals: Number(match[1]) },
         }
     }
+    // Python 先以 {floatN} 到 #N 的跨度标记该参数保留精度。若两者并不相邻，
+    // 后续格式替换不会消费该标记（如 {float4}+#2），因此值也不能回退为默认 1 位小数。
+    const distantFloatRe = new RegExp(`\\{float\\d+\\}[^#]*#${index}(?!\\d)`, "i")
+    if (distantFloatRe.test(originalTemplate)) return { template, cast: { kind: "preserve" } }
     return { template, cast: null }
 }
 
 /** 对齐 Lua FormatDescValue1：默认 1 位小数，int/float 标记覆盖默认精度。 */
 function formatDescValue1(value: string, cast: DescCast): string {
+    if (cast?.kind === "preserve") return value
     const match = value.match(/-?\d+\.?\d*/)
     if (!match) return value
     const numeric = Number(match[0])

@@ -1,7 +1,7 @@
 /** Title module - 称号及获取来源。 */
 
 import type { ModuleContext } from "../../core/Graph.ts"
-import { LTemplate, seq, T, type VNodeTree } from "../../i18n/vnode.ts"
+import { LTemplate, seq, T, TRaw, type VNodeTree } from "../../i18n/vnode.ts"
 
 function table(ctx: ModuleContext, name: string): Record<string, any> {
     const value = ctx.dm.getTable(name)
@@ -71,7 +71,7 @@ export function titleModule(ctx: ModuleContext): VNodeTree {
         const row = item as Record<string, any>
         const id = Number(row.TitleID ?? 0)
         if (!id) continue
-        const output: Record<string, VNodeTree> = { id, name: T(row.Name ?? ""), suf: Boolean(row.IfSuffix) }
+        const output: Record<string, VNodeTree> = { id, name: TRaw(row.Name ?? ""), suf: Boolean(row.IfSuffix) }
         const source = sources.get(String(id))
         if (source) {
             const value = sourceName(ctx, source)

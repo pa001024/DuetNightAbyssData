@@ -1,7 +1,7 @@
 /** Pet module - 魔灵基础信息及支援技能。 */
 
 import type { ModuleContext } from "../../core/Graph.ts"
-import { LTemplate, T, type VNodeTree } from "../../i18n/vnode.ts"
+import { LTemplate, LTemplateValueOrder, T, type VNodeTree } from "../../i18n/vnode.ts"
 import { roundValue } from "../skill/skillModule.ts"
 
 function table(ctx: ModuleContext, name: string): Record<string, any> {
@@ -59,16 +59,6 @@ function skillValues(ctx: ModuleContext, values: unknown): { values: number[][];
     return { values: result, markers }
 }
 
-function valuesByAppearance(ctx: ModuleContext, templateKey: string, values: number[][]): number[][] {
-    const template = ctx.textmap.get(templateKey, "cn")
-    const ordered: number[][] = []
-    for (const match of template.matchAll(/#(\d+)(?!\d)/g)) {
-        const index = Number(match[1]) - 1
-        if (index >= 0 && index < values.length) ordered.push(values[index])
-    }
-    return ordered.length > 0 ? ordered : values
-}
-
 function activeSkill(ctx: ModuleContext, skillId: number): Record<string, VNodeTree> | undefined {
     const skill = skillEntry(ctx, skillId)
     if (!skill?.SkillDesc) return undefined
@@ -76,7 +66,7 @@ function activeSkill(ctx: ModuleContext, skillId: number): Record<string, VNodeT
     const output: Record<string, VNodeTree> = {
         id: skill.SkillId ?? skillId,
         描述: LTemplate(String(skill.SkillDesc), computed.markers),
-        值: valuesByAppearance(ctx, String(skill.SkillDesc), computed.values),
+        值: LTemplateValueOrder(String(skill.SkillDesc), computed.values),
     }
     if (skill.CD) output.cd = skill.CD
     return output
@@ -87,7 +77,7 @@ function passiveSkill(ctx: ModuleContext, battlePet: Record<string, any>): Recor
     const computed = skillValues(ctx, battlePet.PassiveEffectDescParameter)
     return {
         描述: LTemplate(String(battlePet.PassiveEffectDesc), computed.markers),
-        值: valuesByAppearance(ctx, String(battlePet.PassiveEffectDesc), computed.values),
+        值: LTemplateValueOrder(String(battlePet.PassiveEffectDesc), computed.values),
     }
 }
 

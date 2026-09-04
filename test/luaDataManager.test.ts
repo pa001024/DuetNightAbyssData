@@ -76,11 +76,21 @@ describe("LuaDataManager", () => {
         expect(dm.materializedTableNames).not.toContain("Skill")
     })
 
-    test("召唤物效果索引在 Lua 内构建并返回 ID", () => {
+    test("召唤物效果索引包含已验证的静态 ID", () => {
         const dm = getLuaDataManager()
         const ids = dm.findSummonEffectIds()
         expect(ids).toContain(600401)
         expect(ids).toContain(210263)
+        for (const id of [180113, 310216, 310322, 310331, 430122, 430123, 430125]) {
+            expect(ids).toContain(id)
+        }
+    })
+
+    test("召唤物效果索引返回副本", () => {
+        const dm = new LuaDataManager()
+        const first = dm.findSummonEffectIds()
+        first.pop()
+        expect(dm.findSummonEffectIds().length).toBeGreaterThan(first.length)
     })
 
     test("Lua 表可直接读取（Fish）", () => {

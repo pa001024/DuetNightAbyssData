@@ -1,7 +1,7 @@
 /** Mod module - mod cards, attributes, passive descriptions and skill replacements. */
 
 import type { ModuleContext } from "../../core/Graph.ts"
-import { compile, LTemplate, T, type VNode, type VNodeTree } from "../../i18n/vnode.ts"
+import { compile, LTemplate, T, TMap, TReplace, type VNode, type VNodeTree } from "../../i18n/vnode.ts"
 import { AssetReader } from "../../lua/AssetReader.ts"
 import type { SkillArtifacts } from "../skill/skillModule.ts"
 import { P_MAP } from "../skill/skillModule.ts"
@@ -121,8 +121,7 @@ export async function modModule(ctx: ModuleContext): Promise<VNodeTree> {
         if (id < 100 || id > 999999) continue
         const level = Number(mod.MaxLevel ?? 0) + Number(mod.ModCardLevelMax ?? 0)
         const tag = tags[String(mod.ApplicationType)] ?? tags[mod.ApplicationType]
-        const tagTexts = sequence(tag?.ModTagText).map(value => ctx.textmap.get(String(value), "cn"))
-        const type = P_MAP[String(tagTexts[0] ?? "")] ?? String(tagTexts[0] ?? "")
+        const typeKey = String(sequence(tag?.ModTagText)[0] ?? "")
         const output: Row = {
             id,
             icon: String(mod.Icon ?? "")
@@ -130,14 +129,15 @@ export async function modModule(ctx: ModuleContext): Promise<VNodeTree> {
                 .split(".")[0],
             名称: T(String(mod.Name ?? "").replace("【待包装】", "")),
             版本: release(mod.ReleaseVersion ?? 100),
-            系列: String(ctx.textmap.get(String(mod.TypeName ?? ""), "cn")).replace("之", ""),
+            系列: TReplace(String(mod.TypeName ?? ""), "之", ""),
             品质: QUALITY[Math.max(0, Math.min(QUALITY.length - 1, Number(mod.Rarity ?? 1) - 1))],
         }
         const polarity = POLARITY[Math.max(0, Math.min(POLARITY.length - 1, Number(mod.Polarity ?? -1)))]
         if (polarity) output.极性 = polarity
-        if (tagTexts.length >= 2) output.属性 = String(tagTexts[1]).replace("属性", "").trim()
+        const attrKey = String(sequence(tag?.ModTagText)[1] ?? "")
+        if (attrKey) output.属性 = TReplace(attrKey, "属性", "")
         output.耐受 = Number(mod.Cost ?? 0) + level * Number(mod.CostChange ?? 1)
-        output.类型 = type
+        output.类型 = TMap(typeKey, P_MAP)
         if (mod.CardLevelNeedModId) output.消耗 = mod.CardLevelNeedModId
         for (const [attrIndex, attr] of sequence(mod.AddAttrs).entries()) {
             const attrRow = attr as Row

@@ -26,14 +26,14 @@ function typeName(ctx: ModuleContext, itemType: string, typeId: number): VNode {
     const item = row(ctx, itemType, typeId)
     if (!item) return ""
     if (itemType === "Weapon") return item.WeaponName ? T(item.WeaponName) : ""
-    if (itemType === "Mod") return seq([TTrim(item.TypeName ?? ""), TTrim(item.Name ?? "")])
+    if (itemType === "Mod") return seq([T(item.TypeName ?? ""), TTrim(item.Name ?? "")])
     if (itemType === "Draft") {
         const productType = String(item.ProductType ?? "")
         const productId = Number(item.ProductId ?? 0)
         if (!productType || !productId) return ""
         if (productType === "Mod") {
             const mod = row(ctx, "Mod", productId)
-            return mod ? seq([TTrim(mod.TypeName ?? ""), TTrim(mod.Name ?? "")]) : ""
+            return mod ? seq([T(mod.TypeName ?? ""), TTrim(mod.Name ?? "")]) : ""
         }
         if (productType === "Resource") {
             const resource = row(ctx, "Resource", productId)

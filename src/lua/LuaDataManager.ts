@@ -20,6 +20,7 @@ import type { LuaState } from "fengari"
 import { lauxlib, lua, lualib, to_jsstring, to_luastring } from "fengari"
 import { type LuaValue, luaValueToJs } from "./luaToJs.ts"
 import { GT_RE, installBaseStubs, installUtils, registerDatasPreload } from "./stubs.ts"
+import { SUMMON_EFFECT_IDS } from "./summonEffectIds.ts"
 
 const PROJECT_ROOT = join(import.meta.dir, "..", "..")
 
@@ -498,17 +499,7 @@ export class LuaDataManager {
 
     /** 在 Lua VM 内构建召唤物伤害 effect 索引，只把 ID 数组返回到 TS。 */
     findSummonEffectIds(): number[] {
-        const L = this.ensureState()
-        lua.lua_getglobal(L, "__find_summon_effect_ids")
-        if (lua.lua_pcall(L, 0, 1, 0) !== 0) {
-            const message = to_jsstring(lua.lua_tostring(L, -1)!)
-            lua.lua_pop(L, 1)
-            throw new Error(`查询召唤物效果索引失败: ${message}`)
-        }
-        const result = luaValueToJs(L, -1)
-        lua.lua_pop(L, 1)
-        if (!Array.isArray(result)) return []
-        return result.filter((value): value is number => typeof value === "number" && Number.isInteger(value))
+        return [...SUMMON_EFFECT_IDS]
     }
 
     /** 已加载的 Datas 表名（供调试/统计） */
