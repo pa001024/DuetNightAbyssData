@@ -276,6 +276,12 @@
         "content": "...The world beyond this island, mm.",
         "voice": "inv/Heitao/001/C85F4124",
         "npc": 790007
+      },
+      {
+        "id": "17758085662685145919",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0016_judian"
       }
     ]
   },
@@ -473,6 +479,12 @@
         "content": "Mm-hmm. Let's really make it stick this time!",
         "voice": "inv/Heitao/002/C85F4FBE",
         "npc": 790008
+      },
+      {
+        "id": "1725258573710195956",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "mute"
       }
     ]
   },
@@ -696,6 +708,12 @@
         "content": "Let's go back to the cave I was hiding in.",
         "voice": "inv/Heitao/003/C85F5DB0",
         "npc": 790008
+      },
+      {
+        "id": "1725258853360197968",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0026_maintheme_website"
       }
     ]
   },
@@ -886,6 +904,12 @@
         "content": "There's nothing to fear now — not anymore.",
         "voice": "inv/Heitao/004/C85F70E2",
         "npc": 790060
+      },
+      {
+        "id": "1725258907075198913",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0026_maintheme_website"
       }
     ]
   },
@@ -1279,6 +1303,12 @@
         "content": "(...And if I can be free...)",
         "voice": "inv/Fuluo/001/C8EC4184",
         "npc": 790088
+      },
+      {
+        "id": "1725246375878179820",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0167_story_fuluo_theme"
       }
     ]
   },
@@ -1663,6 +1693,12 @@
         "content": "No matter what happens... I love you. As I always have.",
         "voice": "inv/Fuluo/002/C8EC51C2",
         "npc": 790090
+      },
+      {
+        "id": "1775633123486592770",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0017_story_incave"
       }
     ]
   },
@@ -1909,6 +1945,12 @@
         "content": "Her final wish... Hilda...",
         "voice": "inv/Fuluo/003/C8EC5EE2",
         "npc": 790088
+      },
+      {
+        "id": "1775633162769893540",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0016_judian"
       }
     ]
   },
@@ -2238,6 +2280,18 @@
         "id": 80260415,
         "content": "Five days later",
         "voice": "inv/Fuluo/004/C8EC6C56"
+      },
+      {
+        "id": "17785737450511951404",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "mute"
+      },
+      {
+        "id": "177607137712010498191",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0036_story_renweidaozu"
       }
     ]
   },
@@ -3612,6 +3666,12 @@
         "content": "(You — have become a monster too.)",
         "voice": "inv/Tuosi/003/C89F7B28",
         "npc": 790036
+      },
+      {
+        "id": "17600797530901247325",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0081_scene_alchemyacademy"
       }
     ]
   },
@@ -3993,6 +4053,12 @@
         "content": "Don't worry, Blues. I'll keep my promise and see it through.",
         "voice": "inv/Tuosi/004/C89F8A94",
         "npc": 790029
+      },
+      {
+        "id": "17601720579201246281",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0040_story_enlike_death"
       }
     ]
   },
@@ -4486,6 +4552,12 @@
         "content": "I believe that, no matter the path you take, as long as you remain clear of mind and not led astray by falsehoods, you will find the right way in the end.",
         "voice": "inv/Nifu/001/C8B294E0",
         "npc": 91502
+      },
+      {
+        "id": "176008115203014305596",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0017_story_incave"
       }
     ]
   },
@@ -4798,6 +4870,12 @@
         "content": "For now... let us set aside the weight of our thoughts and savour this rare moment of peace together, over a pot of tea.",
         "voice": "inv/Nifu/002/C8B2A1AC",
         "npc": 91502
+      },
+      {
+        "id": "176008122481914927927",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0017_story_incave"
       }
     ]
   },
@@ -5203,6 +5281,12 @@
         "content": "Perhaps it's my age, but I do tend to be long-winded. I appreciate your patience — for keeping this old lady company and listening to my endless ramblings about the past.",
         "voice": "inv/Nifu/003/C8B2B436",
         "npc": 91502
+      },
+      {
+        "id": "176008127674215550093",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0071_lise_secret"
       }
     ]
   },
@@ -5558,6 +5642,12 @@
         "id": 80170445,
         "content": "(A dream laced with the sweet scent of wild berries, bathed in the golden warmth of sunlight, where perhaps, a hare flits playfully through the underbrush in the distance...)",
         "voice": "inv/Nifu/004/C8B2C3A2"
+      },
+      {
+        "id": "176008137938317415608",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0071_lise_secret"
       }
     ]
   },
@@ -7055,6 +7145,18 @@
         "content": "You'll see when we get there.",
         "voice": "inv/Kezhou/004/C8CC5FBC",
         "npc": 790067
+      },
+      {
+        "id": "1764761092028637139",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "mute"
+      },
+      {
+        "id": "17647598060221907423",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0117_scene_tingyayuan"
       }
     ]
   },
@@ -8771,6 +8873,12 @@
         "content": "Thank you for taking me out to see the stars tonight, {性别:Mr|Miss} Unicorn. Let's go home.",
         "voice": "inv/Feina/002/C865BAFE",
         "npc": 790017
+      },
+      {
+        "id": "17252443077681630",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0034_atomos_feina_home"
       }
     ]
   },
@@ -9026,6 +9134,12 @@
         "content": "I have the Great Magician, and I have you. I am more than content now.",
         "voice": "inv/Feina/003/C865CA40",
         "npc": 790017
+      },
+      {
+        "id": "1725258957911199915",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0034_atomos_feina_home"
       }
     ]
   },
@@ -10930,6 +11044,12 @@
         "id": 80270153,
         "content": "How wonderful... My Paradise is becoming more complete.",
         "npc": 790093
+      },
+      {
+        "id": "178832927078615095531",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0185_scene_aerkanuo_town"
       }
     ]
   },
@@ -11204,6 +11324,12 @@
         "id": 80270245,
         "content": "Ngh... I'm sorry...",
         "npc": 790092
+      },
+      {
+        "id": "178832934452916214442",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0185_scene_aerkanuo_town"
       }
     ]
   },
@@ -11471,6 +11597,12 @@
         "id": 80270342,
         "content": "Good night, Ada... the real Ada.",
         "npc": 790092
+      },
+      {
+        "id": "178833150146318451476",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0185_scene_aerkanuo_town"
       }
     ]
   },
@@ -11745,6 +11877,12 @@
         "id": 80090143,
         "content": "Hehehe, wanna play hide and seek? I bet you won't find me so easily this time!",
         "npc": 92301
+      },
+      {
+        "id": "176008440102828618603",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0033_story_humour"
       }
     ]
   },
@@ -11932,6 +12070,12 @@
         "id": 80090229,
         "content": "Next time you whip up a new drink, I'll tell you all about it!",
         "npc": 92301
+      },
+      {
+        "id": "176008445662029241616",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0033_story_humour"
       }
     ]
   },
@@ -13002,6 +13146,12 @@
         "content": "Come — no sense in lingering.",
         "voice": "inv/Fushu/001/C8C5BDB0",
         "npc": 790053
+      },
+      {
+        "id": "17647591425661233",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0110_story_fushu_theme"
       }
     ]
   },
@@ -13433,6 +13583,12 @@
         "content": "Heh. It's a promise.",
         "voice": "inv/Fushu/002/C8C5CF14",
         "npc": 790053
+      },
+      {
+        "id": "17647591904771524",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0110_story_fushu_theme"
       }
     ]
   },
@@ -13792,6 +13948,12 @@
         "content": "There's a stretch of water not far from here where Shouxing Squid tend to gather. Could you catch a few for me? It shouldn't prove too difficult.",
         "voice": "inv/Fushu/003/C8C5D772",
         "npc": 790054
+      },
+      {
+        "id": "1764759223485636953",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0110_story_fushu_theme"
       }
     ]
   },
@@ -14183,6 +14345,12 @@
         "content": "... Next time, pick a more fitting gift of apology, would you?",
         "voice": "inv/Fushu/004/C8C5EF3C",
         "npc": 790053
+      },
+      {
+        "id": "17647597740291272372",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0110_story_fushu_theme"
       }
     ]
   },
@@ -16493,6 +16661,12 @@
         "id": 80130131,
         "content": "Yale and Oliver — the unforgettable duo from Scarletriver. If you ever have the chance, why not pick up a few of their creations? Those Kaboom Spinners and Whizpop Fireworks sound like an absolute blast...",
         "voice": "inv/Yeer/001/C898ED9E"
+      },
+      {
+        "id": "176008143312118037889",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0016_judian"
       }
     ]
   },
@@ -16777,6 +16951,12 @@
         "id": 80130234,
         "content": "Yale hurries off — clearly, he's made up his mind to return Snap 'n' Spark to its rightful owner.",
         "voice": "inv/Yeer/002/C898FE84"
+      },
+      {
+        "id": "176008152749919281850",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0016_judian"
       }
     ]
   },
@@ -17212,6 +17392,12 @@
         "id": 80130347,
         "content": "Oliver sits restlessly, one leg bouncing non-stop. It looks like it'll be a while before Yale wakes up...",
         "voice": "inv/Yeer/003/C899110E"
+      },
+      {
+        "id": "176008162166121147628",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0024_story_pub"
       }
     ]
   },
@@ -17553,6 +17739,12 @@
         "id": 80130443,
         "content": "A seemingly endless day draws to a close. \n And what follows is not a night just as long — but the faint glimmer of dawn, rising at the edge of the sky.",
         "voice": "inv/Yeer/004/C89920CE"
+      },
+      {
+        "id": "176008169603322392013",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0017_story_incave"
       }
     ]
   },
@@ -17826,6 +18018,18 @@
         "id": 80280143,
         "content": "(By the time I understood what she had meant, it was already too late.)",
         "npc": 790094
+      },
+      {
+        "id": "17878145713164493439",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "mute_broadcast"
+      },
+      {
+        "id": "17881666516268388121",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0180_cs_intro_loop_ver"
       }
     ]
   },
@@ -18124,6 +18328,18 @@
         "id": 80280248,
         "content": "...I see. I understand.",
         "npc": 790097
+      },
+      {
+        "id": "17878158817825610447",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "mute_broadcast"
+      },
+      {
+        "id": "17881667279959505938",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0180_cs_intro_loop_ver"
       }
     ]
   },
@@ -18492,6 +18708,12 @@
         "id": 80280359,
         "content": "Wait for me, {nickname2}.",
         "npc": 790094
+      },
+      {
+        "id": "178816678216310623600",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0180_cs_intro_loop_ver"
       }
     ]
   },
@@ -18792,6 +19014,12 @@
         "content": "For reasons I would rather not share, I won't be introducing myself. Just think of me as a weary traveller, laden with troubles, seeking a drink strong enough to drown them for an hour.",
         "voice": "inv/Haier/001/C8AC28A4",
         "npc": 790055
+      },
+      {
+        "id": "17601725152201869432",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0016_judian"
       }
     ]
   },
@@ -21556,6 +21784,12 @@
         "id": 80120202,
         "content": "You decide to check on her...",
         "voice": "inv/Maer/002/C89290A4"
+      },
+      {
+        "id": "176008420383726750698",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0024_story_pub"
       }
     ]
   },
@@ -22085,6 +22319,12 @@
         "id": 80120358,
         "content": "\"Considering we share a last name, I hereby inscribe it on the bottom of this pot instead, which saves me the shame, and allows the stove fire to scorch your disgrace.\"",
         "voice": "inv/Maer/003/C892AA3C"
+      },
+      {
+        "id": "176008429880827373191",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0016_judian"
       }
     ]
   },
@@ -22518,6 +22758,12 @@
         "content": "...Alright, no more excuses! Next time Plumpytail and I meet again, I'll see her off with a smile!",
         "voice": "inv/Maer/004/C892B92A",
         "npc": 93301
+      },
+      {
+        "id": "176008434936427995784",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0016_judian"
       }
     ]
   },
@@ -23426,6 +23672,12 @@
         "content": "If you don't mind bearing with my clumsiness and would like to witness my change... I promise you this: once I find my own \"rhythm,\" I'll share it with you first, before anyone else.",
         "voice": "inv/Lise/003/C8A5DFD8",
         "npc": 790044
+      },
+      {
+        "id": "1758249927667934781",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "mute"
       }
     ]
   },
@@ -27603,6 +27855,12 @@
         "voice": "inv/Xibi/001/C8727936",
         "npc": 790015,
         "next": 800701271
+      },
+      {
+        "id": "1725259468464205017",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0043_story_empire"
       }
     ]
   },
@@ -27862,6 +28120,12 @@
         "content": "I appreciate your candour, Lynn. However modest, you have something worth fighting for — that's all that matters.",
         "voice": "inv/Xibi/002/C8728AEE",
         "npc": 790013
+      },
+      {
+        "id": "1725259813489206196",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0036_story_renweidaozu"
       }
     ]
   },
@@ -28109,6 +28373,12 @@
         "content": "While I may not offer comfort, I can guide you through resolving your doubts.",
         "voice": "inv/Xibi/003/C8729B02",
         "npc": 790013
+      },
+      {
+        "id": "1725259862283207188",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "mute"
       }
     ]
   },
@@ -28402,6 +28672,12 @@
         "content": "I'm full now. See you around!",
         "voice": "inv/Songlu/001/C86C12E2",
         "npc": 95101
+      },
+      {
+        "id": "176008235483123636444",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0024_story_pub"
       }
     ]
   },
@@ -28652,6 +28928,12 @@
         "content": "Well, I guess I should try even harder! I'm off to gather food with Filbert now! See you around — and don't forget to eat well!",
         "voice": "inv/Songlu/002/C86C224E",
         "npc": 95101
+      },
+      {
+        "id": "176008242309324259069",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0024_story_pub"
       }
     ]
   },
@@ -28939,6 +29221,12 @@
         "content": "I have to go now, {nickname}. See you next time!",
         "voice": "inv/Songlu/003/C86C335E",
         "npc": 95101
+      },
+      {
+        "id": "176008246779524881542",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0024_story_pub"
       }
     ]
   },
@@ -29278,6 +29566,12 @@
         "voice": "inv/Songlu/004/C86C4540",
         "npc": 95101,
         "next": 80060449
+      },
+      {
+        "id": "176008405759425504975",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0024_story_pub"
       }
     ]
   },
@@ -30468,6 +30762,12 @@
         "content": "Sure! I'll keep all this in mind. I'll ask for you next time I see {性别:him|her}.",
         "voice": "inv/Saiqi/001/C878E4A0",
         "npc": 790004
+      },
+      {
+        "id": "1725259200699203740",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0044_story_first_meet_saiqi_loop"
       }
     ]
   },
@@ -30820,6 +31120,12 @@
         "content": "Never mind...",
         "voice": "inv/Saiqi/002/C878F5B0",
         "npc": 790006
+      },
+      {
+        "id": "1725259081013202362",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0044_story_first_meet_saiqi_loop"
       }
     ]
   },
@@ -31130,6 +31436,12 @@
         "content": "Fate, grant me mercy just this once... allow me to help her fulfil this wish.",
         "voice": "inv/Saiqi/003/C879051C",
         "npc": 790005
+      },
+      {
+        "id": "1725259036826201498",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0039_story_saiqi_see_flower"
       }
     ]
   },
@@ -31786,6 +32098,12 @@
         "content": "And tell me <H>if you still stay true to your ideals.</>",
         "voice": "inv/Dafu/002/C8B90C1A",
         "npc": 790013
+      },
+      {
+        "id": "1760171867976500",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0036_story_renweidaozu"
       }
     ]
   },
@@ -32168,6 +32486,12 @@
         "content": "To find Captain {nickname2}, and make sure {性别2:he|she}'s safe.",
         "voice": "inv/Dafu/003/C8B91CD6",
         "npc": 790045
+      },
+      {
+        "id": "1760409524790776",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "mute"
       }
     ]
   }

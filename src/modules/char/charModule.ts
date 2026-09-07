@@ -882,7 +882,7 @@ function generateSkillBehavior(
     const attrConfig = () => (dm.getTable("AttrConfig") as Record<string, any>) || {}
     let bpAddBuff = BP_ADD_BUFF_CACHE.get(dm.root)
     if (!bpAddBuff) {
-        bpAddBuff = JSON.parse(readFileSync(join(dm.root, "processor", "BPAddBuff.json"), "utf8")) as Record<string, number[]>
+        bpAddBuff = JSON.parse(readFileSync(join(import.meta.dir, "data", "BPAddBuff.json"), "utf8")) as Record<string, number[]>
         BP_ADD_BUFF_CACHE.set(dm.root, bpAddBuff)
     }
     const entry = getSkillEntry(dm, skillId)

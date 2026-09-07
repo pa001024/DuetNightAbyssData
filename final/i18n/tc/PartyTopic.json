@@ -276,6 +276,12 @@
         "content": "……島外面啊。",
         "voice": "inv/Heitao/001/C85F4124",
         "npc": 790007
+      },
+      {
+        "id": "17758085662685145919",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0016_judian"
       }
     ]
   },
@@ -473,6 +479,12 @@
         "content": "嗯。這次要說話算話啊！",
         "voice": "inv/Heitao/002/C85F4FBE",
         "npc": 790008
+      },
+      {
+        "id": "1725258573710195956",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "mute"
       }
     ]
   },
@@ -696,6 +708,12 @@
         "content": "就去我剛才藏身的山洞吧。",
         "voice": "inv/Heitao/003/C85F5DB0",
         "npc": 790008
+      },
+      {
+        "id": "1725258853360197968",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0026_maintheme_website"
       }
     ]
   },
@@ -886,6 +904,12 @@
         "content": "沒什麼好怕的——已經沒什麼好怕的了。",
         "voice": "inv/Heitao/004/C85F70E2",
         "npc": 790060
+      },
+      {
+        "id": "1725258907075198913",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0026_maintheme_website"
       }
     ]
   },
@@ -1279,6 +1303,12 @@
         "content": "（……只要能得到自由……）",
         "voice": "inv/Fuluo/001/C8EC4184",
         "npc": 790088
+      },
+      {
+        "id": "1725246375878179820",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0167_story_fuluo_theme"
       }
     ]
   },
@@ -1663,6 +1693,12 @@
         "content": "無論發生什麼，我都是愛著你的。",
         "voice": "inv/Fuluo/002/C8EC51C2",
         "npc": 790090
+      },
+      {
+        "id": "1775633123486592770",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0017_story_incave"
       }
     ]
   },
@@ -1909,6 +1945,12 @@
         "content": "……最後的願望……希爾妲……",
         "voice": "inv/Fuluo/003/C8EC5EE2",
         "npc": 790088
+      },
+      {
+        "id": "1775633162769893540",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0016_judian"
       }
     ]
   },
@@ -2238,6 +2280,18 @@
         "id": 80260415,
         "content": "五日後",
         "voice": "inv/Fuluo/004/C8EC6C56"
+      },
+      {
+        "id": "17785737450511951404",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "mute"
+      },
+      {
+        "id": "177607137712010498191",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0036_story_renweidaozu"
       }
     ]
   },
@@ -3612,6 +3666,12 @@
         "content": "（你——也變成怪物了。）",
         "voice": "inv/Tuosi/003/C89F7B28",
         "npc": 790036
+      },
+      {
+        "id": "17600797530901247325",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0081_scene_alchemyacademy"
       }
     ]
   },
@@ -3993,6 +4053,12 @@
         "content": "放心吧，布魯斯。答應你的，我定然會做到。",
         "voice": "inv/Tuosi/004/C89F8A94",
         "npc": 790029
+      },
+      {
+        "id": "17601720579201246281",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0040_story_enlike_death"
       }
     ]
   },
@@ -4486,6 +4552,12 @@
         "content": "我相信，無論你的選擇為何，只要能夠保持清醒、不被虛假之物羈絆，便終會找到正確的道路。",
         "voice": "inv/Nifu/001/C8B294E0",
         "npc": 91502
+      },
+      {
+        "id": "176008115203014305596",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0017_story_incave"
       }
     ]
   },
@@ -4798,6 +4870,12 @@
         "content": "至於現在……就讓我們放下那些沉重的東西，一起將這壺茶飲盡，好好享受這來之不易的片刻安寧吧。",
         "voice": "inv/Nifu/002/C8B2A1AC",
         "npc": 91502
+      },
+      {
+        "id": "176008122481914927927",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0017_story_incave"
       }
     ]
   },
@@ -5203,6 +5281,12 @@
         "content": "許是因為上了年紀，我說話總是有些囉嗦，多謝你願意陪著我這個老人家，聽我絮絮叨叨地講這些往事。",
         "voice": "inv/Nifu/003/C8B2B436",
         "npc": 91502
+      },
+      {
+        "id": "176008127674215550093",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0071_lise_secret"
       }
     ]
   },
@@ -5558,6 +5642,12 @@
         "id": 80170445,
         "content": "（一個充滿著漿果的香氣和陽光的暖意——或許還有一隻調皮的野兔飛奔而過——的好夢。）",
         "voice": "inv/Nifu/004/C8B2C3A2"
+      },
+      {
+        "id": "176008137938317415608",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0071_lise_secret"
       }
     ]
   },
@@ -7055,6 +7145,18 @@
         "content": "等到了你就知道了。",
         "voice": "inv/Kezhou/004/C8CC5FBC",
         "npc": 790067
+      },
+      {
+        "id": "1764761092028637139",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "mute"
+      },
+      {
+        "id": "17647598060221907423",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0117_scene_tingyayuan"
       }
     ]
   },
@@ -8771,6 +8873,12 @@
         "content": "謝謝你今天陪我玩，獨角獸{性别:先生|小姐}。我們回家吧。",
         "voice": "inv/Feina/002/C865BAFE",
         "npc": 790017
+      },
+      {
+        "id": "17252443077681630",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0034_atomos_feina_home"
       }
     ]
   },
@@ -9026,6 +9134,12 @@
         "content": "我有大魔法師，還有你。現在的我啊，已經很滿足了。",
         "voice": "inv/Feina/003/C865CA40",
         "npc": 790017
+      },
+      {
+        "id": "1725258957911199915",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0034_atomos_feina_home"
       }
     ]
   },
@@ -10930,6 +11044,12 @@
         "id": 80270153,
         "content": "真好啊……我的樂園，正在變得更加完整。",
         "npc": 790093
+      },
+      {
+        "id": "178832927078615095531",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0185_scene_aerkanuo_town"
       }
     ]
   },
@@ -11204,6 +11324,12 @@
         "id": 80270245,
         "content": "嗚……對不起……",
         "npc": 790092
+      },
+      {
+        "id": "178832934452916214442",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0185_scene_aerkanuo_town"
       }
     ]
   },
@@ -11471,6 +11597,12 @@
         "id": 80270342,
         "content": "晚安，真正的「艾達」。",
         "npc": 790092
+      },
+      {
+        "id": "178833150146318451476",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0185_scene_aerkanuo_town"
       }
     ]
   },
@@ -11745,6 +11877,12 @@
         "id": 80090143,
         "content": "嘻嘻嘻，我們來玩捉迷藏吧，這次我可不會再被你輕鬆找到了！",
         "npc": 92301
+      },
+      {
+        "id": "176008440102828618603",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0033_story_humour"
       }
     ]
   },
@@ -11932,6 +12070,12 @@
         "id": 80090229,
         "content": "等你下次準備好新飲料了，我再講給你聽！",
         "npc": 92301
+      },
+      {
+        "id": "176008445662029241616",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0033_story_humour"
       }
     ]
   },
@@ -13002,6 +13146,12 @@
         "content": "時間不等人，即刻出發吧。",
         "voice": "inv/Fushu/001/C8C5BDB0",
         "npc": 790053
+      },
+      {
+        "id": "17647591425661233",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0110_story_fushu_theme"
       }
     ]
   },
@@ -13433,6 +13583,12 @@
         "content": "嗬，一言為定。",
         "voice": "inv/Fushu/002/C8C5CF14",
         "npc": 790053
+      },
+      {
+        "id": "17647591904771524",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0110_story_fushu_theme"
       }
     ]
   },
@@ -13792,6 +13948,12 @@
         "content": "離這裡不遠的水域中，常有壽星烏賊出沒，幫我釣些來，不難的吧！",
         "voice": "inv/Fushu/003/C8C5D772",
         "npc": 790054
+      },
+      {
+        "id": "1764759223485636953",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0110_story_fushu_theme"
       }
     ]
   },
@@ -14183,6 +14345,12 @@
         "content": "唉……下一次，換個道歉禮物吧。",
         "voice": "inv/Fushu/004/C8C5EF3C",
         "npc": 790053
+      },
+      {
+        "id": "17647597740291272372",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0110_story_fushu_theme"
       }
     ]
   },
@@ -16493,6 +16661,12 @@
         "id": 80130131,
         "content": "來自丹流城的耶爾和奥利弗，讓人印象深刻的奇怪組合，有空的話買一些小玩具吧，炸裂陀螺和飛高高煙花聽起來都很有趣……",
         "voice": "inv/Yeer/001/C898ED9E"
+      },
+      {
+        "id": "176008143312118037889",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0016_judian"
       }
     ]
   },
@@ -16777,6 +16951,12 @@
         "id": 80130234,
         "content": "耶爾急匆匆地跑開了，看來他下定決心想要把「劈里啪啦」還給那個突然出現的老店主。",
         "voice": "inv/Yeer/002/C898FE84"
+      },
+      {
+        "id": "176008152749919281850",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0016_judian"
       }
     ]
   },
@@ -17212,6 +17392,12 @@
         "id": 80130347,
         "content": "奥利弗非常焦慮地坐在椅子上抖著腿，看來等到耶爾甦醒，還需要一段時間……",
         "voice": "inv/Yeer/003/C899110E"
+      },
+      {
+        "id": "176008162166121147628",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0024_story_pub"
       }
     ]
   },
@@ -17553,6 +17739,12 @@
         "id": 80130443,
         "content": "漫長的白天過去，隨之而來的，並非是同樣漫長的黑夜，而天際邊緣，晨暉即將出現。",
         "voice": "inv/Yeer/004/C89920CE"
+      },
+      {
+        "id": "176008169603322392013",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0017_story_incave"
       }
     ]
   },
@@ -17826,6 +18018,18 @@
         "id": 80280143,
         "content": "（而當我開始思索這句話的意義時，一切都已太遲了。）",
         "npc": 790094
+      },
+      {
+        "id": "17878145713164493439",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "mute_broadcast"
+      },
+      {
+        "id": "17881666516268388121",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0180_cs_intro_loop_ver"
       }
     ]
   },
@@ -18124,6 +18328,18 @@
         "id": 80280248,
         "content": "……是嗎，我明白了。",
         "npc": 790097
+      },
+      {
+        "id": "17878158817825610447",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "mute_broadcast"
+      },
+      {
+        "id": "17881667279959505938",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0180_cs_intro_loop_ver"
       }
     ]
   },
@@ -18492,6 +18708,12 @@
         "id": 80280359,
         "content": "等著我，{nickname2}。",
         "npc": 790094
+      },
+      {
+        "id": "178816678216310623600",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0180_cs_intro_loop_ver"
       }
     ]
   },
@@ -18792,6 +19014,12 @@
         "content": "因為一些原因，我不會奉上自我介紹。你可以把我當作一個風塵僕僕的過路人，此刻瑣事纏身，需要一杯能暫忘憂愁的飲料。",
         "voice": "inv/Haier/001/C8AC28A4",
         "npc": 790055
+      },
+      {
+        "id": "17601725152201869432",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0016_judian"
       }
     ]
   },
@@ -21556,6 +21784,12 @@
         "id": 80120202,
         "content": "去看看吧……",
         "voice": "inv/Maer/002/C89290A4"
+      },
+      {
+        "id": "176008420383726750698",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0024_story_pub"
       }
     ]
   },
@@ -22085,6 +22319,12 @@
         "id": 80120358,
         "content": "「鑒於我們共用一個姓氏，我將你的名字刻於鍋底，既免於丟我的人，也能讓灶火灼燒你的恥辱。」",
         "voice": "inv/Maer/003/C892AA3C"
+      },
+      {
+        "id": "176008429880827373191",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0016_judian"
       }
     ]
   },
@@ -22518,6 +22758,12 @@
         "content": "……算了，不找藉口了！到下次，我和胖尾巴的下一次見面，我會笑著和它說再見的！",
         "voice": "inv/Maer/004/C892B92A",
         "npc": 93301
+      },
+      {
+        "id": "176008434936427995784",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0016_judian"
       }
     ]
   },
@@ -23426,6 +23672,12 @@
         "content": "如果你願意包容我的笨拙，見證我的改變……我向你約定，等我真正找到屬於自己的「節奏」，一定會最先分享給你。",
         "voice": "inv/Lise/003/C8A5DFD8",
         "npc": 790044
+      },
+      {
+        "id": "1758249927667934781",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "mute"
       }
     ]
   },
@@ -27603,6 +27855,12 @@
         "voice": "inv/Xibi/001/C8727936",
         "npc": 790015,
         "next": 800701271
+      },
+      {
+        "id": "1725259468464205017",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0043_story_empire"
       }
     ]
   },
@@ -27862,6 +28120,12 @@
         "content": "我欣賞你的坦誠，琳恩。雖然很微小，但你也有願意不斷為之攀登的目標，這便足夠了。",
         "voice": "inv/Xibi/002/C8728AEE",
         "npc": 790013
+      },
+      {
+        "id": "1725259813489206196",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0036_story_renweidaozu"
       }
     ]
   },
@@ -28109,6 +28373,12 @@
         "content": "我雖不會安慰你的情緒，但會給你解決困惑的手段。",
         "voice": "inv/Xibi/003/C8729B02",
         "npc": 790013
+      },
+      {
+        "id": "1725259862283207188",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "mute"
       }
     ]
   },
@@ -28402,6 +28672,12 @@
         "content": "我已經喝飽啦。改天見！",
         "voice": "inv/Songlu/001/C86C12E2",
         "npc": 95101
+      },
+      {
+        "id": "176008235483123636444",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0024_story_pub"
       }
     ]
   },
@@ -28652,6 +28928,12 @@
         "content": "嗯——不能再等啦！我和榛子現在就要去籌備糧食！改天再來找你玩，你也記得要多吃飯！",
         "voice": "inv/Songlu/002/C86C224E",
         "npc": 95101
+      },
+      {
+        "id": "176008242309324259069",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0024_story_pub"
       }
     ]
   },
@@ -28939,6 +29221,12 @@
         "content": "我得先走了，{nickname}，我們下次再見吧！",
         "voice": "inv/Songlu/003/C86C335E",
         "npc": 95101
+      },
+      {
+        "id": "176008246779524881542",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0024_story_pub"
       }
     ]
   },
@@ -29278,6 +29566,12 @@
         "voice": "inv/Songlu/004/C86C4540",
         "npc": 95101,
         "next": 80060449
+      },
+      {
+        "id": "176008405759425504975",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0024_story_pub"
       }
     ]
   },
@@ -30468,6 +30762,12 @@
         "content": "嗯，我記下了……下次有機會，我會幫大家問的。",
         "voice": "inv/Saiqi/001/C878E4A0",
         "npc": 790004
+      },
+      {
+        "id": "1725259200699203740",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0044_story_first_meet_saiqi_loop"
       }
     ]
   },
@@ -30820,6 +31120,12 @@
         "content": "算了……",
         "voice": "inv/Saiqi/002/C878F5B0",
         "npc": 790006
+      },
+      {
+        "id": "1725259081013202362",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0044_story_first_meet_saiqi_loop"
       }
     ]
   },
@@ -31130,6 +31436,12 @@
         "content": "命運啊……求你憐憫我唯一一次……讓我幫她實現這個願望吧。",
         "voice": "inv/Saiqi/003/C879051C",
         "npc": 790005
+      },
+      {
+        "id": "1725259036826201498",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0039_story_saiqi_see_flower"
       }
     ]
   },
@@ -31786,6 +32098,12 @@
         "content": "——告訴我，<H>你的理想依舊在嗎？</>",
         "voice": "inv/Dafu/002/C8B90C1A",
         "npc": 790013
+      },
+      {
+        "id": "1760171867976500",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0036_story_renweidaozu"
       }
     ]
   },
@@ -32168,6 +32486,12 @@
         "content": "去找{nickname2}隊長，確認{性别2:他|她}是否安全。",
         "voice": "inv/Dafu/003/C8B91CD6",
         "npc": 790045
+      },
+      {
+        "id": "1760409524790776",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "mute"
       }
     ]
   }

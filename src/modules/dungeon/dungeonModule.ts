@@ -80,10 +80,15 @@ class DungeonBuilder {
     private readonly asyncCombatMap = new Map<number, VNodeTree[]>()
     private readonly spawnSources = new Map<number, Row>()
     private readonly defenceWavesPerStage = new Map<number, number>()
+    private readonly rewardTable: Row
+    /** 历练界面/周常“委托列表”（SelectDungeon/WeeklySelectDungeon 的 DungeonList）与委托密函可选副本（WalnutSelectDungeon 的 DungeonId）：无论奖励如何都保留。 */
+    private readonly entryDungeonIds = new Set<number>()
 
     constructor(private readonly ctx: ModuleContext) {
         this.rewards = table(ctx, "ModDungeonMonReward")
         this.asyncCombat = rows(ctx.dm.getTable("AsyncCombat"))
+        this.buildEntryDungeonIds()
+        this.rewardTable = table(ctx, "Reward")
         this.monsterSpawns = table(ctx, "MonsterSpawn")
         this.monsterGroups = table(ctx, "MonsterGroup")
         this.monsterGroupSpawns = table(ctx, "MonsterGroupSpawn")
@@ -103,6 +108,27 @@ class DungeonBuilder {
                 const dungeonId = Number(item.DungeonId)
                 if (dungeonId && !this.spawnSources.has(dungeonId)) this.spawnSources.set(dungeonId, item)
             }
+    }
+
+    private buildEntryDungeonIds(): void {
+        const addList = (value: unknown): void => {
+            for (const id of list(value).map(Number)) if (id) this.entryDungeonIds.add(id)
+        }
+        // 历练界面各委托章节（SelectDungeon）与周常章节（WeeklySelectDungeon）的 DungeonList
+        for (const tableName of ["SelectDungeon", "WeeklySelectDungeon"])
+            for (const chapter of rows(this.ctx.dm.getTable(tableName))) addList(chapter.DungeonList)
+        // 委托密函（WalnutSelectDungeon）可选的副本
+        for (const entry of rows(this.ctx.dm.getTable("WalnutSelectDungeon"))) addList(entry.DungeonId)
+    }
+
+    /** 该奖励条目是否全部为铜币（Resource#101）。 */
+    private isCopperOnlyReward(rewardId: number): boolean {
+        const row = this.rewardTable[String(rewardId)]
+        if (!row) return false
+        const types = Array.isArray(row.Type) ? row.Type : [row.Type]
+        const ids = Array.isArray(row.Id) ? row.Id : [row.Id]
+        if (!types.length || types.length !== ids.length) return false
+        return types.every((type: unknown, index: number) => type === "Resource" && Number(ids[index]) === 101)
     }
 
     private buildModMaps(eliteRush: Row): void {
@@ -323,7 +349,7 @@ class DungeonBuilder {
         }
 
         const wavesPerStage = this.defenceWavesPerStage.get(dungeonId)
-        if ((type === "Defence" || type === "DefenceMove") && wavesPerStage !== undefined) item.wavesPerStage = wavesPerStage
+        if ((type === "Defence" || type === "DefenceMove") && wavesPerStage !== undefined) item.waves = wavesPerStage
 
         const condition = this.modConditions.get(dungeonId) ?? this.directModConditions.get(dungeonId)
         if (condition !== undefined) {
@@ -359,8 +385,15 @@ class DungeonBuilder {
         if (spawn.length) item.spawn = spawn
         if (has(dungeon, "DungeonReward")) {
             const rewards = list(dungeon.DungeonReward)
-            if (rewards.length === 1 && rewards[0] === 50100) return undefined
-            item.r = rewards
+            // 奖励 id 在 Reward 表中无对应 → 该条视为无奖励（50100 等空奖励位）；全为空则整个副本无奖励，不输出。
+            const validRewards = rewards.filter(id => this.rewardTable[String(Number(id))])
+            // 不在历练/周常委托列表、委托密函入口，也不属于灾厄/联袂演绎/SoloRaid 的副本：仅剩单条纯铜币（如 50900/51006）即无实际价值，不输出；
+            // 91701/90201 等多条铜币额度池不属于“只有铜币”，保留。
+            const fromEntry =
+                type === "IronSurvival" || type === "AsyncCombat" || type === "SoloRaid" || this.entryDungeonIds.has(dungeonId)
+            if (!fromEntry && (!validRewards.length || (validRewards.length === 1 && this.isCopperOnlyReward(Number(validRewards[0])))))
+                return undefined
+            item.r = validRewards
         } else if (type !== "AsyncCombat") return undefined
         if (has(dungeon, "DungeonWinMode")) item.win = dungeon.DungeonWinMode
         return item

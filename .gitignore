@@ -20,3 +20,4 @@ out_ts/
 src/_probe.ts
 .tmp/
 .cache/
+.venv/

@@ -276,6 +276,12 @@
         "content": "...섬 밖이라...",
         "voice": "inv/Heitao/001/C85F4124",
         "npc": 790007
+      },
+      {
+        "id": "17758085662685145919",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0016_judian"
       }
     ]
   },
@@ -473,6 +479,12 @@
         "content": "응. 이번에는 꼭 약속 지켜야 해!",
         "voice": "inv/Heitao/002/C85F4FBE",
         "npc": 790008
+      },
+      {
+        "id": "1725258573710195956",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "mute"
       }
     ]
   },
@@ -696,6 +708,12 @@
         "content": "내가 방금 숨어 있었던 동굴로 가자.",
         "voice": "inv/Heitao/003/C85F5DB0",
         "npc": 790008
+      },
+      {
+        "id": "1725258853360197968",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0026_maintheme_website"
       }
     ]
   },
@@ -886,6 +904,12 @@
         "content": "더 이상 두렵지 않아... 더 이상 두려운 건 없어.",
         "voice": "inv/Heitao/004/C85F70E2",
         "npc": 790060
+      },
+      {
+        "id": "1725258907075198913",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0026_maintheme_website"
       }
     ]
   },
@@ -1279,6 +1303,12 @@
         "content": "(...자유로워질 수만 있다면...)",
         "voice": "inv/Fuluo/001/C8EC4184",
         "npc": 790088
+      },
+      {
+        "id": "1725246375878179820",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0167_story_fuluo_theme"
       }
     ]
   },
@@ -1663,6 +1693,12 @@
         "content": "앞으로 무슨 일이 있어도, 엄마는 널 사랑한단다.",
         "voice": "inv/Fuluo/002/C8EC51C2",
         "npc": 790090
+      },
+      {
+        "id": "1775633123486592770",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0017_story_incave"
       }
     ]
   },
@@ -1909,6 +1945,12 @@
         "content": "...마지막 소망이라니... 힐다...",
         "voice": "inv/Fuluo/003/C8EC5EE2",
         "npc": 790088
+      },
+      {
+        "id": "1775633162769893540",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0016_judian"
       }
     ]
   },
@@ -2238,6 +2280,18 @@
         "id": 80260415,
         "content": "5일 후",
         "voice": "inv/Fuluo/004/C8EC6C56"
+      },
+      {
+        "id": "17785737450511951404",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "mute"
+      },
+      {
+        "id": "177607137712010498191",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0036_story_renweidaozu"
       }
     ]
   },
@@ -3612,6 +3666,12 @@
         "content": "(너도... 괴물이 되어버렸구나.)",
         "voice": "inv/Tuosi/003/C89F7B28",
         "npc": 790036
+      },
+      {
+        "id": "17600797530901247325",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0081_scene_alchemyacademy"
       }
     ]
   },
@@ -3993,6 +4053,12 @@
         "content": "걱정 마, 블루스. 네게 약속한 건 반드시 지킬 테니까.",
         "voice": "inv/Tuosi/004/C89F8A94",
         "npc": 790029
+      },
+      {
+        "id": "17601720579201246281",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0040_story_enlike_death"
       }
     ]
   },
@@ -4486,6 +4552,12 @@
         "content": "난 네가 어떤 선택을 하든, 깨어 있고 거짓된 것에 얽매이지 않는다면, 결국 올바른 길을 찾을 거라고 믿어.",
         "voice": "inv/Nifu/001/C8B294E0",
         "npc": 91502
+      },
+      {
+        "id": "176008115203014305596",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0017_story_incave"
       }
     ]
   },
@@ -4798,6 +4870,12 @@
         "content": "이제는... 무거운 것들은 내려놓고, 이 차나 한잔 하며 이 소중한 평화의 순간을 만끽하렴.",
         "voice": "inv/Nifu/002/C8B2A1AC",
         "npc": 91502
+      },
+      {
+        "id": "176008122481914927927",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0017_story_incave"
       }
     ]
   },
@@ -5203,6 +5281,12 @@
         "content": "나이를 먹어서 그런지 내가 말이 좀 많아졌네. 이야기를 들어줘서 고마워.",
         "voice": "inv/Nifu/003/C8B2B436",
         "npc": 91502
+      },
+      {
+        "id": "176008127674215550093",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0071_lise_secret"
       }
     ]
   },
@@ -5558,6 +5642,12 @@
         "id": 80170445,
         "content": "(아마도 열매 향기와 햇살의 따스함이 가득한 꿈... 그리고 장난스러운 토끼 한 마리가 뛰어다니는 꿈일 것이다.)",
         "voice": "inv/Nifu/004/C8B2C3A2"
+      },
+      {
+        "id": "176008137938317415608",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0071_lise_secret"
       }
     ]
   },
@@ -7055,6 +7145,18 @@
         "content": "가보면 알아.",
         "voice": "inv/Kezhou/004/C8CC5FBC",
         "npc": 790067
+      },
+      {
+        "id": "1764761092028637139",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "mute"
+      },
+      {
+        "id": "17647598060221907423",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0117_scene_tingyayuan"
       }
     ]
   },
@@ -8771,6 +8873,12 @@
         "content": "오늘 함께해줘서 고마워, 유니콘 {性别:오빠|언니}. 이제 집으로 가자.",
         "voice": "inv/Feina/002/C865BAFE",
         "npc": 790017
+      },
+      {
+        "id": "17252443077681630",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0034_atomos_feina_home"
       }
     ]
   },
@@ -9026,6 +9134,12 @@
         "content": "대마법사도 있고... 우리 둘도 함께 있잖아. 이걸로 만족해.",
         "voice": "inv/Feina/003/C865CA40",
         "npc": 790017
+      },
+      {
+        "id": "1725258957911199915",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0034_atomos_feina_home"
       }
     ]
   },
@@ -10930,6 +11044,12 @@
         "id": 80270153,
         "content": "훌륭해... 나의 낙원이, 더 완벽해지고 있어.",
         "npc": 790093
+      },
+      {
+        "id": "178832927078615095531",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0185_scene_aerkanuo_town"
       }
     ]
   },
@@ -11204,6 +11324,12 @@
         "id": 80270245,
         "content": "훌쩍... 미안해...",
         "npc": 790092
+      },
+      {
+        "id": "178832934452916214442",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0185_scene_aerkanuo_town"
       }
     ]
   },
@@ -11471,6 +11597,12 @@
         "id": 80270342,
         "content": "좋은 꿈 꿔, 진짜 '아이다'.",
         "npc": 790092
+      },
+      {
+        "id": "178833150146318451476",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0185_scene_aerkanuo_town"
       }
     ]
   },
@@ -11745,6 +11877,12 @@
         "id": 80090143,
         "content": "히히히, 우리 숨바꼭질하고 놀자. 이번에는 찾기 힘들걸!",
         "npc": 92301
+      },
+      {
+        "id": "176008440102828618603",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0033_story_humour"
       }
     ]
   },
@@ -11932,6 +12070,12 @@
         "id": 80090229,
         "content": "다음에 새로운 음료수를 준비해 주면, 또 이야기해 줄게!",
         "npc": 92301
+      },
+      {
+        "id": "176008445662029241616",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0033_story_humour"
       }
     ]
   },
@@ -13002,6 +13146,12 @@
         "content": "그러면 여기서 이럴 게 아니라, 지금 바로 출발하죠.",
         "voice": "inv/Fushu/001/C8C5BDB0",
         "npc": 790053
+      },
+      {
+        "id": "17647591425661233",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0110_story_fushu_theme"
       }
     ]
   },
@@ -13433,6 +13583,12 @@
         "content": "후후, 그럼 약속한 거예요.",
         "voice": "inv/Fushu/002/C8C5CF14",
         "npc": 790053
+      },
+      {
+        "id": "17647591904771524",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0110_story_fushu_theme"
       }
     ]
   },
@@ -13792,6 +13948,12 @@
         "content": "이 근처에 있는 물가에 수성 오징어가 자주 나타나거든. 나 대신 몇 마리만 낚아 와 줘. 별로 안 어렵지!",
         "voice": "inv/Fushu/003/C8C5D772",
         "npc": 790054
+      },
+      {
+        "id": "1764759223485636953",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0110_story_fushu_theme"
       }
     ]
   },
@@ -14183,6 +14345,12 @@
         "content": "에휴... 다음엔 화해의 선물로 다른 걸 줘야겠네.",
         "voice": "inv/Fushu/004/C8C5EF3C",
         "npc": 790053
+      },
+      {
+        "id": "17647597740291272372",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0110_story_fushu_theme"
       }
     ]
   },
@@ -16493,6 +16661,12 @@
         "id": 80130131,
         "content": "스칼렛의 예일과 올리버, 인상 깊은 콤비다. 여유로울 때 작은 장난감 몇 개를 사보자. 폭발 팽이와 하늘높이 폭죽 모두 꽤 흥미가 당긴다...",
         "voice": "inv/Yeer/001/C898ED9E"
+      },
+      {
+        "id": "176008143312118037889",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0016_judian"
       }
     ]
   },
@@ -16777,6 +16951,12 @@
         "id": 80130234,
         "content": "예일은 급히 뛰어나가 버렸다. 아무래도 그는 '우르르쾅쾅'을 갑자기 나타난 그 옛 주인에게 돌려주기로 마음먹은 것 같다. ",
         "voice": "inv/Yeer/002/C898FE84"
+      },
+      {
+        "id": "176008152749919281850",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0016_judian"
       }
     ]
   },
@@ -17212,6 +17392,12 @@
         "id": 80130347,
         "content": "올리버가 매우 초조해하며 의자에 앉아 다리를 떨고 있다. 예일이 깨어나려면 시간이 좀 더 필요한 것 같다... ",
         "voice": "inv/Yeer/003/C899110E"
+      },
+      {
+        "id": "176008162166121147628",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0024_story_pub"
       }
     ]
   },
@@ -17553,6 +17739,12 @@
         "id": 80130443,
         "content": "긴 낮이 지나간 후 찾아오는 건, 똑같은 긴 밤이 아니다.\n 먼 하늘 언저리, 아침 햇살이 곧 찾아올 것이다.",
         "voice": "inv/Yeer/004/C89920CE"
+      },
+      {
+        "id": "176008169603322392013",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0017_story_incave"
       }
     ]
   },
@@ -17826,6 +18018,18 @@
         "id": 80280143,
         "content": "(그리고 그 말에 담긴 의미를 깨닫기 시작했을 땐, 이미 모든 것이 너무 늦어 버린 뒤였다.)",
         "npc": 790094
+      },
+      {
+        "id": "17878145713164493439",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "mute_broadcast"
+      },
+      {
+        "id": "17881666516268388121",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0180_cs_intro_loop_ver"
       }
     ]
   },
@@ -18124,6 +18328,18 @@
         "id": 80280248,
         "content": "...그렇군요. 알겠습니다.",
         "npc": 790097
+      },
+      {
+        "id": "17878158817825610447",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "mute_broadcast"
+      },
+      {
+        "id": "17881667279959505938",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0180_cs_intro_loop_ver"
       }
     ]
   },
@@ -18492,6 +18708,12 @@
         "id": 80280359,
         "content": "기다려 줘, {nickname2}.",
         "npc": 790094
+      },
+      {
+        "id": "178816678216310623600",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0180_cs_intro_loop_ver"
       }
     ]
   },
@@ -18792,6 +19014,12 @@
         "content": "이런저런 이유로 인해, 내 소개는 생략하겠다. 날 긴 여정에 지친 행인으로 생각해도 좋아. 지금은 번잡한 일들이 많아서, 근심을 잊게 해줄 음료를 한잔해야겠군.",
         "voice": "inv/Haier/001/C8AC28A4",
         "npc": 790055
+      },
+      {
+        "id": "17601725152201869432",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0016_judian"
       }
     ]
   },
@@ -21556,6 +21784,12 @@
         "id": 80120202,
         "content": "(한번 가보자...)",
         "voice": "inv/Maer/002/C89290A4"
+      },
+      {
+        "id": "176008420383726750698",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0024_story_pub"
       }
     ]
   },
@@ -22085,6 +22319,12 @@
         "id": 80120358,
         "content": "우리가 같은 성을 쓰는 걸 고려해, 네 이름을 냄비 바닥에 새겼다. 이러면 내 체면을 지키면서도, 불꽃이 네 치욕을 지져버릴 수 있겠지.\"",
         "voice": "inv/Maer/003/C892AA3C"
+      },
+      {
+        "id": "176008429880827373191",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0016_judian"
       }
     ]
   },
@@ -22518,6 +22758,12 @@
         "content": "좋아요, 더는 변명하지 않을게요. 다음에 팻테일을 만나면 웃으면서 작별 인사를 할 수 있을 거예요!",
         "voice": "inv/Maer/004/C892B92A",
         "npc": 93301
+      },
+      {
+        "id": "176008434936427995784",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0016_judian"
       }
     ]
   },
@@ -23426,6 +23672,12 @@
         "content": "제 서툰 모습을 받아주고, 변화하는 저를 지켜봐준다면... 제가 진정한 '리듬'을 찾았을 때, 가장 먼저 당신에게 알려줄게요.",
         "voice": "inv/Lise/003/C8A5DFD8",
         "npc": 790044
+      },
+      {
+        "id": "1758249927667934781",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "mute"
       }
     ]
   },
@@ -27603,6 +27855,12 @@
         "voice": "inv/Xibi/001/C8727936",
         "npc": 790015,
         "next": 800701271
+      },
+      {
+        "id": "1725259468464205017",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0043_story_empire"
       }
     ]
   },
@@ -27862,6 +28120,12 @@
         "content": "난 네 솔직함이 맘에 든다, 린. 비록 작지만, 네게도 계속 좇을 목표가 있으니 그걸로 충분하다.",
         "voice": "inv/Xibi/002/C8728AEE",
         "npc": 790013
+      },
+      {
+        "id": "1725259813489206196",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0036_story_renweidaozu"
       }
     ]
   },
@@ -28109,6 +28373,12 @@
         "content": "네 감정을 위로해 주지는 않겠지만, 의문을 해결할 수단은 알려줄 수 있을 거다.",
         "voice": "inv/Xibi/003/C8729B02",
         "npc": 790013
+      },
+      {
+        "id": "1725259862283207188",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "mute"
       }
     ]
   },
@@ -28402,6 +28672,12 @@
         "content": "다 마셨다. 다음에 봐!",
         "voice": "inv/Songlu/001/C86C12E2",
         "npc": 95101
+      },
+      {
+        "id": "176008235483123636444",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0024_story_pub"
       }
     ]
   },
@@ -28652,6 +28928,12 @@
         "content": "휴, 더는 안 되겠어! 헤이즐넛과 지금 당장 식량을 모으러 가야겠어! 다음에 또 올게. 너도 밥 잘 챙겨 먹고!",
         "voice": "inv/Songlu/002/C86C224E",
         "npc": 95101
+      },
+      {
+        "id": "176008242309324259069",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0024_story_pub"
       }
     ]
   },
@@ -28939,6 +29221,12 @@
         "content": "난 먼저 가볼게. {nickname}, 다음에 또 보자!",
         "voice": "inv/Songlu/003/C86C335E",
         "npc": 95101
+      },
+      {
+        "id": "176008246779524881542",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0024_story_pub"
       }
     ]
   },
@@ -29278,6 +29566,12 @@
         "voice": "inv/Songlu/004/C86C4540",
         "npc": 95101,
         "next": 80060449
+      },
+      {
+        "id": "176008405759425504975",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0024_story_pub"
       }
     ]
   },
@@ -30468,6 +30762,12 @@
         "content": "응, 기억해둘게... 다음에 물어봐 줄게.",
         "voice": "inv/Saiqi/001/C878E4A0",
         "npc": 790004
+      },
+      {
+        "id": "1725259200699203740",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0044_story_first_meet_saiqi_loop"
       }
     ]
   },
@@ -30820,6 +31120,12 @@
         "content": "휴, 뭐 어때...",
         "voice": "inv/Saiqi/002/C878F5B0",
         "npc": 790006
+      },
+      {
+        "id": "1725259081013202362",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0044_story_first_meet_saiqi_loop"
       }
     ]
   },
@@ -31130,6 +31436,12 @@
         "content": "운명의 신이시여... 부디 한 번만 절 불쌍히 여기시어... 이 아이의 소원을 이룰 수 있게 해주십시오.",
         "voice": "inv/Saiqi/003/C879051C",
         "npc": 790005
+      },
+      {
+        "id": "1725259036826201498",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0039_story_saiqi_see_flower"
       }
     ]
   },
@@ -31786,6 +32098,12 @@
         "content": "그리고 말해. <H>네 이상이 여전히 건재한지</> 말이야.",
         "voice": "inv/Dafu/002/C8B90C1A",
         "npc": 790013
+      },
+      {
+        "id": "1760171867976500",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "0036_story_renweidaozu"
       }
     ]
   },
@@ -32168,6 +32486,12 @@
         "content": "{nickname2} 대장님을 찾으러 갈 거예요. 무사하신지 확인해야죠.",
         "voice": "inv/Dafu/003/C8B91CD6",
         "npc": 790045
+      },
+      {
+        "id": "1760409524790776",
+        "type": "PlayOrStopBGMNode",
+        "name": "BGM节点",
+        "resource": "mute"
       }
     ]
   }
