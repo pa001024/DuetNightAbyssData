@@ -98,6 +98,11 @@ tsc --noEmit
 
 # 独立导出剧情媒体文件（不属于主 out CLI）
 bun run src/tools/exportStoryMedia.ts
+
+# 独立 agent：逐 QuestChain 生成剧情 AI 总结（storysummary，非主 out CLI；仅生成缺失/变更项，
+# 输出 final/i18n/cn/storySummary.json，配置见 .env 的 STORY_SUMMARY_*）
+bun run src/tools/storySummary/agent.ts --dry-run   # 测试/演练：只报告，不调用任何 API
+bun run src/tools/storySummary/agent.ts             # 真实生成（前置: bun out -f QuestChain QuestStory）
 ```
 
 `bun run lint` 当前会执行 `biome check --write && tsc --noEmit`，可能改写格式；运行前先确认
