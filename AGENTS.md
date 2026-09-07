@@ -18,9 +18,11 @@ TypeScript 流水线直接从游戏 Lua/资产数据构建多语言导出，不�
 
 ```text
 src/cli.ts
-  -> 模块注册与目标解析
+  -> 插件发现（src/modules/*/register.ts）与目标解析
 src/core/Graph.ts
   -> 依赖拓扑、环检测、一次性 build、artifacts 共享
+src/core/plugin.ts
+  -> 插件契约（ModulePlugin）与目录级自动发现/校验
 src/lua/LuaDataManager.ts
   -> Fengari 常驻 Lua state，读取 Script/Datas/*.lua，调用 Script/Utils/*.lua
 src/modules/*
@@ -35,8 +37,10 @@ src/output/OutputCollector.ts
 
 - `skill` 是共享的纯依赖模块，不直接输出文件；它暴露技能数值计算、字段解释、战斗元数据和
   实体/子技能等 artifacts。`char`、`weapon` 依赖 `skill`。
-- 其他领域模块在 `src/cli.ts` 的 registry 中注册；模块返回单个 vnode 树或
-  `{ 文件名: vnode 树 }`。新增模块必须显式注册，并声明真实依赖。
+- 领域模块以插件形式注册：每个模块目录 `src/modules/<dir>/register.ts` 导出
+  `plugins: ModulePlugin[]`（契约见 `src/core/plugin.ts`），主程序只做目录级自动发现，
+  不静态 import 具体模块。模块返回单个 vnode 树或 `{ 文件名: vnode 树 }`；
+  新增模块只需新增目录与 register.ts，无需修改主程序，但必须声明真实依赖。
 - Graph 只负责构建顺序和 artifacts 传递，不应被模块绕过来重复解析同一依赖。
 - 模块 build 阶段必须语言无关：名称、描述和模板使用 `T`、`LTemplate`、`compile` 等 vnode
   表达；语言选择只发生在输出阶段。

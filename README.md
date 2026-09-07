@@ -34,7 +34,7 @@ bun run src/cli.ts --list
 bun run src/cli.ts -f Weapon Char --langs cn,en
 ```
 
-模块名按 CLI 注册表中的规范名称传入，`-f/--file-types` 匹配时不区分大小写。
+模块名按插件注册表中的规范名称传入（各模块目录 `src/modules/*/register.ts` 自动登记，主程序不再维护静态清单），`-f/--file-types` 匹配时不区分大小写。
 
 ## UAsset 缓存
 
