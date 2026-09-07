@@ -8,6 +8,7 @@
     "diff:cn": "bun run src/tools/diffFinal.ts --lang cn",
     "out": "bun run src/cli.ts",
     "export:maps": "bun run src/tools/exportMaps.ts",
+    "copytrans": "bun run src/tools/copyTranslation.ts",
     "warmup": "bun run src/cli.ts --warmup",
     "lint": "biome check --write && tsc --noEmit",
     "fmt": "biome check --write --linter-enabled=false"

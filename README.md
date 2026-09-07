@@ -56,6 +56,26 @@ bun run src/cli.ts -v eb0af1e4
 该版本的 `Script/` 会先用 `git archive` 物化到 `.cache/script-snapshots/<version>-<commit>/`
 （按 commit 缓存，重复运行直接复用），输出仍写入 `final/i18n/`。
 
+## 翻译词典同步（copytrans）
+
+`final/i18n/<lang>/translation.json` 是网页端（dna-builder）维护的"中文 → 各语言"术语/文案
+词典，历史上由 `copy.tran.bat` + `create_translation.py` 维护。TS 工具 `src/tools/copyTranslation.ts`
+等价移植：
+
+```sh
+# 仅重建 final/i18n 各语言 translation.json（读各语言导出、以 cn 为键源按 id 对齐合并更新）
+bun run copytrans
+# 外部网页 i18n 目录往返：拉取 → 重建 → 推回（路径也可用环境变量 DNA_BUILDER_DIR）
+bun run copytrans --web D:/path/to/dna-builder/public/i18n
+bun run copytrans --web <dir> --pull-only     # 只拉取
+bun run copytrans --web <dir> --push-only     # 只推回
+bun run copytrans --gen-only                  # 显式只重建
+```
+
+重建逻辑与 python 原版一致：`ALLOW_TYPES` / `FIELD_CONFIG` / `EX_FIELDS` / `EX_T`（含角色标签）
+配置原样迁移，查词用的 TextMap 数据直接取自当前 Lua（`Script/Datas/TextMap_I18n.lua`），
+不再依赖已删除的 `out/TextMap_I18n.json`。`--final <dir>` 可覆盖 i18n 根（供测试）。
+
 ## UAsset 缓存
 
 动画、地图等资产解析结果会缓存到 `.cache/uasset.duckdb`。解包资产更新后可清空并按实际导出流程预热缓存：
