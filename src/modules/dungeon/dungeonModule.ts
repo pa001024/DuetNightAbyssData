@@ -79,6 +79,7 @@ class DungeonBuilder {
     private readonly eliteRushDungeonIds = new Set<number>()
     private readonly asyncCombatMap = new Map<number, VNodeTree[]>()
     private readonly spawnSources = new Map<number, Row>()
+    private readonly defenceWavesPerStage = new Map<number, number>()
 
     constructor(private readonly ctx: ModuleContext) {
         this.rewards = table(ctx, "ModDungeonMonReward")
@@ -90,6 +91,13 @@ class DungeonBuilder {
         this.ironSurvival = table(ctx, "IronSurvival")
         this.buildModMaps(table(ctx, "EliteRushSelectDungeon"))
         this.buildAsyncCombatMap()
+        for (const tableName of ["Defence", "DefenceMove"])
+            for (const item of rows(ctx.dm.getTable(tableName))) {
+                const dungeonId = Number(item.DungeonId)
+                if (!dungeonId) continue
+                // BP_DefenceComponent_C defaults WavesPerStage to 3 when omitted.
+                this.defenceWavesPerStage.set(dungeonId, item.WavesPerStage || 3)
+            }
         for (const name of SPAWN_TABLES)
             for (const item of rows(ctx.dm.getTable(name))) {
                 const dungeonId = Number(item.DungeonId)
@@ -313,6 +321,9 @@ class DungeonBuilder {
             lv: dungeon.DungeonLevel ?? 0,
             rd: dungeon.IsRandom ?? 0,
         }
+
+        const wavesPerStage = this.defenceWavesPerStage.get(dungeonId)
+        if ((type === "Defence" || type === "DefenceMove") && wavesPerStage !== undefined) item.wavesPerStage = wavesPerStage
 
         const condition = this.modConditions.get(dungeonId) ?? this.directModConditions.get(dungeonId)
         if (condition !== undefined) {

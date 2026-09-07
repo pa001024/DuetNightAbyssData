@@ -15,6 +15,31 @@ interface ProcessedNodes {
     incomingMap: Map<string, string[]>
 }
 
+function mediaResource(value: unknown): string | undefined {
+    if (typeof value !== "string" || !value) return undefined
+    const quoted = value.match(/'([^']+)'/)?.[1]
+    return (quoted ?? value).replaceAll("\\", "/") || undefined
+}
+
+function mediaResourceName(resource: string): string {
+    return resource.split(/[./]/).at(-1)?.replaceAll("'", "") ?? ""
+}
+
+function storyMediaNode(nodeId: string, node: Row): Row | undefined {
+    const props = row(node.propsData) ?? {}
+    if (node.type === "VideoNode") {
+        const resource = mediaResource(props.MediaSourceRef)
+        if (!resource) return undefined
+        return { id: nodeId, type: "VideoNode", name: node.name ?? "", resource: mediaResourceName(resource) }
+    }
+    if (node.type === "PlayOrStopBGMNode" && Number(props.SoundStateType) === 0) {
+        const resource = mediaResource(props.SoundPath)
+        if (!resource) return undefined
+        return { id: nodeId, type: "PlayOrStopBGMNode", name: node.name ?? "", resource: mediaResourceName(resource) }
+    }
+    return undefined
+}
+
 interface GuidePoints {
     values: Row
     ambiguous: Set<string>
@@ -325,11 +350,36 @@ function processNodes(
             }
         }
     }
+    // Media nodes without a valid incoming edge are standalone outputs. Keep
+    // them without expanding other unreachable node types.
+    for (const parent of parents) {
+        const questData = row(parent.questNodeData)
+        const nodeData = row(questData?.nodeData) ?? {}
+        const edges = Array.isArray(questData?.lineData) ? questData.lineData.map(row).filter((v): v is Row => !!v) : []
+        const incomingKeys = new Set<string>()
+        const outgoingByStart = new Map<string, string[]>()
+        for (const edge of edges) {
+            if (!validEdge(edge)) continue
+            const end = String(edge.endQuest ?? "")
+            if (end) incomingKeys.add(end)
+            const start = String(edge.startQuest ?? "")
+            if (start && end) outgoingByStart.set(start, [...(outgoingByStart.get(start) ?? []), end])
+        }
+        for (const [key, value] of Object.entries(nodeData)) {
+            const node = row(value)
+            const nodeId = String(node?.key ?? key)
+            if (!node || incomingKeys.has(key) || incomingKeys.has(nodeId) || !storyMediaNode(nodeId, node)) continue
+            const outgoing = outgoingByStart.get(nodeId) ?? outgoingByStart.get(key) ?? []
+            nextMap.set(nodeId, outgoing)
+            const built = buildNode(ctx, dialogue, nodeId, node, parent, guidePoints, questions, answers, outgoing)
+            if (built && !result.some(existing => String(existing.id) === nodeId)) result.push(built)
+        }
+    }
     const hasOrderedNodes = result.length > 0
     for (const parent of parents) {
-        if (parent.type !== "TalkNode") continue
+        if (parent.type !== "TalkNode" && !storyMediaNode(String(parent.key ?? parent.name ?? ""), parent)) continue
         const props = row(parent.propsData) ?? {}
-        if (props.FirstDialogueId || props.FlowAssetPath) {
+        if (props.FirstDialogueId || props.FlowAssetPath || storyMediaNode(String(parent.key ?? parent.name ?? ""), parent)) {
             const built = buildNode(
                 ctx,
                 dialogue,
@@ -431,6 +481,14 @@ function buildNode(
     next: string[] = []
 ): Row | undefined {
     const type = node.type
+    const media = storyMediaNode(nodeId, node)
+    if (media) {
+        if (next.length > 0) media.next = [...next]
+        const point = pointForNode(guidePoints, node, context)
+        if (point.srId !== undefined) media.srId = point.srId
+        if (point.pos) media.pos = point.pos
+        return media
+    }
     if (type !== "TalkNode" && type !== "UnlockDetectiveQuestionNode" && type !== "UnlockDetectiveAnswerNode") return undefined
     const output: Row = { id: nodeId, type, name: node.name ?? "" }
     const point = pointForNode(guidePoints, node, context)

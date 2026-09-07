@@ -22,6 +22,35 @@ function sortedKeys(value: Row): string[] {
     })
 }
 
+function mediaResource(value: unknown): string | undefined {
+    if (typeof value !== "string" || !value) return undefined
+    const quoted = value.match(/'([^']+)'/)?.[1]
+    return (quoted ?? value).replaceAll("\\", "/") || undefined
+}
+
+function mediaResourceName(resource: string): string {
+    return resource.split(/[./]/).at(-1)?.replaceAll("'", "") ?? ""
+}
+
+export function storyMediaNode(nodeId: string, node: Row): Row | undefined {
+    const props = node.propsData && typeof node.propsData === "object" ? node.propsData : {}
+    if (node.type === "VideoNode") {
+        const resource = mediaResource(props.MediaSourceRef)
+        if (!resource) return undefined
+        return { id: nodeId, type: "VideoNode", name: node.name ?? "", resource: mediaResourceName(resource) }
+    }
+    if (node.type === "PlayOrStopBGMNode" && Number(props.SoundStateType) === 0) {
+        const resource = mediaResource(props.SoundPath)
+        if (!resource) return undefined
+        return { id: nodeId, type: "PlayOrStopBGMNode", name: node.name ?? "", resource: mediaResourceName(resource) }
+    }
+    return undefined
+}
+
+function isStoryOutputNode(node: Row | undefined): node is Row {
+    return node?.type === "TalkNode" || storyMediaNode("", node ?? {}) !== undefined
+}
+
 export function storylineNodes(ctx: ModuleContext, path: unknown, options: StorylineOptions = {}): VNodeTree[] {
     const dialogue = ctx.getArtifact<DialogueService>("Dialogue")
     const story = dialogue?.story(path)
@@ -31,6 +60,8 @@ export function storylineNodes(ctx: ModuleContext, path: unknown, options: Story
     const parentKeys = sortedKeys(data as Row)
     for (const parentKey of parentKeys) {
         const parent = (data as Row)[parentKey] as Row
+        const parentMedia = storyMediaNode(String(parent.key ?? parentKey), parent)
+        if (parentMedia) result.push(parentMedia)
         if (parent?.type === "TalkNode") {
             const props = parent.propsData ?? {}
             const chain = props.FlowAssetPath ? dialogue.flowChain(props.FlowAssetPath) : dialogue.chain(props.FirstDialogueId)
@@ -104,9 +135,10 @@ export function storylineNodes(ctx: ModuleContext, path: unknown, options: Story
                 if (visited.has(current)) continue
                 visited.add(current)
                 const candidate = nodeData[current] as Row | undefined
-                if (candidate?.type === "TalkNode") {
+                if (isStoryOutputNode(candidate)) {
                     const candidateProps = candidate.propsData ?? {}
-                    if (candidateProps.FirstDialogueId || candidateProps.FlowAssetPath) targets.push(current)
+                    if (candidate.type !== "TalkNode" || candidateProps.FirstDialogueId || candidateProps.FlowAssetPath)
+                        targets.push(current)
                     continue
                 }
                 pending.push(...(next.get(current) ?? []))
@@ -124,11 +156,19 @@ export function storylineNodes(ctx: ModuleContext, path: unknown, options: Story
         const parentResults: Row[] = []
         for (const key of orderedKeys) {
             const node = nodeData[key] as Row
-            if (node?.type !== "TalkNode") continue
+            if (!isStoryOutputNode(node)) continue
             const props = node.propsData ?? {}
+            const id = String(node.key ?? key)
+            const media = storyMediaNode(id, node)
+            if (media) {
+                const targets = resolveTalkTargets(next.get(id) ?? [])
+                if (targets.length) media.next = targets
+                result.push(media)
+                parentResults.push(media)
+                continue
+            }
             const chain = props.FlowAssetPath ? dialogue.flowChain(props.FlowAssetPath) : dialogue.chain(props.FirstDialogueId)
             if (!props.FirstDialogueId && !props.FlowAssetPath && chain.length === 0) continue
-            const id = String(node.key ?? key)
             const out: Row = { id, type: "TalkNode", name: node.name ?? "" }
             let successors = resolveTalkTargets(next.get(id) ?? [])
             if (!options.includeSelfNodeNext) successors = successors.filter(value => value !== id)
@@ -174,6 +214,8 @@ export function storylineNodes(ctx: ModuleContext, path: unknown, options: Story
                 const out = parentResults[index]
                 if (!Array.isArray(out.next)) continue
                 const sequential = parentResults[index + 1]?.id
+                const sequentialNode = parentResults[index + 1]
+                if (sequentialNode?.type === "VideoNode" || sequentialNode?.type === "PlayOrStopBGMNode") continue
                 const filtered = out.next.filter(value => String(value) !== String(sequential))
                 if (filtered.length) out.next = filtered
                 else delete out.next
@@ -185,6 +227,24 @@ export function storylineNodes(ctx: ModuleContext, path: unknown, options: Story
 export function storylineDialogues(ctx: ModuleContext, path: unknown): Row[] {
     const nodes = storylineNodes(ctx, path)
     return nodes.flatMap(node => sequence((node as Row).dialogues) as Row[])
+}
+
+export function storyMediaNodes(dialogue: DialogueService, path: unknown): Row[] {
+    const story = dialogue.story?.(path)
+    const parents = story?.storyNodeData && typeof story.storyNodeData === "object" ? (story.storyNodeData as Row) : {}
+    const result: Row[] = []
+    for (const parentKey of sortedKeys(parents)) {
+        const parent = parents[parentKey] as Row
+        const parentNode = storyMediaNode(String(parent?.key ?? parentKey), parent)
+        if (parentNode) result.push(parentNode)
+        const nodeData = parent?.questNodeData?.nodeData
+        if (!nodeData || typeof nodeData !== "object") continue
+        for (const nodeKey of sortedKeys(nodeData as Row)) {
+            const media = storyMediaNode(nodeKey, (nodeData as Row)[nodeKey] as Row)
+            if (media) result.push(media)
+        }
+    }
+    return result
 }
 
 export function eventStorylineNodes(ctx: ModuleContext, path: unknown): VNodeTree[] {
@@ -219,12 +279,28 @@ export function eventStorylineNodes(ctx: ModuleContext, path: unknown): VNodeTre
             if (visited.has(key)) continue
             visited.add(key)
             const node = nodeData[key] as Row | undefined
-            if (node?.type === "TalkNode") {
+            if (!node) continue
+            if (node?.type === "TalkNode" || isStoryOutputNode(node)) {
                 const props = node.propsData ?? {}
-                const out: Row = { id: key, type: "TalkNode", name: node.name ?? "" }
-                const children = next.get(key)
-                if (children?.length) out.next = children
-                const chain = props.FirstDialogueId ? dialogue.chain(props.FirstDialogueId) : []
+                const media = storyMediaNode(key, node)
+                const out: Row = media ?? { id: key, type: "TalkNode", name: node.name ?? "" }
+                const children = next.get(key) ?? []
+                const targets: string[] = []
+                const pending = [...children]
+                const seen = new Set<string>()
+                while (pending.length) {
+                    const child = pending.shift()!
+                    if (seen.has(child)) continue
+                    seen.add(child)
+                    if (isStoryOutputNode(nodeData[child] as Row | undefined)) targets.push(child)
+                    else pending.push(...(next.get(child) ?? []))
+                }
+                if (targets.length) out.next = targets
+                const chain = props.FlowAssetPath
+                    ? dialogue.flowChain(props.FlowAssetPath)
+                    : props.FirstDialogueId
+                      ? dialogue.chain(props.FirstDialogueId)
+                      : []
                 if (chain.length) out.dialogues = chain
                 result.push(out)
             }

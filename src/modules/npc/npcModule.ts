@@ -2,6 +2,7 @@ import type { ModuleContext } from "../../core/Graph.ts"
 import type { VNodeTree } from "../../i18n/vnode.ts"
 import type { DialogueService } from "../dialogue/dialogueModule.ts"
 import { type Row, sequence, table } from "../shared/dataHelpers.ts"
+import { storyMediaNodes } from "../storyline/storyline.ts"
 
 interface GuidePointIndex {
     byName: Map<string, Row[]>
@@ -139,12 +140,12 @@ export function npcModule(ctx: ModuleContext): VNodeTree {
             for (const triggerId of sequence(item.RelatedTalks)) {
                 const trigger = triggers[String(triggerId)]
                 if (!trigger?.StoryLinePath || !dialogue) continue
-                talks.push(...npcStoryDialogues(dialogue, trigger.StoryLinePath))
+                talks.push(...npcStoryDialogues(dialogue, trigger.StoryLinePath), ...storyMediaNodes(dialogue, trigger.StoryLinePath))
             }
             if (talks.length) {
                 const seen = new Set<string>()
                 output.talks = talks.filter(talk => {
-                    const key = String(talk.id)
+                    const key = `${String(talk.type ?? "Dialogue")}:${String(talk.id)}`
                     if (seen.has(key)) return false
                     seen.add(key)
                     return true

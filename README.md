@@ -1,48 +1,79 @@
 # DuetNightAbyssData
 
-Repository containing the data for the game Duet Night Abyss.
+Duet Night Abyss 游戏数据导出工具。主流程使用 TypeScript/Bun，直接读取 Lua 数据并生成多语言 JSON。
 
-## Usage
+## 环境
 
-```sh
-# ./lua Examples/2001_Mod.lua
-python step1_convert.py
-python step2_convert_dialog.py
-python step3_output.py
-```
+- [Bun](https://bun.sh/) 1.4+
+- `.env` 中可选配置 `DNA_UNPACK_DIR`，指向游戏解包目录
+- 使用 UAsset 资产解析时需要 .NET 10 运行时
 
-## 地图导出（Map Splice / RegionMap 合图）
-
-地图导出脚本默认以 **UAssetCLI server 模式** 直接解析 `.uasset`（不再依赖 FModel
-预导出的静态 JSON），并支持通过 `.env` 设置解包目录：
+安装依赖：
 
 ```sh
-python export_all_maps.py      # 导出 Map_Splice 各子图 -> out/map_splice
-python export_region_maps.py   # 合成 RegionMap 全图 -> out/region_map_merged
+bun install --frozen-lockfile
 ```
 
-- 解包目录解析顺序：环境变量 `DNA_UNPACK_DIR` → 仓库根 `.env` 的 `DNA_UNPACK_DIR`
-  → 仓库同级 `../dna-unpack`。
-- `.env`（gitignored）示例：
-  ```
-  DNA_UNPACK_DIR=D:/dev/dna-unpack
-  ```
-- 无 uasset / 无 exe 时自动回退到静态 JSON（FModel `Output/Exports` 下的 `.json`）；
-  用 `--force-static-json` 可强制回退。
-- 依赖：`.NET 10` 运行时（`tools/UAssetCLI/UAssetCLI.exe`）、`Pillow`。
+## 导出
+
+直接运行会构建所有已注册模块，并生成 `final/i18n/` 下的多语言 JSON：
+
+```sh
+bun run src/cli.ts
+```
+
+列出可用模块：
+
+```sh
+bun run src/cli.ts --list
+```
+
+只导出指定模块和语言：
+
+```sh
+bun run src/cli.ts -f Weapon Char --langs cn,en
+```
+
+模块名按 CLI 注册表中的规范名称传入，`-f/--file-types` 匹配时不区分大小写。
 
 ## UAsset 缓存
 
-动画和地图资产的 UAssetCLI `fmodel` 响应会持久化到 `.cache/uasset.duckdb`。普通导出会按
-“DuckDB 命中 → 未命中时请求 UAssetCLI → 成功后写入 DuckDB”的顺序读取；命中缓存时不会启动
-UAssetCLI server。
+动画、地图等资产解析结果会缓存到 `.cache/uasset.duckdb`。解包资产更新后可清空并按实际导出流程预热缓存：
 
-解包资产更新后，用一条命令清空并按实际资产导出流程重新预热缓存（默认重放
-`Resource`、`Weapon`、`Char`、`Mod`）：
-
-```bash
+```sh
 bun run warmup
 ```
 
-也可以只预热指定模块，例如 `bun run src/cli.ts --warmup -f Weapon Char`。
-- 单张小图：`python stitch_map_tiles.py <切图目录> --layout-json <布局.json>`。
+也可以只预热指定模块：
+
+```sh
+bun run src/cli.ts --warmup -f Weapon Char
+```
+
+## 检查与测试
+
+```sh
+bun test
+bunx biome check src test
+tsc --noEmit
+```
+
+## 地图工具
+
+地图合图脚本仍是独立的 Python 工具，不属于 TypeScript 数据导出主流程：
+
+```sh
+python export_all_maps.py
+python export_region_maps.py
+python stitch_map_tiles.py <切图目录> --layout-json <布局.json>
+```
+
+导出剧情节点引用的实际视频和 BGM 文件（独立于主数据导出）：
+
+```sh
+bun run src/tools/exportStoryMedia.ts
+```
+
+文件会按资源缩名复制到 `out/Video/` 和 `out/BGM/`。视频从序列中的 `FileMediaSource` 定位真实媒体文件；BGM 根据 FModel 日志中每次事件提取后保存的 `.ogg` 记录定位真实音频，并从 `dna-voice-dataset` 复制。缺少映射、一个事件对应多个 `.ogg` 或缩名冲突时命令会报错，不会静默选择文件。
+
+地图脚本默认通过 UAssetCLI server 解析 `.uasset`。解包目录解析顺序为 `DNA_UNPACK_DIR` 环境变量、仓库根目录 `.env`，最后是仓库同级的 `../dna-unpack`。

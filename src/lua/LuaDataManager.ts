@@ -221,7 +221,7 @@ export class LuaDataManager {
             __project_story = function(value)
                 local function props(value)
                     local out = {}
-                    local fields = {"FirstDialogueId", "FlowAssetPath", "TalkType", "GuidePointName", "StoryGuidePointName", "UnitBPPath", "UnitName", "QuestId", "QuestDescription", "QuestDeatil", "SubRegionId", "QuestionIds", "AnswerIds", "SpecialConfigId"}
+                    local fields = {"FirstDialogueId", "FlowAssetPath", "TalkType", "ShowFilePath", "GuidePointName", "StoryGuidePointName", "UnitBPPath", "UnitName", "QuestId", "QuestDescription", "QuestDeatil", "SubRegionId", "QuestionIds", "AnswerIds", "SpecialConfigId", "MediaSourceRef", "SoundPath", "SoundStateType"}
                     for _, field in ipairs(fields) do if value and value[field] ~= nil then out[field] = value[field] end end
                     return out
                 end

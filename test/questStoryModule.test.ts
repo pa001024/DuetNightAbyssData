@@ -5,6 +5,56 @@ import type { DialogueService } from "../src/modules/dialogue/dialogueModule.ts"
 import { collectSpecialStoryPaths, questStoryModule } from "../src/modules/questStory/questStoryModule.ts"
 
 describe("QuestStory special stories", () => {
+    test("keeps a standalone video node alongside reachable dialogue", async () => {
+        const story = {
+            storyNodeData: {
+                parent: {
+                    key: "parent",
+                    propsData: { QuestId: 10 },
+                    questNodeData: {
+                        lineData: [{ startQuest: "start", startPort: "QuestStart", endQuest: "talk" }],
+                        nodeData: {
+                            start: { key: "start", type: "QuestStartNode", propsData: {} },
+                            talk: { key: "talk", type: "TalkNode", name: "对白", propsData: { FirstDialogueId: 1 } },
+                            video: {
+                                key: "video",
+                                type: "VideoNode",
+                                name: "视频节点",
+                                propsData: { MediaSourceRef: "FileMediaSource'/Game/Asset/UIVideo/EX01_SC018.EX01_SC018'" },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+        const dialogue = {
+            story: () => story,
+            prepareStoryFlows: async () => {},
+            prefetchReachable: () => {},
+            chain: () => [{ id: 1 }],
+        } as unknown as DialogueService
+        const tables: Record<string, unknown> = {
+            QuestChain: { 1: { QuestChainId: 1, StoryPath: "main.story" } },
+            STLExportQuestChain: { 1: { Quests: { 10: {} } } },
+            DetectiveQuestion: {},
+            DetectiveAnswer: {},
+            SpecialQuestConfig: {},
+        }
+        const ctx = {
+            dm: {
+                getTable: (name: string) => tables[name],
+                loadScriptTableRows: () => [],
+            },
+            getArtifact: () => dialogue,
+        } as unknown as ModuleContext
+
+        const result = (await questStoryModule(ctx)) as Array<Record<string, any>>
+        expect(result[0].quests[0].nodes).toEqual([
+            { id: "talk", type: "TalkNode", name: "对白", dialogues: [{ id: 1 }] },
+            { id: "video", type: "VideoNode", name: "视频节点", resource: "EX01_SC018" },
+        ])
+    })
+
     test("uses the owning quest id when a special story node has no config id", () => {
         const story = {
             storyNodeData: {

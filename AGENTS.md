@@ -1,7 +1,7 @@
 # DuetNightAbyssData Agent Guide
 
-本仓库同时保留旧 Python 流水线和新的 TypeScript/Bun 流水线。当前默认开发主线是
-TypeScript；Python 仅作为未迁移模块的 legacy 实现或在需求明确指定时使用。不要因为旧
+本仓库的唯一主线是 TypeScript/Bun 流水线，直接从 Lua/资产数据构建并输出多语言 JSON。
+Python 脚本仅保留为独立的地图工具或明确指定的历史工具，不参与正常数据导出。不要因为旧
 Python 目录结构、处理器命名或历史输出习惯，就推断 TypeScript 的行为。
 
 ## 工作原则
@@ -14,8 +14,7 @@ Python 目录结构、处理器命名或历史输出习惯，就推断 TypeScrip
 
 ## 当前架构
 
-TypeScript 主线的目标是直接从游戏 Lua/资产数据构建多语言导出，不再以 Python 的 JSON
-中间转换作为前置步骤：
+TypeScript 流水线直接从游戏 Lua/资产数据构建多语言导出，不经过 Python JSON 中间层：
 
 ```text
 src/cli.ts
@@ -29,7 +28,7 @@ src/modules/*
 src/i18n/vnode.ts + TextMap.ts
   -> 保留文本 key 和模板占位符，按语言渲染
 src/output/OutputCollector.ts
-  -> 写入 final_ts/i18n/<lang>/*.json
+  -> 写入 final/i18n/<lang>/*.json
 ```
 
 关键约束：
@@ -41,9 +40,7 @@ src/output/OutputCollector.ts
 - Graph 只负责构建顺序和 artifacts 传递，不应被模块绕过来重复解析同一依赖。
 - 模块 build 阶段必须语言无关：名称、描述和模板使用 `T`、`LTemplate`、`compile` 等 vnode
   表达；语言选择只发生在输出阶段。
-- `final/` 是旧 Python 输出，`final_ts/` 是 TypeScript 输出。两者用于差异验证，不互相覆盖。
-- `src/tools/diffFinal.ts` 和 `src/tools/diffAll.ts` 用于迁移期间定位差异；差异本身不能通过直接改
-  `final` 或 `final_ts` 消除。
+- `final/` 是 TypeScript 的正式输出目录；生成文件不得手工编辑。
 
 ### 数据与资产边界
 
@@ -54,7 +51,8 @@ src/output/OutputCollector.ts
 - 动画 Montage 元数据由 `AssetReader` 读取。UAssetCLI server 可直接解析解包目录中的 `.uasset`；
   同路径 `.json` 兼容读取仍存在。解包目录可由 `.env` 的 `DNA_UNPACK_DIR` 指定，UAssetCLI 需要
   .NET 10。
-- 资产路径、Lua 表键、游戏字段名和 UAsset/FModel 属性名都是外部数据契约。修改解析前必须用
+- 资产路径、Lua 表键、游戏字段名和 UAsset/FModel 属性名都是外部数据契约。剧情媒体节点输出
+  `name` 使用节点实际名称，`resource` 使用按 icon 规则缩短的资源名。修改解析前必须用
   真实样本确认字段形状，并检查相邻正例和负例。
 
 ### 近期提交与正在收敛方向
@@ -65,8 +63,8 @@ src/output/OutputCollector.ts
 - vnode 模板占位符按完整索引匹配（例如 `#1` 不得误替换 `#10`），数值格式继续对齐 Lua 的
   `FormatDescValue1` 舍入规则。
 - 召唤物 effect 索引改为首次使用时懒加载并缓存，避免技能模块初始化时无条件读取全部召唤物表。
-- Char/Weapon 的动画读取暂时保留旧 JSON 时间线结果的偏好，以控制迁移差异；在资产路径和数值
-  舍入验证完成前，不要把该偏好扩展成新的全局优先级。
+- Char/Weapon 的动画读取暂时保留 JSON 时间线结果的偏好；在资产路径和数值舍入验证完成前，
+  不要把该偏好扩展成新的全局优先级。
 - 稀疏数字键表、单值/对象形态的字段归一化，以及技能/伤害标签链仍需以真实 Lua 数据和差异输出
   逐项验证，不能仅凭字段名称泛化规则。
 
@@ -90,14 +88,12 @@ bun run src/cli.ts
 bun out -f Weapon Char --langs cn,en
 bun run src/cli.ts --list
 
-# 迁移差异
-bun run src/tools/diffFinal.ts --lang cn
-bun run src/tools/diffFinal.ts --lang cn --file Weapon
-bun run src/tools/diffAll.ts --file Char --max 200
-
 # 检查
 bunx biome check src test
 tsc --noEmit
+
+# 独立导出剧情媒体文件（不属于主 out CLI）
+bun run src/tools/exportStoryMedia.ts
 ```
 
 `bun run lint` 当前会执行 `biome check --write && tsc --noEmit`，可能改写格式；运行前先确认
@@ -121,21 +117,14 @@ tsc --noEmit
 3. 涉及导出时运行对应 CLI，并使用 `diffFinal`/`diffAll` 检查旧输出与新输出；确认生成内容后再报告。
 4. 最后运行 `bunx biome check src test` 和必要的 `tsc --noEmit`，明确区分已修复、基线失败和未验证边界。
 
-## Python legacy 流水线
+## Python 工具
 
-旧实现仍包括 `step1_convert.py`、`step2_convert_dialog.py`、`step3_output.py` 和
-`processor/`。它们只在以下情况使用：
-
-- 目标模块尚未迁移到 `src/modules/`；
-- 用户明确要求修改或运行 Python 流程；
-- 需要把 `final/` 作为迁移对照基线。
-
-Python 专用命令、处理器约定和 UAssetCLI 地图脚本说明见 [`AGENTS.py.md`](AGENTS.py.md)。不要把
-Python 的 JSON 中间层、AST 解析器或 fallback 规则自动搬回 TypeScript 主线。
+地图脚本等独立 Python 工具的约定见 [`AGENTS.py.md`](AGENTS.py.md)。它们不生成正式数据导出，
+也不应被重新接回 TypeScript 主线。
 
 ## 禁止事项
 
 - 未确认就新增 fallback、改变 Lua/uasset/JSON 数据源优先级或静默吞掉解析错误。
-- 手工编辑 `final/`、`final_ts/` 或把生成结果当作实现代码提交。
+- 手工编辑 `final/` 或把生成结果当作实现代码提交。
 - 用旧 Python Processor 的结构替代 TypeScript 模块依赖图，或绕过共享 artifacts 重复加载数据。
 - 在导出文本中写入调试日志、开发思路、推测性说明或面向开发者的功能解释。

@@ -5697,6 +5697,7 @@
     "t": "Defence",
     "lv": 30,
     "rd": 0,
+    "wavesPerStage": 3,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "m": [
       8001001,
@@ -6106,6 +6107,7 @@
     "t": "Defence",
     "lv": 50,
     "rd": 0,
+    "wavesPerStage": 3,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "m": [
       8001001,
@@ -6515,6 +6517,7 @@
     "t": "Defence",
     "lv": 70,
     "rd": 0,
+    "wavesPerStage": 3,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "m": [
       8001001,
@@ -6924,6 +6927,7 @@
     "t": "Defence",
     "lv": 30,
     "rd": 0,
+    "wavesPerStage": 3,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "m": [
       8001001,
@@ -7333,6 +7337,7 @@
     "t": "Defence",
     "lv": 50,
     "rd": 0,
+    "wavesPerStage": 3,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "m": [
       8001001,
@@ -7742,6 +7747,7 @@
     "t": "Defence",
     "lv": 70,
     "rd": 0,
+    "wavesPerStage": 3,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "m": [
       8001001,
@@ -8151,6 +8157,7 @@
     "t": "Defence",
     "lv": 30,
     "rd": 0,
+    "wavesPerStage": 3,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "m": [
       8001001,
@@ -8287,6 +8294,7 @@
     "t": "Defence",
     "lv": 30,
     "rd": 0,
+    "wavesPerStage": 3,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "m": [
       8001001,
@@ -10565,6 +10573,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 30,
     "rd": 1,
+    "wavesPerStage": 3,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "m": [
       8501002,
@@ -10976,6 +10985,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 40,
     "rd": 1,
+    "wavesPerStage": 2,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "m": [
       8501002,
@@ -13377,6 +13387,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 30,
     "rd": 1,
+    "wavesPerStage": 3,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "m": [
       8501002,
@@ -13788,6 +13799,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 40,
     "rd": 1,
+    "wavesPerStage": 2,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "m": [
       8501002,
@@ -16189,6 +16201,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 30,
     "rd": 1,
+    "wavesPerStage": 3,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "m": [
       8501002,
@@ -16600,6 +16613,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 40,
     "rd": 1,
+    "wavesPerStage": 2,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "m": [
       8501002,
@@ -19100,6 +19114,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 20,
     "rd": 1,
+    "wavesPerStage": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "m": [
       8501002,
@@ -19708,6 +19723,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 30,
     "rd": 1,
+    "wavesPerStage": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "m": [
       8501002,
@@ -20316,6 +20332,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 40,
     "rd": 1,
+    "wavesPerStage": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "m": [
       8501002,
@@ -20924,6 +20941,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 50,
     "rd": 0,
+    "wavesPerStage": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "m": [
       6011001,
@@ -21487,6 +21505,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 60,
     "rd": 1,
+    "wavesPerStage": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "m": [
       8501002,
@@ -22095,6 +22114,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 70,
     "rd": 1,
+    "wavesPerStage": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "m": [
       8501002,
@@ -22703,6 +22723,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 80,
     "rd": 1,
+    "wavesPerStage": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "m": [
       8501002,
@@ -23311,6 +23332,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 30,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 12,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -23627,6 +23649,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 30,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 12,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -23943,6 +23966,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 50,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 30,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -24259,6 +24283,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 50,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 30,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -24575,6 +24600,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 50,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 30,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -24891,6 +24917,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 50,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 30,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -25207,6 +25234,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 30,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 12,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -25523,6 +25551,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 30,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 12,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -25839,6 +25868,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 50,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 30,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -26155,6 +26185,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 50,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 30,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -26470,6 +26501,7 @@
     "t": "DefenceMove",
     "lv": 30,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 12,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -26770,6 +26802,7 @@
     "t": "DefenceMove",
     "lv": 30,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 12,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -27070,6 +27103,7 @@
     "t": "DefenceMove",
     "lv": 30,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 12,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -27370,6 +27404,7 @@
     "t": "DefenceMove",
     "lv": 30,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 12,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -27670,6 +27705,7 @@
     "t": "DefenceMove",
     "lv": 50,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 30,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -27970,6 +28006,7 @@
     "t": "DefenceMove",
     "lv": 50,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 30,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -28270,6 +28307,7 @@
     "t": "DefenceMove",
     "lv": 50,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 30,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -28570,6 +28608,7 @@
     "t": "DefenceMove",
     "lv": 50,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 30,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -28872,6 +28911,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 65,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 45,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -29189,6 +29229,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 65,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 45,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -29506,6 +29547,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 65,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 45,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -29823,6 +29865,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 65,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 45,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -30140,6 +30183,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 65,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 45,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -30457,6 +30501,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 65,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 45,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -30774,6 +30819,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 65,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 45,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -31091,6 +31137,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 65,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 45,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -31408,6 +31455,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 65,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 45,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -61371,6 +61419,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 75,
     "rd": 0,
+    "wavesPerStage": 3,
     "mod": 60,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -61510,6 +61559,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 75,
     "rd": 0,
+    "wavesPerStage": 3,
     "mod": 60,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -62843,6 +62893,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 75,
     "rd": 0,
+    "wavesPerStage": 3,
     "mod": 60,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -62982,6 +63033,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 75,
     "rd": 0,
+    "wavesPerStage": 3,
     "mod": 60,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -63299,6 +63351,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 75,
     "rd": 0,
+    "wavesPerStage": 3,
     "mod": 60,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -68531,6 +68584,7 @@
     "e": "风",
     "lv": 75,
     "rd": 0,
+    "wavesPerStage": 3,
     "mod": 60,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -68739,6 +68793,7 @@
     "e": "风",
     "lv": 75,
     "rd": 0,
+    "wavesPerStage": 3,
     "mod": 60,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -69274,6 +69329,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 75,
     "rd": 0,
+    "wavesPerStage": 3,
     "mod": 60,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -69411,6 +69467,7 @@
     "t": "DefenceMove",
     "lv": 50,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 30,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -69711,6 +69768,7 @@
     "t": "DefenceMove",
     "lv": 50,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 30,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -70717,6 +70775,7 @@
     "e": "雷",
     "lv": 75,
     "rd": 0,
+    "wavesPerStage": 3,
     "mod": 60,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -70925,6 +70984,7 @@
     "e": "雷",
     "lv": 75,
     "rd": 0,
+    "wavesPerStage": 3,
     "mod": 60,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -71349,6 +71409,7 @@
     "e": "光",
     "lv": 75,
     "rd": 0,
+    "wavesPerStage": 3,
     "mod": 60,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -71557,6 +71618,7 @@
     "e": "光",
     "lv": 75,
     "rd": 0,
+    "wavesPerStage": 3,
     "mod": 60,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -72091,6 +72153,7 @@
     "e": "暗",
     "lv": 65,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 45,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -72393,6 +72456,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 65,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 45,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -72695,6 +72759,7 @@
     "ts": "Defence (Ⅰ)",
     "lv": 65,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 45,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -72997,6 +73062,7 @@
     "ts": "Defence ∞ (Ⅱ)",
     "lv": 65,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 45,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -73299,6 +73365,7 @@
     "ts": "Defence (Ⅱ)",
     "lv": 65,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 45,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -73601,6 +73668,7 @@
     "ts": "Defence ∞ (Ⅲ)",
     "lv": 65,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 45,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -73902,6 +73970,7 @@
     "e": "风",
     "lv": 65,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 45,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -74203,6 +74272,7 @@
     "e": "光",
     "lv": 65,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 45,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -74504,6 +74574,7 @@
     "e": "光",
     "lv": 65,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 45,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -76265,6 +76336,7 @@
     "ts": "Defence (Ⅰ)",
     "lv": 100,
     "rd": 1,
+    "wavesPerStage": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "m": [
       6001001,
@@ -76393,6 +76465,7 @@
     "ts": "Defence (Ⅰ)",
     "lv": 100,
     "rd": 1,
+    "wavesPerStage": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "m": [
       6001001,
@@ -76521,6 +76594,7 @@
     "ts": "Defence (Ⅰ)",
     "lv": 100,
     "rd": 1,
+    "wavesPerStage": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "m": [
       6001001,
@@ -76649,6 +76723,7 @@
     "ts": "Defence (Ⅰ)",
     "lv": 100,
     "rd": 1,
+    "wavesPerStage": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "m": [
       6001001,
@@ -76777,6 +76852,7 @@
     "ts": "Defence (Ⅰ)",
     "lv": 100,
     "rd": 1,
+    "wavesPerStage": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "m": [
       6001001,
@@ -76905,6 +76981,7 @@
     "ts": "Defence (Ⅰ)",
     "lv": 100,
     "rd": 1,
+    "wavesPerStage": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "m": [
       6001001,
@@ -77032,6 +77109,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 50,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 30,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -77959,6 +78037,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 75,
     "rd": 0,
+    "wavesPerStage": 3,
     "mod": 60,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -78098,6 +78177,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 75,
     "rd": 0,
+    "wavesPerStage": 3,
     "mod": 60,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -78235,6 +78315,7 @@
     "t": "DefenceMove",
     "lv": 50,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 30,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -79241,6 +79322,7 @@
     "e": "暗",
     "lv": 75,
     "rd": 0,
+    "wavesPerStage": 3,
     "mod": 60,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -79449,6 +79531,7 @@
     "e": "暗",
     "lv": 75,
     "rd": 0,
+    "wavesPerStage": 3,
     "mod": 60,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -80124,6 +80207,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 75,
     "rd": 0,
+    "wavesPerStage": 3,
     "mod": 60,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -80263,6 +80347,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 75,
     "rd": 0,
+    "wavesPerStage": 3,
     "mod": 60,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -80402,6 +80487,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 70,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 55,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -80719,6 +80805,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 70,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 55,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -81036,6 +81123,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 70,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 55,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -81353,6 +81441,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 70,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 55,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -81670,6 +81759,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 70,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 55,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -81987,6 +82077,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 70,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 55,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -82845,6 +82936,7 @@
     "e": "水",
     "lv": 75,
     "rd": 0,
+    "wavesPerStage": 3,
     "mod": 60,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -83053,6 +83145,7 @@
     "e": "水",
     "lv": 75,
     "rd": 0,
+    "wavesPerStage": 3,
     "mod": 60,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -84160,6 +84253,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 80,
     "rd": 1,
+    "wavesPerStage": 3,
     "mod": 60,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -84299,6 +84393,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 80,
     "rd": 1,
+    "wavesPerStage": 3,
     "mod": 60,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -84438,6 +84533,7 @@
     "ts": "Defence ∞ (Ⅰ)",
     "lv": 65,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 45,
     "desc": "Protect Lunoxplorer and defeat the enemies",
     "sm": [
@@ -85785,6 +85881,7 @@
     "e": "火",
     "lv": 80,
     "rd": 1,
+    "wavesPerStage": 3,
     "mod": 60,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -85993,6 +86090,7 @@
     "e": "火",
     "lv": 80,
     "rd": 1,
+    "wavesPerStage": 3,
     "mod": 60,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",
@@ -86201,6 +86299,7 @@
     "e": "火",
     "lv": 65,
     "rd": 1,
+    "wavesPerStage": 2,
     "mod": 45,
     "rush": 1,
     "desc": "Protect Lunoxplorer and defeat the enemies",

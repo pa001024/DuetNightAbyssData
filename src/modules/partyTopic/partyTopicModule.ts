@@ -1,6 +1,7 @@
 import type { ModuleContext } from "../../core/Graph.ts"
 import { T, type VNodeTree } from "../../i18n/vnode.ts"
 import type { DialogueService } from "../dialogue/dialogueModule.ts"
+import { storyMediaNodes } from "../storyline/storyline.ts"
 
 type Row = Record<string, any>
 
@@ -68,6 +69,12 @@ export async function partyTopicModule(ctx: ModuleContext): Promise<VNodeTree> {
                     seen.add(entryId)
                     dialogues.push(entry)
                 }
+            }
+        }
+        for (const media of storyMediaNodes(dialogue, item.PartyTopicTalkId)) {
+            if (!seen.has(String(media.id))) {
+                seen.add(String(media.id))
+                dialogues.push(media)
             }
         }
         if (dialogues.length > 0) output.dialogues = dialogues
