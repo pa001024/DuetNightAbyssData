@@ -6,6 +6,8 @@ import { join } from "node:path"
  * 用法（对齐旧版导出入口的命令行形态）：
  *   bun out -f Weapon Char                       # 构建指定模块并输出全部语言
  *   bun out -f Weapon Char --langs cn,en          # 指定语言
+ *   bun out -v 1.2                                # 用 git 历史版本（tag/commit）的 Script 数据解析
+ *   bun out -v 1.6 --langs cn                     # 版本前缀匹配同前缀最新版（1.6 → v1.6.4.1）
  *   bun out --list                                # 列出已注册模块
  *   bun run warmup                                # 清空并预热 UAsset DuckDB 缓存
  *
@@ -19,6 +21,8 @@ import { join } from "node:path"
 import { Graph } from "./core/Graph.ts"
 import { loadPlugins } from "./core/plugin.ts"
 import { getTextMap, LANGS } from "./i18n/TextMap.ts"
+import { setLuaDataRoot } from "./lua/LuaDataManager.ts"
+import { resolveScriptVersion, snapshotScriptData } from "./lua/scriptSnapshot.ts"
 import { clearUAssetCache, closeUAssetServer } from "./lua/UAssetServer.ts"
 import { OutputCollector } from "./output/OutputCollector.ts"
 
@@ -27,6 +31,8 @@ interface CliArgs {
     langs: string[]
     list: boolean
     warmup: boolean
+    /** -v：git 历史中的版本号 / tag 名 / commit，取该版本的 Script 数据解析 */
+    version: string | undefined
 }
 
 /** 解析 argv：支持文件类型、语言、模块列表和 UAsset DuckDB 缓存预热。 */
@@ -35,10 +41,16 @@ function parseArgs(argv: string[]): CliArgs {
     const langs: string[] = []
     let list = false
     let warmup = false
+    let version: string | undefined
     let i = 0
     while (i < argv.length) {
         const a = argv[i]
-        if (a === "-f" || a === "--file-types") {
+        if (a === "-v" || a === "--version") {
+            if (i + 1 < argv.length) {
+                version = argv[i + 1]
+                i++
+            }
+        } else if (a === "-f" || a === "--file-types") {
             // 消费后续所有非标志参数（对齐原版 nargs="+"）
             i++
             while (i < argv.length && !argv[i].startsWith("-")) {
@@ -85,16 +97,30 @@ function parseArgs(argv: string[]): CliArgs {
                     .map(s => s.trim())
                     .filter(Boolean)
             )
+        } else if (a.startsWith("--version=")) {
+            version = a.slice(10)
+        } else if (a.startsWith("-v") && a.length > 2) {
+            version = a.slice(2)
         }
         i++
     }
-    return { files, langs, list, warmup }
+    return { files, langs, list, warmup, version }
 }
 
 async function main() {
     const args = parseArgs(process.argv.slice(2))
     const baseDir = join(import.meta.dir, "..")
     const outputRoot = join(baseDir, "final")
+
+    // -v：从 git 历史解析版本（tag 名 / commit subject / commit 哈希），把 Lua 数据层切到
+    // 该版本的 Script 快照目录。代码、uasset 解包与 out/ 等当前工作区内容保持不变。
+    if (args.version && !args.list) {
+        const resolved = resolveScriptVersion(baseDir, args.version)
+        const snapshotDir = snapshotScriptData(baseDir, resolved)
+        setLuaDataRoot(snapshotDir)
+        console.log(`Lua 数据层使用历史版本 ${resolved.version}（来源 ${resolved.label}, commit ${resolved.commit.slice(0, 12)}）`)
+        console.log(`数据快照目录: ${snapshotDir}`)
+    }
 
     // 插件自动发现：模块目录 register.ts 自我注册，此处不做任何静态模块引用。
     const registry = await loadPlugins()

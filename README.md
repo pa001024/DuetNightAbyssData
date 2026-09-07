@@ -36,6 +36,26 @@ bun run src/cli.ts -f Weapon Char --langs cn,en
 
 模块名按插件注册表中的规范名称传入（各模块目录 `src/modules/*/register.ts` 自动登记，主程序不再维护静态清单），`-f/--file-types` 匹配时不区分大小写。
 
+## 历史版本解析（-v）
+
+git 历史中记录了各游戏版本的 Lua 数据（`Script/` 目录，含 `Datas/`、`Utils/`、`CommonConst.lua`
+等；仓库根不再保留任何 Lua 文件），版本标记
+来自 **tag**（`v1.1`、`v1.2`）与 **master 主线 commit subject 即版本号**（`v1.3.125.1` … `v1.6.4.1`）。
+`-v` 会把 Lua 数据层切到指定历史版本再解析；代码、uasset 解包与 `out/` 等当前工作区内容不变：
+
+```sh
+# 精确版本（tag）
+bun run src/cli.ts -v 1.2 -f MonsterStrongAffixes --langs cn
+# 只传部分段则匹配同前缀里最新版本：1.6 → v1.6.4.1
+bun run src/cli.ts -v 1.6
+# 也支持 v 前缀 / commit 哈希
+bun run src/cli.ts -v v1.2
+bun run src/cli.ts -v eb0af1e4
+```
+
+该版本的 `Script/` 会先用 `git archive` 物化到 `.cache/script-snapshots/<version>-<commit>/`
+（按 commit 缓存，重复运行直接复用），输出仍写入 `final/i18n/`。
+
 ## UAsset 缓存
 
 动画、地图等资产解析结果会缓存到 `.cache/uasset.duckdb`。解包资产更新后可清空并按实际导出流程预热缓存：

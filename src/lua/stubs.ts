@@ -2,7 +2,7 @@
  * Lua 全局环境桩（stubs）。
  *
  * 在 fengari 单例 state 里安装游戏所需的全局符号，使 Script/Datas/*.lua 与
- * Script/Utils（游戏真实引擎，根 Utils/ 将被删除）能在 VM 中执行：
+ * Script/Utils（游戏真实引擎；仓库根不再保留任何 Lua：根 Utils/ 与根级壳脚本均已删除）能在 VM 中执行：
  *
  * - ReadOnly: 数据文件 `return ReadOnly(name, tbl)` 直接返回 tbl
  * - GText / CText: 返回"哨兵串"（见下），数值计算串里文本 key 被哨兵包裹，
@@ -61,7 +61,7 @@ Const = {}
     lua.lua_setglobal(L, "DataMgr")
 
     // DataMgr 分片查询函数（TextMap_TextMapContent 等分区懒加载表依赖）
-    // 对齐 DataMgr.lua 的 BinarySearch / QueryTable / GetPartitionData。
+    // 对齐已删除的根 DataMgr.lua 的 BinarySearch / QueryTable / GetPartitionData。
     // Partition 表结构：{{MinKey, MaxKey, Loader=function}, ...}，BinarySearch 找到分片后
     // 调用 Loader() 返回该分片表，再从中取 key。
     lauxlib.luaL_dostring(
@@ -588,7 +588,8 @@ export function registerDatasPreload(L: LuaState, root: string, name: string): v
 /**
  * 注册 Script/Utils 完整版 + CommonConst 的 preload，并设置全局。
  *
- * Script/Utils 的依赖链与全局引用（根 Utils/ 将被删除，故用完整版）：
+ * Script/Utils 的依赖链与全局引用（根 Utils/ 已删除，CommonConst / Utils.* 一律取
+ * Script/ 下的完整版）：
  * - CommonUtils 顶层 require("Utils.SerializeUtils")
  * - SkillUtils  顶层 require("Utils.StringUtils")；运行时引用全局 CommonUtils / GText /
  *   GWorld / UE4 / CommonConst
@@ -601,7 +602,7 @@ export function installUtils(L: LuaState, root: string): void {
     // 依赖链先注册（按加载顺序）
     preloadFile(L, root, "Utils.SerializeUtils", "Script/Utils/SerializeUtils.lua")
     preloadFile(L, root, "Utils.StringUtils", "Script/Utils/StringUtils.lua")
-    preloadFile(L, root, "CommonConst", "CommonConst.lua")
+    preloadFile(L, root, "CommonConst", "Script/CommonConst.lua")
     preloadFile(L, root, "Utils.TimeUtils", "Script/Utils/TimeUtils.lua")
     preloadFile(L, root, "Utils.CommonUtils", "Script/Utils/CommonUtils.lua")
     preloadFile(L, root, "Utils.SkillUtils", "Script/Utils/SkillUtils.lua")

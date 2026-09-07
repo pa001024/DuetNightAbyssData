@@ -28,6 +28,11 @@ const PROJECT_ROOT = join(import.meta.dir, "..", "..")
 export { GT_PREFIX, GT_RE, GT_SUFFIX, sentinelOf } from "./stubs.ts"
 
 export class LuaDataManager {
+    /**
+     * -v 历史版本快照目录（Script/ 数据层所在；仓库根不再保留 Lua 文件）。
+     * null = 不覆盖，数据从 root 读取。
+     */
+    private dataRootOverride: string | null = null
     private L: LuaState | null = null
     /** 已加载的 Datas 表名集合（= package.loaded 里已缓存的） */
     private loadedTables = new Set<string>()
@@ -44,8 +49,22 @@ export class LuaDataManager {
     /** Story 投影函数只需在常驻 VM 中定义一次。 */
     private storyProjectorReady = false
 
-    /** 项目根（Script/Datas、Utils 所在） */
+    /** 项目根（Script/ 数据与引擎所在；Lua 数据根默认等于它） */
     constructor(public root: string = PROJECT_ROOT) {}
+
+    /**
+     * Lua 数据根：Script/（Datas / Utils / CommonConst.lua 等）数据与引擎文件实际解析的目录。
+     * 未设置历史快照时等于 root（当前工作区）。-v 解析旧版本数据时指向快照目录。
+     */
+    get scriptDataRoot(): string {
+        return this.dataRootOverride ?? this.root
+    }
+
+    /** 把 Lua 数据层切到指定目录（-v 历史快照）；传 null 恢复为 root。须在首次取数前调用。 */
+    setDataRoot(dir: string | null): void {
+        if (this.L) throw new Error("Lua 状态已初始化，无法切换数据根")
+        this.dataRootOverride = dir
+    }
 
     /** 获取（惰性创建）state，并安装全部环境 */
     private ensureState(): LuaState {
@@ -84,13 +103,13 @@ export class LuaDataManager {
             "DataConst",
             "Const",
         ]
-        for (const name of datasNames) registerDatasPreload(L, this.root, name)
+        for (const name of datasNames) registerDatasPreload(L, this.scriptDataRoot, name)
         installBaseStubs(L, (LL: LuaState, key: string) => {
             this.loadDatasIntoState(LL, key)
         })
 
         // 注册 Utils / CommonConst 的 preload
-        installUtils(L, this.root)
+        installUtils(L, this.scriptDataRoot)
 
         this.L = L
         return L
@@ -117,7 +136,7 @@ export class LuaDataManager {
         lua.lua_pop(L, 3) // 弹出 package/loaded/nil
 
         // 2. 读文件执行
-        const file = join(this.root, "Script", "Datas", `${key}.lua`)
+        const file = join(this.scriptDataRoot, "Script", "Datas", `${key}.lua`)
         if (!existsSync(file)) {
             lua.lua_pushnil(L)
             return
@@ -191,7 +210,7 @@ export class LuaDataManager {
 
     /** 在同一 Fengari state 中执行一个 Script 下的 Lua 文件并读取其返回值。 */
     loadScriptFile(relativePath: string): LuaValue | undefined {
-        const file = join(this.root, relativePath)
+        const file = join(this.scriptDataRoot, relativePath)
         if (!existsSync(file)) return undefined
         const L = this.ensureState()
         const code = readFileSync(file, "utf8")
@@ -210,7 +229,7 @@ export class LuaDataManager {
 
     /** 读取剧情 Lua，并只投影 QuestStory/PartyTopic 所需字段，避免大型节点元数据递归物化。 */
     loadStoryFile(relativePath: string): LuaValue | undefined {
-        const file = join(this.root, relativePath)
+        const file = join(this.scriptDataRoot, relativePath)
         if (!existsSync(file)) return undefined
         const L = this.ensureState()
         if (!this.storyProjectorReady) {
@@ -276,7 +295,7 @@ export class LuaDataManager {
 
     /** 读取返回表的浅层记录，适合大型平面索引文件，避免递归物化整张表。 */
     loadScriptTableRows(relativePath: string, fields: string[]): Array<Record<string, string | number | boolean | null>> {
-        const file = join(this.root, relativePath)
+        const file = join(this.scriptDataRoot, relativePath)
         if (!existsSync(file)) return []
         const L = this.ensureState()
         const code = readFileSync(file, "utf8")
@@ -790,4 +809,13 @@ export function getLuaDataManager(root?: string, _fallbackOutDir?: string): LuaD
         _instance = new LuaDataManager(root)
     }
     return _instance
+}
+
+/**
+ * 设置全局 Lua 数据根（CLI -v 历史版本快照目录）。须在任何取数/翻译访问前调用；
+ * 传 null 恢复默认（当前工作区根）。
+ */
+export function setLuaDataRoot(dir: string | null): void {
+    const dm = getLuaDataManager()
+    dm.setDataRoot(dir)
 }

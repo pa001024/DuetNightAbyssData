@@ -111,7 +111,7 @@ function addUnique(map: Map<number, number[]>, key: number, value: number): void
 
 function buildDesignLevelUnitIds(dm: ModuleContext["dm"]): Map<number, number> {
     const result = new Map<number, number>()
-    const dir = join(dm.root, "Script", "Datas", "DesignLevel_data")
+    const dir = join(dm.scriptDataRoot, "Script", "Datas", "DesignLevel_data")
     if (!existsSync(dir)) return result
     for (const file of readdirSync(dir)) {
         if (!file.endsWith(".lua")) continue
@@ -142,7 +142,7 @@ function buildBookPlacements(dm: ModuleContext["dm"], links: ReturnType<typeof b
         if (level && subRegionId !== undefined) levelToSubRegion.set(level, subRegionId)
     }
 
-    const dir = join(dm.root, "Script", "Datas", "DesignLevel_data")
+    const dir = join(dm.scriptDataRoot, "Script", "Datas", "DesignLevel_data")
     if (!existsSync(dir)) return placements
     for (const file of readdirSync(dir)) {
         if (!file.endsWith(".lua")) continue
