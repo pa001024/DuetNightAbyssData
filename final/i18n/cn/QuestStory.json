@@ -78,6 +78,17 @@
                 "npc": 100001
               }
             ]
+          },
+          {
+            "id": "174780850603427909967",
+            "type": "PlayOrStopBGMNode",
+            "name": "暂时关闭任务提示音",
+            "resource": "0_1_mute_mission_event",
+            "srId": 100103,
+            "pos": [
+              32113,
+              32365
+            ]
           }
         ]
       },
@@ -144,6 +155,12 @@
             "type": "PlayOrStopBGMNode",
             "name": "noise - state 0 - start",
             "resource": "SC002"
+          },
+          {
+            "id": "quest_16940691773581109",
+            "type": "PlayOrStopBGMNode",
+            "name": "noise - state 2 - start",
+            "resource": "Cine00_SC002"
           }
         ]
       },
@@ -314,6 +331,12 @@
             "type": "PlayOrStopBGMNode",
             "name": "暂时关闭任务提示音",
             "resource": "0_1_mute_mission_event"
+          },
+          {
+            "id": "quest_1685600508920400",
+            "type": "PlayOrStopBGMNode",
+            "name": "BGM - cunzhuang - start",
+            "resource": "0003_story_cunzhuang"
           }
         ]
       },
@@ -862,6 +885,17 @@
                 "npc": 100003
               }
             ]
+          },
+          {
+            "id": "quest_16940703816133006",
+            "type": "PlayOrStopBGMNode",
+            "name": "BGM - 07- start",
+            "resource": "07",
+            "srId": 100102,
+            "pos": [
+              16281,
+              8965
+            ]
           }
         ]
       }
@@ -898,7 +932,33 @@
               22268,
               19929
             ]
+          },
+          {
+            "id": "quest_1685947271598238",
+            "type": "PlayOrStopBGMNode",
+            "name": "bgm - _zaoyudiguojun  - start",
+            "resource": "0007_story_zaoyudiguojun",
+            "srId": 100103,
+            "pos": [
+              22268,
+              19929
+            ]
+          },
+          {
+            "id": "1708484335215205339",
+            "type": "PlayOrStopBGMNode",
+            "name": "BGM - shendianyiji上层 - Play",
+            "resource": "0029_atmos_shendianshangceng",
+            "srId": 100103,
+            "pos": [
+              22268,
+              19929
+            ]
           }
+        ],
+        "startIds": [
+          "quest_1685947271598238",
+          "1708484335215205339"
         ]
       },
       {
@@ -1107,13 +1167,20 @@
             "type": "PlayOrStopBGMNode",
             "name": "mute",
             "resource": "mute"
+          },
+          {
+            "id": "1730293403920418558",
+            "type": "PlayOrStopBGMNode",
+            "name": "bgm - tiaoya  - start",
+            "resource": "0012_story_tiaoya"
           }
         ],
         "startIds": [
           "quest_16926743134633260",
           "quest_16941646614348815",
           "quest_16940707345323398",
-          "quest_1686818656143291"
+          "quest_1686818656143291",
+          "1730293403920418558"
         ]
       },
       {
@@ -1297,7 +1364,17 @@
                 "npc": 100005
               }
             ]
+          },
+          {
+            "id": "1730293403920418558",
+            "type": "PlayOrStopBGMNode",
+            "name": "bgm - tiaoya  - start",
+            "resource": "0012_story_tiaoya"
           }
+        ],
+        "startIds": [
+          "1749024308932885184",
+          "1730293403920418558"
         ]
       },
       {
@@ -1314,29 +1391,7 @@
               19977,
               11262
             ]
-          },
-          {
-            "id": "17468608271436328",
-            "type": "TalkNode",
-            "name": "对话节点",
-            "srId": 100102,
-            "pos": [
-              19977,
-              11262
-            ],
-            "dialogues": [
-              {
-                "id": 10010101,
-                "content": "贝蕾，我……",
-                "voice": "story/1001/100101/190F2A32",
-                "npc": 100001
-              }
-            ]
           }
-        ],
-        "startIds": [
-          "17467774050433073",
-          "17468608271436328"
         ]
       },
       {
@@ -6315,6 +6370,17 @@
                 "voice": "story/1002/101054/194C4414",
                 "npc": 200021
               }
+            ]
+          },
+          {
+            "id": "1717642566949173641",
+            "type": "PlayOrStopBGMNode",
+            "name": "开启幽默音乐",
+            "resource": "0033_story_humour",
+            "srId": 101304,
+            "pos": [
+              16189,
+              30813
             ]
           }
         ]
@@ -12922,11 +12988,18 @@
                 "npc": 100001
               }
             ]
+          },
+          {
+            "id": "17442139067719240962",
+            "type": "PlayOrStopBGMNode",
+            "name": "播bgm",
+            "resource": "0042_story_find_saiqi"
           }
         ],
         "startIds": [
           "1715756785354969639",
-          "1715756785354969659"
+          "1715756785354969659",
+          "17442139067719240962"
         ]
       },
       {
@@ -12983,7 +13056,17 @@
                 "npc": 100001
               }
             ]
+          },
+          {
+            "id": "17321974593475231515",
+            "type": "PlayOrStopBGMNode",
+            "name": "播bgm",
+            "resource": "0042_story_find_saiqi"
           }
+        ],
+        "startIds": [
+          "17442870280663025531",
+          "17321974593475231515"
         ]
       }
     ]
@@ -13941,11 +14024,18 @@
                 "npc": 200006
               }
             ]
+          },
+          {
+            "id": "17253490620542759752",
+            "type": "PlayOrStopBGMNode",
+            "name": "播放bgm",
+            "resource": "mute"
           }
         ],
         "startIds": [
           "17234443684931164064",
-          "17253647720541280199"
+          "17253647720541280199",
+          "17253490620542759752"
         ]
       },
       {
@@ -16353,7 +16443,17 @@
                 "icon": "VoiceIcon"
               }
             ]
+          },
+          {
+            "id": "17485135772303487435",
+            "type": "PlayOrStopBGMNode",
+            "name": "BGM节点",
+            "resource": "0072_story_reasoning"
           }
+        ],
+        "startIds": [
+          "17358100632406816",
+          "17485135772303487435"
         ]
       },
       {
@@ -16761,6 +16861,12 @@
                 "icon": "InformtIcon"
               }
             ]
+          },
+          {
+            "id": "17485137736544361469",
+            "type": "PlayOrStopBGMNode",
+            "name": "BGM节点",
+            "resource": "0072_story_reasoning"
           }
         ]
       },
@@ -25574,6 +25680,12 @@
                 "speakerName": "布鲁斯"
               }
             ]
+          },
+          {
+            "id": "17580230240234936",
+            "type": "PlayOrStopBGMNode",
+            "name": "BGM节点",
+            "resource": "0086_cs_thea_fight"
           }
         ]
       },
@@ -51100,11 +51212,18 @@
                 "npc": 110041
               }
             ]
+          },
+          {
+            "id": "17290485968531764750",
+            "type": "VideoNode",
+            "name": "视频节点",
+            "resource": "EX01_SC018"
           }
         ],
         "startIds": [
           "1724136079053183530",
-          "17483342890804211"
+          "17483342890804211",
+          "17290485968531764750"
         ]
       },
       {
@@ -94235,6 +94354,17 @@
                 "npc": 200002
               }
             ]
+          },
+          {
+            "id": "177418279453510115810",
+            "type": "PlayOrStopBGMNode",
+            "name": "BGM节点",
+            "resource": "0101_story_zhuyinzhizai_full",
+            "srId": 105201,
+            "pos": [
+              13130,
+              -2310
+            ]
           }
         ]
       },
@@ -111865,6 +111995,17 @@
                 "voice": "story/2001/200054/3214DBB6",
                 "npc": 200074
               }
+            ]
+          },
+          {
+            "id": "17489344984583511337",
+            "type": "PlayOrStopBGMNode",
+            "name": "播放幽默音乐",
+            "resource": "0033_story_humour",
+            "srId": 101103,
+            "pos": [
+              -32456,
+              34166
             ]
           }
         ]
@@ -161402,6 +161543,17 @@
                 "content": "跟我来吧，顺便把睡着的白给一起抬出去。",
                 "npc": 700354
               }
+            ]
+          },
+          {
+            "id": "17647611270281325",
+            "type": "PlayOrStopBGMNode",
+            "name": "BGM节点",
+            "resource": "0041_story_jiaojiao_tiejiang",
+            "srId": 210101,
+            "pos": [
+              -383,
+              2829
             ]
           }
         ]
