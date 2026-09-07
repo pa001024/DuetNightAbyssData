@@ -9,7 +9,7 @@
  *
  * 2. **数值计算**：游戏自带的 SkillUtils（`Utils/SkillUtils.lua` 精简版）在 VM 内运行，
  *    `calcSkillDesc(desc, level)` 等封装直接调用，返回计算后的串（含 GText 哨兵）。
- *    这是 Python ast_parser / SkillGrow 查找的替代，正确性由游戏引擎保证。
+ *    这是旧版 AST 表达式求值 / SkillGrow 查找的替代，正确性由游戏引擎保证。
  *
  * 语言无关：GText 桩返回哨兵串，Lua 层不感知语言；多语言渲染在 TS 侧 vnode 层完成。
  */

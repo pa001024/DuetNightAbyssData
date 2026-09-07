@@ -1,7 +1,7 @@
 /**
  * charModule — 输出 Char.json。
  *
- * 对齐老 processor/char_processor.py 的核心输出路径：
+ * 对齐旧版导出的核心输出路径：
  * - 基础信息（id/icon/名称/版本/别名/出生地/势力/生日/CV/阵营/属性/精通/标签）
  * - 基础属性（攻击/生命/防御/护盾/神智）、加成、突破、溯源、碎片、第七溯源消耗、专武
  * - 技能（名称/类型/描述/字段/升级/实体/术语解释/子技能/行为）
@@ -34,7 +34,7 @@ const ATTR_NAME_MAP: Record<string, string> = {
     武器多重射击: "多重",
 }
 
-/** 武器类型标签 → 中文（对齐老 BaseProcessor.process_tags） */
+/** 武器类型标签 → 中文（对齐旧版导出） */
 const WEAPON_TYPE_CN: Record<string, string> = {
     Ultra: "同律",
     Melee: "近战",
@@ -1153,7 +1153,7 @@ function asEntryList(v: unknown): any[] {
             entries.push([Number(k), val])
         }
     }
-    // 0 起始键放到末尾（对齐 python list[-1]），其余按数值序
+    // 0 起始键放到末尾（对齐旧版导出的列表末位语义），其余按数值序
     const zero = entries.filter(([k]) => k === 0).map(([, v]) => v)
     const rest = entries
         .filter(([k]) => k !== 0)

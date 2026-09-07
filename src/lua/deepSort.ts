@@ -1,5 +1,5 @@
 /**
- * deepSort — 对齐 python step1_convert.py 的 deep_sort_json。
+ * deepSort — 对齐旧版 Lua 转换输出的键排序。
  *
  * 递归排序 JSON 里的所有对象键：
  * - 数字键排最前，按数值序

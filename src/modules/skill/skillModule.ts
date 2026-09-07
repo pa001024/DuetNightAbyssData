@@ -19,7 +19,7 @@ import { GT_RE } from "../../lua/stubs.ts"
 
 // ---------- 常量映射（port 老代码） ----------
 
-/** P_MAP：属性名缩写（port processor/_util.py） */
+/** P_MAP：属性名缩写（沿用旧版导出的属性名表） */
 export const P_MAP: Record<string, string> = {
     最大神智: "神智",
     造成的伤害: "增伤",
@@ -93,7 +93,7 @@ export const P_MAP: Record<string, string> = {
     FlySpeedModifier: "飞行速度",
 }
 
-/** 伤害标签 → 中文（port base_processor._DAMAGE_TAG_CN，仅常用部分；未知原样） */
+/** 伤害标签 → 中文（沿用旧版导出的标签表，仅常用部分；未知原样） */
 export const DAMAGE_TAG_CN: Record<string, string> = {
     Attack: "普攻",
     Skill: "技能",
@@ -115,7 +115,7 @@ export const DAMAGE_TAG_CN: Record<string, string> = {
     HyperTrigger: "充盈",
 }
 
-/** 伤害类型 → 中文（port char_processor._DAMAGE_TYPE_CN） */
+/** 伤害类型 → 中文（沿用旧版导出的类型表） */
 export const DAMAGE_TYPE_CN: Record<string, string> = {
     Fire: "火",
     Water: "水",
@@ -130,7 +130,7 @@ export const DAMAGE_TYPE_CN: Record<string, string> = {
     Default: "无属性",
 }
 
-/** 伤害基值属性 → 中文（port char_processor._BASE_ATTR_CN） */
+/** 伤害基值属性 → 中文（沿用旧版导出的属性表） */
 export const BASE_ATTR_CN: Record<string, string> = {
     ATK: "攻击",
     ATK_Char: "角色攻击",
@@ -143,7 +143,7 @@ export const BASE_ATTR_CN: Record<string, string> = {
     ES: "护盾",
 }
 
-/** 动作/技能名 → 中文（port char_processor._ACTION_CN） */
+/** 动作/技能名 → 中文（沿用旧版导出的动作表） */
 export const ACTION_CN: Record<string, string> = {
     Attack: "普攻",
     HeavyAttack: "重击",
@@ -191,14 +191,14 @@ export function extractReferencedIds(descValue: string): { effectIds: number[]; 
     return { effectIds, nodeIds }
 }
 
-/** round_value：四舍五入到最多 3 位小数，对齐老代码 */
+/** round_value：四舍五入到最多 3 位小数，对齐旧版导出 */
 export function roundValue(value: number): number {
     const rounded = Math.round(value * 10000) / 10000
     if (Math.abs(rounded - Math.round(rounded)) < 0.00001) return Math.round(rounded)
     return rounded
 }
 
-/** 提取值 + 值2 + 格式模板（port weapon_processor._extract_field_value_and_format） */
+/** 提取值 + 值2 + 格式模板（沿用旧版导出的字段提取逻辑） */
 export function extractFieldValueAndFormat(
     calculatedValue: string | number | null | undefined
 ): [number | string, number | string | null, string | null] {

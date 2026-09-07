@@ -1,7 +1,7 @@
 # DuetNightAbyssData Agent Guide
 
 本仓库的唯一主线是 TypeScript/Bun 流水线，直接从 Lua/资产数据构建并输出多语言 JSON。
-Python 脚本仅保留为独立的地图工具或明确指定的历史工具，不参与正常数据导出。不要因为旧
+仓库内已不保留 Python 脚本（旧 Python 导出流水线与地图工具已全部移除）；不要因为旧
 Python 目录结构、处理器命名或历史输出习惯，就推断 TypeScript 的行为。
 
 ## 工作原则
@@ -126,14 +126,13 @@ bun run src/tools/storySummary/agent.ts             # 真实生成（前置: bun
 3. 涉及导出时运行对应 CLI，并使用 `diffFinal`/`diffAll` 检查旧输出与新输出；确认生成内容后再报告。
 4. 最后运行 `bunx biome check src test` 和必要的 `tsc --noEmit`，明确区分已修复、基线失败和未验证边界。
 
-## Python 工具
+## 地图导出
 
-地图脚本等独立 Python 工具的约定见 [`AGENTS.py.md`](AGENTS.py.md)。它们不生成正式数据导出，
-也不应被重新接回 TypeScript 主线。
+地图拼接导出为独立的 TypeScript 工具（见 `src/tools/exportMaps.ts`），不属于主数据导出流程。
 
 ## 禁止事项
 
 - 未确认就新增 fallback、改变 Lua/uasset/JSON 数据源优先级或静默吞掉解析错误。
 - 手工编辑 `final/` 或把生成结果当作实现代码提交。
-- 用旧 Python Processor 的结构替代 TypeScript 模块依赖图，或绕过共享 artifacts 重复加载数据。
+- 绕过共享 artifacts 重复加载数据，或用旁路逻辑替代模块依赖图。
 - 在导出文本中写入调试日志、开发思路、推测性说明或面向开发者的功能解释。

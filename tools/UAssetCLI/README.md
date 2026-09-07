@@ -15,7 +15,7 @@ FModel 的 JSON 导出只有属性签名、不含编译后的字节码（`Script
 
 ## 运行模式
 
-### 1. server 模式（供 step3 流水线自动调用，stdio JSON 行协议）
+### 1. server 模式（供 TS 工具自动调用，stdio JSON 行协议）
 
 从 stdin 读一行一个 JSON 命令，向 stdout 写一行 JSON 响应，收到 `shutdown` 或 stdin
 关闭后自动退出：
@@ -63,19 +63,18 @@ UAssetCLI <uasset文件|目录>          # 字节码调用解析，直接打印 
 UAssetCLI export <uasset文件|目录>   # FModel 式整体 JSON
 ```
 
-## 与 step3 流水线集成
+## 与 TS 工具链集成
 
-`step3_output.py -f Char` 会在导出开始时自动：
+UAssetCLI server 由 TS 侧 `src/lua/UAssetServer.ts` 封装，供地图拼接导出（`src/tools/exportMaps.ts`）
+与动画等资产解析使用：
 
 1. 定位 `tools/UAssetCLI/UAssetCLI.exe`；
-2. 通过 `DNA_UNPACK_DIR` 环境变量（缺省时尝试仓库同级 `../dna-unpack`）定位解包后的
-   蓝图目录 `Fmodel/Output/Exports/*/Content/BluePrints/Combat/PassiveEffect/DesignerBP/Player`；
-3. 以 **server 模式** 批量解析全部角色被动 BP，提取 `AddBuffToTarget` 的 buff id，
-   生成 `{BP名: [buff id...]}` 映射传给 `CharProcessor`；
-4. 提取完成即发送 `shutdown` 关闭 server（不占用额外进程）。
+2. 通过 `DNA_UNPACK_DIR` 环境变量（缺省时尝试仓库同级 `../dna-unpack`）定位解包目录；
+3. 以 **server 模式** 请求 `fmodel` / `fmodel_dir` / `parse_dir` 等命令；
+4. 使用完毕发送 `shutdown` 关闭 server（不占用额外进程）。
 
-无 uasset / 无 exe / 提取失败时自动回退到仓库内置的 `processor/BPAddBuff.json`
-（同样从 uasset 提取，提交在仓库中以保证可复现）。
+`src/modules/char/data/BPAddBuff.json` 是角色被动 BP 的 `{BP名: [buff id...]}` 映射
+（从 uasset 提取并提交在仓库中以保证可复现），由 TS 的 char 模块在生成技能行为摘要时读取。
 
 ## 重新构建 exe
 
@@ -92,14 +91,12 @@ rmdir /s /q publish2
 
 `UAssetCLI.exe` 提交进 git（`tools/UAssetCLI/` 下的 bin/obj 已被 .gitignore 忽略）。
 
-## 重新生成 processor/BPAddBuff.json
+## 重新生成 src/modules/char/data/BPAddBuff.json
 
-```bash
-python -c "..."   # 见 step3_output.py 的 _load_bp_addbuff_map 实现
-```
+用 `parse_dir` 解析角色被动 BP 目录后，按下述清洗规则生成映射并写回该文件：
 
 清洗规则：仅取 `Function == "AddBuffToTarget"` 的调用，取 `IntParams` 中 >=100000
-且存在于 `out/Buff.json` 的 id，去重保序。
+且存在于 Buff 表的 id，去重保序。
 
 ## 限制
 

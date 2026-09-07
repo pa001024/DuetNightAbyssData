@@ -1,12 +1,12 @@
 /**
  * Lua table → JS 递归转换（读回工具）。
  *
- * 对齐 python step1_convert.py 的 convert_lua_data 启发式：
+ * 对齐旧版 Lua 转换的 convert_lua_data 启发式：
  * - 连续整数键 1..n 的表 → JS 数组
  * - 否则 → JS 对象（数字键字符串化，JS 属性访问 obj[110101] 与 obj["110101"] 等价，
  *   与老处理器 str(id) 访问对齐）
  *
- * 注意：不做 step1 的"奖励表豁免"（含 Id/Type/Count 字段的表不转数组）。
+ * 注意：不做旧 Lua 转换的"奖励表豁免"（含 Id/Type/Count 字段的表不转数组）。
  * 新架构直接读原始表，保持原始形状更忠实；必要时对比时再按需对齐。
  */
 

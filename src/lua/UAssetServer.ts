@@ -1,5 +1,5 @@
 /**
- * UAssetServer — UAssetCLI server 客户端（TS 版，对齐 python uasset_client.py）。
+ * UAssetServer — UAssetCLI server 客户端（TS 版）。
  *
  * 启动一次 UAssetCLI.exe server，通过 stdio JSON 行协议请求：
  * - `fmodel` / `fmodel_dir`：按 FModel Output/Exports 数组格式导出 uasset（内存 JSON）
@@ -7,7 +7,7 @@
  * 用于把 assets（动画 Montage 等）的数据源从"FModel 预导出 JSON"迁移为
  * "直接解析 .uasset"，实现零 fmodel json 依赖。
  *
- * 解包目录解析顺序（对齐 python）：
+ * 解包目录解析顺序：
  *   1. 环境变量 DNA_UNPACK_DIR
  *   2. 仓库根 .env 的 DNA_UNPACK_DIR
  *   3. 仓库同级 ../dna-unpack
@@ -149,7 +149,7 @@ export class UAssetServer {
         })
     }
 
-    /** 带重试的请求（对齐 python _request_with_retry：瞬时失败指数退避） */
+    /** 带重试的请求（瞬时失败指数退避） */
     private async request(cmd: Record<string, unknown>, retries = 4): Promise<Record<string, unknown>> {
         for (let attempt = 0; attempt < retries; attempt++) {
             try {

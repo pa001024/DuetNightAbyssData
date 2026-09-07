@@ -60,13 +60,15 @@ tsc --noEmit
 
 ## 地图工具
 
-地图合图脚本仍是独立的 Python 工具，不属于 TypeScript 数据导出主流程：
+地图拼接导出是独立的 TypeScript 工具（`src/tools/exportMaps.ts`，不属于主数据导出）：
 
 ```sh
-python export_all_maps.py
-python export_region_maps.py
-python stitch_map_tiles.py <切图目录> --layout-json <布局.json>
+bun run export:maps
 ```
+
+`--splice-dir` 默认指向解包目录的 `Map_Splice` UMG 布局目录，`--output-root` 默认为
+`out/map_splice`（保留相对目录结构）。支持 `--splice-dir` / `--texture-root` /
+`--output-root` / `--grid-name` / `--force-static-json` 等选项，详细见 `bun run export:maps --help`。
 
 导出剧情节点引用的实际视频和 BGM 文件（独立于主数据导出）：
 
@@ -76,4 +78,4 @@ bun run src/tools/exportStoryMedia.ts
 
 文件会按资源缩名复制到 `out/Video/` 和 `out/BGM/`。视频从序列中的 `FileMediaSource` 定位真实媒体文件；BGM 根据 FModel 日志中每次事件提取后保存的 `.ogg` 记录定位真实音频，并从 `dna-voice-dataset` 复制。缺少映射、一个事件对应多个 `.ogg` 或缩名冲突时命令会报错，不会静默选择文件。
 
-地图脚本默认通过 UAssetCLI server 解析 `.uasset`。解包目录解析顺序为 `DNA_UNPACK_DIR` 环境变量、仓库根目录 `.env`，最后是仓库同级的 `../dna-unpack`。
+地图与媒体工具默认通过 UAssetCLI server 解析 `.uasset`（见 `src/lua/UAssetServer.ts`）。解包目录解析顺序为 `DNA_UNPACK_DIR` 环境变量、仓库根目录 `.env`，最后是仓库同级的 `../dna-unpack`。

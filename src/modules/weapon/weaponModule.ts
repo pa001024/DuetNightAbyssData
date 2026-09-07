@@ -1,7 +1,7 @@
 /**
  * weaponModule — 输出 Weapon.json。
  *
- * 对齐老 processor/weapon_processor.py 的核心输出路径：
+ * 对齐旧版导出的核心输出路径：
  * - 基础信息（id/icon/名称/版本/描述/类型）
  * - 属性（伤害类型/攻击/暴击/暴伤/触发/弹匣…）
  * - 加成 / 突破 / 熔炼 / 熔炉
@@ -26,7 +26,7 @@ const TYPE_MAP: Record<string, string> = {
     SlideAttack: "滑行攻击",
 }
 
-/** 武器标签映射（对齐 BaseProcessor.process_tags 的 WeaponType_* 部分） */
+/** 武器标签映射（对齐旧版导出的 WeaponType_* 部分） */
 const WEAPON_TYPE_KEY: Record<string, string> = {
     Ultra: "同律",
     Melee: "近战",

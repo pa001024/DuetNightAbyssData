@@ -3,7 +3,7 @@ import { join } from "node:path"
 /**
  * CLI — DuetNightAbyssData TS 重构入口。
  *
- * 用法（对齐原版 step3_output.py）：
+ * 用法（对齐旧版导出入口的命令行形态）：
  *   bun out -f Weapon Char                       # 构建指定模块并输出全部语言
  *   bun out -f Weapon Char --langs cn,en          # 指定语言
  *   bun out --list                                # 列出已注册模块
