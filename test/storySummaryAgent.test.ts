@@ -2,9 +2,10 @@ import { afterAll, beforeAll, describe, expect, test } from "bun:test"
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs"
 import { join } from "node:path"
 import { runStorySummary } from "../src/tools/storySummary/agent.ts"
-import { buildChainDigest, collectChainDigests, loadCnContext, truncateText } from "../src/tools/storySummary/context.ts"
+import { findPersonViolation } from "../src/tools/storySummary/client.ts"
+import { buildChainDigest, buildPrompt, collectChainDigests, loadCnContext, truncateText } from "../src/tools/storySummary/context.ts"
 import { buildOutputObject } from "../src/tools/storySummary/output.ts"
-import { pendingChainIds } from "../src/tools/storySummary/state.ts"
+import { pendingChainIds, loadState } from "../src/tools/storySummary/state.ts"
 
 const projectRoot = join(import.meta.dir, "..")
 const tmpRoot = join(projectRoot, ".tmp", "storysummary-test")
@@ -163,6 +164,14 @@ describe("context", () => {
         expect(truncated.endsWith("a".repeat(16))).toBe(true)
         expect(truncateText("短文本", 40)).toBe("短文本")
     })
+
+    test("提示词固定第二人称：含人称约束，禁止“我/我们/主角/玩家”且不直接引用对白", () => {
+        writeFixtures()
+        const prompt = buildPrompt(digestsOf().get(100101)!, 60_000)
+        expect(prompt).toContain("人称与引用：全文用第二人称“你”指代玩家角色")
+        expect(prompt).toContain("正文禁止出现“我”“我们”“主角”“玩家”")
+        expect(prompt).toContain("不得直接引用对白原话")
+    })
 })
 
 describe("state 与 output", () => {
@@ -171,19 +180,30 @@ describe("state 与 output", () => {
             [1, { fingerprint: "a" }],
             [2, { fingerprint: "b" }],
         ])
-        const state = { "1": { summary: "s", fingerprint: "a", updatedAt: "" } }
-        expect(pendingChainIds(digests, state, false)).toEqual([2])
-        expect(pendingChainIds(digests, { "1": { summary: "s", fingerprint: "old", updatedAt: "" } }, false)).toEqual([1, 2])
-        expect(pendingChainIds(digests, state, true)).toEqual([1, 2])
+        const ledger = { "1": { fingerprint: "a", updatedAt: "" } }
+        expect(pendingChainIds(digests, ledger, false)).toEqual([2])
+        expect(pendingChainIds(digests, { "1": { fingerprint: "old", updatedAt: "" } }, false)).toEqual([1, 2])
+        expect(pendingChainIds(digests, ledger, true)).toEqual([1, 2])
+    })
+
+    test("loadState 迁移：丢弃旧账本里的 summary 正文（final 才是唯一权威）", () => {
+        const legacy = {
+            "1": { summary: "旧正文", fingerprint: "a", updatedAt: "" },
+            "2": { fingerprint: "b", updatedAt: "" },
+            "3": "不是对象",
+        }
+        writeJson(manifestFile, legacy)
+        const ledger = loadState(manifestFile)
+        expect(ledger["1"]).toEqual({ fingerprint: "a", updatedAt: "" })
+        expect(ledger["2"]).toEqual({ fingerprint: "b", updatedAt: "" })
+        expect(ledger["3"]).toBeUndefined()
+        expect("summary" in ledger["1"]!).toBe(false)
     })
 
     test("输出对象只含既有总结的链且按 id 升序", () => {
-        const state = {
-            "1": { summary: "s1", fingerprint: "a", updatedAt: "" },
-            "3": { summary: "s3", fingerprint: "c", updatedAt: "" },
-        }
-        expect(buildOutputObject(state, new Set([1, 2, 3]))).toEqual({ "1": "s1", "3": "s3" })
-        expect(buildOutputObject({ ...state, "1": { summary: "", fingerprint: "a", updatedAt: "" } }, new Set([1]))).toEqual({})
+        const summaries = { "1": "s1", "3": "s3" }
+        expect(buildOutputObject(summaries, new Set([1, 2, 3]))).toEqual({ "1": "s1", "3": "s3" })
+        expect(buildOutputObject({ "1": "" }, new Set([1]))).toEqual({})
     })
 })
 
@@ -207,6 +227,60 @@ describe("agent 编排", () => {
         const calls: string[] = []
         const stats = await runStorySummary(options({ dryRun: true, generate: fakeGenerate(calls) }))
         expect(stats.pending).toBe(2)
+        expect(stats.generated).toBe(0)
+        expect(calls).toEqual([])
+        expect(existsSync(manifestFile)).toBe(false)
+        expect(existsSync(outputFile)).toBe(false)
+    })
+
+    test("单步模式（limit 1）：每次只生成 1 条并落盘，逐次推进到完成", async () => {
+        writeFixtures()
+        resetGeneratedState()
+        const calls: string[] = []
+        const generate = fakeGenerate(calls)
+
+        // 第一步：只生成 100101（pending 升序取前 1），状态与输出即时落盘
+        const first = await runStorySummary(options({ limit: 1, generate }))
+        expect(first.eligible).toBe(2)
+        expect(first.pending).toBe(1)
+        expect(first.generated).toBe(1)
+        expect(first.failed).toBe(0)
+        expect(calls).toHaveLength(1)
+        expect(calls[0]).toContain("【剧情链 100101】")
+        expect(readJson(manifestFile)["100101"]).toBeTruthy()
+        expect(Object.keys(readJson(outputFile))).toEqual(["100101"])
+
+        // 第二步：继续单步，只生成 300301
+        const second = await runStorySummary(options({ limit: 1, generate }))
+        expect(second.generated).toBe(1)
+        expect(calls).toHaveLength(2)
+        expect(calls[1]).toContain("【剧情链 300301】")
+        expect(Object.keys(readJson(outputFile))).toEqual(["100101", "300301"])
+
+        // 第三步：无剩余，limit 不触发任何调用
+        const third = await runStorySummary(options({ limit: 1, generate }))
+        expect(third.pending).toBe(0)
+        expect(third.generated).toBe(0)
+        expect(calls).toHaveLength(2)
+    })
+
+    test("limit 限量不改变 stats.pending 语义，limit 大于待生成数时等同全量", async () => {
+        writeFixtures()
+        resetGeneratedState()
+        const calls: string[] = []
+        const generate = fakeGenerate(calls)
+        const stats = await runStorySummary(options({ limit: 5, generate }))
+        expect(stats.pending).toBe(2)
+        expect(stats.generated).toBe(2)
+        expect(calls).toHaveLength(2)
+    })
+
+    test("dry-run 与单步模式组合：只预览前 1 条，仍不触网不写盘", async () => {
+        writeFixtures()
+        resetGeneratedState()
+        const calls: string[] = []
+        const stats = await runStorySummary(options({ dryRun: true, limit: 1, generate: fakeGenerate(calls) }))
+        expect(stats.pending).toBe(1)
         expect(stats.generated).toBe(0)
         expect(calls).toEqual([])
         expect(existsSync(manifestFile)).toBe(false)
@@ -250,6 +324,58 @@ describe("agent 编排", () => {
         expect(calls.at(-1)).not.toContain("【剧情链 300301】")
     })
 
+    test("final 是唯一权威：删除某条后重跑会重新生成，不静默从账本恢复", async () => {
+        writeFixtures()
+        resetGeneratedState()
+        const calls: string[] = []
+        const generate = fakeGenerate(calls)
+        await runStorySummary(options({ generate }))
+        expect(calls).toHaveLength(2)
+        expect(Object.keys(readJson(outputFile))).toEqual(["100101", "300301"])
+
+        // 模拟用户从 final 输出删除 300301 这条总结
+        const before = readJson(outputFile) as Record<string, string>
+        writeJson(outputFile, { "100101": before["100101"] })
+
+        const second = await runStorySummary(options({ generate }))
+        expect(second.pending).toBe(1)
+        expect(second.generated).toBe(1)
+        expect(second.failed).toBe(0)
+        // 关键：删除必须触发一次新的生成调用（而非从缓存里原样捞回）
+        expect(calls).toHaveLength(3)
+        expect(calls.at(-1)).toContain("【剧情链 300301】")
+        // 未删除的 100101 不被重生成，正文原样保留
+        expect(readJson(outputFile)["100101"]).toBe(before["100101"])
+        expect(Object.keys(readJson(outputFile))).toEqual(["100101", "300301"])
+        // 账本只记指纹，不保存总结正文
+        const ledger = readJson(manifestFile) as Record<string, { summary?: string }>
+        expect(ledger["100101"]).not.toHaveProperty("summary")
+        expect(ledger["300301"]).not.toHaveProperty("summary")
+    })
+
+    test("final 删除 + 单步模式：--limit 1 只重生成被删的那一条", async () => {
+        writeFixtures()
+        resetGeneratedState()
+        const calls: string[] = []
+        const generate = fakeGenerate(calls)
+        await runStorySummary(options({ generate }))
+        const before = readJson(outputFile) as Record<string, string>
+
+        // 删除 100101 后单步：下一次只重生成 100101，300301 不受影响
+        writeJson(outputFile, { "300301": before["300301"] })
+        const step = await runStorySummary(options({ limit: 1, generate }))
+        expect(step.pending).toBe(1)
+        expect(step.generated).toBe(1)
+        expect(calls.at(-1)).toContain("【剧情链 100101】")
+        expect(readJson(outputFile)["300301"]).toBe(before["300301"])
+        expect(Object.keys(readJson(outputFile))).toEqual(["100101", "300301"])
+
+        // 再次单步：无剩余，不触网
+        const done = await runStorySummary(options({ limit: 1, generate }))
+        expect(done.pending).toBe(0)
+        expect(done.generated).toBe(0)
+    })
+
     test("失败链留待下次重试，其余正常落盘", async () => {
         writeFixtures()
         resetGeneratedState()
@@ -259,7 +385,7 @@ describe("agent 编排", () => {
         expect(first.generated).toBe(1)
         expect(first.failed).toBe(1)
         expect(first.failedIds).toEqual([300301])
-        // 换一个不再失败的生成器重跑：300301 仍在 manifest 缺失，只补它
+        // 换一个不再失败的生成器重跑：300301 在账本中仍缺失，只补它
         const second = await runStorySummary(options({ generate: fakeGenerate(calls) }))
         expect(second.generated).toBe(1)
         expect(second.failed).toBe(0)
@@ -291,5 +417,15 @@ describe("agent 编排", () => {
             error = caught
         }
         expect(String(error)).toContain("API key")
+    })
+})
+
+describe("client 人称硬校验", () => {
+    test("命中违禁词：我（含我们）、主角、玩家；干净文本不误伤", () => {
+        expect(findPersonViolation("你和贝蕾妮卡必须逃离这座岛。")).toBeUndefined()
+        expect(findPersonViolation("这里曾是“我们”的家。")).toBe("我")
+        expect(findPersonViolation("她告诉你这里有飞艇。")).toBeUndefined()
+        expect(findPersonViolation("主角前往山顶遗迹。")).toBe("主角")
+        expect(findPersonViolation("玩家角色在梦中惊醒。")).toBe("玩家")
     })
 })

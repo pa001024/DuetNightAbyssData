@@ -178,8 +178,9 @@ export function truncateText(textValue: string, maxChars: number): string {
 export function buildPrompt(digest: ChainDigest, maxChars: number): string {
     const body = truncateText(digest.text, maxChars)
     return [
-        "请阅读下面的剧情链信息与全部对白，写一段该链的剧情总结（300～500 字中文）。",
+        "请阅读下面的剧情链信息与全部对白，写一段该链的剧情总结（100～200 字中文）。",
         "要求：只依据所给内容，不得虚构或脑补未出现的情节；概述起因、经过、结果与关键转折；",
+        "人称与引用：全文用第二人称“你”指代玩家角色，其余角色用名字（如贝蕾妮卡）；不得直接引用对白原话，一律转述；正文禁止出现“我”“我们”“主角”“玩家”等第一人称或旁白式指代；",
         "行文自然连贯，让没玩过游戏的读者也能看懂这章讲了什么；只输出总结正文本身，",
         "不要输出标题、Markdown、列表或任何解释。",
         "【内容开始】",

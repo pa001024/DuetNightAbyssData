@@ -103,6 +103,7 @@ bun run src/tools/exportStoryMedia.ts
 # 输出 final/i18n/cn/storySummary.json，配置见 .env 的 STORY_SUMMARY_*）
 bun run src/tools/storySummary/agent.ts --dry-run   # 测试/演练：只报告，不调用任何 API
 bun run src/tools/storySummary/agent.ts             # 真实生成（前置: bun out -f QuestChain QuestStory）
+bun run src/tools/storySummary/agent.ts --limit 1   # 单步模式：本次只生成 1 条并落盘，可反复执行逐条推进（--limit N 限量）
 ```
 
 `bun run lint` 当前会执行 `biome check --write && tsc --noEmit`，可能改写格式；运行前先确认

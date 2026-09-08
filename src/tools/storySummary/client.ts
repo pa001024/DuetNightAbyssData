@@ -2,6 +2,8 @@
  * storysummary LLM 客户端 —— OpenAI 兼容的 chat/completions 单次调用。
  * baseUrl 形如 https://api.deepseek.com/v1（DeepSeek）或 https://api.openai.com/v1（OpenAI），
  * 端点按 `${baseUrl}/chat/completions` 拼接。
+ * 除基础健壮性检查（空响应/过短）外，还对“人称”做硬校验：总结必须固定第二人称“你”，
+ * 正文（含引号内）不得出现“我/我们/主角/玩家”等词，违规视为生成失败，交由重试。
  */
 
 export interface ClientOptions {
@@ -12,6 +14,14 @@ export interface ClientOptions {
 }
 
 export type GenerateResult = { ok: true; summary: string } | { ok: false; error: string }
+
+/** 人称违禁词（“我”同时覆盖“我们”）；总结正文禁止出现，包括引号内的台词引用 */
+const FORBIDDEN_PERSON_WORDS = ["我", "主角", "玩家"] as const
+
+/** 返回命中的首个违禁词；未命中返回 undefined。暴露给测试做断言。 */
+export function findPersonViolation(text: string): string | undefined {
+    return FORBIDDEN_PERSON_WORDS.find(word => text.includes(word))
+}
 
 /** 组装 chat 请求体（暴露给测试做断言） */
 export function chatRequestBody(prompt: string): Record<string, unknown> {
@@ -25,7 +35,9 @@ export function chatRequestBody(prompt: string): Record<string, unknown> {
             { role: "user", content: prompt },
         ],
         temperature: 0.6,
-        max_tokens: 1024,
+        // DeepSeek 系列模型会先产出 reasoning 再写正文；上限太小时思考占满预算会致 content 为空
+        // （finish_reason=length）。个别链思考可达数千 token，给足预算让“思考 + ≤200字正文”都能放下。
+        max_tokens: 8192,
     }
 }
 
@@ -85,6 +97,10 @@ export function createChatClient(options: ClientOptions): ChatClient {
             }
             const summary = extractSummary(content)
             if (summary.length < 20) return { ok: false, error: "模型输出过短，判定为生成失败" }
+            const violation = findPersonViolation(summary)
+            if (violation) {
+                return { ok: false, error: `人称违规：正文出现“${violation}”（须固定第二人称“你”，禁止 我/我们/主角/玩家，含引号内）` }
+            }
             return { ok: true, summary }
         },
     }
