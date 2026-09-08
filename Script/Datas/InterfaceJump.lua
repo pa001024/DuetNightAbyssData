@@ -2,14 +2,15 @@ local T = {}
 T.RT_1 = {4220}
 T.RT_2 = {4020}
 T.RT_3 = {4480}
-T.RT_4 = {4170}
-T.RT_5 = {8002}
-T.RT_6 = {4030}
-T.RT_7 = {3003}
-T.RT_8 = {3002}
-T.RT_9 = {3001, 125}
-T.RT_10 = {4240}
-T.RT_11 = {12010306}
+T.RT_4 = {4041}
+T.RT_5 = {4170}
+T.RT_6 = {8002}
+T.RT_7 = {4030}
+T.RT_8 = {3003}
+T.RT_9 = {3002}
+T.RT_10 = {3001, 125}
+T.RT_11 = {4240}
+T.RT_12 = {12010306}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -91,14 +92,14 @@ return ReadOnly("InterfaceJump", {
     InterfaceJumpId = 13,
     JumpParameter1 = "JumpToRougeMain",
     JumpType = "SelfDefinedJump",
-    PortalUnlockCondition = T.RT_4,
+    PortalUnlockCondition = T.RT_5,
     PortalUnlockTips = "UI_Locked_Des_Rouge"
   },
   [14] = {
     InterfaceJumpId = 14,
     JumpParameter1 = "JumpToAbyssMainNormal",
     JumpType = "SelfDefinedJump",
-    PortalUnlockCondition = T.RT_5,
+    PortalUnlockCondition = T.RT_6,
     PortalUnlockTips = "UI_Locked_Des_Abyss"
   },
   [15] = {
@@ -184,7 +185,7 @@ return ReadOnly("InterfaceJump", {
     JumpParameter4 = "nil",
     JumpParameter5 = "Shop",
     JumpType = "SelfDefinedJump",
-    PortalUnlockCondition = T.RT_6,
+    PortalUnlockCondition = T.RT_7,
     PortalUnlockTips = "UI_Locked_Des_Shop"
   },
   [27] = {
@@ -195,7 +196,7 @@ return ReadOnly("InterfaceJump", {
     JumpParameter4 = "160201",
     JumpParameter5 = "Shop",
     JumpType = "SelfDefinedJump",
-    PortalUnlockCondition = T.RT_6,
+    PortalUnlockCondition = T.RT_7,
     PortalUnlockTips = "UI_Locked_Des_Shop"
   },
   [28] = {
@@ -206,7 +207,7 @@ return ReadOnly("InterfaceJump", {
     JumpParameter4 = "nil",
     JumpParameter5 = "AbyssShop",
     JumpType = "SelfDefinedJump",
-    PortalUnlockCondition = T.RT_5,
+    PortalUnlockCondition = T.RT_6,
     PortalUnlockTips = "UI_Locked_Des_AbyssShop"
   },
   [29] = {
@@ -250,7 +251,7 @@ return ReadOnly("InterfaceJump", {
     JumpParameter4 = "nil",
     JumpParameter5 = "Shop",
     JumpType = "SelfDefinedJump",
-    PortalUnlockCondition = T.RT_6,
+    PortalUnlockCondition = T.RT_7,
     PortalUnlockTips = "UI_Locked_Des_Shop"
   },
   [34] = {
@@ -293,7 +294,7 @@ return ReadOnly("InterfaceJump", {
     JumpParameter4 = "nil",
     JumpParameter5 = "True",
     JumpType = "SelfDefinedJump",
-    PortalUnlockCondition = T.RT_7,
+    PortalUnlockCondition = T.RT_8,
     PortalUnlockTips = "UI_Locked_Des_CurrentComission"
   },
   [39] = {
@@ -304,7 +305,7 @@ return ReadOnly("InterfaceJump", {
     JumpParameter4 = "nil",
     JumpParameter5 = "True",
     JumpType = "SelfDefinedJump",
-    PortalUnlockCondition = T.RT_7,
+    PortalUnlockCondition = T.RT_8,
     PortalUnlockTips = "UI_Locked_Des_CurrentComission"
   },
   [40] = {
@@ -315,7 +316,7 @@ return ReadOnly("InterfaceJump", {
     JumpParameter4 = "nil",
     JumpParameter5 = "True",
     JumpType = "SelfDefinedJump",
-    PortalUnlockCondition = T.RT_7,
+    PortalUnlockCondition = T.RT_8,
     PortalUnlockTips = "UI_Locked_Des_CurrentComission"
   },
   [41] = {
@@ -326,7 +327,7 @@ return ReadOnly("InterfaceJump", {
     JumpParameter4 = "nil",
     JumpParameter5 = "True",
     JumpType = "SelfDefinedJump",
-    PortalUnlockCondition = T.RT_8,
+    PortalUnlockCondition = T.RT_9,
     PortalUnlockTips = "UI_Locked_Des_CurrentComission"
   },
   [42] = {
@@ -337,7 +338,7 @@ return ReadOnly("InterfaceJump", {
     JumpParameter4 = "nil",
     JumpParameter5 = "True",
     JumpType = "SelfDefinedJump",
-    PortalUnlockCondition = T.RT_8,
+    PortalUnlockCondition = T.RT_9,
     PortalUnlockTips = "UI_Locked_Des_CurrentComission"
   },
   [43] = {
@@ -348,7 +349,7 @@ return ReadOnly("InterfaceJump", {
     JumpParameter4 = "nil",
     JumpParameter5 = "True",
     JumpType = "SelfDefinedJump",
-    PortalUnlockCondition = T.RT_8,
+    PortalUnlockCondition = T.RT_9,
     PortalUnlockTips = "UI_Locked_Des_CurrentComission"
   },
   [44] = {
@@ -359,7 +360,7 @@ return ReadOnly("InterfaceJump", {
     JumpParameter4 = "nil",
     JumpParameter5 = "True",
     JumpType = "SelfDefinedJump",
-    PortalUnlockCondition = T.RT_9,
+    PortalUnlockCondition = T.RT_10,
     PortalUnlockTips = "UI_Locked_Des_CurrentComission"
   },
   [45] = {
@@ -370,7 +371,7 @@ return ReadOnly("InterfaceJump", {
     JumpParameter4 = "nil",
     JumpParameter5 = "True",
     JumpType = "SelfDefinedJump",
-    PortalUnlockCondition = T.RT_9,
+    PortalUnlockCondition = T.RT_10,
     PortalUnlockTips = "UI_Locked_Des_CurrentComission"
   },
   [46] = {
@@ -381,7 +382,7 @@ return ReadOnly("InterfaceJump", {
     JumpParameter4 = "nil",
     JumpParameter5 = "True",
     JumpType = "SelfDefinedJump",
-    PortalUnlockCondition = T.RT_9,
+    PortalUnlockCondition = T.RT_10,
     PortalUnlockTips = "UI_Locked_Des_CurrentComission"
   },
   [47] = {
@@ -456,7 +457,7 @@ return ReadOnly("InterfaceJump", {
     JumpParameter4 = "nil",
     JumpParameter5 = "Rouge",
     JumpType = "SelfDefinedJump",
-    PortalUnlockCondition = T.RT_4,
+    PortalUnlockCondition = T.RT_5,
     PortalUnlockTips = "UI_Locked_Des_Rouge"
   },
   [56] = {
@@ -476,7 +477,7 @@ return ReadOnly("InterfaceJump", {
     JumpParameter4 = "nil",
     JumpParameter5 = "Shop",
     JumpType = "SelfDefinedJump",
-    PortalUnlockCondition = T.RT_6,
+    PortalUnlockCondition = T.RT_7,
     PortalUnlockTips = "UI_Locked_Des_Shop"
   },
   [58] = {
@@ -521,7 +522,7 @@ return ReadOnly("InterfaceJump", {
     JumpParameter4 = "nil",
     JumpParameter5 = "Shop",
     JumpType = "SelfDefinedJump",
-    PortalUnlockCondition = T.RT_6
+    PortalUnlockCondition = T.RT_7
   },
   [63] = {
     InterfaceJumpId = 63,
@@ -540,7 +541,7 @@ return ReadOnly("InterfaceJump", {
     JumpParameter2 = "NewDeputeRoot",
     JumpParameter3 = "WeeklySelectDungeon",
     JumpType = "SelfDefinedJump",
-    PortalUnlockCondition = T.RT_10,
+    PortalUnlockCondition = T.RT_11,
     PortalUnlockTips = "UI_Locked_Des_CurrentComission"
   },
   [66] = {
@@ -596,7 +597,7 @@ return ReadOnly("InterfaceJump", {
     JumpParameter4 = "nil",
     JumpParameter5 = "HuaxuExploreShop",
     JumpType = "SelfDefinedJump",
-    PortalUnlockCondition = T.RT_11,
+    PortalUnlockCondition = T.RT_12,
     PortalUnlockTips = "UI_Locked_Des_Shop"
   },
   [73] = {
@@ -607,7 +608,7 @@ return ReadOnly("InterfaceJump", {
     JumpParameter4 = "nil",
     JumpParameter5 = "WeeklyDungeonShop",
     JumpType = "SelfDefinedJump",
-    PortalUnlockCondition = T.RT_10,
+    PortalUnlockCondition = T.RT_11,
     PortalUnlockTips = "UI_Locked_Des_Match"
   },
   [74] = {
@@ -636,7 +637,7 @@ return ReadOnly("InterfaceJump", {
     InterfaceJumpId = 77,
     JumpParameter1 = "JumpToAbyssMainFromActivity",
     JumpType = "SelfDefinedJump",
-    PortalUnlockCondition = T.RT_5,
+    PortalUnlockCondition = T.RT_6,
     PortalUnlockTips = "UI_Locked_Des_Abyss"
   },
   [78] = {
@@ -694,7 +695,7 @@ return ReadOnly("InterfaceJump", {
     JumpParameter4 = "nil",
     JumpParameter5 = "Shop",
     JumpType = "SelfDefinedJump",
-    PortalUnlockCondition = T.RT_6,
+    PortalUnlockCondition = T.RT_7,
     PortalUnlockTips = "UI_Locked_Des_Shop"
   },
   [86] = {
@@ -774,7 +775,7 @@ return ReadOnly("InterfaceJump", {
     JumpParameter2 = "4",
     JumpParameter3 = "200314",
     JumpType = "SelfDefinedJump",
-    PortalUnlockCondition = T.RT_11,
+    PortalUnlockCondition = T.RT_12,
     PortalUnlockTips = "UI_Locked_Des_Quest"
   },
   [96] = {
@@ -983,7 +984,7 @@ return ReadOnly("InterfaceJump", {
     JumpParameter1 = "JumpToGachaPage",
     JumpParameter2 = "3",
     JumpType = "SelfDefinedJump",
-    PortalUnlockCondition = {4041}
+    PortalUnlockCondition = T.RT_4
   },
   [122] = {
     InterfaceJumpId = 122,
@@ -1190,6 +1191,13 @@ return ReadOnly("InterfaceJump", {
     JumpType = "SelfDefinedJump",
     PortalUnlockCondition = T.RT_1,
     PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [148] = {
+    InterfaceJumpId = 148,
+    JumpParameter1 = "JumpToGachaPage",
+    JumpParameter2 = "4",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_4
   },
   [1101] = {
     InterfaceJumpId = 1101,

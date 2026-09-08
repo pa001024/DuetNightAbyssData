@@ -835,7 +835,7 @@ return ReadOnly("AbyssSeason", {
     DifficultyLock = 9991,
     DifficultyLockToast = "Abyss_RotateLockToast",
     Order = 3,
-    WalnutId = 1026,
+    WalnutId = 1027,
     WalnutNum = 20
   },
   [1602] = {
@@ -869,7 +869,7 @@ return ReadOnly("AbyssSeason", {
     InfiniteNode = T.RT_5,
     LastInfinite = 1504,
     Order = 4,
-    WalnutId = 1026,
+    WalnutId = 1027,
     WalnutNum = 45
   },
   [1603] = {

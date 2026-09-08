@@ -1885,7 +1885,7 @@ return ReadOnly("ShopBannerTab", {
     EndTime = LocalTimeProxy(1792400400),
     Id = 601,
     IfJumpSkinGacha = true,
-    InterfaceJumpId = 121,
+    InterfaceJumpId = 148,
     InterfaceJumpText = "UI_Banner_SkinGacha_Get",
     IsSwitchTab = true,
     MarkText = "UI_Banner_Tab_ReGacha",

@@ -251,6 +251,24 @@ return ReadOnly("PayGoodsToScore", {
       GoodsId = "com.hero.dna.Pay_ZaieWeaponSupply3_1.6",
       GoodsName = "Pack_Name_14_HyperWeapon3",
       PayGoodsScore = 3280
+    },
+    ["com.hero.dna.Pay_tanchuang01_1.6"] = {
+      EventId = 113001,
+      GoodsId = "com.hero.dna.Pay_tanchuang01_1.6",
+      GoodsName = "Pack_Name_Gacha_Target1",
+      PayGoodsScore = 980
+    },
+    ["com.hero.dna.Pay_tanchuang02_1.6"] = {
+      EventId = 113001,
+      GoodsId = "com.hero.dna.Pay_tanchuang02_1.6",
+      GoodsName = "Pack_Name_Gacha_Target2",
+      PayGoodsScore = 1980
+    },
+    ["com.hero.dna.Pay_tanchuang03_1.6"] = {
+      EventId = 113001,
+      GoodsId = "com.hero.dna.Pay_tanchuang03_1.6",
+      GoodsName = "Pack_Name_Gacha_Target3",
+      PayGoodsScore = 3280
     }
   }
 })

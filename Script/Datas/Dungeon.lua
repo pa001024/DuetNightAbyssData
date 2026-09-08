@@ -2858,7 +2858,6 @@ return ReadOnly("Dungeon", {
     SettlementOffset = T.RT_11
   },
   [53] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
     DungeonCost = T.RT_49,
@@ -5473,7 +5472,6 @@ return ReadOnly("Dungeon", {
     bHideBatttleMap = true
   },
   [30101] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
     DungeonContent = "UI_DUNGEON_CONTENT_DEFENCE_1",
@@ -5506,7 +5504,6 @@ return ReadOnly("Dungeon", {
     bHideBatttleMap = true
   },
   [30102] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
     DungeonContent = "UI_DUNGEON_CONTENT_DEFENCE_1",
@@ -5539,7 +5536,6 @@ return ReadOnly("Dungeon", {
     bHideBatttleMap = true
   },
   [30103] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
     DungeonContent = "UI_DUNGEON_CONTENT_DEFENCE_1",
@@ -5572,7 +5568,6 @@ return ReadOnly("Dungeon", {
     bHideBatttleMap = true
   },
   [30104] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
     DungeonContent = "UI_DUNGEON_CONTENT_DEFENCE_1",
@@ -5605,7 +5600,6 @@ return ReadOnly("Dungeon", {
     bHideBatttleMap = true
   },
   [30105] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
     DungeonContent = "UI_DUNGEON_CONTENT_DEFENCE_1",
@@ -5638,7 +5632,6 @@ return ReadOnly("Dungeon", {
     bHideBatttleMap = true
   },
   [30106] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
     DungeonContent = "UI_DUNGEON_CONTENT_DEFENCE_1",
@@ -5671,7 +5664,6 @@ return ReadOnly("Dungeon", {
     bHideBatttleMap = true
   },
   [30107] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
     DungeonContent = "UI_DUNGEON_CONTENT_DEFENCE_1",
@@ -5704,7 +5696,6 @@ return ReadOnly("Dungeon", {
     bHideBatttleMap = true
   },
   [30108] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
     DungeonContent = "UI_DUNGEON_CONTENT_DEFENCE_1",
@@ -5737,7 +5728,6 @@ return ReadOnly("Dungeon", {
     bHideBatttleMap = true
   },
   [30601] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
     DungeonContent = "UI_DUNGEON_CONTENT_SURVIVALPRO_1",
@@ -5770,7 +5760,6 @@ return ReadOnly("Dungeon", {
     bHideBatttleMap = true
   },
   [30602] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
     DungeonContent = "UI_DUNGEON_CONTENT_SURVIVALPRO_1",
@@ -5803,7 +5792,6 @@ return ReadOnly("Dungeon", {
     bHideBatttleMap = true
   },
   [30603] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
     DungeonContent = "UI_DUNGEON_CONTENT_SURVIVALPRO_1",
@@ -5836,7 +5824,6 @@ return ReadOnly("Dungeon", {
     bHideBatttleMap = true
   },
   [30604] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
     DungeonContent = "UI_DUNGEON_CONTENT_SURVIVALPRO_1",
@@ -5869,7 +5856,6 @@ return ReadOnly("Dungeon", {
     bHideBatttleMap = true
   },
   [30605] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
     DungeonContent = "UI_DUNGEON_CONTENT_SURVIVALPRO_1",
@@ -5902,7 +5888,6 @@ return ReadOnly("Dungeon", {
     bHideBatttleMap = true
   },
   [30606] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
     DungeonContent = "UI_DUNGEON_CONTENT_SURVIVALPRO_1",
@@ -5935,7 +5920,6 @@ return ReadOnly("Dungeon", {
     bHideBatttleMap = true
   },
   [30607] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
     DungeonContent = "UI_DUNGEON_CONTENT_SURVIVALPRO_1",
@@ -5968,7 +5952,6 @@ return ReadOnly("Dungeon", {
     bHideBatttleMap = true
   },
   [30608] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
     DungeonContent = "UI_DUNGEON_CONTENT_SURVIVALPRO_1",
@@ -6001,7 +5984,6 @@ return ReadOnly("Dungeon", {
     bHideBatttleMap = true
   },
   [30609] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
     DungeonContent = "UI_DUNGEON_CONTENT_SURVIVALPRO_1",
@@ -6034,7 +6016,6 @@ return ReadOnly("Dungeon", {
     bHideBatttleMap = true
   },
   [30801] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
     DungeonContent = "UI_DUNGEON_CONTENT_EXTERMINATE_1",
@@ -6066,7 +6047,6 @@ return ReadOnly("Dungeon", {
     bHideBatttleMap = true
   },
   [30802] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
     DungeonContent = "UI_DUNGEON_CONTENT_EXTERMINATE_1",
@@ -6098,7 +6078,6 @@ return ReadOnly("Dungeon", {
     bHideBatttleMap = true
   },
   [30803] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
     DungeonContent = "UI_DUNGEON_CONTENT_EXTERMINATE_1",
@@ -6130,7 +6109,6 @@ return ReadOnly("Dungeon", {
     bHideBatttleMap = true
   },
   [30804] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
     DungeonContent = "UI_DUNGEON_CONTENT_EXTERMINATE_1",
@@ -6162,7 +6140,6 @@ return ReadOnly("Dungeon", {
     bHideBatttleMap = true
   },
   [31001] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
     DungeonContent = "UI_DUNGEON_CONTENT_TESTING_1",
@@ -6195,7 +6172,6 @@ return ReadOnly("Dungeon", {
     bHideBatttleMap = true
   },
   [31002] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
     DungeonContent = "UI_DUNGEON_CONTENT_TESTING_1",
@@ -6228,7 +6204,6 @@ return ReadOnly("Dungeon", {
     bHideBatttleMap = true
   },
   [31003] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
     DungeonContent = "UI_DUNGEON_CONTENT_TESTING_1",
@@ -6261,7 +6236,6 @@ return ReadOnly("Dungeon", {
     bHideBatttleMap = true
   },
   [31004] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
     DungeonContent = "UI_DUNGEON_CONTENT_TESTING_1",
@@ -6294,7 +6268,6 @@ return ReadOnly("Dungeon", {
     bHideBatttleMap = true
   },
   [31005] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DungeonBGM = "event:/bgm/1_1/level/level_bgm",
     DungeonContent = "UI_DUNGEON_CONTENT_TESTING_1",
@@ -19317,7 +19290,6 @@ return ReadOnly("Dungeon", {
     SettlementOffset = T.RT_11
   },
   [90101] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DropReward = T.RT_205,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -19499,7 +19471,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90103] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = {3110},
     DropReward = T.RT_205,
@@ -19682,7 +19653,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90105] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = {3111},
     DropReward = T.RT_205,
@@ -19865,7 +19835,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90107] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = {3112},
     DropReward = T.RT_205,
@@ -20067,7 +20036,6 @@ return ReadOnly("Dungeon", {
     WCDungeonDesignMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Yanjindu_Main/Design_Data/Huaxu_Yanjindu_DungeonDesign_Defence01"
   },
   [90109] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = {3113},
     DropReward = T.RT_205,
@@ -20251,7 +20219,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90111] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = {3114},
     DropReward = T.RT_205,
@@ -20435,7 +20402,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90113] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_238,
     DropReward = T.RT_239,
@@ -20619,7 +20585,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90115] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_238,
     DropReward = T.RT_239,
@@ -22955,7 +22920,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90301] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DropReward = T.RT_251,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -22995,7 +22959,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90302] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DropReward = T.RT_251,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -23035,7 +22998,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90303] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DropReward = T.RT_251,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -23075,7 +23037,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90304] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DropReward = T.RT_251,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -23114,7 +23075,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90305] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DropReward = T.RT_252,
     DropRewardMonsterNum = 200,
@@ -23154,7 +23114,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90306] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DropReward = T.RT_252,
     DropRewardMonsterNum = 200,
@@ -23194,7 +23153,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90307] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DropReward = T.RT_252,
     DropRewardMonsterNum = 200,
@@ -23234,7 +23192,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90308] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_237,
     DropReward = T.RT_252,
@@ -23275,7 +23232,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90309] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_228,
     DropReward = T.RT_252,
@@ -23316,7 +23272,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90310] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_214,
     DropReward = T.RT_252,
@@ -23357,7 +23312,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90311] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_216,
     DropReward = T.RT_252,
@@ -23398,7 +23352,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90312] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = {3105},
     DropReward = T.RT_252,
@@ -29584,7 +29537,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90501] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DropReward = T.RT_268,
     DropRewardMonsterNum = 100,
@@ -29622,7 +29574,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90502] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_249,
     DropReward = T.RT_268,
@@ -29661,7 +29612,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90503] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_250,
     DropReward = T.RT_268,
@@ -29700,7 +29650,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90504] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_237,
     DropReward = T.RT_268,
@@ -29739,7 +29688,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90505] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_228,
     DropReward = T.RT_268,
@@ -29778,7 +29726,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90506] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_214,
     DropReward = T.RT_268,
@@ -29817,7 +29764,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90507] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_216,
     DropReward = T.RT_268,
@@ -29857,7 +29803,6 @@ return ReadOnly("Dungeon", {
   },
   [90508] = {
     AttributeType = "Fire",
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_272,
     DropReward = T.RT_223,
@@ -29902,7 +29847,6 @@ return ReadOnly("Dungeon", {
   },
   [90509] = {
     AttributeType = "Thunder",
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_272,
     DropReward = T.RT_223,
@@ -29947,7 +29891,6 @@ return ReadOnly("Dungeon", {
   },
   [90510] = {
     AttributeType = "Wind",
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_272,
     DropReward = T.RT_223,
@@ -29992,7 +29935,6 @@ return ReadOnly("Dungeon", {
   },
   [90511] = {
     AttributeType = "Dark",
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_272,
     DropReward = T.RT_223,
@@ -30032,7 +29974,6 @@ return ReadOnly("Dungeon", {
   },
   [90512] = {
     AttributeType = "Light",
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_272,
     DropReward = T.RT_223,
@@ -30072,7 +30013,6 @@ return ReadOnly("Dungeon", {
   },
   [90513] = {
     AttributeType = "Water",
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_274,
     DropReward = T.RT_223,
@@ -30124,7 +30064,6 @@ return ReadOnly("Dungeon", {
   },
   [90514] = {
     AttributeType = "Fire",
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_274,
     DropReward = T.RT_223,
@@ -30169,7 +30108,6 @@ return ReadOnly("Dungeon", {
   },
   [90515] = {
     AttributeType = "Thunder",
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_274,
     DropReward = T.RT_223,
@@ -30214,7 +30152,6 @@ return ReadOnly("Dungeon", {
   },
   [90516] = {
     AttributeType = "Wind",
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_274,
     DropReward = T.RT_223,
@@ -30259,7 +30196,6 @@ return ReadOnly("Dungeon", {
   },
   [90517] = {
     AttributeType = "Dark",
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_274,
     DropReward = T.RT_223,
@@ -30299,7 +30235,6 @@ return ReadOnly("Dungeon", {
   },
   [90518] = {
     AttributeType = "Light",
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_274,
     DropReward = T.RT_223,
@@ -30338,7 +30273,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90521] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_228,
     DropReward = T.RT_268,
@@ -30377,7 +30311,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90522] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_214,
     DropReward = T.RT_268,
@@ -30416,7 +30349,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90523] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_216,
     DropReward = T.RT_268,
@@ -30455,7 +30387,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90601] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DropReward = T.RT_276,
     DropRewardMonsterNum = 200,
@@ -30496,7 +30427,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90602] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_249,
     DropReward = T.RT_276,
@@ -30544,7 +30474,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90603] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_250,
     DropReward = T.RT_276,
@@ -30592,7 +30521,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90604] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_237,
     DropReward = {
@@ -30662,7 +30590,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90605] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_228,
     DropReward = T.RT_276,
@@ -30710,7 +30637,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90606] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_214,
     DropReward = T.RT_276,
@@ -30758,7 +30684,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90607] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_216,
     DropReward = T.RT_276,
@@ -30806,7 +30731,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90701] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DropReward = T.RT_278,
     DropRewardMonsterNum = 200,
@@ -30846,7 +30770,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90702] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DropReward = T.RT_278,
     DropRewardMonsterNum = 200,
@@ -30886,7 +30809,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90703] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_250,
     DropReward = T.RT_278,
@@ -30927,7 +30849,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90704] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_237,
     DropReward = T.RT_278,
@@ -30968,7 +30889,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90705] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_228,
     DropReward = T.RT_278,
@@ -31009,7 +30929,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90706] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_214,
     DropReward = T.RT_278,
@@ -31050,7 +30969,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90707] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_216,
     DropReward = T.RT_278,
@@ -31092,7 +31010,6 @@ return ReadOnly("Dungeon", {
   },
   [90801] = {
     AlertDisable = true,
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DropReward = T.RT_279,
     DropRewardMonsterNum = 40,
@@ -31131,7 +31048,6 @@ return ReadOnly("Dungeon", {
   },
   [90802] = {
     AlertDisable = true,
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_249,
     DropReward = T.RT_279,
@@ -31171,7 +31087,6 @@ return ReadOnly("Dungeon", {
   },
   [90803] = {
     AlertDisable = true,
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_250,
     DropReward = T.RT_279,
@@ -31211,7 +31126,6 @@ return ReadOnly("Dungeon", {
   },
   [90804] = {
     AlertDisable = true,
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_237,
     DropReward = {
@@ -31264,7 +31178,6 @@ return ReadOnly("Dungeon", {
   },
   [90805] = {
     AlertDisable = true,
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_228,
     DropReward = T.RT_279,
@@ -31304,7 +31217,6 @@ return ReadOnly("Dungeon", {
   },
   [90806] = {
     AlertDisable = true,
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_214,
     DropReward = T.RT_279,
@@ -31344,7 +31256,6 @@ return ReadOnly("Dungeon", {
   },
   [90807] = {
     AlertDisable = true,
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_216,
     DropReward = T.RT_279,
@@ -31383,7 +31294,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90901] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DropReward = T.RT_284,
     DropRewardMonsterNum = 200,
@@ -31421,7 +31331,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90902] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DropReward = T.RT_284,
     DropRewardMonsterNum = 200,
@@ -31459,7 +31368,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90903] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_250,
     DropReward = T.RT_284,
@@ -31498,7 +31406,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90904] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_237,
     DropReward = T.RT_284,
@@ -31537,7 +31444,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90905] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_228,
     DropReward = T.RT_284,
@@ -31576,7 +31482,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90906] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_214,
     DropReward = T.RT_284,
@@ -31615,7 +31520,6 @@ return ReadOnly("Dungeon", {
     TicketId = T.RT_208
   },
   [90907] = {
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = T.RT_216,
     DropReward = T.RT_284,
@@ -31655,7 +31559,6 @@ return ReadOnly("Dungeon", {
   },
   [91001] = {
     AlertDisable = true,
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     DropReward = T.RT_285,
     DungeonBGM = "event:/bgm/cbt01/level/zhuiji",
@@ -31690,7 +31593,6 @@ return ReadOnly("Dungeon", {
   },
   [91002] = {
     AlertDisable = true,
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = {3120},
     DropReward = T.RT_285,
@@ -31726,7 +31628,6 @@ return ReadOnly("Dungeon", {
   },
   [91003] = {
     AlertDisable = true,
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = {3121},
     DropReward = T.RT_285,
@@ -31762,7 +31663,6 @@ return ReadOnly("Dungeon", {
   },
   [91004] = {
     AlertDisable = true,
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = {3122},
     DropReward = T.RT_285,
@@ -31798,7 +31698,6 @@ return ReadOnly("Dungeon", {
   },
   [91005] = {
     AlertDisable = true,
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = {3123},
     DropReward = T.RT_285,
@@ -31834,7 +31733,6 @@ return ReadOnly("Dungeon", {
   },
   [91006] = {
     AlertDisable = true,
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = {3124},
     DropReward = T.RT_285,
@@ -31870,7 +31768,6 @@ return ReadOnly("Dungeon", {
   },
   [91007] = {
     AlertDisable = true,
-    AutoNextRound = true,
     CameraParam = T.RT_6,
     Condition = {3125},
     DropReward = T.RT_285,
