@@ -4088,6 +4088,21 @@ return ReadOnly("ShopItem2ShopSubId", {
           SubTabId = 1401
         }
       },
+      [30120] = {
+        [1] = {ShopItemId = 150321, SubTabId = 1501}
+      },
+      [30121] = {
+        [1] = {ShopItemId = 150322, SubTabId = 1501}
+      },
+      [30122] = {
+        [1] = {ShopItemId = 150323, SubTabId = 1501}
+      },
+      [30123] = {
+        [1] = {ShopItemId = 150324, SubTabId = 1501}
+      },
+      [30124] = {
+        [1] = {ShopItemId = 150325, SubTabId = 1501}
+      },
       [41002] = {
         [1] = {ShopItemId = 140133, SubTabId = 1403}
       },

@@ -1230,7 +1230,6 @@ return ReadOnly("TargetTypeIdValidMap", {
   ["10524_Dark"] = true,
   ["10524_Fire"] = true,
   ["10524_Light"] = true,
-  ["10524_SurvivalMiniPro"] = true,
   ["10524_Thunder"] = true,
   ["10524_Water"] = true,
   ["10524_Wind"] = true,

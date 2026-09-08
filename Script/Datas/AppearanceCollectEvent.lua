@@ -746,7 +746,7 @@ return ReadOnly("AppearanceCollectEvent", {
     EntranceId = 8,
     EventId = 10302402,
     Highlight = true,
-    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face30_04.T_Fashion_Face30_04'",
+    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face30_01.T_Fashion_Face30_01'",
     JumpLink = {
       [1] = "Shop_Main",
       [2] = "Shop_Main",

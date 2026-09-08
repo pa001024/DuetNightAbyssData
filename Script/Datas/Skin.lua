@@ -947,6 +947,9 @@ return ReadOnly("Skin", {
     DefaultItem = {
       Hair = {
         [210182] = 1
+      },
+      HeadSculpture = {
+        [20016] = 1
       }
     },
     Des = "UI_Skin_Des_210101",

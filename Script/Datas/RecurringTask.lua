@@ -473,6 +473,54 @@ return ReadOnly("RecurringTask", {
     Times = T.RT_3,
     Type = 1
   },
+  [1001037] = {
+    ExpCount = T.RT_28,
+    QuestId = 1001037,
+    Rarity = 3,
+    ReputationID = 1001,
+    Resource = 2015,
+    StarterQuestDes = "RegionReputation_RecurringTask_05",
+    Target = 30,
+    TargetId = {20200108},
+    Times = T.RT_3,
+    Type = 1
+  },
+  [1001038] = {
+    ExpCount = T.RT_28,
+    QuestId = 1001038,
+    Rarity = 3,
+    ReputationID = 1001,
+    Resource = 2015,
+    StarterQuestDes = "RegionReputation_RecurringTask_06",
+    Target = 30,
+    TargetId = {20200109},
+    Times = T.RT_3,
+    Type = 1
+  },
+  [1001039] = {
+    ExpCount = T.RT_28,
+    QuestId = 1001039,
+    Rarity = 3,
+    ReputationID = 1001,
+    Resource = 2015,
+    StarterQuestDes = "RegionReputation_RecurringTask_07",
+    Target = 30,
+    TargetId = {20200110},
+    Times = T.RT_3,
+    Type = 1
+  },
+  [1001040] = {
+    ExpCount = T.RT_28,
+    QuestId = 1001040,
+    Rarity = 3,
+    ReputationID = 1001,
+    Resource = 2015,
+    StarterQuestDes = "RegionReputation_RecurringTask_08",
+    Target = 30,
+    TargetId = {20200111},
+    Times = T.RT_3,
+    Type = 1
+  },
   [1001041] = {
     ExpCount = T.RT_28,
     QuestId = 1001041,

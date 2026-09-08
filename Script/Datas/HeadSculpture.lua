@@ -425,6 +425,15 @@ return ReadOnly("HeadSculpture", {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Falu01.T_Head_Falu01'",
     Name = "UI_PlayerHead_Name_20015"
   },
+  [20016] = {
+    AccessText = "UI_Accessory_Unlock_Skin",
+    CanPreView = true,
+    Des = "UI_PlayerHead_Des_Common",
+    HeadId = 20016,
+    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Shuimu02.T_Head_Shuimu02'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Shuimu02.T_Head_Shuimu02'",
+    Name = "UI_PlayerHead_Name_20016"
+  },
   [30001] = {
     AccessText = "UI_Accessory_Unlock_Impression",
     CanPreView = true,

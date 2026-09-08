@@ -451,6 +451,7 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CharId = 3104,
     CollisionLevel = 999,
+    MailHead = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Falu.T_Head_Falu'",
     MailSender = "法露茜（看板娘）",
     ModelId = 3104,
     MouthProfile = "LipSync_10008",
