@@ -4,7 +4,7 @@ import { join } from "node:path"
 import { describe, expect, test } from "bun:test"
 import type { ModuleContext } from "../src/core/Graph.ts"
 import type { DialogueService } from "../src/modules/dialogue/dialogueModule.ts"
-import { eventStorylineNodes, storylineNodes } from "../src/modules/storyline/storyline.ts"
+import { eventStorylineNodes, storylineNodes, storyMediaNode } from "../src/modules/storyline/storyline.ts"
 import { collectBgmFiles, normalizeBgmAssetPath, parseFModelSoundLog } from "../src/tools/exportStoryMedia.ts"
 
 function context(story: Record<string, unknown>): ModuleContext {
@@ -51,6 +51,62 @@ describe("storyline media nodes", () => {
             { id: "video", type: "VideoNode", name: "开车", resource: "EX01_SC018", next: ["bgm"] },
             { id: "bgm", type: "PlayOrStopBGMNode", name: "活动音乐", resource: "0091_feina_activity_cs_01" },
         ])
+    })
+
+    test("skips BGM nodes that only mute the current music", () => {
+        const media = (key: string, node: Record<string, any>) =>
+            storyMediaNode(key, node) as Record<string, any> | undefined
+        expect(
+            media("mute-event", {
+                type: "PlayOrStopBGMNode",
+                propsData: { SoundStateType: 0, SoundPath: "event:/bgm/mute" },
+            })
+        ).toBeUndefined()
+        expect(
+            media("mute-asset", {
+                type: "PlayOrStopBGMNode",
+                propsData: { SoundStateType: 0, SoundPath: "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/mute.mute'" },
+            })
+        ).toBeUndefined()
+        expect(
+            media("ambience", {
+                type: "PlayOrStopBGMNode",
+                propsData: { SoundStateType: 0, SoundPath: "event:/ambience/common/pad_noise_rain_plain_heavy" },
+            })
+        ).toEqual({ id: "ambience", type: "PlayOrStopBGMNode", name: "", resource: "pad_noise_rain_plain_heavy" })
+    })
+
+    test("skips snapshot control events that carry no audio content", () => {
+        const media = (key: string, node: Record<string, any>) =>
+            storyMediaNode(key, node) as Record<string, any> | undefined
+        expect(
+            media("mission-mute", {
+                type: "PlayOrStopBGMNode",
+                propsData: {
+                    SoundStateType: 0,
+                    SoundType: 2,
+                    SoundPath: "FMODEvent'/Game/Asset/Audio/FMOD/Events/snapshot/story/0_1_mute_mission_event.0_1_mute_mission_event'",
+                },
+            })
+        ).toBeUndefined()
+        expect(
+            media("reverb", {
+                type: "PlayOrStopBGMNode",
+                propsData: { SoundStateType: 0, SoundType: 2, SoundPath: "event:/snapshot/story/0_0_opening" },
+            })
+        ).toBeUndefined()
+        expect(
+            media("broadcast", {
+                type: "PlayOrStopBGMNode",
+                propsData: { SoundStateType: 0, SoundType: 2, SoundPath: "event:/snapshot/story/mute_broadcast" },
+            })
+        ).toBeUndefined()
+        expect(
+            media("noise", {
+                type: "PlayOrStopBGMNode",
+                propsData: { SoundStateType: 0, SoundType: 1, SoundPath: "event:/ambience/world/prologue/char_pick" },
+            })
+        ).toEqual({ id: "noise", type: "PlayOrStopBGMNode", name: "", resource: "char_pick" })
     })
 
     test("exports the same media nodes from event storylines", () => {

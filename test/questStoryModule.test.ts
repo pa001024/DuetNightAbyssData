@@ -55,6 +55,72 @@ describe("QuestStory special stories", () => {
         ])
     })
 
+    test("does not export BGM nodes that only mute the current music", async () => {
+        const story = {
+            storyNodeData: {
+                parent: {
+                    key: "parent",
+                    propsData: { QuestId: 10 },
+                    questNodeData: {
+                        lineData: [{ startQuest: "start", startPort: "QuestStart", endQuest: "talk" }],
+                        nodeData: {
+                            start: { key: "start", type: "QuestStartNode", propsData: {} },
+                            talk: { key: "talk", type: "TalkNode", name: "对白", propsData: { FirstDialogueId: 1 } },
+                            mute: {
+                                key: "mute",
+                                type: "PlayOrStopBGMNode",
+                                name: "静音",
+                                propsData: { SoundStateType: 0, SoundPath: "event:/bgm/mute" },
+                            },
+                            snapshot: {
+                                key: "snapshot",
+                                type: "PlayOrStopBGMNode",
+                                name: "任务提示音静音",
+                                propsData: {
+                                    SoundStateType: 0,
+                                    SoundType: 2,
+                                    SoundPath: "FMODEvent'/Game/Asset/Audio/FMOD/Events/snapshot/story/0_1_mute_mission_event.0_1_mute_mission_event'",
+                                },
+                            },
+                            bgm: {
+                                key: "bgm",
+                                type: "PlayOrStopBGMNode",
+                                name: "活动音乐",
+                                propsData: { SoundStateType: 0, SoundPath: "event:/bgm/1_0/0091_feina_activity_cs_01" },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+        const dialogue = {
+            story: () => story,
+            prepareStoryFlows: async () => {},
+            prefetchReachable: () => {},
+            chain: () => [{ id: 1 }],
+        } as unknown as DialogueService
+        const tables: Record<string, unknown> = {
+            QuestChain: { 1: { QuestChainId: 1, StoryPath: "main.story" } },
+            STLExportQuestChain: { 1: { Quests: { 10: {} } } },
+            DetectiveQuestion: {},
+            DetectiveAnswer: {},
+            SpecialQuestConfig: {},
+        }
+        const ctx = {
+            dm: {
+                getTable: (name: string) => tables[name],
+                loadScriptTableRows: () => [],
+            },
+            getArtifact: () => dialogue,
+        } as unknown as ModuleContext
+
+        const result = (await questStoryModule(ctx)) as Array<Record<string, any>>
+        expect(result[0].quests[0].nodes).toEqual([
+            { id: "talk", type: "TalkNode", name: "对白", dialogues: [{ id: 1 }] },
+            { id: "bgm", type: "PlayOrStopBGMNode", name: "活动音乐", resource: "0091_feina_activity_cs_01" },
+        ])
+    })
+
     test("uses the owning quest id when a special story node has no config id", () => {
         const story = {
             storyNodeData: {

@@ -479,12 +479,6 @@
         "content": "Promis cette fois ? Pas de « prochaine fois », hein ?",
         "voice": "inv/Heitao/002/C85F4FBE",
         "npc": 790008
-      },
-      {
-        "id": "1725258573710195956",
-        "type": "PlayOrStopBGMNode",
-        "name": "BGM节点",
-        "resource": "mute"
       }
     ]
   },
@@ -2280,12 +2274,6 @@
         "id": 80260415,
         "content": "Cinq jours plus tard",
         "voice": "inv/Fuluo/004/C8EC6C56"
-      },
-      {
-        "id": "17785737450511951404",
-        "type": "PlayOrStopBGMNode",
-        "name": "BGM节点",
-        "resource": "mute"
       },
       {
         "id": "177607137712010498191",
@@ -7145,12 +7133,6 @@
         "content": "Tu verras bien en arrivant.",
         "voice": "inv/Kezhou/004/C8CC5FBC",
         "npc": 790067
-      },
-      {
-        "id": "1764761092028637139",
-        "type": "PlayOrStopBGMNode",
-        "name": "BGM节点",
-        "resource": "mute"
       },
       {
         "id": "17647598060221907423",
@@ -18020,12 +18002,6 @@
         "npc": 790094
       },
       {
-        "id": "17878145713164493439",
-        "type": "PlayOrStopBGMNode",
-        "name": "BGM节点",
-        "resource": "mute_broadcast"
-      },
-      {
         "id": "17881666516268388121",
         "type": "PlayOrStopBGMNode",
         "name": "BGM节点",
@@ -18328,12 +18304,6 @@
         "id": 80280248,
         "content": "... Je comprends.",
         "npc": 790097
-      },
-      {
-        "id": "17878158817825610447",
-        "type": "PlayOrStopBGMNode",
-        "name": "BGM节点",
-        "resource": "mute_broadcast"
       },
       {
         "id": "17881667279959505938",
@@ -23672,12 +23642,6 @@
         "content": "Si tu acceptes mes maladresses et veux être témoin de ma transformation... Je te promets que dès que je trouverai mon propre « rythme », tu seras {性别:le premier|la première} à le savoir.",
         "voice": "inv/Lise/003/C8A5DFD8",
         "npc": 790044
-      },
-      {
-        "id": "1758249927667934781",
-        "type": "PlayOrStopBGMNode",
-        "name": "BGM节点",
-        "resource": "mute"
       }
     ]
   },
@@ -28373,12 +28337,6 @@
         "content": "Je ne te réconforterai pas, mais je peux t’aider à trouver des solutions.",
         "voice": "inv/Xibi/003/C8729B02",
         "npc": 790013
-      },
-      {
-        "id": "1725259862283207188",
-        "type": "PlayOrStopBGMNode",
-        "name": "BGM节点",
-        "resource": "mute"
       }
     ]
   },
@@ -32486,12 +32444,6 @@
         "content": "Retrouver le Capitaine {nickname2} pour m’assurer {性别:qu’il|qu’elle} va bien.",
         "voice": "inv/Dafu/003/C8B91CD6",
         "npc": 790045
-      },
-      {
-        "id": "1760409524790776",
-        "type": "PlayOrStopBGMNode",
-        "name": "BGM节点",
-        "resource": "mute"
       }
     ]
   }

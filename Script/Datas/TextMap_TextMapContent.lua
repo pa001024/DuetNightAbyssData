@@ -69557,7 +69557,7 @@ local Data = {
           TextMapContent = "获得驶入夜幕"
         },
         UI_Locked_Des_4030022 = {
-          TextMapContent = "获得所有远程呐喊武器形象"
+          TextMapContent = "获得所有呐喊武器形象"
         },
         UI_Locked_Des_4030031 = {
           TextMapContent = "获得初雪小夜曲·晴蓝"
@@ -75867,7 +75867,7 @@ local Data = {
           TextMapContent = "追猎·晴蓝"
         },
         UI_PlayerHead_Name_30174 = {
-          TextMapContent = "追猎·绣红"
+          TextMapContent = "追猎·锈红"
         },
         UI_PlayerHead_Name_30175 = {
           TextMapContent = "追猎·鎏金"

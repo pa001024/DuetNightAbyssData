@@ -1,5 +1,15 @@
 return {
   StaticCreator = {
+    ["851600102"] = {
+      CreatorId = 851600102,
+      UnitType = "Mechanism",
+      UnitId = 11011
+    },
+    ["851600101"] = {
+      CreatorId = 851600101,
+      UnitType = "Monster",
+      UnitId = 8516001
+    },
     ["142790375"] = {
       CreatorId = 142790375,
       UnitType = "Drop",

@@ -1510,12 +1510,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17862106808996706852",
-            startPort = "Out",
-            endQuest = "178843989476113446750",
-            endPort = "In"
-          },
-          {
             startQuest = "17862059191322237593",
             startPort = "Out",
             endQuest = "178844110558216805376",
@@ -1525,12 +1519,6 @@ return {
             startQuest = "178844110558216805376",
             startPort = "Out",
             endQuest = "178844112266216805868",
-            endPort = "In"
-          },
-          {
-            startQuest = "17884381077828967919",
-            startPort = "Out",
-            endQuest = "178844260233420164426",
             endPort = "In"
           }
         },
@@ -2218,17 +2206,6 @@ return {
               SoundType = 2
             }
           },
-          ["178843989476113446750"] = {
-            key = "178843989476113446750",
-            type = "PlayOrStopBGMNode",
-            name = "BGM节点",
-            pos = {x = 5219.171245070437, y = -846.8103467897242},
-            propsData = {
-              SoundStateType = 3,
-              SoundPriority = 0,
-              SoundType = 0
-            }
-          },
           ["178844110558216805376"] = {
             key = "178844110558216805376",
             type = "GoToNode",
@@ -2251,22 +2228,6 @@ return {
               SoundPriority = 0,
               SoundType = 0,
               SoundPath = "event:/bgm/mute",
-              ParamKey = "",
-              ParamValue = 0,
-              RelatedRegionId = {107601},
-              bStoreToServer = true
-            }
-          },
-          ["178844260233420164426"] = {
-            key = "178844260233420164426",
-            type = "PlayOrStopBGMNode",
-            name = "BGM节点",
-            pos = {x = 7783.049582666895, y = -1003.178060427357},
-            propsData = {
-              SoundStateType = 0,
-              SoundPriority = 0,
-              SoundType = 0,
-              SoundPath = "event:/bgm/cbt02/0059_scene_ex01_encounter",
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {107601},

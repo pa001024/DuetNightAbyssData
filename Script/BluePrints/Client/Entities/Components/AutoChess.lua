@@ -2,24 +2,8 @@ local AutoChessConst = require("BluePrints.UI.AutoChess.AutoChessConst")
 local AutoChessModel = require("BluePrints.UI.AutoChess.AutoChessDataModel")
 local Component = {}
 
-function Component:EnterWorld()
-  EventManager:AddEvent(EventID.OnActivityTimeOpen, self, self.TryRefreshAutoChessLinearReddotOnActivityTimeOpen)
-end
-
-function Component:LeaveWorld()
-  EventManager:RemoveEvent(EventID.OnActivityTimeOpen, self)
-end
-
 function Component:OnLoginSuccess()
   AutoChessModel:InitModel()
-end
-
-function Component:TryRefreshAutoChessLinearReddotOnActivityTimeOpen()
-  AutoChessModel:RefreshAutoChessLinearReddot()
-end
-
-function Component:_OnPropChangeQuestChains()
-  AutoChessModel:RefreshAutoChessLinearReddot()
 end
 
 function Component:RefreshRandomMission(Callback)

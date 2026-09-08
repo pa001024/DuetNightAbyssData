@@ -7329,7 +7329,7 @@ return ReadOnly("CharAccessory", {
     NiagaraPath = "NiagaraSystem'/Game/Asset/Effect/Niagara/Costume/04Back/NS_Back_Part10.NS_Back_Part10'",
     Rarity = 5,
     RegainItemId = 110,
-    RegainItemNum = 23,
+    RegainItemNum = 33,
     SocketName = "root",
     SortPriority = 505,
     Sound = "SOUND_ITEM_CLOTH",

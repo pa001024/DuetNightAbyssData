@@ -201,6 +201,11 @@ return {
       ManualItemId = 10180104,
       UnitType = "Mechanism",
       UnitId = 10411
+    },
+    ["10180105"] = {
+      ManualItemId = 10180105,
+      UnitType = "Mechanism",
+      UnitId = 70403
     }
   },
   Explore = {},

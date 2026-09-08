@@ -1417,6 +1417,56 @@ return {
       UnitType = "Mechanism",
       UnitId = 390072
     },
+    ["164019"] = {
+      ManualItemId = 164019,
+      UnitType = "Mechanism",
+      UnitId = 10613
+    },
+    ["164025"] = {
+      ManualItemId = 164025,
+      UnitType = "Mechanism",
+      UnitId = 106130
+    },
+    ["164018"] = {
+      ManualItemId = 164018,
+      UnitType = "Mechanism",
+      UnitId = 10613
+    },
+    ["164022"] = {
+      ManualItemId = 164022,
+      UnitType = "Mechanism",
+      UnitId = 10613
+    },
+    ["164038"] = {
+      ManualItemId = 164038,
+      UnitType = "Mechanism",
+      UnitId = 106130
+    },
+    ["164015"] = {
+      ManualItemId = 164015,
+      UnitType = "Mechanism",
+      UnitId = 10613
+    },
+    ["164017"] = {
+      ManualItemId = 164017,
+      UnitType = "Mechanism",
+      UnitId = 10613
+    },
+    ["164020"] = {
+      ManualItemId = 164020,
+      UnitType = "Mechanism",
+      UnitId = 10613
+    },
+    ["164021"] = {
+      ManualItemId = 164021,
+      UnitType = "Mechanism",
+      UnitId = 10613
+    },
+    ["164016"] = {
+      ManualItemId = 164016,
+      UnitType = "Mechanism",
+      UnitId = 10613
+    },
     ["1641009"] = {
       ManualItemId = 1641009,
       UnitType = "Mechanism",

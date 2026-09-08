@@ -23060,6 +23060,23 @@
                 "endTime": 1793005200
               },
               {
+                "id": 140519,
+                "itemType": "TitleFrame",
+                "typeId": 10054,
+                "typeName": "재앙의 사자",
+                "price": 0,
+                "priceType": 111,
+                "priceName": "무지개빛 프리즘",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1401,
+                "sequence": 1633,
+                "startTime": 1788746400,
+                "endTime": 1793005200,
+                "cond": "재앙의 사자 획득",
+                "isSpPopup": 1
+              },
+              {
                 "id": 160165,
                 "itemType": "WeaponAccessory",
                 "typeId": 30001,

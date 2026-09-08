@@ -735,11 +735,23 @@ function ConditionUtils:JudgeConditionalRewardEventEnd(EventId)
   if not GWorld:IsSkynetServer() and IsDedicatedServer(GWorld.GameInstance) then
     return false
   end
-  if self.ClaimActivityConditionRewardRecord[EventId] then
-    return true
-  else
+  local Info = DataMgr.ConditionalRewardEvent[EventId]
+  if not Info or Info.RewardClaimCondition == nil then
     return false
   end
+  local ConditionCount = type(Info.RewardClaimCondition) == "table" and #Info.RewardClaimCondition or 1
+  if ConditionCount <= 0 then
+    return false
+  end
+  local OldClaimed = self.ClaimActivityConditionRewardRecord[EventId] and true or false
+  local RecordList = self.ClaimActivityConditionRewardRecordList
+  local List = RecordList and RecordList[EventId]
+  for Index = 1, ConditionCount do
+    if (1 ~= Index or not OldClaimed) and (not List or not CommonUtils.HasValue(List, Index)) then
+      return false
+    end
+  end
+  return true
 end
 
 function ConditionUtils:JudgeDualTerminalLogin(DeviceType)

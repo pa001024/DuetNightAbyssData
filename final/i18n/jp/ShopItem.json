@@ -23060,6 +23060,23 @@
                 "endTime": 1793005200
               },
               {
+                "id": 140519,
+                "itemType": "TitleFrame",
+                "typeId": 10054,
+                "typeName": "災厄の使者",
+                "price": 0,
+                "priceType": 111,
+                "priceName": "虹色のプリズム",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1401,
+                "sequence": 1633,
+                "startTime": 1788746400,
+                "endTime": 1793005200,
+                "cond": "災厄の使者を獲得",
+                "isSpPopup": 1
+              },
+              {
                 "id": 160165,
                 "itemType": "WeaponAccessory",
                 "typeId": 30001,

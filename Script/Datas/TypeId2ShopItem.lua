@@ -3926,6 +3926,9 @@ return ReadOnly("TypeId2ShopItem", {
     },
     [10026] = {
       [1] = 140366
+    },
+    [10054] = {
+      [1] = 140519
     }
   },
   Walnut = {

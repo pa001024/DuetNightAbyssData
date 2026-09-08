@@ -1994,30 +1994,30 @@ return {
     BP_MissionGroup_ProtectEve01_2 = {
       QuestID = 11020201,
       StaticCreator = {
-        ["162800064"] = {
-          CreatorId = 162800064,
+        ["162800224"] = {
+          CreatorId = 162800224,
           UnitType = "Mechanism",
-          UnitId = 115
-        },
-        ["162800066"] = {
-          CreatorId = 162800066,
-          UnitType = "Monster",
-          UnitId = 9512001
+          UnitId = 179913
         },
         ["162800225"] = {
           CreatorId = 162800225,
           UnitType = "Monster",
           UnitId = 9512001
         },
+        ["162800064"] = {
+          CreatorId = 162800064,
+          UnitType = "Mechanism",
+          UnitId = 115
+        },
         ["162800065"] = {
           CreatorId = 162800065,
           UnitType = "Mechanism",
           UnitId = 179913
         },
-        ["162800224"] = {
-          CreatorId = 162800224,
-          UnitType = "Mechanism",
-          UnitId = 179913
+        ["162800066"] = {
+          CreatorId = 162800066,
+          UnitType = "Monster",
+          UnitId = 9512001
         }
       },
       ManualItem = {

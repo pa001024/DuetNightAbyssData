@@ -250,10 +250,10 @@ return {
   Explore = {
     ["167070035"] = {
       AutoReset = 1,
-      ["162400148"] = {
-        CreatorId = 162400148,
+      ["162400142"] = {
+        CreatorId = 162400142,
         UnitType = "Mechanism",
-        UnitId = 1210321,
+        UnitId = 1210342,
         RarelyId = 167070035
       },
       ["162400143"] = {
@@ -262,22 +262,22 @@ return {
         UnitId = 1210322,
         RarelyId = 167070035
       },
-      ["162400147"] = {
-        CreatorId = 162400147,
-        UnitType = "Mechanism",
-        UnitId = 121034,
-        RarelyId = 167070035
-      },
       ["162400146"] = {
         CreatorId = 162400146,
         UnitType = "Mechanism",
         UnitId = 1210341,
         RarelyId = 167070035
       },
-      ["162400142"] = {
-        CreatorId = 162400142,
+      ["162400148"] = {
+        CreatorId = 162400148,
         UnitType = "Mechanism",
-        UnitId = 1210342,
+        UnitId = 1210321,
+        RarelyId = 167070035
+      },
+      ["162400147"] = {
+        CreatorId = 162400147,
+        UnitType = "Mechanism",
+        UnitId = 121034,
         RarelyId = 167070035
       }
     },

@@ -4077,11 +4077,11 @@ return ReadOnly("SoundEffect", {
   },
   [852019] = {
     SoundId = 852019,
-    SoundPath = "event:/sfx/boss/Aida/skill13_fx_stop"
+    SoundPath = "event:/sfx/boss/Aida/skill13_fx_"
   },
   [852021] = {
     SoundId = 852021,
-    SoundPath = "event:/sfx/boss/Aida/skill13_fx_exp"
+    SoundPath = "event:/sfx/boss/Aida/skill13_fx_"
   },
   [852101] = {
     SoundId = 852101,

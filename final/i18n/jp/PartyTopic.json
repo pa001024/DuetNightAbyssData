@@ -479,12 +479,6 @@
         "content": "今度は絶対！約束だよ！",
         "voice": "inv/Heitao/002/C85F4FBE",
         "npc": 790008
-      },
-      {
-        "id": "1725258573710195956",
-        "type": "PlayOrStopBGMNode",
-        "name": "BGM节点",
-        "resource": "mute"
       }
     ]
   },
@@ -2280,12 +2274,6 @@
         "id": 80260415,
         "content": "五日後",
         "voice": "inv/Fuluo/004/C8EC6C56"
-      },
-      {
-        "id": "17785737450511951404",
-        "type": "PlayOrStopBGMNode",
-        "name": "BGM节点",
-        "resource": "mute"
       },
       {
         "id": "177607137712010498191",
@@ -7145,12 +7133,6 @@
         "content": "それは、着いたら分かる。",
         "voice": "inv/Kezhou/004/C8CC5FBC",
         "npc": 790067
-      },
-      {
-        "id": "1764761092028637139",
-        "type": "PlayOrStopBGMNode",
-        "name": "BGM节点",
-        "resource": "mute"
       },
       {
         "id": "17647598060221907423",
@@ -18020,12 +18002,6 @@
         "npc": 790094
       },
       {
-        "id": "17878145713164493439",
-        "type": "PlayOrStopBGMNode",
-        "name": "BGM节点",
-        "resource": "mute_broadcast"
-      },
-      {
         "id": "17881666516268388121",
         "type": "PlayOrStopBGMNode",
         "name": "BGM节点",
@@ -18328,12 +18304,6 @@
         "id": 80280248,
         "content": "……承知しました。",
         "npc": 790097
-      },
-      {
-        "id": "17878158817825610447",
-        "type": "PlayOrStopBGMNode",
-        "name": "BGM节点",
-        "resource": "mute_broadcast"
       },
       {
         "id": "17881667279959505938",
@@ -23672,12 +23642,6 @@
         "content": "私の不器用を受け入れ、私の変化を見届けてくれるのなら……私が自分の「リズム」を見つけた時、一番にあなたに教えると約束するわ。",
         "voice": "inv/Lise/003/C8A5DFD8",
         "npc": 790044
-      },
-      {
-        "id": "1758249927667934781",
-        "type": "PlayOrStopBGMNode",
-        "name": "BGM节点",
-        "resource": "mute"
       }
     ]
   },
@@ -28373,12 +28337,6 @@
         "content": "お前の気持ちを慰めるつもりは毛頭ないけど、困りごとを解決する手段ぐらいは与えてやれるわ。",
         "voice": "inv/Xibi/003/C8729B02",
         "npc": 790013
-      },
-      {
-        "id": "1725259862283207188",
-        "type": "PlayOrStopBGMNode",
-        "name": "BGM节点",
-        "resource": "mute"
       }
     ]
   },
@@ -32486,12 +32444,6 @@
         "content": "{nickname2}隊長の安否を、確認しに行きます。",
         "voice": "inv/Dafu/003/C8B91CD6",
         "npc": 790045
-      },
-      {
-        "id": "1760409524790776",
-        "type": "PlayOrStopBGMNode",
-        "name": "BGM节点",
-        "resource": "mute"
       }
     ]
   }

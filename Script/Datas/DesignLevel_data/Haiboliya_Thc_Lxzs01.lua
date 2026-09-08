@@ -2244,6 +2244,56 @@ return {
       CreatorId = 312780844,
       UnitType = "Mechanism",
       UnitId = 170202
+    },
+    ["312780855"] = {
+      CreatorId = 312780855,
+      UnitType = "Monster",
+      UnitId = 9511001
+    },
+    ["312780846"] = {
+      CreatorId = 312780846,
+      UnitType = "Monster",
+      UnitId = 9511001
+    },
+    ["312780847"] = {
+      CreatorId = 312780847,
+      UnitType = "Monster",
+      UnitId = 9511001
+    },
+    ["312780848"] = {
+      CreatorId = 312780848,
+      UnitType = "Monster",
+      UnitId = 9511001
+    },
+    ["312780849"] = {
+      CreatorId = 312780849,
+      UnitType = "Monster",
+      UnitId = 9511001
+    },
+    ["312780850"] = {
+      CreatorId = 312780850,
+      UnitType = "Monster",
+      UnitId = 9511001
+    },
+    ["312780851"] = {
+      CreatorId = 312780851,
+      UnitType = "Monster",
+      UnitId = 9511001
+    },
+    ["312780852"] = {
+      CreatorId = 312780852,
+      UnitType = "Monster",
+      UnitId = 9511001
+    },
+    ["312780853"] = {
+      CreatorId = 312780853,
+      UnitType = "Monster",
+      UnitId = 9511001
+    },
+    ["312780854"] = {
+      CreatorId = 312780854,
+      UnitType = "Monster",
+      UnitId = 9511001
     }
   },
   ManualItem = {

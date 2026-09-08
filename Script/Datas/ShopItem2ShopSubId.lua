@@ -5360,6 +5360,13 @@ return ReadOnly("ShopItem2ShopSubId", {
           ShopItemId = 140366,
           SubTabId = 1401
         }
+      },
+      [10054] = {
+        [1] = {
+          AccessOrder = 2,
+          ShopItemId = 140519,
+          SubTabId = 1401
+        }
       }
     },
     SoloTreasurePermShop = T.RT_1,

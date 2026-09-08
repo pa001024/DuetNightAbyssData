@@ -310,6 +310,7 @@ local AvatarAttr = {
   PaotaiBuffs = prop.prop("Int2IntDict", "client save"),
   Community = prop.prop("Community.Community", "client save"),
   ClaimActivityConditionRewardRecord = prop.prop("Int2IntDict", "client save"),
+  ClaimActivityConditionRewardRecordList = prop.prop("Int2IntListDict", "client save"),
   DoubleModDrop = prop.prop("DoubleModDrop.DoubleModDropDict", "client save"),
   DoubleModDropFirst = prop.prop("Bool", "client save", true),
   CommonQuestActivity = prop.prop("CommonQuest.CommonQuestDict", "client save"),

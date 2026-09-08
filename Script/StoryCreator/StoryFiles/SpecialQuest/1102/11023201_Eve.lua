@@ -534,12 +534,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "178351028202118592041",
-            startPort = "Out",
-            endQuest = "17823842906512167912",
-            endPort = "In"
-          },
-          {
             startQuest = "17823015137832153757",
             startPort = "Out",
             endQuest = "17822168065071078485",
@@ -969,6 +963,12 @@ return {
             startQuest = "178816816589226858563",
             startPort = "Out",
             endQuest = "17823852810802174641",
+            endPort = "In"
+          },
+          {
+            startQuest = "17834984113639842432",
+            startPort = "Out",
+            endQuest = "17823842906512167912",
             endPort = "In"
           }
         },
@@ -2228,7 +2228,7 @@ return {
             key = "178351028202118592041",
             type = "UpdateTaskBarAndTaskMainNode",
             name = "更新任务目标节点",
-            pos = {x = 6093.293339910166, y = 530.5850863310044},
+            pos = {x = 6373.293339910166, y = 327.251752997671},
             propsData = {
               NewDescription = "Description_110232_2",
               NewDetail = "Content_110232_2",

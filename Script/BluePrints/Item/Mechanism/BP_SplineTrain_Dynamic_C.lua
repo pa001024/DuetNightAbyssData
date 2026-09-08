@@ -267,6 +267,10 @@ function M:ApplySequentialRevealDistance(revealDistance)
       local shouldShow = revealVisible and portalVisible and not self._TrainHidden
       mesh:SetVisibility(shouldShow, true)
       mesh:SetHiddenInGame(not shouldShow, true)
+      if self.SoundTrigger and mesh == self.HeadMesh then
+        self.SoundTrigger:SetVisibility(false, true)
+        self.SoundTrigger:SetHiddenInGame(true, true)
+      end
     end
   end
   for i = 1, self.ActiveConnectCount or 0 do
@@ -955,6 +959,10 @@ function M:BuildCarriages()
   if self.HeadMesh and IsValid(self.HeadMesh) then
     self.HeadMesh:SetVisibility(true, true)
     self.HeadMesh:SetHiddenInGame(false, true)
+    if self.SoundTrigger then
+      self.SoundTrigger:SetVisibility(false, true)
+      self.SoundTrigger:SetHiddenInGame(true, true)
+    end
     self:SetupTrainMeshCollision(self.HeadMesh)
     self.HeadMeshComponent = self.HeadMesh
     local headScale = self:ResolveMeshScaleVector(self.HeadMeshComponent)

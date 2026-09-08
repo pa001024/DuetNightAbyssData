@@ -382,6 +382,13 @@ return ReadOnly("TitleFrame", {
     Name = "TitleFrame_10053",
     TitleFrameID = 10053
   },
+  [10054] = {
+    Des = "TitleFrame_Des",
+    FramePath = "WidgetBlueprint'/Game/UI/WBP/PersonalInfo/Widget/Title/Title/WBP_PersonalInfo_Title_14_1.WBP_PersonalInfo_Title_14_1'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_TitleFrame.T_Icon_Random_TitleFrame'",
+    Name = "RESOURCE_NAME_49985",
+    TitleFrameID = 10054
+  },
   [20001] = {
     Des = "TitleFrame_Des",
     FramePath = "WidgetBlueprint'/Game/UI/WBP/PersonalInfo/Widget/Title/Title/WBP_PersonalInfo_Title_10_3.WBP_PersonalInfo_Title_10_3'",

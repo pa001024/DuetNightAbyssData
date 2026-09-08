@@ -47,7 +47,7 @@ return {
       key = "1781772565041106",
       type = "StoryNode",
       name = "任务节点",
-      pos = {x = 1380, y = 314},
+      pos = {x = 1380, y = 312.57142857142856},
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
@@ -198,12 +198,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17821998508714994",
-            startPort = "Out",
-            endQuest = "17821334214853218303",
-            endPort = "In"
-          },
-          {
             startQuest = "17821334214853218303",
             startPort = "Out",
             endQuest = "17821998463834806",
@@ -285,6 +279,12 @@ return {
             startQuest = "178817214795045880206",
             startPort = "Out",
             endQuest = "17821360167205359773",
+            endPort = "In"
+          },
+          {
+            startQuest = "17821333629113217391",
+            startPort = "Out",
+            endQuest = "17821334214853218303",
             endPort = "In"
           }
         },
@@ -778,7 +778,7 @@ return {
             key = "17821998508714994",
             type = "UpdateTaskBarAndTaskMainNode",
             name = "更新任务目标节点",
-            pos = {x = 4062.418426077229, y = -73.70754646397711},
+            pos = {x = 4296.963880622684, y = -313.7075464639771},
             propsData = {
               NewDescription = "Description_110231_17",
               NewDetail = "Content_110231_17",

@@ -687,6 +687,11 @@ return {
       UnitType = "Mechanism",
       UnitId = 161012
     },
+    ["264016"] = {
+      ManualItemId = 264016,
+      UnitType = "Mechanism",
+      UnitId = 161010
+    },
     ["264015"] = {
       ManualItemId = 264015,
       UnitType = "Mechanism",

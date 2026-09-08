@@ -25,6 +25,15 @@ function mediaResourceName(resource: string): string {
     return resource.split(/[./]/).at(-1)?.replaceAll("'", "") ?? ""
 }
 
+/**
+ * BGM 节点只导出实际播放的音频事件。mute 事件（路径末段为 mute / mute.xxx）用于
+ * 静音当前 BGM，SoundType=2 是 FMOD snapshot 控制事件（混响/静音等，无音频内容），
+ * 都不属于具体曲目，不作为 BGM 媒体节点导出。
+ */
+function isMuteBgmEvent(resource: string): boolean {
+    return /(?:^|\/)mute(?:\.|$)/i.test(resource.replaceAll("\\", "/").toLowerCase())
+}
+
 function storyMediaNode(nodeId: string, node: Row): Row | undefined {
     const props = row(node.propsData) ?? {}
     if (node.type === "VideoNode") {
@@ -34,7 +43,7 @@ function storyMediaNode(nodeId: string, node: Row): Row | undefined {
     }
     if (node.type === "PlayOrStopBGMNode" && Number(props.SoundStateType) === 0) {
         const resource = mediaResource(props.SoundPath)
-        if (!resource) return undefined
+        if (!resource || Number(props.SoundType) === 2 || isMuteBgmEvent(resource)) return undefined
         return { id: nodeId, type: "PlayOrStopBGMNode", name: node.name ?? "", resource: mediaResourceName(resource) }
     }
     return undefined
