@@ -11651,7 +11651,7 @@ return ReadOnly("Resource", {
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Rare",
     UseEffectType = "RandomSelectPack",
-    UseParam = 350031
+    UseParam = 350020
   },
   [110047] = {
     AccessKey = T.RT_22,
@@ -11699,7 +11699,7 @@ return ReadOnly("Resource", {
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Rare",
     UseEffectType = "RandomSelectPack",
-    UseParam = 350032
+    UseParam = 350023
   },
   [110050] = {
     AccessKey = T.RT_22,

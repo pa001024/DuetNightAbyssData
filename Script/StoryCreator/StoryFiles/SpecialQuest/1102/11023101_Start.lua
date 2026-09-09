@@ -3173,7 +3173,7 @@ return {
             key = "178126107419621795655",
             type = "TalkNode",
             name = "过场",
-            pos = {x = 2009.4554823282883, y = 109.92579823353697},
+            pos = {x = 2010.9554823282883, y = 108.42579823353697},
             propsData = {
               IsNpcNode = false,
               TalkType = "Cinematic",
@@ -3357,9 +3357,14 @@ return {
             name = "BGM节点",
             pos = {x = 2304.6018875311183, y = -59.71716495749861},
             propsData = {
-              SoundStateType = 3,
+              SoundStateType = 0,
               SoundPriority = 0,
-              SoundType = 0
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_6/0184_story_curse_echoes",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {107001},
+              bStoreToServer = true
             }
           }
         },

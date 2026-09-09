@@ -66,24 +66,17 @@ T.RT_19 = {
   Resource = T.RT_1
 }
 T.RT_20 = {
-  [10021] = 1
+  [10016] = 1
 }
 T.RT_21 = {
   HeadSculpture = T.RT_20,
   Resource = T.RT_1
 }
 T.RT_22 = {
-  [10016] = 1
+  [10013] = 1
 }
 T.RT_23 = {
   HeadSculpture = T.RT_22,
-  Resource = T.RT_1
-}
-T.RT_24 = {
-  [10013] = 1
-}
-T.RT_25 = {
-  HeadSculpture = T.RT_24,
   Resource = T.RT_1
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
@@ -452,7 +445,12 @@ return ReadOnly("Skin", {
   },
   [3103] = {
     CharId = 3103,
-    DefaultItem = T.RT_21,
+    DefaultItem = {
+      HeadSculpture = {
+        [10021] = 1
+      },
+      Resource = T.RT_1
+    },
     Des = "UI_Skin_Des_3103",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -469,7 +467,12 @@ return ReadOnly("Skin", {
   },
   [3104] = {
     CharId = 3104,
-    DefaultItem = T.RT_21,
+    DefaultItem = {
+      HeadSculpture = {
+        [10033] = 1
+      },
+      Resource = T.RT_1
+    },
     Des = "UI_Skin_Des_3104",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -552,7 +555,7 @@ return ReadOnly("Skin", {
   },
   [4101] = {
     CharId = 4101,
-    DefaultItem = T.RT_23,
+    DefaultItem = T.RT_21,
     Des = "UI_Skin_Des_4101",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -591,7 +594,7 @@ return ReadOnly("Skin", {
   },
   [4103] = {
     CharId = 4103,
-    DefaultItem = T.RT_23,
+    DefaultItem = T.RT_21,
     Des = "UI_Skin_Des_4103",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -740,7 +743,7 @@ return ReadOnly("Skin", {
   },
   [5401] = {
     CharId = 5401,
-    DefaultItem = T.RT_25,
+    DefaultItem = T.RT_23,
     Des = "UI_Skin_Des_5401",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -757,7 +760,7 @@ return ReadOnly("Skin", {
   },
   [5402] = {
     CharId = 5402,
-    DefaultItem = T.RT_25,
+    DefaultItem = T.RT_23,
     Des = "UI_Skin_Des_5402",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -1179,7 +1182,7 @@ return ReadOnly("Skin", {
   },
   [410101] = {
     CharId = 4101,
-    DefaultItem = T.RT_23,
+    DefaultItem = T.RT_21,
     Des = "UI_Skin_Des_410101",
     Icon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Lise01",
     LongIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Avatar/T_Gacha_AvatarLise01",
@@ -1235,7 +1238,7 @@ return ReadOnly("Skin", {
       Hair = {
         [410392] = 1
       },
-      HeadSculpture = T.RT_22,
+      HeadSculpture = T.RT_20,
       Resource = T.RT_1
     },
     Des = "UI_Skin_Des_410301",

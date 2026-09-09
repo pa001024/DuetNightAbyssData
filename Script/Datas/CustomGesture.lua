@@ -338,5 +338,23 @@ return ReadOnly("CustomGesture", {
     GestureTag = "Gesture",
     Name = "初雪小夜曲03",
     ReleaseWheel = 41068
+  },
+  [2054] = {
+    GestureId = 2054,
+    GestureTag = "Gesture",
+    Name = "地狱01",
+    ReleaseWheel = 41069
+  },
+  [2055] = {
+    GestureId = 2055,
+    GestureTag = "Gesture",
+    Name = "地狱02",
+    ReleaseWheel = 41070
+  },
+  [2056] = {
+    GestureId = 2056,
+    GestureTag = "Gesture",
+    Name = "地狱03",
+    ReleaseWheel = 41071
   }
 })
