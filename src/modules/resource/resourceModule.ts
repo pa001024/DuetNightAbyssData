@@ -73,7 +73,6 @@ function buildLinkMaps(dm: ModuleContext["dm"], resourceMap: Map<number, Row>) {
 
     const mechanismToResource = new Map<number, ResourcePair[]>()
     for (const mechanism of rows(dm.getTable("Mechanism"))) {
-        if (mechanism.UnitParams && typeof mechanism.UnitParams === "object" && mechanism.UnitParams.MiniGameType) continue
         const unitId = toInt(mechanism.UnitId)
         const rewardId = toInt(mechanism.RewardId)
         if (unitId === undefined || rewardId === undefined) continue

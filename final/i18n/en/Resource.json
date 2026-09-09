@@ -276,7 +276,67 @@
     "icon": "T_Resource_Ticket04",
     "rarity": 5,
     "desc": "Increases commission rewards by 2000%.\nAs your team, The Noctoyagers, rise to prominence among the Phoxhunters, more and more commissions come your way. While this entails heavier responsibilities, it also leads to greater rewards.",
-    "desc2": "\"Let's see, today's commissions include... finding a lost wallet, saving a stray cat on the roof, and mending a broken heart?? Handling all these trivial jobs one by one is a real hassle. I'll just bundle them together and finish them in one go.\"\n\n— Outsider, a Phoxhunter"
+    "desc2": "\"Let's see, today's commissions include... finding a lost wallet, saving a stray cat on the roof, and mending a broken heart?? Handling all these trivial jobs one by one is a real hassle. I'll just bundle them together and finish them in one go.\"\n\n— Outsider, a Phoxhunter",
+    "source": [
+      {
+        "srId": 107001,
+        "rewardId": 3026,
+        "pos": [
+          [
+            -13762,
+            -68698
+          ],
+          [
+            -17434,
+            -89518
+          ],
+          [
+            -29799,
+            -78487
+          ],
+          [
+            4990,
+            -34700
+          ]
+        ]
+      },
+      {
+        "srId": 107101,
+        "rewardId": 3026,
+        "pos": [
+          [
+            -32401,
+            -33049
+          ],
+          [
+            -32045,
+            -29375
+          ],
+          [
+            -65027,
+            -58332
+          ],
+          [
+            -29229,
+            -23097
+          ]
+        ]
+      },
+      {
+        "srId": 107201,
+        "rewardId": 3026,
+        "pos": [
+          [
+            18610,
+            10347
+          ],
+          [
+            12985,
+            -24291
+          ]
+        ]
+      }
+    ]
   },
   {
     "id": 210,
@@ -5316,6 +5376,28 @@
       },
       {
         "srId": 107001,
+        "rewardId": 3026,
+        "pos": [
+          [
+            -13762,
+            -68698
+          ],
+          [
+            -17434,
+            -89518
+          ],
+          [
+            -29799,
+            -78487
+          ],
+          [
+            4990,
+            -34700
+          ]
+        ]
+      },
+      {
+        "srId": 107001,
         "rewardId": 3200,
         "pos": [
           [
@@ -5431,6 +5513,28 @@
           [
             -380,
             200
+          ]
+        ]
+      },
+      {
+        "srId": 107101,
+        "rewardId": 3026,
+        "pos": [
+          [
+            -32401,
+            -33049
+          ],
+          [
+            -32045,
+            -29375
+          ],
+          [
+            -65027,
+            -58332
+          ],
+          [
+            -29229,
+            -23097
           ]
         ]
       },
@@ -5573,6 +5677,20 @@
           [
             420,
             -130
+          ]
+        ]
+      },
+      {
+        "srId": 107201,
+        "rewardId": 3026,
+        "pos": [
+          [
+            18610,
+            10347
+          ],
+          [
+            12985,
+            -24291
           ]
         ]
       },
@@ -8559,7 +8677,67 @@
     "icon": "T_Resource_Zaie_Ice",
     "rarity": 4,
     "desc": "A crystal infused with Hydro magic. Obtained through Abyssal Commissions. Can be used as smelting material for Calamity Weapons.",
-    "desc2": "Ask presses on through dusk's lament.\nHis gaze remains unclouded by the dark; he lifts it to the heavens and offers up his final light.\nThough his mind is cast into turmoil, it soon scatters like the shadows of days long gone.\nHis swift legs pursue the storm, and fire bursts from his radiant eyes.\nHis broad chest meets the rain, and his roar rolls like thunder.\nThis is no curse, but the gift the Father left to his children.\nFor from destruction, new life shall bloom.\n\n— Lirico, Wandering Bard, in \"Tales of the Misty Sea\""
+    "desc2": "Ask presses on through dusk's lament.\nHis gaze remains unclouded by the dark; he lifts it to the heavens and offers up his final light.\nThough his mind is cast into turmoil, it soon scatters like the shadows of days long gone.\nHis swift legs pursue the storm, and fire bursts from his radiant eyes.\nHis broad chest meets the rain, and his roar rolls like thunder.\nThis is no curse, but the gift the Father left to his children.\nFor from destruction, new life shall bloom.\n\n— Lirico, Wandering Bard, in \"Tales of the Misty Sea\"",
+    "source": [
+      {
+        "srId": 107001,
+        "rewardId": 3026,
+        "pos": [
+          [
+            -13762,
+            -68698
+          ],
+          [
+            -17434,
+            -89518
+          ],
+          [
+            -29799,
+            -78487
+          ],
+          [
+            4990,
+            -34700
+          ]
+        ]
+      },
+      {
+        "srId": 107101,
+        "rewardId": 3026,
+        "pos": [
+          [
+            -32401,
+            -33049
+          ],
+          [
+            -32045,
+            -29375
+          ],
+          [
+            -65027,
+            -58332
+          ],
+          [
+            -29229,
+            -23097
+          ]
+        ]
+      },
+      {
+        "srId": 107201,
+        "rewardId": 3026,
+        "pos": [
+          [
+            18610,
+            10347
+          ],
+          [
+            12985,
+            -24291
+          ]
+        ]
+      }
+    ]
   },
   {
     "id": 15032,
@@ -8567,7 +8745,67 @@
     "icon": "T_Resource_Zaie_Fire",
     "rarity": 4,
     "desc": "A crystal infused with Pyro magic. Obtained through Abyssal Commissions. Can be used as smelting material for Calamity Weapons.",
-    "desc2": "Ask presses on through dusk's lament.\nHis gaze remains unclouded by the dark; he lifts it to the heavens and offers up his final light.\nThough his mind is cast into turmoil, it soon scatters like the shadows of days long gone.\nHis swift legs pursue the storm, and fire bursts from his radiant eyes.\nHis broad chest meets the rain, and his roar rolls like thunder.\nThis is no curse, but the gift the Father left to his children.\nFor from destruction, new life shall bloom.\n\n— Lirico, Wandering Bard, in \"Tales of the Misty Sea\""
+    "desc2": "Ask presses on through dusk's lament.\nHis gaze remains unclouded by the dark; he lifts it to the heavens and offers up his final light.\nThough his mind is cast into turmoil, it soon scatters like the shadows of days long gone.\nHis swift legs pursue the storm, and fire bursts from his radiant eyes.\nHis broad chest meets the rain, and his roar rolls like thunder.\nThis is no curse, but the gift the Father left to his children.\nFor from destruction, new life shall bloom.\n\n— Lirico, Wandering Bard, in \"Tales of the Misty Sea\"",
+    "source": [
+      {
+        "srId": 107001,
+        "rewardId": 3026,
+        "pos": [
+          [
+            -13762,
+            -68698
+          ],
+          [
+            -17434,
+            -89518
+          ],
+          [
+            -29799,
+            -78487
+          ],
+          [
+            4990,
+            -34700
+          ]
+        ]
+      },
+      {
+        "srId": 107101,
+        "rewardId": 3026,
+        "pos": [
+          [
+            -32401,
+            -33049
+          ],
+          [
+            -32045,
+            -29375
+          ],
+          [
+            -65027,
+            -58332
+          ],
+          [
+            -29229,
+            -23097
+          ]
+        ]
+      },
+      {
+        "srId": 107201,
+        "rewardId": 3026,
+        "pos": [
+          [
+            18610,
+            10347
+          ],
+          [
+            12985,
+            -24291
+          ]
+        ]
+      }
+    ]
   },
   {
     "id": 15033,
@@ -8575,7 +8813,67 @@
     "icon": "T_Resource_Zaie_Wind",
     "rarity": 4,
     "desc": "A crystal infused with Anemo magic. Obtained through Abyssal Commissions. Can be used as smelting material for Calamity Weapons.",
-    "desc2": "Ask presses on through dusk's lament.\nHis gaze remains unclouded by the dark; he lifts it to the heavens and offers up his final light.\nThough his mind is cast into turmoil, it soon scatters like the shadows of days long gone.\nHis swift legs pursue the storm, and fire bursts from his radiant eyes.\nHis broad chest meets the rain, and his roar rolls like thunder.\nThis is no curse, but the gift the Father left to his children.\nFor from destruction, new life shall bloom.\n\n— Lirico, Wandering Bard, in \"Tales of the Misty Sea\""
+    "desc2": "Ask presses on through dusk's lament.\nHis gaze remains unclouded by the dark; he lifts it to the heavens and offers up his final light.\nThough his mind is cast into turmoil, it soon scatters like the shadows of days long gone.\nHis swift legs pursue the storm, and fire bursts from his radiant eyes.\nHis broad chest meets the rain, and his roar rolls like thunder.\nThis is no curse, but the gift the Father left to his children.\nFor from destruction, new life shall bloom.\n\n— Lirico, Wandering Bard, in \"Tales of the Misty Sea\"",
+    "source": [
+      {
+        "srId": 107001,
+        "rewardId": 3026,
+        "pos": [
+          [
+            -13762,
+            -68698
+          ],
+          [
+            -17434,
+            -89518
+          ],
+          [
+            -29799,
+            -78487
+          ],
+          [
+            4990,
+            -34700
+          ]
+        ]
+      },
+      {
+        "srId": 107101,
+        "rewardId": 3026,
+        "pos": [
+          [
+            -32401,
+            -33049
+          ],
+          [
+            -32045,
+            -29375
+          ],
+          [
+            -65027,
+            -58332
+          ],
+          [
+            -29229,
+            -23097
+          ]
+        ]
+      },
+      {
+        "srId": 107201,
+        "rewardId": 3026,
+        "pos": [
+          [
+            18610,
+            10347
+          ],
+          [
+            12985,
+            -24291
+          ]
+        ]
+      }
+    ]
   },
   {
     "id": 15034,
@@ -8583,7 +8881,67 @@
     "icon": "T_Resource_Zaie_Lighting",
     "rarity": 4,
     "desc": "A crystal infused with Electro magic. Obtained through Abyssal Commissions. Can be used as smelting material for Calamity Weapons.",
-    "desc2": "Ask presses on through dusk's lament.\nHis gaze remains unclouded by the dark; he lifts it to the heavens and offers up his final light.\nThough his mind is cast into turmoil, it soon scatters like the shadows of days long gone.\nHis swift legs pursue the storm, and fire bursts from his radiant eyes.\nHis broad chest meets the rain, and his roar rolls like thunder.\nThis is no curse, but the gift the Father left to his children.\nFor from destruction, new life shall bloom.\n\n— Lirico, Wandering Bard, in \"Tales of the Misty Sea\""
+    "desc2": "Ask presses on through dusk's lament.\nHis gaze remains unclouded by the dark; he lifts it to the heavens and offers up his final light.\nThough his mind is cast into turmoil, it soon scatters like the shadows of days long gone.\nHis swift legs pursue the storm, and fire bursts from his radiant eyes.\nHis broad chest meets the rain, and his roar rolls like thunder.\nThis is no curse, but the gift the Father left to his children.\nFor from destruction, new life shall bloom.\n\n— Lirico, Wandering Bard, in \"Tales of the Misty Sea\"",
+    "source": [
+      {
+        "srId": 107001,
+        "rewardId": 3026,
+        "pos": [
+          [
+            -13762,
+            -68698
+          ],
+          [
+            -17434,
+            -89518
+          ],
+          [
+            -29799,
+            -78487
+          ],
+          [
+            4990,
+            -34700
+          ]
+        ]
+      },
+      {
+        "srId": 107101,
+        "rewardId": 3026,
+        "pos": [
+          [
+            -32401,
+            -33049
+          ],
+          [
+            -32045,
+            -29375
+          ],
+          [
+            -65027,
+            -58332
+          ],
+          [
+            -29229,
+            -23097
+          ]
+        ]
+      },
+      {
+        "srId": 107201,
+        "rewardId": 3026,
+        "pos": [
+          [
+            18610,
+            10347
+          ],
+          [
+            12985,
+            -24291
+          ]
+        ]
+      }
+    ]
   },
   {
     "id": 15035,
@@ -8591,7 +8949,67 @@
     "icon": "T_Resource_Zaie_Light",
     "rarity": 4,
     "desc": "A crystal infused with Lumino magic. Obtained through Abyssal Commissions. Can be used as smelting material for Calamity Weapons.",
-    "desc2": "Ask presses on through dusk's lament.\nHis gaze remains unclouded by the dark; he lifts it to the heavens and offers up his final light.\nThough his mind is cast into turmoil, it soon scatters like the shadows of days long gone.\nHis swift legs pursue the storm, and fire bursts from his radiant eyes.\nHis broad chest meets the rain, and his roar rolls like thunder.\nThis is no curse, but the gift the Father left to his children.\nFor from destruction, new life shall bloom.\n\n— Lirico, Wandering Bard, in \"Tales of the Misty Sea\""
+    "desc2": "Ask presses on through dusk's lament.\nHis gaze remains unclouded by the dark; he lifts it to the heavens and offers up his final light.\nThough his mind is cast into turmoil, it soon scatters like the shadows of days long gone.\nHis swift legs pursue the storm, and fire bursts from his radiant eyes.\nHis broad chest meets the rain, and his roar rolls like thunder.\nThis is no curse, but the gift the Father left to his children.\nFor from destruction, new life shall bloom.\n\n— Lirico, Wandering Bard, in \"Tales of the Misty Sea\"",
+    "source": [
+      {
+        "srId": 107001,
+        "rewardId": 3026,
+        "pos": [
+          [
+            -13762,
+            -68698
+          ],
+          [
+            -17434,
+            -89518
+          ],
+          [
+            -29799,
+            -78487
+          ],
+          [
+            4990,
+            -34700
+          ]
+        ]
+      },
+      {
+        "srId": 107101,
+        "rewardId": 3026,
+        "pos": [
+          [
+            -32401,
+            -33049
+          ],
+          [
+            -32045,
+            -29375
+          ],
+          [
+            -65027,
+            -58332
+          ],
+          [
+            -29229,
+            -23097
+          ]
+        ]
+      },
+      {
+        "srId": 107201,
+        "rewardId": 3026,
+        "pos": [
+          [
+            18610,
+            10347
+          ],
+          [
+            12985,
+            -24291
+          ]
+        ]
+      }
+    ]
   },
   {
     "id": 15036,
@@ -8599,7 +9017,67 @@
     "icon": "T_Resource_Zaie_Dark",
     "rarity": 4,
     "desc": "A crystal infused with Umbro magic. Obtained through Abyssal Commissions. Can be used as smelting material for Calamity Weapons.",
-    "desc2": "Ask presses on through dusk's lament.\nHis gaze remains unclouded by the dark; he lifts it to the heavens and offers up his final light.\nThough his mind is cast into turmoil, it soon scatters like the shadows of days long gone.\nHis swift legs pursue the storm, and fire bursts from his radiant eyes.\nHis broad chest meets the rain, and his roar rolls like thunder.\nThis is no curse, but the gift the Father left to his children.\nFor from destruction, new life shall bloom.\n\n— Lirico, Wandering Bard, in \"Tales of the Misty Sea\""
+    "desc2": "Ask presses on through dusk's lament.\nHis gaze remains unclouded by the dark; he lifts it to the heavens and offers up his final light.\nThough his mind is cast into turmoil, it soon scatters like the shadows of days long gone.\nHis swift legs pursue the storm, and fire bursts from his radiant eyes.\nHis broad chest meets the rain, and his roar rolls like thunder.\nThis is no curse, but the gift the Father left to his children.\nFor from destruction, new life shall bloom.\n\n— Lirico, Wandering Bard, in \"Tales of the Misty Sea\"",
+    "source": [
+      {
+        "srId": 107001,
+        "rewardId": 3026,
+        "pos": [
+          [
+            -13762,
+            -68698
+          ],
+          [
+            -17434,
+            -89518
+          ],
+          [
+            -29799,
+            -78487
+          ],
+          [
+            4990,
+            -34700
+          ]
+        ]
+      },
+      {
+        "srId": 107101,
+        "rewardId": 3026,
+        "pos": [
+          [
+            -32401,
+            -33049
+          ],
+          [
+            -32045,
+            -29375
+          ],
+          [
+            -65027,
+            -58332
+          ],
+          [
+            -29229,
+            -23097
+          ]
+        ]
+      },
+      {
+        "srId": 107201,
+        "rewardId": 3026,
+        "pos": [
+          [
+            18610,
+            10347
+          ],
+          [
+            12985,
+            -24291
+          ]
+        ]
+      }
+    ]
   },
   {
     "id": 15037,
@@ -8607,7 +9085,67 @@
     "icon": "T_Resource_Zaie_Rainbow",
     "rarity": 5,
     "desc": "A crystal aglow with shifting colours. Within its facets, one may glimpse the splendour of all Atlasia, suffused with the power of every element. \nObtained through Abyssal Commissions. Can be used as smelting material for Calamity Weapons.",
-    "desc2": "Mother Embla weeps. Her child, battered and bloodied, crawls through the blazing furnace, begging her for absolution.\nShe would reclaim the joy and mercy once bestowed, and strip away every blessing once granted by her grace.\nFor the evil he has wrought cannot be pardoned, nor the sins he bears forgiven.\nThen she sheds a single tear, and as it slips down her cheek, it hardens into a precious crystal.\n\n— A tribal legend from Askard"
+    "desc2": "Mother Embla weeps. Her child, battered and bloodied, crawls through the blazing furnace, begging her for absolution.\nShe would reclaim the joy and mercy once bestowed, and strip away every blessing once granted by her grace.\nFor the evil he has wrought cannot be pardoned, nor the sins he bears forgiven.\nThen she sheds a single tear, and as it slips down her cheek, it hardens into a precious crystal.\n\n— A tribal legend from Askard",
+    "source": [
+      {
+        "srId": 107001,
+        "rewardId": 3026,
+        "pos": [
+          [
+            -13762,
+            -68698
+          ],
+          [
+            -17434,
+            -89518
+          ],
+          [
+            -29799,
+            -78487
+          ],
+          [
+            4990,
+            -34700
+          ]
+        ]
+      },
+      {
+        "srId": 107101,
+        "rewardId": 3026,
+        "pos": [
+          [
+            -32401,
+            -33049
+          ],
+          [
+            -32045,
+            -29375
+          ],
+          [
+            -65027,
+            -58332
+          ],
+          [
+            -29229,
+            -23097
+          ]
+        ]
+      },
+      {
+        "srId": 107201,
+        "rewardId": 3026,
+        "pos": [
+          [
+            18610,
+            10347
+          ],
+          [
+            12985,
+            -24291
+          ]
+        ]
+      }
+    ]
   },
   {
     "id": 15038,
@@ -8767,7 +9305,67 @@
     "icon": "T_Resource_Ganran02",
     "rarity": 4,
     "desc": "Solid crystals harvested from rare Filthoids. Commonly used for intricate research into the biology of these enigmatic creatures.",
-    "desc2": "\"Humanity's tale is one of combat with Filthoids. For fifteen centuries, we've but 'driven them away', never truly vanquished them... for true understanding had always eluded us... Now, the tide turns. The Repulsive Crystal's unveiling, I believe, marks our first stride towards a true 'triumph' over them.\"\n\n— Timbergen, Pioneer of Filthology at Spathatoi, in \"History of Filthoids: From the High Tower to the Mosken Sea\""
+    "desc2": "\"Humanity's tale is one of combat with Filthoids. For fifteen centuries, we've but 'driven them away', never truly vanquished them... for true understanding had always eluded us... Now, the tide turns. The Repulsive Crystal's unveiling, I believe, marks our first stride towards a true 'triumph' over them.\"\n\n— Timbergen, Pioneer of Filthology at Spathatoi, in \"History of Filthoids: From the High Tower to the Mosken Sea\"",
+    "source": [
+      {
+        "srId": 107001,
+        "rewardId": 3026,
+        "pos": [
+          [
+            -13762,
+            -68698
+          ],
+          [
+            -17434,
+            -89518
+          ],
+          [
+            -29799,
+            -78487
+          ],
+          [
+            4990,
+            -34700
+          ]
+        ]
+      },
+      {
+        "srId": 107101,
+        "rewardId": 3026,
+        "pos": [
+          [
+            -32401,
+            -33049
+          ],
+          [
+            -32045,
+            -29375
+          ],
+          [
+            -65027,
+            -58332
+          ],
+          [
+            -29229,
+            -23097
+          ]
+        ]
+      },
+      {
+        "srId": 107201,
+        "rewardId": 3026,
+        "pos": [
+          [
+            18610,
+            10347
+          ],
+          [
+            12985,
+            -24291
+          ]
+        ]
+      }
+    ]
   },
   {
     "id": 20009,
@@ -9000,7 +9598,67 @@
     "icon": "T_Resource_Forge_High03",
     "rarity": 4,
     "desc": "A special product from the other side of the desert. It can be crafted into exquisite decorations or used to strengthen components. The final quality depends on how much real sand gets mixed in during transportation—since it is hard to distinguish between the two, deal with trusted merchants if necessary.",
-    "desc2": "\"Here I lay in eternal repose,\nBeneath countless sand grains,\nWith no opulent sepulchre,\nBut at dawn's light,\nMy golden grave gleams bright.\"\n\n— \"The Gold Miners' Evening Bell\", a Khemet ballad "
+    "desc2": "\"Here I lay in eternal repose,\nBeneath countless sand grains,\nWith no opulent sepulchre,\nBut at dawn's light,\nMy golden grave gleams bright.\"\n\n— \"The Gold Miners' Evening Bell\", a Khemet ballad ",
+    "source": [
+      {
+        "srId": 107001,
+        "rewardId": 3026,
+        "pos": [
+          [
+            -13762,
+            -68698
+          ],
+          [
+            -17434,
+            -89518
+          ],
+          [
+            -29799,
+            -78487
+          ],
+          [
+            4990,
+            -34700
+          ]
+        ]
+      },
+      {
+        "srId": 107101,
+        "rewardId": 3026,
+        "pos": [
+          [
+            -32401,
+            -33049
+          ],
+          [
+            -32045,
+            -29375
+          ],
+          [
+            -65027,
+            -58332
+          ],
+          [
+            -29229,
+            -23097
+          ]
+        ]
+      },
+      {
+        "srId": 107201,
+        "rewardId": 3026,
+        "pos": [
+          [
+            18610,
+            10347
+          ],
+          [
+            12985,
+            -24291
+          ]
+        ]
+      }
+    ]
   },
   {
     "id": 20024,
