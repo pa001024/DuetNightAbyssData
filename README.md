@@ -116,6 +116,18 @@ bun run export:maps
 bun run src/tools/exportStoryMedia.ts
 ```
 
-文件会按资源缩名复制到 `out/Video/` 和 `out/BGM/`。视频从序列中的 `FileMediaSource` 定位真实媒体文件；BGM 根据 FModel 日志中每次事件提取后保存的 `.ogg` 记录定位真实音频，并从 `dna-voice-dataset` 复制。缺少映射、一个事件对应多个 `.ogg` 或缩名冲突时命令会报错，不会静默选择文件。
+文件会按资源规范名复制到 `out/Video/` 和 `out/BGM/`。视频从序列中的 `FileMediaSource` 定位真实媒体文件；
+BGM 根据 FModel 日志中每次事件提取后保存的 `.ogg` 记录定位真实音频，并从 `dna-voice-dataset` 复制。
+缺少映射、一个事件对应多个 `.ogg` 或缩名冲突时命令会报错，不会静默选择文件。
+
+过场（含无对白的纯演出节点）在剧情数据（`QuestStory`）中以其 **`video` 字段** 输出，
+值取过场引用的 LevelSequence 包基名（如 `SQ_OBT0102_SC020`）；`exportStoryMedia` 以同一名称把
+实际媒体复制为 `out/Video/SQ_OBT0102_SC020.mp4`，两侧一一对应。同一场景存在多个媒体变体
+（`_F/_M/_EF/_EM/_PC/_Mobile` 等）时，主变体落在规范名，其余变体以 `规范名_变体` 全量导出。
+当场景的 LevelSequence 资产尚未解包时，只要 `Movies/Story/PC/…` 目录下有同名影片，
+工具会按目录约定兜底定位并导出。对话演出（TalkNode 走 `FlowAssetPath + TalkStageName`，
+如 FixSimple/SpecialShow）的影片经 `AssetDesign/Story/DialogueSequence/<flow>/SQ_<stage>*_Media`
+资产绑定，同样会导出并以 `SQ_<stage>` 挂到对应剧情节点的 `video` 字段。
+可用 `--video-only` 跳过 BGM 阶段，`--all-stories` 不依赖引用表而遍历全部剧情文件。
 
 地图与媒体工具默认通过 UAssetCLI server 解析 `.uasset`（见 `src/lua/UAssetServer.ts`）。解包目录解析顺序为 `DNA_UNPACK_DIR` 环境变量、仓库根目录 `.env`，最后是仓库同级的 `../dna-unpack`。

@@ -2,6 +2,12 @@ import type { ModuleContext } from "../../core/Graph.ts"
 import type { VNodeTree } from "../../i18n/vnode.ts"
 import type { DialogueService } from "../dialogue/dialogueModule.ts"
 import { type Row, sequence } from "../shared/dataHelpers.ts"
+import { cinematicVideoWithMedia, dialogueFlowCgVideo, dialogueStageTalkVideo } from "../shared/storyStageMedia.ts"
+
+/** 过场（ShowFilePath，须有真实影片）、对话演出（TalkStageName）或 CG 对话流（FlowAssetPath 即场景码）媒体规范名。 */
+function talkVideo(props: Row | undefined): string | undefined {
+    return cinematicVideoWithMedia(props) ?? dialogueStageTalkVideo(props) ?? dialogueFlowCgVideo(props)
+}
 
 export interface StorylineOptions {
     includeNodeNext?: boolean
@@ -76,6 +82,8 @@ export function storylineNodes(ctx: ModuleContext, path: unknown, options: Story
             const chain = props.FlowAssetPath ? dialogue.flowChain(props.FlowAssetPath) : dialogue.chain(props.FirstDialogueId)
             if (props.FirstDialogueId || props.FlowAssetPath) {
                 const out: Row = { id: String(parent.key ?? ""), type: "TalkNode", name: parent.name ?? "" }
+                const video = talkVideo(props)
+                if (video) out.video = video
                 if (chain.length) out.dialogues = chain
                 result.push(out)
             }
@@ -179,6 +187,8 @@ export function storylineNodes(ctx: ModuleContext, path: unknown, options: Story
             const chain = props.FlowAssetPath ? dialogue.flowChain(props.FlowAssetPath) : dialogue.chain(props.FirstDialogueId)
             if (!props.FirstDialogueId && !props.FlowAssetPath && chain.length === 0) continue
             const out: Row = { id, type: "TalkNode", name: node.name ?? "" }
+            const video = talkVideo(props)
+            if (video) out.video = video
             let successors = resolveTalkTargets(next.get(id) ?? [])
             if (!options.includeSelfNodeNext) successors = successors.filter(value => value !== id)
             let siblingTarget: string | undefined
@@ -293,6 +303,10 @@ export function eventStorylineNodes(ctx: ModuleContext, path: unknown): VNodeTre
                 const props = node.propsData ?? {}
                 const media = storyMediaNode(key, node)
                 const out: Row = media ?? { id: key, type: "TalkNode", name: node.name ?? "" }
+                if (!media) {
+                    const video = talkVideo(props)
+                    if (video) out.video = video
+                }
                 const children = next.get(key) ?? []
                 const targets: string[] = []
                 const pending = [...children]

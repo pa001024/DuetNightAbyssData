@@ -5,7 +5,9 @@ import { describe, expect, test } from "bun:test"
 import type { ModuleContext } from "../src/core/Graph.ts"
 import type { DialogueService } from "../src/modules/dialogue/dialogueModule.ts"
 import { eventStorylineNodes, storylineNodes, storyMediaNode } from "../src/modules/storyline/storyline.ts"
-import { collectBgmFiles, normalizeBgmAssetPath, parseFModelSoundLog } from "../src/tools/exportStoryMedia.ts"
+import { collectBgmFiles, movieStemLabel, normalizeBgmAssetPath, parseFModelSoundLog } from "../src/tools/exportStoryMedia.ts"
+import { storyVideoName } from "../src/modules/shared/dataHelpers.ts"
+import { dialogueFlowDir, stageSequenceName } from "../src/modules/shared/storyStageMedia.ts"
 
 function context(story: Record<string, unknown>): ModuleContext {
     const dialogue = {
@@ -112,6 +114,87 @@ describe("storyline media nodes", () => {
     test("exports the same media nodes from event storylines", () => {
         const nodes = eventStorylineNodes(context(story), "story") as Array<Record<string, any>>
         expect(nodes.map(node => node.type)).toEqual(["VideoNode", "PlayOrStopBGMNode"])
+    })
+
+    test("derives a canonical video name from UE references", () => {
+        expect(
+            storyVideoName("LevelSequence'/Game/Asset/Cinematics/Story/OBT01/OBT0102/OBT0102_SC020/SQ_OBT0102_SC020.SQ_OBT0102_SC020'")
+        ).toBe("SQ_OBT0102_SC020")
+        expect(storyVideoName("/Game/Asset/UIVideo/EX01_SC018.EX01_SC018")).toBe("EX01_SC018")
+        expect(storyVideoName("/Game/Asset/Cinematics/Story/OBT01/OBT0101/OBT0101_SC011/SQ_OBT0101_SC011")).toBe("SQ_OBT0101_SC011")
+        expect(storyVideoName("")).toBeUndefined()
+    })
+
+    test("classifies Movies folder media stems into variants", () => {
+        expect(movieStemLabel("Ver0106_SC001_Movie", "Ver0106_SC001")).toBe("")
+        expect(movieStemLabel("Ver0106_SC001", "Ver0106_SC001")).toBe("")
+        expect(movieStemLabel("Ver0102_SC001_F_Movie", "Ver0102_SC001")).toBe("F")
+        expect(movieStemLabel("Ver0102_SC001_M_Movie", "Ver0102_SC001")).toBe("M")
+        expect(movieStemLabel("Ver0103_SC003_F", "Ver0103_SC003")).toBe("F")
+        expect(movieStemLabel("SQ_Ver0105_SC013_EF", "Ver0105_SC013")).toBe("EF")
+        expect(movieStemLabel("Ver0101_SC021", "Ver0101_SC021")).toBe("")
+        expect(movieStemLabel("Animatic_Edit_Ver0102_SC001", "Ver0101_SC001")).toBeUndefined()
+    })
+
+    test("derives dialogue-flow dir and stage sequence name from TalkNode props", () => {
+        expect(dialogueFlowDir("DialogueAsset'/Game/Dialogue/MainStory/1102/110201/11020101.11020101'")).toBe(
+            "MainStory/1102/110201"
+        )
+        expect(dialogueFlowDir("/Game/Dialogue/MainStory/1102/110201/11020102")).toBe("MainStory/1102/110201")
+        expect(dialogueFlowDir("MainStory/1102/110201")).toBeUndefined()
+        expect(stageSequenceName("Ex02_FixSimple_01")).toBe("SQ_Ex02_FixSimple_01")
+        expect(stageSequenceName("SQ_Ex02_FixSimple_01")).toBe("SQ_Ex02_FixSimple_01")
+        expect(stageSequenceName("")).toBeUndefined()
+    })
+
+    test("keeps cinematic TalkNode rows and marks them with their video", () => {
+        const cinematic = {
+            storyNodeData: {
+                parent: {
+                    questNodeData: {
+                        lineData: [
+                            { startQuest: "start", startPort: "QuestStart", endQuest: "cinematic" },
+                            { startQuest: "cinematic", startPort: "Out", endQuest: "stage" },
+                        ],
+                        nodeData: {
+                            start: { type: "QuestStartNode" },
+                            cinematic: {
+                                name: "过场动画",
+                                type: "TalkNode",
+                                propsData: {
+                                    FirstDialogueId: 7,
+                                    TalkType: "Cinematic",
+                                    ShowFilePath: "/Game/Asset/Cinematics/Story/OBT01/OBT0102/OBT0102_SC020/SQ_OBT0102_SC020",
+                                },
+                            },
+                            stage: {
+                                name: "演出-战斗",
+                                type: "TalkNode",
+                                propsData: {
+                                    FirstDialogueId: 8,
+                                    TalkType: "Cinematic",
+                                    ShowFilePath: "/Game/AssetDesign/Story/Sequence/Chapter01/HaerFight",
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+        const dialogue = {
+            story: () => cinematic,
+            chain: () => [],
+            flowChain: () => [],
+        } as unknown as DialogueService
+        const ctx = { getArtifact: () => dialogue } as unknown as ModuleContext
+        const nodes = storylineNodes(ctx, "story") as Array<Record<string, any>>
+        expect(nodes).toEqual([
+            { id: "cinematic", type: "TalkNode", name: "过场动画", video: "SQ_OBT0102_SC020" },
+            { id: "stage", type: "TalkNode", name: "演出-战斗" },
+        ])
+        const eventNodes = eventStorylineNodes(ctx, "story") as Array<Record<string, any>>
+        expect(eventNodes[0]).toMatchObject({ id: "cinematic", type: "TalkNode", video: "SQ_OBT0102_SC020" })
+        expect(eventNodes[1]).not.toHaveProperty("video")
     })
 
     test("normalizes FMOD object paths to the event package", () => {

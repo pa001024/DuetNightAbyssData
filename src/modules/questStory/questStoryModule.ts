@@ -1,6 +1,7 @@
 import type { ModuleContext } from "../../core/Graph.ts"
 import { T, TRaw, TUnlessEqual, type VNodeTree } from "../../i18n/vnode.ts"
 import type { DialogueService } from "../dialogue/dialogueModule.ts"
+import { cinematicVideoWithMedia, dialogueFlowCgVideo, dialogueStageTalkVideo } from "../shared/storyStageMedia.ts"
 
 type Row = Record<string, any>
 
@@ -506,7 +507,9 @@ function buildNode(
     if (next.length > 0) output.next = [...next]
     const props = row(node.propsData) ?? {}
     if (type === "TalkNode") {
-        if (!("FirstDialogueId" in props) && !props.FlowAssetPath) return undefined
+        const video = cinematicVideoWithMedia(props) ?? dialogueStageTalkVideo(props) ?? dialogueFlowCgVideo(props)
+        if (!("FirstDialogueId" in props) && !props.FlowAssetPath && !video) return undefined
+        if (video) output.video = video
         const chain = props.FlowAssetPath ? dialogue.flowChain(props.FlowAssetPath) : dialogue.chain(props.FirstDialogueId)
         if (chain.length > 0) {
             output.dialogues = chain

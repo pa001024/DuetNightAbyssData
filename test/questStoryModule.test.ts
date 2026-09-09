@@ -154,6 +154,59 @@ describe("QuestStory special stories", () => {
         ).toEqual(["SpecialQuest/10.story", "SpecialQuest/12.story"])
     })
 
+    test("marks cinematic TalkNode with its canonical video resource", async () => {
+        const story = {
+            storyNodeData: {
+                parent: {
+                    key: "parent",
+                    propsData: { QuestId: 10 },
+                    questNodeData: {
+                        lineData: [{ startQuest: "start", startPort: "QuestStart", endQuest: "cinematic" }],
+                        nodeData: {
+                            start: { key: "start", type: "QuestStartNode", propsData: {} },
+                            cinematic: {
+                                key: "cinematic",
+                                type: "TalkNode",
+                                name: "过场动画",
+                                propsData: {
+                                    FirstDialogueId: 1,
+                                    TalkType: "Cinematic",
+                                    ShowFilePath:
+                                        "LevelSequence'/Game/Asset/Cinematics/Story/OBT01/OBT0102/OBT0102_SC020/SQ_OBT0102_SC020.SQ_OBT0102_SC020'",
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+        const dialogue = {
+            story: () => story,
+            prepareStoryFlows: async () => {},
+            prefetchReachable: () => {},
+            chain: () => [{ id: 1 }],
+        } as unknown as DialogueService
+        const tables: Record<string, unknown> = {
+            QuestChain: { 1: { QuestChainId: 1, StoryPath: "main.story" } },
+            STLExportQuestChain: { 1: { Quests: { 10: {} } } },
+            DetectiveQuestion: {},
+            DetectiveAnswer: {},
+            SpecialQuestConfig: {},
+        }
+        const ctx = {
+            dm: {
+                getTable: (name: string) => tables[name],
+                loadScriptTableRows: () => [],
+            },
+            getArtifact: () => dialogue,
+        } as unknown as ModuleContext
+
+        const result = (await questStoryModule(ctx)) as Array<Record<string, any>>
+        expect(result[0].quests[0].nodes).toEqual([
+            { id: "cinematic", type: "TalkNode", name: "过场动画", video: "SQ_OBT0102_SC020", dialogues: [{ id: 1 }] },
+        ])
+    })
+
     test("keeps a TalkNode with an explicit empty dialogue chain", async () => {
         const story = {
             storyNodeData: {

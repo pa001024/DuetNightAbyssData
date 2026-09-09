@@ -240,7 +240,7 @@ export class LuaDataManager {
             __project_story = function(value)
                 local function props(value)
                     local out = {}
-                    local fields = {"FirstDialogueId", "FlowAssetPath", "TalkType", "ShowFilePath", "GuidePointName", "StoryGuidePointName", "UnitBPPath", "UnitName", "QuestId", "QuestDescription", "QuestDeatil", "SubRegionId", "QuestionIds", "AnswerIds", "SpecialConfigId", "MediaSourceRef", "SoundPath", "SoundStateType", "SoundType"}
+                    local fields = {"FirstDialogueId", "FlowAssetPath", "TalkType", "TalkStageName", "ShowFilePath", "GuidePointName", "StoryGuidePointName", "UnitBPPath", "UnitName", "QuestId", "QuestDescription", "QuestDeatil", "SubRegionId", "QuestionIds", "AnswerIds", "SpecialConfigId", "MediaSourceRef", "SoundPath", "SoundStateType", "SoundType"}
                     for _, field in ipairs(fields) do if value and value[field] ~= nil then out[field] = value[field] end end
                     return out
                 end
@@ -663,7 +663,7 @@ export class LuaDataManager {
      *   相同 desc+level 跨模块/跨武器复用，避免重复编译。
      */
     calcSkillDesc(desc: string, level: number): string {
-        const key = `${level} ${desc}`
+        const key = `${level}${desc}`
         const cached = this.calcDescCache.get(key)
         if (cached !== undefined) return cached
         const r = this.callSkillUtilsTableFn("CalcSkillDesc", [desc, level])
