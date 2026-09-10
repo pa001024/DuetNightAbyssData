@@ -302520,6 +302520,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "要不你也一起看一下，看看和你在这里得到的情报有无出入？",
           DialogueId = 51300103,
           Duration = 8,
+          GUID = "806CA6FD",
           SpeakNpcId = 703135
         },
         [51300201] = {
@@ -314871,6 +314872,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72006402] = {
           Content = "咿呀，被你找到了。",
+          ContentKR = "이~야! 날 찾아 냈네.",
           DialogueId = 72006402,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -314881,6 +314883,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72006403] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
+          ContentKR = "낙원에는 재미있는 게 참 많구나. 또 다른 곳에서 만나자~",
           DialogueId = 72006403,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -314916,6 +314919,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72006502] = {
           Content = "咿呀，被你找到了。",
+          ContentKR = "이~야! 날 찾아 냈네.",
           DialogueId = 72006502,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -314926,6 +314930,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72006503] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
+          ContentKR = "낙원에는 재미있는 게 참 많구나. 또 다른 곳에서 만나자~",
           DialogueId = 72006503,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -314961,6 +314966,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72006602] = {
           Content = "咿呀，被你找到了。",
+          ContentKR = "이~야! 날 찾아 냈네.",
           DialogueId = 72006602,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -314971,6 +314977,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72006603] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
+          ContentKR = "낙원에는 재미있는 게 참 많구나. 또 다른 곳에서 만나자~",
           DialogueId = 72006603,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315006,6 +315013,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72006702] = {
           Content = "咿呀，被你找到了。",
+          ContentKR = "이~야! 날 찾아 냈네.",
           DialogueId = 72006702,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315016,6 +315024,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72006703] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
+          ContentKR = "낙원에는 재미있는 게 참 많구나. 또 다른 곳에서 만나자~",
           DialogueId = 72006703,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315051,6 +315060,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72006802] = {
           Content = "咿呀，被你找到了。",
+          ContentKR = "이~야! 날 찾아 냈네.",
           DialogueId = 72006802,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315061,6 +315071,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72006803] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
+          ContentKR = "낙원에는 재미있는 게 참 많구나. 또 다른 곳에서 만나자~",
           DialogueId = 72006803,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315096,6 +315107,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72006902] = {
           Content = "咿呀，被你找到了。",
+          ContentKR = "이~야! 날 찾아 냈네.",
           DialogueId = 72006902,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315106,6 +315118,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72006903] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
+          ContentKR = "낙원에는 재미있는 게 참 많구나. 또 다른 곳에서 만나자~",
           DialogueId = 72006903,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315141,6 +315154,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007002] = {
           Content = "咿呀，被你找到了。",
+          ContentKR = "이~야! 날 찾아 냈네.",
           DialogueId = 72007002,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315151,6 +315165,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007003] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
+          ContentKR = "낙원에는 재미있는 게 참 많구나. 또 다른 곳에서 만나자~",
           DialogueId = 72007003,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315186,6 +315201,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007102] = {
           Content = "咿呀，被你找到了。",
+          ContentKR = "이~야! 날 찾아 냈네.",
           DialogueId = 72007102,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315196,6 +315212,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007103] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
+          ContentKR = "낙원에는 재미있는 게 참 많구나. 또 다른 곳에서 만나자~",
           DialogueId = 72007103,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315231,6 +315248,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007202] = {
           Content = "咿呀，被你找到了。",
+          ContentKR = "이~야! 날 찾아 냈네.",
           DialogueId = 72007202,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315241,6 +315259,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007203] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
+          ContentKR = "낙원에는 재미있는 게 참 많구나. 또 다른 곳에서 만나자~",
           DialogueId = 72007203,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315276,6 +315295,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007302] = {
           Content = "咿呀，被你找到了。",
+          ContentKR = "이~야! 날 찾아 냈네.",
           DialogueId = 72007302,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315286,6 +315306,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007303] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
+          ContentKR = "낙원에는 재미있는 게 참 많구나. 또 다른 곳에서 만나자~",
           DialogueId = 72007303,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315321,6 +315342,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007402] = {
           Content = "咿呀，被你找到了。",
+          ContentKR = "이~야! 날 찾아 냈네.",
           DialogueId = 72007402,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315331,6 +315353,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007403] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
+          ContentKR = "낙원에는 재미있는 게 참 많구나. 또 다른 곳에서 만나자~",
           DialogueId = 72007403,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315366,6 +315389,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007502] = {
           Content = "咿呀，被你找到了。",
+          ContentKR = "이~야! 날 찾아 냈네.",
           DialogueId = 72007502,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315376,6 +315400,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007503] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
+          ContentKR = "낙원에는 재미있는 게 참 많구나. 또 다른 곳에서 만나자~",
           DialogueId = 72007503,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315411,6 +315436,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007602] = {
           Content = "咿呀，被你找到了。",
+          ContentKR = "이~야! 날 찾아 냈네.",
           DialogueId = 72007602,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315421,6 +315447,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007603] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
+          ContentKR = "낙원에는 재미있는 게 참 많구나. 또 다른 곳에서 만나자~",
           DialogueId = 72007603,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315456,6 +315483,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007702] = {
           Content = "咿呀，被你找到了。",
+          ContentKR = "이~야! 날 찾아 냈네.",
           DialogueId = 72007702,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315466,6 +315494,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007703] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
+          ContentKR = "낙원에는 재미있는 게 참 많구나. 또 다른 곳에서 만나자~",
           DialogueId = 72007703,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -366252,7 +366281,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80270137] = {
           Content = "嗯，我允许他继续扮演「死神」……<H>现在允许</>。",
-          ContentKR = "그래, 계속 「사신」 역할을 맡을 수 있도록... <H>허락해 줄게</>.",
+          ContentKR = "그래, 계속 「사신」 역할을 맡을 수 있도록... <H>지금은 허락해 줄게</>.",
           DialogueId = 80270137,
           GUID = "C8F2A75A",
           NextDialogue = 80270138,

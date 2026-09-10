@@ -732,7 +732,7 @@ function WBP_Bag_Main_P_C:EnterWeaponResolveState()
   self.DesireResolveWeaponList = {}
   local SelectStuffDatas
   if self.CurSelectStuffContent and self.CurSelectStuffContent.StuffType == BagCommon.TabIdToStuffType[self.CurTabId] then
-    if self:CheckIsCanAddToSaleList(self.CurSelectStuffContent, false) then
+    if self:CheckIsCanAddToResolveList(self.CurSelectStuffContent, false) then
       local StuffUuid = self.CurSelectStuffContent.Uuid
       local StuffServerData = self:GetStuffServerData(StuffUuid, self.CurSelectStuffContent.StuffType)
       SelectStuffDatas = StuffIconObject:GetWeaponStuffData(StuffServerData, nil, "ClickChooseStuff")

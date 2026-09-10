@@ -529,7 +529,9 @@ function M:CheckIsCanAddToResolveList(CurStuffContent, bIsShowToast)
   end
   local ShowTextId
   if nil ~= CurStuffContent then
-    if 0 ~= CurStuffContent.LockType then
+    if -1 == CurStuffContent.Price then
+      ShowTextId = 7014
+    elseif 0 ~= CurStuffContent.LockType then
       ShowTextId = 7010
     elseif self:GetIsStuffIsEquiped(CurStuffContent) then
       ShowTextId = 7012

@@ -83,7 +83,7 @@ end
 function MoneyTreeMgr.GetPriceYuan(PayType)
   local GoodsId = MoneyTreeMgr.GetGoodsId(PayType)
   local PayGoodsData = GoodsId and DataMgr.PayGoods and DataMgr.PayGoods[GoodsId]
-  return PayGoodsData and PayGoodsData.PriceCNY or 0
+  return PayGoodsData and PayGoodsData[ShopUtils:GetCurrencyPrice()] or 0
 end
 
 function MoneyTreeMgr.GetEndTime()

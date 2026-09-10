@@ -274524,6 +274524,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "要不你也一起看一下，看看和你在这里得到的情报有无出入？",
           DialogueId = 51300103,
           Duration = 8,
+          GUID = "806CA6FD",
           SpeakNpcId = 703135
         },
         [51300201] = {

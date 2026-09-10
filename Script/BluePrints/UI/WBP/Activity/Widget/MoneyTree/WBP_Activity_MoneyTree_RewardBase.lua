@@ -46,7 +46,8 @@ end
 function M:Refresh()
   local State = MoneyTreeMgr.GetState()
   if self.Text_Price then
-    self.Text_Price:SetText(string.format("¥%d", MoneyTreeMgr.GetPriceYuan(self.PayType)))
+    local price = MoneyTreeMgr.GetPriceYuan(self.PayType)
+    self.Text_Price:SetText(GText(ShopUtils:GetCurrencyType()) .. tostring(price))
   end
   if 2 == self.PayType then
     self:RefreshAllUnlock(State)

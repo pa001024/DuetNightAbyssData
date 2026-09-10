@@ -64,6 +64,30 @@ export function soloTreasureModule(ctx: ModuleContext): VNodeTree {
     return result
 }
 
+/**
+ * SoloTreasureDrop：秘宝玩法的怪物标签掉落配置。
+ * 表键即怪物标签（如 Mon.SoloTreasure.AContainer），容器行给 BoxDropRate/DropMechanismId，
+ * 点位行给 KillScore；同一怪物可同时带容器与点位标签，故按表原样整表导出。
+ */
+export function soloTreasureDropModule(ctx: ModuleContext): VNodeTree {
+    const result: VNodeTree[] = []
+    for (const item of rows(ctx, "SoloTreasureDrop")) {
+        const tag = String(item.MonsterTag ?? "")
+        if (!tag) continue
+        const row: Record<string, VNodeTree> = { tag }
+        if (item.BoxDropRate !== undefined && item.BoxDropRate !== null) row.boxDropRate = item.BoxDropRate
+        if (item.DropMechanismId !== undefined && item.DropMechanismId !== null) row.dropMechanismId = item.DropMechanismId
+        if (item.KillScore !== undefined && item.KillScore !== null) row.killScore = item.KillScore
+        result.push(row)
+    }
+    result.sort((a, b) => {
+        const left = String((a as Record<string, any>).tag)
+        const right = String((b as Record<string, any>).tag)
+        return left < right ? -1 : left > right ? 1 : 0
+    })
+    return result
+}
+
 function buildSpawn(ctx: ModuleContext, spawnId: unknown): Record<string, VNodeTree> | undefined {
     if (!spawnId) return undefined
     const spawn = byId(table(ctx, "MonsterSpawn"), spawnId)

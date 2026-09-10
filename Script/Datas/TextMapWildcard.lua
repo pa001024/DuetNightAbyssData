@@ -389,6 +389,14 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "NpcBiography_Information_XiAo_2",
     WildcardClassification = "Story"
   },
+  Observation_11023101 = {
+    TextMapId = "Observation_11023101",
+    WildcardClassification = "Story"
+  },
+  Observation_11023102 = {
+    TextMapId = "Observation_11023102",
+    WildcardClassification = "Story"
+  },
   PROLOGUE_SELECTGUN_TIP_2 = {
     TextMapId = "PROLOGUE_SELECTGUN_TIP_2",
     WildcardClassification = "Story"

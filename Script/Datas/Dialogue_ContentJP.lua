@@ -101986,7 +101986,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11108605] = {
           Content = "嗷呜！烤土豆被吃掉喽。",
-          ContentJP = "がおーっ！焼きいも、食べちゃうぞ。",
+          ContentJP = "がおーっ！焼きいも、食べちゃう{性别2:ぞ|よ}。",
           DialogueId = 11108605,
           ExStoryInfo = "EXPlayer",
           GUID = "1BCF2982",
@@ -102650,7 +102650,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11108937] = {
           Content = "我在军团前几年基本都在训练和演习，最后一年才开始执行任务。",
-          ContentJP = "帝国軍に入ってからの数年は、ほとんどが訓練と演習だった。任務に出るようになったのは、最後の一年くらいだ。",
+          ContentJP = "帝国軍に入ってからの数年は、ほとんどが訓練と演習だった。任務に出るようになったのは、最後の一年くらい{性别2:だ|}。",
           DialogueId = 11108937,
           ExStoryInfo = "EXPlayer",
           GUID = "1BCF5FFA",
@@ -102720,7 +102720,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11108944] = {
           Content = "（你现在还好吗……达芙涅？）",
-          ContentJP = "（今、無事でいるだろうか……ダフネ。）",
+          ContentJP = "（今、無事でいる{性别2:だろうか|でしょうか}……ダフネ。）",
           DialogueId = 11108944,
           DisableMouth = 1,
           ExStoryInfo = "EXPlayer",
@@ -104180,7 +104180,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11110405] = {
           Content = "风景……很漂亮。",
-          ContentJP = "景色は……きれいだ。",
+          ContentJP = "景色は……きれい{性别2:だ|}。",
           DialogueId = 11110405,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD050D2",
@@ -104407,7 +104407,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11110612] = {
           Content = "老师成了斗争的牺牲品，倒在了阴谋的枪口下。",
-          ContentJP = "教官は、内部の権力争いに巻き込まれた。そして、陰謀の犠牲者になった",
+          ContentJP = "教官は、内部の権力争いに巻き込まれた。そして、陰謀の犠牲者になった。",
           DialogueId = 11110612,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD072C8",
@@ -104987,7 +104987,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11111021] = {
           Content = "那么，便有三种可能。第一，富尔维斯还没有来；第二，富尔维斯在这座山里，只是躲在了镇民们看不到的地方；第三……",
-          ContentJP = "なら、可能性は三つだ。フルヴィスはまだここに到着していない。あるいは、すでにこの山に潜伏しているが、町の人たちの目には触れていない。もしくは……",
+          ContentJP = "なら、可能性は三つ{性别2:だ|}。フルヴィスはまだここに到着していない。あるいは、すでにこの山に潜伏しているが、町の人たちの目には触れていない。もしくは……",
           DialogueId = 11111021,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD0B5E2",
@@ -105046,7 +105046,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11111027] = {
           Content = "别装傻。你听过中央控制室的录音——那是富尔维斯在找的东西。",
-          ContentJP = "とぼけ{性别2:るな|ないで}。{性别2:君|あなた}は中央制御室の録音を聞いている。フルヴィスが探しているものだ。",
+          ContentJP = "とぼけ{性别2:るな|ないで}。{性别2:君|あなた}は中央制御室の録音を聞いている。フルヴィスが探しているもの{性别2:だ|よ}。",
           DialogueId = 11111027,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD0B6DE",
@@ -105116,7 +105116,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11111034] = {
           Content = "情报里，“兔妈妈”是一名深不可测的“骸”，她不会被任何利益诱惑，也不接受任何武力威胁。如果军团强行打进来，她会把触媒和这座小镇一起摧毁。",
-          ContentJP = "記録によれば、『ウサギママ』は底の知れない「骸」だ。どんな利益にも動かず、武力による脅しにも屈しない。帝国軍が強引に攻め込めば、触媒も、この町もろとも破壊する。",
+          ContentJP = "記録によれば、『ウサギママ』は底の知れない「骸」{性别2:だ|}。どんな利益にも動かず、武力による脅しにも屈しない。帝国軍が強引に攻め込めば、触媒も、この町もろとも破壊する。",
           DialogueId = 11111034,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD0B804",
@@ -105190,7 +105190,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11111041] = {
           Content = "你一直不难猜。你的体术比我更好，但你的行动从不会超出预料。",
-          ContentJP = "{性别2:君|あなた}は昔から読みやすい。体術は私より上だが、行動は予想を外れない。",
+          ContentJP = "{性别2:君|あなた}は昔から読みやすい。体術は私より上だ{性别2:が|けど}、行動は予想を外れない。",
           DialogueId = 11111041,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD0B92A",
@@ -105243,7 +105243,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11111046] = {
           Content = "但富尔维斯并没有藏在里面，你很失望。",
-          ContentJP = "だが、フルヴィスはそこにいなかった。期待外れだったわけだ。",
+          ContentJP = "{性别2:だが|けど}、フルヴィスはそこにいなかった。期待外れだったわけ{性别2:だ|}。",
           DialogueId = 11111046,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD0B9FC",
@@ -105283,7 +105283,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11111050] = {
           Content = "“触媒”……或许只能等到明天的乐园巡游，亲自会一会那位“兔妈妈”了。",
-          ContentJP = "「触媒」……やはり明日の<up text=\"ワンダーランド・パレード\">楽園巡遊</>を待って、あの「ウサギママ」に直接会うしかないか。",
+          ContentJP = "「触媒」……やはり明日の<up text=\"ワンダーランド・パレード\">楽園巡遊</>を待って、あの「ウサギママ」に直接会うしかない{性别2:か|ね}。",
           DialogueId = 11111050,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD0BAA4",
@@ -105400,7 +105400,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11111061] = {
           Content = "阿瓦尔老师也是卡戎之民，你怎么对他也下得去手？",
-          ContentJP = "アヴァール教官もカロンの民だ。それでも{性别2:君|あなた}は、彼に手を下せたのか。",
+          ContentJP = "アヴァール教官もカロンの民{性别2:だ|よ}。それでも{性别2:君|あなた}は、彼に手を下せたの性别2:か|}。",
           DialogueId = 11111061,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD0BC72",
@@ -105430,7 +105430,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11111064] = {
           Content = "我说了，既然录音设备没了，就得留你一条命去法庭作证。",
-          ContentJP = "言ったはずだ。録音装置が失われた以上、{性别2:君|あなた}には軍法会議で証言してもらう必要がある。",
+          ContentJP = "言ったはず{性别2:だ|よ}。録音装置が失われた以上、{性别2:君|あなた}には軍法会議で証言してもらう必要がある。",
           DialogueId = 11111064,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD0BCF0",
@@ -105470,7 +105470,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11111068] = {
           Content = "达芙涅和我讲过一个最近流行的童话故事：一个女孩经由山林里的兔子洞，抵达了另一个世界。",
-          ContentJP = "ダフネから、最近はやっている童話を聞いたことがある。森の中のウサギ穴を抜けた少女が、別の世界へ迷い込む話だ。",
+          ContentJP = "ダフネから、最近はやっている童話を聞いたことがある。森の中のウサギ穴を抜けた少女が、別の世界へ迷い込む話{性别2:だ|}。",
           DialogueId = 11111068,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD0BD98",
@@ -105490,7 +105490,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11111070] = {
           Content = "不，那只是童话故事罢了。但我觉得，这座小镇和故事里的那个世界一样，它和原本的世界很接近，但又有微妙的不同。",
-          ContentJP = "{性别2:いや|ううん}、ただの童話だ。{性别2:だが|けど}、この町はその物語の世界に似ている。元の世界とよく似ているのに、どこかが少しずつ違う。",
+          ContentJP = "{性别2:いや|ううん}、ただの童話{性别2:だ|よ}。{性别2:だが|けど}、この町はその物語の世界に似ている。元の世界とよく似ているのに、どこかが少しずつ違う。",
           DialogueId = 11111070,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD0BDEC",
@@ -105520,7 +105520,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11111073] = {
           Content = "我们的情报差不多就是这些了，目前还不够。",
-          ContentJP = "こちらの情報は、ひとまずこの程度だ。まだ足りない。",
+          ContentJP = "こちらの情報は、ひとまずこの程度{性别2:だ|}。まだ足りない。",
           DialogueId = 11111073,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD0BE6A",
@@ -105639,7 +105639,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11111205] = {
           Content = "……是。我们准备在镇上转转。",
-          ContentJP = "……{性别2:ああ|うん}。町を少し見て回るところだ。",
+          ContentJP = "……{性别2:ああ|うん}。町を少し見て回るところ{性别2:だ|よ}。",
           DialogueId = 11111205,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD0D412",
@@ -105682,7 +105682,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11111301] = {
           Content = "据艾达所说，旁边应该有个装置能把吊桥放下来，我想就是这个了。",
-          ContentJP = "エイダの話では、近くに吊り橋を下ろす装置があるはずだ。たぶん、これだな。",
+          ContentJP = "エイダの話では、近くに吊り橋を下ろす装置があるはず{性别2:だ|}。たぶん、これだ{性别2:な|ね}。",
           DialogueId = 11111301,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD0E3D2",
@@ -105995,7 +105995,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11112401] = {
           Content = "前方变得开阔了起来，并不利于摆脱追兵。去高处观察一下四周，看看有没有什么发现。",
-          ContentJP = "この先は開けた地形になる。追手を振り切るには不利だ。高い場所から周囲を確認して、何か手がかりがないか探そう。",
+          ContentJP = "この先は開けた地形になる。追手を振り切るには不利{性别2:だ|}。高い場所から周囲を確認して、何か手がかりがないか探そう。",
           DialogueId = 11112401,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD1984A",
@@ -106091,7 +106091,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11112804] = {
           Content = "也不知道那些镇民是怎么活下来的。",
-          ContentJP = "町の人たちは、どうやって生き延びたんだろう{性别2:な|}。",
+          ContentJP = "町の人たちは、どうやって生き延び{性别2:たんだろう|たんでしょう}。",
           DialogueId = 11112804,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD1DA68",
@@ -302518,6 +302518,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "要不你也一起看一下，看看和你在这里得到的情报有无出入？",
           DialogueId = 51300103,
           Duration = 8,
+          GUID = "806CA6FD",
           SpeakNpcId = 703135
         },
         [51300201] = {
@@ -314869,6 +314870,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72006402] = {
           Content = "咿呀，被你找到了。",
+          ContentJP = "ありゃ、見つかっちゃった。",
           DialogueId = 72006402,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -314879,6 +314881,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72006403] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
+          ContentJP = "楽園に面白いことが本当に多いね…次のところでまたお会いましょう！",
           DialogueId = 72006403,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -314914,6 +314917,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72006502] = {
           Content = "咿呀，被你找到了。",
+          ContentJP = "ありゃ、見つかっちゃった。",
           DialogueId = 72006502,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -314924,6 +314928,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72006503] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
+          ContentJP = "楽園に面白いことが本当に多いね…次のところでまたお会いましょう！",
           DialogueId = 72006503,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -314959,6 +314964,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72006602] = {
           Content = "咿呀，被你找到了。",
+          ContentJP = "ありゃ、見つかっちゃった。",
           DialogueId = 72006602,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -314969,6 +314975,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72006603] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
+          ContentJP = "楽園に面白いことが本当に多いね…次のところでまたお会いましょう！",
           DialogueId = 72006603,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315004,6 +315011,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72006702] = {
           Content = "咿呀，被你找到了。",
+          ContentJP = "ありゃ、見つかっちゃった。",
           DialogueId = 72006702,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315014,6 +315022,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72006703] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
+          ContentJP = "楽園に面白いことが本当に多いね…次のところでまたお会いましょう！",
           DialogueId = 72006703,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315049,6 +315058,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72006802] = {
           Content = "咿呀，被你找到了。",
+          ContentJP = "ありゃ、見つかっちゃった。",
           DialogueId = 72006802,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315059,6 +315069,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72006803] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
+          ContentJP = "楽園に面白いことが本当に多いね…次のところでまたお会いましょう！",
           DialogueId = 72006803,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315094,6 +315105,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72006902] = {
           Content = "咿呀，被你找到了。",
+          ContentJP = "ありゃ、見つかっちゃった。",
           DialogueId = 72006902,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315104,6 +315116,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72006903] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
+          ContentJP = "楽園に面白いことが本当に多いね…次のところでまたお会いましょう！",
           DialogueId = 72006903,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315139,6 +315152,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007002] = {
           Content = "咿呀，被你找到了。",
+          ContentJP = "ありゃ、見つかっちゃった。",
           DialogueId = 72007002,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315149,6 +315163,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007003] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
+          ContentJP = "楽園に面白いことが本当に多いね…次のところでまたお会いましょう！",
           DialogueId = 72007003,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315184,6 +315199,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007102] = {
           Content = "咿呀，被你找到了。",
+          ContentJP = "ありゃ、見つかっちゃった。",
           DialogueId = 72007102,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315194,6 +315210,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007103] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
+          ContentJP = "楽園に面白いことが本当に多いね…次のところでまたお会いましょう！",
           DialogueId = 72007103,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315229,6 +315246,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007202] = {
           Content = "咿呀，被你找到了。",
+          ContentJP = "ありゃ、見つかっちゃった。",
           DialogueId = 72007202,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315239,6 +315257,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007203] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
+          ContentJP = "楽園に面白いことが本当に多いね…次のところでまたお会いましょう！",
           DialogueId = 72007203,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315274,6 +315293,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007302] = {
           Content = "咿呀，被你找到了。",
+          ContentJP = "ありゃ、見つかっちゃった。",
           DialogueId = 72007302,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315284,6 +315304,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007303] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
+          ContentJP = "楽園に面白いことが本当に多いね…次のところでまたお会いましょう！",
           DialogueId = 72007303,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315319,6 +315340,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007402] = {
           Content = "咿呀，被你找到了。",
+          ContentJP = "ありゃ、見つかっちゃった。",
           DialogueId = 72007402,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315329,6 +315351,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007403] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
+          ContentJP = "楽園に面白いことが本当に多いね…次のところでまたお会いましょう！",
           DialogueId = 72007403,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315364,6 +315387,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007502] = {
           Content = "咿呀，被你找到了。",
+          ContentJP = "ありゃ、見つかっちゃった。",
           DialogueId = 72007502,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315374,6 +315398,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007503] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
+          ContentJP = "楽園に面白いことが本当に多いね…次のところでまたお会いましょう！",
           DialogueId = 72007503,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315409,6 +315434,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007602] = {
           Content = "咿呀，被你找到了。",
+          ContentJP = "ありゃ、見つかっちゃった。",
           DialogueId = 72007602,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315419,6 +315445,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007603] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
+          ContentJP = "楽園に面白いことが本当に多いね…次のところでまたお会いましょう！",
           DialogueId = 72007603,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315454,6 +315481,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007702] = {
           Content = "咿呀，被你找到了。",
+          ContentJP = "ありゃ、見つかっちゃった。",
           DialogueId = 72007702,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315464,6 +315492,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72007703] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
+          ContentJP = "楽園に面白いことが本当に多いね…次のところでまたお会いましょう！",
           DialogueId = 72007703,
           FacialId = {
             [1] = "820000:PetPan_Common"

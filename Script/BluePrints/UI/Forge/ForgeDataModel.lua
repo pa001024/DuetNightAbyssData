@@ -48,6 +48,7 @@ function ForgeDataModel:OnCompleteProduce(DraftIds, Ret)
     local DraftInfo = self:CheckState(DraftId)
     self:DecreaseReddotByDraftInfo(DraftId)
     self:_DecreaseReddotNodeInner(DraftId, ForgeConst.ReddotNodeName[ForgeConst.TabType.Producing])
+    self:_DecreaseReddotNodeInner(DraftId, ForgeConst.ReddotNodeName[ForgeConst.TabType.All])
   end
 end
 

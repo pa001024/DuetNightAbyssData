@@ -1,0 +1,56 @@
+[
+  {
+    "tag": "Mon.SoloTreasure.AContainer",
+    "boxDropRate": 0.03,
+    "dropMechanismId": 131076
+  },
+  {
+    "tag": "Mon.SoloTreasure.APoint",
+    "killScore": 400
+  },
+  {
+    "tag": "Mon.SoloTreasure.BContainer",
+    "boxDropRate": 0.03,
+    "dropMechanismId": 131061
+  },
+  {
+    "tag": "Mon.SoloTreasure.BPoint",
+    "killScore": 200
+  },
+  {
+    "tag": "Mon.SoloTreasure.CContainer",
+    "boxDropRate": 0.3,
+    "dropMechanismId": 131079
+  },
+  {
+    "tag": "Mon.SoloTreasure.CPoint",
+    "killScore": 3000
+  },
+  {
+    "tag": "Mon.SoloTreasure.DContainer",
+    "boxDropRate": 0.3,
+    "dropMechanismId": 131064
+  },
+  {
+    "tag": "Mon.SoloTreasure.DPoint",
+    "killScore": 1500
+  },
+  {
+    "tag": "Mon.SoloTreasure.EContainer",
+    "boxDropRate": 1,
+    "dropMechanismId": 131080
+  },
+  {
+    "tag": "Mon.SoloTreasure.EPoint",
+    "killScore": 10000
+  },
+  {
+    "tag": "Mon.SoloTreasure.FContainer",
+    "boxDropRate": 1,
+    "dropMechanismId": 131065
+  },
+  {
+    "tag": "Mon.SoloTreasure.FPoint",
+    "killScore": 5000
+  }
+]
