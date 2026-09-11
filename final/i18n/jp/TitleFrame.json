@@ -1,0 +1,344 @@
+[
+  {
+    "id": 10001,
+    "name": "デフォルト",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10002,
+    "name": "デュエットナイトアビス I",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame",
+    "access": "冒険Lv.20になると解放"
+  },
+  {
+    "id": 10003,
+    "name": "デュエットナイトアビス II",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame",
+    "access": "冒険Lv.40になると解放"
+  },
+  {
+    "id": 10004,
+    "name": "デュエットナイトアビスIII",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame",
+    "access": "冒険Lv.60になると解放"
+  },
+  {
+    "id": 10005,
+    "name": "楽章I",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame",
+    "access": "アチーブメントで獲得"
+  },
+  {
+    "id": 10006,
+    "name": "楽章II",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame",
+    "access": "アチーブメントで獲得"
+  },
+  {
+    "id": 10007,
+    "name": "楽章III",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame",
+    "access": "アチーブメントで獲得"
+  },
+  {
+    "id": 10008,
+    "name": "SSS級月狩り人 Ⅰ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10009,
+    "name": "SS級月狩り人 Ⅰ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10010,
+    "name": "S級月狩り人 Ⅰ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10011,
+    "name": "B級月狩り人 Ⅰ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10012,
+    "name": "A級月狩り人 Ⅰ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10013,
+    "name": "SSS級月狩り人 Ⅱ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10014,
+    "name": "SS級月狩り人 Ⅱ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10015,
+    "name": "S級月狩り人 Ⅱ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10016,
+    "name": "A級月狩り人 Ⅱ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10017,
+    "name": "B級月狩り人 Ⅱ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10018,
+    "name": "神君の祝福",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10019,
+    "name": "アイスレイク城漁業協会",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10020,
+    "name": "皓京漁業協会",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10021,
+    "name": "SSS級月狩り人 Ⅲ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10022,
+    "name": "SS級月狩り人 Ⅲ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10023,
+    "name": "S級月狩り人 Ⅲ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10024,
+    "name": "A級月狩り人 Ⅲ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10025,
+    "name": "B級月狩り人 Ⅲ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10026,
+    "name": "シャドウメア",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10028,
+    "name": "SSS級月狩り人 Ⅳ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10029,
+    "name": "SS級月狩り人 Ⅳ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10030,
+    "name": "S級月狩り人 Ⅳ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10031,
+    "name": "A級月狩り人 Ⅳ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10032,
+    "name": "B級月狩り人 Ⅳ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10033,
+    "name": "彩りの殿堂Ⅰ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10034,
+    "name": "彩りの殿堂Ⅱ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10035,
+    "name": "彩りの殿堂Ⅲ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10036,
+    "name": "彩りの殿堂Ⅳ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10037,
+    "name": "彩りの殿堂Ⅴ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10038,
+    "name": "彩りの殿堂Ⅵ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10039,
+    "name": "彩りの殿堂Ⅶ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10040,
+    "name": "彩りの殿堂Ⅷ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10041,
+    "name": "彩りの殿堂Ⅸ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10042,
+    "name": "彩りの殿堂Ⅹ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10043,
+    "name": "TitleFrame_10043",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10044,
+    "name": "SSS級月狩り人 Ⅴ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10045,
+    "name": "SS級月狩り人 Ⅴ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10046,
+    "name": "S級月狩り人 Ⅴ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10047,
+    "name": "A級月狩り人 Ⅴ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10048,
+    "name": "B級月狩り人 Ⅴ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10049,
+    "name": "SSS級月狩り人 Ⅵ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10050,
+    "name": "SS級月狩り人 Ⅵ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10051,
+    "name": "S級月狩り人 Ⅵ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10052,
+    "name": "A級月狩り人 Ⅵ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10053,
+    "name": "B級月狩り人 Ⅵ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10054,
+    "name": "災厄の使者",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 20001,
+    "name": "彩りの殿堂Ⅶ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 20002,
+    "name": "彩りの殿堂Ⅷ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 20003,
+    "name": "彩りの殿堂Ⅸ",
+    "desc": "称号スタイルで装備できます",
+    "icon": "T_Icon_Random_TitleFrame"
+  }
+]

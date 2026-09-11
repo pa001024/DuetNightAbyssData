@@ -1,0 +1,344 @@
+[
+  {
+    "id": 10001,
+    "name": "Par défaut",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10002,
+    "name": "Duet Night Abyss I",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame",
+    "access": "Se débloque au Niveau d’Aventure 20"
+  },
+  {
+    "id": 10003,
+    "name": "Duet Night Abyss II",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame",
+    "access": "Se débloque au Niveau d’Aventure 40"
+  },
+  {
+    "id": 10004,
+    "name": "Duet Night Abyss III",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame",
+    "access": "Se débloque au Niveau d’Aventure 60"
+  },
+  {
+    "id": 10005,
+    "name": "Mouvement I",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame",
+    "access": "Récompense de succès"
+  },
+  {
+    "id": 10006,
+    "name": "Mouvement II",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame",
+    "access": "Récompense de succès"
+  },
+  {
+    "id": 10007,
+    "name": "Mouvement III",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame",
+    "access": "Récompense de succès"
+  },
+  {
+    "id": 10008,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} SSS – I",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10009,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} SS – I",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10010,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} S – I",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10011,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} B – I",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10012,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} A – I",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10013,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} SSS – II",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10014,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} SS – II",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10015,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} S – II",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10016,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} A – II",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10017,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} B – II",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10018,
+    "name": "Bénédiction du Seigneur",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10019,
+    "name": "Association des pêcheurs de Givrelac",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10020,
+    "name": "Association des pêcheurs de Haojing",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10021,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} SSS – III",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10022,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} SS – III",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10023,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} S – III",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10024,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} A – III",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10025,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} B – III",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10026,
+    "name": "Vers les ténèbres",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10028,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} SSS – IV",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10029,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} SS – IV",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10030,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} S – IV",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10031,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} A – IV",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10032,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} B – IV",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10033,
+    "name": "Palais des merveilles – I",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10034,
+    "name": "Palais des merveilles – II",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10035,
+    "name": "Palais des merveilles – III",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10036,
+    "name": "Palais des merveilles – IV",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10037,
+    "name": "Palais des merveilles – V",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10038,
+    "name": "Palais des merveilles – VI",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10039,
+    "name": "Palais des merveilles – VII",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10040,
+    "name": "Palais des merveilles – VIII",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10041,
+    "name": "Palais des merveilles – IX",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10042,
+    "name": "Palais des merveilles – X",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10043,
+    "name": "TitleFrame_10043",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10044,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} SSS – V",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10045,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} SS – V",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10046,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} S – V",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10047,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} A – V",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10048,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} B – V",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10049,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} SSS – VI",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10050,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} SS – VI",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10051,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} S – VI",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10052,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} A – VI",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10053,
+    "name": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} B – VI",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10054,
+    "name": "Héraut de la calamité",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 20001,
+    "name": "Palais des merveilles – VII",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 20002,
+    "name": "Palais des merveilles – VIII",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 20003,
+    "name": "Palais des merveilles – IX",
+    "desc": "Peut être équipé dans les [Cadres] des titres.",
+    "icon": "T_Icon_Random_TitleFrame"
+  }
+]

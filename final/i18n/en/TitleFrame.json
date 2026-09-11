@@ -1,0 +1,344 @@
+[
+  {
+    "id": 10001,
+    "name": "Default",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10002,
+    "name": "Duet Night Abyss Ⅰ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame",
+    "access": "Unlocks at Trial Lv. 20"
+  },
+  {
+    "id": 10003,
+    "name": "Duet Night Abyss Ⅱ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame",
+    "access": "Unlocks at Trial Lv. 40"
+  },
+  {
+    "id": 10004,
+    "name": " Duet Night Abyss (Ⅲ)",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame",
+    "access": "Unlocks at Trial Lv. 60"
+  },
+  {
+    "id": 10005,
+    "name": " Movement (Ⅰ)",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame",
+    "access": "Achievement Reward"
+  },
+  {
+    "id": 10006,
+    "name": " Movement (Ⅱ)",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame",
+    "access": "Achievement Reward"
+  },
+  {
+    "id": 10007,
+    "name": " Movement (Ⅲ)",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame",
+    "access": "Achievement Reward"
+  },
+  {
+    "id": 10008,
+    "name": "SSS-Rank Phoxhunter Ⅰ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10009,
+    "name": "SS-Rank Phoxhunter Ⅰ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10010,
+    "name": "S-Rank Phoxhunter Ⅰ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10011,
+    "name": "B-Rank Phoxhunter Ⅰ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10012,
+    "name": "A-Rank Phoxhunter Ⅰ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10013,
+    "name": "SSS-Rank Phoxhunter Ⅱ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10014,
+    "name": "SS-Rank Phoxhunter Ⅱ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10015,
+    "name": "S-Rank Phoxhunter Ⅱ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10016,
+    "name": "A-Rank Phoxhunter Ⅱ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10017,
+    "name": "B-Rank Phoxhunter Ⅱ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10018,
+    "name": "Argent Blessings",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10019,
+    "name": "Icelake Fisheries",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10020,
+    "name": "Haojing Fisheries",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10021,
+    "name": "SSS-Rank Phoxhunter Ⅲ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10022,
+    "name": "SS-Rank Phoxhunter Ⅲ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10023,
+    "name": "S-Rank Phoxhunter Ⅲ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10024,
+    "name": "A-Rank Phoxhunter Ⅲ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10025,
+    "name": "B-Rank Phoxhunter Ⅲ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10026,
+    "name": "Into the Nightveil",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10028,
+    "name": "SSS-Rank Phoxhunter Ⅳ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10029,
+    "name": "SS-Rank Phoxhunter Ⅳ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10030,
+    "name": "S-Rank Phoxhunter Ⅳ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10031,
+    "name": "A-Rank Phoxhunter Ⅳ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10032,
+    "name": "B-Rank Phoxhunter Ⅳ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10033,
+    "name": "Hall of Glamour Ⅰ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10034,
+    "name": "Hall of Glamour Ⅱ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10035,
+    "name": "Hall of Glamour Ⅲ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10036,
+    "name": "Hall of Glamour Ⅳ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10037,
+    "name": "Hall of Glamour Ⅴ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10038,
+    "name": "Hall of Glamour Ⅵ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10039,
+    "name": "Hall of Glamour Ⅶ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10040,
+    "name": "Hall of Glamour Ⅷ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10041,
+    "name": "Hall of Glamour Ⅸ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10042,
+    "name": "Hall of Glamour Ⅹ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10043,
+    "name": "TitleFrame_10043",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10044,
+    "name": "SSS-Rank Phoxhunter Ⅴ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10045,
+    "name": "SS-Rank Phoxhunter Ⅴ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10046,
+    "name": "S-Rank Phoxhunter Ⅴ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10047,
+    "name": "A-Rank Phoxhunter Ⅴ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10048,
+    "name": "B-Rank Phoxhunter Ⅴ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10049,
+    "name": "SSS-Rank Phoxhunter Ⅵ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10050,
+    "name": "SS-Rank Phoxhunter Ⅵ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10051,
+    "name": "S-Rank Phoxhunter Ⅵ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10052,
+    "name": "A-Rank Phoxhunter Ⅵ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10053,
+    "name": "B-Rank Phoxhunter Ⅵ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10054,
+    "name": "Calamity Harbinger",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 20001,
+    "name": "Hall of Glamour Ⅶ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 20002,
+    "name": "Hall of Glamour Ⅷ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 20003,
+    "name": "Hall of Glamour Ⅸ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  }
+]

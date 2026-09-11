@@ -56,6 +56,19 @@ export function headFrameModule(ctx: ModuleContext): VNodeTree {
     return result
 }
 
+export function titleFrameModule(ctx: ModuleContext): VNodeTree {
+    const result: VNodeTree[] = []
+    for (const item of rows(ctx, "TitleFrame")) {
+        const id = Number(item.TitleFrameID ?? 0)
+        if (!id) continue
+        const row: Record<string, VNodeTree> = { id, name: T(item.Name ?? ""), desc: T(item.Des ?? ""), icon: iconName(item.Icon) }
+        if (item.AccessText) row.access = T(item.AccessText)
+        result.push(row)
+    }
+    result.sort((a, b) => Number((a as any).id) - Number((b as any).id))
+    return result
+}
+
 export function headSculptureModule(ctx: ModuleContext): VNodeTree {
     const result: VNodeTree[] = []
     for (const item of rows(ctx, "HeadSculpture")) {
