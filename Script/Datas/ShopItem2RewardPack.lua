@@ -1357,6 +1357,36 @@ return ReadOnly("ShopItem2RewardPack", {
         ShopType = "Shop",
         SubTabId = 1601,
         TypeId = 12164
+      },
+      [4] = {
+        ShopItemId = 1601034,
+        ShopType = "Shop",
+        SubTabId = 1601,
+        TypeId = 12236
+      },
+      [5] = {
+        ShopItemId = 1601035,
+        ShopType = "Shop",
+        SubTabId = 1601,
+        TypeId = 12237
+      },
+      [6] = {
+        ShopItemId = 1601036,
+        ShopType = "Shop",
+        SubTabId = 1601,
+        TypeId = 12238
+      },
+      [7] = {
+        ShopItemId = 1601037,
+        ShopType = "Shop",
+        SubTabId = 1601,
+        TypeId = 12239
+      },
+      [8] = {
+        ShopItemId = 1601038,
+        ShopType = "Shop",
+        SubTabId = 1601,
+        TypeId = 12240
       }
     },
     [1004102] = {

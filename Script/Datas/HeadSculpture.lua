@@ -275,7 +275,7 @@ return ReadOnly("HeadSculpture", {
   [10032] = {
     AccessText = "UI_Accessory_Unlock_Char",
     CanPreView = true,
-    Des = "UI_PlayerHead_Des_10031",
+    Des = "UI_PlayerHead_Des_10032",
     HeadId = 10032,
     HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Eve.T_Head_Eve'",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Eve.T_Head_Eve'",
@@ -284,7 +284,7 @@ return ReadOnly("HeadSculpture", {
   [10033] = {
     AccessText = "UI_Accessory_Unlock_Char",
     CanPreView = true,
-    Des = "UI_PlayerHead_Des_10031",
+    Des = "UI_PlayerHead_Des_10033",
     HeadId = 10033,
     HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Falu.T_Head_Falu'",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Falu.T_Head_Falu'",

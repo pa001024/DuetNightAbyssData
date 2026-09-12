@@ -16866,6 +16866,71 @@
     ]
   },
   {
+    "id": 12236,
+    "m": "Fixed",
+    "icon": "T_Pack_Char_Kami_5",
+    "child": [
+      {
+        "id": 1003202,
+        "t": "Resource",
+        "c": 5,
+        "n": "想いの欠片・カミラ"
+      }
+    ]
+  },
+  {
+    "id": 12237,
+    "m": "Fixed",
+    "icon": "T_Pack_Char_Kami_5",
+    "child": [
+      {
+        "id": 1003202,
+        "t": "Resource",
+        "c": 5,
+        "n": "想いの欠片・カミラ"
+      }
+    ]
+  },
+  {
+    "id": 12238,
+    "m": "Fixed",
+    "icon": "T_Pack_Char_Kami",
+    "child": [
+      {
+        "id": 1003202,
+        "t": "Resource",
+        "c": 10,
+        "n": "想いの欠片・カミラ"
+      }
+    ]
+  },
+  {
+    "id": 12239,
+    "m": "Fixed",
+    "icon": "T_Pack_Char_Kami",
+    "child": [
+      {
+        "id": 1003202,
+        "t": "Resource",
+        "c": 10,
+        "n": "想いの欠片・カミラ"
+      }
+    ]
+  },
+  {
+    "id": 12240,
+    "m": "Fixed",
+    "icon": "T_Pack_Char_Kami_15",
+    "child": [
+      {
+        "id": 1003202,
+        "t": "Resource",
+        "c": 15,
+        "n": "想いの欠片・カミラ"
+      }
+    ]
+  },
+  {
     "id": 20000,
     "m": "Fixed",
     "child": [

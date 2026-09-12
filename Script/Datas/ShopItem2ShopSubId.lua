@@ -5175,6 +5175,21 @@ return ReadOnly("ShopItem2ShopSubId", {
       },
       [12235] = {
         [1] = {ShopItemId = 1601030, SubTabId = 1601}
+      },
+      [12236] = {
+        [1] = {ShopItemId = 1601034, SubTabId = 1601}
+      },
+      [12237] = {
+        [1] = {ShopItemId = 1601035, SubTabId = 1601}
+      },
+      [12238] = {
+        [1] = {ShopItemId = 1601036, SubTabId = 1601}
+      },
+      [12239] = {
+        [1] = {ShopItemId = 1601037, SubTabId = 1601}
+      },
+      [12240] = {
+        [1] = {ShopItemId = 1601038, SubTabId = 1601}
       }
     },
     SoloTreasurePermShop = T.RT_1,

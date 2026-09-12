@@ -164,5 +164,10 @@ return ReadOnly("ShopItem2PayGoods", {
   [1601030] = "com.hero.dna.Pay_ZaieWeaponSupply3_1.6",
   [1601031] = "com.hero.dna.Pay_Yueshisixian1_1.6",
   [1601032] = "com.hero.dna.Pay_Yueshisixian2_1.6",
-  [1601033] = "com.hero.dna.Pay_Yueshisixian3_1.6"
+  [1601033] = "com.hero.dna.Pay_Yueshisixian3_1.6",
+  [1601034] = "com.hero.dna.Pay_CharaShards_kamila4",
+  [1601035] = "com.hero.dna.Pay_CharaShards_kamila5",
+  [1601036] = "com.hero.dna.Pay_CharaShards_kamila6",
+  [1601037] = "com.hero.dna.Pay_CharaShards_kamila7",
+  [1601038] = "com.hero.dna.Pay_CharaShards_kamila8"
 })

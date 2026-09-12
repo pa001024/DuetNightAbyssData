@@ -180,6 +180,36 @@ return ReadOnly("PayGoodsToScore", {
       GoodsName = "Pack_Name_16_CharPiece",
       PayGoodsScore = 1080
     },
+    ["com.hero.dna.Pay_CharaShards_kamila4"] = {
+      EventId = 113001,
+      GoodsId = "com.hero.dna.Pay_CharaShards_kamila4",
+      GoodsName = "Pack_Name_16_CharPiece_21",
+      PayGoodsScore = 30
+    },
+    ["com.hero.dna.Pay_CharaShards_kamila5"] = {
+      EventId = 113001,
+      GoodsId = "com.hero.dna.Pay_CharaShards_kamila5",
+      GoodsName = "Pack_Name_16_CharPiece_22",
+      PayGoodsScore = 60
+    },
+    ["com.hero.dna.Pay_CharaShards_kamila6"] = {
+      EventId = 113001,
+      GoodsId = "com.hero.dna.Pay_CharaShards_kamila6",
+      GoodsName = "Pack_Name_16_CharPiece_23",
+      PayGoodsScore = 180
+    },
+    ["com.hero.dna.Pay_CharaShards_kamila7"] = {
+      EventId = 113001,
+      GoodsId = "com.hero.dna.Pay_CharaShards_kamila7",
+      GoodsName = "Pack_Name_16_CharPiece_24",
+      PayGoodsScore = 300
+    },
+    ["com.hero.dna.Pay_CharaShards_kamila8"] = {
+      EventId = 113001,
+      GoodsId = "com.hero.dna.Pay_CharaShards_kamila8",
+      GoodsName = "Pack_Name_16_CharPiece_25",
+      PayGoodsScore = 680
+    },
     ["com.hero.dna.Pay_DailyCharaShards_faluxi"] = {
       EventId = 113001,
       GoodsId = "com.hero.dna.Pay_DailyCharaShards_faluxi",

@@ -105400,7 +105400,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
         },
         [11111061] = {
           Content = "阿瓦尔老师也是卡戎之民，你怎么对他也下得去手？",
-          ContentJP = "アヴァール教官もカロンの民{性别2:だ|よ}。それでも{性别2:君|あなた}は、彼に手を下せたの性别2:か|}。",
+          ContentJP = "アヴァール教官もカロンの民{性别2:だ|よ}。それでも{性别2:君|あなた}は、彼に手を下せたの{性别2:か|}。",
           DialogueId = 11111061,
           ExStoryInfo = "EXPlayer",
           GUID = "1BD0BC72",
