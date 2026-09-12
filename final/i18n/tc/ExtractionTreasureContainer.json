@@ -1,7 +1,8 @@
 [
   {
     "id": 131059,
-    "name": "Bamboo Treasure Basket",
+    "name": "藏珍竹筐",
+    "bp": "BP_Container_Small1",
     "itemLevelLimit": {
       "3": 1,
       "6": 1
@@ -23,7 +24,8 @@
   },
   {
     "id": 131060,
-    "name": "Small Bamboo Basket",
+    "name": "小型竹簍",
+    "bp": "BP_Container_Small2",
     "itemLevelLimit": {
       "3": 1,
       "6": 1
@@ -45,7 +47,9 @@
   },
   {
     "id": 131061,
-    "name": "Mystic Gourd",
+    "name": "妙妙葫蘆",
+    "dropRate": 0.03,
+    "bp": "BP_Container_Small3",
     "itemLevelLimit": {
       "3": 1,
       "6": 1
@@ -67,7 +71,8 @@
   },
   {
     "id": 131062,
-    "name": "Wicker Basket of Treasures",
+    "name": "藏珍兜婁",
+    "bp": "BP_Container_Medium1",
     "itemLevelLimit": {
       "4": 1,
       "6": 1
@@ -89,7 +94,8 @@
   },
   {
     "id": 131063,
-    "name": "Mystic Box",
+    "name": "妙妙箱",
+    "bp": "BP_Container_Medium2",
     "itemLevelLimit": {
       "4": 1,
       "6": 1
@@ -111,7 +117,9 @@
   },
   {
     "id": 131064,
-    "name": "Medium Bamboo Basket",
+    "name": "中型竹簍",
+    "dropRate": 0.3,
+    "bp": "BP_Container_Medium3",
     "itemLevelLimit": {
       "4": 1,
       "6": 1
@@ -133,7 +141,9 @@
   },
   {
     "id": 131065,
-    "name": "Custom Treasure Stove",
+    "name": "特製藏寶爐",
+    "dropRate": 1,
+    "bp": "BP_Container_Big",
     "itemLevelLimit": {
       "4": 1,
       "5": 1,
@@ -158,7 +168,8 @@
   },
   {
     "id": 131066,
-    "name": "Triple Ritual Vessel",
+    "name": "三連卣",
+    "bp": "BP_Container_Big2",
     "itemLevelLimit": {
       "4": 1,
       "5": 1,
@@ -183,7 +194,8 @@
   },
   {
     "id": 131072,
-    "name": "Custom Treasure Stove",
+    "name": "特製藏寶爐",
+    "bp": "BP_Container_Big",
     "itemLevelLimit": {
       "4": 1,
       "5": 1,
@@ -208,7 +220,8 @@
   },
   {
     "id": 131074,
-    "name": "Bamboo Treasure Basket",
+    "name": "藏珍竹筐",
+    "bp": "BP_Container_Small1",
     "itemLevelLimit": {
       "3": 1,
       "6": 1
@@ -230,7 +243,8 @@
   },
   {
     "id": 131075,
-    "name": "Small Bamboo Basket",
+    "name": "小型竹簍",
+    "bp": "BP_Container_Small2",
     "itemLevelLimit": {
       "3": 1,
       "6": 1
@@ -252,7 +266,9 @@
   },
   {
     "id": 131076,
-    "name": "Mystic Gourd",
+    "name": "妙妙葫蘆",
+    "dropRate": 0.03,
+    "bp": "BP_Container_Small3",
     "itemLevelLimit": {
       "3": 1,
       "6": 1
@@ -274,7 +290,8 @@
   },
   {
     "id": 131077,
-    "name": "Wicker Basket of Treasures",
+    "name": "藏珍兜婁",
+    "bp": "BP_Container_Medium1",
     "itemLevelLimit": {
       "3": 1,
       "4": 1,
@@ -298,7 +315,8 @@
   },
   {
     "id": 131078,
-    "name": "Mystic Box",
+    "name": "妙妙箱",
+    "bp": "BP_Container_Medium2",
     "itemLevelLimit": {
       "3": 1,
       "4": 1,
@@ -322,7 +340,9 @@
   },
   {
     "id": 131079,
-    "name": "Medium Bamboo Basket",
+    "name": "中型竹簍",
+    "dropRate": 0.3,
+    "bp": "BP_Container_Medium3",
     "itemLevelLimit": {
       "3": 1,
       "4": 1,
@@ -346,7 +366,9 @@
   },
   {
     "id": 131080,
-    "name": "Custom Treasure Stove",
+    "name": "特製藏寶爐",
+    "dropRate": 1,
+    "bp": "BP_Container_Big",
     "itemLevelLimit": {
       "4": 1,
       "5": 1,
@@ -371,7 +393,8 @@
   },
   {
     "id": 131081,
-    "name": "Triple Ritual Vessel",
+    "name": "三連卣",
+    "bp": "BP_Container_Big2",
     "itemLevelLimit": {
       "4": 1,
       "5": 1,
@@ -396,7 +419,8 @@
   },
   {
     "id": 131084,
-    "name": "Bamboo Treasure Basket",
+    "name": "藏珍竹筐",
+    "bp": "BP_Container_Small1",
     "itemLevelLimit": {
       "3": 1,
       "4": 1,
@@ -420,7 +444,8 @@
   },
   {
     "id": 131085,
-    "name": "Small Bamboo Basket",
+    "name": "小型竹簍",
+    "bp": "BP_Container_Small2",
     "itemLevelLimit": {
       "3": 1,
       "4": 1,
@@ -444,7 +469,8 @@
   },
   {
     "id": 131086,
-    "name": "Medium Bamboo Basket",
+    "name": "中型竹簍",
+    "bp": "BP_Container_Medium3",
     "itemLevelLimit": {
       "4": 1,
       "5": 1,
@@ -469,7 +495,8 @@
   },
   {
     "id": 131087,
-    "name": "Wicker Basket of Treasures",
+    "name": "藏珍兜婁",
+    "bp": "BP_Container_Medium1",
     "itemLevelLimit": {
       "4": 1,
       "5": 1,

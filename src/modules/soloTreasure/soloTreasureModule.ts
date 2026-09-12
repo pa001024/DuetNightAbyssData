@@ -64,6 +64,14 @@ export function soloTreasureModule(ctx: ModuleContext): VNodeTree {
     return result
 }
 
+/** SoloTreasureDrop 产物的行形状（供下游模块按 DropMechanismId 关联容器爆率）。 */
+export interface SoloTreasureDropRow {
+    tag: string
+    boxDropRate?: number
+    dropMechanismId?: number
+    killScore?: number
+}
+
 /**
  * SoloTreasureDrop：秘宝玩法的怪物标签掉落配置。
  * 表键即怪物标签（如 Mon.SoloTreasure.AContainer），容器行给 BoxDropRate/DropMechanismId，
