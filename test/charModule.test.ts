@@ -51,18 +51,19 @@ describe("char 模块", () => {
         const brief = (id: number, lang: string) =>
             (renderTree(traits(id), lang, textmap) as Array<Record<string, any>>).map(trait => ({
                 名称: trait.名称,
+                icon: trait.icon,
                 等级: trait.等级,
                 解锁: trait.解锁,
             }))
 
         // 1501：Battle/Empathy/Empathy + 突破阶段 0/2/4 → 战斗 1 级、共情 2 级
         expect(brief(1501, "cn")).toEqual([
-            { 名称: "冒险家", 等级: 1, 解锁: [0] },
-            { 名称: "印象：共情", 等级: 2, 解锁: [2, 4] },
+            { 名称: "冒险家", icon: "T_Dispatch_A09", 等级: 1, 解锁: [0] },
+            { 名称: "印象：共情", icon: "T_Dispatch_B03", 等级: 2, 解锁: [2, 4] },
         ])
         expect(brief(1501, "en")).toEqual([
-            { 名称: "Adventurer", 等级: 1, 解锁: [0] },
-            { 名称: "Impression: Empathy", 等级: 2, 解锁: [2, 4] },
+            { 名称: "Adventurer", icon: "T_Dispatch_A09", 等级: 1, 解锁: [0] },
+            { 名称: "Impression: Empathy", icon: "T_Dispatch_B03", 等级: 2, 解锁: [2, 4] },
         ])
         // 描述取 CharDispatchTag 的 TextMap key，未命中会原样输出 key
         const empathyDesc = (renderTree(traits(1501), "cn", textmap) as Array<Record<string, any>>)[1].描述
@@ -70,12 +71,12 @@ describe("char 模块", () => {
         expect(empathyDesc.length).toBeGreaterThan(0)
 
         // 2102：Morality/Lucky/Lucky → 诸神宠儿 2 级
-        expect(brief(2102, "cn")[1]).toEqual({ 名称: "诸神宠儿", 等级: 2, 解锁: [2, 4] })
+        expect(brief(2102, "cn")[1]).toEqual({ 名称: "诸神宠儿", icon: "T_Dispatch_A08", 等级: 2, 解锁: [2, 4] })
 
         // 3202：Benefit/Benefit/Skilled + 突破阶段 0/2/5（唯一非 0/2/4 的角色）
         expect(brief(3202, "cn")).toEqual([
-            { 名称: "印象：功利", 等级: 2, 解锁: [0, 2] },
-            { 名称: "左右逢源", 等级: 1, 解锁: [5] },
+            { 名称: "印象：功利", icon: "T_Dispatch_B02", 等级: 2, 解锁: [0, 2] },
+            { 名称: "左右逢源", icon: "T_Dispatch_A06", 等级: 1, 解锁: [5] },
         ])
     })
 })

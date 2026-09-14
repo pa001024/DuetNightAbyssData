@@ -189,8 +189,10 @@ export async function charModule(ctx: ModuleContext) {
      *
      * Char.DispatchTag 的每个槽位在突破到 Char.DispatchUnlock 对应阶段后解锁；同名标签每占
      * 一个槽位提升一级（对齐 Character:GetCurrentUnlockDispatchTag 的计数语义）。这里按标签
-     * 首次出现顺序聚合：名称/描述取 CharDispatchTag 的 TextMap key，等级为已占槽位数，
-     * 解锁为各级对应的突破阶段（0..5，对应 突破 数组的第 N+1 段）。
+     * 首次出现顺序聚合：名称/描述取 CharDispatchTag 的 TextMap key，icon 取该标签的 T_ 贴图名，
+     * 标签为槽位里的原始标签 key（Battle / Collect / Pet / Lucky …，界面按
+     * UIUtils.GetDispathchColorNameByType 用它决定图标的配色分组；与角色自身的 标签（定位标签）无关），
+     * 等级为已占槽位数，解锁为各级对应的突破阶段（0..5，对应 突破 数组的第 N+1 段）。
      */
     function processTraits(char: Record<string, any>): VNodeTree {
         const tags = normalizeMapOrArray(char.DispatchTag)
@@ -216,6 +218,8 @@ export async function charModule(ctx: ModuleContext) {
             return {
                 名称: T(row.Name ?? ""),
                 描述: T(row.Description ?? ""),
+                icon: textureName(row.Icon),
+                标签: tag,
                 等级: stages.length,
                 解锁: stages,
             }
@@ -851,7 +855,7 @@ const PASSIVE_FUNCTION_CN: Record<string, string> = {
  * - 角色：id/icon/名称/版本/别名/出生地/势力/生日/中文CV/日文CV/英文CV/韩文CV/
  *   阵营/属性/精通/额外精通/标签/特质/基础攻击/基础生命/基础防御/基础护盾/基础神智/
  *   加成/突破/技能/溯源/碎片/第七溯源消耗/专武/同律武器
- * - 特质：名称/描述/等级/解锁
+ * - 特质：名称/描述/icon/等级/解锁
  * - 技能：id/名称/类型/描述/icon/cd/实体/字段/升级/术语解释/子技能/行为
  *   （无自有名称的子技能，名称追加在对象末尾）
  * - 字段：名称/影响/值/值2/格式/tag/削韧/Boss削韧/取消/连段
@@ -1259,4 +1263,13 @@ function extractIconName(v: unknown): string {
     const s = String(v ?? "")
     if (s.includes("Skill_")) return s.split("Skill_")[1]
     return s
+}
+
+/**
+ * T_ 贴图名（派遣标签图标等）：取路径中的 `T_xxx` 资源名，与 CharAccessory/HardBoss 等模块一致，
+ * 结果即解包资源的文件名（如 `/Game/…/Dispatch/T_Dispatch_A09.T_Dispatch_A09` → `T_Dispatch_A09`）。
+ */
+function textureName(v: unknown): string {
+    if (typeof v !== "string") return ""
+    return v.match(/(T_[^./']+)/)?.[1] ?? ""
 }
