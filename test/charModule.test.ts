@@ -39,4 +39,43 @@ describe("char 模块", () => {
         expect(suyiBehavior).toContain("$0.25*math.exp(")
         expect(liseField?.取消).toBeUndefined()
     })
+
+    test("特质按派遣标签槽位聚合，同名标签叠加等级并保留各自突破阶段", async () => {
+        const graph = new Graph()
+        graph.defineModule({ name: "Skill", deps: [], outputs: false, build: ctx => skillModule(ctx) })
+        graph.defineModule({ name: "Char", deps: ["Skill"], outputs: true, build: ctx => charModule(ctx) })
+
+        const artifacts = await graph.build({}, undefined, ["Char"])
+        const chars = (artifacts.get("Char") as { Char: Array<Record<string, any>> }).Char
+        const traits = (id: number) => chars.find(item => item.id === id)?.特质 as Array<Record<string, any>>
+        const brief = (id: number, lang: string) =>
+            (renderTree(traits(id), lang, textmap) as Array<Record<string, any>>).map(trait => ({
+                名称: trait.名称,
+                等级: trait.等级,
+                解锁: trait.解锁,
+            }))
+
+        // 1501：Battle/Empathy/Empathy + 突破阶段 0/2/4 → 战斗 1 级、共情 2 级
+        expect(brief(1501, "cn")).toEqual([
+            { 名称: "冒险家", 等级: 1, 解锁: [0] },
+            { 名称: "印象：共情", 等级: 2, 解锁: [2, 4] },
+        ])
+        expect(brief(1501, "en")).toEqual([
+            { 名称: "Adventurer", 等级: 1, 解锁: [0] },
+            { 名称: "Impression: Empathy", 等级: 2, 解锁: [2, 4] },
+        ])
+        // 描述取 CharDispatchTag 的 TextMap key，未命中会原样输出 key
+        const empathyDesc = (renderTree(traits(1501), "cn", textmap) as Array<Record<string, any>>)[1].描述
+        expect(empathyDesc).not.toBe("UI_DispatchTag_Des_Empathy")
+        expect(empathyDesc.length).toBeGreaterThan(0)
+
+        // 2102：Morality/Lucky/Lucky → 诸神宠儿 2 级
+        expect(brief(2102, "cn")[1]).toEqual({ 名称: "诸神宠儿", 等级: 2, 解锁: [2, 4] })
+
+        // 3202：Benefit/Benefit/Skilled + 突破阶段 0/2/5（唯一非 0/2/4 的角色）
+        expect(brief(3202, "cn")).toEqual([
+            { 名称: "印象：功利", 等级: 2, 解锁: [0, 2] },
+            { 名称: "左右逢源", 等级: 1, 解锁: [5] },
+        ])
+    })
 })

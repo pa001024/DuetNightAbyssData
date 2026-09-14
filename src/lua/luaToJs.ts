@@ -22,6 +22,13 @@ const LUA_TFUNCTION = lua.LUA_TFUNCTION
 
 const MAX_DEPTH = 60
 
+/**
+ * 递归转换需要在 VM 栈上保留每层的迭代器/键，栈顶之上只留 BASIC_CI 的 LUA_MINSTACK 个槽位
+ * （~20）时会触发 fengari 的 stack overflow 断言。这里按最大递归深度预留槽位，
+ * DialogueConvert 这类多层嵌套表（Operations[1].SEQ[1].X.Y）才会读得完整。
+ */
+const STACK_HEADROOM = MAX_DEPTH * 4
+
 /** 单个值的类型 */
 export type LuaValue = null | boolean | number | string | LuaValue[] | { [k: string]: LuaValue }
 
@@ -103,6 +110,7 @@ function tableToJs(L: LuaState, idx: number, depth: number): LuaValue {
  */
 export function luaValueToJs(L: LuaState, idx: number): LuaValue {
     const abs = lua.lua_absindex(L, idx)
+    lua.lua_checkstack(L, STACK_HEADROOM)
     const result = valueToJs(L, abs, 0)
     return result
 }

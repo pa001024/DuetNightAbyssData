@@ -99,6 +99,11 @@ tsc --noEmit
 # 独立导出剧情媒体文件（不属于主 out CLI）
 bun run src/tools/exportStoryMedia.ts
 
+# 原始数据导出（out CLI 子指令）：Script/Datas 下每张 Lua 表整表 → out/<相对路径>.json
+# 对齐旧 Python 流水线 step1；不建模块图、不渲染多语言，支持 -v 历史版本与 --out 输出目录
+bun out export-raw
+bun out export-raw -v 1.6 --out .tmp/raw
+
 # 独立 agent：逐 QuestChain 生成剧情 AI 总结（storysummary，非主 out CLI；仅生成缺失/变更项，
 # 输出 final/i18n/cn/storySummary.json，配置见 .env 的 STORY_SUMMARY_*）
 bun run src/tools/storySummary/agent.ts --dry-run   # 测试/演练：只报告，不调用任何 API

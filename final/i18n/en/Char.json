@@ -29,6 +29,32 @@
       "Consonance Weapon",
       "Weapon DMG"
     ],
+    "特质": [
+      {
+        "名称": "Adventurer",
+        "描述": "Skilled in combat",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression: Morality",
+        "描述": "Upholds justice and integrity.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Rapt Attention",
+        "描述": "Handles tasks with heightened efficiency, reducing completion time.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
+    ],
     "基础攻击": 20,
     "基础生命": 100,
     "基础防御": 300,
@@ -773,6 +799,32 @@
       "DPS",
       "Weapon DMG"
     ],
+    "特质": [
+      {
+        "名称": "Adventurer",
+        "描述": "Skilled in combat",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression: Morality",
+        "描述": "Upholds justice and integrity.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Rapt Attention",
+        "描述": "Handles tasks with heightened efficiency, reducing completion time.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
+    ],
     "基础攻击": 26,
     "基础生命": 130,
     "基础防御": 350,
@@ -1327,6 +1379,25 @@
     "标签": [
       "DPS",
       "Skill DMG"
+    ],
+    "特质": [
+      {
+        "名称": "Adventurer",
+        "描述": "Skilled in combat",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression: Chaos",
+        "描述": "Values spontaneity and personal freedom over order.",
+        "等级": 2,
+        "解锁": [
+          2,
+          4
+        ]
+      }
     ],
     "基础攻击": 21,
     "基础生命": 130,
@@ -2042,6 +2113,32 @@
       "DPS",
       "Weapon DMG"
     ],
+    "特质": [
+      {
+        "名称": "Impression: Wisdom",
+        "描述": "Quick-witted or highly knowledgeable in specific fields.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Adventurer",
+        "描述": "Skilled in combat",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Rapt Attention",
+        "描述": "Handles tasks with heightened efficiency, reducing completion time.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
+    ],
     "基础攻击": 20,
     "基础生命": 100,
     "基础防御": 300,
@@ -2584,6 +2681,25 @@
       "DPS",
       "Consonance Weapon",
       "Weapon DMG"
+    ],
+    "特质": [
+      {
+        "名称": "Adventurer",
+        "描述": "Skilled in combat",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression: Empathy",
+        "描述": "Deeply sensitive and emotionally perceptive.",
+        "等级": 2,
+        "解锁": [
+          2,
+          4
+        ]
+      }
     ],
     "基础攻击": 24,
     "基础生命": 90,
@@ -3335,6 +3451,25 @@
       "DPS",
       "Skill DMG"
     ],
+    "特质": [
+      {
+        "名称": "Impression: Empathy",
+        "描述": "Deeply sensitive and emotionally perceptive.",
+        "等级": 2,
+        "解锁": [
+          0,
+          2
+        ]
+      },
+      {
+        "名称": "Fortune Favour",
+        "描述": "Favoured by luck — more likely to receive unexpected gains.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
+    ],
     "基础攻击": 21,
     "基础生命": 105,
     "基础防御": 255,
@@ -3930,6 +4065,32 @@
     "标签": [
       "DPS",
       "Weapon DMG"
+    ],
+    "特质": [
+      {
+        "名称": "Adventurer",
+        "描述": "Skilled in combat",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression: Chaos",
+        "描述": "Values spontaneity and personal freedom over order.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Rapt Attention",
+        "描述": "Handles tasks with heightened efficiency, reducing completion time.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
     ],
     "基础攻击": 25,
     "基础生命": 135,
@@ -4670,6 +4831,32 @@
       "DPS",
       "Skill DMG"
     ],
+    "特质": [
+      {
+        "名称": "Impression: Wisdom",
+        "描述": "Quick-witted or highly knowledgeable in specific fields.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Adventurer",
+        "描述": "Skilled in combat",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Rapt Attention",
+        "描述": "Handles tasks with heightened efficiency, reducing completion time.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
+    ],
     "基础攻击": 29,
     "基础生命": 70,
     "基础防御": 220,
@@ -5236,6 +5423,32 @@
     "标签": [
       "Support"
     ],
+    "特质": [
+      {
+        "名称": "Impression: Wisdom",
+        "描述": "Quick-witted or highly knowledgeable in specific fields.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Adventurer",
+        "描述": "Skilled in combat",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Rapt Attention",
+        "描述": "Handles tasks with heightened efficiency, reducing completion time.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
+    ],
     "基础攻击": 22,
     "基础生命": 120,
     "基础防御": 300,
@@ -5705,6 +5918,32 @@
     ],
     "标签": [
       "Support"
+    ],
+    "特质": [
+      {
+        "名称": "Impression: Empathy",
+        "描述": "Deeply sensitive and emotionally perceptive.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Fortune Favour",
+        "描述": "Favoured by luck — more likely to receive unexpected gains.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Tamer",
+        "描述": "Skilled in training Geniemons",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
     ],
     "基础攻击": 22,
     "基础生命": 105,
@@ -6211,6 +6450,25 @@
       "Summon",
       "Skill DMG"
     ],
+    "特质": [
+      {
+        "名称": "Piscator",
+        "描述": "Skilled in fishing",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression: Empathy",
+        "描述": "Deeply sensitive and emotionally perceptive.",
+        "等级": 2,
+        "解锁": [
+          2,
+          4
+        ]
+      }
+    ],
     "基础攻击": 25,
     "基础生命": 100,
     "基础防御": 252,
@@ -6679,6 +6937,25 @@
       "DPS",
       "Summon",
       "Skill DMG"
+    ],
+    "特质": [
+      {
+        "名称": "Impression: Morality",
+        "描述": "Upholds justice and integrity.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Fortune Favour",
+        "描述": "Favoured by luck — more likely to receive unexpected gains.",
+        "等级": 2,
+        "解锁": [
+          2,
+          4
+        ]
+      }
     ],
     "基础攻击": 26,
     "基础生命": 95,
@@ -7159,6 +7436,25 @@
     "标签": [
       "Support",
       "Summon"
+    ],
+    "特质": [
+      {
+        "名称": "Impression: Morality",
+        "描述": "Upholds justice and integrity.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Fortune Favour",
+        "描述": "Favoured by luck — more likely to receive unexpected gains.",
+        "等级": 2,
+        "解锁": [
+          2,
+          4
+        ]
+      }
     ],
     "基础攻击": 20,
     "基础生命": 100,
@@ -7672,6 +7968,32 @@
       "Summon",
       "Crowd Control"
     ],
+    "特质": [
+      {
+        "名称": "Piscator",
+        "描述": "Skilled in fishing",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression: Chaos",
+        "描述": "Values spontaneity and personal freedom over order.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Astute Mind",
+        "描述": "Adapts quickly and may obtain bonus rewards.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
+    ],
     "基础攻击": 17,
     "基础生命": 115,
     "基础防御": 300,
@@ -8118,6 +8440,25 @@
       "Support",
       "Sanity Recovery",
       "Healing"
+    ],
+    "特质": [
+      {
+        "名称": "Impression: Morality",
+        "描述": "Upholds justice and integrity.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Keen Insight",
+        "描述": "Attentive to detail, increasing the chance of success.",
+        "等级": 2,
+        "解锁": [
+          2,
+          4
+        ]
+      }
     ],
     "基础攻击": 23,
     "基础生命": 105,
@@ -8639,6 +8980,32 @@
       "Consonance Weapon",
       "Weapon DMG"
     ],
+    "特质": [
+      {
+        "名称": "Impression: Chaos",
+        "描述": "Values spontaneity and personal freedom over order.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Rapt Attention",
+        "描述": "Handles tasks with heightened efficiency, reducing completion time.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Adventurer",
+        "描述": "Skilled in combat",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
+    ],
     "基础攻击": 23,
     "基础生命": 105,
     "基础防御": 240,
@@ -9105,6 +9472,32 @@
       "DPS",
       "Skill DMG",
       "Weapon DMG"
+    ],
+    "特质": [
+      {
+        "名称": "Tamer",
+        "描述": "Skilled in training Geniemons",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression: Wisdom",
+        "描述": "Quick-witted or highly knowledgeable in specific fields.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Fortune Favour",
+        "描述": "Favoured by luck — more likely to receive unexpected gains.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
     ],
     "基础攻击": 27,
     "基础生命": 90,
@@ -9573,6 +9966,32 @@
     "标签": [
       "DPS",
       "Skill DMG"
+    ],
+    "特质": [
+      {
+        "名称": "Tamer",
+        "描述": "Skilled in training Geniemons",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression: Wisdom",
+        "描述": "Quick-witted or highly knowledgeable in specific fields.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Astute Mind",
+        "描述": "Adapts quickly and may obtain bonus rewards.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
     ],
     "基础攻击": 21,
     "基础生命": 96,
@@ -10146,6 +10565,32 @@
     "标签": [
       "DPS",
       "Skill DMG"
+    ],
+    "特质": [
+      {
+        "名称": "Gleaner",
+        "描述": "Skilled in gathering resources",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression: Empathy",
+        "描述": "Deeply sensitive and emotionally perceptive.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Fortune Favour",
+        "描述": "Favoured by luck — more likely to receive unexpected gains.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
     ],
     "基础攻击": 16,
     "基础生命": 200,
@@ -10728,6 +11173,32 @@
       "Max HP",
       "Skill DMG"
     ],
+    "特质": [
+      {
+        "名称": "Geologist",
+        "描述": "Skilled in mining",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression: Morality",
+        "描述": "Upholds justice and integrity.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Rapt Attention",
+        "描述": "Handles tasks with heightened efficiency, reducing completion time.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
+    ],
     "基础攻击": 15,
     "基础生命": 183,
     "基础防御": 345,
@@ -11227,6 +11698,25 @@
       "Skill DMG",
       "Support"
     ],
+    "特质": [
+      {
+        "名称": "Impression: Benefit",
+        "描述": "Prioritises gains and trade-offs.",
+        "等级": 2,
+        "解锁": [
+          0,
+          2
+        ]
+      },
+      {
+        "名称": "Astute Mind",
+        "描述": "Adapts quickly and may obtain bonus rewards.",
+        "等级": 1,
+        "解锁": [
+          5
+        ]
+      }
+    ],
     "基础攻击": 25,
     "基础生命": 120,
     "基础防御": 330,
@@ -11725,6 +12215,32 @@
       "DPS",
       "Crowd Control",
       "Skill DMG"
+    ],
+    "特质": [
+      {
+        "名称": "Gleaner",
+        "描述": "Skilled in gathering resources",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression: Empathy",
+        "描述": "Deeply sensitive and emotionally perceptive.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Fortune Favour",
+        "描述": "Favoured by luck — more likely to receive unexpected gains.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
     ],
     "基础攻击": 21,
     "基础生命": 83,
@@ -12242,6 +12758,32 @@
       "DPS",
       "Skill DMG"
     ],
+    "特质": [
+      {
+        "名称": "Adventurer",
+        "描述": "Skilled in combat",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression: Morality",
+        "描述": "Upholds justice and integrity.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Rapt Attention",
+        "描述": "Handles tasks with heightened efficiency, reducing completion time.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
+    ],
     "基础攻击": 22,
     "基础生命": 94,
     "基础防御": 276,
@@ -12743,6 +13285,32 @@
     "标签": [
       "DPS",
       "Skill DMG"
+    ],
+    "特质": [
+      {
+        "名称": "Impression: Wisdom",
+        "描述": "Quick-witted or highly knowledgeable in specific fields.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Gleaner",
+        "描述": "Skilled in gathering resources",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Astute Mind",
+        "描述": "Adapts quickly and may obtain bonus rewards.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
     ],
     "基础攻击": 24,
     "基础生命": 80,
@@ -13490,6 +14058,32 @@
       "DPS",
       "Skill DMG"
     ],
+    "特质": [
+      {
+        "名称": "Adventurer",
+        "描述": "Skilled in combat",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression: Morality",
+        "描述": "Upholds justice and integrity.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Rapt Attention",
+        "描述": "Handles tasks with heightened efficiency, reducing completion time.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
+    ],
     "基础攻击": 22,
     "基础生命": 94,
     "基础防御": 276,
@@ -13745,6 +14339,32 @@
       "DPS",
       "Skill DMG",
       "Weapon DMG"
+    ],
+    "特质": [
+      {
+        "名称": "Impression: Morality",
+        "描述": "Upholds justice and integrity.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Rapt Attention",
+        "描述": "Handles tasks with heightened efficiency, reducing completion time.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Gleaner",
+        "描述": "Skilled in gathering resources",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
     ],
     "基础攻击": 22,
     "基础生命": 150,
@@ -14266,6 +14886,32 @@
       "Support",
       "DEF",
       "Shielding"
+    ],
+    "特质": [
+      {
+        "名称": "Adventurer",
+        "描述": "Skilled in combat",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression: Wisdom",
+        "描述": "Quick-witted or highly knowledgeable in specific fields.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Keen Insight",
+        "描述": "Attentive to detail, increasing the chance of success.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
     ],
     "基础攻击": 14,
     "基础生命": 105,
@@ -14796,6 +15442,32 @@
       "DPS",
       "Max HP",
       "Skill DMG"
+    ],
+    "特质": [
+      {
+        "名称": "Piscator",
+        "描述": "Skilled in fishing",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression: Benefit",
+        "描述": "Prioritises gains and trade-offs.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Rapt Attention",
+        "描述": "Handles tasks with heightened efficiency, reducing completion time.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
     ],
     "基础攻击": 13,
     "基础生命": 185,
@@ -15382,6 +16054,32 @@
       "Support",
       "Max HP",
       "Healing"
+    ],
+    "特质": [
+      {
+        "名称": "Impression: Empathy",
+        "描述": "Deeply sensitive and emotionally perceptive.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Tamer",
+        "描述": "Skilled in training Geniemons",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Fortune Favour",
+        "描述": "Favoured by luck — more likely to receive unexpected gains.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
     ],
     "基础攻击": 12,
     "基础生命": 185,
@@ -16112,6 +16810,32 @@
       "DPS",
       "Weapon DMG"
     ],
+    "特质": [
+      {
+        "名称": "Piscator",
+        "描述": "Skilled in fishing",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression: Empathy",
+        "描述": "Deeply sensitive and emotionally perceptive.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Rapt Attention",
+        "描述": "Handles tasks with heightened efficiency, reducing completion time.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
+    ],
     "基础攻击": 20,
     "基础生命": 85,
     "基础防御": 285,
@@ -16557,6 +17281,25 @@
       "Consonance Weapon",
       "Weapon DMG",
       "Skill DMG"
+    ],
+    "特质": [
+      {
+        "名称": "Impression: Empathy",
+        "描述": "Deeply sensitive and emotionally perceptive.",
+        "等级": 2,
+        "解锁": [
+          0,
+          2
+        ]
+      },
+      {
+        "名称": "Gleaner",
+        "描述": "Skilled in gathering resources",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
     ],
     "基础攻击": 28,
     "基础生命": 70,
@@ -17133,6 +17876,32 @@
       "Crowd Control",
       "Healing"
     ],
+    "特质": [
+      {
+        "名称": "Geologist",
+        "描述": "Skilled in mining",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression: Wisdom",
+        "描述": "Quick-witted or highly knowledgeable in specific fields.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Fortune Favour",
+        "描述": "Favoured by luck — more likely to receive unexpected gains.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
+    ],
     "基础攻击": 19,
     "基础生命": 100,
     "基础防御": 285,
@@ -17568,6 +18337,32 @@
     "精通": [
       "Polearm",
       "Assault Rifle"
+    ],
+    "特质": [
+      {
+        "名称": "Geologist",
+        "描述": "Skilled in mining",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression: Wisdom",
+        "描述": "Quick-witted or highly knowledgeable in specific fields.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Fortune Favour",
+        "描述": "Favoured by luck — more likely to receive unexpected gains.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
     ],
     "基础攻击": 28,
     "基础生命": 70,

@@ -227,6 +227,47 @@ export class LuaDataManager {
         return result
     }
 
+    /**
+     * raw 导出专用：在同一 Fengari state 中执行 Script 下的 Lua 文件，把返回值深度物化为 JS。
+     *
+     * 与 loadScriptFile 的差别：
+     * - 返回值的表先用 __deep_materialize 展开 __pairs（分区懒加载表 / 代理表在 lua_next 下是空的）；
+     * - 编译失败、执行失败、未返回值三种情况分别返回 error，不折叠成 undefined。
+     */
+    loadScriptValue(relativePath: string): { value?: LuaValue; error?: string } {
+        const file = join(this.scriptDataRoot, relativePath)
+        if (!existsSync(file)) return { error: `文件不存在: ${file}` }
+        const L = this.ensureState()
+        const code = readFileSync(file, "utf8")
+        const base = lua.lua_gettop(L)
+
+        if (lauxlib.luaL_loadstring(L, to_luastring(code)) !== 0) {
+            const err = lua.lua_tostring(L, -1)
+            lua.lua_settop(L, base)
+            return { error: `编译失败: ${err ? to_jsstring(err) : "未知错误"}` }
+        }
+        if (lua.lua_pcall(L, 0, 1, 0) !== 0) {
+            const err = lua.lua_tostring(L, -1)
+            lua.lua_settop(L, base)
+            return { error: `执行失败: ${err ? to_jsstring(err) : "未知错误"}` }
+        }
+        if (lua.lua_type(L, -1) === lua.LUA_TNIL) {
+            lua.lua_settop(L, base)
+            return { error: "文件未返回值" }
+        }
+
+        lua.lua_getglobal(L, "__deep_materialize")
+        lua.lua_pushvalue(L, -2)
+        if (lua.lua_pcall(L, 1, 1, 0) !== 0) {
+            const err = lua.lua_tostring(L, -1)
+            lua.lua_settop(L, base)
+            return { error: `物化失败: ${err ? to_jsstring(err) : "未知错误"}` }
+        }
+        const value = luaValueToJs(L, -1) as LuaValue
+        lua.lua_settop(L, base)
+        return { value }
+    }
+
     /** 读取剧情 Lua，并只投影 QuestStory/PartyTopic 所需字段，避免大型节点元数据递归物化。 */
     loadStoryFile(relativePath: string): LuaValue | undefined {
         const file = join(this.scriptDataRoot, relativePath)

@@ -29,6 +29,32 @@
       "Arme de Consonance",
       "DGT d’arme"
     ],
+    "特质": [
+      {
+        "名称": "Aventurier",
+        "描述": "Compétent en combat.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression : Morale",
+        "描述": "Défend la justice et les bonnes mœurs.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Focus absolu",
+        "描述": "Travaille avec efficacité, réduisant la durée des expéditions.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
+    ],
     "基础攻击": 20,
     "基础生命": 100,
     "基础防御": 300,
@@ -773,6 +799,32 @@
       "DPS",
       "DGT d’arme"
     ],
+    "特质": [
+      {
+        "名称": "Aventurier",
+        "描述": "Compétent en combat.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression : Morale",
+        "描述": "Défend la justice et les bonnes mœurs.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Focus absolu",
+        "描述": "Travaille avec efficacité, réduisant la durée des expéditions.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
+    ],
     "基础攻击": 26,
     "基础生命": 130,
     "基础防御": 350,
@@ -1327,6 +1379,25 @@
     "标签": [
       "DPS",
       "Dégâts de compétence"
+    ],
+    "特质": [
+      {
+        "名称": "Aventurier",
+        "描述": "Compétent en combat.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression : Chaos",
+        "描述": "Suit avant tout ses envies, libre de toute contrainte.",
+        "等级": 2,
+        "解锁": [
+          2,
+          4
+        ]
+      }
     ],
     "基础攻击": 21,
     "基础生命": 130,
@@ -2042,6 +2113,32 @@
       "DPS",
       "DGT d’arme"
     ],
+    "特质": [
+      {
+        "名称": "Impression : Sagesse",
+        "描述": "Esprit vif ou expertise approfondie dans un domaine.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Aventurier",
+        "描述": "Compétent en combat.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Focus absolu",
+        "描述": "Travaille avec efficacité, réduisant la durée des expéditions.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
+    ],
     "基础攻击": 20,
     "基础生命": 100,
     "基础防御": 300,
@@ -2584,6 +2681,25 @@
       "DPS",
       "Arme de Consonance",
       "DGT d’arme"
+    ],
+    "特质": [
+      {
+        "名称": "Aventurier",
+        "描述": "Compétent en combat.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression : Empathie",
+        "描述": "Grande sensibilité émotionnelle et empathie naturelle.",
+        "等级": 2,
+        "解锁": [
+          2,
+          4
+        ]
+      }
     ],
     "基础攻击": 24,
     "基础生命": 90,
@@ -3335,6 +3451,25 @@
       "DPS",
       "Dégâts de compétence"
     ],
+    "特质": [
+      {
+        "名称": "Impression : Empathie",
+        "描述": "Grande sensibilité émotionnelle et empathie naturelle.",
+        "等级": 2,
+        "解锁": [
+          0,
+          2
+        ]
+      },
+      {
+        "名称": "Favori de la Fortune",
+        "描述": "Souvent favorisé par la chance, obtient des gains inattendus.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
+    ],
     "基础攻击": 21,
     "基础生命": 105,
     "基础防御": 255,
@@ -3930,6 +4065,32 @@
     "标签": [
       "DPS",
       "DGT d’arme"
+    ],
+    "特质": [
+      {
+        "名称": "Aventurier",
+        "描述": "Compétent en combat.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression : Chaos",
+        "描述": "Suit avant tout ses envies, libre de toute contrainte.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Focus absolu",
+        "描述": "Travaille avec efficacité, réduisant la durée des expéditions.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
     ],
     "基础攻击": 25,
     "基础生命": 135,
@@ -4670,6 +4831,32 @@
       "DPS",
       "Dégâts de compétence"
     ],
+    "特质": [
+      {
+        "名称": "Impression : Sagesse",
+        "描述": "Esprit vif ou expertise approfondie dans un domaine.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Aventurier",
+        "描述": "Compétent en combat.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Focus absolu",
+        "描述": "Travaille avec efficacité, réduisant la durée des expéditions.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
+    ],
     "基础攻击": 29,
     "基础生命": 70,
     "基础防御": 220,
@@ -5236,6 +5423,32 @@
     "标签": [
       "Soutien"
     ],
+    "特质": [
+      {
+        "名称": "Impression : Sagesse",
+        "描述": "Esprit vif ou expertise approfondie dans un domaine.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Aventurier",
+        "描述": "Compétent en combat.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Focus absolu",
+        "描述": "Travaille avec efficacité, réduisant la durée des expéditions.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
+    ],
     "基础攻击": 22,
     "基础生命": 120,
     "基础防御": 300,
@@ -5705,6 +5918,32 @@
     ],
     "标签": [
       "Soutien"
+    ],
+    "特质": [
+      {
+        "名称": "Impression : Empathie",
+        "描述": "Grande sensibilité émotionnelle et empathie naturelle.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Favori de la Fortune",
+        "描述": "Souvent favorisé par la chance, obtient des gains inattendus.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Dresseur",
+        "描述": "Compétent dans l’entraînement des Géniemon.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
     ],
     "基础攻击": 22,
     "基础生命": 105,
@@ -6211,6 +6450,25 @@
       "Invocation",
       "Dégâts de compétence"
     ],
+    "特质": [
+      {
+        "名称": "Pêcheur",
+        "描述": "Compétent en pêche.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression : Empathie",
+        "描述": "Grande sensibilité émotionnelle et empathie naturelle.",
+        "等级": 2,
+        "解锁": [
+          2,
+          4
+        ]
+      }
+    ],
     "基础攻击": 25,
     "基础生命": 100,
     "基础防御": 252,
@@ -6679,6 +6937,25 @@
       "DPS",
       "Invocation",
       "Dégâts de compétence"
+    ],
+    "特质": [
+      {
+        "名称": "Impression : Morale",
+        "描述": "Défend la justice et les bonnes mœurs.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Favori de la Fortune",
+        "描述": "Souvent favorisé par la chance, obtient des gains inattendus.",
+        "等级": 2,
+        "解锁": [
+          2,
+          4
+        ]
+      }
     ],
     "基础攻击": 26,
     "基础生命": 95,
@@ -7159,6 +7436,25 @@
     "标签": [
       "Soutien",
       "Invocation"
+    ],
+    "特质": [
+      {
+        "名称": "Impression : Morale",
+        "描述": "Défend la justice et les bonnes mœurs.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Favori de la Fortune",
+        "描述": "Souvent favorisé par la chance, obtient des gains inattendus.",
+        "等级": 2,
+        "解锁": [
+          2,
+          4
+        ]
+      }
     ],
     "基础攻击": 20,
     "基础生命": 100,
@@ -7672,6 +7968,32 @@
       "Invocation",
       "Contrôle"
     ],
+    "特质": [
+      {
+        "名称": "Pêcheur",
+        "描述": "Compétent en pêche.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression : Chaos",
+        "描述": "Suit avant tout ses envies, libre de toute contrainte.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Opportuniste",
+        "描述": "À l’aise dans toutes les situations, peut obtenir des récompenses bonus.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
+    ],
     "基础攻击": 17,
     "基础生命": 115,
     "基础防御": 300,
@@ -8118,6 +8440,25 @@
       "Soutien",
       "Régénération de Lucidité",
       "Soin"
+    ],
+    "特质": [
+      {
+        "名称": "Impression : Morale",
+        "描述": "Défend la justice et les bonnes mœurs.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Sens affûté",
+        "描述": "Souci du détail, augmente les chances de réussite.",
+        "等级": 2,
+        "解锁": [
+          2,
+          4
+        ]
+      }
     ],
     "基础攻击": 23,
     "基础生命": 105,
@@ -8639,6 +8980,32 @@
       "Arme de Consonance",
       "DGT d’arme"
     ],
+    "特质": [
+      {
+        "名称": "Impression : Chaos",
+        "描述": "Suit avant tout ses envies, libre de toute contrainte.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Focus absolu",
+        "描述": "Travaille avec efficacité, réduisant la durée des expéditions.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Aventurier",
+        "描述": "Compétent en combat.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
+    ],
     "基础攻击": 23,
     "基础生命": 105,
     "基础防御": 240,
@@ -9105,6 +9472,32 @@
       "DPS",
       "Dégâts de compétence",
       "DGT d’arme"
+    ],
+    "特质": [
+      {
+        "名称": "Dresseur",
+        "描述": "Compétent dans l’entraînement des Géniemon.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression : Sagesse",
+        "描述": "Esprit vif ou expertise approfondie dans un domaine.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Favori de la Fortune",
+        "描述": "Souvent favorisé par la chance, obtient des gains inattendus.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
     ],
     "基础攻击": 27,
     "基础生命": 90,
@@ -9573,6 +9966,32 @@
     "标签": [
       "DPS",
       "Dégâts de compétence"
+    ],
+    "特质": [
+      {
+        "名称": "Dresseur",
+        "描述": "Compétent dans l’entraînement des Géniemon.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression : Sagesse",
+        "描述": "Esprit vif ou expertise approfondie dans un domaine.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Opportuniste",
+        "描述": "À l’aise dans toutes les situations, peut obtenir des récompenses bonus.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
     ],
     "基础攻击": 21,
     "基础生命": 96,
@@ -10146,6 +10565,32 @@
     "标签": [
       "DPS",
       "Dégâts de compétence"
+    ],
+    "特质": [
+      {
+        "名称": "Collecteur",
+        "描述": "Compétent en collecte de ressources.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression : Empathie",
+        "描述": "Grande sensibilité émotionnelle et empathie naturelle.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Favori de la Fortune",
+        "描述": "Souvent favorisé par la chance, obtient des gains inattendus.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
     ],
     "基础攻击": 16,
     "基础生命": 200,
@@ -10728,6 +11173,32 @@
       "PV max",
       "Dégâts de compétence"
     ],
+    "特质": [
+      {
+        "名称": "Prospecteur",
+        "描述": "Compétent en extraction minière.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression : Morale",
+        "描述": "Défend la justice et les bonnes mœurs.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Focus absolu",
+        "描述": "Travaille avec efficacité, réduisant la durée des expéditions.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
+    ],
     "基础攻击": 15,
     "基础生命": 183,
     "基础防御": 345,
@@ -11227,6 +11698,25 @@
       "Dégâts de compétence",
       "Soutien"
     ],
+    "特质": [
+      {
+        "名称": "Impression : Avantage",
+        "描述": "Privilégie le gain et l’efficacité des résultats.",
+        "等级": 2,
+        "解锁": [
+          0,
+          2
+        ]
+      },
+      {
+        "名称": "Opportuniste",
+        "描述": "À l’aise dans toutes les situations, peut obtenir des récompenses bonus.",
+        "等级": 1,
+        "解锁": [
+          5
+        ]
+      }
+    ],
     "基础攻击": 25,
     "基础生命": 120,
     "基础防御": 330,
@@ -11725,6 +12215,32 @@
       "DPS",
       "Contrôle",
       "Dégâts de compétence"
+    ],
+    "特质": [
+      {
+        "名称": "Collecteur",
+        "描述": "Compétent en collecte de ressources.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression : Empathie",
+        "描述": "Grande sensibilité émotionnelle et empathie naturelle.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Favori de la Fortune",
+        "描述": "Souvent favorisé par la chance, obtient des gains inattendus.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
     ],
     "基础攻击": 21,
     "基础生命": 83,
@@ -12242,6 +12758,32 @@
       "DPS",
       "Dégâts de compétence"
     ],
+    "特质": [
+      {
+        "名称": "Aventurier",
+        "描述": "Compétent en combat.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression : Morale",
+        "描述": "Défend la justice et les bonnes mœurs.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Focus absolu",
+        "描述": "Travaille avec efficacité, réduisant la durée des expéditions.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
+    ],
     "基础攻击": 22,
     "基础生命": 94,
     "基础防御": 276,
@@ -12743,6 +13285,32 @@
     "标签": [
       "DPS",
       "Dégâts de compétence"
+    ],
+    "特质": [
+      {
+        "名称": "Impression : Sagesse",
+        "描述": "Esprit vif ou expertise approfondie dans un domaine.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Collecteur",
+        "描述": "Compétent en collecte de ressources.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Opportuniste",
+        "描述": "À l’aise dans toutes les situations, peut obtenir des récompenses bonus.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
     ],
     "基础攻击": 24,
     "基础生命": 80,
@@ -13490,6 +14058,32 @@
       "DPS",
       "Dégâts de compétence"
     ],
+    "特质": [
+      {
+        "名称": "Aventurier",
+        "描述": "Compétent en combat.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression : Morale",
+        "描述": "Défend la justice et les bonnes mœurs.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Focus absolu",
+        "描述": "Travaille avec efficacité, réduisant la durée des expéditions.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
+    ],
     "基础攻击": 22,
     "基础生命": 94,
     "基础防御": 276,
@@ -13745,6 +14339,32 @@
       "DPS",
       "Dégâts de compétence",
       "DGT d’arme"
+    ],
+    "特质": [
+      {
+        "名称": "Impression : Morale",
+        "描述": "Défend la justice et les bonnes mœurs.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Focus absolu",
+        "描述": "Travaille avec efficacité, réduisant la durée des expéditions.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Collecteur",
+        "描述": "Compétent en collecte de ressources.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
     ],
     "基础攻击": 22,
     "基础生命": 150,
@@ -14266,6 +14886,32 @@
       "Soutien",
       "DÉF",
       "Bouclier"
+    ],
+    "特质": [
+      {
+        "名称": "Aventurier",
+        "描述": "Compétent en combat.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression : Sagesse",
+        "描述": "Esprit vif ou expertise approfondie dans un domaine.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Sens affûté",
+        "描述": "Souci du détail, augmente les chances de réussite.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
     ],
     "基础攻击": 14,
     "基础生命": 105,
@@ -14796,6 +15442,32 @@
       "DPS",
       "PV max",
       "Dégâts de compétence"
+    ],
+    "特质": [
+      {
+        "名称": "Pêcheur",
+        "描述": "Compétent en pêche.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression : Avantage",
+        "描述": "Privilégie le gain et l’efficacité des résultats.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Focus absolu",
+        "描述": "Travaille avec efficacité, réduisant la durée des expéditions.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
     ],
     "基础攻击": 13,
     "基础生命": 185,
@@ -15382,6 +16054,32 @@
       "Soutien",
       "PV max",
       "Soin"
+    ],
+    "特质": [
+      {
+        "名称": "Impression : Empathie",
+        "描述": "Grande sensibilité émotionnelle et empathie naturelle.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Dresseur",
+        "描述": "Compétent dans l’entraînement des Géniemon.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Favori de la Fortune",
+        "描述": "Souvent favorisé par la chance, obtient des gains inattendus.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
     ],
     "基础攻击": 12,
     "基础生命": 185,
@@ -16112,6 +16810,32 @@
       "DPS",
       "DGT d’arme"
     ],
+    "特质": [
+      {
+        "名称": "Pêcheur",
+        "描述": "Compétent en pêche.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression : Empathie",
+        "描述": "Grande sensibilité émotionnelle et empathie naturelle.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Focus absolu",
+        "描述": "Travaille avec efficacité, réduisant la durée des expéditions.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
+    ],
     "基础攻击": 20,
     "基础生命": 85,
     "基础防御": 285,
@@ -16557,6 +17281,25 @@
       "Arme de Consonance",
       "DGT d’arme",
       "Dégâts de compétence"
+    ],
+    "特质": [
+      {
+        "名称": "Impression : Empathie",
+        "描述": "Grande sensibilité émotionnelle et empathie naturelle.",
+        "等级": 2,
+        "解锁": [
+          0,
+          2
+        ]
+      },
+      {
+        "名称": "Collecteur",
+        "描述": "Compétent en collecte de ressources.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
     ],
     "基础攻击": 28,
     "基础生命": 70,
@@ -17133,6 +17876,32 @@
       "Contrôle",
       "Soin"
     ],
+    "特质": [
+      {
+        "名称": "Prospecteur",
+        "描述": "Compétent en extraction minière.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression : Sagesse",
+        "描述": "Esprit vif ou expertise approfondie dans un domaine.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Favori de la Fortune",
+        "描述": "Souvent favorisé par la chance, obtient des gains inattendus.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
+    ],
     "基础攻击": 19,
     "基础生命": 100,
     "基础防御": 285,
@@ -17568,6 +18337,32 @@
     "精通": [
       "Arme d’hast",
       "Fusil d’assaut"
+    ],
+    "特质": [
+      {
+        "名称": "Prospecteur",
+        "描述": "Compétent en extraction minière.",
+        "等级": 1,
+        "解锁": [
+          0
+        ]
+      },
+      {
+        "名称": "Impression : Sagesse",
+        "描述": "Esprit vif ou expertise approfondie dans un domaine.",
+        "等级": 1,
+        "解锁": [
+          2
+        ]
+      },
+      {
+        "名称": "Favori de la Fortune",
+        "描述": "Souvent favorisé par la chance, obtient des gains inattendus.",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
     ],
     "基础攻击": 28,
     "基础生命": 70,

@@ -33,6 +33,8 @@ declare module "fengari" {
         lua_gettop(L: LuaState): number
         lua_settop(L: LuaState, idx: number): void
         lua_pop(L: LuaState, n: number): void
+        /** 确保栈顶之上还有 n 个空位（同时抬高当前帧的 top），返回是否成功 */
+        lua_checkstack(L: LuaState, n: number): boolean
         lua_absindex(L: LuaState, idx: number): number
         lua_pushvalue(L: LuaState, idx: number): void
         lua_type(L: LuaState, idx: number): number

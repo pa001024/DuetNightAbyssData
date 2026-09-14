@@ -56,6 +56,30 @@ bun run src/cli.ts -v eb0af1e4
 该版本的 `Script/` 会先用 `git archive` 物化到 `.cache/script-snapshots/<version>-<commit>/`
 （按 commit 缓存，重复运行直接复用），输出仍写入 `final/i18n/`。
 
+## 原始数据导出（export-raw）
+
+把 `Script/Datas` 下的 Lua 表整表导出为 JSON，产物形态对齐旧 Python 流水线的 `step1`：
+
+```sh
+bun run src/cli.ts export-raw                  # → out/*.json
+bun run src/cli.ts export-raw -v 1.6           # 导出历史版本的 Script 数据
+bun run src/cli.ts export-raw --out .tmp/raw   # 指定输出目录
+```
+
+输出路径保持 `Datas` 下的相对目录结构（`Script/Datas/Seat_data/Foo.lua` → `out/Seat_data/Foo.json`），
+键按 `deepSort` 规则排序（数字键按数值序、数字字符串次之、其余按字典序）、2 空格缩进、末尾换行，
+与 `final/i18n` 的 JSON 风格一致。
+
+几个与主流水线不同的点：
+
+- 不做领域解释、不渲染多语言：字段名、数值、结构都保持 Lua 里的原始形状。连续整数键 `1..n`
+  的表转成 JSON 数组（不套用旧 Python 转换器的"奖励表不转数组"豁免规则）。
+- 取数走共享 `LuaDataManager`（同一 Fengari state、同一套 stubs），`require` / `DataMgr` 都可用；
+  返回值先按 Lua `pairs` 展开 `__pairs`，因此 `TextMap_ContentXX` / `Dialogue_ContentXX` /
+  `Talk_SoundXX` 这类分区懒加载代理表会导出真实内容，而不是空表。
+- 编译失败、执行失败、文件未返回值三类文件会被跳过并列在结尾的"跳过 N 个文件"里，
+  同时进程退出码为 1；不会静默写出空文件。
+
 ## 翻译词典同步（copytrans）
 
 `final/i18n/<lang>/translation.json` 是网页端（dna-builder）维护的"中文 → 各语言"术语/文案

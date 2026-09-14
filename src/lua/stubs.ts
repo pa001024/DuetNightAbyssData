@@ -125,6 +125,29 @@ __materialize = function(name)
   end
   return m
 end
+-- 递归版：把带 __pairs 的表（TextMap_ContentXX / Dialogue_ContentXX / Talk_SoundXX 等代理表
+-- 与分区懒加载表）按 Lua pairs 展开，并递归处理其后代，供 JS 端 raw 导出读回。
+-- 只在表自身带 __pairs 时复制，普通表原样返回（避免无谓的整表复制）。
+-- 超过 40 层不再深入：既截断数据里的循环引用，也保留原表（不丢子树）——再深的部分由
+-- 读回侧 luaToJs 的 MAX_DEPTH 决定，超出时标记 [deep]。
+__deep_materialize = function(value, depth)
+  if type(value) ~= "table" then return value end
+  depth = (depth or 0) + 1
+  if depth > 40 then return value end
+  local out = value
+  local mt = getmetatable(value)
+  if mt and rawget(mt, "__pairs") then
+    out = {}
+    for k, v in pairs(value) do out[k] = v end
+  end
+  for k, v in pairs(out) do
+    if type(v) == "table" then
+      local materialized = __deep_materialize(v, depth)
+      if materialized ~= v then out[k] = materialized end
+    end
+  end
+  return out
+end
 -- 按需读取一组顶层键。返回值只包含请求的子树，避免调用方为了批量
 -- 读取而把 Skill/SkillNode 等大表整体物化到 JS。
 __get_table_items = function(name, keys)

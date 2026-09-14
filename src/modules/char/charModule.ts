@@ -2,7 +2,7 @@
  * charModule — 输出 Char.json。
  *
  * 对齐旧版导出的核心输出路径：
- * - 基础信息（id/icon/名称/版本/别名/出生地/势力/生日/CV/阵营/属性/精通/标签）
+ * - 基础信息（id/icon/名称/版本/别名/出生地/势力/生日/CV/阵营/属性/精通/标签/特质）
  * - 基础属性（攻击/生命/防御/护盾/神智）、加成、突破、溯源、碎片、第七溯源消耗、专武
  * - 技能（名称/类型/描述/字段/升级/实体/术语解释/子技能/行为）
  *
@@ -69,6 +69,7 @@ export async function charModule(ctx: ModuleContext) {
     const characterData = () => (dm.getTable("CharacterData") as Record<string, any>) || {}
     const campData = () => (dm.getTable("CharCamp") as Record<string, any>) || {}
     const weaponTagData = () => (dm.getTable("WeaponTag") as Record<string, any>) || {}
+    const dispatchTagData = () => (dm.getTable("CharDispatchTag") as Record<string, any>) || {}
     const charAddonAttrData = () => (dm.getTable("CharAddonAttr") as Record<string, any>) || {}
     const charBreakData = () => (dm.getTable("CharBreak") as Record<string, any>) || {}
     const levelUpData = () => (dm.getTable("LevelUp") as Record<string, any>) || {}
@@ -181,6 +182,44 @@ export async function charModule(ctx: ModuleContext) {
             if (row?.Name) out.push(T(row.Name))
         }
         return out
+    }
+
+    /**
+     * 特质（派遣标签）。
+     *
+     * Char.DispatchTag 的每个槽位在突破到 Char.DispatchUnlock 对应阶段后解锁；同名标签每占
+     * 一个槽位提升一级（对齐 Character:GetCurrentUnlockDispatchTag 的计数语义）。这里按标签
+     * 首次出现顺序聚合：名称/描述取 CharDispatchTag 的 TextMap key，等级为已占槽位数，
+     * 解锁为各级对应的突破阶段（0..5，对应 突破 数组的第 N+1 段）。
+     */
+    function processTraits(char: Record<string, any>): VNodeTree {
+        const tags = normalizeMapOrArray(char.DispatchTag)
+        if (tags.length === 0) return []
+        const unlockStages = normalizeMapOrArray(char.DispatchUnlock)
+        const order: string[] = []
+        const stagesByTag = new Map<string, number[]>()
+        for (let i = 0; i < tags.length; i++) {
+            const tag = String(tags[i] ?? "")
+            if (!tag) continue
+            let stages = stagesByTag.get(tag)
+            if (!stages) {
+                stages = []
+                stagesByTag.set(tag, stages)
+                order.push(tag)
+            }
+            const stage = Number(unlockStages[i])
+            if (Number.isFinite(stage)) stages.push(stage)
+        }
+        return order.map(tag => {
+            const row = dispatchTagData()[tag] ?? {}
+            const stages = stagesByTag.get(tag) ?? []
+            return {
+                名称: T(row.Name ?? ""),
+                描述: T(row.Description ?? ""),
+                等级: stages.length,
+                解锁: stages,
+            }
+        })
     }
 
     /** 武器类型标签（UWeapon 的 WeaponTag：Ultra/Melee/Sword 等） */
@@ -680,6 +719,7 @@ export async function charModule(ctx: ModuleContext) {
             精通: processMastery(battleChar.ExcelWeaponTags),
             额外精通: processMastery(battleChar.ExcelWeaponTagsExpand),
             标签: processTags(battleChar.Positioning),
+            特质: processTraits(char),
             基础攻击: baseAttr.攻击 ?? 0,
             基础生命: baseAttr.生命 ?? 0,
             基础防御: baseAttr.防御 ?? 0,
@@ -720,6 +760,7 @@ export async function charModule(ctx: ModuleContext) {
         }
         if ((processed.加成 as { entries?: unknown[] } | undefined)?.entries?.length === 0) delete processed.加成
         if (!(processed.标签 as VNodeTree[])?.length) delete processed.标签
+        if (!(processed.特质 as VNodeTree[])?.length) delete processed.特质
         if (!(processed.额外精通 as string[])?.length) delete processed.额外精通
 
         items.push(processed)
@@ -808,8 +849,9 @@ const PASSIVE_FUNCTION_CN: Record<string, string> = {
  * 输出对象的字段顺序由各构建点的对象字面量/属性赋值顺序直接固定（对齐旧 Python 导出），
  * 不做写入后排序。各类对象的固定顺序：
  * - 角色：id/icon/名称/版本/别名/出生地/势力/生日/中文CV/日文CV/英文CV/韩文CV/
- *   阵营/属性/精通/额外精通/标签/基础攻击/基础生命/基础防御/基础护盾/基础神智/
+ *   阵营/属性/精通/额外精通/标签/特质/基础攻击/基础生命/基础防御/基础护盾/基础神智/
  *   加成/突破/技能/溯源/碎片/第七溯源消耗/专武/同律武器
+ * - 特质：名称/描述/等级/解锁
  * - 技能：id/名称/类型/描述/icon/cd/实体/字段/升级/术语解释/子技能/行为
  *   （无自有名称的子技能，名称追加在对象末尾）
  * - 字段：名称/影响/值/值2/格式/tag/削韧/Boss削韧/取消/连段
