@@ -1793,7 +1793,7 @@ return ReadOnly("EventMain", {
     EventBgBPPathPC = "/Game/UI/WBP/Abyss/Widget/BackGround/WBP_Abyss_ActivityBG.WBP_Abyss_ActivityBG",
     EventBgSound = "/ui/activity/common_simple_entrance_loop",
     EventDes = "Event_Des_103002",
-    EventEndTime = LocalTimeProxy(1792486800),
+    EventEndTime = LocalTimeProxy(1792400400),
     EventEndTimeMail = T.RT_1,
     EventId = 1030035,
     EventName = "Abyss_entry",

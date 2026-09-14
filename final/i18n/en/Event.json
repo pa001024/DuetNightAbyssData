@@ -723,7 +723,7 @@
     "name": "Immersive Theatre",
     "desc": "Spectator or protagonist — the choice is yours. Step into the fray, where courage faces towering foes... and victory awaits.",
     "startTime": 1790647200,
-    "endTime": 1792486800,
+    "endTime": 1792400400,
     "rule": "<Title>About Immersive Theatre</>\n1. Immersive Theatre is divided into three sections: [Classic Repertoire], [Featured Repertoire], and [Immortal Repertoire]. Complete each section to unlock the next.\n[Classic Repertoire] are one-time challenges. [Featured Repertoire] and [Immortal Repertoire] rotate with version updates. [Immortal Repertoire] also include permanent stages that can be replayed after meeting certain conditions.\n2. Defeat all opponents within the time limit to clear a stage. Completing a stage awards [Stars] and [Ticket Stubs]. Stars unlock milestone rewards. Ticket Stubs can be exchanged for items at the Theatre Gift Shop.\n3. [Classic Repertoire] and [Featured Repertoire] include two rounds per stage: [Hero's Odyssey] and [Hero's Way Home]. You must use different teams for each round. Final rewards are based on your total stars earned across both rounds. [Immortal Repertoire] includes only [Hero's Odyssey].\n4. Each round consists of 5 rooms that must be cleared in order. Clear all rooms in both [Hero's Odyssey] and [Hero's Way Home] to unlock the next act. Failing to defeat the opponent or running out of time in any room will prevent further progress.\n5. All stages feature [Stage Score] — a unique mechanic that grants buffs or debuffs during battle. You can adjust your strategy based on the effects in play."
   },
   {

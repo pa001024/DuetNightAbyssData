@@ -26367,7 +26367,7 @@ What wish, you wonder, keeps them tethered to this world?]]
           ContentEN = "Lost in the Woods"
         },
         Name_110202 = {
-          ContentEN = "Cat and Rabbit, Same Cage"
+          ContentEN = "Kitty and Bunny, Same Cage"
         },
         Name_110203 = {
           ContentEN = "Nightmare in Paradise"

@@ -93,7 +93,7 @@ return ReadOnly("RegionMap", {
     MainRegionMap = true,
     RegionId = 1070,
     RegionMapId = 600,
-    RegionMapUnlockCondition = 10040501,
+    RegionMapUnlockCondition = 10040502,
     UISubRegionType = "EX"
   },
   [601] = {

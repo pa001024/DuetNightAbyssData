@@ -773,11 +773,10 @@ return ReadOnly("Hair", {
     CharId = 3104,
     CharPartId = 310491,
     ExcludeCollect = true,
-    ExcludeCollectServer = true,
     HairId = 310491,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Falu_01.T_Fashion_Falu_01'",
     LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Falu_01.T_Fashion_Falu_01'",
-    Rarity = 0,
+    Rarity = 5,
     ReleaseVersion = 160,
     Sound = "SOUND_ITEM_NORMAL"
   },

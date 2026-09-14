@@ -569,12 +569,6 @@ return {
             endPort = "Success"
           },
           {
-            startQuest = "17809919312922058396",
-            startPort = "true",
-            endQuest = "17809914840822055457",
-            endPort = "In"
-          },
-          {
             startQuest = "17809914840822055457",
             startPort = "Out",
             endQuest = "17809919635672059236",
@@ -639,6 +633,24 @@ return {
             startPort = "Out",
             endQuest = "178731988468214576654",
             endPort = "In"
+          },
+          {
+            startQuest = "17809919312922058396",
+            startPort = "true",
+            endQuest = "17893538661691976",
+            endPort = "In"
+          },
+          {
+            startQuest = "17893538661691976",
+            startPort = "Fail",
+            endQuest = "17809914840822055457",
+            endPort = "In"
+          },
+          {
+            startQuest = "17893538661691976",
+            startPort = "Success",
+            endQuest = "17809937527233084733",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -646,14 +658,14 @@ return {
             key = "1780920816042405",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 420.2222222222222, y = 356},
+            pos = {x = 98.29914529914521, y = 368.6923076923077},
             propsData = {ModeType = 0}
           },
           ["1780920816042406"] = {
             key = "1780920816042406",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 2877.745098039216, y = 619.4117647058823},
+            pos = {x = 3436.836007130125, y = 635.7754010695187},
             propsData = {ModeType = 0}
           },
           ["1780920816042407"] = {
@@ -759,7 +771,7 @@ return {
             key = "17809919312922058396",
             type = "ExecuteBlueprintFunctionCheckVarNode",
             name = "执行变量检测函数",
-            pos = {x = 659.9743148156191, y = 342.5583537235712},
+            pos = {x = 324.7179045592088, y = 688.5839947492121},
             propsData = {
               FunctionName = "Equal",
               VarName = "ex02_11020103",
@@ -804,7 +816,7 @@ return {
             key = "17809937527233084733",
             type = "SetVarNode",
             name = "设置变量值",
-            pos = {x = 2996.8525154371455, y = 289.3317743194753},
+            pos = {x = 2901.8525154371455, y = 444.3317743194753},
             propsData = {
               VarName = "ex02_11020103",
               VarValue = 2
@@ -814,7 +826,7 @@ return {
             key = "17860043157161742",
             type = "SendMessageNode",
             name = "发送消息",
-            pos = {x = 1514.5851664221311, y = 515.1534027421561},
+            pos = {x = 1532.5851664221311, y = 1130.1534027421562},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "QuestShootStart",
@@ -923,6 +935,13 @@ return {
             name = "显示图文引导",
             pos = {x = 1937.595746716293, y = 314.47583664378305},
             propsData = {GuideId = 162}
+          },
+          ["17893538661691976"] = {
+            key = "17893538661691976",
+            type = "ConditionNode",
+            name = "条件节点",
+            pos = {x = 649.0745920745919, y = 461.7599067599067},
+            propsData = {ConditionId = 7086048}
           }
         },
         commentData = {}

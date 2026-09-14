@@ -81,6 +81,6 @@ return ReadOnly("WorldMap", {
       601,
       602
     },
-    WorldMapUnlockCondition = 10040501
+    WorldMapUnlockCondition = 10040502
   }
 })

@@ -302516,6 +302516,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51300103] = {
           Content = "要不你也一起看一下，看看和你在这里得到的情报有无出入？",
+          ContentJP = "よかったら、一緒に確認してみて、ここで得た情報と違いがないか確認してみない？",
           DialogueId = 51300103,
           Duration = 8,
           GUID = "806CA6FD",
