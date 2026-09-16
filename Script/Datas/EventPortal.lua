@@ -222,7 +222,7 @@ return ReadOnly("EventPortal", {
     JumpFinishDes = "UI_EventPortalFinish",
     JumpUIId = 79,
     JumpUnlockTips = "EventPortal_UnlockTips_Common",
-    RewardPreview = 103017,
+    RewardPreview = 103030,
     SubBPPath2 = "/Game/UI/WBP/Activity/Widget/CameraGame/WBP_Activity_CameraGame_TaskEntryBtn.WBP_Activity_CameraGame_TaskEntryBtn"
   },
   [103031] = {

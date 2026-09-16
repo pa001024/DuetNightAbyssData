@@ -76625,7 +76625,7 @@ local Data = {
   },
   {
     MinKey = "UI_PersonInfo_Select_Appearance",
-    MaxKey = "UI_PlayerHead_Name_10024",
+    MaxKey = "UI_PlayerHead_Name_10021",
     Loader = function()
       return {
         UI_PersonInfo_Select_Appearance = {
@@ -77056,6 +77056,15 @@ local Data = {
         UI_PlayerHead_Des_10030 = {
           ContentJP = "シリュウのアイコンに変更できる。"
         },
+        UI_PlayerHead_Des_10031 = {
+          ContentJP = "スーイーのアイコンに変更できる。"
+        },
+        UI_PlayerHead_Des_10032 = {
+          ContentJP = "イブのアイコンに変更できる。"
+        },
+        UI_PlayerHead_Des_10033 = {
+          ContentJP = "フォルスのアイコンに変更できる。"
+        },
         UI_PlayerHead_Des_20001 = {
           ContentJP = "「夢の舞踏会」のアイコンに変更できる。"
         },
@@ -77130,7 +77139,15 @@ local Data = {
         },
         UI_PlayerHead_Name_10021 = {
           ContentJP = "双生児の肖像"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_PlayerHead_Name_10022",
+    MaxKey = "UI_PlayerHead_Name_30173",
+    Loader = function()
+      return {
         UI_PlayerHead_Name_10022 = {
           ContentJP = "花のお姫様の肖像"
         },
@@ -77139,15 +77156,7 @@ local Data = {
         },
         UI_PlayerHead_Name_10024 = {
           ContentJP = "放浪剣士の肖像"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_PlayerHead_Name_10025",
-    MaxKey = "UI_PlayerHead_Name_30176",
-    Loader = function()
-      return {
+        },
         UI_PlayerHead_Name_10025 = {
           ContentJP = "月狩り人の肖像"
         },
@@ -77716,7 +77725,15 @@ local Data = {
         },
         UI_PlayerHead_Name_30173 = {
           ContentJP = "狩猟・スカイブルー"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_PlayerHead_Name_30174",
+    MaxKey = "UI_RaceLottery_Toast_NotInRewardTime",
+    Loader = function()
+      return {
         UI_PlayerHead_Name_30174 = {
           ContentJP = "狩猟・ペルシアンレッド"
         },
@@ -77725,15 +77742,7 @@ local Data = {
         },
         UI_PlayerHead_Name_30176 = {
           ContentJP = "しまった"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_PlayerHead_Name_30177",
-    MaxKey = "UI_RaidDungeon_Unlock_Time",
-    Loader = function()
-      return {
+        },
         UI_PlayerHead_Name_30177 = {ContentJP = "叡智"},
         UI_PlayerHead_Name_30178 = {
           ContentJP = "虚実の兎"
@@ -78268,20 +78277,20 @@ local Data = {
         },
         UI_RaceLottery_Toast_NotInRewardTime = {
           ContentJP = "本日の試合結果はまだ公示されていません。しばらくお待ちください。"
-        },
-        UI_RaceLottery_WatchingNum = {ContentJP = "観客数"},
-        UI_Radar_Dire_North = {ContentJP = "北"},
-        UI_RaidDungeon_Unlock_Time = {
-          ContentJP = "後にアンロック"
         }
       }
     end
   },
   {
-    MinKey = "UI_Raid_BattleCountDown",
-    MaxKey = "UI_RougeMiniGame_ClaimConfirm",
+    MinKey = "UI_RaceLottery_WatchingNum",
+    MaxKey = "UI_RougeLike_SelectBlessing",
     Loader = function()
       return {
+        UI_RaceLottery_WatchingNum = {ContentJP = "観客数"},
+        UI_Radar_Dire_North = {ContentJP = "北"},
+        UI_RaidDungeon_Unlock_Time = {
+          ContentJP = "後にアンロック"
+        },
         UI_Raid_BattleCountDown = {
           ContentJP = "挑戦残り時間"
         },
@@ -78834,22 +78843,22 @@ local Data = {
         UI_RougeLike_RefreshSelect = {ContentJP = "更新"},
         UI_RougeLike_SelectBlessing = {
           ContentJP = "キャンドルの芯を1つ選択"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_RougeLike_SelectTreasure",
+    MaxKey = "UI_STAT_Shield",
+    Loader = function()
+      return {
         UI_RougeLike_SelectTreasure = {
           ContentJP = "レリックを1つ選択"
         },
         UI_RougeLike_TreasureConfirm = {ContentJP = "選択"},
         UI_RougeMiniGame_ClaimConfirm = {
           ContentJP = "バンバン砲撃戦が退出確認"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Rouge_Des",
-    MaxKey = "UI_STAT_Sigil_DEAD",
-    Loader = function()
-      return {
+        },
         UI_Rouge_Des = {
           ContentJP = "我を通して、始まりも終わりもない時の岐路へ踏み出せ。"
         },
@@ -79340,7 +79349,15 @@ local Data = {
         },
         UI_STAT_Shield = {
           ContentJP = "シールド吸収ダメージ"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_STAT_Sigil",
+    MaxKey = "UI_Setting_Layout02",
+    Loader = function()
+      return {
         UI_STAT_Sigil = {
           ContentJP = "戦友シジル"
         },
@@ -79349,15 +79366,7 @@ local Data = {
         },
         UI_STAT_Sigil_DEAD = {
           ContentJP = "戦友シジル行動不能回数"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_STAT_Sigil_KILL",
-    MaxKey = "UI_SettlementPage_TotalScore",
-    Loader = function()
-      return {
+        },
         UI_STAT_Sigil_KILL = {
           ContentJP = "戦友シジル 撃破数"
         },
@@ -79848,22 +79857,22 @@ local Data = {
         },
         UI_Setting_Layout02 = {
           ContentJP = "レイアウト2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Setting_Layout03",
+    MaxKey = "UI_Skin_Name_3103",
+    Loader = function()
+      return {
         UI_Setting_Layout03 = {
           ContentJP = "レイアウト3"
         },
         UI_SettlementPage_NewRecord = {ContentJP = "新記録"},
         UI_SettlementPage_TotalScore = {
           ContentJP = "トータルスコア"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Settlement_Repeat_Notenough",
-    MaxKey = "UI_Skin_Name_3201",
-    Loader = function()
-      return {
+        },
         UI_Settlement_Repeat_Notenough = {
           ContentJP = "スタミナが足りないため、挑戦できません"
         },
@@ -80406,7 +80415,15 @@ local Data = {
         },
         UI_Skin_Name_3103 = {
           ContentJP = "イェール＆オリバーのコスチューム"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Skin_Name_3104",
+    MaxKey = "UI_Squad_UnessentialMiss_Tips",
+    Loader = function()
+      return {
         UI_Skin_Name_3104 = {
           ContentJP = "フォルスのコスチューム"
         },
@@ -80415,15 +80432,7 @@ local Data = {
         },
         UI_Skin_Name_3201 = {
           ContentJP = "ヘルファイアのコスチューム"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Skin_Name_3202",
-    MaxKey = "UI_StringBoard",
-    Loader = function()
-      return {
+        },
         UI_Skin_Name_3202 = {
           ContentJP = "カミラのコスチューム"
         },
@@ -80968,7 +80977,15 @@ local Data = {
         UI_Squad_SwitchSigil_Toast = {
           ContentJP = "%sを%sに切り替えました"
         },
-        UI_Squad_UnessentialMiss_Tips = {ContentJP = "不足"},
+        UI_Squad_UnessentialMiss_Tips = {ContentJP = "不足"}
+      }
+    end
+  },
+  {
+    MinKey = "UI_State_Replaced",
+    MaxKey = "UI_TEMPLE_CONFIRM",
+    Loader = function()
+      return {
         UI_State_Replaced = {
           ContentJP = "切り替え済み"
         },
@@ -80977,15 +80994,7 @@ local Data = {
         },
         UI_StringBoard = {
           ContentJP = "調査手帳"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_StringBoard_Process",
-    MaxKey = "UI_TEMPLE_CatchWarn_2",
-    Loader = function()
-      return {
+        },
         UI_StringBoard_Process = {
           ContentJP = "手がかりの入手進捗"
         },
@@ -81524,7 +81533,15 @@ local Data = {
         },
         UI_TEMPLE_CONFIRM = {
           ContentJP = "現在の進行度をリセットして、やり直しますか？"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_TEMPLE_CatchCount",
+    MaxKey = "UI_TeamjoinRequest",
+    Loader = function()
+      return {
         UI_TEMPLE_CatchCount = {
           ContentJP = "第%d/%dラウンドの檻消失まで"
         },
@@ -81533,15 +81550,7 @@ local Data = {
         },
         UI_TEMPLE_CatchWarn_2 = {
           ContentJP = "水位上昇中。まもなくモンスターが水没します"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_TEMPLE_Catch_0",
-    MaxKey = "UI_TempleEvent_Ball",
-    Loader = function()
-      return {
+        },
         UI_TEMPLE_Catch_0 = {
           ContentJP = "檻を攻撃して落下させよう"
         },
@@ -82100,22 +82109,22 @@ local Data = {
         },
         UI_TeamjoinRequest = {
           ContentJP = "チーム参加申請"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_TeammateEffect_High",
+    MaxKey = "UI_Vote_Retreat_Reward",
+    Loader = function()
+      return {
         UI_TeammateEffect_High = {ContentJP = "表示"},
         UI_TeammateEffect_Middle = {
           ContentJP = "一部非表示"
         },
         UI_TempleEvent_Ball = {
           ContentJP = "アイアンスロー"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_TempleEvent_EntryLevel",
-    MaxKey = "UI_Voucher_Available",
-    Loader = function()
-      return {
+        },
         UI_TempleEvent_EntryLevel = {
           ContentJP = "挑戦開始"
         },
@@ -82644,7 +82653,15 @@ local Data = {
         },
         UI_Vote_Retreat_Reward = {
           ContentJP = "撤退すると直ちに報酬を集計"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Vote_Select",
+    MaxKey = "UI_WEAPON_NAME_20698",
+    Loader = function()
+      return {
         UI_Vote_Select = {
           ContentJP = "行動の選択"
         },
@@ -82653,15 +82670,7 @@ local Data = {
         },
         UI_Voucher_Available = {
           ContentJP = "<H>割引券を使用可能</>"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Voucher_Count",
-    MaxKey = "UI_WEAPON_NAME_530101",
-    Loader = function()
-      return {
+        },
         UI_Voucher_Count = {ContentJP = "%s ×1"},
         UI_Voucher_DefaultUse = {
           ContentJP = "デフォルトで最適な割引プランを選択"
@@ -83226,7 +83235,15 @@ local Data = {
         },
         UI_WEAPON_NAME_20698 = {
           ContentJP = "スカウトロングボウ"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WEAPON_NAME_20699",
+    MaxKey = "UI_WeaponCardLevel_Popup_Overflow",
+    Loader = function()
+      return {
         UI_WEAPON_NAME_20699 = {
           ContentJP = "メタルロングボウ"
         },
@@ -83235,15 +83252,7 @@ local Data = {
         },
         UI_WEAPON_NAME_530101 = {
           ContentJP = "イカルス"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WEAPON_NAME_AutoChess_1",
-    MaxKey = "UI_WeaponSkin_Des_3010101",
-    Loader = function()
-      return {
+        },
         UI_WEAPON_NAME_AutoChess_1 = {
           ContentJP = "生命のルーン石"
         },
@@ -83810,7 +83819,15 @@ local Data = {
         },
         UI_WeaponCardLevel_Popup_Overflow = {
           ContentJP = "製錬レベルが上限より %s 超過します。消費した武器は返却されません。溶錬を続けますか？"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WeaponCardLevel_Popup_PlayerEquiped",
+    MaxKey = "UI_Wiki_No_Content",
+    Loader = function()
+      return {
         UI_WeaponCardLevel_Popup_PlayerEquiped = {
           ContentJP = "この武器は装着中のため、製錬素材として消費できません"
         },
@@ -83819,15 +83836,7 @@ local Data = {
         },
         UI_WeaponSkin_Des_3010101 = {
           ContentJP = "一日釣りをするくらいなら、せめて魚の一匹ぐらい持って帰れ。……ちょうど今日、市場で割引中だ。80銅貨だよ。"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WeaponSkin_Des_3010102",
-    MaxKey = "UI_Wiki_Tab_Locked",
-    Loader = function()
-      return {
+        },
         UI_WeaponSkin_Des_3010102 = {
           ContentJP = "星が星と衝突する、その刹那に交わされた別れの口づけ。砕けた囁きは空の彼方へと尾を引き、愚直な抱擁は――まるで銀河が吐息を漏らしたかのようだった。"
         },
@@ -84388,7 +84397,15 @@ local Data = {
         },
         UI_Wiki_No_Content = {
           ContentJP = "解放済み用語なし"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Wiki_RelatedEntry",
+    MaxKey = "VoiceDes099",
+    Loader = function()
+      return {
         UI_Wiki_RelatedEntry = {
           ContentJP = "関連用語"
         },
@@ -84397,15 +84414,7 @@ local Data = {
         },
         UI_Wiki_Tab_Locked = {
           ContentJP = "このカテゴリは未解放です"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Wiki_ToBeUnlcoked",
-    MaxKey = "VoiceDes102",
-    Loader = function()
-      return {
+        },
         UI_Wiki_ToBeUnlcoked = {
           ContentJP = "後日記入"
         },
@@ -84898,7 +84907,15 @@ local Data = {
         },
         VoiceDes099 = {
           ContentJP = "ゴミ箱の知識"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "VoiceDes100",
+    MaxKey = "WikiText_20101903",
+    Loader = function()
+      return {
         VoiceDes100 = {
           ContentJP = "雪原の思い出"
         },
@@ -84907,15 +84924,7 @@ local Data = {
         },
         VoiceDes102 = {
           ContentJP = "あだ名について"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "VoiceDes103",
-    MaxKey = "WikiText_20102101",
-    Loader = function()
-      return {
+        },
         VoiceDes103 = {
           ContentJP = "願いごと"
         },
@@ -85464,7 +85473,15 @@ local Data = {
         },
         WikiText_20101903 = {
           ContentJP = "ロンザスパイ事件において、ヘルファイアは{nickname2}に対し薬物催眠を実施。その結果として語られた供述の信憑性を認め、さらなる真相の究明に向けて調査を進めることを了承した。"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "WikiText_20102001",
+    MaxKey = "WikiText_40600201",
+    Loader = function()
+      return {
         WikiText_20102001 = {
           ContentJP = "ヒュペリア帝国の親王であり、皇帝ジュリアスの実の弟。"
         },
@@ -85473,15 +85490,7 @@ local Data = {
         },
         WikiText_20102101 = {
           ContentJP = "本名ディズ・ガレア。「大移住」の時代における名将として知られ、のちにヒュペリアにてガレア王朝を打ち立てた建国の祖である。"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "WikiText_20102102",
-    MaxKey = "WikiText_40600501",
-    Loader = function()
-      return {
+        },
         WikiText_20102102 = {
           ContentJP = "帝国の正史によれば、「ダクリ湖の夜」に続く争乱の時代に、ディス一世はソラの民を率い、残酷なカロン族に対する反攻の狼煙を上げた。勝利ののち、ディス一世はカロンの民が犯した罪を赦した。これが、後世において「シルバー・ピース」と呼ばれる偉大な時代の始まりとなった。"
         },
@@ -86072,7 +86081,15 @@ local Data = {
         },
         WikiText_40600201 = {
           ContentJP = "アイスレイク城の内城区と外城区の境界に位置する歌劇場。数百年の歴史を持ち、アイスレイク城の興亡を静かに見守ってきた由緒ある建物である。外城区にありながら、多くの貴族たちが足繁く通う数少ない場所のひとつとして知られている。"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "WikiText_40600301",
+    MaxKey = "voice_ch_char_Baonu_vo_skill01_r01",
+    Loader = function()
+      return {
         WikiText_40600301 = {
           ContentJP = "もともとは一部の漁師たちによって結成された小規模な民間互助団体だったが、アイスレイク城の鉱業が衰退し漁業が台頭するにつれて、その構成員は次第に増加していった。最終的には政府の介入と再編を経て、現在では正式な産業管理組織として機能している。"
         },
@@ -86081,15 +86098,7 @@ local Data = {
         },
         WikiText_40600501 = {
           ContentJP = "有名な世界的民間学術組織。古跡を再び日の下にさらすことを理念に掲げ、アトラシア大陸各地で古代遺跡の探索・文物保護・歴史の真相復元のための発掘事業を展開する。\n この組織は各方面からの資金提供を受け、かつて上流社会で一世を風靡した。名誉会員にはヒュペリアの前皇后すら名を連ねたことがある。"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "WikiText_40600601",
-    MaxKey = "voice_ch_char_Baonu_vo_skill02_r02",
-    Loader = function()
-      return {
+        },
         WikiText_40600601 = {
           ContentJP = "皓京でも名高い薬堂。伝承によれば、澤生閣(たくせいかく)の創始者は<up text=\"しゅくゆ\">祝由</>であるフーの一族の出であり、家伝の<up text=\"こえいのじゅつ\">枯栄の術</>を捨てて本草学を大いに発展させたという。澤生閣は、まさにその流派開創の成果である。数十年にわたる継承を経た今では、学徒が雲のごとく集まり、門弟であふれている。"
         },
@@ -86678,7 +86687,15 @@ local Data = {
         },
         voice_ch_char_Baonu_vo_skill01_r01 = {
           ContentJP = "清め給え！"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Baonu_vo_skill01_r02",
+    MaxKey = "voice_ch_char_Feina_vo_topic_05_1",
+    Loader = function()
+      return {
         voice_ch_char_Baonu_vo_skill01_r02 = {
           ContentJP = "「ペイシェンス」の名のもとに！"
         },
@@ -86687,15 +86704,7 @@ local Data = {
         },
         voice_ch_char_Baonu_vo_skill02_r02 = {
           ContentJP = "サマエル、あたしの声にどうか応えてーー"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Baonu_vo_skill02_r03",
-    MaxKey = "voice_ch_char_Feina_vo_victory",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Baonu_vo_skill02_r03 = {
           ContentJP = "サマエル、あたしにあなたの「怒り」を預けてーー"
         },
@@ -87284,7 +87293,15 @@ local Data = {
         },
         voice_ch_char_Feina_vo_topic_05_1 = {
           ContentJP = "アウトサイダーはね、世界で一番偉大な魔法使い。一番心地よい言葉を話す、世界で一番優しい人……"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Feina_vo_topic_05_2",
+    MaxKey = "voice_ch_char_Kezhou_vo_topic_03_3",
+    Loader = function()
+      return {
         voice_ch_char_Feina_vo_topic_05_2 = {
           ContentJP = "あれ、ハテナが頭に浮かんでいるみたいだけど、フィーナ、何か間違っているの？"
         },
@@ -87293,15 +87310,7 @@ local Data = {
         },
         voice_ch_char_Feina_vo_victory = {
           ContentJP = "「そして、みんなは幸せに暮らしましたとさ」、いい夢を見てね、お休み。"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Feina_vo_welcome",
-    MaxKey = "voice_ch_char_Kezhou_vo_topic_04_3",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Feina_vo_welcome = {
           ContentJP = "……あっ……あなたは。こんにちは、どうも。"
         },
@@ -87892,7 +87901,15 @@ local Data = {
         },
         voice_ch_char_Kezhou_vo_topic_03_3 = {
           ContentJP = "もちろん、本気で遣りあえる相手に出会った時は、迷わず剣を抜いて全力で挑むさ。"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Kezhou_vo_topic_04_1",
+    MaxKey = "voice_ch_char_Nifu_vo_die_r02",
+    Loader = function()
+      return {
         voice_ch_char_Kezhou_vo_topic_04_1 = {
           ContentJP = "まあ、言われてみりゃ確かにな。○○の兄貴、○○王、○○仙人……中でも、動物絡みの異名がやたら多いんだよ。龍や虎、獅子に鶴、類を問わず使われてるらしい。まったく賑やかなもんだ。"
         },
@@ -87901,15 +87918,7 @@ local Data = {
         },
         voice_ch_char_Kezhou_vo_topic_04_3 = {
           ContentJP = "俺はいつだって本名を名乗ることにしてる。異名みたいだって思っただろ？師匠にも同じことを言われたよ。文字で書くと二文字でな。「そんな名前じゃ、幼くして玄人扱いされて、痛い目を見るぞ」ってな。"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Kezhou_vo_topic_04_4",
-    MaxKey = "voice_ch_char_Nifu_vo_idle",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Kezhou_vo_topic_04_4 = {
           ContentJP = "だが、この名はおやじがつけてくれたものだからな。きっと、俺に正義を貫く者になってほしいって願いを込めたんだろう。おやじが残してくれたものは多くないが、この名前がある限り、おやじがこの世に刻んだ剣の軌跡は消えないって思えるんだ。"
         },
@@ -88500,7 +88509,15 @@ local Data = {
         },
         voice_ch_char_Nifu_vo_die_r02 = {
           ContentJP = "しばしの眠りに身をゆだねましょう。"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Nifu_vo_fail",
+    MaxKey = "voice_ch_char_Songlu_vo_topic_05_2",
+    Loader = function()
+      return {
         voice_ch_char_Nifu_vo_fail = {
           ContentJP = "大丈夫ですよ。勝ち負けなど一時の結果に過ぎません。もう一度やり直しましょう。"
         },
@@ -88509,15 +88526,7 @@ local Data = {
         },
         voice_ch_char_Nifu_vo_idle = {
           ContentJP = "争いの絶えないこの土地で、こうして静けさに身をゆだねられるひとときがあるのは、悪くないものですね。"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Nifu_vo_lvup",
-    MaxKey = "voice_ch_char_Songlu_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Nifu_vo_lvup = {
           ContentJP = "野草は芽吹き、木々は新しい枝を広げる――それが春という季節ですよ。"
         },
@@ -89104,7 +89113,15 @@ local Data = {
         },
         voice_ch_char_Songlu_vo_topic_05_2 = {
           ContentJP = "考えたことあります……でも修道士の人たちが言ってたんです。そういうことを考えること自体が神様へのぼ、ぼう……冒涜とかなんとか。だから、私はもうそのことについて考えてないよ。"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Songlu_vo_topic_05_3",
+    MaxKey = "voice_ch_char_Xier_vo_topic_02_1",
+    Loader = function()
+      return {
         voice_ch_char_Songlu_vo_topic_05_3 = {
           ContentJP = "ふあ～ぁ、あの人たちの話って私にはよくわからないの。いつも「暴食はとても重い罪だ」って言うけど……食いしん坊な人ほど偉い肩書きをもってたりするのになぁ。"
         },
@@ -89113,15 +89130,7 @@ local Data = {
         },
         voice_ch_char_Songlu_vo_welcome = {
           ContentJP = "お日さまがポカポカで、雲はふわふわで、早起きの鳥さんたちももうお腹いっぱいだよ。あなたのお腹も、鳥さんたちみたいにグーグー鳴ってるの？"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Suyi01_vo_appear",
-    MaxKey = "voice_ch_char_Xier_vo_topic_03_2",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Suyi01_vo_appear = {
           ContentJP = "天巡七型、出撃準備完了！"
         },
@@ -89710,7 +89719,15 @@ local Data = {
         },
         voice_ch_char_Xier_vo_topic_02_1 = {
           ContentJP = "そんな当たり前のことが気になりますので？一介のメイドとして戦いを嗜むのは至極当然でございます。"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Xier_vo_topic_02_2",
+    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
+    Loader = function()
+      return {
         voice_ch_char_Xier_vo_topic_02_2 = {
           ContentJP = "私の目には、目障りに飛びまわるハエも穢獣も、掃いて捨てるべき汚れにしか映りません。戦闘は、私にとって掃除という愉快な作業にすぎないのです。"
         },
@@ -89719,15 +89736,7 @@ local Data = {
         },
         voice_ch_char_Xier_vo_topic_03_2 = {
           ContentJP = "……えぇ、認めます。私は銃が好きですよ。日常的に使うメイドの掃除道具の中でも、一番手にしっくりきますし、最も効率よく「汚れ」を排除することができますからね。"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Xier_vo_topic_03_3",
-    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Xier_vo_topic_03_3 = {
           ContentJP = "ストレスが溜まっているのであれば、何丁かお貸ししても構いません。ダダダダダッと嗜めば気も晴れますかと。"
         },

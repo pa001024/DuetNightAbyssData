@@ -176,19 +176,19 @@
   {
     "id": 10031,
     "name": "기추 소녀의 초상화",
-    "desc": "UI_PlayerHead_Des_10031",
+    "desc": "프로필을 소을의 이미지로 변경할 수 있다.",
     "icon": "T_Head_Suyi"
   },
   {
     "id": 10032,
     "name": "하얀 토끼의 초상화",
-    "desc": "UI_PlayerHead_Des_10032",
+    "desc": "프로필을 이브의 이미지로 변경할 수 있다.",
     "icon": "T_Head_Eve"
   },
   {
     "id": 10033,
     "name": "복수자의 초상화",
-    "desc": "UI_PlayerHead_Des_10033",
+    "desc": "프로필을 펄시의 이미지로 변경할 수 있다.",
     "icon": "T_Head_Falu"
   },
   {

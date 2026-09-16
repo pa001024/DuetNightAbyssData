@@ -75881,7 +75881,7 @@ Allez voir ce qui se passe.]]
   },
   {
     MinKey = "UI_PersonalPage_ActionNoWeapon",
-    MaxKey = "UI_PlayerHead_Name_10029",
+    MaxKey = "UI_PlayerHead_Name_10026",
     Loader = function()
       return {
         UI_PersonalPage_ActionNoWeapon = {
@@ -76285,6 +76285,15 @@ Allez voir ce qui se passe.]]
         UI_PlayerHead_Des_10030 = {
           ContentFR = "Permet de remplacer l’icône d’avatar par celle de Zhiliu."
         },
+        UI_PlayerHead_Des_10031 = {
+          ContentFR = "Permet de remplacer l’icône d’avatar par celle de Su Yi."
+        },
+        UI_PlayerHead_Des_10032 = {
+          ContentFR = "Permet de remplacer l’icône d’avatar par celle d’Eve."
+        },
+        UI_PlayerHead_Des_10033 = {
+          ContentFR = "Permet de remplacer l’icône d’avatar par celle de Falsi."
+        },
         UI_PlayerHead_Des_20001 = {
           ContentFR = "Permet de remplacer l’icône d’avatar par celle de « Bal du songe »."
         },
@@ -76374,7 +76383,15 @@ Allez voir ce qui se passe.]]
         },
         UI_PlayerHead_Name_10026 = {
           ContentFR = "Portrait : Chasseuse de Phoxène"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_PlayerHead_Name_10027",
+    MaxKey = "UI_PlayerHead_Name_30178",
+    Loader = function()
+      return {
         UI_PlayerHead_Name_10027 = {
           ContentFR = "Portrait : Le garçon dans le rêve"
         },
@@ -76383,15 +76400,7 @@ Allez voir ce qui se passe.]]
         },
         UI_PlayerHead_Name_10029 = {
           ContentFR = "Portrait : Passeuse de la Mer du Silence"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_PlayerHead_Name_10030",
-    MaxKey = "UI_PlayerHead_Name_40002",
-    Loader = function()
-      return {
+        },
         UI_PlayerHead_Name_10030 = {
           ContentFR = "Portrait : La stratège"
         },
@@ -76962,7 +76971,15 @@ Allez voir ce qui se passe.]]
         UI_PlayerHead_Name_30177 = {ContentFR = "Sagesse"},
         UI_PlayerHead_Name_30178 = {
           ContentFR = "Lapin entre réalité et illusion"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_PlayerHead_Name_30179",
+    MaxKey = "UI_Raid_Boss_Battle",
+    Loader = function()
+      return {
         UI_PlayerHead_Name_30179 = {
           ContentFR = "Couteau du Lapin blanc"
         },
@@ -76971,15 +76988,7 @@ Allez voir ce qui se passe.]]
         },
         UI_PlayerHead_Name_40002 = {
           ContentFR = "Palais des merveilles – Scintillant"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_PlayerHead_Name_40003",
-    MaxKey = "UI_Raid_MaxScore",
-    Loader = function()
-      return {
+        },
         UI_PlayerHead_Name_40003 = {
           ContentFR = "Regard perçant"
         },
@@ -77498,7 +77507,15 @@ Allez voir ce qui se passe.]]
         },
         UI_Raid_Boss_Battle = {
           ContentFR = "Classement suprême"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Raid_Boss_Detail",
+    MaxKey = "UI_Rouge_Detail",
+    Loader = function()
+      return {
         UI_Raid_Boss_Detail = {
           ContentFR = "Vaincre la menace majeure avant la fin du temps imparti"
         },
@@ -77507,15 +77524,7 @@ Allez voir ce qui se passe.]]
         },
         UI_Raid_MaxScore = {
           ContentFR = "Plafond de score"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Raid_Pre_Battle",
-    MaxKey = "UI_Rouge_Event_ReviewESC",
-    Loader = function()
-      return {
+        },
         UI_Raid_Pre_Battle = {
           ContentFR = "Phase de groupes"
         },
@@ -78042,20 +78051,20 @@ Allez voir ce qui se passe.]]
         },
         UI_Rouge_Detail = {
           ContentFR = "À propos du Dédale mystique"
-        },
-        UI_Rouge_ESC_EndOut = {
-          ContentFR = "Quitter et valider"
-        },
-        UI_Rouge_ESC_HalfwayOut = {ContentFR = "Quitter"},
-        UI_Rouge_Event_ReviewESC = {ContentFR = "Retour"}
+        }
       }
     end
   },
   {
-    MinKey = "UI_Rouge_Shop_MainTab",
-    MaxKey = "UI_STORY_EX02_PROTECT_EVE_01",
+    MinKey = "UI_Rouge_ESC_EndOut",
+    MaxKey = "UI_STAT_Sigil_SUFFER",
     Loader = function()
       return {
+        UI_Rouge_ESC_EndOut = {
+          ContentFR = "Quitter et valider"
+        },
+        UI_Rouge_ESC_HalfwayOut = {ContentFR = "Quitter"},
+        UI_Rouge_Event_ReviewESC = {ContentFR = "Retour"},
         UI_Rouge_Shop_MainTab = {
           ContentFR = "Marchand abyssal"
         },
@@ -78520,7 +78529,15 @@ Allez voir ce qui se passe.]]
         },
         UI_STAT_Sigil_SUFFER = {
           ContentFR = "Dégâts subis (Emblème de combat)"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_STAT_Sigil_Weapon_Config",
+    MaxKey = "UI_Setup_Panel_Exp",
+    Loader = function()
+      return {
         UI_STAT_Sigil_Weapon_Config = {
           ContentFR = "Configuration d’armes"
         },
@@ -78529,15 +78546,7 @@ Allez voir ce qui se passe.]]
         },
         UI_STORY_EX02_PROTECT_EVE_01 = {
           ContentFR = "Protéger Ada"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_SUBMIT_10630",
-    MaxKey = "UI_Shader_Skip",
-    Loader = function()
-      return {
+        },
         UI_SUBMIT_10630 = {
           ContentFR = "Soumettre des matériaux"
         },
@@ -79050,22 +79059,22 @@ Allez voir ce qui se passe.]]
         UI_Settlement_Repeat_Notenough = {
           ContentFR = "Énergie insuffisante pour relancer le défi"
         },
-        UI_Setup_Panel_Exp = {ContentFR = "EXP"},
+        UI_Setup_Panel_Exp = {ContentFR = "EXP"}
+      }
+    end
+  },
+  {
+    MinKey = "UI_Shader_Continue",
+    MaxKey = "UI_Skin_Name_320201",
+    Loader = function()
+      return {
         UI_Shader_Continue = {
           ContentFR = "Continuer la compilation"
         },
         UI_Shader_Fail = {
           ContentFR = "Une anomalie potentielle a été détectée lors de la compilation des shaders. Souhaitez-vous ignorer cette compilation ?"
         },
-        UI_Shader_Skip = {ContentFR = "Ignorer"}
-      }
-    end
-  },
-  {
-    MinKey = "UI_Shadow_Carrying",
-    MaxKey = "UI_Skin_Name_410101",
-    Loader = function()
-      return {
+        UI_Shader_Skip = {ContentFR = "Ignorer"},
         UI_Shadow_Carrying = {
           ContentFR = "Arme équipée"
         },
@@ -79614,7 +79623,15 @@ Allez voir ce qui se passe.]]
         },
         UI_Skin_Name_320201 = {
           ContentFR = "Nuit envoûtante — Camilla"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Skin_Name_3301",
+    MaxKey = "UI_StringBoard_Researching",
+    Loader = function()
+      return {
         UI_Skin_Name_3301 = {
           ContentFR = "Tenue de Margie"
         },
@@ -79623,15 +79640,7 @@ Allez voir ce qui se passe.]]
         },
         UI_Skin_Name_410101 = {
           ContentFR = "Murmures indicibles — Rhythm"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Skin_Name_4102",
-    MaxKey = "UI_SubTitle_BookArchive",
-    Loader = function()
-      return {
+        },
         UI_Skin_Name_4102 = {
           ContentFR = "Tenue de Zhiliu"
         },
@@ -80176,22 +80185,22 @@ Allez voir ce qui se passe.]]
         },
         UI_StringBoard_Researching = {
           ContentFR = "Enquête en cours..."
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_StringBoard_Reward",
+    MaxKey = "UI_TEMPLE_CatchWarn_2",
+    Loader = function()
+      return {
         UI_StringBoard_Reward = {
           ContentFR = "Récompenses"
         },
         UI_StringBoard_Total = {
           ContentFR = "Collecté :{空格}"
         },
-        UI_SubTitle_BookArchive = {ContentFR = "Lectures"}
-      }
-    end
-  },
-  {
-    MinKey = "UI_SubTitle_CharArchive",
-    MaxKey = "UI_TEMPLE_Catch_2",
-    Loader = function()
-      return {
+        UI_SubTitle_BookArchive = {ContentFR = "Lectures"},
         UI_SubTitle_CharArchive = {
           ContentFR = "Personnages"
         },
@@ -80766,7 +80775,15 @@ Tirer sur les cibles pour marquer des points.
         },
         UI_TEMPLE_CatchWarn_2 = {
           ContentFR = "Le niveau de l’eau monte. Les monstres seront bientôt submergés."
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_TEMPLE_Catch_0",
+    MaxKey = "UI_TempleEvent_Ball",
+    Loader = function()
+      return {
         UI_TEMPLE_Catch_0 = {
           ContentFR = "Attaquez une cage pour la faire tomber"
         },
@@ -80775,15 +80792,7 @@ Tirer sur les cibles pour marquer des points.
         },
         UI_TEMPLE_Catch_2 = {
           ContentFR = "Belle prise ! Score ×2 !"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_TEMPLE_Catch_3",
-    MaxKey = "UI_TempleEvent_HardModeShort",
-    Loader = function()
-      return {
+        },
         UI_TEMPLE_Catch_3 = {
           ContentFR = "Capture exceptionnelle ! Multiplicateur augmenté !"
         },
@@ -81330,22 +81339,22 @@ Tirer sur les cibles pour marquer des points.
         },
         UI_TempleEvent_Ball = {
           ContentFR = "Lance-boulets"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_TempleEvent_EntryLevel",
+    MaxKey = "UI_Voucher_Available",
+    Loader = function()
+      return {
         UI_TempleEvent_EntryLevel = {
           ContentFR = "Lancer le défi"
         },
         UI_TempleEvent_HardMode = {
           ContentFR = "Difficulté du défi"
         },
-        UI_TempleEvent_HardModeShort = {ContentFR = "Difficile"}
-      }
-    end
-  },
-  {
-    MinKey = "UI_TempleEvent_LevelDes",
-    MaxKey = "UI_Voucher_DefaultUseDes",
-    Loader = function()
-      return {
+        UI_TempleEvent_HardModeShort = {ContentFR = "Difficile"},
         UI_TempleEvent_LevelDes = {
           ContentFR = "Description du défi"
         },
@@ -81866,22 +81875,22 @@ Tirer sur les cibles pour marquer des points.
         UI_Vote_Wave = {ContentFR = "Vague"},
         UI_Voucher_Available = {
           ContentFR = "<H>Bons de réduction disponibles</>"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Voucher_Count",
+    MaxKey = "UI_WEAPON_NAME_530101",
+    Loader = function()
+      return {
         UI_Voucher_Count = {ContentFR = "%s ×1"},
         UI_Voucher_DefaultUse = {
           ContentFR = "Sélection auto. du meilleur bon"
         },
         UI_Voucher_DefaultUseDes = {
           ContentFR = "Si vous possédez des bons, celui offrant la meilleure réduction est sélectionné par défaut. Sinon, aucun bon n’est appliqué. (Un seul bon peut être utilisé par achat.)"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Voucher_NotUse",
-    MaxKey = "UI_WEAPON_NAME_AutoChess_11",
-    Loader = function()
-      return {
+        },
         UI_Voucher_NotUse = {
           ContentFR = "Ne pas utiliser de bon de réduction"
         },
@@ -82460,22 +82469,22 @@ Tirer sur les cibles pour marquer des points.
         UI_WEAPON_NAME_310101 = {
           ContentFR = "Hansel et Gretel"
         },
-        UI_WEAPON_NAME_530101 = {ContentFR = "Icare"},
+        UI_WEAPON_NAME_530101 = {ContentFR = "Icare"}
+      }
+    end
+  },
+  {
+    MinKey = "UI_WEAPON_NAME_AutoChess_1",
+    MaxKey = "UI_WeaponSkin_Des_3010101",
+    Loader = function()
+      return {
         UI_WEAPON_NAME_AutoChess_1 = {ContentFR = "Rune de PV"},
         UI_WEAPON_NAME_AutoChess_10 = {
           ContentFR = "Rune de rupture"
         },
         UI_WEAPON_NAME_AutoChess_11 = {
           ContentFR = "Rune de désagrégation"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WEAPON_NAME_AutoChess_12",
-    MaxKey = "UI_WeaponSkin_Des_3010104",
-    Loader = function()
-      return {
+        },
         UI_WEAPON_NAME_AutoChess_12 = {
           ContentFR = "Rune de trempe"
         },
@@ -83052,7 +83061,15 @@ Tirer sur les cibles pour marquer des points.
         },
         UI_WeaponSkin_Des_3010101 = {
           ContentFR = "Un vrai pêcheur ne rentre jamais bredouille. Par chance, le marché faisait des soldes aujourd’hui — quatre-vingts pièces la bête. Inutile de préciser d’où vient la prise."
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WeaponSkin_Des_3010102",
+    MaxKey = "UI_Wiki_Tab_Locked",
+    Loader = function()
+      return {
         UI_WeaponSkin_Des_3010102 = {
           ContentFR = "Juste avant leur collision, les étoiles s’échangèrent un dernier baiser.\nLeurs murmures brisés se muèrent en traînées de feu — souffle de deux amantes dérivant dans la voie lactée."
         },
@@ -83061,15 +83078,7 @@ Tirer sur les cibles pour marquer des points.
         },
         UI_WeaponSkin_Des_3010104 = {
           ContentFR = "Un espadon singulier, censé incarner l’autorité d’un père : ferme, formateur... et traumatisant juste ce qu’il faut."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WeaponSkin_Des_3010105",
-    MaxKey = "UI_Wiki_WikiReferTitle",
-    Loader = function()
-      return {
+        },
         UI_WeaponSkin_Des_3010105 = {ContentFR = "Miaou !"},
         UI_WeaponSkin_Des_3010106 = {
           ContentFR = "Un véritable maître n’a pas besoin d’arme : un bambou brisé ou une branche desséchée suffisent à écrire une légende que nul ne peut arrêter."
@@ -83620,7 +83629,15 @@ Tirer sur les cibles pour marquer des points.
         },
         UI_Wiki_Tab_Locked = {
           ContentFR = "Catégorie non débloquée"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Wiki_ToBeUnlcoked",
+    MaxKey = "VoiceDes102",
+    Loader = function()
+      return {
         UI_Wiki_ToBeUnlcoked = {
           ContentFR = "À venir..."
         },
@@ -83629,15 +83646,7 @@ Tirer sur les cibles pour marquer des points.
         },
         UI_Wiki_WikiReferTitle = {
           ContentFR = "Consulter l’entrée"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Windows_Close",
-    MaxKey = "VoiceDes105",
-    Loader = function()
-      return {
+        },
         UI_Windows_Close = {ContentFR = "Fermer"},
         UI_Windows_GameName = {
           ContentFR = "Duet Night Abyss"
@@ -84162,7 +84171,15 @@ Tirer sur les cibles pour marquer des points.
         },
         VoiceDes102 = {
           ContentFR = "À propos de ton surnom"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "VoiceDes103",
+    MaxKey = "WikiText_20102101",
+    Loader = function()
+      return {
         VoiceDes103 = {
           ContentFR = "À propos des vœux"
         },
@@ -84171,15 +84188,7 @@ Tirer sur les cibles pour marquer des points.
         },
         VoiceDes105 = {
           ContentFR = "À propos des rêves"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "VoiceDes106",
-    MaxKey = "WikiText_20102301",
-    Loader = function()
-      return {
+        },
         VoiceDes106 = {
           ContentFR = "À propos des parents"
         },
@@ -84726,7 +84735,15 @@ Tirer sur les cibles pour marquer des points.
         },
         WikiText_20102101 = {
           ContentFR = "De son nom d’origine Dis Galea, il fut un général éminent durant la Grande Migration.\nIl devint par la suite le fondateur de la dynastie Galea qui régna sur Hyperborea."
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "WikiText_20102102",
+    MaxKey = "WikiText_40600501",
+    Loader = function()
+      return {
         WikiText_20102102 = {
           ContentFR = "Les chroniques impériales relatent qu’après les bouleversements de la Nuit du Lac du Deuil, Dis Ier mena les Solariens dans leur résistance contre les atrocités des Charons.\nMais une fois la victoire assurée, il choisit la voie du pardon, inaugurant une ère nouvelle connue sous le nom de Paix d’Argent."
         },
@@ -84735,15 +84752,7 @@ Tirer sur les cibles pour marquer des points.
         },
         WikiText_20102301 = {
           ContentFR = "Soprano principale de la troupe de la Flûte Enchantée et star incontournable de l’opéra hyperboréen.\nConnue pour sa voix aux nuances multiples et son art du travestissement, elle est surnommée « Violetta aux mille métamorphoses »."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "WikiText_20102302",
-    MaxKey = "WikiText_40600801",
-    Loader = function()
-      return {
+        },
         WikiText_20102302 = {
           ContentFR = "De son vrai nom Enola Ruthford, elle est la fille de Fabrice Ruthford, ancien officier en charge de la Fosse de Glevum.\n\nUne affaire d’enlèvement la conduisit à croiser la route de Violette, une jeune fille issue des taudis qui rêvait de devenir dramaturge. À la mort de cette dernière, afin d’exaucer son dernier vœu, Enola simula sa propre disparition avec l’aide de Sig, le frère aîné de Violette, prit le nom de Violetta et s’enfuit à Luca pour étudier l’art lyrique.\nAujourd’hui chanteuse de renom, Violetta revient sur la scène de sa terre natale avec <I>Putini</>, l’opéra qu’elle a coécrit avec son amie disparue. Elle se consacre également à la formation de la jeune génération d’artistes lyriques, sans distinction d’origine ou de rang.\n\nSelon des informations circulant parmi les Chasseurs de Phoxène, elle mènerait aussi en secret des recherches sur un élève porté disparu du nom de Parsifal."
         },
@@ -85334,7 +85343,15 @@ Tirer sur les cibles pour marquer des points.
         },
         WikiText_40600501 = {
           ContentFR = "Organisation savante non gouvernementale de renom, active au-delà des frontières, animée par la volonté de révéler au grand jour les vestiges du passé. Elle mène à travers le continent d’Atlasia des projets de fouilles archéologiques visant à explorer des ruines antiques, préserver les artéfacts et reconstituer la vérité historique. L’organisation accepte des financements issus de multiples horizons et connut autrefois un grand succès auprès de la haute société ; parmi ses membres honoraires figura même une ancienne Impératrice Hyperboréenne."
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "WikiText_40600601",
+    MaxKey = "voice_ch_char_Baonu_vo_skill02_r03",
+    Loader = function()
+      return {
         WikiText_40600601 = {
           ContentFR = "Apothicairerie réputée de Haojing. Selon la rumeur, la fondatrice de la Pharmacie Zesheng serait issue de la tradition Zhuyou de la maison Fu. Elle renonça à l’Art de l’Éphémère, transmis dans sa famille, pour consacrer sa vie à l’herboristerie. La Pharmacie Zesheng est née de cette nouvelle école. Après plusieurs décennies de transmission, l’établissement attire aujourd’hui de nombreux apprentis et disciples."
         },
@@ -85343,15 +85360,7 @@ Tirer sur les cibles pour marquer des points.
         },
         WikiText_40600801 = {
           ContentFR = "Contrairement aux bâtiments traditionnels en pierre, la partie supérieure de la Gare des Cent-Fleurs repose sur une charpente d’acier recouverte de verre, ce qui lui procure une luminosité remarquable et en fait l’un des emblèmes de Givrelac.\n \nLes nettoyeurs des structures métalliques sont chargés d’éliminer la poussière et les nids d’oiseaux accumulés sur l’ossature de la gare. Ce travail revient le plus souvent à des enfants agiles et débrouillards."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "WikiText_40600901",
-    MaxKey = "voice_ch_char_Baonu_vo_topic_01_3",
-    Loader = function()
-      return {
+        },
         WikiText_40600901 = {
           ContentFR = "Organisation clandestine fondée spontanément par les ouvriers de la Gare des Cent-Fleurs. Seuls les employés les plus endurants et travailleurs sont autorisés à la rejoindre.\nSes membres s’accordent une entraide modeste, mais l’identité de son dirigeant, tout comme ses véritables objectifs, demeure enveloppée de mystère."
         },
@@ -85936,7 +85945,15 @@ Tirer sur les cibles pour marquer des points.
         },
         voice_ch_char_Baonu_vo_skill02_r03 = {
           ContentFR = "Samaël, accorde-moi ta « colère » !"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Baonu_vo_topic_01_1",
+    MaxKey = "voice_ch_char_Feina_vo_welcome",
+    Loader = function()
+      return {
         voice_ch_char_Baonu_vo_topic_01_1 = {
           ContentFR = "Samaël n’est pas une simple arme. C’est mon meilleur ami !"
         },
@@ -85945,15 +85962,7 @@ Tirer sur les cibles pour marquer des points.
         },
         voice_ch_char_Baonu_vo_topic_01_3 = {
           ContentFR = "... Seulement voilà. Depuis ce jour, il ne répond plus à mes appels. H-Hé ! C’est un secret ! Tu n’as absolument pas le droit d’en parler !"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Baonu_vo_topic_01_4",
-    MaxKey = "voice_ch_char_Fuluo01_vo_gain",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Baonu_vo_topic_01_4 = {
           ContentFR = "Hein ?! Il n’aime pas la glace ?! Alors... de la purée ? De la vinaigrette, peut-être ?"
         },
@@ -86532,7 +86541,15 @@ Tirer sur les cibles pour marquer des points.
         },
         voice_ch_char_Feina_vo_welcome = {
           ContentFR = "Ah, c’est toi. Bonjour, comment vas-tu ?"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Fuluo01_vo_appear",
+    MaxKey = "voice_ch_char_Kezhou_vo_topic_04_4",
+    Loader = function()
+      return {
         voice_ch_char_Fuluo01_vo_appear = {
           ContentFR = "Si l’éclat divin ne peut percer cette longue nuit... alors je saisirai moi-même Sa balance."
         },
@@ -86541,15 +86558,7 @@ Tirer sur les cibles pour marquer des points.
         },
         voice_ch_char_Fuluo01_vo_gain = {
           ContentFR = "Je purifierai cette terre souillée et rendrai leur jugement aux coupables. Je ferai venir la lumière du jour et accorderai ma clémence aux innocents. Toi qui partages ma route... sois témoin de tout cela."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Fuluo01_vo_skill02_r01",
-    MaxKey = "voice_ch_char_Landi_vo_appear",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Fuluo01_vo_skill02_r01 = {
           ContentFR = "Nulle absolution."
         },
@@ -87130,7 +87139,15 @@ Tirer sur les cibles pour marquer des points.
         },
         voice_ch_char_Kezhou_vo_topic_04_4 = {
           ContentFR = "Mais c’est le nom que mon père m’a donné. Peut-être espérait-il que je devienne un héros. Il ne m’a pas laissé grand-chose, mais tant que je porte ce nom, c’est comme si son épée laissait encore une trace dans ce monde."
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Kezhou_vo_victory",
+    MaxKey = "voice_ch_char_Nifu_vo_lvup",
+    Loader = function()
+      return {
         voice_ch_char_Kezhou_vo_victory = {
           ContentFR = "Mon épée pour la justice. Qui sera le prochain ?"
         },
@@ -87139,15 +87156,7 @@ Tirer sur les cibles pour marquer des points.
         },
         voice_ch_char_Landi_vo_appear = {
           ContentFR = "Je suis vraiment obligé d’y aller cette fois ?"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Landi_vo_battleidle",
-    MaxKey = "voice_ch_char_Nifu_vo_skill01_r02",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Landi_vo_battleidle = {
           ContentFR = "Si seulement ils savaient aussi bien que moi la valeur du repos."
         },
@@ -87726,7 +87735,15 @@ Tirer sur les cibles pour marquer des points.
         },
         voice_ch_char_Nifu_vo_lvup = {
           ContentFR = "Telle la douce renaissance du printemps, où les herbes percent la terre et les branches s’ornent de bourgeons."
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Nifu_vo_revive",
+    MaxKey = "voice_ch_char_Suyi_vo_companio_03",
+    Loader = function()
+      return {
         voice_ch_char_Nifu_vo_revive = {
           ContentFR = "Il semble que mon heure ne soit pas encore venue."
         },
@@ -87735,15 +87752,7 @@ Tirer sur les cibles pour marquer des points.
         },
         voice_ch_char_Nifu_vo_skill01_r02 = {
           ContentFR = "La nuit s’efface devant l’aurore."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Nifu_vo_skill02_r01",
-    MaxKey = "voice_ch_char_Suyi_vo_fail",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Nifu_vo_skill02_r01 = {
           ContentFR = "Tels les larmes pleines de grâce de la Mère Embla."
         },
@@ -88320,7 +88329,15 @@ Tirer sur les cibles pour marquer des points.
         },
         voice_ch_char_Suyi_vo_companio_03 = {
           ContentFR = "Tes ailes... elles sont magnifiques. Mais les miennes ne sont pas mal non plus. On fait la course ?"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Suyi_vo_die_r01",
+    MaxKey = "voice_ch_char_Yeer_vo_appear",
+    Loader = function()
+      return {
         voice_ch_char_Suyi_vo_die_r01 = {
           ContentFR = "Tante... pardon... je n’ai pas réussi..."
         },
@@ -88329,15 +88346,7 @@ Tirer sur les cibles pour marquer des points.
         },
         voice_ch_char_Suyi_vo_fail = {
           ContentFR = "Puissance... modules... moteur... Où est l’erreur... ?"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Suyi_vo_gain",
-    MaxKey = "voice_ch_char_Yeer_vo_battlestart_r02",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Suyi_vo_gain = {
           ContentFR = "Les disciples de la Secte Jishu se serrent toujours les coudes. Si tu as des ennuis à Huaxu, appelle-moi. Je m’en occupe !"
         },
@@ -88920,7 +88929,15 @@ Tirer sur les cibles pour marquer des points.
         },
         voice_ch_char_Yeer_vo_appear = {
           ContentFR = "Yale : Pour le combat... O-Oliver est sûrement p-plus fort que moi..."
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Yeer_vo_battleidle",
+    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
+    Loader = function()
+      return {
         voice_ch_char_Yeer_vo_battleidle = {
           ContentFR = "Oliver : Bouge-toi un peu, trouve un truc à faire sauter.\nYale : Chut, on doit s’en tenir au plan."
         },
@@ -88929,15 +88946,7 @@ Tirer sur les cibles pour marquer des points.
         },
         voice_ch_char_Yeer_vo_battlestart_r02 = {
           ContentFR = "Yale : L’expérience va commencer, f-faites attention !"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Yeer_vo_be_hit_heavy_r01",
-    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Yeer_vo_be_hit_heavy_r01 = {
           ContentFR = "Oliver : Tu perds rien pour attendre."
         },

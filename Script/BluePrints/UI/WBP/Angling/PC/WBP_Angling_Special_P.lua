@@ -31,7 +31,9 @@ function M:OnCanSpecialFishing(AutoConfirmDelay)
   self.Text_Time:SetText(self.CountTime)
   self.Panel_Angling:SetVisibility(bAutoConfirm and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.SelfHitTestInvisible)
   self.Btn_Angling:SetVisibility(bAutoConfirm and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.Visible)
-  self.WidgetSwitcher_E:SetVisibility(bAutoConfirm and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.SelfHitTestInvisible)
+  if self.WidgetSwitcher_E then
+    self.WidgetSwitcher_E:SetVisibility(bAutoConfirm and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.SelfHitTestInvisible)
+  end
   self.bFailed = false
   self:PlayAnimation(self.In)
   if self.RootPage.DeviceInPc then

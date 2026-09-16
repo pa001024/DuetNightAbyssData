@@ -74065,7 +74065,7 @@ local Data = {
   },
   {
     MinKey = "UI_PersonInfo_NotHeld",
-    MaxKey = "UI_PlayerHead_Name_10021",
+    MaxKey = "UI_PlayerHead_Name_10018",
     Loader = function()
       return {
         UI_PersonInfo_NotHeld = {ContentTC = "未獲得"},
@@ -74483,6 +74483,15 @@ local Data = {
         UI_PlayerHead_Des_10030 = {
           ContentTC = "可將頭像更換為止流的形象。"
         },
+        UI_PlayerHead_Des_10031 = {
+          ContentTC = "可將頭像更換為蘇乙的形象。"
+        },
+        UI_PlayerHead_Des_10032 = {
+          ContentTC = "可將頭像更換為伊薇的形象。"
+        },
+        UI_PlayerHead_Des_10033 = {
+          ContentTC = "可將頭像更換為法露茜的形象。"
+        },
         UI_PlayerHead_Des_20001 = {
           ContentTC = "可將頭像更換為「夢中的舞會」的形象。"
         },
@@ -74548,7 +74557,15 @@ local Data = {
         },
         UI_PlayerHead_Name_10018 = {
           ContentTC = "幕後之人的肖像"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_PlayerHead_Name_10019",
+    MaxKey = "UI_PlayerHead_Name_30169",
+    Loader = function()
+      return {
         UI_PlayerHead_Name_10019 = {
           ContentTC = "大軍團長的肖像"
         },
@@ -74557,15 +74574,7 @@ local Data = {
         },
         UI_PlayerHead_Name_10021 = {
           ContentTC = "一體雙生的肖像"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_PlayerHead_Name_10022",
-    MaxKey = "UI_PlayerHead_Name_30173",
-    Loader = function()
-      return {
+        },
         UI_PlayerHead_Name_10022 = {
           ContentTC = "百花公主的肖像"
         },
@@ -75120,22 +75129,22 @@ local Data = {
         UI_PlayerHead_Name_30168 = {ContentTC = "流星雨"},
         UI_PlayerHead_Name_30169 = {
           ContentTC = "兔死誰手"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_PlayerHead_Name_30170",
+    MaxKey = "UI_RaceLottery_PlayerRaceRank",
+    Loader = function()
+      return {
         UI_PlayerHead_Name_30170 = {ContentTC = "游魚"},
         UI_PlayerHead_Name_30172 = {
           ContentTC = "強敵對策"
         },
         UI_PlayerHead_Name_30173 = {
           ContentTC = "追獵·晴藍"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_PlayerHead_Name_30174",
-    MaxKey = "UI_RaceLottery_Toast_NotInRewardTime",
-    Loader = function()
-      return {
+        },
         UI_PlayerHead_Name_30174 = {
           ContentTC = "追獵·銹紅"
         },
@@ -75626,22 +75635,22 @@ local Data = {
           ContentTC = "%s號選手視角"
         },
         UI_RaceLottery_PlayerNum = {ContentTC = "NO."},
-        UI_RaceLottery_PlayerRaceRank = {ContentTC = "第%s名"},
+        UI_RaceLottery_PlayerRaceRank = {ContentTC = "第%s名"}
+      }
+    end
+  },
+  {
+    MinKey = "UI_RaceLottery_StartPoint",
+    MaxKey = "UI_RougeLike_GiveUpSelect",
+    Loader = function()
+      return {
         UI_RaceLottery_StartPoint = {ContentTC = "起點"},
         UI_RaceLottery_Toast_MaxAntenum = {
           ContentTC = "已達今日可支持獎券上限"
         },
         UI_RaceLottery_Toast_NotInRewardTime = {
           ContentTC = "今日賽果尚未公示，請耐心等待"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_RaceLottery_WatchingNum",
-    MaxKey = "UI_RougeLike_SelectBlessing",
-    Loader = function()
-      return {
+        },
         UI_RaceLottery_WatchingNum = {
           ContentTC = "觀賽人數"
         },
@@ -76162,22 +76171,22 @@ local Data = {
         UI_RougeLike_End__ClickEmpty = {
           ContentTC = "點擊空白處關閉"
         },
-        UI_RougeLike_GiveUpSelect = {ContentTC = "放棄"},
+        UI_RougeLike_GiveUpSelect = {ContentTC = "放棄"}
+      }
+    end
+  },
+  {
+    MinKey = "UI_RougeLike_GiveUpSelect_Tip",
+    MaxKey = "UI_STAT_Online_P4",
+    Loader = function()
+      return {
         UI_RougeLike_GiveUpSelect_Tip = {
           ContentTC = "放棄本次選擇機會可<Highlight>獲取%d余燼</>，是否放棄？"
         },
         UI_RougeLike_RefreshSelect = {ContentTC = "刷新"},
         UI_RougeLike_SelectBlessing = {
           ContentTC = "選擇1枚燭芯"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_RougeLike_SelectTreasure",
-    MaxKey = "UI_STAT_Shield",
-    Loader = function()
-      return {
+        },
         UI_RougeLike_SelectTreasure = {
           ContentTC = "選擇1件遺物"
         },
@@ -76612,22 +76621,22 @@ local Data = {
         UI_STAT_Online_P1 = {ContentTC = "1P"},
         UI_STAT_Online_P2 = {ContentTC = "2P"},
         UI_STAT_Online_P3 = {ContentTC = "3P"},
-        UI_STAT_Online_P4 = {ContentTC = "4P"},
+        UI_STAT_Online_P4 = {ContentTC = "4P"}
+      }
+    end
+  },
+  {
+    MinKey = "UI_STAT_Other",
+    MaxKey = "UI_Setting_Display",
+    Loader = function()
+      return {
         UI_STAT_Other = {ContentTC = "其他"},
         UI_STAT_SUFFER = {
           ContentTC = "承受傷害"
         },
         UI_STAT_Shield = {
           ContentTC = "護盾吸收傷害"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_STAT_Sigil",
-    MaxKey = "UI_Setting_Layout02",
-    Loader = function()
-      return {
+        },
         UI_STAT_Sigil = {
           ContentTC = "協戰印記"
         },
@@ -77080,18 +77089,18 @@ local Data = {
         UI_Setting_CustomLayout = {
           ContentTC = "自定義布局"
         },
-        UI_Setting_Display = {ContentTC = "顯示"},
-        UI_Setting_Hide = {ContentTC = "隱藏"},
-        UI_Setting_Layout01 = {ContentTC = "布局一"},
-        UI_Setting_Layout02 = {ContentTC = "布局二"}
+        UI_Setting_Display = {ContentTC = "顯示"}
       }
     end
   },
   {
-    MinKey = "UI_Setting_Layout03",
-    MaxKey = "UI_Skin_Name_3103",
+    MinKey = "UI_Setting_Hide",
+    MaxKey = "UI_Skin_Name_310101",
     Loader = function()
       return {
+        UI_Setting_Hide = {ContentTC = "隱藏"},
+        UI_Setting_Layout01 = {ContentTC = "布局一"},
+        UI_Setting_Layout02 = {ContentTC = "布局二"},
         UI_Setting_Layout03 = {ContentTC = "布局三"},
         UI_SettlementPage_NewRecord = {ContentTC = "新記錄"},
         UI_SettlementPage_TotalScore = {ContentTC = "總積分"},
@@ -77620,7 +77629,15 @@ local Data = {
         },
         UI_Skin_Name_310101 = {
           ContentTC = "七日聖約·琳恩"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Skin_Name_3102",
+    MaxKey = "UI_Squad_SigilMiss_Toast",
+    Loader = function()
+      return {
         UI_Skin_Name_3102 = {
           ContentTC = "希爾妲的衣飾"
         },
@@ -77629,15 +77646,7 @@ local Data = {
         },
         UI_Skin_Name_3103 = {
           ContentTC = "耶爾與奧利弗的衣飾"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Skin_Name_3104",
-    MaxKey = "UI_Squad_UnessentialMiss_Tips",
-    Loader = function()
-      return {
+        },
         UI_Skin_Name_3104 = {
           ContentTC = "法露茜的衣飾"
         },
@@ -78178,22 +78187,22 @@ local Data = {
         },
         UI_Squad_SigilMiss_Toast = {
           ContentTC = "請先裝配協戰同伴"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Squad_SwitchChar_Toast",
+    MaxKey = "UI_TEMPLE_BLANK",
+    Loader = function()
+      return {
         UI_Squad_SwitchChar_Toast = {
           ContentTC = "%s已替換至角色"
         },
         UI_Squad_SwitchSigil_Toast = {
           ContentTC = "%s已替換至%s"
         },
-        UI_Squad_UnessentialMiss_Tips = {ContentTC = "缺失"}
-      }
-    end
-  },
-  {
-    MinKey = "UI_State_Replaced",
-    MaxKey = "UI_TEMPLE_CONFIRM",
-    Loader = function()
-      return {
+        UI_Squad_UnessentialMiss_Tips = {ContentTC = "缺失"},
         UI_State_Replaced = {ContentTC = "已替換"},
         UI_StoryReview_Dialogue_None = {
           ContentTC = "暫無內容"
@@ -78708,7 +78717,15 @@ local Data = {
         UI_TEMPLE_81703 = {
           ContentTC = "擊落囚籠，困住敵人"
         },
-        UI_TEMPLE_BLANK = {ContentTC = "◆ "},
+        UI_TEMPLE_BLANK = {ContentTC = "◆ "}
+      }
+    end
+  },
+  {
+    MinKey = "UI_TEMPLE_COLLECT",
+    MaxKey = "UI_Team_YouBecomeLeader",
+    Loader = function()
+      return {
         UI_TEMPLE_COLLECT = {
           ContentTC = "目前積分："
         },
@@ -78717,15 +78734,7 @@ local Data = {
         },
         UI_TEMPLE_CONFIRM = {
           ContentTC = "確定放棄當前進度，重新開始？"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_TEMPLE_CatchCount",
-    MaxKey = "UI_TeamjoinRequest",
-    Loader = function()
-      return {
+        },
         UI_TEMPLE_CatchCount = {
           ContentTC = "距離第 %d/%d 輪籠子消失"
         },
@@ -79268,7 +79277,15 @@ local Data = {
         },
         UI_Team_YouBecomeLeader = {
           ContentTC = "你已成為隊長"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Team_YouGiveWayToNewLeader",
+    MaxKey = "UI_Vote_Finish_Retreating",
+    Loader = function()
+      return {
         UI_Team_YouGiveWayToNewLeader = {
           ContentTC = "你已移交隊長"
         },
@@ -79277,15 +79294,7 @@ local Data = {
         },
         UI_TeamjoinRequest = {
           ContentTC = "入隊申請"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_TeammateEffect_High",
-    MaxKey = "UI_Vote_Retreat_Reward",
-    Loader = function()
-      return {
+        },
         UI_TeammateEffect_High = {ContentTC = "顯示"},
         UI_TeammateEffect_Middle = {
           ContentTC = "部分遮罩"
@@ -79800,7 +79809,15 @@ local Data = {
         },
         UI_Vote_Finish_Retreating = {
           ContentTC = "即將撤離"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Vote_Retreat_Auto",
+    MaxKey = "UI_WEAPON_NAME_20603",
+    Loader = function()
+      return {
         UI_Vote_Retreat_Auto = {
           ContentTC = "若未做選擇，倒計時結束後將自動撤離"
         },
@@ -79809,15 +79826,7 @@ local Data = {
         },
         UI_Vote_Retreat_Reward = {
           ContentTC = "選擇撤離則直接結算當前獎勵"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Vote_Select",
-    MaxKey = "UI_WEAPON_NAME_20698",
-    Loader = function()
-      return {
+        },
         UI_Vote_Select = {
           ContentTC = "行動抉擇"
         },
@@ -80366,22 +80375,22 @@ local Data = {
         },
         UI_WEAPON_NAME_20603 = {
           ContentTC = "茵布拉花序"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WEAPON_NAME_20604",
+    MaxKey = "UI_WeaponCardLevel_Popup_HaveMax",
+    Loader = function()
+      return {
         UI_WEAPON_NAME_20604 = {ContentTC = "裂魂"},
         UI_WEAPON_NAME_20605 = {
           ContentTC = "帽匠的宴會"
         },
         UI_WEAPON_NAME_20698 = {
           ContentTC = "斥候長弓"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WEAPON_NAME_20699",
-    MaxKey = "UI_WeaponCardLevel_Popup_Overflow",
-    Loader = function()
-      return {
+        },
         UI_WEAPON_NAME_20699 = {
           ContentTC = "金屬長弓"
         },
@@ -80942,7 +80951,15 @@ local Data = {
         },
         UI_WeaponCardLevel_Popup_HaveMax = {
           ContentTC = "當前選中的武器中，存在已熔煉過的武器，本次熔煉將額外提升熔煉等級至 %s 級，是否繼續熔煉？"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WeaponCardLevel_Popup_HaveUpgraded",
+    MaxKey = "UI_Wiki_MainTitle",
+    Loader = function()
+      return {
         UI_WeaponCardLevel_Popup_HaveUpgraded = {
           ContentTC = "當前選中的武器中，存在已升級的武器，是否繼續熔煉？"
         },
@@ -80951,15 +80968,7 @@ local Data = {
         },
         UI_WeaponCardLevel_Popup_Overflow = {
           ContentTC = "熔煉等級即將溢出 %s 級，消耗的武器不會返還，是否繼續熔煉？"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WeaponCardLevel_Popup_PlayerEquiped",
-    MaxKey = "UI_Wiki_No_Content",
-    Loader = function()
-      return {
+        },
         UI_WeaponCardLevel_Popup_PlayerEquiped = {
           ContentTC = "該武器正在裝備中，無法被作為熔煉素材"
         },
@@ -81502,7 +81511,15 @@ local Data = {
         UI_Wiki_MainTab_Faction = {ContentTC = "勢力"},
         UI_Wiki_MainTitle = {
           ContentTC = "阿特拉西亞百科全書"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Wiki_Matches_Not_Found",
+    MaxKey = "VoiceDes096",
+    Loader = function()
+      return {
         UI_Wiki_Matches_Not_Found = {
           ContentTC = "目前分類下未搜尋到匹配項"
         },
@@ -81511,15 +81528,7 @@ local Data = {
         },
         UI_Wiki_No_Content = {
           ContentTC = "目前無解鎖詞條"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Wiki_RelatedEntry",
-    MaxKey = "VoiceDes099",
-    Loader = function()
-      return {
+        },
         UI_Wiki_RelatedEntry = {
           ContentTC = "關聯詞條"
         },
@@ -82012,7 +82021,15 @@ local Data = {
         },
         VoiceDes096 = {
           ContentTC = "關於口吃"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "VoiceDes097",
+    MaxKey = "WikiText_20101801",
+    Loader = function()
+      return {
         VoiceDes097 = {
           ContentTC = "關於童年"
         },
@@ -82021,15 +82038,7 @@ local Data = {
         },
         VoiceDes099 = {
           ContentTC = "關於垃圾桶"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "VoiceDes100",
-    MaxKey = "WikiText_20101903",
-    Loader = function()
-      return {
+        },
         VoiceDes100 = {
           ContentTC = "關於雪原"
         },
@@ -82560,7 +82569,15 @@ local Data = {
         },
         WikiText_20101801 = {
           ContentTC = "海伯利亞帝國皇帝。年少時即位，曾在帝國攝政塞維烏斯公爵的輔佐下推行一系列新政，改善卡戎之民的處境以緩解社會矛盾。但後來因不明原因廢止了這些懷柔政策，轉向對卡戎之民更深重的壓制。"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "WikiText_20101901",
+    MaxKey = "WikiText_40502303",
+    Loader = function()
+      return {
         WikiText_20101901 = {
           ContentTC = "海爾法·蘇爾特（蘇爾特：Surt），海伯利亞帝國軍事監獄現任典獄長。\n繼承了家族特徵，通體皮膚呈現如烈火一般鮮豔的紅色，且溫度極高，讓人無法接近。 \n正義感強烈，對秩序與正義有著強烈的執念，無法容忍一切欺騙與隱瞞行為。"
         },
@@ -82569,15 +82586,7 @@ local Data = {
         },
         WikiText_20101903 = {
           ContentTC = "在龍莎間諜案中，海爾法對{nickname2}進行了藥物催眠，並因此認可了{性别2:他|她}供詞的價值，同意進一步探尋真相。"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "WikiText_20102001",
-    MaxKey = "WikiText_40600201",
-    Loader = function()
-      return {
+        },
         WikiText_20102001 = {
           ContentTC = "海伯利亞帝國的親王，尤里烏斯的弟弟。"
         },
@@ -83168,7 +83177,15 @@ local Data = {
         },
         WikiText_40502303 = {
           ContentTC = "人們會在樂園巡遊時進行一場遊戲，在遊戲投票環節最高得票者將被判出局。\n\n樂園巡遊本質上是「兔媽媽」對樂園居民進行的一場服從性測試，違反樂園規則的玩家會遭到處決。"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "WikiText_40502401",
+    MaxKey = "voice_ch_char_Baonu_vo_idle",
+    Loader = function()
+      return {
         WikiText_40502401 = {
           ContentTC = "阿爾卡諾鎮的每個居民都有一個獨一無二的名牌，對應著不同的含義與本質，分別是「愚者」、「魔術師」、「女祭司」、「女皇」、「皇帝」、「教皇」、「戀人」、「戰車」、「力量」、「隱士」、「命運之輪」、「正義」、「倒吊人」、「死神」、「節制」、「惡魔」、「塔」、「星星」、「月亮」、「太陽」、「審判」、「世界」。這些名牌寓意著名牌持有者都是樂園的一家人。"
         },
@@ -83177,15 +83194,7 @@ local Data = {
         },
         WikiText_40600201 = {
           ContentTC = "坐落於冰湖城內外城交界處的歌劇院，至今已有數百年歷史，見證了冰湖城的興衰。\n是外城唯一能夠看到大量貴族出入的地方。"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "WikiText_40600301",
-    MaxKey = "voice_ch_char_Baonu_vo_skill01_r01",
-    Loader = function()
-      return {
+        },
         WikiText_40600301 = {
           ContentTC = "最初是由少部份漁民組成的民間互助組織，在冰湖城礦業衰落、漁業興起之後，協會成員逐漸增加，最後經過政府介入整頓，逐漸成為了官方的產業管理組織。"
         },
@@ -83766,22 +83775,22 @@ local Data = {
         },
         voice_ch_char_Baonu_vo_idle = {
           ContentTC = "薩麥爾，今天外面正豔陽高照呢，那我們吃點涼的怎麼樣？唔，聽說聖都最近有一種叫「冰淇淋」的甜品，莉茲偷偷買給你吧！雖然是平民的食物，但肯定比那些老頑固給的餐點美味很多！"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Baonu_vo_lvup",
+    MaxKey = "voice_ch_char_Feina_vo_topic_03_2",
+    Loader = function()
+      return {
         voice_ch_char_Baonu_vo_lvup = {
           ContentTC = "薩麥爾，我又變強了哦，讓我們一起保護那些煩人的傢伙吧。"
         },
         voice_ch_char_Baonu_vo_revive = {
           ContentTC = "「堅忍」大人的堅忍也是有限度的！"
         },
-        voice_ch_char_Baonu_vo_skill01_r01 = {ContentTC = "聖哉！"}
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Baonu_vo_skill01_r02",
-    MaxKey = "voice_ch_char_Feina_vo_topic_05_1",
-    Loader = function()
-      return {
+        voice_ch_char_Baonu_vo_skill01_r01 = {ContentTC = "聖哉！"},
         voice_ch_char_Baonu_vo_skill01_r02 = {
           ContentTC = "以「堅忍」之名！"
         },
@@ -84360,7 +84369,15 @@ local Data = {
         },
         voice_ch_char_Feina_vo_topic_03_2 = {
           ContentTC = "你說得對！也許那是一個仙境，所有睡著的孩子和小動物都可以在那裡一起玩。嗯……下次的夢裡會遇到誰呢？貓頭鷹爺爺、金絲雀小姐，還是白兔先生？"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Feina_vo_topic_04_1",
+    MaxKey = "voice_ch_char_Kezhou_vo_topic_02_5",
+    Loader = function()
+      return {
         voice_ch_char_Feina_vo_topic_04_1 = {
           ContentTC = "菲娜曾經有一個媽媽，兩個爸爸。不過，他們都不在了……"
         },
@@ -84369,15 +84386,7 @@ local Data = {
         },
         voice_ch_char_Feina_vo_topic_05_1 = {
           ContentTC = "他是最偉大的魔法師，是說話最好聽的人，是全世界最溫柔最溫柔的人……"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Feina_vo_topic_05_2",
-    MaxKey = "voice_ch_char_Kezhou_vo_topic_03_3",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Feina_vo_topic_05_2 = {
           ContentTC = "唔，你看起來有很多很多問題，我哪裡說的不對嗎？"
         },
@@ -84954,7 +84963,15 @@ local Data = {
         },
         voice_ch_char_Kezhou_vo_topic_02_5 = {
           ContentTC = "在我看來，現在的華胥就是把《大風九章》翻爛的拙劍客，連我這樣的飄零人都斬不盡，要是遇到真正的強敵，是會敗的。"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Kezhou_vo_topic_03_1",
+    MaxKey = "voice_ch_char_Nifu_vo_companio_03",
+    Loader = function()
+      return {
         voice_ch_char_Kezhou_vo_topic_03_1 = {
           ContentTC = "當然了，劍客的意思是擅長用劍，不是只會用劍。否則的話，華胥還有人能把筆和筷子當作武器，那劍客豈不是不能寫字吃飯？"
         },
@@ -84963,15 +84980,7 @@ local Data = {
         },
         voice_ch_char_Kezhou_vo_topic_03_3 = {
           ContentTC = "但是，如果碰見能痛快打上一場的對手，我肯定會拔出劍來，全力以赴。"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Kezhou_vo_topic_04_1",
-    MaxKey = "voice_ch_char_Nifu_vo_die_r02",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Kezhou_vo_topic_04_1 = {
           ContentTC = "確實，你這麼一問我能想到不少。啥啥一哥，什麼王，某仙之類，用動物來做外號的尤其多，龍虎獅鶴，飛禽走獸都有，非常熱鬧。"
         },
@@ -85546,7 +85555,15 @@ local Data = {
         },
         voice_ch_char_Nifu_vo_companio_03 = {
           ContentTC = "你好，孩子。呵呵……是啊，我們有著相似的角，說不定過去有些淵源。但那不是你的故事，不必深究，不必介懷，只管去做你想做的事就好。"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Nifu_vo_companio_04",
+    MaxKey = "voice_ch_char_Songlu_vo_topic_04_2",
+    Loader = function()
+      return {
         voice_ch_char_Nifu_vo_companio_04 = {
           ContentTC = "我雖擁有漫長的記憶，然而所見多為殘酷，能夠遺忘未必不是一種幸運。請相信，那些真正重要的東西，即便不被銘記，也終會回到你身邊。"
         },
@@ -85555,15 +85572,7 @@ local Data = {
         },
         voice_ch_char_Nifu_vo_die_r02 = {
           ContentTC = "只需享受這片刻沉眠。"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Nifu_vo_fail",
-    MaxKey = "voice_ch_char_Songlu_vo_topic_05_2",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Nifu_vo_fail = {
           ContentTC = "無妨，勝敗只是一時，重振旗鼓從頭再來便是。"
         },
@@ -86138,7 +86147,15 @@ local Data = {
         },
         voice_ch_char_Songlu_vo_topic_04_2 = {
           ContentTC = "因為穿著裙子到處跑太不方便啦，有一次我跑得快了，都被裙擺絆倒，手裡的麵包都撒了。"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Songlu_vo_topic_04_3",
+    MaxKey = "voice_ch_char_Xier_vo_topic_01_1",
+    Loader = function()
+      return {
         voice_ch_char_Songlu_vo_topic_04_3 = {
           ContentTC = "所以，哎……要是哪天，沒有人挨餓了，我就拜託婆婆再把這條褲子改回去！"
         },
@@ -86147,15 +86164,7 @@ local Data = {
         },
         voice_ch_char_Songlu_vo_topic_05_2 = {
           ContentTC = "之前想過，不過修士們說，想這種事情是什麼瀆……神？所以我就不想這些了。"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Songlu_vo_topic_05_3",
-    MaxKey = "voice_ch_char_Xier_vo_topic_02_1",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Songlu_vo_topic_05_3 = {
           ContentTC = "唉，修士們的話我總是聽得半懂不懂的，比如他們總是說貪吃是非常非常嚴重的罪過……可是好像越是大吃大喝的人，地位就越高哦。"
         },
@@ -86734,7 +86743,15 @@ local Data = {
         },
         voice_ch_char_Xier_vo_topic_01_1 = {
           ContentTC = "確實如此，起霧的日子不少，洗好的衣服在那樣的天氣裡無法晾乾，還會沾染彌漫的灰塵。"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Xier_vo_topic_01_2",
+    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
+    Loader = function()
+      return {
         voice_ch_char_Xier_vo_topic_01_2 = {
           ContentTC = "有時，還會有一些汙物趁著濃密的霧氣接近芙羅拉小姐，意圖不軌。"
         },
@@ -86743,15 +86760,7 @@ local Data = {
         },
         voice_ch_char_Xier_vo_topic_02_1 = {
           ContentTC = "一名女僕能戰鬥，很正常，沒什麼值得問的。"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Xier_vo_topic_02_2",
-    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Xier_vo_topic_02_2 = {
           ContentTC = "在我的眼中，嗡嗡作響的飛蠅與穢獸都是應當清掃的汙物。所謂的戰鬥，也不過是一項令人愉快的清掃工作而已。"
         },

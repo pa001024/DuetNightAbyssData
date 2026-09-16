@@ -176,19 +176,19 @@
   {
     "id": 10031,
     "name": "Portrait : Demoiselle Jishu",
-    "desc": "UI_PlayerHead_Des_10031",
+    "desc": "Permet de remplacer l’icône d’avatar par celle de Su Yi.",
     "icon": "T_Head_Suyi"
   },
   {
     "id": 10032,
     "name": "Portrait : Le Lapin Blanc",
-    "desc": "UI_PlayerHead_Des_10032",
+    "desc": "Permet de remplacer l’icône d’avatar par celle d’Eve.",
     "icon": "T_Head_Eve"
   },
   {
     "id": 10033,
     "name": "Portrait : La vengeresse",
-    "desc": "UI_PlayerHead_Des_10033",
+    "desc": "Permet de remplacer l’icône d’avatar par celle de Falsi.",
     "icon": "T_Head_Falu"
   },
   {

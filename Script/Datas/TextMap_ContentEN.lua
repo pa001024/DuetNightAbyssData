@@ -76797,7 +76797,7 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
   },
   {
     MinKey = "UI_PersonInfo_NoChar",
-    MaxKey = "UI_PlayerHead_Name_10020",
+    MaxKey = "UI_PlayerHead_Name_10017",
     Loader = function()
       return {
         UI_PersonInfo_NoChar = {
@@ -77200,6 +77200,15 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_PlayerHead_Des_10030 = {
           ContentEN = "Unlocks Zhiliu as your avatar icon."
         },
+        UI_PlayerHead_Des_10031 = {
+          ContentEN = "Unlocks Su Yi as your avatar icon."
+        },
+        UI_PlayerHead_Des_10032 = {
+          ContentEN = "Unlocks Eve as your avatar icon."
+        },
+        UI_PlayerHead_Des_10033 = {
+          ContentEN = "Unlocks Falsi as your avatar icon."
+        },
         UI_PlayerHead_Des_20001 = {
           ContentEN = "Unlocks \"Minuet Reverie\" as your avatar icon."
         },
@@ -77262,7 +77271,15 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         },
         UI_PlayerHead_Name_10017 = {
           ContentEN = "Portrait: Princess Rubbish Bin"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_PlayerHead_Name_10018",
+    MaxKey = "UI_PlayerHead_Name_30168",
+    Loader = function()
+      return {
         UI_PlayerHead_Name_10018 = {
           ContentEN = "Portrait: The One Behind the Curtain"
         },
@@ -77271,15 +77288,7 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         },
         UI_PlayerHead_Name_10020 = {
           ContentEN = "Portrait: The Perfect Maid"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_PlayerHead_Name_10021",
-    MaxKey = "UI_PlayerHead_Name_30172",
-    Loader = function()
-      return {
+        },
         UI_PlayerHead_Name_10021 = {
           ContentEN = "Portrait: The Undivided Two"
         },
@@ -77846,7 +77855,15 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         },
         UI_PlayerHead_Name_30168 = {
           ContentEN = "Meteor Shower"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_PlayerHead_Name_30169",
+    MaxKey = "UI_RaceLottery_PlayerNum",
+    Loader = function()
+      return {
         UI_PlayerHead_Name_30169 = {
           ContentEN = "Who Claims the Rabbit"
         },
@@ -77855,15 +77872,7 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         },
         UI_PlayerHead_Name_30172 = {
           ContentEN = "Elite Threat Protocol"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_PlayerHead_Name_30173",
-    MaxKey = "UI_RaceLottery_Toast_MaxAntenum",
-    Loader = function()
-      return {
+        },
         UI_PlayerHead_Name_30173 = {
           ContentEN = "Hunt: Celeste"
         },
@@ -78354,20 +78363,20 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_RaceLottery_NumXPlayerView = {
           ContentEN = "Contestant #%s View"
         },
-        UI_RaceLottery_PlayerNum = {ContentEN = "No. "},
-        UI_RaceLottery_PlayerRaceRank = {ContentEN = "Rank %s"},
-        UI_RaceLottery_StartPoint = {ContentEN = "Start"},
-        UI_RaceLottery_Toast_MaxAntenum = {
-          ContentEN = "You've used all your votes for today"
-        }
+        UI_RaceLottery_PlayerNum = {ContentEN = "No. "}
       }
     end
   },
   {
-    MinKey = "UI_RaceLottery_Toast_NotInRewardTime",
-    MaxKey = "UI_RougeLike_RefreshSelect",
+    MinKey = "UI_RaceLottery_PlayerRaceRank",
+    MaxKey = "UI_RougeLike_End__ClickEmpty",
     Loader = function()
       return {
+        UI_RaceLottery_PlayerRaceRank = {ContentEN = "Rank %s"},
+        UI_RaceLottery_StartPoint = {ContentEN = "Start"},
+        UI_RaceLottery_Toast_MaxAntenum = {
+          ContentEN = "You've used all your votes for today"
+        },
         UI_RaceLottery_Toast_NotInRewardTime = {
           ContentEN = "Today's race results aren't out yet. Check back later."
         },
@@ -78899,20 +78908,20 @@ But Vergilius and I had already put a plan in place.]]
         UI_RougeLike_End_Treasure = {ContentEN = "Artefacts"},
         UI_RougeLike_End__ClickEmpty = {
           ContentEN = "Click in the blank area to close"
-        },
-        UI_RougeLike_GiveUpSelect = {ContentEN = "Quit"},
-        UI_RougeLike_GiveUpSelect_Tip = {
-          ContentEN = "Discard current selection to <Highlight>obtain %d Embers</>. Proceed?"
-        },
-        UI_RougeLike_RefreshSelect = {ContentEN = "Refresh"}
+        }
       }
     end
   },
   {
-    MinKey = "UI_RougeLike_SelectBlessing",
-    MaxKey = "UI_STAT_SUFFER",
+    MinKey = "UI_RougeLike_GiveUpSelect",
+    MaxKey = "UI_STAT_Online_P3",
     Loader = function()
       return {
+        UI_RougeLike_GiveUpSelect = {ContentEN = "Quit"},
+        UI_RougeLike_GiveUpSelect_Tip = {
+          ContentEN = "Discard current selection to <Highlight>obtain %d Embers</>. Proceed?"
+        },
+        UI_RougeLike_RefreshSelect = {ContentEN = "Refresh"},
         UI_RougeLike_SelectBlessing = {
           ContentEN = "Select a Lampwick"
         },
@@ -79347,20 +79356,20 @@ But Vergilius and I had already put a plan in place.]]
         UI_STAT_Online_Kill_4P = {ContentEN = "4P Defeats"},
         UI_STAT_Online_P1 = {ContentEN = "1P"},
         UI_STAT_Online_P2 = {ContentEN = "2P"},
-        UI_STAT_Online_P3 = {ContentEN = "3P"},
-        UI_STAT_Online_P4 = {ContentEN = "4P"},
-        UI_STAT_Other = {ContentEN = "Others"},
-        UI_STAT_SUFFER = {
-          ContentEN = "Damage Taken"
-        }
+        UI_STAT_Online_P3 = {ContentEN = "3P"}
       }
     end
   },
   {
-    MinKey = "UI_STAT_Shield",
-    MaxKey = "UI_Setting_Layout01",
+    MinKey = "UI_STAT_Online_P4",
+    MaxKey = "UI_Setting_CustomLayout",
     Loader = function()
       return {
+        UI_STAT_Online_P4 = {ContentEN = "4P"},
+        UI_STAT_Other = {ContentEN = "Others"},
+        UI_STAT_SUFFER = {
+          ContentEN = "Damage Taken"
+        },
         UI_STAT_Shield = {
           ContentEN = "Shield DMG Absorption"
         },
@@ -79851,18 +79860,18 @@ Too many incorrect attempts. Access has been locked.
         UI_SetTime_Title = {ContentEN = "Time Cycle"},
         UI_Setting_CustomLayout = {
           ContentEN = "Custom Layout"
-        },
-        UI_Setting_Display = {ContentEN = "Show"},
-        UI_Setting_Hide = {ContentEN = "Hide"},
-        UI_Setting_Layout01 = {ContentEN = "Layout 1"}
+        }
       }
     end
   },
   {
-    MinKey = "UI_Setting_Layout02",
-    MaxKey = "UI_Skin_Name_310201",
+    MinKey = "UI_Setting_Display",
+    MaxKey = "UI_Skin_Name_3101",
     Loader = function()
       return {
+        UI_Setting_Display = {ContentEN = "Show"},
+        UI_Setting_Hide = {ContentEN = "Hide"},
+        UI_Setting_Layout01 = {ContentEN = "Layout 1"},
         UI_Setting_Layout02 = {ContentEN = "Layout 2"},
         UI_Setting_Layout03 = {ContentEN = "Layout 3"},
         UI_SettlementPage_NewRecord = {ContentEN = "New Record"},
@@ -80371,7 +80380,15 @@ Too many incorrect attempts. Access has been locked.
         },
         UI_Skin_Name_3101 = {
           ContentEN = "Lynn's Accessory"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Skin_Name_310101",
+    MaxKey = "UI_Squad_Sigil2",
+    Loader = function()
+      return {
         UI_Skin_Name_310101 = {
           ContentEN = "Seven-Day Covenant: Lynn"
         },
@@ -80380,15 +80397,7 @@ Too many incorrect attempts. Access has been locked.
         },
         UI_Skin_Name_310201 = {
           ContentEN = "Nightfall Enchantress: Hilda"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Skin_Name_3103",
-    MaxKey = "UI_Squad_SwitchSigil_Toast",
-    Loader = function()
-      return {
+        },
         UI_Skin_Name_3103 = {
           ContentEN = "Yale and Oliver's Accessory"
         },
@@ -80910,7 +80919,15 @@ On Hard difficulty, completing scoring also grants <H>bonus</> Coins based on th
         },
         UI_Squad_Sigil2 = {
           ContentEN = "Combat Partner 2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Squad_SigilMiss_Toast",
+    MaxKey = "UI_TEMPLE_81703",
+    Loader = function()
+      return {
         UI_Squad_SigilMiss_Toast = {
           ContentEN = "Please select a Combat Partner first"
         },
@@ -80919,15 +80936,7 @@ On Hard difficulty, completing scoring also grants <H>bonus</> Coins based on th
         },
         UI_Squad_SwitchSigil_Toast = {
           ContentEN = "%s has been allocated to %s"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Squad_UnessentialMiss_Tips",
-    MaxKey = "UI_TEMPLE_COMPLETE",
-    Loader = function()
-      return {
+        },
         UI_Squad_UnessentialMiss_Tips = {ContentEN = "Missing"},
         UI_State_Replaced = {ContentEN = "Current"},
         UI_StoryReview_Dialogue_None = {
@@ -81491,22 +81500,22 @@ Step on the correct tiles
         },
         UI_TEMPLE_81703 = {
           ContentEN = "Knock down cages to trap enemies"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_TEMPLE_BLANK",
+    MaxKey = "UI_Team_YouBeKicked",
+    Loader = function()
+      return {
         UI_TEMPLE_BLANK = {ContentEN = "◇"},
         UI_TEMPLE_COLLECT = {
           ContentEN = "Current Points: "
         },
         UI_TEMPLE_COMPLETE = {
           ContentEN = "Avian Spirit Trial Completed"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_TEMPLE_CONFIRM",
-    MaxKey = "UI_Team_YouLeaveTeam",
-    Loader = function()
-      return {
+        },
         UI_TEMPLE_CONFIRM = {
           ContentEN = "Are you sure you want to quit now and start over?"
         },
@@ -82043,7 +82052,15 @@ Don't let up until she reaches the finish!]]
         },
         UI_Team_YouBeKicked = {
           ContentEN = "You've been removed from the team"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Team_YouBecomeLeader",
+    MaxKey = "UI_Vote_Finish_Retreated",
+    Loader = function()
+      return {
         UI_Team_YouBecomeLeader = {
           ContentEN = "You are now the team leader"
         },
@@ -82052,15 +82069,7 @@ Don't let up until she reaches the finish!]]
         },
         UI_Team_YouLeaveTeam = {
           ContentEN = "You have left the team"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_TeamjoinRequest",
-    MaxKey = "UI_Vote_Retreat_Current",
-    Loader = function()
-      return {
+        },
         UI_TeamjoinRequest = {
           ContentEN = "Join Requests"
         },
@@ -82564,22 +82573,22 @@ About Zones
         UI_Vote_Finish_Retreat = {ContentEN = "Retreat"},
         UI_Vote_Finish_Retreated = {
           ContentEN = "Ready to retreat"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Vote_Finish_Retreating",
+    MaxKey = "UI_WEAPON_NAME_20602",
+    Loader = function()
+      return {
         UI_Vote_Finish_Retreating = {ContentEN = "In retreat"},
         UI_Vote_Retreat_Auto = {
           ContentEN = "You will automatically retreat if no selection is made before the countdown ends"
         },
         UI_Vote_Retreat_Current = {
           ContentEN = "Current rewards"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Vote_Retreat_Reward",
-    MaxKey = "UI_WEAPON_NAME_20605",
-    Loader = function()
-      return {
+        },
         UI_Vote_Retreat_Reward = {
           ContentEN = "Retreating now earns rewards based on current progress"
         },
@@ -83147,22 +83156,22 @@ In the end, those fragile strings could bear no more, and snapped. She was made 
         },
         UI_WEAPON_NAME_20602 = {
           ContentEN = "Arclight Apocalypses"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WEAPON_NAME_20603",
+    MaxKey = "UI_WeaponCardLevel_Popup_Equiped",
+    Loader = function()
+      return {
         UI_WEAPON_NAME_20603 = {
           ContentEN = "Embla Inflorescence"
         },
         UI_WEAPON_NAME_20604 = {ContentEN = "Soulrend"},
         UI_WEAPON_NAME_20605 = {
           ContentEN = "The Hatter's Banquet"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WEAPON_NAME_20698",
-    MaxKey = "UI_WeaponCardLevel_Popup_Normal",
-    Loader = function()
-      return {
+        },
         UI_WEAPON_NAME_20698 = {
           ContentEN = "Sentry Longbow"
         },
@@ -83723,7 +83732,15 @@ Gaming services will only be available to minors for 1 hour between 20:00 and 21
         },
         UI_WeaponCardLevel_Popup_Equiped = {
           ContentEN = "The selected weapons include weapon(s) currently equipped by a Combat Partner. Proceed with smelting anyway?"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WeaponCardLevel_Popup_HaveMax",
+    MaxKey = "UI_Wiki_MainTab_Faction",
+    Loader = function()
+      return {
         UI_WeaponCardLevel_Popup_HaveMax = {
           ContentEN = "The selected weapons include previously smelted weapon(s). This process will additionally boost the Smelting Level to %s. Proceed with smelting anyway?"
         },
@@ -83732,15 +83749,7 @@ Gaming services will only be available to minors for 1 hour between 20:00 and 21
         },
         UI_WeaponCardLevel_Popup_Normal = {
           ContentEN = "Confirm consumption of the selected smelting material(s) for smelting?"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WeaponCardLevel_Popup_Overflow",
-    MaxKey = "UI_Wiki_No_Choose",
-    Loader = function()
-      return {
+        },
         UI_WeaponCardLevel_Popup_Overflow = {
           ContentEN = "Exceeding Smelting Lv. %s with XP overflow. Consumed weapons will not be returned. Proceed with smelting anyway?"
         },
@@ -84267,22 +84276,22 @@ Gaming services will only be available to minors for 1 hour between 20:00 and 21
           ContentEN = "Civilizations"
         },
         UI_Wiki_MainTab_Customs = {ContentEN = "Nature"},
-        UI_Wiki_MainTab_Faction = {ContentEN = "Factions"},
+        UI_Wiki_MainTab_Faction = {ContentEN = "Factions"}
+      }
+    end
+  },
+  {
+    MinKey = "UI_Wiki_MainTitle",
+    MaxKey = "VoiceDes095",
+    Loader = function()
+      return {
         UI_Wiki_MainTitle = {ContentEN = "Atlasium"},
         UI_Wiki_Matches_Not_Found = {
           ContentEN = "No results found in this category"
         },
         UI_Wiki_No_Choose = {
           ContentEN = "No entries selected"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Wiki_No_Content",
-    MaxKey = "VoiceDes098",
-    Loader = function()
-      return {
+        },
         UI_Wiki_No_Content = {
           ContentEN = "No entries unlocked"
         },
@@ -84791,7 +84800,15 @@ Gaming services will only be available to minors for 1 hour between 20:00 and 21
         },
         VoiceDes095 = {
           ContentEN = "About Things You Are Good At"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "VoiceDes096",
+    MaxKey = "WikiText_20101701",
+    Loader = function()
+      return {
         VoiceDes096 = {
           ContentEN = "About Stuttering"
         },
@@ -84800,15 +84817,7 @@ Gaming services will only be available to minors for 1 hour between 20:00 and 21
         },
         VoiceDes098 = {
           ContentEN = "About Being a Scavenger"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "VoiceDes099",
-    MaxKey = "WikiText_20101902",
-    Loader = function()
-      return {
+        },
         VoiceDes099 = {
           ContentEN = "About Rubbish Bin"
         },
@@ -85351,7 +85360,15 @@ A scion of an old Hyperborean noble house, Fulvis rose to his position in the mi
         },
         WikiText_20101701 = {
           ContentEN = "A prominent noble of Hyperborea and a former leading member of the Military Council. He served as regent during the early years of Emperor Julius's reign, assisting the young sovereign in quelling the Charon Uprising and introducing reforms aimed at improving the rights and status of the Charon people — efforts that greatly eased ethnic tensions within the Empire."
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "WikiText_20101801",
+    MaxKey = "WikiText_40502302",
+    Loader = function()
+      return {
         WikiText_20101801 = {
           ContentEN = "The current emperor of the Hyperborean Empire. He ascended the throne at a young age and, with the support of Duke Servius, initially introduced a series of reforms aimed at alleviating the oppression and marginalisation of the Charon community, in an effort to ease domestic tensions. For reasons unknown, these conciliatory policies were later abandoned in favour of a more repressive stance."
         },
@@ -85365,15 +85382,7 @@ Fiercely devoted to justice and order, she maintains an uncompromising stance ag
         },
         WikiText_20101902 = {
           ContentEN = "The Warden's weapon, Inferno, is a unique artefact passed down exclusively through the Surt lineage. Its extreme heat and power are said to be unbearable for any bearer outside the family, making the position of Warden effectively hereditary since the post's inception."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "WikiText_20101903",
-    MaxKey = "WikiText_40600101",
-    Loader = function()
-      return {
+        },
         WikiText_20101903 = {
           ContentEN = "During the Lonza treason case, Hellfire conducted a drug-induced hypnotic interrogation of {nickname2}. Convinced of the authenticity of {性别2:his|her} testimony, she authorised a deeper investigation into the matter."
         },
@@ -86075,7 +86084,15 @@ Eisenbahn himself, however, seems to keep the group at arm's length... for reaso
         },
         WikiText_40502302 = {
           ContentEN = "According to the villagers, the Parade is a celebration where all villagers work together to make the village a better place."
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "WikiText_40502303",
+    MaxKey = "voice_ch_char_Baonu_vo_gain",
+    Loader = function()
+      return {
         WikiText_40502303 = {
           ContentEN = [[
 During the Parade, a game is held. The participant with the highest number of votes in the game is eliminated.
@@ -86086,15 +86103,7 @@ The Parade is essentially a loyalty test conducted by Mother Bunny on the reside
         },
         WikiText_40600101 = {
           ContentEN = "Once the largest Phoxene mine in northern Hyperborea. The veins have long since run dry, and though several nearby factories remain in operation, the mine itself has been abandoned. Its hollowed depths are now a den for Filthoids."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "WikiText_40600201",
-    MaxKey = "voice_ch_char_Baonu_vo_revive",
-    Loader = function()
-      return {
+        },
         WikiText_40600201 = {
           ContentEN = [[
 Located at the junction between Icelake's inner and outer districts, Galea Theatre has stood for centuries, bearing witness to the city's rise and decline.
@@ -86734,7 +86743,15 @@ Well... I, a candidate of the Seven Virtues, order you to show me your anger! No
         },
         voice_ch_char_Baonu_vo_gain = {
           ContentEN = "Behold, I am the great Miss Lisbell, candidate for the Patience of the Seven Virtues of the Elysian Church. In the name of the almighty Tower, the divine nine Gods of Elysian, the... what was it...? Ahem, forget it. Anyway, I command you to address me as \"Mistress Patience\". Do you understand?"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Baonu_vo_idle",
+    MaxKey = "voice_ch_char_Feina_vo_topic_03_1",
+    Loader = function()
+      return {
         voice_ch_char_Baonu_vo_idle = {
           ContentEN = "Samael, it's a beautiful day outside! Isn't this the perfect weather to eat something cool? I've heard the Holy City has an amazing dessert called ice cream. It's a commoner's food, but I bet it's way tastier than anything those old farts are handing out. I'll secretly grab you some!"
         },
@@ -86743,15 +86760,7 @@ Well... I, a candidate of the Seven Virtues, order you to show me your anger! No
         },
         voice_ch_char_Baonu_vo_revive = {
           ContentEN = "Even Mistress Patience has her limits!"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Baonu_vo_skill01_r01",
-    MaxKey = "voice_ch_char_Feina_vo_topic_04_2",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Baonu_vo_skill01_r01 = {ContentEN = "Holiness!"},
         voice_ch_char_Baonu_vo_skill01_r02 = {
           ContentEN = "In the name of Patience!"
@@ -87326,7 +87335,15 @@ We used to celebrate birthdays back in Arcano too... but those were all just cop
         },
         voice_ch_char_Feina_vo_topic_03_1 = {
           ContentEN = "Mm-hmm! I dreamed of a nightingale, pure as driven snow, resting on my hand one moment, and playing hide-and-seek with me the next... Hmm, was it me who dreamed, or did it dream of me, I wonder?"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Feina_vo_topic_03_2",
+    MaxKey = "voice_ch_char_Kezhou_vo_topic_02_4",
+    Loader = function()
+      return {
         voice_ch_char_Feina_vo_topic_03_2 = {
           ContentEN = "You might be right! Maybe it's a wonderland where all the sleeping children and little animals can play together. Hmm... I wonder who I'll meet in my next dream — Owl the Wise, Miss Canary, or Sir Rabbit?"
         },
@@ -87335,15 +87352,7 @@ We used to celebrate birthdays back in Arcano too... but those were all just cop
         },
         voice_ch_char_Feina_vo_topic_04_2 = {
           ContentEN = "The first dad went to a faraway land with mum. And the second one... he's in that faraway land too... I sent him there."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Feina_vo_topic_05_1",
-    MaxKey = "voice_ch_char_Kezhou_vo_topic_03_2",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Feina_vo_topic_05_1 = {
           ContentEN = "He's the greatest magician, with the most soothing voice and the gentlest soul in the world..."
         },
@@ -87930,7 +87939,15 @@ Everything's on the house today. Have whatever you like, catch up with everyone,
         },
         voice_ch_char_Kezhou_vo_topic_02_4 = {
           ContentEN = "But if you stick too closely to the scroll and can't think on your feet, your sword's no better than a lump of scrap — dull, clumsy, useless. Face something unexpected, and you'll flail around like a headless chicken."
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Kezhou_vo_topic_02_5",
+    MaxKey = "voice_ch_char_Nifu_vo_companio_02",
+    Loader = function()
+      return {
         voice_ch_char_Kezhou_vo_topic_02_5 = {
           ContentEN = "To me, Huaxu is like a clumsy swordsman glued to their Nine Chapters of Dafeng. They can't even deal with a Drifter like me — what chance do they have against a true threat? It's only a matter of time before they fall."
         },
@@ -87939,15 +87956,7 @@ Everything's on the house today. Have whatever you like, catch up with everyone,
         },
         voice_ch_char_Kezhou_vo_topic_03_2 = {
           ContentEN = "Oh, I can do that. But why bother? Dodging is way easier, after all. Even boars in the woods know to go for radishes over tree bark when they can."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Kezhou_vo_topic_03_3",
-    MaxKey = "voice_ch_char_Nifu_vo_die_r01",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Kezhou_vo_topic_03_3 = {
           ContentEN = "That said, if I ever meet a worthy opponent, you can bet I'll draw my sword and go all out."
         },
@@ -88522,7 +88531,15 @@ Should you ever feel lost, or simply wish to hear a story, my arms will always b
         },
         voice_ch_char_Nifu_vo_companio_02 = {
           ContentEN = "My dear, you carry an aura I find quite familiar. Could it be that you, like me, hail from bygone days?"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Nifu_vo_companio_03",
+    MaxKey = "voice_ch_char_Songlu_vo_topic_04_1",
+    Loader = function()
+      return {
         voice_ch_char_Nifu_vo_companio_03 = {
           ContentEN = "Greetings, child. Hehe... Indeed, we share a likeness in our horns. Perhaps our paths crossed long ago. But that is not your burden to bear. Set it aside, and follow the path your heart desires."
         },
@@ -88531,15 +88548,7 @@ Should you ever feel lost, or simply wish to hear a story, my arms will always b
         },
         voice_ch_char_Nifu_vo_die_r01 = {
           ContentEN = "Don't worry... as always, I'll soon be..."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Nifu_vo_die_r02",
-    MaxKey = "voice_ch_char_Songlu_vo_topic_05_1",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Nifu_vo_die_r02 = {
           ContentEN = "Might as well enjoy the solace in this fleeting slumber."
         },
@@ -89118,7 +89127,15 @@ After all, even if I gave you a thousand chances, I would still escape from your
         },
         voice_ch_char_Songlu_vo_topic_04_1 = {
           ContentEN = "Thank you! Actually, these are shorts, not a dress. They did start as a pretty, long, white dress; then the lady at the tailor's shop turned them into shorts for me."
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Songlu_vo_topic_04_2",
+    MaxKey = "voice_ch_char_Xier_vo_skill02_r03",
+    Loader = function()
+      return {
         voice_ch_char_Songlu_vo_topic_04_2 = {
           ContentEN = "Because dresses aren't the best for all the running around I do. One time, I tripped over the hem and all the bread in my arms went flying."
         },
@@ -89127,15 +89144,7 @@ After all, even if I gave you a thousand chances, I would still escape from your
         },
         voice_ch_char_Songlu_vo_topic_05_1 = {
           ContentEN = "Oh, I was meditating, not zoning out. I'm a member of the Elysian Church after all, so I do try to give some deep thought occasionally."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Songlu_vo_topic_05_2",
-    MaxKey = "voice_ch_char_Xier_vo_topic_01_3",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Songlu_vo_topic_05_2 = {
           ContentEN = "I used to wonder about that, but the clergy said it was... blastphomy or something. So I stopped thinking about that."
         },
@@ -89716,7 +89725,15 @@ Good. Then let's also finalise the external campaign slogans, domestic case anal
         },
         voice_ch_char_Xier_vo_skill02_r03 = {
           ContentEN = "All in a day's work."
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Xier_vo_topic_01_1",
+    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
+    Loader = function()
+      return {
         voice_ch_char_Xier_vo_topic_01_1 = {
           ContentEN = "Indeed. The persistent fog means laundry never dries and it clings to the ever-present dust."
         },
@@ -89725,15 +89742,7 @@ Good. Then let's also finalise the external campaign slogans, domestic case anal
         },
         voice_ch_char_Xier_vo_topic_01_3 = {
           ContentEN = "Sunny days do favour the laundry, yet they also make it easier for Miss Flora and me to be spotted. There's no ideal weather for us, just less troublesome days."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Xier_vo_topic_02_1",
-    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Xier_vo_topic_02_1 = {
           ContentEN = "Why, isn't it normal for a maid to be able to fight? Nothing out of the ordinary here."
         },
