@@ -315591,7 +315591,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [72006403] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
-          ContentEN = "Paradise is full of surprises~ I’ll see you at the next stop.",
+          ContentEN = "Paradise is full of surprises~ I'll see you at the next stop.",
           DialogueId = 72006403,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315638,7 +315638,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [72006503] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
-          ContentEN = "Paradise is full of surprises~ I’ll see you at the next stop.",
+          ContentEN = "Paradise is full of surprises~ I'll see you at the next stop.",
           DialogueId = 72006503,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315685,7 +315685,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [72006603] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
-          ContentEN = "Paradise is full of surprises~ I’ll see you at the next stop.",
+          ContentEN = "Paradise is full of surprises~ I'll see you at the next stop.",
           DialogueId = 72006603,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315732,7 +315732,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [72006703] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
-          ContentEN = "Paradise is full of surprises~ I’ll see you at the next stop.",
+          ContentEN = "Paradise is full of surprises~ I'll see you at the next stop.",
           DialogueId = 72006703,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315779,7 +315779,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [72006803] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
-          ContentEN = "Paradise is full of surprises~ I’ll see you at the next stop.",
+          ContentEN = "Paradise is full of surprises~ I'll see you at the next stop.",
           DialogueId = 72006803,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315826,7 +315826,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [72006903] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
-          ContentEN = "Paradise is full of surprises~ I’ll see you at the next stop.",
+          ContentEN = "Paradise is full of surprises~ I'll see you at the next stop.",
           DialogueId = 72006903,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315873,7 +315873,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [72007003] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
-          ContentEN = "Paradise is full of surprises~ I’ll see you at the next stop.",
+          ContentEN = "Paradise is full of surprises~ I'll see you at the next stop.",
           DialogueId = 72007003,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315920,7 +315920,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [72007103] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
-          ContentEN = "Paradise is full of surprises~ I’ll see you at the next stop.",
+          ContentEN = "Paradise is full of surprises~ I'll see you at the next stop.",
           DialogueId = 72007103,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -315967,7 +315967,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [72007203] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
-          ContentEN = "Paradise is full of surprises~ I’ll see you at the next stop.",
+          ContentEN = "Paradise is full of surprises~ I'll see you at the next stop.",
           DialogueId = 72007203,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -316014,7 +316014,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [72007303] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
-          ContentEN = "Paradise is full of surprises~ I’ll see you at the next stop.",
+          ContentEN = "Paradise is full of surprises~ I'll see you at the next stop.",
           DialogueId = 72007303,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -316061,7 +316061,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [72007403] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
-          ContentEN = "Paradise is full of surprises~ I’ll see you at the next stop.",
+          ContentEN = "Paradise is full of surprises~ I'll see you at the next stop.",
           DialogueId = 72007403,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -316108,7 +316108,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [72007503] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
-          ContentEN = "Paradise is full of surprises~ I’ll see you at the next stop.",
+          ContentEN = "Paradise is full of surprises~ I'll see you at the next stop.",
           DialogueId = 72007503,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -316155,7 +316155,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [72007603] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
-          ContentEN = "Paradise is full of surprises~ I’ll see you at the next stop.",
+          ContentEN = "Paradise is full of surprises~ I'll see you at the next stop.",
           DialogueId = 72007603,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -316202,7 +316202,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [72007703] = {
           Content = "乐园里好玩的东西真不少呀，我们下个地方见~",
-          ContentEN = "Paradise is full of surprises~ I’ll see you at the next stop.",
+          ContentEN = "Paradise is full of surprises~ I'll see you at the next stop.",
           DialogueId = 72007703,
           FacialId = {
             [1] = "820000:PetPan_Common"

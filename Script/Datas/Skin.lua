@@ -59,24 +59,29 @@ T.RT_17 = {
   10
 }
 T.RT_18 = {
-  [10014] = 1
+  120178,
+  120179,
+  120180
 }
 T.RT_19 = {
-  HeadSculpture = T.RT_18,
-  Resource = T.RT_1
+  [10014] = 1
 }
 T.RT_20 = {
-  [10016] = 1
-}
-T.RT_21 = {
-  HeadSculpture = T.RT_20,
+  HeadSculpture = T.RT_19,
   Resource = T.RT_1
 }
+T.RT_21 = {
+  [10016] = 1
+}
 T.RT_22 = {
-  [10013] = 1
+  HeadSculpture = T.RT_21,
+  Resource = T.RT_1
 }
 T.RT_23 = {
-  HeadSculpture = T.RT_22,
+  [10013] = 1
+}
+T.RT_24 = {
+  HeadSculpture = T.RT_23,
   Resource = T.RT_1
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
@@ -280,7 +285,7 @@ return ReadOnly("Skin", {
   },
   [1801] = {
     CharId = 1801,
-    DefaultItem = T.RT_19,
+    DefaultItem = T.RT_20,
     Des = "UI_Skin_Des_1801",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -555,7 +560,7 @@ return ReadOnly("Skin", {
   },
   [4101] = {
     CharId = 4101,
-    DefaultItem = T.RT_21,
+    DefaultItem = T.RT_22,
     Des = "UI_Skin_Des_4101",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -594,7 +599,7 @@ return ReadOnly("Skin", {
   },
   [4103] = {
     CharId = 4103,
-    DefaultItem = T.RT_21,
+    DefaultItem = T.RT_22,
     Des = "UI_Skin_Des_4103",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -743,7 +748,7 @@ return ReadOnly("Skin", {
   },
   [5401] = {
     CharId = 5401,
-    DefaultItem = T.RT_23,
+    DefaultItem = T.RT_24,
     Des = "UI_Skin_Des_5401",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -760,7 +765,7 @@ return ReadOnly("Skin", {
   },
   [5402] = {
     CharId = 5402,
-    DefaultItem = T.RT_23,
+    DefaultItem = T.RT_24,
     Des = "UI_Skin_Des_5402",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -926,7 +931,7 @@ return ReadOnly("Skin", {
   },
   [180101] = {
     CharId = 1801,
-    DefaultItem = T.RT_19,
+    DefaultItem = T.RT_20,
     Des = "UI_Skin_Des_180101",
     Icon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Feina01",
     LongIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Avatar/T_Gacha_AvatarFeina01",
@@ -1182,7 +1187,7 @@ return ReadOnly("Skin", {
   },
   [410101] = {
     CharId = 4101,
-    DefaultItem = T.RT_21,
+    DefaultItem = T.RT_22,
     Des = "UI_Skin_Des_410101",
     Icon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Lise01",
     LongIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Avatar/T_Gacha_AvatarLise01",
@@ -1238,7 +1243,7 @@ return ReadOnly("Skin", {
       Hair = {
         [410392] = 1
       },
-      HeadSculpture = T.RT_20,
+      HeadSculpture = T.RT_21,
       Resource = T.RT_1
     },
     Des = "UI_Skin_Des_410301",
@@ -1574,7 +1579,7 @@ return ReadOnly("Skin", {
     SkinId = 11020161,
     SkinModelId = 11020161,
     SkinName = "UI_Skin_Name_0161",
-    SkinSeries = "BP_07",
+    SkinSeries = "BP_07_1",
     Sound = "SOUND_ITEM_NORMAL"
   },
   [11030010] = {
@@ -2307,6 +2312,7 @@ return ReadOnly("Skin", {
     CommonSkinSettingId = 1504,
     Des = "UI_Skin_Des_0161",
     ExcludeCollect = true,
+    GoShopTypeId = T.RT_18,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_Police.T_Pack_Police'",
     LongIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Avatar/T_Gacha_Nvzhu_TP08",
     NpcSkinModelId = 15040161,
@@ -2722,6 +2728,7 @@ return ReadOnly("Skin", {
     CommonSkinSettingId = 1801,
     Des = "UI_Skin_Des_0161",
     ExcludeCollect = true,
+    GoShopTypeId = T.RT_18,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_Police.T_Pack_Police'",
     LongIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Avatar/T_Gacha_Nvzhu_TP08",
     NpcSkinModelId = 18010161,
@@ -2926,6 +2933,7 @@ return ReadOnly("Skin", {
     CommonSkinSettingId = 2102,
     Des = "UI_Skin_Des_0161",
     ExcludeCollect = true,
+    GoShopTypeId = T.RT_18,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_Police.T_Pack_Police'",
     LongIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Avatar/T_Gacha_Nvzhu_TP08",
     NpcSkinModelId = 21020161,
@@ -3175,6 +3183,7 @@ return ReadOnly("Skin", {
     CommonSkinSettingId = 2401,
     Des = "UI_Skin_Des_0161",
     ExcludeCollect = true,
+    GoShopTypeId = T.RT_18,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_Police.T_Pack_Police'",
     LongIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Avatar/T_Gacha_Nvzhu_TP08",
     NpcSkinModelId = 24010161,
@@ -3339,6 +3348,7 @@ return ReadOnly("Skin", {
     CommonSkinSettingId = 3101,
     Des = "UI_Skin_Des_0161",
     ExcludeCollect = true,
+    GoShopTypeId = T.RT_18,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_Police.T_Pack_Police'",
     LongIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Avatar/T_Gacha_Nvzhu_TP08",
     NpcSkinModelId = 31010161,
@@ -3409,7 +3419,7 @@ return ReadOnly("Skin", {
     SkinId = 31020161,
     SkinModelId = 31020161,
     SkinName = "UI_Skin_Name_0161",
-    SkinSeries = "BP_07",
+    SkinSeries = "BP_07_1",
     Sound = "SOUND_ITEM_NORMAL"
   },
   [31030010] = {
@@ -3697,7 +3707,7 @@ return ReadOnly("Skin", {
     SkinId = 32010161,
     SkinModelId = 32010161,
     SkinName = "UI_Skin_Name_0161",
-    SkinSeries = "BP_07",
+    SkinSeries = "BP_07_1",
     Sound = "SOUND_ITEM_NORMAL"
   },
   [32020131] = {
@@ -3776,7 +3786,7 @@ return ReadOnly("Skin", {
     SkinId = 32020161,
     SkinModelId = 32020161,
     SkinName = "UI_Skin_Name_0161",
-    SkinSeries = "BP_07",
+    SkinSeries = "BP_07_2",
     Sound = "SOUND_ITEM_NORMAL"
   },
   [33010010] = {
@@ -3928,6 +3938,7 @@ return ReadOnly("Skin", {
     CommonSkinSettingId = 3301,
     Des = "UI_Skin_Des_0161",
     ExcludeCollect = true,
+    GoShopTypeId = T.RT_18,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_Police.T_Pack_Police'",
     LongIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Avatar/T_Gacha_Nvzhu_TP08",
     NpcSkinModelId = 33010161,
@@ -4092,6 +4103,7 @@ return ReadOnly("Skin", {
     CommonSkinSettingId = 4101,
     Des = "UI_Skin_Des_0161",
     ExcludeCollect = true,
+    GoShopTypeId = T.RT_18,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_Police.T_Pack_Police'",
     LongIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Avatar/T_Gacha_Nvzhu_TP08",
     NpcSkinModelId = 41010161,
@@ -4227,7 +4239,7 @@ return ReadOnly("Skin", {
     SkinId = 41020161,
     SkinModelId = 41020161,
     SkinName = "UI_Skin_Name_0161",
-    SkinSeries = "BP_07",
+    SkinSeries = "BP_07_1",
     Sound = "SOUND_ITEM_NORMAL"
   },
   [42010121] = {
@@ -4549,6 +4561,7 @@ return ReadOnly("Skin", {
     CommonSkinSettingId = 4301,
     Des = "UI_Skin_Des_0161",
     ExcludeCollect = true,
+    GoShopTypeId = T.RT_18,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_Police.T_Pack_Police'",
     LongIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Avatar/T_Gacha_Nvzhu_TP08",
     NpcSkinModelId = 43010161,
@@ -5088,6 +5101,7 @@ return ReadOnly("Skin", {
     CommonSkinSettingId = 5401,
     Des = "UI_Skin_Des_0161",
     ExcludeCollect = true,
+    GoShopTypeId = T.RT_18,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_Police.T_Pack_Police'",
     LongIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Avatar/T_Gacha_Nvzhu_TP08",
     NpcSkinModelId = 54010161,

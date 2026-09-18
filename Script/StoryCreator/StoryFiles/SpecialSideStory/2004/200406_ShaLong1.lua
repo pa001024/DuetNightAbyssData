@@ -1147,7 +1147,7 @@ return {
         SubRegionId = 106001,
         SubRegionIdList = {},
         StoryGuideType = "Npc",
-        StoryGuidePointName = "Npc_Bai_152480429",
+        StoryGuidePointName = "Npc_Bai_152480433",
         JumpId = 0,
         IsBacktrack = false
       },
@@ -1204,7 +1204,7 @@ return {
             key = "17804164294298024033",
             type = "ChangeStaticCreatorNode",
             name = "生成/销毁节点",
-            pos = {x = 674, y = 284},
+            pos = {x = 674, y = 281.99107142857144},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -1225,7 +1225,7 @@ return {
               NpcId = 700450,
               GuideUIEnable = true,
               GuideType = "N",
-              GuidePointName = "Npc_Bai_152480429",
+              GuidePointName = "Npc_Bai_152480433",
               DelayShowGuideTime = 0,
               IsPlayerTurnToNPC = false,
               IsNPCTurnToPlayer = false,

@@ -1362,7 +1362,7 @@ local Data = {
           ContentKR = "'몰입형 연극'에서 현재 진행 중인 '불후 레퍼토리' <H>12</>막 완료"
         },
         BattlePass_Task_Des_100004205 = {
-          ContentKR = "포격 연습' 이벤트에서 '포격 연습 Ⅵ' 스테이지 완료"
+          ContentKR = "'포격 연습' 이벤트에서 '포격 연습 Ⅵ' 스테이지 완료"
         },
         BattlePass_Task_Des_100005204 = {
           ContentKR = "의뢰 <H>70</>회 완료"
