@@ -44,6 +44,11 @@ LoadClass = function() return {} end
 IsValid = function(obj) return obj ~= nil end
 DebugPrint = function() end
 Const = {}
+-- PC / Mobile：引擎侧的平台常量。1.3 起 Seat_data/SeatName2UniqueId.lua 用
+-- [PC]/[Mobile] 作表键，未定义时求值为 nil，会直接报 "table index is nil" 使整表导出失败。
+-- 取值与历史导出结果一致（导出 JSON 中的键为 "0"/"1"）。
+PC = 0
+Mobile = 1
     `)
     )
 
