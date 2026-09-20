@@ -109,35 +109,40 @@
     "charId": 1101,
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_Heitao_vo_companio_02_1",
-    "text": "Mademoiselle Truffle, est-ce que je peux... toucher votre cochon ? Juste une fois, promis. Vous pourriez le tenir un peu, s’il vous plaît ? J’ai peur qu’il s’enfuie... Les petits animaux me fuient toujours."
+    "text": "Mademoiselle Truffle, est-ce que je peux... toucher votre cochon ? Juste une fois, promis. Vous pourriez le tenir un peu, s’il vous plaît ? J’ai peur qu’il s’enfuie... Les petits animaux me fuient toujours.",
+    "companioCharId": 5101
   },
   {
     "id": 10018,
     "charId": 1101,
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_Heitao_vo_companio_02_2",
-    "text": "Merci... Ah... c’est tout chaud... et tout doux... C’est vraiment agréable..."
+    "text": "Merci... Ah... c’est tout chaud... et tout doux... C’est vraiment agréable...",
+    "companioCharId": 5101
   },
   {
     "id": 10019,
     "charId": 1101,
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_Heitao_vo_companio_03",
-    "text": "Je ne suis pas le « n° 0 » de la Légion. Et encore moins un jouet entre tes mains. Pars. Ou emmène mon cadavre, mais jamais je ne te suivrai vivante."
+    "text": "Je ne suis pas le « n° 0 » de la Légion. Et encore moins un jouet entre tes mains. Pars. Ou emmène mon cadavre, mais jamais je ne te suivrai vivante.",
+    "companioCharId": 4301
   },
   {
     "id": 10020,
     "charId": 1101,
     "name": "Discussion : Rencontre aléatoire : III",
     "res": "char_Heitao_vo_companio_04_1",
-    "text": "On dit que vous êtes un fin gourmet... Vous accepteriez de me montrer quelques-unes de vos recettes ? {nickname} ne tarit pas d’éloges sur votre cuisine et ça sonnait vrai, pas juste un compliment de courtoisie."
+    "text": "On dit que vous êtes un fin gourmet... Vous accepteriez de me montrer quelques-unes de vos recettes ? {nickname} ne tarit pas d’éloges sur votre cuisine et ça sonnait vrai, pas juste un compliment de courtoisie.",
+    "companioCharId": 5102
   },
   {
     "id": 10021,
     "charId": 1101,
     "name": "Discussion : Rencontre aléatoire : III",
     "res": "char_Heitao_vo_companio_04_2",
-    "text": "...Vous n’utilisez pourtant que des ingrédients très simples ? Alors pourquoi... ? Quel est votre secret ?"
+    "text": "...Vous n’utilisez pourtant que des ingrédients très simples ? Alors pourquoi... ? Quel est votre secret ?",
+    "companioCharId": 5102
   },
   {
     "id": 10022,
@@ -354,21 +359,24 @@
     "charId": 2301,
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_Zhangyu_vo_companio_01",
-    "text": "Hein ? Tu veux m’attraper ? Mais je suis gentille, moi ! J’ai juste piqué un truc à un autre voleur... Hé, t’approche pas ! Aïe ! Ça brûle !"
+    "text": "Hein ? Tu veux m’attraper ? Mais je suis gentille, moi ! J’ai juste piqué un truc à un autre voleur... Hé, t’approche pas ! Aïe ! Ça brûle !",
+    "companioCharId": 3201
   },
   {
     "id": 10094,
     "charId": 2301,
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_Zhangyu_vo_companio_02",
-    "text": "C’est pour moi ? <I>Hmm...</> t’as une tête louche, toi... Oh non, ce parfum... j’ai la tête qui tourne, et mes tentacules picotent ! T’es vraiment trop suspecte !"
+    "text": "C’est pour moi ? <I>Hmm...</> t’as une tête louche, toi... Oh non, ce parfum... j’ai la tête qui tourne, et mes tentacules picotent ! T’es vraiment trop suspecte !",
+    "companioCharId": 2101
   },
   {
     "id": 10095,
     "charId": 2301,
     "name": "Discussion : Rencontre aléatoire : III",
     "res": "char_Zhangyu_vo_companio_03",
-    "text": "T’es trop marrante quand tu parles à ton épée ! « Samaël, tu aimes cet endroit ? Allons explorer encore plein d’autres lieux ! » ... Pourquoi tu fais cette tête ? Hihi, encore plus drôle comme ça !"
+    "text": "T’es trop marrante quand tu parles à ton épée ! « Samaël, tu aimes cet endroit ? Allons explorer encore plein d’autres lieux ! » ... Pourquoi tu fais cette tête ? Hihi, encore plus drôle comme ça !",
+    "companioCharId": 1501
   },
   {
     "id": 10096,
@@ -578,21 +586,24 @@
     "charId": 3101,
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_Linen_vo_companio_01",
-    "text": "La prochaine fois, va droit au but, ok ? Tes bavardages, ça me gonfle."
+    "text": "La prochaine fois, va droit au but, ok ? Tes bavardages, ça me gonfle.",
+    "companioCharId": 4202
   },
   {
     "id": 10126,
     "charId": 3101,
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_Linen_vo_companio_02",
-    "text": "Bonjour, madame..."
+    "text": "Bonjour, madame...",
+    "companioCharId": 4301
   },
   {
     "id": 10127,
     "charId": 3101,
     "name": "Discussion : Rencontre aléatoire : III",
     "res": "char_Linen_vo_companio_03",
-    "text": "T’es un bon soldat, ça c’est dit. Et... profite un peu de la vie aussi, hein ? Allez, assez causé, va-t’en."
+    "text": "T’es un bon soldat, ça c’est dit. Et... profite un peu de la vie aussi, hein ? Allez, assez causé, va-t’en.",
+    "companioCharId": 4101
   },
   {
     "id": 10128,
@@ -851,21 +862,24 @@
     "charId": 3102,
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_Xier_vo_companio_01",
-    "text": "Ma fleur favorite pousse sous un dôme de chaleur constante. Une seule pétale suffit à préparer une tisane apaisante, tandis que dix pétales distillent un poison mortel. Parfois, je la taille dans mes rêves, et je me réjouis de ne plus avoir à m’en occuper à mon réveil."
+    "text": "Ma fleur favorite pousse sous un dôme de chaleur constante. Une seule pétale suffit à préparer une tisane apaisante, tandis que dix pétales distillent un poison mortel. Parfois, je la taille dans mes rêves, et je me réjouis de ne plus avoir à m’en occuper à mon réveil.",
+    "companioCharId": 5301
   },
   {
     "id": 10165,
     "charId": 3102,
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_Xier_vo_companio_02",
-    "text": "Impressionnant. Vous réfléchissez constamment à des sujets importants, tandis que moi, humble servante, je ne m’occupe que des tâches de tous les jours."
+    "text": "Impressionnant. Vous réfléchissez constamment à des sujets importants, tandis que moi, humble servante, je ne m’occupe que des tâches de tous les jours.",
+    "companioCharId": 1501
   },
   {
     "id": 10166,
     "charId": 3102,
     "name": "Discussion : Rencontre aléatoire : III",
     "res": "char_Xier_vo_companio_03",
-    "text": "Ces amas de désordre me causent bien des maux de tête. Je serais ravie que vous les emportiez. Mais avant d’entrer, vous devrez me laisser faire le ménage : pas de refus, pas de contestation."
+    "text": "Ces amas de désordre me causent bien des maux de tête. Je serais ravie que vous les emportiez. Mais avant d’entrer, vous devrez me laisser faire le ménage : pas de refus, pas de contestation.",
+    "companioCharId": 3301
   },
   {
     "id": 10167,
@@ -1082,21 +1096,24 @@
     "charId": 4201,
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_Yuming_vo_companio_01",
-    "text": "Je ne connais pas le passé que tu as laissé derrière toi, mais nos esprits se ressemblent. Garde tes distances, je n’apprécie guère les semblables."
+    "text": "Je ne connais pas le passé que tu as laissé derrière toi, mais nos esprits se ressemblent. Garde tes distances, je n’apprécie guère les semblables.",
+    "companioCharId": 5102
   },
   {
     "id": 10198,
     "charId": 4201,
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_Yuming_vo_companio_02",
-    "text": "Nous ne sommes plus les camarades d’autrefois. Comme le vent qui passe, les gens vont et viennent. Mieux vaut laisser le passé derrière soi."
+    "text": "Nous ne sommes plus les camarades d’autrefois. Comme le vent qui passe, les gens vont et viennent. Mieux vaut laisser le passé derrière soi.",
+    "companioCharId": 1503
   },
   {
     "id": 10199,
     "charId": 4201,
     "name": "Discussion : Rencontre aléatoire : III",
     "res": "char_Yuming_vo_companio_03",
-    "text": "Ta détermination et ton respect des règles m’impressionnent. As-tu déjà été assailli par le doute ?"
+    "text": "Ta détermination et ton respect des règles m’impressionnent. As-tu déjà été assailli par le doute ?",
+    "companioCharId": 3201
   },
   {
     "id": 10200,
@@ -1376,21 +1393,24 @@
     "charId": 5301,
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_Saiqi_vo_companio_01",
-    "text": "J’ai entendu dire que tu avais prévu une grande fête d’anniversaire pour Fina. Je savais que tu avais un cœur attentionné, malgré ton franc-parler. Est-ce que je peux me joindre à toi la prochaine fois que tu lui prépareras une grande surprise pour son anniversaire ?"
+    "text": "J’ai entendu dire que tu avais prévu une grande fête d’anniversaire pour Fina. Je savais que tu avais un cœur attentionné, malgré ton franc-parler. Est-ce que je peux me joindre à toi la prochaine fois que tu lui prépareras une grande surprise pour son anniversaire ?",
+    "companioCharId": 5102
   },
   {
     "id": 10240,
     "charId": 5301,
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_Saiqi_vo_companio_02",
-    "text": "En voyant Camilla, je pense à cette taverne animée et accueillante... Quelle chance de vous connaître."
+    "text": "En voyant Camilla, je pense à cette taverne animée et accueillante... Quelle chance de vous connaître.",
+    "companioCharId": 3202
   },
   {
     "id": 10241,
     "charId": 5301,
     "name": "Discussion : Rencontre aléatoire : III",
     "res": "char_Saiqi_vo_companio_03",
-    "text": "Tu vas vraiment me raconter l’histoire d’Élysium ? Merci beaucoup ! Hmm... et si je t’offrais une fleur en échange ? Quoi ? Une fleur... à manger ?"
+    "text": "Tu vas vraiment me raconter l’histoire d’Élysium ? Merci beaucoup ! Hmm... et si je t’offrais une fleur en échange ? Quoi ? Une fleur... à manger ?",
+    "companioCharId": 5101
   },
   {
     "id": 10242,
@@ -1656,21 +1676,24 @@
     "charId": 2401,
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_Baiheng_vo_companio_01",
-    "text": "Monsieur Randy, à mon humble avis, la léthargie et le laxisme ne sont pas moins des symptômes de maladie. Ils ne vous dérangent peut-être pas pour l’instant, mais ils sèment les graines de futurs maux. Peut-être pourrions-nous faire un peu d’entraînement physique ? Un peu d’exercice pourrait vous faire du bien."
+    "text": "Monsieur Randy, à mon humble avis, la léthargie et le laxisme ne sont pas moins des symptômes de maladie. Ils ne vous dérangent peut-être pas pour l’instant, mais ils sèment les graines de futurs maux. Peut-être pourrions-nous faire un peu d’entraînement physique ? Un peu d’exercice pourrait vous faire du bien.",
+    "companioCharId": 4202
   },
   {
     "id": 10280,
     "charId": 2401,
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_Baiheng_vo_companio_02",
-    "text": "Si un guérisseur peut soulager la souffrance, défier le destin est au-delà de nos capacités. Je peux vous offrir un remède pour apaiser la chaleur de votre cœur, mais la cause profonde de vos problèmes échappe à mon contrôle. Il vaut mieux accepter et s’adapter au cours du temps pour trouver votre propre chemin vers le réconfort..."
+    "text": "Si un guérisseur peut soulager la souffrance, défier le destin est au-delà de nos capacités. Je peux vous offrir un remède pour apaiser la chaleur de votre cœur, mais la cause profonde de vos problèmes échappe à mon contrôle. Il vaut mieux accepter et s’adapter au cours du temps pour trouver votre propre chemin vers le réconfort...",
+    "companioCharId": 4102
   },
   {
     "id": 10281,
     "charId": 2401,
     "name": "Discussion : Rencontre aléatoire : III",
     "res": "char_Baiheng_vo_companio_03",
-    "text": "Vous entendez souvent une autre voix qui vous parle ? Les autres l’entendent-ils aussi ? Comment se passe votre sommeil ? Quelque chose vous pèse-t-il sur le cœur ? Les afflictions de l’esprit sont les plus difficiles à guérir, même avec l’aide des techniques Zhuyou. Mais en tant que guérisseuse, je ne ménagerai aucun effort."
+    "text": "Vous entendez souvent une autre voix qui vous parle ? Les autres l’entendent-ils aussi ? Comment se passe votre sommeil ? Quelque chose vous pèse-t-il sur le cœur ? Les afflictions de l’esprit sont les plus difficiles à guérir, même avec l’aide des techniques Zhuyou. Mais en tant que guérisseuse, je ne ménagerai aucun effort.",
+    "companioCharId": 3103
   },
   {
     "id": 10282,
@@ -1957,21 +1980,24 @@
     "charId": 5101,
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_Songlu_vo_companio_01",
-    "text": "Tu as trouvé des patates qui germent dans le bac ? Ne les jette pas ! On les plante, on les arrose, et on aura plein de patates pour tout le monde !"
+    "text": "Tu as trouvé des patates qui germent dans le bac ? Ne les jette pas ! On les plante, on les arrose, et on aura plein de patates pour tout le monde !",
+    "companioCharId": 3301
   },
   {
     "id": 10323,
     "charId": 5101,
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_Songlu_vo_companio_02",
-    "text": "Tu travailles tout le temps... T’as pas un petit creux ? Tu devrais rejoindre l’Église ! Moi, je prends soin des ventres vides."
+    "text": "Tu travailles tout le temps... T’as pas un petit creux ? Tu devrais rejoindre l’Église ! Moi, je prends soin des ventres vides.",
+    "companioCharId": 3101
   },
   {
     "id": 10324,
     "charId": 5101,
     "name": "Discussion : Rencontre aléatoire : III",
     "res": "char_Songlu_vo_companio_03",
-    "text": "Coucou ! Dis, c’est vrai que prier, ça remplit l’âme ? Moi je trouve qu’un bon repas, ça marche pareil ! Tu préfères quoi, toi ?"
+    "text": "Coucou ! Dis, c’est vrai que prier, ça remplit l’âme ? Moi je trouve qu’un bon repas, ça marche pareil ! Tu préfères quoi, toi ?",
+    "companioCharId": 1501
   },
   {
     "id": 10325,
@@ -2174,21 +2200,24 @@
     "charId": 4202,
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_Landi_vo_companio_01",
-    "text": "Au rapport rapport, commandante Sibylle. Les tâches du jour sont toutes assignées. Si vous avez d’autres consignes, je suis prêt à les exécuter. Mais la journée a été chargée, pensez à vous reposer pour ne pas vous épuiser."
+    "text": "Au rapport rapport, commandante Sibylle. Les tâches du jour sont toutes assignées. Si vous avez d’autres consignes, je suis prêt à les exécuter. Mais la journée a été chargée, pensez à vous reposer pour ne pas vous épuiser.",
+    "companioCharId": 4301
   },
   {
     "id": 10354,
     "charId": 4202,
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_Landi_vo_companio_02",
-    "text": "Beau boulot pour la dernière mission, mais j’ai reçu quelques plaintes à propos de dégâts matériels... Et devine qui doit aller présenter ses excuses à ta place ? Moi ! Et tu me connais, je suis bien trop timide pour ça... Alors, ma très chère, adorable et gentille Lynn, tu pourrais pas t’occuper de ces petites urgences à ma place ? Allez, sois un amour, juste cette fois."
+    "text": "Beau boulot pour la dernière mission, mais j’ai reçu quelques plaintes à propos de dégâts matériels... Et devine qui doit aller présenter ses excuses à ta place ? Moi ! Et tu me connais, je suis bien trop timide pour ça... Alors, ma très chère, adorable et gentille Lynn, tu pourrais pas t’occuper de ces petites urgences à ma place ? Allez, sois un amour, juste cette fois.",
+    "companioCharId": 3101
   },
   {
     "id": 10355,
     "charId": 4202,
     "name": "Discussion : Rencontre aléatoire : III",
     "res": "char_Landi_vo_companio_03",
-    "text": "Hein, comment as-tu pu... ? Je dois être épuisé, j’ai des hallucinations... Je vais déclarer ça comme accident de travail et prendre un congé maladie."
+    "text": "Hein, comment as-tu pu... ? Je dois être épuisé, j’ai des hallucinations... Je vais déclarer ça comme accident de travail et prendre un congé maladie.",
+    "companioCharId": 1101
   },
   {
     "id": 10356,
@@ -2412,7 +2441,8 @@
     "charId": 4301,
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_Xibi_vo_companio_01",
-    "text": "... Il est temps que nous réglions nos différends."
+    "text": "... Il est temps que nous réglions nos différends.",
+    "companioCharId": 5401
   },
   {
     "id": 10390,
@@ -2699,35 +2729,40 @@
     "charId": 3301,
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_Maer_vo_companio_01",
-    "text": "Regardez le tissu, l’écusson et le cuir ! Mme Hilda, vous êtes mon ange ! Si vous avez d’autres biens mal acquis qui doivent être « éliminés correctement », je suis votre associée ! Vous pouvez compter sur moi pour m’en occuper !"
+    "text": "Regardez le tissu, l’écusson et le cuir ! Mme Hilda, vous êtes mon ange ! Si vous avez d’autres biens mal acquis qui doivent être « éliminés correctement », je suis votre associée ! Vous pouvez compter sur moi pour m’en occuper !",
+    "companioCharId": 3102
   },
   {
     "id": 10431,
     "charId": 3301,
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_Maer_vo_companio_02",
-    "text": "Petite Fina ! Ça fait une éternité. Tu veux connaître la suite de « Flocon la Ranger et Gingembre la Détective » ? Parfait ! Je vais chercher un petit tabouret et te raconter ça tranquillement !"
+    "text": "Petite Fina ! Ça fait une éternité. Tu veux connaître la suite de « Flocon la Ranger et Gingembre la Détective » ? Parfait ! Je vais chercher un petit tabouret et te raconter ça tranquillement !",
+    "companioCharId": 1801
   },
   {
     "id": 10432,
     "charId": 3301,
     "name": "Discussion : Rencontre aléatoire : III",
     "res": "char_Maer_vo_companio_03",
-    "text": "Je vous assure, Madame la geôlière, que je suis une citoyenne respectable ! Je n’ai jamais volé ni pillé, je me contente juste de récupérer quelques restes dans les poubelles pour calmer ma faim. Même votre zèle ne va pas jusqu’aux ordures, si ?"
+    "text": "Je vous assure, Madame la geôlière, que je suis une citoyenne respectable ! Je n’ai jamais volé ni pillé, je me contente juste de récupérer quelques restes dans les poubelles pour calmer ma faim. Même votre zèle ne va pas jusqu’aux ordures, si ?",
+    "companioCharId": 3201
   },
   {
     "id": 10433,
     "charId": 3301,
     "name": "Discussion : Rencontre aléatoire : IV",
     "res": "char_Maer_vo_companio_04",
-    "text": "Tu vis au jour le jour, n’est-ce pas... ? C’est vraiment difficile. Tu veux venir avec moi faire un peu de récupération ? Ça pourrait te faciliter un peu les choses..."
+    "text": "Tu vis au jour le jour, n’est-ce pas... ? C’est vraiment difficile. Tu veux venir avec moi faire un peu de récupération ? Ça pourrait te faciliter un peu les choses...",
+    "companioCharId": 3101
   },
   {
     "id": 10434,
     "charId": 3301,
     "name": "Discussion : Rencontre aléatoire : V",
     "res": "char_Maer_vo_companio_05",
-    "text": "Camilla ! Toi, la plus gentille et la plus belle de Givrelac ! J’ai un tout petit, tout petit problème, tu pourrais m’aider à m’en sortir... Promis, c’est la dernière fois ! Euh, enfin, la dernière fois ce mois-ci ! Tu vas pas me dire non, hein ?"
+    "text": "Camilla ! Toi, la plus gentille et la plus belle de Givrelac ! J’ai un tout petit, tout petit problème, tu pourrais m’aider à m’en sortir... Promis, c’est la dernière fois ! Euh, enfin, la dernière fois ce mois-ci ! Tu vas pas me dire non, hein ?",
+    "companioCharId": 3202
   },
   {
     "id": 10435,
@@ -2972,21 +3007,24 @@
     "charId": 1801,
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_Feina_vo_companio_01",
-    "text": "Promets-moi que tu n’iras jamais, jamais, jamais... dans cet endroit effrayant où il y a plein de mauvais sorciers, d’accord ?"
+    "text": "Promets-moi que tu n’iras jamais, jamais, jamais... dans cet endroit effrayant où il y a plein de mauvais sorciers, d’accord ?",
+    "companioCharId": 5102
   },
   {
     "id": 10470,
     "charId": 1801,
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_Feina_vo_companio_02",
-    "text": "Qu’est-ce que c’est ? Ton petit esprit, Mlle Hamster ? Incroyable... Il doit pouvoir te porter et t’emporter au-dessus des murailles de tous les châteaux !"
+    "text": "Qu’est-ce que c’est ? Ton petit esprit, Mlle Hamster ? Incroyable... Il doit pouvoir te porter et t’emporter au-dessus des murailles de tous les châteaux !",
+    "companioCharId": 5101
   },
   {
     "id": 10471,
     "charId": 1801,
     "name": "Discussion : Rencontre aléatoire : III",
     "res": "char_Feina_vo_companio_03",
-    "text": "Dis, Mlle Lionne, tu veux réveiller la fée qui dort dans cette épée géante ? Alors il te faudra sûrement chanter des tas de sortilèges, comme : « Ô toi qui as éveillé l’épée sacrée Samaël... un jour, tu deviendras le roi d’Élysium ! »"
+    "text": "Dis, Mlle Lionne, tu veux réveiller la fée qui dort dans cette épée géante ? Alors il te faudra sûrement chanter des tas de sortilèges, comme : « Ô toi qui as éveillé l’épée sacrée Samaël... un jour, tu deviendras le roi d’Élysium ! »",
+    "companioCharId": 1501
   },
   {
     "id": 10473,
@@ -3224,21 +3262,24 @@
     "charId": 3103,
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_Yeer_vo_companio_01",
-    "text": "Yale : B-bonjour... V-votre voix est vraiment... vraiment magnifique.\nOliver : Pff. Encore une pauvre victime."
+    "text": "Yale : B-bonjour... V-votre voix est vraiment... vraiment magnifique.\nOliver : Pff. Encore une pauvre victime.",
+    "companioCharId": 1103
   },
   {
     "id": 10507,
     "charId": 3103,
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_Yeer_vo_companio_02",
-    "text": "Yale : F-Filbert... c’est ton ami ? Moi aussi j’ai un ami... aussi f-fiable que Filbert...\nOliver : Tu traites qui de cochon, au juste ?"
+    "text": "Yale : F-Filbert... c’est ton ami ? Moi aussi j’ai un ami... aussi f-fiable que Filbert...\nOliver : Tu traites qui de cochon, au juste ?",
+    "companioCharId": 5101
   },
   {
     "id": 10508,
     "charId": 3103,
     "name": "Discussion : Rencontre aléatoire : III",
     "res": "char_Yeer_vo_companio_03",
-    "text": "Yale : S-S’il te plaît ne t’énerve pas ! Mes expériences avec les bombes respectent t-toutes les n-n-normes de sécurité..."
+    "text": "Yale : S-S’il te plaît ne t’énerve pas ! Mes expériences avec les bombes respectent t-toutes les n-n-normes de sécurité...",
+    "companioCharId": 3201
   },
   {
     "id": 10509,
@@ -3497,21 +3538,24 @@
     "charId": 3201,
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_Haier_vo_companio_01",
-    "text": "Moi, geôlière. Vous, commandante de la Légion. Deux visages d’un même ordre implacable. Que l’on nous craigne ou nous haïsse, tant que l’Empire vit, cela n’a aucune importance."
+    "text": "Moi, geôlière. Vous, commandante de la Légion. Deux visages d’un même ordre implacable. Que l’on nous craigne ou nous haïsse, tant que l’Empire vit, cela n’a aucune importance.",
+    "companioCharId": 4301
   },
   {
     "id": 10546,
     "charId": 3201,
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_Haier_vo_companio_02",
-    "text": "Tiens, encore toi."
+    "text": "Tiens, encore toi.",
+    "companioCharId": 2101
   },
   {
     "id": 10547,
     "charId": 3201,
     "name": "Discussion : Rencontre aléatoire : III",
     "res": "char_Haier_vo_companio_03",
-    "text": "Tss, l’adjoint de Sibylle... Celui qu’on accuse sans cesse d’incompétence, pas vrai ? Je vois clair dans ton petit jeu : tu caches tes talents et ton ambition pour rester dans son ombre. Dis-moi, qu’est-ce que tu mijotes ?"
+    "text": "Tss, l’adjoint de Sibylle... Celui qu’on accuse sans cesse d’incompétence, pas vrai ? Je vois clair dans ton petit jeu : tu caches tes talents et ton ambition pour rester dans son ombre. Dis-moi, qu’est-ce que tu mijotes ?",
+    "companioCharId": 4202
   },
   {
     "id": 10548,
@@ -3833,14 +3877,16 @@
     "charId": 1502,
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_Nifu_vo_companio_01",
-    "text": "Nul ne peut fuir son passé éternellement. Un jour viendra où tu devras lui faire face... Puisses-tu alors trouver la force qui te permettra de le combattre."
+    "text": "Nul ne peut fuir son passé éternellement. Un jour viendra où tu devras lui faire face... Puisses-tu alors trouver la force qui te permettra de le combattre.",
+    "companioCharId": 5102
   },
   {
     "id": 10594,
     "charId": 1502,
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_Nifu_vo_companio_02",
-    "text": "Ma chère enfant, il y a en toi une essence qui me semble familière... Serait-ce que toi aussi, tu viens d’une époque révolue, comme moi ?"
+    "text": "Ma chère enfant, il y a en toi une essence qui me semble familière... Serait-ce que toi aussi, tu viens d’une époque révolue, comme moi ?",
+    "companioCharId": 2401
   },
   {
     "id": 10597,
@@ -4148,14 +4194,16 @@
     "charId": 4101,
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_Lise_vo_companio_01",
-    "text": "Je ne peux pas m’empêcher de vouloir tout remettre en ordre dès que quelque chose est bancal. Mais chez toi, Hilda, tout est parfaitement rangé. C’est vraiment apaisant."
+    "text": "Je ne peux pas m’empêcher de vouloir tout remettre en ordre dès que quelque chose est bancal. Mais chez toi, Hilda, tout est parfaitement rangé. C’est vraiment apaisant.",
+    "companioCharId": 3102
   },
   {
     "id": 10641,
     "charId": 4101,
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_Lise_vo_companio_02",
-    "text": "Ce plan est ultra précis, calibré à la seconde. Le suivre doit procurer une vraie satisfaction. Juste... difficile à croire que ça vienne de l’officier Randy."
+    "text": "Ce plan est ultra précis, calibré à la seconde. Le suivre doit procurer une vraie satisfaction. Juste... difficile à croire que ça vienne de l’officier Randy.",
+    "companioCharId": 4202
   },
   {
     "id": 10643,
@@ -4470,14 +4518,16 @@
     "charId": 1103,
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_Tuosi_vo_companio_01",
-    "text": "Comment allez-vous, ces derniers temps ?\n... Pardonnez mon audace. Nous ne nous connaissons guère, c’est vrai. Je me renseignais... pour un ami."
+    "text": "Comment allez-vous, ces derniers temps ?\n... Pardonnez mon audace. Nous ne nous connaissons guère, c’est vrai. Je me renseignais... pour un ami.",
+    "companioCharId": 4101
   },
   {
     "id": 10688,
     "charId": 1103,
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_Tuosi_vo_companio_02",
-    "text": "Vraiment ? Tu as trouvé un foyer, une famille attentionnée... C’est merveilleux. Tu as réussi à te libérer de ta propre cage, il faut du courage pour cela."
+    "text": "Vraiment ? Tu as trouvé un foyer, une famille attentionnée... C’est merveilleux. Tu as réussi à te libérer de ta propre cage, il faut du courage pour cela.",
+    "companioCharId": 1801
   },
   {
     "id": 10690,
@@ -4841,28 +4891,32 @@
     "charId": 5401,
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_Dafu_vo_companio_01",
-    "text": "J’ai lu un jour, à la bibliothèque de la capitale, des traités médicaux de Huaxu. Bien que leurs théories diffèrent de celles des traditions médicales d’Hyperborea, elles se sont avérées remarquablement efficaces pour le traitement. Il reste cependant des passages que je ne maîtrise pas complètement, pourriez-vous m’aider à les éclaircir ?"
+    "text": "J’ai lu un jour, à la bibliothèque de la capitale, des traités médicaux de Huaxu. Bien que leurs théories diffèrent de celles des traditions médicales d’Hyperborea, elles se sont avérées remarquablement efficaces pour le traitement. Il reste cependant des passages que je ne maîtrise pas complètement, pourriez-vous m’aider à les éclaircir ?",
+    "companioCharId": 2401
   },
   {
     "id": 10743,
     "charId": 5401,
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_Dafu_vo_companio_02",
-    "text": "Madame la geôlière, je me demande : une justice qui arrive tardivement mérite-t-elle encore d’être appelée justice ?"
+    "text": "Madame la geôlière, je me demande : une justice qui arrive tardivement mérite-t-elle encore d’être appelée justice ?",
+    "companioCharId": 3201
   },
   {
     "id": 10744,
     "charId": 5401,
     "name": "Discussion : Rencontre aléatoire : III",
     "res": "char_Dafu_vo_companio_03",
-    "text": "Ça fait si longtemps. Depuis que j’ai quitté les Spathatoi, nous nous sommes à peine parlé. Comment... vas-tu ?"
+    "text": "Ça fait si longtemps. Depuis que j’ai quitté les Spathatoi, nous nous sommes à peine parlé. Comment... vas-tu ?",
+    "companioCharId": 4301
   },
   {
     "id": 10745,
     "charId": 5401,
     "name": "Discussion : Rencontre aléatoire : IV",
     "res": "char_Dafu_vo_companio_04",
-    "text": "Même si j’ai quitté les Spathatoi, c’est un lieu qui m’a profondément marquée. Je sais que demander pardon est peut-être trop, mais je tiens quand même à dire... je suis désolée."
+    "text": "Même si j’ai quitté les Spathatoi, c’est un lieu qui m’a profondément marquée. Je sais que demander pardon est peut-être trop, mais je tiens quand même à dire... je suis désolée.",
+    "companioCharId": 1103
   },
   {
     "id": 10746,
@@ -5128,21 +5182,24 @@
     "charId": 1503,
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_Kezhou_vo_companio_01",
-    "text": "On dit que le meilleur épéiste n’a même pas besoin d’épée : une herbe, un bout de bois peut devenir une lame. J’ai entendu dire que tu utilises des outils de nettoyage comme armes, tu dois être un maître épéiste. Apprends-moi quelques techniques."
+    "text": "On dit que le meilleur épéiste n’a même pas besoin d’épée : une herbe, un bout de bois peut devenir une lame. J’ai entendu dire que tu utilises des outils de nettoyage comme armes, tu dois être un maître épéiste. Apprends-moi quelques techniques.",
+    "companioCharId": 3102
   },
   {
     "id": 10784,
     "charId": 1503,
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_Kezhou_vo_companio_02",
-    "text": "Je garde ton ancienne épée pour l’instant. Quand tu cesseras de faire la tête, je te la rendrai, mais seulement si tu me bats en duel. Si tu perds, elle sera à moi pour de bon."
+    "text": "Je garde ton ancienne épée pour l’instant. Quand tu cesseras de faire la tête, je te la rendrai, mais seulement si tu me bats en duel. Si tu perds, elle sera à moi pour de bon.",
+    "companioCharId": 4201
   },
   {
     "id": 10785,
     "charId": 1503,
     "name": "Discussion : Rencontre aléatoire : III",
     "res": "char_Kezhou_vo_companio_03",
-    "text": "Une épée peut être une amie, un jouet, voire un outil pour couper, faire levier ou raser. Mais elle ne doit jamais devenir ton maître. Ne laisse pas cette lame t’empêcher d’avancer."
+    "text": "Une épée peut être une amie, un jouet, voire un outil pour couper, faire levier ou raser. Mais elle ne doit jamais devenir ton maître. Ne laisse pas cette lame t’empêcher d’avancer.",
+    "companioCharId": 1501
   },
   {
     "id": 10786,
@@ -5366,35 +5423,40 @@
     "charId": 5102,
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_Aote_vo_companio_01",
-    "text": "Qu’est-ce que tu fais là ? Tu vas bien ? T’as mangé ? Allez, repose-toi un peu. Et si t’as besoin de quoi que ce soit, demande-moi, d’accord ?"
+    "text": "Qu’est-ce que tu fais là ? Tu vas bien ? T’as mangé ? Allez, repose-toi un peu. Et si t’as besoin de quoi que ce soit, demande-moi, d’accord ?",
+    "companioCharId": 1801
   },
   {
     "id": 10818,
     "charId": 5102,
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_Aote_vo_companio_02_1",
-    "text": "C’est toi, la fille proche de {nickname}, c’est ça ? J’ai entendu que t’étais pas en forme. Tu devrais t’asseoir un moment."
+    "text": "C’est toi, la fille proche de {nickname}, c’est ça ? J’ai entendu que t’étais pas en forme. Tu devrais t’asseoir un moment.",
+    "companioCharId": 5301
   },
   {
     "id": 10819,
     "charId": 5102,
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_Aote_vo_companio_02_2",
-    "text": "Si t’as faim, soif, ou besoin de quoi que ce soit, dis-le-moi. J’ai l’habitude de veiller sur les autres... Ma petite sœur est malade, alors tu sais, je gère. Et puis, une amie de {nickname}, c’est aussi une amie à moi."
+    "text": "Si t’as faim, soif, ou besoin de quoi que ce soit, dis-le-moi. J’ai l’habitude de veiller sur les autres... Ma petite sœur est malade, alors tu sais, je gère. Et puis, une amie de {nickname}, c’est aussi une amie à moi.",
+    "companioCharId": 5301
   },
   {
     "id": 10820,
     "charId": 5102,
     "name": "Discussion : Rencontre aléatoire : III",
     "res": "char_Aote_vo_companio_03_1",
-    "text": "Eh, Madame Camilla ? Vous ici ? Me dites pas que c’est encore une urgence... {nickname} est déjà sur les rotules. Donnez-nous au moins une pause."
+    "text": "Eh, Madame Camilla ? Vous ici ? Me dites pas que c’est encore une urgence... {nickname} est déjà sur les rotules. Donnez-nous au moins une pause.",
+    "companioCharId": 3202
   },
   {
     "id": 10821,
     "charId": 5102,
     "name": "Discussion : Rencontre aléatoire : III",
     "res": "char_Aote_vo_companio_03_2",
-    "text": "Cela dit... si c’est bien payé, je veux bien écouter."
+    "text": "Cela dit... si c’est bien payé, je veux bien écouter.",
+    "companioCharId": 3202
   },
   {
     "id": 10823,
@@ -5674,14 +5736,16 @@
     "charId": 4102,
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_Zhiliu_vo_companio_01",
-    "text": "Ton parfum est intense, passionné, empreint d’une douceur sans retenue, un contraste marqué avec la subtilité des senteurs de Huaxu. Cela éveille ma curiosité."
+    "text": "Ton parfum est intense, passionné, empreint d’une douceur sans retenue, un contraste marqué avec la subtilité des senteurs de Huaxu. Cela éveille ma curiosité.",
+    "companioCharId": 2101
   },
   {
     "id": 10865,
     "charId": 4102,
     "name": "Discussion : Rencontre aléatoire : III",
     "res": "char_Zhiliu_vo_companio_03",
-    "text": "J’ai cru voir en toi un reflet de quelqu’un que j’ai connu autrefois... Non, je dois me tromper. Oublie ce que je viens de dire. "
+    "text": "J’ai cru voir en toi un reflet de quelqu’un que j’ai connu autrefois... Non, je dois me tromper. Oublie ce que je viens de dire. ",
+    "companioCharId": 3202
   },
   {
     "id": 10866,
@@ -5919,7 +5983,8 @@
     "charId": 1501,
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_Baonu_vo_companio_02",
-    "text": "« La Résilience est l’une des Sept Vertus... Celui qui la cultive peut voir ce que nul autre ne voit, accomplir ce que— ce que... »\nAaaah ! J’en peux plus ! Espèce de nabot, si tu continues à m’imiter, je te jure par les Neuf Dieux d’Élysium que je te tranche en rondelles avec Samaël ! Et je le ferai vraiment !"
+    "text": "« La Résilience est l’une des Sept Vertus... Celui qui la cultive peut voir ce que nul autre ne voit, accomplir ce que— ce que... »\nAaaah ! J’en peux plus ! Espèce de nabot, si tu continues à m’imiter, je te jure par les Neuf Dieux d’Élysium que je te tranche en rondelles avec Samaël ! Et je le ferai vraiment !",
+    "companioCharId": 3101
   },
   {
     "id": 10901,
@@ -6178,14 +6243,16 @@
     "charId": 3202,
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_Kami_vo_companio_02",
-    "text": "Chaque personne possède ses propres talents. Certains naissent avec le don d’apaiser les autres... comme toi. Tu es quelqu’un de bien."
+    "text": "Chaque personne possède ses propres talents. Certains naissent avec le don d’apaiser les autres... comme toi. Tu es quelqu’un de bien.",
+    "companioCharId": 4102
   },
   {
     "id": 10939,
     "charId": 3202,
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_Kami_vo_companio_03",
-    "text": "C’est rare que tu fasses tout ce chemin jusqu’à Givrelac. Alors dis-moi... tu viens chercher des produits rares de l’Empire ? Ou simplement assister au spectacle ?"
+    "text": "C’est rare que tu fasses tout ce chemin jusqu’à Givrelac. Alors dis-moi... tu viens chercher des produits rares de l’Empire ? Ou simplement assister au spectacle ?",
+    "companioCharId": 5102
   },
   {
     "id": 10940,
@@ -6521,21 +6588,24 @@
     "charId": 1504,
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_Suyi_vo_companio_01",
-    "text": "Les gens de Luca sont toujours aussi directs ? On vient à peine de commencer à discuter et tu veux déjà me prendre dans tes bras— N-Non ! Pas maintenant !"
+    "text": "Les gens de Luca sont toujours aussi directs ? On vient à peine de commencer à discuter et tu veux déjà me prendre dans tes bras— N-Non ! Pas maintenant !",
+    "companioCharId": 2101
   },
   {
     "id": 10988,
     "charId": 1504,
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_Suyi_vo_companio_02",
-    "text": "Encore une nouvelle épée ?! Tu crois que le budget des Pics Extérieurs est illimité ? Non ! Même à genoux ça ne marchera pas ! Et m’appeler « grande-tante » ne changera rien ! Cette fois, je ne me laisserai pas convaincre !"
+    "text": "Encore une nouvelle épée ?! Tu crois que le budget des Pics Extérieurs est illimité ? Non ! Même à genoux ça ne marchera pas ! Et m’appeler « grande-tante » ne changera rien ! Cette fois, je ne me laisserai pas convaincre !",
+    "companioCharId": 1503
   },
   {
     "id": 10989,
     "charId": 1504,
     "name": "Discussion : Rencontre aléatoire : III",
     "res": "char_Suyi_vo_companio_03",
-    "text": "Tes ailes... elles sont magnifiques. Mais les miennes ne sont pas mal non plus. On fait la course ?"
+    "text": "Tes ailes... elles sont magnifiques. Mais les miennes ne sont pas mal non plus. On fait la course ?",
+    "companioCharId": 5301
   },
   {
     "id": 10990,
@@ -6857,21 +6927,24 @@
     "charId": 1102,
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_Fuluo_vo_companio_01",
-    "text": "Hilda... Heureusement qu’il me reste encore ta présence. Heureusement que tu es ici. Reste auprès de moi un peu plus longtemps. Ainsi... cela me suffit."
+    "text": "Hilda... Heureusement qu’il me reste encore ta présence. Heureusement que tu es ici. Reste auprès de moi un peu plus longtemps. Ainsi... cela me suffit.",
+    "companioCharId": 3102
   },
   {
     "id": 11036,
     "charId": 1102,
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_Fuluo_vo_companio_02",
-    "text": "Tu m’es semblable. Inutile de te hâter à le nier par quelque formule du genre : « Comment pourrais-je t’égaler ? » Je vois la flamme qui brûle au plus profond de ton cœur. Tu auras beau vouloir l’ensevelir sous terre, sous un tombeau glacé... jamais ne s’éteindra ce feu de colère."
+    "text": "Tu m’es semblable. Inutile de te hâter à le nier par quelque formule du genre : « Comment pourrais-je t’égaler ? » Je vois la flamme qui brûle au plus profond de ton cœur. Tu auras beau vouloir l’ensevelir sous terre, sous un tombeau glacé... jamais ne s’éteindra ce feu de colère.",
+    "companioCharId": 5102
   },
   {
     "id": 11037,
     "charId": 1102,
     "name": "Discussion : Rencontre aléatoire : III",
     "res": "char_Fuluo_vo_companio_03",
-    "text": "Quelle tristesse... Le loup solitaire qu’il avait sauvé de sa propre main se contente aujourd’hui de quelques os, devenu chien de chasse remuant la queue devant les traîtres qui l’ont abandonné."
+    "text": "Quelle tristesse... Le loup solitaire qu’il avait sauvé de sa propre main se contente aujourd’hui de quelques os, devenu chien de chasse remuant la queue devant les traîtres qui l’ont abandonné.",
+    "companioCharId": 4301
   },
   {
     "id": 11038,
@@ -7214,21 +7287,24 @@
     "charId": 2102,
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_Eve_vo_companio_01",
-    "text": "Petite sœur oiseau aux cheveux bleus, moi aussi je sais créer des « amis magiques » ! Regarde, regarde : un petit chat gris, un petit canard jaune... Yiou ?! N-non, je n’ai pas fait exprès de lui mettre trois ailes ! Bouhou... gentille petite sœur, tu peux faire comme si tu n’avais rien vu ?"
+    "text": "Petite sœur oiseau aux cheveux bleus, moi aussi je sais créer des « amis magiques » ! Regarde, regarde : un petit chat gris, un petit canard jaune... Yiou ?! N-non, je n’ai pas fait exprès de lui mettre trois ailes ! Bouhou... gentille petite sœur, tu peux faire comme si tu n’avais rien vu ?",
+    "companioCharId": 1801
   },
   {
     "id": 11087,
     "charId": 2102,
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_Eve_vo_companio_02",
-    "text": "Yiou yiou yiou, quel gentil petit cochon... Je peux le caresser ? Je peux ? « Générale au Chapeau Fleuri, Commandante des Cochons », tu pourrais me prêter ton petit cochon pour que je monte dessus juste un tout petit peu ? Juste un tout petit peu, s’il te plaît~"
+    "text": "Yiou yiou yiou, quel gentil petit cochon... Je peux le caresser ? Je peux ? « Générale au Chapeau Fleuri, Commandante des Cochons », tu pourrais me prêter ton petit cochon pour que je monte dessus juste un tout petit peu ? Juste un tout petit peu, s’il te plaît~",
+    "companioCharId": 5101
   },
   {
     "id": 11088,
     "charId": 2102,
     "name": "Discussion : Rencontre aléatoire : III",
     "res": "char_Eve_vo_companio_03",
-    "text": "Yiou, petit chat, où es-tu passé ? {nickname2} et moi, on pense beaucoup à toi. Reviens vite~"
+    "text": "Yiou, petit chat, où es-tu passé ? {nickname2} et moi, on pense beaucoup à toi. Reviens vite~",
+    "companioCharId": 3104
   },
   {
     "id": 11089,
@@ -7508,21 +7584,24 @@
     "charId": 3104,
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_Falu_vo_companio_01",
-    "text": "Que vous le souhaitiez ou non, que vous me pardonniez ou non... je vous dois des excuses. À vous, à votre père, ainsi qu’à vos camarades. Récupérer l’enregistreur du commandant Avar n’était qu’un début. Si vous souhaitez me faire payer de ma vie... vous pouvez le faire à tout moment."
+    "text": "Que vous le souhaitiez ou non, que vous me pardonniez ou non... je vous dois des excuses. À vous, à votre père, ainsi qu’à vos camarades. Récupérer l’enregistreur du commandant Avar n’était qu’un début. Si vous souhaitez me faire payer de ma vie... vous pouvez le faire à tout moment.",
+    "companioCharId": 5401
   },
   {
     "id": 11129,
     "charId": 3104,
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_Falu_vo_companio_02",
-    "text": "Combien de fois devrai-je vous le répéter ? Ne vous approchez pas de moi sans prévenir. Je réagis instinctivement à tout contact soudain. Si un jour je vous frappe par réflexe... ne m’en tenez pas rigueur."
+    "text": "Combien de fois devrai-je vous le répéter ? Ne vous approchez pas de moi sans prévenir. Je réagis instinctivement à tout contact soudain. Si un jour je vous frappe par réflexe... ne m’en tenez pas rigueur.",
+    "companioCharId": 2102
   },
   {
     "id": 11130,
     "charId": 3104,
     "name": "Discussion : Rencontre aléatoire : III",
     "res": "char_Falu_vo_companio_03",
-    "text": "Même entre assassins, il semble exister des différences fondamentales. Moi, je ne suis qu’une ombre errant dans les ténèbres. Mais vous... vous avez encore quelqu’un à protéger. Des liens que vous refusez d’abandonner."
+    "text": "Même entre assassins, il semble exister des différences fondamentales. Moi, je ne suis qu’une ombre errant dans les ténèbres. Mais vous... vous avez encore quelqu’un à protéger. Des liens que vous refusez d’abandonner.",
+    "companioCharId": 3102
   },
   {
     "id": 11131,
@@ -7928,14 +8007,16 @@
     "charId": 2101,
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_Shuimu_vo_companio_01",
-    "text": "Ce parfum sec... c’est toi, hein ? Ça fait longtemps. Tu veux toujours m’embarquer ? Ça a l’air plutôt amusant... Après tout, même si je te donnais mille chances, je m’échapperais quand même de ton emprise... Tu ne crois pas, Mme la Geôlière ?"
+    "text": "Ce parfum sec... c’est toi, hein ? Ça fait longtemps. Tu veux toujours m’embarquer ? Ça a l’air plutôt amusant... Après tout, même si je te donnais mille chances, je m’échapperais quand même de ton emprise... Tu ne crois pas, Mme la Geôlière ?",
+    "companioCharId": 3201
   },
   {
     "id": 21010029,
     "charId": 2101,
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_Shuimu_vo_companio_02",
-    "text": "Tu as peur de moi ? Ne t’inquiète pas, je finirai par te faire m’aimer. Viens, sens ce parfum que j’ai créé. Il est très doux, et je suis sûre que tu ressentiras un bonheur que tu n’as jamais connu."
+    "text": "Tu as peur de moi ? Ne t’inquiète pas, je finirai par te faire m’aimer. Viens, sens ce parfum que j’ai créé. Il est très doux, et je suis sûre que tu ressentiras un bonheur que tu n’as jamais connu.",
+    "companioCharId": 2301
   },
   {
     "id": 21010031,

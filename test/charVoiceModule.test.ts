@@ -53,4 +53,30 @@ describe("CharVoice 模块", () => {
         expect(renderTree(die.text, "cn", textmap)).toContain("约定的地方")
         expect(renderTree(die.text, "en", textmap)).toContain("If only")
     })
+
+    test("偶遇语音输出同伴角色 companioCharId，非偶遇语音不带该字段", async () => {
+        const graph = new Graph()
+        graph.defineModule({ name: "CharVoice", deps: [], outputs: true, build: ctx => ({ CharVoice: charVoiceModule(ctx) }) })
+        const artifacts = await graph.build({}, undefined, ["CharVoice"])
+        const rows = (artifacts.get("CharVoice") as { CharVoice: Array<Record<string, any>> }).CharVoice
+        const textmap = getTextMap()
+
+        // 黑桃 companio_02 的对象是松露(5101)：主动方闲谈 HeitaoSonglu
+        const heitaoSonglu = rows.find(row => row.res === "char_Heitao_vo_companio_02_1")!
+        expect(heitaoSonglu.charId).toBe(1101)
+        expect(heitaoSonglu.companioCharId).toBe(5101)
+        expect(renderTree(heitaoSonglu.text, "cn", textmap)).toContain("松露小姐")
+
+        // 玛尔 companio_01 的对象是希尔妲(3102)：取主动方闲谈 MaerXier，而非 SongluMaer
+        const maerXier = rows.find(row => row.res === "char_Maer_vo_companio_01")!
+        expect(maerXier.charId).toBe(3301)
+        expect(maerXier.companioCharId).toBe(3102)
+        expect(renderTree(maerXier.text, "cn", textmap)).toContain("希尔妲")
+
+        const companioRows = rows.filter(row => String(row.res).includes("_vo_companio_"))
+        expect(companioRows).toHaveLength(87)
+        expect(companioRows.filter(row => typeof row.companioCharId === "number")).toHaveLength(81)
+        const idle = rows.find(row => row.res === "char_Heitao_vo_idle")!
+        expect(idle.companioCharId).toBeUndefined()
+    })
 })

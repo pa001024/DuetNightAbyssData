@@ -275,7 +275,135 @@
     "desc": "휴식처 입구에 등장한 포토그래퍼가,\n'스냅 노트'라는 특별한 기록 방식을 소개하는데...",
     "startTime": 1775700000,
     "endTime": 1776718800,
-    "rule": "1. 이벤트 기간 동안 매일 새로운 촬영 퀘스트가 해제됩니다.\n2. 퀘스트를 완료하면, 이벤트 화면에서 보상을 수령할 수 있습니다."
+    "rule": "1. 이벤트 기간 동안 매일 새로운 촬영 퀘스트가 해제됩니다.\n2. 퀘스트를 완료하면, 이벤트 화면에서 보상을 수령할 수 있습니다.",
+    "photoTasks": [
+      {
+        "id": 1,
+        "startTime": 1775682000,
+        "endTime": 1776718800,
+        "photoView": "T_Activity_PhotoEvent_7",
+        "questChain": 400121,
+        "reward": 112001,
+        "rewardView": 1030113,
+        "location": {
+          "id": 2830,
+          "name": "필토이드로 가득한 마을",
+          "pos": [
+            1970,
+            3670
+          ],
+          "subRegion": 100101
+        }
+      },
+      {
+        "id": 2,
+        "startTime": 1775768400,
+        "endTime": 1776718800,
+        "photoView": "T_Activity_PhotoEvent_3",
+        "questChain": 400122,
+        "reward": 112002,
+        "rewardView": 1030114,
+        "location": {
+          "id": 2831,
+          "name": "히프노스의 집",
+          "pos": [
+            -3300,
+            11840
+          ],
+          "subRegion": 101101
+        }
+      },
+      {
+        "id": 3,
+        "startTime": 1775854800,
+        "endTime": 1776718800,
+        "photoView": "T_Activity_PhotoEvent_4",
+        "questChain": 400123,
+        "reward": 112003,
+        "rewardView": 1030115,
+        "location": {
+          "id": 2832,
+          "name": "눈물의 호수",
+          "pos": [
+            -9460,
+            44930
+          ],
+          "subRegion": 100103
+        }
+      },
+      {
+        "id": 4,
+        "startTime": 1775941200,
+        "endTime": 1776718800,
+        "photoView": "T_Activity_PhotoEvent_5",
+        "questChain": 400124,
+        "reward": 112004,
+        "rewardView": 1030116,
+        "location": {
+          "id": 2833,
+          "name": "아이스레이크 시티 하수도 깊은 곳",
+          "pos": [
+            -6590,
+            -11350
+          ],
+          "subRegion": 101703
+        }
+      },
+      {
+        "id": 5,
+        "startTime": 1776027600,
+        "endTime": 1776718800,
+        "photoView": "T_Activity_PhotoEvent_2",
+        "questChain": 400125,
+        "reward": 112005,
+        "rewardView": 1030117,
+        "location": {
+          "id": 2834,
+          "name": "갈레아 극장",
+          "pos": [
+            20510,
+            900
+          ],
+          "subRegion": 101901
+        }
+      },
+      {
+        "id": 6,
+        "startTime": 1776114000,
+        "endTime": 1776718800,
+        "photoView": "T_Activity_PhotoEvent_1",
+        "questChain": 400126,
+        "reward": 112006,
+        "rewardView": 1030118,
+        "location": {
+          "id": 2835,
+          "name": "백년춘",
+          "pos": [
+            37080,
+            6230
+          ],
+          "subRegion": 104110
+        }
+      },
+      {
+        "id": 7,
+        "startTime": 1776200400,
+        "endTime": 1776718800,
+        "photoView": "T_Activity_PhotoEvent_6",
+        "questChain": 400127,
+        "reward": 112007,
+        "rewardView": 1030119,
+        "location": {
+          "id": 2836,
+          "name": "구장 광장",
+          "pos": [
+            32830,
+            -103270
+          ],
+          "subRegion": 104506
+        }
+      }
+    ]
   },
   {
     "id": 103018,
@@ -380,7 +508,135 @@
     "desc": "빛과 그림자로 지난날을 아로새기고, 우리의 여정을 기록하세요.",
     "startTime": 1789005600,
     "endTime": 1790629200,
-    "rule": "1. 이벤트 기간 동안 매일 새로운 촬영 퀘스트가 해제됩니다.\n2. 퀘스트를 완료하면, 이벤트 화면에서 보상을 수령할 수 있습니다."
+    "rule": "1. 이벤트 기간 동안 매일 새로운 촬영 퀘스트가 해제됩니다.\n2. 퀘스트를 완료하면, 이벤트 화면에서 보상을 수령할 수 있습니다.",
+    "photoTasks": [
+      {
+        "id": 1,
+        "startTime": 1788987600,
+        "endTime": 1790629200,
+        "photoView": "T_Activity_PhotoEvent_8",
+        "questChain": 400130,
+        "reward": 112001,
+        "rewardView": 1030113,
+        "location": {
+          "id": 2858,
+          "name": "역전 아트리움",
+          "pos": [
+            -4552,
+            15
+          ],
+          "subRegion": 106001
+        }
+      },
+      {
+        "id": 2,
+        "startTime": 1789074000,
+        "endTime": 1790629200,
+        "photoView": "T_Activity_PhotoEvent_9",
+        "questChain": 400131,
+        "reward": 112002,
+        "rewardView": 1030114,
+        "location": {
+          "id": 2859,
+          "name": "역 밖 공터",
+          "pos": [
+            -42679,
+            -1136
+          ],
+          "subRegion": 106001
+        }
+      },
+      {
+        "id": 3,
+        "startTime": 1789160400,
+        "endTime": 1790629200,
+        "photoView": "T_Activity_PhotoEvent_10",
+        "questChain": 400132,
+        "reward": 112003,
+        "rewardView": 1030115,
+        "location": {
+          "id": 2860,
+          "name": "제철소",
+          "pos": [
+            -13366,
+            8034
+          ],
+          "subRegion": 106301
+        }
+      },
+      {
+        "id": 4,
+        "startTime": 1789246800,
+        "endTime": 1790629200,
+        "photoView": "T_Activity_PhotoEvent_11",
+        "questChain": 400133,
+        "reward": 112004,
+        "rewardView": 1030116,
+        "location": {
+          "id": 2861,
+          "name": "버려진 놀이공원",
+          "pos": [
+            -25203,
+            -29482
+          ],
+          "subRegion": 107101
+        }
+      },
+      {
+        "id": 5,
+        "startTime": 1789333200,
+        "endTime": 1790629200,
+        "photoView": "T_Activity_PhotoEvent_12",
+        "questChain": 400134,
+        "reward": 112005,
+        "rewardView": 1030117,
+        "location": {
+          "id": 2862,
+          "name": "낙원 마을",
+          "pos": [
+            -11900,
+            -74820
+          ],
+          "subRegion": 107001
+        }
+      },
+      {
+        "id": 6,
+        "startTime": 1789419600,
+        "endTime": 1790629200,
+        "photoView": "T_Activity_PhotoEvent_13",
+        "questChain": 400135,
+        "reward": 112006,
+        "rewardView": 1030118,
+        "location": {
+          "id": 2863,
+          "name": "낙원 마을",
+          "pos": [
+            -21510,
+            -76030
+          ],
+          "subRegion": 107001
+        }
+      },
+      {
+        "id": 7,
+        "startTime": 1789506000,
+        "endTime": 1790629200,
+        "photoView": "T_Activity_PhotoEvent_14",
+        "questChain": 400136,
+        "reward": 112007,
+        "rewardView": 1030119,
+        "location": {
+          "id": 2864,
+          "name": "골짜기의 균열",
+          "pos": [
+            -33280,
+            -12150
+          ],
+          "subRegion": 107201
+        }
+      }
+    ]
   },
   {
     "id": 103031,

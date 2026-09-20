@@ -275,7 +275,135 @@
     "desc": "Une photographe itinérante est apparue à l’entrée du Sanctuaire et vous a fait découvrir une manière bien particulière d’immortaliser ses souvenirs : le « Carnet d’images »...",
     "startTime": 1775700000,
     "endTime": 1776718800,
-    "rule": "1. Pendant l’événement, de nouveaux défis photo sont débloqués chaque jour\n2. Une fois les défis terminés, rendez-vous dans l’interface de l’événement pour récupérer vos récompenses\n"
+    "rule": "1. Pendant l’événement, de nouveaux défis photo sont débloqués chaque jour\n2. Une fois les défis terminés, rendez-vous dans l’interface de l’événement pour récupérer vos récompenses\n",
+    "photoTasks": [
+      {
+        "id": 1,
+        "startTime": 1775682000,
+        "endTime": 1776718800,
+        "photoView": "T_Activity_PhotoEvent_7",
+        "questChain": 400121,
+        "reward": 112001,
+        "rewardView": 1030113,
+        "location": {
+          "id": 2830,
+          "name": "Village Dévasté par les Souillés",
+          "pos": [
+            1970,
+            3670
+          ],
+          "subRegion": 100101
+        }
+      },
+      {
+        "id": 2,
+        "startTime": 1775768400,
+        "endTime": 1776718800,
+        "photoView": "T_Activity_PhotoEvent_3",
+        "questChain": 400122,
+        "reward": 112002,
+        "rewardView": 1030114,
+        "location": {
+          "id": 2831,
+          "name": "Maison d’Hypnos",
+          "pos": [
+            -3300,
+            11840
+          ],
+          "subRegion": 101101
+        }
+      },
+      {
+        "id": 3,
+        "startTime": 1775854800,
+        "endTime": 1776718800,
+        "photoView": "T_Activity_PhotoEvent_4",
+        "questChain": 400123,
+        "reward": 112003,
+        "rewardView": 1030115,
+        "location": {
+          "id": 2832,
+          "name": "Rive du Lac du Deuil",
+          "pos": [
+            -9460,
+            44930
+          ],
+          "subRegion": 100103
+        }
+      },
+      {
+        "id": 4,
+        "startTime": 1775941200,
+        "endTime": 1776718800,
+        "photoView": "T_Activity_PhotoEvent_5",
+        "questChain": 400124,
+        "reward": 112004,
+        "rewardView": 1030116,
+        "location": {
+          "id": 2833,
+          "name": "Profondeurs des Égouts de Givrelac",
+          "pos": [
+            -6590,
+            -11350
+          ],
+          "subRegion": 101703
+        }
+      },
+      {
+        "id": 5,
+        "startTime": 1776027600,
+        "endTime": 1776718800,
+        "photoView": "T_Activity_PhotoEvent_2",
+        "questChain": 400125,
+        "reward": 112005,
+        "rewardView": 1030117,
+        "location": {
+          "id": 2834,
+          "name": "Théâtre Galea",
+          "pos": [
+            20510,
+            900
+          ],
+          "subRegion": 101901
+        }
+      },
+      {
+        "id": 6,
+        "startTime": 1776114000,
+        "endTime": 1776718800,
+        "photoView": "T_Activity_PhotoEvent_1",
+        "questChain": 400126,
+        "reward": 112006,
+        "rewardView": 1030118,
+        "location": {
+          "id": 2835,
+          "name": "Éternel Printemps",
+          "pos": [
+            37080,
+            6230
+          ],
+          "subRegion": 104110
+        }
+      },
+      {
+        "id": 7,
+        "startTime": 1776200400,
+        "endTime": 1776718800,
+        "photoView": "T_Activity_PhotoEvent_6",
+        "questChain": 400127,
+        "reward": 112007,
+        "rewardView": 1030119,
+        "location": {
+          "id": 2836,
+          "name": "Esplanade des Neuf Chapitres",
+          "pos": [
+            32830,
+            -103270
+          ],
+          "subRegion": 104506
+        }
+      }
+    ]
   },
   {
     "id": 103018,
@@ -380,7 +508,135 @@
     "desc": "Immortaliser le passé dans les jeux d’ombre et de lumière, et garder une trace de notre voyage.",
     "startTime": 1789005600,
     "endTime": 1790629200,
-    "rule": "1. Pendant l’événement, de nouveaux défis photo sont débloqués chaque jour\n2. Une fois les défis terminés, rendez-vous dans l’interface de l’événement pour récupérer vos récompenses\n"
+    "rule": "1. Pendant l’événement, de nouveaux défis photo sont débloqués chaque jour\n2. Une fois les défis terminés, rendez-vous dans l’interface de l’événement pour récupérer vos récompenses\n",
+    "photoTasks": [
+      {
+        "id": 1,
+        "startTime": 1788987600,
+        "endTime": 1790629200,
+        "photoView": "T_Activity_PhotoEvent_8",
+        "questChain": 400130,
+        "reward": 112001,
+        "rewardView": 1030113,
+        "location": {
+          "id": 2858,
+          "name": "Dôme d’entrée",
+          "pos": [
+            -4552,
+            15
+          ],
+          "subRegion": 106001
+        }
+      },
+      {
+        "id": 2,
+        "startTime": 1789074000,
+        "endTime": 1790629200,
+        "photoView": "T_Activity_PhotoEvent_9",
+        "questChain": 400131,
+        "reward": 112002,
+        "rewardView": 1030114,
+        "location": {
+          "id": 2859,
+          "name": "Esplanade de la gare",
+          "pos": [
+            -42679,
+            -1136
+          ],
+          "subRegion": 106001
+        }
+      },
+      {
+        "id": 3,
+        "startTime": 1789160400,
+        "endTime": 1790629200,
+        "photoView": "T_Activity_PhotoEvent_10",
+        "questChain": 400132,
+        "reward": 112003,
+        "rewardView": 1030115,
+        "location": {
+          "id": 2860,
+          "name": "Installations de forge",
+          "pos": [
+            -13366,
+            8034
+          ],
+          "subRegion": 106301
+        }
+      },
+      {
+        "id": 4,
+        "startTime": 1789246800,
+        "endTime": 1790629200,
+        "photoView": "T_Activity_PhotoEvent_11",
+        "questChain": 400133,
+        "reward": 112004,
+        "rewardView": 1030116,
+        "location": {
+          "id": 2861,
+          "name": "Parc d’attractions en ruines",
+          "pos": [
+            -25203,
+            -29482
+          ],
+          "subRegion": 107101
+        }
+      },
+      {
+        "id": 5,
+        "startTime": 1789333200,
+        "endTime": 1790629200,
+        "photoView": "T_Activity_PhotoEvent_12",
+        "questChain": 400134,
+        "reward": 112005,
+        "rewardView": 1030117,
+        "location": {
+          "id": 2862,
+          "name": "Paradis",
+          "pos": [
+            -11900,
+            -74820
+          ],
+          "subRegion": 107001
+        }
+      },
+      {
+        "id": 6,
+        "startTime": 1789419600,
+        "endTime": 1790629200,
+        "photoView": "T_Activity_PhotoEvent_13",
+        "questChain": 400135,
+        "reward": 112006,
+        "rewardView": 1030118,
+        "location": {
+          "id": 2863,
+          "name": "Paradis",
+          "pos": [
+            -21510,
+            -76030
+          ],
+          "subRegion": 107001
+        }
+      },
+      {
+        "id": 7,
+        "startTime": 1789506000,
+        "endTime": 1790629200,
+        "photoView": "T_Activity_PhotoEvent_14",
+        "questChain": 400136,
+        "reward": 112007,
+        "rewardView": 1030119,
+        "location": {
+          "id": 2864,
+          "name": "Faille de la vallée",
+          "pos": [
+            -33280,
+            -12150
+          ],
+          "subRegion": 107201
+        }
+      }
+    ]
   },
   {
     "id": 103031,
