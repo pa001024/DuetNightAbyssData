@@ -66,10 +66,46 @@ function photoTasksByEvent(ctx: ModuleContext): Map<string, VNodeTree[]> {
     return result
 }
 
+/**
+ * 签到类活动（DailyLogin，7 日/14 日签到）的奖励 ID，按 EventId 分组。
+ * - rewards：EventReward 的逐日奖励 ID 列表（序号即天数），不解引用；
+ * - bigRewardDays：大奖励所在的天数列表（BigRewardDays 的键，按天升序），
+ *   对应 rewards 中的同名 RewardId，不重复输出 ID。
+ * DailyLogin 行缺失或两者均为空时不产生条目。
+ */
+function signInByEvent(ctx: ModuleContext): Map<string, VNodeTree> {
+    const result = new Map<string, VNodeTree>()
+    for (const item of Object.values(table(ctx, "DailyLogin"))) {
+        if (!item || typeof item !== "object") continue
+        const row = item as Record<string, any>
+        const eventId = Number(row.EventId ?? 0)
+        if (!eventId) continue
+        const rewards = sequence(row.EventReward)
+            .map(value => Number(value ?? 0))
+            .filter(value => value > 0)
+        const bigRewardDays: number[] = []
+        for (const entry of sequence(row.BigRewardDays)) {
+            if (!entry || typeof entry !== "object") continue
+            for (const day of Object.keys(entry)) {
+                const dayNum = Number(day)
+                if (dayNum > 0) bigRewardDays.push(dayNum)
+            }
+        }
+        bigRewardDays.sort((a, b) => a - b)
+        if (rewards.length === 0 && bigRewardDays.length === 0) continue
+        const signIn: Record<string, unknown> = { duration: Number(row.LoginDuration ?? 0) }
+        if (rewards.length > 0) signIn.rewards = rewards
+        if (bigRewardDays.length > 0) signIn.bigRewardDays = bigRewardDays
+        result.set(String(eventId), signIn as VNodeTree)
+    }
+    return result
+}
+
 export function eventModule(ctx: ModuleContext): VNodeTree {
     const boxDrops = rowsByEvent(ctx, "BoxDrop")
     const topUps = rowsByEvent(ctx, "CumulativeTopUpEvent")
     const photoTasks = photoTasksByEvent(ctx)
+    const signIns = signInByEvent(ctx)
     const result: VNodeTree[] = []
     for (const item of Object.values(table(ctx, "EventMain"))) {
         if (!item || typeof item !== "object") continue
@@ -98,6 +134,8 @@ export function eventModule(ctx: ModuleContext): VNodeTree {
         }
         const tasks = photoTasks.get(String(id))
         if (tasks) output.photoTasks = tasks
+        const signIn = signIns.get(String(id))
+        if (signIn) output.signIn = signIn
         result.push(output)
     }
     result.sort((a, b) => Number((a as Record<string, any>).id) - Number((b as Record<string, any>).id))

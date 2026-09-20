@@ -4,133 +4,366 @@
     "name": "Ode to the Bloom",
     "desc": "Log in for  for 7 days to claim rewards",
     "startTime": 1761523200,
-    "endTime": 1764018000
+    "endTime": 1764018000,
+    "signIn": {
+      "duration": 7,
+      "rewards": [
+        1010012,
+        1010012,
+        1010013,
+        1010012,
+        1010012,
+        1010012,
+        1010014
+      ]
+    }
   },
   {
     "id": 101002,
     "name": "Under the Apricot Petals",
     "desc": "Log in for 7 days to claim rewards",
     "startTime": 1766437200,
-    "endTime": 1768856400
+    "endTime": 1768856400,
+    "signIn": {
+      "duration": 7,
+      "rewards": [
+        1010012,
+        1010012,
+        1010013,
+        1010012,
+        1010012,
+        1010012,
+        1010014
+      ]
+    }
   },
   {
     "id": 101003,
     "name": "Message of the Nightingale",
     "desc": "Log in for  for 7 days to claim rewards",
     "startTime": 1764036000,
-    "endTime": 1766394000
+    "endTime": 1766394000,
+    "signIn": {
+      "duration": 7,
+      "rewards": [
+        1010012,
+        1010012,
+        1010013,
+        1010012,
+        1010012,
+        1010012,
+        1010014
+      ]
+    }
   },
   {
     "id": 101004,
     "name": "When the Stone Falls",
     "desc": "The age of Loong ends here. And I shall claim the mantle.\nLog in for 5 days during the event to claim rewards",
     "startTime": 1770256800,
-    "endTime": 1771189200
+    "endTime": 1771189200,
+    "signIn": {
+      "duration": 5,
+      "rewards": [
+        1010041,
+        1010042,
+        1010043,
+        1010044,
+        1010045
+      ]
+    }
   },
   {
     "id": 101005,
     "name": "Drift of Youth",
     "desc": "Log in for 7 days to claim rewards",
     "startTime": 1768874400,
-    "endTime": 1770667200
+    "endTime": 1770667200,
+    "signIn": {
+      "duration": 7,
+      "rewards": [
+        1010012,
+        1010012,
+        1010013,
+        1010012,
+        1010012,
+        1010012,
+        1010014
+      ]
+    }
   },
   {
     "id": 101006,
     "name": "Celestial Accord",
     "desc": "Log in for 7 days to claim rewards",
     "startTime": 1770602400,
-    "endTime": 1773090000
+    "endTime": 1773090000,
+    "signIn": {
+      "duration": 7,
+      "rewards": [
+        1010012,
+        1010012,
+        1010013,
+        1010012,
+        1010012,
+        1010012,
+        1010014
+      ]
+    }
   },
   {
     "id": 101007,
     "name": "Wish for Tranquil Peace",
     "desc": "Log in for 7 days to claim rewards",
     "startTime": 1773108000,
-    "endTime": 1775466000
+    "endTime": 1775466000,
+    "signIn": {
+      "duration": 7,
+      "rewards": [
+        1010012,
+        1010012,
+        1010013,
+        1010012,
+        1010012,
+        1010012,
+        1010014
+      ]
+    }
   },
   {
     "id": 101008,
     "name": "Wish Amidst Myriad Turns",
     "desc": "A wish takes wing in spring. A heart finds its breeze.\nLog in for 5 days during the event to claim rewards.",
     "startTime": 1775095200,
-    "endTime": 1776114000
+    "endTime": 1776114000,
+    "signIn": {
+      "duration": 5,
+      "rewards": [
+        1010041,
+        1010042,
+        1010043,
+        1010044,
+        1010045
+      ]
+    }
   },
   {
     "id": 101009,
     "name": "Train to the Snowfield",
     "desc": "The whistle blows. Steel roars with searing heat, and the rusted gears of fate grind slowly into motion once more.\n\nLog in for 5 days during the event to claim rewards.",
     "startTime": 1779933600,
-    "endTime": 1780952400
+    "endTime": 1780952400,
+    "signIn": {
+      "duration": 5,
+      "rewards": [
+        1010041,
+        1010042,
+        1010043,
+        1010044,
+        1010045
+      ]
+    }
   },
   {
     "id": 101010,
     "name": "Clockwork Constellations",
     "desc": "Log in for 7 days to claim rewards",
     "startTime": 1775440800,
-    "endTime": 1777928400
+    "endTime": 1777928400,
+    "signIn": {
+      "duration": 7,
+      "rewards": [
+        1010012,
+        1010012,
+        1010013,
+        1010012,
+        1010012,
+        1010012,
+        1010014
+      ]
+    }
   },
   {
     "id": 101011,
     "name": "Lingering Reflections",
     "desc": "Log in for 7 days to claim rewards",
     "startTime": 1777946400,
-    "endTime": 1780304400
+    "endTime": 1780304400,
+    "signIn": {
+      "duration": 7,
+      "rewards": [
+        1010012,
+        1010012,
+        1010013,
+        1010012,
+        1010012,
+        1010012,
+        1010014
+      ]
+    }
   },
   {
     "id": 101012,
     "name": "Beyond the Cage",
     "desc": "Log in for 7 days to claim rewards",
     "startTime": 1780279200,
-    "endTime": 1782766800
+    "endTime": 1782766800,
+    "signIn": {
+      "duration": 7,
+      "rewards": [
+        1010012,
+        1010012,
+        1010013,
+        1010012,
+        1010012,
+        1010012,
+        1010014
+      ]
+    }
   },
   {
     "id": 101013,
     "name": "Days of Tranquility",
     "desc": "Log in for 7 days to claim rewards",
     "startTime": 1782784800,
-    "endTime": 1785142800
+    "endTime": 1785142800,
+    "signIn": {
+      "duration": 7,
+      "rewards": [
+        1010012,
+        1010012,
+        1010013,
+        1010012,
+        1010012,
+        1010012,
+        1010014
+      ]
+    }
   },
   {
     "id": 101014,
     "name": "Wanderer's Gifts",
     "desc": "Log in for 14 days during the event to claim gifts",
     "startTime": 1761523200,
-    "endTime": null
+    "endTime": null,
+    "signIn": {
+      "duration": 14,
+      "rewards": [
+        10101401,
+        10101402,
+        10101403,
+        10101404,
+        10101405,
+        10101406,
+        10101407,
+        10101408,
+        10101409,
+        10101410,
+        10101411,
+        10101412,
+        10101413,
+        10101414
+      ],
+      "bigRewardDays": [
+        2,
+        3,
+        4,
+        7,
+        9,
+        11,
+        13,
+        14
+      ]
+    }
   },
   {
     "id": 101015,
     "name": "Rabbit in Wonderland",
     "desc": "A girl drifts through the wonderland. What fairytale awaits her today?\n\nLog in for 5 days during the event to claim rewards.",
     "startTime": 1784772000,
-    "endTime": 1785790800
+    "endTime": 1785790800,
+    "signIn": {
+      "duration": 5,
+      "rewards": [
+        1010041,
+        1010042,
+        1010043,
+        1010044,
+        1010045
+      ]
+    }
   },
   {
     "id": 101016,
     "name": "Shh! The Parade Begins",
     "desc": "Welcome to Arcano, the home you came from — our paradise, everlasting and inviolate.\nSign in for 5 days during the event to claim gifts.",
     "startTime": 1788400800,
-    "endTime": 1789419600
+    "endTime": 1789419600,
+    "signIn": {
+      "duration": 5,
+      "rewards": [
+        1010041,
+        1010042,
+        1010043,
+        1010044,
+        1010045
+      ]
+    }
   },
   {
     "id": 101017,
     "name": "White Bunnies' Invitation",
     "desc": "Log in for 7 days to claim rewards",
     "startTime": 1785117600,
-    "endTime": 1788771600
+    "endTime": 1788771600,
+    "signIn": {
+      "duration": 7,
+      "rewards": [
+        1010012,
+        1010012,
+        1010013,
+        1010012,
+        1010012,
+        1010012,
+        1010014
+      ]
+    }
   },
   {
     "id": 101018,
     "name": "Way of the Penitent",
     "desc": "Log in for 7 days to claim rewards",
     "startTime": 1788746400,
-    "endTime": 1792400400
+    "endTime": 1792400400,
+    "signIn": {
+      "duration": 7,
+      "rewards": [
+        1010012,
+        1010012,
+        1010013,
+        1010012,
+        1010012,
+        1010012,
+        1010014
+      ]
+    }
   },
   {
     "id": 101019,
     "name": "A Flame Rekindled",
     "desc": "In the bitter wind, the last embers in her heart flare to life once more, lighting the path ahead.\nLog in on 5 different days during the event to claim rewards.",
     "startTime": 1792029600,
-    "endTime": 1793048400
+    "endTime": 1793048400,
+    "signIn": {
+      "duration": 5,
+      "rewards": [
+        1010041,
+        1010042,
+        1010043,
+        1010044,
+        1010045
+      ]
+    }
   },
   {
     "id": 102001,
