@@ -12,8 +12,8 @@
         "text": "1er janvier\nAujourd’hui, ▇▇▇▇ m’a donné quelques éclats de Phoxène en guise « d’argent de poche ».\nElle m’a expliqué qu’à la Capitale, les enfants reçoivent régulièrement de l’argent de leurs aînés jusqu’à leur majorité — pour acheter ce qu’ils désirent : nourriture, jouets, et autres babioles.\n\nIl n’y a aucune boutique dans la zone des ruines ; elle m’a donc dit de les économiser. Ainsi, le jour où j’aurai envie de quelque chose, ou que je voudrai accomplir quelque chose, je pourrai lui remettre une partie de cet « argent de poche » pour qu’elle m’aide.\n\nMais... je ne sais pas vraiment ce que je veux.\n\n2 janvier\nJ’ai trouvé ! Je pourrais offrir un « cadeau d’anniversaire » à {nickname} !\nDans les livres, il est écrit que les enfants de la Capitale mangent un gâteau pour célébrer leur anniversaire. Cela a l’air très précieux... mais si j’économise assez, je pourrai demander à ▇▇▇▇ de m’aider à en obtenir un.\n\nJ’ai trouvé une vieille jarre en argile dans la cuisine : parfaite pour y garder mes économies.\n\n16 janvier\nAujourd’hui, alors que nous jouions à cache-cache, {nickname} a découvert ma jarre et a failli l’ouvrir... Je dois lui trouver une meilleure cachette.\nDemain, je me faufilerai dans la salle d’alchimie de ▇▇▇▇ pour chercher un endroit sûr. Il y a là-bas plein d’appareils impressionnants, et ▇▇▇▇ ne laisse jamais {nickname} y entrer.\n\n17 janvier\nJ’ai caché ma tirelire <H>près de la cascade, dans la salle d’alchimie</>.\nAinsi, ni {nickname} ni ▇▇▇▇ ne tomberont dessus.\n\n...\n\n▇▇ ▇▇\nL’anniversaire de {nickname} approche, et j’ai économisé assez pour remplir toute une caisse d’« argent de poche ». Cela devrait suffire pour échanger contre un gâteau. Mais ▇▇▇▇ semble préoccupée ces derniers temps. Elle se couche très tard... Peut-être que ce n’est pas le bon moment pour lui demander quoi que ce soit.\n\nL’an prochain, je pourrai demander un gâteau encore plus grand — tellement grand que nous pourrons tous les trois en manger jusqu’à ne plus avoir faim.",
         "srId": 100102,
         "pos": [
-          27885,
-          5905
+          24786,
+          4599
         ],
         "treasurePos": [
           29327,
@@ -27,8 +27,8 @@
         "text": "Berry,\n\nSi tu lis cette lettre, c’est que tu es revenue ici.\nTu as toujours été une fille réfléchie, et je suis sûr que tu avais une bonne raison de revenir.\nJ’ai laissé des provisions pour ton voyage, enterrées <H>près du dirigeable</> — elles devraient suffire à quitter l’Île du Purgatoire.\n\nPuisses-tu voyager en sécurité.",
         "srId": 100103,
         "pos": [
-          21480,
-          24980
+          17959,
+          25654
         ],
         "treasurePos": [
           26165,
@@ -42,8 +42,8 @@
         "text": "La Déesse du Destin tisse la course des étoiles et nous offre la lumière pour guider nos pas vers le bonheur éternel.\n\nPourtant, les humains ont trahi Ses enseignements.\nNous avons oublié l’amour et la compassion, et brandissons à présent des lames glacées les uns contre les autres.\nLes terres sacrées se sont effondrées, et même Ses temples ont été souillés.\n\nSi cette épreuve est bien celle qu’Elle a voulue — la nuit avant l’aube — alors, à toi, voyageur du futur, je lègue une bénédiction venue d’un autre temps.\n\nDans <H>un lieu que Son regard ne frôlera jamais</>, j’ai enfoui l’héritage d’une ère où l’humanité croyait encore en l’amour et en la fraternité.\n\nQue Ses fils du destin te guident vers la véritable aurore.",
         "srId": 100101,
         "pos": [
-          8260,
-          -3620
+          4735,
+          6295
         ],
         "treasurePos": [
           11990,
@@ -57,8 +57,8 @@
         "text": "Le temps s’efface, la mémoire s’endort.\nLes visages changent, les vents se souviennent.\nSous les collines, la lumière des dieux persiste.\nLes racines murmurent au voyageur patient.\nDans la caverne, la vérité sommeille.\nLà où tout se fane, un nouveau cycle s’éveille.",
         "srId": 100103,
         "pos": [
-          38879,
-          19823
+          38744,
+          19632
         ],
         "treasurePos": [
           29978,
@@ -80,8 +80,8 @@
         "text": "Désolé ma belle, j’ai eu quelques ennuis à la maison. Ce mois-ci, je ne pourrai pas t’emmener vivre dans la cité intérieure comme promis. Mais ne t’en fais pas — dès que tout sera réglé, je viendrai te chercher. Fais-moi confiance, une dernière fois, d’accord ?\nPour me faire pardonner, j’ai caché quelques pièces <H>sous le carré d’herbe à gauche du passage</> vers la cité intérieure. N’oublie pas d’aller les chercher. Je t’aime.\n\n<W>Sale menteur ! Salaud ! À chaque fois, tu crois pouvoir m’acheter avec ton fric ! Je ne suis pas ton chien ! Je ne veux rien de toi ! Garde ton argent et casse-toi !</>",
         "srId": 101101,
         "pos": [
-          -2050,
-          4170
+          -2051,
+          4208
         ],
         "treasurePos": [
           820,
@@ -95,12 +95,12 @@
         "text": "Hé, toi ! Marre de galérer dans la misère ?\nFatigué de bosser comme un chien pour une misère, sous les regards méprisants ?\nT’as beau te tuer à la tâche, tu restes toujours fauché ?\nNe t’en veux pas — le problème, c’est pas toi. Ce qu’il te manque, c’est pas le talent... c’est la chance !\nAujourd’hui, ta chance tourne !\nLe mois dernier, notre Alliance Minière Légendaire a dévoilé une invention révolutionnaire, dix ans de travail !\nUne machine d’extraction nouvelle génération : facile à utiliser, durable, et surtout capable d’extraire les particules de Phoxène invisibles à l’œil nu, pour les transformer en pierres solides !\nGrâce à elle, les mines épuisées de Givrelac vont renaître, et notre industrie minière retrouvera sa gloire passée !\n\nEt nous recrutons dès maintenant ! Une occasion pareille ne se présentera qu’une fois ! Résous l’énigme ci-dessous pour obtenir ton laissez-passer !\n\n(En bas de la page figure un croquis sommaire des taudis, avec un symbole de Phoxène marquant <H>un tas de ferraille près d’une poubelle sur le bas-côté</>.)",
         "srId": 101101,
         "pos": [
-          -1701,
-          -7421
+          -1802,
+          -7577
         ],
         "treasurePos": [
-          -7017,
-          -6601
+          -2520,
+          -12737
         ]
       },
       {
@@ -110,8 +110,8 @@
         "text": "La dernière fois, on a trouvé ma cachette d’argent de poche...\nCette fois, j’ai demandé conseil à un pro : il m’a dit de cacher mon magot <H>près d’une flaque, hors de la cité</>.\n\nBon, le Phoxène ne craint pas l’eau, mais la boîte, elle, risque de moisir avec l’humidité... Et si tout partait en bouillie, ce serait vraiment de l’argent jeté à l’eau, pas vrai ?\n\nEnfin... mieux vaut ça que de se le faire piquer.\nJ’irai vérifier la cache la semaine prochaine, juste pour être sûr.",
         "srId": 101101,
         "pos": [
-          -9393,
-          7504
+          -9978,
+          7800
         ],
         "treasurePos": [
           -15374,
@@ -125,8 +125,8 @@
         "text": "Hé ! On joue à un jeu ?\nSi tu trouves <H>le plus gros cristal</> des environs, je te donne un cadeau !",
         "srId": 101301,
         "pos": [
-          6308,
-          2379
+          5590,
+          6314
         ],
         "treasurePos": [
           120,
@@ -140,8 +140,8 @@
         "text": "<W>Il n’y a ici aucun morceau de Phoxène, pas même cent.</>\n\n(Sous ces mots, des lignes irrégulières esquissent vaguement les galeries de la mine. Le cercle rouge semble indiquer <H>l’entrée de la mine</>.)",
         "srId": 101103,
         "pos": [
-          -39461,
-          -3328
+          -37953,
+          1241
         ],
         "treasurePos": [
           -32774,
@@ -155,8 +155,8 @@
         "text": "Je l’ai vu de mes propres yeux : un éclat bleu surgir <H>du pied de cette colonne effondrée</> ! Et pourtant, il n’y a aucun dispositif lumineux à cet endroit ! Il y a forcément quelque chose de louche...\n\nSans doute l’esprit d’un mineur mort d’épuisement, resté accroché là... Voilà pourquoi personne n’a jamais réussi à réparer cette colonne depuis si longtemps !",
         "srId": 101103,
         "pos": [
-          -28580,
-          -5200
+          -25655,
+          -3764
         ],
         "treasurePos": [
           -33408,
@@ -170,8 +170,8 @@
         "text": "Salut, étranger.\nJe suis un explorateur, et cette caverne est l’un des plus beaux endroits que j’aie jamais vus — on croirait le repaire des fées des neiges !\n\nDe gigantesques stalactites de glace pure, les racines pétrifiées d’un vieil Arbre Céleste, un labyrinthe naturel fascinant... Tout ici palpite d’énergie et d’émerveillement.\n\nSi tu es arrivé jusqu’ici, ne rebrousse pas chemin ! Plus haut, le spectacle est encore plus grandiose.\nJ’ai laissé pour toi un petit présent et quelques provisions <H>au sommet de la caverne</>.\n\nAvance sans crainte, aventurier : la vie est un voyage, et le voyage ne s’arrête jamais !",
         "srId": 101103,
         "pos": [
-          -25917,
-          5325
+          -31321,
+          9226
         ],
         "treasurePos": [
           2254,
@@ -185,8 +185,8 @@
         "text": "Te souviens-tu ? Ce jour où nous avons quitté la cité pour marcher jusqu’à la <H>Rive du Lac du Deuil</>, traversant les eaux peu profondes.« Regarde, un arbre aux feuilles rouges », disais-tu.« Elles sont orange », t’ai-je corrigé.« J’ai dit rouge », as-tu insisté, obstinée.\nJ’avais mis de côté quelques morceaux de Phoxène — je voulais les échanger contre une véritable plante aux feuilles rouges, un cadeau pour toi.Finalement, je les ai enfouies <H>sous cet arbre aux feuilles orangées</>.\n... Oui, je pense toujours qu’elles sont orange. Pardonne-moi.Les feuilles ne virent pas au rouge parce que tu l’affirmes, tout comme tu ne reviendras pas simplement parce que je le désire.\nPeut-être qu’au printemps, le Phoxène germera — comme les sentiments que je porte encore. Ou peut-être qu’un passant chanceux les déterrera.\nPeu importe. Tu disais toujours que les bonnes choses doivent être partagées.Si ce présent que je n’ai jamais pu t’offrir peut aider quelqu’un dans le besoin... alors peut-être est-ce là une forme d’heureuse conclusion.",
         "srId": 101103,
         "pos": [
-          -38101,
-          30921
+          -40741,
+          31904
         ],
         "treasurePos": [
           -55534,
@@ -216,7 +216,7 @@
         "srId": 101701,
         "pos": [
           -14120,
-          -7175
+          -7148
         ],
         "treasurePos": [
           -10478,
@@ -268,8 +268,8 @@
         "text": "« Hé, mes chers anciens camarades — et si l’on fêtait un petit quelque chose ?\n\nPas d’inquiétude, je sais très bien que la forteresse n’autorise que la célébration de la Journée du Triomphe... mais rien ne nous empêche d’honorer en secret un autre festival, non ?\n\nChez moi, le premier jour d’avril est celui de la Fête du Dégel : on accroche des breloques aux branches des pins libérées de la neige, on s’échange des présents à leur pied, et l’on salue la fin de l’hiver pour accueillir le printemps à venir.\n\nVous vous souvenez sans doute du pin dans le <H>Champ de Bataille Simulé</> ? Celui que nos entraînements ont criblé d’impacts et assombri de fumée ? À ce stade, on peut presque appeler ça des décorations.\n\nLa semaine prochaine, c’est votre 6ᵉ escouade qui aura séance d’entraînement — et j’ai peut-être caché un petit cadeau <H>sous le pin près de l’eau</>. Pensez à vous porter volontaires pour le nettoyage du terrain... et à découvrir le paquet, mine de rien.\n\n(Une part chacun — pas de triche ! Je vous surveillerai dans l’ombre, 0^0)\n\nMême si j’ai été transféré dans une autre unité, vous resterez toujours mes amis. »",
         "srId": 102102,
         "pos": [
-          -10037,
-          -1317
+          -818,
+          -21712
         ],
         "treasurePos": [
           -10036,
@@ -1601,8 +1601,8 @@
         "text": "Contrat de prêt — Année X de Dafeng\n\nEn l’an X de Dafeng, le Xᵉ jour du Xᵉ mois, She Yuqing a emprunté dix mille pièces de cuivre auprès de Li Laoqian, avec un intérêt mensuel de cent pièces.\nLe remboursement du capital et des intérêts devra être effectué avant le Xᵉ jour du Xᵉ mois. Passé ce délai, la somme totale due — capital et intérêts compris — sera exigible au triple du montant.\nSous le témoignage du Seigneur Dragon d’Argent, et conformément aux enseignements des Neuf Chapitres de Dafeng, les deux parties établissent le présent contrat et y apposent leur empreinte digitale en guise de foi.\n\nParties contractantes :\nShe Yuqing\nLi Laoqian\n\nRédigé à Huaxu, en l’an X de Dafeng, le Xᵉ jour du Xᵉ mois.",
         "srId": 104109,
         "pos": [
-          -13014,
-          11761
+          -12960,
+          11791
         ]
       }
     ]
@@ -1861,8 +1861,8 @@
         "text": "Ouinn... L’autre jour, pour frimer devant mes amis, je suis monté sur la tête de la statue de Bi’an, <H>derrière la Stèle de l’Admonition</>. Et voilà que depuis, j’attrape un rhume et je tombe sans arrêt... C’est sûrement une punition divine, non ?\n\nJ’ai offert tout mon argent de poche du mois <H>aux pieds de Seigneur Bi’an</>. J’espère qu’il fera preuve de clémence et me pardonnera vite...",
         "srId": 104108,
         "pos": [
-          41170,
-          67884
+          40684,
+          62831
         ],
         "treasurePos": [
           58816,
@@ -1876,8 +1876,8 @@
         "text": "...\n21 septembre\n\nPris d’une impulsion soudaine, j’ai tiré cinq Œufs porte-bonheur. Les quatre premiers contenaient une boîte de cure-dents, un chiffon, un sachet de graines de lys céleste et des pastilles pour la gorge — rien de bien remarquable. Mais le dernier renfermait un paquet de thé printanier de Port-des-Brumes, de qualité supérieure !\n\nLuno, la carpe, a dit que j’étais chanceux... Serais-je vraiment un enfant chéri de la fortune ? J’essaierai de nouveau quand j’en aurai l’occasion.\n...\n27 septembre\n\nDix Œufs porte-bonheur aujourd’hui. Trois sachets parfumés, un bon d’échange pour des gâteaux d’osmanthe, deux coupons de réduction de sept pièces d’argent pour des places de théâtre (non cumulables, en plus ?), une brosse en bois, cent grammes de fientes de paon séchées — la notice prétend que c’est médicinal... répugnant, je l’enterrerai dans un champ — puis un pain d’encre et une boîte d’allumettes...\n\nMaudit soit-il... Pas un seul objet rare ces derniers jours ! Si Luno, la carpe n’était pas si adorable, je n’ouvrirais plus un seul œuf.\n\n28 septembre\n\nSous l’insistance de Luno, la carpe, j’ai ouvert plus de vingt Œufs porte-bonheur. Elle disait que j’avais atteint le seuil garanti et que j’obtiendrais un œuf « ultra-rare »... Et qu’y avait-il dedans ?! Des bouts de papier, de la nourriture pour animaux et des jouets pour enfants ?!\nC’est clairement une boutique frauduleuse ! Une arnaque ! Pourquoi le Bi’an ne fait-il rien ?!\nPlus jamais je n’ouvrirai ces maudits œufs !\nJe vais jeter toute cette camelote dans le <H>bassin aux lotus</> pour nourrir les poissons !",
         "srId": 104110,
         "pos": [
-          31508,
-          -3480
+          31657,
+          -3314
         ],
         "treasurePos": [
           26995,
@@ -1906,8 +1906,8 @@
         "text": "Depuis notre débat ce jour-là, une chose m’est devenue claire : si nous restons au Marché Voilé, nous ne comprendrons jamais la véritable signification de la liberté, ni le prix qu’elle exige.\n\nLes jeux de mots et les combines du Marché Voilé ne sont que des compromissions sous couvert de règles. Je refuse une liberté née de la ruse et de l’évitement. Il doit exister, quelque part, une liberté droite et franche, sans calcul ni faux-semblants... Je veux en apporter la preuve.\n\nC’est pourquoi je pars — au-delà de la montagne que nous avons tant de fois contemplée, vers des sommets plus hauts encore. Même si le prix à payer est l’errance et la rupture avec le monde.\n\nLorsque tu liras cette lettre, je serai déjà loin. J’ai laissé quelques présents <H>sur la vieille barque au bord de l’eau</> où nous jouions autrefois. Pardonne mon départ sans adieu. Je te le promets : nous nous reverrons... le jour où j’aurai trouvé ma réponse.",
         "srId": 104109,
         "pos": [
-          -19023,
-          5230
+          -18930,
+          5024
         ],
         "treasurePos": [
           -20696,
@@ -1921,8 +1921,8 @@
         "text": "J’avais entendu dire que la Mer de Poussière était d’une dangerosité extrême. Après cette exploration, je ne peux que confirmer : c’est terrifiant, mais exaltant. À y regarder de plus près, le paysage possède même une beauté singulière ; sans l’invasion des Souillés, ce lieu pourrait presque devenir un site renommé.\n\nMais partout s’étendent rochers et arbres morts, au point qu’il est facile de perdre tout sens de l’orientation. Lors d’une pause, j’ai égaré un paquet — je crois qu’il se trouvait dans une <H>certaine grotte</>... J’ai beau chercher depuis des heures, je n’en trouve pas l’entrée. La nuit va bientôt tomber.\n\nTant pis. Qu’un heureux élu le découvre...",
         "srId": 104105,
         "pos": [
-          -18718,
-          -31299
+          -19836,
+          -31620
         ],
         "treasurePos": [
           -19577,
@@ -2120,8 +2120,8 @@
         "text": "4 juin\nDemandeur : Wang Quan\nMotif : Je soutiens que le tofu soyeux sucré est le meilleur, mais Zhang Fu affirme que le salé est supérieur. Il ne reste qu’une solution : un duel pour trancher la question !\n\n28 juin\nDemandeur : Xu Hong\nMotif : Je souhaite tester un nouveau mécanisme explosif. Le terrain d’entraînement étant assez dégagé, il s’y prête parfaitement.\n\n15 juillet\nDemandeur : Su Yi\nMotif : Lu Ye et Pei Jing veulent s’exercer au tir à l’arc et à l’arbalète. On m’a donc demandé de venir les superviser.\n\n16 juillet\nDemandeur : Su Yi\nMotif : Même raison qu’hier. (Ces enfants progressent vraiment bien !)\n\n6 août\nDemandeur : Oncle Tang\nMotif : Un nouveau dispositif d’amplification sonore pour le combat vient d’être achevé. Je voudrais que chacun vienne chanter à tour de rôle sur le terrain d’entraînement afin d’en tester la portée.\n\n20 août\nDemandeur : Oncle Tang\nMotif : Zhu Pu s’est blessé à la jambe à force de s’entraîner. Je voudrais aujourd’hui tester l’attelle de soutien que j’ai conçue pour lui et relever quelques données.",
         "srId": 105201,
         "pos": [
-          15713,
-          2236
+          15694,
+          2267
         ]
       }
     ]
@@ -2175,7 +2175,7 @@
         "srId": 104502,
         "pos": [
           19290,
-          -2900
+          -2880
         ]
       }
     ]
@@ -2256,8 +2256,8 @@
         "text": "À l’est, les herbes des confins deviennent de plus en plus denses, on s’enfonce dans les cavités... sans jamais rien trouver.\nÀ force d’attendre, les yeux levés vers les étoiles et la lune, dans une vaine obstination, on découvre enfin que le trésor repose, profondément enfoui à la racine.",
         "srId": 104505,
         "pos": [
-          61191,
-          -76998
+          59114,
+          -78225
         ],
         "treasurePos": [
           63613,
@@ -2271,8 +2271,8 @@
         "text": "Du sud au nord, de l’est à l’ouest, la quête ne connaît pas de repos.\nVers l’ouest, les routes convergent et mènent à la cité centrale. Mais où donc se cache le trésor ? Sous l’arbre desséché, au-dessus des eaux.",
         "srId": 104502,
         "pos": [
-          18391,
-          -38555
+          18313,
+          -38554
         ],
         "treasurePos": [
           21881,
@@ -2482,8 +2482,8 @@
         "text": "C’était horrible... En descendant du train, j’ai remarqué qu’un passager avait fait tomber son portefeuille. Sur un coup de folie, je l’ai discrètement ramassé... Mais à l’intérieur, il y avait plein d’étranges papiers ressemblant à des talismans, avec des lunes noires dessinées dessus... Franchement, ça faisait froid dans le dos... Il paraît que c’est le symbole d’une secte hérétique d’Élysium ou quelque chose du genre ?\n \nJ’ai laissé le portefeuille <H>devant l’infirmerie</>. Si ça peut aider quelqu’un dans le besoin, peut-être que ça compensera ma faute... Les Sept Dieux d’Élysium... ou c’était les Neuf ? Enfin bref, puisque je n’ai pas touché à l’argent, s’il vous plaît, ne me maudissez pas !",
         "srId": 106001,
         "pos": [
-          -28074,
-          19451
+          -28014,
+          19582
         ],
         "treasurePos": [
           -30764,
@@ -2749,8 +2749,8 @@
         "text": "Poursuis un cerf et offre-le à Maman Lapin, aimée comme une mère ;\nPoursuis un cerf et offre-le à Maman Lapin, vénérée comme une divinité ;\nArrache-lui ses sabots fendus, tranche ses bois indomptés ;\nChâtie son entêtement obstiné !\nDépouille-le de sa douce fourrure et recouds-la de fil et d’aiguille ;\nRecouvre de peau de cerf le sentier jonché de pierres.\nMaman Lapin, viens jusqu’ici !\nTends ta main bienveillante,\nSous le témoignage du <H>Cerf d’Or</>,\nAccorde-moi une seconde vie.\n \n— <I>Hymne à Maman Lapin – Chapitre de la Chasse au Cerf</>",
         "srId": 107001,
         "pos": [
-          -19644,
-          -78235
+          -10060,
+          -69619
         ],
         "treasurePos": [
           -19644,
@@ -2764,8 +2764,8 @@
         "text": "Pourquoi refuses-tu de me croire ? Tu t’obstines à dire que ce n’est qu’une <H>Pierre Lapin</> !\nC’est pourtant l’incarnation de Maman Lapin. Tu n’entends donc pas Sa voix ?\n \nCe n’est pas une hallucination, vraiment... Si tu y vas maintenant, tu pourras encore voir Son cadeau. Il est juste <H>à Ses pieds</> !\n \nElle m’a choisi ! Elle m’a reconnu ! Elle m’a pardonné ! Elle m’a invité à rejoindre Son monde, pour La servir à Ses côtés. Là-bas, c’est le paradis, c’est le Paradis, c’est la terre où coule le Fleuve de Miel... C’est le Paradis... le Paradis... le Paradis ! Son Paradis !",
         "srId": 107001,
         "pos": [
-          -4625,
-          -24393
+          -75,
+          -31731
         ],
         "treasurePos": [
           -4625,
@@ -2779,8 +2779,8 @@
         "text": "Félicitations au quatre-vingt-dix-neuvième heureux gagnant des tasses tournantes ! Vous avez décroché le gros lot !\nDescendez d’ici et rendez-vous dans la pièce où un cadeau exceptionnel vous attend. Une récompense à la hauteur de votre incroyable chance.\nJe ne sais pas lequel des habitants d’Arcano vous êtes. Peut-être la petite Ada, toujours prête à s’amuser ? Hahaha ! Enfin, peu importe qui vous êtes. Le Paradis existe avant tout pour rendre les gens heureux. Peu importe à qui cette joie est offerte, c’est une bonne chose.\n \nIci, c’est notre Arcano à tous. Ici, c’est notre foyer, notre Paradis à tous.\nPour ce cadeau inattendu, ne remerciez personne. La seule personne que vous devez remercier, c’est vous-même. C’est votre bonne étoile qui vous a conduit jusqu’ici, et c’est grâce à votre sens de l’observation que vous avez trouvé ce billet et obtenu cette récompense.\nArcano devient chaque jour un endroit meilleur grâce aux efforts de chacun. Il est donc naturel que chacun puisse profiter des fruits de ces efforts.\nAllez maintenant récupérer votre cadeau dans <H>la pièce juste en face, à l’enseigne dorée</> !\n \nJe vous souhaite une merveilleuse journée !\nÀ l’avenir d’Arcano ! À notre avenir !",
         "srId": 107101,
         "pos": [
-          -31890,
-          -32580
+          -28250,
+          -29412
         ],
         "treasurePos": [
           -31890,
@@ -2794,8 +2794,8 @@
         "text": "L’atterrissage d’urgence a échoué. La moitié de mon corps ne répond plus. Je ne pense pas survivre jusqu’à l’arrivée des secours.\nIl reste encore des provisions dans le <H>dirigeable</>. Mes camarades, emportez-les avec vous. Puisse votre mission se dérouler sans encombre.\nSi vous le pouvez, allez dans la soute arrière du dirigeable et trouvez la photo d’une jeune fille aux longs cheveux blonds. Déposez-la sur ma poitrine et enterrez-la avec moi...\nC’est le seul souvenir auquel je tiens encore.",
         "srId": 107101,
         "pos": [
-          -64451,
-          -54481
+          -52419,
+          -53057
         ],
         "treasurePos": [
           -64451,
@@ -2809,8 +2809,8 @@
         "text": "Ma chère Rosalia,\nJ’arrive bientôt à Arcano. Comme je te l’avais promis, je consignerai toutes mes observations sur cette ville et je te les enverrai par courrier.\nIl paraît que les coutumes locales y sont très particulières. Pour un auteur de romans fantastiques comme moi, c’est tout simplement un lieu rêvé pour trouver l’inspiration !\nTu le sais, je traverse une période où l’inspiration me fait défaut et cela me désespère. Je suis persuadé que venir ici en personne me donnera quantité de nouvelles idées.\nJ’ai déjà trouvé mon histoire. Elle parlera d’une jeune fille qui obtient par hasard une paire de chaussures de danse rouges capables d’exaucer les vœux. Mais en réalité, chaque vœu réalisé exige un prix. Et lorsqu’elle voudra enfin s’en débarrasser, incapable de continuer à en payer le prix, elle découvrira que les chaussures ont fusionné avec ses pieds...\nQu’en penses-tu ? Un conte avec une petite touche d’horreur, ça te plaît ? J’ai déjà rempli une bonne quinzaine de pages de brouillons. Comme je m’y attendais, changer d’environnement stimule vraiment l’inspiration. Une fois ce voyage terminé, je mettrai tout cela au propre avant de l’envoyer de nouveau à une maison d’édition.\n...\nLes habitants sont chaleureux et accueillants, bien loin de l’image effrayante que leur prêtent les rumeurs. J’en étais sûr : la plupart de ces légendes urbaines ne sont que des histoires déformées de bouche à oreille. Il n’y avait vraiment aucune raison de s’inquiéter.\nC’est un peu dommage, finalement... Je comptais justement y puiser de l’inspiration pour mon histoire d’horreur.\nJ’ai un peu trop bu... J’ai la tête qui tourne...\nHein ? Où est-ce que j’ai posé mes bagages déjà ?\nAh... je les vois. <H>À côté du pilier, dans le coin de la pièce</>.\nJ’ai vraiment la tête qui tourne...\nJe ferais mieux d’aller dormir un peu.\n...\n...\nC’est... moi qui ai écrit cette lettre ?\nQui est Rosalia... ?\nEt moi...\nQui suis-je... ?\n \n(La suite de la lettre a été détruite par les flammes. Les bords noircis sont irréguliers et entièrement carbonisés.)",
         "srId": 107201,
         "pos": [
-          16968,
-          17918
+          20985,
+          -1961
         ],
         "treasurePos": [
           16968,

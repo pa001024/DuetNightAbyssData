@@ -257,7 +257,8 @@ function refParts(value: unknown): [string | undefined, string | undefined] {
     return [undefined, parts[0]]
 }
 
-function buildObjectMaps(nodes: Row[]) {
+/** 按 Outer 全名/短名与 ObjectPath 建立节点索引，供引用解析使用 */
+export function buildObjectMaps(nodes: Row[]) {
     const byOuter = new Map<string, Row>()
     const byName = new Map<string, Row[]>()
     const byPath = new Map<string, Row>()
@@ -362,13 +363,60 @@ function objectLocation(obj: Row, maps: ReturnType<typeof buildObjectMaps>, root
     return rootFirst ? (related() ?? direct()) : (direct() ?? related())
 }
 
-function extractPosition(node: Row, maps: ReturnType<typeof buildObjectMaps>): number[] | undefined {
+/** UE 旋转作用于向量（FRotationMatrix 约定，Roll→Pitch→Yaw，左手系） */
+function rotateVector(vector: number[], rotation: Row): number[] {
+    const toRad = Math.PI / 180
+    const pitch = (Number(rotation.Pitch) || 0) * toRad
+    const yaw = (Number(rotation.Yaw) || 0) * toRad
+    const roll = (Number(rotation.Roll) || 0) * toRad
+    const cp = Math.cos(pitch)
+    const sp = Math.sin(pitch)
+    const cy = Math.cos(yaw)
+    const sy = Math.sin(yaw)
+    const cr = Math.cos(roll)
+    const sr = Math.sin(roll)
+    const [x, y, z] = vector
+    return [
+        x * cp * cy + y * (sr * sp * cy - cr * sy) + z * -(cr * sp * cy + sr * sy),
+        x * cp * sy + y * (sr * sp * sy + cr * cy) + z * (cy * sr - cr * sp * sy),
+        x * sp + y * -sr * cp + z * cr * cp,
+    ]
+}
+
+/** 直连 actor 根组件的子组件世界坐标：根位置 + 根旋转作用于组件局部偏移；非直连返回 undefined */
+function rootChildLocation(node: Row, key: string, maps: ReturnType<typeof buildObjectMaps>): number[] | undefined {
+    const props = node.Properties && typeof node.Properties === "object" ? (node.Properties as Row) : {}
+    const root = resolveRef(props.RootComponent, maps) ?? resolveRef(props.DefaultSceneRoot, maps)
+    const rootProps = root?.Properties && typeof root.Properties === "object" ? (root.Properties as Row) : {}
+    const rootLocation = toVec3(rootProps.RelativeLocation) ?? toVec3(rootProps.Location)
+    if (!rootLocation) return undefined
+    const child = resolveRef(props[key], maps)
+    if (!child) return undefined
+    const childProps = child.Properties && typeof child.Properties === "object" ? (child.Properties as Row) : {}
+    if (childProps.AttachParent && resolveRef(childProps.AttachParent, maps) !== root) return undefined
+    const local = toVec3(childProps.RelativeLocation) ?? toVec3(childProps.Location)
+    if (!local) return [...rootLocation]
+    const moved = rotateVector(
+        local,
+        rootProps.RelativeRotation && typeof rootProps.RelativeRotation === "object" ? rootProps.RelativeRotation : {}
+    )
+    return moved.map((value, index) => value + rootLocation[index])
+}
+
+/** 取节点的世界坐标：探索点用资源创建组件，其余用节点自身或其场景组件 */
+export function extractPosition(node: Row, maps: ReturnType<typeof buildObjectMaps>): number[] | undefined {
     const props = node.Properties && typeof node.Properties === "object" ? (node.Properties as Row) : {}
     if (node.Type === "BP_StaticCreatorComponent_C" && node.Name === "FinishMechanism") {
         const location = refLocation(props.AttachParent, maps)
         if (location) return location
     }
-    if (node.Type === "Explore_Treasure_C" || node.Type === "Explore_Drop_C") return objectLocation(node, maps, true)
+    if (node.Type === "Explore_Treasure_C" || node.Type === "Explore_Drop_C") {
+        // 探索点 actor 的根组件只是分组锚点，资源落点由 Drop 创建组件给出；组件直连根组件，
+        // 根带旋转时局部偏移必须按旋转合成，否则会落到锚点附近（与宝箱坐标重合）
+        const drop = rootChildLocation(node, "Drop", maps) ?? accumulatedRefLocation(props.Drop, maps)
+        if (drop) return drop
+        return objectLocation(node, maps, true)
+    }
     return objectLocation(node, maps, false)
 }
 
@@ -440,7 +488,7 @@ function collectAssetSources(
             if (position) current.pos = [roundEven(position[0]), roundEven(position[1])]
         }
         if (node.Type === "Explore_Treasure_C" && !current.treasurePos) {
-            const position = accumulatedRefLocation(props.Chest, maps)
+            const position = rootChildLocation(node, "Chest", maps) ?? accumulatedRefLocation(props.Chest, maps)
             if (position) current.treasurePos = [roundEven(position[0]), roundEven(position[1])]
         }
         if (current.pos || current.treasurePos) positions.set(resourceId, current)

@@ -12,8 +12,8 @@
         "text": "January 1st\nToday, ▇▇▇▇ gave me some Phoxene shards as \"pocket money.\" She said that back in the capital, kids get pocket money from their elders before they come of age — to spend on treats or toys.\nThere aren't any shops around here, so she told me to save it. Then, when there's something I really want or need, I can use it to ask for her help.\nThing is... I can't really think of anything I want.\n\n\nJanuary 2nd\nI've got it! I could get {nickname} a \"birthday present\"! Maybe one of those \"birthday cakes\" kids in the capital have when they turn a year older — I read they're really tasty! They might be expensive... but if I save enough pocket money to give to ▇▇▇▇, I bet she could help me get one.\nI found an old clay jar in the kitchen. It's just right for keeping my savings.\n\n\nJanuary 16th\nWe were playing hide-and-seek today, and {nickname} found the jar and almost opened it... I need to find a better hiding spot.\nMaybe tomorrow I'll sneak into the room where ▇▇▇▇ does her alchemy work. There are loads of strange machines in there — she never lets {nickname} go near them.\n\n\nJanuary 17th\nI hid my piggy bank under the <H>waterfall, right next to the alchemy chamber</>. That way, neither {nickname} nor ▇▇▇▇ will stumble across it.\n\n\n...\n\n\n▇▇ ▇▇\n{nickname}'s birthday is coming up, and I've saved a whole box full of pocket money. It should be enough for a cake. But ▇▇▇▇ seems really busy these days. She's been staying up late a lot... Maybe it's not the right time to bother her. I guess I'll ask her next year.\nWith another year of saving, I can get an even bigger cake — big enough for all three of us.",
         "srId": 100102,
         "pos": [
-          27885,
-          5905
+          24786,
+          4599
         ],
         "treasurePos": [
           29327,
@@ -27,8 +27,8 @@
         "text": "Dear Berry,\n \n If you are reading this letter, it means you've returned after all.\n You've always been a good girl, and I trust you had your reasons for coming back.\n I've left some supplies for you, buried <H>near the airship</> — they should be enough to get you both off Purgatorio Island.\n I wish you the best on your journey. Stay safe.",
         "srId": 100103,
         "pos": [
-          21480,
-          24980
+          17959,
+          25654
         ],
         "treasurePos": [
           26165,
@@ -42,8 +42,8 @@
         "text": "The Goddess of Fate weaves the stars into their paths, gifting us with guiding lights that lead us towards eternal bliss.\n Yet, in our times, humanity has strayed from Her teachings. We have forsaken the bonds of love and compassion, choosing instead to arm ourselves with cold steel against our own kin. Our sacred lands have crumbled, and even Her sanctuaries have been defiled.\n Should this be the ordeal She has devised — a sombre prelude to the dawn — then to you, the destined one who will one day reach this place, I offer a blessing that transcends time.\n \n In <H>a place overlooked by Her gaze</>, I have hidden the final legacy of an age when humanity cherished love and solidarity.\n May Her tender threads of fate lead you to the true dawn.",
         "srId": 100101,
         "pos": [
-          8260,
-          -3620
+          4735,
+          6295
         ],
         "treasurePos": [
           11990,
@@ -57,8 +57,8 @@
         "text": "Time, slips swiftly by, ever a fading treasure.\nIn the distant corners of memory, truth stays hidden.\nHaving pierced countless illusions, the path leads under.\nThrough winding stone, with divine light, to the forgotten cave.\nIn lands devoid of life and hope, a new cycle takes root.",
         "srId": 100103,
         "pos": [
-          38879,
-          19823
+          38744,
+          19632
         ],
         "treasurePos": [
           29978,
@@ -80,8 +80,8 @@
         "text": "Sorry, babe, there's been a hiccup at home, so I can't take you to the inner city this month as I promised. But hang tight, I'll come for you as soon as I sort things out. Trust me one more time, okay?\n As a little something to make it up to you, I've hidden some cash <H>under the grass on the left side of the pathway</> to the inner city. Don't forget to pick it up. Love you!\n \n <W>You liar! You jerk! Every time you lie to me, you just throw money at me like I'm some kind of pet you own! I'd rather starve or drop dead in the street than take another coin from you! You can rot with your filthy money for all I care!</>",
         "srId": 101101,
         "pos": [
-          -2050,
-          4170
+          -2051,
+          4208
         ],
         "treasurePos": [
           820,
@@ -95,12 +95,12 @@
         "text": "Hey there! Are you tired of struggling to make ends meet?\nSick of breaking your back every day for a pittance, only to be treated like dirt?\nDo you feel like, no matter how hard you try, you just can't catch a break?\nDon't beat yourself up — it's not your fault. What you're lacking isn't skill, but a stroke of luck! All you need is the right opportunity, and you could be the next bigshot!\nAnd guess what? It's your lucky day! Just last month, the chief engineer of our Legendary Mining Alliance unveiled a new mining marvel, ten years in the making! It is user-friendly, boasts an impressive battery life, and the cherry on top — it can automatically extract microscopic Phoxene particles — invisible to the naked eye — and turn them into solid Phoxene! With this revolutionary technology, we can breathe new life into the exhausted mines and bring Icelake's mining industry back from the brink!\n \nWe're on the lookout for partners right now! Opportunities like this come once in a lifetime!\nWant in? Solve the puzzle below for a chance to join our elite team!\n \n(Beneath the text is a simple map of the slums with a Phoxene symbol marking a spot — it appears to be near <H>a pile of old junk by the roadside rubbish bin</>.)",
         "srId": 101101,
         "pos": [
-          -1701,
-          -7421
+          -1802,
+          -7577
         ],
         "treasurePos": [
-          -7017,
-          -6601
+          -2520,
+          -12737
         ]
       },
       {
@@ -110,8 +110,8 @@
         "text": "Someone found my secret stash last time...\nThis time, I consulted a professional, who suggested I hide it somewhere outside the city, perhaps <H>somewhere near a puddle</>.\nSure, Phoxene won't go bad in water, but what if the box gets mouldy or rots from the moisture? Then my stash would literally be \"money down the drain\", right?\nStill, it's better than having it stolen... I'm going to give it a shot. I'll check on it next week.",
         "srId": 101101,
         "pos": [
-          -9393,
-          7504
+          -9978,
+          7800
         ],
         "treasurePos": [
           -15374,
@@ -125,8 +125,8 @@
         "text": "Hey, wanna play a game?\nIf you can find the <H>biggest gem</> around here, I'll give you a reward!",
         "srId": 101301,
         "pos": [
-          6308,
-          2379
+          5590,
+          6314
         ],
         "treasurePos": [
           120,
@@ -140,8 +140,8 @@
         "text": "<W>There are no 100 pieces of Phoxene here.</>\n \n(Beneath this message, some squiggly lines attempt to outline the mine's paths. The spot marked with a red circle appears to be <H>near the mine's entrance</>.)",
         "srId": 101103,
         "pos": [
-          -39461,
-          -3328
+          -37953,
+          1241
         ],
         "treasurePos": [
           -32774,
@@ -155,8 +155,8 @@
         "text": "I saw it with my own eyes — blue light, shining out from <H>under that fallen pillar</>! But there's no lighting rig down there... none at all. There's definitely something weird going on!\nLike... maybe some miner worked himself to death and just... never left. No wonder no one's bothered to fix it since.",
         "srId": 101103,
         "pos": [
-          -28580,
-          -5200
+          -25655,
+          -3764
         ],
         "treasurePos": [
           -33408,
@@ -170,8 +170,8 @@
         "text": "Hello, stranger, I am an explorer.\nThis cavern is absolutely enchanting, like something out of a fairy tale where snow fairies might live! The massive, crystal-clear ice pillars, the rugged old roots of a withered Heaventree, and the complex terrain that twists and turns like a natural labyrinth... it'll take your breath away!\nIf you've made it this far, don't give up now — the scenery up there is even more spectacular! I've left a gift and some provisions for you at the <H>cavern's summit</>. Keep going — you're almost there.\nMay you discover the same thrill of adventure that drives me. As long as there's life in you, let the journey never end!",
         "srId": 101103,
         "pos": [
-          -25917,
-          5325
+          -31321,
+          9226
         ],
         "treasurePos": [
           2254,
@@ -185,8 +185,8 @@
         "text": "Do you remember that day we left the city and wandered along the <H>lakeside of Lamenting Lake</>, wading barefoot through the shallows?\n\"Look at that tree with red leaves,\" you said.\n\"They're orange,\" I corrected.\n\"I said red,\" you insisted.\n\nI'd saved up a few pieces of Phoxene — I was going to trade them for a real red-leafed plant, as a gift for you.\nIn the end, I buried them <H>beneath that tree with the orange leaves</>.\n\n...Yes, I still think they're orange. I'm sorry. Leaves don't turn red just because you say they are — just like you won't come back just because I keep saying you will.\n\nMaybe, when spring comes, the Phoxene will sprout and grow — like the feelings I still carry for you. Or maybe some lucky passerby will dig them up instead.\n\nEither way, I think that would be a good thing. You always said good things are meant to be shared. If this gift I never gave ends up helping someone else... maybe that's a kind of happy ending, too.",
         "srId": 101103,
         "pos": [
-          -38101,
-          30921
+          -40741,
+          31904
         ],
         "treasurePos": [
           -55534,
@@ -216,7 +216,7 @@
         "srId": 101701,
         "pos": [
           -14120,
-          -7175
+          -7148
         ],
         "treasurePos": [
           -10478,
@@ -268,8 +268,8 @@
         "text": "Hey, my dear ex-teammates — let's celebrate a little festival of our own!\n \nNow, don't be hasty to shoot me down. I know the Fortress only allows Triumph Day... but surely there's no harm in a secret celebration or two, right?\nBack home, we mark the first of April with the Snowmelt Festival: trinkets hung from pine boughs as the snow retreats, gifts exchanged beneath the trees, and a fond farewell to winter as spring draws near.\nYou all remember that pine in the <H>Simulated Battlefield</>, don't you? The one we riddled with bullet holes and cordite burns during drills? If you squint, I'd say those count as decorations. Next week just happens to be your training rotation — and I may have buried a little something <H>beneath that tree by the water</>. Volunteer for post-training clean-up and \"accidentally\" dig them up, yeah~?\n(One each — no hoarding! I'll be watching, 0^0)\n \nEven though I've been transferred to another squad, we'll always be best buds!",
         "srId": 102102,
         "pos": [
-          -10037,
-          -1317
+          -818,
+          -21712
         ],
         "treasurePos": [
           -10036,
@@ -1601,8 +1601,8 @@
         "text": "Loan Contract — Year X of Dafeng\n\nOn the Xth day of the Xth month in Year X of Dafeng, She Yuqing borrowed ten thousand copper coins from Li Laoqian, with interest accruing at one hundred per month.\nRepayment of both principal and interest is due by the Xth day of the Xth month. After that date, the total amount owed — principal and interest — shall be eligible for triple compensation..\n\nWitnessed by Lord Argent, and in accordance with the teachings of the Nine Chapters of Dafeng, both parties hereby establish this contract and seal it with their fingerprints as proof.\n\nSignatories:\nShe Yuqing\nLi Laoqian\n\nIssued in Huaxu, on the Xth day of the Xth month in Year X of Dafeng.",
         "srId": 104109,
         "pos": [
-          -13014,
-          11761
+          -12960,
+          11791
         ]
       }
     ]
@@ -1861,8 +1861,8 @@
         "text": "Ughh... A few days ago, trying to show off in front of my friends, I climbed all the way up onto the head of the Bi'an statue <H>behind the Admonition Stele</>. Now I've come down with a cold and taken a nasty fall. Feels like punishment catching up with me...\nI've left all of this month's pocket money at <H>Lord Bi'an's feet</>. Really hope Lord Bi'an won't hold it against me...",
         "srId": 104108,
         "pos": [
-          41170,
-          67884
+          40684,
+          62831
         ],
         "treasurePos": [
           58816,
@@ -1876,8 +1876,8 @@
         "text": "...\n\n21 September\nI felt like trying my luck today, so I opened five Lucky Eggs. The first four were nothing special: a box of toothpicks, a rag, a packet of Skylily seeds, and some throat lozenges. But the last one actually turned out to be a packet of fine Mistwharf Green Tea!\n Lunocarp said my luck was pretty good... could I really be Lady Luck's favourite after all!?\n Might try a few more when I get the chance.\n\n...\n\n27 September\nOpened ten Lucky Eggs today. Got three sachets, a voucher for osmanthus cakes, two discount coupons that each take seven silver off a better theatre seat (and they don't even stack!), a wooden brush, a hundred grams of dried peafowl droppings — the note says it's medicinal, but it's honestly just disgusting, so I'll probably bury it in the field when I get home — plus a block of ink and a box of matches.\n Darn it... not a single rare item these past few days! If it weren't for how cute Lunocarp is, I really wouldn't bother opening another one.\n\n28 September\nLunocarp talked me into opening more than twenty Lucky Eggs today. She said I'd hit the guarantee and could get a \"super rare\" one. And what was inside? Two slips of paper, pet food, and some kid stuff!!!\nWhat a rip-off! Why doesn't Bi'an step in and do something about it!?\nI'm done. I'm never opening another Lucky Egg again!\n\nIn a minute I'm throwing the rubbish straight into the <H>lotus pond</> to feed the fish!",
         "srId": 104110,
         "pos": [
-          31508,
-          -3480
+          31657,
+          -3314
         ],
         "treasurePos": [
           26995,
@@ -1906,8 +1906,8 @@
         "text": "Ever since our debate that day, one thing has become clear to me: if we stay in Haze Market, we will never know what freedom truly is, nor what it costs.\n\nWhat we do here — all the little tricks and the loopholes we exploit — are merely ways of bending the rules without ever going beyond them. I don't want freedom that lives on compromise. There must be a freedom in this world that needs no cunning and no pretence... and I want to prove it exists. So I have to go — beyond the mountain we've looked to so many times, and further still, to heights neither of us has yet seen. Even if it means becoming a wanderer, cut loose from the world.\n\nBy the time you read this, I will be far away. I've left a few gifts <H>on the old boat by the water</> where we always played. Forgive me for leaving without a proper farewell, but I promise you this: we will meet again, on the day I find my answer.",
         "srId": 104109,
         "pos": [
-          -19023,
-          5230
+          -18930,
+          5024
         ],
         "treasurePos": [
           -20696,
@@ -1921,8 +1921,8 @@
         "text": "I'd heard the Gritblight Expanse was brutally dangerous, and after today's wandering... well, it really is — terrifying at times, but thrilling all the same. Look closely and the place even has a strange sort of beauty to it; if not for the Filthoids running wild, it might pass for a scenic spot.\n\nBut with nothing around me except rock and deadwood, it's far too easy to lose your bearings. I left a pack behind earlier when I stopped to rest — I'm fairly sure it was in some <H>cave</>... but after circling the area for ages, I still can't find the entrance. At this rate, night will catch me out here.\n\nForget it. Whoever comes across it can have it...",
         "srId": 104105,
         "pos": [
-          -18718,
-          -31299
+          -19836,
+          -31620
         ],
         "treasurePos": [
           -19577,
@@ -2120,8 +2120,8 @@
         "text": "4 June\nFiled by: Wang Quan\nReason: I say sweet tofu pudding is best. Zhang Fu swears by the savoury kind. Only one way to settle it — a match!\n\n28 June\nFiled by: Xu Hong\nReason: I want to test a new explosive prototype. The yard is open enough for it.\n\n15 July\nFiled by: Su Yi\nReason: Lu Ye and Pei Jing want to practise with crossbows. I've been asked to keep an eye on them.\n\n16 July\nFiled by: Su Yi\nReason: Same as yesterday (the kids are really coming along!).\n\n6 August\nFiled by: Uncle Tang\nReason: Finished a new battlefield loudhailer. Need everyone to take turns singing in the yard for a sound test.\n\n20 August\nFiled by: Uncle Tang\nReason: Zhu Pu overtrained and hurt his leg. Want to test the support brace I made for him and log a few measurements.",
         "srId": 105201,
         "pos": [
-          15713,
-          2236
+          15694,
+          2267
         ]
       }
     ]
@@ -2175,7 +2175,7 @@
         "srId": 104502,
         "pos": [
           19290,
-          -2900
+          -2880
         ]
       }
     ]
@@ -2256,8 +2256,8 @@
         "text": "East of the city, where wild grasses creep,\nlies a cavern with pathways running deep.\nNight after night, searching bears no fruit;\nyet the treasure lies where the grasses root.",
         "srId": 104505,
         "pos": [
-          61191,
-          -76998
+          59114,
+          -78225
         ],
         "treasurePos": [
           63613,
@@ -2271,8 +2271,8 @@
         "text": "Southward, northward, east and west,\nseekers roam each road in restless quest.\nBut where, at last, will the treasure be?\nAbove the water, beneath the dead tree.",
         "srId": 104502,
         "pos": [
-          18391,
-          -38555
+          18313,
+          -38554
         ],
         "treasurePos": [
           21881,
@@ -2482,8 +2482,8 @@
         "text": "This is awful... When I got off the train, I noticed a passenger's wallet lying on the floor. For a moment, I lost my head and quietly took it. But when I opened it, it was full of strange papers that looked like charms, covered in drawings of black moons. Absolutely creepy. I heard those are the symbol of some kind of cult from Elysian Church or something?\nI've left the wallet <H>by the infirmary door</>. Hopefully, that'll help someone in need and make up for what I did. The Great Seven of Elysian Church? Or was it nine? Whichever it is, please don't curse me — I didn't take the money! I beg you!",
         "srId": 106001,
         "pos": [
-          -28074,
-          19451
+          -28014,
+          19582
         ],
         "treasurePos": [
           -30764,
@@ -2749,8 +2749,8 @@
         "text": "Chase a deer and bring it to Mother Bunny, dear as a mother;\nChase a deer and bring it to Mother Bunny, sacred as a god.\nTake its cloven hooves, cut away its defiant horns;\nTeach its stubborn heart to yield.\nPeel the soft hide, stitch it with thread and bone;\nSpread the skin across the stony road.\nMother Bunny, come to us!\nReach out your gentle hand—\nUnder the gaze of the <H>Golden Deer</>—\nGrant me a second life.\n\n— Hymn to Mother Bunny: The Deer Hunt",
         "srId": 107001,
         "pos": [
-          -19644,
-          -78235
+          -10060,
+          -69619
         ],
         "treasurePos": [
           -19644,
@@ -2764,8 +2764,8 @@
         "text": "Why won't you believe me? You keep saying it's just a rabbit-shaped stone, but it's Mother Bunny's incarnation! Can't you hear Her voice?\nIt's not a hallucination, it's real... If you go there now, you can still see the gift She left for me, <H>right at Her feet</>!\nShe chose me! She acknowledged me! She forgave me! She's invited me to Her world, to serve by Her side — a paradise, a land where rivers flow with honey... It's paradise, paradise! Her paradise!",
         "srId": 107001,
         "pos": [
-          -4625,
-          -24393
+          -75,
+          -31731
         ],
         "treasurePos": [
           -4625,
@@ -2779,8 +2779,8 @@
         "text": "Congratulations to the 99th lucky player of the spinning teacup! You've hit the jackpot!\nCome down now and head to the room, there's a lucky gift waiting for you. A reward truly worthy of your fortune.\nI don't know who you are, my guess is, maybe the most playful little Ada? Haha, it doesn't really matter. After all, this paradise exists to bring joy, and whoever receives that joy, it's a good thing. This is our shared town of Arcano. This is our home, our paradise.\nYou don't need to thank anyone for this unexpected gift. Thank yourself. It was your luck that brought you here, your attentiveness that found this note, and that's how you earned this gift. Arcano is growing better and better, it's thanks to everyone, and the rewards should be shared by everyone.\nNow, go to <H>the room with the golden sign</> right in front of you, and claim it! Have a wonderful day!\nTo the future of Arcano! To our future!",
         "srId": 107101,
         "pos": [
-          -31890,
-          -32580
+          -28250,
+          -29412
         ],
         "treasurePos": [
           -31890,
@@ -2794,8 +2794,8 @@
         "text": "The crash landing failed. Half of my body has gone numb. I don't think I'll make it until rescue arrives.\nThere's still some supplies left in the <H>airship</>. Take them, my comrade, may your battles go well.\nIf you can, please go to the rear cabin. Find a photo of a girl with long golden hair, and  bury it with me, resting on my chest. That... is my only wish.",
         "srId": 107101,
         "pos": [
-          -64451,
-          -54481
+          -52419,
+          -53057
         ],
         "treasurePos": [
           -64451,
@@ -2809,8 +2809,8 @@
         "text": "Dear Rosalia:\n\nI'm nearly at Arcano. As I mentioned before, I'll record my experiences here and send them to you. I've heard the local folklore is quite unique, and for a fantasy novelist like me, it's the perfect place to gather material!\nYou know I've been struggling with writer's block lately, and it's been bothering me a lot. I believe that visiting the place in person will spark some fresh ideas.\nI've already come up with a story: a girl who accidentally obtains a pair of red dancing shoes that grant wishes. But in truth, every wish comes at a price. When she can no longer bear the cost and tries to get rid of the shoes, she finds that her feet have already grown into them...\nWhat do you think of this slightly horror-tinged story? I've already written over a dozen pages of manuscript. As expected, a new environment really does get the creativity flowing. Once I return from this trip and finish sorting out these drafts, I'll submit them to the publisher again.\n...\nThe townsfolk are warm and welcoming, not as frightening as the rumours said. I knew most of those urban legends were exaggerated, and there was nothing to worry about after all. A bit of a shame, though — this won't be giving me much material for my horror stories.\nI've had a bit too much to drink, and I'm feeling dizzy... Huh, where did I put my luggage? Oh, there it is — <H>by the pillar in the corner of the room</>.\nStill feeling lightheaded... I should get some proper rest.\n\n...\n\nIs this... a letter I wrote?\nWho is Rosalia...?\nAnd... who am I...?\n\n(The rest has been burned away, the edges charred and uneven.)",
         "srId": 107201,
         "pos": [
-          16968,
-          17918
+          20985,
+          -1961
         ],
         "treasurePos": [
           16968,
