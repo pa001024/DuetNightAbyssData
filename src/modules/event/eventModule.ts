@@ -101,11 +101,48 @@ function signInByEvent(ctx: ModuleContext): Map<string, VNodeTree> {
     return result
 }
 
+/**
+ * 星耀巡游（OnlineTime 类活动，AccumulateTargetEvent 表即该类别专属配置）的阶梯奖励，
+ * 按 EventId 分组。AccumulateTargetEvent 行给出 QuestPhaseId；CommonQuestDetail 中
+ * 该阶段的每个任务即一档奖励：Target 为累计在线分钟数（对应文案 Event_TargetDes_112001），
+ * QuestReward 为奖励 ID（该类别全部任务恒为单元素列表，此处取首个有效 ID；
+ * 条目内容见 Reward 模块产物）。阶段按 QuestId 升序。
+ */
+function onlineTimeByEvent(ctx: ModuleContext): Map<string, VNodeTree> {
+    const stagesByPhase = new Map<string, Array<{ id: number; target: number; reward: number }>>()
+    for (const item of Object.values(table(ctx, "CommonQuestDetail"))) {
+        if (!item || typeof item !== "object") continue
+        const row = item as Record<string, any>
+        const questId = Number(row.QuestId ?? 0)
+        const phaseId = Number(row.QuestPhaseId ?? 0)
+        if (!questId || !phaseId) continue
+        const stages = stagesByPhase.get(String(phaseId)) ?? []
+        stages.push({
+            id: questId,
+            target: Number(row.Target ?? 0),
+            reward: sequence(row.QuestReward).map(value => Number(value ?? 0)).find(value => value > 0) ?? 0,
+        })
+        stagesByPhase.set(String(phaseId), stages)
+    }
+    const result = new Map<string, VNodeTree>()
+    for (const item of Object.values(table(ctx, "AccumulateTargetEvent"))) {
+        if (!item || typeof item !== "object") continue
+        const row = item as Record<string, any>
+        const eventId = Number(row.EventId ?? 0)
+        if (!eventId) continue
+        const stages = (stagesByPhase.get(String(row.QuestPhaseId ?? 0)) ?? []).sort((a, b) => a.id - b.id)
+        if (stages.length === 0) continue
+        result.set(String(eventId), stages.map(stage => ({ target: stage.target, reward: stage.reward })) as VNodeTree)
+    }
+    return result
+}
+
 export function eventModule(ctx: ModuleContext): VNodeTree {
     const boxDrops = rowsByEvent(ctx, "BoxDrop")
     const topUps = rowsByEvent(ctx, "CumulativeTopUpEvent")
     const photoTasks = photoTasksByEvent(ctx)
     const signIns = signInByEvent(ctx)
+    const onlineTimes = onlineTimeByEvent(ctx)
     const result: VNodeTree[] = []
     for (const item of Object.values(table(ctx, "EventMain"))) {
         if (!item || typeof item !== "object") continue
@@ -136,6 +173,8 @@ export function eventModule(ctx: ModuleContext): VNodeTree {
         if (tasks) output.photoTasks = tasks
         const signIn = signIns.get(String(id))
         if (signIn) output.signIn = signIn
+        const onlineTime = onlineTimes.get(String(id))
+        if (onlineTime) output.onlineTime = onlineTime
         result.push(output)
     }
     result.sort((a, b) => Number((a as Record<string, any>).id) - Number((b as Record<string, any>).id))
