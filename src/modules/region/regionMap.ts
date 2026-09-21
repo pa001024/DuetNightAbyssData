@@ -13,6 +13,24 @@ export interface RegionMapEntry {
     zOrder: number
 }
 
+export interface RegionMapLayout {
+    entries: RegionMapEntry[]
+    /** 地图控件是否含 `Img_Map` 子部件。含则游戏直接用作者坐标渲染图层，不含则运行时按世界坐标重排。 */
+    hasImageMap: boolean
+    /** 运行时重排口的建议地图中心（世界坐标），仅在不含 `Img_Map` 且锚点可用时给出。 */
+    mapCenter?: [number, number]
+}
+
+/** 运行时重排锚点：`pos` 为锚点作者 slotPos，`world` 为锚点世界坐标，`worldBySplice` 为各拼接图层名对应的世界坐标。 */
+export interface RegionMapAnchor {
+    pos: number[]
+    world: [number, number]
+    worldBySplice: Map<string, [number, number]>
+}
+
+/** 世界坐标与地图像素的换算比例：`LevelMap_Wild_Dialog_PC_C.lua` 的 `self.Scale = 1/30`。 */
+const WORLD_UNITS_PER_PIXEL = 30
+
 function refParts(value: unknown): [string | undefined, string | undefined] {
     if (typeof value !== "string" || !value) return [undefined, undefined]
     let raw = value.replace(/^'+|'+$/g, "")
@@ -69,6 +87,47 @@ function roundEven(value: number): number {
     if (fraction < 0.5) return sign * floor
     if (fraction > 0.5) return sign * (floor + 1)
     return sign * (floor % 2 === 0 ? floor : floor + 1)
+}
+
+/**
+ * 按游戏运行时规则重排 `IsRandom` 子区域图层：锚点保留作者 slotPos，其余子区域
+ * `slotPos(i) = 锚点作者 slotPos + (world_i - world_anchor) / 30`，尺寸不变。
+ * 未命中世界坐标的图层（非 `IsRandom` 子区域，如背景层）保持原位。
+ */
+export function relayoutIsRandom(entries: RegionMapEntry[], anchor: RegionMapAnchor): RegionMapEntry[] {
+    return entries.map(entry => {
+        const world = anchor.worldBySplice.get(entry.name)
+        if (!world) return entry
+        return {
+            ...entry,
+            pos: [
+                roundEven(anchor.pos[0] + (world[0] - anchor.world[0]) / WORLD_UNITS_PER_PIXEL),
+                roundEven(anchor.pos[1] + (world[1] - anchor.world[1]) / WORLD_UNITS_PER_PIXEL),
+                entry.pos[2],
+                entry.pos[3],
+            ],
+        }
+    })
+}
+
+/**
+ * 推导地图中心：前端以「投影帧」中心对齐 `mapCenter`，帧为含 `_Bg` 图层时取这些图层的并集，
+ * 否则取全部图层并集。世界坐标与像素为线性关系，故
+ * `mapCenter = world_anchor + (帧中心 - 锚点中心) * 30`。
+ */
+export function centerFromAnchor(entries: RegionMapEntry[], anchor: RegionMapAnchor): [number, number] {
+    const base = entries.filter(item => item.name.includes("_Bg"))
+    const frame = base.length > 0 ? base : entries
+    const minX = Math.min(...frame.map(item => item.pos[0]))
+    const minY = Math.min(...frame.map(item => item.pos[1]))
+    const maxX = Math.max(...frame.map(item => item.pos[0] + item.pos[2]))
+    const maxY = Math.max(...frame.map(item => item.pos[1] + item.pos[3]))
+    const centerX = anchor.pos[0] + anchor.pos[2] / 2
+    const centerY = anchor.pos[1] + anchor.pos[3] / 2
+    return [
+        roundEven(anchor.world[0] + ((minX + maxX) / 2 - centerX) * WORLD_UNITS_PER_PIXEL),
+        roundEven(anchor.world[1] + ((minY + maxY) / 2 - centerY) * WORLD_UNITS_PER_PIXEL),
+    ]
 }
 
 function slotGeometry(parent: Rect, props: Row, fallback: [number, number]): Rect {
@@ -287,7 +346,7 @@ export class RegionMapReader {
         }
     }
 
-    async mappingFor(imagePath: string): Promise<RegionMapEntry[]> {
+    private async widgetFor(imagePath: string): Promise<{ nodes: Row[]; maps: Maps; panel: Row }> {
         const marker = "/Game/UI/WBP/Map/Widget/RegionMap/"
         if (!imagePath.includes(marker)) throw new Error(`Unexpected RegionMapImage path: ${imagePath}`)
         const packagePath = `Game/UI/WBP/Map/Widget/RegionMap/${imagePath.split(marker, 2)[1].split(".", 1)[0]}`
@@ -295,6 +354,66 @@ export class RegionMapReader {
         const maps = buildObjectMaps(nodes)
         const panel = rootPanel(nodes, maps)
         if (!panel) throw new Error(`Region map asset has no CanvasPanel: ${imagePath}`)
+        return { nodes, maps, panel }
+    }
+
+    /** 取区域部件下某个子区域子部件的拼接图层名（部件名即子区域 id）。 */
+    private spliceNameOf(nodes: Row[], subRegionId: number): string | undefined {
+        const node = nodes.find(candidate => candidate.Name === String(subRegionId))
+        const path = node ? classPath(node) : undefined
+        return path?.split(".", 1)[0].split("/").at(-1)
+    }
+
+    /**
+     * 解析运行时重排的锚点：`IsRandom` 中第一个既能找到同名部件、又有 `SubRegionCenter` 的子区域。
+     * 锚点保留作者坐标，其余子区域按世界坐标差平移。
+     */
+    private runtimeAnchor(
+        nodes: Row[],
+        entries: RegionMapEntry[],
+        isRandom: number[],
+        centers: Map<string, [number, number]>
+    ): RegionMapAnchor | undefined {
+        const worldBySplice = new Map<string, [number, number]>()
+        for (const id of isRandom) {
+            const splice = this.spliceNameOf(nodes, id)
+            const world = centers.get(String(id))
+            if (splice && world) worldBySplice.set(splice, world)
+        }
+        for (const id of isRandom) {
+            const splice = this.spliceNameOf(nodes, id)
+            if (!splice || !worldBySplice.has(splice)) continue
+            const entry = entries.find(item => item.name === splice)
+            if (!entry) continue
+            return { pos: entry.pos, world: worldBySplice.get(splice)!, worldBySplice }
+        }
+        return undefined
+    }
+
+    /**
+     * 读取地图控件的完整布局。
+     *
+     * 不含 `Img_Map` 的控件由游戏在运行时按 `IsRandom` 子区域的世界坐标重排：
+     * `slotPos(i) = 锚点作者 slotPos + (world_i - world_anchor) / 30`，作者坐标不再成立，
+     * 因此这里同步重算图层位置并推导地图中心。`resolveCenters` 只在该分支下被调用。
+     */
+    async layoutFor(
+        imagePath: string,
+        isRandom: number[],
+        resolveCenters: (ids: number[]) => Map<string, [number, number]>
+    ): Promise<RegionMapLayout> {
+        const { nodes } = await this.widgetFor(imagePath)
+        const entries = await this.mappingFor(imagePath)
+        const hasImageMap = nodes.some(node => node.Name === "Img_Map")
+        if (hasImageMap || isRandom.length === 0) return { entries, hasImageMap }
+        const anchor = this.runtimeAnchor(nodes, entries, isRandom, resolveCenters(isRandom))
+        if (!anchor) return { entries, hasImageMap }
+        const relaid = relayoutIsRandom(entries, anchor)
+        return { entries: relaid, hasImageMap, mapCenter: centerFromAnchor(relaid, anchor) }
+    }
+
+    async mappingFor(imagePath: string): Promise<RegionMapEntry[]> {
+        const { nodes, maps, panel } = await this.widgetFor(imagePath)
         const [width, height] = inferCanvasSize(nodes)
         const base: Rect = [0, 0, width, height]
         const result: RegionMapEntry[] = []

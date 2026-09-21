@@ -6,8 +6,8 @@
     "mapId": 100,
     "mapImage": "WBP_Map_Reg_Prologue",
     "mapCenter": [
-      16600,
-      13500
+      14300,
+      14540
     ],
     "mapScale": [
       0.5,
@@ -47,8 +47,8 @@
       {
         "name": "WBP_Map_Prologue_100102",
         "pos": [
-          748,
-          207,
+          819,
+          177,
           1024,
           1024
         ],
@@ -58,8 +58,8 @@
       {
         "name": "WBP_Map_Prologue_100103",
         "pos": [
-          1014,
-          1124,
+          952,
+          1094,
           1024,
           1024
         ],
@@ -354,6 +354,10 @@
     "type": "Main",
     "mapId": 400,
     "mapImage": "WBP_Map_Reg_East_Yanjindu",
+    "mapCenter": [
+      0,
+      0
+    ],
     "mapScale": [
       0.3,
       1
