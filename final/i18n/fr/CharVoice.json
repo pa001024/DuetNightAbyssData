@@ -105,6 +105,14 @@
     "text": "{性别:Il n’a jamais été fait pour vivre en cage. J’ai toujours su qu’un jour, il quitterait l’île pour s’envoler vers le ciel. Ce que je n’ai jamais su, c’est si ce serait une bénédiction... ou une malédiction, pour nous.|Elle n’a jamais été faite pour vivre en cage. J’ai toujours su qu’un jour, elle quitterait l’île pour s’envoler vers le ciel. Ce que je n’ai jamais su, c’est si ce serait une bénédiction... ou une malédiction, pour nous.}"
   },
   {
+    "id": 10016,
+    "charId": 1101,
+    "hide": true,
+    "name": "Discussion : Rencontre aléatoire : I",
+    "res": "char_Heitao_vo_companio_01",
+    "text": "{性别:Toutes ces années, j’ai veillé sur lui... et sur moi aussi, comme je te l’avais promis. Tu pourrais me caresser la tête et me dire que j’ai bien fait, comme quand j’étais petit ? Et cette fois... s’il te plaît... ne nous laisse plus.|Toutes ces années, j’ai veillé sur elle... et sur moi aussi, comme je te l’avais promis. Tu pourrais me caresser la tête et me dire que j’ai bien fait, comme quand j’étais petite ? Et cette fois... s’il te plaît... ne nous laisse plus.}"
+  },
+  {
     "id": 10017,
     "charId": 1101,
     "name": "Discussion : Rencontre aléatoire : I",
@@ -2445,6 +2453,22 @@
     "companioCharId": 5401
   },
   {
+    "id": 10388,
+    "charId": 4301,
+    "hide": true,
+    "name": "Discussion : Rencontre aléatoire : II",
+    "res": "char_Xibi_vo_companio_02",
+    "text": "Nos chemins sont diamétralement opposés. J’ai douté, un temps, que tu puisses avoir raison... mais au final, ton nom ne vivra que dans l’ombre des vaincus."
+  },
+  {
+    "id": 10389,
+    "charId": 4301,
+    "hide": true,
+    "name": "Discussion : Rencontre aléatoire : III",
+    "res": "char_Xibi_vo_companio_03",
+    "text": "Si tu n’étais pas son héritier... ma lame aurait déjà transpercé ton cœur."
+  },
+  {
     "id": 10390,
     "charId": 4301,
     "name": "Discussion : Rencontre aléatoire : IV",
@@ -3027,6 +3051,14 @@
     "res": "char_Feina_vo_companio_03",
     "text": "Dis, Mlle Lionne, tu veux réveiller la fée qui dort dans cette épée géante ? Alors il te faudra sûrement chanter des tas de sortilèges, comme : « Ô toi qui as éveillé l’épée sacrée Samaël... un jour, tu deviendras le roi d’Élysium ! »",
     "companioCharId": 1501
+  },
+  {
+    "id": 10472,
+    "charId": 1801,
+    "hide": true,
+    "name": "Discussion : Rencontre aléatoire : IV",
+    "res": "char_Feina_vo_companio_04",
+    "text": "Monsieur Hippocampe originaire du royaume du sud, je crois t’avoir déjà vu quelque part... Hmm... Je me souviens ! Il y a bien longtemps, Papa avait accroché ton portrait au mur de notre maison."
   },
   {
     "id": 10473,
@@ -3891,6 +3923,22 @@
     "companioCharId": 2401
   },
   {
+    "id": 10595,
+    "charId": 1502,
+    "hide": true,
+    "name": "Discussion : Rencontre aléatoire : III",
+    "res": "char_Nifu_vo_companio_03",
+    "text": "Bonjour, mon enfant. Hé hé... Oui, nos cornes se ressemblent, et peut-être que nos chemins se sont croisés jadis. Mais ce passé n’est pas le tien, laisse-le de côté, et suis ce que ton cœur désire."
+  },
+  {
+    "id": 10596,
+    "charId": 1502,
+    "hide": true,
+    "name": "Discussion : Rencontre aléatoire : IV",
+    "res": "char_Nifu_vo_companio_04",
+    "text": "Ma mémoire s’étend sur des siècles, et pourtant elle est emplie de tant de cruauté. Peut-être qu’oublier est une forme de bénédiction... Sache que ce qui importe vraiment finira toujours par revenir, même si tu l’oublies."
+  },
+  {
     "id": 10597,
     "charId": 1502,
     "name": "Prêt à l’action",
@@ -4206,6 +4254,14 @@
     "res": "char_Lise_vo_companio_02",
     "text": "Ce plan est ultra précis, calibré à la seconde. Le suivre doit procurer une vraie satisfaction. Juste... difficile à croire que ça vienne de l’officier Randy.",
     "companioCharId": 4202
+  },
+  {
+    "id": 10642,
+    "charId": 4101,
+    "hide": true,
+    "name": "Discussion : Rencontre aléatoire : III",
+    "res": "char_Lise_vo_companio_03",
+    "text": "Est-ce que tu pourrais jouer autre chose ? Ta musique est vraiment magnifique, c’est juste que... ce morceau me ramène à de vieux souvenirs que je préfère ne pas raviver."
   },
   {
     "id": 10643,
@@ -4532,12 +4588,28 @@
     "companioCharId": 1801
   },
   {
+    "id": 10689,
+    "charId": 1103,
+    "hide": true,
+    "name": "Discussion : Rencontre aléatoire : III",
+    "res": "char_Tuosi_vo_companio_03",
+    "text": "Mademoiselle, la musique que vous jouez est vraiment captivante. Puis-je vous demander le titre de ce morceau ?\nAh, une composition originale de votre cru... Quel talent enviable ! Pourrais-je avoir l’honneur de contempler la partition ?"
+  },
+  {
     "id": 10690,
     "charId": 1103,
     "name": "Discussion : Rencontre aléatoire : IV",
     "res": "char_Tuosi_vo_companio_04",
     "text": "Votre capacité de mimétisme est exceptionnelle, même le meilleur des accessoiristes ne pourrait créer un tel chef-d’œuvre.",
     "companioCharId": 2301
+  },
+  {
+    "id": 10691,
+    "charId": 1103,
+    "hide": true,
+    "name": "Discussion : Rencontre aléatoire : V",
+    "res": "char_Tuosi_vo_companio_05",
+    "text": "Je n’ai pas besoin d’un miroir pour me rappeler constamment mon apparence hideuse."
   },
   {
     "id": 10692,
@@ -5462,6 +5534,14 @@
     "companioCharId": 3202
   },
   {
+    "id": 10822,
+    "charId": 5102,
+    "hide": true,
+    "name": "Discussion : Rencontre aléatoire : IV",
+    "res": "char_Aote_vo_companio_04",
+    "text": "Tu te rappelles de moi, quand j’étais petit ? T’étais à la fois une sœur douce et un père sévère... Non, je dis pas que t’es vieille et brutale, hein, juste... merci de m’avoir donné un vrai foyer."
+  },
+  {
     "id": 10823,
     "charId": 5102,
     "name": "Prêt à l’action",
@@ -5743,6 +5823,22 @@
     "companioCharId": 2101
   },
   {
+    "id": 10863,
+    "charId": 4102,
+    "hide": true,
+    "name": "Discussion : Rencontre aléatoire : II",
+    "res": "char_Zhiliu_vo_companio_02_1",
+    "text": "La tromperie peut guider une bataille, mais dans les affaires et les relations, c’est une arme à double tranchant qui finit par ternir ta réputation commerciale."
+  },
+  {
+    "id": 10864,
+    "charId": 4102,
+    "hide": true,
+    "name": "Discussion : Rencontre aléatoire : II",
+    "res": "char_Zhiliu_vo_companio_02_2",
+    "text": "Mais tu as ta manière d’agir. Mes paroles, je le crains, ne font pas d’écho en toi."
+  },
+  {
     "id": 10865,
     "charId": 4102,
     "name": "Discussion : Rencontre aléatoire : III",
@@ -5983,6 +6079,14 @@
     "text": "Samaël, regarde ce soleil éclatant... Ce serait parfait pour manger quelque chose de frais, non ? On dit que la Capitale Élyséenne vend une douceur appelée glace. C’est de la nourriture de simples roturiers, mais sûrement bien meilleure que les plats de ces vieux grincheux... Je t’en achèterai en cachette !"
   },
   {
+    "id": 10899,
+    "charId": 1501,
+    "hide": true,
+    "name": "Discussion : Rencontre aléatoire : I",
+    "res": "char_Baonu_vo_companio_01",
+    "text": "Samaël ? Il va très bien. Il me réveille le matin, m’encourage au combat... et le soir, il me raconte douze histoires avant de dormir. Inutile de t’en faire."
+  },
+  {
     "id": 10900,
     "charId": 1501,
     "name": "Discussion : Rencontre aléatoire : II",
@@ -5997,6 +6101,14 @@
     "res": "char_Baonu_vo_companio_03",
     "text": "De la crème ? Et alors ? C’est comme ça que les Élyséens entretiennent leurs armes. Une objection ?",
     "companioCharId": 3101
+  },
+  {
+    "id": 10902,
+    "charId": 1501,
+    "hide": true,
+    "name": "Discussion : Rencontre aléatoire : IV",
+    "res": "char_Baonu_vo_companio_04",
+    "text": "Je ne t’ai jamais vu te mettre en colère... Très bien ! Moi, candidate aux Sept Vertus, je t’ordonne de te fâcher pour moi ! Sans réciter les préceptes, ni les doctrines, ni les volumes sacrés ! Vas-y... fais semblant. Mets-toi en colère !"
   },
   {
     "id": 10903,
@@ -8023,6 +8135,14 @@
     "res": "char_Shuimu_vo_companio_02",
     "text": "Tu as peur de moi ? Ne t’inquiète pas, je finirai par te faire m’aimer. Viens, sens ce parfum que j’ai créé. Il est très doux, et je suis sûre que tu ressentiras un bonheur que tu n’as jamais connu.",
     "companioCharId": 2301
+  },
+  {
+    "id": 21010030,
+    "charId": 2101,
+    "hide": true,
+    "name": "Discussion : Rencontre aléatoire : III",
+    "res": "char_Shuimu_vo_companio_03",
+    "text": "Tu es aussi bizarre que moi. Tu aimes souffrir, tu savoures la douleur et tu te plonges dans le massacre de tes ennemis sans sourciller... Je comprends. <I>rire léger</> C’est sûrement ta façon d’exprimer ton amour."
   },
   {
     "id": 21010031,

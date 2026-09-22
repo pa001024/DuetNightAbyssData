@@ -40,9 +40,21 @@ const VOICE_SUPPLEMENTS: ReadonlyArray<{ charId: number; voiceName: string }> = 
     { charId: 1601, voiceName: "NvzhuLight" },
 ]
 
+/** 偶遇语音补全：扫描的编号上限（描述键 VoiceDes041~050 覆盖"他人偶遇·其一~其十"）。 */
+const COMPANIO_SCAN_COUNT = 10
+/** 同一编号的多句语音后缀（vo_companio_NN、_NN_1、_NN_2）。 */
+const COMPANIO_SCAN_SUFFIXES = ["", "_1", "_2"] as const
+
 /** 偶遇语音后缀："char_Heitao_vo_companio_02_1" => "02"。 */
 function companioSerial(res: string): string | undefined {
     return res.match(/_vo_companio_(\d+)/)?.[1]
+}
+
+/** 偶遇语音的编号与句序："char_Heitao_vo_companio_02_1" => [2, 1]；无句序时 part 为 0。 */
+function companioOrder(res: string): { serial: number; part: number } | undefined {
+    const matched = res.match(/_vo_companio_(\d+)(?:_(\d+))?$/)
+    if (!matched) return undefined
+    return { serial: Number(matched[1]), part: matched[2] ? Number(matched[2]) : 0 }
 }
 
 /**
@@ -112,6 +124,62 @@ function buildCompanioIndex(ctx: ModuleContext): Map<number, Map<number, number>
     return result
 }
 
+/**
+ * 补齐 CharVoice 表缺配、但台词与语音都存在的偶遇语音（如 voice_ch_char_Xibi_vo_companio_02）。
+ *
+ * 名称沿用同角色约定：VoiceDes001 + VoiceDes0(40+编号)；描述键不存在时跳过该编号。
+ * 这些语音在数据源里没有 UnlockDialogue，也没有对应的成对闲谈，故不带 companioCharId。
+ *
+ * VoiceId 按编号顺序插进同角色偶遇语音之间：数据源为缺配编号预留了空位（如溪比 01=10387、
+ * 04=10390，补全的 02/03 即 10388/10389）；空隙不足时退到该角色最大 VoiceId 之后。
+ */
+function supplementCompanioVoices(
+    ctx: ModuleContext,
+    tokensByChar: Map<number, string>,
+    knownKeys: Set<string>,
+    existing: Map<number, Array<{ serial: number; part: number; id: number }>>,
+    usedIds: Set<number>
+): VNodeTree[] {
+    const byOrder = (a: { serial: number; part: number }, b: { serial: number; part: number }) => a.serial - b.serial || a.part - b.part
+    const items: VNodeTree[] = []
+
+    for (const [charId, token] of [...tokensByChar].sort((a, b) => a[0] - b[0])) {
+        const known = (existing.get(charId) ?? []).slice().sort(byOrder)
+        const missing: Array<{ serial: number; part: number; key: string; description: string }> = []
+        for (let serial = 1; serial <= COMPANIO_SCAN_COUNT; serial++) {
+            const description = `VoiceDes0${40 + serial}`
+            if (!ctx.textmap.has(description)) continue
+            for (const [index, suffix] of COMPANIO_SCAN_SUFFIXES.entries()) {
+                const key = `voice_ch_char_${token}_vo_companio_${String(serial).padStart(2, "0")}${suffix}`
+                if (knownKeys.has(key) || !ctx.textmap.has(key)) continue
+                if (ctx.dm.getTableItem("Talk_SoundEditor", key) === undefined) continue
+                missing.push({ serial, part: index, key, description })
+            }
+        }
+        const tail = Math.max(0, ...known.map(entry => entry.id))
+        for (const entry of missing.sort(byOrder)) {
+            const previous = known.filter(candidate => byOrder(candidate, entry) < 0).pop()
+            const next = known.find(candidate => byOrder(candidate, entry) > 0)
+            let voiceId = previous ? previous.id + 1 : (next?.id ?? tail) - 1
+            if (next && voiceId >= next.id) voiceId = Math.max(tail, next.id)
+            while (usedIds.has(voiceId)) voiceId += 1
+            usedIds.add(voiceId)
+            known.push({ serial: entry.serial, part: entry.part, id: voiceId })
+            known.sort(byOrder)
+            items.push({
+                id: voiceId,
+                charId,
+                // 数据源未配置，属流水线补全，供下游决定是否展示
+                hide: true,
+                name: seq([T("VoiceDes001"), T(entry.description)]),
+                res: entry.key.replace(/^voice_ch_/, ""),
+                text: T(entry.key),
+            })
+        }
+    }
+    return items
+}
+
 export function charVoiceModule(ctx: ModuleContext): VNodeTree {
     const table = (ctx.dm.getTable("CharVoice") as Record<string, any>) || {}
     const companioIndex = buildCompanioIndex(ctx)
@@ -119,6 +187,14 @@ export function charVoiceModule(ctx: ModuleContext): VNodeTree {
     const charIdsWithVoice = new Set<number>()
     /** 战斗语音后缀 → 非皮肤 VoiceDes 键（全角色同后缀共用同一模板）。 */
     const baseDescBySuffix = new Map<string, string[]>()
+    /** 角色 → 语音键前缀 token（取自该角色已有条目）。 */
+    const tokensByChar = new Map<number, string>()
+    /** 数据源已出现的语音键，避免补全时重复。 */
+    const knownKeys = new Set<string>()
+    /** 角色 → 已有偶遇语音的编号/句序/VoiceId，供补全条目插空编号。 */
+    const companioIds = new Map<number, Array<{ serial: number; part: number; id: number }>>()
+    /** 已使用的 VoiceId，保证补全条目不与既有条目相撞。 */
+    const usedIds = new Set<number>()
     /** 偶遇语音条数与其中解析到同伴角色的条数，用于提示数据源缺口。 */
     let companioTotal = 0
     let companioResolved = 0
@@ -128,9 +204,15 @@ export function charVoiceModule(ctx: ModuleContext): VNodeTree {
         const charId = voice.CharId
         if (!voiceId || !charId) return
         charIdsWithVoice.add(Number(charId))
+        usedIds.add(Number(voiceId))
         const descriptions = Array.isArray(voice.VoiceDes) ? voice.VoiceDes : typeof voice.VoiceDes === "string" ? [voice.VoiceDes] : []
         const texts = Array.isArray(voice.VoiceText) ? voice.VoiceText : []
         const textKey = texts[0]
+        if (typeof textKey === "string") {
+            knownKeys.add(textKey)
+            const token = textKey.match(/^voice_ch_char_([A-Za-z0-9_]+?)_vo_/)?.[1]
+            if (token) tokensByChar.set(Number(charId), token)
+        }
         const res = typeof textKey === "string" ? textKey.replace(/^voice_ch_/, "") : ""
         const entry: Record<string, VNodeTree> = {
             id: voiceId,
@@ -140,6 +222,11 @@ export function charVoiceModule(ctx: ModuleContext): VNodeTree {
             text: T(typeof textKey === "string" ? textKey : ""),
         }
         const serial = companioSerial(res)
+        const order = companioOrder(res)
+        if (order) {
+            if (!companioIds.has(Number(charId))) companioIds.set(Number(charId), [])
+            companioIds.get(Number(charId))!.push({ ...order, id: Number(voiceId) })
+        }
         if (serial) {
             companioTotal += 1
             const segment = Math.floor(Number(voice.UnlockDialogue) / 100) * 100
@@ -182,6 +269,10 @@ export function charVoiceModule(ctx: ModuleContext): VNodeTree {
             })
         })
     }
+
+    const supplemented = supplementCompanioVoices(ctx, tokensByChar, knownKeys, companioIds, usedIds)
+    items.push(...supplemented)
+    if (supplemented.length > 0) ctx.log(`CharVoice: 补齐 ${supplemented.length} 条表外偶遇语音（台词与语音均存在）`)
 
     if (companioTotal > companioResolved) {
         ctx.log(`CharVoice: ${companioTotal - companioResolved}/${companioTotal} 条偶遇语音缺对应闲谈组合，未输出 companioCharId`)

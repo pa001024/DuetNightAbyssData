@@ -105,6 +105,14 @@
     "text": "{性别:He|She} was never meant to be caged. I always knew {性别:he|she} would someday leave the island to reach for the sky. What I couldn't tell was whether that would be a blessing or a curse for us."
   },
   {
+    "id": 10016,
+    "charId": 1101,
+    "hide": true,
+    "name": "Chitchat: Chance Encounter Ⅰ",
+    "res": "char_Heitao_vo_companio_01",
+    "text": "All these years, I've taken good care of {性别:him|her} and of myself, just as I promised you... Could you pat my head and tell me I've done well, like you used to when I was little? And this time, please, don't leave us again..."
+  },
+  {
     "id": 10017,
     "charId": 1101,
     "name": "Chitchat: Chance Encounter Ⅰ",
@@ -2445,6 +2453,22 @@
     "companioCharId": 5401
   },
   {
+    "id": 10388,
+    "charId": 4301,
+    "hide": true,
+    "name": "Chitchat: Chance Encounter Ⅱ",
+    "res": "char_Xibi_vo_companio_02",
+    "text": "Our paths are diametrically opposed. I've doubted myself before, wondering if you were right. Sadly, you will only be remembered as the defeated."
+  },
+  {
+    "id": 10389,
+    "charId": 4301,
+    "hide": true,
+    "name": "Chitchat: Chance Encounter Ⅲ",
+    "res": "char_Xibi_vo_companio_03",
+    "text": "Were you not his heir... my blade would have found your heart by now."
+  },
+  {
     "id": 10390,
     "charId": 4301,
     "name": "Chitchat: Chance Encounter Ⅳ",
@@ -3027,6 +3051,14 @@
     "res": "char_Feina_vo_companio_03",
     "text": "Miss Lioness, are you trying to wake up the fairy inside the giant sword? Perhaps you need to chant a lot of incantations, like, \"O chosen one who awoke the sacred greatsword Samael, destined to be the king of Elysium!\"",
     "companioCharId": 1501
+  },
+  {
+    "id": 10472,
+    "charId": 1801,
+    "hide": true,
+    "name": "Chitchat: Chance Encounter Ⅳ",
+    "res": "char_Feina_vo_companio_04",
+    "text": "Mr Seahorse from the southern realm, you look familiar. Hmm... Oh! A long, long time ago, Papa hung a portrait of you on our wall at home."
   },
   {
     "id": 10473,
@@ -3891,6 +3923,22 @@
     "companioCharId": 2401
   },
   {
+    "id": 10595,
+    "charId": 1502,
+    "hide": true,
+    "name": "Chitchat: Chance Encounter Ⅲ",
+    "res": "char_Nifu_vo_companio_03",
+    "text": "Greetings, child. Hehe... Indeed, we share a likeness in our horns. Perhaps our paths crossed long ago. But that is not your burden to bear. Set it aside, and follow the path your heart desires."
+  },
+  {
+    "id": 10596,
+    "charId": 1502,
+    "hide": true,
+    "name": "Chitchat: Chance Encounter Ⅳ",
+    "res": "char_Nifu_vo_companio_04",
+    "text": "My memories span endless times, yet much of what I've witnessed is cruelty. Perhaps forgetting is indeed bliss. Trust that what truly matters shall find its way back to you, even if not held in mind."
+  },
+  {
     "id": 10597,
     "charId": 1502,
     "name": "Ready to Go",
@@ -4206,6 +4254,14 @@
     "res": "char_Lise_vo_companio_02",
     "text": "This proposal is remarkably detailed, down to every second accounted for. Following it through must be immensely satisfying. It's just... hard to believe something like this was put together by Lieutenant Colonel Randy.",
     "companioCharId": 4202
+  },
+  {
+    "id": 10642,
+    "charId": 4101,
+    "hide": true,
+    "name": "Chitchat: Chance Encounter Ⅲ",
+    "res": "char_Lise_vo_companio_03",
+    "text": "Would you mind playing a different tune? It's not that your music isn't beautiful — it is just that... it stirs memories I'd rather not dwell on."
   },
   {
     "id": 10643,
@@ -4532,12 +4588,28 @@
     "companioCharId": 1801
   },
   {
+    "id": 10689,
+    "charId": 1103,
+    "hide": true,
+    "name": "Chitchat: Chance Encounter Ⅲ",
+    "res": "char_Tuosi_vo_companio_03",
+    "text": "Miss, the music you play is truly captivating. May I ask the name of this piece?\nAh, an original composition of yours... Such an enviable gift. Might I have the honour of admiring the sheet music?"
+  },
+  {
     "id": 10690,
     "charId": 1103,
     "name": "Chitchat: Chance Encounter Ⅳ",
     "res": "char_Tuosi_vo_companio_04",
     "text": "Your mimicry is extraordinary. Even the finest stage prop artists couldn't craft something so exquisitely detailed.",
     "companioCharId": 2301
+  },
+  {
+    "id": 10691,
+    "charId": 1103,
+    "hide": true,
+    "name": "Chitchat: Chance Encounter Ⅴ",
+    "res": "char_Tuosi_vo_companio_05",
+    "text": "I have no need for a mirror to continuously remind me of my own grotesqueness."
   },
   {
     "id": 10692,
@@ -5462,6 +5534,14 @@
     "companioCharId": 3202
   },
   {
+    "id": 10822,
+    "charId": 5102,
+    "hide": true,
+    "name": "Chitchat: Chance Encounter Ⅳ",
+    "res": "char_Aote_vo_companio_04",
+    "text": "Remember me from when I was little? You were like a sweet sister to me, and a tough dad all rolled into one... Uh, I'm not saying you're old and violent, just... thank you for making me feel I belonged back then."
+  },
+  {
     "id": 10823,
     "charId": 5102,
     "name": "Ready to Go",
@@ -5743,6 +5823,22 @@
     "companioCharId": 2101
   },
   {
+    "id": 10863,
+    "charId": 4102,
+    "hide": true,
+    "name": "Chitchat: Chance Encounter Ⅱ",
+    "res": "char_Zhiliu_vo_companio_02_1",
+    "text": "Deception may serve its purpose in war, but in the finer art of human interaction, it is a blunt instrument. Overreliance on such tactics does little more than tarnish one's standing in business."
+  },
+  {
+    "id": 10864,
+    "charId": 4102,
+    "hide": true,
+    "name": "Chitchat: Chance Encounter Ⅱ",
+    "res": "char_Zhiliu_vo_companio_02_2",
+    "text": "But, of course, you have your own way with everything. My words, I suspect, fall on deaf ears."
+  },
+  {
     "id": 10865,
     "charId": 4102,
     "name": "Chitchat: Chance Encounter Ⅲ",
@@ -5983,6 +6079,14 @@
     "text": "Samael, it's a beautiful day outside! Isn't this the perfect weather to eat something cool? I've heard the Holy City has an amazing dessert called ice cream. It's a commoner's food, but I bet it's way tastier than anything those old farts are handing out. I'll secretly grab you some!"
   },
   {
+    "id": 10899,
+    "charId": 1501,
+    "hide": true,
+    "name": "Chitchat: Chance Encounter Ⅰ",
+    "res": "char_Baonu_vo_companio_01",
+    "text": "Samael? Oh, it's alright. It wakes me up every morning, cheers me on during combat, and even has a dozen bedtime stories lined up for me! So, there's nothing to worry about."
+  },
+  {
     "id": 10900,
     "charId": 1501,
     "name": "Chitchat: Chance Encounter Ⅱ",
@@ -5997,6 +6101,14 @@
     "res": "char_Baonu_vo_companio_03",
     "text": "Cream? What's wrong? That's how we Elysians take care of our weapons. You got a problem with that?",
     "companioCharId": 3101
+  },
+  {
+    "id": 10902,
+    "charId": 1501,
+    "hide": true,
+    "name": "Chitchat: Chance Encounter Ⅳ",
+    "res": "char_Baonu_vo_companio_04",
+    "text": "How strange. I've never seen you vent your anger before...\nWell... I, a candidate of the Seven Virtues, order you to show me your anger! No more preaching those silly virtues, doctrines, and scriptures. Let's see some real emotion for once!"
   },
   {
     "id": 10903,
@@ -8023,6 +8135,14 @@
     "res": "char_Shuimu_vo_companio_02",
     "text": "You're scared of me? Don't worry. I'll make you love me eventually. Come, have a whiff of the perfume I've blended. It smells very sweet, and I believe you'll love it.",
     "companioCharId": 2301
+  },
+  {
+    "id": 21010030,
+    "charId": 2101,
+    "hide": true,
+    "name": "Chitchat: Chance Encounter Ⅲ",
+    "res": "char_Shuimu_vo_companio_03",
+    "text": "You're a weirdo like me. You enjoy getting hurt, savour pains and immerse yourself in slaughtering your enemies without blinking an eye... I get it. *giggle* That must be how you express your love."
   },
   {
     "id": 21010031,
