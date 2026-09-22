@@ -2449,14 +2449,16 @@
     "charId": 4301,
     "name": "Discussion : Rencontre aléatoire : IV",
     "res": "char_Xibi_vo_companio_04",
-    "text": "Une si belle façade... ça ne fait que révéler à quel point tu as poli tes crocs dans l’ombre. J’attends patiemment le jour où tu montreras les crocs... pour mieux te les briser."
+    "text": "Une si belle façade... ça ne fait que révéler à quel point tu as poli tes crocs dans l’ombre. J’attends patiemment le jour où tu montreras les crocs... pour mieux te les briser.",
+    "companioCharId": 5102
   },
   {
     "id": 10391,
     "charId": 4301,
     "name": "Discussion : Rencontre aléatoire : V",
     "res": "char_Xibi_vo_companio_05",
-    "text": "Les derniers rapports d’opérations, les plans tactiques, documents logistiques et rapports de pertes sont bien organisés ?\nBien. Alors passons aux slogans de campagne, aux analyses internes, aux rapports réguliers à l’Empereur, et les résultats des tests des nouvelles armes des Spathatoi. Ce n’est pas une charge supplémentaire, c’est notre boulot."
+    "text": "Les derniers rapports d’opérations, les plans tactiques, documents logistiques et rapports de pertes sont bien organisés ?\nBien. Alors passons aux slogans de campagne, aux analyses internes, aux rapports réguliers à l’Empereur, et les résultats des tests des nouvelles armes des Spathatoi. Ce n’est pas une charge supplémentaire, c’est notre boulot.",
+    "companioCharId": 4202
   },
   {
     "id": 10392,
@@ -4534,7 +4536,8 @@
     "charId": 1103,
     "name": "Discussion : Rencontre aléatoire : IV",
     "res": "char_Tuosi_vo_companio_04",
-    "text": "Votre capacité de mimétisme est exceptionnelle, même le meilleur des accessoiristes ne pourrait créer un tel chef-d’œuvre."
+    "text": "Votre capacité de mimétisme est exceptionnelle, même le meilleur des accessoiristes ne pourrait créer un tel chef-d’œuvre.",
+    "companioCharId": 2301
   },
   {
     "id": 10692,
@@ -5745,14 +5748,15 @@
     "name": "Discussion : Rencontre aléatoire : III",
     "res": "char_Zhiliu_vo_companio_03",
     "text": "J’ai cru voir en toi un reflet de quelqu’un que j’ai connu autrefois... Non, je dois me tromper. Oublie ce que je viens de dire. ",
-    "companioCharId": 3202
+    "companioCharId": 1503
   },
   {
     "id": 10866,
     "charId": 4102,
     "name": "Discussion : Rencontre aléatoire : IV",
     "res": "char_Zhiliu_vo_companio_04",
-    "text": "Cela fait longtemps que je n’ai pas eu le plaisir de déguster une boisson que tu as préparée. Si tu as un moment aujourd’hui, pourrais-tu m’en servir un petit verre pour accompagner l’après-midi ?"
+    "text": "Cela fait longtemps que je n’ai pas eu le plaisir de déguster une boisson que tu as préparée. Si tu as un moment aujourd’hui, pourrais-tu m’en servir un petit verre pour accompagner l’après-midi ?",
+    "companioCharId": 3202
   },
   {
     "id": 10867,
@@ -5984,14 +5988,15 @@
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_Baonu_vo_companio_02",
     "text": "« La Résilience est l’une des Sept Vertus... Celui qui la cultive peut voir ce que nul autre ne voit, accomplir ce que— ce que... »\nAaaah ! J’en peux plus ! Espèce de nabot, si tu continues à m’imiter, je te jure par les Neuf Dieux d’Élysium que je te tranche en rondelles avec Samaël ! Et je le ferai vraiment !",
-    "companioCharId": 3101
+    "companioCharId": 2301
   },
   {
     "id": 10901,
     "charId": 1501,
     "name": "Discussion : Rencontre aléatoire : III",
     "res": "char_Baonu_vo_companio_03",
-    "text": "De la crème ? Et alors ? C’est comme ça que les Élyséens entretiennent leurs armes. Une objection ?"
+    "text": "De la crème ? Et alors ? C’est comme ça que les Élyséens entretiennent leurs armes. Une objection ?",
+    "companioCharId": 3101
   },
   {
     "id": 10903,
@@ -6244,7 +6249,7 @@
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_Kami_vo_companio_02",
     "text": "Chaque personne possède ses propres talents. Certains naissent avec le don d’apaiser les autres... comme toi. Tu es quelqu’un de bien.",
-    "companioCharId": 4102
+    "companioCharId": 5301
   },
   {
     "id": 10939,
@@ -6252,14 +6257,15 @@
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_Kami_vo_companio_03",
     "text": "C’est rare que tu fasses tout ce chemin jusqu’à Givrelac. Alors dis-moi... tu viens chercher des produits rares de l’Empire ? Ou simplement assister au spectacle ?",
-    "companioCharId": 5102
+    "companioCharId": 4102
   },
   {
     "id": 10940,
     "charId": 3202,
     "name": "Discussion : Rencontre aléatoire : III",
     "res": "char_Kami_vo_companio_04",
-    "text": "Cette cicatrice... tu as encore accepté une mission dangereuse ? Hah... J’ai de la pommade derrière le comptoir. Va en mettre. S’il t’arrivait quelque chose ici, ça nuirait à mon commerce. Alors ? Tu comptes rester planté là longtemps ? Ou tu attends que j’aille te la chercher moi-même ?"
+    "text": "Cette cicatrice... tu as encore accepté une mission dangereuse ? Hah... J’ai de la pommade derrière le comptoir. Va en mettre. S’il t’arrivait quelque chose ici, ça nuirait à mon commerce. Alors ? Tu comptes rester planté là longtemps ? Ou tu attends que j’aille te la chercher moi-même ?",
+    "companioCharId": 5102
   },
   {
     "id": 10941,

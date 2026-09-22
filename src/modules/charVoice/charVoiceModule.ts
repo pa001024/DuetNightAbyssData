@@ -6,8 +6,9 @@
  * 这里按标准战斗语音集补齐。数据源一旦出现该 CharId 组即自动停用补全，避免重复。
  *
  * 偶遇语音（vo_companio_NN_*）额外输出可选的 companioCharId，即触发该段对话的另一个角色
- * CharId；编号 NN 的换算规则见 buildCompanioIndex。
+ * CharId；由语音的 UnlockDialogue 定位闲谈剧情，见 buildCompanioIndex。
  */
+import { join } from "node:path"
 import type { ModuleContext } from "../../core/Graph.ts"
 import { seq, T, type VNodeTree } from "../../i18n/vnode.ts"
 
@@ -45,49 +46,69 @@ function companioSerial(res: string): string | undefined {
 }
 
 /**
- * 构建「偶遇语音 → 触发的另一个角色 CharId」索引：unit -> (companio 编号 -> CharId)。
- *
- * 编号规则：NpcGossipTriggerConvert.NpcTrigger[unitId] 列出该 unit 参与的闲谈 TalkId；
- * 只取 unit 位于 NpcGossipTrigger[talkId].NpcCombination 首位（该角色为主动方）的成对闲谈，
- * 按 TalkId 升序依次编号为 01、02…，NN 即语音后缀 companio_NN；对手 unit 经 Npc 表换 CharId。
- * 主动方为对手的闲谈属于对手的编号序列，不计入本 unit。
+ * 递归取 story 投影里的 FirstDialogueId（出现顺序即对话顺序）。
+ * loadStoryFile 已把节点 propsData 投影为普通表，这里只做字段收集。
  */
-function buildCompanioIndex(ctx: ModuleContext): Map<number, Map<string, number>> {
-    const triggerTable = (ctx.dm.getTable("NpcGossipTrigger") ?? {}) as Record<string, any>
-    const convert = (ctx.dm.getTable("NpcGossipTriggerConvert") ?? {}) as Record<string, any>
-    const npcTrigger = (convert.NpcTrigger ?? {}) as Record<string, Record<string, number>>
-
-    const unitPairs = new Map<number, Map<string, number>>()
-    const otherUnits = new Set<number>()
-    for (const [unitKey, talkIds] of Object.entries(npcTrigger)) {
-        const unit = Number(unitKey)
-        const pairs = new Map<string, number>()
-        let serial = 0
-        for (const talkId of Object.values(talkIds ?? {}).sort((a, b) => a - b)) {
-            const combination = triggerTable[String(talkId)]?.NpcCombination
-            if (!Array.isArray(combination) || combination.length < 2) continue
-            if (Number(combination[0]) !== unit) continue
-            const other = Number(combination[1])
-            serial += 1
-            pairs.set(String(serial).padStart(2, "0"), other)
-            otherUnits.add(other)
-        }
-        if (pairs.size > 0) unitPairs.set(unit, pairs)
+function collectFirstDialogueIds(value: unknown, out: number[] = []): number[] {
+    if (Array.isArray(value)) {
+        for (const item of value) collectFirstDialogueIds(item, out)
+        return out
     }
+    if (!value || typeof value !== "object") return out
+    const record = value as Record<string, any>
+    if (typeof record.FirstDialogueId === "number") out.push(record.FirstDialogueId)
+    for (const nested of Object.values(record)) if (nested && typeof nested === "object") collectFirstDialogueIds(nested, out)
+    return out
+}
 
-    const npcById = ctx.dm.getTableItems("Npc", [...otherUnits])
-    const result = new Map<number, Map<string, number>>()
+/**
+ * 构建「偶遇语音 → 触发的另一个角色 CharId」索引：对话段号 -> (自身 unit -> 对手 CharId)。
+ *
+ * 偶遇语音的 UnlockDialogue 就是该段闲谈剧情首个对话的 DialogueId，剧情由 NpcGossipTrigger 的
+ * 成对组合经 TalkTrigger.StoryLinePath 指向；同一剧情的后续台词与之同段（…01、…02），按段号归组。
+ * 语音后缀里的 companio_NN 编号存在空缺（如卡米没有 companio_01），不能当序号用。
+ */
+function buildCompanioIndex(ctx: ModuleContext): Map<number, Map<number, number>> {
+    const triggerTable = (ctx.dm.getTable("NpcGossipTrigger") ?? {}) as Record<string, any>
+    const talkTrigger = (ctx.dm.getTable("TalkTrigger") ?? {}) as Record<string, any>
+
+    /** 段号 -> 成对闲谈的 unit 组合 */
+    const pairsBySegment = new Map<number, number[]>()
+    let conflicting = 0
+    for (const [talkId, entry] of Object.entries(triggerTable)) {
+        const combination = (entry as any)?.NpcCombination
+        if (!Array.isArray(combination) || combination.length < 2) continue
+        const storyPath = String(talkTrigger[talkId]?.StoryLinePath ?? "")
+        if (!storyPath) continue
+        const story = ctx.dm.loadStoryFile(join("Script", "StoryCreator", "StoryFiles", storyPath.replace(/\.story$/, ".lua")))
+        for (const dialogueId of collectFirstDialogueIds(story)) {
+            const segment = Math.floor(dialogueId / 100) * 100
+            if (pairsBySegment.has(segment)) {
+                conflicting += 1
+                continue
+            }
+            pairsBySegment.set(segment, combination.map(Number))
+        }
+    }
+    if (conflicting > 0) ctx.log(`CharVoice: ${conflicting} 个偶遇闲谈的对话段号与其他闲谈重复，仅取首个组合`)
+
+    const units = new Set<number>()
+    for (const pair of pairsBySegment.values()) for (const unit of pair) units.add(unit)
+    const npcById = ctx.dm.getTableItems("Npc", [...units])
+
+    const result = new Map<number, Map<number, number>>()
     let unresolved = 0
-    for (const [unit, pairs] of unitPairs) {
-        const resolved = new Map<string, number>()
-        for (const [serial, otherUnit] of pairs) {
-            const charId = (npcById.get(String(otherUnit)) as Record<string, unknown> | undefined)?.CharId
-            if (typeof charId === "number") resolved.set(serial, charId)
+    for (const [segment, pair] of pairsBySegment) {
+        const byUnit = new Map<number, number>()
+        for (const unit of pair) {
+            const other = pair.find(candidate => candidate !== unit)
+            const charId = other === undefined ? undefined : (npcById.get(String(other)) as Record<string, unknown> | undefined)?.CharId
+            if (typeof charId === "number") byUnit.set(unit, charId)
             else unresolved += 1
         }
-        if (resolved.size > 0) result.set(unit, resolved)
+        if (byUnit.size > 0) result.set(segment, byUnit)
     }
-    if (unresolved > 0) ctx.log(`CharVoice: ${unresolved} 个偶遇组合缺 Npc.CharId，对应语音不输出 companioCharId`)
+    if (unresolved > 0) ctx.log(`CharVoice: ${unresolved} 个偶遇闲谈的对手 unit 缺 Npc.CharId`)
     return result
 }
 
@@ -121,7 +142,8 @@ export function charVoiceModule(ctx: ModuleContext): VNodeTree {
         const serial = companioSerial(res)
         if (serial) {
             companioTotal += 1
-            const companioCharId = companioIndex.get(Number(voice.UnitId))?.get(serial)
+            const segment = Math.floor(Number(voice.UnlockDialogue) / 100) * 100
+            const companioCharId = Number.isFinite(segment) ? companioIndex.get(segment)?.get(Number(voice.UnitId)) : undefined
             if (companioCharId !== undefined) {
                 entry.companioCharId = companioCharId
                 companioResolved += 1

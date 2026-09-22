@@ -61,21 +61,31 @@ describe("CharVoice 模块", () => {
         const rows = (artifacts.get("CharVoice") as { CharVoice: Array<Record<string, any>> }).CharVoice
         const textmap = getTextMap()
 
-        // 黑桃 companio_02 的对象是松露(5101)：主动方闲谈 HeitaoSonglu
+        // 黑桃 companio_02 的对象是松露(5101)，由 UnlockDialogue 定位到 HeitaoSonglu 闲谈
         const heitaoSonglu = rows.find(row => row.res === "char_Heitao_vo_companio_02_1")!
         expect(heitaoSonglu.charId).toBe(1101)
         expect(heitaoSonglu.companioCharId).toBe(5101)
         expect(renderTree(heitaoSonglu.text, "cn", textmap)).toContain("松露小姐")
 
-        // 玛尔 companio_01 的对象是希尔妲(3102)：取主动方闲谈 MaerXier，而非 SongluMaer
+        // 玛尔 companio_01 的对象是希尔妲(3102)：闲谈 MaerXier，而非 SongluMaer
         const maerXier = rows.find(row => row.res === "char_Maer_vo_companio_01")!
         expect(maerXier.charId).toBe(3301)
         expect(maerXier.companioCharId).toBe(3102)
         expect(renderTree(maerXier.text, "cn", textmap)).toContain("希尔妲")
 
+        // 卡米没有 companio_01（编号空缺），companio_02 是赛琪(5301)而不是第二组闲谈的止流(4102)
+        const kami = rows.filter(row => row.charId === 3202 && String(row.res).includes("_vo_companio_"))
+        expect(kami.map(row => row.res)).toEqual([
+            "char_Kami_vo_companio_02",
+            "char_Kami_vo_companio_03",
+            "char_Kami_vo_companio_04",
+        ])
+        expect(kami.map(row => row.companioCharId)).toEqual([5301, 4102, 5102])
+        expect(renderTree(kami[0].text, "cn", textmap)).toContain("治愈人心")
+
         const companioRows = rows.filter(row => String(row.res).includes("_vo_companio_"))
         expect(companioRows).toHaveLength(87)
-        expect(companioRows.filter(row => typeof row.companioCharId === "number")).toHaveLength(81)
+        expect(companioRows.filter(row => typeof row.companioCharId === "number")).toHaveLength(87)
         const idle = rows.find(row => row.res === "char_Heitao_vo_idle")!
         expect(idle.companioCharId).toBeUndefined()
     })
