@@ -79287,9 +79287,7 @@ Allez voir ce qui se passe.]]
         UI_SkinPreview_Accessory_Weapon = {
           ContentFR = "Accessoire d’arme"
         },
-        UI_SkinPreview_CharNotOwned = {
-          ContentFR = "Personnage non possédé"
-        },
+        UI_SkinPreview_CharNotOwned = {ContentFR = "Non obtenu"},
         UI_SkinPreview_Dye = {
           ContentFR = "Aperçu de teinture"
         },

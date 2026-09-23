@@ -348,7 +348,15 @@ function M:OnIronItemSelected(selectedId)
   if not Avatar then
     return
   end
-  Avatar:SetIronRareDrop(nil, self.CurSelectedDungeonId, selectedId)
+  local DungeonIds = self.IronDungeonIdsOnPage
+  if not DungeonIds or 0 == #DungeonIds then
+    DungeonIds = {
+      self.CurSelectedDungeonId
+    }
+  end
+  for _, DungeonId in ipairs(DungeonIds) do
+    Avatar:SetIronRareDrop(nil, DungeonId, selectedId)
+  end
 end
 
 function M:OnClickIronExp()
@@ -664,10 +672,6 @@ function M:InitListCellInfo(DungeonId)
   local Dungeon2SubDungeon = DataMgr.Dungeon2SubDungeon
   self.CurSelectedDungeonId = DungeonId
   M.SelectedDungeonId = DungeonId
-  if self.PendingDefaultIronDropId then
-    self:OnIronItemSelected(self.PendingDefaultIronDropId)
-    self.PendingDefaultIronDropId = nil
-  end
   self.HasTypeSelect = false
   self.Stats:SetRenderOpacity(0)
   self:RefreshDeputeEvent(DungeonId)
@@ -727,6 +731,9 @@ function M:InitListCellInfo(DungeonId)
       local PriorityB = DataMgr.Attribute[DataMgr.Dungeon[B].AttributeType].DisplayPriority
       return PriorityA < PriorityB
     end)
+    if self.isIron then
+      self.IronDungeonIdsOnPage = SubDungeonData
+    end
     for k, v in pairs(SubDungeonData) do
       local Item = self:CreateWidgetNew("DeputeTypeIcon")
       Item:InitContent(DataMgr.Dungeon[v].AttributeType)
@@ -745,6 +752,10 @@ function M:InitListCellInfo(DungeonId)
     self.Panel_Type:SetVisibility(ESlateVisibility.Collapsed)
     self.Panel_WarningHint_Attribute:SetVisibility(ESlateVisibility.Collapsed)
     self:RefreshLevelCellContent(self.CurSelectedDungeonId)
+  end
+  if self.PendingDefaultIronDropId then
+    self:OnIronItemSelected(self.PendingDefaultIronDropId)
+    self.PendingDefaultIronDropId = nil
   end
   local IsNightFlight = self.DeputeType == Const.DeputeType.NightFlightManualDepute
   if not IsNightFlight then
