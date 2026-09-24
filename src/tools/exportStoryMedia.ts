@@ -1,7 +1,7 @@
 #!/usr/bin/env bun
 
 import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync } from "node:fs"
-import { basename, extname, isAbsolute, join } from "node:path"
+import { basename, dirname, extname, isAbsolute, join } from "node:path"
 import { AssetReader } from "../lua/AssetReader.ts"
 import { LuaDataManager } from "../lua/LuaDataManager.ts"
 import { getExportsRoot } from "../lua/UAssetServer.ts"
@@ -596,12 +596,13 @@ function locateBgmSources(
     soundMap: ReadonlyMap<string, readonly string[]>,
     savedSounds: ReadonlyMap<string, readonly string[]>
 ): string[] {
-    const bank = name.split("_")[0]
+    const bank = name.split("/")[0]
     const parentName = (path: string): string => {
         const normalized = path.replaceAll("\\", "/")
         return normalized.slice(0, normalized.lastIndexOf("/")).split("/").at(-1) ?? ""
     }
-    const byName = (savedSounds.get(name) ?? []).filter(path => existsSync(path))
+    // bank 导出的 ogg 基名把事件路径的分段用 `_` 连接（cine/Ver0103/sc002 → cine_Ver0103_sc002）。
+    const byName = (savedSounds.get(name.replaceAll("/", "_")) ?? []).filter(path => existsSync(path))
     if (byName.length > 0) {
         const inBank = byName.filter(path => parentName(path).toLowerCase() === bank.toLowerCase())
         const picked = inBank.length > 0 ? inBank : byName
@@ -619,8 +620,9 @@ export interface BgmPlan {
 }
 
 /**
- * 规划 BGM 输出：文件名取事件规范名（含 `Events/` 下的子路径，对齐 bank 导出的 ogg 名），
- * 与剧情 JSON 的 BGM resource 一致。
+ * 规划 BGM 输出：文件名取事件规范名（事件在 `Events/` 下的相对路径、斜杠分隔，如
+ * `bgm/1_1/0109_combat_black_market`），与剧情 JSON 的 BGM resource 一致；落盘时按同一
+ * 结构创建子目录，与 FMOD 事件目录对应。
  *
  * 找不到音频时默认报错（保持"引用了不存在的媒体即失败"的语义）；`skipMissing` 用于
  * 解包不完整的环境，跳过后由调用方显式报告清单。
@@ -660,7 +662,12 @@ export function collectBgmFiles(
 
 function writeFiles(destination: string, files: Map<string, string>): void {
     mkdirSync(destination, { recursive: true })
-    for (const [name, source] of files) copyFileSync(source, join(destination, `${name}${extname(source)}`))
+    for (const [name, source] of files) {
+        // name 可能是带目录的事件路径（如 bgm/1_1/0109_combat_black_market），按原结构落盘。
+        const target = join(destination, `${name}${extname(source)}`)
+        mkdirSync(dirname(target), { recursive: true })
+        copyFileSync(source, target)
+    }
 }
 
 /**
@@ -756,7 +763,12 @@ export async function exportStoryMedia(): Promise<{ videos: number; bgm: number 
         if (videoOnly) return { videos: videos.size, bgm: 0 }
         const wantedBgmPaths = new Set(allBgm.map(item => normalizeBgmAssetPath(item.resource)))
         const soundMap = loadFModelSoundMap(fmodelLogRoot, wantedBgmPaths)
-        const wantedBgmNames = new Set(allBgm.map(item => fmodEventMediaName(item.resource)).filter((name): name is string => !!name))
+        const wantedBgmNames = new Set(
+            allBgm
+                .map(item => fmodEventMediaName(item.resource))
+                .filter((name): name is string => !!name)
+                .map(name => name.replaceAll("/", "_"))
+        )
         const savedSounds = loadFModelSavedSounds(fmodelLogRoot, wantedBgmNames)
         const skipMissing = Bun.argv.includes("--skip-missing-bgm")
         const bgm = collectBgmFiles(allBgm, soundMap, savedSounds, skipMissing)

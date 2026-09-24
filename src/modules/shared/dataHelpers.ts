@@ -80,9 +80,9 @@ export function storyVideoName(value: unknown): string | undefined {
  * SoundPath 有 `event:/bgm/1_1/0109_combat_black_market`、
  * `FMODEvent'/Game/Asset/Audio/FMOD/Events/cine/Ver0103/sc002.sc002'` 等形态；只取末段
  * （如 `sc002`）无法区分不同目录下的同名事件。规范名取事件在 `Events/` 下的完整相对路径、
- * 分段以 `_` 连接（`cine/Ver0103/sc002` → `cine_Ver0103_sc002`），与 FMOD bank 导出的
- * ogg 文件名一致。剧情 JSON 的 BGM resource 与 exportStoryMedia 写入 out/BGM 的文件
- * 使用同一名字，保证两侧一一对应。
+ * 保留目录分隔（`cine/Ver0103/sc002`、`bgm/1_1/0109_combat_black_market`），与 Music 模块
+ * 导出的事件路径（`/bgm/1_4/musicbox/…`）同构，同时也是导出音频相对输出根的路径。
+ * 剧情 JSON 的 BGM resource 与 exportStoryMedia 落盘的音频使用同一名字，保证一一对应。
  */
 export function fmodEventMediaName(value: unknown): string | undefined {
     const path = quotedPackagePath(value)
@@ -95,7 +95,7 @@ export function fmodEventMediaName(value: unknown): string | undefined {
         .split("/")
         .filter(Boolean)
     if (segments.length === 0) return undefined
-    return segments.join("_")
+    return segments.join("/")
 }
 
 /**
