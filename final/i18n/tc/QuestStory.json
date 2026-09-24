@@ -33,7 +33,7 @@
             "id": "174782280482333956126",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "char_pick"
+            "resource": "ambience_world_prologue_char_pick"
           }
         ]
       },
@@ -72,7 +72,7 @@
             "id": "quest_16940528724831102",
             "type": "PlayOrStopBGMNode",
             "name": "bgm - start",
-            "resource": "0002_story_shahai",
+            "resource": "bgm_cbt01_0002_story_shahai",
             "next": [
               "quest_16939946055681077"
             ]
@@ -81,19 +81,19 @@
             "id": "quest_16940525957161093",
             "type": "PlayOrStopBGMNode",
             "name": "noise - state 1 - start",
-            "resource": "SC002"
+            "resource": "cine_OBT0100_SC002"
           },
           {
             "id": "quest_16939946055681077",
             "type": "PlayOrStopBGMNode",
             "name": "noise - state 0 - start",
-            "resource": "SC002"
+            "resource": "cine_OBT0100_SC002"
           },
           {
             "id": "quest_16940691773581109",
             "type": "PlayOrStopBGMNode",
             "name": "noise - state 2 - start",
-            "resource": "Cine00_SC002"
+            "resource": "cine_Cine00_SC002"
           }
         ]
       },
@@ -133,7 +133,7 @@
             "id": "170928206780818056",
             "type": "PlayOrStopBGMNode",
             "name": "noise - state 2 - start",
-            "resource": "SC002"
+            "resource": "cine_OBT0100_SC002"
           },
           {
             "id": "17047805518314946",
@@ -168,7 +168,7 @@
             "id": "quest_16940815139431509",
             "type": "PlayOrStopBGMNode",
             "name": "出山洞过渡音效 - start",
-            "resource": "connect_01_cave_sfx"
+            "resource": "cine_Cine00_connect_01_cave_sfx"
           }
         ]
       },
@@ -236,7 +236,7 @@
             "id": "quest_1685600508920400",
             "type": "PlayOrStopBGMNode",
             "name": "BGM - cunzhuang - start",
-            "resource": "0003_story_cunzhuang"
+            "resource": "bgm_cbt01_0003_story_cunzhuang"
           }
         ]
       },
@@ -315,7 +315,7 @@
             "id": "1706007306143137059",
             "type": "PlayOrStopBGMNode",
             "name": "BGM - huishou - start",
-            "resource": "0004_atmos_huishou",
+            "resource": "bgm_cbt01_0004_atmos_huishou",
             "srId": 100101,
             "pos": [
               2362,
@@ -554,7 +554,7 @@
             "id": "quest_16940700911492987",
             "type": "PlayOrStopBGMNode",
             "name": "BGM - nvshenxiang - start",
-            "resource": "0005_story_nvshenxiang",
+            "resource": "bgm_cbt01_0005_story_nvshenxiang",
             "srId": 100101,
             "pos": [
               10111,
@@ -614,7 +614,7 @@
             "id": "quest_1694142034518804",
             "type": "PlayOrStopBGMNode",
             "name": "BGM - shendianyiji - start",
-            "resource": "0006_atmos_shendianyiji",
+            "resource": "bgm_cbt01_0006_atmos_shendianyiji",
             "srId": 100102,
             "pos": [
               18714,
@@ -779,7 +779,7 @@
             "id": "quest_16940703816133006",
             "type": "PlayOrStopBGMNode",
             "name": "BGM - 07- start",
-            "resource": "07",
+            "resource": "bgm_chaper_prologue_temp_07",
             "srId": 100102,
             "pos": [
               16281,
@@ -801,7 +801,7 @@
             "id": "quest_1685947271598238",
             "type": "PlayOrStopBGMNode",
             "name": "bgm - _zaoyudiguojun  - start",
-            "resource": "0007_story_zaoyudiguojun",
+            "resource": "bgm_cbt01_0007_story_zaoyudiguojun",
             "srId": 100103,
             "pos": [
               22268,
@@ -812,7 +812,7 @@
             "id": "1708484335215205339",
             "type": "PlayOrStopBGMNode",
             "name": "BGM - shendianyiji上层 - Play",
-            "resource": "0029_atmos_shendianshangceng",
+            "resource": "bgm_cbt01_0029_atmos_shendianshangceng",
             "srId": 100103,
             "pos": [
               22268,
@@ -908,7 +908,7 @@
             "id": "quest_16940706250363385",
             "type": "PlayOrStopBGMNode",
             "name": "bgm - zhuizhuzhan  - start",
-            "resource": "0008_combat_zhuizhuzhan",
+            "resource": "bgm_cbt01_0008_combat_zhuizhuzhan",
             "srId": 100103,
             "pos": [
               25358,
@@ -925,7 +925,7 @@
             "id": "169935322288426436",
             "type": "PlayOrStopBGMNode",
             "name": "bgm - xibi_p1  - start",
-            "resource": "0009_combat_xibi_p1",
+            "resource": "bgm_cbt01_0009_combat_xibi_p1",
             "srId": 100103,
             "pos": [
               36189,
@@ -985,7 +985,7 @@
             "id": "quest_16940707345323398",
             "type": "PlayOrStopBGMNode",
             "name": "bgm - xibi p2  - start",
-            "resource": "0011_combat_xibi_p2"
+            "resource": "bgm_cbt01_0011_combat_xibi_p2"
           },
           {
             "id": "quest_1686818656143291",
@@ -1049,7 +1049,7 @@
             "id": "1730293403920418558",
             "type": "PlayOrStopBGMNode",
             "name": "bgm - tiaoya  - start",
-            "resource": "0012_story_tiaoya"
+            "resource": "bgm_cbt01_0012_story_tiaoya"
           }
         ],
         "startIds": [
@@ -1069,7 +1069,7 @@
             "id": "170970524420825041",
             "type": "PlayOrStopBGMNode",
             "name": "prologue_void_2d - noise - Play",
-            "resource": "prologue_void_2d",
+            "resource": "ambience_2d_prologue_void_2d",
             "next": [
               "1708484399604207504"
             ]
@@ -1147,7 +1147,7 @@
             "id": "1708484399604207504",
             "type": "PlayOrStopBGMNode",
             "name": "BGM - 沙海2 - Play",
-            "resource": "0028_story_shahai_part2"
+            "resource": "bgm_cbt01_0028_story_shahai_part2"
           }
         ]
       },
@@ -1186,7 +1186,7 @@
             "id": "173028002823318208",
             "type": "PlayOrStopBGMNode",
             "name": "bgm - xibi p2  - start",
-            "resource": "0011_combat_xibi_p2"
+            "resource": "bgm_cbt01_0011_combat_xibi_p2"
           },
           {
             "id": "173028002823318202",
@@ -1240,7 +1240,7 @@
             "id": "1730293403920418558",
             "type": "PlayOrStopBGMNode",
             "name": "bgm - tiaoya  - start",
-            "resource": "0012_story_tiaoya"
+            "resource": "bgm_cbt01_0012_story_tiaoya"
           }
         ]
       },
@@ -1252,7 +1252,7 @@
             "id": "17467774050433073",
             "type": "PlayOrStopBGMNode",
             "name": "BGM - 07- end",
-            "resource": "07",
+            "resource": "bgm_chaper_prologue_temp_07",
             "srId": 100102,
             "pos": [
               19977,
@@ -1269,7 +1269,7 @@
             "id": "17468601216233220",
             "type": "PlayOrStopBGMNode",
             "name": "BGM - 07- end",
-            "resource": "07",
+            "resource": "bgm_chaper_prologue_temp_07",
             "srId": 100102,
             "pos": [
               22410,
@@ -2289,7 +2289,7 @@
             "id": "170912107815515005",
             "type": "PlayOrStopBGMNode",
             "name": "播放疗养院剧情音乐",
-            "resource": "0020_story_sanatorium",
+            "resource": "bgm_cbt01_0020_story_sanatorium",
             "next": [
               "17371907445847875041"
             ]
@@ -3310,7 +3310,7 @@
             "id": "170912272639927108",
             "type": "PlayOrStopBGMNode",
             "name": "播放酒馆剧情音乐",
-            "resource": "0024_story_pub",
+            "resource": "bgm_cbt01_0024_story_pub",
             "next": [
               "1703162571823213439"
             ]
@@ -4414,7 +4414,7 @@
             "id": "17181605173287021",
             "type": "PlayOrStopBGMNode",
             "name": "播放酒馆剧情音乐",
-            "resource": "0024_story_pub",
+            "resource": "bgm_cbt01_0024_story_pub",
             "next": [
               "17406612041766353"
             ]
@@ -5735,7 +5735,7 @@
             "id": "17184248768162029924",
             "type": "PlayOrStopBGMNode",
             "name": "开启声音",
-            "resource": "0032_combat_shijingzhe",
+            "resource": "bgm_cbt01_0032_combat_shijingzhe",
             "next": [
               "17241238357881232873"
             ]
@@ -6210,7 +6210,7 @@
             "id": "1717642566949173641",
             "type": "PlayOrStopBGMNode",
             "name": "开启幽默音乐",
-            "resource": "0033_story_humour",
+            "resource": "bgm_cbt01_0033_story_humour",
             "srId": 101304,
             "pos": [
               16189,
@@ -8393,7 +8393,7 @@
             "id": "17289734866038503",
             "type": "PlayOrStopBGMNode",
             "name": "开始播放训练bgm",
-            "resource": "combat01_state1_r01",
+            "resource": "bgm_cbt01_level_stage1_combat01_state1_r01",
             "srId": 101103,
             "pos": [
               -28000,
@@ -8485,7 +8485,7 @@
             "id": "17582680876436601",
             "type": "PlayOrStopBGMNode",
             "name": "开始播放训练bgm",
-            "resource": "combat01_state1_r01",
+            "resource": "bgm_cbt01_level_stage1_combat01_state1_r01",
             "srId": 101103,
             "pos": [
               -32982,
@@ -8801,7 +8801,7 @@
             "id": "17305368913881073",
             "type": "PlayOrStopBGMNode",
             "name": "开始播放训练bgm",
-            "resource": "combat01_state1_r01"
+            "resource": "bgm_cbt01_level_stage1_combat01_state1_r01"
           },
           {
             "id": "17421242991512880432",
@@ -9363,7 +9363,7 @@
             "id": "17491238392664102804",
             "type": "PlayOrStopBGMNode",
             "name": "停止播放站桩bgm",
-            "resource": "0050_story_saiqi_grow_flower"
+            "resource": "bgm_cbt02_0050_story_saiqi_grow_flower"
           },
           {
             "id": "174228308433410206522",
@@ -9525,7 +9525,7 @@
             "id": "17441070471244931503",
             "type": "PlayOrStopBGMNode",
             "name": "放Bgm",
-            "resource": "0039_story_saiqi_see_flower",
+            "resource": "bgm_cbt02_0039_story_saiqi_see_flower",
             "srId": 101103,
             "pos": [
               -29128,
@@ -11776,7 +11776,7 @@
             "id": "1729666715845568782",
             "type": "PlayOrStopBGMNode",
             "name": "开始播放站桩bgm",
-            "resource": "0051_story_danger"
+            "resource": "bgm_cbt02_0051_story_danger"
           },
           {
             "id": "1725459527481552476",
@@ -11867,7 +11867,7 @@
             "id": "17296685922142047194",
             "type": "PlayOrStopBGMNode",
             "name": "开始播放站桩bgm",
-            "resource": "0051_story_danger"
+            "resource": "bgm_cbt02_0051_story_danger"
           },
           {
             "id": "171161181907811033",
@@ -11908,7 +11908,7 @@
             "id": "17296677862101491667",
             "type": "PlayOrStopBGMNode",
             "name": "开始播放站桩bgm",
-            "resource": "0051_story_danger"
+            "resource": "bgm_cbt02_0051_story_danger"
           },
           {
             "id": "1711011247473162271",
@@ -12535,7 +12535,7 @@
             "id": "17815073625007744",
             "type": "PlayOrStopBGMNode",
             "name": "播放站桩Bgm",
-            "resource": "0042_story_find_saiqi",
+            "resource": "bgm_cbt02_0042_story_find_saiqi",
             "srId": 101103,
             "pos": [
               -30270,
@@ -12616,7 +12616,7 @@
             "id": "1715756785354969639",
             "type": "PlayOrStopBGMNode",
             "name": "播放声音",
-            "resource": "0032_combat_shijingzhe",
+            "resource": "bgm_cbt01_0032_combat_shijingzhe",
             "srId": 101103,
             "pos": [
               -8918,
@@ -12694,7 +12694,7 @@
             "id": "17442139067709240929",
             "type": "PlayOrStopBGMNode",
             "name": "播放声音",
-            "resource": "0047_combat_saiqi_p1"
+            "resource": "bgm_cbt02_0047_combat_saiqi_p1"
           },
           {
             "id": "17442139067719240933",
@@ -12762,7 +12762,7 @@
             "id": "17442139067719240962",
             "type": "PlayOrStopBGMNode",
             "name": "播bgm",
-            "resource": "0042_story_find_saiqi"
+            "resource": "bgm_cbt02_0042_story_find_saiqi"
           }
         ],
         "startIds": [
@@ -12785,7 +12785,7 @@
             "id": "17442870280663025531",
             "type": "PlayOrStopBGMNode",
             "name": "开始播放站桩bgm",
-            "resource": "0042_story_find_saiqi",
+            "resource": "bgm_cbt02_0042_story_find_saiqi",
             "srId": 101103,
             "pos": [
               -8918,
@@ -12804,7 +12804,7 @@
             "id": "17296873159381488469",
             "type": "PlayOrStopBGMNode",
             "name": "播风暴音效",
-            "resource": "storm"
+            "resource": "sfx_common_story_01_storm"
           },
           {
             "id": "174524051291634693153",
@@ -12830,7 +12830,7 @@
             "id": "17321974593475231515",
             "type": "PlayOrStopBGMNode",
             "name": "播bgm",
-            "resource": "0042_story_find_saiqi"
+            "resource": "bgm_cbt02_0042_story_find_saiqi"
           }
         ],
         "startIds": [
@@ -12903,7 +12903,7 @@
             "id": "17253485743162756940",
             "type": "PlayOrStopBGMNode",
             "name": "播放幻境bgm",
-            "resource": "0049_combat_saiqi_memory"
+            "resource": "bgm_cbt02_0049_combat_saiqi_memory"
           },
           {
             "id": "17182738991682003306",
@@ -12949,7 +12949,7 @@
             "id": "174800614085416893",
             "type": "PlayOrStopBGMNode",
             "name": "播放 积木效果音",
-            "resource": "woodblockfall"
+            "resource": "sfx_common_story_01_woodblockfall"
           },
           {
             "id": "17452243953059266116",
@@ -13373,7 +13373,7 @@
             "id": "17266278147504676",
             "type": "PlayOrStopBGMNode",
             "name": "播放 传送门效果音",
-            "resource": "portal1"
+            "resource": "sfx_common_story_01_portal1"
           },
           {
             "id": "174522755786114725048",
@@ -13474,13 +13474,13 @@
             "id": "17253486084042757490",
             "type": "PlayOrStopBGMNode",
             "name": "播放幻境bgm",
-            "resource": "0049_combat_saiqi_memory"
+            "resource": "bgm_cbt02_0049_combat_saiqi_memory"
           },
           {
             "id": "1748006422260594157",
             "type": "PlayOrStopBGMNode",
             "name": "播放 传送门效果音",
-            "resource": "portal1"
+            "resource": "sfx_common_story_01_portal1"
           }
         ],
         "startIds": [
@@ -13595,7 +13595,7 @@
             "id": "17253488456182758722",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0048_combat_saiqi_p2"
+            "resource": "bgm_cbt02_0048_combat_saiqi_p2"
           },
           {
             "id": "17184319496412590176",
@@ -13663,7 +13663,7 @@
             "id": "1725360950241785",
             "type": "PlayOrStopBGMNode",
             "name": "播放bgm",
-            "resource": "0054_combat_saiqi_p3"
+            "resource": "bgm_cbt02_0054_combat_saiqi_p3"
           },
           {
             "id": "17184325923652866005",
@@ -13703,7 +13703,7 @@
             "id": "17268145457014179",
             "type": "PlayOrStopBGMNode",
             "name": "播放bgm",
-            "resource": "0056_story_saiqi_fly_to_sun"
+            "resource": "bgm_cbt02_0056_story_saiqi_fly_to_sun"
           },
           {
             "id": "17214660590632549",
@@ -15842,7 +15842,7 @@
             "id": "1756978090241967878",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0072_story_reasoning",
+            "resource": "bgm_cbt03_0072_story_reasoning",
             "next": [
               "1756978090241967878"
             ]
@@ -16158,7 +16158,7 @@
             "id": "17485135772303487435",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0072_story_reasoning"
+            "resource": "bgm_cbt03_0072_story_reasoning"
           }
         ],
         "startIds": [
@@ -16175,7 +16175,7 @@
             "id": "17569849459422877933",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0072_story_reasoning",
+            "resource": "bgm_cbt03_0072_story_reasoning",
             "next": [
               "17569849459422877933"
             ]
@@ -16576,7 +16576,7 @@
             "id": "17485137736544361469",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0072_story_reasoning"
+            "resource": "bgm_cbt03_0072_story_reasoning"
           }
         ]
       },
@@ -17014,7 +17014,7 @@
             "id": "17485141117565241874",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0072_story_reasoning",
+            "resource": "bgm_cbt03_0072_story_reasoning",
             "next": [
               "173278031895721846"
             ]
@@ -17426,7 +17426,7 @@
             "id": "17485141466885243290",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0072_story_reasoning",
+            "resource": "bgm_cbt03_0072_story_reasoning",
             "next": [
               "173278046099127774"
             ]
@@ -17971,7 +17971,7 @@
             "id": "17569849790292879155",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0072_story_reasoning",
+            "resource": "bgm_cbt03_0072_story_reasoning",
             "next": [
               "17569849790292879155"
             ],
@@ -18185,7 +18185,7 @@
             "id": "17569849524302878190",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0072_story_reasoning",
+            "resource": "bgm_cbt03_0072_story_reasoning",
             "next": [
               "17569849524302878190"
             ],
@@ -18517,7 +18517,7 @@
             "id": "17485143570986987157",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "combat01_state2_r01"
+            "resource": "bgm_cbt01_level_stage1_combat01_state2_r01"
           },
           {
             "id": "1735872857075698526",
@@ -18742,7 +18742,7 @@
             "id": "17485144742537568794",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "combat01_state2_r01"
+            "resource": "bgm_cbt01_level_stage1_combat01_state2_r01"
           },
           {
             "id": "1739519063115783217",
@@ -19186,7 +19186,7 @@
             "id": "17485210385975016",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0074_story_encounter_with_blues",
+            "resource": "bgm_cbt03_0074_story_encounter_with_blues",
             "next": [
               "17308902087824166012",
               "17485146243129308614"
@@ -19226,7 +19226,7 @@
             "id": "17485146243129308614",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0060_boss_ex01_lizhanzhe_loop"
+            "resource": "bgm_cbt02_0060_boss_ex01_lizhanzhe_loop"
           },
           {
             "id": "17308903579024168935",
@@ -19463,7 +19463,7 @@
             "id": "174851558636215115484",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0071_lise_secret",
+            "resource": "bgm_cbt03_0071_lise_secret",
             "next": [
               "1730701647488815970"
             ]
@@ -20167,7 +20167,7 @@
             "id": "17503156862002873807",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0071_lise_secret",
+            "resource": "bgm_cbt03_0071_lise_secret",
             "next": [
               "17503156861962873791"
             ],
@@ -21330,7 +21330,7 @@
             "id": "174851693411720345331",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0072_story_reasoning",
+            "resource": "bgm_cbt03_0072_story_reasoning",
             "next": [
               "17320110260813252"
             ],
@@ -21465,7 +21465,7 @@
             "id": "17482426816602665",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "clue_cd1",
+            "resource": "sfx_common_story_02_clue_cd1",
             "next": [
               "17367606070361918123"
             ]
@@ -21490,7 +21490,7 @@
             "id": "17482427161512948",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "clue_cd2",
+            "resource": "sfx_common_story_02_clue_cd2",
             "next": [
               "17406417410512353775"
             ]
@@ -21515,7 +21515,7 @@
             "id": "17482427196483163",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "clue_cd3",
+            "resource": "sfx_common_story_02_clue_cd3",
             "next": [
               "17406417461232353972"
             ]
@@ -21782,7 +21782,7 @@
             "id": "174851716764521218491",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0071_lise_secret",
+            "resource": "bgm_cbt03_0071_lise_secret",
             "next": [
               "17410579739793624"
             ]
@@ -21980,7 +21980,7 @@
             "id": "1758013775481962685",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0061_scene_ex01_escape"
+            "resource": "bgm_cbt02_0061_scene_ex01_escape"
           }
         ],
         "startIds": [
@@ -23186,13 +23186,13 @@
             "id": "17570423189393040",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0074_story_encounter_with_blues"
+            "resource": "bgm_cbt03_0074_story_encounter_with_blues"
           },
           {
             "id": "17496318501493969",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0060_boss_ex01_lizhanzhe_loop"
+            "resource": "bgm_cbt02_0060_boss_ex01_lizhanzhe_loop"
           },
           {
             "id": "17483503991223351",
@@ -23413,7 +23413,7 @@
             "id": "174851589174118308519",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "combat01_state2_r01"
+            "resource": "bgm_cbt01_level_stage1_combat01_state2_r01"
           },
           {
             "id": "1740033517474519887",
@@ -23477,7 +23477,7 @@
             "id": "17485746346556744",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0081_scene_alchemyacademy",
+            "resource": "bgm_cbt03_0081_scene_alchemyacademy",
             "next": [
               "1733734212424597775"
             ]
@@ -24436,7 +24436,7 @@
             "id": "17485753485211757557",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0079_story_escape_from_lab_cs",
+            "resource": "bgm_cbt03_0079_story_escape_from_lab_cs",
             "next": [
               "17485231754334936731"
             ]
@@ -24445,7 +24445,7 @@
             "id": "17485231754334936731",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0075_story_escape_from_lab"
+            "resource": "bgm_cbt03_0075_story_escape_from_lab"
           }
         ]
       },
@@ -24662,7 +24662,7 @@
             "id": "17503164627055761930",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0071_lise_secret",
+            "resource": "bgm_cbt03_0071_lise_secret",
             "next": [
               "17503164627045761924"
             ],
@@ -25077,7 +25077,7 @@
             "id": "17496457592087833",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0061_scene_ex01_escape"
+            "resource": "bgm_cbt02_0061_scene_ex01_escape"
           },
           {
             "id": "173459408267631729",
@@ -25271,7 +25271,7 @@
             "id": "17580230240234936",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0086_cs_thea_fight"
+            "resource": "bgm_1_0_0086_cs_thea_fight"
           }
         ]
       },
@@ -25284,7 +25284,7 @@
             "id": "17503190879501855467",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0061_scene_ex01_escape"
+            "resource": "bgm_cbt02_0061_scene_ex01_escape"
           },
           {
             "id": "17503190879501855435",
@@ -29314,7 +29314,7 @@
             "id": "1779520323568669",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0163_combat_jazz_01",
+            "resource": "bgm_1_4_0163_combat_jazz_01",
             "srId": 106301,
             "pos": [
               -15620,
@@ -29433,7 +29433,7 @@
             "id": "1779718823633504",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0162_story_jazz_sneak_into",
+            "resource": "bgm_1_4_0162_story_jazz_sneak_into",
             "srId": 106001,
             "pos": [
               -16870,
@@ -29863,7 +29863,7 @@
             "id": "17797124105732838",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0162_story_jazz_sneak_into",
+            "resource": "bgm_1_4_0162_story_jazz_sneak_into",
             "srId": 106001,
             "pos": [
               -16870,
@@ -30695,7 +30695,7 @@
             "id": "17830648152597543",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0166_story_danger"
+            "resource": "bgm_1_4_0166_story_danger"
           },
           {
             "id": "177892286027192226921",
@@ -30830,7 +30830,7 @@
             "id": "17797130795419200613",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0163_combat_jazz_01"
+            "resource": "bgm_1_4_0163_combat_jazz_01"
           }
         ]
       },
@@ -30843,7 +30843,7 @@
             "id": "177978411478316956143",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0165_story_xier_theme",
+            "resource": "bgm_1_4_0165_story_xier_theme",
             "srId": 106001,
             "pos": [
               -17343,
@@ -30892,7 +30892,7 @@
             "id": "17797131316471940065",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0164_cs_xier_show",
+            "resource": "bgm_1_4_0164_cs_xier_show",
             "next": [
               "177763795417816773252"
             ],
@@ -30919,7 +30919,7 @@
             "id": "17800554634351458143",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0165_story_xier_theme",
+            "resource": "bgm_1_4_0165_story_xier_theme",
             "srId": 106001,
             "pos": [
               -16550,
@@ -32311,7 +32311,7 @@
             "id": "1779520549383969223",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0162_story_jazz_sneak_into"
+            "resource": "bgm_1_4_0162_story_jazz_sneak_into"
           },
           {
             "id": "177847399602678",
@@ -32414,7 +32414,7 @@
             "id": "177969493425927101363",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0164_cs_xier_show",
+            "resource": "bgm_1_4_0164_cs_xier_show",
             "srId": 106001,
             "pos": [
               -39010,
@@ -32565,7 +32565,7 @@
             "id": "17797127232322907865",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0165_story_xier_theme",
+            "resource": "bgm_1_4_0165_story_xier_theme",
             "srId": 106001,
             "pos": [
               -39010,
@@ -34514,7 +34514,7 @@
             "id": "17795206183041936545",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0168_boss_haluoji",
+            "resource": "bgm_1_4_0168_boss_haluoji",
             "srId": 106001,
             "pos": [
               -87180,
@@ -34986,7 +34986,7 @@
             "id": "177969555969913542774",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0167_story_fuluo_theme",
+            "resource": "bgm_1_4_0167_story_fuluo_theme",
             "srId": 106001,
             "pos": [
               -20650,
@@ -36389,7 +36389,7 @@
             "id": "17795207159622903847",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0167_story_fuluo_theme"
+            "resource": "bgm_1_4_0167_story_fuluo_theme"
           },
           {
             "id": "17787400372049740479",
@@ -36674,7 +36674,7 @@
             "id": "177969628728015478056",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0165_story_xier_theme"
+            "resource": "bgm_1_4_0165_story_xier_theme"
           }
         ]
       },
@@ -36912,7 +36912,7 @@
             "id": "177969673256533392057",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0161_scene_train_station",
+            "resource": "bgm_1_4_0161_scene_train_station",
             "srId": 106101,
             "pos": [
               255430,
@@ -37814,7 +37814,7 @@
             "id": "1779696794706404",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0162_story_jazz_sneak_into"
+            "resource": "bgm_1_4_0162_story_jazz_sneak_into"
           }
         ]
       },
@@ -38566,7 +38566,7 @@
             "id": "1779697034679969208",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0170_story_fuluo_play_piano"
+            "resource": "bgm_1_4_0170_story_fuluo_play_piano"
           }
         ]
       },
@@ -38641,7 +38641,7 @@
             "id": "17796972200011936342",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0166_story_danger"
+            "resource": "bgm_1_4_0166_story_danger"
           }
         ]
       },
@@ -39230,7 +39230,7 @@
             "id": "17795207468333872443",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0167_story_fuluo_theme",
+            "resource": "bgm_1_4_0167_story_fuluo_theme",
             "srId": 106101,
             "pos": [
               255430,
@@ -39252,7 +39252,7 @@
             "id": "177980054136812121858",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0169_cs_tiaoche",
+            "resource": "bgm_1_4_0169_cs_tiaoche",
             "srId": 106101,
             "pos": [
               255430,
@@ -39404,7 +39404,7 @@
             "id": "17834256782697945545",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0008_combat_zhuizhuzhan",
+            "resource": "bgm_cbt01_0008_combat_zhuizhuzhan",
             "srId": 106101,
             "pos": [
               255430,
@@ -40091,7 +40091,7 @@
             "id": "17797874344247271808",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0008_combat_zhuizhuzhan",
+            "resource": "bgm_cbt01_0008_combat_zhuizhuzhan",
             "srId": 106101,
             "pos": [
               256340,
@@ -40109,7 +40109,7 @@
             "id": "17798724048563879013",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0008_combat_zhuizhuzhan",
+            "resource": "bgm_cbt01_0008_combat_zhuizhuzhan",
             "next": [
               "177772041576114019395"
             ]
@@ -40520,7 +40520,7 @@
             "id": "1779520994099968656",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0168_boss_haluoji"
+            "resource": "bgm_1_4_0168_boss_haluoji"
           },
           {
             "id": "177772041577114019461",
@@ -40614,7 +40614,7 @@
             "id": "177969828211040647726",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0080_story_the_abandoned_theme",
+            "resource": "bgm_cbt03_0080_story_the_abandoned_theme",
             "next": [
               "177772041577114019460"
             ]
@@ -40697,7 +40697,7 @@
             "id": "1779787486825797",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0080_story_the_abandoned_theme"
+            "resource": "bgm_cbt03_0080_story_the_abandoned_theme"
           },
           {
             "id": "177772045534914953121",
@@ -40755,7 +40755,7 @@
             "id": "177969834552341616074",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0171_combat_lieche_intro",
+            "resource": "bgm_1_4_0171_combat_lieche_intro",
             "next": [
               "17795210722591935845"
             ]
@@ -40764,7 +40764,7 @@
             "id": "17795210722591935845",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0171_combat_lieche_loop"
+            "resource": "bgm_1_4_0171_combat_lieche_loop"
           }
         ]
       },
@@ -40822,13 +40822,13 @@
             "id": "177969863473044520369",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0080_story_the_abandoned_theme"
+            "resource": "bgm_cbt03_0080_story_the_abandoned_theme"
           },
           {
             "id": "17795211629842903298",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0171_combat_lieche_loop"
+            "resource": "bgm_1_4_0171_combat_lieche_loop"
           },
           {
             "id": "17788440692621930548",
@@ -41717,7 +41717,7 @@
             "id": "177969907659952263446",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0043_story_empire",
+            "resource": "bgm_cbt02_0043_story_empire",
             "srId": 106101,
             "pos": [
               256340,
@@ -41847,7 +41847,7 @@
             "id": "177969881698146457301",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0172_story_counter_attack",
+            "resource": "bgm_1_4_0172_story_counter_attack",
             "srId": 106101,
             "pos": [
               256340,
@@ -41960,7 +41960,7 @@
             "id": "17283896795166504",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0060_boss_ex01_lizhanzhe_loop"
+            "resource": "bgm_cbt02_0060_boss_ex01_lizhanzhe_loop"
           },
           {
             "id": "173010246588627112540",
@@ -42214,7 +42214,7 @@
             "id": "1728390134697194412",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0057_scene_ex01_prepare"
+            "resource": "bgm_cbt02_0057_scene_ex01_prepare"
           },
           {
             "id": "17537756449062114",
@@ -42496,7 +42496,7 @@
             "id": "1728390768716196045",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0058_scene_ex01_action"
+            "resource": "bgm_cbt02_0058_scene_ex01_action"
           },
           {
             "id": "1718864280999136821",
@@ -42620,7 +42620,7 @@
             "id": "1728391611239201164",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0057_scene_ex01_prepare",
+            "resource": "bgm_cbt02_0057_scene_ex01_prepare",
             "next": [
               "1728391598499200670"
             ],
@@ -43064,7 +43064,7 @@
             "id": "1728391958638568742",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0058_scene_ex01_action",
+            "resource": "bgm_cbt02_0058_scene_ex01_action",
             "srId": 102101,
             "pos": [
               20409,
@@ -43302,7 +43302,7 @@
             "id": "17314987663599959662",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0058_scene_ex01_action"
+            "resource": "bgm_cbt02_0058_scene_ex01_action"
           },
           {
             "id": "17314987663559959648",
@@ -43455,7 +43455,7 @@
             "id": "17601019900401742",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0061_scene_ex01_escape",
+            "resource": "bgm_cbt02_0061_scene_ex01_escape",
             "srId": 102101,
             "pos": [
               1011,
@@ -43664,7 +43664,7 @@
             "id": "17552626061712131505",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0061_scene_ex01_escape"
+            "resource": "bgm_cbt02_0061_scene_ex01_escape"
           }
         ],
         "startIds": [
@@ -44412,7 +44412,7 @@
             "id": "17346895450532728966",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0057_scene_ex01_prepare",
+            "resource": "bgm_cbt02_0057_scene_ex01_prepare",
             "srId": 102101,
             "pos": [
               -2516,
@@ -44586,7 +44586,7 @@
             "id": "17283928471781846317",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0058_scene_ex01_action",
+            "resource": "bgm_cbt02_0058_scene_ex01_action",
             "next": [
               "17364998973465905300"
             ],
@@ -44618,7 +44618,7 @@
             "id": "17346900009364774201",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0058_scene_ex01_action",
+            "resource": "bgm_cbt02_0058_scene_ex01_action",
             "srId": 102101,
             "pos": [
               -9791,
@@ -44801,7 +44801,7 @@
             "id": "17346901796314778328",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0058_scene_ex01_action",
+            "resource": "bgm_cbt02_0058_scene_ex01_action",
             "srId": 102102,
             "pos": [
               -5951,
@@ -44823,7 +44823,7 @@
             "id": "172844402509811394203",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0058_scene_ex01_action",
+            "resource": "bgm_cbt02_0058_scene_ex01_action",
             "srId": 102102,
             "pos": [
               -10970,
@@ -45283,7 +45283,7 @@
             "id": "172844407937311940011",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0058_scene_ex01_action",
+            "resource": "bgm_cbt02_0058_scene_ex01_action",
             "srId": 102102,
             "pos": [
               -17100,
@@ -45325,7 +45325,7 @@
             "id": "17283936245673679378",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0059_scene_ex01_encounter"
+            "resource": "bgm_cbt02_0059_scene_ex01_encounter"
           },
           {
             "id": "17203249441934033964",
@@ -45388,7 +45388,7 @@
             "id": "17284429951917373268",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0059_scene_ex01_encounter"
+            "resource": "bgm_cbt02_0059_scene_ex01_encounter"
           },
           {
             "id": "17212737371581673097",
@@ -45579,7 +45579,7 @@
             "id": "17283936453023683366",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0058_scene_ex01_action",
+            "resource": "bgm_cbt02_0058_scene_ex01_action",
             "srId": 102102,
             "pos": [
               4799,
@@ -45644,7 +45644,7 @@
             "id": "17283938260834414078",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0057_scene_ex01_prepare",
+            "resource": "bgm_cbt02_0057_scene_ex01_prepare",
             "srId": 102102,
             "pos": [
               1145,
@@ -46238,7 +46238,7 @@
             "id": "1735894963114941906",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0058_scene_ex01_action",
+            "resource": "bgm_cbt02_0058_scene_ex01_action",
             "srId": 102101,
             "pos": [
               -42,
@@ -46494,7 +46494,7 @@
             "id": "17358952675115599136",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0058_scene_ex01_action",
+            "resource": "bgm_cbt02_0058_scene_ex01_action",
             "srId": 102101,
             "pos": [
               -56,
@@ -46636,7 +46636,7 @@
             "id": "173633192837710583603",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0058_scene_ex01_action",
+            "resource": "bgm_cbt02_0058_scene_ex01_action",
             "srId": 102102,
             "pos": [
               -17755,
@@ -46918,7 +46918,7 @@
             "id": "172854286752423290978",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0057_scene_ex01_prepare",
+            "resource": "bgm_cbt02_0057_scene_ex01_prepare",
             "srId": 102102,
             "pos": [
               0,
@@ -46929,7 +46929,7 @@
             "id": "17283942605365339857",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0060_boss_ex01_lizhanzhe_loop",
+            "resource": "bgm_cbt02_0060_boss_ex01_lizhanzhe_loop",
             "next": [
               "17229280300911386820"
             ]
@@ -47435,7 +47435,7 @@
             "id": "17283943979645526499",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0043_story_empire",
+            "resource": "bgm_cbt02_0043_story_empire",
             "srId": 102102,
             "pos": [
               -10,
@@ -47518,7 +47518,7 @@
             "id": "17349231817402736518",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0058_scene_ex01_action",
+            "resource": "bgm_cbt02_0058_scene_ex01_action",
             "srId": 102102,
             "pos": [
               -10,
@@ -47932,7 +47932,7 @@
             "id": "17344912306295971",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0061_scene_ex01_escape"
+            "resource": "bgm_cbt02_0061_scene_ex01_escape"
           },
           {
             "id": "17253450193859109322",
@@ -47971,7 +47971,7 @@
             "id": "17283945330285897420",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0057_scene_ex01_prepare"
+            "resource": "bgm_cbt02_0057_scene_ex01_prepare"
           },
           {
             "id": "17424592240842094065",
@@ -48157,7 +48157,7 @@
             "id": "1733380183841608",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0061_scene_ex01_escape"
+            "resource": "bgm_cbt02_0061_scene_ex01_escape"
           }
         ],
         "startIds": [
@@ -48186,7 +48186,7 @@
             "id": "173165997827929022663",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0061_scene_ex01_escape"
+            "resource": "bgm_cbt02_0061_scene_ex01_escape"
           },
           {
             "id": "1752833494727974",
@@ -48780,7 +48780,7 @@
             "id": "17344913204799605",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0061_scene_ex01_escape",
+            "resource": "bgm_cbt02_0061_scene_ex01_escape",
             "srId": 102102,
             "pos": [
               -750,
@@ -48798,7 +48798,7 @@
             "id": "172844423166912492404",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0061_scene_ex01_escape",
+            "resource": "bgm_cbt02_0061_scene_ex01_escape",
             "srId": 102102,
             "pos": [
               10,
@@ -48992,7 +48992,7 @@
             "id": "172844424841812674421",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0061_scene_ex01_escape",
+            "resource": "bgm_cbt02_0061_scene_ex01_escape",
             "srId": 102102,
             "pos": [
               0,
@@ -49343,7 +49343,7 @@
             "id": "172844426683612856495",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0061_scene_ex01_escape",
+            "resource": "bgm_cbt02_0061_scene_ex01_escape",
             "srId": 102102,
             "pos": [
               10,
@@ -49361,7 +49361,7 @@
             "id": "172844428541713038520",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0061_scene_ex01_escape",
+            "resource": "bgm_cbt02_0061_scene_ex01_escape",
             "srId": 102102,
             "pos": [
               3950,
@@ -49630,7 +49630,7 @@
             "id": "17295869358111903759",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0057_scene_ex01_prepare"
+            "resource": "bgm_cbt02_0057_scene_ex01_prepare"
           },
           {
             "id": "174228506548822424423",
@@ -49675,7 +49675,7 @@
             "id": "17476541889811582",
             "type": "PlayOrStopBGMNode",
             "name": "播放 传送门效果音",
-            "resource": "portal1"
+            "resource": "sfx_common_story_01_portal1"
           },
           {
             "id": "17446922066821622956",
@@ -49852,7 +49852,7 @@
             "id": "17295874506191906119",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0055_combat_boss_haier"
+            "resource": "bgm_cbt02_0055_combat_boss_haier"
           },
           {
             "id": "17271690062773511993",
@@ -50414,7 +50414,7 @@
             "id": "17483342890804211",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0067_story_daphnis_theme_piano"
+            "resource": "bgm_cbt02_0067_story_daphnis_theme_piano"
           },
           {
             "id": "17470542648655710487",
@@ -50729,7 +50729,7 @@
             "id": "17483344492462595699",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0073_story_virgil_theme"
+            "resource": "bgm_cbt03_0073_story_virgil_theme"
           }
         ]
       },
@@ -50878,7 +50878,7 @@
             "id": "17476542294431151309",
             "type": "PlayOrStopBGMNode",
             "name": "播放 传送门效果音",
-            "resource": "portal1"
+            "resource": "sfx_common_story_01_portal1"
           },
           {
             "id": "174229348655233380293",
@@ -51708,7 +51708,7 @@
             "id": "17879138468782237814",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0033_story_humour"
+            "resource": "bgm_cbt01_0033_story_humour"
           },
           {
             "id": "1780315440331371",
@@ -52081,7 +52081,7 @@
             "id": "17879144202635591143",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0183_scene_park"
+            "resource": "bgm_1_6_0183_scene_park"
           },
           {
             "id": "1780920816035374",
@@ -52857,7 +52857,7 @@
             "id": "17882754818631137018",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0184_story_curse_echoes"
+            "resource": "bgm_1_6_0184_story_curse_echoes"
           },
           {
             "id": "17815218418292099598",
@@ -52963,7 +52963,7 @@
             "id": "178791623328912301854",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0184_story_curse_echoes"
+            "resource": "bgm_1_6_0184_story_curse_echoes"
           },
           {
             "id": "17815778711223149814",
@@ -53272,7 +53272,7 @@
             "id": "17884366014902252429",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0177_story_investigate"
+            "resource": "bgm_1_6_0177_story_investigate"
           },
           {
             "id": "1781531329392563",
@@ -53612,7 +53612,7 @@
             "id": "178791638100313419147",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0061_scene_ex01_escape"
+            "resource": "bgm_cbt02_0061_scene_ex01_escape"
           },
           {
             "id": "178299821273412997318",
@@ -54005,7 +54005,7 @@
             "id": "178791732498220129344",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0176_story_horror"
+            "resource": "bgm_1_6_0176_story_horror"
           },
           {
             "id": "1781686084680531",
@@ -55735,7 +55735,7 @@
             "id": "17884422879004486477",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0177_story_investigate"
+            "resource": "bgm_1_6_0177_story_investigate"
           },
           {
             "id": "1786872443222987",
@@ -55960,7 +55960,7 @@
             "id": "17881611859534473325",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0182_jingle_scared"
+            "resource": "bgm_1_6_0182_jingle_scared"
           },
           {
             "id": "17829042439722162841",
@@ -59573,7 +59573,7 @@
             "id": "178805923415329077655",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0177_story_investigate",
+            "resource": "bgm_1_6_0177_story_investigate",
             "next": [
               "1783433088942130",
               "1783433088942134"
@@ -59772,7 +59772,7 @@
             "id": "178805923415329077655",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0177_story_investigate",
+            "resource": "bgm_1_6_0177_story_investigate",
             "next": [
               "1783433088942130",
               "1783433088942134"
@@ -59988,7 +59988,7 @@
             "id": "178805945679632429592",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0177_story_investigate"
+            "resource": "bgm_1_6_0177_story_investigate"
           },
           {
             "id": "17822716431658133",
@@ -60028,7 +60028,7 @@
             "id": "178805982701435786622",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0061_scene_ex01_escape"
+            "resource": "bgm_cbt02_0061_scene_ex01_escape"
           },
           {
             "id": "17872811041401471",
@@ -60650,7 +60650,7 @@
             "id": "17881637006036717005",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0176_story_horror"
+            "resource": "bgm_1_6_0176_story_horror"
           },
           {
             "id": "17811943098016146066",
@@ -61539,7 +61539,7 @@
             "id": "17884419268883366169",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0184_story_curse_echoes"
+            "resource": "bgm_1_6_0184_story_curse_echoes"
           },
           {
             "id": "178127103721032264098",
@@ -61772,7 +61772,7 @@
             "id": "178816522223011190354",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0177_story_investigate"
+            "resource": "bgm_1_6_0177_story_investigate"
           }
         ]
       },
@@ -62195,7 +62195,7 @@
             "id": "17884438480115610761",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0176_story_horror"
+            "resource": "bgm_1_6_0176_story_horror"
           },
           {
             "id": "17814407914931063417",
@@ -62636,7 +62636,7 @@
             "id": "178816670599623496873",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0184_story_curse_echoes"
+            "resource": "bgm_1_6_0184_story_curse_echoes"
           },
           {
             "id": "17821180686671072380",
@@ -63044,7 +63044,7 @@
             "id": "178817214795045880206",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0189_cs_eve_defend_on_bridge"
+            "resource": "bgm_1_6_0189_cs_eve_defend_on_bridge"
           }
         ]
       },
@@ -63057,7 +63057,7 @@
             "id": "178816685404624616503",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0184_story_curse_echoes"
+            "resource": "bgm_1_6_0184_story_curse_echoes"
           },
           {
             "id": "17849871835811277",
@@ -63108,7 +63108,7 @@
             "id": "17884494733591623",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0176_story_horror",
+            "resource": "bgm_1_6_0176_story_horror",
             "srId": 107001,
             "pos": [
               -17434,
@@ -63119,7 +63119,7 @@
             "id": "17884450101388974479",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0176_story_horror"
+            "resource": "bgm_1_6_0176_story_horror"
           },
           {
             "id": "17823026824922155381",
@@ -64056,7 +64056,7 @@
             "id": "178817238201650360433",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0191_boss_aida_stage_1"
+            "resource": "bgm_1_6_0191_boss_aida_stage_1"
           },
           {
             "id": "17857738455844453424",
@@ -64093,7 +64093,7 @@
             "id": "178817241514951478719",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0192_boss_aida_stage_2"
+            "resource": "bgm_1_6_0192_boss_aida_stage_2"
           },
           {
             "id": "17857741454785568441",
@@ -64191,7 +64191,7 @@
             "id": "178817222085747000699",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0190_story_aida_dream_land",
+            "resource": "bgm_1_6_0190_story_aida_dream_land",
             "next": [
               "17861020334603351118",
               "17862055158821671"
@@ -64329,7 +64329,7 @@
             "id": "17884364063825102",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0059_scene_ex01_encounter"
+            "resource": "bgm_cbt02_0059_scene_ex01_encounter"
           },
           {
             "id": "17863769875776700126",
@@ -64798,7 +64798,7 @@
             "id": "178816922932830216504",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0187_boss_fuerweisi"
+            "resource": "bgm_1_6_0187_boss_fuerweisi"
           }
         ]
       },
@@ -65480,7 +65480,7 @@
             "id": "178817036069341401355",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0073_story_virgil_theme"
+            "resource": "bgm_cbt03_0073_story_virgil_theme"
           },
           {
             "id": "17853967676851339",
@@ -67771,7 +67771,7 @@
             "id": "17489373296329494",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0051_story_danger",
+            "resource": "bgm_cbt02_0051_story_danger",
             "srId": 101901,
             "pos": [
               20502,
@@ -68403,7 +68403,7 @@
             "id": "17625896173367921",
             "type": "PlayOrStopBGMNode",
             "name": "播放暂停音乐",
-            "resource": "0016_judian",
+            "resource": "bgm_cbt01_0016_judian",
             "next": [
               "17297514826724188018"
             ]
@@ -68657,7 +68657,7 @@
             "id": "17626006756111988301",
             "type": "PlayOrStopBGMNode",
             "name": "播放音乐",
-            "resource": "0035_atomos_thrill",
+            "resource": "bgm_cbt01_0035_atomos_thrill",
             "next": [
               "173686186326616400265"
             ],
@@ -68759,7 +68759,7 @@
             "id": "17626024816852979685",
             "type": "PlayOrStopBGMNode",
             "name": "播放音乐",
-            "resource": "0043_story_empire",
+            "resource": "bgm_cbt02_0043_story_empire",
             "next": [
               "17360696807954131645"
             ],
@@ -68934,7 +68934,7 @@
             "id": "17626026015272981524",
             "type": "PlayOrStopBGMNode",
             "name": "播放潜行音乐",
-            "resource": "combat01_state1_r01",
+            "resource": "bgm_cbt01_level_stage1_combat01_state1_r01",
             "srId": 101101,
             "pos": [
               -5299,
@@ -69095,7 +69095,7 @@
             "id": "17626034802882983132",
             "type": "PlayOrStopBGMNode",
             "name": "播放音乐",
-            "resource": "0043_story_empire",
+            "resource": "bgm_cbt02_0043_story_empire",
             "next": [
               "17519720925528386"
             ],
@@ -69404,7 +69404,7 @@
             "id": "17640010261263104",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0096_cs_dongguo_opening",
+            "resource": "bgm_1_1_0096_cs_dongguo_opening",
             "next": [
               "17569774987172977"
             ]
@@ -70143,7 +70143,7 @@
             "id": "17648540448499562275",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0132_cs_baibianchegnjiejiefei",
+            "resource": "bgm_1_1_0132_cs_baibianchegnjiejiefei",
             "next": [
               "17367673639968835808"
             ],
@@ -70856,13 +70856,13 @@
             "id": "17640019010627035",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0102_story_dafengjiuzhang"
+            "resource": "bgm_1_1_0102_story_dafengjiuzhang"
           },
           {
             "id": "17640019568117385",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0103_cs_dafengjiuzhang_expand"
+            "resource": "bgm_1_1_0103_cs_dafengjiuzhang_expand"
           }
         ]
       },
@@ -70907,7 +70907,7 @@
             "id": "1764002133915695333",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0101_story_zhuyinzhizai_low"
+            "resource": "bgm_1_1_0101_story_zhuyinzhizai_low"
           },
           {
             "id": "1736851364283721227",
@@ -72152,7 +72152,7 @@
             "id": "17654451375861481",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0107_story_zhuyinzhizai_full"
+            "resource": "bgm_1_1_0107_story_zhuyinzhizai_full"
           }
         ],
         "startIds": [
@@ -72487,7 +72487,7 @@
             "id": "17651813091839080",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0107_story_zhuyinzhizai_full",
+            "resource": "bgm_1_1_0107_story_zhuyinzhizai_full",
             "srId": 104103,
             "pos": [
               -5403,
@@ -73216,7 +73216,7 @@
             "id": "17648545616524788594",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0131_story_bangfeibangjia",
+            "resource": "bgm_1_1_0131_story_bangfeibangjia",
             "next": [
               "17627890394154362797"
             ],
@@ -73504,7 +73504,7 @@
             "id": "1764035741860687954",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0131_story_bangfeibangjia"
+            "resource": "bgm_1_1_0131_story_bangfeibangjia"
           }
         ],
         "startIds": [
@@ -74367,7 +74367,7 @@
             "id": "17649251390831283627",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点音效",
-            "resource": "pad_noise_rain_plain_heavy",
+            "resource": "ambience_common_pad_noise_rain_plain_heavy",
             "srId": 104105,
             "pos": [
               -18890,
@@ -74464,7 +74464,7 @@
             "id": "17640368479004130963",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0107_story_zhuyinzhizai_full",
+            "resource": "bgm_1_1_0107_story_zhuyinzhizai_full",
             "next": [
               "17627890394154362901"
             ],
@@ -74554,7 +74554,7 @@
             "id": "17640366323033441364",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0102_story_dafengjiuzhang"
+            "resource": "bgm_1_1_0102_story_dafengjiuzhang"
           },
           {
             "id": "176338106841420159943",
@@ -74669,7 +74669,7 @@
             "id": "1764933025563984",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点音效",
-            "resource": "pad_noise_rain_plain_heavy",
+            "resource": "ambience_common_pad_noise_rain_plain_heavy",
             "next": [
               "1763198015066673585",
               "1763198043794674175",
@@ -75181,7 +75181,7 @@
             "id": "1765976903507642269",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点音效",
-            "resource": "pad_noise_rain_plain_heavy"
+            "resource": "ambience_common_pad_noise_rain_plain_heavy"
           },
           {
             "id": "17632945730403355818",
@@ -75756,7 +75756,7 @@
             "id": "17640378444115161739",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0112_cs_white_loong_kill_black_wolf",
+            "resource": "bgm_1_1_0112_cs_white_loong_kill_black_wolf",
             "srId": 104110,
             "pos": [
               29641,
@@ -75767,7 +75767,7 @@
             "id": "17659769233961282451",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点音效",
-            "resource": "pad_noise_rain_plain_heavy"
+            "resource": "ambience_common_pad_noise_rain_plain_heavy"
           }
         ],
         "startIds": [
@@ -77113,7 +77113,7 @@
             "id": "17640380368527223477",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0110_story_fushu_theme",
+            "resource": "bgm_1_1_0110_story_fushu_theme",
             "next": [
               "17302568818361168471"
             ],
@@ -78790,7 +78790,7 @@
             "id": "17640381320348255324",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0116_cs_fushuhuanjing"
+            "resource": "bgm_1_1_0116_cs_fushuhuanjing"
           }
         ]
       },
@@ -79455,7 +79455,7 @@
             "id": "17640391235938943900",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0118_cs_bad_guy_trigger_gear",
+            "resource": "bgm_1_1_0118_cs_bad_guy_trigger_gear",
             "srId": 104102,
             "pos": [
               -52592,
@@ -79592,7 +79592,7 @@
             "id": "176485570582710842403",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0128_cs_qiusir_attack_player",
+            "resource": "bgm_1_1_0128_cs_qiusir_attack_player",
             "srId": 104102,
             "pos": [
               -59359,
@@ -79630,7 +79630,7 @@
             "id": "176485663052812753084",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0129_boss_yuming"
+            "resource": "bgm_1_1_0129_boss_yuming"
           }
         ],
         "startIds": [
@@ -80015,7 +80015,7 @@
             "id": "17640392180849975096",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0098_scene_ancient_battlefield_intro"
+            "resource": "bgm_1_1_0098_scene_ancient_battlefield_intro"
           },
           {
             "id": "17630384760342357018",
@@ -80482,7 +80482,7 @@
             "id": "17648555587659567244",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0123_boss_juque"
+            "resource": "bgm_1_1_0123_boss_juque"
           }
         ]
       }
@@ -80500,7 +80500,7 @@
             "id": "17649384290081280098",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点音效",
-            "resource": "pad_noise_rain_plain_heavy",
+            "resource": "ambience_common_pad_noise_rain_plain_heavy",
             "next": [
               "17660601326541603644"
             ],
@@ -80539,7 +80539,7 @@
             "id": "17660601326541603644",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0101_story_zhuyinzhizai_low",
+            "resource": "bgm_1_1_0101_story_zhuyinzhizai_low",
             "next": [
               "17308127132391624296"
             ],
@@ -80654,7 +80654,7 @@
             "id": "17649387978011282818",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点音效",
-            "resource": "pad_noise_rain_plain_heavy",
+            "resource": "ambience_common_pad_noise_rain_plain_heavy",
             "srId": 104105,
             "pos": [
               -18596,
@@ -80677,7 +80677,7 @@
             "id": "17650088884693198453",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0126_cs_reach_heilongjitan",
+            "resource": "bgm_1_1_0126_cs_reach_heilongjitan",
             "srId": 105701,
             "pos": [
               22901,
@@ -80869,7 +80869,7 @@
             "id": "17650089714863199556",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0130_cs_heilongjitan_parkour",
+            "resource": "bgm_1_1_0130_cs_heilongjitan_parkour",
             "next": [
               "17650090048573199985"
             ],
@@ -80883,7 +80883,7 @@
             "id": "17650090048573199985",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0102_story_dafengjiuzhang",
+            "resource": "bgm_1_1_0102_story_dafengjiuzhang",
             "next": [
               "17616406875047976769"
             ],
@@ -81050,7 +81050,7 @@
             "id": "17650090489933200749",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0122_boss_heilong_intro",
+            "resource": "bgm_1_1_0122_boss_heilong_intro",
             "srId": 105701,
             "pos": [
               22901,
@@ -81061,7 +81061,7 @@
             "id": "176485712838513392067",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0121_boss_heilong"
+            "resource": "bgm_1_1_0121_boss_heilong"
           }
         ],
         "startIds": [
@@ -81078,7 +81078,7 @@
             "id": "176485781597114667965",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0125_story_zhiliu_betray",
+            "resource": "bgm_1_1_0125_story_zhiliu_betray",
             "next": [
               "1749035653238924174"
             ],
@@ -81162,7 +81162,7 @@
             "id": "176485785246814668438",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0127_cs_zhiliuqiujinwanjia",
+            "resource": "bgm_1_1_0127_cs_zhiliuqiujinwanjia",
             "next": [
               "176485788879914669276"
             ],
@@ -81176,7 +81176,7 @@
             "id": "176485788879914669276",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0125_story_zhiliu_betray",
+            "resource": "bgm_1_1_0125_story_zhiliu_betray",
             "next": [
               "1749035641134923908"
             ],
@@ -81267,7 +81267,7 @@
             "id": "176485797485514670014",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0124_cs_zhiliuxishouheilong",
+            "resource": "bgm_1_1_0124_cs_zhiliuxishouheilong",
             "next": [
               "17645175349987296423"
             ],
@@ -85054,7 +85054,7 @@
             "id": "17599126388786257",
             "type": "PlayOrStopBGMNode",
             "name": "BGM-Play",
-            "resource": "0092_feina_activity_cs_02",
+            "resource": "bgm_1_0_0092_feina_activity_cs_02",
             "srId": 101103,
             "pos": [
               -45815,
@@ -85065,7 +85065,7 @@
             "id": "1759912722017637",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0060_boss_ex01_lizhanzhe_loop"
+            "resource": "bgm_cbt02_0060_boss_ex01_lizhanzhe_loop"
           },
           {
             "id": "17573134789504521",
@@ -86290,7 +86290,7 @@
             "id": "1759913775428938085",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0091_feina_activity_cs_01",
+            "resource": "bgm_1_0_0091_feina_activity_cs_01",
             "srId": 101105,
             "pos": [
               160,
@@ -87971,7 +87971,7 @@
             "id": "1764002133915695333",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0101_story_zhuyinzhizai_low"
+            "resource": "bgm_1_1_0101_story_zhuyinzhizai_low"
           },
           {
             "id": "1736851364283721227",
@@ -88738,7 +88738,7 @@
             "id": "17741812707862526841",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0101_story_zhuyinzhizai_low"
+            "resource": "bgm_1_1_0101_story_zhuyinzhizai_low"
           },
           {
             "id": "1767944727334743",
@@ -89427,7 +89427,7 @@
             "id": "17741818497442528816",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0136_cs_bailong_god_appear",
+            "resource": "bgm_1_3_0136_cs_bailong_god_appear",
             "srId": 104506,
             "pos": [
               31600,
@@ -89438,7 +89438,7 @@
             "id": "17741819193542529724",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0137_story_kezhou_meet_bailong",
+            "resource": "bgm_1_3_0137_story_kezhou_meet_bailong",
             "srId": 104506,
             "pos": [
               31600,
@@ -89593,7 +89593,7 @@
             "id": "17741820011962530587",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0138_cs_kezhou_attack_bailong",
+            "resource": "bgm_1_3_0138_cs_kezhou_attack_bailong",
             "srId": 104506,
             "pos": [
               31600,
@@ -89638,7 +89638,7 @@
             "id": "1774182188541628",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0129_boss_yuming"
+            "resource": "bgm_1_1_0129_boss_yuming"
           },
           {
             "id": "17735671418006754384",
@@ -89764,7 +89764,7 @@
             "id": "17741823080955059703",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0129_boss_yuming",
+            "resource": "bgm_1_1_0129_boss_yuming",
             "srId": 104503,
             "pos": [
               29196,
@@ -90893,7 +90893,7 @@
             "id": "1774182557582630",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0125_story_zhiliu_betray"
+            "resource": "bgm_1_1_0125_story_zhiliu_betray"
           },
           {
             "id": "17633681300011705",
@@ -93338,7 +93338,7 @@
             "id": "177418279453510115810",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0101_story_zhuyinzhizai_full",
+            "resource": "bgm_1_1_0101_story_zhuyinzhizai_full",
             "srId": 105201,
             "pos": [
               13130,
@@ -93356,7 +93356,7 @@
             "id": "177505383225812783754",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0107_story_zhuyinzhizai_full",
+            "resource": "bgm_1_1_0107_story_zhuyinzhizai_full",
             "srId": 105201,
             "pos": [
               7839,
@@ -93594,7 +93594,7 @@
             "id": "177418302136811379965",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0129_boss_yuming",
+            "resource": "bgm_1_1_0129_boss_yuming",
             "srId": 105201,
             "pos": [
               7839,
@@ -93646,7 +93646,7 @@
             "id": "17742597041042120",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0139_cs_kezhou_vs_yuming",
+            "resource": "bgm_1_3_0139_cs_kezhou_vs_yuming",
             "srId": 105201,
             "pos": [
               7839,
@@ -93912,7 +93912,7 @@
             "id": "17741838339411247",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0123_boss_juque"
+            "resource": "bgm_1_1_0123_boss_juque"
           },
           {
             "id": "177356944462516040868",
@@ -94521,7 +94521,7 @@
             "id": "17750547808862575726",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0123_boss_juque",
+            "resource": "bgm_1_1_0123_boss_juque",
             "next": [
               "17735828291564229823"
             ]
@@ -94620,7 +94620,7 @@
             "id": "17742597812081268483",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0140_cs_suyi_fly_with_player",
+            "resource": "bgm_1_3_0140_cs_suyi_fly_with_player",
             "srId": 105201,
             "pos": [
               7839,
@@ -94638,7 +94638,7 @@
             "id": "177505423970316632112",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0129_boss_yuming",
+            "resource": "bgm_1_1_0129_boss_yuming",
             "srId": 105201,
             "pos": [
               7754,
@@ -95047,7 +95047,7 @@
             "id": "17741844011671687130",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0125_story_zhiliu_betray"
+            "resource": "bgm_1_1_0125_story_zhiliu_betray"
           },
           {
             "id": "1769845067925760707",
@@ -95216,7 +95216,7 @@
             "id": "17750545519561718005",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0141_story_zhiliu_climp",
+            "resource": "bgm_1_3_0141_story_zhiliu_climp",
             "next": [
               "1770194740182383848"
             ]
@@ -95367,7 +95367,7 @@
             "id": "17741845701761130",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0141_story_zhiliu_climp"
+            "resource": "bgm_1_3_0141_story_zhiliu_climp"
           }
         ]
       }
@@ -97222,7 +97222,7 @@
             "id": "177418524152418964879",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0142_story_zhiliu_memory",
+            "resource": "bgm_1_3_0142_story_zhiliu_memory",
             "next": [
               "176250715858522831274"
             ],
@@ -97879,7 +97879,7 @@
             "id": "1774185807400515",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0125_story_zhiliu_betray"
+            "resource": "bgm_1_1_0125_story_zhiliu_betray"
           },
           {
             "id": "17698459273514558762",
@@ -98314,7 +98314,7 @@
             "id": "177505557280120485899",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0125_story_zhiliu_betray",
+            "resource": "bgm_1_1_0125_story_zhiliu_betray",
             "next": [
               "1770346423085673"
             ]
@@ -98688,7 +98688,7 @@
             "id": "17742599025442537755",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0144_cs_zhiliu_combat_with_bailong"
+            "resource": "bgm_1_3_0144_cs_zhiliu_combat_with_bailong"
           }
         ]
       },
@@ -98701,7 +98701,7 @@
             "id": "177418639623522762896",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0145_cs_two_lonng_bite",
+            "resource": "bgm_1_3_0145_cs_two_lonng_bite",
             "srId": 104503,
             "pos": [
               31470,
@@ -98724,7 +98724,7 @@
             "id": "17741864821922534564",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0107_story_zhuyinzhizai_full",
+            "resource": "bgm_1_1_0107_story_zhuyinzhizai_full",
             "next": [
               "176251735161126752346"
             ],
@@ -98976,7 +98976,7 @@
             "id": "17741865928403799026",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0107_story_zhuyinzhizai_full",
+            "resource": "bgm_1_1_0107_story_zhuyinzhizai_full",
             "srId": 104501,
             "pos": [
               45700,
@@ -99080,7 +99080,7 @@
             "id": "1774186924195692",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0129_boss_yuming"
+            "resource": "bgm_1_1_0129_boss_yuming"
           }
         ]
       },
@@ -99093,7 +99093,7 @@
             "id": "17741869745853800144",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0129_boss_yuming",
+            "resource": "bgm_1_1_0129_boss_yuming",
             "srId": 104501,
             "pos": [
               45700,
@@ -99222,7 +99222,7 @@
             "id": "17750568955692574695",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0129_boss_yuming",
+            "resource": "bgm_1_1_0129_boss_yuming",
             "srId": 104501,
             "pos": [
               45730,
@@ -99240,7 +99240,7 @@
             "id": "17741869997913800708",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0129_boss_yuming",
+            "resource": "bgm_1_1_0129_boss_yuming",
             "srId": 104503,
             "pos": [
               34410,
@@ -99348,7 +99348,7 @@
             "id": "17750569191502575385",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0129_boss_yuming",
+            "resource": "bgm_1_1_0129_boss_yuming",
             "srId": 104503,
             "pos": [
               28924,
@@ -99420,7 +99420,7 @@
             "id": "17750569268172575617",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0129_boss_yuming",
+            "resource": "bgm_1_1_0129_boss_yuming",
             "srId": 104503,
             "pos": [
               31727,
@@ -99629,7 +99629,7 @@
             "id": "17750569880033858663",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0129_boss_yuming",
+            "resource": "bgm_1_1_0129_boss_yuming",
             "next": [
               "177228575025223735000"
             ],
@@ -99763,7 +99763,7 @@
             "id": "17750570365063859426",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0129_boss_yuming",
+            "resource": "bgm_1_1_0129_boss_yuming",
             "srId": 104503,
             "pos": [
               31467,
@@ -99801,7 +99801,7 @@
             "id": "17741870269413801488",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0146_enter_zhilvge",
+            "resource": "bgm_1_3_0146_enter_zhilvge",
             "srId": 104506,
             "pos": [
               31495,
@@ -99844,7 +99844,7 @@
             "id": "17741874131936330224",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0125_story_zhiliu_betray",
+            "resource": "bgm_1_1_0125_story_zhiliu_betray",
             "srId": 105301,
             "pos": [
               28912,
@@ -99947,7 +99947,7 @@
             "id": "17741874687536331113",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0148_theme_song_hyb_story_cut1",
+            "resource": "bgm_1_3_0148_theme_song_hyb_story_cut1",
             "srId": 105301,
             "pos": [
               41943,
@@ -99965,7 +99965,7 @@
             "id": "17741875792037595691",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0147_boss_two_dragon",
+            "resource": "bgm_1_3_0147_boss_two_dragon",
             "srId": 105301,
             "pos": [
               43387,
@@ -99996,7 +99996,7 @@
             "id": "17741876947728861054",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0148_theme_song_hyb_story_cut2",
+            "resource": "bgm_1_3_0148_theme_song_hyb_story_cut2",
             "srId": 104503,
             "pos": [
               32054,
@@ -100074,7 +100074,7 @@
             "id": "177418776017510125182",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0148_theme_song_hyb_story_cut3",
+            "resource": "bgm_1_3_0148_theme_song_hyb_story_cut3",
             "srId": 105301,
             "pos": [
               35812,
@@ -100405,7 +100405,7 @@
             "id": "177418794350012655233",
             "type": "PlayOrStopBGMNode",
             "name": "播放暂停音乐",
-            "resource": "0149_cs_two_lonng_merge",
+            "resource": "bgm_1_3_0149_cs_two_lonng_merge",
             "next": [
               "17675829024551092776"
             ],
@@ -101489,7 +101489,7 @@
             "id": "17745058711591683",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0109_combat_black_market",
+            "resource": "bgm_1_1_0109_combat_black_market",
             "srId": 104501,
             "pos": [
               50415,
@@ -101500,7 +101500,7 @@
             "id": "17745059280611273907",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0151_story_east_humour",
+            "resource": "bgm_1_3_0151_story_east_humour",
             "srId": 104501,
             "pos": [
               50415,
@@ -105497,7 +105497,7 @@
             "id": "17745062001375091627",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0125_story_zhiliu_betray",
+            "resource": "bgm_1_1_0125_story_zhiliu_betray",
             "srId": 104503,
             "pos": [
               24938,
@@ -106998,7 +106998,7 @@
             "id": "177450653693911453504",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0152_story_jiaolancun_piano",
+            "resource": "bgm_1_3_0152_story_jiaolancun_piano",
             "srId": 104503,
             "pos": [
               17487,
@@ -108206,7 +108206,7 @@
             "id": "177450689582617815327",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0129_boss_yuming",
+            "resource": "bgm_1_1_0129_boss_yuming",
             "srId": 104504,
             "pos": [
               8298,
@@ -108244,7 +108244,7 @@
             "id": "1774423736524482",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0123_boss_juque"
+            "resource": "bgm_1_1_0123_boss_juque"
           }
         ]
       },
@@ -108719,7 +108719,7 @@
             "id": "177450703157419088850",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0135_login_theme",
+            "resource": "bgm_1_1_0135_login_theme",
             "srId": 104506,
             "pos": [
               31501,
@@ -108737,7 +108737,7 @@
             "id": "177450673281013999337",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0153_cs_juque_on_stage",
+            "resource": "bgm_1_3_0153_cs_juque_on_stage",
             "srId": 104503,
             "pos": [
               22541,
@@ -108836,7 +108836,7 @@
             "id": "177450675651013999718",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0129_boss_yuming",
+            "resource": "bgm_1_1_0129_boss_yuming",
             "srId": 104503,
             "pos": [
               22541,
@@ -110391,7 +110391,7 @@
             "id": "1748933879119883582",
             "type": "PlayOrStopBGMNode",
             "name": "播放幽默音乐",
-            "resource": "0033_story_humour",
+            "resource": "bgm_cbt01_0033_story_humour",
             "srId": 101101,
             "pos": [
               -5213,
@@ -110460,7 +110460,7 @@
             "id": "17489343539003509289",
             "type": "PlayOrStopBGMNode",
             "name": "播放幽默音乐",
-            "resource": "0033_story_humour",
+            "resource": "bgm_cbt01_0033_story_humour",
             "srId": 101103,
             "pos": [
               -34151,
@@ -110887,7 +110887,7 @@
             "id": "17489344984583511337",
             "type": "PlayOrStopBGMNode",
             "name": "播放幽默音乐",
-            "resource": "0033_story_humour",
+            "resource": "bgm_cbt01_0033_story_humour",
             "srId": 101103,
             "pos": [
               -32456,
@@ -124200,7 +124200,7 @@
             "id": "17600061625596531944",
             "type": "PlayOrStopBGMNode",
             "name": "播放幽默",
-            "resource": "0033_story_humour",
+            "resource": "bgm_cbt01_0033_story_humour",
             "srId": 101101,
             "pos": [
               -7659,
@@ -124340,7 +124340,7 @@
             "id": "17600065919608394228",
             "type": "PlayOrStopBGMNode",
             "name": "播放幽默",
-            "resource": "0033_story_humour",
+            "resource": "bgm_cbt01_0033_story_humour",
             "srId": 101101,
             "pos": [
               -9415,
@@ -124407,7 +124407,7 @@
             "id": "17600066558329325511",
             "type": "PlayOrStopBGMNode",
             "name": "播放幽默",
-            "resource": "0033_story_humour",
+            "resource": "bgm_cbt01_0033_story_humour",
             "srId": 101101,
             "pos": [
               -9265,
@@ -124637,7 +124637,7 @@
             "id": "17600066899369326656",
             "type": "PlayOrStopBGMNode",
             "name": "播放幽默",
-            "resource": "0033_story_humour",
+            "resource": "bgm_cbt01_0033_story_humour",
             "srId": 101101,
             "pos": [
               -9265,
@@ -126974,7 +126974,7 @@
             "id": "17600102202512817",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0043_story_empire",
+            "resource": "bgm_cbt02_0043_story_empire",
             "srId": 101107,
             "pos": [
               -225,
@@ -127081,7 +127081,7 @@
             "id": "17600103648751840",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0072_story_reasoning",
+            "resource": "bgm_cbt03_0072_story_reasoning",
             "srId": 101101,
             "pos": [
               -2500,
@@ -127406,7 +127406,7 @@
             "id": "1760010486230935268",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0043_story_empire",
+            "resource": "bgm_cbt02_0043_story_empire",
             "srId": 101103,
             "pos": [
               -15162,
@@ -128218,7 +128218,7 @@
             "id": "17600107038051867283",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0036_story_renweidaozu",
+            "resource": "bgm_cbt01_0036_story_renweidaozu",
             "srId": 101101,
             "pos": [
               -3580,
@@ -136263,7 +136263,7 @@
             "id": "17677836599642664",
             "type": "PlayOrStopBGMNode",
             "name": "播放潜行音乐",
-            "resource": "0111_scene_wuhuizhidi"
+            "resource": "bgm_1_1_0111_scene_wuhuizhidi"
           },
           {
             "id": "17658722095622118004",
@@ -141991,7 +141991,7 @@
             "id": "177313446494136299267",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0125_story_zhiliu_betray",
+            "resource": "bgm_1_1_0125_story_zhiliu_betray",
             "next": [
               "17726066180633637092"
             ],
@@ -142271,7 +142271,7 @@
             "id": "17748664206292213",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0106_scene_cave_near_sea"
+            "resource": "bgm_1_1_0106_scene_cave_near_sea"
           },
           {
             "id": "1773295971015727",
@@ -142470,7 +142470,7 @@
             "id": "17748664896837243856",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0106_scene_cave_near_sea",
+            "resource": "bgm_1_1_0106_scene_cave_near_sea",
             "next": [
               "1770281427083396372"
             ],
@@ -142671,7 +142671,7 @@
             "id": "1774866566119855714",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0106_scene_cave_near_sea",
+            "resource": "bgm_1_1_0106_scene_cave_near_sea",
             "next": [
               "1773296529860493"
             ]
@@ -160452,7 +160452,7 @@
             "id": "17647611270281325",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0041_story_jiaojiao_tiejiang",
+            "resource": "bgm_cbt02_0041_story_jiaojiao_tiejiang",
             "srId": 210101,
             "pos": [
               -383,
@@ -160678,7 +160678,7 @@
             "id": "17648358565963813392",
             "type": "PlayOrStopBGMNode",
             "name": "BGM节点",
-            "resource": "0033_story_humour",
+            "resource": "bgm_cbt01_0033_story_humour",
             "srId": 101101,
             "pos": [
               -3610,

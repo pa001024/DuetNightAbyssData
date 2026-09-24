@@ -5,7 +5,7 @@ import { basename, extname, isAbsolute, join } from "node:path"
 import { AssetReader } from "../lua/AssetReader.ts"
 import { LuaDataManager } from "../lua/LuaDataManager.ts"
 import { getExportsRoot } from "../lua/UAssetServer.ts"
-import { quotedPackagePath, storyVideoName } from "../modules/shared/dataHelpers.ts"
+import { fmodEventMediaName, quotedPackagePath, storyVideoName } from "../modules/shared/dataHelpers.ts"
 import {
     dialogueFlowCgVideo,
     dialogueFlowDir,
@@ -27,13 +27,25 @@ const assetRoot = join(contentRoot, "Asset")
 const outputRoot = join(projectRoot, "out")
 const fmodelLogRoot = join(exportsRoot, "..", "Logs")
 
+/** 剧情 BGM 输出目录：.env 的 DNA_BGM_EXPORT_DIR（与 FMOD bank 导出的 ogg 同库存放）。 */
+function bgmOutputDir(): string {
+    const dir = process.env.DNA_BGM_EXPORT_DIR?.trim()
+    if (!dir) throw new Error("未配置 DNA_BGM_EXPORT_DIR（.env）：剧情 BGM 输出目录")
+    return dir
+}
+
 function quotedPath(value: unknown): string | undefined {
     return quotedPackagePath(value)
 }
 
-function isBgmResource(value: string): boolean {
-    const normalized = value.replaceAll("\\", "/").toLowerCase()
-    return (normalized.startsWith("event:/bgm/") || normalized.includes("/events/bgm/")) && !/(?:^|\/)mute(?:\.|$)/i.test(normalized)
+/**
+ * BGM 节点只导出实际播放的音频事件：mute 事件（路径末段为 mute / mute.xxx）用于静音当前
+ * BGM，SoundType=2 是 FMOD snapshot 控制事件（混响/静音等，无音频内容），都不作为媒体导出。
+ * 收录范围与剧情模块的 BGM 节点（storyline/questStory）保持一致。
+ */
+function isPlayableBgmEvent(value: string, soundType: unknown): boolean {
+    if (/(?:^|\/)mute(?:\.|$)/i.test(value.replaceAll("\\", "/").toLowerCase())) return false
+    return Number(soundType) !== 2
 }
 
 export function normalizeBgmAssetPath(value: string): string {
@@ -79,6 +91,29 @@ export function loadFModelSoundMap(logRoot: string, wantedPaths: ReadonlySet<str
             const existing = result.get(event) ?? []
             for (const path of paths) if (!existing.includes(path)) existing.push(path)
             result.set(event, existing)
+        }
+    }
+    return result
+}
+
+/**
+ * 日志里 `SaveAndPlaySound` 落盘的音频文件索引：基名 → 绝对路径（同一基名可能落盘到多处）。
+ * FMOD bank 导出的 ogg 以 `<bank>_<事件路径分段>` 命名（如 `cine_Ver0103_sc002.ogg`），
+ * 与 `fmodEventMediaName` 的规范名一致，因此可按基名反查真实音频。
+ */
+export function loadFModelSavedSounds(logRoot: string, wanted: ReadonlySet<string>): Map<string, string[]> {
+    const result = new Map<string, string[]>()
+    for (const entry of readdirSync(logRoot, { withFileTypes: true })) {
+        if (!entry.isFile() || !/^FModel-Log-.*\.log$/i.test(entry.name)) continue
+        for (const line of readFileSync(join(logRoot, entry.name), "utf8").split(/\r?\n/)) {
+            const saved = line.match(/SaveAndPlaySound: Successfully saved (.+?\.(?:ogg|wav))\s*$/i)
+            if (!saved) continue
+            const source = saved[1].replaceAll("\\", "/")
+            const stem = source.slice(source.lastIndexOf("/") + 1).replace(/\.[^.]+$/, "")
+            if (!wanted.has(stem)) continue
+            const paths = result.get(stem) ?? []
+            if (!paths.includes(source)) paths.push(source)
+            result.set(stem, paths)
         }
     }
     return result
@@ -161,7 +196,7 @@ export function collectMedia(dm: LuaDataManager, storyPaths: Iterable<string>): 
                 videos.push({ resource: quotedPath(props.MediaSourceRef)!, story, node: id })
             if (node.type === "PlayOrStopBGMNode" && Number(props.SoundStateType) === 0) {
                 const resource = quotedPath(props.SoundPath)
-                if (resource && isBgmResource(resource)) bgm.push({ resource, story, node: id })
+                if (resource && isPlayableBgmEvent(resource, props.SoundType)) bgm.push({ resource, story, node: id })
             }
         }
     }
@@ -548,24 +583,82 @@ export function collectFlowCgVideoFiles(items: CgMediaItem[]): Map<string, strin
     return output
 }
 
-export function collectBgmFiles(items: MediaItem[], soundMap: ReadonlyMap<string, readonly string[]>): Map<string, string> {
-    const output = new Map<string, string>()
-    for (const item of items) {
-        const name = basename(item.resource).replace(/\.[^.]+$/, "")
-        const event = normalizeBgmAssetPath(item.resource)
-        const matches = soundMap.get(event) ?? []
-        if (matches.length !== 1) throw new Error(`BGM 资源 ${name} from ${item.story}:${item.node} mapped to ${matches.length} OGG files`)
-        const source = matches[0]
-        if (!existsSync(source)) throw new Error(`找不到 BGM 文件 ${source}，来源 ${item.story}:${item.node}`)
-        const previous = output.get(name)
-        if (previous && previous !== source) throw new Error(`BGM 缩名冲突: ${name}`)
-        output.set(name, source)
+/**
+ * 事件规范名对应的真实音频（按日志顺序）：
+ * - 优先 bank 导出的 ogg（基名即规范名，与 bank 内音频一一对应）；
+ * - 其次事件级提取日志（FMOD 事件 .uasset → ogg）。一个事件可能含多条音轨
+ *   （如 intro + loop），日志会依次保存多个 ogg，这里全部返回。
+ * 同名音频落盘到多处时优先 `<bank>/` 子目录下的那份，仍不唯一视为冲突。
+ */
+function locateBgmSources(
+    name: string,
+    item: MediaItem,
+    soundMap: ReadonlyMap<string, readonly string[]>,
+    savedSounds: ReadonlyMap<string, readonly string[]>
+): string[] {
+    const bank = name.split("_")[0]
+    const parentName = (path: string): string => {
+        const normalized = path.replaceAll("\\", "/")
+        return normalized.slice(0, normalized.lastIndexOf("/")).split("/").at(-1) ?? ""
     }
-    return output
+    const byName = (savedSounds.get(name) ?? []).filter(path => existsSync(path))
+    if (byName.length > 0) {
+        const inBank = byName.filter(path => parentName(path).toLowerCase() === bank.toLowerCase())
+        const picked = inBank.length > 0 ? inBank : byName
+        if (picked.length > 1) throw new Error(`BGM 资源 ${name} 命中 ${picked.length} 个同名音频: ${picked.join(", ")}`)
+        return picked
+    }
+    const event = normalizeBgmAssetPath(item.resource)
+    return [...new Set((soundMap.get(event) ?? []).filter(path => existsSync(path)))]
 }
 
-function writeFiles(kind: string, files: Map<string, string>): void {
-    const destination = join(outputRoot, kind)
+export interface BgmPlan {
+    files: Map<string, string>
+    /** 解包/日志里没有对应音频的 BGM 事件（规范名 + 来源）。 */
+    missing: string[]
+}
+
+/**
+ * 规划 BGM 输出：文件名取事件规范名（含 `Events/` 下的子路径，对齐 bank 导出的 ogg 名），
+ * 与剧情 JSON 的 BGM resource 一致。
+ *
+ * 找不到音频时默认报错（保持"引用了不存在的媒体即失败"的语义）；`skipMissing` 用于
+ * 解包不完整的环境，跳过后由调用方显式报告清单。
+ */
+export function collectBgmFiles(
+    items: MediaItem[],
+    soundMap: ReadonlyMap<string, readonly string[]>,
+    savedSounds: ReadonlyMap<string, readonly string[]> = new Map(),
+    skipMissing = false
+): BgmPlan {
+    const files = new Map<string, string>()
+    const conflicts: string[] = []
+    const missing: string[] = []
+    for (const item of items) {
+        const name = fmodEventMediaName(item.resource)
+        if (!name) continue
+        const sources = locateBgmSources(name, item, soundMap, savedSounds)
+        if (sources.length === 0) {
+            missing.push(`${name} (${item.story}:${item.node})`)
+            continue
+        }
+        // 主音轨用规范名（与剧情 JSON 的 BGM resource 一致），同一事件的附加音轨加序号后缀。
+        sources.forEach((source, index) => {
+            const fileName = index === 0 ? name : `${name}_${index + 1}`
+            const previous = files.get(fileName)
+            if (previous && previous !== source) {
+                conflicts.push(`${fileName} (${previous} vs ${source}, ${item.story}:${item.node})`)
+                return
+            }
+            files.set(fileName, source)
+        })
+    }
+    if (conflicts.length) throw new Error(`BGM 缩名冲突: ${conflicts.join("; ")}`)
+    if (missing.length && !skipMissing) throw new Error(`找不到 BGM 音频文件: ${missing.join("; ")}`)
+    return { files, missing }
+}
+
+function writeFiles(destination: string, files: Map<string, string>): void {
     mkdirSync(destination, { recursive: true })
     for (const [name, source] of files) copyFileSync(source, join(destination, `${name}${extname(source)}`))
 }
@@ -659,13 +752,17 @@ export async function exportStoryMedia(): Promise<{ videos: number; bgm: number 
                 videos.set(name, source)
             }
         }
-        writeFiles("Video", videos)
+        writeFiles(join(outputRoot, "Video"), videos)
         if (videoOnly) return { videos: videos.size, bgm: 0 }
         const wantedBgmPaths = new Set(allBgm.map(item => normalizeBgmAssetPath(item.resource)))
         const soundMap = loadFModelSoundMap(fmodelLogRoot, wantedBgmPaths)
-        const bgm = collectBgmFiles(allBgm, soundMap)
-        writeFiles("BGM", bgm)
-        return { videos: videos.size, bgm: bgm.size }
+        const wantedBgmNames = new Set(allBgm.map(item => fmodEventMediaName(item.resource)).filter((name): name is string => !!name))
+        const savedSounds = loadFModelSavedSounds(fmodelLogRoot, wantedBgmNames)
+        const skipMissing = Bun.argv.includes("--skip-missing-bgm")
+        const bgm = collectBgmFiles(allBgm, soundMap, savedSounds, skipMissing)
+        writeFiles(bgmOutputDir(), bgm.files)
+        if (bgm.missing.length) console.warn(`跳过 ${bgm.missing.length} 个未解包 BGM: ${bgm.missing.join("; ")}`)
+        return { videos: videos.size, bgm: bgm.files.size }
     } finally {
         await reader.close()
     }

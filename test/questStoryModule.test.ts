@@ -117,7 +117,7 @@ describe("QuestStory special stories", () => {
         const result = (await questStoryModule(ctx)) as Array<Record<string, any>>
         expect(result[0].quests[0].nodes).toEqual([
             { id: "talk", type: "TalkNode", name: "对白", dialogues: [{ id: 1 }] },
-            { id: "bgm", type: "PlayOrStopBGMNode", name: "活动音乐", resource: "0091_feina_activity_cs_01" },
+            { id: "bgm", type: "PlayOrStopBGMNode", name: "活动音乐", resource: "bgm_1_0_0091_feina_activity_cs_01" },
         ])
     })
 

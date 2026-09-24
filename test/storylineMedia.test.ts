@@ -1,4 +1,4 @@
-import { mkdtempSync, rmSync, writeFileSync } from "node:fs"
+import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs"
 import { tmpdir } from "node:os"
 import { join } from "node:path"
 import { describe, expect, test } from "bun:test"
@@ -6,7 +6,7 @@ import type { ModuleContext } from "../src/core/Graph.ts"
 import type { DialogueService } from "../src/modules/dialogue/dialogueModule.ts"
 import { eventStorylineNodes, storylineNodes, storyMediaNode } from "../src/modules/storyline/storyline.ts"
 import { collectBgmFiles, movieStemLabel, normalizeBgmAssetPath, parseFModelSoundLog } from "../src/tools/exportStoryMedia.ts"
-import { storyVideoName } from "../src/modules/shared/dataHelpers.ts"
+import { fmodEventMediaName, storyVideoName } from "../src/modules/shared/dataHelpers.ts"
 import { dialogueFlowDir, stageSequenceName } from "../src/modules/shared/storyStageMedia.ts"
 
 function context(story: Record<string, unknown>): ModuleContext {
@@ -51,7 +51,7 @@ describe("storyline media nodes", () => {
         const nodes = storylineNodes(context(story), "story") as Array<Record<string, any>>
         expect(nodes).toEqual([
             { id: "video", type: "VideoNode", name: "开车", resource: "EX01_SC018", next: ["bgm"] },
-            { id: "bgm", type: "PlayOrStopBGMNode", name: "活动音乐", resource: "0091_feina_activity_cs_01" },
+            { id: "bgm", type: "PlayOrStopBGMNode", name: "活动音乐", resource: "bgm_1_0_0091_feina_activity_cs_01" },
         ])
     })
 
@@ -75,7 +75,12 @@ describe("storyline media nodes", () => {
                 type: "PlayOrStopBGMNode",
                 propsData: { SoundStateType: 0, SoundPath: "event:/ambience/common/pad_noise_rain_plain_heavy" },
             })
-        ).toEqual({ id: "ambience", type: "PlayOrStopBGMNode", name: "", resource: "pad_noise_rain_plain_heavy" })
+        ).toEqual({
+            id: "ambience",
+            type: "PlayOrStopBGMNode",
+            name: "",
+            resource: "ambience_common_pad_noise_rain_plain_heavy",
+        })
     })
 
     test("skips snapshot control events that carry no audio content", () => {
@@ -108,7 +113,7 @@ describe("storyline media nodes", () => {
                 type: "PlayOrStopBGMNode",
                 propsData: { SoundStateType: 0, SoundType: 1, SoundPath: "event:/ambience/world/prologue/char_pick" },
             })
-        ).toEqual({ id: "noise", type: "PlayOrStopBGMNode", name: "", resource: "char_pick" })
+        ).toEqual({ id: "noise", type: "PlayOrStopBGMNode", name: "", resource: "ambience_world_prologue_char_pick" })
     })
 
     test("exports the same media nodes from event storylines", () => {
@@ -227,13 +232,65 @@ describe("storyline media nodes", () => {
             const source = join(directory, "菲娜活动配乐-01.ogg")
             writeFileSync(source, "ogg")
             const item = { resource: "event:/bgm/1_0/0091_feina_activity_cs_01", story: "story", node: "bgm" }
-            expect(collectBgmFiles([item], new Map([[normalizeBgmAssetPath(item.resource), [source]]]))).toEqual(
-                new Map([["0091_feina_activity_cs_01", source]]),
-            )
-            expect(() => collectBgmFiles([item], new Map())).toThrow("mapped to 0 OGG files")
-            expect(() => collectBgmFiles([item], new Map([[normalizeBgmAssetPath(item.resource), [source, source]]]))).toThrow(
-                "mapped to 2 OGG files",
-            )
+            expect(collectBgmFiles([item], new Map([[normalizeBgmAssetPath(item.resource), [source]]]))).toEqual({
+                files: new Map([["bgm_1_0_0091_feina_activity_cs_01", source]]),
+                missing: [],
+            })
+            expect(collectBgmFiles([item], new Map(), new Map(), true).missing).toEqual([
+                "bgm_1_0_0091_feina_activity_cs_01 (story:bgm)",
+            ])
+            expect(() => collectBgmFiles([item], new Map())).toThrow("找不到 BGM 音频文件")
+            // 一个 FMOD 事件可能含多条音轨（intro + loop）：主音轨用规范名，附加音轨加序号。
+            const loopSource = join(directory, "菲娜活动配乐-01-loop.ogg")
+            writeFileSync(loopSource, "ogg")
+            expect(collectBgmFiles([item], new Map([[normalizeBgmAssetPath(item.resource), [source, loopSource]]]))).toEqual({
+                files: new Map([
+                    ["bgm_1_0_0091_feina_activity_cs_01", source],
+                    ["bgm_1_0_0091_feina_activity_cs_01_2", loopSource],
+                ]),
+                missing: [],
+            })
+        } finally {
+            rmSync(directory, { recursive: true, force: true })
+        }
+    })
+
+    test("names BGM files after the FMOD event path so they match the bank OGG", () => {
+        expect(fmodEventMediaName("FMODEvent'/Game/Asset/Audio/FMOD/Events/cine/Ver0103/sc002.sc002'")).toBe("cine_Ver0103_sc002")
+        expect(fmodEventMediaName("event:/bgm/1_1/0109_combat_black_market")).toBe("bgm_1_1_0109_combat_black_market")
+        expect(fmodEventMediaName("/Game/Asset/Audio/FMOD/Events/cine/Cine00/connect_01_cave")).toBe("cine_Cine00_connect_01_cave")
+        expect(fmodEventMediaName("event:/bgm/mute")).toBe("bgm_mute")
+        expect(fmodEventMediaName("")).toBeUndefined()
+    })
+
+    test("resolves BGM audio from the bank OGG name before the event log", () => {
+        const directory = mkdtempSync(join(tmpdir(), "story-media-"))
+        try {
+            const bankDir = join(directory, "cine")
+            mkdirSync(bankDir, { recursive: true })
+            const bankSource = join(bankDir, "cine_Ver0103_sc002.ogg")
+            writeFileSync(bankSource, "ogg")
+            const otherSource = join(directory, "cine_Ver0103_sc002.ogg")
+            writeFileSync(otherSource, "ogg")
+            const eventSource = join(directory, "过场配乐.ogg")
+            writeFileSync(eventSource, "ogg")
+            const item = {
+                resource: "FMODEvent'/Game/Asset/Audio/FMOD/Events/cine/Ver0103/sc002.sc002'",
+                story: "story",
+                node: "bgm",
+            }
+            // 同名 ogg 落盘到多处时优先 bank 子目录下的那份，其余视为冲突而非静默取第一个。
+            expect(collectBgmFiles([item], new Map(), new Map([["cine_Ver0103_sc002", [bankSource]]]))).toEqual({
+                files: new Map([["cine_Ver0103_sc002", bankSource]]),
+                missing: [],
+            })
+            expect(
+                collectBgmFiles([item], new Map(), new Map([["cine_Ver0103_sc002", [bankSource, otherSource]]])).files,
+            ).toEqual(new Map([["cine_Ver0103_sc002", bankSource]]))
+            // 没有 bank 同名音频时退回事件级提取日志，文件名仍用事件规范名。
+            expect(
+                collectBgmFiles([item], new Map([[normalizeBgmAssetPath(item.resource), [eventSource]]]), new Map()),
+            ).toEqual({ files: new Map([["cine_Ver0103_sc002", eventSource]]), missing: [] })
         } finally {
             rmSync(directory, { recursive: true, force: true })
         }

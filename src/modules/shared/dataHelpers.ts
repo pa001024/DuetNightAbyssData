@@ -75,6 +75,30 @@ export function storyVideoName(value: unknown): string | undefined {
 }
 
 /**
+ * FMOD 事件引用（剧情节点 SoundPath）→ BGM 媒体规范名。
+ *
+ * SoundPath 有 `event:/bgm/1_1/0109_combat_black_market`、
+ * `FMODEvent'/Game/Asset/Audio/FMOD/Events/cine/Ver0103/sc002.sc002'` 等形态；只取末段
+ * （如 `sc002`）无法区分不同目录下的同名事件。规范名取事件在 `Events/` 下的完整相对路径、
+ * 分段以 `_` 连接（`cine/Ver0103/sc002` → `cine_Ver0103_sc002`），与 FMOD bank 导出的
+ * ogg 文件名一致。剧情 JSON 的 BGM resource 与 exportStoryMedia 写入 out/BGM 的文件
+ * 使用同一名字，保证两侧一一对应。
+ */
+export function fmodEventMediaName(value: unknown): string | undefined {
+    const path = quotedPackagePath(value)
+    if (!path) return undefined
+    let rel = path.replace(/^event:\/*/i, "")
+    const events = /(?:^|\/)Events\/(.+)$/i.exec(rel)
+    if (events) rel = events[1]
+    const segments = rel
+        .replace(/\.(?:uasset|umap)$/i, "")
+        .split("/")
+        .filter(Boolean)
+    if (segments.length === 0) return undefined
+    return segments.join("_")
+}
+
+/**
  * 过场 TalkNode 的视频规范名：TalkType=Cinematic 且 ShowFilePath 指向
  * `/Game/Asset/Cinematics/…`（真实影片/过场资产）时返回媒体规范名
  * （供剧情节点 video 字段使用）；引擎内演出/战斗/UI 等非影片序列返回 undefined。
