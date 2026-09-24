@@ -5,7 +5,7 @@
 import { describe, expect, test } from "bun:test"
 import { TextMap } from "../src/i18n/TextMap.ts"
 import { deriveLangViews } from "../src/i18n/textmapReactive.ts"
-import { compile, LTemplate, LTemplateValueOrder, record, renderTree, seq, T, TLang, TL, TMap, TReplace, TSection, TUnlessEqual, TRaw } from "../src/i18n/vnode.ts"
+import { compile, LTemplate, LTemplateColumns, LTemplateValueOrder, record, renderTree, seq, T, TLang, TL, TMap, TReplace, TSection, TUnlessEqual, TRaw } from "../src/i18n/vnode.ts"
 import { getLuaDataManager } from "../src/lua/LuaDataManager.ts"
 import { sentinelOf } from "../src/lua/stubs.ts"
 
@@ -267,5 +267,128 @@ describe("reactive 派生", () => {
 
         expect(renderTree(node, "cn", textmap)).toEqual([[10], [20]])
         expect(renderTree(node, "en", textmap)).toEqual([[20], [10]])
+    })
+
+    test("LTemplateColumns 输出模板 + 各占位符逐级值", () => {
+        const textmap = { get: () => "攻击提高#1，持续#2秒" } as unknown as TextMap
+        const node = LTemplateColumns("placeholder", [["20%", "40%"], ["3", "4"]])
+
+        expect(renderTree(node, "cn", textmap)).toEqual(["攻击提高#1，持续#2秒", ["20%", "40%"], ["3", "4"]])
+    })
+
+    test("LTemplateColumns 保留占位符并沿用 Lua 数值精度", () => {
+        const tm = makeTextMap()
+        const node = LTemplateColumns("SKILL_10102_DESC", [["75%", "90%"], ["33.25%", "39.6%"], ["6", "7"]], true)
+        const rendered = renderTree(node, "cn", tm) as [string, ...string[][]]
+
+        expect(rendered[0]).toBe("触发概率+#1。水属性角色使用此武器造成的伤害触发额外效果时，为其他队友附加攻击提高#2，持续#3秒。")
+        expect(rendered[1]).toEqual(["75.0%", "90.0%"])
+        expect(rendered[2]).toEqual(["33.2%", "39.6%"])
+        expect(rendered[3]).toEqual(["6.0", "7.0"])
+    })
+
+    test("LTemplateColumns 每列独立应用自己的精度标记", () => {
+        const tm = makeTextMap()
+        const node = LTemplateColumns("SKILL_20407_DESC", [["90%", "99%"], ["0.25", "0.3"], ["75%", "80%"], ["24", "25"]], true)
+        const rendered = renderTree(node, "en", tm) as [string, ...string[][]]
+
+        // 第 2 列受 {float4} 影响保留 2 位小数，其余列按默认 1 位
+        expect(rendered[2]).toEqual(["0.25", "0.3"])
+        expect(rendered[1]).toEqual(["90.0%", "99.0%"])
+        expect(rendered[4]).toEqual(["24.0", "25.0"])
+    })
+
+    test("LTemplateColumns 模板按语言取且列数不随语言变化", () => {
+        const tm = makeTextMap()
+        const node = LTemplateColumns("SKILL_10102_DESC", [
+            ["75%", "90%"],
+            ["33%", "39.6%"],
+            ["6", "7"],
+        ])
+        const cn = renderTree(node, "cn", tm) as [string, ...string[][]]
+        const en = renderTree(node, "en", tm) as [string, ...string[][]]
+
+        expect(cn[0]).not.toBe(en[0])
+        expect(cn[0]).toContain("#1")
+        expect(en[0]).toContain("#1")
+        // 值数组语言无关
+        expect(cn.slice(1)).toEqual(en.slice(1))
+        expect(cn.slice(1)).toHaveLength(3)
+    })
+
+    test("LTemplateColumns 保留编号空洞（#2 必须取到第 2 个数组）", () => {
+        const textmap = { get: () => "只在#2处取值" } as unknown as TextMap
+        const node = LTemplateColumns("placeholder", [
+            ["未引用1", "未引用2"],
+            ["被引用1", "被引用2"],
+        ])
+
+        expect(renderTree(node, "cn", textmap)).toEqual(["只在#2处取值", ["未引用1", "未引用2"], ["被引用1", "被引用2"]])
+    })
+
+    test("LTemplateColumns 截断未被模板引用的尾部条目", () => {
+        // 值列表有 3 项但模板只引用 #1：第 2、3 项仅服务于取值内部互引，不应产出列
+        const textmap = { get: () => "只引用#1" } as unknown as TextMap
+        const node = LTemplateColumns("placeholder", [
+            ["有效1", "有效2"],
+            ["内部1", "内部2"],
+            ["内部3", "内部4"],
+        ])
+
+        expect(renderTree(node, "cn", textmap)).toEqual(["只引用#1", ["有效1", "有效2"]])
+    })
+
+    test("LTemplateColumns 将各级完全一致的列退火进模板", () => {
+        // 全部列恒定：退化为只有模板
+        const allConst = { get: () => "强化至+#1后，此魔之楔可同时重复装备多个。" } as unknown as TextMap
+        expect(renderTree(LTemplateColumns("placeholder", [["5.0", "5.0", "5.0"]]), "cn", allConst)).toEqual([
+            "强化至+5.0后，此魔之楔可同时重复装备多个。",
+        ])
+
+        // 部分列恒定：#1 代入模板并删除，原 #2 重排为 #1
+        const partial = { get: () => "技能效益大于等于#1时，自身技能威力提高#2。" } as unknown as TextMap
+        expect(
+            renderTree(LTemplateColumns("placeholder", [["130.0%", "130.0%"], ["16.0%", "24.0%"]]), "cn", partial)
+        ).toEqual(["技能效益大于等于130.0%时，自身技能威力提高#1。", ["16.0%", "24.0%"]])
+    })
+
+    test("LTemplateColumns 退火后占位符重排为连续编号", () => {
+        // #2 恒定被代入，#1/#3 保留 → 应重排为 #1/#2
+        const textmap = { get: () => "恒定#2，变化#1 与 #3" } as unknown as TextMap
+        const node = LTemplateColumns("placeholder", [["a1", "a2"], ["固定", "固定"], ["c1", "c2"]])
+
+        expect(renderTree(node, "cn", textmap)).toEqual(["恒定固定，变化#1 与 #2", ["a1", "a2"], ["c1", "c2"]])
+    })
+
+    test("LTemplateColumns 退火时多位数占位符不被误伤", () => {
+        // #10 恒定被代入、#1..#9 保留：代入 #10 不会连带影响 #1（(?!\d) 保证不匹配多位数前缀）
+        const textmap = { get: () => "#1 与 #10" } as unknown as TextMap
+        const columns = [["变化1", "变化2"], ...Array.from({ length: 8 }, () => ["x1", "x2"]), ["固定", "固定"]]
+        const rendered = renderTree(LTemplateColumns("placeholder", columns), "cn", textmap) as [string, ...string[][]]
+
+        expect(rendered[0]).toBe("#1 与 固定")
+        expect(rendered.slice(1)).toHaveLength(9)
+        expect(rendered[1]).toEqual(["变化1", "变化2"])
+        expect(rendered[9]).toEqual(["x1", "x2"])
+    })
+
+    test("LTemplateColumns 模板 key 缺失时不截断", () => {
+        // 文本缺失时 get 回退返回 key 本身，此时不按占位符裁剪，避免误丢数据
+        const textmap = { get: (key: string) => key } as unknown as TextMap
+        const node = LTemplateColumns("MISSING_KEY", [
+            ["a1", "a2"],
+            ["b1", "b2"],
+        ])
+
+        expect(renderTree(node, "cn", textmap)).toEqual(["MISSING_KEY", ["a1", "a2"], ["b1", "b2"]])
+    })
+
+    test("LTemplateColumns 不把 #10 当作 #1（列与编号一一对应）", () => {
+        const textmap = { get: () => "第#10项" } as unknown as TextMap
+        const columns = Array.from({ length: 10 }, (_, index) => [`v${index + 1}a`, `v${index + 1}b`])
+        const rendered = renderTree(LTemplateColumns("placeholder", columns), "cn", textmap) as [string, ...string[][]]
+
+        expect(rendered[0]).toBe("第#10项")
+        expect(rendered[10]).toEqual(["v10a", "v10b"])
     })
 })

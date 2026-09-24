@@ -1,7 +1,7 @@
 /** Mod module - mod cards, attributes, passive descriptions and skill replacements. */
 
 import type { ModuleContext } from "../../core/Graph.ts"
-import { compile, LTemplate, T, TMap, TReplace, type VNode, type VNodeTree } from "../../i18n/vnode.ts"
+import { compile, LTemplateColumns, T, TMap, TReplace, type VNode, type VNodeTree } from "../../i18n/vnode.ts"
 import { AssetReader } from "../../lua/AssetReader.ts"
 import type { SkillArtifacts } from "../skill/skillModule.ts"
 import { P_MAP } from "../skill/skillModule.ts"
@@ -54,16 +54,26 @@ function attrConfigKey(attr: Row, config: Row): string {
     return name
 }
 
+/**
+ * 被动效果：模板（保留 #N 占位符）+ 每个占位符的逐级填充值。
+ *
+ * 形如 ["受到伤害降低#1。...", ["4.0%",...], ["2.0%",...]]，第 i 个数组对应模板中的 #i
+ * （与 ArmoryUtils.GenModPassiveEffectDesc 逐条 gsub("#" .. i) 的索引语义一致）。
+ * 等级上限为 MaxLevel + ModCardLevelMax（卡牌等级额外叠加）。
+ */
 function passiveDescription(ctx: ModuleContext, mod: Row, modId: number, level: number): VNodeTree | undefined {
     if (!mod.PassiveEffectsDesc) return undefined
     const values = sequence(mod.DescValues)
-    const rendered: VNode[] = []
+    const columns: VNode[][] = []
     for (const value of values) {
         if (typeof value !== "string") continue
-        const computed = ctx.dm.calcModDescValue(value, modId, level)
-        rendered.push(compile(computed))
+        const perLevel: VNode[] = []
+        for (let lv = 1; lv <= level; lv++) {
+            perLevel.push(compile(ctx.dm.calcModDescValue(value, modId, lv)))
+        }
+        columns.push(perLevel)
     }
-    return LTemplate(String(mod.PassiveEffectsDesc), rendered, true)
+    return LTemplateColumns(String(mod.PassiveEffectsDesc), columns, true)
 }
 
 function skillEntry(ctx: ModuleContext, id: number): Row | undefined {

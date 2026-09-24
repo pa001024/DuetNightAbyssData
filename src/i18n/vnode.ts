@@ -59,6 +59,24 @@ export interface LTemplateValueOrderNode {
     readonly key: string
     readonly values: VNodeTree[]
 }
+/**
+ * TextMap 模板（保留 #N 占位符）+ 每个占位符的逐级填充值。
+ * 渲染为 [模板, #1各级值, #2各级值, ...]：数组下标 i（1 起）对应模板中的 #i。
+ * 与 LTemplate 的区别是不做替换、保留占位符，由使用方按等级自行取值代入。
+ *
+ * 「退火」：某列各级取值完全一致时，说明该值不随等级变化，直接代入模板并移除该列，
+ * 剩余占位符按原顺序重排为连续的 #1..#k，保证 #N 仍对应第 N 个数组。
+ * 若全部列都恒定，结果退化为只剩模板的单元素数组。
+ */
+export interface LTemplateColumnsNode {
+    readonly __t: "ltCols"
+    readonly key: string
+    /** columns[i] = 占位符 #(i+1) 的逐级值；级数由数据源决定 */
+    readonly columns: VNode[][]
+    /** 是否按 SkillUtils.FormatDescValue1 规则格式化各列值 */
+    readonly formatValues: boolean
+    readonly preserveHighlight?: boolean | "capitalized"
+}
 /** 固定语言文本 key（如 CV 名：日文CV 始终用 jp 文本，不随输出语言变） */
 export interface TFixedNode {
     readonly __t: "tf"
@@ -110,6 +128,7 @@ export type VNode =
     | RecordNode
     | LTemplateNode
     | LTemplateValueOrderNode
+    | LTemplateColumnsNode
     | TFixedNode
     | TTrimNode
     | TMapNode
@@ -168,6 +187,22 @@ export function LTemplate(
 /** 按渲染语言的 #N 占位符出现顺序输出值数组。 */
 export function LTemplateValueOrder(key: string, values: VNodeTree[]): LTemplateValueOrderNode {
     return { __t: "ltValues", key, values }
+}
+
+/**
+ * TextMap 模板 + 每个占位符的逐级填充值（保留 #N 占位符不替换）。
+ *
+ * columns[i] 对应模板中的 #(i+1)，本级数由数据源决定（武器 6 级 / Mod 按 MaxLevel 等）。
+ * 渲染结果：[模板, #1 逐级值, #2 逐级值, ...]。
+ * 各级完全一致的列会被退火进模板并移除，剩余列重排为连续编号。
+ */
+export function LTemplateColumns(
+    key: string,
+    columns: VNode[][],
+    formatValues = false,
+    preserveHighlight: boolean | "capitalized" = false
+): LTemplateColumnsNode {
+    return { __t: "ltCols", key, columns, formatValues, preserveHighlight }
 }
 
 /** 固定语言文本 key（CV 名等始终用指定语言文本，不随输出语言变） */
@@ -335,6 +370,68 @@ function renderVNode(v: VNode, lang: string, textmap: TextMap): unknown {
                 if (value !== undefined) values.push(renderTree(value, lang, textmap))
             }
             return values
+        }
+        case "ltCols": {
+            // 保留 #N 占位符的模板 + 每个占位符的逐级值；模板仍按语言取。
+            let template = textmap.get(v.key, lang)
+            if (template === v.key) template = textmap.get(v.key, "cn")
+            const originalTemplate = template
+            // 列数按 cn 模板（数据主源）引用的最大占位符截断。
+            // 数据源的取值列表可能包含未被模板引用的末尾条目：它们只服务于取值内部的
+            // 互引（如 DescValues[2]="#2" 被 DescValues[1] 读取），本身不参与文案替换，
+            // 但按占位符编号计算会产出无意义的字面串。截断后列与占位符仍按编号对齐。
+            const cnTemplate = String(textmap.get(v.key, "cn"))
+            const referenced = [...cnTemplate.matchAll(/#(\d+)(?!\d)/g)].map(match => Number(match[1]))
+            const limit = referenced.length > 0 ? Math.max(...referenced) : 0
+            // 模板 key 无法解析时（文本缺失，get 回退返回 key 本身）不做截断，
+            // 避免把仅因文本缺失而看似"未引用"的数据一并丢弃。
+            const columnCount = cnTemplate === v.key ? v.columns.length : Math.min(v.columns.length, limit)
+            // 与 LTemplate 同一套 cast 处理：逐占位符消费 {int}/{floatN} 标记并解析数值精度。
+            // 区别是这里不做替换（占位符原样保留），因此标记消费结果与既有替换路径逐字一致。
+            let castTemplate = template
+            const casts: DescCast[] = []
+            for (let i = 0; i < columnCount; i++) {
+                if (!v.formatValues) {
+                    casts.push(null)
+                    continue
+                }
+                const resolved = descValueCast(castTemplate, i + 1, originalTemplate)
+                castTemplate = resolved.template
+                casts.push(resolved.cast)
+            }
+            // 列与占位符按编号一一对应：columns[i] ↔ #(i+1)。
+            const renderedColumns: string[][] = []
+            for (let i = 0; i < columnCount; i++) {
+                const rendered: string[] = []
+                for (const value of v.columns[i]) {
+                    const text = String(renderVNode(value, lang, textmap) ?? "")
+                    rendered.push(v.formatValues ? formatDescValue1(text, casts[i]) : text)
+                }
+                renderedColumns.push(rendered)
+            }
+            // 退火：某列各级取值完全一致时，该值不随等级变化，直接代入模板并移除该列。
+            const constantFlags = renderedColumns.map(column => column.length > 0 && column.every(text => text === column[0]))
+            let outTemplate = castTemplate
+            for (let i = 0; i < constantFlags.length; i++) {
+                if (!constantFlags[i]) continue
+                // 用函数式替换：取值可能含 $ 等替换字符串的元字符
+                outTemplate = outTemplate.replace(new RegExp(`#${i + 1}(?!\\d)`, "g"), () => renderedColumns[i][0])
+            }
+            // 移除常量列后，把剩余占位符按原顺序重排为连续的 #1..#k，使 #N 始终对应第 N 个数组。
+            // 按升序重排（新编号 ≤ 原编号），配合 (?!\d) 不会与 #10 之类的多位数互相干扰。
+            const survivors = renderedColumns.filter((_, index) => !constantFlags[index])
+            let next = 1
+            for (let i = 0; i < renderedColumns.length; i++) {
+                if (constantFlags[i]) continue
+                const from = i + 1
+                const to = next++
+                if (from !== to) outTemplate = outTemplate.replace(new RegExp(`#${from}(?!\\d)`, "g"), `#${to}`)
+            }
+            if (v.preserveHighlight === true) outTemplate = outTemplate.replace(/\{int\}/gi, "")
+            else if (v.preserveHighlight === "capitalized")
+                outTemplate = outTemplate.replace(/<(?!Highlight>)[^>]*>/g, "").replace(/\{int\}/gi, "")
+            else outTemplate = outTemplate.replace(/<[^>]*>/g, "").replace(/\{int\}/gi, "")
+            return [outTemplate, ...survivors]
         }
     }
 }

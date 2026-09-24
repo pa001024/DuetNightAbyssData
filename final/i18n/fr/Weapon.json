@@ -55,12 +55,15 @@
       }
     ],
     "熔炼": [
-      "ATQ du personnage +60.0%.",
-      "ATQ du personnage +72.0%.",
-      "ATQ du personnage +84.0%.",
-      "ATQ du personnage +96.0%.",
-      "ATQ du personnage +108.0%.",
-      "ATQ du personnage +120.0%."
+      "ATQ du personnage +#1.",
+      [
+        "60.0%",
+        "72.0%",
+        "84.0%",
+        "96.0%",
+        "108.0%",
+        "120.0%"
+      ]
     ],
     "技能": [
       {
@@ -239,12 +242,23 @@
       }
     ],
     "熔炼": [
-      "Chance de déclenchement +75.0%. Lorsqu’un personnage Hydro déclenche un Effet supplémentaire avec cette arme, les autres alliés obtiennent +33.0% d’ATQ pendant 6.0 s.",
-      "Chance de déclenchement +90.0%. Lorsqu’un personnage Hydro déclenche un Effet supplémentaire avec cette arme, les autres alliés obtiennent +39.6% d’ATQ pendant 6.0 s.",
-      "Chance de déclenchement +105.0%. Lorsqu’un personnage Hydro déclenche un Effet supplémentaire avec cette arme, les autres alliés obtiennent +46.2% d’ATQ pendant 6.0 s.",
-      "Chance de déclenchement +120.0%. Lorsqu’un personnage Hydro déclenche un Effet supplémentaire avec cette arme, les autres alliés obtiennent +52.8% d’ATQ pendant 6.0 s.",
-      "Chance de déclenchement +135.0%. Lorsqu’un personnage Hydro déclenche un Effet supplémentaire avec cette arme, les autres alliés obtiennent +59.4% d’ATQ pendant 6.0 s.",
-      "Chance de déclenchement +150.0%. Lorsqu’un personnage Hydro déclenche un Effet supplémentaire avec cette arme, les autres alliés obtiennent +66.0% d’ATQ pendant 6.0 s."
+      "Chance de déclenchement +#1. Lorsqu’un personnage Hydro déclenche un Effet supplémentaire avec cette arme, les autres alliés obtiennent +#2 d’ATQ pendant 6.0 s.",
+      [
+        "75.0%",
+        "90.0%",
+        "105.0%",
+        "120.0%",
+        "135.0%",
+        "150.0%"
+      ],
+      [
+        "33.0%",
+        "39.6%",
+        "46.2%",
+        "52.8%",
+        "59.4%",
+        "66.0%"
+      ]
     ],
     "技能": [
       {
@@ -423,12 +437,23 @@
       }
     ],
     "熔炼": [
-      "Portée d’attaque +1.0. Lorsque cette arme inflige un coup critique, vous avez 33.0% de chances de restaurer 3.0 de Lucidité.\nCet effet peut se déclencher au maximum une fois toutes les 0.5 s.",
-      "Portée d’attaque +1.2. Lorsque cette arme inflige un coup critique, vous avez 39.6% de chances de restaurer 3.0 de Lucidité.\nCet effet peut se déclencher au maximum une fois toutes les 0.5 s.",
-      "Portée d’attaque +1.4. Lorsque cette arme inflige un coup critique, vous avez 46.2% de chances de restaurer 3.0 de Lucidité.\nCet effet peut se déclencher au maximum une fois toutes les 0.5 s.",
-      "Portée d’attaque +1.6. Lorsque cette arme inflige un coup critique, vous avez 52.8% de chances de restaurer 3.0 de Lucidité.\nCet effet peut se déclencher au maximum une fois toutes les 0.5 s.",
-      "Portée d’attaque +1.8. Lorsque cette arme inflige un coup critique, vous avez 59.4% de chances de restaurer 3.0 de Lucidité.\nCet effet peut se déclencher au maximum une fois toutes les 0.5 s.",
-      "Portée d’attaque +2.0. Lorsque cette arme inflige un coup critique, vous avez 66.0% de chances de restaurer 3.0 de Lucidité.\nCet effet peut se déclencher au maximum une fois toutes les 0.5 s."
+      "Portée d’attaque +#1. Lorsque cette arme inflige un coup critique, vous avez #2 de chances de restaurer 3.0 de Lucidité.\nCet effet peut se déclencher au maximum une fois toutes les 0.5 s.",
+      [
+        "1.0",
+        "1.2",
+        "1.4",
+        "1.6",
+        "1.8",
+        "2.0"
+      ],
+      [
+        "33.0%",
+        "39.6%",
+        "46.2%",
+        "52.8%",
+        "59.4%",
+        "66.0%"
+      ]
     ],
     "技能": [
       {
@@ -607,12 +632,23 @@
       }
     ],
     "熔炼": [
-      "DÉF +50.0%. Lorsque l’arme déclenche un Effet supplémentaire, elle a 25.0% de chances de réduire le Bouclier de la cible d’une valeur équivalente à 350.0% de la DÉF du porteur.",
-      "DÉF +60.0%. Lorsque l’arme déclenche un Effet supplémentaire, elle a 30.0% de chances de réduire le Bouclier de la cible d’une valeur équivalente à 350.0% de la DÉF du porteur.",
-      "DÉF +70.0%. Lorsque l’arme déclenche un Effet supplémentaire, elle a 35.0% de chances de réduire le Bouclier de la cible d’une valeur équivalente à 350.0% de la DÉF du porteur.",
-      "DÉF +80.0%. Lorsque l’arme déclenche un Effet supplémentaire, elle a 40.0% de chances de réduire le Bouclier de la cible d’une valeur équivalente à 350.0% de la DÉF du porteur.",
-      "DÉF +90.0%. Lorsque l’arme déclenche un Effet supplémentaire, elle a 45.0% de chances de réduire le Bouclier de la cible d’une valeur équivalente à 350.0% de la DÉF du porteur.",
-      "DÉF +100.0%. Lorsque l’arme déclenche un Effet supplémentaire, elle a 50.0% de chances de réduire le Bouclier de la cible d’une valeur équivalente à 350.0% de la DÉF du porteur."
+      "DÉF +#1. Lorsque l’arme déclenche un Effet supplémentaire, elle a #2 de chances de réduire le Bouclier de la cible d’une valeur équivalente à 350.0% de la DÉF du porteur.",
+      [
+        "50.0%",
+        "60.0%",
+        "70.0%",
+        "80.0%",
+        "90.0%",
+        "100.0%"
+      ],
+      [
+        "25.0%",
+        "30.0%",
+        "35.0%",
+        "40.0%",
+        "45.0%",
+        "50.0%"
+      ]
     ],
     "技能": [
       {
@@ -791,12 +827,23 @@
       }
     ],
     "熔炼": [
-      "Vitesse d’attaque +25.0%. Lors d’une attaque chargée avec cette arme, 28.0% de chances de réduire le temps de recharge du Soutien de Géniemon de 3.0 s.",
-      "Vitesse d’attaque +30.0%. Lors d’une attaque chargée avec cette arme, 33.6% de chances de réduire le temps de recharge du Soutien de Géniemon de 3.0 s.",
-      "Vitesse d’attaque +35.0%. Lors d’une attaque chargée avec cette arme, 39.2% de chances de réduire le temps de recharge du Soutien de Géniemon de 3.0 s.",
-      "Vitesse d’attaque +40.0%. Lors d’une attaque chargée avec cette arme, 44.8% de chances de réduire le temps de recharge du Soutien de Géniemon de 3.0 s.",
-      "Vitesse d’attaque +45.0%. Lors d’une attaque chargée avec cette arme, 50.4% de chances de réduire le temps de recharge du Soutien de Géniemon de 3.0 s.",
-      "Vitesse d’attaque +50.0%. Lors d’une attaque chargée avec cette arme, 56.0% de chances de réduire le temps de recharge du Soutien de Géniemon de 3.0 s."
+      "Vitesse d’attaque +#1. Lors d’une attaque chargée avec cette arme, #2 de chances de réduire le temps de recharge du Soutien de Géniemon de 3.0 s.",
+      [
+        "25.0%",
+        "30.0%",
+        "35.0%",
+        "40.0%",
+        "45.0%",
+        "50.0%"
+      ],
+      [
+        "28.0%",
+        "33.6%",
+        "39.2%",
+        "44.8%",
+        "50.4%",
+        "56.0%"
+      ]
     ],
     "技能": [
       {
@@ -975,12 +1022,31 @@
       }
     ],
     "熔炼": [
-      "Vigueur +15.0%. Lorsque les personnages Umbro infligent des dégâts, les dégâts augmentent de 0.20% par point de Combo. Après avoir consommé des points de Combo, la valeur de Vigueur augmente de [0.25% × points consommés] pendant 8.0 s.",
-      "Vigueur +18.0%. Lorsque les personnages Umbro infligent des dégâts, les dégâts augmentent de 0.24% par point de Combo. Après avoir consommé des points de Combo, la valeur de Vigueur augmente de [0.30% × points consommés] pendant 8.0 s.",
-      "Vigueur +21.0%. Lorsque les personnages Umbro infligent des dégâts, les dégâts augmentent de 0.28% par point de Combo. Après avoir consommé des points de Combo, la valeur de Vigueur augmente de [0.35% × points consommés] pendant 8.0 s.",
-      "Vigueur +24.0%. Lorsque les personnages Umbro infligent des dégâts, les dégâts augmentent de 0.32% par point de Combo. Après avoir consommé des points de Combo, la valeur de Vigueur augmente de [0.40% × points consommés] pendant 8.0 s.",
-      "Vigueur +27.0%. Lorsque les personnages Umbro infligent des dégâts, les dégâts augmentent de 0.36% par point de Combo. Après avoir consommé des points de Combo, la valeur de Vigueur augmente de [0.45% × points consommés] pendant 8.0 s.",
-      "Vigueur +30.0%. Lorsque les personnages Umbro infligent des dégâts, les dégâts augmentent de 0.40% par point de Combo. Après avoir consommé des points de Combo, la valeur de Vigueur augmente de [0.50% × points consommés] pendant 8.0 s."
+      "Vigueur +#1. Lorsque les personnages Umbro infligent des dégâts, les dégâts augmentent de #2 par point de Combo. Après avoir consommé des points de Combo, la valeur de Vigueur augmente de [#3 × points consommés] pendant 8.0 s.",
+      [
+        "15.0%",
+        "18.0%",
+        "21.0%",
+        "24.0%",
+        "27.0%",
+        "30.0%"
+      ],
+      [
+        "0.20%",
+        "0.24%",
+        "0.28%",
+        "0.32%",
+        "0.36%",
+        "0.40%"
+      ],
+      [
+        "0.25%",
+        "0.30%",
+        "0.35%",
+        "0.40%",
+        "0.45%",
+        "0.50%"
+      ]
     ],
     "技能": [
       {
@@ -1159,12 +1225,23 @@
       }
     ],
     "熔炼": [
-      "Portée de compétence +30.0%. Lorsqu’une Attaque normale portée avec cette arme touche une cible, confère +3.6% de Vitesse d’attaque pendant 15.0 s. Cumulable jusqu’à 12.0 fois. L’effet est annulé lors du changement d’arme.",
-      "Portée de compétence +36.0%. Lorsqu’une Attaque normale portée avec cette arme touche une cible, confère +4.3% de Vitesse d’attaque pendant 15.0 s. Cumulable jusqu’à 12.0 fois. L’effet est annulé lors du changement d’arme.",
-      "Portée de compétence +42.0%. Lorsqu’une Attaque normale portée avec cette arme touche une cible, confère +5.0% de Vitesse d’attaque pendant 15.0 s. Cumulable jusqu’à 12.0 fois. L’effet est annulé lors du changement d’arme.",
-      "Portée de compétence +48.0%. Lorsqu’une Attaque normale portée avec cette arme touche une cible, confère +5.8% de Vitesse d’attaque pendant 15.0 s. Cumulable jusqu’à 12.0 fois. L’effet est annulé lors du changement d’arme.",
-      "Portée de compétence +54.0%. Lorsqu’une Attaque normale portée avec cette arme touche une cible, confère +6.5% de Vitesse d’attaque pendant 15.0 s. Cumulable jusqu’à 12.0 fois. L’effet est annulé lors du changement d’arme.",
-      "Portée de compétence +60.0%. Lorsqu’une Attaque normale portée avec cette arme touche une cible, confère +7.2% de Vitesse d’attaque pendant 15.0 s. Cumulable jusqu’à 12.0 fois. L’effet est annulé lors du changement d’arme."
+      "Portée de compétence +#1. Lorsqu’une Attaque normale portée avec cette arme touche une cible, confère +#2 de Vitesse d’attaque pendant 15.0 s. Cumulable jusqu’à 12.0 fois. L’effet est annulé lors du changement d’arme.",
+      [
+        "30.0%",
+        "36.0%",
+        "42.0%",
+        "48.0%",
+        "54.0%",
+        "60.0%"
+      ],
+      [
+        "3.6%",
+        "4.3%",
+        "5.0%",
+        "5.8%",
+        "6.5%",
+        "7.2%"
+      ]
     ],
     "技能": [
       {
@@ -1368,12 +1445,23 @@
       }
     ],
     "熔炼": [
-      "Vitesse d’attaque +25.0%. Les attaques avec cette arme infligent 45.0% de dégâts supplémentaires aux cibles affectées par un Effet supplémentaire.",
-      "Vitesse d’attaque +30.0%. Les attaques avec cette arme infligent 54.0% de dégâts supplémentaires aux cibles affectées par un Effet supplémentaire.",
-      "Vitesse d’attaque +35.0%. Les attaques avec cette arme infligent 63.0% de dégâts supplémentaires aux cibles affectées par un Effet supplémentaire.",
-      "Vitesse d’attaque +40.0%. Les attaques avec cette arme infligent 72.0% de dégâts supplémentaires aux cibles affectées par un Effet supplémentaire.",
-      "Vitesse d’attaque +45.0%. Les attaques avec cette arme infligent 81.0% de dégâts supplémentaires aux cibles affectées par un Effet supplémentaire.",
-      "Vitesse d’attaque +50.0%. Les attaques avec cette arme infligent 90.0% de dégâts supplémentaires aux cibles affectées par un Effet supplémentaire."
+      "Vitesse d’attaque +#1. Les attaques avec cette arme infligent #2 de dégâts supplémentaires aux cibles affectées par un Effet supplémentaire.",
+      [
+        "25.0%",
+        "30.0%",
+        "35.0%",
+        "40.0%",
+        "45.0%",
+        "50.0%"
+      ],
+      [
+        "45.0%",
+        "54.0%",
+        "63.0%",
+        "72.0%",
+        "81.0%",
+        "90.0%"
+      ]
     ],
     "技能": [
       {
@@ -1577,12 +1665,23 @@
       }
     ],
     "熔炼": [
-      "Puissance de compétence +20.0%. Lorsqu’un personnage Électro inflige des dégâts d’attaque plongeante, vous et vos alliés Électro gagnez 1 cumul d’augmentation des Dégâts de compétence de 5.0% pendant 10.0 s, cumulable jusqu’à 5 fois.",
-      "Puissance de compétence +24.0%. Lorsqu’un personnage Électro inflige des dégâts d’attaque plongeante, vous et vos alliés Électro gagnez 1 cumul d’augmentation des Dégâts de compétence de 6.0% pendant 10.0 s, cumulable jusqu’à 5 fois.",
-      "Puissance de compétence +28.0%. Lorsqu’un personnage Électro inflige des dégâts d’attaque plongeante, vous et vos alliés Électro gagnez 1 cumul d’augmentation des Dégâts de compétence de 7.0% pendant 10.0 s, cumulable jusqu’à 5 fois.",
-      "Puissance de compétence +32.0%. Lorsqu’un personnage Électro inflige des dégâts d’attaque plongeante, vous et vos alliés Électro gagnez 1 cumul d’augmentation des Dégâts de compétence de 8.0% pendant 10.0 s, cumulable jusqu’à 5 fois.",
-      "Puissance de compétence +36.0%. Lorsqu’un personnage Électro inflige des dégâts d’attaque plongeante, vous et vos alliés Électro gagnez 1 cumul d’augmentation des Dégâts de compétence de 9.0% pendant 10.0 s, cumulable jusqu’à 5 fois.",
-      "Puissance de compétence +40.0%. Lorsqu’un personnage Électro inflige des dégâts d’attaque plongeante, vous et vos alliés Électro gagnez 1 cumul d’augmentation des Dégâts de compétence de 10.0% pendant 10.0 s, cumulable jusqu’à 5 fois."
+      "Puissance de compétence +#1. Lorsqu’un personnage Électro inflige des dégâts d’attaque plongeante, vous et vos alliés Électro gagnez 1 cumul d’augmentation des Dégâts de compétence de #2 pendant 10.0 s, cumulable jusqu’à 5 fois.",
+      [
+        "20.0%",
+        "24.0%",
+        "28.0%",
+        "32.0%",
+        "36.0%",
+        "40.0%"
+      ],
+      [
+        "5.0%",
+        "6.0%",
+        "7.0%",
+        "8.0%",
+        "9.0%",
+        "10.0%"
+      ]
     ],
     "技能": [
       {
@@ -1786,12 +1885,31 @@
       }
     ],
     "熔炼": [
-      "Ténacité +5.0%. Lorsqu’un personnage Anémo utilise sa compétence ultime, il obtient [Bénédiction des Mille Vents] :\nTénacité +8.0%, Vitesse d’attaque +15.0% pendant 15.0 s.\nChaque Dégâts de compétence ou DGT d’arme à distance prolonge la durée de l’effet de 0.2 s.",
-      "Ténacité +6.0%. Lorsqu’un personnage Anémo utilise sa compétence ultime, il obtient [Bénédiction des Mille Vents] :\nTénacité +9.6%, Vitesse d’attaque +18.0% pendant 15.0 s.\nChaque Dégâts de compétence ou DGT d’arme à distance prolonge la durée de l’effet de 0.2 s.",
-      "Ténacité +7.0%. Lorsqu’un personnage Anémo utilise sa compétence ultime, il obtient [Bénédiction des Mille Vents] :\nTénacité +11.2%, Vitesse d’attaque +21.0% pendant 15.0 s.\nChaque Dégâts de compétence ou DGT d’arme à distance prolonge la durée de l’effet de 0.2 s.",
-      "Ténacité +8.0%. Lorsqu’un personnage Anémo utilise sa compétence ultime, il obtient [Bénédiction des Mille Vents] :\nTénacité +12.8%, Vitesse d’attaque +24.0% pendant 15.0 s.\nChaque Dégâts de compétence ou DGT d’arme à distance prolonge la durée de l’effet de 0.2 s.",
-      "Ténacité +9.0%. Lorsqu’un personnage Anémo utilise sa compétence ultime, il obtient [Bénédiction des Mille Vents] :\nTénacité +14.4%, Vitesse d’attaque +27.0% pendant 15.0 s.\nChaque Dégâts de compétence ou DGT d’arme à distance prolonge la durée de l’effet de 0.2 s.",
-      "Ténacité +10.0%. Lorsqu’un personnage Anémo utilise sa compétence ultime, il obtient [Bénédiction des Mille Vents] :\nTénacité +16.0%, Vitesse d’attaque +30.0% pendant 15.0 s.\nChaque Dégâts de compétence ou DGT d’arme à distance prolonge la durée de l’effet de 0.2 s."
+      "Ténacité +#1. Lorsqu’un personnage Anémo utilise sa compétence ultime, il obtient [Bénédiction des Mille Vents] :\nTénacité +#2, Vitesse d’attaque +#3 pendant 15.0 s.\nChaque Dégâts de compétence ou DGT d’arme à distance prolonge la durée de l’effet de 0.2 s.",
+      [
+        "5.0%",
+        "6.0%",
+        "7.0%",
+        "8.0%",
+        "9.0%",
+        "10.0%"
+      ],
+      [
+        "8.0%",
+        "9.6%",
+        "11.2%",
+        "12.8%",
+        "14.4%",
+        "16.0%"
+      ],
+      [
+        "15.0%",
+        "18.0%",
+        "21.0%",
+        "24.0%",
+        "27.0%",
+        "30.0%"
+      ]
     ],
     "技能": [
       {
@@ -1995,12 +2113,15 @@
       }
     ],
     "熔炼": [
-      "Puissance de compétence +24.0%.",
-      "Puissance de compétence +28.8%.",
-      "Puissance de compétence +33.6%.",
-      "Puissance de compétence +38.4%.",
-      "Puissance de compétence +43.2%.",
-      "Puissance de compétence +48.0%."
+      "Puissance de compétence +#1.",
+      [
+        "24.0%",
+        "28.8%",
+        "33.6%",
+        "38.4%",
+        "43.2%",
+        "48.0%"
+      ]
     ],
     "技能": [
       {
@@ -2204,12 +2325,23 @@
       }
     ],
     "熔炼": [
-      "Taux CRIT +50.0%. Lorsque cette arme inflige des dégâts avec une attaque normale, il y a 1.7% de chances de recharger le chargeur de l’arme à distance équipée.",
-      "Taux CRIT +60.0%. Lorsque cette arme inflige des dégâts avec une attaque normale, il y a 2.0% de chances de recharger le chargeur de l’arme à distance équipée.",
-      "Taux CRIT +70.0%. Lorsque cette arme inflige des dégâts avec une attaque normale, il y a 2.4% de chances de recharger le chargeur de l’arme à distance équipée.",
-      "Taux CRIT +80.0%. Lorsque cette arme inflige des dégâts avec une attaque normale, il y a 2.7% de chances de recharger le chargeur de l’arme à distance équipée.",
-      "Taux CRIT +90.0%. Lorsque cette arme inflige des dégâts avec une attaque normale, il y a 3.1% de chances de recharger le chargeur de l’arme à distance équipée.",
-      "Taux CRIT +100.0%. Lorsque cette arme inflige des dégâts avec une attaque normale, il y a 3.4% de chances de recharger le chargeur de l’arme à distance équipée."
+      "Taux CRIT +#1. Lorsque cette arme inflige des dégâts avec une attaque normale, il y a #2 de chances de recharger le chargeur de l’arme à distance équipée.",
+      [
+        "50.0%",
+        "60.0%",
+        "70.0%",
+        "80.0%",
+        "90.0%",
+        "100.0%"
+      ],
+      [
+        "1.7%",
+        "2.0%",
+        "2.4%",
+        "2.7%",
+        "3.1%",
+        "3.4%"
+      ]
     ],
     "技能": [
       {
@@ -2413,12 +2545,23 @@
       }
     ],
     "熔炼": [
-      "Taux CRIT +50.0%. Lorsqu’un coup critique est infligé avec cette arme, il y a 30.0% de chances d’augmenter les DGT CRIT de 3.0% pendant 15.0 s. Cumulable jusqu’à 25.0 fois. L’effet est annulé lors du changement d’arme.",
-      "Taux CRIT +60.0%. Lorsqu’un coup critique est infligé avec cette arme, il y a 30.0% de chances d’augmenter les DGT CRIT de 3.6% pendant 15.0 s. Cumulable jusqu’à 25.0 fois. L’effet est annulé lors du changement d’arme.",
-      "Taux CRIT +70.0%. Lorsqu’un coup critique est infligé avec cette arme, il y a 30.0% de chances d’augmenter les DGT CRIT de 4.2% pendant 15.0 s. Cumulable jusqu’à 25.0 fois. L’effet est annulé lors du changement d’arme.",
-      "Taux CRIT +80.0%. Lorsqu’un coup critique est infligé avec cette arme, il y a 30.0% de chances d’augmenter les DGT CRIT de 4.8% pendant 15.0 s. Cumulable jusqu’à 25.0 fois. L’effet est annulé lors du changement d’arme.",
-      "Taux CRIT +90.0%. Lorsqu’un coup critique est infligé avec cette arme, il y a 30.0% de chances d’augmenter les DGT CRIT de 5.4% pendant 15.0 s. Cumulable jusqu’à 25.0 fois. L’effet est annulé lors du changement d’arme.",
-      "Taux CRIT +100.0%. Lorsqu’un coup critique est infligé avec cette arme, il y a 30.0% de chances d’augmenter les DGT CRIT de 6.0% pendant 15.0 s. Cumulable jusqu’à 25.0 fois. L’effet est annulé lors du changement d’arme."
+      "Taux CRIT +#1. Lorsqu’un coup critique est infligé avec cette arme, il y a 30.0% de chances d’augmenter les DGT CRIT de #2 pendant 15.0 s. Cumulable jusqu’à 25.0 fois. L’effet est annulé lors du changement d’arme.",
+      [
+        "50.0%",
+        "60.0%",
+        "70.0%",
+        "80.0%",
+        "90.0%",
+        "100.0%"
+      ],
+      [
+        "3.0%",
+        "3.6%",
+        "4.2%",
+        "4.8%",
+        "5.4%",
+        "6.0%"
+      ]
     ],
     "技能": [
       {
@@ -2625,11 +2768,6 @@
       }
     ],
     "熔炼": [
-      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
-      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
-      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
-      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
-      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
       "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage."
     ],
     "熔炉": [
@@ -3036,12 +3174,23 @@
       }
     ],
     "熔炼": [
-      "PV max +50.0%. Lorsqu’un personnage Pyro subit des dégâts, il obtient +15.0% de Durée de compétence pendant 8.0 s. Cumulable jusqu’à 3.0 fois.",
-      "PV max +60.0%. Lorsqu’un personnage Pyro subit des dégâts, il obtient +18.0% de Durée de compétence pendant 8.0 s. Cumulable jusqu’à 3.0 fois.",
-      "PV max +70.0%. Lorsqu’un personnage Pyro subit des dégâts, il obtient +21.0% de Durée de compétence pendant 8.0 s. Cumulable jusqu’à 3.0 fois.",
-      "PV max +80.0%. Lorsqu’un personnage Pyro subit des dégâts, il obtient +24.0% de Durée de compétence pendant 8.0 s. Cumulable jusqu’à 3.0 fois.",
-      "PV max +90.0%. Lorsqu’un personnage Pyro subit des dégâts, il obtient +27.0% de Durée de compétence pendant 8.0 s. Cumulable jusqu’à 3.0 fois.",
-      "PV max +100.0%. Lorsqu’un personnage Pyro subit des dégâts, il obtient +30.0% de Durée de compétence pendant 8.0 s. Cumulable jusqu’à 3.0 fois."
+      "PV max +#1. Lorsqu’un personnage Pyro subit des dégâts, il obtient +#2 de Durée de compétence pendant 8.0 s. Cumulable jusqu’à 3.0 fois.",
+      [
+        "50.0%",
+        "60.0%",
+        "70.0%",
+        "80.0%",
+        "90.0%",
+        "100.0%"
+      ],
+      [
+        "15.0%",
+        "18.0%",
+        "21.0%",
+        "24.0%",
+        "27.0%",
+        "30.0%"
+      ]
     ],
     "技能": [
       {
@@ -3229,12 +3378,23 @@
       }
     ],
     "熔炼": [
-      "Taux CRIT +50.0%. Lorsque l’arme déclenche un Effet supplémentaire, a 2.1% de chances de passer directement au niveau de Combo maximal.",
-      "Taux CRIT +60.0%. Lorsque l’arme déclenche un Effet supplémentaire, a 2.5% de chances de passer directement au niveau de Combo maximal.",
-      "Taux CRIT +70.0%. Lorsque l’arme déclenche un Effet supplémentaire, a 2.9% de chances de passer directement au niveau de Combo maximal.",
-      "Taux CRIT +80.0%. Lorsque l’arme déclenche un Effet supplémentaire, a 3.4% de chances de passer directement au niveau de Combo maximal.",
-      "Taux CRIT +90.0%. Lorsque l’arme déclenche un Effet supplémentaire, a 3.8% de chances de passer directement au niveau de Combo maximal.",
-      "Taux CRIT +100.0%. Lorsque l’arme déclenche un Effet supplémentaire, a 4.2% de chances de passer directement au niveau de Combo maximal."
+      "Taux CRIT +#1. Lorsque l’arme déclenche un Effet supplémentaire, a #2 de chances de passer directement au niveau de Combo maximal.",
+      [
+        "50.0%",
+        "60.0%",
+        "70.0%",
+        "80.0%",
+        "90.0%",
+        "100.0%"
+      ],
+      [
+        "2.1%",
+        "2.5%",
+        "2.9%",
+        "3.4%",
+        "3.8%",
+        "4.2%"
+      ]
     ],
     "技能": [
       {
@@ -3422,12 +3582,15 @@
       }
     ],
     "熔炼": [
-      "Durée de compétence +18.0%.",
-      "Durée de compétence +21.6%.",
-      "Durée de compétence +25.2%.",
-      "Durée de compétence +28.8%.",
-      "Durée de compétence +32.4%.",
-      "Durée de compétence +36.0%."
+      "Durée de compétence +#1.",
+      [
+        "18.0%",
+        "21.6%",
+        "25.2%",
+        "28.8%",
+        "32.4%",
+        "36.0%"
+      ]
     ],
     "技能": [
       {
@@ -3615,12 +3778,23 @@
       }
     ],
     "熔炼": [
-      "Vigueur +15.0%. Lorsqu’un personnage Électro utilise sa Compétence ultime, vous obtenez 1 cumul de +25.0% de Puissance de compétence pendant 12.0 s (cumulable jusqu’à 3.0 fois).",
-      "Vigueur +18.0%. Lorsqu’un personnage Électro utilise sa Compétence ultime, vous obtenez 1 cumul de +30.0% de Puissance de compétence pendant 12.0 s (cumulable jusqu’à 3.0 fois).",
-      "Vigueur +21.0%. Lorsqu’un personnage Électro utilise sa Compétence ultime, vous obtenez 1 cumul de +35.0% de Puissance de compétence pendant 12.0 s (cumulable jusqu’à 3.0 fois).",
-      "Vigueur +24.0%. Lorsqu’un personnage Électro utilise sa Compétence ultime, vous obtenez 1 cumul de +40.0% de Puissance de compétence pendant 12.0 s (cumulable jusqu’à 3.0 fois).",
-      "Vigueur +27.0%. Lorsqu’un personnage Électro utilise sa Compétence ultime, vous obtenez 1 cumul de +45.0% de Puissance de compétence pendant 12.0 s (cumulable jusqu’à 3.0 fois).",
-      "Vigueur +30.0%. Lorsqu’un personnage Électro utilise sa Compétence ultime, vous obtenez 1 cumul de +50.0% de Puissance de compétence pendant 12.0 s (cumulable jusqu’à 3.0 fois)."
+      "Vigueur +#1. Lorsqu’un personnage Électro utilise sa Compétence ultime, vous obtenez 1 cumul de +#2 de Puissance de compétence pendant 12.0 s (cumulable jusqu’à 3.0 fois).",
+      [
+        "15.0%",
+        "18.0%",
+        "21.0%",
+        "24.0%",
+        "27.0%",
+        "30.0%"
+      ],
+      [
+        "25.0%",
+        "30.0%",
+        "35.0%",
+        "40.0%",
+        "45.0%",
+        "50.0%"
+      ]
     ],
     "技能": [
       {
@@ -3808,12 +3982,23 @@
       }
     ],
     "熔炼": [
-      "Chance de déclenchement +75.0%. Lorsque cette arme déclenche un effet supplémentaire, elle a 50.0% de chances de récupérer 5 projectiles.",
-      "Chance de déclenchement +90.0%. Lorsque cette arme déclenche un effet supplémentaire, elle a 60.0% de chances de récupérer 5 projectiles.",
-      "Chance de déclenchement +105.0%. Lorsque cette arme déclenche un effet supplémentaire, elle a 70.0% de chances de récupérer 5 projectiles.",
-      "Chance de déclenchement +120.0%. Lorsque cette arme déclenche un effet supplémentaire, elle a 80.0% de chances de récupérer 5 projectiles.",
-      "Chance de déclenchement +135.0%. Lorsque cette arme déclenche un effet supplémentaire, elle a 90.0% de chances de récupérer 5 projectiles.",
-      "Chance de déclenchement +150.0%. Lorsque cette arme déclenche un effet supplémentaire, elle a 100.0% de chances de récupérer 5 projectiles."
+      "Chance de déclenchement +#1. Lorsque cette arme déclenche un effet supplémentaire, elle a #2 de chances de récupérer 5 projectiles.",
+      [
+        "75.0%",
+        "90.0%",
+        "105.0%",
+        "120.0%",
+        "135.0%",
+        "150.0%"
+      ],
+      [
+        "50.0%",
+        "60.0%",
+        "70.0%",
+        "80.0%",
+        "90.0%",
+        "100.0%"
+      ]
     ],
     "技能": [
       {
@@ -4003,11 +4188,6 @@
       }
     ],
     "熔炼": [
-      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
-      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
-      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
-      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
-      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
       "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage."
     ],
     "熔炉": [
@@ -4400,12 +4580,23 @@
       }
     ],
     "熔炼": [
-      "Vitesse d’attaque +25.0%. Lorsqu’un Effet supplémentaire est déclenché avec cette arme et que les PV sont inférieurs à 25 %, a 45.0% de chance de restaurer 1.5% % des PV max.",
-      "Vitesse d’attaque +30.0%. Lorsqu’un Effet supplémentaire est déclenché avec cette arme et que les PV sont inférieurs à 25 %, a 45.0% de chance de restaurer 1.8% % des PV max.",
-      "Vitesse d’attaque +35.0%. Lorsqu’un Effet supplémentaire est déclenché avec cette arme et que les PV sont inférieurs à 25 %, a 45.0% de chance de restaurer 2.1% % des PV max.",
-      "Vitesse d’attaque +40.0%. Lorsqu’un Effet supplémentaire est déclenché avec cette arme et que les PV sont inférieurs à 25 %, a 45.0% de chance de restaurer 2.4% % des PV max.",
-      "Vitesse d’attaque +45.0%. Lorsqu’un Effet supplémentaire est déclenché avec cette arme et que les PV sont inférieurs à 25 %, a 45.0% de chance de restaurer 2.7% % des PV max.",
-      "Vitesse d’attaque +50.0%. Lorsqu’un Effet supplémentaire est déclenché avec cette arme et que les PV sont inférieurs à 25 %, a 45.0% de chance de restaurer 3.0% % des PV max."
+      "Vitesse d’attaque +#1. Lorsqu’un Effet supplémentaire est déclenché avec cette arme et que les PV sont inférieurs à 25 %, a 45.0% de chance de restaurer #2 % des PV max.",
+      [
+        "25.0%",
+        "30.0%",
+        "35.0%",
+        "40.0%",
+        "45.0%",
+        "50.0%"
+      ],
+      [
+        "1.5%",
+        "1.8%",
+        "2.1%",
+        "2.4%",
+        "2.7%",
+        "3.0%"
+      ]
     ],
     "技能": [
       {
@@ -4594,12 +4785,23 @@
       }
     ],
     "熔炼": [
-      "DGT CRIT +62.5%. Les Attaques en glissade avec cette arme gagnent +75.0% de Taux CRIT.",
-      "DGT CRIT +75.0%. Les Attaques en glissade avec cette arme gagnent +90.0% de Taux CRIT.",
-      "DGT CRIT +87.5%. Les Attaques en glissade avec cette arme gagnent +105.0% de Taux CRIT.",
-      "DGT CRIT +100.0%. Les Attaques en glissade avec cette arme gagnent +120.0% de Taux CRIT.",
-      "DGT CRIT +112.5%. Les Attaques en glissade avec cette arme gagnent +135.0% de Taux CRIT.",
-      "DGT CRIT +125.0%. Les Attaques en glissade avec cette arme gagnent +150.0% de Taux CRIT."
+      "DGT CRIT +#1. Les Attaques en glissade avec cette arme gagnent +#2 de Taux CRIT.",
+      [
+        "62.5%",
+        "75.0%",
+        "87.5%",
+        "100.0%",
+        "112.5%",
+        "125.0%"
+      ],
+      [
+        "75.0%",
+        "90.0%",
+        "105.0%",
+        "120.0%",
+        "135.0%",
+        "150.0%"
+      ]
     ],
     "技能": [
       {
@@ -4788,12 +4990,15 @@
       }
     ],
     "熔炼": [
-      "Portée de compétence +36.0%.",
-      "Portée de compétence +43.2%.",
-      "Portée de compétence +50.4%.",
-      "Portée de compétence +57.6%.",
-      "Portée de compétence +64.8%.",
-      "Portée de compétence +72.0%."
+      "Portée de compétence +#1.",
+      [
+        "36.0%",
+        "43.2%",
+        "50.4%",
+        "57.6%",
+        "64.8%",
+        "72.0%"
+      ]
     ],
     "技能": [
       {
@@ -4982,12 +5187,23 @@
       }
     ],
     "熔炼": [
-      "Portée d’attaque +1.0. Lors d’une Attaque chargée avec cette arme, 6.0% de chances de ne pas consommer de points de Combo.",
-      "Portée d’attaque +1.2. Lors d’une Attaque chargée avec cette arme, 7.2% de chances de ne pas consommer de points de Combo.",
-      "Portée d’attaque +1.4. Lors d’une Attaque chargée avec cette arme, 8.4% de chances de ne pas consommer de points de Combo.",
-      "Portée d’attaque +1.6. Lors d’une Attaque chargée avec cette arme, 9.6% de chances de ne pas consommer de points de Combo.",
-      "Portée d’attaque +1.8. Lors d’une Attaque chargée avec cette arme, 10.8% de chances de ne pas consommer de points de Combo.",
-      "Portée d’attaque +2.0. Lors d’une Attaque chargée avec cette arme, 12.0% de chances de ne pas consommer de points de Combo."
+      "Portée d’attaque +#1. Lors d’une Attaque chargée avec cette arme, #2 de chances de ne pas consommer de points de Combo.",
+      [
+        "1.0",
+        "1.2",
+        "1.4",
+        "1.6",
+        "1.8",
+        "2.0"
+      ],
+      [
+        "6.0%",
+        "7.2%",
+        "8.4%",
+        "9.6%",
+        "10.8%",
+        "12.0%"
+      ]
     ],
     "技能": [
       {
@@ -5176,12 +5392,23 @@
       }
     ],
     "熔炼": [
-      "Vitesse d’attaque +25.0%. Lorsqu’une récupération de PV vous fait dépasser 80 % de vos PV max, vos PV sont considérés comme étant à 30.0% pendant 6.0 s pour le calcul de Vigueur et de Ténacité, et votre Ténacité augmente de 20.0%.",
-      "Vitesse d’attaque +30.0%. Lorsqu’une récupération de PV vous fait dépasser 80 % de vos PV max, vos PV sont considérés comme étant à 30.0% pendant 6.0 s pour le calcul de Vigueur et de Ténacité, et votre Ténacité augmente de 24.0%.",
-      "Vitesse d’attaque +35.0%. Lorsqu’une récupération de PV vous fait dépasser 80 % de vos PV max, vos PV sont considérés comme étant à 30.0% pendant 6.0 s pour le calcul de Vigueur et de Ténacité, et votre Ténacité augmente de 28.0%.",
-      "Vitesse d’attaque +40.0%. Lorsqu’une récupération de PV vous fait dépasser 80 % de vos PV max, vos PV sont considérés comme étant à 30.0% pendant 6.0 s pour le calcul de Vigueur et de Ténacité, et votre Ténacité augmente de 32.0%.",
-      "Vitesse d’attaque +45.0%. Lorsqu’une récupération de PV vous fait dépasser 80 % de vos PV max, vos PV sont considérés comme étant à 30.0% pendant 6.0 s pour le calcul de Vigueur et de Ténacité, et votre Ténacité augmente de 36.0%.",
-      "Vitesse d’attaque +50.0%. Lorsqu’une récupération de PV vous fait dépasser 80 % de vos PV max, vos PV sont considérés comme étant à 30.0% pendant 6.0 s pour le calcul de Vigueur et de Ténacité, et votre Ténacité augmente de 40.0%."
+      "Vitesse d’attaque +#1. Lorsqu’une récupération de PV vous fait dépasser 80 % de vos PV max, vos PV sont considérés comme étant à 30.0% pendant 6.0 s pour le calcul de Vigueur et de Ténacité, et votre Ténacité augmente de #2.",
+      [
+        "25.0%",
+        "30.0%",
+        "35.0%",
+        "40.0%",
+        "45.0%",
+        "50.0%"
+      ],
+      [
+        "20.0%",
+        "24.0%",
+        "28.0%",
+        "32.0%",
+        "36.0%",
+        "40.0%"
+      ]
     ],
     "技能": [
       {
@@ -5370,12 +5597,23 @@
       }
     ],
     "熔炼": [
-      "PV max +50.0%. Lorsqu’une attaque avec cette arme déclenche un Effet supplémentaire, vous gagnez 8.6% de PV max supplémentaires pendant 15.0 s (cumulable jusqu’à 10.0 fois).",
-      "PV max +60.0%. Lorsqu’une attaque avec cette arme déclenche un Effet supplémentaire, vous gagnez 10.3% de PV max supplémentaires pendant 15.0 s (cumulable jusqu’à 10.0 fois).",
-      "PV max +70.0%. Lorsqu’une attaque avec cette arme déclenche un Effet supplémentaire, vous gagnez 12.0% de PV max supplémentaires pendant 15.0 s (cumulable jusqu’à 10.0 fois).",
-      "PV max +80.0%. Lorsqu’une attaque avec cette arme déclenche un Effet supplémentaire, vous gagnez 13.8% de PV max supplémentaires pendant 15.0 s (cumulable jusqu’à 10.0 fois).",
-      "PV max +90.0%. Lorsqu’une attaque avec cette arme déclenche un Effet supplémentaire, vous gagnez 15.5% de PV max supplémentaires pendant 15.0 s (cumulable jusqu’à 10.0 fois).",
-      "PV max +100.0%. Lorsqu’une attaque avec cette arme déclenche un Effet supplémentaire, vous gagnez 17.2% de PV max supplémentaires pendant 15.0 s (cumulable jusqu’à 10.0 fois)."
+      "PV max +#1. Lorsqu’une attaque avec cette arme déclenche un Effet supplémentaire, vous gagnez #2 de PV max supplémentaires pendant 15.0 s (cumulable jusqu’à 10.0 fois).",
+      [
+        "50.0%",
+        "60.0%",
+        "70.0%",
+        "80.0%",
+        "90.0%",
+        "100.0%"
+      ],
+      [
+        "8.6%",
+        "10.3%",
+        "12.0%",
+        "13.8%",
+        "15.5%",
+        "17.2%"
+      ]
     ],
     "技能": [
       {
@@ -5564,12 +5802,23 @@
       }
     ],
     "熔炼": [
-      "Puissance de compétence +20.0%. Lorsqu’un personnage Hydro inflige un coup critique avec cette arme, augmente les Dégâts de compétence des alliés de 17.0% pendant 6.0 s.",
-      "Puissance de compétence +24.0%. Lorsqu’un personnage Hydro inflige un coup critique avec cette arme, augmente les Dégâts de compétence des alliés de 20.4% pendant 6.0 s.",
-      "Puissance de compétence +28.0%. Lorsqu’un personnage Hydro inflige un coup critique avec cette arme, augmente les Dégâts de compétence des alliés de 23.8% pendant 6.0 s.",
-      "Puissance de compétence +32.0%. Lorsqu’un personnage Hydro inflige un coup critique avec cette arme, augmente les Dégâts de compétence des alliés de 27.2% pendant 6.0 s.",
-      "Puissance de compétence +36.0%. Lorsqu’un personnage Hydro inflige un coup critique avec cette arme, augmente les Dégâts de compétence des alliés de 30.6% pendant 6.0 s.",
-      "Puissance de compétence +40.0%. Lorsqu’un personnage Hydro inflige un coup critique avec cette arme, augmente les Dégâts de compétence des alliés de 34.0% pendant 6.0 s."
+      "Puissance de compétence +#1. Lorsqu’un personnage Hydro inflige un coup critique avec cette arme, augmente les Dégâts de compétence des alliés de #2 pendant 6.0 s.",
+      [
+        "20.0%",
+        "24.0%",
+        "28.0%",
+        "32.0%",
+        "36.0%",
+        "40.0%"
+      ],
+      [
+        "17.0%",
+        "20.4%",
+        "23.8%",
+        "27.2%",
+        "30.6%",
+        "34.0%"
+      ]
     ],
     "技能": [
       {
@@ -5758,12 +6007,15 @@
       }
     ],
     "熔炼": [
-      "Durée de compétence +18.0%.",
-      "Durée de compétence +21.6%.",
-      "Durée de compétence +25.2%.",
-      "Durée de compétence +28.8%.",
-      "Durée de compétence +32.4%.",
-      "Durée de compétence +36.0%."
+      "Durée de compétence +#1.",
+      [
+        "18.0%",
+        "21.6%",
+        "25.2%",
+        "28.8%",
+        "32.4%",
+        "36.0%"
+      ]
     ],
     "技能": [
       {
@@ -5952,12 +6204,23 @@
       }
     ],
     "熔炼": [
-      "Chance de déclenchement +75.0%. Les Attaques chargées avec cette arme confèrent +44.0% d’augmentation de la Vitesse d’attaque pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
-      "Chance de déclenchement +90.0%. Les Attaques chargées avec cette arme confèrent +52.8% d’augmentation de la Vitesse d’attaque pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
-      "Chance de déclenchement +105.0%. Les Attaques chargées avec cette arme confèrent +61.6% d’augmentation de la Vitesse d’attaque pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
-      "Chance de déclenchement +120.0%. Les Attaques chargées avec cette arme confèrent +70.4% d’augmentation de la Vitesse d’attaque pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
-      "Chance de déclenchement +135.0%. Les Attaques chargées avec cette arme confèrent +79.2% d’augmentation de la Vitesse d’attaque pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
-      "Chance de déclenchement +150.0%. Les Attaques chargées avec cette arme confèrent +88.0% d’augmentation de la Vitesse d’attaque pendant 6.0 s. L’effet est annulé lors du changement d’arme."
+      "Chance de déclenchement +#1. Les Attaques chargées avec cette arme confèrent +#2 d’augmentation de la Vitesse d’attaque pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
+      [
+        "75.0%",
+        "90.0%",
+        "105.0%",
+        "120.0%",
+        "135.0%",
+        "150.0%"
+      ],
+      [
+        "44.0%",
+        "52.8%",
+        "61.6%",
+        "70.4%",
+        "79.2%",
+        "88.0%"
+      ]
     ],
     "技能": [
       {
@@ -6146,12 +6409,23 @@
       }
     ],
     "熔炼": [
-      "Vitesse d’attaque +25.0%. Les Attaques chargées avec cette arme confèrent +12.5% de Vitesse de déplacement pendant 8.0 s.",
-      "Vitesse d’attaque +30.0%. Les Attaques chargées avec cette arme confèrent +15.0% de Vitesse de déplacement pendant 8.0 s.",
-      "Vitesse d’attaque +35.0%. Les Attaques chargées avec cette arme confèrent +17.5% de Vitesse de déplacement pendant 8.0 s.",
-      "Vitesse d’attaque +40.0%. Les Attaques chargées avec cette arme confèrent +20.0% de Vitesse de déplacement pendant 8.0 s.",
-      "Vitesse d’attaque +45.0%. Les Attaques chargées avec cette arme confèrent +22.5% de Vitesse de déplacement pendant 8.0 s.",
-      "Vitesse d’attaque +50.0%. Les Attaques chargées avec cette arme confèrent +25.0% de Vitesse de déplacement pendant 8.0 s."
+      "Vitesse d’attaque +#1. Les Attaques chargées avec cette arme confèrent +#2 de Vitesse de déplacement pendant 8.0 s.",
+      [
+        "25.0%",
+        "30.0%",
+        "35.0%",
+        "40.0%",
+        "45.0%",
+        "50.0%"
+      ],
+      [
+        "12.5%",
+        "15.0%",
+        "17.5%",
+        "20.0%",
+        "22.5%",
+        "25.0%"
+      ]
     ],
     "技能": [
       {
@@ -6340,12 +6614,23 @@
       }
     ],
     "熔炼": [
-      "DGT CRIT +62.5%. Infliger des dégâts augmente les dégâts infligés de 9.0%, plus 9.0% supplémentaires par niveau de Combo.",
-      "DGT CRIT +75.0%. Infliger des dégâts augmente les dégâts infligés de 10.8%, plus 10.8% supplémentaires par niveau de Combo.",
-      "DGT CRIT +87.5%. Infliger des dégâts augmente les dégâts infligés de 12.6%, plus 12.6% supplémentaires par niveau de Combo.",
-      "DGT CRIT +100.0%. Infliger des dégâts augmente les dégâts infligés de 14.4%, plus 14.4% supplémentaires par niveau de Combo.",
-      "DGT CRIT +112.5%. Infliger des dégâts augmente les dégâts infligés de 16.2%, plus 16.2% supplémentaires par niveau de Combo.",
-      "DGT CRIT +125.0%. Infliger des dégâts augmente les dégâts infligés de 18.0%, plus 18.0% supplémentaires par niveau de Combo."
+      "DGT CRIT +#1. Infliger des dégâts augmente les dégâts infligés de #2, plus #2 supplémentaires par niveau de Combo.",
+      [
+        "62.5%",
+        "75.0%",
+        "87.5%",
+        "100.0%",
+        "112.5%",
+        "125.0%"
+      ],
+      [
+        "9.0%",
+        "10.8%",
+        "12.6%",
+        "14.4%",
+        "16.2%",
+        "18.0%"
+      ]
     ],
     "技能": [
       {
@@ -6546,12 +6831,15 @@
       }
     ],
     "熔炼": [
-      "Portée de compétence +36.0%.",
-      "Portée de compétence +43.2%.",
-      "Portée de compétence +50.4%.",
-      "Portée de compétence +57.6%.",
-      "Portée de compétence +64.8%.",
-      "Portée de compétence +72.0%."
+      "Portée de compétence +#1.",
+      [
+        "36.0%",
+        "43.2%",
+        "50.4%",
+        "57.6%",
+        "64.8%",
+        "72.0%"
+      ]
     ],
     "技能": [
       {
@@ -6752,12 +7040,23 @@
       }
     ],
     "熔炼": [
-      "ATQ du personnage +50.0%. Les Attaques chargées avec cette arme confèrent +75.0% de DGT CRIT pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
-      "ATQ du personnage +60.0%. Les Attaques chargées avec cette arme confèrent +90.0% de DGT CRIT pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
-      "ATQ du personnage +70.0%. Les Attaques chargées avec cette arme confèrent +105.0% de DGT CRIT pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
-      "ATQ du personnage +80.0%. Les Attaques chargées avec cette arme confèrent +120.0% de DGT CRIT pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
-      "ATQ du personnage +90.0%. Les Attaques chargées avec cette arme confèrent +135.0% de DGT CRIT pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
-      "ATQ du personnage +100.0%. Les Attaques chargées avec cette arme confèrent +150.0% de DGT CRIT pendant 6.0 s. L’effet est annulé lors du changement d’arme."
+      "ATQ du personnage +#1. Les Attaques chargées avec cette arme confèrent +#2 de DGT CRIT pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
+      [
+        "50.0%",
+        "60.0%",
+        "70.0%",
+        "80.0%",
+        "90.0%",
+        "100.0%"
+      ],
+      [
+        "75.0%",
+        "90.0%",
+        "105.0%",
+        "120.0%",
+        "135.0%",
+        "150.0%"
+      ]
     ],
     "技能": [
       {
@@ -6958,12 +7257,23 @@
       }
     ],
     "熔炼": [
-      "Portée d’attaque +1.0. Lorsque le Niveau de combo augmente, confère 1 cumul augmentant les dégâts d’Attaque normale de 11.0% pendant 10.0 s, cumulable jusqu’à 4.0 fois. L’effet est annulé lors du changement d’arme.",
-      "Portée d’attaque +1.2. Lorsque le Niveau de combo augmente, confère 1 cumul augmentant les dégâts d’Attaque normale de 13.2% pendant 10.0 s, cumulable jusqu’à 4.0 fois. L’effet est annulé lors du changement d’arme.",
-      "Portée d’attaque +1.4. Lorsque le Niveau de combo augmente, confère 1 cumul augmentant les dégâts d’Attaque normale de 15.4% pendant 10.0 s, cumulable jusqu’à 4.0 fois. L’effet est annulé lors du changement d’arme.",
-      "Portée d’attaque +1.6. Lorsque le Niveau de combo augmente, confère 1 cumul augmentant les dégâts d’Attaque normale de 17.6% pendant 10.0 s, cumulable jusqu’à 4.0 fois. L’effet est annulé lors du changement d’arme.",
-      "Portée d’attaque +1.8. Lorsque le Niveau de combo augmente, confère 1 cumul augmentant les dégâts d’Attaque normale de 19.8% pendant 10.0 s, cumulable jusqu’à 4.0 fois. L’effet est annulé lors du changement d’arme.",
-      "Portée d’attaque +2.0. Lorsque le Niveau de combo augmente, confère 1 cumul augmentant les dégâts d’Attaque normale de 22.0% pendant 10.0 s, cumulable jusqu’à 4.0 fois. L’effet est annulé lors du changement d’arme."
+      "Portée d’attaque +#1. Lorsque le Niveau de combo augmente, confère 1 cumul augmentant les dégâts d’Attaque normale de #2 pendant 10.0 s, cumulable jusqu’à 4.0 fois. L’effet est annulé lors du changement d’arme.",
+      [
+        "1.0",
+        "1.2",
+        "1.4",
+        "1.6",
+        "1.8",
+        "2.0"
+      ],
+      [
+        "11.0%",
+        "13.2%",
+        "15.4%",
+        "17.6%",
+        "19.8%",
+        "22.0%"
+      ]
     ],
     "技能": [
       {
@@ -7168,12 +7478,23 @@
       }
     ],
     "熔炼": [
-      "Chance de déclenchement +75.0%. Chaque tir avec cette arme a une probabilité (selon sa Chance de déclenchement) de tirer un projectile supplémentaire sans consommer de munitions, infligeant des Dégâts de zone équivalents à 50.0% de son ATQ.",
-      "Chance de déclenchement +90.0%. Chaque tir avec cette arme a une probabilité (selon sa Chance de déclenchement) de tirer un projectile supplémentaire sans consommer de munitions, infligeant des Dégâts de zone équivalents à 60.0% de son ATQ.",
-      "Chance de déclenchement +105.0%. Chaque tir avec cette arme a une probabilité (selon sa Chance de déclenchement) de tirer un projectile supplémentaire sans consommer de munitions, infligeant des Dégâts de zone équivalents à 70.0% de son ATQ.",
-      "Chance de déclenchement +120.0%. Chaque tir avec cette arme a une probabilité (selon sa Chance de déclenchement) de tirer un projectile supplémentaire sans consommer de munitions, infligeant des Dégâts de zone équivalents à 80.0% de son ATQ.",
-      "Chance de déclenchement +135.0%. Chaque tir avec cette arme a une probabilité (selon sa Chance de déclenchement) de tirer un projectile supplémentaire sans consommer de munitions, infligeant des Dégâts de zone équivalents à 90.0% de son ATQ.",
-      "Chance de déclenchement +150.0%. Chaque tir avec cette arme a une probabilité (selon sa Chance de déclenchement) de tirer un projectile supplémentaire sans consommer de munitions, infligeant des Dégâts de zone équivalents à 100.0% de son ATQ."
+      "Chance de déclenchement +#1. Chaque tir avec cette arme a une probabilité (selon sa Chance de déclenchement) de tirer un projectile supplémentaire sans consommer de munitions, infligeant des Dégâts de zone équivalents à #2 de son ATQ.",
+      [
+        "75.0%",
+        "90.0%",
+        "105.0%",
+        "120.0%",
+        "135.0%",
+        "150.0%"
+      ],
+      [
+        "50.0%",
+        "60.0%",
+        "70.0%",
+        "80.0%",
+        "90.0%",
+        "100.0%"
+      ]
     ],
     "技能": [
       {
@@ -7279,12 +7600,15 @@
       }
     ],
     "熔炼": [
-      "ATQ du personnage +60.0%.",
-      "ATQ du personnage +72.0%.",
-      "ATQ du personnage +84.0%.",
-      "ATQ du personnage +96.0%.",
-      "ATQ du personnage +108.0%.",
-      "ATQ du personnage +120.0%."
+      "ATQ du personnage +#1.",
+      [
+        "60.0%",
+        "72.0%",
+        "84.0%",
+        "96.0%",
+        "108.0%",
+        "120.0%"
+      ]
     ],
     "技能": [
       {
@@ -7385,12 +7709,23 @@
       }
     ],
     "熔炼": [
-      "Tir multiple +37.5%. Lorsque cette arme déclenche un Effet supplémentaire, augmente les dégâts des armes de mêlée de 35.0% pendant 12.0 s.",
-      "Tir multiple +45.0%. Lorsque cette arme déclenche un Effet supplémentaire, augmente les dégâts des armes de mêlée de 42.0% pendant 12.0 s.",
-      "Tir multiple +52.5%. Lorsque cette arme déclenche un Effet supplémentaire, augmente les dégâts des armes de mêlée de 49.0% pendant 12.0 s.",
-      "Tir multiple +60.0%. Lorsque cette arme déclenche un Effet supplémentaire, augmente les dégâts des armes de mêlée de 56.0% pendant 12.0 s.",
-      "Tir multiple +67.5%. Lorsque cette arme déclenche un Effet supplémentaire, augmente les dégâts des armes de mêlée de 63.0% pendant 12.0 s.",
-      "Tir multiple +75.0%. Lorsque cette arme déclenche un Effet supplémentaire, augmente les dégâts des armes de mêlée de 70.0% pendant 12.0 s."
+      "Tir multiple +#1. Lorsque cette arme déclenche un Effet supplémentaire, augmente les dégâts des armes de mêlée de #2 pendant 12.0 s.",
+      [
+        "37.5%",
+        "45.0%",
+        "52.5%",
+        "60.0%",
+        "67.5%",
+        "75.0%"
+      ],
+      [
+        "35.0%",
+        "42.0%",
+        "49.0%",
+        "56.0%",
+        "63.0%",
+        "70.0%"
+      ]
     ],
     "技能": [
       {
@@ -7491,12 +7826,23 @@
       }
     ],
     "熔炼": [
-      "DGT CRIT +62.5%. Lorsqu’un ennemi est vaincu avec cette arme, obtient 1 cumul augmentant le Taux CRIT de 5.0% pendant 20.0 s, jusqu’à 15.0 cumuls. L’effet est annulé lors du changement d’arme.",
-      "DGT CRIT +75.0%. Lorsqu’un ennemi est vaincu avec cette arme, obtient 1 cumul augmentant le Taux CRIT de 6.0% pendant 20.0 s, jusqu’à 15.0 cumuls. L’effet est annulé lors du changement d’arme.",
-      "DGT CRIT +87.5%. Lorsqu’un ennemi est vaincu avec cette arme, obtient 1 cumul augmentant le Taux CRIT de 7.0% pendant 20.0 s, jusqu’à 15.0 cumuls. L’effet est annulé lors du changement d’arme.",
-      "DGT CRIT +100.0%. Lorsqu’un ennemi est vaincu avec cette arme, obtient 1 cumul augmentant le Taux CRIT de 8.0% pendant 20.0 s, jusqu’à 15.0 cumuls. L’effet est annulé lors du changement d’arme.",
-      "DGT CRIT +112.5%. Lorsqu’un ennemi est vaincu avec cette arme, obtient 1 cumul augmentant le Taux CRIT de 9.0% pendant 20.0 s, jusqu’à 15.0 cumuls. L’effet est annulé lors du changement d’arme.",
-      "DGT CRIT +125.0%. Lorsqu’un ennemi est vaincu avec cette arme, obtient 1 cumul augmentant le Taux CRIT de 10.0% pendant 20.0 s, jusqu’à 15.0 cumuls. L’effet est annulé lors du changement d’arme."
+      "DGT CRIT +#1. Lorsqu’un ennemi est vaincu avec cette arme, obtient 1 cumul augmentant le Taux CRIT de #2 pendant 20.0 s, jusqu’à 15.0 cumuls. L’effet est annulé lors du changement d’arme.",
+      [
+        "62.5%",
+        "75.0%",
+        "87.5%",
+        "100.0%",
+        "112.5%",
+        "125.0%"
+      ],
+      [
+        "5.0%",
+        "6.0%",
+        "7.0%",
+        "8.0%",
+        "9.0%",
+        "10.0%"
+      ]
     ],
     "技能": [
       {
@@ -7614,12 +7960,15 @@
       }
     ],
     "熔炼": [
-      "Puissance de compétence +24.0%.",
-      "Puissance de compétence +28.8%.",
-      "Puissance de compétence +33.6%.",
-      "Puissance de compétence +38.4%.",
-      "Puissance de compétence +43.2%.",
-      "Puissance de compétence +48.0%."
+      "Puissance de compétence +#1.",
+      [
+        "24.0%",
+        "28.8%",
+        "33.6%",
+        "38.4%",
+        "43.2%",
+        "48.0%"
+      ]
     ],
     "技能": [
       {
@@ -7734,12 +8083,31 @@
       }
     ],
     "熔炼": [
-      "Durée de compétence +15.0%. Les projectiles rebondissent une fois après avoir touché un ennemi ou un élément du décor. Infliger des dégâts avec cette arme augmente les DGT d’arme des Doubles pistolets de 45.0% pendant 15.0 s.",
-      "Durée de compétence +18.0%. Les projectiles rebondissent une fois après avoir touché un ennemi ou un élément du décor. Infliger des dégâts avec cette arme augmente les DGT d’arme des Doubles pistolets de 54.0% pendant 18.0 s.",
-      "Durée de compétence +21.0%. Les projectiles rebondissent une fois après avoir touché un ennemi ou un élément du décor. Infliger des dégâts avec cette arme augmente les DGT d’arme des Doubles pistolets de 63.0% pendant 21.0 s.",
-      "Durée de compétence +24.0%. Les projectiles rebondissent une fois après avoir touché un ennemi ou un élément du décor. Infliger des dégâts avec cette arme augmente les DGT d’arme des Doubles pistolets de 72.0% pendant 24.0 s.",
-      "Durée de compétence +27.0%. Les projectiles rebondissent une fois après avoir touché un ennemi ou un élément du décor. Infliger des dégâts avec cette arme augmente les DGT d’arme des Doubles pistolets de 81.0% pendant 27.0 s.",
-      "Durée de compétence +30.0%. Les projectiles rebondissent une fois après avoir touché un ennemi ou un élément du décor. Infliger des dégâts avec cette arme augmente les DGT d’arme des Doubles pistolets de 90.0% pendant 30.0 s."
+      "Durée de compétence +#1. Les projectiles rebondissent une fois après avoir touché un ennemi ou un élément du décor. Infliger des dégâts avec cette arme augmente les DGT d’arme des Doubles pistolets de #2 pendant #3 s.",
+      [
+        "15.0%",
+        "18.0%",
+        "21.0%",
+        "24.0%",
+        "27.0%",
+        "30.0%"
+      ],
+      [
+        "45.0%",
+        "54.0%",
+        "63.0%",
+        "72.0%",
+        "81.0%",
+        "90.0%"
+      ],
+      [
+        "15.0",
+        "18.0",
+        "21.0",
+        "24.0",
+        "27.0",
+        "30.0"
+      ]
     ],
     "技能": [
       {
@@ -7853,12 +8221,23 @@
       }
     ],
     "熔炼": [
-      "Taux CRIT +50.0%. Lorsqu’un coup critique est infligé avec cette arme, confère +6.2% Tir multiple pendant 12.0 s.\nCumulable jusqu’à 10.0 fois. L’effet est annulé lors du changement d’arme.",
-      "Taux CRIT +60.0%. Lorsqu’un coup critique est infligé avec cette arme, confère +7.5% Tir multiple pendant 12.0 s.\nCumulable jusqu’à 10.0 fois. L’effet est annulé lors du changement d’arme.",
-      "Taux CRIT +70.0%. Lorsqu’un coup critique est infligé avec cette arme, confère +8.8% Tir multiple pendant 12.0 s.\nCumulable jusqu’à 10.0 fois. L’effet est annulé lors du changement d’arme.",
-      "Taux CRIT +80.0%. Lorsqu’un coup critique est infligé avec cette arme, confère +10.0% Tir multiple pendant 12.0 s.\nCumulable jusqu’à 10.0 fois. L’effet est annulé lors du changement d’arme.",
-      "Taux CRIT +90.0%. Lorsqu’un coup critique est infligé avec cette arme, confère +11.2% Tir multiple pendant 12.0 s.\nCumulable jusqu’à 10.0 fois. L’effet est annulé lors du changement d’arme.",
-      "Taux CRIT +100.0%. Lorsqu’un coup critique est infligé avec cette arme, confère +12.5% Tir multiple pendant 12.0 s.\nCumulable jusqu’à 10.0 fois. L’effet est annulé lors du changement d’arme."
+      "Taux CRIT +#1. Lorsqu’un coup critique est infligé avec cette arme, confère +#2 Tir multiple pendant 12.0 s.\nCumulable jusqu’à 10.0 fois. L’effet est annulé lors du changement d’arme.",
+      [
+        "50.0%",
+        "60.0%",
+        "70.0%",
+        "80.0%",
+        "90.0%",
+        "100.0%"
+      ],
+      [
+        "6.2%",
+        "7.5%",
+        "8.8%",
+        "10.0%",
+        "11.2%",
+        "12.5%"
+      ]
     ],
     "技能": [
       {
@@ -7973,12 +8352,23 @@
       }
     ],
     "熔炼": [
-      "Vigueur +15.0%. Lorsqu’un personnage Hydro effectue une invocation, obtient 1 cumul augmentant les dégâts infligés par ses propres invocations de 7.5% pendant 18.0 s, jusqu’à 9.0 cumuls.",
-      "Vigueur +18.0%. Lorsqu’un personnage Hydro effectue une invocation, obtient 1 cumul augmentant les dégâts infligés par ses propres invocations de 9.0% pendant 18.0 s, jusqu’à 9.0 cumuls.",
-      "Vigueur +21.0%. Lorsqu’un personnage Hydro effectue une invocation, obtient 1 cumul augmentant les dégâts infligés par ses propres invocations de 10.5% pendant 18.0 s, jusqu’à 9.0 cumuls.",
-      "Vigueur +24.0%. Lorsqu’un personnage Hydro effectue une invocation, obtient 1 cumul augmentant les dégâts infligés par ses propres invocations de 12.0% pendant 18.0 s, jusqu’à 9.0 cumuls.",
-      "Vigueur +27.0%. Lorsqu’un personnage Hydro effectue une invocation, obtient 1 cumul augmentant les dégâts infligés par ses propres invocations de 13.5% pendant 18.0 s, jusqu’à 9.0 cumuls.",
-      "Vigueur +30.0%. Lorsqu’un personnage Hydro effectue une invocation, obtient 1 cumul augmentant les dégâts infligés par ses propres invocations de 15.0% pendant 18.0 s, jusqu’à 9.0 cumuls."
+      "Vigueur +#1. Lorsqu’un personnage Hydro effectue une invocation, obtient 1 cumul augmentant les dégâts infligés par ses propres invocations de #2 pendant 18.0 s, jusqu’à 9.0 cumuls.",
+      [
+        "15.0%",
+        "18.0%",
+        "21.0%",
+        "24.0%",
+        "27.0%",
+        "30.0%"
+      ],
+      [
+        "7.5%",
+        "9.0%",
+        "10.5%",
+        "12.0%",
+        "13.5%",
+        "15.0%"
+      ]
     ],
     "技能": [
       {
@@ -8085,11 +8475,6 @@
       }
     ],
     "熔炼": [
-      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
-      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
-      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
-      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
-      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
       "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage."
     ],
     "熔炉": [
@@ -8408,12 +8793,23 @@
       }
     ],
     "熔炼": [
-      "Rayon de l’explosion +0.2. À l’explosion, le projectile se divise en 6 projectiles supplémentaires qui explosent à leur tour. Vaincre un ennemi avec cette arme octroie 1 cumul augmentant les DGT CRIT de 8.8% pendant 15.0 s, jusqu’à 10.0 cumuls. Changer d’arme retire cet effet.",
-      "Rayon de l’explosion +0.3. À l’explosion, le projectile se divise en 6 projectiles supplémentaires qui explosent à leur tour. Vaincre un ennemi avec cette arme octroie 1 cumul augmentant les DGT CRIT de 10.5% pendant 15.0 s, jusqu’à 10.0 cumuls. Changer d’arme retire cet effet.",
-      "Rayon de l’explosion +0.3. À l’explosion, le projectile se divise en 6 projectiles supplémentaires qui explosent à leur tour. Vaincre un ennemi avec cette arme octroie 1 cumul augmentant les DGT CRIT de 12.2% pendant 15.0 s, jusqu’à 10.0 cumuls. Changer d’arme retire cet effet.",
-      "Rayon de l’explosion +0.4. À l’explosion, le projectile se divise en 6 projectiles supplémentaires qui explosent à leur tour. Vaincre un ennemi avec cette arme octroie 1 cumul augmentant les DGT CRIT de 14.0% pendant 15.0 s, jusqu’à 10.0 cumuls. Changer d’arme retire cet effet.",
-      "Rayon de l’explosion +0.5. À l’explosion, le projectile se divise en 6 projectiles supplémentaires qui explosent à leur tour. Vaincre un ennemi avec cette arme octroie 1 cumul augmentant les DGT CRIT de 15.8% pendant 15.0 s, jusqu’à 10.0 cumuls. Changer d’arme retire cet effet.",
-      "Rayon de l’explosion +0.5. À l’explosion, le projectile se divise en 6 projectiles supplémentaires qui explosent à leur tour. Vaincre un ennemi avec cette arme octroie 1 cumul augmentant les DGT CRIT de 17.5% pendant 15.0 s, jusqu’à 10.0 cumuls. Changer d’arme retire cet effet."
+      "Rayon de l’explosion +#1. À l’explosion, le projectile se divise en 6 projectiles supplémentaires qui explosent à leur tour. Vaincre un ennemi avec cette arme octroie 1 cumul augmentant les DGT CRIT de #2 pendant 15.0 s, jusqu’à 10.0 cumuls. Changer d’arme retire cet effet.",
+      [
+        "0.2",
+        "0.3",
+        "0.3",
+        "0.4",
+        "0.5",
+        "0.5"
+      ],
+      [
+        "8.8%",
+        "10.5%",
+        "12.2%",
+        "14.0%",
+        "15.8%",
+        "17.5%"
+      ]
     ],
     "技能": [
       {
@@ -8537,12 +8933,23 @@
       }
     ],
     "熔炼": [
-      "Tir multiple +37.5%. Lorsqu’un personnage Pyro esquive, il gagne 1 cumul augmentant les Dégâts de compétence et le Tir multiple de 8.0% pendant 16.0 s, jusqu’à 4.0 cumuls.",
-      "Tir multiple +45.0%. Lorsqu’un personnage Pyro esquive, il gagne 1 cumul augmentant les Dégâts de compétence et le Tir multiple de 9.6% pendant 16.0 s, jusqu’à 4.0 cumuls.",
-      "Tir multiple +52.5%. Lorsqu’un personnage Pyro esquive, il gagne 1 cumul augmentant les Dégâts de compétence et le Tir multiple de 11.2% pendant 16.0 s, jusqu’à 4.0 cumuls.",
-      "Tir multiple +60.0%. Lorsqu’un personnage Pyro esquive, il gagne 1 cumul augmentant les Dégâts de compétence et le Tir multiple de 12.8% pendant 16.0 s, jusqu’à 4.0 cumuls.",
-      "Tir multiple +67.5%. Lorsqu’un personnage Pyro esquive, il gagne 1 cumul augmentant les Dégâts de compétence et le Tir multiple de 14.4% pendant 16.0 s, jusqu’à 4.0 cumuls.",
-      "Tir multiple +75.0%. Lorsqu’un personnage Pyro esquive, il gagne 1 cumul augmentant les Dégâts de compétence et le Tir multiple de 16.0% pendant 16.0 s, jusqu’à 4.0 cumuls."
+      "Tir multiple +#1. Lorsqu’un personnage Pyro esquive, il gagne 1 cumul augmentant les Dégâts de compétence et le Tir multiple de #2 pendant 16.0 s, jusqu’à 4.0 cumuls.",
+      [
+        "37.5%",
+        "45.0%",
+        "52.5%",
+        "60.0%",
+        "67.5%",
+        "75.0%"
+      ],
+      [
+        "8.0%",
+        "9.6%",
+        "11.2%",
+        "12.8%",
+        "14.4%",
+        "16.0%"
+      ]
     ],
     "技能": [
       {
@@ -8709,12 +9116,15 @@
       }
     ],
     "熔炼": [
-      "Portée de compétence +36.0%.",
-      "Portée de compétence +43.2%.",
-      "Portée de compétence +50.4%.",
-      "Portée de compétence +57.6%.",
-      "Portée de compétence +64.8%.",
-      "Portée de compétence +72.0%."
+      "Portée de compétence +#1.",
+      [
+        "36.0%",
+        "43.2%",
+        "50.4%",
+        "57.6%",
+        "64.8%",
+        "72.0%"
+      ]
     ],
     "技能": [
       {
@@ -8821,12 +9231,23 @@
       }
     ],
     "熔炼": [
-      "DGT CRIT +62.5%. Lorsque les projectiles touchent un ennemi ou un élément du décor, ils se divisent en 2 projectiles supplémentaires. En passant à cette arme, le Tir multiple augmente jusqu’à 38.0%, puis diminue progressivement. Cet effet peut être déclenché une fois toutes les 10 s et disparaît en changeant d’arme.",
-      "DGT CRIT +75.0%. Lorsque les projectiles touchent un ennemi ou un élément du décor, ils se divisent en 2 projectiles supplémentaires. En passant à cette arme, le Tir multiple augmente jusqu’à 45.0%, puis diminue progressivement. Cet effet peut être déclenché une fois toutes les 10 s et disparaît en changeant d’arme.",
-      "DGT CRIT +87.5%. Lorsque les projectiles touchent un ennemi ou un élément du décor, ils se divisent en 2 projectiles supplémentaires. En passant à cette arme, le Tir multiple augmente jusqu’à 52.0%, puis diminue progressivement. Cet effet peut être déclenché une fois toutes les 10 s et disparaît en changeant d’arme.",
-      "DGT CRIT +100.0%. Lorsque les projectiles touchent un ennemi ou un élément du décor, ils se divisent en 2 projectiles supplémentaires. En passant à cette arme, le Tir multiple augmente jusqu’à 59.0%, puis diminue progressivement. Cet effet peut être déclenché une fois toutes les 10 s et disparaît en changeant d’arme.",
-      "DGT CRIT +112.5%. Lorsque les projectiles touchent un ennemi ou un élément du décor, ils se divisent en 2 projectiles supplémentaires. En passant à cette arme, le Tir multiple augmente jusqu’à 66.0%, puis diminue progressivement. Cet effet peut être déclenché une fois toutes les 10 s et disparaît en changeant d’arme.",
-      "DGT CRIT +125.0%. Lorsque les projectiles touchent un ennemi ou un élément du décor, ils se divisent en 2 projectiles supplémentaires. En passant à cette arme, le Tir multiple augmente jusqu’à 73.0%, puis diminue progressivement. Cet effet peut être déclenché une fois toutes les 10 s et disparaît en changeant d’arme."
+      "DGT CRIT +#1. Lorsque les projectiles touchent un ennemi ou un élément du décor, ils se divisent en 2 projectiles supplémentaires. En passant à cette arme, le Tir multiple augmente jusqu’à #2, puis diminue progressivement. Cet effet peut être déclenché une fois toutes les 10 s et disparaît en changeant d’arme.",
+      [
+        "62.5%",
+        "75.0%",
+        "87.5%",
+        "100.0%",
+        "112.5%",
+        "125.0%"
+      ],
+      [
+        "38.0%",
+        "45.0%",
+        "52.0%",
+        "59.0%",
+        "66.0%",
+        "73.0%"
+      ]
     ],
     "技能": [
       {
@@ -8961,12 +9382,23 @@
       }
     ],
     "熔炼": [
-      "Vitesse d’attaque +25.0%. Lorsque cette arme déclenche un Effet supplémentaire, confère +5.0% d’augmentation de la Vitesse d’attaque pendant 12.0 s (jusqu’à 10.0 cumuls). L’effet est annulé lors du changement d’arme.",
-      "Vitesse d’attaque +30.0%. Lorsque cette arme déclenche un Effet supplémentaire, confère +6.0% d’augmentation de la Vitesse d’attaque pendant 12.0 s (jusqu’à 10.0 cumuls). L’effet est annulé lors du changement d’arme.",
-      "Vitesse d’attaque +35.0%. Lorsque cette arme déclenche un Effet supplémentaire, confère +7.0% d’augmentation de la Vitesse d’attaque pendant 12.0 s (jusqu’à 10.0 cumuls). L’effet est annulé lors du changement d’arme.",
-      "Vitesse d’attaque +40.0%. Lorsque cette arme déclenche un Effet supplémentaire, confère +8.0% d’augmentation de la Vitesse d’attaque pendant 12.0 s (jusqu’à 10.0 cumuls). L’effet est annulé lors du changement d’arme.",
-      "Vitesse d’attaque +45.0%. Lorsque cette arme déclenche un Effet supplémentaire, confère +9.0% d’augmentation de la Vitesse d’attaque pendant 12.0 s (jusqu’à 10.0 cumuls). L’effet est annulé lors du changement d’arme.",
-      "Vitesse d’attaque +50.0%. Lorsque cette arme déclenche un Effet supplémentaire, confère +10.0% d’augmentation de la Vitesse d’attaque pendant 12.0 s (jusqu’à 10.0 cumuls). L’effet est annulé lors du changement d’arme."
+      "Vitesse d’attaque +#1. Lorsque cette arme déclenche un Effet supplémentaire, confère +#2 d’augmentation de la Vitesse d’attaque pendant 12.0 s (jusqu’à 10.0 cumuls). L’effet est annulé lors du changement d’arme.",
+      [
+        "25.0%",
+        "30.0%",
+        "35.0%",
+        "40.0%",
+        "45.0%",
+        "50.0%"
+      ],
+      [
+        "5.0%",
+        "6.0%",
+        "7.0%",
+        "8.0%",
+        "9.0%",
+        "10.0%"
+      ]
     ],
     "技能": [
       {
@@ -9101,12 +9533,15 @@
       }
     ],
     "熔炼": [
-      "Durée de compétence +18.0%.",
-      "Durée de compétence +21.6%.",
-      "Durée de compétence +25.2%.",
-      "Durée de compétence +28.8%.",
-      "Durée de compétence +32.4%.",
-      "Durée de compétence +36.0%."
+      "Durée de compétence +#1.",
+      [
+        "18.0%",
+        "21.6%",
+        "25.2%",
+        "28.8%",
+        "32.4%",
+        "36.0%"
+      ]
     ],
     "技能": [
       {
@@ -9212,12 +9647,39 @@
       }
     ],
     "熔炼": [
-      "Taux CRIT +50.0%. Les projectiles se fixent sur la cible et explosent après 3 s. Lorsque plusieurs projectiles adhèrent au même endroit, ils se cumulent et augmentent les dégâts ainsi que la portée de l’explosion. Avec 1/2/3 cumuls, l’explosion inflige 217.0%/383.0%/592.0% des dégâts initiaux.",
-      "Taux CRIT +60.0%. Les projectiles se fixent sur la cible et explosent après 3 s. Lorsque plusieurs projectiles adhèrent au même endroit, ils se cumulent et augmentent les dégâts ainsi que la portée de l’explosion. Avec 1/2/3 cumuls, l’explosion inflige 225.0%/399.0%/615.0% des dégâts initiaux.",
-      "Taux CRIT +70.0%. Les projectiles se fixent sur la cible et explosent après 3 s. Lorsque plusieurs projectiles adhèrent au même endroit, ils se cumulent et augmentent les dégâts ainsi que la portée de l’explosion. Avec 1/2/3 cumuls, l’explosion inflige 234.0%/414.0%/639.0% des dégâts initiaux.",
-      "Taux CRIT +80.0%. Les projectiles se fixent sur la cible et explosent après 3 s. Lorsque plusieurs projectiles adhèrent au même endroit, ils se cumulent et augmentent les dégâts ainsi que la portée de l’explosion. Avec 1/2/3 cumuls, l’explosion inflige 243.0%/429.0%/663.0% des dégâts initiaux.",
-      "Taux CRIT +90.0%. Les projectiles se fixent sur la cible et explosent après 3 s. Lorsque plusieurs projectiles adhèrent au même endroit, ils se cumulent et augmentent les dégâts ainsi que la portée de l’explosion. Avec 1/2/3 cumuls, l’explosion inflige 251.0%/445.0%/686.0% des dégâts initiaux.",
-      "Taux CRIT +100.0%. Les projectiles se fixent sur la cible et explosent après 3 s. Lorsque plusieurs projectiles adhèrent au même endroit, ils se cumulent et augmentent les dégâts ainsi que la portée de l’explosion. Avec 1/2/3 cumuls, l’explosion inflige 260.0%/460.0%/710.0% des dégâts initiaux."
+      "Taux CRIT +#1. Les projectiles se fixent sur la cible et explosent après 3 s. Lorsque plusieurs projectiles adhèrent au même endroit, ils se cumulent et augmentent les dégâts ainsi que la portée de l’explosion. Avec 1/2/3 cumuls, l’explosion inflige #2/#3/#4 des dégâts initiaux.",
+      [
+        "50.0%",
+        "60.0%",
+        "70.0%",
+        "80.0%",
+        "90.0%",
+        "100.0%"
+      ],
+      [
+        "217.0%",
+        "225.0%",
+        "234.0%",
+        "243.0%",
+        "251.0%",
+        "260.0%"
+      ],
+      [
+        "383.0%",
+        "399.0%",
+        "414.0%",
+        "429.0%",
+        "445.0%",
+        "460.0%"
+      ],
+      [
+        "592.0%",
+        "615.0%",
+        "639.0%",
+        "663.0%",
+        "686.0%",
+        "710.0%"
+      ]
     ],
     "技能": [
       {
@@ -9323,12 +9785,23 @@
       }
     ],
     "熔炼": [
-      "DGT CRIT +62.5%. Les projectiles tirés suivent la direction du viseur. Plus la cible est éloignée, plus les dégâts augmentent, jusqu’à un maximum de +45.0%.",
-      "DGT CRIT +75.0%. Les projectiles tirés suivent la direction du viseur. Plus la cible est éloignée, plus les dégâts augmentent, jusqu’à un maximum de +54.0%.",
-      "DGT CRIT +87.5%. Les projectiles tirés suivent la direction du viseur. Plus la cible est éloignée, plus les dégâts augmentent, jusqu’à un maximum de +63.0%.",
-      "DGT CRIT +100.0%. Les projectiles tirés suivent la direction du viseur. Plus la cible est éloignée, plus les dégâts augmentent, jusqu’à un maximum de +72.0%.",
-      "DGT CRIT +112.5%. Les projectiles tirés suivent la direction du viseur. Plus la cible est éloignée, plus les dégâts augmentent, jusqu’à un maximum de +81.0%.",
-      "DGT CRIT +125.0%. Les projectiles tirés suivent la direction du viseur. Plus la cible est éloignée, plus les dégâts augmentent, jusqu’à un maximum de +90.0%."
+      "DGT CRIT +#1. Les projectiles tirés suivent la direction du viseur. Plus la cible est éloignée, plus les dégâts augmentent, jusqu’à un maximum de +#2.",
+      [
+        "62.5%",
+        "75.0%",
+        "87.5%",
+        "100.0%",
+        "112.5%",
+        "125.0%"
+      ],
+      [
+        "45.0%",
+        "54.0%",
+        "63.0%",
+        "72.0%",
+        "81.0%",
+        "90.0%"
+      ]
     ],
     "技能": [
       {
@@ -9435,12 +9908,23 @@
       }
     ],
     "熔炼": [
-      "ATQ du personnage +50.0%. Lors de la charge, tire une balle spéciale se déplaçant lentement avant d’exploser après un court délai, infligeant des Dégâts de zone. Les tirs rapides peuvent provoquer son explosion anticipée en la touchant. Lorsqu’un personnage Umbro utilise sa Compétence ultime, il obtient +20.0% d’Efficacité de compétence pendant 15.0 s.",
-      "ATQ du personnage +60.0%. Lors de la charge, tire une balle spéciale se déplaçant lentement avant d’exploser après un court délai, infligeant des Dégâts de zone. Les tirs rapides peuvent provoquer son explosion anticipée en la touchant. Lorsqu’un personnage Umbro utilise sa Compétence ultime, il obtient +24.0% d’Efficacité de compétence pendant 15.0 s.",
-      "ATQ du personnage +70.0%. Lors de la charge, tire une balle spéciale se déplaçant lentement avant d’exploser après un court délai, infligeant des Dégâts de zone. Les tirs rapides peuvent provoquer son explosion anticipée en la touchant. Lorsqu’un personnage Umbro utilise sa Compétence ultime, il obtient +28.0% d’Efficacité de compétence pendant 15.0 s.",
-      "ATQ du personnage +80.0%. Lors de la charge, tire une balle spéciale se déplaçant lentement avant d’exploser après un court délai, infligeant des Dégâts de zone. Les tirs rapides peuvent provoquer son explosion anticipée en la touchant. Lorsqu’un personnage Umbro utilise sa Compétence ultime, il obtient +32.0% d’Efficacité de compétence pendant 15.0 s.",
-      "ATQ du personnage +90.0%. Lors de la charge, tire une balle spéciale se déplaçant lentement avant d’exploser après un court délai, infligeant des Dégâts de zone. Les tirs rapides peuvent provoquer son explosion anticipée en la touchant. Lorsqu’un personnage Umbro utilise sa Compétence ultime, il obtient +36.0% d’Efficacité de compétence pendant 15.0 s.",
-      "ATQ du personnage +100.0%. Lors de la charge, tire une balle spéciale se déplaçant lentement avant d’exploser après un court délai, infligeant des Dégâts de zone. Les tirs rapides peuvent provoquer son explosion anticipée en la touchant. Lorsqu’un personnage Umbro utilise sa Compétence ultime, il obtient +40.0% d’Efficacité de compétence pendant 15.0 s."
+      "ATQ du personnage +#1. Lors de la charge, tire une balle spéciale se déplaçant lentement avant d’exploser après un court délai, infligeant des Dégâts de zone. Les tirs rapides peuvent provoquer son explosion anticipée en la touchant. Lorsqu’un personnage Umbro utilise sa Compétence ultime, il obtient +#2 d’Efficacité de compétence pendant 15.0 s.",
+      [
+        "50.0%",
+        "60.0%",
+        "70.0%",
+        "80.0%",
+        "90.0%",
+        "100.0%"
+      ],
+      [
+        "20.0%",
+        "24.0%",
+        "28.0%",
+        "32.0%",
+        "36.0%",
+        "40.0%"
+      ]
     ],
     "技能": [
       {
@@ -9598,12 +10082,23 @@
       }
     ],
     "熔炼": [
-      "DGT CRIT +62.5%. Lorsque cette arme inflige des dégâts, si l’arme équipée est une arme de mêlée, les dégâts de cette arme augmentent de 35.0%.",
-      "DGT CRIT +75.0%. Lorsque cette arme inflige des dégâts, si l’arme équipée est une arme de mêlée, les dégâts de cette arme augmentent de 42.0%.",
-      "DGT CRIT +87.5%. Lorsque cette arme inflige des dégâts, si l’arme équipée est une arme de mêlée, les dégâts de cette arme augmentent de 49.0%.",
-      "DGT CRIT +100.0%. Lorsque cette arme inflige des dégâts, si l’arme équipée est une arme de mêlée, les dégâts de cette arme augmentent de 56.0%.",
-      "DGT CRIT +112.5%. Lorsque cette arme inflige des dégâts, si l’arme équipée est une arme de mêlée, les dégâts de cette arme augmentent de 63.0%.",
-      "DGT CRIT +125.0%. Lorsque cette arme inflige des dégâts, si l’arme équipée est une arme de mêlée, les dégâts de cette arme augmentent de 70.0%."
+      "DGT CRIT +#1. Lorsque cette arme inflige des dégâts, si l’arme équipée est une arme de mêlée, les dégâts de cette arme augmentent de #2.",
+      [
+        "62.5%",
+        "75.0%",
+        "87.5%",
+        "100.0%",
+        "112.5%",
+        "125.0%"
+      ],
+      [
+        "35.0%",
+        "42.0%",
+        "49.0%",
+        "56.0%",
+        "63.0%",
+        "70.0%"
+      ]
     ],
     "技能": [
       {
@@ -9718,12 +10213,31 @@
       }
     ],
     "熔炼": [
-      "Munitions max +90.0%. Lorsqu’un personnage Lumino consomme de la Lucidité en utilisant une compétence de combat ou une compétence ultime, il obtient un bonus de Puissance de compétence en fonction de la quantité consommée. Chaque point de Lucidité consommé augmente la Puissance de compétence de 0.25%, jusqu’à un maximum de 75.0%, pendant 24.0 s.",
-      "Munitions max +108.0%. Lorsqu’un personnage Lumino consomme de la Lucidité en utilisant une compétence de combat ou une compétence ultime, il obtient un bonus de Puissance de compétence en fonction de la quantité consommée. Chaque point de Lucidité consommé augmente la Puissance de compétence de 0.30%, jusqu’à un maximum de 90.0%, pendant 24.0 s.",
-      "Munitions max +126.0%. Lorsqu’un personnage Lumino consomme de la Lucidité en utilisant une compétence de combat ou une compétence ultime, il obtient un bonus de Puissance de compétence en fonction de la quantité consommée. Chaque point de Lucidité consommé augmente la Puissance de compétence de 0.35%, jusqu’à un maximum de 105.0%, pendant 24.0 s.",
-      "Munitions max +144.0%. Lorsqu’un personnage Lumino consomme de la Lucidité en utilisant une compétence de combat ou une compétence ultime, il obtient un bonus de Puissance de compétence en fonction de la quantité consommée. Chaque point de Lucidité consommé augmente la Puissance de compétence de 0.40%, jusqu’à un maximum de 120.0%, pendant 24.0 s.",
-      "Munitions max +162.0%. Lorsqu’un personnage Lumino consomme de la Lucidité en utilisant une compétence de combat ou une compétence ultime, il obtient un bonus de Puissance de compétence en fonction de la quantité consommée. Chaque point de Lucidité consommé augmente la Puissance de compétence de 0.45%, jusqu’à un maximum de 135.0%, pendant 24.0 s.",
-      "Munitions max +180.0%. Lorsqu’un personnage Lumino consomme de la Lucidité en utilisant une compétence de combat ou une compétence ultime, il obtient un bonus de Puissance de compétence en fonction de la quantité consommée. Chaque point de Lucidité consommé augmente la Puissance de compétence de 0.50%, jusqu’à un maximum de 150.0%, pendant 24.0 s."
+      "Munitions max +#1. Lorsqu’un personnage Lumino consomme de la Lucidité en utilisant une compétence de combat ou une compétence ultime, il obtient un bonus de Puissance de compétence en fonction de la quantité consommée. Chaque point de Lucidité consommé augmente la Puissance de compétence de #2, jusqu’à un maximum de #3, pendant 24.0 s.",
+      [
+        "90.0%",
+        "108.0%",
+        "126.0%",
+        "144.0%",
+        "162.0%",
+        "180.0%"
+      ],
+      [
+        "0.25%",
+        "0.30%",
+        "0.35%",
+        "0.40%",
+        "0.45%",
+        "0.50%"
+      ],
+      [
+        "75.0%",
+        "90.0%",
+        "105.0%",
+        "120.0%",
+        "135.0%",
+        "150.0%"
+      ]
     ],
     "技能": [
       {
@@ -9825,12 +10339,15 @@
       }
     ],
     "熔炼": [
-      "Durée de compétence +18.0%.",
-      "Durée de compétence +21.6%.",
-      "Durée de compétence +25.2%.",
-      "Durée de compétence +28.8%.",
-      "Durée de compétence +32.4%.",
-      "Durée de compétence +36.0%."
+      "Durée de compétence +#1.",
+      [
+        "18.0%",
+        "21.6%",
+        "25.2%",
+        "28.8%",
+        "32.4%",
+        "36.0%"
+      ]
     ],
     "技能": [
       {
@@ -9937,12 +10454,23 @@
       }
     ],
     "熔炼": [
-      "Chance de déclenchement +75.0%. Tire un rayon d’énergie qui rebondit sur la cible et frappe jusqu’à 4 ennemis proches. Lorsqu’un personnage Électro déclenche un Effet supplémentaire avec cette arme, il obtient +45.0% de DGT d’arme pendant 10.0 s.",
-      "Chance de déclenchement +90.0%. Tire un rayon d’énergie qui rebondit sur la cible et frappe jusqu’à 4 ennemis proches. Lorsqu’un personnage Électro déclenche un Effet supplémentaire avec cette arme, il obtient +54.0% de DGT d’arme pendant 10.0 s.",
-      "Chance de déclenchement +105.0%. Tire un rayon d’énergie qui rebondit sur la cible et frappe jusqu’à 4 ennemis proches. Lorsqu’un personnage Électro déclenche un Effet supplémentaire avec cette arme, il obtient +63.0% de DGT d’arme pendant 10.0 s.",
-      "Chance de déclenchement +120.0%. Tire un rayon d’énergie qui rebondit sur la cible et frappe jusqu’à 4 ennemis proches. Lorsqu’un personnage Électro déclenche un Effet supplémentaire avec cette arme, il obtient +72.0% de DGT d’arme pendant 10.0 s.",
-      "Chance de déclenchement +135.0%. Tire un rayon d’énergie qui rebondit sur la cible et frappe jusqu’à 4 ennemis proches. Lorsqu’un personnage Électro déclenche un Effet supplémentaire avec cette arme, il obtient +81.0% de DGT d’arme pendant 10.0 s.",
-      "Chance de déclenchement +150.0%. Tire un rayon d’énergie qui rebondit sur la cible et frappe jusqu’à 4 ennemis proches. Lorsqu’un personnage Électro déclenche un Effet supplémentaire avec cette arme, il obtient +90.0% de DGT d’arme pendant 10.0 s."
+      "Chance de déclenchement +#1. Tire un rayon d’énergie qui rebondit sur la cible et frappe jusqu’à 4 ennemis proches. Lorsqu’un personnage Électro déclenche un Effet supplémentaire avec cette arme, il obtient +#2 de DGT d’arme pendant 10.0 s.",
+      [
+        "75.0%",
+        "90.0%",
+        "105.0%",
+        "120.0%",
+        "135.0%",
+        "150.0%"
+      ],
+      [
+        "45.0%",
+        "54.0%",
+        "63.0%",
+        "72.0%",
+        "81.0%",
+        "90.0%"
+      ]
     ],
     "技能": [
       {
@@ -10047,12 +10575,23 @@
       }
     ],
     "熔炼": [
-      "Chance de déclenchement +75.0%. Lorsqu’un Effet supplémentaire est déclenché avec cette arme, il y a 30.0% de chances de recharger 1 projectile.",
-      "Chance de déclenchement +90.0%. Lorsqu’un Effet supplémentaire est déclenché avec cette arme, il y a 36.0% de chances de recharger 1 projectile.",
-      "Chance de déclenchement +105.0%. Lorsqu’un Effet supplémentaire est déclenché avec cette arme, il y a 42.0% de chances de recharger 1 projectile.",
-      "Chance de déclenchement +120.0%. Lorsqu’un Effet supplémentaire est déclenché avec cette arme, il y a 48.0% de chances de recharger 1 projectile.",
-      "Chance de déclenchement +135.0%. Lorsqu’un Effet supplémentaire est déclenché avec cette arme, il y a 54.0% de chances de recharger 1 projectile.",
-      "Chance de déclenchement +150.0%. Lorsqu’un Effet supplémentaire est déclenché avec cette arme, il y a 60.0% de chances de recharger 1 projectile."
+      "Chance de déclenchement +#1. Lorsqu’un Effet supplémentaire est déclenché avec cette arme, il y a #2 de chances de recharger 1 projectile.",
+      [
+        "75.0%",
+        "90.0%",
+        "105.0%",
+        "120.0%",
+        "135.0%",
+        "150.0%"
+      ],
+      [
+        "30.0%",
+        "36.0%",
+        "42.0%",
+        "48.0%",
+        "54.0%",
+        "60.0%"
+      ]
     ],
     "技能": [
       {
@@ -10143,12 +10682,23 @@
       }
     ],
     "熔炼": [
-      "Tir multiple +37.5%. Infliger des dégâts avec cette arme augmente les dégâts proportionnellement au pourcentage de munitions restantes : moins il en reste, plus les dégâts augmentent, jusqu’à un maximum de 45.0%.\nLe bonus maximal est atteint lorsque les munitions passent sous 20.0%.",
-      "Tir multiple +45.0%. Infliger des dégâts avec cette arme augmente les dégâts proportionnellement au pourcentage de munitions restantes : moins il en reste, plus les dégâts augmentent, jusqu’à un maximum de 54.0%.\nLe bonus maximal est atteint lorsque les munitions passent sous 20.0%.",
-      "Tir multiple +52.5%. Infliger des dégâts avec cette arme augmente les dégâts proportionnellement au pourcentage de munitions restantes : moins il en reste, plus les dégâts augmentent, jusqu’à un maximum de 63.0%.\nLe bonus maximal est atteint lorsque les munitions passent sous 20.0%.",
-      "Tir multiple +60.0%. Infliger des dégâts avec cette arme augmente les dégâts proportionnellement au pourcentage de munitions restantes : moins il en reste, plus les dégâts augmentent, jusqu’à un maximum de 72.0%.\nLe bonus maximal est atteint lorsque les munitions passent sous 20.0%.",
-      "Tir multiple +67.5%. Infliger des dégâts avec cette arme augmente les dégâts proportionnellement au pourcentage de munitions restantes : moins il en reste, plus les dégâts augmentent, jusqu’à un maximum de 81.0%.\nLe bonus maximal est atteint lorsque les munitions passent sous 20.0%.",
-      "Tir multiple +75.0%. Infliger des dégâts avec cette arme augmente les dégâts proportionnellement au pourcentage de munitions restantes : moins il en reste, plus les dégâts augmentent, jusqu’à un maximum de 90.0%.\nLe bonus maximal est atteint lorsque les munitions passent sous 20.0%."
+      "Tir multiple +#1. Infliger des dégâts avec cette arme augmente les dégâts proportionnellement au pourcentage de munitions restantes : moins il en reste, plus les dégâts augmentent, jusqu’à un maximum de #2.\nLe bonus maximal est atteint lorsque les munitions passent sous 20.0%.",
+      [
+        "37.5%",
+        "45.0%",
+        "52.5%",
+        "60.0%",
+        "67.5%",
+        "75.0%"
+      ],
+      [
+        "45.0%",
+        "54.0%",
+        "63.0%",
+        "72.0%",
+        "81.0%",
+        "90.0%"
+      ]
     ],
     "技能": [
       {
@@ -10273,12 +10823,39 @@
       }
     ],
     "熔炼": [
-      "Capacité du chargeur +30.0%. Après avoir consommé 10 munitions en tirant avec cette arme, toutes les munitions restantes du chargeur sont consommées pour tirer 1 projectile spécial infligeant des Dégâts de zone. Chaque munition consommée augmente les dégâts de ce tir de 1.7%, jusqu’à un maximum de 51.0%. Vaincre un ennemi avec cette arme a 25.0% de chances d’obtenir 1 munition.",
-      "Capacité du chargeur +36.0%. Après avoir consommé 10 munitions en tirant avec cette arme, toutes les munitions restantes du chargeur sont consommées pour tirer 1 projectile spécial infligeant des Dégâts de zone. Chaque munition consommée augmente les dégâts de ce tir de 2.0%, jusqu’à un maximum de 61.2%. Vaincre un ennemi avec cette arme a 30.0% de chances d’obtenir 1 munition.",
-      "Capacité du chargeur +42.0%. Après avoir consommé 10 munitions en tirant avec cette arme, toutes les munitions restantes du chargeur sont consommées pour tirer 1 projectile spécial infligeant des Dégâts de zone. Chaque munition consommée augmente les dégâts de ce tir de 2.4%, jusqu’à un maximum de 71.4%. Vaincre un ennemi avec cette arme a 35.0% de chances d’obtenir 1 munition.",
-      "Capacité du chargeur +48.0%. Après avoir consommé 10 munitions en tirant avec cette arme, toutes les munitions restantes du chargeur sont consommées pour tirer 1 projectile spécial infligeant des Dégâts de zone. Chaque munition consommée augmente les dégâts de ce tir de 2.7%, jusqu’à un maximum de 81.6%. Vaincre un ennemi avec cette arme a 40.0% de chances d’obtenir 1 munition.",
-      "Capacité du chargeur +54.0%. Après avoir consommé 10 munitions en tirant avec cette arme, toutes les munitions restantes du chargeur sont consommées pour tirer 1 projectile spécial infligeant des Dégâts de zone. Chaque munition consommée augmente les dégâts de ce tir de 3.1%, jusqu’à un maximum de 91.8%. Vaincre un ennemi avec cette arme a 45.0% de chances d’obtenir 1 munition.",
-      "Capacité du chargeur +60.0%. Après avoir consommé 10 munitions en tirant avec cette arme, toutes les munitions restantes du chargeur sont consommées pour tirer 1 projectile spécial infligeant des Dégâts de zone. Chaque munition consommée augmente les dégâts de ce tir de 3.4%, jusqu’à un maximum de 102.0%. Vaincre un ennemi avec cette arme a 50.0% de chances d’obtenir 1 munition."
+      "Capacité du chargeur +#1. Après avoir consommé 10 munitions en tirant avec cette arme, toutes les munitions restantes du chargeur sont consommées pour tirer 1 projectile spécial infligeant des Dégâts de zone. Chaque munition consommée augmente les dégâts de ce tir de #2, jusqu’à un maximum de #3. Vaincre un ennemi avec cette arme a #4 de chances d’obtenir 1 munition.",
+      [
+        "30.0%",
+        "36.0%",
+        "42.0%",
+        "48.0%",
+        "54.0%",
+        "60.0%"
+      ],
+      [
+        "1.7%",
+        "2.0%",
+        "2.4%",
+        "2.7%",
+        "3.1%",
+        "3.4%"
+      ],
+      [
+        "51.0%",
+        "61.2%",
+        "71.4%",
+        "81.6%",
+        "91.8%",
+        "102.0%"
+      ],
+      [
+        "25.0%",
+        "30.0%",
+        "35.0%",
+        "40.0%",
+        "45.0%",
+        "50.0%"
+      ]
     ],
     "技能": [
       {
@@ -10390,12 +10967,23 @@
       }
     ],
     "熔炼": [
-      "Capacité du chargeur +30.0%. Lorsqu’un coup critique est infligé avec cette arme, confère 1 cumul de Vitesse d’attaque +5.0% pendant 6.0 s, cumulable jusqu’à 10.0 fois. L’effet est annulé lors du changement d’arme.",
-      "Capacité du chargeur +36.0%. Lorsqu’un coup critique est infligé avec cette arme, confère 1 cumul de Vitesse d’attaque +6.0% pendant 6.0 s, cumulable jusqu’à 10.0 fois. L’effet est annulé lors du changement d’arme.",
-      "Capacité du chargeur +42.0%. Lorsqu’un coup critique est infligé avec cette arme, confère 1 cumul de Vitesse d’attaque +7.0% pendant 6.0 s, cumulable jusqu’à 10.0 fois. L’effet est annulé lors du changement d’arme.",
-      "Capacité du chargeur +48.0%. Lorsqu’un coup critique est infligé avec cette arme, confère 1 cumul de Vitesse d’attaque +8.0% pendant 6.0 s, cumulable jusqu’à 10.0 fois. L’effet est annulé lors du changement d’arme.",
-      "Capacité du chargeur +54.0%. Lorsqu’un coup critique est infligé avec cette arme, confère 1 cumul de Vitesse d’attaque +9.0% pendant 6.0 s, cumulable jusqu’à 10.0 fois. L’effet est annulé lors du changement d’arme.",
-      "Capacité du chargeur +60.0%. Lorsqu’un coup critique est infligé avec cette arme, confère 1 cumul de Vitesse d’attaque +10.0% pendant 6.0 s, cumulable jusqu’à 10.0 fois. L’effet est annulé lors du changement d’arme."
+      "Capacité du chargeur +#1. Lorsqu’un coup critique est infligé avec cette arme, confère 1 cumul de Vitesse d’attaque +#2 pendant 6.0 s, cumulable jusqu’à 10.0 fois. L’effet est annulé lors du changement d’arme.",
+      [
+        "30.0%",
+        "36.0%",
+        "42.0%",
+        "48.0%",
+        "54.0%",
+        "60.0%"
+      ],
+      [
+        "5.0%",
+        "6.0%",
+        "7.0%",
+        "8.0%",
+        "9.0%",
+        "10.0%"
+      ]
     ],
     "技能": [
       {
@@ -10485,12 +11073,31 @@
       }
     ],
     "熔炼": [
-      "DGT CRIT +62.5%. Lorsque les projectiles touchent le décor ou parcourent une certaine distance, ils reviennent vers l’utilisateur et ajoutent 1 munition.\nChaque augmentation de la munition maximale augmente les dégâts de 4.5%, jusqu’à un maximum de 45.0%.",
-      "DGT CRIT +75.0%. Lorsque les projectiles touchent le décor ou parcourent une certaine distance, ils reviennent vers l’utilisateur et ajoutent 1 munition.\nChaque augmentation de la munition maximale augmente les dégâts de 5.4%, jusqu’à un maximum de 54.0%.",
-      "DGT CRIT +87.5%. Lorsque les projectiles touchent le décor ou parcourent une certaine distance, ils reviennent vers l’utilisateur et ajoutent 1 munition.\nChaque augmentation de la munition maximale augmente les dégâts de 6.3%, jusqu’à un maximum de 63.0%.",
-      "DGT CRIT +100.0%. Lorsque les projectiles touchent le décor ou parcourent une certaine distance, ils reviennent vers l’utilisateur et ajoutent 1 munition.\nChaque augmentation de la munition maximale augmente les dégâts de 7.2%, jusqu’à un maximum de 72.0%.",
-      "DGT CRIT +112.5%. Lorsque les projectiles touchent le décor ou parcourent une certaine distance, ils reviennent vers l’utilisateur et ajoutent 1 munition.\nChaque augmentation de la munition maximale augmente les dégâts de 8.1%, jusqu’à un maximum de 81.0%.",
-      "DGT CRIT +125.0%. Lorsque les projectiles touchent le décor ou parcourent une certaine distance, ils reviennent vers l’utilisateur et ajoutent 1 munition.\nChaque augmentation de la munition maximale augmente les dégâts de 9.0%, jusqu’à un maximum de 90.0%."
+      "DGT CRIT +#1. Lorsque les projectiles touchent le décor ou parcourent une certaine distance, ils reviennent vers l’utilisateur et ajoutent 1 munition.\nChaque augmentation de la munition maximale augmente les dégâts de #2, jusqu’à un maximum de #3.",
+      [
+        "62.5%",
+        "75.0%",
+        "87.5%",
+        "100.0%",
+        "112.5%",
+        "125.0%"
+      ],
+      [
+        "4.5%",
+        "5.4%",
+        "6.3%",
+        "7.2%",
+        "8.1%",
+        "9.0%"
+      ],
+      [
+        "45.0%",
+        "54.0%",
+        "63.0%",
+        "72.0%",
+        "81.0%",
+        "90.0%"
+      ]
     ],
     "技能": [
       {
@@ -10597,12 +11204,23 @@
       }
     ],
     "熔炼": [
-      "Portée de compétence +30.0%. Lorsqu’un personnage Lumino inflige des dégâts supplémentaires, il y a 30.0% de chances d’octroyer à ses alliés +9.0% ATQ pendant 15.0 s (jusqu’à 10.0 cumuls).",
-      "Portée de compétence +36.0%. Lorsqu’un personnage Lumino inflige des dégâts supplémentaires, il y a 30.0% de chances d’octroyer à ses alliés +10.8% ATQ pendant 15.0 s (jusqu’à 10.0 cumuls).",
-      "Portée de compétence +42.0%. Lorsqu’un personnage Lumino inflige des dégâts supplémentaires, il y a 30.0% de chances d’octroyer à ses alliés +12.6% ATQ pendant 15.0 s (jusqu’à 10.0 cumuls).",
-      "Portée de compétence +48.0%. Lorsqu’un personnage Lumino inflige des dégâts supplémentaires, il y a 30.0% de chances d’octroyer à ses alliés +14.4% ATQ pendant 15.0 s (jusqu’à 10.0 cumuls).",
-      "Portée de compétence +54.0%. Lorsqu’un personnage Lumino inflige des dégâts supplémentaires, il y a 30.0% de chances d’octroyer à ses alliés +16.2% ATQ pendant 15.0 s (jusqu’à 10.0 cumuls).",
-      "Portée de compétence +60.0%. Lorsqu’un personnage Lumino inflige des dégâts supplémentaires, il y a 30.0% de chances d’octroyer à ses alliés +18.0% ATQ pendant 15.0 s (jusqu’à 10.0 cumuls)."
+      "Portée de compétence +#1. Lorsqu’un personnage Lumino inflige des dégâts supplémentaires, il y a 30.0% de chances d’octroyer à ses alliés +#2 ATQ pendant 15.0 s (jusqu’à 10.0 cumuls).",
+      [
+        "30.0%",
+        "36.0%",
+        "42.0%",
+        "48.0%",
+        "54.0%",
+        "60.0%"
+      ],
+      [
+        "9.0%",
+        "10.8%",
+        "12.6%",
+        "14.4%",
+        "16.2%",
+        "18.0%"
+      ]
     ],
     "技能": [
       {
@@ -10693,12 +11311,23 @@
       }
     ],
     "熔炼": [
-      "Durée de compétence +15.0%. Les projectiles reviennent après impact ou distance parcourue, ajoutant 1 munition. Lorsqu’un personnage Lumino déclenche un Effet supplémentaire, il obtient 1 cumul d’ATQ +17.5% pendant 24.0 s, jusqu’à 9.0 cumuls. L’utilisation de la compétence ultime réinitialise la durée de tous les cumuls à 24.0 s.",
-      "Durée de compétence +18.0%. Les projectiles reviennent après impact ou distance parcourue, ajoutant 1 munition. Lorsqu’un personnage Lumino déclenche un Effet supplémentaire, il obtient 1 cumul d’ATQ +21.0% pendant 24.0 s, jusqu’à 9.0 cumuls. L’utilisation de la compétence ultime réinitialise la durée de tous les cumuls à 24.0 s.",
-      "Durée de compétence +21.0%. Les projectiles reviennent après impact ou distance parcourue, ajoutant 1 munition. Lorsqu’un personnage Lumino déclenche un Effet supplémentaire, il obtient 1 cumul d’ATQ +24.5% pendant 24.0 s, jusqu’à 9.0 cumuls. L’utilisation de la compétence ultime réinitialise la durée de tous les cumuls à 24.0 s.",
-      "Durée de compétence +24.0%. Les projectiles reviennent après impact ou distance parcourue, ajoutant 1 munition. Lorsqu’un personnage Lumino déclenche un Effet supplémentaire, il obtient 1 cumul d’ATQ +28.0% pendant 24.0 s, jusqu’à 9.0 cumuls. L’utilisation de la compétence ultime réinitialise la durée de tous les cumuls à 24.0 s.",
-      "Durée de compétence +27.0%. Les projectiles reviennent après impact ou distance parcourue, ajoutant 1 munition. Lorsqu’un personnage Lumino déclenche un Effet supplémentaire, il obtient 1 cumul d’ATQ +31.5% pendant 24.0 s, jusqu’à 9.0 cumuls. L’utilisation de la compétence ultime réinitialise la durée de tous les cumuls à 24.0 s.",
-      "Durée de compétence +30.0%. Les projectiles reviennent après impact ou distance parcourue, ajoutant 1 munition. Lorsqu’un personnage Lumino déclenche un Effet supplémentaire, il obtient 1 cumul d’ATQ +35.0% pendant 24.0 s, jusqu’à 9.0 cumuls. L’utilisation de la compétence ultime réinitialise la durée de tous les cumuls à 24.0 s."
+      "Durée de compétence +#1. Les projectiles reviennent après impact ou distance parcourue, ajoutant 1 munition. Lorsqu’un personnage Lumino déclenche un Effet supplémentaire, il obtient 1 cumul d’ATQ +#2 pendant 24.0 s, jusqu’à 9.0 cumuls. L’utilisation de la compétence ultime réinitialise la durée de tous les cumuls à 24.0 s.",
+      [
+        "15.0%",
+        "18.0%",
+        "21.0%",
+        "24.0%",
+        "27.0%",
+        "30.0%"
+      ],
+      [
+        "17.5%",
+        "21.0%",
+        "24.5%",
+        "28.0%",
+        "31.5%",
+        "35.0%"
+      ]
     ],
     "技能": [
       {
@@ -10805,12 +11434,23 @@
       }
     ],
     "熔炼": [
-      "Vitesse de rechargement +30.0%. Après avoir rechargé, la Vitesse d’attaque augmente de 50.0% pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
-      "Vitesse de rechargement +36.0%. Après avoir rechargé, la Vitesse d’attaque augmente de 60.0% pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
-      "Vitesse de rechargement +42.0%. Après avoir rechargé, la Vitesse d’attaque augmente de 70.0% pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
-      "Vitesse de rechargement +48.0%. Après avoir rechargé, la Vitesse d’attaque augmente de 80.0% pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
-      "Vitesse de rechargement +54.0%. Après avoir rechargé, la Vitesse d’attaque augmente de 90.0% pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
-      "Vitesse de rechargement +60.0%. Après avoir rechargé, la Vitesse d’attaque augmente de 100.0% pendant 6.0 s. L’effet est annulé lors du changement d’arme."
+      "Vitesse de rechargement +#1. Après avoir rechargé, la Vitesse d’attaque augmente de #2 pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
+      [
+        "30.0%",
+        "36.0%",
+        "42.0%",
+        "48.0%",
+        "54.0%",
+        "60.0%"
+      ],
+      [
+        "50.0%",
+        "60.0%",
+        "70.0%",
+        "80.0%",
+        "90.0%",
+        "100.0%"
+      ]
     ],
     "技能": [
       {
@@ -10923,12 +11563,23 @@
       }
     ],
     "熔炼": [
-      "Tir multiple +37.5%. Lorsqu’un personnage Pyro inflige des Dégâts de compétence, il gagne 1 cumul augmentant la Puissance de compétence de 2.5% pendant 10.0 s, cumulable jusqu’à 30.0 fois.",
-      "Tir multiple +45.0%. Lorsqu’un personnage Pyro inflige des Dégâts de compétence, il gagne 1 cumul augmentant la Puissance de compétence de 3.0% pendant 10.0 s, cumulable jusqu’à 30.0 fois.",
-      "Tir multiple +52.5%. Lorsqu’un personnage Pyro inflige des Dégâts de compétence, il gagne 1 cumul augmentant la Puissance de compétence de 3.5% pendant 10.0 s, cumulable jusqu’à 30.0 fois.",
-      "Tir multiple +60.0%. Lorsqu’un personnage Pyro inflige des Dégâts de compétence, il gagne 1 cumul augmentant la Puissance de compétence de 4.0% pendant 10.0 s, cumulable jusqu’à 30.0 fois.",
-      "Tir multiple +67.5%. Lorsqu’un personnage Pyro inflige des Dégâts de compétence, il gagne 1 cumul augmentant la Puissance de compétence de 4.5% pendant 10.0 s, cumulable jusqu’à 30.0 fois.",
-      "Tir multiple +75.0%. Lorsqu’un personnage Pyro inflige des Dégâts de compétence, il gagne 1 cumul augmentant la Puissance de compétence de 5.0% pendant 10.0 s, cumulable jusqu’à 30.0 fois."
+      "Tir multiple +#1. Lorsqu’un personnage Pyro inflige des Dégâts de compétence, il gagne 1 cumul augmentant la Puissance de compétence de #2 pendant 10.0 s, cumulable jusqu’à 30.0 fois.",
+      [
+        "37.5%",
+        "45.0%",
+        "52.5%",
+        "60.0%",
+        "67.5%",
+        "75.0%"
+      ],
+      [
+        "2.5%",
+        "3.0%",
+        "3.5%",
+        "4.0%",
+        "4.5%",
+        "5.0%"
+      ]
     ],
     "技能": [
       {
@@ -11020,11 +11671,6 @@
       }
     ],
     "熔炼": [
-      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
-      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
-      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
-      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
-      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
       "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage."
     ],
     "熔炉": [
@@ -11335,12 +11981,31 @@
       }
     ],
     "熔炼": [
-      "Vitesse d’attaque +25.0%. Les dégâts d’une flèche augmentent de 9.0% pour chaque ennemi qu’elle touche, jusqu’à un maximum de 45.0%.",
-      "Vitesse d’attaque +30.0%. Les dégâts d’une flèche augmentent de 10.8% pour chaque ennemi qu’elle touche, jusqu’à un maximum de 54.0%.",
-      "Vitesse d’attaque +35.0%. Les dégâts d’une flèche augmentent de 12.6% pour chaque ennemi qu’elle touche, jusqu’à un maximum de 63.0%.",
-      "Vitesse d’attaque +40.0%. Les dégâts d’une flèche augmentent de 14.4% pour chaque ennemi qu’elle touche, jusqu’à un maximum de 72.0%.",
-      "Vitesse d’attaque +45.0%. Les dégâts d’une flèche augmentent de 16.2% pour chaque ennemi qu’elle touche, jusqu’à un maximum de 81.0%.",
-      "Vitesse d’attaque +50.0%. Les dégâts d’une flèche augmentent de 18.0% pour chaque ennemi qu’elle touche, jusqu’à un maximum de 90.0%."
+      "Vitesse d’attaque +#1. Les dégâts d’une flèche augmentent de #2 pour chaque ennemi qu’elle touche, jusqu’à un maximum de #3.",
+      [
+        "25.0%",
+        "30.0%",
+        "35.0%",
+        "40.0%",
+        "45.0%",
+        "50.0%"
+      ],
+      [
+        "9.0%",
+        "10.8%",
+        "12.6%",
+        "14.4%",
+        "16.2%",
+        "18.0%"
+      ],
+      [
+        "45.0%",
+        "54.0%",
+        "63.0%",
+        "72.0%",
+        "81.0%",
+        "90.0%"
+      ]
     ],
     "技能": [
       {
@@ -11527,12 +12192,47 @@
       }
     ],
     "熔炼": [
-      "Durée de compétence +15.0%. Lorsqu’un coup critique est infligé avec cette arme, confère aléatoirement à vos alliés l’un des effets suivants pendant 16.0 s : ATQ +10.0%, DÉF +10.0%, Puissance de compétence +7.5% ou Durée de compétence +10.0%.",
-      "Durée de compétence +18.0%. Lorsqu’un coup critique est infligé avec cette arme, confère aléatoirement à vos alliés l’un des effets suivants pendant 16.0 s : ATQ +12.0%, DÉF +12.0%, Puissance de compétence +9.0% ou Durée de compétence +12.0%.",
-      "Durée de compétence +21.0%. Lorsqu’un coup critique est infligé avec cette arme, confère aléatoirement à vos alliés l’un des effets suivants pendant 16.0 s : ATQ +14.0%, DÉF +14.0%, Puissance de compétence +10.5% ou Durée de compétence +14.0%.",
-      "Durée de compétence +24.0%. Lorsqu’un coup critique est infligé avec cette arme, confère aléatoirement à vos alliés l’un des effets suivants pendant 16.0 s : ATQ +16.0%, DÉF +16.0%, Puissance de compétence +12.0% ou Durée de compétence +16.0%.",
-      "Durée de compétence +27.0%. Lorsqu’un coup critique est infligé avec cette arme, confère aléatoirement à vos alliés l’un des effets suivants pendant 16.0 s : ATQ +18.0%, DÉF +18.0%, Puissance de compétence +13.5% ou Durée de compétence +18.0%.",
-      "Durée de compétence +30.0%. Lorsqu’un coup critique est infligé avec cette arme, confère aléatoirement à vos alliés l’un des effets suivants pendant 16.0 s : ATQ +20.0%, DÉF +20.0%, Puissance de compétence +15.0% ou Durée de compétence +20.0%."
+      "Durée de compétence +#1. Lorsqu’un coup critique est infligé avec cette arme, confère aléatoirement à vos alliés l’un des effets suivants pendant 16.0 s : ATQ +#2, DÉF +#3, Puissance de compétence +#4 ou Durée de compétence +#5.",
+      [
+        "15.0%",
+        "18.0%",
+        "21.0%",
+        "24.0%",
+        "27.0%",
+        "30.0%"
+      ],
+      [
+        "10.0%",
+        "12.0%",
+        "14.0%",
+        "16.0%",
+        "18.0%",
+        "20.0%"
+      ],
+      [
+        "10.0%",
+        "12.0%",
+        "14.0%",
+        "16.0%",
+        "18.0%",
+        "20.0%"
+      ],
+      [
+        "7.5%",
+        "9.0%",
+        "10.5%",
+        "12.0%",
+        "13.5%",
+        "15.0%"
+      ],
+      [
+        "10.0%",
+        "12.0%",
+        "14.0%",
+        "16.0%",
+        "18.0%",
+        "20.0%"
+      ]
     ],
     "技能": [
       {
@@ -11638,12 +12338,23 @@
       }
     ],
     "熔炼": [
-      "Portée de compétence +30.0%. Pendant la charge, verrouille progressivement les ennemis dans la zone. Lors du relâchement, tire des flèches traçantes vers toutes les cibles verrouillées. Lorsqu’un personnage Lumino inflige des Dégâts de compétence, il obtient +35.0% de Dégâts de compétence pendant 6.0 s.",
-      "Portée de compétence +36.0%. Pendant la charge, verrouille progressivement les ennemis dans la zone. Lors du relâchement, tire des flèches traçantes vers toutes les cibles verrouillées. Lorsqu’un personnage Lumino inflige des Dégâts de compétence, il obtient +42.0% de Dégâts de compétence pendant 6.0 s.",
-      "Portée de compétence +42.0%. Pendant la charge, verrouille progressivement les ennemis dans la zone. Lors du relâchement, tire des flèches traçantes vers toutes les cibles verrouillées. Lorsqu’un personnage Lumino inflige des Dégâts de compétence, il obtient +49.0% de Dégâts de compétence pendant 6.0 s.",
-      "Portée de compétence +48.0%. Pendant la charge, verrouille progressivement les ennemis dans la zone. Lors du relâchement, tire des flèches traçantes vers toutes les cibles verrouillées. Lorsqu’un personnage Lumino inflige des Dégâts de compétence, il obtient +56.0% de Dégâts de compétence pendant 6.0 s.",
-      "Portée de compétence +54.0%. Pendant la charge, verrouille progressivement les ennemis dans la zone. Lors du relâchement, tire des flèches traçantes vers toutes les cibles verrouillées. Lorsqu’un personnage Lumino inflige des Dégâts de compétence, il obtient +63.0% de Dégâts de compétence pendant 6.0 s.",
-      "Portée de compétence +60.0%. Pendant la charge, verrouille progressivement les ennemis dans la zone. Lors du relâchement, tire des flèches traçantes vers toutes les cibles verrouillées. Lorsqu’un personnage Lumino inflige des Dégâts de compétence, il obtient +70.0% de Dégâts de compétence pendant 6.0 s."
+      "Portée de compétence +#1. Pendant la charge, verrouille progressivement les ennemis dans la zone. Lors du relâchement, tire des flèches traçantes vers toutes les cibles verrouillées. Lorsqu’un personnage Lumino inflige des Dégâts de compétence, il obtient +#2 de Dégâts de compétence pendant 6.0 s.",
+      [
+        "30.0%",
+        "36.0%",
+        "42.0%",
+        "48.0%",
+        "54.0%",
+        "60.0%"
+      ],
+      [
+        "35.0%",
+        "42.0%",
+        "49.0%",
+        "56.0%",
+        "63.0%",
+        "70.0%"
+      ]
     ],
     "技能": [
       {
@@ -11770,12 +12481,15 @@
       }
     ],
     "熔炼": [
-      "Portée de compétence +36.0%.",
-      "Portée de compétence +43.2%.",
-      "Portée de compétence +50.4%.",
-      "Portée de compétence +57.6%.",
-      "Portée de compétence +64.8%.",
-      "Portée de compétence +72.0%."
+      "Portée de compétence +#1.",
+      [
+        "36.0%",
+        "43.2%",
+        "50.4%",
+        "57.6%",
+        "64.8%",
+        "72.0%"
+      ]
     ],
     "技能": [
       {
@@ -11881,11 +12595,6 @@
       }
     ],
     "熔炼": [
-      "Vitesse d’attaque +100.0%. Tirer une flèche pendant la 3e phase de charge augmente les dégâts qu’elle inflige de 71.9% et augmente le Rayon de l’explosion de 6.0 pendant 2.0 s.",
-      "Vitesse d’attaque +100.0%. Tirer une flèche pendant la 3e phase de charge augmente les dégâts qu’elle inflige de 71.9% et augmente le Rayon de l’explosion de 6.0 pendant 2.0 s.",
-      "Vitesse d’attaque +100.0%. Tirer une flèche pendant la 3e phase de charge augmente les dégâts qu’elle inflige de 71.9% et augmente le Rayon de l’explosion de 6.0 pendant 2.0 s.",
-      "Vitesse d’attaque +100.0%. Tirer une flèche pendant la 3e phase de charge augmente les dégâts qu’elle inflige de 71.9% et augmente le Rayon de l’explosion de 6.0 pendant 2.0 s.",
-      "Vitesse d’attaque +100.0%. Tirer une flèche pendant la 3e phase de charge augmente les dégâts qu’elle inflige de 71.9% et augmente le Rayon de l’explosion de 6.0 pendant 2.0 s.",
       "Vitesse d’attaque +100.0%. Tirer une flèche pendant la 3e phase de charge augmente les dégâts qu’elle inflige de 71.9% et augmente le Rayon de l’explosion de 6.0 pendant 2.0 s."
     ],
     "技能": [

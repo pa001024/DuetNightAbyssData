@@ -55,12 +55,15 @@
       }
     ],
     "熔炼": [
-      "Character ATK ‍+60.0%.",
-      "Character ATK ‍+72.0%.",
-      "Character ATK ‍+84.0%.",
-      "Character ATK ‍+96.0%.",
-      "Character ATK ‍+108.0%.",
-      "Character ATK ‍+120.0%."
+      "Character ATK ‍+#1.",
+      [
+        "60.0%",
+        "72.0%",
+        "84.0%",
+        "96.0%",
+        "108.0%",
+        "120.0%"
+      ]
     ],
     "技能": [
       {
@@ -239,12 +242,23 @@
       }
     ],
     "熔炼": [
-      "Trigger Probability +75.0%. When a Hydro character triggers a bonus effect with this weapon, other allies gain +33.0% ATK for 6.0s.",
-      "Trigger Probability +90.0%. When a Hydro character triggers a bonus effect with this weapon, other allies gain +39.6% ATK for 6.0s.",
-      "Trigger Probability +105.0%. When a Hydro character triggers a bonus effect with this weapon, other allies gain +46.2% ATK for 6.0s.",
-      "Trigger Probability +120.0%. When a Hydro character triggers a bonus effect with this weapon, other allies gain +52.8% ATK for 6.0s.",
-      "Trigger Probability +135.0%. When a Hydro character triggers a bonus effect with this weapon, other allies gain +59.4% ATK for 6.0s.",
-      "Trigger Probability +150.0%. When a Hydro character triggers a bonus effect with this weapon, other allies gain +66.0% ATK for 6.0s."
+      "Trigger Probability +#1. When a Hydro character triggers a bonus effect with this weapon, other allies gain +#2 ATK for 6.0s.",
+      [
+        "75.0%",
+        "90.0%",
+        "105.0%",
+        "120.0%",
+        "135.0%",
+        "150.0%"
+      ],
+      [
+        "33.0%",
+        "39.6%",
+        "46.2%",
+        "52.8%",
+        "59.4%",
+        "66.0%"
+      ]
     ],
     "技能": [
       {
@@ -423,12 +437,23 @@
       }
     ],
     "熔炼": [
-      "ATK Range ‍+1.0. Landing a CRIT with this weapon has a 33.0% chance to restore 3.0 Sanity. Can trigger once every 0.5s.",
-      "ATK Range ‍+1.2. Landing a CRIT with this weapon has a 39.6% chance to restore 3.0 Sanity. Can trigger once every 0.5s.",
-      "ATK Range ‍+1.4. Landing a CRIT with this weapon has a 46.2% chance to restore 3.0 Sanity. Can trigger once every 0.5s.",
-      "ATK Range ‍+1.6. Landing a CRIT with this weapon has a 52.8% chance to restore 3.0 Sanity. Can trigger once every 0.5s.",
-      "ATK Range ‍+1.8. Landing a CRIT with this weapon has a 59.4% chance to restore 3.0 Sanity. Can trigger once every 0.5s.",
-      "ATK Range ‍+2.0. Landing a CRIT with this weapon has a 66.0% chance to restore 3.0 Sanity. Can trigger once every 0.5s."
+      "ATK Range ‍+#1. Landing a CRIT with this weapon has a #2 chance to restore 3.0 Sanity. Can trigger once every 0.5s.",
+      [
+        "1.0",
+        "1.2",
+        "1.4",
+        "1.6",
+        "1.8",
+        "2.0"
+      ],
+      [
+        "33.0%",
+        "39.6%",
+        "46.2%",
+        "52.8%",
+        "59.4%",
+        "66.0%"
+      ]
     ],
     "技能": [
       {
@@ -607,12 +632,23 @@
       }
     ],
     "熔炼": [
-      "DEF +50.0%. When dealing damage with this weapon triggers Bonus Effect, there's a 25.0% chance to decrease the target's Shield by 350.0% of the user's DEF.",
-      "DEF +60.0%. When dealing damage with this weapon triggers Bonus Effect, there's a 30.0% chance to decrease the target's Shield by 350.0% of the user's DEF.",
-      "DEF +70.0%. When dealing damage with this weapon triggers Bonus Effect, there's a 35.0% chance to decrease the target's Shield by 350.0% of the user's DEF.",
-      "DEF +80.0%. When dealing damage with this weapon triggers Bonus Effect, there's a 40.0% chance to decrease the target's Shield by 350.0% of the user's DEF.",
-      "DEF +90.0%. When dealing damage with this weapon triggers Bonus Effect, there's a 45.0% chance to decrease the target's Shield by 350.0% of the user's DEF.",
-      "DEF +100.0%. When dealing damage with this weapon triggers Bonus Effect, there's a 50.0% chance to decrease the target's Shield by 350.0% of the user's DEF."
+      "DEF +#1. When dealing damage with this weapon triggers Bonus Effect, there's a #2 chance to decrease the target's Shield by 350.0% of the user's DEF.",
+      [
+        "50.0%",
+        "60.0%",
+        "70.0%",
+        "80.0%",
+        "90.0%",
+        "100.0%"
+      ],
+      [
+        "25.0%",
+        "30.0%",
+        "35.0%",
+        "40.0%",
+        "45.0%",
+        "50.0%"
+      ]
     ],
     "技能": [
       {
@@ -791,12 +827,23 @@
       }
     ],
     "熔炼": [
-      "ATK Speed +25.0%‍. Charged Attacks with this weapon have a 28.0% chance to reduce the cooldown of Geniemon Support by 3.0s.",
-      "ATK Speed +30.0%‍. Charged Attacks with this weapon have a 33.6% chance to reduce the cooldown of Geniemon Support by 3.0s.",
-      "ATK Speed +35.0%‍. Charged Attacks with this weapon have a 39.2% chance to reduce the cooldown of Geniemon Support by 3.0s.",
-      "ATK Speed +40.0%‍. Charged Attacks with this weapon have a 44.8% chance to reduce the cooldown of Geniemon Support by 3.0s.",
-      "ATK Speed +45.0%‍. Charged Attacks with this weapon have a 50.4% chance to reduce the cooldown of Geniemon Support by 3.0s.",
-      "ATK Speed +50.0%‍. Charged Attacks with this weapon have a 56.0% chance to reduce the cooldown of Geniemon Support by 3.0s."
+      "ATK Speed +#1‍. Charged Attacks with this weapon have a #2 chance to reduce the cooldown of Geniemon Support by 3.0s.",
+      [
+        "25.0%",
+        "30.0%",
+        "35.0%",
+        "40.0%",
+        "45.0%",
+        "50.0%"
+      ],
+      [
+        "28.0%",
+        "33.6%",
+        "39.2%",
+        "44.8%",
+        "50.4%",
+        "56.0%"
+      ]
     ],
     "技能": [
       {
@@ -975,12 +1022,31 @@
       }
     ],
     "熔炼": [
-      "Morale +15.0%. When an Umbro character deals damage, Damage Dealt increases by 0.20% for each Combo Point. After Combo Points are consumed, Morale increases by [0.25% × Combo Points consumed] for 8.0s.",
-      "Morale +18.0%. When an Umbro character deals damage, Damage Dealt increases by 0.24% for each Combo Point. After Combo Points are consumed, Morale increases by [0.30% × Combo Points consumed] for 8.0s.",
-      "Morale +21.0%. When an Umbro character deals damage, Damage Dealt increases by 0.28% for each Combo Point. After Combo Points are consumed, Morale increases by [0.35% × Combo Points consumed] for 8.0s.",
-      "Morale +24.0%. When an Umbro character deals damage, Damage Dealt increases by 0.32% for each Combo Point. After Combo Points are consumed, Morale increases by [0.40% × Combo Points consumed] for 8.0s.",
-      "Morale +27.0%. When an Umbro character deals damage, Damage Dealt increases by 0.36% for each Combo Point. After Combo Points are consumed, Morale increases by [0.45% × Combo Points consumed] for 8.0s.",
-      "Morale +30.0%. When an Umbro character deals damage, Damage Dealt increases by 0.40% for each Combo Point. After Combo Points are consumed, Morale increases by [0.50% × Combo Points consumed] for 8.0s."
+      "Morale +#1. When an Umbro character deals damage, Damage Dealt increases by #2 for each Combo Point. After Combo Points are consumed, Morale increases by [#3 × Combo Points consumed] for 8.0s.",
+      [
+        "15.0%",
+        "18.0%",
+        "21.0%",
+        "24.0%",
+        "27.0%",
+        "30.0%"
+      ],
+      [
+        "0.20%",
+        "0.24%",
+        "0.28%",
+        "0.32%",
+        "0.36%",
+        "0.40%"
+      ],
+      [
+        "0.25%",
+        "0.30%",
+        "0.35%",
+        "0.40%",
+        "0.45%",
+        "0.50%"
+      ]
     ],
     "技能": [
       {
@@ -1159,12 +1225,23 @@
       }
     ],
     "熔炼": [
-      "Skill Range +30.0%. Each hit of Normal Attack with this weapon grants a 3.6% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
-      "Skill Range +36.0%. Each hit of Normal Attack with this weapon grants a 4.3% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
-      "Skill Range +42.0%. Each hit of Normal Attack with this weapon grants a 5.0% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
-      "Skill Range +48.0%. Each hit of Normal Attack with this weapon grants a 5.8% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
-      "Skill Range +54.0%. Each hit of Normal Attack with this weapon grants a 6.5% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
-      "Skill Range +60.0%. Each hit of Normal Attack with this weapon grants a 7.2% ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons."
+      "Skill Range +#1. Each hit of Normal Attack with this weapon grants a #2 ATK Speed Increase for 15.0s (up to 12.0 stacks). Effect is removed when switching weapons.",
+      [
+        "30.0%",
+        "36.0%",
+        "42.0%",
+        "48.0%",
+        "54.0%",
+        "60.0%"
+      ],
+      [
+        "3.6%",
+        "4.3%",
+        "5.0%",
+        "5.8%",
+        "6.5%",
+        "7.2%"
+      ]
     ],
     "技能": [
       {
@@ -1368,12 +1445,23 @@
       }
     ],
     "熔炼": [
-      "ATK Speed‍ +25.0%. Deals +45.0% damage to targets afflicted with bonus effects.",
-      "ATK Speed‍ +30.0%. Deals +54.0% damage to targets afflicted with bonus effects.",
-      "ATK Speed‍ +35.0%. Deals +63.0% damage to targets afflicted with bonus effects.",
-      "ATK Speed‍ +40.0%. Deals +72.0% damage to targets afflicted with bonus effects.",
-      "ATK Speed‍ +45.0%. Deals +81.0% damage to targets afflicted with bonus effects.",
-      "ATK Speed‍ +50.0%. Deals +90.0% damage to targets afflicted with bonus effects."
+      "ATK Speed‍ +#1. Deals +#2 damage to targets afflicted with bonus effects.",
+      [
+        "25.0%",
+        "30.0%",
+        "35.0%",
+        "40.0%",
+        "45.0%",
+        "50.0%"
+      ],
+      [
+        "45.0%",
+        "54.0%",
+        "63.0%",
+        "72.0%",
+        "81.0%",
+        "90.0%"
+      ]
     ],
     "技能": [
       {
@@ -1577,12 +1665,23 @@
       }
     ],
     "熔炼": [
-      "Skill Intensity +20.0%. When an Electro character deals damage using a Plunging Attack with this weapon, grants self and Electro allies +5.0% Skill DMG for 10.0s (up to 5 stacks).",
-      "Skill Intensity +24.0%. When an Electro character deals damage using a Plunging Attack with this weapon, grants self and Electro allies +6.0% Skill DMG for 10.0s (up to 5 stacks).",
-      "Skill Intensity +28.0%. When an Electro character deals damage using a Plunging Attack with this weapon, grants self and Electro allies +7.0% Skill DMG for 10.0s (up to 5 stacks).",
-      "Skill Intensity +32.0%. When an Electro character deals damage using a Plunging Attack with this weapon, grants self and Electro allies +8.0% Skill DMG for 10.0s (up to 5 stacks).",
-      "Skill Intensity +36.0%. When an Electro character deals damage using a Plunging Attack with this weapon, grants self and Electro allies +9.0% Skill DMG for 10.0s (up to 5 stacks).",
-      "Skill Intensity +40.0%. When an Electro character deals damage using a Plunging Attack with this weapon, grants self and Electro allies +10.0% Skill DMG for 10.0s (up to 5 stacks)."
+      "Skill Intensity +#1. When an Electro character deals damage using a Plunging Attack with this weapon, grants self and Electro allies +#2 Skill DMG for 10.0s (up to 5 stacks).",
+      [
+        "20.0%",
+        "24.0%",
+        "28.0%",
+        "32.0%",
+        "36.0%",
+        "40.0%"
+      ],
+      [
+        "5.0%",
+        "6.0%",
+        "7.0%",
+        "8.0%",
+        "9.0%",
+        "10.0%"
+      ]
     ],
     "技能": [
       {
@@ -1786,12 +1885,31 @@
       }
     ],
     "熔炼": [
-      "Resolve +5.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 8.0% and ATK Speed by 15.0% for 15.0s. Each instance of Skill DMG or Ranged Weapon DMG extends the duration by 0.2s.",
-      "Resolve +6.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 9.6% and ATK Speed by 18.0% for 15.0s. Each instance of Skill DMG or Ranged Weapon DMG extends the duration by 0.2s.",
-      "Resolve +7.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 11.2% and ATK Speed by 21.0% for 15.0s. Each instance of Skill DMG or Ranged Weapon DMG extends the duration by 0.2s.",
-      "Resolve +8.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 12.8% and ATK Speed by 24.0% for 15.0s. Each instance of Skill DMG or Ranged Weapon DMG extends the duration by 0.2s.",
-      "Resolve +9.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 14.4% and ATK Speed by 27.0% for 15.0s. Each instance of Skill DMG or Ranged Weapon DMG extends the duration by 0.2s.",
-      "Resolve +10.0%. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by 16.0% and ATK Speed by 30.0% for 15.0s. Each instance of Skill DMG or Ranged Weapon DMG extends the duration by 0.2s."
+      "Resolve +#1. After an Anemo character uses their Ultimate Skill, grants [Thousand Winds' Blessing]: increases Resolve by #2 and ATK Speed by #3 for 15.0s. Each instance of Skill DMG or Ranged Weapon DMG extends the duration by 0.2s.",
+      [
+        "5.0%",
+        "6.0%",
+        "7.0%",
+        "8.0%",
+        "9.0%",
+        "10.0%"
+      ],
+      [
+        "8.0%",
+        "9.6%",
+        "11.2%",
+        "12.8%",
+        "14.4%",
+        "16.0%"
+      ],
+      [
+        "15.0%",
+        "18.0%",
+        "21.0%",
+        "24.0%",
+        "27.0%",
+        "30.0%"
+      ]
     ],
     "技能": [
       {
@@ -1995,12 +2113,15 @@
       }
     ],
     "熔炼": [
-      "Skill Intensity +24.0%.",
-      "Skill Intensity +28.8%.",
-      "Skill Intensity +33.6%.",
-      "Skill Intensity +38.4%.",
-      "Skill Intensity +43.2%.",
-      "Skill Intensity +48.0%."
+      "Skill Intensity +#1.",
+      [
+        "24.0%",
+        "28.8%",
+        "33.6%",
+        "38.4%",
+        "43.2%",
+        "48.0%"
+      ]
     ],
     "技能": [
       {
@@ -2204,12 +2325,23 @@
       }
     ],
     "熔炼": [
-      "CRIT Chance +50.0%. When dealing damage using normal attack with this weapon, there is a 1.7% chance to reload the user's ranged weapon magazine.",
-      "CRIT Chance +60.0%. When dealing damage using normal attack with this weapon, there is a 2.0% chance to reload the user's ranged weapon magazine.",
-      "CRIT Chance +70.0%. When dealing damage using normal attack with this weapon, there is a 2.4% chance to reload the user's ranged weapon magazine.",
-      "CRIT Chance +80.0%. When dealing damage using normal attack with this weapon, there is a 2.7% chance to reload the user's ranged weapon magazine.",
-      "CRIT Chance +90.0%. When dealing damage using normal attack with this weapon, there is a 3.1% chance to reload the user's ranged weapon magazine.",
-      "CRIT Chance +100.0%. When dealing damage using normal attack with this weapon, there is a 3.4% chance to reload the user's ranged weapon magazine."
+      "CRIT Chance +#1. When dealing damage using normal attack with this weapon, there is a #2 chance to reload the user's ranged weapon magazine.",
+      [
+        "50.0%",
+        "60.0%",
+        "70.0%",
+        "80.0%",
+        "90.0%",
+        "100.0%"
+      ],
+      [
+        "1.7%",
+        "2.0%",
+        "2.4%",
+        "2.7%",
+        "3.1%",
+        "3.4%"
+      ]
     ],
     "技能": [
       {
@@ -2413,12 +2545,23 @@
       }
     ],
     "熔炼": [
-      "CRIT Chance +50.0%. Dealing CRIT Damage with this weapon has a 30.0% chance to grant 1 stack of +3.0% CRIT Damage for 15.0s, up to 25.0 stacks. This effect is removed when switching weapons.",
-      "CRIT Chance +60.0%. Dealing CRIT Damage with this weapon has a 30.0% chance to grant 1 stack of +3.6% CRIT Damage for 15.0s, up to 25.0 stacks. This effect is removed when switching weapons.",
-      "CRIT Chance +70.0%. Dealing CRIT Damage with this weapon has a 30.0% chance to grant 1 stack of +4.2% CRIT Damage for 15.0s, up to 25.0 stacks. This effect is removed when switching weapons.",
-      "CRIT Chance +80.0%. Dealing CRIT Damage with this weapon has a 30.0% chance to grant 1 stack of +4.8% CRIT Damage for 15.0s, up to 25.0 stacks. This effect is removed when switching weapons.",
-      "CRIT Chance +90.0%. Dealing CRIT Damage with this weapon has a 30.0% chance to grant 1 stack of +5.4% CRIT Damage for 15.0s, up to 25.0 stacks. This effect is removed when switching weapons.",
-      "CRIT Chance +100.0%. Dealing CRIT Damage with this weapon has a 30.0% chance to grant 1 stack of +6.0% CRIT Damage for 15.0s, up to 25.0 stacks. This effect is removed when switching weapons."
+      "CRIT Chance +#1. Dealing CRIT Damage with this weapon has a 30.0% chance to grant 1 stack of +#2 CRIT Damage for 15.0s, up to 25.0 stacks. This effect is removed when switching weapons.",
+      [
+        "50.0%",
+        "60.0%",
+        "70.0%",
+        "80.0%",
+        "90.0%",
+        "100.0%"
+      ],
+      [
+        "3.0%",
+        "3.6%",
+        "4.2%",
+        "4.8%",
+        "5.4%",
+        "6.0%"
+      ]
     ],
     "技能": [
       {
@@ -2625,11 +2768,6 @@
       }
     ],
     "熔炼": [
-      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
-      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
-      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
-      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
-      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
       "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type."
     ],
     "熔炉": [
@@ -3036,12 +3174,23 @@
       }
     ],
     "熔炼": [
-      "Max HP +50.0%. When a Pyro character takes damage, grants +15.0% Skill Duration for 8.0s (up to 3.0 stacks).",
-      "Max HP +60.0%. When a Pyro character takes damage, grants +18.0% Skill Duration for 8.0s (up to 3.0 stacks).",
-      "Max HP +70.0%. When a Pyro character takes damage, grants +21.0% Skill Duration for 8.0s (up to 3.0 stacks).",
-      "Max HP +80.0%. When a Pyro character takes damage, grants +24.0% Skill Duration for 8.0s (up to 3.0 stacks).",
-      "Max HP +90.0%. When a Pyro character takes damage, grants +27.0% Skill Duration for 8.0s (up to 3.0 stacks).",
-      "Max HP +100.0%. When a Pyro character takes damage, grants +30.0% Skill Duration for 8.0s (up to 3.0 stacks)."
+      "Max HP +#1. When a Pyro character takes damage, grants +#2 Skill Duration for 8.0s (up to 3.0 stacks).",
+      [
+        "50.0%",
+        "60.0%",
+        "70.0%",
+        "80.0%",
+        "90.0%",
+        "100.0%"
+      ],
+      [
+        "15.0%",
+        "18.0%",
+        "21.0%",
+        "24.0%",
+        "27.0%",
+        "30.0%"
+      ]
     ],
     "技能": [
       {
@@ -3229,12 +3378,23 @@
       }
     ],
     "熔炼": [
-      "CRIT Chance +50.0%. When dealing damage with this weapon triggers Bonus Effect, there is a 2.1% chance to increase the Combo Level to maximum.",
-      "CRIT Chance +60.0%. When dealing damage with this weapon triggers Bonus Effect, there is a 2.5% chance to increase the Combo Level to maximum.",
-      "CRIT Chance +70.0%. When dealing damage with this weapon triggers Bonus Effect, there is a 2.9% chance to increase the Combo Level to maximum.",
-      "CRIT Chance +80.0%. When dealing damage with this weapon triggers Bonus Effect, there is a 3.4% chance to increase the Combo Level to maximum.",
-      "CRIT Chance +90.0%. When dealing damage with this weapon triggers Bonus Effect, there is a 3.8% chance to increase the Combo Level to maximum.",
-      "CRIT Chance +100.0%. When dealing damage with this weapon triggers Bonus Effect, there is a 4.2% chance to increase the Combo Level to maximum."
+      "CRIT Chance +#1. When dealing damage with this weapon triggers Bonus Effect, there is a #2 chance to increase the Combo Level to maximum.",
+      [
+        "50.0%",
+        "60.0%",
+        "70.0%",
+        "80.0%",
+        "90.0%",
+        "100.0%"
+      ],
+      [
+        "2.1%",
+        "2.5%",
+        "2.9%",
+        "3.4%",
+        "3.8%",
+        "4.2%"
+      ]
     ],
     "技能": [
       {
@@ -3422,12 +3582,15 @@
       }
     ],
     "熔炼": [
-      "Skill Duration +18.0%.",
-      "Skill Duration +21.6%.",
-      "Skill Duration +25.2%.",
-      "Skill Duration +28.8%.",
-      "Skill Duration +32.4%.",
-      "Skill Duration +36.0%."
+      "Skill Duration +#1.",
+      [
+        "18.0%",
+        "21.6%",
+        "25.2%",
+        "28.8%",
+        "32.4%",
+        "36.0%"
+      ]
     ],
     "技能": [
       {
@@ -3615,12 +3778,23 @@
       }
     ],
     "熔炼": [
-      "Morale +15.0%. When an Electro character uses their Ultimate Skill, grants +25.0% Skill Intensity for 12.0s (up to 3.0 stacks).",
-      "Morale +18.0%. When an Electro character uses their Ultimate Skill, grants +30.0% Skill Intensity for 12.0s (up to 3.0 stacks).",
-      "Morale +21.0%. When an Electro character uses their Ultimate Skill, grants +35.0% Skill Intensity for 12.0s (up to 3.0 stacks).",
-      "Morale +24.0%. When an Electro character uses their Ultimate Skill, grants +40.0% Skill Intensity for 12.0s (up to 3.0 stacks).",
-      "Morale +27.0%. When an Electro character uses their Ultimate Skill, grants +45.0% Skill Intensity for 12.0s (up to 3.0 stacks).",
-      "Morale +30.0%. When an Electro character uses their Ultimate Skill, grants +50.0% Skill Intensity for 12.0s (up to 3.0 stacks)."
+      "Morale +#1. When an Electro character uses their Ultimate Skill, grants +#2 Skill Intensity for 12.0s (up to 3.0 stacks).",
+      [
+        "15.0%",
+        "18.0%",
+        "21.0%",
+        "24.0%",
+        "27.0%",
+        "30.0%"
+      ],
+      [
+        "25.0%",
+        "30.0%",
+        "35.0%",
+        "40.0%",
+        "45.0%",
+        "50.0%"
+      ]
     ],
     "技能": [
       {
@@ -3808,12 +3982,23 @@
       }
     ],
     "熔炼": [
-      "Trigger Probability +75.0%. When damage dealt with this weapon triggers a bonus effect, there is a 50.0% chance to restore 5 rounds of ammo.",
-      "Trigger Probability +90.0%. When damage dealt with this weapon triggers a bonus effect, there is a 60.0% chance to restore 5 rounds of ammo.",
-      "Trigger Probability +105.0%. When damage dealt with this weapon triggers a bonus effect, there is a 70.0% chance to restore 5 rounds of ammo.",
-      "Trigger Probability +120.0%. When damage dealt with this weapon triggers a bonus effect, there is a 80.0% chance to restore 5 rounds of ammo.",
-      "Trigger Probability +135.0%. When damage dealt with this weapon triggers a bonus effect, there is a 90.0% chance to restore 5 rounds of ammo.",
-      "Trigger Probability +150.0%. When damage dealt with this weapon triggers a bonus effect, there is a 100.0% chance to restore 5 rounds of ammo."
+      "Trigger Probability +#1. When damage dealt with this weapon triggers a bonus effect, there is a #2 chance to restore 5 rounds of ammo.",
+      [
+        "75.0%",
+        "90.0%",
+        "105.0%",
+        "120.0%",
+        "135.0%",
+        "150.0%"
+      ],
+      [
+        "50.0%",
+        "60.0%",
+        "70.0%",
+        "80.0%",
+        "90.0%",
+        "100.0%"
+      ]
     ],
     "技能": [
       {
@@ -4003,11 +4188,6 @@
       }
     ],
     "熔炼": [
-      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
-      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
-      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
-      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
-      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
       "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type."
     ],
     "熔炉": [
@@ -4400,12 +4580,23 @@
       }
     ],
     "熔炼": [
-      "ATK Speed +25.0%. When dealing damage with this weapon triggers Bonus Effect, if the user's HP percentage is below 25%, there's a 45.0% chance to restore 1.5% of the Max HP.",
-      "ATK Speed +30.0%. When dealing damage with this weapon triggers Bonus Effect, if the user's HP percentage is below 25%, there's a 45.0% chance to restore 1.8% of the Max HP.",
-      "ATK Speed +35.0%. When dealing damage with this weapon triggers Bonus Effect, if the user's HP percentage is below 25%, there's a 45.0% chance to restore 2.1% of the Max HP.",
-      "ATK Speed +40.0%. When dealing damage with this weapon triggers Bonus Effect, if the user's HP percentage is below 25%, there's a 45.0% chance to restore 2.4% of the Max HP.",
-      "ATK Speed +45.0%. When dealing damage with this weapon triggers Bonus Effect, if the user's HP percentage is below 25%, there's a 45.0% chance to restore 2.7% of the Max HP.",
-      "ATK Speed +50.0%. When dealing damage with this weapon triggers Bonus Effect, if the user's HP percentage is below 25%, there's a 45.0% chance to restore 3.0% of the Max HP."
+      "ATK Speed +#1. When dealing damage with this weapon triggers Bonus Effect, if the user's HP percentage is below 25%, there's a 45.0% chance to restore #2 of the Max HP.",
+      [
+        "25.0%",
+        "30.0%",
+        "35.0%",
+        "40.0%",
+        "45.0%",
+        "50.0%"
+      ],
+      [
+        "1.5%",
+        "1.8%",
+        "2.1%",
+        "2.4%",
+        "2.7%",
+        "3.0%"
+      ]
     ],
     "技能": [
       {
@@ -4594,12 +4785,23 @@
       }
     ],
     "熔炼": [
-      "CRIT Damage +62.5%. Sliding Attacks with this weapon gain +75.0% CRIT Chance.",
-      "CRIT Damage +75.0%. Sliding Attacks with this weapon gain +90.0% CRIT Chance.",
-      "CRIT Damage +87.5%. Sliding Attacks with this weapon gain +105.0% CRIT Chance.",
-      "CRIT Damage +100.0%. Sliding Attacks with this weapon gain +120.0% CRIT Chance.",
-      "CRIT Damage +112.5%. Sliding Attacks with this weapon gain +135.0% CRIT Chance.",
-      "CRIT Damage +125.0%. Sliding Attacks with this weapon gain +150.0% CRIT Chance."
+      "CRIT Damage +#1. Sliding Attacks with this weapon gain +#2 CRIT Chance.",
+      [
+        "62.5%",
+        "75.0%",
+        "87.5%",
+        "100.0%",
+        "112.5%",
+        "125.0%"
+      ],
+      [
+        "75.0%",
+        "90.0%",
+        "105.0%",
+        "120.0%",
+        "135.0%",
+        "150.0%"
+      ]
     ],
     "技能": [
       {
@@ -4788,12 +4990,15 @@
       }
     ],
     "熔炼": [
-      "Skill Range +36.0%.",
-      "Skill Range +43.2%.",
-      "Skill Range +50.4%.",
-      "Skill Range +57.6%.",
-      "Skill Range +64.8%.",
-      "Skill Range +72.0%."
+      "Skill Range +#1.",
+      [
+        "36.0%",
+        "43.2%",
+        "50.4%",
+        "57.6%",
+        "64.8%",
+        "72.0%"
+      ]
     ],
     "技能": [
       {
@@ -4982,12 +5187,23 @@
       }
     ],
     "熔炼": [
-      "ATK Range +1.0. Charged Attacks with this weapon have a 6.0% chance not to consume Combo Points.",
-      "ATK Range +1.2. Charged Attacks with this weapon have a 7.2% chance not to consume Combo Points.",
-      "ATK Range +1.4. Charged Attacks with this weapon have a 8.4% chance not to consume Combo Points.",
-      "ATK Range +1.6. Charged Attacks with this weapon have a 9.6% chance not to consume Combo Points.",
-      "ATK Range +1.8. Charged Attacks with this weapon have a 10.8% chance not to consume Combo Points.",
-      "ATK Range +2.0. Charged Attacks with this weapon have a 12.0% chance not to consume Combo Points."
+      "ATK Range +#1. Charged Attacks with this weapon have a #2 chance not to consume Combo Points.",
+      [
+        "1.0",
+        "1.2",
+        "1.4",
+        "1.6",
+        "1.8",
+        "2.0"
+      ],
+      [
+        "6.0%",
+        "7.2%",
+        "8.4%",
+        "9.6%",
+        "10.8%",
+        "12.0%"
+      ]
     ],
     "技能": [
       {
@@ -5176,12 +5392,23 @@
       }
     ],
     "熔炼": [
-      "ATK Speed +25.0%. When a Pyro character's HP recovers to above 80% of Max HP, the HP percentage is treated as 30.0% when calculating Morale and Resolve for 6.0s. During this time, Resolve is increased by 20.0%.",
-      "ATK Speed +30.0%. When a Pyro character's HP recovers to above 80% of Max HP, the HP percentage is treated as 30.0% when calculating Morale and Resolve for 6.0s. During this time, Resolve is increased by 24.0%.",
-      "ATK Speed +35.0%. When a Pyro character's HP recovers to above 80% of Max HP, the HP percentage is treated as 30.0% when calculating Morale and Resolve for 6.0s. During this time, Resolve is increased by 28.0%.",
-      "ATK Speed +40.0%. When a Pyro character's HP recovers to above 80% of Max HP, the HP percentage is treated as 30.0% when calculating Morale and Resolve for 6.0s. During this time, Resolve is increased by 32.0%.",
-      "ATK Speed +45.0%. When a Pyro character's HP recovers to above 80% of Max HP, the HP percentage is treated as 30.0% when calculating Morale and Resolve for 6.0s. During this time, Resolve is increased by 36.0%.",
-      "ATK Speed +50.0%. When a Pyro character's HP recovers to above 80% of Max HP, the HP percentage is treated as 30.0% when calculating Morale and Resolve for 6.0s. During this time, Resolve is increased by 40.0%."
+      "ATK Speed +#1. When a Pyro character's HP recovers to above 80% of Max HP, the HP percentage is treated as 30.0% when calculating Morale and Resolve for 6.0s. During this time, Resolve is increased by #2.",
+      [
+        "25.0%",
+        "30.0%",
+        "35.0%",
+        "40.0%",
+        "45.0%",
+        "50.0%"
+      ],
+      [
+        "20.0%",
+        "24.0%",
+        "28.0%",
+        "32.0%",
+        "36.0%",
+        "40.0%"
+      ]
     ],
     "技能": [
       {
@@ -5370,12 +5597,23 @@
       }
     ],
     "熔炼": [
-      "Max HP +50.0%. When this weapon triggers a bonus effect on hit, grants ‍+8.6%‍ Max HP for 15.0‍s (up to 10.0 stacks).",
-      "Max HP +60.0%. When this weapon triggers a bonus effect on hit, grants ‍+10.3%‍ Max HP for 15.0‍s (up to 10.0 stacks).",
-      "Max HP +70.0%. When this weapon triggers a bonus effect on hit, grants ‍+12.0%‍ Max HP for 15.0‍s (up to 10.0 stacks).",
-      "Max HP +80.0%. When this weapon triggers a bonus effect on hit, grants ‍+13.8%‍ Max HP for 15.0‍s (up to 10.0 stacks).",
-      "Max HP +90.0%. When this weapon triggers a bonus effect on hit, grants ‍+15.5%‍ Max HP for 15.0‍s (up to 10.0 stacks).",
-      "Max HP +100.0%. When this weapon triggers a bonus effect on hit, grants ‍+17.2%‍ Max HP for 15.0‍s (up to 10.0 stacks)."
+      "Max HP +#1. When this weapon triggers a bonus effect on hit, grants ‍+#2‍ Max HP for 15.0‍s (up to 10.0 stacks).",
+      [
+        "50.0%",
+        "60.0%",
+        "70.0%",
+        "80.0%",
+        "90.0%",
+        "100.0%"
+      ],
+      [
+        "8.6%",
+        "10.3%",
+        "12.0%",
+        "13.8%",
+        "15.5%",
+        "17.2%"
+      ]
     ],
     "技能": [
       {
@@ -5564,12 +5802,23 @@
       }
     ],
     "熔炼": [
-      "Skill Intensity +20.0%. When a Hydro character deals CRIT DMG with this weapon, increases Skill DMG for allies by 17.0% for 6.0s.",
-      "Skill Intensity +24.0%. When a Hydro character deals CRIT DMG with this weapon, increases Skill DMG for allies by 20.4% for 6.0s.",
-      "Skill Intensity +28.0%. When a Hydro character deals CRIT DMG with this weapon, increases Skill DMG for allies by 23.8% for 6.0s.",
-      "Skill Intensity +32.0%. When a Hydro character deals CRIT DMG with this weapon, increases Skill DMG for allies by 27.2% for 6.0s.",
-      "Skill Intensity +36.0%. When a Hydro character deals CRIT DMG with this weapon, increases Skill DMG for allies by 30.6% for 6.0s.",
-      "Skill Intensity +40.0%. When a Hydro character deals CRIT DMG with this weapon, increases Skill DMG for allies by 34.0% for 6.0s."
+      "Skill Intensity +#1. When a Hydro character deals CRIT DMG with this weapon, increases Skill DMG for allies by #2 for 6.0s.",
+      [
+        "20.0%",
+        "24.0%",
+        "28.0%",
+        "32.0%",
+        "36.0%",
+        "40.0%"
+      ],
+      [
+        "17.0%",
+        "20.4%",
+        "23.8%",
+        "27.2%",
+        "30.6%",
+        "34.0%"
+      ]
     ],
     "技能": [
       {
@@ -5758,12 +6007,15 @@
       }
     ],
     "熔炼": [
-      "Skill Duration +18.0%.",
-      "Skill Duration +21.6%.",
-      "Skill Duration +25.2%.",
-      "Skill Duration +28.8%.",
-      "Skill Duration +32.4%.",
-      "Skill Duration +36.0%."
+      "Skill Duration +#1.",
+      [
+        "18.0%",
+        "21.6%",
+        "25.2%",
+        "28.8%",
+        "32.4%",
+        "36.0%"
+      ]
     ],
     "技能": [
       {
@@ -5952,12 +6204,23 @@
       }
     ],
     "熔炼": [
-      "Trigger Probability +75.0%. Charged Attacks with this weapon grant +44.0% ATK Speed for 6.0s. Effect is removed when switching weapons.",
-      "Trigger Probability +90.0%. Charged Attacks with this weapon grant +52.8% ATK Speed for 6.0s. Effect is removed when switching weapons.",
-      "Trigger Probability +105.0%. Charged Attacks with this weapon grant +61.6% ATK Speed for 6.0s. Effect is removed when switching weapons.",
-      "Trigger Probability +120.0%. Charged Attacks with this weapon grant +70.4% ATK Speed for 6.0s. Effect is removed when switching weapons.",
-      "Trigger Probability +135.0%. Charged Attacks with this weapon grant +79.2% ATK Speed for 6.0s. Effect is removed when switching weapons.",
-      "Trigger Probability +150.0%. Charged Attacks with this weapon grant +88.0% ATK Speed for 6.0s. Effect is removed when switching weapons."
+      "Trigger Probability +#1. Charged Attacks with this weapon grant +#2 ATK Speed for 6.0s. Effect is removed when switching weapons.",
+      [
+        "75.0%",
+        "90.0%",
+        "105.0%",
+        "120.0%",
+        "135.0%",
+        "150.0%"
+      ],
+      [
+        "44.0%",
+        "52.8%",
+        "61.6%",
+        "70.4%",
+        "79.2%",
+        "88.0%"
+      ]
     ],
     "技能": [
       {
@@ -6146,12 +6409,23 @@
       }
     ],
     "熔炼": [
-      "ATK Speed +25.0%. Charged Attacks with this weapon grant 12.5% Movement Speed for 8.0s.",
-      "ATK Speed +30.0%. Charged Attacks with this weapon grant 15.0% Movement Speed for 8.0s.",
-      "ATK Speed +35.0%. Charged Attacks with this weapon grant 17.5% Movement Speed for 8.0s.",
-      "ATK Speed +40.0%. Charged Attacks with this weapon grant 20.0% Movement Speed for 8.0s.",
-      "ATK Speed +45.0%. Charged Attacks with this weapon grant 22.5% Movement Speed for 8.0s.",
-      "ATK Speed +50.0%. Charged Attacks with this weapon grant 25.0% Movement Speed for 8.0s."
+      "ATK Speed +#1. Charged Attacks with this weapon grant #2 Movement Speed for 8.0s.",
+      [
+        "25.0%",
+        "30.0%",
+        "35.0%",
+        "40.0%",
+        "45.0%",
+        "50.0%"
+      ],
+      [
+        "12.5%",
+        "15.0%",
+        "17.5%",
+        "20.0%",
+        "22.5%",
+        "25.0%"
+      ]
     ],
     "技能": [
       {
@@ -6340,12 +6614,23 @@
       }
     ],
     "熔炼": [
-      "CRIT Damage +62.5%. When dealing damage with this weapon, increases Damage Dealt by 9.0%, with an additional 9.0% increase per Combo Level.",
-      "CRIT Damage +75.0%. When dealing damage with this weapon, increases Damage Dealt by 10.8%, with an additional 10.8% increase per Combo Level.",
-      "CRIT Damage +87.5%. When dealing damage with this weapon, increases Damage Dealt by 12.6%, with an additional 12.6% increase per Combo Level.",
-      "CRIT Damage +100.0%. When dealing damage with this weapon, increases Damage Dealt by 14.4%, with an additional 14.4% increase per Combo Level.",
-      "CRIT Damage +112.5%. When dealing damage with this weapon, increases Damage Dealt by 16.2%, with an additional 16.2% increase per Combo Level.",
-      "CRIT Damage +125.0%. When dealing damage with this weapon, increases Damage Dealt by 18.0%, with an additional 18.0% increase per Combo Level."
+      "CRIT Damage +#1. When dealing damage with this weapon, increases Damage Dealt by #2, with an additional #2 increase per Combo Level.",
+      [
+        "62.5%",
+        "75.0%",
+        "87.5%",
+        "100.0%",
+        "112.5%",
+        "125.0%"
+      ],
+      [
+        "9.0%",
+        "10.8%",
+        "12.6%",
+        "14.4%",
+        "16.2%",
+        "18.0%"
+      ]
     ],
     "技能": [
       {
@@ -6546,12 +6831,15 @@
       }
     ],
     "熔炼": [
-      "Skill Range +36.0%.",
-      "Skill Range +43.2%.",
-      "Skill Range +50.4%.",
-      "Skill Range +57.6%.",
-      "Skill Range +64.8%.",
-      "Skill Range +72.0%."
+      "Skill Range +#1.",
+      [
+        "36.0%",
+        "43.2%",
+        "50.4%",
+        "57.6%",
+        "64.8%",
+        "72.0%"
+      ]
     ],
     "技能": [
       {
@@ -6752,12 +7040,23 @@
       }
     ],
     "熔炼": [
-      "Character ATK +50.0%. Charged Attacks with this weapon grant +75.0% CRIT Damage for 6.0s. Effect is removed when switching weapons.",
-      "Character ATK +60.0%. Charged Attacks with this weapon grant +90.0% CRIT Damage for 6.0s. Effect is removed when switching weapons.",
-      "Character ATK +70.0%. Charged Attacks with this weapon grant +105.0% CRIT Damage for 6.0s. Effect is removed when switching weapons.",
-      "Character ATK +80.0%. Charged Attacks with this weapon grant +120.0% CRIT Damage for 6.0s. Effect is removed when switching weapons.",
-      "Character ATK +90.0%. Charged Attacks with this weapon grant +135.0% CRIT Damage for 6.0s. Effect is removed when switching weapons.",
-      "Character ATK +100.0%. Charged Attacks with this weapon grant +150.0% CRIT Damage for 6.0s. Effect is removed when switching weapons."
+      "Character ATK +#1. Charged Attacks with this weapon grant +#2 CRIT Damage for 6.0s. Effect is removed when switching weapons.",
+      [
+        "50.0%",
+        "60.0%",
+        "70.0%",
+        "80.0%",
+        "90.0%",
+        "100.0%"
+      ],
+      [
+        "75.0%",
+        "90.0%",
+        "105.0%",
+        "120.0%",
+        "135.0%",
+        "150.0%"
+      ]
     ],
     "技能": [
       {
@@ -6958,12 +7257,23 @@
       }
     ],
     "熔炼": [
-      "ATK Range +1.0. When Combo Level increases, grants 1 stack of +11.0% Normal Attack DMG for 10.0s, up to 4.0  stacks. This effect is removed when switching weapons.",
-      "ATK Range +1.2. When Combo Level increases, grants 1 stack of +13.2% Normal Attack DMG for 10.0s, up to 4.0  stacks. This effect is removed when switching weapons.",
-      "ATK Range +1.4. When Combo Level increases, grants 1 stack of +15.4% Normal Attack DMG for 10.0s, up to 4.0  stacks. This effect is removed when switching weapons.",
-      "ATK Range +1.6. When Combo Level increases, grants 1 stack of +17.6% Normal Attack DMG for 10.0s, up to 4.0  stacks. This effect is removed when switching weapons.",
-      "ATK Range +1.8. When Combo Level increases, grants 1 stack of +19.8% Normal Attack DMG for 10.0s, up to 4.0  stacks. This effect is removed when switching weapons.",
-      "ATK Range +2.0. When Combo Level increases, grants 1 stack of +22.0% Normal Attack DMG for 10.0s, up to 4.0  stacks. This effect is removed when switching weapons."
+      "ATK Range +#1. When Combo Level increases, grants 1 stack of +#2 Normal Attack DMG for 10.0s, up to 4.0  stacks. This effect is removed when switching weapons.",
+      [
+        "1.0",
+        "1.2",
+        "1.4",
+        "1.6",
+        "1.8",
+        "2.0"
+      ],
+      [
+        "11.0%",
+        "13.2%",
+        "15.4%",
+        "17.6%",
+        "19.8%",
+        "22.0%"
+      ]
     ],
     "技能": [
       {
@@ -7168,12 +7478,23 @@
       }
     ],
     "熔炼": [
-      "Trigger Probability +75.0%. Each shot with this weapon has a chance (based on its Weapon Trigger Probability) to fire an extra projectile at no Ammo cost, dealing AoE Damage equal to 50.0% of its ATK.",
-      "Trigger Probability +90.0%. Each shot with this weapon has a chance (based on its Weapon Trigger Probability) to fire an extra projectile at no Ammo cost, dealing AoE Damage equal to 60.0% of its ATK.",
-      "Trigger Probability +105.0%. Each shot with this weapon has a chance (based on its Weapon Trigger Probability) to fire an extra projectile at no Ammo cost, dealing AoE Damage equal to 70.0% of its ATK.",
-      "Trigger Probability +120.0%. Each shot with this weapon has a chance (based on its Weapon Trigger Probability) to fire an extra projectile at no Ammo cost, dealing AoE Damage equal to 80.0% of its ATK.",
-      "Trigger Probability +135.0%. Each shot with this weapon has a chance (based on its Weapon Trigger Probability) to fire an extra projectile at no Ammo cost, dealing AoE Damage equal to 90.0% of its ATK.",
-      "Trigger Probability +150.0%. Each shot with this weapon has a chance (based on its Weapon Trigger Probability) to fire an extra projectile at no Ammo cost, dealing AoE Damage equal to 100.0% of its ATK."
+      "Trigger Probability +#1. Each shot with this weapon has a chance (based on its Weapon Trigger Probability) to fire an extra projectile at no Ammo cost, dealing AoE Damage equal to #2 of its ATK.",
+      [
+        "75.0%",
+        "90.0%",
+        "105.0%",
+        "120.0%",
+        "135.0%",
+        "150.0%"
+      ],
+      [
+        "50.0%",
+        "60.0%",
+        "70.0%",
+        "80.0%",
+        "90.0%",
+        "100.0%"
+      ]
     ],
     "技能": [
       {
@@ -7279,12 +7600,15 @@
       }
     ],
     "熔炼": [
-      "Character ATK ‍+60.0%.",
-      "Character ATK ‍+72.0%.",
-      "Character ATK ‍+84.0%.",
-      "Character ATK ‍+96.0%.",
-      "Character ATK ‍+108.0%.",
-      "Character ATK ‍+120.0%."
+      "Character ATK ‍+#1.",
+      [
+        "60.0%",
+        "72.0%",
+        "84.0%",
+        "96.0%",
+        "108.0%",
+        "120.0%"
+      ]
     ],
     "技能": [
       {
@@ -7385,12 +7709,23 @@
       }
     ],
     "熔炼": [
-      "Multishot +37.5%. When this weapon triggers a bonus effect on hit, increases Melee Weapon DMG by 35.0% for 12.0s.",
-      "Multishot +45.0%. When this weapon triggers a bonus effect on hit, increases Melee Weapon DMG by 42.0% for 12.0s.",
-      "Multishot +52.5%. When this weapon triggers a bonus effect on hit, increases Melee Weapon DMG by 49.0% for 12.0s.",
-      "Multishot +60.0%. When this weapon triggers a bonus effect on hit, increases Melee Weapon DMG by 56.0% for 12.0s.",
-      "Multishot +67.5%. When this weapon triggers a bonus effect on hit, increases Melee Weapon DMG by 63.0% for 12.0s.",
-      "Multishot +75.0%. When this weapon triggers a bonus effect on hit, increases Melee Weapon DMG by 70.0% for 12.0s."
+      "Multishot +#1. When this weapon triggers a bonus effect on hit, increases Melee Weapon DMG by #2 for 12.0s.",
+      [
+        "37.5%",
+        "45.0%",
+        "52.5%",
+        "60.0%",
+        "67.5%",
+        "75.0%"
+      ],
+      [
+        "35.0%",
+        "42.0%",
+        "49.0%",
+        "56.0%",
+        "63.0%",
+        "70.0%"
+      ]
     ],
     "技能": [
       {
@@ -7491,12 +7826,23 @@
       }
     ],
     "熔炼": [
-      "CRIT Damage +62.5%. Defeating a target with this weapon grants 1 stack of +5.0% CRIT Chance for 20.0s, up to 15.0 stacks. This effect is removed when switching weapons.",
-      "CRIT Damage +75.0%. Defeating a target with this weapon grants 1 stack of +6.0% CRIT Chance for 20.0s, up to 15.0 stacks. This effect is removed when switching weapons.",
-      "CRIT Damage +87.5%. Defeating a target with this weapon grants 1 stack of +7.0% CRIT Chance for 20.0s, up to 15.0 stacks. This effect is removed when switching weapons.",
-      "CRIT Damage +100.0%. Defeating a target with this weapon grants 1 stack of +8.0% CRIT Chance for 20.0s, up to 15.0 stacks. This effect is removed when switching weapons.",
-      "CRIT Damage +112.5%. Defeating a target with this weapon grants 1 stack of +9.0% CRIT Chance for 20.0s, up to 15.0 stacks. This effect is removed when switching weapons.",
-      "CRIT Damage +125.0%. Defeating a target with this weapon grants 1 stack of +10.0% CRIT Chance for 20.0s, up to 15.0 stacks. This effect is removed when switching weapons."
+      "CRIT Damage +#1. Defeating a target with this weapon grants 1 stack of +#2 CRIT Chance for 20.0s, up to 15.0 stacks. This effect is removed when switching weapons.",
+      [
+        "62.5%",
+        "75.0%",
+        "87.5%",
+        "100.0%",
+        "112.5%",
+        "125.0%"
+      ],
+      [
+        "5.0%",
+        "6.0%",
+        "7.0%",
+        "8.0%",
+        "9.0%",
+        "10.0%"
+      ]
     ],
     "技能": [
       {
@@ -7614,12 +7960,15 @@
       }
     ],
     "熔炼": [
-      "Skill Intensity +24.0%.",
-      "Skill Intensity +28.8%.",
-      "Skill Intensity +33.6%.",
-      "Skill Intensity +38.4%.",
-      "Skill Intensity +43.2%.",
-      "Skill Intensity +48.0%."
+      "Skill Intensity +#1.",
+      [
+        "24.0%",
+        "28.8%",
+        "33.6%",
+        "38.4%",
+        "43.2%",
+        "48.0%"
+      ]
     ],
     "技能": [
       {
@@ -7734,12 +8083,31 @@
       }
     ],
     "熔炼": [
-      "Skill Duration +15.0%. When its projectiles hit enemies or the environment, they bounce once. When dealing damage with this weapon, increases Dual Pistols Damage by 45.0% for 15.0s.",
-      "Skill Duration +18.0%. When its projectiles hit enemies or the environment, they bounce once. When dealing damage with this weapon, increases Dual Pistols Damage by 54.0% for 18.0s.",
-      "Skill Duration +21.0%. When its projectiles hit enemies or the environment, they bounce once. When dealing damage with this weapon, increases Dual Pistols Damage by 63.0% for 21.0s.",
-      "Skill Duration +24.0%. When its projectiles hit enemies or the environment, they bounce once. When dealing damage with this weapon, increases Dual Pistols Damage by 72.0% for 24.0s.",
-      "Skill Duration +27.0%. When its projectiles hit enemies or the environment, they bounce once. When dealing damage with this weapon, increases Dual Pistols Damage by 81.0% for 27.0s.",
-      "Skill Duration +30.0%. When its projectiles hit enemies or the environment, they bounce once. When dealing damage with this weapon, increases Dual Pistols Damage by 90.0% for 30.0s."
+      "Skill Duration +#1. When its projectiles hit enemies or the environment, they bounce once. When dealing damage with this weapon, increases Dual Pistols Damage by #2 for #3s.",
+      [
+        "15.0%",
+        "18.0%",
+        "21.0%",
+        "24.0%",
+        "27.0%",
+        "30.0%"
+      ],
+      [
+        "45.0%",
+        "54.0%",
+        "63.0%",
+        "72.0%",
+        "81.0%",
+        "90.0%"
+      ],
+      [
+        "15.0",
+        "18.0",
+        "21.0",
+        "24.0",
+        "27.0",
+        "30.0"
+      ]
     ],
     "技能": [
       {
@@ -7853,12 +8221,23 @@
       }
     ],
     "熔炼": [
-      "CRIT Chance +50.0%. Dealing CRIT Damage with this weapon grants +6.2% Multishot for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
-      "CRIT Chance +60.0%. Dealing CRIT Damage with this weapon grants +7.5% Multishot for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
-      "CRIT Chance +70.0%. Dealing CRIT Damage with this weapon grants +8.8% Multishot for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
-      "CRIT Chance +80.0%. Dealing CRIT Damage with this weapon grants +10.0% Multishot for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
-      "CRIT Chance +90.0%. Dealing CRIT Damage with this weapon grants +11.2% Multishot for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
-      "CRIT Chance +100.0%. Dealing CRIT Damage with this weapon grants +12.5% Multishot for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons."
+      "CRIT Chance +#1. Dealing CRIT Damage with this weapon grants +#2 Multishot for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
+      [
+        "50.0%",
+        "60.0%",
+        "70.0%",
+        "80.0%",
+        "90.0%",
+        "100.0%"
+      ],
+      [
+        "6.2%",
+        "7.5%",
+        "8.8%",
+        "10.0%",
+        "11.2%",
+        "12.5%"
+      ]
     ],
     "技能": [
       {
@@ -7973,12 +8352,23 @@
       }
     ],
     "熔炼": [
-      "Morale +15.0%. When a Hydro character summons a unit, they gain 1 stack of +7.5% Damage Dealt by Summons for 18.0s. Max 9.0 stacks.",
-      "Morale +18.0%. When a Hydro character summons a unit, they gain 1 stack of +9.0% Damage Dealt by Summons for 18.0s. Max 9.0 stacks.",
-      "Morale +21.0%. When a Hydro character summons a unit, they gain 1 stack of +10.5% Damage Dealt by Summons for 18.0s. Max 9.0 stacks.",
-      "Morale +24.0%. When a Hydro character summons a unit, they gain 1 stack of +12.0% Damage Dealt by Summons for 18.0s. Max 9.0 stacks.",
-      "Morale +27.0%. When a Hydro character summons a unit, they gain 1 stack of +13.5% Damage Dealt by Summons for 18.0s. Max 9.0 stacks.",
-      "Morale +30.0%. When a Hydro character summons a unit, they gain 1 stack of +15.0% Damage Dealt by Summons for 18.0s. Max 9.0 stacks."
+      "Morale +#1. When a Hydro character summons a unit, they gain 1 stack of +#2 Damage Dealt by Summons for 18.0s. Max 9.0 stacks.",
+      [
+        "15.0%",
+        "18.0%",
+        "21.0%",
+        "24.0%",
+        "27.0%",
+        "30.0%"
+      ],
+      [
+        "7.5%",
+        "9.0%",
+        "10.5%",
+        "12.0%",
+        "13.5%",
+        "15.0%"
+      ]
     ],
     "技能": [
       {
@@ -8085,11 +8475,6 @@
       }
     ],
     "熔炼": [
-      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
-      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
-      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
-      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
-      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
       "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type."
     ],
     "熔炉": [
@@ -8408,12 +8793,23 @@
       }
     ],
     "熔炼": [
-      "Explosion Range +0.2. When its projectiles explode, they split into 6 additional projectiles that explode and deal damage. When defeating a target with this weapon, grants 1 stack that increases CRIT Damage by 8.8% for 15.0s, up to 10.0 stacks.\nThis effect is removed when switching to another weapon.",
-      "Explosion Range +0.3. When its projectiles explode, they split into 6 additional projectiles that explode and deal damage. When defeating a target with this weapon, grants 1 stack that increases CRIT Damage by 10.5% for 15.0s, up to 10.0 stacks.\nThis effect is removed when switching to another weapon.",
-      "Explosion Range +0.3. When its projectiles explode, they split into 6 additional projectiles that explode and deal damage. When defeating a target with this weapon, grants 1 stack that increases CRIT Damage by 12.2% for 15.0s, up to 10.0 stacks.\nThis effect is removed when switching to another weapon.",
-      "Explosion Range +0.4. When its projectiles explode, they split into 6 additional projectiles that explode and deal damage. When defeating a target with this weapon, grants 1 stack that increases CRIT Damage by 14.0% for 15.0s, up to 10.0 stacks.\nThis effect is removed when switching to another weapon.",
-      "Explosion Range +0.5. When its projectiles explode, they split into 6 additional projectiles that explode and deal damage. When defeating a target with this weapon, grants 1 stack that increases CRIT Damage by 15.8% for 15.0s, up to 10.0 stacks.\nThis effect is removed when switching to another weapon.",
-      "Explosion Range +0.5. When its projectiles explode, they split into 6 additional projectiles that explode and deal damage. When defeating a target with this weapon, grants 1 stack that increases CRIT Damage by 17.5% for 15.0s, up to 10.0 stacks.\nThis effect is removed when switching to another weapon."
+      "Explosion Range +#1. When its projectiles explode, they split into 6 additional projectiles that explode and deal damage. When defeating a target with this weapon, grants 1 stack that increases CRIT Damage by #2 for 15.0s, up to 10.0 stacks.\nThis effect is removed when switching to another weapon.",
+      [
+        "0.2",
+        "0.3",
+        "0.3",
+        "0.4",
+        "0.5",
+        "0.5"
+      ],
+      [
+        "8.8%",
+        "10.5%",
+        "12.2%",
+        "14.0%",
+        "15.8%",
+        "17.5%"
+      ]
     ],
     "技能": [
       {
@@ -8537,12 +8933,23 @@
       }
     ],
     "熔炼": [
-      "Multishot +37.5%. When a Pyro character performs a Dodge, grants 1 stack of +8.0% Skill DMG and +8.0% Multishot for 16.0s, up to 4.0 stacks.",
-      "Multishot +45.0%. When a Pyro character performs a Dodge, grants 1 stack of +9.6% Skill DMG and +9.6% Multishot for 16.0s, up to 4.0 stacks.",
-      "Multishot +52.5%. When a Pyro character performs a Dodge, grants 1 stack of +11.2% Skill DMG and +11.2% Multishot for 16.0s, up to 4.0 stacks.",
-      "Multishot +60.0%. When a Pyro character performs a Dodge, grants 1 stack of +12.8% Skill DMG and +12.8% Multishot for 16.0s, up to 4.0 stacks.",
-      "Multishot +67.5%. When a Pyro character performs a Dodge, grants 1 stack of +14.4% Skill DMG and +14.4% Multishot for 16.0s, up to 4.0 stacks.",
-      "Multishot +75.0%. When a Pyro character performs a Dodge, grants 1 stack of +16.0% Skill DMG and +16.0% Multishot for 16.0s, up to 4.0 stacks."
+      "Multishot +#1. When a Pyro character performs a Dodge, grants 1 stack of +#2 Skill DMG and +#2 Multishot for 16.0s, up to 4.0 stacks.",
+      [
+        "37.5%",
+        "45.0%",
+        "52.5%",
+        "60.0%",
+        "67.5%",
+        "75.0%"
+      ],
+      [
+        "8.0%",
+        "9.6%",
+        "11.2%",
+        "12.8%",
+        "14.4%",
+        "16.0%"
+      ]
     ],
     "技能": [
       {
@@ -8709,12 +9116,15 @@
       }
     ],
     "熔炼": [
-      "Skill Range +36.0%.",
-      "Skill Range +43.2%.",
-      "Skill Range +50.4%.",
-      "Skill Range +57.6%.",
-      "Skill Range +64.8%.",
-      "Skill Range +72.0%."
+      "Skill Range +#1.",
+      [
+        "36.0%",
+        "43.2%",
+        "50.4%",
+        "57.6%",
+        "64.8%",
+        "72.0%"
+      ]
     ],
     "技能": [
       {
@@ -8821,12 +9231,23 @@
       }
     ],
     "熔炼": [
-      "CRIT Damage +62.5%. When its projectiles hit enemies or the environment, they split into 2 additional projectiles that continue to travel. After switching to this weapon, increases Multishot by 38.0%, which decreases over time. This effect can only be triggered once every 10s and is removed when switching to another weapon.",
-      "CRIT Damage +75.0%. When its projectiles hit enemies or the environment, they split into 2 additional projectiles that continue to travel. After switching to this weapon, increases Multishot by 45.0%, which decreases over time. This effect can only be triggered once every 10s and is removed when switching to another weapon.",
-      "CRIT Damage +87.5%. When its projectiles hit enemies or the environment, they split into 2 additional projectiles that continue to travel. After switching to this weapon, increases Multishot by 52.0%, which decreases over time. This effect can only be triggered once every 10s and is removed when switching to another weapon.",
-      "CRIT Damage +100.0%. When its projectiles hit enemies or the environment, they split into 2 additional projectiles that continue to travel. After switching to this weapon, increases Multishot by 59.0%, which decreases over time. This effect can only be triggered once every 10s and is removed when switching to another weapon.",
-      "CRIT Damage +112.5%. When its projectiles hit enemies or the environment, they split into 2 additional projectiles that continue to travel. After switching to this weapon, increases Multishot by 66.0%, which decreases over time. This effect can only be triggered once every 10s and is removed when switching to another weapon.",
-      "CRIT Damage +125.0%. When its projectiles hit enemies or the environment, they split into 2 additional projectiles that continue to travel. After switching to this weapon, increases Multishot by 73.0%, which decreases over time. This effect can only be triggered once every 10s and is removed when switching to another weapon."
+      "CRIT Damage +#1. When its projectiles hit enemies or the environment, they split into 2 additional projectiles that continue to travel. After switching to this weapon, increases Multishot by #2, which decreases over time. This effect can only be triggered once every 10s and is removed when switching to another weapon.",
+      [
+        "62.5%",
+        "75.0%",
+        "87.5%",
+        "100.0%",
+        "112.5%",
+        "125.0%"
+      ],
+      [
+        "38.0%",
+        "45.0%",
+        "52.0%",
+        "59.0%",
+        "66.0%",
+        "73.0%"
+      ]
     ],
     "技能": [
       {
@@ -8961,12 +9382,23 @@
       }
     ],
     "熔炼": [
-      "ATK Speed +25.0%. When this weapon triggers a bonus effect on hit, grants +5.0% ATK Speed for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
-      "ATK Speed +30.0%. When this weapon triggers a bonus effect on hit, grants +6.0% ATK Speed for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
-      "ATK Speed +35.0%. When this weapon triggers a bonus effect on hit, grants +7.0% ATK Speed for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
-      "ATK Speed +40.0%. When this weapon triggers a bonus effect on hit, grants +8.0% ATK Speed for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
-      "ATK Speed +45.0%. When this weapon triggers a bonus effect on hit, grants +9.0% ATK Speed for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
-      "ATK Speed +50.0%. When this weapon triggers a bonus effect on hit, grants +10.0% ATK Speed for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons."
+      "ATK Speed +#1. When this weapon triggers a bonus effect on hit, grants +#2 ATK Speed for 12.0s (up to 10.0 stacks). Effect is removed when switching weapons.",
+      [
+        "25.0%",
+        "30.0%",
+        "35.0%",
+        "40.0%",
+        "45.0%",
+        "50.0%"
+      ],
+      [
+        "5.0%",
+        "6.0%",
+        "7.0%",
+        "8.0%",
+        "9.0%",
+        "10.0%"
+      ]
     ],
     "技能": [
       {
@@ -9101,12 +9533,15 @@
       }
     ],
     "熔炼": [
-      "Skill Duration +18.0%.",
-      "Skill Duration +21.6%.",
-      "Skill Duration +25.2%.",
-      "Skill Duration +28.8%.",
-      "Skill Duration +32.4%.",
-      "Skill Duration +36.0%."
+      "Skill Duration +#1.",
+      [
+        "18.0%",
+        "21.6%",
+        "25.2%",
+        "28.8%",
+        "32.4%",
+        "36.0%"
+      ]
     ],
     "技能": [
       {
@@ -9212,12 +9647,39 @@
       }
     ],
     "熔炼": [
-      "CRIT Chance +50.0%. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals 217.0%/383.0%/592.0% of the original damage.",
-      "CRIT Chance +60.0%. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals 225.0%/399.0%/615.0% of the original damage.",
-      "CRIT Chance +70.0%. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals 234.0%/414.0%/639.0% of the original damage.",
-      "CRIT Chance +80.0%. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals 243.0%/429.0%/663.0% of the original damage.",
-      "CRIT Chance +90.0%. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals 251.0%/445.0%/686.0% of the original damage.",
-      "CRIT Chance +100.0%. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals 260.0%/460.0%/710.0% of the original damage."
+      "CRIT Chance +#1. The projectile it shoots attaches to the target and explodes after 3s. Projectiles attached to one another in the same position will stack up, increasing the damage and the range of the incoming explosion. When 1/2/3 projectiles are stacked, it deals #2/#3/#4 of the original damage.",
+      [
+        "50.0%",
+        "60.0%",
+        "70.0%",
+        "80.0%",
+        "90.0%",
+        "100.0%"
+      ],
+      [
+        "217.0%",
+        "225.0%",
+        "234.0%",
+        "243.0%",
+        "251.0%",
+        "260.0%"
+      ],
+      [
+        "383.0%",
+        "399.0%",
+        "414.0%",
+        "429.0%",
+        "445.0%",
+        "460.0%"
+      ],
+      [
+        "592.0%",
+        "615.0%",
+        "639.0%",
+        "663.0%",
+        "686.0%",
+        "710.0%"
+      ]
     ],
     "技能": [
       {
@@ -9323,12 +9785,23 @@
       }
     ],
     "熔炼": [
-      "CRIT Damage +62.5%. Fired projectiles track the crosshair. When dealing damage with this weapon, the farther the target, the higher the damage, up to a maximum increase of 45.0%.",
-      "CRIT Damage +75.0%. Fired projectiles track the crosshair. When dealing damage with this weapon, the farther the target, the higher the damage, up to a maximum increase of 54.0%.",
-      "CRIT Damage +87.5%. Fired projectiles track the crosshair. When dealing damage with this weapon, the farther the target, the higher the damage, up to a maximum increase of 63.0%.",
-      "CRIT Damage +100.0%. Fired projectiles track the crosshair. When dealing damage with this weapon, the farther the target, the higher the damage, up to a maximum increase of 72.0%.",
-      "CRIT Damage +112.5%. Fired projectiles track the crosshair. When dealing damage with this weapon, the farther the target, the higher the damage, up to a maximum increase of 81.0%.",
-      "CRIT Damage +125.0%. Fired projectiles track the crosshair. When dealing damage with this weapon, the farther the target, the higher the damage, up to a maximum increase of 90.0%."
+      "CRIT Damage +#1. Fired projectiles track the crosshair. When dealing damage with this weapon, the farther the target, the higher the damage, up to a maximum increase of #2.",
+      [
+        "62.5%",
+        "75.0%",
+        "87.5%",
+        "100.0%",
+        "112.5%",
+        "125.0%"
+      ],
+      [
+        "45.0%",
+        "54.0%",
+        "63.0%",
+        "72.0%",
+        "81.0%",
+        "90.0%"
+      ]
     ],
     "技能": [
       {
@@ -9435,12 +9908,23 @@
       }
     ],
     "熔炼": [
-      "Character ATK +50.0%. Charging fires a special bullet that travels slowly and explodes after a short delay, dealing AoE damage. Tap-firing bullets can trigger its early detonation on contact. When an Umbro character casts their Ultimate, grants +20.0% Skill Efficiency for 15.0s.",
-      "Character ATK +60.0%. Charging fires a special bullet that travels slowly and explodes after a short delay, dealing AoE damage. Tap-firing bullets can trigger its early detonation on contact. When an Umbro character casts their Ultimate, grants +24.0% Skill Efficiency for 15.0s.",
-      "Character ATK +70.0%. Charging fires a special bullet that travels slowly and explodes after a short delay, dealing AoE damage. Tap-firing bullets can trigger its early detonation on contact. When an Umbro character casts their Ultimate, grants +28.0% Skill Efficiency for 15.0s.",
-      "Character ATK +80.0%. Charging fires a special bullet that travels slowly and explodes after a short delay, dealing AoE damage. Tap-firing bullets can trigger its early detonation on contact. When an Umbro character casts their Ultimate, grants +32.0% Skill Efficiency for 15.0s.",
-      "Character ATK +90.0%. Charging fires a special bullet that travels slowly and explodes after a short delay, dealing AoE damage. Tap-firing bullets can trigger its early detonation on contact. When an Umbro character casts their Ultimate, grants +36.0% Skill Efficiency for 15.0s.",
-      "Character ATK +100.0%. Charging fires a special bullet that travels slowly and explodes after a short delay, dealing AoE damage. Tap-firing bullets can trigger its early detonation on contact. When an Umbro character casts their Ultimate, grants +40.0% Skill Efficiency for 15.0s."
+      "Character ATK +#1. Charging fires a special bullet that travels slowly and explodes after a short delay, dealing AoE damage. Tap-firing bullets can trigger its early detonation on contact. When an Umbro character casts their Ultimate, grants +#2 Skill Efficiency for 15.0s.",
+      [
+        "50.0%",
+        "60.0%",
+        "70.0%",
+        "80.0%",
+        "90.0%",
+        "100.0%"
+      ],
+      [
+        "20.0%",
+        "24.0%",
+        "28.0%",
+        "32.0%",
+        "36.0%",
+        "40.0%"
+      ]
     ],
     "技能": [
       {
@@ -9598,12 +10082,23 @@
       }
     ],
     "熔炼": [
-      "CRIT Damage +62.5%. When dealing damage with this weapon, increases Damage Dealt by 35.0% if the current weapon is a melee weapon.",
-      "CRIT Damage +75.0%. When dealing damage with this weapon, increases Damage Dealt by 42.0% if the current weapon is a melee weapon.",
-      "CRIT Damage +87.5%. When dealing damage with this weapon, increases Damage Dealt by 49.0% if the current weapon is a melee weapon.",
-      "CRIT Damage +100.0%. When dealing damage with this weapon, increases Damage Dealt by 56.0% if the current weapon is a melee weapon.",
-      "CRIT Damage +112.5%. When dealing damage with this weapon, increases Damage Dealt by 63.0% if the current weapon is a melee weapon.",
-      "CRIT Damage +125.0%. When dealing damage with this weapon, increases Damage Dealt by 70.0% if the current weapon is a melee weapon."
+      "CRIT Damage +#1. When dealing damage with this weapon, increases Damage Dealt by #2 if the current weapon is a melee weapon.",
+      [
+        "62.5%",
+        "75.0%",
+        "87.5%",
+        "100.0%",
+        "112.5%",
+        "125.0%"
+      ],
+      [
+        "35.0%",
+        "42.0%",
+        "49.0%",
+        "56.0%",
+        "63.0%",
+        "70.0%"
+      ]
     ],
     "技能": [
       {
@@ -9718,12 +10213,31 @@
       }
     ],
     "熔炼": [
-      "Max Ammo +90.0%. When a Lumino character uses their Combat Skill or Ultimate Skill and consumes Sanity, grants {float4}+0.25% Skill Intensity per Sanity spent for 24.0s, up to 75.0%.",
-      "Max Ammo +108.0%. When a Lumino character uses their Combat Skill or Ultimate Skill and consumes Sanity, grants {float4}+0.3% Skill Intensity per Sanity spent for 24.0s, up to 90.0%.",
-      "Max Ammo +126.0%. When a Lumino character uses their Combat Skill or Ultimate Skill and consumes Sanity, grants {float4}+0.35% Skill Intensity per Sanity spent for 24.0s, up to 105.0%.",
-      "Max Ammo +144.0%. When a Lumino character uses their Combat Skill or Ultimate Skill and consumes Sanity, grants {float4}+0.4% Skill Intensity per Sanity spent for 24.0s, up to 120.0%.",
-      "Max Ammo +162.0%. When a Lumino character uses their Combat Skill or Ultimate Skill and consumes Sanity, grants {float4}+0.45% Skill Intensity per Sanity spent for 24.0s, up to 135.0%.",
-      "Max Ammo +180.0%. When a Lumino character uses their Combat Skill or Ultimate Skill and consumes Sanity, grants {float4}+0.5% Skill Intensity per Sanity spent for 24.0s, up to 150.0%."
+      "Max Ammo +#1. When a Lumino character uses their Combat Skill or Ultimate Skill and consumes Sanity, grants {float4}+#2 Skill Intensity per Sanity spent for 24.0s, up to #3.",
+      [
+        "90.0%",
+        "108.0%",
+        "126.0%",
+        "144.0%",
+        "162.0%",
+        "180.0%"
+      ],
+      [
+        "0.25%",
+        "0.3%",
+        "0.35%",
+        "0.4%",
+        "0.45%",
+        "0.5%"
+      ],
+      [
+        "75.0%",
+        "90.0%",
+        "105.0%",
+        "120.0%",
+        "135.0%",
+        "150.0%"
+      ]
     ],
     "技能": [
       {
@@ -9825,12 +10339,15 @@
       }
     ],
     "熔炼": [
-      "Skill Duration +18.0%.",
-      "Skill Duration +21.6%.",
-      "Skill Duration +25.2%.",
-      "Skill Duration +28.8%.",
-      "Skill Duration +32.4%.",
-      "Skill Duration +36.0%."
+      "Skill Duration +#1.",
+      [
+        "18.0%",
+        "21.6%",
+        "25.2%",
+        "28.8%",
+        "32.4%",
+        "36.0%"
+      ]
     ],
     "技能": [
       {
@@ -9937,12 +10454,23 @@
       }
     ],
     "熔炼": [
-      "Trigger Probability +75.0%. Fires a Beam Attack that ricochets off the target and hits up to 4 enemies within range. When an Electro character triggers bonus effects with this weapon, the user gains +45.0% Weapon Damage for 10.0s.",
-      "Trigger Probability +90.0%. Fires a Beam Attack that ricochets off the target and hits up to 4 enemies within range. When an Electro character triggers bonus effects with this weapon, the user gains +54.0% Weapon Damage for 10.0s.",
-      "Trigger Probability +105.0%. Fires a Beam Attack that ricochets off the target and hits up to 4 enemies within range. When an Electro character triggers bonus effects with this weapon, the user gains +63.0% Weapon Damage for 10.0s.",
-      "Trigger Probability +120.0%. Fires a Beam Attack that ricochets off the target and hits up to 4 enemies within range. When an Electro character triggers bonus effects with this weapon, the user gains +72.0% Weapon Damage for 10.0s.",
-      "Trigger Probability +135.0%. Fires a Beam Attack that ricochets off the target and hits up to 4 enemies within range. When an Electro character triggers bonus effects with this weapon, the user gains +81.0% Weapon Damage for 10.0s.",
-      "Trigger Probability +150.0%. Fires a Beam Attack that ricochets off the target and hits up to 4 enemies within range. When an Electro character triggers bonus effects with this weapon, the user gains +90.0% Weapon Damage for 10.0s."
+      "Trigger Probability +#1. Fires a Beam Attack that ricochets off the target and hits up to 4 enemies within range. When an Electro character triggers bonus effects with this weapon, the user gains +#2 Weapon Damage for 10.0s.",
+      [
+        "75.0%",
+        "90.0%",
+        "105.0%",
+        "120.0%",
+        "135.0%",
+        "150.0%"
+      ],
+      [
+        "45.0%",
+        "54.0%",
+        "63.0%",
+        "72.0%",
+        "81.0%",
+        "90.0%"
+      ]
     ],
     "技能": [
       {
@@ -10047,12 +10575,23 @@
       }
     ],
     "熔炼": [
-      "Trigger Probability +75.0%. When this weapon triggers a bonus effect on hit, there is a 30.0% chance to reload 1 projectile.",
-      "Trigger Probability +90.0%. When this weapon triggers a bonus effect on hit, there is a 36.0% chance to reload 1 projectile.",
-      "Trigger Probability +105.0%. When this weapon triggers a bonus effect on hit, there is a 42.0% chance to reload 1 projectile.",
-      "Trigger Probability +120.0%. When this weapon triggers a bonus effect on hit, there is a 48.0% chance to reload 1 projectile.",
-      "Trigger Probability +135.0%. When this weapon triggers a bonus effect on hit, there is a 54.0% chance to reload 1 projectile.",
-      "Trigger Probability +150.0%. When this weapon triggers a bonus effect on hit, there is a 60.0% chance to reload 1 projectile."
+      "Trigger Probability +#1. When this weapon triggers a bonus effect on hit, there is a #2 chance to reload 1 projectile.",
+      [
+        "75.0%",
+        "90.0%",
+        "105.0%",
+        "120.0%",
+        "135.0%",
+        "150.0%"
+      ],
+      [
+        "30.0%",
+        "36.0%",
+        "42.0%",
+        "48.0%",
+        "54.0%",
+        "60.0%"
+      ]
     ],
     "技能": [
       {
@@ -10143,12 +10682,23 @@
       }
     ],
     "熔炼": [
-      "Multishot +37.5%. When dealing damage with this weapon, the lower the remaining Ammo percentage, the higher the damage dealt, up to a maximum increase of 45.0%, with full effect when the Ammo count is below 20.0%.",
-      "Multishot +45.0%. When dealing damage with this weapon, the lower the remaining Ammo percentage, the higher the damage dealt, up to a maximum increase of 54.0%, with full effect when the Ammo count is below 20.0%.",
-      "Multishot +52.5%. When dealing damage with this weapon, the lower the remaining Ammo percentage, the higher the damage dealt, up to a maximum increase of 63.0%, with full effect when the Ammo count is below 20.0%.",
-      "Multishot +60.0%. When dealing damage with this weapon, the lower the remaining Ammo percentage, the higher the damage dealt, up to a maximum increase of 72.0%, with full effect when the Ammo count is below 20.0%.",
-      "Multishot +67.5%. When dealing damage with this weapon, the lower the remaining Ammo percentage, the higher the damage dealt, up to a maximum increase of 81.0%, with full effect when the Ammo count is below 20.0%.",
-      "Multishot +75.0%. When dealing damage with this weapon, the lower the remaining Ammo percentage, the higher the damage dealt, up to a maximum increase of 90.0%, with full effect when the Ammo count is below 20.0%."
+      "Multishot +#1. When dealing damage with this weapon, the lower the remaining Ammo percentage, the higher the damage dealt, up to a maximum increase of #2, with full effect when the Ammo count is below 20.0%.",
+      [
+        "37.5%",
+        "45.0%",
+        "52.5%",
+        "60.0%",
+        "67.5%",
+        "75.0%"
+      ],
+      [
+        "45.0%",
+        "54.0%",
+        "63.0%",
+        "72.0%",
+        "81.0%",
+        "90.0%"
+      ]
     ],
     "技能": [
       {
@@ -10273,12 +10823,39 @@
       }
     ],
     "熔炼": [
-      "Mag Capacity +30.0%. After firing 10 rounds, the weapon consumes all remaining rounds in the magazine to fire a special round that deals AoE DMG. For each round consumed, this damage increases by 1.7%, up to 51.0%. Defeating an enemy with this weapon has a 25.0% chance to restore 1 round.",
-      "Mag Capacity +36.0%. After firing 10 rounds, the weapon consumes all remaining rounds in the magazine to fire a special round that deals AoE DMG. For each round consumed, this damage increases by 2.0%, up to 61.2%. Defeating an enemy with this weapon has a 30.0% chance to restore 1 round.",
-      "Mag Capacity +42.0%. After firing 10 rounds, the weapon consumes all remaining rounds in the magazine to fire a special round that deals AoE DMG. For each round consumed, this damage increases by 2.4%, up to 71.4%. Defeating an enemy with this weapon has a 35.0% chance to restore 1 round.",
-      "Mag Capacity +48.0%. After firing 10 rounds, the weapon consumes all remaining rounds in the magazine to fire a special round that deals AoE DMG. For each round consumed, this damage increases by 2.7%, up to 81.6%. Defeating an enemy with this weapon has a 40.0% chance to restore 1 round.",
-      "Mag Capacity +54.0%. After firing 10 rounds, the weapon consumes all remaining rounds in the magazine to fire a special round that deals AoE DMG. For each round consumed, this damage increases by 3.1%, up to 91.8%. Defeating an enemy with this weapon has a 45.0% chance to restore 1 round.",
-      "Mag Capacity +60.0%. After firing 10 rounds, the weapon consumes all remaining rounds in the magazine to fire a special round that deals AoE DMG. For each round consumed, this damage increases by 3.4%, up to 102.0%. Defeating an enemy with this weapon has a 50.0% chance to restore 1 round."
+      "Mag Capacity +#1. After firing 10 rounds, the weapon consumes all remaining rounds in the magazine to fire a special round that deals AoE DMG. For each round consumed, this damage increases by #2, up to #3. Defeating an enemy with this weapon has a #4 chance to restore 1 round.",
+      [
+        "30.0%",
+        "36.0%",
+        "42.0%",
+        "48.0%",
+        "54.0%",
+        "60.0%"
+      ],
+      [
+        "1.7%",
+        "2.0%",
+        "2.4%",
+        "2.7%",
+        "3.1%",
+        "3.4%"
+      ],
+      [
+        "51.0%",
+        "61.2%",
+        "71.4%",
+        "81.6%",
+        "91.8%",
+        "102.0%"
+      ],
+      [
+        "25.0%",
+        "30.0%",
+        "35.0%",
+        "40.0%",
+        "45.0%",
+        "50.0%"
+      ]
     ],
     "技能": [
       {
@@ -10390,12 +10967,23 @@
       }
     ],
     "熔炼": [
-      "Mag Capacity +30.0%. On a CRIT with this weapon, grants 1 stack of +5.0% ATK Speed for 6.0s, stacking up to 10.0 times. The effect is removed when switching weapons.",
-      "Mag Capacity +36.0%. On a CRIT with this weapon, grants 1 stack of +6.0% ATK Speed for 6.0s, stacking up to 10.0 times. The effect is removed when switching weapons.",
-      "Mag Capacity +42.0%. On a CRIT with this weapon, grants 1 stack of +7.0% ATK Speed for 6.0s, stacking up to 10.0 times. The effect is removed when switching weapons.",
-      "Mag Capacity +48.0%. On a CRIT with this weapon, grants 1 stack of +8.0% ATK Speed for 6.0s, stacking up to 10.0 times. The effect is removed when switching weapons.",
-      "Mag Capacity +54.0%. On a CRIT with this weapon, grants 1 stack of +9.0% ATK Speed for 6.0s, stacking up to 10.0 times. The effect is removed when switching weapons.",
-      "Mag Capacity +60.0%. On a CRIT with this weapon, grants 1 stack of +10.0% ATK Speed for 6.0s, stacking up to 10.0 times. The effect is removed when switching weapons."
+      "Mag Capacity +#1. On a CRIT with this weapon, grants 1 stack of +#2 ATK Speed for 6.0s, stacking up to 10.0 times. The effect is removed when switching weapons.",
+      [
+        "30.0%",
+        "36.0%",
+        "42.0%",
+        "48.0%",
+        "54.0%",
+        "60.0%"
+      ],
+      [
+        "5.0%",
+        "6.0%",
+        "7.0%",
+        "8.0%",
+        "9.0%",
+        "10.0%"
+      ]
     ],
     "技能": [
       {
@@ -10485,12 +11073,31 @@
       }
     ],
     "熔炼": [
-      "CRIT Damage +62.5%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. For each additional Ammo count gained, the damage dealt by this weapon is increased by 4.5%, up to a maximum increase of 45.0%.",
-      "CRIT Damage +75.0%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. For each additional Ammo count gained, the damage dealt by this weapon is increased by 5.4%, up to a maximum increase of 54.0%.",
-      "CRIT Damage +87.5%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. For each additional Ammo count gained, the damage dealt by this weapon is increased by 6.3%, up to a maximum increase of 63.0%.",
-      "CRIT Damage +100.0%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. For each additional Ammo count gained, the damage dealt by this weapon is increased by 7.2%, up to a maximum increase of 72.0%.",
-      "CRIT Damage +112.5%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. For each additional Ammo count gained, the damage dealt by this weapon is increased by 8.1%, up to a maximum increase of 81.0%.",
-      "CRIT Damage +125.0%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. For each additional Ammo count gained, the damage dealt by this weapon is increased by 9.0%, up to a maximum increase of 90.0%."
+      "CRIT Damage +#1. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. For each additional Ammo count gained, the damage dealt by this weapon is increased by #2, up to a maximum increase of #3.",
+      [
+        "62.5%",
+        "75.0%",
+        "87.5%",
+        "100.0%",
+        "112.5%",
+        "125.0%"
+      ],
+      [
+        "4.5%",
+        "5.4%",
+        "6.3%",
+        "7.2%",
+        "8.1%",
+        "9.0%"
+      ],
+      [
+        "45.0%",
+        "54.0%",
+        "63.0%",
+        "72.0%",
+        "81.0%",
+        "90.0%"
+      ]
     ],
     "技能": [
       {
@@ -10597,12 +11204,23 @@
       }
     ],
     "熔炼": [
-      "Skill Range +30.0%. When a Lumino character deals additional damage, there is a 30.0% chance to grant allies +9.0% ATK for 15.0s (up to 10.0 stacks).",
-      "Skill Range +36.0%. When a Lumino character deals additional damage, there is a 30.0% chance to grant allies +10.8% ATK for 15.0s (up to 10.0 stacks).",
-      "Skill Range +42.0%. When a Lumino character deals additional damage, there is a 30.0% chance to grant allies +12.6% ATK for 15.0s (up to 10.0 stacks).",
-      "Skill Range +48.0%. When a Lumino character deals additional damage, there is a 30.0% chance to grant allies +14.4% ATK for 15.0s (up to 10.0 stacks).",
-      "Skill Range +54.0%. When a Lumino character deals additional damage, there is a 30.0% chance to grant allies +16.2% ATK for 15.0s (up to 10.0 stacks).",
-      "Skill Range +60.0%. When a Lumino character deals additional damage, there is a 30.0% chance to grant allies +18.0% ATK for 15.0s (up to 10.0 stacks)."
+      "Skill Range +#1. When a Lumino character deals additional damage, there is a 30.0% chance to grant allies +#2 ATK for 15.0s (up to 10.0 stacks).",
+      [
+        "30.0%",
+        "36.0%",
+        "42.0%",
+        "48.0%",
+        "54.0%",
+        "60.0%"
+      ],
+      [
+        "9.0%",
+        "10.8%",
+        "12.6%",
+        "14.4%",
+        "16.2%",
+        "18.0%"
+      ]
     ],
     "技能": [
       {
@@ -10693,12 +11311,23 @@
       }
     ],
     "熔炼": [
-      "Skill Duration +15.0%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. When a Lumino character triggers Bonus Effect, grants 1 stack that increases ATK by 17.5% for 24.0s, up to 9.0 stacks. Using an Ultimate Skill refreshes the duration of all stacks to 24.0s.",
-      "Skill Duration +18.0%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. When a Lumino character triggers Bonus Effect, grants 1 stack that increases ATK by 21.0% for 24.0s, up to 9.0 stacks. Using an Ultimate Skill refreshes the duration of all stacks to 24.0s.",
-      "Skill Duration +21.0%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. When a Lumino character triggers Bonus Effect, grants 1 stack that increases ATK by 24.5% for 24.0s, up to 9.0 stacks. Using an Ultimate Skill refreshes the duration of all stacks to 24.0s.",
-      "Skill Duration +24.0%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. When a Lumino character triggers Bonus Effect, grants 1 stack that increases ATK by 28.0% for 24.0s, up to 9.0 stacks. Using an Ultimate Skill refreshes the duration of all stacks to 24.0s.",
-      "Skill Duration +27.0%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. When a Lumino character triggers Bonus Effect, grants 1 stack that increases ATK by 31.5% for 24.0s, up to 9.0 stacks. Using an Ultimate Skill refreshes the duration of all stacks to 24.0s.",
-      "Skill Duration +30.0%. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. When a Lumino character triggers Bonus Effect, grants 1 stack that increases ATK by 35.0% for 24.0s, up to 9.0 stacks. Using an Ultimate Skill refreshes the duration of all stacks to 24.0s."
+      "Skill Duration +#1. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. When a Lumino character triggers Bonus Effect, grants 1 stack that increases ATK by #2 for 24.0s, up to 9.0 stacks. Using an Ultimate Skill refreshes the duration of all stacks to 24.0s.",
+      [
+        "15.0%",
+        "18.0%",
+        "21.0%",
+        "24.0%",
+        "27.0%",
+        "30.0%"
+      ],
+      [
+        "17.5%",
+        "21.0%",
+        "24.5%",
+        "28.0%",
+        "31.5%",
+        "35.0%"
+      ]
     ],
     "技能": [
       {
@@ -10805,12 +11434,23 @@
       }
     ],
     "熔炼": [
-      "Reload Speed +30.0%. After reloading, ATK Speed increases by 50.0% for 6.0s. This effect is removed when switching weapons.",
-      "Reload Speed +36.0%. After reloading, ATK Speed increases by 60.0% for 6.0s. This effect is removed when switching weapons.",
-      "Reload Speed +42.0%. After reloading, ATK Speed increases by 70.0% for 6.0s. This effect is removed when switching weapons.",
-      "Reload Speed +48.0%. After reloading, ATK Speed increases by 80.0% for 6.0s. This effect is removed when switching weapons.",
-      "Reload Speed +54.0%. After reloading, ATK Speed increases by 90.0% for 6.0s. This effect is removed when switching weapons.",
-      "Reload Speed +60.0%. After reloading, ATK Speed increases by 100.0% for 6.0s. This effect is removed when switching weapons."
+      "Reload Speed +#1. After reloading, ATK Speed increases by #2 for 6.0s. This effect is removed when switching weapons.",
+      [
+        "30.0%",
+        "36.0%",
+        "42.0%",
+        "48.0%",
+        "54.0%",
+        "60.0%"
+      ],
+      [
+        "50.0%",
+        "60.0%",
+        "70.0%",
+        "80.0%",
+        "90.0%",
+        "100.0%"
+      ]
     ],
     "技能": [
       {
@@ -10923,12 +11563,23 @@
       }
     ],
     "熔炼": [
-      "Multishot +37.5%. When a Pyro character deals Skill DMG, grants 1 stack of +2.5% Skill DMG for 10.0s, up to 30.0 stacks.",
-      "Multishot +45.0%. When a Pyro character deals Skill DMG, grants 1 stack of +3.0% Skill DMG for 10.0s, up to 30.0 stacks.",
-      "Multishot +52.5%. When a Pyro character deals Skill DMG, grants 1 stack of +3.5% Skill DMG for 10.0s, up to 30.0 stacks.",
-      "Multishot +60.0%. When a Pyro character deals Skill DMG, grants 1 stack of +4.0% Skill DMG for 10.0s, up to 30.0 stacks.",
-      "Multishot +67.5%. When a Pyro character deals Skill DMG, grants 1 stack of +4.5% Skill DMG for 10.0s, up to 30.0 stacks.",
-      "Multishot +75.0%. When a Pyro character deals Skill DMG, grants 1 stack of +5.0% Skill DMG for 10.0s, up to 30.0 stacks."
+      "Multishot +#1. When a Pyro character deals Skill DMG, grants 1 stack of +#2 Skill DMG for 10.0s, up to 30.0 stacks.",
+      [
+        "37.5%",
+        "45.0%",
+        "52.5%",
+        "60.0%",
+        "67.5%",
+        "75.0%"
+      ],
+      [
+        "2.5%",
+        "3.0%",
+        "3.5%",
+        "4.0%",
+        "4.5%",
+        "5.0%"
+      ]
     ],
     "技能": [
       {
@@ -11020,11 +11671,6 @@
       }
     ],
     "熔炼": [
-      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
-      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
-      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
-      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
-      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
       "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type."
     ],
     "熔炉": [
@@ -11335,12 +11981,31 @@
       }
     ],
     "熔炼": [
-      "ATK Speed +25.0%‍. Each enemy struck by a single arrow increases the arrow's damage by 9.0%, with a maximum increase of 45.0%.",
-      "ATK Speed +30.0%‍. Each enemy struck by a single arrow increases the arrow's damage by 10.8%, with a maximum increase of 54.0%.",
-      "ATK Speed +35.0%‍. Each enemy struck by a single arrow increases the arrow's damage by 12.6%, with a maximum increase of 63.0%.",
-      "ATK Speed +40.0%‍. Each enemy struck by a single arrow increases the arrow's damage by 14.4%, with a maximum increase of 72.0%.",
-      "ATK Speed +45.0%‍. Each enemy struck by a single arrow increases the arrow's damage by 16.2%, with a maximum increase of 81.0%.",
-      "ATK Speed +50.0%‍. Each enemy struck by a single arrow increases the arrow's damage by 18.0%, with a maximum increase of 90.0%."
+      "ATK Speed +#1‍. Each enemy struck by a single arrow increases the arrow's damage by #2, with a maximum increase of #3.",
+      [
+        "25.0%",
+        "30.0%",
+        "35.0%",
+        "40.0%",
+        "45.0%",
+        "50.0%"
+      ],
+      [
+        "9.0%",
+        "10.8%",
+        "12.6%",
+        "14.4%",
+        "16.2%",
+        "18.0%"
+      ],
+      [
+        "45.0%",
+        "54.0%",
+        "63.0%",
+        "72.0%",
+        "81.0%",
+        "90.0%"
+      ]
     ],
     "技能": [
       {
@@ -11527,12 +12192,47 @@
       }
     ],
     "熔炼": [
-      "Skill Duration +15.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +10.0% ATK, +10.0% DEF, +7.5% Skill Intensity, or +10.0% Skill Duration.",
-      "Skill Duration +18.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +12.0% ATK, +12.0% DEF, +9.0% Skill Intensity, or +12.0% Skill Duration.",
-      "Skill Duration +21.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +14.0% ATK, +14.0% DEF, +10.5% Skill Intensity, or +14.0% Skill Duration.",
-      "Skill Duration +24.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +16.0% ATK, +16.0% DEF, +12.0% Skill Intensity, or +16.0% Skill Duration.",
-      "Skill Duration +27.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +18.0% ATK, +18.0% DEF, +13.5% Skill Intensity, or +18.0% Skill Duration.",
-      "Skill Duration +30.0%. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +20.0% ATK, +20.0% DEF, +15.0% Skill Intensity, or +20.0% Skill Duration."
+      "Skill Duration +#1. Landing a CRIT hit with this weapon randomly grants other allies one of the following for 16.0s: +#2 ATK, +#3 DEF, +#4 Skill Intensity, or +#5 Skill Duration.",
+      [
+        "15.0%",
+        "18.0%",
+        "21.0%",
+        "24.0%",
+        "27.0%",
+        "30.0%"
+      ],
+      [
+        "10.0%",
+        "12.0%",
+        "14.0%",
+        "16.0%",
+        "18.0%",
+        "20.0%"
+      ],
+      [
+        "10.0%",
+        "12.0%",
+        "14.0%",
+        "16.0%",
+        "18.0%",
+        "20.0%"
+      ],
+      [
+        "7.5%",
+        "9.0%",
+        "10.5%",
+        "12.0%",
+        "13.5%",
+        "15.0%"
+      ],
+      [
+        "10.0%",
+        "12.0%",
+        "14.0%",
+        "16.0%",
+        "18.0%",
+        "20.0%"
+      ]
     ],
     "技能": [
       {
@@ -11638,12 +12338,23 @@
       }
     ],
     "熔炼": [
-      "Skill Range +30.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill DMG, grants +35.0% Skill DMG for 6.0s.",
-      "Skill Range +36.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill DMG, grants +42.0% Skill DMG for 6.0s.",
-      "Skill Range +42.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill DMG, grants +49.0% Skill DMG for 6.0s.",
-      "Skill Range +48.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill DMG, grants +56.0% Skill DMG for 6.0s.",
-      "Skill Range +54.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill DMG, grants +63.0% Skill DMG for 6.0s.",
-      "Skill Range +60.0%. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill DMG, grants +70.0% Skill DMG for 6.0s."
+      "Skill Range +#1. While charging, the weapon gradually locks onto nearby enemies. Upon release, fires tracking arrows at all locked targets. When a Lumino character deals Skill DMG, grants +#2 Skill DMG for 6.0s.",
+      [
+        "30.0%",
+        "36.0%",
+        "42.0%",
+        "48.0%",
+        "54.0%",
+        "60.0%"
+      ],
+      [
+        "35.0%",
+        "42.0%",
+        "49.0%",
+        "56.0%",
+        "63.0%",
+        "70.0%"
+      ]
     ],
     "技能": [
       {
@@ -11770,12 +12481,15 @@
       }
     ],
     "熔炼": [
-      "Skill Range +36.0%.",
-      "Skill Range +43.2%.",
-      "Skill Range +50.4%.",
-      "Skill Range +57.6%.",
-      "Skill Range +64.8%.",
-      "Skill Range +72.0%."
+      "Skill Range +#1.",
+      [
+        "36.0%",
+        "43.2%",
+        "50.4%",
+        "57.6%",
+        "64.8%",
+        "72.0%"
+      ]
     ],
     "技能": [
       {
@@ -11881,11 +12595,6 @@
       }
     ],
     "熔炼": [
-      "ATK Speed +100.0%. Arrows fired during Charged Attack Stage 3 deal 71.9% more damage and grant +6.0 Explosion Range for 2.0s.",
-      "ATK Speed +100.0%. Arrows fired during Charged Attack Stage 3 deal 71.9% more damage and grant +6.0 Explosion Range for 2.0s.",
-      "ATK Speed +100.0%. Arrows fired during Charged Attack Stage 3 deal 71.9% more damage and grant +6.0 Explosion Range for 2.0s.",
-      "ATK Speed +100.0%. Arrows fired during Charged Attack Stage 3 deal 71.9% more damage and grant +6.0 Explosion Range for 2.0s.",
-      "ATK Speed +100.0%. Arrows fired during Charged Attack Stage 3 deal 71.9% more damage and grant +6.0 Explosion Range for 2.0s.",
       "ATK Speed +100.0%. Arrows fired during Charged Attack Stage 3 deal 71.9% more damage and grant +6.0 Explosion Range for 2.0s."
     ],
     "技能": [

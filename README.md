@@ -10,6 +10,9 @@ Duet Night Abyss 游戏数据导出工具。主流程使用 TypeScript/Bun，直
 
 安装依赖：
 
+- 需要 .NET 10 运行时（Windows、macOS、Linux 都有）
+- https://dotnet.microsoft.com/en-us/download
+
 ```sh
 bun install --frozen-lockfile
 ```
@@ -19,19 +22,20 @@ bun install --frozen-lockfile
 直接运行会构建所有已注册模块，并生成 `final/i18n/` 下的多语言 JSON：
 
 ```sh
-bun run src/cli.ts
+bun warmup # 第一次运行时需要预热，后续可以直接导出
+bun out
 ```
 
 列出可用模块：
 
 ```sh
-bun run src/cli.ts --list
+bun out --list
 ```
 
 只导出指定模块和语言：
 
 ```sh
-bun run src/cli.ts -f Weapon Char --langs cn,en
+bun out -f Weapon Char --langs cn,en
 ```
 
 模块名按插件注册表中的规范名称传入（各模块目录 `src/modules/*/register.ts` 自动登记，主程序不再维护静态清单），`-f/--file-types` 匹配时不区分大小写。

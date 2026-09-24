@@ -13,7 +13,7 @@
  */
 
 import type { ModuleContext } from "../../core/Graph.ts"
-import { compile, LTemplate, record, T, TLang, TMap, type VNode, type VNodeTree } from "../../i18n/vnode.ts"
+import { compile, LTemplate, LTemplateColumns, record, T, TLang, TMap, type VNode, type VNodeTree } from "../../i18n/vnode.ts"
 import { AssetReader } from "../../lua/AssetReader.ts"
 import type { SkillArtifacts } from "../skill/skillModule.ts"
 import { extractFieldValueAndFormatFromSource, P_MAP, resolveFieldCombatMetaImpl, roundValue } from "../skill/skillModule.ts"
@@ -219,22 +219,27 @@ export async function weaponModule(ctx: ModuleContext) {
         return out
     }
 
-    /** 熔炼（TextMap 模板 + 逐级值替换） */
+    /**
+     * 熔炼：模板（保留 #N 占位符）+ 每个占位符的 1~6 级填充值。
+     *
+     * 输出形如 ["角色攻击+#1。", ["60.0%","72.0%",...]]，第 i 个数组对应模板中的 #i
+     * （与游戏 UI 逐条 gsub("#" .. i) 的索引语义一致）。武器熔炼固定 6 级。
+     */
     function processSmelting(battleWeapon: Record<string, any>): VNodeTree {
         const passiveDesc = battleWeapon.PassiveEffectsDesc
         const descValues = battleWeapon.PassiveEffectsDescValues ?? []
         if (!passiveDesc) return []
-        const out: VNode[] = []
-        for (let grade = 1; grade <= 6; grade++) {
+        const columns: VNode[][] = []
+        for (const dv of descValues) {
+            if (typeof dv !== "string") continue
             // 每个占位 #N 用 Lua CalcSkillDesc 计算该等级的值
-            const values: VNode[] = []
-            for (const dv of descValues) {
-                if (typeof dv !== "string") continue
-                values.push(compile(dm.calcSkillDesc(dv, grade)))
+            const perGrade: VNode[] = []
+            for (let grade = 1; grade <= 6; grade++) {
+                perGrade.push(compile(dm.calcSkillDesc(dv, grade)))
             }
-            out.push(LTemplate(String(passiveDesc), values, true))
+            columns.push(perGrade)
         }
-        return out
+        return LTemplateColumns(String(passiveDesc), columns, true)
     }
 
     function processFurnace(weaponId: number, battleWeapon: Record<string, any>): { rows: VNodeTree[]; addon: Array<[VNode, VNode]> } {
