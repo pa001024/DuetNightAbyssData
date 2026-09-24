@@ -1,7 +1,7 @@
 import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs"
 import { tmpdir } from "node:os"
-import { join } from "node:path"
-import { describe, expect, test } from "bun:test"
+import { dirname, join } from "node:path"
+import { afterEach, beforeEach, describe, expect, test } from "bun:test"
 import type { ModuleContext } from "../src/core/Graph.ts"
 import type { DialogueService } from "../src/modules/dialogue/dialogueModule.ts"
 import { eventStorylineNodes, storylineNodes, storyMediaNode } from "../src/modules/storyline/storyline.ts"
@@ -47,6 +47,50 @@ const story = {
 }
 
 describe("storyline media nodes", () => {
+    // BGM 节点只在对应音频已导出时保留：用临时目录固定音频可用性，避免依赖真实数据集。
+    let audioRoot: string
+    let previousAudioRoot: string | undefined
+    beforeEach(() => {
+        previousAudioRoot = process.env.DNA_BGM_EXPORT_DIR
+        audioRoot = mkdtempSync(join(tmpdir(), "bgm-audio-"))
+        for (const name of [
+            "bgm/1_0/0091_feina_activity_cs_01",
+            "ambience/common/pad_noise_rain_plain_heavy",
+            "ambience/world/prologue/char_pick",
+        ]) {
+            const file = join(audioRoot, `${name}.ogg`)
+            mkdirSync(dirname(file), { recursive: true })
+            writeFileSync(file, "ogg")
+        }
+        process.env.DNA_BGM_EXPORT_DIR = audioRoot
+    })
+    afterEach(() => {
+        if (previousAudioRoot === undefined) delete process.env.DNA_BGM_EXPORT_DIR
+        else process.env.DNA_BGM_EXPORT_DIR = previousAudioRoot
+        rmSync(audioRoot, { recursive: true, force: true })
+    })
+
+    test("drops BGM nodes whose audio was never exported", () => {
+        const empty = mkdtempSync(join(tmpdir(), "bgm-audio-missing-"))
+        process.env.DNA_BGM_EXPORT_DIR = empty
+        try {
+            expect(
+                storyMediaNode("noise", {
+                    type: "PlayOrStopBGMNode",
+                    propsData: { SoundStateType: 0, SoundType: 1, SoundPath: "event:/ambience/world/prologue/char_pick" },
+                }),
+            ).toBeUndefined()
+            expect(
+                storyMediaNode("bgm", {
+                    type: "PlayOrStopBGMNode",
+                    propsData: { SoundStateType: 0, SoundPath: "event:/bgm/1_0/0091_feina_activity_cs_01" },
+                }),
+            ).toBeUndefined()
+        } finally {
+            rmSync(empty, { recursive: true, force: true })
+        }
+    })
+
     test("exports video and BGM start nodes with exact resources and skips stop nodes", () => {
         const nodes = storylineNodes(context(story), "story") as Array<Record<string, any>>
         expect(nodes).toEqual([
@@ -291,6 +335,35 @@ describe("storyline media nodes", () => {
             expect(
                 collectBgmFiles([item], new Map([[normalizeBgmAssetPath(item.resource), [eventSource]]]), new Map()),
             ).toEqual({ files: new Map([["cine/Ver0103/sc002", eventSource]]), missing: [] })
+        } finally {
+            rmSync(directory, { recursive: true, force: true })
+        }
+    })
+
+    test("picks the bank copy when the same audio is saved under several bank roots", () => {
+        // FModel 会把同一批 bank 音频存到多个 bank 根（Banks/、Desktop/…），各根的 bank 段
+        // 同名（都有 cine/），内容一致，不应判为冲突。
+        const directory = mkdtempSync(join(tmpdir(), "story-media-"))
+        try {
+            const banksCopy = join(directory, "Banks", "cine", "cine_Cine00_SC002.ogg")
+            const desktopCopy = join(directory, "Desktop", "cine", "cine_Cine00_SC002.ogg")
+            for (const source of [banksCopy, desktopCopy]) {
+                mkdirSync(dirname(source), { recursive: true })
+                writeFileSync(source, "ogg")
+            }
+            const item = {
+                resource: "FMODEvent'/Game/Asset/Audio/FMOD/Events/cine/Cine00_SC002.Cine00_SC002'",
+                story: "story",
+                node: "bgm",
+            }
+            expect(collectBgmFiles([item], new Map(), new Map([["cine_Cine00_SC002", [banksCopy, desktopCopy]]]))).toEqual({
+                files: new Map([["cine/Cine00_SC002", banksCopy]]),
+                missing: [],
+            })
+            // 输出顺序颠倒时结论一致：只按"是否位于某 bank 根下"筛选，不依赖日志先后。
+            expect(
+                collectBgmFiles([item], new Map(), new Map([["cine_Cine00_SC002", [desktopCopy, banksCopy]]])).files,
+            ).toEqual(new Map([["cine/Cine00_SC002", desktopCopy]]))
         } finally {
             rmSync(directory, { recursive: true, force: true })
         }

@@ -1,3 +1,5 @@
+import { existsSync } from "node:fs"
+import { join } from "node:path"
 import type { ModuleContext } from "../../core/Graph.ts"
 
 export type Row = Record<string, any>
@@ -96,6 +98,18 @@ export function fmodEventMediaName(value: unknown): string | undefined {
         .filter(Boolean)
     if (segments.length === 0) return undefined
     return segments.join("/")
+}
+
+/**
+ * BGM 事件规范名对应的音频是否已导出（供剧情节点过滤）。
+ *
+ * 剧情媒体导出按规范名落盘到 `.env` 的 DNA_BGM_EXPORT_DIR（如 `<root>/bgm/1_1/xxx.ogg`）。
+ * 该目录未配置时无从判定，按"保留节点"处理（未配置解包/导出目录的环境行为不变）。
+ */
+export function hasExportedBgmAudio(name: string): boolean {
+    const root = process.env.DNA_BGM_EXPORT_DIR?.trim()
+    if (!root) return true
+    return existsSync(join(root, `${name}.ogg`))
 }
 
 /**

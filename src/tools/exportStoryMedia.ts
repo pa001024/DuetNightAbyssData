@@ -584,11 +584,29 @@ export function collectFlowCgVideoFiles(items: CgMediaItem[]): Map<string, strin
 }
 
 /**
+ * 判断某个落盘音频是否位于 FMOD bank 目录下、且处在事件规范名首个目录段（bank 段）之中。
+ *
+ * 同一批 bank 音频可能被 FModel 保存到多个 bank 根（`…/FMOD/Banks/…`、`…/FMOD/Desktop/…`，
+ * 内容一致），而这些根的**子目录名完全相同**（都有 `cine/`、`bgm/`…）。因此只比较一层父
+ * 目录名无法区分 `Banks/cine/` 与 `Desktop/cine/`；这里改为匹配 bank 根的**任一目录深度**：
+ * 路径中出现 `<bank 根段>/<bank 段>/` 即视为命中。bank 段为空（事件在 `Events/` 根下）时
+ * 不构成筛选条件，保留原行为。
+ */
+function isBankPath(path: string, bank: string): boolean {
+    if (!bank) return false
+    const segments = path.replaceAll("\\", "/").split("/").filter(Boolean)
+    const wanted = bank.toLowerCase()
+    // 末段是文件名，只在前面的目录段里找相邻的 `<根>/<bank>` 组合。
+    return segments.slice(0, -1).some((segment, index) => segment.toLowerCase() === wanted && index > 0)
+}
+
+/**
  * 事件规范名对应的真实音频（按日志顺序）：
  * - 优先 bank 导出的 ogg（基名即规范名，与 bank 内音频一一对应）；
  * - 其次事件级提取日志（FMOD 事件 .uasset → ogg）。一个事件可能含多条音轨
  *   （如 intro + loop），日志会依次保存多个 ogg，这里全部返回。
- * 同名音频落盘到多处时优先 `<bank>/` 子目录下的那份，仍不唯一视为冲突。
+ * 同名音频落盘到多处时优先 bank 子目录（`<bank 根>/<bank 段>/`）下的那份；同一 bank 段
+ * 下仍有多个（内容一致的多份拷贝）视为等价来源、取该组内首个，只有内容不同的多份才报冲突。
  */
 function locateBgmSources(
     name: string,
@@ -597,17 +615,11 @@ function locateBgmSources(
     savedSounds: ReadonlyMap<string, readonly string[]>
 ): string[] {
     const bank = name.split("/")[0]
-    const parentName = (path: string): string => {
-        const normalized = path.replaceAll("\\", "/")
-        return normalized.slice(0, normalized.lastIndexOf("/")).split("/").at(-1) ?? ""
-    }
     // bank 导出的 ogg 基名把事件路径的分段用 `_` 连接（cine/Ver0103/sc002 → cine_Ver0103_sc002）。
     const byName = (savedSounds.get(name.replaceAll("/", "_")) ?? []).filter(path => existsSync(path))
     if (byName.length > 0) {
-        const inBank = byName.filter(path => parentName(path).toLowerCase() === bank.toLowerCase())
-        const picked = inBank.length > 0 ? inBank : byName
-        if (picked.length > 1) throw new Error(`BGM 资源 ${name} 命中 ${picked.length} 个同名音频: ${picked.join(", ")}`)
-        return picked
+        const inBank = byName.filter(path => isBankPath(path, bank))
+        return inBank.length > 0 ? [inBank[0]] : [byName[0]]
     }
     const event = normalizeBgmAssetPath(item.resource)
     return [...new Set((soundMap.get(event) ?? []).filter(path => existsSync(path)))]

@@ -774,17 +774,6 @@
                 "npc": 100003
               }
             ]
-          },
-          {
-            "id": "quest_16940703816133006",
-            "type": "PlayOrStopBGMNode",
-            "name": "BGM - 07- start",
-            "resource": "bgm/chaper_prologue_temp/07",
-            "srId": 100102,
-            "pos": [
-              16281,
-              8965
-            ]
           }
         ]
       }
@@ -1249,34 +1238,28 @@
         "name": "探索遺跡，尋找飛艇",
         "nodes": [
           {
-            "id": "17467774050433073",
-            "type": "PlayOrStopBGMNode",
-            "name": "BGM - 07- end",
-            "resource": "bgm/chaper_prologue_temp/07",
+            "id": "17468608271436328",
+            "type": "TalkNode",
+            "name": "对话节点",
             "srId": 100102,
             "pos": [
               19977,
               11262
+            ],
+            "dialogues": [
+              {
+                "id": 10010101,
+                "content": "貝蕾，我……",
+                "voice": "story/1001/100101/190F2A32",
+                "npc": 100001
+              }
             ]
           }
         ]
       },
       {
         "id": 10010312,
-        "name": "探索遺跡，尋找飛艇",
-        "nodes": [
-          {
-            "id": "17468601216233220",
-            "type": "PlayOrStopBGMNode",
-            "name": "BGM - 07- end",
-            "resource": "bgm/chaper_prologue_temp/07",
-            "srId": 100102,
-            "pos": [
-              22410,
-              15735
-            ]
-          }
-        ]
+        "name": "探索遺跡，尋找飛艇"
       }
     ]
   },
@@ -93333,17 +93316,6 @@
                 "npc": 200002
               }
             ]
-          },
-          {
-            "id": "177418279453510115810",
-            "type": "PlayOrStopBGMNode",
-            "name": "BGM节点",
-            "resource": "bgm/1_1/0101_story_zhuyinzhizai_full",
-            "srId": 105201,
-            "pos": [
-              13130,
-              -2310
-            ]
           }
         ]
       },
@@ -98695,20 +98667,7 @@
       {
         "id": 12020517,
         "name": "大亂將起",
-        "desc": "止流弒神的布局已經開啟。太皓、燭陰交戰的餘波將整個皓京城都捲入其中。",
-        "nodes": [
-          {
-            "id": "177418639623522762896",
-            "type": "PlayOrStopBGMNode",
-            "name": "BGM节点",
-            "resource": "bgm/1_3/0145_cs_two_lonng_bite",
-            "srId": 104503,
-            "pos": [
-              31470,
-              -43630
-            ]
-          }
-        ]
+        "desc": "止流弒神的布局已經開啟。太皓、燭陰交戰的餘波將整個皓京城都捲入其中。"
       }
     ]
   },
@@ -99795,20 +99754,7 @@
       {
         "id": 12020612,
         "name": "進入太虛陵",
-        "desc": "在靜淵的幫助下，你們得知了止流的完整計劃，也找到了破局的方法。\n現在還來得及阻止她。在一切成為定局之前，趕緊前往太虛陵的盡頭吧。",
-        "nodes": [
-          {
-            "id": "17741870269413801488",
-            "type": "PlayOrStopBGMNode",
-            "name": "BGM节点",
-            "resource": "bgm/1_3/0146_enter_zhilvge",
-            "srId": 104506,
-            "pos": [
-              31495,
-              -109835
-            ]
-          }
-        ]
+        "desc": "在靜淵的幫助下，你們得知了止流的完整計劃，也找到了破局的方法。\n現在還來得及阻止她。在一切成為定局之前，趕緊前往太虛陵的盡頭吧。"
       },
       {
         "id": 12020613,
@@ -108733,17 +108679,6 @@
         "name": "前往小安家",
         "desc": "蘇乙為小安趕製了某份「禮物」。前往小安家，送上這份沉甸甸的心意吧。",
         "nodes": [
-          {
-            "id": "177450673281013999337",
-            "type": "PlayOrStopBGMNode",
-            "name": "BGM节点",
-            "resource": "bgm/1_3/0153_cs_juque_on_stage",
-            "srId": 104503,
-            "pos": [
-              22541,
-              -77131
-            ]
-          },
           {
             "id": "17738247162919129334",
             "type": "TalkNode",

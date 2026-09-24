@@ -774,17 +774,6 @@
                 "npc": 100003
               }
             ]
-          },
-          {
-            "id": "quest_16940703816133006",
-            "type": "PlayOrStopBGMNode",
-            "name": "BGM - 07- start",
-            "resource": "bgm/chaper_prologue_temp/07",
-            "srId": 100102,
-            "pos": [
-              16281,
-              8965
-            ]
           }
         ]
       }
@@ -1249,34 +1238,28 @@
         "name": "Explore the ruins and search for the airship",
         "nodes": [
           {
-            "id": "17467774050433073",
-            "type": "PlayOrStopBGMNode",
-            "name": "BGM - 07- end",
-            "resource": "bgm/chaper_prologue_temp/07",
+            "id": "17468608271436328",
+            "type": "TalkNode",
+            "name": "对话节点",
             "srId": 100102,
             "pos": [
               19977,
               11262
+            ],
+            "dialogues": [
+              {
+                "id": 10010101,
+                "content": "Berry, I...",
+                "voice": "story/1001/100101/190F2A32",
+                "npc": 100001
+              }
             ]
           }
         ]
       },
       {
         "id": 10010312,
-        "name": "Explore the ruins and search for the airship",
-        "nodes": [
-          {
-            "id": "17468601216233220",
-            "type": "PlayOrStopBGMNode",
-            "name": "BGM - 07- end",
-            "resource": "bgm/chaper_prologue_temp/07",
-            "srId": 100102,
-            "pos": [
-              22410,
-              15735
-            ]
-          }
-        ]
+        "name": "Explore the ruins and search for the airship"
       }
     ]
   },
@@ -93334,17 +93317,6 @@
                 "npc": 200002
               }
             ]
-          },
-          {
-            "id": "177418279453510115810",
-            "type": "PlayOrStopBGMNode",
-            "name": "BGM节点",
-            "resource": "bgm/1_1/0101_story_zhuyinzhizai_full",
-            "srId": 105201,
-            "pos": [
-              13130,
-              -2310
-            ]
           }
         ]
       },
@@ -98696,20 +98668,7 @@
       {
         "id": 12020517,
         "name": "A storm is coming",
-        "desc": "Zhiliu's design to slay a god is already in motion. The fallout from Taihao and Zhuyin's clash is plunging Haojing into chaos.",
-        "nodes": [
-          {
-            "id": "177418639623522762896",
-            "type": "PlayOrStopBGMNode",
-            "name": "BGM节点",
-            "resource": "bgm/1_3/0145_cs_two_lonng_bite",
-            "srId": 104503,
-            "pos": [
-              31470,
-              -43630
-            ]
-          }
-        ]
+        "desc": "Zhiliu's design to slay a god is already in motion. The fallout from Taihao and Zhuyin's clash is plunging Haojing into chaos."
       }
     ]
   },
@@ -99796,20 +99755,7 @@
       {
         "id": 12020612,
         "name": "Enter the Taixu Mausoleum",
-        "desc": "With Hermit Jingyuan's help, you learn the full extent of Zhiliu's plan — and how to stop her.\nThere's still time. Press on towards the depths of the Taixu Mausoleum.",
-        "nodes": [
-          {
-            "id": "17741870269413801488",
-            "type": "PlayOrStopBGMNode",
-            "name": "BGM节点",
-            "resource": "bgm/1_3/0146_enter_zhilvge",
-            "srId": 104506,
-            "pos": [
-              31495,
-              -109835
-            ]
-          }
-        ]
+        "desc": "With Hermit Jingyuan's help, you learn the full extent of Zhiliu's plan — and how to stop her.\nThere's still time. Press on towards the depths of the Taixu Mausoleum."
       },
       {
         "id": 12020613,
@@ -108734,17 +108680,6 @@
         "name": "Go to An's home",
         "desc": "Su Yi stayed up through the night to finish a special gift for An. Go to his home and deliver it to him in person.",
         "nodes": [
-          {
-            "id": "177450673281013999337",
-            "type": "PlayOrStopBGMNode",
-            "name": "BGM节点",
-            "resource": "bgm/1_3/0153_cs_juque_on_stage",
-            "srId": 104503,
-            "pos": [
-              22541,
-              -77131
-            ]
-          },
           {
             "id": "17738247162919129334",
             "type": "TalkNode",

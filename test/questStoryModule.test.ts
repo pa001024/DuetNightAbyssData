@@ -1,10 +1,30 @@
-import { describe, expect, test } from "bun:test"
+import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs"
+import { tmpdir } from "node:os"
+import { dirname, join } from "node:path"
+import { afterEach, beforeEach, describe, expect, test } from "bun:test"
 import type { ModuleContext } from "../src/core/Graph.ts"
 import { renderTree } from "../src/i18n/vnode.ts"
 import type { DialogueService } from "../src/modules/dialogue/dialogueModule.ts"
 import { collectSpecialStoryPaths, questStoryModule } from "../src/modules/questStory/questStoryModule.ts"
 
 describe("QuestStory special stories", () => {
+    // BGM 节点只在对应音频已导出时保留：用临时目录固定音频可用性，避免依赖真实数据集。
+    let audioRoot: string
+    let previousAudioRoot: string | undefined
+    beforeEach(() => {
+        previousAudioRoot = process.env.DNA_BGM_EXPORT_DIR
+        audioRoot = mkdtempSync(join(tmpdir(), "bgm-audio-"))
+        const file = join(audioRoot, "bgm/1_0/0091_feina_activity_cs_01.ogg")
+        mkdirSync(dirname(file), { recursive: true })
+        writeFileSync(file, "ogg")
+        process.env.DNA_BGM_EXPORT_DIR = audioRoot
+    })
+    afterEach(() => {
+        if (previousAudioRoot === undefined) delete process.env.DNA_BGM_EXPORT_DIR
+        else process.env.DNA_BGM_EXPORT_DIR = previousAudioRoot
+        rmSync(audioRoot, { recursive: true, force: true })
+    })
+
     test("keeps a standalone video node alongside reachable dialogue", async () => {
         const story = {
             storyNodeData: {

@@ -1,7 +1,7 @@
 import type { ModuleContext } from "../../core/Graph.ts"
 import { T, TRaw, TUnlessEqual, type VNodeTree } from "../../i18n/vnode.ts"
 import type { DialogueService } from "../dialogue/dialogueModule.ts"
-import { fmodEventMediaName } from "../shared/dataHelpers.ts"
+import { fmodEventMediaName, hasExportedBgmAudio } from "../shared/dataHelpers.ts"
 import { cinematicVideoWithMedia, dialogueFlowCgVideo, dialogueStageTalkVideo } from "../shared/storyStageMedia.ts"
 
 type Row = Record<string, any>
@@ -47,7 +47,7 @@ function storyMediaNode(nodeId: string, node: Row): Row | undefined {
         const resource = mediaResource(props.SoundPath)
         if (!resource || Number(props.SoundType) === 2 || isMuteBgmEvent(resource)) return undefined
         const sound = fmodEventMediaName(resource)
-        if (!sound) return undefined
+        if (!sound || !hasExportedBgmAudio(sound)) return undefined
         return { id: nodeId, type: "PlayOrStopBGMNode", name: node.name ?? "", resource: sound }
     }
     return undefined
