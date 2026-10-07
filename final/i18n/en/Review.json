@@ -1,0 +1,386 @@
+[
+  {
+    "id": 1,
+    "episodeName": "Paradise's 22nd White Bunny",
+    "chains": [
+      {
+        "id": 110201,
+        "column": 0,
+        "main": [
+          {
+            "id": 1001,
+            "name": "The Hunter and the White Rabbit",
+            "content": "Not long after reaching Mount Arcano, I met two residents of Arcano, Ada and Bernard. They told me Mount Arcano was my home and that I was Victor, known in the village as \"The Chariot\".\nI have no memories of this place or of being Victor, but perhaps visiting the village will bring something back. For now, I'll follow Ada back to Arcano and gather intelligence on Fulvis and the Catalyst before deciding what to do next.",
+            "pic2": "T_StringBoard_Main_0050",
+            "type": 1,
+            "questChainId": 110201,
+            "unlock": 11020101,
+            "finish": 11020102
+          }
+        ],
+        "side": [],
+        "firstShow": 11020101
+      },
+      {
+        "id": 110202,
+        "column": 1,
+        "main": [
+          {
+            "id": 1002,
+            "name": "Arcano Ruins",
+            "content": "Soon after arriving on Mount Arcano, I began having bouts of dizziness. Ada noticed something was wrong and took me to an abandoned amusement park to rest. She explained that the park had once been part of Arcano before the war. Hardly anyone came here anymore; most of the villagers now lived in the new Arcano built by Mother Bunny.\nBefore we set off for the new village, we heard several gunshots ring out from the ruins.",
+            "pic2": "T_StringBoard_Main_0051",
+            "type": 1,
+            "questChainId": 110201,
+            "unlock": 11020102,
+            "finish": 11020104
+          }
+        ],
+        "side": [],
+        "prev": 110201
+      },
+      {
+        "id": 110203,
+        "column": 2,
+        "main": [
+          {
+            "id": 1003,
+            "name": "Gunshots in the Ruins",
+            "content": "The gunshots were followed by an ambush. I was wounded in the ensuing struggle, but managed to subdue our attacker, Falsi. To be safe, I can't let her out of my sight.",
+            "pic2": "T_StringBoard_Main_0052",
+            "type": 1,
+            "questChainId": 110201,
+            "unlock": 11020104,
+            "finish": 11020104
+          }
+        ],
+        "side": [],
+        "prev": 110202
+      },
+      {
+        "id": 110204,
+        "column": 3,
+        "main": [
+          {
+            "id": 1004,
+            "name": "Mount Arcano Rift",
+            "content": "The rift on Mount Arcano was swarming with Filthoids, and the lake was heavily contaminated. Fortunately, Falsi found an operational Legion turret, which we used to keep the Filthoids at bay. We were finally able to cross the lake along the roller-coaster track Ada had repaired.\nA Filthoid suddenly lunged at us from beside the track and knocked Falsi into the water. She can't die here.",
+            "pic2": "T_StringBoard_Main_0053",
+            "type": 1,
+            "questChainId": 110202,
+            "unlock": 11020104,
+            "finish": 11020201
+          }
+        ],
+        "side": [
+          {
+            "id": 1005,
+            "name": "A Strange Dream",
+            "content": "I had a dream in which Ada was nothing like her usual self. She seemed dangerous. Sinister, even. After Falsi came to, we compared notes. She warned me not to trust Ada — she'd seen Ada kill someone with her own eyes. Could that dream have been trying to warn me...?",
+            "pic2": "T_StringBoard_Main_0054",
+            "type": 1,
+            "questChainId": 110203,
+            "unlock": 11020301,
+            "finish": 11020301
+          }
+        ],
+        "prev": 110203
+      },
+      {
+        "id": 110205,
+        "column": 4,
+        "main": [
+          {
+            "id": 1006,
+            "name": "Paradise Village",
+            "content": "We finally followed Ada to the new Arcano. Its residents gave us a warm welcome, and everyone was busy preparing for tomorrow's Parade.\nWhat exactly is the Parade? How did they rebuild the village on this scale in just a few years? Where is the Catalyst? And... is this really my home?\nI still don't know nearly enough. I should look around the village and see what I can learn.",
+            "pic2": "T_StringBoard_Main_0055",
+            "type": 1,
+            "questChainId": 110203,
+            "unlock": 11020301,
+            "finish": 11020302
+          }
+        ],
+        "side": [],
+        "prev": 110204
+      },
+      {
+        "id": 110206,
+        "column": 5,
+        "main": [
+          {
+            "id": 1007,
+            "name": "Nutcrackers",
+            "content": "We came across some damaged toys in the village, along with their maker, \"The Magician\" Morgana. She claims she once taught me how to make these Nutcrackers. I still don't remember any of it, but their ears are pretty adorable.",
+            "pic1": "T_StringBoard_Main_0056",
+            "pic2": "T_StringBoard_Main_0057",
+            "type": 1,
+            "questChainId": 110211,
+            "unlock": 11020302,
+            "finish": 110211
+          },
+          {
+            "id": 1008,
+            "name": "Fragments of Memory",
+            "content": "Since coming to Mount Arcano, my headaches have grown more frequent, and I've even started seeing fleeting visions.\nOne showed Fulvis; the others felt like fragments of a life I had once lived here. Could they be memories from when I was \"Victor\"?",
+            "pic1": "T_StringBoard_Main_0058",
+            "pic2": "T_StringBoard_Main_0059",
+            "type": 1,
+            "questChainId": 110212,
+            "unlock": 11020302,
+            "finish": 110212
+          },
+          {
+            "id": 1009,
+            "name": "Arcano Warehouse",
+            "content": "Near the warehouse in Paradise Village, I met \"The Moon\" Selena, \"The Sun\" Elio, and \"The Star\" Stella. I played a game called Greedy Gobbler with the three children.\nI told them about my time at military school and in the Legion. To my surprise, they ended up worrying about me. Maybe my stories were a little too grim.\nFalsi also found piles of identical items in the warehouse, most likely created by the Catalyst. Nothing else stood out.",
+            "pic1": "T_StringBoard_Main_0020",
+            "pic2": "T_StringBoard_Main_0021",
+            "type": 1,
+            "questChainId": 110213,
+            "unlock": 11020302,
+            "finish": 110213
+          },
+          {
+            "id": 1010,
+            "name": "Something Strange About Ada",
+            "content": "\"The Hierophant\" Sanctus asked Ada and me to gather decorations for the celebration from the woods. It was a simple errand, but Ada insisted on stopping to play a game along the way.\nShe seemed a little sad when the game ended. For some reason, the people here seem unable to leave Mount Arcano.",
+            "pic1": "T_StringBoard_Main_0024",
+            "pic2": "T_StringBoard_Main_0063",
+            "type": 1,
+            "questChainId": 110214,
+            "unlock": 11020302,
+            "finish": 110214
+          },
+          {
+            "id": 1011,
+            "name": "A Bird's-Eye View of Arcano",
+            "content": "We rode the village's Ferris wheel to get a bird's-eye view of Paradise Village. From up there, the village seemed even more peaceful. Everyone was helping one another and busily preparing for tomorrow's celebration. It was a heartwarming sight — something I rarely saw in the Legion.",
+            "pic1": "T_StringBoard_Main_0064",
+            "pic2": "T_StringBoard_Main_0065_2",
+            "type": 1,
+            "questChainId": 110215,
+            "unlock": 11020302,
+            "finish": 110215
+          }
+        ],
+        "side": [],
+        "prev": 110205
+      },
+      {
+        "id": 110207,
+        "column": 6,
+        "main": [
+          {
+            "id": 1014,
+            "name": "A Feast in Paradise",
+            "content": "Justus led us back to the village for dinner. Cesare, the village head, showed me a few photographs from my time in Arcano. Before I knew it, the villagers were crowding around me and ushering me to the table, all eager to welcome me...\nI can barely remember what happened after that.",
+            "pic2": "T_StringBoard_Main_0068",
+            "type": 1,
+            "questChainId": 110220,
+            "unlock": 11022000,
+            "finish": 11022001
+          }
+        ],
+        "side": [
+          {
+            "id": 1013,
+            "name": "The Forbidden Room",
+            "content": "\"The Empress\" Teresa asked us to deliver a few bottles of wine to \"Justice\" Justus. We eventually found him near the Pond of Slumber, but he reacted strangely when he saw us: he yelled at Ada for bringing me there, then ordered her to recite the village's rules.\nSo, apparently no one is allowed near the Pond of Slumber without the village head's permission... What is hidden inside that house? I should come back and investigate when I get the chance.",
+            "pic2": "T_StringBoard_Main_0067",
+            "type": 1,
+            "questChainId": 110220,
+            "unlock": 1102200101,
+            "finish": 1102200101
+          }
+        ],
+        "prev": 110206
+      },
+      {
+        "id": 110208,
+        "column": 7,
+        "main": [
+          {
+            "id": 1012,
+            "name": "A Strangely Familiar Room",
+            "content": "According to Cesare, this used to be my home. The place is cluttered, but someone has clearly taken great care to keep it clean. Has someone really been waiting all this time for me to come home?",
+            "pic2": "T_StringBoard_Main_0066",
+            "type": 1,
+            "questChainId": 110220,
+            "unlock": 11022001,
+            "finish": 11022002
+          }
+        ],
+        "side": [],
+        "prev": 110207
+      },
+      {
+        "id": 110209,
+        "column": 8,
+        "main": [
+          {
+            "id": 1015,
+            "name": "Scars of War",
+            "content": "After comparing notes with Falsi, we decided to investigate the areas we hadn't explored yesterday. In the woods beyond the drawbridge, we came across the wreckage of a Legion airship that had made an emergency landing there four years earlier. Nearby, we found signs that the airship's two survivors had taken shelter in a cave.",
+            "pic1": "T_StringBoard_Main_0069",
+            "pic2": "T_StringBoard_Main_0025",
+            "type": 1,
+            "questChainId": 110221,
+            "unlock": 11022002,
+            "finish": 110221
+          },
+          {
+            "id": 1016,
+            "name": "Recovering the Weapons",
+            "content": "We searched the old battlefield. I found some flashbangs, but then Falsi stepped on an unexploded shell, triggering a blast that knocked her unconscious. Fortunately, the explosion was relatively weak. Her injuries appear minor, and she should be able to look after herself once she regains consciousness.",
+            "pic1": "T_StringBoard_Main_0071",
+            "pic2": "T_StringBoard_Main_0072",
+            "type": 1,
+            "questChainId": 110222,
+            "unlock": 11022002,
+            "finish": 110222
+          }
+        ],
+        "side": [],
+        "prev": 110208
+      },
+      {
+        "id": 110210,
+        "column": 9,
+        "main": [
+          {
+            "id": 1017,
+            "name": "The Parade",
+            "content": "The Parade was less a celebration than a public trial for those accused of breaking the rules. During the Parade, we unexpectedly came face-to-face with Fulvis, the man we had been searching for. The villagers, however, insisted that he was \"The Fool\" Joy, a long-time resident of Paradise Village. He certainly seemed nothing like the Fulvis I remembered.\nFalsi tried to kill Fulvis to avenge herself, but she was no match for Mother Bunny, a powerful Daimon. With Fulvis under the protection of Mother Bunny and the village head, there was nothing I could do about him for the time being.\nFalsi has been imprisoned at the Pond of Slumber and is set to be executed by the village head. She is the key witness in the Lonza case. I cannot let her die here with the truth still buried. Just then, Ada gave me the opening I needed to reach the Pond of Slumber and rescue her.",
+            "pic2": "T_StringBoard_Main_0073",
+            "type": 1,
+            "questChainId": 110231,
+            "unlock": 11023100,
+            "finish": 11023101
+          }
+        ],
+        "side": [],
+        "prev": 110209
+      },
+      {
+        "id": 110211,
+        "column": 10,
+        "main": [
+          {
+            "id": 1018,
+            "name": "The Truth About Paradise",
+            "content": "Joy tossed me a key, allowing me to free Falsi from the Pond of Slumber at last. As we fled, we stumbled upon a cemetery. There was a headstone for every one of Arcano's residents — including Victor. I am not Victor. The real Victor died in the war four years ago.\nThe village head and Joy soon arrived, and I finally learned the truth about Paradise Village. None of its current residents were actually from Arcano. Cesare and Mother Bunny had forced them to remain here and play the parts of the villagers who had died.\nJust as Cesare was about to fire on us, Joy — apparently Fulvis with no memory of his past — threw himself into the line of fire and saved us.",
+            "pic2": "T_StringBoard_Main_0074",
+            "type": 1,
+            "questChainId": 110231,
+            "unlock": 11023101,
+            "finish": 11023102
+          }
+        ],
+        "side": [],
+        "prev": 110210
+      },
+      {
+        "id": 110212,
+        "column": 11,
+        "main": [
+          {
+            "id": 1019,
+            "name": "Escape from Paradise",
+            "content": "After everything Falsi has been through over the past few days, her wounds are getting worse. I have to get her out of here alive.\nAda stayed behind to cover our escape. She assured us that Mother Bunny would never hurt her — that she was safe for a reason.",
+            "pic2": "T_StringBoard_Main_0075",
+            "type": 1,
+            "questChainId": 110231,
+            "unlock": 11023102,
+            "finish": 11023104
+          }
+        ],
+        "side": [],
+        "prev": 110211
+      },
+      {
+        "id": 110213,
+        "column": 12,
+        "main": [
+          {
+            "id": 1020,
+            "name": "Return to Paradise",
+            "content": "Now that Falsi is safe, it is time to go back for Ada and put an end to this twisted game.",
+            "pic2": "T_StringBoard_Main_0076",
+            "type": 1,
+            "questChainId": 110232,
+            "unlock": 11023104,
+            "finish": 11023201
+          }
+        ],
+        "side": [],
+        "prev": 110212
+      },
+      {
+        "id": 110214,
+        "column": 13,
+        "main": [
+          {
+            "id": 1021,
+            "name": "Eve and Ada",
+            "content": "Having found the courage to resist, Ada defied Mother Bunny and chose a new name for herself: Eve.\nAfter we defeated Mother Bunny, rescued Eve, and helped the other villagers escape Paradise Village, I finally saw the face beneath Mother Bunny's mask. She was identical to Eve... Mother Bunny was the real Ada, and Eve was her replica.",
+            "pic2": "T_StringBoard_Main_0077",
+            "type": 1,
+            "questChainId": 110232,
+            "unlock": 11023201,
+            "finish": 11023203
+          }
+        ],
+        "side": [],
+        "prev": 110213
+      },
+      {
+        "id": 110215,
+        "column": 14,
+        "main": [
+          {
+            "id": 1022,
+            "name": "Fulvis",
+            "content": "Fulvis had been pretending to have lost his memory all along. Posing as Joy, he secretly helped me in the hope that Mother Bunny and I would wear each other down in a desperate struggle. He could then overpower Mother Bunny and claim the Catalyst for himself.\nBut Vergilius and I had already put a plan in place.",
+            "pic2": "T_StringBoard_Main_0078",
+            "type": 1,
+            "questChainId": 110232,
+            "unlock": 11023203,
+            "finish": 11023204
+          }
+        ],
+        "side": [],
+        "prev": 110214
+      },
+      {
+        "id": 110216,
+        "column": 15,
+        "main": [
+          {
+            "id": 1023,
+            "name": "The End of Paradise",
+            "content": "Fulvis's scheme was thwarted. Mother Bunny and the village head disappeared into the depths of the ruins... And with that, the curtain fell on Mount Arcano's \"Paradise\".",
+            "pic2": "T_StringBoard_Main_0079",
+            "type": 3,
+            "questChainId": 110232,
+            "unlock": 11023204,
+            "finish": 11023205
+          }
+        ],
+        "side": [
+          {
+            "id": 1024,
+            "name": "Paradise's Past",
+            "content": "I returned to the locked chest I had found at the Pond of Slumber and finally managed to open it. Inside were several of Cesare's belongings, including a journal recounting his experiences during the war and revealing how Paradise Village came to be.",
+            "pic2": "T_StringBoard_Main_0080",
+            "type": 2,
+            "questChainId": 110233,
+            "unlock": 11023205,
+            "finish": 110233
+          }
+        ],
+        "prev": 110215
+      }
+    ]
+  }
+]

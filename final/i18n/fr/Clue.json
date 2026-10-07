@@ -1,0 +1,1202 @@
+[
+  {
+    "type": "Ex02_Core",
+    "name": "Points clés",
+    "priority": 55,
+    "pages": [
+      {
+        "id": "Ex02_MainStory_1001",
+        "name": "Fulvis",
+        "clues": [
+          {
+            "id": 100101,
+            "name": "Trace de Fulvis",
+            "contents": [
+              {
+                "id": 10010101,
+                "text": "Fulvis est arrivé dans la province de Flagson. Ses actions actuelles restent inconnues.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11100001
+                }
+              },
+              {
+                "id": 10010102,
+                "text": "D’après les informations de « La Force » Bernard, aucune personne ressemblant à Fulvis n’a été aperçue dans les Montagnes d’Arcano au cours des cinq derniers jours.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11100241
+                }
+              },
+              {
+                "id": 10010103,
+                "text": "« La Papesse » Ada affirme n’avoir vu aucun membre de la Légion à part moi. Il semblerait donc que les habitants d’Arcano n’aient pratiquement jamais rencontré l’officier Fulvis.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11101617
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0005",
+            "pic2": "T_StringBoard_Main_0005",
+            "type": 1
+          },
+          {
+            "id": 100102,
+            "name": "Actions de Fulvis",
+            "contents": [
+              {
+                "id": 10010201,
+                "text": "Ne pouvant confirmer si Falsi avait survécu, Fulvis a envoyé des agents à sa recherche afin de l’éliminer.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11105822
+                }
+              },
+              {
+                "id": 10010202,
+                "text": "Les hommes de Fulvis ont été divisés en deux groupes, stationnés aux alentours des Montagnes d’Arcano. Aucun d’entre eux n’est entré dans les montagnes.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11111019
+                }
+              },
+              {
+                "id": 10010203,
+                "text": "Fulvis n’a jamais perdu la mémoire. Depuis le début, il se faisait passer pour « Le Fou » Joy, attisant secrètement le conflit entre moi et le Paradis afin de s’emparer du Catalyseur lorsque les deux camps seraient suffisamment affaiblis.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11120338
+                }
+              },
+              {
+                "id": 10010204,
+                "text": "J’ai percé à jour la supercherie de Fulvis et remplacé discrètement son communicateur, réduisant ainsi son plan à néant. Comprenant qu’il n’avait plus aucune chance de renverser la situation, Fulvis fit exploser son véhicule de combat, transformant Arcano en un océan de flammes dans l’espoir de nous entraîner avec lui dans la mort.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11120622
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0006",
+            "type": 1
+          }
+        ],
+        "unlock": 11020101
+      },
+      {
+        "id": "Ex02_MainStory_1002",
+        "name": "Catalyseur",
+        "clues": [
+          {
+            "id": 100201,
+            "name": "Catalyseur",
+            "contents": [
+              {
+                "id": 10020101,
+                "text": "Grâce au Catalyseur, il est possible de créer continuellement des copies à partir d’un même individu servant de modèle. Il est fort probable que ce Catalyseur soit en possession de Maman Lapin, maîtresse du Paradis. Toutefois, personne ne connaît sa véritable forme.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11100001
+                }
+              },
+              {
+                "id": 10020102,
+                "text": "Le Catalyseur permet de copier des choses déjà existantes, y compris des êtres humains.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11120305
+                }
+              },
+              {
+                "id": 10020103,
+                "text": "Le Catalyseur indispensable au Projet Nouvel Héritier n’est autre que le pouvoir de duplication qui sommeille dans la lignée d’Ada.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11120334
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0007",
+            "type": 1
+          }
+        ],
+        "unlock": 11020101
+      },
+      {
+        "id": "Ex02_MainStory_1003",
+        "name": "Montagnes d’Arcano",
+        "clues": [
+          {
+            "id": 100301,
+            "name": "Vie à Arcano",
+            "contents": [
+              {
+                "id": 10030101,
+                "text": "Chaque habitant d’Arcano possède un nom d’arcane unique. Celui d’Ada est « La Papesse », le mien est « Le Chariot ». Il en existe au total vingt-et-un. Ces noms d’arcane symbolisent le fait que leurs porteurs appartiennent tous à la famille du Paradis.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11101619
+                }
+              },
+              {
+                "id": 10030102,
+                "text": "Le Paradis possède un ensemble de règles que tous les habitants doivent respecter.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106524
+                }
+              },
+              {
+                "id": 10030103,
+                "text": "La vie au Paradis est particulièrement harmonieuse. Lorsque des désaccords surviennent entre les habitants, ils les règlent uniquement par le biais de jeux plutôt que par des disputes ou la violence.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11108404
+                }
+              },
+              {
+                "id": 10030104,
+                "text": "Qu’ils soient Solariens ou Charons, tous peuvent vivre ensemble au Paradis dans l’égalité et le bonheur.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11111057
+                }
+              },
+              {
+                "id": 10030105,
+                "text": "Le Paradis possède un jouet appelé Casse-noisette. Son artisanat est particulièrement raffiné et son apparence adorable. Il aide les habitants dans leur quotidien. D’après Morgana, j’ai moi aussi appris à en fabriquer lorsque j’étais enfant.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106804
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0008",
+            "type": 1
+          },
+          {
+            "id": 100302,
+            "name": "Parade du Paradis",
+            "contents": [
+              {
+                "id": 10030201,
+                "text": "Une cérémonie particulière a lieu chaque mois au Paradis : la Parade du Paradis. Maman Lapin apparaît lors de cette nuit de célébration.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11100902
+                }
+              },
+              {
+                "id": 10030202,
+                "text": "À l’occasion de la Parade du Paradis, les habitants prennent part à un jeu dont le participant ayant obtenu le plus de votes est éliminé.\nEn réalité, la Parade du Paradis est un test d’obéissance imposé par Maman Lapin aux habitants du Paradis. Les joueurs qui enfreignent les règles du Paradis sont exécutés.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11115049
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0009",
+            "type": 1
+          },
+          {
+            "id": 100303,
+            "name": "Anomalies dans les montagnes",
+            "contents": [
+              {
+                "id": 10030301,
+                "text": "Pour une raison inconnue, je ressens souvent de soudains vertiges après être entré dans les montagnes.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11100406
+                }
+              },
+              {
+                "id": 10030302,
+                "text": "La plupart des véritables habitants d’Arcano ont péri pendant la guerre. Les habitants actuels du Paradis sont tous des étrangers contraints par le chef du village et Maman Lapin d’endosser l’identité des défunts. Ceux qui enfreignent les règles ou refusent d’assumer correctement leur rôle sont exécutés par le chef du village, puis enterrés dans le cimetière situé sous l’Étang du Repos.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11117210
+                }
+              },
+              {
+                "id": 10030303,
+                "text": "L’eau des Montagnes d’Arcano a été contaminée par Cesare avec une substance alchimique de l’Académie d’Alchimie. À l’origine, cette substance était destinée à apaiser les soldats et à maintenir leur calme. Cependant, une utilisation excessive affecte l’esprit des individus et les pousse à ne plus faire qu’obéir aux ordres.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11117225
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0010",
+            "type": 1
+          },
+          {
+            "id": 100304,
+            "name": "Règles d’Arcano (I)",
+            "contents": [
+              {
+                "id": 10030401,
+                "text": "Première règle : les Montagnes d’Arcano sont notre Paradis. Nous sommes tous les Lapins Blancs de Maman Lapin.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11114213
+                }
+              },
+              {
+                "id": 10030402,
+                "text": "Deuxième règle : tous les Lapins Blancs doivent s’aimer les uns les autres. Toute violence entre Lapins Blancs est interdite. En cas de conflit, celui-ci doit être résolu par le jeu.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11114213
+                }
+              },
+              {
+                "id": 10030403,
+                "text": "Troisième règle : il existe de nombreuses couleurs de lapins. Les lapins blancs sont nos amis. Les lapins rouges sont dangereux. Si vous apercevez un lapin rouge, signalez-le immédiatement au chef du village.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11114213
+                }
+              },
+              {
+                "id": 10030404,
+                "text": "Quatrième règle : la Parade du Paradis est la plus grande fête d’Arcano. Lors de cette célébration, une partie doit avoir lieu.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11114213
+                }
+              },
+              {
+                "id": 10030405,
+                "text": "Cinquième règle : les jouets des Montagnes d’Arcano sont nos compagnons bienveillants. Vous pouvez accepter leur protection et leur aide.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11114213
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0011",
+            "type": 1
+          },
+          {
+            "id": 100305,
+            "name": "Règles d’Arcano (II)",
+            "contents": [
+              {
+                "id": 10030406,
+                "text": "Sixième règle : tous les Lapins Blancs doivent se souvenir de leur nom d’arcane. Il représente leur essence. N’agissez jamais contre votre essence.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11114213
+                }
+              },
+              {
+                "id": 10030407,
+                "text": "Septième règle : les grands hommes de métal qui flottent dans le ciel sont les ennemis du Paradis. Si vous en voyez un, abandonnez immédiatement ce que vous êtes en train de faire et rendez-vous à l’Étang du Repos.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11114213
+                }
+              },
+              {
+                "id": 10030408,
+                "text": "Huitième règle : si vous enfreignez une règle, l’Étang du Repos vous aidera à retrouver la paix intérieure.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11114213
+                }
+              },
+              {
+                "id": 10030409,
+                "text": "Neuvième règle : en l’absence d’un grand homme de métal dans le ciel, il est interdit d’approcher l’Étang du Repos sans l’autorisation du chef du village.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11114213
+                }
+              },
+              {
+                "id": 10030410,
+                "text": "Dixième règle : afin que notre quotidien ne soit pas perturbé par les troubles du monde extérieur, aucun Lapin Blanc ne doit quitter notre Paradis sans raison valable.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11114213
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0012",
+            "type": 1
+          }
+        ],
+        "unlock": 11020101
+      }
+    ]
+  },
+  {
+    "type": "Ex02_Region",
+    "name": "Régions",
+    "priority": 45,
+    "pages": [
+      {
+        "id": "Ex02_Region_1101",
+        "name": "Ruines d’Arcano",
+        "clues": [
+          {
+            "id": 110101,
+            "name": "Informations générales",
+            "contents": [
+              {
+                "id": 11010101,
+                "text": "Arcano, détruit par la guerre il y a quatre ans, est aujourd’hui presque désert. Seules quelques installations fonctionnent encore tant bien que mal. C’est également le lieu où Ada et moi avons autrefois vécu.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11101102
+                }
+              },
+              {
+                "id": 11010102,
+                "text": "Il y a quatre ans, après l’échec d’une attaque sur le front, une flotte de dirigeables de la Légion effectua un atterrissage d’urgence dans les Montagnes d’Arcano. Les soldats survivants reçurent l’ordre de tenir leur position afin de ralentir autant que possible l’avancée des troupes terrestres de l’Église Élyséenne.\nFinalement, la Légion déploya d’importantes forces aériennes et parvint à stopper l’offensive de l’Église Élyséenne dans les montagnes. Arcano fut cependant entièrement détruit lors des bombardements.",
+                "trigger": {
+                  "type": "Resource",
+                  "id": 2000128
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0013",
+            "pic2": "T_StringBoard_Main_0014",
+            "type": 2
+          }
+        ],
+        "unlock": 11020102
+      },
+      {
+        "id": "Ex02_Region_1102",
+        "name": "Faille des Montagnes d’Arcano",
+        "clues": [
+          {
+            "id": 110201,
+            "name": "Informations générales",
+            "contents": [
+              {
+                "id": 11020101,
+                "text": "Après avoir été bombardés, les soldats de l’Église Élyséenne se replièrent dans la Faille des Montagnes d’Arcano. Afin de ralentir la progression des soldats de la Légion, ils déposèrent un grand nombre de mines tout au long de leur retraite.",
+                "trigger": {
+                  "type": "Resource",
+                  "id": 2000129
+                }
+              },
+              {
+                "id": 11020102,
+                "text": "Il y a quatre ans, des substances toxiques transportées par les obus de la Légion se sont infiltrées dans les sols et les ruisseaux environnants, formant ce lac aux couleurs étranges. Cette eau est extrêmement dangereuse : même les Souillés ne peuvent y survivre.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11114002
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0015",
+            "pic2": "T_StringBoard_Main_0016",
+            "type": 2
+          }
+        ],
+        "unlock": 11020104
+      },
+      {
+        "id": "Ex02_Region_1103",
+        "name": "Arcano",
+        "clues": [
+          {
+            "id": 110301,
+            "name": "Archives de la Légion",
+            "contents": [
+              {
+                "id": 11030101,
+                "text": "Arcano est situé sur un plateau au cœur des Montagnes d’Arcano, dont il porte le nom. À l’origine simple village de petite taille, il connut un essor considérable après la construction de son parc d’attractions. L’afflux massif de visiteurs permit son agrandissement, faisant d’Arcano une ville touristique prospère.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11100001
+                }
+              },
+              {
+                "id": 11030102,
+                "text": "Lors de la guerre d’il y a quatre ans, Arcano devint brièvement l’un des nombreux points de ravitaillement des légions frontalières. Mais à mesure que le conflit s’intensifia, même les localités autrefois épargnées furent entraînées dans les combats. Arcano fut ainsi l’une des nombreuses villes anéanties par la guerre.\n \nD’après les témoignages des survivants de la guerre, la majorité des habitants d’Arcano ont péri durant ce conflit. Arcano a ainsi disparu de l’histoire.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11100001
+                }
+              },
+              {
+                "id": 11030103,
+                "text": "La guerre d’il y a quatre ans a laissé des séquelles irréversibles dans les Montagnes d’Arcano. Le village d’Arcano, niché au cœur des montagnes, a été détruit et tous ses habitants ont péri. De vastes zones sont également devenues inhabitables pour l’être humain.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11100001
+                }
+              },
+              {
+                "id": 11030104,
+                "text": "Par ailleurs, lors de leur retraite, les soldats de l’Église Élyséenne ont disséminé un grand nombre de mines afin de ralentir l’avancée des troupes impériales. L’ensemble de ces facteurs a empêché l’Empire, durant toutes ces années, de reprendre le contrôle des Montagnes d’Arcano et d’Arcano, ou d’y entreprendre des travaux de reconstruction.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11100001
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0017",
+            "type": 2
+          },
+          {
+            "id": 110302,
+            "name": "Paradis",
+            "contents": [
+              {
+                "id": 11030201,
+                "text": "À elle seule, Maman Lapin reconstruisit Arcano, dévasté par la guerre, au cœur des Montagnes d’Arcano, avant de le rebaptiser Paradis. Les survivants y menèrent dès lors une existence paisible et heureuse.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11101610
+                }
+              },
+              {
+                "id": 11030202,
+                "text": "En temps normal, le pont-levis constitue l’unique entrée du Paradis. Il faut qu’une personne reste constamment à l’intérieur du village pour maintenir le mécanisme et permettre son activation.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11110403
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0018",
+            "pic2": "T_StringBoard_Main_0019",
+            "type": 2
+          },
+          {
+            "id": 110303,
+            "name": "Entrepôt",
+            "contents": [
+              {
+                "id": 11030301,
+                "text": "L’entrepôt du Paradis contient de nombreuses ressources alimentaires, jouets, vêtements et décorations soigneusement rangés.\nLeur apparence est parfaitement identique, jusqu’aux moindres détails : même les traces d’usure et les dommages sont exactement les mêmes. Il est très probable qu’ils soient des créations du Catalyseur.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11108813
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0019",
+            "pic2": "T_StringBoard_Main_0021",
+            "type": 2
+          },
+          {
+            "id": 110304,
+            "name": "Étang du Repos",
+            "contents": [
+              {
+                "id": 11030401,
+                "text": "Falsi a enquêté seule sur l’Étang du Repos. Il n’y avait personne sur place. L’endroit ressemble davantage à une prison qu’à un lieu destiné au repos.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11111047
+                }
+              },
+              {
+                "id": 11030402,
+                "text": "Sous l’Étang du Repos se trouve un cimetière où sont enterrés tous les habitants d’Arcano. Parmi eux se trouve également « mon » propre tombeau : celui de Victor.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11117201
+                }
+              },
+              {
+                "id": 11030403,
+                "text": "Une boîte impossible à ouvrir a été découverte dans le cimetière. Revenir l’examiner une fois que tout sera terminé.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11116801
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0022",
+            "pic2": "T_StringBoard_Main_0023",
+            "type": 2
+          },
+          {
+            "id": 110305,
+            "name": "Découverte dans les bois",
+            "contents": [
+              {
+                "id": 11030501,
+                "text": "Il y a quatre ans, un dirigeable de la Légion s’est écrasé dans cette zone. Avant de pouvoir rejoindre les forces principales, les deux survivants furent attaqués par l’avant-garde de l’Église Élyséenne. Une fusillade éclata alors dans les bois.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11112301
+                }
+              },
+              {
+                "id": 11030502,
+                "text": "Nous avons retrouvé la tombe de l’un des soldats survivants. L’autre survivant, qui semblait être un officier, reste introuvable.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11112701
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0069",
+            "pic2": "T_StringBoard_Main_0025",
+            "type": 2
+          }
+        ],
+        "unlock": 11020101
+      }
+    ]
+  },
+  {
+    "type": "Ex02_Character",
+    "name": "Personnages",
+    "priority": 30,
+    "pages": [
+      {
+        "id": "Ex02_Character_1201",
+        "name": "Falsi",
+        "clues": [
+          {
+            "id": 120101,
+            "name": "Falsi",
+            "contents": [
+              {
+                "id": 12010101,
+                "text": "Fulvis a tenté de faire taire Falsi en provoquant l’explosion de la Forteresse de Lonza. Cependant, Falsi a survécu et l’a poursuivi jusque dans les Montagnes d’Arcano.\nMalheureusement, l’enregistreur audio qu’elle détenait a été détruit dans l’explosion. Une preuve supplémentaire capable de faire tomber Fulvis a ainsi disparu.\nJe dois au moins ramener Falsi avec moi : elle constitue un témoin essentiel.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11102821
+                }
+              },
+              {
+                "id": 12010102,
+                "text": "Après avoir survécu à l’explosion de la Forteresse de Lonza, Falsi n’avait plus qu’un seul objectif : tuer Fulvis pour assouvir sa vengeance.\nAu vu des blessures encore ouvertes sur son corps, elle a probablement affronté de nombreux agents de Fulvis au cours de son trajet jusqu’aux Montagnes d’Arcano.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11105822
+                }
+              },
+              {
+                "id": 12010103,
+                "text": "Afin de retrouver l’enregistrement révélant la vérité sur la Forteresse de Lonza, Falsi est entrée seule dans les flammes. Son sort demeure inconnu.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11121012
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0026",
+            "type": 3
+          }
+        ],
+        "unlock": 11020104
+      },
+      {
+        "id": "Ex02_Character_1202",
+        "name": "Habitants d’Arcano (I)",
+        "clues": [
+          {
+            "id": 120204,
+            "name": "« Le Jugement » Maman Lapin",
+            "contents": [
+              {
+                "id": 12020401,
+                "text": "Maman Lapin est un mystérieux et puissant Daimon, ainsi que la détentrice du Catalyseur indispensable au Projet Nouvel Héritier. Selon les renseignements d’Avar, quelles que soient les circonstances, elle ne remettra jamais le Catalyseur, quitte à périr avec lui en entraînant son ennemi dans la mort.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11100001
+                }
+              },
+              {
+                "id": 12020402,
+                "text": "Maman Lapin occupe une place extrêmement importante à Arcano. Elle semble également avoir dirigé les travaux de reconstruction de la ville.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11101610
+                }
+              },
+              {
+                "id": 12020403,
+                "text": "Maman Lapin est l’unique survivante de la guerre qui ravagea Arcano il y a quatre ans. Elle est en réalité la véritable Ada. Elle possède un rare pouvoir de duplication.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11120305
+                }
+              },
+              {
+                "id": 12020404,
+                "text": "Ada a utilisé les dernières forces qui lui restaient pour nous permettre de nous échapper des ruines d’Arcano, désormais englouties par les flammes. Puis elle entra dans le brasier aux côtés du chef du village, avant de disparaître dans les flammes. Son sort demeure inconnu.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11120823
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0031",
+            "pic2": "T_StringBoard_Main_0032",
+            "type": 3
+          },
+          {
+            "id": 120201,
+            "name": "« La Force » Bernard",
+            "contents": [
+              {
+                "id": 12020101,
+                "text": "Un chasseur d’Arcano. Chaleureux et bienveillant, il se déplace souvent dans les montagnes. Il a aperçu avant-hier la silhouette d’une femme inconnue traversant furtivement les bois.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11100241
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0027",
+            "type": 3
+          },
+          {
+            "id": 120202,
+            "name": "« La Papesse » Ada",
+            "contents": [
+              {
+                "id": 12020201,
+                "text": "L’une des habitantes d’Arcano. Elle paraît naïve et innocente, avec une façon de penser parfois difficile à suivre. Selon ses propres dires, elle est une amie d’enfance de Victor.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11100414
+                }
+              },
+              {
+                "id": 12020202,
+                "text": "Falsi a été témoin du meurtre de plusieurs habitants du village par Ada, qui les a exécutés froidement. Ada est loin d’être aussi innocente qu’elle en a l’air.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11105834
+                }
+              },
+              {
+                "id": 12020203,
+                "text": "Ada aime jouer et endosser les nombreuses identités que les jeux lui permettent d’incarner. Elle affirme qu’elle ne peut passer toute sa vie qu’au fin fond des montagnes... Mais pourquoi ?",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11103808
+                }
+              },
+              {
+                "id": 12020204,
+                "text": "Ada est différente aux yeux de Maman Lapin.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11115516
+                }
+              },
+              {
+                "id": 12020205,
+                "text": "Lors du jugement de Maman Lapin, Ada renonça au nom qu’elle avait reçu de cette dernière, « Ada », et choisit de se donner un nouveau nom : Eve.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11118623
+                }
+              },
+              {
+                "id": 12020206,
+                "text": "Maman Lapin est en réalité la véritable Ada, une création qu’elle a elle-même reproduite en prenant son propre corps comme modèle.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11120305
+                }
+              },
+              {
+                "id": 12020207,
+                "text": "Après avoir fui les Montagnes d’Arcano, Eve entreprit un voyage en solitaire. Désormais, elle peut enfin découvrir le monde extérieur de ses propres yeux.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11121420
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0028",
+            "pic2": "T_StringBoard_Main_0029",
+            "type": 3
+          },
+          {
+            "id": 120203,
+            "name": "« Le Chariot » Victor",
+            "contents": [
+              {
+                "id": 12020301,
+                "text": "Tous les habitants d’ici m’appellent « Le Chariot » Victor. Il y a quatre ans, j’ai quitté ma ville natale, Arcano, pour rejoindre la Légion.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11100225
+                }
+              },
+              {
+                "id": 12020302,
+                "text": "Lorsque j’étais enfant, Victor attrapait des insectes avec Ada, jouait avec elle dans Arcano et partait également chasser avec Bernard.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106802
+                }
+              },
+              {
+                "id": 12020303,
+                "text": "Les habitants d’Arcano semblent incapables de confirmer précisément à quoi je ressemble aujourd’hui. Est-ce que mon apparence a tellement changé après mon entrée dans la Légion ?",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106537
+                }
+              },
+              {
+                "id": 12020304,
+                "text": "Dans un état second, j’ai aperçu quelques fragments de souvenirs. Il s’agissait probablement de souvenirs de ma vie passée, lorsque j’étais Victor et que je vivais avec les habitants d’Arcano.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11108302
+                }
+              },
+              {
+                "id": 12020305,
+                "text": "Je ne suis pas Victor. Tout ce que racontent les habitants d’Arcano n’est qu’un mensonge. Le véritable Victor était un habitant d’Arcano et a trouvé la mort durant la guerre, il y a quatre ans.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11117210
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0030",
+            "type": 3
+          },
+          {
+            "id": 120205,
+            "name": "« L’Empereur » Cesare",
+            "contents": [
+              {
+                "id": 12020501,
+                "text": "Le chef du village d’Arcano. Il a donné à Ada une mystérieuse préparation qui a permis d’atténuer mes blessures ainsi que celles de Falsi.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11105405
+                }
+              },
+              {
+                "id": 12020502,
+                "text": "La mystérieuse préparation donnée par Cesare à Ada était en réalité le stimulant cardiaque distribué il y a quatre ans par l’Académie d’Alchimie aux officiers supérieurs de la Légion. Quel lien Cesare entretient-il avec la Légion ?",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11115524
+                }
+              },
+              {
+                "id": 12020503,
+                "text": "Cesare était l’autre officier survivant du dirigeable qui s’était écrasé à l’époque. Il sauva Ada, qui était au bord de la mort, dans les ruines d’Arcano. Pour lui, Ada devint alors l’unique salut qu’il lui restait au milieu de cette guerre.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11123840
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0033",
+            "type": 3
+          },
+          {
+            "id": 120206,
+            "name": "« L’Étoile » Stella",
+            "contents": [
+              {
+                "id": 12020601,
+                "text": "Une jeune fille timide, pleurnicharde et qui s’inquiète constamment pour les autres.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106506
+                }
+              },
+              {
+                "id": 12020602,
+                "text": "Stella cache un secret qui la terrifie. C’est également l’une des raisons pour lesquelles elle pleure si souvent.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11108949
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0034",
+            "type": 3
+          },
+          {
+            "id": 120207,
+            "name": "« Le Soleil » Elio",
+            "contents": [
+              {
+                "id": 12020701,
+                "text": "Un garçon énergique qui s’intéresse énormément à ma vie au sein de la Légion.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106506
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0035",
+            "type": 3
+          }
+        ],
+        "unlock": 11020101
+      },
+      {
+        "id": "Ex02_Character_1203",
+        "name": "Habitants d’Arcano (II)",
+        "clues": [
+          {
+            "id": 120208,
+            "name": "« La Lune » Selina",
+            "contents": [
+              {
+                "id": 12020801,
+                "text": "Une jeune fille sage et attentionnée. Elle reste toujours avec Stella et Elio.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106506
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0036",
+            "type": 3
+          },
+          {
+            "id": 120209,
+            "name": "« L’Impératrice » Teresa",
+            "contents": [
+              {
+                "id": 12020901,
+                "text": "Une femme douce, douée pour toutes sortes de tâches domestiques et excellente cuisinière. Elle cultive également des légumes dans son jardin et élève quelques pigeons chez elle.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106506
+                }
+              },
+              {
+                "id": 12020902,
+                "text": "Après avoir été éliminée lors du jeu de la Parade du Paradis, Teresa s’est donné la mort.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11116601
+                }
+              },
+              {
+                "id": 12020903,
+                "text": "Teresa était autrefois une simple femme au foyer. Elle est arrivée dans les Montagnes d’Arcano en cherchant son mari disparu, Fred. Elle ne supportait plus depuis longtemps la vie au Paradis. Il y a peu, elle a finalement décidé d’attacher une lettre de secours à la patte de l’un de ses pigeons afin de demander de l’aide à l’extérieur. Malheureusement, son pigeon a été dévoré par un rapace dans les montagnes. Jusqu’au bout, sa lettre n’a jamais pu parvenir à quelqu’un.",
+                "trigger": {
+                  "type": "Resource",
+                  "id": 2000134
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0037",
+            "type": 3
+          },
+          {
+            "id": 120210,
+            "name": "« Le Diable » Aamon",
+            "contents": [
+              {
+                "id": 12021001,
+                "text": "Un vieil homme sévère. Malgré son ton dur, ses paroles laissent toujours transparaître son inquiétude pour les autres.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106506
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0038",
+            "type": 3
+          },
+          {
+            "id": 120211,
+            "name": "« Les Amoureux » Vena",
+            "contents": [
+              {
+                "id": 12021101,
+                "text": "Une jeune femme séduisante, curieuse de connaître ma relation avec Falsi.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106506
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0039",
+            "type": 3
+          },
+          {
+            "id": 120212,
+            "name": "« Le Magicien » Morgana",
+            "contents": [
+              {
+                "id": 12021201,
+                "text": "Une jeune femme habile de ses mains, douée pour l’artisanat et la mécanique.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106506
+                }
+              },
+              {
+                "id": 12021202,
+                "text": "Lors du jeu de la Parade du Paradis, elle soupçonna Teresa, ce qui provoqua son élimination.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11115003
+                }
+              },
+              {
+                "id": 12021203,
+                "text": "Son véritable nom est Catherine. Elle était l’élève du folkloriste Woodville. Elle s’était déjà libérée des effets de la préparation, mais continuait malgré tout à jouer consciencieusement le rôle de « Le Magicien » Morgana, attendant simplement le moment le plus sûr pour s’échapper. Le fait d’avoir orienté les soupçons vers Teresa était probablement destiné à protéger son professeur. Pour assurer sa survie et celle de son professeur, elle resta calme au point d’en devenir presque cruelle.",
+                "trigger": {
+                  "type": "Resource",
+                  "id": 2000135
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0040",
+            "type": 3
+          },
+          {
+            "id": 120213,
+            "name": "« Le Hiérophante » Sanctus",
+            "contents": [
+              {
+                "id": 12021301,
+                "text": "Un homme d’âge mûr profondément croyant, qui considère Maman Lapin comme une divinité.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106506
+                }
+              },
+              {
+                "id": 12021302,
+                "text": "Sanctus a subi de nombreuses persécutions de la part des Solariens à l’extérieur. Le Paradis est devenu son seul refuge. C’est pourquoi il voue une loyauté absolue à Maman Lapin, au point d’être prêt à donner sa vie pour elle.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11118913
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0041",
+            "type": 3
+          },
+          {
+            "id": 120214,
+            "name": "« La Roue de la Fortune » Karma",
+            "contents": [
+              {
+                "id": 12021401,
+                "text": "Un jeune homme étrange qui tient constamment des propos incompréhensibles.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106506
+                }
+              },
+              {
+                "id": 12021402,
+                "text": "Karma était autrefois un vagabond qui n’avait rien. Lui aussi était depuis longtemps lassé de la manière mystérieuse et énigmatique dont parlait « La Roue de la Fortune ». Après avoir échappé au contrôle de Maman Lapin, ses émotions ont complètement éclaté.",
+                "trigger": {
+                  "type": "Resource",
+                  "id": 2000138
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0042",
+            "type": 3
+          }
+        ],
+        "unlock": 11020302
+      },
+      {
+        "id": "Ex02_Character_1204",
+        "name": "Habitants d’Arcano (III)",
+        "clues": [
+          {
+            "id": 120215,
+            "name": "« La Justice » Justus",
+            "contents": [
+              {
+                "id": 12021501,
+                "text": "Un homme d’âge mûr sévère qui ne cesse de rappeler les règles du Paradis.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106506
+                }
+              },
+              {
+                "id": 12021502,
+                "text": "Justus était autrefois un assassin engagé par des particuliers. Ayant perdu toute place dans le monde extérieur, il a finalement trouvé une nouvelle vie au Paradis. Quoi qu’il arrive, il ne trahira jamais Maman Lapin.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11118917
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0043",
+            "type": 3
+          },
+          {
+            "id": 120216,
+            "name": "« Le Pendu » Isaac",
+            "contents": [
+              {
+                "id": 12021601,
+                "text": "Un vieil homme chaleureux qui ne semble responsable d’aucune tâche particulière à Arcano. Il paraît toujours très détendu.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106506
+                }
+              },
+              {
+                "id": 12021602,
+                "text": "Son véritable nom est Woodville. C’est un folkloriste d’Aethyrie. Il est venu dans les Montagnes d’Arcano avec son élève Catherine pour mener des recherches, mais a été emprisonné par Maman Lapin. Il n’a eu d’autre choix que d’incarner « Le Pendu » Isaac au Paradis.",
+                "trigger": {
+                  "type": "Resource",
+                  "id": 2000135
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0044",
+            "type": 3
+          },
+          {
+            "id": 120217,
+            "name": "« La Tour » Ambitio",
+            "contents": [
+              {
+                "id": 12021701,
+                "text": "Un jeune homme qui semble un peu simple d’esprit. Le symbole des Déchus apparaît encore sur ses vêtements. Impossible de savoir quel lien il entretient avec eux.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106506
+                }
+              },
+              {
+                "id": 12021702,
+                "text": "Après interrogatoire, la Légion a conclu qu’il était effectivement membre des Déchus. Cependant, à cause de la préparation de Cesare, il a totalement perdu la mémoire.",
+                "trigger": {
+                  "type": "Resource",
+                  "id": 2000137
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0045",
+            "type": 3
+          },
+          {
+            "id": 120218,
+            "name": "« L’Hermite » Tacita",
+            "contents": [
+              {
+                "id": 12021801,
+                "text": "Une vieille femme silencieuse avec qui il est difficile de communiquer.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106506
+                }
+              },
+              {
+                "id": 12021802,
+                "text": "Tacita s’appelait autrefois Jenny. Il y a quelques années, elle est venue dans les Montagnes d’Arcano après s’être lancée dans un pari par orgueil avec quelqu’un.",
+                "trigger": {
+                  "type": "Resource",
+                  "id": 2000139
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0046",
+            "type": 3
+          },
+          {
+            "id": 120219,
+            "name": "« La Mort » Finis",
+            "contents": [
+              {
+                "id": 12021901,
+                "text": "Je ne connais que son nom. Je ne l’ai jamais rencontré à Arcano. Il doit probablement s’agir de l’un des habitants que Falsi a vus se faire tuer sans pitié par Ada.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11121420
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0047",
+            "type": 3
+          },
+          {
+            "id": 120220,
+            "name": "« La Tempérance » Mensura",
+            "contents": [
+              {
+                "id": 12022001,
+                "text": "Une femme d’âge mûr extrêmement méticuleuse, avec quelques comportements obsessionnels.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106506
+                }
+              },
+              {
+                "id": 12022002,
+                "text": "Après interrogatoire, il s’est avéré qu’elle avait été fortement affectée par la préparation de Cesare. Elle a complètement perdu les souvenirs de sa vie avant son arrivée dans les Montagnes d’Arcano.",
+                "trigger": {
+                  "type": "Resource",
+                  "id": 2000136
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0048",
+            "type": 3
+          },
+          {
+            "id": 120221,
+            "name": "« Le Fou » Joy",
+            "contents": [
+              {
+                "id": 12022101,
+                "text": "Pendant le jeu de la Parade du Paradis, Fulvis est soudainement apparu sur les lieux de la cérémonie aux côtés de Maman Lapin. Pourtant, tout le monde affirme qu’il n’est pas Fulvis, mais « Le Fou » Joy, un habitant qui aurait toujours vécu au Paradis. Sa réaction et son comportement lorsqu’il m’a vu avec Falsi ne ressemblaient effectivement pas à ceux du Fulvis que je connaissais.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11115209
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0049",
+            "type": 3
+          }
+        ],
+        "unlock": 11020302
+      }
+    ]
+  }
+]

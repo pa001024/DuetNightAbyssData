@@ -1,0 +1,386 @@
+[
+  {
+    "id": 1,
+    "episodeName": "Le 22ᵉ Lapin blanc du Paradis",
+    "chains": [
+      {
+        "id": 110201,
+        "column": 0,
+        "main": [
+          {
+            "id": 1001,
+            "name": "Le chasseur et le Lapin Blanc",
+            "content": "Peu après mon arrivée dans les Montagnes d’Arcano, j’ai rencontré Ada et Bernard, deux habitants du village situé au cœur des montagnes. Ils m’ont affirmé que les Montagnes d’Arcano étaient ma terre natale et que mon véritable nom était « Le Chariot » Victor.\nJe n’ai aucun souvenir de cet endroit ni de ma vie en tant que Victor. Pourtant, peut-être que je retrouverai certains souvenirs une fois arrivé au village. Pour l’instant, je vais suivre Ada jusqu’à Arcano, recueillir des informations sur Fulvis et le Catalyseur, puis décider de la suite.",
+            "pic2": "T_StringBoard_Main_0050",
+            "type": 1,
+            "questChainId": 110201,
+            "unlock": 11020101,
+            "finish": 11020102
+          }
+        ],
+        "side": [],
+        "firstShow": 11020101
+      },
+      {
+        "id": 110202,
+        "column": 1,
+        "main": [
+          {
+            "id": 1002,
+            "name": "Les ruines d’Arcano",
+            "content": "Après être entré dans les montagnes, j’ai commencé à ressentir des vertiges intermittents. Ada a remarqué mon malaise et m’a conduit dans un ancien parc d’attractions abandonné afin que je puisse me reposer un moment.\nD’après elle, ce parc était autrefois la ville d’Arcano. Aujourd’hui, presque plus personne ne vient y jouer : la plupart des habitants vivent désormais dans le nouvel Arcano reconstruit par Maman Lapin.\nAlors que nous nous apprêtions à partir vers ce nouvel Arcano, plusieurs coups de feu ont retenti depuis les ruines.",
+            "pic2": "T_StringBoard_Main_0051",
+            "type": 1,
+            "questChainId": 110201,
+            "unlock": 11020102,
+            "finish": 11020104
+          }
+        ],
+        "side": [],
+        "prev": 110201
+      },
+      {
+        "id": 110203,
+        "column": 2,
+        "main": [
+          {
+            "id": 1003,
+            "name": "Des coups de feu dans les ruines",
+            "content": "Les coups de feu faisaient partie d’une embuscade préparée à l’avance. Malgré quelques blessures, j’ai finalement réussi à maîtriser l’assaillante, Falsi.\nPar précaution, je ne dois pas la laisser quitter mon champ de vision.",
+            "pic2": "T_StringBoard_Main_0052",
+            "type": 1,
+            "questChainId": 110201,
+            "unlock": 11020104,
+            "finish": 11020104
+          }
+        ],
+        "side": [],
+        "prev": 110202
+      },
+      {
+        "id": 110204,
+        "column": 3,
+        "main": [
+          {
+            "id": 1004,
+            "name": "La faille des Montagnes d’Arcano",
+            "content": "La Faille des Montagnes d’Arcano était infestée de Souillés et d’eaux contaminées. Heureusement, Falsi a trouvé un canon de la Légion encore fonctionnel, réduisant considérablement la pression exercée par les Souillés.\nGrâce aux rails de montagnes russes réparés par Ada, nous avons finalement pu traverser le lac.\nMais un Souillé nous a attaqués depuis les abords des rails et a projeté Falsi dans l’eau.\nElle ne peut pas mourir ici.",
+            "pic2": "T_StringBoard_Main_0053",
+            "type": 1,
+            "questChainId": 110202,
+            "unlock": 11020104,
+            "finish": 11020201
+          }
+        ],
+        "side": [
+          {
+            "id": 1005,
+            "name": "Un rêve étrange",
+            "content": "J’ai fait un rêve. Dans ce rêve, Ada était complètement différente de celle que je connaissais durant la journée. Elle semblait dangereuse et inquiétante.\nAprès son réveil, Falsi et moi avons échangé certaines informations. Elle m’a finalement révélé qu’Ada était extrêmement suspecte : elle l’avait vue tuer quelqu’un de ses propres yeux.\nCe rêve... était-il un avertissement ?",
+            "pic2": "T_StringBoard_Main_0054",
+            "type": 1,
+            "questChainId": 110203,
+            "unlock": 11020301,
+            "finish": 11020301
+          }
+        ],
+        "prev": 110203
+      },
+      {
+        "id": 110205,
+        "column": 4,
+        "main": [
+          {
+            "id": 1006,
+            "name": "Le Paradis",
+            "content": "Nous avons finalement suivi Ada jusqu’à Arcano, la ville reconstruite. Les habitants d’ici sont très chaleureux et se préparent tous pour la célébration de la « Parade du Paradis » qui aura lieu demain.\nQu’est-ce que la « Parade du Paradis » ? Comment ce village a-t-il pu être reconstruit à une telle échelle en seulement quelques années ? Où est caché le Catalyseur ? Et surtout... Est-ce que cet endroit est réellement ma ville natale ?\nNous manquons encore trop d’informations. Je devrais explorer davantage la ville afin d’en apprendre plus.",
+            "pic2": "T_StringBoard_Main_0055",
+            "type": 1,
+            "questChainId": 110203,
+            "unlock": 11020301,
+            "finish": 11020302
+          }
+        ],
+        "side": [],
+        "prev": 110204
+      },
+      {
+        "id": 110206,
+        "column": 5,
+        "main": [
+          {
+            "id": 1007,
+            "name": "Les casse-noisettes",
+            "content": "Dans le village, nous avons rencontré plusieurs jouets endommagés ainsi que leur créatrice, « Le Magicien » Morgana.\nElle semble avoir été autrefois l’un de mes professeurs. Elle m’aurait appris à fabriquer ces jouets appelés casse-noisettes.\nJe n’ai toujours aucun souvenir de tout cela... Mais il faut reconnaître que les oreilles des casse-noisettes sont plutôt adorables.",
+            "pic1": "T_StringBoard_Main_0056",
+            "pic2": "T_StringBoard_Main_0057",
+            "type": 1,
+            "questChainId": 110211,
+            "unlock": 11020302,
+            "finish": 110211
+          },
+          {
+            "id": 1008,
+            "name": "Fragments de souvenirs",
+            "content": "Dans les Montagnes d’Arcano, mes maux de tête sont devenus plus fréquents. J’ai même commencé à voir des fragments de souvenirs défiler devant mes yeux.\nJe n’ai pas seulement aperçu l’illusion de Fulvis : j’ai également revu certains moments de ma vie passée ici...\nS’agissait-il des souvenirs de l’époque où j’étais réellement « Victor » ?",
+            "pic1": "T_StringBoard_Main_0058",
+            "pic2": "T_StringBoard_Main_0059",
+            "type": 1,
+            "questChainId": 110212,
+            "unlock": 11020302,
+            "finish": 110212
+          },
+          {
+            "id": 1009,
+            "name": "L’entrepôt d’Arcano",
+            "content": "Près de l’entrepôt du Paradis, j’ai rencontré « La Lune » Selina, « Le Soleil » Elio et « L’Étoile » Stella. J’ai joué avec ces trois enfants à un jeu appelé le Glouton.\nJe leur ai raconté certaines choses sur ma vie à l’école et au sein de la Légion ces dernières années. Pourtant, ils se sont mis à s’inquiéter pour moi... Peut-être que mes histoires étaient simplement trop lourdes à entendre.\nPar ailleurs, Falsi a découvert dans l’entrepôt de nombreuses copies parfaitement identiques. Il est fort probable qu’il s’agisse de créations du Catalyseur.\nEn dehors de cela, rien d’autre ne semblait digne d’attention.",
+            "pic1": "T_StringBoard_Main_0020",
+            "pic2": "T_StringBoard_Main_0021",
+            "type": 1,
+            "questChainId": 110213,
+            "unlock": 11020302,
+            "finish": 110213
+          },
+          {
+            "id": 1010,
+            "name": "L’anomalie d’Ada",
+            "content": "« Le Hiérophante » Sanctus nous a demandé, à Ada et moi, d’aller chercher des décorations dans les bois des Montagnes d’Arcano.\nLa tâche n’avait rien de compliqué, mais Ada a absolument tenu à nous faire jouer à un jeu pendant le trajet.\nAprès la partie, Ada semblait quelque peu mélancolique. On dirait que, pour une raison inconnue, les habitants d’ici ont beaucoup de mal à quitter les Montagnes d’Arcano.",
+            "pic1": "T_StringBoard_Main_0024",
+            "pic2": "T_StringBoard_Main_0063",
+            "type": 1,
+            "questChainId": 110214,
+            "unlock": 11020302,
+            "finish": 110214
+          },
+          {
+            "id": 1011,
+            "name": "Vue sur le village",
+            "content": "Afin de mieux comprendre l’ensemble du Paradis, nous avons pris place dans la grande roue du village pour observer les lieux depuis les hauteurs.\nDepuis là-haut, il était encore plus facile de ressentir la paix et l’harmonie qui règnent ici. Les habitants s’entraident constamment et s’activent tous pour préparer la célébration du lendemain.\nUne scène chaleureuse qu’il est difficile d’apercevoir dans la vie militaire de la Légion.",
+            "pic1": "T_StringBoard_Main_0064",
+            "pic2": "T_StringBoard_Main_0065_2",
+            "type": 1,
+            "questChainId": 110215,
+            "unlock": 11020302,
+            "finish": 110215
+          }
+        ],
+        "side": [],
+        "prev": 110205
+      },
+      {
+        "id": 110207,
+        "column": 6,
+        "main": [
+          {
+            "id": 1014,
+            "name": "Le banquet du Paradis",
+            "content": "Justus nous a raccompagnés au village pour le dîner. Le chef du village Cesare m’a donné plusieurs photographies de mon ancienne vie à Arcano. Ensuite, j’ai été entouré par les habitants, qui m’ont accueilli avec une grande chaleur...\nMais ce qui s’est passé ensuite reste assez flou dans mon esprit.",
+            "pic2": "T_StringBoard_Main_0068",
+            "type": 1,
+            "questChainId": 110220,
+            "unlock": 11022000,
+            "finish": 11022001
+          }
+        ],
+        "side": [
+          {
+            "id": 1013,
+            "name": "Une pièce inaccessible",
+            "content": "« L’Impératrice » Teresa nous a demandé d’apporter quelques bouteilles d’alcool à « La Justice » Justus. Nous avons finalement retrouvé Justus près de l’Étang du Repos. Pourtant, sa réaction en nous voyant était extrêmement étrange. Il a violemment reproché à Ada de m’avoir amené près de l’Étang du Repos, avant de lui demander de réciter les règles du village.\nPersonne n’a donc le droit de s’approcher de l’Étang du Repos sans l’autorisation du chef du village ? Que cache réellement cet endroit ?\nSi l’occasion se présente, je devrais revenir enquêter.",
+            "pic2": "T_StringBoard_Main_0067",
+            "type": 1,
+            "questChainId": 110220,
+            "unlock": 1102200101,
+            "finish": 1102200101
+          }
+        ],
+        "prev": 110206
+      },
+      {
+        "id": 110208,
+        "column": 7,
+        "main": [
+          {
+            "id": 1012,
+            "name": "Une chambre familière et étrangère",
+            "content": "Selon le chef du village Cesare, cette maison était autrefois la mienne.\nMême si les objets y sont disposés de manière quelque peu désordonnée, on distingue encore les traces d’un nettoyage soigneux effectué par quelqu’un.\nEst-ce qu’ils attendaient tous mon retour depuis tout ce temps ?",
+            "pic2": "T_StringBoard_Main_0066",
+            "type": 1,
+            "questChainId": 110220,
+            "unlock": 11022001,
+            "finish": 11022002
+          }
+        ],
+        "side": [],
+        "prev": 110207
+      },
+      {
+        "id": 110209,
+        "column": 8,
+        "main": [
+          {
+            "id": 1015,
+            "name": "Les traces de la guerre",
+            "content": "Après avoir échangé les informations que nous avions recueillies avec Falsi, nous avons décidé d’enquêter dans les endroits que nous n’avions pas encore visités la veille.\nAprès avoir traversé le pont-levis, dans la forêt située de l’autre côté, nous avons découvert un dirigeable de la Légion qui s’était écrasé ici il y a quatre ans.\nDans une grotte non loin de là, nous avons également trouvé des traces laissées par les deux survivants du dirigeable.",
+            "pic1": "T_StringBoard_Main_0069",
+            "pic2": "T_StringBoard_Main_0025",
+            "type": 1,
+            "questChainId": 110221,
+            "unlock": 11022002,
+            "finish": 110221
+          },
+          {
+            "id": 1016,
+            "name": "Récupération d’armes",
+            "content": "Nous avons enquêté sur le lieu où les combats avaient eu lieu à l’époque.\nAlors que je récupérais des grenades aveuglantes, Falsi a accidentellement marché sur une grenade non explosée et a perdu connaissance.\nHeureusement, la puissance destructrice directe de ces grenades était limitée. Falsi semble n’avoir subi que des blessures légères, qui ne devraient pas trop affecter la suite de nos opérations.",
+            "pic1": "T_StringBoard_Main_0071",
+            "pic2": "T_StringBoard_Main_0072",
+            "type": 1,
+            "questChainId": 110222,
+            "unlock": 11022002,
+            "finish": 110222
+          }
+        ],
+        "side": [],
+        "prev": 110208
+      },
+      {
+        "id": 110210,
+        "column": 9,
+        "main": [
+          {
+            "id": 1017,
+            "name": "La Parade du Paradis",
+            "content": "La soi-disant « Parade du Paradis » ressemblait davantage à une cérémonie de jugement visant ceux qui enfreignent les règles du Paradis qu’à une simple célébration.\nAu cours de la cérémonie, nous avons aperçu Fulvis, que nous recherchions justement. Pourtant, les habitants affirmaient tous qu’il n’était pas Fulvis, mais « Le Fou » Joy, un habitant du Paradis depuis toujours.\nSon comportement et sa réaction lorsqu’il m’a vu avec Falsi étaient effectivement très différents du Fulvis que je connaissais.\nFalsi a tenté de se venger de Fulvis, mais elle était totalement impuissante face à la puissance de Maman Lapin. Sous la protection et la surveillance de Maman Lapin et du chef du village, je ne pouvais temporairement pas agir contre Fulvis.\nFalsi a été enfermée dans l’Étang du Repos et devait être exécutée par le chef du village.\nElle est le témoin principal de l’affaire de la Forteresse de Lonza. Elle ne peut pas mourir ici sans raison.\nÀ ce moment crucial, Ada m’a offert l’occasion d’entrer dans l’Étang du Repos pour sauver Falsi.",
+            "pic2": "T_StringBoard_Main_0073",
+            "type": 1,
+            "questChainId": 110231,
+            "unlock": 11023100,
+            "finish": 11023101
+          }
+        ],
+        "side": [],
+        "prev": 110209
+      },
+      {
+        "id": 110211,
+        "column": 10,
+        "main": [
+          {
+            "id": 1018,
+            "name": "La vérité du Paradis",
+            "content": "Grâce à la clé lancée par Joy, j’ai finalement réussi à sauver Falsi de l’Étang du Repos.\nEn quittant les lieux avec elle, nous sommes tombés sur un cimetière. Sur les pierres tombales, j’ai clairement vu les noms de tous les habitants du village. Parmi eux se trouvait également la tombe de Victor. Je ne suis pas Victor.\nLe véritable Victor est mort durant la guerre, il y a quatre ans. À ce moment-là, Cesare et Joy sont également arrivés dans le cimetière. J’ai alors découvert la vérité sur le Paradis : tous les habitants étaient retenus ici par Cesare et Maman Lapin, contraints de participer à un jeu consistant à jouer le rôle de personnes déjà mortes.\nAu moment où Cesare allait s’en prendre à nous, Joy — qui n’était autre que Fulvis ayant perdu la mémoire — s’est interposé et a bloqué son arme.",
+            "pic2": "T_StringBoard_Main_0074",
+            "type": 1,
+            "questChainId": 110231,
+            "unlock": 11023101,
+            "finish": 11023102
+          }
+        ],
+        "side": [],
+        "prev": 110210
+      },
+      {
+        "id": 110212,
+        "column": 11,
+        "main": [
+          {
+            "id": 1019,
+            "name": "Fuir le Paradis",
+            "content": "Après tous ces événements qui se sont succédé ces derniers jours, les blessures de Falsi se sont aggravées. Je dois absolument l’emmener vivante hors d’ici.\nAda a décidé de rester derrière pour nous couvrir. Elle nous a assuré que, pour une raison particulière, Maman Lapin ne lui ferait jamais de mal.",
+            "pic2": "T_StringBoard_Main_0075",
+            "type": 1,
+            "questChainId": 110231,
+            "unlock": 11023102,
+            "finish": 11023104
+          }
+        ],
+        "side": [],
+        "prev": 110211
+      },
+      {
+        "id": 110213,
+        "column": 12,
+        "main": [
+          {
+            "id": 1020,
+            "name": "Retour au Paradis",
+            "content": "Après avoir mis Falsi en sécurité, il est temps de retourner sauver Ada et de mettre fin à ce jeu absurde.",
+            "pic2": "T_StringBoard_Main_0076",
+            "type": 1,
+            "questChainId": 110232,
+            "unlock": 11023104,
+            "finish": 11023201
+          }
+        ],
+        "side": [],
+        "prev": 110212
+      },
+      {
+        "id": 110214,
+        "column": 13,
+        "main": [
+          {
+            "id": 1021,
+            "name": "Eve et Ada",
+            "content": "Refusant de se soumettre une nouvelle fois, Ada s’est dressée contre Maman Lapin et a choisi un nouveau nom pour elle-même : Eve.\nAprès avoir vaincu Maman Lapin, sauvé Eve et aidé les autres habitants à fuir le Paradis, j’ai aperçu sous le masque de Maman Lapin un visage identique à celui d’Eve...\nMaman Lapin était en réalité la véritable Ada. Et Eve était sa copie.",
+            "pic2": "T_StringBoard_Main_0077",
+            "type": 1,
+            "questChainId": 110232,
+            "unlock": 11023201,
+            "finish": 11023203
+          }
+        ],
+        "side": [],
+        "prev": 110213
+      },
+      {
+        "id": 110215,
+        "column": 14,
+        "main": [
+          {
+            "id": 1022,
+            "name": "Fulvis",
+            "content": "Fulvis avait toujours prétendu avoir perdu la mémoire. Il avait profité de la situation pour se faire passer pour Joy et m’aider secrètement. Son véritable objectif était de provoquer un affrontement entre Maman Lapin et moi afin que nous nous affaiblissions mutuellement, lui permettant ensuite de prendre facilement le contrôle de Maman Lapin et d’obtenir le véritable Catalyseur.\nCependant, j’avais déjà établi un plan avec Vergilius avant cela.",
+            "pic2": "T_StringBoard_Main_0078",
+            "type": 1,
+            "questChainId": 110232,
+            "unlock": 11023203,
+            "finish": 11023204
+          }
+        ],
+        "side": [],
+        "prev": 110214
+      },
+      {
+        "id": 110216,
+        "column": 15,
+        "main": [
+          {
+            "id": 1023,
+            "name": "La fin du Paradis",
+            "content": "Le plan de Fulvis a échoué. Maman Lapin, accompagnée du chef du village, a également disparu dans les profondeurs des ruines... Le Paradis des Montagnes d’Arcano a finalement pris fin.",
+            "pic2": "T_StringBoard_Main_0079",
+            "type": 3,
+            "questChainId": 110232,
+            "unlock": 11023204,
+            "finish": 11023205
+          }
+        ],
+        "side": [
+          {
+            "id": 1024,
+            "name": "Le passé du Paradis",
+            "content": "J’ai ouvert la boîte impossible à ouvrir que j’avais aperçue auparavant dans l’Étang du Repos. À l’intérieur, j’ai trouvé plusieurs objets laissés par le chef du village Cesare.\nDans son journal, il avait soigneusement consigné la guerre qu’il avait vécue ainsi que l’origine du Paradis.",
+            "pic2": "T_StringBoard_Main_0080",
+            "type": 2,
+            "questChainId": 110233,
+            "unlock": 11023205,
+            "finish": 110233
+          }
+        ],
+        "prev": 110215
+      }
+    ]
+  }
+]

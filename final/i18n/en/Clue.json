@@ -1,0 +1,1202 @@
+[
+  {
+    "type": "Ex02_Core",
+    "name": "Key Leads",
+    "priority": 55,
+    "pages": [
+      {
+        "id": "Ex02_MainStory_1001",
+        "name": "Fulvis",
+        "clues": [
+          {
+            "id": 100101,
+            "name": "Fulvis's Whereabouts",
+            "contents": [
+              {
+                "id": 10010101,
+                "text": "Fulvis has arrived in Flagson, but what he is up to remains unclear.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11100001
+                }
+              },
+              {
+                "id": 10010102,
+                "text": "\"Strength\" Bernard says he has not seen anyone matching Fulvis's description on Mount Arcano in the past five days.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11100241
+                }
+              },
+              {
+                "id": 10010103,
+                "text": "\"The High Priestess\" Ada has not seen any Legion soldiers apart from me, either. It seems that almost no one in Arcano has ever met Fulvis.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11101617
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0005",
+            "pic2": "T_StringBoard_Main_0005",
+            "type": 1
+          },
+          {
+            "id": 100102,
+            "name": "Fulvis's Activities",
+            "contents": [
+              {
+                "id": 10010201,
+                "text": "Unable to confirm whether Falsi was dead or alive, Fulvis sent agents to track her down and silence her.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11105822
+                }
+              },
+              {
+                "id": 10010202,
+                "text": "Fulvis's men were split into two teams and stationed near Mount Arcano. Neither team ventured deep into the mountain.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11111019
+                }
+              },
+              {
+                "id": 10010203,
+                "text": "Fulvis never lost his memory. He had been posing as \"The Fool\" Joy all along, secretly turning the residents of Arcano and me against each other so he could claim the Catalyst after we had weakened one another.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11120338
+                }
+              },
+              {
+                "id": 10010204,
+                "text": "I saw through Fulvis's disguise and swapped out his communicator well in advance, foiling his scheme. Once he realised there was no way back, Fulvis detonated his combat vehicle and set Arcano ablaze, intending to take us with him.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11120622
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0006",
+            "type": 1
+          }
+        ],
+        "unlock": 11020101
+      },
+      {
+        "id": "Ex02_MainStory_1002",
+        "name": "The Catalyst",
+        "clues": [
+          {
+            "id": 100201,
+            "name": "The Catalyst",
+            "contents": [
+              {
+                "id": 10020101,
+                "text": "The Catalyst can create infinite copies of any object. It is believed to be in the possession of Mother Bunny, the master of Paradise Village, though its true form remains unknown.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11100001
+                }
+              },
+              {
+                "id": 10020102,
+                "text": "The Catalyst can replicate anything in the world, even humans.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11120305
+                }
+              },
+              {
+                "id": 10020103,
+                "text": "The Catalyst required for the Second Scion Program is Ada's innate power of replication.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11120334
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0007",
+            "type": 1
+          }
+        ],
+        "unlock": 11020101
+      },
+      {
+        "id": "Ex02_MainStory_1003",
+        "name": "Mount Arcano",
+        "clues": [
+          {
+            "id": 100301,
+            "name": "Life in Arcano",
+            "contents": [
+              {
+                "id": 10030101,
+                "text": "Every resident of Arcano has a unique arcana name. Ada's is \"The High Priestess\", while mine is \"The Chariot\". There are 21 in all, and anyone who bears one is considered part of Paradise Village's one big family.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11101619
+                }
+              },
+              {
+                "id": 10030102,
+                "text": "Paradise Village has rules that every resident must obey.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106524
+                }
+              },
+              {
+                "id": 10030103,
+                "text": "The people of Paradise Village live peacefully together. Whenever a dispute arises, they settle it through a game instead of arguing or fighting.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11108404
+                }
+              },
+              {
+                "id": 10030104,
+                "text": "In Paradise Village, Solarians and Charons alike live happily side by side as equals.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11111057
+                }
+              },
+              {
+                "id": 10030105,
+                "text": "Paradise Village is home to adorable, finely crafted toys known as Nutcrackers. They help the villagers with everyday tasks. Morgana says she taught me how to make them when I was little.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106804
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0008",
+            "type": 1
+          },
+          {
+            "id": 100302,
+            "name": "The Parade",
+            "contents": [
+              {
+                "id": 10030201,
+                "text": "Every month, Paradise Village holds a special celebration known as the Parade. Mother Bunny makes an appearance on the night of the Parade.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11100902
+                }
+              },
+              {
+                "id": 10030202,
+                "text": "During the Parade, a game is held. The participant with the highest number of votes in the game is eliminated.\nThe Parade is essentially a loyalty test conducted by Mother Bunny on the residents of the paradise. Players who violate the rules of paradise are executed.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11115049
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0009",
+            "type": 1
+          },
+          {
+            "id": 100303,
+            "name": "Anomalies on the Mountain",
+            "contents": [
+              {
+                "id": 10030301,
+                "text": "For some reason, I've been having sudden dizzy spells ever since I came to Mount Arcano.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11100406
+                }
+              },
+              {
+                "id": 10030302,
+                "text": "Most of the original residents of Arcano died in the war. The current residents of Paradise Village are outsiders who were coerced by the village chief and Mother Bunny into playing the roles of the deceased. Those who break the rules or fail to perform their roles are executed by the chief and buried in the cemetery beneath the Pond of Slumber.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11117210
+                }
+              },
+              {
+                "id": 10030303,
+                "text": "Cesare laced the water supply on Mount Arcano with a drug developed by the Alchemy Academy of Hyperborea. It was designed to calm soldiers and help them maintain their composure. In high doses, however, it impairs the mind, rendering those affected capable only of following orders.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11117225
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0010",
+            "type": 1
+          },
+          {
+            "id": 100304,
+            "name": "Rules of Arcano (Ⅰ)",
+            "contents": [
+              {
+                "id": 10030401,
+                "text": "Rule Ⅰ\nMount Arcano is our Paradise, and we are all Mother Bunny's White Bunnies.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11114213
+                }
+              },
+              {
+                "id": 10030402,
+                "text": "Rule Ⅱ\nWhite Bunnies must love one another. Violence between White Bunnies is forbidden. When conflicts arise, they must be settled through games.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11114213
+                }
+              },
+              {
+                "id": 10030403,
+                "text": "Rule Ⅲ\nBunnies come in many colors. White Bunnies are friends. Red Bunnies are dangerous. If you see a Red Bunny, report it to the chief at once.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11114213
+                }
+              },
+              {
+                "id": 10030404,
+                "text": "Rule Ⅳ\nThe Parade is Arcano's monthly grand celebration. During the Parade, all Bunnies must complete one game together.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11114213
+                }
+              },
+              {
+                "id": 10030405,
+                "text": "Rule Ⅴ\nThe toys of Mount Arcano are our friends. You may accept their help and protection.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11114213
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0011",
+            "type": 1
+          },
+          {
+            "id": 100305,
+            "name": "Rules of Arcano (Ⅱ)",
+            "contents": [
+              {
+                "id": 10030406,
+                "text": "Rule Ⅵ\nAll White Bunnies must remember their Arcana names. They reveal our essence. We must never act against it.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11114213
+                }
+              },
+              {
+                "id": 10030407,
+                "text": "Rule Ⅶ\nThe giant metal man in the sky is the enemy of Paradise. If the giant metal man appears, stop whatever you are doing and proceed at once to the Pond of Slumber.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11114213
+                }
+              },
+              {
+                "id": 10030408,
+                "text": "Rule Ⅷ\nFor those who have broken the rules, the Pond of Slumber will help them find peace again.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11114213
+                }
+              },
+              {
+                "id": 10030409,
+                "text": "Rule Ⅸ\nUnless the giant metal man appears, no one may approach the Pond of Slumber without the chief's permission.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11114213
+                }
+              },
+              {
+                "id": 10030410,
+                "text": "Rule Ⅹ\nTo keep our lives from being disturbed by the outside world, no White Bunny may leave Paradise without permission.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11114213
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0012",
+            "type": 1
+          }
+        ],
+        "unlock": 11020101
+      }
+    ]
+  },
+  {
+    "type": "Ex02_Region",
+    "name": "Locations",
+    "priority": 45,
+    "pages": [
+      {
+        "id": "Ex02_Region_1101",
+        "name": "Arcano Ruins",
+        "clues": [
+          {
+            "id": 110101,
+            "name": "Overview",
+            "contents": [
+              {
+                "id": 11010101,
+                "text": "Arcano was destroyed in the war four years ago and has been all but deserted ever since. Only a few facilities remain operational, and even those are barely functioning. Ada and I once lived there.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11101102
+                }
+              },
+              {
+                "id": 11010102,
+                "text": "Four years ago, a Legion airship unit dispatched for a surprise assault on the front lines was forced to make an emergency landing on Mount Arcano when the operation failed. The survivors were ordered to hold their position and delay the Elysian Church's ground forces for as long as possible. The Legion eventually halted the Church's advance with overwhelming air power, but the bombardment completely destroyed Arcano.",
+                "trigger": {
+                  "type": "Resource",
+                  "id": 2000128
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0013",
+            "pic2": "T_StringBoard_Main_0014",
+            "type": 2
+          }
+        ],
+        "unlock": 11020102
+      },
+      {
+        "id": "Ex02_Region_1102",
+        "name": "Mount Arcano Rift",
+        "clues": [
+          {
+            "id": 110201,
+            "name": "Overview",
+            "contents": [
+              {
+                "id": 11020101,
+                "text": "Under heavy bombardment, Elysian Church forces retreated into the Mount Arcano Rift, laying mines behind them to slow the pursuing Legion troops.",
+                "trigger": {
+                  "type": "Resource",
+                  "id": 2000129
+                }
+              },
+              {
+                "id": 11020102,
+                "text": "Four years ago, toxic residue from Legion munitions seeped into the surrounding soil and waterways, giving the lake before us its strange colour. The water is so toxic that even Filthoids cannot survive in it.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11114002
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0015",
+            "pic2": "T_StringBoard_Main_0016",
+            "type": 2
+          }
+        ],
+        "unlock": 11020104
+      },
+      {
+        "id": "Ex02_Region_1103",
+        "name": "Arcano",
+        "clues": [
+          {
+            "id": 110301,
+            "name": "Legion Records",
+            "contents": [
+              {
+                "id": 11030101,
+                "text": "The town of Arcano is a mountain settlement on a plateau in southern Flagson, sharing the mountain's name. It started as a small settlement, but after the villagers built an amusement park within the town, a surge of tourists flooded in. The town expanded and became a thriving tourist destination.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11100001
+                }
+              },
+              {
+                "id": 11030102,
+                "text": "During the war four years ago, the town of Arcano briefly served as one of the many supply stops for the border legions. But as the conflict intensified, many once-safe towns were drawn into the flames of war — and Arcano was among those that fell.wn into the war. Arcano was among those destroyed.\nAccording to official records, most of Arcano's residents died in the war, and the village itself ceased to exist.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11100001
+                }
+              },
+              {
+                "id": 11030103,
+                "text": "The war four years ago left an irreversible mark on Mount Arcano. The town of Arcano was destroyed, its villagers all perished, and large areas became uninhabitable.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11100001
+                }
+              },
+              {
+                "id": 11030104,
+                "text": "In addition, retreating Elysian Church soldiers laid extensive landmines across the area to slow the Empire's pursuit. These factors combined have kept the Empire from reclaiming or rebuilding Mount Arcano and the town of Arcano over the years.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11100001
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0017",
+            "type": 2
+          },
+          {
+            "id": 110302,
+            "name": "Paradise Village",
+            "contents": [
+              {
+                "id": 11030201,
+                "text": "Mother Bunny single-handedly rebuilt Arcano amidst the war-torn ruins of Mount Arcano, renaming it Paradise Village. Survivors now live peaceful, content lives here.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11101610
+                }
+              },
+              {
+                "id": 11030202,
+                "text": "Under normal circumstances, the drawbridge is the only way in or out of Paradise Village. It can only be operated from inside the village, and the switch must be held down the entire time.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11110403
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0018",
+            "pic2": "T_StringBoard_Main_0019",
+            "type": 2
+          },
+          {
+            "id": 110303,
+            "name": "Warehouse",
+            "contents": [
+              {
+                "id": 11030301,
+                "text": "Paradise Village's warehouse is neatly stocked with cooking ingredients, toys, clothing, and decorations. Every item of the same type is identical, right down to the smallest tears and signs of wear, suggesting that they were created by the Catalyst.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11108813
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0019",
+            "pic2": "T_StringBoard_Main_0021",
+            "type": 2
+          },
+          {
+            "id": 110304,
+            "name": "Pond of Slumber",
+            "contents": [
+              {
+                "id": 11030401,
+                "text": "Falsi investigated the Pond of Slumber alone. She found no one there, and the place seemed more like a prison.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11111047
+                }
+              },
+              {
+                "id": 11030402,
+                "text": "Beneath the Pond of Slumber lies a cemetery where all of Arcano's residents are buried. There is even a grave for \"me\" — Victor.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11117201
+                }
+              },
+              {
+                "id": 11030403,
+                "text": "The chest we found in the crypt wouldn't open. We should come back and take another look once this is all over.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11116801
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0022",
+            "pic2": "T_StringBoard_Main_0023",
+            "type": 2
+          },
+          {
+            "id": 110305,
+            "name": "Discovery in the Woods",
+            "contents": [
+              {
+                "id": 11030501,
+                "text": "Four years ago, a Legion airship made an emergency landing here. Before the two survivors could rejoin the main force, they encountered an Elysian Church advance party, and a firefight broke out in the forest.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11112301
+                }
+              },
+              {
+                "id": 11030502,
+                "text": "We found the gravestone of one of the two survivors. The other, who appears to have been an officer, remains unaccounted for.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11112701
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0069",
+            "pic2": "T_StringBoard_Main_0025",
+            "type": 2
+          }
+        ],
+        "unlock": 11020101
+      }
+    ]
+  },
+  {
+    "type": "Ex02_Character",
+    "name": "People",
+    "priority": 30,
+    "pages": [
+      {
+        "id": "Ex02_Character_1201",
+        "name": "Falsi",
+        "clues": [
+          {
+            "id": 120101,
+            "name": "Falsi",
+            "contents": [
+              {
+                "id": 12010101,
+                "text": "Fulvis orchestrated the explosion at Lonza Fortress to silence Falsi, but she survived and pursued him all the way to Mount Arcano. Unfortunately, her audio recorder was destroyed in the blast, costing us yet another piece of evidence that could bring Fulvis down. At the very least, I need to bring Falsi back as a witness.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11102821
+                }
+              },
+              {
+                "id": 12010102,
+                "text": "Since surviving the explosion at Lonza Fortress, Falsi has been determined to kill Fulvis and get revenge. Judging by her unhealed wounds, she fought several bloody battles on her way to Mount Arcano with agents Fulvis sent to eliminate her.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11105822
+                }
+              },
+              {
+                "id": 12010103,
+                "text": "Falsi went into the flames alone to retrieve the recording of what happened at Lonza Fortress. She has not been seen since.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11121012
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0026",
+            "type": 3
+          }
+        ],
+        "unlock": 11020104
+      },
+      {
+        "id": "Ex02_Character_1202",
+        "name": "Arcano Residents (Ⅰ)",
+        "clues": [
+          {
+            "id": 120204,
+            "name": "\"Judgement\" Mother Bunny",
+            "contents": [
+              {
+                "id": 12020401,
+                "text": "Mother Bunny is a mysterious and powerful Daimon who possesses the Catalyst, which is crucial to the Second Scion Program. According to intelligence from Sir Avar, she would rather die — and take the Catalyst and her enemies with her — than surrender it.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11100001
+                }
+              },
+              {
+                "id": 12020402,
+                "text": "Mother Bunny wields considerable authority in Arcano and appears to have overseen its reconstruction.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11101610
+                }
+              },
+              {
+                "id": 12020403,
+                "text": "Mother Bunny was the sole survivor of Arcano's destruction four years ago — and she is the real Ada. She wields a rare form of replication magic.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11120305
+                }
+              },
+              {
+                "id": 12020404,
+                "text": "Ada used the last of her power to help us escape as Arcano burned. The village chief then carried her into the flames on his back. She vanished in the blaze and has been missing ever since.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11120823
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0031",
+            "pic2": "T_StringBoard_Main_0032",
+            "type": 3
+          },
+          {
+            "id": 120201,
+            "name": "\"Strength\" Bernard",
+            "contents": [
+              {
+                "id": 12020101,
+                "text": "A warm and friendly hunter from Arcano who often roams Mount Arcano. Two days ago, he caught a glimpse of an unfamiliar woman darting through the woods.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11100241
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0027",
+            "type": 3
+          },
+          {
+            "id": 120202,
+            "name": "\"The High Priestess\" Ada",
+            "contents": [
+              {
+                "id": 12020201,
+                "text": "One of Arcano's residents. She seems naive and tends to jump from one subject to another. She says she and Victor grew up together.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11100414
+                }
+              },
+              {
+                "id": 12020202,
+                "text": "Falsi saw Ada kill a villager without showing the slightest emotion. Ada may be far less innocent than she appears.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11105834
+                }
+              },
+              {
+                "id": 12020203,
+                "text": "Ada loves games and taking on different roles in them. She says she has to spend her entire life on Mount Arcano. Why?",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11103808
+                }
+              },
+              {
+                "id": 12020204,
+                "text": "Ada is special to Mother Bunny.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11115516
+                }
+              },
+              {
+                "id": 12020205,
+                "text": "During her trial before Mother Bunny, Ada cast aside the name she had been given and chose a new one for herself: Eve.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11118623
+                }
+              },
+              {
+                "id": 12020206,
+                "text": "In truth, she is a replica created in the image of Mother Bunny, the real Ada.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11120305
+                }
+              },
+              {
+                "id": 12020207,
+                "text": "After escaping Mount Arcano, Eve set out on her own. Now, at last, she can see the outside world for herself.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11121420
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0028",
+            "pic2": "T_StringBoard_Main_0029",
+            "type": 3
+          },
+          {
+            "id": 120203,
+            "name": "\"The Chariot\" Victor",
+            "contents": [
+              {
+                "id": 12020301,
+                "text": "The villagers here call me \"The Chariot\" Victor. I left my hometown, Arcano, four years ago to join the Legion.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11100225
+                }
+              },
+              {
+                "id": 12020302,
+                "text": "As a child, Victor would catch bugs and roam around the village with Ada. {性别2：He丨‍She} would also go hunting with Bernard.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106802
+                }
+              },
+              {
+                "id": 12020303,
+                "text": "The villagers don't seem entirely sure what I look like now. Have I really changed that much since joining the Legion?",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106537
+                }
+              },
+              {
+                "id": 12020304,
+                "text": "I've been in a daze. Fragments of a life I seemed to have lived here as Victor kept surfacing.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11108302
+                }
+              },
+              {
+                "id": 12020305,
+                "text": "I am not Victor. Everything the people of Arcano told me was a lie. The real Victor was a resident of Arcano who died when the village was destroyed in the war four years ago.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11117210
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0030",
+            "type": 3
+          },
+          {
+            "id": 120205,
+            "name": "\"The Emperor\" Cesare",
+            "contents": [
+              {
+                "id": 12020501,
+                "text": "Arcano's village chief. He gave Ada a mysterious drug, which she used to treat the injuries Falsi and I had sustained.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11105405
+                }
+              },
+              {
+                "id": 12020502,
+                "text": "The mysterious drug Cesare gave Ada was a cardiac stimulant developed by the Alchemy Academy of Hyperborea and issued to senior officers four years ago. How is Cesare connected to the Legion?",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11115524
+                }
+              },
+              {
+                "id": 12020503,
+                "text": "Cesare was the other survivor of the airship's emergency landing four years ago, as well as an officer in the Legion. He found Ada on the brink of death among the ruins of Arcano and saved her. Amid the horrors of war, she became his only source of hope.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11123840
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0033",
+            "type": 3
+          },
+          {
+            "id": 120206,
+            "name": "\"The Star\" Stella",
+            "contents": [
+              {
+                "id": 12020601,
+                "text": "A timid little girl who cries easily and worries about everything.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106506
+                }
+              },
+              {
+                "id": 12020602,
+                "text": "Stella has a secret that terrifies her — one of the reasons she cries so often.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11108949
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0034",
+            "type": 3
+          },
+          {
+            "id": 120207,
+            "name": "\"The Sun\" Elio",
+            "contents": [
+              {
+                "id": 12020701,
+                "text": "A lively little boy who is fascinated by my life in the Legion.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106506
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0035",
+            "type": 3
+          }
+        ],
+        "unlock": 11020101
+      },
+      {
+        "id": "Ex02_Character_1203",
+        "name": "Arcano Residents (Ⅱ)",
+        "clues": [
+          {
+            "id": 120208,
+            "name": "\"The Moon\" Selina",
+            "contents": [
+              {
+                "id": 12020801,
+                "text": "A sweet, sensible little girl who is often seen with Stella and Elio.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106506
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0036",
+            "type": 3
+          },
+          {
+            "id": 120209,
+            "name": "\"The Empress\" Teresa",
+            "contents": [
+              {
+                "id": 12020901,
+                "text": "A gentle woman who is a gifted homemaker and exceptional cook. She grows vegetables in her garden and keeps several pigeons at home.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106506
+                }
+              },
+              {
+                "id": 12020902,
+                "text": "Teresa took her own life after losing the game held during the Parade.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11116601
+                }
+              },
+              {
+                "id": 12020903,
+                "text": "Teresa was a housewife who came to Mount Arcano in search of her missing husband, Fred. Unable to bear life in Paradise Village any longer, she tied a distress note to the leg of one of her pigeons, hoping it would carry her plea beyond the village. Unfortunately, the pigeon was devoured by a bird of prey in the mountains, and her message never got through.",
+                "trigger": {
+                  "type": "Resource",
+                  "id": 2000134
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0037",
+            "type": 3
+          },
+          {
+            "id": 120210,
+            "name": "\"The Devil\" Aamon",
+            "contents": [
+              {
+                "id": 12021001,
+                "text": "A stern old man. Though he speaks harshly, his words reveal genuine concern for others.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106506
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0038",
+            "type": 3
+          },
+          {
+            "id": 120211,
+            "name": "\"The Lovers\" Vena",
+            "contents": [
+              {
+                "id": 12021101,
+                "text": "A charming young woman with a flirtatious air, curious about the relationship between Falsi and me.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106506
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0039",
+            "type": 3
+          },
+          {
+            "id": 120212,
+            "name": "\"The Magician\" Morgana",
+            "contents": [
+              {
+                "id": 12021201,
+                "text": "A resourceful young woman skilled in handicrafts and mechanical work.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106506
+                }
+              },
+              {
+                "id": 12021202,
+                "text": "During the Parade, she singled Teresa out as a suspect, leading to Teresa's elimination.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11115003
+                }
+              },
+              {
+                "id": 12021203,
+                "text": "Her real name is Catherine, and she is a student of the folklorist Woodville. She had shaken off the drug's effects long ago, but carefully maintained her role as \"The Magician\" Morgana while waiting for the safest opportunity to escape. She likely cast suspicion on Teresa earlier to protect her teacher. When her own safety and her teacher's are at stake, she can be calculating to the point of seeming ruthless.",
+                "trigger": {
+                  "type": "Resource",
+                  "id": 2000135
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0040",
+            "type": 3
+          },
+          {
+            "id": 120213,
+            "name": "\"The Hierophant\" Sanctus",
+            "contents": [
+              {
+                "id": 12021301,
+                "text": "A devout middle-aged man who worships Mother Bunny as a deity.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106506
+                }
+              },
+              {
+                "id": 12021302,
+                "text": "Sanctus faced discrimination and abuse from Solarians in the outside world. Paradise Village was the only place that offered him refuge, and his loyalty to Mother Bunny is absolute — he would even lay down his life for her.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11118913
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0041",
+            "type": 3
+          },
+          {
+            "id": 120214,
+            "name": "\"Wheel of Fortune\" Karma",
+            "contents": [
+              {
+                "id": 12021401,
+                "text": "An eccentric young man who is always muttering cryptic things no one understands.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106506
+                }
+              },
+              {
+                "id": 12021402,
+                "text": "Karma was once a penniless drifter. He had grown tired of the cryptic, prophetic manner he was forced to adopt as \"Wheel of Fortune\". Once freed from Mother Bunny's control, all his pent-up emotions came pouring out.",
+                "trigger": {
+                  "type": "Resource",
+                  "id": 2000138
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0042",
+            "type": 3
+          }
+        ],
+        "unlock": 11020302
+      },
+      {
+        "id": "Ex02_Character_1204",
+        "name": "Arcano Residents (Ⅲ)",
+        "clues": [
+          {
+            "id": 120215,
+            "name": "\"Justice\" Justus",
+            "contents": [
+              {
+                "id": 12021501,
+                "text": "A stern middle-aged man who constantly recites the rules of Paradise Village.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106506
+                }
+              },
+              {
+                "id": 12021502,
+                "text": "Justus was once a killer for hire. With no place left for him in the outside world, he found a new life in Paradise Village. No matter what happens, he will never betray Mother Bunny.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11118917
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0043",
+            "type": 3
+          },
+          {
+            "id": 120216,
+            "name": "\"The Hanged Man\" Isaac",
+            "contents": [
+              {
+                "id": 12021601,
+                "text": "A friendly old man with no fixed duties in Arcano. He always seems to be taking it easy.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106506
+                }
+              },
+              {
+                "id": 12021602,
+                "text": "His real name is Woodville, a folklorist from Aethyrie who came to Mount Arcano on a research expedition with his student Catherine. Mother Bunny imprisoned them and forced him to play the role of \"The Hanged Man\" in Paradise Village.",
+                "trigger": {
+                  "type": "Resource",
+                  "id": 2000135
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0044",
+            "type": 3
+          },
+          {
+            "id": 120217,
+            "name": "\"The Tower\" Ambitio",
+            "contents": [
+              {
+                "id": 12021701,
+                "text": "A rather vacant-eyed young man wearing the Forsakens' emblem. I wonder what his connection to them is.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106506
+                }
+              },
+              {
+                "id": 12021702,
+                "text": "After questioning him, the Legion tentatively concluded that he is indeed a member of the Forsakens, though Cesare's drugs have left him with no memory of his past.",
+                "trigger": {
+                  "type": "Resource",
+                  "id": 2000137
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0045",
+            "type": 3
+          },
+          {
+            "id": 120218,
+            "name": "\"The Hermit\" Tacita",
+            "contents": [
+              {
+                "id": 12021801,
+                "text": "A taciturn old woman who is difficult to engage in conversation.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106506
+                }
+              },
+              {
+                "id": 12021802,
+                "text": "Tacita's real name is Jenny. She came to Mount Arcano several years ago after accepting a reckless dare.",
+                "trigger": {
+                  "type": "Resource",
+                  "id": 2000139
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0046",
+            "type": 3
+          },
+          {
+            "id": 120219,
+            "name": "\"Death\" Finis",
+            "contents": [
+              {
+                "id": 12021901,
+                "text": "I've only heard his name, but I've never seen him in Arcano. He is likely the villager Falsi saw Ada kill in cold blood.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11121420
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0047",
+            "type": 3
+          },
+          {
+            "id": 120220,
+            "name": "\"Temperance\" Mensura",
+            "contents": [
+              {
+                "id": 12022001,
+                "text": "A meticulous middle-aged woman prone to compulsive habits.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11106506
+                }
+              },
+              {
+                "id": 12022002,
+                "text": "After questioning her, I realised that Cesare's drugs had severely affected her. She remembers nothing from before she came to Mount Arcano.",
+                "trigger": {
+                  "type": "Resource",
+                  "id": 2000136
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0048",
+            "type": 3
+          },
+          {
+            "id": 120221,
+            "name": "\"The Fool\" Joy",
+            "contents": [
+              {
+                "id": 12022101,
+                "text": "Fulvis suddenly appeared at the Parade alongside Mother Bunny. Yet everyone insisted that he was not Fulvis, but \"The Fool\" Joy, who had supposedly lived in Paradise Village all along. Neither his reaction to Falsi and me nor his subsequent behaviour matched the Fulvis I remembered.",
+                "trigger": {
+                  "type": "Dialogue",
+                  "id": 11115209
+                }
+              }
+            ],
+            "pic1": "T_StringBoard_Main_0004",
+            "pic2": "T_StringBoard_Main_0049",
+            "type": 3
+          }
+        ],
+        "unlock": 11020302
+      }
+    ]
+  }
+]
