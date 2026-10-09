@@ -4,20 +4,12 @@ import type { ModuleContext } from "../../core/Graph.ts"
 import { compile, LTemplateColumns, T, TMap, TReplace, type VNode, type VNodeTree } from "../../i18n/vnode.ts"
 import { AssetReader } from "../../lua/AssetReader.ts"
 import type { SkillArtifacts } from "../skill/skillModule.ts"
-import { P_MAP } from "../skill/skillModule.ts"
+import { P_MAP, weaponSkillName } from "../skill/skillModule.ts"
 
 type Row = Record<string, any>
 
 const QUALITY = ["白", "绿", "蓝", "紫", "金"]
 const POLARITY = ["", "A", "D", "V", "O"]
-const TYPE_MAP: Record<string, string> = {
-    Shooting: "射击",
-    Attack: "普通攻击",
-    HeavyAttack: "蓄力攻击",
-    FallAttack: "下落攻击",
-    SlideAttack: "滑行攻击",
-}
-
 function table(ctx: ModuleContext, name: string): Row {
     const value = ctx.dm.getTable(name)
     return value && typeof value === "object" && !Array.isArray(value) ? (value as Row) : {}
@@ -85,7 +77,8 @@ function skillEntry(ctx: ModuleContext, id: number): Row | undefined {
 
 function skillDisplayName(id: number, entry: Row | undefined): VNodeTree {
     if (entry?.SkillName) return T(entry.SkillName)
-    return TYPE_MAP[String(entry?.SkillType ?? "")] ?? String(id)
+    const name = weaponSkillName(entry?.SkillType)
+    return name === "" ? String(id) : name
 }
 
 async function skillReplacements(ctx: ModuleContext, mod: Row, skill: SkillArtifacts, assetReader: AssetReader): Promise<Row | undefined> {

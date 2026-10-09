@@ -14,7 +14,7 @@
  */
 
 import type { ModuleContext } from "../../core/Graph.ts"
-import { compile, T, type VNode } from "../../i18n/vnode.ts"
+import { compile, T, TL, type VNode, type VNodeTree } from "../../i18n/vnode.ts"
 import { GT_RE } from "../../lua/stubs.ts"
 
 // ---------- 常量映射（port 老代码） ----------
@@ -155,6 +155,39 @@ export const ACTION_CN: Record<string, string> = {
     Dodge: "闪避",
     Skill1: "战技",
     Skill2: "终结技",
+}
+
+/**
+ * 武器基础招式（SkillType）→ 多语言 vnode。
+ *
+ * 官方文本表为「蓄力攻击 / 下落攻击 / 滑行攻击 / 射击」提供了独立词条，按 ID 取权威译名；
+ * 「普通攻击 / 蓄力射击」官方只有带后缀的整词（如 Normal Attack DMG），无独立词条，
+ * 按官方构词法截取后手工补译（与下游 dna-builder 的 SUPPLEMENTAL_TRANSLATIONS 保持一致）。
+ */
+export const WEAPON_SKILL_NAME: Record<string, VNode> = {
+    Attack: TL("普通攻击", {
+        en: "Normal Attack",
+        jp: "通常攻撃",
+        kr: "기본 공격",
+        fr: "Attaque normale",
+        tc: "普通攻擊",
+    }),
+    HeavyAttack: T("Tag_HeavyAttack"),
+    FallAttack: T("Tag_FallAttack"),
+    SlideAttack: T("Tag_SlideAttack"),
+    Shooting: T("UI_EventHud_Shoot"),
+    HeavyShooting: TL("蓄力射击", {
+        en: "Charged Shot",
+        jp: "ため射撃",
+        kr: "차지 사격",
+        fr: "Tir chargé",
+        tc: "蓄力射擊",
+    }),
+}
+
+/** 武器基础招式名 vnode；未收录的 SkillType 原样返回。 */
+export function weaponSkillName(skillType: unknown): VNodeTree {
+    return WEAPON_SKILL_NAME[String(skillType ?? "")] ?? String(skillType ?? "")
 }
 
 // ---------- 数据解释辅助 ----------

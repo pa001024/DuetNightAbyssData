@@ -16,15 +16,13 @@ import type { ModuleContext } from "../../core/Graph.ts"
 import { compile, LTemplate, LTemplateColumns, record, T, TLang, TMap, type VNode, type VNodeTree } from "../../i18n/vnode.ts"
 import { AssetReader } from "../../lua/AssetReader.ts"
 import type { SkillArtifacts } from "../skill/skillModule.ts"
-import { extractFieldValueAndFormatFromSource, P_MAP, resolveFieldCombatMetaImpl, roundValue } from "../skill/skillModule.ts"
-
-const TYPE_MAP: Record<string, string> = {
-    Shooting: "射击",
-    Attack: "普通攻击",
-    HeavyAttack: "蓄力攻击",
-    FallAttack: "下落攻击",
-    SlideAttack: "滑行攻击",
-}
+import {
+    extractFieldValueAndFormatFromSource,
+    P_MAP,
+    resolveFieldCombatMetaImpl,
+    roundValue,
+    weaponSkillName,
+} from "../skill/skillModule.ts"
 
 /** 武器标签映射（对齐旧版导出的 WeaponType_* 部分） */
 const WEAPON_TYPE_KEY: Record<string, string> = {
@@ -435,7 +433,7 @@ export async function weaponModule(ctx: ModuleContext) {
         for (const skill of skills as Array<Record<string, any>>) {
             const outItem: Record<string, VNodeTree> = {}
             if (skill.id !== undefined) outItem.id = skill.id
-            outItem.名称 = TYPE_MAP[String(skill.名称)] ?? skill.名称
+            outItem.名称 = weaponSkillName(skill.名称)
             outItem.类型 = "武器伤害"
             if (skill.字段) outItem.字段 = skill.字段
             if (skill.实体) outItem.实体 = skill.实体

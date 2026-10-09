@@ -10,14 +10,17 @@ setDefaultTimeout(60000)
 const baseDir = new URL("../out/", import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, "$1")
 const textmap = getTextMap(baseDir)
 
-async function buildWeapons(): Promise<Array<Record<string, any>>> {
+async function buildAllWeapons(): Promise<Array<Record<string, any>>> {
     const graph = new Graph()
     graph.defineModule({ name: "Skill", deps: [], outputs: false, build: ctx => skillModule(ctx) })
     graph.defineModule({ name: "Weapon", deps: ["Skill"], outputs: true, build: ctx => weaponModule(ctx) })
 
     const artifacts = await graph.build({}, undefined, ["Weapon"])
-    const weapons = (artifacts.get("Weapon") as { Weapon: Array<Record<string, any>> }).Weapon
-    return renderTree(weapons, "cn", textmap) as Array<Record<string, any>>
+    return (artifacts.get("Weapon") as { Weapon: Array<Record<string, any>> }).Weapon
+}
+
+async function buildWeapons(): Promise<Array<Record<string, any>>> {
+    return renderTree(await buildAllWeapons(), "cn", textmap) as Array<Record<string, any>>
 }
 
 describe("weapon 模块", () => {
@@ -71,6 +74,29 @@ describe("weapon 模块", () => {
         // 10101：单占位符且各级变化，保留一列
         const single = weapons.find(item => item.id === 10101)
         expect(single?.熔炼).toEqual(["角色攻击+#1。", ["60.0%", "72.0%", "84.0%", "96.0%", "108.0%", "120.0%"]])
+    })
+
+    test("武器技能名按语言渲染（官方词条 + 无词条补充译名）", async () => {
+        const weapons = await buildAllWeapons()
+        const nameOf = (lang: Parameters<typeof renderTree>[1], weaponId: number, skillId: number): unknown => {
+            const rendered = renderTree(weapons, lang, textmap) as Array<Record<string, any>>
+            const weapon = rendered.find(item => item.id === weaponId)
+            const skill = weapon?.技能?.find((s: Record<string, any>) => s.id === skillId)
+            return skill?.名称
+        }
+
+        // 官方词条：蓄力攻击 / 下落攻击 / 滑行攻击 / 射击
+        expect(nameOf("cn", 10101, 1010101)).toBe("普通攻击")
+        expect(nameOf("en", 10101, 1010101)).toBe("Normal Attack")
+        expect(nameOf("en", 10101, 1010102)).toBe("Charged Attack")
+        expect(nameOf("jp", 10101, 1010102)).toBe("溜め攻撃")
+        expect(nameOf("kr", 10101, 1010103)).toBe("낙하 공격")
+        expect(nameOf("fr", 10101, 1010104)).toBe("Attaque en glissade")
+        expect(nameOf("tc", 10101, 1010101)).toBe("普通攻擊")
+
+        // HeavyShooting 曾因映射缺失直接输出枚举名，现补为「蓄力射击」
+        expect(nameOf("cn", 20405, 2040502)).toBe("蓄力射击")
+        expect(nameOf("en", 20405, 2040502)).toBe("Charged Shot")
     })
 
     test("各级完全一致的熔炼退化为纯文案", async () => {
