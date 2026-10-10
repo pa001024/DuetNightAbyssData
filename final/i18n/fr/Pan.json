@@ -1,0 +1,2292 @@
+[
+  {
+    "id": 1001,
+    "name": "Paniemon",
+    "rewardId": 3011,
+    "dialogues": [
+      {
+        "id": 72003802,
+        "content": "Mmmh... à quoi vont te servir ces trois fleurs ?",
+        "npc": 820000,
+        "next": 72003803
+      },
+      {
+        "id": 72003803,
+        "content": "Une pour le soleil... une pour la lune... et une pour les étoiles ?",
+        "npc": 820000,
+        "next": 72003804
+      },
+      {
+        "id": 72003902,
+        "content": "Les oiseaux qui bougent, les oiseaux qui ne bougent pas, et les gens qui ne bougent pas sont encore ici.",
+        "npc": 820000,
+        "next": 72003903
+      },
+      {
+        "id": 72003903,
+        "content": "Mais les gens qui bougent sont tous partis... Est-ce qu’ils reviendront un jour ?",
+        "npc": 820000,
+        "next": 72003904
+      },
+      {
+        "id": 72000002,
+        "content": "兄弟，你好",
+        "npc": 820000,
+        "next": 72000003
+      },
+      {
+        "id": 72000003,
+        "content": "很高兴见到你",
+        "npc": 820000,
+        "next": 72000004
+      },
+      {
+        "id": 72000202,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72000203
+      },
+      {
+        "id": 72000203,
+        "content": "Les arbres m’enlacent avec chaleur... mais je ne peux pas rester blotti là éternellement.",
+        "npc": 820000,
+        "next": 72000204
+      },
+      {
+        "id": 72000302,
+        "content": "Oh, quelqu’un a rallumé la lampe.",
+        "npc": 820000,
+        "next": 72000303
+      },
+      {
+        "id": 72000303,
+        "content": "Dis... et si le soleil n’était lui aussi qu’une mèche qu’on a enflammée ?",
+        "npc": 820000,
+        "next": 72000304
+      },
+      {
+        "id": 72000402,
+        "content": "Si je flotte comme le vent... alors peut-être qu’il deviendra mon ami.",
+        "npc": 820000,
+        "next": 72000403
+      },
+      {
+        "id": 72000403,
+        "content": "Et toi, veux-tu aussi être {性别:l’ami|l’amie} du vent ?",
+        "npc": 820000,
+        "next": 72000404
+      },
+      {
+        "id": 72000502,
+        "content": "Merci, humain des buissons... J’étais coincé dans ce seau rond et glacé depuis si longtemps...",
+        "npc": 820000,
+        "next": 72000503
+      },
+      {
+        "id": 72000503,
+        "content": "Oh ? Plus de buissons... Mais merci quand même, humain de neige.",
+        "npc": 820000,
+        "next": 72000504
+      }
+    ],
+    "groups": [
+      {
+        "id": 7000054,
+        "srId": 100101,
+        "pos": [
+          3306,
+          5100
+        ]
+      },
+      {
+        "id": 7000055,
+        "srId": 100101,
+        "pos": [
+          6161,
+          -1757
+        ]
+      },
+      {
+        "id": 7000058,
+        "srId": 100101,
+        "pos": [
+          3920,
+          470
+        ]
+      },
+      {
+        "id": 7001039,
+        "srId": 100102,
+        "pos": [
+          22429,
+          -5823
+        ]
+      },
+      {
+        "id": 7001040,
+        "srId": 100102,
+        "pos": [
+          27339,
+          5982
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1017,
+    "name": "Paniemon",
+    "rewardId": 3011,
+    "dialogues": [
+      {
+        "id": 72002902,
+        "content": "<I>Yiiiip !</> S’il te plaît, ne prends pas ce coffre.",
+        "npc": 820000,
+        "next": 72002903
+      },
+      {
+        "id": 72002903,
+        "content": "Ma maison a été envahie par de vilaines souris... Je voulais utiliser cet argent pour engager un courageux petit chat, afin qu’il m’aide à les chasser.",
+        "npc": 820000,
+        "next": 72002904
+      },
+      {
+        "id": 72000002,
+        "content": "兄弟，你好",
+        "npc": 820000,
+        "next": 72000003
+      },
+      {
+        "id": 72000003,
+        "content": "很高兴见到你",
+        "npc": 820000,
+        "next": 72000004
+      },
+      {
+        "id": 72003002,
+        "content": "Ouah, tu es incroyable ! Fchhh, fchhh... Ziiiu, ziiiu... En quelques gestes, tu as éliminé toutes les souris des environs.",
+        "npc": 820000,
+        "next": 72003003
+      },
+      {
+        "id": 72003003,
+        "content": "Alors, ce coffre est à toi.",
+        "npc": 820000,
+        "next": 72003004
+      },
+      {
+        "id": 72004302,
+        "content": "Je flotte, je flotte... Je suis un petit canard libre~",
+        "npc": 820000,
+        "next": 72004303
+      },
+      {
+        "id": 72004303,
+        "content": "<I>Yiiiip !</> Pourquoi as-tu vidé l’eau de ma piscine ?",
+        "npc": 820000,
+        "next": 72004304
+      },
+      {
+        "id": 72004402,
+        "content": "<I>Yiiiip !</> Bonjour, petit humain cueilleur de champignons~",
+        "npc": 820000,
+        "next": 72004403
+      },
+      {
+        "id": 72004403,
+        "content": "Les champignons sont délicieux, mais il faut toujours attendre qu’ils soient bien cuits avant de les manger.",
+        "npc": 820000,
+        "next": 72004404
+      },
+      {
+        "id": 72004502,
+        "content": "Boum boum, boum boum boum !",
+        "npc": 820000,
+        "next": 72004503
+      },
+      {
+        "id": 72004503,
+        "content": "J’apprends à jouer de cet orgue de tuyaux.",
+        "npc": 820000,
+        "next": 72004504
+      },
+      {
+        "id": 72004602,
+        "content": "<I>Yiiiip !</> Félicitations, tu as découvert ma base secrète~",
+        "npc": 820000,
+        "next": 72004603
+      },
+      {
+        "id": 72004603,
+        "content": "Les lianes, les plantes aquatiques, l’étang et moi, on forme un tout petit écosystème.",
+        "npc": 820000,
+        "next": 72004604
+      }
+    ],
+    "groups": [
+      {
+        "id": 7020075,
+        "srId": 101701,
+        "pos": [
+          -6075,
+          5070
+        ]
+      },
+      {
+        "id": 7021028,
+        "srId": 101701,
+        "pos": [
+          -22090,
+          5830
+        ]
+      },
+      {
+        "id": 7021030,
+        "srId": 101702,
+        "pos": [
+          -35270,
+          -16890
+        ]
+      },
+      {
+        "id": 7022013,
+        "srId": 101703,
+        "pos": [
+          -11660,
+          -5460
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1060,
+    "name": "Paniemon",
+    "rewardId": 3011,
+    "dialogues": [
+      {
+        "id": 72005902,
+        "content": "Quelle forêt bien rangée !",
+        "npc": 820000,
+        "next": 72005903
+      },
+      {
+        "id": 72005903,
+        "content": "Ils ont tous le même aspect... Ils seraient nés de la même maman ?",
+        "npc": 820000,
+        "next": 72005904
+      },
+      {
+        "id": 72005904,
+        "content": "Hmm ? Ils sont fabriqués ? Les humains peuvent donner naissance à des structures métalliques ? C’est bien la première fois que j’entends ça. Tu essaies de me tromper, pas vrai ?",
+        "npc": 820000,
+        "next": 72005905
+      },
+      {
+        "id": 72006002,
+        "content": "{空格}",
+        "npc": 820000,
+        "next": 72006003
+      },
+      {
+        "id": 72006003,
+        "content": "{空格}",
+        "npc": 820000,
+        "next": 72006004
+      },
+      {
+        "id": 72006004,
+        "content": "{空格}",
+        "npc": 820000,
+        "next": 72006005
+      },
+      {
+        "id": 72006102,
+        "content": "Hmm... Cet endroit est très calme. Pas de gens, pas de voyageurs, même pas le bruit des trains...",
+        "npc": 820000,
+        "next": 72006103
+      },
+      {
+        "id": 72006103,
+        "content": "Enfin, c’est ce que je pensais avant d’arriver ici. Avec l’écho, on entend en réalité les trains encore plus clairement.",
+        "npc": 820000,
+        "next": 72006104
+      },
+      {
+        "id": 72006104,
+        "content": "Je vais partir maintenant. Il est temps de me mettre en route. Au revoir !",
+        "npc": 820000,
+        "next": 72006105
+      },
+      {
+        "id": 72006202,
+        "content": "Chut, j’ai découvert quelque chose : cet endroit est aussi une gare.",
+        "npc": 820000,
+        "next": 72006203
+      },
+      {
+        "id": 72006203,
+        "content": "Beaucoup d’animaux partent en même temps que les trains démarrent.",
+        "npc": 820000,
+        "next": 72006204
+      },
+      {
+        "id": 72006204,
+        "content": "Hmm ? Tu dis qu’ils ont juste peur ?",
+        "npc": 820000,
+        "next": 72006205
+      },
+      {
+        "id": 72006205,
+        "content": "Bon, alors je vais leur expliquer que les trains sont seulement très bruyants. Tant qu’on ne les gêne pas pendant qu’ils avancent, tout ira bien !",
+        "npc": 820000,
+        "next": 72006206
+      },
+      {
+        "id": 72004802,
+        "content": "Tout est en désordre, tout est en désordre.",
+        "npc": 820000,
+        "next": 72004803
+      },
+      {
+        "id": 72004803,
+        "content": "Cet endroit est toujours chaotique, tout le monde est occupé... alors je suis resté ici, pour voir combien de temps il faudrait avant que quelqu’un me remarque.",
+        "npc": 820000,
+        "next": 72004804
+      },
+      {
+        "id": 72004804,
+        "content": "Depuis combien de temps déjà... ? Hmm, on ne voit pas le soleil ici, alors je ne sais pas.",
+        "npc": 820000,
+        "next": 72004805
+      },
+      {
+        "id": 72004805,
+        "content": "Mais j’ai compté : les gens sont déjà passés par ici puis revenus plus de neuf mille fois !",
+        "npc": 820000,
+        "next": 72004806
+      },
+      {
+        "id": 72004902,
+        "content": "Cette fleur de bronze a un problème ! Une fleur est censée avoir un pistil !",
+        "npc": 820000,
+        "next": 72004903
+      },
+      {
+        "id": 72004903,
+        "content": "Une fleur sans pistil, c’est comme une personne sans cœur !",
+        "npc": 820000,
+        "next": 72004904
+      },
+      {
+        "id": 72004904,
+        "content": "Alors je suis ici pour jouer le rôle du pistil. Oui, bonjour, je suis le pistil.",
+        "npc": 820000,
+        "next": 72004905
+      },
+      {
+        "id": 72005002,
+        "content": "Quand je me réveille, je suis dans un endroit complètement différent ! Comme si j’avais voyagé en train.",
+        "npc": 820000,
+        "next": 72005003
+      },
+      {
+        "id": 72005003,
+        "content": "Merci, conducteur de train. Même si celui-là est en bois... alors ça devrait plutôt être... un train en bois ?",
+        "npc": 820000,
+        "next": 72005004
+      },
+      {
+        "id": 72005102,
+        "content": "Tous les humains ont leur propre chambre.",
+        "npc": 820000,
+        "next": 72005103
+      },
+      {
+        "id": 72005103,
+        "content": "Moi aussi, j’en veux une ! Ce sera ici !",
+        "npc": 820000,
+        "next": 72005104
+      },
+      {
+        "id": 72005104,
+        "content": "Bienvenue dans ma chambre ! Maintenant, je vais devoir trouver des meubles !",
+        "npc": 820000,
+        "next": 72005105
+      },
+      {
+        "id": 72005202,
+        "content": "Un toboggan, un toboggan ! C’est le meilleur toboggan du monde !",
+        "npc": 820000,
+        "next": 72005203
+      },
+      {
+        "id": 72005203,
+        "content": "Même si quelqu’un finit toujours par détruire mon toboggan, ce n’est pas grave.",
+        "npc": 820000,
+        "next": 72005204
+      },
+      {
+        "id": 72005204,
+        "content": "Je peux patiner sur cette grande surface bien plate !",
+        "npc": 820000,
+        "next": 72005205
+      },
+      {
+        "id": 72005302,
+        "content": "Toutes les caisses métalliques ici se ressemblent.",
+        "npc": 820000,
+        "next": 72005303
+      },
+      {
+        "id": 72005303,
+        "content": "Alors comment font-elles pour reconnaître leurs frères et sœurs ?",
+        "npc": 820000,
+        "next": 72005304
+      },
+      {
+        "id": 72005304,
+        "content": "Elles n’ont pas besoin de se reconnaître ? Impossible ! Sans famille, on se sentirait trop seul !",
+        "npc": 820000,
+        "next": 72005305
+      },
+      {
+        "id": 72005402,
+        "content": "Les humains tressent des fleurs en couronnes qu’ils déposent sur la tête des personnes qu’ils aiment.",
+        "npc": 820000,
+        "next": 72005403
+      },
+      {
+        "id": 72005403,
+        "content": "Moi, j’aime cet endroit. Alors j’ai dessiné un cercle et tressé une couronne avec mes empreintes pour lui offrir !",
+        "npc": 820000,
+        "next": 72005404
+      },
+      {
+        "id": 72005502,
+        "content": "Cet endroit est beaucoup trop dangereux ! Certaines hauteurs font au moins dix fois ma taille !",
+        "npc": 820000,
+        "next": 72005503
+      },
+      {
+        "id": 72005503,
+        "content": "Alors j’ai laissé des marques au centre de chaque planche.",
+        "npc": 820000,
+        "next": 72005504
+      },
+      {
+        "id": 72005504,
+        "content": "En suivant les marques, impossible de tomber !",
+        "npc": 820000,
+        "next": 72005505
+      },
+      {
+        "id": 72005602,
+        "content": "Les gardes patrouillent.",
+        "npc": 820000,
+        "next": 72005603
+      },
+      {
+        "id": 72005603,
+        "content": "Mais ils ne peuvent pas voir derrière eux.",
+        "npc": 820000,
+        "next": 72005604
+      },
+      {
+        "id": 72005604,
+        "content": "Alors moi aussi, je patrouille, mais dans la direction opposée.",
+        "npc": 820000,
+        "next": 72005605
+      },
+      {
+        "id": 72005605,
+        "content": "Comme ça, aucun méchant ne pourra s’approcher. Parfait !",
+        "npc": 820000,
+        "next": 72005606
+      },
+      {
+        "id": 72005702,
+        "content": "Les véhicules qui suivent toujours le même chemin s’appellent des trains.",
+        "npc": 820000,
+        "next": 72005703
+      },
+      {
+        "id": 72005703,
+        "content": "Alors un Géniemon qui suit toujours le même chemin devrait s’appeler... un Trainiemon !",
+        "npc": 820000,
+        "next": 72005704
+      },
+      {
+        "id": 72005704,
+        "content": "Tu trouves ça comment ? Moi, j’adore !",
+        "npc": 820000,
+        "next": 72005705
+      },
+      {
+        "id": 72005802,
+        "content": "Les trains sont vraiment bêtes. Ils ont besoin de rails pour leur montrer comment traverser un pont.",
+        "npc": 820000,
+        "next": 72005803
+      },
+      {
+        "id": 72005803,
+        "content": "Alors je vais leur montrer ! Il suffit de sauter comme ça !",
+        "npc": 820000,
+        "next": 72005804
+      },
+      {
+        "id": 72005804,
+        "content": "S’ils ne peuvent pas sauter, c’est leur problème ! Ils passent pourtant leur temps à courir, ils devraient être légers.",
+        "npc": 820000,
+        "next": 72005805
+      },
+      {
+        "id": 72005805,
+        "content": "Qu’est-ce qui ne va pas chez eux ?",
+        "npc": 820000,
+        "next": 72005806
+      },
+      {
+        "id": 72006302,
+        "content": "{空格}",
+        "npc": 820000,
+        "next": 72006303
+      },
+      {
+        "id": 72006303,
+        "content": "{空格}",
+        "npc": 820000,
+        "next": 72006304
+      },
+      {
+        "id": 72004702,
+        "content": "Le verre est transparent, alors d’habitude, personne ne fait attention à lui.",
+        "npc": 820000,
+        "next": 72004703
+      },
+      {
+        "id": 72004703,
+        "content": "Sauf quand son visage est sale. Là, quelqu’un vient lui nettoyer le visage.",
+        "npc": 820000,
+        "next": 72004704
+      },
+      {
+        "id": 72004704,
+        "content": "Alors, si tu es venu me voir... c’est parce que j’ai sali quelque chose ?",
+        "npc": 820000,
+        "next": 72004705
+      }
+    ],
+    "groups": [
+      {
+        "id": 7090063,
+        "srId": 106001,
+        "pos": [
+          -10873,
+          -4790
+        ]
+      },
+      {
+        "id": 7090064,
+        "srId": 106001,
+        "pos": [
+          -3045,
+          4865
+        ]
+      },
+      {
+        "id": 7090065,
+        "srId": 106001,
+        "pos": [
+          -7976,
+          10
+        ]
+      },
+      {
+        "id": 7090070,
+        "srId": 106001,
+        "pos": [
+          -7982,
+          -655
+        ]
+      },
+      {
+        "id": 7090071,
+        "srId": 106001,
+        "pos": [
+          -6704,
+          7194
+        ]
+      },
+      {
+        "id": 7090075,
+        "srId": 106001,
+        "pos": [
+          -31907,
+          19386
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1063,
+    "name": "Paniemon",
+    "rewardId": 3011,
+    "dialogues": [
+      {
+        "id": 72005902,
+        "content": "Quelle forêt bien rangée !",
+        "npc": 820000,
+        "next": 72005903
+      },
+      {
+        "id": 72005903,
+        "content": "Ils ont tous le même aspect... Ils seraient nés de la même maman ?",
+        "npc": 820000,
+        "next": 72005904
+      },
+      {
+        "id": 72005904,
+        "content": "Hmm ? Ils sont fabriqués ? Les humains peuvent donner naissance à des structures métalliques ? C’est bien la première fois que j’entends ça. Tu essaies de me tromper, pas vrai ?",
+        "npc": 820000,
+        "next": 72005905
+      },
+      {
+        "id": 72006002,
+        "content": "{空格}",
+        "npc": 820000,
+        "next": 72006003
+      },
+      {
+        "id": 72006003,
+        "content": "{空格}",
+        "npc": 820000,
+        "next": 72006004
+      },
+      {
+        "id": 72006004,
+        "content": "{空格}",
+        "npc": 820000,
+        "next": 72006005
+      },
+      {
+        "id": 72006102,
+        "content": "Hmm... Cet endroit est très calme. Pas de gens, pas de voyageurs, même pas le bruit des trains...",
+        "npc": 820000,
+        "next": 72006103
+      },
+      {
+        "id": 72006103,
+        "content": "Enfin, c’est ce que je pensais avant d’arriver ici. Avec l’écho, on entend en réalité les trains encore plus clairement.",
+        "npc": 820000,
+        "next": 72006104
+      },
+      {
+        "id": 72006104,
+        "content": "Je vais partir maintenant. Il est temps de me mettre en route. Au revoir !",
+        "npc": 820000,
+        "next": 72006105
+      },
+      {
+        "id": 72006202,
+        "content": "Chut, j’ai découvert quelque chose : cet endroit est aussi une gare.",
+        "npc": 820000,
+        "next": 72006203
+      },
+      {
+        "id": 72006203,
+        "content": "Beaucoup d’animaux partent en même temps que les trains démarrent.",
+        "npc": 820000,
+        "next": 72006204
+      },
+      {
+        "id": 72006204,
+        "content": "Hmm ? Tu dis qu’ils ont juste peur ?",
+        "npc": 820000,
+        "next": 72006205
+      },
+      {
+        "id": 72006205,
+        "content": "Bon, alors je vais leur expliquer que les trains sont seulement très bruyants. Tant qu’on ne les gêne pas pendant qu’ils avancent, tout ira bien !",
+        "npc": 820000,
+        "next": 72006206
+      },
+      {
+        "id": 72004802,
+        "content": "Tout est en désordre, tout est en désordre.",
+        "npc": 820000,
+        "next": 72004803
+      },
+      {
+        "id": 72004803,
+        "content": "Cet endroit est toujours chaotique, tout le monde est occupé... alors je suis resté ici, pour voir combien de temps il faudrait avant que quelqu’un me remarque.",
+        "npc": 820000,
+        "next": 72004804
+      },
+      {
+        "id": 72004804,
+        "content": "Depuis combien de temps déjà... ? Hmm, on ne voit pas le soleil ici, alors je ne sais pas.",
+        "npc": 820000,
+        "next": 72004805
+      },
+      {
+        "id": 72004805,
+        "content": "Mais j’ai compté : les gens sont déjà passés par ici puis revenus plus de neuf mille fois !",
+        "npc": 820000,
+        "next": 72004806
+      },
+      {
+        "id": 72004902,
+        "content": "Cette fleur de bronze a un problème ! Une fleur est censée avoir un pistil !",
+        "npc": 820000,
+        "next": 72004903
+      },
+      {
+        "id": 72004903,
+        "content": "Une fleur sans pistil, c’est comme une personne sans cœur !",
+        "npc": 820000,
+        "next": 72004904
+      },
+      {
+        "id": 72004904,
+        "content": "Alors je suis ici pour jouer le rôle du pistil. Oui, bonjour, je suis le pistil.",
+        "npc": 820000,
+        "next": 72004905
+      },
+      {
+        "id": 72005002,
+        "content": "Quand je me réveille, je suis dans un endroit complètement différent ! Comme si j’avais voyagé en train.",
+        "npc": 820000,
+        "next": 72005003
+      },
+      {
+        "id": 72005003,
+        "content": "Merci, conducteur de train. Même si celui-là est en bois... alors ça devrait plutôt être... un train en bois ?",
+        "npc": 820000,
+        "next": 72005004
+      },
+      {
+        "id": 72005102,
+        "content": "Tous les humains ont leur propre chambre.",
+        "npc": 820000,
+        "next": 72005103
+      },
+      {
+        "id": 72005103,
+        "content": "Moi aussi, j’en veux une ! Ce sera ici !",
+        "npc": 820000,
+        "next": 72005104
+      },
+      {
+        "id": 72005104,
+        "content": "Bienvenue dans ma chambre ! Maintenant, je vais devoir trouver des meubles !",
+        "npc": 820000,
+        "next": 72005105
+      },
+      {
+        "id": 72005202,
+        "content": "Un toboggan, un toboggan ! C’est le meilleur toboggan du monde !",
+        "npc": 820000,
+        "next": 72005203
+      },
+      {
+        "id": 72005203,
+        "content": "Même si quelqu’un finit toujours par détruire mon toboggan, ce n’est pas grave.",
+        "npc": 820000,
+        "next": 72005204
+      },
+      {
+        "id": 72005204,
+        "content": "Je peux patiner sur cette grande surface bien plate !",
+        "npc": 820000,
+        "next": 72005205
+      },
+      {
+        "id": 72005302,
+        "content": "Toutes les caisses métalliques ici se ressemblent.",
+        "npc": 820000,
+        "next": 72005303
+      },
+      {
+        "id": 72005303,
+        "content": "Alors comment font-elles pour reconnaître leurs frères et sœurs ?",
+        "npc": 820000,
+        "next": 72005304
+      },
+      {
+        "id": 72005304,
+        "content": "Elles n’ont pas besoin de se reconnaître ? Impossible ! Sans famille, on se sentirait trop seul !",
+        "npc": 820000,
+        "next": 72005305
+      },
+      {
+        "id": 72005402,
+        "content": "Les humains tressent des fleurs en couronnes qu’ils déposent sur la tête des personnes qu’ils aiment.",
+        "npc": 820000,
+        "next": 72005403
+      },
+      {
+        "id": 72005403,
+        "content": "Moi, j’aime cet endroit. Alors j’ai dessiné un cercle et tressé une couronne avec mes empreintes pour lui offrir !",
+        "npc": 820000,
+        "next": 72005404
+      },
+      {
+        "id": 72005502,
+        "content": "Cet endroit est beaucoup trop dangereux ! Certaines hauteurs font au moins dix fois ma taille !",
+        "npc": 820000,
+        "next": 72005503
+      },
+      {
+        "id": 72005503,
+        "content": "Alors j’ai laissé des marques au centre de chaque planche.",
+        "npc": 820000,
+        "next": 72005504
+      },
+      {
+        "id": 72005504,
+        "content": "En suivant les marques, impossible de tomber !",
+        "npc": 820000,
+        "next": 72005505
+      },
+      {
+        "id": 72005602,
+        "content": "Les gardes patrouillent.",
+        "npc": 820000,
+        "next": 72005603
+      },
+      {
+        "id": 72005603,
+        "content": "Mais ils ne peuvent pas voir derrière eux.",
+        "npc": 820000,
+        "next": 72005604
+      },
+      {
+        "id": 72005604,
+        "content": "Alors moi aussi, je patrouille, mais dans la direction opposée.",
+        "npc": 820000,
+        "next": 72005605
+      },
+      {
+        "id": 72005605,
+        "content": "Comme ça, aucun méchant ne pourra s’approcher. Parfait !",
+        "npc": 820000,
+        "next": 72005606
+      },
+      {
+        "id": 72005702,
+        "content": "Les véhicules qui suivent toujours le même chemin s’appellent des trains.",
+        "npc": 820000,
+        "next": 72005703
+      },
+      {
+        "id": 72005703,
+        "content": "Alors un Géniemon qui suit toujours le même chemin devrait s’appeler... un Trainiemon !",
+        "npc": 820000,
+        "next": 72005704
+      },
+      {
+        "id": 72005704,
+        "content": "Tu trouves ça comment ? Moi, j’adore !",
+        "npc": 820000,
+        "next": 72005705
+      },
+      {
+        "id": 72005802,
+        "content": "Les trains sont vraiment bêtes. Ils ont besoin de rails pour leur montrer comment traverser un pont.",
+        "npc": 820000,
+        "next": 72005803
+      },
+      {
+        "id": 72005803,
+        "content": "Alors je vais leur montrer ! Il suffit de sauter comme ça !",
+        "npc": 820000,
+        "next": 72005804
+      },
+      {
+        "id": 72005804,
+        "content": "S’ils ne peuvent pas sauter, c’est leur problème ! Ils passent pourtant leur temps à courir, ils devraient être légers.",
+        "npc": 820000,
+        "next": 72005805
+      },
+      {
+        "id": 72005805,
+        "content": "Qu’est-ce qui ne va pas chez eux ?",
+        "npc": 820000,
+        "next": 72005806
+      },
+      {
+        "id": 72006302,
+        "content": "{空格}",
+        "npc": 820000,
+        "next": 72006303
+      },
+      {
+        "id": 72006303,
+        "content": "{空格}",
+        "npc": 820000,
+        "next": 72006304
+      },
+      {
+        "id": 72004702,
+        "content": "Le verre est transparent, alors d’habitude, personne ne fait attention à lui.",
+        "npc": 820000,
+        "next": 72004703
+      },
+      {
+        "id": 72004703,
+        "content": "Sauf quand son visage est sale. Là, quelqu’un vient lui nettoyer le visage.",
+        "npc": 820000,
+        "next": 72004704
+      },
+      {
+        "id": 72004704,
+        "content": "Alors, si tu es venu me voir... c’est parce que j’ai sali quelque chose ?",
+        "npc": 820000,
+        "next": 72004705
+      }
+    ],
+    "groups": [
+      {
+        "id": 7091038,
+        "srId": 106301,
+        "pos": [
+          -14669,
+          8847
+        ]
+      },
+      {
+        "id": 7091039,
+        "srId": 106301,
+        "pos": [
+          -9064,
+          17552
+        ]
+      },
+      {
+        "id": 7091040,
+        "srId": 106301,
+        "pos": [
+          -12266,
+          15492
+        ]
+      },
+      {
+        "id": 7091041,
+        "srId": 106301,
+        "pos": [
+          -19590,
+          11386
+        ]
+      },
+      {
+        "id": 7091042,
+        "srId": 106301,
+        "pos": [
+          -12930,
+          368
+        ]
+      },
+      {
+        "id": 7091043,
+        "srId": 106301,
+        "pos": [
+          -13386,
+          7056
+        ]
+      },
+      {
+        "id": 7091044,
+        "srId": 106301,
+        "pos": [
+          -16072,
+          13405
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1011,
+    "name": "Paniemon",
+    "rewardId": 3011,
+    "dialogues": [
+      {
+        "id": 72001002,
+        "content": "Le mur dit qu’il repousse ce qu’il veut repousser.",
+        "npc": 820000,
+        "next": 72001003
+      },
+      {
+        "id": 72001003,
+        "content": "Mais s’il t’apprécie... il te laisse entrer.",
+        "npc": 820000,
+        "next": 72001004
+      },
+      {
+        "id": 72000002,
+        "content": "兄弟，你好",
+        "npc": 820000,
+        "next": 72000003
+      },
+      {
+        "id": 72000003,
+        "content": "很高兴见到你",
+        "npc": 820000,
+        "next": 72000004
+      },
+      {
+        "id": 72001102,
+        "content": "Je croyais que ce coffre était un Poto Carta. Je lui ai demandé si longtemps de bouger...",
+        "npc": 820000,
+        "next": 72001103
+      },
+      {
+        "id": 72001103,
+        "content": "Mais non... J’aurais dû lui donner un petit coup de pied plus tôt.",
+        "npc": 820000,
+        "next": 72001104
+      },
+      {
+        "id": 72001202,
+        "content": "Cet arbre a l’air fatigué... Il s’est couché pour se reposer.",
+        "npc": 820000,
+        "next": 72001203
+      },
+      {
+        "id": 72001203,
+        "content": "Alors... la neige tombée au sol... peut-être qu’elle aussi a fini par se lasser de voler, et s’est posée pour se reposer ?",
+        "npc": 820000,
+        "next": 72001204
+      },
+      {
+        "id": 72001302,
+        "content": "Ici, il fait si bon... Tu peux t’asseoir avec moi.",
+        "npc": 820000,
+        "next": 72001303
+      },
+      {
+        "id": 72001303,
+        "content": "Mais pas trop longtemps, mes autres amis risqueraient d’avoir froid.",
+        "npc": 820000,
+        "next": 72001304
+      },
+      {
+        "id": 72001402,
+        "content": "Un chemin sans issue... hmm...",
+        "npc": 820000,
+        "next": 72001403
+      },
+      {
+        "id": 72001403,
+        "content": "Ou peut-être voulais-je dire... que j’aimerais rester seul un moment. Veux-tu... rester seul avec moi ?",
+        "npc": 820000,
+        "next": 72001404
+      },
+      {
+        "id": 72001404,
+        "content": "Mais alors... pourrait-on encore appeler cela être seul ?",
+        "npc": 820000,
+        "next": 72001405
+      },
+      {
+        "id": 72001502,
+        "content": "Ces maisons ont l’air si fatiguées... Leur peau est toute abîmée, tachetée...",
+        "npc": 820000,
+        "next": 72001503
+      },
+      {
+        "id": 72001503,
+        "content": "Comme j’aimerais qu’elles guérissent...",
+        "npc": 820000,
+        "next": 72001504
+      },
+      {
+        "id": 72001602,
+        "content": "Cette montagne est si haute ! Si brillante ! Et moi, tout en haut ! Je suis incroyable !",
+        "npc": 820000,
+        "next": 72001603
+      },
+      {
+        "id": 72001603,
+        "content": "<I>Yiiiip ! </>Ce n’est pas une montagne ? Mais alors... ?",
+        "npc": 820000,
+        "next": 72001604
+      },
+      {
+        "id": 72001604,
+        "content": "C’est grand, c’est pointu... donc c’est une montagne !",
+        "npc": 820000,
+        "next": 72001605
+      },
+      {
+        "id": 72001702,
+        "content": "Si tu vois bien le chemin sous tes pieds... tu n’auras plus peur des Souillés, pas vrai ?",
+        "npc": 820000,
+        "next": 72001703
+      },
+      {
+        "id": 72001703,
+        "content": "<I>Tadaa !</> Voilà, tout est illuminé.",
+        "npc": 820000,
+        "next": 72001704
+      },
+      {
+        "id": 72001802,
+        "content": "Il y a ici tant d’odeurs humaines ici... et pourtant, pas une seule présence.",
+        "npc": 820000,
+        "next": 72001803
+      },
+      {
+        "id": 72001803,
+        "content": "Où sont-ils donc passés ?",
+        "npc": 820000,
+        "next": 72001804
+      },
+      {
+        "id": 72001902,
+        "content": "<I>Hmpf !</> Tout le monde est assis côte à côte... sauf celui qui s’est enfui !",
+        "npc": 820000,
+        "next": 72001903
+      },
+      {
+        "id": 72001903,
+        "content": "Alors... que la grande fête des Cartas commence !",
+        "npc": 820000,
+        "next": 72001904
+      },
+      {
+        "id": 72002202,
+        "content": "J’aimerais faire la course avec les voitures de la route.",
+        "npc": 820000,
+        "next": 72002203
+      },
+      {
+        "id": 72002203,
+        "content": "Mais si elles courent trop vite... elles pourraient glisser. Et j’en serais si triste pour elles...",
+        "npc": 820000,
+        "next": 72002204
+      },
+      {
+        "id": 72002302,
+        "content": "Les fleurs sont si généreuses... Tous ceux qui les reçoivent sourient.",
+        "npc": 820000,
+        "next": 72002303
+      },
+      {
+        "id": 72002303,
+        "content": "Et si, en secret... elles chuchotaient des mots doux à leurs destinataires ?",
+        "npc": 820000,
+        "next": 72002304
+      },
+      {
+        "id": 72002402,
+        "content": "Dis... crois-tu qu’un être, un dieu peut-être, assez puissant, pourrait soulever le Lac du Deuil tout entier... et le croquer comme un bonbon ?",
+        "npc": 820000,
+        "next": 72002403
+      },
+      {
+        "id": 72002403,
+        "content": "Quel goût aurait-il ? Bleu... donc peut-être le goût du ciel ?",
+        "npc": 820000,
+        "next": 72002404
+      },
+      {
+        "id": 72002502,
+        "content": "Tu emmènes cette fleur avec toi ? Elle sera ravie.",
+        "npc": 820000,
+        "next": 72002503
+      },
+      {
+        "id": 72002503,
+        "content": "Comme ça, elle pourra partir en voyage... et découvrir d’autres horizons.",
+        "npc": 820000,
+        "next": 72002504
+      },
+      {
+        "id": 72002602,
+        "content": "<I>Mmh...</> Merci de m’avoir construit une maison.",
+        "npc": 820000,
+        "next": 72002603
+      },
+      {
+        "id": 72002603,
+        "content": "Si un jour tu grandis assez pour m’arriver à l’épaule, je t’invite à venir vivre ici. On sera voisins.",
+        "npc": 820000,
+        "next": 72002604
+      },
+      {
+        "id": 72002702,
+        "content": "Où veux-tu aller ?",
+        "npc": 820000,
+        "next": 72002703
+      },
+      {
+        "id": 72002703,
+        "content": "Si tu croises cet humain aux reflets de verre brisé... n’oublie pas de devenir son ami.",
+        "npc": 820000,
+        "next": 72002704
+      },
+      {
+        "id": 72002802,
+        "content": "<I>Cling cling ! Clang clang !</>",
+        "npc": 820000,
+        "next": 72002803
+      },
+      {
+        "id": 72002803,
+        "content": "C’est ainsi que chantent les bouteilles ! Alors ? Est-ce que je les imite bien ?",
+        "npc": 820000,
+        "next": 72002804
+      }
+    ],
+    "groups": [
+      {
+        "id": 7010091,
+        "srId": 101101,
+        "pos": [
+          -6800,
+          14207
+        ]
+      },
+      {
+        "id": 7010092,
+        "srId": 101101,
+        "pos": [
+          2622,
+          15568
+        ]
+      },
+      {
+        "id": 7010093,
+        "srId": 101101,
+        "pos": [
+          -5764,
+          3585
+        ]
+      },
+      {
+        "id": 7010094,
+        "srId": 101101,
+        "pos": [
+          -1875,
+          2287
+        ]
+      },
+      {
+        "id": 7010095,
+        "srId": 101101,
+        "pos": [
+          -3618,
+          -10058
+        ]
+      },
+      {
+        "id": 7010096,
+        "srId": 101101,
+        "pos": [
+          -2836,
+          -1235
+        ]
+      },
+      {
+        "id": 7010100,
+        "srId": 101101,
+        "pos": [
+          -11678,
+          279
+        ]
+      },
+      {
+        "id": 7011065,
+        "srId": 101103,
+        "pos": [
+          -25486,
+          -3701
+        ]
+      },
+      {
+        "id": 7011066,
+        "srId": 101103,
+        "pos": [
+          -31822,
+          -12454
+        ]
+      },
+      {
+        "id": 7011068,
+        "srId": 101103,
+        "pos": [
+          -29450,
+          -9128
+        ]
+      },
+      {
+        "id": 7017050,
+        "srId": 101103,
+        "pos": [
+          -12528,
+          -1850
+        ]
+      },
+      {
+        "id": 7017070,
+        "srId": 101103,
+        "pos": [
+          -33946,
+          11686
+        ]
+      },
+      {
+        "id": 7017074,
+        "srId": 101103,
+        "pos": [
+          -45413,
+          -7469
+        ]
+      },
+      {
+        "id": 7060003,
+        "srId": 101108,
+        "pos": [
+          37795,
+          13388
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1013,
+    "name": "Paniemon",
+    "rewardId": 3011,
+    "dialogues": [
+      {
+        "id": 72000002,
+        "content": "兄弟，你好",
+        "npc": 820000,
+        "next": 72000003
+      },
+      {
+        "id": 72000003,
+        "content": "很高兴见到你",
+        "npc": 820000,
+        "next": 72000004
+      },
+      {
+        "id": 72004002,
+        "content": "Chaque lampe éteinte, c’est quelqu’un qui n’est pas rentré chez lui...",
+        "npc": 820000,
+        "next": 72004003
+      },
+      {
+        "id": 72004003,
+        "content": "Alors chaque lampe allumée, c’est quelqu’un qui est rentré à la maison, pas vrai ?",
+        "npc": 820000,
+        "next": 72004004
+      },
+      {
+        "id": 72004102,
+        "content": "<I>Yiiiip !</> Pourquoi as-tu cassé mon petit nid ?",
+        "npc": 820000,
+        "next": 72004103
+      },
+      {
+        "id": 72004103,
+        "content": "On dit que dormir sur un lit tout dur permet de forger sa volonté.",
+        "npc": 820000,
+        "next": 72004104
+      },
+      {
+        "id": 72004202,
+        "content": "À quoi ça sert, d’empiler des caisses aussi haut ?",
+        "npc": 820000,
+        "next": 72004203
+      },
+      {
+        "id": 72004203,
+        "content": "Autant me les laisser pour en faire une maison.",
+        "npc": 820000,
+        "next": 72004204
+      }
+    ],
+    "groups": [
+      {
+        "id": 7012018,
+        "srId": 101301,
+        "pos": [
+          10360,
+          4110
+        ]
+      },
+      {
+        "id": 7018008,
+        "srId": 101304,
+        "pos": [
+          17200,
+          34020
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1021,
+    "name": "Paniemon",
+    "rewardId": 3011,
+    "dialogues": [
+      {
+        "id": 72000002,
+        "content": "兄弟，你好",
+        "npc": 820000,
+        "next": 72000003
+      },
+      {
+        "id": 72000003,
+        "content": "很高兴见到你",
+        "npc": 820000,
+        "next": 72000004
+      },
+      {
+        "id": 72003102,
+        "content": "Que cherches-tu ?",
+        "npc": 820000,
+        "next": 72003103
+      },
+      {
+        "id": 72003103,
+        "content": "Si ce n’est pas moi, je peux t’aider à trouver.",
+        "npc": 820000,
+        "next": 72003104
+      },
+      {
+        "id": 72003302,
+        "content": "Beaucoup sont venus... Beaucoup sont repartis.",
+        "npc": 820000,
+        "next": 72003303
+      },
+      {
+        "id": 72003303,
+        "content": "Trop d’odeurs, je n’arrive pas à toutes les retenir... Et toi, tu t’en souviens ?",
+        "npc": 820000,
+        "next": 72003304
+      },
+      {
+        "id": 72003402,
+        "content": "Voici mon trésor ! Seuls ceux qui triomphent de l’épreuve de sagesse peuvent entrer !",
+        "npc": 820000,
+        "next": 72003403
+      },
+      {
+        "id": 72003403,
+        "content": "Alors dis-moi... ici, dans cette forteresse... quelle couleur te laisse passer ?",
+        "npc": 820000
+      },
+      {
+        "id": 72003502,
+        "content": "<I>Aïe, aïe !</> La vapeur m’a frappé !",
+        "npc": 820000,
+        "next": 72003503
+      },
+      {
+        "id": 72003503,
+        "content": "Elle est méchante... je la déteste. Toi non plus, ne deviens pas son ami.",
+        "npc": 820000,
+        "next": 72003504
+      },
+      {
+        "id": 72003602,
+        "content": "Ici... ça sent un peu comme dehors. Ça sent la joie, la grandeur.",
+        "npc": 820000,
+        "next": 72003603
+      },
+      {
+        "id": 72003603,
+        "content": "Rien à voir avec ces lieux saturés de cris et de bagarres.",
+        "npc": 820000,
+        "next": 72003604
+      },
+      {
+        "id": 72003407,
+        "content": "Exact ! Tu as choisi la couleur du passage ! Alors je t’ouvre la voie !",
+        "npc": 820000,
+        "next": 72003409
+      },
+      {
+        "id": 72003408,
+        "content": "Non... réfléchis encore. Plus fort, bien plus fort !",
+        "npc": 820000,
+        "next": 72003409
+      },
+      {
+        "id": 72003702,
+        "content": "Alors... si Miaouzz compte comme une voiture... combien y en a-t-il dans cette pièce ?",
+        "npc": 820000
+      },
+      {
+        "id": 72003706,
+        "content": "<I>Yiiiip ! </>Recompte encore, pour être sûr.",
+        "npc": 820000,
+        "next": 72003708
+      },
+      {
+        "id": 72003707,
+        "content": "Exact ! Mais dis-moi... qui est venu en premier : les voitures, ou Miaouzz ?",
+        "npc": 820000,
+        "next": 72003708
+      },
+      {
+        "id": 72000602,
+        "content": "Tourne... tourne... ouh, j’ai le tournis...",
+        "npc": 820000,
+        "next": 72000603
+      },
+      {
+        "id": 72000603,
+        "content": "Ce machin est dangereux ! Rempli de Phoxichor, et pourtant il ne cesse de tourner. Serait-ce... un piège ?",
+        "npc": 820000,
+        "next": 72000604
+      },
+      {
+        "id": 72000702,
+        "content": "Un groupe fuit, un autre poursuit...",
+        "npc": 820000,
+        "next": 72000703
+      },
+      {
+        "id": 72000703,
+        "content": "Les humains aiment aussi jouer à cache-cache ? Mais vous... vous n’avez pas l’air de vous amuser.",
+        "npc": 820000,
+        "next": 72000704
+      },
+      {
+        "id": 72000802,
+        "content": "Trois soldats s’en vont au zoo... Deux soldats courent après le soleil...",
+        "npc": 820000,
+        "next": 72000803
+      },
+      {
+        "id": 72000803,
+        "content": "Et un seul... connaîtra la paix.",
+        "npc": 820000,
+        "next": 72000804
+      },
+      {
+        "id": 72000902,
+        "content": "Voilà, plus personne ne s’assoit de travers.",
+        "npc": 820000,
+        "next": 72000903
+      },
+      {
+        "id": 72000903,
+        "content": "Et plus de genoux cognés... même pour les grandes jambes.",
+        "npc": 820000,
+        "next": 72000904
+      }
+    ],
+    "groups": [
+      {
+        "id": 7030055,
+        "srId": 102101,
+        "pos": [
+          -4267,
+          -47051
+        ]
+      },
+      {
+        "id": 7030071,
+        "srId": 102101,
+        "pos": [
+          -6281,
+          -3629
+        ]
+      },
+      {
+        "id": 7030072,
+        "srId": 102101,
+        "pos": [
+          11421,
+          -48647
+        ]
+      },
+      {
+        "id": 7030074,
+        "srId": 102101,
+        "pos": [
+          -2443,
+          -42175
+        ]
+      },
+      {
+        "id": 7030081,
+        "srId": 102101,
+        "pos": [
+          11012,
+          -31063
+        ]
+      },
+      {
+        "id": 7031051,
+        "srId": 102102,
+        "pos": [
+          -5805,
+          -20124
+        ]
+      },
+      {
+        "id": 7031052,
+        "srId": 102102,
+        "pos": [
+          -17744,
+          -8834
+        ]
+      },
+      {
+        "id": 7031063,
+        "srId": 102102,
+        "pos": [
+          -10601,
+          3126
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1070,
+    "name": "Paniemon",
+    "rewardId": 3011,
+    "dialogues": [
+      {
+        "id": 72007002,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72007003
+      },
+      {
+        "id": 72007003,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72007004
+      },
+      {
+        "id": 72006502,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72006503
+      },
+      {
+        "id": 72006503,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72006504
+      },
+      {
+        "id": 72007202,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72007203
+      },
+      {
+        "id": 72007203,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72007204
+      },
+      {
+        "id": 72007302,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72007303
+      },
+      {
+        "id": 72007303,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72007304
+      },
+      {
+        "id": 72007402,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72007403
+      },
+      {
+        "id": 72007403,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72007404
+      },
+      {
+        "id": 72007502,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72007503
+      },
+      {
+        "id": 72007503,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72007504
+      },
+      {
+        "id": 72007602,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72007603
+      },
+      {
+        "id": 72007603,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72007604
+      },
+      {
+        "id": 72007702,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72007703
+      },
+      {
+        "id": 72007703,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72007704
+      },
+      {
+        "id": 72006902,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72006903
+      },
+      {
+        "id": 72006903,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72006904
+      },
+      {
+        "id": 72006402,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72006403
+      },
+      {
+        "id": 72006403,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72006404
+      },
+      {
+        "id": 72006602,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72006603
+      },
+      {
+        "id": 72006603,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72006604
+      },
+      {
+        "id": 72006702,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72006703
+      },
+      {
+        "id": 72006703,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72006704
+      },
+      {
+        "id": 72006802,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72006803
+      },
+      {
+        "id": 72006803,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72006804
+      },
+      {
+        "id": 72007102,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72007103
+      },
+      {
+        "id": 72007103,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72007104
+      }
+    ],
+    "groups": [
+      {
+        "id": 7085013,
+        "srId": 107001,
+        "pos": [
+          -8008,
+          -74933
+        ]
+      },
+      {
+        "id": 7085014,
+        "srId": 107001,
+        "pos": [
+          -17930,
+          -83700
+        ]
+      },
+      {
+        "id": 7085015,
+        "srId": 107001,
+        "pos": [
+          -12670,
+          -76496
+        ]
+      },
+      {
+        "id": 7085016,
+        "srId": 107001,
+        "pos": [
+          -1647,
+          -28375
+        ]
+      },
+      {
+        "id": 7085029,
+        "srId": 107001,
+        "pos": [
+          -30750,
+          -84730
+        ]
+      },
+      {
+        "id": 7085030,
+        "srId": 107001,
+        "pos": [
+          -27640,
+          -79290
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1071,
+    "name": "Paniemon",
+    "rewardId": 3011,
+    "dialogues": [
+      {
+        "id": 72007002,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72007003
+      },
+      {
+        "id": 72007003,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72007004
+      },
+      {
+        "id": 72006502,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72006503
+      },
+      {
+        "id": 72006503,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72006504
+      },
+      {
+        "id": 72007202,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72007203
+      },
+      {
+        "id": 72007203,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72007204
+      },
+      {
+        "id": 72007302,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72007303
+      },
+      {
+        "id": 72007303,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72007304
+      },
+      {
+        "id": 72007402,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72007403
+      },
+      {
+        "id": 72007403,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72007404
+      },
+      {
+        "id": 72007502,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72007503
+      },
+      {
+        "id": 72007503,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72007504
+      },
+      {
+        "id": 72007602,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72007603
+      },
+      {
+        "id": 72007603,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72007604
+      },
+      {
+        "id": 72007702,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72007703
+      },
+      {
+        "id": 72007703,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72007704
+      },
+      {
+        "id": 72006902,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72006903
+      },
+      {
+        "id": 72006903,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72006904
+      },
+      {
+        "id": 72006402,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72006403
+      },
+      {
+        "id": 72006403,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72006404
+      },
+      {
+        "id": 72006602,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72006603
+      },
+      {
+        "id": 72006603,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72006604
+      },
+      {
+        "id": 72006702,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72006703
+      },
+      {
+        "id": 72006703,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72006704
+      },
+      {
+        "id": 72006802,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72006803
+      },
+      {
+        "id": 72006803,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72006804
+      },
+      {
+        "id": 72007102,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72007103
+      },
+      {
+        "id": 72007103,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72007104
+      }
+    ],
+    "groups": [
+      {
+        "id": 7086014,
+        "srId": 107101,
+        "pos": [
+          -33580,
+          -28827
+        ]
+      },
+      {
+        "id": 7086017,
+        "srId": 107101,
+        "pos": [
+          -48060,
+          -36140
+        ]
+      },
+      {
+        "id": 7086018,
+        "srId": 107101,
+        "pos": [
+          -29480,
+          -29400
+        ]
+      },
+      {
+        "id": 7086020,
+        "srId": 107101,
+        "pos": [
+          -29120,
+          -37110
+        ]
+      },
+      {
+        "id": 7086022,
+        "srId": 107101,
+        "pos": [
+          -27032,
+          -22056
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1072,
+    "name": "Paniemon",
+    "rewardId": 3011,
+    "dialogues": [
+      {
+        "id": 72007002,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72007003
+      },
+      {
+        "id": 72007003,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72007004
+      },
+      {
+        "id": 72006502,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72006503
+      },
+      {
+        "id": 72006503,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72006504
+      },
+      {
+        "id": 72007202,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72007203
+      },
+      {
+        "id": 72007203,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72007204
+      },
+      {
+        "id": 72007302,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72007303
+      },
+      {
+        "id": 72007303,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72007304
+      },
+      {
+        "id": 72007402,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72007403
+      },
+      {
+        "id": 72007403,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72007404
+      },
+      {
+        "id": 72007502,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72007503
+      },
+      {
+        "id": 72007503,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72007504
+      },
+      {
+        "id": 72007602,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72007603
+      },
+      {
+        "id": 72007603,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72007604
+      },
+      {
+        "id": 72007702,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72007703
+      },
+      {
+        "id": 72007703,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72007704
+      },
+      {
+        "id": 72006902,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72006903
+      },
+      {
+        "id": 72006903,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72006904
+      },
+      {
+        "id": 72006402,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72006403
+      },
+      {
+        "id": 72006403,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72006404
+      },
+      {
+        "id": 72006602,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72006603
+      },
+      {
+        "id": 72006603,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72006604
+      },
+      {
+        "id": 72006702,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72006703
+      },
+      {
+        "id": 72006703,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72006704
+      },
+      {
+        "id": 72006802,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72006803
+      },
+      {
+        "id": 72006803,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72006804
+      },
+      {
+        "id": 72007102,
+        "content": "<I>Yiiiip !</> Tu m’as trouvé.",
+        "npc": 820000,
+        "next": 72007103
+      },
+      {
+        "id": 72007103,
+        "content": "Il y a vraiment plein de choses amusantes au Paradis. On se retrouve au prochain endroit~",
+        "npc": 820000,
+        "next": 72007104
+      }
+    ],
+    "groups": [
+      {
+        "id": 7087012,
+        "srId": 107201,
+        "pos": [
+          20806,
+          -2349
+        ]
+      },
+      {
+        "id": 7087016,
+        "srId": 107201,
+        "pos": [
+          12672,
+          -28134
+        ]
+      },
+      {
+        "id": 7087017,
+        "srId": 107201,
+        "pos": [
+          -31480,
+          -13270
+        ]
+      }
+    ]
+  }
+]

@@ -186,7 +186,7 @@ function normalizeLevelKey(filePath: string): string | undefined {
     return stem ? stem.toLowerCase() : undefined
 }
 
-function collectDesignFiles(mapsRoot: string, level: string): string[] {
+export function collectDesignFiles(mapsRoot: string, level: string): string[] {
     const result: string[] = []
     const stack = [mapsRoot]
     while (stack.length > 0) {
@@ -232,7 +232,7 @@ function collectDesignFiles(mapsRoot: string, level: string): string[] {
     return result.sort((a, b) => a.length - b.length || a.localeCompare(b))
 }
 
-function iterNodes(data: unknown): Row[] {
+export function iterNodes(data: unknown): Row[] {
     if (Array.isArray(data)) return data.filter((item): item is Row => !!item && typeof item === "object" && !Array.isArray(item))
     if (!data || typeof data !== "object") return []
     const result: Row[] = []
@@ -284,7 +284,7 @@ function toVec3(value: unknown): number[] | undefined {
     return Number.isFinite(x) && Number.isFinite(y) && Number.isFinite(z) ? [x, y, z] : undefined
 }
 
-function roundEven(value: number): number {
+export function roundEven(value: number): number {
     const sign = value < 0 ? -1 : 1
     const absolute = Math.abs(value)
     const floor = Math.floor(absolute)
