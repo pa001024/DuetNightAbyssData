@@ -82,6 +82,20 @@ export function skinModule(ctx: ModuleContext): VNodeTree {
             icon: iconName(skin.Icon),
             rarity: skin.Rarity ?? 0,
         }
+        // 立绘贴图基名：有 BigIcon 的皮肤（如限定皮肤）直接取其基名；基础皮肤
+        // （SkinId == CharId）沿用角色立绘，由图标名按游戏资源命名规则派生。
+        // 月石皮（如发条旋舞）等既无 BigIcon 又非基础皮肤的条目没有立绘，不输出该字段，
+        // 下游展示时不得再按 T_Head_ 前缀臆测。基名仅表达游戏侧的引用关系，不保证对应贴图
+        // 已在当前客户端解包/下游资源包中落盘，资源存在性由下游打包环节判定。
+        const bigIcon = skin.BigIcon !== undefined && skin.BigIcon !== "" ? iconName(skin.BigIcon) : ""
+        if (bigIcon) {
+            output.bust = bigIcon
+        } else if (skin.CharId !== undefined && skin.CharId !== "" && Number(skin.CharId) === skinId) {
+            const baseIcon = output.icon
+            if (typeof baseIcon === "string" && baseIcon.startsWith("T_Head_")) {
+                output.bust = baseIcon.replace("_Head", "_Bust")
+            }
+        }
         if (skin.CharId !== undefined && skin.CharId !== "") output.charId = skin.CharId
         if (skin.SkinTag !== undefined && skin.SkinTag !== "") output.tag = skin.SkinTag
         if (skin.ReleaseVersion) output.release = processRelease(skin.ReleaseVersion)

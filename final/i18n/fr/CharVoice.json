@@ -8021,7 +8021,7 @@
     "name": "Discussion : Rencontre aléatoire : I",
     "res": "char_SpLise_vo_companio_01",
     "text": "Cet ami que je n’ai jamais eu l’occasion de rencontrer... Merci d’avoir accompagné Blues pendant les moments sombres où je n’étais pas là.",
-    "companioCharId": 1503
+    "companioCharId": 1103
   },
   {
     "id": 11174,
@@ -8029,7 +8029,7 @@
     "name": "Discussion : Rencontre aléatoire : II",
     "res": "char_SpLise_vo_companio_02",
     "text": "Ton cocktail est excellent. Je ne suis simplement pas encore habituée au goût de l’alcool. Si possible, pourrais-tu m’en préparer un adapté aux débutants ? Je le dégusterai avec attention... puis je rédigerai un rapport de dégustation de cinq cents mots.",
-    "companioCharId": 1503
+    "companioCharId": 3202
   },
   {
     "id": 11175,
@@ -8037,7 +8037,7 @@
     "name": "Discussion : Rencontre aléatoire : III",
     "res": "char_SpLise_vo_companio_03",
     "text": "Alors, la jeune fille mentionnée dans les renseignements n’était pas Berenica... Désolée d’avoir entraîné {nickname} dans les machinations des Déchus. Je ferai tout mon possible pour vous aider à retrouver sa trace.",
-    "companioCharId": 1503
+    "companioCharId": 5102
   },
   {
     "id": 11176,

@@ -8021,7 +8021,7 @@
     "name": "잡담·우연한 만남 Ⅰ",
     "res": "char_SpLise_vo_companio_01",
     "text": "만나뵙지 못한 그 친구분이군요...? 제가 없는 동안, 블루스와 함께 힘든 시간들을 견뎌 줘서, 정말 고마워요.",
-    "companioCharId": 1503
+    "companioCharId": 1103
   },
   {
     "id": 11174,
@@ -8029,7 +8029,7 @@
     "name": "잡담·우연한 만남 Ⅱ",
     "res": "char_SpLise_vo_companio_02",
     "text": "훌륭한 칵테일이지만, 아직 술에 익숙하지 않아서요. 실례가 안 된다면, 입문자용으로 한 잔 부탁드려도 될까요? 진지하게 시음해 보고, 500자 분량의 보고서를 작성해서 제출할게요.",
-    "companioCharId": 1503
+    "companioCharId": 3202
   },
   {
     "id": 11175,
@@ -8037,7 +8037,7 @@
     "name": "잡담·우연한 만남 Ⅲ",
     "res": "char_SpLise_vo_companio_03",
     "text": "그 정보의 아가씨는 베레니카 씨가 아니었던 건가요... {nickname} 씨가 포세이큰 동맹의 음모에 휘말리게 해서 미안해요. 제가 그분의 행방을 찾을 수 있게 최선을 다해 도울게요.",
-    "companioCharId": 1503
+    "companioCharId": 5102
   },
   {
     "id": 11176,

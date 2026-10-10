@@ -8021,7 +8021,7 @@
     "name": "Chitchat: Chance Encounter Ⅰ",
     "res": "char_SpLise_vo_companio_01",
     "text": "To the friend I've never met... thank you. For being there for Blues when I couldn't be.",
-    "companioCharId": 1503
+    "companioCharId": 1103
   },
   {
     "id": 11174,
@@ -8029,7 +8029,7 @@
     "name": "Chitchat: Chance Encounter Ⅱ",
     "res": "char_SpLise_vo_companio_02",
     "text": "Your wine is good, but I'm still not used to the taste. Could you make me something milder? I'll drink it properly and write a five-hundred-word recommendation for you.",
-    "companioCharId": 1503
+    "companioCharId": 3202
   },
   {
     "id": 11175,
@@ -8037,7 +8037,7 @@
     "name": "Chitchat: Chance Encounter Ⅲ",
     "res": "char_SpLise_vo_companio_03",
     "text": "So the girl in the intel wasn't Berenica... I'm sorry you got dragged into the Forsakens's schemes. I'll do everything I can to help you find {nickname}.",
-    "companioCharId": 1503
+    "companioCharId": 5102
   },
   {
     "id": 11176,

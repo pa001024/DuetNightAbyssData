@@ -5,6 +5,7 @@
     "desc": "Black is the colour of night — a calm, watchful veil drawn over the world. Black is the colour of shadow — a cloak that lets one remain ever near to those they hold dear. Berenica favours it.",
     "icon": "T_Head_Heitao",
     "rarity": 5,
+    "bust": "T_Bust_Heitao",
     "charId": 1101,
     "release": "1.0",
     "defaultItem": {
@@ -30,6 +31,7 @@
     "desc": "Wherever she goes, the shadow of Hyperborea hangs over her — a dark, invisible cage that never lifts.",
     "icon": "T_Head_Fuluo",
     "rarity": 5,
+    "bust": "T_Bust_Fuluo",
     "charId": 1102,
     "release": "1.0",
     "defaultItem": {
@@ -55,6 +57,7 @@
     "desc": "A shadow in motion. A fumbling actor on a stage. A tale spun by a fool.",
     "icon": "T_Head_Tuosi",
     "rarity": 5,
+    "bust": "T_Bust_Tuosi",
     "charId": 1103,
     "release": "1.0",
     "defaultItem": {
@@ -80,6 +83,7 @@
     "desc": "Drifting through night and sea, in robes of white, to meet the dawn.",
     "icon": "T_Head_Nvzhu02",
     "rarity": 5,
+    "bust": "T_Bust_Nvzhu02",
     "charId": 1201,
     "release": "1.4"
   },
@@ -89,6 +93,7 @@
     "desc": "The Elysian Church's doctrine is not merely stitched into fabric — it is etched upon the soul, bearing witness to a girl who time and again sheds her rage, and rises patient and resolute.",
     "icon": "T_Head_Baonu",
     "rarity": 5,
+    "bust": "T_Bust_Baonu",
     "charId": 1501,
     "release": "1.0",
     "defaultItem": {
@@ -114,6 +119,7 @@
     "desc": "Gauzy veils, spun of dusk and aurora, guide each soul across the tear-brimmed river — to the Misty Sea, where all are reborn.",
     "icon": "T_Head_Nifu",
     "rarity": 5,
+    "bust": "T_Bust_Nifu",
     "charId": 1502,
     "release": "1.0",
     "defaultItem": {
@@ -139,6 +145,7 @@
     "desc": "Rain slips from flowing robes, gathers at the sword's tip, then vanishes into the world of drifting blades.",
     "icon": "T_Head_Kezhou",
     "rarity": 5,
+    "bust": "T_Bust_Kezhou",
     "charId": 1503,
     "release": "1.1",
     "defaultItem": {
@@ -164,6 +171,7 @@
     "desc": "Let dreams soar and pride aloft, with a pinch of cyan, a measure of wit, and a breath of dawn.",
     "icon": "T_Head_Suyi",
     "rarity": 5,
+    "bust": "T_Bust_Suyi",
     "charId": 1504,
     "release": "1.3",
     "defaultItem": {
@@ -189,6 +197,7 @@
     "desc": "Drifting through night and sea, in robes of white, to meet the dawn.",
     "icon": "T_Head_Nvzhu",
     "rarity": 5,
+    "bust": "T_Bust_Nvzhu",
     "charId": 1601,
     "release": "1.0",
     "defaultItem": {
@@ -207,6 +216,7 @@
     "desc": "The nightingale pins snowy plumes to her tale, letting the delicate wings carry her dreams into the clouds.",
     "icon": "T_Head_Feina",
     "rarity": 5,
+    "bust": "T_Bust_Feina",
     "charId": 1801,
     "release": "1.0",
     "defaultItem": {
@@ -232,6 +242,7 @@
     "desc": "Jellyfish tendrils drift into the deep like a trailing hem, setting a lover's heart aquiver in the dark.",
     "icon": "T_Head_Shuimu",
     "rarity": 5,
+    "bust": "T_Bust_Shuimu",
     "charId": 2101,
     "release": "1.0",
     "defaultItem": {
@@ -257,6 +268,7 @@
     "desc": "The blue folds ripple like layered water, mirroring a vibrant world caught in her gaze.",
     "icon": "T_Head_Eve",
     "rarity": 5,
+    "bust": "T_Bust_Eve",
     "charId": 2102,
     "release": "1.5",
     "defaultItem": {
@@ -282,6 +294,7 @@
     "desc": "Drifting through night and sea, in robes of white, to meet the dawn.",
     "icon": "T_Head_WeitaF",
     "rarity": 5,
+    "bust": "T_Bust_WeitaF",
     "charId": 2201,
     "release": "1.6"
   },
@@ -291,6 +304,7 @@
     "desc": "What writhes in the dark — conspiracy, chaos, crime? None of those. Just tentacles.",
     "icon": "T_Head_Zhangyu",
     "rarity": 5,
+    "bust": "T_Bust_Zhangyu",
     "charId": 2301,
     "release": "1.0",
     "defaultItem": {
@@ -316,6 +330,7 @@
     "desc": "Wisps of herbal fragrance drift through white sleeves, whispering of life's return to the withered.",
     "icon": "T_Head_Baiheng",
     "rarity": 5,
+    "bust": "T_Bust_Baiheng",
     "charId": 2401,
     "release": "1.1",
     "defaultItem": {
@@ -341,6 +356,7 @@
     "desc": "Gunpowder warmth clings to the matte uniform — driven on by the pulse of fervent blood.",
     "icon": "T_Head_Linen",
     "rarity": 5,
+    "bust": "T_Bust_Linen",
     "charId": 3101,
     "release": "1.0",
     "defaultItem": {
@@ -366,6 +382,7 @@
     "desc": "A delicate bouquet in her hands, a hidden arsenal beneath her skirt. Like the black and white of her dress, she walks the line between light and shadow, each day a quiet verse in a maid's silent devotion.",
     "icon": "T_Head_Xier",
     "rarity": 5,
+    "bust": "T_Bust_Xier",
     "charId": 3102,
     "release": "1.4",
     "defaultItem": {
@@ -391,6 +408,7 @@
     "desc": "Burning threads of red and white bind a madman's reveries — and stitch together a boy's innocent dream.",
     "icon": "T_Head_Yeer",
     "rarity": 5,
+    "bust": "T_Bust_Yeer",
     "charId": 3103,
     "release": "1.0",
     "defaultItem": {
@@ -416,6 +434,7 @@
     "desc": "Tattered by lies and betrayal, these rags can barely contain the vengeance burning within.",
     "icon": "T_Head_Falu",
     "rarity": 5,
+    "bust": "T_Bust_Falu",
     "charId": 3104,
     "release": "1.0",
     "defaultItem": {
@@ -441,6 +460,7 @@
     "desc": "Chains and thorns mark retribution for sin — and bind the righteous fire that burns within.",
     "icon": "T_Head_Haier",
     "rarity": 5,
+    "bust": "T_Bust_Haier",
     "charId": 3201,
     "release": "1.0",
     "defaultItem": {
@@ -466,6 +486,7 @@
     "desc": "A figure limned in luminous grace, every gesture steeped in wine and whispered dusk.",
     "icon": "T_Head_Kami",
     "rarity": 5,
+    "bust": "T_Bust_Kami",
     "charId": 3202,
     "release": "1.3",
     "defaultItem": {
@@ -491,6 +512,7 @@
     "desc": "A multipurpose helmet forged from a pot — sturdy armour for a scavenger girl.",
     "icon": "T_Head_Maer",
     "rarity": 5,
+    "bust": "T_Bust_Maer",
     "charId": 3301,
     "release": "1.0",
     "defaultItem": {
@@ -516,6 +538,7 @@
     "desc": "Star-flecked blue shimmers across her uniform — a will to protect, and a gaze lifted towards the future.",
     "icon": "T_Head_Lise",
     "rarity": 5,
+    "bust": "T_Bust_Lise",
     "charId": 4101,
     "release": "1.0",
     "defaultItem": {
@@ -541,6 +564,7 @@
     "desc": "Sunlight spills across sumptuous brocade like molten gold — the dawn of revolution reflected in her golden eyes.",
     "icon": "T_Head_Zhiliu",
     "rarity": 5,
+    "bust": "T_Bust_Zhiliu",
     "charId": 4102,
     "release": "1.2",
     "defaultItem": {
@@ -566,6 +590,7 @@
     "desc": "她披着一身干练的红色衣装，如暖阳、如火焰、如灯火般闪耀在寒冷的大地上。",
     "icon": "T_Head_SpLise",
     "rarity": 5,
+    "bust": "T_Bust_SpLise",
     "charId": 4103,
     "release": "1.7",
     "defaultItem": {
@@ -591,6 +616,7 @@
     "desc": "Heaven's thunder courses through his form. Upholding Dafeng's mandate, sin finds no refuge — nor does he.",
     "icon": "T_Head_Yuming",
     "rarity": 5,
+    "bust": "T_Bust_Yuming",
     "charId": 4201,
     "release": "1.2",
     "defaultItem": {
@@ -616,6 +642,7 @@
     "desc": "A medal gleams with a genius mind above. A uniform beats the heart of an ordinary man below.",
     "icon": "T_Head_Landi",
     "rarity": 5,
+    "bust": "T_Bust_Landi",
     "charId": 4202,
     "release": "1.0",
     "defaultItem": {
@@ -641,6 +668,7 @@
     "desc": "She wears neither armour nor crown — yet her presence resounds with commanding dread.",
     "icon": "T_Head_Xibi",
     "rarity": 5,
+    "bust": "T_Bust_Xibi",
     "charId": 4301,
     "release": "1.0",
     "defaultItem": {
@@ -666,6 +694,7 @@
     "desc": "White plumes flutter through the streets, trailing the scent of malt and hearthfire — borne on the wind to every empty stomach.",
     "icon": "T_Head_Songlu",
     "rarity": 5,
+    "bust": "T_Bust_Songlu",
     "charId": 5101,
     "release": "1.0",
     "defaultItem": {
@@ -691,6 +720,7 @@
     "desc": "Simple garb won't silence the crimson wails of dark alleys — but it shelters a sliver of starlight from the world's brutality.",
     "icon": "T_Head_Aote",
     "rarity": 5,
+    "bust": "T_Bust_Aote",
     "charId": 5102,
     "release": "1.0",
     "defaultItem": {
@@ -716,6 +746,7 @@
     "desc": "A butterfly rests in the crook of her arm, bearing dreams that crossed the winter frost.",
     "icon": "T_Head_Saiqi",
     "rarity": 5,
+    "bust": "T_Bust_Saiqi",
     "charId": 5301,
     "release": "1.0",
     "defaultItem": {
@@ -741,6 +772,7 @@
     "desc": "Verdant green, rising through smoke and gunpowder — light as wild grass, and just as unyielding.",
     "icon": "T_Head_Dafu",
     "rarity": 5,
+    "bust": "T_Bust_Dafu",
     "charId": 5401,
     "release": "1.0",
     "defaultItem": {
@@ -766,6 +798,7 @@
     "desc": "UI_Skin_Des_5402",
     "icon": "T_Head_Dafu",
     "rarity": 5,
+    "bust": "T_Bust_Dafu",
     "charId": 5402,
     "release": "2.0",
     "defaultItem": {
@@ -800,6 +833,7 @@
     "desc": "The noble angel takes up the sword of judgement. Sinners shall be condemned. The innocent shall be absolved.",
     "icon": "T_Head_Fuluo01",
     "rarity": 5,
+    "bust": "T_Bust_Fuluo01",
     "charId": 1102,
     "tag": "Fuluo01",
     "release": "1.4",
@@ -840,6 +874,7 @@
     "desc": "Drifting through night and sea, in robes of white, to meet the dawn.",
     "icon": "T_Head_Nanzhu02",
     "rarity": 5,
+    "bust": "T_Bust_Nanzhu02",
     "charId": 120101,
     "release": "1.4"
   },
@@ -858,6 +893,7 @@
     "desc": "Though miracles have vanished from the world, there are still mortals willing to bear the weight of faith.",
     "icon": "T_Head_Nifu01",
     "rarity": 5,
+    "bust": "T_Bust_Nifu01",
     "charId": 1502,
     "tag": "Nifu01",
     "release": "1.4"
@@ -868,6 +904,7 @@
     "desc": "Wings wrought by will, now borne upon the wind.",
     "icon": "T_Head_Suyi01",
     "rarity": 5,
+    "bust": "T_Bust_Suyi01",
     "charId": 1504,
     "tag": "Suyi01",
     "release": "1.3",
@@ -908,6 +945,7 @@
     "desc": "Drifting through night and sea, in robes of white, to meet the dawn.",
     "icon": "T_Head_Nanzhu",
     "rarity": 5,
+    "bust": "T_Bust_Nanzhu",
     "charId": 160101,
     "release": "1.0",
     "defaultItem": {
@@ -952,6 +990,7 @@
     "desc": "The waves soak the hem of her white tulle dress. Upon them rides her whisper: \"Only death shall part us.\"",
     "icon": "T_Head_Shuimu02",
     "rarity": 5,
+    "bust": "T_Bust_Shuimu02",
     "charId": 2101,
     "tag": "Shuimu02",
     "release": "1.4",
@@ -992,6 +1031,7 @@
     "desc": "A murmur of love through the silks, an eternity sealed in a fatal kiss.",
     "icon": "T_Head_Shuimu01",
     "rarity": 5,
+    "bust": "T_Bust_Shuimu01",
     "charId": 2101,
     "tag": "Shuimu01",
     "release": "1.0",
@@ -1018,6 +1058,7 @@
     "desc": "Snowflakes rest in her palms, whispering fairytales from a dreamer's distance.",
     "icon": "T_Head_Eve01",
     "rarity": 5,
+    "bust": "T_Bust_Eve01",
     "charId": 2102,
     "tag": "Eve01",
     "release": "1.5",
@@ -1058,6 +1099,7 @@
     "desc": "Drifting through night and sea, in robes of white, to meet the dawn.",
     "icon": "T_Head_WeitaM",
     "rarity": 5,
+    "bust": "T_Bust_WeitaM",
     "charId": 220101,
     "release": "1.6"
   },
@@ -1067,6 +1109,7 @@
     "desc": "Tides to wash away the dust, waves to still the heart.",
     "icon": "T_Head_Baiheng01",
     "rarity": 5,
+    "bust": "T_Bust_Baiheng01",
     "charId": 2401,
     "tag": "Baiheng01",
     "release": "1.1",
@@ -1093,6 +1136,7 @@
     "desc": "Though miracles have vanished from the world, there are still mortals willing to bear the weight of faith.",
     "icon": "T_Head_Linen01",
     "rarity": 5,
+    "bust": "T_Bust_Linen01",
     "charId": 3101,
     "tag": "Linen01",
     "release": "1.4"
@@ -1112,6 +1156,7 @@
     "desc": "The road back vanishes as the fangs are bared. All that lies ahead is a fight to the death.",
     "icon": "T_Head_Falu01",
     "rarity": 5,
+    "bust": "T_Bust_Falu01",
     "charId": 3104,
     "tag": "Falu01",
     "release": "1.6",
@@ -1187,6 +1232,7 @@
     "desc": "Over wine and words, fates are drawn and fortunes unfold.",
     "icon": "T_Head_Zhiliu01",
     "rarity": 5,
+    "bust": "T_Bust_Zhiliu01",
     "charId": 4102,
     "tag": "Zhiliu01",
     "release": "1.2",
@@ -1213,6 +1259,7 @@
     "desc": "Lights weave the city into a shimmering web at night, and she is the finest hunter.",
     "icon": "T_Head_SPLise01",
     "rarity": 5,
+    "bust": "T_Bust_SPLise01",
     "charId": 4103,
     "tag": "SpLise01",
     "release": "1.7",
@@ -1260,6 +1307,7 @@
     "desc": "Sunshine gathered, sunshine scattered!",
     "icon": "T_Head_Songlu01",
     "rarity": 5,
+    "bust": "T_Bust_Songlu01",
     "charId": 5101,
     "tag": "Songlu01",
     "release": "1.0",
@@ -1295,6 +1343,7 @@
     "desc": "Midsummer night, beneath a sky of stars, a forest where violets and butterfly wings waltzed in delicate steps. A sight she had never seen.",
     "icon": "T_Head_Saiqi01",
     "rarity": 5,
+    "bust": "T_Bust_Saiqi01",
     "charId": 5301,
     "tag": "Saiqi01",
     "release": "1.0",

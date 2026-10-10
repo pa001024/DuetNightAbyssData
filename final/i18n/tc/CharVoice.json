@@ -8021,7 +8021,7 @@
     "name": "閒談・他人偶遇 其一",
     "res": "char_SpLise_vo_companio_01",
     "text": "素未謀面的那位朋友……？謝謝你，在我缺席的時間裡，陪伴布魯斯度過了那些灰暗的時刻。",
-    "companioCharId": 1503
+    "companioCharId": 1103
   },
   {
     "id": 11174,
@@ -8029,7 +8029,7 @@
     "name": "閒談・他人偶遇 其二",
     "res": "char_SpLise_vo_companio_02",
     "text": "你的酒很好，只是我還是不太習慣酒精的味道。如果可以的話，能拜託你為我調一杯適合新手入門的酒嗎，我會用心品嘗，並且提交一份五百字的試飲報告。",
-    "companioCharId": 1503
+    "companioCharId": 3202
   },
   {
     "id": 11175,
@@ -8037,7 +8037,7 @@
     "name": "閒談・他人偶遇 其三",
     "res": "char_SpLise_vo_companio_03",
     "text": "原來情報裡的女孩不是貝蕾妮卡小姐嗎……抱歉，害{nickname}捲入了神棄者同盟的陰謀。我會全力協助你們尋找{性别：他|她}的下落。",
-    "companioCharId": 1503
+    "companioCharId": 5102
   },
   {
     "id": 11176,

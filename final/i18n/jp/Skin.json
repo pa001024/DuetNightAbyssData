@@ -5,6 +5,7 @@
     "desc": "黒は夜の色。大地を包み、安らぎと静けさをもたらす。黒は影の色。寄り添い、最も大切な人を守り続ける。ベレニカは、この色を好んでいる。",
     "icon": "T_Head_Heitao",
     "rarity": 5,
+    "bust": "T_Bust_Heitao",
     "charId": 1101,
     "release": "1.0",
     "defaultItem": {
@@ -30,6 +31,7 @@
     "desc": "彼女の足跡のどこにでも、ヒュペリアの巨大な影が付き従う。それは永遠に晴れぬ暗雲のごとく、見えざる牢獄として彼女を静かに囲い込む。",
     "icon": "T_Head_Fuluo",
     "rarity": 5,
+    "bust": "T_Bust_Fuluo",
     "charId": 1102,
     "release": "1.0",
     "defaultItem": {
@@ -55,6 +57,7 @@
     "desc": "一つの歩く影、一人芝居の下手な役者、一人の愚者が語る物語。",
     "icon": "T_Head_Tuosi",
     "rarity": 5,
+    "bust": "T_Bust_Tuosi",
     "charId": 1103,
     "release": "1.0",
     "defaultItem": {
@@ -80,6 +83,7 @@
     "desc": "白い衣に身を包み、剣を持って、夜の海を越える。夜明けの果てにまた会おう。",
     "icon": "T_Head_Nvzhu02",
     "rarity": 5,
+    "bust": "T_Bust_Nvzhu02",
     "charId": 1201,
     "release": "1.4"
   },
@@ -89,6 +93,7 @@
     "desc": "礼賛会の銘文は服に刻まれるだけでなく、魂にまで刻み込まれる。それは少女が怒りから何度も脱皮し、真の忍耐へと至る過程を見届けている。",
     "icon": "T_Head_Baonu",
     "rarity": 5,
+    "bust": "T_Bust_Baonu",
     "charId": 1501,
     "release": "1.0",
     "defaultItem": {
@@ -114,6 +119,7 @@
     "desc": "薄暮と極光が織り成すヴェールは、涙に満ちた川を越え、すべてが新生する霧海へと魂を導く。",
     "icon": "T_Head_Nifu",
     "rarity": 5,
+    "bust": "T_Bust_Nifu",
     "charId": 1502,
     "release": "1.0",
     "defaultItem": {
@@ -139,6 +145,7 @@
     "desc": "舞い散る風雨は衣の裾を伝い、剣先で止まり、そして江湖に散った。",
     "icon": "T_Head_Kezhou",
     "rarity": 5,
+    "bust": "T_Bust_Kezhou",
     "charId": 1503,
     "release": "1.1",
     "defaultItem": {
@@ -164,6 +171,7 @@
     "desc": "青を三分裁ち取り、機巧を七分溶かし込み、最後に朝風をひとすじ借りて、少女の夢と誇りを空へと放つ。",
     "icon": "T_Head_Suyi",
     "rarity": 5,
+    "bust": "T_Bust_Suyi",
     "charId": 1504,
     "release": "1.3",
     "defaultItem": {
@@ -189,6 +197,7 @@
     "desc": "白い衣に身を包み、剣を持って、夜の海を越える。夜明けの果てにまた会おう。",
     "icon": "T_Head_Nvzhu",
     "rarity": 5,
+    "bust": "T_Bust_Nvzhu",
     "charId": 1601,
     "release": "1.0",
     "defaultItem": {
@@ -207,6 +216,7 @@
     "desc": "ナイチンゲールが彼女に紡いだ物語は白き羽を授かり、小さな翼に夢を載せて雲の彼方へ舞い上がる。",
     "icon": "T_Head_Feina",
     "rarity": 5,
+    "bust": "T_Bust_Feina",
     "charId": 1801,
     "release": "1.0",
     "defaultItem": {
@@ -232,6 +242,7 @@
     "desc": "クラゲの触手が深海に垂れ下がり、泳ぐドレスの裾のように、夜の中で恋人の心を揺さぶる。",
     "icon": "T_Head_Shuimu",
     "rarity": 5,
+    "bust": "T_Bust_Shuimu",
     "charId": 2101,
     "release": "1.0",
     "defaultItem": {
@@ -257,6 +268,7 @@
     "desc": "幾重にも重なる水面のように、青いプリーツがゆらめく。少女の瞳に映し出された、色鮮やかな世界を映すかのように。",
     "icon": "T_Head_Eve",
     "rarity": 5,
+    "bust": "T_Bust_Eve",
     "charId": 2102,
     "release": "1.5",
     "defaultItem": {
@@ -282,6 +294,7 @@
     "desc": "白い衣に身を包み、剣を持って、夜の海を越える。夜明けの果てにまた会おう。",
     "icon": "T_Head_WeitaF",
     "rarity": 5,
+    "bust": "T_Bust_WeitaF",
     "charId": 2201,
     "release": "1.6"
   },
@@ -291,6 +304,7 @@
     "desc": "暗闇で蠢いているのは何だ？陰謀？混沌？犯罪？――違う、それは触手だ！",
     "icon": "T_Head_Zhangyu",
     "rarity": 5,
+    "bust": "T_Bust_Zhangyu",
     "charId": 2301,
     "release": "1.0",
     "defaultItem": {
@@ -316,6 +330,7 @@
     "desc": "薬草の香りは糸となって白衣の袖を伝い、枯草が蘇るかのような囁きを告げる。",
     "icon": "T_Head_Baiheng",
     "rarity": 5,
+    "bust": "T_Bust_Baiheng",
     "charId": 2401,
     "release": "1.1",
     "defaultItem": {
@@ -341,6 +356,7 @@
     "desc": "マットな制服に残る火薬の余韻は、熱き鼓動と共にいつまでも消えない。",
     "icon": "T_Head_Linen",
     "rarity": 5,
+    "bust": "T_Bust_Linen",
     "charId": 3101,
     "release": "1.0",
     "defaultItem": {
@@ -366,6 +382,7 @@
     "desc": "その手には可憐な花束を、スカートの下には秘められた凶刃を。ドレスの黒と白が示すように、彼女は光と影の境界を歩む。メイドの衣装を身に纏い、今日もまた、騒がしき一日が幕を上げるのだ",
     "icon": "T_Head_Xier",
     "rarity": 5,
+    "bust": "T_Bust_Xier",
     "charId": 3102,
     "release": "1.4",
     "defaultItem": {
@@ -391,6 +408,7 @@
     "desc": "燃え盛る赤と白は狂人の爆破幻想を閉じ込め、少年の純粋な夢を縫い合わせる。",
     "icon": "T_Head_Yeer",
     "rarity": 5,
+    "bust": "T_Bust_Yeer",
     "charId": 3103,
     "release": "1.0",
     "defaultItem": {
@@ -416,6 +434,7 @@
     "desc": "嘘と裏切りに引き裂かれたぼろぼろの衣装。その内には、激しく燃え盛る復讐の炎が閉じ込められている。",
     "icon": "T_Head_Falu",
     "rarity": 5,
+    "bust": "T_Bust_Falu",
     "charId": 3104,
     "release": "1.0",
     "defaultItem": {
@@ -441,6 +460,7 @@
     "desc": "背負った鎖と棘は罪を罰するためのものにとどまらず、心に宿る正義の炎を縛るものでもある。",
     "icon": "T_Head_Haier",
     "rarity": 5,
+    "bust": "T_Bust_Haier",
     "charId": 3201,
     "release": "1.0",
     "defaultItem": {
@@ -466,6 +486,7 @@
     "desc": "華麗な光沢が息をのむような曲線を描き出し、その一挙手一投足には、酒の香りと夜の色が溶け合うような艶やかな気配が満ちている。",
     "icon": "T_Head_Kami",
     "rarity": 5,
+    "bust": "T_Bust_Kami",
     "charId": 3202,
     "release": "1.3",
     "defaultItem": {
@@ -491,6 +512,7 @@
     "desc": "鍋から作られた多機能ヘルメットは、ゴミ拾いの少女の堅牢な甲冑だ。",
     "icon": "T_Head_Maer",
     "rarity": 5,
+    "bust": "T_Bust_Maer",
     "charId": 3301,
     "release": "1.0",
     "defaultItem": {
@@ -516,6 +538,7 @@
     "desc": "制服に散る青白い星光は守護の意思であり、未来への憧憬でもある。",
     "icon": "T_Head_Lise",
     "rarity": 5,
+    "bust": "T_Bust_Lise",
     "charId": 4101,
     "release": "1.0",
     "defaultItem": {
@@ -541,6 +564,7 @@
     "desc": "朝陽が金箔を溶かし、絢爛な錦に降り注ぐ。変革の意志と共に、その金色の瞳に燃え上がる。",
     "icon": "T_Head_Zhiliu",
     "rarity": 5,
+    "bust": "T_Bust_Zhiliu",
     "charId": 4102,
     "release": "1.2",
     "defaultItem": {
@@ -566,6 +590,7 @@
     "desc": "她披着一身干练的红色衣装，如暖阳、如火焰、如灯火般闪耀在寒冷的大地上。",
     "icon": "T_Head_SpLise",
     "rarity": 5,
+    "bust": "T_Bust_SpLise",
     "charId": 4103,
     "release": "1.7",
     "defaultItem": {
@@ -591,6 +616,7 @@
     "desc": "応天の雷は全身を駆け巡る。暴風の意志を貫き、罪人は逃げられず、彼自身も逃げられない。",
     "icon": "T_Head_Yuming",
     "rarity": 5,
+    "bust": "T_Bust_Yuming",
     "charId": 4201,
     "release": "1.2",
     "defaultItem": {
@@ -616,6 +642,7 @@
     "desc": "勲章に刻まれたのは天才の魂。軍服の下に隠されているのは凡人の心。",
     "icon": "T_Head_Landi",
     "rarity": 5,
+    "bust": "T_Bust_Landi",
     "charId": 4202,
     "release": "1.0",
     "defaultItem": {
@@ -641,6 +668,7 @@
     "desc": "孤高の者に鎧や冠は不要。その存在自体が威圧の轟きだからだ。",
     "icon": "T_Head_Xibi",
     "rarity": 5,
+    "bust": "T_Bust_Xibi",
     "charId": 4301,
     "release": "1.0",
     "defaultItem": {
@@ -666,6 +694,7 @@
     "desc": "地面に揺れる白い羽飾りは、麦芽の香りを運び、万家の灯と共に、飢えた者たちの心へ飛んでいく。",
     "icon": "T_Head_Songlu",
     "rarity": 5,
+    "bust": "T_Bust_Songlu",
     "charId": 5101,
     "release": "1.0",
     "defaultItem": {
@@ -691,6 +720,7 @@
     "desc": "質素な衣は裏路地の赤い嗚咽を防げはしないが、荒野の中で小さな星明かりを守るには十分だ。",
     "icon": "T_Head_Aote",
     "rarity": 5,
+    "bust": "T_Bust_Aote",
     "charId": 5102,
     "release": "1.0",
     "defaultItem": {
@@ -716,6 +746,7 @@
     "desc": "少女の腕に憩う蝶は、いくつもの冬を越える夢を届けてくれる。",
     "icon": "T_Head_Saiqi",
     "rarity": 5,
+    "bust": "T_Bust_Saiqi",
     "charId": 5301,
     "release": "1.0",
     "defaultItem": {
@@ -741,6 +772,7 @@
     "desc": "煙と灰の中から芽吹いた翠緑は、野草のように軽やかで、野草のように絶え間なく息づく。",
     "icon": "T_Head_Dafu",
     "rarity": 5,
+    "bust": "T_Bust_Dafu",
     "charId": 5401,
     "release": "1.0",
     "defaultItem": {
@@ -766,6 +798,7 @@
     "desc": "UI_Skin_Des_5402",
     "icon": "T_Head_Dafu",
     "rarity": 5,
+    "bust": "T_Bust_Dafu",
     "charId": 5402,
     "release": "2.0",
     "defaultItem": {
@@ -800,6 +833,7 @@
     "desc": "高潔なる天使は裁きの剣を掲げ、罪ある者には審判を、罪なき者には赦しを与える。",
     "icon": "T_Head_Fuluo01",
     "rarity": 5,
+    "bust": "T_Bust_Fuluo01",
     "charId": 1102,
     "tag": "Fuluo01",
     "release": "1.4",
@@ -840,6 +874,7 @@
     "desc": "白い衣に身を包み、剣を持って、夜の海を越える。夜明けの果てにまた会おう。",
     "icon": "T_Head_Nanzhu02",
     "rarity": 5,
+    "bust": "T_Bust_Nanzhu02",
     "charId": 120101,
     "release": "1.4"
   },
@@ -858,6 +893,7 @@
     "desc": "たとえこの世に神跡が消え失せても、信仰のために重荷を背負い進む凡人の身はなお存在する。",
     "icon": "T_Head_Nifu01",
     "rarity": 5,
+    "bust": "T_Bust_Nifu01",
     "charId": 1502,
     "tag": "Nifu01",
     "release": "1.4"
@@ -868,6 +904,7 @@
     "desc": "青羽もて雲上の客となり、ひとたび念じて風を駆る。",
     "icon": "T_Head_Suyi01",
     "rarity": 5,
+    "bust": "T_Bust_Suyi01",
     "charId": 1504,
     "tag": "Suyi01",
     "release": "1.3",
@@ -908,6 +945,7 @@
     "desc": "白い衣に身を包み、剣を持って、夜の海を越える。夜明けの果てにまた会おう。",
     "icon": "T_Head_Nanzhu",
     "rarity": 5,
+    "bust": "T_Bust_Nanzhu",
     "charId": 160101,
     "release": "1.0",
     "defaultItem": {
@@ -952,6 +990,7 @@
     "desc": "波が白いドレスを濡らし、彼女のささやきを運んでくる——「死だけが、私たちを引き裂ける。」",
     "icon": "T_Head_Shuimu02",
     "rarity": 5,
+    "bust": "T_Bust_Shuimu02",
     "charId": 2101,
     "tag": "Shuimu02",
     "release": "1.4",
@@ -992,6 +1031,7 @@
     "desc": "幾重にも重なる紗の奥、囁きで愛を語り、死によって永遠に触れ合う。",
     "icon": "T_Head_Shuimu01",
     "rarity": 5,
+    "bust": "T_Bust_Shuimu01",
     "charId": 2101,
     "tag": "Shuimu01",
     "release": "1.0",
@@ -1018,6 +1058,7 @@
     "desc": "少女は手のひらに舞い降りた雪をそっと受け止め、遠い彼方から届いた、おとぎ話に耳を傾ける。",
     "icon": "T_Head_Eve01",
     "rarity": 5,
+    "bust": "T_Bust_Eve01",
     "charId": 2102,
     "tag": "Eve01",
     "release": "1.5",
@@ -1058,6 +1099,7 @@
     "desc": "白い衣に身を包み、剣を持って、夜の海を越える。夜明けの果てにまた会おう。",
     "icon": "T_Head_WeitaM",
     "rarity": 5,
+    "bust": "T_Bust_WeitaM",
     "charId": 220101,
     "release": "1.6"
   },
@@ -1067,6 +1109,7 @@
     "desc": "易水は俗塵を洗い流し、白波は心を静める。",
     "icon": "T_Head_Baiheng01",
     "rarity": 5,
+    "bust": "T_Bust_Baiheng01",
     "charId": 2401,
     "tag": "Baiheng01",
     "release": "1.1",
@@ -1093,6 +1136,7 @@
     "desc": "たとえこの世に神跡が消え失せても、信仰のために重荷を背負い進む凡人の身はなお存在する。",
     "icon": "T_Head_Linen01",
     "rarity": 5,
+    "bust": "T_Bust_Linen01",
     "charId": 3101,
     "tag": "Linen01",
     "release": "1.4"
@@ -1112,6 +1156,7 @@
     "desc": "牙を剥いたその瞬間から、もう後戻りはできない。待ち受けるのは――ただ、死闘のみだ。",
     "icon": "T_Head_Falu01",
     "rarity": 5,
+    "bust": "T_Bust_Falu01",
     "charId": 3104,
     "tag": "Falu01",
     "release": "1.6",
@@ -1187,6 +1232,7 @@
     "desc": "杯が交う夜宴には、声なき殺伐が次々と流れている。",
     "icon": "T_Head_Zhiliu01",
     "rarity": 5,
+    "bust": "T_Bust_Zhiliu01",
     "charId": 4102,
     "tag": "Zhiliu01",
     "release": "1.2",
@@ -1213,6 +1259,7 @@
     "desc": "灯火が夜の街をきらめく網へと織り上げる。そして彼女は最高の狩人。",
     "icon": "T_Head_SPLise01",
     "rarity": 5,
+    "bust": "T_Bust_SPLise01",
     "charId": 4103,
     "tag": "SpLise01",
     "release": "1.7",
@@ -1260,6 +1307,7 @@
     "desc": "ぽかぽか日差しと、丹念な磨き。惜しみなく振りまけ、すべては光のために！",
     "icon": "T_Head_Songlu01",
     "rarity": 5,
+    "bust": "T_Bust_Songlu01",
     "charId": 5101,
     "tag": "Songlu01",
     "release": "1.0",
@@ -1295,6 +1343,7 @@
     "desc": "真夏の夜、星降る森で――三色菫と蝶の羽が織り成すステップ。それは、彼女の見知らぬ景色だった。",
     "icon": "T_Head_Saiqi01",
     "rarity": 5,
+    "bust": "T_Bust_Saiqi01",
     "charId": 5301,
     "tag": "Saiqi01",
     "release": "1.0",

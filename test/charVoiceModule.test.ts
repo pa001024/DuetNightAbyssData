@@ -83,12 +83,26 @@ describe("CharVoice 模块", () => {
         expect(kami.map(row => row.companioCharId)).toEqual([5301, 4102, 5102])
         expect(renderTree(kami[0].text, "cn", textmap)).toContain("治愈人心")
 
-        // 表内 87 条都能解析出同伴角色；另有 15 条表外语音（台词+语音都在，表缺配）被补齐，不带 companioCharId
-        const companioRows = rows.filter(row => String(row.res).includes("_vo_companio_"))
-        expect(companioRows).toHaveLength(102)
-        expect(companioRows.filter(row => typeof row.companioCharId === "number")).toHaveLength(87)
         const idle = rows.find(row => row.res === "char_Heitao_vo_idle")!
         expect(idle.companioCharId).toBeUndefined()
+    })
+
+    test("4103 三条偶遇分属三个闲谈，同段号时按精确对话号定位", async () => {
+        const graph = new Graph()
+        graph.defineModule({ name: "CharVoice", deps: [], outputs: true, build: ctx => ({ CharVoice: charVoiceModule(ctx) }) })
+        const artifacts = await graph.build({}, undefined, ["CharVoice"])
+        const rows = (artifacts.get("CharVoice") as { CharVoice: Array<Record<string, any>> }).CharVoice
+
+        // 90400034/35/36 段号同为 90400000，但分属 SPLiseHuanjing/Kami/Aote 三个闲谈
+        const lise = rows
+            .filter(row => row.charId === 4103 && String(row.res).includes("_vo_companio_"))
+            .sort((a, b) => Number(a.id) - Number(b.id))
+        expect(lise.map(row => row.res)).toEqual([
+            "char_SpLise_vo_companio_01",
+            "char_SpLise_vo_companio_02",
+            "char_SpLise_vo_companio_03",
+        ])
+        expect(lise.map(row => row.companioCharId)).toEqual([1103, 3202, 5102])
     })
 
     test("补齐 CharVoice 表缺配但台词与语音都存在的偶遇语音", async () => {

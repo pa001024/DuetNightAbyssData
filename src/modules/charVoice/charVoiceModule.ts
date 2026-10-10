@@ -74,54 +74,90 @@ function collectFirstDialogueIds(value: unknown, out: number[] = []): number[] {
 }
 
 /**
- * 构建「偶遇语音 → 触发的另一个角色 CharId」索引：对话段号 -> (自身 unit -> 对手 CharId)。
+ * 偶遇闲谈组合的手工订正（TalkId -> NpcCombination）。
+ * - 920204（SPLiseHuanjing）：数据源组合为 [84103, 81503]（刻舟），但剧情文件名中的
+ *   Huanjing（幻景拼音；音频事件 gacha_show_Huanjing 同例）、语音台词“陪伴布鲁斯度过了
+ *   那些灰暗的时刻”（对 TextMap“幻景与布鲁斯的藏身之地”）都指向 1103 幻景；81103 与
+ *   81503 仅一位之差，疑似数据源笔误。这里按 [84103, 81103] 定位（黎瑟·浴火 ↔ 幻景）。
+ */
+const COMPANIO_PAIR_OVERRIDES: Record<number, number[]> = {
+    920204: [84103, 81103],
+}
+
+/**
+ * 构建「偶遇语音 → 触发的另一个角色 CharId」索引：精确对话号与对话段号各一张表。
  *
  * 偶遇语音的 UnlockDialogue 就是该段闲谈剧情首个对话的 DialogueId，剧情由 NpcGossipTrigger 的
- * 成对组合经 TalkTrigger.StoryLinePath 指向；同一剧情的后续台词与之同段（…01、…02），按段号归组。
+ * 成对组合经 TalkTrigger.StoryLinePath 指向；同一剧情的后续台词（如 …_1、…_2 复用同一段号，
+ * UnlockDialogue 为段内后续对话号）按段号归组兜底。
+ * 同一段号可能分属多个不同组合的闲谈（如 4103 的 90400034/35/36 分属三个剧情，
+ * 段号同为 90400000），此时段号兜底会有歧义，必须优先用精确对话号定位。
  * 语音后缀里的 companio_NN 编号存在空缺（如卡米没有 companio_01），不能当序号用。
  */
-function buildCompanioIndex(ctx: ModuleContext): Map<number, Map<number, number>> {
+function buildCompanioIndex(ctx: ModuleContext): { exact: Map<number, Map<number, number>>; segment: Map<number, Map<number, number>> } {
     const triggerTable = (ctx.dm.getTable("NpcGossipTrigger") ?? {}) as Record<string, any>
     const talkTrigger = (ctx.dm.getTable("TalkTrigger") ?? {}) as Record<string, any>
 
-    /** 段号 -> 成对闲谈的 unit 组合 */
-    const pairsBySegment = new Map<number, number[]>()
+    /** 精确对话号 -> 成对闲谈的 unit 组合 */
+    const pairByDialogue = new Map<number, number[]>()
+    /** 段号 -> 该段内出现过的 unit 组合（用于无歧义时兜底后续台词） */
+    const pairsBySegment = new Map<number, number[][]>()
     let conflicting = 0
     for (const [talkId, entry] of Object.entries(triggerTable)) {
-        const combination = (entry as any)?.NpcCombination
+        const combination = COMPANIO_PAIR_OVERRIDES[Number(talkId)] ?? (entry as any)?.NpcCombination
         if (!Array.isArray(combination) || combination.length < 2) continue
         const storyPath = String(talkTrigger[talkId]?.StoryLinePath ?? "")
         if (!storyPath) continue
         const story = ctx.dm.loadStoryFile(join("Script", "StoryCreator", "StoryFiles", storyPath.replace(/\.story$/, ".lua")))
         for (const dialogueId of collectFirstDialogueIds(story)) {
-            const segment = Math.floor(dialogueId / 100) * 100
-            if (pairsBySegment.has(segment)) {
+            if (pairByDialogue.has(dialogueId)) {
                 conflicting += 1
                 continue
             }
-            pairsBySegment.set(segment, combination.map(Number))
+            const pair = combination.map(Number)
+            pairByDialogue.set(dialogueId, pair)
+            const segment = Math.floor(dialogueId / 100) * 100
+            if (!pairsBySegment.has(segment)) pairsBySegment.set(segment, [])
+            pairsBySegment.get(segment)!.push(pair)
         }
     }
-    if (conflicting > 0) ctx.log(`CharVoice: ${conflicting} 个偶遇闲谈的对话段号与其他闲谈重复，仅取首个组合`)
+    if (conflicting > 0) ctx.log(`CharVoice: ${conflicting} 个偶遇闲谈的首对话号与其他闲谈重复，仅取首个组合`)
 
     const units = new Set<number>()
-    for (const pair of pairsBySegment.values()) for (const unit of pair) units.add(unit)
+    for (const pair of pairByDialogue.values()) for (const unit of pair) units.add(unit)
     const npcById = ctx.dm.getTableItems("Npc", [...units])
-
-    const result = new Map<number, Map<number, number>>()
-    let unresolved = 0
-    for (const [segment, pair] of pairsBySegment) {
+    const toByUnit = (pair: number[]): Map<number, number> | undefined => {
         const byUnit = new Map<number, number>()
+        let unresolved = 0
         for (const unit of pair) {
             const other = pair.find(candidate => candidate !== unit)
             const charId = other === undefined ? undefined : (npcById.get(String(other)) as Record<string, unknown> | undefined)?.CharId
             if (typeof charId === "number") byUnit.set(unit, charId)
             else unresolved += 1
         }
-        if (byUnit.size > 0) result.set(segment, byUnit)
+        if (unresolved > 0) ctx.log(`CharVoice: ${unresolved} 个偶遇闲谈的对手 unit 缺 Npc.CharId`)
+        return byUnit.size > 0 ? byUnit : undefined
     }
-    if (unresolved > 0) ctx.log(`CharVoice: ${unresolved} 个偶遇闲谈的对手 unit 缺 Npc.CharId`)
-    return result
+
+    const exact = new Map<number, Map<number, number>>()
+    for (const [dialogueId, pair] of pairByDialogue) {
+        const byUnit = toByUnit(pair)
+        if (byUnit) exact.set(dialogueId, byUnit)
+    }
+    // 段号兜底仅在段内所有组合一致时启用；多组合同段（如 4103 的 90400000）保持未解析，避免串位。
+    const segment = new Map<number, Map<number, number>>()
+    let ambiguous = 0
+    for (const [seg, pairs] of pairsBySegment) {
+        const keys = new Set(pairs.map(pair => [...pair].sort((a, b) => a - b).join(",")))
+        if (keys.size !== 1) {
+            ambiguous += 1
+            continue
+        }
+        const byUnit = toByUnit(pairs[0])
+        if (byUnit) segment.set(seg, byUnit)
+    }
+    if (ambiguous > 0) ctx.log(`CharVoice: ${ambiguous} 个偶遇闲谈段号分属多个组合，段号兜底停用（用精确对话号定位）`)
+    return { exact, segment }
 }
 
 /**
@@ -229,8 +265,14 @@ export function charVoiceModule(ctx: ModuleContext): VNodeTree {
         }
         if (serial) {
             companioTotal += 1
-            const segment = Math.floor(Number(voice.UnlockDialogue) / 100) * 100
-            const companioCharId = Number.isFinite(segment) ? companioIndex.get(segment)?.get(Number(voice.UnitId)) : undefined
+            const dialogueId = Number(voice.UnlockDialogue)
+            const unitId = Number(voice.UnitId)
+            const companioCharId =
+                (Number.isFinite(dialogueId) ? companioIndex.exact.get(dialogueId)?.get(unitId) : undefined) ??
+                (() => {
+                    const segment = Math.floor(dialogueId / 100) * 100
+                    return Number.isFinite(segment) ? companioIndex.segment.get(segment)?.get(unitId) : undefined
+                })()
             if (companioCharId !== undefined) {
                 entry.companioCharId = companioCharId
                 companioResolved += 1

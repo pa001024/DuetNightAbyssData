@@ -5,6 +5,7 @@
     "desc": "검은색은 밤의 색으로, 대지에 고요하면서도 평온한 베일을 씌워준다. 검은색은 그림자의 색으로, 가장 가까운 사람의 곁을 떠나지 않고 지켜준다. 그래서 베레니카는 검은색을 좋아한다.",
     "icon": "T_Head_Heitao",
     "rarity": 5,
+    "bust": "T_Bust_Heitao",
     "charId": 1101,
     "release": "1.0",
     "defaultItem": {
@@ -30,6 +31,7 @@
     "desc": "그녀가 어디를 가든, 휘페르보레아의 거대한 그림자가 드리워져, 마치 보이지 않는 어둠의 감옥처럼 그녀를 짓누른다.",
     "icon": "T_Head_Fuluo",
     "rarity": 5,
+    "bust": "T_Bust_Fuluo",
     "charId": 1102,
     "release": "1.0",
     "defaultItem": {
@@ -55,6 +57,7 @@
     "desc": "걷는 그림자와 무대 위의 서투른 광대, 한 어리석은 자가 들려주는 이야기.",
     "icon": "T_Head_Tuosi",
     "rarity": 5,
+    "bust": "T_Bust_Tuosi",
     "charId": 1103,
     "release": "1.0",
     "defaultItem": {
@@ -80,6 +83,7 @@
     "desc": "검 한 자루에 흰 옷 걸치고 홀로 걷는다. 거친 바다와 차디찬 밤을 건너, 새벽의 끝과 만나기 위해.",
     "icon": "T_Head_Nvzhu02",
     "rarity": 5,
+    "bust": "T_Bust_Nvzhu02",
     "charId": 1201,
     "release": "1.4"
   },
@@ -89,6 +93,7 @@
     "desc": "교회의 비문은 단순한 의상이 아닌, 영혼에 각인된 징표이다. 그것은 소녀가 거듭된 분노 속에서 진정한 강인함을 배우는 과정을 지켜보고 있다.",
     "icon": "T_Head_Baonu",
     "rarity": 5,
+    "bust": "T_Bust_Baonu",
     "charId": 1501,
     "release": "1.0",
     "defaultItem": {
@@ -114,6 +119,7 @@
     "desc": "노을과 오로라로 엮인 베일이 영혼을 인도하며, 눈물로 가득한 강을 건너, 만물이 소생하는 안개의 바다로 나아간다.",
     "icon": "T_Head_Nifu",
     "rarity": 5,
+    "bust": "T_Bust_Nifu",
     "charId": 1502,
     "release": "1.0",
     "defaultItem": {
@@ -139,6 +145,7 @@
     "desc": "빗방울이 옷자락을 타고 흘러내려, 검끝에 내려앉았다가 세상에 흩어진다.",
     "icon": "T_Head_Kezhou",
     "rarity": 5,
+    "bust": "T_Bust_Kezhou",
     "charId": 1503,
     "release": "1.1",
     "defaultItem": {
@@ -164,6 +171,7 @@
     "desc": "푸른 빛을 세 겹 떼어, 일곱 겹의 기교로 녹여 빚고, 아침 바람 한 줄기를 불어넣어, 소녀의 꿈과 자부심을 날려보낸다.",
     "icon": "T_Head_Suyi",
     "rarity": 5,
+    "bust": "T_Bust_Suyi",
     "charId": 1504,
     "release": "1.3",
     "defaultItem": {
@@ -189,6 +197,7 @@
     "desc": "검 한 자루에 흰 옷 걸치고 홀로 걷는다. 거친 바다와 차디찬 밤을 건너, 새벽의 끝과 만나기 위해.",
     "icon": "T_Head_Nvzhu",
     "rarity": 5,
+    "bust": "T_Bust_Nvzhu",
     "charId": 1601,
     "release": "1.0",
     "defaultItem": {
@@ -207,6 +216,7 @@
     "desc": "나이팅게일은 그녀가 엮은 이야기에 하얀 깃털을 달았다. 작은 날개는 그녀의 꿈을 싣고 구름 속으로 날아간다.",
     "icon": "T_Head_Feina",
     "rarity": 5,
+    "bust": "T_Bust_Feina",
     "charId": 1801,
     "release": "1.0",
     "defaultItem": {
@@ -232,6 +242,7 @@
     "desc": "깊은 바다에 드리운 해파리의 촉수는, 흩날리는 드레스 자락처럼, 어둠 속에서 연인의 마음을 흔든다.",
     "icon": "T_Head_Shuimu",
     "rarity": 5,
+    "bust": "T_Bust_Shuimu",
     "charId": 2101,
     "release": "1.0",
     "defaultItem": {
@@ -257,6 +268,7 @@
     "desc": "파란 치맛자락이 잔물결처럼 겹쳐지며, 소녀의 눈동자 속 알록달록한 세계를 비춘다.",
     "icon": "T_Head_Eve",
     "rarity": 5,
+    "bust": "T_Bust_Eve",
     "charId": 2102,
     "release": "1.5",
     "defaultItem": {
@@ -282,6 +294,7 @@
     "desc": "검 한 자루에 흰 옷 걸치고 홀로 걷는다. 거친 바다와 차디찬 밤을 건너, 새벽의 끝과 만나기 위해.",
     "icon": "T_Head_WeitaF",
     "rarity": 5,
+    "bust": "T_Bust_WeitaF",
     "charId": 2201,
     "release": "1.6"
   },
@@ -291,6 +304,7 @@
     "desc": "저 어둠 속에서 꿈틀대는 것은 무엇인가? 음모? 혼돈? 범죄? 틀렸다, 그것은 촉수이다!",
     "icon": "T_Head_Zhangyu",
     "rarity": 5,
+    "bust": "T_Bust_Zhangyu",
     "charId": 2301,
     "release": "1.0",
     "defaultItem": {
@@ -316,6 +330,7 @@
     "desc": "약 향이 실처럼 엮여, 하얀 소매 사이에서 다시 봄이 찾아온 듯 속삭인다.",
     "icon": "T_Head_Baiheng",
     "rarity": 5,
+    "bust": "T_Bust_Baiheng",
     "charId": 2401,
     "release": "1.1",
     "defaultItem": {
@@ -341,6 +356,7 @@
     "desc": "매트한 재질의 제복에 남은 화약의 온기는 피 끓는 외침 아래에서도 오래도록 사라지지 않는다.",
     "icon": "T_Head_Linen",
     "rarity": 5,
+    "bust": "T_Bust_Linen",
     "charId": 3101,
     "release": "1.0",
     "defaultItem": {
@@ -366,6 +382,7 @@
     "desc": "치맛자락 위에는 정성스럽게 다듬은 꽃다발을 들고, 아래는 치명적인 총부리를 감추었다. 마치 흑백의 치마처럼, 빛과 그림자 사이로 바쁜 하루를 보내는 메이드의 일상을 기록한다.",
     "icon": "T_Head_Xier",
     "rarity": 5,
+    "bust": "T_Bust_Xier",
     "charId": 3102,
     "release": "1.4",
     "defaultItem": {
@@ -391,6 +408,7 @@
     "desc": "타오르는 붉은색과 흰색이 미치광이의 폭발에 대한 열망을 잠재우고, 한 소년의 끝없는 꿈을 엮어낸다.",
     "icon": "T_Head_Yeer",
     "rarity": 5,
+    "bust": "T_Bust_Yeer",
     "charId": 3103,
     "release": "1.0",
     "defaultItem": {
@@ -416,6 +434,7 @@
     "desc": "거짓과 배반에 갈가리 찣긴 남루한 옷 안에는 활활 타오르는 복수의 불길이 숨어 있다.",
     "icon": "T_Head_Falu",
     "rarity": 5,
+    "bust": "T_Bust_Falu",
     "charId": 3104,
     "release": "1.0",
     "defaultItem": {
@@ -441,6 +460,7 @@
     "desc": "짊어진 사슬과 가시덤불은 죄업을 징벌하고, 마음속에 자리한 정의의 불꽃을 속박한다.",
     "icon": "T_Head_Haier",
     "rarity": 5,
+    "bust": "T_Bust_Haier",
     "charId": 3201,
     "release": "1.0",
     "defaultItem": {
@@ -466,6 +486,7 @@
     "desc": "화려한 빛이 춤추며 숨 멎을 듯한 곡선을 그려낸다. 손짓과 발걸음마다 와인과 그윽한 밤의 향기가 숨결로 피어난다.",
     "icon": "T_Head_Kami",
     "rarity": 5,
+    "bust": "T_Bust_Kami",
     "charId": 3202,
     "release": "1.3",
     "defaultItem": {
@@ -491,6 +512,7 @@
     "desc": "냄비로 만든 다용도 헬멧. 넝마주이 소녀의 단단한 갑옷이다.",
     "icon": "T_Head_Maer",
     "rarity": 5,
+    "bust": "T_Bust_Maer",
     "charId": 3301,
     "release": "1.0",
     "defaultItem": {
@@ -516,6 +538,7 @@
     "desc": "제복 위에서 별빛처럼 반짝이는 푸른 빛은 수호의 의지이자, 미래를 향한 갈망이다.",
     "icon": "T_Head_Lise",
     "rarity": 5,
+    "bust": "T_Bust_Lise",
     "charId": 4101,
     "release": "1.0",
     "defaultItem": {
@@ -541,6 +564,7 @@
     "desc": "아침 햇살이 금박을 녹인 듯 화려한 비단 위에 쏟아지면, 황금빛 눈동자 속에서 개혁의 의지가 함께 타오른다.",
     "icon": "T_Head_Zhiliu",
     "rarity": 5,
+    "bust": "T_Bust_Zhiliu",
     "charId": 4102,
     "release": "1.2",
     "defaultItem": {
@@ -566,6 +590,7 @@
     "desc": "她披着一身干练的红色衣装，如暖阳、如火焰、如灯火般闪耀在寒冷的大地上。",
     "icon": "T_Head_SpLise",
     "rarity": 5,
+    "bust": "T_Bust_SpLise",
     "charId": 4103,
     "release": "1.7",
     "defaultItem": {
@@ -591,6 +616,7 @@
     "desc": "응천의 번개가 주변을 맴도니, 대풍의 의지 아래, 죄업도, 그도 도망칠 곳 없으리라.",
     "icon": "T_Head_Yuming",
     "rarity": 5,
+    "bust": "T_Bust_Yuming",
     "charId": 4201,
     "release": "1.2",
     "defaultItem": {
@@ -616,6 +642,7 @@
     "desc": "훈장 위에는 천재의 영혼이, 군복 아래에는 보통 사람의 마음이 자리한다.",
     "icon": "T_Head_Landi",
     "rarity": 5,
+    "bust": "T_Bust_Landi",
     "charId": 4202,
     "release": "1.0",
     "defaultItem": {
@@ -641,6 +668,7 @@
     "desc": "고고한 자에게 갑옷이나 왕관은 필요하지 않다. 그 존재만으로도 압도적인 울림이 있다.",
     "icon": "T_Head_Xibi",
     "rarity": 5,
+    "bust": "T_Bust_Xibi",
     "charId": 4301,
     "release": "1.0",
     "defaultItem": {
@@ -666,6 +694,7 @@
     "desc": "흔들리는 하얀 깃털 장식이 보리 향을 싣고, 민가의 아궁이 연기를 타고, 굶주린 이의 마음속으로 날아간다.",
     "icon": "T_Head_Songlu",
     "rarity": 5,
+    "bust": "T_Bust_Songlu",
     "charId": 5101,
     "release": "1.0",
     "defaultItem": {
@@ -691,6 +720,7 @@
     "desc": "소박한 옷차림은 뒷골목의 진홍빛 울음소리를 완전히 막아낼 순 없지만, 황폐함 속의 별빛 한 줄기를 지켜내기에 충분하다.",
     "icon": "T_Head_Aote",
     "rarity": 5,
+    "bust": "T_Bust_Aote",
     "charId": 5102,
     "release": "1.0",
     "defaultItem": {
@@ -716,6 +746,7 @@
     "desc": "소녀의 팔에 머무른 나비는 무수히 많은 겨울을 넘어선 꿈을 전한다.",
     "icon": "T_Head_Saiqi",
     "rarity": 5,
+    "bust": "T_Bust_Saiqi",
     "charId": 5301,
     "release": "1.0",
     "defaultItem": {
@@ -741,6 +772,7 @@
     "desc": "화약 연기와 먼지 아래에서 자라난 푸르름은, 들풀처럼 가볍고 강인하다.",
     "icon": "T_Head_Dafu",
     "rarity": 5,
+    "bust": "T_Bust_Dafu",
     "charId": 5401,
     "release": "1.0",
     "defaultItem": {
@@ -766,6 +798,7 @@
     "desc": "UI_Skin_Des_5402",
     "icon": "T_Head_Dafu",
     "rarity": 5,
+    "bust": "T_Bust_Dafu",
     "charId": 5402,
     "release": "2.0",
     "defaultItem": {
@@ -800,6 +833,7 @@
     "desc": "고결한 천사가 심판의 검을 쥐니, 죄 있는 자는 심판받고, 죄 없는 자는 용서를 받으리라.",
     "icon": "T_Head_Fuluo01",
     "rarity": 5,
+    "bust": "T_Bust_Fuluo01",
     "charId": 1102,
     "tag": "Fuluo01",
     "release": "1.4",
@@ -840,6 +874,7 @@
     "desc": "검 한 자루에 흰 옷 걸치고 홀로 걷는다. 거친 바다와 차디찬 밤을 건너, 새벽의 끝과 만나기 위해.",
     "icon": "T_Head_Nanzhu02",
     "rarity": 5,
+    "bust": "T_Bust_Nanzhu02",
     "charId": 120101,
     "release": "1.4"
   },
@@ -858,6 +893,7 @@
     "desc": "기적이 사라진 세상에도, 여전히 믿음 하나로 가시밭길을 걷는 이들이 있다.",
     "icon": "T_Head_Nifu01",
     "rarity": 5,
+    "bust": "T_Bust_Nifu01",
     "charId": 1502,
     "tag": "Nifu01",
     "release": "1.4"
@@ -868,6 +904,7 @@
     "desc": "날개를 활짝 펴고 구름 위로 날아 올라라!",
     "icon": "T_Head_Suyi01",
     "rarity": 5,
+    "bust": "T_Bust_Suyi01",
     "charId": 1504,
     "tag": "Suyi01",
     "release": "1.3",
@@ -908,6 +945,7 @@
     "desc": "검 한 자루에 흰 옷 걸치고 홀로 걷는다. 거친 바다와 차디찬 밤을 건너, 새벽의 끝과 만나기 위해.",
     "icon": "T_Head_Nanzhu",
     "rarity": 5,
+    "bust": "T_Bust_Nanzhu",
     "charId": 160101,
     "release": "1.0",
     "defaultItem": {
@@ -952,6 +990,7 @@
     "desc": "파도에 젖은 하얀 베일 사이로 그녀가 속삭인다.\n\"죽음이 우리를 갈라놓을 때까지.\"",
     "icon": "T_Head_Shuimu02",
     "rarity": 5,
+    "bust": "T_Bust_Shuimu02",
     "charId": 2101,
     "tag": "Shuimu02",
     "release": "1.4",
@@ -992,6 +1031,7 @@
     "desc": "겹겹이 쌓인 베일 아래, 속삭임으로 사랑을 말하고, 죽음으로 영원을 터치하라.",
     "icon": "T_Head_Shuimu01",
     "rarity": 5,
+    "bust": "T_Bust_Shuimu01",
     "charId": 2101,
     "tag": "Shuimu01",
     "release": "1.0",
@@ -1018,6 +1058,7 @@
     "desc": "소녀는 손 위에 내려앉은 눈송이를 받쳐 들고, 머나먼 곳에서 전해져 온 동화에 귀를 기울인다.",
     "icon": "T_Head_Eve01",
     "rarity": 5,
+    "bust": "T_Bust_Eve01",
     "charId": 2102,
     "tag": "Eve01",
     "release": "1.5",
@@ -1058,6 +1099,7 @@
     "desc": "검 한 자루에 흰 옷 걸치고 홀로 걷는다. 거친 바다와 차디찬 밤을 건너, 새벽의 끝과 만나기 위해.",
     "icon": "T_Head_WeitaM",
     "rarity": 5,
+    "bust": "T_Bust_WeitaM",
     "charId": 220101,
     "release": "1.6"
   },
@@ -1067,6 +1109,7 @@
     "desc": "복잡한 일들은 하얀 물보라 너머로 쓸어 보내자.",
     "icon": "T_Head_Baiheng01",
     "rarity": 5,
+    "bust": "T_Bust_Baiheng01",
     "charId": 2401,
     "tag": "Baiheng01",
     "release": "1.1",
@@ -1093,6 +1136,7 @@
     "desc": "기적이 사라진 세상에도, 여전히 믿음 하나로 가시밭길을 걷는 이들이 있다.",
     "icon": "T_Head_Linen01",
     "rarity": 5,
+    "bust": "T_Bust_Linen01",
     "charId": 3101,
     "tag": "Linen01",
     "release": "1.4"
@@ -1112,6 +1156,7 @@
     "desc": "송곳니를 드러낸 순간, 이미 물러날 여지는 없다. 오직 죽기살기로 싸울 뿐이다.",
     "icon": "T_Head_Falu01",
     "rarity": 5,
+    "bust": "T_Bust_Falu01",
     "charId": 3104,
     "tag": "Falu01",
     "release": "1.6",
@@ -1187,6 +1232,7 @@
     "desc": "넘실대는 술잔 속에 침묵의 전쟁이 펼쳐진다.",
     "icon": "T_Head_Zhiliu01",
     "rarity": 5,
+    "bust": "T_Bust_Zhiliu01",
     "charId": 4102,
     "tag": "Zhiliu01",
     "release": "1.2",
@@ -1213,6 +1259,7 @@
     "desc": "불빛이 어둠 속 도시를 반짝이는 그물로 엮어 놓으면, 그녀는 그곳을 누비는 최고의 사냥꾼이다.",
     "icon": "T_Head_SPLise01",
     "rarity": 5,
+    "bust": "T_Bust_SPLise01",
     "charId": 4103,
     "tag": "SpLise01",
     "release": "1.7",
@@ -1260,6 +1307,7 @@
     "desc": "따뜻한 햇살을 곱게 갈아서, 듬뿍 뿌려주자!",
     "icon": "T_Head_Songlu01",
     "rarity": 5,
+    "bust": "T_Bust_Songlu01",
     "charId": 5101,
     "tag": "Songlu01",
     "release": "1.0",
@@ -1295,6 +1343,7 @@
     "desc": "한여름 밤, 별빛 아래 숲,\n팬지꽃과 나비의 날개가 뒤엉킨 미뉴에트...\n그녀가 한 번도 본 적 없는 광경.",
     "icon": "T_Head_Saiqi01",
     "rarity": 5,
+    "bust": "T_Bust_Saiqi01",
     "charId": 5301,
     "tag": "Saiqi01",
     "release": "1.0",
