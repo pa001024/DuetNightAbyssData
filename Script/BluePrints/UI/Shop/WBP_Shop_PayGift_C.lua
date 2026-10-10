@@ -8,9 +8,11 @@ M._components = {
 
 function M:Construct()
   self:AddInputMethodChangedListen()
+  self.bQuickAddOpen = false
   self.List_PayGift.OnCreateEmptyContent:Bind(self, function(self)
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
     Content.ShopId = nil
+    Content.bQuickAddOpen = self.bQuickAddOpen
     return Content
   end)
 end
@@ -28,6 +30,7 @@ function M:InitPayGiftInfo(ShopItemsData)
   for _, v in ipairs(ShopItemsData) do
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
     Content.ItemData = v
+    Content.bQuickAddOpen = self.bQuickAddOpen
     if 0 ~= ShopUtils:GetShopItemPurchaseLimit(v.ItemId) or Avatar:CheckShopItemSoldOutDisplay(v.ItemId) then
       self.List_PayGift:AddItem(Content)
     end
@@ -40,6 +43,19 @@ function M:InitPayGiftInfo(ShopItemsData)
       self:AddTimer(0.01, function()
         self.List_PayGift:SetFocus()
       end)
+    end
+  end
+end
+
+function M:SetQuickAddMode(bOpen)
+  self.bQuickAddOpen = bOpen
+  local Items = self.List_PayGift:GetListItems()
+  if Items then
+    for _, Content in pairs(Items) do
+      if Content and Content.SelfWidget and Content.SelfWidget.SetQuickAddMode then
+        Content.bQuickAddOpen = bOpen
+        Content.SelfWidget:SetQuickAddMode(bOpen)
+      end
     end
   end
 end

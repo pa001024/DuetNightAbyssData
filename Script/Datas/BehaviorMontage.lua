@@ -405,6 +405,32 @@ return ReadOnly("BehaviorMontage", {
     MontagePath = "/Game/Asset/Char/Monster/JH_Shenfu/Animation/Montage/SpecialIdle/JH_Shenfu_SpecialAlert_Montage.JH_Shenfu_SpecialAlert_Montage",
     MontageType = "EnterAlert"
   },
+  [8004001] = {
+    MontageGroupId = 8004,
+    MontageId = 8004001,
+    MontagePath = "/Game/Asset/Char/Monster/JH_Zhutai/Animation/Montage/SpecialIdle/JH_Zhutai_SpecialIdle01_Montage.JH_Zhutai_SpecialIdle01_Montage",
+    MontageType = "OutBattleBehavior",
+    NextMontage = 8004100
+  },
+  [8004100] = {
+    MontageGroupId = 8004,
+    MontageId = 8004100,
+    MontagePath = "/Game/Asset/Char/Monster/JH_Zhutai/Animation/Montage/SpecialIdle/JH_Zhutai_SpecialAlert_Montage.JH_Zhutai_SpecialAlert_Montage",
+    MontageType = "EnterAlert"
+  },
+  [8005001] = {
+    MontageGroupId = 8005,
+    MontageId = 8005001,
+    MontagePath = "/Game/Asset/Char/Monster/JH_Shiji/Animation/Montage/SpecialIdle/JH_Shiji_SpecialIdle01_Montage.JH_Shiji_SpecialIdle01_Montage",
+    MontageType = "OutBattleBehavior",
+    NextMontage = 8005100
+  },
+  [8005100] = {
+    MontageGroupId = 8005,
+    MontageId = 8005100,
+    MontagePath = "/Game/Asset/Char/Monster/JH_Shiji/Animation/Montage/SpecialIdle/JH_Shiji_SpecialAlert_Montage.JH_Shiji_SpecialAlert_Montage",
+    MontageType = "EnterAlert"
+  },
   [9001001] = {
     MontageGroupId = 9001,
     MontageId = 9001001,

@@ -193,4 +193,20 @@ function M:_PlaySceneStateAnimation()
   self:RefreshSceneVisualState()
 end
 
+function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
+  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+  if not UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
+    return UE4.UWidgetBlueprintLibrary.UnHandled()
+  end
+  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  if InKeyName ~= UIConst.GamePadKey.SpecialRight then
+    return UE4.UWidgetBlueprintLibrary.UnHandled()
+  end
+  local HostPage = self.HostPage
+  if HostPage and HostPage.Handle_ScenePageGamepadKeyDown and HostPage:Handle_ScenePageGamepadKeyDown(InKeyName, UE4.UKismetInputLibrary.InputEvent_IsRepeat(InKeyEvent)) then
+    return UE4.UWidgetBlueprintLibrary.Handled()
+  end
+  return UE4.UWidgetBlueprintLibrary.UnHandled()
+end
+
 return M

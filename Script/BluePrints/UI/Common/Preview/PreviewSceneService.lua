@@ -1,8 +1,17 @@
 require("UnLua")
 local MiscUtils = require("Utils.MiscUtils")
+local PreviewLevelHandoffMask = require("BluePrints.UI.Common.Preview.PreviewLevelHandoffMask")
 local PREVIEW_ROOT_BP_PATH = "/Game/BluePrints/UI/PersonalPreview/BP_PreviewSceneRoot.BP_PreviewSceneRoot_C"
 local UI_ART_NS_ACTOR_BP_PATH = "/Game/UI/Blueprint/BP_UIArt_NSActor.BP_UIArt_NSActor_C"
 local UI_ART_NS_COMPONENT_NAME = "NS_XK_dimian_2"
+local ESceneState = {
+  Idle = 0,
+  Loading = 1,
+  Loaded = 2
+}
+local TIMER_NAME_DELAY_CALL_SCENE_LOADED = "DelayCallSceneLoaded"
+local TIMER_NAME_REFRESH_ENVIRONMENT = "RefreshEnvironment"
+local TIMER_NAME_RECOVER_ENVIRONMENT_AFTER_UNLOAD = "RecoverEnvironmentAfterUnload"
 local M = {}
 
 function M:Init(Params)
@@ -19,9 +28,9 @@ function M:Init(Params)
   self.PreviewSceneTrans = nil
   self.PreviewRootActor = nil
   self.PreviewLevelActorReceiver = nil
-  self.bPreviewSceneLoaded = false
-  self.IsPreviewSceneLoading = false
+  self.SceneState = ESceneState.Idle
   self.bPendingLightingUpdate = false
+  self.UserLightData = nil
   self.SceneCoroutineMap = {}
   self.SceneCoroutineArray = {}
 end
@@ -175,16 +184,13 @@ local PreviewSceneLoaded = {}
 local function IncreasePreviewSceneRefCount(PreviewLevelName)
   PreviewSceneLoaded[PreviewLevelName] = PreviewSceneLoaded[PreviewLevelName] or 0
   PreviewSceneLoaded[PreviewLevelName] = PreviewSceneLoaded[PreviewLevelName] + 1
-  DebugPrint(string.format("PreviewSceneService: IncreaseRef level=%s ref=%s", tostring(PreviewLevelName), tostring(PreviewSceneLoaded[PreviewLevelName])))
 end
 
 local function DecreasePreviewSceneRefCount(PreviewLevelName)
   if PreviewSceneLoaded[PreviewLevelName] then
     PreviewSceneLoaded[PreviewLevelName] = PreviewSceneLoaded[PreviewLevelName] - 1
-    DebugPrint(string.format("PreviewSceneService: DecreaseRef level=%s ref=%s", tostring(PreviewLevelName), tostring(PreviewSceneLoaded[PreviewLevelName])))
     if PreviewSceneLoaded[PreviewLevelName] <= 0 then
       PreviewSceneLoaded[PreviewLevelName] = nil
-      DebugPrint(string.format("PreviewSceneService: ClearRef level=%s", tostring(PreviewLevelName)))
     end
   end
 end
@@ -255,12 +261,66 @@ function M:GetPreviewRootActor()
   return self.PreviewRootActor
 end
 
+function M:SpawnPreviewEffectCreature(EffectCreatureId, SpawnHostActor)
+  if not EffectCreatureId then
+    return nil
+  end
+  if IsValid(SpawnHostActor) and SpawnHostActor.CreateEffectCreature then
+    return SpawnHostActor:CreateEffectCreature(EffectCreatureId, FTransform(), false, "")
+  end
+  local EffectCreatureData = DataMgr and DataMgr.EffectCreature and DataMgr.EffectCreature[EffectCreatureId] or nil
+  local EffectCreaturePath = EffectCreatureData and EffectCreatureData.EffectCreaturePath or nil
+  if type(EffectCreaturePath) ~= "string" or "" == EffectCreaturePath then
+    DebugPrint(string.format("PreviewSceneService: standalone effect creature path missing id=%s", tostring(EffectCreatureId)))
+    return nil
+  end
+  if string.sub(EffectCreaturePath, -2) ~= "_C" then
+    EffectCreaturePath = EffectCreaturePath .. "_C"
+  end
+  local World = self.ViewUI and self.ViewUI:GetWorld() or nil
+  local EffectCreatureClass = World and LoadClass(EffectCreaturePath) or nil
+  if not EffectCreatureClass then
+    DebugPrint(string.format("PreviewSceneService: standalone effect creature class missing id=%s path=%s", tostring(EffectCreatureId), EffectCreaturePath))
+    return nil
+  end
+  local EffectCreature = World:SpawnActor(EffectCreatureClass, FTransform(), UE4.ESpawnActorCollisionHandlingMethod.AlwaysSpawn)
+  if not IsValid(EffectCreature) then
+    DebugPrint(string.format("PreviewSceneService: standalone effect creature spawn failed id=%s", tostring(EffectCreatureId)))
+    return nil
+  end
+  EffectCreature:SetActorHiddenInGame(true)
+  EffectCreature:SetActorEnableCollision(false)
+  if self.PreviewRootActor and EffectCreature.SetOwner then
+    EffectCreature:SetOwner(self.PreviewRootActor)
+  end
+  EffectCreature.EffectCreatureId = EffectCreatureId
+  EffectCreature.ReplaceSkinEffectCreatureId = EffectCreatureId
+  EffectCreature.SkillSpeed = 1
+  EffectCreature.LoadTime = 0
+  EffectCreature:Active()
+  EffectCreature:SetTickableWhenPaused(true)
+  if EffectCreature.SkeletalMesh and EffectCreature.SkeletalMesh.SetTickableWhenPaused then
+    EffectCreature.SkeletalMesh:SetTickableWhenPaused(true)
+  end
+  EffectCreature:LoadEffectCreatureResource()
+  EffectCreature:PlayCreateSe()
+  if EffectCreature.OnBeginPlay then
+    EffectCreature:OnBeginPlay()
+  end
+  DebugPrint(string.format("PreviewSceneService: standalone effect creature created id=%s actor=%s", tostring(EffectCreatureId), tostring(EffectCreature.GetName and EffectCreature:GetName() or EffectCreature)))
+  return EffectCreature
+end
+
 local function BindPreviewLevelActor(self, PreviewLevelActor)
-  if self.ArmoryHelper then
+  if IsValid(self.ArmoryHelper) then
     self.ArmoryHelper:SetPreviewLevelActor(PreviewLevelActor)
   end
   if self.PreviewLevelActorReceiver and self.PreviewLevelActorReceiver.SetPreviewLevelActor then
     self.PreviewLevelActorReceiver:SetPreviewLevelActor(PreviewLevelActor)
+  end
+  if PreviewLevelActor and self.SceneState ~= ESceneState.Idle then
+    self.SceneState = ESceneState.Loaded
+    self:NotifyHelperUpdateLighting()
   end
 end
 
@@ -274,16 +334,23 @@ function M:RebindPreviewLevelActor()
     return nil
   end
   local PreviewLevelActor = GetLevelScriptActor(WorldLoader, self.PreviewLevelName)
+  if not PreviewLevelActor then
+    return nil
+  end
   BindPreviewLevelActor(self, PreviewLevelActor)
   return PreviewLevelActor
 end
 
 function M:IsSceneLoaded()
-  return self.bPreviewSceneLoaded
+  return self.SceneState ~= ESceneState.Idle
 end
 
 function M:IsSceneLoading()
-  return self.IsPreviewSceneLoading
+  return self.SceneState == ESceneState.Loading
+end
+
+function M:IsSceneReady()
+  return self.SceneState == ESceneState.Loaded
 end
 
 function M:LoadScene(SceneType)
@@ -294,6 +361,7 @@ function M:LoadScene(SceneType)
   local DefaultPath = CommonConst.PreviewScenePaths[self.PreviewSceneType]
   local Path = self.PreviewScenePath or DefaultPath
   if not Path and not DefaultPath then
+    PreviewLevelHandoffMask.Hide(self.ViewUI)
     return
   end
   if not self.PreviewSceneLocation then
@@ -305,6 +373,7 @@ function M:LoadScene(SceneType)
   local GameMode = UE4.UGameplayStatics.GetGameMode(self.ViewUI)
   local WorldLoader = GameMode and GameMode:GetLevelLoader()
   if not WorldLoader then
+    PreviewLevelHandoffMask.Hide(self.ViewUI)
     return
   end
   local TargetTrans = FTransform()
@@ -326,24 +395,36 @@ function M:LoadScene(SceneType)
     self.PreviewRootActor = nil
   end
   local PreviewLevelName = self:GetPreviewLevelName()
-  if self.bPreviewSceneLoaded and self.PreviewLevelName == PreviewLevelName then
-    DebugPrint(string.format("PreviewSceneService: LoadScene skipped sameInstance level=%s", tostring(PreviewLevelName)))
-    self:OnPreviewSceneLoaded()
-    return
+  if self.PreviewLevelName == PreviewLevelName then
+    if self:IsSceneLoading() then
+      return
+    end
+    if self:IsSceneReady() then
+      self:OnPreviewSceneLoaded()
+      return
+    end
   end
-  if self.bPreviewSceneLoaded and self.PreviewLevelName and self.PreviewLevelName ~= PreviewLevelName then
-    DebugPrint(string.format("PreviewSceneService: LoadScene switchLevel old=%s new=%s", tostring(self.PreviewLevelName), tostring(PreviewLevelName)))
+  if self.SceneState ~= ESceneState.Idle and self.PreviewLevelName and self.PreviewLevelName ~= PreviewLevelName then
     self:UnloadScene()
   end
-  self.IsPreviewSceneLoading = true
-  DebugPrint(string.format("PreviewSceneService: LoadScene begin level=%s hadAny=%s hasRef=%s instanceKey=%s type=%s", tostring(PreviewLevelName), tostring(HadAnyPreviewScene()), tostring(IsPreviewSceneHasRef(PreviewLevelName)), tostring(self.PreviewInstanceKey), tostring(self.PreviewSceneType)))
+  self.SceneState = ESceneState.Loading
+  
+  local function BindPreviewLevelActorDelayed()
+    if not IsValid(self.ViewUI) then
+      return
+    end
+    self.ViewUI:AddTimer(0.1, function()
+      if not IsValid(self.ViewUI) or self.SceneState ~= ESceneState.Loading then
+        return
+      end
+      BindPreviewLevelActor(self, GetLevelScriptActor(WorldLoader, PreviewLevelName))
+      self:OnPreviewSceneLoaded()
+    end, false, 0, TIMER_NAME_DELAY_CALL_SCENE_LOADED, true)
+  end
+  
   if not IsPreviewSceneHasRef(PreviewLevelName) then
     local function OnPreviewLevelLoaded()
-      self.ViewUI:AddTimer(0.1, function()
-        BindPreviewLevelActor(self, GetLevelScriptActor(WorldLoader, PreviewLevelName))
-        
-        self:OnPreviewSceneLoaded()
-      end)
+      BindPreviewLevelActorDelayed()
     end
     
     local LoadedPath
@@ -356,38 +437,28 @@ function M:LoadScene(SceneType)
       self.PreviewScenePath = LoadedPath or Path
       self.PreviewLevelName = PreviewLevelName
       IncreasePreviewSceneRefCount(PreviewLevelName)
-      self.bPreviewSceneLoaded = true
-      DebugPrint(string.format("PreviewSceneService: LoadScene loadNewSuccess level=%s path=%s", tostring(PreviewLevelName), tostring(self.PreviewScenePath)))
     else
       self.PreviewSceneTrans = nil
-      DebugPrint(string.format("PreviewSceneService: LoadScene loadNewFailed level=%s path=%s defaultPath=%s", tostring(PreviewLevelName), tostring(Path), tostring(DefaultPath)))
+      self.SceneState = ESceneState.Idle
+      self:AbortDeferredSceneBehavior()
+      PreviewLevelHandoffMask.Hide(self.ViewUI)
     end
   else
     IncreasePreviewSceneRefCount(PreviewLevelName)
-    self.bPreviewSceneLoaded = true
     self.PreviewLevelName = PreviewLevelName
-    DebugPrint(string.format("PreviewSceneService: LoadScene reuseLoaded level=%s", tostring(PreviewLevelName)))
-    if self.ArmoryHelper then
-      self.ArmoryHelper:AddTimer(0.1, function()
-        BindPreviewLevelActor(self, GetLevelScriptActor(WorldLoader, PreviewLevelName))
-        self:OnPreviewSceneLoaded()
-      end, false, 0, "DelayCallSceneLoaded", true)
-    end
+    BindPreviewLevelActorDelayed()
   end
 end
 
-function M:UnloadScene()
-  if not self.bPreviewSceneLoaded then
-    DebugPrint(string.format("PreviewSceneService: UnloadScene skipped level=%s loaded=false", tostring(self.PreviewLevelName or self:GetPreviewLevelName())))
+function M:UnloadScene(bKeepWorldLoaded)
+  if self.SceneState == ESceneState.Idle then
     return
   end
   local PreviewLevelName = self.PreviewLevelName or self:GetPreviewLevelName()
-  DebugPrint(string.format("PreviewSceneService: UnloadScene begin level=%s", tostring(PreviewLevelName)))
-  self.bPreviewSceneLoaded = false
+  self.SceneState = ESceneState.Idle
   self.bPendingLightingUpdate = false
   DecreasePreviewSceneRefCount(PreviewLevelName)
   if IsPreviewSceneHasRef(PreviewLevelName) then
-    DebugPrint(string.format("PreviewSceneService: UnloadScene keepLoaded level=%s refStillExists=true", tostring(PreviewLevelName)))
     return
   end
   local GameMode = UE4.UGameplayStatics.GetGameMode(self.ViewUI)
@@ -396,12 +467,18 @@ function M:UnloadScene()
     return
   end
   self:DisableEnvirSystem(true)
-  local Controller = self.ArmoryHelper and UE4.UGameplayStatics.GetPlayerController(self.ArmoryHelper, 0)
-  if Controller then
-    UTalkSequenceFunctionLibrary.UpdatePlayerCameraManager(Controller)
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(self.ViewUI, 0)
+  local ViewController = UE4.UGameplayStatics.GetPlayerController(self.ViewUI, 0)
+  local Controller = ViewController or self.ArmoryHelper and UE4.UGameplayStatics.GetPlayerController(self.ArmoryHelper, 0)
+  if not bKeepWorldLoaded then
+    if ViewController and IsValid(Player) and ViewController:GetViewTarget() ~= Player then
+      ViewController:SetViewTargetWithBlend(Player, 0, UE4.EViewTargetBlendFunction.VTBlend_Linear, 0, false)
+    end
+    if Controller then
+      UTalkSequenceFunctionLibrary.UpdatePlayerCameraManager(Controller)
+    end
   end
-  WorldLoader:UnloadPreviewLevel(PreviewLevelName)
-  DebugPrint(string.format("PreviewSceneService: UnloadScene unloadLevel level=%s", tostring(PreviewLevelName)))
+  WorldLoader:UnloadPreviewLevel(PreviewLevelName, bKeepWorldLoaded)
   BindPreviewLevelActor(self, nil)
   if self.ArmoryHelper then
     self.ArmoryHelper:OnPreviewSceneUnloaded()
@@ -421,7 +498,7 @@ function M:UnloadScene()
       if PlayerController then
         UTalkSequenceFunctionLibrary.UpdatePlayerCameraManager(PlayerController)
       end
-    end, false, 0, "RecoverEnvironmentAfterUnload", true)
+    end, false, 0, TIMER_NAME_RECOVER_ENVIRONMENT_AFTER_UNLOAD, true)
   end
 end
 
@@ -438,7 +515,7 @@ function M:GetEnvirSystemActor()
 end
 
 function M:IsLightingTargetReady()
-  if not self.bPreviewSceneLoaded or not self.ArmoryHelper then
+  if not self:IsSceneReady() or not IsValid(self.ArmoryHelper) then
     return false
   end
   local PreviewLevelActor = self.ArmoryHelper:GetPreviewLevelActor()
@@ -452,7 +529,7 @@ function M:IsLightingTargetReady()
 end
 
 function M:WaitForPreviewSceneLoadFinished()
-  if self.IsPreviewSceneLoading then
+  if self:IsSceneLoading() then
     if coroutine.isyieldable() then
       coroutine.yield()
     else
@@ -485,6 +562,17 @@ function M:DoDeferredSceneBehavior()
   self.SceneCoroutineMap = {}
   for _, Co in ipairs(SceneCoroutineArray) do
     coroutine.resume(Co)
+  end
+end
+
+function M:AbortDeferredSceneBehavior()
+  local SceneCoroutineArray = self.SceneCoroutineArray
+  self.SceneCoroutineArray = {}
+  self.SceneCoroutineMap = {}
+  for _, Co in ipairs(SceneCoroutineArray) do
+    if coroutine.status(Co) == "suspended" then
+      coroutine.close(Co)
+    end
   end
 end
 
@@ -525,11 +613,14 @@ function M:DisableEnvirSystem(bDisable)
   self:DoSomethingWithScene("DisableEnvirSystem", DisableEnvirSystemInternal)
 end
 
-function M:RefreshEnvironment(NeedUpdateLighting)
-  if not self.ArmoryHelper then
+function M:RefreshEnvironment()
+  if not IsValid(self.ArmoryHelper) then
     return
   end
   self.ArmoryHelper:AddTimer(0.03, function()
+    if not IsValid(self.ViewUI) or not IsValid(self.ArmoryHelper) then
+      return
+    end
     local EnvironmentManager = UE4.UGameplayStatics.GetActorOfClass(self.ViewUI, UE4.AEnvironmentManager:StaticClass())
     if EnvironmentManager then
       self:DisableEnvirSystem(true)
@@ -538,24 +629,14 @@ function M:RefreshEnvironment(NeedUpdateLighting)
         UTalkSequenceFunctionLibrary.UpdatePlayerCameraManager(Controller)
       end
       EnvironmentManager:Refresh(true)
-      if NeedUpdateLighting then
-        self:DelayUpdateLighting()
-      end
+      self:NotifyHelperUpdateLighting()
+      self:RefreshUIArtNiagara()
     end
-  end, false, 0, "RefreshEnvironment", true)
-end
-
-function M:DelayUpdateLighting()
-  if not self.ArmoryHelper then
-    return
-  end
-  self.ArmoryHelper:AddTimer(0.03, function()
-    self:NotifyHelperUpdateLighting()
-  end, false, 0, "DelayUpdateSceneLighting", true)
+  end, false, 0, TIMER_NAME_REFRESH_ENVIRONMENT, true)
 end
 
 function M:NotifyHelperUpdateLighting()
-  if not self.ArmoryHelper then
+  if not IsValid(self.ArmoryHelper) then
     return
   end
   if not self:IsLightingTargetReady() then
@@ -566,9 +647,37 @@ function M:NotifyHelperUpdateLighting()
   self.ArmoryHelper.SkyBoxIndex = self.SkyBoxIndex or 0
   self.ArmoryHelper:UpdateDirLight(true)
   self.ArmoryHelper:UpdateLighting()
+  self:ApplyUserLight()
+end
+
+function M:SetUserLight(LightEditData)
+  LightEditData = LightEditData or {}
+  local Direction = LightEditData and LightEditData.Direction or {}
+  self.UserLightData = {
+    Roll = Direction[1] or LightEditData.Roll or 0,
+    Pitch = Direction[2] or LightEditData.Pitch or 0,
+    Yaw = Direction[3] or LightEditData.Yaw or 0,
+    LightIntensity = LightEditData.Intensity or LightEditData.LightIntensity or 0
+  }
+  self:NotifyHelperUpdateLighting()
+end
+
+function M:ClearUserLight()
+  self.UserLightData = nil
+  self:NotifyHelperUpdateLighting()
+end
+
+function M:ApplyUserLight()
+  if not IsValid(self.ArmoryHelper) or not self.UserLightData then
+    return
+  end
+  self.ArmoryHelper:SetUserLight(self.UserLightData.Roll, self.UserLightData.Pitch, self.UserLightData.Yaw, self.UserLightData.LightIntensity)
 end
 
 function M:RefreshUIArtNiagara()
+  if not IsValid(self.ViewUI) then
+    return
+  end
   local ActorClass = LoadClass(UI_ART_NS_ACTOR_BP_PATH)
   if not ActorClass then
     return
@@ -594,7 +703,7 @@ function M:RefreshUIArtNiagara()
 end
 
 function M:ChangeSkyBox(Index)
-  if not self.ArmoryHelper then
+  if not IsValid(self.ArmoryHelper) then
     return
   end
   self.SkyBoxIndex = Index or 0
@@ -605,18 +714,17 @@ function M:ChangeSkyBox(Index)
     if not bSuccess then
       return
     end
-    self:DelayUpdateLighting()
+    self:NotifyHelperUpdateLighting()
   end
   
   self:DoSomethingWithScene("OnSkyBoxIndexChange", CallSkyBoxChanged)
 end
 
 function M:OnPreviewSceneLoaded()
-  self.IsPreviewSceneLoading = false
+  PreviewLevelHandoffMask.Hide(self.ViewUI)
   self:DoDeferredSceneBehavior()
   self:RefreshUIArtNiagara()
   if self.bPendingLightingUpdate then
-    self.ArmoryHelper:RemoveTimer("DelayUpdateSceneLighting")
     self:NotifyHelperUpdateLighting()
   end
 end

@@ -13,7 +13,7 @@ T.RT_4 = {
 }
 T.RT_5 = {0.5}
 T.RT_6 = {0.4}
-T.RT_7 = {1200}
+T.RT_7 = {1250}
 T.RT_8 = {20}
 T.RT_9 = {500}
 T.RT_10 = {0.2}
@@ -33,17 +33,18 @@ T.RT_16 = {
 }
 T.RT_17 = {900}
 T.RT_18 = {2048}
-T.RT_19 = {
+T.RT_19 = {1200}
+T.RT_20 = {
   0,
   54,
   0
 }
-T.RT_20 = {
+T.RT_21 = {
   0,
   1800,
   0
 }
-T.RT_21 = {0}
+T.RT_22 = {0}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -341,7 +342,7 @@ return ReadOnly("PlayerRotationRates", {
   },
   RideMoveFlySpeed = {
     ParamentName = "RideMoveFlySpeed ",
-    ParamentValue = T.RT_7
+    ParamentValue = T.RT_19
   },
   RideMoveInAir = {
     ParamentName = "RideMoveInAir",
@@ -349,11 +350,11 @@ return ReadOnly("PlayerRotationRates", {
   },
   RideMoveMax = {
     ParamentName = "RideMoveMax",
-    ParamentValue = T.RT_19
+    ParamentValue = T.RT_20
   },
   RideMoveMin = {
     ParamentName = "RideMoveMin",
-    ParamentValue = T.RT_19
+    ParamentValue = T.RT_20
   },
   RideMoveMinVelocity = {
     ParamentName = "RideMoveMinVelocity",
@@ -401,11 +402,11 @@ return ReadOnly("PlayerRotationRates", {
   },
   SecondJumpStart = {
     ParamentName = "SecondJumpStart",
-    ParamentValue = T.RT_20
+    ParamentValue = T.RT_21
   },
   SecondJumpZVelocity = {
     ParamentName = "SecondJumpZVelocity",
-    ParamentValue = T.RT_7
+    ParamentValue = T.RT_19
   },
   Shooting = {
     ParamentName = "Shooting",
@@ -417,7 +418,7 @@ return ReadOnly("PlayerRotationRates", {
   },
   Skill = {
     ParamentName = "Skill",
-    ParamentValue = T.RT_20
+    ParamentValue = T.RT_21
   },
   SlideGroundFriction = {
     ParamentName = "SlideGroundFriction",
@@ -425,15 +426,15 @@ return ReadOnly("PlayerRotationRates", {
   },
   SlideInAirFriction = {
     ParamentName = "SlideInAirFriction",
-    ParamentValue = T.RT_21
+    ParamentValue = T.RT_22
   },
   SlideLaunchDelay = {
     ParamentName = "SlideLaunchDelay",
-    ParamentValue = T.RT_21
+    ParamentValue = T.RT_22
   },
   SlideMaintainTime = {
     ParamentName = "SlideMaintainTime",
-    ParamentValue = T.RT_21
+    ParamentValue = T.RT_22
   },
   SlideSpeed = {
     ParamentName = "SlideSpeed",

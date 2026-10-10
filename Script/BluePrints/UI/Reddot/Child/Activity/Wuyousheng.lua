@@ -1,6 +1,5 @@
 local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 local ReddotTreeNode_Wuyousheng = Class("BluePrints.UI.Reddot.Child.Activity.ActivityBase")
-local WuyoushengId = {110001}
 
 function ReddotTreeNode_Wuyousheng:_Judge(EventId)
   local Node = ReddotManager.GetTreeNode("WuyoushengReward")
@@ -50,7 +49,7 @@ function ReddotTreeNode_Wuyousheng:OnWuyoushengRewardChange(Count, RdType, RdNam
   if 0 ~= Count then
     return
   end
-  for _, EventId in ipairs(WuyoushengId) do
+  for _, EventId in ipairs(ActivityUtils.GetWuyoushengEventIds()) do
     ActivityUtils.TrySubActivityReddotCommon("Red", EventId, self.Name)
   end
 end

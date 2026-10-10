@@ -29,6 +29,7 @@ local GuildAttr = {
   GuildId = prop.prop("Int", "client save"),
   OwnerUid = prop.prop("Int", "client save"),
   Name = prop.prop("Str", "client save"),
+  BadgeText = prop.prop("Str", "client save", ""),
   Declaration = prop.prop("Str", "client save"),
   Logo = prop.prop("Str", "client save"),
   CreateTime = prop.prop("Int", "client save", 0),

@@ -205,11 +205,6 @@ return {
       UnitType = "Mechanism",
       UnitId = 1
     },
-    ["2790503"] = {
-      CreatorId = 2790503,
-      UnitType = "Mechanism",
-      UnitId = 90007
-    },
     ["142790034"] = {
       CreatorId = 142790034,
       UnitType = "Mechanism",

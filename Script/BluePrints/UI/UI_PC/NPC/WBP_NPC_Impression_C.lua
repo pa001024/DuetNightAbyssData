@@ -31,6 +31,12 @@ function WBP_NPC_Impression_C:OnDisabled()
   end
 end
 
+function WBP_NPC_Impression_C:ResetForPool()
+  self:StopAllAnimations()
+  self.bIsEnabled_Impression = false
+  self:SetVisibility(UE4.ESlateVisibility.Collapsed)
+end
+
 function WBP_NPC_Impression_C:OnOutAnimationFinished()
   self:SetVisibility(UE4.ESlateVisibility.Collapsed)
 end

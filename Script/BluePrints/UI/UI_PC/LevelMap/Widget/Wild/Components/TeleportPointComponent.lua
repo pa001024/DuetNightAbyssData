@@ -273,6 +273,9 @@ function Component:OnTeleportPointClick(Id)
   else
     self.LevelMap_Convey_Widget_PC.Btn_Go:UnBindEventOnClickedByObj(self)
     self.LevelMap_Convey_Widget_PC.Btn_Go:BindEventOnClicked(self, self.OnConveyClicked)
+    if self.LevelMap_Convey_Widget_PC:IsAnimationPlaying(self.LevelMap_Convey_Widget_PC.Auto_Out) then
+      self.LevelMap_Convey_Widget_PC:StopAnimation(self.LevelMap_Convey_Widget_PC.Auto_Out)
+    end
     self.LevelMap_Convey_Widget_PC:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.LevelMap_Convey_Widget_PC:PlayAnimation(self.LevelMap_Convey_Widget_PC.Auto_In)
     self.LevelMap_Convey_Widget_PC.Text_Name:SetText(GText(data.TeleportPointName))

@@ -1,5 +1,6 @@
 local T = {}
 T.RT_1 = {"CharTitle"}
+T.RT_2 = {10700401, 10700402}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -9,21 +10,31 @@ end
 return ReadOnly("ConditionalRewardEvent", {
   [107001] = {
     EventId = 107001,
-    EventReward = 107001,
+    EventReward = {107001},
     HideBPNode = T.RT_1,
-    RewardClaimCondition = 6014
+    RewardClaimCondition = {6014}
   },
   [107002] = {
     EventId = 107002,
-    EventReward = 107002,
+    EventReward = {107002},
     HideBPNode = T.RT_1,
-    RewardClaimCondition = 6015
+    RewardClaimCondition = {6015}
   },
   [107003] = {
     EventId = 107003,
-    EventReward = 107006,
+    EventReward = {107006},
     HideBPNode = T.RT_1,
-    RewardClaimCondition = 10020105,
+    RewardClaimCondition = {10020105},
     RewardUnlockTips = "UI_RewardUnlockTips_107003"
+  },
+  [107004] = {
+    EventId = 107004,
+    EventReward = T.RT_2,
+    HideBPNode = T.RT_1,
+    RewardClaimCondition = T.RT_2,
+    RewardClaimDes = {
+      "RewardUnlockTips_10700401",
+      "RewardUnlockTips_10700402"
+    }
   }
 })

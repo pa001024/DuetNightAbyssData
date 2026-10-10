@@ -153,6 +153,36 @@ return ReadOnly("CinematicChapter", {
     ConditionId = 110109,
     SortPriority = 3
   },
+  [1102] = {
+    ChapterIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Chapter/T_Chapter_Icon02.T_Chapter_Icon02'",
+    ChapterId = 1102,
+    ChapterName = "Episode_Ex02",
+    ChapterNumber = "UI_ChapterName_Ex02",
+    ChapterPicPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Memory/Chapter/T_Memory_1102.T_Memory_1102'",
+    ChapterShadowPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Chapter/T_Chapter_Icon02.T_Chapter_Icon02'",
+    ChapterType = 1,
+    CinematicId = {
+      1102001,
+      1102003,
+      1102005,
+      1102006,
+      1102033,
+      1102007,
+      1102008,
+      1102009,
+      1102010,
+      1102011,
+      1102012,
+      1102013,
+      1102016,
+      1102017,
+      1102018,
+      1102019,
+      1102020
+    },
+    ConditionId = 110232,
+    SortPriority = 8
+  },
   [1201] = {
     ChapterIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Chapter/T_Chapter_Icon03.T_Chapter_Icon03'",
     ChapterId = 1201,

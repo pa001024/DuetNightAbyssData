@@ -261,6 +261,13 @@ return ReadOnly("GamepadSet", {
     KeyText = "MAIN_UI_QUEST",
     Order = 28
   },
+  PreAim = {
+    ActionName = "PreAim",
+    IsAction = true,
+    KeyRegion = T.RT_1,
+    KeyText = "UI_Keyboard_Map_PreAim",
+    Order = 36
+  },
   ShowTeamInfo = {
     ActionName = "ShowTeamInfo",
     IsAction = true,

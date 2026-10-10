@@ -169,24 +169,24 @@ return ReadOnly("GMIntegration", {
   },
   ChangeAbyss131 = {
     GMCommands = {
-      [1] = "sgm settime 2026 09 09 10 00 00",
+      [1] = "sgm settime 2026 10 22 10 00 00",
       [2] = "gm SystemCommonUnlock",
       [3] = "sgm CompleteCondition 4220",
       [4] = "sgm CompleteCondition 8002",
-      [5] = "sgm SetAbyssLevelProgress 1602 36 5"
+      [5] = "sgm SetAbyssLevelProgress 1702 36 5"
     },
-    GMDisplayName = "私服切换大秘境1.5上半",
+    GMDisplayName = "私服切换新版本大秘境上半",
     GMIntegrationName = "ChangeAbyss131"
   },
   ChangeAbyss132 = {
     GMCommands = {
-      [1] = "sgm settime 2026 09 30 10 00 00",
+      [1] = "sgm settime 2026 11 12 10 00 00",
       [2] = "gm SystemCommonUnlock",
       [3] = "sgm CompleteCondition 4220",
       [4] = "sgm CompleteCondition 8002",
-      [5] = "sgm SetAbyssLevelProgress 1604 36 5"
+      [5] = "sgm SetAbyssLevelProgress 1704 36 5"
     },
-    GMDisplayName = "私服切换大秘境1.5下半",
+    GMDisplayName = "私服切换新版本大秘境下半",
     GMIntegrationName = "ChangeAbyss132"
   },
   ChapterUIEast01End = {
@@ -1558,9 +1558,9 @@ return ReadOnly("GMIntegration", {
       [1] = "gm SystemCommonUnlock",
       [2] = "sgm CompleteCondition 4220",
       [3] = "sgm CompleteCondition 8002",
-      [4] = "sgm SetAbyssLevelProgress 1602 50 5"
+      [4] = "sgm SetAbyssLevelProgress 1702 50 5"
     },
-    GMDisplayName = "新号解锁大秘境1.5上半",
+    GMDisplayName = "新号解锁新版本大秘境上半",
     GMIntegrationName = "UnlockAbyss131"
   },
   UnlockAbyss132 = {
@@ -1568,9 +1568,9 @@ return ReadOnly("GMIntegration", {
       [1] = "gm SystemCommonUnlock",
       [2] = "sgm CompleteCondition 4220",
       [3] = "sgm CompleteCondition 8002",
-      [4] = "sgm SetAbyssLevelProgress 1604 50 5"
+      [4] = "sgm SetAbyssLevelProgress 1704 50 5"
     },
-    GMDisplayName = "新号解锁大秘境1.5下半",
+    GMDisplayName = "新号解锁新版本大秘境下半",
     GMIntegrationName = "UnlockAbyss132"
   },
   UnlockAllSoloTreasureRepeatDungeon = {

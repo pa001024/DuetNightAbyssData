@@ -308,6 +308,9 @@ function M:InitDungeonName()
         DifficultyLevel = DataMgr.HardBossDifficulty[DifficultyId].DifficultyLevel
       end
       self.Describe = self.Describe .. DifficultyLevel
+    elseif self.IsHardBossEvent then
+      local HardBossEventCfg = self:GetHardBossEventCfg(self.DungeonId)
+      self.Describe = HardBossEventCfg and HardBossEventCfg.HardBossName and GText(HardBossEventCfg.HardBossName) or ""
     else
       local HardBossDgInfo = DataMgr.HardBossDg[self.DungeonId]
       if HardBossDgInfo then
@@ -451,8 +454,20 @@ function M:InitHardBossOrWeekyDungeonInfo()
   end
   local RemainTimes, TotalTimes
   if self.IsHardBoss then
-    RemainTimes = Avatar.HardBoss.HardBossRewardTimesLeft
-    TotalTimes = DataMgr.GlobalConstant.BossRewardRefresh.ConstantValue
+    if self.IsHardBossEvent then
+      local DungeonCfg = DataMgr.HardBossEventDungeon[self.DungeonId]
+      if not DungeonCfg or DungeonCfg.HardBossType ~= "Reward" then
+        self:ShowHardBossTimes(false)
+        return
+      end
+      RemainTimes = Avatar.HardBossEvent and Avatar.HardBossEvent.RewardTimesLeft or 0
+      local EventId = DataMgr.HardBossEventDungeonId2EventId and DataMgr.HardBossEventDungeonId2EventId[self.DungeonId]
+      local EventMain = EventId and DataMgr.HardBossEventMain[EventId]
+      TotalTimes = EventMain and EventMain.PeriodRewardTime or 0
+    else
+      RemainTimes = Avatar.HardBoss.HardBossRewardTimesLeft
+      TotalTimes = DataMgr.GlobalConstant.BossRewardRefresh.ConstantValue
+    end
     self.Text_Times01:SetText(GText("UI_HardBoss_ChancesRemain"))
   elseif self.IsWeeklyDungeon then
     RemainTimes = Avatar.WeeklyDungeonRewardLeft
@@ -669,19 +684,36 @@ function M:Continue()
   end
   local Avatar = GWorld:GetAvatar()
   if self.IsHardBoss then
-    local RemainTimes = Avatar.HardBoss.HardBossRewardTimesLeft or 0
-    local IsNoMorePrompts = self:CheckNeedShowWindow("IsBossBattlePopup")
-    local DifficultyId = 1
-    if GameState(self):IsInRegion() then
-      DifficultyId = Avatar.HardBossInfo.DifficultyId
+    local RemainTimes
+    if self.IsHardBossEvent then
+      local DungeonCfg = DataMgr.HardBossEventDungeon[self.DungeonId]
+      if not DungeonCfg or DungeonCfg.HardBossType ~= "Reward" then
+        self:DefaultContinue()
+        return
+      end
+      RemainTimes = Avatar.HardBossEvent and Avatar.HardBossEvent.RewardTimesLeft or 0
     else
-      DifficultyId = DataMgr.HardBossDg[self.DungeonId].DifficultyId
+      RemainTimes = Avatar.HardBoss.HardBossRewardTimesLeft or 0
     end
-    if RemainTimes > 0 or IsNoMorePrompts or Avatar and DifficultyId and 0 == Avatar.HardBoss:GetPassCount(DifficultyId) then
+    local PopupCacheKey = self.IsHardBossEvent and "HardBossEventRewardPopup" or "IsBossBattlePopup"
+    local IsNoMorePrompts = self:CheckNeedShowWindow(PopupCacheKey)
+    if RemainTimes > 0 or IsNoMorePrompts then
       self:DefaultContinue()
-    else
-      self:ShowConfirmWindow()
+      return
     end
+    if not self.IsHardBossEvent then
+      local DifficultyId = 1
+      if GameState(self):IsInRegion() then
+        DifficultyId = Avatar.HardBossInfo.DifficultyId
+      else
+        DifficultyId = DataMgr.HardBossDg[self.DungeonId].DifficultyId
+      end
+      if Avatar and DifficultyId and 0 == Avatar.HardBoss:GetPassCount(DifficultyId) then
+        self:DefaultContinue()
+        return
+      end
+    end
+    self:ShowConfirmWindow()
   elseif Avatar and self.IsWeeklyDungeon then
     local RemainTimes = Avatar.WeeklyDungeonRewardLeft or 0
     local IsNoMorePrompts = self:CheckNeedShowWindow("IsWeeklyDungeonPopup")
@@ -943,8 +975,14 @@ function M:CalcPropInfo()
       if self.IsHardBoss then
         if GameState(self):IsInRegion() then
           self.FailTips:InitialTips(self.BattleInfo.HardBossId, true)
+        elseif self.IsHardBossEvent then
+          self.FailTips:InitialTips(self.DungeonId, false)
         else
-          self.FailTips:InitialTips(DataMgr.HardBossDg[self.DungeonId].HardBossId, true)
+          local HardBossDgInfo = DataMgr.HardBossDg[self.DungeonId]
+          local HardBossId = HardBossDgInfo and HardBossDgInfo.HardBossId or self.BattleInfo.HardBossId
+          if HardBossId then
+            self.FailTips:InitialTips(HardBossId, true)
+          end
         end
       else
         self.FailTips:InitialTips(self.DungeonId, false)
@@ -1591,8 +1629,9 @@ function M:UpdateSelectedInfo(Data)
   local IsSelected = Data.SelectHint.IsSelected
   local CurTimestamp = TimeUtils.NowTime()
   if self.IsHardBoss then
-    EMCache:Set("IsBossBattlePopupNoMorePrompts", IsSelected, true)
-    EMCache:Set("IsBossBattlePopupTimestamp", CurTimestamp, true)
+    local PopupCacheKey = self.IsHardBossEvent and "HardBossEventRewardPopup" or "IsBossBattlePopup"
+    EMCache:Set(PopupCacheKey .. "NoMorePrompts", IsSelected, true)
+    EMCache:Set(PopupCacheKey .. "Timestamp", CurTimestamp, true)
   elseif self.IsWeeklyDungeon then
     EMCache:Set("IsWeeklyDungeonPopupNoMorePrompts", IsSelected, true)
     EMCache:Set("IsWeeklyDungeonPopupTimestamp", CurTimestamp, true)
@@ -1709,15 +1748,35 @@ end
 
 function M:CheckIsHardBossMode()
   self.IsHardBoss = false
+  self.IsHardBossEvent = false
   local Avatar = GWorld:GetAvatar()
   if Avatar and Avatar:IsInHardBoss() then
     self.IsHardBoss = true
-    return
   end
   local DungeonInfo = DataMgr.Dungeon[self.DungeonId]
   if DungeonInfo then
-    self.IsHardBoss = DungeonInfo.DungeonType == "HardBossDg"
+    local DungeonType = DungeonInfo.DungeonType
+    if "HardBossDg" == DungeonType then
+      self.IsHardBoss = true
+    elseif "HardBossEvent" == DungeonType then
+      self.IsHardBoss = true
+      self.IsHardBossEvent = true
+    end
   end
+end
+
+function M:GetHardBossEventCfg(DungeonId)
+  local Selects = DataMgr.HardBossEventDungeonSelect
+  for _, Cfg in pairs(Selects) do
+    if Cfg and Cfg.DungeonId then
+      for _, Id in pairs(Cfg.DungeonId) do
+        if Id == DungeonId then
+          return Cfg
+        end
+      end
+    end
+  end
+  return nil
 end
 
 function M:CheckWalnutAgainAvailable()

@@ -18,8 +18,9 @@ function M:ScrollCamera(DeltaMove)
   if not self.EnableMouseWheel then
     return
   end
-  if self.ActorController then
-    self.ActorController:OnScrolling(DeltaMove)
+  local Target = not self.ActorController and self.PreviewScene and self.PreviewScene.Controller
+  if Target then
+    Target:OnScrolling(DeltaMove)
   end
 end
 
@@ -106,8 +107,9 @@ function M:OnSinglePointerMove(MyGeometry, MouseEvent)
       return Unhandled
     end
     self.MovedWhileDragging = true
-    if self.ActorController then
-      self.ActorController:OnDragViewActor(CursorDelta)
+    local Target = not self.ActorController and self.PreviewScene and self.PreviewScene.Controller
+    if Target then
+      Target:OnDragViewActor(CursorDelta)
     end
     if not self:HasMouseCapture() then
       return UWidgetBlueprintLibrary.CaptureMouse(UWidgetBlueprintLibrary.Handled(), self)

@@ -10,6 +10,9 @@ M.AppearanceMainTabNames = {
 
 function M.GetCharAppearanceReddot(CharId)
   local Avatar = GWorld:GetAvatar()
+  if not Avatar or not Avatar.CommonChars then
+    return false, false
+  end
   local CommonChar = Avatar.CommonChars[CharId]
   if not CommonChar then
     return false, false
@@ -106,7 +109,8 @@ function M.GetWeaponTabReddot(WeaponType)
         local BattleWeaponData = DataMgr.BattleWeapon[Weapon.WeaponId]
         if BattleWeaponData and BattleWeaponData.ModApplicationType then
           local ModApplicationType = BattleWeaponData.ModApplicationType
-          for _, ApplicationType in pairs(ModApplicationType or {}) do
+          local TypeArray = type(ModApplicationType) == "table" and ModApplicationType or {ModApplicationType}
+          for _, ApplicationType in pairs(TypeArray) do
             local WeaponStanceFXNode = ReddotManager.GetTreeNode("WeaponStanceFX" .. ApplicationType)
             NewWeaponStanceFXCount = NewWeaponStanceFXCount + (WeaponStanceFXNode and WeaponStanceFXNode.Count or 0)
           end

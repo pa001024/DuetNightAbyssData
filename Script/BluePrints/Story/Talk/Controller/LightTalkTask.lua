@@ -14,6 +14,7 @@ function LightTalkTask:InitData(TalkTaskData, NodeFinished_Callback)
   self.TalkTimerManager = self.TalkContext.TalkTimerManager
   self.WaitQueueManager = self.TalkContext.WaitQueueManager
   self.bTaskPlayDialogueFinished = false
+  self.bFinished = false
   self.Player = TalkTaskData.Player
 end
 
@@ -24,7 +25,31 @@ function LightTalkTask:InitUI()
   self.UI = UIManager(GWorld.GameInstance):LoadUINew(self.TalkTaskData.UIName)
   if self.TalkType == "ForgingGuide" then
     self.UI:SetForgeVisibility(true)
+  else
+    self.UI:SetForgeVisibility(false)
   end
+end
+
+function LightTalkTask:GetTalkFlowType()
+  return self.BasicTalkType
+end
+
+function LightTalkTask:CreatePrepareDialogueNode(Flow, Params)
+  local DialogueData = Params and Params.DialogueData
+  if not DialogueData then
+    return
+  end
+  local PrepareNode = Flow:CreateNode(UEFNode_Delegate)
+  PrepareNode.DebugLog = string.format("LightTalkTask PrepareDialogueNode: %s", tostring(DialogueData.DialogueId))
+  PrepareNode.OnStart:Add(PrepareNode, function(Node)
+    self.CurrentDialogueData = DialogueData
+    self:UpdateTalkSnapShot(DialogueData)
+    self:ProcessDialogueData(DialogueData, false)
+    Node:Finish({
+      Node.FinishPin
+    })
+  end)
+  return PrepareNode
 end
 
 function LightTalkTask:Start(TalkTaskData, NodeFinished_Callback)
@@ -34,10 +59,18 @@ function LightTalkTask:Start(TalkTaskData, NodeFinished_Callback)
   self:InitData(TalkTaskData, NodeFinished_Callback)
   self:InitUI()
   EventManager:AddEvent(EventID.InLoading, self, self.InLoading)
-  self:StartPlayDialogue()
+  self:StartTalkFlow()
+end
+
+function LightTalkTask:OnFlowEnd()
+  self.CurrentDialogueData = nil
 end
 
 function LightTalkTask:Finish(TalkNodeFinishType)
+  if self.bFinished then
+    return
+  end
+  self.bFinished = true
   DebugPrint("LightTalkTask:Finish:", self.TalkTaskData.TalkNodeId)
   if IsValid(self.UI) and self.UI.OnFinished then
     self.UI:OnFinished(function()
@@ -64,12 +97,12 @@ function LightTalkTask:Clear()
 end
 
 function LightTalkTask:PlayDialogue(bPauseResume)
-  local NodeType = self.DialogueIterationComponent:GetCurrentNodeType()
+  local NodeType = self.TalkFlowController:GetCurrentNodeType()
   if NodeType ~= EDialogueNodeType.Dialogue then
     DebugPrint("lhr@Dialogue Iteration Error: NodeType", NodeType, "不合法")
     return
   end
-  local Dialogue = self.DialogueIterationComponent:GetDialogue()
+  local Dialogue = self.TalkFlowController:GetDialogue()
   DebugPrint("LightTalkTask PlayDialogue:", Dialogue and Dialogue.DialogueId)
   if not Dialogue then
     DebugPrint("lhr@Dialogue Iteration Error: Dialogue为空")
@@ -77,9 +110,9 @@ function LightTalkTask:PlayDialogue(bPauseResume)
   end
   self:UpdateTalkSnapShot(Dialogue)
   local DialogueData = self:GetDialogueDataWithCheck(Dialogue)
+  DialogueData = self:ProcessDialogueData(DialogueData, bPauseResume)
   self.CurrentDialogueData = DialogueData
   self:ConstructWaitTag(self, self.OnTaskPlayDialogueFinished)
-  self:ProcessDialogueData(DialogueData, bPauseResume)
   self:ProcessWaitTag_UIPlayDialogue(DialogueData, self.WaitQueue)
   self:ProcessWaitTag_PlayAudio(DialogueData, bPauseResume, nil, self.WaitQueue)
   self:ProcessWaitTag_PlayScript(DialogueData, self.WaitQueue)
@@ -104,7 +137,9 @@ end
 
 function LightTalkTask:RealFinish(TalkNodeFinishType)
   DebugPrint("LightTalkTask:RealFinish:", self.TalkTaskData.TalkNodeId, self.TalkTaskData.TalkNodeName, self.NodeFinished_Callback)
-  self:TryEndFlowGraph()
+  if self.TalkFlowController:IsUseFlowAsset() then
+    self:TryEndFlowGraph()
+  end
   self:Clear()
   self:TryFireEndingCallback(TalkNodeFinishType)
   TalkSubsystem():ClearRefs(self)
@@ -163,15 +198,17 @@ end
 
 function LightTalkTask:OnTaskPlayDialogueFinished()
   DebugPrint("LightTalkTask OnTaskPlayDialogueFinished", self)
-  self:IterateDialogue()
+  self.TalkFlowController:Iterate()
 end
 
 function LightTalkTask:OnExceptionInterruptedBySTL()
   DebugPrint("LightTalkTask:OnExceptionInterruptedBySTL")
   TalkUtils:RemovePlayerInvincible()
   self.bHasInterrupted = true
-  if self.TalkTaskData and self.TalkTaskData.FlowAsset then
+  if self.TalkFlowController:IsUseFlowAsset() then
     self.TalkTaskData.FlowAsset:FinishFlow(UE4.EFlowFinishPolicy.Keep)
+  else
+    self:StopTalkFlow()
   end
   self:Clear()
 end
@@ -179,8 +216,10 @@ end
 function LightTalkTask:OnInterrupted()
   DebugPrint("LightTalkTask:OnInterrupted")
   self.bHasInterrupted = true
-  if self.TalkTaskData and self.TalkTaskData.FlowAsset then
+  if self.TalkFlowController:IsUseFlowAsset() then
     self.TalkTaskData.FlowAsset:FinishFlow(UE4.EFlowFinishPolicy.Keep)
+  else
+    self:StopTalkFlow()
   end
   self:Clear()
 end
@@ -188,6 +227,10 @@ end
 function LightTalkTask:OnPaused()
   DebugPrint("LightTalkTask:对话被暂停", self, self:GetTalkType())
   self.PauseTime = UE4.UGameplayStatics.GetTimeSeconds(GWorld.GameInstance)
+  if not self.TalkFlowController:IsUseFlowAsset() then
+    self:PauseTalkFlow()
+    return
+  end
   self:ClearWaitTag()
   self:PauseAllTimers(true)
   if not self.bAudioFinished then
@@ -204,11 +247,15 @@ function LightTalkTask:OnPauseResumed()
     return
   end
   DebugPrint("LightTalkTask:对话暂停恢复", self, self:GetTalkType())
+  if not self.TalkFlowController:IsUseFlowAsset() then
+    self:ResumeTalkFlow()
+    return
+  end
   if IsValid(self.UI) and self.UI.OnPauseResumed then
     self.UI:OnPauseResumed()
   end
+  self.TalkFlowController:Resume()
   self:PauseAllTimers(false)
-  self.DialogueIterationComponent:Resume()
   if not self.bAudioFinished then
     self:ResumePauseAudio()
   end
@@ -217,10 +264,15 @@ end
 function LightTalkTask:ProcessDialogueData(DialogueData, bPauseResume)
   if bPauseResume then
     local PlayedDuration = self.PauseTime - self.StartTime
-    DialogueData.Duration = DialogueData.Duration - PlayedDuration
-    DialogueData.Duration = math.max(DialogueData.Duration, 0)
+    local PlaybackData = {}
+    for Key, Value in pairs(DialogueData) do
+      PlaybackData[Key] = Value
+    end
+    PlaybackData.Duration = math.max(DialogueData.Duration - PlayedDuration, 0)
+    return PlaybackData
   else
     self.StartTime = UE4.UGameplayStatics.GetTimeSeconds(GWorld.GameInstance)
+    return DialogueData
   end
 end
 
@@ -256,7 +308,6 @@ function LightTalkTask:CreateComponents()
   end
   self.TalkTaskData = self.TaskData
   self.TalkContext = self.TaskData.TalkContext
-  self:CreateDialogueIteratorComponent()
   self:CreateTalkAudioComponent()
   self:CreateExpressionComponent()
 end

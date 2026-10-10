@@ -527,7 +527,9 @@ end
 function RougeLikeComponent:GetWaveStartBP()
   local WaveStartBP = UIManager(self):GetUIObj("WaveStartBP")
   WaveStartBP = WaveStartBP or UIManager(self):LoadUINew("WaveStartBP")
-  WaveStartBP:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
+  if WaveStartBP then
+    WaveStartBP:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
+  end
   return WaveStartBP
 end
 
@@ -557,7 +559,9 @@ end
 function RougeLikeComponent:ShowCountDown()
   local GuideCountDownFloat = UIManager(self):GetUIObj("GuideCountDown")
   GuideCountDownFloat = GuideCountDownFloat or UIManager(self):LoadUINew("GuideCountDown")
-  GuideCountDownFloat:InitializeData(self.Countdown)
+  if GuideCountDownFloat then
+    GuideCountDownFloat:InitializeData(self.Countdown)
+  end
 end
 
 function RougeLikeComponent:StartRougeMorseMiniGame(MiniGameId)

@@ -10,6 +10,7 @@ FileName:]] .. self.Context.FileName .. [[
 
 NodeInfo:]] .. self:ToString()
     UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, UE.EStoryLogType.SpecialQuest, "客户端不存在特殊任务", Message)
+    return
   end
   
   local function FinishNodeCallback()

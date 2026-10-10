@@ -25,7 +25,7 @@ function ObservationTalkComponent:CreateObserveTalkFlow(DialogueId)
     return nil
   end
   TalkFlow:BindOnCheckAutoIterateEvent(self, self.IsAutoIterateDialogue)
-  TalkFlow:BindOnDialogueEndEvent(self, self.OnObserveTalkFlowFinished)
+  TalkFlow:BindOnFlowCompleteEvent(self, self.OnObserveTalkFlowFinished)
   TalkFlow:BindOnFlowEndEvent(self, self.OnObserveTalkFlowEnded)
   TalkFlow:BuildFlow()
   if not TalkFlow.StartNode then

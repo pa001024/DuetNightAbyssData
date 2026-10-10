@@ -700,12 +700,15 @@ function M:CheckCharCanUpUltraGradeLevel()
 end
 
 function M:OnCharGradeLevelUp(Ret, CharUuid, CurrentGradeLevel)
+  if not self.Char or CharUuid ~= self.Char.Uuid then
+    return
+  end
   DebugPrint("zwkkk OnCharGradeLevelUp ", Ret, CharUuid, CurrentGradeLevel)
   self.Parent:BlockAllUIInput(false)
   if ErrorCode:Check(Ret) then
-    local Avatar = GWorld:GetAvatar()
-    self.Char = Avatar.Chars[self.Char.Uuid]
-    self.CharGradeLevel = CurrentGradeLevel + 1
+    if not self:SyncCharData() then
+      return
+    end
     if self["InronItem_" .. self.SelectTraceId] then
       AudioManager(self):PlayUISound(self, "event:/ui/armory/card_level_unlock", nil, nil)
       self["InronItem_" .. self.SelectTraceId]:PlayUnLockAnim()
@@ -722,15 +725,20 @@ function M:OnCharGradeLevelUp(Ret, CharUuid, CurrentGradeLevel)
     if self.Details then
       self.Details:UpdateDetailInfo(self.SelectTraceId, 1)
     end
+  else
+    self:RefreshCurrentTraceInfo()
   end
 end
 
 function M:OnCharExtraGradeLevelUp(Ret, CharUuid)
+  if not self.Char or CharUuid ~= self.Char.Uuid then
+    return
+  end
   self.Parent:BlockAllUIInput(false)
   if ErrorCode:Check(Ret) then
-    local Avatar = GWorld:GetAvatar()
-    self.Char = Avatar.Chars[self.Char.Uuid]
-    self.IsExtraGradeUnlocked = true
+    if not self:SyncCharData() then
+      return
+    end
     if self["InronItem_" .. self.SelectTraceId] then
       AudioManager(self):PlayUISound(self, "event:/ui/armory/card_level_unlock", nil, nil)
       self["InronItem_" .. self.SelectTraceId]:PlayUnLockAnim()
@@ -741,6 +749,8 @@ function M:OnCharExtraGradeLevelUp(Ret, CharUuid)
     if self.Details then
       self.Details:UpdateDetailInfo(self.SelectTraceId, 1)
     end
+  else
+    self:RefreshCurrentTraceInfo()
   end
 end
 

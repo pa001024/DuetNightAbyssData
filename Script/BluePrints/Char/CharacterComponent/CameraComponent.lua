@@ -3,6 +3,9 @@ local SettingUtils = require("Utils.SettingUtils")
 local CameraComponent = {}
 
 function CameraComponent:OnCharacterReady()
+  if IsValid(self.CharSpringArmComponent) then
+    self.CharSpringArmComponent:SetEnableLazyTransformUpdate(self.FromOtherWorld and not self.FromArmory)
+  end
   if self.FromOtherWorld then
     return
   end

@@ -485,6 +485,34 @@ return ReadOnly("TiltleName", {
     TextMapContent = "失忆的",
     TextMapId = "Title_10120"
   },
+  [10121] = {
+    TextMapContent = "创造奇迹的",
+    TextMapId = "Title_10121"
+  },
+  [10122] = {
+    TextMapContent = "璀璨夺目的",
+    TextMapId = "Title_10122"
+  },
+  [10123] = {
+    TextMapContent = "赫赫威名的",
+    TextMapId = "Title_10123"
+  },
+  [10124] = {
+    TextMapContent = "一周年的",
+    TextMapId = "Title_10124"
+  },
+  [10125] = {
+    TextMapContent = "乘风破浪的",
+    TextMapId = "Title_10125"
+  },
+  [10126] = {
+    TextMapContent = "第十三军团的",
+    TextMapId = "Title_10126"
+  },
+  [10127] = {
+    TextMapContent = "炼火的",
+    TextMapId = "Title_10127"
+  },
   [20001] = {
     TextMapContent = "力量",
     TextMapId = "Title_20001"
@@ -896,5 +924,25 @@ return ReadOnly("TiltleName", {
   [20103] = {
     TextMapContent = "乐园",
     TextMapId = "Title_20103"
+  },
+  [20104] = {
+    TextMapContent = "一周年",
+    TextMapId = "Title_20104"
+  },
+  [20105] = {
+    TextMapContent = "入梦之人",
+    TextMapId = "Title_20105"
+  },
+  [20106] = {
+    TextMapContent = "风暴",
+    TextMapId = "Title_20106"
+  },
+  [20107] = {
+    TextMapContent = "怪物",
+    TextMapId = "Title_20107"
+  },
+  [20108] = {
+    TextMapContent = "复制品",
+    TextMapId = "Title_20108"
   }
 })

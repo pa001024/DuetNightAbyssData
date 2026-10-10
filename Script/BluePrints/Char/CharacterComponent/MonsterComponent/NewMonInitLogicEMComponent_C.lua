@@ -1,5 +1,6 @@
 require("UnLua")
 local EffectResults = require("BluePrints.Combat.BattleLogic.EffectResults")
+local MonsterUtils = require("Utils.MonsterUtils")
 local M = Class({
   "BluePrints.Common.TimerMgr"
 })
@@ -44,7 +45,7 @@ function M:NewMonInitComponent_CallBPReceiveBeginPlay(Owner)
   if Const.bOutAirWallBoxCheckEnable and Owner.TryStartOutAirWallCheck then
     Owner:TryStartOutAirWallCheck()
   end
-  local MonsterData = DataMgr.Monster[Owner.UnitId]
+  local MonsterData = MonsterUtils.GetMonsterDataByOwner(Owner)
   if MonsterData and MonsterData.EnableForceMaxMeshLOD and Owner.Mesh then
     if CommonUtils.GetRuntimePlatform(self) == CommonConst.CLIENT_DEVICE_TYPE.MOBILE then
       Owner.Mesh:SetForcedLOD(2)
@@ -131,7 +132,7 @@ function M:NewMonInitComponent_OnCharacterReady_SpecialTakeRecord(Owner)
 end
 
 function M:NewMonInitComponent_EnterPoolSetDataInfo(Owner)
-  Owner.Data = DataMgr.Monster[Owner.UnitId]
+  Owner.Data = MonsterUtils.GetMonsterDataByOwner(Owner)
   Owner.BattleCharInfo = nil
   local RoleId = Owner.CurrentRoleId
   if not RoleId or 0 == RoleId then

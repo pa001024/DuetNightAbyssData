@@ -5,6 +5,7 @@ local M = Class({
 
 function M:OnListItemObjectSet(Content)
   self:InitData(Content)
+  self:SyncItemLayerManagementMode()
   self.DelayTime = Content.DelayTime or 0
   self.Panel_Change:SetVisibility(ESlateVisibility.Collapsed)
   self.bConvert = Content.bConvert

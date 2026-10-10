@@ -6,13 +6,37 @@ function BP_PhotoAtMech_C:AuthorityInitInfo(Info)
   BP_PhotoAtMech_C.Super.AuthorityInitInfo(self, Info)
 end
 
+local function FindPhotoCameraIdByStaticCreatorId(CreatorId)
+  if not CreatorId or CreatorId <= 0 then
+    return nil
+  end
+  local PhotoCamera = DataMgr.PhotoCamera
+  if not PhotoCamera then
+    return nil
+  end
+  for _, CameraData in pairs(PhotoCamera) do
+    if CameraData.StaticCreatorId == CreatorId and CameraData.PhotoCameraId and CameraData.PhotoCameraId > 0 then
+      return CameraData.PhotoCameraId
+    end
+  end
+  return nil
+end
+
+local function ResolvePhotoAtPlaceId(Mech)
+  local PhotoCameraId = FindPhotoCameraIdByStaticCreatorId(Mech.CreatorId)
+  if PhotoCameraId then
+    return PhotoCameraId
+  end
+  if Mech.UnitParams and Mech.UnitParams.PhotoSpotId then
+    return Mech.UnitParams.PhotoSpotId
+  end
+  return Mech.PhotoSpotId
+end
+
 function BP_PhotoAtMech_C:CommonInitInfo(Info)
   BP_PhotoAtMech_C.Super.CommonInitInfo(self, Info)
-  self.PhotoAtPlaceId = self.PhotoSpotId
-  if self.UnitParams and self.UnitParams.PhotoSpotId then
-    self.PhotoAtPlaceId = self.UnitParams.PhotoSpotId
-  end
-  DebugPrint("yly BP_PhotoAtMech_C:CommonInitInfo PhotoAtPlaceId: ", self.PhotoAtPlaceId)
+  self.PhotoAtPlaceId = ResolvePhotoAtPlaceId(self)
+  DebugPrint("yly BP_PhotoAtMech_C:CommonInitInfo PhotoAtPlaceId: ", self.PhotoAtPlaceId, " CreatorId: ", self.CreatorId)
 end
 
 function BP_PhotoAtMech_C:ClientInitInfo(Info)
@@ -24,7 +48,7 @@ function BP_PhotoAtMech_C:OnActorReady(Info)
 end
 
 function BP_PhotoAtMech_C:GetCanOpen(PlayerEid)
-  if self.PhotoSpotId == nil or nil == DataMgr.PhotoCamera[self.PhotoSpotId] then
+  if self.PhotoAtPlaceId == nil or nil == DataMgr.PhotoCamera[self.PhotoAtPlaceId] then
     return false
   end
   if self.StateId == PhotoSpotState.Photographing then

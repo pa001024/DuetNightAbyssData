@@ -134,12 +134,17 @@ function M:SetItemMoney(CurrencyId, CurrencyNum)
     local CoinIcon = LoadObject(DataMgr.Resource[CurrencyId].Icon)
     self.MoneyWidget.Img_Coin:SetBrushResourceObject(CoinIcon)
     self.MoneyWidget.Text_Cost:SetText(CurrencyNum)
-    self:AddWidgetToNode(self.MoneyWidget)
+    local Config = UIConst.ComItemLayerManagement
+    self:AddWidgetToNode(self.MoneyWidget, nil, Config.Layer.Base, Config.Order.Money)
     self:AddTimer(0.01, function()
       if self.ComItemNewReddot and self.WidgetMap[self.ComItemNewReddot] and self.ComItemNewReddot:GetVisibility() ~= UE4.ESlateVisibility.Collapsed then
-        self.ComItemNewReddot:RemoveFromParent()
-        self.ComItemNewReddot = self:CreateWidgetNew("ComItemNewReddot")
-        self:AddWidgetToNode(self.ComItemNewReddot)
+        if self:IsItemLayerManagementActive() then
+          self:AddWidgetToNode(self.ComItemNewReddot, nil, Config.Layer.Top, Config.Order.NewRedDot)
+        else
+          self.ComItemNewReddot:RemoveFromParent()
+          self.ComItemNewReddot = self:CreateWidgetNew("ComItemNewReddot")
+          self:AddWidgetToNode(self.ComItemNewReddot)
+        end
       end
     end)
   elseif self.WidgetMap[self.MoneyWidget] then

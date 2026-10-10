@@ -29,6 +29,12 @@ WBP_Battle_Button_Phone._components = {
 function WBP_Battle_Button_Phone:Initialize(Initializer)
   self.Super.Initialize(self)
   self.OwnerPlayer = nil
+  self.IsUltimateActionSwap = false
+  self.AutoAttackEnabled = false
+  self.AutoShootEnabled = false
+  self.AutoMeleeVisualBanApplied = false
+  self.AutoRangedVisualBanApplied = false
+  self.UltimateGuideState = nil
 end
 
 function WBP_Battle_Button_Phone:Construct()
@@ -615,6 +621,10 @@ function WBP_Battle_Button_Phone:InitVariable()
   self.Battle_Menu.OwnerPanel = self
   self.Dodge.OwnerPanel = self
   self.AimLocked.OwnerPanel = self
+  if IsValid(self.Aim) then
+    self.Aim.OwnerPanel = self
+    self.Aim:BindOwnerPlayer(self.OwnerPlayer)
+  end
   self.BulletJump.OwnerPanel = self
   self.BulletJumpLeft.OwnerPanel = self
   self.BulletJumpCancelRight.OwnerPanel = self
@@ -985,7 +995,10 @@ function WBP_Battle_Button_Phone:GetSkillActiveInfo()
   end
   if PlayerController then
     local len = PlayerController.CurrentInActiveSkills:Length()
-    local TempButtons = self.SkillButtons
+    local TempButtons = {}
+    for Id in pairs(self.SkillButtons) do
+      TempButtons[Id] = true
+    end
     for i = 1, len do
       self:ChangeSkillButtonState(PlayerController.CurrentInActiveSkills[i], "Lock")
       TempButtons[PlayerController.CurrentInActiveSkills[i]] = nil
@@ -1253,8 +1266,10 @@ end
 
 function WBP_Battle_Button_Phone:RefreshUltimateAttackGuide()
   local State = UltimateAttackGuideHelper:GetUltimateAttackGuideState(self.OwnerPlayer)
-  local IsUltraActive = UltimateAttackGuideHelper:IsUltimateActive(self.OwnerPlayer)
-  local WasUltraActive = self.IsUltraActive == true
+  self.UltimateGuideState = State
+  self.IsUltimateActionSwap = State.IsActionSwap == true
+  local IsUltraActive = State.IsUltimateActive
+  local WasUltraActive = true == self.IsUltraActive
   self.IsUltraActive = IsUltraActive
   if IsUltraActive and not WasUltraActive then
     self:StopFoldTimer()
@@ -1263,6 +1278,49 @@ function WBP_Battle_Button_Phone:RefreshUltimateAttackGuide()
     end
   elseif not IsUltraActive and WasUltraActive then
     self:TryStartFoldTimer()
+  end
+  self:ApplyAttackButtonVisualState()
+  if State.IsType1 and State.ReplaceMobileAttackButtonIcon then
+    self.AtkMelee:LoadUltimateIcon(self.OwnerPlayer)
+    self.AtkRangedLeft:LoadUltimateIcon(self.OwnerPlayer)
+  elseif State.IsActionSwap then
+    if State.ReplaceMobileAttackButtonIcon then
+      self.AtkMelee:LoadUltimateIcon(self.OwnerPlayer)
+    end
+    self.AtkRangedLeft:RestoreDefaultIcon()
+  else
+    self.AtkMelee:RestoreDefaultIcon()
+    self.AtkRangedLeft:RestoreDefaultIcon()
+  end
+  self.SkillItems[2]:OnUltimateStateChanged(State.MainAttackType ~= nil)
+end
+
+function WBP_Battle_Button_Phone:ApplyAttackButtonVisualState()
+  local State = self.UltimateGuideState
+  if not State then
+    return
+  end
+  local MeleeAutoBan = self.AutoAttackEnabled == true
+  local RangedAutoBan = true == self.AutoShootEnabled
+  if self.AutoMeleeVisualBanApplied and not MeleeAutoBan then
+    self.AtkMelee.IsBan = false
+    self.AtkMelee.AutoCombatBan = false
+    EMUIAnimationSubsystem:EMStopAnimation(self.AtkMelee, self.AtkMelee.Ban)
+    if self.AtkMelee.CurrentUltimateAnim then
+      EMUIAnimationSubsystem:EMStopAnimation(self.AtkMelee, self.AtkMelee.CurrentUltimateAnim)
+    end
+    EMUIAnimationSubsystem:EMPlayAnimation(self.AtkMelee, self.AtkMelee.Normal)
+  end
+  if self.AutoRangedVisualBanApplied and not RangedAutoBan then
+    self.AtkRanged.AutoCombatBan = false
+    self.AtkRangedLeft.AutoCombatBan = false
+    if self.AtkRanged.CurrentUltimateAnim then
+      EMUIAnimationSubsystem:EMStopAnimation(self.AtkRanged, self.AtkRanged.CurrentUltimateAnim)
+    end
+    if "Ban" == self.AtkRanged.CurButtonState then
+      self.AtkRanged.CurButtonState = nil
+      self.AtkRanged:UpdateRangeWeaponButton()
+    end
   end
   if State.IsType1 then
     self.AtkRanged:EnterUltimateBan()
@@ -1273,16 +1331,26 @@ function WBP_Battle_Button_Phone:RefreshUltimateAttackGuide()
   self.AtkRanged:OnUltimateStateChanged(RangedNeedsEnable2, false)
   local LeftRangedNeedsEnable = State.IsType1 or State.IsType2 and State.MainAttackType == "Ranged"
   self.AtkRangedLeft:OnUltimateStateChanged(LeftRangedNeedsEnable, State.IsType1)
-  local MeleeNeedsEnable = State.IsType1 or State.IsType2 and State.MainAttackType == "Melee"
-  self.AtkMelee:OnUltimateStateChanged(MeleeNeedsEnable, State.IsType1)
-  if State.IsType1 and State.ReplaceMobileAttackButtonIcon then
-    self.AtkMelee:LoadUltimateIcon(self.OwnerPlayer)
-    self.AtkRangedLeft:LoadUltimateIcon(self.OwnerPlayer)
-  else
-    self.AtkMelee:RestoreDefaultIcon()
-    self.AtkRangedLeft:RestoreDefaultIcon()
+  local MeleeNeedsEnable = State.IsActionSwap or State.IsType1 or State.IsType2 and State.MainAttackType == "Melee"
+  self.AtkMelee:OnUltimateStateChanged(MeleeNeedsEnable, State.IsType1 or State.IsActionSwap)
+  self.AtkMelee.AutoCombatBan = MeleeAutoBan
+  self.AtkRanged.AutoCombatBan = RangedAutoBan
+  self.AtkRangedLeft.AutoCombatBan = RangedAutoBan
+  if MeleeAutoBan then
+    self.AtkMelee.IsBan = true
+    EMUIAnimationSubsystem:EMPlayAnimation(self.AtkMelee, self.AtkMelee.Ban)
   end
-  self.SkillItems[2]:OnUltimateStateChanged(State.MainAttackType ~= nil)
+  if RangedAutoBan then
+    self.AtkRanged.CurButtonState = "Ban"
+    EMUIAnimationSubsystem:EMPlayAnimation(self.AtkRanged, self.AtkRanged.Ban)
+    if self.HasLeftShoot then
+      self.AtkRangedLeft:SetVisibility(ESlateVisibility.Collapsed)
+    end
+  elseif self.HasLeftShoot and not self.SettingDisabledTags.AtkRangedLeft then
+    self.AtkRangedLeft:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  end
+  self.AutoMeleeVisualBanApplied = MeleeAutoBan
+  self.AutoRangedVisualBanApplied = RangedAutoBan
 end
 
 function WBP_Battle_Button_Phone:RefreshRoleTargetSkill(SkillName)
@@ -1612,10 +1680,14 @@ function WBP_Battle_Button_Phone:OnRecordButtonOptionChanged(bShow)
 end
 
 function WBP_Battle_Button_Phone:OnAutoAttackEnabledChanged(Player, bEnabled, bIsAutoOff)
-  if bEnabled then
-    self:ChangeSkillButtonState(ESkillName.Attack, "Ban")
+  if IsValid(Player) and IsValid(self.OwnerPlayer) and Player ~= self.OwnerPlayer then
+    return
+  end
+  self.AutoAttackEnabled = true == bEnabled
+  if self.UltimateGuideState then
+    self:ApplyAttackButtonVisualState()
   else
-    self:ChangeSkillButtonState(ESkillName.Attack, "UnBan")
+    self:RefreshUltimateAttackGuide()
   end
   self:RefreshFoldStateByAutoCombatState()
   if not bIsAutoOff then
@@ -1624,23 +1696,14 @@ function WBP_Battle_Button_Phone:OnAutoAttackEnabledChanged(Player, bEnabled, bI
 end
 
 function WBP_Battle_Button_Phone:OnAutoShootEnabledChanged(Player, bEnabled, bIsAutoOff)
-  if bEnabled then
-    self.AtkRanged.CurButtonState = "Ban"
-    EMUIAnimationSubsystem:EMPlayAnimation(self.AtkRanged, self.AtkRanged.Ban)
-    if self.HasLeftShoot then
-      self.AtkRangedLeft:SetVisibility(ESlateVisibility.Collapsed)
-    end
+  if IsValid(Player) and IsValid(self.OwnerPlayer) and Player ~= self.OwnerPlayer then
+    return
+  end
+  self.AutoShootEnabled = true == bEnabled
+  if self.UltimateGuideState then
+    self:ApplyAttackButtonVisualState()
   else
-    self.AtkRanged.CurButtonState = nil
-    self.AtkRanged:UpdateRangeWeaponButton()
-    if self.AtkRanged.IsUltimateEnabled and self.AtkRanged.CurrentUltimateAnim then
-      self.AtkRanged:StopAllAnimations()
-      EMUIAnimationSubsystem:EMPlayAnimation(self.AtkRanged, self.AtkRanged.Normal)
-      EMUIAnimationSubsystem:EMPlayAnimation(self.AtkRanged, self.AtkRanged.CurrentUltimateAnim)
-    end
-    if self.HasLeftShoot and not self.SettingDisabledTags.AtkRangedLeft then
-      self.AtkRangedLeft:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    end
+    self:RefreshUltimateAttackGuide()
   end
   self:RefreshFoldStateByAutoCombatState()
   if not bIsAutoOff then
@@ -1653,45 +1716,32 @@ function WBP_Battle_Button_Phone:SyncAutoCombatVisual()
   if not IsValid(Player) then
     return
   end
+  self.AutoMeleeVisualBanApplied = self.AtkMelee.AutoCombatBan == true
+  self.AutoRangedVisualBanApplied = true == self.AtkRanged.AutoCombatBan
   local bAutoAttack = Player:IsAutoAttackEnabled()
+  self.AutoAttackEnabled = bAutoAttack
   DebugPrint("[SyncAutoCombatVisual] bAutoAttack=", bAutoAttack, "bAutoShoot=", Player:IsAutoShootEnabled())
   local BattleMainUI_Sync = UIManager(self):GetUIObj("BattleMain")
   local LeftAutoBtn = BattleMainUI_Sync and BattleMainUI_Sync.LeftAutoBtn
   if LeftAutoBtn and IsValid(LeftAutoBtn.AutoBattle) then
     LeftAutoBtn.AutoBattle.IsAutoAttackOn = bAutoAttack
     if bAutoAttack then
-      EMUIAnimationSubsystem:EMPlayAnimation(LeftAutoBtn.AutoBattle, LeftAutoBtn.AutoBattle.Press)
+      EMUIAnimationSubsystem:EMPlayAnimation(LeftAutoBtn.AutoBattle, LeftAutoBtn.AutoBattle.Using)
     else
       EMUIAnimationSubsystem:EMPlayAnimation(LeftAutoBtn.AutoBattle, LeftAutoBtn.AutoBattle.Normal)
     end
   end
-  if bAutoAttack then
-    self:ChangeSkillButtonState(ESkillName.Attack, "Ban")
-  else
-    self:ChangeSkillButtonState(ESkillName.Attack, "UnBan")
-  end
   local bAutoShoot = Player:IsAutoShootEnabled()
+  self.AutoShootEnabled = bAutoShoot
   if LeftAutoBtn and IsValid(LeftAutoBtn.AutoRemote) then
     LeftAutoBtn.AutoRemote.IsAutoShootOn = bAutoShoot
     if bAutoShoot then
-      EMUIAnimationSubsystem:EMPlayAnimation(LeftAutoBtn.AutoRemote, LeftAutoBtn.AutoRemote.Press)
+      EMUIAnimationSubsystem:EMPlayAnimation(LeftAutoBtn.AutoRemote, LeftAutoBtn.AutoRemote.Using)
     else
       EMUIAnimationSubsystem:EMPlayAnimation(LeftAutoBtn.AutoRemote, LeftAutoBtn.AutoRemote.Normal)
     end
   end
-  if bAutoShoot then
-    self.AtkRanged.CurButtonState = "Ban"
-    EMUIAnimationSubsystem:EMPlayAnimation(self.AtkRanged, self.AtkRanged.Ban)
-    if self.HasLeftShoot then
-      self.AtkRangedLeft:SetVisibility(ESlateVisibility.Collapsed)
-    end
-  else
-    self.AtkRanged.CurButtonState = nil
-    self.AtkRanged:UpdateRangeWeaponButton()
-    if self.HasLeftShoot and not self.SettingDisabledTags.AtkRangedLeft then
-      self.AtkRangedLeft:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    end
-  end
+  self:RefreshUltimateAttackGuide()
 end
 
 function WBP_Battle_Button_Phone:IsInBigWorldRegion()

@@ -330,11 +330,14 @@ function Component:UpdateSignBoardNpc(SignBoard, NpcId)
   self:CallServer("UpdateSignBoardNpc", callback, SignBoard, NpcId)
 end
 
-function Component:UpdateActionMapping(ActionMapping)
+function Component:UpdateActionMapping(ActionMapping, Callback)
   local function callback(Ret)
     self.logger.debug("UpdateActionMapping", Ret, ActionMapping)
     
     EventManager:FireEvent(EventID.OnUpdateActionMapping, Ret, ActionMapping)
+    if Callback then
+      Callback(Ret, ActionMapping)
+    end
   end
   
   self:CallServer("UpdateActionMapping", callback, ActionMapping)
@@ -567,6 +570,18 @@ function Component:CheckCustomerServiceRedDot()
     return true
   end
   return false
+end
+
+function Component:GetPreviewIsShow()
+  return 1 == self.DataStatistics.PreviewIsShow
+end
+
+function Component:SetPreviewShow()
+  local function Callback(Ret)
+    self.logger.debug("SetPreviewShow Callback", Ret)
+  end
+  
+  self:CallServer("SetPreviewShow", Callback)
 end
 
 function Component:GetInteractTriggerReward(InteractTriggerId)

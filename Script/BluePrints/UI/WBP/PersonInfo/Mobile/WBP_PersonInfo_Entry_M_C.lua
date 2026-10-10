@@ -56,6 +56,7 @@ function M:RefreshBaseInfo()
     PCBluePrint = "WidgetBlueprint'/Game/UI/WBP/PersonalInfo/Mobile/WBP_PersonalInfo_Main_M.WBP_PersonalInfo_Main_M'"
   })
   if self.PersonInfoMainPage then
+    self.PersonInfoMainPage.RootPage = self
     self.PersonInfoMainPage:PlayAnimation(self.PersonInfoMainPage.In)
   end
   if PersonInfoController:NeedHideUI() then
@@ -90,6 +91,7 @@ end
 function M:Hideui()
   PersonInfoController:SetMainPageUIHidden(true)
   self.MainPageItem:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self:SetMainPageBlurVisible(false)
   self:PlayAnimation(self.HideUi)
 end
 
@@ -97,6 +99,7 @@ function M:Recoverui()
   PersonInfoController:SetMainPageUIHidden(false)
   self.Com_Tab_M:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.MainPageItem:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self:SetMainPageBlurVisible(true)
   self:PlayAnimation(self.ShowUi)
 end
 

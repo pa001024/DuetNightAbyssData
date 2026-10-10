@@ -9,6 +9,8 @@ function M:Initialize(Initializer)
   self.SuffixTitleID = nil
   self.PrefixTitleId = nil
   self.CurrentTitleFrameID = nil
+  self.bViewedTitleTab = false
+  self.bViewedTitleFrameTab = false
 end
 
 local StyleBPPath = "BluePrints.UI.WidgetBlueprint'/Game/UI/WBP/PersonalInfo/Widget/Title/WBP_PersonalInfo_Title_TypeContent.WBP_PersonalInfo_Title_TypeContent'"
@@ -101,6 +103,7 @@ function M:OnTabChange(TabWidget)
   self.TabId = TabWidget.Idx
   local Idx = TabWidget.Idx
   if 1 == Idx then
+    self.bViewedTitleTab = true
     if self.TitleStylePage then
       self.TitleStylePage:SetVisibility(ESlateVisibility.Collapsed)
       self.TitleStylePage:ResetEquipFrame()
@@ -115,6 +118,7 @@ function M:OnTabChange(TabWidget)
     end
     self:OnTitleContentPageSwitch()
   elseif 2 == Idx then
+    self.bViewedTitleFrameTab = true
     if self.TitleContentPage then
       self.TitleContentPage:SetVisibility(ESlateVisibility.Collapsed)
     end
@@ -346,9 +350,50 @@ function M:OnComfirmBtnClick()
   UIManager(self):ShowUITip(UIConst.Tip_CommonTop, GText("UI_Change_Success"))
 end
 
+function M:ClearAllLeafNewReddots(ReddotName)
+  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(ReddotName)
+  if not CacheDetail then
+    return
+  end
+  local Ids = {}
+  for Id, Flag in pairs(CacheDetail) do
+    if Flag then
+      table.insert(Ids, Id)
+    end
+  end
+  for _, Id in ipairs(Ids) do
+    UIUtils.TrySubReddotCacheDetailNumber(Id, ReddotName)
+  end
+end
+
+function M:GetLeafReddotCount(ReddotName)
+  local Node = ReddotManager.GetTreeNode(ReddotName)
+  if not Node then
+    return 0
+  end
+  return Node.Count or 0
+end
+
+function M:ClearViewedTabNewReddotsOnClose()
+  if self.bViewedTitleTab then
+    self:ClearAllLeafNewReddots("Title")
+  end
+  if self.bViewedTitleFrameTab then
+    self:ClearAllLeafNewReddots("TitleFrame")
+  end
+  local TitleBtnNode = ReddotManager.GetTreeNode("TitleBtn")
+  local RemainCount = self:GetLeafReddotCount("Title") + self:GetLeafReddotCount("TitleFrame")
+  if RemainCount > 0 and TitleBtnNode and (not TitleBtnNode.Count or TitleBtnNode.Count <= 0) then
+    ReddotManager.IncreaseLeafNodeCount("TitleBtn", 1)
+  end
+end
+
 function M:Destruct()
   ReddotManager.RemoveListener("TitleTab", self)
   ReddotManager.RemoveListener("TitleFrameTab", self)
+  self:ClearViewedTabNewReddotsOnClose()
+  self.bViewedTitleTab = nil
+  self.bViewedTitleFrameTab = nil
 end
 
 function M:OnContentPreviewKeyDown(MyGeometry, InKeyEvent)
@@ -398,10 +443,16 @@ function M:OnGamePadDown(InKeyName)
 end
 
 function M:OnTitleTabReddotChange(Count, RdType, RdName)
+  if not IsValid(self.Tab) or not IsValid(self.Tab.Com_Tab) then
+    return
+  end
   self.Tab.Com_Tab:ShowTabRedDot(1, Count > 0)
 end
 
 function M:OnTitleFrameTabReddotChange(Count, RdType, RdName)
+  if not IsValid(self.Tab) or not IsValid(self.Tab.Com_Tab) then
+    return
+  end
   self.Tab.Com_Tab:ShowTabRedDot(2, Count > 0)
 end
 

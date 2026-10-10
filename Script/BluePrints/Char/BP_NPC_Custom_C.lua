@@ -338,39 +338,38 @@ function M:ActiveSetCustomNpcHideByAvatarSuitData()
   end
 end
 
-function M:InitHeadWidgetComponent()
-  if IsValid(self.HeadWidgetComponent) then
-    return
-  end
-  local HeadUISubsystem = UNpcHeadUISubsystem.GetHeadUISubsystem(self)
-  if not HeadUISubsystem then
-    return
-  end
-  self.HeadWidgetComponent = HeadUISubsystem:InitHeadWidgetComponent(self)
-end
-
-function M:EnableHeadWidget(WidgetName, bEnable, ...)
-  if bEnable then
-    self:InitHeadWidgetComponent()
-  end
-  if IsValid(self.HeadWidgetComponent) then
-    if bEnable then
-      if self.HeadWidgetComponent:NeedForceInit() then
-        self.HeadWidgetComponent:AdjustSelfTransform()
-      end
-      self.HeadWidgetComponent:EnableWidget(WidgetName, ...)
-    else
-      self.HeadWidgetComponent:DisableWidget(WidgetName, ...)
-    end
-  end
-end
-
 function M:EnableBubbleWidget(bEnable, Content)
-  self:EnableHeadWidget("Long_Bubble", bEnable, Content)
+  local Comp
+  if bEnable then
+    Comp = self:GetOrCreateHeadWidgetComponent()
+  else
+    Comp = self:GetHeadWidgetComponent()
+  end
+  if not IsValid(Comp) then
+    return
+  end
+  if bEnable then
+    Comp:EnableBubbleTyped(Content, "Long_Bubble")
+  else
+    Comp:DisableBubbleTyped("Long_Bubble")
+  end
 end
 
 function M:EnableNameWidget(bEnable, Name)
-  self:EnableHeadWidget("Name", bEnable, GText(Name))
+  local Comp
+  if bEnable then
+    Comp = self:GetOrCreateHeadWidgetComponent()
+  else
+    Comp = self:GetHeadWidgetComponent()
+  end
+  if not IsValid(Comp) then
+    return
+  end
+  if bEnable then
+    Comp:EnableNameWidget(GText(Name))
+  else
+    Comp:DisableNameWidget()
+  end
 end
 
 function M:PreEnterStory(Context)

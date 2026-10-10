@@ -34,7 +34,8 @@ local MessageTypeToFunc = {
   TransformAFDay = "HandleTransformAFDay",
   HyperWeaponLevelUp = "HandleHyperWeaponLevelUp",
   SwitchAutoAgreeInvite = "HandleSwitchAutoAgreeInvite",
-  GuildRegionOnlineHeatSync = "HandleGuildRegionOnlineHeatSync"
+  GuildRegionOnlineHeatSync = "HandleGuildRegionOnlineHeatSync",
+  [CommonConst.RegionOnlineServerMessageType.GuildBadgeDisplayChange] = "HandleGuildBadgeDisplayChange"
 }
 local Component = {}
 
@@ -340,6 +341,17 @@ function Component:HandleGuildRegionOnlineHeatSync(message)
   self.CurrentGuildOnlineHeat = math.max(0, math.floor(tonumber(message.CurrentHeat) or 0))
   self.CurrentGuildOnlineHeatSnapshot = message.HeatSnapshot or {}
   self.logger.debug("HandleGuildRegionOnlineHeatSync", GuildId, self.CurrentGuildOnlineHeat, message.Reason)
+end
+
+function Component:HandleGuildBadgeDisplayChange(message)
+  local SenderInfo = self.RegionAvatars[message.Sender]
+  if not SenderInfo then
+    return
+  end
+  SenderInfo.AvatarInfo.GuildSimpleInfo = message.GuildSimpleInfo or {}
+  SenderInfo.AvatarInfo.ShowGuildBadge = message.ShowGuildBadge ~= false
+  self.logger.debug("HandleGuildBadgeDisplayChange", message.Sender, SenderInfo.AvatarInfo.ShowGuildBadge)
+  EventManager:FireEvent(EventID.OnlineRegionGuildBadgeChange, message.Sender, SenderInfo.AvatarInfo.Uid)
 end
 
 function Component:HandleEnterRegionOnline(message)
@@ -1578,6 +1590,23 @@ function Component:SetAutoAgreeInvite(bEnable)
   end
   
   self:CallServer("SetAutoAgreeInvite", callback, bEnable)
+end
+
+function Component:SetShowGuildBadge(Callback, ShowGuildBadge)
+  local bShowGuildBadge = ShowGuildBadge and true or false
+  
+  local function OnSetShowGuildBadge(ErrCode)
+    DebugPrint("SetShowGuildBadge callback", self, ErrCode, bShowGuildBadge, self.ShowGuildBadge)
+    if Callback then
+      Callback(ErrCode)
+    end
+  end
+  
+  self:CallServer("SetShowGuildBadge", OnSetShowGuildBadge, bShowGuildBadge)
+end
+
+function Component:_OnPropChangeShowGuildBadge()
+  EventManager:FireEvent(EventID.OnLocalGuildBadgeChange)
 end
 
 return Component

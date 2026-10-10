@@ -14,6 +14,7 @@ function M:SetCallbacks(OwnerObj, Callbacks)
   self.OwnerObj = OwnerObj
   self.OnClickCb = Callbacks.OnClickCb
   self.ClearRdCb = Callbacks.ClearRdCb
+  self.BeforeShowDetailCb = Callbacks.BeforeShowDetailCb
 end
 
 function M:InitItemInfo(ShopItemData)
@@ -117,6 +118,9 @@ end
 function M:ShowItemDetail()
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
+    return
+  end
+  if self.BeforeShowDetailCb and self.OwnerObj and self.BeforeShowDetailCb(self.OwnerObj) == false then
     return
   end
   if Avatar:CheckShopItemEnhanceRedDot(self.ShopItemData.ItemId) then

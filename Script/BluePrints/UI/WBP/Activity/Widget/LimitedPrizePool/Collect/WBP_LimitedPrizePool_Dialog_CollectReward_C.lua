@@ -94,6 +94,9 @@ function M:IsItemOwned(Avatar, ItemType, ItemId)
   if not (Avatar and ItemType) or not ItemId then
     return false
   end
+  if "Background" == ItemType then
+    return ItemUtils.HasBackground(ItemId)
+  end
   local CheckFuncName = "Check" .. ItemType .. "Enough"
   local CheckFunc = Avatar[CheckFuncName]
   if not CheckFunc then
@@ -144,10 +147,11 @@ function M:BuildCategoryContents()
     local ItemTypeIndex = RoundData.Type and RoundData.Type[PrizeIndex]
     local ItemIds = RoundData.Id and RoundData.Id[PrizeIndex]
     local ItemCount = RoundData.Count and RoundData.Count[PrizeIndex]
-    local RewardId = ExtraInfo and (ExtraInfo[1] or ExtraInfo.Id or ExtraInfo.ItemId)
-    local RewardCount = ExtraInfo and (ExtraInfo[2] or ExtraInfo.Count or ExtraInfo.ItemCount)
+    local RewardType = ExtraInfo and ItemUtils.GetItemType(ExtraInfo[1])
+    local RewardId = ExtraInfo and (ExtraInfo[2] or ExtraInfo.Id or ExtraInfo.ItemId)
+    local RewardCount = ExtraInfo and (ExtraInfo[3] or ExtraInfo.Count or ExtraInfo.ItemCount)
     local ItemType = ItemTypeIndex and ItemUtils.GetItemType(ItemTypeIndex)
-    if ItemType and ItemIds and #ItemIds > 0 and ItemCount and ItemCount > 0 and RewardId and RewardId > 0 and RewardCount and RewardCount > 0 then
+    if ItemType and ItemIds and #ItemIds > 0 and ItemCount and ItemCount > 0 and RewardId and RewardId > 0 and RewardCount and RewardCount > 0 and type(RewardType) == "string" and "" ~= RewardType then
       local Content = NewObject(UIUtils.GetCommonItemContentClass())
       Content.Owner = self
       Content.Index = #self.CategoryContents + 1
@@ -168,6 +172,7 @@ function M:BuildCategoryContents()
         end
       end
       Content.TotalCount = #Content.ItemIds
+      Content.RewardType = RewardType
       Content.RewardId = RewardId
       Content.RewardCount = RewardCount
       Content.bRewardClaimed = true == ClaimedPrizeSet[PrizeIndex]

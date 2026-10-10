@@ -3,6 +3,11 @@ T.RT_1 = {2}
 T.RT_2 = {3}
 T.RT_3 = {2, 3}
 T.RT_4 = {1}
+T.RT_5 = {
+  1,
+  2,
+  3
+}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -223,11 +228,7 @@ return ReadOnly("LevelUpVisualEffects", {
   [310457] = {
     IsAlways = true,
     IsAttach = true,
-    Level = {
-      1,
-      2,
-      3
-    },
+    Level = T.RT_5,
     SkinID = 310401,
     VisualEffectId = 310457
   },
@@ -244,5 +245,61 @@ return ReadOnly("LevelUpVisualEffects", {
     Level = T.RT_1,
     SkinID = 310401,
     VisualEffectId = 310459
+  },
+  [410391] = {
+    IsAlways = true,
+    IsAttach = true,
+    Level = T.RT_5,
+    SkinID = 410301,
+    VisualEffectId = 410391
+  },
+  [410392] = {
+    IsAlways = true,
+    IsAttach = true,
+    Level = T.RT_4,
+    SkinID = 410301,
+    VisualEffectId = 410392
+  },
+  [410393] = {
+    IsAlways = true,
+    IsAttach = true,
+    Level = T.RT_3,
+    SkinID = 410301,
+    VisualEffectId = 410393
+  },
+  [410394] = {
+    IsAlways = true,
+    IsAttach = true,
+    Level = T.RT_3,
+    SkinID = 410301,
+    VisualEffectId = 410394
+  },
+  [410395] = {
+    IsAlways = true,
+    IsAttach = true,
+    Level = T.RT_1,
+    SkinID = 410301,
+    VisualEffectId = 410395
+  },
+  [410396] = {
+    IsAlways = true,
+    IsAttach = true,
+    Level = T.RT_1,
+    SkinID = 410301,
+    VisualEffectId = 410396
+  },
+  [410397] = {
+    IsAlways = true,
+    IsAttach = true,
+    Level = T.RT_2,
+    SkinID = 410301,
+    VisualEffectId = 410397
+  },
+  [410398] = {
+    IsAlways = true,
+    IsAttach = true,
+    Level = T.RT_2,
+    SkinID = 410301,
+    VisualEffectId = 410398
   }
 })

@@ -23,7 +23,6 @@ function BP_NPC_C:ReceiveBeginPlay()
   self.IsDestroied = false
   self.IsShowSideIndicator = false
   self.IsInSpecialQuest = false
-  self.IsNeedCollapsedOtherBubble = false
 end
 
 function BP_NPC_C:OnBattleReady_TryInitCharacterInfo(_Battle)
@@ -1133,16 +1132,11 @@ function BP_NPC_C:TryEnableNpcSideBubble(InNpcId, IsEnable)
 end
 
 function BP_NPC_C:TryEnableIndicator(bEnable, Brush)
-  if bEnable and self.EnableIndicator then
-    self:EnableHeadWidget("NpcSideIndicator", false, nil)
-  end
   self.EnableIndicator = bEnable
   if bEnable then
-    self:EnableHeadWidget("NpcSideIndicator", bEnable, Brush)
-    self:CollapsedOtherBubble(bEnable)
+    self:SetSideIndicatorVisible(true, Brush)
   else
-    self:EnableHeadWidget("NpcSideIndicator", false, nil)
-    self:CollapsedOtherBubble(false)
+    self:SetSideIndicatorVisible(false)
   end
 end
 
@@ -1156,62 +1150,97 @@ function BP_NPC_C:TryEnableNpcMissionBubble(InUnitId)
 end
 
 function BP_NPC_C:EnableHeadIconWidget(bEnable)
-  if self.IsNeedCollapsedOtherBubble == false then
-    self:EnableHeadWidget("HeadIcon", bEnable, self)
+  local Comp = bEnable and self:GetOrCreateHeadWidgetComponent() or self:GetHeadWidgetComponent()
+  if not IsValid(Comp) then
+    return
+  end
+  if bEnable then
+    Comp:EnableHeadIconWidget()
   else
-    self:EnableHeadWidget("HeadIcon", false, self)
+    Comp:DisableHeadIconWidget()
+  end
+end
+
+function BP_NPC_C:SetSideIndicatorVisible(bShow, Brush)
+  local Comp
+  if bShow then
+    Comp = self:GetOrCreateHeadWidgetComponent()
+  else
+    Comp = self:GetHeadWidgetComponent()
+  end
+  if not IsValid(Comp) then
+    return
+  end
+  if bShow then
+    if type(Brush) == "string" then
+      Brush = LoadObject(Brush)
+    end
+    Comp:EnableNpcSideIndicatorWidget(Brush)
+    Comp:SetSubWidgetHideTag("HeadIcon", "NpcSideIndicator", true)
+    Comp:SetSubWidgetHideTag("Impression", "NpcSideIndicator", true)
+  else
+    Comp:DisableNpcSideIndicatorWidget()
+    Comp:SetSubWidgetHideTag("HeadIcon", "NpcSideIndicator", false)
+    Comp:SetSubWidgetHideTag("Impression", "NpcSideIndicator", false)
   end
 end
 
 function BP_NPC_C:EnableNpcSideBubbleWidget(bEnable)
-  if self.IsShowSideIndicator and bEnable and (self.IsInSpecialQuest == false or self.IsInSpecialQuest == nil) then
-    self:EnableHeadWidget("NpcSideIndicator", bEnable, self:GetNpcSideQuestBubbleBrush(MissionIndicatorManager.MissionNpcSideBubbles[self.UnitId]))
-    self:CollapsedOtherBubble(bEnable)
-  else
-    self:EnableHeadWidget("NpcSideIndicator", false, nil)
-    self:CollapsedOtherBubble(false)
+  local bShow = self.IsShowSideIndicator and bEnable and (self.IsInSpecialQuest == false or self.IsInSpecialQuest == nil)
+  local Brush
+  if bShow then
+    Brush = self:GetNpcSideQuestBubbleBrush(MissionIndicatorManager.MissionNpcSideBubbles[self.UnitId])
   end
-end
-
-function BP_NPC_C:CollapsedOtherBubble(bCollapsed)
-  if bCollapsed then
-    self.IsNeedCollapsedOtherBubble = true
-    self:EnableHeadIconWidget(false)
-    self:EnableImpressionWidget(false)
-  else
-    self.IsNeedCollapsedOtherBubble = false
-  end
+  self:SetSideIndicatorVisible(bShow, Brush)
 end
 
 function BP_NPC_C:EnableImpressionWidget(bEnable)
-  if self.IsNeedCollapsedOtherBubble == false then
-    self:EnableHeadWidget("Impression", bEnable, self)
+  local Comp = bEnable and self:GetOrCreateHeadWidgetComponent() or self:GetHeadWidgetComponent()
+  if not IsValid(Comp) then
+    return
+  end
+  if bEnable then
+    Comp:EnableImpressionWidget()
   else
-    self:EnableHeadWidget("Impression", false, self)
+    Comp:DisableImpressionWidget()
   end
 end
 
 function BP_NPC_C:EnableNameWidget(bEnable)
   if not bEnable then
-    self:EnableHeadWidget("Name", false)
+    local Comp = self:GetHeadWidgetComponent()
+    if IsValid(Comp) then
+      Comp:DisableNameWidget()
+    end
     return
   end
   local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
   local IsHidden = GameState and GameState:IsNpcNameHidden(self.UnitId)
   if IsHidden then
-    self:EnableHeadWidget("Name", false)
+    local Comp = self:GetHeadWidgetComponent()
+    if IsValid(Comp) then
+      Comp:DisableNameWidget()
+    end
+    return
+  end
+  local Comp = self:GetOrCreateHeadWidgetComponent()
+  if not IsValid(Comp) then
     return
   end
   local Name = GameState and GameState:GetNpcName(self.UnitId)
-  self:EnableHeadWidget("Name", true, GText(Name))
-end
-
-function BP_NPC_C:EnableBubbleWidget(bEnable, Content, Style)
-  self:EnableHeadWidget("Bubble", bEnable, Content, Style)
+  Comp:EnableNameWidget(GText(Name))
 end
 
 function BP_NPC_C:EnableBubbleRewardWidget(bEnable)
-  self:EnableHeadWidget("Bubble_Reward", bEnable)
+  local Comp = bEnable and self:GetOrCreateHeadWidgetComponent() or self:GetHeadWidgetComponent()
+  if not IsValid(Comp) then
+    return
+  end
+  if bEnable then
+    Comp:EnableBubbleRewardWidget()
+  else
+    Comp:DisableBubbleRewardWidget()
+  end
 end
 
 function BP_NPC_C:GetHitMontageRule()

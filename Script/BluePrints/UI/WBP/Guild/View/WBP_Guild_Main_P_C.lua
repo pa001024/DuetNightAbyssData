@@ -22,12 +22,8 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   if self.IsInGuild then
     if 1 == self.Tab.CurrentTab then
       IsHandled = self.GuildInfoPage:OnContentKeyDown(MyGeometry, InKeyEvent)
-    elseif 2 == self.Tab.CurrentTab then
-      if self.GuildMember then
-        IsHandled = self.GuildMember:OnContentKeyDown(MyGeometry, InKeyEvent)
-      end
-    elseif 3 == self.Tab.CurrentTab and self.GuildBoss then
-      IsHandled = self.GuildBoss:OnContentKeyDown(MyGeometry, InKeyEvent)
+    elseif 2 == self.Tab.CurrentTab and self.GuildMember then
+      IsHandled = self.GuildMember:OnContentKeyDown(MyGeometry, InKeyEvent)
     end
   elseif 1 == self.Tab.CurrentTab then
     IsHandled = self.GuildJoin:OnContentKeyDown(MyGeometry, InKeyEvent)
@@ -128,13 +124,8 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
       IsHandled = self.GuildMember:OnContentFocusReceived(MyGeometry, InFocusEvent)
       return IsHandled
     end
-  elseif 1 == self.Tab.CurrentTab and self.IsInGuild then
-    if self.GuildInfoPage then
-      IsHandled = self.GuildInfoPage:OnContentFocusReceived(MyGeometry, InFocusEvent)
-      return IsHandled
-    end
-  elseif 3 == self.Tab.CurrentTab and self.IsInGuild and self.GuildBoss then
-    IsHandled = self.GuildBoss:OnContentFocusReceived(MyGeometry, InFocusEvent)
+  elseif 1 == self.Tab.CurrentTab and self.IsInGuild and self.GuildInfoPage then
+    IsHandled = self.GuildInfoPage:OnContentFocusReceived(MyGeometry, InFocusEvent)
     return IsHandled
   end
   return self.Super.OnFocusReceived(self, MyGeometry, InFocusEvent)
@@ -283,14 +274,11 @@ function M:InitTabInfo()
   if self.IsInGuild then
     ReddotManager.AddListenerEx("GuildTaskHub", self, self.RefreshGuildWeekActivityReddot)
     ReddotManager.AddListenerEx("GuildNewRequest", self, self.RefreshGuildNewRequestReddot)
-    ReddotManager.AddListenerEx("GuildBossHub", self, self.RefreshGuildBossHubReddot)
   else
     ReddotManager.RemoveListener("GuildTaskHub", self)
     ReddotManager.RemoveListener("GuildNewRequest", self)
-    ReddotManager.RemoveListener("GuildBossHub", self)
     self.Tab:ShowTabRedDot(1, false, false)
     self.Tab:ShowTabRedDot(2, false, false)
-    self.Tab:ShowTabRedDot(3, false, false)
   end
   self:PlayPageOpenSound()
 end
@@ -419,35 +407,6 @@ function M:OnTabItemSelected_InGuild(TabWidget, Tab)
       self.GuildInfoPage:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end
     self.WBox_Entrance:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    if self.Tab.HB_RC then
-      self.Tab.HB_RC:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    end
-    if self.Tab.Panel_Tip then
-      self.Tab.Panel_Tip:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    end
-    if self.Tab.Pos_Report then
-      self.Tab.Pos_Report:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    end
-  elseif 3 == Tab.TabId then
-    if not self.GuildBoss then
-      local GuildBoss = self:CreateWidgetNew("GuildBoss")
-      local Slot = self.Anchor:AddChildToOverlay(GuildBoss)
-      Slot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
-      Slot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
-      GuildBoss.ParentWidget = self
-      self.GuildBoss = GuildBoss
-    else
-      self.GuildBoss:SetVisibility(UIConst.VisibilityOp.Visible)
-      self.GuildBoss:RefreshUIInfo()
-    end
-    self.GuildBoss:PlayInAnim()
-    self.WBox_Entrance:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    if self.GuildInfoPage then
-      self.GuildInfoPage:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    end
-    if self.GuildMember then
-      self.GuildMember:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    end
     if self.Tab.HB_RC then
       self.Tab.HB_RC:SetVisibility(UE4.ESlateVisibility.Collapsed)
     end
@@ -591,13 +550,6 @@ function M:Close()
     end)
     self.GuildMember:PlayAnimation(self.GuildMember.Out)
   end
-  if self.GuildBoss and 3 == self.Tab.CurrentTab then
-    OutCount = OutCount + 1
-    self.GuildBoss:BindToAnimationFinished(self.GuildBoss.Out, function()
-      CloseFunc()
-    end)
-    self.GuildBoss:PlayAnimation(self.GuildBoss.Out)
-  end
 end
 
 function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
@@ -635,14 +587,9 @@ function M:InitSubWidgetView(CurInputDevice, CurGamepadName)
       if self.GuildInfoPage then
         self.GuildInfoPage:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
       end
-    elseif 2 == self.Tab.CurrentTab then
-      if self.GuildMember then
-        local NeedFocus = self:HasFocusedDescendants() or self:HasAnyUserFocus()
-        self.GuildMember:UpdateUIType(CurInputDevice, CurGamepadName, NeedFocus)
-      end
-    elseif 3 == self.Tab.CurrentTab and self.GuildBoss then
+    elseif 2 == self.Tab.CurrentTab and self.GuildMember then
       local NeedFocus = self:HasFocusedDescendants() or self:HasAnyUserFocus()
-      self.GuildBoss:UpdateUIType(CurInputDevice, CurGamepadName, NeedFocus)
+      self.GuildMember:UpdateUIType(CurInputDevice, CurGamepadName, NeedFocus)
     end
   else
     self:UpdateComTab()
@@ -726,14 +673,6 @@ function M:RefreshGuildWeekActivityReddot(Count)
     self.Tab:ShowTabRedDot(1, false, true)
   else
     self.Tab:ShowTabRedDot(1, false, false)
-  end
-end
-
-function M:RefreshGuildBossHubReddot(Count)
-  if Count > 0 then
-    self.Tab:ShowTabRedDot(3, false, true)
-  else
-    self.Tab:ShowTabRedDot(3, false, false)
   end
 end
 

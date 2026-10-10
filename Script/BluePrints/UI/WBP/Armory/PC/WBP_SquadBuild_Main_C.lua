@@ -289,7 +289,7 @@ function WBP_SquadBuild_Main_P_C:AllSlotPlayAnimation(Animation, SlotIndex)
 end
 
 function WBP_SquadBuild_Main_P_C:CancelCreateSquadAndBackToSquadList()
-  DebugPrint("thy   取消编辑然后返回阵容列表")
+  DebugPrint("Squad CancelEdit")
   AudioManager(self):PlayUISound(nil, "event:/ui/common/click_btn_cancel", nil, nil)
   self.IsNeedSave = self:CheckChangeSquadInfo()
   self.IsNeedPlayRefreshAnimation = true
@@ -456,7 +456,7 @@ function WBP_SquadBuild_Main_P_C:OnAutoAssistPanelClosed(Panel, IsEnabled)
 end
 
 function WBP_SquadBuild_Main_P_C:DeleteSquad()
-  DebugPrint("thy   删除阵容")
+  DebugPrint("Squad Delete")
   local Params = {
     RightCallbackObj = self,
     RightCallbackFunction = self.RealDeleteSquad,
@@ -476,14 +476,14 @@ function WBP_SquadBuild_Main_P_C:RealDeleteSquad()
 end
 
 function WBP_SquadBuild_Main_P_C:EditorSquad()
-  DebugPrint("thy   编辑阵容")
+  DebugPrint("Squad Edit")
   self:UpdateBtnInfo(self.Btn_Save, GText("UI_RegionMap_Save"), self.SaveSquad)
   self:ResetAllSlotsClickState()
   self.Character:OnClickCallback()
 end
 
 function WBP_SquadBuild_Main_P_C:SaveSquad()
-  DebugPrint("thy   保存阵容")
+  DebugPrint("Squad Save")
   AudioManager(self):PlayUISound(nil, "event:/ui/common/click_btn_confirm", nil, nil)
   local IsMainRoleSlotLack = false
   if self.Btn_Save.IsForbidden then
@@ -659,7 +659,12 @@ function WBP_SquadBuild_Main_P_C:InitSquadData()
     [3] = self.Panel_Roulette
   }
   self.CurSelectSquadIndex = self.SelectIndex or 1
-  self.SquadMax = DataMgr.GlobalConstant.SquadMax.ConstantValue or 10
+  local SquadMaxCfg = DataMgr.GlobalConstant.SquadMax
+  self.SquadMax = SquadMaxCfg and SquadMaxCfg.ConstantValue
+  if not self.SquadMax then
+    GWorld.logger.error("GlobalConstant.SquadMax 缺失")
+    self.SquadMax = 20
+  end
   self.IsDraging = false
   self.CurPhantomWeaponType = "Melee"
   self.IsInClickCD = false
@@ -1323,7 +1328,7 @@ function WBP_SquadBuild_Main_P_C:UpdateSquadList()
     self.List_Default:AddItem(Content)
   end
   self.List_Default:SetSelectedIndex(self.CurSelectSquadIndex - 1)
-  if #self.SquadInfoList < 10 then
+  if #self.SquadInfoList < self.SquadMax then
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
     Content.Owner = self
     Content.ClickCallback = self.AddSquad
@@ -1333,31 +1338,36 @@ function WBP_SquadBuild_Main_P_C:UpdateSquadList()
   end
 end
 
-function WBP_SquadBuild_Main_P_C:AutoSetScrollBoxOffSet(ScrollBox, ScrollOffset)
+function WBP_SquadBuild_Main_P_C:AutoSetScrollBoxOffSet(ScrollBox)
   if not ScrollBox then
     return
   end
-  self.CurScrollOffset = ScrollBox:GetScrollOffset()
-  local TargetScrollOffset = self.CurScrollOffset + ScrollOffset
-  local IsUp = ScrollOffset < 0
-  local IsDone = false
-  DebugPrint("thyScrollset", self.CurScrollOffset, TargetScrollOffset)
+  if self.TimerHandles and self.TimerHandles.AutoScroll then
+    return
+  end
+  local Step = 24
   self:AddTimer(0.01, function()
-    DebugPrint("thyAutoScroll", self.CurScrollOffset, TargetScrollOffset)
-    if IsDone then
+    if not self.IsDraging then
       self:RemoveTimer("AutoScroll")
       return
     end
-    self.CurScrollOffset = self.CurScrollOffset + ScrollOffset / 5
-    if IsUp then
-      self.CurScrollOffset = math.max(self.CurScrollOffset, 0)
+    local MousePos = UE4.UWidgetLayoutLibrary.GetMousePositionOnPlatform()
+    if not MousePos then
+      self:RemoveTimer("AutoScroll")
+      return
+    end
+    local ScrollUpCachedGeometry = self.TriggerScrollUp:GetCachedGeometry()
+    local ScrollDownCachedGeometry = self.TriggerScrollDown:GetCachedGeometry()
+    local IsUnderInScrollUp = USlateBlueprintLibrary.IsUnderLocation(ScrollUpCachedGeometry, MousePos)
+    local IsUnderInScrollDown = USlateBlueprintLibrary.IsUnderLocation(ScrollDownCachedGeometry, MousePos)
+    local CurScrollOffset = ScrollBox:GetScrollOffset()
+    if IsUnderInScrollUp then
+      ScrollBox:SetScrollOffset(math.max(0, CurScrollOffset - Step))
+    elseif IsUnderInScrollDown then
+      ScrollBox:SetScrollOffset(math.min(ScrollBox:GetScrollOffsetOfEnd(), CurScrollOffset + Step))
     else
-      self.CurScrollOffset = math.min(self.CurScrollOffset, TargetScrollOffset)
+      self:RemoveTimer("AutoScroll")
     end
-    if self.CurScrollOffset == TargetScrollOffset or 0 == self.CurScrollOffset then
-      IsDone = true
-    end
-    ScrollBox:SetScrollOffset(self.CurScrollOffset)
   end, true, 0, "AutoScroll", true)
 end
 
@@ -1390,7 +1400,7 @@ function WBP_SquadBuild_Main_P_C:CheckSquadListArr()
 end
 
 function WBP_SquadBuild_Main_P_C:ClickSelectSquadItem(Index)
-  DebugPrint("thy    点击预设阵容列表时的回调", self.CurSelectSquadIndex, Index, self.IsDraging)
+  DebugPrint("Squad ClickItem", self.CurSelectSquadIndex, Index, self.IsDraging)
   if self.IsInEditor then
     return
   end
@@ -1415,7 +1425,7 @@ function WBP_SquadBuild_Main_P_C:ClickSelectSquadItem(Index)
 end
 
 function WBP_SquadBuild_Main_P_C:AddSquad()
-  DebugPrint("thy    新添加一个预设阵容的回调")
+  DebugPrint("Squad Add")
   self.SquadInfo = nil
   self.IsInEditor = true
   self:ClearAllSlots(true)
@@ -1596,7 +1606,7 @@ end
 
 function WBP_SquadBuild_Main_P_C:GetWeaponTypeById(WeaponId)
   if not WeaponId then
-    DebugPrint("thy    GetWeaponTypeById 没有提供武器Id")
+    DebugPrint("Squad GetWeaponTypeById no WeaponId")
     return
   end
   local WeaponTypeList = DataMgr.BattleWeapon[WeaponId].WeaponTag
@@ -1607,7 +1617,7 @@ function WBP_SquadBuild_Main_P_C:GetWeaponTypeById(WeaponId)
       end
     end
   end
-  DebugPrint("thy    GetWeaponTypeById 没有找到武器类型", WeaponId)
+  DebugPrint("Squad GetWeaponTypeById unknown type", WeaponId)
   return "Melee"
 end
 
@@ -2510,7 +2520,6 @@ end
 
 function WBP_SquadBuild_Main_P_C:SetCurFocusArea(CurFocusArea)
   self.CurGamepadArea = CurFocusArea
-  DebugPrint("thy   SetCurFocusArea", self.CurGamepadArea)
 end
 
 function WBP_SquadBuild_Main_P_C:SquadListMoveInGamePadWithDPad(IsUp)
@@ -2632,7 +2641,6 @@ function WBP_SquadBuild_Main_P_C:Handle_OnGamePadDown(InKeyName)
     end
   elseif "Gamepad_DPad_Up" == InKeyName then
     if self.IsInCd then
-      DebugPrint("thy    IsInCD")
       return true
     else
       self:CreateCDTimer()
@@ -2640,7 +2648,6 @@ function WBP_SquadBuild_Main_P_C:Handle_OnGamePadDown(InKeyName)
     return self:SquadListMoveInGamePadWithDPad(true)
   elseif "Gamepad_DPad_Down" == InKeyName then
     if self.IsInCd then
-      DebugPrint("thy    IsInCD")
       return true
     else
       self:CreateCDTimer()
@@ -2665,7 +2672,6 @@ function WBP_SquadBuild_Main_P_C:Handle_OnGamePadDown(InKeyName)
     return true
   elseif "Gamepad_LeftStick_Up" == InKeyName then
     if self.IsInCd and self.IsInSortState then
-      DebugPrint("thy    IsInCD")
       return true
     else
       self:CreateCDTimer()
@@ -2673,7 +2679,6 @@ function WBP_SquadBuild_Main_P_C:Handle_OnGamePadDown(InKeyName)
     return self:SquadListMoveInGamePadWithDPad(true)
   elseif "Gamepad_LeftStick_Down" == InKeyName then
     if self.IsInCd and self.IsInSortState then
-      DebugPrint("thy    IsInCD")
       return true
     else
       self:CreateCDTimer()

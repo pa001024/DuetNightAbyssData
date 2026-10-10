@@ -51,11 +51,13 @@ function M:EnsureMainPageGamepadWidgetsInitialized()
   if self.bMainPageGamepadWidgetsInitialized then
     return
   end
-  if self.Btn_Data then
+  if not self.bBtnDataGamepadInitialized and self.Btn_Data then
     if self.Btn_Data.SetDefaultGamePadImg then
-      self.Btn_Data:SetDefaultGamePadImg("Menu")
+      self.Btn_Data:SetDefaultGamePadImg(UIConst.GamePadImgKey.SpecialRight)
+      self.bBtnDataGamepadInitialized = true
     elseif self.Btn_Data.SetGamePadImg then
-      self.Btn_Data:SetGamePadImg("Menu")
+      self.Btn_Data:SetGamePadImg(UIConst.GamePadImgKey.SpecialRight)
+      self.bBtnDataGamepadInitialized = true
     elseif self.Btn_Data.Key_GamePad and self.Btn_Data.Key_GamePad.CreateCommonKey then
       self.Btn_Data.Key_GamePad:CreateCommonKey({
         KeyInfoList = {
@@ -65,16 +67,25 @@ function M:EnsureMainPageGamepadWidgetsInitialized()
           }
         }
       })
+      self.bBtnDataGamepadInitialized = true
     end
   end
-  if PersonInfoModel:IsOwener() and self.Btn_EditShow then
-    if self.Btn_EditShow.SetDefaultGamePadImg then
-      self.Btn_EditShow:SetDefaultGamePadImg("Y")
-    elseif self.Btn_EditShow.SetGamePadImg then
-      self.Btn_EditShow:SetGamePadImg("Y")
+  if not self.bBtnEditShowGamepadInitialized then
+    if not PersonInfoModel:IsOwener() then
+      self.bBtnEditShowGamepadInitialized = true
+    elseif self.Btn_EditShow then
+      if self.Btn_EditShow.SetDefaultGamePadImg then
+        self.Btn_EditShow:SetDefaultGamePadImg(UIConst.GamePadImgKey.FaceButtonTop)
+        self.bBtnEditShowGamepadInitialized = true
+      elseif self.Btn_EditShow.SetGamePadImg then
+        self.Btn_EditShow:SetGamePadImg(UIConst.GamePadImgKey.FaceButtonTop)
+        self.bBtnEditShowGamepadInitialized = true
+      end
     end
   end
-  self.bMainPageGamepadWidgetsInitialized = true
+  if self.bBtnDataGamepadInitialized and self.bBtnEditShowGamepadInitialized then
+    self.bMainPageGamepadWidgetsInitialized = true
+  end
 end
 
 function M:RefreshGuildGamepadKeyVisibility()
@@ -99,10 +110,10 @@ function M:RefreshMainPageShortcutVisibilityForEditList()
   self.Key_Guild:SetVisibility(bIsEditFocused and UIConst.VisibilityOp.Collapsed or bIsGamepad and self.CanOpenGuildDetailByGamepad and self:CanOpenGuildDetailByGamepad() and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
   self:RefreshSettingGamepadKeyVisibility()
   if self.Btn_EditShow and self.Btn_EditShow.SetGamepadIconVisibility then
-    self.Btn_EditShow:SetGamepadIconVisibility(not bIsEditFocused)
+    self.Btn_EditShow:SetGamepadIconVisibility(bIsGamepad and not bIsEditFocused)
   end
   if self.Btn_Data and self.Btn_Data.SetGamepadIconVisibility then
-    self.Btn_Data:SetGamepadIconVisibility(not bIsEditFocused)
+    self.Btn_Data:SetGamepadIconVisibility(bIsGamepad and not bIsEditFocused)
   end
   if self.RootPage and self.RootPage.RefreshMainPageBottomShortcutVisibilityForEditList then
     self.RootPage:RefreshMainPageBottomShortcutVisibilityForEditList()

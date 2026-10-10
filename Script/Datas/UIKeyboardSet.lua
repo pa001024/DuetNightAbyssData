@@ -32,7 +32,15 @@ return ReadOnly("UIKeyboardSet", {
   },
   InBattleWheel = {
     ActionNameList = {
-      "OpenBattleWheel"
+      "OpenBattleWheel",
+      "UseBattleWheelSlot1",
+      "UseBattleWheelSlot2",
+      "UseBattleWheelSlot3",
+      "UseBattleWheelSlot4",
+      "UseBattleWheelSlot5",
+      "UseBattleWheelSlot6",
+      "UseBattleWheelSlot7",
+      "UseBattleWheelSlot8"
     },
     IsWhiteList = true,
     KeyboardSetName = "InBattleWheel"

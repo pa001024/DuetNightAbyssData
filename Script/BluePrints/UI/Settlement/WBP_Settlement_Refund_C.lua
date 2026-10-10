@@ -59,10 +59,12 @@ function WBP_Settlement_Refund_C:InitItemInfo(ItemId, ItemNum)
 end
 
 function WBP_Settlement_Refund_C:OpenWalnutDetail(WalnutId)
-  if not UIManager(self):GetUIObj("WalnutRewardDialog") then
-    self.DialogWidget = UIManager(self):LoadUINew("WalnutRewardDialog", WalnutId, "DungeonSettlement")
+  local Dialog = UIManager(self):GetUIObj("WalnutRewardDialog")
+  Dialog = Dialog or UIManager(self):LoadUINew("WalnutRewardDialog", WalnutId, "DungeonSettlement")
+  self.DialogWidget = Dialog
+  if Dialog then
+    Dialog:Show("DungeonSettlement")
   end
-  self.DialogWidget:Show("DungeonSettlement")
 end
 
 function WBP_Settlement_Refund_C:AddRefundItem(ItemInfo)

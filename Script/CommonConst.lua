@@ -122,6 +122,7 @@ local CommonConst = {
     MultiDestroy = "RegionMultiDestroyProgress",
     CoDefence = "RegionCoDefenceProgress",
     HardBossDg = "Disable",
+    HardBossEvent = "Disable",
     SoloRaid = "WidgetUI",
     MonsterRush = "WidgetUI",
     AutoChess = "Disable",
@@ -151,13 +152,15 @@ local CommonConst = {
     FeiNa = "FeinaEvent",
     MonsterRush = "MonsterRush",
     HardBossDg = "HardBossDg",
+    HardBossEvent = "HardBossEvent",
     SoloRaid = "SoloRaid",
-    GuildBoss = "GuildBoss",
     AutoChess = "AutoChess",
     SoloTreasure = "SoloTreasure",
     AsyncCombat = "AsyncCombat",
     WeaponVerify = "WeaponVerify"
   },
+  HardBossEventType = {Reward = "Reward", Challenge = "Challenge"},
+  HardBossEventPeriodRewardType = {Day = "Day", Week = "Week"},
   SubRegionType = {Field = "field", Home = "home"},
   BlockLevelUpInfoDungeonType = {
     Temple = true,
@@ -200,6 +203,7 @@ local CommonConst = {
   },
   GuildSeatPlanMaxCount = 3,
   GuildSeatActionRarity = 6,
+  GuildMemberInfoQueryMaxCount = 50,
   GuildSeatCreateType = {Score = 1, Occupy = 2},
   ActorType = {
     Player = 1,
@@ -259,6 +263,19 @@ local CommonConst = {
   ShopBannerPCPath = "/Game/UI/WBP/Shop/PC/Banner/",
   ShopBannerMobilePath = "/Game/UI/WBP/Shop/Mobile/Banner/",
   ShopOncePurchaseLimit = 10000000,
+  ShoppingCartSystemName = "Shop",
+  ShoppingCartPayGoodsId = "com.hero.dna.Pay_ShoppingCartTotal",
+  ShoppingCartSdkGoodsId = "999999999",
+  ShoppingCartAmountScale = 100,
+  ShoppingCartCurrency = {China = "CNY", Global = "USD"},
+  ShoppingCartOrderStatus = {
+    Pending = 0,
+    Processing = 1,
+    Success = 2,
+    Failed = 3,
+    Canceled = 4,
+    RefundPending = 5
+  },
   PlatinumItemId = 100,
   ExpItemId = 101,
   CharExpItemId = 102,
@@ -295,12 +312,15 @@ local CommonConst = {
     SelectPet = "SelectPet",
     SelectResource = "SelectResource",
     ResourcePack = "ResourcePack",
+    RandomSelectPack = "RandomSelectPack",
     SelectSkin = "SelectSkin",
     SelectGeneralSkin = "SelectGeneralSkin",
     SelectWeaponSkin = "SelectWeaponSkin",
     SelectCharAccessory = "SelectCharAccessory",
     SelectWeaponAccessory = "SelectWeaponAccessory",
-    SelectGestureItem = "SelectGestureItem"
+    SelectGestureItem = "SelectGestureItem",
+    ChangeName = "ChangeName",
+    ChangeGuildName = "ChangeGuildName"
   },
   OptRewardType = {
     Char = "Char",
@@ -513,6 +533,7 @@ local CommonConst = {
   TargetTypeTempleStarsGet = 22001,
   TargetTypeWYSStarsGet = 22002,
   TargetTypeCommonQuestFinish = 22004,
+  TargetTypeD4SeasonCommonQuestFinish = 22020,
   TargetTypeCollectFeiNaCount = 22005,
   TargetTypeMidTermScoreGet = 22006,
   TargetTypeAutoChessRankLevel = 22013,
@@ -537,8 +558,6 @@ local CommonConst = {
   TargetTypeGuildMultiDungeon = 22205,
   TargetTypeGuildRegionOnlineDuration = 22206,
   TargetTypeVisitGuildRegionOnline = 22207,
-  TargetTypeGuildBossParticipate = 22208,
-  TargetTypeGuildBossPointMax = 22209,
   TargetTypeWeeklyScoreMax = 23002,
   MaxGradeLevel = 6,
   MailMaxDueTime = 9999,
@@ -625,6 +644,7 @@ local CommonConst = {
     14004,
     20001,
     22004,
+    22020,
     12004,
     10805,
     17002,
@@ -727,7 +747,8 @@ local CommonConst = {
   },
   DefaultTag = {
     HideUIInScreen = "ShowOrHideUINode",
-    ContinuedGuide = "ShowOrHideUINode"
+    ContinuedGuide = "ShowOrHideUINode",
+    SwitchStoryMode = "SwitchStoryModeNode"
   },
   BGMSoundType = {
     SOUND_BGM = 0,
@@ -1533,6 +1554,9 @@ local CommonConst = {
     SwitchOnlineState = true,
     UseGouSuo = true
   },
+  RegionOnlineServerMessageType = {
+    GuildBadgeDisplayChange = "GuildBadgeDisplayChange"
+  },
   OnlineClientItemMessageType = {
     OnDeadRegionOnlineItem = "OnDeadRegionOnlineItem",
     OnChangeRegionOnlineItemState = "OnChangeRegionOnlineItemState",
@@ -1569,6 +1593,7 @@ local CommonConst = {
   },
   DefaultPersonalInfoScene = {101, 102},
   DefaultPersonalInfoGesture = {1001, 1002},
+  PersonalInfoEpsilon = 1.0E-6,
   DeliveryAnchorMechanismUnitId = 90100,
   MechanismPointType = {StaticCreator = 1, ManualItem = 2},
   AutoChess = {
@@ -1707,6 +1732,9 @@ CommonConst.RaidState = {
   Raid = 2,
   Rest = 3
 }
+CommonConst.RaidSeasonType = {Score = 1, Floor = 2}
+CommonConst.RaidSeasonFloorRankScoreFactor = 100000
+CommonConst.RaidSeasonFloorRankMaxPassTime = 60000
 CommonConst.PreRaidRankRefreshPercent = 1
 CommonConst.PreRaidRankRefreshCheckMin = 100000
 CommonConst.TheaterPerformGameState = {
@@ -1782,4 +1810,94 @@ CommonConst.AsyncCombatCheatCheckDungeons = {
 }
 CommonConst.AsyncCombatCheatAutoBan = 1
 CommonConst.AsyncCombatSysRoomOpen = true
+CommonConst.MirrorWorldState = {RealWorld = 0, MirrorWorld = 1}
+CommonConst.MirrorSwitchFailReason = {
+  Success = 0,
+  NotInArea = 1,
+  Switching = 2,
+  AreaInvalid = 3
+}
+CommonConst.MirrorSwitchFailToast = {
+  [CommonConst.MirrorSwitchFailReason.NotInArea] = "MirrorWorld_Toast_NotInArea",
+  [CommonConst.MirrorSwitchFailReason.Switching] = "MirrorWorld_Toast_Switching",
+  [CommonConst.MirrorSwitchFailReason.AreaInvalid] = "MirrorWorld_Toast_AreaInvalid"
+}
+CommonConst.D4SeasonItemContainerType = {
+  Equip = 1,
+  Bag = 2,
+  Store = 3,
+  Max = 3
+}
+CommonConst.D4SeasonEquipSlotType = {
+  Head = 1,
+  Chest = 2,
+  Hand = 3,
+  Foot = 4,
+  Belt = 5,
+  Necklace = 6,
+  Ring = 7,
+  Amulet = 8,
+  CrystalBall = 9,
+  MagicBook = 10,
+  Shield = 11
+}
+CommonConst.D4SeasonEquipSlotIndex = {
+  MainHead = 1,
+  MainChest = 2,
+  MainHand = 3,
+  MainFoot = 4,
+  MainBelt = 5,
+  MainNecklace = 6,
+  MainRing1 = 7,
+  MainRing2 = 8,
+  Assist1Amulet = 9,
+  Assist1CrystalBall = 10,
+  Assist1MagicBook = 11,
+  Assist1Shield = 12,
+  Assist2Amulet = 13,
+  Assist2CrystalBall = 14,
+  Assist2MagicBook = 15,
+  Assist2Shield = 16,
+  Max = 16
+}
+CommonConst.D4SeasonEquipRule = {
+  [CommonConst.D4SeasonEquipSlotType.Head] = {
+    CommonConst.D4SeasonEquipSlotIndex.MainHead
+  },
+  [CommonConst.D4SeasonEquipSlotType.Chest] = {
+    CommonConst.D4SeasonEquipSlotIndex.MainChest
+  },
+  [CommonConst.D4SeasonEquipSlotType.Hand] = {
+    CommonConst.D4SeasonEquipSlotIndex.MainHand
+  },
+  [CommonConst.D4SeasonEquipSlotType.Foot] = {
+    CommonConst.D4SeasonEquipSlotIndex.MainFoot
+  },
+  [CommonConst.D4SeasonEquipSlotType.Belt] = {
+    CommonConst.D4SeasonEquipSlotIndex.MainBelt
+  },
+  [CommonConst.D4SeasonEquipSlotType.Necklace] = {
+    CommonConst.D4SeasonEquipSlotIndex.MainNecklace
+  },
+  [CommonConst.D4SeasonEquipSlotType.Ring] = {
+    CommonConst.D4SeasonEquipSlotIndex.MainRing1,
+    CommonConst.D4SeasonEquipSlotIndex.MainRing2
+  },
+  [CommonConst.D4SeasonEquipSlotType.Amulet] = {
+    CommonConst.D4SeasonEquipSlotIndex.Assist1Amulet,
+    CommonConst.D4SeasonEquipSlotIndex.Assist2Amulet
+  },
+  [CommonConst.D4SeasonEquipSlotType.CrystalBall] = {
+    CommonConst.D4SeasonEquipSlotIndex.Assist1CrystalBall,
+    CommonConst.D4SeasonEquipSlotIndex.Assist2CrystalBall
+  },
+  [CommonConst.D4SeasonEquipSlotType.MagicBook] = {
+    CommonConst.D4SeasonEquipSlotIndex.Assist1MagicBook,
+    CommonConst.D4SeasonEquipSlotIndex.Assist2MagicBook
+  },
+  [CommonConst.D4SeasonEquipSlotType.Shield] = {
+    CommonConst.D4SeasonEquipSlotIndex.Assist1Shield,
+    CommonConst.D4SeasonEquipSlotIndex.Assist2Shield
+  }
+}
 return CommonConst

@@ -744,6 +744,14 @@
     "unlock": "透過活動獲得"
   },
   {
+    "id": 10101,
+    "name": "噤言詭靈·絳紫",
+    "desc": "我們究竟是在祭天，還是在祭人？",
+    "icon": "T_Fashion_Head57_04",
+    "rarity": 5,
+    "unlock": ""
+  },
+  {
     "id": 10102,
     "name": "汪汪髮飾·涅白",
     "desc": "靈動、可愛、活潑、美麗……世上一切對美好的形容詞在狗耳朵的面前都會顯得黯淡無光，這就是狗耳朵那讓人無法拒絕的魔力……這台詞總感覺在哪裡說過，應該是錯覺吧。",
@@ -1260,6 +1268,14 @@
     "name": "獄火狂燃",
     "desc": "熊熊燃燒，直至一切化為灰燼。",
     "icon": "T_Fashion_Fx40",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 11010,
+    "name": "骨冢爆破·黛藍",
+    "desc": "於亡骸中綻放。",
+    "icon": "T_Fashion_Fx50",
     "rarity": 5,
     "unlock": "通過稜鏡兌換獲得"
   },
@@ -2728,6 +2744,62 @@
     "unlock": "通過商店獲得"
   },
   {
+    "id": 20106,
+    "name": "骨冢花·涅白",
+    "desc": "生生不息。",
+    "icon": "T_Fashion_Face31_03",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 20107,
+    "name": "骨冢花·絳紫",
+    "desc": "生生不息。",
+    "icon": "T_Fashion_Face31_01",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 20108,
+    "name": "骨冢花·鎏金",
+    "desc": "生生不息。",
+    "icon": "T_Fashion_Face31_02",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 20109,
+    "name": "骨冢花·銹紅",
+    "desc": "生生不息。",
+    "icon": "T_Fashion_Face31_04",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 20110,
+    "name": "瘟疫行者·鉛灰",
+    "desc": "穿行於死亡的時代。",
+    "icon": "T_Fashion_Face32_03",
+    "rarity": 5,
+    "unlock": "透過活動獲得"
+  },
+  {
+    "id": 20111,
+    "name": "瘟疫行者·墨玉",
+    "desc": "穿行於死亡的時代。",
+    "icon": "T_Fashion_Face32_01",
+    "rarity": 5,
+    "unlock": "透過活動獲得"
+  },
+  {
+    "id": 20112,
+    "name": "瘟疫行者·涅白",
+    "desc": "穿行於死亡的時代。",
+    "icon": "T_Fashion_Face32_02",
+    "rarity": 5,
+    "unlock": "透過活動獲得"
+  },
+  {
     "id": 21001,
     "name": "UI_Accessory_Name_21001",
     "desc": "UI_Accessory_Desc_21001",
@@ -2820,6 +2892,46 @@
     "name": "幽燃熱浪",
     "desc": "扭曲的熱浪，如同烈火在空中劃出的漣漪。",
     "icon": "T_Fashion_Fx39",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 21016,
+    "name": "貓貓幽靈·涅白",
+    "desc": "一隻白色的貓貓幽靈，遊蕩在阿特拉西亞。",
+    "icon": "T_Fashion_Fx52",
+    "rarity": 5,
+    "unlock": "透過活動獲得"
+  },
+  {
+    "id": 21017,
+    "name": "搗蛋幽靈·鎏金",
+    "desc": "貓貓、南瓜、蝙蝠，到處都是幽靈！",
+    "icon": "T_Fashion_Fx53",
+    "rarity": 5,
+    "unlock": "透過活動獲得"
+  },
+  {
+    "id": 21018,
+    "name": "南瓜幽靈·鎏金",
+    "desc": "一個金色的南瓜幽靈，遊蕩在阿特拉西亞。",
+    "icon": "T_Fashion_Fx54",
+    "rarity": 5,
+    "unlock": "透過活動獲得"
+  },
+  {
+    "id": 21019,
+    "name": "詭道符籙·絳紫",
+    "desc": "符隨念動，詭道相隨。",
+    "icon": "T_Fashion_Fx51",
+    "rarity": 5,
+    "unlock": "透過活動獲得"
+  },
+  {
+    "id": 21020,
+    "name": "懸絲曳影·黛藍",
+    "desc": "蛛絲在空中搖曳，勾勒出獵手的輪廓。",
+    "icon": "T_Fashion_Fx49",
     "rarity": 5,
     "unlock": "通過稜鏡兌換獲得"
   },
@@ -3353,7 +3465,7 @@
   },
   {
     "id": 31007,
-    "name": "勝利·地獄咆哮",
+    "name": "勝利·初雪小夜曲",
     "desc": "可變更勝利動作。",
     "icon": "T_Fashion_SettlementAction_07",
     "rarity": 5,
@@ -3614,6 +3726,14 @@
     "icon": "T_Fashion_Back39_02",
     "rarity": 5,
     "unlock": "透過活動獲得"
+  },
+  {
+    "id": 40037,
+    "name": "詭道陳兵·絳紫",
+    "desc": "真言驅詭，養魂飼靈。",
+    "icon": "T_Fashion_Back39_04",
+    "rarity": 5,
+    "unlock": ""
   },
   {
     "id": 40038,
@@ -3984,6 +4104,62 @@
     "unlock": "透過活動獲得"
   },
   {
+    "id": 40090,
+    "name": "星落懸絲·絳紫",
+    "desc": "纖細的蛛絲，捕獲了墜落的星辰。",
+    "icon": "T_Fashion_Waist37_04",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 40091,
+    "name": "星落懸絲·涅白",
+    "desc": "纖細的蛛絲，捕獲了墜落的星辰。",
+    "icon": "T_Fashion_Waist37_01",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 40092,
+    "name": "星落懸絲·鎏金",
+    "desc": "纖細的蛛絲，捕獲了墜落的星辰。",
+    "icon": "T_Fashion_Waist37_02",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 40093,
+    "name": "星落懸絲·銹紅",
+    "desc": "纖細的蛛絲，捕獲了墜落的星辰。",
+    "icon": "T_Fashion_Waist37_03",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 40094,
+    "name": "搗蛋笑魘·鎏金",
+    "desc": "不要回頭，就在你身後。",
+    "icon": "T_Fashion_Waist38_02",
+    "rarity": 5,
+    "unlock": "透過活動獲得"
+  },
+  {
+    "id": 40095,
+    "name": "搗蛋笑魘·銹紅",
+    "desc": "不要回頭，就在你身後。",
+    "icon": "T_Fashion_Waist38_03",
+    "rarity": 5,
+    "unlock": "透過活動獲得"
+  },
+  {
+    "id": 40096,
+    "name": "搗蛋笑魘·涅白",
+    "desc": "不要回頭，就在你身後。",
+    "icon": "T_Fashion_Waist38_01",
+    "rarity": 5,
+    "unlock": "透過活動獲得"
+  },
+  {
     "id": 50001,
     "name": "",
     "desc": "",
@@ -4296,6 +4472,38 @@
     "unlock": "通過稜鏡兌換獲得"
   },
   {
+    "id": 70084,
+    "name": "花影懸絲·絳紫",
+    "desc": "絲線編織的花朵，引渡著迷失在夜色中的亡靈。",
+    "icon": "T_Fashion_Fx48_04",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 70085,
+    "name": "花影懸絲·涅白",
+    "desc": "絲線編織的花朵，引渡著迷失在夜色中的亡靈。",
+    "icon": "T_Fashion_Fx48_03",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 70086,
+    "name": "花影懸絲·鎏金",
+    "desc": "絲線編織的花朵，引渡著迷失在夜色中的亡靈。",
+    "icon": "T_Fashion_Fx48_02",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 70087,
+    "name": "花影懸絲·銹紅",
+    "desc": "絲線編織的花朵，引渡著迷失在夜色中的亡靈。",
+    "icon": "T_Fashion_Fx48_01",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
     "id": 80001,
     "name": "夏夜邀約",
     "desc": "蝴蝶銜著三色堇，等待著主人翁的到來，奏響舞會的序章。",
@@ -4542,5 +4750,37 @@
     "icon": "T_Fashion_Fx45_02",
     "rarity": 5,
     "unlock": "透過活動獲得"
+  },
+  {
+    "id": 80070,
+    "name": "骨冢蝶·涅白",
+    "desc": "即使化為白骨，也請不要忘記飛翔。",
+    "icon": "T_Fashion_Fx47_03",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 80071,
+    "name": "骨冢蝶·絳紫",
+    "desc": "即使化為白骨，也請不要忘記飛翔。",
+    "icon": "T_Fashion_Fx47_04",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 80072,
+    "name": "骨冢蝶·鎏金",
+    "desc": "即使化為白骨，也請不要忘記飛翔。",
+    "icon": "T_Fashion_Fx47_02",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 80073,
+    "name": "骨冢蝶·銹紅",
+    "desc": "即使化為白骨，也請不要忘記飛翔。",
+    "icon": "T_Fashion_Fx47_01",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
   }
 ]

@@ -258,7 +258,7 @@ return {
             endPort = "Fail"
           },
           {
-            startQuest = "17821360167205359773",
+            startQuest = "17889395855797287066",
             startPort = "Out",
             endQuest = "178816676839023497775",
             endPort = "In"
@@ -278,7 +278,7 @@ return {
           {
             startQuest = "178817214795045880206",
             startPort = "Out",
-            endQuest = "17821360167205359773",
+            endQuest = "17889395855797287066",
             endPort = "In"
           },
           {
@@ -681,54 +681,6 @@ return {
               OverrideFailBlend = false
             }
           },
-          ["17821360167205359773"] = {
-            key = "17821360167205359773",
-            type = "TalkNode",
-            name = "过场",
-            pos = {x = 6300.056047315079, y = -43.652245496339276},
-            propsData = {
-              IsNpcNode = false,
-              TalkType = "Cinematic",
-              TalkStageName = "",
-              ShowFilePath = "/Game/Asset/Cinematics/Story/Ver01/Ver0105/Ver0105_SC009/SQ_Ver0105_SC009",
-              BlendInTime = 0,
-              BlendOutTime = 0,
-              InType = "FadeIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
-              ShowSkipButton = true,
-              ShowReviewButton = true,
-              ShowWikiButton = true,
-              PauseGameGlobal = false,
-              bOpenDefaultSkinKawaii = false,
-              HideNpcs = false,
-              HideMonsters = true,
-              bHidePickup = true,
-              bHideSkillCreature = true,
-              bHideSceneEffects = true,
-              HideMechanismsFX = false,
-              DisableNpcOptimization = false,
-              DoNotReceiveCharacterShadow = false,
-              CloseMotionBlur = false,
-              PauseTimeElapse = false,
-              BeginNewTargetPointName = "",
-              EndNewTargetPointName = "",
-              CameraLookAtTartgetPoint = "",
-              RestoreStand = false,
-              TalkActors = {
-                {
-                  TalkActorType = "Player",
-                  TalkActorId = 0,
-                  TalkActorVisible = false
-                }
-              },
-              bLockHighestLOD = false,
-              FreezeWorldComposition = true,
-              bTravelFullLoadWorldComposition = false,
-              SwitchToMaster = "None",
-              OverrideFailBlend = false
-            }
-          },
           ["17821371098416428784"] = {
             key = "17821371098416428784",
             type = "ActivePlayerSkillsNode",
@@ -947,6 +899,54 @@ return {
               ParamValue = 0,
               RelatedRegionId = {107001},
               bStoreToServer = true
+            }
+          },
+          ["17889395855797287066"] = {
+            key = "17889395855797287066",
+            type = "TalkNode",
+            name = "过场",
+            pos = {x = 6300.056047315079, y = -43.652245496339276},
+            propsData = {
+              IsNpcNode = false,
+              TalkType = "Cinematic",
+              TalkStageName = "",
+              ShowFilePath = "/Game/Asset/Cinematics/Story/Ver01/Ver0105/Ver0105_SC009/SQ_Ver0105_SC009",
+              BlendInTime = 0,
+              BlendOutTime = 0,
+              InType = "FadeIn",
+              OutType = "FadeOut",
+              ShowFadeDetail = false,
+              ShowSkipButton = true,
+              ShowReviewButton = true,
+              ShowWikiButton = true,
+              PauseGameGlobal = false,
+              bOpenDefaultSkinKawaii = false,
+              HideNpcs = false,
+              HideMonsters = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
+              bHideSceneEffects = true,
+              HideMechanismsFX = false,
+              DisableNpcOptimization = false,
+              DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
+              PauseTimeElapse = false,
+              BeginNewTargetPointName = "",
+              EndNewTargetPointName = "",
+              CameraLookAtTartgetPoint = "",
+              RestoreStand = false,
+              TalkActors = {
+                {
+                  TalkActorType = "Player",
+                  TalkActorId = 0,
+                  TalkActorVisible = false
+                }
+              },
+              bLockHighestLOD = false,
+              FreezeWorldComposition = true,
+              bTravelFullLoadWorldComposition = false,
+              SwitchToMaster = "None",
+              OverrideFailBlend = false
             }
           }
         },

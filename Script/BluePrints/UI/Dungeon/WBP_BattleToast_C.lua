@@ -26,7 +26,9 @@ function WBP_BattleToast_C:GetWaveStartBP()
   local UIManager = GameInstance:GetGameUIManager()
   local WaveStartBP = UIManager:GetUIObj("WaveStartBP")
   WaveStartBP = WaveStartBP or UIManager:LoadUINew("WaveStartBP")
-  WaveStartBP:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
+  if WaveStartBP then
+    WaveStartBP:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
+  end
   return WaveStartBP
 end
 
@@ -107,7 +109,9 @@ function WBP_BattleToast_C:ShowCountDown()
   local UIManager = GameInstance:GetGameUIManager()
   local GuideCountDownFloat = UIManager:GetUIObj("GuideCountDown")
   GuideCountDownFloat = GuideCountDownFloat or UIManager:LoadUINew("GuideCountDown")
-  GuideCountDownFloat:InitializeData(self.HintTime)
+  if GuideCountDownFloat then
+    GuideCountDownFloat:InitializeData(self.HintTime)
+  end
 end
 
 return WBP_BattleToast_C

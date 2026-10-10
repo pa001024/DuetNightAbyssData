@@ -493,8 +493,8 @@ function Storyline:UpdateCurrentSTLData(SuitSubType, SuitKey, UpdateParam)
   if not self.CurrentSTLData then
     self.CurrentSTLData = {}
   end
-  if SuitSubType == CommonConst.QuestSuit.HideUIInScreen then
-    local IsHide = UpdateParam.IsHide
+  if SuitSubType == CommonConst.QuestSuit.HideUIInScreen or SuitSubType == CommonConst.QuestSuit.ContinuedGuide or SuitSubType == CommonConst.QuestSuit.SwitchStoryMode then
+    local IsAdd = UpdateParam.IsAdd
     local Tag = UpdateParam.Tag
     if not self.ChangedInfo[SuitSubType] then
       self.ChangedInfo[SuitSubType] = {}
@@ -509,31 +509,10 @@ function Storyline:UpdateCurrentSTLData(SuitSubType, SuitKey, UpdateParam)
       self.CurrentSTLData[SuitSubType][SuitKey] = {}
     end
     local TagSet = self.CurrentSTLData[SuitSubType][SuitKey]
-    if IsHide then
+    if IsAdd then
       TagSet[Tag] = 1
     else
       TagSet[Tag] = nil
-    end
-  elseif SuitSubType == CommonConst.QuestSuit.ContinuedGuide then
-    local IsHide = UpdateParam.IsHide
-    local Tag = UpdateParam.Tag
-    if not self.ChangedInfo[SuitSubType] then
-      self.ChangedInfo[SuitSubType] = {}
-    end
-    if not self.ChangedInfo[SuitSubType][SuitKey] then
-      self.ChangedInfo[SuitSubType][SuitKey] = 1
-    end
-    if not self.CurrentSTLData[SuitSubType] then
-      self.CurrentSTLData[SuitSubType] = {}
-    end
-    if not self.CurrentSTLData[SuitSubType][SuitKey] then
-      self.CurrentSTLData[SuitSubType][SuitKey] = {}
-    end
-    local TagSet = self.CurrentSTLData[SuitSubType][SuitKey]
-    if IsHide then
-      TagSet[Tag] = nil
-    else
-      TagSet[Tag] = 1
     end
   end
 end
@@ -563,9 +542,19 @@ function Storyline:UseCurrentSTLData()
   if self.CurrentSTLData.ContinuedGuide then
     local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
     if GameMode and GameMode.SetContinuedPCGuideVisibility then
-      for ActionName, HideTags in pairs(self.CurrentSTLData.ContinuedGuide) do
-        for HideTag, _ in pairs(HideTags) do
-          GameMode:SetContinuedPCGuideVisibility(ActionName, false, HideTag)
+      for ActionName, ShowTags in pairs(self.CurrentSTLData.ContinuedGuide) do
+        for ShowTag, _ in pairs(ShowTags) do
+          GameMode:SetContinuedPCGuideVisibility(ActionName, false, ShowTag)
+        end
+      end
+    end
+  end
+  if self.CurrentSTLData.SwitchStoryMode then
+    local PlayerController = UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
+    if PlayerController and PlayerController.SetStoryModeState then
+      for ActionName, OpenTags in pairs(self.CurrentSTLData.SwitchStoryMode) do
+        for OpenTag, _ in pairs(OpenTags) do
+          PlayerController:SetStoryModeState(true, OpenTag)
         end
       end
     end
@@ -589,9 +578,19 @@ function Storyline:RollbackCurrentSTLData()
   if self.CurrentSTLData.ContinuedGuide then
     local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
     if GameMode and GameMode.SetContinuedPCGuideVisibility then
-      for ActionName, HideTags in pairs(self.CurrentSTLData.ContinuedGuide) do
-        for HideTag, _ in pairs(HideTags) do
-          GameMode:SetContinuedPCGuideVisibility(ActionName, true, HideTag)
+      for ActionName, ShowTags in pairs(self.CurrentSTLData.ContinuedGuide) do
+        for ShowTag, _ in pairs(ShowTags) do
+          GameMode:SetContinuedPCGuideVisibility(ActionName, true, ShowTag)
+        end
+      end
+    end
+  end
+  if self.CurrentSTLData.SwitchStoryMode then
+    local PlayerController = UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
+    if PlayerController and PlayerController.SetStoryModeState then
+      for ActionName, OpenTags in pairs(self.CurrentSTLData.SwitchStoryMode) do
+        for OpenTag, _ in pairs(OpenTags) do
+          PlayerController:SetStoryModeState(false, OpenTag)
         end
       end
     end
@@ -600,15 +599,10 @@ end
 
 function Storyline:SaveCurrentSTLData(STLData)
   for SuitSubType, SuitKeys in pairs(self.ChangedInfo) do
-    if SuitSubType == CommonConst.QuestSuit.HideUIInScreen then
+    if SuitSubType == CommonConst.QuestSuit.HideUIInScreen or SuitSubType == CommonConst.QuestSuit.ContinuedGuide or SuitSubType == CommonConst.QuestSuit.SwitchStoryMode then
       for SuitKey, _ in pairs(SuitKeys) do
-        local HideTags = self.CurrentSTLData[SuitSubType][SuitKey]
-        STLData:SaveSuitUpdateData("UpdateSuitKey2Table", CommonConst.SuitType.QuestSuit, CommonConst.QuestSuit.HideUIInScreen, SuitKey, HideTags)
-      end
-    elseif SuitSubType == CommonConst.QuestSuit.ContinuedGuide then
-      for SuitKey, _ in pairs(SuitKeys) do
-        local ShowTags = self.CurrentSTLData[SuitSubType][SuitKey]
-        STLData:SaveSuitUpdateData("UpdateSuitKey2Table", CommonConst.SuitType.QuestSuit, CommonConst.QuestSuit.ContinuedGuide, SuitKey, ShowTags)
+        local Tags = self.CurrentSTLData[SuitSubType][SuitKey]
+        STLData:SaveSuitUpdateData("UpdateSuitKey2Table", CommonConst.SuitType.QuestSuit, SuitSubType, SuitKey, Tags)
       end
     end
   end

@@ -67,6 +67,23 @@ return ReadOnly("DetectiveQuestion", {
     QuestionID = 1005,
     Tips = "TextMap_Inference_1005"
   },
+  [1207] = {
+    ProbablyNeededAnswers = {
+      120701,
+      120702,
+      120703,
+      120704,
+      120705,
+      120706,
+      120707,
+      120708,
+      120709
+    },
+    QuestName = "Name_120704",
+    QuestionID = 1207,
+    ReasoningImagePath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Reasoning/T_Reasoning_SPLise.T_Reasoning_SPLise'",
+    Tips = "TextMap_Inference_1207"
+  },
   [2001] = {
     ProbablyNeededAnswers = {
       200101,

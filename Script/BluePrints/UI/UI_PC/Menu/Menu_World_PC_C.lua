@@ -19,6 +19,8 @@ function Menu_World_PC_C:Initialize(Initializer)
   self.ShopEntranceId = 4
   self.RelatedProductEntranceId = 27
   self.CloudGameEntranceId = 30
+  self.TBSupportEntranceId = 38
+  self.TBSupportNewCacheKey = "TBSupportNewClicked"
 end
 
 function Menu_World_PC_C:OnLoaded(...)
@@ -483,10 +485,15 @@ function Menu_World_PC_C:SetPlayerInfo()
         end
       else
         local Path = DataMgr.HeadFrame[HeadFrameId].SmallIcon
-        local ImageResource = LoadObject(Path)
-        if nil ~= ImageResource then
-          self.Head_Frame:SetBrushResourceObject(ImageResource)
-        end
+        self.HeadIconPending = Path
+        UE4.UResourceLibrary.LoadObjectAsync(self, Path, {
+          self,
+          function(_, IconResource)
+            if IconResource and IsValid(self) and self.HeadIconPending == Path then
+              self.Head_Frame:SetBrushResourceObject(IconResource)
+            end
+          end
+        })
         self.Head_Frame:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
       end
     end
@@ -508,13 +515,19 @@ function Menu_World_PC_C:InitBg()
     if Char then
       local CharConfig = DataMgr.Char[Char.CharId]
       if CharConfig and CharConfig.EscMenuBg then
-        local CharImage = LoadObject(CharConfig.EscMenuBg)
-        if CharImage then
-          local DynamicMaterial = self.Img_Avatar:GetDynamicMaterial()
-          if DynamicMaterial then
-            DynamicMaterial:SetTextureParameterValue("MainTex", CharImage)
+        local BgPath = CharConfig.EscMenuBg
+        self.EscBgPending = BgPath
+        UE4.UResourceLibrary.LoadObjectAsync(self, BgPath, {
+          self,
+          function(_, BgImage)
+            if BgImage and IsValid(self) and self.EscBgPending == BgPath then
+              local DynamicMaterial = self.Img_Avatar:GetDynamicMaterial()
+              if DynamicMaterial then
+                DynamicMaterial:SetTextureParameterValue("MainTex", BgImage)
+              end
+            end
           end
-        end
+        })
       end
     end
   end
@@ -524,13 +537,19 @@ function Menu_World_PC_C:InitBg()
     local BgConfig = DataMgr.Background[MenuWorldBackground]
     if BgConfig and BgConfig.EscWidget then
       self.WS_Img:SetActiveWidgetIndex(1)
-      local Image = LoadObject(BgConfig.EscWidget)
-      if Image then
-        local DynamicMaterial = self.Img_Color:GetDynamicMaterial()
-        if DynamicMaterial then
-          DynamicMaterial:SetTextureParameterValue("MainTex", Image)
+      local CardBgPath = BgConfig.EscWidget
+      self.NameCardBgPending = CardBgPath
+      UE4.UResourceLibrary.LoadObjectAsync(self, CardBgPath, {
+        self,
+        function(_, CardImage)
+          if CardImage and IsValid(self) and self.NameCardBgPending == CardBgPath then
+            local DynamicMaterial = self.Img_Color:GetDynamicMaterial()
+            if DynamicMaterial then
+              DynamicMaterial:SetTextureParameterValue("MainTex", CardImage)
+            end
+          end
         end
-      end
+      })
     else
       SetDefaultCharacterBackground()
     end
@@ -603,6 +622,7 @@ function Menu_World_PC_C:InitSystemItem()
   for _, Value in pairs(self.SystemSortList) do
     local id = Value.Id
     if 20 == id and UIUtils.AmIInGuildScene() then
+    elseif id == self.TBSupportEntranceId and (CommonUtils.GetDeviceTypeByPlatformName(self) ~= "PC" or UE4.UUCloudGameInstanceSubsystem.IsCloudGame()) then
     else
       local MainUIConfig = DataMgr.MainUI[Value.Id]
       local bUnlocked = true
@@ -646,9 +666,9 @@ function Menu_World_PC_C:InitSystemItem()
             Item = self.Entrance_Activity
           end
         elseif id == self.RelatedProductEntranceId and UE.AHotUpdateGameMode.IsGlobalPak() then
-          goto lbl_280
+          goto lbl_313
         elseif id == self.CloudGameEntranceId and (UE.AHotUpdateGameMode.IsGlobalPak() or IgnoreCNChannelIds[ChannelId]) then
-          goto lbl_280
+          goto lbl_313
         else
           local TaskName = "MenuEntranceBtn_" .. id
           Item = UIManager(GWorld.GameInstance):_CreateWidgetNew(WidgetName)
@@ -675,6 +695,14 @@ function Menu_World_PC_C:InitSystemItem()
             end
             local IsForbid, ForbidToast = self:CheckSystemForbid(MainUIConfig.SystemUIName)
             Item:InitButton(self, IsForbid, ForbidToast)
+            if id == self.TBSupportEntranceId then
+              self.TBSupportItem = Item
+              Item:SetRedDot(EMCache:Get(self.TBSupportNewCacheKey, false) == nil)
+              
+              function Item.CustomClickFunc()
+                self:OnClickTBSupport()
+              end
+            end
           end
         end
       else
@@ -687,7 +715,7 @@ function Menu_World_PC_C:InitSystemItem()
         end
       end
     end
-    ::lbl_280::
+    ::lbl_313::
   end
   ItemNum = ItemNum + 4 - ItemNum % 4
   local EmptyNum = ItemNum - InitSuccNum
@@ -718,6 +746,39 @@ end
 function Menu_World_PC_C:OnClickArmory()
   UIUtils.PlayCommonBtnSe(self)
   UIUtils.OpenSystem(1, true)
+end
+
+function Menu_World_PC_C:OnClickTBSupport()
+  if not UE4.UEMTaskbarRewardLibrary then
+    DebugPrint("[TBH] UE4.UEMTaskbarRewardLibrary is nil, C++ module may not be compiled/loaded.")
+    return
+  end
+  local bOk, Result = pcall(function()
+    return UE4.UEMTaskbarRewardLibrary.LaunchTaskbarRewardWidget()
+  end)
+  if not bOk then
+    DebugPrint("[TBH] Launch failed (pcall error): " .. tostring(Result))
+    return
+  end
+  DebugPrint("[TBH] Launch result: " .. tostring(Result))
+  if Result then
+    EMCache:Set(self.TBSupportNewCacheKey, 1, false)
+    if self.TBSupportItem then
+      self.TBSupportItem:SetRedDot(false)
+    end
+    local USDK = HeroUSDKSubsystem(self)
+    if USDK then
+      DebugPrint("[TBH] UploadTrackLog called: event=tbsupport_use, login_use_count=1")
+      USDK:UploadTrackLog_Lua("tbsupport_use", {login_use_count = 1})
+    end
+  end
+  local GameInstance = GWorld.GameInstance
+  if GameInstance and GameInstance:SyncTBHCharacterState() then
+    DebugPrint("[TBH] Synced character state to taskbar widget")
+  end
+  if GameInstance and GameInstance.SendTBHLang then
+    GameInstance:SendTBHLang()
+  end
 end
 
 function Menu_World_PC_C:ShowHudRewardAfterClose(HudRewardTitle, HudRewardList)

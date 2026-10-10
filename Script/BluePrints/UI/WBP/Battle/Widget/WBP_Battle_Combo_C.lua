@@ -38,7 +38,7 @@ function M:ShowCombo(BeforeCount, BeforeLevel, CurCount, CurLevel)
   if BeforeLevel < CurLevel or BeforeCount < CurCount then
     EMUIAnimationSubsystem:EMPlayAnimation(self, self.Add)
   end
-  if 0 == BeforeCount or BeforeLevel < CurLevel then
+  if 0 == BeforeCount or CurLevel ~= BeforeLevel then
     local ComboLevelText = self:GetComboLevelText(CurLevel)
     self.Text_Appraise:SetText(ComboLevelText)
     self.VX_Text_Appraise:SetText(ComboLevelText)
@@ -50,7 +50,9 @@ function M:ShowCombo(BeforeCount, BeforeLevel, CurCount, CurLevel)
     if 4 == CurLevel then
       self.VX_Light:SetColorAndOpacity(UE4.UUIFunctionLibrary.StringToLinearColor("FFEC7FFF"))
     end
-    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Change)
+    if 0 == BeforeCount or BeforeLevel < CurLevel then
+      EMUIAnimationSubsystem:EMPlayAnimation(self, self.Change)
+    end
   end
   local NextLevelData = DataMgr.ComboLevel[CurLevel + 1]
   if NextLevelData then

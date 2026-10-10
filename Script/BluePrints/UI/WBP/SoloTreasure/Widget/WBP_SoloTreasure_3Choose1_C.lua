@@ -24,7 +24,7 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, ...)
   self:AddDispatcher(EventID.OnSoloTreasureRefreshTickets, self, self.OnRefreshTickets)
   self:AddDispatcher(EventID.OnUpdateGameScore, self, self.OnUpdateGameScore)
   self:AddDispatcher(EventID.OnSoloTreasureGetTicket, self, self.OnGetTicket)
-  self:AddDispatcher(EventID.OnPlayShowDamageEffect, self, self.PlayHitAnim)
+  self:AddDispatcher(EventID.MainPlayerBeAttacked, self, self.PlayHitAnim)
   EventManager:FireEvent(EventID.ShowCountDownTips)
   EventManager:FireEvent(EventID.OpenSoloTreasure3Choose1)
   if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then

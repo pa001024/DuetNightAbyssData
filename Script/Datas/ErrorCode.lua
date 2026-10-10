@@ -5300,6 +5300,26 @@ return ReadOnly("ErrorCode", {
     ErrorCodeContent = "金额未达到折扣券使用门槛",
     ErrorCodeId = 14023
   },
+  [14024] = {
+    ErrorCodeContent = "商品不能添加至购物车",
+    ErrorCodeId = 14024
+  },
+  [14025] = {
+    ErrorCodeContent = "购物车空空如也",
+    ErrorCodeId = 14025
+  },
+  [14026] = {
+    ErrorCodeContent = "购物车版本已变化",
+    ErrorCodeId = 14026
+  },
+  [14027] = {
+    ErrorCodeContent = "购物车商品不存在",
+    ErrorCodeId = 14027
+  },
+  [14028] = {
+    ErrorCodeContent = "购物车商品价格无效",
+    ErrorCodeId = 14028
+  },
   [15001] = {
     ContentEN = "State switching failed",
     ContentES = "Error al cambiar de estado",
@@ -7374,6 +7394,10 @@ return ReadOnly("ErrorCode", {
     ContentTC = "經驗材料錯誤",
     ErrorCodeContent = "经验材料错误",
     ErrorCodeId = 32028
+  },
+  [32029] = {
+    ErrorCodeContent = "个人主页展示中的魔灵无法放生",
+    ErrorCodeId = 32029
   },
   [33001] = {
     ContentEN = "Quick message index error",
@@ -10869,6 +10893,10 @@ return ReadOnly("ErrorCode", {
     ContentTC = "排名賽排名數據錯誤",
     ErrorCodeContent = "排名赛排名数据错误",
     ErrorCodeId = 80016
+  },
+  [80018] = {
+    ErrorCodeContent = "封禁期间无法参与",
+    ErrorCodeId = 80018
   },
   [81001] = {
     ContentEN = "Invalid web redirect server",

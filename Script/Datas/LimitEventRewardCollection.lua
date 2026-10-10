@@ -4,7 +4,8 @@ T.RT_2 = {140, 150}
 T.RT_3 = {150}
 T.RT_4 = {160}
 T.RT_5 = {160, 170}
-T.RT_6 = {130}
+T.RT_6 = {170}
+T.RT_7 = {130}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -47,6 +48,16 @@ return ReadOnly("LimitEventRewardCollection", {
     RewardId = 101015,
     ShowVersion = T.RT_5
   },
+  [101020] = {
+    EventId = 101020,
+    RewardId = 101012,
+    ShowVersion = T.RT_6
+  },
+  [101021] = {
+    EventId = 101021,
+    RewardId = 101015,
+    ShowVersion = {170, 180}
+  },
   [102002] = {
     EventId = 102002,
     RewardId = 102002,
@@ -62,24 +73,34 @@ return ReadOnly("LimitEventRewardCollection", {
     RewardId = 102004,
     ShowVersion = T.RT_4
   },
+  [102005] = {
+    EventId = 102005,
+    RewardId = 102005,
+    ShowVersion = T.RT_6
+  },
   [103014] = {
     EventId = 103014,
     RewardId = 10301401,
-    ShowVersion = T.RT_6
+    ShowVersion = T.RT_7
   },
   [103018] = {
     EventId = 103018,
     RewardId = 1030106,
-    ShowVersion = T.RT_6
+    ShowVersion = T.RT_7
   },
   [103019] = {
     EventId = 103019,
     RewardId = 1030112,
-    ShowVersion = T.RT_6
+    ShowVersion = T.RT_7
   },
   [103020] = {
     EventId = 103020,
     RewardId = 10302001,
+    ShowVersion = T.RT_7
+  },
+  [103021] = {
+    EventId = 103021,
+    RewardId = 10302100,
     ShowVersion = T.RT_6
   },
   [103023] = {
@@ -127,6 +148,26 @@ return ReadOnly("LimitEventRewardCollection", {
     RewardId = 103032,
     ShowVersion = T.RT_4
   },
+  [103036] = {
+    EventId = 103036,
+    RewardId = 103036,
+    ShowVersion = T.RT_6
+  },
+  [103037] = {
+    EventId = 103037,
+    RewardId = 103037,
+    ShowVersion = T.RT_6
+  },
+  [103038] = {
+    EventId = 103038,
+    RewardId = 103038,
+    ShowVersion = T.RT_6
+  },
+  [107004] = {
+    EventId = 107004,
+    RewardId = 107004,
+    ShowVersion = T.RT_6
+  },
   [109003] = {
     EventId = 109003,
     RewardId = 109003,
@@ -152,6 +193,11 @@ return ReadOnly("LimitEventRewardCollection", {
     RewardId = 1030083,
     ShowVersion = T.RT_4
   },
+  [111007] = {
+    EventId = 111007,
+    RewardId = 1030083,
+    ShowVersion = T.RT_6
+  },
   [112003] = {
     EventId = 112003,
     RewardId = 112003,
@@ -166,6 +212,11 @@ return ReadOnly("LimitEventRewardCollection", {
     EventId = 112005,
     RewardId = 112005,
     ShowVersion = T.RT_4
+  },
+  [112006] = {
+    EventId = 112006,
+    RewardId = 112005,
+    ShowVersion = T.RT_6
   },
   [113001] = {
     EventId = 113001,
@@ -184,15 +235,19 @@ return ReadOnly("LimitEventRewardCollection", {
     EventId = 121003,
     ShowVersion = T.RT_4
   },
+  [121004] = {
+    EventId = 121004,
+    ShowVersion = T.RT_6
+  },
   [1030025] = {
     EventId = 1030025,
     RewardId = 1030025,
-    ShowVersion = T.RT_6
+    ShowVersion = T.RT_7
   },
   [1030026] = {
     EventId = 1030026,
     RewardId = 1030026,
-    ShowVersion = T.RT_6
+    ShowVersion = T.RT_7
   },
   [1030029] = {
     EventId = 1030029,
@@ -224,10 +279,25 @@ return ReadOnly("LimitEventRewardCollection", {
     RewardId = 1030035,
     ShowVersion = T.RT_4
   },
+  [1030036] = {
+    EventId = 1030036,
+    RewardId = 1030036,
+    ShowVersion = T.RT_6
+  },
+  [1030037] = {
+    EventId = 1030037,
+    RewardId = 1030037,
+    ShowVersion = T.RT_6
+  },
   [10300602] = {
     EventId = 10300602,
     RewardId = 1030071,
     ShowVersion = T.RT_1
+  },
+  [10300603] = {
+    EventId = 10300603,
+    RewardId = 1030071,
+    ShowVersion = T.RT_6
   },
   [10301101] = {
     EventId = 10301101,
@@ -254,6 +324,11 @@ return ReadOnly("LimitEventRewardCollection", {
     RewardId = 10302004,
     ShowVersion = T.RT_4
   },
+  [10302004] = {
+    EventId = 10302004,
+    RewardId = 10302005,
+    ShowVersion = T.RT_6
+  },
   [10302101] = {
     EventId = 10302101,
     RewardId = 10302101,
@@ -269,14 +344,24 @@ return ReadOnly("LimitEventRewardCollection", {
     RewardId = 10302103,
     ShowVersion = T.RT_5
   },
+  [10302104] = {
+    EventId = 10302104,
+    RewardId = 10302104,
+    ShowVersion = T.RT_6
+  },
   [10302402] = {
     EventId = 10302402,
     RewardId = 10302402,
     ShowVersion = T.RT_4
   },
+  [10302403] = {
+    EventId = 10302403,
+    RewardId = 10302403,
+    ShowVersion = T.RT_6
+  },
   [103009002] = {
     EventId = 103009002,
-    ShowVersion = T.RT_6
+    ShowVersion = T.RT_7
   },
   [103009006] = {
     EventId = 103009006,
@@ -322,6 +407,11 @@ return ReadOnly("LimitEventRewardCollection", {
     RewardId = 20000,
     ShowVersion = T.RT_4
   },
+  [105101024] = {
+    EventId = 105101024,
+    RewardId = 20000,
+    ShowVersion = T.RT_6
+  },
   [105102022] = {
     EventId = 105102022,
     RewardId = 20000,
@@ -341,5 +431,10 @@ return ReadOnly("LimitEventRewardCollection", {
     EventId = 105102025,
     RewardId = 20000,
     ShowVersion = T.RT_4
+  },
+  [105102026] = {
+    EventId = 105102026,
+    RewardId = 20000,
+    ShowVersion = T.RT_6
   }
 })

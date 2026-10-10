@@ -49,18 +49,19 @@ end
 function M:AddRot(DeltaRot)
   local CurRot = self:K2_GetActorRotation()
   local FinalYaw = CurRot.Yaw + DeltaRot.Yaw
-  if FinalYaw > self.MaxAngle then
+  local RelativeYaw = (FinalYaw - self.InitRotate.Yaw + 180) % 360 - 180
+  if RelativeYaw > self.MaxAngle then
     self:NotifyStopRotate()
     self.ToTheEnd = true
-    FinalYaw = self.MaxAngle - 0.001
+    RelativeYaw = self.MaxAngle - 0.001
     if not self.HasFireEvent1 then
       self.HasFireEvent1 = true
       self:FireCustomEvent(self.EventName1)
     end
-  elseif FinalYaw < -self.MaxAngle then
+  elseif RelativeYaw < -self.MaxAngle then
     self:NotifyStopRotate()
     self.ToTheEnd = true
-    FinalYaw = -self.MaxAngle + 0.001
+    RelativeYaw = -self.MaxAngle + 0.001
     if not self.HasFireEvent2 then
       self.HasFireEvent2 = true
       self:FireCustomEvent(self.EventName2)
@@ -68,6 +69,7 @@ function M:AddRot(DeltaRot)
   else
     self.ToTheEnd = false
   end
+  FinalYaw = self.InitRotate.Yaw + RelativeYaw
   local FinalRot = UE.FRotator(CurRot.Pitch, FinalYaw, CurRot.Roll)
   self:K2_SetActorRotation(FinalRot, false, nil, false)
 end

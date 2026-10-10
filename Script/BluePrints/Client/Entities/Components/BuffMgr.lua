@@ -1,3 +1,4 @@
+local MonsterUtils = require("Utils.MonsterUtils")
 local Component = {}
 
 function Component:OnAddBuff(BuffId, Duration, BuffLevel)
@@ -31,7 +32,7 @@ function Component:OnAddBuff(BuffId, Duration, BuffLevel)
         if not Summon or not Summon:IsMonster() then
         elseif not UBlueprintGameplayTagLibrary.HasTag(Summon.GameplayTags, URuntimeCommonFunctionLibrary.BPRequestGameplayTag("Player.RealSummon", false), false) then
         else
-          local MonsterConfig = DataMgr.Monster[Summon.UnitId]
+          local MonsterConfig = MonsterUtils.GetMonsterDataByOwner(Summon)
           if not MonsterConfig or MonsterConfig.IgnoreBuff then
           else
             Battle:AddAvatarBuffToTarget(Summon, Summon, BuffId, -1, 0, BuffLevel)
@@ -72,7 +73,7 @@ function Component:OnRemoveBuff(BuffId)
         if not Summon or not Summon:IsMonster() then
         elseif not UBlueprintGameplayTagLibrary.HasTag(Summon.GameplayTags, URuntimeCommonFunctionLibrary.BPRequestGameplayTag("Player.RealSummon", false), false) then
         else
-          local MonsterConfig = DataMgr.Monster[Summon.UnitId]
+          local MonsterConfig = MonsterUtils.GetMonsterDataByOwner(Summon)
           if not MonsterConfig or MonsterConfig.IgnoreBuff then
           else
             Battle:RemoveAvatarBuffFromTarget(Summon, Summon, BuffId, false, -1)
@@ -113,7 +114,7 @@ function Component:OnBuffFinished(BuffId)
         if not Summon or not Summon:IsMonster() then
         elseif not UBlueprintGameplayTagLibrary.HasTag(Summon.GameplayTags, URuntimeCommonFunctionLibrary.BPRequestGameplayTag("Player.RealSummon", false), false) then
         else
-          local MonsterConfig = DataMgr.Monster[Summon.UnitId]
+          local MonsterConfig = MonsterUtils.GetMonsterDataByOwner(Summon)
           if not MonsterConfig or MonsterConfig.IgnoreBuff then
           else
             Battle:RemoveAvatarBuffFromTarget(Summon, Summon, BuffId, false, -1)

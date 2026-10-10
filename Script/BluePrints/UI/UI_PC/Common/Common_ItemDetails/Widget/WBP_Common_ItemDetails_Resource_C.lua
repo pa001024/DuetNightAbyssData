@@ -14,6 +14,19 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
     self:InitTipsInfo(self.ParentWidget.Content)
     return
   end
+  if "CustomItem" == ItemType then
+    local ItemData = DataMgr.CustomItem and DataMgr.CustomItem[ItemId] or nil
+    if not ItemData then
+      return
+    end
+    self.ParentWidget.Panel_Hold:SetVisibility(ESlateVisibility.Visible)
+    self.ParentWidget.Text_Hold02:SetText(Content.Count or 0)
+    self.ParentWidget.Panel_Describe:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.ParentWidget.Text_ItemDescribe:SetText(GText("UI_PersonalPage_ItemTips"))
+    self.Text_LongDescribe:SetVisibility(ItemData.FunctionDes and ESlateVisibility.SelfHitTestInvisible or ESlateVisibility.Collapsed)
+    self.Text_LongDescribe:SetText(ItemData.FunctionDes and GText(ItemData.FunctionDes) or "")
+    return
+  end
   self:SetFocus()
   self.ParentWidget.Panel_Describe:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   if "CharPartMesh" == ItemType or "Skin" == ItemType or "WeaponSkin" == ItemType or "Title" == ItemType or "TitleFrame" == ItemType then
@@ -259,7 +272,11 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
     self:RefreshBackgroundInfo(ItemId)
     return
   end
-  if "Resource" == ItemType and DataMgr.LimitedTimeResource[ItemId] then
+  if "CustomScene" == ItemType then
+    self:RefreshCustomSceneInfo(ItemId, Content)
+    return
+  end
+  if "Resource" == ItemType then
     local LimitedData = ItemUtils.GetItemLimitedInfo(ItemId)
     if LimitedData then
       local diff = os.difftime(LimitedData.EndTime.GetTime(), TimeUtils.NowTime())
@@ -479,7 +496,11 @@ function M:InitItemInfoInBag(ItemType, ItemId, UnitId, Content)
     self:RefreshBackgroundInfo(ItemId)
     return
   end
-  if "Resource" == ItemType and DataMgr.LimitedTimeResource[ItemId] then
+  if "CustomScene" == ItemType then
+    self:RefreshCustomSceneInfo(ItemId, Content)
+    return
+  end
+  if "Resource" == ItemType then
     local LimitedData = ItemUtils.GetItemLimitedInfo(ItemId)
     if LimitedData then
       local diff = os.difftime(LimitedData.EndTime.GetTime(), TimeUtils.NowTime())
@@ -628,6 +649,48 @@ function M:RefreshBackgroundInfo(ItemId)
   end
   self.Text_LongDescribe:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.Text_LongDescribe:SetText(GText(BackgroundInfo.Des) or "")
+end
+
+function M:RefreshCustomSceneInfo(ItemId, Content)
+  local SceneInfo = DataMgr.CustomScene and DataMgr.CustomScene[ItemId]
+  if not SceneInfo then
+    ScreenPrint("没找到对应个人主页场景信息 ItemId:" .. tostring(ItemId))
+    return
+  end
+  self.ParentWidget.Panel_Hold:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.ParentWidget.Switch_Show:SetActiveWidgetIndex(3)
+  local bOwned = Content and Content.IsUnlocked == true
+  self.ParentWidget.Text_Describe:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.ParentWidget.Text_Describe:SetText(bOwned and GText("UI_Background_Owned") or GText("UI_Background_Unowned"))
+  self.ParentWidget.Panel_Describe:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.ParentWidget.Text_ItemDescribe:SetText(GText("UI_PersonalPage_CustomSceneDesc"))
+  self.Text_LongDescribe:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  if self.Panel_LongDescribe then
+    self.Panel_LongDescribe:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  local SceneDesc = SceneInfo.SceneDesc
+  if SceneDesc and "" ~= SceneDesc then
+    self.Text_Describe:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Text_Describe:SetText(GText(SceneDesc))
+  else
+    self.Text_Describe:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  self.Panel_Title:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  local PreviewPath = SceneInfo.PreviewPath
+  if not PreviewPath or "" == PreviewPath then
+    PreviewPath = SceneInfo.Icon
+  end
+  local Widget = UIManager(self):CreateWidget("WidgetBlueprint'/Game/UI/WBP/NameCard/Widget/WBP_NameCard_TipsItem.WBP_NameCard_TipsItem'", false)
+  if Widget then
+    self.Pos_Title:ClearChildren()
+    self.Pos_Title:AddChild(Widget)
+    if PreviewPath then
+      local IconImage = LoadObject(PreviewPath)
+      if IconImage and Widget.Image_ItemIcon then
+        Widget.Image_ItemIcon:SetBrushFromTexture(IconImage)
+      end
+    end
+  end
 end
 
 return M

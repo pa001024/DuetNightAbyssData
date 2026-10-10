@@ -847,9 +847,6 @@ function M:PetMain_InitKeySetting(KeyDownEvents, KeyUpEvents, BottomKeyInfo)
     if self.IsSubUIFocused then
       table.insert(BottomKeyInfo, self.SelectBottomKeyInfoList)
     else
-      if not self.LockStar then
-        table.insert(BottomKeyInfo, self.EditNameBottomKeyInfoList)
-      end
       self:AddKeyEvents(KeyDownEvents, self.EditNameKeyDownEvents)
       self:AddKeyEvents(KeyDownEvents, self.LockKeyDownEvents)
       self:AddKeyEvents(KeyDownEvents, self.StarTargetNameKeyDownEvents)

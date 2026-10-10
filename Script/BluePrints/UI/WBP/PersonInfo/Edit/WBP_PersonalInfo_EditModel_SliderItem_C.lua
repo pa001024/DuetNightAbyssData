@@ -33,6 +33,7 @@ function M:Construct()
   self.GamepadKeyInited = false
   self.CurInputDeviceType = nil
   self.CurGamepadName = nil
+  self.ClickInterval = nil
 end
 
 function M:Destruct()
@@ -45,6 +46,7 @@ function M:Destruct()
   self.GamepadKeyInited = false
   self.CurInputDeviceType = nil
   self.CurGamepadName = nil
+  self.ClickInterval = nil
 end
 
 function M:InitSliderItem(OwnerWidget, AxisName)
@@ -52,6 +54,21 @@ function M:InitSliderItem(OwnerWidget, AxisName)
   self.AxisName = AxisName
   self:BindSliderEvents()
   self:BindFocusEvents()
+end
+
+function M:SetClickInterval(BusinessStep)
+  local Step = tonumber(BusinessStep)
+  if not Step or Step <= 0 then
+    Step = 1
+  end
+  self.ClickInterval = Step
+  local NormalizedStep = math.min(Step / 100, 1)
+  if self.Slider and self.Slider.SetStepSize then
+    self.Slider:SetStepSize(NormalizedStep)
+  end
+  if self.Slider_Controller and self.Slider_Controller.SetStepSize then
+    self.Slider_Controller:SetStepSize(NormalizedStep)
+  end
 end
 
 function M:RefreshInputStyle(CurInputType, CurGamepadName)
@@ -106,6 +123,9 @@ end
 function M:HandleSliderValueChanged(SliderValue)
   if self.IsSyncingSliderValue then
     return
+  end
+  if self:_GetNormalizedClickStep() then
+    SliderValue = self:_SnapNormalizedValue(SliderValue)
   end
   self:SetSliderValue(SliderValue)
   AudioManager(self):PlayUISound(self, "event:/ui/common/slider_value_change", nil, nil)
@@ -181,17 +201,24 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
     return UE4.UWidgetBlueprintLibrary.UnHandled()
   end
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  if InKeyName == UIConst.GamePadKey.FaceButtonRight then
+    if self.OwnerWidget and self.OwnerWidget.OnGamepadBackFromSlider and self.OwnerWidget:OnGamepadBackFromSlider() then
+      return UE4.UWidgetBlueprintLibrary.Handled()
+    end
+    return UE4.UWidgetBlueprintLibrary.UnHandled()
+  end
   if GAMEPAD_UP_KEYS[InKeyName] or GAMEPAD_DOWN_KEYS[InKeyName] then
     return UE4.UWidgetBlueprintLibrary.UnHandled()
   end
+  local GamepadStep = self:_GetNormalizedClickStep() or GAMEPAD_SLIDER_STEP
   if GAMEPAD_LEFT_KEYS[InKeyName] then
-    if self:_AdjustSliderByGamepadStep(-GAMEPAD_SLIDER_STEP) then
+    if self:_AdjustSliderByGamepadStep(-GamepadStep) then
       return UE4.UWidgetBlueprintLibrary.Handled()
     end
     return UE4.UWidgetBlueprintLibrary.UnHandled()
   end
   if GAMEPAD_RIGHT_KEYS[InKeyName] then
-    if self:_AdjustSliderByGamepadStep(GAMEPAD_SLIDER_STEP) then
+    if self:_AdjustSliderByGamepadStep(GamepadStep) then
       return UE4.UWidgetBlueprintLibrary.Handled()
     end
     return UE4.UWidgetBlueprintLibrary.UnHandled()
@@ -301,6 +328,29 @@ function M:_AdjustSliderByGamepadStep(Offset)
   local bChanged = self:AdjustSliderByOffset(Offset)
   self.OwnerWidget:OnEndTransformSliderDrag(self.AxisName)
   return bChanged
+end
+
+function M:_GetNormalizedClickStep()
+  local Step = tonumber(self.ClickInterval)
+  if not Step or Step <= 0 then
+    return nil
+  end
+  return math.min(Step / 100, 1)
+end
+
+function M:_SnapNormalizedValue(Value)
+  local NormalizedStep = self:_GetNormalizedClickStep()
+  Value = math.max(0, math.min(1, Value or 0))
+  if not NormalizedStep then
+    return Value
+  end
+  if Value <= 0 then
+    return 0
+  end
+  if Value >= 1 then
+    return 1
+  end
+  return math.max(0, math.min(1, math.floor(Value / NormalizedStep + 0.5) * NormalizedStep))
 end
 
 return M

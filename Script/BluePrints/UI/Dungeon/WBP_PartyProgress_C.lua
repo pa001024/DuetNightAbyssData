@@ -311,8 +311,9 @@ function M:OnPartyProgressUpdate()
       local MinX = self.Length
       local MinIndex = 1
       for i, v in pairs(self.Points) do
-        if MinX > math.abs(v.RenderTransform.Translation.X - RebirthPlayerPosX) then
-          MinX = v.RenderTransform.Translation.X
+        local Distance = math.abs(v.RenderTransform.Translation.X - RebirthPlayerPosX)
+        if MinX > Distance then
+          MinX = Distance
           MinIndex = i
         end
       end

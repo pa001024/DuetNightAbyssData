@@ -285,6 +285,31 @@ return ReadOnly("CombatTerm", {
     CombatTermExplaination = "TERMEXP_4102_Skill02_03",
     CombatTermId = "Term_4102_Skill02_03"
   },
+  Term_4103_Passive01_01 = {
+    CombatTerm = "TERM_4103_Passive01_01",
+    CombatTermExplaination = "TERMEXP_4103_Passive01_01",
+    CombatTermId = "Term_4103_Passive01_01"
+  },
+  Term_4103_Skill01_01 = {
+    CombatTerm = "TERM_4103_Skill01_01",
+    CombatTermExplaination = "TERMEXP_4103_Skill01_01",
+    CombatTermId = "Term_4103_Skill01_01"
+  },
+  Term_4103_Skill02_01 = {
+    CombatTerm = "TERM_4103_Skill02_01",
+    CombatTermExplaination = "TERMEXP_4103_Skill02_01",
+    CombatTermId = "Term_4103_Skill02_01"
+  },
+  Term_4103_Skill02_02 = {
+    CombatTerm = "TERM_4103_Skill02_02",
+    CombatTermExplaination = "TERMEXP_4103_Skill02_02",
+    CombatTermId = "Term_4103_Skill02_02"
+  },
+  Term_4103_Skill02_03 = {
+    CombatTerm = "TERM_4103_Skill02_03",
+    CombatTermExplaination = "TERMEXP_4103_Skill02_03",
+    CombatTermId = "Term_4103_Skill02_03"
+  },
   Term_4201_BonusAttack = {
     CombatTerm = "TERM_4201_BonusAttack",
     CombatTermExplaination = "TERMEXP_4201_BonusAttack",
@@ -389,6 +414,26 @@ return ReadOnly("CombatTerm", {
     CombatTerm = "TERM_5401_Debuff",
     CombatTermExplaination = "TERMEXP_5401_Debuff",
     CombatTermId = "Term_5401_Debuff"
+  },
+  Term_5402_Beat = {
+    CombatTerm = "TERM_5402_Beat",
+    CombatTermExplaination = "TERMEXP_5402_Beat",
+    CombatTermId = "Term_5402_Beat"
+  },
+  Term_5402_Merged = {
+    CombatTerm = "TERM_5402_Merged",
+    CombatTermExplaination = "TERMEXP_5402_Merged",
+    CombatTermId = "Term_5402_Merged"
+  },
+  Term_5402_Skill2 = {
+    CombatTerm = "TERM_5402_Skill2",
+    CombatTermExplaination = "TERMEXP_5402_Skill2",
+    CombatTermId = "Term_5402_Skill2"
+  },
+  Term_5402_Split = {
+    CombatTerm = "TERM_5402_Split",
+    CombatTermExplaination = "TERMEXP_5402_Split",
+    CombatTermId = "Term_5402_Split"
   },
   Term_Rou_10101_MoltenBlaze = {
     CombatTerm = "TERM_Rou_10101_MoltenBlaze",

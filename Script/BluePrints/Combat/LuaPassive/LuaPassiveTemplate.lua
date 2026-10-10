@@ -27,12 +27,6 @@ end
 function M:BreakCountDown(Character, Damage, TargetEid)
 end
 
-function M:OnDamageCrit(Character, Damage, Source, Target)
-end
-
-function M:OnDamageTrig(Character, Damage, Source, Target)
-end
-
 function M:InitHeal(Character, Damage, Source, Target)
 end
 

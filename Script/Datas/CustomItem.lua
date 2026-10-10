@@ -1,5 +1,9 @@
 local T = {}
-T.RT_1 = {"Text_Gacha"}
+T.RT_1 = {
+  0,
+  0,
+  90
+}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -8,59 +12,70 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
 end
 return ReadOnly("CustomItem", {
   [1001] = {
-    AccessKey = {
-      "Text_Achievement"
-    },
-    FunctionDes = "CustomItem_Des_1001",
+    FunctionDes = "CustomItem_Des_Normal",
+    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/PersonalInfo/T_PersonalInfo_Item_0002.T_PersonalInfo_Item_0002'",
+    IsDefaultUnlock = true,
     ItemId = 1001,
     Name = "CustomItem_Name_1001",
-    Path = "StaticMesh'/Game/Asset/Scene/EN002_Haiboliya/Binghucheng/BH_City/Mesh/SM_Bar_Cha01.SM_Bar_Cha01'",
-    Rarity = 1
+    Path = "StaticMesh'/Game/Asset/Scene/EN002_Haiboliya/Binghucheng/BH_City/Mesh/SM_Bar_Pail01B.SM_Bar_Pail01B'",
+    Rarity = 1,
+    Scale = 1.3
   },
   [1002] = {
-    AccessKey = T.RT_1,
-    FunctionDes = "CustomItem_Des_1002",
+    DefaultRotation = T.RT_1,
+    FunctionDes = "CustomItem_Des_Normal",
+    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/PersonalInfo/T_PersonalInfo_Item_0006.T_PersonalInfo_Item_0006'",
+    IsDefaultUnlock = true,
     ItemId = 1002,
     Name = "CustomItem_Name_1002",
-    Path = "StaticMesh'/Game/Asset/Scene/EN002_Haiboliya/Binghucheng/BH_Carnival/Mesh/SM_Carn_Bal02.SM_Carn_Bal02'",
-    Rarity = 2
-  },
-  [1003] = {
-    AccessKey = T.RT_1,
-    FunctionDes = "CustomItem_Des_1003",
-    ItemId = 1003,
-    Name = "CustomItem_Name_1003",
-    Path = "StaticMesh'/Game/Asset/Scene/EN002_Haiboliya/Binghucheng/BH_Carnival/Mesh/SM_Carn_Cry01.SM_Carn_Cry01'",
+    Path = "StaticMesh'/Game/Asset/Scene/EN002_Haiboliya/Binghucheng/BH_Home/Mesh/SM_Home_Cha01.SM_Home_Cha01'",
     Rarity = 3
   },
+  [1003] = {
+    DefaultRotation = T.RT_1,
+    FunctionDes = "CustomItem_Des_Normal",
+    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/PersonalInfo/T_PersonalInfo_Item_0003.T_PersonalInfo_Item_0003'",
+    IsDefaultUnlock = true,
+    ItemId = 1003,
+    Name = "CustomItem_Name_1003",
+    Path = "StaticMesh'/Game/Asset/Scene/EN002_Haiboliya/Binghucheng/BH_Carnival/Mesh/SM_Carn_Sig03.SM_Carn_Sig03'",
+    Rarity = 4,
+    Scale = 0.7
+  },
   [1004] = {
-    AccessKey = {
-      "Text_Headicon"
-    },
-    FunctionDes = "CustomItem_Des_1004",
+    DefaultRotation = T.RT_1,
+    FunctionDes = "CustomItem_Des_Normal",
+    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/PersonalInfo/T_PersonalInfo_Item_0004.T_PersonalInfo_Item_0004'",
+    IsDefaultUnlock = true,
     ItemId = 1004,
     Name = "CustomItem_Name_1004",
-    Path = "StaticMesh'/Game/Asset/Scene/EN002_Haiboliya/Binghucheng/BH_Carnival/Mesh/SM_Carn_Toy01.SM_Carn_Toy01'",
+    Path = "StaticMesh'/Game/Asset/Scene/EN002_Haiboliya/Binghucheng/BH_Carnival/Mesh/SM_Carn_Sig02.SM_Carn_Sig02'",
     Rarity = 4
   },
   [1005] = {
-    AccessKey = {
-      "Text_Raid_DungeonReward"
+    DefaultLocation = {
+      0,
+      0,
+      100
     },
-    FunctionDes = "CustomItem_Des_1005",
+    FunctionDes = "CustomItem_Des_Normal",
+    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/PersonalInfo/T_PersonalInfo_Item_0005.T_PersonalInfo_Item_0005'",
+    IsDefaultUnlock = true,
     ItemId = 1005,
     Name = "CustomItem_Name_1005",
-    Path = "StaticMesh'/Game/Asset/Scene/EN002_Haiboliya/Binghucheng/BH_City/Mesh/SM_Cit_Sign11.SM_Cit_Sign11'",
-    Rarity = 5
+    Path = "StaticMesh'/Game/Asset/Scene/EN002_Haiboliya/Binghucheng/BH_Carnival/Mesh/SM_Carn_Bal03.SM_Carn_Bal03'",
+    Rarity = 2,
+    Scale = 0.5
   },
   [1006] = {
-    AccessKey = {
-      "Text_Raid_Reward"
-    },
-    FunctionDes = "CustomItem_Des_1006",
+    DefaultRotation = T.RT_1,
+    FunctionDes = "CustomItem_Des_Normal",
+    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/PersonalInfo/T_PersonalInfo_Item_0001.T_PersonalInfo_Item_0001'",
+    IsDefaultUnlock = true,
     ItemId = 1006,
     Name = "CustomItem_Name_1006",
-    Path = "StaticMesh'/Game/Asset/Scene/EN002_Haiboliya/Binghucheng/BH_City/Mesh/SM_Cit_Sign12.SM_Cit_Sign12'",
-    Rarity = 6
+    Path = "StaticMesh'/Game/Asset/Scene/EN002_Haiboliya/Binghucheng/BH_City/Mesh/SM_Bar_Boa01.SM_Bar_Boa01'",
+    Rarity = 2,
+    Scale = 0.8
   }
 })

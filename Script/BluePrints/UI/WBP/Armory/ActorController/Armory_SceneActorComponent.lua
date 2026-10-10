@@ -1,3 +1,4 @@
+local PreviewLevelHandoffMask = require("BluePrints.UI.Common.Preview.PreviewLevelHandoffMask")
 local M = {}
 
 function M:Init()
@@ -93,7 +94,13 @@ function M:TryLoadPreviewScene(SceneType)
     end
     if not IsPreviewSceneHasRef(PreviewLevelName) then
       local bSuccess = WorldLoader:LoadPreviewLevel(PreviewLevelName, Path, function()
+        if not IsValid(self.ViewUI) or not IsValid(self.ArmoryHelper) then
+          return
+        end
         self.ViewUI:AddTimer(0.1, function()
+          if not IsValid(self.ViewUI) or not IsValid(self.ArmoryHelper) then
+            return
+          end
           self.ArmoryHelper:SetPreviewLevelActor(GetLevelScriptActor(WorldLoader, PreviewLevelName))
           self.ArmoryHelper:OnPreviewSceneLoaded()
           self:OnPreviewSceneLoaded()
@@ -111,17 +118,18 @@ function M:TryLoadPreviewScene(SceneType)
       self.bPreviewSceneLoaded = true
       self.PreviewLevelName = PreviewLevelName
       self.ArmoryHelper:AddTimer(0.1, function()
-        if IsValid(self.ArmoryHelper) then
-          self.ArmoryHelper:SetPreviewLevelActor(GetLevelScriptActor(WorldLoader, PreviewLevelName))
-          self.ArmoryHelper:OnPreviewSceneLoaded()
+        if not IsValid(self.ViewUI) or not IsValid(self.ArmoryHelper) then
+          return
         end
+        self.ArmoryHelper:SetPreviewLevelActor(GetLevelScriptActor(WorldLoader, PreviewLevelName))
+        self.ArmoryHelper:OnPreviewSceneLoaded()
         self:OnPreviewSceneLoaded()
       end, false, 0, "DelayCallSceneLoaded", true)
     end
   end
 end
 
-function M:UnloadPreviewScene()
+function M:UnloadPreviewScene(bKeepWorldLoaded)
   if self.bPreviewSceneLoaded then
     local PreviewLevelName = "PreviewLevel" .. self.EPreviewSceneType
     self.bPreviewSceneLoaded = false
@@ -140,7 +148,7 @@ function M:UnloadPreviewScene()
         if Controller then
           UTalkSequenceFunctionLibrary.UpdatePlayerCameraManager(Controller)
         end
-        WorldLoader:UnloadPreviewLevel("PreviewLevel" .. self.EPreviewSceneType)
+        WorldLoader:UnloadPreviewLevel("PreviewLevel" .. self.EPreviewSceneType, bKeepWorldLoaded)
         if IsValid(self.ArmoryHelper) then
           self.ArmoryHelper:SetPreviewLevelActor(nil)
           self.ArmoryHelper:OnPreviewSceneUnloaded()
@@ -277,6 +285,7 @@ function M:IsSceneActorLoading()
 end
 
 function M:OnPreviewSceneLoaded()
+  PreviewLevelHandoffMask.Hide(self.ViewUI)
   self:DisableEnvirSystem(false)
   self.IsPreviewSceneLoading = false
   self:DoDeferredSceneBehavior()

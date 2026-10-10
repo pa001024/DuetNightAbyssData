@@ -37,15 +37,17 @@ end
 
 function M:BuildUIModel()
   local Root = self.OwnerRoot
+  local bIsItemPage = Root and Root.IsItemMainPageActive and Root:IsItemMainPageActive()
   return {
     StateName = "Root",
     ChooseKind = nil,
     TopBarMode = "RootTab",
     SidePanelMode = "None",
-    SlotPanelMode = "CharacterSlot",
+    DetailContentKind = bIsItemPage and "Item" or "Character",
+    SlotPanelMode = bIsItemPage and "ItemSlot" or "CharacterSlot",
     WSMode = "Button_SaveAdd",
     CanPreviewCameraRoam = true,
-    FocusSlotIndex = Root and Root.GetSelectedCharacterSlotIndex and Root:GetSelectedCharacterSlotIndex() or nil
+    FocusSlotIndex = bIsItemPage and Root:GetSelectedItemSlotIndex() or Root and Root.GetSelectedCharacterSlotIndex and Root:GetSelectedCharacterSlotIndex() or nil
   }
 end
 

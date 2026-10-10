@@ -1,5 +1,6 @@
 local MiscUtils = require("Utils.MiscUtils")
 local SerializeUtils = require("Utils.SerializeUtils")
+local RewardBox = require("BluePrints.Client.CustomTypes.SimpleRewardBox")
 local Component = {}
 
 function Component:EnterWorld()
@@ -111,6 +112,7 @@ function Component:OnDungeonFinish(DungeonId, IsWin, Rewards, DungeonRewards, Pl
   PrintTable({ClientRes = ClientRes}, 10)
   self.CacheDSInfo = nil
   self:ResetCachedDungeonRewards()
+  self:SendTaskbarDungeonFinish(DungeonId, Rewards, DungeonRewards)
   local UIManger = GWorld.GameInstance:GetGameUIManager()
   if not UIManger then
     return
@@ -136,6 +138,34 @@ function Component:OnDungeonFinish(DungeonId, IsWin, Rewards, DungeonRewards, Pl
   end
   print(_G.LogTag, "LogicServer_OnDungeonFinish OnDungeonFinish")
   RealOnDungeonFinish()
+end
+
+function Component:SendTaskbarDungeonFinish(DungeonId, Rewards, DungeonRewards)
+  local DungeonName = ""
+  local DungeonInfo = DataMgr.Dungeon[DungeonId]
+  local DungeonNameKey = DungeonInfo and DungeonInfo.DungeonName
+  if DungeonNameKey and DataMgr.TextMap[DungeonNameKey] then
+    DungeonName = GText(DungeonNameKey)
+  end
+  if DungeonRewards and type(DungeonRewards) == "table" then
+    local RewardTypes = DataMgr.RewardType
+    for RewardType, RewardTypeValue in pairs(RewardTypes) do
+      if RewardTypeValue.DungeonRewardType then
+        local Reward = DungeonRewards[RewardType .. "s"]
+        if Reward then
+          for Id, NumTable in pairs(Reward) do
+            local Count = RewardBox:GetCount(NumTable)
+            DebugPrint("TrySendTaskbarReward", RewardType, Id, Count)
+            ItemUtils.TrySendTaskbarReward(RewardType, Id, Count)
+          end
+        end
+      end
+    end
+  end
+  UE4.UEMTaskbarRewardLibrary.SendTaskbarDungeonStatus(DungeonId, "complete", DungeonName)
+  if GWorld.GameInstance and GWorld.GameInstance.ClearTBHDeathState then
+    GWorld.GameInstance:ClearTBHDeathState()
+  end
 end
 
 function Component:NotifyUnCostItems(Items)

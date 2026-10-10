@@ -1,5 +1,6 @@
 require("UnLua")
 local PersonInfoController = require("BluePrints.UI.WBP.PersonInfo.PersonInfoController")
+local DisplayRules = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_DisplayRules")
 local UIUtils = require("Utils.UIUtils")
 local M = Class("BluePrints.UI.BP_EMUserWidget_C")
 
@@ -21,12 +22,21 @@ local function AddContentToBlueprintCache(CacheArray, Content)
   CacheArray:Add(Content)
 end
 
+local function PinThenRebuildBlueprintContentCache(CacheArray, Contents)
+  for _, Content in ipairs(Contents or {}) do
+    AddContentToBlueprintCache(CacheArray, Content)
+  end
+end
+
 M._components = {
   "BluePrints.UI.WBP.PersonInfo.Edit.PersonInfo_CustomEditExpandListCompoment",
   "BluePrints.UI.WBP.PersonInfo.Edit.PersonInfo_CustomEditChooseSelectionComponent",
+  "BluePrints.UI.WBP.PersonInfo.Edit.PersonInfo_CustomEditChooseUniqueSlotComponent",
   "BluePrints.UI.WBP.PersonInfo.Edit.PersonInfo_CustomEditChooseCharacterComponent",
   "BluePrints.UI.WBP.PersonInfo.Edit.PersonInfo_CustomEditChooseWeaponComponent",
   "BluePrints.UI.WBP.PersonInfo.Edit.PersonInfo_CustomEditChooseActionComponent",
+  "BluePrints.UI.WBP.PersonInfo.Edit.PersonInfo_CustomEditChooseItemComponent",
+  "BluePrints.UI.WBP.PersonInfo.Edit.PersonInfo_CustomEditChoosePetComponent",
   "BluePrints.Common.TimerMgr"
 }
 
@@ -47,16 +57,31 @@ function M:InitChoosePage(EditRootController, ChooseMode, Params)
   self.CurrentCharacterTipsContent = nil
   self.SelectItem = nil
   self.BottomKeyPlanIndex = nil
-  if not self.EditDataModel then
-    self.EditDataModel = PersonInfoController:GetEdirModel()
-  end
+  self.bItemDetailsFocused = false
+  self.bItemDetailsOpened = false
+  self:_EnsureEditDataModel()
   self:BindPageEvents()
   self:_InitCharacterTips()
+  self:_InitItemDetailsWidget()
   self:_InitChoosePageTab()
-  self:_GetChoosePageTabWidget():PlayInAnim()
   self:RefreshChoosePageClickMaskState(false)
   self:RefreshView()
   self:PlayAnimation(self.Change_List)
+end
+
+function M:Destruct()
+  if self.CleanTimer then
+    self:CleanTimer()
+  end
+  self.EditRootController = nil
+end
+
+function M:_EnsureEditDataModel()
+  if self.EditDataModel then
+    return self.EditDataModel
+  end
+  self.EditDataModel = PersonInfoController:GetEdirModel()
+  return self.EditDataModel
 end
 
 function M:ApplyChoosePageContext(EditRootController, ChooseMode, Params)
@@ -64,6 +89,7 @@ function M:ApplyChoosePageContext(EditRootController, ChooseMode, Params)
   self.ChooseMode = ChooseMode
   self.Params = Params or {}
   self.CurrentWeaponSubTab = self:_ResolveInitialWeaponSubTab()
+  self:_EnsureEditDataModel()
 end
 
 function M:BindPageEvents()
@@ -98,6 +124,9 @@ end
 
 function M:RefreshView()
   if not self.EditRootController then
+    return
+  end
+  if not self:_EnsureEditDataModel() then
     return
   end
   self:_RefreshChoosePageTab()
@@ -171,7 +200,92 @@ function M:OnClickBack()
   if self:_TryCloseCharacterTips() then
     return
   end
+  self:HideItemDetails()
   self.EditRootController:CloseChoosePageAndReturn()
+end
+
+function M:_InitItemDetailsWidget()
+  if self.ChooseMode ~= "Item" then
+    if self.ItemDetailsWidget then
+      self.ItemDetailsWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+    return
+  end
+  if not self.ItemDetailsWidget then
+    self.ItemDetailsWidget = UIManager(self):_CreateWidgetNew("ItemDetailsMain")
+    self.Pos_Tips:AddChild(self.ItemDetailsWidget)
+  end
+  self.ItemDetailsWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+end
+
+function M:ShowItemDetails(Content)
+  if not (self.ChooseMode == "Item" and self.ItemDetailsWidget and Content) or not Content.ItemId then
+    return
+  end
+  self.ItemDetailsWidget:RefreshItemInfo({
+    ItemType = "CustomItem",
+    ItemId = Content.ItemId,
+    Count = 1,
+    bNotFocus = true,
+    OverrideDetailsBackObj = self,
+    OverrideDetailsBackEvent = self.OnItemDetailsBackByGamepad,
+    OnItemDetailAddedToFocusPathEvent = {
+      Obj = self,
+      Callback = self.OnItemDetailsAddedToFocusPath
+    },
+    OnItemRemovedFromFocusPathEvent = {
+      Obj = self,
+      Callback = self.OnItemDetailsRemovedFromFocusPath
+    }
+  }, true)
+  self.ItemDetailsWidget:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.bItemDetailsOpened = true
+  self:RefreshChoosePageClickMaskState(true)
+  self.ItemDetailsWidget:StopAnimation(self.ItemDetailsWidget.Out)
+  self.ItemDetailsWidget:PlayAnimation(self.ItemDetailsWidget.In)
+end
+
+function M:HideItemDetails()
+  if not self.ItemDetailsWidget then
+    return
+  end
+  self.bItemDetailsFocused = false
+  self.bItemDetailsOpened = false
+  self:RefreshChoosePageClickMaskState(false)
+  self.ItemDetailsWidget:StopAnimation(self.ItemDetailsWidget.In)
+  self.ItemDetailsWidget:PlayAnimation(self.ItemDetailsWidget.Out)
+end
+
+function M:OnItemDetailsAddedToFocusPath()
+  self.bItemDetailsFocused = true
+  if self.RefreshChoosePageGamepadState then
+    self:RefreshChoosePageGamepadState()
+  end
+end
+
+function M:OnItemDetailsRemovedFromFocusPath()
+  self.bItemDetailsFocused = false
+  if self.RefreshChoosePageGamepadState then
+    self:RefreshChoosePageGamepadState()
+  end
+end
+
+function M:OnItemDetailsBackByGamepad()
+  if self.ItemDetailsWidget then
+    self.ItemDetailsWidget.bFocusItem = false
+  end
+  local FocusContent = self.LastSelectedListContent or self.LastSelectedContent
+  if FocusContent and self.TileView_Select_Role then
+    self.TileView_Select_Role:BP_NavigateToItem(FocusContent)
+    local EntryWidget = self:_GetChooseEntryWidget(FocusContent)
+    if EntryWidget and EntryWidget.SetFocus then
+      EntryWidget:SetFocus()
+      return
+    end
+  end
+  if self.TileView_Select_Role then
+    self.TileView_Select_Role:SetFocus()
+  end
 end
 
 function M:OnClickConfirmChoose()
@@ -180,17 +294,41 @@ function M:OnClickConfirmChoose()
       return
     end
     self.EditRootController:ConfirmCharacterChoosePage()
+    return
+  end
+  if self.ChooseMode == "Pet" then
+    self.EditRootController:ConfirmPetChoosePage()
+    return
+  end
+  if self.ChooseMode == "Item" then
+    self.EditRootController:ConfirmItemChoosePage()
+    return
+  end
+  if self.ChooseMode == "Weapon" then
+    self.EditRootController:ConfirmWeaponChoosePage()
+    return
+  end
+  if self.ChooseMode == "Action" then
+    self.EditRootController:ConfirmActionChoosePage()
   end
 end
 
 function M:OnClickConfirmChooseForbidden()
-  if self.ChooseMode ~= "Character" or not self.EditRootController then
+  if not self.EditRootController then
+    return
+  end
+  if self.ChooseMode ~= "Character" and self.ChooseMode ~= "Pet" and self.ChooseMode ~= "Item" and self.ChooseMode ~= "Weapon" and self.ChooseMode ~= "Action" then
     return
   end
   if self.EditRootController:IsSavingEdit() then
     return
   end
-  if not self.EditRootController:CanConfirmCharacterChoosePage() then
+  if not self.EditRootController:CanConfirmChoosePage() then
+    local bShowActionNoWeapon = self.ChooseMode == "Weapon" and self.EditRootController._IsCurrentActionUnableToShowWeapon and self.EditRootController:_IsCurrentActionUnableToShowWeapon() == true
+    if bShowActionNoWeapon then
+      UIManager(self):ShowUITip("CommonToastMain", GText("UI_PersonalPage_ActionNoWeapon"))
+      return
+    end
     UIManager(self):ShowUITip("CommonToastMain", GText("UI_PersonalPage_NoChanges"))
   end
 end
@@ -209,6 +347,14 @@ end
 
 function M:ActionMain_OnListItemClicked(Content)
   self:OnActionContentClicked(Content)
+end
+
+function M:ItemMain_OnListItemClicked(Content)
+  self:OnItemContentClicked(Content)
+end
+
+function M:PetMain_OnListItemClicked(Content)
+  self:OnPetContentClicked(Content)
 end
 
 function M:OnListItemSelectionChanged(Content, IsSelected)
@@ -391,16 +537,38 @@ function M:OnSortTypeChanged()
 end
 
 function M:_BuildCurrentListContents(TabName)
+  local EditDataModel = self:_EnsureEditDataModel()
+  if not EditDataModel then
+    return {}
+  end
   if "Character" == TabName then
-    return self.EditDataModel:GetCustomEditCharacterItems()
+    return EditDataModel:GetCustomEditCharacterItems()
   end
   if "Melee" == TabName or "Ranged" == TabName then
-    return self.EditDataModel:GetCustomEditWeaponItems(TabName)
+    return EditDataModel:GetCustomEditWeaponItems(TabName)
   end
   if "Action" == TabName then
-    return self.EditDataModel:GetCustomEditActionItems()
+    return EditDataModel:GetCustomEditActionItems()
+  end
+  if "Item" == TabName then
+    return EditDataModel:GetCustomEditItemItems()
+  end
+  if "Pet" == TabName then
+    return EditDataModel:GetCustomEditPetItems()
   end
   return {}
+end
+
+function M:_CommitPetSelection(Content)
+  if not Content or not Content.UniqueId then
+    return false, "pet_missing"
+  end
+  local Avatar = GWorld and GWorld.GetAvatar and GWorld:GetAvatar() or nil
+  local PetData = Avatar and Avatar.Pets and Avatar.Pets[Content.UniqueId] or nil
+  if not PetData then
+    return false, "pet_missing"
+  end
+  return self.EditRootController:ApplyPetSelection(PetData)
 end
 
 function M:_CommitCharacterSelection(Content)
@@ -449,8 +617,8 @@ function M:InitEditListView(Parent, Params)
   self.AllItemContents = Params.ItemContents
   self.EMListView_Filter:ClearListItems()
   ResetBlueprintContentCache(self.CacheFilterContents)
-  ResetBlueprintContentCache(self.CacheChooseContents)
   ResetBlueprintContentCache(self.CacheChooseEmptyContents)
+  PinThenRebuildBlueprintContentCache(self.CacheChooseContents, Params.ItemContents)
   self.SelectedFilterContents = {}
   self.FilteredContents = {}
   if self.AllItemContents then
@@ -528,12 +696,14 @@ function M:FillListView()
   self.LastSelectedListContent = self:GetSelectedContent()
   if self.ChooseMode == "Character" then
     self:_RefreshCharacterChosenState(self.FilteredContents)
+  elseif self.ChooseMode == "Pet" or self.ChooseMode == "Item" then
+    self:_RefreshUniqueSlotChosenState()
   end
   for _, Content in ipairs(self.FilteredContents or {}) do
     local bIsSelected = self:IsSelectedContent(Content)
     Content.IsSelect = bIsSelected
     Content.IsSelected = bIsSelected
-    if self.ChooseMode == "Character" then
+    if self.ChooseMode == "Character" or self.ChooseMode == "Pet" or self.ChooseMode == "Item" then
       Content.bSelectTag = Content.IsChosen == true
     else
       Content.bSelectTag = false
@@ -556,10 +726,19 @@ function M:FillListView()
     self.TileView_Select_Role:BP_NavigateToItem(self:GetSelectedContent())
   end
   self:AddTimer(0.001, function()
-    if 0 == GWorld.GameInstance:GetGameUIManager():GetWidgetRenderSize(self.TileView_Select_Role).X then
+    if not IsValid(self) or not IsValid(self.TileView_Select_Role) then
+      return
+    end
+    local GameInstance = GWorld and GWorld.GameInstance
+    local UIMgr = GameInstance and GameInstance.GetGameUIManager and GameInstance:GetGameUIManager()
+    local RenderSize = UIMgr and UIMgr.GetWidgetRenderSize and UIMgr:GetWidgetRenderSize(self.TileView_Select_Role)
+    if not RenderSize or 0 == RenderSize.X then
       return
     end
     local ItemUIs = self.TileView_Select_Role:GetDisplayedEntryWidgets()
+    if not ItemUIs or not ItemUIs.Length then
+      return
+    end
     local XCount, YCount = UIUtils.GetTileViewContentMaxCount(self.TileView_Select_Role, "XY")
     local ItemLen = ItemUIs:Length()
     local RestCount = XCount * YCount - ItemLen
@@ -585,11 +764,11 @@ end
 
 function M:_RestoreFilterItemFocusAfterFilterRefresh(Content)
   self:AddTimer(0.001, function()
-    if not self.EMListView_Filter or not self.EMListView_Filter.SetFocus then
+    if not (IsValid(self) and IsValid(self.EMListView_Filter)) or not self.EMListView_Filter.SetFocus then
       return
     end
     local FocusContent = Content or self.LastSelectedFilterContent or self.FilterContentObj_All
-    if FocusContent then
+    if IsValid(FocusContent) then
       self.EMListView_Filter:BP_SetSelectedItem(FocusContent)
       self.EMListView_Filter:BP_NavigateToItem(FocusContent)
     end
@@ -658,6 +837,25 @@ function M:_FindDefaultSelectedContent(ItemContents)
         return Content
       end
     end
+  elseif self.ChooseMode == "Pet" then
+    local Slot = self.EditRootController and self.EditRootController.GetSelectedPetSlot and self.EditRootController:GetSelectedPetSlot() or nil
+    local PetData = Slot and Slot.PetData or nil
+    local PetUniqueId = PetData and PetData.UniqueId or nil
+    for _, Content in ipairs(ItemContents) do
+      if Content.UniqueId == PetUniqueId then
+        return Content
+      end
+    end
+    return nil
+  elseif self.ChooseMode == "Item" then
+    local Slot = self.EditRootController and self.EditRootController.GetSelectedItemSlot and self.EditRootController:GetSelectedItemSlot() or nil
+    local ItemId = Slot and Slot.ItemData and Slot.ItemData.ItemId or nil
+    for _, Content in ipairs(ItemContents) do
+      if Content.ItemId == ItemId then
+        return Content
+      end
+    end
+    return nil
   end
   return ItemContents[1]
 end
@@ -671,7 +869,7 @@ function M:_SelectAndFocusWeaponDefaultContent()
 end
 
 function M:_ShouldSyncEquippedContentAsSelected()
-  return self.ChooseMode == "Weapon" or self.ChooseMode == "Action"
+  return self.ChooseMode == "Weapon" or self.ChooseMode == "Action" or self.ChooseMode == "Pet" or self.ChooseMode == "Item"
 end
 
 function M:_SyncEquippedContentAsSelectedForUniqueEquipModes()
@@ -696,7 +894,7 @@ function M:_InitChoosePageTab()
     OwnerPanel = self,
     BackCallback = self.OnReturnKeyDown
   }
-  ComTab:Init(TabConfigData)
+  ComTab:Init(TabConfigData, true)
   self.IsChooseTabInitialized = true
 end
 
@@ -722,13 +920,24 @@ function M:_GetChoosePageTabWidget()
   return self.Com_Tab
 end
 
+function M:_ShouldShowChoosePageGamepadClearKey(Content)
+  if not IsValid(Content) or Content.IsChosen ~= true then
+    return false
+  end
+  if self.ChooseMode == "Character" then
+    return true ~= self.IsCharacterTipsOpened
+  end
+  return self.ChooseMode == "Pet" or self.ChooseMode == "Item"
+end
+
 function M:_BuildBottomKeyPlanIndex()
   local ChooseMode = self.ChooseMode or "None"
   local bIsGamepad = self:_IsChoosePageGamepadInput()
   local bIsTipsOpened = self.IsCharacterTipsOpened == true
   local FocusedContent = self.LastSelectedListContent or self.LastSelectedContent
-  local bShowClear = "Character" == ChooseMode and nil ~= FocusedContent and true == FocusedContent.IsChosen and not bIsTipsOpened
-  return string.format("%s|%s|%s|%s", tostring(ChooseMode), tostring(bIsGamepad), tostring(bIsTipsOpened), tostring(bShowClear))
+  local bShowClear = self:_ShouldShowChoosePageGamepadClearKey(FocusedContent)
+  local bHideGamepadPageKeys = self.ShouldHideChoosePageGamepadKeys and true == self:ShouldHideChoosePageGamepadKeys()
+  return string.format("%s|%s|%s|%s|%s", tostring(ChooseMode), tostring(bIsGamepad), tostring(bIsTipsOpened), tostring(bShowClear), tostring(bHideGamepadPageKeys))
 end
 
 function M:SetFilterContentIsSelected(Content, IsSelected)
@@ -845,6 +1054,12 @@ function M:_BuildTitleText()
   if self.ChooseMode == "Action" then
     return GText("UI_PersonalPage_SetAction")
   end
+  if self.ChooseMode == "Pet" then
+    return GText("UI_PersonalPage_AddGeniemon")
+  end
+  if self.ChooseMode == "Item" then
+    return GText("UI_PersonInfo_CustomItem")
+  end
   return ""
 end
 
@@ -856,6 +1071,9 @@ function M:_BuildEmptyText()
     return GText("UI_Armory_Weapon_Empty")
   end
   if self.ChooseMode == "Action" then
+    return GText("UI_Armory_PetListIsEmpty")
+  end
+  if self.ChooseMode == "Pet" then
     return GText("UI_Armory_PetListIsEmpty")
   end
   return GText("UI_Armory_PetListIsEmpty")
@@ -889,12 +1107,16 @@ function M:_RefreshChooseEntryWidget(EntryWidget, Content, bIsSelected)
   if not EntryWidget or not Content then
     return
   end
-  if self.ChooseMode == "Character" then
+  if self.ChooseMode == "Character" or self.ChooseMode == "Pet" or self.ChooseMode == "Item" then
     local bIsChosen = Content.IsChosen == true
-    Content.bSelectTag = Content.IsChosen == true
+    Content.bSelectTag = bIsChosen
+    Content.bInGear = false
     Content.IsSelect = true == bIsSelected
     Content.IsSelected = true == bIsSelected
     EntryWidget:SetItemSelect(bIsChosen)
+    if EntryWidget.SetInGear then
+      EntryWidget:SetInGear(false)
+    end
     EntryWidget:SetSelected(true == bIsSelected)
     EntryWidget:SetItemMinus(bIsChosen)
     if bIsChosen then
@@ -984,6 +1206,14 @@ function M:_BindChooseEntryMinusButton(EntryWidget, Content)
   end
   MinusBtn:BindEventOnClicked(self, function()
     AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_minus", nil, nil)
+    if self.ChooseMode == "Pet" then
+      self:OnClickPetChosenMinus(Content)
+      return
+    end
+    if self.ChooseMode == "Item" then
+      self:OnClickItemChosenMinus(Content)
+      return
+    end
     self:OnClickCharacterChosenMinus(Content)
   end)
 end
@@ -1003,8 +1233,30 @@ function M:_RefreshCharacterChosenState(ItemContents)
       end
     end
   end
+  self:_ApplyChosenSlotIndexMap(ItemContents, ChosenSlotIndexByUuid, "Uuid")
+end
+
+function M:_RefreshPetChosenState(ItemContents)
+  if self.ChooseMode ~= "Pet" then
+    return
+  end
+  local Draft = self.EditRootController and self.EditRootController.DisplayEditor and self.EditRootController.DisplayEditor:GetDraft() or nil
+  local ChosenSlotIndexByUniqueId = DisplayRules:BuildPetOccupiedSlotIndexMap(Draft)
+  self:_ApplyChosenSlotIndexMap(ItemContents, ChosenSlotIndexByUniqueId, "UniqueId")
+end
+
+function M:_RefreshItemChosenState(ItemContents)
+  if self.ChooseMode ~= "Item" then
+    return
+  end
+  local Draft = self.EditRootController and self.EditRootController.DisplayEditor and self.EditRootController.DisplayEditor:GetDraft() or nil
+  local ChosenSlotIndexByItemId = DisplayRules:BuildItemOccupiedSlotIndexMap(Draft)
+  self:_ApplyChosenSlotIndexMap(ItemContents, ChosenSlotIndexByItemId, "ItemId")
+end
+
+function M:_ApplyChosenSlotIndexMap(ItemContents, ChosenSlotIndexMap, KeyField)
   for _, Content in ipairs(ItemContents or {}) do
-    local ChosenSlotIndex = ChosenSlotIndexByUuid[Content.Uuid]
+    local ChosenSlotIndex = ChosenSlotIndexMap[Content[KeyField]]
     Content.bAllUseAsyncLoadWidget = false
     Content.IsChosen = nil ~= ChosenSlotIndex
     Content.ChosenBoxIdx = ChosenSlotIndex
@@ -1026,9 +1278,11 @@ function M:RefreshEntryVisual(Content, EntryWidget)
   Content.IsSelect = bSelected
   Content.IsSelected = bSelected
   Content.bMinus = bShowMinus
+  Content.bUnrevealed = self.ChooseMode == "Item" and Content.IsOwned ~= true
   EntryWidget:SetSelected(bSelected)
   self:RefreshEntryEquipState(Content, EntryWidget)
   EntryWidget:SetItemMinus(bShowMinus)
+  EntryWidget:SetItemUnrevealed(Content.bUnrevealed)
   if bShowMinus then
     self:_BindChooseEntryMinusButton(EntryWidget, Content)
   end
@@ -1081,6 +1335,10 @@ end
 
 function M:OnMouseButtonDown(MyGeometry, MouseEvent)
   if self:_TryCloseCharacterTips() then
+    return UE4.UWidgetBlueprintLibrary.Handled()
+  end
+  if self.ChooseMode == "Item" and self.bItemDetailsOpened then
+    self:HideItemDetails()
     return UE4.UWidgetBlueprintLibrary.Handled()
   end
   return UE4.UWidgetBlueprintLibrary.UnHandled()
@@ -1140,6 +1398,14 @@ function M:_FindMatchedContent(ItemContents, OldContent)
       if Content.PoseId == OldContent.PoseId then
         return Content
       end
+    elseif self.ChooseMode == "Item" then
+      if Content.ItemId == OldContent.ItemId then
+        return Content
+      end
+    elseif self.ChooseMode == "Pet" then
+      if Content.UniqueId == OldContent.UniqueId then
+        return Content
+      end
     elseif Content.Uuid == OldContent.Uuid then
       return Content
     end
@@ -1156,6 +1422,12 @@ function M:_IsValidChooseContent(Content)
   end
   if self.ChooseMode == "Action" then
     return true == Content.IsDefaultAction or nil ~= Content.PoseId
+  end
+  if self.ChooseMode == "Item" then
+    return nil ~= Content.ItemId and nil ~= Content.ItemData
+  end
+  if self.ChooseMode == "Pet" then
+    return nil ~= Content.UniqueId
   end
   return Content.Uuid ~= nil
 end
@@ -1298,11 +1570,11 @@ function M:OnCharacterTipsConfirmClicked(_TipsWidget, ModIndex, AppearanceIndex)
 end
 
 function M:_RefreshChoosePageActionButtons()
-  local bIsCharacterMode = self.ChooseMode == "Character"
-  local bCanConfirm = bIsCharacterMode and self.EditRootController and self.EditRootController.CanConfirmCharacterChoosePage and self.EditRootController:CanConfirmCharacterChoosePage()
+  local bIsConfirmMode = self.ChooseMode == "Character" or self.ChooseMode == "Pet" or self.ChooseMode == "Item"
+  local bCanConfirm = bIsConfirmMode and self.EditRootController and self.EditRootController.CanConfirmChoosePage and self.EditRootController:CanConfirmChoosePage()
   local bIsSaving = self.EditRootController and self.EditRootController.IsSavingEdit and self.EditRootController:IsSavingEdit() or false
   if self.Btn_Confirm then
-    self.Btn_Confirm:SetVisibility(bIsCharacterMode and UIConst.VisibilityOp.Visible or UIConst.VisibilityOp.Collapsed)
+    self.Btn_Confirm:SetVisibility(bIsConfirmMode and UIConst.VisibilityOp.Visible or UIConst.VisibilityOp.Collapsed)
     if self.Btn_Confirm.Text_Button then
       self.Btn_Confirm.Text_Button:SetText(GText("UI_PersonalPage_ConfirmSelect"))
     end
@@ -1311,7 +1583,7 @@ function M:_RefreshChoosePageActionButtons()
     end
   end
   if self.Btn_Cancel then
-    self.Btn_Cancel:SetVisibility(bIsCharacterMode and UIConst.VisibilityOp.Visible or UIConst.VisibilityOp.Collapsed)
+    self.Btn_Cancel:SetVisibility(bIsConfirmMode and UIConst.VisibilityOp.Visible or UIConst.VisibilityOp.Collapsed)
   end
 end
 
@@ -1346,23 +1618,23 @@ function M:_IsContentEquipped(Content)
   if not Content then
     return false
   end
-  if self.ChooseMode == "Character" then
-    return self:IsCharacterContentEquipped(Content)
-  end
   if self.ChooseMode == "Weapon" then
     return self:IsWeaponContentEquipped(Content)
   end
   if self.ChooseMode == "Action" then
     return self:IsActionContentEquipped(Content)
   end
+  if self.ChooseMode == "Character" or self.ChooseMode == "Pet" or self.ChooseMode == "Item" then
+    return Content.IsChosen == true
+  end
   return false
 end
 
 function M:_CanShowContentMinus(Content)
-  if self.ChooseMode ~= "Character" or not Content then
+  if not Content then
     return false
   end
-  return self:CanShowCharacterMinus(Content)
+  return (self.ChooseMode == "Character" or self.ChooseMode == "Pet" or self.ChooseMode == "Item") and Content.IsChosen == true
 end
 
 function M:_GetChooseEntryWidget(Content)

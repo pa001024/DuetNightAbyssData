@@ -1,6 +1,5 @@
 require("UnLua")
 local Common_GuidePoint_C = Class("BluePrints.UI.BP_EMUserWidget_C")
-local TaskUtils = require("BluePrints.UI.TaskPanel.TaskUtils")
 
 function Common_GuidePoint_C:Construct()
   self.Button_GuidePoint.OnClicked:Add(self, self.OnClicked)
@@ -115,12 +114,13 @@ function Common_GuidePoint_C:OnDisabled()
   self.Img_GuidePoint_Icon:SetBrushResourceObject(nil)
 end
 
-function Common_GuidePoint_C:InitNpcSideQuestBubble(ParentHeadWidget)
+function Common_GuidePoint_C:ResetForPool()
+  self.Img_GuidePoint_Icon:SetBrushResourceObject(nil)
   self:SetVisibility(UE4.ESlateVisibility.Collapsed)
-  self.ParentHeadWidget = ParentHeadWidget
 end
 
-function Common_GuidePoint_C:InitBubble(InWidget)
+function Common_GuidePoint_C:InitNpcSideQuestBubble(ParentHeadWidget)
+  self:SetVisibility(UE4.ESlateVisibility.Collapsed)
 end
 
 function Common_GuidePoint_C:PlayLoopUISound()

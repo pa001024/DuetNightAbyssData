@@ -7,6 +7,14 @@ function Component:ExploreIdActive(RarelyId, SubRegionId)
   if not DataMgr.SubRegion[SubRegionId] then
     return
   end
+  local CurrentSubRegionId = self:GetCurrentRegionId()
+  if not DataMgr.SubRegion[CurrentSubRegionId] then
+    return
+  end
+  if self:GetSubRegionId2RegionId(SubRegionId) ~= self:GetSubRegionId2RegionId(CurrentSubRegionId) then
+    self.logger.info("探索组激活Region与当前Region不一致 跳过激活上报 探索组唯一ID：", RarelyId, " 探索组SubRegionId：", SubRegionId, " 当前SubRegionId：", CurrentSubRegionId)
+    return
+  end
   local Explore = self.Explores[RarelyId]
   if Explore and not Explore:IsInActive() and 0 == Explore.StarBonusList:Length() then
     return false

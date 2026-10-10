@@ -7,15 +7,14 @@ function M:BuildSceneSpec(View, Draft)
   Draft = Draft or DisplayDraft:CreateEmpty()
   DisplayDraft:EnsureCharacterSlots(Draft)
   DisplayDraft:EnsurePetSlots(Draft)
+  DisplayDraft:EnsureItemSlots(Draft)
   local Scene = Draft.Scene or {}
   local SceneId = Scene.SceneId
   local Entities = {}
-  local FirstCharacterEntityId
   local CharacterEntityIdMap = {}
   for _, Slot in ipairs(Draft.CharacterSlots) do
     if DisplayDraft:IsCharacterSlotOccupied(Slot) then
       local EntityId = self:_BuildCharacterEntityId(Slot.SlotIndex)
-      FirstCharacterEntityId = FirstCharacterEntityId or EntityId
       CharacterEntityIdMap[EntityId] = true
       table.insert(Entities, {
         Id = EntityId,
@@ -35,8 +34,8 @@ function M:BuildSceneSpec(View, Draft)
   for _, Slot in ipairs(Draft.PetSlots) do
     if DisplayDraft:IsPetSlotOccupied(Slot) then
       local OwnerEntityId = Slot.OwnerEntityId
-      if not OwnerEntityId or not CharacterEntityIdMap[OwnerEntityId] then
-        OwnerEntityId = FirstCharacterEntityId
+      if OwnerEntityId and not CharacterEntityIdMap[OwnerEntityId] then
+        OwnerEntityId = nil
       end
       table.insert(Entities, {
         Id = self:_BuildPetEntityId(Slot.SlotIndex),
@@ -46,6 +45,21 @@ function M:BuildSceneSpec(View, Draft)
         },
         OwnerEntityId = OwnerEntityId,
         Transform = Slot.Transform or DisplayConfig:GetDefaultPetTransform(Slot.SlotIndex),
+        Visible = true
+      })
+    end
+  end
+  for _, Slot in ipairs(Draft.ItemSlots) do
+    if DisplayDraft:IsItemSlotOccupied(Slot) then
+      local Transform = Slot.Transform or DisplayConfig:GetDefaultItemTransform(Slot.SlotIndex, Slot.ItemData)
+      Transform = DisplayConfig:ReplaceItemScale(Transform, Slot.ItemData) or Transform
+      table.insert(Entities, {
+        Id = self:_BuildItemEntityId(Slot.SlotIndex),
+        Type = DisplayTypes.EntityType.Item,
+        Source = {
+          ItemData = Slot.ItemData
+        },
+        Transform = Transform,
         Visible = true
       })
     end
@@ -67,6 +81,10 @@ end
 
 function M:_BuildPetEntityId(SlotIndex)
   return "pet_slot_" .. tostring(SlotIndex)
+end
+
+function M:_BuildItemEntityId(SlotIndex)
+  return "item_slot_" .. tostring(SlotIndex)
 end
 
 return M

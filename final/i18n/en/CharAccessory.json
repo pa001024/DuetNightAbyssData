@@ -744,6 +744,14 @@
     "unlock": "Available from events"
   },
   {
+    "id": 10101,
+    "name": "Hushed Shade: Violet",
+    "desc": "Are we making offerings to Heaven... or to ourselves?",
+    "icon": "T_Fashion_Head57_04",
+    "rarity": 5,
+    "unlock": ""
+  },
+  {
     "id": 10102,
     "name": "Puppy Headpiece: Opaque White",
     "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of these puppy ears. Hang on... why does that sound weirdly familiar? Must be my imagination.",
@@ -1260,6 +1268,14 @@
     "name": "Inferno Frenzy",
     "desc": "Burn until nothing remains but ash.",
     "icon": "T_Fashion_Fx40",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 11010,
+    "name": "Ivoryburst: Azure",
+    "desc": "From the remains, life bursts into bloom.",
+    "icon": "T_Fashion_Fx50",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
@@ -2728,6 +2744,62 @@
     "unlock": "Available at Shop"
   },
   {
+    "id": 20106,
+    "name": "Ivorybloom: Opaque White",
+    "desc": "Life finds its way.",
+    "icon": "T_Fashion_Face31_03",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 20107,
+    "name": "Ivorybloom: Violet",
+    "desc": "Life finds its way.",
+    "icon": "T_Fashion_Face31_01",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 20108,
+    "name": "Ivorybloom: Gilt",
+    "desc": "Life finds its way.",
+    "icon": "T_Fashion_Face31_02",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 20109,
+    "name": "Ivorybloom: Rust Red",
+    "desc": "Life finds its way.",
+    "icon": "T_Fashion_Face31_04",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 20110,
+    "name": "Pestilence Physician: Leaden Grey",
+    "desc": "Through an age of death, they wander.",
+    "icon": "T_Fashion_Face32_03",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 20111,
+    "name": "Pestilence Physician: Dark Jade",
+    "desc": "Through an age of death, they wander.",
+    "icon": "T_Fashion_Face32_01",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 20112,
+    "name": "Pestilence Physician: Opaque White",
+    "desc": "Through an age of death, they wander.",
+    "icon": "T_Fashion_Face32_02",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
     "id": 21001,
     "name": "UI_Accessory_Name_21001",
     "desc": "UI_Accessory_Desc_21001",
@@ -2820,6 +2892,46 @@
     "name": "Wraithveil Surge",
     "desc": "Heat shimmers through the air like ripples of flame.",
     "icon": "T_Fashion_Fx39",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 21016,
+    "name": "Spooky Kitty: Opaque White",
+    "desc": "A spooky little white kitty, wandering through Atlasia.",
+    "icon": "T_Fashion_Fx52",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 21017,
+    "name": "Spooky Tricks: Gilt",
+    "desc": "Kitties, pumpkins, and bats... Spooks everywhere!!!",
+    "icon": "T_Fashion_Fx53",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 21018,
+    "name": "Spooky Pumpkin: Gilt",
+    "desc": "A spooky golden pumpkin, wandering through Atlasia.",
+    "icon": "T_Fashion_Fx54",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 21019,
+    "name": "Eldritch Talisman: Violet",
+    "desc": "With but a thought, the talisman stirs, and eldritch power answers.",
+    "icon": "T_Fashion_Fx51",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 21020,
+    "name": "Trailing Silks: Azure",
+    "desc": "Silken threads dance in the air, tracing the silhouette of a hunter.",
+    "icon": "T_Fashion_Fx49",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
@@ -3353,7 +3465,7 @@
   },
   {
     "id": 31007,
-    "name": "Victory: Hellborne Roar",
+    "name": "Victory: Snowfall Serenade",
     "desc": "Changes your Victory Posture.",
     "icon": "T_Fashion_SettlementAction_07",
     "rarity": 5,
@@ -3614,6 +3726,14 @@
     "icon": "T_Fashion_Back39_02",
     "rarity": 5,
     "unlock": "Available from events"
+  },
+  {
+    "id": 40037,
+    "name": "Array of Designs: Violet",
+    "desc": "By sacred words, evil is banished, the soul is nourished, and the spirits are sustained.",
+    "icon": "T_Fashion_Back39_04",
+    "rarity": 5,
+    "unlock": ""
   },
   {
     "id": 40038,
@@ -3984,6 +4104,62 @@
     "unlock": "Available from events"
   },
   {
+    "id": 40090,
+    "name": "Starfall Silks: Violet",
+    "desc": "Silken threads ensnare the falling stars.",
+    "icon": "T_Fashion_Waist37_04",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 40091,
+    "name": "Starfall Silks: Opaque White",
+    "desc": "Silken threads ensnare the falling stars.",
+    "icon": "T_Fashion_Waist37_01",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 40092,
+    "name": "Starfall Silks: Gilt",
+    "desc": "Silken threads ensnare the falling stars.",
+    "icon": "T_Fashion_Waist37_02",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 40093,
+    "name": "Starfall Silks: Rust Red",
+    "desc": "Silken threads ensnare the falling stars.",
+    "icon": "T_Fashion_Waist37_03",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 40094,
+    "name": "Mischief Grin: Gilt",
+    "desc": "Don't look back... Something's right behind you!",
+    "icon": "T_Fashion_Waist38_02",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 40095,
+    "name": "Mischief Grin: Rust Red",
+    "desc": "Don't look back... Something's right behind you!",
+    "icon": "T_Fashion_Waist38_03",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 40096,
+    "name": "Mischief Grin: Opaque White",
+    "desc": "Don't look back... Something's right behind you!",
+    "icon": "T_Fashion_Waist38_01",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
     "id": 50001,
     "name": "",
     "desc": "",
@@ -4296,6 +4472,38 @@
     "unlock": "Available through Prism Exchange"
   },
   {
+    "id": 70084,
+    "name": "Florafall Silks: Violet",
+    "desc": "Flowers from silken threads guide lost souls through the night.",
+    "icon": "T_Fashion_Fx48_04",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 70085,
+    "name": "Florafall Silks: Opaque White",
+    "desc": "Flowers from silken threads guide lost souls through the night.",
+    "icon": "T_Fashion_Fx48_03",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 70086,
+    "name": "Florafall Silks: Gilt",
+    "desc": "Flowers from silken threads guide lost souls through the night.",
+    "icon": "T_Fashion_Fx48_02",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 70087,
+    "name": "Florafall Silks: Rust Red",
+    "desc": "Flowers from silken threads guide lost souls through the night.",
+    "icon": "T_Fashion_Fx48_01",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
     "id": 80001,
     "name": "Midsummer Rendezvous",
     "desc": "Bearing pansies, butterflies await the star's arrival to begin the ball's grand overture.",
@@ -4542,5 +4750,37 @@
     "icon": "T_Fashion_Fx45_02",
     "rarity": 5,
     "unlock": "Available from events"
+  },
+  {
+    "id": 80070,
+    "name": "Ivorywing: Opaque White",
+    "desc": "Though only bones remain, never forget how to fly.",
+    "icon": "T_Fashion_Fx47_03",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 80071,
+    "name": "Ivorywing: Violet",
+    "desc": "Though only bones remain, never forget how to fly.",
+    "icon": "T_Fashion_Fx47_04",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 80072,
+    "name": "Ivorywing: Gilt",
+    "desc": "Though only bones remain, never forget how to fly.",
+    "icon": "T_Fashion_Fx47_02",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 80073,
+    "name": "Ivorywing: Rust Red",
+    "desc": "Though only bones remain, never forget how to fly.",
+    "icon": "T_Fashion_Fx47_01",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
   }
 ]

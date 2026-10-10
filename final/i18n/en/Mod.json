@@ -2468,8 +2468,9 @@
     "生命": 0.75,
     "防御": 0.75,
     "追加伤害": 0.18,
+    "技能伤害": -0.5,
     "效果": [
-      "Skill DMG -50.0%. When attacking with a weapon, deals #1 additional damage of the same element type.",
+      "When attacking with a weapon, deals #1 additional damage of the same element type.",
       [
         "6.0%",
         "9.0%",
@@ -2576,8 +2577,9 @@
     "生命": 0.75,
     "防御": 0.75,
     "追加伤害": 0.18,
+    "技能伤害": -0.5,
     "效果": [
-      "Skill DMG -50.0%. When attacking with a weapon, deals #1 additional damage of the same element type.",
+      "When attacking with a weapon, deals #1 additional damage of the same element type.",
       [
         "6.0%",
         "9.0%",
@@ -2684,8 +2686,9 @@
     "生命": 0.75,
     "防御": 0.75,
     "追加伤害": 0.18,
+    "技能伤害": -0.5,
     "效果": [
-      "Skill DMG -50.0%. When attacking with a weapon, deals #1 additional damage of the same element type.",
+      "When attacking with a weapon, deals #1 additional damage of the same element type.",
       [
         "6.0%",
         "9.0%",
@@ -2792,8 +2795,9 @@
     "生命": 0.75,
     "防御": 0.75,
     "追加伤害": 0.18,
+    "技能伤害": -0.5,
     "效果": [
-      "Skill DMG -50.0%. When attacking with a weapon, deals #1 additional damage of the same element type.",
+      "When attacking with a weapon, deals #1 additional damage of the same element type.",
       [
         "6.0%",
         "9.0%",
@@ -2900,8 +2904,9 @@
     "生命": 0.75,
     "防御": 0.75,
     "追加伤害": 0.18,
+    "技能伤害": -0.5,
     "效果": [
-      "Skill DMG -50.0%. When attacking with a weapon, deals #1 additional damage of the same element type.",
+      "When attacking with a weapon, deals #1 additional damage of the same element type.",
       [
         "6.0%",
         "9.0%",
@@ -3008,8 +3013,9 @@
     "生命": 0.75,
     "防御": 0.75,
     "追加伤害": 0.18,
+    "技能伤害": -0.5,
     "效果": [
-      "Skill DMG -50.0%. When attacking with a weapon, deals #1 additional damage of the same element type.",
+      "When attacking with a weapon, deals #1 additional damage of the same element type.",
       [
         "6.0%",
         "9.0%",
@@ -3180,6 +3186,23 @@
     "耐受": 21,
     "类型": "Characters",
     "昂扬": 0.15,
+    "技能威力": 0.3,
+    "效果": [
+      "Once upgraded to +5.0, this Demon Wedge can be equipped in multiples."
+    ]
+  },
+  {
+    "id": 41718,
+    "icon": "Mephisto01_Black",
+    "名称": "Blaze – Volition",
+    "版本": "1.7",
+    "系列": "Covenanter's ",
+    "品质": "紫",
+    "极性": "V",
+    "属性": "Umbro",
+    "耐受": 25,
+    "类型": "Characters",
+    "攻击": 0.72,
     "技能威力": 0.3,
     "效果": [
       "Once upgraded to +5.0, this Demon Wedge can be equipped in multiples."
@@ -3577,6 +3600,23 @@
     "类型": "Characters",
     "昂扬": 0.15,
     "技能伤害": 0.15,
+    "效果": [
+      "Once upgraded to +5.0, this Demon Wedge can be equipped in multiples."
+    ]
+  },
+  {
+    "id": 41748,
+    "icon": "Mephisto01_Purple",
+    "名称": "Blaze – Refinement",
+    "版本": "1.7",
+    "系列": "Covenanter's ",
+    "品质": "紫",
+    "极性": "D",
+    "属性": "Electro",
+    "耐受": 25,
+    "类型": "Characters",
+    "攻击": 0.72,
+    "技能伤害": 0.18,
     "效果": [
       "Once upgraded to +5.0, this Demon Wedge can be equipped in multiples."
     ]
@@ -4330,6 +4370,29 @@
     ]
   },
   {
+    "id": 41942,
+    "icon": "Summanus01",
+    "名称": "Still Thunder",
+    "版本": "1.7",
+    "系列": "Summanus's ",
+    "品质": "紫",
+    "极性": "O",
+    "属性": "Electro",
+    "耐受": 24,
+    "类型": "Characters",
+    "技能威力": 0.3,
+    "效果": [
+      "After remaining stationary for 1s, Electro characters gain 1 stack of #1 Skill Intensity every 0.5s. Lasts indefinitely and stacks up to 10.0 times. All stacks are removed upon moving.",
+      [
+        "3.2%",
+        "4.8%",
+        "6.4%",
+        "8.0%",
+        "9.6%"
+      ]
+    ]
+  },
+  {
     "id": 41951,
     "icon": "Hastur01",
     "名称": "Whispering Zephyr",
@@ -4750,6 +4813,28 @@
     ]
   },
   {
+    "id": 42505,
+    "icon": "Fenrir01",
+    "名称": "Huaxu Hunt",
+    "版本": "1.7",
+    "系列": "Fenrir's ",
+    "品质": "紫",
+    "极性": "O",
+    "耐受": 17,
+    "类型": "Melee Weapons",
+    "HxRate": 0.42,
+    "效果": [
+      "Damage Dealt to members of Huaxu +#1.",
+      [
+        "14.0%",
+        "21.0%",
+        "28.0%",
+        "35.0%",
+        "42.0%"
+      ]
+    ]
+  },
+  {
     "id": 42511,
     "icon": "Fenrir01",
     "名称": "Pierce",
@@ -4816,16 +4901,25 @@
     ]
   },
   {
-    "id": 42704,
+    "id": 42705,
     "icon": "Fenrir01",
-    "名称": "Dissolution",
+    "名称": "Mighty Hunt",
     "版本": "1.7",
     "系列": "Fenrir's ",
     "品质": "紫",
-    "极性": "D",
-    "耐受": 15,
+    "极性": "O",
+    "耐受": 17,
     "类型": "Melee Weapons",
-    "CutTNRate": 1
+    "效果": [
+      "Damage Dealt to enemies of a higher level +#1.",
+      [
+        "6.0%",
+        "9.0%",
+        "12.0%",
+        "15.0%",
+        "18.0%"
+      ]
+    ]
   },
   {
     "id": 42801,
@@ -4839,6 +4933,18 @@
     "类型": "Melee Weapons",
     "触发": 0.9,
     "充盈转化": 1.08
+  },
+  {
+    "id": 42802,
+    "icon": "Fenrir01",
+    "名称": "Dissolution",
+    "版本": "1.7",
+    "系列": "Fenrir's ",
+    "品质": "紫",
+    "极性": "D",
+    "耐受": 18,
+    "类型": "Melee Weapons",
+    "战姿削减": 0.36
   },
   {
     "id": 43001,
@@ -5206,6 +5312,28 @@
         "27.0%",
         "34.0%",
         "40.0%"
+      ]
+    ]
+  },
+  {
+    "id": 43505,
+    "icon": "Fafnir01",
+    "名称": "Huaxu Hunt",
+    "版本": "1.7",
+    "系列": "Fafnir's ",
+    "品质": "紫",
+    "极性": "O",
+    "耐受": 17,
+    "类型": "Ranged Weapons",
+    "HxRate": 0.42,
+    "效果": [
+      "Damage Dealt to members of Huaxu +#1.",
+      [
+        "14.0%",
+        "21.0%",
+        "28.0%",
+        "35.0%",
+        "42.0%"
       ]
     ]
   },
@@ -6174,8 +6302,9 @@
     "生命": 1.54,
     "防御": 1.54,
     "追加伤害": 0.33,
+    "技能伤害": -0.5,
     "效果": [
-      "Skill DMG -50.0%. When attacking with a weapon, deals #1 additional damage of the same element type.",
+      "When attacking with a weapon, deals #1 additional damage of the same element type.",
       [
         "6.0%",
         "9.0%",
@@ -6312,8 +6441,9 @@
     "生命": 1.54,
     "防御": 1.54,
     "追加伤害": 0.33,
+    "技能伤害": -0.5,
     "效果": [
-      "Skill DMG -50.0%. When attacking with a weapon, deals #1 additional damage of the same element type.",
+      "When attacking with a weapon, deals #1 additional damage of the same element type.",
       [
         "6.0%",
         "9.0%",
@@ -6450,8 +6580,9 @@
     "生命": 1.54,
     "防御": 1.54,
     "追加伤害": 0.33,
+    "技能伤害": -0.5,
     "效果": [
-      "Skill DMG -50.0%. When attacking with a weapon, deals #1 additional damage of the same element type.",
+      "When attacking with a weapon, deals #1 additional damage of the same element type.",
       [
         "6.0%",
         "9.0%",
@@ -6588,8 +6719,9 @@
     "生命": 1.54,
     "防御": 1.54,
     "追加伤害": 0.33,
+    "技能伤害": -0.5,
     "效果": [
-      "Skill DMG -50.0%. When attacking with a weapon, deals #1 additional damage of the same element type.",
+      "When attacking with a weapon, deals #1 additional damage of the same element type.",
       [
         "6.0%",
         "9.0%",
@@ -6726,8 +6858,9 @@
     "生命": 1.54,
     "防御": 1.54,
     "追加伤害": 0.33,
+    "技能伤害": -0.5,
     "效果": [
-      "Skill DMG -50.0%. When attacking with a weapon, deals #1 additional damage of the same element type.",
+      "When attacking with a weapon, deals #1 additional damage of the same element type.",
       [
         "6.0%",
         "9.0%",
@@ -6864,8 +6997,9 @@
     "生命": 1.54,
     "防御": 1.54,
     "追加伤害": 0.33,
+    "技能伤害": -0.5,
     "效果": [
-      "Skill DMG -50.0%. When attacking with a weapon, deals #1 additional damage of the same element type.",
+      "When attacking with a weapon, deals #1 additional damage of the same element type.",
       [
         "6.0%",
         "9.0%",
@@ -7078,6 +7212,26 @@
       51717
     ],
     "昂扬": 0.275,
+    "技能威力": 0.55,
+    "效果": [
+      "Once upgraded to +5.0, this Demon Wedge can be equipped in multiples."
+    ]
+  },
+  {
+    "id": 51718,
+    "icon": "Mephisto01_Black",
+    "名称": "Blaze – Volition",
+    "版本": "1.7",
+    "系列": "Covenanter's ",
+    "品质": "金",
+    "极性": "V",
+    "属性": "Umbro",
+    "耐受": 27,
+    "类型": "Characters",
+    "消耗": [
+      51718
+    ],
+    "攻击": 1.32,
     "技能威力": 0.55,
     "效果": [
       "Once upgraded to +5.0, this Demon Wedge can be equipped in multiples."
@@ -7554,6 +7708,26 @@
     ],
     "昂扬": 0.275,
     "技能伤害": 0.275,
+    "效果": [
+      "Once upgraded to +5.0, this Demon Wedge can be equipped in multiples."
+    ]
+  },
+  {
+    "id": 51748,
+    "icon": "Mephisto01_Purple",
+    "名称": "Blaze – Refinement",
+    "版本": "1.7",
+    "系列": "Covenanter's ",
+    "品质": "金",
+    "极性": "D",
+    "属性": "Electro",
+    "耐受": 30,
+    "类型": "Characters",
+    "消耗": [
+      51748
+    ],
+    "攻击": 1.32,
+    "技能伤害": 0.33,
     "效果": [
       "Once upgraded to +5.0, this Demon Wedge can be equipped in multiples."
     ]
@@ -8564,6 +8738,37 @@
     ]
   },
   {
+    "id": 51942,
+    "icon": "Summanus01",
+    "名称": "Still Thunder",
+    "版本": "1.7",
+    "系列": "Summanus's ",
+    "品质": "金",
+    "极性": "O",
+    "属性": "Electro",
+    "耐受": 27,
+    "类型": "Characters",
+    "消耗": [
+      51942
+    ],
+    "技能威力": 0.55,
+    "效果": [
+      "After remaining stationary for 1s, Electro characters gain 1 stack of #1 Skill Intensity every 0.5s. Lasts indefinitely and stacks up to 10.0 times. All stacks are removed upon moving.",
+      [
+        "3.2%",
+        "4.8%",
+        "6.4%",
+        "8.0%",
+        "9.6%",
+        "11.2%",
+        "12.8%",
+        "14.4%",
+        "16.0%",
+        "17.6%"
+      ]
+    ]
+  },
+  {
     "id": 51951,
     "icon": "Hastur01",
     "名称": "Whispering Zephyr",
@@ -8837,6 +9042,22 @@
     "下落增伤": 0.33
   },
   {
+    "id": 52013,
+    "icon": "Cerberus01",
+    "名称": "Focus – Impact",
+    "版本": "1.7",
+    "系列": "Cerberus's ",
+    "品质": "金",
+    "极性": "A",
+    "耐受": 32,
+    "类型": "Melee Weapons",
+    "消耗": [
+      52013
+    ],
+    "暴击": 0.99,
+    "普攻增伤": 0.44
+  },
+  {
     "id": 52101,
     "icon": "Cerberus01",
     "名称": "Edge",
@@ -8997,6 +9218,21 @@
     ],
     "触发": 1.65,
     "充盈转化": 2
+  },
+  {
+    "id": 52802,
+    "icon": "Fenrir01",
+    "名称": "Dissolution",
+    "版本": "1.7",
+    "系列": "Fenrir's ",
+    "品质": "金",
+    "极性": "D",
+    "耐受": 20,
+    "类型": "Melee Weapons",
+    "消耗": [
+      52802
+    ],
+    "战姿削减": 0.66
   },
   {
     "id": 53001,
@@ -11006,6 +11242,28 @@
     }
   },
   {
+    "id": 103004,
+    "icon": "Fenrir01",
+    "名称": "蓄势重压",
+    "版本": "1.7",
+    "系列": "Fenrir's ",
+    "品质": "紫",
+    "极性": "V",
+    "耐受": 25,
+    "类型": "Melee Weapons",
+    "战姿削减": 0.2,
+    "效果": [
+      "改变重剑的蓄力攻击招式和威力。蓄力攻击可造成大幅度战姿削减。"
+    ],
+    "技能替换": {
+      "1030102": {
+        "id": 1030302,
+        "名称": "Charged Attack",
+        "类型": "武器伤害"
+      }
+    }
+  },
+  {
     "id": 104001,
     "icon": "Fenrir01",
     "名称": "In Full Bloom",
@@ -11817,7 +12075,7 @@
     "icon": "Songlu",
     "名称": "Bumpity-Bump!",
     "版本": "1.6",
-    "系列": "Filbert",
+    "系列": "Filbert ",
     "品质": "金",
     "极性": "O",
     "耐受": 27,

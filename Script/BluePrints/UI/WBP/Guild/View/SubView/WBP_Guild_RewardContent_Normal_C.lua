@@ -1,12 +1,8 @@
 require("UnLua")
 local GuildCommon = require("BluePrints.UI.WBP.Guild.Common.GuildCommon")
-local GuildBossRewardUtils = require("BluePrints.UI.WBP.Guild.Common.GuildBossRewardUtils")
-local GuildBossPointRewardUtils = require("BluePrints.UI.WBP.Guild.Common.GuildBossPointRewardUtils")
-local GuildModel = require("BluePrints.UI.WBP.Guild.Model.GuildModel")
 local EastSeasonQuestUtils = require("BluePrints.UI.WBP.Activity.Widget.EastSeason.EastSeasonQuestUtils")
 local TimeUtils = require("Utils.TimeUtils")
 local PageJumpUtils = require("Utils.PageJumpUtils")
-local SimpleRewardBox = require("BluePrints.Client.CustomTypes.SimpleRewardBox")
 local M = Class({
   "Blueprints.UI.BP_UIState_C"
 })
@@ -43,10 +39,6 @@ local function ClearPendingTabFocusTimers(Widget)
   Widget:RemoveTimer(FocusGuildRewardSelectedTabEntryTimerKey)
   Widget:RemoveTimer(RefreshFocusGuildRewardDefaultTabTimerKey)
   Widget:RemoveTimer(GuildRewardPreviewCloseRestoreFocusTimerKey)
-end
-
-local function IsGuildBossMode(Widget)
-  return Widget and Widget.ConfigData and Widget.ConfigData.Mode == "GuildBoss"
 end
 
 function M:Construct()
@@ -209,19 +201,15 @@ function M:OnLoaded(...)
   end
   EventManager:AddEvent(EventID.OnDailyRefresh, self, self.OnRefreshInNextDay)
   EventManager:AddEvent(EventID.RefreshAcvitityRewardPanel, self, self.RefreshAcvitityRewardPanel)
-  if IsGuildBossMode(self) then
-    self:InitGuildBossMode()
-  else
-    GuildController:RegisterEvent(self, function(self, EventId, ...)
-      if EventId == GuildCommon.EventID.OnGuildActivityPointReward then
-        self:OnRecvActivityPointReward(...)
-      end
-    end)
-    self:InitActivityProgress()
-    ReddotManager.AddListener("GuildWeekActivity", self, self.OnGuildWeekActivityReddotChange)
-    ReddotManager.AddListener("GuildDailyTask", self, self.OnGuildTaskReddotChange)
-    ReddotManager.AddListener("GuildWeekTask", self, self.OnGuildTaskReddotChange)
-  end
+  GuildController:RegisterEvent(self, function(self, EventId, ...)
+    if EventId == GuildCommon.EventID.OnGuildActivityPointReward then
+      self:OnRecvActivityPointReward(...)
+    end
+  end)
+  self:InitActivityProgress()
+  ReddotManager.AddListener("GuildWeekActivity", self, self.OnGuildWeekActivityReddotChange)
+  ReddotManager.AddListener("GuildDailyTask", self, self.OnGuildTaskReddotChange)
+  ReddotManager.AddListener("GuildWeekTask", self, self.OnGuildTaskReddotChange)
   AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "GuildRewardNormalIn", nil)
 end
 
@@ -229,57 +217,7 @@ function M:RefreshAcvitityRewardPanel()
   if self.ConfigData.RefreshPanleCallBack then
     self.ConfigData.RefreshPanleCallBack(self)
   end
-  if not IsGuildBossMode(self) then
-    self:RefreshActivityProgress()
-  end
-end
-
-function M:InitGuildBossMode()
-  self:InitGuildBossPointRewardArea()
-  ReddotManager.AddListener("GuildBossPersonPointReward", self, self.OnGuildBossRewardReddotChange)
-  ReddotManager.AddListener("GuildBossProgressReward", self, self.OnGuildBossRewardReddotChange)
-  self:RefreshTabReddot()
-end
-
-function M:InitGuildBossPointRewardArea()
-  GuildBossRewardUtils.RefreshPointRewardBottom(self)
-end
-
-function M:OnGuildBossPointRewardItemClicked(Item)
-  if not Item then
-    return
-  end
-  if Item.bCanGet then
-    GuildBossRewardUtils.ClaimPointRewardSlot(self, Item.Idx)
-    return
-  end
-  self:ShowGuildBossPointRewardPreview()
-end
-
-function M:ShowGuildBossPointRewardPreview()
-  local Snapshot = GuildBossRewardUtils.GetPointRewardSnapshot()
-  if not (Snapshot and Snapshot.RewardIds) or not Snapshot.EachGradePoints then
-    return
-  end
-  local Groups = {}
-  for Index = 1, math.min(GuildBossRewardUtils.POINT_REWARD_SLOT_COUNT, #Snapshot.RewardIds) do
-    local GradePoints = Snapshot.EachGradePoints * Index
-    table.insert(Groups, {
-      Title = string.format("%s%d", GText("RougeMiniGamePointsReach"), GradePoints),
-      RewardId = Snapshot.RewardIds[Index]
-    })
-  end
-  if 0 == #Groups then
-    return
-  end
-  ClearPendingTabFocusTimers(self)
-  local Params = {
-    Groups = Groups,
-    OnCloseCallbackObj = self,
-    OnCloseCallbackFunction = self.OnActivityRewardPreviewClosed
-  }
-  local UIManager = GWorld.GameInstance:GetGameUIManager()
-  UIManager:ShowCommonPopupUI(100364, Params, self)
+  self:RefreshActivityProgress()
 end
 
 function M:UpdateBottomKey(ShowGetAllButton)
@@ -490,18 +428,12 @@ function M:InitItem(ConfigData)
     self.RewardContent_OneClick.Btn_OneClick:ForbidBtn(true)
     self:UpdateBottomKey(false)
   end
-  if IsGuildBossMode(self) then
-    if self.List_Item.SetEmptyGridItemCount then
-      self.List_Item:SetEmptyGridItemCount(0)
-    end
-  else
-    self.List_Item.OnCreateEmptyContent:Bind(self, function(self)
-      local ItemContent = NewObject(UIUtils.GetCommonItemContentClass())
-      ItemContent.IsEmpty = true
-      return ItemContent
-    end)
-    self.List_Item:RequestFillEmptyContent()
-  end
+  self.List_Item.OnCreateEmptyContent:Bind(self, function(self)
+    local ItemContent = NewObject(UIUtils.GetCommonItemContentClass())
+    ItemContent.IsEmpty = true
+    return ItemContent
+  end)
+  self.List_Item:RequestFillEmptyContent()
 end
 
 function M:SortItems()
@@ -635,13 +567,8 @@ function M:RealRefreshListRewardInfo(TabType, NotPlaySound)
   if not NotPlaySound then
     AudioManager(self):PlayUISound(self, "event:/ui/common/special_content_01_click", nil, nil)
   end
-  if IsGuildBossMode(self) then
-    GuildBossRewardUtils.RefreshGuildBossRewardConfigData(self)
-    ConfigData = self.Datas[TabType]
-  else
-    M.RefreshGuildQuestConfigData(self)
-    ConfigData = self.Datas[TabType]
-  end
+  M.RefreshGuildQuestConfigData(self)
+  ConfigData = self.Datas[TabType]
   if not ConfigData then
     return
   end
@@ -698,15 +625,10 @@ function M:Destruct()
   self.Super.Destruct(self)
   EventManager:RemoveEvent(EventID.OnDailyRefresh, self)
   EventManager:RemoveEvent(EventID.RefreshAcvitityRewardPanel, self)
-  if IsGuildBossMode(self) then
-    ReddotManager.RemoveListener("GuildBossPersonPointReward", self)
-    ReddotManager.RemoveListener("GuildBossProgressReward", self)
-  else
-    GuildController:UnRegisterEvent(self)
-    ReddotManager.RemoveListener("GuildWeekActivity", self)
-    ReddotManager.RemoveListener("GuildDailyTask", self)
-    ReddotManager.RemoveListener("GuildWeekTask", self)
-  end
+  GuildController:UnRegisterEvent(self)
+  ReddotManager.RemoveListener("GuildWeekActivity", self)
+  ReddotManager.RemoveListener("GuildDailyTask", self)
+  ReddotManager.RemoveListener("GuildWeekTask", self)
   self:RemoveInputMethodChangedListen()
   if self.List_Tab then
     self.List_Tab:ClearListItems()
@@ -1015,52 +937,6 @@ function M:OnTabSelected(TabWidget)
   if self.ConfigData and self.ConfigData.TabInfo[TabWidget.Idx] then
     self:RealRefreshListRewardInfo(self.ConfigData.TabInfo[TabWidget.Idx].Type)
   end
-end
-
-function M:GetScoreTierCurrentScore()
-  local Snapshot = GuildBossRewardUtils.GetPointRewardSnapshot()
-  return Snapshot and Snapshot.CurrentScore or 0
-end
-
-function M:IsScoreTierRewardGot(Index)
-  local AvatarBossData = GuildModel:GetAvatarGuildBossData()
-  return GuildBossPointRewardUtils.IsPointRewardGot(AvatarBossData, Index)
-end
-
-function M:RequestClaimScoreTierReward(Index, Callback)
-  local Avatar = GWorld:GetAvatar()
-  if not Avatar then
-    return
-  end
-  if nil == Index then
-    if not Avatar.GuildBossClaimAllPointReward then
-      return
-    end
-    Avatar:GuildBossClaimAllPointReward(function(RetCode, Info)
-      if Callback then
-        Callback(RetCode, Info and Info.Rewards)
-      end
-      if ErrorCode:Check(RetCode) then
-        GuildBossRewardUtils.RefreshGuildBossRewardConfigData(self)
-      end
-    end)
-    return
-  end
-  if not Avatar.GuildBossClaimPointReward then
-    return
-  end
-  Avatar:GuildBossClaimPointReward(function(RetCode, Rewards)
-    if Callback then
-      Callback(RetCode, Rewards)
-    end
-    if ErrorCode:Check(RetCode) then
-      GuildBossRewardUtils.RefreshGuildBossRewardConfigData(self)
-    end
-  end, Index)
-end
-
-function M:ScoreTierReward_OnClaimSuccess()
-  GuildBossRewardUtils.RefreshGuildBossRewardConfigData(self)
 end
 
 function M:Refresh(ConfigData)
@@ -1630,19 +1506,11 @@ function M:RefreshTabReddot()
   for Idx, TabItem in ipairs(self.TabInfo) do
     local ListItem = self.List_Tab and self.List_Tab:GetItemAt(Idx - 1)
     if ListItem and ListItem.Entry and ListItem.Entry.Reddot then
-      local ReddotNodeName
-      if IsGuildBossMode(self) then
-        ReddotNodeName = TabItem.ReddotName
-      else
-        ReddotNodeName = TabItem.Type == "Daily" and DataMgr.ReddotNode.GuildDailyTask.Name or TabItem.Type == "Weekly" and DataMgr.ReddotNode.GuildWeekTask.Name
-      end
+      local ReddotNodeName = TabItem.Type == "Daily" and DataMgr.ReddotNode.GuildDailyTask.Name or TabItem.Type == "Weekly" and DataMgr.ReddotNode.GuildWeekTask.Name
       local Count = 0
       if ReddotNodeName then
         local Node = ReddotManager.GetTreeNode(ReddotNodeName)
         Count = Node and Node.Count or 0
-      end
-      if IsGuildBossMode(self) and TabItem.Type == GuildBossRewardUtils.GUILD_TAB_TYPE then
-        Count = 0
       end
       ListItem.Entry.Reddot:SetVisibility(Count > 0 and ESlateVisibility.SelfHitTestInvisible or ESlateVisibility.Collapsed)
     end
@@ -1666,18 +1534,6 @@ function M:OnGuildTaskReddotChange(Count, ReddotType, NodeName)
       end
       break
     end
-  end
-end
-
-function M:OnGuildBossRewardReddotChange()
-  if not IsGuildBossMode(self) then
-    return
-  end
-  GuildBossRewardUtils.RefreshGuildBossRewardConfigData(self)
-  self:RefreshTabReddot()
-  local CurConfig = self.HasTab and self.ConfigData.Datas[self.Type] or self.ConfigData
-  if CurConfig then
-    self:RefreshBtnGetAll(CurConfig)
   end
 end
 
@@ -1863,34 +1719,6 @@ function M:OnActivityRewardPreviewClosed()
 end
 
 function M:OnXButtonClicked()
-  if IsGuildBossMode(self) then
-    AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_confirm_positive", nil, nil)
-    local AvatarBossData = GuildModel:GetAvatarGuildBossData()
-    if GuildBossPointRewardUtils.GetCanClaimRewardCount(AvatarBossData) > 0 then
-      local Avatar = GWorld:GetAvatar()
-      if Avatar and Avatar.GuildBossClaimAllPointReward then
-        Avatar:GuildBossClaimAllPointReward(function(RetCode, Info)
-          if not ErrorCode:Check(RetCode) then
-            return
-          end
-          GuildBossRewardUtils.RefreshGuildBossRewardConfigData(self)
-          GuildBossRewardUtils.RefreshPointRewardBottom(self)
-          if Info and Info.Rewards then
-            local MergedRewards = {}
-            for _, RewardEntry in ipairs(Info.Rewards) do
-              if RewardEntry and RewardEntry.Items then
-                MergedRewards = SimpleRewardBox.MergeDumpTables(MergedRewards, RewardEntry.Items)
-              end
-            end
-            UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, MergedRewards, false, nil, self)
-          end
-        end)
-      end
-    else
-      self:ShowGuildBossPointRewardPreview()
-    end
-    return
-  end
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_confirm_positive", nil, nil)
   local Model = GuildController:GetModel()
   local ActivityLevel = Model:GetGuildActivityLevel()

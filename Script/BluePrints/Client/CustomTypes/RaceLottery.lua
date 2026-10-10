@@ -27,6 +27,15 @@ RaceLotteryInfo.__Props__ = {
   RaceLotteryTime = prop.prop("Int", "client save", -1),
   RaceLotteryGotReward = prop.prop("Bool", "client save", false)
 }
+
+function RaceLotteryInfo:OnDailyRefresh()
+  self.RaceLotteryRumorList:Clear()
+  self.RaceLotteryPlayerList:Clear()
+  self.RaceLotteryAnteNum = 0
+  self.RaceLotteryTime = -1
+  self.RaceLotteryGotReward = false
+end
+
 FormatProperties(RaceLotteryInfo)
 return {
   RaceLotteryHistory = RaceLotteryHistory,

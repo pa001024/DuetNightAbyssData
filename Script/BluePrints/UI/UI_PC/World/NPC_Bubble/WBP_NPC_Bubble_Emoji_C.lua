@@ -13,7 +13,7 @@ function WBP_NPC_Bubble_Emoji_C:Init(ParentHeadWidget)
   self.bIsEnabled_Bubble = false
 end
 
-function WBP_NPC_Bubble_Emoji_C:OnEnabled(EmojiId)
+function WBP_NPC_Bubble_Emoji_C:OnEnabled(IconPath)
   if not self.ParentHeadWidget then
     return
   end
@@ -21,9 +21,8 @@ function WBP_NPC_Bubble_Emoji_C:OnEnabled(EmojiId)
     return
   end
   self.bIsEnabled_Bubble = true
-  self.EmojiId = EmojiId
-  PrintTable(EmojiId)
-  UResourceLibrary.LoadObjectAsync(self, EmojiId.Icon, {
+  self.IconPath = IconPath
+  UResourceLibrary.LoadObjectAsync(self, IconPath, {
     self,
     function(obj, Image)
       if not IsValid(obj) then
@@ -32,7 +31,7 @@ function WBP_NPC_Bubble_Emoji_C:OnEnabled(EmojiId)
       if not self.bIsEnabled_Bubble then
         return
       end
-      if self.EmojiId ~= EmojiId then
+      if self.IconPath ~= IconPath then
         return
       end
       self.WS_Emoji:SetActiveWidgetIndex(0)
@@ -49,9 +48,18 @@ function WBP_NPC_Bubble_Emoji_C:OnDisabled()
     return
   end
   self.bIsEnabled_Bubble = false
+  self.IconPath = nil
   self:StopAllAnimations()
   self:PlayAnimation(self.Out)
   self.Image_EmojiBig:SetBrushFromTexture(nil)
+end
+
+function WBP_NPC_Bubble_Emoji_C:ResetForPool()
+  self:StopAllAnimations()
+  self.bIsEnabled_Bubble = false
+  self.IconPath = nil
+  self.Image_EmojiBig:SetBrushFromTexture(nil)
+  self:SetVisibility(UE4.ESlateVisibility.Collapsed)
 end
 
 function WBP_NPC_Bubble_Emoji_C:OnInAnimationFinished()

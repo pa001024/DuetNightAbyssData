@@ -1,5 +1,8 @@
 local T = {}
 T.RT_1 = {
+  [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Boss/Task_Data/Haiboliya_Thc_Boss04_02_Task.Haiboliya_Thc_Boss04_02_Task"
+}
+T.RT_2 = {
   [1] = "/Game/Maps/Levels/Chapter01/Chapter01_Main/Navmesh_Data/Chapter01_Icelake_NavMesh_00010",
   [2] = "/Game/Maps/Levels/Chapter01/Chapter01_Main/Navmesh_Data/Chapter01_Icelake_NavMesh_00011",
   [3] = "/Game/Maps/Levels/Chapter01/Chapter01_Main/Navmesh_Data/Chapter01_Icelake_NavMesh_00012",
@@ -81,9 +84,7 @@ return ReadOnly("ArtLevelControl_TaskVar2Data", {
     [1076] = {
       Id = 62,
       InTime = 0,
-      LoadLevel = {
-        [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Boss/Task_Data/Haiboliya_Thc_Boss04_02_Task.Haiboliya_Thc_Boss04_02_Task"
-      },
+      LoadLevel = T.RT_1,
       OutTime = 0,
       RegionId = 1076,
       VarName = "EX02_Boss04_02"
@@ -179,7 +180,7 @@ return ReadOnly("ArtLevelControl_TaskVar2Data", {
       },
       OutTime = 0.5,
       RegionId = 1011,
-      UnLoadLevel = T.RT_1,
+      UnLoadLevel = T.RT_2,
       VarName = "IQ1002"
     }
   },
@@ -226,7 +227,7 @@ return ReadOnly("ArtLevelControl_TaskVar2Data", {
       },
       OutTime = 0.5,
       RegionId = 1011,
-      UnLoadLevel = T.RT_1,
+      UnLoadLevel = T.RT_2,
       VarName = "IQ100303"
     }
   },
@@ -547,6 +548,16 @@ return ReadOnly("ArtLevelControl_TaskVar2Data", {
       VarName = "IQ11023103"
     }
   },
+  IQ110232 = {
+    [1076] = {
+      Id = 73,
+      InTime = 0,
+      LoadLevel = T.RT_1,
+      OutTime = 0,
+      RegionId = 1076,
+      VarName = "IQ110232"
+    }
+  },
   IQ11023201 = {
     [1070] = {
       Id = 63,
@@ -701,6 +712,18 @@ return ReadOnly("ArtLevelControl_TaskVar2Data", {
       OutTime = 0,
       RegionId = 1041,
       VarName = "IQ120315"
+    }
+  },
+  IQ120704 = {
+    [1017] = {
+      Id = 72,
+      InTime = 0,
+      LoadLevel = {
+        [1] = "/Game/Maps/Levels/Chapter01/Chapter01_Sew_Main/Task_Data/Chapter01_Sew_IQ120404_Task.Chapter01_Sew_IQ120404_Task"
+      },
+      OutTime = 0,
+      RegionId = 1017,
+      VarName = "IQ120704"
     }
   },
   IQ13010101 = {

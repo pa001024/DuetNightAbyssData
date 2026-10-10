@@ -10,6 +10,18 @@ function M:InitSoloRaidComponent()
   if Avatar and Avatar.RaidSeasons and Avatar.CurrentRaidSeasonId and Avatar.RaidSeasons[Avatar.CurrentRaidSeasonId] then
     self.HistoryMaxScore = Avatar.RaidSeasons[Avatar.CurrentRaidSeasonId]:GetMaxRaidScore()
   end
+  local PreInitInfo = self.GameMode.PreInitInfo
+  if PreInitInfo and PreInitInfo.FloorId then
+    local FloorId = PreInitInfo.FloorId
+    local RaidFloorConf = DataMgr.RaidFloor[FloorId]
+    if RaidFloorConf then
+      local Level = RaidFloorConf.MonsterLevel
+      self.GameMode:SetGameModeLevel(Level)
+      DebugPrint("SoloRaidComponent:Init FloorId", FloorId, "Level", Level)
+    else
+      DebugPrint("SoloRaidComponent:Init FloorId读表失败", FloorId)
+    end
+  end
   DebugPrint("SoloRaidComponent:Init!", self.GameMode.DungeonId)
 end
 

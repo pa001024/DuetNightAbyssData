@@ -105,6 +105,11 @@ return ReadOnly("AttrLimit", {
     AttrName = "MaxSkillRange",
     LimitValue = 2.8
   },
+  MaxSkillSpeed = {
+    AttachAttrName = "SkillSpeed",
+    AttrName = "MaxSkillSpeed",
+    LimitValue = 2.8
+  },
   MaxSkillSustain = {
     AttachAttrName = "SkillSustain",
     AttrName = "MaxSkillSustain",

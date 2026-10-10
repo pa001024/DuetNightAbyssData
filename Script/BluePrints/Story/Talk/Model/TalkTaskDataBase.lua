@@ -11,6 +11,7 @@ function TalkTaskDataBase_C.New(TalkNodeData)
   Obj.FilePath = TalkNodeData.FilePath
   Obj.TalkNodeId = TalkNodeData.TalkNodeId
   Obj.TalkId = TalkNodeData.TalkId
+  Obj.BGMQuestChainId = TalkNodeData.BGMQuestChainId or TalkNodeData.QuestChainId or 0
   Obj.FirstDialogueId = TalkNodeData.FirstDialogueId
   Obj.TalkType = TalkNodeData.TalkType
   Obj.bNeedStage = Obj.ExtraParams.bNeedStage

@@ -131,9 +131,14 @@ end
 
 function M:AddBinding(LevelSequenceActor, LevelSequenceBindingParams, Id, StateId)
   local GameState = UGameplayStatics.GetGameState(self)
+  local ClearedCreators = {}
   for _, Param in pairs(LevelSequenceBindingParams:ToTable()) do
     local Creator = GameState.StaticCreatorMap:Find(Param.CreatorId)
     if Creator then
+      if not ClearedCreators[Creator] then
+        ClearedCreators[Creator] = true
+        Creator.OnStaticCreatorChildReadyDelegate:Clear()
+      end
       local ChildEids = Creator:GetActorToChildEids():ToTable()
       if 0 ~= #ChildEids then
         local Entity = Battle(self):GetEntity(ChildEids[1])
@@ -141,7 +146,16 @@ function M:AddBinding(LevelSequenceActor, LevelSequenceBindingParams, Id, StateI
           LevelSequenceActor:AddBindingByTag(Param.Tag, Entity, false)
         end
       end
-      table.insert(self.BindingCreator, Creator)
+      local bRecorded = false
+      for _, BoundCreator in ipairs(self.BindingCreator) do
+        if BoundCreator == Creator then
+          bRecorded = true
+          break
+        end
+      end
+      if not bRecorded then
+        table.insert(self.BindingCreator, Creator)
+      end
       Creator.OnStaticCreatorChildReadyDelegate:Add(self, function(self, NewEntity)
         if IsValid(NewEntity) then
           LevelSequenceActor:AddBindingByTag(Param.Tag, NewEntity, false)

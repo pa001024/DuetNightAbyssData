@@ -11,12 +11,11 @@ function M:InitContent(Params, PopupData, Owner)
     local CountDownEndTime = TimeUtils.NowTime() + CountDownRemainTime
     self:AddTimer(1, function()
       local CurrentTime = TimeUtils.NowTime()
-      if CurrentTime > CountDownEndTime then
-        self:RemoveTimer("DialogCountDown")
-        return
-      end
       local RemainTimeDict, TimeCount = UIUtils.GetLeftTimeStrStyle2(CountDownEndTime)
       self.Time:SetTimeText(CountDownName, RemainTimeDict, CountDownTimeIconPath)
+      if CurrentTime >= CountDownEndTime then
+        self:RemoveTimer("DialogCountDown")
+      end
     end, true, -1, "DialogCountDown")
   end
 end

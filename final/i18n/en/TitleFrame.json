@@ -324,6 +324,36 @@
     "icon": "T_Icon_Random_TitleFrame"
   },
   {
+    "id": 10055,
+    "name": "SSS-Rank Phoxhunter Ⅶ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10056,
+    "name": "SS-Rank Phoxhunter Ⅶ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10057,
+    "name": "S-Rank Phoxhunter Ⅶ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10058,
+    "name": "A-Rank Phoxhunter Ⅶ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10059,
+    "name": "B-Rank Phoxhunter Ⅶ",
+    "desc": "Equip this in [Title] - [Frame]",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
     "id": 20001,
     "name": "Hall of Glamour Ⅶ",
     "desc": "Equip this in [Title] - [Frame]",

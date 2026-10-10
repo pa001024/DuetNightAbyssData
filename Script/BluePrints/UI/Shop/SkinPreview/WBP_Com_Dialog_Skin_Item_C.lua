@@ -24,7 +24,7 @@ function M:InitSkinItemInfo(Content)
     bCustomStype = true,
     bDisableCommonClick = true
   })
-  self.Text_Item_Name:SetTexT(GText(Content.Name))
+  self.Text_Item_Name:SetText(GText(Content.Name))
   self.Text_Item_Num:SetText("1")
 end
 

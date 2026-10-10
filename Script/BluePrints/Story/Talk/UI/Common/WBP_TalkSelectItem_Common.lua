@@ -14,8 +14,10 @@ local function ParseInitParams(Params)
     ListIdx = InitParams.ListIdx,
     bIsSelected = InitParams.bIsSelected == true,
     bCanReselect = true == InitParams.bCanReselect,
-    OnItemClickedDelegate = InitParams.OnItemClickedDelegate,
-    OnItemClickStartDelegate = InitParams.OnItemClickStartDelegate
+    OnClickedDelegate = InitParams.OnClickedDelegate,
+    OnClickStartDelegate = InitParams.OnClickStartDelegate,
+    OnHoveredDelegate = InitParams.OnHoveredDelegate,
+    OnUnhoveredDelegate = InitParams.OnUnhoveredDelegate
   }
 end
 
@@ -26,8 +28,10 @@ function M:Init(Params)
   self.OptionIdx = InitParams.OptionIdx
   self.ListIdx = InitParams.ListIdx
   self.bCanReselect = InitParams.bCanReselect
-  self.OnItemClickedDelegate = InitParams.OnItemClickedDelegate
-  self.OnItemClickStartDelegate = InitParams.OnItemClickStartDelegate
+  self.OnClickedDelegate = InitParams.OnClickedDelegate
+  self.OnClickStartDelegate = InitParams.OnClickStartDelegate
+  self.OnHoveredDelegate = InitParams.OnHoveredDelegate
+  self.OnUnhoveredDelegate = InitParams.OnUnhoveredDelegate
   self:InitPlatform()
   self:InitKey()
   self:InitText(InitParams.OptionText)
@@ -132,7 +136,7 @@ function M:OnClickAnimationFinished()
   if self.bIsSelected and not self.bCanReselect then
     return
   end
-  self:FireDelegate(self.OnItemClickedDelegate, self.OptionIdx)
+  self:FireDelegate(self.OnClickedDelegate, self)
 end
 
 function M:OnClicked()
@@ -147,15 +151,17 @@ function M:OnClicked()
     self:StopAllAnimations()
     self:PlayAnimation(self.Click)
     self:UnBindAllEvents()
-    self:FireDelegate(self.OnItemClickStartDelegate)
+    self:FireDelegate(self.OnClickStartDelegate, self)
   end
 end
 
 function M:OnHovered()
+  self:FireDelegate(self.OnHoveredDelegate, self.OptionIdx)
   self.SelectUI:SelectNewItem(self.ListIdx)
 end
 
 function M:OnUnhovered()
+  self:FireDelegate(self.OnUnhoveredDelegate, self.OptionIdx)
   if self.bInMobile then
     return
   end

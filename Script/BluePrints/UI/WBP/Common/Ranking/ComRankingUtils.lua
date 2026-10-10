@@ -1,5 +1,4 @@
 require("UnLua")
-local SerializeUtils = require("Utils.SerializeUtils")
 local ComRankingUtils = {}
 ComRankingUtils.ItemType = {Squad = 0, Score = 1}
 ComRankingUtils.RankIconPath = {
@@ -18,6 +17,62 @@ ComRankingUtils.BottomKeyState = {
   HeaderQaTipOpen = 3,
   EmptyState = 4
 }
+ComRankingUtils.ColumnWidgetPathByType = {
+  RankingNum = "WidgetBlueprint'/Game/UI/WBP/Common/Ranking/Widget/Info/WBP_Com_Ranking_RankingNum.WBP_Com_Ranking_RankingNum'",
+  GradeIcon = "WidgetBlueprint'/Game/UI/WBP/Common/Ranking/Widget/Info/WBP_Com_Ranking_GradeIcon.WBP_Com_Ranking_GradeIcon'",
+  Name = "WidgetBlueprint'/Game/UI/WBP/Common/Ranking/Widget/Info/WBP_Com_Ranking_Name.WBP_Com_Ranking_Name'",
+  TextInfo = "WidgetBlueprint'/Game/UI/WBP/Common/Ranking/Widget/Info/WBP_Com_Ranking_TextInfo.WBP_Com_Ranking_TextInfo'",
+  Team = "WidgetBlueprint'/Game/UI/WBP/Common/Ranking/Widget/Info/WBP_Com_Ranking_Team.WBP_Com_Ranking_Team'"
+}
+ComRankingUtils.HeaderNameByType = {
+  RankingNum = "RaidDungeon_Rank",
+  GradeIcon = "RaidDungeon_Rank_Tier",
+  Name = "RaidDungeon_Rank_Name",
+  Team = "RaidDungeon_Rank_CharList"
+}
+
+function ComRankingUtils.IsSameUid(A, B)
+  if nil == A or nil == B then
+    return false
+  end
+  if A == B then
+    return true
+  end
+  local NumA, NumB = tonumber(A), tonumber(B)
+  if NumA and NumB then
+    return NumA == NumB
+  end
+  return tostring(A) == tostring(B)
+end
+
+function ComRankingUtils.LookupByUid(Dict, Uid)
+  if nil == Dict or nil == Uid then
+    return nil
+  end
+  
+  local function TryIndex(Key)
+    local Ok, Value = pcall(function()
+      return Dict[Key]
+    end)
+    if Ok then
+      return Value
+    end
+    return nil
+  end
+  
+  local Value = TryIndex(Uid)
+  if nil ~= Value then
+    return Value
+  end
+  local Num = tonumber(Uid)
+  if nil ~= Num then
+    Value = TryIndex(Num)
+    if nil ~= Value then
+      return Value
+    end
+  end
+  return TryIndex(tostring(Uid))
+end
 
 function ComRankingUtils.IsEmptyTable(tbl)
   if type(tbl) ~= "table" then
@@ -29,47 +84,59 @@ function ComRankingUtils.IsEmptyTable(tbl)
   return true
 end
 
-function ComRankingUtils.GetSquadInfo(SquadSnapShot)
-  if not SquadSnapShot then
-    return
+function ComRankingUtils.IsValidConfigId(Id)
+  return type(Id) == "number" and Id > 0
+end
+
+function ComRankingUtils.GetSquadInfo(RankInfo)
+  local CharSlots = {}
+  local PhantomSlots = {}
+  if type(RankInfo) ~= "table" then
+    return CharSlots, PhantomSlots
   end
-  local Squad = SerializeUtils:UnSerialize(SquadSnapShot)
-  if not Squad or ComRankingUtils.IsEmptyTable(Squad) then
-    return
-  end
-  local RoleInfo, PetInfo = {}, {}
-  if Squad.AvatarInfo then
-    local CharacterInfo = Squad.AvatarInfo.CharacterInfo
-    if CharacterInfo and CharacterInfo.RoleInfo then
-      RoleInfo[1] = {
-        id = CharacterInfo.RoleInfo.RoleId,
-        level = CharacterInfo.RoleInfo.Level
-      }
-    end
-    local PhantomIndex = 2
-    local PhantomInfo1 = Squad.AvatarInfo.PhantomInfo1
-    if PhantomInfo1 and PhantomInfo1.RoleInfo then
-      RoleInfo[PhantomIndex] = {
-        id = PhantomInfo1.RoleInfo.RoleId,
-        level = PhantomInfo1.RoleInfo.Level
-      }
-      PhantomIndex = PhantomIndex + 1
-    end
-    local PhantomInfo2 = Squad.AvatarInfo.PhantomInfo2
-    if PhantomInfo2 and PhantomInfo2.RoleInfo then
-      RoleInfo[PhantomIndex] = {
-        id = PhantomInfo2.RoleInfo.RoleId,
-        level = PhantomInfo2.RoleInfo.Level
-      }
-    end
-  end
-  if Squad.CommonCombatInfo then
-    PetInfo = {
-      id = Squad.CommonCombatInfo.pet_id,
-      level = Squad.CommonCombatInfo.pet_level
+  if ComRankingUtils.IsValidConfigId(RankInfo.RoleId) then
+    CharSlots[1] = {
+      Id = RankInfo.RoleId,
+      Level = RankInfo.RoleLevel,
+      Type = "Char"
     }
   end
-  return RoleInfo, PetInfo
+  if ComRankingUtils.IsValidConfigId(RankInfo.MeleeWeaponId) then
+    CharSlots[2] = {
+      Id = RankInfo.MeleeWeaponId,
+      Level = RankInfo.MeleeWeaponLevel,
+      Type = "Weapon"
+    }
+  end
+  if ComRankingUtils.IsValidConfigId(RankInfo.RangedWeaponId) then
+    CharSlots[3] = {
+      Id = RankInfo.RangedWeaponId,
+      Level = RankInfo.RangedWeaponLevel,
+      Type = "Weapon"
+    }
+  end
+  if ComRankingUtils.IsValidConfigId(RankInfo.PetId) then
+    CharSlots[4] = {
+      Id = RankInfo.PetId,
+      Level = RankInfo.PetLevel,
+      Type = "Pet"
+    }
+  end
+  if ComRankingUtils.IsValidConfigId(RankInfo.Phantom1RoleId) then
+    PhantomSlots[1] = {
+      Num = "01",
+      RoleId = RankInfo.Phantom1RoleId,
+      WeaponId = RankInfo.Phantom1WeaponId
+    }
+  end
+  if ComRankingUtils.IsValidConfigId(RankInfo.Phantom2RoleId) then
+    PhantomSlots[2] = {
+      Num = "02",
+      RoleId = RankInfo.Phantom2RoleId,
+      WeaponId = RankInfo.Phantom2WeaponId
+    }
+  end
+  return CharSlots, PhantomSlots
 end
 
 return ComRankingUtils

@@ -2,6 +2,7 @@ require("UnLua")
 local PreviewSceneService = require("BluePrints.UI.Common.Preview.PreviewSceneService")
 local PreviewCharacterHandle = require("BluePrints.UI.Common.Preview.PreviewCharacterHandle")
 local PreviewPetHandle = require("BluePrints.UI.Common.Preview.PreviewPetHandle")
+local PreviewItemHandle = require("BluePrints.UI.Common.Preview.PreviewItemHandle")
 local PreviewAppearanceService = require("BluePrints.UI.Common.Preview.PreviewAppearanceService")
 local PersonInfoCommon = require("BluePrints.UI.WBP.PersonInfo.PersonInfoCommon")
 local DisplayConfig = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_DisplayConfig")
@@ -65,6 +66,7 @@ function M:Init(Params)
   self.FocusEntityId = nil
   self.ArmoryHelper = nil
   self.PreviewCameraRuntime = nil
+  self.SimpleFilterState = nil
   self.UIName = self.ViewUI and self.ViewUI:GetUIConfigName() or "PersonInfoPageMain"
   self.Avatar = nil
   self.ArmoryPlayer = nil
@@ -77,6 +79,7 @@ function M:Init(Params)
   self.IsControlled = false
   self.IsPreviewSuspended = false
   self._NeedRefreshEnvironmentOnBecomeViewTarget = false
+  self.OnFirstBecomeViewTarget = nil
   self.CurrentCameraRigLocalPosition = FVector(0, 0, 0)
   self.CurrentCameraRigLocalRotation = FRotator(0, 0, 0)
   self.AppliedSceneColorIndex = nil
@@ -118,10 +121,10 @@ end
 function M:OnOpened(SceneSpec)
   DebugPrint(string.format("PersonInfoDisplayController: OnOpened sceneSpec=%s editor=%s initialChar=%s initialSceneId=%s", tostring(nil ~= SceneSpec), tostring(nil ~= self.Editor), tostring(self.InitialCharInfo and self.InitialCharInfo.CharId or nil), tostring(self.InitialSceneId)))
   self:EnsureHelper()
-  local FXMgr = UE4.USubsystemBlueprintLibrary.GetWorldSubsystem(self.ViewUI, UE4.UFXPriorityManager)
-  if FXMgr then
-    FXMgr.SetFXTickEvenPaused(self.ViewUI, "PersonInfo", true)
+  if IsValid(self.ArmoryHelper) then
+    self.ArmoryHelper:CallBP_OnCameraRotated()
   end
+  UE4.UEMNiagaraFunctionLibrary.SetFXTickEvenPaused(self.ViewUI, "PersonInfo", true)
   self._NeedRefreshEnvironmentOnBecomeViewTarget = true
   if true == self.SkipInitialDraftLoad then
     DebugPrint("PersonInfoDisplayController: OnOpened skip initial draft load")
@@ -171,10 +174,7 @@ function M:OnClosed()
   self.bClosed = true
   self:ResumePreviewControl()
   if self.ViewUI then
-    local FXMgr = UE4.USubsystemBlueprintLibrary.GetWorldSubsystem(self.ViewUI, UE4.UFXPriorityManager)
-    if FXMgr then
-      FXMgr.SetFXTickEvenPaused(self.ViewUI, "PersonInfo", false)
-    end
+    UE4.UEMNiagaraFunctionLibrary.SetFXTickEvenPaused(self.ViewUI, "PersonInfo", false)
   end
   if self.PreviewCameraRuntime then
     self.PreviewCameraRuntime:EndViewTarget()
@@ -242,6 +242,7 @@ function M:EnsureHelper()
     }, self)
     self.ArmoryHelper.PersonalPreview = true
     self.ArmoryHelper.ArchivePreview = false
+    self.ArmoryHelper.DisplayController = self
     self.ArmoryHelper:UpdatePPSetting(2)
     DebugPrint(string.format("PersonInfoDisplayController: EnsureHelper created helper=%s", GetObjectNameSafe(self.ArmoryHelper)))
   else
@@ -251,14 +252,33 @@ end
 
 function M:ApplySceneColor(SceneId)
   if not self.SceneService then
-    return false
+    return
   end
   local SceneColorIndex = DisplayConfig:GetSceneColorIndex(SceneId)
   if self.AppliedSceneColorIndex == SceneColorIndex then
-    return false
+    return
   end
   self.AppliedSceneColorIndex = SceneColorIndex
   self.SceneService:ChangeSkyBox(SceneColorIndex)
+end
+
+function M:ApplySceneSwitch(Draft)
+  if not (Draft and self.SceneService and self.SceneService.IsSceneReady) or not self.SceneService:IsSceneReady() then
+    return false
+  end
+  local SceneId = Draft.Scene and Draft.Scene.SceneId or nil
+  local NextPath = DisplayConfig:GetScenePath(SceneId)
+  local CurrentPath = self.SceneService.PreviewScenePath
+  if type(NextPath) ~= "string" or "" == NextPath or CurrentPath ~= NextPath then
+    return false
+  end
+  self.SceneDraft = Draft
+  if self.SceneSpec then
+    self.SceneSpec.Scene = Draft.Scene
+    self.SceneSpec.Camera = Draft.Camera
+  end
+  self:ApplySceneColor(SceneId)
+  self:ApplyDraftSceneLight(Draft)
   return true
 end
 
@@ -266,9 +286,12 @@ function M:OnHelperBecomeViewTarget(PC)
   self.IsControlled = true
   if self._NeedRefreshEnvironmentOnBecomeViewTarget and self.SceneService then
     self._NeedRefreshEnvironmentOnBecomeViewTarget = false
-    local NeedUpdateLighting = not self._SceneColorLightingScheduled
-    self._SceneColorLightingScheduled = false
-    self.SceneService:RefreshEnvironment(NeedUpdateLighting)
+    self.SceneService:RefreshEnvironment()
+  end
+  if self.OnFirstBecomeViewTarget then
+    local Callback = self.OnFirstBecomeViewTarget
+    self.OnFirstBecomeViewTarget = nil
+    Callback()
   end
 end
 
@@ -292,6 +315,7 @@ function M:TryDestroyActors()
   if self.HighlightComponent then
     self.HighlightComponent:ClearAllHighlight()
   end
+  self:ClearFilterEffect()
   self:ClearEntities()
   if self.PreviewCameraRuntime then
     self.PreviewCameraRuntime:Dispose()
@@ -305,6 +329,7 @@ function M:TryDestroyActors()
     UKismetSystemLibrary.ExecuteConsoleCommand(Player, "r.Shadow.ForceCacheUpdate 1", nil)
   end
   if IsValid(self.ArmoryHelper) then
+    self.ArmoryHelper.DisplayController = nil
     self.ArmoryHelper:DestroySelf()
   end
   self.ArmoryHelper = nil
@@ -344,7 +369,13 @@ function M:LoadScene(SceneSpec)
   DebugPrint(string.format("PersonInfoDisplayController: LoadScene sceneId=%s entityCount=%s focusEntity=%s scenePath=%s", tostring(SceneId), tostring(EntityCount), tostring(SceneSpec and SceneSpec.FocusEntityId or nil), tostring(DisplayConfig:GetScenePath(SceneId))))
   self.SceneService:SetPreviewScenePath(DisplayConfig:GetScenePath(SceneId))
   self.SceneService:LoadScene(CommonConst.EPreviewSceneType.PreviewCommon)
-  self._SceneColorLightingScheduled = self:ApplySceneColor(SceneId)
+  local LightParam = SceneSpec and SceneSpec.Scene and SceneSpec.Scene.LightParam or nil
+  if LightParam then
+    self.SceneService:SetUserLight(LightParam)
+  else
+    self.SceneService:ClearUserLight()
+  end
+  self:ApplySceneColor(SceneId)
   self:RebuildEntities(SceneSpec and SceneSpec.Entities or {})
   if SceneSpec and SceneSpec.FocusEntityId and self:GetEntityHandle(SceneSpec.FocusEntityId) then
     self:SetFocusEntity(SceneSpec.FocusEntityId, false)
@@ -382,6 +413,7 @@ function M:LoadDraft(Draft)
     self:SetFocusEntity(self.FocusEntityId, false)
   end
   self.ArmoryPlayer = self:GetMainCharacterActor()
+  self:ApplyDraftFilter(Draft)
   DebugPrint(string.format("PersonInfoDisplayController: LoadDraft ArmoryPlayer=%s", GetObjectNameSafe(self.ArmoryPlayer)))
 end
 
@@ -395,6 +427,7 @@ function M:ClearEntities()
     end
   end
   self.EntityHandles = {}
+  self.FocusEntityId = nil
 end
 
 function M:RebuildEntities(EntitySpecs)
@@ -410,8 +443,12 @@ function M:RebuildEntities(EntitySpecs)
   end)
   DebugPrint(string.format("PersonInfoDisplayController: RebuildEntities orderedCount=%s", tostring(#OrderedEntitySpecs)))
   for _, EntitySpec in ipairs(OrderedEntitySpecs) do
+    local Source = EntitySpec and EntitySpec.Source or nil
+    DebugPrint(string.format("PersonInfoDisplayController: RebuildEntities entity id=%s type=%s hasChar=%s hasPet=%s hasItem=%s", tostring(EntitySpec and EntitySpec.Id or nil), tostring(EntitySpec and EntitySpec.Type or nil), tostring(Source and Source.CharData ~= nil), tostring(Source and nil ~= Source.PetData), tostring(Source and nil ~= Source.ItemData)))
+  end
+  for _, EntitySpec in ipairs(OrderedEntitySpecs) do
     if EntitySpec.Type == DisplayTypes.EntityType.Char then
-      DebugPrint(string.format("PersonInfoDisplayController: RebuildEntities createChar entityId=%s charId=%s hasAppearance=%s hasWeapon=%s hasAnim=%s", tostring(EntitySpec.Id), tostring(EntitySpec.Source and EntitySpec.Source.CharData and EntitySpec.Source.CharData.CharId or nil), tostring(EntitySpec.Appearance ~= nil), tostring(EntitySpec.Source and nil ~= EntitySpec.Source.WeaponData), tostring(nil ~= EntitySpec.Anim)))
+      DebugPrint(string.format("PersonInfoDisplayController: RebuildEntities createChar entityId=%s charId=%s hasAppearance=%s hasWeapon=%s hasAnim=%s", tostring(EntitySpec.Id), tostring(EntitySpec.Source and EntitySpec.Source.CharData and EntitySpec.Source.CharData.CharId or nil), tostring(nil ~= EntitySpec.Appearance), tostring(EntitySpec.Source and nil ~= EntitySpec.Source.WeaponData), tostring(nil ~= EntitySpec.Anim)))
       local CharacterHandle = PreviewCharacterHandle:New({
         ViewUI = self.ViewUI,
         SceneService = self.SceneService,
@@ -434,15 +471,22 @@ function M:RebuildEntities(EntitySpecs)
   for _, EntitySpec in ipairs(OrderedEntitySpecs) do
     if EntitySpec.Type == DisplayTypes.EntityType.Pet then
       DebugPrint(string.format("PersonInfoDisplayController: RebuildEntities createPet entityId=%s owner=%s petId=%s", tostring(EntitySpec.Id), tostring(EntitySpec.OwnerEntityId), tostring(EntitySpec.Source and EntitySpec.Source.PetData and EntitySpec.Source.PetData.PetId or nil)))
-      local PetHandle = PreviewPetHandle:New({
-        ViewUI = self.ViewUI,
-        SceneService = self.SceneService
-      })
-      local OwnerHandle = EntitySpec.OwnerEntityId and self.EntityHandles[EntitySpec.OwnerEntityId] or nil
-      PetHandle:Create(EntitySpec.Source and EntitySpec.Source.PetData, OwnerHandle, {
-        Transform = EntitySpec.Transform
-      })
-      self.EntityHandles[EntitySpec.Id] = PetHandle
+      local PetSlotIndex = tonumber(string.match(tostring(EntitySpec.Id), "^pet_slot_(%d+)$"))
+      if type(PetSlotIndex) == "number" then
+        self:_CreatePetEntity(PetSlotIndex, EntitySpec.Source and EntitySpec.Source.PetData, EntitySpec.Transform, EntitySpec.OwnerEntityId)
+      end
+    end
+  end
+  for _, EntitySpec in ipairs(OrderedEntitySpecs) do
+    local Source = EntitySpec.Source or {}
+    local ItemData = Source.ItemData or EntitySpec.ItemData
+    local bIsItemEntity = EntitySpec.Type == DisplayTypes.EntityType.Item or nil ~= ItemData and EntitySpec.Type ~= DisplayTypes.EntityType.Char and EntitySpec.Type ~= DisplayTypes.EntityType.Pet
+    if bIsItemEntity then
+      local ItemSlotIndex = tonumber(string.match(tostring(EntitySpec.Id), "^item_slot_(%d+)$"))
+      local bCreated = self:_CreateItemEntity(EntitySpec.Id, ItemSlotIndex, ItemData, EntitySpec.Transform)
+      DebugPrint(string.format("PersonInfoDisplayController: RebuildEntities item entityId=%s itemId=%s effectCreatureId=%s created=%s", tostring(EntitySpec.Id), tostring(ItemData and ItemData.ItemId or nil), tostring(ItemData and ItemData.EffectCreatureId or nil), tostring(true == bCreated)))
+    elseif EntitySpec.Type ~= DisplayTypes.EntityType.Char and EntitySpec.Type ~= DisplayTypes.EntityType.Pet then
+      DebugPrint(string.format("PersonInfoDisplayController: RebuildEntities unsupported entity id=%s type=%s", tostring(EntitySpec.Id), tostring(EntitySpec.Type)))
     end
   end
   DebugPrint(string.format("PersonInfoDisplayController: RebuildEntities finished handleCount=%s", tostring(#OrderedEntitySpecs)))
@@ -468,11 +512,15 @@ function M:ClearPendingPointerSelection()
   end
 end
 
-function M:CommitPointerSelection()
+function M:CommitPointerSelection(Options)
   if not self.SelectionComponent or not self.SelectionComponent.CommitPointerSelection then
     return nil
   end
-  return self.SelectionComponent:CommitPointerSelection()
+  local IgnoreActors
+  if Options and Options.IgnoreEntityPrefixes then
+    IgnoreActors = self:_CollectPointerSelectionIgnoreActors(Options.IgnoreEntityPrefixes)
+  end
+  return self.SelectionComponent:CommitPointerSelection(IgnoreActors)
 end
 
 function M:BeginCameraPreviewTransaction()
@@ -601,6 +649,22 @@ function M:SetFocusCharacterSlot(SlotIndex, bOpenHighlight)
   self:SetFocusEntity(self:_BuildCharacterEntityId(SlotIndex), true == bOpenHighlight)
 end
 
+function M:SetFocusPetSlot(SlotIndex, bOpenHighlight)
+  if type(SlotIndex) ~= "number" or SlotIndex <= 0 then
+    self:SetFocusEntity(nil, false)
+    return
+  end
+  self:SetFocusEntity(self:_BuildPetEntityId(SlotIndex), true == bOpenHighlight)
+end
+
+function M:SetFocusItemSlot(SlotIndex, bOpenHighlight)
+  if type(SlotIndex) ~= "number" or SlotIndex <= 0 then
+    self:SetFocusEntity(nil, false)
+    return
+  end
+  self:SetFocusEntity(self:_BuildItemEntityId(SlotIndex), true == bOpenHighlight)
+end
+
 function M:_RefreshFocusedCharacterSlotHighlight(SlotIndex)
   if type(SlotIndex) ~= "number" or SlotIndex <= 0 then
     return
@@ -614,11 +678,44 @@ function M:_RefreshFocusedCharacterSlotHighlight(SlotIndex)
   self.HighlightComponent:OpenFocusHighlight()
 end
 
+function M:_RefreshFocusedPetSlotHighlight(SlotIndex)
+  if type(SlotIndex) ~= "number" or SlotIndex <= 0 then
+    return
+  end
+  local EntityId = self:_BuildPetEntityId(SlotIndex)
+  if self.FocusEntityId ~= EntityId or not self.HighlightComponent then
+    return
+  end
+  self.HighlightComponent:CloseFocusHighlight()
+  self.HighlightComponent:RefreshFocusHighlight(nil, EntityId)
+  self.HighlightComponent:OpenFocusHighlight()
+end
+
+function M:_RefreshFocusedItemSlotHighlight(SlotIndex)
+  if type(SlotIndex) ~= "number" or SlotIndex <= 0 then
+    return
+  end
+  local EntityId = self:_BuildItemEntityId(SlotIndex)
+  if self.FocusEntityId ~= EntityId or not self.HighlightComponent then
+    return
+  end
+  self.HighlightComponent:CloseFocusHighlight()
+  self.HighlightComponent:RefreshFocusHighlight(nil, EntityId)
+  self.HighlightComponent:OpenFocusHighlight()
+end
+
 function M:GetCharacterHandleBySlotIndex(SlotIndex)
   if type(SlotIndex) ~= "number" or SlotIndex <= 0 then
     return nil
   end
   return self:GetEntityHandle(self:_BuildCharacterEntityId(SlotIndex))
+end
+
+function M:GetPetHandleBySlotIndex(SlotIndex)
+  if type(SlotIndex) ~= "number" or SlotIndex <= 0 then
+    return nil
+  end
+  return self:GetEntityHandle(self:_BuildPetEntityId(SlotIndex))
 end
 
 local function BuildDefaultWeaponPoseActionData(WeaponData)
@@ -642,6 +739,28 @@ local function ShouldPreviewDisplayWeapon(WeaponData, ActionData)
   return true
 end
 
+local function BuildActionIdentity(ActionData)
+  if type(ActionData) ~= "table" then
+    return nil
+  end
+  return {
+    Mode = ActionData.Mode,
+    PoseId = ActionData.PoseId,
+    PoseTag = ActionData.PoseTag,
+    MontagePath = ActionData.MontagePath,
+    Document = ActionData.Document,
+    PoseName = ActionData.PoseName,
+    ReleaseWheel = ActionData.ReleaseWheel
+  }
+end
+
+local function IsSameActionIdentity(Left, Right)
+  if type(Left) ~= "table" or type(Right) ~= "table" then
+    return false
+  end
+  return Left.Mode == Right.Mode and Left.PoseId == Right.PoseId and Left.PoseTag == Right.PoseTag and Left.MontagePath == Right.MontagePath and Left.Document == Right.Document and Left.PoseName == Right.PoseName and Left.ReleaseWheel == Right.ReleaseWheel
+end
+
 function M:_ApplyCharacterVisualState(CharacterHandle, WeaponData, ActionData)
   if not CharacterHandle then
     return
@@ -659,9 +778,15 @@ function M:_ApplyCharacterVisualState(CharacterHandle, WeaponData, ActionData)
     local bWeaponPoseAction = "Melee" == ActionData.PoseTag or "Ranged" == ActionData.PoseTag
     if bWeaponPoseAction and not bDisplayWeaponReady then
       CharacterHandle:StopMontage()
+      CharacterHandle.AppliedActionIdentity = nil
+      return
+    end
+    local NextActionIdentity = BuildActionIdentity(ActionData)
+    if not bDisplayWeaponReady and IsSameActionIdentity(CharacterHandle.AppliedActionIdentity, NextActionIdentity) then
       return
     end
     self:_ApplyCharacterActionPreview(CharacterHandle, ActionData)
+    CharacterHandle.AppliedActionIdentity = NextActionIdentity
     return
   end
   if bDisplayWeaponReady then
@@ -684,6 +809,134 @@ function M:ApplyCharacterTransform(SlotIndex, Transform, Draft)
   end
   CharacterHandle:SetTransform(Transform)
   return true
+end
+
+function M:ApplyPetTransform(SlotIndex, Transform, Draft)
+  if type(SlotIndex) ~= "number" or SlotIndex <= 0 then
+    return false
+  end
+  local PetHandle = self:GetPetHandleBySlotIndex(SlotIndex)
+  if not PetHandle or not Transform then
+    return false
+  end
+  if nil ~= Draft then
+    self.SceneDraft = Draft
+  end
+  PetHandle:SetTransform(Transform)
+  return true
+end
+
+function M:ApplyPetSlot(SlotIndex, Draft)
+  if type(SlotIndex) ~= "number" or SlotIndex <= 0 then
+    return false
+  end
+  if nil ~= Draft then
+    self.SceneDraft = Draft
+  end
+  local EntityId = self:_BuildPetEntityId(SlotIndex)
+  local OldHandle = self.EntityHandles and self.EntityHandles[EntityId] or nil
+  if OldHandle and OldHandle.Dispose then
+    OldHandle:Dispose()
+  end
+  if self.EntityHandles then
+    self.EntityHandles[EntityId] = nil
+  end
+  if self.FocusEntityId == EntityId and self.HighlightComponent then
+    self.HighlightComponent:CloseFocusHighlight()
+  end
+  local Slot = Draft and DisplayDraft:GetPetSlot(Draft, SlotIndex) or nil
+  if not DisplayDraft:IsPetSlotOccupied(Slot) then
+    return true
+  end
+  local Transform = Slot.Transform or DisplayConfig:GetDefaultPetTransform(SlotIndex)
+  return self:_CreatePetEntity(SlotIndex, Slot.PetData, Transform, Slot.OwnerEntityId) == true
+end
+
+function M:_CreatePetEntity(SlotIndex, PetData, Transform, OwnerEntityId)
+  local EntityId = self:_BuildPetEntityId(SlotIndex)
+  local PetHandle = PreviewPetHandle:New({
+    ViewUI = self.ViewUI,
+    SceneService = self.SceneService,
+    EnableSelectionCollision = true
+  })
+  local OwnerHandle = OwnerEntityId and self.EntityHandles[OwnerEntityId] or nil
+  
+  function PetHandle.OnResourceReady()
+    if not IsValid(self.ViewUI) then
+      return
+    end
+    if not PetHandle.IsValid or not PetHandle:IsValid() then
+      return
+    end
+    self:_RefreshFocusedPetSlotHighlight(SlotIndex)
+  end
+  
+  PetHandle:Create(PetData, OwnerHandle, {Transform = Transform})
+  self.EntityHandles = self.EntityHandles or {}
+  self.EntityHandles[EntityId] = PetHandle
+  return true == PetHandle:IsValid()
+end
+
+function M:ApplyItemSlot(SlotIndex, Draft)
+  if type(SlotIndex) ~= "number" or SlotIndex <= 0 then
+    return false
+  end
+  if nil ~= Draft then
+    self.SceneDraft = Draft
+  end
+  local EntityId = self:_BuildItemEntityId(SlotIndex)
+  local OldHandle = self.EntityHandles and self.EntityHandles[EntityId] or nil
+  if OldHandle and OldHandle.Dispose then
+    OldHandle:Dispose()
+  end
+  if self.EntityHandles then
+    self.EntityHandles[EntityId] = nil
+  end
+  if self.FocusEntityId == EntityId and self.HighlightComponent then
+    self.HighlightComponent:CloseFocusHighlight()
+  end
+  local Slot = Draft and DisplayDraft:GetItemSlot(Draft, SlotIndex) or nil
+  if not DisplayDraft:IsItemSlotOccupied(Slot) then
+    return true
+  end
+  local Transform = Slot.Transform or DisplayConfig:GetDefaultItemTransform(SlotIndex, Slot.ItemData)
+  Transform = DisplayConfig:ReplaceItemScale(Transform, Slot.ItemData) or Transform
+  return self:_CreateItemEntity(EntityId, SlotIndex, Slot.ItemData, Transform) == true
+end
+
+function M:_CreateItemEntity(EntityId, SlotIndex, ItemData, Transform)
+  local ItemHandle = PreviewItemHandle:New({
+    ViewUI = self.ViewUI,
+    SceneService = self.SceneService,
+    EnableSelectionCollision = true
+  })
+  local bCreated = ItemHandle:Create(ItemData, {
+    Transform = Transform,
+    SpawnHostActor = self:GetMainCharacterActor()
+  })
+  self.EntityHandles = self.EntityHandles or {}
+  self.EntityHandles[EntityId] = ItemHandle
+  if type(SlotIndex) == "number" then
+    self:_RefreshFocusedItemSlotHighlight(SlotIndex)
+  end
+  return true == bCreated
+end
+
+function M:ApplyItemTransform(SlotIndex, Transform, Draft)
+  if type(SlotIndex) ~= "number" or SlotIndex <= 0 or not Transform then
+    return false
+  end
+  local ItemHandle = self:GetEntityHandle(self:_BuildItemEntityId(SlotIndex))
+  if not ItemHandle then
+    return false
+  end
+  if nil ~= Draft then
+    self.SceneDraft = Draft
+  end
+  local SourceDraft = Draft or self.SceneDraft
+  local Slot = SourceDraft and DisplayDraft:GetItemSlot(SourceDraft, SlotIndex) or nil
+  local ScaledTransform = DisplayConfig:ReplaceItemScale(Transform, Slot and Slot.ItemData or nil) or Transform
+  return ItemHandle:SetTransform(ScaledTransform) == true
 end
 
 function M:ApplyCharacterWeaponAndAction(SlotIndex, Draft)
@@ -790,6 +1043,99 @@ function M:GetOutlineCameraComponent()
     OutlineCamera = self.ArmoryHelper.Camera
   end
   return OutlineCamera
+end
+
+function M:ApplyDraftFilter(Draft)
+  local Other = Draft and Draft.Other or nil
+  local Filter = Other and Other.Filter or nil
+  if type(Filter) ~= "table" then
+    self:ApplyFilterEffect(nil)
+    return
+  end
+  self:ApplyFilterEffect(Filter)
+end
+
+function M:ApplyDraftSceneLight(Draft)
+  local LightParam = Draft and Draft.Scene and Draft.Scene.LightParam or nil
+  if LightParam then
+    self.SceneService:SetUserLight(LightParam)
+  else
+    self.SceneService:ClearUserLight()
+  end
+  return true
+end
+
+function M:ClearFilterEffect()
+  local State = self.SimpleFilterState
+  self.SimpleFilterState = nil
+  if type(State) ~= "table" then
+    return
+  end
+  local Camera = State.Camera
+  local Material = State.Material
+  if not IsValid(Camera) or not IsValid(Material) then
+    return
+  end
+  if Camera.RemoveBlendable then
+    Camera:RemoveBlendable(Material)
+  end
+  local UPostProcessFunctionLibrary = LoadClass(Const.PostProcessFunctionLibraryPath)
+  if UPostProcessFunctionLibrary then
+    UPostProcessFunctionLibrary.ClearSimplePostProcess(Material, Camera, 1)
+  end
+end
+
+function M:_SetFilterPostInt(Material, Weight)
+  if not IsValid(Material) or not Material.SetScalarParameterValue then
+    return
+  end
+  Material:SetScalarParameterValue("PostInt", Weight)
+end
+
+function M:ApplyFilterEffect(FilterData)
+  if type(FilterData) ~= "table" then
+    self:ClearFilterEffect()
+    return
+  end
+  local FilterId = FilterData.FilterId or FilterData.Id
+  local CustomDisplayDefaults = PersonInfoCommon.CustomDisplayDefaults
+  local Intensity = tonumber(FilterData.Intensity) or tonumber(CustomDisplayDefaults.FilterIntensity) or 50
+  local FilterConfigTable = DataMgr and DataMgr.CustomFilter or nil
+  local FilterConfig = FilterId and FilterConfigTable and FilterConfigTable[FilterId] or nil
+  if FilterConfig and FilterConfig.ForbidIntensityAdjust == true then
+    Intensity = 100
+  end
+  local Weight = math.max(0, math.min(1, Intensity / 100))
+  local State = self.SimpleFilterState
+  if type(State) == "table" and State.FilterId == FilterId and IsValid(State.Camera) and IsValid(State.Material) then
+    self:_SetFilterPostInt(State.Material, Weight)
+    State.Weight = Weight
+    return
+  end
+  self:ClearFilterEffect()
+  local PPEnum = DisplayConfig:GetFilterPPEnum(FilterId)
+  local bInvalidNumber = type(PPEnum) == "number" and PPEnum <= 0
+  if nil == PPEnum or bInvalidNumber then
+    DebugPrint(string.format("PersonInfoDisplayController: ApplyFilterEffect invalid PPEnum FilterId=%s PPEnum=%s", tostring(FilterId), tostring(PPEnum)))
+    return
+  end
+  local Camera = self:GetOutlineCameraComponent()
+  if not IsValid(Camera) then
+    return
+  end
+  local UPostProcessFunctionLibrary = LoadClass(Const.PostProcessFunctionLibraryPath)
+  if not UPostProcessFunctionLibrary then
+    return
+  end
+  local Material = UPostProcessFunctionLibrary.SimplePostProcess(PPEnum, Camera, 1)
+  self:_SetFilterPostInt(Material, Weight)
+  self.SimpleFilterState = {
+    Camera = Camera,
+    Material = Material,
+    Weight = Weight,
+    PPEnum = PPEnum,
+    FilterId = FilterId
+  }
 end
 
 function M:ShowMainCharacter(CharData, Avatar, AppearanceInfo)
@@ -954,7 +1300,11 @@ function M:OrbitCameraByCursorDelta(CursorDelta)
   if not Editor or not Editor.MoveCameraLocalRotation then
     return false
   end
-  return Editor:MoveCameraLocalRotation(-(CursorDelta.Y or 0) * (GetCameraInputConfig().CameraDragPitchSpeed or 0.5), (CursorDelta.X or 0) * (GetCameraInputConfig().CameraDragYawSpeed or 0.5), 0, self:GetCameraLimitConfig())
+  local bRotated = Editor:MoveCameraLocalRotation(-(CursorDelta.Y or 0) * (GetCameraInputConfig().CameraDragPitchSpeed or 0.5), (CursorDelta.X or 0) * (GetCameraInputConfig().CameraDragYawSpeed or 0.5), 0, self:GetCameraLimitConfig())
+  if bRotated and self.ArmoryHelper then
+    self.ArmoryHelper:CallBP_OnCameraRotated()
+  end
+  return bRotated
 end
 
 function M:OnScrolling(DeltaMove)
@@ -963,13 +1313,13 @@ function M:OnScrolling(DeltaMove)
   end
   local RootController = self.ActiveCustomEditRootController or self.ViewUI and self.ViewUI.GetCustomEditRootController and self.ViewUI:GetCustomEditRootController() or nil
   local bUseCustomEditRoam = RootController and RootController.IsPreviewCameraRoamEnabled ~= nil
-  if bUseCustomEditRoam and not RootController:IsPreviewCameraRoamEnabled() then
-    return false
-  end
-  if not bUseCustomEditRoam and self.PreviewCameraRuntime and self:IsEnableCameraScrolling() then
-    return self.PreviewCameraRuntime:OnScrolling(DeltaMove)
-  end
-  if self.Editor and DeltaMove and 0 ~= DeltaMove then
+  if bUseCustomEditRoam then
+    if not RootController:IsPreviewCameraRoamEnabled() then
+      return false
+    end
+    if not (self.Editor and DeltaMove) or 0 == DeltaMove then
+      return false
+    end
     self:BeginWheelCameraPreviewTransaction()
     local DistanceDelta = (DeltaMove or 0) * (GetCameraInputConfig().CameraScrollDistanceScale or 20)
     local bHandled = self:MoveCameraByAxis(DistanceDelta, 0, 0)
@@ -977,6 +1327,9 @@ function M:OnScrolling(DeltaMove)
       self:_RestartWheelCameraPreviewCommitTimer()
     end
     return bHandled
+  end
+  if self.PreviewCameraRuntime and self:IsEnableCameraScrolling() then
+    return self.PreviewCameraRuntime:OnScrolling(DeltaMove)
   end
   return false
 end
@@ -1276,7 +1629,11 @@ function M:ViewTarget()
     return
   end
   DebugPrint("PersonInfoDisplayController: ViewTarget use independent preview camera")
-  self.PreviewCameraRuntime:ViewTarget()
+  if self.PreviewCameraRuntime:ViewTarget() then
+    self:ClearFilterEffect()
+    local Draft = self.Editor and self.Editor.GetDraft and self.Editor:GetDraft() or self.SceneDraft
+    self:ApplyDraftFilter(Draft)
+  end
 end
 
 function M:_GetOrderedCharacterEntityIds()
@@ -1292,6 +1649,14 @@ end
 
 function M:_BuildCharacterEntityId(SlotIndex)
   return "char_slot_" .. tostring(SlotIndex)
+end
+
+function M:_BuildPetEntityId(SlotIndex)
+  return "pet_slot_" .. tostring(SlotIndex)
+end
+
+function M:_BuildItemEntityId(SlotIndex)
+  return "item_slot_" .. tostring(SlotIndex)
 end
 
 function M:PreviewCharacterChooseSlot(SlotIndex, CharData, Avatar, AppearanceInfo, ReferenceSlotDraft)
@@ -1393,6 +1758,38 @@ end
 
 function M:_IsCharacterEntityId(EntityId)
   return string.match(EntityId or "", "^char_slot_%d+$") ~= nil
+end
+
+function M:_IsPetEntityId(EntityId)
+  return string.match(EntityId or "", "^pet_slot_%d+$") ~= nil
+end
+
+function M:_IsItemEntityId(EntityId)
+  return string.match(EntityId or "", "^item_slot_%d+$") ~= nil
+end
+
+function M:_CollectPointerSelectionIgnoreActors(IgnoreEntityPrefixes)
+  local IgnoreActors = TArray(AActor)
+  if type(IgnoreEntityPrefixes) ~= "table" then
+    return IgnoreActors
+  end
+  for EntityId, Handle in pairs(self.EntityHandles or {}) do
+    local bIgnore = false
+    if IgnoreEntityPrefixes.Char and self:_IsCharacterEntityId(EntityId) then
+      bIgnore = true
+    elseif IgnoreEntityPrefixes.Pet and self:_IsPetEntityId(EntityId) then
+      bIgnore = true
+    elseif IgnoreEntityPrefixes.Item and self:_IsItemEntityId(EntityId) then
+      bIgnore = true
+    end
+    if bIgnore then
+      local Actor = Handle and Handle.GetActor and Handle:GetActor() or nil
+      if Actor then
+        IgnoreActors:Add(Actor)
+      end
+    end
+  end
+  return IgnoreActors
 end
 
 function M:_BuildCameraOffsetVector(CameraData)
@@ -1501,7 +1898,11 @@ function M:SyncCameraRigToArmoryHelper(LocalPosition, LocalRotation)
   if not self.PreviewCameraRuntime then
     return false
   end
-  return self.PreviewCameraRuntime:SetRelativeTransform(LocalPosition or FVector(0, 0, 0), LocalRotation or FRotator(0, 0, 0))
+  local bSuccess = self.PreviewCameraRuntime:SetRelativeTransform(LocalPosition or FVector(0, 0, 0), LocalRotation or FRotator(0, 0, 0))
+  if bSuccess and IsValid(self.ArmoryHelper) then
+    self.ArmoryHelper:CallBP_OnCameraRotated()
+  end
+  return bSuccess
 end
 
 function M:SetCameraRigLocalTransform(LocalPosition, LocalRotation, bSyncToHelper)
@@ -1531,6 +1932,18 @@ end
 function M:_ApplyDraftCameraB(CameraData)
   if not self.PreviewCameraRuntime then
     return false
+  end
+  if CameraData and CameraData.RelativeCharacter then
+    PreviewCameraCompatibility:ApplyTaggedCamera({
+      Controller = self,
+      CameraRuntime = self.PreviewCameraRuntime,
+      Data = CameraData,
+      OffsetVector = FVector(0, 0, 0),
+      OffsetRotator = FRotator(0, 0, 0),
+      Time = CameraData.Time or 0,
+      bRelativeCharacter = true
+    })
+    return true
   end
   if CameraData and CameraData.ServerPosition and CameraData.ServerRotation then
     local RelativeLocation = FVector(CameraData.ServerPosition[1] or 0, CameraData.ServerPosition[2] or 0, CameraData.ServerPosition[3] or 0)
@@ -1607,6 +2020,19 @@ end
 
 function M:PanCameraByDistance(DistanceDelta)
   return self:_PanCameraByDistanceB(DistanceDelta)
+end
+
+function M:GetPreviewCameraActor()
+  if self.PreviewCameraRuntime then
+    local CameraActor = self.PreviewCameraRuntime:EnsureCameraActor()
+    if CameraActor and IsValid(CameraActor) then
+      return CameraActor
+    end
+  end
+  if IsValid(self.ArmoryHelper) then
+    return self.ArmoryHelper
+  end
+  return nil
 end
 
 return M

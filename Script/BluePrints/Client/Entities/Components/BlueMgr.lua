@@ -32,9 +32,9 @@ function Component:CompleteProduct(DraftId)
   self:CallServer("CompleteProduct", Callback, DraftId)
 end
 
-function Component:OnBlueProductComplete(DraftId)
+function Component:OnBlueProductComplete(DraftId, CompleteNum)
   DebugPrint("Tianyi@ OnBlueProductComplete")
-  EventManager:FireEvent(EventID.OnBlueComplete, DraftId)
+  EventManager:FireEvent(EventID.OnBlueComplete, DraftId, CompleteNum)
   self.logger.debug("ZJT_ SeverCallClient OnBlueProductComplete ", DraftId)
   ForgeModel:IncreaseReddotByDraftInfo(DraftId)
 end
@@ -42,9 +42,9 @@ end
 function Component:AccelerateProduct(DraftId)
   self.logger.debug("ZJT_ AccelerateBlueProduct DraftId", DraftId)
   
-  local function Callback(Ret)
+  local function Callback(Ret, AcceleratedNum)
     self.logger.debug("ZJT_ AccelerateBlueProduct ServerCallClient ", Ret)
-    EventManager:FireEvent(EventID.OnAccerateProduce, DraftId, Ret)
+    EventManager:FireEvent(EventID.OnAccerateProduce, DraftId, Ret, AcceleratedNum)
   end
   
   self:CallServer("AccelerateProduct", Callback, DraftId)

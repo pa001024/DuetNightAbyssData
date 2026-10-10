@@ -234,12 +234,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "178351480005516429140",
-            startPort = "Out",
-            endQuest = "17865446879064480599",
-            endPort = "In"
-          },
-          {
             startQuest = "17865446879064480599",
             startPort = "Out",
             endQuest = "17816992638431058099",
@@ -435,6 +429,24 @@ return {
             startQuest = "178454900531729863148",
             startPort = "Out",
             endQuest = "178791736993120130270",
+            endPort = "In"
+          },
+          {
+            startQuest = "17865383728062038",
+            startPort = "Out",
+            endQuest = "17889383217222868327",
+            endPort = "In"
+          },
+          {
+            startQuest = "178351480005516429140",
+            startPort = "Out",
+            endQuest = "17889394168005156352",
+            endPort = "In"
+          },
+          {
+            startQuest = "17889394168005156352",
+            startPort = "Out",
+            endQuest = "17865446879064480599",
             endPort = "In"
           }
         },
@@ -1143,7 +1155,7 @@ return {
             key = "17865383728062038",
             type = "StandAloneBlackScreenNode",
             name = "独立黑屏节点",
-            pos = {x = 2833.4320396579687, y = 303.12320875718683},
+            pos = {x = 2839.4320396579687, y = 299.12320875718683},
             propsData = {
               FadeInSeconds = 0,
               FadeOutSeconds = 0,
@@ -1504,6 +1516,30 @@ return {
               ParamValue = 0,
               RelatedRegionId = {107301},
               bStoreToServer = true
+            }
+          },
+          ["17889383217222868327"] = {
+            key = "17889383217222868327",
+            type = "ShowOrHideUINode",
+            name = "显示或隐藏UI",
+            pos = {x = 3119.931022408963, y = 670.4472947073566},
+            propsData = {
+              Function = "HideUIInScreen",
+              UIParam = "AimIndicator",
+              ActionParam = "SpiralLeap",
+              ShowOrHide = true
+            }
+          },
+          ["17889394168005156352"] = {
+            key = "17889394168005156352",
+            type = "ShowOrHideUINode",
+            name = "显示或隐藏UI",
+            pos = {x = 4022.857382658621, y = 1599.0654670608699},
+            propsData = {
+              Function = "HideUIInScreen",
+              UIParam = "AimIndicator",
+              ActionParam = "SpiralLeap",
+              ShowOrHide = false
             }
           }
         },

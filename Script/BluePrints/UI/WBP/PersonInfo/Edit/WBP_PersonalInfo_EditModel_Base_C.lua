@@ -66,10 +66,27 @@ function M:BindPanelEvents()
 end
 
 function M:RefreshView()
+  if self:IsItemEditMode() then
+    self:RefreshSelectedItemPanel()
+    return
+  end
   self:RefreshSelectedCharacterPanel()
 end
 
+function M:IsItemEditMode()
+  return self.RootEditPage ~= nil and nil ~= self.RootEditPage.IsItemMainPageActive and self.RootEditPage:IsItemMainPageActive() == true
+end
+
+function M:IsPetEditMode()
+  return self.RootEditPage ~= nil and nil ~= self.RootEditPage.ShouldShowPetDetailPanel and self.RootEditPage:ShouldShowPetDetailPanel() == true
+end
+
 function M:RefreshSelectedCharacterPanel()
+  if self:IsPetEditMode() then
+    self:RefreshSelectedPetPanel()
+    return
+  end
+  self:_SetWeaponActionButtonsVisible(true)
   local ViewData = self.RootEditPage:BuildSelectedCharacterViewData()
   local CharData = ViewData.CharData
   local CharCfg = CharData and DataMgr.Char and DataMgr.Char[CharData.CharId] or nil
@@ -89,6 +106,64 @@ function M:RefreshSelectedCharacterPanel()
   self:_RefreshSliderPresentation("FrontBack")
   self:_RefreshSliderPresentation("LeftRight")
   self:_RefreshSliderPresentation("Horizontal")
+end
+
+function M:RefreshSelectedPetPanel()
+  self:_SetWeaponActionButtonsVisible(false)
+  local ViewData = self.RootEditPage:BuildSelectedPetViewData()
+  local PetCfg = ViewData.PetCfg
+  self.Text_Name:SetText(ViewData.Name or "")
+  self:_RefreshPetHeadIcon(PetCfg)
+  self.Text_TitlePosition:SetText(GText("UI_Accessory_Custom_Location"))
+  self.Text_TitleRotate:SetText(GText("UI_Accessory_Custom_Rotation"))
+  local Rotation = ViewData.Rotation or {}
+  self.CurrentTransformEditData = {
+    X = ViewData.Translation.X or 0,
+    Y = ViewData.Translation.Y or 0,
+    Z = ViewData.Translation.Z or 0,
+    Pitch = Rotation.Pitch or 0,
+    Yaw = Rotation.Yaw or 0,
+    Roll = Rotation.Roll or 0
+  }
+  self.CurrentTransformSliderRangeMap = ViewData.TransformRange or {}
+  self:_RefreshSliderPresentation("FrontBack")
+  self:_RefreshSliderPresentation("LeftRight")
+  self:_RefreshSliderPresentation("Horizontal")
+end
+
+function M:RefreshSelectedItemPanel()
+  self:_SetWeaponActionButtonsVisible(false)
+  local ViewData = self.RootEditPage:BuildSelectedItemViewData()
+  self.Text_Name:SetText(ViewData.Name or "")
+  self:_RefreshItemHeadIcon(ViewData.Icon)
+  self.Text_TitlePosition:SetText(GText("UI_Accessory_Custom_Location"))
+  self.Text_TitleRotate:SetText(GText("UI_Accessory_Custom_Rotation"))
+  local Rotation = ViewData.Rotation or {}
+  self.CurrentTransformEditData = {
+    X = ViewData.Translation.X or 0,
+    Y = ViewData.Translation.Y or 0,
+    Z = ViewData.Translation.Z or 0,
+    Pitch = Rotation.Pitch or 0,
+    Yaw = Rotation.Yaw or 0,
+    Roll = Rotation.Roll or 0
+  }
+  self.CurrentTransformSliderRangeMap = ViewData.TransformRange or {}
+  self:_RefreshSliderPresentation("FrontBack")
+  self:_RefreshSliderPresentation("LeftRight")
+  self:_RefreshSliderPresentation("Horizontal")
+end
+
+function M:_SetWeaponActionButtonsVisible(bVisible)
+  local Visibility = bVisible and UIConst.VisibilityOp.Visible or UIConst.VisibilityOp.Collapsed
+  if self.Btn_Weapon then
+    self.Btn_Weapon:SetVisibility(Visibility)
+  end
+  if self.Btn_Action then
+    self.Btn_Action:SetVisibility(Visibility)
+  end
+  if self.Group_Btn then
+    self.Group_Btn:SetVisibility(bVisible and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
+  end
 end
 
 function M:_InitButtonText()
@@ -124,9 +199,17 @@ function M:FocusGamepadDefaultPanelItem()
 end
 
 function M:OnBeginTransformSliderDrag(AxisName)
-  if self.RootEditPage then
-    self.RootEditPage:BeginCharacterTransformPreview()
+  if not self.RootEditPage then
+    return
   end
+  if self:IsItemEditMode() then
+    self.RootEditPage:BeginItemTransformPreview()
+    return
+  elseif self:IsPetEditMode() then
+    self.RootEditPage:BeginPetTransformPreview()
+    return
+  end
+  self.RootEditPage:BeginCharacterTransformPreview()
 end
 
 function M:OnTransformSliderValueChanged(AxisName, Value)
@@ -139,14 +222,28 @@ function M:OnTransformSliderValueChanged(AxisName, Value)
   end
   local FieldName = SliderConfig.Field
   self.CurrentTransformEditData[FieldName] = self:_ConvertSliderValueToBusinessValue(SliderConfig, Value)
-  self.RootEditPage:PreviewCharacterTransform(self.CurrentTransformEditData)
+  if self:IsItemEditMode() then
+    self.RootEditPage:PreviewItemTransform(self.CurrentTransformEditData)
+  elseif self:IsPetEditMode() then
+    self.RootEditPage:PreviewPetTransform(self.CurrentTransformEditData)
+  else
+    self.RootEditPage:PreviewCharacterTransform(self.CurrentTransformEditData)
+  end
   self:_RefreshSliderPresentation(AxisName)
 end
 
 function M:OnEndTransformSliderDrag(AxisName)
-  if self.RootEditPage then
-    self.RootEditPage:CommitCharacterTransformPreview()
+  if not self.RootEditPage then
+    return
   end
+  if self:IsItemEditMode() then
+    self.RootEditPage:CommitItemTransformPreview()
+    return
+  elseif self:IsPetEditMode() then
+    self.RootEditPage:CommitPetTransformPreview()
+    return
+  end
+  self.RootEditPage:CommitCharacterTransformPreview()
 end
 
 function M:AddInputMethodChangedListen()
@@ -343,6 +440,41 @@ function M:_RefreshHeadIcon(CharCfg)
   HeadImage:SetBrushResourceObject(HeadIcon)
 end
 
+function M:_RefreshItemHeadIcon(IconPath)
+  local HeadImage = self:_GetHeadImageWidget()
+  if not HeadImage then
+    return
+  end
+  local HeadIcon
+  if IconPath and "" ~= IconPath then
+    HeadIcon = LoadObject(IconPath)
+  end
+  local DynamicMaterial = HeadImage:GetDynamicMaterial()
+  if DynamicMaterial then
+    DynamicMaterial:SetTextureParameterValue("IconMap", HeadIcon)
+    return
+  end
+  HeadImage:SetBrushResourceObject(HeadIcon)
+end
+
+function M:_RefreshPetHeadIcon(PetCfg)
+  local HeadImage = self:_GetHeadImageWidget()
+  if not HeadImage then
+    return
+  end
+  local HeadIcon
+  local IconPath = PetCfg and PetCfg.Icon or nil
+  if IconPath and "" ~= IconPath then
+    HeadIcon = LoadObject(IconPath)
+  end
+  local DynamicMaterial = HeadImage:GetDynamicMaterial()
+  if DynamicMaterial then
+    DynamicMaterial:SetTextureParameterValue("IconMap", HeadIcon)
+    return
+  end
+  HeadImage:SetBrushResourceObject(HeadIcon)
+end
+
 function M:_ConvertSliderValueToBusinessValue(SliderConfig, SliderValue)
   local MinValue = SliderConfig.Min or 0
   local MaxValue = SliderConfig.Max or 1
@@ -360,9 +492,16 @@ end
 
 function M:_BuildAxisSliderConfig(AxisName)
   local BaseConfig = M.SliderConfigMap[AxisName]
+  if not BaseConfig then
+    return nil
+  end
+  local TitleKey = BaseConfig.TitleKey
+  if "Horizontal" == AxisName and self:IsPetEditMode() then
+    TitleKey = "UI_PersonalPage_Angle"
+  end
   local AxisRange = self:_GetCurrentAxisRange(BaseConfig.Field)
   return {
-    Title = GText(BaseConfig.TitleKey),
+    Title = GText(TitleKey),
     Field = BaseConfig.Field,
     Min = AxisRange.Min,
     Max = AxisRange.Max

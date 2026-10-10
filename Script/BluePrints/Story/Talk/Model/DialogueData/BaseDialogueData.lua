@@ -27,7 +27,10 @@ DialogueId:]] .. DialogueId
   Obj.DialoguePanelType = DialogueData.DialoguePanelType
   Obj.HeadIconType = DialogueData.HeadIconType
   Obj.GuideFacialId = DialogueData.GuideFacialId
-  Obj.Facial2DId = DialogueData.Facial2DId
+  local TalkTaskData = TalkTask and TalkTask.TalkTaskData
+  if not IsValid(TalkTaskData and TalkTaskData.FlowAsset) then
+    Obj.PortraitFacialType = DialogueData.PortraitFacialType or "Idle"
+  end
   Obj.CameraBlendCurve = DialogueData.CameraBlendCurve
   return Obj
 end

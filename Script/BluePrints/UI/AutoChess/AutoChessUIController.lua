@@ -109,6 +109,7 @@ function AutoChessUIController:UpdateMainPageEventTimeInfo()
   self.MainPageView:InitEventTimeInfos(EventTimeInfo, function()
     self:UpdateMainPageEventTimeInfo()
   end)
+  self.Model:RefreshAutoChessLinearReddot()
 end
 
 function AutoChessUIController:OnEquipItemClicked(EquipId)

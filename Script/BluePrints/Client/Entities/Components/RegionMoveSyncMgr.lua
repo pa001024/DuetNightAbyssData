@@ -87,32 +87,40 @@ end
 function Component:InitMoveSyncMgr()
   self.OtherRoleInfo = {}
   self.LocalMountPassengerInfo = nil
+  self.bRegionDeferredDestroyEnabledLast = LuaConst.bEnableRegionDeferredDestroy
 end
 
 function Component:DestoryAllOthers()
-  if not self.OtherRoleInfo then
-    return
-  end
-  if not LuaConst.bEnableRegionDeferredDestroy then
-    for k, v in pairs(self.OtherRoleInfo) do
-      self:RegionSyncRemoveRoleAndDestroy(v.ObjectId, v)
-    end
-    self.OtherRoleInfo = {}
-  else
-    local RoleSnapshot = self.OtherRoleInfo
+  local bEnableRegionDeferredDestroy = LuaConst.bEnableRegionDeferredDestroy
+  if not bEnableRegionDeferredDestroy and self.bRegionDeferredDestroyEnabledLast then
     local GameInstance = GWorld.GameInstance
     local RegionSycnSubsys = GameInstance and UE4.URegionSyncSubsystem.GetInstance(GameInstance)
     if RegionSycnSubsys then
+      RegionSycnSubsys:FlushRetiredRolesForDisable()
+    end
+  end
+  self.bRegionDeferredDestroyEnabledLast = bEnableRegionDeferredDestroy
+  if not self.OtherRoleInfo then
+    return
+  end
+  if bEnableRegionDeferredDestroy then
+    local RoleSnapshot = self.OtherRoleInfo
+    local GameInstance = GWorld.GameInstance
+    local RegionSycnSubsys = GameInstance and UE4.URegionSyncSubsystem.GetInstance(GameInstance)
+    if RegionSycnSubsys and RegionSycnSubsys:CanRetireAllRoleBornInfo() then
       RegionSycnSubsys:RetireAllRoleBornInfo()
       self.OtherRoleInfo = {}
       for _, RoleInfo in pairs(RoleSnapshot) do
         EventManager:FireEvent(EventID.OnlineRemoveOtherPlayer, RoleInfo.Uid)
         EventManager:FireEvent(EventID.RemoveRegionIndicatorInfo, RoleInfo.Uid)
       end
-    else
-      self.OtherRoleInfo = {}
+      return
     end
   end
+  for k, v in pairs(self.OtherRoleInfo) do
+    self:RegionSyncRemoveRoleAndDestroy(v.ObjectId, v)
+  end
+  self.OtherRoleInfo = {}
 end
 
 function Component:NotifyCharacterStartSync(RegionOnlineId)

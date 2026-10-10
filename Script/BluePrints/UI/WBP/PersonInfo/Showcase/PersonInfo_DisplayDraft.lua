@@ -9,6 +9,10 @@ local function GetDefaultPetSlotCount()
   return DisplayConfig:GetPetSlotCount()
 end
 
+local function GetDefaultItemSlotCount()
+  return DisplayConfig:GetItemSlotCount()
+end
+
 local function CloneValue(Value, Visited)
   if type(Value) ~= "table" then
     return Value
@@ -77,7 +81,20 @@ local function ClonePetSlot(Slot)
     SlotIndex = Slot.SlotIndex,
     PetData = Slot.PetData,
     OwnerEntityId = Slot.OwnerEntityId,
-    Transform = Slot.Transform
+    Transform = Slot.Transform,
+    TransformRotation = CloneValue(Slot.TransformRotation)
+  }
+end
+
+local function CloneItemSlot(Slot)
+  if not Slot then
+    return nil
+  end
+  return {
+    SlotIndex = Slot.SlotIndex,
+    ItemData = Slot.ItemData,
+    Transform = Slot.Transform,
+    TransformRotation = CloneValue(Slot.TransformRotation)
   }
 end
 
@@ -103,7 +120,17 @@ local function BuildEmptyPetSlot(Index)
     SlotIndex = Index,
     PetData = nil,
     OwnerEntityId = nil,
-    Transform = nil
+    Transform = nil,
+    TransformRotation = nil
+  }
+end
+
+local function BuildEmptyItemSlot(Index)
+  return {
+    SlotIndex = Index,
+    ItemData = nil,
+    Transform = nil,
+    TransformRotation = nil
   }
 end
 
@@ -112,12 +139,14 @@ function M:CreateEmpty(SceneId)
     Version = 1,
     CharacterSlots = {},
     PetSlots = {},
+    ItemSlots = {},
     Scene = {
       SceneType = CommonConst.EPreviewSceneType.PreviewCommon,
       SceneLocation = nil,
       SceneId = nil,
       EnvLight = {},
-      FreeLight = {}
+      FreeLight = {},
+      LightParam = nil
     },
     Other = {Filter = nil, Sticker = nil},
     Camera = {
@@ -136,6 +165,9 @@ function M:CreateEmpty(SceneId)
   for Index = 1, GetDefaultPetSlotCount() do
     Draft.PetSlots[Index] = BuildEmptyPetSlot(Index)
   end
+  for Index = 1, GetDefaultItemSlotCount() do
+    Draft.ItemSlots[Index] = BuildEmptyItemSlot(Index)
+  end
   DisplayConfig:ApplySceneDefaults(Draft, true, SceneId)
   return Draft
 end
@@ -151,6 +183,7 @@ function M:Clone(Draft)
     Version = Draft.Version,
     CharacterSlots = {},
     PetSlots = {},
+    ItemSlots = {},
     Scene = CloneValue(Draft.Scene),
     Other = CloneValue(Draft.Other),
     Camera = CloneValue(Draft.Camera)
@@ -161,8 +194,12 @@ function M:Clone(Draft)
   for Index, Slot in ipairs(Draft.PetSlots or {}) do
     NewDraft.PetSlots[Index] = ClonePetSlot(Slot)
   end
+  for Index, Slot in ipairs(Draft.ItemSlots or {}) do
+    NewDraft.ItemSlots[Index] = CloneItemSlot(Slot)
+  end
   self:EnsureCharacterSlots(NewDraft)
   self:EnsurePetSlots(NewDraft)
+  self:EnsureItemSlots(NewDraft)
   return NewDraft
 end
 
@@ -182,6 +219,15 @@ function M:EnsurePetSlots(Draft, Count)
   end
 end
 
+function M:EnsureItemSlots(Draft, Count)
+  Draft.ItemSlots = Draft.ItemSlots or {}
+  Count = Count or GetDefaultItemSlotCount()
+  for Index = 1, Count do
+    Draft.ItemSlots[Index] = Draft.ItemSlots[Index] or BuildEmptyItemSlot(Index)
+    Draft.ItemSlots[Index].SlotIndex = Index
+  end
+end
+
 function M:GetCharacterSlot(Draft, SlotIndex)
   self:EnsureCharacterSlots(Draft, SlotIndex)
   return Draft.CharacterSlots[SlotIndex]
@@ -192,6 +238,11 @@ function M:GetPetSlot(Draft, SlotIndex)
   return Draft.PetSlots[SlotIndex]
 end
 
+function M:GetItemSlot(Draft, SlotIndex)
+  self:EnsureItemSlots(Draft, SlotIndex)
+  return Draft.ItemSlots[SlotIndex]
+end
+
 function M:IsValidCharacterData(CharData)
   if type(CharData) ~= "table" then
     return false
@@ -199,12 +250,24 @@ function M:IsValidCharacterData(CharData)
   return CharData.Uuid ~= nil or nil ~= CharData.CharId
 end
 
+function M:IsValidPetData(PetData)
+  if type(PetData) ~= "table" then
+    return false
+  end
+  local PetId = tonumber(PetData.PetId)
+  return nil ~= PetId and PetId > 0
+end
+
 function M:IsCharacterSlotOccupied(Slot)
   return Slot and self:IsValidCharacterData(Slot.CharData)
 end
 
 function M:IsPetSlotOccupied(Slot)
-  return Slot and Slot.PetData ~= nil
+  return Slot and self:IsValidPetData(Slot.PetData)
+end
+
+function M:IsItemSlotOccupied(Slot)
+  return Slot and Slot.ItemData ~= nil
 end
 
 function M:IsEquivalent(DraftA, DraftB)

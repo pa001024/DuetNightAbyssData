@@ -84,5 +84,35 @@ return ReadOnly("PopupPack", {
     PopupPackId = 8,
     ShopItemId = 990008,
     TabId = 6
+  },
+  [9] = {
+    Desc = "Pack_Desc_PopupPack7",
+    DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/SingleIcon/T_Gacha_GiftPop_JJ01.T_Gacha_GiftPop_JJ01'",
+    Duration = 120,
+    MaxTrigger = 3,
+    Name = "Pack_Name_PopupPack1",
+    PopupPackId = 9,
+    ShopItemId = 990009,
+    TabId = 9
+  },
+  [10] = {
+    Desc = "Pack_Desc_PopupPack8",
+    DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/SingleIcon/T_Gacha_GiftPop_JJ03.T_Gacha_GiftPop_JJ03'",
+    Duration = 120,
+    MaxTrigger = 3,
+    Name = "Pack_Name_PopupPack2",
+    PopupPackId = 10,
+    ShopItemId = 990010,
+    TabId = 9
+  },
+  [11] = {
+    Desc = "Pack_Desc_PopupPack9",
+    DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/SingleIcon/T_Gacha_GiftPop_JJ04.T_Gacha_GiftPop_JJ04'",
+    Duration = 120,
+    MaxTrigger = 3,
+    Name = "Pack_Name_PopupPack3",
+    PopupPackId = 11,
+    ShopItemId = 990011,
+    TabId = 9
   }
 })

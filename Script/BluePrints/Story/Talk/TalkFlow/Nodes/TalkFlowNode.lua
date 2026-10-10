@@ -80,7 +80,7 @@ function M:BindNodeEvents(NodeEvents)
   self.OnNodeEnter = NodeEvents.OnNodeEnter
   self.OnNodeCreated = NodeEvents.OnNodeCreated
   self.OnFlowCreated = NodeEvents.OnFlowCreated
-  self.OnDialogueEnd = NodeEvents.OnDialogueEnd
+  self.OnFlowComplete = NodeEvents.OnFlowComplete
 end
 
 function M:CreateNodeData(DialogueId)

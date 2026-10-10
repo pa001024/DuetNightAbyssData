@@ -1,4 +1,5 @@
 require("UnLua")
+local MonsterUtils = require("Utils.MonsterUtils")
 local M = Class({
   "BluePrints.Common.TimerMgr",
   "BluePrints.Common.DelayFrameComponent",
@@ -58,11 +59,12 @@ function M:PressedSelectAction()
 end
 
 function M:ReleasedSelectAction()
-  if not IsValid(self.InteractiveComponent) or not self.Pressed then
+  local WasPressed = self.Pressed == true
+  self.Pressed = false
+  if not IsValid(self.InteractiveComponent) or not WasPressed then
     return
   end
   self.InteractiveComponent:BtnReleased(UE4.UGameplayStatics.GetPlayerCharacter(self, 0))
-  self.Pressed = false
 end
 
 function M:RefreshInfoByDevice()
@@ -85,12 +87,22 @@ function M:RefreshInfoByDevice()
 end
 
 function M:InitDefeatedCharacter(InCharacter, ParentWidget)
+  EventManager:RemoveEvent(EventID.UpdateBossToughness, self)
+  self.IsRecycling = false
+  self.Pressed = false
+  self.MarkPlayLoop = false
+  self.MarkLoopOut = false
+  self.bCanExecute = nil
+  self.PhoneExecute = nil
+  self.PhoneGroupExecuteDesc = nil
   self:SetVisibility(UIConst.VisibilityOp.Visible)
-  self:AddDelayFrameFunc(function()
-    self:PlayAnimation(self.In)
-  end, 1)
   self.DefeatedCharacter = InCharacter
   self.ParentWidget = ParentWidget
+  self:AddDelayFrameFunc(function()
+    if not self.IsRecycling and self.DefeatedCharacter == InCharacter and self.ParentWidget == ParentWidget then
+      self:PlayAnimation(self.In)
+    end
+  end, 1, "PlayExecuteIn")
   self.MainPlayer = UGameplayStatics.GetPlayerCameraManager(self, 0)
   self.InteractiveComponent = self.DefeatedCharacter.PenalizeInteractiveComponent
   self.ScreenLocation = FVector2D(0, 0)
@@ -106,7 +118,8 @@ function M:InitDefeatedCharacter(InCharacter, ParentWidget)
 end
 
 function M:InitTextExecuteDesc()
-  local PenalizeText = DataMgr.Monster[self.DefeatedCharacter.UnitId].BossPenalize.PenalizeText
+  local MonsterData = MonsterUtils.GetMonsterDataByOwner(self.DefeatedCharacter)
+  local PenalizeText = MonsterData and MonsterData.BossPenalize and MonsterData.BossPenalize.PenalizeText
   if PenalizeText then
     self.Text_ExecuteDesc:SetVisibility(ESlateVisibility.HitTestInvisible)
     self.Text_ExecuteDesc:SetText(GText(PenalizeText))
@@ -175,6 +188,30 @@ function M:HideExecuteItem()
   self:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
+function M:PrepareForRecycle()
+  if self.IsRecycling then
+    return false
+  end
+  self.IsRecycling = true
+  EventManager:RemoveEvent(EventID.UpdateBossToughness, self)
+  self:ReleasedSelectAction()
+  self:TryShowPhoneUI(false)
+  self:StopAllAnimations()
+  self.Pressed = false
+  self.MarkPlayLoop = false
+  self.MarkLoopOut = false
+  self.bCanExecute = nil
+  self.PhoneExecute = nil
+  self.PhoneGroupExecuteDesc = nil
+  self.DefeatedCharacter = nil
+  self.InteractiveComponent = nil
+  self.ParentWidget = nil
+  self.MainPlayer = nil
+  self.PlayerController = nil
+  self.LastTN = nil
+  return true
+end
+
 function M:UpdateScreenLocation(InDeltaTime)
   if not (IsValid(self.DefeatedCharacter) and IsValid(self.MainPlayer) and IsValid(self.InteractiveComponent)) or not IsValid(self.PlayerController) then
     self:HideExecuteItem()
@@ -213,7 +250,8 @@ function M:UpdateScreenLocation(InDeltaTime)
 end
 
 function M:RefreshTextDistanceVisibility()
-  local PenalizeText = self.DefeatedCharacter and self.DefeatedCharacter.UnitId and DataMgr.Monster[self.DefeatedCharacter.UnitId].BossPenalize.PenalizeText
+  local MonsterData = MonsterUtils.GetMonsterDataByOwner(self.DefeatedCharacter)
+  local PenalizeText = MonsterData and MonsterData.BossPenalize and MonsterData.BossPenalize.PenalizeText
   if PenalizeText and self.DefeatedCharacter:GetAttr("Hp") <= 0 and self.bCanExecute then
     self.Group_ExecuteDesc:SetVisibility(ESlateVisibility.HitTestInvisible)
     if self.PhoneGroupExecuteDesc then
@@ -231,11 +269,8 @@ function M:OnAnimationFinished(Animation)
   if self.Constructing then
     return
   end
-  if (Animation == self.Press or Animation == self.out) and not self:IsAnimationPlaying(self.In) then
-    EventManager:RemoveEvent(EventID.UpdateBossToughness, self)
-    if not self.IsForcedClosed then
-      self.ParentWidget:RecycleExecuteWidget(self.DefeatedCharacter)
-    end
+  if (Animation == self.Press or Animation == self.out) and not self.IsRecycling and self.ParentWidget and not self:IsAnimationPlaying(self.In) then
+    self.ParentWidget:RecycleExecuteWidget(self.DefeatedCharacter)
   end
 end
 
@@ -250,7 +285,7 @@ function M:TryShowPhoneUI(bShow)
   local Execute = BattleMainUI.Char_Skill.Execute
   if bShow then
     Execute:Show(self)
-  else
+  elseif Execute.ExecuteItems and Execute.ExecuteItems[self] then
     Execute:Hide(self)
   end
 end

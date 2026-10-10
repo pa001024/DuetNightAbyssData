@@ -75,6 +75,7 @@ function Menu_Function_Button_PC_C:LoadImage(MainUIId, Type)
   local BtnInfo = DataMgr.MainUI
   local Id = MainUIId
   self.EnterId = Id
+  self:InitEscBubble(BtnInfo[Id])
   local Icon = BtnInfo[Id].Icon
   if nil == Icon then
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Armory.T_Entrance_Armory"
@@ -111,7 +112,39 @@ function Menu_Function_Button_PC_C:LoadImage(MainUIId, Type)
   self:UpdateGuidePoint()
 end
 
+function Menu_Function_Button_PC_C:InitEscBubble(MainUIConfig)
+  self.CanShowEscBubble = false
+  if not self.Bubble then
+    return
+  end
+  self:HideEscBubble()
+  if CommonUtils.GetDeviceTypeByPlatformName(self) ~= "PC" or self.Type ~= "Small" or not MainUIConfig then
+    return
+  end
+  local BubbleText = MainUIConfig.EscShowTypeDes
+  if nil == BubbleText or "" == BubbleText then
+    return
+  end
+  self.CanShowEscBubble = true
+  self.Bubble:Init({Text = BubbleText})
+end
+
+function Menu_Function_Button_PC_C:ShowEscBubble()
+  if not (self.CanShowEscBubble and self.Bubble) or UIUtils.IsGamepadInput() then
+    return
+  end
+  self.Bubble:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  self.Bubble:PlayInAnimation()
+end
+
+function Menu_Function_Button_PC_C:HideEscBubble()
+  if self.Bubble then
+    self.Bubble:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+end
+
 function Menu_Function_Button_PC_C:Destruct()
+  self:HideEscBubble()
   self:ReddotTreePlugOut()
   self:RemoveDispatcher(EventID.ConditionComplete, self, self.OnConditionComplete)
   self:RemoveDispatcher(EventID.DownloadTaskStart, self, self.AddDownloadSignEffect)
@@ -162,6 +195,10 @@ function Menu_Function_Button_PC_C:BtnOnClick()
     AudioManager(self):PlayUISound(nil, "event:/ui/common/click_mid", nil, nil)
   else
     AudioManager(self):PlayUISound(nil, "event:/ui/common/click_mid", nil, nil)
+  end
+  if self.CustomClickFunc then
+    self.CustomClickFunc()
+    return
   end
   local MainUIConf = DataMgr.MainUI[self.EnterId]
   if self.LinkName and MainUIConf and MainUIConf.IfNoUI then
@@ -270,6 +307,11 @@ end
 function Menu_Function_Button_PC_C:OnBtnHovered()
   self.IsHovering = true
   self:PlayButtonHoverAnim()
+  if UIUtils.IsGamepadInput() then
+    self:HideEscBubble()
+  else
+    self:ShowEscBubble()
+  end
 end
 
 function Menu_Function_Button_PC_C:SetBtnHovered(IsHovered)
@@ -325,6 +367,7 @@ end
 
 function Menu_Function_Button_PC_C:OnBtnUnhovered()
   self.IsHovering = false
+  self:HideEscBubble()
   if not self.IsPressing then
     self:PlayButtonUnHoverAnim()
   end

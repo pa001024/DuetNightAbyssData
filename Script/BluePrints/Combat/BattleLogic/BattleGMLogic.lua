@@ -526,6 +526,15 @@ function Component:GM_TestBattle(Eid)
   self:AddBuffToTarget(Target, Target, 903, -1, 0, nil)
 end
 
+function Component:GM_DamageSyncProfile(PlayerEid, Enable, DamageCount, MaxDamage, HealInterval, MonsterToPlayerDamageCount, MonsterToPlayerMaxDamage)
+  local bEnable = tostring(Enable) == "1" or string.lower(tostring(Enable)) == "true"
+  UE4.UDamageSyncProfileFunctionLibrary.SetDamageSyncProfile(self, tonumber(PlayerEid) or 0, bEnable, tonumber(DamageCount) or 1000, tonumber(MaxDamage) or 100, tonumber(HealInterval) or 3, tonumber(MonsterToPlayerDamageCount) or 0, tonumber(MonsterToPlayerMaxDamage) or 100)
+end
+
+function Component:GM_ComboCountSyncProfile(PlayerEid, ResultCount)
+  UE4.UGMFunctionLibrary.SyncComboCountResults(self, tonumber(PlayerEid) or 0, tonumber(ResultCount) or 1000)
+end
+
 function Component:GM_RecoverPlayer(PlayerEid, TargetEid, IsBegin, OverrideSpeed)
   PlayerEid = tonumber(PlayerEid)
   TargetEid = tonumber(TargetEid)

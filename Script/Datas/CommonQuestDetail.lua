@@ -183,32 +183,34 @@ T.RT_137 = {50945}
 T.RT_138 = {50946}
 T.RT_139 = {50950}
 T.RT_140 = {50951}
-T.RT_141 = {11200101}
-T.RT_142 = {11200102}
-T.RT_143 = {11200103}
-T.RT_144 = {11200104}
-T.RT_145 = {11200105}
-T.RT_146 = {11200106}
-T.RT_147 = {11200107}
-T.RT_148 = {11200108}
-T.RT_149 = {11200109}
-T.RT_150 = {11200110}
-T.RT_151 = {11200111}
-T.RT_152 = {11200112}
-T.RT_153 = {11200401}
-T.RT_154 = {11200402}
-T.RT_155 = {11200403}
-T.RT_156 = {11200404}
-T.RT_157 = {11200405}
-T.RT_158 = {11200406}
-T.RT_159 = {11200407}
-T.RT_160 = {11200408}
-T.RT_161 = {11200409}
-T.RT_162 = {11200410}
-T.RT_163 = {11200411}
-T.RT_164 = {11200412}
-T.RT_165 = {1000501}
-T.RT_166 = {50930}
+T.RT_141 = {50954}
+T.RT_142 = {50955}
+T.RT_143 = {11200101}
+T.RT_144 = {11200102}
+T.RT_145 = {11200103}
+T.RT_146 = {11200104}
+T.RT_147 = {11200105}
+T.RT_148 = {11200106}
+T.RT_149 = {11200107}
+T.RT_150 = {11200108}
+T.RT_151 = {11200109}
+T.RT_152 = {11200110}
+T.RT_153 = {11200111}
+T.RT_154 = {11200112}
+T.RT_155 = {11200401}
+T.RT_156 = {11200402}
+T.RT_157 = {11200403}
+T.RT_158 = {11200404}
+T.RT_159 = {11200405}
+T.RT_160 = {11200406}
+T.RT_161 = {11200407}
+T.RT_162 = {11200408}
+T.RT_163 = {11200409}
+T.RT_164 = {11200410}
+T.RT_165 = {11200411}
+T.RT_166 = {11200412}
+T.RT_167 = {1000501}
+T.RT_168 = {50930}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -669,6 +671,60 @@ return ReadOnly("CommonQuestDetail", {
     StarterQuestDes = "CheZhanQuest_Des_10200414",
     Target = 5,
     TargetId = {505104}
+  },
+  [10200501] = {
+    EventId = 102005,
+    QuestId = 10200501,
+    QuestPhaseId = 1020051,
+    QuestReward = {102005001},
+    StarterQuestDes = "Event_TargetDes_10200501",
+    Target = 1,
+    TargetId = {10200501}
+  },
+  [10200502] = {
+    EventId = 102005,
+    QuestId = 10200502,
+    QuestPhaseId = 1020051,
+    QuestReward = {102005002},
+    StarterQuestDes = "Event_TargetDes_10200502",
+    Target = 1,
+    TargetId = {10200502}
+  },
+  [10200503] = {
+    EventId = 102005,
+    QuestId = 10200503,
+    QuestPhaseId = 1020051,
+    QuestReward = {102005003},
+    StarterQuestDes = "Event_TargetDes_10200503",
+    Target = 1,
+    TargetId = {10200503}
+  },
+  [10200504] = {
+    EventId = 102005,
+    QuestId = 10200504,
+    QuestPhaseId = 1020051,
+    QuestReward = {102005004},
+    StarterQuestDes = "Event_TargetDes_10200504",
+    Target = 1,
+    TargetId = {10200504}
+  },
+  [10200505] = {
+    EventId = 102005,
+    QuestId = 10200505,
+    QuestPhaseId = 1020051,
+    QuestReward = {102005005},
+    StarterQuestDes = "Event_TargetDes_10200505",
+    Target = 1,
+    TargetId = {10200505}
+  },
+  [10200506] = {
+    EventId = 102005,
+    QuestId = 10200506,
+    QuestPhaseId = 1020051,
+    QuestReward = {102005006},
+    StarterQuestDes = "Event_TargetDes_10200506",
+    Target = 1,
+    TargetId = {10200506}
   },
   [10300000] = {
     EventId = 103016,
@@ -1970,6 +2026,132 @@ return ReadOnly("CommonQuestDetail", {
     Target = 15,
     TargetId = T.RT_105
   },
+  [10303811] = {
+    EventId = 103038,
+    QuestId = 10303811,
+    QuestPhaseId = 1030380,
+    QuestReward = {10303811},
+    StarterQuestDes = "Event_TargetDes_10302711",
+    Target = 10000,
+    TargetId = T.RT_96
+  },
+  [10303812] = {
+    EventId = 103038,
+    QuestId = 10303812,
+    QuestPhaseId = 1030380,
+    QuestReward = {10303812},
+    StarterQuestDes = "Event_TargetDes_10302712",
+    Target = 50000,
+    TargetId = T.RT_96
+  },
+  [10303813] = {
+    EventId = 103038,
+    QuestId = 10303813,
+    QuestPhaseId = 1030380,
+    QuestReward = {10303813},
+    StarterQuestDes = "Event_TargetDes_10302713",
+    Target = 200000,
+    TargetId = T.RT_96
+  },
+  [10303814] = {
+    EventId = 103038,
+    QuestId = 10303814,
+    QuestPhaseId = 1030380,
+    QuestReward = {10303814},
+    StarterQuestDes = "Event_TargetDes_10302714",
+    Target = 3,
+    TargetId = T.RT_97
+  },
+  [10303815] = {
+    EventId = 103038,
+    QuestId = 10303815,
+    QuestPhaseId = 1030380,
+    QuestReward = {10303815},
+    StarterQuestDes = "Event_TargetDes_10302715",
+    Target = 6,
+    TargetId = T.RT_97
+  },
+  [10303816] = {
+    EventId = 103038,
+    QuestId = 10303816,
+    QuestPhaseId = 1030380,
+    QuestReward = {10303816},
+    StarterQuestDes = "Event_TargetDes_10302716",
+    Target = 9,
+    TargetId = T.RT_97
+  },
+  [10303821] = {
+    EventId = 103038,
+    QuestId = 10303821,
+    QuestPhaseId = 1030381,
+    QuestReward = {10303821},
+    StarterQuestDes = "Event_TargetDes_10302721",
+    Target = 10,
+    TargetId = T.RT_101
+  },
+  [10303822] = {
+    EventId = 103038,
+    QuestId = 10303822,
+    QuestPhaseId = 1030381,
+    QuestReward = {10303822},
+    StarterQuestDes = "Event_TargetDes_10302722",
+    Target = 50,
+    TargetId = T.RT_101
+  },
+  [10303823] = {
+    EventId = 103038,
+    QuestId = 10303823,
+    QuestPhaseId = 1030381,
+    QuestReward = {10303823},
+    StarterQuestDes = "Event_TargetDes_10302723",
+    Target = 100,
+    TargetId = T.RT_101
+  },
+  [10303824] = {
+    EventId = 103038,
+    QuestId = 10303824,
+    QuestPhaseId = 1030381,
+    QuestReward = {10303824},
+    StarterQuestDes = "Event_TargetDes_10302724",
+    Target = 10,
+    TargetId = T.RT_102
+  },
+  [10303825] = {
+    EventId = 103038,
+    QuestId = 10303825,
+    QuestPhaseId = 1030381,
+    QuestReward = {10303825},
+    StarterQuestDes = "Event_TargetDes_10302725",
+    Target = 10,
+    TargetId = T.RT_103
+  },
+  [10303826] = {
+    EventId = 103038,
+    QuestId = 10303826,
+    QuestPhaseId = 1030381,
+    QuestReward = {10303826},
+    StarterQuestDes = "Event_TargetDes_10302726",
+    Target = 5,
+    TargetId = T.RT_105
+  },
+  [10303827] = {
+    EventId = 103038,
+    QuestId = 10303827,
+    QuestPhaseId = 1030381,
+    QuestReward = {10303827},
+    StarterQuestDes = "Event_TargetDes_10302727",
+    Target = 10,
+    TargetId = T.RT_105
+  },
+  [10303828] = {
+    EventId = 103038,
+    QuestId = 10303828,
+    QuestPhaseId = 1030381,
+    QuestReward = {10303828},
+    StarterQuestDes = "Event_TargetDes_10302728",
+    Target = 15,
+    TargetId = T.RT_105
+  },
   [11100101] = {
     EventId = 111001,
     QuestId = 11100101,
@@ -2510,11 +2692,119 @@ return ReadOnly("CommonQuestDetail", {
     Target = 20,
     TargetId = T.RT_140
   },
+  [11100161] = {
+    EventId = 111007,
+    QuestId = 11100161,
+    QuestPhaseId = 2012,
+    QuestReward = T.RT_115,
+    StarterQuestDes = "UI_CommonQuest_11100101",
+    Target = 1,
+    TargetId = T.RT_141
+  },
+  [11100162] = {
+    EventId = 111007,
+    QuestId = 11100162,
+    QuestPhaseId = 2012,
+    QuestReward = T.RT_117,
+    StarterQuestDes = "UI_CommonQuest_11100102",
+    Target = 3,
+    TargetId = T.RT_141
+  },
+  [11100163] = {
+    EventId = 111007,
+    QuestId = 11100163,
+    QuestPhaseId = 2012,
+    QuestReward = T.RT_118,
+    StarterQuestDes = "UI_CommonQuest_11100103",
+    Target = 5,
+    TargetId = T.RT_141
+  },
+  [11100164] = {
+    EventId = 111007,
+    QuestId = 11100164,
+    QuestPhaseId = 2012,
+    QuestReward = T.RT_119,
+    StarterQuestDes = "UI_CommonQuest_11100104",
+    Target = 10,
+    TargetId = T.RT_141
+  },
+  [11100165] = {
+    EventId = 111007,
+    QuestId = 11100165,
+    QuestPhaseId = 2012,
+    QuestReward = T.RT_120,
+    StarterQuestDes = "UI_CommonQuest_11100105",
+    Target = 15,
+    TargetId = T.RT_141
+  },
+  [11100166] = {
+    EventId = 111007,
+    QuestId = 11100166,
+    QuestPhaseId = 2012,
+    QuestReward = T.RT_121,
+    StarterQuestDes = "UI_CommonQuest_11100106",
+    Target = 20,
+    TargetId = T.RT_141
+  },
+  [11100167] = {
+    EventId = 111007,
+    QuestId = 11100167,
+    QuestPhaseId = 2011,
+    QuestReward = T.RT_122,
+    StarterQuestDes = "UI_CommonQuest_11100107",
+    Target = 1,
+    TargetId = T.RT_142
+  },
+  [11100168] = {
+    EventId = 111007,
+    QuestId = 11100168,
+    QuestPhaseId = 2011,
+    QuestReward = T.RT_124,
+    StarterQuestDes = "UI_CommonQuest_11100108",
+    Target = 3,
+    TargetId = T.RT_142
+  },
+  [11100169] = {
+    EventId = 111007,
+    QuestId = 11100169,
+    QuestPhaseId = 2011,
+    QuestReward = T.RT_125,
+    StarterQuestDes = "UI_CommonQuest_11100109",
+    Target = 5,
+    TargetId = T.RT_142
+  },
+  [11100170] = {
+    EventId = 111007,
+    QuestId = 11100170,
+    QuestPhaseId = 2011,
+    QuestReward = T.RT_126,
+    StarterQuestDes = "UI_CommonQuest_11100110",
+    Target = 10,
+    TargetId = T.RT_142
+  },
+  [11100171] = {
+    EventId = 111007,
+    QuestId = 11100171,
+    QuestPhaseId = 2011,
+    QuestReward = T.RT_127,
+    StarterQuestDes = "UI_CommonQuest_11100111",
+    Target = 15,
+    TargetId = T.RT_142
+  },
+  [11100172] = {
+    EventId = 111007,
+    QuestId = 11100172,
+    QuestPhaseId = 2011,
+    QuestReward = T.RT_128,
+    StarterQuestDes = "UI_CommonQuest_11100112",
+    Target = 20,
+    TargetId = T.RT_142
+  },
   [11200101] = {
     EventId = 112001,
     QuestId = 11200101,
     QuestPhaseId = 1201,
-    QuestReward = T.RT_141,
+    QuestReward = T.RT_143,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 10,
     TargetId = T.RT_79
@@ -2523,7 +2813,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112001,
     QuestId = 11200102,
     QuestPhaseId = 1201,
-    QuestReward = T.RT_142,
+    QuestReward = T.RT_144,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 20,
     TargetId = T.RT_79
@@ -2532,7 +2822,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112001,
     QuestId = 11200103,
     QuestPhaseId = 1201,
-    QuestReward = T.RT_143,
+    QuestReward = T.RT_145,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 30,
     TargetId = T.RT_79
@@ -2541,7 +2831,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112001,
     QuestId = 11200104,
     QuestPhaseId = 1201,
-    QuestReward = T.RT_144,
+    QuestReward = T.RT_146,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 60,
     TargetId = T.RT_79
@@ -2550,7 +2840,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112001,
     QuestId = 11200105,
     QuestPhaseId = 1201,
-    QuestReward = T.RT_145,
+    QuestReward = T.RT_147,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 70,
     TargetId = T.RT_79
@@ -2559,7 +2849,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112001,
     QuestId = 11200106,
     QuestPhaseId = 1201,
-    QuestReward = T.RT_146,
+    QuestReward = T.RT_148,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 80,
     TargetId = T.RT_79
@@ -2568,7 +2858,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112001,
     QuestId = 11200107,
     QuestPhaseId = 1201,
-    QuestReward = T.RT_147,
+    QuestReward = T.RT_149,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 90,
     TargetId = T.RT_79
@@ -2577,7 +2867,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112001,
     QuestId = 11200108,
     QuestPhaseId = 1201,
-    QuestReward = T.RT_148,
+    QuestReward = T.RT_150,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 120,
     TargetId = T.RT_79
@@ -2586,7 +2876,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112001,
     QuestId = 11200109,
     QuestPhaseId = 1201,
-    QuestReward = T.RT_149,
+    QuestReward = T.RT_151,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 130,
     TargetId = T.RT_79
@@ -2595,7 +2885,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112001,
     QuestId = 11200110,
     QuestPhaseId = 1201,
-    QuestReward = T.RT_150,
+    QuestReward = T.RT_152,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 140,
     TargetId = T.RT_79
@@ -2604,7 +2894,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112001,
     QuestId = 11200111,
     QuestPhaseId = 1201,
-    QuestReward = T.RT_151,
+    QuestReward = T.RT_153,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 150,
     TargetId = T.RT_79
@@ -2613,7 +2903,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112001,
     QuestId = 11200112,
     QuestPhaseId = 1201,
-    QuestReward = T.RT_152,
+    QuestReward = T.RT_154,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 180,
     TargetId = T.RT_79
@@ -2622,7 +2912,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112002,
     QuestId = 11200201,
     QuestPhaseId = 1202,
-    QuestReward = T.RT_141,
+    QuestReward = T.RT_143,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 10,
     TargetId = T.RT_79
@@ -2631,7 +2921,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112002,
     QuestId = 11200202,
     QuestPhaseId = 1202,
-    QuestReward = T.RT_142,
+    QuestReward = T.RT_144,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 20,
     TargetId = T.RT_79
@@ -2640,7 +2930,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112002,
     QuestId = 11200203,
     QuestPhaseId = 1202,
-    QuestReward = T.RT_143,
+    QuestReward = T.RT_145,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 30,
     TargetId = T.RT_79
@@ -2649,7 +2939,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112002,
     QuestId = 11200204,
     QuestPhaseId = 1202,
-    QuestReward = T.RT_144,
+    QuestReward = T.RT_146,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 60,
     TargetId = T.RT_79
@@ -2658,7 +2948,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112002,
     QuestId = 11200205,
     QuestPhaseId = 1202,
-    QuestReward = T.RT_145,
+    QuestReward = T.RT_147,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 70,
     TargetId = T.RT_79
@@ -2667,7 +2957,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112002,
     QuestId = 11200206,
     QuestPhaseId = 1202,
-    QuestReward = T.RT_146,
+    QuestReward = T.RT_148,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 80,
     TargetId = T.RT_79
@@ -2676,7 +2966,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112002,
     QuestId = 11200207,
     QuestPhaseId = 1202,
-    QuestReward = T.RT_147,
+    QuestReward = T.RT_149,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 90,
     TargetId = T.RT_79
@@ -2685,7 +2975,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112002,
     QuestId = 11200208,
     QuestPhaseId = 1202,
-    QuestReward = T.RT_148,
+    QuestReward = T.RT_150,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 120,
     TargetId = T.RT_79
@@ -2694,7 +2984,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112002,
     QuestId = 11200209,
     QuestPhaseId = 1202,
-    QuestReward = T.RT_149,
+    QuestReward = T.RT_151,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 130,
     TargetId = T.RT_79
@@ -2703,7 +2993,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112002,
     QuestId = 11200210,
     QuestPhaseId = 1202,
-    QuestReward = T.RT_150,
+    QuestReward = T.RT_152,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 140,
     TargetId = T.RT_79
@@ -2712,7 +3002,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112002,
     QuestId = 11200211,
     QuestPhaseId = 1202,
-    QuestReward = T.RT_151,
+    QuestReward = T.RT_153,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 150,
     TargetId = T.RT_79
@@ -2721,7 +3011,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112002,
     QuestId = 11200212,
     QuestPhaseId = 1202,
-    QuestReward = T.RT_152,
+    QuestReward = T.RT_154,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 180,
     TargetId = T.RT_79
@@ -2838,7 +3128,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112004,
     QuestId = 11200401,
     QuestPhaseId = 1204,
-    QuestReward = T.RT_153,
+    QuestReward = T.RT_155,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 10,
     TargetId = T.RT_79
@@ -2847,7 +3137,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112004,
     QuestId = 11200402,
     QuestPhaseId = 1204,
-    QuestReward = T.RT_154,
+    QuestReward = T.RT_156,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 20,
     TargetId = T.RT_79
@@ -2856,7 +3146,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112004,
     QuestId = 11200403,
     QuestPhaseId = 1204,
-    QuestReward = T.RT_155,
+    QuestReward = T.RT_157,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 30,
     TargetId = T.RT_79
@@ -2865,7 +3155,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112004,
     QuestId = 11200404,
     QuestPhaseId = 1204,
-    QuestReward = T.RT_156,
+    QuestReward = T.RT_158,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 60,
     TargetId = T.RT_79
@@ -2874,7 +3164,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112004,
     QuestId = 11200405,
     QuestPhaseId = 1204,
-    QuestReward = T.RT_157,
+    QuestReward = T.RT_159,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 70,
     TargetId = T.RT_79
@@ -2883,7 +3173,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112004,
     QuestId = 11200406,
     QuestPhaseId = 1204,
-    QuestReward = T.RT_158,
+    QuestReward = T.RT_160,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 80,
     TargetId = T.RT_79
@@ -2892,7 +3182,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112004,
     QuestId = 11200407,
     QuestPhaseId = 1204,
-    QuestReward = T.RT_159,
+    QuestReward = T.RT_161,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 90,
     TargetId = T.RT_79
@@ -2901,7 +3191,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112004,
     QuestId = 11200408,
     QuestPhaseId = 1204,
-    QuestReward = T.RT_160,
+    QuestReward = T.RT_162,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 120,
     TargetId = T.RT_79
@@ -2910,7 +3200,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112004,
     QuestId = 11200409,
     QuestPhaseId = 1204,
-    QuestReward = T.RT_161,
+    QuestReward = T.RT_163,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 130,
     TargetId = T.RT_79
@@ -2919,7 +3209,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112004,
     QuestId = 11200410,
     QuestPhaseId = 1204,
-    QuestReward = T.RT_162,
+    QuestReward = T.RT_164,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 140,
     TargetId = T.RT_79
@@ -2928,7 +3218,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112004,
     QuestId = 11200411,
     QuestPhaseId = 1204,
-    QuestReward = T.RT_163,
+    QuestReward = T.RT_165,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 150,
     TargetId = T.RT_79
@@ -2937,7 +3227,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112004,
     QuestId = 11200412,
     QuestPhaseId = 1204,
-    QuestReward = T.RT_164,
+    QuestReward = T.RT_166,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 180,
     TargetId = T.RT_79
@@ -2946,7 +3236,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112005,
     QuestId = 11200501,
     QuestPhaseId = 1205,
-    QuestReward = T.RT_153,
+    QuestReward = T.RT_155,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 10,
     TargetId = T.RT_79
@@ -2955,7 +3245,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112005,
     QuestId = 11200502,
     QuestPhaseId = 1205,
-    QuestReward = T.RT_154,
+    QuestReward = T.RT_156,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 20,
     TargetId = T.RT_79
@@ -2964,7 +3254,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112005,
     QuestId = 11200503,
     QuestPhaseId = 1205,
-    QuestReward = T.RT_155,
+    QuestReward = T.RT_157,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 30,
     TargetId = T.RT_79
@@ -2973,7 +3263,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112005,
     QuestId = 11200504,
     QuestPhaseId = 1205,
-    QuestReward = T.RT_156,
+    QuestReward = T.RT_158,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 60,
     TargetId = T.RT_79
@@ -2982,7 +3272,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112005,
     QuestId = 11200505,
     QuestPhaseId = 1205,
-    QuestReward = T.RT_157,
+    QuestReward = T.RT_159,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 70,
     TargetId = T.RT_79
@@ -2991,7 +3281,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112005,
     QuestId = 11200506,
     QuestPhaseId = 1205,
-    QuestReward = T.RT_158,
+    QuestReward = T.RT_160,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 80,
     TargetId = T.RT_79
@@ -3000,7 +3290,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112005,
     QuestId = 11200507,
     QuestPhaseId = 1205,
-    QuestReward = T.RT_159,
+    QuestReward = T.RT_161,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 90,
     TargetId = T.RT_79
@@ -3009,7 +3299,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112005,
     QuestId = 11200508,
     QuestPhaseId = 1205,
-    QuestReward = T.RT_160,
+    QuestReward = T.RT_162,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 120,
     TargetId = T.RT_79
@@ -3018,7 +3308,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112005,
     QuestId = 11200509,
     QuestPhaseId = 1205,
-    QuestReward = T.RT_161,
+    QuestReward = T.RT_163,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 130,
     TargetId = T.RT_79
@@ -3027,7 +3317,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112005,
     QuestId = 11200510,
     QuestPhaseId = 1205,
-    QuestReward = T.RT_162,
+    QuestReward = T.RT_164,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 140,
     TargetId = T.RT_79
@@ -3036,7 +3326,7 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112005,
     QuestId = 11200511,
     QuestPhaseId = 1205,
-    QuestReward = T.RT_163,
+    QuestReward = T.RT_165,
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 150,
     TargetId = T.RT_79
@@ -3045,7 +3335,115 @@ return ReadOnly("CommonQuestDetail", {
     EventId = 112005,
     QuestId = 11200512,
     QuestPhaseId = 1205,
-    QuestReward = T.RT_164,
+    QuestReward = T.RT_166,
+    StarterQuestDes = "Event_TargetDes_112001",
+    Target = 180,
+    TargetId = T.RT_79
+  },
+  [11200601] = {
+    EventId = 112006,
+    QuestId = 11200601,
+    QuestPhaseId = 1206,
+    QuestReward = {11200601},
+    StarterQuestDes = "Event_TargetDes_112001",
+    Target = 10,
+    TargetId = T.RT_79
+  },
+  [11200602] = {
+    EventId = 112006,
+    QuestId = 11200602,
+    QuestPhaseId = 1206,
+    QuestReward = {11200602},
+    StarterQuestDes = "Event_TargetDes_112001",
+    Target = 20,
+    TargetId = T.RT_79
+  },
+  [11200603] = {
+    EventId = 112006,
+    QuestId = 11200603,
+    QuestPhaseId = 1206,
+    QuestReward = {11200603},
+    StarterQuestDes = "Event_TargetDes_112001",
+    Target = 30,
+    TargetId = T.RT_79
+  },
+  [11200604] = {
+    EventId = 112006,
+    QuestId = 11200604,
+    QuestPhaseId = 1206,
+    QuestReward = {11200604},
+    StarterQuestDes = "Event_TargetDes_112001",
+    Target = 60,
+    TargetId = T.RT_79
+  },
+  [11200605] = {
+    EventId = 112006,
+    QuestId = 11200605,
+    QuestPhaseId = 1206,
+    QuestReward = {11200605},
+    StarterQuestDes = "Event_TargetDes_112001",
+    Target = 70,
+    TargetId = T.RT_79
+  },
+  [11200606] = {
+    EventId = 112006,
+    QuestId = 11200606,
+    QuestPhaseId = 1206,
+    QuestReward = {11200606},
+    StarterQuestDes = "Event_TargetDes_112001",
+    Target = 80,
+    TargetId = T.RT_79
+  },
+  [11200607] = {
+    EventId = 112006,
+    QuestId = 11200607,
+    QuestPhaseId = 1206,
+    QuestReward = {11200607},
+    StarterQuestDes = "Event_TargetDes_112001",
+    Target = 90,
+    TargetId = T.RT_79
+  },
+  [11200608] = {
+    EventId = 112006,
+    QuestId = 11200608,
+    QuestPhaseId = 1206,
+    QuestReward = {11200608},
+    StarterQuestDes = "Event_TargetDes_112001",
+    Target = 120,
+    TargetId = T.RT_79
+  },
+  [11200609] = {
+    EventId = 112006,
+    QuestId = 11200609,
+    QuestPhaseId = 1206,
+    QuestReward = {11200609},
+    StarterQuestDes = "Event_TargetDes_112001",
+    Target = 130,
+    TargetId = T.RT_79
+  },
+  [11200610] = {
+    EventId = 112006,
+    QuestId = 11200610,
+    QuestPhaseId = 1206,
+    QuestReward = {11200610},
+    StarterQuestDes = "Event_TargetDes_112001",
+    Target = 140,
+    TargetId = T.RT_79
+  },
+  [11200611] = {
+    EventId = 112006,
+    QuestId = 11200611,
+    QuestPhaseId = 1206,
+    QuestReward = {11200611},
+    StarterQuestDes = "Event_TargetDes_112001",
+    Target = 150,
+    TargetId = T.RT_79
+  },
+  [11200612] = {
+    EventId = 112006,
+    QuestId = 11200612,
+    QuestPhaseId = 1206,
+    QuestReward = {11200612},
     StarterQuestDes = "Event_TargetDes_112001",
     Target = 180,
     TargetId = T.RT_79
@@ -3057,7 +3455,7 @@ return ReadOnly("CommonQuestDetail", {
     QuestReward = {11400101},
     StarterQuestDes = "Event_TargetDes_11400101",
     Target = 1,
-    TargetId = T.RT_165
+    TargetId = T.RT_167
   },
   [11400102] = {
     EventId = 114001,
@@ -3067,7 +3465,7 @@ return ReadOnly("CommonQuestDetail", {
     QuestReward = {11400102},
     StarterQuestDes = "Event_TargetDes_11400102",
     Target = 5,
-    TargetId = T.RT_166
+    TargetId = T.RT_168
   },
   [11400103] = {
     EventId = 114001,
@@ -3116,7 +3514,7 @@ return ReadOnly("CommonQuestDetail", {
     QuestReward = {11400107},
     StarterQuestDes = "Event_TargetDes_11400107",
     Target = 2,
-    TargetId = T.RT_165
+    TargetId = T.RT_167
   },
   [11400108] = {
     EventId = 114001,
@@ -3126,7 +3524,7 @@ return ReadOnly("CommonQuestDetail", {
     QuestReward = {11400108},
     StarterQuestDes = "Event_TargetDes_11400108",
     Target = 10,
-    TargetId = T.RT_166
+    TargetId = T.RT_168
   },
   [11400109] = {
     EventId = 114001,
@@ -3175,7 +3573,7 @@ return ReadOnly("CommonQuestDetail", {
     QuestReward = {11400113},
     StarterQuestDes = "Event_TargetDes_11400113",
     Target = 3,
-    TargetId = T.RT_165
+    TargetId = T.RT_167
   },
   [11400114] = {
     EventId = 114001,
@@ -3185,7 +3583,7 @@ return ReadOnly("CommonQuestDetail", {
     QuestReward = {11400114},
     StarterQuestDes = "Event_TargetDes_11400114",
     Target = 15,
-    TargetId = T.RT_166
+    TargetId = T.RT_168
   },
   [11400115] = {
     EventId = 114001,
@@ -3956,5 +4354,71 @@ return ReadOnly("CommonQuestDetail", {
     StarterQuestDes = "UI_CommonQuest_11100112",
     Target = 20,
     TargetId = T.RT_123
+  },
+  [1030200401] = {
+    AutoGetReward = true,
+    EventId = 10302004,
+    QuestId = 1030200401,
+    QuestPhaseId = 103020041,
+    QuestReward = T.RT_111,
+    QuestType = 2,
+    StarterQuestDes = "Event_TargetDes_1030200201",
+    Target = 1,
+    TargetId = T.RT_112
+  },
+  [1030200402] = {
+    AutoGetReward = true,
+    EventId = 10302004,
+    QuestId = 1030200402,
+    QuestPhaseId = 103020041,
+    QuestReward = T.RT_113,
+    QuestType = 2,
+    StarterQuestDes = "Event_TargetDes_1030200202",
+    Target = 5,
+    TargetId = T.RT_112
+  },
+  [1030200403] = {
+    AutoGetReward = true,
+    EventId = 10302004,
+    QuestId = 1030200403,
+    QuestPhaseId = 103020041,
+    QuestReward = T.RT_111,
+    QuestType = 2,
+    StarterQuestDes = "Event_TargetDes_1030200203",
+    Target = 5,
+    TargetId = T.RT_81
+  },
+  [1030200404] = {
+    AutoGetReward = true,
+    EventId = 10302004,
+    QuestId = 1030200404,
+    QuestPhaseId = 103020041,
+    QuestReward = T.RT_113,
+    QuestType = 2,
+    StarterQuestDes = "Event_TargetDes_1030200204",
+    Target = 25,
+    TargetId = T.RT_81
+  },
+  [1030200405] = {
+    AutoGetReward = true,
+    EventId = 10302004,
+    QuestId = 1030200405,
+    QuestPhaseId = 103020041,
+    QuestReward = T.RT_111,
+    QuestType = 2,
+    StarterQuestDes = "Event_TargetDes_1030200205",
+    Target = 5,
+    TargetId = T.RT_114
+  },
+  [1030200406] = {
+    AutoGetReward = true,
+    EventId = 10302004,
+    QuestId = 1030200406,
+    QuestPhaseId = 103020041,
+    QuestReward = T.RT_113,
+    QuestType = 2,
+    StarterQuestDes = "Event_TargetDes_1030200206",
+    Target = 25,
+    TargetId = T.RT_114
   }
 })

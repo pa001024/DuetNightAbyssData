@@ -8,7 +8,8 @@ local EItemType = {
   [5] = "WeaponAccessory",
   [6] = "Resource",
   [7] = "HeadFrame",
-  [8] = "HeadSculpture"
+  [8] = "HeadSculpture",
+  [9] = "Background"
 }
 local ItemUtils = {}
 
@@ -175,12 +176,14 @@ function ItemUtils.GetWalnutItemPercent(WalnutItemId)
   return GoldTotal / Total, SilverTotal / Total, BronzeTotal / Total
 end
 
-function ItemUtils.GetItemLimitedInfo(ResourceId)
+function ItemUtils.GetItemLimitedInfo(ResourceId, Type)
   local Res
-  if not DataMgr.LimitedTimeResource[ResourceId] then
+  Type = Type or "Resource"
+  local TypeData = DataMgr.LimitedTimeResource[Type]
+  if not TypeData or not TypeData[ResourceId] then
     return Res
   end
-  local LimitedInfoLst = CommonUtils.DeepCopy(DataMgr.LimitedTimeResource[ResourceId])
+  local LimitedInfoLst = CommonUtils.DeepCopy(TypeData[ResourceId])
   table.sort(LimitedInfoLst, function(a, b)
     return a.EndTime < b.EndTime
   end)
@@ -346,6 +349,58 @@ function ItemUtils.HasBackground(BackgroundId)
     end
   end
   return false
+end
+
+local GreatProductCache
+
+local function GetGreatProductCache()
+  if not GreatProductCache then
+    GreatProductCache = {
+      WholeTypes = {},
+      PartialIds = {}
+    }
+    for _, Product in pairs(DataMgr.GreatProduct) do
+      local Type = Product.GreatProductType
+      local Ids = Product.GreatProductTypeId
+      if Ids and #Ids > 0 then
+        local IdMap = GreatProductCache.PartialIds[Type] or {}
+        for _, Id in ipairs(Ids) do
+          IdMap[Id] = true
+        end
+        GreatProductCache.PartialIds[Type] = IdMap
+      else
+        GreatProductCache.WholeTypes[Type] = true
+      end
+    end
+  end
+  return GreatProductCache
+end
+
+function ItemUtils.IsGreatProduct(TableName, ItemId)
+  local Cache = GetGreatProductCache()
+  if Cache.WholeTypes[TableName] then
+    return true
+  end
+  local IdMap = Cache.PartialIds[TableName]
+  return nil ~= IdMap and true == IdMap[ItemId]
+end
+
+function ItemUtils.TrySendTaskbarReward(TableName, ItemId, Count)
+  if not ItemUtils.IsGreatProduct(TableName, ItemId) then
+    return false
+  end
+  local ItemName = ItemUtils:GetDropName(ItemId, TableName)
+  if IsNilOrEmpty(ItemName) then
+    return false
+  end
+  local ItemRarity = ItemUtils.GetItemRarity(ItemId, TableName)
+  local bOk, Err = pcall(function()
+    UE4.UEMTaskbarRewardLibrary.SendTaskbarReward(ItemName, ItemRarity, Count or 1, ItemId)
+  end)
+  if not bOk then
+    DebugPrint("SendTaskbarReward failed:", Err)
+  end
+  return bOk
 end
 
 return ItemUtils

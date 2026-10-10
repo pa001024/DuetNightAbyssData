@@ -106,17 +106,22 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
     self.IsGamePad = true
     IsEventHandled = self.Tab_OnlineAction:Handle_KeyEventOnGamePad(InKeyName)
-    IsEventHandled = IsEventHandled or self:OnGamePadDown(InKeyName)
-    return UE4.UWidgetBlueprintLibrary.Handled()
+    if not IsEventHandled then
+      IsEventHandled = self:OnGamePadDown(InKeyName)
+    end
   else
     self.IsGamePad = false
     if "Escape" == InKeyName then
+      IsEventHandled = true
       self:OnReturnKeyDown()
     elseif "Q" == InKeyName then
+      IsEventHandled = true
       self:OnLeftTabKeyDown()
     elseif "E" == InKeyName then
+      IsEventHandled = true
       self:OnRightTabKeyDown()
     elseif InKeyName == OnlineActionCommon.RefreshAllKey then
+      IsEventHandled = true
       if self.IsInRefreshCD then
       else
         self:OnRefreshAllKeyDown()
@@ -125,11 +130,17 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
           self.IsInRefreshCD = false
         end)
       end
-    elseif InKeyName == OnlineActionCommon.RejectAllKey and 2 ~= self.Tab_OnlineAction.CurrentTab then
-      self:OnRejectAllKeyDown()
+    elseif InKeyName == OnlineActionCommon.RejectAllKey then
+      IsEventHandled = true
+      if 2 ~= self.Tab_OnlineAction.CurrentTab then
+        self:OnRejectAllKeyDown()
+      end
     end
   end
-  return UE4.UWidgetBlueprintLibrary.Handled()
+  if IsEventHandled then
+    return UE4.UWidgetBlueprintLibrary.Handled()
+  end
+  return UE4.UWidgetBlueprintLibrary.Unhandled()
 end
 
 function M:OnGamePadDown(InKeyName)

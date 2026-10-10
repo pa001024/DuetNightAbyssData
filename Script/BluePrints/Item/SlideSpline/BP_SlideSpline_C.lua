@@ -129,6 +129,9 @@ end
 
 function BP_SlideSpline_C:ReceiveTick(DeltaSeconds)
   self.Overridden.ReceiveTick(self, DeltaSeconds)
+  if self:IsExistTimer("SlideLaunchPlayer") then
+    return
+  end
   if IsValid(self.CurPlayer) and self.PlayerInSlide then
     self:EnsureSlideCMCLocked(self.CurPlayer)
     if self.PlayerInSwitch then
@@ -216,6 +219,8 @@ function BP_SlideSpline_C:LeaveSlideMechanism_Lua(IsPassive)
     self:RemoveTimer("MovePlayer")
     self.PlayerInSwitch = false
     self.SwitchCurrentRotation = nil
+    self.PlayerInSlide = false
+    local LeavingPlayer = self.CurPlayer
     local Distance = self.Progress * self.Length
     local Tangent = self.Spline:GetDirectionAtDistanceAlongSpline(Distance, ESplineCoordinateSpace.World)
     Tangent:Normalize()
@@ -251,6 +256,9 @@ function BP_SlideSpline_C:LeaveSlideMechanism_Lua(IsPassive)
       self.CanChange = false
       self.MoveDirection = 1
       self:OnEndLeave()
+      if IsValid(LeavingPlayer) then
+        LeavingPlayer:RestoreSlideCameraState()
+      end
       self:CheckInitialOverlap()
     end, false, 0, "SlideLaunchPlayer")
     self:AddTimer(self.ChangeCD, function()
@@ -320,6 +328,9 @@ end
 
 function BP_SlideSpline_C:UpdateLockedCamera(Rotation)
   if not self.CurPlayer then
+    return
+  end
+  if self:IsExistTimer("SlideLaunchPlayer") then
     return
   end
   if not self.LockCamera then
@@ -666,6 +677,9 @@ end
 
 function BP_SlideSpline_C:EnsureSlideCMCLocked(Player)
   if not IsValid(Player) then
+    return
+  end
+  if self:IsExistTimer("SlideLaunchPlayer") then
     return
   end
   if self.SlideSavedForbidOrient == nil then

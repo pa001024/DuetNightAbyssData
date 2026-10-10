@@ -161,6 +161,14 @@ BattleHUDCommonConst.DesignBaseConfigInHUD = {
     InnerActiveSlateName = "Button_Area",
     MaskNodeName = "Image_AimLockedPos"
   },
+  AimPos = {
+    WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_BattleAimBtn_M.WBP_BattleAimBtn_M_C'",
+    WidgetName = "Aim",
+    HUDNodeName = "Aim",
+    TextMapContent = "UI_Keyboard_Map_PreAim",
+    InnerActiveSlateName = "Button_Area",
+    MaskNodeName = "Image_AimPos"
+  },
   SquatPos = {
     WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_Squat_M.WBP_Battle_Squat_M_C'",
     WidgetName = "Squat",

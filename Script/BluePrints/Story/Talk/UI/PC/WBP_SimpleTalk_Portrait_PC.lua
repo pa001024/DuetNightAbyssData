@@ -13,41 +13,16 @@ WBP_SimpleTalk_PC._components = {
 
 function WBP_SimpleTalk_PC:InitImpressionUI()
   WBP_SimpleTalk_PC.Super.InitImpressionUI(self)
-  self:InitKeyInfo()
   self:RefreshBaseInfo()
-  self:AddLSFocusTarget(self.Btn_DimensionDrawArea.Key_Dimension, self.Btn_DimensionDrawArea, "Menu", true)
-  self:AddLSFocusTarget(self.Com_Cost.Key, self.Com_Cost, "RS", true)
 end
 
 function WBP_SimpleTalk_PC:GetImpressionItemUIPath()
   return ImpressionItemUIPath
 end
 
-function WBP_SimpleTalk_PC:InitOptions(OptionData, TalkTriggerId, ImpressionAreaId, OnOptionItemClicked)
-  WBP_SimpleTalk_PC.Super.InitOptions(self, OptionData, TalkTriggerId, ImpressionAreaId, OnOptionItemClicked)
+function WBP_SimpleTalk_PC:InitOptions(OptionData, TalkTriggerId, ImpressionAreaId)
+  WBP_SimpleTalk_PC.Super.InitOptions(self, OptionData, TalkTriggerId, ImpressionAreaId)
   self:RefreshBaseInfo()
-end
-
-function WBP_SimpleTalk_PC:InitKeyInfo()
-  self.Key_PickUp:CreateCommonKey({
-    KeyInfoList = {
-      {
-        Type = "Text",
-        Text = CommonUtils:GetActionMappingKeyName("TalkOption")
-      }
-    }
-  })
-  self.Key_Controller:CreateCommonKey({
-    KeyInfoList = {
-      {
-        Type = "Img",
-        ImgShortPath = CommonUtils:GetKeyText(CommonUtils:GetActionMappingKeyName("TalkOption", true))
-      }
-    }
-  })
-  if self.KeyNode then
-    self.KeyNode:SetVisibility(ESlateVisibility.Collapsed)
-  end
 end
 
 function WBP_SimpleTalk_PC:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
@@ -144,24 +119,17 @@ function WBP_SimpleTalk_PC:OnWikiButtonClicked()
 end
 
 function WBP_SimpleTalk_PC:IsTipsOpen()
-  return self.Com_Cost:HasFocusedDescendants() or self.Com_Cost:HasAnyUserFocus()
+  return self.OptionComp:IsTipsOpen()
 end
 
 function WBP_SimpleTalk_PC:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   DebugPrint("WBP_SimpleTalk_PC:RefreshOpInfoByInputDevice", CurInputDevice, CurGamepadName)
   local IsGamePad = CurInputDevice == ECommonInputType.Gamepad
   self.IsGamePad = IsGamePad
-  if self.OptionComp then
-    self.OptionComp:UpdateKeyImg(IsGamePad, CurGamepadName)
+  if IsGamePad and (not self:HasFocusedDescendants() or self:HasAnyUserFocus()) then
+    self:SetFocus()
   end
-  if IsGamePad then
-    if not self:HasFocusedDescendants() or self:HasAnyUserFocus() then
-      self:SetFocus()
-    end
-    self.WS_Node:SetActiveWidgetIndex(1)
-  else
-    self.WS_Node:SetActiveWidgetIndex(0)
-  end
+  self.OptionComp:Event_UpdateKeyImg(IsGamePad, CurGamepadName)
   self.WBP_Story_PlayKey_P:UpdateKeyImg(IsGamePad)
 end
 
@@ -171,31 +139,8 @@ function WBP_SimpleTalk_PC:ClearOptions()
 end
 
 function WBP_SimpleTalk_PC:AdaptPlatform()
-  self.Img_Mouse:SetVisibility(ESlateVisibility.HitTestInvisible)
-end
-
-function WBP_SimpleTalk_PC:OnExitButtonSelectedPlatform(bIsSelect)
-  if bIsSelect then
-    self.KeyNode:SetVisibility(ESlateVisibility.HitTestInvisible)
-  else
-    self.KeyNode:SetVisibility(ESlateVisibility.Collapsed)
-  end
-end
-
-function WBP_SimpleTalk_PC:OnExitButtonReleasedByPlatform()
-  if self:IsExitButtonSelect() then
-    self:PlayAnimation(self.BtnQuit_Hover, 0, 1)
-  end
-end
-
-function WBP_SimpleTalk_PC:PlayExitButtonHoveredPerformanceByPlatform()
-  self:StopAnimation(self.BtnQuit_UnHover)
-  self:PlayAnimation(self.BtnQuit_Hover, 0, 1)
-end
-
-function WBP_SimpleTalk_PC:PlayExitButtonUnhoveredPerformanceByPlatform()
-  self:StopAnimation(self.BtnQuit_Hover)
-  self:PlayAnimation(self.BtnQuit_UnHover)
+  self.OptionComp:Event_AdaptPlatform(false)
+  self.DimensionComp:Event_AdaptPlatform(false)
 end
 
 function WBP_SimpleTalk_PC:InitPlayKey()
@@ -203,18 +148,6 @@ function WBP_SimpleTalk_PC:InitPlayKey()
 end
 
 function WBP_SimpleTalk_PC:InitAutoPlay()
-end
-
-function WBP_SimpleTalk_PC:ChangeImgMouseVisibility(OptionData)
-  if OptionData.OptionType == ETalkOptionType.Check then
-    self.Img_Mouse:SetVisibility(ESlateVisibility.HitTestInvisible)
-    return
-  end
-  if self.OptionMaxNum >= 2 then
-    self.Img_Mouse:SetVisibility(ESlateVisibility.HitTestInvisible)
-    return
-  end
-  self.Img_Mouse:SetVisibility(ESlateVisibility.Collapsed)
 end
 
 function WBP_SimpleTalk_PC:PreExitTalkTask(TalkTask, TalkData, OnPreExitTalkTaskFinished, OutType, OutTime)

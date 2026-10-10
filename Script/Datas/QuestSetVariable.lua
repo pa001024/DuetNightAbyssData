@@ -622,6 +622,15 @@ return ReadOnly("QuestSetVariable", {
       QuestStartorSuccess = "Success"
     }
   },
+  [11023206] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ110232", Value = 1}
+      },
+      QuestId = 11023206,
+      QuestStartorSuccess = "Success"
+    }
+  },
   [11023301] = {
     Start = {
       Info = {
@@ -1001,6 +1010,24 @@ return ReadOnly("QuestSetVariable", {
         [3] = {Name = "IQ12030706", Value = 0}
       },
       QuestId = 12030801,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [12070401] = {
+    Start = {
+      Info = {
+        [1] = {Name = "IQ120704", Value = 1}
+      },
+      QuestId = 12070401,
+      QuestStartorSuccess = "Start"
+    }
+  },
+  [12070602] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ120704", Value = 0}
+      },
+      QuestId = 12070602,
       QuestStartorSuccess = "Success"
     }
   },

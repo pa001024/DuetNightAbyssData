@@ -3,12 +3,17 @@ local UIUtils = require("Utils.UIUtils")
 local MiscUtils = require("Utils.MiscUtils")
 local GREY_TITLE_FONT_MATERIAL_PATH = "MaterialInstanceConstant'/Game/UI/WBP/Common/VX/Common/MI_Com_TagWord_Grey.MI_Com_TagWord_Grey'"
 local M = Class("BluePrints.UI.BP_EMUserWidget_C")
+local StickerPreviewHost = require("BluePrints.UI.WBP.PersonInfo.Edit.PersonInfo_CustomEditStickerPreviewHost")
+StickerPreviewHost.BindMethods(M)
 M._components = {
   "BluePrints.UI.WBP.PersonInfo.Edit.PersonInfo_CustomEditPageHostComponent"
 }
 M.MainTabNameList = {
   [1] = "Char",
-  [2] = "Scene"
+  [2] = "Pet",
+  [3] = "Item",
+  [4] = "Scene",
+  [5] = "Other"
 }
 M.MainTabConfigList = {
   [1] = {
@@ -18,10 +23,28 @@ M.MainTabConfigList = {
     TabId = 1
   },
   [2] = {
+    Name = "Pet",
+    TextKey = "UI_Pet",
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Pet",
+    TabId = 2
+  },
+  [3] = {
+    Name = "Item",
+    TextKey = "UI_PersonInfo_CustomItem",
+    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Personal_Object.T_Tab_Personal_Object'",
+    TabId = 3
+  },
+  [4] = {
     Name = "Scene",
     TextKey = "UI_PersonalPage_Scene",
     IconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Personal_Scence",
-    TabId = 2
+    TabId = 4
+  },
+  [5] = {
+    Name = "Other",
+    TextKey = "UI_PersonalPage_Others",
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_System",
+    TabId = 5
   }
 }
 
@@ -36,7 +59,14 @@ function M:InitMainPage(EditRootController)
   self.CharacterSlotEntryWidgetMap = {}
   self.IsHudBubbleInitialized = false
   self.IsAddCharacterBubbleShowing = false
+  self.IsChangePetBubbleInitialized = false
+  self.IsAddPetBubbleShowing = false
+  self.SideBtnIndex = nil
   self.bCharacterSlotSwitchGamepadKeyInitialized = false
+  self.StickersEditWidget = nil
+  self.bStickerEditActive = false
+  self._bStickerEditTabSingleMode = false
+  self.ConfirmedStickerWidget = nil
   self:BindRootPageEvents()
   if self.Com_HudBubble then
     self.Com_HudBubble:PlayHorizontalLoopAnimation()
@@ -61,6 +91,7 @@ function M:RefreshView()
   if not self.EditRootController then
     return
   end
+  self:_EnsureMainTabConfigCurrent()
   self:_EnsureCharacterSlotListInitialized()
   self:RefreshTabState()
   self:RefreshSlotAreaState()
@@ -75,11 +106,14 @@ function M:RefreshTabState()
   if not self.EditRootController then
     return
   end
-  local bShowTab = not self.EditRootController:IsChoosePageActive()
+  local bIsChoosePage = self.EditRootController:IsChoosePageActive()
+  local bIsStickerEditPage = self.EditRootController.IsStickerEditPageActive and self.EditRootController:IsStickerEditPageActive()
+  local bShowTab = not bIsChoosePage
   self:SetRootTabVisibility(bShowTab)
-  if bShowTab then
+  if bShowTab and not bIsStickerEditPage then
     self:_RefreshMainTabSelection()
   end
+  self:_ApplyStickerEditTabMode(true == bIsStickerEditPage)
   self:RefreshSceneTabReddot()
 end
 
@@ -87,9 +121,20 @@ function M:RefreshSlotAreaState()
   if not self.EditRootController then
     return
   end
-  local bShowCharacterSlots = self.EditRootController:ShouldShowCharacterSlotArea()
-  self:SetRootSlotAreaVisibility(bShowCharacterSlots)
-  if bShowCharacterSlots then
+  local bShowSlots = self.EditRootController:ShouldShowSlotArea()
+  if self.EditRootController:IsScenePageActive() and self.List_Model and UIConst.VisibilityOp.Hidden then
+    self.List_Model:SetVisibility(UIConst.VisibilityOp.Hidden)
+  else
+    self:SetRootSlotAreaVisibility(bShowSlots)
+  end
+  if not bShowSlots then
+    return
+  end
+  if self.EditRootController:ShouldShowItemSlotArea() then
+    self:_RefreshItemSlotList()
+  elseif self.EditRootController:IsPetPageActive() then
+    self:_RefreshPetSlotList()
+  else
     self:_RefreshCharacterSlotList()
   end
 end
@@ -98,39 +143,117 @@ function M:RefreshCommonActionState()
   if not self.EditRootController then
     return
   end
+  local bIsStickerEditPage = self.EditRootController.IsStickerEditPageActive and self.EditRootController:IsStickerEditPageActive() == true
+  if self.WS_Title then
+    self:_SetWidgetVisibility(self.WS_Title, true)
+  end
+  if bIsStickerEditPage then
+    self:_ApplyStickerEditActionButtons()
+    self:_RefreshTitleConfirmButtonState()
+    self:_RefreshBottomKeyInfo()
+    if self.RefreshCustomEditGamepadPageState then
+      self:RefreshCustomEditGamepadPageState()
+    end
+    return
+  end
   local bIsChooseConfirmMode = self.EditRootController:IsChooseConfirmMode()
   local bShowSaveButton = true
   local bCanSave
   if bIsChooseConfirmMode then
-    bCanSave = self.EditRootController:CanConfirmCharacterChoosePage()
+    bCanSave = self.EditRootController:CanConfirmChoosePage()
   else
     bCanSave = self.EditRootController:CanSaveEdit()
   end
   self:_SetButtonVisibility(self.Btn_Save, bShowSaveButton)
   self:_SetButtonEnabled(self.Btn_Save, bCanSave and not self.EditRootController:IsSavingEdit())
-  local bShowAddButton = self.EditRootController:GetActiveMainTabName() == "Char" and not self.EditRootController:IsChoosePageActive()
-  self:_SetButtonVisibility(self.Btn_Add, bShowAddButton)
-  self:_SetWidgetVisibility(self.Group_Add, bShowAddButton)
+  self:_RefreshSideBtnState(self:_ResolveSideBtnIndex())
   self:_RefreshCommonButtonText()
+  self:_RefreshTitleConfirmButtonState()
+  self:RefreshSceneResetButtonState()
   self:_RefreshCommonTitleState()
   self:_RefreshCommonInfoState()
   self:_RefreshAddCharacterBubbleState()
   self:_RefreshBottomKeyInfo()
+  if self.RefreshCustomEditGamepadPageState then
+    self:RefreshCustomEditGamepadPageState()
+  end
+end
+
+function M:_ApplyStickerEditActionButtons()
+  if self.WS_Title then
+    self.WS_Title:SetActiveWidgetIndex(1)
+  end
+  self:_RefreshSideBtnState(3)
+  self:_SetButtonVisibility(self.Btn_Save, true)
+  self:_SetButtonEnabled(self.Btn_Save, true)
+  if self.Btn_Save and self.Btn_Save.SetText then
+    self.Btn_Save:SetText(GText("UI_PATCH_ENSURE"))
+  end
+  self:RefreshStickerResetButtonState()
+end
+
+function M:_ResolveSideBtnIndex()
+  if not self.EditRootController then
+    return nil
+  end
+  if self.EditRootController.IsStickerEditPageActive and self.EditRootController:IsStickerEditPageActive() == true then
+    return 3
+  end
+  if self.EditRootController:IsChoosePageActive() then
+    return nil
+  end
+  local ActiveMainTabName = self.EditRootController:GetActiveMainTabName()
+  if "Scene" == ActiveMainTabName then
+    return 3
+  end
+  if "Pet" == ActiveMainTabName then
+    return 1
+  end
+  if "Item" == ActiveMainTabName then
+    return 2
+  end
+  if "Char" == ActiveMainTabName then
+    return 0
+  end
+  return nil
+end
+
+function M:_RefreshSideBtnState(SideBtnIndex)
+  self.SideBtnIndex = SideBtnIndex
+  if not self.WS_SideBtn then
+    return
+  end
+  if nil == SideBtnIndex then
+    self:_SetWidgetVisibility(self.WS_SideBtn, false)
+    return
+  end
+  self:_SetWidgetVisibility(self.WS_SideBtn, true)
+  self.WS_SideBtn:SetActiveWidgetIndex(SideBtnIndex)
 end
 
 function M:RefreshSaveButtonState()
   if not self.EditRootController then
     return
   end
+  if self.EditRootController.IsStickerEditPageActive and self.EditRootController:IsStickerEditPageActive() then
+    self:_SetButtonVisibility(self.Btn_Save, true)
+    self:_SetButtonEnabled(self.Btn_Save, true)
+    if self.Btn_Save and self.Btn_Save.SetText then
+      self.Btn_Save:SetText(GText("UI_PATCH_ENSURE"))
+    end
+    self:_RefreshTitleConfirmButtonState()
+    return
+  end
   local bIsChooseConfirmMode = self.EditRootController:IsChooseConfirmMode()
   local bCanSave
   if bIsChooseConfirmMode then
-    bCanSave = self.EditRootController:CanConfirmCharacterChoosePage()
+    bCanSave = self.EditRootController:CanConfirmChoosePage()
   else
     bCanSave = self.EditRootController:CanSaveEdit()
   end
   self:_SetButtonVisibility(self.Btn_Save, true)
   self:_SetButtonEnabled(self.Btn_Save, bCanSave and not self.EditRootController:IsSavingEdit())
+  self:_RefreshTitleConfirmButtonState()
 end
 
 function M:OnTabItemSelected(TabWidget, TabData)
@@ -152,6 +275,12 @@ end
 
 function M:OnClickSave()
   DebugPrint("[PersonInfoSaveTrace][MainPage.OnClickSave]\n" .. tostring(UBattleFunctionLibrary.GetTraceStack(30)))
+  if self.EditRootController.IsStickerEditPageActive and self.EditRootController:IsStickerEditPageActive() then
+    if self.EditRootController.ConfirmStickerEditAndReturn then
+      self.EditRootController:ConfirmStickerEditAndReturn()
+    end
+    return
+  end
   if self.EditRootController:IsChooseConfirmMode() then
     self.EditRootController.ChoosePagePanel:OnClickConfirmChoose()
     return
@@ -160,6 +289,9 @@ function M:OnClickSave()
 end
 
 function M:OnClickSaveForbidden()
+  if self.EditRootController.IsStickerEditPageActive and self.EditRootController:IsStickerEditPageActive() then
+    return
+  end
   if self.EditRootController:IsChooseConfirmMode() then
     local ChoosePagePanel = self.EditRootController.ChoosePagePanel
     if ChoosePagePanel and ChoosePagePanel.OnClickConfirmChooseForbidden then
@@ -175,8 +307,104 @@ function M:OnClickSaveForbidden()
   end
 end
 
+function M:OnClickStickerEditReset()
+  if not (self.EditRootController and self.EditRootController.IsStickerEditPageActive) or not self.EditRootController:IsStickerEditPageActive() then
+    return
+  end
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_mid", nil, nil)
+  if self.EditRootController.ResetStickerEdit then
+    self.EditRootController:ResetStickerEdit()
+  end
+  self:RefreshStickerResetButtonState()
+end
+
+function M:OnClickStickerEditResetForbidden()
+  if not (self.EditRootController and self.EditRootController.IsStickerEditPageActive) or not self.EditRootController:IsStickerEditPageActive() then
+    return
+  end
+  UIManager(self):ShowUITip("CommonToastMain", GText("UI_PersonalPage_RestoredDefault"))
+end
+
+function M:OnStickerEditTransformChanged()
+  self:RefreshStickerResetButtonState()
+  self:RefreshSaveButtonState()
+end
+
+function M:RefreshStickerResetButtonState()
+  if not self.Btn_Reset then
+    return
+  end
+  if not (self.EditRootController and self.EditRootController.IsStickerEditPageActive) or not self.EditRootController:IsStickerEditPageActive() then
+    return
+  end
+  local bAtDefault = true
+  if self.EditRootController.IsStickerEditAtDefaultTransform then
+    bAtDefault = self.EditRootController:IsStickerEditAtDefaultTransform()
+  end
+  self:_SetButtonEnabled(self.Btn_Reset, not bAtDefault)
+end
+
+function M:OnClickResetButton()
+  if self.EditRootController and self.EditRootController.IsScenePageActive and self.EditRootController:IsScenePageActive() then
+    self:OnClickSceneEditReset()
+    return
+  end
+  self:OnClickStickerEditReset()
+end
+
+function M:OnClickResetButtonForbidden()
+  if self.EditRootController and self.EditRootController.IsScenePageActive and self.EditRootController:IsScenePageActive() then
+    UIManager(self):ShowUITip("CommonToastMain", GText("UI_PersonalPage_NoLightAdjust"))
+    return
+  end
+  self:OnClickStickerEditResetForbidden()
+end
+
+function M:OnClickSceneEditReset()
+  if not self.EditRootController or not self.EditRootController.ScenePagePanel then
+    return
+  end
+  local ScenePagePanel = self.EditRootController.ScenePagePanel
+  if not ScenePagePanel.ResetSceneLightToDefault then
+    return
+  end
+  local bReset = ScenePagePanel:ResetSceneLightToDefault()
+  if not bReset then
+    UIManager(self):ShowUITip("CommonToastMain", GText("UI_PersonalPage_ResetDefault"))
+    return
+  end
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_mid", nil, nil)
+  self:RefreshSceneResetButtonState()
+end
+
+function M:RefreshSceneResetButtonState()
+  if not self.Btn_Reset then
+    return
+  end
+  if not (self.EditRootController and self.EditRootController.IsScenePageActive) or not self.EditRootController:IsScenePageActive() then
+    return
+  end
+  local bAtDefault = true
+  local ScenePagePanel = self.EditRootController.ScenePagePanel
+  if ScenePagePanel and ScenePagePanel._IsSceneLightAtDefault then
+    bAtDefault = ScenePagePanel:_IsSceneLightAtDefault()
+  end
+  self:_SetButtonEnabled(self.Btn_Reset, not bAtDefault)
+end
+
 function M:OnClickAdd()
+  if self.EditRootController:IsItemMainPageActive() then
+    self.EditRootController:OpenItemChoosePage()
+    return
+  end
   self.EditRootController:OpenCharacterChoosePage()
+end
+
+function M:OnClickChangePet()
+  if not self.EditRootController then
+    return
+  end
+  self.EditRootController:OpenPetChoosePage()
 end
 
 function M:SetRootTabVisibility(bVisible)
@@ -205,7 +433,13 @@ function M:RefreshTitleText()
 end
 
 function M:RefreshSelectedCharacterSlotContext()
-  self:_RefreshCharacterSlotSelection()
+  if self.EditRootController and self.EditRootController:ShouldShowItemSlotArea() then
+    self:_ApplyCharacterSlotSelectionLocally(self.EditRootController:GetSelectedItemSlotIndex())
+  elseif self.EditRootController and self.EditRootController:IsPetPageActive() then
+    self:_ApplyCharacterSlotSelectionLocally(self.EditRootController:GetSelectedPetSlotIndex())
+  else
+    self:_RefreshCharacterSlotSelection()
+  end
   if self.RefreshCustomEditGamepadPageState then
     self:RefreshCustomEditGamepadPageState()
   end
@@ -240,6 +474,28 @@ function M:_InitMainTab()
   self.Com_Tab:BindEventOnTabSelected(self, self.OnTabItemSelected)
 end
 
+function M:_EnsureMainTabConfigCurrent()
+  local CurrentTabs = self.Com_Tab and self.Com_Tab.Tabs or nil
+  if type(CurrentTabs) ~= "table" then
+    return
+  end
+  local bConfigChanged = #CurrentTabs ~= #M.MainTabConfigList
+  if not bConfigChanged then
+    for TabIndex, TabConfig in ipairs(M.MainTabConfigList) do
+      if not CurrentTabs[TabIndex] or CurrentTabs[TabIndex].Name ~= TabConfig.Name then
+        bConfigChanged = true
+        break
+      end
+    end
+  end
+  if not bConfigChanged then
+    return
+  end
+  self.MainTabSelectedIndex = nil
+  self.BottomKeyPlanIndex = nil
+  self:_InitMainTab()
+end
+
 function M:_RefreshMainTabSelection()
   local ActiveTabName = self.EditRootController:GetActiveMainTabName()
   for TabIndex, TabConfig in ipairs(M.MainTabConfigList) do
@@ -258,20 +514,43 @@ end
 
 function M:_BindCommonActionButtons()
   self:_BindButtonClick(self.Btn_Save, self.OnClickSave)
-  self:_BindButtonClick(self.Btn_Add, self.OnClickAdd)
+  if self.Btn_Add then
+    self:_BindButtonClick(self.Btn_Add, self.OnClickAdd)
+  end
+  if self.Btn_ChangeSubject then
+    self:_BindButtonClick(self.Btn_ChangeSubject, self.OnClickAdd)
+  end
+  if self.Btn_ChangePet then
+    self:_BindButtonClick(self.Btn_ChangePet, self.OnClickChangePet)
+  end
+  if self.Btn_Reset then
+    self:_BindButtonClick(self.Btn_Reset, self.OnClickResetButton)
+  end
+  local TitleConfirmButton = self:_GetTitleConfirmButton()
+  if TitleConfirmButton then
+    self:_BindButtonClick(TitleConfirmButton, self.OnClickTitleConfirm)
+  end
 end
 
 function M:_InitCommonButtonText()
   self.Btn_Save:SetText(GText("UI_PersonalPage_SaveEdit"))
   self.Btn_Save:BindForbidStateExecuteEvent(self, self.OnClickSaveForbidden)
+  if self.Btn_Reset and self.Btn_Reset.BindForbidStateExecuteEvent then
+    self.Btn_Reset:BindForbidStateExecuteEvent(self, self.OnClickResetButtonForbidden)
+  end
   if self.Btn_Save and self.Btn_Save.SetDefaultGamePadImg then
     self.Btn_Save:SetDefaultGamePadImg("Y")
   elseif self.Btn_Save and self.Btn_Save.SetGamePadImg then
     self.Btn_Save:SetGamePadImg("Y")
   end
+  self:_InitTitleConfirmButton()
 end
 
 function M:_RefreshCommonButtonText()
+  if self.EditRootController.IsStickerEditPageActive and self.EditRootController:IsStickerEditPageActive() then
+    self.Btn_Save:SetText(GText("UI_PATCH_ENSURE"))
+    return
+  end
   if self.EditRootController:IsChooseConfirmMode() then
     self.Btn_Save:SetText(GText("UI_PersonalPage_ConfirmSelect"))
   else
@@ -279,9 +558,102 @@ function M:_RefreshCommonButtonText()
   end
 end
 
+function M:_GetTitleConfirmButton()
+  local TitleCard = self.Edit_Title
+  if not TitleCard then
+    return nil
+  end
+  return TitleCard.Btn_Confirm
+end
+
+function M:GetActiveCommonConfirmButton()
+  if self.EditRootController and self.EditRootController.ShouldUseCharacterInfoSwitcher and self.EditRootController:ShouldUseCharacterInfoSwitcher() then
+    local TitleConfirmButton = self:_GetTitleConfirmButton()
+    if TitleConfirmButton then
+      return TitleConfirmButton
+    end
+  end
+  return self.Btn_Save
+end
+
+function M:_InitTitleConfirmButton()
+  local TitleConfirmButton = self:_GetTitleConfirmButton()
+  if not TitleConfirmButton then
+    return
+  end
+  if TitleConfirmButton.SetText then
+    TitleConfirmButton:SetText(GText("UI_PersonalPage_ConfirmSelect"))
+  end
+  if TitleConfirmButton.BindForbidStateExecuteEvent then
+    TitleConfirmButton:BindForbidStateExecuteEvent(self, self.OnClickTitleConfirmForbidden)
+  end
+  if TitleConfirmButton.SetDefaultGamePadImg then
+    TitleConfirmButton:SetDefaultGamePadImg("Y")
+  elseif TitleConfirmButton.SetGamePadImg then
+    TitleConfirmButton:SetGamePadImg("Y")
+  end
+end
+
+function M:_RefreshTitleConfirmButtonState()
+  local TitleConfirmButton = self:_GetTitleConfirmButton()
+  if not TitleConfirmButton then
+    return
+  end
+  local bShowTitleConfirm = self.EditRootController and self.EditRootController.ShouldUseCharacterInfoSwitcher and self.EditRootController:ShouldUseCharacterInfoSwitcher() == true
+  local bCanConfirm = bShowTitleConfirm and self.EditRootController.CanConfirmChoosePage and true == self.EditRootController:CanConfirmChoosePage() and not self.EditRootController:IsSavingEdit()
+  self:_SetButtonVisibility(TitleConfirmButton, bShowTitleConfirm)
+  self:_SetButtonEnabled(TitleConfirmButton, bCanConfirm)
+  if TitleConfirmButton.SetText then
+    TitleConfirmButton:SetText(GText("UI_PersonalPage_ConfirmSelect"))
+  end
+end
+
+function M:OnClickTitleConfirm()
+  if not self.EditRootController or not self.EditRootController.ChoosePagePanel then
+    return
+  end
+  self.EditRootController.ChoosePagePanel:OnClickConfirmChoose()
+end
+
+function M:OnClickTitleConfirmForbidden()
+  if not self.EditRootController or not self.EditRootController.ChoosePagePanel then
+    return
+  end
+  if self.EditRootController.ChoosePagePanel.OnClickConfirmChooseForbidden then
+    self.EditRootController.ChoosePagePanel:OnClickConfirmChooseForbidden()
+  end
+end
+
 function M:_RefreshCommonTitleState()
   local ActiveIndex = self.EditRootController:ShouldUseCharacterInfoSwitcher() and 0 or 1
   self.WS_Title:SetActiveWidgetIndex(ActiveIndex)
+end
+
+function M:_ApplyStickerEditTabMode(bActive)
+  if not self.Com_Tab then
+    return
+  end
+  local AdjustTitle = GText("UI_PersonalPage_AdjustSticker")
+  if bActive then
+    if type(self.Com_Tab.EnterViewSingleMode) == "function" then
+      self.Com_Tab:EnterViewSingleMode(AdjustTitle)
+    end
+    self._bStickerEditTabSingleMode = true
+    if self.Com_Tab.Title_Tab then
+      self.Com_Tab.Title_Tab:SetText(AdjustTitle)
+    end
+    if "function" == type(self.Com_Tab.UpdateTopTitle) then
+      self.Com_Tab:UpdateTopTitle(AdjustTitle)
+    end
+    return
+  end
+  if (self._bStickerEditTabSingleMode or self.Com_Tab.IsInViewSingleMode) and "function" == type(self.Com_Tab.LeaveViewSingleMode) then
+    self.Com_Tab:LeaveViewSingleMode()
+  end
+  self._bStickerEditTabSingleMode = false
+  if "function" == type(self.Com_Tab.UpdateTopTitle) then
+    self.Com_Tab:UpdateTopTitle(GText("UI_PersonalPage_Customize"))
+  end
 end
 
 function M:_RefreshBottomKeyInfo()
@@ -316,11 +688,15 @@ function M:RefreshSceneTabReddot()
   local bShowNew = Count > 0 and RdType == EReddotType.New
   local bShowNormal = Count > 0 and RdType == EReddotType.Normal
   local bShowGray = Count > 0 and RdType == EReddotType.Gray
-  self.Com_Tab:ShowTabRedDot(2, bShowNew, bShowNormal, bShowGray)
+  self.Com_Tab:ShowTabRedDotByTabId(4, bShowNew, bShowNormal, bShowGray)
 end
 
 function M:OnReturnKeyDown()
   if not self.EditRootController then
+    return
+  end
+  if self.EditRootController.IsStickerEditPageActive and self.EditRootController:IsStickerEditPageActive() then
+    self.EditRootController:CloseStickerEditAndReturn()
     return
   end
   self.EditRootController:RequestCloseEdit()
@@ -333,12 +709,17 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   local bIsControlDown = UE4.UKismetInputLibrary.InputEvent_IsControlDown(InKeyEvent)
-  local bCanHandleMainPageShortcut = not self.EditRootController:IsChoosePageActive()
-  if not bCanHandleMainPageShortcut then
+  local bIsStickerEditPage = self.EditRootController.IsStickerEditPageActive and self.EditRootController:IsStickerEditPageActive() == true
+  local bCanHandleMainPageShortcut = not self.EditRootController:IsChoosePageActive() and not bIsStickerEditPage
+  if not bCanHandleMainPageShortcut and self.EditRootController:IsChoosePageActive() then
     local ChoosePagePanel = self.EditRootController.ChoosePagePanel
     if ChoosePagePanel and ChoosePagePanel.Handle_ChoosePageForwardedKeyDown and ChoosePagePanel:Handle_ChoosePageForwardedKeyDown(InKeyName) then
       return UE4.UWidgetBlueprintLibrary.Handled()
     end
+  end
+  if bIsStickerEditPage and "U" == InKeyName then
+    self:OnHideUIClick()
+    return UE4.UWidgetBlueprintLibrary.Handled()
   end
   if bCanHandleMainPageShortcut and self.OnCameraRoamKeyDown and self:OnCameraRoamKeyDown(InKeyName) then
     return UE4.UWidgetBlueprintLibrary.Handled()
@@ -368,8 +749,12 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
     return UE4.UWidgetBlueprintLibrary.Handled()
   end
   if "Escape" == InKeyName then
-    if self.EditRootController and self.EditRootController:IsChoosePageActive() then
+    if self.EditRootController:IsChoosePageActive() then
       self.EditRootController:CloseChoosePageAndReturn()
+      return UE4.UWidgetBlueprintLibrary.Handled()
+    end
+    if bIsStickerEditPage then
+      self.EditRootController:CloseStickerEditAndReturn()
       return UE4.UWidgetBlueprintLibrary.Handled()
     end
     self:OnReturnKeyDown()
@@ -381,6 +766,51 @@ end
 function M:_BuildBottomKeyInfo()
   if self.EditRootController and self.EditRootController:IsChoosePageActive() then
     return {}
+  end
+  if self.EditRootController and self.EditRootController.IsSceneTipsOpened and self.EditRootController:IsSceneTipsOpened() then
+    return {}
+  end
+  if self.EditRootController and self.EditRootController.IsStickerEditPageActive and self.EditRootController:IsStickerEditPageActive() then
+    return {
+      {
+        KeyInfoList = {
+          {
+            Type = "Text",
+            Text = "U",
+            ClickCallback = self.OnHideUIClick,
+            Owner = self
+          }
+        },
+        GamePadInfoList = {
+          {
+            Type = "Img",
+            ImgShortPath = UIConst.GamePadImgKey.RightThumb,
+            ClickCallback = self.OnHideUIClick,
+            Owner = self
+          }
+        },
+        Desc = GText("UI_Dye_HideUI")
+      },
+      {
+        KeyInfoList = {
+          {
+            Type = "Text",
+            Text = "Esc",
+            ClickCallback = self.OnReturnKeyDown,
+            Owner = self
+          }
+        },
+        GamePadInfoList = {
+          {
+            Type = "Img",
+            ImgShortPath = "B",
+            ClickCallback = self.OnReturnKeyDown,
+            Owner = self
+          }
+        },
+        Desc = GText("UI_BACK")
+      }
+    }
   end
   local BottomKeyInfo = {
     {
@@ -598,8 +1028,10 @@ end
 function M:_BuildBottomKeyPlanIndex()
   local ActiveTabName = self.EditRootController and self.EditRootController:GetActiveMainTabName() or "None"
   local bIsChoosePageActive = self.EditRootController and self.EditRootController:IsChoosePageActive() == true
+  local bIsStickerEditPageActive = self.EditRootController and self.EditRootController.IsStickerEditPageActive and true == self.EditRootController:IsStickerEditPageActive()
   local bIsHiddenUI = true == self.bHiddenUI
-  return string.format("%s|%s|%s", tostring(ActiveTabName), tostring(bIsChoosePageActive), tostring(bIsHiddenUI))
+  local bIsSceneTipsOpened = self.EditRootController and self.EditRootController.IsSceneTipsOpened and true == self.EditRootController:IsSceneTipsOpened()
+  return string.format("%s|%s|%s|%s|%s", tostring(ActiveTabName), tostring(bIsChoosePageActive), tostring(bIsStickerEditPageActive), tostring(bIsHiddenUI), tostring(bIsSceneTipsOpened))
 end
 
 function M:OnClickUndo()
@@ -676,6 +1108,9 @@ function M:_BindButtonClick(ButtonWidget, Callback)
 end
 
 function M:TriggerCommonButtonClick(ButtonWidget)
+  if not ButtonWidget then
+    return false
+  end
   ButtonWidget:OnBtnPressed()
   ButtonWidget:OnBtnClicked()
   return true
@@ -706,12 +1141,64 @@ function M:_RefreshCharacterSlotList()
   end
 end
 
+function M:_RefreshItemSlotList()
+  local SlotViewList = self.EditRootController:BuildItemSlotViewList()
+  if self.CharacterSlotItemContents and #self.CharacterSlotItemContents == #SlotViewList and self.CharacterSlotItemContents[1] and self.CharacterSlotItemContents[1].SlotKind == "Item" then
+    for SlotIndex, SlotViewData in ipairs(SlotViewList) do
+      local Content = self.CharacterSlotItemContents[SlotIndex]
+      if Content then
+        self:_ApplyCharacterSlotItemContent(Content, SlotViewData, SlotIndex)
+        local EntryWidget = self.CharacterSlotEntryWidgetMap and self.CharacterSlotEntryWidgetMap[SlotIndex] or nil
+        if IsValid(EntryWidget) then
+          self:_RefreshCharacterSlotEntryWidget(EntryWidget, Content)
+        end
+      end
+    end
+    return
+  end
+  self.CharacterSlotItemContents = {}
+  self.CharacterSlotEntryWidgetMap = {}
+  self.List_Model:ClearListItems()
+  for SlotIndex, SlotViewData in ipairs(SlotViewList) do
+    local Content = self:_BuildCharacterSlotItemContent(SlotViewData, SlotIndex)
+    self.CharacterSlotItemContents[#self.CharacterSlotItemContents + 1] = Content
+    self.List_Model:AddItem(Content)
+  end
+end
+
+function M:_RefreshPetSlotList()
+  local SlotViewList = self.EditRootController:BuildPetSlotViewList()
+  self.CharacterSlotItemContents = {}
+  self.CharacterSlotEntryWidgetMap = {}
+  self.List_Model:ClearListItems()
+  for SlotIndex, SlotViewData in ipairs(SlotViewList) do
+    local Content = self:_BuildCharacterSlotItemContent(SlotViewData, SlotIndex)
+    self.CharacterSlotItemContents[#self.CharacterSlotItemContents + 1] = Content
+    self.List_Model:AddItem(Content)
+  end
+end
+
 function M:_EnsureCharacterSlotListInitialized()
   if not self.EditRootController then
     return
   end
-  if self.CharacterSlotItemContents == nil or #self.CharacterSlotItemContents <= 0 then
-    self:_RefreshCharacterSlotList()
+  local ExpectedSlotKind = "Char"
+  if self.EditRootController:ShouldShowItemSlotArea() then
+    ExpectedSlotKind = "Item"
+  elseif self.EditRootController:IsPetPageActive() then
+    ExpectedSlotKind = "Pet"
+  end
+  local FirstContent = self.CharacterSlotItemContents and self.CharacterSlotItemContents[1] or nil
+  local bListEmpty = self.CharacterSlotItemContents == nil or #self.CharacterSlotItemContents <= 0
+  local bSlotKindMismatch = nil ~= FirstContent and FirstContent.SlotKind ~= ExpectedSlotKind
+  if bListEmpty or bSlotKindMismatch then
+    if "Item" == ExpectedSlotKind then
+      self:_RefreshItemSlotList()
+    elseif "Pet" == ExpectedSlotKind then
+      self:_RefreshPetSlotList()
+    else
+      self:_RefreshCharacterSlotList()
+    end
   end
 end
 
@@ -719,7 +1206,50 @@ function M:RefreshCharacterSlotItem(SlotIndex)
   if not self.EditRootController or type(SlotIndex) ~= "number" then
     return
   end
+  if self.EditRootController:ShouldShowItemSlotArea() then
+    self:RefreshItemSlotItem(SlotIndex)
+    return
+  end
   local SlotViewData = self.EditRootController:BuildCharacterSlotViewData(SlotIndex)
+  if not SlotViewData then
+    return
+  end
+  local Content = self.CharacterSlotItemContents and self.CharacterSlotItemContents[SlotIndex] or nil
+  if not Content then
+    return
+  end
+  self:_ApplyCharacterSlotItemContent(Content, SlotViewData, SlotIndex)
+  local EntryWidget = self.CharacterSlotEntryWidgetMap and self.CharacterSlotEntryWidgetMap[SlotIndex] or nil
+  if IsValid(EntryWidget) then
+    self:_RefreshCharacterSlotEntryWidget(EntryWidget, Content)
+  end
+end
+
+function M:RefreshItemSlotItem(SlotIndex)
+  if not self.EditRootController or type(SlotIndex) ~= "number" then
+    return
+  end
+  local SlotViewData = self.EditRootController:BuildItemSlotViewData(SlotIndex)
+  local Content = self.CharacterSlotItemContents and self.CharacterSlotItemContents[SlotIndex] or nil
+  if not SlotViewData or not Content then
+    return
+  end
+  self:_ApplyCharacterSlotItemContent(Content, SlotViewData, SlotIndex)
+  local EntryWidget = self.CharacterSlotEntryWidgetMap and self.CharacterSlotEntryWidgetMap[SlotIndex] or nil
+  if IsValid(EntryWidget) then
+    self:_RefreshCharacterSlotEntryWidget(EntryWidget, Content)
+  end
+end
+
+function M:RefreshItemSlotSelection()
+  self:_ApplyCharacterSlotSelectionLocally(self.EditRootController:GetSelectedItemSlotIndex())
+end
+
+function M:RefreshPetSlotItem(SlotIndex)
+  if not self.EditRootController or type(SlotIndex) ~= "number" then
+    return
+  end
+  local SlotViewData = self.EditRootController:BuildPetSlotViewData(SlotIndex)
   if not SlotViewData then
     return
   end
@@ -747,6 +1277,9 @@ function M:_BuildCurrentTitleText()
   if not self.EditRootController then
     return GText("UI_PersonalPage_Customize")
   end
+  if self.EditRootController.IsStickerEditPageActive and self.EditRootController:IsStickerEditPageActive() then
+    return GText("UI_PersonalPage_AdjustSticker")
+  end
   if self.EditRootController:IsChoosePageActive() then
     local ChooseMode = self.EditRootController.ActiveChooseMode
     if "Character" == ChooseMode then
@@ -758,9 +1291,21 @@ function M:_BuildCurrentTitleText()
     if "Action" == ChooseMode then
       return GText("UI_PersonalPage_SetAction")
     end
+    if "Item" == ChooseMode then
+      return GText("UI_PersonInfo_CustomItem")
+    end
   end
   if self.EditRootController:GetActiveMainTabName() == "Scene" then
     return GText("UI_PersonalPage_Scene")
+  end
+  if self.EditRootController:GetActiveMainTabName() == "Other" then
+    return GText("UI_PersonalPage_Others")
+  end
+  if self.EditRootController:GetActiveMainTabName() == "Pet" then
+    return GText("UI_Pet")
+  end
+  if "Item" == self.EditRootController:GetActiveMainTabName() then
+    return GText("UI_PersonInfo_CustomItem")
   end
   return GText("UI_PersonalPage_Customize")
 end
@@ -854,29 +1399,99 @@ function M:_RefreshCommonInfoState()
 end
 
 function M:_InitAddCharacterBubble()
-  if self.IsHudBubbleInitialized or not self.Com_HudBubble then
+  if self.IsHudBubbleInitialized then
     return
   end
   self.IsHudBubbleInitialized = true
-  self.Com_HudBubble:Init({
-    Text = GText("UI_PersonalPage_AddChar")
+  if self.Com_HudBubble then
+    self.Com_HudBubble:Init({
+      Text = GText("UI_PersonalPage_AddChar")
+    })
+    self.Com_HudBubble:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Com_HudBubble:StopAllAnimations()
+    self.Com_HudBubble:PlayHorizontalLoopAnimation()
+  end
+  if self.Com_HudBubble_ChangeSubject then
+    self.Com_HudBubble_ChangeSubject:Init({
+      Text = GText("UI_PersonInfo_AddItem")
+    })
+    self.Com_HudBubble_ChangeSubject:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Com_HudBubble_ChangeSubject:StopAllAnimations()
+    self.Com_HudBubble_ChangeSubject:PlayHorizontalLoopAnimation()
+  end
+end
+
+function M:_InitChangePetBubble()
+  if self.IsChangePetBubbleInitialized or not self.Com_HudBubble_ChangePet then
+    return
+  end
+  self.IsChangePetBubbleInitialized = true
+  self.Com_HudBubble_ChangePet:Init({
+    Text = GText("UI_PersonalPage_AddGeniemon")
   })
-  self.Com_HudBubble:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  self.Com_HudBubble:StopAllAnimations()
-  self.Com_HudBubble:PlayHorizontalLoopAnimation()
+  self.Com_HudBubble_ChangePet:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Com_HudBubble_ChangePet:StopAllAnimations()
+  self.Com_HudBubble_ChangePet:PlayHorizontalLoopAnimation()
 end
 
 function M:_ShouldShowAddCharacterBubble()
   if not self.EditRootController then
     return false
   end
-  if self.EditRootController:GetActiveMainTabName() ~= "Char" then
+  local ActiveMainTabName = self.EditRootController:GetActiveMainTabName()
+  if "Char" ~= ActiveMainTabName and "Item" ~= ActiveMainTabName then
     return false
   end
   if self.EditRootController:IsChoosePageActive() then
     return false
   end
+  if "Item" == ActiveMainTabName then
+    return not self:_HasAnyItemSlotFilled()
+  end
   return not self:_HasAnyCharacterSlotFilled()
+end
+
+function M:_ShouldShowAddPetBubble()
+  if not self.EditRootController then
+    return false
+  end
+  if self.EditRootController:GetActiveMainTabName() ~= "Pet" then
+    return false
+  end
+  if self.EditRootController:IsChoosePageActive() then
+    return false
+  end
+  return not self:_HasAnyPetSlotFilled()
+end
+
+function M:_HasAnyPetSlotFilled()
+  for _, SlotContent in ipairs(self.CharacterSlotItemContents or {}) do
+    if SlotContent.SlotKind == "Pet" and SlotContent.HasCharacter == true then
+      return true
+    end
+  end
+  local SlotViewList = self.EditRootController and self.EditRootController.BuildPetSlotViewList and self.EditRootController:BuildPetSlotViewList() or nil
+  for _, SlotViewData in ipairs(SlotViewList or {}) do
+    if SlotViewData.HasCharacter == true then
+      return true
+    end
+  end
+  return false
+end
+
+function M:_HasAnyItemSlotFilled()
+  for _, SlotContent in ipairs(self.CharacterSlotItemContents or {}) do
+    if SlotContent.SlotKind == "Item" and SlotContent.HasItem == true then
+      return true
+    end
+  end
+  local SlotViewList = self.EditRootController and self.EditRootController.BuildItemSlotViewList and self.EditRootController:BuildItemSlotViewList() or nil
+  for _, SlotViewData in ipairs(SlotViewList or {}) do
+    if SlotViewData.HasItem == true then
+      return true
+    end
+  end
+  return false
 end
 
 function M:_HasAnyCharacterSlotFilled()
@@ -895,33 +1510,62 @@ function M:_HasAnyCharacterSlotFilled()
 end
 
 function M:_RefreshAddCharacterBubbleState()
-  if not self.Com_HudBubble then
-    return
-  end
+  local ActiveMainTabName = self.EditRootController and self.EditRootController:GetActiveMainTabName() or nil
+  local bShouldShowAddBubble = self:_ShouldShowAddCharacterBubble()
   self:_InitAddCharacterBubble()
-  if self:_ShouldShowAddCharacterBubble() then
-    self.Com_HudBubble.Text_Bubble:SetText(GText("UI_PersonalPage_AddChar"))
-    if self.Com_HudBubble.SetRenderOpacity then
-      self.Com_HudBubble:SetRenderOpacity(1)
+  local ActiveBubble = self.Com_HudBubble
+  local ActiveTextKey = "UI_PersonalPage_AddChar"
+  local ActiveFlagName = "IsAddCharacterBubbleShowing"
+  local InactiveBubble = self.Com_HudBubble_ChangeSubject
+  local InactiveFlagName = "IsAddItemBubbleShowing"
+  if "Item" == ActiveMainTabName then
+    ActiveBubble = self.Com_HudBubble_ChangeSubject
+    ActiveTextKey = "UI_PersonInfo_AddItem"
+    ActiveFlagName = "IsAddItemBubbleShowing"
+    InactiveBubble = self.Com_HudBubble
+    InactiveFlagName = "IsAddCharacterBubbleShowing"
+  end
+  self:_SetAddBubbleShowing(ActiveBubble, bShouldShowAddBubble, ActiveTextKey, ActiveFlagName)
+  self:_SetAddBubbleShowing(InactiveBubble, false, ActiveTextKey, InactiveFlagName)
+  self:_InitChangePetBubble()
+  self:_SetAddBubbleShowing(self.Com_HudBubble_ChangePet, self:_ShouldShowAddPetBubble(), "UI_PersonalPage_AddGeniemon", "IsAddPetBubbleShowing")
+end
+
+function M:_SetAddBubbleShowing(BubbleWidget, bShouldShow, TextKey, ShowingFlagName)
+  if not BubbleWidget then
+    return
+  end
+  if bShouldShow then
+    if BubbleWidget.StopAllAnimations then
+      BubbleWidget:StopAllAnimations()
     end
-    self.Com_HudBubble:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-    if not self.IsAddCharacterBubbleShowing then
-      self.Com_HudBubble:PlayHorizontalLoopAnimation()
-      self.IsAddCharacterBubbleShowing = true
+    if BubbleWidget.Text_Bubble then
+      BubbleWidget.Text_Bubble:SetText(GText(TextKey))
+    end
+    if BubbleWidget.SetRenderOpacity then
+      BubbleWidget:SetRenderOpacity(1)
+    end
+    BubbleWidget:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    if not self[ShowingFlagName] then
+      BubbleWidget:PlayHorizontalLoopAnimation()
+      self[ShowingFlagName] = true
     end
     return
   end
-  self.IsAddCharacterBubbleShowing = false
-  if self.Com_HudBubble.StopAllAnimations then
-    self.Com_HudBubble:StopAllAnimations()
+  if not self[ShowingFlagName] then
+    return
   end
-  if self.Com_HudBubble.PlayOutAnimation then
-    self.Com_HudBubble:PlayOutAnimation()
+  self[ShowingFlagName] = false
+  if BubbleWidget.StopAllAnimations then
+    BubbleWidget:StopAllAnimations()
   end
-  if self.Com_HudBubble.SetRenderOpacity then
-    self.Com_HudBubble:SetRenderOpacity(0)
+  if BubbleWidget.PlayOutAnimation then
+    BubbleWidget:PlayOutAnimation()
   end
-  self.Com_HudBubble:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  if BubbleWidget.SetRenderOpacity then
+    BubbleWidget:SetRenderOpacity(0)
+  end
+  BubbleWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
 function M:_BindCharacterSlotListEvents()
@@ -944,6 +1588,14 @@ function M:OnCharacterSlotItemSelectionChanged(Content, IsSelected)
   if not Content or true ~= IsSelected then
     return
   end
+  if Content.SlotKind == "Item" then
+    if true == Content.CanInteract then
+      self.EditRootController:SetSelectedItemSlotIndex(Content.SlotIndex, {
+        OpenHighlight = true == Content.HasItem
+      })
+    end
+    return
+  end
   if true ~= Content.HasCharacter or true ~= Content.CanInteract then
     return
   end
@@ -961,11 +1613,20 @@ function M:GetGamepadDefaultFocusTarget()
   if not self.EditRootController or self.EditRootController:IsChoosePageActive() then
     return nil
   end
-  if self.EditRootController:GetActiveMainTabName() == "Char" then
-    local SlotIndex = self.EditRootController:GetSelectedCharacterSlotIndex()
+  local ActiveTabName = self.EditRootController:GetActiveMainTabName()
+  if "Char" == ActiveTabName or "Pet" == ActiveTabName or "Item" == ActiveTabName then
+    local SlotIndex = "Pet" == ActiveTabName and self.EditRootController:GetSelectedPetSlotIndex() or "Item" == ActiveTabName and self.EditRootController:GetSelectedItemSlotIndex() or self.EditRootController:GetSelectedCharacterSlotIndex()
     local EntryWidget = self.CharacterSlotEntryWidgetMap and self.CharacterSlotEntryWidgetMap[SlotIndex] or nil
     local Content = self.CharacterSlotItemContents and self.CharacterSlotItemContents[SlotIndex] or nil
-    if IsValid(EntryWidget) and Content and Content.HasCharacter == true and true == Content.CanInteract then
+    local bCanFocusSlot = false
+    if IsValid(EntryWidget) and Content and Content.CanInteract == true then
+      if "Pet" == ActiveTabName then
+        bCanFocusSlot = true
+      else
+        bCanFocusSlot = true == Content.HasCharacter or true == Content.HasItem
+      end
+    end
+    if bCanFocusSlot then
       return EntryWidget
     end
   end
@@ -974,12 +1635,17 @@ end
 
 function M:_ApplyCharacterSlotItemContent(Content, SlotViewData, SlotIndex)
   Content.SlotIndex = SlotViewData and SlotViewData.SlotIndex or SlotIndex
+  Content.SlotKind = SlotViewData and SlotViewData.SlotKind or "Char"
   Content.HasCharacter = SlotViewData and SlotViewData.HasCharacter == true or false
   Content.CharData = SlotViewData and SlotViewData.CharData or nil
+  Content.PetData = SlotViewData and SlotViewData.PetData or nil
+  Content.HasItem = SlotViewData and true == SlotViewData.HasItem or false
+  Content.ItemData = SlotViewData and SlotViewData.ItemData or nil
   Content.Name = SlotViewData and SlotViewData.Name or ""
   Content.LevelText = SlotViewData and SlotViewData.LevelText or ""
   Content.IsSelected = SlotViewData and true == SlotViewData.IsSelected or false
   Content.Icon = SlotViewData and SlotViewData.Icon or nil
+  Content.Rarity = SlotViewData and SlotViewData.Rarity or nil
   Content.CanInteract = SlotViewData and true == SlotViewData.CanInteract or false
   Content.ShowAddIcon = SlotViewData and true == SlotViewData.ShowAddIcon or false
   Content.ShowLockIcon = SlotViewData and true == SlotViewData.ShowLockIcon or false
@@ -1038,6 +1704,19 @@ function M:OnCharacterSlotEntryFocused(Content, EntryWidget)
     return
   end
   self:_ApplyCharacterSlotSelectionLocally(Content.SlotIndex)
+  if Content.SlotKind == "Item" then
+    self.EditRootController:SetSelectedItemSlotIndex(Content.SlotIndex, {
+      OpenHighlight = true == Content.HasItem
+    })
+    return
+  end
+  if Content.SlotKind == "Pet" or self.EditRootController:IsPetPageActive() then
+    self.EditRootController:SetSelectedPetSlotIndex(Content.SlotIndex, {
+      OpenHighlight = true == Content.HasCharacter,
+      OpenDetail = true == Content.HasCharacter and true == self.EditRootController:IsPetMainPageActive()
+    })
+    return
+  end
   self.EditRootController:SetSelectedCharacterSlotIndex(Content.SlotIndex, {
     OpenHighlight = true == Content.HasCharacter,
     OpenDetail = false
@@ -1062,6 +1741,66 @@ end
 function M:PlayAnimation(AnimationName)
   self.Overridden.PlayAnimation(self, AnimationName)
   MiscUtils.GreenPrint(AnimationName:GetName())
+end
+
+local STICKERS_EDIT_BP_PATH = "WidgetBlueprint'/Game/UI/WBP/PersonalInfo/Widget/EditModel/WBP_PersonalInfo_EditModel_StickersEdit.WBP_PersonalInfo_EditModel_StickersEdit'"
+
+function M:ShowStickerEditWidget(StickerViewData)
+  if not self.Group_Stickers then
+    return
+  end
+  self:ClearConfirmedStickerPreview()
+  local EditWidget = self.StickersEditWidget
+  if not EditWidget or not IsValid(EditWidget) then
+    EditWidget = UIManager(self):CreateWidget(STICKERS_EDIT_BP_PATH)
+    if not EditWidget then
+      return
+    end
+    self.Group_Stickers:ClearChildren()
+    self.Group_Stickers:AddChildToCanvas(EditWidget)
+    self:_ApplyStickerEditCanvasCenter(EditWidget)
+    self.StickersEditWidget = EditWidget
+  end
+  if EditWidget.InitStickerEdit then
+    EditWidget:InitStickerEdit(StickerViewData, self)
+  elseif EditWidget.RefreshStickerEdit then
+    EditWidget:RefreshStickerEdit(StickerViewData)
+  end
+  EditWidget:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.Group_Stickers:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.bStickerEditActive = true
+end
+
+function M:HideStickerEditWidget()
+  if self.StickersEditWidget and IsValid(self.StickersEditWidget) then
+    self.StickersEditWidget:RemoveFromParent()
+  end
+  self.StickersEditWidget = nil
+  self.ConfirmedStickerWidget = nil
+  if self.Group_Stickers then
+    self.Group_Stickers:ClearChildren()
+    self.Group_Stickers:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  self.bStickerEditActive = false
+end
+
+function M:_ApplyStickerEditCanvasCenter(EditWidget)
+  if not EditWidget then
+    return
+  end
+  local Slot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(EditWidget)
+  if not Slot then
+    return
+  end
+  local Anchors = UE4.FAnchors()
+  Anchors.Minimum = FVector2D(0.5, 0.5)
+  Anchors.Maximum = FVector2D(0.5, 0.5)
+  Slot:SetAnchors(Anchors)
+  Slot:SetAlignment(FVector2D(0.5, 0.5))
+  Slot:SetPosition(FVector2D(0, 0))
+  if Slot.SetAutoSize then
+    Slot:SetAutoSize(true)
+  end
 end
 
 AssembleComponents(M)

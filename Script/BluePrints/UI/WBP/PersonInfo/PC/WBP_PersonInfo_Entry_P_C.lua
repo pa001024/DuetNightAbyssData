@@ -203,6 +203,7 @@ end
 function M:Hideui()
   PersonInfoController:SetMainPageUIHidden(true)
   self.PersonInfoMainPage.MainPanel:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+  self:SetMainPageBlurVisible(false)
   self.Com_Tab:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self:Playanimation(self.HideUi)
   local GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
@@ -214,6 +215,10 @@ end
 function M:Recoverui()
   PersonInfoController:SetMainPageUIHidden(false)
   self.PersonInfoMainPage.MainPanel:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self:SetMainPageBlurVisible(true)
+  if self.MainPageItem then
+    self.MainPageItem:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  end
   self.Com_Tab:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self:Playanimation(self.ShowUi)
   local GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self)

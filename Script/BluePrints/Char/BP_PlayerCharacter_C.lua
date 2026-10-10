@@ -4,6 +4,7 @@ require("DataMgr")
 local Const = require("Const")
 local EMCache = require("EMCache.EMCache")
 local CommonUtils = require("Utils.CommonUtils")
+local BattleUtils = require("Utils.BattleUtils")
 local TimeUtils = require("Utils.TimeUtils")
 local GMVariable = require("BluePrints.UI.GMInterface.GMVariable")
 local StoryPlayableUtils = require("BluePrints.Story.StoryPlayableUtils")
@@ -15,10 +16,14 @@ local EMLuaConst = require("EMLuaConst")
 local SettlementCameraData = require("SettlementCameraData")
 local BattleEventName = require("BluePrints/Combat/BattleEvents/BattleEventName")
 local ENABLE_AUTO_PLAY_COMPONENT = false
+local BATTLE_WHEEL_TOAST_DURATION = 3
 local SLIDE_HOOK_START_SOUND_PATH = "event:/sfx/common/player/action/commnon_gousuo_start"
 local SLIDE_HOOK_END_SOUND_PATH = "event:/sfx/common/player/action/commnon_gousuo_end"
 local SLIDE_HOOK_START_SOUND_KEY = "GousuoStart"
 local SLIDE_HOOK_END_SOUND_KEY = "GousuoEnd"
+local SLIDE_DEFAULT_VIEW_YAW_MIN = 0.0
+local SLIDE_DEFAULT_VIEW_YAW_MAX = 359.998
+local SLIDE_CLAMPED_YAW_RANGE = 350.0
 local BP_PlayerCharacter_C = Class("BluePrints.Char.BP_CharacterBase_C")
 BP_PlayerCharacter_C._components = {
   "BluePrints.Char.CharacterComponent.PickupComponent",
@@ -68,6 +73,7 @@ function BP_PlayerCharacter_C:ReceiveBeginPlay()
     self:UpdateOpenHelperAim(self.IsOpenHelperAim)
     self:InitGameSkillFaceTo()
     self:SetEnableFallAtkDir()
+    self:SetEnableStrafeCircleFromCache()
     self:SetVirtualJoystickEnableMoveLockFromCache()
     self:SetRegionOnlineState()
     local ShowPlayerNameOption = EMCache:Get("ShowPlayerName") or EMainPlayerNameWidgetOption.EOnlyInRegionOnline
@@ -353,6 +359,82 @@ function BP_PlayerCharacter_C:OpenBattleWheel()
       UIManager(self):ShowUITip_BattleCommonTop(UIConst.Tip_CommonTop, GText("UI_BATTLEWHEEL_FORBIDDEN"))
     end
   end
+end
+
+function BP_PlayerCharacter_C:CheckBattleWheelResourceCanUse(ResourceId)
+  local ResourceData = DataMgr.Resource[ResourceId]
+  if not ResourceData then
+    return false
+  end
+  local Resolved = BattleUtils.ResolveCharacterAttributeSwitchPhantomData(ResourceData)
+  local CombatConditionIDs = Resolved.CombatConditionID or {}
+  local CombatConditionParams = Resolved.CombatConditionParams or {}
+  local ToastIds = Resolved.CombatConditionToast or {}
+  for Index, CombatConditionID in ipairs(CombatConditionIDs) do
+    if CombatConditionID then
+      local ConditionConfig = DataMgr.CombatCondition[CombatConditionID]
+      if ConditionConfig then
+        local ExtraVars = CombatConditionParams[Index]
+        if not Battle(self):CheckCondition_Lua(CombatConditionID, self, nil, ExtraVars) then
+          return false, ToastIds[Index]
+        end
+      end
+    end
+  end
+  return true
+end
+
+function BP_PlayerCharacter_C:TryUseBattleWheelItem(ResourceId, ResourceCount, UseWheelItemInBattleCallBack)
+  local Controller = self:GetController()
+  local Avatar = GWorld:GetAvatar()
+  local Resource = Avatar and Avatar.Resources and Avatar.Resources[ResourceId]
+  if not (Controller and Controller.bEnableBattleWheel) or not Resource then
+    return false
+  end
+  if (ResourceCount or 0) <= 0 and Resource:Data().Type ~= "InfiniteBattleItem" then
+    local ToastText = string.format(GText("BATTLE_MENU_ITEM_LACK"), GText(Resource.ResourceName))
+    UIManager(self):ShowUITip("CommonToastMain", ToastText, BATTLE_WHEEL_TOAST_DURATION)
+    return false
+  end
+  local bCanUse, ToastTextId = self:CheckBattleWheelResourceCanUse(ResourceId)
+  if not bCanUse then
+    if ToastTextId then
+      UIManager(self):ShowUITip("CommonToastMain", GText(ToastTextId))
+    else
+      DebugPrint("gmy@BP_PlayerCharacter_C:TryUseBattleWheelItem", ResourceId, ToastTextId)
+    end
+    return false
+  end
+  Avatar:UseWheelItemInBattle(ResourceId, UseWheelItemInBattleCallBack)
+  return true
+end
+
+function BP_PlayerCharacter_C:TryUseBattleWheelShortcut(ShortcutIndex)
+  if self.UIModePlatform ~= "PC" then
+    return
+  end
+  local Controller = self:GetController()
+  if not Controller then
+    return
+  end
+  if not Controller.bEnableBattleWheel then
+    return
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local UIUnlockRule = DataMgr.UIUnlockRule
+  local UIUnlockRuleId = UIUnlockRule.BattleWheel.UIUnlockRuleId
+  if not Avatar:CheckUIUnlocked(UIUnlockRuleId) then
+    return
+  end
+  local WheelIndex = self.SquadWheelIndex > 0 and self.SquadWheelIndex or Avatar.WheelIndex or 1
+  local ResourceId, ResourceCount = Avatar:ResolveBattleWheelShortcutItem(WheelIndex, ShortcutIndex, Controller.QuestBattleWheelID)
+  if not ResourceId then
+    return
+  end
+  self:TryUseBattleWheelItem(ResourceId, ResourceCount)
 end
 
 function BP_PlayerCharacter_C:CloseBattleWheel(bForceClose)
@@ -648,6 +730,9 @@ function BP_PlayerCharacter_C:RefreshCharUIByPlatform()
     DebugPrint("gmy@BP_PlayerCharacter_C:RefreshCharUIByPlatform ", SkillUIName)
     UIManager:UnLoadUI(SkillUIName)
     self.SkillUINames[SkillUIName] = nil
+    if self.SkillUIRequests then
+      self.SkillUIRequests[SkillUIName] = nil
+    end
   end
   DebugPrint("gmy@BP_PlayerCharacter_C BP_PlayerCharacter_C:RefreshCharUIByPlatform1", self.CurrentRoleId)
   local BattleCharInfo = DataMgr.BattleChar[self.CurrentRoleId]
@@ -788,11 +873,30 @@ end
 
 function BP_PlayerCharacter_C:ShowPlayerDeadUI()
   local RecoverUIName = self:GetCurRecoveryUIName()
-  if RecoverUIName then
-    local RecoverUI = UIManager(self):LoadUINew(RecoverUIName)
-    RecoverUI:OnMainCharacterInitReady()
-    RecoverUI:InitResurgenceUI(self.Eid)
+  if not RecoverUIName then
+    return
   end
+  local UIManager = UIManager(self)
+  local RecoverUI = UIManager:GetUI(RecoverUIName)
+  if RecoverUI then
+    self:InitPlayerDeadUI(RecoverUI)
+    return
+  end
+  UIManager:LoadUIAsync(RecoverUIName, function(LoadedUI)
+    if not IsValid(LoadedUI) then
+      return
+    end
+    if not IsValid(self) or not self:IsDead() then
+      UIManager:UnLoadUI(RecoverUIName)
+      return
+    end
+    self:InitPlayerDeadUI(LoadedUI)
+  end)
+end
+
+function BP_PlayerCharacter_C:InitPlayerDeadUI(RecoverUI)
+  RecoverUI:OnMainCharacterInitReady()
+  RecoverUI:InitResurgenceUI(self.Eid)
 end
 
 function BP_PlayerCharacter_C:IsDeadDuringQuest()
@@ -974,47 +1078,6 @@ function BP_PlayerCharacter_C:ShowBlackScreenFade_StandAlone(TriggerFallingScree
   end
 end
 
-function BP_PlayerCharacter_C:TryToUpdateScreenEffect(DamageFrom, EnergyShieldReduce)
-  local NowEnergyShield = self:GetAttr("ES")
-  if EnergyShieldReduce > 0 then
-    local MaxES = self:GetAttr("MaxES")
-    if 0 ~= MaxES and DataMgr.SystemUI[UIConst.BattleBrokenShieldPCName].Params.ShieldUIResetRate and (NowEnergyShield + EnergyShieldReduce) / MaxES > DataMgr.SystemUI[UIConst.BattleBrokenShieldPCName].Params.ShieldUIResetRate then
-      self.PlayBrokenShiledAnim = true
-    end
-    if NowEnergyShield <= 0 and self:IsMainPlayer() and self.PlayBrokenShiledAnim then
-      self.PlayBrokenShiledAnim = false
-      local SystemUIConfig = DataMgr.SystemUI[UIConst.BattleBrokenShieldPCName]
-      if SystemUIConfig then
-        local InAnimName = SystemUIConfig.Params.AnimName
-        if nil ~= InAnimName then
-          local ScreenEffectUI = UIManager(self):PlayScreenEffectAnim(UIConst.LoadInConfig, UIConst.BattleBrokenShieldPCName, {
-            {
-              AnimName = InAnimName,
-              StartTime = 0.0,
-              LoopNums = 1
-            }
-          })
-          local curTime = TimeUtils.NowTime()
-          AudioManager(self):PlayUISound(ScreenEffectUI, "event:/ui/common/char_sheild_break", nil, nil)
-          if nil == self.PreHitSoundTime or curTime - self.PreHitSoundTime >= 30 then
-            self.PreHitSoundTime = curTime
-            local PlayStruct = FPlayFMODSoundStruct()
-            PlayStruct.FMODEventPath, PlayStruct.SelectKey = AudioManager(self):ContactPlayerStringPath(self, "vo_be_hit_heavy")
-            PlayStruct.EventKey = "vo_be_hit_heavy"
-            PlayStruct.bStopWhenAttachedToDestoryed = true
-            PlayStruct.bPlayAs2D = true
-            PlayStruct = UE4.UAudioManager.SetObjectToFPlayFMODSoundStruct(PlayStruct, self)
-            local SoundEventInstance = AudioManager(self):PlayFMODSound_Sync(PlayStruct)
-          end
-        end
-      end
-    end
-  end
-  if self:IsMainPlayer() then
-    EventManager:FireEvent(EventID.OnPlayShowDamageEffect)
-  end
-end
-
 function BP_PlayerCharacter_C:SkillEnd(Owner, SkillId)
   if not SkillId or 0 == SkillId then
     return
@@ -1193,7 +1256,9 @@ function BP_PlayerCharacter_C:StopFire(bStillHoldFire, OnlyReleaseFire)
       self:ShouldEnableHandIk()
     end
     self.PlayerAnimInstance.StopShoot = false
-    self.PlayerAnimInstance.EnableAim = UE4.UKismetMathLibrary.Clamp(self.PlayerAnimInstance.EnableAim - 1, 0, 1)
+    if not self.IsInPreAim then
+      self.PlayerAnimInstance.EnableAim = UE4.UKismetMathLibrary.Clamp(self.PlayerAnimInstance.EnableAim - 1, 0, 1)
+    end
   end
 end
 
@@ -1798,14 +1863,20 @@ do
     if Controller then
       Controller:RemoveDisableRotationInputTag("SlideSplineTurn")
       local CameraManager = Controller.PlayerCameraManager
-      if CameraManager and self.SlideCameraOriginalViewYawMin ~= nil then
-        CameraManager.ViewYawMin = self.SlideCameraOriginalViewYawMin
-        CameraManager.ViewYawMax = self.SlideCameraOriginalViewYawMax
-        CameraManager.ViewPitchMin = self.SlideCameraOriginalViewPitchMin
-        CameraManager.ViewPitchMax = self.SlideCameraOriginalViewPitchMax
+      if CameraManager then
+        local bYawClamped = CameraManager.ViewYawMax - CameraManager.ViewYawMin < SLIDE_CLAMPED_YAW_RANGE
+        if self.SlideCameraOriginalViewYawMin ~= nil then
+          CameraManager.ViewYawMin = self.SlideCameraOriginalViewYawMin
+          CameraManager.ViewYawMax = self.SlideCameraOriginalViewYawMax
+          CameraManager.ViewPitchMin = self.SlideCameraOriginalViewPitchMin
+          CameraManager.ViewPitchMax = self.SlideCameraOriginalViewPitchMax
+        elseif self.SlideCameraActive and bYawClamped then
+          CameraManager.ViewYawMin = SLIDE_DEFAULT_VIEW_YAW_MIN
+          CameraManager.ViewYawMax = SLIDE_DEFAULT_VIEW_YAW_MAX
+        end
       end
     end
-    if self.SlideCameraLerping and self.CameraRotationComponent then
+    if (self.SlideCameraLerping or self.SlideCameraActive) and self.CameraRotationComponent then
       self.CameraRotationComponent:StopControlRotationLerp()
     end
     self.SlideCameraActive = nil
@@ -2639,9 +2710,34 @@ function BP_PlayerCharacter_C:TryOpenSkillUI(CharUIId, bIsOpenByBuff)
         end
         self.SkillUINames = self.SkillUINames or {}
         self.SkillUINames[CharUIInfo.UIName] = true
-        UIObj = UIManager:LoadUINew(CharUIInfo.UIName, self, CharUIInfo.Params)
-        if UIObj and UIObj.InitBattleCharUI then
-          UIObj:InitBattleCharUI(CharUIId, GradeLevel)
+        self.SkillUIRequests = self.SkillUIRequests or {}
+        self.SkillUIRequestVersions = self.SkillUIRequestVersions or {}
+        local UIName = CharUIInfo.UIName
+        local RequestVersion = (self.SkillUIRequestVersions[UIName] or 0) + 1
+        local SkillUIRequest = {CharUIId = CharUIId, Version = RequestVersion}
+        self.SkillUIRequestVersions[UIName] = RequestVersion
+        self.SkillUIRequests[UIName] = SkillUIRequest
+        
+        local function OnSkillUILoaded(AsyncUIObj)
+          local IsCurrentRequest = IsValid(self) and self.SkillUIRequests and self.SkillUIRequests[UIName] == SkillUIRequest
+          local IsTriggerBuffValid = not bIsOpenByBuff or not CharUIInfo.TriggerBuffId or IsValid(self) and self.BuffManager and self.BuffManager:HasBuff(CharUIInfo.TriggerBuffId, false)
+          if not IsCurrentRequest or not IsTriggerBuffValid then
+            if IsCurrentRequest then
+              self.SkillUIRequests[UIName] = nil
+              self.SkillUINames[UIName] = nil
+              UIManager:UnLoadUI(UIName)
+            end
+            return
+          end
+          if AsyncUIObj and AsyncUIObj.InitBattleCharUI then
+            AsyncUIObj:InitBattleCharUI(CharUIId, GradeLevel)
+          end
+        end
+        
+        if UIManager:GetUIObjIsAsyncLoading(UIName) then
+          UIManager:GetUIObjAsync(UIName, OnSkillUILoaded)
+        else
+          UIManager:LoadUIAsync(UIName, OnSkillUILoaded, self, CharUIInfo.Params)
         end
       end
       
@@ -2669,12 +2765,24 @@ function BP_PlayerCharacter_C:TryCloseSkillUI(CharUIId)
   if CharUIInfo then
     local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
     local UIManager = GameInstance:GetGameUIManager()
-    local UIObj = UIManager:GetUIObj(CharUIInfo.UIName)
-    if UIObj then
-      UIObj:RemoveSelf()
-    end
-    if self.SkillUINames and self.SkillUINames[CharUIInfo.UIName] then
-      self.SkillUINames[CharUIInfo.UIName] = nil
+    local UIName = CharUIInfo.UIName
+    local UIObj = UIManager:GetUIObj(UIName)
+    local SkillUIRequest = self.SkillUIRequests and self.SkillUIRequests[UIName]
+    if not SkillUIRequest or SkillUIRequest.CharUIId == CharUIId then
+      if self.SkillUIRequests then
+        self.SkillUIRequests[UIName] = nil
+      end
+      if self.SkillUIRequestVersions then
+        self.SkillUIRequestVersions[UIName] = (self.SkillUIRequestVersions[UIName] or 0) + 1
+      end
+      if UIManager:GetUIObjIsAsyncLoading(UIName) then
+        UIManager:UnLoadUI(UIName)
+      elseif UIObj then
+        UIObj:RemoveSelf()
+      end
+      if self.SkillUINames and self.SkillUINames[UIName] then
+        self.SkillUINames[UIName] = nil
+      end
     end
   end
 end
@@ -2722,6 +2830,7 @@ function BP_PlayerCharacter_C:TryCloseAllSkillUI()
     end
   end
   self.SkillUINames = {}
+  self.SkillUIRequests = {}
 end
 
 function BP_PlayerCharacter_C:TryShowAllSkillUI()
@@ -3780,13 +3889,6 @@ function BP_PlayerCharacter_C:LoadHitDirection(HitDirectionsObject, Attacker)
   end)
 end
 
-function BP_PlayerCharacter_C:TriggerBeAttacked()
-  DebugPrint("BP_PlayerCharacter_C:TriggerBeAttacked")
-  if self:IsMainPlayer() then
-    EventManager:FireEvent(EventID.MainPlayerBeAttacked, self)
-  end
-end
-
 function BP_PlayerCharacter_C:DungeonOtherPlayerLeave()
   if not self:IsMainPlayer() and IsClient(self) then
     EventManager:FireEvent(EventID.OnDungeonOtherPlayerLeave, self)
@@ -4053,6 +4155,27 @@ function BP_PlayerCharacter_C:UpdateEnableFallAtkDir(Enable)
   EMCache:Set("EnableFallAtkDir", Enable)
 end
 
+function BP_PlayerCharacter_C:SetEnableStrafeCircleFromCache()
+  local bEnableStrafeCircle = EMCache:Get("bEnableStrafeCircle")
+  if nil == bEnableStrafeCircle then
+    local OptionInfo = DataMgr.Option.bEnableStrafeCircle
+    local DefaultValue = OptionInfo.DefaultValue
+    if (CommonUtils.GetRuntimePlatform(self) == "Mobile" or GWorld.GameInstance and GWorld.GameInstance:GetUseMapPhoneInPC()) and OptionInfo.DefaultValueM then
+      DefaultValue = OptionInfo.DefaultValueM
+    end
+    bEnableStrafeCircle = true
+    if "False" == DefaultValue then
+      bEnableStrafeCircle = false
+    end
+  end
+  self:UpdateEnableStrafeCircle(bEnableStrafeCircle)
+end
+
+function BP_PlayerCharacter_C:UpdateEnableStrafeCircle(Enable)
+  self.bEnableStrafeCircle = Enable
+  EMCache:Set("bEnableStrafeCircle", Enable)
+end
+
 function BP_PlayerCharacter_C:GetCurrentCharUI()
   local BattleCharInfo = DataMgr.BattleChar[self.CurrentRoleId]
   if BattleCharInfo.CharUIId then
@@ -4167,38 +4290,56 @@ function BP_PlayerCharacter_C:EnterRegionOnlineRegisterTeamEvent(bEnterRegionOnl
 end
 
 function BP_PlayerCharacter_C:OnChangeNickName(NewNickName)
-  self:EnableHeadWidget("Name", false)
-  self:EnableHeadWidget("Name", true, NewNickName)
+  local Comp = self:GetOrCreateHeadWidgetComponent()
+  if not IsValid(Comp) then
+    return
+  end
+  Comp:DisableNameWidget()
+  Comp:EnableNameWidget(NewNickName)
 end
 
 function BP_PlayerCharacter_C:OnChangeTitle(PrefixId, SuffixId, TitleFrameId)
   self:RefreshTitle(PrefixId, SuffixId, TitleFrameId)
 end
 
+function BP_PlayerCharacter_C:RefreshGuildSign()
+  local Avatar = GWorld:GetAvatar()
+  local Comp = self:GetHeadWidgetComponent()
+  local UniformWidget = IsValid(Comp) and Comp:GetWidget() or nil
+  local NameWidget = IsValid(UniformWidget) and UniformWidget.Npc_Name_PC or nil
+  if Avatar and IsValid(NameWidget) then
+    NameWidget:RefreshGuildSign(Avatar)
+  end
+end
+
 function BP_PlayerCharacter_C:EnableNameWidget()
   EventManager:AddEvent(EventID.OnChangeNickName, self, self.OnChangeNickName)
   EventManager:AddEvent(EventID.OnChangeTitle, self, self.OnChangeTitle)
-  local bFirtInit = self.HeadWidgetComponent == nil
-  self:InitHeadWidgetComponent()
-  if bFirtInit then
-    self:EnableHeadWidget("Name", false)
-    self:EnableHeadWidget("Title", false)
+  EventManager:AddEvent(EventID.OnLocalGuildBadgeChange, self, self.RefreshGuildSign)
+  local bFirtInit = self:GetHeadWidgetComponent() == nil
+  local Comp = self:GetOrCreateHeadWidgetComponent()
+  if bFirtInit and IsValid(Comp) then
+    Comp:DisableNameWidget()
+    Comp:DisableTitleWidget()
   end
   local Avatar = GWorld:GetAvatar()
   if Avatar then
     self:OnChangeNickName(Avatar.Nickname)
+    self:RefreshGuildSign()
     self:OnChangeTitle(Avatar.TitleBefore, Avatar.TitleAfter, Avatar.TitleFrame)
   end
 end
 
 function BP_PlayerCharacter_C:DisableNameWidget()
-  if not self.HeadWidgetComponent then
+  local Comp = self:GetHeadWidgetComponent()
+  if not IsValid(Comp) then
     return
   end
   EventManager:RemoveEvent(EventID.OnChangeNickName, self)
   EventManager:RemoveEvent(EventID.OnChangeTitle, self)
-  self:EnableHeadWidget("Name", false)
-  self:EnableHeadWidget("Title", false)
+  EventManager:RemoveEvent(EventID.OnLocalGuildBadgeChange, self)
+  Comp:DisableNameWidget()
+  Comp:DisableTitleWidget()
 end
 
 function BP_PlayerCharacter_C:SetVirtualJoystickEnableMoveLockFromCache()

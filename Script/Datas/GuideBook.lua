@@ -274,7 +274,7 @@ return ReadOnly("GuideBook", {
     RewardId = 7000
   },
   [61] = {
-    FunctionId = "FriendMain",
+    FunctionId = "Dungeon",
     GuideId = 46,
     GuideNoteId = 61,
     GuideNoteTab = 5,
@@ -347,7 +347,6 @@ return ReadOnly("GuideBook", {
     SysGuideId = 2015
   },
   [75] = {
-    CompleteUIGuideId = 55,
     FinishQuest = 10020103,
     GuideId = 55,
     GuideNoteId = 75,
@@ -410,6 +409,7 @@ return ReadOnly("GuideBook", {
   },
   [86] = {
     CompleteUIGuideId = 69,
+    FinishQuest = 10020105,
     GuideId = 69,
     GuideNoteId = 86,
     GuideNoteTab = 5,
@@ -1074,6 +1074,14 @@ return ReadOnly("GuideBook", {
     GuideId = 163,
     GuideNoteId = 174,
     GuideNoteTab = 3,
+    RewardId = 7000
+  },
+  [175] = {
+    CompleteUIGuideId = 164,
+    FinishQuest = 10020108,
+    GuideId = 164,
+    GuideNoteId = 175,
+    GuideNoteTab = 4,
     RewardId = 7000
   },
   [1001] = {

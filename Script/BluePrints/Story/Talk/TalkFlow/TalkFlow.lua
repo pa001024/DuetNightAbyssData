@@ -37,8 +37,8 @@ function M:BuildFlow()
     OnFlowCreated = function(Flow, ParallelNode, WaitAllNode)
       self:OnFlowCreated(Flow, ParallelNode, WaitAllNode)
     end,
-    OnDialogueEnd = function()
-      self:OnDialogueEnd()
+    OnFlowComplete = function()
+      self:OnFlowComplete()
     end
   }
   local FlowChecker = {
@@ -121,6 +121,10 @@ function M:Stop()
 end
 
 function M:Skip()
+  if not self.CurrentNode then
+    DebugPrint("FTalkFlow:Skip(),CurrentNode is nil")
+    return false
+  end
   local bSkipFail = self.CurrentNode:Skip()
   return not bSkipFail
 end
@@ -146,14 +150,14 @@ function M:OnNodeCreated(Node)
   end
 end
 
-function M:BindOnDialogueEndEvent(Obj, Event)
-  self.OnDialogueEndObj = Obj
-  self.OnDialogueEndEvent = Event
+function M:BindOnFlowCompleteEvent(Obj, Event)
+  self.OnFlowCompleteObj = Obj
+  self.OnFlowCompleteEvent = Event
 end
 
-function M:OnDialogueEnd()
-  if self.OnDialogueEndObj and self.OnDialogueEndEvent then
-    self.OnDialogueEndEvent(self.OnDialogueEndObj)
+function M:OnFlowComplete()
+  if self.OnFlowCompleteObj and self.OnFlowCompleteEvent then
+    self.OnFlowCompleteEvent(self.OnFlowCompleteObj)
   end
   self:End()
 end
@@ -216,7 +220,7 @@ function M:IsInImpression()
 end
 
 function M:IsInText()
-  return self.CurrentNode and self.CurrentNode:GetType() == EDialogueNodeType.Dialogue
+  return self.CurrentNode ~= nil and self.CurrentNode:GetType() == EDialogueNodeType.Dialogue
 end
 
 function M:IsInOption()

@@ -39,8 +39,9 @@ function ConditionUtils.CheckConditionInternal(Avatar, ConditionId, ConditionChe
   local Logic = string.lower(ConditionInfo.ConditionLogic)
   if "and" == Logic then
     for Condition, List in pairs(ConditionInfo.ConditionMap) do
+      local Judge = ConditionUtils["Judge" .. Condition]
       for i = 1, #List do
-        if not ConditionUtils["Judge" .. Condition](Avatar, List[i], ConditionCheckId) then
+        if not Judge or not Judge(Avatar, List[i], ConditionCheckId) then
           return CheckResult(false)
         end
       end
@@ -48,8 +49,9 @@ function ConditionUtils.CheckConditionInternal(Avatar, ConditionId, ConditionChe
     return CheckResult(true)
   elseif "or" == Logic then
     for Condition, List in pairs(ConditionInfo.ConditionMap) do
+      local Judge = ConditionUtils["Judge" .. Condition]
       for i = 1, #List do
-        if ConditionUtils["Judge" .. Condition](Avatar, List[i], ConditionCheckId) then
+        if Judge and Judge(Avatar, List[i], ConditionCheckId) then
           return CheckResult(true)
         end
       end
@@ -100,50 +102,6 @@ function ConditionUtils:JudgeGuildLevelMin(Params)
   if GWorld:IsSkynetServer() or not IsDedicatedServer(GWorld.GameInstance) then
     local GuildLevel = tonumber((self.GuildSimpleInfo or {}).Level) or 0
     return math.floor(GuildLevel) >= math.floor(tonumber(Params) or 0)
-  end
-  return false
-end
-
-local function GuildBossGetSyncedFinishedTrialCount(Avatar)
-  local GuildInfo = type(Avatar.GuildInfo) == "table" and Avatar.GuildInfo or {}
-  local GuildBossData = "table" == type(GuildInfo.GuildBossData) and GuildInfo.GuildBossData or {}
-  local TrialList = "table" == type(GuildBossData.TrialList) and GuildBossData.TrialList or {}
-  local TrialProgress = "table" == type(GuildBossData.TrialProgress) and GuildBossData.TrialProgress or nil
-  if not TrialProgress then
-    return nil
-  end
-  local Count = 0
-  for _, TrialId in pairs(TrialList) do
-    local TrialIdNumber = tonumber(TrialId) or 0
-    local Progress = tonumber(TrialProgress[TrialId] or TrialProgress[tostring(TrialId)] or TrialProgress[TrialIdNumber]) or 0
-    local Rule = (DataMgr and DataMgr.GuildWarTest or {})[TrialIdNumber] or {}.CalulationRule or {}
-    local Need = tonumber(Rule.Rate) or 0
-    if Need <= 0 then
-      Need = tonumber(Rule.Hit) or 0
-    end
-    if Need <= 0 then
-      Need = 1
-    end
-    if Progress >= Need then
-      Count = Count + 1
-    end
-  end
-  return Count
-end
-
-function ConditionUtils:JudgeGuildBossTrialFinishedCount(Params)
-  if GWorld:IsSkynetServer() or not IsDedicatedServer(GWorld.GameInstance) then
-    local NeedCount = type(Params) == "table" and tonumber(Params[1] or Params.Count or Params.NeedCount) or tonumber(Params)
-    NeedCount = math.floor(NeedCount or 0)
-    if type(self.GetCachedGuildBossTrialFinishedCount) == "function" then
-      return NeedCount <= self:GetCachedGuildBossTrialFinishedCount()
-    end
-    local SyncedFinishedCount = GuildBossGetSyncedFinishedTrialCount(self)
-    if nil ~= SyncedFinishedCount then
-      return NeedCount <= SyncedFinishedCount
-    end
-    local Cache = self.GuildBossShopUnlockCache or {}
-    return NeedCount <= (tonumber(Cache.FinishedTrialCount) or 0)
   end
   return false
 end
@@ -338,6 +296,29 @@ function ConditionUtils:JudgeStarterQuestFinish(Params)
     return true
   end
   return false
+end
+
+function ConditionUtils:JudgeQuestPhaseFinish(Params)
+  if not GWorld:IsSkynetServer() and IsDedicatedServer(GWorld.GameInstance) then
+    return false
+  end
+  local EventId, PhaseId = Params[1], Params[2]
+  local Phase = DataMgr.CommonQuestPhase[PhaseId]
+  local QuestIds = DataMgr.QuestPhaseId2QuestId[PhaseId]
+  if not (Phase and Phase.EventId == EventId and QuestIds) or 0 == #QuestIds then
+    return false
+  end
+  local Quests = self.CommonQuestActivity and self.CommonQuestActivity:GetCommonQuests(EventId)
+  if not Quests then
+    return false
+  end
+  for _, QuestId in ipairs(QuestIds) do
+    local Counter = Quests[QuestId]
+    if not Counter or not Counter:IsComplete() then
+      return false
+    end
+  end
+  return true
 end
 
 function ConditionUtils:JudgePhaseQuestEnd(Params)
@@ -655,6 +636,23 @@ function ConditionUtils:JudgeRougeLikePassRoom(Params)
   return PassRoom <= RougeLike.PassRooms:Length()
 end
 
+function ConditionUtils:JudgeRaidFloorMin(Params)
+  if not GWorld:IsSkynetServer() and IsDedicatedServer(GWorld.GameInstance) then
+    return false
+  end
+  local RaidSeason = self.RaidSeasons[Params[1]]
+  if not RaidSeason then
+    return false
+  end
+  local FloorType, Floor = Params[2], Params[3]
+  if FloorType == CommonConst.RaidDungeonType.Pre then
+    return Floor <= RaidSeason.PreRaidFloor
+  elseif FloorType == CommonConst.RaidDungeonType.Formal then
+    return Floor <= RaidSeason.RaidFloor
+  end
+  return false
+end
+
 function ConditionUtils:JudgeDialogueHasRead(DialogueId)
   if not GWorld:IsSkynetServer() and IsDedicatedServer(GWorld.GameInstance) then
     return false
@@ -735,23 +733,27 @@ function ConditionUtils:JudgeConditionalRewardEventEnd(EventId)
   if not GWorld:IsSkynetServer() and IsDedicatedServer(GWorld.GameInstance) then
     return false
   end
-  local Info = DataMgr.ConditionalRewardEvent[EventId]
-  if not Info or Info.RewardClaimCondition == nil then
-    return false
-  end
-  local ConditionCount = type(Info.RewardClaimCondition) == "table" and #Info.RewardClaimCondition or 1
-  if ConditionCount <= 0 then
-    return false
-  end
-  local OldClaimed = self.ClaimActivityConditionRewardRecord[EventId] and true or false
   local RecordList = self.ClaimActivityConditionRewardRecordList
-  local List = RecordList and RecordList[EventId]
-  for Index = 1, ConditionCount do
-    if (1 ~= Index or not OldClaimed) and (not List or not CommonUtils.HasValue(List, Index)) then
+  if RecordList then
+    local List = RecordList[EventId]
+    if not List then
       return false
     end
+    local Info = DataMgr.ConditionalRewardEvent[EventId]
+    if not Info or #Info.RewardClaimCondition <= 0 then
+      return false
+    end
+    for i = 1, #Info.RewardClaimCondition do
+      if not CommonUtils.HasValue(List, i) then
+        return false
+      end
+    end
+    return true
   end
-  return true
+  if self.ClaimActivityConditionRewardRecord[EventId] then
+    return true
+  end
+  return false
 end
 
 function ConditionUtils:JudgeDualTerminalLogin(DeviceType)

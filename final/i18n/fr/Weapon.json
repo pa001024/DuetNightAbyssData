@@ -1170,6 +1170,392 @@
     ]
   },
   {
+    "id": 10199,
+    "icon": "Sword_Yemei",
+    "名称": "Énigme insoluble",
+    "版本": "1.7",
+    "描述": "L’une des porteuses de cette arme était une sage. Père Ask récompensa son esprit. Obsédée par sa quête de vérité, elle passait nuit après nuit, seule au cœur des ténèbres, à méditer sur la véritable nature du monde, encore et encore. Elle aspirait à une conclusion parfaite, exempte de toute faille et de toute erreur. Pourtant, plus elle en apprenait, plus l’inconnu s’étendait devant elle.\n \nElle noya ses heures dans la nuit et les pages blanches, mais comment la quête de vérité pourrait-elle jamais connaître une fin ? La souffrance de l’inconnaissable finit par la déchirer. Au terme d’une longue nuit, elle mit fin à ses jours avec une lame. Quant à l’énigme insoluble qu’elle laissa derrière elle, elle en plongea bien d’autres dans la folie.",
+    "类型": [
+      "近战",
+      "单手剑"
+    ],
+    "伤害类型": "灾厄",
+    "攻击": 20,
+    "暴击": 0.23,
+    "暴伤": 2.2,
+    "触发": 0.22,
+    "加成": {
+      "技能威力": 0.45,
+      "攻击": 0.9,
+      "属性穿透": 0.35,
+      "昂扬": 0.6
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Sel volatil endommagé": 6,
+        "Composant d’arme basique : Poignée": 2
+      },
+      {
+        "Pièce": 6100,
+        "Réactif inflammable": 3,
+        "Composant d’arme basique : Poignée": 4,
+        "Composant d’arme basique : Lame": 2
+      },
+      {
+        "Pièce": 6900,
+        "Réactif inflammable": 6,
+        "Composant d’arme intermédiaire : Poignée": 3,
+        "Composant d’arme intermédiaire : Lame": 1
+      },
+      {
+        "Pièce": 17000,
+        "Réactif inflammable": 12,
+        "Composant d’arme avancé : Poignée": 6,
+        "Composant d’arme avancé : Lame": 2
+      },
+      {
+        "Pièce": 49000,
+        "Réactif inflammable": 24,
+        "Composant d’arme avancé : Poignée": 10,
+        "Composant d’arme avancé : Lame": 4
+      },
+      {
+        "Pièce": 180000,
+        "Réactif inflammable": 48,
+        "Composant d’arme avancé : Poignée": 20,
+        "Composant d’arme avancé : Lame": 8
+      }
+    ],
+    "熔炼": [
+      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage."
+    ],
+    "熔炉": [
+      {
+        "lv": 0,
+        "技能": [
+          {
+            "id": 10199001,
+            "名称": "Insoluble – Méditation",
+            "icon": "",
+            "描述": "Lorsque cette arme inflige des dégâts, elle confère 1.0 points de calamité. Le maximum de calamité est de 150.0 points.\nLorsque le maximum est atteint, tous les points de calamité sont consommés et vous obtenez 1 cumul de [Recherche] : la Vitesse de compétence augmente de 10.0% pendant 9.0 s, jusqu’à 6.0 cumuls."
+          }
+        ]
+      },
+      {
+        "lv": 1,
+        "解锁": {
+          "Prototype : Énigme insoluble": 36,
+          "Module de transfert d’affinité d’arme": 5,
+          "Insigne de force": 30,
+          "Insigne d’inflexibilité": 30
+        },
+        "技能": [
+          {
+            "id": 10199002,
+            "名称": "Insoluble – Aspiration",
+            "icon": "",
+            "描述": "Lorsque vous consommez du [Désordre], vous obtenez [12.0 × nombre de cumuls consommés] points de calamité.",
+            "解锁": {
+              "Prototype : Énigme insoluble": 30,
+              "Cristal Électro": 90,
+              "Cristal radieux": 15,
+              "Module de transfert d’affinité d’arme": 2,
+              "Insigne de force": 50,
+              "Insigne d’inflexibilité": 50
+            }
+          },
+          {
+            "id": 10199003,
+            "名称": "Énigme – Inconnu",
+            "icon": "",
+            "描述": "Lorsque des Dégâts de compétence se déclenchent, vous obtenez [2.0 × Vitesse de compétence] points de calamité.",
+            "解锁": {
+              "Prototype : Énigme insoluble": 30,
+              "Cristal Électro": 90,
+              "Cristal radieux": 15,
+              "Module de transfert d’affinité d’arme": 2,
+              "Insigne de force": 50,
+              "Insigne d’inflexibilité": 50
+            }
+          }
+        ]
+      },
+      {
+        "lv": 2,
+        "解锁": {
+          "Prototype : Énigme insoluble": 42,
+          "Cristal Électro": 20,
+          "Élixir d’aiguisage": 6,
+          "Insigne de force": 40,
+          "Insigne d’inflexibilité": 40
+        },
+        "技能": [
+          {
+            "id": 10199004,
+            "名称": "Insoluble – Puissance",
+            "icon": "T_Rouge_Talent_SkillIntensityUP",
+            "加成": {
+              "Puissance de compétence": 0.45
+            },
+            "解锁": {
+              "Prototype : Énigme insoluble": 30,
+              "Cristal Électro": 90,
+              "Cristal radieux": 15,
+              "Élixir d’aiguisage": 4,
+              "Insigne de force": 50,
+              "Insigne d’inflexibilité": 50
+            }
+          },
+          {
+            "id": 10199005,
+            "名称": "Énigme – Assaut",
+            "icon": "T_Rouge_Talent_ATK",
+            "加成": {
+              "ATQ": 0.9
+            },
+            "解锁": {
+              "Prototype : Énigme insoluble": 30,
+              "Cristal Électro": 90,
+              "Cristal radieux": 15,
+              "Élixir d’aiguisage": 4,
+              "Insigne de force": 50,
+              "Insigne d’inflexibilité": 50
+            }
+          }
+        ]
+      },
+      {
+        "lv": 3,
+        "解锁": {
+          "Prototype : Énigme insoluble": 48,
+          "Cristal Électro": 30,
+          "Cristal radieux": 5,
+          "Module de transfert d’affinité d’arme": 6,
+          "Insigne de force": 50,
+          "Insigne d’inflexibilité": 50
+        },
+        "技能": [
+          {
+            "id": 10199006,
+            "名称": "Insoluble – Réponse",
+            "icon": "",
+            "描述": "Sous l’effet de [Recherche], si votre Vitesse de compétence dépasse 220.0%, les Dégâts de compétence augmentent de 90.0%.",
+            "解锁": {
+              "Prototype : Énigme insoluble": 30,
+              "Cristal Électro": 90,
+              "Cristal radieux": 15,
+              "Module de transfert d’affinité d’arme": 2,
+              "Insigne de force": 50,
+              "Insigne d’inflexibilité": 50
+            }
+          },
+          {
+            "id": 10199007,
+            "名称": "Énigme – Preuve",
+            "icon": "",
+            "描述": "Sous l’effet de [Recherche], si votre Vitesse de compétence dépasse 2.2, la Pénétration de compétence augmente de 30.0%.",
+            "解锁": {
+              "Prototype : Énigme insoluble": 30,
+              "Cristal Électro": 90,
+              "Cristal radieux": 15,
+              "Module de transfert d’affinité d’arme": 2,
+              "Insigne de force": 50,
+              "Insigne d’inflexibilité": 50
+            }
+          }
+        ]
+      },
+      {
+        "lv": 4,
+        "解锁": {
+          "Prototype : Énigme insoluble": 54,
+          "Cristal Électro": 50,
+          "Cristal radieux": 15,
+          "Élixir d’aiguisage": 6,
+          "Insigne de force": 60,
+          "Insigne d’inflexibilité": 60
+        },
+        "技能": [
+          {
+            "id": 10199008,
+            "名称": "Insoluble – Perforation",
+            "icon": "T_Rouge_Talent_AttrPenetration",
+            "加成": {
+              "Pénétration de tous les attributs": 0.35
+            },
+            "解锁": {
+              "Prototype : Énigme insoluble": 30,
+              "Cristal Électro": 90,
+              "Cristal radieux": 15,
+              "Élixir d’aiguisage": 4,
+              "Insigne de force": 50,
+              "Insigne d’inflexibilité": 50
+            }
+          },
+          {
+            "id": 10199009,
+            "名称": "Énigme – Vigueur",
+            "icon": "T_Rouge_Talent_Morale",
+            "加成": {
+              "Vigueur": 0.6
+            },
+            "解锁": {
+              "Prototype : Énigme insoluble": 30,
+              "Cristal Électro": 90,
+              "Cristal radieux": 15,
+              "Élixir d’aiguisage": 4,
+              "Insigne de force": 50,
+              "Insigne d’inflexibilité": 50
+            }
+          }
+        ]
+      },
+      {
+        "lv": 5,
+        "解锁": {
+          "Prototype : Énigme insoluble": 100,
+          "Cristal Électro": 90,
+          "Cristal radieux": 20,
+          "Moule de fusion": 1,
+          "Insigne de force": 100,
+          "Insigne d’inflexibilité": 100
+        },
+        "技能": [
+          {
+            "id": 10199010,
+            "名称": "Insoluble – Vérité",
+            "icon": "",
+            "描述": "Dégâts de compétence supplémentaires de votre attribut +50.0%.\nLorsque [Recherche] atteint le nombre maximal de cumuls, vous obtenez également l’effet suivant : lorsque vous infligez des Dégâts de compétence, 3500.0% dégâts de calamité sont infligés aux ennemis dans un rayon de 3.0 m autour de la cible. Ces dégâts sont considérés comme des Dégâts de compétence et augmentent en fonction de la Puissance de compétence et de la Vitesse de compétence du personnage, selon le multiplicateur [Puissance de compétence × Vitesse de compétence - 100 %]. Cet effet peut se déclencher au maximum une fois toutes les 1.0 s.",
+            "加成": {
+              "追加伤害": 0.5
+            }
+          }
+        ]
+      }
+    ],
+    "技能": [
+      {
+        "id": 1010101,
+        "名称": "Attaque normale",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts du 1ᵉʳ coup",
+            "值": 1.35,
+            "削韧": 25,
+            "延迟": 0.05,
+            "卡肉": 0.03,
+            "tag": [
+              "近战",
+              "武器",
+              "普攻"
+            ],
+            "取消": 0.2333,
+            "连段": 0.4667
+          },
+          {
+            "名称": "Dégâts du 2ᵉ coup",
+            "值": 1.5,
+            "削韧": 30,
+            "延迟": 0.1,
+            "卡肉": 0.03,
+            "tag": [
+              "近战",
+              "武器",
+              "普攻"
+            ],
+            "取消": 0.1667,
+            "连段": 0.3777
+          },
+          {
+            "名称": "Dégâts du 3ᵉ coup",
+            "值": 1.2,
+            "格式": "{%}×2",
+            "削韧": 30,
+            "tag": [
+              "近战",
+              "武器",
+              "普攻"
+            ],
+            "取消": 0.4,
+            "连段": 0.612
+          },
+          {
+            "名称": "Dégâts du 4ᵉ coup",
+            "值": 2.46,
+            "削韧": 50,
+            "延迟": 0.05,
+            "卡肉": 0.07,
+            "tag": [
+              "近战",
+              "武器",
+              "普攻"
+            ],
+            "取消": 0.6333,
+            "连段": 0.9
+          }
+        ]
+      },
+      {
+        "id": 1010102,
+        "名称": "Attaque chargée",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts d’attaque chargée",
+            "值": 3.29,
+            "削韧": 73,
+            "卡肉": 0.03,
+            "tag": [
+              "近战",
+              "武器",
+              "蓄力攻击"
+            ],
+            "取消": 1.2333
+          }
+        ]
+      },
+      {
+        "id": 1010103,
+        "名称": "Attaque plongeante",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts d’attaque plongeante",
+            "值": 1.54,
+            "削韧": 33,
+            "tag": [
+              "近战",
+              "武器",
+              "下落攻击"
+            ],
+            "取消": 1.6807
+          }
+        ]
+      },
+      {
+        "id": 1010104,
+        "名称": "Attaque en glissade",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts d’attaque en glissade",
+            "值": 1.53,
+            "削韧": 33,
+            "卡肉": 0.1,
+            "tag": [
+              "近战",
+              "武器",
+              "滑行攻击"
+            ],
+            "取消": 0.4333
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": 10201,
     "icon": "Polearm_Sairen",
     "名称": "Baiser de la sirène",
@@ -3942,7 +4328,7 @@
     "暴伤": 2,
     "触发": 0.3,
     "加成": {
-      "触发": 0.75
+      "战姿削减": 0.375
     },
     "突破": [
       {
@@ -3982,22 +4368,30 @@
       }
     ],
     "熔炼": [
-      "Chance de déclenchement +#1. Lorsque cette arme déclenche un effet supplémentaire, elle a #2 de chances de récupérer 5 projectiles.",
+      "Réduction de posture +#1. Lorsque cette arme inflige un coup critique, la Vitesse d’attaque augmente de #2 et la Vitesse d’attaque chargée augmente de #3 pendant 5.0 s. L’effet est annulé lors du changement d’arme.",
       [
-        "75.0%",
-        "90.0%",
-        "105.0%",
-        "120.0%",
-        "135.0%",
-        "150.0%"
+        "37.5%",
+        "45.0%",
+        "52.5%",
+        "60.0%",
+        "67.5%",
+        "75.0%"
       ],
       [
-        "50.0%",
-        "60.0%",
-        "70.0%",
-        "80.0%",
-        "90.0%",
-        "100.0%"
+        "30.0%",
+        "36.0%",
+        "42.0%",
+        "48.0%",
+        "54.0%",
+        "60.0%"
+      ],
+      [
+        "25.0%",
+        "30.0%",
+        "35.0%",
+        "40.0%",
+        "45.0%",
+        "50.0%"
       ]
     ],
     "技能": [
@@ -4135,7 +4529,7 @@
     "icon": "Claymore_Yemei",
     "名称": "Braise souveraine",
     "版本": "1.5",
-    "描述": "L’un des porteurs de cette arme était un roi. Le Dieu-Père récompensa son ambition. Le peuple se tenait derrière lui, acclamant son nom et célébrant ses conquêtes.\nIl ne cessa jamais d’avancer sur la voie de la conquête, convaincu que toujours plus de gens se rallieraient à lui. Mais ses ennemis, eux, ne firent que se multiplier. Il finit encerclé sur son trône, embrasa un grand feu et se réduisit en cendres avec sa gloire.",
+    "描述": "L’un des porteurs de cette arme était un roi. Père Ask récompensa son ambition. Le peuple se tenait derrière lui, acclamant son nom et célébrant ses conquêtes.\nIl ne cessa jamais d’avancer sur la voie de la conquête, convaincu que toujours plus de gens se rallieraient à lui. Mais ses ennemis, eux, ne firent que se multiplier. Il finit encerclé sur son trône, embrasa un grand feu et se réduisit en cendres avec sa gloire.",
     "类型": [
       "近战",
       "重剑"
@@ -5147,7 +5541,7 @@
     "暴伤": 2,
     "触发": 0.2,
     "加成": {
-      "攻击范围": 100
+      "暴击": 0.5
     },
     "突破": [
       {
@@ -5187,22 +5581,22 @@
       }
     ],
     "熔炼": [
-      "Portée d’attaque +#1. Lors d’une Attaque chargée avec cette arme, #2 de chances de ne pas consommer de points de Combo.",
+      "Taux CRIT +#1. Lors d’une Attaque chargée avec cette arme, restitue #2 des points de Combo consommés.",
       [
-        "1.0",
-        "1.2",
-        "1.4",
-        "1.6",
-        "1.8",
-        "2.0"
+        "50.0%",
+        "60.0%",
+        "70.0%",
+        "80.0%",
+        "90.0%",
+        "100.0%"
       ],
       [
-        "6.0%",
-        "7.2%",
-        "8.4%",
-        "9.6%",
-        "10.8%",
-        "12.0%"
+        "20.0%",
+        "24.0%",
+        "28.0%",
+        "32.0%",
+        "36.0%",
+        "40.0%"
       ]
     ],
     "技能": [
@@ -8626,7 +9020,7 @@
         "技能": [
           {
             "id": 20299008,
-            "名称": "Sanguine – Pénétration",
+            "名称": "Sanguine – Perforation",
             "icon": "T_Rouge_Talent_AttrPenetration",
             "加成": {
               "Pénétration de tous les attributs": 0.35
@@ -9472,6 +9866,129 @@
     ],
     "装填": 1.4941,
     "射击间隔": 0.05
+  },
+  {
+    "id": 20306,
+    "icon": "Cannon_Huozhe",
+    "名称": "Le poids de vivre",
+    "版本": "1.7",
+    "描述": "活下去，是生者需要背负的祝福。",
+    "类型": [
+      "远程",
+      "榴炮"
+    ],
+    "伤害类型": "震荡",
+    "攻击": 8,
+    "暴击": 0.3,
+    "暴伤": 2.5,
+    "触发": 0.1,
+    "弹匣": 8,
+    "最大弹药": 40,
+    "弹药转化率": 0.35,
+    "最大射程": 2800,
+    "加成": {
+      "暴伤": 0.625
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Armature": 4,
+        "Composant d’arme basique : Verrou": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Armature": 3,
+        "Composant d’arme intermédiaire : Verrou": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Armature": 6,
+        "Composant d’arme avancé : Verrou": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Armature": 10,
+        "Composant d’arme avancé : Verrou": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Armature": 20,
+        "Composant d’arme avancé : Verrou": 8
+      }
+    ],
+    "熔炼": [
+      "DGT CRIT +#1. Lorsqu’un personnage Électro tire, il obtient un effet augmentant la Puissance de compétence de #2. Cet effet est retiré lorsqu’il cesse de tirer ou prépare une attaque chargée avec une arme à distance.",
+      [
+        "62.5%",
+        "75.0%",
+        "87.5%",
+        "100.0%",
+        "112.5%",
+        "125.0%"
+      ],
+      [
+        "75.0%",
+        "90.0%",
+        "105.0%",
+        "120.0%",
+        "135.0%",
+        "150.0%"
+      ]
+    ],
+    "技能": [
+      {
+        "id": 2030601,
+        "名称": "Tirer",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts d’explosion",
+            "值": 0.95,
+            "削韧": 40,
+            "tag": [
+              "远程",
+              "武器",
+              "爆炸"
+            ],
+            "取消": 0.5667,
+            "连段": 0.6333
+          },
+          {
+            "名称": "Rayon d’explosion",
+            "值": 3,
+            "格式": "{}m"
+          }
+        ],
+        "实体": [
+          {
+            "id": 2030611,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 5,
+              "BoxLength": 10,
+              "BoxWidth": 5
+            },
+            "时长": 3,
+            "速度": 5000,
+            "标签": [
+              "ExplodeBullet"
+            ]
+          }
+        ]
+      }
+    ],
+    "装填": 0.3352,
+    "射击间隔": 0.8333
   },
   {
     "id": 20401,
@@ -10823,7 +11340,7 @@
       }
     ],
     "熔炼": [
-      "Capacité du chargeur +#1. Après avoir consommé 10 munitions en tirant avec cette arme, toutes les munitions restantes du chargeur sont consommées pour tirer 1 projectile spécial infligeant des Dégâts de zone. Chaque munition consommée augmente les dégâts de ce tir de #2, jusqu’à un maximum de #3. Vaincre un ennemi avec cette arme a #4 de chances d’obtenir 1 munition.",
+      "Capacité du chargeur +#1. Après avoir consommé 10 munitions en tirant avec cette arme, toutes les munitions restantes du chargeur sont consommées pour tirer 1 projectile spécial infligeant des dégâts de zone. Chaque munition consommée augmente les dégâts de ce tir de #2, jusqu’à un maximum de #3. Lorsque le projectile spécial touche, vous obtenez un effet augmentant les DGT d’arme à distance de #4 pendant 12.0 s, cumulable jusqu’à 2.0 fois.",
       [
         "30.0%",
         "36.0%",
@@ -10849,12 +11366,12 @@
         "102.0%"
       ],
       [
-        "25.0%",
-        "30.0%",
-        "35.0%",
-        "40.0%",
-        "45.0%",
-        "50.0%"
+        "15.0%",
+        "18.0%",
+        "21.0%",
+        "24.0%",
+        "27.0%",
+        "30.0%"
       ]
     ],
     "技能": [
@@ -11394,7 +11911,7 @@
     "弹药转化率": 1.1,
     "最大射程": 2800,
     "加成": {
-      "装填": 0.3
+      "触发": 0.75
     },
     "突破": [
       {
@@ -11434,22 +11951,22 @@
       }
     ],
     "熔炼": [
-      "Vitesse de rechargement +#1. Après avoir rechargé, la Vitesse d’attaque augmente de #2 pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
+      "Chance de déclenchement +#1. Après avoir touché une cible, les dégâts que cette arme lui inflige augmentent de #2, cumulable jusqu’à 15.0 fois.",
       [
-        "30.0%",
-        "36.0%",
-        "42.0%",
-        "48.0%",
-        "54.0%",
-        "60.0%"
+        "75.0%",
+        "90.0%",
+        "105.0%",
+        "120.0%",
+        "135.0%",
+        "150.0%"
       ],
       [
-        "50.0%",
-        "60.0%",
-        "70.0%",
-        "80.0%",
-        "90.0%",
-        "100.0%"
+        "3.0%",
+        "3.6%",
+        "4.2%",
+        "4.8%",
+        "5.4%",
+        "6.0%"
       ]
     ],
     "技能": [
@@ -12546,16 +13063,16 @@
       "弓（长弓）"
     ],
     "伤害类型": "贯穿",
-    "攻击": 17,
-    "暴击": 0.19,
-    "暴伤": 2,
-    "触发": 0.2,
+    "攻击": 18,
+    "暴击": 0.2,
+    "暴伤": 2.2,
+    "触发": 0.12,
     "弹匣": 1,
     "最大弹药": 50,
     "弹药转化率": 0.5,
     "最大射程": 4000,
     "加成": {
-      "攻速": 1
+      "攻速": 0.25
     },
     "突破": [
       {
@@ -12595,13 +13112,71 @@
       }
     ],
     "熔炼": [
-      "Vitesse d’attaque +100.0%. Tirer une flèche pendant la 3e phase de charge augmente les dégâts qu’elle inflige de 71.9% et augmente le Rayon de l’explosion de 6.0 pendant 2.0 s."
+      "Vitesse d’attaque +#1. Tirer une flèche pendant la 3e phase de charge augmente les dégâts qu’elle inflige de 100.0% et augmente le Rayon de l’explosion de #2 pendant 5.0 s.",
+      [
+        "25.0%",
+        "30.0%",
+        "35.0%",
+        "40.0%",
+        "45.0%",
+        "50.0%"
+      ],
+      [
+        "1.2",
+        "1.5",
+        "1.8",
+        "2.0",
+        "2.2",
+        "2.5"
+      ]
     ],
     "技能": [
       {
         "id": 2060501,
         "名称": "Tirer",
         "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts du projectile",
+            "值": 0.65,
+            "削韧": 8,
+            "tag": [
+              "远程",
+              "武器"
+            ],
+            "取消": 0.3,
+            "连段": 0.3667
+          },
+          {
+            "名称": "Dégâts du projectile — Phase 2",
+            "值": 1,
+            "削韧": 25,
+            "tag": [
+              "远程",
+              "武器",
+              "爆炸"
+            ],
+            "取消": 0.3,
+            "连段": 0.3667
+          },
+          {
+            "名称": "Dégâts du projectile — Phase 3",
+            "值": 2,
+            "削韧": 25,
+            "tag": [
+              "远程",
+              "武器",
+              "爆炸"
+            ],
+            "取消": 0.3,
+            "连段": 0.3667
+          },
+          {
+            "名称": "Rayon d’explosion",
+            "值": 3,
+            "格式": "{}m"
+          }
+        ],
         "实体": [
           {
             "id": 2060511,

@@ -7834,6 +7834,324 @@
     "text": "Please... give me another chance. I won't fail you again."
   },
   {
+    "id": 11147,
+    "charId": 4103,
+    "name": "Character Pose: First Encounter",
+    "res": "char_SpLise01_vo_gain",
+    "text": "A night of revelry... and perfect cover for danger. I won't let my guard down."
+  },
+  {
+    "id": 11148,
+    "charId": 4103,
+    "name": "Character Pose: Ready to Go",
+    "res": "char_SpLise01_vo_appear",
+    "text": "The cuffs conceal a pistol nicely, but I'll need some time to adjust to this hem."
+  },
+  {
+    "id": 11149,
+    "charId": 4103,
+    "name": "Character Pose: Battle Stance",
+    "res": "char_SpLise01_vo_battlestart",
+    "text": "I can hear it — the tension beneath Icelake's cheer."
+  },
+  {
+    "id": 11150,
+    "charId": 4103,
+    "name": "Character Pose: Ultimate SkillⅠ",
+    "res": "char_SpLise01_vo_skill02_r01",
+    "text": "Lightning reveals the guilty."
+  },
+  {
+    "id": 11151,
+    "charId": 4103,
+    "name": "Character Pose: Ultimate SkillⅡ",
+    "res": "char_SpLise01_vo_skill02_r02",
+    "text": "Your brutal revelry ends here."
+  },
+  {
+    "id": 11152,
+    "charId": 4103,
+    "name": "Character Pose: Ultimate SkillⅢ",
+    "res": "char_SpLise01_vo_skill02_r03",
+    "text": "Surrender now!"
+  },
+  {
+    "id": 11153,
+    "charId": 4103,
+    "name": "First Encounter Ⅰ",
+    "res": "char_SpLise_vo_gain",
+    "text": "I'll live on, {nickname}. Not just to honour Blues' last words, but because I've found a reason to keep going."
+  },
+  {
+    "id": 11154,
+    "charId": 4103,
+    "name": "Greetings",
+    "res": "char_SpLise_vo_welcome",
+    "text": "Patrol complete. Just a habit — I like to keep an eye on things."
+  },
+  {
+    "id": 11155,
+    "charId": 4103,
+    "name": "Chitchat: About ChangeⅠ",
+    "res": "char_SpLise_vo_topic_01_1",
+    "text": "Yeah, even the neighbours didn't recognise me at first. I wore that uniform year in, year out. Barely owned anything else."
+  },
+  {
+    "id": 11156,
+    "charId": 4103,
+    "name": "Chitchat: About ChangeⅡ",
+    "res": "char_SpLise_vo_topic_01_2",
+    "text": "Since you're here, what do you think? Does this suit me?"
+  },
+  {
+    "id": 11157,
+    "charId": 4103,
+    "name": "Chitchat: About ChangeⅢ",
+    "res": "char_SpLise_vo_topic_01_3",
+    "text": "Thank you. I needed something to remind myself that I'm not who I used to be."
+  },
+  {
+    "id": 11158,
+    "charId": 4103,
+    "name": "Chitchat: About ChangeⅣ",
+    "res": "char_SpLise_vo_topic_01_4",
+    "text": "...I am. Even though I've told them countless times that I've resigned, people in Icelake still call me \"Officer Fischer.\""
+  },
+  {
+    "id": 11159,
+    "charId": 4103,
+    "name": "Chitchat: About ChangeⅤ",
+    "res": "char_SpLise_vo_topic_01_5",
+    "text": "You're right. One day, they'll see me as I am now."
+  },
+  {
+    "id": 11160,
+    "charId": 4103,
+    "name": "Chitchat: About JobsⅠ",
+    "res": "char_SpLise_vo_topic_02_1",
+    "text": "New commissions. Mediating disputes in Mist Aken, covering up malicious graffiti."
+  },
+  {
+    "id": 11161,
+    "charId": 4103,
+    "name": "Chitchat: About JobsⅡ",
+    "res": "char_SpLise_vo_topic_02_2",
+    "text": "Someone has to do the small stuff. And if it makes people's lives better, it's not really small, is it?"
+  },
+  {
+    "id": 11162,
+    "charId": 4103,
+    "name": "Chitchat: About JobsⅢ",
+    "res": "char_SpLise_vo_topic_02_3",
+    "text": "Like Blues and his operas? ...No, I don't think so. I've spent so long filling my days with work that I've probably missed my chance."
+  },
+  {
+    "id": 11163,
+    "charId": 4103,
+    "name": "Chitchat: About JobsⅣ",
+    "res": "char_SpLise_vo_topic_02_4",
+    "text": "Let me think... I like order and symmetry. Maybe I could take up cleaning and organising? ...No, that still sounds like work."
+  },
+  {
+    "id": 11164,
+    "charId": 4103,
+    "name": "Chitchat: About the LegionⅠ",
+    "res": "char_SpLise_vo_topic_03_1",
+    "text": "A few come from The Asphodel, but most come from my old contacts in the Security Bureau. They pass me the cases they can't handle officially, mediating armed disputes, that sort of thing."
+  },
+  {
+    "id": 11165,
+    "charId": 4103,
+    "name": "Chitchat: About the LegionⅡ",
+    "res": "char_SpLise_vo_topic_03_2",
+    "text": "Yes. Many of the lower-ranked soldiers are just ordinary people like me. Some of them have their own sense of justice... the ones who helped us with the investigation, for example."
+  },
+  {
+    "id": 11166,
+    "charId": 4103,
+    "name": "Chitchat: About the LegionⅢ",
+    "res": "char_SpLise_vo_topic_03_3",
+    "text": "I despise the Legion. But I don't hate these people."
+  },
+  {
+    "id": 11167,
+    "charId": 4103,
+    "name": "Chitchat: About RevengeⅠ",
+    "res": "char_SpLise_vo_topic_04_1",
+    "text": "Ah, yes. Hit the bullseye from a few hundred metres away. Not bad, right?"
+  },
+  {
+    "id": 11168,
+    "charId": 4103,
+    "name": "Chitchat: About RevengeⅡ",
+    "res": "char_SpLise_vo_topic_04_2",
+    "text": "When I've mastered it, I'll pay a few old friends a visit."
+  },
+  {
+    "id": 11169,
+    "charId": 4103,
+    "name": "Chitchat: About RevengeⅢ",
+    "res": "char_SpLise_vo_topic_04_3",
+    "text": "Yes. But don't worry, I won't let vengeance cloud my judgement or consume my life."
+  },
+  {
+    "id": 11170,
+    "charId": 4103,
+    "name": "Chitchat: About RevengeⅣ",
+    "res": "char_SpLise_vo_topic_04_4",
+    "text": "I'll live well, sharpen my skills, wait for the right moment — and walk away clean."
+  },
+  {
+    "id": 11171,
+    "charId": 4103,
+    "name": "Chitchat: About RevengeⅤ",
+    "res": "char_SpLise_vo_topic_04_5",
+    "text": "I won't forget Blues' final request. And besides, I have you now. Friends who stood by me when things were hardest. I'll treasure all of it."
+  },
+  {
+    "id": 11172,
+    "charId": 4103,
+    "name": "Soliloquy",
+    "res": "char_SpLise_vo_idle",
+    "text": "The weekend's clear... a rare day off."
+  },
+  {
+    "id": 11173,
+    "charId": 4103,
+    "name": "Chitchat: Chance Encounter Ⅰ",
+    "res": "char_SpLise_vo_companio_01",
+    "text": "To the friend I've never met... thank you. For being there for Blues when I couldn't be.",
+    "companioCharId": 1503
+  },
+  {
+    "id": 11174,
+    "charId": 4103,
+    "name": "Chitchat: Chance Encounter Ⅱ",
+    "res": "char_SpLise_vo_companio_02",
+    "text": "Your wine is good, but I'm still not used to the taste. Could you make me something milder? I'll drink it properly and write a five-hundred-word recommendation for you.",
+    "companioCharId": 1503
+  },
+  {
+    "id": 11175,
+    "charId": 4103,
+    "name": "Chitchat: Chance Encounter Ⅲ",
+    "res": "char_SpLise_vo_companio_03",
+    "text": "So the girl in the intel wasn't Berenica... I'm sorry you got dragged into the Forsakens's schemes. I'll do everything I can to help you find {nickname}.",
+    "companioCharId": 1503
+  },
+  {
+    "id": 11176,
+    "charId": 4103,
+    "name": "Ready to Go",
+    "res": "char_SpLise_vo_appear",
+    "text": "Ready. We can move out whenever."
+  },
+  {
+    "id": 11177,
+    "charId": 4103,
+    "name": "Ascension",
+    "res": "char_SpLise_vo_lvup",
+    "text": "This power... it'll help me train better. Thank you."
+  },
+  {
+    "id": 11178,
+    "charId": 4103,
+    "name": "Battle Starts",
+    "res": "char_SpLise_vo_battlestart",
+    "text": "Let's give it everything."
+  },
+  {
+    "id": 11179,
+    "charId": 4103,
+    "name": "Idle",
+    "res": "char_SpLise_vo_battleidle",
+    "text": "So you pace yourself and rest when needed — is that your strategy?"
+  },
+  {
+    "id": 11180,
+    "charId": 4103,
+    "name": "Injured: Ⅰ",
+    "res": "char_SpLise_vo_be_hit_heavy_r01",
+    "text": "Uh!"
+  },
+  {
+    "id": 11181,
+    "charId": 4103,
+    "name": "Injured: Ⅱ",
+    "res": "char_SpLise_vo_be_hit_heavy_r02",
+    "text": "I'm fine."
+  },
+  {
+    "id": 11182,
+    "charId": 4103,
+    "name": "Combat Skill: Ⅰ",
+    "res": "char_SpLise_vo_skill01_r01",
+    "text": "Target spotted."
+  },
+  {
+    "id": 11183,
+    "charId": 4103,
+    "name": "Combat Skill: Ⅱ",
+    "res": "char_SpLise_vo_skill01_r02",
+    "text": "Target locked."
+  },
+  {
+    "id": 11184,
+    "charId": 4103,
+    "name": "Ultimate Skill: Ⅰ",
+    "res": "char_SpLise_vo_skill02_r01",
+    "text": "This ends now."
+  },
+  {
+    "id": 11185,
+    "charId": 4103,
+    "name": "Ultimate Skill: Ⅱ",
+    "res": "char_SpLise_vo_skill02_r02",
+    "text": "You have nowhere left to run."
+  },
+  {
+    "id": 11186,
+    "charId": 4103,
+    "name": "Ultimate Skill: Ⅲ",
+    "res": "char_SpLise_vo_skill02_r03",
+    "text": "Reload complete."
+  },
+  {
+    "id": 11187,
+    "charId": 4103,
+    "name": "Defeated: Ⅰ",
+    "res": "char_SpLise_vo_die_r01",
+    "text": "No... I promised..."
+  },
+  {
+    "id": 11188,
+    "charId": 4103,
+    "name": "Defeated: Ⅱ",
+    "res": "char_SpLise_vo_die_r02",
+    "text": "I can't fall here…"
+  },
+  {
+    "id": 11189,
+    "charId": 4103,
+    "name": "Revive",
+    "res": "char_SpLise_vo_revive",
+    "text": "I won't break my word."
+  },
+  {
+    "id": 11190,
+    "charId": 4103,
+    "name": "Victory",
+    "res": "char_SpLise_vo_victory",
+    "text": "Good. One step closer to where I need to be."
+  },
+  {
+    "id": 11191,
+    "charId": 4103,
+    "name": "Retreat",
+    "res": "char_SpLise_vo_fail",
+    "text": "Still a chance. Again."
+  },
+  {
     "id": 16010001,
     "charId": 1601,
     "name": "Ready to Go",

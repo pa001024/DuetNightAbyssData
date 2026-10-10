@@ -200,12 +200,46 @@ function Component:EnterDefeatedTag()
     return
   end
   if not self:HasCannotCondemn() then
-    local DefeatedUI = UIManager(self):GetUIObj("DefeatedInteract")
-    DefeatedUI = DefeatedUI or UIManager(self):LoadUINew("DefeatedInteract")
-    DefeatedUI:InitDefeatedCharacter(self)
+    local UIManagerComponent = UIManager(self)
+    local DefeatedUIName = "DefeatedInteract"
+    local DefeatedUI = UIManagerComponent:GetUIObj(DefeatedUIName)
+    
+    local function InitDefeatedCharacter(AsyncDefeatedUI)
+      if not (AsyncDefeatedUI and IsValid(self) and self:CharacterInTag("Defeated")) or self:HasCannotCondemn() then
+        return
+      end
+      if AsyncDefeatedUI.ExecuteItems and AsyncDefeatedUI.ExecuteItems[self] then
+        return
+      end
+      AsyncDefeatedUI:InitDefeatedCharacter(self)
+    end
+    
+    if DefeatedUI then
+      InitDefeatedCharacter(DefeatedUI)
+    elseif UIManagerComponent:GetUIObjIsAsyncLoading(DefeatedUIName) then
+      UIManagerComponent:GetUIObjAsync(DefeatedUIName, InitDefeatedCharacter)
+    else
+      UIManagerComponent:LoadUIAsync(DefeatedUIName, function(AsyncDefeatedUI)
+        InitDefeatedCharacter(AsyncDefeatedUI)
+        UIManagerComponent:AddTimer(0.02, function()
+          if IsValid(AsyncDefeatedUI) and AsyncDefeatedUI:IsExecuteItemEmpty() then
+            AsyncDefeatedUI:Close()
+          end
+        end, false, 0, nil, true)
+      end)
+    end
     self:SetHeightLightTip(true)
   end
-  UIManager(self):LoadUINew("ToughnessWeak", self)
+  local ToughnessUI = UIManager(self):GetUIObj("ToughnessWeak")
+  if ToughnessUI then
+    UIManager(self):LoadUINew("ToughnessWeak", self)
+  elseif not UIManager(self):GetUIObjIsAsyncLoading("ToughnessWeak") then
+    UIManager(self):LoadUIAsync("ToughnessWeak", function(AsyncToughnessUI)
+      if AsyncToughnessUI and AsyncToughnessUI.BossMonster == self and IsValid(self) and not self:CharacterInTag("Defeated") then
+        AsyncToughnessUI:Close()
+      end
+    end, self)
+  end
   if self.BossBloodUI then
     self.BossBloodUI:ShowToughnessBar(false)
   end

@@ -22,6 +22,7 @@ function M:StartDrawAnimation(TransformID)
   end
   local Texture = LoadObject(TransformData.Icon)
   self.Image_Icon:SetBrushFromTexture(Texture)
+  self.Image_Icon:SetRenderOpacity(0)
   self:PlayAnimation(self.Draw)
   self:AddTimer(0.5, self.ShowIcon)
 end

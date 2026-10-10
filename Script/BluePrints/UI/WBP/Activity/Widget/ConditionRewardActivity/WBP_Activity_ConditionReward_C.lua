@@ -7,7 +7,7 @@ local M = Class({
 function M:InitUI()
   local ActivityConfigData = self:GetPageConfigData()
   self.List_Reward:ClearListItems()
-  local PreViewReward, RewardContentList = ActivityConfigData.EventReward, {}
+  local PreViewReward, RewardContentList = self.RewardId, {}
   if nil == PreViewReward then
     self.Group_RewardView:SetVisibility(UIConst.VisibilityOp.Collapsed)
   else
@@ -75,7 +75,7 @@ function M:InitUI()
     self.Btn_Get.Text_TrainingLevelGetAll:SetText(GText("UI_GameEvent_ToBeFinished"))
     self.Text_Lock:SetText(GText(ActivityConfigData.RewardUnlockTips))
   end
-  if self.IsComplete or self.IsGetReward then
+  if self.IsGetReward then
     self.Ws:SetActiveWidgetIndex(2)
     self.Text_Complete:SetText(GText("UI_GameEvent_HasClaimed"))
   end

@@ -5,6 +5,9 @@ local M = Class({
 local DefaultTipText = "Event_PretextTasks2_UnlockTips"
 
 function M:OnListItemObjectSet(Content)
+  if self.Content and self.Content ~= Content and self.Content.SelfWidget == self then
+    self.Content.SelfWidget = nil
+  end
   self.Content = Content
   Content.SelfWidget = self
   self.BtnName = Content.BtnName
@@ -16,7 +19,7 @@ function M:OnListItemObjectSet(Content)
   self.IsShowFinish = Content.IsShowFinish
   self.IsShowTip = Content.IsShowTip
   self.TipText = Content.TipText
-  if self.TipText == nil or self.TipText == "" then
+  if nil == self.TipText or self.TipText == "" then
     self.TipText = DefaultTipText
   end
   self:UpdateLockDisplay()
@@ -57,6 +60,13 @@ function M:OnClickedBtn()
   else
     self.OnClickedParams.Callback(self.OnClickedParams.Obj)
   end
+end
+
+function M:Destruct()
+  if self.Content and self.Content.SelfWidget == self then
+    self.Content.SelfWidget = nil
+  end
+  self.Content = nil
 end
 
 return M

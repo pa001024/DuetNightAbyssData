@@ -10,6 +10,10 @@ M._components = {
   "BluePrints.UI.BP_EMUserWidgetUtils_C"
 }
 
+function M:Initialize(Initializer)
+  self.bChangingPetVisibility = false
+end
+
 function M:Construct()
   self.Btn_Intensify:BindEventOnClicked(self, self.OnIntensifyBtnClicked)
   self.Btn_Intensify:BindForbidStateExecuteEvent(self, self.OnForbiddenIntensifyBtnClicked)
@@ -34,15 +38,21 @@ function M:Construct()
     OnAddedToFocusPath = self.OnEntryWidgetAddedToFocusPath
   })
   self.Text_Preview:SetText(GText("UI_Preview_Title"))
-  local Avatar = GWorld:GetAvatar()
-  if Avatar and self.Com_SwitchCheckBox then
-    self.Com_SwitchCheckBox:SetChecked(not Avatar.ShowPet)
+  self.Panel_Invisible:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.CheckBox_HidePet.Text_Slot:AddChild(self.Text_Invisible)
+  local NewSlot = self.CheckBox_HidePet.Root:GetChildAt(0):AddChildToOverlay(self.New)
+  NewSlot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Right)
+  NewSlot:SetVerticalAlignment(EVerticalAlignment.VAlign_Top)
+  self.CheckBox_HidePet:InitGamepadKey("Menu")
+  self.CheckBox_HidePet.Com_KeyImg:SetVisibility(UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
+  self.CheckBox_HidePet:BindEventOnClicked({
+    Inst = self,
+    Func = self.BtnInvisibleArea
+  })
+  if self.Btn_PetRecycle and self.Btn_PetRecycle.Init then
+    self.Btn_PetRecycle:Init(self, self.OnPetRecycleClicked)
   end
-  if self.Btn_Invisible_Area then
-    self.Btn_Invisible_Area.OnClicked:Add(self, self.BtnInvisibleArea)
-    self.Btn_Invisible_Area.OnHovered:Add(self, self.OnHovered)
-    self.Btn_Invisible_Area.OnUnHovered:Add(self, self.OnUnHovered)
-  end
+  self:SyncPetVisibility()
   self:InitPetIsShowReddot()
   self.New:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   if EMCache:Get("PetIsShowNew", true) then
@@ -173,6 +183,12 @@ function M:Init(Params)
   self.IsPreviewMode = Params.IsPreviewMode
   self.bHideDeployBtn = Params.bHideDeployBtn
   self.bNeedPreviewSwitcher = Params.bNeedPreviewSwitcher
+  local EntryVisibility = (self.IsPreviewMode or self.bFromOptRewardPreview) and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.SelfHitTestInvisible
+  self.CheckBox_HidePet:SetVisibility(EntryVisibility)
+  if self.Btn_PetRecycle then
+    self.Btn_PetRecycle:SetVisibility(self.Btn_PetRecycle.Init and EntryVisibility or UIConst.VisibilityOp.Collapsed)
+  end
+  self:SyncPetVisibility()
   if self.bFromOptRewardPreview and self.Panel_Invisible then
     self.Panel_Invisible:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
@@ -312,25 +328,26 @@ function M:InitPetIsShowReddot()
   end
 end
 
-function M:OnHovered()
+function M:SyncPetVisibility(IsShow)
   local Avatar = GWorld:GetAvatar()
-  if Avatar.ShowPet then
-    self.Com_SwitchCheckBox:PlayAnimation(self.Com_SwitchCheckBox.Close_Hover)
-  else
-    self.Com_SwitchCheckBox:PlayAnimation(self.Com_SwitchCheckBox.Open_Hover)
+  if nil == IsShow and Avatar then
+    IsShow = Avatar.ShowPet
   end
-end
-
-function M:OnUnHovered()
-  local Avatar = GWorld:GetAvatar()
-  if Avatar.ShowPet then
-    self.Com_SwitchCheckBox:PlayAnimation(self.Com_SwitchCheckBox.Close_Unhover)
-  else
-    self.Com_SwitchCheckBox:PlayAnimation(self.Com_SwitchCheckBox.Open_Unhover)
+  if nil ~= IsShow then
+    self.CheckBox_HidePet:SetIsCheckedWithoutCallback(not IsShow, false)
   end
+  self.CheckBox_HidePet:ForbidBtn(self.bChangingPetVisibility)
 end
 
 function M:BtnInvisibleArea()
+  self:SyncPetVisibility()
+  if self.bChangingPetVisibility or self.IsPreviewMode or self.bFromOptRewardPreview then
+    return
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
   if not EMCache:Get("PetIsShowNew", true) then
     ArmoryUtils:SetPetIsShowReddotRead()
   end
@@ -339,42 +356,65 @@ function M:BtnInvisibleArea()
   else
     self.New:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
-  local Avatar = GWorld:GetAvatar()
-  if Avatar.ShowPet then
-    local Params = {}
-    
-    function Params.RightCallbackFunction()
-      local function SetShowPetCallBack(Ret, IsShow)
-        if 0 == Ret then
-          self.Com_SwitchCheckBox:SetChecked(not IsShow)
-        end
-      end
-      
-      local Avatar = GWorld:GetAvatar()
-      Avatar:SetShowPet(SetShowPetCallBack, not Avatar.ShowPet)
+  self.bChangingPetVisibility = true
+  self:SyncPetVisibility()
+  local TargetIsShow = not Avatar.ShowPet
+  
+  local function Cancel()
+    if not IsValid(self) then
+      return
     end
-    
-    UIManager(self):ShowCommonPopupUI(100382, Params, self)
+    self.bChangingPetVisibility = false
+    self:SyncPetVisibility()
+  end
+  
+  local function Confirm()
+    Avatar:SetShowPet(function(Ret, IsShow)
+      if not IsValid(self) then
+        return
+      end
+      self.bChangingPetVisibility = false
+      if ErrorCode:Check(Ret) then
+        self:SyncPetVisibility(IsShow)
+      else
+        self:SyncPetVisibility()
+      end
+    end, TargetIsShow)
+  end
+  
+  if not TargetIsShow then
+    UIManager(self):ShowCommonPopupUI(100382, {
+      RightCallbackFunction = Confirm,
+      LeftCallbackFunction = Cancel,
+      CloseBtnCallbackFunction = Cancel
+    }, self.Parent)
     AudioManager(self):PlayUISound(self, "event:/ui/common/switch_off", nil, nil)
   else
-    local function SetShowPetCallBack(Ret, IsShow)
-      if 0 == Ret then
-        self.Com_SwitchCheckBox:SetChecked(not IsShow)
-      end
-    end
-    
-    local Avatar = GWorld:GetAvatar()
-    Avatar:SetShowPet(SetShowPetCallBack, not Avatar.ShowPet)
+    Confirm()
     AudioManager(self):PlayUISound(self, "event:/ui/common/switch_on", nil, nil)
   end
 end
 
-function M:Destruct()
-  if self.Btn_Invisible_Area then
-    self.Btn_Invisible_Area.OnClicked:Remove(self, self.BtnInvisibleArea)
-    self.Btn_Invisible_Area.OnHovered:Remove(self, self.OnHovered)
-    self.Btn_Invisible_Area.OnUnHovered:Remove(self, self.OnUnHovered)
+function M:OnPetRecycleClicked()
+  if not self.IsPreviewMode and not self.bFromOptRewardPreview and not self.bChangingPetVisibility then
+    self.Parent:OpenPetRecycle()
   end
+end
+
+function M:OnParentKeyDown(MyGeometry, InKeyEvent)
+  local KeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(UE4.UKismetInputLibrary.GetKey(InKeyEvent))
+  if KeyName == UIConst.GamePadKey.SpecialRight then
+    self:BtnInvisibleArea()
+    return UIUtils.Handled, true
+  elseif KeyName == UIConst.GamePadKey.RightThumb then
+    self:OnPetRecycleClicked()
+    return UIUtils.Handled, true
+  end
+  return UIUtils.UnHandled, false
+end
+
+function M:Destruct()
+  self.CheckBox_HidePet:UnBindEventOnClickedByObj(self)
 end
 
 AssembleComponents(M)

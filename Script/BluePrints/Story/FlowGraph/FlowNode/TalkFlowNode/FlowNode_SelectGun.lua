@@ -2,6 +2,7 @@ local M = Class("BluePrints.Story.FlowGraph.FlowNode.TalkFlowNode.FlowNode_TalkN
 local FlowLogType = UE.EStoryLogType.TalkFlow
 
 function M:Start()
+  self.bHandled = false
   local PlayerCharacter = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
   if not IsValid(PlayerCharacter) then
     local Message = string.format("%s start failed, PlayerCharacter is invalid", self:GetName())
@@ -12,13 +13,18 @@ function M:Start()
     self:FinishEnd()
     return
   end
-  self:SetTalkUIVisibility(false)
+  if not IsValid(self.CameraSequence) then
+    local Message = string.format("%s start failed, CameraSequence is invalid", self:GetName())
+    UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, FlowLogType, "选枪节点错误: CameraSequence无效", Message)
+    return
+  end
   self.CameraSequenceActor = self:GetWorld():SpawnActor(ALevelSequenceActor)
   if not IsValid(self.CameraSequenceActor) then
     local Message = string.format("%s start failed, CameraSequenceActor is invalid", self:GetName())
     UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, FlowLogType, "选枪节点错误: CameraSequenceActor无效", Message)
     return
   end
+  self:SetTalkUIVisibility(false)
   self.CameraSequenceActor:SetSequence(self.CameraSequence)
   self.CameraSequenceActor.SequencePlayer.OnPause:Add(self, self.SelectGuns)
   self.CameraSequenceActor.SequencePlayer.OnFinished:Add(self, self.FinishEnd)
@@ -29,6 +35,10 @@ function M:Start()
 end
 
 function M:K2_Cleanup()
+  EventManager:RemoveEvent(EventID.OnSelectWeapon, self)
+  if UIManager(self):GetUIObj("StoryWeaponSelect") then
+    UIManager(self):UnLoadUINew("StoryWeaponSelect")
+  end
   self:SetTalkUIVisibility(true)
   if IsValid(self.CameraSequenceActor) then
     self.CameraSequenceActor:K2_DestroyActor()
@@ -46,9 +56,15 @@ function M:SelectGuns()
 end
 
 function M:OnSelectedGuns()
+  if self.bHandled then
+    return
+  end
+  self.bHandled = true
   UIManager(self):UnLoadUINew("StoryWeaponSelect")
   EventManager:RemoveEvent(EventID.OnSelectWeapon, self)
-  self.CameraSequenceActor.SequencePlayer:Play()
+  if IsValid(self.CameraSequenceActor) then
+    self.CameraSequenceActor.SequencePlayer:Play()
+  end
 end
 
 function M:SetTalkUIVisibility(bVisibility)

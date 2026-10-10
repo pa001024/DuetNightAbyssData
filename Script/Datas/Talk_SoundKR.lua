@@ -8065,7 +8065,7 @@ local Data = {
   },
   {
     MinKey = "voice_kr_char_Songlu_vo_emotion_start_02",
-    MaxKey = "voice_kr_char_WeitaF_vo_emotion_objection_01",
+    MaxKey = "voice_kr_char_Tuosi_vo_emotion_personal_05_f",
     Loader = function()
       return {
         voice_kr_char_Songlu_vo_emotion_start_02 = {
@@ -8237,6 +8237,331 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/char/Songlu/vo",
           SelectKey = "voice_kr_char_Songlu_vo_welcome",
           SoundLength = 9570
+        },
+        voice_kr_char_SpLise_vo_appear = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_appear",
+          SoundLength = 2940
+        },
+        voice_kr_char_SpLise_vo_battleidle = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_battleidle",
+          SoundLength = 5120
+        },
+        voice_kr_char_SpLise_vo_birthday = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_birthday",
+          SoundLength = 48110
+        },
+        voice_kr_char_SpLise_vo_companio_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_companio_01",
+          SoundLength = 9620
+        },
+        voice_kr_char_SpLise_vo_companio_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_companio_02",
+          SoundLength = 14080
+        },
+        voice_kr_char_SpLise_vo_companio_03 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_companio_03",
+          SoundLength = 15400
+        },
+        voice_kr_char_SpLise_vo_emotion_amaze_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_amaze_01",
+          SoundLength = 1120
+        },
+        voice_kr_char_SpLise_vo_emotion_amaze_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_amaze_02",
+          SoundLength = 780
+        },
+        voice_kr_char_SpLise_vo_emotion_complacent_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_complacent_01",
+          SoundLength = 650
+        },
+        voice_kr_char_SpLise_vo_emotion_conclude_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_conclude_01",
+          SoundLength = 910
+        },
+        voice_kr_char_SpLise_vo_emotion_confuse_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_confuse_01",
+          SoundLength = 960
+        },
+        voice_kr_char_SpLise_vo_emotion_continue_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_continue_01",
+          SoundLength = 880
+        },
+        voice_kr_char_SpLise_vo_emotion_disdain_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_disdain_01",
+          SoundLength = 1010
+        },
+        voice_kr_char_SpLise_vo_emotion_dislike_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_dislike_01",
+          SoundLength = 740
+        },
+        voice_kr_char_SpLise_vo_emotion_dislike_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_dislike_02",
+          SoundLength = 1080
+        },
+        voice_kr_char_SpLise_vo_emotion_dislike_03 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_dislike_03",
+          SoundLength = 1590
+        },
+        voice_kr_char_SpLise_vo_emotion_excuse_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_excuse_01",
+          SoundLength = 970
+        },
+        voice_kr_char_SpLise_vo_emotion_happy_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_happy_01",
+          SoundLength = 890
+        },
+        voice_kr_char_SpLise_vo_emotion_happy_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_happy_02",
+          SoundLength = 1230
+        },
+        voice_kr_char_SpLise_vo_emotion_happy_03 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_happy_03",
+          SoundLength = 2420
+        },
+        voice_kr_char_SpLise_vo_emotion_hesitate_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_hesitate_01",
+          SoundLength = 1140
+        },
+        voice_kr_char_SpLise_vo_emotion_no_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_no_01",
+          SoundLength = 950
+        },
+        voice_kr_char_SpLise_vo_emotion_objection_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_objection_01",
+          SoundLength = 1180
+        },
+        voice_kr_char_SpLise_vo_emotion_personal_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_personal_01",
+          SoundLength = 970
+        },
+        voice_kr_char_SpLise_vo_emotion_personal_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_personal_02",
+          SoundLength = 1260
+        },
+        voice_kr_char_SpLise_vo_emotion_personal_03 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_personal_03",
+          SoundLength = 1060
+        },
+        voice_kr_char_SpLise_vo_emotion_personal_04 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_personal_04",
+          SoundLength = 1580
+        },
+        voice_kr_char_SpLise_vo_emotion_personal_05 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_personal_05",
+          SoundLength = 1500
+        },
+        voice_kr_char_SpLise_vo_emotion_realize_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_realize_01",
+          SoundLength = 790
+        },
+        voice_kr_char_SpLise_vo_emotion_refute_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_refute_01",
+          SoundLength = 900
+        },
+        voice_kr_char_SpLise_vo_emotion_reply_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_reply_01",
+          SoundLength = 630
+        },
+        voice_kr_char_SpLise_vo_emotion_reply_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_reply_02",
+          SoundLength = 850
+        },
+        voice_kr_char_SpLise_vo_emotion_sigh_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_sigh_01",
+          SoundLength = 790
+        },
+        voice_kr_char_SpLise_vo_emotion_sigh_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_sigh_02",
+          SoundLength = 940
+        },
+        voice_kr_char_SpLise_vo_emotion_start_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_start_01",
+          SoundLength = 1290
+        },
+        voice_kr_char_SpLise_vo_emotion_start_02 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_start_02",
+          SoundLength = 1020
+        },
+        voice_kr_char_SpLise_vo_emotion_thank_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_thank_01",
+          SoundLength = 970
+        },
+        voice_kr_char_SpLise_vo_emotion_think_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_think_01",
+          SoundLength = 860
+        },
+        voice_kr_char_SpLise_vo_emotion_understand_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_understand_01",
+          SoundLength = 830
+        },
+        voice_kr_char_SpLise_vo_emotion_unexpect_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_unexpect_01",
+          SoundLength = 970
+        },
+        voice_kr_char_SpLise_vo_emotion_yes_01 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_emotion_yes_01",
+          SoundLength = 940
+        },
+        voice_kr_char_SpLise_vo_fail = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_fail",
+          SoundLength = 2570
+        },
+        voice_kr_char_SpLise_vo_gain = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_gain",
+          SoundLength = 9830
+        },
+        voice_kr_char_SpLise_vo_idle = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_idle",
+          SoundLength = 5960
+        },
+        voice_kr_char_SpLise_vo_lvup = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_lvup",
+          SoundLength = 5280
+        },
+        voice_kr_char_SpLise_vo_mouth = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_mouth",
+          SoundLength = 50970
+        },
+        voice_kr_char_SpLise_vo_topic_01_1 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_topic_01_1",
+          SoundLength = 8980
+        },
+        voice_kr_char_SpLise_vo_topic_01_2 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_topic_01_2",
+          SoundLength = 5460
+        },
+        voice_kr_char_SpLise_vo_topic_01_3 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_topic_01_3",
+          SoundLength = 9740
+        },
+        voice_kr_char_SpLise_vo_topic_01_4 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_topic_01_4",
+          SoundLength = 10550
+        },
+        voice_kr_char_SpLise_vo_topic_01_5 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_topic_01_5",
+          SoundLength = 5830
+        },
+        voice_kr_char_SpLise_vo_topic_02_1 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_topic_02_1",
+          SoundLength = 9620
+        },
+        voice_kr_char_SpLise_vo_topic_02_2 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_topic_02_2",
+          SoundLength = 8020
+        },
+        voice_kr_char_SpLise_vo_topic_02_3 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_topic_02_3",
+          SoundLength = 14870
+        },
+        voice_kr_char_SpLise_vo_topic_02_4 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_topic_02_4",
+          SoundLength = 19300
+        },
+        voice_kr_char_SpLise_vo_topic_03_1 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_topic_03_1",
+          SoundLength = 13400
+        },
+        voice_kr_char_SpLise_vo_topic_03_2 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_topic_03_2",
+          SoundLength = 14240
+        },
+        voice_kr_char_SpLise_vo_topic_03_3 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_topic_03_3",
+          SoundLength = 4620
+        },
+        voice_kr_char_SpLise_vo_topic_04_1 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_topic_04_1",
+          SoundLength = 6600
+        },
+        voice_kr_char_SpLise_vo_topic_04_2 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_topic_04_2",
+          SoundLength = 7300
+        },
+        voice_kr_char_SpLise_vo_topic_04_3 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_topic_04_3",
+          SoundLength = 9660
+        },
+        voice_kr_char_SpLise_vo_topic_04_4 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_topic_04_4",
+          SoundLength = 8490
+        },
+        voice_kr_char_SpLise_vo_topic_04_5 = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_topic_04_5",
+          SoundLength = 19610
+        },
+        voice_kr_char_SpLise_vo_victory = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_victory",
+          SoundLength = 3560
+        },
+        voice_kr_char_SpLise_vo_welcome = {
+          ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+          SelectKey = "voice_kr_char_SpLise_vo_welcome",
+          SoundLength = 8410
         },
         voice_kr_char_Suyi_vo_appear = {
           ProgrammerSoundPath = "event:/voice/kr/char/Suyi/vo",
@@ -8742,7 +9067,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/char/Tuosi/vo",
           SelectKey = "voice_kr_char_Tuosi_vo_emotion_personal_05_f",
           SoundLength = 1470
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_char_Tuosi_vo_emotion_personal_05_m",
+    MaxKey = "voice_kr_char_Xier_vo_emotion_excuse_01",
+    Loader = function()
+      return {
         voice_kr_char_Tuosi_vo_emotion_personal_05_m = {
           ProgrammerSoundPath = "event:/voice/kr/char/Tuosi/vo",
           SelectKey = "voice_kr_char_Tuosi_vo_emotion_personal_05_m",
@@ -9067,15 +9400,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
           SelectKey = "voice_kr_char_WeitaF_vo_emotion_objection_01",
           SoundLength = 660
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_char_WeitaF_vo_emotion_realize_01",
-    MaxKey = "voice_kr_char_Yeer_vo_companio_01_1",
-    Loader = function()
-      return {
+        },
         voice_kr_char_WeitaF_vo_emotion_realize_01 = {
           ProgrammerSoundPath = "event:/voice/kr/char/WeitaF/vo",
           SelectKey = "voice_kr_char_WeitaF_vo_emotion_realize_01",
@@ -9750,7 +10075,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/char/Xier/vo",
           SelectKey = "voice_kr_char_Xier_vo_emotion_excuse_01",
           SoundLength = 2220
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_char_Xier_vo_emotion_happy_01",
+    MaxKey = "voice_kr_char_Zhangyu_vo_emotion_disdain_01",
+    Loader = function()
+      return {
         voice_kr_char_Xier_vo_emotion_happy_01 = {
           ProgrammerSoundPath = "event:/voice/kr/char/Xier/vo",
           SelectKey = "voice_kr_char_Xier_vo_emotion_happy_01",
@@ -10075,15 +10408,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/char/Yeer/vo",
           SelectKey = "voice_kr_char_Yeer_vo_companio_01_1",
           SoundLength = 8220
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_char_Yeer_vo_companio_01_2",
-    MaxKey = "voice_kr_char_Zhiliu_vo_emotion_disdain_01",
-    Loader = function()
-      return {
+        },
         voice_kr_char_Yeer_vo_companio_01_2 = {
           ProgrammerSoundPath = "event:/voice/kr/char/Yeer/vo",
           SelectKey = "voice_kr_char_Yeer_vo_companio_01_2",
@@ -10758,7 +11083,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/char/Zhangyu/vo",
           SelectKey = "voice_kr_char_Zhangyu_vo_emotion_disdain_01",
           SoundLength = 1360
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_char_Zhangyu_vo_emotion_dislike_01",
+    MaxKey = "voice_kr_env_Ver0101_7D6DEA72",
+    Loader = function()
+      return {
         voice_kr_char_Zhangyu_vo_emotion_dislike_01 = {
           ProgrammerSoundPath = "event:/voice/kr/char/Zhangyu/vo",
           SelectKey = "voice_kr_char_Zhangyu_vo_emotion_dislike_01",
@@ -11083,15 +11416,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/char/Zhiliu/vo",
           SelectKey = "voice_kr_char_Zhiliu_vo_emotion_disdain_01",
           SoundLength = 620
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_char_Zhiliu_vo_emotion_dislike_01",
-    MaxKey = "voice_kr_env_Ver0102_7D702F3A",
-    Loader = function()
-      return {
+        },
         voice_kr_char_Zhiliu_vo_emotion_dislike_01 = {
           ProgrammerSoundPath = "event:/voice/kr/char/Zhiliu/vo",
           SelectKey = "voice_kr_char_Zhiliu_vo_emotion_dislike_01",
@@ -11766,7 +12091,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/env",
           SelectKey = "voice_kr_env_Ver0101_7D6DEA72",
           SoundLength = 13000
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_env_Ver0101_7D6DFADA",
+    MaxKey = "voice_kr_inv_Dafu_001_C8B8F69C",
+    Loader = function()
+      return {
         voice_kr_env_Ver0101_7D6DFADA = {
           ProgrammerSoundPath = "event:/voice/kr/env",
           SelectKey = "voice_kr_env_Ver0101_7D6DFADA",
@@ -12091,15 +12424,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/env",
           SelectKey = "voice_kr_env_Ver0102_7D702F3A",
           SoundLength = 4070
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_env_Ver0102_7D702F64",
-    MaxKey = "voice_kr_inv_Dafu_002_C8B90B72",
-    Loader = function()
-      return {
+        },
         voice_kr_env_Ver0102_7D702F64 = {
           ProgrammerSoundPath = "event:/voice/kr/env",
           SelectKey = "voice_kr_env_Ver0102_7D702F64",
@@ -12774,7 +13099,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Dafu/001",
           SelectKey = "voice_kr_inv_Dafu_001_C8B8F69C",
           SoundLength = 14430
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Dafu_001_C8B8F6C6",
+    MaxKey = "voice_kr_inv_Feina_003_C865C5FC_f",
+    Loader = function()
+      return {
         voice_kr_inv_Dafu_001_C8B8F6C6 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Dafu/001",
           SelectKey = "voice_kr_inv_Dafu_001_C8B8F6C6",
@@ -13099,15 +13432,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Dafu/002",
           SelectKey = "voice_kr_inv_Dafu_002_C8B90B72",
           SoundLength = 8060
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Dafu_002_C8B90B9C",
-    MaxKey = "voice_kr_inv_Fushu_001_C8C5B4A9",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Dafu_002_C8B90B9C = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Dafu/002",
           SelectKey = "voice_kr_inv_Dafu_002_C8B90B9C",
@@ -13782,7 +14107,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Feina/003",
           SelectKey = "voice_kr_inv_Feina_003_C865C5FC_f",
           SoundLength = 4010
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Feina_003_C865C5FC_m",
+    MaxKey = "voice_kr_inv_Fushu_003_C8C5D25C",
+    Loader = function()
+      return {
         voice_kr_inv_Feina_003_C865C5FC_m = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Feina/003",
           SelectKey = "voice_kr_inv_Feina_003_C865C5FC_m",
@@ -14107,15 +14440,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Fushu/001",
           SelectKey = "voice_kr_inv_Fushu_001_C8C5B4A9",
           SoundLength = 21350
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Fushu_001_C8C5B4AA",
-    MaxKey = "voice_kr_inv_Fushu_004_C8C5EAA4",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Fushu_001_C8C5B4AA = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Fushu/001",
           SelectKey = "voice_kr_inv_Fushu_001_C8C5B4AA",
@@ -14790,7 +15115,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Fushu/003",
           SelectKey = "voice_kr_inv_Fushu_003_C8C5D25C",
           SoundLength = 14370
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Fushu_003_C8C5D286",
+    MaxKey = "voice_kr_inv_Heitao_003_C85F5D5C_m",
+    Loader = function()
+      return {
         voice_kr_inv_Fushu_003_C8C5D286 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Fushu/003",
           SelectKey = "voice_kr_inv_Fushu_003_C8C5D286",
@@ -15115,15 +15448,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Fushu/004",
           SelectKey = "voice_kr_inv_Fushu_004_C8C5EAA4",
           SoundLength = 5440
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Fushu_004_C8C5EACE",
-    MaxKey = "voice_kr_inv_Kami_001_14170ACA",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Fushu_004_C8C5EACE = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Fushu/004",
           SelectKey = "voice_kr_inv_Fushu_004_C8C5EACE",
@@ -15798,7 +16123,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Heitao/003",
           SelectKey = "voice_kr_inv_Heitao_003_C85F5D5C_m",
           SoundLength = 1820
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Heitao_003_C85F5D86",
+    MaxKey = "voice_kr_inv_Kami_003_1417305C",
+    Loader = function()
+      return {
         voice_kr_inv_Heitao_003_C85F5D86 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Heitao/003",
           SelectKey = "voice_kr_inv_Heitao_003_C85F5D86",
@@ -16123,15 +16456,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Kami/001",
           SelectKey = "voice_kr_inv_Kami_001_14170ACA",
           SoundLength = 2370
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Kami_001_14170AF4",
-    MaxKey = "voice_kr_inv_Kezhou_002_C8CC3F6A",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Kami_001_14170AF4 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Kami/001",
           SelectKey = "voice_kr_inv_Kami_001_14170AF4",
@@ -16806,7 +17131,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Kami/003",
           SelectKey = "voice_kr_inv_Kami_003_1417305C",
           SoundLength = 4440
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Kami_003_14173086",
+    MaxKey = "voice_kr_inv_Kezhou_004_C8CC6400",
+    Loader = function()
+      return {
         voice_kr_inv_Kami_003_14173086 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Kami/003",
           SelectKey = "voice_kr_inv_Kami_003_14173086",
@@ -17131,15 +17464,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Kezhou/002",
           SelectKey = "voice_kr_inv_Kezhou_002_C8CC3F6A",
           SoundLength = 8050
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Kezhou_002_C8CC3F94",
-    MaxKey = "voice_kr_inv_Landi_001_C858D4BE",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Kezhou_002_C8CC3F94 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Kezhou/002",
           SelectKey = "voice_kr_inv_Kezhou_002_C8CC3F94",
@@ -17814,7 +18139,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Kezhou/004",
           SelectKey = "voice_kr_inv_Kezhou_004_C8CC6400",
           SoundLength = 12950
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Kezhou_004_C8CC642A",
+    MaxKey = "voice_kr_inv_Linen_001_C88C1B0E",
+    Loader = function()
+      return {
         voice_kr_inv_Kezhou_004_C8CC642A = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Kezhou/004",
           SelectKey = "voice_kr_inv_Kezhou_004_C8CC642A",
@@ -18139,15 +18472,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Landi/001",
           SelectKey = "voice_kr_inv_Landi_001_C858D4BE",
           SoundLength = 8170
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Landi_001_C858D4E8",
-    MaxKey = "voice_kr_inv_Linen_003_C88C3C5C",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Landi_001_C858D4E8 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Landi/001",
           SelectKey = "voice_kr_inv_Landi_001_C858D4E8",
@@ -18822,7 +19147,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Linen/001",
           SelectKey = "voice_kr_inv_Linen_001_C88C1B0E",
           SoundLength = 9930
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Linen_001_C88C1B38",
+    MaxKey = "voice_kr_inv_Nifu_003_C8B2ACFE",
+    Loader = function()
+      return {
         voice_kr_inv_Linen_001_C88C1B38 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Linen/001",
           SelectKey = "voice_kr_inv_Linen_001_C88C1B38",
@@ -19147,15 +19480,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Linen/003",
           SelectKey = "voice_kr_inv_Linen_003_C88C3C5C",
           SoundLength = 4280
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Linen_003_C88C3C86",
-    MaxKey = "voice_kr_inv_Nifu_004_C8B2BEB6",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Linen_003_C88C3C86 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Linen/003",
           SelectKey = "voice_kr_inv_Linen_003_C88C3C86",
@@ -19830,7 +20155,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Nifu/003",
           SelectKey = "voice_kr_inv_Nifu_003_C8B2ACFE",
           SoundLength = 19470
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Nifu_003_C8B2AD28",
+    MaxKey = "voice_kr_inv_Saiqi_003_C87900AE",
+    Loader = function()
+      return {
         voice_kr_inv_Nifu_003_C8B2AD28 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Nifu/003",
           SelectKey = "voice_kr_inv_Nifu_003_C8B2AD28",
@@ -20155,15 +20488,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Nifu/004",
           SelectKey = "voice_kr_inv_Nifu_004_C8B2BEB6",
           SoundLength = 14050
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Nifu_004_C8B2BEE0",
-    MaxKey = "voice_kr_inv_Shuimu_002_01",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Nifu_004_C8B2BEE0 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Nifu/004",
           SelectKey = "voice_kr_inv_Nifu_004_C8B2BEE0",
@@ -20838,7 +21163,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Saiqi/003",
           SelectKey = "voice_kr_inv_Saiqi_003_C87900AE",
           SoundLength = 21410
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Saiqi_003_C87900D8",
+    MaxKey = "voice_kr_inv_Shuimu_004_C885E3FA",
+    Loader = function()
+      return {
         voice_kr_inv_Saiqi_003_C87900D8 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Saiqi/003",
           SelectKey = "voice_kr_inv_Saiqi_003_C87900D8",
@@ -21163,15 +21496,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Shuimu/002",
           SelectKey = "voice_kr_inv_Shuimu_002_01",
           SoundLength = 14620
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Shuimu_002_02",
-    MaxKey = "voice_kr_inv_Songlu_002_C86C20D4",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Shuimu_002_02 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Shuimu/002",
           SelectKey = "voice_kr_inv_Shuimu_002_02",
@@ -21846,7 +22171,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Shuimu/004",
           SelectKey = "voice_kr_inv_Shuimu_004_C885E3FA",
           SoundLength = 5450
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Shuimu_004_C885E424",
+    MaxKey = "voice_kr_inv_Suyi_002_C8DF7B42",
+    Loader = function()
+      return {
         voice_kr_inv_Shuimu_004_C885E424 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Shuimu/004",
           SelectKey = "voice_kr_inv_Shuimu_004_C885E424",
@@ -22171,15 +22504,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Songlu/002",
           SelectKey = "voice_kr_inv_Songlu_002_C86C20D4",
           SoundLength = 10260
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Songlu_002_C86C2128",
-    MaxKey = "voice_kr_inv_Suyi_003_C8DF8FEE",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Songlu_002_C86C2128 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Songlu/002",
           SelectKey = "voice_kr_inv_Songlu_002_C86C2128",
@@ -22854,7 +23179,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Suyi/002",
           SelectKey = "voice_kr_inv_Suyi_002_C8DF7B42",
           SoundLength = 13810
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Suyi_002_C8DF7B6C",
+    MaxKey = "voice_kr_inv_Tuosi_002_C89F69EE",
+    Loader = function()
+      return {
         voice_kr_inv_Suyi_002_C8DF7B6C = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Suyi/002",
           SelectKey = "voice_kr_inv_Suyi_002_C8DF7B6C",
@@ -23179,15 +23512,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Suyi/003",
           SelectKey = "voice_kr_inv_Suyi_003_C8DF8FEE",
           SoundLength = 16480
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Suyi_003_C8DF9018",
-    MaxKey = "voice_kr_inv_Tuosi_003_C89F7A56",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Suyi_003_C8DF9018 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Suyi/003",
           SelectKey = "voice_kr_inv_Suyi_003_C8DF9018",
@@ -23862,7 +24187,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Tuosi/002",
           SelectKey = "voice_kr_inv_Tuosi_002_C89F69EE",
           SoundLength = 3290
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Tuosi_002_C89F6A18",
+    MaxKey = "voice_kr_inv_Xibi_002_C8728AEE",
+    Loader = function()
+      return {
         voice_kr_inv_Tuosi_002_C89F6A18 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Tuosi/002",
           SelectKey = "voice_kr_inv_Tuosi_002_C89F6A18",
@@ -24187,15 +24520,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Tuosi/003",
           SelectKey = "voice_kr_inv_Tuosi_003_C89F7A56",
           SoundLength = 2610
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Tuosi_003_C89F7A80",
-    MaxKey = "voice_kr_inv_Xier_003_C8528B9E",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Tuosi_003_C89F7A80 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Tuosi/003",
           SelectKey = "voice_kr_inv_Tuosi_003_C89F7A80",
@@ -24870,7 +25195,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Xibi/002",
           SelectKey = "voice_kr_inv_Xibi_002_C8728AEE",
           SoundLength = 9360
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Xibi_003_C87295C2",
+    MaxKey = "voice_kr_inv_Yuming_002_C8D2AA56",
+    Loader = function()
+      return {
         voice_kr_inv_Xibi_003_C87295C2 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Xibi/003",
           SelectKey = "voice_kr_inv_Xibi_003_C87295C2",
@@ -25195,15 +25528,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Xier/003",
           SelectKey = "voice_kr_inv_Xier_003_C8528B9E",
           SoundLength = 9790
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Xier_003_C8528BC8",
-    MaxKey = "voice_kr_inv_Yuming_003_C8D2C028",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Xier_003_C8528BC8 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Xier/003",
           SelectKey = "voice_kr_inv_Xier_003_C8528BC8",
@@ -25878,7 +26203,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Yuming/002",
           SelectKey = "voice_kr_inv_Yuming_002_C8D2AA56",
           SoundLength = 1590
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Yuming_002_C8D2AA80",
+    MaxKey = "voice_kr_inv_Zhangyu_003_C87F6BC4",
+    Loader = function()
+      return {
         voice_kr_inv_Yuming_002_C8D2AA80 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Yuming/002",
           SelectKey = "voice_kr_inv_Yuming_002_C8D2AA80",
@@ -26203,15 +26536,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Yuming/003",
           SelectKey = "voice_kr_inv_Yuming_003_C8D2C028",
           SoundLength = 14340
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Yuming_003_C8D2C052",
-    MaxKey = "voice_kr_inv_Zhiliu_001_C8D8FFC4",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Yuming_003_C8D2C052 = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Yuming/003",
           SelectKey = "voice_kr_inv_Yuming_003_C8D2C052",
@@ -26886,7 +27211,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Zhangyu/003",
           SelectKey = "voice_kr_inv_Zhangyu_003_C87F6BC4",
           SoundLength = 6960
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Zhangyu_003_C87F6BEE",
+    MaxKey = "voice_kr_inv_Zhiliu_004_C8D931A4",
+    Loader = function()
+      return {
         voice_kr_inv_Zhangyu_003_C87F6BEE = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Zhangyu/003",
           SelectKey = "voice_kr_inv_Zhangyu_003_C87F6BEE",
@@ -27211,15 +27544,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Zhiliu/001",
           SelectKey = "voice_kr_inv_Zhiliu_001_C8D8FFC4",
           SoundLength = 9700
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_inv_Zhiliu_001_C8D8FFEE",
-    MaxKey = "voice_kr_story_0_600308_9647E34A",
-    Loader = function()
-      return {
+        },
         voice_kr_inv_Zhiliu_001_C8D8FFEE = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Zhiliu/001",
           SelectKey = "voice_kr_inv_Zhiliu_001_C8D8FFEE",
@@ -27894,7 +28219,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Zhiliu/004",
           SelectKey = "voice_kr_inv_Zhiliu_004_C8D931A4",
           SoundLength = 7130
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_inv_Zhiliu_004_C8D931CE",
+    MaxKey = "voice_kr_story_1001_100109_190FAD9D",
+    Loader = function()
+      return {
         voice_kr_inv_Zhiliu_004_C8D931CE = {
           ProgrammerSoundPath = "event:/voice/kr/inv/Zhiliu/004",
           SelectKey = "voice_kr_inv_Zhiliu_004_C8D931CE",
@@ -28219,15 +28552,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/0",
           SelectKey = "voice_kr_story_0_600308_9647E34A",
           SoundLength = 2240
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_0_600309_9647F3B2",
-    MaxKey = "voice_kr_story_1001_100119_191052A8",
-    Loader = function()
-      return {
+        },
         voice_kr_story_0_600309_9647F3B2 = {
           ProgrammerSoundPath = "event:/voice/kr/story/0",
           SelectKey = "voice_kr_story_0_600309_9647F3B2",
@@ -28919,7 +29244,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1001",
           SelectKey = "voice_kr_story_1001_100109_190FAD9D",
           SoundLength = 1070
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1001_100109_190FAD9E",
+    MaxKey = "voice_kr_story_1002_100127_1910D595_f",
+    Loader = function()
+      return {
         voice_kr_story_1001_100109_190FAD9E = {
           ProgrammerSoundPath = "event:/voice/kr/story/1001",
           SelectKey = "voice_kr_story_1001_100109_190FAD9E",
@@ -29270,15 +29603,7 @@ local Data = {
           SelectKey = "voice_kr_story_1001_100119_191052A8",
           SoundLength = 930,
           SoundVolume = 0
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1001_100119_191052D2_f",
-    MaxKey = "voice_kr_story_1002_101003_1948F94A",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1001_100119_191052D2_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1001",
           SelectKey = "voice_kr_story_1001_100119_191052D2_f",
@@ -29998,7 +30323,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_100127_1910D595_f",
           SoundLength = 5360
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_100127_1910D595_m",
+    MaxKey = "voice_kr_story_1002_101014_1949AD44",
+    Loader = function()
+      return {
         voice_kr_story_1002_100127_1910D595_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_100127_1910D595_m",
@@ -30332,15 +30665,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101003_1948F94A",
           SoundLength = 2910
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_101004_1949090A",
-    MaxKey = "voice_kr_story_1002_101019_194A001E_f",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_101004_1949090A = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101004_1949090A",
@@ -31024,7 +31349,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101014_1949AD44",
           SoundLength = 5360
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_101014_1949AD6E",
+    MaxKey = "voice_kr_story_1002_101034_194AF575",
+    Loader = function()
+      return {
         voice_kr_story_1002_101014_1949AD6E = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101014_1949AD6E",
@@ -31349,15 +31682,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101019_194A001E_f",
           SoundLength = 6160
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_101019_194A001E_m",
-    MaxKey = "voice_kr_story_1002_101045_194BAAD8",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_101019_194A001E_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101019_194A001E_m",
@@ -32042,7 +32367,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101034_194AF575",
           SoundLength = 3480
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_101036_194B160A",
+    MaxKey = "voice_kr_story_1002_101056_194C5ED2",
+    Loader = function()
+      return {
         voice_kr_story_1002_101036_194B160A = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101036_194B160A",
@@ -32367,15 +32700,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101045_194BAAD8",
           SoundLength = 10500
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_101045_194BAB02",
-    MaxKey = "voice_kr_story_1002_101061_194CB158",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_101045_194BAB02 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101045_194BAB02",
@@ -33052,7 +33377,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101056_194C5ED2",
           SoundLength = 9180
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_101056_194C5EFC",
+    MaxKey = "voice_kr_story_1002_101070_194D467A_f",
+    Loader = function()
+      return {
         voice_kr_story_1002_101056_194C5EFC = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101056_194C5EFC",
@@ -33380,15 +33713,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101061_194CB158",
           SoundLength = 13290
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_101061_194CB182_f",
-    MaxKey = "voice_kr_story_1002_101078_194DC816",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_101061_194CB182_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101061_194CB182_f",
@@ -34064,7 +34389,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101070_194D467A_f",
           SoundLength = 5600
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_101070_194D467A_m",
+    MaxKey = "voice_kr_story_1002_101090_194E8D75_m",
+    Loader = function()
+      return {
         voice_kr_story_1002_101070_194D467A_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101070_194D467A_m",
@@ -34389,15 +34722,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101078_194DC816",
           SoundLength = 14460
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_101078_194DC840_f",
-    MaxKey = "voice_kr_story_1002_101097_194F00A0_f",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_101078_194DC840_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101078_194DC840_f",
@@ -35072,7 +35397,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101090_194E8D75_m",
           SoundLength = 13710
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_101090_194E8D76_f",
+    MaxKey = "voice_kr_story_1002_101105_194F83E0_m",
+    Loader = function()
+      return {
         voice_kr_story_1002_101090_194E8D76_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101090_194E8D76_f",
@@ -35402,15 +35735,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101097_194F00A0_f",
           SoundLength = 1830
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_101097_194F00A0_m",
-    MaxKey = "voice_kr_story_1002_101109_194FC4D8_f",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_101097_194F00A0_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101097_194F00A0_m",
@@ -36087,7 +36412,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101105_194F83E0_m",
           SoundLength = 6770
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_101105_194F840A",
+    MaxKey = "voice_kr_story_1002_101130_19511CB8_m",
+    Loader = function()
+      return {
         voice_kr_story_1002_101105_194F840A = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101105_194F840A",
@@ -36416,15 +36749,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101109_194FC4D8_f",
           SoundLength = 4990
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_101109_194FC4D8_m",
-    MaxKey = "voice_kr_story_1002_101131_19512E9A",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_101109_194FC4D8_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101109_194FC4D8_m",
@@ -37118,7 +37443,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101130_19511CB8_m",
           SoundLength = 2080
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_101130_19511CE2",
+    MaxKey = "voice_kr_story_1002_101189_1954E432",
+    Loader = function()
+      return {
         voice_kr_story_1002_101130_19511CE2 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101130_19511CE2",
@@ -37443,15 +37776,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101131_19512E9A",
           SoundLength = 5080
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_101132_19513D0A_f",
-    MaxKey = "voice_kr_story_1002_101211_19564E1E",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_101132_19513D0A_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101132_19513D0A_f",
@@ -38126,7 +38451,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101189_1954E432",
           SoundLength = 2910
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_101190_1954F49A",
+    MaxKey = "voice_kr_story_1002_101248_1958AC7E_m",
+    Loader = function()
+      return {
         voice_kr_story_1002_101190_1954F49A = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101190_1954F49A",
@@ -38451,15 +38784,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101211_19564E1E",
           SoundLength = 6070
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_101212_19565D8A_f",
-    MaxKey = "voice_kr_story_1002_101259_19596510",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_101212_19565D8A_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101212_19565D8A_f",
@@ -39134,7 +39459,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101248_1958AC7E_m",
           SoundLength = 7060
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_101248_1958ACA8",
+    MaxKey = "voice_kr_story_1002_110103_1B902B26_f",
+    Loader = function()
+      return {
         voice_kr_story_1002_101248_1958ACA8 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101248_1958ACA8",
@@ -39459,15 +39792,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101259_19596510",
           SoundLength = 13130
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_101259_1959653A",
-    MaxKey = "voice_kr_story_1002_110107_1B906DC2_f",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_101259_1959653A = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_101259_1959653A",
@@ -40148,7 +40473,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110103_1B902B26_f",
           SoundLength = 2350
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_110103_1B902B26_m",
+    MaxKey = "voice_kr_story_1002_110114_1B90E046",
+    Loader = function()
+      return {
         voice_kr_story_1002_110103_1B902B26_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110103_1B902B26_m",
@@ -40473,15 +40806,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110107_1B906DC2_f",
           SoundLength = 7080
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_110107_1B906DC2_m",
-    MaxKey = "voice_kr_story_1002_110115_1B90F696",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_110107_1B906DC2_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110107_1B906DC2_m",
@@ -41160,7 +41485,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110114_1B90E046",
           SoundLength = 2600
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_110114_1B90E070",
+    MaxKey = "voice_kr_story_1002_110119_1B913374_m",
+    Loader = function()
+      return {
         voice_kr_story_1002_110114_1B90E070 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110114_1B90E070",
@@ -41485,15 +41818,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110115_1B90F696",
           SoundLength = 10620
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_110115_1B90F6C0",
-    MaxKey = "voice_kr_story_1002_110124_1B918678_f",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_110115_1B90F6C0 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110115_1B90F6C0",
@@ -42168,7 +42493,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110119_1B913374_m",
           SoundLength = 1820
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_110119_1B91339E",
+    MaxKey = "voice_kr_story_1002_110128_1B91C64A",
+    Loader = function()
+      return {
         voice_kr_story_1002_110119_1B91339E = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110119_1B91339E",
@@ -42493,15 +42826,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110124_1B918678_f",
           SoundLength = 4090
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_110124_1B918678_m",
-    MaxKey = "voice_kr_story_1002_110134_1B92276A_f",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_110124_1B918678_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110124_1B918678_m",
@@ -43195,7 +43520,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110128_1B91C64A",
           SoundLength = 6130
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_110128_1B91C674",
+    MaxKey = "voice_kr_story_1002_110144_1B92CDC6_f",
+    Loader = function()
+      return {
         voice_kr_story_1002_110128_1B91C674 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110128_1B91C674",
@@ -43520,15 +43853,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110134_1B92276A_f",
           SoundLength = 10240
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_110134_1B92276A_m",
-    MaxKey = "voice_kr_story_1002_110151_1B93426C_f",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_110134_1B92276A_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110134_1B92276A_m",
@@ -44206,7 +44531,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110144_1B92CDC6_f",
           SoundLength = 12240
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_110144_1B92CDC6_m",
+    MaxKey = "voice_kr_story_1002_110165_1B9422B2_m",
+    Loader = function()
+      return {
         voice_kr_story_1002_110144_1B92CDC6_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110144_1B92CDC6_m",
@@ -44535,15 +44868,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110151_1B93426C_f",
           SoundLength = 1070
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_110151_1B93426C_m",
-    MaxKey = "voice_kr_story_1002_110168_1B9455B8_f",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_110151_1B93426C_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110151_1B93426C_m",
@@ -45219,7 +45544,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110165_1B9422B2_m",
           SoundLength = 1710
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_110165_1B9422DC",
+    MaxKey = "voice_kr_story_1002_110175_1B94CA0A_f",
+    Loader = function()
+      return {
         voice_kr_story_1002_110165_1B9422DC = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110165_1B9422DC",
@@ -45544,15 +45877,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110168_1B9455B8_f",
           SoundLength = 2710
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_110168_1B9455B8_m",
-    MaxKey = "voice_kr_story_1002_110182_1B9539EE_m",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_110168_1B9455B8_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110168_1B9455B8_m",
@@ -46234,7 +46559,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110175_1B94CA0A_f",
           SoundLength = 6580
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_110175_1B94CA0A_m",
+    MaxKey = "voice_kr_story_1002_110190_1B95C3BE_m",
+    Loader = function()
+      return {
         voice_kr_story_1002_110175_1B94CA0A_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110175_1B94CA0A_m",
@@ -46559,15 +46892,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110182_1B9539EE_m",
           SoundLength = 4420
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_110182_1B953A6C_f",
-    MaxKey = "voice_kr_story_1002_110193_1B95F00A",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_110182_1B953A6C_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110182_1B953A6C_f",
@@ -47242,7 +47567,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110190_1B95C3BE_m",
           SoundLength = 730
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1002_110190_1B95C412",
+    MaxKey = "voice_kr_story_1003_100306_191C501A_f",
+    Loader = function()
+      return {
         voice_kr_story_1002_110190_1B95C412 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110190_1B95C412",
@@ -47567,15 +47900,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110193_1B95F00A",
           SoundLength = 17160
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1002_110193_1B95F034_f",
-    MaxKey = "voice_kr_story_1003_100308_191C7096",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1002_110193_1B95F034_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1002",
           SelectKey = "voice_kr_story_1002_110193_1B95F034_f",
@@ -48250,7 +48575,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100306_191C501A_f",
           SoundLength = 1510
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1003_100306_191C501A_m",
+    MaxKey = "voice_kr_story_1003_100318_191D125A",
+    Loader = function()
+      return {
         voice_kr_story_1003_100306_191C501A_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100306_191C501A_m",
@@ -48575,15 +48908,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100308_191C7096",
           SoundLength = 1360
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1003_100308_191C70C0_f",
-    MaxKey = "voice_kr_story_1003_100323_191D6534",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1003_100308_191C70C0_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100308_191C70C0_f",
@@ -49258,7 +49583,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100318_191D125A",
           SoundLength = 4680
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1003_100318_191D1284",
+    MaxKey = "voice_kr_story_1003_100328_191DBB2C_m",
+    Loader = function()
+      return {
         voice_kr_story_1003_100318_191D1284 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100318_191D1284",
@@ -49583,15 +49916,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100323_191D6534",
           SoundLength = 3650
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1003_100323_191D655E_f",
-    MaxKey = "voice_kr_story_1003_100333_191E0ABE",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1003_100323_191D655E_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100323_191D655E_f",
@@ -50266,7 +50591,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100328_191DBB2C_m",
           SoundLength = 11130
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1003_100329_191DC6D2",
+    MaxKey = "voice_kr_story_1003_100339_191E7412",
+    Loader = function()
+      return {
         voice_kr_story_1003_100329_191DC6D2 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100329_191DC6D2",
@@ -50591,15 +50924,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100333_191E0ABE",
           SoundLength = 3770
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1003_100333_191E0AE8",
-    MaxKey = "voice_kr_story_1003_100342_191E9F62_f",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1003_100333_191E0AE8 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100333_191E0AE8",
@@ -51274,7 +51599,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100339_191E7412",
           SoundLength = 5190
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1003_100339_191E743C",
+    MaxKey = "voice_kr_story_1003_100347_191EEF1E_f",
+    Loader = function()
+      return {
         voice_kr_story_1003_100339_191E743C = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100339_191E743C",
@@ -51599,15 +51932,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100342_191E9F62_f",
           SoundLength = 14090
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1003_100342_191E9F62_m",
-    MaxKey = "voice_kr_story_1003_100349_191F1096_f",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1003_100342_191E9F62_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100342_191E9F62_m",
@@ -52282,7 +52607,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100347_191EEF1E_f",
           SoundLength = 4070
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1003_100347_191EEF1E_m",
+    MaxKey = "voice_kr_story_1003_100354_191F614E",
+    Loader = function()
+      return {
         voice_kr_story_1003_100347_191EEF1E_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100347_191EEF1E_m",
@@ -52607,15 +52940,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100349_191F1096_f",
           SoundLength = 1010
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1003_100349_191F1096_m",
-    MaxKey = "voice_kr_story_1003_100357_191F925C",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1003_100349_191F1096_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100349_191F1096_m",
@@ -53290,7 +53615,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100354_191F614E",
           SoundLength = 2120
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1003_100354_191F6178",
+    MaxKey = "voice_kr_story_1003_100362_191FE854",
+    Loader = function()
+      return {
         voice_kr_story_1003_100354_191F6178 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100354_191F6178",
@@ -53626,15 +53959,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100357_191F925C",
           SoundLength = 2350
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1003_100357_191F9286",
-    MaxKey = "voice_kr_story_1003_100365_192015C6",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1003_100357_191F9286 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100357_191F9286",
@@ -54309,7 +54634,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100362_191FE854",
           SoundLength = 11280
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1003_100362_191FE87E",
+    MaxKey = "voice_kr_story_1003_100368_192047A6",
+    Loader = function()
+      return {
         voice_kr_story_1003_100362_191FE87E = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100362_191FE87E",
@@ -54634,15 +54967,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100365_192015C6",
           SoundLength = 7990
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1003_100365_192015F0",
-    MaxKey = "voice_kr_story_1003_100376_1920CA14",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1003_100365_192015F0 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100365_192015F0",
@@ -55317,7 +55642,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100368_192047A6",
           SoundLength = 18220
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1003_100368_192047D0",
+    MaxKey = "voice_kr_story_1004_100403_19228704_f",
+    Loader = function()
+      return {
         voice_kr_story_1003_100368_192047D0 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100368_192047D0",
@@ -55642,15 +55975,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100376_1920CA14",
           SoundLength = 2790
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1003_100376_1920CA3E",
-    MaxKey = "voice_kr_story_1004_100405_1922AAF2",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1003_100376_1920CA3E = {
           ProgrammerSoundPath = "event:/voice/kr/story/1003",
           SelectKey = "voice_kr_story_1003_100376_1920CA3E",
@@ -56325,7 +56650,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100403_19228704_f",
           SoundLength = 3220
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1004_100403_19228704_m",
+    MaxKey = "voice_kr_story_1004_100412_19231932",
+    Loader = function()
+      return {
         voice_kr_story_1004_100403_19228704_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100403_19228704_m",
@@ -56650,15 +56983,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100405_1922AAF2",
           SoundLength = 11140
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1004_100405_1922AB1C",
-    MaxKey = "voice_kr_story_1004_100416_19235C76",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1004_100405_1922AB1C = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100405_1922AB1C",
@@ -57333,7 +57658,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100412_19231932",
           SoundLength = 1090
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1004_100412_1923195C",
+    MaxKey = "voice_kr_story_1004_100423_1923CD56_f",
+    Loader = function()
+      return {
         voice_kr_story_1004_100412_1923195C = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100412_1923195C",
@@ -57658,15 +57991,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100416_19235C76",
           SoundLength = 6850
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1004_100416_19235CA0",
-    MaxKey = "voice_kr_story_1004_100426_19240200",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1004_100416_19235CA0 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100416_19235CA0",
@@ -58341,7 +58666,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100423_1923CD56_f",
           SoundLength = 8100
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1004_100423_1923CD56_m",
+    MaxKey = "voice_kr_story_1004_100435_192493B0_f",
+    Loader = function()
+      return {
         voice_kr_story_1004_100423_1923CD56_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100423_1923CD56_m",
@@ -58666,15 +58999,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100426_19240200",
           SoundLength = 1880
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1004_100426_1924022A",
-    MaxKey = "voice_kr_story_1004_100438_1924C4BE",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1004_100426_1924022A = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100426_1924022A",
@@ -59349,7 +59674,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100435_192493B0_f",
           SoundLength = 3910
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1004_100435_192493B0_m",
+    MaxKey = "voice_kr_story_1004_100444_19252782",
+    Loader = function()
+      return {
         voice_kr_story_1004_100435_192493B0_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100435_192493B0_m",
@@ -59674,15 +60007,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100438_1924C4BE",
           SoundLength = 8260
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1004_100438_1924C4E8_f",
-    MaxKey = "voice_kr_story_1004_100448_19256850_m",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1004_100438_1924C4E8_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100438_1924C4E8_f",
@@ -60357,7 +60682,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100444_19252782",
           SoundLength = 15170
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1004_100444_192527AC",
+    MaxKey = "voice_kr_story_1004_100454_1925CD36_f",
+    Loader = function()
+      return {
         voice_kr_story_1004_100444_192527AC = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100444_192527AC",
@@ -60682,15 +61015,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100448_19256850_m",
           SoundLength = 9740
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1004_100448_1925687A_f",
-    MaxKey = "voice_kr_story_1004_100460_19262DAE",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1004_100448_1925687A_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100448_1925687A_f",
@@ -61365,7 +61690,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100454_1925CD36_f",
           SoundLength = 3260
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1004_100454_1925CD36_m",
+    MaxKey = "voice_kr_story_1004_100465_19267F8C_m",
+    Loader = function()
+      return {
         voice_kr_story_1004_100454_1925CD36_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100454_1925CD36_m",
@@ -61690,15 +62023,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100460_19262DAE",
           SoundLength = 10900
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1004_100460_19262DD8_f",
-    MaxKey = "voice_kr_story_1004_100467_1926A0B0_m",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1004_100460_19262DD8_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100460_19262DD8_f",
@@ -62373,7 +62698,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100465_19267F8C_m",
           SoundLength = 3640
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1004_100465_19267FB6",
+    MaxKey = "voice_kr_story_1004_100475_192722F4",
+    Loader = function()
+      return {
         voice_kr_story_1004_100465_19267FB6 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100465_19267FB6",
@@ -62698,15 +63031,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100467_1926A0B0_m",
           SoundLength = 7370
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1004_100468_1926AF4A",
-    MaxKey = "voice_kr_story_1004_100477_1927453E",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1004_100468_1926AF4A = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100468_1926AF4A",
@@ -63381,7 +63706,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100475_192722F4",
           SoundLength = 14550
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1004_100475_1927231E_f",
+    MaxKey = "voice_kr_story_1004_100483_1927A82C",
+    Loader = function()
+      return {
         voice_kr_story_1004_100475_1927231E_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100475_1927231E_f",
@@ -63706,15 +64039,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100477_1927453E",
           SoundLength = 7070
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1004_100477_19274568_f",
-    MaxKey = "voice_kr_story_1004_100485_1927C72E_f",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1004_100477_19274568_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100477_19274568_f",
@@ -64389,7 +64714,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100483_1927A82C",
           SoundLength = 14020
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1004_100483_1927A856",
+    MaxKey = "voice_kr_story_1004_100491_19282CBC_f",
+    Loader = function()
+      return {
         voice_kr_story_1004_100483_1927A856 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100483_1927A856",
@@ -64714,15 +65047,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100485_1927C72E_f",
           SoundLength = 4460
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1004_100485_1927C72E_m",
-    MaxKey = "voice_kr_story_1004_100493_19284B6A",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1004_100485_1927C72E_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100485_1927C72E_m",
@@ -65397,7 +65722,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100491_19282CBC_f",
           SoundLength = 1420
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1004_100491_19282CBC_m",
+    MaxKey = "voice_kr_story_1004_100499_100499135",
+    Loader = function()
+      return {
         voice_kr_story_1004_100491_19282CBC_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100491_19282CBC_m",
@@ -65722,15 +66055,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100493_19284B6A",
           SoundLength = 1030
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1004_100493_19284B94",
-    MaxKey = "voice_kr_story_1004_100499_1928B176_m",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1004_100493_19284B94 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100493_19284B94",
@@ -66405,7 +66730,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100499_100499135",
           SoundLength = 15190
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1004_100499_100499136",
+    MaxKey = "voice_kr_story_1102_111002_1BC9CAD4_f",
+    Loader = function()
+      return {
         voice_kr_story_1004_100499_100499136 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100499_100499136",
@@ -66730,15 +67063,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100499_1928B176_m",
           SoundLength = 6110
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1004_100499_1928B1A0_f",
-    MaxKey = "voice_kr_story_1102_111007_1BCA18C2",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1004_100499_1928B1A0_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1004",
           SelectKey = "voice_kr_story_1004_100499_1928B1A0_f",
@@ -67413,7 +67738,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111002_1BC9CAD4_f",
           SoundLength = 16990
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1102_111002_1BC9CAD4_m",
+    MaxKey = "voice_kr_story_1102_111028_1BCB71C8_f",
+    Loader = function()
+      return {
         voice_kr_story_1102_111002_1BC9CAD4_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111002_1BC9CAD4_m",
@@ -67738,15 +68071,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111007_1BCA18C2",
           SoundLength = 10480
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1102_111007_1BCA18EC_f",
-    MaxKey = "voice_kr_story_1102_111031_1BCBA4A4_m",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1102_111007_1BCA18EC_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111007_1BCA18EC_f",
@@ -68421,7 +68746,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111028_1BCB71C8_f",
           SoundLength = 4660
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1102_111028_1BCB71C8_m",
+    MaxKey = "voice_kr_story_1102_111054_1BCD1F76",
+    Loader = function()
+      return {
         voice_kr_story_1102_111028_1BCB71C8_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111028_1BCB71C8_m",
@@ -68746,15 +69079,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111031_1BCBA4A4_m",
           SoundLength = 1020
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1102_111031_1BCBA4CE_f",
-    MaxKey = "voice_kr_story_1102_111058_1BCD64B2_m",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1102_111031_1BCBA4CE_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111031_1BCBA4CE_f",
@@ -69429,7 +69754,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111054_1BCD1F76",
           SoundLength = 3860
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1102_111054_1BCD1FA0_f",
+    MaxKey = "voice_kr_story_1102_111068_1BCE01DE_m",
+    Loader = function()
+      return {
         voice_kr_story_1102_111054_1BCD1FA0_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111054_1BCD1FA0_f",
@@ -69754,15 +70087,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111058_1BCD64B2_m",
           SoundLength = 11950
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1102_111058_1BCD64DC_f",
-    MaxKey = "voice_kr_story_1102_111083_1BCEF7A3_f",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1102_111058_1BCD64DC_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111058_1BCD64DC_f",
@@ -70437,7 +70762,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111068_1BCE01DE_m",
           SoundLength = 1700
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1102_111068_1BCE0208",
+    MaxKey = "voice_kr_story_1102_111089_1BCF61F2",
+    Loader = function()
+      return {
         voice_kr_story_1102_111068_1BCE0208 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111068_1BCE0208",
@@ -70762,15 +71095,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111083_1BCEF7A3_f",
           SoundLength = 7910
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1102_111083_1BCEF7A3_m",
-    MaxKey = "voice_kr_story_1102_111095_1BCFC1EC",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1102_111083_1BCEF7A3_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111083_1BCEF7A3_m",
@@ -71445,7 +71770,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111089_1BCF61F2",
           SoundLength = 11980
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1102_111089_1BCF621C_f",
+    MaxKey = "voice_kr_story_1102_111096_1BD051A4",
+    Loader = function()
+      return {
         voice_kr_story_1102_111089_1BCF621C_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111089_1BCF621C_f",
@@ -71770,15 +72103,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111095_1BCFC1EC",
           SoundLength = 6550
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1102_111095_1BCFC216_f",
-    MaxKey = "voice_kr_story_1102_111096_1BD0B36C",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1102_111095_1BCFC216_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111095_1BCFC216_f",
@@ -72453,7 +72778,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111096_1BD051A4",
           SoundLength = 10410
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1102_111096_1BD051CE_f",
+    MaxKey = "voice_kr_story_1102_111096_1BD188B4_f",
+    Loader = function()
+      return {
         voice_kr_story_1102_111096_1BD051CE_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111096_1BD051CE_f",
@@ -72778,15 +73111,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111096_1BD0B36C",
           SoundLength = 950
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1102_111096_1BD0B396_f",
-    MaxKey = "voice_kr_story_1102_111096_1BD28E8C",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1102_111096_1BD0B396_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111096_1BD0B396_f",
@@ -73461,7 +73786,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111096_1BD188B4_f",
           SoundLength = 13500
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1102_111096_1BD188B4_m",
+    MaxKey = "voice_kr_story_1102_111096_1BD347C6_m",
+    Loader = function()
+      return {
         voice_kr_story_1102_111096_1BD188B4_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111096_1BD188B4_m",
@@ -73786,15 +74119,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111096_1BD28E8C",
           SoundLength = 2380
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1102_111096_1BD28EB6",
-    MaxKey = "voice_kr_story_1102_111096_1BD39704",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1102_111096_1BD28EB6 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111096_1BD28EB6",
@@ -74479,7 +74804,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111096_1BD347C6_m",
           SoundLength = 8910
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1102_111096_1BD347F0_f",
+    MaxKey = "voice_kr_story_1102_111096_1BD4B452",
+    Loader = function()
+      return {
         voice_kr_story_1102_111096_1BD347F0_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111096_1BD347F0_f",
@@ -74804,15 +75137,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111096_1BD39704",
           SoundLength = 5980
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1102_111096_1BD3972E_f",
-    MaxKey = "voice_kr_story_1102_111096_1BD51EA2_4",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1102_111096_1BD3972E_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111096_1BD3972E_f",
@@ -75487,7 +75812,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111096_1BD4B452",
           SoundLength = 11270
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1102_111096_1BD4B47C",
+    MaxKey = "voice_kr_story_1102_111096_1BD5E42A",
+    Loader = function()
+      return {
         voice_kr_story_1102_111096_1BD4B47C = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111096_1BD4B47C",
@@ -75812,15 +76145,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111096_1BD51EA2_4",
           SoundLength = 8090
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1102_111096_1BD51EA2_5",
-    MaxKey = "voice_kr_story_1102_111096_1BD6AA30",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1102_111096_1BD51EA2_5 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111096_1BD51EA2_5",
@@ -76495,7 +76820,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111096_1BD5E42A",
           SoundLength = 12180
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1102_111096_1BD5E454_f",
+    MaxKey = "voice_kr_story_1102_111096_1BD72D1C",
+    Loader = function()
+      return {
         voice_kr_story_1102_111096_1BD5E454_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111096_1BD5E454_f",
@@ -76820,15 +77153,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111096_1BD6AA30",
           SoundLength = 3390
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1102_111096_1BD6AA5A",
-    MaxKey = "voice_kr_story_1200_120004_1E0AB048_f",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1102_111096_1BD6AA5A = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111096_1BD6AA5A",
@@ -77504,7 +77829,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111096_1BD72D1C",
           SoundLength = 2610
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1102_111096_1BD72D46_f",
+    MaxKey = "voice_kr_story_1200_120013_1E0B4B28",
+    Loader = function()
+      return {
         voice_kr_story_1102_111096_1BD72D46_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1102",
           SelectKey = "voice_kr_story_1102_111096_1BD72D46_f",
@@ -77829,15 +78162,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1200",
           SelectKey = "voice_kr_story_1200_120004_1E0AB048_f",
           SoundLength = 12550
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1200_120004_1E0AB048_m",
-    MaxKey = "voice_kr_story_1200_120015_1E0B6CF4",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1200_120004_1E0AB048_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1200",
           SelectKey = "voice_kr_story_1200_120004_1E0AB048_m",
@@ -78512,7 +78837,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1200",
           SelectKey = "voice_kr_story_1200_120013_1E0B4B28",
           SoundLength = 9630
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1200_120013_1E0B4B52",
+    MaxKey = "voice_kr_story_1200_120042_1E0D1F8E",
+    Loader = function()
+      return {
         voice_kr_story_1200_120013_1E0B4B52 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1200",
           SelectKey = "voice_kr_story_1200_120013_1E0B4B52",
@@ -78837,15 +79170,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1200",
           SelectKey = "voice_kr_story_1200_120015_1E0B6CF4",
           SoundLength = 8650
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1200_120015_1E0B6D1E_f",
-    MaxKey = "voice_kr_story_1201_120101_1E10EB76",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1200_120015_1E0B6D1E_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1200",
           SelectKey = "voice_kr_story_1200_120015_1E0B6D1E_f",
@@ -79520,7 +79845,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1200",
           SelectKey = "voice_kr_story_1200_120042_1E0D1F8E",
           SoundLength = 2750
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1200_120042_1E0D1FB8",
+    MaxKey = "voice_kr_story_1201_120105_1E112BF0",
+    Loader = function()
+      return {
         voice_kr_story_1200_120042_1E0D1FB8 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1200",
           SelectKey = "voice_kr_story_1200_120042_1E0D1FB8",
@@ -79845,15 +80178,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120101_1E10EB76",
           SoundLength = 14830
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1201_120101_1E10EBA0_f",
-    MaxKey = "voice_kr_story_1201_120107_1E114DBC",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1201_120101_1E10EBA0_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120101_1E10EBA0_f",
@@ -80528,7 +80853,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120105_1E112BF0",
           SoundLength = 1570
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1201_120105_1E112C1A",
+    MaxKey = "voice_kr_story_1201_120111_1E1DFD5A",
+    Loader = function()
+      return {
         voice_kr_story_1201_120105_1E112C1A = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120105_1E112C1A",
@@ -80853,15 +81186,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120107_1E114DBC",
           SoundLength = 3840
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1201_120107_1E114DE6",
-    MaxKey = "voice_kr_story_1201_120111_C8462C64",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1201_120107_1E114DE6 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120107_1E114DE6",
@@ -81536,7 +81861,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120111_1E1DFD5A",
           SoundLength = 12630
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1201_120111_1E1DFD84",
+    MaxKey = "voice_kr_story_1201_120112_C846D392_m",
+    Loader = function()
+      return {
         voice_kr_story_1201_120111_1E1DFD84 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120111_1E1DFD84",
@@ -81861,15 +82194,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120111_C8462C64",
           SoundLength = 7760
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1201_120111_C8462C8E",
-    MaxKey = "voice_kr_story_1201_120113_1E1F23D8",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1201_120111_C8462C8E = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120111_C8462C8E",
@@ -82544,7 +82869,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120112_C846D392_m",
           SoundLength = 7760
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1201_120112_C846D3BC_f",
+    MaxKey = "voice_kr_story_1201_120114_1E1FB50A_f",
+    Loader = function()
+      return {
         voice_kr_story_1201_120112_C846D3BC_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120112_C846D3BC_f",
@@ -82869,15 +83202,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120113_1E1F23D8",
           SoundLength = 14340
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1201_120113_1E1F2402",
-    MaxKey = "voice_kr_story_1201_120114_1E1FF6AA",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1201_120113_1E1F2402 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120113_1E1F2402",
@@ -83552,7 +83877,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120114_1E1FB50A_f",
           SoundLength = 1030
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1201_120114_1E1FB50A_m",
+    MaxKey = "voice_kr_story_1201_120114_1E209AE4",
+    Loader = function()
+      return {
         voice_kr_story_1201_120114_1E1FB50A_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120114_1E1FB50A_m",
@@ -83877,15 +84210,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120114_1E1FF6AA",
           SoundLength = 2730
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1201_120114_1E1FF6D4_f",
-    MaxKey = "voice_kr_story_1201_120114_C8483B0B",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1201_120114_1E1FF6D4_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120114_1E1FF6D4_f",
@@ -84560,7 +84885,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120114_1E209AE4",
           SoundLength = 15370
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1201_120114_1E209B0E",
+    MaxKey = "voice_kr_story_1201_120124_1E1260DE",
+    Loader = function()
+      return {
         voice_kr_story_1201_120114_1E209B0E = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120114_1E209B0E",
@@ -84885,15 +85218,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120114_C8483B0B",
           SoundLength = 4150
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1201_120114_C8483B0C",
-    MaxKey = "voice_kr_story_1201_120127_1E12955E",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1201_120114_C8483B0C = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120114_C8483B0C",
@@ -85568,7 +85893,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120124_1E1260DE",
           SoundLength = 2680
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1201_120125_1E12711C",
+    MaxKey = "voice_kr_story_1201_120134_1E130CF8",
+    Loader = function()
+      return {
         voice_kr_story_1201_120125_1E12711C = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120125_1E12711C",
@@ -85893,15 +86226,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120127_1E12955E",
           SoundLength = 8720
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1201_120127_1E129588",
-    MaxKey = "voice_kr_story_1201_120140_1E13685A",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1201_120127_1E129588 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120127_1E129588",
@@ -86576,7 +86901,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120134_1E130CF8",
           SoundLength = 3890
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1201_120135_1E131502",
+    MaxKey = "voice_kr_story_1201_120158_1E148F02",
+    Loader = function()
+      return {
         voice_kr_story_1201_120135_1E131502 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120135_1E131502",
@@ -86901,15 +87234,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120140_1E13685A",
           SoundLength = 1200
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1201_120140_1E136884_f",
-    MaxKey = "voice_kr_story_1201_120165_1E150132_m",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1201_120140_1E136884_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120140_1E136884_f",
@@ -87584,7 +87909,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120158_1E148F02",
           SoundLength = 6560
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1201_120158_1E148F2C",
+    MaxKey = "voice_kr_story_1201_120183_1E1629D2",
+    Loader = function()
+      return {
         voice_kr_story_1201_120158_1E148F2C = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120158_1E148F2C",
@@ -87909,15 +88242,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120165_1E150132_m",
           SoundLength = 3850
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1201_120165_1E15015C",
-    MaxKey = "voice_kr_story_1201_120186_1E165C30",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1201_120165_1E15015C = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120165_1E15015C",
@@ -88592,7 +88917,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120183_1E1629D2",
           SoundLength = 2970
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1201_120183_1E1629FC",
+    MaxKey = "voice_kr_story_1201_120203_1E17721C_m",
+    Loader = function()
+      return {
         voice_kr_story_1201_120183_1E1629FC = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120183_1E1629FC",
@@ -88917,15 +89250,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120186_1E165C30",
           SoundLength = 8420
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1201_120186_1E165C5A",
-    MaxKey = "voice_kr_story_1201_120212_1E180474_f",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1201_120186_1E165C5A = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120186_1E165C5A",
@@ -89600,7 +89925,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120203_1E17721C_m",
           SoundLength = 3960
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1201_120203_1E177246_f",
+    MaxKey = "voice_kr_story_1201_120228_1E190C99",
+    Loader = function()
+      return {
         voice_kr_story_1201_120203_1E177246_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120203_1E177246_f",
@@ -89925,15 +90258,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120212_1E180474_f",
           SoundLength = 4060
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1201_120212_1E180474_m",
-    MaxKey = "voice_kr_story_1201_120233_1E195E22",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1201_120212_1E180474_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120212_1E180474_m",
@@ -90608,7 +90933,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120228_1E190C99",
           SoundLength = 2490
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1201_120228_1E190CA1",
+    MaxKey = "voice_kr_story_1204_120405_1E2466A2_m",
+    Loader = function()
+      return {
         voice_kr_story_1201_120228_1E190CA1 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120228_1E190CA1",
@@ -90933,15 +91266,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120233_1E195E22",
           SoundLength = 7240
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1201_120233_1E195E4C",
-    MaxKey = "voice_kr_story_1204_120411_1E24C54C",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1201_120233_1E195E4C = {
           ProgrammerSoundPath = "event:/voice/kr/story/1201",
           SelectKey = "voice_kr_story_1201_120233_1E195E4C",
@@ -91616,7 +91941,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120405_1E2466A2_m",
           SoundLength = 6460
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1204_120405_1E2466CC",
+    MaxKey = "voice_kr_story_1204_120428_1E25DCB2",
+    Loader = function()
+      return {
         voice_kr_story_1204_120405_1E2466CC = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120405_1E2466CC",
@@ -91941,15 +92274,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120411_1E24C54C",
           SoundLength = 8130
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1204_120411_1E24C576",
-    MaxKey = "voice_kr_story_1204_120429_1E25F3AA",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1204_120411_1E24C576 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120411_1E24C576",
@@ -92624,7 +92949,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120428_1E25DCB2",
           SoundLength = 14730
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1204_120428_1E25DCDC",
+    MaxKey = "voice_kr_story_1204_120437_1E26705A",
+    Loader = function()
+      return {
         voice_kr_story_1204_120428_1E25DCDC = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120428_1E25DCDC",
@@ -92949,15 +93282,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120429_1E25F3AA",
           SoundLength = 4630
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1204_120429_1E25F3D4",
-    MaxKey = "voice_kr_story_1204_120438_1E268140",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1204_120429_1E25F3D4 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120429_1E25F3D4",
@@ -93632,7 +93957,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120437_1E26705A",
           SoundLength = 5620
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1204_120437_1E267084",
+    MaxKey = "voice_kr_story_1204_120445_1E26F4C0",
+    Loader = function()
+      return {
         voice_kr_story_1204_120437_1E267084 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120437_1E267084",
@@ -93957,15 +94290,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120438_1E268140",
           SoundLength = 8020
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1204_120438_1E26816A",
-    MaxKey = "voice_kr_story_1204_120451_1E2757AE_m",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1204_120438_1E26816A = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120438_1E26816A",
@@ -94640,7 +94965,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120445_1E26F4C0",
           SoundLength = 12870
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1204_120445_1E26F4EA",
+    MaxKey = "voice_kr_story_1204_120456_1E27AD7C",
+    Loader = function()
+      return {
         voice_kr_story_1204_120445_1E26F4EA = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120445_1E26F4EA",
@@ -94965,15 +95298,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120451_1E2757AE_m",
           SoundLength = 5250
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1204_120451_1E2757D8",
-    MaxKey = "voice_kr_story_1204_120457_1E27BE62_m",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1204_120451_1E2757D8 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120451_1E2757D8",
@@ -95648,7 +95973,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120456_1E27AD7C",
           SoundLength = 19070
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1204_120456_1E27ADA6",
+    MaxKey = "voice_kr_story_1204_120466_1E284C4C",
+    Loader = function()
+      return {
         voice_kr_story_1204_120456_1E27ADA6 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120456_1E27ADA6",
@@ -95973,15 +96306,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120457_1E27BE62_m",
           SoundLength = 19330
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1204_120457_1E27BE8C_f",
-    MaxKey = "voice_kr_story_1204_120470_1E288DEC",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1204_120457_1E27BE8C_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120457_1E27BE8C_f",
@@ -96656,7 +96981,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120466_1E284C4C",
           SoundLength = 6360
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1204_120466_1E284C76",
+    MaxKey = "voice_kr_story_1204_120482_1E2953F2_m",
+    Loader = function()
+      return {
         voice_kr_story_1204_120466_1E284C76 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120466_1E284C76",
@@ -96981,15 +97314,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120470_1E288DEC",
           SoundLength = 8920
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1204_120470_1E288E16",
-    MaxKey = "voice_kr_story_1204_120487_1E29A720",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1204_120470_1E288E16 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120470_1E288E16",
@@ -97664,7 +97989,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120482_1E2953F2_m",
           SoundLength = 7880
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1204_120482_1E29541C_f",
+    MaxKey = "voice_kr_story_1204_120490_1E29E524",
+    Loader = function()
+      return {
         voice_kr_story_1204_120482_1E29541C_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120482_1E29541C_f",
@@ -97989,15 +98322,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120487_1E29A720",
           SoundLength = 6710
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1204_120487_1E29A74A_f",
-    MaxKey = "voice_kr_story_1204_120491_1E29EDD6",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1204_120487_1E29A74A_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120487_1E29A74A_f",
@@ -98672,7 +98997,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120490_1E29E524",
           SoundLength = 5060
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1204_120490_1E29E54E",
+    MaxKey = "voice_kr_story_1206_120604_1E3123B4_f",
+    Loader = function()
+      return {
         voice_kr_story_1204_120490_1E29E54E = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120490_1E29E54E",
@@ -98997,15 +99330,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120491_1E29EDD6",
           SoundLength = 2150
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1204_120492_1E29FB74",
-    MaxKey = "voice_kr_story_1206_120606_1E314724",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1204_120492_1E29FB74 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1204",
           SelectKey = "voice_kr_story_1204_120492_1E29FB74",
@@ -99680,7 +100005,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120604_1E3123B4_f",
           SoundLength = 3860
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1206_120604_1E3123B4_m",
+    MaxKey = "voice_kr_story_1206_120611_1E31975E",
+    Loader = function()
+      return {
         voice_kr_story_1206_120604_1E3123B4_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120604_1E3123B4_m",
@@ -100005,15 +100338,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120606_1E314724",
           SoundLength = 11110
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1206_120606_1E31474E",
-    MaxKey = "voice_kr_story_1206_120612_1E31AC34_f",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1206_120606_1E31474E = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120606_1E31474E",
@@ -100688,7 +101013,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120611_1E31975E",
           SoundLength = 3450
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1206_120611_1E319788",
+    MaxKey = "voice_kr_story_1206_120617_1E31F9F8_1",
+    Loader = function()
+      return {
         voice_kr_story_1206_120611_1E319788 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120611_1E319788",
@@ -101013,15 +101346,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120612_1E31AC34_f",
           SoundLength = 2750
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1206_120612_1E31AC34_m",
-    MaxKey = "voice_kr_story_1206_120619_1E3219A2_f",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1206_120612_1E31AC34_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120612_1E31AC34_m",
@@ -101696,7 +102021,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120617_1E31F9F8_1",
           SoundLength = 5250
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1206_120617_1E31F9F8_2",
+    MaxKey = "voice_kr_story_1206_120624_1E326DA2",
+    Loader = function()
+      return {
         voice_kr_story_1206_120617_1E31F9F8_2 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120617_1E31F9F8_2",
@@ -102021,15 +102354,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120619_1E3219A2_f",
           SoundLength = 1880
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1206_120619_1E3219A2_m",
-    MaxKey = "voice_kr_story_1206_120626_1E328D22",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1206_120619_1E3219A2_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120619_1E3219A2_m",
@@ -102704,7 +103029,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120624_1E326DA2",
           SoundLength = 6660
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1206_120624_1E326DCC",
+    MaxKey = "voice_kr_story_1206_120630_1E32CE1A",
+    Loader = function()
+      return {
         voice_kr_story_1206_120624_1E326DCC = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120624_1E326DCC",
@@ -103029,15 +103362,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120626_1E328D22",
           SoundLength = 6500
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1206_120626_1E328D4C",
-    MaxKey = "voice_kr_story_1206_120633_1E32FFA6",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1206_120626_1E328D4C = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120626_1E328D4C",
@@ -103712,7 +104037,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120630_1E32CE1A",
           SoundLength = 5800
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_1206_120630_1E32CE44",
+    MaxKey = "voice_kr_story_2001_200005_3211B7F8",
+    Loader = function()
+      return {
         voice_kr_story_1206_120630_1E32CE44 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120630_1E32CE44",
@@ -104037,15 +104370,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120633_1E32FFA6",
           SoundLength = 10480
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_1206_120633_1E32FFD0",
-    MaxKey = "voice_kr_story_2001_200008_3211E9D8",
-    Loader = function()
-      return {
+        },
         voice_kr_story_1206_120633_1E32FFD0 = {
           ProgrammerSoundPath = "event:/voice/kr/story/1206",
           SelectKey = "voice_kr_story_1206_120633_1E32FFD0",
@@ -104720,7 +105045,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/2001",
           SelectKey = "voice_kr_story_2001_200005_3211B7F8",
           SoundLength = 9380
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_2001_200005_3211B822",
+    MaxKey = "voice_kr_story_2001_200054_3214D8EC_f",
+    Loader = function()
+      return {
         voice_kr_story_2001_200005_3211B822 = {
           ProgrammerSoundPath = "event:/voice/kr/story/2001",
           SelectKey = "voice_kr_story_2001_200005_3211B822",
@@ -105045,15 +105378,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/2001",
           SelectKey = "voice_kr_story_2001_200008_3211E9D8",
           SoundLength = 5270
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_2001_200008_3211EA02",
-    MaxKey = "voice_kr_story_2001_200057_32150CC4_f",
-    Loader = function()
-      return {
+        },
         voice_kr_story_2001_200008_3211EA02 = {
           ProgrammerSoundPath = "event:/voice/kr/story/2001",
           SelectKey = "voice_kr_story_2001_200008_3211EA02",
@@ -105728,7 +106053,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/2001",
           SelectKey = "voice_kr_story_2001_200054_3214D8EC_f",
           SoundLength = 3210
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_2001_200054_3214D8EC_m",
+    MaxKey = "voice_kr_story_2001_200070_3215DEEE_m",
+    Loader = function()
+      return {
         voice_kr_story_2001_200054_3214D8EC_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/2001",
           SelectKey = "voice_kr_story_2001_200054_3214D8EC_m",
@@ -106053,15 +106386,7 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/2001",
           SelectKey = "voice_kr_story_2001_200057_32150CC4_f",
           SoundLength = 1300
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_kr_story_2001_200057_32150CC4_m",
-    MaxKey = "voice_kr_story_2001_200070_3215E1B8",
-    Loader = function()
-      return {
+        },
         voice_kr_story_2001_200057_32150CC4_m = {
           ProgrammerSoundPath = "event:/voice/kr/story/2001",
           SelectKey = "voice_kr_story_2001_200057_32150CC4_m",
@@ -106736,7 +107061,15 @@ local Data = {
           ProgrammerSoundPath = "event:/voice/kr/story/2001",
           SelectKey = "voice_kr_story_2001_200070_3215DEEE_m",
           SoundLength = 8980
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_kr_story_2001_200070_3215DF18_f",
+    MaxKey = "voice_kr_story_2001_200070_3215E1B8",
+    Loader = function()
+      return {
         voice_kr_story_2001_200070_3215DF18_f = {
           ProgrammerSoundPath = "event:/voice/kr/story/2001",
           SelectKey = "voice_kr_story_2001_200070_3215DF18_f",

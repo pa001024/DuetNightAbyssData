@@ -311,6 +311,11 @@ function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InAnalogInputEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   if "Gamepad_LeftY" == InKeyName or "Gamepad_LeftX" == InKeyName then
+    local AnalogValue = UE4.UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent)
+    local Parent = self.Parent
+    if Parent and Parent.TryRearmStickByAnalog then
+      Parent:TryRearmStickByAnalog(InKeyName, AnalogValue)
+    end
     return UIUtils.Handled
   end
   if "Gamepad_RightY" == InKeyName then

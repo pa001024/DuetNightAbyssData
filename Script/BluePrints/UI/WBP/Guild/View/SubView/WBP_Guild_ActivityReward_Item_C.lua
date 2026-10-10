@@ -52,12 +52,6 @@ end
 
 function M:OnClicked()
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_confirm_positive", nil, nil)
-  if self.ParentUI and self.ParentUI.ConfigData and self.ParentUI.ConfigData.Mode == "GuildBoss" then
-    if self.ParentUI.OnGuildBossPointRewardItemClicked then
-      self.ParentUI:OnGuildBossPointRewardItemClicked(self)
-    end
-    return
-  end
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return

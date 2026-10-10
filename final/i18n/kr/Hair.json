@@ -91,6 +91,34 @@
     "rarity": 4
   },
   {
+    "id": 10135,
+    "name": "장난꾸러기 호박·오렌지",
+    "desc": "장식용으로만 사용하며, 식용 불가.",
+    "icon": "T_Fashion_Hat29_03",
+    "rarity": 4
+  },
+  {
+    "id": 10136,
+    "name": "장난꾸러기 호박·러스트 레드",
+    "desc": "장식용으로만 사용하며, 식용 불가.",
+    "icon": "T_Fashion_Hat29_04",
+    "rarity": 4
+  },
+  {
+    "id": 10137,
+    "name": "장난꾸러기 호박·골드",
+    "desc": "장식용으로만 사용하며, 식용 불가.",
+    "icon": "T_Fashion_Hat29_02",
+    "rarity": 4
+  },
+  {
+    "id": 10138,
+    "name": "장난꾸러기 호박·민트",
+    "desc": "장식용으로만 사용하며, 식용 불가.",
+    "icon": "T_Fashion_Hat29_01",
+    "rarity": 4
+  },
+  {
     "id": 110292,
     "name": "용서하는 자",
     "icon": "T_Fashion_Fuluo_01",
@@ -141,8 +169,8 @@
   },
   {
     "id": 410392,
-    "name": "UI_Skin_Name_410301",
-    "icon": "T_Fashion_Zhiliu_01",
+    "name": "밤에 스며드는 실",
+    "icon": "T_Fashion_SPLise_01",
     "rarity": 5,
     "charId": 4103
   },

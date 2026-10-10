@@ -199,7 +199,8 @@ function BP_UIState_C:SetUIVisibilityTag(VisibiltyTag, Invisible, EDesireVisibil
     end
   else
     EDesireVisibilty = EDesireVisibilty or UE4.ESlateVisibility.SelfHitTestInvisible
-    if self:GetVisibility() ~= EDesireVisibilty then
+    local CurLogicVisibility = self.SelfWidgetParamForStackChange and self.SelfWidgetParamForStackChange.DesireVisibilty or self:GetVisibility()
+    if CurLogicVisibility ~= EDesireVisibilty then
       if self.bIsActive then
         self:ActivateWidget()
       elseif self:CheckIsNeedTransitionFade(VisibiltyTag, false) then
@@ -207,6 +208,10 @@ function BP_UIState_C:SetUIVisibilityTag(VisibiltyTag, Invisible, EDesireVisibil
       else
         self:SetVisibility(EDesireVisibilty)
       end
+      if self.SelfWidgetParamForStackChange then
+        self:CancelTweenOutSystemStackChange()
+      end
+      self.SelfWidgetParamForStackChange = nil
       SystemGuideManager:ShowUIEvent(self.WidgetName)
       IsVisibilityChange = true
     end
@@ -719,22 +724,31 @@ function BP_UIState_C:OnUpdateWhenSystemJump(CurValue)
 end
 
 function BP_UIState_C:OnCompleteAfterSystemJump(EndValue)
-  DebugPrint("Hy@ UIState型界面系统跳转完成后回调 OnCompleteAfterSystemJump，名称：", self:GetUIConfigName(), " EndValue:", EndValue)
-  self:SetRenderOpacity(EndValue)
-  if self.SelfWidgetParamForStackChange then
-    self:SetVisibility(self.SelfWidgetParamForStackChange.DesireVisibilty or UE4.ESlateVisibility.Collapsed)
-  else
-    self:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  if not IsValid(self) then
+    return
   end
+  DebugPrint("Hy@ UIState型界面系统跳转完成后回调 OnCompleteAfterSystemJump，名称：", self:GetUIConfigName(), " EndValue:", EndValue)
+  local StackChangeParam = self.SelfWidgetParamForStackChange
+  self.SelfWidgetParamForStackChange = nil
+  if not self:IsHide() then
+    self:SetRenderOpacity(StackChangeParam and StackChangeParam.RenderOpacityBeforeJump or 1.0)
+    return
+  end
+  self:SetRenderOpacity(EndValue)
+  self:SetVisibility(StackChangeParam and StackChangeParam.DesireVisibilty or UIConst.VisibilityOp.Collapsed)
 end
 
 function BP_UIState_C:OnCancelWhenSystemJump()
+  if not IsValid(self) then
+    return
+  end
   DebugPrint("Hy@ UIState型界面系统跳转取消后回调 OnCancelWhenSystemJump，名称：", self:GetUIConfigName())
   if self.SelfWidgetParamForStackChange then
     self:SetRenderOpacity(self.SelfWidgetParamForStackChange.RenderOpacityBeforeJump or 1.0)
   else
     self:SetRenderOpacity(1.0)
   end
+  self.SelfWidgetParamForStackChange = nil
 end
 
 function BP_UIState_C:DealWithBattleUnitVisibility(HideBattleUnitType, bHideOrShow, AnimType)

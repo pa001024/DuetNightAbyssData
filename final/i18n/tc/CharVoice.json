@@ -7834,6 +7834,324 @@
     "text": "請再給我一次機會吧……請不要放棄我。"
   },
   {
+    "id": 11147,
+    "charId": 4103,
+    "name": "角色形象·初見",
+    "res": "char_SpLise01_vo_gain",
+    "text": "狂歡夜嗎……越是這樣的慶典越容易潛伏著危機，得時刻保持警惕。"
+  },
+  {
+    "id": 11148,
+    "charId": 4103,
+    "name": "角色形象·準備就緒",
+    "res": "char_SpLise01_vo_appear",
+    "text": "這身衣服的袖口很適合藏匿手槍，就是裙襬有點太長，我還不太適應……"
+  },
+  {
+    "id": 11149,
+    "charId": 4103,
+    "name": "角色形象·戰鬥開始",
+    "res": "char_SpLise01_vo_battlestart",
+    "text": "我已經能聽見冰湖城的歡笑聲後，暗流湧動的聲響。"
+  },
+  {
+    "id": 11150,
+    "charId": 4103,
+    "name": "角色形象·釋放終結技·其一",
+    "res": "char_SpLise01_vo_skill02_r01",
+    "text": "電光會照亮罪惡。"
+  },
+  {
+    "id": 11151,
+    "charId": 4103,
+    "name": "角色形象·釋放終結技·其二",
+    "res": "char_SpLise01_vo_skill02_r02",
+    "text": "我將結束你們殘暴的歡愉。"
+  },
+  {
+    "id": 11152,
+    "charId": 4103,
+    "name": "角色形象·釋放終結技·其三",
+    "res": "char_SpLise01_vo_skill02_r03",
+    "text": "束手就擒！"
+  },
+  {
+    "id": 11153,
+    "charId": 4103,
+    "name": "初見·其一",
+    "res": "char_SpLise_vo_gain",
+    "text": "我會好好活下去的，{nickname}。並不單單只是為了不違背布魯斯的遺言，也是因為，我已經找到了活下去的理由。"
+  },
+  {
+    "id": 11154,
+    "charId": 4103,
+    "name": "致候",
+    "res": "char_SpLise_vo_welcome",
+    "text": "今日據點巡邏結束……噢，這只是我的個人習慣，多留心一下安全總是好的。"
+  },
+  {
+    "id": 11155,
+    "charId": 4103,
+    "name": "閒談・關於改變·其一",
+    "res": "char_SpLise_vo_topic_01_1",
+    "text": "是啊，好多街坊鄰居第一眼都沒認出我。畢竟之前我一年到頭都是穿制服，幾乎沒買過衣服。"
+  },
+  {
+    "id": 11156,
+    "charId": 4103,
+    "name": "閒談・關於改變·其二",
+    "res": "char_SpLise_vo_topic_01_2",
+    "text": "剛好你在，幫我看看，這件還算合適嗎？"
+  },
+  {
+    "id": 11157,
+    "charId": 4103,
+    "name": "閒談・關於改變·其三",
+    "res": "char_SpLise_vo_topic_01_3",
+    "text": "嗯，謝謝你。對我個人而言，我也需要一些變化來提醒自己，我已經不再是過去的我了。"
+  },
+  {
+    "id": 11158,
+    "charId": 4103,
+    "name": "閒談・關於改變·其四",
+    "res": "char_SpLise_vo_topic_01_4",
+    "text": "……的確。儘管我說過很多次我已經辭職了，但冰湖城的許多人，仍然會習慣性地稱呼我為「黎瑟長官」。"
+  },
+  {
+    "id": 11159,
+    "charId": 4103,
+    "name": "閒談・關於改變·其五",
+    "res": "char_SpLise_vo_topic_01_5",
+    "text": "你說得對，總有一天，大家都會習慣這個新身份的。"
+  },
+  {
+    "id": 11160,
+    "charId": 4103,
+    "name": "閒談・關於打工·其一",
+    "res": "char_SpLise_vo_topic_02_1",
+    "text": "在工作。最近接下的新委託，制止霧區的私鬥和糾紛，還有塗掉那些宣傳惡意的塗鴉。"
+  },
+  {
+    "id": 11161,
+    "charId": 4103,
+    "name": "閒談・關於打工·其二",
+    "res": "char_SpLise_vo_topic_02_2",
+    "text": "這些小事也總得有人去做，更何況讓大家的生活變得更好的事，也不算小事。"
+  },
+  {
+    "id": 11162,
+    "charId": 4103,
+    "name": "閒談・關於打工·其三",
+    "res": "char_SpLise_vo_topic_02_3",
+    "text": "是類似布魯斯喜歡歌劇那樣的愛好嗎……唔，好像確實沒有。過去我習慣了被工作填滿的日子，想來已經錯過擁有愛好的機會了吧。"
+  },
+  {
+    "id": 11163,
+    "charId": 4103,
+    "name": "閒談・關於打工·其四",
+    "res": "char_SpLise_vo_topic_02_4",
+    "text": "喜歡的東西……我想想，唔，我喜歡整齊劃一和對稱的東西。也許我可以愛好打掃和整理？——不對，這好像還是「工作」……"
+  },
+  {
+    "id": 11164,
+    "charId": 4103,
+    "name": "閒談・關於軍團·其一",
+    "res": "char_SpLise_vo_topic_03_1",
+    "text": "少數委託是水仙平原接的，大多數則是來自我過去在治安署的幾個同僚。有一些不方便出手的治安工作，比如調停械鬥之類的，他們會優先考慮交給我。"
+  },
+  {
+    "id": 11165,
+    "charId": 4103,
+    "name": "閒談・關於軍團·其二",
+    "res": "char_SpLise_vo_topic_03_2",
+    "text": "是的，很多最下層的士兵也只是像我一樣的普通人。他們中的一些人也會有屬於自己的樸素正義……比如當時冒著風險，協助我們一起查案的那幾位同伴。"
+  },
+  {
+    "id": 11166,
+    "charId": 4103,
+    "name": "閒談・關於軍團·其三",
+    "res": "char_SpLise_vo_topic_03_3",
+    "text": "我憎惡軍團，但我並不恨他們。"
+  },
+  {
+    "id": 11167,
+    "charId": 4103,
+    "name": "閒談・關於復仇·其一",
+    "res": "char_SpLise_vo_topic_04_1",
+    "text": "啊，是的。幾百米外就能正中靶心，還不錯吧。"
+  },
+  {
+    "id": 11168,
+    "charId": 4103,
+    "name": "閒談・關於復仇·其二",
+    "res": "char_SpLise_vo_topic_04_2",
+    "text": "等我練到百發百中的時候，就可以找一些「老夥計」算算舊帳了。"
+  },
+  {
+    "id": 11169,
+    "charId": 4103,
+    "name": "閒談・關於復仇·其三",
+    "res": "char_SpLise_vo_topic_04_3",
+    "text": "對。但你不用擔心，我不會被仇恨沖昏頭腦去以卵擊石，也不會讓仇恨成為生活的全部。"
+  },
+  {
+    "id": 11170,
+    "charId": 4103,
+    "name": "閒談・關於復仇·其四",
+    "res": "char_SpLise_vo_topic_04_4",
+    "text": "我會好好活下去，磨礪身手，等待一個確定的時機，而後全身而退。"
+  },
+  {
+    "id": 11171,
+    "charId": 4103,
+    "name": "閒談・關於復仇·其五",
+    "res": "char_SpLise_vo_topic_04_5",
+    "text": "當然，因為布魯斯最後的囑託，我也絕不會忘記。更何況，我現在有了你們這些在最困難的時候和我彼此扶持的友人……我會珍惜現在的一切。"
+  },
+  {
+    "id": 11172,
+    "charId": 4103,
+    "name": "獨白",
+    "res": "char_SpLise_vo_idle",
+    "text": "這周末的行程空出來了……嗯，難得的休息日。"
+  },
+  {
+    "id": 11173,
+    "charId": 4103,
+    "name": "閒談・他人偶遇 其一",
+    "res": "char_SpLise_vo_companio_01",
+    "text": "素未謀面的那位朋友……？謝謝你，在我缺席的時間裡，陪伴布魯斯度過了那些灰暗的時刻。",
+    "companioCharId": 1503
+  },
+  {
+    "id": 11174,
+    "charId": 4103,
+    "name": "閒談・他人偶遇 其二",
+    "res": "char_SpLise_vo_companio_02",
+    "text": "你的酒很好，只是我還是不太習慣酒精的味道。如果可以的話，能拜託你為我調一杯適合新手入門的酒嗎，我會用心品嘗，並且提交一份五百字的試飲報告。",
+    "companioCharId": 1503
+  },
+  {
+    "id": 11175,
+    "charId": 4103,
+    "name": "閒談・他人偶遇 其三",
+    "res": "char_SpLise_vo_companio_03",
+    "text": "原來情報裡的女孩不是貝蕾妮卡小姐嗎……抱歉，害{nickname}捲入了神棄者同盟的陰謀。我會全力協助你們尋找{性别：他|她}的下落。",
+    "companioCharId": 1503
+  },
+  {
+    "id": 11176,
+    "charId": 4103,
+    "name": "準備就緒",
+    "res": "char_SpLise_vo_appear",
+    "text": "準備完成，隨時可以出發。"
+  },
+  {
+    "id": 11177,
+    "charId": 4103,
+    "name": "精進",
+    "res": "char_SpLise_vo_lvup",
+    "text": "這份力量……能夠支撐我更好地完成訓練。謝謝。"
+  },
+  {
+    "id": 11178,
+    "charId": 4103,
+    "name": "戰鬥開始",
+    "res": "char_SpLise_vo_battlestart",
+    "text": "全力以赴吧。"
+  },
+  {
+    "id": 11179,
+    "charId": 4103,
+    "name": "空暇",
+    "res": "char_SpLise_vo_battleidle",
+    "text": "張弛有度，且戰且休，這是你的戰術安排嗎？"
+  },
+  {
+    "id": 11180,
+    "charId": 4103,
+    "name": "受傷·其一",
+    "res": "char_SpLise_vo_be_hit_heavy_r01",
+    "text": "呃！"
+  },
+  {
+    "id": 11181,
+    "charId": 4103,
+    "name": "受傷·其二",
+    "res": "char_SpLise_vo_be_hit_heavy_r02",
+    "text": "沒事。"
+  },
+  {
+    "id": 11182,
+    "charId": 4103,
+    "name": "釋放技能·其一",
+    "res": "char_SpLise_vo_skill01_r01",
+    "text": "發現目標。"
+  },
+  {
+    "id": 11183,
+    "charId": 4103,
+    "name": "釋放技能·其二",
+    "res": "char_SpLise_vo_skill01_r02",
+    "text": "目標鎖定。"
+  },
+  {
+    "id": 11184,
+    "charId": 4103,
+    "name": "釋放終結技·其一",
+    "res": "char_SpLise_vo_skill02_r01",
+    "text": "該結束了。"
+  },
+  {
+    "id": 11185,
+    "charId": 4103,
+    "name": "釋放終結技·其二",
+    "res": "char_SpLise_vo_skill02_r02",
+    "text": "你已無處可逃。"
+  },
+  {
+    "id": 11186,
+    "charId": 4103,
+    "name": "釋放終結技·其三",
+    "res": "char_SpLise_vo_skill02_r03",
+    "text": "彈藥裝填完成。"
+  },
+  {
+    "id": 11187,
+    "charId": 4103,
+    "name": "無法行動·其一",
+    "res": "char_SpLise_vo_die_r01",
+    "text": "不，我答應過的……"
+  },
+  {
+    "id": 11188,
+    "charId": 4103,
+    "name": "無法行動·其二",
+    "res": "char_SpLise_vo_die_r02",
+    "text": "我……不能死……"
+  },
+  {
+    "id": 11189,
+    "charId": 4103,
+    "name": "復甦",
+    "res": "char_SpLise_vo_revive",
+    "text": "我不會失約的。"
+  },
+  {
+    "id": 11190,
+    "charId": 4103,
+    "name": "勝利",
+    "res": "char_SpLise_vo_victory",
+    "text": "好，距離我的目標更近了一步。"
+  },
+  {
+    "id": 11191,
+    "charId": 4103,
+    "name": "敗退",
+    "res": "char_SpLise_vo_fail",
+    "text": "還有機會，再來。"
+  },
+  {
     "id": 16010001,
     "charId": 1601,
     "name": "準備就緒",

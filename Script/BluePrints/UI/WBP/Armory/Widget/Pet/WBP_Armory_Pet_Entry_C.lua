@@ -17,6 +17,15 @@ function M:Init(Content)
   elseif Content.IsEmpty then
     self.WidgetSwitcher_State:SetActiveWidgetIndex(1)
   else
+    local Material = self.Light_Quality:GetDynamicMaterial()
+    if Material then
+      local Rarity = Content.Rarity or 1
+      local TexturePath = "Texture2D'/Game/UI/Texture/Static/Image/Common/Item/T_Item_Hover_" .. Rarity .. ".T_Item_Hover_" .. Rarity .. "'"
+      local Texture = LoadObject(TexturePath)
+      if Texture then
+        Material:SetTextureParameterValue("MainTex", Texture)
+      end
+    end
     self.Pet_EntryTag:Init(Content)
     self.Text_Entry:SetText(Content.Name)
     self.Text_Desc:SetText(Content.Desc)

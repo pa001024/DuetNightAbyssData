@@ -40,10 +40,12 @@ function DungeonFinishComponent:TryPlayerFinish(IsWin, AvatarEidStrs, GameEndRea
   local AllowedFinishAvatarEidStrs = {}
   if self.CheckPlayerAllowedFinish then
     for _, AvatarEidStr in pairs(AvatarEidStrs) do
-      if self.CheckPlayerAllowedFinish(IsWin, AvatarEidStr, GameEndReason) then
+      if self:CheckPlayerAllowedFinish(IsWin, AvatarEidStr, GameEndReason) then
         table.insert(AllowedFinishAvatarEidStrs, AvatarEidStr)
       end
     end
+  else
+    AllowedFinishAvatarEidStrs = AvatarEidStrs
   end
   print("ljl@ DungeonFinishComponent TryPlayerFinish AllowedFinishAvatarEidStrs", table.concat(AllowedFinishAvatarEidStrs, ", "), "IsWin", IsWin, "GameEndReason", GameEndReason)
   for _, AvatarEidStr in pairs(AllowedFinishAvatarEidStrs) do

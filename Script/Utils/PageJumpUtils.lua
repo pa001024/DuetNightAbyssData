@@ -331,10 +331,6 @@ function PageJumpUtils:CloseFrontDialog()
   if CoopCreate then
     CoopCreate:Close()
   end
-  local GuildBossPointReward = UIManager:GetUI("GuildBossReward")
-  if GuildBossPointReward then
-    GuildBossPointReward:Close()
-  end
 end
 
 function PageJumpUtils:SortAccessItem(ItemsContainer)
@@ -1812,6 +1808,10 @@ function PageJumpUtils:JumpToEventPage(CurTabIndex)
       end
     end
   })
+end
+
+function PageJumpUtils:JumpToHardBossEvent()
+  self:JumpToTargetPage("HardBossEventRoot")
 end
 
 function PageJumpUtils:JumpToShopPage(MainTabIdx, SubTabIdx, ShopItemId, ShopType, Callback, CallbackObj)

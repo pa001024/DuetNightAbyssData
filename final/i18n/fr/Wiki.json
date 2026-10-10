@@ -235,7 +235,7 @@
   {
     "id": 2,
     "name": "Personnages",
-    "count": 54,
+    "count": 55,
     "subTypes": [
       {
         "id": 201,
@@ -527,6 +527,11 @@
                 "id": 20101106,
                 "text": "Récompensée pour son rôle dans l’affaire de la Traque des Charons, elle reçut le titre de Charon Couronné.\nMais, endeuillée et privée de but, elle finit par démissionner des Veilleurs.",
                 "unlock": 20101106
+              },
+              {
+                "id": 20101107,
+                "text": "Rhythm se rendit à Dismania afin d’aider {nickname} à retrouver la trace de sa famille. Cependant, à la suite d’un concours de circonstances provoqué par les informations qu’elle avait obtenues, {nickname} se retrouva mêlé à l’attaque d’un train avant de disparaître sans laisser de trace. Après avoir appris la nouvelle, Rhythm n’eut d’autre choix que de retourner à Givrelac.\n \nAlors qu’elle triait les affaires laissées par Blues dans la base secrète, Rhythm découvrit par hasard une ancienne liste de recrutement de la VIᵉ Légion. Cette découverte la poussa à partir à la rencontre des familles des victimes, un voyage au cours duquel elle fit la connaissance de toutes sortes de personnes. C’est ainsi qu’elle rencontra Rae, une jeune fille dont la situation ressemblait beaucoup à la sienne, et l’empêcha de céder à une vengeance impulsive. Cette rencontre poussa également Rhythm à affronter ses propres blessures du passé. Elle décida de ne plus fuir, mais de continuer à vivre et de chercher activement une nouvelle voie.",
+                "unlock": 20101107
               }
             ]
           },
@@ -1150,6 +1155,7 @@
           {
             "id": 201035,
             "title": "« La Papesse » Ada",
+            "img": "T_Encyclopedia_83",
             "related": [
               408024,
               405023
@@ -1227,6 +1233,20 @@
                   11120815
                 ],
                 "unlock": 20103604
+              }
+            ]
+          },
+          {
+            "id": 201037,
+            "title": "Rae",
+            "related": [
+              201011
+            ],
+            "texts": [
+              {
+                "id": 20103701,
+                "text": "Rae Sloan est la sœur cadette de Darcy, l’une des victimes des expériences secrètes menées par la VIᵉ Légion.\n \nRae possède une capacité magique particulière qui lui permet d’entrevoir, dans ses rêves, certains souvenirs de sa sœur. C’est ainsi qu’elle découvrit une partie de la vérité sur ce qui lui était arrivé. Submergée par la douleur et la colère, elle chercha à se venger de la Légion et prit pour cible le lieutenant-colonel Johnson, qui avait été chargé de maintenir l’ordre sur le lieu d’enrôlement, préparant secrètement son assassinat.\n \nRhythm finit cependant par découvrir son projet et parvint à l’en empêcher. Grâce aux paroles de Rhythm, Rae renonça finalement à cette vengeance irréfléchie et décida de continuer à vivre en chérissant les précieux souvenirs qu’elle partageait avec sa sœur.",
+                "unlock": 20103701
               }
             ]
           }
@@ -4429,6 +4449,7 @@
           {
             "id": 408023,
             "title": "Montagnes d’Arcano",
+            "img": "T_Encyclopedia_82",
             "related": [
               408024
             ],
@@ -4454,6 +4475,7 @@
           {
             "id": 408024,
             "title": "Arcano",
+            "img": "T_Encyclopedia_84",
             "related": [
               408023,
               405023

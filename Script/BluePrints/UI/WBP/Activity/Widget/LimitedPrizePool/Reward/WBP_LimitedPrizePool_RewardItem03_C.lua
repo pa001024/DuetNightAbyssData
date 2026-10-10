@@ -138,7 +138,6 @@ function M:ConfirmSelectItem(ItemData)
     self.Content.Id = ItemData.Id
     self.Content.SelectedIndex = ItemData.Index
     self:SetSelectedItem(self.Content)
-    self:TryDecreaseLimitedPrizeRewardSelectReddot(self.Content.Number)
   end
   
   Avatar:SetLimitPrizeSelfSelect(Callback, self.Content.EventId, self.Content.Number, ItemData.Index)
@@ -191,18 +190,6 @@ function M:OnGachaGetAnimationFinished()
     local CallbackFunc = self.GachaGetCallbackFunc
     self.GachaGetCallbackFunc = nil
     CallbackFunc()
-  end
-end
-
-function M:TryDecreaseLimitedPrizeRewardSelectReddot(Index)
-  local NodeName = "LimitedPrizeRewardSelect"
-  if not ReddotManager.GetTreeNode(NodeName) then
-    ReddotManager.AddNode(NodeName)
-  end
-  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
-  if CacheDetail[Index] then
-    CacheDetail[Index] = nil
-    ReddotManager.DecreaseLeafNodeCount(NodeName, 1)
   end
 end
 

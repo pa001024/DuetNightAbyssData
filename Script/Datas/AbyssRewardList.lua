@@ -1825,5 +1825,247 @@ return ReadOnly("AbyssRewardList", {
     Level = 62,
     Reward = 48058,
     RewardAddOn = 2
+  },
+  [170201] = {
+    ItemID = 170201,
+    Level = 2,
+    Reward = 46211,
+    WalnutOrResourceReward = true
+  },
+  [170202] = {
+    ItemID = 170202,
+    Level = 4,
+    Reward = 46212,
+    WalnutOrResourceReward = true
+  },
+  [170203] = {
+    ItemID = 170203,
+    Level = 6,
+    Reward = 46213,
+    WalnutOrResourceReward = true
+  },
+  [170204] = {
+    ItemID = 170204,
+    Level = 8,
+    Reward = 46214,
+    WalnutOrResourceReward = true
+  },
+  [170205] = {
+    ItemID = 170205,
+    Level = 10,
+    Reward = 46215,
+    WalnutOrResourceReward = true
+  },
+  [170206] = {
+    ItemID = 170206,
+    Level = 12,
+    Reward = 46216,
+    WalnutOrResourceReward = true
+  },
+  [170207] = {
+    ItemID = 170207,
+    Level = 14,
+    Reward = 46217,
+    WalnutOrResourceReward = true
+  },
+  [170208] = {
+    ItemID = 170208,
+    Level = 16,
+    Reward = 46218,
+    WalnutOrResourceReward = true
+  },
+  [170209] = {
+    ItemID = 170209,
+    Level = 18,
+    Reward = 46219,
+    WalnutOrResourceReward = true
+  },
+  [170210] = {
+    ItemID = 170210,
+    Level = 20,
+    Reward = 46220,
+    WalnutOrResourceReward = true
+  },
+  [170211] = {
+    ItemID = 170211,
+    Level = 22,
+    Reward = 46221,
+    WalnutOrResourceReward = true
+  },
+  [170212] = {
+    ItemID = 170212,
+    Level = 24,
+    Reward = 46222,
+    WalnutOrResourceReward = true
+  },
+  [170213] = {
+    ItemID = 170213,
+    Level = 26,
+    Reward = 46223,
+    WalnutOrResourceReward = true
+  },
+  [170214] = {
+    ItemID = 170214,
+    Level = 28,
+    Reward = 46224,
+    WalnutOrResourceReward = true
+  },
+  [170215] = {
+    ItemID = 170215,
+    Level = 30,
+    Reward = 46225,
+    WalnutOrResourceReward = true
+  },
+  [170301] = {
+    ItemID = 170301,
+    Level = 10,
+    Reward = 48060,
+    RewardAddOn = 10,
+    WalnutOrResourceReward = true
+  },
+  [170302] = {
+    ItemID = 170302,
+    Level = 30,
+    Reward = 48061
+  },
+  [170303] = {
+    ItemID = 170303,
+    Level = 35,
+    Reward = 48062,
+    RewardAddOn = 5,
+    WalnutOrResourceReward = true
+  },
+  [170304] = {
+    ItemID = 170304,
+    Level = 60,
+    Reward = 48063
+  },
+  [170305] = {
+    ItemID = 170305,
+    Level = 62,
+    Reward = 48064,
+    RewardAddOn = 2
+  },
+  [170307] = {
+    ItemID = 170307,
+    Level = 252,
+    Reward = 48065,
+    RewardAddOn = 2
+  },
+  [171000] = {
+    ItemID = 171000,
+    Level = 252,
+    Reward = 48069,
+    RewardAddOn = 2
+  },
+  [171201] = {
+    ItemID = 171201,
+    Level = 2,
+    Reward = 46226,
+    WalnutOrResourceReward = true
+  },
+  [171202] = {
+    ItemID = 171202,
+    Level = 4,
+    Reward = 46227,
+    WalnutOrResourceReward = true
+  },
+  [171203] = {
+    ItemID = 171203,
+    Level = 6,
+    Reward = 46228,
+    WalnutOrResourceReward = true
+  },
+  [171204] = {
+    ItemID = 171204,
+    Level = 8,
+    Reward = 46229,
+    WalnutOrResourceReward = true
+  },
+  [171205] = {
+    ItemID = 171205,
+    Level = 10,
+    Reward = 46230,
+    WalnutOrResourceReward = true
+  },
+  [171206] = {
+    ItemID = 171206,
+    Level = 12,
+    Reward = 46231,
+    WalnutOrResourceReward = true
+  },
+  [171207] = {
+    ItemID = 171207,
+    Level = 14,
+    Reward = 46232,
+    WalnutOrResourceReward = true
+  },
+  [171208] = {
+    ItemID = 171208,
+    Level = 16,
+    Reward = 46233,
+    WalnutOrResourceReward = true
+  },
+  [171209] = {
+    ItemID = 171209,
+    Level = 18,
+    Reward = 46234,
+    WalnutOrResourceReward = true
+  },
+  [171210] = {
+    ItemID = 171210,
+    Level = 20,
+    Reward = 46235,
+    WalnutOrResourceReward = true
+  },
+  [171211] = {
+    ItemID = 171211,
+    Level = 22,
+    Reward = 46236,
+    WalnutOrResourceReward = true
+  },
+  [171212] = {
+    ItemID = 171212,
+    Level = 24,
+    Reward = 46237,
+    WalnutOrResourceReward = true
+  },
+  [171213] = {
+    ItemID = 171213,
+    Level = 26,
+    Reward = 46238,
+    WalnutOrResourceReward = true
+  },
+  [171214] = {
+    ItemID = 171214,
+    Level = 28,
+    Reward = 46239,
+    WalnutOrResourceReward = true
+  },
+  [171215] = {
+    ItemID = 171215,
+    Level = 30,
+    Reward = 46240,
+    WalnutOrResourceReward = true
+  },
+  [171301] = {
+    ItemID = 171301,
+    Level = 10,
+    Reward = 48066,
+    RewardAddOn = 10,
+    WalnutOrResourceReward = true
+  },
+  [171302] = {
+    ItemID = 171302,
+    Level = 35,
+    Reward = 48067,
+    RewardAddOn = 5,
+    WalnutOrResourceReward = true
+  },
+  [171303] = {
+    ItemID = 171303,
+    Level = 62,
+    Reward = 48068,
+    RewardAddOn = 2
   }
 })

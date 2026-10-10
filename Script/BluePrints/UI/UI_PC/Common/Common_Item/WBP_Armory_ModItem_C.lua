@@ -5,6 +5,7 @@ local M = Class({
 
 function M:OnListItemObjectSet(Content)
   Content.SelfWidget = self
+  self:SyncItemLayerManagementMode()
   self:RemoveAllEvent()
   self:InitData(Content)
   self.bAllUseAsyncLoadWidget = false
@@ -210,15 +211,25 @@ function M:ShowContentWarning(WarningText)
     if not IsValid(self.ConflictWidget) then
       self.ConflictWidget = self:CreateWidgetAsync("ComItemConflict", CoroutineObj)
       
-      self.Node_Widget:AddChild(self.ConflictWidget)
-      local WidgetSlot = UWidgetLayoutLibrary.SlotAsOverlaySlot(self.ConflictWidget)
-      WidgetSlot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
-      WidgetSlot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
+      if self:IsItemLayerManagementActive() then
+        local Config = UIConst.ComItemLayerManagement
+        self:AddWidgetToNode(self.ConflictWidget, nil, Config.Layer.State, Config.Order.Conflict)
+      else
+        self.Node_Widget:AddChild(self.ConflictWidget)
+        local WidgetSlot = UWidgetLayoutLibrary.SlotAsOverlaySlot(self.ConflictWidget)
+        WidgetSlot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+        WidgetSlot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
+      end
     end
     if WarningText then
       self.ConflictWidget:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
       self.ConflictWidget.Text_SoldOut:SetText(WarningText)
-      self:CheckWidgetIsTop(self.ConflictWidget)
+      if self:IsItemLayerManagementActive() then
+        local Config = UIConst.ComItemLayerManagement
+        self:AddWidgetToNode(self.ConflictWidget, nil, Config.Layer.State, Config.Order.Conflict)
+      else
+        self:CheckWidgetIsTop(self.ConflictWidget)
+      end
     elseif IsValid(self.ConflictWidget) then
       self.ConflictWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end
@@ -235,10 +246,16 @@ function M:ShowModStar(Mod)
   else
     if not IsValid(self.ModStarWidget) then
       local Widget = UIManager(self):CreateWidget("/Game/UI/WBP/Common/Item/Widget/WBP_Com_Item_ModStar.WBP_Com_Item_ModStar")
-      local WidgetSlot = self.Node_Widget:AddChild(Widget)
-      WidgetSlot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
-      WidgetSlot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
       self.ModStarWidget = Widget
+      if not self:IsItemLayerManagementActive() then
+        local WidgetSlot = self.Node_Widget:AddChild(Widget)
+        WidgetSlot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+        WidgetSlot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
+      end
+    end
+    if self:IsItemLayerManagementActive() then
+      local Config = UIConst.ComItemLayerManagement
+      self:AddWidgetToNode(self.ModStarWidget, nil, Config.Layer.Base, Config.Order.ModStar)
     end
     self.ModStarWidget:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     self.ModStarWidget.List_ModStar:ClearListItems()
@@ -272,10 +289,16 @@ function M:SetAura(bAura)
   if bAura then
     if not IsValid(self.AruaWidget) then
       local Widget = UIManager(self):CreateWidget("/Game/UI/WBP/Common/Item/Widget/WBP_Com_Item_Aura.WBP_Com_Item_Aura")
-      local WidgetSlot = self.Node_Widget:AddChild(Widget)
-      WidgetSlot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
-      WidgetSlot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
       self.AruaWidget = Widget
+      if not self:IsItemLayerManagementActive() then
+        local WidgetSlot = self.Node_Widget:AddChild(Widget)
+        WidgetSlot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+        WidgetSlot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
+      end
+    end
+    if self:IsItemLayerManagementActive() then
+      local Config = UIConst.ComItemLayerManagement
+      self:AddWidgetToNode(self.AruaWidget, nil, Config.Layer.Base, Config.Order.Aura)
     end
     self.AruaWidget:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   elseif IsValid(self.AruaWidget) then

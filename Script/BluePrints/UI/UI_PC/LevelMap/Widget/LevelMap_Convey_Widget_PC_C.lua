@@ -6,9 +6,11 @@ local M = Class({
 function M:Construct()
   self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(UGameplayStatics.GetPlayerController(self, 0))
   self.GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.OnUpdateUIStyleByInputTypeChange)
-  self.Btn_Go:SetDefaultGamePadImg(UIConst.GamePadImgKey.FaceButtonBottom)
-  self.Btn_CancelGo:SetDefaultGamePadImg(UIConst.GamePadImgKey.FaceButtonTop)
-  self:UpdateButtonGamepadHints(self.GameInputModeSubsystem:GetCurrentInputType())
+  if self.Btn_Go then
+    self.Btn_Go:SetDefaultGamePadImg(UIConst.GamePadImgKey.FaceButtonBottom)
+    self.Btn_CancelGo:SetDefaultGamePadImg(UIConst.GamePadImgKey.FaceButtonTop)
+    self:UpdateButtonGamepadHints(self.GameInputModeSubsystem:GetCurrentInputType())
+  end
 end
 
 function M:Destruct()

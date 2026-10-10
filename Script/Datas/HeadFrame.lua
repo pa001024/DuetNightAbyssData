@@ -414,5 +414,32 @@ return ReadOnly("HeadFrame", {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/HeadFrame/T_Head_Frame44.T_Head_Frame44'",
     Name = "UI_HeadFrame_Name_10050",
     SmallIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head_Frame/T_Head_Frame44.T_Head_Frame44'"
+  },
+  [10051] = {
+    AccessText = "UI_Accessory_Unlock_MonthlyCard",
+    CanPreView = true,
+    Des = "UI_HeadFrame_Des_Common",
+    FrameID = 10051,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/HeadFrame/T_Head_Frame47.T_Head_Frame47'",
+    Name = "UI_HeadFrame_Name_10051",
+    SmallIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head_Frame/T_Head_Frame47.T_Head_Frame47'"
+  },
+  [10052] = {
+    AccessText = "UI_Accessory_Unlock_Event",
+    CanPreView = true,
+    Des = "UI_HeadFrame_Des_Common",
+    FrameID = 10052,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/HeadFrame/T_Head_Frame48.T_Head_Frame48'",
+    Name = "UI_HeadFrame_Name_10052",
+    SmallIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head_Frame/T_Head_Frame48.T_Head_Frame48'"
+  },
+  [10053] = {
+    AccessText = "UI_Accessory_Unlock_Event",
+    CanPreView = true,
+    Des = "UI_HeadFrame_Des_Common",
+    FrameID = 10053,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/HeadFrame/T_Head_Frame49.T_Head_Frame49'",
+    Name = "UI_HeadFrame_Name_10053",
+    SmallIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head_Frame/T_Head_Frame49.T_Head_Frame49'"
   }
 })

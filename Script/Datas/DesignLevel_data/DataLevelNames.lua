@@ -9,13 +9,19 @@ local function make_read_only(t)
 end
 
 return make_read_only({
+  "Ailixian_Abyss_CMZD",
+  "Ailixian_Abyss_MYJSC",
+  "Ailixian_Abyss_SDFX",
   "Ailixian_CharTrial",
   "Ailixian_Chenmian",
   "Ailixian_DreamSailafei",
   "Ailixian_LLKWon",
   "Ailixian_LLKXDY",
   "Ailixian_Miandao",
+  "Ailixian_Miandao_LilikouMJ",
+  "Ailixian_Miandao_MJSC",
   "Ailixian_Miandao_MM",
+  "Ailixian_Miandao_SLF",
   "Ailixian_Miandao_Yyhf",
   "Ailixian_Paotai01_Bat01",
   "Ailixian_Paotai01_Bat02",
@@ -261,6 +267,7 @@ return make_read_only({
   "Prologue_Road_15",
   "Prologue_Village",
   "Prologue_Void",
+  "RegionProfTest",
   "RougePro",
   "Temple_Battle_01",
   "Temple_Battle_02",

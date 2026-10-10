@@ -9,7 +9,6 @@ local WaitItemUniqueTag = {
   DelayTime = 2,
   PlayAudio = 3,
   DialogueSequenceDrive = 4,
-  DialogueSequenceWaitClick = 5,
   DialogueSequencePause = 6
 }
 local M = Class("BluePrints.Story.Talk.Controller.CommonTalkTask")
@@ -210,11 +209,6 @@ function M:SequenceEndPlayDialogue(DialogueId)
   if WaitQuque then
     WaitQuque:CloseWaitQueue()
   end
-end
-
-function M:SequenceTryPauseDialogue()
-  DebugPrint("CinematicTalkTask:SequenceTryPauseDialogue")
-  self.TalkTaskData.SequencePlayer:Pause()
 end
 
 function M:SequenceTryResumeDialogue()

@@ -162,7 +162,7 @@ function M:GetFirstInteractiveFocusButton()
         if self:IsPermissionCellInteractive(targetTitle, permKey) then
           local cb = boxes[i]
           local btn = cb and (cb.GetFocusButton and cb:GetFocusButton() or cb.Btn_Click)
-          if btn then
+          if btn and IsValid(btn) then
             return btn
           end
         end

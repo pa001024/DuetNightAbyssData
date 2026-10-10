@@ -45,6 +45,7 @@ function M:InitCommonView()
   else
     self.Node_Widget:ClearChildren()
     self.WidgetMap = {}
+    self.WidgetLayerMap = {}
   end
   M.Super.InitCommonView(self)
 end

@@ -235,7 +235,7 @@
   {
     "id": 2,
     "name": "Folks",
-    "count": 54,
+    "count": 55,
     "subTypes": [
       {
         "id": 201,
@@ -527,6 +527,11 @@
                 "id": 20101106,
                 "text": "Recognised for her outstanding actions during the Charon Hunt investigation, Rhythm was awarded the title of Laurelled Charon. However, having lost both a loved one and her sense of purpose, she eventually resigned from her post in the Escort.",
                 "unlock": 20101106
+              },
+              {
+                "id": 20101107,
+                "text": "Rhythm travelled to Dismania to help {nickname} search for their missing family. However, the information she uncovered inadvertently led {nickname} into a train hijacking, after which they disappeared. When news of their disappearance reached Rhythm, she had no choice but to return to Icelake.\nWhile going through Blues's belongings at their hideout, Rhythm found an old list of recruits accepted into the 6th Legion. The names on it led her to seek out the families of those who had fallen victim to the Legion's experiments. Along the way, she met people from many different walks of life — and eventually Rae, a young woman who, like Rhythm, had lost someone she loved to the Legion. Rhythm stopped Rae before she could carry out a desperate act of revenge. In Rae, she saw a reflection of her own grief and self-destructive guilt. The encounter made Rhythm realise that continuing to punish herself would change nothing. She chose instead to move forward with her life and find a new purpose.",
+                "unlock": 20101107
               }
             ]
           },
@@ -1150,6 +1155,7 @@
           {
             "id": 201035,
             "title": "\"The High Priestess\" Ada",
+            "img": "T_Encyclopedia_83",
             "related": [
               408024,
               405023
@@ -1227,6 +1233,20 @@
                   11120815
                 ],
                 "unlock": 20103604
+              }
+            ]
+          },
+          {
+            "id": 201037,
+            "title": "Rae",
+            "related": [
+              201011
+            ],
+            "texts": [
+              {
+                "id": 20103701,
+                "text": "Rae Sloan is the younger sister of Darcy Sloan, one of the victims of the 6th Legion's clandestine experiments. Rae possesses a rare magical ability that allows her to glimpse fragments of her sister's memories in dreams. Through those dreams, she uncovered part of the truth surrounding Darcy's death. Consumed by grief and rage, Rae sought revenge against the Legion, setting her sights on Lieutenant Colonel Johnson, who had been responsible for maintaining order at the recruitment site. She began plotting to assassinate him.\nRhythm uncovered the plot by chance and intervened before Rae could carry it out. With Rhythm's help, Rae eventually gave up her plans for revenge and chose instead to move forward with her life, carrying the memories of her sister with her.",
+                "unlock": 20103701
               }
             ]
           }
@@ -4429,6 +4449,7 @@
           {
             "id": 408023,
             "title": "Mount Arcano",
+            "img": "T_Encyclopedia_82",
             "related": [
               408024
             ],
@@ -4454,6 +4475,7 @@
           {
             "id": 408024,
             "title": "Arcano",
+            "img": "T_Encyclopedia_84",
             "related": [
               408023,
               405023

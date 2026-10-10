@@ -324,6 +324,36 @@
     "icon": "T_Icon_Random_TitleFrame"
   },
   {
+    "id": 10055,
+    "name": "SSS급 월석 사냥꾼 Ⅶ",
+    "desc": "칭호 스타일에서 장착 가능",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10056,
+    "name": "SS급 월석 사냥꾼 Ⅶ",
+    "desc": "칭호 스타일에서 장착 가능",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10057,
+    "name": "S급 월석 사냥꾼 Ⅶ",
+    "desc": "칭호 스타일에서 장착 가능",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10058,
+    "name": "A급 월석 사냥꾼 Ⅶ",
+    "desc": "칭호 스타일에서 장착 가능",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10059,
+    "name": "B급 월석 사냥꾼 Ⅶ",
+    "desc": "칭호 스타일에서 장착 가능",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
     "id": 20001,
     "name": "화려한 전당 Ⅶ",
     "desc": "칭호 스타일에서 장착 가능",

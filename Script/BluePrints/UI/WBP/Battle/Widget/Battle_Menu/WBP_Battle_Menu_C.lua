@@ -69,6 +69,9 @@ end
 
 function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   self.bIsGamepad = CurInputDevice == ECommonInputType.Gamepad
+  if self.RefreshBattleWheelShortcutKeys then
+    self:RefreshBattleWheelShortcutKeys()
+  end
 end
 
 function M:RelayoutPrepass(FrameCount)

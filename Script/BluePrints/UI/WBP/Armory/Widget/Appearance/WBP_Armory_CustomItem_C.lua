@@ -74,7 +74,7 @@ function M:OnListItemObjectSet(Params)
       end
     end
   elseif ChildrenNum < ShouldKeepCount then
-    for i = ChildrenNum, ShouldKeepCount do
+    for i = ChildrenNum + 1, ShouldKeepCount do
       self.VB_Custom:AddChild(UIManager:CreateWidget(WidgetClass, false))
     end
   end
@@ -152,7 +152,7 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   if InKeyName == self.GamepadResetKeyName and rawget(self, "bShowResetBtn") then
-    self:ResetValue()
+    self:OnResetBtnClicked()
     return UIUtils.Handled
   end
   return UIUtils.Unhandled

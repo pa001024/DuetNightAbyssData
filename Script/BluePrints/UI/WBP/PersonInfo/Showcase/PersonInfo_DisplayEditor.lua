@@ -98,6 +98,7 @@ function M:CommitPreviewTransaction()
   end
   self.ActivePreviewTransaction = nil
   if not Transaction.Changed or DisplayDraft:IsEquivalent(Transaction.StartDraft, self.Draft) then
+    self:RefreshDirtyState()
     return false
   end
   table.insert(self.UndoStack, {
@@ -110,16 +111,36 @@ function M:CommitPreviewTransaction()
   return true
 end
 
-function M:CancelPreviewTransaction()
+function M:AcceptPreviewTransaction()
   local Transaction = self.ActivePreviewTransaction
   if not Transaction or not Transaction.Active then
     return false
   end
   self.ActivePreviewTransaction = nil
+  self:RefreshDirtyState()
+  return true
+end
+
+function M:CancelPreviewTransaction()
+  local Transaction = self.ActivePreviewTransaction
+  if not Transaction or not Transaction.Active then
+    return false
+  end
+  local Operation = self:_CloneHistoryOperation(Transaction.Operation)
+  local PreviousDraft = self.Draft
+  self.ActivePreviewTransaction = nil
   if not DisplayDraft:IsEquivalent(self.Draft, Transaction.StartDraft) then
     self.Draft = self:_CloneDraft(Transaction.StartDraft)
     self:RefreshDirtyState()
-    self:Render()
+    if Operation and Operation.Type == "CharacterWeaponAction" then
+      self:_ApplyChangedCharacterWeaponSlots(PreviousDraft, self.Draft)
+    elseif Operation and Operation.Type == "PetSlotChange" then
+      self:_ApplyChangedPetSlots(PreviousDraft, self.Draft)
+    elseif Operation and Operation.Type == "ItemChoose" then
+      self:_ApplyChangedItemSlots(PreviousDraft, self.Draft)
+    else
+      self:_ApplyDraftByHistoryOperation(Operation)
+    end
   end
   return true
 end
@@ -174,6 +195,7 @@ function M:Redo()
 end
 
 function M:Render()
+  DebugPrint("PersonInfoDisplayEditor: Render\n" .. tostring(debug.traceback("", 2)))
   if self.Renderer and self.Renderer.LoadDraft then
     self.Renderer:LoadDraft(self.Draft)
   end
@@ -324,39 +346,380 @@ function M:SetCharacterSlotsDraft(CharacterDraft)
   return self:_CommitDraftIfChanged(Draft, {
     Type = "CharacterChooseCommit",
     AffectedSlotIndices = AffectedSlotIndices
-  })
+  }, true)
+end
+
+function M:_BuildPetAffectedSlotIndexMap(SlotIndex, ExtraSlotIndex)
+  local AffectedSlotIndices = {}
+  if type(SlotIndex) == "number" and SlotIndex > 0 then
+    AffectedSlotIndices[SlotIndex] = true
+  end
+  if type(ExtraSlotIndex) == "number" and ExtraSlotIndex > 0 then
+    AffectedSlotIndices[ExtraSlotIndex] = true
+  end
+  return AffectedSlotIndices
 end
 
 function M:SetPetToSlot(SlotIndex, PetData)
+  local PetKey = PetData and PetData.UniqueId or nil
+  local _, OldSlotIndex = DisplayRules:FindPetSlotByPetKey(self.Draft, PetKey)
+  local AffectedSlotIndices = self:_BuildPetAffectedSlotIndexMap(SlotIndex, OldSlotIndex)
   local Draft = self:_CloneDraft(self.Draft)
   DisplayRules:AssignPetToSlot(Draft, SlotIndex, PetData)
-  DisplayRules:NormalizePetSlots(Draft)
-  return self:_CommitDraftIfChanged(Draft)
+  return self:_CommitPetSlotDraftIfChanged(Draft, AffectedSlotIndices)
 end
 
-function M:SetPetTransform(SlotIndex, Transform)
+function M:RemovePetFromSlot(SlotIndex)
+  local Draft = self:_CloneDraft(self.Draft)
+  DisplayRules:RemovePetFromSlot(Draft, SlotIndex)
+  return self:_CommitPetSlotDraftIfChanged(Draft, self:_BuildPetAffectedSlotIndexMap(SlotIndex))
+end
+
+function M:RestorePetSlotsFromDraft(SourceDraft)
+  if not SourceDraft then
+    return false
+  end
+  local Draft = self:_CloneDraft(self.Draft)
+  local SourceClone = DisplayDraft:Clone(SourceDraft)
+  Draft.PetSlots = SourceClone.PetSlots
+  DisplayDraft:EnsurePetSlots(Draft)
+  return self:_CommitPetSlotDraftIfChanged(Draft, self:_BuildChangedPetSlotIndexMap(self.Draft, Draft))
+end
+
+function M:_GetPetSlotIdentity(Slot)
+  if not DisplayDraft:IsPetSlotOccupied(Slot) then
+    return nil
+  end
+  local PetData = Slot.PetData
+  return PetData.UniqueId or PetData.PetId
+end
+
+function M:_BuildChangedPetSlotIndexMap(LeftDraft, RightDraft)
+  local AffectedSlotIndices = {}
+  local PetSlotCount = DisplayConfig:GetPetSlotCount()
+  for SlotIndex = 1, PetSlotCount do
+    local LeftIdentity = self:_GetPetSlotIdentity(DisplayDraft:GetPetSlot(LeftDraft, SlotIndex))
+    local RightIdentity = self:_GetPetSlotIdentity(DisplayDraft:GetPetSlot(RightDraft, SlotIndex))
+    if LeftIdentity ~= RightIdentity then
+      AffectedSlotIndices[SlotIndex] = true
+    end
+  end
+  return AffectedSlotIndices
+end
+
+function M:_CommitPetSlotDraftIfChanged(Draft, AffectedSlotIndices)
+  if DisplayDraft:IsEquivalent(self.Draft, Draft) then
+    return false
+  end
+  local OperationMeta = {
+    Type = "PetSlotChange",
+    AffectedSlotIndices = self:_CloneAffectedSlotIndexMap(AffectedSlotIndices)
+  }
+  if self.ActivePreviewTransaction and self.ActivePreviewTransaction.Active then
+    self.ActivePreviewTransaction.Changed = true
+    self.ActivePreviewTransaction.Operation = self:_CloneHistoryOperation(OperationMeta)
+    self.RedoStack = {}
+  else
+    self:Snapshot(OperationMeta)
+    self.LastHistoryOperation = self:_CloneHistoryOperation(OperationMeta)
+  end
+  self.Draft = Draft
+  self:RefreshDirtyState()
+  self:_ApplyPetSlotIndexMap(AffectedSlotIndices)
+  return true
+end
+
+function M:_ApplyPetSlotIndexMap(AffectedSlotIndices)
+  if not self.Renderer or not self.Renderer.ApplyPetSlot then
+    self:Render()
+    return
+  end
+  local bOccupiedFailed = false
+  for SlotIndex, bAffected in pairs(AffectedSlotIndices or {}) do
+    if true == bAffected and type(SlotIndex) == "number" and SlotIndex > 0 then
+      local bApplied = true == self.Renderer:ApplyPetSlot(SlotIndex, self.Draft)
+      if not bApplied then
+        local Slot = DisplayDraft:GetPetSlot(self.Draft, SlotIndex)
+        if DisplayDraft:IsPetSlotOccupied(Slot) then
+          bOccupiedFailed = true
+        end
+      end
+    end
+  end
+  if bOccupiedFailed then
+    self:Render()
+  end
+end
+
+function M:_ApplyChangedPetSlots(PreviousDraft, NextDraft)
+  self:_ApplyPetSlotIndexMap(self:_BuildChangedPetSlotIndexMap(PreviousDraft, NextDraft))
+end
+
+function M:SetPetTransform(SlotIndex, Transform, TransformRotation)
+  if self.ActivePreviewTransaction and self.ActivePreviewTransaction.Active then
+    return self:_ApplyPetTransformPreview(SlotIndex, Transform, TransformRotation)
+  end
   local Draft = self:_CloneDraft(self.Draft)
   local Slot = DisplayDraft:GetPetSlot(Draft, SlotIndex)
   if Slot then
     Slot.Transform = Transform
+    Slot.TransformRotation = TransformRotation
   end
-  return self:_CommitDraftIfChanged(Draft)
+  return self:_CommitPetTransformDraftIfChanged(Draft, SlotIndex)
+end
+
+function M:_BuildItemAffectedSlotIndexMap(SlotIndex, ExtraSlotIndex)
+  local AffectedItemSlotIndices = {}
+  if type(SlotIndex) == "number" and SlotIndex > 0 then
+    AffectedItemSlotIndices[SlotIndex] = true
+  end
+  if type(ExtraSlotIndex) == "number" and ExtraSlotIndex > 0 then
+    AffectedItemSlotIndices[ExtraSlotIndex] = true
+  end
+  return AffectedItemSlotIndices
+end
+
+function M:SetItemToSlot(SlotIndex, ItemData)
+  local ItemKey = ItemData and ItemData.ItemId or nil
+  local _, OldSlotIndex = DisplayRules:FindItemSlotByItemKey(self.Draft, ItemKey)
+  local Draft = self:_CloneDraft(self.Draft)
+  if not DisplayRules:AssignItemToSlot(Draft, SlotIndex, ItemData) then
+    return false
+  end
+  return self:_CommitItemSlotDraftIfChanged(Draft, self:_BuildItemAffectedSlotIndexMap(SlotIndex, OldSlotIndex))
+end
+
+function M:RemoveItemFromSlot(SlotIndex)
+  local Draft = self:_CloneDraft(self.Draft)
+  if not DisplayRules:RemoveItemFromSlot(Draft, SlotIndex) then
+    return false
+  end
+  return self:_CommitItemSlotDraftIfChanged(Draft, self:_BuildItemAffectedSlotIndexMap(SlotIndex))
+end
+
+function M:RestoreItemSlotsFromDraft(SourceDraft)
+  if not SourceDraft then
+    return false
+  end
+  local Draft = self:_CloneDraft(self.Draft)
+  local SourceClone = DisplayDraft:Clone(SourceDraft)
+  Draft.ItemSlots = SourceClone.ItemSlots
+  DisplayDraft:EnsureItemSlots(Draft)
+  return self:_CommitItemSlotDraftIfChanged(Draft, self:_BuildChangedItemSlotIndexMap(self.Draft, Draft))
+end
+
+function M:_GetItemSlotIdentity(Slot)
+  if not DisplayDraft:IsItemSlotOccupied(Slot) then
+    return nil
+  end
+  local ItemData = Slot.ItemData
+  return ItemData.ItemId or ItemData.Id
+end
+
+function M:_BuildChangedItemSlotIndexMap(LeftDraft, RightDraft)
+  local AffectedItemSlotIndices = {}
+  local ItemSlotCount = DisplayConfig:GetItemSlotCount()
+  for SlotIndex = 1, ItemSlotCount do
+    local LeftIdentity = self:_GetItemSlotIdentity(DisplayDraft:GetItemSlot(LeftDraft, SlotIndex))
+    local RightIdentity = self:_GetItemSlotIdentity(DisplayDraft:GetItemSlot(RightDraft, SlotIndex))
+    if LeftIdentity ~= RightIdentity then
+      AffectedItemSlotIndices[SlotIndex] = true
+    end
+  end
+  return AffectedItemSlotIndices
+end
+
+function M:_CommitItemSlotDraftIfChanged(Draft, AffectedItemSlotIndices)
+  if DisplayDraft:IsEquivalent(self.Draft, Draft) then
+    return false
+  end
+  local OperationMeta = {
+    Type = "ItemChoose",
+    AffectedItemSlotIndices = self:_CloneAffectedSlotIndexMap(AffectedItemSlotIndices)
+  }
+  if self.ActivePreviewTransaction and self.ActivePreviewTransaction.Active then
+    self.ActivePreviewTransaction.Changed = true
+    self.ActivePreviewTransaction.Operation = self:_CloneHistoryOperation(OperationMeta)
+    self.RedoStack = {}
+  else
+    self:Snapshot(OperationMeta)
+    self.LastHistoryOperation = self:_CloneHistoryOperation(OperationMeta)
+  end
+  self.Draft = Draft
+  self:RefreshDirtyState()
+  self:_ApplyItemSlotIndexMap(AffectedItemSlotIndices)
+  return true
+end
+
+function M:_ApplyItemSlotIndexMap(AffectedItemSlotIndices)
+  if not self.Renderer or not self.Renderer.ApplyItemSlot then
+    self:Render()
+    return
+  end
+  local bOccupiedFailed = false
+  for SlotIndex, bAffected in pairs(AffectedItemSlotIndices or {}) do
+    if true == bAffected and type(SlotIndex) == "number" and SlotIndex > 0 then
+      local bApplied = true == self.Renderer:ApplyItemSlot(SlotIndex, self.Draft)
+      if not bApplied then
+        local Slot = DisplayDraft:GetItemSlot(self.Draft, SlotIndex)
+        if DisplayDraft:IsItemSlotOccupied(Slot) then
+          bOccupiedFailed = true
+        end
+      end
+    end
+  end
+  if bOccupiedFailed then
+    self:Render()
+  end
+end
+
+function M:_ApplyChangedItemSlots(PreviousDraft, NextDraft)
+  self:_ApplyItemSlotIndexMap(self:_BuildChangedItemSlotIndexMap(PreviousDraft, NextDraft))
+end
+
+function M:SetItemTransform(SlotIndex, Transform, TransformRotation)
+  local Draft = self:_CloneDraft(self.Draft)
+  local Slot = DisplayDraft:GetItemSlot(Draft, SlotIndex)
+  if not DisplayDraft:IsItemSlotOccupied(Slot) then
+    return false
+  end
+  Slot.Transform = Transform
+  Slot.TransformRotation = TransformRotation
+  return self:_CommitItemTransformDraftIfChanged(Draft, SlotIndex)
+end
+
+function M:_ApplyPetTransformPreview(SlotIndex, Transform, TransformRotation)
+  local Slot = DisplayDraft:GetPetSlot(self.Draft, SlotIndex)
+  if not Slot then
+    return false
+  end
+  Slot.Transform = Transform
+  Slot.TransformRotation = TransformRotation
+  local OperationMeta = {
+    Type = "PetTransform",
+    SlotIndex = SlotIndex,
+    AffectedSlotIndices = {
+      [SlotIndex] = true
+    }
+  }
+  self.ActivePreviewTransaction.Changed = true
+  self.ActivePreviewTransaction.Operation = self:_CloneHistoryOperation(OperationMeta)
+  self.RedoStack = {}
+  self.IsDirty = true
+  if self.Renderer and self.Renderer.ApplyPetTransform then
+    local bApplied = self.Renderer:ApplyPetTransform(SlotIndex, Transform, self.Draft)
+    if true == bApplied then
+      return true
+    end
+  end
+  self:Render()
+  return true
 end
 
 function M:SetSceneData(SceneData)
   local Draft = self:_CloneDraft(self.Draft)
+  local PreviousLightParam = self.Draft and self.Draft.Scene and self.Draft.Scene.LightParam or nil
   Draft.Scene = self:_CloneDraft(SceneData or {})
+  if Draft.Scene.LightParam == nil and nil ~= PreviousLightParam then
+    Draft.Scene.LightParam = self:_CloneDraft(PreviousLightParam)
+  end
   DisplayConfig:ApplySceneDefaults(Draft, true)
-  return self:_CommitDraftIfChanged(Draft, {
-    Type = "SceneSwitch",
-    SceneId = Draft.Scene and Draft.Scene.SceneId or nil
-  })
+  return self:_CommitSceneSwitchDraftIfChanged(Draft)
 end
 
-function M:SetOtherData(OtherData)
+function M:_CommitSceneSwitchDraftIfChanged(Draft)
+  if DisplayDraft:IsEquivalent(self.Draft, Draft) then
+    return false
+  end
+  local OperationMeta = {
+    Type = "SceneSwitch",
+    SceneId = Draft.Scene and Draft.Scene.SceneId or nil
+  }
+  if self.ActivePreviewTransaction and self.ActivePreviewTransaction.Active then
+    self.ActivePreviewTransaction.Changed = true
+    self.ActivePreviewTransaction.Operation = self:_CloneHistoryOperation(OperationMeta)
+    self.RedoStack = {}
+  else
+    self:Snapshot(OperationMeta)
+    self.LastHistoryOperation = self:_CloneHistoryOperation(OperationMeta)
+  end
+  self.Draft = Draft
+  self:RefreshDirtyState()
+  if self.Renderer and self.Renderer.ApplySceneSwitch and true == self.Renderer:ApplySceneSwitch(self.Draft) then
+    return true
+  end
+  self:Render()
+  return true
+end
+
+function M:UpdateSceneLightData(LightEditData)
+  local Draft = self:_CloneDraft(self.Draft)
+  Draft.Scene = Draft.Scene or {}
+  if not LightEditData or LightEditData.HasUserLight == false then
+    Draft.Scene.LightParam = DisplayPersistence:BuildSceneInitialLightParam(Draft.Scene.SceneId)
+  else
+    Draft.Scene.LightParam = {
+      Intensity = LightEditData.LightIntensity or LightEditData.Intensity or 0,
+      Direction = {
+        LightEditData.Roll or 0,
+        LightEditData.Pitch or 0,
+        LightEditData.Yaw or 0
+      }
+    }
+  end
+  if DisplayDraft:IsEquivalent(self.Draft, Draft) then
+    return false
+  end
+  local OperationMeta = {Type = "SceneLight"}
+  if self.ActivePreviewTransaction and self.ActivePreviewTransaction.Active then
+    self.ActivePreviewTransaction.Changed = true
+    self.ActivePreviewTransaction.Operation = self:_CloneHistoryOperation(OperationMeta)
+    self.RedoStack = {}
+  else
+    self:Snapshot(OperationMeta)
+    self.LastHistoryOperation = self:_CloneHistoryOperation(OperationMeta)
+  end
+  self.Draft = Draft
+  self:RefreshDirtyState()
+  return true
+end
+
+function M:SetOtherData(OtherData, OperationMeta)
+  if self.ActivePreviewTransaction and self.ActivePreviewTransaction.Active then
+    return self:_ApplyOtherPreview(OtherData, OperationMeta)
+  end
   local Draft = self:_CloneDraft(self.Draft)
   Draft.Other = self:_CloneDraft(OtherData or {})
-  return self:_CommitDraftIfChanged(Draft)
+  return self:_CommitOtherDraftIfChanged(Draft, OperationMeta)
+end
+
+function M:_ApplyOtherPreview(OtherData, OperationMeta)
+  if not self.ActivePreviewTransaction or not self.ActivePreviewTransaction.Active then
+    return false
+  end
+  self.Draft.Other = self:_CloneDraft(OtherData or {})
+  self.ActivePreviewTransaction.Changed = true
+  self.ActivePreviewTransaction.Operation = self:_CloneHistoryOperation(OperationMeta)
+  self.RedoStack = {}
+  self.IsDirty = true
+  return true
+end
+
+function M:_CommitOtherDraftIfChanged(Draft, OperationMeta)
+  if DisplayDraft:IsEquivalent(self.Draft, Draft) then
+    return false
+  end
+  if self.ActivePreviewTransaction and self.ActivePreviewTransaction.Active then
+    self.ActivePreviewTransaction.Changed = true
+    self.ActivePreviewTransaction.Operation = self:_CloneHistoryOperation(OperationMeta)
+    self.RedoStack = {}
+  else
+    self:Snapshot(OperationMeta)
+    self.LastHistoryOperation = self:_CloneHistoryOperation(OperationMeta)
+  end
+  self.Draft = Draft
+  self:RefreshDirtyState()
+  return true
 end
 
 function M:SetCameraData(CameraData)
@@ -545,8 +908,12 @@ function M:MoveCameraLocalRotation(PitchDelta, YawDelta, RollDelta, LimitConfig)
   })
 end
 
+function M:PrepareDraftForSave()
+  return self:_CloneDraft(self.Draft)
+end
+
 function M:ExportSaveData()
-  return DisplayPersistence:ExportSaveData(self.Draft)
+  return DisplayPersistence:ExportSaveData(self:PrepareDraftForSave())
 end
 
 function M:_CloneDraft(Draft)
@@ -562,7 +929,7 @@ function M:_ResetBaselineState()
   self.LastHistoryOperation = nil
 end
 
-function M:_CommitDraftIfChanged(Draft, OperationMeta)
+function M:_CommitDraftIfChanged(Draft, OperationMeta, bSkipRender)
   if DisplayDraft:IsEquivalent(self.Draft, Draft) then
     return false
   end
@@ -576,7 +943,9 @@ function M:_CommitDraftIfChanged(Draft, OperationMeta)
   end
   self.Draft = Draft
   self:RefreshDirtyState()
-  self:Render()
+  if true ~= bSkipRender then
+    self:Render()
+  end
   return true
 end
 
@@ -630,6 +999,67 @@ function M:_CommitCharacterTransformDraftIfChanged(Draft, SlotIndex)
     if true == bApplied then
       return true
     end
+  end
+  self:Render()
+  return true
+end
+
+function M:_CommitPetTransformDraftIfChanged(Draft, SlotIndex)
+  if DisplayDraft:IsEquivalent(self.Draft, Draft) then
+    return false
+  end
+  local OperationMeta = {
+    Type = "PetTransform",
+    SlotIndex = SlotIndex,
+    AffectedSlotIndices = {
+      [SlotIndex] = true
+    }
+  }
+  if self.ActivePreviewTransaction and self.ActivePreviewTransaction.Active then
+    self.ActivePreviewTransaction.Changed = true
+    self.ActivePreviewTransaction.Operation = self:_CloneHistoryOperation(OperationMeta)
+    self.RedoStack = {}
+  else
+    self:Snapshot(OperationMeta)
+    self.LastHistoryOperation = self:_CloneHistoryOperation(OperationMeta)
+  end
+  self.Draft = Draft
+  self:RefreshDirtyState()
+  local Slot = DisplayDraft:GetPetSlot(self.Draft, SlotIndex)
+  local Transform = Slot and Slot.Transform or nil
+  if self.Renderer and self.Renderer.ApplyPetTransform then
+    local bApplied = self.Renderer:ApplyPetTransform(SlotIndex, Transform, self.Draft)
+    if true == bApplied then
+      return true
+    end
+  end
+  self:Render()
+  return true
+end
+
+function M:_CommitItemTransformDraftIfChanged(Draft, SlotIndex)
+  if DisplayDraft:IsEquivalent(self.Draft, Draft) then
+    return false
+  end
+  local OperationMeta = {
+    Type = "ItemTransform",
+    AffectedItemSlotIndices = {
+      [SlotIndex] = true
+    }
+  }
+  if self.ActivePreviewTransaction and self.ActivePreviewTransaction.Active then
+    self.ActivePreviewTransaction.Changed = true
+    self.ActivePreviewTransaction.Operation = self:_CloneHistoryOperation(OperationMeta)
+    self.RedoStack = {}
+  else
+    self:Snapshot(OperationMeta)
+    self.LastHistoryOperation = self:_CloneHistoryOperation(OperationMeta)
+  end
+  self.Draft = Draft
+  self:RefreshDirtyState()
+  local Slot = DisplayDraft:GetItemSlot(self.Draft, SlotIndex)
+  if self.Renderer and self.Renderer.ApplyItemTransform and self.Renderer:ApplyItemTransform(SlotIndex, Slot and Slot.Transform or nil, self.Draft) then
+    return true
   end
   self:Render()
   return true
@@ -721,11 +1151,33 @@ function M:_ApplyDraftByHistoryOperation(Operation)
     if self:_ApplyCharacterTransformHistory(Operation) then
       return
     end
+  elseif "PetTransform" == OperationType then
+    if self:_ApplyPetTransformHistory(Operation) then
+      return
+    end
   elseif "CharacterWeaponAction" == OperationType then
     if self:_ApplyCharacterWeaponActionHistory(Operation) then
       return
     end
-  elseif "CameraAdjust" == OperationType and self:_ApplyCameraAdjustHistory() then
+  elseif "CameraAdjust" == OperationType then
+    if self:_ApplyCameraAdjustHistory() then
+      return
+    end
+  elseif "SceneLight" == OperationType then
+    if self.Renderer and self.Renderer.ApplyDraftSceneLight then
+      self.Renderer:ApplyDraftSceneLight(self.Draft)
+      return
+    end
+  elseif "SceneSwitch" == OperationType then
+    if self.Renderer and self.Renderer.ApplySceneSwitch and self.Renderer:ApplySceneSwitch(self.Draft) == true then
+      return
+    end
+  elseif "FilterSwitch" == OperationType or "FilterIntensity" == OperationType then
+    if self.Renderer and self.Renderer.ApplyDraftFilter then
+      self.Renderer:ApplyDraftFilter(self.Draft)
+    end
+    return
+  elseif "StickerSwitch" == OperationType or "StickerRemove" == OperationType or "StickerTransform" == OperationType then
     return
   end
   self:Render()
@@ -746,6 +1198,65 @@ function M:_ApplyCharacterTransformHistory(Operation)
     end
   end
   return bAppliedAny
+end
+
+function M:_ApplyPetTransformHistory(Operation)
+  if not self.Renderer or not self.Renderer.ApplyPetTransform then
+    return false
+  end
+  local AffectedSlotIndices = Operation and Operation.AffectedSlotIndices or nil
+  local bAppliedAny = false
+  for SlotIndex, bAffected in pairs(AffectedSlotIndices or {}) do
+    if true == bAffected and type(SlotIndex) == "number" and SlotIndex > 0 then
+      local Slot = DisplayDraft:GetPetSlot(self.Draft, SlotIndex)
+      local Transform = Slot and Slot.Transform or nil
+      local bApplied = self.Renderer:ApplyPetTransform(SlotIndex, Transform, self.Draft)
+      bAppliedAny = bAppliedAny or true == bApplied
+    end
+  end
+  return bAppliedAny
+end
+
+function M:_GetCharacterWeaponActionIdentity(Slot)
+  if not Slot or not Slot.CharData then
+    return nil
+  end
+  local WeaponData = Slot.WeaponData
+  local Action = Slot.Action
+  return {
+    WeaponId = WeaponData and WeaponData.WeaponId or nil,
+    Mode = Action and Action.Mode or nil,
+    PoseId = Action and Action.PoseId or nil,
+    PoseTag = Action and Action.PoseTag or nil,
+    MontagePath = Action and Action.MontagePath or nil,
+    Document = Action and Action.Document or nil,
+    PoseName = Action and Action.PoseName or nil,
+    ReleaseWheel = Action and Action.ReleaseWheel or nil
+  }
+end
+
+function M:_IsSameCharacterWeaponActionIdentity(Left, Right)
+  if nil == Left and nil == Right then
+    return true
+  end
+  if type(Left) ~= "table" or type(Right) ~= "table" then
+    return false
+  end
+  return Left.WeaponId == Right.WeaponId and Left.Mode == Right.Mode and Left.PoseId == Right.PoseId and Left.PoseTag == Right.PoseTag and Left.MontagePath == Right.MontagePath and Left.Document == Right.Document and Left.PoseName == Right.PoseName and Left.ReleaseWheel == Right.ReleaseWheel
+end
+
+function M:_ApplyChangedCharacterWeaponSlots(PreviousDraft, NextDraft)
+  if not self.Renderer or not self.Renderer.ApplyCharacterWeaponAndAction then
+    return
+  end
+  local SlotCount = DisplayConfig:GetCharacterSlotCount()
+  for SlotIndex = 1, SlotCount do
+    local LeftIdentity = self:_GetCharacterWeaponActionIdentity(DisplayDraft:GetCharacterSlot(PreviousDraft, SlotIndex))
+    local RightIdentity = self:_GetCharacterWeaponActionIdentity(DisplayDraft:GetCharacterSlot(NextDraft, SlotIndex))
+    if not self:_IsSameCharacterWeaponActionIdentity(LeftIdentity, RightIdentity) then
+      self.Renderer:ApplyCharacterWeaponAndAction(SlotIndex, self.Draft)
+    end
+  end
 end
 
 function M:_ApplyCharacterWeaponActionHistory(Operation)

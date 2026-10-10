@@ -1409,6 +1409,7 @@ return ReadOnly("CharTemplate", {
   [310401] = {
     CharId = 3104,
     CharLevel = 70,
+    Grade = 2,
     ModId = T.RT_52,
     ModLevel = T.RT_1,
     RuleId = 310401,
@@ -1630,6 +1631,13 @@ return ReadOnly("CharTemplate", {
     ModId = T.RT_61,
     ModLevel = T.RT_40,
     RuleId = 410201,
+    SkillLevel = 8,
+    SkillTreeUnlock = T.RT_19
+  },
+  [410301] = {
+    CharId = 4103,
+    CharLevel = 70,
+    RuleId = 410301,
     SkillLevel = 8,
     SkillTreeUnlock = T.RT_19
   },
@@ -2499,6 +2507,15 @@ return ReadOnly("CharTemplate", {
     ModId = T.RT_83,
     ModLevel = T.RT_1,
     RuleId = 704102,
+    SkillLevel = 8,
+    SkillTreeUnlock = T.RT_19
+  },
+  [704103] = {
+    CharId = 4103,
+    CharLevel = 70,
+    ModId = T.RT_83,
+    ModLevel = T.RT_1,
+    RuleId = 704103,
     SkillLevel = 8,
     SkillTreeUnlock = T.RT_19
   },
@@ -4131,6 +4148,16 @@ return ReadOnly("CharTemplate", {
     ModId = T.RT_83,
     ModLevel = T.RT_1,
     RuleId = 70410201,
+    SkillLevel = 8,
+    SkillTreeUnlock = T.RT_19
+  },
+  [70410301] = {
+    CharCostumeId = 410301,
+    CharId = 4103,
+    CharLevel = 70,
+    ModId = T.RT_83,
+    ModLevel = T.RT_1,
+    RuleId = 70410301,
     SkillLevel = 8,
     SkillTreeUnlock = T.RT_19
   },

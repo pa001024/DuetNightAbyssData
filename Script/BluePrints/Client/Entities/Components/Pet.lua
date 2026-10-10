@@ -303,4 +303,13 @@ function Component:SetShowPet(InCallback, IsShow)
   self:CallServer("SetShowPet", Callback, IsShow)
 end
 
+function Component:DecomposePets(PetUniqueIds, SecondaryPassword, Callback)
+  self:CallServer("DecomposePets", function(ErrCode, ...)
+    self.logger.info("DecomposePets", ErrorCode:Name(ErrCode))
+    if Callback then
+      Callback(ErrCode, ...)
+    end
+  end, PetUniqueIds, SecondaryPassword)
+end
+
 return Component

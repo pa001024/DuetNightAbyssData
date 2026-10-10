@@ -92,6 +92,16 @@ T.RT_37 = {
   [3] = T.RT_35,
   [4] = T.RT_36
 }
+T.RT_38 = {852000111}
+T.RT_39 = {8520501}
+T.RT_40 = {8520502}
+T.RT_41 = {8520503}
+T.RT_42 = {
+  [1] = T.RT_39,
+  [2] = T.RT_40,
+  [3] = T.RT_40,
+  [4] = T.RT_41
+}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -487,6 +497,60 @@ return ReadOnly("HardBossDg", {
     DifficultyId = 1066,
     DungeonId = 50706,
     HardBossId = 7,
+    PreparingAirWallStaticId = 1969948
+  },
+  [50801] = {
+    AirWallStaticId = 852000112,
+    BossStaticId = T.RT_38,
+    BossUnitId = T.RT_42,
+    DifficultyId = 1071,
+    DungeonId = 50801,
+    HardBossId = 8,
+    PreparingAirWallStaticId = 1969948
+  },
+  [50802] = {
+    AirWallStaticId = 852000112,
+    BossStaticId = T.RT_38,
+    BossUnitId = T.RT_42,
+    DifficultyId = 1072,
+    DungeonId = 50802,
+    HardBossId = 8,
+    PreparingAirWallStaticId = 1969948
+  },
+  [50803] = {
+    AirWallStaticId = 852000112,
+    BossStaticId = T.RT_38,
+    BossUnitId = T.RT_42,
+    DifficultyId = 1073,
+    DungeonId = 50803,
+    HardBossId = 8,
+    PreparingAirWallStaticId = 1969948
+  },
+  [50804] = {
+    AirWallStaticId = 852000112,
+    BossStaticId = T.RT_38,
+    BossUnitId = T.RT_42,
+    DifficultyId = 1074,
+    DungeonId = 50804,
+    HardBossId = 8,
+    PreparingAirWallStaticId = 1969948
+  },
+  [50805] = {
+    AirWallStaticId = 852000112,
+    BossStaticId = T.RT_38,
+    BossUnitId = T.RT_42,
+    DifficultyId = 1075,
+    DungeonId = 50805,
+    HardBossId = 8,
+    PreparingAirWallStaticId = 1969948
+  },
+  [50806] = {
+    AirWallStaticId = 852000112,
+    BossStaticId = T.RT_38,
+    BossUnitId = T.RT_42,
+    DifficultyId = 1076,
+    DungeonId = 50806,
+    HardBossId = 8,
     PreparingAirWallStaticId = 1969948
   }
 })

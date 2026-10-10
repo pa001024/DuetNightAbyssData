@@ -46,9 +46,10 @@ end
 function WBP_Rouge_ArchiveMain_C:GetAllRewards(ReceiveAllParm)
   local Avatar = GWorld:GetAvatar()
   if Avatar then
+    local ManualType = ReceiveAllParm.SelfWidget.Type
+    
     local function CallBack(Ret, Reward)
       DebugPrint("@@@RougeArchive GetAllRewards CallBack")
-      
       local HaveReWardToGet = false
       for i = 0, ReceiveAllParm.SelfWidget.List_Item:GetNumItems() - 1 do
         local Item = ReceiveAllParm.SelfWidget.List_Item:GetItemAt(i)
@@ -62,7 +63,7 @@ function WBP_Rouge_ArchiveMain_C:GetAllRewards(ReceiveAllParm)
         Item.ConfigData.CanReceive = CanReceive
         Item.ConfigData.RewardsGot = IsGot
         if Item.SelfWidget then
-          Item.SelfWidget:RefreshBtn(IsGot)
+          Item.SelfWidget:RefreshBtn(IsGot, CanReceive)
         end
       end
       UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, Reward, false, function()
@@ -70,10 +71,10 @@ function WBP_Rouge_ArchiveMain_C:GetAllRewards(ReceiveAllParm)
       end, ReceiveAllParm.SelfWidget)
       ReceiveAllParm.SelfWidget:RefreshButton(HaveReWardToGet)
       DebugPrint("@@@RougeArchive GetAllRewards HaveReWardToGet", HaveReWardToGet)
-      ReceiveAllParm.SelfWidget:RefreshReddotInfo()
+      ReceiveAllParm.SelfWidget:RefreshReddotInfo(ManualType)
     end
     
-    Avatar:GetRougeLikeManualReward(CallBack, ReceiveAllParm.SelfWidget.Type, -1)
+    Avatar:GetRougeLikeManualReward(CallBack, ManualType, -1)
   end
 end
 
@@ -97,7 +98,7 @@ function WBP_Rouge_ArchiveMain_C:GetReward(Content)
           Item.ConfigData.CanReceive = CanReceive
           Item.ConfigData.RewardsGot = IsGot
           if Item.SelfWidget then
-            Item.SelfWidget:RefreshBtn(IsGot)
+            Item.SelfWidget:RefreshBtn(IsGot, CanReceive)
           end
         end
       end

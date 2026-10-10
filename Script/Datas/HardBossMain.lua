@@ -284,5 +284,35 @@ return ReadOnly("HardBossMain", {
     TeleportId = 9006,
     TitleBp = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/HardBoss/PlayHardBossTitle/WBP_Play_HardBoss_Title_Lieche.WBP_Play_HardBoss_Title_Lieche'",
     UnlockCondition = 2067
+  },
+  [8] = {
+    AirWallStaticId = 852000112,
+    BossIcon = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Aida.T_Permanent_HardBoss_VideoImg_Aida",
+    CameraParam = T.RT_6,
+    DifficultyId = {
+      1071,
+      1072,
+      1073,
+      1074,
+      1075,
+      1076
+    },
+    DisplayPriority = 8,
+    GameModePath = "/Game/AssetDesign/GameMode/HardBoss/BP_EMGameMode_HardBoss07_BossAida.BP_EMGameMode_HardBoss07_BossAida",
+    GuidanceTitle = 100001,
+    HardBossDes = "UI_HardBoss_Des_8",
+    HardBossId = 8,
+    HardBossName = "UI_HardBoss_Name_8",
+    MainIcon = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/HardBoss/PlayHardBossImage/WBP_Play_HardBoss_Image_Aida.WBP_Play_HardBoss_Image_Aida'",
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_Aida_S.T_Permanent_HardBoss_Aida_S",
+    MonsterId = {8520501},
+    MonsterStaticId = {852000111},
+    OpenTitleWidgetName = "HardBossOpenTitle_Aida",
+    PosDisplayName = "BP_HardBoss_PlayerStart",
+    SettlementOffset = T.RT_11,
+    StorylinePath = "HardBoss/Aida",
+    TeleportId = 9007,
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/HardBoss/PlayHardBossTitle/WBP_Play_HardBoss_Title_Aida.WBP_Play_HardBoss_Title_Aida'",
+    UnlockCondition = 2077
   }
 })

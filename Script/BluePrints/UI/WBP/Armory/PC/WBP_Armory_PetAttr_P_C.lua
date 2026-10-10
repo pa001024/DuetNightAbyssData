@@ -43,9 +43,8 @@ function M:UpdateButtonStyle(CurPet, Pet)
 end
 
 function M:Destruct()
-  if self.Btn_Invisible_Area then
-    self.Btn_Invisible_Area.OnClicked:Remove(self, self.BtnInvisibleArea)
-  end
+  M.Super.Destruct(self)
+  self:RemoveInputMethodChangedListen()
 end
 
 function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
@@ -63,21 +62,7 @@ function M:UpdateGamepadKeyStyle()
       self.Btn_Replace:SetGamePadVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     end
   end
-  if self.bFromOptRewardPreview then
-    self.Key_Invisible:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  elseif self.IsGamepadInput then
-    self.Key_Invisible:CreateCommonKey({
-      KeyInfoList = {
-        {
-          Type = "Img",
-          ImgShortPath = UIConst.GamePadImgKey.RightThumb
-        }
-      }
-    })
-    self.Key_Invisible:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-  else
-    self.Key_Invisible:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  end
+  self.Key_Invisible:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
 function M:OnFocusReceived(MyGeometry, InFocusEvent)
@@ -98,6 +83,10 @@ function M:OnInGear()
 end
 
 function M:OnParentKeyDown(MyGeometry, InKeyEvent)
+  local Reply, IsHandled = M.Super.OnParentKeyDown(self, MyGeometry, InKeyEvent)
+  if IsHandled then
+    return Reply, true
+  end
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   if InKeyName == UIConst.GamePadKey.FaceButtonLeft then
@@ -110,11 +99,6 @@ function M:OnParentKeyDown(MyGeometry, InKeyEvent)
     end
     return UIUtils.Handled, true
   elseif InKeyName == UIConst.GamePadKey.FaceButtonTop then
-  elseif InKeyName == UIConst.GamePadKey.RightThumb then
-    if self.bFromOptRewardPreview then
-      return UIUtils.Handled, true
-    end
-    self:BtnInvisibleArea()
   end
 end
 

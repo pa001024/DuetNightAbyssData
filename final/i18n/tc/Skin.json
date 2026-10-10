@@ -562,8 +562,8 @@
   },
   {
     "id": 4103,
-    "name": "UI_Skin_Name_4103",
-    "desc": "UI_Skin_Des_4103",
+    "name": "黎瑟·浴火的衣飾",
+    "desc": "她披著一身幹練的紅色衣裝，如暖陽、如火焰、如燈火般閃耀在寒冷的大地上。",
     "icon": "T_Head_SpLise",
     "rarity": 5,
     "charId": 4103,
@@ -842,6 +842,15 @@
     "rarity": 5,
     "charId": 120101,
     "release": "1.4"
+  },
+  {
+    "id": 150101,
+    "name": "糖霜滿屋·莉茲貝爾",
+    "desc": "坩堝、魔藥、掃把……還有一隻黑貓？！這些全都不需要啦，我們要的只有糖果、糖果！",
+    "icon": "T_Head_Baonu01",
+    "rarity": 5,
+    "charId": 1501,
+    "release": "1.7"
   },
   {
     "id": 150201,
@@ -1200,9 +1209,9 @@
   },
   {
     "id": 410301,
-    "name": "UI_Skin_Name_410301",
-    "desc": "UI_Skin_Des_410301",
-    "icon": "T_Head_Lise01",
+    "name": "結絲夜行",
+    "desc": "燈火將黑夜中的城市織成閃爍的網，而她是最優秀的獵手。",
+    "icon": "T_Head_SPLise01",
     "rarity": 5,
     "charId": 4103,
     "tag": "SpLise01",
@@ -1211,14 +1220,14 @@
       "Hair": [
         {
           "id": 410392,
-          "name": "UI_Skin_Name_410301",
+          "name": "結絲夜行",
           "num": 1
         }
       ],
       "HeadSculpture": [
         {
-          "id": 10016,
-          "name": "逐燈者的肖像",
+          "id": 30191,
+          "name": "逐燈者的肖像·夜行",
           "num": 1
         }
       ],
@@ -1229,7 +1238,21 @@
           "num": 40
         }
       ]
-    }
+    },
+    "upgrade": [
+      {
+        "step": 2,
+        "amount": 54,
+        "currencyId": 1010,
+        "currency": "流光織針"
+      },
+      {
+        "step": 3,
+        "amount": 72,
+        "currencyId": 1010,
+        "currency": "流光織針"
+      }
+    ]
   },
   {
     "id": 510101,
@@ -1256,6 +1279,15 @@
         }
       ]
     }
+  },
+  {
+    "id": 510102,
+    "name": "糖霜滿屋·松露與榛子",
+    "desc": "坩堝、魔藥、掃把……還有一隻黑貓？！這些全都不需要啦，我們要的只有糖果、糖果！",
+    "icon": "T_Head_Songlu02",
+    "rarity": 5,
+    "charId": 5101,
+    "release": "1.7"
   },
   {
     "id": 530101,
@@ -1306,7 +1338,16 @@
     "icon": "T_Head_Saiqi01",
     "rarity": 5,
     "charId": 5402,
-    "release": "2.0"
+    "release": "2.0",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 540292,
+          "name": "",
+          "num": 1
+        }
+      ]
+    }
   },
   {
     "id": 11010010,

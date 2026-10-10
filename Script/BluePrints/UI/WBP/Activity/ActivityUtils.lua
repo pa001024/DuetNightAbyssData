@@ -48,15 +48,27 @@ function ActivityUtils.CheckEventIsExpired(ActivityId)
   return NowTime > EndTime:GetTime()
 end
 
-function ActivityUtils.CheckEventIsInActiveTime(EventID, EventMainExcel)
-  local NowTime = TimeUtils.NowTime()
+function ActivityUtils.GetWuyoushengEventIds()
+  local EventIds, Seen = {}, {}
+  for _, Conf in pairs(DataMgr.WuyoushengEventLevel or {}) do
+    if Conf.EventId and not Seen[Conf.EventId] then
+      Seen[Conf.EventId] = true
+      table.insert(EventIds, Conf.EventId)
+    end
+  end
+  table.sort(EventIds)
+  return EventIds
+end
+
+function ActivityUtils.CheckEventIsInActiveTime(EventID, EventMainExcel, NowTime, Avatar)
+  NowTime = NowTime or TimeUtils.NowTime()
   if nil == EventMainExcel then
     EventMainExcel = DataMgr.EventMain[EventID]
   end
   if not EventMainExcel then
     return false
   end
-  local Avatar = GWorld:GetAvatar()
+  Avatar = Avatar or GWorld:GetAvatar()
   if not Avatar then
     return false
   end
@@ -86,7 +98,22 @@ function ActivityUtils.CheckEventIsInActiveTime(EventID, EventMainExcel)
   return true
 end
 
+ActivityUtils.CheckEventIsOpenCache = {}
+ActivityUtils.CheckEventIsOpenCacheValidSeconds = 1
+
 function ActivityUtils.CheckEventIsOpen(EventID, EventMainExcel, IsUseRewardTime, UnlockRuleName)
+  local CacheKey = EventID .. "_" .. (IsUseRewardTime and 1 or 0)
+  local NowTime = TimeUtils.NowTime()
+  local Cached = ActivityUtils.CheckEventIsOpenCache[CacheKey]
+  if Cached and NowTime - Cached.Time < ActivityUtils.CheckEventIsOpenCacheValidSeconds then
+    return Cached.Result
+  end
+  local Result = ActivityUtils.CheckEventIsOpenNoCache(EventID, EventMainExcel, IsUseRewardTime, UnlockRuleName, NowTime)
+  ActivityUtils.CheckEventIsOpenCache[CacheKey] = {Time = NowTime, Result = Result}
+  return Result
+end
+
+function ActivityUtils.CheckEventIsOpenNoCache(EventID, EventMainExcel, IsUseRewardTime, UnlockRuleName, NowTime)
   if ActivityCommon.GlobalPakForbidTabId[EventID] and UE.AHotUpdateGameMode.IsGlobalPak() then
     return false
   end
@@ -94,7 +121,6 @@ function ActivityUtils.CheckEventIsOpen(EventID, EventMainExcel, IsUseRewardTime
   if not Avatar then
     return false
   end
-  local NowTime = TimeUtils.NowTime()
   if nil == EventMainExcel then
     EventMainExcel = DataMgr.EventMain[EventID]
   end
@@ -127,7 +153,7 @@ function ActivityUtils.CheckEventIsOpen(EventID, EventMainExcel, IsUseRewardTime
     local IsNotEventEndTimeAndPermanenEventTime = false
     local IsActivityOpenAndInEventEndTime = false
     local IsNotEventEndTimeAndNotPermanenEventTime = false
-    local bEventIsInActiveTime = ActivityUtils.CheckEventIsInActiveTime(EventID, EventMainExcel)
+    local bEventIsInActiveTime = ActivityUtils.CheckEventIsInActiveTime(EventID, EventMainExcel, NowTime, Avatar)
     if bEventIsInActiveTime and not EventMainExcel.EventEndTime and EventMainExcel.PermanenEventTime then
       IsNotEventEndTimeAndPermanenEventTime = true
     end
@@ -291,6 +317,7 @@ end
 function ActivityUtils.OnClearCache()
   ActivityUtils.InvaildEventIds = {}
   ActivityUtils._ProcessedInvaildEventIds = {}
+  ActivityUtils.CheckEventIsOpenCache = {}
 end
 
 function ActivityUtils.GetCurrentAllActivityWithoutSystemCheck()
@@ -674,13 +701,15 @@ function ActivityUtils.SetUpJustifyOfJap(TextBlock1, TextBlock2)
 end
 
 function ActivityUtils.IsAccessoryDropActivity(ActivityId)
-  local AccessoryDropActivityIds = ActivityCommon.AccessoryDropActivityIds
-  for _, Id in pairs(AccessoryDropActivityIds) do
-    if Id == ActivityId then
-      return true
-    end
+  if not ActivityId then
+    return false
   end
-  return false
+  local AccessoryDropConfig = DataMgr.BoxDrop[ActivityId]
+  local ActivityConfigData = DataMgr.EventMain[ActivityId]
+  if not AccessoryDropConfig or not ActivityConfigData then
+    return false
+  end
+  return ActivityUtils.CheckEventIsInActiveTime(ActivityId, ActivityConfigData)
 end
 
 function ActivityUtils.DetermineBtnConfirmStatusByEvent(InEvent)

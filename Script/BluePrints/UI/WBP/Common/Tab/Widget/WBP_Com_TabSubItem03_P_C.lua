@@ -109,7 +109,7 @@ function M:Btn_Release()
 end
 
 function M:SetSwitchOn(IsOn, IsNeedPressAnim)
-  if self.IsLocked then
+  if self.IsLocked and IsOn then
     local ShowTextContent = self.Info.LockReasonText or "Not Define!!!!"
     UIManager(self):ShowUITip(UIConst.Tip_CommonToast, ShowTextContent)
     return
@@ -178,6 +178,9 @@ function M:SetLockInfo(bUnLock)
     self:PlayAnimation(self.Normal)
   else
     self:PlayAnimation(self.Lock)
+    if self.IsOn then
+      self:SetSwitchOn(false)
+    end
   end
 end
 

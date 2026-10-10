@@ -5,6 +5,11 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("CDType2Skills", {
+  [5402] = {
+    [540201] = 1,
+    [540211] = 1,
+    [540221] = 1
+  },
   [110102] = {
     [110102] = 1,
     [110121] = 1

@@ -4,12 +4,16 @@ local M = Class({
 })
 
 function M:Destruct()
+  if self.Type == "BackUp" then
+    self.Btn_1:UnBindEventOnClickedByObj(self)
+    self.Btn_2:UnBindEventOnClickedByObj(self)
+  end
   self:SetInputUIOnly(false)
   self.Super.Destruct(self)
 end
 
 function M:OnLoaded(...)
-  self.QuestUIId, self.Type = ...
+  self.QuestUIId, self.Type, self.EndingData = ...
   self.Info = DataMgr.QuestUI[self.QuestUIId]
   self.Text_SubTitle:SetTexT(GText(self.Info.ChapterName))
   self.Text_Title:SetTexT(GText(self.Info.CantoName))
@@ -50,7 +54,11 @@ function M:OnLoaded(...)
       end
     })
     self:PlayAnimation(self.End_In)
-    self.Btn_FullClose.OnClicked:Add(self, self.OnClick)
+    if self.Type == "BackUp" then
+      self:InitBackUpUI(self.EndingData)
+    else
+      self.Btn_FullClose.OnClicked:Add(self, self.OnClick)
+    end
   end
   self.Key_Tips:CreateCommonKey({
     KeyInfoList = {
@@ -64,6 +72,34 @@ function M:OnLoaded(...)
   if self.QuestUIId == 100400 then
     AudioManager(self):PlayUISound(self, "event:/ui/common/main_quest_start_chapter3", "Chapter3ToEnd", nil)
   end
+end
+
+function M:InitBackUpUI(EndingData)
+  self.Text_SubTitle:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.EndImage:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
+  self.Group_Button:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  self.Text_Tips:SetTexT(GText("UI_QuestEnd_1301_01"))
+  self.Btn_1:SetText(GText("UI_QuestEnd_1301_02"))
+  self.Btn_2:SetText(GText("UI_QuestEnd_1301_03"))
+  self.Btn_1:BindEventOnClicked(self, self.OnClick)
+  self.Btn_2:BindEventOnClicked(self, self.OnBackUpClick)
+end
+
+function M:OnBackUpClick()
+  if self:IsPlayingAnimation(self.Out) or not self.bClick then
+    return
+  end
+  AudioManager(self):PlayUISound(self, "event:/ui/common/special_content_01_click", nil, nil)
+  self.Out:BindToAnimationFinished(self, {
+    self,
+    function()
+      local UIManger = UIManager(self)
+      AudioManager(self):SetEventSoundParam(self, "Close", {ToEnd = 1})
+      self:OnClose()
+      UIManger:LoadUINew("QuestReviewRoot")
+    end
+  })
+  self:PlayAnimation(self.Out)
 end
 
 function M:OnClick()
@@ -96,20 +132,25 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputType, CurGamepadName)
     return
   end
   local IsUseKeyAndMouse = CurInputType == ECommonInputType.MouseAndKeyboard
+  local IsBackUp = self.Type == "BackUp"
   if IsUseKeyAndMouse then
-    self.Text_Tips:SetTexT(GText("UI_GACHA_NEXT"))
+    self.Text_Tips:SetTexT(GText(IsBackUp and "UI_QuestEnd_1301_01" or "UI_GACHA_NEXT"))
     self.Key_Tips:SetVisibility(UE4.ESlateVisibility.Collapsed)
   else
-    self.Text_Tips:SetTexT(GText("UI_CTL_Continue"))
+    self.Text_Tips:SetTexT(GText(IsBackUp and "UI_QuestEnd_1301_01" or "UI_CTL_Continue"))
     self.Key_Tips:SetVisibility(UE4.ESlateVisibility.visible)
-    self:SetFocus()
+    if IsBackUp then
+      self.Btn_2:SetFocus()
+    else
+      self:SetFocus()
+    end
   end
 end
 
 function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  if "Gamepad_FaceButton_Bottom" == InKeyName and self.bClick then
+  if "Gamepad_FaceButton_Bottom" == InKeyName and self.bClick and self.Type ~= "BackUp" then
     self:OnClose()
     return UE4.UWidgetBlueprintLibrary.Handled()
   end

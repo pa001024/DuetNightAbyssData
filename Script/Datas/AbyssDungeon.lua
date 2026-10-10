@@ -1417,6 +1417,126 @@ T.RT_188 = {
   214,
   401
 }
+T.RT_189 = {
+  100,
+  17111,
+  219
+}
+T.RT_190 = {
+  217111,
+  217112,
+  217112,
+  217112,
+  217113
+}
+T.RT_191 = {
+  100,
+  17121,
+  217
+}
+T.RT_192 = {
+  217121,
+  217122,
+  217122,
+  217122,
+  217123
+}
+T.RT_193 = {
+  217211,
+  217212,
+  217212,
+  217212,
+  217213
+}
+T.RT_194 = {
+  217221,
+  217222,
+  217222,
+  217222,
+  217223
+}
+T.RT_195 = {
+  217311,
+  217312,
+  217312,
+  217312,
+  217313
+}
+T.RT_196 = {
+  217321,
+  217322,
+  217322,
+  217322,
+  217323
+}
+T.RT_197 = {
+  101,
+  100,
+  17111,
+  17121,
+  219,
+  17131
+}
+T.RT_198 = {
+  100,
+  17211,
+  217
+}
+T.RT_199 = {
+  217411,
+  217412,
+  217412,
+  217412,
+  217413
+}
+T.RT_200 = {
+  100,
+  17221,
+  218
+}
+T.RT_201 = {
+  217421,
+  217422,
+  217422,
+  217422,
+  217423
+}
+T.RT_202 = {
+  217511,
+  217512,
+  217512,
+  217512,
+  217513
+}
+T.RT_203 = {
+  217521,
+  217522,
+  217522,
+  217522,
+  217523
+}
+T.RT_204 = {
+  217611,
+  217612,
+  217612,
+  217612,
+  217613
+}
+T.RT_205 = {
+  217621,
+  217622,
+  217622,
+  217622,
+  217623
+}
+T.RT_206 = {
+  101,
+  100,
+  17211,
+  17221,
+  219,
+  17231
+}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -3102,5 +3222,185 @@ return ReadOnly("AbyssDungeon", {
     DungeonId = 20303,
     DungeonMonsters = T.RT_120,
     RoomId = T.RT_187
+  },
+  [2171011] = {
+    AbyssBuffID = T.RT_189,
+    AbyssDungeonId = 2171011,
+    DungeonId = 20301,
+    DungeonMonsters = T.RT_72,
+    MonsterBuff = T.RT_14,
+    RoomId = T.RT_190
+  },
+  [2171012] = {
+    AbyssBuffID = T.RT_191,
+    AbyssDungeonId = 2171012,
+    DungeonId = 20302,
+    DungeonMonsters = T.RT_118,
+    MonsterBuff = T.RT_90,
+    RoomId = T.RT_192
+  },
+  [2171021] = {
+    AbyssBuffID = T.RT_189,
+    AbyssDungeonId = 2171021,
+    DungeonId = 20303,
+    DungeonMonsters = T.RT_63,
+    MonsterBuff = T.RT_14,
+    RoomId = T.RT_193
+  },
+  [2171022] = {
+    AbyssBuffID = T.RT_191,
+    AbyssDungeonId = 2171022,
+    DungeonId = 20301,
+    DungeonMonsters = T.RT_120,
+    MonsterBuff = T.RT_90,
+    RoomId = T.RT_194
+  },
+  [2171031] = {
+    AbyssBuffID = T.RT_189,
+    AbyssDungeonId = 2171031,
+    DungeonId = 20302,
+    DungeonMonsters = T.RT_96,
+    MonsterBuff = T.RT_14,
+    RoomId = T.RT_195
+  },
+  [2171032] = {
+    AbyssBuffID = T.RT_191,
+    AbyssDungeonId = 2171032,
+    DungeonId = 20303,
+    DungeonMonsters = T.RT_138,
+    MonsterBuff = T.RT_90,
+    RoomId = T.RT_196
+  },
+  [2172011] = {
+    AbyssBuffID = T.RT_197,
+    AbyssDungeonId = 2172011,
+    DungeonId = 20301,
+    DungeonMonsters = T.RT_72,
+    RoomId = T.RT_190
+  },
+  [2172021] = {
+    AbyssBuffID = T.RT_197,
+    AbyssDungeonId = 2172021,
+    DungeonId = 20302,
+    DungeonMonsters = T.RT_118,
+    RoomId = T.RT_192
+  },
+  [2172031] = {
+    AbyssBuffID = T.RT_197,
+    AbyssDungeonId = 2172031,
+    DungeonId = 20303,
+    DungeonMonsters = T.RT_63,
+    RoomId = T.RT_193
+  },
+  [2172041] = {
+    AbyssBuffID = T.RT_197,
+    AbyssDungeonId = 2172041,
+    DungeonId = 20301,
+    DungeonMonsters = T.RT_120,
+    RoomId = T.RT_194
+  },
+  [2172051] = {
+    AbyssBuffID = T.RT_197,
+    AbyssDungeonId = 2172051,
+    DungeonId = 20302,
+    DungeonMonsters = T.RT_96,
+    RoomId = T.RT_195
+  },
+  [2172061] = {
+    AbyssBuffID = T.RT_197,
+    AbyssDungeonId = 2172061,
+    DungeonId = 20303,
+    DungeonMonsters = T.RT_138,
+    RoomId = T.RT_196
+  },
+  [2173011] = {
+    AbyssBuffID = T.RT_198,
+    AbyssDungeonId = 2173011,
+    DungeonId = 20301,
+    DungeonMonsters = T.RT_53,
+    MonsterBuff = T.RT_90,
+    RoomId = T.RT_199
+  },
+  [2173012] = {
+    AbyssBuffID = T.RT_200,
+    AbyssDungeonId = 2173012,
+    DungeonId = 20302,
+    DungeonMonsters = T.RT_72,
+    MonsterBuff = T.RT_57,
+    RoomId = T.RT_201
+  },
+  [2173021] = {
+    AbyssBuffID = T.RT_198,
+    AbyssDungeonId = 2173021,
+    DungeonId = 20303,
+    DungeonMonsters = T.RT_118,
+    MonsterBuff = T.RT_90,
+    RoomId = T.RT_202
+  },
+  [2173022] = {
+    AbyssBuffID = T.RT_200,
+    AbyssDungeonId = 2173022,
+    DungeonId = 20301,
+    DungeonMonsters = T.RT_116,
+    MonsterBuff = T.RT_57,
+    RoomId = T.RT_203
+  },
+  [2173031] = {
+    AbyssBuffID = T.RT_198,
+    AbyssDungeonId = 2173031,
+    DungeonId = 20302,
+    DungeonMonsters = T.RT_138,
+    MonsterBuff = T.RT_90,
+    RoomId = T.RT_204
+  },
+  [2173032] = {
+    AbyssBuffID = T.RT_200,
+    AbyssDungeonId = 2173032,
+    DungeonId = 20303,
+    DungeonMonsters = T.RT_120,
+    MonsterBuff = T.RT_57,
+    RoomId = T.RT_205
+  },
+  [2174011] = {
+    AbyssBuffID = T.RT_206,
+    AbyssDungeonId = 2174011,
+    DungeonId = 20301,
+    DungeonMonsters = T.RT_53,
+    RoomId = T.RT_199
+  },
+  [2174021] = {
+    AbyssBuffID = T.RT_206,
+    AbyssDungeonId = 2174021,
+    DungeonId = 20302,
+    DungeonMonsters = T.RT_72,
+    RoomId = T.RT_201
+  },
+  [2174031] = {
+    AbyssBuffID = T.RT_206,
+    AbyssDungeonId = 2174031,
+    DungeonId = 20303,
+    DungeonMonsters = T.RT_118,
+    RoomId = T.RT_202
+  },
+  [2174041] = {
+    AbyssBuffID = T.RT_206,
+    AbyssDungeonId = 2174041,
+    DungeonId = 20301,
+    DungeonMonsters = T.RT_116,
+    RoomId = T.RT_203
+  },
+  [2174051] = {
+    AbyssBuffID = T.RT_206,
+    AbyssDungeonId = 2174051,
+    DungeonId = 20302,
+    DungeonMonsters = T.RT_138,
+    RoomId = T.RT_204
+  },
+  [2174061] = {
+    AbyssBuffID = T.RT_206,
+    AbyssDungeonId = 2174061,
+    DungeonId = 20303,
+    DungeonMonsters = T.RT_120,
+    RoomId = T.RT_205
   }
 })

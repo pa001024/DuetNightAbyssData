@@ -206,6 +206,25 @@ function M:GetIsWatched()
   end
 end
 
+function M:IsActivityInRewardRecvDeadLine(EventID, EventMainExcel)
+  local NowTime = TimeUtils.NowTime()
+  if nil == EventMainExcel then
+    EventMainExcel = DataMgr.EventMain[EventID]
+  end
+  local RewardEndTime = EventMainExcel.RewardEndTime
+  if not RewardEndTime then
+    return false
+  end
+  local ActivityEndTime = EventMainExcel.EventEndTime
+  if not ActivityEndTime then
+    return false
+  end
+  if ActivityEndTime and NowTime > ActivityEndTime:GetTime() and RewardEndTime and NowTime <= RewardEndTime:GetTime() then
+    return true
+  end
+  return false
+end
+
 function M:GetAllPlayerInfo()
   local Avatar = GWorld:GetAvatar()
   if Avatar then

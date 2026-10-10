@@ -4,6 +4,27 @@ local DisplayConfig = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_
 local DisplayDraft = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_DisplayDraft")
 local M = {}
 
+function M:PreviewSceneLight(LightEditData)
+  self.DisplayController.SceneService:SetUserLight(LightEditData)
+  return true
+end
+
+function M:ClearSceneLightPreview()
+  self.DisplayController.SceneService:ClearUserLight()
+  return true
+end
+
+function M:UpdateSceneLightData(LightEditData)
+  if not self.DisplayEditor or not self.DisplayEditor.UpdateSceneLightData then
+    return false
+  end
+  local bChanged = self.DisplayEditor:UpdateSceneLightData(LightEditData)
+  if bChanged and self._RefreshRootCommonActionState then
+    self:_RefreshRootCommonActionState()
+  end
+  return bChanged
+end
+
 function M:ResetCameraToSceneDefault()
   if not self.DisplayEditor or not self.DisplayEditor.ResetCameraToSceneDefault then
     return false
@@ -52,6 +73,81 @@ function M:ApplyActionSelection(ActionData)
   return self:_ApplyActionSelection(self:GetSelectedCharacterSlotIndex(), ActionData)
 end
 
+function M:ApplyItemSelection(ItemData)
+  local SlotIndex = self:GetSelectedItemSlotIndex()
+  if type(SlotIndex) ~= "number" or SlotIndex <= 0 or not ItemData then
+    return false
+  end
+  local bSuccess = self.DisplayEditor:SetItemToSlot(SlotIndex, ItemData) == true
+  if bSuccess and self.RootViewPanel then
+    self.RootViewPanel:RefreshItemSlotItem(SlotIndex)
+    self.RootViewPanel:RefreshCommonActionState()
+  end
+  return bSuccess
+end
+
+function M:ApplyPetSelection(PetData)
+  local SlotIndex = self:GetSelectedPetSlotIndex()
+  if type(SlotIndex) ~= "number" or SlotIndex <= 0 then
+    return false, "slot_missing"
+  end
+  if not PetData then
+    return false, "pet_missing"
+  end
+  local bSuccess = self.DisplayEditor:SetPetToSlot(SlotIndex, PetData) == true
+  if bSuccess then
+    self:_RefreshPetChooseRootState()
+    self:_SelectNextEditableEmptyPetSlot()
+    self:_SyncFocusedPetHighlight()
+  end
+  return bSuccess
+end
+
+function M:_RefreshPetChooseRootState()
+  if not self.RootViewPanel then
+    return
+  end
+  if self.RootViewPanel.RefreshPetSlotItem then
+    local SlotCount = DisplayConfig:GetPetSlotCount()
+    for SlotIndex = 1, SlotCount do
+      self.RootViewPanel:RefreshPetSlotItem(SlotIndex)
+    end
+  end
+  if self.RootViewPanel.RefreshCommonActionState then
+    self.RootViewPanel:RefreshCommonActionState()
+  end
+  if self.RootViewPanel.RefreshTitleText then
+    self.RootViewPanel:RefreshTitleText()
+  end
+end
+
+function M:RemovePetChooseSelectionBySlot(SlotIndex)
+  if self.ActiveChooseMode ~= "Pet" then
+    return false
+  end
+  if type(SlotIndex) ~= "number" or SlotIndex <= 0 then
+    return false
+  end
+  local Slot = self:_GetPetSlot(SlotIndex)
+  if not DisplayDraft:IsPetSlotOccupied(Slot) then
+    return false
+  end
+  local bSuccess = self.DisplayEditor:RemovePetFromSlot(SlotIndex) == true
+  if not bSuccess then
+    return false
+  end
+  self:_RefreshPetChooseRootState()
+  if self.SelectedPetSlotIndex == SlotIndex then
+    self:_SelectNextEditableEmptyPetSlot()
+    if self:GetSelectedPetSlotIndex() == SlotIndex then
+      self:RefreshSelectedPetSlotContext()
+    end
+  else
+    self:_SyncFocusedPetHighlight()
+  end
+  return true
+end
+
 function M:BeginCharacterTransformPreview()
   return self.DisplayEditor:BeginPreviewTransaction("character_transform_" .. tostring(self:GetSelectedCharacterSlotIndex()))
 end
@@ -74,17 +170,113 @@ function M:PreviewCharacterTransform(TransformData)
   return true
 end
 
+function M:BeginItemTransformPreview()
+  return self.DisplayEditor:BeginPreviewTransaction("item_transform_" .. tostring(self:GetSelectedItemSlotIndex()))
+end
+
+function M:PreviewItemTransform(TransformData)
+  local SlotIndex = self:GetSelectedItemSlotIndex()
+  if type(SlotIndex) ~= "number" then
+    return false
+  end
+  local Transform = self:_BuildItemTransformFromEditData(SlotIndex, TransformData)
+  local TransformRotation = self:_BuildTransformRotationFromEditData(TransformData)
+  return self.DisplayEditor:SetItemTransform(SlotIndex, Transform, TransformRotation) == true
+end
+
+function M:CommitItemTransformPreview()
+  local bCommitted = self.DisplayEditor:CommitPreviewTransaction() == true
+  if bCommitted then
+    self.RootViewPanel:RefreshSaveButtonState()
+    if self:ShouldShowItemDetailPanel() and self.CharacterEditPanel then
+      self.CharacterEditPanel:RefreshView()
+    end
+  end
+  return bCommitted
+end
+
+function M:BeginPetTransformPreview()
+  return self.DisplayEditor:BeginPreviewTransaction("pet_transform_" .. tostring(self:GetSelectedPetSlotIndex()))
+end
+
+function M:CommitPetTransformPreview()
+  local bCommitted = self.DisplayEditor:CommitPreviewTransaction() == true
+  if bCommitted then
+    if self.RootViewPanel and self.RootViewPanel.RefreshCommonActionState then
+      self.RootViewPanel:RefreshCommonActionState()
+    end
+    if self:ShouldShowPetDetailPanel() and self.CharacterEditPanel then
+      self.CharacterEditPanel:RefreshView()
+    end
+  end
+  return bCommitted
+end
+
+function M:PreviewPetTransform(TransformData)
+  local Transform = self:_BuildPetTransformFromEditData(self:GetSelectedPetSlotIndex(), TransformData)
+  local TransformRotation = self:_BuildTransformRotationFromEditData(TransformData)
+  self.DisplayEditor:SetPetTransform(self:GetSelectedPetSlotIndex(), Transform, TransformRotation)
+  return true
+end
+
 function M:SetFocusedCharacterSlot(SlotIndex, bOpenHighlight)
   self.DisplayController:SetFocusCharacterSlot(SlotIndex, true == bOpenHighlight)
 end
 
+function M:SetFocusedPetSlot(SlotIndex, bOpenHighlight)
+  if not self.DisplayController then
+    return
+  end
+  self.DisplayController:SetFocusPetSlot(SlotIndex, true == bOpenHighlight)
+end
+
+function M:SetFocusedItemSlot(SlotIndex, bOpenHighlight)
+  if not self.DisplayController then
+    return
+  end
+  self.DisplayController:SetFocusItemSlot(SlotIndex, true == bOpenHighlight)
+end
+
 function M:TrySelectPreviewEntityByPointer()
-  local EntityId = self.DisplayController:CommitPointerSelection()
-  local SlotIndex = self:_GetCharacterSlotIndexByEntityId(EntityId)
-  if not SlotIndex then
+  if self.ActiveTabName == "Other" then
+    if self.DisplayController and self.DisplayController.ClearPendingPointerSelection then
+      self.DisplayController:ClearPendingPointerSelection()
+    end
     return false
   end
-  return self:_SelectCharacterSlot(SlotIndex, {
+  if not self.DisplayController or not self.DisplayController.CommitPointerSelection then
+    return false
+  end
+  local IgnoreByTab = {
+    Char = {Pet = true, Item = true},
+    Pet = {Char = true, Item = true},
+    Item = {Char = true, Pet = true}
+  }
+  local IgnoreEntityPrefixes = IgnoreByTab[self.ActiveTabName]
+  local PointerOptions = IgnoreEntityPrefixes and {IgnoreEntityPrefixes = IgnoreEntityPrefixes} or nil
+  local EntityId = self.DisplayController:CommitPointerSelection(PointerOptions)
+  if self:IsItemPageActive() then
+    local ItemSlotIndex = self:_GetItemSlotIndexByEntityId(EntityId)
+    if not ItemSlotIndex then
+      return false
+    end
+    return self:_SelectItemSlot(ItemSlotIndex, {OpenHighlight = true})
+  end
+  if self:IsPetPageActive() then
+    local PetSlotIndex = self:_GetPetSlotIndexByEntityId(EntityId)
+    if not PetSlotIndex then
+      return false
+    end
+    return self:_SelectPetSlot(PetSlotIndex, {
+      OpenHighlight = true,
+      OpenDetail = self:IsPetMainPageActive()
+    })
+  end
+  local CharacterSlotIndex = self:_GetCharacterSlotIndexByEntityId(EntityId)
+  if not CharacterSlotIndex then
+    return false
+  end
+  return self:_SelectCharacterSlot(CharacterSlotIndex, {
     OpenHighlight = true,
     OpenDetail = self:IsCharacterMainPageActive()
   })
@@ -268,6 +460,22 @@ function M:_GetCharacterSlotIndexByEntityId(EntityId)
   return tonumber(SlotIndexText)
 end
 
+function M:_GetPetSlotIndexByEntityId(EntityId)
+  local SlotIndexText = string.match(EntityId or "", "^pet_slot_(%d+)$")
+  if not SlotIndexText then
+    return nil
+  end
+  return tonumber(SlotIndexText)
+end
+
+function M:_GetItemSlotIndexByEntityId(EntityId)
+  local SlotIndexText = string.match(EntityId or "", "^item_slot_(%d+)$")
+  if not SlotIndexText then
+    return nil
+  end
+  return tonumber(SlotIndexText)
+end
+
 function M:_RebuildCharacterChoosePreviewTransaction()
   local Draft = self:_BuildCharacterChooseSlotDraft()
   if not self:_ApplyCharacterChooseDraftToScene(Draft) then
@@ -360,6 +568,24 @@ function M:_BuildTransformFromEditData(SlotIndex, TransformData)
   return FTransform(Rotation:ToQuat(), Translation, Scale)
 end
 
+function M:_BuildPetTransformFromEditData(SlotIndex, TransformData)
+  local BaseTransform = DisplayConfig:GetDefaultPetTransform(SlotIndex)
+  local Scale = BaseTransform and BaseTransform.Scale3D or FVector(1, 1, 1)
+  local Rotation = FRotator(TransformData.Pitch or 0, TransformData.Yaw or 0, TransformData.Roll or 0)
+  local Translation = FVector(TransformData.X or 0, TransformData.Y or 0, TransformData.Z or 0)
+  return FTransform(Rotation:ToQuat(), Translation, Scale)
+end
+
+function M:_BuildItemTransformFromEditData(SlotIndex, TransformData)
+  local Draft = self.DisplayEditor and self.DisplayEditor.GetDraft and self.DisplayEditor:GetDraft() or nil
+  local Slot = Draft and DisplayDraft:GetItemSlot(Draft, SlotIndex) or nil
+  local BaseTransform = DisplayConfig:GetDefaultItemTransform(SlotIndex, Slot and Slot.ItemData or nil)
+  local Scale = BaseTransform and BaseTransform.Scale3D or FVector(1, 1, 1)
+  local Rotation = FRotator(TransformData.Pitch or 0, TransformData.Yaw or 0, TransformData.Roll or 0)
+  local Translation = FVector(TransformData.X or 0, TransformData.Y or 0, TransformData.Z or 0)
+  return FTransform(Rotation:ToQuat(), Translation, Scale)
+end
+
 function M:_CloneTable(Source, Visited)
   if type(Source) ~= "table" then
     return {}
@@ -378,57 +604,6 @@ function M:_CloneTable(Source, Visited)
     end
   end
   return Cloned
-end
-
-function M:_RebuildCharacterChoosePreviewTransaction()
-  local Draft = self:_BuildCharacterChooseSlotDraft()
-  if not self:_ApplyCharacterChooseDraftToScene(Draft) then
-    return false
-  end
-  local PendingPreview = self.PendingCharacterChoosePreview
-  if not PendingPreview then
-    return true
-  end
-  local Avatar = self:_GetPreviewAvatar()
-  local CharData = Avatar and Avatar.Chars and Avatar.Chars[PendingPreview.CharUuid] or nil
-  if not CharData then
-    return false
-  end
-  local AppearanceInfo = self:_BuildCharacterAppearanceByPlan(CharData, PendingPreview.AppearancePlan)
-  local ReferenceSlotDraft = Draft and Draft.CharacterSlots and Draft.CharacterSlots[PendingPreview.SlotIndex] or nil
-  return self.DisplayController:PreviewCharacterChooseSlot(PendingPreview.SlotIndex, CharData, Avatar, AppearanceInfo, ReferenceSlotDraft)
-end
-
-function M:_RestoreCharacterChooseSlotPreview(SlotIndex)
-  if not self.DisplayController or type(SlotIndex) ~= "number" or SlotIndex <= 0 then
-    return false
-  end
-  local Draft = self:_BuildCharacterChooseSlotDraft()
-  local SlotDraft = Draft and Draft.CharacterSlots and Draft.CharacterSlots[SlotIndex] or nil
-  return self.DisplayController:RestoreCharacterChooseSlotPreview(SlotIndex, SlotDraft)
-end
-
-function M:_ApplyCharacterChooseDraftToScene(Draft)
-  if not self.DisplayController then
-    return false
-  end
-  for SlotIndex = 1, 4 do
-    local SlotDraft = Draft and Draft.CharacterSlots and Draft.CharacterSlots[SlotIndex] or nil
-    if not self.DisplayController:RestoreCharacterChooseSlotPreview(SlotIndex, SlotDraft) then
-      return false
-    end
-  end
-  return true
-end
-
-function M:_WriteCharacterChooseDraftToEditor(Draft)
-  assert(self.DisplayEditor, "PersonalEdit 缺少 DisplayEditor，无法写回角色选择草稿")
-  assert(Draft, "PersonalEdit 角色选择确认时缺少目标草稿")
-  local CurrentDraft = self.DisplayEditor:GetDraft()
-  if not DisplayDraft:IsEquivalent(CurrentDraft, Draft) then
-    self.DisplayEditor:SetCharacterSlotsDraft(Draft)
-  end
-  self.DisplayController.SceneDraft = self.DisplayEditor:GetDraft()
 end
 
 return M

@@ -27,7 +27,6 @@ local FLockNpcSpawnComponent = require("BluePrints.Story.Components.LockNpcSpawn
 local SimpleDialogueData_C = require("BluePrints.Story.Talk.Model.DialogueData").SimpleDialogueData_C
 local TalkUtils = require("BluePrints.Story.Talk.View.TalkUtils")
 local TalkOptionData_C = require("BluePrints.Story.Talk.Model.TalkOptionData").TalkOptionData_C
-local CommonTalkTaskData_C = require("BluePrints.Story.Talk.Model.CommonTalkTaskData")
 local ETalkOptionType = require("BluePrints.Story.Talk.Model.TalkOptionData").ETalkOptionType
 local ImpressionModel = require("BluePrints.Story.Talk.Model.ImpressionModel")
 local EDialogueNodeType = TalkUtils.EDialogueNodeType
@@ -1436,7 +1435,6 @@ end
 function CommonTalkTask:TryPlaySequence()
   if self.TalkTaskData.SequencePlayer then
     self.TalkContext:BindActors(self)
-    CommonTalkTaskData_C.StartMobilePanMediaRateTick(self, self.TalkTaskData.SequenceActor, self.TalkTaskData.Sequence)
     self.TalkTaskData.SequencePlayer:Play()
     local PlayerController = UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
     UTalkSequenceFunctionLibrary.UpdatePlayerCameraManager(PlayerController)

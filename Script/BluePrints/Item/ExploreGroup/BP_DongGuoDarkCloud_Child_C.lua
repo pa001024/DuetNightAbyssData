@@ -14,6 +14,9 @@ function M:CommonInitInfo(Info)
 end
 
 function M:StartIntegration(Actor)
+  if self.IsIntegrated then
+    return
+  end
   if Actor.IsDongGuoDarkCloud and Actor.IsCanDestroy and Actor.Eid == self.Parent.Eid then
     local Loc = self:K2_GetActorLocation()
     self:SetMovementTarget(2, true, Loc)

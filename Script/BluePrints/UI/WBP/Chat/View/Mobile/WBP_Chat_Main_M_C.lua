@@ -43,11 +43,11 @@ function M:Construct()
       local ErrCode, ChannelType = ...
       self:HandleEnterChatChannel(ErrCode, ChannelType)
     elseif EventId == ChatCommon.EventID.ChatMsgRecv then
-      local TimeWrap, MsgWrap = ...
-      self:HandleChatMsgRecv(TimeWrap, MsgWrap)
+      local TimeWrap, MsgWrap, EvictedWraps = ...
+      self:HandleChatMsgRecv(TimeWrap, MsgWrap, EvictedWraps)
     elseif EventId == ChatCommon.EventID.ChatMsgSent then
-      local TimeWrap, MsgWrap = ...
-      self:HandleChatMsgSent(TimeWrap, MsgWrap)
+      local TimeWrap, MsgWrap, EvictedWraps = ...
+      self:HandleChatMsgSent(TimeWrap, MsgWrap, EvictedWraps)
     elseif EventId == ChatCommon.EventID.SelectPlayerToChat then
       local Uid = (...)
       self:HandleSelectPlayerToChat(Uid)
@@ -311,7 +311,7 @@ function M:ResetUI()
   self.Group_ChatNormal:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.WS_Dialoglist:SetActiveWidgetIndex(0)
   self.Group_PlayerList:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  self.List_Dialog:ClearListItems()
+  self:_ClearChatMsgListView()
   if self.bOpenTeamList then
     self:BtnTeamInfoOnClicked()
   end
@@ -371,7 +371,6 @@ function M:OnListSelectChannelClicked(Content)
 end
 
 function M:OnTabSelected(TabWidget)
-  ChatModel:GetChannelRemovedMsgs()
   local TabIdx = TabWidget.Idx
   self.CurrSelectTabIdx = TabIdx
   self._bIsChatInOpenChannel = 1 == TabIdx

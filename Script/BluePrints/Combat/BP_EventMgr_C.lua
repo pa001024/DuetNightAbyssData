@@ -4,6 +4,7 @@ require("Const")
 local MiscUtils = require("Utils.MiscUtils")
 local Utils = require("Utils")
 local EventTrigger = require("BluePrints.Combat.EventTrigger")
+local MonsterUtils = require("Utils.MonsterUtils")
 local BP_EventMgr_C = Class()
 
 function BP_EventMgr_C:Initialize(Initializer)
@@ -567,8 +568,8 @@ function BP_EventMgr_C:NeedApplySubsidenceAdjust(Unit)
   if Unit:IsAIControlled() == false then
     return false
   end
-  local UnitId = Unit.UnitId
-  if DataMgr.Monster[UnitId] and DataMgr.Monster[UnitId].DontApplySubsidenceAdjust then
+  local MonsterData = MonsterUtils.GetMonsterDataByOwner(Unit)
+  if MonsterData and MonsterData.DontApplySubsidenceAdjust then
     return false
   end
   return true

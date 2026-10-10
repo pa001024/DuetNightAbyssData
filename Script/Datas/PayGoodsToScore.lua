@@ -228,9 +228,9 @@ return ReadOnly("PayGoodsToScore", {
       GoodsName = "Pack_Name_13_MainChar",
       PayGoodsScore = 1280
     },
-    ["com.hero.dna.Pay_YouyuanWeeklyLuckyPack_1.6"] = {
+    ["com.hero.dna.Pay_YouyuanWeeklyLuckyPack1.6"] = {
       EventId = 113001,
-      GoodsId = "com.hero.dna.Pay_YouyuanWeeklyLuckyPack_1.6",
+      GoodsId = "com.hero.dna.Pay_YouyuanWeeklyLuckyPack1.6",
       GoodsName = "Pack_Name_15_Gacha9",
       PayGoodsScore = 30
     },

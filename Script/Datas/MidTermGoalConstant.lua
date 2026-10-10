@@ -55,7 +55,7 @@ return ReadOnly("MidTermGoalConstant", {
   },
   MidTermGoalEventId = {
     ConstantName = "MidTermGoalEventId",
-    ConstantValue = 10300602
+    ConstantValue = 10300603
   },
   OFRewardCount = {
     ConstantName = "OFRewardCount",

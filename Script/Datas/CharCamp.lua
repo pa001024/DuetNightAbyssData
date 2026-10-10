@@ -36,7 +36,9 @@ return ReadOnly("CharCamp", {
     CampSpineBp = "/Game/UI/WBP/Gacha/Widget/CampAni/WBP_Gacha_CampAni_NoCamp.WBP_Gacha_CampAni_NoCamp"
   },
   Tongmeng = {
+    CampIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Camp/T_Gacha_CampIcon_Tongmeng.T_Gacha_CampIcon_Tongmeng'",
     CampKey = "Tongmeng",
+    CampName = "Camp_Name_Tongmeng",
     CampSpineBp = "/Game/UI/WBP/Gacha/Widget/CampAni/WBP_Gacha_CampAni_Tongmeng.WBP_Gacha_CampAni_Tongmeng"
   },
   Yehang = {

@@ -8,7 +8,6 @@ return ReadOnly("PhotoCamera", {
   [1] = {
     FocalLength = 45,
     IsLockCamPos = true,
-    IsLockPause = true,
     IsSetParams = true,
     IsStartPause = true,
     PhotoCameraId = 1,
@@ -18,7 +17,6 @@ return ReadOnly("PhotoCamera", {
   [2] = {
     FocalLength = 11,
     IsLockCamPos = true,
-    IsLockPause = true,
     IsSetParams = true,
     IsStartPause = true,
     PhotoCameraId = 2,
@@ -29,7 +27,6 @@ return ReadOnly("PhotoCamera", {
   [3] = {
     FocalLength = 13,
     IsLockCamPos = true,
-    IsLockPause = true,
     IsSetParams = true,
     IsStartPause = true,
     PhotoCameraId = 3,
@@ -40,7 +37,6 @@ return ReadOnly("PhotoCamera", {
   [4] = {
     FocalLength = 12,
     IsLockCamPos = true,
-    IsLockPause = true,
     IsSetParams = true,
     IsStartPause = true,
     PhotoCameraId = 4,
@@ -51,7 +47,6 @@ return ReadOnly("PhotoCamera", {
   [5] = {
     FocalLength = 9,
     IsLockCamPos = true,
-    IsLockPause = true,
     IsSetParams = true,
     IsStartPause = true,
     PhotoCameraId = 5,
@@ -62,7 +57,6 @@ return ReadOnly("PhotoCamera", {
   [6] = {
     FocalLength = 13,
     IsLockCamPos = true,
-    IsLockPause = true,
     IsSetParams = true,
     IsStartPause = true,
     PhotoCameraId = 6,
@@ -73,7 +67,6 @@ return ReadOnly("PhotoCamera", {
   [7] = {
     FocalLength = 16,
     IsLockCamPos = true,
-    IsLockPause = true,
     IsSetParams = true,
     IsStartPause = true,
     PhotoCameraId = 7,
@@ -84,7 +77,6 @@ return ReadOnly("PhotoCamera", {
   [8] = {
     FocalLength = 13,
     IsLockCamPos = true,
-    IsLockPause = true,
     IsSetParams = true,
     IsStartPause = true,
     PhotoCameraId = 8,
@@ -95,7 +87,6 @@ return ReadOnly("PhotoCamera", {
   [9] = {
     FocalLength = 17,
     IsLockCamPos = true,
-    IsLockPause = true,
     IsSetParams = true,
     IsStartPause = true,
     PhotoCameraId = 9,
@@ -106,7 +97,6 @@ return ReadOnly("PhotoCamera", {
   [10] = {
     FocalLength = 9,
     IsLockCamPos = true,
-    IsLockPause = true,
     IsSetParams = true,
     IsStartPause = true,
     PhotoCameraId = 10,
@@ -117,7 +107,6 @@ return ReadOnly("PhotoCamera", {
   [11] = {
     FocalLength = 8,
     IsLockCamPos = true,
-    IsLockPause = true,
     IsSetParams = true,
     IsStartPause = true,
     PhotoCameraId = 11,
@@ -128,7 +117,6 @@ return ReadOnly("PhotoCamera", {
   [13] = {
     FocalLength = 10,
     IsLockCamPos = true,
-    IsLockPause = true,
     IsSetParams = true,
     IsStartPause = true,
     PhotoCameraId = 13,

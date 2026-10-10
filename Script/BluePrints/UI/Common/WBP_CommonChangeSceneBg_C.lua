@@ -46,6 +46,8 @@ function WBP_CommonChangeSceneBg_C:OnShowLoading()
   end
   local isDungeonData = true
   self.bEnableTick = true
+  self.LastLoadingTickTime = UE4.UGameplayStatics.GetRealTimeSeconds(GWorld.GameInstance)
+  self:AddTimer(0.033, self.OnLoadingTick, true, 0, "LoadingTick", true)
   local SojournsGameInstanceSubsystem = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(self, USojournsGameInstanceSubsystem)
   self:SetIsShowNavigateGuide(false)
   if SojournsGameInstanceSubsystem and SojournsGameInstanceSubsystem:IsInInvitation() then
@@ -175,6 +177,8 @@ end
 function WBP_CommonChangeSceneBg_C:Destruct()
   DebugPrint(WarningTag, LXYTag, "Loading界面应该销毁了")
   self.Overridden.Destruct(self)
+  self.bEnableTick = false
+  self:RemoveTimer("LoadingTick")
   local GameInputModeSubsystem = UIManager(self):GetGameInputModeSubsystem()
   if GameInputModeSubsystem and GameInputModeSubsystem.OnInputMethodChanged then
     GameInputModeSubsystem.OnInputMethodChanged:Remove(self, self.RefreshOpInfoByInputDevice)
@@ -194,11 +198,13 @@ function WBP_CommonChangeSceneBg_C:DestructSoundFunc()
   AudioManager(self):RemoveAuANotifyForbidTag("LoadingUI")
 end
 
-function WBP_CommonChangeSceneBg_C:Tick(MyGeometry, InDeltaTime)
+function WBP_CommonChangeSceneBg_C:OnLoadingTick()
   if not self.bEnableTick then
     return
   end
-  self.Overridden.Tick(self, MyGeometry, InDeltaTime)
+  local NowTime = UE4.UGameplayStatics.GetRealTimeSeconds(GWorld.GameInstance)
+  local InDeltaTime = math.max(NowTime - (self.LastLoadingTickTime or NowTime), 0)
+  self.LastLoadingTickTime = NowTime
   self.bShowThisFrame = false
   local PlayerController = UGameplayStatics.GetPlayerController(self, 0)
   if PlayerController and not self.bReset then
@@ -414,8 +420,9 @@ function WBP_CommonChangeSceneBg_C:RealCloseLoading()
   local PlayerCharacter = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   EventManager:FireEvent(EventID.CloseLoading, PlayerCharacter and PlayerCharacter.Eid)
   self.bIsInLoading = nil
+  self.bEnableTick = false
+  self:RemoveTimer("LoadingTick")
   if self.WidgetLoading then
-    self.bEnableTick = false
     DebugPrint("SL_LoadingDBG 关闭当前Loading  UIName :", self.WidgetLoading:GetName())
     if self.WidgetLoading.Out then
       self.WidgetLoading:UnbindAllFromAnimationFinished(self.WidgetLoading.Out)

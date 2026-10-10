@@ -1,9 +1,12 @@
 local M = {}
 local CHARACTER_GROUP_ID = 101
 local PET_GROUP_ID = 102
+local ITEM_GROUP_ID = 103
 local DEFAULT_CHARACTER_SPAWN_RANGE_X = {-300, 300}
 local DEFAULT_CHARACTER_SPAWN_RANGE_Y = {-300, 300}
 local DEFAULT_CHARACTER_SPAWN_RANGE_Z = {-100, 150}
+local PHOTO_FILTER_CAMERA_CLASS_PATH = "/Game/AssetDesign/Camera/BP_ScreenshotCamera.BP_ScreenshotCamera_C"
+local PhotoFilterRowById
 
 local function BuildSymmetricRangeLimit(RawValue)
   if type(RawValue) == "number" then
@@ -34,6 +37,31 @@ local function BuildTransformFromPointConfig(PointConfig)
   return FTransform(Rotator:ToQuat(), Location, FVector(1, 1, 1))
 end
 
+local function HasVector3(RawValue)
+  return type(RawValue) == "table" and nil ~= RawValue[1] and nil ~= RawValue[2] and nil ~= RawValue[3]
+end
+
+local function GetCustomItemConfig(ItemData)
+  if type(ItemData) ~= "table" then
+    return nil
+  end
+  local ItemId = tonumber(ItemData.ItemId) or tonumber(ItemData.Id)
+  local ConfigTable = DataMgr and DataMgr.CustomItem or nil
+  local Config = ItemId and ConfigTable and ConfigTable[ItemId] or nil
+  if type(Config) ~= "table" then
+    return nil
+  end
+  return Config
+end
+
+local function ResolvePositiveScale(RawScale)
+  local ScaleValue = tonumber(RawScale)
+  if ScaleValue and ScaleValue > 0 then
+    return ScaleValue
+  end
+  return 1
+end
+
 local function GetPointId(DisplayGroupId, PointIndex)
   return DisplayGroupId * 100 + PointIndex
 end
@@ -61,12 +89,131 @@ local function GetPointConfig(DisplayGroupId, PointIndex)
   return nil
 end
 
+local function ToPhotoId(RawId)
+  if type(RawId) == "number" then
+    return RawId
+  end
+  return tonumber(RawId) or tonumber(tostring(RawId))
+end
+
+local function GetPhotoFilterCameraCDO()
+  local CameraClass = LoadClass(PHOTO_FILTER_CAMERA_CLASS_PATH)
+  if not CameraClass then
+    return nil
+  end
+  if CameraClass.GetDefaultObject then
+    return CameraClass:GetDefaultObject()
+  end
+  return nil
+end
+
+local function EnsurePhotoFilterRowById()
+  if PhotoFilterRowById then
+    return PhotoFilterRowById
+  end
+  local CameraCDO = GetPhotoFilterCameraCDO()
+  if not IsValid(CameraCDO) then
+    DebugPrint("PersonInfo_DisplayConfig: BP_ScreenshotCamera CDO missing")
+    return {}
+  end
+  if not CameraCDO.GetFilterDataByRowName then
+    DebugPrint("PersonInfo_DisplayConfig: GetFilterDataByRowName missing")
+    return {}
+  end
+  local DataTable = CameraCDO.BP_FilterData
+  if not IsValid(DataTable) then
+    DebugPrint("PersonInfo_DisplayConfig: BP_FilterData missing")
+    return {}
+  end
+  if not UDataTableFunctionLibrary then
+    DebugPrint("PersonInfo_DisplayConfig: UDataTableFunctionLibrary missing")
+    return {}
+  end
+  local AllRowNames = UDataTableFunctionLibrary.GetDataTableRowNames(DataTable)
+  if not AllRowNames then
+    DebugPrint("PersonInfo_DisplayConfig: GetDataTableRowNames failed")
+    return {}
+  end
+  local NameList = AllRowNames.ToTable and AllRowNames:ToTable() or {}
+  local RowMap = {}
+  for _, RowName in ipairs(NameList) do
+    local bOk, Res = pcall(CameraCDO.GetFilterDataByRowName, CameraCDO, RowName)
+    if bOk and Res then
+      local PhotoId = ToPhotoId(Res.ID)
+      if PhotoId then
+        local PhotoStep = tonumber(Res.Step)
+        RowMap[PhotoId] = {
+          ID = PhotoId,
+          PPEnum = Res.PPEnum,
+          IconPath = Res.IconPath,
+          TextmapID = Res.TextmapID,
+          Step = PhotoStep and PhotoStep > 0 and PhotoStep or 1
+        }
+      end
+    end
+  end
+  if next(RowMap) == nil then
+    DebugPrint("PersonInfo_DisplayConfig: photo filter row map empty")
+    return {}
+  end
+  PhotoFilterRowById = RowMap
+  return PhotoFilterRowById
+end
+
+local function GetCustomFilterConfig(FilterId)
+  FilterId = tonumber(FilterId)
+  if not FilterId then
+    return nil
+  end
+  local ConfigTable = DataMgr and DataMgr.CustomFilter or nil
+  local Config = ConfigTable and ConfigTable[FilterId] or nil
+  if type(Config) ~= "table" then
+    return nil
+  end
+  return Config
+end
+
+function M:GetPhotoFilterRow(PhotoId)
+  PhotoId = ToPhotoId(PhotoId)
+  if not PhotoId then
+    return nil
+  end
+  local RowMap = EnsurePhotoFilterRowById()
+  return RowMap[PhotoId]
+end
+
+function M:GetFilterPPEnum(FilterId)
+  local Config = GetCustomFilterConfig(FilterId)
+  if not Config then
+    return nil
+  end
+  local Row = self:GetPhotoFilterRow(Config.PPEnumID)
+  if not Row then
+    return nil
+  end
+  local PPEnum = Row.PPEnum
+  if type(PPEnum) == "number" then
+    if PPEnum <= 0 then
+      return nil
+    end
+    return PPEnum
+  end
+  if nil == PPEnum then
+    return nil
+  end
+  return PPEnum
+end
+
 function M:GetCharacterGroupId()
   return CHARACTER_GROUP_ID
 end
 
 function M:GetPetGroupId()
   return PET_GROUP_ID
+end
+
+function M:GetItemGroupId()
+  return ITEM_GROUP_ID
 end
 
 function M:GetCharacterSlotCount()
@@ -79,12 +226,99 @@ function M:GetPetSlotCount()
   return Config and Config.MaxCount and Config.MaxCount > 0 and Config.MaxCount or 1
 end
 
+function M:GetItemSlotCount()
+  local Config = GetDisplayGroupConfig(ITEM_GROUP_ID)
+  return Config and Config.MaxCount and Config.MaxCount > 0 and Config.MaxCount or 1
+end
+
 function M:GetDefaultCharacterTransform(SlotIndex, SceneId)
   return BuildTransformFromPointConfig(GetPointConfig(CHARACTER_GROUP_ID, SlotIndex or 1))
 end
 
 function M:GetDefaultPetTransform(SlotIndex)
   return BuildTransformFromPointConfig(GetPointConfig(PET_GROUP_ID, SlotIndex or 1))
+end
+
+function M:GetDefaultItemTransform(SlotIndex, ItemData)
+  local PointConfig = GetPointConfig(ITEM_GROUP_ID, SlotIndex or 1)
+  local ItemConfig = GetCustomItemConfig(ItemData)
+  local Position, Rotation
+  if ItemConfig and HasVector3(ItemConfig.DefaultLocation) then
+    Position = ItemConfig.DefaultLocation
+  elseif PointConfig then
+    Position = PointConfig.OffsetPosition
+  end
+  if ItemConfig and HasVector3(ItemConfig.DefaultRotation) then
+    Rotation = ItemConfig.DefaultRotation
+  elseif PointConfig then
+    Rotation = PointConfig.OffsetRotation
+  end
+  Position = Position or {}
+  Rotation = Rotation or {}
+  local ScaleValue = ResolvePositiveScale(ItemConfig and ItemConfig.Scale or nil)
+  local Rotator = FRotator(Rotation[2] or 0, Rotation[3] or 0, Rotation[1] or 0)
+  local Location = FVector(Position[1] or 0, Position[2] or 0, Position[3] or 0)
+  return FTransform(Rotator:ToQuat(), Location, FVector(ScaleValue, ScaleValue, ScaleValue))
+end
+
+function M:ReplaceItemScale(Transform, ItemData)
+  if not Transform then
+    return nil
+  end
+  local ItemConfig = GetCustomItemConfig(ItemData)
+  local ScaleValue = ResolvePositiveScale(ItemConfig and ItemConfig.Scale or nil)
+  local Scale = FVector(ScaleValue, ScaleValue, ScaleValue)
+  local Rotation = Transform.Rotation
+  if Rotation and Rotation.ToRotator then
+    Rotation = Rotation:ToRotator()
+  end
+  if Rotation and Rotation.ToQuat then
+    Rotation = Rotation:ToQuat()
+  end
+  Rotation = Rotation or FRotator(0, 0, 0):ToQuat()
+  local Location = Transform.Translation or FVector(0, 0, 0)
+  return FTransform(Rotation, Location, Scale)
+end
+
+function M:GetItemDefaultTranslation(SlotIndex)
+  local PointConfig = GetPointConfig(ITEM_GROUP_ID, SlotIndex or 1)
+  local Position = PointConfig and PointConfig.OffsetPosition or nil
+  return {
+    X = Position and Position[1] or 0,
+    Y = Position and Position[2] or 0,
+    Z = Position and Position[3] or 0
+  }
+end
+
+function M:GetPetDefaultTranslation(SlotIndex)
+  local PointConfig = GetPointConfig(PET_GROUP_ID, SlotIndex or 1)
+  local Position = PointConfig and PointConfig.OffsetPosition or nil
+  return {
+    X = Position and Position[1] or 0,
+    Y = Position and Position[2] or 0,
+    Z = Position and Position[3] or 0
+  }
+end
+
+function M:GetPetTransformEditRange(SlotIndex, SceneId, CurrentTranslation)
+  local SceneConfig = self:GetSceneConfig(SceneId)
+  local DefaultTranslation = self:GetPetDefaultTranslation(SlotIndex)
+  local Translation = CurrentTranslation or DefaultTranslation
+  local XMin, XMax = BuildSymmetricRangeLimit(SceneConfig and SceneConfig.SpawnLocationX or nil)
+  local YMin, YMax = BuildSymmetricRangeLimit(SceneConfig and SceneConfig.SpawnLocationY or nil)
+  XMin, XMax = self:_NormalizeAxisRange(XMin, XMax, Translation.X, DefaultTranslation.X, DEFAULT_CHARACTER_SPAWN_RANGE_X)
+  YMin, YMax = self:_NormalizeAxisRange(YMin, YMax, Translation.Y, DefaultTranslation.Y, DEFAULT_CHARACTER_SPAWN_RANGE_Y)
+  local ZFallback = {
+    math.min(DEFAULT_CHARACTER_SPAWN_RANGE_Z[1], (DefaultTranslation.Z or 0) - 100),
+    math.max(DEFAULT_CHARACTER_SPAWN_RANGE_Z[2], (DefaultTranslation.Z or 0) + 150)
+  }
+  local ZMin, ZMax = self:_NormalizeAxisRange(nil, nil, Translation.Z, DefaultTranslation.Z, ZFallback)
+  return {
+    X = {Min = XMin, Max = XMax},
+    Y = {Min = YMin, Max = YMax},
+    Z = {Min = ZMin, Max = ZMax},
+    Yaw = {Min = -180, Max = 180}
+  }
 end
 
 function M:GetCharacterPointConfig(SlotIndex)
@@ -136,6 +370,44 @@ function M:GetSceneColorIndex(SceneId)
   return SceneConfig and SceneConfig.SceneColorIndex or 0
 end
 
+function M:GetSceneLightInitialParams(SceneId)
+  local SceneConfig = self:GetSceneConfig(SceneId)
+  local InitialParams = SceneConfig and SceneConfig.LightInitialParms
+  if type(InitialParams) ~= "table" then
+    return nil
+  end
+  return {
+    Roll = InitialParams[1] or 0,
+    Pitch = InitialParams[2] or 0,
+    Yaw = InitialParams[3] or 0,
+    LightIntensity = InitialParams[4] or 0
+  }
+end
+
+function M:GetSceneLightRange(SceneId, AxisName)
+  local FieldNameMap = {
+    Roll = "LightDirectionX",
+    Pitch = "LightDirectionY",
+    Yaw = "LightDirectionZ",
+    LightIntensity = "LightIntensity"
+  }
+  local FieldName = FieldNameMap[AxisName]
+  local SceneConfig = self:GetSceneConfig(SceneId)
+  local RawRange = FieldName and SceneConfig and SceneConfig[FieldName] or nil
+  if type(RawRange) ~= "table" then
+    return nil
+  end
+  local ValueA = tonumber(RawRange[1])
+  local ValueB = tonumber(RawRange[2])
+  if nil == ValueA or nil == ValueB then
+    return nil
+  end
+  return {
+    Min = math.min(ValueA, ValueB),
+    Max = math.max(ValueA, ValueB)
+  }
+end
+
 function M:GetSceneInitialCameraTransform(SceneId)
   local SceneConfig = self:GetSceneConfig(SceneId)
   if not SceneConfig then
@@ -179,6 +451,27 @@ end
 function M:GetCharacterTransformEditRange(SlotIndex, SceneId, CurrentTranslation)
   local SceneConfig = self:GetSceneConfig(SceneId)
   local DefaultTranslation = self:GetCharacterDefaultTranslation(SlotIndex)
+  local Translation = CurrentTranslation or DefaultTranslation
+  local XMin, XMax = BuildSymmetricRangeLimit(SceneConfig and SceneConfig.SpawnLocationX or nil)
+  local YMin, YMax = BuildSymmetricRangeLimit(SceneConfig and SceneConfig.SpawnLocationY or nil)
+  XMin, XMax = self:_NormalizeAxisRange(XMin, XMax, Translation.X, DefaultTranslation.X, DEFAULT_CHARACTER_SPAWN_RANGE_X)
+  YMin, YMax = self:_NormalizeAxisRange(YMin, YMax, Translation.Y, DefaultTranslation.Y, DEFAULT_CHARACTER_SPAWN_RANGE_Y)
+  local ZFallback = {
+    math.min(DEFAULT_CHARACTER_SPAWN_RANGE_Z[1], (DefaultTranslation.Z or 0) - 100),
+    math.max(DEFAULT_CHARACTER_SPAWN_RANGE_Z[2], (DefaultTranslation.Z or 0) + 150)
+  }
+  local ZMin, ZMax = self:_NormalizeAxisRange(nil, nil, Translation.Z, DefaultTranslation.Z, ZFallback)
+  return {
+    X = {Min = XMin, Max = XMax},
+    Y = {Min = YMin, Max = YMax},
+    Z = {Min = ZMin, Max = ZMax},
+    Yaw = {Min = -180, Max = 180}
+  }
+end
+
+function M:GetItemTransformEditRange(SlotIndex, SceneId, CurrentTranslation)
+  local SceneConfig = self:GetSceneConfig(SceneId)
+  local DefaultTranslation = self:GetItemDefaultTranslation(SlotIndex)
   local Translation = CurrentTranslation or DefaultTranslation
   local XMin, XMax = BuildSymmetricRangeLimit(SceneConfig and SceneConfig.SpawnLocationX or nil)
   local YMin, YMax = BuildSymmetricRangeLimit(SceneConfig and SceneConfig.SpawnLocationY or nil)

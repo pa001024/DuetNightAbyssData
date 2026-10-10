@@ -66,10 +66,10 @@ end
 function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InAnalogInputEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  if "Gamepad_LeftX" == InKeyName then
-    self.MoveDeltaX = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent)
-  elseif "Gamepad_LeftY" == InKeyName then
+  if "Gamepad_LeftY" == InKeyName then
     self.MoveDeltaY = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent)
+  else
+    self.MoveDeltaY = 0
   end
   local InKeyName
   if self.MoveDeltaY and 0 ~= self.MoveDeltaY then

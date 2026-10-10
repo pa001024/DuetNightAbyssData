@@ -82,7 +82,7 @@
   {
     "id": 3010111,
     "name": "夜の雪舞・大剣",
-    "desc": "UI_WeaponSkin_Des_3010111",
+    "desc": "静かな白雪だけが、灰燼と化したあの長い夜を覚えている。",
     "icon": "T_Head_Claymore_Yejin",
     "rarity": 5,
     "unlock": "ショップで獲得"
@@ -157,6 +157,14 @@
     "desc": "グワッ――—————！",
     "icon": "T_Head_Sword_Nahan",
     "rarity": 4,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010210,
+    "name": "コスミック・インビテーション・片手剣",
+    "desc": "星々より届く悠久の招待に耳を澄ませ。",
+    "icon": "T_Head_Sword_Huanyu",
+    "rarity": 5,
     "unlock": "ショップで獲得"
   },
   {
@@ -552,6 +560,14 @@
     "unlock": "ショップで獲得"
   },
   {
+    "id": 3010905,
+    "name": "枯骨に花咲く",
+    "desc": "死を宿す枯骨にさえ、強き命は花開く。",
+    "icon": "T_Head_Cannon_Kugu",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
     "id": 3011001,
     "name": "ビリビリネコ2号",
     "desc": "にゃう♪にゃにゃ～♪にゃん♪",
@@ -586,8 +602,8 @@
   {
     "id": 3011005,
     "name": "UI_WeaponSkin_Name_3011005",
-    "desc": "UI_WeaponSkin_Des_3010111",
-    "icon": "",
+    "desc": "静かな白雪だけが、灰燼と化したあの長い夜を覚えている。",
+    "icon": "T_Head_Shotgun_Nahan",
     "rarity": 5,
     "unlock": "ショップで獲得"
   },

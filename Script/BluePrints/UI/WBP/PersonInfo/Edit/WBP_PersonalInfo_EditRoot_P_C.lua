@@ -142,7 +142,8 @@ function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
   local SuperReply = self.Super.OnPreviewKeyDown(self, MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) and self.Handle_PreviewKeyDownOnGamePad and self:Handle_PreviewKeyDownOnGamePad(InKeyName) then
+  local bIsRepeat = UE4.UKismetInputLibrary.InputEvent_IsRepeat(InKeyEvent)
+  if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) and self.Handle_PreviewKeyDownOnGamePad and self:Handle_PreviewKeyDownOnGamePad(InKeyName, bIsRepeat) then
     return UE4.UWidgetBlueprintLibrary.Handled()
   end
   return SuperReply or UE4.UWidgetBlueprintLibrary.UnHandled()
@@ -151,11 +152,12 @@ end
 function M:OnKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  local bIsRepeat = UE4.UKismetInputLibrary.InputEvent_IsRepeat(InKeyEvent)
   if "Escape" == InKeyName and self.bHiddenUI then
     self:OnHideUIClick()
     return UE4.UWidgetBlueprintLibrary.Handled()
   end
-  if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) and self.Handle_KeyDownOnGamePad and self:Handle_KeyDownOnGamePad(InKeyName) then
+  if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) and self.Handle_KeyDownOnGamePad and self:Handle_KeyDownOnGamePad(InKeyName, bIsRepeat) then
     return UE4.UWidgetBlueprintLibrary.Handled()
   end
   return PersonInfoCustomEditMainPageBase.OnKeyDown(self, MyGeometry, InKeyEvent)

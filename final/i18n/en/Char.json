@@ -1925,7 +1925,7 @@
             "类型": "Buff",
             "icon": "Tuosi02_Off",
             "cd": 3,
-            "行为": "执行[ChangeModel];移除增益(110302)[每1秒消耗30神智, 每1秒执行技能效果(110323), 激活技能, 召唤武器, 禁用[重击, 滑行攻击]];移除增益(110303)[攻击上限315, 移动速度+0.5, Jump Speed+10%];移除增益(110331)[攻击上限315, 技能速度+0.3];触发被动功能[解除变身](被动效果110301·BP_Tuosi_Passive)",
+            "行为": "执行[ChangeModel];移除增益(110302)[每1秒消耗30神智, 每1秒执行技能效果(110323), 激活技能, 召唤武器, 禁用[重击, 滑行攻击]];移除增益(110303)[攻击上限315, 移动速度+0.5, Jump Speed+10%];移除增益(110331)[攻击上限315, Attr_SkillSpeed_Name+30%];触发被动功能[解除变身](被动效果110301·BP_Tuosi_Passive)",
             "名称": "Duo"
           }
         ],
@@ -2066,7 +2066,7 @@
         "术语解释": {
           "Bestial Fury: Devotion": "While under [Bestial Fury: Devotion], continuously drains [Immersion] instead of Sanity to maintain the state. Increases Skill Speed, and boosts ATK based on the user's Max Sanity. \nWhile active, [Bestial Fury: Devotion] prevents [Immersion] gain from sustaining Beast Form."
         },
-        "行为": "被动效果(110301)(BP_Tuosi_Passive);增益(110304);增益(110303)[攻击上限315, 移动速度+0.5, Jump Speed+10%];增益(110331)[攻击上限315, 技能速度+0.3]"
+        "行为": "被动效果(110301)(BP_Tuosi_Passive);增益(110304);增益(110303)[攻击上限315, 移动速度+0.5, Jump Speed+10%];增益(110331)[攻击上限315, Attr_SkillSpeed_Name+30%]"
       },
       {
         "id": 110304,
@@ -7092,6 +7092,7 @@
               4.55
             ],
             "tag": [
+              "技能",
               "召唤物"
             ],
             "削韧": 5
@@ -7126,6 +7127,7 @@
               18.23
             ],
             "tag": [
+              "技能",
               "召唤物"
             ],
             "削韧": 15
@@ -7257,6 +7259,7 @@
               182.17
             ],
             "tag": [
+              "技能",
               "召唤物"
             ],
             "削韧": 120,
@@ -7440,6 +7443,9 @@
             "名称": "DMG",
             "影响": "技能威力",
             "值": 9.52,
+            "tag": [
+              "技能"
+            ],
             "削韧": 100
           },
           {
@@ -8983,7 +8989,7 @@
             "Twilight Tread": 1
           }
         ],
-        "行为": "被动效果(240101)(BP_Baiheng_Passive);增益(240131);增益(240122);增益(240121)"
+        "行为": "被动效果(240101)(BP_Baiheng_Passive);增益(240131);增益(240122)[DamageIgnoreDefence+0.3];增益(240121)"
       },
       {
         "id": 240104,
@@ -10957,7 +10963,7 @@
           },
           {
             "名称": "Overflow Damage",
-            "影响": "技能威力",
+            "影响": "技能威力,HyperTriggerRate",
             "值": [
               0.16,
               0.19,
@@ -10981,7 +10987,7 @@
           },
           {
             "名称": "Bonus Damage",
-            "影响": "技能威力",
+            "影响": "技能威力,HyperTriggerRate",
             "值": [
               0.04,
               0.05,
@@ -12010,10 +12016,10 @@
             "名称": "Tipsy",
             "类型": "DMG",
             "icon": "Kami01",
-            "行为": "触发被动功能[释放战技](被动效果320201·BP_Kami_Passive);造成角色攻击167.0%的伤害(技能/战技);削减战姿25;附加增益(320203)[每层+#1技能速度(最多10层)];移除增益(320203)[每层+#1技能速度(最多10层)]"
+            "行为": "触发被动功能[释放战技](被动效果320201·BP_Kami_Passive);造成角色攻击167.0%的伤害(技能/战技);削减战姿25;附加增益(320203)[每层+#1Attr_SkillSpeed_Name(最多10层)];移除增益(320203)[每层+#1Attr_SkillSpeed_Name(最多10层)]"
           }
         ],
-        "行为": "触发被动功能[释放战技](被动效果320201·BP_Kami_Passive);造成角色攻击167.0%的伤害(技能/战技);削减战姿25;附加增益(320203)[每层+#1技能速度(最多10层)];移除增益(320203)[每层+#1技能速度(最多10层)]"
+        "行为": "触发被动功能[释放战技](被动效果320201·BP_Kami_Passive);造成角色攻击167.0%的伤害(技能/战技);削减战姿25;附加增益(320203)[每层+#1Attr_SkillSpeed_Name(最多10层)];移除增益(320203)[每层+#1Attr_SkillSpeed_Name(最多10层)]"
       },
       {
         "id": 320202,
@@ -12295,6 +12301,95 @@
       ]
     ],
     "专武": 20512
+  },
+  {
+    "id": 3203,
+    "icon": "Kajia",
+    "名称": "Katya",
+    "版本": "1.8",
+    "别名": "（待包装）",
+    "阵营": "The Forsakens",
+    "属性": "火",
+    "精通": [
+      "Greatsword",
+      "Dual Pistols"
+    ],
+    "特质": [
+      {
+        "名称": "Impression: Benefit",
+        "描述": "Prioritises gains and trade-offs.",
+        "icon": "T_Dispatch_B02",
+        "标签": "Benefit",
+        "等级": 2,
+        "解锁": [
+          0,
+          2
+        ]
+      },
+      {
+        "名称": "Astute Mind",
+        "描述": "Adapts quickly and may obtain bonus rewards.",
+        "icon": "T_Dispatch_A06",
+        "标签": "Skilled",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
+    ],
+    "基础攻击": 21,
+    "基础生命": 83,
+    "基础防御": 264,
+    "基础护盾": 83,
+    "基础神智": 160,
+    "突破": [],
+    "技能": [
+      {
+        "id": 320301,
+        "类型": "DMG",
+        "icon": "Kajia01",
+        "实体": [
+          {
+            "id": 320301,
+            "形状": {
+              "类型": "Sphere",
+              "Radius": 10
+            },
+            "时长": 4
+          }
+        ],
+        "行为": "召唤实体(320301)"
+      },
+      {
+        "id": 320311,
+        "类型": "DMG",
+        "icon": "Kajia01",
+        "实体": [
+          {
+            "id": 320301,
+            "形状": {
+              "类型": "Sphere",
+              "Radius": 10
+            },
+            "时长": 4
+          }
+        ],
+        "行为": "召唤实体(320301)"
+      },
+      {
+        "id": 320302,
+        "类型": "DMG",
+        "icon": "",
+        "行为": "触发被动功能[SaveSummonLoc](被动效果320301·BP_Kajia_Passive);执行[CreateUnit]"
+      },
+      {
+        "id": 320303,
+        "类型": "Passive",
+        "icon": "ExtraPassive",
+        "行为": "被动效果(320301)(BP_Kajia_Passive)"
+      }
+    ],
+    "碎片": 1003203
   },
   {
     "id": 3301,
@@ -14165,7 +14260,8 @@
       "[Celestial Revelation] Level +2, [Talismans Coalescence] Level +1.",
       "When excess Sanity Recovery overflows, grants 1 stack of +16% ATK Boost for 16s for self and allies, stacking up to 5 times.",
       "[Heaven-Earth Divination] Level +2, [Talismans Coalescence] Level +1.",
-      "When within [Four Realms Align]'s range, increases Zhiliu's PEN stats by 40%, and gains Skill DMG Boost from [Fortune's Clarity]."
+      "When within [Four Realms Align]'s range, increases Zhiliu's PEN stats by 40%, and gains Skill DMG Boost from [Fortune's Clarity].",
+      "Consecutively using the same Combat Skill or Ultimate Skill grants 1 stack of [Hexagram]. Each stack grants +6% Skill Speed and causes Skill DMG to ignore 6% of the target's DEF for 10s, stacking up to 5 times.\nAt max [Hexagram] stacks, the duration of [Four Realms Align] is paused. [Zhen-Xun Convergence] consumes 1 stacks of [Electro Disruption] from the target when dealing damage to increase its DMG multiplier by [600% × Overflow Intensity]."
     ],
     "碎片": 1004102,
     "专武": 10304
@@ -14173,14 +14269,27 @@
   {
     "id": 4103,
     "icon": "SpLise",
-    "名称": "SP黎瑟",
+    "名称": "Rhythm: Flamewrought",
     "版本": "1.7",
-    "别名": "UI_CHAR_SUBTITLE_4103",
-    "阵营": "The Hyperborean Empire",
+    "别名": "First-Light Farer",
+    "出生地": "Hyperborean Empire",
+    "势力": "Unaffiliated",
+    "生日": "08-19",
+    "中文CV": "橙璃",
+    "日文CV": "瀬戸麻沙美",
+    "英文CV": "Sophie Colquhoun",
+    "韩文CV": "김예림",
+    "阵营": "No Affiliation",
     "属性": "雷",
     "精通": [
-      "Katana",
-      "Assault Rifle"
+      "Sword",
+      "Grenade Launcher"
+    ],
+    "额外精通": [
+      "Polearm",
+      "Greatsword",
+      "Dual Blades",
+      "Whipblade"
     ],
     "标签": [
       "DPS",
@@ -14218,11 +14327,15 @@
         ]
       }
     ],
-    "基础攻击": 22,
-    "基础生命": 94,
-    "基础防御": 276,
-    "基础护盾": 94,
-    "基础神智": 150,
+    "基础攻击": 29,
+    "基础生命": 95,
+    "基础防御": 290,
+    "基础护盾": 95,
+    "基础神智": 180,
+    "加成": {
+      "Morale": 0.15,
+      "Skill Intensity": 0.2
+    },
     "突破": [
       {
         "Coin": 5200,
@@ -14258,8 +14371,54 @@
     "技能": [
       {
         "id": 410301,
+        "名称": "Surge Strike",
         "类型": "DMG",
-        "icon": "Linen01",
+        "描述": "Uses [Arcshot] to deal Electro Damage to enemies in front and gains [Tactical Reload].",
+        "icon": "SPLise01",
+        "字段": [
+          {
+            "名称": "Sanity Cost",
+            "影响": "技能效益",
+            "值": 30,
+            "格式": "{}"
+          },
+          {
+            "名称": "DMG",
+            "影响": "技能威力",
+            "值": [
+              0.113,
+              0.139,
+              0.165,
+              0.191,
+              0.217,
+              0.243,
+              0.269,
+              0.295,
+              0.321,
+              0.347,
+              0.373,
+              0.399
+            ],
+            "tag": [
+              "技能",
+              "战技",
+              "SPliseGun01"
+            ],
+            "削韧": 15,
+            "Boss削韧": 5
+          },
+          {
+            "名称": "Duration",
+            "影响": "技能耐久",
+            "值": 6,
+            "格式": "{}s"
+          },
+          {
+            "名称": "Max Firing Range",
+            "值": 50,
+            "格式": "{}m"
+          }
+        ],
         "升级": [
           {
             "Coin": 1120,
@@ -14314,12 +14473,97 @@
             "Twilight Tread": 1
           }
         ],
-        "行为": "造成角色攻击100.0%的伤害(技能/战技/SPliseGun01);削减战姿15;造成角色攻击100.0%的伤害(技能/战技/SPliseGun02);造成角色攻击100.0%的伤害(技能/战技);附加增益(113);附加增益(410311)"
+        "术语解释": {
+          "Tactical Reload": "Immediately reloads [Arcshot] once. While [Arcshot] is held, it automatically reloads after each shot. Dealing Skill DMG is guaranteed to trigger an additional Electro Bonus Effect."
+        },
+        "子技能": [
+          {
+            "id": 410311,
+            "类型": "DMG",
+            "icon": "SPLise01",
+            "行为": "附加增益(410311)(持续6秒);造成角色攻击11.3%的伤害(技能/战技/SPliseGun01);削减战姿15;造成角色攻击11.3%的伤害(技能/战技/SPliseGun02);附加增益(410322)[每0.2秒执行技能效果(410326)];移除增益(410322)[每0.2秒执行技能效果(410326)]",
+            "名称": "Tactical Reload"
+          }
+        ],
+        "行为": "附加增益(410311)(持续6秒);造成角色攻击11.3%的伤害(技能/战技/SPliseGun01);削减战姿15;造成角色攻击11.3%的伤害(技能/战技/SPliseGun02)"
       },
       {
         "id": 410302,
+        "名称": "Vortex Shot",
         "类型": "Buff",
-        "icon": "Linen02_On",
+        "描述": "Summons 2 [Volt Rifles], switches the Ranged Weapon to [Arcshot], and enters [Deadeye Domain], during which shooting consumes Sanity. [Deadeye Domain] ends when this skill is used again or a Ranged Attack is used.\n[Deadeye Domain] grants 1 stack of [Steady Aim] every 0.2s.",
+        "icon": "SPLise02_On",
+        "字段": [
+          {
+            "名称": "Sanity Cost",
+            "影响": "技能效益",
+            "值": 30,
+            "格式": "{}"
+          },
+          {
+            "名称": "[Arcshot] Sanity Cost per Shot",
+            "影响": "技能效益",
+            "值": 50,
+            "格式": "{}"
+          },
+          {
+            "名称": "[Sniper Bullet] DMG",
+            "影响": "技能威力",
+            "值": [
+              0.049,
+              0.059,
+              0.069,
+              0.079,
+              0.089,
+              0.099,
+              0.109,
+              0.119,
+              0.129,
+              0.139,
+              0.149,
+              0.159
+            ],
+            "tag": [
+              "技能",
+              "终结技",
+              "SPliseGun01"
+            ],
+            "削韧": 10
+          },
+          {
+            "名称": "[Electrified Sniper Bullet] DMG",
+            "影响": "技能威力",
+            "值": [
+              0.351,
+              0.428,
+              0.505,
+              0.582,
+              0.659,
+              0.736,
+              0.813,
+              0.89,
+              0.967,
+              1.044,
+              1.121,
+              1.198
+            ],
+            "tag": [
+              "技能",
+              "终结技",
+              "SPliseGun01"
+            ],
+            "削韧": 15
+          },
+          {
+            "名称": "Skill SPD Bonus per [Steady Aim] Stack",
+            "值": 0.04
+          },
+          {
+            "名称": "[Arcshot] Sanity Cost per Shot Reduced per [Steady Aim] Stack",
+            "值": 1,
+            "格式": "{}"
+          }
+        ],
         "升级": [
           {
             "Coin": 1120,
@@ -14374,12 +14618,59 @@
             "Twilight Tread": 1
           }
         ],
-        "行为": "附加增益(410321)[激活技能, 召唤武器, 禁用[下落攻击, 重击, 蓄力射击, 滑行攻击]];附加增益(410322)[每0.2秒执行技能效果(410326)];附加增益(410323)[替换动作]"
+        "术语解释": {
+          "Deadeye Domain": "Continuously calibrates Accuracy. Shooting with [Arcshot] resets Accuracy and launches a [Sniper Bullet], dealing Electro DMG to all enemies in its path. At 100% Accuracy, shoots an [Electrified Sniper Bullet] instead and becomes immune to Hitstun when taking damage.",
+          "Steady Aim": "Increases Skill Speed and reduces Sanity Cost when shooting with [Arcshot]. Lasts indefinitely and stacks up to 30 times. All stacks are removed upon exiting [Deadeye Domain].",
+          "Volt Rifle": "Repeats [Arcshot] shot and [Surge Strike]."
+        },
+        "子技能": [
+          {
+            "id": 410325,
+            "类型": "",
+            "icon": "SPLise02_Off",
+            "行为": "移除增益(410322)[每0.2秒执行技能效果(410326)];移除增益(410321)[激活技能, 召唤武器];移除增益(410323)[激活技能, 替换动作, 禁用[下落攻击, 重击, 蓄力射击, 滑行攻击]];移除增益(410324)[激活技能];移除增益(410327)",
+            "名称": "Deadeye Domain"
+          },
+          {
+            "id": 410326,
+            "类型": "",
+            "icon": "SPLise02_Off",
+            "行为": "移除增益(410322)[每0.2秒执行技能效果(410326)];移除增益(410321)[激活技能, 召唤武器];移除增益(410323)[激活技能, 替换动作, 禁用[下落攻击, 重击, 蓄力射击, 滑行攻击]];移除增益(410324)[激活技能];移除增益(410327)",
+            "名称": "Steady Aim"
+          }
+        ],
+        "行为": "附加增益(410321)[激活技能, 召唤武器];附加增益(410322)[每0.2秒执行技能效果(410326)];附加增益(410323)[激活技能, 替换动作, 禁用[下落攻击, 重击, 蓄力射击, 滑行攻击]]"
       },
       {
         "id": 410303,
+        "名称": "Electro Coordination",
         "类型": "Passive",
-        "icon": "Linen03",
+        "描述": "DMG dealt with [Electrified Sniper Bullet] consumes 1 stack of [Electro Disruption] and grants 1 stack of [Arc Mastery], up to 6 stacks.",
+        "icon": "SPLise03",
+        "字段": [
+          {
+            "名称": "Sanity Restored by [Arc Mastery]",
+            "值": 1,
+            "格式": "{}"
+          },
+          {
+            "名称": "[Arc Mastery] Skill DMG Boost",
+            "值": [
+              0.052,
+              0.064,
+              0.076,
+              0.088,
+              0.1,
+              0.112,
+              0.124,
+              0.136,
+              0.148,
+              0.16,
+              0.172,
+              0.184
+            ]
+          }
+        ],
         "升级": [
           {
             "Coin": 1120,
@@ -14434,15 +14725,44 @@
             "Twilight Tread": 1
           }
         ],
+        "术语解释": {
+          "Arc Mastery": "Restores Sanity and increases Skill DMG. While this effect is active, [Arcshot] shots and [Surge Strike] have a chance to trigger 1 additional time. The chance is [Ranged Weapon Multishot × 30]%. The remaining time of the effect is refreshed with each new stack gained."
+        },
         "行为": "被动效果(410301)(BP_SPLise_Passive)"
       },
       {
         "id": 410304,
+        "名称": "Honed Technique",
         "类型": "Passive",
-        "icon": "ExtraPassive"
+        "描述": "DMG dealt by [Arcshot] and [Volt Rifle] increases by [Ranged Weapon CRIT Chance × (Ranged Weapon CRIT Damage - 1)]%, with a minimum of 0.",
+        "icon": "ExtraPassive",
+        "行为": "被动效果(410302)(BP_SPLise_Passive2)"
+      },
+      {
+        "id": 410003,
+        "名称": "Divine Retribution",
+        "类型": "Support",
+        "描述": "[Available only when deployed as a Combat Partner]\nIncreases ATK for self and Electro allies.",
+        "icon": "PhantomPassive",
+        "字段": [
+          {
+            "名称": "ATK Boost",
+            "值": 0.5
+          }
+        ],
+        "行为": "被动效果(410003)(BP_Common_PhantomPassive)"
       }
     ],
-    "碎片": 1004103
+    "溯源": [
+      "[Arcshot] shots have no recoil. Firing an [Electrified Sniper Bullet] with [Arcshot] additionally triggers [Surge Strike] once. This trigger consumes no Sanity and does not end [Deadeye Domain].",
+      "While in [Deadeye Domain], gain Invisibility if other allies are detectable by enemies. When Skill Speed exceeds 2, Skill DMG dealt in [Deadeye Domain] gains an independent damage multiplier equal to [Skill Speed × 15].",
+      "[Surge Strike] Level +2; [Vortex Shot] Level +1.",
+      "While in [Deadeye Domain], gain a additional stack of [Steady Aim] every 0.2s. Each stack of [Steady Aim] additionally grants +3% Morale.",
+      "[Electro Coordination] Level +2; [Vortex Shot] Level +1.",
+      "Enemies within a radius of 50m can be seen through terrain, and [Surge Strike] can deal damage through terrain. While in [Deadeye Domain], increase Rhythm's PEN stats by 60%."
+    ],
+    "碎片": 1004103,
+    "专武": 20306
   },
   {
     "id": 4201,
@@ -14992,7 +15312,8 @@
       "[Precipitous Thunderfall] Level +2; [Soaring Sky-High] Level +1.",
       "Plunging Attack deals additional Electro damage equal to 12% of Yuming's Skill Intensity, with a maximum of 36%.",
       "[Grimscales] Level +2; [Soaring Sky-High] Level +1.",
-      "During [Xuanjiao Manifest], increases PEN stats by 25%. After triggering [Thunderous Onslaught] 6 times, deals an additional instance of [Thunderous Onslaught] damage at 130% of its original multiplier to all targets affected. Can trigger once every 6s."
+      "During [Xuanjiao Manifest], increases PEN stats by 25%. After triggering [Thunderous Onslaught] 6 times, deals an additional instance of [Thunderous Onslaught] damage at 130% of its original multiplier to all targets affected. Can trigger once every 6s.",
+      "Using [Starstorm Descent] grants Yuming and allies stacks of [Xuanjiao's Blessing] equal to the number of Electro characters in the team, lasting 10s, up to 3 stacks. Each application resets the stack count.\nEach stack of [Xuanjiao's Blessing] grants +30% Morale and +12.5% Electro DMG Dealt.\nAt 2 or more stacks, grants +20% PEN stats.\nAt 3 stacks, Xuanjiao absorbs HP damage taken by allied characters other than [Yuming]."
     ],
     "碎片": 1004201,
     "专武": 10203
@@ -18502,11 +18823,11 @@
   },
   {
     "id": 5402,
-    "icon": "Dafu",
-    "名称": "莉莉蔻",
+    "icon": "Lilikou",
+    "名称": "Lirico",
     "版本": "2.0",
     "别名": "UI_CHAR_SUBTITLE_5402",
-    "阵营": "The Hyperborean Empire",
+    "阵营": "The Elysian Church",
     "属性": "风",
     "精通": [
       "Polearm",
@@ -18549,49 +18870,269 @@
     "基础防御": 252,
     "基础护盾": 140,
     "基础神智": 150,
-    "突破": [],
+    "加成": {
+      "Overflow Intensity": 1,
+      "Skill Intensity": 0.2
+    },
+    "突破": [
+      {
+        "Coin": 4160,
+        "Vermilion Teardrop": 10,
+        "Withered Bough": 5
+      },
+      {
+        "Coin": 8320,
+        "Snowswift Tail Feather": 5,
+        "Galeweaver": 7
+      },
+      {
+        "Coin": 13040,
+        "Snowswift Tail Feather": 10,
+        "Galeweaver": 15
+      },
+      {
+        "Coin": 27760,
+        "Snowswift Tail Feather": 20,
+        "Oceanifly": 6
+      },
+      {
+        "Coin": 65280,
+        "Snowswift Tail Feather": 40,
+        "Oceanifly": 12
+      },
+      {
+        "Coin": 194400,
+        "Snowswift Tail Feather": 80,
+        "Oceanifly": 25
+      }
+    ],
     "技能": [
       {
         "id": 540201,
+        "名称": "风起之颂(待包装)",
         "类型": "Buff",
+        "描述": "(待包装)\n进入[颂歌]状态，获得飞行能力。[颂歌]状态中持续消耗神智，自身和队友造成的伤害提高，近战攻击与远程攻击被替换为[弹奏]，神智下降为0或再次使用此技能时退出[颂歌]状态。",
         "icon": "Saiqi02_On",
+        "cd": 1,
+        "字段": [
+          {
+            "名称": "Sanity Cost",
+            "影响": "技能效益",
+            "值": 10,
+            "格式": "{}"
+          },
+          {
+            "名称": "Sanity Cost per second",
+            "影响": "技能效益,技能耐久",
+            "值": 10,
+            "格式": "{}"
+          },
+          {
+            "名称": "Homing Projectile DMG",
+            "影响": "MultiShoot",
+            "值": 1,
+            "tag": [
+              "远程",
+              "武器",
+              "召唤物"
+            ],
+            "削韧": 15,
+            "Boss削韧": 7
+          },
+          {
+            "名称": "DMG Radius",
+            "影响": "技能范围",
+            "值": 3,
+            "格式": "{}m"
+          },
+          {
+            "名称": "DMG Boost",
+            "值": 0.3
+          }
+        ],
+        "术语解释": {
+          "弹奏(待包装)": "(待包装)\n按一定节奏释放时，会根据判定触发[良好][精彩][神技]其中一种效果，依据效果发射不同数量的追踪弹锁定随机敌人并获得等量[传颂值]，命中造成风属性范围伤害，视为远程武器伤害。\n[良好]：3发\n[精彩]：5发\n[神技]：6发"
+        },
         "子技能": [
           {
             "id": 540211,
             "类型": "Buff",
             "icon": "Saiqi02_Off",
-            "行为": "移除增益(540201)[激活技能, 替换动作, 启用飞行, 召唤武器, 禁用[下落攻击, 重击, 滑行攻击, 普攻]];触发被动功能[解除变身/离场](被动效果540201·BP_Lilikou)"
+            "cd": 1,
+            "行为": "移除;触发被动功能[解除变身/离场](被动效果540201)",
+            "名称": "弹奏(待包装)"
           }
         ],
-        "行为": "附加增益(540201)[激活技能, 替换动作, 启用飞行, 召唤武器, 禁用[下落攻击, 重击, 滑行攻击, 普攻]];附加增益(540211)[Damage Dealt+30%]"
+        "行为": "附加增益(540241);附加增益(540201)[每1秒消耗10神智, 激活技能, 替换动作, 启用飞行, 召唤武器, 禁用[下落攻击, 重击, 滑行攻击, 普攻]]"
       },
       {
         "id": 540202,
+        "名称": "风声共鸣(待包装)",
         "类型": "Buff",
+        "描述": "(待包装)\n生成持续跟随自身一定时间的[风之回响]，进入[齐颂之诗]及[颂歌]状态。[风之回响]存在期间，长按释放此技能时会重新生成[风之回响]。",
         "icon": "Dafu02",
         "cd": 5,
+        "字段": [
+          {
+            "名称": "Sanity Cost",
+            "影响": "技能效益",
+            "值": 30,
+            "格式": "{}"
+          },
+          {
+            "名称": "Duration",
+            "影响": "技能耐久",
+            "值": 16,
+            "格式": "{}s"
+          },
+          {
+            "名称": "[Echoes in Wind]Homing Projectile DMG",
+            "值": 1,
+            "tag": [
+              "远程",
+              "武器"
+            ],
+            "削韧": 15,
+            "Boss削韧": 7
+          },
+          {
+            "名称": "[Verse Retold] DMG",
+            "影响": "技能威力,HyperTriggerRate",
+            "值": 1,
+            "tag": [
+              "技能",
+              "充盈"
+            ],
+            "削韧": 15,
+            "Boss削韧": 7
+          },
+          {
+            "名称": "[Verse Retold] Damage Radius",
+            "影响": "技能范围",
+            "值": 10,
+            "格式": "{}m"
+          },
+          {
+            "名称": "[Echoes in Wind]Extends [Echoes in Wind] Duration",
+            "影响": "技能耐久",
+            "值": 2,
+            "格式": "{}s"
+          },
+          {
+            "名称": "[Verse in Chorus]DMG Boost",
+            "值": 0.5
+          },
+          {
+            "名称": "[Verse in Chorus]DMG Taken Boost",
+            "值": 0.3
+          },
+          {
+            "名称": "[Verse in Chorus]Fly Speed Decrease",
+            "值": 0.5
+          },
+          {
+            "名称": "[Verse Interwoven]HP Recovery per second",
+            "影响": "技能威力",
+            "值": 1,
+            "值2": 35,
+            "格式": "{%}ATK+{}"
+          }
+        ],
+        "术语解释": {
+          "风之回响(待包装)": "(待包装)\n存在期间，[莉莉蔻]受到伤害时不会产生僵直；触发[弹奏]时，[风之回响]基于[莉莉蔻]远程武器多重射击属性值额外发射追踪弹，命中造成风属性伤害，视为远程武器伤害；触发[传颂之诗]时，[风之回响]持续时间延长，并触发1次独立倍率但无治疗效果的[传颂之诗]。",
+          "齐颂之诗(待包装)": "(待包装)\n状态持续期间，自身造成的伤害提高，受到的伤害降低，飞行速度降低；点按释放此技能或退出[颂歌]状态时会切换至[交织之诗]，[风之回响]会停止跟随。",
+          "交织之诗(待包装)": "(待包装)\n状态持续期间，自身和队友持续回复生命；[风之回响]在一定范围内时，点按释放此技能时会传送至[风之回响]所在的位置并切换至[齐颂之诗]，[风之回响]会重新跟随。"
+        },
         "子技能": [
           {
             "id": 540221,
             "类型": "Buff",
             "icon": "Dafu02",
-            "cd": 1
+            "cd": 1,
+            "名称": "风之回响(待包装)"
+          },
+          {
+            "id": 540222,
+            "类型": "",
+            "icon": "",
+            "名称": "齐颂之诗(待包装)"
           }
         ],
-        "行为": "移除增益(540221)[激活技能];延迟3秒后附加增益(540221)[激活技能](持续16秒);延迟3秒后附加增益(540201)[激活技能, 替换动作, 启用飞行, 召唤武器, 禁用[下落攻击, 重击, 滑行攻击, 普攻]]"
+        "行为": "移除;延迟3秒后附加增益(540221)[激活技能](持续16秒);延迟0.5秒后附加增益(540201)[每1秒消耗10神智, 激活技能, 替换动作, 启用飞行, 召唤武器, 禁用[下落攻击, 重击, 滑行攻击, 普攻]]"
       },
       {
         "id": 540203,
+        "名称": "流传(待包装)",
         "类型": "Passive",
+        "描述": "(待包装)\n根据持有的[传颂值]提高自身充盈威力，[传颂值]最高999点。每累计增加15点[传颂值]，下次[弹奏]消耗累计值触发1次[传颂之诗]，造成风属性范围充盈伤害，对自身和队友提供治疗。\n造成技能伤害时可以基于远程武器触发概率触发风属性额外效果。",
         "icon": "Dafu03",
-        "行为": "被动效果(540201)(BP_Lilikou);增益(540203)[每层+0.001Overflow Intensity(最多999层)];增益(540231);增益(540232)[每层+0.004Overflow Intensity(最多100层)]"
+        "字段": [
+          {
+            "名称": "Overflow Intensity Increase (first 100 points)",
+            "值": 0.04,
+            "值2": 0.01,
+            "格式": "{%}+{%}"
+          },
+          {
+            "名称": "Overflow Intensity Increase (above 100 points)",
+            "值": 0.01
+          },
+          {
+            "名称": "[Verse Retold] DMG",
+            "影响": "技能威力,HyperTriggerRate",
+            "值": 1,
+            "tag": [
+              "技能",
+              "充盈"
+            ]
+          },
+          {
+            "名称": "[Verse Retold] Damage Radius",
+            "影响": "技能范围",
+            "值": 10,
+            "格式": "{}m"
+          },
+          {
+            "名称": "Healing",
+            "影响": "技能威力",
+            "值": 1,
+            "值2": 35,
+            "格式": "{%}ATK+{}"
+          }
+        ],
+        "行为": "被动效果(540201)"
       },
       {
         "id": 540204,
+        "名称": "奋起(待包装)",
         "类型": "Passive",
+        "描述": "Healing an ally additionally grants +Overflow Intensity for 6s equal to 25.0% of [Lirico]'s Overflow Intensity, up to 500.0%.",
         "icon": "ExtraPassive",
-        "行为": "被动效果(540202)(BP_Lilikou_Extra);增益(540204)[Overflow Intensity上限1]"
+        "行为": "被动效果(540202)"
+      },
+      {
+        "id": 510191,
+        "名称": "Peep & Peck",
+        "类型": "Support",
+        "描述": "[Available only when deployed as a Combat Partner]\nIncreases Resolve for self and allies if 2 or more characters on the team share the same element.",
+        "icon": "PhantomPassive",
+        "字段": [
+          {
+            "名称": "Resolve Boost",
+            "值": 0.05
+          }
+        ],
+        "行为": "被动效果(510191)(BP_Common_PhantomPassive)"
       }
-    ]
+    ],
+    "溯源": [
+      "Inflicting [Anemo Disruption] deals 100% Anemo Skill DMG as Overflow DMG to enemies within 6m, up to 8 times. Triggering [Verse Retold] resets the count.",
+      "While [Canticle] is active, Lirico and allies gain +20% PEN stats, with an additional +16% PEN stats when dealing Overflow DMG.",
+      "[风起之颂(待包装)]等级+2，[流传(待包装)]等级+1。",
+      "While [Echoes in Wind] is active, Overflow DMG dealt by Lirico and allies is 120% of its original value.",
+      "[风声共鸣(待包装)]等级+2，[流传(待包装)]等级+1。",
+      "Triggering [Verse Retold] grants +30% PEN stats for 6s. While this effect is active, CRIT Damage dealt by Lirico or allies additionally triggers [Intron Lv. 1]'s AoE DMG once. The same damage source can trigger this effect once every 0.5s."
+    ],
+    "碎片": 1005402
   }
 ]

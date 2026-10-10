@@ -21,38 +21,12 @@ function WBP_SimpleTalk_Mobile:ChangeAutoPlayUI()
 end
 
 function WBP_SimpleTalk_Mobile:AdaptPlatform()
-  if self.KeyNode then
-    self.KeyNode:SetVisibility(ESlateVisibility.Collapsed)
-  end
-  if self.Img_Mouse then
-    self.Img_Mouse:SetVisibility(ESlateVisibility.Collapsed)
-  end
-  if self.Btn_DimensionDrawArea and self.Btn_DimensionDrawArea.Key_Dimension then
-    self.Btn_DimensionDrawArea.Key_Dimension:SetVisibility(ESlateVisibility.Collapsed)
-  end
-end
-
-function WBP_SimpleTalk_Mobile:OnExitButtonSelectedPlatform(bIsSelect)
-end
-
-function WBP_SimpleTalk_Mobile:OnExitButtonReleasedByPlatform()
-  self:PlayAnimation(self.BtnQuit_Normal)
-end
-
-function WBP_SimpleTalk_Mobile:PlayExitButtonHoveredPerformanceByPlatform()
-end
-
-function WBP_SimpleTalk_Mobile:PlayExitButtonUnhoveredPerformanceByPlatform()
+  self.OptionComp:Event_AdaptPlatform(true)
+  self.DimensionComp:Event_AdaptPlatform(true)
 end
 
 function WBP_SimpleTalk_Mobile:InitAutoPlay()
   self:ChangeAutoPlayUI()
-end
-
-function WBP_SimpleTalk_Mobile:ChangeImgMouseVisibility(OptionData)
-  if self.Img_Mouse then
-    self.Img_Mouse:SetVisibility(ESlateVisibility.Collapsed)
-  end
 end
 
 return WBP_SimpleTalk_Mobile

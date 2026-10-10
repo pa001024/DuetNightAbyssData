@@ -6,8 +6,12 @@ local function GetCharacterUniqueKey(CharData)
   return CharData and (CharData.Uuid or CharData.CharId) or nil
 end
 
-local function GetPetId(PetData)
-  return PetData and PetData.PetId or nil
+local function GetPetUniqueKey(PetData)
+  return PetData and PetData.UniqueId or nil
+end
+
+local function GetItemUniqueKey(ItemData)
+  return ItemData and ItemData.ItemId or nil
 end
 
 local function GetWeaponId(WeaponData)
@@ -23,6 +27,25 @@ local function CloneSimpleTable(Value)
     NewValue[Key] = SubValue
   end
   return NewValue
+end
+
+local function ClearPetSlot(Slot)
+  if not Slot then
+    return
+  end
+  Slot.PetData = nil
+  Slot.OwnerEntityId = nil
+  Slot.Transform = nil
+  Slot.TransformRotation = nil
+end
+
+local function ClearItemSlot(Slot)
+  if not Slot then
+    return
+  end
+  Slot.ItemData = nil
+  Slot.Transform = nil
+  Slot.TransformRotation = nil
 end
 
 function M:NormalizeCharacterSlots(Draft)
@@ -86,17 +109,48 @@ function M:FindCharacterSlotByCharacterKey(Draft, CharacterKey)
   return nil
 end
 
-function M:FindPetSlotByPetId(Draft, PetId)
-  if not PetId then
+function M:_FindUniqueSlotByKey(Draft, TargetKey, SlotsField, DataField, EnsureMethod, GetKey)
+  if nil == TargetKey then
     return nil
   end
-  DisplayDraft:EnsurePetSlots(Draft)
-  for Index, Slot in ipairs(Draft.PetSlots) do
-    if GetPetId(Slot.PetData) == PetId then
+  DisplayDraft[EnsureMethod](DisplayDraft, Draft)
+  for Index, Slot in ipairs(Draft[SlotsField] or {}) do
+    if GetKey(Slot and Slot[DataField] or nil) == TargetKey then
       return Slot, Index
     end
   end
   return nil
+end
+
+function M:_BuildUniqueSlotIndexMap(Draft, SlotsField, DataField, EnsureMethod, GetKey)
+  local OccupiedSlotMap = {}
+  if not Draft then
+    return OccupiedSlotMap
+  end
+  DisplayDraft[EnsureMethod](DisplayDraft, Draft)
+  for Index, Slot in ipairs(Draft[SlotsField] or {}) do
+    local UniqueKey = GetKey(Slot and Slot[DataField] or nil)
+    if nil ~= UniqueKey then
+      OccupiedSlotMap[UniqueKey] = Index
+    end
+  end
+  return OccupiedSlotMap
+end
+
+function M:FindPetSlotByPetKey(Draft, PetKey)
+  return self:_FindUniqueSlotByKey(Draft, PetKey, "PetSlots", "PetData", "EnsurePetSlots", GetPetUniqueKey)
+end
+
+function M:BuildPetOccupiedSlotIndexMap(Draft)
+  return self:_BuildUniqueSlotIndexMap(Draft, "PetSlots", "PetData", "EnsurePetSlots", GetPetUniqueKey)
+end
+
+function M:FindItemSlotByItemKey(Draft, ItemKey)
+  return self:_FindUniqueSlotByKey(Draft, ItemKey, "ItemSlots", "ItemData", "EnsureItemSlots", GetItemUniqueKey)
+end
+
+function M:BuildItemOccupiedSlotIndexMap(Draft)
+  return self:_BuildUniqueSlotIndexMap(Draft, "ItemSlots", "ItemData", "EnsureItemSlots", GetItemUniqueKey)
 end
 
 function M:FindWeaponConflictSlot(Draft, WeaponId, IgnoreSlotIndex)
@@ -149,16 +203,26 @@ end
 
 function M:AssignPetToSlot(Draft, SlotIndex, PetData)
   local TargetSlot = DisplayDraft:GetPetSlot(Draft, SlotIndex)
-  local PetId = GetPetId(PetData)
-  if not TargetSlot or not PetId then
+  local PetKey = GetPetUniqueKey(PetData)
+  if not TargetSlot or nil == PetKey then
     return TargetSlot
   end
-  local OldSlot = self:FindPetSlotByPetId(Draft, PetId)
+  local OldSlot = self:FindPetSlotByPetKey(Draft, PetKey)
   if OldSlot and OldSlot ~= TargetSlot then
-    OldSlot.PetData = nil
+    ClearPetSlot(OldSlot)
+  end
+  local bReplacingOccupiedSlot = DisplayDraft:IsPetSlotOccupied(TargetSlot)
+  local KeepTransform, KeepTransformRotation
+  if bReplacingOccupiedSlot then
+    KeepTransform = TargetSlot.Transform or DisplayConfig:GetDefaultPetTransform(SlotIndex)
+    KeepTransformRotation = CloneSimpleTable(TargetSlot.TransformRotation)
+  else
+    KeepTransform = DisplayConfig:GetDefaultPetTransform(SlotIndex)
   end
   TargetSlot.PetData = PetData
-  TargetSlot.Transform = TargetSlot.Transform or DisplayConfig:GetDefaultPetTransform(SlotIndex)
+  TargetSlot.OwnerEntityId = nil
+  TargetSlot.Transform = KeepTransform
+  TargetSlot.TransformRotation = KeepTransformRotation
   return TargetSlot
 end
 
@@ -178,10 +242,32 @@ end
 
 function M:RemovePetFromSlot(Draft, SlotIndex)
   local Slot = DisplayDraft:GetPetSlot(Draft, SlotIndex)
-  if not Slot then
-    return
+  ClearPetSlot(Slot)
+end
+
+function M:AssignItemToSlot(Draft, SlotIndex, ItemData)
+  local TargetSlot = DisplayDraft:GetItemSlot(Draft, SlotIndex)
+  local ItemKey = GetItemUniqueKey(ItemData)
+  if not TargetSlot or nil == ItemKey then
+    return nil
   end
-  Slot.PetData = nil
+  local OldSlot = self:FindItemSlotByItemKey(Draft, ItemKey)
+  if OldSlot and OldSlot ~= TargetSlot then
+    ClearItemSlot(OldSlot)
+  end
+  TargetSlot.ItemData = ItemData
+  TargetSlot.Transform = DisplayConfig:GetDefaultItemTransform(SlotIndex, ItemData)
+  TargetSlot.TransformRotation = nil
+  return TargetSlot
+end
+
+function M:RemoveItemFromSlot(Draft, SlotIndex)
+  local Slot = DisplayDraft:GetItemSlot(Draft, SlotIndex)
+  if not DisplayDraft:IsItemSlotOccupied(Slot) then
+    return false
+  end
+  ClearItemSlot(Slot)
+  return true
 end
 
 function M:ApplyWeaponToCharacterSlot(Draft, SlotIndex, WeaponData)

@@ -125,6 +125,16 @@ return ReadOnly("BehaviorRuleId", {
     OutBattleList = {8003001},
     RuleId = 8003
   },
+  [8004] = {
+    DefaultAlert = 8004100,
+    OutBattleList = {8004001},
+    RuleId = 8004
+  },
+  [8005] = {
+    DefaultAlert = 8005100,
+    OutBattleList = {8005001},
+    RuleId = 8005
+  },
   [9001] = {
     DefaultAlert = 9001100,
     OutBattleList = {9001001},

@@ -798,7 +798,7 @@ function WBP_GameStartMainPage_C:GetAllAvatars()
   else
     CdnTool:GetAllAvatars(self.AccountId, Callback)
   end
-  self:AddTimer(3, function()
+  self:AddTimer(5, function()
     if not GWorld.GetAvatarInfos then
       if GWorld.NetworkMgr then
         GWorld.NetworkMgr:Disconnect()
@@ -880,10 +880,7 @@ function WBP_GameStartMainPage_C:OnHeroSDKLogin(Result, UserInfoStr, Msg)
     DebugPrint("HeroSDK登录成功: ", UserInfoStr, Msg)
     DebugPrint("sdk user id", HeroUSDKUtils.GetUserInfo().sdkUserId, type(HeroUSDKUtils.GetUserInfo().sdkUserId))
     HeroUSDKSubsystem(self):SetNewBDCPublicAttriubuteOnInit()
-    local BDCSubsystem = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UNewBdcSubsystem)
-    if BDCSubsystem then
-      BDCSubsystem:Login(HeroUSDKUtils.GetUserInfo().sdkUserId, "")
-    end
+    HeroUSDKSubsystem(self):LoginNewBDCWhenReady(HeroUSDKUtils.GetUserInfo().sdkUserId, "")
     HeroUSDKSubsystem(self):UploadTrackLog("sdk_login", Json.encode({login_state = 1}))
     HeroUSDKSubsystem(self):MSDKUploadCommonEventByEventName("finish_sdk_login")
     GWorld.GetAvatarInfos = nil
@@ -972,7 +969,7 @@ function WBP_GameStartMainPage_C:EMLogin()
   local bUploaded = false
   
   local function TimerFunc()
-    self:AddTimer(3, function()
+    self:AddTimer(5, function()
       local GameInstance = self:GetGameInstance()
       if GWorld.NetworkMgr then
         DebugPrint("Disconnecting existing network connection...")

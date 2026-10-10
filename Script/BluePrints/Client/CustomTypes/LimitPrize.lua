@@ -28,7 +28,8 @@ LimitPrize.__Props__ = {
   Prizes = prop.prop("IntList", "save"),
   SelfSelect = prop.prop("Int2IntDict", "client save", {}),
   HasDrawPrizes = prop.prop("IntList", "client save"),
-  Record = prop.prop("LimitPrizeRecordList", "client save")
+  Record = prop.prop("LimitPrizeRecordList", "client save"),
+  ExtraItemsReceived = prop.prop("Str2IntDict", "save")
 }
 
 function LimitPrize:IsRoundEnd()

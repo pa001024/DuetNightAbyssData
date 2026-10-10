@@ -1,4 +1,5 @@
 require("UnLua")
+local MonsterUtils = require("Utils.MonsterUtils")
 local M = Class()
 local WeaponMontageTagsConfig = {
   "Bow",
@@ -33,7 +34,8 @@ function M:GetDistructableBodyId()
   if not self.Owner:IsRealMonster() or self.Owner:IsPhantom() then
     return
   end
-  return DataMgr.Monster[self.Owner.UnitId].DistructableId
+  local MonsterData = MonsterUtils.GetMonsterDataByOwner(self.Owner)
+  return MonsterData and MonsterData.DistructableId
 end
 
 function M:GetPlayerWeaponMontageTags()

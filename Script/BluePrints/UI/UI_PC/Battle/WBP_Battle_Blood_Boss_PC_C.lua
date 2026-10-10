@@ -2,6 +2,7 @@ require("UnLua")
 local CommonConst = require("CommonConst")
 local Const = require("Const")
 local BloodBarUtils = require("BluePrints.UI.BloodBar.BloodBarUtils")
+local MonsterUtils = require("Utils.MonsterUtils")
 local WBP_Battle_Blood_Boss_PC_C = Class("BluePrints.UI.BP_UIState_C")
 
 function WBP_Battle_Blood_Boss_PC_C:Initialize(Initializer)
@@ -52,8 +53,8 @@ function WBP_Battle_Blood_Boss_PC_C:InitBossUI(Owner, IsBossInPart, BossUIType)
 end
 
 function WBP_Battle_Blood_Boss_PC_C:InitBossComponent()
-  local BossData = DataMgr.Monster[self.Owner.UnitId]
-  if self.Owner:IsBossMonster() then
+  local BossData = MonsterUtils.GetMonsterDataByOwner(self.Owner)
+  if self.Owner:IsBossMonster() and BossData then
     if BossData.BossUIValues.PhaseValues ~= nil then
       self.PhaseValues = BossData.BossUIValues.PhaseValues
     else
@@ -557,9 +558,7 @@ function WBP_Battle_Blood_Boss_PC_C:UpdateBossToughness(bNowBossInDefeated)
   if not IsValid(self.Owner) or not self.IsShowToughnessBar then
     return
   end
-  if not self.MaxTN then
-    self.MaxTN = self.Owner:GetAttr("MaxTN")
-  end
+  self.MaxTN = self.Owner:GetAttr("MaxTN")
   if not self.NowTN then
     self.NowTN = self.MaxTN
   end

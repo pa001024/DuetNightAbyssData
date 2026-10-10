@@ -224,12 +224,6 @@ function M:CreateKeyInfoLists()
     },
     Desc = ""
   }
-  self.EditNameBottomKeyInfoList = {
-    GamePadInfoList = {
-      {Type = "Img", ImgShortPath = "Left"}
-    },
-    Desc = GText("UI_CTL_Pet_Rename")
-  }
   self.SelectBottomKeyInfoList = {
     GamePadInfoList = {
       {Type = "Img", ImgShortPath = "A"}
@@ -269,6 +263,9 @@ function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
 end
 
 function M:OnRepeatKeyDown(MyGeometry, InKeyEvent)
+  if self.PetRecyclePage then
+    return Handled
+  end
   local Reply, IsHandled
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
@@ -283,6 +280,10 @@ function M:OnRepeatKeyDown(MyGeometry, InKeyEvent)
 end
 
 function M:OnKeyDown(MyGeometry, InKeyEvent)
+  if self.PetRecyclePage then
+    self.PetRecyclePage:OnKeyDown(MyGeometry, InKeyEvent)
+    return Handled
+  end
   local MyInKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local MyInKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(MyInKey)
   if CommonUtils:IfExistSystemGuideUI(self) then
@@ -306,6 +307,9 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
 end
 
 function M:OnKeyUp(MyGeometry, InKeyEvent)
+  if self.PetRecyclePage then
+    return Handled
+  end
   local MyInKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local MyInKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(MyInKey)
   if CommonUtils:IfExistSystemGuideUI(self) then
@@ -336,6 +340,10 @@ function M:OnKeyUp(MyGeometry, InKeyEvent)
 end
 
 function M:OnFocusReceived(MyGeometry, InFocusEvent)
+  if self.PetRecyclePage then
+    self.PetRecyclePage:SetFocus_Lua()
+    return Handled
+  end
   if self.CurrentSubUI and self.CurrentSubUI.UnlockDialog then
     return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self.CurrentSubUI.UnlockDialog)
   end

@@ -4414,6 +4414,217 @@ return ReadOnly("CharacterDataTarget", {
       CharText = "UI_CHAR_DATA_TEXT_41020404"
     }
   },
+  [4103] = {
+    [29001] = {
+      CharDataName = T.RT_1,
+      CharDataTarget = 29001,
+      CharDataTargetDescribe = "UI_CHAR_DATA_UNLOCK_20",
+      CharDataTargetParam = 1,
+      CharDataTargetType = 10101,
+      CharDataType = 1,
+      CharDataUnlockLevel = 20,
+      CharId = 4103,
+      CharText = "UI_CHAR_DATA_TEXT_41030101"
+    },
+    [29002] = {
+      CharDataName = T.RT_2,
+      CharDataTarget = 29002,
+      CharDataTargetDescribe = "UI_CHAR_DATA_UNLOCK_30",
+      CharDataTargetParam = 1,
+      CharDataTargetType = 10101,
+      CharDataType = 2,
+      CharDataUnlockLevel = 30,
+      CharId = 4103,
+      CharText = "UI_CHAR_DATA_TEXT_41030102"
+    },
+    [29003] = {
+      CharDataName = T.RT_3,
+      CharDataTarget = 29003,
+      CharDataTargetDescribe = "UI_CHAR_DATA_UNLOCK_40",
+      CharDataTargetParam = 1,
+      CharDataTargetType = 10101,
+      CharDataType = 3,
+      CharDataUnlockLevel = 40,
+      CharId = 4103,
+      CharText = "UI_CHAR_DATA_TEXT_41030103"
+    },
+    [29004] = {
+      CharDataName = T.RT_4,
+      CharDataTarget = 29004,
+      CharDataTargetDescribe = "UI_CHAR_DATA_UNLOCK_50",
+      CharDataTargetParam = 1,
+      CharDataTargetType = 10101,
+      CharDataType = 4,
+      CharDataUnlockLevel = 50,
+      CharId = 4103,
+      CharText = "UI_CHAR_DATA_TEXT_41030104"
+    },
+    [29005] = {
+      CharDataName = T.RT_6,
+      CharDataTarget = 29005,
+      CharDataTargetDescribe = "UI_CHAR_DATA_UNLOCK_20",
+      CharDataTargetParam = 1,
+      CharDataTargetType = 10101,
+      CharDataType = 1,
+      CharDataUnlockLevel = 20,
+      CharId = 4103,
+      CharText = "UI_CHAR_DATA_TEXT_41030201"
+    },
+    [29006] = {
+      CharDataName = T.RT_7,
+      CharDataTarget = 29006,
+      CharDataTargetDescribe = "UI_CHAR_DATA_UNLOCK_30",
+      CharDataTargetParam = 1,
+      CharDataTargetType = 10101,
+      CharDataType = 2,
+      CharDataUnlockLevel = 30,
+      CharId = 4103,
+      CharText = "UI_CHAR_DATA_TEXT_41030202"
+    },
+    [29007] = {
+      CharDataName = T.RT_8,
+      CharDataTarget = 29007,
+      CharDataTargetDescribe = "UI_CHAR_DATA_UNLOCK_40",
+      CharDataTargetParam = 1,
+      CharDataTargetType = 10101,
+      CharDataType = 3,
+      CharDataUnlockLevel = 40,
+      CharId = 4103,
+      CharText = "UI_CHAR_DATA_TEXT_41030203"
+    },
+    [29008] = {
+      CharDataName = T.RT_9,
+      CharDataTarget = 29008,
+      CharDataTargetDescribe = "UI_CHAR_DATA_UNLOCK_50",
+      CharDataTargetParam = 1,
+      CharDataTargetType = 10101,
+      CharDataType = 4,
+      CharDataUnlockLevel = 50,
+      CharId = 4103,
+      CharText = "UI_CHAR_DATA_TEXT_41030204"
+    },
+    [29009] = {
+      CharDataName = T.RT_10,
+      CharDataTarget = 29009,
+      CharDataTargetDescribe = "UI_CHAR_DATA_UNLOCK_60",
+      CharDataTargetParam = 1,
+      CharDataTargetType = 10101,
+      CharDataType = 5,
+      CharDataUnlockLevel = 60,
+      CharId = 4103,
+      CharText = "UI_CHAR_DATA_TEXT_41030205"
+    },
+    [29010] = {
+      CharDataName = T.RT_11,
+      CharDataTarget = 29010,
+      CharDataTargetDescribe = "UI_CHAR_DATA_UNLOCK_20",
+      CharDataTargetParam = 1,
+      CharDataTargetType = 10101,
+      CharDataType = 1,
+      CharDataUnlockLevel = 20,
+      CharId = 4103,
+      CharText = "UI_CHAR_DATA_TEXT_41030301"
+    },
+    [29011] = {
+      CharDataName = T.RT_12,
+      CharDataTarget = 29011,
+      CharDataTargetDescribe = "UI_CHAR_DATA_UNLOCK_30",
+      CharDataTargetParam = 1,
+      CharDataTargetType = 10101,
+      CharDataType = 2,
+      CharDataUnlockLevel = 30,
+      CharId = 4103,
+      CharText = "UI_CHAR_DATA_TEXT_41030302"
+    },
+    [29012] = {
+      CharDataName = T.RT_13,
+      CharDataTarget = 29012,
+      CharDataTargetDescribe = "UI_CHAR_DATA_UNLOCK_40",
+      CharDataTargetParam = 1,
+      CharDataTargetType = 10101,
+      CharDataType = 3,
+      CharDataUnlockLevel = 40,
+      CharId = 4103,
+      CharText = "UI_CHAR_DATA_TEXT_41030303"
+    },
+    [29013] = {
+      CharDataName = T.RT_14,
+      CharDataTarget = 29013,
+      CharDataTargetDescribe = "UI_CHAR_DATA_UNLOCK_50",
+      CharDataTargetParam = 1,
+      CharDataTargetType = 10101,
+      CharDataType = 4,
+      CharDataUnlockLevel = 50,
+      CharId = 4103,
+      CharText = "UI_CHAR_DATA_TEXT_41030304"
+    },
+    [29014] = {
+      CharDataName = T.RT_15,
+      CharDataTarget = 29014,
+      CharDataTargetDescribe = "UI_CHAR_DATA_UNLOCK_60",
+      CharDataTargetParam = 1,
+      CharDataTargetType = 10101,
+      CharDataType = 5,
+      CharDataUnlockLevel = 60,
+      CharId = 4103,
+      CharText = "UI_CHAR_DATA_TEXT_41030305"
+    },
+    [29015] = {
+      CharDataName = T.RT_16,
+      CharDataTarget = 29015,
+      CharDataTargetDescribe = "UI_CHAR_DATA_UNLOCK_20",
+      CharDataTargetParam = 1,
+      CharDataTargetType = 10101,
+      CharDataType = 1,
+      CharDataUnlockLevel = 20,
+      CharId = 4103,
+      CharText = "UI_CHAR_DATA_TEXT_41030401"
+    },
+    [29016] = {
+      CharDataName = T.RT_17,
+      CharDataTarget = 29016,
+      CharDataTargetDescribe = "UI_CHAR_DATA_UNLOCK_30",
+      CharDataTargetParam = 1,
+      CharDataTargetType = 10101,
+      CharDataType = 2,
+      CharDataUnlockLevel = 30,
+      CharId = 4103,
+      CharText = "UI_CHAR_DATA_TEXT_41030402"
+    },
+    [29017] = {
+      CharDataName = T.RT_18,
+      CharDataTarget = 29017,
+      CharDataTargetDescribe = "UI_CHAR_DATA_UNLOCK_40",
+      CharDataTargetParam = 1,
+      CharDataTargetType = 10101,
+      CharDataType = 3,
+      CharDataUnlockLevel = 40,
+      CharId = 4103,
+      CharText = "UI_CHAR_DATA_TEXT_41030403"
+    },
+    [29018] = {
+      CharDataName = T.RT_19,
+      CharDataTarget = 29018,
+      CharDataTargetDescribe = "UI_CHAR_DATA_UNLOCK_50",
+      CharDataTargetParam = 1,
+      CharDataTargetType = 10101,
+      CharDataType = 4,
+      CharDataUnlockLevel = 50,
+      CharId = 4103,
+      CharText = "UI_CHAR_DATA_TEXT_41030404"
+    },
+    [29019] = {
+      CharDataName = T.RT_20,
+      CharDataTarget = 29019,
+      CharDataTargetDescribe = "UI_CHAR_DATA_UNLOCK_60",
+      CharDataTargetParam = 1,
+      CharDataTargetType = 10101,
+      CharDataType = 5,
+      CharDataUnlockLevel = 60,
+      CharId = 4103,
+      CharText = "UI_CHAR_DATA_TEXT_41030405"
+    }
+  },
   [4201] = {
     [8001] = {
       CharDataName = T.RT_1,

@@ -1340,6 +1340,7 @@ end
 function M:SendChatNewMsgRead(CurrFriendUid, SubTabType)
   if self:GetModel():GetCurrentChannel() ~= ChatCommon.ChannelDef.Friend then
     ChatModel:ClearReddotCount(self.CurrChannel)
+    ChatModel:CheckAndClearTaskbarInfo(self:GetModel():GetCurrentChannel())
   end
   if not CurrFriendUid then
     CurrFriendUid = ChatModel:GetCurrentFriendUid()
@@ -1492,7 +1493,10 @@ function M:_AddMessage(Message, bCalcUnread)
   if UIUtils.IsAsyncCombatRoomMessage(Message) and not UIUtils.IsAsyncCombatRoomMessageValid(Message) then
     return
   end
-  local TimeWrap, MsgWrap = self:GetModel():AddMessage(Message, bCalcUnread)
+  local TimeWrap, MsgWrap, EvictedWraps = self:GetModel():AddMessage(Message, bCalcUnread)
+  if not MsgWrap then
+    return
+  end
   local Channel = Message.ChannelType
   if MsgWrap:IsSticker() and Channel ~= ChatCommon.ChannelDef.Friend then
     local Uid = Message.Sender.Uid
@@ -1509,9 +1513,9 @@ function M:_AddMessage(Message, bCalcUnread)
     return
   end
   if Message.Type == CommonConst.MESSAGE_TYPE_SELF then
-    self:NotifyEvent(ChatCommon.EventID.ChatMsgSent, TimeWrap, MsgWrap)
+    self:NotifyEvent(ChatCommon.EventID.ChatMsgSent, TimeWrap, MsgWrap, EvictedWraps)
   else
-    self:NotifyEvent(ChatCommon.EventID.ChatMsgRecv, TimeWrap, MsgWrap)
+    self:NotifyEvent(ChatCommon.EventID.ChatMsgRecv, TimeWrap, MsgWrap, EvictedWraps)
   end
 end
 
@@ -1858,6 +1862,7 @@ function M:ParseTeamInfoText(MsgWrap)
 end
 
 function M:ClearChannelReddot(ChannelType)
+  self:GetModel():ClearTaskbarChatUnreadCount(ChannelType)
   if ChannelType ~= ChatCommon.ChannelDef.Friend then
     self:GetModel():ClearReddotCount(ChannelType)
   else

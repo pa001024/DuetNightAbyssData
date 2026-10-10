@@ -1,6 +1,13 @@
 require("UnLua")
 local WBP_VideoPlayer_C = Class("BluePrints.UI.BP_UIState_C")
 
+function WBP_VideoPlayer_C:Initialize(Initializer)
+  self.Super.Initialize(self, Initializer)
+  rawset(self, "PauseOnFirstFrameTimer", nil)
+  rawset(self, "PauseOnFirstFrameTick", 0)
+  rawset(self, "bShouldPauseOnFirstFrame", false)
+end
+
 function WBP_VideoPlayer_C:Construct()
   WBP_VideoPlayer_C.Super.Construct(self)
   self.IsInit = true
@@ -117,6 +124,7 @@ function WBP_VideoPlayer_C:Play()
   if not self.MediaPlayer then
     return
   end
+  self:DropPendingPauseOnFirstFrame()
   self:HideVideoSurfaceForLoading()
   if self.MediaPlayer:IsPreparing() then
     return false
@@ -168,27 +176,57 @@ function WBP_VideoPlayer_C:PlaySoundOnMediaPlayStart(SoundPath)
   self.SoundPath = SoundPath
 end
 
+function WBP_VideoPlayer_C:DropPendingPauseOnFirstFrame()
+  rawset(self, "PauseOnFirstFrameTick", (rawget(self, "PauseOnFirstFrameTick") or 0) + 1)
+  local Timer = rawget(self, "PauseOnFirstFrameTimer")
+  if Timer and self.RemoveTimer then
+    self:RemoveTimer(Timer)
+  end
+  rawset(self, "PauseOnFirstFrameTimer", nil)
+end
+
+function WBP_VideoPlayer_C:CancelPauseOnFirstFrame()
+  self:DropPendingPauseOnFirstFrame()
+  rawset(self, "bShouldPauseOnFirstFrame", false)
+end
+
 function WBP_VideoPlayer_C:OnMediaPlayStart()
   self:ShowVideoSurface()
   if self.Image_Mask then
     self.Image_Mask:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
   if rawget(self, "bShouldPauseOnFirstFrame") then
-    self:AddTimer(0.1, function()
-      self.MediaPlayer:Rewind()
-      self:Pause()
+    rawset(self, "bShouldPauseOnFirstFrame", false)
+    local Tick = (rawget(self, "PauseOnFirstFrameTick") or 0) + 1
+    rawset(self, "PauseOnFirstFrameTick", Tick)
+    local Timer = self:AddTimer(0.1, function()
+      if rawget(self, "PauseOnFirstFrameTick") ~= Tick then
+        return
+      end
+      rawset(self, "PauseOnFirstFrameTimer", nil)
+      if self.MediaPlayer then
+        self.MediaPlayer:Rewind()
+        self:Pause()
+      end
     end)
+    rawset(self, "PauseOnFirstFrameTimer", Timer)
   elseif self.SoundPath then
     AudioManager(self):PlayUISound(self, self.SoundPath, "VideoPlayerSound", nil)
   end
 end
 
 function WBP_VideoPlayer_C:PauseOnFirstFrame()
+  self:DropPendingPauseOnFirstFrame()
   rawset(self, "bShouldPauseOnFirstFrame", true)
-  self:Play()
+  local bPlayed = self:Play()
+  if true ~= bPlayed then
+    rawset(self, "bShouldPauseOnFirstFrame", false)
+  end
+  return bPlayed
 end
 
 function WBP_VideoPlayer_C:Close()
+  self:CancelPauseOnFirstFrame()
   self.Super.Close(self)
   if self.MediaPlayer then
     self.MediaPlayer:Close()
@@ -196,9 +234,11 @@ function WBP_VideoPlayer_C:Close()
 end
 
 function WBP_VideoPlayer_C:Destruct()
+  self:CancelPauseOnFirstFrame()
   if self.MediaPlayer then
     self.MediaPlayer:Close()
   end
+  rawset(self, "PauseOnFirstFrameTimer", nil)
   self.Super.Destruct(self)
 end
 

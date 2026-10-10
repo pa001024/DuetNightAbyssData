@@ -49,6 +49,7 @@ function Component:GmGetAllTitleFrame()
 end
 
 function Component:_OnPropChangeTitles(Keys)
+  self:ReconcileExpiredLimitedTitleReddots()
   EventManager:FireEvent(EventID.OnGetTitle, self.Titles)
 end
 
@@ -73,16 +74,20 @@ end
 
 function Component:OnGetTitle(Titles)
   local Avatar = GWorld:GetAvatar()
+  local bAdded = false
   if Avatar then
     for FrameID, GetTime in pairs(Titles) do
       local CacheKey = FrameID
       local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("Title")
       if nil == CacheDetail[CacheKey] and "-1" ~= CacheKey then
         UIUtils.TryAddReddotCacheDetailNumber(CacheKey, "Title")
+        bAdded = true
       end
     end
   end
-  ReddotManager.IncreaseLeafNodeCount("TitleBtn", 1)
+  if bAdded then
+    ReddotManager.IncreaseLeafNodeCount("TitleBtn", 1)
+  end
 end
 
 function Component:InitReddots()
@@ -94,6 +99,7 @@ function Component:InitReddots()
   Node = Node or ReddotManager.AddNodeEx("TitleTab", nil, 1)
   Node = ReddotManager.GetTreeNode("TitleFrameTab")
   Node = Node or ReddotManager.AddNodeEx("TitleFrameTab", nil, 1)
+  self:ReconcileExpiredLimitedTitleReddots()
 end
 
 function Component:ClearEvent()
@@ -117,6 +123,150 @@ function Component:CheckTitleFrameEnough(CheckData)
     end
   end
   return true
+end
+
+function Component:IsLimitedTitleExpired(TitleId)
+  if not TitleId or -1 == TitleId then
+    return false
+  end
+  local LimitedTypeData = DataMgr.LimitedTimeResource.Title
+  if not LimitedTypeData or not LimitedTypeData[TitleId] then
+    return false
+  end
+  local EndTime = self:GetLimitedTitleEndTime(TitleId)
+  if not EndTime then
+    return true
+  end
+  return EndTime <= TimeUtils.NowTime()
+end
+
+function Component:GetLimitedTitleEndTime(TitleId)
+  if not TitleId or -1 == TitleId then
+    return nil
+  end
+  local LimitedTypeData = DataMgr.LimitedTimeResource.Title
+  if not LimitedTypeData or not LimitedTypeData[TitleId] then
+    return nil
+  end
+  local EndTime
+  if self.LimitedItems then
+    local LimitedItem = self.LimitedItems:GetLimitedItem("Title", TitleId)
+    if LimitedItem and LimitedItem.EndTime then
+      EndTime = LimitedItem.EndTime
+    end
+  end
+  if not EndTime then
+    local LimitedInfo = ItemUtils.GetItemLimitedInfo(TitleId, "Title")
+    EndTime = LimitedInfo and LimitedInfo.EndTime
+  end
+  if type(EndTime) == "table" and EndTime.GetTime then
+    EndTime = EndTime.GetTime()
+  end
+  return EndTime
+end
+
+function Component:GetTitleReddotCacheEntry(CacheDetail, TitleId)
+  if nil ~= CacheDetail[TitleId] then
+    return TitleId, CacheDetail[TitleId]
+  end
+  local StringKey = tostring(TitleId)
+  if nil ~= CacheDetail[StringKey] then
+    return StringKey, CacheDetail[StringKey]
+  end
+  return TitleId, nil
+end
+
+function Component:CollectExpiredLimitedTitleIdsFromReddot()
+  local TitleIds = {}
+  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("Title")
+  if not CacheDetail then
+    return TitleIds, CacheDetail
+  end
+  local LimitedTypeData = DataMgr.LimitedTimeResource.Title
+  if not LimitedTypeData then
+    return TitleIds, CacheDetail
+  end
+  local Titles = self.Titles
+  if not Titles then
+    return TitleIds, CacheDetail
+  end
+  local Seen = {}
+  for CacheKey, _ in pairs(CacheDetail) do
+    local TitleId = tonumber(CacheKey)
+    if TitleId and -1 ~= TitleId and not Seen[TitleId] and not Titles[TitleId] and LimitedTypeData[TitleId] then
+      Seen[TitleId] = true
+      table.insert(TitleIds, TitleId)
+    end
+  end
+  table.sort(TitleIds)
+  return TitleIds, CacheDetail
+end
+
+function Component:SubExpiredLimitedTitleReddotFlags(CacheDetail, TitleIds)
+  for _, TitleId in ipairs(TitleIds) do
+    local CacheKey, Flag = self:GetTitleReddotCacheEntry(CacheDetail, TitleId)
+    if Flag then
+      UIUtils.TrySubReddotCacheDetailNumber(CacheKey, "Title")
+    end
+  end
+end
+
+function Component:ReconcileExpiredLimitedTitleReddots()
+  local TitleIds, CacheDetail = self:CollectExpiredLimitedTitleIdsFromReddot()
+  if not CacheDetail then
+    return
+  end
+  self:SubExpiredLimitedTitleReddotFlags(CacheDetail, TitleIds)
+end
+
+function Component:CollectAndClearExpiredLimitedTitleReddots()
+  local TitleIds, CacheDetail = self:CollectExpiredLimitedTitleIdsFromReddot()
+  if CacheDetail then
+    self:SubExpiredLimitedTitleReddotFlags(CacheDetail, TitleIds)
+    for _, TitleId in ipairs(TitleIds) do
+      CacheDetail[TitleId] = nil
+      CacheDetail[tostring(TitleId)] = nil
+    end
+  end
+  return TitleIds
+end
+
+function Component:UnequipExpiredWornLimitedTitles()
+  if self:IsLimitedTitleExpired(self.TitleBefore) then
+    self:ChangeTitleBefore(-1)
+  end
+  if self:IsLimitedTitleExpired(self.TitleAfter) then
+    self:ChangeTitleAfter(-1)
+  end
+end
+
+function Component:TryOpenTitleSettingPopup(OwnerWidget, PopupParams)
+  if not IsValid(OwnerWidget) then
+    return
+  end
+  self:UnequipExpiredWornLimitedTitles()
+  local TitleIds = self:CollectAndClearExpiredLimitedTitleReddots()
+  if 0 == #TitleIds then
+    UIManager(OwnerWidget):ShowCommonPopupUI(100239, PopupParams, OwnerWidget)
+    return
+  end
+  local Names = {}
+  for _, TitleId in ipairs(TitleIds) do
+    local TitleData = DataMgr.Title[TitleId]
+    if TitleData then
+      table.insert(Names, GText(TitleData.Name))
+    end
+  end
+  UIManager(OwnerWidget):ShowCommonPopupUI(100438, {
+    ShortText = string.format(GText("UI_Title_LimitTime_Tips"), table.concat(Names, "，")),
+    OnCloseCallbackObj = OwnerWidget,
+    OnCloseCallbackFunction = function(CallbackObj)
+      if not IsValid(CallbackObj) then
+        return
+      end
+      UIManager(CallbackObj):ShowCommonPopupUI(100239, PopupParams, CallbackObj)
+    end
+  }, OwnerWidget)
 end
 
 return Component

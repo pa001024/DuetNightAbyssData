@@ -67,8 +67,15 @@ end
 
 function M:OnContentFocusReceived(_, _)
   if UIUtils.IsGamepadInput() and IsValid(self.ListRoom) and not self.ListRoom:HasAnyUserFocus() and not self.ListRoom:HasFocusedDescendants() then
+    local Num = self.ListRoom:GetNumItems()
+    if Num <= 0 then
+      return UE4.UWidgetBlueprintLibrary.UnHandled()
+    end
     self:HideDisplayedResetGamepadIcons()
     local Idx = self.GamepadFocusedIndex or 0
+    if Idx < 0 or Num <= Idx then
+      Idx = 0
+    end
     self.ListRoom:NavigateToIndex(Idx)
   end
   return UE4.UWidgetBlueprintLibrary.UnHandled()

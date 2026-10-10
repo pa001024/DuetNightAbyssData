@@ -3309,5 +3309,57 @@ return ReadOnly("CommonPopupUIContext", {
     Style = "ShortTextDefault",
     Title = "UI_LEAVE_STAGE",
     YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100438] = {
+    ExtraParams = T.RT_1,
+    Id = 100438,
+    NotShowCloseButton = 1,
+    PopoverText = "UI_Title_LimitTime_Tips",
+    Style = "ShortTextComfirm",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100439] = {
+    Id = 100439,
+    NoButtonText = "UI_PATCH_CANCEL",
+    Style = "Guild_EditSign",
+    YesButtonForbiddenToast = "UI_GuildEmblem_NoModification",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100440] = {
+    Id = 100440,
+    PopoverText = "Raid_Season_Floor_Tips1_Desc",
+    ShowQuitTip = 1,
+    Style = "LongTextDefault_1",
+    Title = "Raid_Season_Floor_Tips1"
+  },
+  [100441] = {
+    HintText = "UI_Pet_Decompose_NotToday",
+    Id = 100441,
+    PopoverText = "UI_Pet_Decompose_CultivatedConfirm",
+    Style = "CheckDefault",
+    Title = "UI_Pet_Decompose_Title"
+  },
+  [100442] = {
+    Id = 100442,
+    NoButtonText = "UI_PATCH_CANCEL",
+    Style = "WeaponResolveDialog",
+    Tip = {
+      [1] = "UI_Pet_Decompose_Tip_1"
+    },
+    Title = "UI_Pet_Decompose_Title",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100443] = {
+    Id = 100443,
+    PopoverText = "Raid_Season_Floor_JumpReward",
+    Style = "Raid_Reward",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_Achievement_GetReward"
+  },
+  [100444] = {
+    Id = 100444,
+    ShowQuitTip = 1,
+    Style = "D4SeasonQuest_BuffDialog"
   }
 })

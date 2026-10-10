@@ -289,6 +289,24 @@ function WBP_TaskSubItem_C:GetDetailInfo()
     end
   end
   self:TrySetSTLDetail(self.QuestChainId, self.QuestID)
+  self:TrySetFakeEndDetail(self.QuestChainId, self.QuestID)
+end
+
+function WBP_TaskSubItem_C:TrySetFakeEndDetail(InQuestChain, InQuestId)
+  local STLQuestChainData = DataMgr.STLExportQuestChain[InQuestChain]
+  local STLQuestData = STLQuestChainData and STLQuestChainData.Quests and STLQuestChainData.Quests[InQuestId]
+  if not (self.State == QuestRealStateEnum.Finished and STLQuestData and STLQuestData.IsBacktrack) or not STLQuestData.EndingId then
+    return
+  end
+  local QuestEndData = DataMgr.QuestEnd[STLQuestData.EndingId]
+  if not QuestEndData or 0 ~= QuestEndData.EndType then
+    return
+  end
+  local EndDescTextMapId = QuestEndData.EndDescTextMapId
+  if not EndDescTextMapId or "" == EndDescTextMapId then
+    return
+  end
+  self.QuestDeatil = GText(EndDescTextMapId)
 end
 
 function WBP_TaskSubItem_C:TrySetSTLDetail(InQuestChain, InQuestId)

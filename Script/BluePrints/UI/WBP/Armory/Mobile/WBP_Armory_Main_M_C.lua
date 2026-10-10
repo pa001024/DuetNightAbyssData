@@ -37,6 +37,16 @@ function M:InitPointerSetting()
 end
 
 function M:OnKeyDown(MyGeometry, InKeyEvent)
+  if self.PetRecyclePage then
+    self.PetRecyclePage:OnKeyDown(MyGeometry, InKeyEvent)
+    return UIUtils.Handled
+  end
+  if self.CurrentSubUI and self.CurrentSubUI.OnParentKeyDown then
+    local Reply, IsHandled = self.CurrentSubUI:OnParentKeyDown(MyGeometry, InKeyEvent)
+    if IsHandled then
+      return Reply
+    end
+  end
   if CommonUtils:IfExistSystemGuideUI(self) then
     return UE4.UWidgetBlueprintLibrary.Handled()
   end
@@ -58,6 +68,10 @@ function M:OnReturnKeyDown()
 end
 
 function M:OnFocusReceived(MyGeometry, InFocusEvent)
+  if self.PetRecyclePage then
+    self.PetRecyclePage:SetFocus_Lua()
+    return UIUtils.Handled
+  end
   if self.CurrentSubUI and self.CurrentSubUI.UnlockDialog then
     return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self.CurrentSubUI.UnlockDialog)
   end

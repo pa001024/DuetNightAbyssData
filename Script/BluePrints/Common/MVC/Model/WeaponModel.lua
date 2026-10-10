@@ -64,6 +64,7 @@ end
 
 local function RemoveWeaponFromMap(Uuid)
   local Value = _WeaponMap[Uuid]
+  local WeaponId = _WeaponUuid2Id[Uuid]
   if Value then
     local WeaponCount = _WeaponCount[Value.WeaponTag][Value.WeaponId] or 0
     if WeaponCount <= 1 then
@@ -71,10 +72,7 @@ local function RemoveWeaponFromMap(Uuid)
     else
       _WeaponCount[Value.WeaponTag][Value.WeaponId] = WeaponCount - 1
     end
-    _ConsumeWeaponRedCount[Value.WeaponTag][Uuid] = nil
-    UpdateRedCountForWeaponId(Value.WeaponTag, Value.WeaponId)
   end
-  local WeaponId = _WeaponUuid2Id[Uuid]
   if WeaponId and _WeaponId2Uuid[WeaponId] then
     _WeaponId2Uuid[WeaponId][Uuid] = nil
     if nil == next(_WeaponId2Uuid[WeaponId]) then
@@ -83,6 +81,10 @@ local function RemoveWeaponFromMap(Uuid)
   end
   _WeaponMap[Uuid] = nil
   _WeaponUuid2Id[Uuid] = nil
+  if Value then
+    _ConsumeWeaponRedCount[Value.WeaponTag][Uuid] = nil
+    UpdateRedCountForWeaponId(Value.WeaponTag, Value.WeaponId)
+  end
 end
 
 local WeaponRewardStates = {Owned = 1, Unowned = 2}

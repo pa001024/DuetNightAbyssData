@@ -1,107 +1,6 @@
 local TalkOptionData_C = require("BluePrints.Story.Talk.Model.TalkOptionData").TalkOptionData_C
 local ETalkCategory = {None = "None", Cutscene = "Cutscene"}
 
-local function CollectPanMediaSectionInfos(Sequence)
-  local SectionInfos = {}
-  local MasterTracks = UE4.UMovieSceneSequenceExtensions.GetMasterTracks(Sequence)
-  if MasterTracks then
-    for _, Track in pairs(MasterTracks:ToTable()) do
-      if IsValid(Track) and Track:IsA(UE4.UEMMovieSceneMediaTrack) then
-        local Sections = UE4.UMovieSceneTrackExtensions.GetSections(Track)
-        if Sections then
-          for _, Section in pairs(Sections:ToTable()) do
-            if IsValid(Section) and Section:IsA(UE4.UEMMovieSceneMediaSection) and Section:IsActive() and IsValid(Section.MediaSource) then
-              local StartFrame, EndFrame
-              if UE4.UMovieSceneSectionExtensions.HasStartFrame(Section) then
-                StartFrame = UE4.UMovieSceneSectionExtensions.GetStartFrame(Section)
-              end
-              if UE4.UMovieSceneSectionExtensions.HasEndFrame(Section) then
-                EndFrame = UE4.UMovieSceneSectionExtensions.GetEndFrame(Section)
-              end
-              table.insert(SectionInfos, {
-                MediaSource = Section.MediaSource,
-                Rate = math.max(0.01, math.min(3.0, Section.Rate or 1.0)),
-                StartFrame = StartFrame,
-                EndFrame = EndFrame,
-                bWasActive = false,
-                bPlaybackObserved = false,
-                bSetRateRequested = false
-              })
-            end
-          end
-        end
-      end
-    end
-  end
-  return SectionInfos
-end
-
-local function StartMobilePanMediaRateTick(TalkTask, SequenceActor, Sequence)
-  if not (CommonUtils.GetRuntimePlatform(GWorld.GameInstance) == "Mobile" and TalkTask and TalkTask.TalkTimerManager and IsValid(SequenceActor)) or not IsValid(Sequence) then
-    return
-  end
-  local SectionInfos = CollectPanMediaSectionInfos(Sequence)
-  if 0 == #SectionInfos then
-    return
-  end
-  local RateTickTimer
-  RateTickTimer = TalkTask.TalkTimerManager:AddTimer(TalkTask, 0.01, true, 0.01, TalkTask, function(Task)
-    if not IsValid(SequenceActor) then
-      Task.TalkTimerManager:DestroyTimer(Task, RateTickTimer)
-      return
-    end
-    local SequencePlayer = SequenceActor.SequencePlayer
-    if not IsValid(SequencePlayer) or not SequencePlayer:IsPlaying() then
-      return
-    end
-    local CurrentTime = SequencePlayer:GetCurrentTime()
-    local CurrentFrame = CurrentTime.Time.FrameNumber.Value
-    local bHasPendingSection = false
-    for _, SectionInfo in pairs(SectionInfos) do
-      local bAfterStart = SectionInfo.StartFrame == nil or CurrentFrame >= SectionInfo.StartFrame
-      local bBeforeEnd = nil == SectionInfo.EndFrame or CurrentFrame < SectionInfo.EndFrame
-      local bIsActive = bAfterStart and bBeforeEnd
-      if bIsActive and not SectionInfo.bWasActive then
-        SectionInfo.bPlaybackObserved = false
-        SectionInfo.bSetRateRequested = false
-      elseif not bIsActive and SectionInfo.bWasActive then
-        SectionInfo.bPlaybackObserved = false
-        SectionInfo.bSetRateRequested = false
-      end
-      SectionInfo.bWasActive = bIsActive
-      if bIsActive and not SectionInfo.bPlaybackObserved then
-        bHasPendingSection = true
-      end
-    end
-    if not bHasPendingSection then
-      return
-    end
-    local PoolSystem = UE4.USubsystemBlueprintLibrary.GetWorldSubsystem(SequenceActor, UE4.UMediaPlayerPoolSubsystem)
-    if not IsValid(PoolSystem) or not PoolSystem.Pool then
-      return
-    end
-    local PoolEntries = PoolSystem.Pool:ToTable()
-    for _, SectionInfo in pairs(SectionInfos) do
-      if SectionInfo.bWasActive and not SectionInfo.bPlaybackObserved then
-        local PoolEntry = PoolEntries[SectionInfo.MediaSource]
-        local MediaPlayer = PoolEntry and PoolEntry.Player or nil
-        if IsValid(MediaPlayer) then
-          local PlaybackRate = SequencePlayer:IsReversed() and -SectionInfo.Rate or SectionInfo.Rate
-          if MediaPlayer:IsPlaying() then
-            SectionInfo.bPlaybackObserved = true
-            if SectionInfo.bSetRateRequested then
-              DebugPrint("Mobile PanMedia resumed by Lua SetRate", PlaybackRate, MediaPlayer)
-            end
-          elseif MediaPlayer:SetRate(PlaybackRate) then
-            SectionInfo.bSetRateRequested = true
-          end
-        end
-      end
-    end
-  end)
-  return RateTickTimer
-end
-
 local function GetSequence(SequencePath)
   local Sequence = UE4.LoadObject(SequencePath)
   if Sequence then
@@ -293,6 +192,7 @@ function CommonTalkTaskData_C.New(TalkNodeData)
   Obj.PlayDialogueCallBack = TalkNodeData.PlayDialogueCallBack
   Obj.bPauseNpcBT = TalkNodeData.PauseNpcBT
   Obj.QuestChainId = TalkNodeData.QuestChainId
+  Obj.BGMQuestChainId = TalkNodeData.BGMQuestChainId or TalkNodeData.QuestChainId or 0
   Obj.PlayerSwitchEmoIdle = TalkNodeData.PlayerSwitchEmoIdle
   Obj.SequencePath = TalkNodeData.ShowFilePath
   if Obj.SequencePath and "" ~= Obj.SequencePath then
@@ -359,5 +259,4 @@ function CommonTalkTaskData_C.New(TalkNodeData)
   return Obj
 end
 
-CommonTalkTaskData_C.StartMobilePanMediaRateTick = StartMobilePanMediaRateTick
 return CommonTalkTaskData_C

@@ -527,7 +527,10 @@ function Component:OnClickChangeTitle()
   ReddotManager.ClearLeafNodeCount("TitleBtn", true)
   AudioManager(self):PlayUISound(self, "event:/ui/common/click", nil, nil)
   self:PlayTitleSettingPanelExpandSound()
-  UIManager(self):ShowCommonPopupUI(100239, self:BuildTitleSettingPanelCloseCallbackParams(), self)
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    Avatar:TryOpenTitleSettingPopup(self, self:BuildTitleSettingPanelCloseCallbackParams())
+  end
 end
 
 return Component

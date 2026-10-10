@@ -9,6 +9,10 @@ end
 
 function M:InitCommonView()
   self.Node_Widget:ClearChildren()
+  self.WidgetLayerMap = {}
+  if self:IsItemLayerManagementActive() then
+    self.WidgetMap = {}
+  end
   self.Super.InitCommonView(self)
 end
 

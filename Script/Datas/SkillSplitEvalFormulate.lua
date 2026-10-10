@@ -26,9 +26,6 @@ return ReadOnly("SkillSplitEvalFormulate", {
   ["$Source:GetRootSource():GetInt('PassiveWaitingNum')$"] = function(Source, SkillLevel, Target)
     return Source:GetRootSource():GetInt("PassiveWaitingNum")
   end,
-  ["$Source:GetFloat('LinenSkill02ShootRate')*Source:GetCurrentWeaponAttr('MultiShoot', 1)$"] = function(Source, SkillLevel, Target)
-    return Source:GetFloat("LinenSkill02ShootRate") * Source:GetCurrentWeaponAttr("MultiShoot", 1)
-  end,
   ["$Source:GetInt('MagazineBulletNum_20505')$"] = function(Source, SkillLevel, Target)
     return Source:GetInt("MagazineBulletNum_20505")
   end,
@@ -43,5 +40,8 @@ return ReadOnly("SkillSplitEvalFormulate", {
   end,
   ["$Source:GetInt('AddSkill02BulletNum')$"] = function(Source, SkillLevel, Target)
     return Source:GetInt("AddSkill02BulletNum")
+  end,
+  ["$Source:GetFloat('LinenSkill02ShootRate')*Source:GetCurrentWeaponAttr('MultiShoot', 1)$"] = function(Source, SkillLevel, Target)
+    return Source:GetFloat("LinenSkill02ShootRate") * Source:GetCurrentWeaponAttr("MultiShoot", 1)
   end
 })

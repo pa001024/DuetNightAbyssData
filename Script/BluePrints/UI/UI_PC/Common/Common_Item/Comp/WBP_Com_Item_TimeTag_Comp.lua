@@ -6,7 +6,8 @@ function Component:SetTimeTag(TimeTagList)
       return
     end
     self.TimeTag = UE.FWeakObjectPtr(TimeTagUI)
-    self:AddWidgetToNode(nil, self.TimeTag)
+    local Config = UIConst.ComItemLayerManagement
+    self:AddWidgetToNode(nil, self.TimeTag, Config.Layer.Top, Config.Order.TimeTag)
     TimeTagUI:SetUpTimeTag(TimeTagList)
   end
   

@@ -82,7 +82,7 @@
   {
     "id": 3010111,
     "name": "夜烬雪舞·重剑",
-    "desc": "UI_WeaponSkin_Des_3010111",
+    "desc": "只有寂静的白雪记得，被焚成灰烬的那个长夜。",
     "icon": "T_Head_Claymore_Yejin",
     "rarity": 5,
     "unlock": "通过商店获得"
@@ -157,6 +157,14 @@
     "desc": "嘎啊——————————",
     "icon": "T_Head_Sword_Nahan",
     "rarity": 4,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 3010210,
+    "name": "寰宇邀约·单手剑",
+    "desc": "聆听自群星传来的亘古邀约。",
+    "icon": "T_Head_Sword_Huanyu",
+    "rarity": 5,
     "unlock": "通过商店获得"
   },
   {
@@ -552,6 +560,14 @@
     "unlock": "通过商店获得"
   },
   {
+    "id": 3010905,
+    "name": "枯骨生花",
+    "desc": "承载死亡的枯骨，亦能绽放出坚强的生命。",
+    "icon": "T_Head_Cannon_Kugu",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
     "id": 3011001,
     "name": "电橘他二号",
     "desc": "喵呜♪喵喵喵♪喵喵♪♪",
@@ -586,8 +602,8 @@
   {
     "id": 3011005,
     "name": "UI_WeaponSkin_Name_3011005",
-    "desc": "UI_WeaponSkin_Des_3010111",
-    "icon": "",
+    "desc": "只有寂静的白雪记得，被焚成灰烬的那个长夜。",
+    "icon": "T_Head_Shotgun_Nahan",
     "rarity": 5,
     "unlock": "通过商店获得"
   },

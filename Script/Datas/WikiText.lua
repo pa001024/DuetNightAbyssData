@@ -303,6 +303,12 @@ return ReadOnly("WikiText", {
     TextId = 20101106,
     TextUnlock = 20101106
   },
+  [20101107] = {
+    EntryId = 201011,
+    TextDetail = "WikiText_20101107",
+    TextId = 20101107,
+    TextUnlock = 20101107
+  },
   [20101201] = {
     EntryId = 201012,
     TextDetail = "WikiText_20101201",
@@ -699,6 +705,12 @@ return ReadOnly("WikiText", {
     TextId = 20103604,
     TextRelatedDialogue = {11120815},
     TextUnlock = 20103604
+  },
+  [20103701] = {
+    EntryId = 201037,
+    TextDetail = "WikiText_20103701",
+    TextId = 20103701,
+    TextUnlock = 20103701
   },
   [20300101] = {
     EntryId = 203001,

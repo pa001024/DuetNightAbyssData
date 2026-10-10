@@ -195,10 +195,24 @@ function M:RefreshCommonActionState()
 end
 
 function M:_RefreshMobileActionButtonGroupView()
+  local bIsChoosePage = self.PageController and self.PageController.IsChoosePageActive and self.PageController:IsChoosePageActive()
+  local bIsStickerEditPage = self.PageController and self.PageController.IsStickerEditPageActive and self.PageController:IsStickerEditPageActive()
+  local bShowActionButtons = not bIsChoosePage
   if self.VB_Btn then
-    local Visibility = UIConst.VisibilityOp.SelfHitTestInvisible
-    local bShowActionButtons = not self.PageController or not self.PageController.IsChoosePageActive or not self.PageController:IsChoosePageActive()
-    self.VB_Btn:SetVisibility(bShowActionButtons and Visibility or UIConst.VisibilityOp.Collapsed)
+    self.VB_Btn:SetVisibility(bShowActionButtons and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
+  end
+  local ExtraBtnVisibility = not (not bShowActionButtons or bIsStickerEditPage) and UIConst.VisibilityOp.Visible or UIConst.VisibilityOp.Collapsed
+  if self.Btn_Screenshot then
+    self.Btn_Screenshot:SetVisibility(ExtraBtnVisibility)
+  end
+  if self.Btn_ResetCamera then
+    self.Btn_ResetCamera:SetVisibility(ExtraBtnVisibility)
+  end
+  if self.Btn_CameraSet then
+    self.Btn_CameraSet:SetVisibility(not (not bShowActionButtons or bIsStickerEditPage) and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
+  end
+  if bShowActionButtons and self.Btn_Invisible then
+    self.Btn_Invisible:SetVisibility(UIConst.VisibilityOp.Visible)
   end
   if self.Btn_Invisible and self.Btn_Invisible.SetText then
     self.Btn_Invisible:SetText(GText("UI_Dye_HideUI"))

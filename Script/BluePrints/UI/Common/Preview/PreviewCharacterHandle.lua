@@ -766,6 +766,15 @@ function M:ChangeDisplayWeapon(WeaponData)
   if not Avatar then
     return false
   end
+  local WeaponId = tonumber(WeaponData.WeaponId)
+  local bUltra = false
+  if WeaponData.IsUltra then
+    bUltra = WeaponData:IsUltra() == true
+  end
+  DebugPrint("[PreviewLevelData@hlb] ChangeDisplayWeapon", "weaponId", WeaponData.WeaponId, "ultra", bUltra)
+  if not WeaponId or WeaponId <= 0 then
+    return false
+  end
   local WeaponTag = WeaponData:HasTag("Melee") and "Melee" or "Ranged"
   
   local function ChangePlayerWeaponInternal(PlayCharacter)

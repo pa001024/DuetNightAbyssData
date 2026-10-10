@@ -79,6 +79,35 @@ local M = {
       }
     }
   },
+  Guide = {
+    DialogueDataType = "Guide",
+    Operations = {
+      {
+        PARA = {
+          [1] = {
+            PrepareDialogue = {DialogueData = "$Dialogue"}
+          },
+          [2] = {
+            PlayGuideUI = {DialogueData = "$Dialogue"}
+          },
+          [3] = {
+            PlayAudio = {
+              VoiceName = "$Dialogue.VoiceName",
+              ExtraInfo = "$RawDialogue",
+              SoundHandle = "$TalkTaskData.BasicTalkType",
+              OverrideAttachActor = "$TalkTaskData.AudioAttachActor",
+              bIsAttachActor = "$IsValid($TalkTaskData.AudioAttachActor)"
+            }
+          },
+          [4] = {
+            PlayScript = {
+              DialogueId = "$DialogueId"
+            }
+          }
+        }
+      }
+    }
+  },
   Observation = {
     DialogueDataType = "Simple",
     Operations = {

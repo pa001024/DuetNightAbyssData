@@ -543,7 +543,7 @@ function M:InferAnswer()
   end
   self.Avatar:DetectiveQuestionInfer(Answers, function(ErrCode, NewAnswer)
     if 0 == ErrCode and not self.NeededAnswers[NewAnswer] then
-      UIManager(self):LoadUINew("DetectiveReasoningAni", Answers, NewAnswer)
+      UIManager(self):LoadUINew("DetectiveReasoningAni", Answers, NewAnswer, self.CurerntQuestionId)
       self.IsPlayingAnimation = true
       self:AddTimer(1.0, function()
         self.CurrentChosenContent = nil

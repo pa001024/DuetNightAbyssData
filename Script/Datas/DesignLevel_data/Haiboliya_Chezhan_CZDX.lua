@@ -300,6 +300,11 @@ return {
       UnitType = "Mechanism",
       UnitId = 1
     },
+    ["2890220"] = {
+      CreatorId = 2890220,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
     ["272890087"] = {
       CreatorId = 272890087,
       UnitType = "Mechanism",
@@ -369,6 +374,21 @@ return {
       CreatorId = 352890217,
       UnitType = "Mechanism",
       UnitId = 1
+    },
+    ["352890222"] = {
+      CreatorId = 352890222,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["352890223"] = {
+      CreatorId = 352890223,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["2890221"] = {
+      CreatorId = 2890221,
+      UnitType = "Mechanism",
+      UnitId = 1130128
     },
     ["292890080"] = {
       CreatorId = 292890080,
@@ -740,6 +760,11 @@ return {
       UnitType = "Monster",
       UnitId = 7001001
     },
+    ["352890225"] = {
+      CreatorId = 352890225,
+      UnitType = "Monster",
+      UnitId = 9501052
+    },
     ["2510004"] = {
       CreatorId = 2510004,
       UnitType = "Monster",
@@ -900,6 +925,11 @@ return {
       UnitType = "Npc",
       UnitId = 700581
     },
+    ["352890224"] = {
+      CreatorId = 352890224,
+      UnitType = "Npc",
+      UnitId = 260013
+    },
     ["352890167"] = {
       CreatorId = 352890167,
       UnitType = "Npc",
@@ -1014,16 +1044,6 @@ return {
       CreatorId = 352890168,
       UnitType = "Npc",
       UnitId = 700485
-    },
-    ["2890220"] = {
-      CreatorId = 2890220,
-      UnitType = "Mechanism",
-      UnitId = 1
-    },
-    ["2890221"] = {
-      CreatorId = 2890221,
-      UnitType = "Mechanism",
-      UnitId = 1130128
     }
   },
   ManualItem = {

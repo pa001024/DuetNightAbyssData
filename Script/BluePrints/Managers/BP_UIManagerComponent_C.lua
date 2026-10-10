@@ -665,6 +665,9 @@ function BP_UIManagerComponent_C:LoadUI(BPClassPath, UIName, ZOrder, ...)
   ExistUIObj = self:GetUI(FinalName)
   if IsValid(ExistUIObj) then
     DebugPrint("The Widget is Already Exist, Name is ", UIName)
+    if ExistUIObj._bIsClosing and type(ExistUIObj.ReloadWhileClosing) == "function" then
+      ExistUIObj:ReloadWhileClosing(...)
+    end
     return ExistUIObj
   end
   if UIUtils.CheckCdnHide(UIName, true) then
@@ -1440,6 +1443,28 @@ function BP_UIManagerComponent_C:GetUIObj(UIName, bUseRegularMatch)
     end
   end
   return self:GetUI(UIName)
+end
+
+function BP_UIManagerComponent_C:RefreshBattleWheelSlotsIfVisible()
+  local BattleWheel = self:GetUIObj("InBattleWheelMenu")
+  local BattleWheelMenu = BattleWheel and BattleWheel.Battle_Menu
+  local bIsHidden = BattleWheel and BattleWheel:IsHide()
+  if not BattleWheelMenu or BattleWheelMenu:IsClosing() or bIsHidden then
+    return false
+  end
+  if self.BattleWheelRefreshTimer then
+    return true
+  end
+  self.BattleWheelRefreshTimer = self:AddTimer(0.01, function()
+    self.BattleWheelRefreshTimer = nil
+    local CurrentBattleWheel = self:GetUIObj("InBattleWheelMenu")
+    local CurrentBattleWheelMenu = CurrentBattleWheel and CurrentBattleWheel.Battle_Menu
+    if not CurrentBattleWheelMenu or CurrentBattleWheelMenu:IsClosing() or CurrentBattleWheel:IsHide() then
+      return
+    end
+    CurrentBattleWheelMenu:RefreshAllBattleWheelSlots()
+  end)
+  return true
 end
 
 function BP_UIManagerComponent_C:GetUIObjAsync(UIName, CoroutineOrCBFunc)
@@ -2273,8 +2298,6 @@ local function CreateArmoryPlayerActor(self, Char, InAvatar, CreateParams)
     })
     local GameMode = UE4.UGameplayStatics.GetGameMode(self)
     if GameMode and AvatarBattleInfo then
-      AvatarBattleInfo = GameMode:SimplifyInfoForInit(AvatarBattleInfo)
-      AvatarBattleInfo = ApplyPreviewPlayerInitParams(AvatarBattleInfo, CreateParams)
       actor:InitCharacterInfo(AvatarBattleInfo)
     end
     actor:ForceClearActorHideTag()

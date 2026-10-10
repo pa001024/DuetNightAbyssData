@@ -63,6 +63,18 @@ function Component:RaidSeasonGetRaidRankTopN(InCallBack)
   self:CallServer("RaidSeasonGetRaidRankTopN", Cb)
 end
 
+function Component:RaidSeasonSetSquadView(bSquadView, InCallBack)
+  local function Cb(ErrCode)
+    DebugPrint("RaidSeasonSetSquadView", ErrorCode:Name(ErrCode))
+    
+    if InCallBack then
+      InCallBack(ErrCode)
+    end
+  end
+  
+  self:CallServer("RaidSeasonSetSquadView", Cb, bSquadView)
+end
+
 function Component:OnGetRaidRankTopN(ErrCode, TopNInfo)
   self.logger.debug("OnGetRaidRankTopN", ErrCode, TopNInfo)
   EventManager:FireEvent(EventID.OnRaidRankInfoTopN, TopNInfo)
@@ -79,6 +91,32 @@ function Component:RaidSeasonGetPreRankReward(InCallBack)
   end
   
   self:CallServer("RaidSeasonGetPreRankReward", Cb)
+end
+
+function Component:RaidSeasonGetFloorReward(InCallBack)
+  self.logger.info("RaidSeasonGetFloorReward")
+  
+  local function Cb(ErrCode, Rewards)
+    DebugPrint("RaidSeasonGetFloorReward", ErrorCode:Name(ErrCode))
+    if InCallBack then
+      InCallBack(ErrCode, Rewards)
+    end
+  end
+  
+  self:CallServer("RaidSeasonGetFloorReward", Cb)
+end
+
+function Component:RaidSeasonGetRaidRankReward(InCallBack)
+  self.logger.info("RaidSeasonGetRaidRankReward")
+  
+  local function Cb(ErrCode, Ret)
+    DebugPrint("RaidSeasonGetRaidRankReward", ErrorCode:Name(ErrCode))
+    if InCallBack then
+      InCallBack(ErrCode, Ret)
+    end
+  end
+  
+  self:CallServer("RaidSeasonGetRaidRankReward", Cb)
 end
 
 function Component:OnPlayerRaidRankRecord(RankInfo)

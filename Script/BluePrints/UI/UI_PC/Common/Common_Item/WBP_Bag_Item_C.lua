@@ -449,7 +449,8 @@ function M:SetTreasureMapDigable(bShow, bDigable)
     if not self.WidgetMap[self.TreasureDigableWidget] then
       self.TreasureDigableWidget = self:CreateWidgetNew("ComTreasureDigable")
     end
-    self:AddWidgetToNode(self.TreasureDigableWidget)
+    local Config = UIConst.ComItemLayerManagement
+    self:AddWidgetToNode(self.TreasureDigableWidget, nil, Config.Layer.State, Config.Order.TreasureDigable)
     local Index = true == bDigable and 1 or 0
     self.TreasureDigableWidget.WidgetSwitcher_State:SetActiveWidgetIndex(Index)
     self.TreasureDigableWidget.Text_DigHint:SetText(GText("UI_TREASURE_COMPLETE"))
@@ -646,11 +647,17 @@ function M:ShowModStar(Mod)
   else
     if not self:CheckAndSetVisibility(self.ModStarWidget, UIConst.VisibilityOp.HitTestInvisible) then
       local Widget = UIManager(self):CreateWidget("/Game/UI/WBP/Common/Item/Widget/WBP_Com_Item_ModStar.WBP_Com_Item_ModStar")
-      local WidgetSlot = self.Node_Widget:AddChild(Widget)
-      WidgetSlot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
-      WidgetSlot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
       self.ModStarWidget = Widget
-      self.WidgetMap[Widget] = true
+      if not self:IsItemLayerManagementActive() then
+        local WidgetSlot = self.Node_Widget:AddChild(Widget)
+        WidgetSlot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+        WidgetSlot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
+        self.WidgetMap[Widget] = true
+      end
+    end
+    if self:IsItemLayerManagementActive() then
+      local Config = UIConst.ComItemLayerManagement
+      self:AddWidgetToNode(self.ModStarWidget, nil, Config.Layer.Base, Config.Order.ModStar)
     end
     self.ModStarWidget.List_ModStar:ClearListItems()
     for i = 1, Mod.ModCardLevelMax do

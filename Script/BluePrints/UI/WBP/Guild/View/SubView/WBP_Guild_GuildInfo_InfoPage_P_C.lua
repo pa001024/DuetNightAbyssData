@@ -10,8 +10,10 @@ local GuildPermissionUtils = require("BluePrints.UI.WBP.Guild.Common.GuildPermis
 local EditPermissionConfig = {
   OnClickEditGuildName = "ModifyNameEmblem",
   OnClickEditGuildDeclaration = "ModifyDeclaration",
-  OnClickEditGuildBanner = "ModifyNameEmblem"
+  OnClickEditGuildBanner = "ModifyNameEmblem",
+  OnClickEditGuildSign = "ModifyNameEmblem"
 }
+local GUILD_EDIT_SIGN_REDDOT = "GuildEditSign"
 
 function M:Construct()
   self.GuildModel = GuildController:GetModel()
@@ -20,6 +22,8 @@ function M:Construct()
   GuildController:RegisterEvent(self, function(self, EventId, ...)
     if EventId == GuildCommon.EventID.OnGuildEditName then
       self:OnGuildEditNameSucceed(...)
+    elseif EventId == GuildCommon.EventID.OnGuildRenameByCard then
+      self:OnGuildRenameByCardSucceed(...)
     elseif EventId == GuildCommon.EventID.OnGuildEditDeclaration then
       self:OnGuildEditDeclarationSucceed(...)
     elseif EventId == GuildCommon.EventID.OnGuildEditLogo then
@@ -32,8 +36,11 @@ function M:Construct()
       end
     elseif EventId == GuildCommon.EventID.OnRpcGuildCheckName then
       self:OnRpcGuildCheckName(...)
+    elseif EventId == GuildCommon.EventID.OnGuildEditBadgeText then
+      self:OnGuildEditBadgeTextSucceed(...)
     end
   end)
+  ReddotManager.AddListenerEx(GUILD_EDIT_SIGN_REDDOT, self, self.OnGuildEditSignReddotChanged)
   local GameInputModeSubsystem = UIManager(self):GetGameInputModeSubsystem()
   if GameInputModeSubsystem then
     GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.RefreshOpInfoByInputDevice)
@@ -41,6 +48,9 @@ function M:Construct()
   self:RefreshOpInfoByInputDevice()
   self:SetEditPanelVisible(false)
   self:InitNavigation()
+  if self.List_Edit and self.List_Edit.BP_OnEntryInitialized then
+    self.List_Edit.BP_OnEntryInitialized:Add(self, self.OnEditListEntryInitialized)
+  end
   self.Btn_Edit.Key_GamePad:CreateCommonKey({
     KeyInfoList = {
       {Type = "Img", ImgShortPath = "LS"}
@@ -67,6 +77,10 @@ function M:Destruct()
   self.Btn_Copy.OnUnhovered:Clear()
   self.Btn_Copy.OnPressed:Clear()
   GuildController:UnRegisterEvent(self)
+  ReddotManager.RemoveListener(GUILD_EDIT_SIGN_REDDOT, self)
+  if self.List_Edit and self.List_Edit.BP_OnEntryInitialized then
+    self.List_Edit.BP_OnEntryInitialized:Remove(self, self.OnEditListEntryInitialized)
+  end
   if self.ExpBarTimer then
     self:RemoveTimer(self.ExpBarTimer)
     self.ExpBarTimer = nil
@@ -107,6 +121,7 @@ function M:InitView(ParentWidget, GuildInfo, ListBtnCloseCb)
   self.Btn_Edit:SetText(GText("UI_EditGuildInfo"))
   self:InitBtnEdit()
   self.Logo:Init(self.CurrGuildInfo.LogoInfo)
+  self:RefreshGuildSign()
   GuildController:SendGetGuildInfo(self.CurrGuildInfo.GuildId)
 end
 
@@ -135,7 +150,22 @@ function M:GetGuildFullInfo(Info)
   self.Text_TotalNum:SetText(tostring(TotalNum))
   self.Text_Activity:SetText(tostring(self.CurrGuildInfo.ActivityLevel or 0))
   self.Logo:Init(self.CurrGuildInfo.LogoInfo)
+  self:RefreshGuildSign()
   self:InitBtnEdit()
+end
+
+function M:RefreshGuildSign()
+  if not self.Sign or not self.Sign.InitByGuildData then
+    return
+  end
+  local Info = self.CurrGuildInfo
+  if not Info then
+    if self.Sign.ResetForPool then
+      self.Sign:ResetForPool()
+    end
+    return
+  end
+  self.Sign:InitByGuildData(Info.LogoInfo, Info.BadgeText)
 end
 
 function M:InitBtnEdit()
@@ -204,6 +234,12 @@ function M:InitEditList()
       Text = "UI_EditGuildBanner",
       OnClickFunction = "OnClickEditGuildBanner",
       PermissionField = "ModifyNameEmblem"
+    },
+    {
+      Text = "UI_GuildEmblem_Edit",
+      OnClickFunction = "OnClickEditGuildSign",
+      PermissionField = "ModifyNameEmblem",
+      ReddotName = GUILD_EDIT_SIGN_REDDOT
     }
   }
   local NameCooldownDaysLeft = self:GetGuildNameCooldownDaysLeft(self.CurrGuildInfo)
@@ -217,6 +253,7 @@ function M:InitEditList()
     MenuContent.FunctionName = ItemConfig.OnClickFunction
     MenuContent.IsForbid = ItemConfig.Text == "UI_EditGuildName" and NameCooldownDaysLeft > 0 or ItemConfig.Text == "UI_EditGuildBanner" and LogoCooldownDaysLeft > 0 or self:HasEditPermission(ItemConfig.PermissionField) == false
     MenuContent.bGamepadIconVisible = false
+    MenuContent.ReddotName = ItemConfig.ReddotName
     
     function MenuContent.OnClickFunction()
       self:OnListBtnClicked(MenuContent)
@@ -289,6 +326,8 @@ function M:OnListBtnForbiddenClicked(Content)
     else
       UIManager(self):ShowUITip(UIConst.Tip_CommonToast, string.format(GText("GuildLogaChangeCD"), tostring(DataMgr.GlobalConstant.GuildLogoEditCoolDownDay and DataMgr.GlobalConstant.GuildLogoEditCoolDownDay.ConstantValue or 3)))
     end
+  elseif Content.FunctionName == "OnClickEditGuildSign" then
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_NoEditPermission"))
   end
   return
 end
@@ -307,6 +346,80 @@ function M:OnClickEditGuildBanner()
     Func = self.ChangeGuildLogo,
     Obj = self
   })
+end
+
+function M:OnClickEditGuildSign()
+  ReddotManager.ClearLeafNodeCount(GUILD_EDIT_SIGN_REDDOT, false)
+  self:OpenEditGuildSignDialog()
+end
+
+function M:OnEditListEntryInitialized(Content, EntryWidget)
+  if not (Content and IsValid(EntryWidget)) or not Content.ReddotName then
+    return
+  end
+  Content.CurrentEntry = EntryWidget
+  local Node = ReddotManager.GetTreeNode(Content.ReddotName)
+  local Count = Node and Node.Count or 0
+  if EntryWidget.SetReddot then
+    EntryWidget:SetReddot(Count > 0)
+  end
+end
+
+function M:OnGuildEditSignReddotChanged(Count)
+  if not IsValid(self) then
+    return
+  end
+  local bShow = (Count or 0) > 0
+  if self.Btn_Edit and self.Btn_Edit.SetReddot then
+    self.Btn_Edit:SetReddot(bShow)
+  end
+  if not self.List_Edit or not self.List_Edit.GetListItems then
+    return
+  end
+  for _, ItemContent in pairs(self.List_Edit:GetListItems()) do
+    if ItemContent and ItemContent.ReddotName == GUILD_EDIT_SIGN_REDDOT then
+      local Entry = ItemContent.SelfWidget or ItemContent.CurrentEntry
+      if IsValid(Entry) and Entry.SetReddot then
+        Entry:SetReddot(bShow)
+      end
+    end
+  end
+end
+
+function M:OpenEditGuildSignDialog()
+  if not self.CurrGuildInfo then
+    return
+  end
+  UIManager(self):ShowCommonPopupUI(GuildCommon.GuildEditSignDialog, {
+    Title = GText("UI_GuildEmblem_EditTitle"),
+    GuildInfo = self.CurrGuildInfo,
+    OnCloseCallbackObj = self,
+    OnCloseCallbackFunction = self.OnEditGuildSignDialogClosed
+  }, self)
+end
+
+function M:OnEditGuildSignDialogClosed(Data, DialogWidget)
+  if not IsValid(self) then
+    return
+  end
+  if IsValid(self.ParentWidget) and self.ParentWidget.RefreshOpInfoByInputDevice then
+    self.ParentWidget:RefreshOpInfoByInputDevice()
+  end
+end
+
+function M:OnGuildEditBadgeTextSucceed(Ret)
+  if not IsValid(self) then
+    return
+  end
+  if Ret and Ret ~= ErrorCode.RET_SUCCESS then
+    return
+  end
+  local GuildData = GuildController:GetModel():GetCurrGuild()
+  if GuildData then
+    self.CurrGuildInfo = GuildData
+  end
+  self:RefreshGuildSign()
+  UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_GuildEmblem_EditSuccess"))
 end
 
 function M:ChangeGuildLogo()
@@ -339,7 +452,32 @@ function M:OnGuildEditNameSucceed(Ret)
     end
   end
   self:InitEditList()
+  self:RefreshGuildSign()
   UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_EditSuccessful"))
+end
+
+function M:OnGuildRenameByCardSucceed(Ret)
+  if not IsValid(self) then
+    return
+  end
+  if Ret and Ret ~= ErrorCode.RET_SUCCESS then
+    return
+  end
+  local GuildData = GuildController:GetModel():GetCurrGuild()
+  if not GuildData then
+    return
+  end
+  self.CurrGuildInfo = GuildData
+  local ParentWidget = self.ParentWidget
+  if IsValid(ParentWidget) then
+    ParentWidget.CurrGuildInfo = GuildData
+    local TextGuildName = ParentWidget.Text_GuildName
+    if IsValid(TextGuildName) and TextGuildName.SetText then
+      TextGuildName:SetText(GuildData.Name or "")
+    end
+  end
+  self:InitEditList()
+  self:RefreshGuildSign()
 end
 
 function M:OnGuildEditDeclarationSucceed(Ret)
@@ -368,6 +506,7 @@ end
 function M:OnGuildEditLogoSucceed(Ret)
   self.CurrGuildInfo = GuildController:GetModel():GetCurrGuild()
   self.Logo:Init(self.CurrGuildInfo.LogoInfo)
+  self:RefreshGuildSign()
   self:InitEditList()
 end
 
@@ -458,7 +597,7 @@ function M:OpenEditGuildNameDialog()
     DialogRightBtnCallback = function(Text)
       local SubmitText = string.gsub(Text or "", "^%s*(.-)%s*$", "%1")
       local InputWidget = self.GuildNameEditDialog.ContentWidgetTable.Dialog_Input_new
-      if InputWidget and self:IsGuildNamePureNumberOrSymbol(SubmitText) then
+      if InputWidget and GuildCommon.IsPureNumberOrSymbolName(SubmitText) then
         InputWidget:ShowTips(GText("GuildNameNoPureNumber"), 1)
         return false
       end
@@ -528,23 +667,6 @@ function M:OpenEditGuildDeclarationDialog()
       self.ParentWidget:RefreshOpInfoByInputDevice()
     end
   }, self)
-end
-
-function M:IsGuildNamePureNumberOrSymbol(Name)
-  local TrimName = string.gsub(Name or "", "^%s*(.-)%s*$", "%1")
-  if "" == TrimName then
-    return false
-  end
-  if string.find(TrimName, "%a") then
-    return false
-  end
-  for i = 1, #TrimName do
-    local Byte = string.byte(TrimName, i)
-    if Byte and Byte >= 128 then
-      return false
-    end
-  end
-  return true
 end
 
 function M:Copy()

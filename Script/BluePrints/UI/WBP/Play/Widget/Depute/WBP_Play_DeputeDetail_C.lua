@@ -65,6 +65,7 @@ function M:Construct()
     end
   end)
   self.List_Event.OnCreateEmptyContent:Bind(self, self.CreateEventAndAddEmptyItem)
+  self.List_Monster.OnCreateEmptyContent:Bind(self, self.CreateMonsterEmptyItem)
   self.HB_Cost:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self:AddInputMethodChangedListen()
   self.List_Prop:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
@@ -1136,27 +1137,38 @@ end
 
 function M:RefreshMonsterInfoList(DungeonId)
   local DungeonInfo = DataMgr.Dungeon[DungeonId]
-  if not (DungeonInfo and DungeonInfo.DungeonMonsters) or 0 == #DungeonInfo.DungeonMonsters then
+  local MonsterSource = DungeonInfo and DungeonInfo.DungeonMonsters
+  if not MonsterSource or 0 == #MonsterSource then
     DebugPrint("ZDX DungeonMonster is nil")
-    return
-  end
-  local DisplayMonsters = CommonUtils.DeepCopy(DungeonInfo.DungeonMonsters)
-  table.sort(DisplayMonsters, MonsterUtils.CompareMonsters)
-  self.MonsterWeaknessIcon = {}
-  self:InitMonsterWeakness(DungeonId)
-  local GameState = UE4.UGameplayStatics.GetGameState(self)
-  for _, MonsterId in ipairs(DisplayMonsters) do
-    local MonsterData = DataMgr.Monster[MonsterId]
-    if MonsterData and GameState.IsUnitRelease(MonsterId) then
-      local Content = NewObject(self.MonsterItemContentClass)
-      Content.ParentWidget = self
-      Content.MonsterId = MonsterId
-      Content.DisableSelect = true
-      Content.SoundEvent = "event:/ui/common/click_mid"
-      Content.WeaknessIcon = self.MonsterWeaknessIcon[MonsterId]
-      self.List_Monster:AddItem(Content)
+  else
+    local DisplayMonsters = CommonUtils.DeepCopy(MonsterSource)
+    table.sort(DisplayMonsters, MonsterUtils.CompareMonsters)
+    self.MonsterWeaknessIcon = {}
+    self:InitMonsterWeakness(DungeonId)
+    local GameState = UE4.UGameplayStatics.GetGameState(self)
+    for _, MonsterId in ipairs(DisplayMonsters) do
+      local MonsterData = DataMgr.Monster[MonsterId]
+      if MonsterData and GameState.IsUnitRelease(MonsterId) then
+        local Content = NewObject(self.MonsterItemContentClass)
+        Content.ParentWidget = self
+        Content.MonsterId = MonsterId
+        Content.DisableSelect = true
+        Content.SoundEvent = "event:/ui/common/click_mid"
+        Content.WeaknessIcon = self.MonsterWeaknessIcon[MonsterId]
+        self.List_Monster:AddItem(Content)
+      end
     end
   end
+  if 0 == self.List_Monster:GetNumItems() then
+    self.List_Monster:AddItem(self:CreateMonsterEmptyItem())
+  end
+  self.List_Monster:RequestFillEmptyContent()
+end
+
+function M:CreateMonsterEmptyItem()
+  local Content = NewObject(self.MonsterItemContentClass)
+  Content.IsEmpty = true
+  return Content
 end
 
 function M:InitMonsterWeakness(DungeonId)

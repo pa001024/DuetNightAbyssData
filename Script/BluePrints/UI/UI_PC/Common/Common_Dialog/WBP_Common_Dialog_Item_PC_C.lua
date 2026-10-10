@@ -58,6 +58,7 @@ function WBP_Common_Dialog_Item_PC_C:Show_Funds(Params, PopupData)
           Numerator = Resource.Count
         }
         Widget:InitContent(Params)
+        Widget:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
       end
     end
     if WidgetCount > #Params.Funds then

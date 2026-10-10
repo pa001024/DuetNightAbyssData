@@ -226,7 +226,7 @@ return ReadOnly("HardBossDifficulty", {
     DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_1",
     DifficultyID = 1041,
     DifficultyLevel = 30,
-    DifficultyReward = 1040,
+    DifficultyReward = 1016,
     ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Linen.T_Permanent_HardBoss_VideoImg_Linen",
     UnlockCondition = {2041}
   },
@@ -235,7 +235,7 @@ return ReadOnly("HardBossDifficulty", {
     DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_2",
     DifficultyID = 1042,
     DifficultyLevel = 40,
-    DifficultyReward = 1041,
+    DifficultyReward = 1017,
     ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Linen.T_Permanent_HardBoss_VideoImg_Linen",
     UnlockCondition = {2042, 125}
   },
@@ -244,7 +244,7 @@ return ReadOnly("HardBossDifficulty", {
     DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_3",
     DifficultyID = 1043,
     DifficultyLevel = 50,
-    DifficultyReward = 1042,
+    DifficultyReward = 1018,
     ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Linen.T_Permanent_HardBoss_VideoImg_Linen",
     UnlockCondition = {2043, 135}
   },
@@ -253,7 +253,7 @@ return ReadOnly("HardBossDifficulty", {
     DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_4",
     DifficultyID = 1044,
     DifficultyLevel = 60,
-    DifficultyReward = 1043,
+    DifficultyReward = 1019,
     ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Linen.T_Permanent_HardBoss_VideoImg_Linen",
     UnlockCondition = {2044, 145}
   },
@@ -262,7 +262,7 @@ return ReadOnly("HardBossDifficulty", {
     DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_5",
     DifficultyID = 1045,
     DifficultyLevel = 70,
-    DifficultyReward = 1044,
+    DifficultyReward = 1020,
     ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Linen.T_Permanent_HardBoss_VideoImg_Linen",
     UnlockCondition = {2045, 155}
   },
@@ -271,7 +271,7 @@ return ReadOnly("HardBossDifficulty", {
     DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_6",
     DifficultyID = 1046,
     DifficultyLevel = 80,
-    DifficultyReward = 1045,
+    DifficultyReward = 1021,
     ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Linen.T_Permanent_HardBoss_VideoImg_Linen",
     UnlockCondition = {2046, 160}
   },
@@ -280,7 +280,7 @@ return ReadOnly("HardBossDifficulty", {
     DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_1",
     DifficultyID = 1051,
     DifficultyLevel = 30,
-    DifficultyReward = 1016,
+    DifficultyReward = 1022,
     ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Bailong.T_Permanent_HardBoss_VideoImg_Bailong",
     UnlockCondition = {2051}
   },
@@ -289,7 +289,7 @@ return ReadOnly("HardBossDifficulty", {
     DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_2",
     DifficultyID = 1052,
     DifficultyLevel = 40,
-    DifficultyReward = 1017,
+    DifficultyReward = 1023,
     ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Bailong.T_Permanent_HardBoss_VideoImg_Bailong",
     UnlockCondition = {2052, 125}
   },
@@ -298,7 +298,7 @@ return ReadOnly("HardBossDifficulty", {
     DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_3",
     DifficultyID = 1053,
     DifficultyLevel = 50,
-    DifficultyReward = 1018,
+    DifficultyReward = 1024,
     ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Bailong.T_Permanent_HardBoss_VideoImg_Bailong",
     UnlockCondition = {2053, 135}
   },
@@ -307,7 +307,7 @@ return ReadOnly("HardBossDifficulty", {
     DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_4",
     DifficultyID = 1054,
     DifficultyLevel = 60,
-    DifficultyReward = 1019,
+    DifficultyReward = 1025,
     ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Bailong.T_Permanent_HardBoss_VideoImg_Bailong",
     UnlockCondition = {2054, 145}
   },
@@ -316,7 +316,7 @@ return ReadOnly("HardBossDifficulty", {
     DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_5",
     DifficultyID = 1055,
     DifficultyLevel = 70,
-    DifficultyReward = 1020,
+    DifficultyReward = 1026,
     ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Bailong.T_Permanent_HardBoss_VideoImg_Bailong",
     UnlockCondition = {2055, 155}
   },
@@ -325,7 +325,7 @@ return ReadOnly("HardBossDifficulty", {
     DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_6",
     DifficultyID = 1056,
     DifficultyLevel = 80,
-    DifficultyReward = 1021,
+    DifficultyReward = 1027,
     ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Bailong.T_Permanent_HardBoss_VideoImg_Bailong",
     UnlockCondition = {2056, 160}
   },
@@ -334,7 +334,7 @@ return ReadOnly("HardBossDifficulty", {
     DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_1",
     DifficultyID = 1061,
     DifficultyLevel = 30,
-    DifficultyReward = 1022,
+    DifficultyReward = 1028,
     ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Lieche.T_Permanent_HardBoss_VideoImg_Lieche",
     UnlockCondition = {2061}
   },
@@ -343,7 +343,7 @@ return ReadOnly("HardBossDifficulty", {
     DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_2",
     DifficultyID = 1062,
     DifficultyLevel = 40,
-    DifficultyReward = 1023,
+    DifficultyReward = 1029,
     ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Lieche.T_Permanent_HardBoss_VideoImg_Lieche",
     UnlockCondition = {2062, 125}
   },
@@ -352,7 +352,7 @@ return ReadOnly("HardBossDifficulty", {
     DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_3",
     DifficultyID = 1063,
     DifficultyLevel = 50,
-    DifficultyReward = 1024,
+    DifficultyReward = 1030,
     ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Lieche.T_Permanent_HardBoss_VideoImg_Lieche",
     UnlockCondition = {2063, 135}
   },
@@ -361,7 +361,7 @@ return ReadOnly("HardBossDifficulty", {
     DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_4",
     DifficultyID = 1064,
     DifficultyLevel = 60,
-    DifficultyReward = 1025,
+    DifficultyReward = 1031,
     ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Lieche.T_Permanent_HardBoss_VideoImg_Lieche",
     UnlockCondition = {2064, 145}
   },
@@ -370,7 +370,7 @@ return ReadOnly("HardBossDifficulty", {
     DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_5",
     DifficultyID = 1065,
     DifficultyLevel = 70,
-    DifficultyReward = 1026,
+    DifficultyReward = 1032,
     ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Lieche.T_Permanent_HardBoss_VideoImg_Lieche",
     UnlockCondition = {2065, 155}
   },
@@ -379,7 +379,7 @@ return ReadOnly("HardBossDifficulty", {
     DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_6",
     DifficultyID = 1066,
     DifficultyLevel = 80,
-    DifficultyReward = 1027,
+    DifficultyReward = 1033,
     ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Lieche.T_Permanent_HardBoss_VideoImg_Lieche",
     UnlockCondition = {2066, 160}
   },
@@ -388,7 +388,7 @@ return ReadOnly("HardBossDifficulty", {
     DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_1",
     DifficultyID = 1071,
     DifficultyLevel = 30,
-    DifficultyReward = 1022,
+    DifficultyReward = 1034,
     ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Aida.T_Permanent_HardBoss_VideoImg_Aida",
     UnlockCondition = {2071}
   },
@@ -397,7 +397,7 @@ return ReadOnly("HardBossDifficulty", {
     DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_2",
     DifficultyID = 1072,
     DifficultyLevel = 40,
-    DifficultyReward = 1023,
+    DifficultyReward = 1035,
     ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Aida.T_Permanent_HardBoss_VideoImg_Aida",
     UnlockCondition = {2072, 125}
   },
@@ -406,7 +406,7 @@ return ReadOnly("HardBossDifficulty", {
     DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_3",
     DifficultyID = 1073,
     DifficultyLevel = 50,
-    DifficultyReward = 1024,
+    DifficultyReward = 1036,
     ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Aida.T_Permanent_HardBoss_VideoImg_Aida",
     UnlockCondition = {2073, 135}
   },
@@ -415,7 +415,7 @@ return ReadOnly("HardBossDifficulty", {
     DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_4",
     DifficultyID = 1074,
     DifficultyLevel = 60,
-    DifficultyReward = 1025,
+    DifficultyReward = 1037,
     ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Aida.T_Permanent_HardBoss_VideoImg_Aida",
     UnlockCondition = {2074, 145}
   },
@@ -424,7 +424,7 @@ return ReadOnly("HardBossDifficulty", {
     DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_5",
     DifficultyID = 1075,
     DifficultyLevel = 70,
-    DifficultyReward = 1026,
+    DifficultyReward = 1038,
     ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Aida.T_Permanent_HardBoss_VideoImg_Aida",
     UnlockCondition = {2075, 155}
   },
@@ -433,7 +433,7 @@ return ReadOnly("HardBossDifficulty", {
     DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_6",
     DifficultyID = 1076,
     DifficultyLevel = 80,
-    DifficultyReward = 1027,
+    DifficultyReward = 1039,
     ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Aida.T_Permanent_HardBoss_VideoImg_Aida",
     UnlockCondition = {2076, 160}
   }

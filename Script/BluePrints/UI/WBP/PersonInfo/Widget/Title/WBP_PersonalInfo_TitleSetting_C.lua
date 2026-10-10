@@ -64,13 +64,16 @@ function M:OnClickChangeTitle()
   ReddotManager.ClearLeafNodeCount("TitleBtn", true)
   AudioManager(self):PlayUISound(self, "event:/ui/common/click", nil, nil)
   AudioManager(self):PlayUISound(self, "event:/ui/common/title_setting_panel_expand", "title_setting_panel_expand_sfx", nil)
-  UIManager(self):ShowCommonPopupUI(100239, {
-    CloseBtnCallbackObj = self,
-    CloseBtnCallbackFunction = function(self)
-      ScreenPrint("OnClickChangeTitle")
-      AudioManager(self):SetEventSoundParam(self, "title_setting_panel_expand_sfx", {ToEnd = 1})
-    end
-  }, self)
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    Avatar:TryOpenTitleSettingPopup(self, {
+      CloseBtnCallbackObj = self,
+      CloseBtnCallbackFunction = function(self)
+        ScreenPrint("OnClickChangeTitle")
+        AudioManager(self):SetEventSoundParam(self, "title_setting_panel_expand_sfx", {ToEnd = 1})
+      end
+    })
+  end
 end
 
 return M

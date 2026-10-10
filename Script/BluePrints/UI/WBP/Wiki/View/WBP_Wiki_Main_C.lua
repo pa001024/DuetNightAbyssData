@@ -452,7 +452,7 @@ function M:UpdateListView()
       end
     end
   end
-  if self.CurrentSelectedCell then
+  if self.CurrentSelectedCell and not self.IsAssociatedJump then
     self:NavigateToEntry(self.CurrentSelectedCell.SubTypeId, self.CurrentSelectedCell.EntryId)
   end
   self.Group_ListEmpty:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -496,10 +496,10 @@ function M:UpdateEntryWidgetSelectedStyle(EntryWidget)
 end
 
 function M:OnEntrySelected(selectedCell)
-  if self.CurrentSelectedCell and self.CurrentSelectedCell.EntryId == selectedCell.EntryId then
+  if self.CurrentSelectedCell == selectedCell then
     return
   end
-  if self.CurrentSelectedCell and self.CurrentSelectedCell.EntryId ~= selectedCell.EntryId and IsValid(self.CurrentSelectedCell) then
+  if self.CurrentSelectedCell and IsValid(self.CurrentSelectedCell) then
     self.CurrentSelectedCell:OnCellUnSelect()
   end
   self.CurrentSelectedCell = selectedCell
@@ -676,22 +676,20 @@ function M:ValidateEntryData(targetData)
 end
 
 function M:SwitchToTargetTab(mainType)
+  self.IsAssociatedJump = true
   if self.IsSearchMode then
     self.Com_Input_Light:OnDeleteBtnClicked()
     self.IsSearchMode = false
   end
-  self.IsAssociatedJump = true
   local RealMainType = mainType + 1
-  if self.CurrentTabIndex == RealMainType then
-    return
-  end
   for index, tab in ipairs(self.Tabs) do
-    if tab.MainType == RealMainType and self.CurrentTabIndex ~= tab.TabId then
-      self.CurrentTabIndex = tab.TabId
-      break
+    if tab.MainType == RealMainType then
+      if self.CurrentTabIndex ~= index then
+        self.Com_Tab:SelectTabById(tab.TabId)
+      end
+      return
     end
   end
-  self.Com_Tab:SelectTabById(self.CurrentTabIndex)
 end
 
 function M:NavigateToEntry(subType, entryId)

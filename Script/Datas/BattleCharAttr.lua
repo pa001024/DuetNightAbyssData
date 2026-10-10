@@ -211,7 +211,7 @@ return ReadOnly("BattleCharAttr", {
   SkillSpeed = {
     AttrName = "SkillSpeed",
     DefaultValue = 1,
-    RoleAttrDisplay = "AlwaysFalse"
+    RoleAttrDisplay = "AlwaysTrue"
   },
   SkillSustain = {
     AttrName = "SkillSustain",

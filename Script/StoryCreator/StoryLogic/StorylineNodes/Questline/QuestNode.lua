@@ -36,6 +36,16 @@ function QuestNode:ClearWhenQuestFail()
   self:OnQuestlineFail()
 end
 
+function QuestNode:GetBGMQuestChainId()
+  local QuestChainId = self.Context and self.Context.QuestChainId or 0
+  if QuestChainId > 0 then
+    return QuestChainId
+  end
+  local SpecialQuestId = self:GetPayload("SpecialQuestId")
+  local SpecialQuestConfig = SpecialQuestId and DataMgr.SpecialQuestConfig[SpecialQuestId]
+  return SpecialQuestConfig and SpecialQuestConfig.QuestChainId or 0
+end
+
 function QuestNode:GetPayload(...)
   if self.Context and self.Context.Storyline then
     return self.Context.Storyline:GetPayload(...)

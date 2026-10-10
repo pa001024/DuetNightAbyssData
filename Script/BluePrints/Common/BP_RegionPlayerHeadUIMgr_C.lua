@@ -9,6 +9,7 @@ function M:OnInitialize()
   EventManager:AddEvent(EventID.OnlineRemoveOtherPlayer, self, self.OnRemoveRegionOtherPlayer)
   EventManager:AddEvent(EventID.OnlineRegionNickNameChange, self, self.OnRegionPlayerInfoChange)
   EventManager:AddEvent(EventID.OnlineRegionTitleChange, self, self.OnRegionPlayerTitleChange)
+  EventManager:AddEvent(EventID.OnlineRegionGuildBadgeChange, self, self.OnRegionPlayerGuildBadgeChange)
   self.bRegisterTeamEvent = false
   self.EIdUIdMap = {}
   self.EIdObjIdMap = {}
@@ -22,6 +23,7 @@ function M:OnDeinitialize()
   EventManager:RemoveEvent(EventID.OnlineRemoveOtherPlayer, self)
   EventManager:RemoveEvent(EventID.OnlineRegionNickNameChange, self)
   EventManager:RemoveEvent(EventID.OnlineRegionTitleChange, self)
+  EventManager:RemoveEvent(EventID.OnlineRegionGuildBadgeChange, self)
   self:UnRegisterTeamEvent()
 end
 
@@ -164,14 +166,6 @@ function M:OnAddRegionOtherPlayer(Eid, Uid, Player, ObjId)
     end
     return
   end
-  if not Player then
-    return
-  end
-  Player:InitHeadWidgetComponent()
-  Player:RefreshRegionNameInfo(Uid, ObjId)
-  Player:RefreshTitleInfo(ObjId)
-  self:AddRegionPlayer(Player)
-  self:HideCharacterHideUI(Player, true)
 end
 
 function M:OnRegionPlayerInfoChange(ObjId, Uid)
@@ -239,6 +233,35 @@ function M:OnRemoveRegionOtherPlayer(Eid, Uid)
   self:RemoveRegionPlayer(Player)
 end
 
+function M:OnRegionPlayerGuildBadgeChange(ObjId, Uid)
+  if not Uid then
+    return
+  end
+  local GameInstance = GWorld.GameInstance
+  if not GameInstance then
+    return
+  end
+  local ScenceManager = GameInstance:GetSceneManager()
+  if not ScenceManager then
+    return
+  end
+  local RegionOnlineCharacterInfo = ScenceManager.RegionOnlineCharacterInfo
+  if not RegionOnlineCharacterInfo then
+    return
+  end
+  local Eid = RegionOnlineCharacterInfo[Uid]
+  local RegionSyncSubsys = UE4.URegionSyncSubsystem.GetInstance(self)
+  if RegionSyncSubsys then
+    PlayerHeadWidgetUtils:RefreshRegionGuildSignInfo(RegionSyncSubsys:GetPlayerHeadWidgetComp(CommonUtils.ObjId2Str(ObjId)), ObjId)
+    return
+  end
+  local Battle = Battle(self)
+  local Player = Eid and Battle:GetEntity(Eid)
+  if Player then
+    Player:RefreshRegionGuildSignInfo(ObjId)
+  end
+end
+
 function M:_RefreshRegionPlayerAutoOnlineActionTag(Eid, ObjId)
   if not Eid or not ObjId then
     return
@@ -276,7 +299,7 @@ function M:StopEmoji(ObjId, Eid)
   end
 end
 
-function M:OnShowPlayerEmoji(Uid, EmojiPath)
+function M:OnShowPlayerEmoji(Uid, EmojiData)
   local GameInstance = GWorld.GameInstance
   if not GameInstance then
     return
@@ -298,8 +321,13 @@ function M:OnShowPlayerEmoji(Uid, EmojiPath)
   if Timer then
     self:RemoveTimer(Timer)
   end
-  self:StopEmoji(ObjId, Eid, EmojiPath)
-  self:PlayEmoji(ObjId, Eid, EmojiPath)
+  self.EmojiTimer[ObjId] = nil
+  self:StopEmoji(ObjId, Eid)
+  local IconPath = type(EmojiData) == "table" and EmojiData.Icon or EmojiData
+  if not IconPath or "" == IconPath then
+    return
+  end
+  self:PlayEmoji(ObjId, Eid, IconPath)
   Timer = self:AddTimer(self.EmojiDuration, function()
     self.EmojiTimer[ObjId] = nil
     self:StopEmoji(ObjId, Eid)

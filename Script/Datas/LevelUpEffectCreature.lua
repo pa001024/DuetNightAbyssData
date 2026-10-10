@@ -1,6 +1,7 @@
 local T = {}
 T.RT_1 = {3}
-T.RT_2 = {2, 3}
+T.RT_2 = {2}
+T.RT_3 = {2, 3}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -17,32 +18,32 @@ return ReadOnly("LevelUpEffectCreature", {
   [110299] = {
     EffectCreatureId = 110299,
     IsAttach = true,
-    Level = {2},
+    Level = T.RT_2,
     SkinID = 110201
   },
   [150441] = {
     EffectCreatureId = 150441,
     IsAttach = true,
-    Level = T.RT_2,
+    Level = T.RT_3,
     SkinID = 150401
   },
   [150443] = {
     EffectCreatureId = 150443,
     IsAlways = true,
     IsAttach = true,
-    Level = T.RT_2,
+    Level = T.RT_3,
     SkinID = 150401
   },
   [210143] = {
     EffectCreatureId = 210143,
     IsAttach = true,
-    Level = T.RT_2,
+    Level = T.RT_3,
     SkinID = 210101
   },
   [210221] = {
     EffectCreatureId = 210221,
     IsAttach = true,
-    Level = T.RT_2,
+    Level = T.RT_3,
     SkinID = 210201
   },
   [210222] = {
@@ -54,19 +55,19 @@ return ReadOnly("LevelUpEffectCreature", {
   [210223] = {
     EffectCreatureId = 210223,
     IsAttach = true,
-    Level = T.RT_2,
+    Level = T.RT_3,
     SkinID = 210201
   },
   [310441] = {
     EffectCreatureId = 310441,
     IsAttach = true,
-    Level = T.RT_2,
+    Level = T.RT_3,
     SkinID = 310401
   },
   [310442] = {
     EffectCreatureId = 310442,
     IsAttach = true,
-    Level = T.RT_2,
+    Level = T.RT_3,
     SkinID = 310401
   },
   [310443] = {
@@ -84,7 +85,19 @@ return ReadOnly("LevelUpEffectCreature", {
   [310445] = {
     EffectCreatureId = 310445,
     IsAttach = true,
-    Level = T.RT_2,
+    Level = T.RT_3,
     SkinID = 310401
+  },
+  [410397] = {
+    EffectCreatureId = 410397,
+    IsAttach = true,
+    Level = T.RT_2,
+    SkinID = 410301
+  },
+  [410398] = {
+    EffectCreatureId = 410398,
+    IsAttach = true,
+    Level = T.RT_1,
+    SkinID = 410301
   }
 })

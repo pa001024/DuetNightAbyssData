@@ -101,6 +101,14 @@ function M:PlayButtonStateAnimation()
   if self.LastCurButtonState == self.CurButtonState then
     return
   end
+  local PreviousAnimation = self.LastCurButtonState and self[self.LastCurButtonState]
+  local NativePlaying = PreviousAnimation and self:IsAnimationPlaying(PreviousAnimation) or false
+  local SubsystemPlaying = PreviousAnimation and EMUIAnimationSubsystem:EMAnimationIsPlaying(self, PreviousAnimation) or false
+  if SubsystemPlaying then
+    EMUIAnimationSubsystem:EMStopAnimation(self, PreviousAnimation)
+  elseif NativePlaying then
+    self:StopAnimation(PreviousAnimation)
+  end
   if self.CurButtonState == "Normal" then
     if not self:IsAnimationPlaying(self.Normal) then
       self:PlayAnimationForward(self.Normal)

@@ -1426,30 +1426,36 @@ T.RT_292 = {
   ShowES = false
 }
 T.RT_293 = {
+  IsBossPart = true,
+  PartScaleCoefficientX = 3,
+  PartScaleCoefficientY = 0.6,
+  ShowES = false
+}
+T.RT_294 = {
   "Mon.Boss",
   "Mon.Reward.A",
   "Mon.IgnoreSeekEnemy"
 }
-T.RT_294 = {
+T.RT_295 = {
   0.3,
   0.4,
   0.3
 }
-T.RT_295 = {
+T.RT_296 = {
   IsBossPart = true,
-  PhaseValues = T.RT_294,
+  PhaseValues = T.RT_295,
   ShowES = true
 }
-T.RT_296 = {
+T.RT_297 = {
   "camera_point"
 }
-T.RT_297 = {EnableFly = true}
-T.RT_298 = {
+T.RT_298 = {EnableFly = true}
+T.RT_299 = {
   "Mon.Reward.A"
 }
-T.RT_299 = {EnterPenalizeAfterDeath = 1, HandlePenalize = 1}
-T.RT_300 = {850501}
-T.RT_301 = {
+T.RT_300 = {EnterPenalizeAfterDeath = 1, HandlePenalize = 1}
+T.RT_301 = {850501}
+T.RT_302 = {
   HideTNUI = true,
   IsBossPart = true,
   PartScaleCoefficientX = 3,
@@ -1457,223 +1463,233 @@ T.RT_301 = {
   PhaseValues = T.RT_291,
   ShowES = false
 }
-T.RT_302 = {850701}
-T.RT_303 = {
+T.RT_303 = {850701}
+T.RT_304 = {
   0.45,
   0.45,
   0.1
 }
-T.RT_304 = {
+T.RT_305 = {
   IsBossPart = true,
-  PhaseValues = T.RT_303,
+  PhaseValues = T.RT_304,
   ShowES = false
 }
-T.RT_305 = {
+T.RT_306 = {
   "hand_right01_c",
   "hand_left01_c"
 }
-T.RT_306 = {AlwaysVisible = true}
-T.RT_307 = {0.5, 0.5}
-T.RT_308 = {
+T.RT_307 = {AlwaysVisible = true}
+T.RT_308 = {0.5, 0.5}
+T.RT_309 = {
   IsBossPart = true,
-  PhaseValues = T.RT_307,
+  PhaseValues = T.RT_308,
   ShowES = false
 }
-T.RT_309 = {
+T.RT_310 = {
   "CameraLockPoint"
 }
-T.RT_310 = {0.75, 0.25}
-T.RT_311 = {
+T.RT_311 = {0.75, 0.25}
+T.RT_312 = {
   IsBossPart = true,
-  PhaseValues = T.RT_310,
+  PhaseValues = T.RT_311,
   ShowES = false
 }
-T.RT_312 = {851301}
-T.RT_313 = {
+T.RT_313 = {851301}
+T.RT_314 = {
   AlwaysVisible = true,
   HeightOffset = -60,
   UIStyleNodeName = "Elite_Monster"
 }
-T.RT_314 = {
+T.RT_315 = {
   "Mon.Elite",
   "Mon.Reward.A"
 }
-T.RT_315 = {HideTNUI = true, ShowES = false}
-T.RT_316 = {851401}
-T.RT_317 = {
+T.RT_316 = {HideTNUI = true, ShowES = false}
+T.RT_317 = {851401}
+T.RT_318 = {
   HeightOffset = 150,
   UIStyleNodeName = "Elite_Monster"
 }
-T.RT_318 = {EscapeBattleDis = 40000}
-T.RT_319 = {851701}
-T.RT_320 = {
+T.RT_319 = {EscapeBattleDis = 40000}
+T.RT_320 = {851701}
+T.RT_321 = {
   HeightOffset = -1000,
   UIStyleNodeName = "Elite_Monster"
 }
-T.RT_321 = {
+T.RT_322 = {
   EnterPenalizeAfterDeath = 1,
   HandlePenalize = 1,
   PlayStoryAfterDeath = 0.1,
   StoryEvent = "TrainBoss01Success"
 }
-T.RT_322 = {0.05, 0.95}
 T.RT_323 = {
+  0.05,
+  0.8,
+  0.15
+}
+T.RT_324 = {
   IsBossPart = true,
-  PhaseValues = T.RT_322,
+  PhaseValues = T.RT_323,
   ShowES = false
 }
-T.RT_324 = {"Mon.Boss", "Mon.Reward"}
-T.RT_325 = {
+T.RT_325 = {0.05, 0.95}
+T.RT_326 = {
+  IsBossPart = true,
+  PhaseValues = T.RT_325,
+  ShowES = false
+}
+T.RT_327 = {"Mon.Boss", "Mon.Reward"}
+T.RT_328 = {
   900001,
   900002,
   900003
 }
-T.RT_326 = {
-  Random = T.RT_325,
+T.RT_329 = {
+  Random = T.RT_328,
   RandomNum = 2
 }
-T.RT_327 = {
+T.RT_330 = {
   "Mon.Sq",
   "Mon.Melee",
   "Mon.Reward.E"
 }
-T.RT_328 = {900101}
-T.RT_329 = {
+T.RT_331 = {900101}
+T.RT_332 = {
   "Mon.Sq",
   "Mon.Melee",
   "Mon.Attribute.Wind"
 }
-T.RT_330 = {
+T.RT_333 = {
   "Mon.Sq",
   "Mon.Ranged",
   "Mon.Reward.E"
 }
-T.RT_331 = {900201, 900101}
-T.RT_332 = {
+T.RT_334 = {900201, 900101}
+T.RT_335 = {
   "Mon.Sq",
   "Mon.Ranged",
   "Mon.Reward.B",
   "Mon.Strong.Frozen",
   "Mon.Elite"
 }
-T.RT_333 = {900201}
-T.RT_334 = {
+T.RT_336 = {900201}
+T.RT_337 = {
   "Mon.Sq",
   "Mon.Ranged",
   "Mon.Reward.B",
   "Mon.Strong.Burst",
   "Mon.Elite"
 }
-T.RT_335 = {
+T.RT_338 = {
   "Mon.Sq",
   "Mon.Ranged",
   "Mon.Reward.B",
   "Mon.Strong.Poison",
   "Mon.Elite"
 }
-T.RT_336 = {
+T.RT_339 = {
   "Mon.Sq",
   "Mon.Ranged",
   "Mon.Reward.B",
   "Mon.Strong.Thunder",
   "Mon.Elite"
 }
-T.RT_337 = {
+T.RT_340 = {
   "Mon.Sq",
   "Mon.Ranged",
   "Mon.Reward.B",
   "Mon.Strong.Blood",
   "Mon.Elite"
 }
-T.RT_338 = {
+T.RT_341 = {
   "Mon.Sq",
   "Mon.Ranged",
   "Mon.Reward.B",
   "Mon.Strong.Fade",
   "Mon.Elite"
 }
-T.RT_339 = {
+T.RT_342 = {
   "Mon.Sq",
   "Mon.Ranged",
   "Mon.Reward.B",
   "Mon.Strong.Shield",
   "Mon.Elite"
 }
-T.RT_340 = {
+T.RT_343 = {
   "Mon.Sq",
   "Mon.Ranged",
   "Mon.Reward.B",
   "Mon.Strong.Revenge",
   "Mon.Elite"
 }
-T.RT_341 = {
+T.RT_344 = {
   "Mon.Sq",
   "Mon.Ranged",
   "Mon.Reward.B",
   "Mon.Strong.IceOrb",
   "Mon.Elite"
 }
-T.RT_342 = {
+T.RT_345 = {
   "Mon.Sq",
   "Mon.Ranged",
   "Mon.Reward.B",
   "Mon.Strong.Reflect",
   "Mon.Elite"
 }
-T.RT_343 = {
+T.RT_346 = {
   "Mon.Sq",
   "Mon.Ranged",
   "Mon.Reward.B",
   "Mon.Strong.Kamikaze",
   "Mon.Elite"
 }
-T.RT_344 = {
+T.RT_347 = {
   "Mon.Sq",
   "Mon.Ranged",
   "Mon.Reward.B",
   "Mon.Strong.ThunderLaser",
   "Mon.Elite"
 }
-T.RT_345 = {
+T.RT_348 = {
   "Mon.Sq",
   "Mon.Ranged",
   "Mon.Reward.B",
   "Mon.Strong.Vampire",
   "Mon.Elite"
 }
-T.RT_346 = {
+T.RT_349 = {
   "Mon.Sq",
   "Mon.Ranged",
   "Mon.Reward.B",
   "Mon.Strong.Threefold",
   "Mon.Elite"
 }
-T.RT_347 = {
+T.RT_350 = {
   "Mon.Sq",
   "Mon.Ranged",
   "Mon.Attribute.Water"
 }
-T.RT_348 = {
+T.RT_351 = {
   "Mon.Sq",
   "Mon.Melee",
   "Mon.Reward.C",
   "Mon.Elite"
 }
-T.RT_349 = {
+T.RT_352 = {
   "Mon.Sq",
   "Mon.Melee",
   "Mon.Reward.B",
   "Mon.Elite",
   "Mon.Strong.Frozen"
 }
-T.RT_350 = {
+T.RT_353 = {
   "Mon.Sq",
   "Mon.Melee",
   "Mon.Reward.B",
   "Mon.Elite",
   "Mon.Strong.Burst"
 }
-T.RT_351 = {
+T.RT_354 = {
   "Mon.Sq",
   "Mon.Melee",
   "Mon.Reward.B",
@@ -1681,137 +1697,137 @@ T.RT_351 = {
   "Mon.Strong.Poison",
   "Mon.SurvivalPoison"
 }
-T.RT_352 = {
+T.RT_355 = {
   "Mon.Sq",
   "Mon.Melee",
   "Mon.Reward.B",
   "Mon.Elite",
   "Mon.Strong.Thunder"
 }
-T.RT_353 = {
+T.RT_356 = {
   "Mon.Sq",
   "Mon.Melee",
   "Mon.Reward.B",
   "Mon.Elite",
   "Mon.Strong.Blood"
 }
-T.RT_354 = {
+T.RT_357 = {
   "Mon.Sq",
   "Mon.Melee",
   "Mon.Reward.B",
   "Mon.Elite",
   "Mon.Strong.Fade"
 }
-T.RT_355 = {
+T.RT_358 = {
   "Mon.Sq",
   "Mon.Melee",
   "Mon.Reward.B",
   "Mon.Elite",
   "Mon.Strong.Shield"
 }
-T.RT_356 = {
+T.RT_359 = {
   "Mon.Sq",
   "Mon.Melee",
   "Mon.Reward.B",
   "Mon.Elite",
   "Mon.Strong.Revenge"
 }
-T.RT_357 = {
+T.RT_360 = {
   "Mon.Sq",
   "Mon.Melee",
   "Mon.Reward.B",
   "Mon.Elite",
   "Mon.Strong.IceOrb"
 }
-T.RT_358 = {
+T.RT_361 = {
   "Mon.Sq",
   "Mon.Melee",
   "Mon.Reward.B",
   "Mon.Elite",
   "Mon.Strong.Reflect"
 }
-T.RT_359 = {Synthesis = 8000}
-T.RT_360 = {
+T.RT_362 = {Synthesis = 8000}
+T.RT_363 = {
   "Mon.Sq",
   "Mon.Melee",
   "Mon.Reward.B",
   "Mon.Elite",
   "Mon.Strong.Kamikaze"
 }
-T.RT_361 = {
+T.RT_364 = {
   "Mon.Sq",
   "Mon.Melee",
   "Mon.Reward.B",
   "Mon.Elite",
   "Mon.Strong.ThunderLaser"
 }
-T.RT_362 = {
+T.RT_365 = {
   "Mon.Sq",
   "Mon.Melee",
   "Mon.Reward.B",
   "Mon.Elite",
   "Mon.Strong.Vampire"
 }
-T.RT_363 = {
+T.RT_366 = {
   "Mon.Sq",
   "Mon.Melee",
   "Mon.Reward.B",
   "Mon.Elite",
   "Mon.Strong.Threefold"
 }
-T.RT_364 = {900003}
-T.RT_365 = {
-  Normal = T.RT_364
+T.RT_367 = {900003}
+T.RT_368 = {
+  Normal = T.RT_367
 }
-T.RT_366 = {
+T.RT_369 = {
   "Mon.Sq",
   "Mon.Melee",
   "Mon.Summon",
   "Mon.Reward.E",
   "Mon.Elite"
 }
-T.RT_367 = {900701}
-T.RT_368 = {
+T.RT_370 = {900701}
+T.RT_371 = {
   "Mon.Sq",
   "Mon.Ranged",
   "Mon.Attribute.Fire"
 }
-T.RT_369 = {
+T.RT_372 = {
   "Mon.Melee",
   "Mon.Reward.A",
   "Mon.Treasure"
 }
-T.RT_370 = {MosterType = "Treasure", Rate = 1}
-T.RT_371 = {
+T.RT_373 = {MosterType = "Treasure", Rate = 1}
+T.RT_374 = {
   Capture = -1,
   Excavation = -1,
   Rouge = -1,
   Sabotage = -1,
   Survival = -1
 }
-T.RT_372 = {
+T.RT_375 = {
   Capture = -1,
   Excavation = -1,
   Sabotage = -1,
   Survival = -1
 }
-T.RT_373 = {
+T.RT_376 = {
   HeavyHit = "LightHit",
   HitFly = "LightHit",
   LightHitRanged = "LightHit"
 }
-T.RT_374 = {950101}
-T.RT_375 = {
+T.RT_377 = {950101}
+T.RT_378 = {
   "Mon.Melee",
   "Mon.Reward.C"
 }
-T.RT_376 = {"Mon.Melee"}
-T.RT_377 = {
+T.RT_379 = {"Mon.Melee"}
+T.RT_380 = {
   "Mon.Melee",
   "Mon.Reward.E"
 }
-T.RT_378 = {951101}
-T.RT_379 = {HitFly = "HeavyHit"}
+T.RT_381 = {951101}
+T.RT_382 = {HitFly = "HeavyHit"}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -2586,6 +2602,54 @@ return ReadOnly("Monster", {
     UnitId = 1014,
     UnitName = "坐骑"
   },
+  [1015] = {
+    AnimCoverPath = "/Game/AssetDesign/Char/Mount/ABP_Mount_Base_Chensi.ABP_Mount_Base_Chensi_C",
+    BattleRoleId = 1000,
+    Camp = "Player",
+    CombatVersionOpen = 17,
+    DisableTicklod = true,
+    DontApplySubsidenceAdjust = true,
+    ForbidHatred = 1,
+    GamePlayTags = T.RT_4,
+    IsSyncLoad = true,
+    ModelId = 1015,
+    PreloadSummonNum = 2,
+    UnitBPPath = "/Game/AssetDesign/Char/Mount/BP_Mount_Base.BP_Mount_Base",
+    UnitId = 1015,
+    UnitName = "坐骑"
+  },
+  [1016] = {
+    AnimCoverPath = "/Game/AssetDesign/Char/Mount/ABP_Mount_Base_Chensi.ABP_Mount_Base_Chensi_C",
+    BattleRoleId = 1000,
+    Camp = "Player",
+    CombatVersionOpen = 17,
+    DisableTicklod = true,
+    DontApplySubsidenceAdjust = true,
+    ForbidHatred = 1,
+    GamePlayTags = T.RT_4,
+    IsSyncLoad = true,
+    ModelId = 1016,
+    PreloadSummonNum = 2,
+    UnitBPPath = "/Game/AssetDesign/Char/Mount/BP_Mount_Base.BP_Mount_Base",
+    UnitId = 1016,
+    UnitName = "坐骑"
+  },
+  [1017] = {
+    AnimCoverPath = "/Game/AssetDesign/Char/Mount/ABP_Mount_Base_Chensi.ABP_Mount_Base_Chensi_C",
+    BattleRoleId = 1000,
+    Camp = "Player",
+    CombatVersionOpen = 17,
+    DisableTicklod = true,
+    DontApplySubsidenceAdjust = true,
+    ForbidHatred = 1,
+    GamePlayTags = T.RT_4,
+    IsSyncLoad = true,
+    ModelId = 1017,
+    PreloadSummonNum = 2,
+    UnitBPPath = "/Game/AssetDesign/Char/Mount/BP_Mount_Base.BP_Mount_Base",
+    UnitId = 1017,
+    UnitName = "坐骑"
+  },
   [110201] = {
     BattleRoleId = 110201,
     BluePrintParams = {
@@ -2678,6 +2742,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 210202,
     Camp = "Player",
     CombatVersionOpen = 15,
+    DeadNotRemove = true,
     DisableTicklod = true,
     EnableSummonMonsterPush = true,
     FollowCreatorTeleport = {TeleportPointDistToOwner = 200, TeleportPointNum = 8},
@@ -2845,6 +2910,23 @@ return ReadOnly("Monster", {
     UnitId = 310302,
     UnitName = "Mon_Name_510101"
   },
+  [320301] = {
+    BT = "/Game/AssetDesign/AI/Player/Kajia/BT_Kajia_Summoned.BT_Kajia_Summoned",
+    BattleRoleId = 320301,
+    Camp = "Player",
+    CombatVersionOpen = 18,
+    DisableTicklod = true,
+    EnableSummonMonsterPush = true,
+    ForbidHatred = 1,
+    ForbidenMoveComp = true,
+    GamePlayTags = T.RT_61,
+    IgnoreByEnemyCheckRangeHit = true,
+    ModelId = 320306,
+    PreloadSummonNum = 3,
+    UnitBPPath = "/Game/AssetDesign/Char/Player/Kajia/BP_Kajia_Summoned.BP_Kajia_Summoned",
+    UnitId = 320301,
+    UnitName = "卡嘉炮台"
+  },
   [410201] = {
     BattleRoleId = 410201,
     Camp = "Player",
@@ -2945,27 +3027,6 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Player/Songlu/BP_Songlu_Summoned.BP_Songlu_Summoned",
     UnitId = 510101,
     UnitName = "Mon_Name_510101"
-  },
-  [530101] = {
-    AnimCoverPath = "/Game/AssetDesign/Char/Player/Saiqi/ABP_Saiqi_Summoned.ABP_Saiqi_Summoned_C",
-    BT = "/Game/AssetDesign/AI/Player/Saiqi/BT_Saiqi_Summoned.BT_Saiqi_Summoned",
-    BattleRoleId = 530101,
-    Camp = "Player",
-    CombatVersionOpen = 10,
-    DamageSource = true,
-    DeadHitDisable = 1,
-    DisableTicklod = true,
-    DontApplySubsidenceAdjust = true,
-    ForbidHatred = 1,
-    GamePlayTags = T.RT_4,
-    HitMontageRule = "NoHitOrDie",
-    IgnoreByEnemyCheckRangeHit = true,
-    IgnoreByFriendCheckRangeHit = true,
-    ModelId = 210101,
-    PreloadSummonNum = 2,
-    UnitBPPath = "/Game/AssetDesign/Char/Player/Saiqi/BP_Saiqi_Summoned.BP_Saiqi_Summoned",
-    UnitId = 530101,
-    UnitName = "Mon_Name_530101"
   },
   [540201] = {
     BattleRoleId = 540201,
@@ -24791,6 +24852,57 @@ return ReadOnly("Monster", {
     UnitName = "Mon_Name_8003704",
     WeaponId = T.RT_257
   },
+  [8004001] = {
+    AlertId = 102,
+    BT = "/Game/AssetDesign/AI/Monster/JH_Zhutai/BT_8Zhutai.BT_8Zhutai",
+    BattleGroupId = 8004,
+    BattleRoleId = 8004001,
+    BirthFXList = T.RT_5,
+    BirthRule = T.RT_6,
+    BloodUIParmas = T.RT_35,
+    Camp = "Monster",
+    CombatVersionOpen = 20,
+    CommonAlertEnable = 1,
+    DeadEffectId = 3,
+    ExpBasic = 20,
+    GalleryRuleId = 8004001,
+    GamePlayTags = T.RT_232,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
+    MiniMapId = 1,
+    ModelId = 800401,
+    NavAgentId = 0,
+    RewardId = 5,
+    UnitBPPath = "/Game/AssetDesign/Char/Monster/JH_Zhutai/BP_Mon_JH_Zhutai.BP_Mon_JH_Zhutai",
+    UnitId = 8004001,
+    UnitName = "Mon_Name_8004001",
+    bUseImpulse = true
+  },
+  [8005001] = {
+    AlertId = 102,
+    BT = "/Game/AssetDesign/AI/Monster/JH_Shiji/BT_8Shiji.BT_8Shiji",
+    BattleGroupId = 8005,
+    BattleRoleId = 8005001,
+    BirthFXList = T.RT_5,
+    BirthRule = T.RT_6,
+    BloodUIParmas = {HeightOffset = -40},
+    Camp = "Monster",
+    CombatVersionOpen = 20,
+    CommonAlertEnable = 1,
+    DeadEffectId = 3,
+    ExpBasic = 20,
+    GalleryRuleId = 8005001,
+    GamePlayTags = T.RT_249,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
+    MiniMapId = 1,
+    ModelId = 800501,
+    NavAgentId = 0,
+    RewardId = 5,
+    UnitBPPath = "/Game/AssetDesign/Char/Monster/JH_Shiji/BP_Mon_JH_Shiji.BP_Mon_JH_Shiji",
+    UnitId = 8005001,
+    UnitName = "Mon_Name_8005001"
+  },
   [8500001] = {
     AlertId = 10,
     BT = "/Game/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.BT_Boss_Xibi_Story",
@@ -25108,6 +25220,35 @@ return ReadOnly("Monster", {
     SupplyMechOffset = T.RT_269,
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_00_Xibi/BP_Boss_Xibi_Hard.BP_Boss_Xibi_Hard",
     UnitId = 8500606,
+    UnitName = "Mon_Name_8500001",
+    WeaponId = T.RT_260
+  },
+  [8500801] = {
+    AlertId = 10,
+    BT = "/Game/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard.BT_Boss_Xibi_Hard",
+    BattleRoleId = 8500801,
+    BloodUIParmas = T.RT_57,
+    BossPenalize = T.RT_62,
+    BossUIValues = T.RT_262,
+    CameraLockOnBones = T.RT_259,
+    Camp = "Monster",
+    CombatVersionOpen = 17,
+    DisableTicklod = true,
+    DontApplyAsyncCreate = true,
+    ExpBasic = 0,
+    GalleryRuleId = 8500001,
+    GamePlayTags = T.RT_60,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
+    HitMontageRule = "BossXibiHard",
+    MiniMapId = 4,
+    ModelId = 850001,
+    NavAgentId = 2,
+    SupplyMechId = T.RT_263,
+    SupplyMechLevel = T.RT_264,
+    SupplyMechOffset = T.RT_269,
+    UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_00_Xibi/BP_Boss_Xibi_Hard.BP_Boss_Xibi_Hard",
+    UnitId = 8500801,
     UnitName = "Mon_Name_8500001",
     WeaponId = T.RT_260
   },
@@ -25934,8 +26075,7 @@ return ReadOnly("Monster", {
     BT = "/Game/AssetDesign/AI/Monster/Boss_04_Lizhan/BT_Boss_Lizhan.BT_Boss_Lizhan",
     BattleRoleId = 8501701,
     BloodUIParmas = T.RT_57,
-    BossPenalize = T.RT_58,
-    BossUIValues = T.RT_41,
+    BossUIValues = T.RT_290,
     CameraLockOnBones = T.RT_271,
     Camp = "Monster",
     CombatVersionOpen = 11,
@@ -25943,19 +26083,17 @@ return ReadOnly("Monster", {
     DontApplyAsyncCreate = true,
     ExpBasic = 0,
     GalleryRuleId = 8501001,
-    GamePlayTags = T.RT_60,
-    GlobalRefresh = T.RT_273,
+    GamePlayTags = T.RT_275,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
-    GuideId = 8501002,
+    GuideId = 10011,
     HitedCapsulePhysMaterial = "Flesh",
-    InitGuide = T.RT_274,
     MiniMapId = 4,
     ModelId = 850101,
     NavAgentId = 2,
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.BP_Boss_Lizhan_Dungeon",
     UnitId = 8501701,
-    UnitName = "Mon_Name_8501001"
+    UnitName = "Mon_Name_8501701"
   },
   [8502001] = {
     AlertId = 10,
@@ -26221,6 +26359,35 @@ return ReadOnly("Monster", {
     UnitName = "Mon_Name_8502001",
     WeaponId = T.RT_65
   },
+  [8502801] = {
+    AlertId = 10,
+    BT = "/Game/AssetDesign/AI/Monster/Boss_01_Saiqi/BT_Boss_Saiqi_HardBossEvent.BT_Boss_Saiqi_HardBossEvent",
+    BattleRoleId = 8502801,
+    BloodUIParmas = T.RT_57,
+    BossPenalize = T.RT_62,
+    BossUIValues = T.RT_293,
+    CameraLockOnBones = T.RT_64,
+    Camp = "Monster",
+    CombatVersionOpen = 17,
+    DisableTicklod = true,
+    DontApplyAsyncCreate = true,
+    ExpBasic = 0,
+    GalleryRuleId = 8502001,
+    GamePlayTags = T.RT_60,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
+    MiniMapId = 4,
+    ModelId = 850201,
+    MultiHitedCapsule = true,
+    NavAgentId = 2,
+    SupplyMechId = T.RT_263,
+    SupplyMechLevel = T.RT_264,
+    SupplyMechOffset = T.RT_269,
+    UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_01_Saiqi/BP_Boss_Saiqi.BP_Boss_Saiqi",
+    UnitId = 8502801,
+    UnitName = "Mon_Name_8502001",
+    WeaponId = T.RT_65
+  },
   [8503001] = {
     AlertId = 10,
     BT = "/Game/AssetDesign/AI/Monster/Boss_02_Shijingzhe/BT_Boss_Shijingzhe.BT_Boss_Shijingzhe",
@@ -26241,7 +26408,7 @@ return ReadOnly("Monster", {
     DontApplyAsyncCreate = true,
     ExpBasic = 0,
     GalleryRuleId = 8503001,
-    GamePlayTags = T.RT_293,
+    GamePlayTags = T.RT_294,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
     MiniMapId = 4,
@@ -26266,7 +26433,7 @@ return ReadOnly("Monster", {
     DontApplyAsyncCreate = true,
     ExpBasic = 0,
     GalleryRuleId = 8503001,
-    GamePlayTags = T.RT_293,
+    GamePlayTags = T.RT_294,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
     MiniMapId = 4,
@@ -26294,7 +26461,7 @@ return ReadOnly("Monster", {
     DontApplyAsyncCreate = true,
     ExpBasic = 0,
     GalleryRuleId = 8503001,
-    GamePlayTags = T.RT_293,
+    GamePlayTags = T.RT_294,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
     MiniMapId = 4,
@@ -26322,7 +26489,7 @@ return ReadOnly("Monster", {
     DontApplyAsyncCreate = true,
     ExpBasic = 0,
     GalleryRuleId = 8503001,
-    GamePlayTags = T.RT_293,
+    GamePlayTags = T.RT_294,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
     MiniMapId = 4,
@@ -26350,7 +26517,7 @@ return ReadOnly("Monster", {
     DontApplyAsyncCreate = true,
     ExpBasic = 0,
     GalleryRuleId = 8503001,
-    GamePlayTags = T.RT_293,
+    GamePlayTags = T.RT_294,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
     MiniMapId = 4,
@@ -26378,7 +26545,7 @@ return ReadOnly("Monster", {
     DontApplyAsyncCreate = true,
     ExpBasic = 0,
     GalleryRuleId = 8503001,
-    GamePlayTags = T.RT_293,
+    GamePlayTags = T.RT_294,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
     MiniMapId = 4,
@@ -26398,14 +26565,14 @@ return ReadOnly("Monster", {
     BattleRoleId = 8504001,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_58,
-    BossUIValues = T.RT_295,
-    CameraLockOnBones = T.RT_296,
+    BossUIValues = T.RT_296,
+    CameraLockOnBones = T.RT_297,
     Camp = "Monster",
     CombatVersionOpen = 10,
     DisableTicklod = true,
     DontApplyAsyncCreate = true,
     ExpBasic = 0,
-    FlyParams = T.RT_297,
+    FlyParams = T.RT_298,
     GalleryRuleId = 8504001,
     GamePlayTags = T.RT_60,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
@@ -26424,14 +26591,14 @@ return ReadOnly("Monster", {
     BattleRoleId = 8504001,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_58,
-    BossUIValues = T.RT_295,
-    CameraLockOnBones = T.RT_296,
+    BossUIValues = T.RT_296,
+    CameraLockOnBones = T.RT_297,
     Camp = "Monster",
     CombatVersionOpen = 10,
     DisableTicklod = true,
     DontApplyAsyncCreate = true,
     ExpBasic = 0,
-    FlyParams = T.RT_297,
+    FlyParams = T.RT_298,
     GalleryRuleId = 8504001,
     GamePlayTags = T.RT_60,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
@@ -26448,15 +26615,15 @@ return ReadOnly("Monster", {
     BT = "/Game/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Summon_01.BT_Boss_Saiqi02_Summon_01",
     BattleRoleId = 8504002,
     BloodUIParmas = T.RT_82,
-    CameraLockOnBones = T.RT_296,
+    CameraLockOnBones = T.RT_297,
     Camp = "Monster",
     CombatVersionOpen = 10,
     DeadDissolveTime = 0.3,
     DisableTicklod = true,
     DontApplyAsyncCreate = true,
     ExpBasic = 0,
-    FlyParams = T.RT_297,
-    GamePlayTags = T.RT_298,
+    FlyParams = T.RT_298,
+    GamePlayTags = T.RT_299,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
     MiniMapId = 4,
@@ -26470,15 +26637,15 @@ return ReadOnly("Monster", {
     BT = "/Game/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Summon_02.BT_Boss_Saiqi02_Summon_02",
     BattleRoleId = 8504002,
     BloodUIParmas = T.RT_82,
-    CameraLockOnBones = T.RT_296,
+    CameraLockOnBones = T.RT_297,
     Camp = "Monster",
     CombatVersionOpen = 10,
     DeadDissolveTime = 0.3,
     DisableTicklod = true,
     DontApplyAsyncCreate = true,
     ExpBasic = 0,
-    FlyParams = T.RT_297,
-    GamePlayTags = T.RT_298,
+    FlyParams = T.RT_298,
+    GamePlayTags = T.RT_299,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
     MiniMapId = 4,
@@ -26492,7 +26659,7 @@ return ReadOnly("Monster", {
     BT = "/Game/AssetDesign/AI/Monster/Boss_05_Lianhuo/BT_Boss_Lianhuo_Story.BT_Boss_Lianhuo_Story",
     BattleRoleId = 8505001,
     BloodUIParmas = T.RT_57,
-    BossPenalize = T.RT_299,
+    BossPenalize = T.RT_300,
     BossUIValues = T.RT_292,
     CameraLockOnBones = T.RT_259,
     Camp = "Monster",
@@ -26510,7 +26677,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_05_Lianhuo/BP_Boss_Lianhuo.BP_Boss_Lianhuo",
     UnitId = 8505001,
     UnitName = "Mon_Name_8505001",
-    WeaponId = T.RT_300
+    WeaponId = T.RT_301
   },
   [8505002] = {
     AlertId = 10,
@@ -26538,7 +26705,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_05_Lianhuo/BP_Boss_Lianhuo.BP_Boss_Lianhuo",
     UnitId = 8505002,
     UnitName = "Mon_Name_8505001",
-    WeaponId = T.RT_300
+    WeaponId = T.RT_301
   },
   [8505501] = {
     AlertId = 10,
@@ -26566,7 +26733,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_05_Lianhuo/BP_Boss_Lianhuo.BP_Boss_Lianhuo",
     UnitId = 8505501,
     UnitName = "Mon_Name_8505001",
-    WeaponId = T.RT_300
+    WeaponId = T.RT_301
   },
   [8505502] = {
     AlertId = 10,
@@ -26594,7 +26761,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_05_Lianhuo/BP_Boss_Lianhuo.BP_Boss_Lianhuo",
     UnitId = 8505502,
     UnitName = "Mon_Name_8505001",
-    WeaponId = T.RT_300
+    WeaponId = T.RT_301
   },
   [8505503] = {
     AlertId = 10,
@@ -26622,7 +26789,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_05_Lianhuo/BP_Boss_Lianhuo.BP_Boss_Lianhuo",
     UnitId = 8505503,
     UnitName = "Mon_Name_8505001",
-    WeaponId = T.RT_300
+    WeaponId = T.RT_301
   },
   [8505601] = {
     AlertId = 10,
@@ -26650,7 +26817,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_05_Lianhuo/BP_Boss_Lianhuo.BP_Boss_Lianhuo",
     UnitId = 8505601,
     UnitName = "Mon_Name_8505001",
-    WeaponId = T.RT_300
+    WeaponId = T.RT_301
   },
   [8505602] = {
     AlertId = 10,
@@ -26678,7 +26845,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_05_Lianhuo/BP_Boss_Lianhuo.BP_Boss_Lianhuo",
     UnitId = 8505602,
     UnitName = "Mon_Name_8505001",
-    WeaponId = T.RT_300
+    WeaponId = T.RT_301
   },
   [8505603] = {
     AlertId = 10,
@@ -26686,7 +26853,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8505603,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_301,
+    BossUIValues = T.RT_302,
     CameraLockOnBones = T.RT_259,
     Camp = "Monster",
     CombatVersionOpen = 14,
@@ -26706,7 +26873,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_05_Lianhuo/BP_Boss_Lianhuo.BP_Boss_Lianhuo",
     UnitId = 8505603,
     UnitName = "Mon_Name_8505001",
-    WeaponId = T.RT_300
+    WeaponId = T.RT_301
   },
   [8505604] = {
     AlertId = 10,
@@ -26714,7 +26881,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8505604,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_301,
+    BossUIValues = T.RT_302,
     CameraLockOnBones = T.RT_259,
     Camp = "Monster",
     CombatVersionOpen = 14,
@@ -26734,7 +26901,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_05_Lianhuo/BP_Boss_Lianhuo.BP_Boss_Lianhuo",
     UnitId = 8505604,
     UnitName = "Mon_Name_8505001",
-    WeaponId = T.RT_300
+    WeaponId = T.RT_301
   },
   [8505605] = {
     AlertId = 10,
@@ -26742,7 +26909,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8505605,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_301,
+    BossUIValues = T.RT_302,
     CameraLockOnBones = T.RT_259,
     Camp = "Monster",
     CombatVersionOpen = 14,
@@ -26762,7 +26929,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_05_Lianhuo/BP_Boss_Lianhuo.BP_Boss_Lianhuo",
     UnitId = 8505605,
     UnitName = "Mon_Name_8505001",
-    WeaponId = T.RT_300
+    WeaponId = T.RT_301
   },
   [8505606] = {
     AlertId = 10,
@@ -26770,7 +26937,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8505606,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_301,
+    BossUIValues = T.RT_302,
     CameraLockOnBones = T.RT_259,
     Camp = "Monster",
     CombatVersionOpen = 14,
@@ -26790,7 +26957,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_05_Lianhuo/BP_Boss_Lianhuo.BP_Boss_Lianhuo",
     UnitId = 8505606,
     UnitName = "Mon_Name_8505001",
-    WeaponId = T.RT_300
+    WeaponId = T.RT_301
   },
   [8505701] = {
     AlertId = 10,
@@ -26818,7 +26985,35 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_05_Lianhuo/BP_Boss_Lianhuo.BP_Boss_Lianhuo",
     UnitId = 8505701,
     UnitName = "Mon_Name_8505001",
-    WeaponId = T.RT_300
+    WeaponId = T.RT_301
+  },
+  [8505801] = {
+    AlertId = 10,
+    BT = "/Game/AssetDesign/AI/Monster/Boss_05_Lianhuo/BT_Boss_Lianhuo_HardBossEvent.BT_Boss_Lianhuo_HardBossEvent",
+    BattleRoleId = 8505801,
+    BloodUIParmas = T.RT_57,
+    BossPenalize = T.RT_62,
+    BossUIValues = T.RT_293,
+    CameraLockOnBones = T.RT_259,
+    Camp = "Monster",
+    CombatVersionOpen = 17,
+    DisableTicklod = true,
+    ExpBasic = 0,
+    GalleryRuleId = 8505001,
+    GamePlayTags = T.RT_60,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
+    MiniMapId = 4,
+    ModelId = 850501,
+    MultiHitedCapsule = true,
+    NavAgentId = 2,
+    SupplyMechId = T.RT_263,
+    SupplyMechLevel = T.RT_264,
+    SupplyMechOffset = T.RT_269,
+    UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_05_Lianhuo/BP_Boss_Lianhuo.BP_Boss_Lianhuo",
+    UnitId = 8505801,
+    UnitName = "Mon_Name_8505001",
+    WeaponId = T.RT_301
   },
   [8506001] = {
     AlertId = 10,
@@ -26826,7 +27021,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8506001,
     BloodUIParmas = T.RT_57,
     BossUIValues = T.RT_41,
-    CameraLockOnBones = T.RT_296,
+    CameraLockOnBones = T.RT_297,
     Camp = "Monster",
     CombatVersionOpen = 10,
     DisableTicklod = true,
@@ -26841,7 +27036,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_06_Nvzhu/BP_Boss_Nvzhu.BP_Boss_Nvzhu",
     UnitId = 8506001,
     UnitName = "Mon_Name_8506001",
-    WeaponId = T.RT_302
+    WeaponId = T.RT_303
   },
   [8507001] = {
     AlertId = 10,
@@ -26849,7 +27044,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8507001,
     BloodUIParmas = T.RT_57,
     BossUIValues = T.RT_41,
-    CameraLockOnBones = T.RT_296,
+    CameraLockOnBones = T.RT_297,
     Camp = "Monster",
     CombatVersionOpen = 10,
     DisableTicklod = true,
@@ -26864,7 +27059,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_06_Nvzhu/BP_Boss_Nvzhu.BP_Boss_Nvzhu",
     UnitId = 8507001,
     UnitName = "Mon_Name_8506001",
-    WeaponId = T.RT_302
+    WeaponId = T.RT_303
   },
   [8509001] = {
     AlertId = 10,
@@ -26896,7 +27091,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8509002,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_58,
-    BossUIValues = T.RT_304,
+    BossUIValues = T.RT_305,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 10,
@@ -26944,7 +27139,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8509601,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_58,
-    BossUIValues = T.RT_304,
+    BossUIValues = T.RT_305,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 10,
@@ -27106,15 +27301,39 @@ return ReadOnly("Monster", {
     UnitId = 8509701,
     UnitName = "Mon_Name_8509001"
   },
+  [8509801] = {
+    AlertId = 10,
+    BT = "/Game/AssetDesign/AI/Monster/Boss_09_Tuosi/BT_Boss_Tuosi_HardBossEvent.BT_Boss_Tuosi_HardBossEvent",
+    BattleRoleId = 8509801,
+    BloodUIParmas = T.RT_57,
+    BossPenalize = T.RT_62,
+    BossUIValues = T.RT_41,
+    CameraLockOnBones = T.RT_64,
+    Camp = "Monster",
+    CombatVersionOpen = 17,
+    DisableTicklod = true,
+    DontApplyAsyncCreate = true,
+    ExpBasic = 0,
+    GalleryRuleId = 8509001,
+    GamePlayTags = T.RT_60,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
+    MiniMapId = 4,
+    ModelId = 850902,
+    NavAgentId = 2,
+    UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_09_Tuosi/BP_Boss_Tuosi.BP_Boss_Tuosi",
+    UnitId = 8509801,
+    UnitName = "Mon_Name_8509801"
+  },
   [8510001] = {
     AlertId = 10,
     AnimCoverPath = "/Game/AssetDesign/Char/Monster/Boss_10_Heilong/ABP_Boss_Heilong.ABP_Boss_Heilong_C",
     BT = "/Game/AssetDesign/AI/Monster/Boss_10_Heilong/BT_Boss_Heilong.BT_Boss_Heilong",
     BattleRoleId = 8510001,
     BloodUIParmas = T.RT_57,
-    BossPenalize = T.RT_299,
+    BossPenalize = T.RT_300,
     BossUIValues = T.RT_41,
-    CameraLockOnBones = T.RT_305,
+    CameraLockOnBones = T.RT_306,
     Camp = "Monster",
     CombatVersionOpen = 11,
     DisableTicklod = true,
@@ -27139,9 +27358,9 @@ return ReadOnly("Monster", {
     BT = "/Game/AssetDesign/AI/Monster/Boss_10_Heilong/BT_Boss_Heilong_Story2.BT_Boss_Heilong_Story2",
     BattleRoleId = 8510003,
     BloodUIParmas = T.RT_39,
-    BossPenalize = T.RT_299,
+    BossPenalize = T.RT_300,
     BossUIValues = T.RT_41,
-    CameraLockOnBones = T.RT_305,
+    CameraLockOnBones = T.RT_306,
     Camp = "Monster",
     CombatVersionOpen = 11,
     DisableTicklod = true,
@@ -27161,7 +27380,7 @@ return ReadOnly("Monster", {
   },
   [8510003] = {
     BattleRoleId = 8510002,
-    BloodUIParmas = T.RT_306,
+    BloodUIParmas = T.RT_307,
     Camp = "Monster",
     CombatVersionOpen = 11,
     DisableTicklod = true,
@@ -27183,7 +27402,7 @@ return ReadOnly("Monster", {
     BloodUIParmas = T.RT_39,
     BossPenalize = T.RT_58,
     BossUIValues = T.RT_41,
-    CameraLockOnBones = T.RT_305,
+    CameraLockOnBones = T.RT_306,
     Camp = "Monster",
     CombatVersionOpen = 11,
     DisableTicklod = true,
@@ -27210,7 +27429,7 @@ return ReadOnly("Monster", {
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_58,
     BossUIValues = T.RT_41,
-    CameraLockOnBones = T.RT_305,
+    CameraLockOnBones = T.RT_306,
     Camp = "Monster",
     CombatVersionOpen = 11,
     DisableTicklod = true,
@@ -27235,9 +27454,9 @@ return ReadOnly("Monster", {
     BT = "/Game/AssetDesign/AI/Monster/Boss_11_Bailong/BT_Boss_Bailong.BT_Boss_Bailong",
     BattleRoleId = 8511001,
     BloodUIParmas = T.RT_44,
-    BossPenalize = T.RT_299,
+    BossPenalize = T.RT_300,
     BossUIValues = T.RT_41,
-    CameraLockOnBones = T.RT_305,
+    CameraLockOnBones = T.RT_306,
     Camp = "Monster",
     CombatVersionOpen = 13,
     DisableTicklod = true,
@@ -27264,7 +27483,7 @@ return ReadOnly("Monster", {
     BloodUIParmas = T.RT_44,
     BossPenalize = T.RT_58,
     BossUIValues = T.RT_41,
-    CameraLockOnBones = T.RT_305,
+    CameraLockOnBones = T.RT_306,
     Camp = "Monster",
     CombatVersionOpen = 13,
     DisableTicklod = true,
@@ -27291,7 +27510,7 @@ return ReadOnly("Monster", {
     BloodUIParmas = T.RT_44,
     BossPenalize = T.RT_58,
     BossUIValues = T.RT_41,
-    CameraLockOnBones = T.RT_305,
+    CameraLockOnBones = T.RT_306,
     Camp = "Monster",
     CombatVersionOpen = 13,
     DisableTicklod = true,
@@ -27314,8 +27533,8 @@ return ReadOnly("Monster", {
     BattleRoleId = 8512001,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_58,
-    BossUIValues = T.RT_308,
-    CameraLockOnBones = T.RT_309,
+    BossUIValues = T.RT_309,
+    CameraLockOnBones = T.RT_310,
     Camp = "Monster",
     CombatVersionOpen = 10,
     DisableTicklod = true,
@@ -27339,8 +27558,8 @@ return ReadOnly("Monster", {
     BattleRoleId = 8512002,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_58,
-    BossUIValues = T.RT_311,
-    CameraLockOnBones = T.RT_309,
+    BossUIValues = T.RT_312,
+    CameraLockOnBones = T.RT_310,
     Camp = "Monster",
     CombatVersionOpen = 10,
     DisableTicklod = true,
@@ -27360,13 +27579,13 @@ return ReadOnly("Monster", {
   },
   [8512011] = {
     BattleRoleId = 8512011,
-    BloodUIParmas = T.RT_306,
+    BloodUIParmas = T.RT_307,
     Camp = "Monster",
     CombatVersionOpen = 10,
     DelayDestroyTime = 3,
     DisableTicklod = true,
     ExpBasic = 0,
-    FlyParams = T.RT_297,
+    FlyParams = T.RT_298,
     ForbidenMoveComp = true,
     GamePlayTags = T.RT_74,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
@@ -27378,13 +27597,13 @@ return ReadOnly("Monster", {
   },
   [8512012] = {
     BattleRoleId = 8512012,
-    BloodUIParmas = T.RT_306,
+    BloodUIParmas = T.RT_307,
     Camp = "Monster",
     CombatVersionOpen = 10,
     DelayDestroyTime = 3,
     DisableTicklod = true,
     ExpBasic = 0,
-    FlyParams = T.RT_297,
+    FlyParams = T.RT_298,
     ForbidenMoveComp = true,
     GamePlayTags = T.RT_74,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
@@ -27396,13 +27615,13 @@ return ReadOnly("Monster", {
   },
   [8512013] = {
     BattleRoleId = 8512013,
-    BloodUIParmas = T.RT_306,
+    BloodUIParmas = T.RT_307,
     Camp = "Monster",
     CombatVersionOpen = 10,
     DelayDestroyTime = 3,
     DisableTicklod = true,
     ExpBasic = 0,
-    FlyParams = T.RT_297,
+    FlyParams = T.RT_298,
     ForbidenMoveComp = true,
     GamePlayTags = T.RT_74,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
@@ -27422,8 +27641,8 @@ return ReadOnly("Monster", {
       HandlePenalize = 1,
       MaxHpPercent = 1
     },
-    BossUIValues = T.RT_308,
-    CameraLockOnBones = T.RT_309,
+    BossUIValues = T.RT_309,
+    CameraLockOnBones = T.RT_310,
     Camp = "Monster",
     CombatVersionOpen = 10,
     DisableTicklod = true,
@@ -27447,8 +27666,8 @@ return ReadOnly("Monster", {
     BattleRoleId = 8512501,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_58,
-    BossUIValues = T.RT_311,
-    CameraLockOnBones = T.RT_309,
+    BossUIValues = T.RT_312,
+    CameraLockOnBones = T.RT_310,
     Camp = "Monster",
     CombatVersionOpen = 10,
     DisableTicklod = true,
@@ -27472,8 +27691,8 @@ return ReadOnly("Monster", {
     BattleRoleId = 8512502,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_58,
-    BossUIValues = T.RT_311,
-    CameraLockOnBones = T.RT_309,
+    BossUIValues = T.RT_312,
+    CameraLockOnBones = T.RT_310,
     Camp = "Monster",
     CombatVersionOpen = 10,
     DisableTicklod = true,
@@ -27497,8 +27716,8 @@ return ReadOnly("Monster", {
     BattleRoleId = 8512503,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_58,
-    BossUIValues = T.RT_311,
-    CameraLockOnBones = T.RT_309,
+    BossUIValues = T.RT_312,
+    CameraLockOnBones = T.RT_310,
     Camp = "Monster",
     CombatVersionOpen = 10,
     DisableTicklod = true,
@@ -27522,8 +27741,8 @@ return ReadOnly("Monster", {
     BattleRoleId = 8512601,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_58,
-    BossUIValues = T.RT_311,
-    CameraLockOnBones = T.RT_309,
+    BossUIValues = T.RT_312,
+    CameraLockOnBones = T.RT_310,
     Camp = "Monster",
     CombatVersionOpen = 10,
     DisableTicklod = true,
@@ -27548,7 +27767,7 @@ return ReadOnly("Monster", {
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_58,
     BossUIValues = T.RT_41,
-    CameraLockOnBones = T.RT_309,
+    CameraLockOnBones = T.RT_310,
     Camp = "Monster",
     CombatVersionOpen = 10,
     DisableTicklod = true,
@@ -27573,7 +27792,7 @@ return ReadOnly("Monster", {
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
     BossUIValues = T.RT_290,
-    CameraLockOnBones = T.RT_309,
+    CameraLockOnBones = T.RT_310,
     Camp = "Monster",
     CombatVersionOpen = 14,
     DisableTicklod = true,
@@ -27598,7 +27817,7 @@ return ReadOnly("Monster", {
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
     BossUIValues = T.RT_290,
-    CameraLockOnBones = T.RT_309,
+    CameraLockOnBones = T.RT_310,
     Camp = "Monster",
     CombatVersionOpen = 14,
     DisableTicklod = true,
@@ -27623,7 +27842,7 @@ return ReadOnly("Monster", {
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
     BossUIValues = T.RT_290,
-    CameraLockOnBones = T.RT_309,
+    CameraLockOnBones = T.RT_310,
     Camp = "Monster",
     CombatVersionOpen = 14,
     DisableTicklod = true,
@@ -27648,7 +27867,7 @@ return ReadOnly("Monster", {
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
     BossUIValues = T.RT_290,
-    CameraLockOnBones = T.RT_309,
+    CameraLockOnBones = T.RT_310,
     Camp = "Monster",
     CombatVersionOpen = 14,
     DisableTicklod = true,
@@ -27673,7 +27892,7 @@ return ReadOnly("Monster", {
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_58,
     BossUIValues = T.RT_41,
-    CameraLockOnBones = T.RT_309,
+    CameraLockOnBones = T.RT_310,
     Camp = "Monster",
     CombatVersionOpen = 15,
     DisableTicklod = true,
@@ -27697,8 +27916,8 @@ return ReadOnly("Monster", {
     BattleRoleId = 8512701,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_58,
-    BossUIValues = T.RT_311,
-    CameraLockOnBones = T.RT_309,
+    BossUIValues = T.RT_312,
+    CameraLockOnBones = T.RT_310,
     Camp = "Monster",
     CombatVersionOpen = 15,
     DisableTicklod = true,
@@ -27739,7 +27958,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_13_Kuxiu/BP_Boss_Kuxiu.BP_Boss_Kuxiu",
     UnitId = 8513001,
     UnitName = "Mon_Name_8513001",
-    WeaponId = T.RT_312
+    WeaponId = T.RT_313
   },
   [8513011] = {
     AlertId = 10,
@@ -27765,7 +27984,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_13_Kuxiu/BP_Boss_Kuxiu.BP_Boss_Kuxiu",
     UnitId = 8513011,
     UnitName = "Mon_Name_8513011",
-    WeaponId = T.RT_312
+    WeaponId = T.RT_313
   },
   [8513012] = {
     AlertId = 10,
@@ -27791,7 +28010,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_13_Kuxiu/BP_Boss_Kuxiu.BP_Boss_Kuxiu",
     UnitId = 8513012,
     UnitName = "Mon_Name_8513012",
-    WeaponId = T.RT_312
+    WeaponId = T.RT_313
   },
   [8513013] = {
     AlertId = 10,
@@ -27817,7 +28036,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_13_Kuxiu/BP_Boss_Kuxiu.BP_Boss_Kuxiu",
     UnitId = 8513013,
     UnitName = "Mon_Name_8513013",
-    WeaponId = T.RT_312
+    WeaponId = T.RT_313
   },
   [8513014] = {
     AlertId = 10,
@@ -27843,7 +28062,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_13_Kuxiu/BP_Boss_Kuxiu.BP_Boss_Kuxiu",
     UnitId = 8513014,
     UnitName = "Mon_Name_8513014",
-    WeaponId = T.RT_312
+    WeaponId = T.RT_313
   },
   [8513015] = {
     AlertId = 10,
@@ -27869,7 +28088,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_13_Kuxiu/BP_Boss_Kuxiu.BP_Boss_Kuxiu",
     UnitId = 8513015,
     UnitName = "Mon_Name_8513015",
-    WeaponId = T.RT_312
+    WeaponId = T.RT_313
   },
   [8513016] = {
     AlertId = 10,
@@ -27895,7 +28114,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_13_Kuxiu/BP_Boss_Kuxiu.BP_Boss_Kuxiu",
     UnitId = 8513016,
     UnitName = "Mon_Name_8513016",
-    WeaponId = T.RT_312
+    WeaponId = T.RT_313
   },
   [8513017] = {
     AlertId = 10,
@@ -27921,7 +28140,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_13_Kuxiu/BP_Boss_Kuxiu.BP_Boss_Kuxiu",
     UnitId = 8513017,
     UnitName = "Mon_Name_8513017",
-    WeaponId = T.RT_312
+    WeaponId = T.RT_313
   },
   [8513018] = {
     AlertId = 10,
@@ -27947,7 +28166,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_13_Kuxiu/BP_Boss_Kuxiu.BP_Boss_Kuxiu",
     UnitId = 8513018,
     UnitName = "Mon_Name_8513018",
-    WeaponId = T.RT_312
+    WeaponId = T.RT_313
   },
   [8513019] = {
     AlertId = 10,
@@ -27973,7 +28192,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_13_Kuxiu/BP_Boss_Kuxiu.BP_Boss_Kuxiu",
     UnitId = 8513019,
     UnitName = "Mon_Name_8513019",
-    WeaponId = T.RT_312
+    WeaponId = T.RT_313
   },
   [8513020] = {
     AlertId = 10,
@@ -27999,7 +28218,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_13_Kuxiu/BP_Boss_Kuxiu.BP_Boss_Kuxiu",
     UnitId = 8513020,
     UnitName = "Mon_Name_8513020",
-    WeaponId = T.RT_312
+    WeaponId = T.RT_313
   },
   [8513021] = {
     AlertId = 10,
@@ -28025,7 +28244,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_13_Kuxiu/BP_Boss_Kuxiu.BP_Boss_Kuxiu",
     UnitId = 8513021,
     UnitName = "Mon_Name_8513021",
-    WeaponId = T.RT_312
+    WeaponId = T.RT_313
   },
   [8513022] = {
     AlertId = 10,
@@ -28051,7 +28270,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_13_Kuxiu/BP_Boss_Kuxiu.BP_Boss_Kuxiu",
     UnitId = 8513022,
     UnitName = "Mon_Name_8513022",
-    WeaponId = T.RT_312
+    WeaponId = T.RT_313
   },
   [8513023] = {
     AlertId = 10,
@@ -28077,7 +28296,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_13_Kuxiu/BP_Boss_Kuxiu.BP_Boss_Kuxiu",
     UnitId = 8513023,
     UnitName = "Mon_Name_8513023",
-    WeaponId = T.RT_312
+    WeaponId = T.RT_313
   },
   [8513024] = {
     AlertId = 10,
@@ -28103,7 +28322,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_13_Kuxiu/BP_Boss_Kuxiu.BP_Boss_Kuxiu",
     UnitId = 8513024,
     UnitName = "Mon_Name_8513024",
-    WeaponId = T.RT_312
+    WeaponId = T.RT_313
   },
   [8513051] = {
     AlertId = 10,
@@ -28126,21 +28345,21 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_13_Kuxiu/BP_Boss_Kuxiu.BP_Boss_Kuxiu",
     UnitId = 8513051,
     UnitName = "Mon_Name_8513001",
-    WeaponId = T.RT_312
+    WeaponId = T.RT_313
   },
   [8513052] = {
     AlertId = 105,
     BT = "/Game/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu_52.BT_Boss_Kuxiu_52",
     BattleRoleId = 8513052,
-    BloodUIParmas = T.RT_313,
+    BloodUIParmas = T.RT_314,
     BluePrintParams = {ExecuteBornDamage = 0},
-    BossPenalize = T.RT_299,
+    BossPenalize = T.RT_300,
     Camp = "Monster",
     CombatVersionOpen = 16,
     DisableTicklod = true,
     DontApplyAsyncCreate = true,
     ExpBasic = 0,
-    GamePlayTags = T.RT_314,
+    GamePlayTags = T.RT_315,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
     MiniMapId = 4,
@@ -28153,15 +28372,15 @@ return ReadOnly("Monster", {
     AlertId = 105,
     BT = "/Game/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu_52.BT_Boss_Kuxiu_52",
     BattleRoleId = 8513052,
-    BloodUIParmas = T.RT_313,
+    BloodUIParmas = T.RT_314,
     BluePrintParams = {ExecuteBornDamage = 1},
-    BossPenalize = T.RT_299,
+    BossPenalize = T.RT_300,
     Camp = "Monster",
     CombatVersionOpen = 16,
     DisableTicklod = true,
     DontApplyAsyncCreate = true,
     ExpBasic = 0,
-    GamePlayTags = T.RT_314,
+    GamePlayTags = T.RT_315,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
     MiniMapId = 4,
@@ -28192,7 +28411,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_13_Kuxiu/BP_Boss_Kuxiu.BP_Boss_Kuxiu",
     UnitId = 8513601,
     UnitName = "Mon_Name_8513001",
-    WeaponId = T.RT_312
+    WeaponId = T.RT_313
   },
   [8513602] = {
     AlertId = 10,
@@ -28216,7 +28435,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_13_Kuxiu/BP_Boss_Kuxiu.BP_Boss_Kuxiu",
     UnitId = 8513602,
     UnitName = "Mon_Name_8513001",
-    WeaponId = T.RT_312
+    WeaponId = T.RT_313
   },
   [8513603] = {
     AlertId = 10,
@@ -28240,7 +28459,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_13_Kuxiu/BP_Boss_Kuxiu.BP_Boss_Kuxiu",
     UnitId = 8513603,
     UnitName = "Mon_Name_8513001",
-    WeaponId = T.RT_312
+    WeaponId = T.RT_313
   },
   [8513604] = {
     AlertId = 10,
@@ -28264,7 +28483,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_13_Kuxiu/BP_Boss_Kuxiu.BP_Boss_Kuxiu",
     UnitId = 8513604,
     UnitName = "Mon_Name_8513001",
-    WeaponId = T.RT_312
+    WeaponId = T.RT_313
   },
   [8513605] = {
     AlertId = 10,
@@ -28288,7 +28507,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_13_Kuxiu/BP_Boss_Kuxiu.BP_Boss_Kuxiu",
     UnitId = 8513605,
     UnitName = "Mon_Name_8513001",
-    WeaponId = T.RT_312
+    WeaponId = T.RT_313
   },
   [8513701] = {
     AlertId = 10,
@@ -28296,7 +28515,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8513701,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 12,
@@ -28312,7 +28531,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_13_Kuxiu/BP_Boss_Kuxiu.BP_Boss_Kuxiu",
     UnitId = 8513701,
     UnitName = "Mon_Name_8513701",
-    WeaponId = T.RT_312
+    WeaponId = T.RT_313
   },
   [8514001] = {
     AlertId = 10,
@@ -28337,7 +28556,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_14_Shenpan/BP_Boss_Shenpan.BP_Boss_Shenpan",
     UnitId = 8514001,
     UnitName = "Mon_Name_8514001",
-    WeaponId = T.RT_316
+    WeaponId = T.RT_317
   },
   [8514011] = {
     AlertId = 10,
@@ -28363,7 +28582,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_14_Shenpan/BP_Boss_Shenpan.BP_Boss_Shenpan",
     UnitId = 8514011,
     UnitName = "Mon_Name_8514011",
-    WeaponId = T.RT_316
+    WeaponId = T.RT_317
   },
   [8514012] = {
     AlertId = 10,
@@ -28389,7 +28608,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_14_Shenpan/BP_Boss_Shenpan.BP_Boss_Shenpan",
     UnitId = 8514012,
     UnitName = "Mon_Name_8514012",
-    WeaponId = T.RT_316
+    WeaponId = T.RT_317
   },
   [8514013] = {
     AlertId = 10,
@@ -28415,7 +28634,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_14_Shenpan/BP_Boss_Shenpan.BP_Boss_Shenpan",
     UnitId = 8514013,
     UnitName = "Mon_Name_8514013",
-    WeaponId = T.RT_316
+    WeaponId = T.RT_317
   },
   [8514014] = {
     AlertId = 10,
@@ -28441,7 +28660,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_14_Shenpan/BP_Boss_Shenpan.BP_Boss_Shenpan",
     UnitId = 8514014,
     UnitName = "Mon_Name_8514014",
-    WeaponId = T.RT_316
+    WeaponId = T.RT_317
   },
   [8514015] = {
     AlertId = 10,
@@ -28467,7 +28686,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_14_Shenpan/BP_Boss_Shenpan.BP_Boss_Shenpan",
     UnitId = 8514015,
     UnitName = "Mon_Name_8514015",
-    WeaponId = T.RT_316
+    WeaponId = T.RT_317
   },
   [8514016] = {
     AlertId = 10,
@@ -28493,7 +28712,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_14_Shenpan/BP_Boss_Shenpan.BP_Boss_Shenpan",
     UnitId = 8514016,
     UnitName = "Mon_Name_8514016",
-    WeaponId = T.RT_316
+    WeaponId = T.RT_317
   },
   [8514017] = {
     AlertId = 10,
@@ -28519,7 +28738,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_14_Shenpan/BP_Boss_Shenpan.BP_Boss_Shenpan",
     UnitId = 8514017,
     UnitName = "Mon_Name_8514017",
-    WeaponId = T.RT_316
+    WeaponId = T.RT_317
   },
   [8514018] = {
     AlertId = 10,
@@ -28545,7 +28764,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_14_Shenpan/BP_Boss_Shenpan.BP_Boss_Shenpan",
     UnitId = 8514018,
     UnitName = "Mon_Name_8514018",
-    WeaponId = T.RT_316
+    WeaponId = T.RT_317
   },
   [8514019] = {
     AlertId = 10,
@@ -28571,7 +28790,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_14_Shenpan/BP_Boss_Shenpan.BP_Boss_Shenpan",
     UnitId = 8514019,
     UnitName = "Mon_Name_8514019",
-    WeaponId = T.RT_316
+    WeaponId = T.RT_317
   },
   [8514020] = {
     AlertId = 10,
@@ -28597,7 +28816,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_14_Shenpan/BP_Boss_Shenpan.BP_Boss_Shenpan",
     UnitId = 8514020,
     UnitName = "Mon_Name_8514020",
-    WeaponId = T.RT_316
+    WeaponId = T.RT_317
   },
   [8514021] = {
     AlertId = 10,
@@ -28623,7 +28842,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_14_Shenpan/BP_Boss_Shenpan.BP_Boss_Shenpan",
     UnitId = 8514021,
     UnitName = "Mon_Name_8514021",
-    WeaponId = T.RT_316
+    WeaponId = T.RT_317
   },
   [8514022] = {
     AlertId = 10,
@@ -28649,7 +28868,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_14_Shenpan/BP_Boss_Shenpan.BP_Boss_Shenpan",
     UnitId = 8514022,
     UnitName = "Mon_Name_8514022",
-    WeaponId = T.RT_316
+    WeaponId = T.RT_317
   },
   [8514023] = {
     AlertId = 10,
@@ -28675,7 +28894,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_14_Shenpan/BP_Boss_Shenpan.BP_Boss_Shenpan",
     UnitId = 8514023,
     UnitName = "Mon_Name_8514023",
-    WeaponId = T.RT_316
+    WeaponId = T.RT_317
   },
   [8514024] = {
     AlertId = 10,
@@ -28701,7 +28920,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_14_Shenpan/BP_Boss_Shenpan.BP_Boss_Shenpan",
     UnitId = 8514024,
     UnitName = "Mon_Name_8514024",
-    WeaponId = T.RT_316
+    WeaponId = T.RT_317
   },
   [8514051] = {
     AlertId = 10,
@@ -28730,7 +28949,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_14_Shenpan/BP_Boss_Shenpan.BP_Boss_Shenpan",
     UnitId = 8514051,
     UnitName = "Mon_Name_8514001",
-    WeaponId = T.RT_316
+    WeaponId = T.RT_317
   },
   [8514601] = {
     AlertId = 10,
@@ -28754,7 +28973,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_14_Shenpan/BP_Boss_Shenpan.BP_Boss_Shenpan",
     UnitId = 8514601,
     UnitName = "Mon_Name_8514001",
-    WeaponId = T.RT_316
+    WeaponId = T.RT_317
   },
   [8514602] = {
     AlertId = 10,
@@ -28762,7 +28981,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8514602,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 14,
@@ -28778,7 +28997,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_14_Shenpan/BP_Boss_Shenpan.BP_Boss_Shenpan",
     UnitId = 8514602,
     UnitName = "Mon_Name_8514001",
-    WeaponId = T.RT_316
+    WeaponId = T.RT_317
   },
   [8514603] = {
     AlertId = 10,
@@ -28786,7 +29005,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8514603,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 14,
@@ -28802,7 +29021,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_14_Shenpan/BP_Boss_Shenpan.BP_Boss_Shenpan",
     UnitId = 8514603,
     UnitName = "Mon_Name_8514001",
-    WeaponId = T.RT_316
+    WeaponId = T.RT_317
   },
   [8514604] = {
     AlertId = 10,
@@ -28810,7 +29029,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8514604,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 14,
@@ -28826,7 +29045,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_14_Shenpan/BP_Boss_Shenpan.BP_Boss_Shenpan",
     UnitId = 8514604,
     UnitName = "Mon_Name_8514001",
-    WeaponId = T.RT_316
+    WeaponId = T.RT_317
   },
   [8514605] = {
     AlertId = 10,
@@ -28834,7 +29053,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8514605,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 14,
@@ -28850,7 +29069,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_14_Shenpan/BP_Boss_Shenpan.BP_Boss_Shenpan",
     UnitId = 8514605,
     UnitName = "Mon_Name_8514001",
-    WeaponId = T.RT_316
+    WeaponId = T.RT_317
   },
   [8514606] = {
     AlertId = 10,
@@ -28874,7 +29093,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_14_Shenpan/BP_Boss_Shenpan.BP_Boss_Shenpan",
     UnitId = 8514606,
     UnitName = "Mon_Name_8514001",
-    WeaponId = T.RT_316
+    WeaponId = T.RT_317
   },
   [8514701] = {
     AlertId = 10,
@@ -28882,7 +29101,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8514701,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 11,
@@ -28899,7 +29118,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_14_Shenpan/BP_Boss_Shenpan.BP_Boss_Shenpan",
     UnitId = 8514701,
     UnitName = "Mon_Name_8514701",
-    WeaponId = T.RT_316
+    WeaponId = T.RT_317
   },
   [8515001] = {
     AlertId = 10,
@@ -29347,8 +29566,8 @@ return ReadOnly("Monster", {
     AlertId = 10,
     BT = "/Game/AssetDesign/AI/Monster/Boss_15_Jushi/BT_Boss_Jushi_53.BT_Boss_Jushi_53",
     BattleRoleId = 8515001,
-    BloodUIParmas = T.RT_317,
-    BluePrintParams = T.RT_318,
+    BloodUIParmas = T.RT_318,
+    BluePrintParams = T.RT_319,
     BossPenalize = T.RT_58,
     CameraLockOnBones = T.RT_271,
     Camp = "Monster",
@@ -29379,8 +29598,8 @@ return ReadOnly("Monster", {
     AlertId = 10,
     BT = "/Game/AssetDesign/AI/Monster/Boss_15_Jushi/BT_Boss_Jushi_53.BT_Boss_Jushi_53",
     BattleRoleId = 8515001,
-    BloodUIParmas = T.RT_317,
-    BluePrintParams = T.RT_318,
+    BloodUIParmas = T.RT_318,
+    BluePrintParams = T.RT_319,
     BossPenalize = T.RT_58,
     CameraLockOnBones = T.RT_271,
     Camp = "Monster",
@@ -29411,7 +29630,7 @@ return ReadOnly("Monster", {
     AlertId = 10,
     BT = "/Game/AssetDesign/AI/Monster/Boss_15_Jushi/BT_Boss_Jushi_55.BT_Boss_Jushi_55",
     BattleRoleId = 8515055,
-    BloodUIParmas = T.RT_317,
+    BloodUIParmas = T.RT_318,
     CameraLockOnBones = T.RT_271,
     Camp = "Monster",
     CombatVersionOpen = 13,
@@ -29463,7 +29682,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8515602,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     CameraLockOnBones = T.RT_271,
     Camp = "Monster",
     CombatVersionOpen = 14,
@@ -29489,7 +29708,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8515603,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     CameraLockOnBones = T.RT_271,
     Camp = "Monster",
     CombatVersionOpen = 14,
@@ -29515,7 +29734,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8515604,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     CameraLockOnBones = T.RT_271,
     Camp = "Monster",
     CombatVersionOpen = 14,
@@ -29541,7 +29760,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8515605,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     CameraLockOnBones = T.RT_271,
     Camp = "Monster",
     CombatVersionOpen = 14,
@@ -29592,7 +29811,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8516601,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 16,
@@ -29617,7 +29836,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8516602,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 16,
@@ -29642,7 +29861,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8516603,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 16,
@@ -29667,7 +29886,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8516604,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 16,
@@ -29692,7 +29911,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8516701,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 16,
@@ -29731,7 +29950,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_17_Yuming/BP_Boss_Yuming.BP_Boss_Yuming",
     UnitId = 8517001,
     UnitName = "Mon_Name_8517001",
-    WeaponId = T.RT_319
+    WeaponId = T.RT_320
   },
   [8517002] = {
     BT = "/Game/AssetDesign/AI/Monster/Boss_17_Yuming/BT_Boss_Yuming_Summoned.BT_Boss_Yuming_Summoned",
@@ -29769,7 +29988,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_17_Yuming/BP_Boss_Yuming_Story2.BP_Boss_Yuming_Story2",
     UnitId = 8517003,
     UnitName = "Mon_Name_8517001",
-    WeaponId = T.RT_319
+    WeaponId = T.RT_320
   },
   [8517004] = {
     AlertId = 10,
@@ -29791,7 +30010,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_17_Yuming/BP_Boss_Yuming.BP_Boss_Yuming",
     UnitId = 8517004,
     UnitName = "Mon_Name_8517001",
-    WeaponId = T.RT_319
+    WeaponId = T.RT_320
   },
   [8518001] = {
     AlertId = 10,
@@ -29825,7 +30044,7 @@ return ReadOnly("Monster", {
     BT = "/Game/AssetDesign/AI/Monster/Boss_18_Juque/BT_Boss_Juque_Stage2.BT_Boss_Juque_Stage2",
     BattleRoleId = 8518002,
     BloodUIParmas = T.RT_57,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 13,
@@ -29903,7 +30122,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8518701,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 11,
@@ -29921,7 +30140,7 @@ return ReadOnly("Monster", {
     NavAgentId = 2,
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_18_Juque/BP_Boss_Juque02.BP_Boss_Juque02",
     UnitId = 8518701,
-    UnitName = "Mon_Name_8518001"
+    UnitName = "Mon_Name_8518701"
   },
   [8519001] = {
     AlertId = 10,
@@ -29934,7 +30153,7 @@ return ReadOnly("Monster", {
       PlayStoryAfterDeath = 0.1,
       StoryEvent = "TrainBoss01AndUISuccess"
     },
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     Camp = "Monster",
     CombatVersionOpen = 14,
     DisableTicklod = true,
@@ -29957,7 +30176,7 @@ return ReadOnly("Monster", {
     BT = "/Game/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.BT_Boss_LiecheHand",
     BattleGroupId = 8519,
     BattleRoleId = 8519002,
-    BloodUIParmas = T.RT_320,
+    BloodUIParmas = T.RT_321,
     Camp = "Monster",
     CombatVersionOpen = 14,
     DisableTicklod = true,
@@ -30043,7 +30262,7 @@ return ReadOnly("Monster", {
     BT = "/Game/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheMCore.BT_Boss_LiecheMCore",
     BattleRoleId = 8519007,
     BloodUIParmas = T.RT_57,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     Camp = "Monster",
     CombatVersionOpen = 14,
     DisableTicklod = true,
@@ -30131,8 +30350,8 @@ return ReadOnly("Monster", {
     BT = "/Game/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheCannon_Hard.BT_Boss_LiecheCannon_Hard",
     BattleRoleId = 8519501,
     BloodUIParmas = T.RT_57,
-    BossPenalize = T.RT_321,
-    BossUIValues = T.RT_315,
+    BossPenalize = T.RT_322,
+    BossUIValues = T.RT_316,
     Camp = "Monster",
     CombatVersionOpen = 14,
     DisableTicklod = true,
@@ -30155,8 +30374,8 @@ return ReadOnly("Monster", {
     BT = "/Game/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheCannon_Hard.BT_Boss_LiecheCannon_Hard",
     BattleRoleId = 8519502,
     BloodUIParmas = T.RT_57,
-    BossPenalize = T.RT_321,
-    BossUIValues = T.RT_315,
+    BossPenalize = T.RT_322,
+    BossUIValues = T.RT_316,
     Camp = "Monster",
     CombatVersionOpen = 14,
     DisableTicklod = true,
@@ -30179,8 +30398,8 @@ return ReadOnly("Monster", {
     BT = "/Game/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheCannon_Hard.BT_Boss_LiecheCannon_Hard",
     BattleRoleId = 8519503,
     BloodUIParmas = T.RT_57,
-    BossPenalize = T.RT_321,
-    BossUIValues = T.RT_315,
+    BossPenalize = T.RT_322,
+    BossUIValues = T.RT_316,
     Camp = "Monster",
     CombatVersionOpen = 14,
     DisableTicklod = true,
@@ -30203,7 +30422,7 @@ return ReadOnly("Monster", {
     BT = "/Game/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.BT_Boss_LiecheHand",
     BattleGroupId = 8519,
     BattleRoleId = 8519504,
-    BloodUIParmas = T.RT_320,
+    BloodUIParmas = T.RT_321,
     Camp = "Monster",
     CombatVersionOpen = 14,
     DisableTicklod = true,
@@ -30226,7 +30445,7 @@ return ReadOnly("Monster", {
     BT = "/Game/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.BT_Boss_LiecheHand",
     BattleGroupId = 8519,
     BattleRoleId = 8519505,
-    BloodUIParmas = T.RT_320,
+    BloodUIParmas = T.RT_321,
     Camp = "Monster",
     CombatVersionOpen = 14,
     DisableTicklod = true,
@@ -30249,7 +30468,7 @@ return ReadOnly("Monster", {
     BT = "/Game/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.BT_Boss_LiecheHand",
     BattleGroupId = 8519,
     BattleRoleId = 8519506,
-    BloodUIParmas = T.RT_320,
+    BloodUIParmas = T.RT_321,
     Camp = "Monster",
     CombatVersionOpen = 14,
     DisableTicklod = true,
@@ -30272,7 +30491,7 @@ return ReadOnly("Monster", {
     BT = "/Game/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheMCore_Hard.BT_Boss_LiecheMCore_Hard",
     BattleRoleId = 8519507,
     BloodUIParmas = T.RT_57,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     Camp = "Monster",
     CombatVersionOpen = 14,
     DisableTicklod = true,
@@ -30295,7 +30514,7 @@ return ReadOnly("Monster", {
     BT = "/Game/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheMCore_Hard.BT_Boss_LiecheMCore_Hard",
     BattleRoleId = 8519508,
     BloodUIParmas = T.RT_57,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     Camp = "Monster",
     CombatVersionOpen = 14,
     DisableTicklod = true,
@@ -30318,7 +30537,7 @@ return ReadOnly("Monster", {
     BT = "/Game/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheMCore_Hard.BT_Boss_LiecheMCore_Hard",
     BattleRoleId = 8519509,
     BloodUIParmas = T.RT_57,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     Camp = "Monster",
     CombatVersionOpen = 14,
     DisableTicklod = true,
@@ -30342,15 +30561,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8520001,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_58,
-    BossUIValues = {
-      IsBossPart = true,
-      PhaseValues = {
-        0.05,
-        0.8,
-        0.15
-      },
-      ShowES = false
-    },
+    BossUIValues = T.RT_324,
     CameraLockOnBones = T.RT_271,
     Camp = "Monster",
     CombatVersionOpen = 16,
@@ -30415,7 +30626,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8520501,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_58,
-    BossUIValues = T.RT_323,
+    BossUIValues = T.RT_326,
     CameraLockOnBones = T.RT_271,
     Camp = "Monster",
     CombatVersionOpen = 16,
@@ -30440,7 +30651,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8520502,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_58,
-    BossUIValues = T.RT_323,
+    BossUIValues = T.RT_326,
     CameraLockOnBones = T.RT_271,
     Camp = "Monster",
     CombatVersionOpen = 16,
@@ -30465,7 +30676,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8520503,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_58,
-    BossUIValues = T.RT_323,
+    BossUIValues = T.RT_326,
     CameraLockOnBones = T.RT_271,
     Camp = "Monster",
     CombatVersionOpen = 16,
@@ -30484,6 +30695,31 @@ return ReadOnly("Monster", {
     UnitId = 8520503,
     UnitName = "Mon_Name_8520001"
   },
+  [8520801] = {
+    AlertId = 105,
+    BT = "/Game/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_HardBossEvent.BT_Boss_Aida_HardBossEvent",
+    BattleRoleId = 8520801,
+    BloodUIParmas = T.RT_57,
+    BossPenalize = T.RT_62,
+    BossUIValues = T.RT_41,
+    CameraLockOnBones = T.RT_271,
+    Camp = "Monster",
+    CombatVersionOpen = 17,
+    DisableTicklod = true,
+    DontApplyAsyncCreate = true,
+    ExpBasic = 0,
+    GalleryRuleId = 8520001,
+    GamePlayTags = T.RT_60,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
+    MiniMapId = 4,
+    ModelId = 852001,
+    NavAgentId = 2,
+    SupplyMechId = T.RT_263,
+    UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_20_Aida/BP_Boss_Aida_Hard.BP_Boss_Aida_Hard",
+    UnitId = 8520801,
+    UnitName = "Mon_Name_8520001"
+  },
   [8521001] = {
     AlertId = 10,
     BT = "/Game/AssetDesign/AI/Monster/Boss_21_Zonghuo/BT_Boss_Zonghuo.BT_Boss_Zonghuo",
@@ -30498,7 +30734,7 @@ return ReadOnly("Monster", {
     DontApplyAsyncCreate = true,
     ExpBasic = 20,
     GalleryRuleId = 8521001,
-    GamePlayTags = T.RT_324,
+    GamePlayTags = T.RT_327,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
     MiniMapId = 4,
@@ -30514,7 +30750,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8521602,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 14,
@@ -30522,7 +30758,7 @@ return ReadOnly("Monster", {
     DontApplyAsyncCreate = true,
     ExpBasic = 20,
     GalleryRuleId = 8521001,
-    GamePlayTags = T.RT_324,
+    GamePlayTags = T.RT_327,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
     MiniMapId = 4,
@@ -30538,7 +30774,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8521603,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 14,
@@ -30546,7 +30782,7 @@ return ReadOnly("Monster", {
     DontApplyAsyncCreate = true,
     ExpBasic = 20,
     GalleryRuleId = 8521001,
-    GamePlayTags = T.RT_324,
+    GamePlayTags = T.RT_327,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
     MiniMapId = 4,
@@ -30562,7 +30798,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8521604,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 14,
@@ -30570,7 +30806,7 @@ return ReadOnly("Monster", {
     DontApplyAsyncCreate = true,
     ExpBasic = 20,
     GalleryRuleId = 8521001,
-    GamePlayTags = T.RT_324,
+    GamePlayTags = T.RT_327,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
     MiniMapId = 4,
@@ -30586,7 +30822,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8521605,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 14,
@@ -30594,7 +30830,7 @@ return ReadOnly("Monster", {
     DontApplyAsyncCreate = true,
     ExpBasic = 20,
     GalleryRuleId = 8521001,
-    GamePlayTags = T.RT_324,
+    GamePlayTags = T.RT_327,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
     MiniMapId = 4,
@@ -30610,7 +30846,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8521701,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 14,
@@ -30686,7 +30922,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8522602,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 14,
@@ -30710,7 +30946,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8522603,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 14,
@@ -30734,7 +30970,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8522604,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 14,
@@ -30758,7 +30994,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8522605,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 14,
@@ -30832,7 +31068,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8522701,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 13,
@@ -30913,7 +31149,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 8523701,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_62,
-    BossUIValues = T.RT_315,
+    BossUIValues = T.RT_316,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 16,
@@ -30973,17 +31209,16 @@ return ReadOnly("Monster", {
       PhaseValues = {0.6, 0.4},
       ShowES = false
     },
-    CameraLockOnBones = T.RT_309,
+    CameraLockOnBones = T.RT_310,
     Camp = "Monster",
     CombatVersionOpen = 20,
     DisableTicklod = true,
     DontApplyAsyncCreate = true,
     ExpBasic = 0,
-    GalleryRuleId = 8512001,
+    GalleryRuleId = 8525001,
     GamePlayTags = T.RT_60,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
-    HitedCapsulePhysMaterial = "Flesh",
     MiniMapId = 4,
     ModelId = 852501,
     NavAgentId = 2,
@@ -30993,7 +31228,7 @@ return ReadOnly("Monster", {
   },
   [8525011] = {
     BattleRoleId = 8512011,
-    BloodUIParmas = T.RT_306,
+    BloodUIParmas = T.RT_307,
     Camp = "Monster",
     CombatVersionOpen = 20,
     DelayDestroyTime = 3.5,
@@ -31008,8 +31243,32 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_25_Yidai/BP_Boss_Yidai_Summon1.BP_Boss_Yidai_Summon1",
     UnitId = 8525011
   },
+  [8527001] = {
+    AlertId = 105,
+    BT = "/Game/AssetDesign/AI/Monster/Boss_27_Shenyuan/BT_Boss_Shenyuan_Story.BT_Boss_Shenyuan_Story",
+    BattleRoleId = 8527001,
+    BloodUIParmas = T.RT_57,
+    BossPenalize = T.RT_58,
+    BossUIValues = T.RT_324,
+    CameraLockOnBones = T.RT_271,
+    Camp = "Monster",
+    CombatVersionOpen = 23,
+    DisableTicklod = true,
+    DontApplyAsyncCreate = true,
+    ExpBasic = 0,
+    GalleryRuleId = 8527001,
+    GamePlayTags = T.RT_60,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
+    MiniMapId = 4,
+    ModelId = 852701,
+    NavAgentId = 2,
+    UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_27_Shenyuan/BP_Boss_Shenyuan_Story.BP_Boss_Shenyuan_Story",
+    UnitId = 8527001,
+    UnitName = "Mon_Name_8527001"
+  },
   [9001001] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Yinxie/BT_9Yinxie.BT_9Yinxie",
     BattleGroupId = 9001,
@@ -31023,7 +31282,7 @@ return ReadOnly("Monster", {
     DeadEffectId = 3,
     ExpBasic = 20,
     GalleryRuleId = 9001001,
-    GamePlayTags = T.RT_327,
+    GamePlayTags = T.RT_330,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 1,
@@ -31034,10 +31293,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Yinxie/BP_Mon_SQ_Yinxie.BP_Mon_SQ_Yinxie",
     UnitId = 9001001,
     UnitName = "Mon_Name_9001001",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9001004] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 202,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Yinxie/BT_9Yinxie.BT_9Yinxie",
     BattleGroupId = 9001,
@@ -31051,7 +31310,7 @@ return ReadOnly("Monster", {
     DeadEffectId = 3,
     ExpBasic = 20,
     GalleryRuleId = 9001001,
-    GamePlayTags = T.RT_327,
+    GamePlayTags = T.RT_330,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 1,
@@ -31062,10 +31321,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Yinxie/BP_Mon_SQ_Yinxie.BP_Mon_SQ_Yinxie",
     UnitId = 9001004,
     UnitName = "Mon_Name_9001001",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9001011] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Yinxie/BT_9Yinxie.BT_9Yinxie",
     BattleGroupId = 9001,
@@ -31098,10 +31357,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Yinxie/BP_Mon_SQ_Yinxie.BP_Mon_SQ_Yinxie",
     UnitId = 9001011,
     UnitName = "Mon_Name_9001011",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9001012] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Yinxie/BT_9Yinxie.BT_9Yinxie",
     BattleGroupId = 9001,
@@ -31134,10 +31393,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Yinxie/BP_Mon_SQ_Yinxie.BP_Mon_SQ_Yinxie",
     UnitId = 9001012,
     UnitName = "Mon_Name_9001012",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9001013] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Yinxie/BT_9Yinxie.BT_9Yinxie",
     BattleGroupId = 9001,
@@ -31171,10 +31430,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Yinxie/BP_Mon_SQ_Yinxie.BP_Mon_SQ_Yinxie",
     UnitId = 9001013,
     UnitName = "Mon_Name_9001013",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9001014] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Yinxie/BT_9Yinxie.BT_9Yinxie",
     BattleGroupId = 9001,
@@ -31207,10 +31466,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Yinxie/BP_Mon_SQ_Yinxie.BP_Mon_SQ_Yinxie",
     UnitId = 9001014,
     UnitName = "Mon_Name_9001014",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9001015] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Yinxie/BT_9Yinxie.BT_9Yinxie",
     BattleGroupId = 9001,
@@ -31243,10 +31502,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Yinxie/BP_Mon_SQ_Yinxie.BP_Mon_SQ_Yinxie",
     UnitId = 9001015,
     UnitName = "Mon_Name_9001015",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9001016] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Yinxie/BT_9Yinxie.BT_9Yinxie",
     BattleGroupId = 9001,
@@ -31279,10 +31538,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Yinxie/BP_Mon_SQ_Yinxie.BP_Mon_SQ_Yinxie",
     UnitId = 9001016,
     UnitName = "Mon_Name_9001016",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9001017] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Yinxie/BT_9Yinxie.BT_9Yinxie",
     BattleGroupId = 9001,
@@ -31315,10 +31574,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Yinxie/BP_Mon_SQ_Yinxie.BP_Mon_SQ_Yinxie",
     UnitId = 9001017,
     UnitName = "Mon_Name_9001017",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9001018] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Yinxie/BT_9Yinxie.BT_9Yinxie",
     BattleGroupId = 9001,
@@ -31351,10 +31610,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Yinxie/BP_Mon_SQ_Yinxie.BP_Mon_SQ_Yinxie",
     UnitId = 9001018,
     UnitName = "Mon_Name_9001018",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9001019] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Yinxie/BT_9Yinxie.BT_9Yinxie",
     BattleGroupId = 9001,
@@ -31387,10 +31646,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Yinxie/BP_Mon_SQ_Yinxie.BP_Mon_SQ_Yinxie",
     UnitId = 9001019,
     UnitName = "Mon_Name_9001019",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9001020] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Yinxie/BT_9Yinxie.BT_9Yinxie",
     BattleGroupId = 9001,
@@ -31423,10 +31682,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Yinxie/BP_Mon_SQ_Yinxie.BP_Mon_SQ_Yinxie",
     UnitId = 9001020,
     UnitName = "Mon_Name_9001020",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9001021] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Yinxie/BT_9Yinxie.BT_9Yinxie",
     BattleGroupId = 9001,
@@ -31459,10 +31718,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Yinxie/BP_Mon_SQ_Yinxie.BP_Mon_SQ_Yinxie",
     UnitId = 9001021,
     UnitName = "Mon_Name_9001021",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9001022] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Yinxie/BT_9Yinxie.BT_9Yinxie",
     BattleGroupId = 9001,
@@ -31495,10 +31754,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Yinxie/BP_Mon_SQ_Yinxie.BP_Mon_SQ_Yinxie",
     UnitId = 9001022,
     UnitName = "Mon_Name_9001022",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9001023] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Yinxie/BT_9Yinxie.BT_9Yinxie",
     BattleGroupId = 9001,
@@ -31531,10 +31790,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Yinxie/BP_Mon_SQ_Yinxie.BP_Mon_SQ_Yinxie",
     UnitId = 9001023,
     UnitName = "Mon_Name_9001023",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9001024] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Yinxie/BT_9Yinxie.BT_9Yinxie",
     BattleGroupId = 9001,
@@ -31567,7 +31826,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Yinxie/BP_Mon_SQ_Yinxie.BP_Mon_SQ_Yinxie",
     UnitId = 9001024,
     UnitName = "Mon_Name_9001024",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9001071] = {
     AlertId = 105,
@@ -31579,7 +31838,7 @@ return ReadOnly("Monster", {
     Camp = "Monster",
     CombatVersionOpen = 12,
     DisableTicklod = true,
-    GamePlayTags = T.RT_329,
+    GamePlayTags = T.RT_332,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 1,
@@ -31588,7 +31847,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Yinxie/BP_Mon_SQ_Yinxie.BP_Mon_SQ_Yinxie",
     UnitId = 9001071,
     UnitName = "Mon_Name_9001001",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9001072] = {
     AlertId = 105,
@@ -31600,7 +31859,7 @@ return ReadOnly("Monster", {
     Camp = "Player",
     CombatVersionOpen = 12,
     DisableTicklod = true,
-    GamePlayTags = T.RT_329,
+    GamePlayTags = T.RT_332,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     ModelId = 900102,
@@ -31608,10 +31867,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Yinxie/BP_Mon_SQ_Yinxie.BP_Mon_SQ_Yinxie",
     UnitId = 9001072,
     UnitName = "Mon_Name_9001001",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9001201] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Yinxie/BT_9Yinxie.BT_9Yinxie",
     BattleGroupId = 9001,
@@ -31646,10 +31905,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Yinxie/BP_Mon_SQ_Yinxie.BP_Mon_SQ_Yinxie",
     UnitId = 9001201,
     UnitName = "Mon_Name_9001201",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9001301] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Yinxie/BT_9Yinxie.BT_9Yinxie",
     BattleGroupId = 9001,
@@ -31685,10 +31944,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Yinxie/BP_Mon_SQ_Yinxie.BP_Mon_SQ_Yinxie",
     UnitId = 9001301,
     UnitName = "Mon_Name_9001301",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9001601] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Yinxie/BT_9Yinxie.BT_9Yinxie",
     BattleGroupId = 9001,
@@ -31701,7 +31960,7 @@ return ReadOnly("Monster", {
     CommonAlertEnable = 1,
     DeadEffectId = 3,
     GalleryRuleId = 9001001,
-    GamePlayTags = T.RT_327,
+    GamePlayTags = T.RT_330,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 1,
@@ -31712,10 +31971,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Yinxie/BP_Mon_SQ_Yinxie.BP_Mon_SQ_Yinxie",
     UnitId = 9001601,
     UnitName = "Mon_Name_9001001",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9001701] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Yinxie/BT_9Yinxie.BT_9Yinxie",
     BattleGroupId = 9001,
@@ -31750,10 +32009,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Yinxie/BP_Mon_SQ_Yinxie.BP_Mon_SQ_Yinxie",
     UnitId = 9001701,
     UnitName = "Mon_Name_9001701",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9001702] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Yinxie/BT_9Yinxie.BT_9Yinxie",
     BattleGroupId = 9001,
@@ -31788,10 +32047,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Yinxie/BP_Mon_SQ_Yinxie.BP_Mon_SQ_Yinxie",
     UnitId = 9001702,
     UnitName = "Mon_Name_9001702",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9002001] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Dufeng/BT_9Dufeng.BT_9Dufeng",
     BattleGroupId = 9002,
@@ -31806,7 +32065,7 @@ return ReadOnly("Monster", {
     DeadEffectId = 3,
     ExpBasic = 20,
     GalleryRuleId = 9002001,
-    GamePlayTags = T.RT_330,
+    GamePlayTags = T.RT_333,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 1,
@@ -31817,10 +32076,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Dufeng/BP_Mon_SQ_Dufeng.BP_Mon_SQ_Dufeng",
     UnitId = 9002001,
     UnitName = "Mon_Name_9002001",
-    WeaponId = T.RT_331
+    WeaponId = T.RT_334
   },
   [9002004] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 202,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Dufeng/BT_9Dufeng.BT_9Dufeng",
     BattleGroupId = 9002,
@@ -31835,7 +32094,7 @@ return ReadOnly("Monster", {
     DeadEffectId = 3,
     ExpBasic = 20,
     GalleryRuleId = 9002001,
-    GamePlayTags = T.RT_330,
+    GamePlayTags = T.RT_333,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 1,
@@ -31846,10 +32105,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Dufeng/BP_Mon_SQ_Dufeng.BP_Mon_SQ_Dufeng",
     UnitId = 9002004,
     UnitName = "Mon_Name_9002001",
-    WeaponId = T.RT_331
+    WeaponId = T.RT_334
   },
   [9002011] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Dufeng/BT_9Dufeng.BT_9Dufeng",
     BattleGroupId = 9002,
@@ -31864,7 +32123,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9002001,
-    GamePlayTags = T.RT_332,
+    GamePlayTags = T.RT_335,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10011,
@@ -31876,10 +32135,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Dufeng/BP_Mon_SQ_Dufeng.BP_Mon_SQ_Dufeng",
     UnitId = 9002011,
     UnitName = "Mon_Name_9002011",
-    WeaponId = T.RT_333
+    WeaponId = T.RT_336
   },
   [9002012] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Dufeng/BT_9Dufeng.BT_9Dufeng",
     BattleGroupId = 9002,
@@ -31894,7 +32153,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9002001,
-    GamePlayTags = T.RT_334,
+    GamePlayTags = T.RT_337,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10012,
@@ -31906,10 +32165,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Dufeng/BP_Mon_SQ_Dufeng.BP_Mon_SQ_Dufeng",
     UnitId = 9002012,
     UnitName = "Mon_Name_9002012",
-    WeaponId = T.RT_333
+    WeaponId = T.RT_336
   },
   [9002013] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Dufeng/BT_9Dufeng.BT_9Dufeng",
     BattleGroupId = 9002,
@@ -31924,7 +32183,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9002001,
-    GamePlayTags = T.RT_335,
+    GamePlayTags = T.RT_338,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10013,
@@ -31936,10 +32195,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Dufeng/BP_Mon_SQ_Dufeng.BP_Mon_SQ_Dufeng",
     UnitId = 9002013,
     UnitName = "Mon_Name_9002013",
-    WeaponId = T.RT_333
+    WeaponId = T.RT_336
   },
   [9002014] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Dufeng/BT_9Dufeng.BT_9Dufeng",
     BattleGroupId = 9002,
@@ -31954,7 +32213,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9002001,
-    GamePlayTags = T.RT_336,
+    GamePlayTags = T.RT_339,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10014,
@@ -31966,10 +32225,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Dufeng/BP_Mon_SQ_Dufeng.BP_Mon_SQ_Dufeng",
     UnitId = 9002014,
     UnitName = "Mon_Name_9002014",
-    WeaponId = T.RT_333
+    WeaponId = T.RT_336
   },
   [9002015] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Dufeng/BT_9Dufeng.BT_9Dufeng",
     BattleGroupId = 9002,
@@ -31984,7 +32243,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9002001,
-    GamePlayTags = T.RT_337,
+    GamePlayTags = T.RT_340,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10015,
@@ -31996,10 +32255,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Dufeng/BP_Mon_SQ_Dufeng.BP_Mon_SQ_Dufeng",
     UnitId = 9002015,
     UnitName = "Mon_Name_9002015",
-    WeaponId = T.RT_333
+    WeaponId = T.RT_336
   },
   [9002016] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Dufeng/BT_9Dufeng.BT_9Dufeng",
     BattleGroupId = 9002,
@@ -32014,7 +32273,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9002001,
-    GamePlayTags = T.RT_338,
+    GamePlayTags = T.RT_341,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10016,
@@ -32026,10 +32285,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Dufeng/BP_Mon_SQ_Dufeng.BP_Mon_SQ_Dufeng",
     UnitId = 9002016,
     UnitName = "Mon_Name_9002016",
-    WeaponId = T.RT_333
+    WeaponId = T.RT_336
   },
   [9002017] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Dufeng/BT_9Dufeng.BT_9Dufeng",
     BattleGroupId = 9002,
@@ -32044,7 +32303,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9002001,
-    GamePlayTags = T.RT_339,
+    GamePlayTags = T.RT_342,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10017,
@@ -32056,10 +32315,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Dufeng/BP_Mon_SQ_Dufeng.BP_Mon_SQ_Dufeng",
     UnitId = 9002017,
     UnitName = "Mon_Name_9002017",
-    WeaponId = T.RT_333
+    WeaponId = T.RT_336
   },
   [9002018] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Dufeng/BT_9Dufeng.BT_9Dufeng",
     BattleGroupId = 9002,
@@ -32074,7 +32333,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9002001,
-    GamePlayTags = T.RT_340,
+    GamePlayTags = T.RT_343,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10018,
@@ -32086,10 +32345,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Dufeng/BP_Mon_SQ_Dufeng.BP_Mon_SQ_Dufeng",
     UnitId = 9002018,
     UnitName = "Mon_Name_9002018",
-    WeaponId = T.RT_333
+    WeaponId = T.RT_336
   },
   [9002019] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Dufeng/BT_9Dufeng.BT_9Dufeng",
     BattleGroupId = 9002,
@@ -32104,7 +32363,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9002001,
-    GamePlayTags = T.RT_341,
+    GamePlayTags = T.RT_344,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10019,
@@ -32116,10 +32375,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Dufeng/BP_Mon_SQ_Dufeng.BP_Mon_SQ_Dufeng",
     UnitId = 9002019,
     UnitName = "Mon_Name_9002019",
-    WeaponId = T.RT_333
+    WeaponId = T.RT_336
   },
   [9002020] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Dufeng/BT_9Dufeng.BT_9Dufeng",
     BattleGroupId = 9002,
@@ -32134,7 +32393,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9002001,
-    GamePlayTags = T.RT_342,
+    GamePlayTags = T.RT_345,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10020,
@@ -32146,10 +32405,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Dufeng/BP_Mon_SQ_Dufeng.BP_Mon_SQ_Dufeng",
     UnitId = 9002020,
     UnitName = "Mon_Name_9002020",
-    WeaponId = T.RT_333
+    WeaponId = T.RT_336
   },
   [9002021] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Dufeng/BT_9Dufeng.BT_9Dufeng",
     BattleGroupId = 9002,
@@ -32164,7 +32423,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9002001,
-    GamePlayTags = T.RT_343,
+    GamePlayTags = T.RT_346,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10021,
@@ -32176,10 +32435,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Dufeng/BP_Mon_SQ_Dufeng.BP_Mon_SQ_Dufeng",
     UnitId = 9002021,
     UnitName = "Mon_Name_9002021",
-    WeaponId = T.RT_333
+    WeaponId = T.RT_336
   },
   [9002022] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Dufeng/BT_9Dufeng.BT_9Dufeng",
     BattleGroupId = 9002,
@@ -32194,7 +32453,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9002001,
-    GamePlayTags = T.RT_344,
+    GamePlayTags = T.RT_347,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10022,
@@ -32206,10 +32465,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Dufeng/BP_Mon_SQ_Dufeng.BP_Mon_SQ_Dufeng",
     UnitId = 9002022,
     UnitName = "Mon_Name_9002022",
-    WeaponId = T.RT_333
+    WeaponId = T.RT_336
   },
   [9002023] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Dufeng/BT_9Dufeng.BT_9Dufeng",
     BattleGroupId = 9002,
@@ -32224,7 +32483,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9002001,
-    GamePlayTags = T.RT_345,
+    GamePlayTags = T.RT_348,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10023,
@@ -32236,10 +32495,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Dufeng/BP_Mon_SQ_Dufeng.BP_Mon_SQ_Dufeng",
     UnitId = 9002023,
     UnitName = "Mon_Name_9002023",
-    WeaponId = T.RT_333
+    WeaponId = T.RT_336
   },
   [9002024] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Dufeng/BT_9Dufeng.BT_9Dufeng",
     BattleGroupId = 9002,
@@ -32254,7 +32513,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9002001,
-    GamePlayTags = T.RT_346,
+    GamePlayTags = T.RT_349,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10024,
@@ -32266,7 +32525,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Dufeng/BP_Mon_SQ_Dufeng.BP_Mon_SQ_Dufeng",
     UnitId = 9002024,
     UnitName = "Mon_Name_9002024",
-    WeaponId = T.RT_333
+    WeaponId = T.RT_336
   },
   [9002071] = {
     AlertId = 105,
@@ -32278,7 +32537,7 @@ return ReadOnly("Monster", {
     Camp = "Monster",
     CombatVersionOpen = 12,
     DisableTicklod = true,
-    GamePlayTags = T.RT_347,
+    GamePlayTags = T.RT_350,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 1,
@@ -32287,7 +32546,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Dufeng/BP_Mon_SQ_Dufeng.BP_Mon_SQ_Dufeng",
     UnitId = 9002071,
     UnitName = "Mon_Name_9002001",
-    WeaponId = T.RT_333
+    WeaponId = T.RT_336
   },
   [9002072] = {
     AlertId = 105,
@@ -32299,7 +32558,7 @@ return ReadOnly("Monster", {
     Camp = "Player",
     CombatVersionOpen = 12,
     DisableTicklod = true,
-    GamePlayTags = T.RT_347,
+    GamePlayTags = T.RT_350,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     ModelId = 900201,
@@ -32307,10 +32566,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Dufeng/BP_Mon_SQ_Dufeng.BP_Mon_SQ_Dufeng",
     UnitId = 9002072,
     UnitName = "Mon_Name_9002001",
-    WeaponId = T.RT_333
+    WeaponId = T.RT_336
   },
   [9002201] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Dufeng/BT_9Dufeng.BT_9Dufeng",
     BattleGroupId = 9002,
@@ -32345,10 +32604,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Dufeng/BP_Mon_SQ_Dufeng.BP_Mon_SQ_Dufeng",
     UnitId = 9002201,
     UnitName = "Mon_Name_9002201",
-    WeaponId = T.RT_333
+    WeaponId = T.RT_336
   },
   [9002301] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Dufeng/BT_9Dufeng.BT_9Dufeng",
     BattleGroupId = 9002,
@@ -32384,10 +32643,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Dufeng/BP_Mon_SQ_Dufeng.BP_Mon_SQ_Dufeng",
     UnitId = 9002301,
     UnitName = "Mon_Name_9002301",
-    WeaponId = T.RT_333
+    WeaponId = T.RT_336
   },
   [9002601] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Dufeng/BT_9Dufeng.BT_9Dufeng",
     BattleGroupId = 9002,
@@ -32401,7 +32660,7 @@ return ReadOnly("Monster", {
     CommonAlertEnable = 1,
     DeadEffectId = 3,
     GalleryRuleId = 9002001,
-    GamePlayTags = T.RT_330,
+    GamePlayTags = T.RT_333,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 1,
@@ -32412,10 +32671,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Dufeng/BP_Mon_SQ_Dufeng.BP_Mon_SQ_Dufeng",
     UnitId = 9002601,
     UnitName = "Mon_Name_9002001",
-    WeaponId = T.RT_331
+    WeaponId = T.RT_334
   },
   [9002701] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Dufeng/BT_9Dufeng.BT_9Dufeng",
     BattleGroupId = 9002,
@@ -32450,10 +32709,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Dufeng/BP_Mon_SQ_Dufeng.BP_Mon_SQ_Dufeng",
     UnitId = 9002701,
     UnitName = "Mon_Name_9002701",
-    WeaponId = T.RT_333
+    WeaponId = T.RT_336
   },
   [9002702] = {
-    AccessoryIds = T.RT_326,
+    AccessoryIds = T.RT_329,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Dufeng/BT_9Dufeng.BT_9Dufeng",
     BattleGroupId = 9002,
@@ -32488,7 +32747,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Dufeng/BP_Mon_SQ_Dufeng.BP_Mon_SQ_Dufeng",
     UnitId = 9002702,
     UnitName = "Mon_Name_9002702",
-    WeaponId = T.RT_333
+    WeaponId = T.RT_336
   },
   [9003001] = {
     AlertId = 101,
@@ -32503,7 +32762,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9003001,
-    GamePlayTags = T.RT_348,
+    GamePlayTags = T.RT_351,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     HitReplace = T.RT_69,
@@ -32515,7 +32774,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Wanju/BP_Mon_SQ_Wanju.BP_Mon_SQ_Wanju",
     UnitId = 9003001,
     UnitName = "Mon_Name_9003001",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9003004] = {
     AlertId = 101,
@@ -32530,7 +32789,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9003001,
-    GamePlayTags = T.RT_348,
+    GamePlayTags = T.RT_351,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Level2.WBP_GuidePoint_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DestroyTarget_A.T_Gp_DestroyTarget_A",
     GuideId = 9003004,
@@ -32544,7 +32803,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Wanju/BP_Mon_SQ_Wanju.BP_Mon_SQ_Wanju",
     UnitId = 9003004,
     UnitName = "Mon_Name_9003001",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9003011] = {
     AlertId = 101,
@@ -32560,7 +32819,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9003001,
-    GamePlayTags = T.RT_349,
+    GamePlayTags = T.RT_352,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10011,
@@ -32573,7 +32832,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Wanju/BP_Mon_SQ_Wanju.BP_Mon_SQ_Wanju",
     UnitId = 9003011,
     UnitName = "Mon_Name_9003011",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9003012] = {
     AlertId = 101,
@@ -32589,7 +32848,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9003001,
-    GamePlayTags = T.RT_350,
+    GamePlayTags = T.RT_353,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10012,
@@ -32602,7 +32861,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Wanju/BP_Mon_SQ_Wanju.BP_Mon_SQ_Wanju",
     UnitId = 9003012,
     UnitName = "Mon_Name_9003012",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9003013] = {
     AlertId = 101,
@@ -32618,7 +32877,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9003001,
-    GamePlayTags = T.RT_351,
+    GamePlayTags = T.RT_354,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10013,
@@ -32631,7 +32890,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Wanju/BP_Mon_SQ_Wanju.BP_Mon_SQ_Wanju",
     UnitId = 9003013,
     UnitName = "Mon_Name_9003013",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9003014] = {
     AlertId = 101,
@@ -32647,7 +32906,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9003001,
-    GamePlayTags = T.RT_352,
+    GamePlayTags = T.RT_355,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10014,
@@ -32660,7 +32919,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Wanju/BP_Mon_SQ_Wanju.BP_Mon_SQ_Wanju",
     UnitId = 9003014,
     UnitName = "Mon_Name_9003014",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9003015] = {
     AlertId = 101,
@@ -32676,7 +32935,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9003001,
-    GamePlayTags = T.RT_353,
+    GamePlayTags = T.RT_356,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10015,
@@ -32689,7 +32948,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Wanju/BP_Mon_SQ_Wanju.BP_Mon_SQ_Wanju",
     UnitId = 9003015,
     UnitName = "Mon_Name_9003015",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9003016] = {
     AlertId = 101,
@@ -32705,7 +32964,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9003001,
-    GamePlayTags = T.RT_354,
+    GamePlayTags = T.RT_357,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10016,
@@ -32718,7 +32977,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Wanju/BP_Mon_SQ_Wanju.BP_Mon_SQ_Wanju",
     UnitId = 9003016,
     UnitName = "Mon_Name_9003016",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9003017] = {
     AlertId = 101,
@@ -32734,7 +32993,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9003001,
-    GamePlayTags = T.RT_355,
+    GamePlayTags = T.RT_358,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10017,
@@ -32747,7 +33006,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Wanju/BP_Mon_SQ_Wanju.BP_Mon_SQ_Wanju",
     UnitId = 9003017,
     UnitName = "Mon_Name_9003017",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9003018] = {
     AlertId = 101,
@@ -32763,7 +33022,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9003001,
-    GamePlayTags = T.RT_356,
+    GamePlayTags = T.RT_359,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10018,
@@ -32776,7 +33035,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Wanju/BP_Mon_SQ_Wanju.BP_Mon_SQ_Wanju",
     UnitId = 9003018,
     UnitName = "Mon_Name_9003018",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9003019] = {
     AlertId = 101,
@@ -32792,7 +33051,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9003001,
-    GamePlayTags = T.RT_357,
+    GamePlayTags = T.RT_360,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10019,
@@ -32805,7 +33064,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Wanju/BP_Mon_SQ_Wanju.BP_Mon_SQ_Wanju",
     UnitId = 9003019,
     UnitName = "Mon_Name_9003019",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9003020] = {
     AlertId = 101,
@@ -32821,12 +33080,12 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9003001,
-    GamePlayTags = T.RT_358,
+    GamePlayTags = T.RT_361,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10020,
     HitReplace = T.RT_69,
-    InitGuide = T.RT_359,
+    InitGuide = T.RT_362,
     MiniMapId = 2,
     ModelId = 900301,
     NavAgentId = 2,
@@ -32835,7 +33094,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Wanju/BP_Mon_SQ_Wanju.BP_Mon_SQ_Wanju",
     UnitId = 9003020,
     UnitName = "Mon_Name_9003020",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9003021] = {
     AlertId = 101,
@@ -32851,7 +33110,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9003001,
-    GamePlayTags = T.RT_360,
+    GamePlayTags = T.RT_363,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10021,
@@ -32864,7 +33123,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Wanju/BP_Mon_SQ_Wanju.BP_Mon_SQ_Wanju",
     UnitId = 9003021,
     UnitName = "Mon_Name_9003021",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9003022] = {
     AlertId = 101,
@@ -32880,7 +33139,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9003001,
-    GamePlayTags = T.RT_361,
+    GamePlayTags = T.RT_364,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10022,
@@ -32893,7 +33152,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Wanju/BP_Mon_SQ_Wanju.BP_Mon_SQ_Wanju",
     UnitId = 9003022,
     UnitName = "Mon_Name_9003022",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9003023] = {
     AlertId = 101,
@@ -32909,7 +33168,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9003001,
-    GamePlayTags = T.RT_362,
+    GamePlayTags = T.RT_365,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10023,
@@ -32922,7 +33181,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Wanju/BP_Mon_SQ_Wanju.BP_Mon_SQ_Wanju",
     UnitId = 9003023,
     UnitName = "Mon_Name_9003023",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9003024] = {
     AlertId = 101,
@@ -32938,7 +33197,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9003001,
-    GamePlayTags = T.RT_363,
+    GamePlayTags = T.RT_366,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10024,
@@ -32951,7 +33210,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Wanju/BP_Mon_SQ_Wanju.BP_Mon_SQ_Wanju",
     UnitId = 9003024,
     UnitName = "Mon_Name_9003024",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9003201] = {
     AlertId = 101,
@@ -32988,7 +33247,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Wanju/BP_Mon_SQ_Wanju.BP_Mon_SQ_Wanju",
     UnitId = 9003201,
     UnitName = "Mon_Name_9003201",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9003301] = {
     AlertId = 101,
@@ -33026,7 +33285,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Wanju/BP_Mon_SQ_Wanju.BP_Mon_SQ_Wanju",
     UnitId = 9003301,
     UnitName = "Mon_Name_9003301",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9003601] = {
     AlertId = 101,
@@ -33040,7 +33299,7 @@ return ReadOnly("Monster", {
     DeadEffectId = 3,
     DisableTicklod = true,
     GalleryRuleId = 9003001,
-    GamePlayTags = T.RT_348,
+    GamePlayTags = T.RT_351,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     HitReplace = T.RT_69,
@@ -33052,7 +33311,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Wanju/BP_Mon_SQ_Wanju.BP_Mon_SQ_Wanju",
     UnitId = 9003601,
     UnitName = "Mon_Name_9003001",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9004001] = {
     AlertId = 101,
@@ -33097,7 +33356,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9005001,
-    GamePlayTags = T.RT_348,
+    GamePlayTags = T.RT_351,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     HitReplace = T.RT_69,
@@ -33109,7 +33368,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Baozha/BP_Mon_SQ_Baozha.BP_Mon_SQ_Baozha",
     UnitId = 9005001,
     UnitName = "Mon_Name_9005001",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9005004] = {
     AlertId = 101,
@@ -33124,7 +33383,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9005001,
-    GamePlayTags = T.RT_348,
+    GamePlayTags = T.RT_351,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Level2.WBP_GuidePoint_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DestroyTarget_B.T_Gp_DestroyTarget_B",
     GuideId = 9005004,
@@ -33138,7 +33397,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Baozha/BP_Mon_SQ_Baozha.BP_Mon_SQ_Baozha",
     UnitId = 9005004,
     UnitName = "Mon_Name_9005001",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9005011] = {
     AlertId = 101,
@@ -33154,7 +33413,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9005001,
-    GamePlayTags = T.RT_349,
+    GamePlayTags = T.RT_352,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10011,
@@ -33167,7 +33426,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Baozha/BP_Mon_SQ_Baozha.BP_Mon_SQ_Baozha",
     UnitId = 9005011,
     UnitName = "Mon_Name_9005011",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9005012] = {
     AlertId = 101,
@@ -33183,7 +33442,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9005001,
-    GamePlayTags = T.RT_350,
+    GamePlayTags = T.RT_353,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10012,
@@ -33196,7 +33455,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Baozha/BP_Mon_SQ_Baozha.BP_Mon_SQ_Baozha",
     UnitId = 9005012,
     UnitName = "Mon_Name_9005012",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9005013] = {
     AlertId = 101,
@@ -33212,7 +33471,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9005001,
-    GamePlayTags = T.RT_351,
+    GamePlayTags = T.RT_354,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10013,
@@ -33225,7 +33484,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Baozha/BP_Mon_SQ_Baozha.BP_Mon_SQ_Baozha",
     UnitId = 9005013,
     UnitName = "Mon_Name_9005013",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9005014] = {
     AlertId = 101,
@@ -33241,7 +33500,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9005001,
-    GamePlayTags = T.RT_352,
+    GamePlayTags = T.RT_355,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10014,
@@ -33254,7 +33513,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Baozha/BP_Mon_SQ_Baozha.BP_Mon_SQ_Baozha",
     UnitId = 9005014,
     UnitName = "Mon_Name_9005014",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9005015] = {
     AlertId = 101,
@@ -33270,7 +33529,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9005001,
-    GamePlayTags = T.RT_353,
+    GamePlayTags = T.RT_356,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10015,
@@ -33283,7 +33542,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Baozha/BP_Mon_SQ_Baozha.BP_Mon_SQ_Baozha",
     UnitId = 9005015,
     UnitName = "Mon_Name_9005015",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9005016] = {
     AlertId = 101,
@@ -33299,7 +33558,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9005001,
-    GamePlayTags = T.RT_354,
+    GamePlayTags = T.RT_357,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10016,
@@ -33312,7 +33571,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Baozha/BP_Mon_SQ_Baozha.BP_Mon_SQ_Baozha",
     UnitId = 9005016,
     UnitName = "Mon_Name_9005016",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9005017] = {
     AlertId = 101,
@@ -33328,7 +33587,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9005001,
-    GamePlayTags = T.RT_355,
+    GamePlayTags = T.RT_358,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10017,
@@ -33341,7 +33600,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Baozha/BP_Mon_SQ_Baozha.BP_Mon_SQ_Baozha",
     UnitId = 9005017,
     UnitName = "Mon_Name_9005017",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9005018] = {
     AlertId = 101,
@@ -33357,7 +33616,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9005001,
-    GamePlayTags = T.RT_356,
+    GamePlayTags = T.RT_359,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10018,
@@ -33370,7 +33629,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Baozha/BP_Mon_SQ_Baozha.BP_Mon_SQ_Baozha",
     UnitId = 9005018,
     UnitName = "Mon_Name_9005018",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9005019] = {
     AlertId = 101,
@@ -33386,7 +33645,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9005001,
-    GamePlayTags = T.RT_357,
+    GamePlayTags = T.RT_360,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10019,
@@ -33399,7 +33658,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Baozha/BP_Mon_SQ_Baozha.BP_Mon_SQ_Baozha",
     UnitId = 9005019,
     UnitName = "Mon_Name_9005019",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9005020] = {
     AlertId = 101,
@@ -33415,7 +33674,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9005001,
-    GamePlayTags = T.RT_358,
+    GamePlayTags = T.RT_361,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10020,
@@ -33428,7 +33687,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Baozha/BP_Mon_SQ_Baozha.BP_Mon_SQ_Baozha",
     UnitId = 9005020,
     UnitName = "Mon_Name_9005020",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9005021] = {
     AlertId = 101,
@@ -33444,7 +33703,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9005001,
-    GamePlayTags = T.RT_360,
+    GamePlayTags = T.RT_363,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10021,
@@ -33457,7 +33716,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Baozha/BP_Mon_SQ_Baozha.BP_Mon_SQ_Baozha",
     UnitId = 9005021,
     UnitName = "Mon_Name_9005021",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9005022] = {
     AlertId = 101,
@@ -33473,7 +33732,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9005001,
-    GamePlayTags = T.RT_361,
+    GamePlayTags = T.RT_364,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10022,
@@ -33486,7 +33745,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Baozha/BP_Mon_SQ_Baozha.BP_Mon_SQ_Baozha",
     UnitId = 9005022,
     UnitName = "Mon_Name_9005022",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9005023] = {
     AlertId = 101,
@@ -33502,7 +33761,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9005001,
-    GamePlayTags = T.RT_362,
+    GamePlayTags = T.RT_365,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10023,
@@ -33515,7 +33774,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Baozha/BP_Mon_SQ_Baozha.BP_Mon_SQ_Baozha",
     UnitId = 9005023,
     UnitName = "Mon_Name_9005023",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9005024] = {
     AlertId = 101,
@@ -33531,7 +33790,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9005001,
-    GamePlayTags = T.RT_363,
+    GamePlayTags = T.RT_366,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10024,
@@ -33544,7 +33803,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Baozha/BP_Mon_SQ_Baozha.BP_Mon_SQ_Baozha",
     UnitId = 9005024,
     UnitName = "Mon_Name_9005024",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9005201] = {
     AlertId = 101,
@@ -33581,7 +33840,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Baozha/BP_Mon_SQ_Baozha.BP_Mon_SQ_Baozha",
     UnitId = 9005201,
     UnitName = "Mon_Name_9005201",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9005301] = {
     AlertId = 101,
@@ -33619,7 +33878,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Baozha/BP_Mon_SQ_Baozha.BP_Mon_SQ_Baozha",
     UnitId = 9005301,
     UnitName = "Mon_Name_9005301",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9005601] = {
     AlertId = 101,
@@ -33633,7 +33892,7 @@ return ReadOnly("Monster", {
     DeadEffectId = 3,
     DisableTicklod = true,
     GalleryRuleId = 9005001,
-    GamePlayTags = T.RT_348,
+    GamePlayTags = T.RT_351,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     HitReplace = T.RT_69,
@@ -33645,10 +33904,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Baozha/BP_Mon_SQ_Baozha.BP_Mon_SQ_Baozha",
     UnitId = 9005601,
     UnitName = "Mon_Name_9005001",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9006001] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha.BT_9Qizha",
     BattleRoleId = 9006001,
@@ -33661,7 +33920,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9006001,
-    GamePlayTags = T.RT_348,
+    GamePlayTags = T.RT_351,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     HitReplace = T.RT_69,
@@ -33673,10 +33932,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Qizha/BP_Mon_SQ_Qizha.BP_Mon_SQ_Qizha",
     UnitId = 9006001,
     UnitName = "Mon_Name_9006001",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9006002] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     AnimCoverPath = "/Game/AssetDesign/Char/Monster/SQ_Qizha/ABP_Mon_SQ_Qizha_Sum01.ABP_Mon_SQ_Qizha_Sum01_C",
     BT = "/Game/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha_Sum01.BT_9Qizha_Sum01",
@@ -33689,7 +33948,7 @@ return ReadOnly("Monster", {
     DeadHitDisable = 1,
     DisableTicklod = true,
     ExpBasic = 20,
-    GamePlayTags = T.RT_366,
+    GamePlayTags = T.RT_369,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     HitReplace = T.RT_69,
@@ -33701,10 +33960,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Qizha/BP_Mon_SQ_Qizha.BP_Mon_SQ_Qizha",
     UnitId = 9006002,
     UnitName = "Mon_Name_9006001",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9006003] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     AnimCoverPath = "/Game/AssetDesign/Char/Monster/SQ_Qizha/ABP_Mon_SQ_Qizha_Sum01.ABP_Mon_SQ_Qizha_Sum01_C",
     BT = "/Game/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha_Sum02.BT_9Qizha_Sum02",
@@ -33718,7 +33977,7 @@ return ReadOnly("Monster", {
     DeadHitDisable = 1,
     DisableTicklod = true,
     ExpBasic = 20,
-    GamePlayTags = T.RT_366,
+    GamePlayTags = T.RT_369,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     HitReplace = T.RT_69,
@@ -33730,10 +33989,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Qizha/BP_Mon_SQ_Qizha.BP_Mon_SQ_Qizha",
     UnitId = 9006003,
     UnitName = "Mon_Name_9006001",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9006004] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha.BT_9Qizha",
     BattleRoleId = 9006001,
@@ -33746,7 +34005,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9006001,
-    GamePlayTags = T.RT_348,
+    GamePlayTags = T.RT_351,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Level2.WBP_GuidePoint_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DestroyTarget_C.T_Gp_DestroyTarget_C",
     GuideId = 9006004,
@@ -33760,10 +34019,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Qizha/BP_Mon_SQ_Qizha.BP_Mon_SQ_Qizha",
     UnitId = 9006004,
     UnitName = "Mon_Name_9006001",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9006011] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha.BT_9Qizha",
     BattleRoleId = 9006011,
@@ -33777,7 +34036,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9006001,
-    GamePlayTags = T.RT_349,
+    GamePlayTags = T.RT_352,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10011,
@@ -33790,10 +34049,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Qizha/BP_Mon_SQ_Qizha.BP_Mon_SQ_Qizha",
     UnitId = 9006011,
     UnitName = "Mon_Name_9006011",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9006012] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha.BT_9Qizha",
     BattleRoleId = 9006012,
@@ -33807,7 +34066,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9006001,
-    GamePlayTags = T.RT_350,
+    GamePlayTags = T.RT_353,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10012,
@@ -33820,10 +34079,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Qizha/BP_Mon_SQ_Qizha.BP_Mon_SQ_Qizha",
     UnitId = 9006012,
     UnitName = "Mon_Name_9006012",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9006013] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha.BT_9Qizha",
     BattleRoleId = 9006013,
@@ -33837,7 +34096,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9006001,
-    GamePlayTags = T.RT_351,
+    GamePlayTags = T.RT_354,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10013,
@@ -33850,10 +34109,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Qizha/BP_Mon_SQ_Qizha.BP_Mon_SQ_Qizha",
     UnitId = 9006013,
     UnitName = "Mon_Name_9006013",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9006014] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha.BT_9Qizha",
     BattleRoleId = 9006014,
@@ -33867,12 +34126,12 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9006001,
-    GamePlayTags = T.RT_352,
+    GamePlayTags = T.RT_355,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10014,
     HitReplace = T.RT_69,
-    InitGuide = T.RT_359,
+    InitGuide = T.RT_362,
     MiniMapId = 2,
     ModelId = 900601,
     NavAgentId = 1,
@@ -33881,10 +34140,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Qizha/BP_Mon_SQ_Qizha.BP_Mon_SQ_Qizha",
     UnitId = 9006014,
     UnitName = "Mon_Name_9006014",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9006015] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha.BT_9Qizha",
     BattleRoleId = 9006015,
@@ -33898,7 +34157,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9006001,
-    GamePlayTags = T.RT_353,
+    GamePlayTags = T.RT_356,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10015,
@@ -33911,10 +34170,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Qizha/BP_Mon_SQ_Qizha.BP_Mon_SQ_Qizha",
     UnitId = 9006015,
     UnitName = "Mon_Name_9006015",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9006016] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha.BT_9Qizha",
     BattleRoleId = 9006016,
@@ -33928,7 +34187,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9006001,
-    GamePlayTags = T.RT_354,
+    GamePlayTags = T.RT_357,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10016,
@@ -33941,10 +34200,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Qizha/BP_Mon_SQ_Qizha.BP_Mon_SQ_Qizha",
     UnitId = 9006016,
     UnitName = "Mon_Name_9006016",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9006017] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha.BT_9Qizha",
     BattleRoleId = 9006017,
@@ -33958,7 +34217,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9006001,
-    GamePlayTags = T.RT_355,
+    GamePlayTags = T.RT_358,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10017,
@@ -33971,10 +34230,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Qizha/BP_Mon_SQ_Qizha.BP_Mon_SQ_Qizha",
     UnitId = 9006017,
     UnitName = "Mon_Name_9006017",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9006018] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha.BT_9Qizha",
     BattleRoleId = 9006018,
@@ -33988,7 +34247,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9006001,
-    GamePlayTags = T.RT_356,
+    GamePlayTags = T.RT_359,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10018,
@@ -34001,10 +34260,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Qizha/BP_Mon_SQ_Qizha.BP_Mon_SQ_Qizha",
     UnitId = 9006018,
     UnitName = "Mon_Name_9006018",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9006019] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha.BT_9Qizha",
     BattleRoleId = 9006019,
@@ -34018,7 +34277,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9006001,
-    GamePlayTags = T.RT_357,
+    GamePlayTags = T.RT_360,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10019,
@@ -34031,10 +34290,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Qizha/BP_Mon_SQ_Qizha.BP_Mon_SQ_Qizha",
     UnitId = 9006019,
     UnitName = "Mon_Name_9006019",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9006020] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha.BT_9Qizha",
     BattleRoleId = 9006020,
@@ -34048,7 +34307,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9006001,
-    GamePlayTags = T.RT_358,
+    GamePlayTags = T.RT_361,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10020,
@@ -34061,10 +34320,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Qizha/BP_Mon_SQ_Qizha.BP_Mon_SQ_Qizha",
     UnitId = 9006020,
     UnitName = "Mon_Name_9006020",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9006021] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha.BT_9Qizha",
     BattleRoleId = 9006021,
@@ -34078,7 +34337,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9006001,
-    GamePlayTags = T.RT_360,
+    GamePlayTags = T.RT_363,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10021,
@@ -34091,10 +34350,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Qizha/BP_Mon_SQ_Qizha.BP_Mon_SQ_Qizha",
     UnitId = 9006021,
     UnitName = "Mon_Name_9006021",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9006022] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha.BT_9Qizha",
     BattleRoleId = 9006022,
@@ -34108,7 +34367,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9006001,
-    GamePlayTags = T.RT_361,
+    GamePlayTags = T.RT_364,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10022,
@@ -34121,10 +34380,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Qizha/BP_Mon_SQ_Qizha.BP_Mon_SQ_Qizha",
     UnitId = 9006022,
     UnitName = "Mon_Name_9006022",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9006023] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha.BT_9Qizha",
     BattleRoleId = 9006023,
@@ -34138,7 +34397,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9006001,
-    GamePlayTags = T.RT_362,
+    GamePlayTags = T.RT_365,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10023,
@@ -34151,10 +34410,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Qizha/BP_Mon_SQ_Qizha.BP_Mon_SQ_Qizha",
     UnitId = 9006023,
     UnitName = "Mon_Name_9006023",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9006024] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha.BT_9Qizha",
     BattleRoleId = 9006024,
@@ -34168,7 +34427,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9006001,
-    GamePlayTags = T.RT_363,
+    GamePlayTags = T.RT_366,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10024,
@@ -34181,10 +34440,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Qizha/BP_Mon_SQ_Qizha.BP_Mon_SQ_Qizha",
     UnitId = 9006024,
     UnitName = "Mon_Name_9006024",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9006201] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha.BT_9Qizha",
     BattleRoleId = 9006201,
@@ -34219,10 +34478,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Qizha/BP_Mon_SQ_Qizha.BP_Mon_SQ_Qizha",
     UnitId = 9006201,
     UnitName = "Mon_Name_9006201",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9006301] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha.BT_9Qizha",
     BattleRoleId = 9006301,
@@ -34258,10 +34517,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Qizha/BP_Mon_SQ_Qizha.BP_Mon_SQ_Qizha",
     UnitId = 9006301,
     UnitName = "Mon_Name_9006301",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9006601] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha.BT_9Qizha",
     BattleRoleId = 9006601,
@@ -34273,7 +34532,7 @@ return ReadOnly("Monster", {
     DeadEffectId = 3,
     DisableTicklod = true,
     GalleryRuleId = 9006001,
-    GamePlayTags = T.RT_348,
+    GamePlayTags = T.RT_351,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     HitReplace = T.RT_69,
@@ -34285,10 +34544,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Qizha/BP_Mon_SQ_Qizha.BP_Mon_SQ_Qizha",
     UnitId = 9006601,
     UnitName = "Mon_Name_9006001",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9007001] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Niaopao/BT_9Niaopao.BT_9Niaopao",
     BattleGroupId = 9007,
@@ -34302,7 +34561,7 @@ return ReadOnly("Monster", {
     DeadEffectId = 3,
     ExpBasic = 20,
     GalleryRuleId = 9007001,
-    GamePlayTags = T.RT_330,
+    GamePlayTags = T.RT_333,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 1,
@@ -34313,10 +34572,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Niaopao/BP_Mon_SQ_Niaopao.BP_Mon_SQ_Niaopao",
     UnitId = 9007001,
     UnitName = "Mon_Name_9007001",
-    WeaponId = T.RT_367
+    WeaponId = T.RT_370
   },
   [9007004] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 202,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Niaopao/BT_9Niaopao.BT_9Niaopao",
     BattleGroupId = 9007,
@@ -34330,7 +34589,7 @@ return ReadOnly("Monster", {
     DeadEffectId = 3,
     ExpBasic = 20,
     GalleryRuleId = 9007001,
-    GamePlayTags = T.RT_330,
+    GamePlayTags = T.RT_333,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 1,
@@ -34341,10 +34600,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Niaopao/BP_Mon_SQ_Niaopao.BP_Mon_SQ_Niaopao",
     UnitId = 9007004,
     UnitName = "Mon_Name_9007001",
-    WeaponId = T.RT_367
+    WeaponId = T.RT_370
   },
   [9007011] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Niaopao/BT_9Niaopao.BT_9Niaopao",
     BattleGroupId = 9007,
@@ -34359,7 +34618,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9007001,
-    GamePlayTags = T.RT_332,
+    GamePlayTags = T.RT_335,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10011,
@@ -34371,10 +34630,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Niaopao/BP_Mon_SQ_Niaopao.BP_Mon_SQ_Niaopao",
     UnitId = 9007011,
     UnitName = "Mon_Name_9007011",
-    WeaponId = T.RT_367
+    WeaponId = T.RT_370
   },
   [9007012] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Niaopao/BT_9Niaopao.BT_9Niaopao",
     BattleGroupId = 9007,
@@ -34389,7 +34648,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9007001,
-    GamePlayTags = T.RT_334,
+    GamePlayTags = T.RT_337,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10012,
@@ -34401,10 +34660,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Niaopao/BP_Mon_SQ_Niaopao.BP_Mon_SQ_Niaopao",
     UnitId = 9007012,
     UnitName = "Mon_Name_9007012",
-    WeaponId = T.RT_367
+    WeaponId = T.RT_370
   },
   [9007013] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Niaopao/BT_9Niaopao.BT_9Niaopao",
     BattleGroupId = 9007,
@@ -34419,7 +34678,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9007001,
-    GamePlayTags = T.RT_335,
+    GamePlayTags = T.RT_338,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10013,
@@ -34431,10 +34690,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Niaopao/BP_Mon_SQ_Niaopao.BP_Mon_SQ_Niaopao",
     UnitId = 9007013,
     UnitName = "Mon_Name_9007013",
-    WeaponId = T.RT_367
+    WeaponId = T.RT_370
   },
   [9007014] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Niaopao/BT_9Niaopao.BT_9Niaopao",
     BattleGroupId = 9007,
@@ -34449,7 +34708,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9007001,
-    GamePlayTags = T.RT_336,
+    GamePlayTags = T.RT_339,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10014,
@@ -34461,10 +34720,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Niaopao/BP_Mon_SQ_Niaopao.BP_Mon_SQ_Niaopao",
     UnitId = 9007014,
     UnitName = "Mon_Name_9007014",
-    WeaponId = T.RT_367
+    WeaponId = T.RT_370
   },
   [9007015] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Niaopao/BT_9Niaopao.BT_9Niaopao",
     BattleGroupId = 9007,
@@ -34479,7 +34738,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9007001,
-    GamePlayTags = T.RT_337,
+    GamePlayTags = T.RT_340,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10015,
@@ -34491,10 +34750,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Niaopao/BP_Mon_SQ_Niaopao.BP_Mon_SQ_Niaopao",
     UnitId = 9007015,
     UnitName = "Mon_Name_9007015",
-    WeaponId = T.RT_367
+    WeaponId = T.RT_370
   },
   [9007016] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Niaopao/BT_9Niaopao.BT_9Niaopao",
     BattleGroupId = 9007,
@@ -34509,7 +34768,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9007001,
-    GamePlayTags = T.RT_338,
+    GamePlayTags = T.RT_341,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10016,
@@ -34521,10 +34780,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Niaopao/BP_Mon_SQ_Niaopao.BP_Mon_SQ_Niaopao",
     UnitId = 9007016,
     UnitName = "Mon_Name_9007016",
-    WeaponId = T.RT_367
+    WeaponId = T.RT_370
   },
   [9007017] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Niaopao/BT_9Niaopao.BT_9Niaopao",
     BattleGroupId = 9007,
@@ -34539,7 +34798,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9007001,
-    GamePlayTags = T.RT_339,
+    GamePlayTags = T.RT_342,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10017,
@@ -34551,10 +34810,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Niaopao/BP_Mon_SQ_Niaopao.BP_Mon_SQ_Niaopao",
     UnitId = 9007017,
     UnitName = "Mon_Name_9007017",
-    WeaponId = T.RT_367
+    WeaponId = T.RT_370
   },
   [9007018] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Niaopao/BT_9Niaopao.BT_9Niaopao",
     BattleGroupId = 9007,
@@ -34569,7 +34828,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9007001,
-    GamePlayTags = T.RT_340,
+    GamePlayTags = T.RT_343,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10018,
@@ -34581,10 +34840,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Niaopao/BP_Mon_SQ_Niaopao.BP_Mon_SQ_Niaopao",
     UnitId = 9007018,
     UnitName = "Mon_Name_9007018",
-    WeaponId = T.RT_367
+    WeaponId = T.RT_370
   },
   [9007019] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Niaopao/BT_9Niaopao.BT_9Niaopao",
     BattleGroupId = 9007,
@@ -34599,7 +34858,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9007001,
-    GamePlayTags = T.RT_341,
+    GamePlayTags = T.RT_344,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10019,
@@ -34611,10 +34870,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Niaopao/BP_Mon_SQ_Niaopao.BP_Mon_SQ_Niaopao",
     UnitId = 9007019,
     UnitName = "Mon_Name_9007019",
-    WeaponId = T.RT_367
+    WeaponId = T.RT_370
   },
   [9007020] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Niaopao/BT_9Niaopao.BT_9Niaopao",
     BattleGroupId = 9007,
@@ -34629,7 +34888,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9007001,
-    GamePlayTags = T.RT_342,
+    GamePlayTags = T.RT_345,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10020,
@@ -34641,10 +34900,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Niaopao/BP_Mon_SQ_Niaopao.BP_Mon_SQ_Niaopao",
     UnitId = 9007020,
     UnitName = "Mon_Name_9007020",
-    WeaponId = T.RT_367
+    WeaponId = T.RT_370
   },
   [9007021] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Niaopao/BT_9Niaopao.BT_9Niaopao",
     BattleGroupId = 9007,
@@ -34659,7 +34918,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9007001,
-    GamePlayTags = T.RT_343,
+    GamePlayTags = T.RT_346,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10021,
@@ -34671,10 +34930,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Niaopao/BP_Mon_SQ_Niaopao.BP_Mon_SQ_Niaopao",
     UnitId = 9007021,
     UnitName = "Mon_Name_9007021",
-    WeaponId = T.RT_367
+    WeaponId = T.RT_370
   },
   [9007022] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Niaopao/BT_9Niaopao.BT_9Niaopao",
     BattleGroupId = 9007,
@@ -34689,7 +34948,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9007001,
-    GamePlayTags = T.RT_344,
+    GamePlayTags = T.RT_347,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10022,
@@ -34701,10 +34960,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Niaopao/BP_Mon_SQ_Niaopao.BP_Mon_SQ_Niaopao",
     UnitId = 9007022,
     UnitName = "Mon_Name_9007022",
-    WeaponId = T.RT_367
+    WeaponId = T.RT_370
   },
   [9007023] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Niaopao/BT_9Niaopao.BT_9Niaopao",
     BattleGroupId = 9007,
@@ -34719,7 +34978,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9007001,
-    GamePlayTags = T.RT_345,
+    GamePlayTags = T.RT_348,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10023,
@@ -34731,10 +34990,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Niaopao/BP_Mon_SQ_Niaopao.BP_Mon_SQ_Niaopao",
     UnitId = 9007023,
     UnitName = "Mon_Name_9007023",
-    WeaponId = T.RT_367
+    WeaponId = T.RT_370
   },
   [9007024] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Niaopao/BT_9Niaopao.BT_9Niaopao",
     BattleGroupId = 9007,
@@ -34749,7 +35008,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 20,
     GalleryRuleId = 9007001,
-    GamePlayTags = T.RT_346,
+    GamePlayTags = T.RT_349,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy",
     GuideId = 10024,
@@ -34761,10 +35020,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Niaopao/BP_Mon_SQ_Niaopao.BP_Mon_SQ_Niaopao",
     UnitId = 9007024,
     UnitName = "Mon_Name_9007024",
-    WeaponId = T.RT_367
+    WeaponId = T.RT_370
   },
   [9007051] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 104,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Niaopao/SP/BT_9Niaopao_SP_51.BT_9Niaopao_SP_51",
     BattleGroupId = 9007,
@@ -34777,7 +35036,7 @@ return ReadOnly("Monster", {
     DeadEffectId = 3,
     ExpBasic = 20,
     GalleryRuleId = 9007001,
-    GamePlayTags = T.RT_330,
+    GamePlayTags = T.RT_333,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 1,
@@ -34788,7 +35047,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Niaopao/BP_Mon_SQ_Niaopao.BP_Mon_SQ_Niaopao",
     UnitId = 9007051,
     UnitName = "Mon_Name_9007001",
-    WeaponId = T.RT_367
+    WeaponId = T.RT_370
   },
   [9007071] = {
     AlertId = 105,
@@ -34800,7 +35059,7 @@ return ReadOnly("Monster", {
     Camp = "Monster",
     CombatVersionOpen = 12,
     DisableTicklod = true,
-    GamePlayTags = T.RT_368,
+    GamePlayTags = T.RT_371,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 1,
@@ -34809,7 +35068,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Niaopao/BP_Mon_SQ_Niaopao.BP_Mon_SQ_Niaopao",
     UnitId = 9007071,
     UnitName = "Mon_Name_9007001",
-    WeaponId = T.RT_367
+    WeaponId = T.RT_370
   },
   [9007072] = {
     AlertId = 105,
@@ -34821,7 +35080,7 @@ return ReadOnly("Monster", {
     Camp = "Player",
     CombatVersionOpen = 12,
     DisableTicklod = true,
-    GamePlayTags = T.RT_368,
+    GamePlayTags = T.RT_371,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     ModelId = 900701,
@@ -34829,10 +35088,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Niaopao/BP_Mon_SQ_Niaopao.BP_Mon_SQ_Niaopao",
     UnitId = 9007072,
     UnitName = "Mon_Name_9007001",
-    WeaponId = T.RT_367
+    WeaponId = T.RT_370
   },
   [9007201] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Niaopao/BT_9Niaopao.BT_9Niaopao",
     BattleGroupId = 9007,
@@ -34867,10 +35126,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Niaopao/BP_Mon_SQ_Niaopao.BP_Mon_SQ_Niaopao",
     UnitId = 9007201,
     UnitName = "Mon_Name_9007201",
-    WeaponId = T.RT_367
+    WeaponId = T.RT_370
   },
   [9007301] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Niaopao/BT_9Niaopao.BT_9Niaopao",
     BattleGroupId = 9007,
@@ -34906,10 +35165,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Niaopao/BP_Mon_SQ_Niaopao.BP_Mon_SQ_Niaopao",
     UnitId = 9007301,
     UnitName = "Mon_Name_9007301",
-    WeaponId = T.RT_367
+    WeaponId = T.RT_370
   },
   [9007302] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Niaopao/BT_9Niaopao.BT_9Niaopao",
     BattleGroupId = 9007,
@@ -34946,10 +35205,10 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Niaopao/BP_Mon_SQ_Niaopao.BP_Mon_SQ_Niaopao",
     UnitId = 9007302,
     UnitName = "Mon_Name_9007302",
-    WeaponId = T.RT_367
+    WeaponId = T.RT_370
   },
   [9007601] = {
-    AccessoryIds = T.RT_365,
+    AccessoryIds = T.RT_368,
     AlertId = 101,
     BT = "/Game/AssetDesign/AI/Monster/SQ_Niaopao/BT_9Niaopao.BT_9Niaopao",
     BattleGroupId = 9007,
@@ -34962,7 +35221,7 @@ return ReadOnly("Monster", {
     CommonAlertEnable = 1,
     DeadEffectId = 3,
     GalleryRuleId = 9007001,
-    GamePlayTags = T.RT_330,
+    GamePlayTags = T.RT_333,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 1,
@@ -34973,7 +35232,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Niaopao/BP_Mon_SQ_Niaopao.BP_Mon_SQ_Niaopao",
     UnitId = 9007601,
     UnitName = "Mon_Name_9007001",
-    WeaponId = T.RT_367
+    WeaponId = T.RT_370
   },
   [9500001] = {
     AlertId = 102,
@@ -34985,13 +35244,13 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 0,
     GalleryRuleId = 9500001,
-    GamePlayTags = T.RT_369,
-    GlobalRefresh = T.RT_370,
+    GamePlayTags = T.RT_372,
+    GlobalRefresh = T.RT_373,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_TreasureHunter.T_Gp_TreasureHunter",
     GuideId = 9500001,
     HitReplace = T.RT_69,
-    InitGuide = T.RT_371,
+    InitGuide = T.RT_374,
     MiniMapId = 5,
     ModelId = 950001,
     NavAgentId = 0,
@@ -35010,13 +35269,13 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 0,
     GalleryRuleId = 9500001,
-    GamePlayTags = T.RT_369,
-    GlobalRefresh = T.RT_370,
+    GamePlayTags = T.RT_372,
+    GlobalRefresh = T.RT_373,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_TreasureHunter.T_Gp_TreasureHunter",
     GuideId = 9500001,
     HitReplace = T.RT_69,
-    InitGuide = T.RT_372,
+    InitGuide = T.RT_375,
     MiniMapId = 5,
     ModelId = 950001,
     NavAgentId = 0,
@@ -35035,13 +35294,13 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 0,
     GalleryRuleId = 9500001,
-    GamePlayTags = T.RT_369,
-    GlobalRefresh = T.RT_370,
+    GamePlayTags = T.RT_372,
+    GlobalRefresh = T.RT_373,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_TreasureHunter.T_Gp_TreasureHunter",
     GuideId = 9500001,
     HitReplace = T.RT_69,
-    InitGuide = T.RT_372,
+    InitGuide = T.RT_375,
     MiniMapId = 5,
     ModelId = 950001,
     NavAgentId = 0,
@@ -35060,13 +35319,13 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 0,
     GalleryRuleId = 9500001,
-    GamePlayTags = T.RT_369,
-    GlobalRefresh = T.RT_370,
+    GamePlayTags = T.RT_372,
+    GlobalRefresh = T.RT_373,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_TreasureHunter.T_Gp_TreasureHunter",
     GuideId = 9500001,
     HitReplace = T.RT_69,
-    InitGuide = T.RT_371,
+    InitGuide = T.RT_374,
     MiniMapId = 5,
     ModelId = 950001,
     NavAgentId = 0,
@@ -35084,13 +35343,13 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 0,
     GalleryRuleId = 9500001,
-    GamePlayTags = T.RT_369,
-    GlobalRefresh = T.RT_370,
+    GamePlayTags = T.RT_372,
+    GlobalRefresh = T.RT_373,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_TreasureHunter.T_Gp_TreasureHunter",
     GuideId = 9500001,
     HitReplace = T.RT_69,
-    InitGuide = T.RT_371,
+    InitGuide = T.RT_374,
     MiniMapId = 5,
     ModelId = 950001,
     NavAgentId = 0,
@@ -35107,7 +35366,7 @@ return ReadOnly("Monster", {
     DeadEffectId = 3,
     DisableTicklod = true,
     ExpBasic = 0,
-    GamePlayTags = T.RT_369,
+    GamePlayTags = T.RT_372,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_TreasureHunter.T_Gp_TreasureHunter",
     HitReplace = T.RT_69,
@@ -35128,7 +35387,7 @@ return ReadOnly("Monster", {
     DeadEffectId = 3,
     DisableTicklod = true,
     ExpBasic = 0,
-    GamePlayTags = T.RT_369,
+    GamePlayTags = T.RT_372,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_TreasureHunter.T_Gp_TreasureHunter",
     HitReplace = T.RT_69,
@@ -35156,7 +35415,7 @@ return ReadOnly("Monster", {
     },
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
-    HitReplace = T.RT_373,
+    HitReplace = T.RT_376,
     MiniMapId = 2,
     ModelId = 950101,
     NavAgentId = 0,
@@ -35164,7 +35423,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Haer/BP_NE_Haer.BP_NE_Haer",
     UnitId = 9501001,
     UnitName = "Mon_Name_9501001",
-    WeaponId = T.RT_374
+    WeaponId = T.RT_377
   },
   [9501002] = {
     AlertId = 201,
@@ -35189,7 +35448,7 @@ return ReadOnly("Monster", {
     },
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
-    HitReplace = T.RT_373,
+    HitReplace = T.RT_376,
     MiniMapId = 2,
     ModelId = 950101,
     NavAgentId = 0,
@@ -35197,7 +35456,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Haer/BP_NE_Haer.BP_NE_Haer",
     UnitId = 9501002,
     UnitName = "Mon_Name_9501001",
-    WeaponId = T.RT_374
+    WeaponId = T.RT_377
   },
   [9501003] = {
     AlertId = 201,
@@ -35209,7 +35468,7 @@ return ReadOnly("Monster", {
     CombatVersionOpen = 10,
     DisableTicklod = true,
     ExpBasic = 0,
-    GamePlayTags = T.RT_375,
+    GamePlayTags = T.RT_378,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 2,
@@ -35219,7 +35478,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Haer/BP_NE_Haer.BP_NE_Haer",
     UnitId = 9501003,
     UnitName = "Mon_Name_9501003",
-    WeaponId = T.RT_374
+    WeaponId = T.RT_377
   },
   [9501004] = {
     AlertId = 201,
@@ -35231,7 +35490,7 @@ return ReadOnly("Monster", {
     CombatVersionOpen = 10,
     DisableTicklod = true,
     ExpBasic = 0,
-    GamePlayTags = T.RT_375,
+    GamePlayTags = T.RT_378,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 2,
@@ -35241,7 +35500,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Haer/BP_NE_Haer.BP_NE_Haer",
     UnitId = 9501004,
     UnitName = "Mon_Name_9501004",
-    WeaponId = T.RT_374
+    WeaponId = T.RT_377
   },
   [9501051] = {
     AlertId = 201,
@@ -35256,7 +35515,7 @@ return ReadOnly("Monster", {
     GamePlayTags = {"Mon.Melee", "Mon.Elite"},
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
-    HitReplace = T.RT_373,
+    HitReplace = T.RT_376,
     MiniMapId = 2,
     ModelId = 950101,
     NavAgentId = 0,
@@ -35264,7 +35523,29 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Haer/BP_NE_Haer.BP_NE_Haer",
     UnitId = 9501051,
     UnitName = "Mon_Name_9501001",
-    WeaponId = T.RT_374
+    WeaponId = T.RT_377
+  },
+  [9501052] = {
+    AlertId = 201,
+    BT = "/Game/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerC.BT_NE_HaerC",
+    BattleGroupId = 9501,
+    BattleRoleId = 9501001,
+    BloodUIParmas = T.RT_35,
+    Camp = "Monster",
+    CombatVersionOpen = 17,
+    DisableTicklod = true,
+    ExpBasic = 0,
+    GamePlayTags = T.RT_379,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
+    MiniMapId = 2,
+    ModelId = 950101,
+    NavAgentId = 0,
+    TeamMoveGroup = 9501,
+    UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Haer/BP_NE_Haer.BP_NE_Haer",
+    UnitId = 9501052,
+    UnitName = "UI_Npc_Name_260012",
+    WeaponId = T.RT_377
   },
   [9502001] = {
     AlertId = 201,
@@ -35276,7 +35557,7 @@ return ReadOnly("Monster", {
     CombatVersionOpen = 10,
     DisableTicklod = true,
     ExpBasic = 0,
-    GamePlayTags = T.RT_375,
+    GamePlayTags = T.RT_378,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 2,
@@ -35286,7 +35567,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Haer/BP_NE_Haer.BP_NE_Haer",
     UnitId = 9502001,
     UnitName = "Mon_Name_9501003",
-    WeaponId = T.RT_374
+    WeaponId = T.RT_377
   },
   [9502006] = {
     AlertId = 201,
@@ -35298,7 +35579,7 @@ return ReadOnly("Monster", {
     CombatVersionOpen = 10,
     DisableTicklod = true,
     ExpBasic = 0,
-    GamePlayTags = T.RT_376,
+    GamePlayTags = T.RT_379,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 2,
@@ -35308,7 +35589,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Haer/BP_NE_Haer.BP_NE_Haer",
     UnitId = 9502006,
     UnitName = "Mon_Name_9501003",
-    WeaponId = T.RT_374
+    WeaponId = T.RT_377
   },
   [9502051] = {
     AlertId = 201,
@@ -35320,7 +35601,7 @@ return ReadOnly("Monster", {
     CombatVersionOpen = 10,
     DisableTicklod = true,
     ExpBasic = 0,
-    GamePlayTags = T.RT_376,
+    GamePlayTags = T.RT_379,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 2,
@@ -35330,7 +35611,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Haer/BP_NE_Haer.BP_NE_Haer",
     UnitId = 9502051,
     UnitName = "Mon_Name_9804001",
-    WeaponId = T.RT_374
+    WeaponId = T.RT_377
   },
   [9503001] = {
     AlertId = 201,
@@ -35342,7 +35623,7 @@ return ReadOnly("Monster", {
     CombatVersionOpen = 10,
     DisableTicklod = true,
     ExpBasic = 0,
-    GamePlayTags = T.RT_375,
+    GamePlayTags = T.RT_378,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 2,
@@ -35352,7 +35633,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Haer/BP_NE_Haer.BP_NE_Haer",
     UnitId = 9503001,
     UnitName = "Mon_Name_9501004",
-    WeaponId = T.RT_374
+    WeaponId = T.RT_377
   },
   [9503002] = {
     AlertId = 201,
@@ -35364,7 +35645,7 @@ return ReadOnly("Monster", {
     CombatVersionOpen = 10,
     DisableTicklod = true,
     ExpBasic = 0,
-    GamePlayTags = T.RT_375,
+    GamePlayTags = T.RT_378,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 2,
@@ -35374,7 +35655,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Haer/BP_NE_Haer.BP_NE_Haer",
     UnitId = 9503002,
     UnitName = "Mon_Name_9503002",
-    WeaponId = T.RT_374
+    WeaponId = T.RT_377
   },
   [9503006] = {
     AlertId = 201,
@@ -35386,7 +35667,7 @@ return ReadOnly("Monster", {
     CombatVersionOpen = 10,
     DisableTicklod = true,
     ExpBasic = 0,
-    GamePlayTags = T.RT_376,
+    GamePlayTags = T.RT_379,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 2,
@@ -35396,7 +35677,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Haer/BP_NE_Haer.BP_NE_Haer",
     UnitId = 9503006,
     UnitName = "Mon_Name_9501004",
-    WeaponId = T.RT_374
+    WeaponId = T.RT_377
   },
   [9503051] = {
     AlertId = 201,
@@ -35408,7 +35689,7 @@ return ReadOnly("Monster", {
     CombatVersionOpen = 10,
     DisableTicklod = true,
     ExpBasic = 0,
-    GamePlayTags = T.RT_376,
+    GamePlayTags = T.RT_379,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 2,
@@ -35418,7 +35699,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Haer/BP_NE_Haer.BP_NE_Haer",
     UnitId = 9503051,
     UnitName = "Mon_Name_9503051",
-    WeaponId = T.RT_374
+    WeaponId = T.RT_377
   },
   [9504001] = {
     BT = "/Game/AssetDesign/AI/Monster/NE_Wuyou/BT_9Wuyou01.BT_9Wuyou01",
@@ -35428,7 +35709,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
-    HitReplace = T.RT_373,
+    HitReplace = T.RT_376,
     ModelId = 950401,
     NavAgentId = 0,
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Wuyou/BP_NE_Wuyou01.BP_NE_Wuyou01",
@@ -35443,7 +35724,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
-    HitReplace = T.RT_373,
+    HitReplace = T.RT_376,
     ModelId = 950501,
     NavAgentId = 0,
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Wuyou/BP_NE_Wuyou02.BP_NE_Wuyou02",
@@ -35458,7 +35739,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
-    HitReplace = T.RT_373,
+    HitReplace = T.RT_376,
     ModelId = 950601,
     NavAgentId = 0,
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Wuyou/BP_NE_Wuyou03.BP_NE_Wuyou03",
@@ -35474,7 +35755,7 @@ return ReadOnly("Monster", {
     CombatVersionOpen = 11,
     DisableTicklod = true,
     ExpBasic = 20,
-    GamePlayTags = T.RT_375,
+    GamePlayTags = T.RT_378,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     HitReplace = T.RT_69,
@@ -35497,7 +35778,7 @@ return ReadOnly("Monster", {
     CombatVersionOpen = 11,
     DisableTicklod = true,
     ExpBasic = 0,
-    GamePlayTags = T.RT_375,
+    GamePlayTags = T.RT_378,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     HitReplace = T.RT_69,
@@ -35508,7 +35789,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Villiger05/BP_Mon_NE_Villiger05.BP_Mon_NE_Villiger05",
     UnitId = 9508001,
     UnitName = "Mon_Name_9508001",
-    WeaponId = T.RT_374
+    WeaponId = T.RT_377
   },
   [9508051] = {
     AlertId = 201,
@@ -35536,7 +35817,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Villiger05/BP_Mon_NE_Villiger05.BP_Mon_NE_Villiger05",
     UnitId = 9508051,
     UnitName = "UI_CMNpc_Name_HengSheng",
-    WeaponId = T.RT_374
+    WeaponId = T.RT_377
   },
   [9508052] = {
     AlertId = 201,
@@ -35547,7 +35828,7 @@ return ReadOnly("Monster", {
     CombatVersionOpen = 11,
     DisableTicklod = true,
     ExpBasic = 0,
-    GamePlayTags = T.RT_375,
+    GamePlayTags = T.RT_378,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     HitReplace = T.RT_69,
@@ -35558,7 +35839,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Villiger05/BP_Mon_NE_Villiger05.BP_Mon_NE_Villiger05",
     UnitId = 9508052,
     UnitName = "UI_CMNpc_Name_HengSheng",
-    WeaponId = T.RT_374
+    WeaponId = T.RT_377
   },
   [9509001] = {
     AlertId = 201,
@@ -35569,7 +35850,7 @@ return ReadOnly("Monster", {
     CombatVersionOpen = 11,
     DisableTicklod = true,
     ExpBasic = 0,
-    GamePlayTags = T.RT_375,
+    GamePlayTags = T.RT_378,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     HitReplace = T.RT_69,
@@ -35580,7 +35861,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Villiger05/BP_Mon_NE_Villiger05.BP_Mon_NE_Villiger05",
     UnitId = 9509001,
     UnitName = "Mon_Name_9509001",
-    WeaponId = T.RT_374
+    WeaponId = T.RT_377
   },
   [9509051] = {
     AlertId = 201,
@@ -35591,7 +35872,7 @@ return ReadOnly("Monster", {
     CombatVersionOpen = 11,
     DisableTicklod = true,
     ExpBasic = 0,
-    GamePlayTags = T.RT_375,
+    GamePlayTags = T.RT_378,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     HitReplace = T.RT_69,
@@ -35602,7 +35883,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Villiger05/BP_Mon_NE_Villiger05.BP_Mon_NE_Villiger05",
     UnitId = 9509051,
     UnitName = "UI_CMNpc_Name_QunYan",
-    WeaponId = T.RT_374
+    WeaponId = T.RT_377
   },
   [9509052] = {
     AlertId = 105,
@@ -35614,13 +35895,13 @@ return ReadOnly("Monster", {
     ExpBasic = 0,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
-    HitReplace = T.RT_373,
+    HitReplace = T.RT_376,
     ModelId = 950901,
     NavAgentId = 0,
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Villiger05/BP_Mon_NE_Villiger05.BP_Mon_NE_Villiger05",
     UnitId = 9509052,
     UnitName = "Mon_Name_9509001",
-    WeaponId = T.RT_374
+    WeaponId = T.RT_377
   },
   [9510001] = {
     AlertId = 201,
@@ -35632,7 +35913,7 @@ return ReadOnly("Monster", {
     CombatVersionOpen = 12,
     DisableTicklod = true,
     ExpBasic = 0,
-    GamePlayTags = T.RT_375,
+    GamePlayTags = T.RT_378,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     HitReplace = T.RT_69,
@@ -35659,7 +35940,7 @@ return ReadOnly("Monster", {
     DeadEffectId = 3,
     ExpBasic = 20,
     GalleryRuleId = 9511001,
-    GamePlayTags = T.RT_377,
+    GamePlayTags = T.RT_380,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 1,
@@ -35670,7 +35951,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Hutao/BP_Mon_NE_Hutao.BP_Mon_NE_Hutao",
     UnitId = 9511001,
     UnitName = "Mon_Name_9511001",
-    WeaponId = T.RT_378
+    WeaponId = T.RT_381
   },
   [9511011] = {
     AlertId = 101,
@@ -35705,7 +35986,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Hutao/BP_Mon_NE_Hutao.BP_Mon_NE_Hutao",
     UnitId = 9511011,
     UnitName = "Mon_Name_9511011",
-    WeaponId = T.RT_378
+    WeaponId = T.RT_381
   },
   [9511012] = {
     AlertId = 101,
@@ -35740,7 +36021,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Hutao/BP_Mon_NE_Hutao.BP_Mon_NE_Hutao",
     UnitId = 9511012,
     UnitName = "Mon_Name_9511012",
-    WeaponId = T.RT_378
+    WeaponId = T.RT_381
   },
   [9511013] = {
     AlertId = 101,
@@ -35776,7 +36057,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Hutao/BP_Mon_NE_Hutao.BP_Mon_NE_Hutao",
     UnitId = 9511013,
     UnitName = "Mon_Name_9511013",
-    WeaponId = T.RT_378
+    WeaponId = T.RT_381
   },
   [9511014] = {
     AlertId = 101,
@@ -35811,7 +36092,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Hutao/BP_Mon_NE_Hutao.BP_Mon_NE_Hutao",
     UnitId = 9511014,
     UnitName = "Mon_Name_9511014",
-    WeaponId = T.RT_378
+    WeaponId = T.RT_381
   },
   [9511015] = {
     AlertId = 101,
@@ -35846,7 +36127,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Hutao/BP_Mon_NE_Hutao.BP_Mon_NE_Hutao",
     UnitId = 9511015,
     UnitName = "Mon_Name_9511015",
-    WeaponId = T.RT_378
+    WeaponId = T.RT_381
   },
   [9511016] = {
     AlertId = 101,
@@ -35881,7 +36162,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Hutao/BP_Mon_NE_Hutao.BP_Mon_NE_Hutao",
     UnitId = 9511016,
     UnitName = "Mon_Name_9511016",
-    WeaponId = T.RT_378
+    WeaponId = T.RT_381
   },
   [9511017] = {
     AlertId = 101,
@@ -35916,7 +36197,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Hutao/BP_Mon_NE_Hutao.BP_Mon_NE_Hutao",
     UnitId = 9511017,
     UnitName = "Mon_Name_9511017",
-    WeaponId = T.RT_378
+    WeaponId = T.RT_381
   },
   [9511018] = {
     AlertId = 101,
@@ -35951,7 +36232,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Hutao/BP_Mon_NE_Hutao.BP_Mon_NE_Hutao",
     UnitId = 9511018,
     UnitName = "Mon_Name_9511018",
-    WeaponId = T.RT_378
+    WeaponId = T.RT_381
   },
   [9511019] = {
     AlertId = 101,
@@ -35986,7 +36267,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Hutao/BP_Mon_NE_Hutao.BP_Mon_NE_Hutao",
     UnitId = 9511019,
     UnitName = "Mon_Name_9511019",
-    WeaponId = T.RT_378
+    WeaponId = T.RT_381
   },
   [9511020] = {
     AlertId = 101,
@@ -36021,7 +36302,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Hutao/BP_Mon_NE_Hutao.BP_Mon_NE_Hutao",
     UnitId = 9511020,
     UnitName = "Mon_Name_9511020",
-    WeaponId = T.RT_378
+    WeaponId = T.RT_381
   },
   [9511021] = {
     AlertId = 101,
@@ -36056,7 +36337,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Hutao/BP_Mon_NE_Hutao.BP_Mon_NE_Hutao",
     UnitId = 9511021,
     UnitName = "Mon_Name_9511021",
-    WeaponId = T.RT_378
+    WeaponId = T.RT_381
   },
   [9511022] = {
     AlertId = 101,
@@ -36091,7 +36372,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Hutao/BP_Mon_NE_Hutao.BP_Mon_NE_Hutao",
     UnitId = 9511022,
     UnitName = "Mon_Name_9511022",
-    WeaponId = T.RT_378
+    WeaponId = T.RT_381
   },
   [9511023] = {
     AlertId = 101,
@@ -36126,7 +36407,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Hutao/BP_Mon_NE_Hutao.BP_Mon_NE_Hutao",
     UnitId = 9511023,
     UnitName = "Mon_Name_9511023",
-    WeaponId = T.RT_378
+    WeaponId = T.RT_381
   },
   [9511024] = {
     AlertId = 101,
@@ -36161,7 +36442,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Hutao/BP_Mon_NE_Hutao.BP_Mon_NE_Hutao",
     UnitId = 9511024,
     UnitName = "Mon_Name_9511024",
-    WeaponId = T.RT_378
+    WeaponId = T.RT_381
   },
   [9512001] = {
     AlertId = 101,
@@ -36171,10 +36452,9 @@ return ReadOnly("Monster", {
     Camp = "Player",
     CombatVersionOpen = 16,
     DeadEffectId = 3,
-    GamePlayTags = T.RT_376,
+    GamePlayTags = T.RT_379,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
-    InitGuide = T.RT_32,
     ModelId = 951201,
     NavAgentId = 0,
     UnitBPPath = "/Game/AssetDesign/Char/Monster/NE_Eve/BP_Mon_NE_Eve.BP_Mon_NE_Eve",
@@ -36190,7 +36470,7 @@ return ReadOnly("Monster", {
     DeadEffectId = 3,
     ExpBasic = 0,
     GalleryRuleId = 9801001,
-    GamePlayTags = T.RT_377,
+    GamePlayTags = T.RT_380,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 1,
@@ -36211,11 +36491,11 @@ return ReadOnly("Monster", {
     DeadEffectId = 3,
     ExpBasic = 0,
     GalleryRuleId = 9801002,
-    GamePlayTags = T.RT_377,
+    GamePlayTags = T.RT_380,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     HitMontageRule = "MonXuelang",
-    HitReplace = T.RT_379,
+    HitReplace = T.RT_382,
     MiniMapId = 1,
     ModelId = 980102,
     NavAgentId = 0,
@@ -36233,11 +36513,11 @@ return ReadOnly("Monster", {
     DeadEffectId = 3,
     ExpBasic = 0,
     GalleryRuleId = 9802001,
-    GamePlayTags = T.RT_377,
+    GamePlayTags = T.RT_380,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     HitMontageRule = "MonHongjiaolu",
-    HitReplace = T.RT_379,
+    HitReplace = T.RT_382,
     MiniMapId = 1,
     ModelId = 980201,
     NavAgentId = 0,
@@ -36255,11 +36535,11 @@ return ReadOnly("Monster", {
     DeadEffectId = 3,
     ExpBasic = 0,
     GalleryRuleId = 9802002,
-    GamePlayTags = T.RT_377,
+    GamePlayTags = T.RT_380,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     HitMontageRule = "MonHongjiaolu",
-    HitReplace = T.RT_379,
+    HitReplace = T.RT_382,
     MiniMapId = 1,
     ModelId = 980202,
     NavAgentId = 0,
@@ -36277,7 +36557,7 @@ return ReadOnly("Monster", {
     DeadEffectId = 3,
     ExpBasic = 0,
     GalleryRuleId = 9803001,
-    GamePlayTags = T.RT_377,
+    GamePlayTags = T.RT_380,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 1,
@@ -36301,7 +36581,7 @@ return ReadOnly("Monster", {
     DeadEffectId = 3,
     ExpBasic = 0,
     GalleryRuleId = 9803002,
-    GamePlayTags = T.RT_377,
+    GamePlayTags = T.RT_380,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 1,
@@ -36320,7 +36600,7 @@ return ReadOnly("Monster", {
     CombatVersionOpen = 11,
     DeadEffectId = 3,
     GalleryRuleId = 9804001,
-    GamePlayTags = T.RT_377,
+    GamePlayTags = T.RT_380,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 1,
@@ -36338,7 +36618,7 @@ return ReadOnly("Monster", {
     CombatVersionOpen = 11,
     DeadEffectId = 3,
     GalleryRuleId = 9805001,
-    GamePlayTags = T.RT_377,
+    GamePlayTags = T.RT_380,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 1,
@@ -36356,7 +36636,7 @@ return ReadOnly("Monster", {
     CombatVersionOpen = 11,
     DeadEffectId = 3,
     GalleryRuleId = 9806001,
-    GamePlayTags = T.RT_377,
+    GamePlayTags = T.RT_380,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 1,
@@ -36374,7 +36654,7 @@ return ReadOnly("Monster", {
     CombatVersionOpen = 11,
     DeadEffectId = 3,
     GalleryRuleId = 9806001,
-    GamePlayTags = T.RT_377,
+    GamePlayTags = T.RT_380,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 1,
@@ -36393,7 +36673,7 @@ return ReadOnly("Monster", {
     DeadEffectId = 3,
     ExpBasic = 0,
     GalleryRuleId = 9807001,
-    GamePlayTags = T.RT_377,
+    GamePlayTags = T.RT_380,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 1,
@@ -36412,7 +36692,7 @@ return ReadOnly("Monster", {
     CombatVersionOpen = 11,
     DeadEffectId = 3,
     GalleryRuleId = 9808001,
-    GamePlayTags = T.RT_377,
+    GamePlayTags = T.RT_380,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 1,
@@ -36431,11 +36711,11 @@ return ReadOnly("Monster", {
     DeadEffectId = 3,
     ExpBasic = 0,
     GalleryRuleId = 9809001,
-    GamePlayTags = T.RT_377,
+    GamePlayTags = T.RT_380,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     HitMontageRule = "MonHongjiaolu",
-    HitReplace = T.RT_379,
+    HitReplace = T.RT_382,
     MiniMapId = 1,
     ModelId = 980901,
     NavAgentId = 0,
@@ -36453,11 +36733,11 @@ return ReadOnly("Monster", {
     DeadEffectId = 3,
     ExpBasic = 0,
     GalleryRuleId = 9809002,
-    GamePlayTags = T.RT_377,
+    GamePlayTags = T.RT_380,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     HitMontageRule = "MonHongjiaolu",
-    HitReplace = T.RT_379,
+    HitReplace = T.RT_382,
     MiniMapId = 1,
     ModelId = 980902,
     NavAgentId = 0,
@@ -36476,7 +36756,7 @@ return ReadOnly("Monster", {
     DeadEffectId = 3,
     ExpBasic = 0,
     GalleryRuleId = 9810001,
-    GamePlayTags = T.RT_377,
+    GamePlayTags = T.RT_380,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 1,
@@ -36497,7 +36777,7 @@ return ReadOnly("Monster", {
     DeadEffectId = 3,
     ExpBasic = 0,
     GalleryRuleId = 9810001,
-    GamePlayTags = T.RT_377,
+    GamePlayTags = T.RT_380,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 1,
@@ -36518,7 +36798,7 @@ return ReadOnly("Monster", {
     DeadEffectId = 3,
     ExpBasic = 0,
     GalleryRuleId = 9810001,
-    GamePlayTags = T.RT_377,
+    GamePlayTags = T.RT_380,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     MiniMapId = 1,
@@ -36717,7 +36997,7 @@ return ReadOnly("Monster", {
     DontApplyAsyncCreate = true,
     ExpBasic = 0,
     GalleryRuleId = 8503001,
-    GamePlayTags = T.RT_293,
+    GamePlayTags = T.RT_294,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
     MiniMapId = 4,
@@ -36745,7 +37025,7 @@ return ReadOnly("Monster", {
     DontApplyAsyncCreate = true,
     ExpBasic = 0,
     GalleryRuleId = 8503001,
-    GamePlayTags = T.RT_293,
+    GamePlayTags = T.RT_294,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
     MiniMapId = 4,
@@ -36773,7 +37053,7 @@ return ReadOnly("Monster", {
     DontApplyAsyncCreate = true,
     ExpBasic = 0,
     GalleryRuleId = 8503001,
-    GamePlayTags = T.RT_293,
+    GamePlayTags = T.RT_294,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
     MiniMapId = 4,
@@ -36801,7 +37081,7 @@ return ReadOnly("Monster", {
     DontApplyAsyncCreate = true,
     ExpBasic = 0,
     GalleryRuleId = 8503001,
-    GamePlayTags = T.RT_293,
+    GamePlayTags = T.RT_294,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
     MiniMapId = 4,
@@ -36829,7 +37109,7 @@ return ReadOnly("Monster", {
     DontApplyAsyncCreate = true,
     ExpBasic = 0,
     GalleryRuleId = 8503001,
-    GamePlayTags = T.RT_293,
+    GamePlayTags = T.RT_294,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
     MiniMapId = 4,
@@ -36857,7 +37137,7 @@ return ReadOnly("Monster", {
     DontApplyAsyncCreate = true,
     ExpBasic = 0,
     GalleryRuleId = 8503001,
-    GamePlayTags = T.RT_293,
+    GamePlayTags = T.RT_294,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
     MiniMapId = 4,
@@ -37072,7 +37352,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_05_Lianhuo/BP_Boss_Lianhuo.BP_Boss_Lianhuo",
     UnitId = 9901031,
     UnitName = "Mon_Name_8505001",
-    WeaponId = T.RT_300
+    WeaponId = T.RT_301
   },
   [9901032] = {
     AlertId = 10,
@@ -37101,7 +37381,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_05_Lianhuo/BP_Boss_Lianhuo.BP_Boss_Lianhuo",
     UnitId = 9901032,
     UnitName = "Mon_Name_8505001",
-    WeaponId = T.RT_300
+    WeaponId = T.RT_301
   },
   [9901033] = {
     AlertId = 10,
@@ -37130,7 +37410,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_05_Lianhuo/BP_Boss_Lianhuo.BP_Boss_Lianhuo",
     UnitId = 9901033,
     UnitName = "Mon_Name_8505001",
-    WeaponId = T.RT_300
+    WeaponId = T.RT_301
   },
   [9901034] = {
     AlertId = 10,
@@ -37159,7 +37439,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_05_Lianhuo/BP_Boss_Lianhuo.BP_Boss_Lianhuo",
     UnitId = 9901034,
     UnitName = "Mon_Name_8505001",
-    WeaponId = T.RT_300
+    WeaponId = T.RT_301
   },
   [9901035] = {
     AlertId = 10,
@@ -37188,7 +37468,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_05_Lianhuo/BP_Boss_Lianhuo.BP_Boss_Lianhuo",
     UnitId = 9901035,
     UnitName = "Mon_Name_8505001",
-    WeaponId = T.RT_300
+    WeaponId = T.RT_301
   },
   [9901036] = {
     AlertId = 10,
@@ -37217,7 +37497,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_05_Lianhuo/BP_Boss_Lianhuo.BP_Boss_Lianhuo",
     UnitId = 9901036,
     UnitName = "Mon_Name_8505001",
-    WeaponId = T.RT_300
+    WeaponId = T.RT_301
   },
   [9901041] = {
     AlertId = 10,
@@ -37225,7 +37505,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 9901041,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_58,
-    BossUIValues = T.RT_304,
+    BossUIValues = T.RT_305,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 10,
@@ -37252,7 +37532,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 9901042,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_58,
-    BossUIValues = T.RT_304,
+    BossUIValues = T.RT_305,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 10,
@@ -37279,7 +37559,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 9901043,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_58,
-    BossUIValues = T.RT_304,
+    BossUIValues = T.RT_305,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 10,
@@ -37306,7 +37586,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 9901044,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_58,
-    BossUIValues = T.RT_304,
+    BossUIValues = T.RT_305,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 10,
@@ -37333,7 +37613,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 9901045,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_58,
-    BossUIValues = T.RT_304,
+    BossUIValues = T.RT_305,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 10,
@@ -37360,7 +37640,7 @@ return ReadOnly("Monster", {
     BattleRoleId = 9901046,
     BloodUIParmas = T.RT_57,
     BossPenalize = T.RT_58,
-    BossUIValues = T.RT_304,
+    BossUIValues = T.RT_305,
     CameraLockOnBones = T.RT_64,
     Camp = "Monster",
     CombatVersionOpen = 10,
@@ -37392,7 +37672,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 0,
     GalleryRuleId = 9006001,
-    GamePlayTags = T.RT_348,
+    GamePlayTags = T.RT_351,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     HitReplace = T.RT_69,
@@ -37402,7 +37682,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Qizha/BP_Mon_SQ_Qizha.BP_Mon_SQ_Qizha",
     UnitId = 9901051,
     UnitName = "Mon_Name_9006001",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9901052] = {
     AlertId = 10,
@@ -37415,7 +37695,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 0,
     GalleryRuleId = 9003001,
-    GamePlayTags = T.RT_348,
+    GamePlayTags = T.RT_351,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     HitReplace = T.RT_69,
@@ -37425,7 +37705,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Wanju/BP_Mon_SQ_Wanju.BP_Mon_SQ_Wanju",
     UnitId = 9901052,
     UnitName = "Mon_Name_9003001",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9901053] = {
     AlertId = 10,
@@ -37438,7 +37718,7 @@ return ReadOnly("Monster", {
     DisableTicklod = true,
     ExpBasic = 0,
     GalleryRuleId = 9005001,
-    GamePlayTags = T.RT_348,
+    GamePlayTags = T.RT_351,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Annihilate.WBP_GuidePoint_Annihilate",
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
     HitReplace = T.RT_69,
@@ -37448,7 +37728,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/SQ_Baozha/BP_Mon_SQ_Baozha.BP_Mon_SQ_Baozha",
     UnitId = 9901053,
     UnitName = "Mon_Name_9005001",
-    WeaponId = T.RT_328
+    WeaponId = T.RT_331
   },
   [9901054] = {
     AlertId = 10,
@@ -37495,7 +37775,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_13_Kuxiu/BP_Boss_Kuxiu.BP_Boss_Kuxiu",
     UnitId = 9901055,
     UnitName = "Mon_Name_8513001",
-    WeaponId = T.RT_312
+    WeaponId = T.RT_313
   },
   [9901056] = {
     AlertId = 10,
@@ -37520,7 +37800,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_14_Shenpan/BP_Boss_Shenpan.BP_Boss_Shenpan",
     UnitId = 9901056,
     UnitName = "Mon_Name_8514001",
-    WeaponId = T.RT_316
+    WeaponId = T.RT_317
   },
   [9901057] = {
     AlertId = 10,
@@ -37571,7 +37851,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_13_Kuxiu/BP_Boss_Kuxiu.BP_Boss_Kuxiu",
     UnitId = 9901058,
     UnitName = "Mon_Name_8513001",
-    WeaponId = T.RT_312
+    WeaponId = T.RT_313
   },
   [9901059] = {
     AlertId = 10,
@@ -37594,7 +37874,7 @@ return ReadOnly("Monster", {
     UnitBPPath = "/Game/AssetDesign/Char/Monster/Boss_14_Shenpan/BP_Boss_Shenpan.BP_Boss_Shenpan",
     UnitId = 9901059,
     UnitName = "Mon_Name_8514001",
-    WeaponId = T.RT_316
+    WeaponId = T.RT_317
   },
   [9901101] = {
     BattleRoleId = 210101,
@@ -37679,7 +37959,7 @@ return ReadOnly("Monster", {
   [9902001] = {
     BattleRoleId = 210101,
     Camp = "Player",
-    CombatVersionOpen = 17,
+    CombatVersionOpen = 999,
     DisableTicklod = true,
     ExpBasic = 0,
     ForbidHatred = 1,

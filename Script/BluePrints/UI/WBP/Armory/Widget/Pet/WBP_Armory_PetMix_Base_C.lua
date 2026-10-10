@@ -169,9 +169,12 @@ end
 
 function M:InitResourceItem()
   local ResourceData = DataMgr.PetEntryP[3]
+  if not ResourceData then
+    return
+  end
   local resourceConfig = DataMgr.Resource[ResourceData.ResourceID]
   self.ResourceID = ResourceData.ResourceID
-  if ResourceData and resourceConfig then
+  if resourceConfig then
     local Content = {
       ItemType = "Resource",
       ResourceId = ResourceData.ResourceID,

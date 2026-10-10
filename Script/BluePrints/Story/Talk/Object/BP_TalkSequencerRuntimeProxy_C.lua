@@ -3,7 +3,8 @@ local M = Class("BluePrints.Story.Talk.Object.BP_TalkSequencerObject_C")
 function M:SetUpLua(TalkTask)
   assert(nil ~= TalkTask, "TalkSequencerProxy: TalkSequencerRuntimeProxy Setup Failed, TalkTask is nil")
   self.TalkTask = TalkTask
-  self:SetQuestChainId(TalkTask.TalkTaskData.QuestChainId)
+  local TalkTaskData = TalkTask.TalkTaskData
+  self:SetQuestChainId(TalkTaskData.BGMQuestChainId or TalkTaskData.QuestChainId or 0)
   self:InitAfterSetupLua()
 end
 

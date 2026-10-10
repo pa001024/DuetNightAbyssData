@@ -47,7 +47,7 @@ return {
       key = "178091594910085",
       type = "StoryNode",
       name = "任务节点",
-      pos = {x = 1348, y = 350},
+      pos = {x = 1348, y = 348.5},
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
@@ -255,6 +255,12 @@ return {
             startQuest = "17884412472392243448",
             startPort = "Out",
             endQuest = "17809262416051032733",
+            endPort = "In"
+          },
+          {
+            startQuest = "17809258060201026790",
+            startPort = "Out",
+            endQuest = "17894621039822875365",
             endPort = "In"
           }
         },
@@ -794,6 +800,17 @@ return {
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
             pos = {x = 2859.725514934856, y = -88.36893315775569},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["17894621039822875365"] = {
+            key = "17894621039822875365",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2546.5, y = 57},
             propsData = {
               SoundStateType = 3,
               SoundPriority = 0,

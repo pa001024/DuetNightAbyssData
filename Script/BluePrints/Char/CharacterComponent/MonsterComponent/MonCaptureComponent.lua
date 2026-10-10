@@ -1,4 +1,5 @@
 local MiscUtils = require("Utils.MiscUtils")
+local MonsterUtils = require("Utils.MonsterUtils")
 local Component = {}
 
 function Component:InitInteractiveComponentImpl()
@@ -6,13 +7,17 @@ function Component:InitInteractiveComponentImpl()
   if self:HasAnyTags_Table(self, {
     "Mon.Capture"
   }, false) then
+    local MonsterData = MonsterUtils.GetMonsterDataByOwner(self)
+    local CaptureParam = MonsterData and MonsterData.CaptureParam
+    if not CaptureParam then
+      return
+    end
     self:AddInteractive()
     EventManager:AddEvent(EventID.OnGameStateTimerAdded, self, self.OnTimerBegin)
     EventManager:AddEvent(EventID.OnGameStateTimerEnded, self, self.OnTimerEnded)
     self.CanOpen = false
     self.OpenState = false
     self.InteractiveType = Const.PressInteractive
-    local CaptureParam = DataMgr.Monster[self.UnitId].CaptureParam
     self.InteractiveComponent:InitInteractiveComponent(CaptureParam.ParamId)
     self.InteractiveComponent.InteractiveTime = CaptureParam.InteractiveTime or 3
     self.InteractiveComponent.InterruptPlayer = not not CaptureParam.Interrupt or true

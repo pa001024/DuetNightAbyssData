@@ -191,12 +191,6 @@ return ReadOnly("BattleWeaponAttr", {
     MeleeWeaponAttrDisplay = "AlwaysFalse",
     RangedWeaponAttrDisplay = "AlwaysFalse"
   },
-  ExtraComboLevel = {
-    AttrName = "ExtraComboLevel",
-    DefaultValue = 0,
-    MeleeWeaponAttrDisplay = "AlwaysFalse",
-    RangedWeaponAttrDisplay = "AlwaysFalse"
-  },
   ExtraComboProb = {
     AttrName = "ExtraComboProb",
     DefaultValue = 0,

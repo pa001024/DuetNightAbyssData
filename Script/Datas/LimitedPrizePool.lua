@@ -9,6 +9,28 @@ return ReadOnly("LimitedPrizePool", {
     BigPrizeBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/LimitedPrizePool/WBP_LimitedPrizePool_SelectPrize_P.WBP_LimitedPrizePool_SelectPrize_P'",
     BigPrizeMobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/LimitedPrizePool/WBP_LimitedPrizePool_SelectPrize_M.WBP_LimitedPrizePool_SelectPrize_M'",
     EventId = 103021,
+    ExtraItem = {
+      [1] = {
+        9,
+        1006,
+        1
+      },
+      [2] = {
+        4,
+        21019,
+        1
+      },
+      [3] = {
+        4,
+        40037,
+        1
+      },
+      [4] = {
+        4,
+        10101,
+        1
+      }
+    },
     HistoryBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/LimitedPrizePool/History/WBP_LimitedPrizePool_DetailHistoryContent.WBP_LimitedPrizePool_DetailHistoryContent'",
     LimitedPrizePoolId = {1001, 1002},
     ProcessBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/LimitedPrizePool/WBP_LimitedPrizePool_Gacha_P.WBP_LimitedPrizePool_Gacha_P'",
@@ -51,9 +73,21 @@ return ReadOnly("LimitedPrizePool", {
     BigPrizeVideoPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/Activity/Activity_LimitedPrizePool_BG02.Activity_LimitedPrizePool_BG02'",
     EventId = 10302103,
     ExtraItem = {
-      [2] = {80059, 1},
-      [3] = {13059, 1},
-      [4] = {10161, 1}
+      [2] = {
+        4,
+        80059,
+        1
+      },
+      [3] = {
+        4,
+        13059,
+        1
+      },
+      [4] = {
+        4,
+        10161,
+        1
+      }
     },
     HistoryBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/LimitedPrizePool/Doll/History/WBP_LimitedPrizePool_DetailHistoryContent_Doll.WBP_LimitedPrizePool_DetailHistoryContent_Doll'",
     LimitedPrizePoolId = {1007, 1008},
@@ -63,5 +97,40 @@ return ReadOnly("LimitedPrizePool", {
     ResultBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/LimitedPrizePool/Doll/WBP_LimitedPrizePool_GetReward_Doll_P.WBP_LimitedPrizePool_GetReward_Doll_P'",
     ResultMobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/LimitedPrizePool/Doll/WBP_LimitedPrizePool_GetReward_Doll_M.WBP_LimitedPrizePool_GetReward_Doll_M'",
     RoundBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/LimitedPrizePool/Doll/WBP_LimitedPrizePool_RewardSwitchTip_Doll.WBP_LimitedPrizePool_RewardSwitchTip_Doll'"
+  },
+  [10302104] = {
+    BigPrizeBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/LimitedPrizePool/Halloween/WBP_LimitedPrizePool_SelectPrize_Halloween_P.WBP_LimitedPrizePool_SelectPrize_Halloween_P'",
+    BigPrizeMobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/LimitedPrizePool/Halloween/WBP_LimitedPrizePool_SelectPrize_Halloween_M.WBP_LimitedPrizePool_SelectPrize_Halloween_M'",
+    BigPrizeVideoPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/Activity/Video_LimitedPrizePool_BG03.Video_LimitedPrizePool_BG03'",
+    EventId = 10302104,
+    ExtraItem = {
+      [1] = {
+        9,
+        1005,
+        1
+      },
+      [2] = {
+        4,
+        21016,
+        1
+      },
+      [3] = {
+        4,
+        40096,
+        1
+      },
+      [4] = {
+        4,
+        20112,
+        1
+      }
+    },
+    HistoryBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/LimitedPrizePool/Halloween/History/WBP_LimitedPrizePool_DetailHistoryContent_Halloween.WBP_LimitedPrizePool_DetailHistoryContent_Halloween'",
+    LimitedPrizePoolId = {1009, 1010},
+    ProcessBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/LimitedPrizePool/Halloween/WBP_LimitedPrizePool_Gacha_Halloween_P.WBP_LimitedPrizePool_Gacha_Halloween_P'",
+    ProcessMobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/LimitedPrizePool/Halloween/WBP_LimitedPrizePool_Gacha_Halloween_M.WBP_LimitedPrizePool_Gacha_Halloween_M'",
+    ResultBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/LimitedPrizePool/Halloween/WBP_LimitedPrizePool_GetReward_Halloween_P.WBP_LimitedPrizePool_GetReward_Halloween_P'",
+    ResultMobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/LimitedPrizePool/Halloween/WBP_LimitedPrizePool_GetReward_Halloween_M.WBP_LimitedPrizePool_GetReward_Halloween_M'",
+    RoundBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/LimitedPrizePool/Halloween/WBP_LimitedPrizePool_RewardSwitchTip_Halloween.WBP_LimitedPrizePool_RewardSwitchTip_Halloween'"
   }
 })

@@ -1323,6 +1323,59 @@ return ReadOnly("CharBreak", {
       ItemNum = T.RT_9
     }
   },
+  [3302] = {
+    [1] = {
+      CharBreakLevel = 20,
+      CharBreakNum = 1,
+      CharId = 3302,
+      CollectRewardExp = 50,
+      ItemId = T.RT_22,
+      ItemNum = T.RT_2
+    },
+    [2] = {
+      CharBreakLevel = 30,
+      CharBreakNum = 2,
+      CharId = 3302,
+      CollectReward = 61001,
+      CollectRewardExp = 100,
+      ItemId = T.RT_23,
+      ItemNum = T.RT_4
+    },
+    [3] = {
+      CharBreakLevel = 40,
+      CharBreakNum = 3,
+      CharId = 3302,
+      CollectRewardExp = 200,
+      ItemId = T.RT_23,
+      ItemNum = T.RT_5
+    },
+    [4] = {
+      CharBreakLevel = 50,
+      CharBreakNum = 4,
+      CharId = 3302,
+      CollectReward = 61002,
+      CollectRewardExp = 400,
+      ItemId = T.RT_24,
+      ItemNum = T.RT_7
+    },
+    [5] = {
+      CharBreakLevel = 60,
+      CharBreakNum = 5,
+      CharId = 3302,
+      CollectRewardExp = 800,
+      ItemId = T.RT_24,
+      ItemNum = T.RT_8
+    },
+    [6] = {
+      CharBreakLevel = 70,
+      CharBreakNum = 6,
+      CharId = 3302,
+      CollectReward = 61003,
+      CollectRewardExp = 1600,
+      ItemId = T.RT_24,
+      ItemNum = T.RT_9
+    }
+  },
   [4101] = {
     [1] = {
       CharBreakLevel = 20,
@@ -1847,6 +1900,59 @@ return ReadOnly("CharBreak", {
       CharBreakLevel = 70,
       CharBreakNum = 6,
       CharId = 5401,
+      CollectReward = 61003,
+      CollectRewardExp = 1600,
+      ItemId = T.RT_30,
+      ItemNum = T.RT_9
+    }
+  },
+  [5402] = {
+    [1] = {
+      CharBreakLevel = 20,
+      CharBreakNum = 1,
+      CharId = 5402,
+      CollectRewardExp = 50,
+      ItemId = T.RT_28,
+      ItemNum = T.RT_2
+    },
+    [2] = {
+      CharBreakLevel = 30,
+      CharBreakNum = 2,
+      CharId = 5402,
+      CollectReward = 61001,
+      CollectRewardExp = 100,
+      ItemId = T.RT_29,
+      ItemNum = T.RT_4
+    },
+    [3] = {
+      CharBreakLevel = 40,
+      CharBreakNum = 3,
+      CharId = 5402,
+      CollectRewardExp = 200,
+      ItemId = T.RT_29,
+      ItemNum = T.RT_5
+    },
+    [4] = {
+      CharBreakLevel = 50,
+      CharBreakNum = 4,
+      CharId = 5402,
+      CollectReward = 61002,
+      CollectRewardExp = 400,
+      ItemId = T.RT_30,
+      ItemNum = T.RT_7
+    },
+    [5] = {
+      CharBreakLevel = 60,
+      CharBreakNum = 5,
+      CharId = 5402,
+      CollectRewardExp = 800,
+      ItemId = T.RT_30,
+      ItemNum = T.RT_8
+    },
+    [6] = {
+      CharBreakLevel = 70,
+      CharBreakNum = 6,
+      CharId = 5402,
       CollectReward = 61003,
       CollectRewardExp = 1600,
       ItemId = T.RT_30,

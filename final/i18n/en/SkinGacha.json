@@ -151,8 +151,8 @@
     "displayType": 1,
     "historyType": 2,
     "hideCountdown": null,
-    "startTime": 1775440800,
-    "endTime": 1780304400,
+    "startTime": 1792375200,
+    "endTime": 1796029200,
     "cost": {
       "res": [
         1004,
@@ -240,6 +240,41 @@
     "star3ItemId": 99923,
     "star4ItemId": 99922,
     "star5ItemId": 99921
+  },
+  {
+    "id": 9009,
+    "name": "Threads Between Reverie",
+    "desc": "You are guaranteed a Purple- or higher-tier item within every <highlight>10</> Weaves, and a Golden-tier item is guaranteed within <highlight>90</> Weaves.",
+    "warning": "<Title>Guaranteed Golden-tier Item</>\nCurrent Weaves: <highlight>%d</>/90\n\n<Title>Event-Exclusive Myriad Drop Rates</>\nThe base drop rate per Weave for a Golden-tier item is <highlight>0.3%%</>. The overall drop rate, including guarantees, is <highlight>1.42%%</>. A Golden-tier item is guaranteed within <highlight>90</> Weaves. Individual drop rates:\nVeil In Shadows: <highlight>0.641%%</>\nIridescent Prism ×25: <highlight>0.641%%</>\nIridescent Prism ×50: <highlight>0.142%%</>\nThe base drop rate per Weave for a Purple-tier item is <highlight>5.1%%</>. The overall drop rate, including guarantees, is <highlight>12.46%%</>. A Purple-tier item is guaranteed within <highlight>10</> Weaves. When the guarantee triggers, the chance of receiving a Purple-tier item is <highlight>99.7%%</>, and of receiving a Golden-tier item is <highlight>0.3%%</>.\nIn cases involving rate-ups or guarantees, please refer to the specific banner rules.\n\n<Title>About Duplicates</>\nEach duplicate Veil In Shadows (Golden-tier skin) converts into Iridescent Prism ×<highlight>25</>.\nOn obtaining a Purple- or Blue-tier skin you already own, it converts into Lucent Prism:\nEach duplicate Purple-tier skin converts into Lucent Prism ×<highlight>4</>.\nEach duplicate Blue-tier skin converts into Lucent Prism ×<highlight>1</>.\n\n<Title>About Weave Progress</>\nWeave counts for the <highlight>Threads Between Reverie</> banner are tallied separately and do not carry over to other Myriad banners.",
+    "coreDes": "Lustrous Skin",
+    "coreDesColor": 5,
+    "type": "Event-Exclusive",
+    "subTabId": 1401,
+    "tabId": 9,
+    "sequence": 9,
+    "gachaTimes": 1,
+    "displayType": 1,
+    "historyType": 2,
+    "hideCountdown": null,
+    "startTime": 1792375200,
+    "endTime": 1796029200,
+    "cost": {
+      "res": [
+        1004,
+        1003
+      ],
+      "num10": 10,
+      "displayRes": [
+        99,
+        1004,
+        1003
+      ]
+    },
+    "probabilityId": 1001,
+    "conditionId": 4041,
+    "star3ItemId": 99913,
+    "star4ItemId": 99912,
+    "star5ItemId": 99911
   },
   {
     "id": 90021,

@@ -50,9 +50,9 @@ end
 function M:ClearBattleProgress()
   DebugPrint("BattleProgressComponent ClearBattleProgress")
   self.IsStarted = false
-  self:RemoveTimer(Const.BattleProgressTimerHandle, self.IsRealTimeCache)
-  self:RemoveClientTimerStruct(Const.BattleProgressTimerHandle)
-  self:RemoveDungeonEvent(Const.BattleProgressTimerHandle)
+  self.GameMode:RemoveTimer(Const.BattleProgressTimerHandle, self.IsRealTimeCache)
+  self.GameMode:RemoveClientTimerStruct(Const.BattleProgressTimerHandle)
+  self.GameMode:RemoveDungeonEvent(Const.BattleProgressTimerHandle)
 end
 
 function M:DeleteTimer()

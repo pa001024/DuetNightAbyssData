@@ -37,5 +37,27 @@ return ReadOnly("Background", {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_HeitaoSaiqi.T_Head_HeitaoSaiqi'",
     Name = "UI_Background_Name_4",
     PersonalInfoWidget = "Texture2D'/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_HeitaoSaiqi.T_Menu_HeitaoSaiqi'"
+  },
+  [1005] = {
+    AccessText = "UI_LimitedPrizePool_Background17_1",
+    BackgroundId = 1005,
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_BaonuSonglu.T_Menu_BaonuSonglu'",
+    Des = "UI_Background_Des_1",
+    EscWidget = "Texture2D'/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_BaonuSonglu.T_Menu_BaonuSonglu'",
+    FriendWidget = "Texture2D'/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_BaonuSonglu.T_Menu_BaonuSonglu'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_BaonuSonglu.T_Head_BaonuSonglu'",
+    Name = "UI_Background_Name_5",
+    PersonalInfoWidget = "Texture2D'/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_BaonuSonglu.T_Menu_BaonuSonglu'"
+  },
+  [1006] = {
+    AccessText = "UI_LimitedPrizePool_Background17_2",
+    BackgroundId = 1006,
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_LiseFeina.T_Menu_LiseFeina'",
+    Des = "UI_Background_Des_1",
+    EscWidget = "Texture2D'/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_LiseFeina.T_Menu_LiseFeina'",
+    FriendWidget = "Texture2D'/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_LiseFeina.T_Menu_LiseFeina'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_LiseFeina.T_Head_LiseFeina'",
+    Name = "UI_Background_Name_6",
+    PersonalInfoWidget = "Texture2D'/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_LiseFeina.T_Menu_LiseFeina'"
   }
 })

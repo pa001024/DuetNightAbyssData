@@ -86,12 +86,6 @@ return {
           {
             startQuest = "17252599337031708",
             startPort = "Out",
-            endQuest = "17252599359261915",
-            endPort = "In"
-          },
-          {
-            startQuest = "17252599359261915",
-            startPort = "Out",
             endQuest = "17224811247736570",
             endPort = "Success"
           }
@@ -122,15 +116,8 @@ return {
             key = "17252599337031708",
             type = "ShowGuideMainNode",
             name = "显示图文引导",
-            pos = {x = 0.4149967679380211, y = 659.6522301228185},
+            pos = {x = 64.5059058588471, y = 558.7431392137277},
             propsData = {GuideId = 45}
-          },
-          ["17252599359261915"] = {
-            key = "17252599359261915",
-            type = "ShowGuideMainNode",
-            name = "显示图文引导",
-            pos = {x = 271.709114414997, y = 552.005171299289},
-            propsData = {GuideId = 46}
           }
         },
         commentData = {}

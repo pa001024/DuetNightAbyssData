@@ -8,8 +8,10 @@ function M:BuildChoosePageViewData()
   return {
     ChooseMode = self.ActiveChooseMode,
     SelectedCharacterSlotIndex = self:GetSelectedCharacterSlotIndex(),
+    SelectedItemSlotIndex = self:GetSelectedItemSlotIndex(),
     ActiveTabName = self.ActiveTabName,
-    SelectedCharacterSlot = self:GetSelectedCharacterSlot()
+    SelectedCharacterSlot = self:GetSelectedCharacterSlot(),
+    SelectedItemSlot = self:GetSelectedItemSlot()
   }
 end
 
@@ -49,12 +51,188 @@ function M:BuildSceneSlotViewList()
   return SceneViewList
 end
 
+function M:BuildFilterViewList()
+  local FilterViewList = {}
+  local FilterConfigTable = DataMgr and DataMgr.CustomFilter or nil
+  if not FilterConfigTable then
+    return FilterViewList
+  end
+  local SelectedFilterId
+  if self.GetWorkingFilterData then
+    local FilterData = self:GetWorkingFilterData()
+    if type(FilterData) == "table" then
+      SelectedFilterId = FilterData.FilterId or FilterData.Id
+    elseif nil ~= FilterData then
+      SelectedFilterId = FilterData
+    end
+  else
+    SelectedFilterId = self:_GetSelectedFilterId()
+  end
+  local Avatar = GWorld and GWorld:GetAvatar() or nil
+  local Sex = Avatar and Avatar.Sex or 1
+  local IconPathSuffix = 1 == Sex and "_F" or "_M"
+  for FilterId, FilterConfig in pairs(FilterConfigTable) do
+    if type(FilterConfig) == "table" then
+      local ResolvedId = FilterConfig.FilterId or FilterId
+      local PhotoRow = DisplayConfig:GetPhotoFilterRow(FilterConfig.PPEnumID)
+      local NameKey = FilterConfig.Name
+      if (not NameKey or "" == NameKey) and PhotoRow then
+        NameKey = PhotoRow.TextmapID
+      end
+      local IconPath = PhotoRow and PhotoRow.IconPath or nil
+      if IconPath and "" ~= IconPath then
+        IconPath = IconPath .. IconPathSuffix
+      else
+        IconPath = nil
+      end
+      FilterViewList[#FilterViewList + 1] = {
+        FilterId = ResolvedId,
+        Name = NameKey and GText(tostring(NameKey)) or tostring(ResolvedId),
+        Icon = IconPath,
+        FilterPath = FilterConfig.FilterPath,
+        IsSelected = ResolvedId == SelectedFilterId,
+        ForbidIntensityAdjust = FilterConfig.ForbidIntensityAdjust == true
+      }
+    end
+  end
+  table.sort(FilterViewList, function(A, B)
+    return (A.FilterId or 0) < (B.FilterId or 0)
+  end)
+  return FilterViewList
+end
+
+function M:BuildStickerViewList()
+  local StickerViewList = {}
+  local StickerConfigTable = DataMgr and DataMgr.CustomStick or nil
+  if not StickerConfigTable then
+    return StickerViewList
+  end
+  local SelectedStickerId = self:_GetSelectedStickerId()
+  local IsOverseaEnv = UE.AHotUpdateGameMode.IsGlobalPak()
+  for StickerId, StickerConfig in pairs(StickerConfigTable) do
+    if type(StickerConfig) == "table" then
+      local ResolvedId = tonumber(StickerConfig.StickerId or StickerId)
+      local StickerIsOversea = StickerConfig.IsOversea == true
+      if ResolvedId and StickerIsOversea == IsOverseaEnv and PersonInfoModel:IsValidOwnedCustomDisplaySticker(ResolvedId) then
+        local NameKey = StickerConfig.Name
+        StickerViewList[#StickerViewList + 1] = {
+          StickerId = ResolvedId,
+          Name = NameKey and GText(NameKey) or tostring(ResolvedId),
+          Icon = StickerConfig.Icon,
+          StickerPath = StickerConfig.StickerPath,
+          IsSelected = ResolvedId == SelectedStickerId
+        }
+      end
+    end
+  end
+  table.sort(StickerViewList, function(A, B)
+    return (A.StickerId or 0) < (B.StickerId or 0)
+  end)
+  return StickerViewList
+end
+
+function M:_GetSelectedFilterId()
+  local Draft = self.DisplayEditor and self.DisplayEditor:GetDraft() or nil
+  local Other = Draft and Draft.Other or nil
+  local Filter = Other and Other.Filter or nil
+  if type(Filter) == "table" then
+    return Filter.FilterId or Filter.Id
+  end
+  return Filter
+end
+
+function M:_GetSelectedStickerId()
+  local Draft = self.DisplayEditor and self.DisplayEditor:GetDraft() or nil
+  local Other = Draft and Draft.Other or nil
+  local Sticker = Other and Other.Sticker or nil
+  if type(Sticker) == "table" then
+    return tonumber(Sticker.StickerId or Sticker.Id)
+  end
+  return tonumber(Sticker)
+end
+
 function M:GetSelectedCharacterSlot()
   return self:_GetCharacterSlot(self:GetSelectedCharacterSlotIndex(), self:IsCharacterChoosePageActive())
 end
 
+function M:_GetItemSlot(SlotIndex)
+  if type(SlotIndex) ~= "number" or SlotIndex <= 0 or not self.DisplayEditor then
+    return nil
+  end
+  local Draft = self.DisplayEditor:GetDraft()
+  return Draft and DisplayDraft:GetItemSlot(Draft, SlotIndex) or nil
+end
+
+function M:GetSelectedItemSlot()
+  return self:_GetItemSlot(self:GetSelectedItemSlotIndex())
+end
+
+function M:HasSelectedItem()
+  return DisplayDraft:IsItemSlotOccupied(self:GetSelectedItemSlot())
+end
+
+function M:BuildSelectedItemViewData()
+  local SlotIndex = self:GetSelectedItemSlotIndex()
+  local Slot = self:_GetItemSlot(SlotIndex)
+  local ItemData = Slot and Slot.ItemData or nil
+  local Transform = Slot and Slot.Transform or DisplayConfig:GetDefaultItemTransform(SlotIndex, ItemData)
+  local Rotation = Slot and Slot.TransformRotation or self:_GetTransformRotation(Transform)
+  local Translation = self:_GetTransformTranslation(Transform)
+  return {
+    SlotIndex = SlotIndex,
+    ItemData = ItemData,
+    Name = ItemData and ItemData.Name and GText(ItemData.Name) or "",
+    Icon = ItemData and (ItemData.Icon or ItemData.IconPath) or nil,
+    Rarity = ItemData and tonumber(ItemData.Rarity) or 0,
+    Translation = {
+      X = Translation.X or 0,
+      Y = Translation.Y or 0,
+      Z = Translation.Z or 0
+    },
+    Rotation = Rotation or {},
+    TransformRange = DisplayConfig:GetItemTransformEditRange(SlotIndex, self:_GetCurrentSceneId(), Translation)
+  }
+end
+
+function M:BuildItemSlotViewList()
+  local bIsItemChoosePage = self:IsChoosePageActive() and self.ActiveChooseMode == "Item"
+  local SelectedSlotIndex = self:GetSelectedItemSlotIndex()
+  local SlotViewList = {}
+  local Draft = self.DisplayEditor and self.DisplayEditor:GetDraft() or nil
+  for SlotIndex = 1, DisplayConfig:GetItemSlotCount() do
+    local Slot = Draft and DisplayDraft:GetItemSlot(Draft, SlotIndex) or nil
+    local ItemData = Slot and Slot.ItemData or nil
+    local bHasItem = DisplayDraft:IsItemSlotOccupied(Slot)
+    SlotViewList[SlotIndex] = {
+      SlotIndex = SlotIndex,
+      SlotKind = "Item",
+      IsSelected = SlotIndex == SelectedSlotIndex,
+      HasCharacter = false,
+      HasItem = bHasItem,
+      ItemData = ItemData,
+      Name = ItemData and ItemData.Name and GText(ItemData.Name) or "",
+      LevelText = "",
+      Icon = ItemData and (ItemData.Icon or ItemData.IconPath) or nil,
+      Rarity = ItemData and tonumber(ItemData.Rarity) or 0,
+      CanInteract = bHasItem or bIsItemChoosePage,
+      ShowAddIcon = not bHasItem and bIsItemChoosePage,
+      ShowLockIcon = false,
+      UseChoosePageStyle = bIsItemChoosePage
+    }
+  end
+  return SlotViewList
+end
+
+function M:BuildItemSlotViewData(SlotIndex)
+  return self:BuildItemSlotViewList()[SlotIndex]
+end
+
 function M:BuildSelectedCharacterViewData()
   return self:_BuildSelectedCharacterViewData(self:GetSelectedCharacterSlotIndex())
+end
+
+function M:BuildSelectedPetViewData()
+  return self:_BuildSelectedPetViewData(self:GetSelectedPetSlotIndex())
 end
 
 function M:BuildCharacterSlotViewList()
@@ -69,6 +247,75 @@ end
 function M:HasSelectedCharacter()
   local Slot = self:GetSelectedCharacterSlot()
   return DisplayDraft:IsCharacterSlotOccupied(Slot)
+end
+
+function M:BuildPetSlotViewList()
+  return self:_BuildPetSlotViewList(self:GetSelectedPetSlotIndex())
+end
+
+function M:BuildPetSlotViewData(SlotIndex)
+  local SlotViewList = self:_BuildPetSlotViewList(self:GetSelectedPetSlotIndex())
+  return SlotViewList and SlotViewList[SlotIndex] or nil
+end
+
+function M:GetSelectedPetSlot()
+  return self:_GetPetSlot(self:GetSelectedPetSlotIndex())
+end
+
+function M:HasSelectedPet()
+  local Slot = self:GetSelectedPetSlot()
+  return DisplayDraft:IsPetSlotOccupied(Slot)
+end
+
+function M:_BuildPetSlotViewList(SelectedSlotIndex)
+  local Draft = self.DisplayEditor and self.DisplayEditor.GetDraft and self.DisplayEditor:GetDraft() or nil
+  local SlotCount = DisplayConfig:GetPetSlotCount()
+  local SlotViewList = {}
+  local bIsPetChoosePage = self.IsPetChoosePageActive and self:IsPetChoosePageActive() == true
+  for SlotIndex = 1, SlotCount do
+    local Slot = Draft and Draft.PetSlots and Draft.PetSlots[SlotIndex] or nil
+    local PetData = Slot and Slot.PetData or nil
+    local bOccupied = DisplayDraft:IsPetSlotOccupied(Slot)
+    local Name = ""
+    local LevelText = ""
+    local Icon, Rarity
+    if bOccupied and PetData then
+      local PetId = PetData.PetId
+      local PetCfg = PetId and DataMgr.Pet and DataMgr.Pet[PetId] or nil
+      Name = PetCfg and PetCfg.Name and GText(PetCfg.Name) or ""
+      local Level = PetData.Level or PetData.BattlePetLevel
+      LevelText = Level and "Lv." .. tostring(Level) or ""
+      Icon = PetCfg and PetCfg.Icon or nil
+      Rarity = PetCfg and PetCfg.Rarity or nil
+    end
+    SlotViewList[SlotIndex] = {
+      SlotIndex = SlotIndex,
+      SlotKind = "Pet",
+      IsSelected = SlotIndex == SelectedSlotIndex,
+      HasCharacter = bOccupied,
+      PetData = PetData,
+      Name = Name,
+      LevelText = LevelText,
+      Icon = Icon,
+      Rarity = Rarity,
+      CanInteract = bOccupied or bIsPetChoosePage,
+      ShowAddIcon = not bOccupied and bIsPetChoosePage,
+      ShowLockIcon = false,
+      UseChoosePageStyle = bIsPetChoosePage
+    }
+  end
+  return SlotViewList
+end
+
+function M:_GetPetSlot(SlotIndex)
+  if type(SlotIndex) ~= "number" or SlotIndex <= 0 then
+    return nil
+  end
+  local Draft = self.DisplayEditor and self.DisplayEditor.GetDraft and self.DisplayEditor:GetDraft() or nil
+  if not Draft then
+    return nil
+  end
+  return DisplayDraft:GetPetSlot(Draft, SlotIndex)
 end
 
 function M:GetSelectedCharacterWeaponData()
@@ -105,6 +352,48 @@ function M:_BuildSelectedCharacterViewData(SlotIndex)
   }
 end
 
+function M:_BuildSelectedPetViewData(SlotIndex)
+  local Slot = self:_GetPetSlot(SlotIndex)
+  local SceneId = self:_GetCurrentSceneId()
+  local Transform = self:_GetEffectivePetTransform(SlotIndex, Slot)
+  local Rotation = Slot and Slot.TransformRotation or self:_GetTransformRotation(Transform)
+  local Translation = self:_GetTransformTranslation(Transform)
+  local TranslationData = {
+    X = Translation.X or 0,
+    Y = Translation.Y or 0,
+    Z = Translation.Z or 0
+  }
+  local DefaultTranslation = DisplayConfig:GetPetDefaultTranslation(SlotIndex)
+  local TransformRange = DisplayConfig:GetPetTransformEditRange(SlotIndex, SceneId, TranslationData)
+  local PetData = Slot and Slot.PetData or nil
+  local PetId = PetData and PetData.PetId or nil
+  local PetCfg = PetId and DataMgr.Pet and DataMgr.Pet[PetId] or nil
+  local Name = ""
+  if PetData and PetData.Name and "" ~= PetData.Name then
+    Name = PetData.Name
+  elseif PetCfg and PetCfg.Name then
+    Name = GText(PetCfg.Name)
+  end
+  return {
+    SlotIndex = SlotIndex,
+    PetData = PetData,
+    PetCfg = PetCfg,
+    Name = Name,
+    Translation = TranslationData,
+    DefaultTranslation = DefaultTranslation,
+    TransformRange = TransformRange,
+    Rotation = Rotation,
+    SceneId = SceneId
+  }
+end
+
+function M:_GetEffectivePetTransform(SlotIndex, Slot)
+  if Slot and Slot.Transform then
+    return Slot.Transform
+  end
+  return DisplayConfig:GetDefaultPetTransform(SlotIndex)
+end
+
 function M:_BuildCharacterSlotViewList(SelectedSlotIndex, bIsCharacterChoosePage)
   local Draft = self.DisplayEditor:GetDraft()
   if bIsCharacterChoosePage and self.CharacterChooseBaseDraft ~= nil then
@@ -123,6 +412,7 @@ function M:_BuildCharacterSlotViewList(SelectedSlotIndex, bIsCharacterChoosePage
     end
     SlotViewList[SlotIndex] = {
       SlotIndex = SlotIndex,
+      SlotKind = "Char",
       IsSelected = SlotIndex == SelectedSlotIndex,
       HasCharacter = DisplayDraft:IsValidCharacterData(CharData),
       CharData = CharData,
@@ -153,6 +443,10 @@ function M:_HasAnyOccupiedCharacterSlot()
 end
 
 function M:_BuildEditTitleViewData(ViewState)
+  if ViewState and ViewState.ActiveTabName == "Item" then
+    local ItemViewData = self:BuildSelectedItemViewData()
+    return self:_BuildItemTitleViewData(ItemViewData.ItemData, ItemViewData.Name, ItemViewData.Rarity)
+  end
   local SlotIndex = ViewState and ViewState.SelectedCharacterSlotIndex or nil
   local ActiveChooseMode = ViewState and ViewState.ActiveChooseMode or nil
   local Slot = self:_GetCharacterSlot(SlotIndex)
@@ -196,6 +490,14 @@ function M:_BuildChoosePreviewTitleViewData(ViewState, Content)
   local ActiveChooseMode = ViewState and ViewState.ActiveChooseMode or nil
   local SlotIndex = ViewState and ViewState.SelectedCharacterSlotIndex or nil
   local TitleViewData = self:_BuildEditTitleViewData(ViewState)
+  if "Item" == ActiveChooseMode then
+    if not Content then
+      return TitleViewData
+    end
+    local ItemData = Content.ItemData
+    local ItemName = Content.UnitName or ItemData and ItemData.Name and GText(ItemData.Name) or tostring(Content.ItemId or "")
+    return self:_BuildItemTitleViewData(ItemData, ItemName, Content.Rarity)
+  end
   if "Weapon" == ActiveChooseMode then
     local CurrentSlot = self:_GetCharacterSlot(SlotIndex)
     local CurrentActionData = CurrentSlot and CurrentSlot.Action or nil
@@ -257,6 +559,20 @@ function M:_BuildChoosePreviewTitleViewData(ViewState, Content)
     TitleViewData.InfoDescText = bShowWarning and WarningText or ActionTypeText
     TitleViewData.ShowActionPanel = "" ~= ActionTypeText
     TitleViewData.ActionSwitcherIndex = ActionTypeText == GText("UI_PersonalPage_DynamicAction") and 1 or 0
+  elseif "Pet" == ActiveChooseMode then
+    local PetName = Content.UnitName or self:_GetChooseContentDisplayName(Content, "")
+    TitleViewData.MainTitle = PetName
+    TitleViewData.CharName = PetName
+    TitleViewData.InfoNameText = PetName
+    TitleViewData.InfoTypeText = ""
+    TitleViewData.InfoDescText = ""
+    TitleViewData.DescText = ""
+    TitleViewData.ShowCharPanel = "" ~= PetName
+    TitleViewData.ShowActionPanel = false
+    TitleViewData.ShowWarning = false
+    TitleViewData.ShowQuality = false
+    TitleViewData.ActionSwitcherIndex = 0
+    TitleViewData.Rarity = Content.Rarity
   end
   return TitleViewData
 end
@@ -265,6 +581,9 @@ function M:_BuildMainTitleText(ViewState)
   local ActiveChooseMode = ViewState and ViewState.ActiveChooseMode or nil
   local ActiveSubPageName = ViewState and ViewState.ActiveSubPageName or "CharacterMain"
   local ActiveTabName = ViewState and ViewState.ActiveTabName or "Char"
+  if "StickerEdit" == ActiveSubPageName then
+    return GText("UI_PersonalPage_AdjustSticker")
+  end
   if "Choose" == ActiveSubPageName then
     if "Character" == ActiveChooseMode then
       return GText("UI_PersonalPage_SelectChar")
@@ -275,11 +594,41 @@ function M:_BuildMainTitleText(ViewState)
     if "Action" == ActiveChooseMode then
       return GText("UI_PersonalPage_SetAction")
     end
+    if "Pet" == ActiveChooseMode then
+      return GText("UI_PersonalPage_AddGeniemon")
+    end
+    if "Item" == ActiveChooseMode then
+      return GText("UI_PersonInfo_CustomItem")
+    end
   end
   if "Scene" == ActiveTabName then
     return GText("UI_PersonalPage_Scene")
   end
+  if "Other" == ActiveTabName then
+    return GText("UI_PersonalPage_Others")
+  end
+  if "Item" == ActiveTabName then
+    return GText("UI_PersonInfo_CustomItem")
+  end
   return GText("UI_PersonalPage_Customize")
+end
+
+function M:_BuildItemTitleViewData(ItemData, ItemName, Rarity)
+  local ResolvedName = ItemName or ""
+  local ResolvedRarity = tonumber(Rarity or ItemData and ItemData.Rarity) or 0
+  return {
+    MainTitle = "" ~= ResolvedName and ResolvedName or GText("UI_PersonInfo_CustomItem"),
+    CharName = ResolvedName,
+    DescText = "",
+    WarningText = "",
+    ShowCharPanel = "" ~= ResolvedName,
+    ShowActionPanel = false,
+    ShowWarning = false,
+    ShowElement = false,
+    ShowQuality = ResolvedRarity > 0,
+    Rarity = ResolvedRarity,
+    ActionSwitcherIndex = 0
+  }
 end
 
 function M:_BuildTitleDescText(ViewState)
@@ -355,6 +704,13 @@ function M:_BuildActionWarningText(ActionData, WeaponData)
     return ""
   end
   return GText("UI_PersonalPage_ActionNoWeapon")
+end
+
+function M:_IsCurrentActionUnableToShowWeapon()
+  local SlotIndex = self.GetSelectedCharacterSlotIndex and self:GetSelectedCharacterSlotIndex() or nil
+  local Slot = self._GetCharacterSlot and self:_GetCharacterSlot(SlotIndex) or nil
+  local WarningText = self:_BuildActionWarningText(Slot and Slot.Action, Slot and Slot.WeaponData)
+  return nil ~= WarningText and "" ~= WarningText
 end
 
 function M:_GetChooseContentDisplayName(Content, EmptyFallback)
@@ -464,7 +820,8 @@ function M:_BuildPageViewState()
     ActiveSubPageName = self.ActiveSubPageName,
     ActiveChooseMode = self.ActiveChooseMode,
     ActiveCharacterPanelState = self.ActiveCharacterPanelState,
-    SelectedCharacterSlotIndex = self:GetSelectedCharacterSlotIndex()
+    SelectedCharacterSlotIndex = self:GetSelectedCharacterSlotIndex(),
+    SelectedItemSlotIndex = self:GetSelectedItemSlotIndex()
   }
 end
 
@@ -472,15 +829,27 @@ function M:ShouldShowCharacterDetailPanel()
   return self:IsCharacterMainPageActive() and self.ActiveCharacterPanelState == "Detail" and self:HasSelectedCharacter()
 end
 
+function M:ShouldShowPetDetailPanel()
+  return self:IsPetMainPageActive() and self.ActivePetPanelState == "Detail" and self:HasSelectedPet()
+end
+
+function M:ShouldShowItemDetailPanel()
+  return self:IsItemMainPageActive() and self:HasSelectedItem()
+end
+
+function M:ShouldShowEditDetailPanel()
+  return self:ShouldShowCharacterDetailPanel() or self:ShouldShowPetDetailPanel() or self:ShouldShowItemDetailPanel()
+end
+
 function M:IsMobileCharacterEditToggleAvailable()
   if self:IsChoosePageActive() then
     return false
   end
-  return self:ShouldShowCharacterDetailPanel()
+  return self:ShouldShowCharacterDetailPanel() or self:ShouldShowPetDetailPanel() or self:ShouldShowItemDetailPanel()
 end
 
 function M:ShouldShowMobileCharacterEditPanel()
-  return self:ShouldShowCharacterDetailPanel() and self:ShouldShowMobileLeftPanel()
+  return (self:ShouldShowCharacterDetailPanel() or self:ShouldShowPetDetailPanel() or self:ShouldShowItemDetailPanel()) and self:ShouldShowMobileLeftPanel()
 end
 
 function M:ShouldUseCharacterInfoSwitcher()
@@ -488,11 +857,34 @@ function M:ShouldUseCharacterInfoSwitcher()
 end
 
 function M:IsChooseConfirmMode()
-  return self.ActiveSubPageName == "Choose" and self.ActiveChooseMode == "Character"
+  return self.ActiveSubPageName == "Choose" and (self.ActiveChooseMode == "Character" or self.ActiveChooseMode == "Pet" or self.ActiveChooseMode == "Item" or self.ActiveChooseMode == "Weapon" or self.ActiveChooseMode == "Action")
+end
+
+function M:CanConfirmChoosePage()
+  if self.ActiveChooseMode == "Character" then
+    return self:CanConfirmCharacterChoosePage()
+  end
+  if self.ActiveChooseMode == "Pet" then
+    return self:CanConfirmPetChoosePage()
+  end
+  if self.ActiveChooseMode == "Item" then
+    return self:CanConfirmItemChoosePage()
+  end
+  if self.ActiveChooseMode == "Weapon" then
+    return self:CanConfirmWeaponChoosePage()
+  end
+  if self.ActiveChooseMode == "Action" then
+    return self:CanConfirmActionChoosePage()
+  end
+  return false
+end
+
+function M:CanConfirmItemChoosePage()
+  return self:_CanConfirmUniqueSlotChoosePage("Item", self.ItemChooseBaseDraft, "ItemSlots")
 end
 
 function M:CanConfirmCharacterChoosePage()
-  if not self:IsChooseConfirmMode() then
+  if self.ActiveSubPageName ~= "Choose" or self.ActiveChooseMode ~= "Character" then
     return false
   end
   for _, _ in pairs(self.StagedCharacterChooseSelections or {}) do
@@ -501,8 +893,56 @@ function M:CanConfirmCharacterChoosePage()
   return false
 end
 
+function M:CanConfirmPetChoosePage()
+  return self:_CanConfirmUniqueSlotChoosePage("Pet", self.PetChooseBaseDraft, "PetSlots")
+end
+
+function M:CanConfirmWeaponChoosePage()
+  if self:_IsCurrentActionUnableToShowWeapon() then
+    return false
+  end
+  return self:_CanConfirmCharacterEquipChoosePage("Weapon", self.WeaponChooseBaseDraft)
+end
+
+function M:CanConfirmActionChoosePage()
+  return self:_CanConfirmCharacterEquipChoosePage("Action", self.ActionChooseBaseDraft)
+end
+
+function M:_CanConfirmCharacterEquipChoosePage(Mode, BaseDraft)
+  if self.ActiveSubPageName ~= "Choose" or self.ActiveChooseMode ~= Mode then
+    return false
+  end
+  if not BaseDraft or not self.DisplayEditor then
+    return false
+  end
+  local CurrentDraft = self.DisplayEditor:GetDraft()
+  return not DisplayDraft:IsEquivalent(BaseDraft.CharacterSlots, CurrentDraft and CurrentDraft.CharacterSlots or nil)
+end
+
+function M:_CanConfirmUniqueSlotChoosePage(Mode, BaseDraft, SlotsField)
+  if self.ActiveSubPageName ~= "Choose" or self.ActiveChooseMode ~= Mode then
+    return false
+  end
+  if not BaseDraft or not self.DisplayEditor then
+    return false
+  end
+  local CurrentDraft = self.DisplayEditor:GetDraft()
+  return not DisplayDraft:IsEquivalent(BaseDraft[SlotsField], CurrentDraft and CurrentDraft[SlotsField] or nil)
+end
+
 function M:ShouldShowCharacterSlotArea()
-  return self.ActiveTabName == "Char" and self.ActiveSubPageName ~= "Scene"
+  if self.ActiveSubPageName == "Scene" or self.ActiveSubPageName == "Other" or self.ActiveSubPageName == "StickerEdit" then
+    return false
+  end
+  return self.ActiveTabName == "Char" or self.ActiveTabName == "Pet"
+end
+
+function M:ShouldShowItemSlotArea()
+  return self:IsItemMainPageActive() or self:IsChoosePageActive() and self.ActiveChooseMode == "Item"
+end
+
+function M:ShouldShowSlotArea()
+  return self:ShouldShowCharacterSlotArea() or self:ShouldShowItemSlotArea()
 end
 
 function M:_ShouldDefaultShowMobileLeftPanel()

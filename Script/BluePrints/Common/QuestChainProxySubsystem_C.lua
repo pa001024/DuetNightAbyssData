@@ -3,22 +3,34 @@ local FQuestChainProxy = require("BluePrints.Client.Quest.QuestChainProxy")
 local QuestChainProxySubsystem = Class()
 
 function QuestChainProxySubsystem:Initialize_Lua()
+  self.bIsInitialized = true
   self.QuestChainProxys = {}
 end
 
 function QuestChainProxySubsystem:Deinitialize_Lua()
   DebugPrint("gyy@QuestChainProxySubsystem:Deinitialize_Lua")
   self:StopAllQuestChainProxyStoryline()
+  self.bIsInitialized = false
+  self.QuestChainProxys = {}
+end
+
+function QuestChainProxySubsystem:TryReinitialize()
+  if self.bIsInitialized then
+    return
+  end
+  self.bIsInitialized = true
   self.QuestChainProxys = {}
 end
 
 function QuestChainProxySubsystem:CreateQuestChainProxys(QuestChains)
+  self:TryReinitialize()
   for QuestChainId, QuestChain in pairs(QuestChains) do
     self.QuestChainProxys[QuestChainId] = FQuestChainProxy(QuestChainId)
   end
 end
 
 function QuestChainProxySubsystem:GetOrCreateQuestChainProxy(QuestChainId, QuestChains)
+  self:TryReinitialize()
   if not QuestChainId then
     return
   end
@@ -33,6 +45,7 @@ function QuestChainProxySubsystem:GetOrCreateQuestChainProxy(QuestChainId, Quest
 end
 
 function QuestChainProxySubsystem:GetQuestChainProxy(QuestChainId)
+  self:TryReinitialize()
   if not QuestChainId then
     return
   end
@@ -40,6 +53,7 @@ function QuestChainProxySubsystem:GetQuestChainProxy(QuestChainId)
 end
 
 function QuestChainProxySubsystem:RemoveQuestChainProxy(QuestChainId)
+  self:TryReinitialize()
   local QuestChainProxy = self.QuestChainProxys[QuestChainId]
   if QuestChainProxy then
     QuestChainProxy:StopStoryline()
@@ -78,6 +92,7 @@ function QuestChainProxySubsystem:StopQuestChainProxyStoryline(QuestChainId)
 end
 
 function QuestChainProxySubsystem:StopAllQuestChainProxyStoryline()
+  self:TryReinitialize()
   for _, QuestChainProxy in pairs(self.QuestChainProxys) do
     QuestChainProxy:StopStoryline()
   end
@@ -115,6 +130,7 @@ function QuestChainProxySubsystem:GetQuestChainProxyStoryline(QuestChainId)
 end
 
 function QuestChainProxySubsystem:IsGuideNodeRunning()
+  self:TryReinitialize()
   for _, QuestChainProxy in pairs(self.QuestChainProxys) do
     if QuestChainProxy:IsGuideNodeRunning() then
       return true
@@ -124,6 +140,7 @@ function QuestChainProxySubsystem:IsGuideNodeRunning()
 end
 
 function QuestChainProxySubsystem:PrintQuestChainProxyStorylineInfo()
+  self:TryReinitialize()
   for _, QuestChainProxy in pairs(self.QuestChainProxys) do
     QuestChainProxy:PrintStorylineInfo()
   end
@@ -189,6 +206,7 @@ function QuestChainProxySubsystem:QuestChainProxysHandleInLoading()
 end
 
 function QuestChainProxySubsystem:RemoveAllCallback(Obj)
+  self:TryReinitialize()
   for _, QuestChainProxy in pairs(self.QuestChainProxys) do
     QuestChainProxy:RemoveStartQuestCallback(Obj)
     QuestChainProxy:RemoveFinishQuestCallback(Obj)

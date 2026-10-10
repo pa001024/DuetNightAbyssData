@@ -1,4 +1,7 @@
 local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
+local ActivityReddotHelper = require("BluePrints.UI.WBP.Activity.ActivityReddotHelper")
+local TimeUtils = require("Utils.TimeUtils")
+local pairs = _ENV.pairs
 local Component = {}
 local DrawType = {Single = 0, Round = 1}
 
@@ -15,6 +18,9 @@ function Component:DrawLimitPrizeByType(Callback, EventId, Type)
   assert(Type)
   
   local function cb(Ret, ...)
+    if Ret == ErrorCode.RET_SUCCESS then
+      self:RefreshLimitedPrizeRewardSelectReddot(EventId)
+    end
     if Callback then
       Callback(Ret, ...)
     end
@@ -29,6 +35,9 @@ function Component:SetLimitPrizeSelfSelect(Callback, EventId, PrizeIdx, SelectId
   assert(SelectId)
   
   local function cb(Ret)
+    if Ret == ErrorCode.RET_SUCCESS then
+      self:RefreshLimitedPrizeRewardSelectReddot(EventId)
+    end
     if Callback then
       Callback(Ret)
     end
@@ -39,60 +48,81 @@ end
 
 function Component:EnterWorld()
   EventManager:AddEvent(EventID.OnLoginSuccess, self, self.OnLoginSuccess)
+  EventManager:AddEvent(EventID.OnActivityTimeOpen, self, self.OnLimitedPrizeActivityTimeOpen)
 end
 
 function Component:LeaveWorld()
   EventManager:RemoveEvent(EventID.OnLoginSuccess, self)
+  EventManager:RemoveEvent(EventID.OnActivityTimeOpen, self)
 end
 
 function Component:OnLoginSuccess()
   self:RefreshLimitedPrizeRewardSelectReddot()
 end
 
-function Component:RefreshLimitedPrizeRewardSelectReddot()
-  local NodeName = "LimitedPrizeRewardSelect"
-  if not ReddotManager.GetTreeNode(NodeName) then
-    ReddotManager.AddNode(NodeName)
+function Component:OnLimitedPrizeActivityTimeOpen(EventId)
+  if DataMgr.LimitedPrizePool[EventId] then
+    self:RefreshLimitedPrizeRewardSelectReddot(EventId)
   end
-  ReddotManager.ClearLeafNodeCount(NodeName, true)
-  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
-  local AllPoolData = DataMgr.LimitedPrizePool or {}
-  local EventId
-  for _, PoolData in pairs(AllPoolData) do
-    if ActivityUtils.CheckEventIsInActiveTime(PoolData.EventId) then
-      EventId = PoolData.EventId
-      break
+end
+
+function Component:HasLimitedPrizeUnselectedReward(EventId)
+  if TimeUtils.ServerTimeZone == nil or not self:CheckUIUnlocked("GameEvent") then
+    return false
+  end
+  local EventData = DataMgr.EventMain[EventId]
+  local PoolData = DataMgr.LimitedPrizePool[EventId]
+  if not (EventData and PoolData) or not PoolData.LimitedPrizePoolId then
+    return false
+  end
+  if not ActivityUtils.CheckEventIsOpenNoCache(EventId, EventData, true, "GameEvent", TimeUtils.NowTime()) then
+    return false
+  end
+  local LimitPrizeData = self.LimitPrize and self.LimitPrize[EventId] or {}
+  if (LimitPrizeData.DrawCounts or 0) > 0 then
+    return false
+  end
+  local Round = LimitPrizeData.Round or 1
+  if Round <= 0 or Round > #PoolData.LimitedPrizePoolId then
+    return false
+  end
+  local RoundData = DataMgr.LimitedPrizeItem[PoolData.LimitedPrizePoolId[Round]]
+  if not RoundData or not RoundData.Id then
+    return false
+  end
+  local SelfSelectData = LimitPrizeData.SelfSelect or {}
+  for Index, Rewards in pairs(RoundData.Id) do
+    if #Rewards > 1 and not SelfSelectData[Index] then
+      return true
     end
+  end
+  return false
+end
+
+function Component:RefreshLimitedPrizeRewardSelectReddot(EventId)
+  if TimeUtils.ServerTimeZone == nil then
+    return
   end
   if not EventId then
+    for PoolEventId, _ in pairs(DataMgr.LimitedPrizePool) do
+      self:RefreshLimitedPrizeRewardSelectReddot(PoolEventId)
+    end
     return
   end
-  local PoolData = DataMgr.LimitedPrizePool[EventId]
-  if not PoolData then
+  if not DataMgr.LimitedPrizePool[EventId] then
     return
   end
-  local IncreaseNum = 0
-  local LimitPrizeData = self.LimitPrize[EventId] or {}
-  if LimitPrizeData then
-    local Round = LimitPrizeData.Round or 1
-    if Round <= 0 or Round > #PoolData.LimitedPrizePoolId then
-      return
-    end
-    local RoundId = PoolData.LimitedPrizePoolId[Round]
-    local RoundData = DataMgr.LimitedPrizeItem[RoundId]
-    if not RoundData then
-      return
-    end
-    local SelfSelectData = LimitPrizeData.SelfSelect or {}
-    for Index, Rewards in pairs(RoundData.Id) do
-      if #Rewards > 1 and not SelfSelectData[Index] then
-        IncreaseNum = IncreaseNum + 1
-        CacheDetail[Index] = 1
-      end
-    end
+  local NodeName = ActivityReddotHelper.GetEventMainNodeName(EventId)
+  local NodeData = NodeName and DataMgr.ReddotNode[NodeName]
+  if not (NodeName == "Acti_LimitedPrize_" .. EventId and NodeData and NodeData.IsLeaf) or NodeData.CacheType ~= Const.ReddotCacheType.UserCache or NodeData.NodeModuleName ~= "Activity.LimitedPrize" then
+    DebugPrint(ErrorTag, "LimitedPrize: invalid activity reddot config", EventId, NodeName)
+    return
   end
-  if IncreaseNum > 0 then
-    ReddotManager.IncreaseLeafNodeCount(NodeName, IncreaseNum)
+  local Node = ReddotManager.GetTreeNode(NodeName) or ReddotManager.AddNodeEx(NodeName)
+  if Node and Node.OnRefreshNodeData then
+    Node:OnRefreshNodeData(EventId)
+  else
+    DebugPrint(ErrorTag, "LimitedPrize: activity reddot module is unavailable", EventId, NodeName)
   end
 end
 

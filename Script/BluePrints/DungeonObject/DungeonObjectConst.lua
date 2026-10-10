@@ -2,8 +2,7 @@ local DungeonObjectConst = {}
 DungeonObjectConst.OpenDungeonObjectsTypes = {
   SoloTreasure = true,
   IronSurvival = true,
-  WeaponVerify = true,
-  GuildBoss = true
+  WeaponVerify = true
 }
 DungeonObjectConst.TypeToActorClass = {
   SoloTreasure = nil,

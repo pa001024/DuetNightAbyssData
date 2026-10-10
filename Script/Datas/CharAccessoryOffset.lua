@@ -2071,6 +2071,26 @@ return ReadOnly("CharAccessoryOffset", {
       [10] = T.RT_236
     }
   },
+  [4103] = {
+    OffsetId = 4103,
+    OffsetParameter = {
+      [1] = T.RT_219,
+      [2] = {
+        Player_Part_Head_B = T.RT_226
+      },
+      [3] = T.RT_136,
+      [4] = T.RT_148,
+      [5] = {
+        Player_Part_Head_L = {
+          Location = {
+            1,
+            0,
+            0
+          }
+        }
+      }
+    }
+  },
   [4201] = {
     OffsetId = 4201,
     OffsetParameter = {
@@ -2630,6 +2650,32 @@ return ReadOnly("CharAccessoryOffset", {
       [8] = T.RT_190,
       [9] = T.RT_246,
       [10] = T.RT_236
+    }
+  },
+  [410399] = {
+    OffsetId = 410399,
+    OffsetParameter = {
+      [1] = T.RT_219,
+      [2] = {
+        Player_Part_Waist = {
+          Location = {
+            4,
+            0,
+            0
+          }
+        }
+      },
+      [3] = T.RT_136,
+      [4] = T.RT_148,
+      [5] = {
+        Player_Part_Head_L = {
+          Location = {
+            2,
+            1,
+            0
+          }
+        }
+      }
     }
   },
   [510199] = {

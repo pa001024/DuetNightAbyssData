@@ -1192,10 +1192,55 @@ return ReadOnly("InterfaceJump", {
     PortalUnlockCondition = T.RT_1,
     PortalUnlockTips = "UI_Locked_Des_GameEvent"
   },
+  [147] = {
+    InterfaceJumpId = 147,
+    JumpParameter1 = "ActivityAccessoryDropTask",
+    JumpType = "MereJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
   [148] = {
     InterfaceJumpId = 148,
     JumpParameter1 = "JumpToGachaPage",
     JumpParameter2 = "4",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_4
+  },
+  [149] = {
+    InterfaceJumpId = 149,
+    JumpParameter1 = "JumpToHardBossEvent",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [150] = {
+    InterfaceJumpId = 150,
+    JumpParameter1 = "ActivityWuyoushengMain",
+    JumpParameter2 = "103037",
+    JumpType = "MereJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [151] = {
+    InterfaceJumpId = 151,
+    JumpParameter1 = "JumpToEventPage",
+    JumpParameter2 = "146",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [152] = {
+    InterfaceJumpId = 152,
+    JumpParameter1 = "JumpToEventPage",
+    JumpParameter2 = "71",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [153] = {
+    InterfaceJumpId = 153,
+    JumpParameter1 = "JumpToGachaPage",
+    JumpParameter2 = "5",
     JumpType = "SelfDefinedJump",
     PortalUnlockCondition = T.RT_4
   },

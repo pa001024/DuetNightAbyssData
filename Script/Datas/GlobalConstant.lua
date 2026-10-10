@@ -307,11 +307,11 @@ return ReadOnly("GlobalConstant", {
   },
   CurrentVersion = {
     ConstantName = "CurrentVersion",
-    ConstantValue = 160
+    ConstantValue = 170
   },
   Daily_Goal_RandomTaskNum = {
     ConstantName = "Daily_Goal_RandomTaskNum",
-    ConstantValue = 6
+    ConstantValue = 8
   },
   DefaultFXHelixLeap = {
     ConstantName = "DefaultFXHelixLeap",
@@ -1164,6 +1164,10 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "RaidRankTopN",
     ConstantValue = 100
   },
+  RaidSeasonMail = {
+    ConstantName = "RaidSeasonMail",
+    ConstantValue = 10090
+  },
   RaidTimeRate = {
     ConstantName = "RaidTimeRate",
     ConstantValue = 1
@@ -1176,29 +1180,9 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "ReconnectTimeout",
     ConstantValue = 30
   },
-  RegionOnlineShowHigh = {
-    ConstantName = "RegionOnlineShowHigh",
-    ConstantValue = 30
-  },
-  RegionOnlineShowIOS = {
-    ConstantName = "RegionOnlineShowIOS",
-    ConstantValue = 10
-  },
-  RegionOnlineShowLow = {
-    ConstantName = "RegionOnlineShowLow",
-    ConstantValue = 10
-  },
   RegionOnlineShowMemory = {
     ConstantName = "RegionOnlineShowMemory",
     ConstantValue = 2
-  },
-  RegionOnlineShowMiddle = {
-    ConstantName = "RegionOnlineShowMiddle",
-    ConstantValue = 20
-  },
-  RegionOnlineShowPC = {
-    ConstantName = "RegionOnlineShowPC",
-    ConstantValue = 50
   },
   RemindMail_BattlePass = {
     ConstantName = "RemindMail_BattlePass",
@@ -1296,7 +1280,7 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "SpecialQuestBlackTimeMin",
     ConstantValue = 1
   },
-  SquadMax = {ConstantName = "SquadMax", ConstantValue = 10},
+  SquadMax = {ConstantName = "SquadMax", ConstantValue = 20},
   StarFriendHoldMax = {
     ConstantName = "StarFriendHoldMax",
     ConstantValue = 10

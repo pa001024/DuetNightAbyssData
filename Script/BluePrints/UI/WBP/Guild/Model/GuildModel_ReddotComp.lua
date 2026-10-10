@@ -1,11 +1,84 @@
 local Component = {}
-local GuildBossPointRewardUtils = require("BluePrints.UI.WBP.Guild.Common.GuildBossPointRewardUtils")
-local GUILD_BOSS_PERSON_POINT_REWARD_NODE = "GuildBossPersonPointReward"
-local GUILD_BOSS_REWARD_NODE = "GuildBossProgressReward"
+local GuildPermissionUtils = require("BluePrints.UI.WBP.Guild.Common.GuildPermissionUtils")
+local GUILD_EDIT_SIGN_REDDOT = "GuildEditSign"
+local GUILD_EDIT_SIGN_PERMISSION = "ModifyNameEmblem"
+
+local function EnsureGuildEditSignNode()
+  if not ReddotManager.GetTreeNode(GUILD_EDIT_SIGN_REDDOT) then
+    ReddotManager.AddNode("GuildHub")
+  end
+end
+
+local function MarkGuildEditSignCreated()
+  EnsureGuildEditSignNode()
+  local Node = ReddotManager.GetTreeNode(GUILD_EDIT_SIGN_REDDOT)
+  if not Node or not Node.Cache then
+    return
+  end
+  if not Node.Cache.Detail then
+    Node.Cache.Detail = {}
+  end
+  if Node.Cache.Detail.HasCreated == nil then
+    Node.Cache.Detail.HasCreated = true
+  end
+end
+
+local function IsNewRegisteredAvatar()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return false
+  end
+  local LastLogoutTime = Avatar.LastLogoutTime or 0
+  return LastLogoutTime <= 0
+end
 
 function Component:OnInit()
   ReddotManager.AddNode("GuildHub")
-  self:RefreshGuildBossPersonPointRewardReddot()
+  self:InitGuildEditSignReddot()
+end
+
+function Component:InitGuildEditSignReddot()
+  EnsureGuildEditSignNode()
+  if not self:IsInGuild() then
+    if IsNewRegisteredAvatar() then
+      MarkGuildEditSignCreated()
+      ReddotManager.ClearLeafNodeCount(GUILD_EDIT_SIGN_REDDOT, false)
+    end
+    return
+  end
+  local CurrGuild = self:GetCurrGuild()
+  local Avatar = GWorld:GetAvatar()
+  if not CurrGuild or not Avatar then
+    return
+  end
+  local MemberInfo = self:GetCurrMember(Avatar.Uid)
+  if not MemberInfo then
+    local SelfUid = tonumber(Avatar.Uid)
+    for _, Member in ipairs(CurrGuild.Members or {}) do
+      if tonumber(Member.Uid) == SelfUid then
+        MemberInfo = Member
+        break
+      end
+    end
+  end
+  if not MemberInfo then
+    return
+  end
+  if not GuildPermissionUtils.GetEffectivePermission(CurrGuild.ClosedPermission, MemberInfo.Title, GUILD_EDIT_SIGN_PERMISSION) then
+    ReddotManager.ClearLeafNodeCount(GUILD_EDIT_SIGN_REDDOT, false)
+    return
+  end
+  if IsNewRegisteredAvatar() then
+    MarkGuildEditSignCreated()
+    ReddotManager.ClearLeafNodeCount(GUILD_EDIT_SIGN_REDDOT, false)
+    return
+  end
+  local Detail = ReddotManager.GetLeafNodeCacheDetail(GUILD_EDIT_SIGN_REDDOT)
+  if Detail and Detail.HasCreated == nil then
+    Detail.HasCreated = true
+    ReddotManager.ClearLeafNodeCount(GUILD_EDIT_SIGN_REDDOT)
+    ReddotManager.IncreaseLeafNodeCount(GUILD_EDIT_SIGN_REDDOT)
+  end
 end
 
 function Component:OnDestory()
@@ -33,24 +106,19 @@ function Component:ClearAllReddot()
   ReddotManager.ClearNodeCount("GuildHub", true)
 end
 
-function Component:RefreshGuildBossPersonPointRewardReddot()
-  if not ReddotManager.GetTreeNode(GUILD_BOSS_PERSON_POINT_REWARD_NODE) then
-    ReddotManager.AddNode("GuildHub")
-  end
-  ReddotManager.ClearLeafNodeCount(GUILD_BOSS_PERSON_POINT_REWARD_NODE)
-  if not self:IsInGuild() then
+function Component:InvokeGuildTaskReddotUpdate()
+  local Avatar = self:GetAvatar()
+  if not Avatar then
     return
   end
-  local Count = GuildBossPointRewardUtils.GetCanClaimRewardCount(self:GetAvatarGuildBossData())
-  if Count > 0 then
-    ReddotManager.IncreaseLeafNodeCount(GUILD_BOSS_PERSON_POINT_REWARD_NODE, Count)
+  if Avatar.GuildActivityLevel >= GuildCommon.MaxActivityPoint then
+    self:TryClearReddotCount("GuildDailyTask")
+    self:TryClearReddotCount("GuildWeekTask")
+    return
   end
-end
-
-function Component:InvokeGuildTaskReddotUpdate()
   local bAllDailyNotComplete = true
   local bAllWeeklyNotComplete = true
-  for QuestId, Quest in pairs(self:GetAvatar().CommonQuestActivity[GuildCommon.GuildDummyEventId]) do
+  for QuestId, Quest in pairs(Avatar.CommonQuestActivity[GuildCommon.GuildDummyEventId]) do
     local QuestConf = DataMgr.CommonQuestDetail[QuestId]
     if not QuestConf then
     elseif QuestConf.QuestType == CommonConst.CommonQuestType.Daily then
@@ -72,24 +140,6 @@ function Component:InvokeGuildTaskReddotUpdate()
   end
   if bAllWeeklyNotComplete then
     self:TryClearReddotCount("GuildWeekTask")
-  end
-end
-
-function Component:InvokeGuildBossRewardReddotUpdate()
-  local StageRewardUtils = require("BluePrints.UI.WBP.Guild.Common.GuildBossStageRewardUtils")
-  if not self:IsInGuild() then
-    ReddotManager.ClearNodeCount(GUILD_BOSS_REWARD_NODE, true)
-    return
-  end
-  ReddotManager.ClearNodeCount(GUILD_BOSS_REWARD_NODE, true)
-  local BossId = StageRewardUtils.GetCurrentBossId()
-  if 0 == BossId then
-    return
-  end
-  for _, Stage in ipairs(StageRewardUtils.GetStages()) do
-    if StageRewardUtils.CanClaimStage(Stage, BossId) then
-      ReddotManager.IncreaseLeafNodeCount(GUILD_BOSS_REWARD_NODE, 1, {Stage = Stage})
-    end
   end
 end
 

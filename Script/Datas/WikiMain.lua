@@ -377,6 +377,7 @@ return ReadOnly("WikiMain", {
     AssociatedEntry1 = 408024,
     AssociatedEntry2 = 405023,
     EntryId = 201035,
+    EntryImg = "Texture2D'/Game/UI/Texture/Dynamic/Image/Encyclopedia/T_Encyclopedia_83.T_Encyclopedia_83'",
     EntryTitle = "EntryTitle_201035",
     MainType = 2,
     SubType = 201
@@ -388,6 +389,13 @@ return ReadOnly("WikiMain", {
     AssociatedEntry4 = 201036,
     EntryId = 201036,
     EntryTitle = "EntryTitle_201036",
+    MainType = 2,
+    SubType = 201
+  },
+  [201037] = {
+    AssociatedEntry1 = 201011,
+    EntryId = 201037,
+    EntryTitle = "EntryTitle_201037",
     MainType = 2,
     SubType = 201
   },
@@ -1539,6 +1547,7 @@ return ReadOnly("WikiMain", {
   [408023] = {
     AssociatedEntry1 = 408024,
     EntryId = 408023,
+    EntryImg = "Texture2D'/Game/UI/Texture/Dynamic/Image/Encyclopedia/T_Encyclopedia_82.T_Encyclopedia_82'",
     EntryTitle = "EntryTitle_408023",
     MainType = 4,
     SubType = 408
@@ -1547,6 +1556,7 @@ return ReadOnly("WikiMain", {
     AssociatedEntry1 = 408023,
     AssociatedEntry2 = 405023,
     EntryId = 408024,
+    EntryImg = "Texture2D'/Game/UI/Texture/Dynamic/Image/Encyclopedia/T_Encyclopedia_84.T_Encyclopedia_84'",
     EntryTitle = "EntryTitle_408024",
     MainType = 4,
     SubType = 408

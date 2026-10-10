@@ -1,14 +1,17 @@
 local PlayerHeadWidgetUtils = {}
 
-function PlayerHeadWidgetUtils:EnableHeadWidget(WidgetComp, WidgetName, bEnable, ...)
+function PlayerHeadWidgetUtils:EnableNameWidget(WidgetComp, Name, Style, PlayerNumber)
   if not WidgetComp then
     return
   end
-  if bEnable then
-    WidgetComp:EnableWidget(WidgetName, ...)
-  else
-    WidgetComp:DisableWidget(WidgetName, ...)
+  WidgetComp:EnableNameWidget(Name, Style or "", PlayerNumber or 0)
+end
+
+function PlayerHeadWidgetUtils:DisableNameWidget(WidgetComp)
+  if not WidgetComp then
+    return
   end
+  WidgetComp:DisableNameWidget()
 end
 
 function PlayerHeadWidgetUtils:RefreshRegionNameInfo(WidgetComp, UId, ObjId)
@@ -17,15 +20,32 @@ function PlayerHeadWidgetUtils:RefreshRegionNameInfo(WidgetComp, UId, ObjId)
   if Avatar then
     local RegionAvatars = Avatar.RegionAvatars or {}
     local OtherAvatar = RegionAvatars[ObjId]
-    Name = OtherAvatar and OtherAvatar.AvatarInfo.Nickname
+    local AvatarInfo = OtherAvatar and OtherAvatar.AvatarInfo
+    Name = AvatarInfo and AvatarInfo.Nickname or ""
   end
   local Member, Pos = TeamController:GetModel():GetTeamMember(UId)
-  self:EnableHeadWidget(WidgetComp, "Name", false)
+  self:DisableNameWidget(WidgetComp)
   local Style = "Player"
   if 0 == Pos or not Pos then
-    Style = nil
+    Style = ""
   end
-  self:EnableHeadWidget(WidgetComp, "Name", true, Name, Style, Pos)
+  self:EnableNameWidget(WidgetComp, Name or "", Style, Pos or 0)
+  self:RefreshRegionGuildSignInfo(WidgetComp, ObjId)
+end
+
+function PlayerHeadWidgetUtils:RefreshRegionGuildSignInfo(WidgetComp, ObjId)
+  if not IsValid(WidgetComp) then
+    return
+  end
+  local Avatar = GWorld:GetAvatar()
+  local RegionAvatars = Avatar and Avatar.RegionAvatars or {}
+  local OtherAvatar = RegionAvatars[ObjId]
+  local AvatarInfo = OtherAvatar and OtherAvatar.AvatarInfo
+  local UniformWidget = WidgetComp:GetWidget()
+  local NameWidget = IsValid(UniformWidget) and UniformWidget.Npc_Name_PC or nil
+  if IsValid(NameWidget) then
+    NameWidget:RefreshGuildSign(AvatarInfo)
+  end
 end
 
 function PlayerHeadWidgetUtils:RefreshTitleInfo(WidgetComp, ObjId)
@@ -41,16 +61,21 @@ function PlayerHeadWidgetUtils:RefreshTitleInfo(WidgetComp, ObjId)
   local PrefixId = OtherAvatar.AvatarInfo.TitleBefore
   local SuffixId = OtherAvatar.AvatarInfo.TitleAfter
   local TitleFrameId = OtherAvatar.AvatarInfo.TitleFrame
-  print(_G.LogTag, "RefreshTitleInfo", PrefixId, SuffixId, TitleFrameId)
   self:RefreshTitle(WidgetComp, PrefixId, SuffixId, TitleFrameId)
 end
 
 function PlayerHeadWidgetUtils:EnableTitle(WidgetComp, PrefixId, SuffixId, TitleFrameId)
-  self:EnableHeadWidget(WidgetComp, "Title", true, PrefixId, SuffixId, TitleFrameId)
+  if not WidgetComp then
+    return
+  end
+  WidgetComp:EnableTitleWidget(PrefixId, SuffixId, TitleFrameId)
 end
 
 function PlayerHeadWidgetUtils:DisableTitle(WidgetComp)
-  self:EnableHeadWidget(WidgetComp, "Title", false)
+  if not WidgetComp then
+    return
+  end
+  WidgetComp:DisableTitleWidget()
 end
 
 function PlayerHeadWidgetUtils:RefreshTitle(WidgetComp, PrefixId, SuffixId, TitleFrameId)
@@ -59,11 +84,17 @@ function PlayerHeadWidgetUtils:RefreshTitle(WidgetComp, PrefixId, SuffixId, Titl
 end
 
 function PlayerHeadWidgetUtils:PlayEmoji(WidgetComp, EmojiPath)
-  self:EnableHeadWidget(WidgetComp, "Bubble_Emoji", true, EmojiPath)
+  if not WidgetComp then
+    return
+  end
+  WidgetComp:EnableEmojiWidget(EmojiPath)
 end
 
 function PlayerHeadWidgetUtils:StopEmoji(WidgetComp)
-  self:EnableHeadWidget(WidgetComp, "Bubble_Emoji", false)
+  if not WidgetComp then
+    return
+  end
+  WidgetComp:DisableEmojiWidget()
 end
 
 return PlayerHeadWidgetUtils

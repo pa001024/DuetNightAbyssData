@@ -2808,6 +2808,27 @@
     "m": 50000
   },
   {
+    "id": 151718,
+    "n": "Ardeur · Décision",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51718,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41718,
+        "n": "Ardeur · Décision",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
     "id": 151721,
     "n": "Ardeur · Nirvana",
     "r": 5,
@@ -3320,6 +3341,27 @@
       {
         "id": 41747,
         "n": "Vigueur · Raffinement",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151748,
+    "n": "Ardeur · Raffinement",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51748,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41748,
+        "n": "Ardeur · Raffinement",
         "c": 5,
         "t": "Mod"
       }
@@ -4065,6 +4107,27 @@
     "m": 50000
   },
   {
+    "id": 151942,
+    "n": "Force inébranlable",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51942,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41942,
+        "n": "Force inébranlable",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
     "id": 151951,
     "n": "Souffle du zéphir",
     "r": 5,
@@ -4347,6 +4410,33 @@
     "m": 50000
   },
   {
+    "id": 152013,
+    "n": "Concentration · Frappe brutale",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 52013,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 42002,
+        "n": "Concentration",
+        "c": 3,
+        "t": "Mod"
+      },
+      {
+        "id": 42001,
+        "n": "Fulgurance",
+        "c": 1,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
     "id": 152101,
     "n": "Tranchant",
     "r": 5,
@@ -4577,6 +4667,27 @@
       {
         "id": 42801,
         "n": "Entrave · Débordement",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 152802,
+    "n": "Désagrégation",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 52802,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 42802,
+        "n": "Désagrégation",
         "c": 5,
         "t": "Mod"
       }
@@ -8919,6 +9030,32 @@
     "m": 280000
   },
   {
+    "id": 910199,
+    "n": "Énigme insoluble",
+    "r": 5,
+    "v": "1.5",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10199,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 15017,
+        "n": "Éveil de forge : Épée",
+        "c": 5,
+        "t": "Resource"
+      },
+      {
+        "id": 15005,
+        "n": "Prototype : Énigme insoluble",
+        "c": 50,
+        "t": "Resource"
+      }
+    ],
+    "m": 500000
+  },
+  {
     "id": 910201,
     "n": "Baiser de la sirène",
     "r": 5,
@@ -10347,6 +10484,44 @@
     "m": 280000
   },
   {
+    "id": 920306,
+    "n": "Le poids de vivre",
+    "r": 5,
+    "v": "1.5",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20306,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12178,
+        "n": "Le poids de vivre : Verrou",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12179,
+        "n": "Le poids de vivre : Armature",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12180,
+        "n": "Le poids de vivre : Canon",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 500000
+  },
+  {
     "id": 920401,
     "n": "Hurlement balistique",
     "r": 5,
@@ -11164,6 +11339,44 @@
       {
         "id": 12105,
         "n": "Déchire-âme : Bras d’arc inférieur",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920605,
+    "n": "Banquet du Chapelier",
+    "r": 5,
+    "v": "1.5",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20605,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12173,
+        "n": "Banquet du Chapelier : Corde d’arc",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12174,
+        "n": "Banquet du Chapelier : Bras d’arc supérieur",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12175,
+        "n": "Banquet du Chapelier : Bras d’arc inférieur",
         "c": 1,
         "t": "Resource"
       }

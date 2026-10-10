@@ -259,6 +259,21 @@ return ReadOnly("BattleCharBuffUI", {
     IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Skill/T_Skill_Xier03.T_Skill_Xier03'",
     Type = "LastTime"
   },
+  [4103] = {
+    BuffId = {
+      [0] = 410301,
+      [1] = 410301,
+      [2] = 410301,
+      [3] = 410301,
+      [4] = 410301,
+      [5] = 410301,
+      [6] = 410301
+    },
+    ElementAttr = "Thunder",
+    ID = 4103,
+    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Buff/T_Buff_Damage_Thunder_Up.T_Buff_Damage_Thunder_Up'",
+    Type = "LastTime"
+  },
   [4201] = {
     BuffId = {
       [0] = 420114,

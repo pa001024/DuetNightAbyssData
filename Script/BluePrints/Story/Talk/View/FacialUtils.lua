@@ -6,7 +6,11 @@ function FacialUtils:GetNpcFacialPrefix(DialogueId, NpcId)
   if not NpcId then
     return nil
   end
-  NpcId = URuntimeCommonFunctionLibrary.GetNPCIdByGender(GWorld.GameInstance, NpcId)
+  if Const.bUseFinalMappingId then
+    NpcId = URuntimeCommonFunctionLibrary.GetFinalNPCIdByMapping(GWorld.GameInstance, NpcId)
+  else
+    NpcId = URuntimeCommonFunctionLibrary.GetNPCIdByGender(GWorld.GameInstance, NpcId)
+  end
   if not NpcId then
     local Message = string.format("获取Npc表情Id失败，NpcId无效，反馈策划检查配置，台本编号：%s，NpcId：%s", DialogueId, NpcId)
     UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, LogType, "获取Npc表情Id失败: NpcId无效", Message)

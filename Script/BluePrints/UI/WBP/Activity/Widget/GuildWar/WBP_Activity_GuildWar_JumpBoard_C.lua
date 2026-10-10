@@ -38,6 +38,8 @@ function M:Init(ActivityConfigData, PageConfigData, PlayerAvatar)
   self:AddInputMethodChangedListen()
   self:RefreshOpInfoByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
   self:SetJumpPageButtonDisable()
+  self:TryOpenGuildWarGroupConfirm()
+  self:TryOpenGuildWarRankConfirm()
 end
 
 function M:SetJumpPageButtonDisable()
@@ -48,6 +50,74 @@ function M:SetJumpPageButtonDisable()
   if ParentWidget and ParentWidget.WS then
     ParentWidget.WS:SetActiveWidgetIndex(2)
     ParentWidget.Text_Complete:SetText(GText("UI_GameEvent_EventEnd"))
+  end
+end
+
+function M:TryOpenGuildWarGroupConfirm()
+  local Avatar = self.Avatar or GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local CurrentRaidSeasonId = Avatar.CurrentRaidSeasonId
+  local RaidSeasons = Avatar.RaidSeasons[CurrentRaidSeasonId]
+  if not RaidSeasons then
+    return
+  end
+  if not GuildWarUtils.IsOfficalRaidTime() then
+    return
+  end
+  local IsNotFirstRaidTime = EMCache:Get("FirstRaidTime", true)
+  DebugPrint("ljl@ TryOpenGuildWarGroupConfirm 本地缓存是否打开过: ", IsNotFirstRaidTime)
+  if IsNotFirstRaidTime then
+    return
+  end
+  if GuildWarUtils.IsFloorMode() then
+    if 0 == RaidSeasons.PreRaidFloor then
+      DebugPrint("ljl@ TryOpenGuildWarGroupConfirm FloorMode 没参加预选赛")
+      return
+    end
+  elseif 0 == RaidSeasons.MaxPreRaidScore then
+    DebugPrint("ljl@ TryOpenGuildWarGroupConfirm OldMode 没参加预选赛")
+    return
+  end
+  EMCache:Set("FirstRaidTime", true, true)
+  local GuildWarGroupConfirm = UIManager(self):LoadUINew("GuildWarGroupConfirm")
+  if GuildWarGroupConfirm then
+    GuildWarGroupConfirm:Init()
+  end
+end
+
+function M:TryOpenGuildWarRankConfirm()
+  local Avatar = self.Avatar or GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local CurrentRaidSeasonId = Avatar.CurrentRaidSeasonId
+  local RaidSeasons = Avatar.RaidSeasons[CurrentRaidSeasonId]
+  if not RaidSeasons then
+    return
+  end
+  if not GuildWarUtils.IsRaidEnded() then
+    return
+  end
+  local FinalRank = RaidSeasons.FinalRank
+  local RankRewardId = GuildWarUtils.GetRaidRankRewardByGroup(CurrentRaidSeasonId, RaidSeasons.PreRaidGroupId, FinalRank)
+  if not RankRewardId then
+    DebugPrint("ljl@ TryOpenGuildWarRankConfirm 没有配置奖励, CurrentRaidSeasonId=", CurrentRaidSeasonId, " PreRaidGroupId=", RaidSeasons.PreRaidGroupId, " FinalRank=", FinalRank)
+    return
+  end
+  local IsNotFirstRaidEnd = EMCache:Get("FirstRaidEnd", true)
+  DebugPrint("ljl@ TryOpenGuildWarRankConfirm 本地缓存是否打开过: ", IsNotFirstRaidEnd)
+  if IsNotFirstRaidEnd then
+    return
+  end
+  DebugPrint("ljl@ TryOpenGuildWarRankConfirm RaidGroupId=", RaidSeasons.RaidGroupId)
+  if RaidSeasons.RaidGroupId > 0 then
+    EMCache:Set("FirstRaidEnd", true, true)
+    local GuildWarGroupConfirm = UIManager(self):LoadUINew("GuildWarGroupConfirm")
+    if GuildWarGroupConfirm then
+      GuildWarGroupConfirm:Init()
+    end
   end
 end
 
@@ -161,7 +231,7 @@ function M:RefreshOfficialBoard()
     BoardWidget.Text_End:SetText(GText("RaidDungeon_PreRaid_End"))
   end
   self:RefreshPreRaidRewardGot(BoardWidget)
-  if 1 ~= RaidSeasons.BanState then
+  if not RaidSeasons:IsBaned() then
     BoardWidget.WS_Type:SetActiveWidgetIndex(0)
     self:SetRankTextureImage(BoardWidget, RaidSeasons.PreRaidGroupId)
     self.Avatar:RaidSeasonGetRaidRankInfo(function(ErrCode)
@@ -229,6 +299,9 @@ function M:InitRaidRankText(RankNum)
 end
 
 function M:CanGetPreRaidReward()
+  if GuildWarUtils.IsFloorMode() then
+    return false
+  end
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return false

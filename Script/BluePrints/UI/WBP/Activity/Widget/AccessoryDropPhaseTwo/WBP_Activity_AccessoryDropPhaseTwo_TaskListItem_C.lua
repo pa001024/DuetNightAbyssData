@@ -6,6 +6,7 @@ local M = Class({
 function M:OnListItemObjectSet(Content)
   self.Content = Content
   self.Content.SelfWidget = self
+  self.Parent = Content.Parent
   local CommonQuestConfig = DataMgr.CommonQuestDetail[Content.QuestId]
   self.RichTextTitle:SetText(GText(CommonQuestConfig.StarterQuestDes))
   self.TextNumNum:SetText(Content.Progress .. "/")
@@ -59,6 +60,7 @@ function M:Construct()
   self.BtnArea.OnClicked:Add(self, self.GoToSystem)
   self.Text_Btn:SetText(GText("UI_GameEvent_Goto"))
   self.Item.Item.ItemDetails_MenuAnchor:SetLastFocusWidget(self)
+  self.FocusItem = false
 end
 
 function M:GoToSystem()
@@ -99,6 +101,7 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
 end
 
 function M:OnFocusLost(MyGeometry, InFocusEvent)
+  self.FocusItem = false
 end
 
 function M:OnKeyDown(MyGeometry, InKeyEvent)
@@ -106,15 +109,21 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   local IsHandle = false
   if InKeyName == UIConst.GamePadKey.LeftThumb then
-    IsHandle = self:OnResourceClick()
-    self:SetGoGamepadIconVisible(false)
-  else
-    if InKeyName == UIConst.GamePadKey.FaceButtonBottom and self.JumpId then
+    self.Item:SetFocus()
+    self.FocusItem = true
+    IsHandle = true
+  elseif InKeyName == UIConst.GamePadKey.FaceButtonBottom then
+    if self.JumpId then
       self:GoToSystem()
       IsHandle = true
     else
     end
+  elseif InKeyName == UIConst.GamePadKey.FaceButtonRight and self.FocusItem then
+    self.FocusItem = false
+    self:SetFocus()
+    IsHandle = true
   end
+  self.Parent:RefreshBottonKey()
   if IsHandle then
     return UIUtils.Handled
   else
@@ -127,7 +136,6 @@ function M:SetGoGamepadIconVisible(bVisible)
     if self.JumpId then
       self.KeyImg:SetVisibility(UIConst.VisibilityOp.Visible)
     end
-    self.WBP_Com_KeyImg:SetVisibility(UIConst.VisibilityOp.Visible)
   else
     self.WBP_Com_KeyImg:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end

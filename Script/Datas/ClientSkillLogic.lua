@@ -13,6 +13,10 @@ return ReadOnly("ClientSkillLogic", {
     BPPath = "/Game/BluePrints/Combat/Input/BP_Suyi_Weapon01_Client.BP_Suyi_Weapon01_Client",
     ID = 150402
   },
+  [410301] = {
+    BPPath = "/Game/BluePrints/Combat/Input/BP_SpLise_Skill02_Client.BP_SpLise_Skill02_Client",
+    ID = 410301
+  },
   [530101] = {
     BPPath = "/Game/BluePrints/Combat/Input/BP_Saiqi_Shoot_Client.BP_Saiqi_Shoot_Client",
     ID = 530101

@@ -8,6 +8,7 @@ local function OnItemMouseButtonUp(IntensifyPanel, Content, Event)
     return
   end
   if Content.bShowAdd then
+    AudioManager(ModEnhanceWidget):PlayUISound(ModEnhanceWidget, "event:/ui/common/click_mid", nil, nil)
     if ModEnhanceWidget.OnItemAddClickCallback then
       ModEnhanceWidget.OnItemAddClickCallback(ModEnhanceWidget.Parent, Content)
     end

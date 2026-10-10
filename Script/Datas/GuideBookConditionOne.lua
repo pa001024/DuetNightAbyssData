@@ -144,10 +144,29 @@ return ReadOnly("GuideBookConditionOne", {
         RewardId = 7000
       },
       [2] = {
-        CompleteUIGuideId = 55,
         FinishQuest = 10020103,
         GuideId = 55,
         GuideNoteId = 75,
+        GuideNoteTab = 4,
+        RewardId = 7000
+      }
+    },
+    [10020105] = {
+      [1] = {
+        CompleteUIGuideId = 69,
+        FinishQuest = 10020105,
+        GuideId = 69,
+        GuideNoteId = 86,
+        GuideNoteTab = 5,
+        RewardId = 7000
+      }
+    },
+    [10020108] = {
+      [1] = {
+        CompleteUIGuideId = 164,
+        FinishQuest = 10020108,
+        GuideId = 164,
+        GuideNoteId = 175,
         GuideNoteTab = 4,
         RewardId = 7000
       }
@@ -523,6 +542,15 @@ return ReadOnly("GuideBookConditionOne", {
         RewardId = 7000
       }
     },
+    Dungeon = {
+      [1] = {
+        FunctionId = "Dungeon",
+        GuideId = 46,
+        GuideNoteId = 61,
+        GuideNoteTab = 5,
+        RewardId = 7000
+      }
+    },
     FriendMain = {
       [1] = {
         FunctionId = "FriendMain",
@@ -533,19 +561,12 @@ return ReadOnly("GuideBookConditionOne", {
       },
       [2] = {
         FunctionId = "FriendMain",
-        GuideId = 46,
-        GuideNoteId = 61,
-        GuideNoteTab = 5,
-        RewardId = 7000
-      },
-      [3] = {
-        FunctionId = "FriendMain",
         GuideId = 59,
         GuideNoteId = 64,
         GuideNoteTab = 5,
         RewardId = 7000
       },
-      [4] = {
+      [3] = {
         FunctionId = "FriendMain",
         GuideId = 61,
         GuideNoteId = 66,

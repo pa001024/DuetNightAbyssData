@@ -3,6 +3,8 @@ local PersonInfoCommon = require("BluePrints.UI.WBP.PersonInfo.PersonInfoCommon"
 local PersonInfoEditModel = require("BluePrints.UI.WBP.PersonInfo.Edit.PersonInfoEditModel")
 local PersonInfoDataModel = require("BluePrints.UI.WBP.PersonInfo.Data.PersonInfoDataModel")
 local GuildBaseInfo = require("BluePrints.UI.WBP.Guild.Common.GuildBaseInfo")
+local GuildWarUtils = require("BluePrints.UI.WBP.Activity.Widget.GuildWar.GuildWarUtils")
+local PreviewLevelHandoffMask = require("BluePrints.UI.Common.Preview.PreviewLevelHandoffMask")
 local M = Class("BluePrints.Common.MVC.Controller")
 M.PageEnum = {
   MainPage = 1,
@@ -19,6 +21,7 @@ function M:Init()
   PersonInfoEditModel:Init()
   self.CurPage = nil
   self.bIsHide = false
+  self.HistoryRankOpenToken = 0
 end
 
 function M:Destory()
@@ -278,6 +281,9 @@ function M:RestoreMainPageAfterCustomEditClosed()
     RootPage.CurInputDeviceType = RootPage.GameInputModeSubsystem:GetCurrentInputType()
   end
   local PersonInfoMainPage = RootPage.PersonInfoMainPage
+  if PersonInfoMainPage.RefreshMainPageStickerPreview then
+    PersonInfoMainPage:RefreshMainPageStickerPreview()
+  end
   if RootPage.FreshViewByInputDevice then
     RootPage:FreshViewByInputDevice(RootPage.CurInputDeviceType == ECommonInputType.Gamepad)
   end
@@ -346,13 +352,49 @@ function M:OpenGuildWarHistoryRank()
   if not Avatar then
     return
   end
+  self.HistoryRankOpenToken = (self.HistoryRankOpenToken or 0) + 1
+  local Token = self.HistoryRankOpenToken
   local BaseInfo = PersonInfoModel:GetGuildWarHistoryBaseInfo()
   
   local function OpenWithRecord(RankRecord)
+    if self.IsDestroied or Token ~= self.HistoryRankOpenToken then
+      return
+    end
     local TopNInfo = PersonInfoModel:BuildGuildWarHistoryTopN(BaseInfo, RankRecord or {})
-    local SelfRankInfo = PersonInfoModel:BuildGuildWarHistorySelfRank(TopNInfo)
-    local HistoryContext = {HistoryMode = true, BaseInfo = BaseInfo}
-    UIManager(self):LoadUINew("PersonalInfoDataRanking", SelfRankInfo, TopNInfo, HistoryContext)
+    local Params = GuildWarUtils.BuildHistoryRankParams(TopNInfo)
+    local Manager = UIManager(self)
+    local ExistRank = Manager and Manager:GetUI("CommonRanking") or nil
+    if IsValid(ExistRank) then
+      if ExistRank._bIsClosing and type(ExistRank.ReloadWhileClosing) == "function" then
+        ExistRank:ReloadWhileClosing(Params)
+        return
+      end
+      local Entry = self.MainPage
+      if IsValid(Entry) then
+        local Page = Entry.PersonInfoMainPage
+        if IsValid(Page) then
+          Page.bStackCovered = true
+          PreviewLevelHandoffMask.Show(Entry)
+          local Service = Page.ActorController and Page.ActorController.SceneService
+          if Service and Service.UnloadScene then
+            Service:UnloadScene()
+          end
+        end
+      end
+      ExistRank._bStackCovered = nil
+      if ExistRank.PreviewScene then
+        ExistRank.PreviewScene.bStackCovered = nil
+      end
+      local bPlaced = Manager:PlaceUIStateToTop("CommonRanking")
+      if IsValid(ExistRank) then
+        local CurrentState = Manager.GetCurrentState and Manager:GetCurrentState() or nil
+        if bPlaced or CurrentState == ExistRank then
+          ExistRank:OnLoaded(Params)
+        end
+      end
+      return
+    end
+    Manager:LoadUINew("CommonRanking", Params)
   end
   
   if PersonInfoModel.DebugCachedRankData then
@@ -373,6 +415,7 @@ function M:OpenGuildWarHistoryRank()
 end
 
 function M:OnClose()
+  self.HistoryRankOpenToken = (self.HistoryRankOpenToken or 0) + 1
   local FocusWidget = UIManager(self):GetLastestAndFocusableUIWidgetObj()
   if FocusWidget and FocusWidget.SetFocus_Lua and type(FocusWidget.SetFocus_Lua) == "function" then
     FocusWidget:SetFocus_Lua()

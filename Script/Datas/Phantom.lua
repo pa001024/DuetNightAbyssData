@@ -650,6 +650,21 @@ return ReadOnly("Phantom", {
     UnitName = "止流-魅影",
     WearMeleeWeapon = 1
   },
+  [4103] = {
+    AutoRespawn = 5,
+    BT = {
+      [1] = "/Game/AssetDesign/AI/Player/Lise/BT_Phantom_SpLise.BT_Phantom_SpLise"
+    },
+    BattleRoleId = 4103,
+    Camp = "Player",
+    GuideIconAni = "/Game/UI/UI_PC/Guide/Guide_Point/Guide_Icon_Phantom.Guide_Icon_Phantom",
+    HatredRatio = 0.5,
+    RespawnUI = 20001,
+    UnitBPPath = "/Game/BluePrints/Char/BP_Phantom/BP_PhantomCharacter.BP_PhantomCharacter",
+    UnitId = 4103,
+    UnitName = "SP黎瑟-魅影",
+    WearRangedWeapon = 1
+  },
   [4201] = {
     AutoRespawn = 5,
     BT = T.RT_8,

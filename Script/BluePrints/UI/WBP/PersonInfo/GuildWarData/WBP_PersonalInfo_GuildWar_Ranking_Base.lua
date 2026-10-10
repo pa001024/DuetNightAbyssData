@@ -4,29 +4,6 @@ local GuildWarUtils = require("BluePrints.UI.WBP.Activity.Widget.GuildWar.GuildW
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
 local SerializeUtils = require("Utils.SerializeUtils")
 local UIUtils = require("Utils.UIUtils")
-local PersonInfoController = require("BluePrints.UI.WBP.PersonInfo.PersonInfoController")
-
-local function GetMainPageActorController()
-  local MainPage = PersonInfoController.MainPage
-  local PersonInfoMainPage = MainPage and MainPage.PersonInfoMainPage
-  return PersonInfoMainPage and PersonInfoMainPage.ActorController or nil
-end
-
-local function RebuildMainPagePreviewAfterRankingClosed()
-  local MainPage = PersonInfoController.MainPage
-  local PersonInfoMainPage = MainPage and MainPage.PersonInfoMainPage
-  if PersonInfoMainPage then
-    PersonInfoMainPage:RebuildDisplayPreviewAfterExternalPreviewClosed()
-    local ActorController = PersonInfoMainPage.ActorController
-    local SceneService = ActorController and ActorController.SceneService
-    if SceneService and SceneService.RefreshUIArtNiagara and ActorController and ActorController.ArmoryHelper then
-      ActorController.ArmoryHelper:AddTimer(0.03, function()
-        SceneService:NotifyHelperUpdateLighting()
-        SceneService:RefreshUIArtNiagara()
-      end, false, 0, "RefreshUIArtNiagaraAfterGuildWarRankingClosed", true)
-    end
-  end
-end
 
 local function NormalizeSlotData(Info)
   if type(Info) ~= "table" then
@@ -114,8 +91,8 @@ function M:ReleasePreviewScene()
     if ActorController.TryDestroyActors then
       ActorController:TryDestroyActors()
     end
+    EventManager:FireEvent(EventID.OnExternalPreviewReleased)
   end
-  RebuildMainPagePreviewAfterRankingClosed()
 end
 
 function M:InitPreviewScene(TopNInfo)
@@ -140,10 +117,7 @@ function M:InitPreviewScene(TopNInfo)
     local _, Weapon = next(DummyAvatar.Weapons)
     WeaponModel = Weapon
   end
-  local MainActorController = GetMainPageActorController()
-  if MainActorController and MainActorController.SuspendPreviewControl then
-    MainActorController:SuspendPreviewControl()
-  end
+  EventManager:FireEvent(EventID.OnExternalPreviewAcquired)
   self.ActorController:OnOpened()
   if WeaponModel then
     self.ActorController:ChangeWeaponModel(WeaponModel)

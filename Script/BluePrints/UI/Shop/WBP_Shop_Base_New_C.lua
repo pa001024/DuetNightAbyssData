@@ -176,7 +176,8 @@ function M:UpdateShopDetail(SubTabData)
   local Filter1, SortType = self.Common_SortList_PC:GetSortInfos()
   local ShopDataList = {}
   for ShopItemId, ShopData in pairs(DataMgr.ShopItem) do
-    if ShopData.SubTabId == SubTabData.SubTabId and ShopUtils:GetShopItemCanShow(ShopItemId) then
+    local bCanShow = self.bQuickAddOpen and ShopUtils:GetShopItemCanShowQuickAdd(ShopItemId) or ShopUtils:GetShopItemCanShow(ShopItemId)
+    if ShopData.SubTabId == SubTabData.SubTabId and bCanShow then
       local bNotCheckWalnut = false
       local bNotCheckOwn = false
       if self.bFilterWalnutOwned and ShopData.ItemType == "Walnut" and ShopUtils:GetCharWeaponHasLevelMax(ShopItemId) then

@@ -29,6 +29,10 @@ function M:Update()
 end
 
 function M:RefreshUIInfo()
+  if RacingOutsiderModel:IsActivityInRewardRecvDeadLine(self.EventId) then
+    self:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    return
+  end
   self.WS_Detail:SetActiveWidgetIndex(math.max(RacingOutsiderModel.CurActivityStage - 1, 0))
   if RacingOutsiderModel.CurActivityStage == RacingActivityConst.RacingActivityStage.SelectPlayer then
     self.Image_Line01:SetColorAndOpacity(self.ProgressNormal)
@@ -64,6 +68,7 @@ function M:RefreshUIInfo()
     self.Text_Time02:SetColorAndOpacity(self.TextTimeNormal)
     self.Text_Time03:SetColorAndOpacity(self.TextTimeLight)
   end
+  self:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self:PlayAnimation(self.In)
 end
 

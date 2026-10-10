@@ -91,6 +91,34 @@
     "rarity": 4
   },
   {
+    "id": 10135,
+    "name": "いたずらのカボチャ·アンズ",
+    "desc": "ただの飾りで食べてはいけません。",
+    "icon": "T_Fashion_Hat29_03",
+    "rarity": 4
+  },
+  {
+    "id": 10136,
+    "name": "いたずらのカボチャ·ペルシアンレッド",
+    "desc": "ただの飾りで食べてはいけません。",
+    "icon": "T_Fashion_Hat29_04",
+    "rarity": 4
+  },
+  {
+    "id": 10137,
+    "name": "いたずらのカボチャ·マリーゴールド",
+    "desc": "ただの飾りで食べてはいけません。",
+    "icon": "T_Fashion_Hat29_02",
+    "rarity": 4
+  },
+  {
+    "id": 10138,
+    "name": "いたずらのカボチャ·ミント",
+    "desc": "ただの飾りで食べてはいけません。",
+    "icon": "T_Fashion_Hat29_01",
+    "rarity": 4
+  },
+  {
     "id": 110292,
     "name": "赦罪の代行者",
     "icon": "T_Fashion_Fuluo_01",
@@ -141,8 +169,8 @@
   },
   {
     "id": 410392,
-    "name": "UI_Skin_Name_410301",
-    "icon": "T_Fashion_Zhiliu_01",
+    "name": "糸を結び、夜を行く",
+    "icon": "T_Fashion_SPLise_01",
     "rarity": 5,
     "charId": 4103
   },

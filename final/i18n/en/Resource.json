@@ -6544,6 +6544,22 @@
     "desc": "The guild follows Mr Qiu's creed: merit is rewarded, and negligence is not overlooked. Active members earn Guild Commendations, which can be exchanged within the guild for various rewards."
   },
   {
+    "id": 4007,
+    "name": "Guild Renaming Agreement",
+    "icon": "T_Resource_Rename_Guild",
+    "rarity": 5,
+    "desc": "Use to immediately rename your Guild",
+    "desc2": "\"Greenwich Archaeological Society has received your request for a name change. We will update your registration shortly.\"\n\n— A Diligent Society Staff Member"
+  },
+  {
+    "id": 4008,
+    "name": "Rename Card",
+    "icon": "T_Resource_Rename_Char",
+    "rarity": 5,
+    "desc": "Use to immediately rename your Phoxhunter",
+    "desc2": "\"Out in the world, you are whoever you say you are. So I got you a few new papers. Miner, fisherman, bodyguard, even blacksmith — take your pick. Just put your name on whichever one you like.\"\n\n— Outsider"
+  },
+  {
     "id": 10001,
     "name": "Withered Bough",
     "icon": "T_BreakRes_Wind02",
@@ -8432,6 +8448,30 @@
     "desc2": "\"The essence of swordsmanship lies in the unity of the wielder's spirit. With utmost focus, one can cleave through the mightiest foes, be they ocean waves or leviathans.\"\n\n— Excerpt from The Art of the Sword, by a nameless swordsman from Huaxu"
   },
   {
+    "id": 12178,
+    "name": "Blessed Burden: Bolt",
+    "icon": "T_Range_Weapon_Part02",
+    "rarity": 5,
+    "desc": "Crafted with precision from the blueprint of Blessed Burden. There is no turning back once the trigger is pulled, much like the commitment that seals a decisive moment.",
+    "desc2": "\"The trigger is the most crucial part of any mechanical device. Even from a developer's perspective, I can tell you — no matter how intricate the internal workings are, it's just a piece of scrap if the trigger doesn't function properly. Trust me, I speak from experience — if my trigger had jammed back then, I wouldn't be here today.\"\n\n— An unnamed veteran traveller"
+  },
+  {
+    "id": 12179,
+    "name": "Blessed Burden: Frame",
+    "icon": "T_Range_Weapon_Part03",
+    "rarity": 5,
+    "desc": "Crafted with precision from the blueprint of Blessed Burden. Sturdy and robust, it doubles effectively as a blunt instrument or a throwable weapon when out of bullets.",
+    "desc2": "\"Sure, the legion gives us some freedom to customise our weapons, but painting my gun pink? That's where I draw the line! I don't care if you're my sister, that's still a no. And take that teddy bear charm off!\"\n\n— Lynn, an officer of the Hyperborean Legion"
+  },
+  {
+    "id": 12180,
+    "name": "Blessed Burden: Barrel",
+    "icon": "T_Range_Weapon_Part01",
+    "rarity": 5,
+    "desc": "Crafted with precision from the blueprint of Blessed Burden. Bullets burst forth from here, as both the barrel and the warrior's heart blaze with unrelenting fervour.",
+    "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
+  },
+  {
     "id": 15001,
     "name": "Used to craft and upgrade Calamity Weapons",
     "icon": "T_Range_Weapon_Part03",
@@ -8465,8 +8505,8 @@
   },
   {
     "id": 15005,
-    "name": "Prototype: Nocturne – Sword",
-    "icon": "T_Range_Weapon_Part01",
+    "name": "Prototype: Endless Enigma",
+    "icon": "T_Weapon_Sword_Zaie",
     "rarity": 5,
     "desc": "One of the legendary prototypes said to have given rise to the Calamity Weapons.\nBut in the end he is bitter as wormwood, sharp as a two-edged sword.\nAcquired through special means. Can be used as smelting material for Calamity Weapons.",
     "desc2": "Father Ask said: \"Look upon those you created — those denied rebirth. They cannot rise above suffering. Their tears blind them. They are cast adrift upon the briny waters, reeling through streets and cities alike.\nI merely helped them raise their hands. You showed them no pity, no love, no care. So I did so in your stead. What, then, was wrong with that?\"\n\n— A tribal legend from Askard"
@@ -10407,7 +10447,7 @@
     "icon": "T_TreasureMap_Chapter01",
     "rarity": 4,
     "desc": "A collection of enigmatic pages discovered by chance. Some are delicate scrolls of fine parchment; others, freshly printed sheets with ink still crisp and dark. A few are no more than torn scraps from half-used notebooks. Whether neatly penned or barely legible, they all share one thing in common — each contains a hint pointing to the whereabouts of a hidden treasure.",
-    "desc2": "Tch, you’re always just squatting by the tracks watching trains. Your hair smells like coal dust now, you know that?\nGot some good news for you: I’ve hidden some of my pocket money under the trees nearby. Enough to buy two months' worth of your favourite serial. How about that? Reckon you’ll finally get off your backside and take a walk now? Use the chance to stretch those stiff legs. Trust me, you might actually find there’s more to life than locomotives. Nature’s not bad once you give it a go!",
+    "desc2": "Tch, you're always just squatting by the tracks watching trains. Your hair smells like coal dust now, you know that?\nGot some good news for you: I've hidden some of my pocket money under the trees nearby. Enough to buy two months' worth of your favourite serial. How about that? Reckon you'll finally get off your backside and take a walk now? Use the chance to stretch those stiff legs. Trust me, you might actually find there's more to life than locomotives. Nature's not bad once you give it a go!",
     "source": [
       {
         "srId": 106001,
@@ -13931,24 +13971,45 @@
   },
   {
     "id": 41072,
-    "name": "RESOURCE_NAME_41072",
-    "icon": "T_Resource_Gesture_Eve03",
+    "name": "Crescent Wishes: Azure",
+    "icon": "T_Resource_Gesture_SPLise01",
     "rarity": 6,
-    "desc": "RESOURCE_DESC_41072"
+    "desc": "在月亮的肩头，捕获群星的梦境。"
   },
   {
     "id": 41073,
-    "name": "RESOURCE_NAME_41073",
-    "icon": "T_Resource_Gesture_Eve03",
+    "name": "Crescent Wishes: Rust Red",
+    "icon": "T_Resource_Gesture_SPLise02",
     "rarity": 6,
-    "desc": "RESOURCE_DESC_41073"
+    "desc": "在月亮的肩头，捕获群星的梦境。"
   },
   {
     "id": 41074,
-    "name": "RESOURCE_NAME_41074",
-    "icon": "T_Resource_Gesture_Eve03",
+    "name": "Crescent Wishes: Dark Jade",
+    "icon": "T_Resource_Gesture_SPLise03",
     "rarity": 6,
-    "desc": "RESOURCE_DESC_41074"
+    "desc": "在月亮的肩头，捕获群星的梦境。"
+  },
+  {
+    "id": 41075,
+    "name": "RESOURCE_NAME_41075",
+    "icon": "",
+    "rarity": 6,
+    "desc": "RESOURCE_DESC_41075"
+  },
+  {
+    "id": 41076,
+    "name": "RESOURCE_NAME_41076",
+    "icon": "",
+    "rarity": 6,
+    "desc": "RESOURCE_DESC_41076"
+  },
+  {
+    "id": 41077,
+    "name": "RESOURCE_NAME_41077",
+    "icon": "",
+    "rarity": 6,
+    "desc": "RESOURCE_DESC_41077"
   },
   {
     "id": 42001,
@@ -13965,6 +14026,20 @@
     "rarity": 4,
     "desc": "An intricately designed square construct built using techniques long lost to the Jishu Sect. Its power core generates a powerful suction capable of clearing the Gritblight caused by the Scourge of Zhuyin.",
     "desc2": "Taixu arose from the primeval mists — formless, colourless, diffusing through all six directions. Later, when Zhuyin succumbed to corruption, its impurities settled and hardened, giving rise to the tangible substance we now call Gritblight... What's that — you'd rather I skip the principles and go straight to the instructions? Alas. Youngsters these days have no patience at all.\n \n— Master Gongshang, Mechanist of Jishu Sect"
+  },
+  {
+    "id": 49983,
+    "name": "RESOURCE_NAME_49983",
+    "icon": "T_Mounts_Gesture_0603",
+    "rarity": 4,
+    "desc": "RESOURCE_DESC_49983"
+  },
+  {
+    "id": 49984,
+    "name": "RESOURCE_NAME_49984",
+    "icon": "T_Mounts_Gesture_0603",
+    "rarity": 4,
+    "desc": "RESOURCE_DESC_49984"
   },
   {
     "id": 49985,
@@ -14546,10 +14621,34 @@
   {
     "id": 110074,
     "name": "Character Skin Selection – Aegis",
-    "icon": "T_Pack_Police",
+    "icon": "T_Pack_Police01",
     "rarity": 5,
     "desc": "Grants a character skin from: Su Yi, Fina, Eve, Fushu, Lynn, Margie, Rhythm, Sibylle, or Daphne.",
     "select": 5010
+  },
+  {
+    "id": 110075,
+    "name": "Geniemon Farewell Gift",
+    "icon": "T_Pack_PetBox02",
+    "rarity": 5,
+    "desc": "Departing Geniemons left you a little something. Open it to see what they left for you.",
+    "pack": 230001
+  },
+  {
+    "id": 110076,
+    "name": "Crystal Selection Chest Ⅳ",
+    "icon": "T_Pack_ZaieRes03",
+    "rarity": 5,
+    "desc": "Grants 1 of the following: Electro Crystal, Pyro Crystal, Lumino Crystal, Hydro Crystal, or Umbro Crystal.",
+    "select": 4010
+  },
+  {
+    "id": 110077,
+    "name": "Character Skin Selection – Aegis Ⅱ",
+    "icon": "T_Pack_Police02",
+    "rarity": 5,
+    "desc": "使用后可从贝蕾妮卡，芙罗拉，丽蓓卡，希尔妲，法露茜，海尔法，止流，赛琪中自选一套角色形象。",
+    "select": 5011
   },
   {
     "id": 120001,
@@ -14592,6 +14691,20 @@
     "icon": "T_Resource_DiscountTicket_01",
     "rarity": 5,
     "desc": "Spend 480 Phoxene Plumules to save 360"
+  },
+  {
+    "id": 120007,
+    "name": "Towards the Dawn Coupon",
+    "icon": "T_Resource_DiscountTicket_01",
+    "rarity": 5,
+    "desc": "Spend 480 Phoxene Plumules to save 360"
+  },
+  {
+    "id": 120008,
+    "name": "碧霄吟代金券",
+    "icon": "T_Resource_DiscountTicket_01",
+    "rarity": 5,
+    "desc": "商品满1280月石晶胚减300月石晶胚"
   },
   {
     "id": 1001101,
@@ -14762,6 +14875,14 @@
     "desc2": "\"You have three lives.\n\nYour first life is breath and heartbeat. You measure and perceive the world with your flesh and blood.\nYour second life is connection and bond. Your soul dwells in the nourishment of family, a lover's kiss, and the embrace of friends.\nYour third life is thought and memory. When a reader sees your name upon a page, when a traveler hears it in a bard's song, when a child draws wisdom and courage from your story—your life echoes once more in this world.\n\nAll return to the Misty Sea, but not all truly die.\"\n\n— Lady Nifle, Ferrywoman of the Misty Sea"
   },
   {
+    "id": 1003203,
+    "name": "Thought: Katya",
+    "icon": "T_CharPiece_Kajia",
+    "rarity": 5,
+    "desc": "Thoughts sifted from the drifting sands of remembrance. They carry the memory of someone — from the past, or from what is yet to come.",
+    "desc2": "\"You have three lives.\n\nYour first life is breath and heartbeat. You measure and perceive the world with your flesh and blood.\nYour second life is connection and bond. Your soul dwells in the nourishment of family, a lover's kiss, and the embrace of friends.\nYour third life is thought and memory. When a reader sees your name upon a page, when a traveler hears it in a bard's song, when a child draws wisdom and courage from your story—your life echoes once more in this world.\n\nAll return to the Misty Sea, but not all truly die.\"\n\n— Lady Nifle, Ferrywoman of the Misty Sea"
+  },
+  {
     "id": 1003301,
     "name": "Thought: Margie",
     "icon": "T_CharPiece_Maer",
@@ -14787,7 +14908,7 @@
   },
   {
     "id": 1004103,
-    "name": "RESOURCE_NAME_1004103",
+    "name": "Thought: Rhythm: Flamewrought",
     "icon": "T_CharPiece_SpLise",
     "rarity": 5,
     "desc": "Thoughts sifted from the drifting sands of remembrance. They carry the memory of someone — from the past, or from what is yet to come.",
@@ -14851,8 +14972,8 @@
   },
   {
     "id": 1005402,
-    "name": "RESOURCE_NAME_1005402",
-    "icon": "T_CharPiece_Dafu",
+    "name": "Thought: Lirico",
+    "icon": "T_CharPiece_Lilikou",
     "rarity": 5,
     "desc": "Thoughts sifted from the drifting sands of remembrance. They carry the memory of someone — from the past, or from what is yet to come.",
     "desc2": "\"You have three lives.\n\nYour first life is breath and heartbeat. You measure and perceive the world with your flesh and blood.\nYour second life is connection and bond. Your soul dwells in the nourishment of family, a lover's kiss, and the embrace of friends.\nYour third life is thought and memory. When a reader sees your name upon a page, when a traveler hears it in a bard's song, when a child draws wisdom and courage from your story—your life echoes once more in this world.\n\nAll return to the Misty Sea, but not all truly die.\"\n\n— Lady Nifle, Ferrywoman of the Misty Sea"
@@ -15026,6 +15147,14 @@
     "desc2": "\"Our tale spans over two millennia: a saga of embrace and massacre, of furore and mercy. History ebbs and flows like the celestial dance of the sun and the moon – constant and cyclical. In the grand tapestry of time recounted in these pages, I am but a mere observer, as insignificant as a flake of Hyperborean snow, a leaf from Aethyrie, a drop in Luca's waters, or a grain from Khemet's sands. Yet, in this immense cosmos, I harbour the hope that snowflakes will forge snowfields, leaves will form forests, drops of water will coalesce into rivers, and grains will gather to sculpt deserts. As all singular entities unite, history shall pivot in our favour.\"\n\n— Betwixt Leaves And Branches — History of Atlasia, by Comnena, Chief Librarian of the Aethyrie Cloud Cavern Library"
   },
   {
+    "id": 1013203,
+    "name": "Sigil: Katya",
+    "icon": "T_Phantom_Kajia",
+    "rarity": 5,
+    "desc": "A sigil for summoning Combat Partners. It is a staff to lean on in a battle, a pact of companionship, and an oath unspoken.\nHeartfelt prayers shall be answered, and the desired one shall appear by your side.",
+    "desc2": "\"Our tale spans over two millennia: a saga of embrace and massacre, of furore and mercy. History ebbs and flows like the celestial dance of the sun and the moon – constant and cyclical. In the grand tapestry of time recounted in these pages, I am but a mere observer, as insignificant as a flake of Hyperborean snow, a leaf from Aethyrie, a drop in Luca's waters, or a grain from Khemet's sands. Yet, in this immense cosmos, I harbour the hope that snowflakes will forge snowfields, leaves will form forests, drops of water will coalesce into rivers, and grains will gather to sculpt deserts. As all singular entities unite, history shall pivot in our favour.\"\n\n— Betwixt Leaves And Branches — History of Atlasia, by Comnena, Chief Librarian of the Aethyrie Cloud Cavern Library"
+  },
+  {
     "id": 1013301,
     "name": "Sigil: Margie",
     "icon": "T_Phantom_Maer",
@@ -15051,7 +15180,7 @@
   },
   {
     "id": 1014103,
-    "name": "RESOURCE_NAME_1014103",
+    "name": "Sigil: Rhythm: Flamewrought",
     "icon": "T_Phantom_SpLise",
     "rarity": 5,
     "desc": "A sigil for summoning Combat Partners. It is a staff to lean on in a battle, a pact of companionship, and an oath unspoken.\nHeartfelt prayers shall be answered, and the desired one shall appear by your side.",
@@ -15115,8 +15244,8 @@
   },
   {
     "id": 1015402,
-    "name": "RESOURCE_NAME_1015402",
-    "icon": "T_Phantom_Dafu",
+    "name": "Sigil: Lirico",
+    "icon": "T_Phantom_Lilikou",
     "rarity": 5,
     "desc": "A sigil for summoning Combat Partners. It is a staff to lean on in a battle, a pact of companionship, and an oath unspoken.\nHeartfelt prayers shall be answered, and the desired one shall appear by your side.",
     "desc2": "\"Our tale spans over two millennia: a saga of embrace and massacre, of furore and mercy. History ebbs and flows like the celestial dance of the sun and the moon – constant and cyclical. In the grand tapestry of time recounted in these pages, I am but a mere observer, as insignificant as a flake of Hyperborean snow, a leaf from Aethyrie, a drop in Luca's waters, or a grain from Khemet's sands. Yet, in this immense cosmos, I harbour the hope that snowflakes will forge snowfields, leaves will form forests, drops of water will coalesce into rivers, and grains will gather to sculpt deserts. As all singular entities unite, history shall pivot in our favour.\"\n\n— Betwixt Leaves And Branches — History of Atlasia, by Comnena, Chief Librarian of the Aethyrie Cloud Cavern Library"
@@ -15157,6 +15286,22 @@
     "id": 1023202,
     "name": "Essence Thought: Camilla",
     "icon": "T_CharPiece_Kami01",
+    "rarity": 5,
+    "desc": "Plucked from the shifting sands of memory, a complete thread of thought carries echoes of someone, from a past yet to come, or a future long forgotten.",
+    "desc2": "\"You have three lives.\n\nYour first life is breath and heartbeat. You measure and perceive the world with your flesh and blood.\nYour second life is connection and bond. Your soul dwells in the nourishment of family, a lover's kiss, and the embrace of friends.\nYour third life is thought and memory. When a reader sees your name upon a page, when a traveler hears it in a bard's song, when a child draws wisdom and courage from your story—your life echoes once more in this world.\n\nAll return to the Misty Sea, but not all truly die.\"\n\n— Lady Nifle, Ferrywoman of the Misty Sea"
+  },
+  {
+    "id": 1024102,
+    "name": "RESOURCE_NAME_1024102",
+    "icon": "T_CharPiece_Zhiliu01",
+    "rarity": 5,
+    "desc": "Plucked from the shifting sands of memory, a complete thread of thought carries echoes of someone, from a past yet to come, or a future long forgotten.",
+    "desc2": "\"You have three lives.\n\nYour first life is breath and heartbeat. You measure and perceive the world with your flesh and blood.\nYour second life is connection and bond. Your soul dwells in the nourishment of family, a lover's kiss, and the embrace of friends.\nYour third life is thought and memory. When a reader sees your name upon a page, when a traveler hears it in a bard's song, when a child draws wisdom and courage from your story—your life echoes once more in this world.\n\nAll return to the Misty Sea, but not all truly die.\"\n\n— Lady Nifle, Ferrywoman of the Misty Sea"
+  },
+  {
+    "id": 1024201,
+    "name": "RESOURCE_NAME_1024201",
+    "icon": "T_CharPiece_Yuming01",
     "rarity": 5,
     "desc": "Plucked from the shifting sands of memory, a complete thread of thought carries echoes of someone, from a past yet to come, or a future long forgotten.",
     "desc2": "\"You have three lives.\n\nYour first life is breath and heartbeat. You measure and perceive the world with your flesh and blood.\nYour second life is connection and bond. Your soul dwells in the nourishment of family, a lover's kiss, and the embrace of friends.\nYour third life is thought and memory. When a reader sees your name upon a page, when a traveler hears it in a bard's song, when a child draws wisdom and courage from your story—your life echoes once more in this world.\n\nAll return to the Misty Sea, but not all truly die.\"\n\n— Lady Nifle, Ferrywoman of the Misty Sea"

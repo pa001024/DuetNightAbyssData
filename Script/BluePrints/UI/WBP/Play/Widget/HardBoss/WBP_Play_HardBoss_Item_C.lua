@@ -24,10 +24,16 @@ function WBP_Play_HardBoss_Item_C:OnListItemObjectSet(Content)
   self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self.Group_Normal:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self.Group_Empty:SetVisibility(UE4.ESlateVisibility.Collapsed)
-  local BtnInfo = DataMgr.HardBossMain
-  local Text = BtnInfo[self.Content.Id].HardBossName
-  local HeadSculpture = LoadObject(BtnInfo[self.Content.Id].MonsterIcon)
-  self.Text_BossName:SetText(GText(Text))
+  local BossInfo = not self.Content.BossConfig and DataMgr.HardBossMain and DataMgr.HardBossMain[self.Content.Id]
+  if not BossInfo then
+    DebugPrint("[HardBoss] Missing boss config:", self.Content.Id)
+    self.Text_BossName:SetText("")
+    self.Image_Boss:SetBrushFromTexture(nil)
+    return
+  end
+  local Text = BossInfo.HardBossName
+  local HeadSculpture = BossInfo.MonsterIcon and LoadObject(BossInfo.MonsterIcon) or nil
+  self.Text_BossName:SetText(Text and GText(Text) or "")
   self.Image_Boss:SetBrushFromTexture(HeadSculpture)
   self:UpdateReddot()
   if self.Content.IsSelect then

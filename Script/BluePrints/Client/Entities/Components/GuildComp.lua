@@ -51,6 +51,7 @@ local function BuildGuildSimpleInfo(GuildInfo)
   return {
     GuildId = tonumber(GuildInfo.GuildId or 0) or 0,
     Name = GuildInfo.Name or "",
+    BadgeText = GuildInfo.BadgeText or "",
     Logo = GuildInfo.Logo or "",
     Level = tonumber(GuildInfo.Level or 1) or 1,
     ActivityLevel = tonumber(GuildInfo.ActivityLevel or 0) or 0,
@@ -142,11 +143,11 @@ function Component:_OnPropChangeGuildId()
   if 0 == GuildId or 0 ~= GuildSimpleInfoGuildId and GuildSimpleInfoGuildId ~= GuildId then
     self:SetGuildSimpleInfo({})
   end
+  if 0 == GuildId then
+    EventManager:FireEvent(EventID.OnLocalGuildBadgeChange)
+  end
   if not GuildModel:GetCurrGuild() and 0 ~= GuildId then
     self:GuildJoinNotify(self.GuildId)
-  end
-  if 0 ~= GuildId then
-    GuildModel:RefreshGuildBossPersonPointRewardReddot()
   end
   DispatchGuildController("GuildIdChanged", nil, self.GuildId)
 end
@@ -185,15 +186,16 @@ function Component:_OnPropChangeGuildInfo(ChangeKeys, OldValue)
   if type(PropName) == "string" then
     self:DispatchGuildPropChange(PropName, GuildInfo and GuildInfo[PropName], OldValue, ChangeKeys)
   end
+  EventManager:FireEvent(EventID.OnLocalGuildBadgeChange)
   DispatchGuildController("GuildInfoChanged", nil, GuildInfo or {})
 end
 
 function Component:_OnPropChangeGuildActivityLevel()
   GuildModel:TryAddReddotCount("GuildWeekActivity")
-end
-
-function Component:_OnPropChangeGuildBossData(ChangeKeys, OldValue)
-  GuildModel:RefreshGuildBossPersonPointRewardReddot()
+  if self.GuildActivityLevel >= GuildCommon.MaxActivityPoint then
+    GuildModel:TryClearReddotCount("GuildDailyTask")
+    GuildModel:TryClearReddotCount("GuildWeekTask")
+  end
 end
 
 function Component:CreateGuild(Callback, GuildName, GuildDecl, GuildExtInfo)
@@ -384,22 +386,6 @@ function Component:RpcGetGuildActivityPointReward(Callback, Index)
   CallGuildRpc(self, "RpcGetGuildActivityPointReward", Callback, Index)
 end
 
-function Component:GuildBossClaimPointReward(Callback, RewardIndex)
-  CallGuildRpc(self, "GuildBossClaimPointReward", Callback, RewardIndex or 0)
-end
-
-function Component:GuildBossClaimAllPointReward(Callback)
-  CallGuildRpc(self, "GuildBossClaimAllPointReward", Callback)
-end
-
-function Component:GuildBossClaimStageReward(Callback, TargetGuildId, BossId, StageId)
-  CallGuildRpc(self, "GuildBossClaimStageReward", Callback, TargetGuildId or 0, BossId or 0, StageId or 0)
-end
-
-function Component:GuildBossClaimAllReward(Callback)
-  CallGuildRpc(self, "GuildBossClaimAllReward", Callback)
-end
-
 function Component:GuildHomeGetBuildData(Callback, TargetGuildId)
   CallGuildRpc(self, "GuildHomeGetBuildData", Callback, TargetGuildId or 0)
 end
@@ -506,15 +492,84 @@ function Component:QueryGuildChatOpen(Callback, Uid, bCallbackOnly)
 end
 
 function Component:QueryGuildMemberInfo(Callback, Uids, bCallbackOnly)
-  if bCallbackOnly then
-    self:CallServer("QueryGuildMemberInfo", function(...)
-      if Callback then
-        Callback(...)
-      end
-    end, Uids or {})
-  else
-    CallGuildRpc(self, "QueryGuildMemberInfo", Callback, Uids or {})
+  local UniqueUids = {}
+  local QueryUids = {}
+  for _, Uid in ipairs(Uids or {}) do
+    Uid = tonumber(Uid) or 0
+    if Uid > 0 and not UniqueUids[Uid] then
+      UniqueUids[Uid] = true
+      table.insert(QueryUids, Uid)
+    end
   end
+  
+  local function RequestBatch(BatchUids, BatchCallback, bSkipDispatch)
+    if bCallbackOnly or bSkipDispatch then
+      self:CallServer("QueryGuildMemberInfo", function(...)
+        if BatchCallback then
+          BatchCallback(...)
+        end
+      end, BatchUids)
+    else
+      CallGuildRpc(self, "QueryGuildMemberInfo", BatchCallback, BatchUids)
+    end
+  end
+  
+  if #QueryUids <= CommonConst.GuildMemberInfoQueryMaxCount then
+    RequestBatch(QueryUids, Callback)
+    return
+  end
+  local MergedInfos = {}
+  local NextIndex = 1
+  local BatchEndIndex = 0
+  local SendNextBatch
+  
+  local function Finish(Ret, Infos)
+    if Callback then
+      Callback(Ret, Infos)
+    end
+    if not bCallbackOnly then
+      DispatchGuildController("QueryGuildMemberInfo", table.pack(QueryUids), Ret, Infos or {})
+    end
+  end
+  
+  local function OnBatchResult(Ret, MemberInfos)
+    if not IsValid(self) then
+      Finish(ErrorCode.RET_FAIL, MergedInfos)
+      return
+    end
+    if Ret ~= ErrorCode.RET_SUCCESS then
+      Finish(Ret, MergedInfos)
+      return
+    end
+    for MemberUid, MemberInfo in pairs(MemberInfos or {}) do
+      MergedInfos[MemberUid] = MemberInfo
+    end
+    NextIndex = BatchEndIndex + 1
+    if NextIndex > #QueryUids then
+      Finish(ErrorCode.RET_SUCCESS, MergedInfos)
+      return
+    end
+    SendNextBatch()
+  end
+  
+  function SendNextBatch()
+    if not IsValid(self) then
+      Finish(ErrorCode.RET_FAIL, MergedInfos)
+      return
+    end
+    local BatchUids = {}
+    local EndIndex = NextIndex + CommonConst.GuildMemberInfoQueryMaxCount - 1
+    if EndIndex > #QueryUids then
+      EndIndex = #QueryUids
+    end
+    for Index = NextIndex, EndIndex do
+      table.insert(BatchUids, QueryUids[Index])
+    end
+    BatchEndIndex = EndIndex
+    RequestBatch(BatchUids, OnBatchResult, true)
+  end
+  
+  SendNextBatch()
 end
 
 function Component:ChatToGuildMember(Callback, Uid, Content)
@@ -570,6 +625,10 @@ function Component:GuildEditLogo(Callback, Logo)
   CallGuildRpc(self, "GuildEditLogo", Callback, Logo or "")
 end
 
+function Component:GuildEditBadgeText(Callback, BadgeText)
+  CallGuildRpc(self, "GuildEditBadgeText", Callback, BadgeText or "")
+end
+
 function Component:NotifyInvitedJoinGuild(GuildId, InviterInfo)
   DispatchGuildController("NotifyInvitedJoinGuild", nil, GuildId, InviterInfo)
 end
@@ -603,6 +662,7 @@ function Component:GuildKickNotify(RequestUid, GuildId, GuildName)
   if tonumber(self.GuildId or 0) == tonumber(GuildId or 0) then
     self:SetGuildSimpleInfo({})
     self.GuildId = 0
+    EventManager:FireEvent(EventID.OnLocalGuildBadgeChange)
   end
   DispatchGuildController("GuildKickNotify", nil, RequestUid, GuildId, GuildName)
 end
@@ -611,6 +671,7 @@ function Component:GuildDissolveNotify(GuildId)
   if tonumber(self.GuildId or 0) == tonumber(GuildId or 0) then
     self:SetGuildSimpleInfo({})
     self.GuildId = 0
+    EventManager:FireEvent(EventID.OnLocalGuildBadgeChange)
   end
   DispatchGuildController("GuildDissolveNotify", nil, GuildId)
 end

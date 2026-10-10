@@ -239,10 +239,20 @@ function Component:RecvGuildQuestGetReward(SrcParams, Ret, Rewards)
   if Ret == ErrorCode.RET_SUCCESS then
     local QuestId = table.unpack(SrcParams)
     local QuestConf = DataMgr.CommonQuestDetail[QuestId]
+    local NodeName
     if QuestConf.QuestType == CommonConst.CommonQuestType.Daily then
-      self:GetModel():TrySubReddotCount("GuildDailyTask", {QuestId = QuestId})
+      NodeName = "GuildDailyTask"
     elseif QuestConf.QuestType == CommonConst.CommonQuestType.Weekly then
-      self:GetModel():TrySubReddotCount("GuildWeekTask", {QuestId = QuestId})
+      NodeName = "GuildWeekTask"
+    end
+    if NodeName then
+      local Model = self:GetModel()
+      local Avatar = self:GetAvatar()
+      if Avatar and Avatar.GuildActivityLevel >= GuildCommon.MaxActivityPoint then
+        Model:TryClearReddotCount(NodeName)
+      else
+        Model:TrySubReddotCount(NodeName, {QuestId = QuestId})
+      end
     end
   end
   self:RecvCommon(Ret, GuildCommon.EventID.OnGuildQuestGetReward, Rewards)

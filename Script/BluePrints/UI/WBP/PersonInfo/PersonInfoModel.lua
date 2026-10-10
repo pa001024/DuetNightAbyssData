@@ -2,10 +2,15 @@ local PersonInfoCommon = require("BluePrints.UI.WBP.PersonInfo.PersonInfoCommon"
 local GuildController = require("BluePrints.UI.WBP.Guild.Controller.GuildController")
 local GuildLogoInfo = require("BluePrints.UI.WBP.Guild.Common.GuildLogoInfo")
 local DisplayDraft = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_DisplayDraft")
+local DisplayConfig = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_DisplayConfig")
+local DisplayPersistence = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_DisplayPersistence")
 local PersonalInfoCustomTypes = require("BluePrints.Client.CustomTypes.PersonalInfo")
 local DisplayTypes = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_DisplayTypes")
+local CommonUtils = require("Utils.CommonUtils")
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
 local M = Class("BluePrints.Common.MVC.Model")
+local CustomDisplayServerSupport = PersonInfoCommon.CustomDisplayServerSupport or {}
+local CustomDisplayDefaults = PersonInfoCommon.CustomDisplayDefaults
 
 function M:Init()
   M.Super.Init(self)
@@ -16,6 +21,16 @@ function M:Init()
   self._DisplayPlan = {}
   self.OtherPersonInfo = nil
   self.OtherBattleDumpInfo = nil
+  self._CustomDisplayExtend = {
+    PetParamGroup = {},
+    Sticker = nil,
+    Filter = nil
+  }
+  self._OwnerCustomDisplayExtend = {
+    PetParamGroup = {},
+    Sticker = nil,
+    Filter = nil
+  }
 end
 
 function M:InitData(PlayerInfo)
@@ -105,6 +120,15 @@ function M:InitData(PlayerInfo)
     elseif nil == Plan.WeaponId then
       Plan.WeaponId = -1
     end
+  end
+  local CustomDisplayForExtend
+  if nil ~= self._PersonID then
+    CustomDisplayForExtend = PlayerInfo and PlayerInfo.CustomDisplay or nil
+    self:_CacheCustomDisplayExtend(CustomDisplayForExtend, true)
+  else
+    self:_RestoreActiveCustomDisplayExtendFromOwner()
+    CustomDisplayForExtend = self._Avatar and self._Avatar.PersonalInfo and self._Avatar.PersonalInfo.CustomDisplay or nil
+    self:_CacheCustomDisplayExtend(CustomDisplayForExtend, false)
   end
 end
 
@@ -412,6 +436,57 @@ function M:HasOwnedCustomDisplayGesture(PoseId)
   return false
 end
 
+function M:GetOwnedCustomDisplayStickerIdList()
+  if not self:IsOwener() then
+    return {}
+  end
+  local Avatar = self._Avatar or GWorld:GetAvatar()
+  local StickIdList = Avatar and Avatar.PersonalInfoStickList or nil
+  local Result = {}
+  for _, StickId in ipairs(StickIdList or {}) do
+    if type(StickId) == "number" then
+      Result[#Result + 1] = StickId
+    end
+  end
+  return Result
+end
+
+function M:HasOwnedCustomDisplaySticker(StickerId)
+  if not self:IsOwener() then
+    return true
+  end
+  StickerId = tonumber(StickerId)
+  if not StickerId then
+    return false
+  end
+  local Avatar = self._Avatar or GWorld:GetAvatar()
+  local StickList = Avatar and Avatar.PersonalInfoStickList or nil
+  if not StickList then
+    return false
+  end
+  if StickList.HasValue then
+    return StickList:HasValue(StickerId)
+  end
+  for _, OwnedStickId in ipairs(self:GetOwnedCustomDisplayStickerIdList()) do
+    if OwnedStickId == StickerId then
+      return true
+    end
+  end
+  return false
+end
+
+function M:IsValidOwnedCustomDisplaySticker(StickerId)
+  StickerId = tonumber(StickerId)
+  if not StickerId or StickerId <= 0 then
+    return false
+  end
+  local Cfg = DataMgr.CustomStick and DataMgr.CustomStick[StickerId]
+  if not Cfg then
+    return false
+  end
+  return self:HasOwnedCustomDisplaySticker(StickerId)
+end
+
 function M:GetFirstOwnedCustomDisplaySceneId(FallbackSceneId)
   if not self:IsOwener() then
     return FallbackSceneId or self:GetCustomDisplaySceneId()
@@ -573,6 +648,338 @@ local function ResolveCustomDisplaySlotIndex(CharParam, FallbackIndex)
     return FallbackIndex
   end
   return SlotIndex
+end
+
+local function BuildSortedCustomDisplayItemParams(ItemParamGroup)
+  local Entries = {}
+  if type(ItemParamGroup) ~= "table" then
+    return Entries
+  end
+  for Key, ItemParam in pairs(ItemParamGroup) do
+    if type(ItemParam) == "table" then
+      local ItemId = tonumber(ItemParam.ItemId) or tonumber(ItemParam.Id) or tonumber(Key)
+      if ItemId then
+        Entries[#Entries + 1] = {
+          ItemId = ItemId,
+          SlotIndex = tonumber(ItemParam.SlotIndex),
+          Param = ItemParam
+        }
+      end
+    end
+  end
+  table.sort(Entries, function(EntryA, EntryB)
+    if EntryA.SlotIndex and EntryB.SlotIndex then
+      if EntryA.SlotIndex == EntryB.SlotIndex then
+        return EntryA.ItemId < EntryB.ItemId
+      end
+      return EntryA.SlotIndex < EntryB.SlotIndex
+    end
+    if EntryA.SlotIndex then
+      return true
+    end
+    if EntryB.SlotIndex then
+      return false
+    end
+    return EntryA.ItemId < EntryB.ItemId
+  end)
+  return Entries
+end
+
+local function EnrichStickerData(Sticker)
+  if type(Sticker) ~= "table" then
+    return nil
+  end
+  local StickerId = tonumber(Sticker.StickerId or Sticker.Id)
+  if not StickerId or StickerId <= 0 then
+    return nil
+  end
+  local Position2D = Sticker.Position2D
+  local Cfg = DataMgr.CustomStick and DataMgr.CustomStick[StickerId] or nil
+  return {
+    StickerId = StickerId,
+    PosX = Sticker.PosX or type(Position2D) == "table" and Position2D[1] or 0,
+    PosY = Sticker.PosY or type(Position2D) == "table" and Position2D[2] or 0,
+    Scale = Sticker.Scale or 1,
+    Icon = Sticker.Icon or Cfg and Cfg.Icon or nil,
+    StickerPath = Sticker.StickerPath or Cfg and Cfg.StickerPath or Sticker.Icon or Cfg and Cfg.Icon or nil,
+    Name = Sticker.Name or Cfg and Cfg.Name or nil
+  }
+end
+
+function M:ResolveDisplayStickerData(Sticker)
+  if type(Sticker) ~= "table" then
+    return nil
+  end
+  local StickerId = tonumber(Sticker.StickerId or Sticker.Id)
+  if not StickerId or not self:IsValidOwnedCustomDisplaySticker(StickerId) then
+    return nil
+  end
+  return EnrichStickerData(Sticker)
+end
+
+local function BuildStickerParam(Sticker)
+  local StickerData = EnrichStickerData(Sticker)
+  if not StickerData then
+    return {}
+  end
+  return {
+    StickerId = tonumber(StickerData.StickerId),
+    Position2D = {
+      tonumber(StickerData.PosX) or 0,
+      tonumber(StickerData.PosY) or 0
+    },
+    Scale = tonumber(StickerData.Scale) or 1
+  }
+end
+
+local function EnrichFilterData(Filter)
+  if type(Filter) ~= "table" then
+    return nil
+  end
+  local FilterId = tonumber(Filter.FilterId)
+  if not FilterId or FilterId <= 0 then
+    FilterId = tonumber(Filter.Id)
+  end
+  if not FilterId or FilterId <= 0 then
+    return nil
+  end
+  return {
+    FilterId = FilterId,
+    Intensity = tonumber(Filter.Intensity) or CustomDisplayDefaults.FilterIntensity
+  }
+end
+
+local function BuildFilterSaveParam(Filter)
+  if type(Filter) ~= "table" then
+    return {}
+  end
+  local FilterId = tonumber(Filter.Id)
+  if not FilterId or FilterId <= 0 then
+    FilterId = tonumber(Filter.FilterId)
+  end
+  if not FilterId or FilterId <= 0 then
+    return {}
+  end
+  return {
+    Id = FilterId,
+    Intensity = tonumber(Filter.Intensity) or 0
+  }
+end
+
+local function BuildDisplayPetDataFromParam(PetParam, OwnerAvatar)
+  if type(PetParam) ~= "table" then
+    return nil
+  end
+  local UniqueId = tonumber(PetParam.UniqueId)
+  local PetId = tonumber(PetParam.PetId)
+  if (not (PetId and DataMgr.Pet) or not DataMgr.Pet[PetId]) and UniqueId and OwnerAvatar and OwnerAvatar.Pets then
+    local OwnedPet = OwnerAvatar.Pets[UniqueId]
+    PetId = OwnedPet and tonumber(OwnedPet.PetId) or nil
+  end
+  if not (PetId and DataMgr.Pet) or not DataMgr.Pet[PetId] then
+    return nil
+  end
+  return {PetId = PetId, UniqueId = UniqueId}
+end
+
+local function CollectPetParamEntries(PetParamGroup)
+  local Entries = {}
+  if type(PetParamGroup) ~= "table" then
+    return Entries
+  end
+  if type(PetParamGroup.Keys) == "function" and "function" == type(PetParamGroup.Get) then
+    for _, Key in ipairs(PetParamGroup:Keys() or {}) do
+      local Index = tonumber(Key)
+      local PetParam = PetParamGroup:Get(Key)
+      if Index and type(PetParam) == "table" then
+        Entries[#Entries + 1] = {Index = Index, Param = PetParam}
+      end
+    end
+  else
+    for Key, PetParam in pairs(PetParamGroup) do
+      local Index = tonumber(Key)
+      if Index and type(PetParam) == "table" then
+        Entries[#Entries + 1] = {Index = Index, Param = PetParam}
+      end
+    end
+  end
+  table.sort(Entries, function(EntryA, EntryB)
+    return EntryA.Index < EntryB.Index
+  end)
+  return Entries
+end
+
+local function CloneCustomDisplayExtend(Source)
+  Source = Source or {}
+  local PetParamGroup = {}
+  for _, Entry in ipairs(CollectPetParamEntries(Source.PetParamGroup)) do
+    local PetParam = Entry.Param
+    PetParamGroup[Entry.Index] = {
+      PetId = PetParam.PetId,
+      UniqueId = PetParam.UniqueId,
+      Position = PetParam.Position,
+      Rotation = PetParam.Rotation
+    }
+  end
+  return {
+    PetParamGroup = PetParamGroup,
+    Sticker = EnrichStickerData(Source.StickerParam or Source.Sticker),
+    Filter = EnrichFilterData(Source.Filter)
+  }
+end
+
+function M:_CacheCustomDisplayExtend(Info, bReplace)
+  local Source = Info
+  if type(Source) ~= "table" then
+    Source = {}
+  elseif CommonUtils and CommonUtils.BinaryDump then
+    local Ok, Dump = pcall(CommonUtils.BinaryDump, Source)
+    if Ok and type(Dump) == "table" then
+      Source = Dump
+    end
+  end
+  if true == bReplace then
+    self._CustomDisplayExtend = {
+      PetParamGroup = "table" == type(Source.PetParamGroup) and Source.PetParamGroup or {},
+      Sticker = EnrichStickerData(Source.StickerParam or Source.Sticker),
+      Filter = EnrichFilterData(Source.Filter)
+    }
+    return
+  end
+  local Extend = self._CustomDisplayExtend or {
+    PetParamGroup = {},
+    Sticker = nil,
+    Filter = nil
+  }
+  if "table" == type(Source.PetParamGroup) then
+    Extend.PetParamGroup = Source.PetParamGroup
+  end
+  if "table" == type(Source.StickerParam) or "table" == type(Source.Sticker) then
+    Extend.Sticker = EnrichStickerData(Source.StickerParam or Source.Sticker)
+  end
+  if "table" == type(Source.Filter) then
+    Extend.Filter = EnrichFilterData(Source.Filter)
+  end
+  self._CustomDisplayExtend = Extend
+end
+
+function M:_SyncOwnerCustomDisplayExtendFromActive()
+  self._OwnerCustomDisplayExtend = CloneCustomDisplayExtend(self._CustomDisplayExtend)
+end
+
+function M:_RestoreActiveCustomDisplayExtendFromOwner()
+  self._CustomDisplayExtend = CloneCustomDisplayExtend(self._OwnerCustomDisplayExtend)
+end
+
+function M:_GetCustomDisplayRawTable()
+  local PersonalInfo
+  if self:IsOwener() then
+    PersonalInfo = self._Avatar and self._Avatar.PersonalInfo or nil
+  else
+    PersonalInfo = self.OtherPersonInfo
+  end
+  local CustomDisplay = PersonalInfo and PersonalInfo.CustomDisplay or nil
+  if not CustomDisplay then
+    return nil
+  end
+  local Raw
+  if CommonUtils and CommonUtils.BinaryDump then
+    local Ok, Dump = pcall(CommonUtils.BinaryDump, CustomDisplay)
+    if Ok and type(Dump) == "table" then
+      Raw = Dump
+    end
+  end
+  if type(Raw) ~= "table" then
+    Raw = {
+      SceneId = CustomDisplay.SceneId,
+      CharParamGroup = CustomDisplay.CharParamGroup,
+      CameraParam = CustomDisplay.CameraParam,
+      LightParam = CustomDisplay.LightParam,
+      ItemParamGroup = CustomDisplay.ItemParamGroup,
+      PetParamGroup = CustomDisplay.PetParamGroup,
+      StickerParam = CustomDisplay.StickerParam,
+      Sticker = CustomDisplay.Sticker,
+      Filter = CustomDisplay.Filter
+    }
+  end
+  local Extend = self._CustomDisplayExtend or {}
+  if CustomDisplayServerSupport.Pet == true then
+    local bUseExtend = "table" ~= type(Raw.PetParamGroup) or 0 == #CollectPetParamEntries(Raw.PetParamGroup)
+    if bUseExtend then
+      Raw.PetParamGroup = Extend.PetParamGroup or {}
+    end
+  else
+    Raw.PetParamGroup = nil
+  end
+  if "table" ~= type(Raw.Sticker) then
+    Raw.Sticker = EnrichStickerData(Raw.StickerParam)
+  end
+  if "table" ~= type(Raw.Sticker) then
+    Raw.Sticker = Extend.Sticker
+  end
+  if CustomDisplayServerSupport.Filter == true then
+    if "table" ~= type(Raw.Filter) then
+      Raw.Filter = Extend.Filter
+    end
+  else
+    Raw.Filter = nil
+  end
+  return Raw
+end
+
+function M:_BuildCurrentCustomDisplaySaveBase()
+  local Draft = self:GetCustomDisplayDraft()
+  if Draft then
+    return DisplayPersistence:ExportSaveData(Draft)
+  end
+  local Raw = self:_GetCustomDisplayRawTable() or {}
+  return {
+    SceneId = Raw.SceneId or self:GetCustomDisplaySceneId(),
+    CharParamGroup = Raw.CharParamGroup or {},
+    CameraParam = Raw.CameraParam,
+    LightParam = Raw.LightParam,
+    ItemParamGroup = Raw.ItemParamGroup or {},
+    PetParamGroup = Raw.PetParamGroup or {},
+    StickerParam = BuildStickerParam(Raw.Sticker or Raw.StickerParam),
+    Filter = BuildFilterSaveParam(Raw.Filter)
+  }
+end
+
+function M:GetPetData()
+  local Raw = self:_GetCustomDisplayRawTable()
+  local Group = Raw and Raw.PetParamGroup or nil
+  if type(Group) ~= "table" then
+    return {}
+  end
+  return Group
+end
+
+function M:GetStickerData()
+  local Raw = self:_GetCustomDisplayRawTable()
+  return self:ResolveDisplayStickerData(Raw and Raw.Sticker or nil)
+end
+
+function M:GetFilterData()
+  local Raw = self:_GetCustomDisplayRawTable()
+  return EnrichFilterData(Raw and Raw.Filter or nil)
+end
+
+function M:SavePetData(PetParamGroup, Callback)
+  local SaveData = self:_BuildCurrentCustomDisplaySaveBase()
+  SaveData.PetParamGroup = type(PetParamGroup) == "table" and PetParamGroup or {}
+  return self:SaveCustomDisplay(SaveData, Callback)
+end
+
+function M:SaveStickerData(StickerData, Callback)
+  local SaveData = self:_BuildCurrentCustomDisplaySaveBase()
+  SaveData.StickerParam = BuildStickerParam(StickerData)
+  return self:SaveCustomDisplay(SaveData, Callback)
+end
+
+function M:SaveFilterData(FilterData, Callback)
+  local SaveData = self:_BuildCurrentCustomDisplaySaveBase()
+  SaveData.Filter = EnrichFilterData(FilterData)
+  return self:SaveCustomDisplay(SaveData, Callback)
 end
 
 function M:_FindOwnerCharByCharId(CharId)
@@ -764,6 +1171,21 @@ function M:GetCustomDisplayDraft()
   CustomDisplay = NormalizeCustomDisplayInfo(CustomDisplay)
   local Draft = DisplayDraft:CreateEmpty(CustomDisplay.SceneId)
   local Avatar = self:IsOwener() and self._Avatar or self:GetFakeAvatar()
+  local CustomDisplayRaw = self:_GetCustomDisplayRawTable() or CustomDisplay
+  local LightParam = CustomDisplayRaw.LightParam or CustomDisplay.LightParam
+  if type(LightParam) ~= "table" then
+    Draft.Scene.LightParam = DisplayPersistence:BuildSceneInitialLightParam(CustomDisplay.SceneId or Draft.Scene.SceneId)
+  else
+    local DirectionSource = LightParam.Direction or {}
+    Draft.Scene.LightParam = {
+      Intensity = LightParam.Intensity or CustomDisplayDefaults.LightIntensity,
+      Direction = {
+        DirectionSource[1] or 0,
+        DirectionSource[2] or 0,
+        DirectionSource[3] or 0
+      }
+    }
+  end
   for Index, CharParam in ipairs(CustomDisplay.CharParamGroup or {}) do
     local SlotIndex = ResolveCustomDisplaySlotIndex(CharParam, Index)
     local Slot = DisplayDraft:GetCharacterSlot(Draft, SlotIndex)
@@ -805,7 +1227,70 @@ function M:GetCustomDisplayDraft()
       end
     end
   end
+  if CustomDisplayServerSupport.Item == true then
+    local UsedItemSlotIndices = {}
+    local ItemSlotCount = DisplayConfig:GetItemSlotCount()
+    local FallbackItemEntries = {}
+    for _, ItemEntry in ipairs(BuildSortedCustomDisplayItemParams(CustomDisplayRaw.ItemParamGroup or CustomDisplay.ItemParamGroup)) do
+      local ItemParam = ItemEntry.Param
+      local SlotIndex = ItemEntry.SlotIndex
+      if not SlotIndex or 0 ~= SlotIndex % 1 or SlotIndex < 1 or ItemSlotCount < SlotIndex or UsedItemSlotIndices[SlotIndex] then
+        FallbackItemEntries[#FallbackItemEntries + 1] = ItemEntry
+      else
+        local ItemId = ItemEntry.ItemId
+        local ItemData = ItemId and DataMgr.CustomItem and DataMgr.CustomItem[ItemId] or nil
+        if ItemData then
+          UsedItemSlotIndices[SlotIndex] = true
+          local Slot = DisplayDraft:GetItemSlot(Draft, SlotIndex)
+          Slot.ItemData = ItemData
+          Slot.Transform = BuildTransformFromServerParam(ItemParam)
+          Slot.TransformRotation = BuildTransformRotationFromServerParam(ItemParam)
+        end
+      end
+    end
+    local FallbackIndex = 1
+    for _, ItemEntry in ipairs(FallbackItemEntries) do
+      while ItemSlotCount >= FallbackIndex and UsedItemSlotIndices[FallbackIndex] do
+        FallbackIndex = FallbackIndex + 1
+      end
+      if ItemSlotCount < FallbackIndex then
+        break
+      end
+      local ItemId = ItemEntry.ItemId
+      local ItemData = ItemId and DataMgr.CustomItem and DataMgr.CustomItem[ItemId] or nil
+      if ItemData then
+        UsedItemSlotIndices[FallbackIndex] = true
+        local Slot = DisplayDraft:GetItemSlot(Draft, FallbackIndex)
+        Slot.ItemData = ItemData
+        Slot.Transform = BuildTransformFromServerParam(ItemEntry.Param)
+        Slot.TransformRotation = BuildTransformRotationFromServerParam(ItemEntry.Param)
+      end
+    end
+  end
   Draft.Camera = BuildCameraDataFromServerParam(CustomDisplay.CameraParam) or Draft.Camera
+  if true == CustomDisplayServerSupport.Pet then
+    local PetParamGroup = self:GetPetData() or {}
+    local OwnerAvatar = self:IsOwener() and (self._Avatar or GWorld:GetAvatar()) or nil
+    for _, Entry in ipairs(CollectPetParamEntries(PetParamGroup)) do
+      local PetParam = Entry.Param
+      if type(PetParam) == "table" then
+        local Slot = DisplayDraft:GetPetSlot(Draft, Entry.Index)
+        local PetData = BuildDisplayPetDataFromParam(PetParam, OwnerAvatar)
+        if PetData then
+          Slot.PetData = PetData
+          Slot.Transform = BuildTransformFromServerParam(PetParam)
+          Slot.TransformRotation = BuildTransformRotationFromServerParam(PetParam)
+        end
+      end
+    end
+  end
+  Draft.Other = Draft.Other or {}
+  Draft.Other.Sticker = self:GetStickerData()
+  if true == CustomDisplayServerSupport.Filter then
+    Draft.Other.Filter = self:GetFilterData()
+  else
+    Draft.Other.Filter = nil
+  end
   return Draft
 end
 
@@ -1012,11 +1497,28 @@ function M:SaveCustomDisplay(CustomDisplayInfo, Callback)
     return false
   end
   CustomDisplayInfo = NormalizeCustomDisplayInfo(CustomDisplayInfo)
+  CustomDisplayInfo.Filter = BuildFilterSaveParam(CustomDisplayInfo.Filter)
   
   local function OnSaveCallback(ret)
     local bSuccess = ErrorCode:Check(ret)
     if bSuccess and self._Avatar and self._Avatar.PersonalInfo then
-      self._Avatar.PersonalInfo.CustomDisplay = PersonalInfoCustomTypes.PersonalInfoCustomDisplay(CustomDisplayInfo)
+      self:_CacheCustomDisplayExtend({
+        PetParamGroup = CustomDisplayServerSupport.Pet == true and CustomDisplayInfo.PetParamGroup or {},
+        StickerParam = CustomDisplayInfo.StickerParam or BuildStickerParam(CustomDisplayInfo.Sticker),
+        Filter = true == CustomDisplayServerSupport.Filter and CustomDisplayInfo.Filter or nil
+      }, true)
+      self:_SyncOwnerCustomDisplayExtendFromActive()
+      local ConfirmedCustomDisplayInfo = {
+        SceneId = CustomDisplayInfo.SceneId,
+        CharParamGroup = CustomDisplayInfo.CharParamGroup,
+        CameraParam = CustomDisplayInfo.CameraParam,
+        LightParam = CustomDisplayInfo.LightParam,
+        ItemParamGroup = true == CustomDisplayServerSupport.Item and CustomDisplayInfo.ItemParamGroup or {},
+        PetParamGroup = CustomDisplayServerSupport.Pet == true and CustomDisplayInfo.PetParamGroup or {},
+        StickerParam = CustomDisplayInfo.StickerParam or BuildStickerParam(CustomDisplayInfo.Sticker),
+        Filter = true == CustomDisplayServerSupport.Filter and CustomDisplayInfo.Filter or {}
+      }
+      self._Avatar.PersonalInfo.CustomDisplay = PersonalInfoCustomTypes.PersonalInfoCustomDisplay(ConfirmedCustomDisplayInfo)
     end
     if Callback then
       Callback(ret)
@@ -1034,11 +1536,21 @@ function M:SaveCustomDisplayDraft(DisplayEditor, Callback)
     return false
   end
   local CharParamGroup = SaveData.CharParamGroup or {}
-  DebugPrint(string.format("PersonInfoSaveCustomDisplay: SceneId=%s CharCount=%s", tostring(SaveData.SceneId), tostring(#CharParamGroup)))
+  local ItemParamGroup = SaveData.ItemParamGroup or {}
+  local ItemCount = 0
+  for _ in pairs(ItemParamGroup) do
+    ItemCount = ItemCount + 1
+  end
+  DebugPrint(string.format("PersonInfoSaveCustomDisplay: SceneId=%s CharCount=%s ItemCount=%s", tostring(SaveData.SceneId), tostring(#CharParamGroup), tostring(ItemCount)))
   for Index, CharParam in ipairs(CharParamGroup) do
     local Position = CharParam.Position or {}
     local Rotation = CharParam.Rotation or {}
     DebugPrint(string.format("PersonInfoSaveCustomDisplay: slot=%s CharId=%s AppearancePlan=%s WeaponId=%s PoseId=%s Pos=(%s,%s,%s) Rot=(%s,%s,%s)", tostring(CharParam.SlotIndex or Index), tostring(CharParam.CharId), tostring(CharParam.AppearancePlan), tostring(CharParam.WeaponId), tostring(CharParam.PoseId), tostring(Position[1]), tostring(Position[2]), tostring(Position[3]), tostring(Rotation[1]), tostring(Rotation[2]), tostring(Rotation[3])))
+  end
+  for ItemId, ItemParam in pairs(ItemParamGroup) do
+    local Position = ItemParam.Position or {}
+    local Rotation = ItemParam.Rotation or {}
+    DebugPrint(string.format("PersonInfoSaveCustomDisplay: itemId=%s slot=%s Pos=(%s,%s,%s) Rot=(%s,%s,%s)", tostring(ItemId), tostring(ItemParam.SlotIndex), tostring(Position[1]), tostring(Position[2]), tostring(Position[3]), tostring(Rotation[1]), tostring(Rotation[2]), tostring(Rotation[3])))
   end
   return self:SaveCustomDisplay(SaveData, Callback)
 end
@@ -1377,6 +1889,11 @@ function M:ClearModel()
   self._DisplayPlan = {}
   self.OtherPersonInfo = nil
   self.OtherBattleDumpInfo = nil
+  self._CustomDisplayExtend = {
+    PetParamGroup = {},
+    Sticker = nil,
+    Filter = nil
+  }
 end
 
 function M:GetGuildWarHistoryBaseInfo()
@@ -1411,24 +1928,31 @@ end
 
 function M:BuildGuildWarHistoryTopN(BaseInfo, RankRecord)
   local List = {}
-  for SeasonId, Record in pairs(RankRecord or {}) do
-    local RankInfo = {}
-    RankInfo.Uid = BaseInfo.Uid
-    RankInfo.Nickname = BaseInfo.Nickname
-    RankInfo.Level = BaseInfo.Level
-    RankInfo.HeadFrameId = BaseInfo.HeadFrameId
-    RankInfo.HeadIconId = BaseInfo.HeadIconId
-    RankInfo.TitleBefore = BaseInfo.TitleBefore
-    RankInfo.TitleAfter = BaseInfo.TitleAfter
-    RankInfo.TitleFrame = BaseInfo.TitleFrame
-    RankInfo.Score = Record.Score
-    RankInfo.Rank = Record.Rank
-    RankInfo.DisplayRank = Record.Rank
-    RankInfo.MaxSquad = Record.Squad
-    RankInfo.SeasonId = Record.SeasonId or SeasonId
-    RankInfo.UpdateTime = Record.UpdateTime
-    RankInfo.PreRaidGroupId = Record.PreRaidGroupId
-    table.insert(List, RankInfo)
+  if type(RankRecord) ~= "table" then
+    RankRecord = {}
+  end
+  for SeasonId, Record in pairs(RankRecord) do
+    if type(Record) == "table" then
+      local RankInfo = {}
+      RankInfo.Uid = BaseInfo.Uid
+      RankInfo.Nickname = BaseInfo.Nickname
+      RankInfo.Level = BaseInfo.Level
+      RankInfo.HeadFrameId = BaseInfo.HeadFrameId
+      RankInfo.HeadIconId = BaseInfo.HeadIconId
+      RankInfo.TitleBefore = BaseInfo.TitleBefore
+      RankInfo.TitleAfter = BaseInfo.TitleAfter
+      RankInfo.TitleFrame = BaseInfo.TitleFrame
+      RankInfo.Score = Record.Score
+      RankInfo.Floor = Record.Floor
+      RankInfo.PassTime = Record.PassTime
+      RankInfo.Rank = Record.Rank
+      RankInfo.DisplayRank = Record.Rank
+      RankInfo.MaxSquad = Record.Squad
+      RankInfo.SeasonId = Record.SeasonId or SeasonId
+      RankInfo.UpdateTime = Record.UpdateTime
+      RankInfo.PreRaidGroupId = Record.PreRaidGroupId
+      table.insert(List, RankInfo)
+    end
   end
   table.sort(List, function(a, b)
     local A = a.SeasonId or 0
@@ -1439,21 +1963,6 @@ function M:BuildGuildWarHistoryTopN(BaseInfo, RankRecord)
     return A > B
   end)
   return List
-end
-
-function M:BuildGuildWarHistorySelfRank(TopNInfo)
-  if not TopNInfo or 0 == #TopNInfo then
-    return {}
-  end
-  local First = TopNInfo[1]
-  return {
-    Rank = First.Rank,
-    Score = First.Score,
-    MaxSquad = First.MaxSquad,
-    SeasonId = First.SeasonId,
-    UpdateTime = First.UpdateTime,
-    PreRaidGroupId = First.PreRaidGroupId
-  }
 end
 
 function M:FillGuildBaseInfo(TargetInfo, SourceInfo)

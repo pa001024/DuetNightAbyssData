@@ -13,11 +13,19 @@ function M:Initialize(Initializer)
   self.LastMaxWeaponSp = 0
   self.LastSegmentsNumber = 0
   self.LastSecondaryCount = 0
+  self.LastHasSecondaryResource = false
+  self.LastCurrentWeapon = nil
+  self.LastTalentActive = false
+  self.bHasRefreshSnapshot = false
   self.bInFullState = false
 end
 
 function M:Init(OwnerPanel)
   self.OwnerPanel = OwnerPanel
+  self:BindToAnimationFinished(self.Progress_Full_In, {
+    self,
+    self.OnFullInFinished
+  })
 end
 
 function M:Refresh(CurrentWeaponSp, MaxWeaponSp, CurrentSecondaryCount, HasSecondaryResource, CurrentWeapon)
@@ -26,20 +34,36 @@ function M:Refresh(CurrentWeaponSp, MaxWeaponSp, CurrentSecondaryCount, HasSecon
   CurrentSecondaryCount = math.max(0, CurrentSecondaryCount or 0)
   HasSecondaryResource = HasSecondaryResource or false
   local IsTalentActive = self:CalcTalentActive(CurrentWeapon)
+  if self.bHasRefreshSnapshot and self.LastWeaponSp == CurrentWeaponSp and self.LastMaxWeaponSp == MaxWeaponSp and self.LastSecondaryCount == CurrentSecondaryCount and self.LastHasSecondaryResource == HasSecondaryResource and self.LastCurrentWeapon == CurrentWeapon and self.LastTalentActive == IsTalentActive then
+    if self.bInFullState and not self:IsAnimationPlaying(self.Progress_Full_Loop) and not self:IsAnimationPlaying(self.Progress_Full_In) then
+      self:PlayAnimation(self.Progress_Full_Loop)
+    end
+    return
+  end
   self:UpdateNumberDisplay(CurrentWeaponSp, CurrentSecondaryCount, HasSecondaryResource)
   self:UpdateProgressBar(CurrentWeaponSp, MaxWeaponSp)
   self:HandleStateAndAnim(CurrentWeaponSp, MaxWeaponSp, CurrentSecondaryCount, HasSecondaryResource, IsTalentActive)
   self.LastWeaponSp = CurrentWeaponSp
   self.LastMaxWeaponSp = MaxWeaponSp
   self.LastSecondaryCount = CurrentSecondaryCount
+  self.LastHasSecondaryResource = HasSecondaryResource
+  self.LastCurrentWeapon = CurrentWeapon
+  self.LastTalentActive = IsTalentActive
+  self.bHasRefreshSnapshot = true
 end
 
 function M:UpdateNumberDisplay(CurrentWeaponSp, CurrentSecondaryCount, HasSecondaryResource)
-  self.TextNumOne:SetText(tostring(math.floor(CurrentWeaponSp)))
+  if not self.bHasRefreshSnapshot or math.floor(self.LastWeaponSp) ~= math.floor(CurrentWeaponSp) then
+    self.TextNumOne:SetText(tostring(math.floor(CurrentWeaponSp)))
+  end
   if HasSecondaryResource then
-    self.LevelTwo:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    self.TextNumTwo:SetText(tostring(math.floor(CurrentSecondaryCount)))
-  else
+    if not self.bHasRefreshSnapshot or not self.LastHasSecondaryResource then
+      self.LevelTwo:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    end
+    if not (self.bHasRefreshSnapshot and self.LastHasSecondaryResource) or math.floor(self.LastSecondaryCount) ~= math.floor(CurrentSecondaryCount) then
+      self.TextNumTwo:SetText(tostring(math.floor(CurrentSecondaryCount)))
+    end
+  elseif not self.bHasRefreshSnapshot or self.LastHasSecondaryResource then
     self.LevelTwo:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
 end
@@ -124,10 +148,6 @@ function M:HandleFullState(CurrentWeaponSp, MaxWeaponSp)
     self.bInFullState = true
     self:PlayAnimationForward(self.Progress_Full_In)
     self:PlayAnimationForward(self.Progress_Num_Add)
-    self:BindToAnimationFinished(self.Progress_Full_In, {
-      self,
-      self.OnFullInFinished
-    })
   elseif not IsFull and self.bInFullState then
     self.bInFullState = false
     self:StopFullAnims()

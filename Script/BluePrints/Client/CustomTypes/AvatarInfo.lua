@@ -26,6 +26,7 @@ AvatarInfo.__Props__ = {
   IsInSpecialQuest = prop.prop("Bool", "client save", false),
   GuildId = prop.prop("Int", "client save", 0),
   GuildSimpleInfo = prop.prop("Dict", "client", nil),
+  ShowGuildBadge = prop.prop("Bool", "client", true),
   BackgroundId = prop.prop("Int", "client save")
 }
 

@@ -312,6 +312,19 @@ function Component:GetOtherPlayerPersonallInfo(PlayerUuid, CallbackInfo, AvatarI
   self:CallServer("CheckOtherPlayerPersonallInfo", cb, PlayerUuid)
 end
 
+function Component:GetOtherPlayerPersonalInfo(PlayerUuid, CallBack)
+  self.logger.debug("GetOtherPlayerPersonalInfo Begin", PlayerUuid)
+  
+  local function InCallback(RetCode, PlayerInfo)
+    self.logger.debug("GetOtherPlayerPersonalInfo InCallback", RetCode, PlayerUuid)
+    if CallBack then
+      CallBack(RetCode, PlayerInfo)
+    end
+  end
+  
+  self:CallServer("CheckOtherPlayerPersonallInfo", InCallback, PlayerUuid)
+end
+
 function Component:SetPersonalInfoVisible(VisibleType)
   self.logger.debug("SetPersonalInfoVisible", VisibleType)
   if not CommonUtils.HasValue(CommonConst.PersonalInfoVisibleType, VisibleType) then

@@ -79,10 +79,10 @@ function M:BeginCountdown()
   end
   self.State = EState.Timing
   self.RemainSeconds = self.CountdownSeconds
-  self:UpdateCountdown(0)
   self.TimerHandle = self:AddTimer(self.UpdateSeconds, function()
     self:UpdateCountdown(self.UpdateSeconds)
   end, true)
+  self:UpdateCountdown(0)
 end
 
 function M:UpdateCountdown(DeltaSeconds)

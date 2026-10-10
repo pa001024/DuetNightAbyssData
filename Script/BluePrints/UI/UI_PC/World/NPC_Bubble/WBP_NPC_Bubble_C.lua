@@ -58,6 +58,23 @@ function WBP_NPC_Bubble_C:OnDisabled()
   EMUIAnimationSubsystem:EMPlayAnimation(self, self.Out)
 end
 
+function WBP_NPC_Bubble_C:ResetForPool()
+  if self.In and EMUIAnimationSubsystem:EMAnimationIsPlaying(self, self.In) then
+    EMUIAnimationSubsystem:EMStopAnimation(self, self.In)
+  end
+  if self.Loop and EMUIAnimationSubsystem:EMAnimationIsPlaying(self, self.Loop) then
+    EMUIAnimationSubsystem:EMStopAnimation(self, self.Loop)
+  end
+  if self.Out and EMUIAnimationSubsystem:EMAnimationIsPlaying(self, self.Out) then
+    EMUIAnimationSubsystem:EMStopAnimation(self, self.Out)
+  end
+  self.bIsEnabled_Bubble = false
+  self.BubbleContent = nil
+  self.Main_Text:SetText("")
+  self.Panle_Main:SetRenderOpacity(0)
+  self:SetVisibility(UE4.ESlateVisibility.Collapsed)
+end
+
 function WBP_NPC_Bubble_C:OnInAnimationFinished()
   EMUIAnimationSubsystem:EMPlayAnimation(self, self.Loop)
 end

@@ -21,6 +21,7 @@ local GAMEPAD_APPLY_FOCUS_TIMER = "SkinCollectTaskGamepadApplyFocus"
 local GAMEPAD_INIT_FOCUS_TIMER = "SkinCollectTaskGamepadInitFocus"
 local GAMEPAD_FOCUS_TASK_TYPE = "TaskType"
 local GAMEPAD_FOCUS_SUB_TASK = "SubTask"
+local GAMEPAD_FOCUS_QA_TIPS = "QATips"
 local GAMEPAD_APPLY_FOCUS_DELAY = 0.05
 local GAMEPAD_APPLY_FOCUS_RETRY_MAX = 12
 local GAMEPAD_ANALOG_DEAD_ZONE = 0.5
@@ -142,6 +143,23 @@ local function BuildSubTaskKeyTipsInfo(OwnerWidget)
           Owner = OwnerWidget
         }
       },
+      GamePadInfoList = {
+        {
+          Type = "Img",
+          ImgShortPath = "B",
+          ClickCallback = OwnerWidget.OnCloseClicked,
+          Owner = OwnerWidget
+        }
+      },
+      Desc = GText("UI_BACK"),
+      bLongPress = false
+    }
+  }
+end
+
+local function BuildQATipsInfo(OwnerWidget)
+  return {
+    {
       GamePadInfoList = {
         {
           Type = "Img",
@@ -445,6 +463,7 @@ function M:OnLoaded(EventId)
   self:RefreshTitleByActivityId(EventId)
   self:RefreshUIBGByActivityId(EventId)
   self:RefreshFontBGByActivityId(EventId)
+  self:RefreshScoreInfo()
   self:RefreshTaskTypeList(EventId)
   if self.In then
     self:StopAnimation(self.In)
@@ -452,6 +471,84 @@ function M:OnLoaded(EventId)
   end
   self:AddTimer(0.1, self.ApplyDefaultFocus, false, 0, POPUP_SET_FOCUS_TIMER, true)
   self:QueueApplyDefaultFocus(0.12)
+  self.Text_ScoreTitle:SetText(GText("UI_AppearanceCollect_CurrentScore"))
+  self.Text_CheckScore:SetText(GText("UI_AppearanceCollect_Switch"))
+end
+
+function M:RefreshScoreInfo()
+  self.CurrentScore = 0
+  self.MaxScore = 0
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    local collectData = Avatar.AppearanceCollectEvent:GetApperanceCollectEvent(self.CurActivityId)
+    if collectData then
+      self.CurrentScore = collectData.Score or 0
+    end
+    local CurrentScore, MaxScore = Avatar.AppearanceCollectEvent:SkinCollectScoreInfo(self.CurActivityId)
+    if MaxScore <= CurrentScore then
+      EMCache:Set("SkinCollectTaskCheckBox", false)
+      self.Com_CheckBoxScore:ForbidBtn(true)
+    end
+  end
+  self.Text_ScoreNum:SetText(self.CurrentScore)
+  if EMCache:Get("SkinCollectTaskCheckBox") then
+    self.Com_CheckBoxScore:SetIsChecked(true)
+  else
+    self.Com_CheckBoxScore:SetIsChecked(false)
+  end
+  self.Com_CheckBoxScore:BindEventOnClicked({
+    Func = self.OnCheckBoxScoreClicked,
+    Inst = self
+  })
+  local DefaultConfigData = {
+    OwnerWidget = self,
+    TextContent = GText("UI_AppearanceCollect_CurrentProgressDetail")
+  }
+  self.Com_BtnQa:Init(DefaultConfigData)
+  local Key_Qa_Params = {
+    KeyInfoList = {
+      {
+        Type = "Img",
+        ImgShortPath = UIConst.GamePadImgKey.SpecialRight
+      }
+    }
+  }
+  self.Com_CheckBoxKey:CreateCommonKey(Key_Qa_Params)
+  local Key_Qa_Params = {
+    KeyInfoList = {
+      {
+        Type = "Img",
+        ImgShortPath = UIConst.GamePadImgKey.FaceButtonLeft
+      }
+    }
+  }
+  self.Com_CheckBoxKey:CreateCommonKey(Key_Qa_Params)
+end
+
+function M:OpenDefaultMenuAnchor()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_level_01", nil, nil)
+  self.Com_BtnQa:PlayAnimation(self.Com_BtnQa.Click)
+  self.Com_BtnQa:OpenMenuAnchor()
+  self.GamepadFocusArea = GAMEPAD_FOCUS_QA_TIPS
+  self:RefreshBottomKeyTips()
+end
+
+function M:CloseMenuAnchor()
+  self.Com_BtnQa:CloseMenuAnchor()
+end
+
+function M:OnQaBtnClicked()
+  if self.Com_HudBubble:IsVisible() then
+    self.Com_HudBubble:SetVisibility(ESlateVisibility.Collapsed)
+  else
+    self.GamepadFocusArea = GAMEPAD_FOCUS_QA_TIPS
+    self.Com_HudBubble:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  end
+end
+
+function M:OnCheckBoxScoreClicked(CheckBoxChecked)
+  local IsChecked = self.Com_CheckBoxScore:IsChecked()
+  EMCache:Set("SkinCollectTaskCheckBox", CheckBoxChecked)
 end
 
 function M:ReceiveEnterState(StackAction)
@@ -502,8 +599,12 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputType, CurGamepadName)
   end
   if CurInputType == ECommonInputType.Gamepad then
     self:InitDefaultGamepadFocus(true)
+    self.Key_QA:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.Com_CheckBoxKey:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   else
     self:ClearGamepadFocus()
+    self.Key_QA:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.Com_CheckBoxKey:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
   self:RefreshBottomKeyTips()
 end
@@ -551,6 +652,7 @@ function M:OnAppearanceCollectEventChanged()
       self.PendingTaskPopupViewState = RestoreViewState
     end
   end
+  self:RefreshScoreInfo()
 end
 
 function M:BindBtnEvent()
@@ -965,6 +1067,9 @@ function M:RefreshBottomKeyTips()
     else
       KeyTipsInfo = BuildTaskTypeKeyTipsInfo(self)
     end
+    if self.GamepadFocusArea == GAMEPAD_FOCUS_QA_TIPS then
+      KeyTipsInfo = BuildQATipsInfo(self)
+    end
   end
   local NormalizedKeyTipsInfo = NormalizeKeyTipsInfo(KeyTipsInfo)
   if #NormalizedKeyTipsInfo <= 0 then
@@ -1291,6 +1396,11 @@ function M:CloseCurrentSubTaskQaTips()
 end
 
 function M:HandleGamepadKeyDown(InKeyName)
+  if self.GamepadFocusArea == GAMEPAD_FOCUS_QA_TIPS and InKeyName == UIConst.GamePadKey.FaceButtonRight then
+    self:CloseMenuAnchor()
+    self:InitDefaultGamepadFocus(true)
+    return true
+  end
   if InKeyName == UIConst.GamePadKey.FaceButtonRight then
     if self:CloseCurrentSubTaskQaTips() then
       return true
@@ -1319,6 +1429,12 @@ function M:HandleGamepadKeyDown(InKeyName)
     return true
   elseif InKeyName == UIConst.GamePadKey.RightThumb then
     self:HandleGamepadQa()
+    return true
+  elseif InKeyName == UIConst.GamePadKey.SpecialRight then
+    self:OpenDefaultMenuAnchor()
+    return true
+  elseif InKeyName == UIConst.GamePadKey.FaceButtonLeft then
+    self.Com_CheckBoxScore:OnClicked()
     return true
   end
   return false

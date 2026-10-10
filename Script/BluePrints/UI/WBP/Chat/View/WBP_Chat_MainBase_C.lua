@@ -235,9 +235,21 @@ function M:_IsSetUpChatMsgListContextCurrent(Context)
   return Context.Channel == self.CurrChannel and Context.SubTab == ChatModel:GetCurrentSubTab() and Context.FriendUid == ChatModel:GetCurrentFriendUid()
 end
 
+function M:_ClearSelectedChatItem()
+  if self.CurrSelectChatItem and IsValid(self.CurrSelectChatItem) then
+    self.CurrSelectChatItem:SelectMessage(false)
+  end
+  self.CurrSelectChatItem = nil
+end
+
+function M:_ClearChatMsgListView()
+  self:_ClearSelectedChatItem()
+  self.List_Dialog:ClearListItems()
+end
+
 function M:_SetUpChatMsgList()
   self.MaxScrollOffset = nil
-  self.List_Dialog:ClearListItems()
+  self:_ClearChatMsgListView()
   self.List_Dialog:DisableScroll(true)
   self.WS_Dialoglist:SetActiveWidgetIndex(0)
   local MsgList = ChatModel:GetCurrentMsgViewList()
@@ -820,12 +832,7 @@ function M:_HandleGuildPrivateTargetDisabled(Uid, TimeWrap, MsgWrap, bNeedRebuil
   if bNeedRebuild then
     self:_SetUpChatMsgList()
   else
-    if TimeWrap then
-      self:_AddNewMsgToListView(TimeWrap)
-    end
-    if MsgWrap then
-      self:_AddNewMsgToListView(MsgWrap)
-    end
+    self:_ApplyChatMessageDelta(TimeWrap, MsgWrap)
   end
 end
 
@@ -908,6 +915,47 @@ function M:_AddNewMsgToListView(MsgWrap)
   end
 end
 
+function M:_TryRemoveEvictedMsgWraps(EvictedWraps)
+  if not EvictedWraps or 0 == #EvictedWraps then
+    return true
+  end
+  local Items = self.List_Dialog:GetListItems()
+  if Items:Num() < #EvictedWraps then
+    return false
+  end
+  local bSelectedItemEvicted = false
+  for Index, MsgWrap in ipairs(EvictedWraps) do
+    local Content = Items:Get(Index)
+    if not Content or Content.Data ~= MsgWrap then
+      return false
+    end
+    if self.CurrSelectChatItem and IsValid(self.CurrSelectChatItem) and (self.CurrSelectChatItem.Content == Content or Content.UI == self.CurrSelectChatItem) then
+      bSelectedItemEvicted = true
+    end
+  end
+  if bSelectedItemEvicted then
+    self:_ClearSelectedChatItem()
+  end
+  for _ = 1, #EvictedWraps do
+    self.List_Dialog:RemoveItem(self.List_Dialog:GetItemAt(0))
+  end
+  Items = self.List_Dialog:GetListItems()
+  for Index = 1, Items:Num() do
+    Items:Get(Index).Index = Index
+  end
+  return true
+end
+
+function M:_ApplyChatMessageDelta(TimeWrap, MsgWrap, EvictedWraps)
+  if not self:_TryRemoveEvictedMsgWraps(EvictedWraps) then
+    self:_SetUpChatMsgList()
+    return false
+  end
+  self:_AddNewMsgToListView(TimeWrap)
+  self:_AddNewMsgToListView(MsgWrap)
+  return true
+end
+
 function M:OnPlayerListUISelected(Content, bSkipInputAreaState)
   bSkipInputAreaState = bSkipInputAreaState or self._bGuildPrivateListRefreshing
   if self.CurrSelectPlayer and Content ~= self.CurrSelectPlayer then
@@ -963,24 +1011,22 @@ function M:OnPlayerListUISelected(Content, bSkipInputAreaState)
   end
 end
 
-function M:HandleChatMsgRecv(TimeWrap, MsgWrap)
+function M:HandleChatMsgRecv(TimeWrap, MsgWrap, EvictedWraps)
   if self.CurrChannel == ChatCommon.ChannelDef.Friend and not ChatModel:GetCurrentFriendUid() then
     return
   end
   local NewBtnVisible = self.Group_NewMessage:IsVisible()
   AudioManager(self):PlayUISound(self, "event:/ui/common/team_msg_pop", nil, nil)
-  self:_AddNewMsgToListView(TimeWrap)
-  self:_AddNewMsgToListView(MsgWrap)
+  self:_ApplyChatMessageDelta(TimeWrap, MsgWrap, EvictedWraps)
 end
 
-function M:HandleChatMsgSent(TimeWrap, MsgWrap)
+function M:HandleChatMsgSent(TimeWrap, MsgWrap, EvictedWraps)
   ChatController:SetUpSendCDTimer(MsgWrap.Message.ChannelType)
   if not MsgWrap:IsSticker() then
     self.Com_Input:SetText("")
   end
   AudioManager(self):PlayUISound(self, "event:/ui/common/team_msg_pop", nil, nil)
-  self:_AddNewMsgToListView(TimeWrap)
-  self:_AddNewMsgToListView(MsgWrap)
+  self:_ApplyChatMessageDelta(TimeWrap, MsgWrap, EvictedWraps)
 end
 
 function M:_AutoScrollToEnd()
@@ -992,16 +1038,6 @@ function M:_AutoScrollToEnd()
       self:UpdateMaxScrollOffset()
     end
   })
-end
-
-function M:_ReduceOverflowMessage()
-  local RemovedMsgs = ChatModel:GetChannelRemovedMsgs()
-  for i, Msg in ipairs(RemovedMsgs) do
-    local Item = self.List_Dialog:GetItemAt(0)
-    if Item then
-      self.List_Dialog:RemoveItem(Item)
-    end
-  end
 end
 
 function M:HandleEnterChatChannel(ErrCode, ChannelType)

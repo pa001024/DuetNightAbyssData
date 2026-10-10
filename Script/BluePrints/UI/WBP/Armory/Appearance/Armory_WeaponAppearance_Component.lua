@@ -649,18 +649,11 @@ function M:UpdateWeaponStanceFXInfo(Content)
   self.WBP_Armory_SkinMod:Init(Params)
   self.Mod_Title_Line:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.Mod_Content:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-  self.Btn_CheckMod:Init({
+  local DefaultConfigData = {
     OwnerWidget = self,
-    TextContent = GText("UI_Accessory_Stance_Tips"),
-    OnMenuOpenChangedCallBack = function(self, IsOpen)
-      if self.IsGamepadInput and self.GetDesiredFocusTarget then
-        local Widget = self:GetDesiredFocusTarget()
-        if Widget then
-          Widget:SetFocus()
-        end
-      end
-    end
-  })
+    TextContent = GText("UI_Accessory_Stance_Tips")
+  }
+  self.Btn_CheckMod:Init(DefaultConfigData)
 end
 
 function M:OnTopTabSelected(TabWidget, Content)

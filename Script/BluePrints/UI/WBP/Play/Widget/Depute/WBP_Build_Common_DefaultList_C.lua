@@ -89,6 +89,7 @@ function M:UpdateSquadListInfo()
       elseif "Pet" == Name and self.Avatar.Pets[Id] then
         SquadInfo[Name .. "Id"] = self.Avatar.Pets[Id].Props.PetId
         SquadInfo[Name .. "Level"] = self.Avatar.Pets[Id].Level
+        SquadInfo[Name] = Id
       else
         SquadInfo[Name] = Id
       end
@@ -113,6 +114,7 @@ function M:UpdateSquadListInfo()
     elseif "Pet" == Name and self.Avatar.Pets[Id] then
       self.SquadNewInfo[Name .. "Id"] = self.Avatar.Pets[Id].Props.PetId
       self.SquadNewInfo[Name .. "Level"] = self.Avatar.Pets[Id].Level
+      self.SquadNewInfo[Name] = Id
     else
       self.SquadNewInfo[Name] = Id
     end

@@ -144,6 +144,9 @@ end
 function Component:RealCloseComp()
   self.Btn_Upgrade:UnBindEventOnClickedByObj(self)
   self:CloseForModCommon()
+  if self.Target:IsOriginalMaxLevel() and self.Target:HasCardLevel() and not self.Target:IsFinalMaxLevel() then
+    ModModel:MarkPendingOpenModEnhance(true)
+  end
 end
 
 function Component:OnLevelUpSuccessCallback()

@@ -86,7 +86,13 @@ function WBP_SimpleTalk_Common:BuildOptionListInitParams()
       self:OnOptionListSelectionChanged(CurrentIndex)
     end,
     OnItemHovered = function(Index)
-      self:OnImpressionItemHovered(Index + 1)
+      self:OnOptionItemHovered(Index + 1)
+    end,
+    OnItemUnhovered = function(Index)
+      self:OnOptionItemUnhovered(Index + 1)
+    end,
+    OnItemClicked = function(Item)
+      self:OnOptionItemClicked(Item)
     end
   }
 end
@@ -143,10 +149,10 @@ function WBP_SimpleTalk_Common:InitGroupCost(ImpressionAreaId, Count, Cost, bCan
   return bCanCheck
 end
 
-function WBP_SimpleTalk_Common:BuildImpressionOptionItemDatas(OptionData, TalkTriggerId, ImpressionAreaId)
+function WBP_SimpleTalk_Common:BuildOptionItemDatas(OptionData, TalkTriggerId, ImpressionAreaId)
   local OptionState = self:GetOptionState(OptionData, ImpressionAreaId)
   local ImpressionDone = false
-  DebugPrint("WBP_SimpleTalk_Common:BuildImpressionOptionItemDatas", OptionState)
+  DebugPrint("WBP_SimpleTalk_Common:BuildOptionItemDatas", OptionState)
   local OptionItemDatas = {}
   local SavedOptions = OptionData.SavedOptions
   local OptionId2Idx = OptionData.OptionId2Idx
@@ -181,18 +187,6 @@ function WBP_SimpleTalk_Common:BuildImpressionOptionItemDatas(OptionData, TalkTr
         OnInterruptedExitDelegate = {
           self,
           self.StopStoryLine
-        },
-        OnHoveredDelegate = {
-          self,
-          self.OnImpressionItemHovered
-        },
-        OnUnhoveredDelegate = {
-          self,
-          self.OnImpressionItemUnhovered
-        },
-        OnClickedDelegate = {
-          self,
-          self.OnImpressionItemClicked
         }
       }
     end
@@ -226,18 +220,6 @@ function WBP_SimpleTalk_Common:BuildImpressionOptionItemDatas(OptionData, TalkTr
           OnInterruptedExitDelegate = {
             self,
             self.StopStoryLine
-          },
-          OnHoveredDelegate = {
-            self,
-            self.OnImpressionItemHovered
-          },
-          OnUnhoveredDelegate = {
-            self,
-            self.OnImpressionItemUnhovered
-          },
-          OnClickedDelegate = {
-            self,
-            self.OnImpressionItemClicked
           }
         }
       end
@@ -247,9 +229,9 @@ function WBP_SimpleTalk_Common:BuildImpressionOptionItemDatas(OptionData, TalkTr
   return OptionItemDatas
 end
 
-function WBP_SimpleTalk_Common:InitOptions(OptionData, TalkTriggerId, ImpressionAreaId, OnOptionItemClicked)
+function WBP_SimpleTalk_Common:InitOptions(OptionData, TalkTriggerId, ImpressionAreaId)
   self.OptionList:ClearListItems()
-  local OptionItemDatas = self:BuildImpressionOptionItemDatas(OptionData, TalkTriggerId, ImpressionAreaId)
+  local OptionItemDatas = self:BuildOptionItemDatas(OptionData, TalkTriggerId, ImpressionAreaId)
   self.OptionList:AddItems(OptionItemDatas)
 end
 
@@ -511,10 +493,10 @@ function WBP_SimpleTalk_Common:OnOptionItemEnd(ItemIdx, SpecifyFinishType)
   DebugPrint("WBP_SimpleTalk_Common:OnOptionItemEnd")
   
   function self.OnOptionOutAnimationFinishedCallback()
-    if self.OnOptionItemClicked then
-      self.OnOptionItemClicked(ItemIdx, SpecifyFinishType)
+    if self.OnOptionChosenFinished then
+      self.OnOptionChosenFinished(ItemIdx, SpecifyFinishType)
     end
-    self.OnOptionItemClicked = nil
+    self.OnOptionChosenFinished = nil
   end
   
   self:ResetNormalButton()
@@ -681,18 +663,18 @@ function WBP_SimpleTalk_Common:SwitchShowOptionUI(bShow)
   end
 end
 
-function WBP_SimpleTalk_Common:InitOptionData(TalkTask, OptionData, OnOptionItemClicked)
+function WBP_SimpleTalk_Common:InitOptionData(TalkTask, OptionData, OnOptionChosenFinished)
   self.TalkTask = TalkTask
   self.OptionData = OptionData
   self.OptionMaxNum = #OptionData.Options
-  self.OnOptionItemClicked = OnOptionItemClicked
+  self.OnOptionChosenFinished = OnOptionChosenFinished
 end
 
-function WBP_SimpleTalk_Common:ShowOptions(TalkTask, OptionData, OnOptionItemClicked)
-  DebugPrint("WBP_SimpleTalk_Common:ShowOptions", TalkTask, OptionData, OnOptionItemClicked)
+function WBP_SimpleTalk_Common:ShowOptions(TalkTask, OptionData, OnOptionChosenFinished)
+  DebugPrint("WBP_SimpleTalk_Common:ShowOptions", TalkTask, OptionData, OnOptionChosenFinished)
   self:TryHideLastDialoguePic()
   self:StopTypingAudio()
-  self:InitOptionData(TalkTask, OptionData, OnOptionItemClicked)
+  self:InitOptionData(TalkTask, OptionData, OnOptionChosenFinished)
   self:PlayAnimation(self.Option_In)
   local OptionType = OptionData.OptionType
   if OptionType == ETalkOptionType.Plus or OptionType == ETalkOptionType.Check then
@@ -906,13 +888,13 @@ function WBP_SimpleTalk_Common:StopStoryLine()
   self.StopStoryline_Delegate:Fire()
 end
 
-function WBP_SimpleTalk_Common:OnImpressionItemHovered(ItemIndex)
+function WBP_SimpleTalk_Common:OnOptionItemHovered(ItemIndex)
 end
 
-function WBP_SimpleTalk_Common:OnImpressionItemUnhovered(ItemIndex)
+function WBP_SimpleTalk_Common:OnOptionItemUnhovered(ItemIndex)
 end
 
-function WBP_SimpleTalk_Common:OnImpressionItemClicked(Item)
+function WBP_SimpleTalk_Common:OnOptionItemClicked(Item)
   DebugPrint("WBP_SimpleTalk_Common:OnClickedItem", Item.State)
   self:StopAllAnimations()
   if Item.State == EImpressionButtonState.Enabled then
@@ -939,7 +921,7 @@ function WBP_SimpleTalk_Common:OnImpressionItemClicked(Item)
   end
 end
 
-function WBP_SimpleTalk_Common:GetCurrentImpressionItem()
+function WBP_SimpleTalk_Common:GetCurrentOptionItem()
   if not self.SelectImpressionItemIndex then
     return nil
   end

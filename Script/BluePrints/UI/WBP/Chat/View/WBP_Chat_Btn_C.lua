@@ -33,7 +33,7 @@ function M:OnListItemObjectSet(Content)
   self.ForceHideGamepadKey = Content and Content.ForceHideGamepadKey == true
   self.AlwaysShowGamepadKey = Content and true == Content.AlwaysShowGamepadKey
   self.Owner = Content.Owner
-  self.Button_Area:SetVisibility(UIConst.VisibilityOp.Visible)
+  self:SetNormal(true)
   self:SetText(Content.Text)
   self:BindOnClick(Content.Owner, Content.Callback)
   if CommonUtils.GetDeviceTypeByPlatformName(self) ~= "Mobile" then
@@ -89,8 +89,8 @@ function M:SetForbidden()
   self.Key_Text:SetForbidKey(true)
 end
 
-function M:SetNormal()
-  if not self.bForbidden then
+function M:SetNormal(bForce)
+  if not bForce and not self.bForbidden then
     return
   end
   self.bForbidden = false

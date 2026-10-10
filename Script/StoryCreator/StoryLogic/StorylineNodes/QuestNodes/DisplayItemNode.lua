@@ -51,7 +51,13 @@ end
 
 function DisplayItemNode:BindNpcInteraction()
   local NpcIdWithGender = self.AssociatedObjectId
-  NpcIdWithGender = NpcIdWithGender and URuntimeCommonFunctionLibrary.GetNPCIdByGender(GWorld.GameInstance, NpcIdWithGender)
+  if NpcIdWithGender then
+    if Const.bUseFinalMappingId then
+      NpcIdWithGender = URuntimeCommonFunctionLibrary.GetFinalNPCIdByMapping(GWorld.GameInstance, NpcIdWithGender)
+    else
+      NpcIdWithGender = URuntimeCommonFunctionLibrary.GetNPCIdByGender(GWorld.GameInstance, NpcIdWithGender)
+    end
+  end
   local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
   local Npc = GameState.NpcCharacterMap:FindRef(NpcIdWithGender)
   if IsValid(Npc) then

@@ -70,6 +70,11 @@ return ReadOnly("CommonQuestPhase", {
     Index = 1,
     QuestPhaseId = 1205
   },
+  [1206] = {
+    EventId = 112006,
+    Index = 1,
+    QuestPhaseId = 1206
+  },
   [1301] = {
     EventId = 103014,
     Index = 1,
@@ -209,6 +214,18 @@ return ReadOnly("CommonQuestPhase", {
     QuestPhaseId = 2010,
     QuestPhaseName = "RaidDungeon_PreRaid_Rank"
   },
+  [2011] = {
+    EventId = 111007,
+    Index = 1,
+    QuestPhaseId = 2011,
+    QuestPhaseName = "RaidDungeon_Raid_Rank"
+  },
+  [2012] = {
+    EventId = 111007,
+    Index = 2,
+    QuestPhaseId = 2012,
+    QuestPhaseName = "RaidDungeon_PreRaid_Rank"
+  },
   [3001] = {
     EventId = 103016,
     Index = 1,
@@ -314,6 +331,16 @@ return ReadOnly("CommonQuestPhase", {
     RewardPreview = 1020011,
     SplineBP = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/WorldExplore/v16/Spine/WBP_Activity_WorldExplore_V16_Spine_02.WBP_Activity_WorldExplore_V16_Spine_02'"
   },
+  [1020051] = {
+    EntranceIcon = "Texture2D'/Game/UI/Texture/Static/Image/Activity/WorldExplore/V17/T_Activity_WorldExplore_V17_BGBtn.T_Activity_WorldExplore_V17_BGBtn'",
+    EventId = 102005,
+    Icon = "Texture2D'/Game/UI/Texture/Static/Image/Activity/WorldExplore/V17/T_Activity_WorldExplore_V17_Pattern_02.T_Activity_WorldExplore_V17_Pattern_02'",
+    Index = 1,
+    QuestPhaseId = 1020051,
+    QuestPhaseName = "Event_102005_QuestName1",
+    RewardPreview = 1020011,
+    SplineBP = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/WorldExplore/V17/Spine/WBP_Activity_WorldExplore_V17_Spine_01.WBP_Activity_WorldExplore_V17_Spine_01'"
+  },
   [1030250] = {
     EventId = 103025,
     Index = 1,
@@ -362,6 +389,18 @@ return ReadOnly("CommonQuestPhase", {
     QuestPhaseId = 1030311,
     QuestPhaseName = "UI_TreasureHunt_QuestPhase2"
   },
+  [1030380] = {
+    EventId = 103038,
+    Index = 1,
+    QuestPhaseId = 1030380,
+    QuestPhaseName = "UI_TreasureHunt_QuestPhase1"
+  },
+  [1030381] = {
+    EventId = 103038,
+    Index = 2,
+    QuestPhaseId = 1030381,
+    QuestPhaseName = "UI_TreasureHunt_QuestPhase2"
+  },
   [103020021] = {
     EventId = 10302002,
     Index = 1,
@@ -378,5 +417,10 @@ return ReadOnly("CommonQuestPhase", {
     Index = 2,
     QuestPhaseId = 103020023,
     QuestPhaseName = "RaidDungeon_PreRaid_Rank"
+  },
+  [103020041] = {
+    EventId = 10302004,
+    Index = 1,
+    QuestPhaseId = 103020041
   }
 })

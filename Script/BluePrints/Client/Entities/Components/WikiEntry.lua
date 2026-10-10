@@ -69,9 +69,22 @@ function Component:ShowWikiTips(WikiNoteId)
   if not UIManager then
     return
   end
-  if UIManager:GetUI("BattleMain") then
-    UIManager:LoadUINew("GuideBook_Tips", WikiNoteId)
+  if not UIManager:GetUI("BattleMain") then
+    return
   end
+  local TipsUI = UIManager:GetUIObj("GuideBook_Tips")
+  if TipsUI then
+    UIManager:LoadUINew("GuideBook_Tips", WikiNoteId)
+    return
+  end
+  if UIManager:GetUIObjIsAsyncLoading("GuideBook_Tips") then
+    return
+  end
+  UIManager:LoadUIAsync("GuideBook_Tips", function(AsyncTipsUI)
+    if AsyncTipsUI and not UIManager:GetUI("BattleMain") then
+      AsyncTipsUI:Close()
+    end
+  end, WikiNoteId)
 end
 
 function Component:Init()

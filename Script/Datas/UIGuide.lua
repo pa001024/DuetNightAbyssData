@@ -961,6 +961,11 @@ return ReadOnly("UIGuide", {
     GuideId = 163,
     MainGuideTitle = "MAINUIGUIDE_TITLE_SlideSpline_1"
   },
+  [164] = {
+    ChildGuideId = {16401, 16402},
+    GuideId = 164,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_DamageChongying_1"
+  },
   [1001] = {
     ChildGuideId = {
       100101,

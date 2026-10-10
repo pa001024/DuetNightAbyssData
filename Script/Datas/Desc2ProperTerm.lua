@@ -31,6 +31,7 @@ return ReadOnly("Desc2ProperTerm", {
   [320102] = T.RT_4,
   [320104] = T.RT_4,
   [410201] = T.RT_2,
+  [410205] = T.RT_1,
   [420202] = T.RT_2,
   [420203] = T.RT_2,
   [510202] = T.RT_2,

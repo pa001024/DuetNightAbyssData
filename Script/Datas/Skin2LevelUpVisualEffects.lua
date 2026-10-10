@@ -1,9 +1,9 @@
 local T = {}
 T.RT_1 = {
-  [1] = 2
+  [1] = 3
 }
 T.RT_2 = {
-  [1] = 3
+  [1] = 2
 }
 T.RT_3 = {
   [1] = 2,
@@ -11,6 +11,11 @@ T.RT_3 = {
 }
 T.RT_4 = {
   [1] = 1
+}
+T.RT_5 = {
+  [1] = 1,
+  [2] = 2,
+  [3] = 3
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
@@ -23,28 +28,28 @@ return ReadOnly("Skin2LevelUpVisualEffects", {
     [110292] = {
       IsAlways = true,
       IsAttach = true,
-      Level = T.RT_1,
+      Level = T.RT_2,
       SkinID = 110201,
       VisualEffectId = 110292
     },
     [110293] = {
       IsAlways = true,
       IsAttach = true,
-      Level = T.RT_1,
+      Level = T.RT_2,
       SkinID = 110201,
       VisualEffectId = 110293
     },
     [110296] = {
       IsAlways = true,
       IsAttach = true,
-      Level = T.RT_2,
+      Level = T.RT_1,
       SkinID = 110201,
       VisualEffectId = 110296
     },
     [110297] = {
       IsAlways = true,
       IsAttach = true,
-      Level = T.RT_2,
+      Level = T.RT_1,
       SkinID = 110201,
       VisualEffectId = 110297
     }
@@ -125,14 +130,14 @@ return ReadOnly("Skin2LevelUpVisualEffects", {
     [210195] = {
       IsAlways = true,
       IsAttach = true,
-      Level = T.RT_2,
+      Level = T.RT_1,
       SkinID = 210101,
       VisualEffectId = 210195
     },
     [210196] = {
       IsAlways = true,
       IsAttach = true,
-      Level = T.RT_2,
+      Level = T.RT_1,
       SkinID = 210101,
       VisualEffectId = 210196
     }
@@ -176,14 +181,14 @@ return ReadOnly("Skin2LevelUpVisualEffects", {
     [210295] = {
       IsAlways = true,
       IsAttach = true,
-      Level = T.RT_1,
+      Level = T.RT_2,
       SkinID = 210201,
       VisualEffectId = 210295
     },
     [210296] = {
       IsAlways = true,
       IsAttach = true,
-      Level = T.RT_2,
+      Level = T.RT_1,
       SkinID = 210201,
       VisualEffectId = 210296
     },
@@ -206,14 +211,14 @@ return ReadOnly("Skin2LevelUpVisualEffects", {
     [310452] = {
       IsAlways = true,
       IsAttach = true,
-      Level = T.RT_2,
+      Level = T.RT_1,
       SkinID = 310401,
       VisualEffectId = 310452
     },
     [310453] = {
       IsAlways = true,
       IsAttach = true,
-      Level = T.RT_2,
+      Level = T.RT_1,
       SkinID = 310401,
       VisualEffectId = 310453
     },
@@ -227,41 +232,95 @@ return ReadOnly("Skin2LevelUpVisualEffects", {
     [310455] = {
       IsAlways = true,
       IsAttach = true,
-      Level = T.RT_2,
+      Level = T.RT_1,
       SkinID = 310401,
       VisualEffectId = 310455
     },
     [310456] = {
       IsAlways = true,
       IsAttach = true,
-      Level = T.RT_2,
+      Level = T.RT_1,
       SkinID = 310401,
       VisualEffectId = 310456
     },
     [310457] = {
       IsAlways = true,
       IsAttach = true,
-      Level = {
-        [1] = 1,
-        [2] = 2,
-        [3] = 3
-      },
+      Level = T.RT_5,
       SkinID = 310401,
       VisualEffectId = 310457
     },
     [310458] = {
       IsAlways = true,
       IsAttach = true,
-      Level = T.RT_1,
+      Level = T.RT_2,
       SkinID = 310401,
       VisualEffectId = 310458
     },
     [310459] = {
       IsAlways = true,
       IsAttach = true,
-      Level = T.RT_1,
+      Level = T.RT_2,
       SkinID = 310401,
       VisualEffectId = 310459
+    }
+  },
+  [410301] = {
+    [410391] = {
+      IsAlways = true,
+      IsAttach = true,
+      Level = T.RT_5,
+      SkinID = 410301,
+      VisualEffectId = 410391
+    },
+    [410392] = {
+      IsAlways = true,
+      IsAttach = true,
+      Level = T.RT_4,
+      SkinID = 410301,
+      VisualEffectId = 410392
+    },
+    [410393] = {
+      IsAlways = true,
+      IsAttach = true,
+      Level = T.RT_3,
+      SkinID = 410301,
+      VisualEffectId = 410393
+    },
+    [410394] = {
+      IsAlways = true,
+      IsAttach = true,
+      Level = T.RT_3,
+      SkinID = 410301,
+      VisualEffectId = 410394
+    },
+    [410395] = {
+      IsAlways = true,
+      IsAttach = true,
+      Level = T.RT_2,
+      SkinID = 410301,
+      VisualEffectId = 410395
+    },
+    [410396] = {
+      IsAlways = true,
+      IsAttach = true,
+      Level = T.RT_2,
+      SkinID = 410301,
+      VisualEffectId = 410396
+    },
+    [410397] = {
+      IsAlways = true,
+      IsAttach = true,
+      Level = T.RT_1,
+      SkinID = 410301,
+      VisualEffectId = 410397
+    },
+    [410398] = {
+      IsAlways = true,
+      IsAttach = true,
+      Level = T.RT_1,
+      SkinID = 410301,
+      VisualEffectId = 410398
     }
   }
 })

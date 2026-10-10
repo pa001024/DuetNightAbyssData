@@ -988,7 +988,7 @@ return ReadOnly("SubRegion", {
     FlyLicense = -1,
     RegionId = 1081,
     SubRegionId = 108101,
-    SubRegionLevel = "Ailixian_SLF",
+    SubRegionLevel = "Ailixian_Miandao_SLF",
     SubRegionType = "field",
     SwitchPlayer = "Player",
     SyncPlayerInfo = 1
@@ -1006,7 +1006,7 @@ return ReadOnly("SubRegion", {
     FlyLicense = -1,
     RegionId = 1083,
     SubRegionId = 108301,
-    SubRegionLevel = "Ailixian_LLKWon",
+    SubRegionLevel = "Ailixian_Miandao_LilikouMJ",
     SubRegionType = "field",
     SwitchPlayer = "Player",
     SyncPlayerInfo = 1
@@ -1032,31 +1032,31 @@ return ReadOnly("SubRegion", {
   [109001] = {
     RegionId = 1090,
     SubRegionId = 109001,
-    SubRegionLevel = "Ailixian_Chenmian",
+    SubRegionLevel = "Ailixian_Abyss_CMZD",
     SubRegionType = "field"
   },
   [109101] = {
     RegionId = 1091,
     SubRegionId = 109101,
-    SubRegionLevel = "Ailixian_Shendianfeixu",
+    SubRegionLevel = "Ailixian_Abyss_SDFX",
     SubRegionType = "field"
   },
   [109201] = {
     RegionId = 1092,
     SubRegionId = 109201,
-    SubRegionLevel = "Ailixian_Manyue",
+    SubRegionLevel = "Ailixian_Abyss_MYJSC",
     SubRegionType = "field"
   },
   [109301] = {
     RegionId = 1093,
     SubRegionId = 109301,
-    SubRegionLevel = "Ailixian_Anzhixin",
+    SubRegionLevel = "Ailixian_Abyss_AZX",
     SubRegionType = "field"
   },
   [109401] = {
     RegionId = 1094,
     SubRegionId = 109401,
-    SubRegionLevel = "Ailixian_LizibeierHJ",
+    SubRegionLevel = "Ailixian_Abyss_SJHL",
     SubRegionType = "field"
   },
   [200101] = {

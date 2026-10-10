@@ -1,4 +1,5 @@
 require("UnLua")
+local GuildWarUtils = require("BluePrints.UI.WBP.Activity.Widget.GuildWar.GuildWarUtils")
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
 })
@@ -20,14 +21,45 @@ function M:Init()
   local CurrentRaidSeasonId = Avatar.CurrentRaidSeasonId
   local RaidSeasons = Avatar.RaidSeasons[CurrentRaidSeasonId]
   local RaidSeasonData = DataMgr.RaidSeason[RaidSeasons.RaidSeasonId]
-  local PreRaidRankData = DataMgr.PreRaidRank[RaidSeasonData.PreRaidRank]
-  if not PreRaidRankData then
-    DebugPrint("[WBP_Activity_GuildWar_GroupConfirm_C] 找不到对应的 PreRaidRankData:", RaidSeasonData.PreRaidRank)
-    return
+  if GuildWarUtils.IsRaidEnded() then
+    local FinalRank = RaidSeasons.FinalRank
+    self.Text_Confirm:SetText(GText("RaidDungeon_Raid_Rank_Title") .. tostring(FinalRank))
+    local RankRewardId = GuildWarUtils.GetRaidRankRewardByGroup(CurrentRaidSeasonId, RaidSeasons.PreRaidGroupId, FinalRank)
+    if RankRewardId then
+      self:RefreshRewardInfoList(RankRewardId)
+    else
+      DebugPrint("ljl@ TryOpenGuildWarRankConfirm 找不到对应的排行榜奖励, SeasonId=", CurrentRaidSeasonId, " PreRaidGroupId=", RaidSeasons.PreRaidGroupId, " FinalRank=", FinalRank)
+      return
+    end
+    Avatar:RaidSeasonGetRaidRankReward(function(ErrCode, Ret)
+      DebugPrint("ljl@ TryOpenGuildWarRankConfirm GetRewardCb: ErrCode=", ErrCode, " Ret=", CommonUtils.TableToString(Ret))
+      if ErrorCode:Check(ErrCode) and Ret then
+        UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, Ret, false, function()
+          self.List_Reward:SetFocus()
+        end, self)
+      end
+    end)
+  else
+    local PreRaidRankData = DataMgr.PreRaidRank[RaidSeasonData.PreRaidRank]
+    if not PreRaidRankData then
+      DebugPrint("ljl@ 找不到对应的 PreRaidRankData:", RaidSeasonData.PreRaidRank)
+      return
+    end
+    local RankReward = PreRaidRankData.RankReward[RaidSeasons.PreRaidGroupId]
+    DebugPrint("ljl@ TryOpenGuildWarGroupConfirm PreRaidGroupId=", RaidSeasons.PreRaidGroupId, " RankReward:", RankReward)
+    self:RefreshRewardInfoList(RankReward)
+    self.Text_Confirm:SetText(GText("RaidDungeon_PreRaid_Comfim"))
+    if GuildWarUtils.IsFloorMode() then
+      Avatar:RaidSeasonGetPreRankReward(function(ErrCode, Ret)
+        DebugPrint("ljl@ DoRequestPreEndReward GetRewardCb: ErrCode=", ErrCode, " Ret=", CommonUtils.TableToString(Ret))
+        if ErrorCode:Check(ErrCode) and Ret then
+          UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, Ret, false, function()
+            self.List_Reward:SetFocus()
+          end, self)
+        end
+      end)
+    end
   end
-  AudioManager(self):PlayUISound(self, "event:/ui/activity/gerengonghuizhan_rank_group_panel", "GuildWar_GroupConfirm", nil)
-  local RankReward = PreRaidRankData.RankReward[RaidSeasons.PreRaidGroupId]
-  self:RefreshRewardInfoList(RankReward)
   local RankIcon = self["Rank_" .. RaidSeasons.PreRaidGroupId]
   if RankIcon then
     local IconDynaMaterial = self.Icon_Rank:GetDynamicMaterial()
@@ -35,17 +67,27 @@ function M:Init()
       IconDynaMaterial:SetTextureParameterValue("MainTex", RankIcon)
     end
   end
-  self.Text_Confirm:SetText(GText("RaidDungeon_PreRaid_Comfim"))
   self.Text_Tip:SetText(GText("UI_Armory_ClickEmpty"))
   self.List_Reward:NavigateToIndex(0)
   self:PlayAnimation(self.In)
+  AudioManager(self):PlayUISound(self, "event:/ui/activity/gerengonghuizhan_rank_group_panel", "GuildWar_GroupConfirm", nil)
   if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
     self.WS_Type:SetActiveWidgetIndex(1)
     self:UpdatKeyDisplay()
   else
     self.WS_Type:SetActiveWidgetIndex(0)
   end
-  self.Text_GetReward:SetText(GText("RaidDungeon_PreRaid_RewardTips"))
+  local TextMap = ""
+  if GuildWarUtils.IsFloorMode() then
+    if GuildWarUtils.IsRaidEnded() then
+      TextMap = "Raid_Season_Floor_Order_Reward"
+    else
+      TextMap = "Raid_Season_Floor_Rank_Reward"
+    end
+  else
+    TextMap = "RaidDungeon_PreRaid_RewardTips"
+  end
+  self.Text_GetReward:SetText(GText(TextMap))
 end
 
 function M:RefreshRewardInfoList(RankRewardID)
@@ -184,9 +226,9 @@ end
 function M:OnReturnKeyDown()
   AudioManager(self):SetEventSoundParam(self, "GuildWar_GroupConfirm", {ToEnd = 1})
   self.Super.Close(self)
-  local Item = UIManager(self):GetUIObj("GuildWarLevel")
-  if Item then
-    Item:SelectCellFocus()
+  local ActivityMain = UIManager(self):GetUIObj("ActivityMain")
+  if ActivityMain then
+    ActivityMain:SetFocus()
   end
 end
 

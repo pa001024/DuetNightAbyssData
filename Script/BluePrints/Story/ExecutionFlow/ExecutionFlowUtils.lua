@@ -23,6 +23,7 @@ local FEFNode_ChangeStaticCreator = require("BluePrints.Story.ExecutionFlow.Node
 local FEFNode_SetVar = require("BluePrints.Story.ExecutionFlow.Nodes.EFNode_SetVar")
 local FEFNode_SetVisibility = require("BluePrints.Story.ExecutionFlow.Nodes.EFNode_SetVisibility")
 local FEFNode_PostProcessGraph = require("BluePrints.Story.ExecutionFlow.Nodes.EFNode_PostProcessGraph")
+local FEFNode_PlayPortraitFacial = require("BluePrints.Story.ExecutionFlow.Nodes.EFNode_PlayPortraitFacial")
 
 function M:CreateFlow(DialogueId, TalkTask, OnFinished)
   local DialogueScriptTable = DataMgr.DialogueConvert[DialogueId]
@@ -309,6 +310,14 @@ function M:PostProcessGraph(Flow, TalkTask, Params)
     return
   end
   return PPGraphNode.StartPin, PPGraphNode.FinishPin
+end
+
+function M:PlayPortraitFacial(Flow, TalkTask, Params)
+  local PlayPortraitFacialNode = FEFNode_PlayPortraitFacial:CreateNode(Flow, TalkTask, Params)
+  if nil == PlayPortraitFacialNode then
+    return
+  end
+  return PlayPortraitFacialNode.StartPin, PlayPortraitFacialNode.FinishPin
 end
 
 return M

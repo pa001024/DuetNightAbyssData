@@ -44,6 +44,7 @@ function GM_Command:Init_Command()
     OpenAppearanceCollectTask = "OpenAppearanceCollectTask",
     OGC = "OpenGuildChat",
     OpenGuildChat = "OpenGuildChat",
+    GuildBadgeVisible = "SetGuildBadgeVisible",
     HideUI = "HideUI",
     CloseUI = "CloseUI",
     CloseAllUI = "CloseAllUI",
@@ -119,6 +120,8 @@ function GM_Command:Init_Command()
     AYF = "AYFTEST",
     LGC = "LGCTEST",
     YLY = "YLYTEST",
+    TestEMSetActor = "TestEMSetActor",
+    TestSuperCycle = "TestSuperCycle",
     PetRaceLottery = "PetRaceLottery",
     DungeonEventTest = "DungeonEventTest",
     WVActivate = "WVActivate",
@@ -128,6 +131,7 @@ function GM_Command:Init_Command()
     PrintLevelDebugInfo = "PrintLevelDebugInfo",
     PrintPlayerInfoOnScreen = "PrintPlayerInfoOnScreen",
     PrintGameModeInfoOnScreen = "PrintGameModeInfoOnScreen",
+    ChangeMonsterPhysicsAsset = "ChangeMonsterPhysicsAsset",
     TeleportPlayer = "TeleportPlayer",
     PrintGetCover = "PrintGetCover",
     PrintUpdateCover = "PrintUpdateCover",
@@ -171,6 +175,10 @@ function GM_Command:Init_Command()
     ForbidDamage = "ForbidDamage",
     ForbidPlay = "ForbidPlay",
     TestBattle = "TestBattle",
+    DamageSyncProfile = "DamageSyncProfile",
+    DSP = "DamageSyncProfile",
+    ComboCountSyncProfile = "ComboCountSyncProfile",
+    CSP = "ComboCountSyncProfile",
     Attr = "GetOrSetPlayerAttr",
     WeaponAttr = "GetOrSetPlayerWeaponAttr",
     PinAttr = "PinAttr",
@@ -415,6 +423,8 @@ function GM_Command:Init_Command()
     CBP = "CompleteBlueProduct",
     CTime = "ShowClientTime",
     STime = "ShowServerTime",
+    RaidInfo = "ShowRaidSeasonInfo",
+    EnterRaidFloor = "EnterRaidFloor",
     StartBattle = "StartBattle",
     LoadSmallObj = "LoadSmallObjects",
     SetPlayerDilation = "SetPlayerDilation",
@@ -423,6 +433,7 @@ function GM_Command:Init_Command()
     ShowAvatarStatus = "ShowAvatarStatus",
     CheckCondition = "CheckCondition",
     ServerCheckCondition = "ServerCheckCondition",
+    CheckTalkTriggerCondition = "CheckTalkTriggerCondition",
     StatMonster = "StatMonster",
     StatMonsterMem = "StatMonsterMem",
     StatFX = "StatFX",
@@ -536,6 +547,8 @@ function GM_Command:Init_Command()
     SSRPlaySequence = "SSRPlaySequence",
     NewDeputeTest = "NewDeputeTest",
     DetectiveMinigame = "DetectiveMinigame",
+    DetectiveReasoningAni = "DetectiveReasoningAni",
+    DRA = "DetectiveReasoningAni",
     StartFlow = "StartFlow",
     StopFlow = "StopFlow",
     OpenWalnutRewardDialog = "OpenWalnutRewardDialog",
@@ -616,7 +629,11 @@ function GM_Command:Init_Command()
     TestRaceInGame = "TestRaceInGame",
     GuildInit = "GuildInit",
     GuildResource = "GuildResource",
-    StartSlideFromPoint = "StartSlideFromPoint"
+    StartSlideFromPoint = "StartSlideFromPoint",
+    LaunchTBHWidget = "LaunchTBHWidget",
+    TBH = "LaunchTBHWidget",
+    SendTBHChatCount = "SendTBHChatCount",
+    SimulatePickup = "SimulatePickup"
   }
 end
 
@@ -952,9 +969,23 @@ function GM_Command:ChatToOtherPlayer(Uid, Count, Content)
   end
 end
 
-function GM_Command:ResetEMCache()
+function GM_Command:ResetEMCache(Key, CacheType)
   local EMCache = require("EMCache.EMCache")
-  EMCache:Reset()
+  if not Key or "" == Key then
+    EMCache:Reset()
+    return
+  end
+  CacheType = string.lower(CacheType or "")
+  local bResetCommon = "user" ~= CacheType
+  local bResetUser = "common" ~= CacheType
+  if bResetCommon then
+    EMCache:Remove(Key, false)
+    EMCache:SaveCommon()
+  end
+  if bResetUser then
+    EMCache:Remove(Key, true)
+    EMCache:SaveUser()
+  end
 end
 
 function GM_Command:ShowNetPrint()
@@ -1211,6 +1242,20 @@ function GM_Command:ShowFlag(Name, bShow)
   end
 end
 
+function GM_Command:SetGuildBadgeVisible(Visible)
+  if "0" ~= Visible and "1" ~= Visible then
+    return "参数错误：GuildBadgeVisible <0|1>"
+  end
+  local Avatar = self:GetClientAvatar()
+  if not Avatar then
+    return "找不到Avatar"
+  end
+  Avatar:SetShowGuildBadge(function(ErrCode)
+    DebugPrint("SetGuildBadgeVisible", Visible, ErrCode)
+  end, "1" == Visible)
+  return "已请求设置公会标志显隐，等待服务器同步"
+end
+
 function GM_Command:QualityLevel(Level)
   local GameInstance = self:GetGameInstance()
   UEMGameInstance.SetOverallScalabilityLevel(Level and tonumber(Level) or -1)
@@ -1360,17 +1405,17 @@ local function BuildAppearanceImportPlanInfo(Char, Avatar, AppearanceIndex)
 end
 
 function GM_Command:OpenAppearanceRank(Mode)
+  local AppearanceRankModel = require("BluePrints.UI.WBP.Appearance.AppearanceRankModel")
   local ModeText = tostring(Mode or "0")
   if "1" == ModeText then
     local SelfRankInfo, TopNInfo = BuildAppearanceRankMockData()
-    self:OpenUI("AppearanceRank", SelfRankInfo, TopNInfo)
+    AppearanceRankModel:LoadUI(SelfRankInfo, TopNInfo)
     return
   end
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
   end
-  local AppearanceRankModel = require("BluePrints.UI.WBP.Appearance.AppearanceRankModel")
   AppearanceRankModel:Open()
 end
 
@@ -1827,6 +1872,20 @@ function GM_Command:TestBattle(Eid)
   self:ServerBattleCommand("TestBattle", Eid)
 end
 
+function GM_Command:DamageSyncProfile(Enable, DamageCount, MaxDamage, HealInterval, MonsterToPlayerDamageCount, MonsterToPlayerMaxDamage)
+  Enable = tonumber(Enable) or 1
+  DamageCount = tonumber(DamageCount) or 1000
+  MaxDamage = tonumber(MaxDamage) or 100
+  HealInterval = tonumber(HealInterval) or 3
+  MonsterToPlayerDamageCount = tonumber(MonsterToPlayerDamageCount) or 0
+  MonsterToPlayerMaxDamage = tonumber(MonsterToPlayerMaxDamage) or 100
+  self:ServerBattleCommand("DamageSyncProfile", self.Player.Eid, Enable, DamageCount, MaxDamage, HealInterval, MonsterToPlayerDamageCount, MonsterToPlayerMaxDamage)
+end
+
+function GM_Command:ComboCountSyncProfile(ResultCount)
+  self:ServerBattleCommand("ComboCountSyncProfile", self.Player.Eid, tonumber(ResultCount) or 1000)
+end
+
 function GM_Command:GetOrSetPlayerAttr(AttrName, Value)
   if not AttrName then
     ScreenPrint(string.format("至少需要传入属性名才可进行查询操作"))
@@ -2271,6 +2330,141 @@ function GM_Command:YXDTEST(type)
     WorldCompositionSubSystem:AddCustomStreamingLocation(Key, Location)
     WorldCompositionSubSystem:AddCustomStreamingLocation("3123213", Location1)
     print(string.format("Added CustomStreamingLocation: Key=%s, X=10000, Y=20000, Z=0", Key))
+  end
+end
+
+function GM_Command:TestEMSetActor(Type)
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
+  if not IsValid(Player) then
+    print("TestEMSetActor: no valid player character")
+    return
+  end
+  Type = tonumber(Type) or 1
+  if 1 == Type then
+    local OldLoc = Player:K2_EMGetActorLocation()
+    local NewLoc = {
+      X = OldLoc.X,
+      Y = OldLoc.Y,
+      Z = OldLoc.Z + 100
+    }
+    Player:K2_EMSetActorLocation(NewLoc)
+    local CurLoc = Player:K2_EMGetActorLocation()
+    print(string.format("TestEMSetActor Loc: expect Z=%.2f, actual Z=%.2f", NewLoc.Z, CurLoc.Z))
+    local OldRot = Player:K2_EMGetActorRotation()
+    local NewRot = {
+      Pitch = 0,
+      Yaw = OldRot.Yaw + 90,
+      Roll = 0
+    }
+    Player:K2_EMSetActorRotation(NewRot)
+    local CurRot = Player:K2_EMGetActorRotation()
+    print(string.format("TestEMSetActor Rot: expect Yaw=%.2f, actual Yaw=%.2f", NewRot.Yaw, CurRot.Yaw))
+    return
+  end
+  local OldLoc = Player:K2_EMGetActorLocation()
+  local CaseTable = {
+    [2] = function()
+      Player:K2_EMSetActorLocation({
+        X = OldLoc.X,
+        Y = OldLoc.Y
+      })
+    end,
+    [3] = function()
+      Player:K2_EMSetActorRotation({Pitch = 0, Roll = 0})
+    end,
+    [4] = function()
+      Player:K2_EMSetActorRotation({
+        Pitch = 0,
+        Yaw = "abc",
+        Roll = 0
+      })
+    end
+  }
+  local Case = CaseTable[Type]
+  if not Case then
+    print("TestEMSetActor: unknown type " .. tostring(Type))
+    return
+  end
+  local Ok, Err = pcall(Case)
+  if Ok then
+    print(string.format("TestEMSetActor case %d: FAILED, no error raised", Type))
+  else
+    print(string.format("TestEMSetActor case %d: got expected error: %s", Type, tostring(Err)))
+  end
+end
+
+function GM_Command:TestSuperCycle(Type)
+  local Candidates = {
+    {
+      Name = "IsQuestChainFinished",
+      Call = function(Wrapper, Obj)
+        return Wrapper(Obj, 0)
+      end
+    },
+    {
+      Name = "CheckFirstMonster",
+      Call = function(Wrapper, Obj)
+        return Wrapper(Obj, 0, false)
+      end
+    },
+    {
+      Name = "CheckStrongGuideFirstMonster",
+      Call = function(Wrapper, Obj)
+        return Wrapper(Obj, 0, false)
+      end
+    }
+  }
+  local Candidate = Candidates[tonumber(Type) or 1]
+  if not Candidate then
+    print("TestSuperCycle: unknown type " .. tostring(Type) .. ", valid range 1-" .. #Candidates)
+    return
+  end
+  local ClassTbl = getmetatable(self)
+  local FName = Candidate.Name
+  if not ClassTbl or type(rawget(ClassTbl, FName)) ~= "function" then
+    print("TestSuperCycle: class table or lua function not found: " .. FName)
+    return
+  end
+  local SavedFunc = rawget(ClassTbl, FName)
+  local SavedSuper = rawget(ClassTbl, "Super")
+  
+  local function Restore()
+    rawset(ClassTbl, "Super", SavedSuper)
+    rawset(ClassTbl, FName, SavedFunc)
+    rawset(self, FName, nil)
+  end
+  
+  rawset(ClassTbl, FName, nil)
+  local Wrapper = self[FName]
+  rawset(ClassTbl, FName, nil)
+  if type(Wrapper) ~= "function" then
+    Restore()
+    print("TestSuperCycle: " .. FName .. " is not a UFunction on avatar, try another type")
+    return
+  end
+  
+  local function ClearFailed()
+    UE4.UKismetSystemLibrary.ExecuteConsoleCommand(GWorld.GameInstance, "lua.clearfailedfuncs", nil)
+  end
+  
+  ClearFailed()
+  rawset(ClassTbl, "Super", ClassTbl)
+  print("========== TestSuperCycle: invoking " .. FName .. " with cyclic Super chain ==========")
+  local Ok, Err = pcall(Candidate.Call, Wrapper, self)
+  Restore()
+  ClearFailed()
+  if not Ok then
+    print("TestSuperCycle: invoke error: " .. tostring(Err))
+    return
+  end
+  print("TestSuperCycle: invoke returned, no dead loop")
+  print("预期日志: Error LogUnLua: FFunctionRegistry: cyclic Super chain detected when resolving '" .. FName .. "' ...")
+  print("若未看到该 Error 且函数正常执行，说明该函数此前已被成功缓存，请换 gm TestSuperCycle 2/3 或重开一局再测")
+  local VerifyOk, VerifyErr = pcall(Candidate.Call, Wrapper, self)
+  if VerifyOk then
+    print("TestSuperCycle: 恢复验证通过，" .. FName .. " 可正常调用")
+  else
+    print("TestSuperCycle: 恢复验证调用异常: " .. tostring(VerifyErr))
   end
 end
 
@@ -3963,7 +4157,16 @@ function GM_Command:HandScale(Scale)
 end
 
 function GM_Command:UpdateVLM()
-  URuntimeCommonFunctionLibrary.UpdateFoliageVLM(self.Player)
+  local EnvirSystemActors = TArray(AActor)
+  local BPClass = LoadClass("/Game/Asset/Scene/common/LightFog/BP_PlaneFog.BP_PlaneFog")
+  local Mat = LoadObject("/Game/Asset/Scene/common/4Materials/BaseMaterials/M_FogBillbord.M_FogBillbord")
+  print("UpdateVLM", Mat)
+  UE4.UGameplayStatics.GetAllActorsOfClass(self.Player, BPClass, EnvirSystemActors)
+  local ActorTab = EnvirSystemActors:ToTable()
+  for i, v in pairs(ActorTab) do
+    v.Plane:CreateDynamicMaterialInstance(0, Mat)
+    print("BP_PlaneFog", v:GetName())
+  end
 end
 
 function GM_Command:ChangeCreatureSpeed(Speed)
@@ -4860,6 +5063,50 @@ function GM_Command:ShowServerTime()
   end
 end
 
+function GM_Command:ShowRaidSeasonInfo()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  print("=========== RaidSeasonInfo ===========")
+  local CurrentRaidSeasonId = Avatar.CurrentRaidSeasonId
+  local RaidSeasons = Avatar.RaidSeasons[CurrentRaidSeasonId]
+  print("CurrentRaidSeasonId =", CurrentRaidSeasonId)
+  if not RaidSeasons then
+    print("RaidSeasons is nil")
+    return
+  end
+  print("RaidSeasonId =", RaidSeasons.RaidSeasonId)
+  print("MaxPreRaidScore =", RaidSeasons.MaxPreRaidScore)
+  print("MaxRaidScore =", RaidSeasons.MaxRaidScore)
+  print("PreRaidGroupId =", RaidSeasons.PreRaidGroupId)
+  print("RaidGroupId =", RaidSeasons.RaidGroupId)
+  print("PreRaidRewardGot =", RaidSeasons.PreRaidRewardGot)
+  print("BanState =", RaidSeasons.BanState)
+  print("FinalRank =", RaidSeasons.FinalRank)
+  print("PreRaidFloor =", RaidSeasons.PreRaidFloor)
+  print("PreRaidFloorPassTime =", RaidSeasons.PreRaidFloorPassTime)
+  print("PreRaidUnlockFloor =", RaidSeasons.PreRaidUnlockFloor)
+  print("RaidFloor =", RaidSeasons.RaidFloor)
+  print("RaidFloorPassTime =", RaidSeasons.RaidFloorPassTime)
+  print("RaidUnlockFloor =", RaidSeasons.RaidUnlockFloor)
+  print("RaidRankRewardGot =", RaidSeasons.RaidRankRewardGot)
+  print("EventId =", RaidSeasons.EventId)
+  print("PreRaidRank =", RaidSeasons.PreRaidRank)
+  print("PreRaidTime =", RaidSeasons.PreRaidTime)
+  print("RaidTime =", RaidSeasons.RaidTime)
+  print("RaidRankCount =", RaidSeasons.RaidRankCount)
+  print("=====================================")
+end
+
+function GM_Command:EnterRaidFloor(arg)
+  local FloorId = tonumber(arg)
+  local Avatar = GWorld:GetAvatar()
+  local RaidFloorInfo = DataMgr.RaidFloor[FloorId]
+  local RaidSeasonInfo = DataMgr.RaidSeason[RaidFloorInfo.RaidSeason]
+  Avatar:EnterEventDungeon(nil, RaidFloorInfo.DungeonId, nil, RaidSeasonInfo.EventId, {FloorId = FloorId})
+end
+
 function GM_Command:StartBattle()
   local MyPlayerController = UE4.UGameplayStatics.GetPlayerController(self:GetGameInstance(), 0)
   MyPlayerController:StartBattle()
@@ -5572,6 +5819,23 @@ function GM_Command:ServerCheckCondition(ConditionId, bShowFailed)
     
     ConditionUtils.ServerCheckCondition(Avatar, tonumber(ConditionId), cb, bShowFailed)
   end
+end
+
+function GM_Command:CheckTalkTriggerCondition(TalkTriggerId)
+  local Id = tonumber(TalkTriggerId)
+  if not Id then
+    return "TalkTriggerId 非法:" .. tostring(TalkTriggerId)
+  end
+  local StorySubsystem = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UStorySubsystem:StaticClass())
+  if not StorySubsystem then
+    return "StorySubsystem 为空"
+  end
+  local TalkTriggerData = DataMgr.TalkTrigger[Id]
+  PrintTable({
+    TalkTriggerId = Id,
+    TriggerCondition = TalkTriggerData and TalkTriggerData.TriggerCondition
+  }, 5, "当前配置")
+  return string.format("CheckTalkTriggerCondition(%d) = %s", Id, tostring(StorySubsystem:CheckTalkTriggerCondition(Id)))
 end
 
 function GM_Command:PrintGetCover(DoPrint)
@@ -7476,6 +7740,23 @@ function GM_Command:DetectiveMinigame(type, Id)
       UIManager(self):LoadUINew("DetectiveReasoningDetail", Id)
     end)
   end
+end
+
+function GM_Command:DetectiveReasoningAni(QuestionId)
+  QuestionId = tonumber(QuestionId)
+  local Question = QuestionId and DataMgr.DetectiveQuestion[QuestionId]
+  if not Question then
+    ScreenPrint("DetectiveReasoningAni 推理问题不存在 QuestionId: " .. tostring(QuestionId))
+    return
+  end
+  local ImagePath = Question.ReasoningImagePath
+  if not ImagePath or "" == ImagePath then
+    ImagePath = "未配置，显示主角图"
+  end
+  ScreenPrint("DetectiveReasoningAni QuestionId: " .. QuestionId .. " 推理图片: " .. ImagePath)
+  local GameUIManager = UIManager(self)
+  GameUIManager:LoadUINew("DetectiveMinigame")
+  GameUIManager:LoadUINew("DetectiveReasoningAni", {}, false, QuestionId)
 end
 
 function GM_Command:ToggleNewSettlementCamera()
@@ -10179,6 +10460,75 @@ function GM_Command:TestRaceInGame(flag)
   end
 end
 
+function GM_Command:ChangeMonsterPhysicsAsset(bUseMinimal, Eid)
+  bUseMinimal = tonumber(bUseMinimal)
+  
+  local function ApplyToMonster(Monster)
+    local MonsterEid = tostring(Monster.Eid or "Unknown")
+    local Mesh = Monster.Mesh
+    if not IsValid(Mesh) or not IsValid(Mesh.SkeletalMesh) then
+      DebugPrint(string.format("[CMPA] Eid=%s invalid mesh", MonsterEid))
+      return
+    end
+    if Mesh:IsAnySimulatingPhysics() then
+      DebugPrint(string.format("[CMPA] Eid=%s skipped: simulating physics", MonsterEid))
+      return
+    end
+    local SourceAsset = Mesh.SkeletalMesh:GetPhysicsAsset()
+    if not IsValid(SourceAsset) then
+      DebugPrint(string.format("[CMPA] Eid=%s invalid Physics Asset", MonsterEid))
+      return
+    end
+    local SourcePath = UE4.UKismetSystemLibrary.GetPathName(SourceAsset)
+    local Suffix = 1 == bUseMinimal and "_Minimal" or ""
+    local PackagePath, ObjectName = string.match(SourcePath, "^(.*)%.([^%.]+)$")
+    if not PackagePath or not ObjectName then
+      DebugPrint(string.format("[CMPA] Eid=%s invalid asset path: %s", MonsterEid, tostring(SourcePath)))
+      return
+    end
+    PackagePath = string.gsub(PackagePath, "_Minimal$", "")
+    PackagePath = string.gsub(PackagePath, "_Lite$", "")
+    ObjectName = string.gsub(ObjectName, "_Minimal$", "")
+    ObjectName = string.gsub(ObjectName, "_Lite$", "")
+    local TargetPath = PackagePath .. Suffix .. "." .. ObjectName .. Suffix
+    local TargetAsset = UE4.UResourceLibrary.FindObject(self.Player, TargetPath)
+    if not IsValid(TargetAsset) then
+      TargetAsset = LoadObject(TargetPath)
+      if not IsValid(TargetAsset) then
+        DebugPrint(string.format("[CMPA] Eid=%s asset can not find physics asset: %s", MonsterEid, TargetPath))
+        return
+      end
+    end
+    Mesh:SetPhysicsAsset(TargetAsset)
+  end
+  
+  local BattleInst = Battle(self.Player)
+  if not BattleInst then
+    return
+  end
+  if Eid then
+    Eid = tonumber(Eid)
+    if not Eid then
+      DebugPrint("[CMPA] Eid invalid")
+      return
+    end
+    local Monster = BattleInst:GetEntity(Eid)
+    if not (Monster and Monster.IsMonster) or not Monster:IsMonster() then
+      DebugPrint(string.format("[CMPA] monster Eid=%d not found", Eid))
+      return
+    end
+    ApplyToMonster(Monster)
+  else
+    local Entities = BattleInst:GetAllEntities()
+    for _, Entity in pairs(Entities or {}) do
+      if Entity and Entity.IsMonster and Entity:IsMonster() then
+        ApplyToMonster(Entity)
+      end
+    end
+  end
+  DebugPrint("[CMPA] finish change physics asset")
+end
+
 function GM_Command:TestCoopRank(RoomConfId, RoomUniId)
   local CoopModel = require("BluePrints.UI.WBP.Activity.PC.Coop.Model.CoopModel")
   
@@ -10802,6 +11152,41 @@ function GM_Command:_GetValidTeamHallDungeonLevelIndex(SecondType, DungeonLevel)
     end
   end
   return 1
+end
+
+function GM_Command:LaunchTBHWidget()
+  if not UE4.UEMTaskbarRewardLibrary then
+    ScreenPrint("[TBH] UE4.UEMTaskbarRewardLibrary is nil, C++ module may not be compiled/loaded.")
+    return
+  end
+  local bOk, Result = pcall(function()
+    return UE4.UEMTaskbarRewardLibrary.LaunchTaskbarRewardWidget()
+  end)
+  if not bOk then
+    ScreenPrint("[TBH] Launch failed (pcall error): " .. tostring(Result))
+    return
+  end
+  ScreenPrint("[TBH] Launch result: " .. tostring(Result))
+  local GameInstance = GWorld.GameInstance
+  if GameInstance and GameInstance:SyncTBHCharacterState() then
+    ScreenPrint("[TBH] Synced character state to taskbar widget")
+  end
+end
+
+function GM_Command:SendTBHChatCount(Team, World, Party)
+  if not UE4.UEMTaskbarRewardLibrary then
+    ScreenPrint("[TBH] UE4.UEMTaskbarRewardLibrary is nil, C++ module may not be compiled/loaded.")
+    return
+  end
+  Team, World, Party = tonumber(Team) or 0, tonumber(World) or 0, tonumber(Party) or 0
+  local bOk, Err = pcall(function()
+    UE4.UEMTaskbarRewardLibrary.SendTaskbarChatCount(Team, World, Party)
+  end)
+  if not bOk then
+    ScreenPrint("[TBH] Send chat count failed: " .. tostring(Err))
+    return
+  end
+  ScreenPrint(string.format("[TBH] Sent chat unread: team=%d, world=%d, party=%d", Team, World, Party))
 end
 
 return GM_Command

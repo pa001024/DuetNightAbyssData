@@ -16,7 +16,9 @@ function Component:SetSelectedContent(Content)
   end
   self.SelectedContent = Content
   self.LastSelectedContent = Content
-  self.LastSelectedListContent = Content
+  if nil ~= Content then
+    self.LastSelectedListContent = Content
+  end
   self:_RefreshContentSelectedState(PreviousSelectedContent)
   self:_RefreshContentSelectedState(Content)
 end

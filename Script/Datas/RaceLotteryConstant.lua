@@ -114,6 +114,10 @@ return ReadOnly("RaceLotteryConstant", {
     Constant = "RandomRaceId",
     ConstantValue = "2"
   },
+  RewardMailId = {
+    Constant = "RewardMailId",
+    ConstantValue = "19119"
+  },
   ShortListedPlayerNum = {
     Constant = "ShortListedPlayerNum",
     ConstantValue = "6"

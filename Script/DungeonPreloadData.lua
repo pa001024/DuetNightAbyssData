@@ -319,6 +319,19 @@ local T = {
       },
       OnlineCoefficient = 1.0
     },
+    RT_30 = {
+      FixedMonster = {},
+      MonsterSpawn = {
+        [6001001] = 10,
+        [6002001] = 8,
+        [6004011] = 1,
+        [6012001] = 7,
+        [8001001] = 10,
+        [8002001] = 11,
+        [8003001] = 4
+      },
+      OnlineCoefficient = 1.0
+    },
     RT_4 = {
       FixedMonster = {},
       MonsterSpawn = {
@@ -569,6 +582,34 @@ local T = {
         [9002001] = 7,
         [9002017] = 1,
         [9002019] = 1,
+        [9007001] = 8
+      },
+      OnlineCoefficient = 2.0
+    },
+    RT_21 = {
+      FixedMonster = {},
+      MonsterSpawn = {
+        [6001001] = 10,
+        [6002001] = 8,
+        [6004011] = 1,
+        [6012001] = 7,
+        [6013015] = 1,
+        [8001001] = 10,
+        [8002001] = 11,
+        [8003001] = 4
+      },
+      OnlineCoefficient = 1.0
+    },
+    RT_22 = {
+      FixedMonster = {},
+      MonsterSpawn = {
+        [6001001] = 10,
+        [6001011] = 1,
+        [6002001] = 8,
+        [6012001] = 7,
+        [9001001] = 10,
+        [9002001] = 7,
+        [9002018] = 1,
         [9007001] = 8
       },
       OnlineCoefficient = 2.0
@@ -3172,6 +3213,12 @@ local ReadOnly = {
   [21612] = T.SoloRaid.RT_8,
   [21613] = T.SoloRaid.RT_8,
   [21614] = T.SoloRaid.RT_8,
+  [21701] = T.SoloRaid.RT_5,
+  [21703] = T.SoloRaid.RT_6,
+  [21711] = T.SoloRaid.RT_5,
+  [21712] = T.SoloRaid.RT_4,
+  [21713] = T.SoloRaid.RT_6,
+  [21714] = T.SoloRaid.RT_8,
   [22001] = T.MonsterRush.RT_1,
   [22002] = T.MonsterRush.RT_2,
   [22003] = T.MonsterRush.RT_3,
@@ -3179,6 +3226,13 @@ local ReadOnly = {
   [22005] = T.MonsterRush.RT_1,
   [22006] = T.MonsterRush.RT_3,
   [22007] = T.MonsterRush.RT_3,
+  [22008] = T.MonsterRush.RT_1,
+  [22009] = T.MonsterRush.RT_2,
+  [22010] = T.MonsterRush.RT_3,
+  [22011] = T.MonsterRush.RT_2,
+  [22012] = T.MonsterRush.RT_1,
+  [22013] = T.MonsterRush.RT_3,
+  [22014] = T.MonsterRush.RT_3,
   [30001] = T.Excavation.RT_1,
   [30002] = T.Capture.RT_1,
   [30004] = T.Capture.RT_1,
@@ -3648,6 +3702,10 @@ local ReadOnly = {
   [616107] = T.SurvivalMiniPro.RT_28,
   [616108] = T.Defence.RT_28,
   [616109] = T.Defence.RT_29,
-  [616110] = T.DefenceMove.RT_20
+  [616110] = T.DefenceMove.RT_20,
+  [617001] = T.Defence.RT_30,
+  [617002] = T.Defence.RT_1,
+  [617101] = T.DefenceMove.RT_21,
+  [617102] = T.DefenceMove.RT_22
 }
 return ReadOnly

@@ -2,6 +2,7 @@ require("UnLua")
 require("DataMgr")
 local UIUtils = require("Utils.UIUtils")
 local GMVariable = require("BluePrints.UI.GMInterface.GMVariable")
+local MonsterUtils = require("Utils.MonsterUtils")
 local BP_CombatPropBase_C = Class({
   "BluePrints.Item.BP_CombatItemBase_C"
 })
@@ -79,7 +80,7 @@ function BP_CombatPropBase_C:CheckIgnoreByRangeHit(TargetActor)
     return false
   end
   if TargetActor:Cast(AMonsterCharacter) then
-    local MonsterData = DataMgr.Monster[TargetActor.UnitId]
+    local MonsterData = MonsterUtils.GetMonsterDataByOwner(TargetActor)
     if not MonsterData then
       return false
     end

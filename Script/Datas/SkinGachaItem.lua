@@ -234,6 +234,31 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("SkinGachaItem", {
+  [99911] = {
+    Count = T.RT_1,
+    GachaItemId = 99911,
+    Id = {
+      [1] = 410301,
+      [2] = 111,
+      [3] = 111
+    },
+    Probability = T.RT_2,
+    Type = T.RT_3
+  },
+  [99912] = {
+    Count = T.RT_4,
+    GachaItemId = 99912,
+    Id = T.RT_5,
+    Probability = T.RT_6,
+    Type = T.RT_7
+  },
+  [99913] = {
+    Count = T.RT_8,
+    GachaItemId = 99913,
+    Id = T.RT_9,
+    Probability = T.RT_10,
+    Type = T.RT_11
+  },
   [99921] = {
     Count = T.RT_1,
     GachaItemId = 99921,

@@ -2300,6 +2300,46 @@ return {
       UnitType = "Mechanism",
       UnitId = 1
     },
+    ["351192091"] = {
+      CreatorId = 351192091,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["351192092"] = {
+      CreatorId = 351192092,
+      UnitType = "Npc",
+      UnitId = 260020
+    },
+    ["351192093"] = {
+      CreatorId = 351192093,
+      UnitType = "Monster",
+      UnitId = 9801001
+    },
+    ["351192094"] = {
+      CreatorId = 351192094,
+      UnitType = "Monster",
+      UnitId = 9801002
+    },
+    ["351192097"] = {
+      CreatorId = 351192097,
+      UnitType = "Monster",
+      UnitId = 9801001
+    },
+    ["351192096"] = {
+      CreatorId = 351192096,
+      UnitType = "Monster",
+      UnitId = 9801002
+    },
+    ["351192095"] = {
+      CreatorId = 351192095,
+      UnitType = "Monster",
+      UnitId = 9801001
+    },
+    ["351192098"] = {
+      CreatorId = 351192098,
+      UnitType = "Monster",
+      UnitId = 9801001
+    },
     ["1240044"] = {
       CreatorId = 1240044,
       UnitType = "Npc",

@@ -222,7 +222,7 @@ function M:PlayOrStopBGM(Params)
   local PlayType = Params.PlayType
   local TalkTask = self:TryGetTalkTask()
   local TalkTaskData = TalkTask.TalkTaskData
-  local QuestChainId = TalkTaskData.QuestChainId
+  local QuestChainId = TalkTaskData.BGMQuestChainId or TalkTaskData.QuestChainId or 0
   local RelateRegionIdArray = {}
   for _, Id in pairs(RelatedRegionId) do
     table.insert(RelateRegionIdArray, Id)

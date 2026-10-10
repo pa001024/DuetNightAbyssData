@@ -8,6 +8,15 @@ local M = Class({
 
 function M:Construct()
   self.Btn_FullClose.OnClicked:Add(self, self.CloseSelf)
+  self.bQuickAddOpen = false
+  self.bShopCartVisible = false
+  if self.SizeBox_Cart then
+    self.SizeBox_Cart:SetVisibility(ESlateVisibility.Collapsed)
+  end
+  if self.Btn_ShopCart then
+    self.Btn_ShopCart:BindEventOnClicked(self, self.OnClickAddToCart)
+  end
+  self:AddDispatcher(EventID.OnShoppingCartChanged, self, self.OnShoppingCartChanged)
   self.Btn_GiftPay:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.Btn_GiftPay.Text_Undiscounted_Price:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Btn_GiftPay:BindEventOnClicked(self, self.PurChaseShopItem)
@@ -56,6 +65,10 @@ end
 
 function M:Destruct()
   self.Btn_GiftPay:UnBindEventOnClickedByObj(self)
+  if self.Btn_ShopCart then
+    self.Btn_ShopCart:UnBindEventOnClickedByObj(self)
+  end
+  self:RemoveDispatcher(EventID.OnShoppingCartChanged, self)
   self.Super.Destruct(self)
 end
 
@@ -63,6 +76,8 @@ function M:OnLoaded(...)
   M.Super.OnLoaded(self)
   self.ShopItemData, self.ParentWidget, self.CloseCallback = ...
   self.bInGiftShop = GiftController:IsInGiftShop()
+  local ShopMain = UIManager(self):GetUIObj("ShopMain")
+  self.bQuickAddOpen = ShopMain and ShopMain.bQuickAddOpen or false
   self.CurrentCount = 1
   self.UnitPrice = ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId)
   self:SetFocus()
@@ -259,6 +274,7 @@ function M:OnLoaded(...)
   self.Com_Tab_ResourceBar:BindEvents(self, {
     OnMenuOpenChanged = self.OnDescOpenChanged
   })
+  self:InitShoppingCartBtn()
   self:UpdateGamePadKeyInfo()
   if ShopUtils:ShouldPlaySoldOutAnimation(self.ShopItemData.ItemId) then
     self:PlayAnimation(self.In_SoldOut)
@@ -760,6 +776,11 @@ function M:OnGamePadDown(InKeyName)
     else
       self:PurChaseShopItem()
     end
+  elseif InKeyName == UIConst.GamePadKey.FaceButtonLeft then
+    if self.bShopCartVisible and not self.FocusOnSubItem and not self.bTipOpen and not self.bItemTipsOpen then
+      IsEventHandled = true
+      self:OnClickAddToCart()
+    end
   elseif InKeyName == UIConst.GamePadKey.FaceButtonTop and self.BtnChooseGiftEnable and not self.FocusOnSubItem and not self.bTipOpen and not self.bItemTipsOpen then
     IsEventHandled = true
     self:OnBtnChooseGiftClicked()
@@ -848,6 +869,73 @@ function M:UpdateBtnPriceState(NeedCount)
     end
   end
   self.Btn_GiftPay.Text_Price:SetText(NeedCount)
+end
+
+function M:InitShoppingCartBtn()
+  if not self.ShopItemData then
+    return
+  end
+  if not self.SizeBox_Cart or not self.Btn_ShopCart then
+    return
+  end
+  local Avatar = GWorld:GetAvatar()
+  local bSupported = ShopUtils:IsShoppingCartSupported(self.ShopItemData.ItemId)
+  local bHasRequire = ShopUtils:HasUnsatisfiedRequire(self.ShopItemData.ItemId)
+  local bVisible = bSupported and not bHasRequire and not self.bInGiftShop
+  self.bShopCartVisible = bVisible
+  self.SizeBox_Cart:SetVisibility(bVisible and ESlateVisibility.SelfHitTestInvisible or ESlateVisibility.Collapsed)
+  if not bVisible then
+    return
+  end
+  self.Btn_ShopCart.Text_Button:SetText(GText("UI_SHOP_SHOPPINGCART_ADD"))
+  if self.Btn_ShopCart.SetGamePadImg then
+    self.Btn_ShopCart:SetGamePadImg("X")
+  end
+  local CartItem = Avatar and Avatar.ShoppingCart and Avatar.ShoppingCart.Items[self.ShopItemData.ItemId]
+  local CurrentCount = CartItem and CartItem.Count or 0
+  if CurrentCount > 0 then
+    self.Btn_ShopCart:SetReddotNumber(CurrentCount)
+    self.Btn_ShopCart:SetReddotNumberVisibility(ESlateVisibility.SelfHitTestInvisible)
+  else
+    self.Btn_ShopCart:SetReddotNumberVisibility(ESlateVisibility.Collapsed)
+  end
+  local bPending = ShopUtils:IsShoppingCartPending()
+  self.Btn_ShopCart:ForbidBtn(bPending)
+end
+
+function M:OnClickAddToCart()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar or not self.ShopItemData then
+    return
+  end
+  if ShopUtils:IsShoppingCartPending() then
+    return
+  end
+  local ShopItemId = self.ShopItemData.ItemId
+  if not ShopUtils:IsShoppingCartSupported(ShopItemId) then
+    return
+  end
+  local Remain, Total = ShopUtils:GetContextRemainAndTotal(ShopItemId)
+  local CartItem = Avatar.ShoppingCart.Items[ShopItemId]
+  local CurrentCount = CartItem and CartItem.Count or 0
+  if -1 ~= Remain and Remain < CurrentCount + 1 then
+    UIManager(self):ShowUITip("CommonToastMain", GText("UI_SHOP_SHOPPINGCART_COUNT_LIMIT"), 1.0)
+    return
+  end
+  local ExpectedRevision = Avatar.ShoppingCart.Revision
+  Avatar:AddShoppingCartItem(ShopItemId, 1, ExpectedRevision)
+  self:PlayAddToCartEffect()
+end
+
+function M:PlayAddToCartEffect()
+  local ShopMain = UIManager(self):GetUIObj("ShopMain")
+  if ShopMain and ShopMain.PlayShoppingCartAddEffect and self.Btn_ShopCart then
+    ShopMain:PlayShoppingCartAddEffect(self.Btn_ShopCart)
+  end
+end
+
+function M:OnShoppingCartChanged()
+  self:InitShoppingCartBtn()
 end
 
 return M

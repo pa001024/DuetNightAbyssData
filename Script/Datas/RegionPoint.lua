@@ -392,7 +392,7 @@ return ReadOnly("RegionPoint", {
     TelepointId = 1708,
     TeleportPointPos = 4,
     TeleportSubRegion = 107201,
-    UnlockConditionId = 11020302
+    UnlockConditionId = 11020301
   },
   [2030] = {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_EX02_JHS.T_Gp_EX02_JHS",

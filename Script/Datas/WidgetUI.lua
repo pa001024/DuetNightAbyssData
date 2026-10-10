@@ -1141,6 +1141,11 @@ return ReadOnly("WidgetUI", {
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Guild/Mobile/WBP_Guild_Member_M.WBP_Guild_Member_M'",
     UIName = "GuildMember"
   },
+  GuildWarFloorItem = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/GuildWar/WBP_Activity_GuildWar_FloorItem.WBP_Activity_GuildWar_FloorItem'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/GuildWar/WBP_Activity_GuildWar_FloorItem.WBP_Activity_GuildWar_FloorItem'",
+    UIName = "GuildWarFloorItem"
+  },
   GuildWarLevelItem = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/GuildWar/WBP_Activity_GuildWar_LevelItem.WBP_Activity_GuildWar_LevelItem'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/GuildWar/WBP_Activity_GuildWar_LevelItem.WBP_Activity_GuildWar_LevelItem'",
@@ -1150,6 +1155,16 @@ return ReadOnly("WidgetUI", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/HUD_Bar/Unit/WBP_HPBar_New.WBP_HPBar_New'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/HUD_Bar/Unit/WBP_HPBar_New.WBP_HPBar_New'",
     UIName = "HPBar"
+  },
+  HardBossEnvironmentItem = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/HardBoss/WBP_Activity_HardBoss_EnvironmentItem.WBP_Activity_HardBoss_EnvironmentItem'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/HardBoss/WBP_Activity_HardBoss_EnvironmentItem.WBP_Activity_HardBoss_EnvironmentItem'",
+    UIName = "HardBossEnvironmentItem"
+  },
+  HardBossLevelItem = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/HardBoss/WBP_Activity_HardBoss_LevelItem.WBP_Activity_HardBoss_LevelItem'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/HardBoss/WBP_Activity_HardBoss_LevelItem.WBP_Activity_HardBoss_LevelItem'",
+    UIName = "HardBossLevelItem"
   },
   HardBossMainMobile = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Play/Mobile/HardBoss/WBP_Play_HardBoss_M.WBP_Play_HardBoss_M'",
@@ -1618,6 +1633,16 @@ return ReadOnly("WidgetUI", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/Task_Process/WBP_Battle_ProcessOngoing.WBP_Battle_ProcessOngoing'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/Task_Process/WBP_Battle_ProcessOngoing.WBP_Battle_ProcessOngoing'",
     UIName = "ProcessOngoing"
+  },
+  QuestReviewMainPage = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/QuestReview/PC/WBP_QuestReview_MainPage_P.WBP_QuestReview_MainPage_P'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/QuestReview/Mobile/WBP_QuestReview_MainPage_M.WBP_QuestReview_MainPage_M'",
+    UIName = "QuestReviewMainPage"
+  },
+  QuestReviewTreePage = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/QuestReview/PC/WBP_QuestReview_TreePage_P.WBP_QuestReview_TreePage_P'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/QuestReview/Mobile/WBP_QuestReview_TreePage_M.WBP_QuestReview_TreePage_M'",
+    UIName = "QuestReviewTreePage"
   },
   RaceLotteryScrolling = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Racing/InGame/WBP_Activity_Racing_InGame_Scrolling.WBP_Activity_Racing_InGame_Scrolling'",

@@ -5289,6 +5289,40 @@ return ReadOnly("UIChildGuide", {
     GuideTitle = "MAINUIGUIDE_TITLE_SlideSpline_1",
     GuideType = "ImageText"
   },
+  [16401] = {
+    ChildGuideId = 16401,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_DamageChongying_1",
+        PC = "UIGuide_DamageChongying_1",
+        Phone = "UIGuide_DamageChongying_1"
+      },
+      GuidePicture = {
+        GamePad = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_DamageChongying_1.T_Guide_Img_DamageChongying_1'",
+        PC = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_DamageChongying_1.T_Guide_Img_DamageChongying_1'",
+        Phone = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_DamageChongying_1.T_Guide_Img_DamageChongying_1'"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_DamageChongying_1",
+    GuideType = "ImageText"
+  },
+  [16402] = {
+    ChildGuideId = 16402,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_DamageChongying_2",
+        PC = "UIGuide_DamageChongying_2",
+        Phone = "UIGuide_DamageChongying_2"
+      },
+      GuidePicture = {
+        GamePad = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_DamageChongying_2.T_Guide_Img_DamageChongying_2'",
+        PC = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_DamageChongying_2.T_Guide_Img_DamageChongying_2'",
+        Phone = "Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/System/T_Guide_Img_DamageChongying_2.T_Guide_Img_DamageChongying_2'"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_DamageChongying_2",
+    GuideType = "ImageText"
+  },
   [100101] = {
     ChildGuideId = 100101,
     GuideInfo1 = {

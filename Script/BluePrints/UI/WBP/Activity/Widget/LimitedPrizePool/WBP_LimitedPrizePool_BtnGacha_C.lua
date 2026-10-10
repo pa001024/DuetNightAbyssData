@@ -310,12 +310,10 @@ function M:RealPrizeDraw()
           function()
             self:SetFocus()
             self:UpdateReward(true, true)
-            Avatar:RefreshLimitedPrizeRewardSelectReddot()
           end
         })
       else
         self:UpdateReward(false, self.bIsBigPrize)
-        Avatar:RefreshLimitedPrizeRewardSelectReddot()
       end
       self.bIsBigPrize = nil
     end)

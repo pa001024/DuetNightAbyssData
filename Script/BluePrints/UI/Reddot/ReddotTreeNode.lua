@@ -50,7 +50,10 @@ function ReddotTreeNode:AddChild(Name, Node, IsLeaf, RdType, CacheType, Cache, N
       self.NodeModuleName = NodeModuleName
     end
     if NodeModuleName then
-      ReddotTreeNodeClass = require("BluePrints.UI.Reddot.Child." .. NodeModuleName)
+      local bSuccess, NodeClass = pcall(require, "BluePrints.UI.Reddot.Child." .. NodeModuleName)
+      if bSuccess then
+        ReddotTreeNodeClass = NodeClass
+      end
     end
     if ReddotTreeNodeClass then
       Node = ReddotTreeNodeClass:New()

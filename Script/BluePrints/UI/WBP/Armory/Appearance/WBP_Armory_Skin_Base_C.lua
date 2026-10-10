@@ -52,7 +52,12 @@ function M:Construct()
   })
   self.Image_Click.OnMouseButtonDownEvent:Unbind()
   self.Image_Click.OnMouseButtonDownEvent:Bind(self, self.On_Image_Click_MouseButtonDown)
-  self:AddDispatcher(EventID.OnPurchaseShopItem, self, self.OnPurchaseShopItem)
+  local DefaultConfigData = {
+    OwnerWidget = self,
+    TextContent = GText("UI_AppearanceCollect_CurrentProgressDetail")
+  }
+  self.Shop_SkinPreview_CollectItem_1.Com_BtnQa:Init(DefaultConfigData)
+  self.Shop_SkinPreview_CollectItem_2.Com_BtnQa:Init(DefaultConfigData)
   self:AddDispatcher(EventID.OnResourcesChanged, self, self.UpdateBtnStateByResourceChanged)
   self.List_Accessory.BP_OnItemClicked:Clear()
   self.List_Accessory.BP_OnItemClicked:Add(self, self.OnAccessoryItemClicked)
@@ -724,6 +729,7 @@ function M:UpdateSkinDetails(Content)
   self.Text_Info:SetText(Content.Text)
   local Avatar = GWorld:GetAvatar()
   self.Num_Fenghua:SetText(Avatar:GetAppearanceScore(Content.ItemType, Content.SkinId) or "")
+  self.Shop_SkinPreview_CollectItem_2.Text_ScoreNum:SetText(Avatar:GetAppearanceScore(Content.ItemType, Content.SkinId) or "0")
   self.Text_SkinName_World:SetText(Content.Name_World)
   self.Group_Icon:SetVisibility(ESlateVisibility.Collapsed)
   self.Text_Char_None:SetVisibility(ESlateVisibility.Collapsed)
@@ -762,6 +768,19 @@ function M:UpdateSkinDetails(Content)
   end
   if Content.RedDotType and not self.NoReddot then
     ArmoryUtils:SetItemReddotRead(Content, true)
+  end
+  local SkinCollectTaskPopupModel = require("BluePrints.UI.WBP.Activity.Widget.SkinCollect.SkinCollectTaskPopupModel")
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    local CurrentScore, MaxScore = Avatar.AppearanceCollectEvent:SkinCollectScoreInfo(SkinCollectTaskPopupModel.SKinCollectTaskEventId)
+    if CurrentScore < MaxScore and EMCache:Get("SkinCollectTaskCheckBox") and Avatar.AppearanceCollectEvent:IsSkinCollectAppearance(SkinCollectTaskPopupModel.SKinCollectTaskEventId, Content.SkinId) then
+      self.Shop_SkinPreview_CollectItem_2:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.Shop_SkinPreview_CollectItem_2.Group_SkinCollectScore:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.Shop_SkinPreview_CollectItem_2.Text_ScoreDesc:SetText(string.format(GText("UI_AppearanceCollect_CurrentProgress"), CurrentScore, MaxScore))
+    else
+      self.Shop_SkinPreview_CollectItem_2:SetVisibility(ESlateVisibility.Collapsed)
+      self.Shop_SkinPreview_CollectItem_2.Group_SkinCollectScore:SetVisibility(ESlateVisibility.Collapsed)
+    end
   end
 end
 
@@ -1046,11 +1065,13 @@ function M:UpdateAccessoryDetails(Content)
     Data = DataMgr.CharAccessory[Content.AccessoryId] or DataMgr.CharPartMesh[Content.AccessoryId]
     self.Text_CharName:SetText(GText(UIConst.AccessoryTypeTextMap[Data.AccessoryType] or ""))
     self.Num_Fenghua:SetText(Avatar:GetAppearanceScore(CommonConst.DataType.CharAccessory, Content.AccessoryId) or "")
+    self.Shop_SkinPreview_CollectItem_1.Text_ScoreNum:SetText(Avatar:GetAppearanceScore(CommonConst.DataType.CharAccessory, Content.AccessoryId) or "")
   else
     Data = DataMgr.WeaponAccessory[Content.AccessoryId]
     self.Text_CharName:SetText(GText(UIConst.AccessoryTypeTextMap.WeaponAccessory))
     self:UpdateWeaponStanceFXInfo(Content)
     self.Num_Fenghua:SetText(Avatar:GetAppearanceScore(CommonConst.DataType.WeaponAccessory, Content.AccessoryId) or "")
+    self.Shop_SkinPreview_CollectItem_1.Text_ScoreNum:SetText(Avatar:GetAppearanceScore(CommonConst.DataType.WeaponAccessory, Content.AccessoryId) or "")
   end
   self:UpdateAccessoryVideo(Data)
   if Data.Rarity and self.NameFont[Data.Rarity] and self[self.NameFont[Data.Rarity]] then
@@ -1077,6 +1098,19 @@ function M:UpdateAccessoryDetails(Content)
   end
   if Content ~= self.NoneAccessory and Content.RedDotType and not self.NoReddot then
     ArmoryUtils:SetItemReddotRead(Content, true)
+  end
+  local SkinCollectTaskPopupModel = require("BluePrints.UI.WBP.Activity.Widget.SkinCollect.SkinCollectTaskPopupModel")
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    local CurrentScore, MaxScore = Avatar.AppearanceCollectEvent:SkinCollectScoreInfo(SkinCollectTaskPopupModel.SKinCollectTaskEventId)
+    if CurrentScore < MaxScore and EMCache:Get("SkinCollectTaskCheckBox") and Avatar.AppearanceCollectEvent:IsSkinCollectAppearance(SkinCollectTaskPopupModel.SKinCollectTaskEventId, Content.AccessoryId) then
+      self.Shop_SkinPreview_CollectItem_1:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.Shop_SkinPreview_CollectItem_1.Group_SkinCollectScore:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.Shop_SkinPreview_CollectItem_1.Text_ScoreDesc:SetText(string.format(GText("UI_AppearanceCollect_CurrentProgress"), CurrentScore, MaxScore))
+    else
+      self.Shop_SkinPreview_CollectItem_1:SetVisibility(ESlateVisibility.Collapsed)
+      self.Shop_SkinPreview_CollectItem_1.Group_SkinCollectScore:SetVisibility(ESlateVisibility.Collapsed)
+    end
   end
 end
 
@@ -1250,14 +1284,12 @@ function M:PurchaseAccessory(PackageResult, DialogWidget)
     SelectedDiscount = PackageResult.Content_1.CallObj.SelectedDiscount
   end
   self:BlockAllUIInput(true)
-  Avatar:PurchaseShopItem(ShopItemData.ItemId, 1, nil, nil, SelectedDiscount and SelectedDiscount.VoucherId or nil)
-end
-
-function M:OnPurchaseShopItem(Ret)
-  self:BlockAllUIInput(false)
-  if Ret ~= ErrorCode.RET_SUCCESS then
-    return
-  end
+  Avatar:PurchaseShopItem(ShopItemData.ItemId, 1, nil, function()
+    if not (IsValid(self) and self.IsInit) or self.IsMarkToRemove or self.IsBeginToClose then
+      return
+    end
+    self:BlockAllUIInput(false)
+  end, SelectedDiscount and SelectedDiscount.VoucherId or nil)
 end
 
 function M:OnEquipedAccessoryContentChanged()

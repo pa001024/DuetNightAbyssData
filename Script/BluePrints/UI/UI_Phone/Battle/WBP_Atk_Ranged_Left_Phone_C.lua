@@ -16,12 +16,15 @@ function M:Construct()
 end
 
 function M:OnBtnPressed()
+  if self.AutoCombatBan then
+    return
+  end
   if not self.OwnerPanel.FireOccupied then
     self.OwnerPanel.FireOccupied = self.OccupiedTag
   else
     return
   end
-  self.OwnerPanel:TryToPlayTargetCommand("Fire", true)
+  self.OwnerPanel:TryToPlayTargetCommand("Fire", not self.OwnerPanel.IsUltimateActionSwap)
   if self.CurButtonState == "Ban" then
     UIManager(self):ShowUITip_BattleCommonTop(UIConst.Tip_CommonTop, GText("UI_RANGED_FORBIDDEN"))
     return
@@ -39,7 +42,7 @@ function M:OnBtnReleased()
   else
     return
   end
-  self.OwnerPanel:TryToStopTargetCommand("Fire", true)
+  self.OwnerPanel:TryToStopTargetCommand("Fire", not self.OwnerPanel.IsUltimateActionSwap)
   if self.CurButtonState ~= "Forbidden" and self.CurButtonState ~= "Ban" and self.CurButtonState ~= "Empty" then
     if EMUIAnimationSubsystem:EMAnimationIsPlaying(self, self.Press) then
       EMUIAnimationSubsystem:EMStopAnimation(self, self.Press)

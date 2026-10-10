@@ -684,6 +684,41 @@
     "src": "Achievements: Who Am I?"
   },
   {
+    "id": 10121,
+    "name": "Miraculous",
+    "suf": false
+  },
+  {
+    "id": 10122,
+    "name": "Resplendent",
+    "suf": false
+  },
+  {
+    "id": 10123,
+    "name": "Illustrious",
+    "suf": false
+  },
+  {
+    "id": 10124,
+    "name": "Year One",
+    "suf": false
+  },
+  {
+    "id": 10125,
+    "name": "Waveriding",
+    "suf": false
+  },
+  {
+    "id": 10126,
+    "name": "13th Legion",
+    "suf": false
+  },
+  {
+    "id": 10127,
+    "name": "Fireborn",
+    "suf": false
+  },
+  {
     "id": 20001,
     "name": " Strength",
     "suf": true,
@@ -1270,5 +1305,30 @@
     "name": " Paradise",
     "suf": true,
     "src": "Achievements: Beneath Paradise"
+  },
+  {
+    "id": 20104,
+    "name": " Anniversary Phoxhunter",
+    "suf": true
+  },
+  {
+    "id": 20105,
+    "name": " Dreamwalker",
+    "suf": true
+  },
+  {
+    "id": 20106,
+    "name": " Tempest",
+    "suf": true
+  },
+  {
+    "id": 20107,
+    "name": " Monster",
+    "suf": true
+  },
+  {
+    "id": 20108,
+    "name": " Replica",
+    "suf": true
   }
 ]

@@ -61,29 +61,31 @@ function M:InitState()
   self.Btn_Area.OnClicked:Clear()
   if self.Progress >= self.TargetProgress then
     local Avatar = GWorld:GetAvatar()
-    if not Avatar then
-      return
-    end
-    if Avatar.CommonQuestActivity and Avatar.CommonQuestActivity[self.EventId] and Avatar.CommonQuestActivity[self.EventId][self.CommonQuestId] and Avatar.CommonQuestActivity[self.EventId][self.CommonQuestId].RewardsGot then
+    local bGot = Avatar and Avatar.CommonQuestActivity and Avatar.CommonQuestActivity[self.EventId] and Avatar.CommonQuestActivity[self.EventId][self.CommonQuestId] and Avatar.CommonQuestActivity[self.EventId][self.CommonQuestId].RewardsGot
+    if bGot then
       self:PlayAnimation(self.Got)
       self.State = "Got"
-      return
+    else
+      self:PlayAnimation(self.Available)
+      self.State = "Available"
+      if Avatar then
+        self.Btn_Area.OnClicked:Add(self, self.OnReceiveRewardClicked)
+      end
     end
-    self:PlayAnimation(self.Available)
-    self.State = "Available"
-    self.Btn_Area.OnClicked:Add(self, self.OnReceiveRewardClicked)
   else
     self:PlayAnimation(self.Normal)
     self.State = "Normal"
   end
+  local Mid = (self.PreProgress + self.TargetProgress) / 2
+  local Half = (self.TargetProgress - self.PreProgress) / 2
+  local Percent = 0
   if self.Progress >= self.TargetProgress then
-    self.ProgressBar:SetPercent(1)
-  elseif self.Progress <= (self.PreProgress + self.TargetProgress) / 2 then
-    self.ProgressBar:SetPercent(0)
-  else
-    local Percent = (self.Progress - self.PreProgress) / (self.TargetProgress - self.PreProgress) - 0.5
-    self.ProgressBar:SetPercent(Percent)
+    Percent = 1
+  elseif Half > 0 then
+    Percent = (self.Progress - Mid) / Half
+    Percent = math.max(0, math.min(1, Percent))
   end
+  self.ProgressBar:SetPercent(Percent)
 end
 
 function M:OnReceiveRewardClicked()

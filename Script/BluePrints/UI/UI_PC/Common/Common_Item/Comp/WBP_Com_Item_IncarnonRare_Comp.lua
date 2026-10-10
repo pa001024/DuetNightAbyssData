@@ -6,7 +6,8 @@ function Component:SetIncarnonRare(bIncarnon)
       return
     end
     self.IncarnonRare = UE.FWeakObjectPtr(IncarnonRare)
-    self:AddWidgetToNode(nil, self.IncarnonRare)
+    local Config = UIConst.ComItemLayerManagement
+    self:AddWidgetToNode(nil, self.IncarnonRare, Config.Layer.Top, Config.Order.IncarnonRare)
   end
   
   if bIncarnon then

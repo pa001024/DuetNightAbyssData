@@ -296,16 +296,20 @@ function M:RefreshBtnGetAll(ConfigData)
   end
 end
 
-function M:RefreshReddotInfo()
-  DebugPrint("@@@ComDilaog Reward Try Clear Reddot ReddotName:", self.ReddotName, " Type:", self.SelectedContent.Type)
+function M:RefreshReddotInfo(ManualType)
+  local TabType = ManualType or self.SelectedContent and self.SelectedContent.Type or self.Type
+  if not TabType then
+    return
+  end
+  DebugPrint("@@@ComDilaog Reward Try Clear Reddot ReddotName:", self.ReddotName, " Type:", TabType)
   local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(self.ReddotName)
-  if CacheDetail[self.SelectedContent.Type] then
+  if CacheDetail[TabType] then
     local Num = 0
-    for _, _ in pairs(CacheDetail[self.SelectedContent.Type]) do
+    for _, _ in pairs(CacheDetail[TabType]) do
       Num = Num + 1
     end
-    CacheDetail[self.SelectedContent.Type] = nil
-    DebugPrint("@@@ComDilaog Reward Clear Reddot ReddotName:", self.ReddotName, " Type:", self.SelectedContent.Type, " Num:", Num)
+    CacheDetail[TabType] = nil
+    DebugPrint("@@@ComDilaog Reward Clear Reddot ReddotName:", self.ReddotName, " Type:", TabType, " Num:", Num)
     ReddotManager.DecreaseLeafNodeCount(self.ReddotName, Num)
   end
 end

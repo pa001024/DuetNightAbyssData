@@ -80,11 +80,11 @@ function M:Construct()
       local ErrCode, ChannelType = ...
       self:HandleEnterChatChannel(ErrCode, ChannelType)
     elseif EventId == ChatCommon.EventID.ChatMsgRecv then
-      local TimeWrap, MsgWrap = ...
-      self:HandleChatMsgRecv(TimeWrap, MsgWrap)
+      local TimeWrap, MsgWrap, EvictedWraps = ...
+      self:HandleChatMsgRecv(TimeWrap, MsgWrap, EvictedWraps)
     elseif EventId == ChatCommon.EventID.ChatMsgSent then
-      local TimeWrap, MsgWrap = ...
-      self:HandleChatMsgSent(TimeWrap, MsgWrap)
+      local TimeWrap, MsgWrap, EvictedWraps = ...
+      self:HandleChatMsgSent(TimeWrap, MsgWrap, EvictedWraps)
     elseif EventId == ChatCommon.EventID.SelectPlayerToChat then
       local Uid = (...)
       self:HandleSelectPlayerToChat(Uid)
@@ -259,7 +259,6 @@ function M:BtnResetOnClicked()
 end
 
 function M:OnTabSelected(TabWidget, TabItemInfo)
-  ChatModel:GetChannelRemovedMsgs()
   self:ResetUI()
   if ChatModel:GetCurrentChannel() ~= TabItemInfo.ChannelType then
     ChatModel:SetChannelMsgCache(self.Com_Input:GetText())
@@ -353,7 +352,7 @@ function M:ResetUI()
   if self.Group_ListTitle then
     self.Group_ListTitle:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
-  self.List_Dialog:ClearListItems()
+  self:_ClearChatMsgListView()
   self.Btn_Sent:SetText("")
 end
 

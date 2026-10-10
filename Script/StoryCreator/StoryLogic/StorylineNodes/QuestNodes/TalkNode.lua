@@ -44,6 +44,7 @@ function TalkNode:CreateTalkNodeData()
   self.TalkNodeData = {
     FilePath = self.Context.FilePath,
     QuestChainId = self.Context.QuestChainId,
+    BGMQuestChainId = self:GetBGMQuestChainId(),
     TalkNodeId = self.Key,
     Options = self.Options,
     FirstDialogueId = self.FirstDialogueId,
@@ -162,8 +163,11 @@ function TalkNode:SwitchStart()
     local BindId
     local NpcIdWithGender = self.NpcId
     if NpcIdWithGender then
-      local NpcIdWithAttribute = URuntimeCommonFunctionLibrary.GetNPCIdByLightDarkPlayer(GWorld.GameInstance, NpcIdWithGender)
-      NpcIdWithGender = URuntimeCommonFunctionLibrary.GetNPCIdByGender(GWorld.GameInstance, NpcIdWithAttribute)
+      if Const.bUseFinalMappingId then
+        NpcIdWithGender = URuntimeCommonFunctionLibrary.GetFinalNPCIdByMapping(GWorld.GameInstance, NpcIdWithGender)
+      else
+        NpcIdWithGender = URuntimeCommonFunctionLibrary.GetNPCIdByGender(GWorld.GameInstance, NpcIdWithGender)
+      end
     end
     self.NpcIdWithGender = NpcIdWithGender
     if string.isempty(self.NpcNodeInteractiveName) then

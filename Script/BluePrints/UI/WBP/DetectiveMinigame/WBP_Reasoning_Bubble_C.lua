@@ -5,6 +5,8 @@ local M = Class({
 
 function M:ShowInfo()
   self.Text_Bubble:SetText(GText("Minigame_Textmap_100303"))
+  self:StopAnimation(self.Loop)
+  self:StopAnimation(self.In)
   self:UnbindFromAnimationFinished(self.In, {
     self,
     self.OnInAnimFinished

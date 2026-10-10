@@ -1734,6 +1734,66 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
       }
     }
   },
+  [4103] = {
+    [1] = {
+      [2] = {
+        Amount = T.RT_12,
+        CharID = 4103,
+        NeedSkill = {
+          [410301] = 4
+        },
+        Num = 1,
+        ResourceID = T.RT_24,
+        Skill = T.RT_15
+      },
+      [3] = {
+        Amount = T.RT_14,
+        CharID = 4103,
+        NeedBreak = 5,
+        Num = 2,
+        ResourceID = T.RT_32,
+        Skill = T.RT_13
+      }
+    },
+    [2] = {
+      [2] = {
+        Amount = T.RT_12,
+        CharID = 4103,
+        NeedSkill = {
+          [410302] = 4
+        },
+        Num = 3,
+        ResourceID = T.RT_24,
+        Skill = T.RT_10
+      },
+      [3] = {
+        Amount = T.RT_9,
+        CharID = 4103,
+        NeedLevel = 75,
+        Num = 4,
+        ResourceID = T.RT_32,
+        Skill = T.RT_7
+      }
+    },
+    [3] = {
+      [2] = {
+        Amount = T.RT_6,
+        CharID = 4103,
+        NeedBreak = 2,
+        Num = 5,
+        ResourceID = T.RT_31,
+        Skill = T.RT_4
+      },
+      [3] = {
+        Amount = T.RT_3,
+        CharID = 4103,
+        NeedBreak = 4,
+        Num = 6,
+        ResourceID = T.RT_30,
+        Skill = T.RT_1
+      }
+    }
+  },
   [4201] = {
     [1] = {
       [2] = {
@@ -2163,6 +2223,66 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
       [3] = {
         Amount = T.RT_3,
         CharID = 5401,
+        NeedBreak = 4,
+        Num = 6,
+        ResourceID = T.RT_2,
+        Skill = T.RT_1
+      }
+    }
+  },
+  [5402] = {
+    [1] = {
+      [2] = {
+        Amount = T.RT_12,
+        CharID = 5402,
+        NeedSkill = {
+          [540201] = 4
+        },
+        Num = 1,
+        ResourceID = T.RT_11,
+        Skill = T.RT_15
+      },
+      [3] = {
+        Amount = T.RT_14,
+        CharID = 5402,
+        NeedBreak = 5,
+        Num = 2,
+        ResourceID = T.RT_8,
+        Skill = T.RT_13
+      }
+    },
+    [2] = {
+      [2] = {
+        Amount = T.RT_12,
+        CharID = 5402,
+        NeedSkill = {
+          [540202] = 4
+        },
+        Num = 3,
+        ResourceID = T.RT_11,
+        Skill = T.RT_10
+      },
+      [3] = {
+        Amount = T.RT_9,
+        CharID = 5402,
+        NeedLevel = 75,
+        Num = 4,
+        ResourceID = T.RT_8,
+        Skill = T.RT_7
+      }
+    },
+    [3] = {
+      [2] = {
+        Amount = T.RT_6,
+        CharID = 5402,
+        NeedBreak = 2,
+        Num = 5,
+        ResourceID = T.RT_5,
+        Skill = T.RT_4
+      },
+      [3] = {
+        Amount = T.RT_3,
+        CharID = 5402,
         NeedBreak = 4,
         Num = 6,
         ResourceID = T.RT_2,

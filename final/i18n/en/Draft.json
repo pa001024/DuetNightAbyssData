@@ -2808,6 +2808,27 @@
     "m": 50000
   },
   {
+    "id": 151718,
+    "n": "Blaze – Volition",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51718,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41718,
+        "n": "Blaze – Volition",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
     "id": 151721,
     "n": "Blaze·Nirvana",
     "r": 5,
@@ -3320,6 +3341,27 @@
       {
         "id": 41747,
         "n": "Morale – Refinement",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151748,
+    "n": "Blaze – Refinement",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51748,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41748,
+        "n": "Blaze – Refinement",
         "c": 5,
         "t": "Mod"
       }
@@ -4065,6 +4107,27 @@
     "m": 50000
   },
   {
+    "id": 151942,
+    "n": "Still Thunder",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51942,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41942,
+        "n": "Still Thunder",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
     "id": 151951,
     "n": "Whispering Zephyr",
     "r": 5,
@@ -4347,6 +4410,33 @@
     "m": 50000
   },
   {
+    "id": 152013,
+    "n": "Focus – Impact",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 52013,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 42002,
+        "n": "Focus",
+        "c": 3,
+        "t": "Mod"
+      },
+      {
+        "id": 42001,
+        "n": "Impetus",
+        "c": 1,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
     "id": 152101,
     "n": "Edge",
     "r": 5,
@@ -4577,6 +4667,27 @@
       {
         "id": 42801,
         "n": "Trammel – Surplus",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 152802,
+    "n": "Dissolution",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 52802,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 42802,
+        "n": "Dissolution",
         "c": 5,
         "t": "Mod"
       }
@@ -8919,6 +9030,32 @@
     "m": 280000
   },
   {
+    "id": 910199,
+    "n": "Endless Enigma",
+    "r": 5,
+    "v": "1.5",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10199,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 15017,
+        "n": "Forging Insight: Sword",
+        "c": 5,
+        "t": "Resource"
+      },
+      {
+        "id": 15005,
+        "n": "Prototype: Endless Enigma",
+        "c": 50,
+        "t": "Resource"
+      }
+    ],
+    "m": 500000
+  },
+  {
     "id": 910201,
     "n": "Siren's Kiss",
     "r": 5,
@@ -10347,6 +10484,44 @@
     "m": 280000
   },
   {
+    "id": 920306,
+    "n": "Blessed Burden",
+    "r": 5,
+    "v": "1.5",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20306,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12178,
+        "n": "Blessed Burden: Bolt",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12179,
+        "n": "Blessed Burden: Frame",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12180,
+        "n": "Blessed Burden: Barrel",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 500000
+  },
+  {
     "id": 920401,
     "n": "Screamshot",
     "r": 5,
@@ -11164,6 +11339,44 @@
       {
         "id": 12105,
         "n": "Soulrend: Lower Limb",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920605,
+    "n": "The Hatter's Banquet",
+    "r": 5,
+    "v": "1.5",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20605,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12173,
+        "n": "The Hatter's Banquet: Bowstring",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12174,
+        "n": "The Hatter's Banquet: Upper Limb",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12175,
+        "n": "The Hatter's Banquet: Lower Limb",
         "c": 1,
         "t": "Resource"
       }

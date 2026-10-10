@@ -317,10 +317,11 @@ function M:Handle_KeyEventOnGamePad(InKeyName)
     if self.HasMoved then
       return UE4.UWidgetBlueprintLibrary.Unhandled()
     end
-    if 0 == self.HoverBtnIdx then
+    local HoverAreaData = self.HoverBtnIdx and self.AreaNameList[self.HoverBtnIdx]
+    if not HoverAreaData then
       return UE4.UWidgetBlueprintLibrary.Unhandled()
     end
-    self:OnClickArea(self.AreaNameList[self.HoverBtnIdx].MapDataId)
+    self:OnClickArea(HoverAreaData.MapDataId)
     if self.IsGamepadSelect then
       self.IsGamepadSelect = false
       self.GamepadSelect:PlayAnimation(self.GamepadSelect.UnHover)
@@ -569,6 +570,15 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
     self.Select:StopAnimation(self.Select.Hover)
     self.Select:PlayAnimation(self.Select.Normal)
     self.bCanDragMap = false
+    self.bCheckGamepadSelect = false
+    self.GamepadSelectState = false
+    self.GamepadSelectAreaIdx = nil
+    self.IsGamepadSelect = false
+    self.HoverBtnIdx = 0
+    if self.GamepadSelectTween then
+      ULTweenBPLibrary.KillIfIsTweening(self, self.GamepadSelectTween)
+      self.GamepadSelectTween = nil
+    end
   end
 end
 
@@ -605,6 +615,10 @@ function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
   self.CheckGamepadSelectTime = UGameplayStatics.GetRealTimeSeconds(self)
   self.GamepadSelectState = false
   self.GamepadSelectPoint = nil
+  if self.GamepadSelectTween then
+    ULTweenBPLibrary.KillIfIsTweening(self, self.GamepadSelectTween)
+    self.GamepadSelectTween = nil
+  end
   self.bCanDragMap = true
   self:UpdateMapOffset(self.CurrentAnalogDelta)
   if self.IsGamepadSelect then
@@ -637,6 +651,7 @@ function M:CheckGamepadSelect()
     else
       self.IsGamepadSelect = false
       self.GamepadSelectAreaIdx = nil
+      self.HoverBtnIdx = 0
     end
   end
 end

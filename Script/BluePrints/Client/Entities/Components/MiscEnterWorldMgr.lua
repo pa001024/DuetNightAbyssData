@@ -21,10 +21,7 @@ function M:OnEnterWorld_HeroUSDK()
   end
   HeroUSDKSubsystem:SetNewBDCPublicAttriubute(tostring(self.Uid), tostring(self.Hostnum))
   HeroUSDKSubsystem:MSDKUploadCommonEventByEventName("entry_game")
-  local BDCSubsystem = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UNewBdcSubsystem)
-  if BDCSubsystem then
-    BDCSubsystem:Login(HeroUSDKSubsystem.UserInfo.sdkUserId, CommonUtils.ObjId2Str2(self.Eid))
-  end
+  HeroUSDKSubsystem:LoginNewBDCWhenReady(HeroUSDKSubsystem.UserInfo.sdkUserId, CommonUtils.ObjId2Str2(self.Eid))
 end
 
 function M:OnEnterWorld_Sentry()

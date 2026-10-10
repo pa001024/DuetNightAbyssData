@@ -6,7 +6,8 @@ function Component:SetCollectionStar(bCollection)
       return
     end
     self.ColStarUI = UE.FWeakObjectPtr(ColStarUI)
-    self:AddWidgetToNode(nil, self.ColStarUI)
+    local Config = UIConst.ComItemLayerManagement
+    self:AddWidgetToNode(nil, self.ColStarUI, Config.Layer.Top, Config.Order.CollectionStar)
   end
   
   if bCollection and not self.Content.bInGear then

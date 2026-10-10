@@ -418,5 +418,14 @@ return ReadOnly("MainUI", {
     Sequence = 132,
     SystemUIName = "TeamHall",
     UIUnlockRuleName = "TeamHall"
+  },
+  [38] = {
+    EnterId = 38,
+    EscShowCondition = T.RT_1,
+    EscShowType = 1,
+    EscShowTypeDes = "UI_MAIN_UI_TBSupport_Des",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_AFK.T_Entrance_AFK",
+    Name = "MAIN_UI_TBSupport",
+    Sequence = 200
   }
 })

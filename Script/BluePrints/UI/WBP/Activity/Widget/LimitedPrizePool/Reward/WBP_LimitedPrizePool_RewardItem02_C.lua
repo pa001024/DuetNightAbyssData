@@ -2,18 +2,6 @@ local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
 
-local function DecreaseLimitedPrizeRewardSelectReddot(Index)
-  local NodeName = "LimitedPrizeRewardSelect"
-  if not ReddotManager.GetTreeNode(NodeName) then
-    ReddotManager.AddNode(NodeName)
-  end
-  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
-  if CacheDetail[Index] then
-    CacheDetail[Index] = nil
-    ReddotManager.DecreaseLeafNodeCount(NodeName, 1)
-  end
-end
-
 function M:Construct()
   self.RedDot = self.Reddot
   self.CustomSelectButton = self.Btn_Add
@@ -154,7 +142,6 @@ function M:ConfirmSelectItem(Result, PopUI)
     elseif Content.OnSetSelectableReward and Content.OnSetSelectableReward[1] and Content.OnSetSelectableReward[2] then
       Content.OnSetSelectableReward[2](Content.OnSetSelectableReward[1])
     end
-    DecreaseLimitedPrizeRewardSelectReddot(self.Number)
   end
   
   Avatar:SetLimitPrizeSelfSelect(Callback, self.EventId, self.Number, self.SelectedIndex)
@@ -228,10 +215,6 @@ end
 
 function M:RestoreSelectWidget()
   self:OpenSelectWidget(self.SelectWidgetChooseIndex)
-end
-
-function M:TryDecreaseLimitedPrizeRewardSelectReddot(Index)
-  DecreaseLimitedPrizeRewardSelectReddot(Index)
 end
 
 function M:ItemMenuAnchorChanged(IsOpen)

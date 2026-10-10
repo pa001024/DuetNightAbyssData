@@ -3,7 +3,6 @@ local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C",
   "BluePrints.Common.TimerMgr"
 })
-local DevServerList = require("BluePrints/UI/GameLogin/DevServerList")
 local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 local ActivityReddotHelper = require("BluePrints.UI.WBP.Activity.ActivityReddotHelper")
 local EMCache = require("EMCache.EMCache")
@@ -20,6 +19,20 @@ function M:OnCommunityFollowActivityJJJFinish(CommunityId)
   self:InitUI()
 end
 
+function M:RefreshCompleteState()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar or not self.FinishCondition then
+    return
+  end
+  local IsComplete = ConditionUtils.CheckCondition(Avatar, self.FinishCondition)
+  if self.IsComplete == IsComplete then
+    return
+  end
+  self.IsComplete = IsComplete
+  self:RemoveTimer("RefreshLeftTime")
+  self:InitTimeInfo()
+end
+
 function M:InitPage(ActivityId, ParentTabId, AllActivityId, ParentWidget)
   self.CurActivityId = ActivityId
   self.ParentTabId = ParentTabId
@@ -33,10 +46,6 @@ function M:InitPage(ActivityId, ParentTabId, AllActivityId, ParentWidget)
   local Avatar = GWorld:GetAvatar()
   if Avatar and self.FinishCondition then
     self.IsComplete = ConditionUtils.CheckCondition(Avatar, self.FinishCondition)
-  end
-  self.Area = "China"
-  if Avatar and Avatar.Hostnum then
-    self.Area = DevServerList[Avatar.Hostnum].area
   end
   self.Languagetype = "ChinaCN"
   local SystemLanguage = EMCache:Get("SystemLanguage") or "CN"
@@ -55,7 +64,12 @@ function M:InitPage(ActivityId, ParentTabId, AllActivityId, ParentWidget)
 end
 
 function M:InitUI()
+  self:RefreshCompleteState()
   local PageConfigData = self:GetPageConfigData()
+  if not PageConfigData or not PageConfigData.CommunityList then
+    self.List_Item:ClearListItems()
+    return
+  end
   local CommunityList = PageConfigData.CommunityList
   self.CommunityList = CommunityList
   local SortedCommunityList = {}

@@ -1118,7 +1118,7 @@
     "icon": "Siren01",
     "名称": "Ailes · Inspiration",
     "版本": "1.0",
-    "系列": "de la Sirène",
+    "系列": "de Sirène",
     "品质": "蓝",
     "耐受": 16,
     "类型": "Personnages",
@@ -2468,8 +2468,9 @@
     "生命": 0.75,
     "防御": 0.75,
     "追加伤害": 0.18,
+    "技能伤害": -0.5,
     "效果": [
-      "Réduit les Dégâts de compétence de 50.0% et, lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
+      "Lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
       [
         "6.0%",
         "9.0%",
@@ -2576,8 +2577,9 @@
     "生命": 0.75,
     "防御": 0.75,
     "追加伤害": 0.18,
+    "技能伤害": -0.5,
     "效果": [
-      "Réduit les Dégâts de compétence de 50.0% et, lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
+      "Lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
       [
         "6.0%",
         "9.0%",
@@ -2684,8 +2686,9 @@
     "生命": 0.75,
     "防御": 0.75,
     "追加伤害": 0.18,
+    "技能伤害": -0.5,
     "效果": [
-      "Réduit les Dégâts de compétence de 50.0% et, lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
+      "Lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
       [
         "6.0%",
         "9.0%",
@@ -2792,8 +2795,9 @@
     "生命": 0.75,
     "防御": 0.75,
     "追加伤害": 0.18,
+    "技能伤害": -0.5,
     "效果": [
-      "Réduit les Dégâts de compétence de 50.0% et, lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
+      "Lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
       [
         "6.0%",
         "9.0%",
@@ -2900,8 +2904,9 @@
     "生命": 0.75,
     "防御": 0.75,
     "追加伤害": 0.18,
+    "技能伤害": -0.5,
     "效果": [
-      "Réduit les Dégâts de compétence de 50.0% et, lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
+      "Lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
       [
         "6.0%",
         "9.0%",
@@ -3008,8 +3013,9 @@
     "生命": 0.75,
     "防御": 0.75,
     "追加伤害": 0.18,
+    "技能伤害": -0.5,
     "效果": [
-      "Réduit les Dégâts de compétence de 50.0% et, lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
+      "Lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
       [
         "6.0%",
         "9.0%",
@@ -3180,6 +3186,23 @@
     "耐受": 21,
     "类型": "Personnages",
     "昂扬": 0.15,
+    "技能威力": 0.3,
+    "效果": [
+      "Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément."
+    ]
+  },
+  {
+    "id": 41718,
+    "icon": "Mephisto01_Black",
+    "名称": "Ardeur · Décision",
+    "版本": "1.7",
+    "系列": "du Pactisant",
+    "品质": "紫",
+    "极性": "V",
+    "属性": "Umbro",
+    "耐受": 25,
+    "类型": "Personnages",
+    "攻击": 0.72,
     "技能威力": 0.3,
     "效果": [
       "Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément."
@@ -3577,6 +3600,23 @@
     "类型": "Personnages",
     "昂扬": 0.15,
     "技能伤害": 0.15,
+    "效果": [
+      "Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément."
+    ]
+  },
+  {
+    "id": 41748,
+    "icon": "Mephisto01_Purple",
+    "名称": "Ardeur · Raffinement",
+    "版本": "1.7",
+    "系列": "du Pactisant",
+    "品质": "紫",
+    "极性": "D",
+    "属性": "Électro",
+    "耐受": 25,
+    "类型": "Personnages",
+    "攻击": 0.72,
+    "技能伤害": 0.18,
     "效果": [
       "Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément."
     ]
@@ -4330,6 +4370,29 @@
     ]
   },
   {
+    "id": 41942,
+    "icon": "Summanus01",
+    "名称": "Force inébranlable",
+    "版本": "1.7",
+    "系列": "de Summanus",
+    "品质": "紫",
+    "极性": "O",
+    "属性": "Électro",
+    "耐受": 24,
+    "类型": "Personnages",
+    "技能威力": 0.3,
+    "效果": [
+      "Après être resté immobile pendant au moins 1 s, un personnage Électro gagne 1 cumul augmentant la Puissance de compétence de #1 toutes les 0,5 s. Durée illimitée, cumulable jusqu’à 10.0 fois. L’effet est annulé en cas de déplacement.",
+      [
+        "3.2%",
+        "4.8%",
+        "6.4%",
+        "8.0%",
+        "9.6%"
+      ]
+    ]
+  },
+  {
     "id": 41951,
     "icon": "Hastur01",
     "名称": "Souffle du zéphir",
@@ -4388,7 +4451,7 @@
     "类型": "Personnages",
     "技能耐久": 0.24,
     "效果": [
-      "Lorsque des ennemis proches d’un personnage Lumino subissent des DGT d’arme, leur Taux CRIT augmente de #1.\nLe bonus est accru de +#2 contre les cibles affectées par un malus.",
+      "Lorsque des ennemis proches d’un personnage Lumino subissent des DGT d’arme, le Taux CRIT contre eux augmente de #1.\nLe bonus augmente de #2 contre les cibles affectées par un malus.",
       [
         "10.9%",
         "16.4%",
@@ -4750,6 +4813,28 @@
     ]
   },
   {
+    "id": 42505,
+    "icon": "Fenrir01",
+    "名称": "Chasse à Huaxu",
+    "版本": "1.7",
+    "系列": "de Fenrir",
+    "品质": "紫",
+    "极性": "O",
+    "耐受": 17,
+    "类型": "Armes de mêlée",
+    "HxRate": 0.42,
+    "效果": [
+      "Augmente les dégâts infligés aux membres de la faction Huaxu de #1.",
+      [
+        "14.0%",
+        "21.0%",
+        "28.0%",
+        "35.0%",
+        "42.0%"
+      ]
+    ]
+  },
+  {
     "id": 42511,
     "icon": "Fenrir01",
     "名称": "Perforation",
@@ -4816,16 +4901,25 @@
     ]
   },
   {
-    "id": 42704,
+    "id": 42705,
     "icon": "Fenrir01",
-    "名称": "Désagrégation",
+    "名称": "Chasse aux plus forts",
     "版本": "1.7",
     "系列": "de Fenrir",
     "品质": "紫",
-    "极性": "D",
-    "耐受": 15,
+    "极性": "O",
+    "耐受": 17,
     "类型": "Armes de mêlée",
-    "CutTNRate": 1
+    "效果": [
+      "Augmente les dégâts infligés aux ennemis d’un niveau supérieur au vôtre de #1.",
+      [
+        "6.0%",
+        "9.0%",
+        "12.0%",
+        "15.0%",
+        "18.0%"
+      ]
+    ]
   },
   {
     "id": 42801,
@@ -4839,6 +4933,18 @@
     "类型": "Armes de mêlée",
     "触发": 0.9,
     "充盈转化": 1.08
+  },
+  {
+    "id": 42802,
+    "icon": "Fenrir01",
+    "名称": "Désagrégation",
+    "版本": "1.7",
+    "系列": "de Fenrir",
+    "品质": "紫",
+    "极性": "D",
+    "耐受": 18,
+    "类型": "Armes de mêlée",
+    "战姿削减": 0.36
   },
   {
     "id": 43001,
@@ -5206,6 +5312,28 @@
         "27.0%",
         "34.0%",
         "40.0%"
+      ]
+    ]
+  },
+  {
+    "id": 43505,
+    "icon": "Fafnir01",
+    "名称": "Chasse à Huaxu",
+    "版本": "1.7",
+    "系列": "de Fáfnir",
+    "品质": "紫",
+    "极性": "O",
+    "耐受": 17,
+    "类型": "Armes à distance",
+    "HxRate": 0.42,
+    "效果": [
+      "Augmente les dégâts infligés aux membres de la faction Huaxu de #1.",
+      [
+        "14.0%",
+        "21.0%",
+        "28.0%",
+        "35.0%",
+        "42.0%"
       ]
     ]
   },
@@ -5649,7 +5777,7 @@
     "icon": "Siren01",
     "名称": "Ailes · Inspiration",
     "版本": "1.0",
-    "系列": "de la Sirène",
+    "系列": "de Sirène",
     "品质": "金",
     "极性": "D",
     "耐受": 24,
@@ -6174,8 +6302,9 @@
     "生命": 1.54,
     "防御": 1.54,
     "追加伤害": 0.33,
+    "技能伤害": -0.5,
     "效果": [
-      "Réduit les Dégâts de compétence de 50.0% et, lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
+      "Lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
       [
         "6.0%",
         "9.0%",
@@ -6312,8 +6441,9 @@
     "生命": 1.54,
     "防御": 1.54,
     "追加伤害": 0.33,
+    "技能伤害": -0.5,
     "效果": [
-      "Réduit les Dégâts de compétence de 50.0% et, lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
+      "Lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
       [
         "6.0%",
         "9.0%",
@@ -6450,8 +6580,9 @@
     "生命": 1.54,
     "防御": 1.54,
     "追加伤害": 0.33,
+    "技能伤害": -0.5,
     "效果": [
-      "Réduit les Dégâts de compétence de 50.0% et, lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
+      "Lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
       [
         "6.0%",
         "9.0%",
@@ -6588,8 +6719,9 @@
     "生命": 1.54,
     "防御": 1.54,
     "追加伤害": 0.33,
+    "技能伤害": -0.5,
     "效果": [
-      "Réduit les Dégâts de compétence de 50.0% et, lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
+      "Lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
       [
         "6.0%",
         "9.0%",
@@ -6726,8 +6858,9 @@
     "生命": 1.54,
     "防御": 1.54,
     "追加伤害": 0.33,
+    "技能伤害": -0.5,
     "效果": [
-      "Réduit les Dégâts de compétence de 50.0% et, lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
+      "Lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
       [
         "6.0%",
         "9.0%",
@@ -6864,8 +6997,9 @@
     "生命": 1.54,
     "防御": 1.54,
     "追加伤害": 0.33,
+    "技能伤害": -0.5,
     "效果": [
-      "Réduit les Dégâts de compétence de 50.0% et, lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
+      "Lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
       [
         "6.0%",
         "9.0%",
@@ -7078,6 +7212,26 @@
       51717
     ],
     "昂扬": 0.275,
+    "技能威力": 0.55,
+    "效果": [
+      "Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément."
+    ]
+  },
+  {
+    "id": 51718,
+    "icon": "Mephisto01_Black",
+    "名称": "Ardeur · Décision",
+    "版本": "1.7",
+    "系列": "du Pactisant",
+    "品质": "金",
+    "极性": "V",
+    "属性": "Umbro",
+    "耐受": 27,
+    "类型": "Personnages",
+    "消耗": [
+      51718
+    ],
+    "攻击": 1.32,
     "技能威力": 0.55,
     "效果": [
       "Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément."
@@ -7554,6 +7708,26 @@
     ],
     "昂扬": 0.275,
     "技能伤害": 0.275,
+    "效果": [
+      "Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément."
+    ]
+  },
+  {
+    "id": 51748,
+    "icon": "Mephisto01_Purple",
+    "名称": "Ardeur · Raffinement",
+    "版本": "1.7",
+    "系列": "du Pactisant",
+    "品质": "金",
+    "极性": "D",
+    "属性": "Électro",
+    "耐受": 30,
+    "类型": "Personnages",
+    "消耗": [
+      51748
+    ],
+    "攻击": 1.32,
+    "技能伤害": 0.33,
     "效果": [
       "Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément."
     ]
@@ -8564,6 +8738,37 @@
     ]
   },
   {
+    "id": 51942,
+    "icon": "Summanus01",
+    "名称": "Force inébranlable",
+    "版本": "1.7",
+    "系列": "de Summanus",
+    "品质": "金",
+    "极性": "O",
+    "属性": "Électro",
+    "耐受": 27,
+    "类型": "Personnages",
+    "消耗": [
+      51942
+    ],
+    "技能威力": 0.55,
+    "效果": [
+      "Après être resté immobile pendant au moins 1 s, un personnage Électro gagne 1 cumul augmentant la Puissance de compétence de #1 toutes les 0,5 s. Durée illimitée, cumulable jusqu’à 10.0 fois. L’effet est annulé en cas de déplacement.",
+      [
+        "3.2%",
+        "4.8%",
+        "6.4%",
+        "8.0%",
+        "9.6%",
+        "11.2%",
+        "12.8%",
+        "14.4%",
+        "16.0%",
+        "17.6%"
+      ]
+    ]
+  },
+  {
     "id": 51951,
     "icon": "Hastur01",
     "名称": "Souffle du zéphir",
@@ -8641,7 +8846,7 @@
     ],
     "技能耐久": 0.44,
     "效果": [
-      "Lorsque des ennemis proches d’un personnage Lumino subissent des DGT d’arme, leur Taux CRIT augmente de #1.\nLe bonus est accru de +#2 contre les cibles affectées par un malus.",
+      "Lorsque des ennemis proches d’un personnage Lumino subissent des DGT d’arme, le Taux CRIT contre eux augmente de #1.\nLe bonus augmente de #2 contre les cibles affectées par un malus.",
       [
         "10.9%",
         "16.4%",
@@ -8837,6 +9042,22 @@
     "下落增伤": 0.33
   },
   {
+    "id": 52013,
+    "icon": "Cerberus01",
+    "名称": "Concentration · Frappe brutale",
+    "版本": "1.7",
+    "系列": "du Cerbère",
+    "品质": "金",
+    "极性": "A",
+    "耐受": 32,
+    "类型": "Armes de mêlée",
+    "消耗": [
+      52013
+    ],
+    "暴击": 0.99,
+    "普攻增伤": 0.44
+  },
+  {
     "id": 52101,
     "icon": "Cerberus01",
     "名称": "Tranchant",
@@ -8997,6 +9218,21 @@
     ],
     "触发": 1.65,
     "充盈转化": 2
+  },
+  {
+    "id": 52802,
+    "icon": "Fenrir01",
+    "名称": "Désagrégation",
+    "版本": "1.7",
+    "系列": "de Fenrir",
+    "品质": "金",
+    "极性": "D",
+    "耐受": 20,
+    "类型": "Armes de mêlée",
+    "消耗": [
+      52802
+    ],
+    "战姿削减": 0.66
   },
   {
     "id": 53001,
@@ -9716,7 +9952,7 @@
     "icon": "Siren01_Black",
     "名称": "Ailes · Inspiration · Poursuite",
     "版本": "1.4",
-    "系列": "de la Sirène",
+    "系列": "de Sirène",
     "品质": "金",
     "极性": "D",
     "属性": "Umbro",
@@ -9780,7 +10016,7 @@
     "icon": "Siren01_Black",
     "名称": "Ailes · Inspiration · Fureur",
     "版本": "1.4",
-    "系列": "de la Sirène",
+    "系列": "de Sirène",
     "品质": "金",
     "极性": "D",
     "属性": "Umbro",
@@ -9844,7 +10080,7 @@
     "icon": "Siren01_Blue",
     "名称": "Ailes · Inspiration · Éveil",
     "版本": "1.5",
-    "系列": "de la Sirène",
+    "系列": "de Sirène",
     "品质": "金",
     "极性": "D",
     "属性": "Hydro",
@@ -9908,7 +10144,7 @@
     "icon": "Siren01_Blue",
     "名称": "Ailes · Inspiration · Vigueur",
     "版本": "1.5",
-    "系列": "de la Sirène",
+    "系列": "de Sirène",
     "品质": "金",
     "极性": "D",
     "属性": "Hydro",
@@ -9972,7 +10208,7 @@
     "icon": "Siren01_Red",
     "名称": "Ailes · Inspiration · Décision",
     "版本": "1.6",
-    "系列": "de la Sirène",
+    "系列": "de Sirène",
     "品质": "金",
     "极性": "D",
     "属性": "Pyro",
@@ -10036,7 +10272,7 @@
     "icon": "Siren01_Red",
     "名称": "Ailes · Inspiration · Vigueur",
     "版本": "1.6",
-    "系列": "de la Sirène",
+    "系列": "de Sirène",
     "品质": "金",
     "极性": "D",
     "属性": "Pyro",
@@ -10100,7 +10336,7 @@
     "icon": "Siren01_Purple",
     "名称": "Ailes · Inspiration · Décision",
     "版本": "1.2",
-    "系列": "de la Sirène",
+    "系列": "de Sirène",
     "品质": "金",
     "极性": "D",
     "属性": "Électro",
@@ -10164,7 +10400,7 @@
     "icon": "Siren01_Purple",
     "名称": "Ailes · Inspiration · Vigueur",
     "版本": "1.2",
-    "系列": "de la Sirène",
+    "系列": "de Sirène",
     "品质": "金",
     "极性": "D",
     "属性": "Électro",
@@ -10228,7 +10464,7 @@
     "icon": "Siren01_Green",
     "名称": "Ailes · Inspiration · Décision",
     "版本": "1.1",
-    "系列": "de la Sirène",
+    "系列": "de Sirène",
     "品质": "金",
     "极性": "D",
     "属性": "Anémo",
@@ -10292,7 +10528,7 @@
     "icon": "Siren01_Green",
     "名称": "Ailes · Inspiration · Ténacité",
     "版本": "1.1",
-    "系列": "de la Sirène",
+    "系列": "de Sirène",
     "品质": "金",
     "极性": "D",
     "属性": "Anémo",
@@ -10356,7 +10592,7 @@
     "icon": "Siren01_Orange",
     "名称": "Ailes · Inspiration · Vigueur",
     "版本": "1.3",
-    "系列": "de la Sirène",
+    "系列": "de Sirène",
     "品质": "金",
     "极性": "D",
     "属性": "Lumino",
@@ -10420,7 +10656,7 @@
     "icon": "Siren01_Orange",
     "名称": "Ailes · Inspiration · Concentration",
     "版本": "1.3",
-    "系列": "de la Sirène",
+    "系列": "de Sirène",
     "品质": "金",
     "极性": "D",
     "属性": "Lumino",
@@ -11002,6 +11238,28 @@
             "连段": 1.5687
           }
         ]
+      }
+    }
+  },
+  {
+    "id": 103004,
+    "icon": "Fenrir01",
+    "名称": "蓄势重压",
+    "版本": "1.7",
+    "系列": "de Fenrir",
+    "品质": "紫",
+    "极性": "V",
+    "耐受": 25,
+    "类型": "Armes de mêlée",
+    "战姿削减": 0.2,
+    "效果": [
+      "改变重剑的蓄力攻击招式和威力。蓄力攻击可造成大幅度战姿削减。"
+    ],
+    "技能替换": {
+      "1030102": {
+        "id": 1030302,
+        "名称": "Attaque chargée",
+        "类型": "武器伤害"
       }
     }
   },

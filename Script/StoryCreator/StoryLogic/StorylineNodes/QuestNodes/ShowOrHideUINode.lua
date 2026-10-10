@@ -45,12 +45,12 @@ function ShowOrHideUINode:UpdateCurrentSTLData()
   end
   if self.Function == "HideUIInScreen" then
     self.Context:UpdateCurrentSTLData(CommonConst.QuestSuit.HideUIInScreen, self.UIParam, {
-      IsHide = self.ShowOrHide,
+      IsAdd = self.ShowOrHide,
       Tag = "ShowOrHideUINode"
     })
   elseif self.Function == "SetContinuedPCGuideVisibility" then
     self.Context:UpdateCurrentSTLData(CommonConst.QuestSuit.ContinuedGuide, self.ActionParam, {
-      IsHide = self.ShowOrHide,
+      IsAdd = not self.ShowOrHide,
       Tag = "ShowOrHideUINode"
     })
   end

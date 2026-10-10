@@ -2,6 +2,8 @@ require("UnLua")
 local CommonUtils = require("Utils.CommonUtils")
 local StuffIconObject = require("BluePrints.UI.WBP.Bag.Widget.BagStuffIconObject")
 local BagCommon = require("BluePrints.UI.WBP.Bag.BagCommon")
+local ResourceUseEffectDispatcher = require("BluePrints.UI.Common.ResourceUse.ResourceUseEffectDispatcher")
+local ResourceUseConsumeCommit = require("BluePrints.UI.Common.ResourceUse.ResourceUseConsumeCommit")
 local M = Class()
 
 function M:InitMultiSelectWidget()
@@ -1125,279 +1127,52 @@ function M:ReClickGoToUseConsume()
 end
 
 function M:OnClickGoToUseConsume(StuffConfigData)
-  self.CurrentChooseInfo = nil
-  local CommonDialogParams = {}
-  CommonDialogParams.OptionalItemsList = {}
-  local UseEffectType, ExtraString, OptCount = StuffConfigData.UseEffectType, ""
-  if UseEffectType then
-    local ResultData = {}
-    if type(self["GenerateDataWith_" .. UseEffectType]) == "function" then
-      ResultData, ExtraString, OptCount = self["GenerateDataWith_" .. UseEffectType](self, StuffConfigData.ResourceId, StuffConfigData.UseParam)
-    end
-    CommonDialogParams.OptionalItemsList = ResultData
-  end
-  DebugPrint("ayff test use resourceID:" .. StuffConfigData.ResourceId)
-  local CharSkinPreviewTypeList = {
-    [CommonConst.ResUseEffectType.SelectGeneralSkin] = "SelectGeneralSkin",
-    [CommonConst.ResUseEffectType.SelectCharAccessory] = "SelectCharAccessory",
-    [CommonConst.ResUseEffectType.SelectWeaponSkin] = "SelectWeaponSkin",
-    [CommonConst.ResUseEffectType.SelectWeaponAccessory] = "SelectWeaponAccessory",
-    [CommonConst.ResUseEffectType.SelectSkin] = "SelectSkin",
-    [CommonConst.ResUseEffectType.SelectGestureItem] = "SelectGestureItem"
-  }
-  if CharSkinPreviewTypeList[UseEffectType] then
-    UIManager(self):LoadUINew("CharSkinPreview", {
-      Type = UseEffectType,
-      OptRewardId = StuffConfigData.UseParam,
-      ResourceId = StuffConfigData.ResourceId
-    })
-    return
-  end
-  CommonDialogParams.Title = GText(StuffConfigData.ResourceName)
-  if "ResourcePack" == UseEffectType then
-    CommonDialogParams.Tips = {
-      string.format(ExtraString, "材料包", 1, 1, 1)
-    }
-  elseif "SelectResource" == UseEffectType then
-    CommonDialogParams.Tips = {
-      string.format(ExtraString, GText(StuffConfigData.ResourceName), 0, OptCount, 2)
-    }
-  else
-    CommonDialogParams.Tips = {
-      string.format(GText("UI_Consumable_Choose"), ExtraString)
-    }
-  end
-  CommonDialogParams.AutoFocus = true
-  CommonDialogParams.DontCloseWhenRightBtnClicked = true
-  CommonDialogParams.FunctionCallbackObj = self
-  CommonDialogParams.ChooseCallbackFunction = self.TryToChooseConsumableItems
-  CommonDialogParams.RightGamepadImg = EKeys.A.KeyName
-  CommonDialogParams.RightGamepadKey = Const.GamepadFaceButtonBottom
-  CommonDialogParams.ParentWidget = self
-  CommonDialogParams.HideItemTips = true
-  CommonDialogParams.ResourceId = StuffConfigData.ResourceId
-  CommonDialogParams.UseParam = StuffConfigData.UseParam
-  
-  function CommonDialogParams.RightCallbackFunction(_, FirstData, FirstPopUIWidget)
-    local ConfirmParams, TargetStuffName, PopConfirmUIId = {}, "", 100210
-    if "SelectWeapon" == UseEffectType then
-      if self.CurrentChooseInfo then
-        TargetStuffName = self.CurrentChooseInfo.ChooseName
-      end
-      ConfirmParams.ShortText = string.format(GText("UI_Consumable_Choose_Confirm"), TargetStuffName)
-    elseif "SelectCharacter" == UseEffectType then
-      local GradeLevel = 0
-      if self.CurrentChooseInfo then
-        TargetStuffName = self.CurrentChooseInfo.ChooseName
-        GradeLevel = CommonDialogParams.OptionalItemsList[self.CurrentChooseInfo.ChooseIndex].GradeLevel or 0
-      end
-      local MaxGradeLevel = DataMgr.GlobalConstant.CharCardLevelMax.ConstantValue
-      if GradeLevel >= MaxGradeLevel then
-        ConfirmParams.ShortText = string.format(GText("UI_Consumable_CardLevel_Max"), TargetStuffName)
-      else
-        ConfirmParams.ShortText = string.format(GText("UI_Consumable_Choose_Confirm"), TargetStuffName)
-      end
-    elseif "SelectPet" == UseEffectType then
-      if self.CurrentChooseInfo then
-        TargetStuffName = self.CurrentChooseInfo.ChooseName
-      end
-      ConfirmParams.ShortText = string.format(GText("UI_Consumable_Choose_Confirm"), TargetStuffName)
-    elseif "SelectResource" == UseEffectType then
-    elseif "ResourcePack" == UseEffectType then
-      self.ConsumeCount = self.CurrentChooseInfo.ConsumeCount or 1
-    elseif "RandomSelectPack" == UseEffectType then
-    end
-    if "ResourcePack" == UseEffectType then
-      FirstPopUIWidget.DontFocusParentWidget = true
-      FirstPopUIWidget:RemoveFirstItemInPopupQueue()
-      FirstPopUIWidget:OnCloseBtnClicked()
-      self:ConfirmDealWithConsumablePacks(UseEffectType)
-    elseif "SelectResource" == UseEffectType then
-      FirstPopUIWidget.DontFocusParentWidget = true
-      FirstPopUIWidget:RemoveFirstItemInPopupQueue()
-      FirstPopUIWidget:OnCloseBtnClicked()
-      self:ConfirmDealWithConsumableResource(UseEffectType)
-    elseif "RandomSelectPack" == UseEffectType then
-      FirstPopUIWidget.DontFocusParentWidget = true
-      FirstPopUIWidget:RemoveFirstItemInPopupQueue()
-      FirstPopUIWidget:OnCloseBtnClicked()
-      self:ConfirmDealWithConsumableRandomBox(UseEffectType)
-    elseif ConfirmParams.ShortText then
-      FirstPopUIWidget.DontFocusParentWidget = true
-      ConfirmParams.AutoFocus = true
-      
-      function ConfirmParams.RightCallbackFunction(_, Data, PopUIWidget)
-        PopUIWidget:RemoveFirstItemInPopupQueue()
-        self:ConfirmDealWithConsumableItems(UseEffectType, StuffConfigData.UseParam)
-      end
-      
-      ConfirmParams.DontFocusParentWidget = true
-      UIManager(self):ShowCommonPopupUI_Interrupt(PopConfirmUIId, ConfirmParams, self)
-    else
-      FirstPopUIWidget.DontFocusParentWidget = false
-      self:ConfirmDealWithConsumableItems(UseEffectType, StuffConfigData.UseParam)
-    end
-  end
-  
-  if "ResourcePack" == UseEffectType then
-    UIManager(self):ShowCommonPopupUI(100207, CommonDialogParams, self)
-  elseif "SelectResource" == UseEffectType then
-    UIManager(self):ShowCommonPopupUI(100208, CommonDialogParams, self)
-  elseif "RandomSelectPack" == UseEffectType then
-    UIManager(self):ShowCommonPopupUI(100343, CommonDialogParams, self)
-  else
-    UIManager(self):ShowCommonPopupUI(100209, CommonDialogParams, self)
-  end
+  ResourceUseEffectDispatcher.TryHandle(self, StuffConfigData)
 end
 
 function M:TryToChooseConsumableItems(CurrentChooseInfo)
   self.CurrentChooseInfo = CurrentChooseInfo
 end
 
+function M:RefreshConsumedResourceGrid(ResourceId)
+  local AllItemCount = self.List_Item:GetNumItems()
+  for i = 0, AllItemCount - 1 do
+    local ItemObj = self.List_Item:GetItemAt(i)
+    if ItemObj and ItemObj.StuffId == ResourceId then
+      local StuffServerData = self:GetStuffServerData(ItemObj.Uuid, BagCommon.StuffType.Resource)
+      if nil == StuffServerData or type(StuffServerData.Count) == "number" and StuffServerData.Count <= 0 then
+        self.List_Item:RemoveItem(ItemObj)
+        local EmptyStuffObj = StuffIconObject:CreateBagItemContent({
+          Uuid = "",
+          StuffType = "EmptyGrid",
+          StuffCount = 0,
+          StuffIcon = nil,
+          ParentWidget = self
+        })
+        self.List_Item:AddItem(EmptyStuffObj)
+        self.List_Item:AddEmptyGridItemCount(1)
+        self.NeedSelectGridIndex = 0
+        self:JumpToSelectItem(false)
+        self:RefreshAllGridIndex()
+      else
+        ItemObj.Count = StuffServerData.Count
+        if ItemObj.SelfWidget then
+          ItemObj.SelfWidget:SetCount(StuffServerData.Count)
+        end
+      end
+    end
+  end
+  if self.Panel_Detail:IsVisible() then
+    self.Panel_Detail:UpdateItemNumber()
+  end
+end
+
 function M:ConfirmDealWithConsumableItems(UseEffectType, UseParam)
-  local PlayerAvatar = GWorld:GetAvatar()
-  if nil == PlayerAvatar then
-    DebugPrint("ConfirmDealWithConsumableItems PlayerAvatar is nil, Not Connect to Server")
-    return
-  end
-  if nil == self.CurrentChooseInfo then
-    DebugPrint("ConfirmDealWithConsumableItems error, CurrentChooseInfo is nil")
-    return
-  end
-  DebugPrint("Now ConfirmDealWithConsumableItems The ChooseId is ", self.CurrentChooseInfo.ChooseId)
-  local ResourceId, OptionalId, OptIdxList, bIsNew = nil, nil, nil, true
-  ResourceId, OptionalId = self.CurrentChooseInfo.ResourceId, self.CurrentChooseInfo.OptionalId
-  local OptIndex = 1
-  for Index, Id in pairs(DataMgr.OptReward[UseParam].Id) do
-    if Id == self.CurrentChooseInfo.ChooseId then
-      OptIndex = Index
-      break
+  ResourceUseConsumeCommit.Items(self, UseEffectType, UseParam, {
+    OnAfterSuccess = function(ResourceId)
+      self:RefreshConsumedResourceGrid(ResourceId)
     end
-  end
-  OptIdxList = {
-    [OptIndex] = 1
-  }
-  if "SelectCharacter" == UseEffectType then
-    bIsNew = not PlayerAvatar:CheckCharEnough({
-      [self.CurrentChooseInfo.ChooseId] = 1
-    })
-  end
-  
-  local function DealWithConsumableItemsCallback()
-    local OptionalItemsDataConfig = DataMgr.OptReward[OptionalId]
-    if "SelectWeapon" == UseEffectType then
-      local WeaponChooseId = OptionalItemsDataConfig.Id[OptIndex]
-      if WeaponChooseId then
-        UIUtils.ShowGetItemPage(BagCommon.StuffType.Weapon, WeaponChooseId, 1)
-      end
-      local AllItemCount = self.List_Item:GetNumItems()
-      for i = 0, AllItemCount - 1 do
-        local ItemObj = self.List_Item:GetItemAt(i)
-        if ItemObj and ItemObj.StuffId == ResourceId then
-          local StuffServerData = self:GetStuffServerData(ItemObj.Uuid, BagCommon.StuffType.Resource)
-          if nil == StuffServerData or type(StuffServerData.Count) == "number" and StuffServerData.Count <= 0 then
-            self.List_Item:RemoveItem(ItemObj)
-            local EmptyStuffObj = StuffIconObject:CreateBagItemContent({
-              Uuid = "",
-              StuffType = "EmptyGrid",
-              StuffCount = 0,
-              StuffIcon = nil,
-              ParentWidget = self
-            })
-            self.List_Item:AddItem(EmptyStuffObj)
-            self.List_Item:AddEmptyGridItemCount(1)
-            self.NeedSelectGridIndex = 0
-            self:JumpToSelectItem(false)
-            self:RefreshAllGridIndex()
-          else
-            ItemObj.Count = StuffServerData.Count
-            if ItemObj.SelfWidget then
-              ItemObj.SelfWidget:SetCount(StuffServerData.Count)
-            end
-          end
-        end
-      end
-      if self.Panel_Detail:IsVisible() then
-        self.Panel_Detail:UpdateItemNumber()
-      end
-    elseif "SelectCharacter" == UseEffectType then
-      local CharChooseId = OptionalItemsDataConfig.Id[OptIndex]
-      if CharChooseId then
-        UIUtils.ShowGetItemPage("Char", CharChooseId, 1, nil, nil, nil, nil, nil, nil, bIsNew)
-      end
-      local AllItemCount = self.List_Item:GetNumItems()
-      for i = 0, AllItemCount - 1 do
-        local ItemObj = self.List_Item:GetItemAt(i)
-        if ItemObj and ItemObj.StuffId == ResourceId then
-          local StuffServerData = self:GetStuffServerData(ItemObj.Uuid, BagCommon.StuffType.Resource)
-          if nil == StuffServerData or type(StuffServerData.Count) == "number" and StuffServerData.Count <= 0 then
-            self.List_Item:RemoveItem(ItemObj)
-            local EmptyStuffObj = StuffIconObject:CreateBagItemContent({
-              Uuid = "",
-              StuffType = "EmptyGrid",
-              StuffCount = 0,
-              StuffIcon = nil,
-              ParentWidget = self
-            })
-            self.List_Item:AddItem(EmptyStuffObj)
-            self.List_Item:AddEmptyGridItemCount(1)
-            self.NeedSelectGridIndex = 0
-            self:JumpToSelectItem(false)
-            self:RefreshAllGridIndex()
-          else
-            ItemObj.Count = StuffServerData.Count
-            if ItemObj.SelfWidget then
-              ItemObj.SelfWidget:SetCount(StuffServerData.Count)
-            end
-          end
-        end
-      end
-      if self.Panel_Detail:IsVisible() then
-        self.Panel_Detail:UpdateItemNumber()
-      end
-    elseif "SelectPet" == UseEffectType then
-      local PetChooseId = OptionalItemsDataConfig.Id[OptIndex]
-      if PetChooseId then
-        local GameInstance = GWorld.GameInstance
-        local UIManager = GameInstance:GetGameUIManager()
-        local SystemUIName = "GetItemPage"
-        UIManager:LoadUINew(SystemUIName, BagCommon.OptionalItemType.Pet, PetChooseId, 1, nil, -1, -1)
-      end
-      local AllItemCount = self.List_Item:GetNumItems()
-      for i = 0, AllItemCount - 1 do
-        local ItemObj = self.List_Item:GetItemAt(i)
-        if ItemObj and ItemObj.StuffId == ResourceId then
-          local StuffServerData = self:GetStuffServerData(ItemObj.Uuid, BagCommon.StuffType.Resource)
-          if nil == StuffServerData or type(StuffServerData.Count) == "number" and StuffServerData.Count <= 0 then
-            self.List_Item:RemoveItem(ItemObj)
-            local EmptyStuffObj = StuffIconObject:CreateBagItemContent({
-              Uuid = "",
-              StuffType = "EmptyGrid",
-              StuffCount = 0,
-              StuffIcon = nil,
-              ParentWidget = self
-            })
-            self.List_Item:AddItem(EmptyStuffObj)
-            self.List_Item:AddEmptyGridItemCount(1)
-            self.NeedSelectGridIndex = 0
-            self:JumpToSelectItem(false)
-            self:RefreshAllGridIndex()
-          else
-            ItemObj.Count = StuffServerData.Count
-            if ItemObj.SelfWidget then
-              ItemObj.SelfWidget:SetCount(StuffServerData.Count)
-            end
-          end
-        end
-      end
-      if self.Panel_Detail:IsVisible() then
-        self.Panel_Detail:UpdateItemNumber()
-      end
-    end
-  end
-  
-  PlayerAvatar:UseOptResourceInBag(ResourceId, OptIdxList, DealWithConsumableItemsCallback)
-  self.CurrentChooseInfo = nil
+  })
 end
 
 function M:ConfirmDealWithConsumableResource(UseEffectType)
@@ -1435,6 +1210,9 @@ function M:ConfirmDealWithConsumableResource(UseEffectType)
   end
   
   local function DealWithConsumableItemsCallback()
+    if not IsValid(self) then
+      return
+    end
     local OptionalItemsDataConfig = DataMgr.OptReward[OptionalId]
     local AllRewards = {
       Resources = {}
@@ -1473,42 +1251,16 @@ function M:ConfirmDealWithConsumableRandomBox()
   self:BlockAllUIInput(true, "SP_DisplayOnly")
   
   local function DealWithConsumableItemsCallback(RewardInfo)
+    if not IsValid(self) then
+      return
+    end
     self:BlockAllUIInput(false)
     if not RewardInfo or RewardInfo.bEmpty then
       return
     end
     UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, RewardInfo, false, function()
     end, self, false)
-    local AllItemCount = self.List_Item:GetNumItems()
-    for i = 0, AllItemCount - 1 do
-      local ItemObj = self.List_Item:GetItemAt(i)
-      if ItemObj and ItemObj.StuffId == ResourceId then
-        local StuffServerData = self:GetStuffServerData(ItemObj.Uuid, BagCommon.StuffType.Resource)
-        if nil == StuffServerData or type(StuffServerData.Count) == "number" and StuffServerData.Count <= 0 then
-          self.List_Item:RemoveItem(ItemObj)
-          local EmptyStuffObj = StuffIconObject:CreateBagItemContent({
-            Uuid = "",
-            StuffType = "EmptyGrid",
-            StuffCount = 0,
-            StuffIcon = nil,
-            ParentWidget = self
-          })
-          self.List_Item:AddItem(EmptyStuffObj)
-          self.List_Item:AddEmptyGridItemCount(1)
-          self.NeedSelectGridIndex = 0
-          self:JumpToSelectItem(false)
-          self:RefreshAllGridIndex()
-        else
-          ItemObj.Count = StuffServerData.Count
-          if ItemObj.SelfWidget then
-            ItemObj.SelfWidget:SetCount(StuffServerData.Count)
-          end
-        end
-      end
-    end
-    if self.Panel_Detail:IsVisible() then
-      self.Panel_Detail:UpdateItemNumber()
-    end
+    self:RefreshConsumedResourceGrid(ResourceId)
   end
   
   PlayerAvatar:UseResourceInBag(ResourceId, ConsumeCount, DealWithConsumableItemsCallback)
@@ -1526,6 +1278,9 @@ function M:ConfirmDealWithConsumablePacks(UseEffectType)
   local ConsumeCount = self.CurrentChooseInfo.ConsumeCount or 1
   
   local function DealWithConsumableItemsCallback()
+    if not IsValid(self) then
+      return
+    end
     local OptionalItemsDataConfig = DataMgr.Reward[OptionalId]
     local Count = self.ConsumeCount
     local ResourcePackChooseId = OptionalItemsDataConfig.Id
@@ -1536,234 +1291,10 @@ function M:ConfirmDealWithConsumablePacks(UseEffectType)
       AllRewards.Resources[v] = OptionalItemsDataConfig.Count[k][1] * Count
     end
     UIManager(self):LoadUINew("GetItemPage", nil, nil, nil, AllRewards, nil, self, true)
-    local AllItemCount = self.List_Item:GetNumItems()
-    for i = 0, AllItemCount - 1 do
-      local ItemObj = self.List_Item:GetItemAt(i)
-      if ItemObj and ItemObj.StuffId == ResourceId then
-        local StuffServerData = self:GetStuffServerData(ItemObj.Uuid, BagCommon.StuffType.Resource)
-        if nil == StuffServerData or type(StuffServerData.Count) == "number" and StuffServerData.Count <= 0 then
-          self.List_Item:RemoveItem(ItemObj)
-          local EmptyStuffObj = StuffIconObject:CreateBagItemContent({
-            Uuid = "",
-            StuffType = "EmptyGrid",
-            StuffCount = 0,
-            StuffIcon = nil,
-            ParentWidget = self
-          })
-          self.List_Item:AddItem(EmptyStuffObj)
-          self.List_Item:AddEmptyGridItemCount(1)
-          self.NeedSelectGridIndex = 0
-          self:JumpToSelectItem(false)
-          self:RefreshAllGridIndex()
-        else
-          ItemObj.Count = StuffServerData.Count
-          if ItemObj.SelfWidget then
-            ItemObj.SelfWidget:SetCount(StuffServerData.Count)
-          end
-        end
-      end
-    end
-    if self.Panel_Detail:IsVisible() then
-      self.Panel_Detail:UpdateItemNumber()
-    end
+    self:RefreshConsumedResourceGrid(ResourceId)
   end
   
   PlayerAvatar:UseResourceInBag(ResourceId, ConsumeCount, DealWithConsumableItemsCallback)
-end
-
-function M:GenerateDataWith_SelectWeapon(ResourceId, UseParam)
-  local ResultData, OptionalItemsDataConfig = {}, DataMgr.OptReward[UseParam]
-  local Avatar = GWorld:GetAvatar()
-  if nil == Avatar then
-    DebugPrint("GenerateDataWith_SelectWeapon Avatar is nil, Not Connect to Server")
-    return ResultData
-  end
-  if OptionalItemsDataConfig then
-    for index, value in ipairs(OptionalItemsDataConfig.Id) do
-      local RewardObject = {}
-      RewardObject.HaveCountNumber = 0
-      for Uuid, StuffServerData in pairs(Avatar.Weapons) do
-        if StuffServerData.WeaponId == value then
-          RewardObject.HaveCountNumber = RewardObject.HaveCountNumber + 1
-          if nil == RewardObject.GradeLevel or StuffServerData.GradeLevel > RewardObject.GradeLevel then
-            RewardObject.GradeLevel = StuffServerData.GradeLevel
-            RewardObject.IsMaxGradeLevel = DataMgr.WeaponCardLevel[value].CardLevelMax == StuffServerData.GradeLevel
-          end
-        end
-      end
-      local WeaponConfigData = DataMgr.Weapon[value]
-      local BattleWeaponInfo, AttributeIcon = DataMgr.BattleWeapon[value]
-      if BattleWeaponInfo then
-        for _, Tag in pairs(BattleWeaponInfo.WeaponTag) do
-          local TagInfo = DataMgr.WeaponTag[Tag]
-          if TagInfo and TagInfo.WeaponTagfilter and TagInfo.Icon then
-            AttributeIcon = TagInfo.Icon
-            break
-          end
-        end
-      end
-      RewardObject.ResourceId = ResourceId
-      RewardObject.OptionalId = UseParam
-      RewardObject.StuffId = value
-      RewardObject.StuffIcon = WeaponConfigData.Icon
-      RewardObject.StuffName = GText(WeaponConfigData.WeaponName)
-      RewardObject.StuffType = BagCommon.OptionalItemType.Weapon
-      RewardObject.Rarity = WeaponConfigData.WeaponRarity or 1
-      RewardObject.AttrIcon = AttributeIcon
-      RewardObject.UIName = BagCommon.MainUIName
-      RewardObject.ParentWidget = self
-      table.insert(ResultData, RewardObject)
-    end
-  end
-  return ResultData, GText("UI_SHOP_SUBTAB_NAME_WEAPON")
-end
-
-function M:GenerateDataWith_SelectCharacter(ResourceId, UseParam)
-  local ResultData, OptionalItemsDataConfig = {}, DataMgr.OptReward[UseParam]
-  local Avatar = GWorld:GetAvatar()
-  if nil == Avatar then
-    return ResultData
-  end
-  if OptionalItemsDataConfig then
-    for index, value in ipairs(OptionalItemsDataConfig.Id) do
-      local RewardObject = {}
-      RewardObject.HaveCountNumber = 0
-      for Uuid, StuffServerData in pairs(Avatar.Chars or {}) do
-        if StuffServerData.CharId == value then
-          RewardObject.HaveCountNumber = RewardObject.HaveCountNumber + 1
-          if nil == RewardObject.GradeLevel or StuffServerData.GradeLevel > RewardObject.GradeLevel then
-            RewardObject.GradeLevel = StuffServerData.GradeLevel
-          end
-          local CharPieceId = DataMgr.Char[value].CharPieceId
-          RewardObject.Count = Avatar:GetResourceNum(CharPieceId)
-        end
-      end
-      local CharacterConfigData = DataMgr.Char[value]
-      local BattleCharInfo, AttributeIcon = DataMgr.BattleChar[value]
-      if BattleCharInfo then
-        local Attribute = BattleCharInfo.Attribute
-        AttributeIcon = DataMgr.Attribute[Attribute] and DataMgr.Attribute[Attribute].Icon
-      end
-      RewardObject.ResourceId = ResourceId
-      RewardObject.OptionalId = UseParam
-      RewardObject.StuffId = value
-      RewardObject.StuffIcon = CharacterConfigData.Icon
-      RewardObject.StuffName = GText(CharacterConfigData.CharName)
-      RewardObject.StuffType = BagCommon.OptionalItemType.Avatar
-      RewardObject.Rarity = CharacterConfigData.CharRarity
-      RewardObject.AttrIcon = AttributeIcon
-      RewardObject.Attribute = BattleCharInfo.Attribute
-      RewardObject.UIName = BagCommon.MainUIName
-      RewardObject.ParentWidget = self
-      table.insert(ResultData, RewardObject)
-    end
-  end
-  return ResultData, GText("UI_Armory_Char")
-end
-
-function M:GenerateDataWith_SelectPet(ResourceId, UseParam)
-  local ResultData, OptionalItemsDataConfig = {}, DataMgr.OptReward[UseParam]
-  local Avatar = GWorld:GetAvatar()
-  if nil == Avatar then
-    return ResultData
-  end
-  if OptionalItemsDataConfig then
-    for index, value in ipairs(OptionalItemsDataConfig.Id) do
-      local RewardObject = {}
-      RewardObject.HaveCountNumber = 0
-      for Uuid, StuffServerData in pairs(Avatar.Pets or {}) do
-        if StuffServerData.PetId == value then
-          RewardObject.HaveCountNumber = RewardObject.HaveCountNumber + 1
-          if nil == RewardObject.GradeLevel or StuffServerData.BreakNum > RewardObject.GradeLevel then
-            RewardObject.GradeLevel = StuffServerData.BreakNum
-          end
-        end
-      end
-      local PetConfigData = DataMgr.Pet[value]
-      RewardObject.ResourceId = ResourceId
-      RewardObject.Premium = PetConfigData.Premium
-      RewardObject.OptionalId = UseParam
-      RewardObject.StuffId = value
-      RewardObject.StuffIcon = PetConfigData.Icon
-      RewardObject.StuffName = GText(PetConfigData.Name)
-      RewardObject.StuffType = BagCommon.OptionalItemType.Pet
-      RewardObject.Rarity = PetConfigData.Rarity or 1
-      RewardObject.UIName = BagCommon.MainUIName
-      RewardObject.ParentWidget = self
-      table.insert(ResultData, RewardObject)
-    end
-  end
-  return ResultData, GText("MAIN_UI_PET")
-end
-
-function M:GenerateDataWith_SelectResource(ResourceId, UseParam)
-  local ResultData, OptionalItemsDataConfig, OptCount = {}, DataMgr.OptReward[UseParam]
-  local Avatar = GWorld:GetAvatar()
-  if nil == Avatar then
-    return ResultData
-  end
-  if OptionalItemsDataConfig then
-    OptCount = Avatar.Resources[ResourceId].Count
-    for index, value in ipairs(OptionalItemsDataConfig.Id) do
-      local RewardObject = {}
-      RewardObject.HaveCountNumber = 0
-      for Uuid, StuffServerData in pairs(Avatar.Resources or {}) do
-        if StuffServerData.ResourceId == value then
-          RewardObject.HaveCountNumber = RewardObject.HaveCountNumber + 1
-        end
-      end
-      local ResourceConfigData = DataMgr.Resource[value]
-      RewardObject.ResourceId = ResourceId
-      RewardObject.OptionalId = UseParam
-      RewardObject.StuffId = value
-      RewardObject.StuffCount = Avatar.Resources[value] and Avatar.Resources[value].Count or 0
-      RewardObject.StuffIcon = ResourceConfigData.Icon
-      RewardObject.StuffName = GText(ResourceConfigData.ResourceName)
-      RewardObject.StuffType = "SelectResource"
-      RewardObject.Rarity = ResourceConfigData.Rarity or 1
-      RewardObject.UIName = BagCommon.MainUIName
-      RewardObject.ParentWidget = self
-      RewardObject.Count = OptionalItemsDataConfig.Count[index]
-      RewardObject.OptCount = OptCount
-      table.insert(ResultData, RewardObject)
-    end
-  end
-  return ResultData, GText("UI_Consumable_Effect_ResourcePack"), OptCount
-end
-
-function M:GenerateDataWith_ResourcePack(ResourceId, UseParam)
-  local ResultData, OptionalItemsDataConfig, OptCount = {}, DataMgr.Reward[UseParam]
-  local Avatar = GWorld:GetAvatar()
-  if nil == Avatar then
-    return ResultData
-  end
-  if OptionalItemsDataConfig then
-    OptCount = Avatar.Resources[ResourceId].Count
-    for index, value in ipairs(OptionalItemsDataConfig.Id) do
-      local RewardObject = {}
-      RewardObject.HaveCountNumber = 0
-      for Uuid, StuffServerData in pairs(Avatar.Resources or {}) do
-        if StuffServerData.ResourceId == value then
-          RewardObject.HaveCountNumber = RewardObject.HaveCountNumber + 1
-        end
-      end
-      local ResourceConfigData = DataMgr.Resource[value]
-      RewardObject.ResourceId = ResourceId
-      RewardObject.OptionalId = UseParam
-      RewardObject.StuffId = value
-      RewardObject.StuffIcon = ResourceConfigData.Icon
-      RewardObject.StuffName = GText(ResourceConfigData.ResourceName)
-      RewardObject.StuffType = "ResourcePack"
-      RewardObject.Rarity = ResourceConfigData.Rarity or 1
-      RewardObject.UIName = BagCommon.MainUIName
-      RewardObject.ParentWidget = self
-      RewardObject.Count = OptionalItemsDataConfig.Count[index][1] or 1
-      RewardObject.OptCount = OptCount
-      table.insert(ResultData, RewardObject)
-    end
-  end
-  local ResourcePackText = GText("UI_Consumable_Effect_ResourcePack"), OptCount
-  return ResultData, ResourcePackText
 end
 
 function M:ClickToUnlockStuff()

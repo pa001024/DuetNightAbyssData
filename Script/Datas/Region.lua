@@ -11,6 +11,7 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
 end
 return ReadOnly("Region", {
   [1001] = {
+    AFKSupportScene = "BG06",
     AlertDisable = true,
     BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_White.WBP_Map_BG_White'",
     IsRandom = {
@@ -33,6 +34,7 @@ return ReadOnly("Region", {
     ResetTime = {MONTH = 1}
   },
   [1011] = {
+    AFKSupportScene = "BG06",
     AlertDisable = true,
     BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_White.WBP_Map_BG_White'",
     IsRandom = {
@@ -60,6 +62,7 @@ return ReadOnly("Region", {
     ResetTime = {DAY = 1}
   },
   [1013] = {
+    AFKSupportScene = "BG06",
     AlertDisable = true,
     BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_White.WBP_Map_BG_White'",
     IsRandom = {
@@ -81,6 +84,7 @@ return ReadOnly("Region", {
     RegionType = "Main"
   },
   [1014] = {
+    AFKSupportScene = "BG06",
     IsRandom = {101401, 101402},
     RegionId = 1014,
     RegionJsonFile = "/Game/Script/Datas/Houdini_data/Chapter01/Main/Chapter01_Saiqi_Wonderland",
@@ -90,6 +94,7 @@ return ReadOnly("Region", {
     RegionType = "Fantasy"
   },
   [1017] = {
+    AFKSupportScene = "BG06",
     AlertDisable = true,
     BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_White.WBP_Map_BG_White'",
     IsRandom = {
@@ -110,6 +115,7 @@ return ReadOnly("Region", {
     ResetTime = {WEEK = 1}
   },
   [1019] = {
+    AFKSupportScene = "BG06",
     AlertDisable = true,
     BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_White.WBP_Map_BG_White'",
     CloseBlock = true,
@@ -124,6 +130,7 @@ return ReadOnly("Region", {
     RegionType = "Main"
   },
   [1021] = {
+    AFKSupportScene = "BG06",
     AlertDisable = true,
     BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_White.WBP_Map_BG_White'",
     IsRandom = {
@@ -144,6 +151,7 @@ return ReadOnly("Region", {
     RegionType = "EX"
   },
   [1032] = {
+    AFKSupportScene = "BG06",
     IsRandom = {103201},
     RegionId = 1032,
     RegionMapFile = "/Game/Maps/Levels/Chapter01/Chapter01_Alch_Main/Chapter01_Alch_Main",
@@ -152,6 +160,7 @@ return ReadOnly("Region", {
     RegionType = "Main"
   },
   [1041] = {
+    AFKSupportScene = "BG04",
     AlertDisable = true,
     BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_Black.WBP_Map_BG_Black'",
     IsRandom = {
@@ -175,6 +184,7 @@ return ReadOnly("Region", {
     RegionType = "Main"
   },
   [1042] = {
+    AFKSupportScene = "BG04",
     IsRandom = {104201},
     RegionId = 1042,
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Yanjindu_Batt01/Huaxu_Yanjindu_Batt01_Main",
@@ -183,6 +193,7 @@ return ReadOnly("Region", {
     RegionType = "Main"
   },
   [1043] = {
+    AFKSupportScene = "BG04",
     IsRandom = {104301},
     RegionId = 1043,
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Yanjindu_Nai01/Huaxu_Yanjindu_Nai01_Main",
@@ -191,6 +202,7 @@ return ReadOnly("Region", {
     RegionType = "Main"
   },
   [1044] = {
+    AFKSupportScene = "BG04",
     IsRandom = {104401},
     RegionId = 1044,
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Yanjindu_Nai02/Huaxu_Yanjindu_Nai02_Main",
@@ -199,6 +211,7 @@ return ReadOnly("Region", {
     RegionType = "Main"
   },
   [1045] = {
+    AFKSupportScene = "BG04",
     AlertDisable = true,
     BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_EastSeason02.WBP_Map_BG_EastSeason02'",
     IsRandom = {
@@ -220,6 +233,7 @@ return ReadOnly("Region", {
     RegionType = "Main"
   },
   [1046] = {
+    AFKSupportScene = "BG04",
     IsRandom = {104601},
     RegionId = 1046,
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Yanjindu_Batt02/Huaxu_Yanjindu_Batt02_Main",
@@ -228,6 +242,7 @@ return ReadOnly("Region", {
     RegionType = "Main"
   },
   [1047] = {
+    AFKSupportScene = "BG04",
     IsRandom = {104701},
     RegionId = 1047,
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Yanjindu_Batt03/Huaxu_Yanjindu_Batt03_Main",
@@ -236,6 +251,7 @@ return ReadOnly("Region", {
     RegionType = "Main"
   },
   [1048] = {
+    AFKSupportScene = "BG04",
     IsRandom = {104801},
     RegionId = 1048,
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_YYG/Huaxu_Haojing_YYG_Main",
@@ -244,6 +260,7 @@ return ReadOnly("Region", {
     RegionType = "Main"
   },
   [1049] = {
+    AFKSupportScene = "BG04",
     AlertDisable = true,
     BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_Black.WBP_Map_BG_Black'",
     IsRandom = {104901},
@@ -255,6 +272,7 @@ return ReadOnly("Region", {
     RegionType = "Main"
   },
   [1050] = {
+    AFKSupportScene = "BG04",
     IsRandom = {105001},
     RegionId = 1050,
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Yanjindu_Nai03/Huaxu_Yanjindu_Nai03_Main",
@@ -263,6 +281,7 @@ return ReadOnly("Region", {
     RegionType = "Main"
   },
   [1051] = {
+    AFKSupportScene = "BG04",
     AlertDisable = true,
     BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_EastSeason02.WBP_Map_BG_EastSeason02'",
     IsRandom = {105101},
@@ -274,6 +293,7 @@ return ReadOnly("Region", {
     RegionType = "Main"
   },
   [1052] = {
+    AFKSupportScene = "BG04",
     AlertDisable = true,
     BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_EastSeason02.WBP_Map_BG_EastSeason02'",
     IsRandom = {105201},
@@ -287,6 +307,7 @@ return ReadOnly("Region", {
     RegionType = "Main"
   },
   [1053] = {
+    AFKSupportScene = "BG04",
     AlertDisable = true,
     BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_EastSeason02.WBP_Map_BG_EastSeason02'",
     CloseBlock = true,
@@ -302,6 +323,7 @@ return ReadOnly("Region", {
     RegionType = "Main"
   },
   [1054] = {
+    AFKSupportScene = "BG04",
     IsRandom = {105401},
     RegionId = 1054,
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_TXJ/Huaxu_Haojing_TXJ_Main",
@@ -309,6 +331,7 @@ return ReadOnly("Region", {
     RegionName = "UI_REGION_NAME_1054"
   },
   [1055] = {
+    AFKSupportScene = "BG04",
     AlertDisable = true,
     BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_EastSeason02.WBP_Map_BG_EastSeason02'",
     CloseBlock = true,
@@ -323,6 +346,7 @@ return ReadOnly("Region", {
     RegionType = "Main"
   },
   [1056] = {
+    AFKSupportScene = "BG04",
     IsRandom = {105601, 105602},
     RegionId = 1056,
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_ZhiliuHJ/Huaxu_Haojing_ZhiliuHJ_Main",
@@ -330,6 +354,7 @@ return ReadOnly("Region", {
     RegionName = "UI_REGION_NAME_1056"
   },
   [1057] = {
+    AFKSupportScene = "BG04",
     BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_Black.WBP_Map_BG_Black'",
     CloseBlock = true,
     IsRandom = {105701},
@@ -343,6 +368,7 @@ return ReadOnly("Region", {
     RegionType = "Main"
   },
   [1058] = {
+    AFKSupportScene = "BG04",
     IsRandom = {105801},
     RegionId = 1058,
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Yanjindu_Stealth/Huaxu_Yanjindu_Stealth_Main",
@@ -351,6 +377,7 @@ return ReadOnly("Region", {
     RegionType = "Main"
   },
   [1059] = {
+    AFKSupportScene = "BG04",
     IsRandom = {105901},
     RegionId = 1059,
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_HaoJing_Batt04/Huaxu_Haojing_Batt04_Main",
@@ -359,6 +386,7 @@ return ReadOnly("Region", {
     RegionType = "Main"
   },
   [1060] = {
+    AFKSupportScene = "BG07",
     AlertDisable = true,
     BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_White.WBP_Map_BG_White'",
     IsRandom = {106001},
@@ -373,6 +401,7 @@ return ReadOnly("Region", {
     RegionType = "Main"
   },
   [1061] = {
+    AFKSupportScene = "BG07",
     IsRandom = {106101},
     RegionId = 1061,
     RegionMapFile = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_YW/Haiboliya_Chezhan_YW_Main",
@@ -382,6 +411,7 @@ return ReadOnly("Region", {
     RegionType = "Main"
   },
   [1062] = {
+    AFKSupportScene = "BG07",
     IsRandom = {106201},
     RegionId = 1062,
     RegionMapFile = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_MT/Haiboliya_Chezhan_MT_Main",
@@ -390,6 +420,7 @@ return ReadOnly("Region", {
     RegionType = "Main"
   },
   [1063] = {
+    AFKSupportScene = "BG07",
     AlertDisable = true,
     BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_White.WBP_Map_BG_White'",
     IsRandom = {106301},
@@ -403,6 +434,7 @@ return ReadOnly("Region", {
     RegionType = "Main"
   },
   [1070] = {
+    AFKSupportScene = "BG05",
     AlertDisable = true,
     BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_Black.WBP_Map_BG_Black'",
     IsRandom = {107001},
@@ -417,6 +449,7 @@ return ReadOnly("Region", {
     RegionType = "EX"
   },
   [1071] = {
+    AFKSupportScene = "BG05",
     AlertDisable = true,
     BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_Black.WBP_Map_BG_Black'",
     IsRandom = {107101},
@@ -431,6 +464,7 @@ return ReadOnly("Region", {
     RegionType = "EX"
   },
   [1072] = {
+    AFKSupportScene = "BG05",
     AlertDisable = true,
     BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_Black.WBP_Map_BG_Black'",
     IsRandom = {107201},
@@ -444,6 +478,7 @@ return ReadOnly("Region", {
     RegionType = "EX"
   },
   [1073] = {
+    AFKSupportScene = "BG05",
     IsRandom = {107301},
     RegionId = 1073,
     RegionMapFile = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Emyly/Haiboliya_Thc_Emyly_Main",
@@ -452,6 +487,7 @@ return ReadOnly("Region", {
     RegionType = "EX"
   },
   [1074] = {
+    AFKSupportScene = "BG05",
     IsRandom = {107401},
     RegionId = 1074,
     RegionMapFile = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Zchj/Haiboliya_Thc_Zchj_Main",
@@ -460,6 +496,7 @@ return ReadOnly("Region", {
     RegionType = "EX"
   },
   [1075] = {
+    AFKSupportScene = "BG05",
     AlertDisable = true,
     BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_Black.WBP_Map_BG_Black'",
     CloseBlock = true,
@@ -472,14 +509,17 @@ return ReadOnly("Region", {
     RegionType = "EX"
   },
   [1076] = {
+    AFKSupportScene = "BG05",
     IsRandom = {107601},
     RegionId = 1076,
     RegionMapFile = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Boss/Haiboliya_Thc_Boss_Main",
+    RegionMapId = 601,
     RegionMapWheelScale = T.RT_1,
     RegionName = "UI_REGION_NAME_1076",
     RegionType = "EX"
   },
   [1077] = {
+    AFKSupportScene = "BG05",
     AlertDisable = true,
     BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_Black.WBP_Map_BG_Black'",
     CloseBlock = true,
@@ -492,6 +532,7 @@ return ReadOnly("Region", {
     RegionType = "EX"
   },
   [1078] = {
+    AFKSupportScene = "BG05",
     IsRandom = {107801},
     RegionId = 1078,
     RegionMapFile = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Ck/Haiboliya_Thc_Ck_Main",
@@ -500,25 +541,37 @@ return ReadOnly("Region", {
     RegionType = "EX"
   },
   [1081] = {
+    AlertDisable = true,
+    CloseBlock = true,
     IsRandom = {108101},
     RegionId = 1081,
-    RegionMapFile = "/Game/Maps/Levels/Ailixian/Ailixian_SLF_Main/Ailixian_SLF_Main",
+    RegionMapFile = "/Game/Maps/Levels/Ailixian/Ailixian_Miandao_SLF/Ailixian_Miandao_SLF_Main",
+    RegionMapId = 700,
+    RegionMapImage = "/Game/UI/WBP/Map/Widget/RegionMap/EX02/WBP_Map_Reg_EXChapter02_Lxzs01.WBP_Map_Reg_EXChapter02_Lxzs01",
     RegionMapWheelScale = T.RT_1,
     RegionName = "艾利西安-塞拉菲修道院",
     RegionType = "Main"
   },
   [1082] = {
+    AlertDisable = true,
+    CloseBlock = true,
     IsRandom = {108201},
     RegionId = 1082,
     RegionMapFile = "/Game/Maps/Levels/Ailixian/Ailixian_Miandao_Main/Ailixian_Miandao_Main",
+    RegionMapId = 701,
+    RegionMapImage = "/Game/UI/WBP/Map/Widget/RegionMap/EX02/WBP_Map_Reg_EXChapter02_Lxzs02.WBP_Map_Reg_EXChapter02_Lxzs02",
     RegionMapWheelScale = T.RT_1,
     RegionName = "艾利西安-眠岛",
     RegionType = "Main"
   },
   [1083] = {
+    AlertDisable = true,
+    CloseBlock = true,
     IsRandom = {108301},
     RegionId = 1083,
-    RegionMapFile = "/Game/Maps/Levels/Ailixian/Ailixian_LLKWon_Main/Ailixian_LLKWon_Main",
+    RegionMapFile = "/Game/Maps/Levels/Ailixian/Ailixian_Miandao_LilikouMJ/Ailixian_Miandao_LilikouMJ_Main",
+    RegionMapId = 702,
+    RegionMapImage = "/Game/UI/WBP/Map/Widget/RegionMap/EX02/WBP_Map_Reg_EXChapter02_Lxzx.WBP_Map_Reg_EXChapter02_Lxzx",
     RegionMapWheelScale = T.RT_1,
     RegionName = "艾利西安-莉莉蔻梦境",
     RegionType = "Main"
@@ -528,7 +581,7 @@ return ReadOnly("Region", {
     RegionId = 1084,
     RegionMapFile = "/Game/Maps/Levels/Ailixian/Ailixian_Miandao_Yyhf_Main/Ailixian_Miandao_Yyhf_Main",
     RegionMapWheelScale = T.RT_1,
-    RegionName = "悠远海风号-眠岛海上",
+    RegionName = "艾利西安-悠远海风号-眠岛海上",
     RegionType = "Main"
   },
   [1085] = {
@@ -536,45 +589,46 @@ return ReadOnly("Region", {
     RegionId = 1085,
     RegionMapFile = "/Game/Maps/Levels/Ailixian/Ailixian_Yidai_Boss/Ailixian_Yidai_Boss_Main",
     RegionMapWheelScale = T.RT_1,
-    RegionName = "艾利西安-伊黛梦境-Boss战",
+    RegionName = "艾利西安-伊黛Boss战",
     RegionType = "Main"
   },
   [1090] = {
     IsRandom = {109001},
     RegionId = 1090,
-    RegionMapFile = "/Game/Maps/Levels/Ailixian/Ailixian_Chenmian_Main/Ailixian_Chenmian_Main",
-    RegionName = "UI_REGION_NAME_1090",
+    RegionMapFile = "/Game/Maps/Levels/Ailixian/Ailixian_Abyss_CMZD/Ailixian_Abyss_CMZD_Main",
+    RegionName = "深渊-沉眠之地",
     RegionType = "Main"
   },
   [1091] = {
     IsRandom = {109101},
     RegionId = 1091,
-    RegionMapFile = "/Game/Maps/Levels/Ailixian/Ailixian_Shendianfeixu_Main/Ailixian_Shendianfeixu_Main",
-    RegionName = "UI_REGION_NAME_1091",
+    RegionMapFile = "/Game/Maps/Levels/Ailixian/Ailixian_Abyss_SDFX/Ailixian_Abyss_SDFX_Main",
+    RegionName = "深渊-神殿废墟",
     RegionType = "Main"
   },
   [1092] = {
     IsRandom = {109201},
     RegionId = 1092,
-    RegionMapFile = "/Game/Maps/Levels/Ailixian/Ailixian_Manyue_Main/Ailixian_Manyue_Main",
-    RegionName = "UI_REGION_NAME_1092",
+    RegionMapFile = "/Game/Maps/Levels/Ailixian/Ailixian_Abyss_MYJSC/Ailixian_Abyss_MYJSC_Main",
+    RegionName = "深渊-满月祭祀场",
     RegionType = "Main"
   },
   [1093] = {
     IsRandom = {109301},
     RegionId = 1093,
-    RegionMapFile = "/Game/Maps/Levels/Ailixian/Ailixian_Anzhixin_Main/Ailixian_Anzhixin_Main",
-    RegionName = "UI_REGION_NAME_1093",
+    RegionMapFile = "/Game/Maps/Levels/Ailixian/Ailixian_Abyss_AZX/Ailixian_Abyss_AZX_Main",
+    RegionName = "深渊-暗之心",
     RegionType = "Main"
   },
   [1094] = {
     IsRandom = {109401},
     RegionId = 1094,
-    RegionMapFile = "/Game/Maps/Levels/Ailixian/Ailixian_LizibeierHJ_Main/Ailixian_LizibeierHJ_Main",
-    RegionName = "UI_REGION_NAME_1094",
+    RegionMapFile = "/Game/Maps/Levels/Ailixian/Ailixian_Abyss_SJHL/Ailixian_Abyss_SJHL_Main",
+    RegionName = "深渊-时间回廊",
     RegionType = "Main"
   },
   [2001] = {
+    AFKSupportScene = "BG06",
     IsRandom = {200101},
     RegionId = 2001,
     RegionMapFile = "/Game/Maps/Levels/Home/Invite_Main/Invite_Main",
@@ -583,6 +637,7 @@ return ReadOnly("Region", {
     RegionType = "Main"
   },
   [2101] = {
+    AFKSupportScene = "BG06",
     AlertDisable = true,
     BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_White.WBP_Map_BG_White'",
     IsRandom = {210101},

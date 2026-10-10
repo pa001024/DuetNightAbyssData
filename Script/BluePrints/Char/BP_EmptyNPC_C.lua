@@ -16,6 +16,7 @@ function BP_EmptyNPC_C:InitInfo(Info)
 end
 
 function BP_EmptyNPC_C:ReceiveBeginPlay()
+  BP_EmptyNPC_C.Super.ReceiveBeginPlay(self)
   self.DelayFuncs = {}
   self.IsDestroied = false
   self.bIsEmptyNpc = true

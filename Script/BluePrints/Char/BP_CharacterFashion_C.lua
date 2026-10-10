@@ -266,9 +266,18 @@ function BP_CharacterFashion_C:SetTimerForCreateEffectOnSkillLevelUp(SkinId)
       return
     end
     for Id, Data in pairs(VisualEffects) do
-      Owner.FXComponent:PlayEffectByIDParams(Id, {
-        NotAttached = not Data.IsAttach
-      })
+      local VisualEffectData = DataMgr.VisualEffect[Id]
+      if VisualEffectData and VisualEffectData.canPlayAsync then
+        local EffectParams = Owner.FXComponent:GetPlayEffectParams(Id)
+        if not Data.IsAttach then
+          EffectParams.NotAttached = true
+        end
+        Owner.FXComponent:PlayEffectByIDParamsAsync(Id, EffectParams)
+      else
+        Owner.FXComponent:PlayEffectByIDParams(Id, {
+          NotAttached = not Data.IsAttach
+        })
+      end
     end
     for Id, Data in pairs(EffectCreatures) do
       local ExistingEffectCreatures = Owner:GetEffectCreatureById(Id)
@@ -346,11 +355,30 @@ function BP_CharacterFashion_C:CreateSkinLevelUpVisualEffect(SkinId)
   for VisualEffectId, LevelUpVisualEffect in pairs(LevelUpVisualEffects) do
     if self:IsContainsLevel(LevelUpVisualEffect.Level) then
       if LevelUpVisualEffect.IsAlways then
-        local FxObject = Owner.FXComponent:PlayEffectByIDParams(VisualEffectId, {
-          NotAttached = not LevelUpVisualEffect.IsAttach
-        })
-        if FxObject then
-          self.NiagaraGroup1:Add(VisualEffectId, FxObject)
+        local VisualEffectData = DataMgr.VisualEffect[VisualEffectId]
+        if VisualEffectData and VisualEffectData.canPlayAsync then
+          local EffectParams = Owner.FXComponent:GetPlayEffectParams(VisualEffectId)
+          if not LevelUpVisualEffect.IsAttach then
+            EffectParams.NotAttached = true
+          end
+          local EffectId = VisualEffectId
+          print(_G.LogTag, "BP_CharacterFashion_C:CreateSkinLevelUpVisualEffect PlayEffectByIDParamsAsyncWithCallbackOut", EffectId)
+          Owner.FXComponent:PlayEffectByIDParamsAsyncWithCallback(EffectId, EffectParams, {
+            self,
+            function(_, FxObject)
+              if FxObject then
+                print(_G.LogTag, "BP_CharacterFashion_C:CreateSkinLevelUpVisualEffect PlayEffectByIDParamsAsyncWithCallback", EffectId)
+                self.NiagaraGroup1:Add(EffectId, FxObject)
+              end
+            end
+          })
+        else
+          local FxObject = Owner.FXComponent:PlayEffectByIDParams(VisualEffectId, {
+            NotAttached = not LevelUpVisualEffect.IsAttach
+          })
+          if FxObject then
+            self.NiagaraGroup1:Add(VisualEffectId, FxObject)
+          end
         end
       else
         NotAlwaysVisualEffect[VisualEffectId] = LevelUpVisualEffect

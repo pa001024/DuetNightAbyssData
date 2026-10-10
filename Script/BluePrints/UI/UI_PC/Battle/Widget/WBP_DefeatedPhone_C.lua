@@ -6,6 +6,9 @@ M._components = {
 
 function M:Construct()
   self.ExecuteItems = {}
+  self.PlayLoopWidget = {}
+  self.IsShow = false
+  self.IsPlayBan = false
   self.Btn_Execute.OnClicked:Add(self, self.OnClick)
 end
 
@@ -105,7 +108,18 @@ end
 
 function M:Hide(ExecuteItem)
   self.ExecuteItems[ExecuteItem] = nil
+  self:StopLoopAnimation(ExecuteItem)
   local IsZero = 0 == CommonUtils.TableLength(self.ExecuteItems)
+  if not IsZero then
+    if not self.IsShow then
+      self.IsShow = true
+      self:StopAllAnimations()
+      self:SetVisibility(ESlateVisibility.Visible)
+      self:PlayAnimation(self.In)
+    end
+    self:RefreshPhoneExecuteBan()
+    return
+  end
   if self.IsShow == false and IsZero then
     return
   end
@@ -117,6 +131,8 @@ function M:Hide(ExecuteItem)
 end
 
 function M:DirectlyClose()
+  self.ExecuteItems = {}
+  self.PlayLoopWidget = {}
   self.IsShow = false
   self.IsPlayBan = false
   self:StopAllAnimations()
@@ -142,7 +158,7 @@ function M:ShowBan(IsShow)
 end
 
 function M:OnAnimationFinished(Animation)
-  if Animation == self.Out then
+  if Animation == self.Out and not self.IsShow then
     self:SetVisibility(ESlateVisibility.Collapsed)
   elseif Animation == self.In then
   end

@@ -65,9 +65,13 @@ function M:SetPrize(Prize)
   local bOwned = false
   local Avatar = GWorld:GetAvatar()
   if Avatar then
-    bOwned = Avatar:CheckSkinEnough({
-      [Prize.Id] = 1
-    })
+    if Prize.Type == "Background" then
+      bOwned = ItemUtils.HasBackground(Prize.Id)
+    else
+      bOwned = Avatar:CheckSkinEnough({
+        [Prize.Id] = 1
+      })
+    end
   end
   self:SetOwned(bOwned)
   self:SetSelected(Prize.bSelected)

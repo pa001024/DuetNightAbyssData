@@ -47,6 +47,7 @@ function M:InitAsyncCombatComponent()
   self.CurTimeBuffId = nil
   self:ParseTimeBuffConfig()
   self:PublishSingleModeProgress()
+  self:RequestRoomEndState()
 end
 
 function M:InitAsyncCombatBaseInfo()
@@ -104,6 +105,7 @@ function M:OnRepClientDungeonMessage(MessageName, ...)
   elseif MessageName == AsyncMsg.AsyncCombatRoomStateUpdate then
     local Data = (...)
     self:OnRep_CurStep(Data.CurStep)
+    self:OnRepRoomEndState(Data)
   elseif MessageName == AsyncMsg.AsyncCombatRoomPass then
     if self.GameMode.AlreadyInit then
       self:OnRoomPass()
@@ -137,6 +139,44 @@ function M:OnRepClientDungeonMessage(MessageName, ...)
         self:OnRoomClose()
       end)
     end
+  end
+end
+
+function M:RequestRoomEndState()
+  if self.IsSingleMode or self.RoomEndStateRequested then
+    return
+  end
+  self.RoomEndStateRequested = true
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  Avatar:SyncToServerDungeonMessage(AsyncMsg.AsyncCombatQueryState, {Type = "Room"})
+end
+
+function M:OnRepRoomEndState(Data)
+  if not Data or self.IsSingleMode or self.RoomEndStateHandled then
+    return
+  end
+  local bIsPass = Data.IsPass == true
+  if not bIsPass and not Data.CloseTime then
+    return
+  end
+  self.RoomEndStateHandled = true
+  
+  local function Handler()
+    if bIsPass then
+      self:OnRoomPass()
+    else
+      self:OnRoomClose()
+    end
+  end
+  
+  if self.GameMode.AlreadyInit then
+    Handler()
+  elseif not self.IsPendingRoomEnd then
+    self.IsPendingRoomEnd = true
+    self.GameMode.EMGameState:RegisterGameModeEvent("OnInit", self, Handler)
   end
 end
 

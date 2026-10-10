@@ -4,11 +4,12 @@ local M = Class({
 })
 
 function M:Init(OccupateProgress)
+  OccupateProgress = math.max(0, math.min(100, OccupateProgress))
   self.Progress = OccupateProgress
   self.TargetProgress = 0
   self.LerpAlpha = 0
   self.Text_Percent:SetText(OccupateProgress)
-  self.Image_Bar:GetDynamicMaterial():SetScalarParameterValue("Percent", OccupateProgress)
+  self.Image_Bar:GetDynamicMaterial():SetScalarParameterValue("Percent", OccupateProgress / 100)
   self.Root:SetRenderOpacity(0)
 end
 

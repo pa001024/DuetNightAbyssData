@@ -141,7 +141,7 @@ function M:InitUI()
         self.VX_WordGlow6:SetVisibility(UE4.ESlateVisibility.Collapsed)
       end
     end
-    if self.Params.TimeRemain == nil then
+    if self.Params.TimeRemain == nil and self.Num_Score then
       self.Num_Score:SetText(self.Params.LevelScore)
     end
   end
@@ -157,12 +157,20 @@ function M:InitUI()
     self.Cost:InitContent(self.Params.CostParams)
   end
   if self.Params.TimeRemain then
-    self.Num_Time:SetText(string.format("%d:%02d", math.floor(self.Params.TimeRemain / 60), self.Params.TimeRemain % 60))
-    self.Num_Time:SetVisibility(UE4.ESlateVisibility.Visible)
-    self.VB_Time:SetVisibility(UE4.ESlateVisibility.Visible)
-  elseif self.Num_Time then
-    self.Num_Time:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    self.VB_Time:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    if self.Num_Time then
+      self.Num_Time:SetText(string.format("%d:%02d", math.floor(self.Params.TimeRemain / 60), self.Params.TimeRemain % 60))
+      self.Num_Time:SetVisibility(UE4.ESlateVisibility.Visible)
+    end
+    if self.VB_Time then
+      self.VB_Time:SetVisibility(UE4.ESlateVisibility.Visible)
+    end
+  else
+    if self.Num_Time then
+      self.Num_Time:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
+    if self.VB_Time then
+      self.VB_Time:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
   end
   if self.Params.Text_TotalTime then
     if self.Text_TotalTime then
@@ -226,8 +234,10 @@ function M:InitUI()
       self.Panel_Title:SetVisibility(UE4.ESlateVisibility.Collapsed)
     end
     if EventSettlementPage.IsShowScore then
-      self.VB_Score:SetVisibility(UE4.ESlateVisibility.Visible)
-    else
+      if self.VB_Score then
+        self.VB_Score:SetVisibility(UE4.ESlateVisibility.Visible)
+      end
+    elseif self.VB_Score then
       self.VB_Score:SetVisibility(UE4.ESlateVisibility.Collapsed)
     end
     if EventSettlementPage.IsShowCondition then
@@ -519,11 +529,16 @@ function M:Play_In()
 end
 
 function M:PlayScoreAndTimeAnimation()
+  if self.Params.LevelScore == nil then
+    return
+  end
   local animationDuration = 1.0
   local startTime = UE4.UGameplayStatics.GetTimeSeconds(self)
   local targetScore = self.Params.LevelScore
   local startTimeRemain = self.Params.TimeRemain
-  self.Num_Score:SetText("0")
+  if self.Num_Score then
+    self.Num_Score:SetText("0")
+  end
   self.Num_Time:SetText(string.format("%d:%02d", math.floor(startTimeRemain / 60), startTimeRemain % 60))
   if self.ScoreAnimationTimer then
     self:RemoveTimer(self.ScoreAnimationTimer)
@@ -534,11 +549,15 @@ function M:PlayScoreAndTimeAnimation()
     local elapsedTime = currentTime - startTime
     local progress = math.min(elapsedTime / animationDuration, 1.0)
     local currentScore = math.floor(targetScore * progress)
-    self.Num_Score:SetText(tostring(currentScore))
+    if self.Num_Score then
+      self.Num_Score:SetText(tostring(currentScore))
+    end
     local currentTimeRemain = math.floor(startTimeRemain * (1.0 - progress))
     self.Num_Time:SetText(string.format("%d:%02d", math.floor(currentTimeRemain / 60), currentTimeRemain % 60))
     if progress >= 1.0 then
-      self.Num_Score:SetText(tostring(targetScore))
+      if self.Num_Score then
+        self.Num_Score:SetText(tostring(targetScore))
+      end
       self.Num_Time:SetText("0:00")
       self:RemoveTimer(self.ScoreAnimationTimer)
       self.ScoreAnimationTimer = nil

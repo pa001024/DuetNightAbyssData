@@ -1925,7 +1925,7 @@
             "类型": "Bonus",
             "icon": "Tuosi02_Off",
             "cd": 3,
-            "行为": "执行[ChangeModel];移除增益(110302)[每1秒消耗30神智, 每1秒执行技能效果(110323), 激活技能, 召唤武器, 禁用[重击, 滑行攻击]];移除增益(110303)[攻击上限315, 移动速度+0.5, Vitesse de saut+10%];移除增益(110331)[攻击上限315, 技能速度+0.3];触发被动功能[解除变身](被动效果110301·BP_Tuosi_Passive)",
+            "行为": "执行[ChangeModel];移除增益(110302)[每1秒消耗30神智, 每1秒执行技能效果(110323), 激活技能, 召唤武器, 禁用[重击, 滑行攻击]];移除增益(110303)[攻击上限315, 移动速度+0.5, Vitesse de saut+10%];移除增益(110331)[攻击上限315, Attr_SkillSpeed_Name+30%];触发被动功能[解除变身](被动效果110301·BP_Tuosi_Passive)",
             "名称": "Duo"
           }
         ],
@@ -2066,7 +2066,7 @@
         "术语解释": {
           "Fureur bestiale : Dévotion": "Pendant l’état [Fureur bestiale : Dévotion], consomme continuellement la [Fusion] au lieu de la Lucidité pour maintenir la forme bestiale.\nAugmente la Vitesse de compétence et l’ATQ proportionnellement à la Lucidité max du personnage.\nTant que cet état est actif, empêche la régénération de [Fusion] normalement obtenue en maintenant la forme bestiale."
         },
-        "行为": "被动效果(110301)(BP_Tuosi_Passive);增益(110304);增益(110303)[攻击上限315, 移动速度+0.5, Vitesse de saut+10%];增益(110331)[攻击上限315, 技能速度+0.3]"
+        "行为": "被动效果(110301)(BP_Tuosi_Passive);增益(110304);增益(110303)[攻击上限315, 移动速度+0.5, Vitesse de saut+10%];增益(110331)[攻击上限315, Attr_SkillSpeed_Name+30%]"
       },
       {
         "id": 110304,
@@ -7092,6 +7092,7 @@
               4.55
             ],
             "tag": [
+              "技能",
               "召唤物"
             ],
             "削韧": 5
@@ -7126,6 +7127,7 @@
               18.23
             ],
             "tag": [
+              "技能",
               "召唤物"
             ],
             "削韧": 15
@@ -7257,6 +7259,7 @@
               182.17
             ],
             "tag": [
+              "技能",
               "召唤物"
             ],
             "削韧": 120,
@@ -7440,6 +7443,9 @@
             "名称": "Dégâts",
             "影响": "技能威力",
             "值": 9.52,
+            "tag": [
+              "技能"
+            ],
             "削韧": 100
           },
           {
@@ -8983,7 +8989,7 @@
             "Trace du crépuscule": 1
           }
         ],
-        "行为": "被动效果(240101)(BP_Baiheng_Passive);增益(240131);增益(240122);增益(240121)"
+        "行为": "被动效果(240101)(BP_Baiheng_Passive);增益(240131);增益(240122)[DamageIgnoreDefence+0.3];增益(240121)"
       },
       {
         "id": 240104,
@@ -10957,7 +10963,7 @@
           },
           {
             "名称": "Dégâts de Surabondance",
-            "影响": "技能威力",
+            "影响": "技能威力,HyperTriggerRate",
             "值": [
               0.16,
               0.19,
@@ -10981,7 +10987,7 @@
           },
           {
             "名称": "Dégâts supplémentaires",
-            "影响": "技能威力",
+            "影响": "技能威力,HyperTriggerRate",
             "值": [
               0.04,
               0.05,
@@ -12010,10 +12016,10 @@
             "名称": "Ébriété légère",
             "类型": "Dégâts",
             "icon": "Kami01",
-            "行为": "触发被动功能[释放战技](被动效果320201·BP_Kami_Passive);造成角色攻击167.0%的伤害(技能/战技);削减战姿25;附加增益(320203)[每层+#1技能速度(最多10层)];移除增益(320203)[每层+#1技能速度(最多10层)]"
+            "行为": "触发被动功能[释放战技](被动效果320201·BP_Kami_Passive);造成角色攻击167.0%的伤害(技能/战技);削减战姿25;附加增益(320203)[每层+#1Attr_SkillSpeed_Name(最多10层)];移除增益(320203)[每层+#1Attr_SkillSpeed_Name(最多10层)]"
           }
         ],
-        "行为": "触发被动功能[释放战技](被动效果320201·BP_Kami_Passive);造成角色攻击167.0%的伤害(技能/战技);削减战姿25;附加增益(320203)[每层+#1技能速度(最多10层)];移除增益(320203)[每层+#1技能速度(最多10层)]"
+        "行为": "触发被动功能[释放战技](被动效果320201·BP_Kami_Passive);造成角色攻击167.0%的伤害(技能/战技);削减战姿25;附加增益(320203)[每层+#1Attr_SkillSpeed_Name(最多10层)];移除增益(320203)[每层+#1Attr_SkillSpeed_Name(最多10层)]"
       },
       {
         "id": 320202,
@@ -12295,6 +12301,95 @@
       ]
     ],
     "专武": 20512
+  },
+  {
+    "id": 3203,
+    "icon": "Kajia",
+    "名称": "Katya",
+    "版本": "1.8",
+    "别名": "（待包装）",
+    "阵营": "Les Déchus",
+    "属性": "火",
+    "精通": [
+      "Espadon",
+      "Doubles pistolets"
+    ],
+    "特质": [
+      {
+        "名称": "Impression : Avantage",
+        "描述": "Privilégie le gain et l’efficacité des résultats.",
+        "icon": "T_Dispatch_B02",
+        "标签": "Benefit",
+        "等级": 2,
+        "解锁": [
+          0,
+          2
+        ]
+      },
+      {
+        "名称": "Opportuniste",
+        "描述": "À l’aise dans toutes les situations, peut obtenir des récompenses bonus.",
+        "icon": "T_Dispatch_A06",
+        "标签": "Skilled",
+        "等级": 1,
+        "解锁": [
+          4
+        ]
+      }
+    ],
+    "基础攻击": 21,
+    "基础生命": 83,
+    "基础防御": 264,
+    "基础护盾": 83,
+    "基础神智": 160,
+    "突破": [],
+    "技能": [
+      {
+        "id": 320301,
+        "类型": "Dégâts",
+        "icon": "Kajia01",
+        "实体": [
+          {
+            "id": 320301,
+            "形状": {
+              "类型": "Sphere",
+              "Radius": 10
+            },
+            "时长": 4
+          }
+        ],
+        "行为": "召唤实体(320301)"
+      },
+      {
+        "id": 320311,
+        "类型": "Dégâts",
+        "icon": "Kajia01",
+        "实体": [
+          {
+            "id": 320301,
+            "形状": {
+              "类型": "Sphere",
+              "Radius": 10
+            },
+            "时长": 4
+          }
+        ],
+        "行为": "召唤实体(320301)"
+      },
+      {
+        "id": 320302,
+        "类型": "Dégâts",
+        "icon": "",
+        "行为": "触发被动功能[SaveSummonLoc](被动效果320301·BP_Kajia_Passive);执行[CreateUnit]"
+      },
+      {
+        "id": 320303,
+        "类型": "Passive",
+        "icon": "ExtraPassive",
+        "行为": "被动效果(320301)(BP_Kajia_Passive)"
+      }
+    ],
+    "碎片": 1003203
   },
   {
     "id": 3301,
@@ -14165,7 +14260,8 @@
       "[Révélation céleste] niveau +2 ; [Rituel jumelé] niveau +1.",
       "Lorsqu’un gain supplémentaire de Régénération de Lucidité entraîne un débordement, confère à vous et à vos alliés 1 cumul d’augmentation d’ATQ de 16% pendant 16 s, cumulable jusqu’à 5 fois.",
       "[Divination cosmique] niveau +2 ; [Rituel jumelé] niveau +1.",
-      "Lorsque Zhiliu se trouve dans la zone d’[Harmonie des Quatre Royaumes], sa Pénétration (tous attributs) augmente de 40% et elle bénéficie en continu de l’augmentation des Dégâts de compétence conférée par [Clarté du destin]."
+      "Lorsque Zhiliu se trouve dans la zone d’[Harmonie des Quatre Royaumes], sa Pénétration (tous attributs) augmente de 40% et elle bénéficie en continu de l’augmentation des Dégâts de compétence conférée par [Clarté du destin].",
+      "Lorsque vous utilisez plusieurs fois de suite la même Compétence de combat ou Compétence ultime, vous obtenez 1 cumul d’[Hexagramme]. Chaque cumul augmente votre Vitesse de compétence de 6% et permet aux Dégâts de compétence d’ignorer 6% de la DÉF de la cible pendant 10 s, jusqu’à 5 cumuls.\nLorsque [Hexagramme] atteint le nombre maximal de cumuls, la durée du champ d’[Harmonie des Quatre Royaumes] est suspendue. Lorsque [Convergence Zhen-Xun] inflige des dégâts, elle consomme 1 cumuls de [Désordre Électro] de la cible pour augmenter son multiplicateur de dégâts de [600% × Puissance de Surabondance]."
     ],
     "碎片": 1004102,
     "专武": 10304
@@ -14173,14 +14269,27 @@
   {
     "id": 4103,
     "icon": "SpLise",
-    "名称": "SP黎瑟",
+    "名称": "Rhythm – Née des flammes",
     "版本": "1.7",
-    "别名": "UI_CHAR_SUBTITLE_4103",
-    "阵营": "Empire Hyperboréen",
+    "别名": "Vers la lumière de l’aube",
+    "出生地": "Empire Hyperboréen",
+    "势力": "Aucune affiliation",
+    "生日": "08-19",
+    "中文CV": "橙璃",
+    "日文CV": "瀬戸麻沙美",
+    "英文CV": "Sophie Colquhoun",
+    "韩文CV": "김예림",
+    "阵营": "Aucune affiliation",
     "属性": "雷",
     "精通": [
-      "Katana",
-      "Fusil d’assaut"
+      "Épée",
+      "Lance-grenades"
+    ],
+    "额外精通": [
+      "Arme d’hast",
+      "Espadon",
+      "Doubles lames",
+      "Épée-fouet"
     ],
     "标签": [
       "DPS",
@@ -14218,11 +14327,15 @@
         ]
       }
     ],
-    "基础攻击": 22,
-    "基础生命": 94,
-    "基础防御": 276,
-    "基础护盾": 94,
-    "基础神智": 150,
+    "基础攻击": 29,
+    "基础生命": 95,
+    "基础防御": 290,
+    "基础护盾": 95,
+    "基础神智": 180,
+    "加成": {
+      "Vigueur": 0.15,
+      "Puissance de compétence": 0.2
+    },
     "突破": [
       {
         "Pièce": 5200,
@@ -14258,8 +14371,54 @@
     "技能": [
       {
         "id": 410301,
+        "名称": "Tir fulgurant",
         "类型": "Dégâts",
-        "icon": "Linen01",
+        "描述": "Utilise le [Fusil de précision] pour infliger des dégâts Électro aux ennemis dans la zone devant vous et obtient [Rechargement tactique].",
+        "icon": "SPLise01",
+        "字段": [
+          {
+            "名称": "Coût en Lucidité",
+            "影响": "技能效益",
+            "值": 30,
+            "格式": "{}"
+          },
+          {
+            "名称": "Dégâts",
+            "影响": "技能威力",
+            "值": [
+              0.113,
+              0.139,
+              0.165,
+              0.191,
+              0.217,
+              0.243,
+              0.269,
+              0.295,
+              0.321,
+              0.347,
+              0.373,
+              0.399
+            ],
+            "tag": [
+              "技能",
+              "战技",
+              "SPliseGun01"
+            ],
+            "削韧": 15,
+            "Boss削韧": 5
+          },
+          {
+            "名称": "Durée",
+            "影响": "技能耐久",
+            "值": 6,
+            "格式": "{}s"
+          },
+          {
+            "名称": "Portée de tir maximale",
+            "值": 50,
+            "格式": "{}m"
+          }
+        ],
         "升级": [
           {
             "Pièce": 1120,
@@ -14314,12 +14473,97 @@
             "Trace du crépuscule": 1
           }
         ],
-        "行为": "造成角色攻击100.0%的伤害(技能/战技/SPliseGun01);削减战姿15;造成角色攻击100.0%的伤害(技能/战技/SPliseGun02);造成角色攻击100.0%的伤害(技能/战技);附加增益(113);附加增益(410311)"
+        "术语解释": {
+          "Rechargement tactique": "Effectue immédiatement 1 rechargement du [Fusil de précision]. Tant que cet effet est actif, le [Fusil de précision] se recharge automatiquement après chaque tir. Lorsque vous infligez des Dégâts de compétence, un Effet supplémentaire Électro se déclenche à coup sûr."
+        },
+        "子技能": [
+          {
+            "id": 410311,
+            "类型": "Dégâts",
+            "icon": "SPLise01",
+            "行为": "附加增益(410311)(持续6秒);造成角色攻击11.3%的伤害(技能/战技/SPliseGun01);削减战姿15;造成角色攻击11.3%的伤害(技能/战技/SPliseGun02);附加增益(410322)[每0.2秒执行技能效果(410326)];移除增益(410322)[每0.2秒执行技能效果(410326)]",
+            "名称": "Rechargement tactique"
+          }
+        ],
+        "行为": "附加增益(410311)(持续6秒);造成角色攻击11.3%的伤害(技能/战技/SPliseGun01);削减战姿15;造成角色攻击11.3%的伤害(技能/战技/SPliseGun02)"
       },
       {
         "id": 410302,
+        "名称": "Tir vortex",
         "类型": "Bonus",
-        "icon": "Linen02_On",
+        "描述": "Invoque 2 [Fusils électriques], remplace l’arme à distance par le [Fusil de précision] et entre en [Mode sniper], durant lequel les tirs consomment de la Lucidité. Quitte le [Mode sniper] lorsque cette compétence est utilisée à nouveau ou lorsqu’une attaque à distance est utilisée.\nPendant le [Mode sniper], obtient 1 cumul de [Concentration] toutes les 0.2 s.",
+        "icon": "SPLise02_On",
+        "字段": [
+          {
+            "名称": "Coût en Lucidité",
+            "影响": "技能效益",
+            "值": 30,
+            "格式": "{}"
+          },
+          {
+            "名称": "Coût en Lucidité des tirs du [Fusil de précision]",
+            "影响": "技能效益",
+            "值": 50,
+            "格式": "{}"
+          },
+          {
+            "名称": "Dégâts de [Balle de précision]",
+            "影响": "技能威力",
+            "值": [
+              0.049,
+              0.059,
+              0.069,
+              0.079,
+              0.089,
+              0.099,
+              0.109,
+              0.119,
+              0.129,
+              0.139,
+              0.149,
+              0.159
+            ],
+            "tag": [
+              "技能",
+              "终结技",
+              "SPliseGun01"
+            ],
+            "削韧": 10
+          },
+          {
+            "名称": "Dégâts de [Balle de précision renforcée]",
+            "影响": "技能威力",
+            "值": [
+              0.351,
+              0.428,
+              0.505,
+              0.582,
+              0.659,
+              0.736,
+              0.813,
+              0.89,
+              0.967,
+              1.044,
+              1.121,
+              1.198
+            ],
+            "tag": [
+              "技能",
+              "终结技",
+              "SPliseGun01"
+            ],
+            "削韧": 15
+          },
+          {
+            "名称": "Bonus de Vitesse de compétence par cumul de [Concentration]",
+            "值": 0.04
+          },
+          {
+            "名称": "Réduction du coût en Lucidité des tirs du [Fusil de précision] par cumul de [Concentration]",
+            "值": 1,
+            "格式": "{}"
+          }
+        ],
         "升级": [
           {
             "Pièce": 1120,
@@ -14374,12 +14618,59 @@
             "Trace du crépuscule": 1
           }
         ],
-        "行为": "附加增益(410321)[激活技能, 召唤武器, 禁用[下落攻击, 重击, 蓄力射击, 滑行攻击]];附加增益(410322)[每0.2秒执行技能效果(410326)];附加增益(410323)[替换动作]"
+        "术语解释": {
+          "Mode sniper": "Calibre en continu la précision. Lorsque le [Fusil de précision] tire, la précision est réinitialisée et une [Balle de précision] est tirée, infligeant des Dégâts Électro à tous les ennemis sur sa trajectoire. Si la progression du calibrage de précision atteint 100 % au moment du tir, tire à la place une [Balle de précision renforcée]. Pendant ce temps, les dégâts subis n’interrompent pas vos actions.",
+          "Concentration": "Augmente la Vitesse de compétence et réduit le coût en Lucidité des tirs du [Fusil de précision]. Durée permanente, jusqu’à 30 cumuls. Retiré en quittant le [Mode sniper].",
+          "Fusil électrique": "Répète les tirs du [Fusil de précision] et [Tir fulgurant]."
+        },
+        "子技能": [
+          {
+            "id": 410325,
+            "类型": "",
+            "icon": "SPLise02_Off",
+            "行为": "移除增益(410322)[每0.2秒执行技能效果(410326)];移除增益(410321)[激活技能, 召唤武器];移除增益(410323)[激活技能, 替换动作, 禁用[下落攻击, 重击, 蓄力射击, 滑行攻击]];移除增益(410324)[激活技能];移除增益(410327)",
+            "名称": "Mode sniper"
+          },
+          {
+            "id": 410326,
+            "类型": "",
+            "icon": "SPLise02_Off",
+            "行为": "移除增益(410322)[每0.2秒执行技能效果(410326)];移除增益(410321)[激活技能, 召唤武器];移除增益(410323)[激活技能, 替换动作, 禁用[下落攻击, 重击, 蓄力射击, 滑行攻击]];移除增益(410324)[激活技能];移除增益(410327)",
+            "名称": "Concentration"
+          }
+        ],
+        "行为": "附加增益(410321)[激活技能, 召唤武器];附加增益(410322)[每0.2秒执行技能效果(410326)];附加增益(410323)[激活技能, 替换动作, 禁用[下落攻击, 重击, 蓄力射击, 滑行攻击]]"
       },
       {
         "id": 410303,
+        "名称": "Synergie électrique",
         "类型": "Passive",
-        "icon": "Linen03",
+        "描述": "Lorsque [Balle de précision renforcée] inflige des dégâts, consomme 1 cumul de [Désordre Électro] et obtient 1 cumul de [Maîtrise du courant], jusqu’à 6 cumuls.",
+        "icon": "SPLise03",
+        "字段": [
+          {
+            "名称": "Lucidité restaurée par [Maîtrise du courant]",
+            "值": 1,
+            "格式": "{}"
+          },
+          {
+            "名称": "Bonus de Dégâts de compétence de [Maîtrise du courant]",
+            "值": [
+              0.052,
+              0.064,
+              0.076,
+              0.088,
+              0.1,
+              0.112,
+              0.124,
+              0.136,
+              0.148,
+              0.16,
+              0.172,
+              0.184
+            ]
+          }
+        ],
         "升级": [
           {
             "Pièce": 1120,
@@ -14434,15 +14725,44 @@
             "Trace du crépuscule": 1
           }
         ],
+        "术语解释": {
+          "Maîtrise du courant": "Restaure de la Lucidité et augmente les Dégâts de compétence infligés. Tant que cet effet est actif, les tirs du [Fusil de précision] et [Tir fulgurant] ont une chance de se déclencher 1 fois supplémentaire. Cette probabilité est de [Tir multiple de l’arme à distance × 30] %. À chaque nouveau cumul, la durée de tous les cumuls est réinitialisée."
+        },
         "行为": "被动效果(410301)(BP_SPLise_Passive)"
       },
       {
         "id": 410304,
+        "名称": "Perfectionnement technique",
         "类型": "Passive",
-        "icon": "ExtraPassive"
+        "描述": "Les dégâts du [Fusil de précision] et du [Fusil électrique] augmentent selon le multiplicateur [Taux CRIT de l’arme à distance × (DGT CRIT de l’arme à distance - 1)], avec un minimum de 0.",
+        "icon": "ExtraPassive",
+        "行为": "被动效果(410302)(BP_SPLise_Passive2)"
+      },
+      {
+        "id": 410003,
+        "名称": "Châtiment divin",
+        "类型": "Support",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ du personnage et des alliés Électro.",
+        "icon": "PhantomPassive",
+        "字段": [
+          {
+            "名称": "Augmentation d’ATQ",
+            "值": 0.5
+          }
+        ],
+        "行为": "被动效果(410003)(BP_Common_PhantomPassive)"
       }
     ],
-    "碎片": 1004103
+    "溯源": [
+      "Les tirs du [Fusil de précision] n’ont plus de recul. Lorsque le [Fusil de précision] tire une [Balle de précision renforcée], vous libérez 1 [Tir fulgurant] supplémentaire. Cette utilisation ne consomme pas de Lucidité et ne vous fait pas quitter le [Mode sniper].",
+      "Pendant le [Mode sniper], si d’autres alliés peuvent être détectés par les ennemis, vous ne pouvez pas être détecté. En [Mode sniper], si votre Vitesse de compétence dépasse 2, les Dégâts de compétence infligés bénéficient d’un bonus indépendant selon le multiplicateur [Vitesse de compétence × 15].",
+      "[Tir fulgurant] niveau +2 ; [Tir vortex] niveau +1.",
+      "Pendant le [Mode sniper], vous obtenez 1 cumul supplémentaire de [Concentration] toutes les 0.2 s. Chaque cumul de [Concentration] augmente également la Vigueur de 3%.",
+      "[Synergie électrique] niveau +2 ; [Tir vortex] niveau +1.",
+      "Les ennemis dans un rayon de 50m peuvent être vus à travers le décor, et [Tir fulgurant] peut infliger des dégâts à travers le décor. Pendant le [Mode sniper], votre Pénétration de tous les attributs augmente de 60%."
+    ],
+    "碎片": 1004103,
+    "专武": 20306
   },
   {
     "id": 4201,
@@ -14992,7 +15312,8 @@
       "[Chute foudroyante] niveau +2 ; [Effleurer les cieux] niveau +1.",
       "Les Attaques plongeantes au corps à corps infligent des Dégâts Électro supplémentaires équivalents à 12% de la Puissance de compétence de Yuming, jusqu’à un maximum de 36%.",
       "[Écailles sinistres] niveau +2 ; [Effleurer les cieux] niveau +1.",
-      "Sous l’état [Éveil de Xuanjiao], la Pénétration de tous les Attributs augmente de 25%.\nAprès avoir déclenché cumulativement 6 effets de dégâts de [Fureur foudroyante], une instance supplémentaire de dégâts de [Fureur foudroyante], équivalente à son multiplicateur initial de 130%, est infligée à toutes les cibles affectées. Cet effet ne peut être déclenché qu’une fois toutes les 6 s."
+      "Sous l’état [Éveil de Xuanjiao], la Pénétration de tous les Attributs augmente de 25%.\nAprès avoir déclenché cumulativement 6 effets de dégâts de [Fureur foudroyante], une instance supplémentaire de dégâts de [Fureur foudroyante], équivalente à son multiplicateur initial de 130%, est infligée à toutes les cibles affectées. Cet effet ne peut être déclenché qu’une fois toutes les 6 s.",
+      "Lors de l’utilisation de [Fracas astral], applique à Yuming et à ses alliés un nombre de cumuls de [Protection de Xuanjiao] égal au nombre de personnages Électro dans l’équipe, pendant 10 s, jusqu’à 3 cumuls. Chaque application réinitialise le nombre de cumuls.\nChaque cumul de [Protection de Xuanjiao] augmente la Vigueur de 30% et les Dégâts Électro infligés de 12.5%.\nÀ 2 cumuls ou plus, la Pénétration de tous les attributs augmente de 20%.\nÀ 3 cumuls, lorsque des alliés autres que [Yuming] subissent des dégâts affectant leurs PV, Xuanjiao peut absorber ces dégâts."
     ],
     "碎片": 1004201,
     "专武": 10203
@@ -18502,11 +18823,11 @@
   },
   {
     "id": 5402,
-    "icon": "Dafu",
-    "名称": "莉莉蔻",
+    "icon": "Lilikou",
+    "名称": "Lirico",
     "版本": "2.0",
     "别名": "UI_CHAR_SUBTITLE_5402",
-    "阵营": "Empire Hyperboréen",
+    "阵营": "Église Élyséenne",
     "属性": "风",
     "精通": [
       "Arme d’hast",
@@ -18549,49 +18870,269 @@
     "基础防御": 252,
     "基础护盾": 140,
     "基础神智": 150,
-    "突破": [],
+    "加成": {
+      "Puissance de Surabondance": 1,
+      "Puissance de compétence": 0.2
+    },
+    "突破": [
+      {
+        "Pièce": 4160,
+        "Larme vermillon": 10,
+        "Branche desséchée": 5
+      },
+      {
+        "Pièce": 8320,
+        "Plume de queue de Nivéole": 5,
+        "Turbine convergente": 7
+      },
+      {
+        "Pièce": 13040,
+        "Plume de queue de Nivéole": 10,
+        "Turbine convergente": 15
+      },
+      {
+        "Pièce": 27760,
+        "Plume de queue de Nivéole": 20,
+        "Océalis": 6
+      },
+      {
+        "Pièce": 65280,
+        "Plume de queue de Nivéole": 40,
+        "Océalis": 12
+      },
+      {
+        "Pièce": 194400,
+        "Plume de queue de Nivéole": 80,
+        "Océalis": 25
+      }
+    ],
     "技能": [
       {
         "id": 540201,
+        "名称": "风起之颂(待包装)",
         "类型": "Bonus",
+        "描述": "(待包装)\n进入[颂歌]状态，获得飞行能力。[颂歌]状态中持续消耗神智，自身和队友造成的伤害提高，近战攻击与远程攻击被替换为[弹奏]，神智下降为0或再次使用此技能时退出[颂歌]状态。",
         "icon": "Saiqi02_On",
+        "cd": 1,
+        "字段": [
+          {
+            "名称": "Coût en Lucidité",
+            "影响": "技能效益",
+            "值": 10,
+            "格式": "{}"
+          },
+          {
+            "名称": "Coût en Lucidité par seconde",
+            "影响": "技能效益,技能耐久",
+            "值": 10,
+            "格式": "{}"
+          },
+          {
+            "名称": "Dégâts du projectile guidé",
+            "影响": "MultiShoot",
+            "值": 1,
+            "tag": [
+              "远程",
+              "武器",
+              "召唤物"
+            ],
+            "削韧": 15,
+            "Boss削韧": 7
+          },
+          {
+            "名称": "Rayon des dégâts",
+            "影响": "技能范围",
+            "值": 3,
+            "格式": "{}m"
+          },
+          {
+            "名称": "Bonus de dégâts infligés",
+            "值": 0.3
+          }
+        ],
+        "术语解释": {
+          "弹奏(待包装)": "(待包装)\n按一定节奏释放时，会根据判定触发[良好][精彩][神技]其中一种效果，依据效果发射不同数量的追踪弹锁定随机敌人并获得等量[传颂值]，命中造成风属性范围伤害，视为远程武器伤害。\n[良好]：3发\n[精彩]：5发\n[神技]：6发"
+        },
         "子技能": [
           {
             "id": 540211,
             "类型": "Bonus",
             "icon": "Saiqi02_Off",
-            "行为": "移除增益(540201)[激活技能, 替换动作, 启用飞行, 召唤武器, 禁用[下落攻击, 重击, 滑行攻击, 普攻]];触发被动功能[解除变身/离场](被动效果540201·BP_Lilikou)"
+            "cd": 1,
+            "行为": "移除;触发被动功能[解除变身/离场](被动效果540201)",
+            "名称": "弹奏(待包装)"
           }
         ],
-        "行为": "附加增益(540201)[激活技能, 替换动作, 启用飞行, 召唤武器, 禁用[下落攻击, 重击, 滑行攻击, 普攻]];附加增益(540211)[Dégâts infligés+30%]"
+        "行为": "附加增益(540241);附加增益(540201)[每1秒消耗10神智, 激活技能, 替换动作, 启用飞行, 召唤武器, 禁用[下落攻击, 重击, 滑行攻击, 普攻]]"
       },
       {
         "id": 540202,
+        "名称": "风声共鸣(待包装)",
         "类型": "Bonus",
+        "描述": "(待包装)\n生成持续跟随自身一定时间的[风之回响]，进入[齐颂之诗]及[颂歌]状态。[风之回响]存在期间，长按释放此技能时会重新生成[风之回响]。",
         "icon": "Dafu02",
         "cd": 5,
+        "字段": [
+          {
+            "名称": "Coût en Lucidité",
+            "影响": "技能效益",
+            "值": 30,
+            "格式": "{}"
+          },
+          {
+            "名称": "Durée",
+            "影响": "技能耐久",
+            "值": 16,
+            "格式": "{}s"
+          },
+          {
+            "名称": "[Écho du vent]Dégâts du projectile guidé",
+            "值": 1,
+            "tag": [
+              "远程",
+              "武器"
+            ],
+            "削韧": 15,
+            "Boss削韧": 7
+          },
+          {
+            "名称": "[Écho du vent]Dégâts de [Poème transmis]",
+            "影响": "技能威力,HyperTriggerRate",
+            "值": 1,
+            "tag": [
+              "技能",
+              "充盈"
+            ],
+            "削韧": 15,
+            "Boss削韧": 7
+          },
+          {
+            "名称": "[Écho du vent]Rayon des dégâts de [Poème transmis]",
+            "影响": "技能范围",
+            "值": 10,
+            "格式": "{}m"
+          },
+          {
+            "名称": "[Écho du vent]Prolongation de la durée de [Écho du vent]",
+            "影响": "技能耐久",
+            "值": 2,
+            "格式": "{}s"
+          },
+          {
+            "名称": "[Poème à l’unisson]Bonus de dégâts infligés",
+            "值": 0.5
+          },
+          {
+            "名称": "[Poème à l’unisson]Réduction des dégâts subis",
+            "值": 0.3
+          },
+          {
+            "名称": "[Poème à l’unisson]Vitesse de vol réduite",
+            "值": 0.5
+          },
+          {
+            "名称": "[Poème entrelacé]Régénération PV/s",
+            "影响": "技能威力",
+            "值": 1,
+            "值2": 35,
+            "格式": "{%}ATQ+{}"
+          }
+        ],
+        "术语解释": {
+          "风之回响(待包装)": "(待包装)\n存在期间，[莉莉蔻]受到伤害时不会产生僵直；触发[弹奏]时，[风之回响]基于[莉莉蔻]远程武器多重射击属性值额外发射追踪弹，命中造成风属性伤害，视为远程武器伤害；触发[传颂之诗]时，[风之回响]持续时间延长，并触发1次独立倍率但无治疗效果的[传颂之诗]。",
+          "齐颂之诗(待包装)": "(待包装)\n状态持续期间，自身造成的伤害提高，受到的伤害降低，飞行速度降低；点按释放此技能或退出[颂歌]状态时会切换至[交织之诗]，[风之回响]会停止跟随。",
+          "交织之诗(待包装)": "(待包装)\n状态持续期间，自身和队友持续回复生命；[风之回响]在一定范围内时，点按释放此技能时会传送至[风之回响]所在的位置并切换至[齐颂之诗]，[风之回响]会重新跟随。"
+        },
         "子技能": [
           {
             "id": 540221,
             "类型": "Bonus",
             "icon": "Dafu02",
-            "cd": 1
+            "cd": 1,
+            "名称": "风之回响(待包装)"
+          },
+          {
+            "id": 540222,
+            "类型": "",
+            "icon": "",
+            "名称": "齐颂之诗(待包装)"
           }
         ],
-        "行为": "移除增益(540221)[激活技能];延迟3秒后附加增益(540221)[激活技能](持续16秒);延迟3秒后附加增益(540201)[激活技能, 替换动作, 启用飞行, 召唤武器, 禁用[下落攻击, 重击, 滑行攻击, 普攻]]"
+        "行为": "移除;延迟3秒后附加增益(540221)[激活技能](持续16秒);延迟0.5秒后附加增益(540201)[每1秒消耗10神智, 激活技能, 替换动作, 启用飞行, 召唤武器, 禁用[下落攻击, 重击, 滑行攻击, 普攻]]"
       },
       {
         "id": 540203,
+        "名称": "流传(待包装)",
         "类型": "Passive",
+        "描述": "(待包装)\n根据持有的[传颂值]提高自身充盈威力，[传颂值]最高999点。每累计增加15点[传颂值]，下次[弹奏]消耗累计值触发1次[传颂之诗]，造成风属性范围充盈伤害，对自身和队友提供治疗。\n造成技能伤害时可以基于远程武器触发概率触发风属性额外效果。",
         "icon": "Dafu03",
-        "行为": "被动效果(540201)(BP_Lilikou);增益(540203)[每层+0.001Puissance de Surabondance(最多999层)];增益(540231);增益(540232)[每层+0.004Puissance de Surabondance(最多100层)]"
+        "字段": [
+          {
+            "名称": "Bonus de Puissance de Surabondance (100 premiers points)",
+            "值": 0.04,
+            "值2": 0.01,
+            "格式": "{%}+{%}"
+          },
+          {
+            "名称": "Bonus de Puissance de Surabondance (au-delà de 100 points)",
+            "值": 0.01
+          },
+          {
+            "名称": "Dégâts de [Poème transmis]",
+            "影响": "技能威力,HyperTriggerRate",
+            "值": 1,
+            "tag": [
+              "技能",
+              "充盈"
+            ]
+          },
+          {
+            "名称": "Rayon des dégâts de [Poème transmis]",
+            "影响": "技能范围",
+            "值": 10,
+            "格式": "{}m"
+          },
+          {
+            "名称": "Soin",
+            "影响": "技能威力",
+            "值": 1,
+            "值2": 35,
+            "格式": "{%}ATQ+{}"
+          }
+        ],
+        "行为": "被动效果(540201)"
       },
       {
         "id": 540204,
+        "名称": "奋起(待包装)",
         "类型": "Passive",
+        "描述": "Lorsque Lirico soigne une cible alliée, elle applique en plus un effet augmentant la Puissance de Surabondance pendant 6 s. Sa valeur correspond à 25.0% de la Puissance de Surabondance de [Lirico], sans dépasser 500.0%.",
         "icon": "ExtraPassive",
-        "行为": "被动效果(540202)(BP_Lilikou_Extra);增益(540204)[Puissance de Surabondance上限1]"
+        "行为": "被动效果(540202)"
+      },
+      {
+        "id": 510191,
+        "名称": "Picorer et trouver",
+        "类型": "Support",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente la Ténacité du personnage et des alliés si deux membres de l’équipe ou plus partagent le même attribut élémentaire.",
+        "icon": "PhantomPassive",
+        "字段": [
+          {
+            "名称": "Augmentation de Ténacité",
+            "值": 0.05
+          }
+        ],
+        "行为": "被动效果(510191)(BP_Common_PhantomPassive)"
       }
-    ]
+    ],
+    "溯源": [
+      "Lorsque vous appliquez un [Désordre Anémo], inflige 100% Dégâts de compétence Anémo aux ennemis dans un rayon de 6 m. Ces dégâts sont considérés comme des Dégâts de Surabondance. Peut se déclencher jusqu’à 8 fois ; le nombre de déclenchements est réinitialisé lorsque [Poème transmis] se déclenche.",
+      "Pendant l’état [Hymne], la Pénétration de tous les attributs de Lirico et de ses alliés augmente de 20%. Lorsqu’ils infligent des Dégâts de Surabondance, leur Pénétration de tous les attributs augmente en plus de 16%.",
+      "[风起之颂(待包装)]等级+2，[流传(待包装)]等级+1。",
+      "Tant que [Écho du vent] est présent, les Dégâts de Surabondance infligés par Lirico et ses alliés sont égaux à 120% des dégâts d’origine.",
+      "[风声共鸣(待包装)]等级+2，[流传(待包装)]等级+1。",
+      "Lorsque [Poème transmis] se déclenche, Lirico obtient un effet augmentant sa Pénétration de tous les attributs de 30% pendant 6 s. Pendant la durée de cet effet, lorsque Lirico ou ses alliés infligent un coup critique, 1 instance supplémentaire de dégâts de zone de [Intron I] se déclenche. Une même source de dégâts ne peut déclencher cet effet qu’une fois toutes les 0.5 s."
+    ],
+    "碎片": 1005402
   }
 ]

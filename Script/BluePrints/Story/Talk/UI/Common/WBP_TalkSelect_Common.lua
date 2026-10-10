@@ -19,20 +19,6 @@ local function BuildExtraSelectable(Params)
   return ExtraSelectable
 end
 
-local function BuildOnSelectionChangedFunc(Params)
-  local function EmptyFunc()
-  end
-  
-  return Params and Params.OnSelectionChanged or EmptyFunc
-end
-
-local function BuildOnItemHoveredFunc(Params)
-  local function EmptyFunc()
-  end
-  
-  return Params and Params.OnItemHovered or EmptyFunc
-end
-
 local M = Class()
 
 function M:New()
@@ -42,7 +28,6 @@ end
 
 function M:Init(ParentWidget, Params)
   self.ItemUIPathName = Params and Params.ItemUIPathName
-  self.ItemClickedInfo = nil
   self.DelayDestoryCount = 0
   self.NextUpDownSelectTime = 0
   self.UpDownSelectCooldown = 0.1
@@ -54,27 +39,20 @@ function M:Init(ParentWidget, Params)
   self.bListeningUpDownEvents = false
   self.bListeningConfirmEvents = false
   self.ExtraSelectable = BuildExtraSelectable(Params)
-  self.OnSelectionChangedFunc = BuildOnSelectionChangedFunc(Params)
-  self.OnItemHoveredFunc = BuildOnItemHoveredFunc(Params)
+  self.OnSelectionChangedFunc = Params.OnSelectionChanged
+  self.OnItemHoveredFunc = Params.OnItemHovered
+  self.OnItemUnhoveredFunc = Params.OnItemUnhovered
+  self.OnItemClickedFunc = Params.OnItemClicked
+  self.OnItemClickStartFunc = Params.OnItemClickedStart
   self:SwitchEnableUpDownEvents(false)
 end
 
 function M:ReceiveTick(InDeltaTime)
 end
 
-function M:BindItemClicked(InObj, InFunc)
-  self.ItemClickedInfo = {}
-  self.ItemClickedInfo.Obj = InObj
-  self.ItemClickedInfo.Func = InFunc
-end
-
-function M:UnBindItemClicked()
-  self.ItemClickedInfo = nil
-end
-
-function M:OnItemClicked(InItemIdx)
-  if self.ItemClickedInfo then
-    self.ItemClickedInfo.Func(self.ItemClickedInfo.Obj, InItemIdx)
+function M:OnItemClicked(Item)
+  if self.OnItemClickedFunc then
+    self.OnItemClickedFunc(Item)
   end
 end
 
@@ -84,7 +62,9 @@ function M:OnItemClickStart()
     local Child = self.ScrollBox_TalkOptions:GetChildAt(i)
     Child:Clear()
   end
-  self.ParentWidget:OnItemClickedStart()
+  if self.OnItemClickStartFunc then
+    self.OnItemClickStartFunc()
+  end
 end
 
 function M:AddItem(InItem)
@@ -101,23 +81,21 @@ function M:AddItem(InItem)
   InitParams.OptionText = InitParams.OptionText or InitParams.Text
   InitParams.OptionIdx = InitParams.OptionIdx or InitParams.Index
   InitParams.ListIdx = ListIdx
-  InitParams.OnItemClickedDelegate = InitParams.OnItemClickedDelegate or {
+  InitParams.OnClickedDelegate = {
     self,
     self.OnItemClicked
   }
-  InitParams.OnItemClickStartDelegate = InitParams.OnItemClickStartDelegate or {
+  InitParams.OnClickStartDelegate = {
     self,
     self.OnItemClickStart
   }
-  local OriginalOnHoveredDelegate = InitParams.OnHoveredDelegate
   InitParams.OnHoveredDelegate = {
     self,
-    function(_, ItemIndex)
-      self:OnItemHoveredByDisplayIndex(ItemIndex)
-      if OriginalOnHoveredDelegate and OriginalOnHoveredDelegate[1] and OriginalOnHoveredDelegate[2] then
-        OriginalOnHoveredDelegate[2](OriginalOnHoveredDelegate[1], ItemIndex)
-      end
-    end
+    self.OnItemHoveredByDisplayIndex
+  }
+  InitParams.OnUnhoveredDelegate = {
+    self,
+    self.OnItemUnhoveredByDisplayIndex
   }
   ItemUI:Init(InitParams)
 end
@@ -277,7 +255,9 @@ function M:SelectNewItem(NewItemIdx, bIsDefault)
     self.CurrentSelectItemIdx = NewItemIdx
     self:TriggerSelectByIndex(self.CurrentSelectItemIdx, true, true)
     self:ScrollIndexIntoView(self.CurrentSelectItemIdx)
-    self.OnSelectionChangedFunc(self.CurrentSelectItemIdx, self.LastSelectItemIdx, true)
+    if self.OnSelectionChangedFunc then
+      self.OnSelectionChangedFunc(self.CurrentSelectItemIdx, self.LastSelectItemIdx, true)
+    end
     return
   end
   if self.CurrentSelectItemIdx == NewItemIdx then
@@ -288,7 +268,9 @@ function M:SelectNewItem(NewItemIdx, bIsDefault)
   self:TriggerSelectByIndex(self.LastSelectItemIdx, false)
   self:TriggerSelectByIndex(self.CurrentSelectItemIdx, true)
   self:ScrollIndexIntoView(self.CurrentSelectItemIdx)
-  self.OnSelectionChangedFunc(self.CurrentSelectItemIdx, self.LastSelectItemIdx, false)
+  if self.OnSelectionChangedFunc then
+    self.OnSelectionChangedFunc(self.CurrentSelectItemIdx, self.LastSelectItemIdx, false)
+  end
 end
 
 function M:SwitchItemSelected(ItemUI, bIsSelected, bIsDefault)
@@ -327,11 +309,23 @@ end
 
 function M:OnItemHovered(Index)
   self:SelectNewItem(Index)
-  self.OnItemHoveredFunc(Index)
+  if self.OnItemHoveredFunc then
+    self.OnItemHoveredFunc(Index)
+  end
 end
 
 function M:OnItemHoveredByDisplayIndex(ItemIndex)
   self:OnItemHovered(ItemIndex - 1)
+end
+
+function M:OnItemUnhovered(Index)
+  if self.OnItemUnhoveredFunc then
+    self.OnItemUnhoveredFunc(Index)
+  end
+end
+
+function M:OnItemUnhoveredByDisplayIndex(ItemIndex)
+  self:OnItemUnhovered(ItemIndex - 1)
 end
 
 function M:OnExtraHovered()

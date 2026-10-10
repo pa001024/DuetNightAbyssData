@@ -169,6 +169,9 @@ function PlayerCommonInterface:KawaiiSwitch(Enabled)
 end
 
 function PlayerCommonInterface:StopArmoryIdle()
+  if not self.PlayerAnimInstance then
+    return
+  end
   self:ShouldEnableHandIk()
   self.PlayerAnimInstance:Montage_StopSlotByName(0, "ArmoryIdle")
 end
@@ -282,9 +285,6 @@ function PlayerCommonInterface:EnterHitFlyTag()
 end
 
 function PlayerCommonInterface:GetDamageInstigatorCurrentAngle(Attacker)
-end
-
-function PlayerCommonInterface:TryToUpdateScreenEffect(DamageFrom, EnergyShieldReduce)
 end
 
 function PlayerCommonInterface:SkillEnd(Owner, SkillId)
@@ -431,16 +431,34 @@ function PlayerCommonInterface:RefreshRegionNameInfo(UId, ObjId)
   if Avatar then
     local RegionAvatars = Avatar.RegionAvatars or {}
     local OtherAvatar = RegionAvatars[ObjId]
-    Name = OtherAvatar and OtherAvatar.AvatarInfo.Nickname
+    local AvatarInfo = OtherAvatar and OtherAvatar.AvatarInfo
+    Name = AvatarInfo and AvatarInfo.Nickname or ""
   end
   local Member, Pos = TeamController:GetModel():GetTeamMember(UId)
-  self:EnableHeadWidget("Name", false)
-  local Style = "Player"
-  if 0 == Pos or not Pos then
-    Style = nil
+  local Comp = self:GetOrCreateHeadWidgetComponent()
+  if IsValid(Comp) then
+    Comp:DisableNameWidget()
+    local Style = "Player"
+    if 0 == Pos or not Pos then
+      Style = ""
+    end
+    Comp:EnableNameWidget(Name or "", Style, Pos or 0)
+    self:RefreshRegionGuildSignInfo(ObjId, Comp)
   end
-  self:EnableHeadWidget("Name", true, Name, Style, Pos)
   self:RefreshAutoOnlineActionTagByRegionState(ObjId)
+end
+
+function PlayerCommonInterface:RefreshRegionGuildSignInfo(ObjId, WidgetComp)
+  local Avatar = GWorld:GetAvatar()
+  local RegionAvatars = Avatar and Avatar.RegionAvatars or {}
+  local OtherAvatar = RegionAvatars[ObjId]
+  local AvatarInfo = OtherAvatar and OtherAvatar.AvatarInfo
+  local Comp = WidgetComp or self:GetHeadWidgetComponent()
+  local UniformWidget = IsValid(Comp) and Comp:GetWidget() or nil
+  local NameWidget = IsValid(UniformWidget) and UniformWidget.Npc_Name_PC or nil
+  if IsValid(NameWidget) then
+    NameWidget:RefreshGuildSign(AvatarInfo)
+  end
 end
 
 function PlayerCommonInterface:GetRegionOnlineCharObjId()
@@ -608,16 +626,23 @@ function PlayerCommonInterface:RefreshTitleInfo(ObjId)
   local PrefixId = OtherAvatar.AvatarInfo.TitleBefore
   local SuffixId = OtherAvatar.AvatarInfo.TitleAfter
   local TitleFrameId = OtherAvatar.AvatarInfo.TitleFrame
-  print(_G.LogTag, "RefreshTitleInfo", PrefixId, SuffixId, TitleFrameId)
   self:RefreshTitle(PrefixId, SuffixId, TitleFrameId)
 end
 
 function PlayerCommonInterface:EnableTitle(PrefixId, SuffixId, TitleFrameId)
-  self:EnableHeadWidget("Title", true, PrefixId, SuffixId, TitleFrameId)
+  local Comp = self:GetOrCreateHeadWidgetComponent()
+  if not IsValid(Comp) then
+    return
+  end
+  Comp:EnableTitleWidget(PrefixId, SuffixId, TitleFrameId)
 end
 
 function PlayerCommonInterface:DisableTitle()
-  self:EnableHeadWidget("Title", false)
+  local Comp = self:GetHeadWidgetComponent()
+  if not IsValid(Comp) then
+    return
+  end
+  Comp:DisableTitleWidget()
 end
 
 function PlayerCommonInterface:RefreshTitle(PrefixId, SuffixId, TitleFrameId)
@@ -626,11 +651,19 @@ function PlayerCommonInterface:RefreshTitle(PrefixId, SuffixId, TitleFrameId)
 end
 
 function PlayerCommonInterface:PlayEmoji(EmojiPath)
-  self:EnableHeadWidget("Bubble_Emoji", true, EmojiPath)
+  local Comp = self:GetOrCreateHeadWidgetComponent()
+  if not IsValid(Comp) then
+    return
+  end
+  Comp:EnableEmojiWidget(EmojiPath)
 end
 
 function PlayerCommonInterface:StopEmoji()
-  self:EnableHeadWidget("Bubble_Emoji", false)
+  local Comp = self:GetHeadWidgetComponent()
+  if not IsValid(Comp) then
+    return
+  end
+  Comp:DisableEmojiWidget()
 end
 
 function PlayerCommonInterface:InitBattleWheelForbidGroup()
@@ -640,7 +673,15 @@ function PlayerCommonInterface:InitBattleWheelForbidGroup()
     S = true,
     D = true,
     OpenBattleWheel = true,
-    Fire = true
+    Fire = true,
+    UseBattleWheelSlot1 = true,
+    UseBattleWheelSlot2 = true,
+    UseBattleWheelSlot3 = true,
+    UseBattleWheelSlot4 = true,
+    UseBattleWheelSlot5 = true,
+    UseBattleWheelSlot6 = true,
+    UseBattleWheelSlot7 = true,
+    UseBattleWheelSlot8 = true
   }
   local KeyboardMap = DataMgr.KeyboardMap
   for ActionName, _ in pairs(KeyboardMap) do

@@ -180,6 +180,10 @@ return ReadOnly("ReasonType", {
     ReasonId = 42001,
     ReasonName = "CUMULATIVE_RECHARGE"
   },
+  D4SEASON_BUFF_UPGRADE_CONSUME = {
+    ReasonId = 59001,
+    ReasonName = "D4SEASON_BUFF_UPGRADE_CONSUME"
+  },
   DAILY_PACK_BUY = {
     ReasonId = 38001,
     ReasonName = "DAILY_PACK_BUY"
@@ -429,6 +433,14 @@ return ReadOnly("ReasonType", {
     ReasonId = 21005,
     ReasonName = "PET_CAPTURE"
   },
+  PET_DECOMPOSE_CONSUME = {
+    ReasonId = 58001,
+    ReasonName = "PET_DECOMPOSE_CONSUME"
+  },
+  PET_DECOMPOSE_GET = {
+    ReasonId = 58002,
+    ReasonName = "PET_DECOMPOSE_GET"
+  },
   PET_ENTRY_REPLACE_CONSUME = {
     ReasonId = 21003,
     ReasonName = "PET_ENTRY_REPLACE_CONSUME"
@@ -520,6 +532,10 @@ return ReadOnly("ReasonType", {
   RAID_DUNGEON_REWARD = {
     ReasonId = 14008,
     ReasonName = "RAID_DUNGEON_REWARD"
+  },
+  RAID_RANK_REWARD = {
+    ReasonId = 37002,
+    ReasonName = "RAID_RANK_REWARD"
   },
   REGION_REPUTATION_QUEST_CONSUME = {
     ReasonId = 41002,

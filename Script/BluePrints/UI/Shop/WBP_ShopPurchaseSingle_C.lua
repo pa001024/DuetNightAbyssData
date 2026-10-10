@@ -114,6 +114,15 @@ function M:InitContent(Params, PopupData, Owner)
     },
     Desc = GText("UI_Controller_Slide")
   })
+  self.ButtonQATips = self:ShowGamepadShortcutBtn({
+    KeyInfoList = {
+      {
+        Type = "Img",
+        ImgShortPath = UIConst.GamePadImgKey.SpecialRight
+      }
+    },
+    Desc = GText("UI_BACK")
+  })
   local Key_RewardDesc_Params = {
     KeyInfoList = {
       {
@@ -122,6 +131,15 @@ function M:InitContent(Params, PopupData, Owner)
       }
     }
   }
+  local Key_Qa_Params = {
+    KeyInfoList = {
+      {
+        Type = "Img",
+        ImgShortPath = UIConst.GamePadImgKey.SpecialRight
+      }
+    }
+  }
+  self.Key_Qa:CreateCommonKey(Key_Qa_Params)
   self.Key_RewardDesc:CreateCommonKey(Key_RewardDesc_Params)
   if self.GameInputModeSubsystem:GetCurrentInputType() ~= ECommonInputType.Gamepad then
     self.Key_Mod:SetVisibility(ESlateVisibility.Collapsed)
@@ -134,6 +152,7 @@ function M:InitContent(Params, PopupData, Owner)
   end
   self.bTipsOpen = false
   self.FocusOnSubItem = false
+  self.FocusOnQATips = false
   self:SetGamepadButtonState(false, false, not self.SingleItemNotInteractive)
   self:HideGamepadShortcut(self.ButtonX)
 end
@@ -190,6 +209,13 @@ function M:InitUI(ShopType)
       }
     end
     self:SetNameRarity(Content.Rarity)
+    self:SetSkinCollectScore(Content)
+    local DefaultConfigData = {
+      OwnerWidget = self,
+      TextContent = GText("UI_AppearanceCollect_CurrentProgressDetail")
+    }
+    self.Com_BtnQa:Init(DefaultConfigData)
+    self.Com_HudBubble:SetVisibility(ESlateVisibility.Collapsed)
     self.SingleItem:Init(Content)
     local Events = {}
     Events.OnMenuOpenChanged = self.ItemMenuAnchorChanged
@@ -461,6 +487,31 @@ function M:InitUI(ShopType)
       self.Owner:GetButtonBar().Com_Hint:SetGamepadIconVisibility(true)
       self.Owner:GetButtonBar().Com_Hint.Button_Area:SetIsEnabled(true)
       self.Owner.DontCloseWhenRightBtnClicked = false
+    end
+  end
+end
+
+function M:OpenDefaultMenuAnchor()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_level_01", nil, nil)
+  self.Com_BtnQa:PlayAnimation(self.Com_BtnQa.Click)
+  self.Com_BtnQa:OpenMenuAnchor()
+  self.FocusOnQATips = true
+end
+
+function M:CloseMenuAnchor()
+  self.Com_BtnQa:CloseMenuAnchor()
+  self.FocusOnQATips = false
+end
+
+function M:SetSkinCollectScore(Content)
+  local SkinCollectTaskPopupModel = require("BluePrints.UI.WBP.Activity.Widget.SkinCollect.SkinCollectTaskPopupModel")
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    local CurrentScore, MaxScore = Avatar.AppearanceCollectEvent:SkinCollectScoreInfo(SkinCollectTaskPopupModel.SKinCollectTaskEventId)
+    if CurrentScore < MaxScore and EMCache:Get("SkinCollectTaskCheckBox") and Avatar.AppearanceCollectEvent:IsSkinCollectAppearance(SkinCollectTaskPopupModel.SKinCollectTaskEventId, Content.Id) then
+      self.Group_SkinCollect:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.Text_ScoreNum:SetText(Avatar:GetAppearanceScore(Content.ItemType, Content.Id) or "0")
+      self.Text_ScoreDesc:SetText(string.format(GText("UI_AppearanceCollect_CurrentProgress"), CurrentScore, MaxScore))
     end
   end
 end
@@ -1002,10 +1053,12 @@ function M:UpdateUIByCurrentState()
     self:SetSliderState(not isFocusOnSubItem and not isTipsOpen)
     self:SetGamepadBtnKeyVisibility(not isFocusOnSubItem and not isTipsOpen)
     self:UpdateUIElementsVisibility(isGamePad, isFocusOnSubItem, isTipsOpen)
+    self.Key_Qa:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   else
     self:SetSliderState(true)
     self:SetGamepadBtnKeyVisibility(false)
     self:UpdateUIElementsVisibility(isGamePad, false, isTipsOpen)
+    self.Key_Qa:SetVisibility(ESlateVisibility.Collapsed)
   end
   if isTipsOpen then
     self:SetGamepadButtonState(false, false, false)
@@ -1058,6 +1111,21 @@ function M:SetGamepadButtonState(showA, showB, showTips)
     self:ShowGamepadShortcut(self.OpenTipsButtonIndex)
   else
     self:HideGamepadShortcut(self.OpenTipsButtonIndex)
+  end
+  if self.FocusOnQATips then
+    self:ShowGamepadShortcut(self.ButtonIndexB)
+    self:HideGamepadShortcut(self.OpenTipsButtonIndex)
+  else
+    self:HideGamepadShortcut(self.ButtonIndexB)
+    self:ShowGamepadShortcut(self.OpenTipsButtonIndex)
+  end
+end
+
+function M:OnQaBtnClicked()
+  if self.Com_HudBubble:IsVisible() then
+    self.Com_HudBubble:SetVisibility(ESlateVisibility.Collapsed)
+  else
+    self.Com_HudBubble:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   end
 end
 
@@ -1120,14 +1188,22 @@ function M:OnGamePadDown(InKeyName)
         self:OnWalnutModDetailsClick()
       end
     end
+    self:OpenDefaultMenuAnchor()
     self:UpdateUIByCurrentState()
   elseif InKeyName == UIConst.GamePadKey.FaceButtonRight and self.FocusOnSubItem then
     self.FocusOnSubItem = false
     self.Owner:SetFocus()
     self:UpdateUIByCurrentState()
     IsEventHandled = true
-  elseif InKeyName == UIConst.GamePadKey.DPadUp and self.CanOpenDiscount then
-    self.Shop_Discount_Btn:OnButtonClicked()
+  elseif InKeyName == UIConst.GamePadKey.DPadUp then
+    if self.CanOpenDiscount then
+      self.Shop_Discount_Btn:OnButtonClicked()
+    end
+  elseif InKeyName == UIConst.GamePadKey.FaceButtonRight and self.FocusOnQATips then
+    self.FocusOnQATips = false
+    self.Com_BtnQa:CloseMenuAnchor()
+    self:UpdateUIByCurrentState()
+    IsEventHandled = true
   end
   return IsEventHandled
 end

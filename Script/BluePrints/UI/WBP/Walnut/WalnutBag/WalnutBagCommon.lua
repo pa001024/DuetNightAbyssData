@@ -1,5 +1,4 @@
 local WalnutBagCommon = {
-  ReddotName = "WalnutBag",
   WalnutItemType = {
     "ChaosWalnut",
     "NeutralWalnut",

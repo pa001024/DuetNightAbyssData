@@ -37,9 +37,11 @@ function M:TryGacha(GachaId, IsSingle)
   end
   if 0 == Res then
     local Avatar = GWorld:GetAvatar()
-    if Avatar then
-      Avatar:DrawSkinGacha(GachaId, tonumber(GachaTimes))
+    if not Avatar then
+      UIManager(GWorld.GameInstance):ShowError(ErrorCode.RET_FAIL, 1.0, "CommonToastMain")
+      return -1
     end
+    Avatar:DrawSkinGacha(GachaId, tonumber(GachaTimes))
   end
   return Res
 end

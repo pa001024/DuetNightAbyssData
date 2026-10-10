@@ -324,6 +324,36 @@
     "icon": "T_Icon_Random_TitleFrame"
   },
   {
+    "id": 10055,
+    "name": "SSS級狩月人·7",
+    "desc": "可在稱號樣式中佩戴",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10056,
+    "name": "SS級狩月人·7",
+    "desc": "可在稱號樣式中佩戴",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10057,
+    "name": "S級狩月人·7",
+    "desc": "可在稱號樣式中佩戴",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10058,
+    "name": "A級狩月人·7",
+    "desc": "可在稱號樣式中佩戴",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
+    "id": 10059,
+    "name": "B級狩月人·7",
+    "desc": "可在稱號樣式中佩戴",
+    "icon": "T_Icon_Random_TitleFrame"
+  },
+  {
     "id": 20001,
     "name": "華彩殿堂·7",
     "desc": "可在稱號樣式中佩戴",

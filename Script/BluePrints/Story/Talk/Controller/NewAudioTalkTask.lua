@@ -19,6 +19,7 @@ function M:EndDialogue()
   if self.bCleared then
     return
   end
+  self:TryEndFlowGraph()
   self:Clear()
   self:TryFireEndingCallback()
 end
@@ -31,6 +32,17 @@ function M:Clear()
   M.Super.Clear(self)
   AudioManager(GWorld.GameInstance):RemoveAuANotifyForbidTag(self.UnitKey)
   self:ClearAudio()
+end
+
+function M:OnExceptionInterruptedBySTL()
+  DebugPrint("NewAudioTalkTask:OnExceptionInterruptedBySTL")
+  self.NodeFinished_Callback = nil
+  if self.TalkFlowController:IsUseFlowAsset() then
+    self.TalkTaskData.FlowAsset:FinishFlow(UE4.EFlowFinishPolicy.Keep)
+  else
+    self:StopTalkFlow()
+  end
+  self:Clear()
 end
 
 function M:OnInterrupted()

@@ -29,7 +29,7 @@ function M:OnListItemObjectSet(Content)
     self.Icon_Empty_Melee:SetVisibility(ESlateVisibility.Visible)
     self:SetEmptyIcon()
   else
-    self.Icon_Item:SetVisibility(ESlateVisibility.Visibie)
+    self.Icon_Item:SetVisibility(ESlateVisibility.Visible)
     self.Icon_Empty_Melee:SetVisibility(ESlateVisibility.Collapsed)
     self:SetIcon(Content.IconPath)
   end

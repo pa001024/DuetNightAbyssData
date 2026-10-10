@@ -431,17 +431,18 @@ function M:InitKeyboardView()
 end
 
 function M:OnReturnKeyDown()
+  if self:IsAnyAnimationPlaying() then
+    return
+  end
   self.Btn_Left.Btn.OnClicked:Clear()
   self.Btn_Right.Btn.OnClicked:Clear()
   self.Btn_Click.Btn_Click.OnClicked:Clear()
   self.ArchiveRewardBtn.Btn_Collect.OnClicked:Clear()
   AudioManager(self):SetEventSoundParam(self, "SwitchArchiveEvent", {ToEnd = 1})
-  if not self:IsAnyAnimationPlaying() then
-    local WidgetUI = self.Root:OpenSubUI("RougeArchiveMain")
-    self.Root.IsOpenSelectLevel = false
-    WidgetUI:InitTable()
-    WidgetUI.Archive_EventItem:SetFocus()
-  end
+  local WidgetUI = self.Root:OpenSubUI("RougeArchiveMain")
+  self.Root.IsOpenSelectLevel = false
+  WidgetUI:InitTable()
+  WidgetUI.Archive_EventItem:SetFocus()
 end
 
 function M:OpenReward()
@@ -453,9 +454,10 @@ end
 function M:GetAllRewards(ReceiveAllParm)
   local Avatar = GWorld:GetAvatar()
   if Avatar then
+    local ManualType = ReceiveAllParm.SelfWidget.Type
+    
     local function CallBack(Ret, Reward)
       local HaveReWardToGet = false
-      
       DebugPrint("@@@RougeArchive GetAllRewards CallBack")
       for i = 0, ReceiveAllParm.SelfWidget.List_Item:GetNumItems() - 1 do
         local Item = ReceiveAllParm.SelfWidget.List_Item:GetItemAt(i)
@@ -470,19 +472,19 @@ function M:GetAllRewards(ReceiveAllParm)
           Item.ConfigData.CanReceive = CanReceive
           Item.ConfigData.RewardsGot = IsGot
           if Item.SelfWidget then
-            Item.SelfWidget:RefreshBtn(IsGot)
+            Item.SelfWidget:RefreshBtn(IsGot, CanReceive)
           end
         end
       end
       UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, Reward, false, function()
         ReceiveAllParm.SelfWidget:SetFocus()
       end, ReceiveAllParm.SelfWidget)
-      ReceiveAllParm.SelfWidget:RefreshReddotInfo()
+      ReceiveAllParm.SelfWidget:RefreshReddotInfo(ManualType)
       ReceiveAllParm.SelfWidget:RefreshButton(HaveReWardToGet)
       DebugPrint("@@@RougeArchive GetAllRewards HaveReWardToGet", HaveReWardToGet)
     end
     
-    Avatar:GetRougeLikeManualReward(CallBack, ReceiveAllParm.SelfWidget.Type, -1)
+    Avatar:GetRougeLikeManualReward(CallBack, ManualType, -1)
   end
 end
 
@@ -506,7 +508,7 @@ function M:GetReward(Content)
           Item.ConfigData.CanReceive = CanReceive
           Item.ConfigData.RewardsGot = IsGot
           if Item.SelfWidget then
-            Item.SelfWidget:RefreshBtn(IsGot)
+            Item.SelfWidget:RefreshBtn(IsGot, CanReceive)
           end
         end
       end

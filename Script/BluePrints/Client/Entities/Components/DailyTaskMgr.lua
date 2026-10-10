@@ -1,8 +1,10 @@
 local DailyTalkController = require("BluePrints.UI.WBP.DailyTalk.DailyTalkController")
 local DailyTalkCommon = require("BluePrints.UI.WBP.DailyTalk.DailyTalkCommon")
 local Decorator = require("BluePrints.Client.Wrapper.Decorator")
+local EMCache = require("EMCache.EMCache")
 local Component = {}
 Decorator:ApplyDecorator(Component)
+local DailyTaskRewardReclaimNoticeKey = "DailyTaskRewardReclaimNotice"
 
 function Component:_OnLoginSuccess()
   DailyTalkController:Init()
@@ -212,6 +214,21 @@ function Component:GetDailyTalkReward(DailyTalkId)
   end
   
   self:CallServer("GetDailyTalkReward", Callback, DailyTalkId)
+end
+
+function Component:OnDailyTaskRewardReclaim(Rewards)
+  EMCache:Set(DailyTaskRewardReclaimNoticeKey, true, true)
+  EMCache:SaveUser(false)
+  self.logger.debug("@jzn OnDailyTaskRewardReclaim", Rewards)
+end
+
+function Component:ConsumeDailyTaskRewardReclaimNotice()
+  if not EMCache:Get(DailyTaskRewardReclaimNoticeKey, true) then
+    return false
+  end
+  EMCache:Remove(DailyTaskRewardReclaimNoticeKey, true)
+  EMCache:SaveUser(false)
+  return true
 end
 
 return Component

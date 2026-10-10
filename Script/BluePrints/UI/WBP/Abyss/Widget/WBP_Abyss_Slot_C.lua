@@ -118,9 +118,11 @@ function WBP_Abyss_Slot_C:Clear()
     return false
   end
   self.IsEmpty = true
-  local Uuid2SlotMap = self.LineupPage.Uuid2SlotMap
-  if Uuid2SlotMap then
-    Uuid2SlotMap[self.Uuid] = nil
+  if self.LineupPage then
+    local Uuid2SlotMap = self.LineupPage.Uuid2SlotMap
+    if Uuid2SlotMap then
+      Uuid2SlotMap[self.Uuid] = nil
+    end
   end
   self.Uuid = nil
   self.WeaponType = "Melee"
@@ -128,7 +130,7 @@ function WBP_Abyss_Slot_C:Clear()
   self.Icon_Empty:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self:PlayRemindAnim()
   if self.WeaponSlot then
-    if nil ~= self.WeaponSlot.Uuid and self.LineupPage.UpdateSingleTeamIcon then
+    if nil ~= self.WeaponSlot.Uuid and self.LineupPage and self.LineupPage.UpdateSingleTeamIcon then
       self.LineupPage:UpdateSingleTeamIcon(self.WeaponSlot.Uuid, false, self.WeaponSlot.WeaponType)
     end
     self.WeaponSlot:Clear()

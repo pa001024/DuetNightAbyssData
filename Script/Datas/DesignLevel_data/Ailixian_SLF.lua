@@ -39,6 +39,31 @@ return {
       CreatorId = 2910031,
       UnitType = "Mechanism",
       UnitId = 190004
+    },
+    ["292910036"] = {
+      CreatorId = 292910036,
+      UnitType = "Mechanism",
+      UnitId = 90100
+    },
+    ["292910037"] = {
+      CreatorId = 292910037,
+      UnitType = "Mechanism",
+      UnitId = 90100
+    },
+    ["292910038"] = {
+      CreatorId = 292910038,
+      UnitType = "Mechanism",
+      UnitId = 90100
+    },
+    ["292910039"] = {
+      CreatorId = 292910039,
+      UnitType = "Mechanism",
+      UnitId = 90100
+    },
+    ["292910040"] = {
+      CreatorId = 292910040,
+      UnitType = "Mechanism",
+      UnitId = 90100
     }
   },
   ManualItem = {},
@@ -90,6 +115,31 @@ return {
         }
       },
       ManualItem = {}
+    },
+    BP_MissionGroup_LibraryPuzzle_2 = {
+      QuestID = 13010198,
+      StaticCreator = {
+        ["2910034"] = {
+          CreatorId = 2910034,
+          UnitType = "Mechanism",
+          UnitId = 190011
+        },
+        ["2910035"] = {
+          CreatorId = 2910035,
+          UnitType = "Mechanism",
+          UnitId = 190011
+        },
+        ["2910033"] = {
+          CreatorId = 2910033,
+          UnitType = "Mechanism",
+          UnitId = 190011
+        }
+      },
+      ManualItem = {
+        ["291006"] = {ManualItemId = 291006},
+        ["291013"] = {ManualItemId = 291013},
+        ["291004"] = {ManualItemId = 291004}
+      }
     }
   }
 }

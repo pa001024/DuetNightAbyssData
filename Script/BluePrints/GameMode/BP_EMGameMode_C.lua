@@ -164,13 +164,6 @@ function BP_EMGameMode_C:ReceiveBeginPlay()
   self.GameModeIndex = GWorld:AddGameMode(self)
 end
 
-function BP_EMGameMode_C:NewAuthorityGameMode_BeginPlay_Lua()
-  self:SetActorTickInterval(1.0)
-  self:AIBattleMgrReceiveBeginPlay()
-  self:BindTalkSubsystem()
-  self.GameModeIndex = GWorld:AddGameMode(self)
-end
-
 function BP_EMGameMode_C:TryCreateDungeonObject()
   self.DungeonObject = GWorld:GetGameModeDungeonObject()
   if self.DungeonObject then
@@ -758,11 +751,11 @@ function BP_EMGameMode_C:BpOnTimerEnd(TimerHandleName)
 end
 
 function BP_EMGameMode_C:BpGetRemainTime(TimerHandleName)
-  local RawRemainTime = CommonUtils.GetClientTimerStructRemainTime(TimerHandleName)
-  if not RawRemainTime then
+  local RemainTime = self:GetTimerRemainingTime(TimerHandleName)
+  if not RemainTime or RemainTime < 0 then
     return 0
   end
-  return RawRemainTime
+  return RemainTime
 end
 
 function BP_EMGameMode_C:SetClientDungeonUIState(DungeonUIState)
@@ -1608,9 +1601,6 @@ function BP_EMGameMode_C:DungeonFinish_OnPlayerRealDead(AvatarEids)
   elseif self.EMGameState.GameModeType == "SoloTreasure" then
     DebugPrint("EMGameMode:DungeonFinish_OnPlayerRealDead SoloTreasure")
     self:TriggerDungeonComponentFun("FinishSolotreasure", false, "PlayerRealDead")
-  elseif self.EMGameState.GameModeType == "GuildBoss" then
-    DebugPrint("EMGameMode:DungeonFinish_OnPlayerRealDead GuildBoss")
-    self:TriggerDungeonComponentFun("FinishGuildBoss", true, "PlayerRealDead")
   else
     DebugPrint("EMGameMode:DungeonFinish_OnPlayerRealDead Default")
     self:TriggerPlayerFailed(AvatarEids)
@@ -3283,6 +3273,30 @@ function BP_EMGameMode_C:StartShootTargetGameByGameMode(GameId)
     return 0
   end
   return SessionId
+end
+
+function BP_EMGameMode_C:GetMonsterSpawnAirAlertLeadTime(SpawnKind)
+  local EnableByKind = Const.MonsterSpawnAirAlertEnableByKind
+  if nil == EnableByKind or true ~= EnableByKind[SpawnKind] then
+    return 0
+  end
+  return Const.MonsterSpawnAirAlertLeadTime or 0
+end
+
+function BP_EMGameMode_C:GetMonsterSpawnClusterFrontAngle()
+  local Angle = Const.MonsterSpawnClusterFrontAngle
+  if nil == Angle then
+    return 180
+  end
+  return Angle
+end
+
+function BP_EMGameMode_C:GetMonsterSpawnClusterCenterDistMul()
+  local Mul = Const.MonsterSpawnClusterCenterDistMul
+  if nil == Mul or Mul <= 0 then
+    return 4
+  end
+  return Mul
 end
 
 AssembleComponents(BP_EMGameMode_C)

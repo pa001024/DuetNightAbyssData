@@ -223,49 +223,4 @@ function M:IsNewFoliageRuleMap(PackageName)
   return true
 end
 
-function M:DestroyAllRegionDataAndEnterDungeon(DungeonId)
-  if not DungeonId or not DataMgr.Dungeon[DungeonId] then
-    return
-  end
-  local Data = DataMgr.Dungeon[DungeonId]
-  self:PauseAndAsyncDestroyRegionData({
-    self,
-    function()
-      local EidKeys = Battle(self):GetAllEntities():Keys()
-      for _, Eid in pairs(EidKeys) do
-        local Ent = Battle(self):GetEntity(Eid)
-        if Ent and not Ent.BpBorn then
-          if Ent.EMActorDestroy and (not Ent.IsPlayer or not Ent:IsPlayer()) then
-            Ent:EMActorDestroy(EDestroyReason.LevelUnloadedSaveGame)
-          elseif not Ent.IsPlayer or not Ent:IsPlayer() then
-            Ent:Destroy()
-          end
-        end
-      end
-      self:ClearAllRegionData()
-      self:UnloadDesignLevel(true)
-      self:RefreshDungeonId()
-      self:RespawnGameMode(true, DungeonId)
-      self:LoadDesignLevel(true, DungeonId)
-      self:AddTimer(0.5, function()
-        local GameMode = UE4.UGameplayStatics.GetGameMode(self)
-        GameMode:SetGameModeState(EGameModeState.EPrepare)
-        GameMode:GetLevelLoader():LevelLoaderReady()
-        GameMode:TryTriggerOnPrepare("BattleInit")
-        GameMode:TryTriggerOnPrepare("GameModeBeginPlay")
-        local Controller = UGameplayStatics.GetPlayerController(self, 0)
-        local AvatarEidStr = Controller.AvatarEidStr
-        if GameMode.LevelLoader and not GameMode.AlreadyInit then
-          GameMode.LevelLoader:SetInitTrans(Controller)
-        end
-        GameMode:OnCharacterReady(AvatarEidStr, self)
-        GameMode:TryTriggerOnInit(AvatarEidStr)
-        local GameState = UGameplayStatics.GetGameState(self)
-        GameState.EndLoadingSuccess = false
-        GameState:TryEndLoading("PlayerReady")
-      end)
-    end
-  })
-end
-
 return M

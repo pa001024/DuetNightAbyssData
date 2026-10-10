@@ -13,7 +13,8 @@ return ReadOnly("ArtLevelControl_RegionId2TaskVar", {
     [5] = "IQ13010101"
   },
   [1017] = {
-    [1] = "IQ100304"
+    [1] = "IQ100304",
+    [2] = "IQ120704"
   },
   [1019] = {
     [1] = "IQ100306",
@@ -106,6 +107,7 @@ return ReadOnly("ArtLevelControl_RegionId2TaskVar", {
   [1076] = {
     [1] = "EX02_Boss03",
     [2] = "EX02_Boss04_01",
-    [3] = "EX02_Boss04_02"
+    [3] = "EX02_Boss04_02",
+    [4] = "IQ110232"
   }
 })

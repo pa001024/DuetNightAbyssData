@@ -18,14 +18,21 @@ function M:Construct()
   self:AddInputMethodChangedListen()
 end
 
-function M:Init()
+function M:Init(Params)
+  self.CloseCallback = Params and Params.CloseCallback or nil
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
   end
-  self.Text_Group:SetText(GText("RaidDungeon_Rank_Tier"))
-  self.Text_Score:SetText(GText("RaidDungeon_Rank_Percentage"))
-  self.Text_Reward:SetText(GText("RaidDungeon_Rank_Reward"))
+  if self.Text_Group then
+    self.Text_Group:SetText(GText("RaidDungeon_Rank_Tier"))
+  end
+  if self.Text_Score then
+    self.Text_Score:SetText(GText("RaidDungeon_Rank_Percentage"))
+  end
+  if self.Text_Reward then
+    self.Text_Reward:SetText(GText("RaidDungeon_Rank_Reward"))
+  end
   local CurrentRaidSeasonId = Avatar.CurrentRaidSeasonId
   local RaidSeasons = Avatar.RaidSeasons[CurrentRaidSeasonId]
   local RaidSeasonData = DataMgr.RaidSeason[RaidSeasons.RaidSeasonId]
@@ -89,10 +96,19 @@ end
 function M:OnReturnKeyDown()
   AudioManager(self):SetEventSoundParam(self, "Play_DeputeDetail", {ToEnd = 1})
   self.Super.Close(self)
+  if self.CloseCallback then
+    local Callback = self.CloseCallback
+    self.CloseCallback = nil
+    Callback(self)
+    return
+  end
   local Item = UIManager(self):GetUIObj("GuildWarLevel")
+  local FloorItem = UIManager(self):GetUIObj("GuildWarFloorLevel")
   local ActivityMain = UIManager(self):GetUIObj("ActivityMain")
   if Item then
     Item:SelectCellFocus()
+  elseif FloorItem then
+    FloorItem:SelectCellFocus()
   elseif ActivityMain then
     ActivityMain:SetFocus()
   end

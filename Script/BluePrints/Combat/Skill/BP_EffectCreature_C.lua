@@ -93,15 +93,11 @@ function BP_EffectCreature_C:GetRealEffectCreatureId()
   return self.ReplaceSkinEffectCreatureId ~= self.EffectCreatureId and self.ReplaceSkinEffectCreatureId or self.EffectCreatureId
 end
 
-function BP_EffectCreature_C:ReplaceSkeletalMesh(EffectCreatureMesh, ModelId)
+function BP_EffectCreature_C:ReplaceSkeletalMesh(EffectCreatureMesh, ModelId, EffectCreatureConfig)
   if EffectCreatureMesh then
-    local RealEffectCreatureId = self:GetRealEffectCreatureId()
-    local EffectCreatureConfig = DataMgr.EffectCreature[RealEffectCreatureId]
-    local IsResetAnim = true
-    if EffectCreatureConfig.DontResetAnim then
-      IsResetAnim = false
-    end
-    self.SkeletalMesh:SetSkeletalMesh(EffectCreatureMesh, IsResetAnim)
+    EffectCreatureConfig = EffectCreatureConfig or DataMgr.EffectCreature[self:GetRealEffectCreatureId()]
+    self.bNeedInitAnimBeforePlay = not EffectCreatureConfig.DontResetAnim
+    self.SkeletalMesh:SetSkeletalMesh(EffectCreatureMesh, false)
     if EffectCreatureConfig.MeshResourceIdByCreator then
       self.MeshResourceList = UE4.URuntimeCommonFunctionLibrary.CreateMeshCompForActor(self, self:GetOwner(), self.SkeletalMesh)
       self.MeshResourceList:Add(self.SkeletalMesh)
@@ -124,18 +120,25 @@ end
 function BP_EffectCreature_C:InitEffectCreatureMeshInfo(EffectCreatureMesh, ModelId)
   local RealEffectCreatureId = self:GetRealEffectCreatureId()
   local EffectCreatureConfig = DataMgr.EffectCreature[RealEffectCreatureId]
-  self:ReplaceSkeletalMesh(EffectCreatureMesh, ModelId)
+  self:ReplaceSkeletalMesh(EffectCreatureMesh, ModelId, EffectCreatureConfig)
   if EffectCreatureConfig.ModelOffset then
     local ModelOffset = EffectCreatureConfig.ModelOffset
     ModelOffset = FVector(ModelOffset[1], ModelOffset[2], ModelOffset[3])
     self.SkeletalMesh:K2_AddLocalOffset(ModelOffset, false, nil, false)
   end
   self:UpdateTickableWhenPaused()
-  self:LoadEffectCreatureAnim()
+  self:LoadEffectCreatureAnim(EffectCreatureConfig)
   self.IsLoadedMesh = true
   local Owner = self:GetOwner()
   if self.IsFireBattlePet and Owner and Owner:GetBattlePet() then
     EventManager:FireEvent(EventID.OnPetEffectCreatureCreated, Owner and Owner:GetBattlePet(), Owner)
+  end
+end
+
+function BP_EffectCreature_C:InitAnimBeforePlay()
+  if self.bNeedInitAnimBeforePlay then
+    UE4.URuntimeCommonFunctionLibrary.InitSkeletalMeshAnim(self.SkeletalMesh)
+    self.bNeedInitAnimBeforePlay = false
   end
 end
 
@@ -160,6 +163,7 @@ function BP_EffectCreature_C:InheritPreAnimation(AnimPosition)
       UE4.UResourceLibrary.LoadObjectAsync(self, EffectCreatureAnimPath, {
         self,
         function(self, EffectCreatureAnim)
+          self:InitAnimBeforePlay()
           self.SkeletalMesh:PlayAnimation(EffectCreatureAnim, true)
           self.SkeletalMesh:SetPosition(AnimPosition, false)
           local SkillSpeed = self.SkillSpeed
@@ -170,6 +174,7 @@ function BP_EffectCreature_C:InheritPreAnimation(AnimPosition)
         end
       })
     else
+      self:InitAnimBeforePlay()
       self.SkeletalMesh:PlayAnimation(AnimationAsset, true)
       self.SkeletalMesh:SetPosition(AnimPosition, false)
       local SkillSpeed = self.SkillSpeed
@@ -243,9 +248,8 @@ function BP_EffectCreature_C:LoadEffectCreatureResource()
   end
 end
 
-function BP_EffectCreature_C:LoadEffectCreatureAnim()
-  local RealEffectCreatureId = self:GetRealEffectCreatureId()
-  local EffectCreatureConfig = DataMgr.EffectCreature[RealEffectCreatureId]
+function BP_EffectCreature_C:LoadEffectCreatureAnim(EffectCreatureConfig)
+  EffectCreatureConfig = EffectCreatureConfig or DataMgr.EffectCreature[self:GetRealEffectCreatureId()]
   local EffectCreatureAnimPath
   if EffectCreatureConfig.MeshResourceIdByCreator then
     local Owner = self:GetOwner()
@@ -277,6 +281,7 @@ end
 
 function BP_EffectCreature_C:PlayEffectCreatureAnimation(EffectCreatureAnim)
   if EffectCreatureAnim then
+    self:InitAnimBeforePlay()
     self.SkeletalMesh:PlayAnimation(EffectCreatureAnim, true)
   end
   self:RefreshEffectAnimation()
@@ -286,7 +291,6 @@ end
 
 function BP_EffectCreature_C:OnResourceReady()
   self.Overridden.OnResourceReady(self)
-  print(_G.LogTag, "PlayEffectCreatureAnimationPlayEffectCreatureAnimation")
   self:TriggerCharTinColor()
   self:SetPetEffectCreatureFX()
 end
@@ -303,7 +307,8 @@ function BP_EffectCreature_C:RefreshEffectAnimation()
   if EffectCreatureData.ForbidAnimAccelerate then
     SkillSpeed = 1
   end
-  local Interval = Owner.SumDeltaSeconds - LoadTime
+  local OwnerSumDeltaSeconds = Owner and Owner.SumDeltaSeconds or self.SumDeltaSeconds or 0
+  local Interval = OwnerSumDeltaSeconds - LoadTime
   Interval = Interval * SkillSpeed
   local SkeletalMesh = self.SkeletalMesh
   SkeletalMesh:SetPosition(Interval, false)

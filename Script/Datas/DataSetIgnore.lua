@@ -65,6 +65,12 @@ return ReadOnly("DataSetIgnore", {
   Skill01Count2 = {
     ID = "Skill01Count2"
   },
+  SpLiseSkill02FovMulti = {
+    ID = "SpLiseSkill02FovMulti"
+  },
+  SpLiseSkill02Percent = {
+    ID = "SpLiseSkill02Percent"
+  },
   ToExplode = {ID = "ToExplode"},
   Weapon20402_Scale = {
     ID = "Weapon20402_Scale"

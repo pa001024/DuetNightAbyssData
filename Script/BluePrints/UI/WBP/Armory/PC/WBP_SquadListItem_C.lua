@@ -175,11 +175,9 @@ function WBP_SquadListItem_C:MoveUp()
   local NowIndex = self.Index - self.FakeIndex
   if NowIndex >= 0 then
     self:PlayAnimation(self["Offset_Up_" .. NowIndex])
-    DebugPrint("MoveUp: Offset_Up_   ", NowIndex, self.FakeIndex, self.Index, self.SquadInfo.CharId)
   else
     NowIndex = math.abs(NowIndex) - 1
     self:PlayAnimation(self["Offset_Down_" .. NowIndex], 0, 1, EUMGSequencePlayMode.Reverse)
-    DebugPrint("MoveUp:   Offset_Down_    ", NowIndex, self.FakeIndex, self.Index, self.SquadInfo.CharId)
   end
 end
 
@@ -188,11 +186,9 @@ function WBP_SquadListItem_C:MoveDown()
   if NowIndex <= 0 then
     NowIndex = math.abs(NowIndex)
     self:PlayAnimation(self["Offset_Down_" .. NowIndex])
-    DebugPrint("MoveDown: Offset_Down_", NowIndex, self.FakeIndex, self.Index, self.SquadInfo.CharId)
   else
     NowIndex = NowIndex - 1
     self:PlayAnimation(self["Offset_Up_" .. NowIndex], 0, 1, EUMGSequencePlayMode.Reverse)
-    DebugPrint("MoveDown: Offset_Up_   ", NowIndex, self.FakeIndex, self.Index, self.SquadInfo.CharId)
   end
 end
 
@@ -233,7 +229,6 @@ function WBP_SquadListItem_C:OnMouseButtonDown(MyGeometry, MouseEvent)
     self.StartDragCountDown = self.StartDragTime
     self:AddTimer(0.1, function()
       if not self.IsPressingItem then
-        DebugPrint("OnDragDetected fail")
         self:RemoveTimer("DragDelay")
         return UnHandled
       end
@@ -307,7 +302,6 @@ function WBP_SquadListItem_C:OnMouseLeave(MyGeometry, InKeyEvent)
 end
 
 function WBP_SquadListItem_C:OnTouchStarted(MyGeometry, InTouchEvent)
-  DebugPrint("WBP_SquadListItem_C:OnTouchStarted")
   local LocalHandle = UE.UWidgetBlueprintLibrary.DetectDragIfPressed(InTouchEvent, self, UE.FKey("Touch"))
   self.bClickBegin = true
   if self.Owner.CurSelectSquadIndex ~= self.Index then
@@ -318,11 +312,9 @@ function WBP_SquadListItem_C:OnTouchStarted(MyGeometry, InTouchEvent)
     self.StartDragCountDown = self.StartDragTime
     self:AddTimer(0.1, function()
       if not self.IsPressingItem then
-        DebugPrint("OnDragDetected fail")
         self:RemoveTimer("DragDelay")
         return
       end
-      DebugPrint("self.StartDragCountDown ", self.StartDragCountDown)
       self.StartDragCountDown = math.max(self.StartDragCountDown - 0.1, 0)
       if self.StartDragCountDown <= 0 then
         if self.Owner.IsTouchMoving then
@@ -330,7 +322,6 @@ function WBP_SquadListItem_C:OnTouchStarted(MyGeometry, InTouchEvent)
           return
         end
         self.StartDrag = true
-        DebugPrint("self.StartDragCountDown 0")
         self:CheckArrowState()
         self:RemoveTimer("DragDelay")
       end
@@ -355,7 +346,6 @@ function WBP_SquadListItem_C:OnTouchMoved(MyGeometry, InTouchEvent)
 end
 
 function WBP_SquadListItem_C:OnTouchEnded(MyGeometry, InTouchEvent)
-  DebugPrint("OnTouchEnded")
   self.Owner.IsTouchMoving = false
   self.Owner:GetSquadWidgetInSquadList(self.Owner.CurSelectSquadIndex):HideAllArrow()
   if not self.bClickBegin then
@@ -414,6 +404,7 @@ function WBP_SquadListItem_C:OnDragDetected(MyGeometry, PointerEvent)
   DragDropOperation.Pivot = UE.EDragPivot.CenterCenter
   DragDropOperation.Index = self.Index
   DragDropOperation.FakeIndex = self.FakeIndex
+  DragDropOperation.TargetIndex = self.FakeIndex
   DragDropOperation.Tag = "SquadListItem"
   DragDropOperation.Payload = self.Content
   DragDropOperation.Owner = self.Owner
@@ -426,6 +417,9 @@ function WBP_SquadListItem_C:OnDragEnter(MyGeometry, PointerEvent, Operation)
   if self.Owner.IsDraging then
   end
   if self.IsSelect or "PC" == Platform then
+  end
+  if Operation and Operation.Tag == "SquadListItem" and not self.IsAddSquad then
+    Operation.TargetIndex = self.FakeIndex
   end
   if 1 == Operation.FakeIndex then
     Operation.DefaultDragVisual:OnlyShowDownArrow()
@@ -458,6 +452,7 @@ function WBP_SquadListItem_C:OnDragLeave(PointerEvent, Operation)
     self.StartDrag = false
     self.Owner.IsInSortState = false
     self.Owner.IsOutBound = true
+    self.Owner:RemoveTimer("AutoScroll")
     self:UpdateListView()
     self.Owner:HideOrShowItemInDraging()
   end
@@ -467,6 +462,7 @@ end
 function WBP_SquadListItem_C:OnDragCancelled(PointerEvent, Operation)
   self.Owner.IsDraging = false
   self.StartDrag = false
+  self.Owner:RemoveTimer("AutoScroll")
   Operation.DefaultDragVisual:HideAllArrow()
   if not self.Owner.IsOutBound then
     self:UpdateListView()
@@ -480,6 +476,7 @@ end
 function WBP_SquadListItem_C:OnDrop(MyGeometry, PointerEvent, Operation)
   self.Owner.IsDraging = false
   self.StartDrag = false
+  self.Owner:RemoveTimer("AutoScroll")
   Operation.DefaultDragVisual:HideAllArrow()
   self.Owner:HideOrShowItemInDraging()
   self.Owner:SwitchAddSquadItemVisibility(true)
@@ -493,29 +490,21 @@ function WBP_SquadListItem_C:OnDragOver(MyGeometry, PointerEvent, Operation)
   end
   local ListView = self.Owner.List_Default
   local MouseDownPos = UE4.UKismetInputLibrary.PointerEvent_GetScreenSpacePosition(PointerEvent)
-  local LocalPos = USlateBlueprintLibrary.AbsoluteToLocal(ListView:GetCachedGeometry(), MouseDownPos)
   local ScrollUpCachedGeometry = self.Owner.TriggerScrollUp:GetCachedGeometry()
   local ScrollDownCachedGeometry = self.Owner.TriggerScrollDown:GetCachedGeometry()
   local IsUnderInScrollUp = USlateBlueprintLibrary.IsUnderLocation(ScrollUpCachedGeometry, MouseDownPos)
   local IsUnderInScrollDown = USlateBlueprintLibrary.IsUnderLocation(ScrollDownCachedGeometry, MouseDownPos)
   if IsUnderInScrollUp then
-    DebugPrint("thyScroll IsUnderInScrollUp")
-    self.Owner:AutoSetScrollBoxOffSet(self.Owner.ScrollBox_0, -120)
+    self.Owner:AutoSetScrollBoxOffSet(self.Owner.EMScrollBox_0)
   elseif IsUnderInScrollDown then
-    DebugPrint("thyScroll IsUnderInScrollDown")
-    self.Owner:AutoSetScrollBoxOffSet(self.Owner.ScrollBox_0, 120)
+    self.Owner:AutoSetScrollBoxOffSet(self.Owner.EMScrollBox_0)
   end
-  local ScrollOffset = ListView:GetScrollOffset()
-  local YPos = LocalPos.Y + ScrollOffset
-  local ListViewHeight, ItemHeight = self:GetListViewSize(ListView)
-  local OffsetIndex = math.clamp(math.floor(YPos / ItemHeight), 0, self.Owner.SquadListLen) + 1
-  local NewIndex = OffsetIndex
+  self:GetListViewSize(ListView)
   local DragIndex = Operation.FakeIndex
-  if NewIndex > 5 then
-    NewIndex = NewIndex - 1
-  end
-  if 1 == math.abs(DragIndex - NewIndex) then
-    self:ChangeTwoItemInListView(ListView, DragIndex, NewIndex, Operation)
+  local TargetIndex = math.clamp(Operation.TargetIndex or DragIndex, 1, self.Owner.SquadListLen)
+  if TargetIndex ~= DragIndex then
+    local StepIndex = DragIndex + (DragIndex < TargetIndex and 1 or -1)
+    self:ChangeTwoItemInListView(ListView, DragIndex, StepIndex, Operation)
   end
   if 1 == Operation.FakeIndex then
     Operation.DefaultDragVisual:OnlyShowDownArrow()
@@ -540,8 +529,6 @@ function WBP_SquadListItem_C:ChangeTwoItemInListView(ListView, DragIndex, NewInd
   local DragItem = self.Owner:GetSquadContent(DragIndex)
   local NewItem = self.Owner:GetSquadContent(NewIndex)
   if DragItem and NewItem then
-    DebugPrint("DragItem", DragItem.FakeIndex, DragItem.SquadInfo.CharId)
-    DebugPrint("NewItem", NewItem.FakeIndex, NewItem.SquadInfo.CharId)
     if DragIndex < NewIndex then
       DragItem:MoveDown()
       NewItem:MoveUp()
@@ -551,8 +538,6 @@ function WBP_SquadListItem_C:ChangeTwoItemInListView(ListView, DragIndex, NewInd
     end
     DragItem:SetIndex(NewIndex)
     NewItem:SetIndex(DragIndex)
-  else
-    DebugPrint("DragItem or NewItem is nil", DragItem, NewItem)
   end
   if Operation then
     Operation.FakeIndex = NewIndex

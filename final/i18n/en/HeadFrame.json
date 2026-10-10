@@ -329,5 +329,26 @@
     "desc": "Used as an avatar frame.",
     "icon": "T_Head_Frame44",
     "access": "Available through Monthly Pass"
+  },
+  {
+    "id": 10051,
+    "name": "冰湖灯火",
+    "desc": "Used as an avatar frame.",
+    "icon": "T_Head_Frame47",
+    "access": "Available through Monthly Pass"
+  },
+  {
+    "id": 10052,
+    "name": "糖霜满屋·鎏金",
+    "desc": "Used as an avatar frame.",
+    "icon": "T_Head_Frame48",
+    "access": "Available from events"
+  },
+  {
+    "id": 10053,
+    "name": "糖霜满屋·墨玉",
+    "desc": "Used as an avatar frame.",
+    "icon": "T_Head_Frame49",
+    "access": "Available from events"
   }
 ]

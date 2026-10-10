@@ -226,6 +226,17 @@ function M:SetRelativeTransform(RelativeLocation, RelativeRotation)
   self.StartRot = CameraRotation
   self.EndRot = CameraRotation
   self.BaseScrollLocation = CameraLocation
+  do
+    local function FmtV(V)
+      return string.format("(%.2f,%.2f,%.2f)", V.X, V.Y, V.Z)
+    end
+    
+    local function FmtR(R)
+      return string.format("(P%.2f,Y%.2f,R%.2f)", R.Pitch, R.Yaw, R.Roll)
+    end
+    
+    DebugPrint(string.format("[CamConv] SetRelativeTransform input: RelLoc=%s RelRot=%s | RootWorld=%s | -> WorldLoc=%s WorldRot=%s", FmtV(RelativeLocation or FVector(0, 0, 0)), FmtR(RelativeRotation or FRotator(0, 0, 0)), self:GetPreviewRootActor() and FmtV(self:GetPreviewRootActor():GetTransform().Translation) or "nil", FmtV(CameraLocation), FmtR(CameraRotation)))
+  end
   if CameraComponent then
     CameraComponent:K2_SetWorldLocationAndRotation(CameraLocation, CameraRotation, false, nil, false)
   end

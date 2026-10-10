@@ -1,7 +1,6 @@
 local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 local Component = {}
 local WuyoushengLevelReddotName = "WuyoushengLevel"
-local WuyoushengId = {110001}
 
 function Component:EnterWorld()
   EventManager:AddEvent(EventID.OnLoginSuccess, self, self.RefreshWuyoushengReddot)
@@ -70,7 +69,7 @@ function Component:RefreshWuyoushengNewLevelReddot()
     end
   end
   ReddotManager.ClearLeafNodeCount(WuyoushengLevelReddotName)
-  for _, EventId in ipairs(WuyoushengId) do
+  for _, EventId in ipairs(ActivityUtils.GetWuyoushengEventIds()) do
     self:_TryAddWuyoushengNewLevelReddot(EventId)
   end
 end
@@ -82,11 +81,6 @@ function Component:_TryAddWuyoushengNewLevelReddot(EventId)
   if not CacheDetail then
     return
   end
-  if CacheDetail.EventId ~= EventId then
-    ReddotManager.ClearLeafNodeCount(WuyoushengLevelReddotName, true)
-    CacheDetail = ReddotManager.GetLeafNodeCacheDetail(WuyoushengLevelReddotName)
-  end
-  CacheDetail.EventId = EventId
   local WuyoushengEventLevelData = DataMgr.WuyoushengEventLevel
   if not WuyoushengEventLevelData then
     return
@@ -107,7 +101,8 @@ function Component:_TryAddWuyoushengNewLevelReddot(EventId)
   end
   local WuyoushengData = Avatar.WuyoushengActivity and Avatar.WuyoushengActivity[EventId]
   for DungeonId, LevelCfg in pairs(WuyoushengEventLevelData) do
-    if false == CacheDetail[DungeonId] then
+    if LevelCfg.EventId ~= EventId then
+    elseif false == CacheDetail[DungeonId] then
     else
       local UnlockDate = LevelCfg.UnlockDate
       UnlockDate = UnlockDate:GetTime()
@@ -153,11 +148,10 @@ function Component:RefreshWuyoushengRewardReddot()
   if not Avatar then
     return
   end
-  if not ActivityUtils.CheckEventIsOpen(WuyoushengId[1], nil, false, nil) then
-    return
-  end
-  for _, EventId in ipairs(WuyoushengId) do
-    self:_TryAddWuyoushengRewardReddot(EventId)
+  for _, EventId in ipairs(ActivityUtils.GetWuyoushengEventIds()) do
+    if ActivityUtils.CheckEventIsOpen(EventId, nil, false, nil) then
+      self:_TryAddWuyoushengRewardReddot(EventId)
+    end
   end
 end
 

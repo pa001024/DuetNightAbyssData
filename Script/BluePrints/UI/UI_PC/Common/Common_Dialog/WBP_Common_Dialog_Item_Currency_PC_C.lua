@@ -44,6 +44,7 @@ function WBP_Common_Dialog_Item_Currency_PC_C:Show_Funds(Params, PopupData)
           InParams.ResourceId = value.FundId
         end
         Widget:InitContent(InParams)
+        Widget:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
         if Widget.BindCurrencyMenuOpenChanged then
           Widget:BindCurrencyMenuOpenChanged(self, self.OnCurrencyItemMenuOpenChanged)
         end

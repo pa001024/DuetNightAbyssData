@@ -559,6 +559,14 @@ return ReadOnly("CommonPopupUIStyle", {
     },
     StyleId = "Gift_ShopTarget_ChooseFriendContent"
   },
+  Guild_EditSign = {
+    ShowContent = {
+      [1] = "WBP_Guild_Dialog_EditSign"
+    },
+    ShowLeftButton = 1,
+    ShowRightButton = 1,
+    StyleId = "Guild_EditSign"
+  },
   Guild_Information = {
     BigSize = true,
     ShowContent = {
@@ -719,6 +727,11 @@ return ReadOnly("CommonPopupUIStyle", {
       [1] = "WBP_Play_Task_RewardPreview"
     },
     StyleId = "Play_Task_RewardPreview"
+  },
+  Raid_Reward = {
+    ShowContent = T.RT_4,
+    ShowRightButton = 1,
+    StyleId = "Raid_Reward"
   },
   ResourceUseConfirm = {
     ShowContent = T.RT_4,

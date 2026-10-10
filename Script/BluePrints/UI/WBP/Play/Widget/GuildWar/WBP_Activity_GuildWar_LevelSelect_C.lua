@@ -10,7 +10,8 @@ local M = Class({
   "BluePrints.UI.BP_UIState_C"
 })
 M._components = {
-  "BluePrints.UI.WBP.Play.Widget.GuildWar.GuildWarView"
+  "BluePrints.UI.WBP.Play.Widget.GuildWar.GuildWarView",
+  "BluePrints.UI.KeyInputComponent"
 }
 local TypeSort = {
   Char = 1,
@@ -23,6 +24,8 @@ local TypeSort = {
 
 function M:Construct()
   M.Super.Construct(self)
+  self:InitGamepadKeyEvents()
+  self:Construct_Internal()
   M.bOpened = true
   if not ReddotManager.GetTreeNode(GuildWarUtils.ReddotNodeKey) then
     ReddotManager.AddNodeEx(GuildWarUtils.ReddotNodeKey)
@@ -71,24 +74,320 @@ function M:Construct()
   self.Text_Details_Buff:SetText(GText("UI_Dungeon_More"))
 end
 
-function M:OnLoaded(...)
-  M.Super.OnLoaded(self, ...)
-  self:Init()
+function M:InitGamepadKeyEvents()
+  self:ClearAllKeyEvents()
+  self:AddKeyClickEvent("Gamepad_FaceButton_Left", self.OnGamepadShopShortPress)
+  self:AddLongPressEvent("Gamepad_FaceButton_Left", Const.LongPressThreshold, self.OnGamepadRankingLongPressStart, self.OnGamepadRankingLongPressCancel, self.OnGamepadRankingLongPress)
+  self:AddLongPressEvent(Const.GamepadLeftThumbstick, Const.LongPressThreshold, self.OnJumpFloorLongPressStart, self.OnJumpFloorLongPressCancel, self.OnJumpFloorLongPressFinished)
+  self:AddLongPressEvent(Const.GamepadRightThumbstick, Const.LongPressThreshold, self.OnRewardPreviewLongPressStart, self.OnRewardPreviewLongPressCancel, self.OnGamepadRewardPreviewLongPress)
 end
 
-function M:Init()
-  self.DungeonList = self:GetCurrentRaidDungeonList()
-  if self.DungeonList then
-    self:InitLevelList(self.DungeonList)
+function M:CanHandleGamepadShortcuts()
+  return not self.DisableEsc and not self.MenuOpen and self.FocusTypeName ~= "MenuAnchor" and self.FocusTypeName ~= "RewardWidget" and (not self.DefaultList.IsShow or self.DefaultList:GetVisibility() ~= ESlateVisibility.SelfHitTestInvisible)
+end
+
+function M:OnGamepadShopShortPress()
+  if self:CanHandleGamepadShortcuts() and self.RaidSeasons and self.RaidSeasons:IsRaidTime() then
+    self:OnShopBtnClicked()
+  end
+  return UIUtils.Handled, true
+end
+
+function M:CanTriggerRanking()
+  return self:CanHandleGamepadShortcuts() and self.Btn_Ranking and self.Btn_Ranking:GetVisibility() ~= ESlateVisibility.Collapsed
+end
+
+function M:StartRankingGamepadLongPress()
+  if self:CanTriggerRanking() and self.Btn_Ranking.Key_Shop then
+    self.Btn_Ranking.Key_Shop:OnButtonPressed()
   end
 end
 
+function M:StopRankingGamepadLongPress()
+  if self.Btn_Ranking and self.Btn_Ranking.Key_Shop then
+    self.Btn_Ranking.Key_Shop:OnButtonReleased()
+  end
+end
+
+function M:OnGamepadRankingLongPressStart()
+  self:StartRankingGamepadLongPress()
+end
+
+function M:OnGamepadRankingLongPressCancel()
+  self:StopRankingGamepadLongPress()
+end
+
+function M:OnGamepadRankingLongPress()
+  self:StopRankingGamepadLongPress()
+  if not self:CanTriggerRanking() then
+    return
+  end
+  if self.Btn_Ranking.IsBtnForbidden and self.Btn_Ranking:IsBtnForbidden() then
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("RaidDungeon_PreRaid_Abandon_Toast"))
+    return
+  end
+  self:OpenGuildWarRank()
+end
+
+function M:CanTriggerRewardPreview()
+  return self:CanHandleGamepadShortcuts() and self.Board and self.Board.OpenGuildWarRewardPop and self.Board.Panel_RewardBtn and self.Board.Panel_RewardBtn:GetVisibility() ~= ESlateVisibility.Collapsed
+end
+
+function M:StartRewardPreviewGamepadLongPress()
+  if self:CanTriggerRewardPreview() and self.Board.Key_Reward then
+    self.Board.Key_Reward:OnButtonPressed()
+  end
+end
+
+function M:StopRewardPreviewGamepadLongPress()
+  if self.Board and self.Board.Key_Reward then
+    self.Board.Key_Reward:OnButtonReleased()
+  end
+end
+
+function M:OnRewardPreviewLongPressStart()
+  self:StartRewardPreviewGamepadLongPress()
+end
+
+function M:OnRewardPreviewLongPressCancel()
+  self:StopRewardPreviewGamepadLongPress()
+end
+
+function M:OnGamepadRewardPreviewLongPress()
+  self:StopRewardPreviewGamepadLongPress()
+  if self:CanTriggerRewardPreview() then
+    self.PreRewardPopFocus = self.SelectCell
+    self.Board:OpenGuildWarRewardPop()
+  end
+  return UIUtils.Handled, true
+end
+
+function M:CanTriggerJumpFloor()
+  return self:CanHandleGamepadShortcuts() and CommonConst.RaidSeasonType.Floor == self.RaidSeasonType and self.Btn_JumpFloor and self.Btn_JumpFloor:GetVisibility() ~= ESlateVisibility.Collapsed
+end
+
+function M:OnJumpFloorLongPressStart()
+  if self:CanTriggerJumpFloor() then
+    self.Btn_JumpFloor:StartGamepadLongPress()
+  end
+end
+
+function M:OnJumpFloorLongPressCancel()
+  if self.Btn_JumpFloor then
+    self.Btn_JumpFloor:StopGamepadLongPress()
+  end
+end
+
+function M:OnJumpFloorLongPressFinished()
+  if self.Btn_JumpFloor then
+    self.Btn_JumpFloor:StopGamepadLongPress()
+  end
+  if self:CanTriggerJumpFloor() then
+    self.Btn_JumpFloor:OnClicked_JumpFloor()
+  end
+end
+
+function M:RefreshJumpFloorGamepadKey(CurInputDevice)
+  if not self.Btn_JumpFloor then
+    return
+  end
+  self.Btn_JumpFloor:SetControllerJumpVisible(CurInputDevice == ECommonInputType.Gamepad)
+end
+
+function M:JumpToHighestFloor()
+  if not self.ScrollBox_List then
+    return
+  end
+  local childCount = self.ScrollBox_List:GetChildrenCount()
+  if not childCount or childCount <= 0 then
+    return
+  end
+  local lastItem = self.ScrollBox_List:GetChildAt(childCount - 1)
+  if not lastItem then
+    return
+  end
+  if lastItem.OnClicked_Floor then
+    lastItem:OnClicked_Floor()
+  end
+  self.ScrollBox_List:ScrollToEnd()
+  self:FocusFloorListItem(lastItem)
+  self:AddTimer(0.01, function()
+    self:FocusFloorListItem(lastItem)
+  end)
+end
+
+function M:FocusFloorListItem(item)
+  if not item or not item.Btn_Click then
+    return
+  end
+  item.Btn_Click:SetFocus()
+  self.CurrentFocusType = "SelectCell"
+  self:UpdatKeyDisplay("SelfWidget")
+end
+
+function M:Construct_Internal()
+  self.CurRaidSeasonId = nil
+  self.RaidSeasonType = nil
+  self.RaidDungeonType = nil
+  self.RaidSeasonTableData = nil
+  self.RaidFloorTableData = nil
+  self.CurSelectedItemIndex = nil
+  self.CurSelectedFloorNum = nil
+  self.CurSelectedFloorId = nil
+  self.CurSelectedDungeonId = nil
+  self.AfterLoading = false
+end
+
+function M:OnLoaded(...)
+  local _, _, _, afterLoading = ...
+  self.AfterLoading = afterLoading
+  M.Super.OnLoaded(self, ...)
+  self:PreInit()
+  self:Init()
+end
+
+function M:PreInit()
+  local curRaidSeasonData = self:GetRaidSeasons()
+  if curRaidSeasonData and DataMgr.RaidSeason then
+    self.CurRaidSeasonId = curRaidSeasonData.RaidSeasonId
+    self.RaidSeasonTableData = DataMgr.RaidSeason[curRaidSeasonData.RaidSeasonId]
+    self.RaidDungeonType = curRaidSeasonData:IsPreRaidTime() and CommonConst.RaidState.PreRaid or curRaidSeasonData:IsRaidTime() and CommonConst.RaidState.Raid or nil
+    if self.RaidSeasonTableData then
+      self.RaidSeasonType = self.RaidSeasonTableData.RaidSeasonType
+    end
+  end
+end
+
+function M:Init()
+  local dungeonList
+  if CommonConst.RaidSeasonType.Score == self.RaidSeasonType then
+    dungeonList = self:GetCurrentRaidDungeonList()
+  elseif CommonConst.RaidSeasonType.Floor == self.RaidSeasonType then
+    local raidFloorTableDataList = self:GetCurrentRaidDungeonList_Floor()
+    dungeonList = raidFloorTableDataList
+  end
+  if dungeonList then
+    self:InitLevelList(dungeonList)
+  end
+  if CommonConst.RaidSeasonType.Floor == self.RaidSeasonType then
+    self:Init_Floor()
+    self.Btn_JumpFloor:Init(self, self.JumpToHighestFloor)
+    self:AddTimer(0.2, function()
+      local allChildrenNum = self.ScrollBox_List:GetChildrenCount()
+      local item = self.ScrollBox_List:getchildAt(allChildrenNum - 1)
+      local currentOffset = self.ScrollBox_List:GetScrollOffset()
+      local endOffset = self.ScrollBox_List:GetScrollOffsetOfEnd()
+      if currentOffset >= endOffset - endOffset / allChildrenNum then
+        self.Btn_JumpFloor:SetVisibility(ESlateVisibility.Collapsed)
+        item:SetHighestFloorDisplayed(true)
+      else
+        self.Btn_JumpFloor:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+        item:SetHighestFloorDisplayed(false)
+      end
+    end, true)
+  end
+  self:RefreshJumpFloorGamepadKey(UIUtils.UtilsGetCurrentInputType())
+end
+
+function M:Init_Floor()
+  self.WS_BG:SetActiveWidgetIndex(1)
+  if self:GetHighestUnlockedFloor() >= self:GetHighestFloor() then
+    self.Btn_More:SetVisibility(ESlateVisibility.Collapsed)
+  end
+  self:UpdateDefaultList()
+  self:RefreshLevelCellContent(self.CurSelectedDungeonId)
+  self.Consume:SetVisibility(ESlateVisibility.Collapsed)
+  local shouldShowRewardSummary, UnGotReward = self:ShouldShowRaidFloorRewardSummary(self:GetRaidSeasons())
+  if shouldShowRewardSummary then
+    local ItemList = {}
+    local ItemIdToIndex = {}
+    for _, floorID in ipairs(UnGotReward) do
+      local rewardTableData = DataMgr.Reward[DataMgr.RaidFloor[floorID].FirstReward]
+      for i = 1, #rewardTableData.Id do
+        local itemId = rewardTableData.Id[i]
+        local itemIndex = ItemIdToIndex[itemId]
+        if itemIndex then
+          ItemList[itemIndex].ItemNum = ItemList[itemIndex].ItemNum + rewardTableData.Count[i][1]
+        else
+          local content = {}
+          content.ItemId = itemId
+          content.ItemType = rewardTableData.Type[i]
+          content.ItemNum = rewardTableData.Count[i][1]
+          table.insert(ItemList, content)
+          ItemIdToIndex[itemId] = #ItemList
+        end
+      end
+    end
+    local RewardList = {}
+    for _, it in ipairs(ItemList) do
+      table.insert(RewardList, {
+        Id = it.ItemId,
+        Type = it.ItemType,
+        ItemCount = it.ItemNum,
+        Icon = ItemUtils.GetItemIconPath(it.ItemId, it.ItemType),
+        Rarity = ItemUtils.GetItemRarity(it.ItemId, it.ItemType)
+      })
+    end
+    local JumpFloorTip = UIManager(self):LoadUINew("GuildWarJumpFloorTip")
+    if JumpFloorTip and JumpFloorTip.Init then
+      JumpFloorTip:Init({
+        FloorNum = self:GetPassedFloor(),
+        RewardList = RewardList
+      })
+      JumpFloorTip.ParentWidget = self
+      
+      function JumpFloorTip.CloseCallback()
+        GWorld:GetAvatar():RaidSeasonGetFloorReward(function(ErrCode, Rewards)
+          if ErrCode and ErrCode == ErrorCode.RET_SUCCESS then
+            UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, Rewards, false, function()
+            end, self)
+          end
+        end)
+      end
+    end
+  end
+end
+
+function M:UpdateDefaultList()
+  self.CurSelectedDungeonId = DataMgr.RaidFloor[self.CurSelectedFloorId] and DataMgr.RaidFloor[self.CurSelectedFloorId].DungeonId or nil
+  if self.CurSelectedDungeonId then
+    local bSquad = DataMgr.Dungeon[self.CurSelectedDungeonId].Squad
+    if bSquad then
+      self.DefaultList:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      local DungeonType = DataMgr.Dungeon[self.CurSelectedDungeonId].DungeonType
+      local bDisablePhantom = DungeonType == CommonConst.DungeonType.Rouge or false
+      local Avatar = GWorld:GetAvatar()
+      if Avatar then
+        local SquadId = Avatar.DungeonSquad[DungeonType] and Avatar.DungeonSquad[DungeonType] or 0
+        self.DefaultList:Init(self, bDisablePhantom, SquadId, self.CurSelectedDungeonId, true)
+      end
+    else
+      self.DefaultList:SetVisibility(ESlateVisibility.Collapsed)
+    end
+  end
+  self.Board:SetDungeonId(self.CurSelectedDungeonId)
+end
+
 function M:Destruct()
+  self:OnRemovedFromFocusPath()
   M.Super.Destruct(self)
   M.bOpened = false
   M.SelectedDungeonId = nil
   self.Btn_Start:UnBindEventOnClickedByObj(self)
   self.Btn_Ranking:UnBindEventOnClickedByObj(self)
+end
+
+function M:GetCurrentRaidDungeonList_Floor()
+  local resultList = {}
+  for _, v in pairs(DataMgr.RaidFloor) do
+    if self.RaidDungeonType == v.FloorType and self.CurRaidSeasonId == v.RaidSeason and self:IsUnlockedFloor(v.Floor) then
+      table.insert(resultList, v)
+    end
+  end
+  table.sort(resultList, function(a, b)
+    return (a.FloorId or 0) < (b.FloorId or 0)
+  end)
+  return resultList
 end
 
 function M:GetCurrentRaidDungeonList()
@@ -171,17 +470,61 @@ function M:InitLevelList(DungeonList)
   self.RaidSeasonData = DataMgr.RaidSeason[self.RaidSeasons.RaidSeasonId]
   local LastUnlockedItem, FirstItem
   self:InitOtherPageTab()
-  for i, DungeonId in ipairs(DungeonList) do
-    local Item = self:CreateWidgetNew("GuildWarLevelItem")
-    Item:BindEventOnClicked(self, self.OnClickedLevelCell, Item)
-    Item:InitDungeonInfo(DungeonId, i, false, self)
-    if 1 == i then
-      FirstItem = Item
+  if CommonConst.RaidSeasonType.Score == self.RaidSeasonType then
+    for i, DungeonId in ipairs(DungeonList) do
+      local Item = self:CreateWidgetNew("GuildWarLevelItem")
+      Item:BindEventOnClicked(self, self.OnClickedLevelCell, Item)
+      Item:InitDungeonInfo(DungeonId, i, false, self)
+      if 1 == i then
+        FirstItem = Item
+      end
+      if self:CheckDungeonCondition(DungeonId) then
+        LastUnlockedItem = Item
+      end
+      self.ScrollBox_List:AddChild(Item)
     end
-    if self:CheckDungeonCondition(DungeonId) then
-      LastUnlockedItem = Item
+  elseif CommonConst.RaidSeasonType.Floor == self.RaidSeasonType then
+    self.CurSelectedFloorNum = require("EMCache.EMCache"):Get("GuildWarLevelSelectLastSelectedFloorNum", true)
+    if self.AfterLoading then
+      local preHighestUnlockedFloor = GWorld.GameInstance:GetPreHighestUnlockedFloor()
+      if preHighestUnlockedFloor < self:GetHighestUnlockedFloor() then
+        self.CurSelectedFloorNum = self:GetHighestUnlockedFloor()
+        require("EMCache.EMCache"):Set("GuildWarLevelSelectLastSelectedFloorNum", self.CurSelectedFloorNum, true)
+        GWorld.GameInstance:SetPreHighestUnlockedFloor(self:GetHighestUnlockedFloor())
+      end
+    else
+      GWorld.GameInstance:SetPreHighestUnlockedFloor(self:GetHighestUnlockedFloor())
     end
-    self.ScrollBox_List:AddChild(Item)
+    self.CurSelectedItemIndex = nil
+    self.CurSelectedFloorId = nil
+    self.RaidFloorTableData = nil
+    local selectedItem, lastItem, lastRaidFloorTableData
+    for i, RaidFloorTableData in ipairs(DungeonList) do
+      local item = self:CreateWidgetNew("GuildWarFloorItem")
+      item:Init(i, RaidFloorTableData, self, self.OnGuildWarFloorItemClicked)
+      self.ScrollBox_List:AddChild(item)
+      lastItem = item
+      lastRaidFloorTableData = RaidFloorTableData
+      if self.CurSelectedFloorNum == RaidFloorTableData.Floor then
+        self.CurSelectedItemIndex = i
+        self.CurSelectedFloorId = RaidFloorTableData.FloorId
+        self.RaidFloorTableData = RaidFloorTableData
+        selectedItem = item
+      end
+    end
+    if not selectedItem and lastItem and lastRaidFloorTableData then
+      self.CurSelectedItemIndex = #DungeonList
+      self.CurSelectedFloorId = lastRaidFloorTableData.FloorId
+      self.CurSelectedFloorNum = lastRaidFloorTableData.Floor
+      self.RaidFloorTableData = lastRaidFloorTableData
+      selectedItem = lastItem
+      require("EMCache.EMCache"):Set("GuildWarLevelSelectLastSelectedFloorNum", self.CurSelectedFloorNum, true)
+    end
+    if selectedItem then
+      selectedItem:UpdateNormalOrClick(true)
+      self:FocusFloorListItem(selectedItem)
+      self.ScrollBox_List:ScrollWidgetIntoView(selectedItem, true, EDescendantScrollDestination.Center)
+    end
   end
   local TargetItem = LastUnlockedItem or FirstItem
   if TargetItem then
@@ -194,6 +537,8 @@ function M:InitLevelList(DungeonList)
     self.SelectCell = TargetItem
     self.CurCellDungeonId = TargetItem.DungeonId
     self:InitListCellInfo(TargetItem.DungeonId)
+  elseif CommonConst.RaidSeasonType.Floor == self.RaidSeasonType then
+    self.Panel_Score:SetVisibility(ESlateVisibility.Collapsed)
   else
     self.Panel_Detail:SetVisibility(ESlateVisibility.Collapsed)
   end
@@ -211,7 +556,7 @@ function M:InitLevelList(DungeonList)
   if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
     self:UpdateUIStyleInPlatform(false)
   end
-  self.Board:Init()
+  self.Board:Init(self)
   if self.RaidSeasons:IsPreRaidTime() and 0 == self.RaidSeasons.MaxRaidScore and self:IsFirstEnterToday() then
     self:OpenGuildWarRewardPop()
   end
@@ -220,23 +565,34 @@ function M:InitLevelList(DungeonList)
     self.Btn_Shop.Text_Name:SetText(GText("RaidDungeon_Shop_Name"))
     self.Consume:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.Btn_Ranking:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    if 0 == self.RaidSeasons.MaxPreRaidScore or 1 == self.RaidSeasons.BanState then
+    if 0 == self.RaidSeasons.PreRaidGroupId or 0 == self.RaidSeasons.RaidGroupId or self.RaidSeasons:IsBaned() then
       self.Btn_Ranking:ForbidBtn(true)
       self.Btn_Ranking:BindForbidStateExecuteEvent(self, function()
         UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("RaidDungeon_PreRaid_Abandon_Toast"))
       end)
     end
-    local IsNotFirstRaidTime = EMCache:Get("FirstRaidTime", true)
-    DebugPrint("判断是是否是首次进入正式赛  IsNotFirstRaidTime : ", IsNotFirstRaidTime)
-    if not IsNotFirstRaidTime and 0 ~= self.RaidSeasons.MaxPreRaidScore then
-      EMCache:Set("FirstRaidTime", true, true)
-      self:OpenGuildWarGroupConfirm()
-    end
   else
-    self.Btn_Shop:SetVisibility(ESlateVisibility.Collapsed)
+    self.Btn_Shop.Text_Name:SetText(GText("RaidDungeon_Shop_Name"))
+    self.Btn_Shop:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.Consume:SetVisibility(ESlateVisibility.Collapsed)
     self.Btn_Ranking:SetVisibility(ESlateVisibility.Collapsed)
   end
+end
+
+function M:OnGuildWarFloorItemClicked(Index, RaidFloorTableData)
+  self.CurSelectedFloorId = RaidFloorTableData.FloorId
+  self.CurSelectedFloorNum = RaidFloorTableData and RaidFloorTableData.Floor or nil
+  self.RaidFloorTableData = RaidFloorTableData
+  if self.CurSelectedItemIndex then
+    local item = self.ScrollBox_List:GetChildAt(self.CurSelectedItemIndex - 1)
+    if item then
+      item:UpdateNormalOrClick(false)
+    end
+  end
+  self.CurSelectedItemIndex = Index
+  self:UpdateDefaultList()
+  self:RefreshLevelCellContent(self.CurSelectedDungeonId)
+  require("EMCache.EMCache"):Set("GuildWarLevelSelectLastSelectedFloorNum", self.CurSelectedFloorNum, true)
 end
 
 function M:UpdateTicketNum()
@@ -247,7 +603,11 @@ function M:UpdateTicketNum()
   if not Avatar then
     return
   end
-  local TicketNumData = DataMgr.RaidDungeon[self.SelectCell.DungeonId].TicketNum
+  local tempDungeonId = self.SelectCell and self.SelectCell.DungeonId or nil
+  if CommonConst.RaidSeasonType.Floor == self.RaidSeasonType then
+    tempDungeonId = self.CurSelectedDungeonId
+  end
+  local TicketNumData = DataMgr.RaidDungeon[tempDungeonId].TicketNum
   self.ResId = 0
   self.ConsumeTicketCount = 0
   for key, value in pairs(TicketNumData) do
@@ -378,8 +738,9 @@ function M:SetPanelDetails(Idx)
         self.Key_MonsterInfo:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
         self.Key_MonsterInfo:CreateCommonKey({
           KeyInfoList = {
-            {Type = "Img", ImgShortPath = "LS"}
+            {Type = "Img", ImgShortPath = "RS"}
           },
+          bLongPress = true,
           Desc = GText("UI_Controller_Check")
         })
       end
@@ -465,7 +826,7 @@ function M:InitListCellInfo(DungeonId)
   self.HasTypeSelect = false
   self.Tab_Info:SelectTab(1)
   self:RefreshLevelCellContent(self.CurSelectedDungeonId)
-  local bSquad = true
+  local bSquad = DataMgr.Dungeon[self.CurSelectedDungeonId].Squad
   if bSquad then
     self.DefaultList:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     local DungeonType = DataMgr.Dungeon[self.CurSelectedDungeonId].DungeonType
@@ -495,7 +856,7 @@ function M:RefreshLevelCellContent(DungeonId)
   end
   self:RefreshMonsterInfoList(DungeonId)
   self:RefreshRewardInfoList(DungeonId)
-  self:RefreshBuffInfoList()
+  self:RefreshBuffInfoList(DungeonId)
   self:RefreshBtnState()
 end
 
@@ -520,7 +881,7 @@ end
 function M:TryOpenRankTopN()
   if self.RankInfo and self.TopNInfo and self.OpenRankTag then
     self.OpenRankTag = nil
-    UIManager():LoadUINew("GuildWarRank", self.RankInfo, self.TopNInfo)
+    UIManager():LoadUINew("CommonRanking", GuildWarUtils.BuildCommonRankParams(self.RankInfo, self.TopNInfo))
   end
 end
 
@@ -531,14 +892,6 @@ function M:OpenGuildWarRank()
     return
   end
   self.OpenRankTag = true
-  self:BlockAllUIInput(true, "RaidSeasonGetRaidRankinfo")
-  Avatar:RaidSeasonGetRaidRankInfo(function(ErrCode)
-    self:BlockAllUIInput(false, "RaidSeasonGetRaidRankinfo")
-    if not ErrorCode:Check(ErrCode) and self then
-      self.RankInfo = {}
-      self:TryOpenRankTopN()
-    end
-  end)
   self:BlockAllUIInput(true, "RaidSeasonGetRaidRankTopN")
   Avatar:RaidSeasonGetRaidRankTopN(function(ErrCode)
     self:BlockAllUIInput(false, "RaidSeasonGetRaidRankTopN")
@@ -547,11 +900,22 @@ function M:OpenGuildWarRank()
       self:TryOpenRankTopN()
     end
   end)
+  self:BlockAllUIInput(true, "RaidSeasonGetRaidRankinfo")
+  Avatar:RaidSeasonGetRaidRankInfo(function(ErrCode)
+    self:BlockAllUIInput(false, "RaidSeasonGetRaidRankinfo")
+    if not ErrorCode:Check(ErrCode) and self then
+      self.RankInfo = {}
+      self:TryOpenRankTopN()
+    end
+  end)
 end
 
-function M:RefreshBuffInfoList()
-  local RaidDungeon = DataMgr.RaidDungeon[self.CurCellDungeonId]
-  self.RaidBuffIDArry = RaidDungeon.RaidBuffID
+function M:RefreshBuffInfoList(DungeonId)
+  local RaidDungeon = DataMgr.RaidDungeon[DungeonId]
+  self.RaidBuffIDArry = RaidDungeon and RaidDungeon.RaidBuffID or nil
+  if CommonConst.RaidSeasonType.Floor == self.RaidSeasonType then
+    self.RaidBuffIDArry = DataMgr.RaidFloor[self.CurSelectedFloorId] and DataMgr.RaidFloor[self.CurSelectedFloorId].RaidBuffID or nil
+  end
   if self.RaidBuffIDArry then
     self.WS_Buff:SetActiveWidgetIndex(0)
     for _, RaidBuffID in ipairs(self.RaidBuffIDArry) do
@@ -576,8 +940,16 @@ function M:RefreshRewardInfoList(DungeonId)
     return
   end
   local FirstRewardList
-  if not Avatar.Dungeons[DungeonId] or not Avatar.Dungeons[DungeonId].IsPass then
-    local RewardInfo = DataMgr.Reward[DataMgr.Dungeon[DungeonId].FirstCompleteReward]
+  local isFirstNotPassed = not Avatar.Dungeons[DungeonId] or not Avatar.Dungeons[DungeonId].IsPass
+  if CommonConst.RaidSeasonType.Floor == self.RaidSeasonType then
+    isFirstNotPassed = not self:IsPassedFloor(self.CurSelectedFloorNum)
+  end
+  if isFirstNotPassed then
+    local rewradId = DataMgr.Dungeon[DungeonId].FirstCompleteReward
+    if CommonConst.RaidSeasonType.Floor == self.RaidSeasonType then
+      rewradId = self.RaidFloorTableData.FirstReward
+    end
+    local RewardInfo = DataMgr.Reward[rewradId]
     if RewardInfo then
       FirstRewardList = {}
       local RewardIds = RewardInfo.Id or {}
@@ -602,7 +974,18 @@ function M:RefreshRewardInfoList(DungeonId)
       end
     end
   end
-  local RewardList = RewardUtils:GetRewardViewInfoById(DataMgr.Dungeon[DungeonId].DungeonRewardView)
+  local rewradId = DataMgr.Dungeon[DungeonId].DungeonRewardView
+  if CommonConst.RaidSeasonType.Floor == self.RaidSeasonType then
+    rewradId = self.RaidFloorTableData.NormalReward
+  end
+  local RewardList = RewardUtils:GetRewardViewInfoById(rewradId)
+  if CommonConst.RaidSeasonType.Floor == self.RaidSeasonType then
+    for _, ItemData in ipairs(RewardList) do
+      if not ItemData.DropType then
+        ItemData.DropType = "DropType_Fixed"
+      end
+    end
+  end
   
   local function SortFunc(A, B)
     if A.Rarity == B.Rarity then
@@ -660,6 +1043,7 @@ function M:RefreshRewardInfoList(DungeonId)
     Content.Count = BaseCount
     self.List_Prop:AddItem(Content)
   end
+  self.List_Prop:RequestFillEmptyContent()
   if self:IsExistTimer(self.NextFrameListEmpty) then
     self:RemoveTimer(self.NextFrameListEmpty)
   end
@@ -855,6 +1239,10 @@ function M:OnAnimationFinished(InAnimation)
 end
 
 function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
+  self:RefreshJumpFloorGamepadKey(CurInputDevice)
+  if CurInputDevice ~= ECommonInputType.Gamepad then
+    self:OnRemovedFromFocusPath()
+  end
   if CurInputDevice == ECommonInputType.Touch then
     return
   end
@@ -1000,19 +1388,21 @@ function M:UpdateUIStyleInPlatform(IsUseKeyAndMouse)
     self.Board.WS_Controller:SetActiveWidgetIndex(1)
     self.Board.Key_Reward:CreateCommonKey({
       KeyInfoList = {
-        {Type = "Img", ImgShortPath = "RB"}
-      }
+        {Type = "Img", ImgShortPath = "RS"}
+      },
+      bLongPress = true
     })
     self.Com_Key_More:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self.Com_Key_More:CreateCommonKey({
       KeyInfoList = {
-        {Type = "Img", ImgShortPath = "LS"}
+        {Type = "Img", ImgShortPath = "RS"}
       },
-      bLongPress = false,
+      bLongPress = true,
       Desc = GText("UI_Controller_Check")
     })
     self.Btn_Ranking.Key_Shop:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.Btn_Ranking.Key_Shop:CreateCommonKey({
+      bLongPress = true,
       KeyInfoList = {
         {Type = "Img", ImgShortPath = "X"}
       }
@@ -1020,7 +1410,7 @@ function M:UpdateUIStyleInPlatform(IsUseKeyAndMouse)
     self.Btn_Shop.Key_Controller:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self.Btn_Shop.Key_Controller:CreateCommonKey({
       KeyInfoList = {
-        {Type = "Img", ImgShortPath = "LB"}
+        {Type = "Img", ImgShortPath = "X"}
       }
     })
   end
@@ -1032,6 +1422,29 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   local IsEventHandled = false
   if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
+    if "Gamepad_FaceButton_Right" == InKeyName then
+      if self.DefaultList and self.DefaultList.IsShow and self.DefaultList:GetVisibility() == ESlateVisibility.SelfHitTestInvisible then
+        self.DefaultList:OnCloseSquadGamepad()
+      else
+        self:OnReturnKeyDown()
+      end
+      return UWidgetBlueprintLibrary.Handled()
+    end
+    if InKeyName == Const.GamepadRightThumbstick and self.Tab and self.Tab.Handle_KeyEventOnGamePad then
+      self.Tab:Handle_KeyEventOnGamePad(InKeyName)
+    end
+    if self:HasLongPressEvent(InKeyName) then
+      if not self:CanHandleGamepadShortcuts() then
+        return UWidgetBlueprintLibrary.UnHandled()
+      end
+      if InKeyName == Const.GamepadRightThumbstick and not self:CanTriggerRewardPreview() then
+        return UWidgetBlueprintLibrary.UnHandled()
+      end
+      if not UE4.UKismetInputLibrary.InputEvent_IsRepeat(InKeyEvent) then
+        self:ProcessOnKeyDown(MyGeometry, InKeyEvent)
+      end
+      return UWidgetBlueprintLibrary.Handled()
+    end
     IsEventHandled = self:OnGamePadDown(InKeyName)
   elseif "Escape" == InKeyName then
     IsEventHandled = true
@@ -1093,37 +1506,36 @@ function M:OnGamePadDown(InKeyName)
       self.DefaultList:OnSpecialRightUp()
       IsEventHandled = true
     end
-  elseif "Gamepad_FaceButton_Left" == InKeyName then
-    if self.RaidSeasons:IsRaidTime() and self.RaidSeasons.MaxPreRaidScore > 0 then
-      self:OpenGuildWarRank()
-    end
   elseif "Gamepad_FaceButton_Top" == InKeyName then
     self:OnClickSolo()
-  elseif "Gamepad_LeftShoulder" == InKeyName then
-    if self.RaidSeasons:IsRaidTime() then
-      self:OnShopBtnClicked()
-    end
-  elseif "Gamepad_RightShoulder" == InKeyName then
-    if self.RaidSeasons:IsPreRaidTime() then
-      self:OpenGuildWarRewardPop()
-    end
-  elseif "Gamepad_LeftThumbstick" == InKeyName then
-    if "SelectCell" ~= self.CurrentFocusType then
-      return IsEventHandled
-    elseif "SelectCell" == self.CurrentFocusType then
-      if self.CurrentTabIdx == self.ObtainTabId then
-        self.List_Prop:SetFocus()
-        self:UpdatKeyDisplay("RewardWidget")
-      elseif self.CurrentTabIdx == self.MonsterTabId then
-        self.List_Monster:SetFocus()
-        self:UpdatKeyDisplay("RewardWidget")
-      end
-      self:PlayAnimation(self.Hover)
-      self.CurrentFocusType = "List"
-      IsEventHandled = true
-    end
   end
   return IsEventHandled
+end
+
+function M:OnKeyUp(MyGeometry, InKeyEvent)
+  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) and self:HasLongPressEvent(InKeyName) then
+    self:ProcessOnKeyUp(MyGeometry, InKeyEvent)
+    return UWidgetBlueprintLibrary.Handled()
+  end
+  return M.Super.OnKeyUp(self, MyGeometry, InKeyEvent)
+end
+
+function M:OnPreviewKeyUp(MyGeometry, InKeyEvent)
+  if self.DefaultList:GetVisibility() == ESlateVisibility.SelfHitTestInvisible and self.DefaultList.IsShow then
+    return UWidgetBlueprintLibrary.UnHandled()
+  end
+  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  if ("Gamepad_FaceButton_Left" == InKeyName or InKeyName == Const.GamepadLeftThumbstick or InKeyName == Const.GamepadRightThumbstick) and self:HasLongPressEvent(InKeyName) then
+    self:ProcessOnKeyUp(MyGeometry, InKeyEvent)
+    return UWidgetBlueprintLibrary.Handled()
+  end
+  if M.Super.OnPreviewKeyUp then
+    return M.Super.OnPreviewKeyUp(self, MyGeometry, InKeyEvent)
+  end
+  return UWidgetBlueprintLibrary.UnHandled()
 end
 
 function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
@@ -1134,6 +1546,23 @@ function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   local IsEventHandled = false
   if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
+    if "Gamepad_FaceButton_Right" == InKeyName then
+      if self.DefaultList and self.DefaultList.IsShow and self.DefaultList:GetVisibility() == ESlateVisibility.SelfHitTestInvisible then
+        self.DefaultList:OnCloseSquadGamepad()
+      else
+        self:OnReturnKeyDown()
+      end
+      return UWidgetBlueprintLibrary.Handled()
+    end
+    if ("Gamepad_FaceButton_Left" == InKeyName or InKeyName == Const.GamepadLeftThumbstick or InKeyName == Const.GamepadRightThumbstick) and self:HasLongPressEvent(InKeyName) then
+      if not self:CanHandleGamepadShortcuts() then
+        return UWidgetBlueprintLibrary.UnHandled()
+      end
+      if not UE4.UKismetInputLibrary.InputEvent_IsRepeat(InKeyEvent) then
+        self:ProcessOnKeyDown(MyGeometry, InKeyEvent)
+      end
+      return UWidgetBlueprintLibrary.Handled()
+    end
     if "Gamepad_DPad_Up" == InKeyName then
       if self.CurrentTabIdx == self.ObtainTabId and not self.MenuOpen then
         self:OpenBuffDetails()
@@ -1190,6 +1619,7 @@ end
 
 function M:SelectCellFocus()
   if not self.SelectCell then
+    self:SetFocus()
     return
   end
   self:UpdatKeyDisplay("SelfWidget")
@@ -1243,7 +1673,10 @@ function M:RefreshBtnState()
   self.Btn_Start:UnBindEventOnClickedByObj(self)
   self.Btn_Start:ForbidBtn(false)
   self.Btn_Start:SetDefaultGamePadImg("Y")
-  local DungeonId = self.SelectCell.DungeonId
+  local DungeonId = self.SelectCell and self.SelectCell.DungeonId or nil
+  if CommonConst.RaidSeasonType.Floor == self.RaidSeasonType then
+    DungeonId = self.CurSelectedDungeonId
+  end
   if not self:CheckDungeonCondition(DungeonId) then
     self.Btn_Start:ForbidBtn(true)
     self.Btn_Start:BindForbidStateExecuteEvent(self, function()
@@ -1253,7 +1686,7 @@ function M:RefreshBtnState()
   end
   if self.RaidSeasons:IsRaidTime() and Avatar then
     local TicketCount = Avatar.Resources[self.ResId] and Avatar.Resources[self.ResId].Count or 0
-    if TicketCount < self.ConsumeTicketCount then
+    if self.ConsumeTicketCount and TicketCount < self.ConsumeTicketCount then
       self.Btn_Start:ForbidBtn(true)
       local Resource = DataMgr.Resource[self.ResId]
       self.Btn_Start:BindForbidStateExecuteEvent(self, function()
@@ -1289,9 +1722,19 @@ end
 function M:TryEnterDungeon(Avatar, DungeonId, OtherCallback)
   DebugPrint("SL@M:TryEnterDungeon ", Avatar, DungeonId, self.RaidSeasonData.EventId, OtherCallback)
   if self.DefaultList:GetVisibility() == ESlateVisibility.Collapsed then
-    Avatar:EnterEventDungeon(OtherCallback, DungeonId, nil, self.RaidSeasonData.EventId)
-  else
+    if CommonConst.RaidSeasonType.Score == self.RaidSeasonType then
+      Avatar:EnterEventDungeon(OtherCallback, DungeonId, nil, self.RaidSeasonData.EventId)
+    elseif CommonConst.RaidSeasonType.Floor == self.RaidSeasonType then
+      Avatar:EnterEventDungeon(OtherCallback, DungeonId, nil, self.RaidSeasonData.EventId, {
+        FloorId = self.CurSelectedFloorId
+      })
+    end
+  elseif CommonConst.RaidSeasonType.Score == self.RaidSeasonType then
     Avatar:EnterEventDungeon(OtherCallback, DungeonId, self.SquadId, self.RaidSeasonData.EventId)
+  elseif CommonConst.RaidSeasonType.Floor == self.RaidSeasonType then
+    Avatar:EnterEventDungeon(OtherCallback, DungeonId, self.SquadId, self.RaidSeasonData.EventId, {
+      FloorId = self.CurSelectedFloorId
+    })
   end
   self.Btn_Start:ForbidBtn(true)
 end
@@ -1317,6 +1760,9 @@ end
 function M:ReceiveEnterState(StackAction)
   self.Super.ReceiveEnterState(self, StackAction)
   EventManager:FireEvent(EventID.GuilfWarLevelSelectReceiveEnterState, StackAction)
+  if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
+    self:SelectCellFocus()
+  end
 end
 
 function M:OnPreRaidRankInfo(arg)
@@ -1366,6 +1812,19 @@ function M:RefreshEntranceReddot()
   else
     self.Btn_Start:SetReddotVisibility(UIConst.VisibilityOp.Collapsed)
   end
+end
+
+function M:ShouldShowRaidFloorRewardSummary(RaidSeasonData)
+  local highestPassedFloor = RaidSeasonData:IsPreRaidTime() and RaidSeasonData.PreRaidFloor or RaidSeasonData:IsRaidTime() and RaidSeasonData.RaidFloor or 0
+  local rewardGotMap = RaidSeasonData:IsPreRaidTime() and RaidSeasonData.PreRaidFloorRewardGot or RaidSeasonData:IsRaidTime() and RaidSeasonData.RaidFloorRewardGot or {}
+  local UnGotReward = {}
+  for floorID = 1, highestPassedFloor do
+    if 1 ~= rewardGotMap[floorID] then
+      local curFloorID = GuildWarUtils.GetRaidFloorId(floorID, self.CurRaidSeasonId, self.RaidDungeonType)
+      table.insert(UnGotReward, curFloorID)
+    end
+  end
+  return #UnGotReward > 0, UnGotReward
 end
 
 AssembleComponents(M)

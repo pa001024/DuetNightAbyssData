@@ -128,6 +128,9 @@ end
 
 function WBP_ImpressionItem_Common:Clear()
   DebugPrint("WBP_ImpressionItem_Common:Clear", self)
+  if not IsValid(self) then
+    return
+  end
   self:ClearByPlatform()
   self:StopAllAnimations()
   self:SwitchBindButtonEvents(false)

@@ -1,11 +1,11 @@
 local T = {}
 T.RT_1 = {
-  [1] = 15002,
-  [2] = 15031,
+  [1] = 15005,
+  [2] = 15034,
   [3] = 15037,
   [4] = 202,
   [5] = 15026,
-  [6] = 15027
+  [6] = 15030
 }
 T.RT_2 = {
   [1] = 30,
@@ -15,14 +15,14 @@ T.RT_2 = {
   [5] = 50,
   [6] = 50
 }
-T.RT_3 = {10299001}
+T.RT_3 = {10199001}
 T.RT_4 = {
-  [1] = 15002,
-  [2] = 15031,
+  [1] = 15005,
+  [2] = 15034,
   [3] = 15037,
   [4] = 20027,
   [5] = 15026,
-  [6] = 15027
+  [6] = 15030
 }
 T.RT_5 = {
   [1] = 30,
@@ -33,6 +33,23 @@ T.RT_5 = {
   [6] = 50
 }
 T.RT_6 = {
+  [1] = 15002,
+  [2] = 15031,
+  [3] = 15037,
+  [4] = 202,
+  [5] = 15026,
+  [6] = 15027
+}
+T.RT_7 = {10299001}
+T.RT_8 = {
+  [1] = 15002,
+  [2] = 15031,
+  [3] = 15037,
+  [4] = 20027,
+  [5] = 15026,
+  [6] = 15027
+}
+T.RT_9 = {
   [1] = 15006,
   [2] = 15035,
   [3] = 15037,
@@ -40,8 +57,8 @@ T.RT_6 = {
   [5] = 15030,
   [6] = 15027
 }
-T.RT_7 = {10399001}
-T.RT_8 = {
+T.RT_10 = {10399001}
+T.RT_11 = {
   [1] = 15006,
   [2] = 15035,
   [3] = 15037,
@@ -49,7 +66,7 @@ T.RT_8 = {
   [5] = 15030,
   [6] = 15027
 }
-T.RT_9 = {
+T.RT_12 = {
   [1] = 15004,
   [2] = 15032,
   [3] = 15037,
@@ -57,8 +74,8 @@ T.RT_9 = {
   [5] = 15030,
   [6] = 15029
 }
-T.RT_10 = {20299001}
-T.RT_11 = {
+T.RT_13 = {20299001}
+T.RT_14 = {
   [1] = 15004,
   [2] = 15032,
   [3] = 15037,
@@ -66,7 +83,7 @@ T.RT_11 = {
   [5] = 15030,
   [6] = 15029
 }
-T.RT_12 = {
+T.RT_15 = {
   [1] = 15003,
   [2] = 15036,
   [3] = 15037,
@@ -74,8 +91,8 @@ T.RT_12 = {
   [5] = 15028,
   [6] = 15029
 }
-T.RT_13 = {20599001}
-T.RT_14 = {
+T.RT_16 = {20599001}
+T.RT_17 = {
   [1] = 15003,
   [2] = 15036,
   [3] = 15037,
@@ -90,6 +107,138 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("HyperWeaponSkillTree", {
+  [10199001] = {
+    SkillDescParameter = {
+      [1] = "$#PassiveEffect[10199].Vars.Lv0AddWeaponSp$",
+      [2] = "$#BattleWeapon[10199].MaxWeaponSp$",
+      [3] = "$#Buff[1019901].AddAttrs[1].Rate*100$%",
+      [4] = "$#PassiveEffect[10199].Vars.Lv0BuffLastTime$",
+      [5] = "$#Buff[1019901].MaxLayer$"
+    },
+    SkillDescription = "SKILL_10199_01_DESC",
+    SkillIndex = 1,
+    WeaponCardLevel = 0,
+    WeaponId = 10199,
+    WeaponSkillId = 10199001,
+    WeaponSkillName = "SKILL_10199_01_Name"
+  },
+  [10199002] = {
+    ResourceId = T.RT_1,
+    ResourceNum = T.RT_2,
+    SkillDescParameter = {
+      [1] = "$#PassiveEffect[10199].Vars.Lv11AddSpRate$"
+    },
+    SkillDescription = "SKILL_10199_02_DESC",
+    SkillIndex = 1,
+    UnlockCondition = T.RT_3,
+    WeaponCardLevel = 1,
+    WeaponId = 10199,
+    WeaponSkillId = 10199002,
+    WeaponSkillName = "SKILL_10199_02_Name"
+  },
+  [10199003] = {
+    ResourceId = T.RT_1,
+    ResourceNum = T.RT_2,
+    SkillDescParameter = {
+      [1] = "$#PassiveEffect[10199].Vars.Lv12AddSpValue$"
+    },
+    SkillDescription = "SKILL_10199_03_DESC",
+    SkillIndex = 2,
+    UnlockCondition = T.RT_3,
+    WeaponCardLevel = 1,
+    WeaponId = 10199,
+    WeaponSkillId = 10199003,
+    WeaponSkillName = "SKILL_10199_03_Name"
+  },
+  [10199004] = {
+    ResourceId = T.RT_4,
+    ResourceNum = T.RT_5,
+    SkillIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillIntensityUP.T_Rouge_Talent_SkillIntensityUP'",
+    SkillIndex = 1,
+    UnlockCondition = {10199002},
+    WeaponCardLevel = 2,
+    WeaponId = 10199,
+    WeaponSkillId = 10199004,
+    WeaponSkillName = "SKILL_10199_04_Name"
+  },
+  [10199005] = {
+    ResourceId = T.RT_4,
+    ResourceNum = T.RT_5,
+    SkillIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_ATK.T_Rouge_Talent_ATK'",
+    SkillIndex = 2,
+    UnlockCondition = {10199003},
+    WeaponCardLevel = 2,
+    WeaponId = 10199,
+    WeaponSkillId = 10199005,
+    WeaponSkillName = "SKILL_10199_05_Name"
+  },
+  [10199006] = {
+    ResourceId = T.RT_1,
+    ResourceNum = T.RT_2,
+    SkillDescParameter = {
+      [1] = "$#PassiveEffect[10199].Vars.Lv3SkillSpeedMin*100$%",
+      [2] = "$#Buff[1019931].AddAttrs[1].Value*100$%"
+    },
+    SkillDescription = "SKILL_10199_06_DESC",
+    SkillIndex = 1,
+    UnlockCondition = {10199004},
+    WeaponCardLevel = 3,
+    WeaponId = 10199,
+    WeaponSkillId = 10199006,
+    WeaponSkillName = "SKILL_10199_06_Name"
+  },
+  [10199007] = {
+    ResourceId = T.RT_1,
+    ResourceNum = T.RT_2,
+    SkillDescParameter = {
+      [1] = "$#PassiveEffect[10199].Vars.Lv3SkillSpeedMin$",
+      [2] = "$#Buff[1019932].AddAttrs[1].Value*100$%"
+    },
+    SkillDescription = "SKILL_10199_07_DESC",
+    SkillIndex = 2,
+    UnlockCondition = {10199005},
+    WeaponCardLevel = 3,
+    WeaponId = 10199,
+    WeaponSkillId = 10199007,
+    WeaponSkillName = "SKILL_10199_07_Name"
+  },
+  [10199008] = {
+    ResourceId = T.RT_4,
+    ResourceNum = T.RT_5,
+    SkillIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_AttrPenetration.T_Rouge_Talent_AttrPenetration'",
+    SkillIndex = 1,
+    UnlockCondition = {10199006},
+    WeaponCardLevel = 4,
+    WeaponId = 10199,
+    WeaponSkillId = 10199008,
+    WeaponSkillName = "SKILL_10199_08_Name"
+  },
+  [10199009] = {
+    ResourceId = T.RT_4,
+    ResourceNum = T.RT_5,
+    SkillIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Morale.T_Rouge_Talent_Morale'",
+    SkillIndex = 2,
+    UnlockCondition = {10199007},
+    WeaponCardLevel = 4,
+    WeaponId = 10199,
+    WeaponSkillId = 10199009,
+    WeaponSkillName = "SKILL_10199_09_Name"
+  },
+  [10199010] = {
+    SkillDescParameter = {
+      [1] = "$#Buff[1019912].AddAttrs[1].Value*100$%",
+      [2] = "$#TargetFilter[#SkillEffects[1019901].TargetFilter].LuaFilterParaments.Radius/100$",
+      [3] = "$#SkillEffects[1019901].TaskEffects[1].Rate*100$%",
+      [4] = "$#PassiveEffect[10199].Vars.Lv5IntervalTime$"
+    },
+    SkillDescription = "SKILL_10199_10_DESC",
+    SkillIndex = 1,
+    UnlockCondition = {10199008, 10199009},
+    WeaponCardLevel = 5,
+    WeaponId = 10199,
+    WeaponSkillId = 10199010,
+    WeaponSkillName = "SKILL_10199_10_Name"
+  },
   [10299001] = {
     SkillDescParameter = {
       [1] = "$#PassiveEffect[10299].Vars.AddWeaponSP01$",
@@ -108,7 +257,7 @@ return ReadOnly("HyperWeaponSkillTree", {
     WeaponSkillName = "SKILL_10299_01_Name"
   },
   [10299002] = {
-    ResourceId = T.RT_1,
+    ResourceId = T.RT_6,
     ResourceNum = T.RT_2,
     SkillDescParameter = {
       [1] = "$#PassiveEffect[10299].Vars.AddWeaponSP03$"
@@ -116,14 +265,14 @@ return ReadOnly("HyperWeaponSkillTree", {
     SkillDescription = "SKILL_10299_02_DESC",
     SkillIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Machinegun_Zaie.T_Rouge_Talent_Machinegun_Zaie'",
     SkillIndex = 1,
-    UnlockCondition = T.RT_3,
+    UnlockCondition = T.RT_7,
     WeaponCardLevel = 1,
     WeaponId = 10299,
     WeaponSkillId = 10299002,
     WeaponSkillName = "SKILL_10299_02_Name"
   },
   [10299003] = {
-    ResourceId = T.RT_1,
+    ResourceId = T.RT_6,
     ResourceNum = T.RT_2,
     SkillDescParameter = {
       [1] = "$#PassiveEffect[10299].Vars.AddWeaponSP04$"
@@ -131,14 +280,14 @@ return ReadOnly("HyperWeaponSkillTree", {
     SkillDescription = "SKILL_10299_03_DESC",
     SkillIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Machinegun_Zaie.T_Rouge_Talent_Machinegun_Zaie'",
     SkillIndex = 2,
-    UnlockCondition = T.RT_3,
+    UnlockCondition = T.RT_7,
     WeaponCardLevel = 1,
     WeaponId = 10299,
     WeaponSkillId = 10299003,
     WeaponSkillName = "SKILL_10299_03_Name"
   },
   [10299004] = {
-    ResourceId = T.RT_4,
+    ResourceId = T.RT_8,
     ResourceNum = T.RT_5,
     SkillIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillIntensityUP.T_Rouge_Talent_SkillIntensityUP'",
     SkillIndex = 1,
@@ -149,7 +298,7 @@ return ReadOnly("HyperWeaponSkillTree", {
     WeaponSkillName = "SKILL_10299_04_Name"
   },
   [10299005] = {
-    ResourceId = T.RT_4,
+    ResourceId = T.RT_8,
     ResourceNum = T.RT_5,
     SkillDescParameter = {
       [1] = "$#BattleWeapon[10299].AddAttrs[2].Rate*100$%"
@@ -164,7 +313,7 @@ return ReadOnly("HyperWeaponSkillTree", {
     WeaponSkillName = "SKILL_10299_05_Name"
   },
   [10299006] = {
-    ResourceId = T.RT_1,
+    ResourceId = T.RT_6,
     ResourceNum = T.RT_2,
     SecondaryResourceBuffID = 1029901,
     SkillDescParameter = {
@@ -183,7 +332,7 @@ return ReadOnly("HyperWeaponSkillTree", {
     bShowSecondaryResource = true
   },
   [10299007] = {
-    ResourceId = T.RT_1,
+    ResourceId = T.RT_6,
     ResourceNum = T.RT_2,
     SecondaryResourceBuffID = 1029901,
     SkillDescParameter = {
@@ -205,7 +354,7 @@ return ReadOnly("HyperWeaponSkillTree", {
     bShowSecondaryResource = true
   },
   [10299008] = {
-    ResourceId = T.RT_4,
+    ResourceId = T.RT_8,
     ResourceNum = T.RT_5,
     SecondaryResourceBuffID = 1029901,
     SkillIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillRangeUP.T_Rouge_Talent_SkillRangeUP'",
@@ -218,7 +367,7 @@ return ReadOnly("HyperWeaponSkillTree", {
     bShowSecondaryResource = true
   },
   [10299009] = {
-    ResourceId = T.RT_4,
+    ResourceId = T.RT_8,
     ResourceNum = T.RT_5,
     SecondaryResourceBuffID = 1029901,
     SkillIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Morale.T_Rouge_Talent_Morale'",
@@ -267,7 +416,7 @@ return ReadOnly("HyperWeaponSkillTree", {
     bShowSecondaryResource = true
   },
   [10399002] = {
-    ResourceId = T.RT_6,
+    ResourceId = T.RT_9,
     ResourceNum = T.RT_2,
     SecondaryResourceBuffID = 1039901,
     SkillDescParameter = {
@@ -277,7 +426,7 @@ return ReadOnly("HyperWeaponSkillTree", {
     SkillDescription = "SKILL_10399_02_DESC",
     SkillIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Claymore_Zaie.T_Rouge_Talent_Claymore_Zaie'",
     SkillIndex = 1,
-    UnlockCondition = T.RT_7,
+    UnlockCondition = T.RT_10,
     WeaponCardLevel = 1,
     WeaponId = 10399,
     WeaponSkillId = 10399002,
@@ -285,7 +434,7 @@ return ReadOnly("HyperWeaponSkillTree", {
     bShowSecondaryResource = true
   },
   [10399003] = {
-    ResourceId = T.RT_6,
+    ResourceId = T.RT_9,
     ResourceNum = T.RT_2,
     SecondaryResourceBuffID = 1039901,
     SkillDescParameter = {
@@ -294,7 +443,7 @@ return ReadOnly("HyperWeaponSkillTree", {
     SkillDescription = "SKILL_10399_03_DESC",
     SkillIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Claymore_Zaie.T_Rouge_Talent_Claymore_Zaie'",
     SkillIndex = 2,
-    UnlockCondition = T.RT_7,
+    UnlockCondition = T.RT_10,
     WeaponCardLevel = 1,
     WeaponId = 10399,
     WeaponSkillId = 10399003,
@@ -302,7 +451,7 @@ return ReadOnly("HyperWeaponSkillTree", {
     bShowSecondaryResource = true
   },
   [10399004] = {
-    ResourceId = T.RT_8,
+    ResourceId = T.RT_11,
     ResourceNum = T.RT_5,
     SecondaryResourceBuffID = 1039901,
     SkillIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillIntensityUP.T_Rouge_Talent_SkillIntensityUP'",
@@ -315,7 +464,7 @@ return ReadOnly("HyperWeaponSkillTree", {
     bShowSecondaryResource = true
   },
   [10399005] = {
-    ResourceId = T.RT_8,
+    ResourceId = T.RT_11,
     ResourceNum = T.RT_5,
     SecondaryResourceBuffID = 1039901,
     SkillDescParameter = {
@@ -332,7 +481,7 @@ return ReadOnly("HyperWeaponSkillTree", {
     bShowSecondaryResource = true
   },
   [10399006] = {
-    ResourceId = T.RT_6,
+    ResourceId = T.RT_9,
     ResourceNum = T.RT_2,
     SecondaryResourceBuffID = 1039901,
     SkillDescParameter = {
@@ -349,7 +498,7 @@ return ReadOnly("HyperWeaponSkillTree", {
     bShowSecondaryResource = true
   },
   [10399007] = {
-    ResourceId = T.RT_6,
+    ResourceId = T.RT_9,
     ResourceNum = T.RT_2,
     SecondaryResourceBuffID = 1039901,
     SkillDescParameter = {
@@ -366,7 +515,7 @@ return ReadOnly("HyperWeaponSkillTree", {
     bShowSecondaryResource = true
   },
   [10399008] = {
-    ResourceId = T.RT_8,
+    ResourceId = T.RT_11,
     ResourceNum = T.RT_5,
     SecondaryResourceBuffID = 1039901,
     SkillDescParameter = {
@@ -383,7 +532,7 @@ return ReadOnly("HyperWeaponSkillTree", {
     bShowSecondaryResource = true
   },
   [10399009] = {
-    ResourceId = T.RT_8,
+    ResourceId = T.RT_11,
     ResourceNum = T.RT_5,
     SecondaryResourceBuffID = 1039901,
     SkillDescParameter = {
@@ -433,7 +582,7 @@ return ReadOnly("HyperWeaponSkillTree", {
     bShowSecondaryResource = true
   },
   [20299002] = {
-    ResourceId = T.RT_9,
+    ResourceId = T.RT_12,
     ResourceNum = T.RT_2,
     SkillDescParameter = {
       [1] = "$#PassiveEffect[20299].Vars.BaseBullet11$",
@@ -442,14 +591,14 @@ return ReadOnly("HyperWeaponSkillTree", {
     SkillDescription = "SKILL_20299_02_DESC",
     SkillIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Crossbow_Zaie.T_Rouge_Talent_Crossbow_Zaie'",
     SkillIndex = 1,
-    UnlockCondition = T.RT_10,
+    UnlockCondition = T.RT_13,
     WeaponCardLevel = 1,
     WeaponId = 20298,
     WeaponSkillId = 20299002,
     WeaponSkillName = "SKILL_20299_02_Name"
   },
   [20299003] = {
-    ResourceId = T.RT_9,
+    ResourceId = T.RT_12,
     ResourceNum = T.RT_2,
     SkillDescParameter = {
       [1] = "$#PassiveEffect[20299].Vars.AddSp12$",
@@ -459,14 +608,14 @@ return ReadOnly("HyperWeaponSkillTree", {
     SkillDescription = "SKILL_20299_03_DESC",
     SkillIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Crossbow_Zaie.T_Rouge_Talent_Crossbow_Zaie'",
     SkillIndex = 2,
-    UnlockCondition = T.RT_10,
+    UnlockCondition = T.RT_13,
     WeaponCardLevel = 1,
     WeaponId = 20298,
     WeaponSkillId = 20299003,
     WeaponSkillName = "SKILL_20299_03_Name"
   },
   [20299004] = {
-    ResourceId = T.RT_11,
+    ResourceId = T.RT_14,
     ResourceNum = T.RT_5,
     SkillIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Qiege.T_Rouge_Talent_Qiege'",
     SkillIndex = 1,
@@ -477,7 +626,7 @@ return ReadOnly("HyperWeaponSkillTree", {
     WeaponSkillName = "SKILL_20299_04_Name"
   },
   [20299005] = {
-    ResourceId = T.RT_11,
+    ResourceId = T.RT_14,
     ResourceNum = T.RT_5,
     SkillIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_DamageUp.T_Rouge_Talent_DamageUp'",
     SkillIndex = 2,
@@ -488,7 +637,7 @@ return ReadOnly("HyperWeaponSkillTree", {
     WeaponSkillName = "SKILL_20299_05_Name"
   },
   [20299006] = {
-    ResourceId = T.RT_9,
+    ResourceId = T.RT_12,
     ResourceNum = T.RT_2,
     SkillDescParameter = {
       [1] = "$#Buff[2029901].AddAttrs[1].Rate*100$%",
@@ -505,7 +654,7 @@ return ReadOnly("HyperWeaponSkillTree", {
     WeaponSkillName = "SKILL_20299_06_Name"
   },
   [20299007] = {
-    ResourceId = T.RT_9,
+    ResourceId = T.RT_12,
     ResourceNum = T.RT_2,
     SkillDescParameter = {
       [1] = "$#Buff[2029902].AddAttrs[1].Value*100$%",
@@ -522,7 +671,7 @@ return ReadOnly("HyperWeaponSkillTree", {
     WeaponSkillName = "SKILL_20299_07_Name"
   },
   [20299008] = {
-    ResourceId = T.RT_11,
+    ResourceId = T.RT_14,
     ResourceNum = T.RT_5,
     SkillIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_AttrPenetration.T_Rouge_Talent_AttrPenetration'",
     SkillIndex = 1,
@@ -533,7 +682,7 @@ return ReadOnly("HyperWeaponSkillTree", {
     WeaponSkillName = "SKILL_20299_08_Name"
   },
   [20299009] = {
-    ResourceId = T.RT_11,
+    ResourceId = T.RT_14,
     ResourceNum = T.RT_5,
     SkillIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Berserker.T_Rouge_Talent_Berserker'",
     SkillIndex = 2,
@@ -573,7 +722,7 @@ return ReadOnly("HyperWeaponSkillTree", {
     WeaponSkillName = "SKILL_20599_01_Name"
   },
   [20599002] = {
-    ResourceId = T.RT_12,
+    ResourceId = T.RT_15,
     ResourceNum = T.RT_2,
     SkillDescParameter = {
       [1] = "$#PassiveEffect[20599].Vars.Rate*100$%",
@@ -582,14 +731,14 @@ return ReadOnly("HyperWeaponSkillTree", {
     SkillDescription = "SKILL_20599_02_DESC",
     SkillIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Polearm_Zaie.T_Rouge_Talent_Polearm_Zaie'",
     SkillIndex = 1,
-    UnlockCondition = T.RT_13,
+    UnlockCondition = T.RT_16,
     WeaponCardLevel = 1,
     WeaponId = 20599,
     WeaponSkillId = 20599002,
     WeaponSkillName = "SKILL_20599_02_Name"
   },
   [20599003] = {
-    ResourceId = T.RT_12,
+    ResourceId = T.RT_15,
     ResourceNum = T.RT_2,
     SkillDescParameter = {
       [1] = "$#PassiveEffect[20599].Vars.AddWeaponSP02$",
@@ -598,14 +747,14 @@ return ReadOnly("HyperWeaponSkillTree", {
     SkillDescription = "SKILL_20599_03_DESC",
     SkillIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Polearm_Zaie.T_Rouge_Talent_Polearm_Zaie'",
     SkillIndex = 2,
-    UnlockCondition = T.RT_13,
+    UnlockCondition = T.RT_16,
     WeaponCardLevel = 1,
     WeaponId = 20599,
     WeaponSkillId = 20599003,
     WeaponSkillName = "SKILL_20599_03_Name"
   },
   [20599004] = {
-    ResourceId = T.RT_14,
+    ResourceId = T.RT_17,
     ResourceNum = T.RT_5,
     SkillIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillIntensityUP.T_Rouge_Talent_SkillIntensityUP'",
     SkillIndex = 1,
@@ -616,7 +765,7 @@ return ReadOnly("HyperWeaponSkillTree", {
     WeaponSkillName = "SKILL_20599_04_Name"
   },
   [20599005] = {
-    ResourceId = T.RT_14,
+    ResourceId = T.RT_17,
     ResourceNum = T.RT_5,
     SkillIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_AttrPenetration.T_Rouge_Talent_AttrPenetration'",
     SkillIndex = 2,
@@ -627,7 +776,7 @@ return ReadOnly("HyperWeaponSkillTree", {
     WeaponSkillName = "SKILL_20599_05_Name"
   },
   [20599006] = {
-    ResourceId = T.RT_12,
+    ResourceId = T.RT_15,
     ResourceNum = T.RT_2,
     SkillDescParameter = {
       [1] = "$#PassiveEffect[20599].Vars.MaxComboCountUse$",
@@ -647,7 +796,7 @@ return ReadOnly("HyperWeaponSkillTree", {
     WeaponSkillName = "SKILL_20599_06_Name"
   },
   [20599007] = {
-    ResourceId = T.RT_12,
+    ResourceId = T.RT_15,
     ResourceNum = T.RT_2,
     SkillDescParameter = {
       [1] = "$#TargetFilter[#SkillEffects[2059907].TargetFilter].LuaFilterParaments.Radius/100$"
@@ -662,7 +811,7 @@ return ReadOnly("HyperWeaponSkillTree", {
     WeaponSkillName = "SKILL_20599_07_Name"
   },
   [20599008] = {
-    ResourceId = T.RT_14,
+    ResourceId = T.RT_17,
     ResourceNum = T.RT_5,
     SkillDescParameter = {
       [1] = "$#Buff[2059903].AddAttrs[1].Value*100$%"
@@ -677,7 +826,7 @@ return ReadOnly("HyperWeaponSkillTree", {
     WeaponSkillName = "SKILL_20599_08_Name"
   },
   [20599009] = {
-    ResourceId = T.RT_14,
+    ResourceId = T.RT_17,
     ResourceNum = T.RT_5,
     SkillIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Morale.T_Rouge_Talent_Morale'",
     SkillIndex = 2,

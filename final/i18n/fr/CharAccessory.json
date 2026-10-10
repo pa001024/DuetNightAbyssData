@@ -744,6 +744,14 @@
     "unlock": "Disponible via les événements"
   },
   {
+    "id": 10101,
+    "name": "Esprit du mutisme – Pourpre profond",
+    "desc": "Rendons-nous hommage aux cieux... ou aux mortels ?",
+    "icon": "T_Fashion_Head57_04",
+    "rarity": 5,
+    "unlock": ""
+  },
+  {
     "id": 10102,
     "name": "Ornement canin – Blanc ivoire",
     "desc": "Vives, adorables, espiègles, ravissantes... Tous les mots du monde pâlissent face aux oreilles-de-chien. Voilà leur charme irrésistible... Tiens, cette réplique me dit quelque chose... Enfin, sûrement une impression.",
@@ -1260,6 +1268,14 @@
     "name": "Flammes infernales déchaînées",
     "desc": "Brûler sans fin, jusqu’à ce que tout soit réduit en cendres.",
     "icon": "T_Fashion_Fx40",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 11010,
+    "name": "Déflagration d’ossuaire – Bleu indigo",
+    "desc": "Éclot parmi les ossements.",
+    "icon": "T_Fashion_Fx50",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
@@ -2728,6 +2744,62 @@
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 20106,
+    "name": "Fleur d’ossuaire – Blanc ivoire",
+    "desc": "La vie renaît sans fin.",
+    "icon": "T_Fashion_Face31_03",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 20107,
+    "name": "Fleur d’ossuaire – Pourpre profond",
+    "desc": "La vie renaît sans fin.",
+    "icon": "T_Fashion_Face31_01",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 20108,
+    "name": "Fleur d’ossuaire – Doré",
+    "desc": "La vie renaît sans fin.",
+    "icon": "T_Fashion_Face31_02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 20109,
+    "name": "Fleur d’ossuaire – Rouille",
+    "desc": "La vie renaît sans fin.",
+    "icon": "T_Fashion_Face31_04",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 20110,
+    "name": "Marcheur de peste – Gris plomb",
+    "desc": "Il chemine à travers une ère de mort.",
+    "icon": "T_Fashion_Face32_03",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 20111,
+    "name": "Marcheur de peste – Jade noir",
+    "desc": "Il chemine à travers une ère de mort.",
+    "icon": "T_Fashion_Face32_01",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 20112,
+    "name": "Marcheur de peste – Blanc ivoire",
+    "desc": "Il chemine à travers une ère de mort.",
+    "icon": "T_Fashion_Face32_02",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
     "id": 21001,
     "name": "UI_Accessory_Name_21001",
     "desc": "UI_Accessory_Desc_21001",
@@ -2820,6 +2892,46 @@
     "name": "Onde de chaleur spectrale",
     "desc": "Une onde de chaleur déformée, telle une ondulation tracée dans l’air par les flammes.",
     "icon": "T_Fashion_Fx39",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 21016,
+    "name": "Chatôme – Blanc ivoire",
+    "desc": "Un Chatôme blanc erre à travers Atlasia.",
+    "icon": "T_Fashion_Fx52",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 21017,
+    "name": "Fantôme espiègle – Doré",
+    "desc": "Chats, citrouilles, chauves-souris... Des fantômes partout !",
+    "icon": "T_Fashion_Fx53",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 21018,
+    "name": "Fantrouille – Doré",
+    "desc": "Une Fantrouille dorée erre à travers Atlasia.",
+    "icon": "T_Fashion_Fx54",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 21019,
+    "name": "Talisman ésotérique – Pourpre profond",
+    "desc": "Le talisman s’anime à la pensée, et les voies occultes lui répondent.",
+    "icon": "T_Fashion_Fx51",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 21020,
+    "name": "Fils d’ombre – Bleu indigo",
+    "desc": "Des fils d’araignée ondulent dans les airs, dessinant la silhouette de la chasseuse.",
+    "icon": "T_Fashion_Fx49",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
@@ -3353,7 +3465,7 @@
   },
   {
     "id": 31007,
-    "name": "Victoire : Hurlement de Cerbère",
+    "name": "Victoire : Sérénade des premières neiges",
     "desc": "Permet de modifier l’animation de victoire.",
     "icon": "T_Fashion_SettlementAction_07",
     "rarity": 5,
@@ -3614,6 +3726,14 @@
     "icon": "T_Fashion_Back39_02",
     "rarity": 5,
     "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 40037,
+    "name": "Déploiement perfide – Pourpre profond",
+    "desc": "Les paroles sacrées chassent les ombres, nourrissent l’âme et élèvent les esprits.",
+    "icon": "T_Fashion_Back39_04",
+    "rarity": 5,
+    "unlock": ""
   },
   {
     "id": 40038,
@@ -3984,6 +4104,62 @@
     "unlock": "Disponible via les événements"
   },
   {
+    "id": 40090,
+    "name": "Fils d’étoiles tombées – Pourpre profond",
+    "desc": "De fins fils d’araignée ont capturé les étoiles tombées du ciel.",
+    "icon": "T_Fashion_Waist37_04",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 40091,
+    "name": "Fils d’étoiles tombées – Blanc ivoire",
+    "desc": "De fins fils d’araignée ont capturé les étoiles tombées du ciel.",
+    "icon": "T_Fashion_Waist37_01",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 40092,
+    "name": "Fils d’étoiles tombées – Doré",
+    "desc": "De fins fils d’araignée ont capturé les étoiles tombées du ciel.",
+    "icon": "T_Fashion_Waist37_02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 40093,
+    "name": "Fils d’étoiles tombées – Rouille",
+    "desc": "De fins fils d’araignée ont capturé les étoiles tombées du ciel.",
+    "icon": "T_Fashion_Waist37_03",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 40094,
+    "name": "Diablotin espiègle – Doré",
+    "desc": "Ne te retourne pas. Il est juste derrière toi.",
+    "icon": "T_Fashion_Waist38_02",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 40095,
+    "name": "Diablotin espiègle – Rouille",
+    "desc": "Ne te retourne pas. Il est juste derrière toi.",
+    "icon": "T_Fashion_Waist38_03",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 40096,
+    "name": "Diablotin espiègle – Blanc ivoire",
+    "desc": "Ne te retourne pas. Il est juste derrière toi.",
+    "icon": "T_Fashion_Waist38_01",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
     "id": 50001,
     "name": "",
     "desc": "",
@@ -4296,6 +4472,38 @@
     "unlock": "Disponible via l’échange de Prismes"
   },
   {
+    "id": 70084,
+    "name": "Fils d’ombres fleuries – Pourpre profond",
+    "desc": "Des fleurs tissées de fils conduisent les âmes errantes perdues dans la nuit.",
+    "icon": "T_Fashion_Fx48_04",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 70085,
+    "name": "Fils d’ombres fleuries – Blanc ivoire",
+    "desc": "Des fleurs tissées de fils conduisent les âmes errantes perdues dans la nuit.",
+    "icon": "T_Fashion_Fx48_03",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 70086,
+    "name": "Fils d’ombres fleuries – Doré",
+    "desc": "Des fleurs tissées de fils conduisent les âmes errantes perdues dans la nuit.",
+    "icon": "T_Fashion_Fx48_02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 70087,
+    "name": "Fils d’ombres fleuries – Rouille",
+    "desc": "Des fleurs tissées de fils conduisent les âmes errantes perdues dans la nuit.",
+    "icon": "T_Fashion_Fx48_01",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
     "id": 80001,
     "name": "Invitation d’une nuit d’été",
     "desc": "Des papillons, chargés de pensées, attendent l’arrivée du protagoniste pour ouvrir le bal.",
@@ -4542,5 +4750,37 @@
     "icon": "T_Fashion_Fx45_02",
     "rarity": 5,
     "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 80070,
+    "name": "Papillon d’ossuaire – Blanc ivoire",
+    "desc": "Même lorsque seuls les os demeurent, n’oublie jamais de voler.",
+    "icon": "T_Fashion_Fx47_03",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80071,
+    "name": "Papillon d’ossuaire – Pourpre profond",
+    "desc": "Même lorsque seuls les os demeurent, n’oublie jamais de voler.",
+    "icon": "T_Fashion_Fx47_04",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80072,
+    "name": "Papillon d’ossuaire – Doré",
+    "desc": "Même lorsque seuls les os demeurent, n’oublie jamais de voler.",
+    "icon": "T_Fashion_Fx47_02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80073,
+    "name": "Papillon d’ossuaire – Rouille",
+    "desc": "Même lorsque seuls les os demeurent, n’oublie jamais de voler.",
+    "icon": "T_Fashion_Fx47_01",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
   }
 ]

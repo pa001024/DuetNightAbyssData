@@ -156,7 +156,8 @@ function BP_RegionOnlineInterComponent_C:GetInteractiveName()
   if Avatar then
     local RegionAvatars = Avatar.RegionAvatars or {}
     local OtherAvatar = RegionAvatars[self.CharObjId]
-    Name = OtherAvatar and OtherAvatar.AvatarInfo.Nickname
+    local AvatarInfo = OtherAvatar and OtherAvatar.AvatarInfo
+    Name = AvatarInfo and AvatarInfo.Nickname or ""
   end
   return GText(Name)
 end

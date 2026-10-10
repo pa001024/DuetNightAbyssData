@@ -34,29 +34,31 @@ T.RT_21 = {615010, 312}
 T.RT_22 = {615011, 312}
 T.RT_23 = {615012, 312}
 T.RT_24 = {616010, 312}
-T.RT_25 = {90161, 312}
-T.RT_26 = {90162, 312}
-T.RT_27 = {90163, 314}
-T.RT_28 = {90164, 314}
-T.RT_29 = {90165, 314}
-T.RT_30 = {90166, 314}
-T.RT_31 = {90167, 312}
-T.RT_32 = {90168, 312}
-T.RT_33 = {90169, 314}
-T.RT_34 = {90170, 314}
-T.RT_35 = {90180, 312}
-T.RT_36 = {90181, 312}
-T.RT_37 = {90182, 312}
-T.RT_38 = {90183, 312}
-T.RT_39 = {90184, 312}
-T.RT_40 = {90185, 312}
-T.RT_41 = {90186, 312}
-T.RT_42 = {90187, 312}
-T.RT_43 = {90188, 312}
-T.RT_44 = {0.9, 0.2}
-T.RT_45 = {9170101, 9170102}
-T.RT_46 = {
-  [1] = T.RT_45
+T.RT_25 = {617001, 314}
+T.RT_26 = {617002, 312}
+T.RT_27 = {90161, 312}
+T.RT_28 = {90162, 312}
+T.RT_29 = {90163, 314}
+T.RT_30 = {90164, 314}
+T.RT_31 = {90165, 314}
+T.RT_32 = {90166, 314}
+T.RT_33 = {90167, 312}
+T.RT_34 = {90168, 312}
+T.RT_35 = {90169, 314}
+T.RT_36 = {90170, 314}
+T.RT_37 = {90180, 312}
+T.RT_38 = {90181, 312}
+T.RT_39 = {90182, 312}
+T.RT_40 = {90183, 312}
+T.RT_41 = {90184, 312}
+T.RT_42 = {90185, 312}
+T.RT_43 = {90186, 312}
+T.RT_44 = {90187, 312}
+T.RT_45 = {90188, 312}
+T.RT_46 = {0.9, 0.2}
+T.RT_47 = {9170101, 9170102}
+T.RT_48 = {
+  [1] = T.RT_47
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
@@ -288,11 +290,11 @@ return ReadOnly("Defence", {
     EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_17,
-      [2] = T.RT_25,
+      [2] = T.RT_27,
       [3] = T.RT_17,
-      [4] = T.RT_25,
+      [4] = T.RT_27,
       [5] = T.RT_17,
-      [6] = T.RT_25
+      [6] = T.RT_27
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -305,11 +307,11 @@ return ReadOnly("Defence", {
     EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_17,
-      [2] = T.RT_26,
+      [2] = T.RT_28,
       [3] = T.RT_17,
-      [4] = T.RT_26,
+      [4] = T.RT_28,
       [5] = T.RT_17,
-      [6] = T.RT_26
+      [6] = T.RT_28
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -322,11 +324,11 @@ return ReadOnly("Defence", {
     EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_15,
-      [2] = T.RT_27,
+      [2] = T.RT_29,
       [3] = T.RT_15,
-      [4] = T.RT_27,
+      [4] = T.RT_29,
       [5] = T.RT_15,
-      [6] = T.RT_27
+      [6] = T.RT_29
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -339,11 +341,11 @@ return ReadOnly("Defence", {
     EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_15,
-      [2] = T.RT_28,
+      [2] = T.RT_30,
       [3] = T.RT_15,
-      [4] = T.RT_28,
+      [4] = T.RT_30,
       [5] = T.RT_15,
-      [6] = T.RT_28
+      [6] = T.RT_30
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -356,11 +358,11 @@ return ReadOnly("Defence", {
     EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_15,
-      [2] = T.RT_29,
+      [2] = T.RT_31,
       [3] = T.RT_15,
-      [4] = T.RT_29,
+      [4] = T.RT_31,
       [5] = T.RT_15,
-      [6] = T.RT_29
+      [6] = T.RT_31
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -373,11 +375,11 @@ return ReadOnly("Defence", {
     EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_15,
-      [2] = T.RT_30,
+      [2] = T.RT_32,
       [3] = T.RT_15,
-      [4] = T.RT_30,
+      [4] = T.RT_32,
       [5] = T.RT_15,
-      [6] = T.RT_30
+      [6] = T.RT_32
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -390,11 +392,11 @@ return ReadOnly("Defence", {
     EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_17,
-      [2] = T.RT_31,
+      [2] = T.RT_33,
       [3] = T.RT_17,
-      [4] = T.RT_31,
+      [4] = T.RT_33,
       [5] = T.RT_17,
-      [6] = T.RT_31
+      [6] = T.RT_33
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -407,11 +409,11 @@ return ReadOnly("Defence", {
     EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_17,
-      [2] = T.RT_32,
+      [2] = T.RT_34,
       [3] = T.RT_17,
-      [4] = T.RT_32,
+      [4] = T.RT_34,
       [5] = T.RT_17,
-      [6] = T.RT_32
+      [6] = T.RT_34
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -424,11 +426,11 @@ return ReadOnly("Defence", {
     EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_15,
-      [2] = T.RT_33,
+      [2] = T.RT_35,
       [3] = T.RT_15,
-      [4] = T.RT_33,
+      [4] = T.RT_35,
       [5] = T.RT_15,
-      [6] = T.RT_33
+      [6] = T.RT_35
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -441,11 +443,11 @@ return ReadOnly("Defence", {
     EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_15,
-      [2] = T.RT_34,
+      [2] = T.RT_36,
       [3] = T.RT_15,
-      [4] = T.RT_34,
+      [4] = T.RT_36,
       [5] = T.RT_15,
-      [6] = T.RT_34
+      [6] = T.RT_36
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -458,11 +460,11 @@ return ReadOnly("Defence", {
     EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_17,
-      [2] = T.RT_35,
+      [2] = T.RT_37,
       [3] = T.RT_17,
-      [4] = T.RT_35,
+      [4] = T.RT_37,
       [5] = T.RT_17,
-      [6] = T.RT_35
+      [6] = T.RT_37
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -475,11 +477,11 @@ return ReadOnly("Defence", {
     EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_17,
-      [2] = T.RT_36,
+      [2] = T.RT_38,
       [3] = T.RT_17,
-      [4] = T.RT_36,
+      [4] = T.RT_38,
       [5] = T.RT_17,
-      [6] = T.RT_36
+      [6] = T.RT_38
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -492,11 +494,11 @@ return ReadOnly("Defence", {
     EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_17,
-      [2] = T.RT_37,
+      [2] = T.RT_39,
       [3] = T.RT_17,
-      [4] = T.RT_37,
+      [4] = T.RT_39,
       [5] = T.RT_17,
-      [6] = T.RT_37
+      [6] = T.RT_39
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -509,11 +511,11 @@ return ReadOnly("Defence", {
     EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_17,
-      [2] = T.RT_38,
+      [2] = T.RT_40,
       [3] = T.RT_17,
-      [4] = T.RT_38,
+      [4] = T.RT_40,
       [5] = T.RT_17,
-      [6] = T.RT_38
+      [6] = T.RT_40
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -526,11 +528,11 @@ return ReadOnly("Defence", {
     EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_17,
-      [2] = T.RT_39,
+      [2] = T.RT_41,
       [3] = T.RT_17,
-      [4] = T.RT_39,
+      [4] = T.RT_41,
       [5] = T.RT_17,
-      [6] = T.RT_39
+      [6] = T.RT_41
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -543,11 +545,11 @@ return ReadOnly("Defence", {
     EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_17,
-      [2] = T.RT_40,
+      [2] = T.RT_42,
       [3] = T.RT_17,
-      [4] = T.RT_40,
+      [4] = T.RT_42,
       [5] = T.RT_17,
-      [6] = T.RT_40
+      [6] = T.RT_42
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -560,11 +562,11 @@ return ReadOnly("Defence", {
     EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_17,
-      [2] = T.RT_41,
+      [2] = T.RT_43,
       [3] = T.RT_17,
-      [4] = T.RT_41,
+      [4] = T.RT_43,
       [5] = T.RT_17,
-      [6] = T.RT_41
+      [6] = T.RT_43
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -577,11 +579,11 @@ return ReadOnly("Defence", {
     EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_17,
-      [2] = T.RT_42,
+      [2] = T.RT_44,
       [3] = T.RT_17,
-      [4] = T.RT_42,
+      [4] = T.RT_44,
       [5] = T.RT_17,
-      [6] = T.RT_42
+      [6] = T.RT_44
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -594,11 +596,11 @@ return ReadOnly("Defence", {
     EnsureGuideTime = 180,
     MonsterSpawnId = {
       [1] = T.RT_17,
-      [2] = T.RT_43,
+      [2] = T.RT_45,
       [3] = T.RT_17,
-      [4] = T.RT_43,
+      [4] = T.RT_45,
       [5] = T.RT_17,
-      [6] = T.RT_43
+      [6] = T.RT_45
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -806,60 +808,60 @@ return ReadOnly("Defence", {
   [91701] = {
     ButcherMonsterId = 8501002,
     ButcherMonsterSpawnMinWave = 2,
-    ButcherMonsterSpawnProbability = T.RT_44,
+    ButcherMonsterSpawnProbability = T.RT_46,
     DungeonId = 91701,
     EnsureGuideTime = -1,
-    MonsterSpawnId = T.RT_46,
+    MonsterSpawnId = T.RT_48,
     MonsterTotalBaseNum = 120,
     WavesPerStage = 1
   },
   [91702] = {
     ButcherMonsterId = 8501002,
     ButcherMonsterSpawnMinWave = 2,
-    ButcherMonsterSpawnProbability = T.RT_44,
+    ButcherMonsterSpawnProbability = T.RT_46,
     DungeonId = 91702,
     EnsureGuideTime = -1,
-    MonsterSpawnId = T.RT_46,
+    MonsterSpawnId = T.RT_48,
     MonsterTotalBaseNum = 120,
     WavesPerStage = 1
   },
   [91703] = {
     ButcherMonsterId = 8501002,
     ButcherMonsterSpawnMinWave = 2,
-    ButcherMonsterSpawnProbability = T.RT_44,
+    ButcherMonsterSpawnProbability = T.RT_46,
     DungeonId = 91703,
     EnsureGuideTime = -1,
-    MonsterSpawnId = T.RT_46,
+    MonsterSpawnId = T.RT_48,
     MonsterTotalBaseNum = 120,
     WavesPerStage = 1
   },
   [91704] = {
     ButcherMonsterId = 8501002,
     ButcherMonsterSpawnMinWave = 2,
-    ButcherMonsterSpawnProbability = T.RT_44,
+    ButcherMonsterSpawnProbability = T.RT_46,
     DungeonId = 91704,
     EnsureGuideTime = -1,
-    MonsterSpawnId = T.RT_46,
+    MonsterSpawnId = T.RT_48,
     MonsterTotalBaseNum = 120,
     WavesPerStage = 1
   },
   [91705] = {
     ButcherMonsterId = 8501002,
     ButcherMonsterSpawnMinWave = 2,
-    ButcherMonsterSpawnProbability = T.RT_44,
+    ButcherMonsterSpawnProbability = T.RT_46,
     DungeonId = 91705,
     EnsureGuideTime = -1,
-    MonsterSpawnId = T.RT_46,
+    MonsterSpawnId = T.RT_48,
     MonsterTotalBaseNum = 120,
     WavesPerStage = 1
   },
   [91706] = {
     ButcherMonsterId = 8501002,
     ButcherMonsterSpawnMinWave = 2,
-    ButcherMonsterSpawnProbability = T.RT_44,
+    ButcherMonsterSpawnProbability = T.RT_46,
     DungeonId = 91706,
     EnsureGuideTime = -1,
-    MonsterSpawnId = T.RT_46,
+    MonsterSpawnId = T.RT_48,
     MonsterTotalBaseNum = 120,
     WavesPerStage = 1
   },
@@ -1202,5 +1204,39 @@ return ReadOnly("Defence", {
       [3] = {100311, 6161090}
     },
     MonsterTotalBaseNum = 80
+  },
+  [617001] = {
+    ButcherMonsterId = 8501002,
+    ButcherMonsterSpawnMinWave = 10,
+    ButcherMonsterSpawnProbability = T.RT_14,
+    DungeonId = 617001,
+    EnsureGuideTime = 180,
+    MonsterSpawnId = {
+      [1] = T.RT_15,
+      [2] = T.RT_25,
+      [3] = T.RT_15,
+      [4] = T.RT_25,
+      [5] = T.RT_15,
+      [6] = T.RT_25
+    },
+    MonsterTotalBaseNum = 50,
+    WavesPerStage = 2
+  },
+  [617002] = {
+    ButcherMonsterId = 8501002,
+    ButcherMonsterSpawnMinWave = 10,
+    ButcherMonsterSpawnProbability = T.RT_14,
+    DungeonId = 617002,
+    EnsureGuideTime = 180,
+    MonsterSpawnId = {
+      [1] = T.RT_17,
+      [2] = T.RT_26,
+      [3] = T.RT_17,
+      [4] = T.RT_26,
+      [5] = T.RT_17,
+      [6] = T.RT_26
+    },
+    MonsterTotalBaseNum = 50,
+    WavesPerStage = 2
   }
 })

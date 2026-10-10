@@ -23,6 +23,8 @@ function M:SetTimeText(Timestamp, StyleType, Joiner1, Joiner2, bUserServerTimezo
   end
   if bShowTimeIcon then
     self.Image_ClockIcon:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  else
+    self.Image_ClockIcon:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
   if bHideTimeZone then
     self.Text_TimeZone:SetVisibility(UIConst.VisibilityOp.Collapsed)

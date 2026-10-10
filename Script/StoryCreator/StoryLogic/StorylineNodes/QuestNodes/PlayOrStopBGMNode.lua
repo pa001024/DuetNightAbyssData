@@ -19,6 +19,7 @@ function PlayOrStopBGMNode:Start(Context)
   PrintTable(self.RelatedRegionId, 3)
   PrintTable(self.ClientRelatedRegionId, 3)
   self.Context = Context
+  local QuestChainId = self:GetBGMQuestChainId()
   local GameInstance = GWorld.GameInstance
   if 0 == self.SoundStateType then
     local Event
@@ -42,7 +43,7 @@ function PlayOrStopBGMNode:Start(Context)
     end
     if 0 == self.SoundPriority then
       AudioManager(GameInstance):StoreLastSTLBGM(self.SoundType)
-      AudioManager(GameInstance):PlayLevelSound(self.SoundType, Event, RelatedRegionIdArray, ClientRelatedRegionIdArray, self.ParamKey, self.ParamValue, false, self.bStoreToServer, self.Context.QuestChainId)
+      AudioManager(GameInstance):PlayLevelSound(self.SoundType, Event, RelatedRegionIdArray, ClientRelatedRegionIdArray, self.ParamKey, self.ParamValue, false, self.bStoreToServer, QuestChainId)
     elseif 1 == self.SoundPriority then
       AudioManager(GameInstance):PlayInviteBGM(self.SoundType, Event, self.ParamKey, self.ParamValue, RelatedRegionIdArray, ClientRelatedRegionIdArray)
     elseif 2 == self.SoundPriority then
@@ -51,7 +52,7 @@ function PlayOrStopBGMNode:Start(Context)
         self:FinishAction()
         return
       end
-      AudioManager(GameInstance):PlayStoryCustomBGM(self.SoundType, Event, self.SoundUnitKey, self.ParamKey, self.ParamValue, RelatedRegionIdArray, ClientRelatedRegionIdArray, self.Context.QuestChainId)
+      AudioManager(GameInstance):PlayStoryCustomBGM(self.SoundType, Event, self.SoundUnitKey, self.ParamKey, self.ParamValue, RelatedRegionIdArray, ClientRelatedRegionIdArray, QuestChainId)
     elseif 3 == self.SoundPriority then
       AudioManager(GameInstance):PlayCGReviewBGM(self.SoundType, Event, RelatedRegionIdArray, ClientRelatedRegionIdArray, self.ParamKey, self.ParamValue, false)
     end

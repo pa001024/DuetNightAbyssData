@@ -126,4 +126,18 @@ function MonsterUtils.SortWeaknessTypeIcon(a, b)
   return aPriority < bPriority
 end
 
+function MonsterUtils.GetMonsterDataByOwner(Owner)
+  if not Owner or not IsValid(Owner) then
+    return nil
+  end
+  if not UCharacterFunctionLibrary.IsMonsterDataOwner(Owner) then
+    return nil
+  end
+  local UnitId = Owner.UnitId
+  if not UnitId or UnitId <= 0 then
+    return nil
+  end
+  return DataMgr.Monster[UnitId]
+end
+
 return MonsterUtils

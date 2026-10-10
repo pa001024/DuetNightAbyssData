@@ -21,9 +21,9 @@ end
 
 function Component:CleanUpAnchor()
   if self.HeadAnchor then
+    self.HeadAnchor:Close()
     self.HeadAnchor.OnGetMenuContentEvent:Unbind()
     self.HeadAnchor.OnMenuOpenChanged:Remove(self, self.HeadMenuOpenChanged)
-    self.HeadAnchor:Close()
     self.HeadAnchor = nil
   end
   self.Head = nil

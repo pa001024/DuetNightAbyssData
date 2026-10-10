@@ -90,26 +90,6 @@ function M:RedoEdit()
   return bSuccess
 end
 
-function M:SaveEditAndClose()
-  if self.IsSaving or not self.DisplayEditor then
-    return false
-  end
-  self.IsSaving = true
-  local bStarted = PersonInfoModel:SaveCustomDisplayDraft(self.DisplayEditor, function(Ret)
-    self.IsSaving = false
-    if ErrorCode and ErrorCode.Check and ErrorCode:Check(Ret) then
-      UIManager(self.OwnerWidget):ShowUITip("CommonToastMain", GText("UI_PersonInfo_Saved"))
-      if self.OwnerWidget and self.OwnerWidget.Close then
-        self.OwnerWidget:Close()
-      end
-    end
-  end)
-  if not bStarted then
-    self.IsSaving = false
-  end
-  return bStarted
-end
-
 function M:GetSelectedCharacterSlot()
   local Draft = self.DisplayEditor and self.DisplayEditor.GetDraft and self.DisplayEditor:GetDraft() or nil
   if not Draft or not Draft.CharacterSlots then

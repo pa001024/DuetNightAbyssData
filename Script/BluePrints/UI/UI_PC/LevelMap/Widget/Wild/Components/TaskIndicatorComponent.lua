@@ -274,7 +274,7 @@ function Component:AddTaskMiniMapIndicator(InUIName, Widget)
     return
   end
   local TargetPointKey, TargetActorKey
-  local IsNpcIndicator = IndicatorUI.GuideInfoCache.PointType == "N" or IndicatorUI.GuideInfoCache.PointType == "Npc"
+  local IsNpcIndicator = IndicatorUI.GuideInfoCache.PointType == "N" or IndicatorUI.GuideInfoCache.PointType == "Npc" or IndicatorUI.GuideInfoCache.PointType == "NpcBubble"
   if IndicatorUI.GuideInfoCache and IndicatorUI.GuideInfoCache.PointName then
     TargetPointKey = IndicatorUI.GuideInfoCache.PointName
   end
@@ -587,7 +587,7 @@ function Component:AddDynamicMiniMapIndicator(InUIName, Widget)
     return
   end
   local TargetPointKey, TargetActor
-  local IsNpcIndicator = IndicatorUI.GuideInfoCache.PointType == "N" or IndicatorUI.GuideInfoCache.PointType == "Npc"
+  local IsNpcIndicator = IndicatorUI.GuideInfoCache.PointType == "N" or IndicatorUI.GuideInfoCache.PointType == "Npc" or IndicatorUI.GuideInfoCache.PointType == "NpcBubble"
   if IndicatorUI.GuideInfoCache and IndicatorUI.GuideInfoCache.PointName then
     TargetPointKey = IndicatorUI.GuideInfoCache.PointName
   end
@@ -673,7 +673,7 @@ function Component:SetMiniMapIsRangeIndicator(InUIName, IsAdd)
     return
   end
   local TargetPointKey, TargetActor
-  local IsNpcIndicator = IndicatorUI.GuideInfoCache.PointType == "N" or IndicatorUI.GuideInfoCache.PointType == "Npc"
+  local IsNpcIndicator = IndicatorUI.GuideInfoCache.PointType == "N" or IndicatorUI.GuideInfoCache.PointType == "Npc" or IndicatorUI.GuideInfoCache.PointType == "NpcBubble"
   if IndicatorUI.GuideInfoCache and IndicatorUI.GuideInfoCache.PointName then
     TargetPointKey = IndicatorUI.GuideInfoCache.PointName
   end
@@ -768,6 +768,9 @@ function Component:SetMissionIndicatorsWidgetFloorStyle(InFloorId)
   end
   local CurRegionId = DataMgr.SubRegion[Avatar.CurrentRegionId].RegionId
   local IndicatorUI = UIManager(self):GetUIObj(InFloorId)
+  if not IndicatorUI or IndicatorUI.GuideInfoCache == nil then
+    return
+  end
   local Widget = self.IndicatorWidgets[InFloorId]
   if not Widget then
     return

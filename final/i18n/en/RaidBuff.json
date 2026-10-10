@@ -82,5 +82,37 @@
       "12",
       "3"
     ]
+  },
+  {
+    "RaidBuffID": 17,
+    "RaidBuffDes": "When a character's Skill Speed exceeds 1, gain 10% PEN stats for every 0.3 over the threshold, up to 50%.\nWhen the character consumes Disruption, their Skill Damage ignores 40% of the target's defensive effects for 3s.",
+    "RaidBuffParameter": [
+      "1",
+      "0.3",
+      "10%",
+      "50%",
+      "40%",
+      "3"
+    ]
+  },
+  {
+    "RaidBuffID": 1001,
+    "RaidBuffDes": "Each time an Extreme-Threat Enemy's Stance is broken, they take 75% additional damage while in the Weakness state, but gain +30% Max Stance and +50% Damage Dealt.",
+    "RaidBuffParameter": [
+      "75%",
+      "30%",
+      "50%"
+    ]
+  },
+  {
+    "RaidBuffID": 1002,
+    "RaidBuffDes": "Extreme-Threat Enemies take 60% additional Skill DMG. Each time they take damage, they gain 1 stack that increases DEF by 1%, up to 300 stacks. Each time they hit an ally, they gain 1 stack that increases Damage Dealt by 5%, up to 20 stacks.",
+    "RaidBuffParameter": [
+      "60%",
+      "1%",
+      "300",
+      "5%",
+      "20"
+    ]
   }
 ]

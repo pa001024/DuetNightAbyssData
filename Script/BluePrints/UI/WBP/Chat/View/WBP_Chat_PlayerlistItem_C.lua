@@ -236,6 +236,7 @@ function M:OnListItemObjectSet_InTeam()
   end
   if nil == TeamData then
     self:_SetEmptyState(true)
+    self.WBP_Com_ItemHead:SetHeadFrame(nil)
     self.Common_Subsize_Reddot_Num:SetVisibility(UIConst.VisibilityOp.Collapsed)
     return
   end

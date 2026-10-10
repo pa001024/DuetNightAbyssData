@@ -383,43 +383,70 @@ T.RT_81 = {
   SkillGrade = T.RT_11,
   UIName = "UISkillFalu"
 }
-T.RT_82 = {RideBuff = 510121, SummonerId = 510101}
+T.RT_82 = {410311}
 T.RT_83 = {
+  ID = 45,
+  RelatedBuffId = T.RT_82,
+  ScaleNode = "Main",
+  SkillGrade = T.RT_11,
+  UIName = "UISkillSplise"
+}
+T.RT_84 = {410321}
+T.RT_85 = {
+  ID = 46,
+  RelatedBuffId = T.RT_84,
+  ScaleNode = "Main",
+  SkillGrade = T.RT_11,
+  TriggerBuffId = 410321,
+  UIName = "UISkillSpliseUlti"
+}
+T.RT_86 = {
+  ID = 47,
+  SkillGrade = T.RT_11,
+  UIName = "UISkillSplise01"
+}
+T.RT_87 = {
+  ID = 48,
+  SkillGrade = T.RT_11,
+  UIName = "UISkillSpliseUlti01"
+}
+T.RT_88 = {RideBuff = 510121, SummonerId = 510101}
+T.RT_89 = {
   ID = 5,
-  Params = T.RT_82,
+  Params = T.RT_88,
   ScaleNode = "Main",
   SkillGrade = T.RT_11,
   UIName = "UISkillSonglu"
 }
-T.RT_84 = {SummonerId = 420101}
-T.RT_85 = {
+T.RT_90 = {SummonerId = 420101}
+T.RT_91 = {
   ID = 6,
-  Params = T.RT_84,
+  Params = T.RT_90,
   ScaleNode = "Main",
   SkillGrade = T.RT_11,
   UIName = "UISkillHeilong"
 }
-T.RT_86 = {310122}
-T.RT_87 = {
+T.RT_92 = {310122}
+T.RT_93 = {
   ID = 7,
-  RelatedBuffId = T.RT_86,
+  RelatedBuffId = T.RT_92,
   ScaleNode = "Main",
   SkillGrade = T.RT_11,
   TriggerBuffId = 310122,
   UIName = "UISkill2Linen"
 }
-T.RT_88 = {850405}
-T.RT_89 = {
+T.RT_94 = {850405}
+T.RT_95 = {
   ID = 8,
-  RelatedBuffId = T.RT_88,
+  RelatedBuffId = T.RT_94,
   SkillGrade = T.RT_11,
   TriggerBuffId = 850405,
   UIName = "UISkillSaqiUlti"
 }
-T.RT_90 = {310301}
-T.RT_91 = {
+T.RT_96 = {310301}
+T.RT_97 = {
   ID = 9,
-  RelatedBuffId = T.RT_90,
+  RelatedBuffId = T.RT_96,
   SkillGrade = T.RT_11,
   TriggerBuffId = 310301,
   UIName = "UISkilYeerUlti"
@@ -468,33 +495,6 @@ return ReadOnly("BattleCharUI", {
     [6] = T.RT_73
   },
   [5] = {
-    [0] = T.RT_83,
-    [1] = T.RT_83,
-    [2] = T.RT_83,
-    [3] = T.RT_83,
-    [4] = T.RT_83,
-    [5] = T.RT_83,
-    [6] = T.RT_83
-  },
-  [6] = {
-    [0] = T.RT_85,
-    [1] = T.RT_85,
-    [2] = T.RT_85,
-    [3] = T.RT_85,
-    [4] = T.RT_85,
-    [5] = T.RT_85,
-    [6] = T.RT_85
-  },
-  [7] = {
-    [0] = T.RT_87,
-    [1] = T.RT_87,
-    [2] = T.RT_87,
-    [3] = T.RT_87,
-    [4] = T.RT_87,
-    [5] = T.RT_87,
-    [6] = T.RT_87
-  },
-  [8] = {
     [0] = T.RT_89,
     [1] = T.RT_89,
     [2] = T.RT_89,
@@ -503,7 +503,7 @@ return ReadOnly("BattleCharUI", {
     [5] = T.RT_89,
     [6] = T.RT_89
   },
-  [9] = {
+  [6] = {
     [0] = T.RT_91,
     [1] = T.RT_91,
     [2] = T.RT_91,
@@ -511,6 +511,33 @@ return ReadOnly("BattleCharUI", {
     [4] = T.RT_91,
     [5] = T.RT_91,
     [6] = T.RT_91
+  },
+  [7] = {
+    [0] = T.RT_93,
+    [1] = T.RT_93,
+    [2] = T.RT_93,
+    [3] = T.RT_93,
+    [4] = T.RT_93,
+    [5] = T.RT_93,
+    [6] = T.RT_93
+  },
+  [8] = {
+    [0] = T.RT_95,
+    [1] = T.RT_95,
+    [2] = T.RT_95,
+    [3] = T.RT_95,
+    [4] = T.RT_95,
+    [5] = T.RT_95,
+    [6] = T.RT_95
+  },
+  [9] = {
+    [0] = T.RT_97,
+    [1] = T.RT_97,
+    [2] = T.RT_97,
+    [3] = T.RT_97,
+    [4] = T.RT_97,
+    [5] = T.RT_97,
+    [6] = T.RT_97
   },
   [10] = {
     [0] = T.RT_8,
@@ -823,5 +850,41 @@ return ReadOnly("BattleCharUI", {
     [4] = T.RT_81,
     [5] = T.RT_81,
     [6] = T.RT_81
+  },
+  [45] = {
+    [0] = T.RT_83,
+    [1] = T.RT_83,
+    [2] = T.RT_83,
+    [3] = T.RT_83,
+    [4] = T.RT_83,
+    [5] = T.RT_83,
+    [6] = T.RT_83
+  },
+  [46] = {
+    [0] = T.RT_85,
+    [1] = T.RT_85,
+    [2] = T.RT_85,
+    [3] = T.RT_85,
+    [4] = T.RT_85,
+    [5] = T.RT_85,
+    [6] = T.RT_85
+  },
+  [47] = {
+    [0] = T.RT_86,
+    [1] = T.RT_86,
+    [2] = T.RT_86,
+    [3] = T.RT_86,
+    [4] = T.RT_86,
+    [5] = T.RT_86,
+    [6] = T.RT_86
+  },
+  [48] = {
+    [0] = T.RT_87,
+    [1] = T.RT_87,
+    [2] = T.RT_87,
+    [3] = T.RT_87,
+    [4] = T.RT_87,
+    [5] = T.RT_87,
+    [6] = T.RT_87
   }
 })

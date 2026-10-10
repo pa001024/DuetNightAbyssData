@@ -17,6 +17,10 @@ return ReadOnly("BattleCamera", {
     ParamentName = "CameraFadeAngleStart",
     ParamentValue = {"30"}
   },
+  CameraInputResumeDelay = {
+    ParamentName = "CameraInputResumeDelay",
+    ParamentValue = {"0.4"}
+  },
   CameraPitchLimitMax = {
     ParamentName = "CameraPitchLimitMax",
     ParamentValue = {"89.9"}
@@ -28,6 +32,10 @@ return ReadOnly("BattleCamera", {
   EnterCollisionSpeed = {
     ParamentName = "EnterCollisionSpeed",
     ParamentValue = T.RT_1
+  },
+  FrontBackDeadZone = {
+    ParamentName = "FrontBackDeadZone",
+    ParamentValue = {"0.9"}
   },
   LeaveCollisionSpeed = {
     ParamentName = "LeaveCollisionSpeed",
@@ -44,6 +52,26 @@ return ReadOnly("BattleCamera", {
   ResetSpringArmMaxSpeed = {
     ParamentName = "ResetSpringArmMaxSpeed",
     ParamentValue = T.RT_2
+  },
+  StrafeInputDeadZone = {
+    ParamentName = "StrafeInputDeadZone",
+    ParamentValue = {"0.05"}
+  },
+  StrafeInputHoldTime = {
+    ParamentName = "StrafeInputHoldTime",
+    ParamentValue = {"0.3"}
+  },
+  StrafeRecoverInterpSpeed = {
+    ParamentName = "StrafeRecoverInterpSpeed",
+    ParamentValue = {"0.175"}
+  },
+  StrafeRecoverYawThreshold = {
+    ParamentName = "StrafeRecoverYawThreshold",
+    ParamentValue = {"5"}
+  },
+  StrafeSideOffsetYaw = {
+    ParamentName = "StrafeSideOffsetYaw",
+    ParamentValue = {"60"}
   },
   TagAndTimeForResetPitch = {
     ParamentName = "TagAndTimeForResetPitch",

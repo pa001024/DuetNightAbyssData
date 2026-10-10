@@ -35,13 +35,13 @@ function BP_DungeonObject_C:OnRep_DungeonObjectTimerHandles()
   print("BP_DungeonObject_C:OnRep_DungeonObjectTimerHandles NewTimerHandles", CommonUtils:TableToStr(NewTimerHandles))
   local AddTimerHandles = {}
   for _, TimerHandle in pairs(NewTimerHandles) do
-    if not CommonUtils.HasValue(LastTimerHandles) then
+    if not CommonUtils.HasValue(LastTimerHandles, TimerHandle) then
       table.insert(AddTimerHandles, TimerHandle)
     end
   end
   local RemoveTimerHandles = {}
   for _, TimerHandle in pairs(LastTimerHandles) do
-    if not CommonUtils.HasValue(NewTimerHandles) then
+    if not CommonUtils.HasValue(NewTimerHandles, TimerHandle) then
       table.insert(RemoveTimerHandles, TimerHandle)
     end
   end
@@ -84,7 +84,7 @@ function BP_DungeonObject_C:DoClientRemoveTimerEvent(TimerHandle)
       self.ClientDungeonObject[FuncName](self.ClientDungeonObject)
     end,
     catch = function(err)
-      DebugPrint(ErrorTag, "DoClientAddTimerEvent Error! TimerHandle: " .. TimerHandle .. " traceback: ")
+      DebugPrint(ErrorTag, "DoClientRemoveTimerEvent Error! TimerHandle: " .. TimerHandle .. " traceback: ")
       Traceback(ErrorTag, err, false)
     end
   })

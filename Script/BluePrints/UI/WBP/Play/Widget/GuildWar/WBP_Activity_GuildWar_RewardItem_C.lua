@@ -26,17 +26,21 @@ function M:OnListItemObjectSet(Content)
 end
 
 function M:InitItemContent()
-  self.Text_Ranking:SetText(self.RankPercent)
+  if self.Text_Ranking then
+    self.Text_Ranking:SetText(self.RankPercent)
+  end
   local RankIcon = self["Rank_" .. self.RankName]
-  if RankIcon then
+  if RankIcon and self.Icon_Rank then
     self.Icon_Rank:SetBrush(RankIcon)
   end
   local Bg = self["BG_" .. self.RankName]
-  if Bg then
+  if Bg and self.BG then
     self.BG:SetBrush(Bg)
   end
   self:RefreshRewardInfoList(self.RankReward)
-  self.BG_Text:SetColorAndOpacity(self["Color_0" .. self.RankName])
+  if self.BG_Text then
+    self.BG_Text:SetColorAndOpacity(self["Color_0" .. self.RankName])
+  end
 end
 
 function M:RefreshRewardInfoList(RankRewardID)

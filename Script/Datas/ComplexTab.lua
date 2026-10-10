@@ -72,7 +72,7 @@ return ReadOnly("ComplexTab", {
   [7] = {
     BackgroundIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Shop/T_Shop_JumpEntry_Mod_1172.T_Shop_JumpEntry_Mod_1172'",
     BackgroundVx = "Vx_Icon_Mod",
-    CoinId = {216},
+    CoinId = {216, 227},
     EntrySort = 94,
     InterfaceJumpId = 73,
     RefreshTime = {WEEK = 4},

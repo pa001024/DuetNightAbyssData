@@ -281,22 +281,24 @@ function M.NormalizeDraft(Draft)
   local SelectedTags = {}
   local SelectedSet = {}
   for _, Tag in ipairs(Draft.SelectedTags or {}) do
-    if #SelectedTags >= M.MaxSelectedTagCount or type(Tag) ~= "table" then
+    if #SelectedTags >= M.MaxSelectedTagCount then
       break
     end
-    if Tag.Kind == "Preset" then
-      local TagId = ToInteger(Tag.Value)
-      local Key = TagId and "P:" .. tostring(TagId) or nil
-      if TagId and ValidPresetTagSet[TagId] and not SelectedSet[Key] then
-        SelectedSet[Key] = true
-        SelectedTags[#SelectedTags + 1] = {Kind = "Preset", Value = TagId}
-      end
-    elseif Tag.Kind == "Custom" then
-      local Text = TrimText(Tag.Value)
-      local Key = "C:" .. Text
-      if CustomTagSet[Text] and not SelectedSet[Key] then
-        SelectedSet[Key] = true
-        SelectedTags[#SelectedTags + 1] = {Kind = "Custom", Value = Text}
+    if type(Tag) == "table" then
+      if Tag.Kind == "Preset" then
+        local TagId = ToInteger(Tag.Value)
+        local Key = TagId and "P:" .. tostring(TagId) or nil
+        if TagId and ValidPresetTagSet[TagId] and not SelectedSet[Key] then
+          SelectedSet[Key] = true
+          SelectedTags[#SelectedTags + 1] = {Kind = "Preset", Value = TagId}
+        end
+      elseif Tag.Kind == "Custom" then
+        local Text = TrimText(Tag.Value)
+        local Key = "C:" .. Text
+        if CustomTagSet[Text] and not SelectedSet[Key] then
+          SelectedSet[Key] = true
+          SelectedTags[#SelectedTags + 1] = {Kind = "Custom", Value = Text}
+        end
       end
     end
   end

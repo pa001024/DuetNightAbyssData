@@ -233,6 +233,16 @@ return ReadOnly("ConditionText", {
     ConditionLogic = "S",
     ConditionType = "QuestChainTrueEnd"
   },
+  QuestPhaseFinish = {
+    AutoTrigger = true,
+    ConditionLogic = "S",
+    ConditionType = "QuestPhaseFinish"
+  },
+  RaidFloorMin = {
+    AutoTrigger = true,
+    ConditionLogic = "S",
+    ConditionType = "RaidFloorMin"
+  },
   RegionCapturePet = {
     ConditionLogic = "S",
     ConditionType = "RegionCapturePet"

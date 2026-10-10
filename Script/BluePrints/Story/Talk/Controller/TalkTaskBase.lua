@@ -140,8 +140,11 @@ function TalkTaskBase_C:StartTalkFlow()
     DebugPrint("TalkTaskBase_C:StartTalkFlow TalkFlowController is nil", self:GetTalkType())
     return
   end
-  if self.DialogueFlowGraphComponent and self.TalkTaskData and IsValid(self.TalkTaskData.FlowAsset) then
-    self.TalkFlowController:RegisterFlowGraph(self.DialogueFlowGraphComponent)
+  if self.TalkFlowController:IsUseFlowAsset() then
+    if not self.TalkFlowController:RegisterFlowGraph(self.DialogueFlowGraphComponent) then
+      DebugPrint("TalkTaskBase_C:StartTalkFlow RegisterFlowGraph failed", self:GetTalkType())
+      return
+    end
     self.TalkFlowController:Start()
     return
   end
@@ -150,7 +153,10 @@ function TalkTaskBase_C:StartTalkFlow()
     self:EndDialogue()
     return
   end
-  self.TalkFlowController:RegisterFlow(TalkFlow)
+  if not self.TalkFlowController:RegisterFlow(TalkFlow) then
+    DebugPrint("TalkTaskBase_C:StartTalkFlow RegisterFlow failed", self:GetTalkType())
+    return
+  end
   self.TalkFlowController:Start()
 end
 
@@ -160,6 +166,10 @@ function TalkTaskBase_C:GetTalkFlowComps()
   }
 end
 
+function TalkTaskBase_C:GetTalkFlowType()
+  return self.TalkTaskData.TalkType
+end
+
 function TalkTaskBase_C:CreateTalkFlow()
   local TalkTaskData = self.TalkTaskData
   local FirstDialogueId = TalkTaskData and TalkTaskData.FirstDialogueId
@@ -167,12 +177,12 @@ function TalkTaskBase_C:CreateTalkFlow()
     return nil
   end
   local Comps = self:GetTalkFlowComps()
-  local FlowType = TalkTaskData and TalkTaskData.TalkType
+  local FlowType = self:GetTalkFlowType()
   local TalkFlow = TalkFlow_C:New(FirstDialogueId, FlowType, self, Comps)
   if self.OnFlowCreated then
     TalkFlow:BindOnFlowCreatedEvent(self, self.OnFlowCreated)
   end
-  TalkFlow:BindOnDialogueEndEvent(self, self.EndDialogue)
+  TalkFlow:BindOnFlowCompleteEvent(self, self.EndDialogue)
   TalkFlow:BindOnFlowEndEvent(self, self.OnFlowEnd)
   TalkFlow:BuildFlow()
   return TalkFlow

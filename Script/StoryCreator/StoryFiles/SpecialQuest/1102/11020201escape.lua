@@ -120,7 +120,7 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1781531329388535",
+            startQuest = "17889395854907273466",
             startPort = "Out",
             endQuest = "17815782636514200585",
             endPort = "In"
@@ -230,7 +230,7 @@ return {
           {
             startQuest = "17829835462875407664",
             startPort = "Out",
-            endQuest = "1781531329388535",
+            endQuest = "17889395854907273466",
             endPort = "In"
           },
           {
@@ -261,54 +261,6 @@ return {
             name = "QuestFail",
             pos = {x = 2046.8363636363636, y = 565.7636363636364},
             propsData = {}
-          },
-          ["1781531329388535"] = {
-            key = "1781531329388535",
-            type = "TalkNode",
-            name = "【Ver0105_SC003】法露茜出现过场",
-            pos = {x = 1135.9444338031808, y = 198.359873054599},
-            propsData = {
-              IsNpcNode = false,
-              TalkType = "Cinematic",
-              TalkStageName = "",
-              ShowFilePath = "/Game/Asset/Cinematics/Story/Ver01/Ver0105/Ver0105_SC003/SQ_Ver0105_SC003",
-              BlendInTime = 0,
-              BlendOutTime = 0,
-              InType = "FadeIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
-              ShowSkipButton = true,
-              ShowReviewButton = true,
-              ShowWikiButton = true,
-              PauseGameGlobal = true,
-              bOpenDefaultSkinKawaii = false,
-              HideNpcs = true,
-              HideMonsters = true,
-              bHidePickup = true,
-              bHideSkillCreature = true,
-              bHideSceneEffects = true,
-              HideMechanismsFX = true,
-              DisableNpcOptimization = false,
-              DoNotReceiveCharacterShadow = false,
-              CloseMotionBlur = false,
-              PauseTimeElapse = false,
-              BeginNewTargetPointName = "",
-              EndNewTargetPointName = "",
-              CameraLookAtTartgetPoint = "",
-              RestoreStand = false,
-              TalkActors = {
-                {
-                  TalkActorType = "Player",
-                  TalkActorId = 0,
-                  TalkActorVisible = false
-                }
-              },
-              bLockHighestLOD = false,
-              FreezeWorldComposition = false,
-              bTravelFullLoadWorldComposition = false,
-              SwitchToMaster = "None",
-              OverrideFailBlend = false
-            }
           },
           ["17815320308382619"] = {
             key = "17815320308382619",
@@ -656,6 +608,54 @@ return {
               ParamValue = 0,
               RelatedRegionId = {107201},
               bStoreToServer = true
+            }
+          },
+          ["17889395854907273466"] = {
+            key = "17889395854907273466",
+            type = "TalkNode",
+            name = "【Ver0105_SC003】法露茜出现过场",
+            pos = {x = 1135.9444338031808, y = 198.359873054599},
+            propsData = {
+              IsNpcNode = false,
+              TalkType = "Cinematic",
+              TalkStageName = "",
+              ShowFilePath = "/Game/Asset/Cinematics/Story/Ver01/Ver0105/Ver0105_SC003/SQ_Ver0105_SC003",
+              BlendInTime = 0,
+              BlendOutTime = 0,
+              InType = "FadeIn",
+              OutType = "FadeOut",
+              ShowFadeDetail = false,
+              ShowSkipButton = true,
+              ShowReviewButton = true,
+              ShowWikiButton = true,
+              PauseGameGlobal = true,
+              bOpenDefaultSkinKawaii = false,
+              HideNpcs = true,
+              HideMonsters = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
+              bHideSceneEffects = true,
+              HideMechanismsFX = true,
+              DisableNpcOptimization = false,
+              DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
+              PauseTimeElapse = false,
+              BeginNewTargetPointName = "",
+              EndNewTargetPointName = "",
+              CameraLookAtTartgetPoint = "",
+              RestoreStand = false,
+              TalkActors = {
+                {
+                  TalkActorType = "Player",
+                  TalkActorId = 0,
+                  TalkActorVisible = false
+                }
+              },
+              bLockHighestLOD = false,
+              FreezeWorldComposition = false,
+              bTravelFullLoadWorldComposition = false,
+              SwitchToMaster = "None",
+              OverrideFailBlend = false
             }
           }
         },
@@ -5084,7 +5084,7 @@ return {
           {
             startQuest = "17836537062261127197",
             startPort = "Out",
-            endQuest = "178168301593214719901",
+            endQuest = "17889395854907273467",
             endPort = "In"
           },
           {
@@ -5376,7 +5376,7 @@ return {
             endPort = "Branch_1"
           },
           {
-            startQuest = "178168301593214719901",
+            startQuest = "17889395854907273467",
             startPort = "Out",
             endQuest = "178645209918968165135",
             endPort = "Input"
@@ -5421,54 +5421,6 @@ return {
             name = "QuestFail",
             pos = {x = 3203, y = 1080.5},
             propsData = {}
-          },
-          ["178168301593214719901"] = {
-            key = "178168301593214719901",
-            type = "TalkNode",
-            name = "【Ver0105_SC005】",
-            pos = {x = 1972.227106227106, y = 296.54716117216105},
-            propsData = {
-              IsNpcNode = false,
-              TalkType = "Cinematic",
-              TalkStageName = "",
-              ShowFilePath = "/Game/Asset/Cinematics/Story/Ver01/Ver0105/Ver0105_SC005/SQ_Ver0105_SC005",
-              BlendInTime = 0,
-              BlendOutTime = 0,
-              InType = "FadeIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
-              ShowSkipButton = true,
-              ShowReviewButton = true,
-              ShowWikiButton = true,
-              PauseGameGlobal = true,
-              bOpenDefaultSkinKawaii = false,
-              HideNpcs = true,
-              HideMonsters = true,
-              bHidePickup = true,
-              bHideSkillCreature = true,
-              bHideSceneEffects = true,
-              HideMechanismsFX = false,
-              DisableNpcOptimization = false,
-              DoNotReceiveCharacterShadow = false,
-              CloseMotionBlur = false,
-              PauseTimeElapse = false,
-              BeginNewTargetPointName = "",
-              EndNewTargetPointName = "",
-              CameraLookAtTartgetPoint = "",
-              RestoreStand = false,
-              TalkActors = {
-                {
-                  TalkActorType = "Player",
-                  TalkActorId = 0,
-                  TalkActorVisible = false
-                }
-              },
-              bLockHighestLOD = false,
-              FreezeWorldComposition = true,
-              bTravelFullLoadWorldComposition = false,
-              SwitchToMaster = "None",
-              OverrideFailBlend = false
-            }
           },
           ["178168340668319971185"] = {
             key = "178168340668319971185",
@@ -6210,6 +6162,54 @@ return {
               RelatedRegionId = {107201},
               bStoreToServer = true
             }
+          },
+          ["17889395854907273467"] = {
+            key = "17889395854907273467",
+            type = "TalkNode",
+            name = "【Ver0105_SC005】",
+            pos = {x = 1972.227106227106, y = 296.54716117216105},
+            propsData = {
+              IsNpcNode = false,
+              TalkType = "Cinematic",
+              TalkStageName = "",
+              ShowFilePath = "/Game/Asset/Cinematics/Story/Ver01/Ver0105/Ver0105_SC005/SQ_Ver0105_SC005",
+              BlendInTime = 0,
+              BlendOutTime = 0,
+              InType = "FadeIn",
+              OutType = "FadeOut",
+              ShowFadeDetail = false,
+              ShowSkipButton = true,
+              ShowReviewButton = true,
+              ShowWikiButton = true,
+              PauseGameGlobal = true,
+              bOpenDefaultSkinKawaii = false,
+              HideNpcs = true,
+              HideMonsters = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
+              bHideSceneEffects = true,
+              HideMechanismsFX = false,
+              DisableNpcOptimization = false,
+              DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
+              PauseTimeElapse = false,
+              BeginNewTargetPointName = "",
+              EndNewTargetPointName = "",
+              CameraLookAtTartgetPoint = "",
+              RestoreStand = false,
+              TalkActors = {
+                {
+                  TalkActorType = "Player",
+                  TalkActorId = 0,
+                  TalkActorVisible = false
+                }
+              },
+              bLockHighestLOD = false,
+              FreezeWorldComposition = true,
+              bTravelFullLoadWorldComposition = false,
+              SwitchToMaster = "None",
+              OverrideFailBlend = false
+            }
           }
         },
         commentData = {
@@ -6278,7 +6278,7 @@ return {
           {
             startQuest = "178168239272614716015",
             startPort = "Out",
-            endQuest = "178168239272714716018",
+            endQuest = "17889395854907273468",
             endPort = "In"
           },
           {
@@ -6366,7 +6366,7 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "178168239272714716018",
+            startQuest = "17889395854907273468",
             startPort = "Out",
             endQuest = "17884368208303372595",
             endPort = "In"
@@ -6434,54 +6434,6 @@ return {
               StaticCreatorId = 0,
               GuideType = "N",
               GuidePointName = ""
-            }
-          },
-          ["178168239272714716018"] = {
-            key = "178168239272714716018",
-            type = "TalkNode",
-            name = "【Ver0105_SC006】主角救法露茜",
-            pos = {x = 1587.607456140351, y = 288.96929824561397},
-            propsData = {
-              IsNpcNode = false,
-              TalkType = "Cinematic",
-              TalkStageName = "",
-              ShowFilePath = "/Game/Asset/Cinematics/Story/Ver01/Ver0105/Ver0105_SC006/SQ_Ver0105_SC006",
-              BlendInTime = 0,
-              BlendOutTime = 0,
-              InType = "FadeIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
-              ShowSkipButton = true,
-              ShowReviewButton = true,
-              ShowWikiButton = true,
-              PauseGameGlobal = true,
-              bOpenDefaultSkinKawaii = false,
-              HideNpcs = true,
-              HideMonsters = true,
-              bHidePickup = true,
-              bHideSkillCreature = true,
-              bHideSceneEffects = true,
-              HideMechanismsFX = false,
-              DisableNpcOptimization = false,
-              DoNotReceiveCharacterShadow = false,
-              CloseMotionBlur = false,
-              PauseTimeElapse = false,
-              BeginNewTargetPointName = "",
-              EndNewTargetPointName = "",
-              CameraLookAtTartgetPoint = "",
-              RestoreStand = false,
-              TalkActors = {
-                {
-                  TalkActorType = "Player",
-                  TalkActorId = 0,
-                  TalkActorVisible = false
-                }
-              },
-              bLockHighestLOD = false,
-              FreezeWorldComposition = true,
-              bTravelFullLoadWorldComposition = false,
-              SwitchToMaster = "None",
-              OverrideFailBlend = false
             }
           },
           ["178168406803323127061"] = {
@@ -6736,6 +6688,54 @@ return {
               SoundStateType = 3,
               SoundPriority = 0,
               SoundType = 0
+            }
+          },
+          ["17889395854907273468"] = {
+            key = "17889395854907273468",
+            type = "TalkNode",
+            name = "【Ver0105_SC006】主角救法露茜",
+            pos = {x = 1587.607456140351, y = 288.96929824561397},
+            propsData = {
+              IsNpcNode = false,
+              TalkType = "Cinematic",
+              TalkStageName = "",
+              ShowFilePath = "/Game/Asset/Cinematics/Story/Ver01/Ver0105/Ver0105_SC006/SQ_Ver0105_SC006",
+              BlendInTime = 0,
+              BlendOutTime = 0,
+              InType = "FadeIn",
+              OutType = "FadeOut",
+              ShowFadeDetail = false,
+              ShowSkipButton = true,
+              ShowReviewButton = true,
+              ShowWikiButton = true,
+              PauseGameGlobal = true,
+              bOpenDefaultSkinKawaii = false,
+              HideNpcs = true,
+              HideMonsters = true,
+              bHidePickup = true,
+              bHideSkillCreature = true,
+              bHideSceneEffects = true,
+              HideMechanismsFX = false,
+              DisableNpcOptimization = false,
+              DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
+              PauseTimeElapse = false,
+              BeginNewTargetPointName = "",
+              EndNewTargetPointName = "",
+              CameraLookAtTartgetPoint = "",
+              RestoreStand = false,
+              TalkActors = {
+                {
+                  TalkActorType = "Player",
+                  TalkActorId = 0,
+                  TalkActorVisible = false
+                }
+              },
+              bLockHighestLOD = false,
+              FreezeWorldComposition = true,
+              bTravelFullLoadWorldComposition = false,
+              SwitchToMaster = "None",
+              OverrideFailBlend = false
             }
           }
         },

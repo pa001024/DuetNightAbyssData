@@ -165,6 +165,9 @@ function S:SetSwitcher(bValue)
   if self.HasBeenForbidden then
     return
   end
+  if self.CacheName == "ShowGuildBadge" and self.bShowGuildBadgeRequesting then
+    return
+  end
   if bValue == self.NowValue then
     return
   end
@@ -685,6 +688,45 @@ function S:GetBottomKeyInfos()
   }
 end
 
+function S:SetShowGuildBadgeOldValue()
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    self.OldValue = Avatar.ShowGuildBadge ~= false
+  end
+end
+
+function S:RestoreDefaultShowGuildBadgeOptionSet()
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    self.OldValue = Avatar.ShowGuildBadge ~= false
+  end
+  self:SaveShowGuildBadgeOptionSetting()
+end
+
+function S:SaveShowGuildBadgeOptionSetting()
+  if self.bIsRestoringState then
+    return
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    self:RevertSwitch(self, self.OldValue)
+    return
+  end
+  local OldValue = self.OldValue
+  self.bShowGuildBadgeRequesting = true
+  Avatar:SetShowGuildBadge(function(ErrCode)
+    if not IsValid(self) then
+      return
+    end
+    self.bShowGuildBadgeRequesting = false
+    if ErrCode ~= ErrorCode.RET_SUCCESS then
+      DebugPrint("SetShowGuildBadge failed", ErrCode)
+      self.OldValue = OldValue
+      self:RevertSwitch(self, OldValue)
+    end
+  end, self.NowValue)
+end
+
 function S:SetShowBuffEnemyOldValue()
   self.OldValue = SettingUtils.GetEMCache(self.EMCacheName, self.EMCacheKey, self.DefaultValue)
 end
@@ -1199,6 +1241,32 @@ function S:SaveDamageTextMiniOptionSetting()
   if JumpWordManager then
     JumpWordManager:SetbOpenJumpWordNumberFormat(self.NowValue)
   end
+end
+
+function S:SetbEnableStrafeCircleOldValue()
+  self.OldValue = self.DefaultValue
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
+  if not IsValid(Player) then
+    return
+  end
+  self.OldValue = Player.bEnableStrafeCircle
+end
+
+function S:RestoreDefaultbEnableStrafeCircleOptionSet()
+  self:SavebEnableStrafeCircleOptionSetting()
+end
+
+function S:SavebEnableStrafeCircleOptionSetting()
+  if self.bIsRestoringState then
+    return
+  end
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
+  if not IsValid(Player) then
+    self:RevertSwitch(self, self.OldValue)
+    return
+  end
+  Player:UpdateEnableStrafeCircle(self.NowValue)
+  self.OldValue = self.NowValue
 end
 
 return S

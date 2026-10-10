@@ -182,6 +182,7 @@ function M:OpenReward()
       CanReceive = WuyoushengData:IsCompleted(RewardKeyId, TaskInfo.RequiredStar) and not WuyoushengData:IsRewarded(RewardKeyId)
     end
     Item.ItemId = RewardKeyId
+    Item.EventId = self.EventId
     Item.CanReceive = CanReceive
     Item.RewardsGot = 1 == RewardState
     Item.ReddotName = "WuyoushengReward"
@@ -237,7 +238,7 @@ function M:GetRewards(Content)
   local Avatar = GWorld:GetAvatar()
   local RewardKeyId = Content.ConfigData.ItemId
   if Avatar then
-    local EventId = self.EventId or 110001
+    local EventId = Content.ConfigData.EventId or 110001
     
     local function Callback(ErrCode, Ret)
       if 0 == ErrCode then
@@ -273,8 +274,8 @@ function M:GetRewards(Content)
         end
         Content.Owner:RefreshButton(HasCanReceive)
         EventManager:FireEvent(EventID.RefreshWuyoushengReddot)
+        UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, Ret, false, nil, nil, false)
       end
-      UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, Ret, false, nil, nil, false)
     end
     
     Avatar:WuyoushengGetReward(EventId, RewardKeyId, Callback)
@@ -284,7 +285,7 @@ end
 function M:GetAllRewards(Content)
   local Avatar = GWorld:GetAvatar()
   if Avatar then
-    local EventId = self.EventId or 110001
+    local EventId = Content.EventId or 110001
     
     local function CallBack(ErrCode, Ret)
       if 0 == ErrCode then

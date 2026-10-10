@@ -213,42 +213,46 @@ return ReadOnly("RegionOnline", {
     NumX = 5,
     NumY = 5,
     NumZ = 1,
-    OnlineCondition = 100103,
+    OnlineCondition = 98,
     Priority = 1,
+    RegionChannelName = "UI_SUBREGION_NAME_101101",
     RegionChannelSwitchCD = 5,
     SubRegionId = 999701,
-    bOpenAOI = true,
-    bOpenAOIDebug = true
+    bOpenAOI = true
   },
   [999702] = {
     ManuaSwitchPlayerNum = 150,
     MultiPlayerNum = 100,
-    OnlineCondition = 100103,
+    OnlineCondition = 98,
     Priority = 2,
+    RegionChannelName = "UI_SUBREGION_NAME_101101",
     RegionChannelSwitchCD = 5,
     SubRegionId = 999702
   },
   [999703] = {
     ManuaSwitchPlayerNum = 150,
     MultiPlayerNum = 100,
-    OnlineCondition = 100103,
+    OnlineCondition = 98,
     Priority = 3,
+    RegionChannelName = "UI_SUBREGION_NAME_101101",
     RegionChannelSwitchCD = 5,
     SubRegionId = 999703
   },
   [999704] = {
     ManuaSwitchPlayerNum = 150,
     MultiPlayerNum = 100,
-    OnlineCondition = 100103,
+    OnlineCondition = 98,
     Priority = 4,
+    RegionChannelName = "UI_SUBREGION_NAME_101101",
     RegionChannelSwitchCD = 5,
     SubRegionId = 999704
   },
   [999705] = {
     ManuaSwitchPlayerNum = 150,
     MultiPlayerNum = 100,
-    OnlineCondition = 100103,
+    OnlineCondition = 98,
     Priority = 5,
+    RegionChannelName = "UI_SUBREGION_NAME_101101",
     RegionChannelSwitchCD = 5,
     SubRegionId = 999705
   }

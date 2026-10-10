@@ -17,7 +17,7 @@ return {
     Area = "China",
     DevFlag = "Development",
     GroupId = 103,
-    Name = "1.5分支内网服",
+    Name = "1.7分支内网服",
     ServerID = 103
   },
   [104] = {
@@ -59,14 +59,14 @@ return {
     Area = "China",
     DevFlag = "Development",
     GroupId = 201,
-    Name = "1.5跑测服上",
+    Name = "1.7跑测服上",
     ServerID = 201
   },
   [202] = {
     Area = "China",
     DevFlag = "Development",
     GroupId = 202,
-    Name = "1.5跑测服下",
+    Name = "1.7跑测服下",
     ServerID = 202
   },
   [203] = {
@@ -94,7 +94,7 @@ return {
     Area = "China",
     DevFlag = "Development",
     GroupId = 303,
-    Name = "杨晨服",
+    Name = "分支2服（QA用）",
     ServerID = 303
   },
   [306] = {
@@ -264,13 +264,6 @@ return {
     GroupId = 513,
     Name = "1.5分支Group合服测试4",
     ServerID = 514
-  },
-  [1109] = {
-    Area = "China",
-    DevFlag = "Development",
-    GroupId = 1109,
-    Name = "分支2服（QA用）",
-    ServerID = 1109
   },
   [5001] = {
     Area = "China",

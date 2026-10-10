@@ -126,5 +126,13 @@ return ReadOnly("Trial", {
   [101033] = {
     CharTrialId = 101033,
     Tasks = T.RT_1
+  },
+  [101034] = {
+    CharTrialId = 101034,
+    Tasks = T.RT_1
+  },
+  [101035] = {
+    CharTrialId = 101035,
+    Tasks = T.RT_1
   }
 })

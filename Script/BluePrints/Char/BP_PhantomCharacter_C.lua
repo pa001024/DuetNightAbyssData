@@ -205,6 +205,11 @@ function BP_PhantomCharacter:OnEMActorDestroy_Lua(DestroyReason)
 end
 
 function BP_PhantomCharacter:OnCharacterReady_Lua()
+  local GameUIManager = GWorld.GameInstance and GWorld.GameInstance:GetGameUIManager()
+  local bOwnedByMainPlayer = self.PhantomOwner and self.PhantomOwner:IsMainPlayer()
+  if GameUIManager and bOwnedByMainPlayer then
+    GameUIManager:RefreshBattleWheelSlotsIfVisible()
+  end
   if self.RangedWeapon == nil then
     return
   end

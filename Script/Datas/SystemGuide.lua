@@ -291,6 +291,7 @@ return ReadOnly("SystemGuide", {
     UIUnlockRule = "Temple"
   },
   [2038] = {
+    ConditionCheck = 99,
     FinishQuest = 10020101,
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
@@ -309,7 +310,7 @@ return ReadOnly("SystemGuide", {
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_GroupOnlineRule.story",
     IsInRegion = 1,
-    PlayerInControl = 1,
+    OpenInterface = "FriendMain",
     SysGuideId = 2039,
     UIUnlockRule = "FriendMain"
   },
@@ -358,6 +359,7 @@ return ReadOnly("SystemGuide", {
     SysGuideId = 2054
   },
   [2055] = {
+    ConditionCheck = 99,
     FinishQuest = 10020105,
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
@@ -475,6 +477,7 @@ return ReadOnly("SystemGuide", {
     SysGuideId = 2066
   },
   [2067] = {
+    ConditionCheck = 99,
     FinishQuest = 10020101,
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
@@ -524,6 +527,7 @@ return ReadOnly("SystemGuide", {
     SysGuideId = 2070
   },
   [2071] = {
+    ConditionCheck = 99,
     FinishQuest = 10020108,
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 1,
@@ -556,6 +560,18 @@ return ReadOnly("SystemGuide", {
     PreSysGuideId = 2069,
     SysGuideId = 2073,
     UIUnlockRule = "WalnutBag"
+  },
+  [2074] = {
+    ConditionCheck = 99,
+    FinishQuestChain = 100208,
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 1,
+    GuideStoryline = "Guide/Guide_OnlineArea.story",
+    IsInRegion = 1,
+    PlayerInControl = 1,
+    SysGuideId = 2074
   },
   [2075] = {
     FinishQuestChain = 200104,
@@ -595,6 +611,7 @@ return ReadOnly("SystemGuide", {
     SysGuideId = 2077
   },
   [2078] = {
+    ConditionCheck = 99,
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
     GuideInfo = {SelectedTargetId = 2101},
@@ -910,6 +927,7 @@ return ReadOnly("SystemGuide", {
     SysGuideId = 2110
   },
   [2111] = {
+    FinishQuest = 10020108,
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
     GuideSkip = 1,
@@ -918,7 +936,6 @@ return ReadOnly("SystemGuide", {
     IsInRegion = 1,
     OpenInterface = "BattleMain",
     PlayerInControl = 1,
-    PreSysGuideId = 2078,
     SysGuideId = 2111
   },
   [2112] = {
@@ -1072,5 +1089,28 @@ return ReadOnly("SystemGuide", {
     IsInRegion = 1,
     OpenInterface = "Observation",
     SysGuideId = 2126
+  },
+  [2127] = {
+    FinishQuest = 10020108,
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_Armory_Chongying.story",
+    IsInRegion = 1,
+    OpenInterface = "ArmoryMain",
+    SysGuideId = 2127
+  },
+  [2128] = {
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_GroupOnlineRule_2.story",
+    IsInRegion = 1,
+    OpenInterface = "StyleOfPlay",
+    PreSysGuideId = 2008,
+    SysGuideId = 2128,
+    UIUnlockRule = "Dungeon"
   }
 })

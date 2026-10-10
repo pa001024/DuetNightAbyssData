@@ -27,13 +27,14 @@ local function HasValidCollectRewardData(PoolId)
   for RawCategoryIndex, RewardInfo in pairs(PoolData.ExtraItem) do
     local CategoryIndex = tonumber(RawCategoryIndex)
     if CategoryIndex and type(RewardInfo) == "table" then
-      local ItemId = tonumber(RewardInfo[1])
-      local ItemCount = tonumber(RewardInfo[2])
+      local RewardType = ItemUtils.GetItemType(RewardInfo[1])
+      local ItemId = tonumber(RewardInfo[2])
+      local ItemCount = tonumber(RewardInfo[3])
       local CollectItemIds = RoundData.Id and RoundData.Id[CategoryIndex]
       local CollectItemTypeIndex = RoundData.Type and RoundData.Type[CategoryIndex]
       local CollectItemType = CollectItemTypeIndex and ItemUtils.GetItemType(CollectItemTypeIndex)
       local CollectItemCount = RoundData.Count and RoundData.Count[CategoryIndex]
-      if ItemId and ItemId > 0 and ItemCount and ItemCount > 0 and CollectItemType and CollectItemIds and #CollectItemIds > 0 and CollectItemCount and CollectItemCount > 0 then
+      if type(RewardType) == "string" and "" ~= RewardType and ItemId and ItemId > 0 and ItemCount and ItemCount > 0 and CollectItemType and CollectItemIds and #CollectItemIds > 0 and CollectItemCount and CollectItemCount > 0 then
         return true
       end
     end

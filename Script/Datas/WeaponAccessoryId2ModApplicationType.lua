@@ -7,6 +7,7 @@ end
 return ReadOnly("WeaponAccessoryId2ModApplicationType", {
   [20001] = 103,
   [20004] = 105,
+  [20005] = 104,
   [30001] = 102,
   [40001] = 106
 })

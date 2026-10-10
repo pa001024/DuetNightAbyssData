@@ -69,4 +69,34 @@ function AppearanceCollectEventDict:SetApperanceCollect(EventId, AppearanceColle
   self[EventId] = AppearanceCollectEventData
 end
 
+function AppearanceCollectEventDict:SkinCollectScoreInfo(EventId)
+  local CurrentScore = 0
+  local MaxScore = 0
+  local collectData = self:GetApperanceCollectEvent(EventId)
+  if collectData then
+    CurrentScore = collectData.Score
+  end
+  local RewardConfigData = DataMgr.AppearanceCollectReward[EventId]
+  if RewardConfigData then
+    MaxScore = RewardConfigData.MaxRewardPoint
+  end
+  return CurrentScore, MaxScore
+end
+
+function AppearanceCollectEventDict:IsSkinCollectAppearance(EventId, TypeId)
+  for Index, EventData in pairs(DataMgr.AppearanceCollectEvent) do
+    if EventData.EventId == EventId then
+      local AppId = EventData.AppId
+      for AppIdIndex, AppIdTYpeId in pairs(AppId) do
+        for ListIndex, ListTYpeId in pairs(AppIdTYpeId) do
+          if ListTYpeId == TypeId then
+            return true
+          end
+        end
+      end
+    end
+  end
+  return false
+end
+
 return {AppearanceCollectEvent = AppearanceCollectEvent, AppearanceCollectEventDict = AppearanceCollectEventDict}

@@ -62,9 +62,48 @@ local function BuildAccessoryRankSelfInfo(RankPayload)
   return FinalSelfRankInfo, TopNInfo
 end
 
+local function BuildCommonRankingParams(SelfRankInfo, TopNInfo)
+  return {
+    TitleText = "UI_AppearanceScore_ScoreRank",
+    MainTab = {
+      TitleName = GText("UI_AppearanceScore_RankList"),
+      StyleName = "TextImage",
+      DynamicNode = {"Back", "BottomKey"},
+      LeftKey = "Q",
+      RightKey = "E"
+    },
+    SubTab = {
+      [1] = {
+        Text = "UI_AppearanceScore_ScoreRank",
+        TabId = 1
+      }
+    },
+    ColumnSchema = {
+      [1] = {
+        {Type = "RankingNum"},
+        {Type = "Name"},
+        {
+          Type = "TextInfo",
+          HeaderName = "UI_AppearanceScore_Score",
+          QaText = "UI_AppearanceScore_Rule",
+          Text1 = {TextMapId = "%.0f", ValueKey = "Score"}
+        }
+      }
+    },
+    TopNRankInfo = {
+      [1] = TopNInfo or {}
+    },
+    SelfRankInfo = {
+      [1] = SelfRankInfo or {}
+    },
+    RankEmptyText = "RaidDungeon_Rank_Empty",
+    PreviewActorTabId = 1
+  }
+end
+
 function M:LoadUI(...)
   local SelfRankInfo, TopNInfo = ParseAccessoryRankData(...)
-  return UIManager(GWorld.GameInstance):LoadUINew("AppearanceRank", SelfRankInfo, TopNInfo)
+  return UIManager(GWorld.GameInstance):LoadUINew("CommonRanking", BuildCommonRankingParams(SelfRankInfo, TopNInfo))
 end
 
 function M:Open()

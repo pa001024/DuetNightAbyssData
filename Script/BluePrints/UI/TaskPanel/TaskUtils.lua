@@ -710,7 +710,8 @@ function TaskUtils:GetOptinalIconTextureByQuestChainType(InChainId)
   local ConstQuestChainTypeTable = {
     [Const.MainQuestChainType] = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission_Optional.T_Gp_MainMission_Optional",
     [Const.SideQuestChainType] = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SideMission_Optional.T_Gp_SideMission_Optional",
-    [Const.SpecialSideQuestChainType] = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpSideMission_Optional.T_Gp_SpSideMission_Optional"
+    [Const.SpecialSideQuestChainType] = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpSideMission_Optional.T_Gp_SpSideMission_Optional",
+    [Const.MainActivityQuestChainType] = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission_Optional.T_Gp_MainMission_Optional"
   }
   if DataMgr.QuestChain[InChainId] then
     local CurQuestChainType = DataMgr.QuestChain[InChainId].QuestChainType

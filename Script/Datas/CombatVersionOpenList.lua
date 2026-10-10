@@ -11,5 +11,6 @@ return ReadOnly("CombatVersionOpenList", {
   [13] = true,
   [14] = true,
   [15] = true,
-  [16] = true
+  [16] = true,
+  [17] = true
 })

@@ -102,6 +102,14 @@ function M:InitDailyGoalTask()
   self:RefresDailyGoalTask()
   self:RefreshProgress()
   self:SetBtn_RewardState()
+  self:TryShowDailyTaskRewardReclaimToast()
+end
+
+function M:TryShowDailyTaskRewardReclaimToast()
+  if not self.PlayerAvatar:ConsumeDailyTaskRewardReclaimNotice() then
+    return
+  end
+  UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_Toast_DailyGoal_RewardClaimReminder"))
 end
 
 function M:SetBtn_RewardState()

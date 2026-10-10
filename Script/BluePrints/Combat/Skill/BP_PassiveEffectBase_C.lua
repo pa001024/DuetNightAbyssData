@@ -6,15 +6,9 @@ local BP_PassiveEffectBase_C = Class({
 
 function BP_PassiveEffectBase_C:ReceiveBeginPlay()
   rawset(self, "BattleEvent", self.BattleEvent)
+  rawset(self, "PassiveEffectClient", self:GetPassiveEffectClient())
   if self.PassiveLuaPath and self.PassiveLuaPath ~= "" then
     self.PassiveLogic = require(self.PassiveLuaPath)
-    if getmetatable(self.PassiveLogic) == nil then
-      setmetatable(self.PassiveLogic, {
-        __index = function(_, Key)
-          return self[Key]
-        end
-      })
-    end
     self:BindPassiveEvents()
     if self.PassiveLogic.BeginPlay and type(self.PassiveLogic.BeginPlay) == "function" then
       self.PassiveLogic.BeginPlay(self)
@@ -50,6 +44,18 @@ end
 
 function BP_PassiveEffectBase_C:InitPassiveLuaVar_Bool(VarName, Value)
   ApplyLuaFallbackVar(self, VarName, Value)
+end
+
+function BP_PassiveEffectBase_C:ExecutePassiveLuaFunction(FunctionName)
+  if not self.PassiveLogic then
+    return false
+  end
+  local Handler = self.PassiveLogic[tostring(FunctionName)]
+  if type(Handler) ~= "function" then
+    return false
+  end
+  Handler(self)
+  return true
 end
 
 function BP_PassiveEffectBase_C:SetPassiveOwner(PassiveOwner)

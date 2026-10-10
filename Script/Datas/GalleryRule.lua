@@ -261,6 +261,20 @@ return ReadOnly("GalleryRule", {
     PreferredMonsterId = 8003001,
     Priority = 31512
   },
+  [8004001] = {
+    DescriptionDetail = "Mon_DesDetail_8004001",
+    GalleryRuleId = 8004001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Empty.T_Head_Empty",
+    PreferredMonsterId = 8004001,
+    Priority = 31513
+  },
+  [8005001] = {
+    DescriptionDetail = "Mon_DesDetail_8005001",
+    GalleryRuleId = 8005001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Empty.T_Head_Empty",
+    PreferredMonsterId = 8005001,
+    Priority = 31012
+  },
   [8500001] = {
     DescriptionDetail = "Mon_DesDetail_8500001",
     DisableTrainingGround = true,
@@ -420,6 +434,22 @@ return ReadOnly("GalleryRule", {
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Empty.T_Head_Empty",
     PreferredMonsterId = 8524001,
     Priority = 24
+  },
+  [8525001] = {
+    DescriptionDetail = "Mon_DesDetail_8525001",
+    DisableTrainingGround = true,
+    GalleryRuleId = 8525001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Boss_Linen.T_Head_Boss_Linen",
+    PreferredMonsterId = 8525001,
+    Priority = 25
+  },
+  [8527001] = {
+    DescriptionDetail = "Mon_DesDetail_8527001",
+    DisableTrainingGround = true,
+    GalleryRuleId = 8527001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Empty.T_Head_Empty",
+    PreferredMonsterId = 8527001,
+    Priority = 27
   },
   [9001001] = {
     DescriptionDetail = "Mon_DesDetail_9001001",

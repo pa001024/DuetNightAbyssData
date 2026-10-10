@@ -8,6 +8,11 @@ function M:Construct()
 end
 
 function M:OnLoaded(BossMonster)
+  if not IsValid(BossMonster) then
+    self.BossMonster = nil
+    self.Super.Close(self)
+    return
+  end
   self.BossMonster = BossMonster
   self:PlayAnimation(self.In)
   self.BossMonster:SetTimeDilation(Const.ToughnessTimeDilation, true)
@@ -27,7 +32,7 @@ function M:PlayOutAnim()
 end
 
 function M:ShowBossBloodPanelTip()
-  if not self.BossMonster or self.BossMonster:GetAttr("Hp") <= 0 then
+  if not (self.BossMonster and IsValid(self.BossMonster)) or self.BossMonster:GetAttr("Hp") <= 0 then
     return
   end
   local BossBloodUI = self.BossMonster.BossBloodUI
@@ -40,6 +45,10 @@ end
 
 function M:Close()
   if not self.BossMonster then
+    return
+  end
+  if not IsValid(self.BossMonster) then
+    self.Super.Close(self)
     return
   end
   local BossBloodUI = self.BossMonster.BossBloodUI

@@ -7,6 +7,14 @@ local HyperWeaponUtils = require("Utils.HyperWeaponUtils")
 local UIUtils = require("Utils.UIUtils")
 local M = Class("BluePrints.UI.BP_UIState_C")
 
+function M:Initialize(Initializer)
+  M.Super.Initialize(self, Initializer)
+  self.PetRecyclePage = nil
+  self.PetRecycleVisibility = nil
+  self.PetRecyclePointerState = nil
+  self.PetRecyclePausedEvents = nil
+end
+
 function M:Construct()
   self.Loaded = false
   M.Super.Construct(self)
@@ -106,6 +114,9 @@ function M:ComponentInitDispatcher()
 end
 
 function M:On_Image_Click_MouseButtonDown(MyGeometry, MouseEvent)
+  if IsValid(self.PetRecyclePage) then
+    self.PetRecyclePage:OnBackgroundPointerDown()
+  end
   self:CallFunctionByName(self.CurMainTab.Name .. "Main_OnImageClickMouseButtonDown")
   return self:OnPointerDown(MyGeometry, MouseEvent)
 end
@@ -170,6 +181,11 @@ function M:OnBtnElementUnhovered()
 end
 
 function M:OnBackgroundClicked()
+  if IsValid(self.PetRecyclePage) then
+    local Reply = self.PetRecyclePage:OnBackgroundClicked()
+    EventManager:FireEvent(EventID.OnMenuClose)
+    return Reply
+  end
   self:CallFunctionByName(self.CurMainTab.Name .. "Main_OnBackgroundClicked")
   EventManager:FireEvent(EventID.OnMenuClose)
 end
@@ -672,6 +688,122 @@ function M:DefaultInitSubUI(Params)
   end
 end
 
+function M:OpenPetRecycle()
+  if self.PetRecyclePage or self.IsPreviewMode then
+    return
+  end
+  local Platform = self.IsPC and "PC" or "Mobile"
+  local Suffix = self.IsPC and "P" or "M"
+  local Path = "/Game/UI/WBP/Armory/" .. Platform .. "/WBP_Armory_PetRecycle_" .. Suffix
+  local Page = UIManager(self):CreateWidget(Path, false)
+  if not (Page and Page.Init) or not Page.Pet_Sell.Init then
+    return
+  end
+  self.PetRecyclePage = Page
+  local Slot = self.Panel_SubUI:AddChildToCanvas(Page)
+  local Anchors = FAnchors()
+  Anchors.Minimum = FVector2D(0, 0)
+  Anchors.Maximum = FVector2D(1, 1)
+  Slot:SetAnchors(Anchors)
+  Slot:SetOffsets(FMargin(0, 0, 0, 0))
+  Slot:SetZOrder(10)
+  self.PetRecycleVisibility = {}
+  for _, Widget in ipairs({
+    self.Tab_Arm,
+    self.Tab_L,
+    self.Panel_SubTab,
+    self.Tab_PetAlive,
+    self.Selective_Listing,
+    self.CurrentSubUI
+  }) do
+    self.PetRecycleVisibility[Widget] = Widget:GetVisibility()
+    Widget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  self.PetRecyclePointerState = {
+    Drag = self.EnableDrag,
+    Wheel = self.EnableMouseWheel
+  }
+  self.EnableDrag = false
+  self.EnableMouseWheel = false
+  self.PetRecyclePausedEvents = {}
+  for _, EventName in ipairs({
+    "OnNewPetObtained",
+    "OnPetDeleted",
+    "OnPropChangePets",
+    "OnSwitchPet"
+  }) do
+    local Event = EventID[EventName]
+    if self.ListenEvent and self.ListenEvent[Event] then
+      self.PetRecyclePausedEvents[Event] = self[EventName]
+      self:RemoveDispatcher(Event)
+    end
+  end
+  Page:Init(self)
+end
+
+function M:ClosePetRecycle()
+  local Page = self.PetRecyclePage
+  if not Page then
+    return
+  end
+  Page.bClosing = true
+  Page:SetInputBlocked(false)
+  Page:RemoveAllDispatcher()
+  self.PetRecyclePage = nil
+  Page:RemoveFromParent()
+  for Widget, Visibility in pairs(self.PetRecycleVisibility) do
+    if IsValid(Widget) then
+      Widget:SetVisibility(Visibility)
+    end
+  end
+  self.PetRecycleVisibility = nil
+  self.EnableDrag = self.PetRecyclePointerState.Drag
+  self.EnableMouseWheel = self.PetRecyclePointerState.Wheel
+  self.PetRecyclePointerState = nil
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    self.CurrentPet = Avatar.Pets[Avatar.CurrentPet]
+  end
+  if Avatar and next(Avatar.Pets) then
+    self:PetMain_CreateItemContents()
+    local TabIndex = self.CurPetTabIdx
+    if 2 == TabIndex and 0 == #self.ResourcePetItemContentsArray then
+      TabIndex = 1
+    end
+    if 1 == TabIndex and 0 == #self.UseablePetItemContentsArray then
+      TabIndex = 2
+    end
+    self:InitRoleListByPetTab(TabIndex)
+    self:SelectRoleListItem(self.PetMain_CmpContent)
+    self:InitSubUI()
+    self.Tab_PetAlive:Forbid(0 == #self.ResourcePetItemContentsArray)
+    self:UpdateBoxReddot()
+  elseif Avatar then
+    self:PetMain_CreateItemContents()
+    self:CreateMainTabs({
+      Char = self.ComparedChar
+    })
+    self:UpdateMainTabs(self.MainTabs)
+    if self.MainTabs[1] then
+      self:JumpToTab(self.MainTabs[1].Name)
+    else
+      self:CallFunctionByName("PetMain_PreMainTabChange")
+      self.CurMainTab, self.CurSubTab = self.NoneTab, self.NoneTab
+      self.CurrentSubUI:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.CurrentSubUI = nil
+      self.Tab_L:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.Panel_SubTab:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.WS_State:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.EMListView_Role:ClearListItems()
+    end
+  end
+  for Event, Callback in pairs(self.PetRecyclePausedEvents) do
+    self:AddDispatcher(Event, self, Callback)
+  end
+  self.PetRecyclePausedEvents = nil
+  self:SetFocus()
+end
+
 function M:ModifySubUIInitParams(Params)
   Params.Parent = self
   Params.IsPreviewMode = Params.IsPreviewMode or self.IsPreviewMode
@@ -922,6 +1054,10 @@ function M:OnRecoverCameraEnd()
 end
 
 function M:OnBackBtnClicked()
+  if self.PetRecyclePage then
+    self.PetRecyclePage:BeginExitDecomposeMode()
+    return
+  end
   if self.ComponentReceivedEvent.Back then
     return
   end
@@ -960,6 +1096,11 @@ function M:BindEventOnClose(Obj, Func)
 end
 
 function M:Destruct()
+  if IsValid(self.PetRecyclePage) then
+    self.PetRecyclePage.bClosing = true
+    self.PetRecyclePage:SetInputBlocked(false)
+    self.PetRecyclePage:RemoveAllDispatcher()
+  end
   M.Super.Destruct(self)
   if self.ActorController then
     self.ActorController:OnDestruct()

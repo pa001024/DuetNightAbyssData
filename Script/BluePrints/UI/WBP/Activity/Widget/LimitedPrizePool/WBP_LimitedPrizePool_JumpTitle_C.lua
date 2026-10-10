@@ -87,8 +87,8 @@ end
 function M:SetTips(EventRule, InfoClickFunction, InfoClickObj)
   if EventRule then
     self.Text_ActivityDescTitle:SetText(GText("UI_Common_Rule"))
-    self.Com_BtnExplanation:SetVisibility(UIConst.VisibilityOp.VisibilityOp)
-    self.Group_ActivityQa:SetVisibility(UIConst.VisibilityOp.VisibilityOp)
+    self.Com_BtnExplanation:SetVisibility(UIConst.VisibilityOp.Visible)
+    self.Group_ActivityQa:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   else
     self.Com_BtnExplanation:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Group_ActivityQa:SetVisibility(UIConst.VisibilityOp.Collapsed)

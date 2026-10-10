@@ -1269,6 +1269,22 @@ function M:TryConsumeBoardHorizontalStickArmed()
   return true
 end
 
+function M:TryRearmStickByAnalog(InKeyName, AnalogValue)
+  if not InKeyName or nil == AnalogValue then
+    return
+  end
+  local AnalogThreshold = StringBoardConfig.AnalogThreshold
+  local AnalogDeadZone = AnalogThreshold * 0.5
+  if AnalogDeadZone < math.abs(AnalogValue) then
+    return
+  end
+  if InKeyName == UIConst.GamePadKey.LeftAnalogY then
+    self.bSubTabStickArmed = true
+  elseif InKeyName == UIConst.GamePadKey.LeftAnalogX then
+    self.bBoardHorizontalStickArmed = true
+  end
+end
+
 function M:HandleBoardGamePadKeyDown(InKeyName)
   if self:IsClueDetailGamepadLocked() and (self:IsBoardNavUpKey(InKeyName) or self:IsBoardNavDownKey(InKeyName) or self:IsBoardNavLeftKey(InKeyName) or self:IsBoardNavRightKey(InKeyName) or InKeyName == UIConst.GamePadKey.FaceButtonBottom) then
     return true
@@ -1552,6 +1568,7 @@ function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
     return UIUtils.Unhandled
   end
   if self:IsClueDetailGamepadLocked() then
+    self:TryRearmStickByAnalog(InKeyName, AnalogValue)
     return UIUtils.Handled
   end
   local AnalogThreshold = StringBoardConfig.AnalogThreshold

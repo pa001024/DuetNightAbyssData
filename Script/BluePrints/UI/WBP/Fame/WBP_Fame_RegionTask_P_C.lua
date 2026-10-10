@@ -5,10 +5,6 @@ local M = Class({
   "BluePrints.UI.BP_UIState_C"
 })
 
-local function GetCurrentReputationID()
-  return self.CurRegionTabId
-end
-
 function M:OnLoaded(...)
   self.Super.OnLoaded(self, ...)
   self.bClosing = false

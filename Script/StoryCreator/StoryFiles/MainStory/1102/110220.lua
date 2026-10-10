@@ -53,7 +53,7 @@ return {
       key = "1783242804230380",
       type = "StoryNode",
       name = "任务节点",
-      pos = {x = 1240, y = 280.5714285973789},
+      pos = {x = 1228, y = 282.5714285973789},
       propsData = {
         QuestId = 11022001,
         QuestDescriptionComment = "",
@@ -420,16 +420,22 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "178325887374323890681",
-            startPort = "Out",
-            endQuest = "178747473039020181440",
-            endPort = "In"
-          },
-          {
             startQuest = "178747473039020181440",
             startPort = "Out",
             endQuest = "17832442648255967557",
             endPort = "Success"
+          },
+          {
+            startQuest = "178325887374323890681",
+            startPort = "Out",
+            endQuest = "17889425188893516",
+            endPort = "In"
+          },
+          {
+            startQuest = "17889425188893516",
+            startPort = "Out",
+            endQuest = "178747473039020181440",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -458,7 +464,7 @@ return {
             key = "178325887374323890681",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1600, y = 372},
+            pos = {x = 1381.8181818181818, y = 373.3636363636364},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -514,6 +520,17 @@ return {
               IsAsync = false,
               UIName = "StringBoardMain",
               IsInterfaceJump = false
+            }
+          },
+          ["17889425188893516"] = {
+            key = "17889425188893516",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1755.2954545454543, y = 367.12499999999994},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },

@@ -151,7 +151,7 @@ function GameModeQuestMgr:SwitchStoryModeSuitRecover(SuitType, SuitSubBase)
   end
   for SuitKey, SuitValue in pairs(SuitSubBase) do
     local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
-    PlayerController:SetStoryModeState(SuitValue)
+    PlayerController:SetStoryModeState(SuitValue, CommonConst.DefaultTag.SwitchStoryMode)
   end
 end
 

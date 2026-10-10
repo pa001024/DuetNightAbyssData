@@ -29,8 +29,8 @@ function Common_Dialog_LuaModel_Base:PackageData()
 end
 
 function Common_Dialog_LuaModel_Base:BindDialogWidget(PopupId, DialogWidget)
-  self.DialogWidget = DialogWidget
-  self.PopupId = PopupId
+  rawset(self, "DialogWidget", DialogWidget)
+  rawset(self, "PopupId", PopupId)
 end
 
 function Common_Dialog_LuaModel_Base:Initialize()

@@ -5,6 +5,8 @@ local StorylineUtils = require("StoryCreator.StoryLogic.StorylineUtils")
 local FIRST_OPEN_LAYOUT_PLAN_03_KEY = "FirstOpenLayoutPlan03"
 local LAYOUT_PLAN_QUEST_CHAIN_ID = 100201
 local LAYOUT_PLAN_QUEST_ID = 10020101
+local AIM_PLAN_QUEST_ID = 10020104
+local AIM_PLAN_ENABLED = false
 
 local function IsBattleMainInVisible()
   local Player = GWorld:GetMainPlayer()
@@ -41,8 +43,22 @@ local function ShouldHoldForLayoutPlanQuestProgress()
   return DoingQuestId < LAYOUT_PLAN_QUEST_ID
 end
 
+local function ShouldHoldForAimPlanQuestProgress()
+  if not AIM_PLAN_ENABLED then
+    return false
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar or UIUtils.IsMobileInput() then
+    return false
+  end
+  if Avatar:GetPreviewIsShow() then
+    return false
+  end
+  return not Avatar:IsQuestFinished(AIM_PLAN_QUEST_ID)
+end
+
 local function GetNextStateWaitGuideOrBattleMain(self, AfterLoadingMgr)
-  if ShouldHoldForLayoutPlanQuestProgress() then
+  if ShouldHoldForLayoutPlanQuestProgress() or ShouldHoldForAimPlanQuestProgress() then
     return self.StateName
   end
   if AfterLoadingMgr.bGuideEndPending then
@@ -174,7 +190,7 @@ StateImpl.JumpToRogueMain = State:New("JumpToRogueMain", {
             end
           elseif ExitDungeonInfo.Type == "GuildWar" then
             local JumpId = ExitDungeonInfo.JumpId
-            PageJumpUtils:JumpToTargetPageByJumpId(JumpId, false, false, true)
+            PageJumpUtils:JumpToTargetPageByJumpId(JumpId, false, false, true, true)
           elseif ExitDungeonInfo.Type == "Temple" then
             local CurTabIndex = ExitDungeonInfo.CurTabIndex
             PageJumpUtils:JumpToTempleSolo(CurTabIndex)
@@ -200,17 +216,6 @@ StateImpl.JumpToRogueMain = State:New("JumpToRogueMain", {
           elseif ExitDungeonInfo.Type == "AsyncCombat" then
             local CurTabIndex = ExitDungeonInfo.CurTabIndex
             PageJumpUtils:JumpToAsyncCombatRoomPage(CurTabIndex)
-          elseif ExitDungeonInfo.Type == "GuildBoss" then
-            if not ExitDungeonInfo.IsFromRegionMechanism then
-              local SubRegionId = ExitDungeonInfo.SubRegionId
-              local TeleportPoint = ExitDungeonInfo.TeleportPoint or 1
-              if SubRegionId then
-                local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
-                if IsValid(GameMode) then
-                  GameMode:HandleLevelDeliver(UE4.EModeType.ModeRegion, SubRegionId, TeleportPoint, nil, nil, true)
-                end
-              end
-            end
           elseif ExitDungeonInfo.Type == "WeaponVerify" then
             local CurTabIndex = ExitDungeonInfo.CurTabIndex
             local CurSelectIndex = ExitDungeonInfo.CurSelectIndex
@@ -379,6 +384,21 @@ StateImpl.LayoutPlan = State:New("LayoutPlan", {
       elseif PlayerCharacter and bIsOldLayoutUser and not bHasSeenLayoutPlan03 then
         UIManager(PlayerCharacter):LoadUINew("LayoutPlan")
       end
+    end
+  end
+})
+StateImpl.AimPlan = State:New("AimPlan", {
+  OnEnter = function(AfterLoadingMgr)
+    if not AIM_PLAN_ENABLED then
+      return
+    end
+    local Avatar = GWorld:GetAvatar()
+    if not (not UIUtils.IsMobileInput() and Avatar) or Avatar:GetPreviewIsShow() or ShouldHoldForAimPlanQuestProgress() then
+      return
+    end
+    local PlayerCharacter = GWorld:GetMainPlayer()
+    if PlayerCharacter then
+      UIManager(PlayerCharacter):LoadUINew("AimPlan")
     end
   end
 })

@@ -352,23 +352,19 @@ function WBP_Bag_Detail_View_C:RefreshInfoWithResource(PlayerAvatar, StuffServer
   else
     self.Panel_LongDescribe:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
-  if DataMgr.LimitedTimeResource[StuffConfigData.ResourceId] then
-    local LimitedData = ItemUtils.GetItemLimitedInfo(StuffConfigData.ResourceId)
-    if LimitedData then
-      local diff = os.difftime(LimitedData.EndTime.GetTime(), TimeUtils.NowTime())
-      if diff < 86400 then
-        self.BG_TimeLimit:SetColorAndOpacity(self.Color_Red)
-      else
-        self.BG_TimeLimit:SetColorAndOpacity(self.Color_Orange)
-      end
-      self.Panel_TimeLimit:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-      local RemainTimeDict, TimeCount = UIUtils.GetLeftTimeStrStyle2(LimitedData.EndTime.GetTime(), TimeUtils.NowTime())
-      self.Time_CountDown:SetTimeText(nil, RemainTimeDict)
-      self.Text_Expiration:SetText(GText("UI_Date_End"))
-      self.Time_Expiration:SetTimeText(LimitedData.EndTime.GetTime(), UIConst.EnumTimeStyleType.YMDAndHMS)
+  local LimitedData = ItemUtils.GetItemLimitedInfo(StuffConfigData.ResourceId)
+  if LimitedData then
+    local diff = os.difftime(LimitedData.EndTime.GetTime(), TimeUtils.NowTime())
+    if diff < 86400 then
+      self.BG_TimeLimit:SetColorAndOpacity(self.Color_Red)
     else
-      self.Panel_TimeLimit:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      self.BG_TimeLimit:SetColorAndOpacity(self.Color_Orange)
     end
+    self.Panel_TimeLimit:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    local RemainTimeDict, TimeCount = UIUtils.GetLeftTimeStrStyle2(LimitedData.EndTime.GetTime(), TimeUtils.NowTime())
+    self.Time_CountDown:SetTimeText(nil, RemainTimeDict)
+    self.Text_Expiration:SetText(GText("UI_Date_End"))
+    self.Time_Expiration:SetTimeText(LimitedData.EndTime.GetTime(), UIConst.EnumTimeStyleType.YMDAndHMS)
   else
     self.Panel_TimeLimit:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end

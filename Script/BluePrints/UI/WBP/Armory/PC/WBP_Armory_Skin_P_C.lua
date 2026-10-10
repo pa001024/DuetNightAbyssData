@@ -36,6 +36,17 @@ function M:Construct()
     },
     Desc = GText("UI_BACK")
   }
+  self.QATipsInfoList = {
+    GamePadInfoList = {
+      {
+        Type = "Img",
+        ImgShortPath = "B",
+        ClickCallback = self.OnBackKeyDown,
+        Owner = self
+      }
+    },
+    Desc = GText("UI_BACK")
+  }
   self.HideUI_KeyInfoList = {
     KeyInfoList = {
       {
@@ -82,6 +93,22 @@ function M:Construct()
     },
     Desc = GText("UI_CTL_RotatePreview")
   }
+  self.Shop_SkinPreview_CollectItem_1.Key_Qa:CreateCommonKey({
+    KeyInfoList = {
+      {
+        Type = "Img",
+        ImgShortPath = UIConst.GamePadImgKey.SpecialRight
+      }
+    }
+  })
+  self.Shop_SkinPreview_CollectItem_2.Key_Qa:CreateCommonKey({
+    KeyInfoList = {
+      {
+        Type = "Img",
+        ImgShortPath = UIConst.GamePadImgKey.SpecialRight
+      }
+    }
+  })
   self.Btn_Function:SetDefaultGamePadImg("A")
   self.Btn_Package_Open:SetDefaultGamePadImg("A")
   self.Btn_Package_Buy:SetDefaultGamePadImg("Y")
@@ -169,6 +196,10 @@ function M:UpdateKeySetting()
   self.EnableDrag = self.EnableMouseWheel
   if self.IsGamepadInput then
     local StateName = self.FSM:Peak().Name
+    if self.Btn_CheckMod:IsMenuAnchorOpen() or self.Shop_SkinPreview_CollectItem_1.Com_BtnQa:IsMenuAnchorOpen() or self.Shop_SkinPreview_CollectItem_2.Com_BtnQa:IsMenuAnchorOpen() then
+      self:AddKeyDownEvent(Const.GamepadFaceButtonRight, self.OnBackKeyDown)
+      return
+    end
     if StateName == FocusAreas.Resource then
       self:AddKeyDownEvent(Const.GamepadFaceButtonRight, self.OnBackKeyDown)
       table.insert(self.BottomKeyInfo, self.ESCKeyInfoList)
@@ -191,17 +222,11 @@ function M:UpdateKeySetting()
           self:AddKeyDownEvent(UIConst.GamePadKey.FaceButtonTop, function()
             self.WBP_Armory_SkinMod:OnBtnModClicked()
           end)
-          self:AddKeyDownEvent(Const.GamepadSpecialRight, function()
-            if not self.Btn_CheckMod:IsMenuAnchorOpen() then
-              self.Btn_CheckMod:OpenMenuAnchor()
-            end
-          end)
-          self:AddKeyUpEvent(Const.GamepadSpecialRight, function()
-            if self.Btn_CheckMod:IsMenuAnchorOpen() then
-              self.Btn_CheckMod:CloseMenuAnchor()
-            end
-          end)
+          self:AddKeyClickEvent(UIConst.GamePadKey.SpecialRight, self.OpenModDefaultMenuAnchor)
           self:AddKeyDownEvent(UIConst.GamePadKey.LeftThumb, self.OnGamePadFocusToModDetailsKeyDown)
+          self:AddLongPressEvent(UIConst.GamePadKey.SpecialRight, 0.5, nil, nil, self.OpenDefaultMenuAnchor)
+        elseif self.Shop_SkinPreview_CollectItem_1:IsVisible() or self.Shop_SkinPreview_CollectItem_2:IsVisible() then
+          self:AddKeyDownEvent(UIConst.GamePadKey.SpecialRight, self.OpenDefaultMenuAnchor)
         end
       end
       if self.Panel_LevelUp:IsVisible() then
@@ -240,6 +265,32 @@ function M:UpdateKeySetting()
   self.Tab_Skin:UpdateBottomKeyInfo(self.BottomKeyInfo)
 end
 
+function M:OpenDefaultMenuAnchor()
+  self.List_SettlementAction:BP_CancelScrollIntoView()
+  self.List_Skin:BP_CancelScrollIntoView()
+  self.List_Accessory:BP_CancelScrollIntoView()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_level_01", nil, nil)
+  self.Shop_SkinPreview_CollectItem_1.Com_BtnQa:PlayAnimation(self.Shop_SkinPreview_CollectItem_1.Com_BtnQa.Click)
+  self.Shop_SkinPreview_CollectItem_1.Com_BtnQa:OpenMenuAnchor()
+  self.Shop_SkinPreview_CollectItem_2.Com_BtnQa:PlayAnimation(self.Shop_SkinPreview_CollectItem_2.Com_BtnQa.Click)
+  self.Shop_SkinPreview_CollectItem_2.Com_BtnQa:OpenMenuAnchor()
+  self.BottomKeyInfo = {}
+  table.insert(self.BottomKeyInfo, self.ESCKeyInfoList)
+  self.Tab_Skin:UpdateBottomKeyInfo(self.BottomKeyInfo)
+  self:UpdateKeySetting()
+end
+
+function M:OpenModDefaultMenuAnchor()
+  self.List_SettlementAction:BP_CancelScrollIntoView()
+  self.List_Skin:BP_CancelScrollIntoView()
+  self.List_Accessory:BP_CancelScrollIntoView()
+  self.Btn_CheckMod:OpenMenuAnchor()
+  self.BottomKeyInfo = {}
+  table.insert(self.BottomKeyInfo, self.ESCKeyInfoList)
+  self.Tab_Skin:UpdateBottomKeyInfo(self.BottomKeyInfo)
+  self:UpdateKeySetting()
+end
+
 function M:OnFocusToResourceKeyDown()
   self.Tab_Skin:Handle_KeyEventOnGamePad(Const.GamepadRightThumbstick)
   return UIUtils.Handled, true
@@ -264,7 +315,6 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
   end
   self.IsGamepadInput = CurInputDevice == ECommonInputType.Gamepad
   if self.IsGamepadInput then
-    self.Btn_CheckMod.Tips_MenuAnchor:SetUseApplicationMenuStack(false)
     self.Key_Show:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     self.Panel_Key_Dye:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     self.Panel_Key_Custom:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
@@ -286,8 +336,11 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
     if State and State.Name == FocusAreas.SkinLevelUp then
       self.Key_LevelUp:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end
+    self.Shop_SkinPreview_CollectItem_1.Key_Qa:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Shop_SkinPreview_CollectItem_2.Key_Qa:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   else
-    self.Btn_CheckMod.Tips_MenuAnchor:SetUseApplicationMenuStack(true)
+    self.Shop_SkinPreview_CollectItem_1.Key_Qa:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Shop_SkinPreview_CollectItem_2.Key_Qa:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Panel_Key_Dye:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Key_Show:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Panel_Key_Custom:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -772,6 +825,18 @@ function M:OnBackKeyDown()
     return
   end
   local StateName = self.FSM:Peak().Name
+  if self.Btn_CheckMod:IsMenuAnchorOpen() then
+    self.Btn_CheckMod:CloseMenuAnchor()
+    return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self:GetDesiredFocusTarget()), true
+  end
+  if self.Shop_SkinPreview_CollectItem_1.Com_BtnQa:IsMenuAnchorOpen() then
+    self.Shop_SkinPreview_CollectItem_1.Com_BtnQa:CloseMenuAnchor()
+    return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self:GetDesiredFocusTarget()), true
+  end
+  if self.Shop_SkinPreview_CollectItem_2.Com_BtnQa:IsMenuAnchorOpen() then
+    self.Shop_SkinPreview_CollectItem_2.Com_BtnQa:CloseMenuAnchor()
+    return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self:GetDesiredFocusTarget()), true
+  end
   if StateName == FocusAreas.SkinLevelUp then
     self.FSM:Pop()
     self.Key_LevelUp:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)

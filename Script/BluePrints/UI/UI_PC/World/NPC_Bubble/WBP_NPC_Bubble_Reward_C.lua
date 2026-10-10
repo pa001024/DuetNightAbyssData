@@ -44,6 +44,12 @@ function WBP_NPC_Bubble_Reward_C:OnDisabled()
   self:PlayAnimation(self.Out)
 end
 
+function WBP_NPC_Bubble_Reward_C:ResetForPool()
+  self:StopAllAnimations()
+  self.bIsEnabled_Bubble = false
+  self:SetVisibility(UE4.ESlateVisibility.Collapsed)
+end
+
 function WBP_NPC_Bubble_Reward_C:OnInAnimationFinished()
   self:PlayAnimation(self.Loop, 0, 0)
 end

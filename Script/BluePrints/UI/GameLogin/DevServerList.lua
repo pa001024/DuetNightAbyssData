@@ -17,7 +17,7 @@ return {
     area = "China",
     hostnum = 103,
     ip = "10.18.200.113",
-    name = "1.5分支内网服",
+    name = "1.7分支内网服",
     port = 8000
   },
   [104] = {
@@ -59,14 +59,14 @@ return {
     area = "China",
     hostnum = 201,
     ip = "47.98.148.238",
-    name = "1.5跑测服上",
+    name = "1.7跑测服上",
     port = 8000
   },
   [202] = {
     area = "China",
     hostnum = 202,
     ip = "112.124.67.119",
-    name = "1.5跑测服下",
+    name = "1.7跑测服下",
     port = 8000
   },
   [203] = {
@@ -93,8 +93,8 @@ return {
   [303] = {
     area = "China",
     hostnum = 303,
-    ip = "10.18.8.197",
-    name = "杨晨服",
+    ip = "10.18.200.171",
+    name = "分支2服（QA用）",
     port = 8000
   },
   [306] = {
@@ -263,13 +263,6 @@ return {
     hostnum = 514,
     ip = "47.99.80.12",
     name = "1.5分支Group合服测试4",
-    port = 8000
-  },
-  [1109] = {
-    area = "China",
-    hostnum = 1109,
-    ip = "10.18.200.171",
-    name = "分支2服（QA用）",
     port = 8000
   },
   [5001] = {

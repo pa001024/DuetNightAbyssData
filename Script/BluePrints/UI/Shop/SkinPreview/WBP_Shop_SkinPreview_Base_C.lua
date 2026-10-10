@@ -105,6 +105,7 @@ function M:Construct()
   self.bSelfHidden = false
   self.BtnChooseGiftEnable = false
   self.BtnSkinLevelUp = false
+  self.FocusQATips = false
   self.Tab_Change.Text_Alive:SetText(GText("UI_Armory_Meleeweapon"))
   self.Tab_Change.Text_Dying:SetText(GText("UI_Armory_Longrange"))
   self.IsGamepadInput = UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad
@@ -152,6 +153,7 @@ function M:OnLoaded(...)
     end
   end
   self.HidePurchase = self.ShopItemData.HidePurchase or false
+  self.SkinCollectOpen = false
   self.Tab_Skin:Init(self.MainTabsStyle)
   if self.Tab_Skin.WBP_Com_Tab_ResourceBar then
     self.Tab_Skin.WBP_Com_Tab_ResourceBar:SetLastFocusWidget(self)
@@ -169,6 +171,7 @@ function M:OnLoaded(...)
   self:BlockAllUIInput(true, "SP_DisplayOnly")
   self:SetFocus()
   self:InitLevelUpPreview(self.ShopItemData)
+  self:SetSkinCollectScore(self.ShopItemData)
 end
 
 function M:InitKeySetting()
@@ -185,7 +188,7 @@ function M:InitKeySetting()
   self.KeyDownEvents[self.GamePadConfirmKey] = self.OnConfirmKeyDown
   self.KeyDownEvents[self.DPadLeftKey] = self.OnClickPreviousSkin
   self.KeyDownEvents[self.DPadRightKey] = self.OnClickNextSkin
-  self.KeyDownEvents[self.DPadUpKey] = self.OnClickDiscount
+  self.KeyDownEvents[self.DPadUpKey] = self.OpenDefaultMenuAnchor
   self.KeyDownEvents[self.LeftShoulderKey] = function(self)
     if self.ShopItemData.ItemType ~= "WeaponAccessory" then
       return
@@ -200,7 +203,6 @@ function M:InitKeySetting()
     self.Tab_Change:TriggerSwitch("Right")
     return UIUtils.Handled, true
   end
-  self.KeyUpEvents[self.MenuKey] = self.OnMenuKeyUp
 end
 
 function M:OnLTKeyDown()
@@ -258,6 +260,10 @@ function M:OnSwitchSuitPreview(IsChecked)
 end
 
 function M:OnBackKeyDown()
+  if self.FocusQATips then
+    self:CloseMenuAnchor()
+    return UIUtils.Handled, true
+  end
   if self.bSelfHidden then
     return self:OnHideUIKeyDown()
   else
@@ -502,6 +508,7 @@ function M:OnClickPreviousSkin()
   self.LastItemType = self.ShopItemData.ItemType
   self:SwitchToSkin(self.Index - 1)
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_addMulti", nil, nil)
+  self:SetSkinCollectScore(self.ShopItemData)
   return UIUtils.Handled, true
 end
 
@@ -513,6 +520,7 @@ function M:OnClickNextSkin()
   self.LastItemType = self.ShopItemData.ItemType
   self:SwitchToSkin(self.Index + 1)
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_addMulti", nil, nil)
+  self:SetSkinCollectScore(self.ShopItemData)
   return UIUtils.Handled, true
 end
 
@@ -864,6 +872,70 @@ function M:GetCutoffInfo(ItemId)
     end
   end
   return nil
+end
+
+function M:SetSkinCollectScore(ItemData)
+  local SkinCollectTaskPopupModel = require("BluePrints.UI.WBP.Activity.Widget.SkinCollect.SkinCollectTaskPopupModel")
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    local CurrentScore, MaxScore = Avatar.AppearanceCollectEvent:SkinCollectScoreInfo(SkinCollectTaskPopupModel.SKinCollectTaskEventId)
+    if CurrentScore < MaxScore and EMCache:Get("SkinCollectTaskCheckBox") and Avatar.AppearanceCollectEvent:IsSkinCollectAppearance(SkinCollectTaskPopupModel.SKinCollectTaskEventId, ItemData.TypeId) then
+      self.SkinCollectOpen = true
+      self.Shop_SkinPreview_CollectItem_2:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.Shop_SkinPreview_CollectItem_2.Group_SkinCollectScore:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.Shop_SkinPreview_CollectItem_2.Text_ScoreNum:SetText(string.format("+%d", Avatar:GetAppearanceScore(ItemData.ItemType, ItemData.TypeId) or 0))
+      self.Shop_SkinPreview_CollectItem_2.Text_ScoreDesc:SetText(string.format(GText("UI_AppearanceCollect_CurrentProgress"), CurrentScore, MaxScore))
+    else
+      self.SkinCollectOpen = false
+      self.Shop_SkinPreview_CollectItem_2:SetVisibility(ESlateVisibility.Collapsed)
+      self.Shop_SkinPreview_CollectItem_2.Group_SkinCollectScore:SetVisibility(ESlateVisibility.Collapsed)
+    end
+  end
+  local DefaultConfigData = {
+    OwnerWidget = self,
+    TextContent = GText("UI_AppearanceCollect_CurrentProgressDetail"),
+    OnMenuOpenChangedCallBack = self.OnMenuOpenChangedCallBack
+  }
+  self.Shop_SkinPreview_CollectItem_2.Com_BtnQa:Init(DefaultConfigData)
+end
+
+function M:OnMenuOpenChangedCallBack(IsOpen)
+  if not IsOpen then
+    self.BottomKeyInfo = {}
+    table.insert(self.BottomKeyInfo, self.HideUI_KeyInfoList)
+    table.insert(self.BottomKeyInfo, self.ZoomKeyInfoList)
+    table.insert(self.BottomKeyInfo, self.RightThumbstickAnalogBottomKeyInfoList)
+    table.insert(self.BottomKeyInfo, self.ESCKeyInfoList)
+    self.Tab_Skin:UpdateBottomKeyInfo(self.BottomKeyInfo)
+  end
+end
+
+function M:OpenDefaultMenuAnchor()
+  if not self.SkinCollectOpen then
+    return
+  end
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_level_01", nil, nil)
+  self.Shop_SkinPreview_CollectItem_2.Com_BtnQa:PlayAnimation(self.Shop_SkinPreview_CollectItem_2.Com_BtnQa.Click)
+  self.Shop_SkinPreview_CollectItem_2.Com_BtnQa:OpenMenuAnchor()
+  self.FocusQATips = true
+  if UIUtils.IsGamepadInput() then
+    self.BottomKeyInfo = {}
+    table.insert(self.BottomKeyInfo, self.ESCKeyInfoList)
+    self.Tab_Skin:UpdateBottomKeyInfo(self.BottomKeyInfo)
+  end
+end
+
+function M:CloseMenuAnchor()
+  self.Shop_SkinPreview_CollectItem_2.Com_BtnQa:CloseMenuAnchor()
+  self.FocusQATips = false
+  if UIUtils.IsGamepadInput() then
+    self.BottomKeyInfo = {}
+    table.insert(self.BottomKeyInfo, self.HideUI_KeyInfoList)
+    table.insert(self.BottomKeyInfo, self.ZoomKeyInfoList)
+    table.insert(self.BottomKeyInfo, self.RightThumbstickAnalogBottomKeyInfoList)
+    table.insert(self.BottomKeyInfo, self.ESCKeyInfoList)
+    self.Tab_Skin:UpdateBottomKeyInfo(self.BottomKeyInfo)
+  end
 end
 
 function M:InitLevelUpPreview(ItemData)

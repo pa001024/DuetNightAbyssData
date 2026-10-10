@@ -37,7 +37,11 @@ function M:OnPropEffectEndReplaceAttack()
 end
 
 function M:OnWeaponHUDIconLoadFinish(Object)
-  if not (IsValid(self) and Object) or self:IsNotShowDefaultIcon() then
+  if not IsValid(self) or not Object then
+    return
+  end
+  self.DefaultIconObject = Object
+  if self:IsNotShowDefaultIcon() or self.bUltimateVisualActive then
     return
   end
   self:WeaponIcon()
@@ -47,6 +51,10 @@ function M:OnWeaponHUDIconLoadFinish(Object)
   end
   if self.Icon_Skill then
     self.Icon_Skill:GetDynamicMaterial():SetTextureParameterValue("Mask", nil)
+  end
+  if self.AutoCombatBan then
+    self.IsBan = true
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Ban)
   end
 end
 
@@ -59,6 +67,10 @@ function M:OnPropIconLoadFinish(Object, ResourceID)
     return
   end
   self:OrganIcon(Object)
+  if self.AutoCombatBan then
+    self.IsBan = true
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Ban)
+  end
 end
 
 function M:IsBtnAreaPassThrough()
@@ -75,6 +87,11 @@ end
 
 function M.ButtonAtkMeleeDown(Battle_Button_Phone, Index, StartPos)
   local MeleeBtn = Battle_Button_Phone.AtkMelee
+  if MeleeBtn.AutoCombatBan then
+    MeleeBtn.AutoCombatBlockedTouch = true
+    return
+  end
+  MeleeBtn.AutoCombatBlockedTouch = false
   if MeleeBtn:IsForbidden() then
     return
   end
@@ -82,7 +99,7 @@ function M.ButtonAtkMeleeDown(Battle_Button_Phone, Index, StartPos)
   if bRailAim then
     MeleeBtn.bRailAttackPending = true
   else
-    Battle_Button_Phone:TryToPlayTargetCommand("Attack", true)
+    Battle_Button_Phone:TryToPlayTargetCommand("Attack", not Battle_Button_Phone.IsUltimateActionSwap)
   end
   if bRailAim or MeleeBtn.IsUltimateEnabled then
     MeleeBtn:SetJoystickActive(true)
@@ -117,11 +134,16 @@ end
 
 function M.ButtonAtkMeleeUp(Battle_Button_Phone, Index, WidgetLocalPos, LastWidgetTouchPos, EndTouchPos, TotalDeltaDis, ScreenSpacePos)
   local MeleeBtn = Battle_Button_Phone.AtkMelee
+  if MeleeBtn.AutoCombatBlockedTouch then
+    MeleeBtn.AutoCombatBlockedTouch = false
+    MeleeBtn:SetJoystickActive(false)
+    return
+  end
   if MeleeBtn.bRailAttackPending then
     MeleeBtn.bRailAttackPending = false
-    Battle_Button_Phone:TryToPlayTargetCommand("Attack", true)
+    Battle_Button_Phone:TryToPlayTargetCommand("Attack", not Battle_Button_Phone.IsUltimateActionSwap)
   end
-  Battle_Button_Phone:TryToStopTargetCommand("Attack", true)
+  Battle_Button_Phone:TryToStopTargetCommand("Attack", not Battle_Button_Phone.IsUltimateActionSwap)
   MeleeBtn:SetJoystickActive(false)
   if MeleeBtn:IsBtnAreaPassThrough() then
     if EMUIAnimationSubsystem:EMAnimationIsPlaying(MeleeBtn, MeleeBtn.Press) then
@@ -133,6 +155,10 @@ end
 
 function M:OnUltimateStateChanged(IsActive, IsType1)
   if IsActive then
+    if self.bUltimateVisualActive and not IsType1 then
+      self:RestoreDefaultIcon()
+    end
+    self.bUltimateVisualActive = true == IsType1
     self.IsUltimateEnabled = true
     local Anim = IsType1 and self.Enable or self.Enable_2
     self.CurrentUltimateAnim = Anim
@@ -150,6 +176,7 @@ function M:OnUltimateStateChanged(IsActive, IsType1)
       EMUIAnimationSubsystem:EMPlayAnimation(self, self.EnableEnd)
       self.CurrentUltimateAnim = nil
     end
+    self:RestoreDefaultIcon()
     if self.Button_Area then
       self.Button_Area:SetVisibility(ESlateVisibility.Visible)
     end
@@ -157,7 +184,7 @@ function M:OnUltimateStateChanged(IsActive, IsType1)
 end
 
 function M:OnUltimateIconLoadFinish(Object)
-  if not IsValid(self) or not Object then
+  if not (IsValid(self) and Object) or not self.bUltimateVisualActive then
     return
   end
   self.IsUltimateIconActive = true
@@ -168,6 +195,10 @@ function M:OnUltimateIconLoadFinish(Object)
   end
   if self.Icon_Skill then
     self.Icon_Skill:GetDynamicMaterial():SetTextureParameterValue("Mask", Object)
+  end
+  if self.AutoCombatBan then
+    self.IsBan = true
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Ban)
   end
 end
 
@@ -188,15 +219,21 @@ function M:LoadUltimateIcon(OwnerPlayer)
 end
 
 function M:RestoreDefaultIcon()
-  if not self.IsUltimateIconActive then
+  if not self.IsUltimateIconActive and not self.bUltimateVisualActive then
     return
   end
   self.IsUltimateIconActive = false
-  if self.DefaultIconPath then
+  self.bUltimateVisualActive = false
+  if IsValid(self.DefaultIconObject) then
+    self:OnWeaponHUDIconLoadFinish(self.DefaultIconObject)
+  elseif self.DefaultIconPath then
     UE.UResourceLibrary.LoadObjectAsync(self, self.DefaultIconPath, {
       self,
       M.OnWeaponHUDIconLoadFinish
     })
+  end
+  if self.Normal then
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
   end
 end
 

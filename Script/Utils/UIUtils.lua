@@ -24,6 +24,9 @@ function UIUtils.ShowGotItemTipsUI(TableTypeName, ItemId, ItemCount, AdditionalP
   if not ItemData or not ItemData.Icon then
     return
   end
+  if "Drop" ~= TableTypeName then
+    ItemUtils.TrySendTaskbarReward(TableTypeName, ItemId, ItemCount)
+  end
   local GameInstance = GWorld.GameInstance
   local Player = UGameplayStatics.GetPlayerCharacter(GameInstance, 0)
   local UIManager = GameInstance:GetGameUIManager()
@@ -2997,6 +3000,15 @@ function UIUtils.GetRemainingTimeByTimestamp(EndTimestamp, bUseCharFormat)
     RemainTimeStr = string.sub(RemainTimeStr, 1, -2)
   end
   return RemainTimeStr
+end
+
+function UIUtils.FormatSeconds(TimeSeconds)
+  TimeSeconds = math.max(0, tonumber(TimeSeconds) or 0)
+  local TotalCentiseconds = math.floor(TimeSeconds * 100 + 0.5)
+  local Minutes = math.floor(TotalCentiseconds / 6000)
+  local Seconds = math.floor(TotalCentiseconds / 100) % 60
+  local Centiseconds = TotalCentiseconds % 100
+  return string.format("%d:%02d.%02d", Minutes, Seconds, Centiseconds)
 end
 
 function UIUtils:LongPressKey(KeyWidget, func, Speed)

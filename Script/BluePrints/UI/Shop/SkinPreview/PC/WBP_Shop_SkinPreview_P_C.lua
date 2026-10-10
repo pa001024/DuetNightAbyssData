@@ -160,6 +160,24 @@ function M:Construct()
       {Type = "Img", ImgShortPath = "LS"}
     }
   })
+  self.Shop_SkinPreview_CollectItem_1.Key_Qa:CreateCommonKey({
+    KeyInfoList = {
+      {
+        Type = "Img",
+        ImgShortPath = UIConst.GamePadImgKey.DPadUp
+      }
+    }
+  })
+  self.Shop_SkinPreview_CollectItem_2.Key_Qa:CreateCommonKey({
+    KeyInfoList = {
+      {
+        Type = "Img",
+        ImgShortPath = UIConst.GamePadImgKey.DPadUp
+      }
+    }
+  })
+  self.Shop_SkinPreview_CollectItem_1.Key_Qa:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Shop_SkinPreview_CollectItem_2.Key_Qa:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Key_GamePad_L:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Key_GamePad_R:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Key_Preview:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -273,6 +291,8 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
     self.Key_LevelUp:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Key_CheckMod:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Key_Mod:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Shop_SkinPreview_CollectItem_1.Key_QA:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Shop_SkinPreview_CollectItem_2.Key_QA:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   else
     if self.ShopItemData.SuitRewardId then
       self.Key_Preview:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -285,6 +305,8 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
     self.Key_LevelUp:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Key_CheckMod:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Key_Mod:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Shop_SkinPreview_CollectItem_1.Key_QA:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Shop_SkinPreview_CollectItem_2.Key_QA:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
 end
 

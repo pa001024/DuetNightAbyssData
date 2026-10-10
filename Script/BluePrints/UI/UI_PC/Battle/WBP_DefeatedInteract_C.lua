@@ -9,6 +9,9 @@ function M:Construct()
   self.Anchor:ClearChildren()
   self.ExecuteItems = {}
   self.RecycleExecuteItem = {}
+  self.PendingExecuteItems = {}
+  self.TargetWidget = nil
+  self.TargetCharacter = nil
 end
 
 function M:RefreshOpInfoByInputDevice()
@@ -18,16 +21,40 @@ function M:RefreshOpInfoByInputDevice()
 end
 
 function M:InitDefeatedCharacter(InCharacter)
+  if self.ExecuteItems[InCharacter] or self.PendingExecuteItems[InCharacter] then
+    return
+  end
   if 0 == #self.RecycleExecuteItem then
-    local Widget = UIManager(self):_CreateWidgetNew("ExecuteItem")
-    Widget:InitDefeatedCharacter(InCharacter, self)
-    self.Anchor:AddChild(Widget)
-    self.ExecuteItems[InCharacter] = Widget
+    local PendingRequest = {}
+    self.PendingExecuteItems[InCharacter] = PendingRequest
+    UIManager(self):CreateWidgetAsync("ExecuteItem", function(Widget)
+      if not IsValid(self) or self.PendingExecuteItems[InCharacter] ~= PendingRequest then
+        return
+      end
+      self.PendingExecuteItems[InCharacter] = nil
+      if not (IsValid(InCharacter) and Widget) or self.ExecuteItems[InCharacter] then
+        self:TryCloseIfExecuteItemsEmpty()
+        return
+      end
+      Widget:InitDefeatedCharacter(InCharacter, self)
+      self.Anchor:AddChild(Widget)
+      self.ExecuteItems[InCharacter] = Widget
+    end)
   else
     local Widget = self.RecycleExecuteItem[#self.RecycleExecuteItem]
     table.remove(self.RecycleExecuteItem, #self.RecycleExecuteItem)
     Widget:InitDefeatedCharacter(InCharacter, self)
     self.ExecuteItems[InCharacter] = Widget
+  end
+end
+
+function M:IsExecuteItemEmpty()
+  return not next(self.ExecuteItems or {}) and not next(self.PendingExecuteItems or {})
+end
+
+function M:TryCloseIfExecuteItemsEmpty()
+  if self:IsExecuteItemEmpty() then
+    self:Close()
   end
 end
 
@@ -88,39 +115,42 @@ function M:PressedSelectAction()
       end
     end
   end
+  self.TargetWidget = TargetWidget
+  self.TargetCharacter = TargetWidget and TargetWidget.DefeatedCharacter
   if TargetWidget then
     TargetWidget:PressedSelectAction()
   end
-  self.TargetWidget = TargetWidget
 end
 
 function M:ReleasedSelectAction()
-  if not self.TargetWidget then
+  local TargetWidget = self.TargetWidget
+  local TargetCharacter = self.TargetCharacter
+  self.TargetWidget = nil
+  self.TargetCharacter = nil
+  if not TargetWidget then
     return
   end
-  self.TargetWidget:ReleasedSelectAction()
+  local IsActiveTarget = TargetCharacter and TargetWidget.DefeatedCharacter == TargetCharacter and self.ExecuteItems and self.ExecuteItems[TargetCharacter] == TargetWidget
+  if IsActiveTarget then
+    TargetWidget:ReleasedSelectAction()
+  end
 end
 
 function M:CloseExecuteItem(DefeatedCharacter)
+  self.PendingExecuteItems[DefeatedCharacter] = nil
   local Widget = self.ExecuteItems and self.ExecuteItems[DefeatedCharacter]
   if not Widget then
+    self:TryCloseIfExecuteItemsEmpty()
     return
   end
-  Widget.IsForcedClosed = true
-  Widget:StopAllAnimations()
   Widget:ChangeUIDefeatedState(false)
-  Widget:HideExecuteItem()
-  table.insert(self.RecycleExecuteItem, Widget)
-  self.ExecuteItems[DefeatedCharacter] = nil
-  Widget.IsForcedClosed = false
-  local Count = CommonUtils.TableLength(self.ExecuteItems)
-  if 0 == Count then
-    self:Close()
-  end
+  self:RecycleExecuteWidget(DefeatedCharacter)
 end
 
 function M:RemoveExecuteItem(DefeatedCharacter, BtnAnim)
+  self.PendingExecuteItems[DefeatedCharacter] = nil
   if not self.ExecuteItems or not self.ExecuteItems[DefeatedCharacter] then
+    self:TryCloseIfExecuteItemsEmpty()
     return
   end
   local Widget = self.ExecuteItems[DefeatedCharacter]
@@ -130,17 +160,23 @@ function M:RemoveExecuteItem(DefeatedCharacter, BtnAnim)
 end
 
 function M:RecycleExecuteWidget(DefeatedCharacter)
+  self.PendingExecuteItems[DefeatedCharacter] = nil
   if not self.ExecuteItems or not self.ExecuteItems[DefeatedCharacter] then
+    self:TryCloseIfExecuteItemsEmpty()
     return
   end
   local ExecuteWidget = self.ExecuteItems[DefeatedCharacter]
+  if self.TargetWidget == ExecuteWidget then
+    self.TargetWidget = nil
+    self.TargetCharacter = nil
+  end
+  if not ExecuteWidget:PrepareForRecycle() then
+    return
+  end
   ExecuteWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.ExecuteItems[DefeatedCharacter] = nil
   table.insert(self.RecycleExecuteItem, ExecuteWidget)
-  local Count = CommonUtils.TableLength(self.ExecuteItems)
-  if 0 == Count then
-    self:Close()
-  end
+  self:TryCloseIfExecuteItemsEmpty()
 end
 
 function M:ClosePhoneUI()
@@ -156,9 +192,15 @@ function M:ClosePhoneUI()
 end
 
 function M:Close()
+  for _, Widget in pairs(self.ExecuteItems or {}) do
+    Widget:PrepareForRecycle()
+  end
+  self.TargetWidget = nil
+  self.TargetCharacter = nil
   self.Anchor:ClearChildren()
   self.ExecuteItems = {}
   self.RecycleExecuteItem = {}
+  self.PendingExecuteItems = {}
   self:ClosePhoneUI()
   self.Super.Close(self)
 end

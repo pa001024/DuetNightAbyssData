@@ -221,6 +221,8 @@ function WBP_Archive_PageChar_C:GetCharacterData(TabId)
   self.AllCharacterIds = {}
   local PlayerCharacterIds = {}
   local GroupId2PlayerCharacterIds = {}
+  self.CharacterId2DisplayId = {}
+  self.DisplayId2CharacterIds = {}
   local CharacterAttributeSwitch = DataMgr.CharacterAttributeSwitch
   local CurrentVersion = DataMgr.GlobalConstant.CurrentVersion.ConstantValue
   for Id, Data in pairs(DataMgr.Char) do
@@ -251,8 +253,9 @@ function WBP_Archive_PageChar_C:GetCharacterData(TabId)
     CharId2CharInfo[CharInfo.CharId] = CharInfo
   end
   for GroupId, CharIds in pairs(GroupId2PlayerCharacterIds) do
+    local DisplayCharId
     if CharIds[CurrentMainCharacterId] then
-      PlayerCharacterIds[CurrentMainCharacterId] = 1
+      DisplayCharId = CurrentMainCharacterId
     else
       local MinCharId
       for CharId, _ in pairs(CharIds) do
@@ -260,8 +263,14 @@ function WBP_Archive_PageChar_C:GetCharacterData(TabId)
           MinCharId = CharId
         end
       end
-      if MinCharId then
-        PlayerCharacterIds[MinCharId] = 1
+      DisplayCharId = MinCharId
+    end
+    if DisplayCharId then
+      PlayerCharacterIds[DisplayCharId] = 1
+      self.DisplayId2CharacterIds[DisplayCharId] = {}
+      for CharId, _ in pairs(CharIds) do
+        self.CharacterId2DisplayId[CharId] = DisplayCharId
+        self.DisplayId2CharacterIds[DisplayCharId][CharId] = 1
       end
     end
   end
@@ -281,6 +290,53 @@ function WBP_Archive_PageChar_C:GetCharacterData(TabId)
     end
   end
   self:SortListDatas()
+end
+
+function WBP_Archive_PageChar_C:GetCharacterReddotDisplayId(CharId)
+  if self.CharacterId2DisplayId then
+    return self.CharacterId2DisplayId[CharId] or CharId
+  end
+  return CharId
+end
+
+function WBP_Archive_PageChar_C:HasCharacterReddot(DisplayCharId, CacheDetail)
+  if not CacheDetail then
+    return false
+  end
+  local CharacterIds = self.DisplayId2CharacterIds and self.DisplayId2CharacterIds[DisplayCharId]
+  if CharacterIds then
+    for CharId, _ in pairs(CharacterIds) do
+      if 1 == CacheDetail[CharId] then
+        return true
+      end
+    end
+    return false
+  end
+  return 1 == CacheDetail[DisplayCharId]
+end
+
+function WBP_Archive_PageChar_C:ClearCharacterReddot(DisplayCharId)
+  if not DisplayCharId then
+    return
+  end
+  local CharacterIds = self.DisplayId2CharacterIds and self.DisplayId2CharacterIds[DisplayCharId]
+  CharacterIds = CharacterIds or {
+    [DisplayCharId] = 1
+  }
+  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(self.NodeName)
+  if not CacheDetail then
+    return
+  end
+  local DecreaseNum = 0
+  for CharId, _ in pairs(CharacterIds) do
+    if 1 == CacheDetail[CharId] then
+      CacheDetail[CharId] = 0
+      DecreaseNum = DecreaseNum + 1
+    end
+  end
+  if DecreaseNum > 0 then
+    ReddotManager.DecreaseLeafNodeCount(self.NodeName, DecreaseNum)
+  end
 end
 
 function WBP_Archive_PageChar_C:GetMeleeData(TabId)
@@ -584,6 +640,7 @@ function WBP_Archive_PageChar_C:ClickListItem(Content)
 end
 
 function WBP_Archive_PageChar_C:ClickListChar(Content)
+  self:ClearCharacterReddot(Content.Id)
   local CharIds = {}
   for _, value in ipairs(self.ListDatas) do
     table.insert(CharIds, value.Id)
@@ -682,36 +739,34 @@ function WBP_Archive_PageChar_C:CheckIsNew(NodeName, Id)
     ReddotManager.AddNode(NodeName)
   end
   local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
-  if 1 == CacheDetail[Id] then
-    return true
-  else
-    return false
+  if self.Name == "Character" then
+    return self:HasCharacterReddot(Id, CacheDetail)
   end
+  return CacheDetail and 1 == CacheDetail[Id]
 end
 
 function WBP_Archive_PageChar_C:RefreshReddot()
-  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(self.NodeName)
+  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(self.NodeName) or {}
   self.Index2ReddotNum = {}
-  if CacheDetail then
+  local CountedCharacterIds = {}
+  if next(CacheDetail) then
     for Id, State in pairs(CacheDetail) do
       if 1 == State then
         if self.Name == "Character" then
-          local Data = DataMgr.Char[Id]
-          local Attribute = DataMgr.BattleChar[Data.CharId].Attribute
-          local Index = self.TabId2Index[Attribute]
-          if 6 == Index then
-            local xxx = 1
-          end
-          if not self.Index2ReddotNum[Index] then
-            self.Index2ReddotNum[Index] = 1
-          else
-            self.Index2ReddotNum[Index] = self.Index2ReddotNum[Index] + 1
-          end
-          local All_Index = self.TabId2Index.All
-          if not self.Index2ReddotNum[All_Index] then
-            self.Index2ReddotNum[All_Index] = 1
-          else
-            self.Index2ReddotNum[All_Index] = self.Index2ReddotNum[All_Index] + 1
+          local DisplayCharId = self:GetCharacterReddotDisplayId(Id)
+          if not CountedCharacterIds[DisplayCharId] then
+            CountedCharacterIds[DisplayCharId] = true
+            local Data = DataMgr.Char[DisplayCharId]
+            local BattleCharData = Data and DataMgr.BattleChar[Data.CharId]
+            local Attribute = BattleCharData and BattleCharData.Attribute
+            local Index = Attribute and self.TabId2Index[Attribute]
+            if Index then
+              self.Index2ReddotNum[Index] = (self.Index2ReddotNum[Index] or 0) + 1
+              local All_Index = self.TabId2Index.All
+              if All_Index then
+                self.Index2ReddotNum[All_Index] = (self.Index2ReddotNum[All_Index] or 0) + 1
+              end
+            end
           end
         elseif self.Name == "Melee" or self.Name == "Ranged" then
           for i, Tag in ipairs(self.FilterTags) do
@@ -727,13 +782,17 @@ function WBP_Archive_PageChar_C:RefreshReddot()
         end
       end
     end
-    self:RefreshTabReddot()
   end
+  self:RefreshTabReddot()
   local Contents = self.List_Item:GetListItems()
   for _, Content in pairs(Contents) do
     Content.IsNew = false
-    if Content.Id and 1 == CacheDetail[Content.Id] then
-      Content.IsNew = true
+    if Content.Id then
+      if self.Name == "Character" then
+        Content.IsNew = self:HasCharacterReddot(Content.Id, CacheDetail)
+      elseif 1 == CacheDetail[Content.Id] then
+        Content.IsNew = true
+      end
     end
   end
   local AllDisplayWidget = self.List_Item:GetDisplayedEntryWidgets()

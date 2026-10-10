@@ -439,6 +439,10 @@ return ReadOnly("CommonDialogContent", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Guild/Widget/Dialog/WBP_Guild_DialogRole.WBP_Guild_DialogRole'",
     ContentId = "WBP_Guild_DialogRole_Content"
   },
+  WBP_Guild_Dialog_EditSign = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Guild/Widget/Sign/WBP_Guild_Dialog_EditSign.WBP_Guild_Dialog_EditSign'",
+    ContentId = "WBP_Guild_Dialog_EditSign"
+  },
   WBP_Guild_RewardPreview_Content = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Guild/Widget/RewardPreview/WBP_Guild_RewardPreview.WBP_Guild_RewardPreview'",
     ContentId = "WBP_Guild_RewardPreview_Content"

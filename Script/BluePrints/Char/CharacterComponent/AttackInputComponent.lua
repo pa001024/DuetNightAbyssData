@@ -320,7 +320,7 @@ function Component:InitReplaceGamepadSet(KeySet)
   end
   for ActionName, ActionData in pairs(GamepadSet) do
     if ActionData.BattleInput and ActionData.BattleInput[KeySet] then
-      self.BattleMapping:Add(ActionData.BattleInput[KeySet], ActionName)
+      self:AddBattleMapping(ActionData.BattleInput[KeySet], ActionName)
       for _, UserData in ipairs(ActionMappings) do
         local Res = string.find(UserData.Key.KeyName, "Gamepad")
         if (UserData.ActionName == ActionData.BattleInput[KeySet] or UserData.ActionName == ActionData.ActionName) and Res then

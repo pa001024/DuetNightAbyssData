@@ -66,6 +66,7 @@ end
 
 function BP_RegionOnlineInterAddFriendComponent_C:NotDisplayInteractiveBtn(PlayerActor)
   self.CanOpen = false
+  self.IsDisplayed = false
   self:SetBtnDisplayed(PlayerActor, false)
   local UIManager = UGameplayStatics.GetGameInstance(self):GetGameUIManager()
   local InteractiveUI = UIManager:GetUIObj(UIConst.InteractiveUIName)

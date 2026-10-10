@@ -331,7 +331,7 @@ require("LogPrint")
 _G.print = print_t
 _G.Get_G = Get_G
 _G.netprint = netprint
-_G.ServerPrint = LogEMServer
+_G.ServerPrint = ServerLog or LogEMServer
 _G.Index = Index
 _G.NewIndex = NewIndex
 _G.Class = Class

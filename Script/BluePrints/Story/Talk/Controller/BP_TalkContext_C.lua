@@ -315,16 +315,6 @@ function BP_TalkContext_C:SequencePlayDialogue(DialogueId, bStart)
   end
 end
 
-function BP_TalkContext_C:SequenceTryPauseDialogue()
-  DebugPrint("SequenceTryPauseDialogue")
-  local SequenceTryPauseDialogue = self.SequenceTalkTask.SequenceTryPauseDialogue
-  if self.SequenceTalkTask and SequenceTryPauseDialogue then
-    return SequenceTryPauseDialogue(self.SequenceTalkTask)
-  else
-    return false
-  end
-end
-
 function BP_TalkContext_C:SequenceSetActorHidden(Actor, bHidden)
   self:ShowHideActor(Actor, not bHidden)
 end

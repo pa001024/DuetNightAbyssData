@@ -170,5 +170,17 @@ return ReadOnly("DailyLogin", {
     EventId = 101019,
     EventReward = T.RT_2,
     LoginDuration = 5
+  },
+  [101020] = {
+    EventId = 101020,
+    EventReward = T.RT_1,
+    LoginDuration = 7,
+    RewardBannerBP = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/SevenDay/Splise/WBP_Activity_SevenDayItems_Splise.WBP_Activity_SevenDayItems_Splise'"
+  },
+  [101021] = {
+    EventId = 101021,
+    EventReward = T.RT_2,
+    LoginDuration = 5,
+    RewardBannerBP = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/WarmUp/Splise/WBP_Activity_WarmUp_Splise_Item.WBP_Activity_WarmUp_Splise_Item'"
   }
 })

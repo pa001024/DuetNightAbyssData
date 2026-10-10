@@ -50,7 +50,6 @@ function WBP_ImpressionItem_PC:OnSelectedByPlatform(bIsSelect)
 end
 
 function WBP_ImpressionItem_PC:ClearByPlatform()
-  self.KeyNode:SetVisibility(ESlateVisibility.Collapsed)
 end
 
 function WBP_ImpressionItem_PC:OnReleasedByPlatform()

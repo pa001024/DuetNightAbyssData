@@ -8,8 +8,11 @@ local DisplayTypes = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_D
 local GuildController = require("BluePrints.UI.WBP.Guild.Controller.GuildController")
 local GuildLogoInfo = require("BluePrints.UI.WBP.Guild.Common.GuildLogoInfo")
 local MiscUtils = require("Utils.MiscUtils")
+local StickerPreviewHost = require("BluePrints.UI.WBP.PersonInfo.Edit.PersonInfo_CustomEditStickerPreviewHost")
+local PreviewLevelHandoffMask = require("BluePrints.UI.Common.Preview.PreviewLevelHandoffMask")
 local PersonInfoModel = PersonInfoController:GetModel()
 local M = Class({})
+StickerPreviewHost.BindMethods(M)
 M._components = {
   "BluePrints.UI.WBP.PersonInfo.PersonInfoEditListCompoment",
   "BluePrints.UI.WBP.Armory.MainComponent.Armory_PointerInputComponent",
@@ -51,6 +54,8 @@ function M:Initialize()
   self.SelectWeaponIndex = -1
   self.Events_BeforeClose = {}
   self.DataPageCameraOffsetState = nil
+  self.ConfirmedStickerWidget = nil
+  self.bStackCovered = false
   self:_ResetGamepadCameraInputState()
   self:InitCameraRoam()
 end
@@ -181,6 +186,8 @@ function M:InitBaseView(Personid)
   SetPersonInfoDataButtonText(self.Btn_Data, GText("UI_PersonalPage_Recount_Name"))
   self:RefreshNameCardBackground()
   EventManager:AddEvent(EventID.OnPersonalInfoBgChanged, self, self.OnPersonalInfoBgChanged)
+  EventManager:AddEvent(EventID.OnExternalPreviewAcquired, self, self.OnExternalPreviewAcquired)
+  EventManager:AddEvent(EventID.OnExternalPreviewReleased, self, self.OnExternalPreviewReleased)
   self:AddReddotListener("EditBtn", self.OnPortraitReddotChange)
   self:AddReddotListener("PersonalInfoCustomizeEntry", self.OnCustomizeEntryReddotChange)
 end
@@ -325,6 +332,8 @@ function M:InitDisplayBoxView(IsChanegeModel)
   end
   if self.ActorController == nil then
     self:ModelViewIni()
+  else
+    self:RefreshMainPageStickerPreview()
   end
 end
 
@@ -635,6 +644,9 @@ end
 
 function M:OnPersonalInfoClosed()
   DebugPrint(string.format("PersonInfoMainPage: OnPersonalInfoClosed actorController=%s", tostring(self.ActorController ~= nil)))
+  if self.ClearConfirmedStickerPreview then
+    self:ClearConfirmedStickerPreview()
+  end
   ReleaseDisplayController(self, "OnPersonalInfoClosed")
   self:_ResetGamepadCameraInputState()
 end
@@ -642,19 +654,37 @@ end
 function M:RebuildDisplayPreviewAfterExternalPreviewClosed()
   if self.ActorController and self.ActorController.RefreshAfterExternalPreviewClosed then
     self.ActorController:RefreshAfterExternalPreviewClosed()
+    self:RefreshMainPageStickerPreview()
     return
   end
+  self:RefreshMainPageStickerPreview()
+end
+
+function M:OnExternalPreviewAcquired()
+  if self.ActorController and self.ActorController.SuspendPreviewControl then
+    self.ActorController:SuspendPreviewControl()
+  end
+end
+
+function M:OnExternalPreviewReleased()
+  self:RebuildDisplayPreviewAfterExternalPreviewClosed()
 end
 
 function M:Destruct()
   EventManager:RemoveEvent(EventID.OnPersonalInfoBgChanged, self)
+  EventManager:RemoveEvent(EventID.OnExternalPreviewAcquired, self)
+  EventManager:RemoveEvent(EventID.OnExternalPreviewReleased, self)
   self:RemoveReddotListener("EscPortrait", self.OnPortraitFrameReddotChange)
   self:RemoveReddotListener("EditBtn")
   self:RemoveReddotListener("PersonalInfoCustomizeEntry")
   self:_StopDataPageCameraOffsetTransition()
   self:ResetCameraRoamInput()
   self:_ResetGamepadCameraInputState()
+  if self.ClearConfirmedStickerPreview then
+    self:ClearConfirmedStickerPreview()
+  end
   ReleaseDisplayController(self, "Destruct")
+  self.bStackCovered = nil
 end
 
 function M:ChangeWeaponView()
@@ -1108,14 +1138,19 @@ function M:BuildMultiCharacterPreviewDraft()
 end
 
 function M:ApplyDisplayPreviewDraft()
+  if self.bStackCovered then
+    return false
+  end
   if not self.ActorController then
     DebugPrint("PersonInfoMainPage: ApplyDisplayPreviewDraft skipped because ActorController is nil")
+    PreviewLevelHandoffMask.Hide(self)
     return false
   end
   local Draft, ValidIndices, bUsingCustomDisplayDraft = self:BuildMultiCharacterPreviewDraft()
   if not self.ActorController.ApplyPreviewDraft then
     self.bUsingCustomDisplayDraft = false
     DebugPrint(string.format("PersonInfoMainPage: ApplyDisplayPreviewDraft failed because controller apply method is nil validCount=%s usingCustomDraft=%s", tostring(#ValidIndices), tostring(true == bUsingCustomDisplayDraft)))
+    PreviewLevelHandoffMask.Hide(self)
     return false
   end
   self.bUsingCustomDisplayDraft = true == bUsingCustomDisplayDraft
@@ -1258,6 +1293,7 @@ function M:ModelViewIni()
     DebugPrint(string.format("PersonInfoMainPage: ModelViewIni hidePlayerActor empty=%s", tostring(#ValidIndices <= 0)))
     self.ActorController:HidePlayerActor("PersonInfo", #ValidIndices <= 0)
   end
+  self:RefreshMainPageStickerPreview()
 end
 
 function M:OnPersonalInfoOpened(CharData)
@@ -1303,6 +1339,31 @@ function M:ChanegeCharInfo(CharData)
   if self.Group_AvatarInfo then
     self.Group_AvatarInfo:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
+end
+
+function M:GetStickerData()
+  return PersonInfoModel:GetStickerData()
+end
+
+function M:GetWorkingStickerData()
+  local Draft = PersonInfoModel.GetCustomDisplayDraft and PersonInfoModel:GetCustomDisplayDraft() or nil
+  local Sticker = Draft and Draft.Other and Draft.Other.Sticker or nil
+  if type(Sticker) == "table" then
+    return PersonInfoModel:ResolveDisplayStickerData(Sticker)
+  end
+  return PersonInfoModel:GetStickerData()
+end
+
+function M:GetStickerPreviewHostCanvas()
+  local RootPage = self.RootPage or PersonInfoController.MainPage
+  return RootPage and RootPage.Group_Stickers or nil
+end
+
+function M:RefreshMainPageStickerPreview()
+  if not self:GetStickerPreviewHostCanvas() then
+    return
+  end
+  self:RefreshConfirmedStickerPreviewFromDraft()
 end
 
 AssembleComponents(M)

@@ -88,6 +88,7 @@ return ReadOnly("WeaponTag", {
   MonDual = {WeaponTag = "MonDual", WeaponTagFloat = 3},
   MonGun = {WeaponTag = "MonGun", WeaponTagFloat = 1},
   MonSingle = {WeaponTag = "MonSingle", WeaponTagFloat = 2},
+  NoPreAim = {WeaponTag = "NoPreAim"},
   Pistol = {
     GachaIcon = "/Game/UI/Texture/Dynamic/Image/WeaponType/T_Gacha_WeaponType_Pistol.T_Gacha_WeaponType_Pistol",
     GachaSpine = "/Game/UI/WBP/Gacha/Widget/CampAni/WBP_Gacha_CampAni_Singlegun.WBP_Gacha_CampAni_Singlegun",

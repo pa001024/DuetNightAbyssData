@@ -36,6 +36,10 @@ return ReadOnly("BuffNextPass", {
     NextPassKey = "Mon_Strong_Tripple",
     Params = T.RT_1
   },
+  SpLise_Grade6_Monster = {
+    MaterialPath = "/Game/Asset/Char/Monster/Common/Materials/MI_Monster_Occluded_01.MI_Monster_Occluded_01",
+    NextPassKey = "SpLise_Grade6_Monster"
+  },
   Tuosi_Skill02_Body = {
     MaterialPath = "/Game/Asset/Char/Player/Char025_Tuosi/Materials/MI_Tuosi_EffectOL01.MI_Tuosi_EffectOL01",
     NextPassKey = "Tuosi_Skill02_Body"

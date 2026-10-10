@@ -1572,6 +1572,60 @@ return ReadOnly("SkillTreeUnlock", {
       Skill = T.RT_15
     }
   },
+  [4103] = {
+    [1] = {
+      Amount = T.RT_1,
+      CharID = 4103,
+      NeedSkill = {
+        [410301] = 4
+      },
+      Num = 1,
+      ResourceID = T.RT_21,
+      Skill = T.RT_3
+    },
+    [2] = {
+      Amount = T.RT_4,
+      CharID = 4103,
+      NeedBreak = 5,
+      Num = 2,
+      ResourceID = T.RT_51,
+      Skill = T.RT_6
+    },
+    [3] = {
+      Amount = T.RT_1,
+      CharID = 4103,
+      NeedSkill = {
+        [410302] = 4
+      },
+      Num = 3,
+      ResourceID = T.RT_21,
+      Skill = T.RT_7
+    },
+    [4] = {
+      Amount = T.RT_8,
+      CharID = 4103,
+      NeedLevel = 75,
+      Num = 4,
+      ResourceID = T.RT_51,
+      Skill = T.RT_9
+    },
+    [5] = {
+      Amount = T.RT_10,
+      CharID = 4103,
+      NeedBreak = 2,
+      Num = 5,
+      ResourceID = T.RT_52,
+      Skill = T.RT_12
+    },
+    [6] = {
+      Amount = T.RT_13,
+      CharID = 4103,
+      NeedBreak = 4,
+      Num = 6,
+      ResourceID = T.RT_53,
+      Skill = T.RT_15
+    }
+  },
   [4201] = {
     [1] = {
       Amount = T.RT_1,
@@ -1960,6 +2014,60 @@ return ReadOnly("SkillTreeUnlock", {
     [6] = {
       Amount = T.RT_13,
       CharID = 5401,
+      NeedBreak = 4,
+      Num = 6,
+      ResourceID = T.RT_58,
+      Skill = T.RT_15
+    }
+  },
+  [5402] = {
+    [1] = {
+      Amount = T.RT_1,
+      CharID = 5402,
+      NeedSkill = {
+        [540201] = 4
+      },
+      Num = 1,
+      ResourceID = T.RT_28,
+      Skill = T.RT_3
+    },
+    [2] = {
+      Amount = T.RT_4,
+      CharID = 5402,
+      NeedBreak = 5,
+      Num = 2,
+      ResourceID = T.RT_56,
+      Skill = T.RT_6
+    },
+    [3] = {
+      Amount = T.RT_1,
+      CharID = 5402,
+      NeedSkill = {
+        [540202] = 4
+      },
+      Num = 3,
+      ResourceID = T.RT_28,
+      Skill = T.RT_7
+    },
+    [4] = {
+      Amount = T.RT_8,
+      CharID = 5402,
+      NeedLevel = 75,
+      Num = 4,
+      ResourceID = T.RT_56,
+      Skill = T.RT_9
+    },
+    [5] = {
+      Amount = T.RT_10,
+      CharID = 5402,
+      NeedBreak = 2,
+      Num = 5,
+      ResourceID = T.RT_57,
+      Skill = T.RT_12
+    },
+    [6] = {
+      Amount = T.RT_13,
+      CharID = 5402,
       NeedBreak = 4,
       Num = 6,
       ResourceID = T.RT_58,

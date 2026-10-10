@@ -35,11 +35,17 @@ function WBP_NPC_ImpressionShop_C:TryChangeIconPath()
     return
   end
   if self.CurrentIconPath ~= self.IconPath then
-    UE.UResourceLibrary.LoadObjectAsync(self, self.IconPath, {
+    local RequestedIconPath = self.IconPath
+    self.CurrentIconPath = RequestedIconPath
+    UE.UResourceLibrary.LoadObjectAsync(self, RequestedIconPath, {
       self,
-      WBP_NPC_ImpressionShop_C.OnHeadIconLoaded
+      function(Obj, HeadIcon)
+        if not (IsValid(Obj) and Obj.bIsEnabled_Impression) or Obj.CurrentIconPath ~= RequestedIconPath then
+          return
+        end
+        Obj:OnHeadIconLoaded(HeadIcon)
+      end
     })
-    self.CurrentIconPath = self.IconPath
   end
 end
 
@@ -59,6 +65,15 @@ function WBP_NPC_ImpressionShop_C:OnDisabled()
     self:StopAllAnimations()
     self:PlayAnimation(self.Out)
   end
+end
+
+function WBP_NPC_ImpressionShop_C:ResetForPool()
+  self:StopAllAnimations()
+  self.bIsEnabled_Impression = false
+  self.IconPath = nil
+  self.CurrentIconPath = nil
+  self.Image_Icon:SetBrushFromTexture(nil)
+  self:SetVisibility(UE4.ESlateVisibility.Collapsed)
 end
 
 function WBP_NPC_ImpressionShop_C:OnAnimationFinished(InAnimation)

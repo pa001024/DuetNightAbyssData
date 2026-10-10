@@ -23,7 +23,7 @@ function M:Init(Params)
       end
     end
   elseif ChildrenNum < ShouldKeepCount then
-    for i = ChildrenNum, ShouldKeepCount do
+    for i = ChildrenNum + 1, ShouldKeepCount do
       self.ScrollBox:AddChild(UIManager:CreateWidget(WidgetClass, false))
     end
   end

@@ -6,7 +6,8 @@ function Component:SetModTag(bAllowModTag, bModEquiped)
       return
     end
     self.ModTagUI = UE.FWeakObjectPtr(ModTagUI)
-    self:AddWidgetToNode(nil, self.ModTagUI)
+    local Config = UIConst.ComItemLayerManagement
+    self:AddWidgetToNode(nil, self.ModTagUI, Config.Layer.Top, Config.Order.ModTag)
     ModTagUI:StopAllAnimations()
     if bModEquiped then
       ModTagUI:PlayAnimation(ModTagUI.Normal)

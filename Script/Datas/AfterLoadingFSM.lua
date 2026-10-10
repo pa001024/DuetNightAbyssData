@@ -9,6 +9,10 @@ return ReadOnly("AfterLoadingFSM", {
     FSMState = "Advertisement",
     NextState = "MonthCard"
   },
+  AimPlan = {
+    FSMState = "AimPlan",
+    NextState = "DynamicQuest"
+  },
   BackToTrial = {
     FSMState = "BackToTrial",
     NextState = "MainLineQuest"
@@ -46,10 +50,7 @@ return ReadOnly("AfterLoadingFSM", {
     FSMState = "JumpToRogueMain",
     NextState = "GameplayReward"
   },
-  LayoutPlan = {
-    FSMState = "LayoutPlan",
-    NextState = "DynamicQuest"
-  },
+  LayoutPlan = {FSMState = "LayoutPlan", NextState = "AimPlan"},
   MainLineQuest = {
     FSMState = "MainLineQuest",
     NextState = "LayoutPlan"

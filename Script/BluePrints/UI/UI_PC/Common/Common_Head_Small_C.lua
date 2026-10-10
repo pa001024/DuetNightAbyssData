@@ -74,6 +74,8 @@ function M:BtnAreaOnPressed()
 end
 
 function M:SetHeadFrame(HeadFrameId)
+  self.HeadFrameRequestVersion = (self.HeadFrameRequestVersion or 0) + 1
+  local RequestVersion = self.HeadFrameRequestVersion
   self.DynamicFrame:ClearChildren()
   self.DynamicFrame:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.HeadFrameId = HeadFrameId
@@ -93,12 +95,18 @@ function M:SetHeadFrame(HeadFrameId)
     UResourceLibrary.LoadObjectAsync(self, Conf.SmallIcon, {
       self,
       function(_, IconRes)
+        if not IsValid(self) or RequestVersion ~= self.HeadFrameRequestVersion then
+          return
+        end
         self.Head_Frame:SetBrushResourceObject(IconRes)
       end
     })
     self.Head_Frame:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   elseif Conf.DynamicPath then
     UIManager(self):CreateWidgetAsync(string.format("HeadFrame_%s", HeadFrameId), function(Widget)
+      if not IsValid(self) or RequestVersion ~= self.HeadFrameRequestVersion then
+        return
+      end
       if self.DynamicFrame:GetChildrenCount() > 0 then
         return
       end

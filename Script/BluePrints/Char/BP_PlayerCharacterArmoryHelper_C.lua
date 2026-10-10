@@ -237,6 +237,8 @@ end
 function M:CallBP_OnCameraRotated()
   if self.bIsViewTarget then
     self:OnCameraRotated()
+  elseif self.PersonalPreview then
+    self:OnCameraRotated_Personal()
   end
 end
 
@@ -467,6 +469,29 @@ end
 
 function M:SetPreviewLevelActor(PreviewLevelActor)
   rawset(self, "PreviewLevelActor", PreviewLevelActor)
+  if PreviewLevelActor then
+    local function SafeCallGetter(FuncName)
+      if not PreviewLevelActor[FuncName] then
+        return nil
+      end
+      local ok, Result = pcall(function()
+        return PreviewLevelActor[FuncName](PreviewLevelActor)
+      end)
+      return ok and Result or nil
+    end
+    
+    local SkyActor = SafeCallGetter("GetSkyActor") or SafeCallGetter("Get Sky Actor")
+    local NSActor = SafeCallGetter("GetNSActor") or SafeCallGetter("Get NS Actor")
+    if SkyActor then
+      self.BP_UIBG_Sky = SkyActor
+    end
+    if NSActor then
+      self.BP_UIArt_NSActor = NSActor
+    end
+  else
+    self.BP_UIBG_Sky = nil
+    self.BP_UIArt_NSActor = nil
+  end
 end
 
 function M:GetPreviewLevelActor()
@@ -684,6 +709,16 @@ function M:GetActorToRotate()
     end
   end
   return self:GetViewActor()
+end
+
+function M:GetPreviewCameraActor()
+  if self.DisplayController and self.DisplayController.GetPreviewCameraActor then
+    local CameraActor = self.DisplayController:GetPreviewCameraActor()
+    if CameraActor and IsValid(CameraActor) then
+      return CameraActor
+    end
+  end
+  return self
 end
 
 return M

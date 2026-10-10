@@ -151,8 +151,8 @@
     "displayType": 1,
     "historyType": 2,
     "hideCountdown": null,
-    "startTime": 1775440800,
-    "endTime": 1780304400,
+    "startTime": 1792375200,
+    "endTime": 1796029200,
     "cost": {
       "res": [
         1004,
@@ -240,6 +240,41 @@
     "star3ItemId": 99923,
     "star4ItemId": 99922,
     "star5ItemId": 99921
+  },
+  {
+    "id": 9009,
+    "name": "Au fil des rêves d’antan",
+    "desc": "Un objet épique ou supérieur est garanti tous les <highlight>10</> évocations, et un objet légendaire dans un maximum de <highlight>90</> évocations.",
+    "warning": "<Title>Objet légendaire garanti</>\nNombre d’évocations en cours : <highlight>%d</>/90\n \n<Title>Probabilités de la Myriade limitée</>\nTaux de base d’obtention d’un objet légendaire par évocation : <highlight>0,3 %%</>.\nTaux global (incluant la garantie) : <highlight>1,42 %%</>.\nUn objet légendaire est garanti dans un maximum de <highlight>90</> évocations.\n \nTaux individuels :\n— Dentelles de minuit : <highlight>0,641 %%</>\n— Prisme iridescent ×25 : <highlight>0,641 %%</>\n— Prisme iridescent ×50 : <highlight>0,142 %%</>\n \nTaux de base d’obtention d’un objet épique : <highlight>5,1 %%</>.\nTaux global (incluant la garantie) : <highlight>12,46 %%</>.\nUn objet épique est garanti dans un maximum de <highlight>10</> évocations.\n \nLorsque la garantie s’active, la probabilité d’obtenir un objet épique est de <highlight>99,7 %%</>, et celle d’obtenir un objet légendaire de <highlight>0,3 %%</>.\nEn cas de bonus de taux ou d’ajustement de garantie, veuillez vous référer aux règles spécifiques de la bannière.\n \n<Title>À propos des doublons</>\nSi vous obtenez à nouveau l’apparence légendaire « Dentelles de minuit », elle sera convertie en Prismes iridescents ×<highlight>25</>.\n \nLes autres apparences (tenues, armes et accessoires) déjà obtenues seront automatiquement converties en Prismes azurés :\n— Apparence épique → ×<highlight>4</>\n— Apparence rare → ×<highlight>1</>\n \n<Title>Transfert de progression entre Myriades</>\nLes évocations de <highlight>Au fil des rêves d’antan</> sont comptabilisées séparément et ne sont pas partagées avec les autres bannières de la Myriade.",
+    "coreDes": "Apparence lumineuse",
+    "coreDesColor": 5,
+    "type": "Myriade limitée",
+    "subTabId": 1401,
+    "tabId": 9,
+    "sequence": 9,
+    "gachaTimes": 1,
+    "displayType": 1,
+    "historyType": 2,
+    "hideCountdown": null,
+    "startTime": 1792375200,
+    "endTime": 1796029200,
+    "cost": {
+      "res": [
+        1004,
+        1003
+      ],
+      "num10": 10,
+      "displayRes": [
+        99,
+        1004,
+        1003
+      ]
+    },
+    "probabilityId": 1001,
+    "conditionId": 4041,
+    "star3ItemId": 99913,
+    "star4ItemId": 99912,
+    "star5ItemId": 99911
   },
   {
     "id": 90021,

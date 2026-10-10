@@ -3,6 +3,7 @@ local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
 local AppearanceUtils = require("BluePrints.UI.WBP.Appearance.AppearanceUtils")
 local AppearanceMainModel = require("BluePrints.UI.WBP.Appearance.AppearanceMainModel")
 local ActorController = require("BluePrints.UI.WBP.Armory.ActorController.Armory_ActorController")
+local PreviewLevelHandoffMask = require("BluePrints.UI.Common.Preview.PreviewLevelHandoffMask")
 local M = Class("BluePrints.UI.BP_UIState_C")
 M._components = {
   "BluePrints.UI.WBP.Armory.MainComponent.Armory_PointerInputComponent",
@@ -14,11 +15,17 @@ function M:Construct()
   self.IMG_Click.OnMouseButtonDownEvent:Unbind()
   self.IMG_Click.OnMouseButtonDownEvent:Bind(self, self.On_IMG_Click_MouseButtonDown)
   rawset(self, "MainWidgets", {})
+  self.bPreviewUnloadedForStack = nil
   self.Panel_Part:ClearChildren()
 end
 
 function M:ReceiveEnterState(StackAction)
   M.Super.ReceiveEnterState(self, StackAction)
+  if 1 == StackAction and self.bPreviewUnloadedForStack and self.ActorController and self.ActorController.TryLoadPreviewScene then
+    self.bPreviewUnloadedForStack = nil
+    PreviewLevelHandoffMask.Show(self)
+    self.ActorController:TryLoadPreviewScene()
+  end
   if self.CurMainWidget then
     self.CurMainWidget:ReceiveEnterState(StackAction)
   end
@@ -26,6 +33,23 @@ end
 
 function M:ReceiveExitState(StackAction)
   M.Super.ReceiveExitState(self, StackAction)
+  local bUnloadPreview = false
+  if 0 == StackAction and self.ActorController and self.ActorController.UnloadPreviewScene then
+    local Manager = UIManager(self)
+    local IncomingName
+    if Manager and Manager.CurrentUIList then
+      local UINameList = Manager.CurrentUIList:ToTable()
+      IncomingName = UINameList[#UINameList]
+    end
+    if "CommonRanking" == IncomingName or "PersonInfoPageMain" == IncomingName then
+      bUnloadPreview = true
+    end
+  end
+  if bUnloadPreview then
+    self.bPreviewUnloadedForStack = true
+    PreviewLevelHandoffMask.Show(self)
+    self.ActorController:UnloadPreviewScene(true)
+  end
   if self.CurMainWidget then
     self.CurMainWidget:ReceiveExitState(StackAction)
   end
@@ -355,6 +379,8 @@ function M:DestroyActorController()
 end
 
 function M:Destruct()
+  PreviewLevelHandoffMask.Hide(self)
+  self.bPreviewUnloadedForStack = nil
   self.Panel_Part:ClearChildren()
   self.MainModel:Destroy()
   self:DestroyActorController()

@@ -50,19 +50,31 @@ function M:InitBaseView()
   local AllTitles = Avatar.Titles
   self.UsedPrefixTitleID = Avatar.TitleBefore
   self.UsedSuffixTitleID = Avatar.TitleAfter
+  local LimitedTypeData = DataMgr.LimitedTimeResource.Title
+  if LimitedTypeData then
+    if Avatar:IsLimitedTitleExpired(self.UsedPrefixTitleID) then
+      self.UsedPrefixTitleID = -1
+    end
+    if Avatar:IsLimitedTitleExpired(self.UsedSuffixTitleID) then
+      self.UsedSuffixTitleID = -1
+    end
+  end
   self.UsedPrefixTitle = nil
   self.UsedSuffixTitle = nil
   for index, value in pairs(AllTitles) do
     if DataMgr.Title[index] then
-      local TitleData = DataMgr.Title[index]
-      local TitleContent = {
-        Name = TitleData.Name,
-        TitleID = TitleData.TitleID
-      }
-      if TitleData.IfSuffix then
-        table.insert(SuffixTitles, TitleContent)
-      else
-        table.insert(PrefixTitles, TitleContent)
+      local bExpiredLimited = Avatar:IsLimitedTitleExpired(index)
+      if not bExpiredLimited then
+        local TitleData = DataMgr.Title[index]
+        local TitleContent = {
+          Name = TitleData.Name,
+          TitleID = TitleData.TitleID
+        }
+        if TitleData.IfSuffix then
+          table.insert(SuffixTitles, TitleContent)
+        else
+          table.insert(PrefixTitles, TitleContent)
+        end
       end
     end
   end
@@ -266,9 +278,10 @@ function M:CancelSelectTitle(Item)
   if Item then
     Item.IsSelected = false
   end
-  if Item and Item.UI then
+  if Item and IsValid(Item.UI) then
     ScreenPrint("------------取消选中了 " .. (Item and Item.Name) .. Item.UI.Text_Title:GetText() or " 空 " .. (Item and Item.ReallyIdx) or " 空id ")
     Item.UI.Text_Title:SetRenderOpacity(0.4)
+    Item.UI:RefreshLimitTime()
   end
 end
 
@@ -290,6 +303,9 @@ function M:SelectTitle(Item, bIsPrefix)
   local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("Title")
   UIUtils.TrySubReddotCacheDetailNumber(Item.TitleID, "Title")
   self:AddTimer(0.05, function()
+    if not IsValid(self) or not Item then
+      return
+    end
     self:ReallySelectTitle(Item, bIsPrefix)
   end, nil, nil, bIsPrefix and "前缀" or "后缀", true)
 end
@@ -302,7 +318,7 @@ function M:ReallySelectTitle(Item, bIsPrefix)
   elseif Item == self.SelectSuffixTitleItem then
     return
   end
-  if Item.UI then
+  if IsValid(Item.UI) then
     local oldItem = bIsPrefix and self.SelectPrefixTitleItem or self.SelectSuffixTitleItem
     ScreenPrint("------------真正切换了 " .. (bIsPrefix and "前缀  " or "后缀  ") .. "旧的Item " .. (oldItem and oldItem.Name or " 空 ") .. (oldItem and oldItem.UI and oldItem.UI.Text_Title:GetText() or " 空 ") .. " 新的Item" .. Item.Name .. Item.UI.Text_Title:GetText())
   end
@@ -318,8 +334,9 @@ function M:ReallySelectTitle(Item, bIsPrefix)
     self.SelectSuffixID = self.SelectSuffixTitleItem.TitleID
     self.SelectSuffixTitleItem.IsSelected = true
   end
-  if Item.UI then
+  if IsValid(Item.UI) then
     Item.UI.Text_Title:SetRenderOpacity(1)
+    Item.UI:RefreshLimitTime()
   end
   self.FatherPage:OnTietleContentChange(self.SelectPrefixID, self.SelectSuffixID)
   if Item.IsNew then

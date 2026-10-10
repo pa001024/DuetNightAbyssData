@@ -313,6 +313,9 @@ function M:OnClickGachaAgain()
     self.Parent:PurchaseGachaResource(self.bSingle, true)
     return
   end
+  if 0 ~= Ret then
+    return
+  end
   self.Parent.bGachaing = true
   self:PlayOutAnim()
 end

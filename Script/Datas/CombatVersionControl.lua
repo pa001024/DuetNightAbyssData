@@ -13,7 +13,8 @@ return ReadOnly("CombatVersionControl", {
       13,
       14,
       15,
-      16
+      16,
+      17
     },
     Id = 1
   }

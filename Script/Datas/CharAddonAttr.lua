@@ -634,6 +634,30 @@ return ReadOnly("CharAddonAttr", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_12",
     Name = "ADDONATTR_410204_NAME"
   },
+  [410301] = {
+    AddAttrs = T.RT_5,
+    AttrId = 410301,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_02",
+    Name = "ADDONATTR_410301_NAME"
+  },
+  [410302] = {
+    AddAttrs = T.RT_6,
+    AttrId = 410302,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_02",
+    Name = "ADDONATTR_410302_NAME"
+  },
+  [410303] = {
+    AddAttrs = T.RT_13,
+    AttrId = 410303,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_12",
+    Name = "ADDONATTR_410303_NAME"
+  },
+  [410304] = {
+    AddAttrs = T.RT_14,
+    AttrId = 410304,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_12",
+    Name = "ADDONATTR_410304_NAME"
+  },
   [420101] = {
     AddAttrs = T.RT_1,
     AttrId = 420101,
@@ -807,5 +831,35 @@ return ReadOnly("CharAddonAttr", {
     AttrId = 540104,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_10",
     Name = "ADDONATTR_540104_NAME"
+  },
+  [540201] = {
+    AddAttrs = {
+      AttrName = "HyperTriggerRate",
+      Rate = 0.4
+    },
+    AttrId = 540201,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_01",
+    Name = "ADDONATTR_540201_NAME"
+  },
+  [540202] = {
+    AddAttrs = {
+      AttrName = "HyperTriggerRate",
+      Rate = 0.6
+    },
+    AttrId = 540202,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_01",
+    Name = "ADDONATTR_540202_NAME"
+  },
+  [540203] = {
+    AddAttrs = T.RT_13,
+    AttrId = 540203,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_12",
+    Name = "ADDONATTR_540203_NAME"
+  },
+  [540204] = {
+    AddAttrs = T.RT_14,
+    AttrId = 540204,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_12",
+    Name = "ADDONATTR_540204_NAME"
   }
 })

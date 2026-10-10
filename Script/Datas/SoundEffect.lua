@@ -865,6 +865,10 @@ return ReadOnly("SoundEffect", {
     SoundId = 3008,
     SoundPath = "event:/sfx/common/player/action/footstep_costume_falu"
   },
+  [3009] = {
+    SoundId = 3009,
+    SoundPath = "event:/sfx/common/player/action/footstep_costume_SpLise"
+  },
   [3101] = {
     NumLimit = 5,
     SoundId = 3101,
@@ -908,6 +912,10 @@ return ReadOnly("SoundEffect", {
     SoundId = 3110,
     SoundPath = "event:/sfx/btc/common/pukeyinfu_huanwen"
   },
+  [3111] = {
+    SoundId = 3111,
+    SoundPath = "event:/sfx/btc/lise/huanwen"
+  },
   [3201] = {
     NumLimit = 5,
     SoundId = 3201,
@@ -944,6 +952,10 @@ return ReadOnly("SoundEffect", {
   [3307] = {
     SoundId = 3307,
     SoundPath = "event:/sfx/btc/falu/fallattack_1.6"
+  },
+  [3308] = {
+    SoundId = 3308,
+    SoundPath = "event:/sfx/btc/lise/fallattack"
   },
   [3401] = {
     SoundId = 3401,
@@ -996,6 +1008,26 @@ return ReadOnly("SoundEffect", {
   [3413] = {
     SoundId = 3413,
     SoundPath = "event:/sfx/btc/xiunv/bulletjump_xiunv03"
+  },
+  [3414] = {
+    SoundId = 3414,
+    SoundPath = "event:/sfx/btc/lise/bulletjump_jiangshi"
+  },
+  [3415] = {
+    SoundId = 3415,
+    SoundPath = "event:/sfx/btc/lise/bulletjump"
+  },
+  [3416] = {
+    SoundId = 3416,
+    SoundPath = "event:/sfx/btc/lise/bulletjump_halloween"
+  },
+  [3417] = {
+    SoundId = 3417,
+    SoundPath = "event:/sfx/btc/lise/bulletjump_halloweenplus"
+  },
+  [3418] = {
+    SoundId = 3418,
+    SoundPath = "event:/sfx/btc/lise/bulletjump_ghost"
   },
   [3502] = {
     NumLimit = 5,
@@ -1968,6 +2000,101 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/player/hit/magic/lightingHit",
     SubSoundId = 53
   },
+  [410301] = {
+    NumLimit = 5,
+    ReplaceSoundID = {
+      [410399] = "event:/sfx/player/SpLise01/skill02_hit"
+    },
+    SoundId = 410301,
+    SoundPath = "event:/sfx/player/SpLise/skill02_hit"
+  },
+  [410302] = {
+    NumLimit = 5,
+    ReplaceSoundID = {
+      [410399] = "event:/sfx/common/player/hit/bullet/hit_cri"
+    },
+    SoundId = 410302,
+    SoundPath = "event:/sfx/common/player/hit/bullet/hit_cri"
+  },
+  [410303] = {
+    NumLimit = 5,
+    ReplaceSoundID = {
+      [410399] = "event:/sfx/player/SpLise01/skill02_aim"
+    },
+    SoundId = 410303,
+    SoundPath = "event:/sfx/player/SpLise/skill02_aim"
+  },
+  [410304] = {
+    NumLimit = 5,
+    ReplaceSoundID = {
+      [410399] = "event:/sfx/player/SpLise01/skill02_charge"
+    },
+    SoundId = 410304,
+    SoundPath = "event:/sfx/player/SpLise/skill02_charge"
+  },
+  [410307] = {
+    NumLimit = 5,
+    ReplaceSoundID = {
+      [410399] = "event:/sfx/player/SpLise01/skill02_lock"
+    },
+    SoundId = 410307,
+    SoundPath = "event:/sfx/player/SpLise/skill02_lock"
+  },
+  [410308] = {
+    NumLimit = 5,
+    ReplaceSoundID = {
+      [410399] = "event:/sfx/player/SpLise01/skill02_kill"
+    },
+    SoundId = 410308,
+    SoundPath = "event:/sfx/player/SpLise/skill02_kill"
+  },
+  [410309] = {
+    NumLimit = 5,
+    ReplaceSoundID = {
+      [410399] = "event:/sfx/player/SpLise01/skill02_scope"
+    },
+    SoundId = 410309,
+    SoundPath = "event:/sfx/player/SpLise/skill02_scope"
+  },
+  [410310] = {
+    NumLimit = 5,
+    ReplaceSoundID = {
+      [410399] = "event:/sfx/common/player/hit/bullet/hit_death"
+    },
+    SoundId = 410310
+  },
+  [410311] = {
+    NumLimit = 5,
+    ReplaceSoundID = {
+      [410399] = "event:/sfx/player/SpLise01/skill02_normal_shoot"
+    },
+    SoundId = 410311,
+    SoundPath = "event:/sfx/player/SpLise/skill02_normal_shoot"
+  },
+  [410312] = {
+    NumLimit = 5,
+    ReplaceSoundID = {
+      [410399] = "event:/sfx/player/SpLise01/skill02_shoot"
+    },
+    SoundId = 410312,
+    SoundPath = "event:/sfx/player/SpLise/skill02_shoot"
+  },
+  [410313] = {
+    NumLimit = 5,
+    ReplaceSoundID = {
+      [410399] = "event:/sfx/player/SpLise01/skill01_exp"
+    },
+    SoundId = 410313,
+    SoundPath = "event:/sfx/player/SpLise/skill01_exp"
+  },
+  [410314] = {
+    NumLimit = 2,
+    ReplaceSoundID = {
+      [410399] = "event:/sfx/player/SpLise01/skill02_aimrelord"
+    },
+    SoundId = 410314,
+    SoundPath = "event:/sfx/player/SpLise/skill02_aimrelord"
+  },
   [420101] = {
     NumLimit = 5,
     SoundId = 420101,
@@ -2647,6 +2774,34 @@ return ReadOnly("SoundEffect", {
     NumLimit = 5,
     SoundId = 800303,
     SoundPath = "event:/sfx/enemy/JH/Shenfu/buff"
+  },
+  [800401] = {
+    SoundId = 800401,
+    SoundPath = "event:/sfx/enemy/JH/Zhutai/attack01_exp"
+  },
+  [800402] = {
+    SoundId = 800402,
+    SoundPath = "event:/sfx/enemy/JH/Zhutai/attack02_exp"
+  },
+  [800403] = {
+    SoundId = 800403,
+    SoundPath = "event:/sfx/enemy/JH/Zhutai/attack_loop"
+  },
+  [800501] = {
+    SoundId = 800501,
+    SoundPath = "event:/sfx/common/enemy/hit/spearHit_normal"
+  },
+  [800502] = {
+    SoundId = 800502,
+    SoundPath = "event:/sfx/common/enemy/hit/spearHit_normal"
+  },
+  [800503] = {
+    SoundId = 800503,
+    SoundPath = "event:/sfx/enemy/JH/Shiji/attack02_loop"
+  },
+  [800504] = {
+    SoundId = 800504,
+    SoundPath = "event:/sfx/enemy/JH/Shiji/hit"
   },
   [850001] = {
     NumLimit = 5,
@@ -4077,11 +4232,11 @@ return ReadOnly("SoundEffect", {
   },
   [852019] = {
     SoundId = 852019,
-    SoundPath = "event:/sfx/boss/Aida/skill13_fx_"
+    SoundPath = "event:/sfx/boss/Aida/skill13_fx_stop"
   },
   [852021] = {
     SoundId = 852021,
-    SoundPath = "event:/sfx/boss/Aida/skill13_fx_"
+    SoundPath = "event:/sfx/boss/Aida/skill13_fx_exp"
   },
   [852101] = {
     SoundId = 852101,
@@ -4422,6 +4577,10 @@ return ReadOnly("SoundEffect", {
     SoundId = 980301,
     SoundPath = "event:/sfx/common/enemy/hit/spearHit_normal"
   },
+  [1019901] = {
+    SoundId = 1019901,
+    SoundPath = "event:/sfx/weapon/Sword/Yemei/explosion"
+  },
   [1020101] = {
     NumLimit = 5,
     SoundId = 1020101,
@@ -4624,6 +4783,10 @@ return ReadOnly("SoundEffect", {
     SoundId = 2030503,
     SoundPath = "event:/sfx/weapon/Cannon/Yinbai/hit",
     SubSoundId = 1
+  },
+  [2030602] = {
+    SoundId = 2030602,
+    SoundPath = "event:/sfx/weapon/Cannon/Huozhe/shoot_hit_ground"
   },
   [2040201] = {
     NumLimit = 5,

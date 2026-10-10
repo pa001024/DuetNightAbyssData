@@ -1815,6 +1815,11 @@ return ReadOnly("Talk_SoundEditor", {
     SelectKey = "voice_ch_char_Falu_vo_birthday",
     SoundLength = 26710
   },
+  voice_ch_char_Falu_vo_companio_01 = {
+    ProgrammerSoundPath = "event:/voice/ch/char/Falu/vo",
+    SelectKey = "voice_ch_char_Falu_vo_companio_01",
+    SoundLength = 18050
+  },
   voice_ch_char_Falu_vo_companio_02 = {
     ProgrammerSoundPath = "event:/voice/ch/char/Falu/vo",
     SelectKey = "voice_ch_char_Falu_vo_companio_02",
@@ -8514,6 +8519,151 @@ return ReadOnly("Talk_SoundEditor", {
     ProgrammerSoundPath = "event:/voice/ch/char/Songlu/vo",
     SelectKey = "voice_ch_char_Songlu_vo_welcome",
     SoundLength = 10490
+  },
+  voice_ch_char_SpLise_vo_appear = {
+    ProgrammerSoundPath = "event:/voice/ch/char/SpLise/vo",
+    SelectKey = "voice_ch_char_SpLise_vo_appear",
+    SoundLength = 2700
+  },
+  voice_ch_char_SpLise_vo_battleidle = {
+    ProgrammerSoundPath = "event:/voice/ch/char/SpLise/vo",
+    SelectKey = "voice_ch_char_SpLise_vo_battleidle",
+    SoundLength = 5370
+  },
+  voice_ch_char_SpLise_vo_birthday = {
+    ProgrammerSoundPath = "event:/voice/ch/char/SpLise/vo",
+    SelectKey = "voice_ch_char_SpLise_vo_birthday",
+    SoundLength = 47130
+  },
+  voice_ch_char_SpLise_vo_companio_01 = {
+    ProgrammerSoundPath = "event:/voice/ch/char/SpLise/vo",
+    SelectKey = "voice_ch_char_SpLise_vo_companio_01",
+    SoundLength = 12830
+  },
+  voice_ch_char_SpLise_vo_companio_02 = {
+    ProgrammerSoundPath = "event:/voice/ch/char/SpLise/vo",
+    SelectKey = "voice_ch_char_SpLise_vo_companio_02",
+    SoundLength = 14810
+  },
+  voice_ch_char_SpLise_vo_companio_03 = {
+    ProgrammerSoundPath = "event:/voice/ch/char/SpLise/vo",
+    SelectKey = "voice_ch_char_SpLise_vo_companio_03",
+    SoundLength = 12280
+  },
+  voice_ch_char_SpLise_vo_fail = {
+    ProgrammerSoundPath = "event:/voice/ch/char/SpLise/vo",
+    SelectKey = "voice_ch_char_SpLise_vo_fail",
+    SoundLength = 2360
+  },
+  voice_ch_char_SpLise_vo_gain = {
+    ProgrammerSoundPath = "event:/voice/ch/char/SpLise/vo",
+    SelectKey = "voice_ch_char_SpLise_vo_gain",
+    SoundLength = 10060
+  },
+  voice_ch_char_SpLise_vo_idle = {
+    ProgrammerSoundPath = "event:/voice/ch/char/SpLise/vo",
+    SelectKey = "voice_ch_char_SpLise_vo_idle",
+    SoundLength = 6250
+  },
+  voice_ch_char_SpLise_vo_lvup = {
+    ProgrammerSoundPath = "event:/voice/ch/char/SpLise/vo",
+    SelectKey = "voice_ch_char_SpLise_vo_lvup",
+    SoundLength = 5640
+  },
+  voice_ch_char_SpLise_vo_topic_01_1 = {
+    ProgrammerSoundPath = "event:/voice/ch/char/SpLise/vo",
+    SelectKey = "voice_ch_char_SpLise_vo_topic_01_1",
+    SoundLength = 9270
+  },
+  voice_ch_char_SpLise_vo_topic_01_2 = {
+    ProgrammerSoundPath = "event:/voice/ch/char/SpLise/vo",
+    SelectKey = "voice_ch_char_SpLise_vo_topic_01_2",
+    SoundLength = 3790
+  },
+  voice_ch_char_SpLise_vo_topic_01_3 = {
+    ProgrammerSoundPath = "event:/voice/ch/char/SpLise/vo",
+    SelectKey = "voice_ch_char_SpLise_vo_topic_01_3",
+    SoundLength = 8350
+  },
+  voice_ch_char_SpLise_vo_topic_01_4 = {
+    ProgrammerSoundPath = "event:/voice/ch/char/SpLise/vo",
+    SelectKey = "voice_ch_char_SpLise_vo_topic_01_4",
+    SoundLength = 9470
+  },
+  voice_ch_char_SpLise_vo_topic_01_5 = {
+    ProgrammerSoundPath = "event:/voice/ch/char/SpLise/vo",
+    SelectKey = "voice_ch_char_SpLise_vo_topic_01_5",
+    SoundLength = 5680
+  },
+  voice_ch_char_SpLise_vo_topic_02_1 = {
+    ProgrammerSoundPath = "event:/voice/ch/char/SpLise/vo",
+    SelectKey = "voice_ch_char_SpLise_vo_topic_02_1",
+    SoundLength = 8340
+  },
+  voice_ch_char_SpLise_vo_topic_02_2 = {
+    ProgrammerSoundPath = "event:/voice/ch/char/SpLise/vo",
+    SelectKey = "voice_ch_char_SpLise_vo_topic_02_2",
+    SoundLength = 7190
+  },
+  voice_ch_char_SpLise_vo_topic_02_3 = {
+    ProgrammerSoundPath = "event:/voice/ch/char/SpLise/vo",
+    SelectKey = "voice_ch_char_SpLise_vo_topic_02_3",
+    SoundLength = 13400
+  },
+  voice_ch_char_SpLise_vo_topic_02_4 = {
+    ProgrammerSoundPath = "event:/voice/ch/char/SpLise/vo",
+    SelectKey = "voice_ch_char_SpLise_vo_topic_02_4",
+    SoundLength = 17380
+  },
+  voice_ch_char_SpLise_vo_topic_03_1 = {
+    ProgrammerSoundPath = "event:/voice/ch/char/SpLise/vo",
+    SelectKey = "voice_ch_char_SpLise_vo_topic_03_1",
+    SoundLength = 13650
+  },
+  voice_ch_char_SpLise_vo_topic_03_2 = {
+    ProgrammerSoundPath = "event:/voice/ch/char/SpLise/vo",
+    SelectKey = "voice_ch_char_SpLise_vo_topic_03_2",
+    SoundLength = 15090
+  },
+  voice_ch_char_SpLise_vo_topic_03_3 = {
+    ProgrammerSoundPath = "event:/voice/ch/char/SpLise/vo",
+    SelectKey = "voice_ch_char_SpLise_vo_topic_03_3",
+    SoundLength = 3290
+  },
+  voice_ch_char_SpLise_vo_topic_04_1 = {
+    ProgrammerSoundPath = "event:/voice/ch/char/SpLise/vo",
+    SelectKey = "voice_ch_char_SpLise_vo_topic_04_1",
+    SoundLength = 5280
+  },
+  voice_ch_char_SpLise_vo_topic_04_2 = {
+    ProgrammerSoundPath = "event:/voice/ch/char/SpLise/vo",
+    SelectKey = "voice_ch_char_SpLise_vo_topic_04_2",
+    SoundLength = 6120
+  },
+  voice_ch_char_SpLise_vo_topic_04_3 = {
+    ProgrammerSoundPath = "event:/voice/ch/char/SpLise/vo",
+    SelectKey = "voice_ch_char_SpLise_vo_topic_04_3",
+    SoundLength = 10180
+  },
+  voice_ch_char_SpLise_vo_topic_04_4 = {
+    ProgrammerSoundPath = "event:/voice/ch/char/SpLise/vo",
+    SelectKey = "voice_ch_char_SpLise_vo_topic_04_4",
+    SoundLength = 7630
+  },
+  voice_ch_char_SpLise_vo_topic_04_5 = {
+    ProgrammerSoundPath = "event:/voice/ch/char/SpLise/vo",
+    SelectKey = "voice_ch_char_SpLise_vo_topic_04_5",
+    SoundLength = 15600
+  },
+  voice_ch_char_SpLise_vo_victory = {
+    ProgrammerSoundPath = "event:/voice/ch/char/SpLise/vo",
+    SelectKey = "voice_ch_char_SpLise_vo_victory",
+    SoundLength = 3540
+  },
+  voice_ch_char_SpLise_vo_welcome = {
+    ProgrammerSoundPath = "event:/voice/ch/char/SpLise/vo",
+    SelectKey = "voice_ch_char_SpLise_vo_welcome",
+    SoundLength = 8420
   },
   voice_ch_char_Suyi_vo_appear = {
     ProgrammerSoundPath = "event:/voice/ch/char/Suyi/vo",
@@ -120586,6 +120736,336 @@ return ReadOnly("Talk_SoundEditor", {
     SelectKey = "voice_en_char_Songlu_vo_welcome",
     SoundLength = 9910
   },
+  voice_en_char_SpLise_vo_appear = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_appear",
+    SoundLength = 2920
+  },
+  voice_en_char_SpLise_vo_battleidle = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_battleidle",
+    SoundLength = 5110
+  },
+  voice_en_char_SpLise_vo_birthday = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_birthday",
+    SoundLength = 40110
+  },
+  voice_en_char_SpLise_vo_companio_01 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_companio_01",
+    SoundLength = 9060
+  },
+  voice_en_char_SpLise_vo_companio_02 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_companio_02",
+    SoundLength = 11580
+  },
+  voice_en_char_SpLise_vo_companio_03_f = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_companio_03_f",
+    SoundLength = 11940
+  },
+  voice_en_char_SpLise_vo_companio_03_m = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_companio_03_m",
+    SoundLength = 11980
+  },
+  voice_en_char_SpLise_vo_emotion_amaze_01 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_amaze_01",
+    SoundLength = 730
+  },
+  voice_en_char_SpLise_vo_emotion_amaze_02 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_amaze_02",
+    SoundLength = 680
+  },
+  voice_en_char_SpLise_vo_emotion_complacent_01 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_complacent_01",
+    SoundLength = 670
+  },
+  voice_en_char_SpLise_vo_emotion_conclude_01 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_conclude_01",
+    SoundLength = 940
+  },
+  voice_en_char_SpLise_vo_emotion_confuse_01 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_confuse_01",
+    SoundLength = 720
+  },
+  voice_en_char_SpLise_vo_emotion_continue_01 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_continue_01",
+    SoundLength = 940
+  },
+  voice_en_char_SpLise_vo_emotion_disdain_01 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_disdain_01",
+    SoundLength = 580
+  },
+  voice_en_char_SpLise_vo_emotion_dislike_01 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_dislike_01",
+    SoundLength = 650
+  },
+  voice_en_char_SpLise_vo_emotion_dislike_02 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_dislike_02",
+    SoundLength = 540
+  },
+  voice_en_char_SpLise_vo_emotion_dislike_03 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_dislike_03",
+    SoundLength = 610
+  },
+  voice_en_char_SpLise_vo_emotion_excuse_01 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_excuse_01",
+    SoundLength = 870
+  },
+  voice_en_char_SpLise_vo_emotion_happy_01 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_happy_01",
+    SoundLength = 760
+  },
+  voice_en_char_SpLise_vo_emotion_happy_02 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_happy_02",
+    SoundLength = 660
+  },
+  voice_en_char_SpLise_vo_emotion_happy_03 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_happy_03",
+    SoundLength = 1010
+  },
+  voice_en_char_SpLise_vo_emotion_hesitate_01 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_hesitate_01",
+    SoundLength = 1090
+  },
+  voice_en_char_SpLise_vo_emotion_no_01 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_no_01",
+    SoundLength = 720
+  },
+  voice_en_char_SpLise_vo_emotion_objection_01 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_objection_01",
+    SoundLength = 1160
+  },
+  voice_en_char_SpLise_vo_emotion_personal_01 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_personal_01",
+    SoundLength = 1210
+  },
+  voice_en_char_SpLise_vo_emotion_personal_02 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_personal_02",
+    SoundLength = 1120
+  },
+  voice_en_char_SpLise_vo_emotion_personal_03 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_personal_03",
+    SoundLength = 1120
+  },
+  voice_en_char_SpLise_vo_emotion_personal_04 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_personal_04",
+    SoundLength = 1450
+  },
+  voice_en_char_SpLise_vo_emotion_personal_05 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_personal_05",
+    SoundLength = 1360
+  },
+  voice_en_char_SpLise_vo_emotion_realize_01 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_realize_01",
+    SoundLength = 820
+  },
+  voice_en_char_SpLise_vo_emotion_refute_01 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_refute_01",
+    SoundLength = 940
+  },
+  voice_en_char_SpLise_vo_emotion_reply_01 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_reply_01",
+    SoundLength = 630
+  },
+  voice_en_char_SpLise_vo_emotion_reply_02 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_reply_02",
+    SoundLength = 860
+  },
+  voice_en_char_SpLise_vo_emotion_sigh_01 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_sigh_01",
+    SoundLength = 730
+  },
+  voice_en_char_SpLise_vo_emotion_sigh_02 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_sigh_02",
+    SoundLength = 1220
+  },
+  voice_en_char_SpLise_vo_emotion_start_01 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_start_01",
+    SoundLength = 1130
+  },
+  voice_en_char_SpLise_vo_emotion_start_02 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_start_02",
+    SoundLength = 1000
+  },
+  voice_en_char_SpLise_vo_emotion_thank_01 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_thank_01",
+    SoundLength = 950
+  },
+  voice_en_char_SpLise_vo_emotion_think_01 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_think_01",
+    SoundLength = 890
+  },
+  voice_en_char_SpLise_vo_emotion_understand_01 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_understand_01",
+    SoundLength = 810
+  },
+  voice_en_char_SpLise_vo_emotion_unexpect_01 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_unexpect_01",
+    SoundLength = 720
+  },
+  voice_en_char_SpLise_vo_emotion_yes_01 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_emotion_yes_01",
+    SoundLength = 990
+  },
+  voice_en_char_SpLise_vo_fail = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_fail",
+    SoundLength = 2490
+  },
+  voice_en_char_SpLise_vo_gain = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_gain",
+    SoundLength = 8040
+  },
+  voice_en_char_SpLise_vo_idle = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_idle",
+    SoundLength = 4060
+  },
+  voice_en_char_SpLise_vo_lvup = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_lvup",
+    SoundLength = 5710
+  },
+  voice_en_char_SpLise_vo_mouth = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_mouth",
+    SoundLength = 10870
+  },
+  voice_en_char_SpLise_vo_topic_01_1 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_topic_01_1",
+    SoundLength = 9060
+  },
+  voice_en_char_SpLise_vo_topic_01_2 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_topic_01_2",
+    SoundLength = 3830
+  },
+  voice_en_char_SpLise_vo_topic_01_3 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_topic_01_3",
+    SoundLength = 5410
+  },
+  voice_en_char_SpLise_vo_topic_01_4 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_topic_01_4",
+    SoundLength = 9350
+  },
+  voice_en_char_SpLise_vo_topic_01_5 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_topic_01_5",
+    SoundLength = 4930
+  },
+  voice_en_char_SpLise_vo_topic_02_1 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_topic_02_1",
+    SoundLength = 6450
+  },
+  voice_en_char_SpLise_vo_topic_02_2 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_topic_02_2",
+    SoundLength = 6910
+  },
+  voice_en_char_SpLise_vo_topic_02_3 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_topic_02_3",
+    SoundLength = 11500
+  },
+  voice_en_char_SpLise_vo_topic_02_4 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_topic_02_4",
+    SoundLength = 11030
+  },
+  voice_en_char_SpLise_vo_topic_03_1 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_topic_03_1",
+    SoundLength = 13370
+  },
+  voice_en_char_SpLise_vo_topic_03_2 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_topic_03_2",
+    SoundLength = 13480
+  },
+  voice_en_char_SpLise_vo_topic_03_3 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_topic_03_3",
+    SoundLength = 4190
+  },
+  voice_en_char_SpLise_vo_topic_04_1 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_topic_04_1",
+    SoundLength = 5500
+  },
+  voice_en_char_SpLise_vo_topic_04_2 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_topic_04_2",
+    SoundLength = 4630
+  },
+  voice_en_char_SpLise_vo_topic_04_3 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_topic_04_3",
+    SoundLength = 5920
+  },
+  voice_en_char_SpLise_vo_topic_04_4 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_topic_04_4",
+    SoundLength = 5730
+  },
+  voice_en_char_SpLise_vo_topic_04_5 = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_topic_04_5",
+    SoundLength = 12090
+  },
+  voice_en_char_SpLise_vo_victory = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_victory",
+    SoundLength = 3890
+  },
+  voice_en_char_SpLise_vo_welcome = {
+    ProgrammerSoundPath = "event:/voice/en/char/SpLise/vo",
+    SelectKey = "voice_en_char_SpLise_vo_welcome",
+    SoundLength = 5530
+  },
   voice_en_char_Suyi_vo_appear = {
     ProgrammerSoundPath = "event:/voice/en/char/Suyi/vo",
     SelectKey = "voice_en_char_Suyi_vo_appear",
@@ -227049,6 +227529,331 @@ return ReadOnly("Talk_SoundEditor", {
     ProgrammerSoundPath = "event:/voice/jp/char/Songlu/vo",
     SelectKey = "voice_jp_char_Songlu_vo_welcome",
     SoundLength = 13940
+  },
+  voice_jp_char_SpLise_vo_appear = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_appear",
+    SoundLength = 3100
+  },
+  voice_jp_char_SpLise_vo_battleidle = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_battleidle",
+    SoundLength = 9370
+  },
+  voice_jp_char_SpLise_vo_birthday = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_birthday",
+    SoundLength = 56320
+  },
+  voice_jp_char_SpLise_vo_companio_01 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_companio_01",
+    SoundLength = 12260
+  },
+  voice_jp_char_SpLise_vo_companio_02 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_companio_02",
+    SoundLength = 14920
+  },
+  voice_jp_char_SpLise_vo_companio_03 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_companio_03",
+    SoundLength = 19770
+  },
+  voice_jp_char_SpLise_vo_emotion_amaze_01 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_amaze_01",
+    SoundLength = 900
+  },
+  voice_jp_char_SpLise_vo_emotion_amaze_02 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_amaze_02",
+    SoundLength = 730
+  },
+  voice_jp_char_SpLise_vo_emotion_complacent_01 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_complacent_01",
+    SoundLength = 700
+  },
+  voice_jp_char_SpLise_vo_emotion_conclude_01 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_conclude_01",
+    SoundLength = 860
+  },
+  voice_jp_char_SpLise_vo_emotion_confuse_01 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_confuse_01",
+    SoundLength = 550
+  },
+  voice_jp_char_SpLise_vo_emotion_continue_01 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_continue_01",
+    SoundLength = 870
+  },
+  voice_jp_char_SpLise_vo_emotion_disdain_01 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_disdain_01",
+    SoundLength = 870
+  },
+  voice_jp_char_SpLise_vo_emotion_dislike_01 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_dislike_01",
+    SoundLength = 870
+  },
+  voice_jp_char_SpLise_vo_emotion_dislike_02 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_dislike_02",
+    SoundLength = 850
+  },
+  voice_jp_char_SpLise_vo_emotion_dislike_03 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_dislike_03",
+    SoundLength = 720
+  },
+  voice_jp_char_SpLise_vo_emotion_excuse_01 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_excuse_01",
+    SoundLength = 1450
+  },
+  voice_jp_char_SpLise_vo_emotion_happy_01 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_happy_01",
+    SoundLength = 610
+  },
+  voice_jp_char_SpLise_vo_emotion_happy_02 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_happy_02",
+    SoundLength = 800
+  },
+  voice_jp_char_SpLise_vo_emotion_happy_03 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_happy_03",
+    SoundLength = 870
+  },
+  voice_jp_char_SpLise_vo_emotion_hesitate_01 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_hesitate_01",
+    SoundLength = 1020
+  },
+  voice_jp_char_SpLise_vo_emotion_no_01 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_no_01",
+    SoundLength = 760
+  },
+  voice_jp_char_SpLise_vo_emotion_objection_01 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_objection_01",
+    SoundLength = 1290
+  },
+  voice_jp_char_SpLise_vo_emotion_personal_01 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_personal_01",
+    SoundLength = 920
+  },
+  voice_jp_char_SpLise_vo_emotion_personal_02 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_personal_02",
+    SoundLength = 1040
+  },
+  voice_jp_char_SpLise_vo_emotion_personal_03 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_personal_03",
+    SoundLength = 1110
+  },
+  voice_jp_char_SpLise_vo_emotion_personal_04 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_personal_04",
+    SoundLength = 1810
+  },
+  voice_jp_char_SpLise_vo_emotion_personal_05 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_personal_05",
+    SoundLength = 1760
+  },
+  voice_jp_char_SpLise_vo_emotion_realize_01 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_realize_01",
+    SoundLength = 1080
+  },
+  voice_jp_char_SpLise_vo_emotion_refute_01 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_refute_01",
+    SoundLength = 850
+  },
+  voice_jp_char_SpLise_vo_emotion_reply_01 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_reply_01",
+    SoundLength = 690
+  },
+  voice_jp_char_SpLise_vo_emotion_reply_02 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_reply_02",
+    SoundLength = 640
+  },
+  voice_jp_char_SpLise_vo_emotion_sigh_01 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_sigh_01",
+    SoundLength = 870
+  },
+  voice_jp_char_SpLise_vo_emotion_sigh_02 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_sigh_02",
+    SoundLength = 850
+  },
+  voice_jp_char_SpLise_vo_emotion_start_01 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_start_01",
+    SoundLength = 1590
+  },
+  voice_jp_char_SpLise_vo_emotion_start_02 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_start_02",
+    SoundLength = 880
+  },
+  voice_jp_char_SpLise_vo_emotion_thank_01 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_thank_01",
+    SoundLength = 870
+  },
+  voice_jp_char_SpLise_vo_emotion_think_01 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_think_01",
+    SoundLength = 780
+  },
+  voice_jp_char_SpLise_vo_emotion_understand_01 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_understand_01",
+    SoundLength = 700
+  },
+  voice_jp_char_SpLise_vo_emotion_unexpect_01 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_unexpect_01",
+    SoundLength = 770
+  },
+  voice_jp_char_SpLise_vo_emotion_yes_01 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_emotion_yes_01",
+    SoundLength = 780
+  },
+  voice_jp_char_SpLise_vo_fail = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_fail",
+    SoundLength = 2970
+  },
+  voice_jp_char_SpLise_vo_gain = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_gain",
+    SoundLength = 10070
+  },
+  voice_jp_char_SpLise_vo_idle = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_idle",
+    SoundLength = 5660
+  },
+  voice_jp_char_SpLise_vo_lvup = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_lvup",
+    SoundLength = 5800
+  },
+  voice_jp_char_SpLise_vo_mouth = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_mouth",
+    SoundLength = 10220
+  },
+  voice_jp_char_SpLise_vo_topic_01_1 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_topic_01_1",
+    SoundLength = 10730
+  },
+  voice_jp_char_SpLise_vo_topic_01_2 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_topic_01_2",
+    SoundLength = 4450
+  },
+  voice_jp_char_SpLise_vo_topic_01_3 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_topic_01_3",
+    SoundLength = 10580
+  },
+  voice_jp_char_SpLise_vo_topic_01_4 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_topic_01_4",
+    SoundLength = 9040
+  },
+  voice_jp_char_SpLise_vo_topic_01_5 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_topic_01_5",
+    SoundLength = 5230
+  },
+  voice_jp_char_SpLise_vo_topic_02_1 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_topic_02_1",
+    SoundLength = 9470
+  },
+  voice_jp_char_SpLise_vo_topic_02_2 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_topic_02_2",
+    SoundLength = 9290
+  },
+  voice_jp_char_SpLise_vo_topic_02_3 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_topic_02_3",
+    SoundLength = 13890
+  },
+  voice_jp_char_SpLise_vo_topic_02_4 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_topic_02_4",
+    SoundLength = 18610
+  },
+  voice_jp_char_SpLise_vo_topic_03_1 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_topic_03_1",
+    SoundLength = 18000
+  },
+  voice_jp_char_SpLise_vo_topic_03_2 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_topic_03_2",
+    SoundLength = 17300
+  },
+  voice_jp_char_SpLise_vo_topic_03_3 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_topic_03_3",
+    SoundLength = 6320
+  },
+  voice_jp_char_SpLise_vo_topic_04_1 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_topic_04_1",
+    SoundLength = 6670
+  },
+  voice_jp_char_SpLise_vo_topic_04_2 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_topic_04_2",
+    SoundLength = 6030
+  },
+  voice_jp_char_SpLise_vo_topic_04_3 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_topic_04_3",
+    SoundLength = 10820
+  },
+  voice_jp_char_SpLise_vo_topic_04_4 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_topic_04_4",
+    SoundLength = 10630
+  },
+  voice_jp_char_SpLise_vo_topic_04_5 = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_topic_04_5",
+    SoundLength = 15430
+  },
+  voice_jp_char_SpLise_vo_victory = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_victory",
+    SoundLength = 3520
+  },
+  voice_jp_char_SpLise_vo_welcome = {
+    ProgrammerSoundPath = "event:/voice/jp/char/SpLise/vo",
+    SelectKey = "voice_jp_char_SpLise_vo_welcome",
+    SoundLength = 8870
   },
   voice_jp_char_Suyi_vo_appear = {
     ProgrammerSoundPath = "event:/voice/jp/char/Suyi/vo",
@@ -333703,6 +334508,331 @@ return ReadOnly("Talk_SoundEditor", {
     ProgrammerSoundPath = "event:/voice/kr/char/Songlu/vo",
     SelectKey = "voice_kr_char_Songlu_vo_welcome",
     SoundLength = 9570
+  },
+  voice_kr_char_SpLise_vo_appear = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_appear",
+    SoundLength = 2940
+  },
+  voice_kr_char_SpLise_vo_battleidle = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_battleidle",
+    SoundLength = 5120
+  },
+  voice_kr_char_SpLise_vo_birthday = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_birthday",
+    SoundLength = 48110
+  },
+  voice_kr_char_SpLise_vo_companio_01 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_companio_01",
+    SoundLength = 9620
+  },
+  voice_kr_char_SpLise_vo_companio_02 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_companio_02",
+    SoundLength = 14080
+  },
+  voice_kr_char_SpLise_vo_companio_03 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_companio_03",
+    SoundLength = 15400
+  },
+  voice_kr_char_SpLise_vo_emotion_amaze_01 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_amaze_01",
+    SoundLength = 1120
+  },
+  voice_kr_char_SpLise_vo_emotion_amaze_02 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_amaze_02",
+    SoundLength = 780
+  },
+  voice_kr_char_SpLise_vo_emotion_complacent_01 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_complacent_01",
+    SoundLength = 650
+  },
+  voice_kr_char_SpLise_vo_emotion_conclude_01 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_conclude_01",
+    SoundLength = 910
+  },
+  voice_kr_char_SpLise_vo_emotion_confuse_01 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_confuse_01",
+    SoundLength = 960
+  },
+  voice_kr_char_SpLise_vo_emotion_continue_01 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_continue_01",
+    SoundLength = 880
+  },
+  voice_kr_char_SpLise_vo_emotion_disdain_01 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_disdain_01",
+    SoundLength = 1010
+  },
+  voice_kr_char_SpLise_vo_emotion_dislike_01 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_dislike_01",
+    SoundLength = 740
+  },
+  voice_kr_char_SpLise_vo_emotion_dislike_02 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_dislike_02",
+    SoundLength = 1080
+  },
+  voice_kr_char_SpLise_vo_emotion_dislike_03 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_dislike_03",
+    SoundLength = 1590
+  },
+  voice_kr_char_SpLise_vo_emotion_excuse_01 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_excuse_01",
+    SoundLength = 970
+  },
+  voice_kr_char_SpLise_vo_emotion_happy_01 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_happy_01",
+    SoundLength = 890
+  },
+  voice_kr_char_SpLise_vo_emotion_happy_02 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_happy_02",
+    SoundLength = 1230
+  },
+  voice_kr_char_SpLise_vo_emotion_happy_03 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_happy_03",
+    SoundLength = 2420
+  },
+  voice_kr_char_SpLise_vo_emotion_hesitate_01 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_hesitate_01",
+    SoundLength = 1140
+  },
+  voice_kr_char_SpLise_vo_emotion_no_01 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_no_01",
+    SoundLength = 950
+  },
+  voice_kr_char_SpLise_vo_emotion_objection_01 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_objection_01",
+    SoundLength = 1180
+  },
+  voice_kr_char_SpLise_vo_emotion_personal_01 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_personal_01",
+    SoundLength = 970
+  },
+  voice_kr_char_SpLise_vo_emotion_personal_02 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_personal_02",
+    SoundLength = 1260
+  },
+  voice_kr_char_SpLise_vo_emotion_personal_03 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_personal_03",
+    SoundLength = 1060
+  },
+  voice_kr_char_SpLise_vo_emotion_personal_04 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_personal_04",
+    SoundLength = 1580
+  },
+  voice_kr_char_SpLise_vo_emotion_personal_05 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_personal_05",
+    SoundLength = 1500
+  },
+  voice_kr_char_SpLise_vo_emotion_realize_01 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_realize_01",
+    SoundLength = 790
+  },
+  voice_kr_char_SpLise_vo_emotion_refute_01 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_refute_01",
+    SoundLength = 900
+  },
+  voice_kr_char_SpLise_vo_emotion_reply_01 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_reply_01",
+    SoundLength = 630
+  },
+  voice_kr_char_SpLise_vo_emotion_reply_02 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_reply_02",
+    SoundLength = 850
+  },
+  voice_kr_char_SpLise_vo_emotion_sigh_01 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_sigh_01",
+    SoundLength = 790
+  },
+  voice_kr_char_SpLise_vo_emotion_sigh_02 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_sigh_02",
+    SoundLength = 940
+  },
+  voice_kr_char_SpLise_vo_emotion_start_01 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_start_01",
+    SoundLength = 1290
+  },
+  voice_kr_char_SpLise_vo_emotion_start_02 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_start_02",
+    SoundLength = 1020
+  },
+  voice_kr_char_SpLise_vo_emotion_thank_01 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_thank_01",
+    SoundLength = 970
+  },
+  voice_kr_char_SpLise_vo_emotion_think_01 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_think_01",
+    SoundLength = 860
+  },
+  voice_kr_char_SpLise_vo_emotion_understand_01 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_understand_01",
+    SoundLength = 830
+  },
+  voice_kr_char_SpLise_vo_emotion_unexpect_01 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_unexpect_01",
+    SoundLength = 970
+  },
+  voice_kr_char_SpLise_vo_emotion_yes_01 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_emotion_yes_01",
+    SoundLength = 940
+  },
+  voice_kr_char_SpLise_vo_fail = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_fail",
+    SoundLength = 2570
+  },
+  voice_kr_char_SpLise_vo_gain = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_gain",
+    SoundLength = 9830
+  },
+  voice_kr_char_SpLise_vo_idle = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_idle",
+    SoundLength = 5960
+  },
+  voice_kr_char_SpLise_vo_lvup = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_lvup",
+    SoundLength = 5280
+  },
+  voice_kr_char_SpLise_vo_mouth = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_mouth",
+    SoundLength = 50970
+  },
+  voice_kr_char_SpLise_vo_topic_01_1 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_topic_01_1",
+    SoundLength = 8980
+  },
+  voice_kr_char_SpLise_vo_topic_01_2 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_topic_01_2",
+    SoundLength = 5460
+  },
+  voice_kr_char_SpLise_vo_topic_01_3 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_topic_01_3",
+    SoundLength = 9740
+  },
+  voice_kr_char_SpLise_vo_topic_01_4 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_topic_01_4",
+    SoundLength = 10550
+  },
+  voice_kr_char_SpLise_vo_topic_01_5 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_topic_01_5",
+    SoundLength = 5830
+  },
+  voice_kr_char_SpLise_vo_topic_02_1 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_topic_02_1",
+    SoundLength = 9620
+  },
+  voice_kr_char_SpLise_vo_topic_02_2 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_topic_02_2",
+    SoundLength = 8020
+  },
+  voice_kr_char_SpLise_vo_topic_02_3 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_topic_02_3",
+    SoundLength = 14870
+  },
+  voice_kr_char_SpLise_vo_topic_02_4 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_topic_02_4",
+    SoundLength = 19300
+  },
+  voice_kr_char_SpLise_vo_topic_03_1 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_topic_03_1",
+    SoundLength = 13400
+  },
+  voice_kr_char_SpLise_vo_topic_03_2 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_topic_03_2",
+    SoundLength = 14240
+  },
+  voice_kr_char_SpLise_vo_topic_03_3 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_topic_03_3",
+    SoundLength = 4620
+  },
+  voice_kr_char_SpLise_vo_topic_04_1 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_topic_04_1",
+    SoundLength = 6600
+  },
+  voice_kr_char_SpLise_vo_topic_04_2 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_topic_04_2",
+    SoundLength = 7300
+  },
+  voice_kr_char_SpLise_vo_topic_04_3 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_topic_04_3",
+    SoundLength = 9660
+  },
+  voice_kr_char_SpLise_vo_topic_04_4 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_topic_04_4",
+    SoundLength = 8490
+  },
+  voice_kr_char_SpLise_vo_topic_04_5 = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_topic_04_5",
+    SoundLength = 19610
+  },
+  voice_kr_char_SpLise_vo_victory = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_victory",
+    SoundLength = 3560
+  },
+  voice_kr_char_SpLise_vo_welcome = {
+    ProgrammerSoundPath = "event:/voice/kr/char/SpLise/vo",
+    SelectKey = "voice_kr_char_SpLise_vo_welcome",
+    SoundLength = 8410
   },
   voice_kr_char_Suyi_vo_appear = {
     ProgrammerSoundPath = "event:/voice/kr/char/Suyi/vo",

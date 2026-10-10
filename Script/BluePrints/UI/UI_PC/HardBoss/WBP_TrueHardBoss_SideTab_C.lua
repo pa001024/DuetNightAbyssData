@@ -51,6 +51,9 @@ function WBP_TrueHardBoss_SideTab_C:OnListItemObjectSet(Content)
     self.Image_TabLine:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.Image_TabLineSelect:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.Content.Parent:SelectFirstTime()
+  else
+    self.Image_TabLine:SetVisibility(UE4.ESlateVisibility.Visible)
+    self.Image_TabLineSelect:SetVisibility(UE4.ESlateVisibility.Visible)
   end
 end
 

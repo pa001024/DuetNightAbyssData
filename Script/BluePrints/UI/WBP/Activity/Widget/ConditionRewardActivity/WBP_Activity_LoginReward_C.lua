@@ -8,7 +8,7 @@ local M = Class({
 function M:InitUI()
   for i = 1, 2 do
     local ItemWidget = self["LoginReward_Item0" .. i]
-    local RewardId = self:GetPageConfigData().EventReward
+    local RewardId = self.RewardId
     local RewardData = DataMgr.Reward[RewardId]
     local ItemId = RewardData.Id[i]
     local Count = RewardUtils:GetCount(RewardData.Count[i])
@@ -51,13 +51,13 @@ function M:InitUI()
     self.Btn_Click:SetForbidden(true)
     self.Text_Doing:SetText(GText("UI_GameEvent_ToBeFinished"))
   end
-  if self.IsComplete or self.IsGetReward then
+  if self.IsGetReward then
     self.Ws_Btn:SetActiveWidgetIndex(2)
     self.Btn_Click:SetForbidden(true)
     self.Text_Got:SetText(GText("UI_GameEvent_HasClaimed"))
   end
-  self.LoginReward_Item01:PlayAnimationByType(self.IsCanGetReward, self.IsComplete or self.IsGetReward)
-  self.LoginReward_Item02:PlayAnimationByType(self.IsCanGetReward, self.IsComplete or self.IsGetReward)
+  self.LoginReward_Item01:PlayAnimationByType(self.IsCanGetReward, self.IsGetReward)
+  self.LoginReward_Item02:PlayAnimationByType(self.IsCanGetReward, self.IsGetReward)
   self.Btn_Click.OnClicked:Add(self, self.OnBtnClick)
   ActivityUtils.SetUpJustifyOfJap(self.LoginReward_Title.Text_ActivityDesc)
 end
@@ -125,8 +125,10 @@ function M:Handle_KeyDownOnGamePad(InKeyName)
       ActivityMain:UpdateActivityKeyTips("SelectView")
     end
     self.IsSelectItem = true
-  elseif "Gamepad_FaceButton_Left" == InKeyName then
+    IsEventHandled = true
+  elseif InKeyName == UIConst.GamePadKey.FaceButtonLeft then
     self:OnBtnClick()
+    IsEventHandled = true
   end
   return IsEventHandled
 end

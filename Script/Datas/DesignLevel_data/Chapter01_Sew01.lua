@@ -1380,6 +1380,81 @@ return {
       UnitType = "Mechanism",
       UnitId = 49006146
     },
+    ["351720775"] = {
+      CreatorId = 351720775,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["351720776"] = {
+      CreatorId = 351720776,
+      UnitType = "Drop",
+      UnitId = 120708
+    },
+    ["351720777"] = {
+      CreatorId = 351720777,
+      UnitType = "Mechanism",
+      UnitId = 10602
+    },
+    ["351720778"] = {
+      CreatorId = 351720778,
+      UnitType = "Mechanism",
+      UnitId = 10602
+    },
+    ["351720779"] = {
+      CreatorId = 351720779,
+      UnitType = "Mechanism",
+      UnitId = 10602
+    },
+    ["351720780"] = {
+      CreatorId = 351720780,
+      UnitType = "Mechanism",
+      UnitId = 10602
+    },
+    ["351720781"] = {
+      CreatorId = 351720781,
+      UnitType = "Mechanism",
+      UnitId = 10602
+    },
+    ["351720782"] = {
+      CreatorId = 351720782,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["351720783"] = {
+      CreatorId = 351720783,
+      UnitType = "Drop",
+      UnitId = 120709
+    },
+    ["351720784"] = {
+      CreatorId = 351720784,
+      UnitType = "Drop",
+      UnitId = 120710
+    },
+    ["351720785"] = {
+      CreatorId = 351720785,
+      UnitType = "Drop",
+      UnitId = 120711
+    },
+    ["351720786"] = {
+      CreatorId = 351720786,
+      UnitType = "Mechanism",
+      UnitId = 10602
+    },
+    ["351720787"] = {
+      CreatorId = 351720787,
+      UnitType = "Mechanism",
+      UnitId = 10602
+    },
+    ["351720788"] = {
+      CreatorId = 351720788,
+      UnitType = "Mechanism",
+      UnitId = 10602
+    },
+    ["351720789"] = {
+      CreatorId = 351720789,
+      UnitType = "Mechanism",
+      UnitId = 10602
+    },
     ["1720429"] = {
       CreatorId = 1720429,
       UnitType = "Npc",

@@ -329,7 +329,7 @@ return ReadOnly("HitPerformanceData", {
     CauseHitParam = T.RT_21,
     HitFlyComboParam = T.RT_21,
     HitId = "HitFly_XY0Z2000",
-    TNZeroHeavyHitParam = T.RT_18
+    TNZeroHeavyHitParam = T.RT_13
   },
   HitFly_XY0Z300 = {
     CauseHit = "HitFly",

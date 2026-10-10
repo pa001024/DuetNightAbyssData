@@ -10,13 +10,23 @@ function ReddotTreeNode_ConditionReward:_Judge(ActivityID)
   if not ConditionData then
     return false
   end
-  if not ConditionUtils.CheckCondition(Avatar, ConditionData.RewardClaimCondition) then
+  local ConditionList = ConditionData.RewardClaimCondition
+  if not ConditionList or 0 == #ConditionList then
     return false
   end
-  if Avatar.ClaimActivityConditionRewardRecord[ActivityID] then
+  local RecordList = Avatar.ClaimActivityConditionRewardRecordList
+  if not RecordList then
     return false
   end
-  return true
+  local ActivityClaimRecord = RecordList[ActivityID]
+  for Index, ConditionId in ipairs(ConditionList) do
+    local IsConditionComplete = ConditionUtils.CheckCondition(Avatar, ConditionId)
+    local IsGetReward = ActivityClaimRecord and CommonUtils.HasValue(ActivityClaimRecord, Index) or false
+    if IsConditionComplete and not IsGetReward then
+      return true
+    end
+  end
+  return false
 end
 
 return ReddotTreeNode_ConditionReward

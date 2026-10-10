@@ -234,6 +234,82 @@ function Component:PurchaseShopItem(ShopItemId, Count, NotShow, PurchaseCallback
   self:CallServer("PurchaseShopItem", Callback, ShopItemId, Count, VoucherId)
 end
 
+function Component:AddShoppingCartItem(ShopItemId, AddCount, ExpectedRevision)
+  self.logger.info("AddShoppingCartItem Begin", ShopItemId, AddCount, ExpectedRevision)
+  
+  local function Callback(Ret)
+    self.logger.info("AddShoppingCartItem callback", Ret, ShopItemId, AddCount)
+  end
+  
+  self:CallServer("AddShoppingCartItem", Callback, ShopItemId, AddCount, ExpectedRevision)
+end
+
+function Component:SetShoppingCartItemCount(ShopItemId, Count, ExpectedRevision)
+  self.logger.info("SetShoppingCartItemCount Begin", ShopItemId, Count, ExpectedRevision)
+  
+  local function Callback(Ret, RemovedShopItemIds)
+    self.logger.info("SetShoppingCartItemCount callback", Ret, ShopItemId, Count, CommonUtils.TableToString(RemovedShopItemIds or {}))
+  end
+  
+  self:CallServer("SetShoppingCartItemCount", Callback, ShopItemId, Count, ExpectedRevision)
+end
+
+function Component:SetShoppingCartItemSelected(ShopItemId, Selected, ExpectedRevision)
+  self.logger.info("SetShoppingCartItemSelected Begin", ShopItemId, Selected, ExpectedRevision)
+  
+  local function Callback(Ret)
+    self.logger.info("SetShoppingCartItemSelected callback", Ret, ShopItemId, Selected)
+  end
+  
+  self:CallServer("SetShoppingCartItemSelected", Callback, ShopItemId, Selected, ExpectedRevision)
+end
+
+function Component:BatchSetShoppingCartItemSelected(ShopItemIds, Selected, ExpectedRevision)
+  self.logger.info("BatchSetShoppingCartItemSelected Begin", CommonUtils.TableToString(ShopItemIds), Selected, ExpectedRevision)
+  
+  local function Callback(Ret)
+    self.logger.info("BatchSetShoppingCartItemSelected callback", Ret, Selected)
+  end
+  
+  self:CallServer("BatchSetShoppingCartItemSelected", Callback, ShopItemIds, Selected, ExpectedRevision)
+end
+
+function Component:ClearShoppingCart(ExpectedRevision)
+  self.logger.info("ClearShoppingCart Begin", ExpectedRevision)
+  
+  local function Callback(Ret)
+    self.logger.info("ClearShoppingCart callback", Ret)
+  end
+  
+  self:CallServer("ClearShoppingCart", Callback, ExpectedRevision)
+end
+
+function Component:RequestShoppingCartPay(ExpectedRevision, PayCallback)
+  self.logger.info("RequestShoppingCartPay Begin", ExpectedRevision)
+  
+  local function Callback(Ret, PayInfo, RemovedShopItemIds)
+    self.logger.info("RequestShoppingCartPay callback", Ret, CommonUtils.TableToString(PayInfo or {}), CommonUtils.TableToString(RemovedShopItemIds or {}))
+    if PayCallback then
+      PayCallback(Ret, PayInfo, RemovedShopItemIds)
+    end
+  end
+  
+  self:CallServer("RequestShoppingCartPay", Callback, ExpectedRevision)
+end
+
+function Component:CancelShoppingCartPendingPay(ExpectedRevision, CancelCallback)
+  self.logger.info("CancelShoppingCartPendingPay Begin", ExpectedRevision)
+  
+  local function Callback(Ret)
+    self.logger.info("CancelShoppingCartPendingPay callback", Ret)
+    if CancelCallback then
+      CancelCallback(Ret)
+    end
+  end
+  
+  self:CallServer("CancelShoppingCartPendingPay", Callback, ExpectedRevision)
+end
+
 function Component:OnRefreshShop(ServerTime)
   self.logger.info("--OnRefreshShop--", TimeUtils.TimeToStr(ServerTime))
   local TimeOffset = ServerTime - TimeUtils.NowTime()

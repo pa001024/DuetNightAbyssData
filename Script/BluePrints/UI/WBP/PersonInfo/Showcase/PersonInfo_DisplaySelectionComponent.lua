@@ -3,28 +3,7 @@ local M = {}
 local PersonInfoCommon = require("BluePrints.UI.WBP.PersonInfo.PersonInfoCommon")
 local TRACE_DISTANCE = 100000.0
 local TRACE_TYPE = UE4.ETraceTypeQuery.TraceExceptChar
-local TRACE_LABEL = "TraceExceptChar"
 local TRACE_DEBUG_DURATION = 5.0
-
-local function GetActorNameSafe(Actor)
-  if not Actor then
-    return "None"
-  end
-  if Actor.GetName then
-    return Actor:GetName()
-  end
-  return tostring(Actor)
-end
-
-local function GetComponentNameSafe(Component)
-  if not Component then
-    return "None"
-  end
-  if Component.GetName then
-    return Component:GetName()
-  end
-  return tostring(Component)
-end
 
 local function DrawTraceSegment(ContextObject, StartPos, EndPos)
   if PersonInfoCommon.EnableSelectionDebugDraw ~= true then
@@ -69,39 +48,37 @@ function M:ClearPendingPointerPress()
   self.PendingScreenPosition = nil
 end
 
-function M:CommitPointerSelection()
+function M:CommitPointerSelection(IgnoreActors)
   local MyGeometry = self.PendingGeometry
   local ScreenPosition = self.PendingScreenPosition
   self:ClearPendingPointerPress()
   if not ScreenPosition or not MyGeometry then
     return nil
   end
-  return self:TrySelectByScreenPosition(MyGeometry, ScreenPosition)
+  return self:TrySelectByScreenPosition(MyGeometry, ScreenPosition, IgnoreActors)
 end
 
-function M:TrySelectByScreenPosition(MyGeometry, ScreenPosition)
-  local HitActor = self:_HitTestPreviewActor(MyGeometry, ScreenPosition)
+function M:TrySelectByScreenPosition(MyGeometry, ScreenPosition, IgnoreActors)
+  local HitActor = self:_HitTestPreviewActor(MyGeometry, ScreenPosition, IgnoreActors)
   if not HitActor then
-    DebugPrint("TrySelectByScreenPosition" .. "No HitActor")
     return nil
   end
   local EntityId = self:_FindEntityIdByActor(HitActor)
   if not EntityId then
     return nil
   end
-  DebugPrint("TrySelectByScreenPosition", EntityId)
   return EntityId
 end
 
-function M:_HitTestPreviewActor(MyGeometry, ScreenPosition)
+function M:_HitTestPreviewActor(MyGeometry, ScreenPosition, IgnoreActors)
   local PlayerController = self:_GetPlayerController()
   if not PlayerController then
     return nil
   end
-  return self:_HitTestByDeproject(MyGeometry, PlayerController, ScreenPosition)
+  return self:_HitTestByDeproject(MyGeometry, PlayerController, ScreenPosition, IgnoreActors)
 end
 
-function M:_HitTestByDeproject(MyGeometry, PlayerController, ScreenPosition)
+function M:_HitTestByDeproject(MyGeometry, PlayerController, ScreenPosition, IgnoreActors)
   if not PlayerController or not ScreenPosition then
     return nil
   end
@@ -117,13 +94,12 @@ function M:_HitTestByDeproject(MyGeometry, PlayerController, ScreenPosition)
   local TraceEnd = WorldOrigin + WorldDir * TRACE_DISTANCE
   local ContextObject = self.ViewUI or self.Controller
   local Hit = UE4.FHitResult()
-  local bHit = UE4.UKismetSystemLibrary.LineTraceSingle(ContextObject, WorldOrigin, TraceEnd, TRACE_TYPE, true, {}, UE4.EDrawDebugTrace.None, Hit, true)
+  local bHit = UE4.UKismetSystemLibrary.LineTraceSingle(ContextObject, WorldOrigin, TraceEnd, TRACE_TYPE, true, IgnoreActors or {}, UE4.EDrawDebugTrace.None, Hit, true)
   local TraceStop = bHit and Hit.ImpactPoint or TraceEnd
   DrawTraceSegment(ContextObject, WorldOrigin, TraceStop)
   if bHit then
     DrawTraceHitPoint(ContextObject, Hit.ImpactPoint)
   end
-  DebugPrint(string.format("DisplaySelection %s Hit=%s Actor=%s Component=%s", TRACE_LABEL, tostring(bHit), GetActorNameSafe(Hit.Actor), GetComponentNameSafe(Hit.Component)))
   if not bHit then
     return nil
   end

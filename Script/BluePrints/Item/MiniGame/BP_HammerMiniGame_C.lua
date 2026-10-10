@@ -71,7 +71,8 @@ end
 function M:OnActorReady(Info)
   self.bHammerStateRecoveryPending = self:IsHammerPlayingState(self.StateId) or self:IsHammerResultState(self.StateId)
   M.Super.OnActorReady(self, Info)
-  if self.OpenState and self.Data and (self.Data.RewardId or 0) > 0 then
+  local GameState = UGameplayStatics.GetGameState(self)
+  if (self.OpenState or self.StateId == 1701026 and GameState and GameState:IsInRegion()) and self.Data and (self.Data.RewardId or 0) > 0 then
     self:EMActorDestroy(EDestroyReason.MechanismDead)
     return
   end

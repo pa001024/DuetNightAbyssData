@@ -329,5 +329,26 @@
     "desc": "适用于头像框。",
     "icon": "T_Head_Frame44",
     "access": "通过月度订单获得"
+  },
+  {
+    "id": 10051,
+    "name": "冰湖灯火",
+    "desc": "适用于头像框。",
+    "icon": "T_Head_Frame47",
+    "access": "通过月度订单获得"
+  },
+  {
+    "id": 10052,
+    "name": "糖霜满屋·鎏金",
+    "desc": "适用于头像框。",
+    "icon": "T_Head_Frame48",
+    "access": "通过活动获得"
+  },
+  {
+    "id": 10053,
+    "name": "糖霜满屋·墨玉",
+    "desc": "适用于头像框。",
+    "icon": "T_Head_Frame49",
+    "access": "通过活动获得"
   }
 ]

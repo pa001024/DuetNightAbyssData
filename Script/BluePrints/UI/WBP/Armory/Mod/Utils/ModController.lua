@@ -10,7 +10,7 @@ M._components = {
 function M:Init()
   M.Super.Init(self)
   self.CurrUIName = nil
-  self.GM_RecommendLimit = true
+  self.GM_RecommendLimit = false
 end
 
 function M:GetModel()
@@ -51,6 +51,17 @@ function M:TryOpenOverCostWarningDialog(Mod, PreviewLevel, Callback, DialogOwner
   else
     Callback()
   end
+end
+
+function M:TryJumpToModEnhance()
+  if ModModel.bPendingOpenModEnhance then
+    self:AddTimer(0.01, function()
+      self:OpenModIntensify()
+    end)
+    ModModel:MarkPendingOpenModEnhance(false)
+    return true
+  end
+  return false
 end
 
 function M:OpenSeconderyPassword(ModUuid, View)
@@ -629,6 +640,7 @@ function M.AutoEquipModTaskFunc(CoroutineObj, self)
   ModModel:StopAutoEquip()
   self:StopAutoEquipTimer()
   self.ModSuitCopyInfo = nil
+  ModModel:CacheModRankRawData(nil)
   self:NotifyEvent(ModCommon.EventId.OnAutoEquipFinished)
 end
 

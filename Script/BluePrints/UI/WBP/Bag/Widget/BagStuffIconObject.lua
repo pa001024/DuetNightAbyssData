@@ -25,6 +25,10 @@ function StuffIconObject:CreateBagItemContent(Content)
   StuffObj.LockType = Content.LockType
   StuffObj.Level = Content.Level
   StuffObj.Rarity = Content.Rarity
+  StuffObj.BreakNum = Content.BreakNum or 0
+  StuffObj.IsPremium = Content.IsPremium
+  StuffObj.PetEntry = Content.PetEntry
+  StuffObj.AfterInitCallback = Content.AfterInitCallback
   StuffObj.Price = Content.Price
   StuffObj.CoinId = Content.CoinId
   StuffObj.bInGear = Content.IsEquipped

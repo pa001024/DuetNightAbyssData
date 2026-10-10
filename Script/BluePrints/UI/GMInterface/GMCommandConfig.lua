@@ -1598,22 +1598,41 @@ GMCommandConfig.commands["系统"].commands = {
     parameters = {"sgm aahf"}
   },
   {
-    text = "个人主页-获得所有背景图",
-    mode = "button",
-    callback = "ExecConsoleCommand",
-    parameters = {"sgm aabg"}
-  },
-  {
-    text = "个人主页-获得所有自定义场景",
-    mode = "button",
-    callback = "ExecConsoleCommand",
-    parameters = {"sgm aasc"}
-  },
-  {
-    text = "个人主页-获得所有姿势",
-    mode = "button",
-    callback = "ExecConsoleCommand",
-    parameters = {"sgm aage"}
+    text = "个人主页",
+    mode = "menu",
+    widget_path = TipsPaths.Common,
+    commands = {
+      {
+        text = "增加所有背景图",
+        mode = "button",
+        callback = "ExecConsoleCommand",
+        parameters = {"sgm aabg"}
+      },
+      {
+        text = "增加所有场景",
+        mode = "button",
+        callback = "ExecConsoleCommand",
+        parameters = {"sgm aasc"}
+      },
+      {
+        text = "增加所有姿势",
+        mode = "button",
+        callback = "ExecConsoleCommand",
+        parameters = {"sgm aage"}
+      },
+      {
+        text = "增加所有贴纸",
+        mode = "button",
+        callback = "ExecConsoleCommand",
+        parameters = {"sgm aast"}
+      },
+      {
+        text = "增加所有场景物品",
+        mode = "button",
+        callback = "ExecConsoleCommand",
+        parameters = {"sgm aaci"}
+      }
+    }
   },
   {
     text = "打开个人主页",

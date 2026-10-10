@@ -4,6 +4,12 @@ local CoroutineUtils = require("CoroutineUtils")
 local TimeUtils = require("Utils.TimeUtils")
 local StrLib = require("BluePrints.Common.DataStructure")
 local Deque = StrLib.Deque
+local ComItemLayerConfig = UIConst.ComItemLayerManagement
+local ComItemLayer = ComItemLayerConfig.Layer
+local ComItemOrder = ComItemLayerConfig.Order
+local table_sort = table.sort
+local xpcall = _ENV.xpcall
+local debug_traceback = debug.traceback
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C",
   "BluePrints.UI.BP_EMUserWidgetUtils_C",
@@ -17,6 +23,7 @@ end
 function M:OnListItemObjectSet(Content)
   Content.SelfWidget = self
   self.WidgetMap = self.WidgetMap or {}
+  self:SyncItemLayerManagementMode()
   self:RemoveAllEvent()
   self:InitData(Content)
   self:InitCompView()
@@ -147,7 +154,7 @@ function M:SetHeadDynamicPath(WidgetPath)
       end
       self.HeadDynamicWidget = self:CreateWidgetAsync(nil, CoroutineObj, WidgetPath)
     end
-    self:AddWidgetToNode(self.HeadDynamicWidget)
+    self:AddWidgetToNode(self.HeadDynamicWidget, nil, ComItemLayer.Base, ComItemOrder.HeadDynamic)
   end)
 end
 
@@ -219,7 +226,7 @@ function M:SetDraftType(IsDraftType)
       if not self.WidgetMap[self.DraftItemWidget] and not IsValid(self.DraftItemWidget) then
         self.DraftItemWidget = self:CreateWidgetAsync("DraftCompendiumItem", CoroutineObj)
       end
-      self:AddWidgetToNode(self.DraftItemWidget)
+      self:AddWidgetToNode(self.DraftItemWidget, nil, ComItemLayer.Base, ComItemOrder.Draft)
     elseif self.DraftItemWidget and self.WidgetMap[self.DraftItemWidget] then
       self:RemoveWidgetFromNode(self.DraftItemWidget)
     end
@@ -281,11 +288,11 @@ function M:_SetMostRarityFX(Rarity, DynamicMaterial)
       if 6 ~= self.Rarity then
         return
       end
-      self:AddWidgetToNode(self._MostRarityFX)
+      self:AddWidgetToNode(self._MostRarityFX, nil, ComItemLayer.Top, ComItemOrder.MostRarityFX)
       self:CheckWidgetIsTop(self._MostRarityFX)
     end, "/Game/UI/WBP/Common/Item/Widget/WBP_Com_Item_RedVX.WBP_Com_Item_RedVX")
   else
-    self:AddWidgetToNode(self._MostRarityFX)
+    self:AddWidgetToNode(self._MostRarityFX, nil, ComItemLayer.Top, ComItemOrder.MostRarityFX)
     self:CheckWidgetIsTop(self._MostRarityFX)
   end
   DynamicMaterial:SetScalarParameterValue("Colorful_Alpha", 0.8)
@@ -336,7 +343,11 @@ function M:OnMouseButtonDown(MyGeometry, MouseEvent)
   if self.HandleMouseDown then
     HandleResult = UWidgetBlueprintLibrary.Handled()
   end
-  if self.NotInteractive or self.IsShowDetails and self.Item.ItemDetails_MenuAnchor.ItemDetailsMenuAnchor:IsOpen() or self:IsInAnimationPlaying() then
+  local bTipsOpened = self.IsShowDetails and self.Item.ItemDetails_MenuAnchor.ItemDetailsMenuAnchor:IsOpen()
+  if self.ItemType == CommonConst.ArmoryType.Mod then
+    bTipsOpened = false
+  end
+  if self.NotInteractive or bTipsOpened or self:IsInAnimationPlaying() then
     return HandleResult
   end
   self:StopAllAnimations()
@@ -488,6 +499,10 @@ function M:Construct()
     self.Node_Widget:ClearChildren()
   end
   self.WidgetMap = {}
+  self.WidgetLayerMap = {}
+  self.ItemLayerMissingWarningMap = {}
+  self.bItemLayerManagementFailed = false
+  self.bItemLayerManagementEnabled = self:IsItemLayerManagementEnabled()
   self.Item.ItemDetails_MenuAnchor.ItemDetailsMenuAnchor.OnMenuOpenChanged:Add(self, self.OnMenuOpenChanged)
 end
 
@@ -498,6 +513,10 @@ function M:Destruct()
   end
   self.ComItemAsyncTasks = nil
   self.bMaxHeight = nil
+  self.WidgetLayerMap = nil
+  self.ItemLayerMissingWarningMap = nil
+  self.bItemLayerManagementFailed = nil
+  self.bItemLayerManagementEnabled = nil
 end
 
 function M:OnMenuOpenChanged(bIsOpen)
@@ -523,7 +542,37 @@ function M:BindEvents(Obj, Events)
   self.Event_OnMenuOpenChanged = Events.OnMenuOpenChanged
 end
 
-function M:AddWidgetToNode(Widget, WidgetPtr)
+function M:IsItemLayerManagementEnabled()
+  local Config = UIConst.ComItemLayerManagement
+  return Config and Config.Enable == true
+end
+
+function M:IsItemLayerManagementActive()
+  return self.bItemLayerManagementEnabled == true
+end
+
+function M:SyncItemLayerManagementMode()
+  local bConfiguredEnabled = self:IsItemLayerManagementEnabled()
+  if not bConfiguredEnabled then
+    self.bItemLayerManagementFailed = false
+  end
+  local bEnabled = bConfiguredEnabled and not self.bItemLayerManagementFailed
+  if self.bItemLayerManagementEnabled ~= nil and self.bItemLayerManagementEnabled ~= bEnabled then
+    self.WidgetLayerMap = {}
+    self.ItemLayerMissingWarningMap = {}
+  end
+  self.bItemLayerManagementEnabled = bEnabled
+end
+
+function M:_SetItemOverlaySlotAlignment(Slot)
+  if not Slot then
+    return
+  end
+  Slot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
+  Slot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+end
+
+function M:_AddWidgetToNodeLegacy(Widget, WidgetPtr)
   if not self.Node_Widget or not Widget and not WidgetPtr then
     return
   end
@@ -531,27 +580,119 @@ function M:AddWidgetToNode(Widget, WidgetPtr)
     self.WidgetMap = {}
   end
   if Widget then
+    local bAdded = false
     if self.WidgetMap[Widget] == nil then
       local Slot = self.Node_Widget:AddChild(Widget)
       if nil ~= Slot then
         Slot:SetVerticalAlignment(EVerticalAlignment.HAlign_Fill)
         Slot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
       end
+      bAdded = true
     end
     Widget:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.WidgetMap[Widget] = true
+    return Widget, bAdded
   end
   if WidgetPtr then
+    local ChildWidget
+    local bAdded = false
     if WidgetPtr:IsValid() then
+      ChildWidget = WidgetPtr:Get()
       if self.WidgetMap[WidgetPtr] == nil then
-        local Slot = self.Node_Widget:AddChild(WidgetPtr:Get())
+        local Slot = self.Node_Widget:AddChild(ChildWidget)
         Slot:SetVerticalAlignment(EVerticalAlignment.HAlign_Fill)
         Slot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+        bAdded = true
       end
-      WidgetPtr:Get():SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      ChildWidget:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     end
     self.WidgetMap[WidgetPtr] = true
+    return ChildWidget, bAdded
   end
+end
+
+function M:_RefreshItemWidgetLayer()
+  if not self.Node_Widget then
+    return true
+  end
+  local OriginalWidgets = {}
+  local SortedWidgets = {}
+  local WidgetIndex = {}
+  for _, ChildWidget in pairs(self.Node_Widget:GetAllChildren()) do
+    OriginalWidgets[#OriginalWidgets + 1] = ChildWidget
+    SortedWidgets[#SortedWidgets + 1] = ChildWidget
+    WidgetIndex[ChildWidget] = #OriginalWidgets
+  end
+  if #SortedWidgets <= 1 then
+    return true
+  end
+  local bNodeOrderChanged = false
+  local bSuccess, ErrorMessage = xpcall(function()
+    table_sort(SortedWidgets, function(WidgetA, WidgetB)
+      local InfoA = self.WidgetLayerMap[WidgetA]
+      local InfoB = self.WidgetLayerMap[WidgetB]
+      local LayerA = InfoA and InfoA.Layer or 0
+      local LayerB = InfoB and InfoB.Layer or 0
+      if LayerA ~= LayerB then
+        return LayerA < LayerB
+      end
+      local OrderA = InfoA and InfoA.StableOrder or 0
+      local OrderB = InfoB and InfoB.StableOrder or 0
+      if OrderA ~= OrderB then
+        return OrderA < OrderB
+      end
+      return WidgetIndex[WidgetA] < WidgetIndex[WidgetB]
+    end)
+    bNodeOrderChanged = true
+    self.Node_Widget:ClearChildren()
+    for _, ChildWidget in ipairs(SortedWidgets) do
+      local Slot = self.Node_Widget:AddChild(ChildWidget)
+      self:_SetItemOverlaySlotAlignment(Slot)
+    end
+  end, debug_traceback)
+  if bSuccess then
+    return true
+  end
+  self.bItemLayerManagementEnabled = false
+  self.bItemLayerManagementFailed = true
+  self.WidgetLayerMap = {}
+  if bNodeOrderChanged then
+    local bRestoreSuccess, RestoreErrorMessage = xpcall(function()
+      self.Node_Widget:ClearChildren()
+      for _, ChildWidget in ipairs(OriginalWidgets) do
+        local Slot = self.Node_Widget:AddChild(ChildWidget)
+        self:_SetItemOverlaySlotAlignment(Slot)
+      end
+    end, debug_traceback)
+    if not bRestoreSuccess then
+      DebugPrint(ErrorTag, "ComItem层级排序异常，恢复原顺序失败", RestoreErrorMessage)
+    end
+  end
+  DebugPrint(ErrorTag, "ComItem层级排序异常，当前道具框已回退旧逻辑", ErrorMessage)
+  return false
+end
+
+function M:AddWidgetToNode(Widget, WidgetPtr, Layer, StableOrder)
+  local ChildWidget, bAdded = self:_AddWidgetToNodeLegacy(Widget, WidgetPtr)
+  if not ChildWidget or not self:IsItemLayerManagementActive() then
+    return
+  end
+  if nil == Layer then
+    self.ItemLayerMissingWarningMap = self.ItemLayerMissingWarningMap or {}
+    if not self.ItemLayerMissingWarningMap[ChildWidget] then
+      self.ItemLayerMissingWarningMap[ChildWidget] = true
+      DebugPrint(WarningTag, "ComItem新层级模式下存在未配置层级的子控件", tostring(ChildWidget))
+    end
+  end
+  Layer = Layer or ComItemLayer.Base
+  StableOrder = StableOrder or 0
+  self.WidgetLayerMap = self.WidgetLayerMap or {}
+  local OldInfo = self.WidgetLayerMap[ChildWidget]
+  if not bAdded and OldInfo and OldInfo.Layer == Layer and OldInfo.StableOrder == StableOrder then
+    return
+  end
+  self.WidgetLayerMap[ChildWidget] = {Layer = Layer, StableOrder = StableOrder}
+  self:_RefreshItemWidgetLayer()
 end
 
 function M:RemoveWidgetFromNode(Widget, bForce, WidgetPtr)
@@ -577,12 +718,19 @@ function M:RemoveWidgetFromNode(Widget, bForce, WidgetPtr)
         Widget:RemoveFromParent()
       end
       self.WidgetMap[Widget] = nil
+      if self.WidgetLayerMap then
+        self.WidgetLayerMap[Widget] = nil
+      end
     end
     if WidgetPtr then
+      local ChildWidget = WidgetPtr:IsValid() and WidgetPtr:Get() or nil
       if self.WidgetMap[WidgetPtr] and WidgetPtr:IsValid() then
         WidgetPtr:Get():RemoveFromParent()
       end
       self.WidgetMap[WidgetPtr] = nil
+      if ChildWidget and self.WidgetLayerMap then
+        self.WidgetLayerMap[ChildWidget] = nil
+      end
     end
   end
 end
@@ -698,7 +846,7 @@ function M:SetIsGot(IsGot)
         self.IsGotWidget = self:CreateWidgetAsync("ComItemHasGot", CoroutineObj)
       end
       self.IsGotWidget:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-      self:AddWidgetToNode(self.IsGotWidget)
+      self:AddWidgetToNode(self.IsGotWidget, nil, ComItemLayer.State, ComItemOrder.IsGot)
       self:CheckWidgetIsTop(self.IsGotWidget)
     elseif self.WidgetMap[self.IsGotWidget] then
       self:RemoveWidgetFromNode(self.IsGotWidget)
@@ -721,7 +869,7 @@ function M:SetIsCanGet(IsCanGet, StyleStr)
       if not self.WidgetMap[self.CanGetWidget] and not IsValid(self.CanGetWidget) then
         self.CanGetWidget = self:CreateWidgetAsync("ComItemCanGet", CoroutineObj)
       end
-      self:AddWidgetToNode(self.CanGetWidget)
+      self:AddWidgetToNode(self.CanGetWidget, nil, ComItemLayer.Base, ComItemOrder.CanGet)
       self.CanGetWidget:SetStyle(StyleStr)
     elseif self.WidgetMap[self.CanGetWidget] then
       self:RemoveWidgetFromNode(self.CanGetWidget)
@@ -749,7 +897,7 @@ function M:SetLock(LockType)
       if not self.LockedCenterWidget or not IsValid(self.LockedCenterWidget) then
         self.LockedCenterWidget = self:CreateWidgetAsync("ComItemLockCenter", CoroutineObj)
       end
-      self:AddWidgetToNode(self.LockedCenterWidget)
+      self:AddWidgetToNode(self.LockedCenterWidget, nil, ComItemLayer.State, ComItemOrder.Lock)
     end
   end)
 end
@@ -797,7 +945,7 @@ function M:SetCount(Count, NeedCount, MaxCount, bNotCountFormat, bShowNotHaveSty
       self:SetItemGreyStyle(self.CountWidget, false)
     end
     if not (self.ItemType == "Walnut" and self.Count) or self.Count > 0 then
-      self:AddWidgetToNode(self.CountWidget)
+      self:AddWidgetToNode(self.CountWidget, nil, ComItemLayer.Base, ComItemOrder.Count)
     else
       self:SetItemGreyStyle(self.CountWidget, true)
     end
@@ -834,7 +982,7 @@ function M:SetBonus(BonusType, ExtraText)
     elseif 3 == BonusType then
       self.BonusWidget = self:CreateWidgetAsync("ComItemWalnutTag", CoroutineObj)
     end
-    self:AddWidgetToNode(self.BonusWidget)
+    self:AddWidgetToNode(self.BonusWidget, nil, ComItemLayer.Base, ComItemOrder.Bonus)
   end)
 end
 
@@ -849,7 +997,7 @@ function M:SetName(Name)
       else
         self.NameWidget.Text_Name:SetText(GText(Name))
       end
-      self:AddWidgetToNode(self.NameWidget)
+      self:AddWidgetToNode(self.NameWidget, nil, ComItemLayer.Base, ComItemOrder.Name)
       self:AdjustBackGroundHeight(self.NameWidget, "SetName   " .. Name)
     elseif self.WidgetMap[self.NameWidget] then
       self:RemoveWidgetFromNode(self.NameWidget)
@@ -868,7 +1016,7 @@ function M:SetLevel(Level)
       self.LevelWidget.Text_Lv:SetText(Level)
       self.LevelWidget:SetVisibility(UIConst.VisibilityOp.Visible)
       self:AdjustBackGroundHeight(self.LevelWidget, "SetLevel  " .. Level)
-      self:AddWidgetToNode(self.LevelWidget)
+      self:AddWidgetToNode(self.LevelWidget, nil, ComItemLayer.Base, ComItemOrder.Level)
     elseif self.WidgetMap[self.LevelWidget] then
       self:RemoveWidgetFromNode(self.LevelWidget)
       self:ClearBackGroundHeight(true)
@@ -894,20 +1042,20 @@ function M:SetRedDot(RedDotType)
       if not self.ComItemReddot then
         self.ComItemReddot = self:CreateWidgetAsync("ComItemReddot", CoroutineObj)
       end
-      self:AddWidgetToNode(self.ComItemReddot)
+      self:AddWidgetToNode(self.ComItemReddot, nil, ComItemLayer.Top, ComItemOrder.RedDot)
       self:CheckWidgetIsTop(self.ComItemReddot)
     elseif RedDotType == UIConst.RedDotType.NewRedDot then
       if not self.ComItemNewReddot then
         self.ComItemNewReddot = self:CreateWidgetAsync("ComItemNewReddot", CoroutineObj)
       end
-      self:AddWidgetToNode(self.ComItemNewReddot)
+      self:AddWidgetToNode(self.ComItemNewReddot, nil, ComItemLayer.Top, ComItemOrder.NewRedDot)
       self:CheckWidgetIsTop(self.ComItemNewReddot)
     elseif RedDotType == UIConst.RedDotType.GreyRedDot then
       if not self.ComItemReddot then
         self.ComItemReddot = self:CreateWidgetAsync("ComItemReddot", CoroutineObj)
       end
       self.ComItemReddot:EMShowReddot(true, EReddotType.Gray)
-      self:AddWidgetToNode(self.ComItemReddot)
+      self:AddWidgetToNode(self.ComItemReddot, nil, ComItemLayer.Top, ComItemOrder.RedDot)
       self:CheckWidgetIsTop(self.ComItemReddot)
     end
   end)
@@ -922,7 +1070,7 @@ function M:SetShadow(bShadow)
       if not self.WidgetMap[self.ShadowWidget] and not IsValid(self.ShadowWidget) then
         self.ShadowWidget = self:CreateWidgetAsync("ComItemShadow", CoroutineObj)
       end
-      self:AddWidgetToNode(self.ShadowWidget)
+      self:AddWidgetToNode(self.ShadowWidget, nil, ComItemLayer.State, ComItemOrder.Shadow)
     end
   end)
 end
@@ -942,7 +1090,7 @@ function M:SetAdd(bAdd)
       if not self.AddWidget or not IsValid(self.AddWidget) then
         self.AddWidget = self:CreateWidgetAsync("ComItemAdd", CoroutineObj)
       end
-      self:AddWidgetToNode(self.AddWidget)
+      self:AddWidgetToNode(self.AddWidget, nil, ComItemLayer.Base, ComItemOrder.Add)
       self:ClearBackGroundHeight(true)
     end
     
@@ -962,7 +1110,7 @@ function M:SetSelectNum(SelectNeedCount, SelectTotalCount)
       end
       self.SelectCountWidget.Text_Hold:SetText(SelectNeedCount)
       self.SelectCountWidget.Text_Total:SetText(SelectTotalCount)
-      self:AddWidgetToNode(self.SelectCountWidget)
+      self:AddWidgetToNode(self.SelectCountWidget, nil, ComItemLayer.State, ComItemOrder.SelectCount)
       if not SelectNeedCount or not SelectTotalCount then
         self.SelectCountWidget.Split_1:SetVisibility(ESlateVisibility.Collapsed)
       else
@@ -1001,7 +1149,7 @@ function M:SetWeaponPhantomIcon(Uuid)
       self:LoadTextureAsync(UIUtils.GetCharMiniIconPath(CharId), function(Texture)
         self.PhantomTagWidget.Img_Role:SetBrushFromTexture(Texture)
       end, "SetWeaponPhantomIcon_LoadIcon")
-      self:AddWidgetToNode(self.PhantomTagWidget)
+      self:AddWidgetToNode(self.PhantomTagWidget, nil, ComItemLayer.Top, ComItemOrder.PhantomTag)
     end
   end)
 end
@@ -1017,7 +1165,7 @@ function M:SetWeaponMiniPhantomIcon(CharId)
       self:LoadTextureAsync(UIUtils.GetCharMiniIconPath(CharId), function(Texture)
         self.PhantomTagWidget.Img_Role:SetBrushFromTexture(Texture)
       end, "SetWeaponMiniPhantomIcon_LoadIcon")
-      self:AddWidgetToNode(self.PhantomTagWidget)
+      self:AddWidgetToNode(self.PhantomTagWidget, nil, ComItemLayer.Top, ComItemOrder.PhantomTag)
     end
   end)
 end
@@ -1043,7 +1191,7 @@ function M:_SetItemConflictImpl(bConflict, Text)
         self.ConflictWidget = self:CreateWidgetAsync("ComItemConflict", CoroutineObj)
       end
       self.ConflictWidget.Text_SoldOut:SetText(Text)
-      self:AddWidgetToNode(self.ConflictWidget)
+      self:AddWidgetToNode(self.ConflictWidget, nil, ComItemLayer.State, ComItemOrder.Conflict)
     elseif self.WidgetMap[self.ConflictWidget] then
       self:RemoveWidgetFromNode(self.ConflictWidget)
     end
@@ -1064,7 +1212,7 @@ function M:SetItemSold(bSold)
         self.SoldWidget = self:CreateWidgetAsync("ComItemConflict", CoroutineObj)
       end
       self.SoldWidget.Text_SoldOut:SetText(GText("UI_Fishing_BuyFishingLure"))
-      self:AddWidgetToNode(self.SoldWidget)
+      self:AddWidgetToNode(self.SoldWidget, nil, ComItemLayer.State, ComItemOrder.Sold)
     elseif self.WidgetMap[self.SoldWidget] then
       self:RemoveWidgetFromNode(self.SoldWidget)
     end
@@ -1077,7 +1225,7 @@ function M:SetItemMinus(bMinus)
       if not self.WidgetMap[self.MinusWidget] and not IsValid(self.MinusWidget) then
         self.MinusWidget = self:CreateWidgetAsync("ComItemMinus", CoroutineObj)
       end
-      self:AddWidgetToNode(self.MinusWidget)
+      self:AddWidgetToNode(self.MinusWidget, nil, ComItemLayer.State, ComItemOrder.Minus)
     elseif self.WidgetMap[self.MinusWidget] then
       self:RemoveWidgetFromNode(self.MinusWidget, true)
     end
@@ -1131,7 +1279,7 @@ function M:SetItemSelect(bSelect)
       if not self.WidgetMap[self.SelectWidget] and not IsValid(self.SelectWidget) then
         self.SelectWidget = self:CreateWidgetAsync("ComItemSelect", CoroutineObj)
       end
-      self:AddWidgetToNode(self.SelectWidget)
+      self:AddWidgetToNode(self.SelectWidget, nil, ComItemLayer.State, ComItemOrder.Select)
     elseif self.WidgetMap[self.SelectWidget] then
       self:RemoveWidgetFromNode(self.SelectWidget)
     end
@@ -1150,7 +1298,7 @@ function M:SetItemSet(bSet, TipText)
       if not self.WidgetMap[self.SetWidget] and not IsValid(self.SetWidget) then
         self.SetWidget = self:CreateWidgetAsync("ComItemSet", CoroutineObj)
       end
-      self:AddWidgetToNode(self.SetWidget)
+      self:AddWidgetToNode(self.SetWidget, nil, ComItemLayer.State, ComItemOrder.Set)
       self.SetWidget.TipText:SetText(TipText or GText("UI_SHOWNPC_SETTLED"))
     elseif self.WidgetMap[self.SetWidget] then
       self:RemoveWidgetFromNode(self.SetWidget)
@@ -1164,7 +1312,7 @@ function M:SetItemUnrevealed(bUnrevealed)
       if not self.WidgetMap[self.UnrevealedWidget] and not IsValid(self.UnrevealedWidget) then
         self.UnrevealedWidget = self:CreateWidgetAsync("ComItemUnreveal", CoroutineObj)
       end
-      self:AddWidgetToNode(self.UnrevealedWidget)
+      self:AddWidgetToNode(self.UnrevealedWidget, nil, ComItemLayer.State, ComItemOrder.Unrevealed)
     elseif self.WidgetMap[self.UnrevealedWidget] then
       self:RemoveWidgetFromNode(self.UnrevealedWidget)
     end
@@ -1227,7 +1375,7 @@ function M:SetPhantomWeaponIcon(UnitId, IsPhantom)
       self:LoadTextureAsync(IconPath, function(IconImage)
         self.PhantomWidget.Img_Phantom_On:SetBrushResourceObject(IconImage)
       end, "SetPhantomWeaponIcon_LoadIcon")
-      self:AddWidgetToNode(self.PhantomWidget)
+      self:AddWidgetToNode(self.PhantomWidget, nil, ComItemLayer.State, ComItemOrder.Phantom)
     elseif self.WidgetMap[self.PhantomWidget] then
       self:RemoveWidgetFromNode(self.PhantomWidget)
     end
@@ -1253,7 +1401,7 @@ function M:SetAttrIcon(AttrIcon)
       else
         self.AttrIconWidget.Attribute:SetBrushResourceObject(AttrIcon)
       end
-      self:AddWidgetToNode(self.AttrIconWidget)
+      self:AddWidgetToNode(self.AttrIconWidget, nil, ComItemLayer.Base, ComItemOrder.AttrIcon)
     elseif self.WidgetMap[self.AttrIconWidget] then
       self:RemoveWidgetFromNode(self.AttrIconWidget)
     end
@@ -1288,7 +1436,7 @@ function M:SetTeamIcon(TeamIdx, CharId)
       self:LoadTextureAsync(IconPath, function(Texture)
         self.TeamCharWidget.Img_Role:SetBrushResourceObject(Texture)
       end, "SetTeamIcon_LoadIcon")
-      self:AddWidgetToNode(self.TeamCharWidget)
+      self:AddWidgetToNode(self.TeamCharWidget, nil, ComItemLayer.Top, ComItemOrder.TeamChar)
     end
     if not self.WidgetMap[self.TeamWidget] and not IsValid(self.TeamWidget) then
       self.TeamWidget = self:CreateWidgetAsync("ComItemAbyssTeam", CoroutineObj)
@@ -1297,7 +1445,7 @@ function M:SetTeamIcon(TeamIdx, CharId)
     if Color then
       self.TeamWidget.BG:SetColorAndOpacity(Color)
     end
-    self:AddWidgetToNode(self.TeamWidget)
+    self:AddWidgetToNode(self.TeamWidget, nil, ComItemLayer.Top, ComItemOrder.Team)
   end)
 end
 
@@ -1307,7 +1455,7 @@ function M:SetRareTag(bRare)
       if not self.WidgetMap[self.RareWidget] and not IsValid(self.RareWidget) then
         self.RareWidget = self:CreateWidgetAsync("ComItemRareTag", CoroutineObj)
       end
-      self:AddWidgetToNode(self.RareWidget)
+      self:AddWidgetToNode(self.RareWidget, nil, ComItemLayer.State, ComItemOrder.RareTag)
     elseif self.WidgetMap[self.RareWidget] then
       self:RemoveWidgetFromNode(self.RareWidget)
     end
@@ -1323,7 +1471,7 @@ function M:SetInGear(bInGear)
       if not self.WidgetMap[self.InGearWidget] and not IsValid(self.InGearWidget) then
         self.InGearWidget = self:CreateWidgetAsync("ComItemInGear", CoroutineObj)
       end
-      self:AddWidgetToNode(self.InGearWidget)
+      self:AddWidgetToNode(self.InGearWidget, nil, ComItemLayer.Top, ComItemOrder.InGear)
     elseif self.WidgetMap[self.InGearWidget] then
       self:RemoveWidgetFromNode(self.InGearWidget)
     end
@@ -1337,7 +1485,7 @@ function M:SetTryOutText(TryOutText)
         self.TryOutWidget = self:CreateWidgetAsync("ComItemTryOut", CoroutineObj)
       end
       self.TryOutWidget.TipText:SetTexT(GText(TryOutText))
-      self:AddWidgetToNode(self.TryOutWidget)
+      self:AddWidgetToNode(self.TryOutWidget, nil, ComItemLayer.State, ComItemOrder.TryOut)
     else
       self:RemoveWidgetFromNode(self.TryOutWidget)
     end
@@ -1352,7 +1500,7 @@ function M:SetSquadBuildTryOutText(SquadBuildTryOutText)
       end
       self.SquadBuildTryOutWidget.Text_TryOut:SetText(GText(SquadBuildTryOutText))
       self.SquadBuildTryOutWidget.SizeBox_TryOut:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-      self:AddWidgetToNode(self.SquadBuildTryOutWidget)
+      self:AddWidgetToNode(self.SquadBuildTryOutWidget, nil, ComItemLayer.State, ComItemOrder.SquadBuildTryOut)
     else
       self:RemoveWidgetFromNode(self.SquadBuildTryOutWidget)
     end
@@ -1373,7 +1521,7 @@ function M:SetPetPremium(bPremium)
       if not self.WidgetMap[self.PetRareWidget] and not IsValid(self.PetRareWidget) then
         self.PetRareWidget = self:CreateWidgetAsync("ComItemPetRare", CoroutineObj)
       end
-      self:AddWidgetToNode(self.PetRareWidget)
+      self:AddWidgetToNode(self.PetRareWidget, nil, ComItemLayer.Base, ComItemOrder.PetRare)
     else
       DynamicMat:SetScalarParameterValue("Colorful_Alpha", self.Item.Colorful_Normal)
     end
@@ -1409,7 +1557,7 @@ function M:SetPetEntryId(PetEntries)
       if not self.WidgetMap[self.PetEntryIdWidget] and not IsValid(self.PetEntryIdWidget) then
         self.PetEntryIdWidget = self:CreateWidgetAsync("ComItemPetEntry", CoroutineObj)
       end
-      self:AddWidgetToNode(self.PetEntryIdWidget)
+      self:AddWidgetToNode(self.PetEntryIdWidget, nil, ComItemLayer.Base, ComItemOrder.PetEntry)
       if self.PetEntryIdWidget then
         if type(PetEntries) == "number" then
           self.PetEntryIdWidget.WBP_Armory_Pet_EntryTag:InitByPetEntryId(PetEntries)
@@ -1459,7 +1607,7 @@ function M:SetPetStarLevel(PetStarLevel)
       if not self.WidgetMap[self.PetStarLevelWidget] and not IsValid(self.PetStarLevelWidget) then
         self.PetStarLevelWidget = self:CreateWidgetAsync("ComItemPetStarLevel", CoroutineObj)
       end
-      self:AddWidgetToNode(self.PetStarLevelWidget)
+      self:AddWidgetToNode(self.PetStarLevelWidget, nil, ComItemLayer.Base, ComItemOrder.PetStar)
       for i = 1, self.PetStarLevelWidget.Panel_PetStar:GetChildrenCount() do
         local PetStar = self.PetStarLevelWidget["PetStar_" .. i]
         if i <= PetStarLevel then
@@ -1491,7 +1639,7 @@ function M:SetItemPolarity(Polarity, PolarityNum)
         self.PolarityWidget.Icon_Polarity:SetVisibility(ESlateVisibility.Collapsed)
       end
       self.PolarityWidget.Text_Polarity:SetText(PolarityNum)
-      self:AddWidgetToNode(self.PolarityWidget)
+      self:AddWidgetToNode(self.PolarityWidget, nil, ComItemLayer.Base, ComItemOrder.Polarity)
     elseif self.WidgetMap[self.PolarityWidget] then
       self:RemoveWidgetFromNode(self.PolarityWidget)
     end
@@ -1517,7 +1665,7 @@ function M:SetAura(bAura)
       if not self.WidgetMap[self.AuraWidget] and not IsValid(self.AuraWidget) then
         self.AuraWidget = self:CreateWidgetAsync("ComItemAura", CoroutineObj)
       end
-      self:AddWidgetToNode(self.AuraWidget)
+      self:AddWidgetToNode(self.AuraWidget, nil, ComItemLayer.Base, ComItemOrder.Aura)
     else
       self:RemoveWidgetFromNode(self.AuraWidget)
     end
@@ -1530,7 +1678,7 @@ function M:GetOrCreateGroupWidget(WidgetName, CoroutineObj)
   if not self.ItemGroup or not IsValid(self.ItemGroup) then
     self.ItemGroup = self:CreateWidgetNew("ComItemGroup")
   end
-  self:AddWidgetToNode(self.ItemGroup)
+  self:AddWidgetToNode(self.ItemGroup, nil, ComItemLayer.Base, ComItemOrder.ItemGroup)
   return self.ItemGroup:CreateAndAddWidgetAsyc(WidgetName, CoroutineObj)
 end
 
@@ -1547,7 +1695,7 @@ end
 
 function M:SetTimeLimitData(TimeLimitData)
   local function Callback(CoroutineObj)
-    if self.ItemType == "Resource" and DataMgr.LimitedTimeResource[self.Id] then
+    if self.ItemType == "Resource" then
       local LimitedData = ItemUtils.GetItemLimitedInfo(self.Id)
       
       if not LimitedData then
@@ -1562,7 +1710,7 @@ function M:SetTimeLimitData(TimeLimitData)
       if not self.WidgetMap[self.TimeLimitWidget] and not IsValid(self.TimeLimitWidget) then
         self.TimeLimitWidget = self:CreateWidgetAsync("ComItemTimeLimit", CoroutineObj)
       end
-      self:AddWidgetToNode(self.TimeLimitWidget)
+      self:AddWidgetToNode(self.TimeLimitWidget, nil, ComItemLayer.State, ComItemOrder.TimeLimit)
       if self.bSmall then
         self.TimeLimitWidget.Text_Time:SetVisibility(ESlateVisibility.Collapsed)
       else
@@ -1697,6 +1845,9 @@ function M:_RealSetBottomBlackHeight(DynamicMat, Height)
 end
 
 function M:CheckWidgetIsTop(Widget)
+  if self:IsItemLayerManagementActive() then
+    return
+  end
   if not IsValid(Widget) then
     return
   end
@@ -1728,7 +1879,7 @@ function M:_SetItemOccupiedImpl(bOccupied, Text)
         self.OccupiedWidget = self:CreateWidgetAsync("ComItemOccupancy", CoroutineObj)
       end
       self.OccupiedWidget.TextTips:SetText(Text)
-      self:AddWidgetToNode(self.OccupiedWidget)
+      self:AddWidgetToNode(self.OccupiedWidget, nil, ComItemLayer.State, ComItemOrder.Occupied)
     elseif self.WidgetMap[self.OccupiedWidget] then
       self:RemoveWidgetFromNode(self.OccupiedWidget)
     end

@@ -6,7 +6,8 @@ function Component:SetNewGlow(bNewGlow)
       return
     end
     self.NewGlow = UE.FWeakObjectPtr(NewGlowUI)
-    self:AddWidgetToNode(nil, self.NewGlow)
+    local Config = UIConst.ComItemLayerManagement
+    self:AddWidgetToNode(nil, self.NewGlow, Config.Layer.Top, Config.Order.NewGlow)
     NewGlowUI:SetRarity(self.Rarity)
   end
   

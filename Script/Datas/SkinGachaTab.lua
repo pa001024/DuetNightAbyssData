@@ -40,10 +40,10 @@ return ReadOnly("SkinGachaTab", {
   [5] = {
     GachaId = {9005},
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Banner/T_Gacha_PoolBanner_Suyi01.T_Gacha_PoolBanner_Suyi01'",
-    ReddotNode = "Gacha_Special_4",
-    Sequence = 1,
+    ReddotNode = "Gacha_ReSpecial_4",
+    Sequence = 2,
     TabId = 5,
-    TabName = "UI_SkinGacha_Special"
+    TabName = "UI_SkinGacha_ReSpecial"
   },
   [6] = {
     GachaId = {90021},
@@ -67,6 +67,14 @@ return ReadOnly("SkinGachaTab", {
     ReddotNode = "Gacha_Special_7",
     Sequence = 1,
     TabId = 8,
+    TabName = "UI_SkinGacha_Special"
+  },
+  [9] = {
+    GachaId = {9009},
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Banner/T_Gacha_PoolBanner_SpLise01.T_Gacha_PoolBanner_SpLise01'",
+    ReddotNode = "Gacha_Special_8",
+    Sequence = 1,
+    TabId = 9,
     TabName = "UI_SkinGacha_Special"
   }
 })

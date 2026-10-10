@@ -1,9 +1,5 @@
 require("UnLua")
-local IconLoadingType = {
-  SupportSkill = 1,
-  BulletIcon = 2,
-  WeaponIcon = 3
-}
+local IconLoadingType = {BulletIcon = 2, WeaponIcon = 3}
 local WBP_Player_SkillPanel_PC_C = Class("BluePrints.UI.BP_UIState_C")
 
 function WBP_Player_SkillPanel_PC_C:Initialize(Initializer)
@@ -20,6 +16,8 @@ function WBP_Player_SkillPanel_PC_C:Initialize(Initializer)
   self.LoadingIconMap = {}
   self.InfinitySymbol = GText("INFINITY_SYMBOL")
   self.MyFVector2D = FVector2D(0, 0)
+  self.WeaponShootHintSources = {}
+  self.bGamepadViewActive = false
 end
 
 function WBP_Player_SkillPanel_PC_C:SetShootTargetHUDMode(IsActive)
@@ -394,6 +392,31 @@ function WBP_Player_SkillPanel_PC_C:SetGamepadIcons()
   })
   self.Battle_Skill_1:SetGamepadIcons()
   self.Battle_Skill_2:SetGamepadIcons()
+  self:RefreshWeaponShootHintVisibility()
+end
+
+function WBP_Player_SkillPanel_PC_C:SetWeaponShootHintCovered(SourceTag, bCovered)
+  if not SourceTag then
+    return
+  end
+  local Sources = self.WeaponShootHintSources or {}
+  self.WeaponShootHintSources = Sources
+  Sources[SourceTag] = bCovered and true or nil
+  self:RefreshWeaponShootHintVisibility()
+end
+
+function WBP_Player_SkillPanel_PC_C:RefreshWeaponShootHintVisibility()
+  if not self.Key_Weapon then
+    return
+  end
+  local Sources = self.WeaponShootHintSources
+  local bCovered = Sources and next(Sources) ~= nil
+  local bGamepadViewActive = self.bGamepadViewActive
+  if nil == bGamepadViewActive then
+    bGamepadViewActive = UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad
+  end
+  local bShow = bGamepadViewActive and not bCovered
+  self.Key_Weapon:SetVisibility(bShow and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
 end
 
 function WBP_Player_SkillPanel_PC_C:RefreshOpInfoByInputDevice(CurInputType, CurGamepadName)
@@ -405,7 +428,8 @@ function WBP_Player_SkillPanel_PC_C:RefreshOpInfoByInputDevice(CurInputType, Cur
 end
 
 function WBP_Player_SkillPanel_PC_C:InitGamepadView()
-  self.Key_Weapon:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.bGamepadViewActive = true
+  self:RefreshWeaponShootHintVisibility()
   self.Key_Dodge:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.Key_Skill:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.WidgetSwitcher_Key:SetActiveWidgetIndex(1)
@@ -416,7 +440,8 @@ function WBP_Player_SkillPanel_PC_C:InitGamepadView()
 end
 
 function WBP_Player_SkillPanel_PC_C:InitKeyboardView()
-  self.Key_Weapon:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.bGamepadViewActive = false
+  self:RefreshWeaponShootHintVisibility()
   self.Key_Dodge:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Key_Skill:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.WidgetSwitcher_Key:SetActiveWidgetIndex(0)
@@ -473,13 +498,9 @@ function WBP_Player_SkillPanel_PC_C:RefreshSupportSkillIcon()
   local SupportSKillBaseConfig = DataMgr.Skill[SupportSKillId][1][0]
   if SupportSKillBaseConfig.SkillBtnIcon then
     local Path = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Skill/T_" .. SupportSKillBaseConfig.SkillBtnIcon
-    self.LoadingIconMap[SupportSKillBaseConfig.SkillBtnIcon] = IconLoadingType.SupportSkill
     self.SupportPath = Path
     if -1 == self.OwnerPlayer.ActivePropEffectId then
-      UE.UResourceLibrary.LoadObjectAsync(self, Path, {
-        self,
-        WBP_Player_SkillPanel_PC_C.OnIconLoadFinish
-      })
+      self:LoadSupportIcon(Path)
     end
   end
   if -1 == self.OwnerPlayer.ActivePropEffectId and SupportSKillBaseConfig.SkillBtnDesc ~= nil then
@@ -498,7 +519,10 @@ function WBP_Player_SkillPanel_PC_C:GetSkillActiveInfo()
   end
   if PlayerController then
     local len = PlayerController.CurrentInActiveSkills:Length()
-    local TempButtons = self.SkillButtons
+    local TempButtons = {}
+    for Id in pairs(self.SkillButtons) do
+      TempButtons[Id] = true
+    end
     for i = 1, len do
       self:ChangeSkillButtonState(PlayerController.CurrentInActiveSkills[i], "Lock")
       TempButtons[PlayerController.CurrentInActiveSkills[i]] = nil
@@ -662,7 +686,7 @@ function WBP_Player_SkillPanel_PC_C:RefreshWeaponIcon()
     self.LoadingIconMap[BulletIcon] = IconLoadingType.BulletIcon
   else
     BulletIconPath = "/Game/UI/Texture/Dynamic/Atlas/Battle/T_Battle_Bullet"
-    self.LoadingIconMap.T_Battle_Bullet = IconLoadingType.BulletIcon
+    self.LoadingIconMap.Battle_Bullet = IconLoadingType.BulletIcon
   end
   UE.UResourceLibrary.LoadObjectAsync(self, BulletIconPath, {
     self,
@@ -676,7 +700,7 @@ function WBP_Player_SkillPanel_PC_C:RefreshWeaponIcon()
     self.LoadingIconMap[BattleWeaponConfig.WeaponHUDIcon] = IconLoadingType.WeaponIcon
   else
     WeaponHUDIcon = "/Game/UI/Texture/Dynamic/Atlas/Battle/Weapon/T_Crossbow_Chixing.T_Crossbow_Chixing"
-    self.LoadingIconMap.Skill_Crossbow_Chixing = IconLoadingType.WeaponIcon
+    self.LoadingIconMap.Crossbow_Chixing = IconLoadingType.WeaponIcon
   end
   self.LoadWeaponIconID = nil
   local Handle = UE.UResourceLibrary.LoadObjectAsyncWithId(self, WeaponHUDIcon, {
@@ -1210,10 +1234,7 @@ function WBP_Player_SkillPanel_PC_C:OnPropEffectReplaceSkill(SkillName, PropEffe
     self.Assist_Skill_Icon:SetRenderOpacity(1.0)
     local PropEffectConfig = DataMgr.PropEffect[PropEffectId]
     local ReplaceIconPath = PropEffectConfig.ReplaceSupportIconPath
-    UE.UResourceLibrary.LoadObjectAsync(self, ReplaceIconPath, {
-      self,
-      WBP_Player_SkillPanel_PC_C.OnSupportIconLoadFinish
-    })
+    self:LoadSupportIcon(ReplaceIconPath)
     local ReplaceDesc = PropEffectConfig.ReplaceSupportSkillDesc
     if ReplaceDesc then
       self.Assist_Skill_Text:SetText(GText(ReplaceDesc))
@@ -1230,10 +1251,7 @@ function WBP_Player_SkillPanel_PC_C:OnPropEffectEndReplaceSkill(SkillName)
   elseif SkillName == ESkillName.Skill3 then
     self.LastSupportSkillState = nil
     self:HandleSupportButtonState()
-    UE.UResourceLibrary.LoadObjectAsync(self, self.SupportPath, {
-      self,
-      WBP_Player_SkillPanel_PC_C.OnSupportIconLoadFinish
-    })
+    self:LoadSupportIcon(self.SupportPath)
     if self.SupportSkillId then
       local SupportSKillBaseConfig = DataMgr.Skill[self.SupportSkillId][1][0]
       if SupportSKillBaseConfig and SupportSKillBaseConfig.SkillBtnDesc then
@@ -1254,11 +1272,7 @@ function WBP_Player_SkillPanel_PC_C:OnIconLoadFinish(Object)
   if not LoadingType then
     return
   end
-  if LoadingType == IconLoadingType.SupportSkill then
-    self.Assist_Skill_Icon:SetBrushResourceObject(Object)
-    local VXSupportSkillMat = self.VX_skillIcon:GetDynamicMaterial()
-    VXSupportSkillMat:SetTextureParameterValue("Mask", Object)
-  elseif LoadingType == IconLoadingType.BulletIcon then
+  if LoadingType == IconLoadingType.BulletIcon then
     self.Bullet:SetBrushResourceObject(Object)
   end
 end
@@ -1276,8 +1290,22 @@ function WBP_Player_SkillPanel_PC_C:OnIconLoadFinishWithId(Object, ResourceID)
   end
 end
 
-function WBP_Player_SkillPanel_PC_C:OnSupportIconLoadFinish(Object)
-  if not Object or not IsValid(self) then
+function WBP_Player_SkillPanel_PC_C:LoadSupportIcon(Path)
+  self.LoadSupportIconID = nil
+  if not Path then
+    return
+  end
+  local Handle = UE.UResourceLibrary.LoadObjectAsyncWithId(self, Path, {
+    self,
+    WBP_Player_SkillPanel_PC_C.OnSupportIconLoadFinishWithId
+  })
+  if Handle then
+    self.LoadSupportIconID = Handle.ResourceID
+  end
+end
+
+function WBP_Player_SkillPanel_PC_C:OnSupportIconLoadFinishWithId(Object, ResourceID)
+  if not (Object and IsValid(self)) or ResourceID ~= self.LoadSupportIconID then
     return
   end
   self.Assist_Skill_Icon:SetBrushResourceObject(Object)

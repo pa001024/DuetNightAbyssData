@@ -486,14 +486,6 @@ function M:GetFormatTextValue(FormatText, ...)
   return ""
 end
 
-function M:GetGuildBossStageDisplayText(StageId)
-  StageId = tonumber(StageId) or 0
-  if StageId <= 0 then
-    return ""
-  end
-  return tostring(StageId) .. "%"
-end
-
 function M:FormatMessageText(MessageData)
   if not MessageData then
     return ""
@@ -529,8 +521,6 @@ function M:FormatMessageText(MessageData)
       return SafeStringFormat(Template, self:GetMemberDisplayName(FormatText.OperatorUid), self:GetFormatTextValue(FormatText, "Count"), self:GetFormatTextValue(FormatText, "ComponentName", "ComponentId"))
     elseif "PublishLayout" == RawMsgType then
       return SafeStringFormat(Template, self:GetMemberDisplayName(FormatText.OperatorUid))
-    elseif "GuildBossStageReward" == RawMsgType then
-      return SafeStringFormat(Template, self:GetGuildBossStageDisplayText(FormatText.StageId), self:GetFormatTextValue(FormatText, "AddFund", "ConfigAddFund"))
     end
     local Result = Template
     for Key, Value in pairs(FormatText) do

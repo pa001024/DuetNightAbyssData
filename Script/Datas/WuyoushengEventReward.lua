@@ -5,6 +5,48 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("WuyoushengEventReward", {
+  [10303701] = {
+    EventId = 103037,
+    RequiredStar = 3,
+    Reward = 10303701,
+    RewardKeyId = 10303701
+  },
+  [10303702] = {
+    EventId = 103037,
+    RequiredStar = 6,
+    Reward = 10303702,
+    RewardKeyId = 10303702
+  },
+  [10303703] = {
+    EventId = 103037,
+    RequiredStar = 9,
+    Reward = 10303703,
+    RewardKeyId = 10303703
+  },
+  [10303704] = {
+    EventId = 103037,
+    RequiredStar = 12,
+    Reward = 10303704,
+    RewardKeyId = 10303704
+  },
+  [10303705] = {
+    EventId = 103037,
+    RequiredStar = 15,
+    Reward = 10303705,
+    RewardKeyId = 10303705
+  },
+  [10303706] = {
+    EventId = 103037,
+    RequiredStar = 18,
+    Reward = 10303706,
+    RewardKeyId = 10303706
+  },
+  [10303707] = {
+    EventId = 103037,
+    RequiredStar = 21,
+    Reward = 10303707,
+    RewardKeyId = 10303707
+  },
   [11000101] = {
     EventId = 110001,
     RequiredStar = 3,

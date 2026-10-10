@@ -95,6 +95,8 @@ Avatar.__Component__ = {
   "BluePrints.Client.Entities.Components.PaotaiGame",
   "BluePrints.Client.Entities.Components.LimitedResourceMgr",
   "BluePrints.Client.Entities.Components.CommonQuestActivity",
+  "BluePrints.Client.Entities.Components.D4SeasonQuest",
+  "BluePrints.Client.Entities.Components.D4SeasonItemComp",
   "BluePrints.Client.Entities.Components.CommunityMgr",
   "BluePrints.Client.Entities.Components.TempleEventMgr",
   "BluePrints.Client.Entities.Components.MiscEnterWorldMgr",
@@ -381,6 +383,10 @@ function Avatar:_OnPropChangeResources(keys)
   end
 end
 
+function Avatar:_OnPropChangeShoppingCart(keys)
+  EventManager:FireEvent(EventID.OnShoppingCartChanged, keys)
+end
+
 function Avatar:_OnPropChangeWheels(keys)
   EventManager:FireEvent(EventID.OnPropChangeWheels)
 end
@@ -475,6 +481,10 @@ function Avatar:SaveCreatePhantomInfo(RoleId, BTIndex, Info, ExtraInfo, Level)
   self.PhantomCreateInfo[RoleId].Info = Info
   self.PhantomCreateInfo[RoleId].ExtraInfo = ExtraInfo
   self.PhantomCreateInfo[RoleId].Level = Level
+  local GameUIManager = GWorld.GameInstance and GWorld.GameInstance:GetGameUIManager()
+  if GameUIManager then
+    GameUIManager:RefreshBattleWheelSlotsIfVisible()
+  end
 end
 
 function Avatar:ClearCreatePhantomInfo(PhantomRoleId)
@@ -485,6 +495,10 @@ function Avatar:ClearCreatePhantomInfo(PhantomRoleId)
     return
   end
   self.PhantomCreateInfo[PhantomRoleId] = nil
+  local GameUIManager = GWorld.GameInstance and GWorld.GameInstance:GetGameUIManager()
+  if GameUIManager then
+    GameUIManager:RefreshBattleWheelSlotsIfVisible()
+  end
 end
 
 function Avatar:NotifyAppStoreRatingJump(IsShowGameRating)

@@ -72,6 +72,7 @@ ChatCommon.GuildDeleteConfirmDialog = 100372
 ChatCommon.GuildPermissionCloseDialog = 100373
 ChatCommon.EmojiGroupId = 0
 ChatCommon.ReddotMaxCount = 99
+ChatCommon.TaskbarChatCountSyncInterval = 1
 ChatCommon.ReddotNamePre = "Chat_"
 ChatCommon.PrivateReddotPost = "_Private"
 ChatCommon.ReddotName = "ChatMainMenu"

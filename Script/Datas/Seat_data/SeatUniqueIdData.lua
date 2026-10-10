@@ -24,6 +24,7 @@ return make_read_only({
   "1070",
   "1070_Mobile",
   "9997",
+  "9997_Mobile",
   "Haiboliya_Chezhan_Main",
   "Haiboliya_Chezhan_Main_Mobile",
   "Huaxu_Haojing_Reb_Main",

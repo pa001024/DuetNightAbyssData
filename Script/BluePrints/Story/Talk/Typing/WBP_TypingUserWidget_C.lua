@@ -13,6 +13,14 @@ local ETypingStates = {
 }
 local OneVector2D = FVector2D(1, 1)
 
+local function CalcLinePosX(BookSizeX, PageSizeX, Alignment)
+  if Alignment == EHorizontalAlignment.HAlign_Left then
+    return 0
+  end
+  local PosX = (BookSizeX - PageSizeX) / 2
+  return PosX < 0 and 0 or PosX
+end
+
 function M:Construct()
   self.RichMatch = "<.-/>"
   self.TextRichMatch = "<.->.-</>"
@@ -200,7 +208,7 @@ function M:SetVerticalAlignment(Alignment)
 end
 
 function M:SetHorizontalAlignment(Alignment)
-  self.HorizontalAlignment = Alignment or 0
+  self.HorizontalAlignment = Alignment or EHorizontalAlignment.HAlign_Center
 end
 
 function M:ShowPageEndIcon()
@@ -425,8 +433,7 @@ function M:InitPageTyping(Index)
     end
   end
   local LineCount = Page:GetLineCount()
-  self.LinePosX = (self.TypingBook:GetSize().X - Page:GetSize().X) / 2
-  self.LinePosX = self.LinePosX < 0 and 0 or self.LinePosX
+  self.LinePosX = CalcLinePosX(self.TypingBook:GetSize().X, Page:GetSize().X, self.HorizontalAlignment)
   self.NextLinePosY = 0
   if LineCount >= 1 then
     for i = 1, LineCount do

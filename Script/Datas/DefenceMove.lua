@@ -451,5 +451,47 @@ return ReadOnly("DefenceMove", {
     },
     MonsterTotalBaseNum = 100,
     WavesPerStage = 2
+  },
+  [617101] = {
+    ButcherMonsterId = 8501002,
+    ButcherMonsterSpawnMinWave = 10,
+    ButcherMonsterSpawnProbability = T.RT_1,
+    DungeonId = 617101,
+    EnsureGuideTime = 180,
+    MonsterSpawnId = {
+      [1] = T.RT_2,
+      [2] = {
+        617101,
+        6171010,
+        318
+      },
+      [3] = T.RT_2,
+      [4] = T.RT_3,
+      [5] = T.RT_2,
+      [6] = T.RT_3
+    },
+    MonsterTotalBaseNum = 100,
+    WavesPerStage = 2
+  },
+  [617102] = {
+    ButcherMonsterId = 8501002,
+    ButcherMonsterSpawnMinWave = 10,
+    ButcherMonsterSpawnProbability = T.RT_1,
+    DungeonId = 617102,
+    EnsureGuideTime = 180,
+    MonsterSpawnId = {
+      [1] = T.RT_4,
+      [2] = {
+        617102,
+        6171020,
+        316
+      },
+      [3] = T.RT_4,
+      [4] = T.RT_5,
+      [5] = T.RT_4,
+      [6] = T.RT_5
+    },
+    MonsterTotalBaseNum = 100,
+    WavesPerStage = 2
   }
 })

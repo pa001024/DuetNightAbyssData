@@ -12,6 +12,10 @@ function WBP_NPC_Name_C:Initialize(Initializer)
   self.Style = nil
   self.PlayerNumber = nil
   self.AutoOnlineActionTag = nil
+  self.GuildSignWidget = nil
+  self.GuildSignAvatarInfo = nil
+  self.bGuildSignCreating = false
+  self.PoolResetSerial = 0
 end
 
 function WBP_NPC_Name_C:Construct()
@@ -32,6 +36,7 @@ function WBP_NPC_Name_C:Init(ParentHeadWidget)
   self.ParentHeadWidget = ParentHeadWidget
   self.bIsEnabled_Name = false
   self:SetAutoOnlineActionTagVisible(false)
+  self:RefreshGuildSign(nil)
 end
 
 function WBP_NPC_Name_C:OnEnabled(Name, Style, PlayerNumber)
@@ -110,8 +115,15 @@ function WBP_NPC_Name_C:SetPlayerNumber(PlayerNumber)
     end
     self.Group_TeamSign:ClearChildren()
   end
+  local RequestSerial = self.PoolResetSerial
   UIManager(self):CreateWidgetAsync("WBP_NPC_Name_Tag", function(TeamTag)
     if not IsValid(self) then
+      return
+    end
+    if self.PoolResetSerial ~= RequestSerial then
+      if IsValid(TeamTag) then
+        TeamTag:RemoveFromParent()
+      end
       return
     end
     if TeamTag then
@@ -119,6 +131,64 @@ function WBP_NPC_Name_C:SetPlayerNumber(PlayerNumber)
       UpdateTeamTag(TeamTag)
     end
   end, tostring(self.NameTagReference))
+end
+
+function WBP_NPC_Name_C:SetGuildSignVisible(IsVisible)
+  if IsValid(self.Group_GuildSign) then
+    self.Group_GuildSign:SetVisibility(IsVisible and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
+  end
+end
+
+function WBP_NPC_Name_C:RefreshGuildSign(AvatarInfo)
+  if type(AvatarInfo) ~= "table" then
+    self.GuildSignAvatarInfo = nil
+    self:SetGuildSignVisible(false)
+    if IsValid(self.GuildSignWidget) then
+      self.GuildSignWidget:ResetForPool()
+    end
+    return
+  end
+  self.GuildSignAvatarInfo = AvatarInfo
+  if IsValid(self.GuildSignWidget) then
+    local bVisible = self.GuildSignWidget:RefreshGuildSign(AvatarInfo)
+    self:SetGuildSignVisible(bVisible)
+    return
+  end
+  if self.bGuildSignCreating or not IsValid(self.Group_GuildSign) then
+    return
+  end
+  self.bGuildSignCreating = true
+  local RequestSerial = self.PoolResetSerial
+  UIManager(self):CreateWidgetAsync(nil, function(GuildSignWidget)
+    if not IsValid(self) then
+      return
+    end
+    if self.PoolResetSerial ~= RequestSerial then
+      if IsValid(GuildSignWidget) then
+        GuildSignWidget:RemoveFromParent()
+      end
+      return
+    end
+    self.bGuildSignCreating = false
+    if not IsValid(GuildSignWidget) then
+      return
+    end
+    local CurrentAvatarInfo = self.GuildSignAvatarInfo
+    if type(CurrentAvatarInfo) ~= "table" then
+      GuildSignWidget:RemoveFromParent()
+      return
+    end
+    local GuildSignGroup = self.Group_GuildSign
+    if not IsValid(GuildSignGroup) then
+      GuildSignWidget:RemoveFromParent()
+      return
+    end
+    GuildSignGroup:ClearChildren()
+    self.GuildSignWidget = GuildSignWidget
+    GuildSignGroup:AddChild(GuildSignWidget)
+    local bVisible = GuildSignWidget:RefreshGuildSign(CurrentAvatarInfo)
+    self:SetGuildSignVisible(bVisible)
+  end, tostring(self.GuildSignReference))
 end
 
 function WBP_NPC_Name_C:OnDisabled()
@@ -131,6 +201,33 @@ function WBP_NPC_Name_C:OnDisabled()
   self:SetAutoOnlineActionTagVisible(false)
   EMUIAnimationSubsystem:EMStopAnimation(self.ParentHeadWidget, self.ParentHeadWidget.Name_In)
   EMUIAnimationSubsystem:EMPlayAnimation(self.ParentHeadWidget, self.ParentHeadWidget.Name_Out)
+end
+
+function WBP_NPC_Name_C:ResetForPool()
+  self.PoolResetSerial = self.PoolResetSerial + 1
+  local ParentHeadWidget = self.ParentHeadWidget
+  if IsValid(ParentHeadWidget) then
+    if ParentHeadWidget.Name_In and EMUIAnimationSubsystem:EMAnimationIsPlaying(ParentHeadWidget, ParentHeadWidget.Name_In) then
+      EMUIAnimationSubsystem:EMStopAnimation(ParentHeadWidget, ParentHeadWidget.Name_In)
+    end
+    if ParentHeadWidget.Name_Out and EMUIAnimationSubsystem:EMAnimationIsPlaying(ParentHeadWidget, ParentHeadWidget.Name_Out) then
+      EMUIAnimationSubsystem:EMStopAnimation(ParentHeadWidget, ParentHeadWidget.Name_Out)
+    end
+  end
+  self.bIsEnabled_Name = false
+  self.Style = nil
+  self.PlayerNumber = nil
+  self.NameTxt:SetText("")
+  self.Group_TeamSign:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.GuildSignAvatarInfo = nil
+  self.bGuildSignCreating = false
+  self:SetGuildSignVisible(false)
+  if IsValid(self.GuildSignWidget) then
+    self.GuildSignWidget:ResetForPool()
+  end
+  self:SetAutoOnlineActionTagVisible(false)
+  self:SetRenderOpacity(0)
+  self:SetVisibility(UE4.ESlateVisibility.Collapsed)
 end
 
 function WBP_NPC_Name_C:CreateAutoOnlineActionTag(Callback)
@@ -146,10 +243,15 @@ function WBP_NPC_Name_C:CreateAutoOnlineActionTag(Callback)
     return
   end
   DebugPrint("CreateAutoOnlineActionTag create begin", self, OnlineActionCommon.OnlineActionAutoTagBPPath)
+  local RequestSerial = self.PoolResetSerial
   UIManager(self):CreateWidgetAsync("WBP_Battle_OnlineAction_AutoTag", function(Widget)
     DebugPrint("CreateAutoOnlineActionTag callback", self, Widget)
     if not IsValid(self) or not IsValid(Widget) then
       DebugPrint("CreateAutoOnlineActionTag callback invalid", self, Widget)
+      return
+    end
+    if self.PoolResetSerial ~= RequestSerial then
+      Widget:RemoveFromParent()
       return
     end
     self.AutoOnlineActionTag = Widget

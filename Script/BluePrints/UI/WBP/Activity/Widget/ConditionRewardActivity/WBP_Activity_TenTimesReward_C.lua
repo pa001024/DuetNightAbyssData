@@ -8,7 +8,7 @@ local M = Class({
 function M:InitUI()
   self.FocusWidgetName = "CheckRewardView"
   self.FocusWidgetWidget = nil
-  local RewardId = self:GetPageConfigData().EventReward
+  local RewardId = self.RewardId
   local RewardData = DataMgr.Reward[RewardId]
   local ResourceData = DataMgr[RewardData.Type[1]][RewardData.Id[1]]
   self.TenTimesReward_Item.Text_ItemTitle:SetText(GText(ResourceData.ResourceName))
@@ -31,7 +31,7 @@ function M:InitUI()
     self.TenTimesReward_Item.Btn_Click:SetForbidden(true)
     self.TenTimesReward_Item.Text_BtnGet:SetText(GText("UI_GameEvent_ToBeFinished"))
   end
-  if self.IsComplete or self.IsGetReward then
+  if self.IsGetReward then
     self.TenTimesReward_Item.Btn_Click:SetForbidden(true)
     self.TenTimesReward_Item.Text_BtnGet:SetText(GText("UI_GameEvent_HasClaimed"))
   end

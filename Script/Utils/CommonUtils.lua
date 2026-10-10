@@ -399,6 +399,17 @@ function CommonUtils.Copy(Object)
   return _copy(Object)
 end
 
+function CommonUtils.CopyListValues(Target, Source, Count)
+  if type(Target) ~= "table" or type(Source) ~= "table" then
+    return false
+  end
+  Count = Count or #Source
+  for i = 1, Count do
+    Target[i] = Source[i]
+  end
+  return true
+end
+
 function CommonUtils.GetTimeZone()
   local utcTime = os.time(os.date("!*t"))
   local localTimeTable = os.date("*t")
@@ -1306,11 +1317,13 @@ function CommonUtils.GetClientTimerStructRemainTime(TimerHandle)
     return 0
   end
   local Info = GameState.ClientTimerStruct:GetTimerInfo(TimerHandle)
-  if Info.IsRealTime then
-    return Info.Time - (GameState.ReplicatedRealTimeSeconds - Info.RealTimeSeconds)
-  else
-    return Info.Time - (GameState.ReplicatedTimeSeconds - Info.TimeSeconds)
+  local ServerTimeNow = GameState:GetSyncedServerTimeSeconds(Info.IsRealTime)
+  local PassedTime = Info.IsRealTime and ServerTimeNow - Info.RealTimeSeconds or ServerTimeNow - Info.TimeSeconds
+  local RemainTime = Info.Time - PassedTime
+  if RemainTime < 0 then
+    RemainTime = 0
   end
+  return RemainTime
 end
 
 function CommonUtils.GetClientTimerStructTotalTime(TimerHandle)
@@ -1332,11 +1345,9 @@ function CommonUtils.GetClientTimerStructPassedTime(TimerHandle)
     return 0
   end
   local Info = GameState.ClientTimerStruct:GetTimerInfo(TimerHandle)
-  if Info.IsRealTime then
-    return GameState.ReplicatedRealTimeSeconds - Info.RealTimeSeconds
-  else
-    return GameState.ReplicatedTimeSeconds - Info.TimeSeconds
-  end
+  local ServerTimeNow = GameState:GetSyncedServerTimeSeconds(Info.IsRealTime)
+  local PassedTime = Info.IsRealTime and ServerTimeNow - Info.RealTimeSeconds or ServerTimeNow - Info.TimeSeconds
+  return PassedTime
 end
 
 function CommonUtils.HasClientTimerStruct(TimerHandle)
@@ -1904,6 +1915,55 @@ function CommonUtils.IsInteger(Value)
   return type(Value) == "number" and Value == math.floor(Value)
 end
 
+function CommonUtils.IsNumberList(Target, ListLength)
+  if type(Target) ~= "table" then
+    return false
+  end
+  ListLength = ListLength or #Target
+  for i = 1, ListLength do
+    if type(Target[i]) ~= "number" then
+      return false
+    end
+  end
+  return true
+end
+
+function CommonUtils.IsVector2List(Target)
+  return CommonUtils.IsNumberList(Target, 2)
+end
+
+function CommonUtils.IsVector3List(Target)
+  return CommonUtils.IsNumberList(Target, 3)
+end
+
+function CommonUtils.IsNumberInRange(Value, Min, Max, Epsilon)
+  Value = tonumber(Value)
+  Min = tonumber(Min)
+  Max = tonumber(Max)
+  Epsilon = math.max(0, tonumber(Epsilon) or 0)
+  if nil == Value or nil == Min or nil == Max then
+    return false
+  end
+  return Value >= Min - Epsilon and Value <= Max + Epsilon
+end
+
+function CommonUtils.IsNumberListInRanges(Values, Ranges, Count, Epsilon)
+  if type(Values) ~= "table" or type(Ranges) ~= "table" then
+    return false
+  end
+  for i = 1, Count do
+    local Range = Ranges[i]
+    if type(Range) ~= "table" or not CommonUtils.IsNumberInRange(Values[i], Range[1], Range[2], Epsilon) then
+      return false
+    end
+  end
+  return true
+end
+
+function CommonUtils.IsVector3InRanges(Values, Ranges, Epsilon)
+  return CommonUtils.IsNumberListInRanges(Values, Ranges, 3, Epsilon)
+end
+
 function CommonUtils.CalcAsyncCombatContribution(Damage, TotalHp)
   if not TotalHp or TotalHp <= 0 then
     return 0
@@ -1916,6 +1976,19 @@ end
 
 function CommonUtils.IsReachBaseContribution(Damage, TotalHp)
   return CommonUtils.CalcAsyncCombatContribution(Damage, TotalHp) >= DataMgr.AsyncCombatEventConstant.AsyncCombat_BaseContributionRequire.ConstantValue
+end
+
+function CommonUtils.RaidSeasonGetUnlockFloorCount(RaidSeasonId, DungeonId, PassTime)
+  local DungeonConf = DataMgr.Dungeon[DungeonId]
+  local TimeRemain = DungeonConf.BPOverrideVars.TimeLimit - PassTime
+  local RaidSeasonConf = DataMgr.RaidSeason[RaidSeasonId]
+  local UnlockFloorCount = 0
+  for Index, JumpTime in ipairs(RaidSeasonConf.JumpTime) do
+    if JumpTime <= TimeRemain then
+      UnlockFloorCount = math.max(UnlockFloorCount, RaidSeasonConf.JumpFloor[Index])
+    end
+  end
+  return UnlockFloorCount
 end
 
 return CommonUtils

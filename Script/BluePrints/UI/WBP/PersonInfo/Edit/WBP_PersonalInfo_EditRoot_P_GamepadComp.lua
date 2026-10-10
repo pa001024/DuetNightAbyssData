@@ -31,8 +31,12 @@ local function ShouldShowCharacterSlotSwitchGamepadKey(Owner)
   if not Owner.PageController or not Owner.PageController:IsChoosePageActive() then
     return false
   end
+  local ChoosePagePanel = Owner.PageController.ChoosePagePanel
+  if ChoosePagePanel and ChoosePagePanel.ShouldHideChoosePageGamepadKeys and ChoosePagePanel:ShouldHideChoosePageGamepadKeys() then
+    return false
+  end
   local ChooseMode = Owner.PageController.ActiveChooseMode
-  return "Character" == ChooseMode or "Weapon" == ChooseMode or "Action" == ChooseMode
+  return "Character" == ChooseMode or "Weapon" == ChooseMode or "Action" == ChooseMode or "Item" == ChooseMode or "Pet" == ChooseMode
 end
 
 local function EnsureCharacterSlotSwitchGamepadKeyInitialized(Owner)
@@ -83,32 +87,125 @@ local function EnsureAddButtonGamepadKeyInitialized(Owner)
   if Owner.bAddButtonGamepadKeyInitialized then
     return
   end
-  if not Owner.Key_Add or not Owner.Key_Add.CreateCommonKey then
+  
+  local function BindAddKey(KeyWidget)
+    if not KeyWidget or not KeyWidget.CreateCommonKey then
+      return
+    end
+    KeyWidget:CreateCommonKey({
+      KeyInfoList = {
+        {
+          Type = "Img",
+          ImgShortPath = "X",
+          ClickCallback = Owner.OnClickAdd,
+          Owner = Owner
+        }
+      }
+    })
+  end
+  
+  BindAddKey(Owner.Key_Add)
+  BindAddKey(Owner.Key_ChangeSubject)
+  Owner.bAddButtonGamepadKeyInitialized = true
+end
+
+local function EnsureChangePetButtonGamepadKeyInitialized(Owner)
+  if Owner.bChangePetButtonGamepadKeyInitialized then
     return
   end
-  Owner.Key_Add:CreateCommonKey({
+  if not Owner.Key_ChangePet or not Owner.Key_ChangePet.CreateCommonKey then
+    return
+  end
+  Owner.Key_ChangePet:CreateCommonKey({
     KeyInfoList = {
       {
         Type = "Img",
         ImgShortPath = "X",
-        ClickCallback = Owner.OnClickAdd,
+        ClickCallback = Owner.OnClickChangePet,
         Owner = Owner
       }
     }
   })
-  Owner.bAddButtonGamepadKeyInitialized = true
+  Owner.bChangePetButtonGamepadKeyInitialized = true
 end
 
-local function RefreshAddButtonGamepadKeyState(Owner, bShowAddButton)
-  Owner.bShouldShowAddButtonGamepadKey = true == bShowAddButton
+local function EnsureResetButtonGamepadKeyInitialized(Owner)
+  if Owner.bResetButtonGamepadKeyInitialized then
+    return
+  end
+  if not Owner.Key_Reset or not Owner.Key_Reset.CreateCommonKey then
+    return
+  end
+  Owner.Key_Reset:CreateCommonKey({
+    KeyInfoList = {
+      {
+        Type = "Img",
+        ImgShortPath = "X",
+        ClickCallback = Owner.OnClickStickerEditReset,
+        Owner = Owner
+      }
+    }
+  })
+  Owner.bResetButtonGamepadKeyInitialized = true
+end
+
+local function SetGamepadKeyOverlayVisibility(OverlayWidget, bVisible)
+  if not OverlayWidget or not OverlayWidget.SetVisibility then
+    return
+  end
+  OverlayWidget:SetVisibility(bVisible and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
+end
+
+local function IsSceneTipsOpened(Owner)
+  local Controller = Owner.EditRootController or Owner.PageController
+  return nil ~= Controller and nil ~= Controller.IsSceneTipsOpened and Controller:IsSceneTipsOpened() == true
+end
+
+local function IsChoosePageExclusiveGamepadFocus(Owner)
+  local ChoosePagePanel = Owner.PageController and Owner.PageController.ChoosePagePanel or nil
+  return nil ~= ChoosePagePanel and nil ~= ChoosePagePanel.ShouldHideChoosePageGamepadKeys and ChoosePagePanel:ShouldHideChoosePageGamepadKeys() == true
+end
+
+local function RefreshSideBtnGamepadKeyState(Owner, SideBtnMode)
+  Owner.SideBtnGamepadMode = SideBtnMode
+  Owner.bShouldShowAddButtonGamepadKey = "Add" == SideBtnMode
   local bIsGamepadInput = Owner.CurInputDeviceType == ECommonInputType.Gamepad
   if bIsGamepadInput then
-    EnsureAddButtonGamepadKeyInitialized(Owner)
+    if "Add" == SideBtnMode then
+      EnsureAddButtonGamepadKeyInitialized(Owner)
+    elseif "ChangePet" == SideBtnMode then
+      EnsureChangePetButtonGamepadKeyInitialized(Owner)
+    elseif "Reset" == SideBtnMode then
+      EnsureResetButtonGamepadKeyInitialized(Owner)
+    end
   end
-  local Visibility = Owner.bShouldShowAddButtonGamepadKey == true and bIsGamepadInput and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed
-  if Owner.Function_Add and Owner.Function_Add.SetVisibility then
-    Owner.Function_Add:SetVisibility(Visibility)
+  local bHideForExclusiveFocus = IsSceneTipsOpened(Owner) or IsChoosePageExclusiveGamepadFocus(Owner)
+  local SideBtnIndex = Owner.SideBtnIndex
+  if nil == SideBtnIndex and Owner._ResolveSideBtnIndex then
+    SideBtnIndex = Owner:_ResolveSideBtnIndex()
   end
+  local bShowAdd = bIsGamepadInput and "Add" == SideBtnMode and not bHideForExclusiveFocus
+  SetGamepadKeyOverlayVisibility(Owner.Function_Add, bShowAdd and 2 ~= SideBtnIndex)
+  SetGamepadKeyOverlayVisibility(Owner.Function_ChangeSubject, bShowAdd and 2 == SideBtnIndex)
+  SetGamepadKeyOverlayVisibility(Owner.Function_ChangePet, bIsGamepadInput and "ChangePet" == SideBtnMode and not bHideForExclusiveFocus)
+  SetGamepadKeyOverlayVisibility(Owner.Function_Reset, bIsGamepadInput and "Reset" == SideBtnMode and not bHideForExclusiveFocus)
+end
+
+local function ResolveSideBtnGamepadMode(Owner)
+  local SideBtnIndex = Owner.SideBtnIndex
+  if nil == SideBtnIndex and Owner._ResolveSideBtnIndex then
+    SideBtnIndex = Owner:_ResolveSideBtnIndex()
+  end
+  if nil == SideBtnIndex then
+    return nil
+  end
+  if 0 == SideBtnIndex or 2 == SideBtnIndex then
+    return "Add"
+  end
+  if 1 == SideBtnIndex then
+    return "ChangePet"
+  end
+  return "Reset"
 end
 
 local function EnsureEditModelGamepadKeyInitialized(Owner)
@@ -143,12 +240,30 @@ local function ShouldShowEditModelGamepadKey(Owner)
   if Owner.CurInputDeviceType ~= ECommonInputType.Gamepad then
     return false
   end
-  if not Owner.EditRootController:IsCharacterMainPageActive() then
+  if IsSceneTipsOpened(Owner) or IsChoosePageExclusiveGamepadFocus(Owner) then
     return false
   end
-  local SlotIndex = Owner.EditRootController:GetSelectedCharacterSlotIndex()
+  if Owner.EditRootController:IsScenePageActive() then
+    local ScenePagePanel = Owner.EditRootController.ScenePagePanel
+    return ScenePagePanel and ScenePagePanel.ShouldShowSceneLightAdjustGamepadKey and ScenePagePanel:ShouldShowSceneLightAdjustGamepadKey() == true
+  end
+  local bIsCharacterMain = true == Owner.EditRootController:IsCharacterMainPageActive()
+  local bIsPetMain = true == Owner.EditRootController:IsPetMainPageActive()
+  local bIsItemMain = true == Owner.EditRootController:IsItemMainPageActive()
+  if not bIsCharacterMain and not bIsPetMain and not bIsItemMain then
+    return false
+  end
+  local SlotIndex
+  if bIsPetMain then
+    SlotIndex = Owner.EditRootController:GetSelectedPetSlotIndex()
+  elseif bIsItemMain then
+    SlotIndex = Owner.EditRootController:GetSelectedItemSlotIndex()
+  else
+    SlotIndex = Owner.EditRootController:GetSelectedCharacterSlotIndex()
+  end
   local Content = Owner.CharacterSlotItemContents and Owner.CharacterSlotItemContents[SlotIndex] or nil
-  if not Content or Content.HasCharacter ~= true or true ~= Content.CanInteract then
+  local bHasContent = Content and (true == Content.HasCharacter or true == Content.HasItem)
+  if not bHasContent or true ~= Content.CanInteract then
     return false
   end
   local EntryWidget = Owner.CharacterSlotEntryWidgetMap and Owner.CharacterSlotEntryWidgetMap[SlotIndex] or nil
@@ -173,6 +288,13 @@ local function RefreshEditModelGamepadKeyState(Owner)
   end
 end
 
+local function RefreshScenePageGamepadState(Owner)
+  local ScenePagePanel = Owner.PageController and Owner.PageController.ScenePagePanel or nil
+  if ScenePagePanel and ScenePagePanel.RefreshScenePageGamepadState then
+    ScenePagePanel:RefreshScenePageGamepadState()
+  end
+end
+
 function Component:FirstInitGamePadView()
   if self.bCustomEditGamepadViewInitialized then
     return
@@ -184,6 +306,8 @@ function Component:FirstInitGamePadView()
   self.GameInputModeSubsystem = GameInputModeSubsystem
   EnsureCharacterSlotSwitchGamepadKeyInitialized(self)
   EnsureAddButtonGamepadKeyInitialized(self)
+  EnsureChangePetButtonGamepadKeyInitialized(self)
+  EnsureResetButtonGamepadKeyInitialized(self)
   EnsureEditModelGamepadKeyInitialized(self)
   self.bCustomEditGamepadViewInitialized = true
   local CurInputType = GameInputModeSubsystem.GetCurrentInputType and GameInputModeSubsystem:GetCurrentInputType() or nil
@@ -200,8 +324,10 @@ function Component:InitGamePadView(CurInputType, CurGamepadName)
   self.CurGamepadName = CurGamepadName
   self.GamepadPressedKeyMap = self.GamepadPressedKeyMap or {}
   RefreshCharacterSlotSwitchGamepadKeyState(self)
-  RefreshAddButtonGamepadKeyState(self, self.bShouldShowAddButtonGamepadKey == true)
+  RefreshSideBtnGamepadKeyState(self, ResolveSideBtnGamepadMode(self))
   RefreshEditModelGamepadKeyState(self)
+  RefreshScenePageGamepadState(self)
+  self:_RefreshSaveGamepadHint()
   self:ApplyCurrentEditStateGamepadFocus()
 end
 
@@ -211,16 +337,31 @@ function Component:InitKeyboardView(CurInputType, CurGamepadName)
   self.GamepadPressedKeyMap = {}
   self:_CancelScheduledGamepadDefaultFocus()
   RefreshCharacterSlotSwitchGamepadKeyState(self)
-  RefreshAddButtonGamepadKeyState(self, self.bShouldShowAddButtonGamepadKey == true)
+  RefreshSideBtnGamepadKeyState(self, ResolveSideBtnGamepadMode(self))
   RefreshEditModelGamepadKeyState(self)
+  RefreshScenePageGamepadState(self)
+  self:_RefreshSaveGamepadHint()
 end
 
 function Component:RefreshCustomEditGamepadPageState()
   RefreshCharacterSlotSwitchGamepadKeyState(self)
-  if self.EditRootController then
-    RefreshAddButtonGamepadKeyState(self, self.EditRootController:GetActiveMainTabName() == "Char" and not self.EditRootController:IsChoosePageActive())
-  end
+  RefreshSideBtnGamepadKeyState(self, ResolveSideBtnGamepadMode(self))
   RefreshEditModelGamepadKeyState(self)
+  RefreshScenePageGamepadState(self)
+  self:_RefreshSaveGamepadHint()
+end
+
+function Component:_RefreshSaveGamepadHint()
+  if not self.Btn_Save or not self.Btn_Save.SetGamePadVisibility then
+    return
+  end
+  local bHide = IsSceneTipsOpened(self) or IsChoosePageExclusiveGamepadFocus(self)
+  local GamePadVisibility = bHide and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.SelfHitTestInvisible
+  self.Btn_Save:SetGamePadVisibility(GamePadVisibility)
+  local TitleConfirmButton = self.Edit_Title and self.Edit_Title.Btn_Confirm or nil
+  if TitleConfirmButton and TitleConfirmButton.SetGamePadVisibility then
+    TitleConfirmButton:SetGamePadVisibility(GamePadVisibility)
+  end
 end
 
 function Component:OnUpdateUIStyleByInputTypeChange(CurInputType, CurGamepadName)
@@ -280,6 +421,34 @@ function Component:HandleGamepadConfirmCharacterSlotFromEntry(Content, EntryWidg
     return false
   end
   self:OnCharacterSlotEntryFocused(Content, EntryWidget)
+  if Content.SlotKind == "Item" or self.EditRootController:IsItemMainPageActive() then
+    if self.EditRootController:IsChoosePageActive() then
+      local ChoosePagePanel = self.EditRootController.ChoosePagePanel
+      if ChoosePagePanel and ChoosePagePanel.FocusGamepadDefaultListItem then
+        ChoosePagePanel:FocusGamepadDefaultListItem()
+      end
+    else
+      local CharacterEditPanel = self.EditRootController.CharacterEditPanel
+      if CharacterEditPanel and CharacterEditPanel.FocusGamepadDefaultPanelItem then
+        CharacterEditPanel:FocusGamepadDefaultPanelItem()
+      end
+    end
+    self:RefreshCustomEditGamepadPageState()
+    return true
+  end
+  if Content.SlotKind == "Pet" or self.EditRootController:IsPetPageActive() then
+    if not self.EditRootController:OpenSelectedPetDetailPanelWithoutFocus() then
+      self:RefreshCustomEditGamepadPageState()
+      return true
+    end
+    self:_CancelScheduledGamepadDefaultFocus()
+    local CharacterEditPanel = self.EditRootController.CharacterEditPanel
+    if CharacterEditPanel and CharacterEditPanel.FocusGamepadDefaultPanelItem then
+      CharacterEditPanel:FocusGamepadDefaultPanelItem()
+    end
+    self:RefreshCustomEditGamepadPageState()
+    return true
+  end
   if not self.EditRootController:OpenSelectedCharacterDetailPanelWithoutFocus() then
     return false
   end
@@ -291,16 +460,44 @@ function Component:HandleGamepadConfirmCharacterSlotFromEntry(Content, EntryWidg
   return true
 end
 
-function Component:Handle_KeyDownOnGamePad(InKeyName)
+function Component:_TryCloseSceneTipsOnGamepadKey(InKeyName)
+  if not self.PageController or not self.PageController:IsSceneTipsOpened() then
+    return false
+  end
+  if InKeyName == UIConst.GamePadKey.SpecialRight and self.bIgnoreSceneTipsMenuHold then
+    return true
+  end
+  local ScenePagePanel = self.PageController.ScenePagePanel
+  if ScenePagePanel and ScenePagePanel._TryCloseSceneTips then
+    ScenePagePanel:_TryCloseSceneTips()
+  end
+  return true
+end
+
+function Component:Handle_KeyDownOnGamePad(InKeyName, bIsRepeat)
   if not self.PageController then
     return false
   end
   self.GamepadPressedKeyMap = self.GamepadPressedKeyMap or {}
   self.GamepadPressedKeyMap[InKeyName] = true
+  if self:_TryCloseSceneTipsOnGamepadKey(InKeyName) then
+    return true
+  end
   if self.PageController:IsChoosePageActive() then
     local ChoosePagePanel = self.PageController.ChoosePagePanel
     if ChoosePagePanel and ChoosePagePanel.Handle_ChoosePageGamepadKeyDown and ChoosePagePanel:Handle_ChoosePageGamepadKeyDown(InKeyName) then
       return true
+    end
+  end
+  if self.PageController.IsStickerEditPageActive and self.PageController:IsStickerEditPageActive() then
+    local StickersEditWidget = self:_GetStickersEditWidget()
+    if StickersEditWidget and StickersEditWidget.HandleGamepadScaleByShoulder then
+      if InKeyName == UIConst.GamePadKey.LeftShoulder then
+        return true == StickersEditWidget:HandleGamepadScaleByShoulder(false)
+      end
+      if InKeyName == UIConst.GamePadKey.RightShoulder then
+        return true == StickersEditWidget:HandleGamepadScaleByShoulder(true)
+      end
     end
   end
   if self.bHiddenUI then
@@ -309,6 +506,12 @@ function Component:Handle_KeyDownOnGamePad(InKeyName)
       return true
     end
     return false
+  end
+  if self.PageController:IsScenePageActive() then
+    local ScenePagePanel = self.PageController.ScenePagePanel
+    if ScenePagePanel and ScenePagePanel.Handle_ScenePageGamepadKeyDown and ScenePagePanel:Handle_ScenePageGamepadKeyDown(InKeyName, bIsRepeat) then
+      return true
+    end
   end
   if nil ~= CAMERA_MOVE_KEY_MAP[InKeyName] then
     return true == self:OnCameraRoamKeyDown(CAMERA_MOVE_KEY_MAP[InKeyName])
@@ -322,7 +525,11 @@ function Component:Handle_KeyDownOnGamePad(InKeyName)
       self.PageController:CloseChoosePageAndReturn()
       return true
     end
-    if self.PageController:ShouldShowCharacterDetailPanel() and self.PageController.CharacterEditPanel:HasFocusedDescendants() then
+    if self.PageController.IsStickerEditPageActive and self.PageController:IsStickerEditPageActive() then
+      self.PageController:CloseStickerEditAndReturn()
+      return true
+    end
+    if (self.PageController:ShouldShowCharacterDetailPanel() or self.PageController:ShouldShowPetDetailPanel() or self.PageController:ShouldShowItemDetailPanel()) and self.PageController.CharacterEditPanel and self.PageController.CharacterEditPanel:HasFocusedDescendants() then
       self:ApplyGamepadFocusToSelectedCharacterSlot()
       self:RefreshCustomEditGamepadPageState()
       return true
@@ -343,8 +550,11 @@ function Component:Handle_KeyDownOnGamePad(InKeyName)
     ChoosePagePanel:OnCharacterTipsConfirmClicked(TipsWidget, ModIndex, AppearanceIndex)
     return true
   end
-  if not self.PageController:IsChoosePageActive() and self.PageController:IsCharacterMainPageActive() then
-    if self.GamepadPressedKeyMap[COMBO_HOLD_KEY] == true then
+  local bIsEditableMain = self.PageController:IsCharacterMainPageActive() or self.PageController:IsPetMainPageActive() or self.PageController:IsItemMainPageActive()
+  local bIsOtherMain = self.PageController.IsOtherPageActive and true == self.PageController:IsOtherPageActive()
+  local bIsStickerEdit = self.PageController.IsStickerEditPageActive and true == self.PageController:IsStickerEditPageActive()
+  if not self.PageController:IsChoosePageActive() and (bIsEditableMain or bIsOtherMain or bIsStickerEdit) then
+    if (bIsEditableMain or bIsOtherMain) and self.GamepadPressedKeyMap[COMBO_HOLD_KEY] == true then
       if InKeyName == UIConst.GamePadKey.FaceButtonLeft and self.PageController.UndoEdit then
         self.PageController:UndoEdit()
         return true
@@ -354,15 +564,26 @@ function Component:Handle_KeyDownOnGamePad(InKeyName)
         return true
       end
     end
-    if self.GamepadPressedKeyMap[COMBO_HOLD_KEY] ~= true and InKeyName == UIConst.GamePadKey.FaceButtonLeft and self.OnClickAdd then
-      self:OnClickAdd()
-      return true
+    if self.GamepadPressedKeyMap[COMBO_HOLD_KEY] ~= true and InKeyName == UIConst.GamePadKey.FaceButtonLeft then
+      local SideBtnMode = ResolveSideBtnGamepadMode(self)
+      if "ChangePet" == SideBtnMode and self.OnClickChangePet then
+        self:OnClickChangePet()
+        return true
+      end
+      if "Reset" == SideBtnMode and self.OnClickStickerEditReset then
+        self:OnClickStickerEditReset()
+        return true
+      end
+      if "Add" == SideBtnMode and self.OnClickAdd then
+        self:OnClickAdd()
+        return true
+      end
     end
-    if "Gamepad_LeftThumbstick" == InKeyName and self.OnClickResetCamera then
+    if bIsEditableMain and "Gamepad_LeftThumbstick" == InKeyName and self.OnClickResetCamera then
       self:OnClickResetCamera()
       return true
     end
-    if InKeyName == UIConst.GamePadKey.RightThumb and self.OnHideUIClick then
+    if (bIsEditableMain or bIsOtherMain or bIsStickerEdit) and InKeyName == UIConst.GamePadKey.RightThumb and self.OnHideUIClick then
       self:OnHideUIClick()
       return true
     end
@@ -371,7 +592,8 @@ function Component:Handle_KeyDownOnGamePad(InKeyName)
     if self.ActorController and self.ActorController.IsCameraPreviewTransactionActive and self.ActorController:IsCameraPreviewTransactionActive() then
       self.ActorController:CommitCameraPreviewTransaction()
     end
-    if self.TriggerCommonButtonClick and self:TriggerCommonButtonClick(self.Btn_Save) then
+    local ConfirmButton = self.GetActiveCommonConfirmButton and self:GetActiveCommonConfirmButton() or self.Btn_Save
+    if self.TriggerCommonButtonClick and self:TriggerCommonButtonClick(ConfirmButton) then
       return true
     end
     return false
@@ -389,26 +611,55 @@ function Component:Handle_KeyDownOnGamePad(InKeyName)
   return false
 end
 
-function Component:Handle_PreviewKeyDownOnGamePad(InKeyName)
+function Component:Handle_PreviewKeyDownOnGamePad(InKeyName, bIsRepeat)
+  if self:_TryCloseSceneTipsOnGamepadKey(InKeyName) then
+    return true
+  end
   if self.bHiddenUI then
     if InKeyName == UIConst.GamePadKey.FaceButtonBottom or InKeyName == UIConst.GamePadKey.FaceButtonRight or InKeyName == UIConst.GamePadKey.FaceButtonLeft or InKeyName == UIConst.GamePadKey.FaceButtonTop then
       self:OnHideUIClick()
       return true
     end
     if nil ~= CAMERA_MOVE_KEY_MAP[InKeyName] then
-      return self:Handle_KeyDownOnGamePad(InKeyName) == true
+      return self:Handle_KeyDownOnGamePad(InKeyName, bIsRepeat) == true
     end
     return false
+  end
+  if self.PageController and self.PageController:IsScenePageActive() and InKeyName == UIConst.GamePadKey.SpecialRight then
+    self.GamepadPressedKeyMap = self.GamepadPressedKeyMap or {}
+    self.GamepadPressedKeyMap[InKeyName] = true
+    local ScenePagePanel = self.PageController.ScenePagePanel
+    if ScenePagePanel and ScenePagePanel.Handle_ScenePageGamepadKeyDown and ScenePagePanel:Handle_ScenePageGamepadKeyDown(InKeyName, bIsRepeat) then
+      return true
+    end
   end
   if nil == CAMERA_MOVE_KEY_MAP[InKeyName] then
     return false
   end
-  return self:Handle_KeyDownOnGamePad(InKeyName) == true
+  return self:Handle_KeyDownOnGamePad(InKeyName, bIsRepeat) == true
 end
 
 function Component:Handle_KeyUpOnGamePad(InKeyName)
   if self.GamepadPressedKeyMap then
     self.GamepadPressedKeyMap[InKeyName] = nil
+  end
+  if InKeyName == UIConst.GamePadKey.SpecialRight then
+    self.bIgnoreSceneTipsMenuHold = false
+  end
+  if self.PageController and self.PageController:IsScenePageActive() then
+    local ScenePagePanel = self.PageController.ScenePagePanel
+    if ScenePagePanel and ScenePagePanel.Handle_ScenePageGamepadKeyUp and ScenePagePanel:Handle_ScenePageGamepadKeyUp(InKeyName) then
+      return true
+    end
+  end
+  if self.PageController and self.PageController.IsStickerEditPageActive and self.PageController:IsStickerEditPageActive() and (InKeyName == UIConst.GamePadKey.LeftShoulder or InKeyName == UIConst.GamePadKey.RightShoulder) then
+    local StickersEditWidget = self:_GetStickersEditWidget()
+    if StickersEditWidget and StickersEditWidget.StopGamepadScaleRepeat then
+      local bIncrease = InKeyName == UIConst.GamePadKey.RightShoulder
+      if StickersEditWidget:StopGamepadScaleRepeat(bIncrease) then
+        return true
+      end
+    end
   end
   if nil ~= CAMERA_MOVE_KEY_MAP[InKeyName] then
     return self:OnCameraRoamKeyUp(CAMERA_MOVE_KEY_MAP[InKeyName]) == true
@@ -419,6 +670,21 @@ end
 function Component:Handle_CustomEditGamepadAnalog(InKeyName, AnalogValue)
   if not self.PageController then
     return false
+  end
+  if self.PageController:IsSceneTipsOpened() then
+    return true
+  end
+  if self.PageController:IsScenePageActive() then
+    local ScenePagePanel = self.PageController.ScenePagePanel
+    if ScenePagePanel and ScenePagePanel.Handle_ScenePageGamepadAnalog and ScenePagePanel:Handle_ScenePageGamepadAnalog(InKeyName, AnalogValue) then
+      return true
+    end
+  end
+  if self.PageController.IsStickerEditPageActive and self.PageController:IsStickerEditPageActive() and ("Gamepad_LeftX" == InKeyName or "Gamepad_LeftY" == InKeyName) then
+    local StickersEditWidget = self:_GetStickersEditWidget()
+    if StickersEditWidget and StickersEditWidget.HandleGamepadMoveAnalog then
+      return StickersEditWidget:HandleGamepadMoveAnalog(InKeyName, AnalogValue) == true
+    end
   end
   if not self.PageController:IsPreviewCameraRoamEnabled() then
     return false
@@ -461,6 +727,20 @@ function Component:Handle_CustomEditGamepadAnalog(InKeyName, AnalogValue)
     return true
   end
   return false
+end
+
+function Component:_GetStickersEditWidget()
+  local Candidates = {
+    self.StickersEditWidget,
+    self.RootViewPanel and self.RootViewPanel.StickersEditWidget or nil,
+    self.PageController and self.PageController.RootViewPanel and self.PageController.RootViewPanel.StickersEditWidget or nil
+  }
+  for _, StickersEditWidget in ipairs(Candidates) do
+    if StickersEditWidget and IsValid(StickersEditWidget) then
+      return StickersEditWidget
+    end
+  end
+  return nil
 end
 
 return Component

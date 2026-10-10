@@ -20,6 +20,16 @@ end
 
 function M:OnListItemObjectSet(Obj)
   DebugPrint("gmy@TabOnListItemObjectSet", Obj.MonsterId, Obj.bIsDefaultSelected)
+  if Obj.IsEmpty then
+    if self.WS_Type then
+      self.WS_Type:SetActiveWidgetIndex(1)
+    end
+    self.MonsterId = nil
+    return
+  end
+  if self.WS_Type then
+    self.WS_Type:SetActiveWidgetIndex(0)
+  end
   local MonsterId = Obj.MonsterId
   local MonsterInfo = DataMgr.Monster[MonsterId]
   if self.ParentWidget and self.MonsterId and self.ParentWidget.MonsterIdToItem and self.ParentWidget.MonsterIdToItem[self.MonsterId] == self then

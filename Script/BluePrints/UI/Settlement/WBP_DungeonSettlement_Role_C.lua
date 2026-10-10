@@ -183,10 +183,11 @@ function WBP_DungeonSettlement_Role_C:GetCharInfo(Player)
       Level = Player:GetAttr("Level")
     }
   end
-  local bUseQuestRole = Player.AvatarQuestRoleID and 0 ~= Player.AvatarQuestRoleID
-  local bUseSlideRole = Player.AvatarSlideRoleID and 0 ~= Player.AvatarSlideRoleID
-  local CurrentRoleId = not (bUseQuestRole or bUseSlideRole) and Player.CurrentRoleId or nil
-  local CharId = CurrentRoleId or self.Id
+  local CharId = self.Id
+  local IsUsingCurrentRole = GameState(self) and GameState(self).GameModeType == "Training"
+  if IsUsingCurrentRole then
+    CharId = Player.CurrentRoleId
+  end
   local EnhanceLevel = self.EnhanceLevel
   local CurrentExp = self.CurInfo.Exp
   local CurrentLevel = self.CurInfo.Level
@@ -238,8 +239,11 @@ function WBP_DungeonSettlement_Role_C:GetWeaponInfo(Player)
       Level = Player[self.RoleName]:GetAttr("Level")
     }
   end
-  local bUseSlideRole = Player.AvatarSlideRoleID and 0 ~= Player.AvatarSlideRoleID
-  local WeaponId = not bUseSlideRole and Player[self.RoleName] and Player[self.RoleName].WeaponId or self.Id
+  local WeaponId = self.Id
+  local IsUsingCurrentWeapon = GameState(self) and GameState(self).GameModeType == "Training"
+  if IsUsingCurrentWeapon then
+    WeaponId = Player[self.RoleName] and Player[self.RoleName].WeaponId or self.Id
+  end
   local EnhanceLevel = self.EnhanceLevel
   local CurrentExp = self.CurInfo.Exp
   local CurrentLevel = self.CurInfo.Level

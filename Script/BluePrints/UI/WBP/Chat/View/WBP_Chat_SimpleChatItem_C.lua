@@ -9,6 +9,7 @@ local SimpleChatTextEdgeReserve = 2
 
 function M:OnListItemObjectSet(Content)
   if not GWorld.NetworkMgr:CheckIsConnected(true) then
+    self:SetVisibility(UIConst.VisibilityOp.Collapsed)
     return
   end
   self.Content = Content
@@ -18,9 +19,14 @@ function M:OnListItemObjectSet(Content)
 end
 
 function M:BP_OnEntryReleased()
+  self:RemoveTicker()
+  self:RemoveCloseTimer()
   self:ResetTranslation()
   self:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  self.Content.UI = nil
+  if self.Content and self.Content.UI == self then
+    self.Content.UI = nil
+  end
+  self.Content = nil
 end
 
 function M:GetChatBubbleTargetWidth()
@@ -51,6 +57,8 @@ function M:GetChatBubbleTargetWidth()
 end
 
 function M:Open(MsgWrap, bSound)
+  self:RemoveTicker()
+  self:RemoveCloseTimer()
   local ChannelName = ChatController:ParseChannelHeader(MsgWrap)
   local Spacker, RawSpacker = ChatController:ParseSpeakerHeader(MsgWrap)
   local Content = ChatController:ParseEmojiToText(MsgWrap)
@@ -117,7 +125,7 @@ function M:Open(MsgWrap, bSound)
       LeftHalf = table.slice(RawContentTable, 1, #RawContentTable - HalfLength)
       RightHalf = table.slice(RawContentTable, #RawContentTable - HalfLength + 1)
       RawContentTable = LeftHalf
-    elseif NowLineWidth < TargetLineWidth and HalfLength > 0 then
+    elseif NowLineWidth <= TargetLineWidth and HalfLength > 0 then
       if not RightHalf or not LeftHalf then
         self.SizeBox_Dialog:SetVisibility(UIConst.VisibilityOp.Collapsed)
         if self.Text_DialogSingle and self.Text_DialogSingle.SetWrapTextAt then
@@ -180,20 +188,20 @@ function M:Close()
 end
 
 function M:RemoveTicker()
-  if not self:IsExistTimer(self._TickForTextSize) then
-    return
-  end
-  self:RemoveTimer(self._TickForTextSize, true)
-  self:SetRenderOpacity(1)
+  local Key = self._TickForTextSize
   self._TickForTextSize = nil
+  if self:IsExistTimer(Key) then
+    self:RemoveTimer(Key, true)
+  end
+  self:SetRenderOpacity(1)
 end
 
 function M:RemoveCloseTimer()
-  if not self:IsExistTimer(self._TimerForAutoClose) then
-    return
-  end
-  self:RemoveTimer(self._TimerForAutoClose, true)
+  local Key = self._TimerForAutoClose
   self._TimerForAutoClose = nil
+  if self:IsExistTimer(Key) then
+    self:RemoveTimer(Key, true)
+  end
 end
 
 function M:Construct()

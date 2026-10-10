@@ -247,6 +247,16 @@ function M:NotifyGuildPropChanged(SrcParams, PropName, NewValue, OldValue, Guild
       return
     end
     CurrGuild.MemberCount = NewValue
+  elseif "Name" == PropName then
+    if not CurrGuild then
+      return
+    end
+    CurrGuild.Name = NewValue
+  elseif "BadgeText" == PropName then
+    if not CurrGuild then
+      return
+    end
+    CurrGuild.BadgeText = NewValue
   end
 end
 

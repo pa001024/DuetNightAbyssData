@@ -671,6 +671,20 @@ function M:UpdateHairDetails(Content)
   if Content.RedDotType and not self.NoReddot then
     ArmoryUtils:SetItemReddotRead(Content, true)
   end
+  local SkinCollectTaskPopupModel = require("BluePrints.UI.WBP.Activity.Widget.SkinCollect.SkinCollectTaskPopupModel")
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    local CurrentScore, MaxScore = Avatar.AppearanceCollectEvent:SkinCollectScoreInfo(SkinCollectTaskPopupModel.SKinCollectTaskEventId)
+    if CurrentScore < MaxScore and EMCache:Get("SkinCollectTaskCheckBox") and Avatar.AppearanceCollectEvent:IsSkinCollectAppearance(SkinCollectTaskPopupModel.SKinCollectTaskEventId, Content.HairId) then
+      self.Shop_SkinPreview_CollectItem_1:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.Shop_SkinPreview_CollectItem_1.Group_SkinCollectScore:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.Shop_SkinPreview_CollectItem_1.Text_ScoreNum:SetText(Avatar:GetAppearanceScore(CommonConst.DataType.Hair, Content.HairId) or "0")
+      self.Shop_SkinPreview_CollectItem_1.Text_ScoreDesc:SetText(string.format(GText("UI_AppearanceCollect_CurrentProgress"), CurrentScore, MaxScore))
+    else
+      self.Shop_SkinPreview_CollectItem_1:SetVisibility(ESlateVisibility.Collapsed)
+      self.Shop_SkinPreview_CollectItem_1.Group_SkinCollectScore:SetVisibility(ESlateVisibility.Collapsed)
+    end
+  end
 end
 
 function M:InitCharAccessory()

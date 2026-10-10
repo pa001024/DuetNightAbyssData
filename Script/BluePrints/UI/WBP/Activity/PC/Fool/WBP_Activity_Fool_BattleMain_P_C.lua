@@ -9,16 +9,20 @@ function M:Construct()
   self.Super.Construct(self)
   self.Handled = UE4.UWidgetBlueprintLibrary.Handled()
   self.Image_ForClick.OnMouseButtonDownEvent:Bind(self, self.ImageClickButtonDown)
-  self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
-  if IsValid(self.GameInputModeSubsystem) then
-    local CurInputDeviceType = self.GameInputModeSubsystem:GetCurrentInputType()
+  local GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
+  if IsValid(GameInputModeSubsystem) then
+    local CurInputDeviceType = GameInputModeSubsystem:GetCurrentInputType()
     rawset(self, "IsGamepadInput", CurInputDeviceType == ECommonInputType.Gamepad)
-    self.GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.RefreshOpInfoByInputDevice)
+    GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.RefreshOpInfoByInputDevice)
     self:RefreshOpInfoByInputDevice(CurInputDeviceType, "")
   end
 end
 
 function M:Destruct()
+  local GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
+  if IsValid(GameInputModeSubsystem) then
+    GameInputModeSubsystem.OnInputMethodChanged:Remove(self, self.RefreshOpInfoByInputDevice)
+  end
   self.Super.Destruct(self)
 end
 

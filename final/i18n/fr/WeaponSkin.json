@@ -82,7 +82,7 @@
   {
     "id": 3010111,
     "name": "Valse des neiges de minuit – Espadon",
-    "desc": "UI_WeaponSkin_Des_3010111",
+    "desc": "Seule la neige silencieuse se souvient de cette longue nuit réduite en cendres.",
     "icon": "T_Head_Claymore_Yejin",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
@@ -157,6 +157,14 @@
     "desc": "GRAAAAH—————— !",
     "icon": "T_Head_Sword_Nahan",
     "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010210,
+    "name": "Invitation cosmique – Épée",
+    "desc": "Écoutez l’appel éternel venu des étoiles.",
+    "icon": "T_Head_Sword_Huanyu",
+    "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },
   {
@@ -552,6 +560,14 @@
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 3010905,
+    "name": "Floraison d’ossements",
+    "desc": "Même les ossements porteurs de mort peuvent faire éclore une vie tenace.",
+    "icon": "T_Head_Cannon_Kugu",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
     "id": 3011001,
     "name": "Guitare miaou n° 2",
     "desc": "Miaouuu ♪ miaou-miaou-miaou ♪ miaou-miaou ♪♪",
@@ -586,8 +602,8 @@
   {
     "id": 3011005,
     "name": "UI_WeaponSkin_Name_3011005",
-    "desc": "UI_WeaponSkin_Des_3010111",
-    "icon": "",
+    "desc": "Seule la neige silencieuse se souvient de cette longue nuit réduite en cendres.",
+    "icon": "T_Head_Shotgun_Nahan",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },

@@ -684,6 +684,41 @@
     "src": "Succès: Qui suis-je ?"
   },
   {
+    "id": 10121,
+    "name": "créateur de miracles",
+    "suf": false
+  },
+  {
+    "id": 10122,
+    "name": "éblouissant",
+    "suf": false
+  },
+  {
+    "id": 10123,
+    "name": "illustre",
+    "suf": false
+  },
+  {
+    "id": 10124,
+    "name": "du 1er anniversaire",
+    "suf": false
+  },
+  {
+    "id": 10125,
+    "name": "bravant vents et flots",
+    "suf": false
+  },
+  {
+    "id": 10126,
+    "name": "de la XIIIᵉ Légion",
+    "suf": false
+  },
+  {
+    "id": 10127,
+    "name": "de la fournaise",
+    "suf": false
+  },
+  {
     "id": 20001,
     "name": "Force",
     "suf": true,
@@ -1270,5 +1305,30 @@
     "name": "Paradis",
     "suf": true,
     "src": "Succès: Sous le Paradis"
+  },
+  {
+    "id": 20104,
+    "name": "1er anniversaire",
+    "suf": true
+  },
+  {
+    "id": 20105,
+    "name": "Voyageur des songes",
+    "suf": true
+  },
+  {
+    "id": 20106,
+    "name": "Tempête",
+    "suf": true
+  },
+  {
+    "id": 20107,
+    "name": "Monstre",
+    "suf": true
+  },
+  {
+    "id": 20108,
+    "name": "Copie",
+    "suf": true
   }
 ]

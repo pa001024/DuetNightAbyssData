@@ -18,6 +18,7 @@ function M:InitPage(ActivityId, ParentTabId, AllActivityId, ParentWidget)
   self.IsComplete = false
   self.IsCanGetReward = false
   self.IsGetReward = false
+  self.RewardStateList = {}
   self:UpdateActivityConditionAndRewardState()
   self:InitUI()
   self:InitTimeInfo()
@@ -106,24 +107,72 @@ end
 
 function M:UpdateActivityConditionAndRewardState()
   local Avatar = GWorld:GetAvatar()
-  if Avatar and self.FinishCondition then
-    self.IsComplete = ConditionUtils.CheckCondition(Avatar, self.FinishCondition)
-  end
   local PageConfigData = self:GetPageConfigData()
-  self.RewardId = PageConfigData.EventReward
-  if Avatar and PageConfigData.RewardClaimCondition then
-    self.IsCanGetReward = ConditionUtils.CheckCondition(Avatar, PageConfigData.RewardClaimCondition)
-  end
-  if Avatar and Avatar.ClaimActivityConditionRewardRecord then
-    self.IsGetReward = Avatar.ClaimActivityConditionRewardRecord[self.CurActivityId]
-  end
-end
-
-function M:OnBtnClick()
-  if self.IsCanGetReward ~= true then
+  if not Avatar or not PageConfigData then
     return
   end
-  if self.IsGetReward or self.IsComplete then
+  if self.FinishCondition then
+    self.IsComplete = ConditionUtils.CheckCondition(Avatar, self.FinishCondition)
+  else
+    self.IsComplete = false
+  end
+  local RewardList = PageConfigData.EventReward or {}
+  local ConditionList = PageConfigData.RewardClaimCondition or {}
+  local RewardClaimDesList = PageConfigData.RewardClaimDes or {}
+  local LegacyIsGetReward = Avatar.ClaimActivityConditionRewardRecord and Avatar.ClaimActivityConditionRewardRecord[self.CurActivityId]
+  local RewardStateList = {}
+  local ActivityClaimRecordList = Avatar.ClaimActivityConditionRewardRecordList
+  local ActivityClaimRecord = ActivityClaimRecordList and ActivityClaimRecordList[self.CurActivityId]
+  for Index, RewardId in ipairs(RewardList) do
+    local ConditionId = ConditionList[Index]
+    local IsCanGetReward = false
+    if ConditionId then
+      IsCanGetReward = ConditionUtils.CheckCondition(Avatar, ConditionId)
+    end
+    local IsGetReward = false
+    if ActivityClaimRecord then
+      IsGetReward = CommonUtils.HasValue(ActivityClaimRecord, Index)
+    end
+    if 1 == Index and not IsGetReward and LegacyIsGetReward then
+      IsGetReward = true
+    end
+    RewardStateList[Index] = {
+      Index = Index,
+      RewardId = RewardId,
+      ConditionId = ConditionId,
+      RewardClaimDes = RewardClaimDesList[Index] or "",
+      IsCanGetReward = IsCanGetReward,
+      IsGetReward = IsGetReward,
+      CanClaim = IsCanGetReward and not IsGetReward
+    }
+  end
+  self.RewardStateList = RewardStateList
+  self:SyncLegacyRewardState()
+end
+
+function M:SyncLegacyRewardState()
+  local FirstRewardState = self.RewardStateList and self.RewardStateList[1]
+  if not FirstRewardState then
+    self.RewardId = nil
+    self.IsCanGetReward = false
+    self.IsGetReward = false
+    return
+  end
+  self.RewardId = FirstRewardState.RewardId
+  self.IsCanGetReward = FirstRewardState.IsCanGetReward
+  self.IsGetReward = FirstRewardState.IsGetReward
+end
+
+function M:OnBtnClick(RewardIndex)
+  RewardIndex = RewardIndex or 1
+  local RewardState = self.RewardStateList and self.RewardStateList[RewardIndex]
+  if not RewardState then
+    return
+  end
+  if RewardState.IsCanGetReward ~= true then
+    return
+  end
+  if RewardState.IsGetReward then
     return
   end
   local Avatar = GWorld:GetAvatar()
@@ -133,15 +182,15 @@ function M:OnBtnClick()
   
   local function Callback(Ret, Rewards)
     if 0 == Ret then
-      local AllRewards = RewardUtils:GetRewards(self.RewardId, nil)
+      local AllRewards = RewardUtils:GetRewards(RewardState.RewardId, nil)
       UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, AllRewards, false, nil, self)
-      self.IsGetReward = true
+      self:UpdateActivityConditionAndRewardState()
       self:InitUI()
       ActivityReddotHelper.TrySubReddotCount(ActivityUtils, self.CurActivityId, "Red")
     end
   end
   
-  Avatar:CallServer("ClaimActivityConditionReward", Callback, self.CurActivityId)
+  Avatar:CallServer("ClaimActivityConditionRewardWithIndex", Callback, self.CurActivityId, RewardIndex)
 end
 
 return M

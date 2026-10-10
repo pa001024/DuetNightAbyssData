@@ -7834,6 +7834,324 @@
     "text": "Je vous en prie... accordez-moi une autre chance. Ne m’abandonnez pas."
   },
   {
+    "id": 11147,
+    "charId": 4103,
+    "name": "Apparence de personnage : Première rencontre",
+    "res": "char_SpLise01_vo_gain",
+    "text": "Une nuit de festivités... C’est précisément lors de ce genre de célébrations que les dangers aiment se dissimuler. Je dois rester vigilante."
+  },
+  {
+    "id": 11148,
+    "charId": 4103,
+    "name": "Apparence de personnage : Prêt à l’action",
+    "res": "char_SpLise01_vo_appear",
+    "text": "Les manches de cette tenue sont idéales pour dissimuler une arme de poing. En revanche... cette jupe est un peu trop longue. Je ne m’y suis pas encore habituée."
+  },
+  {
+    "id": 11149,
+    "charId": 4103,
+    "name": "Apparence de personnage : Début du combat",
+    "res": "char_SpLise01_vo_battlestart",
+    "text": "Derrière les rires de Givrelac, j’entends déjà les remous qui s’agitent dans l’ombre."
+  },
+  {
+    "id": 11150,
+    "charId": 4103,
+    "name": "Apparence de personnage : Compétence ultimeI",
+    "res": "char_SpLise01_vo_skill02_r01",
+    "text": "L’éclair révélera vos crimes."
+  },
+  {
+    "id": 11151,
+    "charId": 4103,
+    "name": "Apparence de personnage : Compétence ultimeII",
+    "res": "char_SpLise01_vo_skill02_r02",
+    "text": "Je mettrai un terme à vos réjouissances cruelles."
+  },
+  {
+    "id": 11152,
+    "charId": 4103,
+    "name": "Apparence de personnage : Compétence ultimeIII",
+    "res": "char_SpLise01_vo_skill02_r03",
+    "text": "Rendez-vous sans résistance !"
+  },
+  {
+    "id": 11153,
+    "charId": 4103,
+    "name": "Première rencontre I",
+    "res": "char_SpLise_vo_gain",
+    "text": "Je continuerai à vivre, {nickname}. Pas seulement pour ne pas trahir les dernières volontés de Blues... mais aussi parce que j’ai enfin trouvé une raison d’avancer."
+  },
+  {
+    "id": 11154,
+    "charId": 4103,
+    "name": "Salutation",
+    "res": "char_SpLise_vo_welcome",
+    "text": "Patrouille de la base terminée pour aujourd’hui... Oh, ce n’est qu’une habitude personnelle. On n’est jamais trop prudent."
+  },
+  {
+    "id": 11155,
+    "charId": 4103,
+    "name": "Discussion : À propos du changementI",
+    "res": "char_SpLise_vo_topic_01_1",
+    "text": "Oui. Beaucoup de voisins ne m’ont même pas reconnue au premier regard. Il faut dire que je portais mon uniforme toute l’année. Je n’achetais presque jamais de vêtements."
+  },
+  {
+    "id": 11156,
+    "charId": 4103,
+    "name": "Discussion : À propos du changementII",
+    "res": "char_SpLise_vo_topic_01_2",
+    "text": "Tu tombes bien. Dis-moi... cette tenue me va ?"
+  },
+  {
+    "id": 11157,
+    "charId": 4103,
+    "name": "Discussion : À propos du changementIII",
+    "res": "char_SpLise_vo_topic_01_3",
+    "text": "Merci. J’avais aussi besoin de ce changement. Il me rappelle que je ne suis plus celle que j’étais."
+  },
+  {
+    "id": 11158,
+    "charId": 4103,
+    "name": "Discussion : À propos du changementIV",
+    "res": "char_SpLise_vo_topic_01_4",
+    "text": "... C’est vrai. J’ai beau avoir répété plusieurs fois que j’avais quitté mon poste, beaucoup de gens à Givrelac continuent de m’appeler « Officier Fischer » par habitude."
+  },
+  {
+    "id": 11159,
+    "charId": 4103,
+    "name": "Discussion : À propos du changementV",
+    "res": "char_SpLise_vo_topic_01_5",
+    "text": "Tu as raison. Un jour, tout le monde s’habituera à cette nouvelle identité."
+  },
+  {
+    "id": 11160,
+    "charId": 4103,
+    "name": "Discussion : À propos des petits boulotsI",
+    "res": "char_SpLise_vo_topic_02_1",
+    "text": "Je travaille. Mes dernières missions consistent à empêcher les rixes et les conflits à Brumelac, et à effacer les graffitis qui propagent la haine."
+  },
+  {
+    "id": 11161,
+    "charId": 4103,
+    "name": "Discussion : À propos des petits boulotsII",
+    "res": "char_SpLise_vo_topic_02_2",
+    "text": "Il faut bien que quelqu’un s’occupe aussi de ces petites choses. Et puis, rendre la vie des gens meilleure... ce n’est pas une petite chose."
+  },
+  {
+    "id": 11162,
+    "charId": 4103,
+    "name": "Discussion : À propos des petits boulotsIII",
+    "res": "char_SpLise_vo_topic_02_3",
+    "text": "Un passe-temps... comme l’opéra pour Blues ? Hum... Je crois que non. Avant, mes journées étaient remplies par le travail. J’ai peut-être laissé passer l’occasion d’en avoir un."
+  },
+  {
+    "id": 11163,
+    "charId": 4103,
+    "name": "Discussion : À propos des petits boulotsIV",
+    "res": "char_SpLise_vo_topic_02_4",
+    "text": "Ce que j’aime... voyons... Les choses bien ordonnées. La symétrie. Peut-être pourrais-je prendre goût au ménage et au rangement. Non... ça ressemble encore à du travail."
+  },
+  {
+    "id": 11164,
+    "charId": 4103,
+    "name": "Discussion : À propos de la LégionI",
+    "res": "char_SpLise_vo_topic_03_1",
+    "text": "Quelques-unes viennent des Asphodèles, mais la plupart me sont confiées par d’anciens collègues du Bureau de la Sécurité. Pour certaines affaires délicates, comme la médiation lors de rixes armées, ils pensent souvent à moi."
+  },
+  {
+    "id": 11165,
+    "charId": 4103,
+    "name": "Discussion : À propos de la LégionII",
+    "res": "char_SpLise_vo_topic_03_2",
+    "text": "Oui. Beaucoup de simples soldats ne sont que des gens ordinaires, comme moi. Certains ont aussi leur propre sens de la justice... comme ceux qui ont pris des risques pour nous aider à enquêter."
+  },
+  {
+    "id": 11166,
+    "charId": 4103,
+    "name": "Discussion : À propos de la LégionIII",
+    "res": "char_SpLise_vo_topic_03_3",
+    "text": "Je hais la Légion. Mais je ne les hais pas, eux."
+  },
+  {
+    "id": 11167,
+    "charId": 4103,
+    "name": "Discussion : À propos de la vengeanceI",
+    "res": "char_SpLise_vo_topic_04_1",
+    "text": "Ah, oui. Toucher le centre d’une cible à plusieurs centaines de mètres... ce n’est déjà pas mal, non ?"
+  },
+  {
+    "id": 11168,
+    "charId": 4103,
+    "name": "Discussion : À propos de la vengeanceII",
+    "res": "char_SpLise_vo_topic_04_2",
+    "text": "Quand je ne manquerai plus jamais ma cible, je pourrai régler quelques comptes avec de vieilles connaissances."
+  },
+  {
+    "id": 11169,
+    "charId": 4103,
+    "name": "Discussion : À propos de la vengeanceIII",
+    "res": "char_SpLise_vo_topic_04_3",
+    "text": "Oui. Mais ne t’inquiète pas. Je ne laisserai pas la haine me rendre imprudente. Et je ne la laisserai pas devenir le seul sens de ma vie."
+  },
+  {
+    "id": 11170,
+    "charId": 4103,
+    "name": "Discussion : À propos de la vengeanceIV",
+    "res": "char_SpLise_vo_topic_04_4",
+    "text": "Je continuerai à vivre. Je m’entraînerai. J’attendrai le bon moment... puis je repartirai en vie."
+  },
+  {
+    "id": 11171,
+    "charId": 4103,
+    "name": "Discussion : À propos de la vengeanceV",
+    "res": "char_SpLise_vo_topic_04_5",
+    "text": "Bien sûr. Je n’oublierai jamais les dernières volontés de Blues. Et maintenant... j’ai aussi des amis qui m’ont soutenue dans les moments les plus difficiles. Je tiens à tout ce que j’ai aujourd’hui."
+  },
+  {
+    "id": 11172,
+    "charId": 4103,
+    "name": "Monologue",
+    "res": "char_SpLise_vo_idle",
+    "text": "Mon week-end est enfin libre... Hum. Un vrai jour de repos, pour une fois."
+  },
+  {
+    "id": 11173,
+    "charId": 4103,
+    "name": "Discussion : Rencontre aléatoire : I",
+    "res": "char_SpLise_vo_companio_01",
+    "text": "Cet ami que je n’ai jamais eu l’occasion de rencontrer... Merci d’avoir accompagné Blues pendant les moments sombres où je n’étais pas là.",
+    "companioCharId": 1503
+  },
+  {
+    "id": 11174,
+    "charId": 4103,
+    "name": "Discussion : Rencontre aléatoire : II",
+    "res": "char_SpLise_vo_companio_02",
+    "text": "Ton cocktail est excellent. Je ne suis simplement pas encore habituée au goût de l’alcool. Si possible, pourrais-tu m’en préparer un adapté aux débutants ? Je le dégusterai avec attention... puis je rédigerai un rapport de dégustation de cinq cents mots.",
+    "companioCharId": 1503
+  },
+  {
+    "id": 11175,
+    "charId": 4103,
+    "name": "Discussion : Rencontre aléatoire : III",
+    "res": "char_SpLise_vo_companio_03",
+    "text": "Alors, la jeune fille mentionnée dans les renseignements n’était pas Berenica... Désolée d’avoir entraîné {nickname} dans les machinations des Déchus. Je ferai tout mon possible pour vous aider à retrouver sa trace.",
+    "companioCharId": 1503
+  },
+  {
+    "id": 11176,
+    "charId": 4103,
+    "name": "Prêt à l’action",
+    "res": "char_SpLise_vo_appear",
+    "text": "Préparatifs terminés. Prête à partir à tout moment."
+  },
+  {
+    "id": 11177,
+    "charId": 4103,
+    "name": "Ascension",
+    "res": "char_SpLise_vo_lvup",
+    "text": "Cette puissance... me permettra de poursuivre mon entraînement dans de meilleures conditions. Merci."
+  },
+  {
+    "id": 11178,
+    "charId": 4103,
+    "name": "Début du combat",
+    "res": "char_SpLise_vo_battlestart",
+    "text": "Donnons tout."
+  },
+  {
+    "id": 11179,
+    "charId": 4103,
+    "name": "Repos",
+    "res": "char_SpLise_vo_battleidle",
+    "text": "Alterner effort et repos... C’est ton plan de bataille ?"
+  },
+  {
+    "id": 11180,
+    "charId": 4103,
+    "name": "Blessé : I",
+    "res": "char_SpLise_vo_be_hit_heavy_r01",
+    "text": "Urh !"
+  },
+  {
+    "id": 11181,
+    "charId": 4103,
+    "name": "Blessé : II",
+    "res": "char_SpLise_vo_be_hit_heavy_r02",
+    "text": "Ça va."
+  },
+  {
+    "id": 11182,
+    "charId": 4103,
+    "name": "Compétence de combat : I",
+    "res": "char_SpLise_vo_skill01_r01",
+    "text": "Cible repérée."
+  },
+  {
+    "id": 11183,
+    "charId": 4103,
+    "name": "Compétence de combat : II",
+    "res": "char_SpLise_vo_skill01_r02",
+    "text": "Cible verrouillée."
+  },
+  {
+    "id": 11184,
+    "charId": 4103,
+    "name": "Compétence ultime : I",
+    "res": "char_SpLise_vo_skill02_r01",
+    "text": "Il est temps d’en finir."
+  },
+  {
+    "id": 11185,
+    "charId": 4103,
+    "name": "Compétence ultime : II",
+    "res": "char_SpLise_vo_skill02_r02",
+    "text": "Tu n’as plus aucune issue."
+  },
+  {
+    "id": 11186,
+    "charId": 4103,
+    "name": "Compétence ultime : III",
+    "res": "char_SpLise_vo_skill02_r03",
+    "text": "Rechargement terminé."
+  },
+  {
+    "id": 11187,
+    "charId": 4103,
+    "name": "Vaincu : I",
+    "res": "char_SpLise_vo_die_r01",
+    "text": "Non... Je l’avais promis..."
+  },
+  {
+    "id": 11188,
+    "charId": 4103,
+    "name": "Vaincu : II",
+    "res": "char_SpLise_vo_die_r02",
+    "text": "Je... ne peux pas mourir..."
+  },
+  {
+    "id": 11189,
+    "charId": 4103,
+    "name": "Ressuscité",
+    "res": "char_SpLise_vo_revive",
+    "text": "Je ne manquerai pas à ma parole."
+  },
+  {
+    "id": 11190,
+    "charId": 4103,
+    "name": "Victoire",
+    "res": "char_SpLise_vo_victory",
+    "text": "Bien. Encore un pas de plus vers mon objectif."
+  },
+  {
+    "id": 11191,
+    "charId": 4103,
+    "name": "Retraite",
+    "res": "char_SpLise_vo_fail",
+    "text": "Il nous reste une chance. Recommençons."
+  },
+  {
     "id": 16010001,
     "charId": 1601,
     "name": "Prêt à l’action",

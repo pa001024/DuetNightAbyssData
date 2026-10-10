@@ -35,14 +35,29 @@ T.RT_7 = {
   10
 }
 T.RT_8 = {
+  0,
+  0,
+  50
+}
+T.RT_9 = {
   50,
   0,
   20
 }
-T.RT_9 = {
+T.RT_10 = {
   4,
   0,
   10
+}
+T.RT_11 = {
+  0,
+  0,
+  100
+}
+T.RT_12 = {
+  0,
+  10,
+  100
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
@@ -285,20 +300,12 @@ return ReadOnly("CameraControlData", {
   },
   FuluoSkill02 = {
     ArmLength = 550,
-    ArmPos = {
-      0,
-      0,
-      50
-    },
+    ArmPos = T.RT_8,
     CameraName = "FuluoSkill02",
-    LagMaxDistance = T.RT_8,
-    LagSpeed = T.RT_9,
+    LagMaxDistance = T.RT_9,
+    LagSpeed = T.RT_10,
     ProbeSize = 12,
-    SocketOffset = {
-      0,
-      0,
-      100
-    },
+    SocketOffset = T.RT_11,
     TimelineFloatCurve = "CameraCurve",
     bIncrementArmLength = false,
     bIncrementArmPos = false,
@@ -325,6 +332,32 @@ return ReadOnly("CameraControlData", {
     bIncrementArmLength = true,
     bIncrementArmPos = true,
     bIncrementSocketOffset = true
+  },
+  LilikouSkill01 = {
+    ArmLength = 420,
+    ArmPos = T.RT_8,
+    CameraName = "LilikouSkill01",
+    LagMaxDistance = T.RT_9,
+    LagSpeed = T.RT_10,
+    ProbeSize = 12,
+    SocketOffset = T.RT_12,
+    TimelineFloatCurve = "CameraCurve",
+    bIncrementArmLength = false,
+    bIncrementArmPos = false,
+    bIncrementSocketOffset = false
+  },
+  LilikouSkill02 = {
+    ArmLength = 500,
+    ArmPos = T.RT_11,
+    CameraName = "LilikouSkill02",
+    LagMaxDistance = T.RT_9,
+    LagSpeed = T.RT_10,
+    ProbeSize = 12,
+    SocketOffset = T.RT_12,
+    TimelineFloatCurve = "CameraCurve",
+    bIncrementArmLength = false,
+    bIncrementArmPos = false,
+    bIncrementSocketOffset = false
   },
   Roller01 = {
     ArmLength = -350,
@@ -364,8 +397,8 @@ return ReadOnly("CameraControlData", {
     ArmLength = 0,
     ArmPos = T.RT_6,
     CameraName = "SongluSkill02",
-    LagMaxDistance = T.RT_8,
-    LagSpeed = T.RT_9,
+    LagMaxDistance = T.RT_9,
+    LagSpeed = T.RT_10,
     ProbeSize = 12,
     SocketOffset = {
       0,
@@ -519,8 +552,8 @@ return ReadOnly("CameraControlData", {
     ArmLength = 150,
     ArmPos = T.RT_1,
     CameraName = "TuosiSkill02",
-    LagMaxDistance = T.RT_8,
-    LagSpeed = T.RT_9,
+    LagMaxDistance = T.RT_9,
+    LagSpeed = T.RT_10,
     ProbeSize = 12,
     SocketOffset = T.RT_2,
     TimelineFloatCurve = "CameraCurve",

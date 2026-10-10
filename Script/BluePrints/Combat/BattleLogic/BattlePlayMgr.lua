@@ -1,6 +1,19 @@
 local msgpack = require("msgpack_core")
 local Component = {}
 
+local function ValidateOrderedArray(Data, DataName)
+  assert(type(Data) == "table", DataName .. "必须是table")
+  local Count = 0
+  local MaxIndex = 0
+  for Index in pairs(Data) do
+    assert(type(Index) == "number" and Index >= 1 and 0 == Index % 1, string.format("%s存在非正整数下标:%s", DataName, tostring(Index)))
+    Count = Count + 1
+    MaxIndex = math.max(MaxIndex, Index)
+  end
+  assert(Count > 0, DataName .. "不能为空")
+  assert(Count == MaxIndex, string.format("%s下标不连续:元素数=%d,最大下标=%d", DataName, Count, MaxIndex))
+end
+
 function Component:_GetParamentsTable(_Data)
   local ParamentsTable
   if _Data.EffectId then
@@ -19,19 +32,35 @@ function Component:ExecuteEffectResults(EffectStruct)
   if not Str then
     return
   end
-  local Result = msgpack.unpack(Str)
-  self.ClientExec = true
-  for _, _Data in pairs(Result) do
-    local ParamentsTable = self:_GetParamentsTable(_Data)
-    for _, Args in pairs(_Data) do
-      for Func, Content in pairs(Args) do
+  local OldClientExec = self.ClientExec
+  local Success, Error = xpcall(function()
+    local Result = msgpack.unpack(Str)
+    ValidateOrderedArray(Result, "EffectResult")
+    self.ClientExec = true
+    for ResultIndex, _Data in ipairs(Result) do
+      assert(type(_Data) == "table", string.format("EffectResult[%d]必须是table", ResultIndex))
+      local ParamentsTable = self:_GetParamentsTable(_Data)
+      ValidateOrderedArray(_Data, string.format("EffectResult[%d]", ResultIndex))
+      for ActionIndex, Args in ipairs(_Data) do
+        assert(type(Args) == "table", string.format("EffectResult[%d][%d]必须是table", ResultIndex, ActionIndex))
+        local Func, Content
+        for Key, Value in pairs(Args) do
+          assert(nil == Func, string.format("EffectResult[%d][%d]包含多个函数:%s,%s", ResultIndex, ActionIndex, tostring(Func), tostring(Key)))
+          Func = Key
+          Content = Value
+        end
+        assert(type(Func) == "string", string.format("EffectResult[%d][%d]函数名无效:%s", ResultIndex, ActionIndex, tostring(Func)))
         local f = self["Play_" .. Func]
         assert(f, "不存在函数:Play_" .. Func)
         f(self, Content, ParamentsTable)
       end
     end
+  end, debug.traceback)
+  self.ClientExec = OldClientExec
+  if not Success then
+    self:ShowBattleErrorLua(Error)
+    error(Error, 0)
   end
-  self.ClientExec = false
 end
 
 function Component:Play_CutToughness(Content, ParamentsTable)

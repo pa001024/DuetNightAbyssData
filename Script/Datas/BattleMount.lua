@@ -6,6 +6,7 @@ T.RT_1 = {
   Man = 1.2,
   Woman = 1.1
 }
+T.RT_2 = {10026}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -147,7 +148,7 @@ return ReadOnly("BattleMount", {
     MountPermanentVX = {10027},
     MountPrefix = "Mnt07",
     MountTurnPrefix = "Mnt07",
-    RolePermanentVX = {10026},
+    RolePermanentVX = T.RT_2,
     TurnSlotName = "DefaultSlot"
   },
   [1009] = {
@@ -265,5 +266,47 @@ return ReadOnly("BattleMount", {
       10073
     },
     MountPrefix = "Mnt09"
+  },
+  [1015] = {
+    CharAnimInstance = "ABP_Mount_",
+    CharMeshSocket = true,
+    FollowCharScale = true,
+    MonsterId = 1015,
+    MountDieSlotName = "MountDie07",
+    MountId = 1015,
+    MountLayerTag = 5,
+    MountPermanentVX = {10074},
+    MountPrefix = "Mnt07",
+    MountTurnPrefix = "Mnt07",
+    RolePermanentVX = T.RT_2,
+    TurnSlotName = "DefaultSlot"
+  },
+  [1016] = {
+    CharAnimInstance = "ABP_Mount_",
+    CharMeshSocket = true,
+    FollowCharScale = true,
+    MonsterId = 1016,
+    MountDieSlotName = "MountDie07",
+    MountId = 1016,
+    MountLayerTag = 5,
+    MountPermanentVX = {10075},
+    MountPrefix = "Mnt07",
+    MountTurnPrefix = "Mnt07",
+    RolePermanentVX = T.RT_2,
+    TurnSlotName = "DefaultSlot"
+  },
+  [1017] = {
+    CharAnimInstance = "ABP_Mount_",
+    CharMeshSocket = true,
+    FollowCharScale = true,
+    MonsterId = 1017,
+    MountDieSlotName = "MountDie07",
+    MountId = 1017,
+    MountLayerTag = 5,
+    MountPermanentVX = {10076},
+    MountPrefix = "Mnt07",
+    MountTurnPrefix = "Mnt07",
+    RolePermanentVX = T.RT_2,
+    TurnSlotName = "DefaultSlot"
   }
 })

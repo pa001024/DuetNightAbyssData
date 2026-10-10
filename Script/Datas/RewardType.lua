@@ -35,6 +35,14 @@ return ReadOnly("RewardType", {
     RewardType = "CustomGesture",
     UniqueType = true
   },
+  CustomItem = {
+    DungeonRewardSeq = 66,
+    DungeonRewardType = true,
+    OperationGM = true,
+    Remark = "个人主页——场景物品",
+    RewardType = "CustomItem",
+    UniqueType = true
+  },
   CustomScene = {
     DungeonRewardSeq = 66,
     DungeonRewardType = true,
@@ -67,6 +75,7 @@ return ReadOnly("RewardType", {
   },
   HeadFrame = {
     DungeonRewardSeq = 53,
+    DungeonRewardType = true,
     OperationGM = true,
     Remark = "头像框",
     RewardType = "HeadFrame",
@@ -74,6 +83,7 @@ return ReadOnly("RewardType", {
   },
   HeadSculpture = {
     DungeonRewardSeq = 60,
+    DungeonRewardType = true,
     OperationGM = true,
     Remark = "头像",
     RewardType = "HeadSculpture",
@@ -123,6 +133,7 @@ return ReadOnly("RewardType", {
   },
   Title = {
     DungeonRewardSeq = 62,
+    DungeonRewardType = true,
     OperationGM = true,
     Remark = "称号",
     RewardType = "Title",
@@ -130,6 +141,7 @@ return ReadOnly("RewardType", {
   },
   TitleFrame = {
     DungeonRewardSeq = 63,
+    DungeonRewardType = true,
     OperationGM = true,
     Remark = "称号框",
     RewardType = "TitleFrame",

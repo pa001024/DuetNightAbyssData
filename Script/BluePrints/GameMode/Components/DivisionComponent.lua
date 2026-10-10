@@ -3,10 +3,19 @@ local DivisionComponent = Class()
 
 function DivisionComponent:ComponentReceiveBeginPlay()
   self.MonsterSpawnDivisions = {}
-  self.MonsterSpawnDivSize = 10000
+  self.MonsterSpawnDivSize = self:ResolveMonsterSpawnDivSize()
+end
+
+function DivisionComponent:ResolveMonsterSpawnDivSize()
+  local Size = Const.MonsterSpawnDivSize or 10000
+  if Size <= 0 then
+    Size = 10000
+  end
+  return Size
 end
 
 function DivisionComponent:InitMonsterSpawnDivisions(ContentInfos)
+  self.MonsterSpawnDivSize = self:ResolveMonsterSpawnDivSize()
   for Index, Info in pairs(ContentInfos) do
     local Key = self:GetCurrentKey(self.MonsterSpawnDivSize, Info.Loc)
     if self.MonsterSpawnDivisions[Key] == nil then

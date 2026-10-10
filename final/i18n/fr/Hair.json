@@ -91,6 +91,34 @@
     "rarity": 4
   },
   {
+    "id": 10135,
+    "name": "Citrouille espiègle – Jaune abricot",
+    "desc": "Pour la décoration uniquement. Ne pas manger.",
+    "icon": "T_Fashion_Hat29_03",
+    "rarity": 4
+  },
+  {
+    "id": 10136,
+    "name": "Citrouille espiègle – Rouille",
+    "desc": "Pour la décoration uniquement. Ne pas manger.",
+    "icon": "T_Fashion_Hat29_04",
+    "rarity": 4
+  },
+  {
+    "id": 10137,
+    "name": "Citrouille espiègle – Doré",
+    "desc": "Pour la décoration uniquement. Ne pas manger.",
+    "icon": "T_Fashion_Hat29_02",
+    "rarity": 4
+  },
+  {
+    "id": 10138,
+    "name": "Citrouille espiègle – Menthe",
+    "desc": "Pour la décoration uniquement. Ne pas manger.",
+    "icon": "T_Fashion_Hat29_01",
+    "rarity": 4
+  },
+  {
     "id": 110292,
     "name": "L’Absolveuse",
     "icon": "T_Fashion_Fuluo_01",
@@ -141,8 +169,8 @@
   },
   {
     "id": 410392,
-    "name": "UI_Skin_Name_410301",
-    "icon": "T_Fashion_Zhiliu_01",
+    "name": "Dentelles de minuit",
+    "icon": "T_Fashion_SPLise_01",
     "rarity": 5,
     "charId": 4103
   },

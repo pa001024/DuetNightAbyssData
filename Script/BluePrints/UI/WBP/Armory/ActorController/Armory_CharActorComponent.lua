@@ -502,7 +502,7 @@ function M:PausePlayerMontage()
   self.IsMontagePaused = true
   
   local function PauseMontage(PlayerCharacter)
-    if nil == PlayerCharacter then
+    if nil == PlayerCharacter or nil == PlayerCharacter.PlayerAnimInstance then
       return
     end
     PlayerCharacter.PlayerAnimInstance:Montage_Pause()
@@ -520,7 +520,7 @@ function M:ResumePlayerMontage()
   self.IsMontagePaused = false
   
   local function ResumeMontage(PlayerCharacter)
-    if nil == PlayerCharacter then
+    if nil == PlayerCharacter or nil == PlayerCharacter.PlayerAnimInstance then
       return
     end
     PlayerCharacter.PlayerAnimInstance:Montage_Resume()
@@ -548,6 +548,9 @@ function M:PlayResourceMotion(ResourceId)
       PlayerCharacter.EMAnimInstance:ResetIdleTag()
     end
     PlayerCharacter:InvokeResourceBPFunction(ResourceId)
+    if PlayerCharacter.PlayerAnimInstance then
+      PlayerCharacter.PlayerAnimInstance:SetKawiiLayerState(EKawaiiLayerState.EKLS_Battle)
+    end
   end
   
   PlayResourceMotionInternal(self:GetPlayerActor())

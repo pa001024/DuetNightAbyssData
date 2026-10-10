@@ -20,6 +20,20 @@ end
 
 function M:PlayOutAnim()
   AudioManager(self):SetEventSoundParam(self, "Activity", {ToEnd = 1})
+  local ActiveBg = self.CurrentActiveBg
+  if IsValid(ActiveBg) and type(ActiveBg.PrepareForActivityEntryOut) == "function" then
+    self:RemoveTimer(RefreshActivityEntryVideoTimerName)
+    ActiveBg:PrepareForActivityEntryOut()
+    if self.WidgetBGAnchor then
+      self.WidgetBGAnchor:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+    self:BindToAnimationFinished(self.Out, {
+      self,
+      self.FinishOutAnimAndClose
+    })
+    self:PlayAnimationForward(self.Out)
+    return
+  end
   self.CurrentActiveBg = nil
   self.WidgetBGAnchor:ClearChildren()
   self:BindToAnimationFinished(self.Out, {
@@ -27,6 +41,21 @@ function M:PlayOutAnim()
     self.Close
   })
   self:PlayAnimationForward(self.Out)
+end
+
+function M:FinishOutAnimAndClose()
+  if self.Out then
+    self:UnbindFromAnimationFinished(self.Out, {
+      self,
+      self.FinishOutAnimAndClose
+    })
+  end
+  self.CurrentActiveBg = nil
+  self.CurrentVideoBgWidget = nil
+  if self.WidgetBGAnchor then
+    self.WidgetBGAnchor:ClearChildren()
+  end
+  self:Close()
 end
 
 function M:CheckIsCanCloseSelf()

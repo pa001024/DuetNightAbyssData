@@ -76,7 +76,11 @@ end
 
 function Component:CharMain_SelectListItem(Content)
   if Content then
-    Content.TeamIdx = self.CurDungeonPanel.DungeonIndex
+    if not self.CurDungeonPanel then
+      DebugPrint("lhr@CharMain_SelectListItem：阵容面板失效或初始化失败")
+    else
+      Content.TeamIdx = self.CurDungeonPanel.DungeonIndex
+    end
   end
   self:SetContentIsChosen(self.CharMain_CurContent, false)
   self:SetContentIsChosen(Content, true)

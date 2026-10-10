@@ -44,7 +44,7 @@ function Menu_EditItem_C:OnListItemObjectSet(Content)
     self.Button_Area:SetVisibility(UIConst.VisibilityOp.Visible)
   end
   if self.ReddotName then
-    self:AddReddotListener(self.ReddotName, self.OnReddotChange)
+    ReddotManager.AddListener(self.ReddotName, self, self.OnReddotChange)
   end
 end
 
@@ -68,30 +68,36 @@ function Menu_EditItem_C:SetStytle(Hover)
   end
 end
 
-function Menu_EditItem_C:AddReddotListener(ReddotNodeName, func)
-  self:RemoveReddotListener(ReddotNodeName)
-  ReddotManager.AddListener(ReddotNodeName, self, func)
-  self.ListenedReddot = true
-end
-
-function Menu_EditItem_C:RemoveReddotListener(ReddotNodeName)
-  if self.ListenedReddot then
-    ReddotManager.RemoveListener(ReddotNodeName, self)
-    self.New:SetEnable(false)
-    self.ListenedReddot = false
+function Menu_EditItem_C:RemoveContentClickListener()
+  if self.CurBtnContent and self.CurBtnContent.BtnClickFunction then
+    self.Button_Area.OnClicked:Remove(self, self.CurBtnContent.BtnClickFunction)
   end
 end
 
+function Menu_EditItem_C:CleanupListItem()
+  if self.ReddotName then
+    ReddotManager.RemoveListener(self.ReddotName, self)
+    self.New:SetEnable(false)
+  end
+  self:RemoveContentClickListener()
+  if self.CurBtnContent and self.CurBtnContent.SelfWidget == self then
+    self.CurBtnContent.SelfWidget = nil
+  end
+  self.CurBtnContent = nil
+  self.Owner = nil
+  self.ReddotName = nil
+end
+
+function Menu_EditItem_C:BP_OnEntryReleased()
+  self:CleanupListItem()
+end
+
 function Menu_EditItem_C:OnReddotChange(Count)
-  local CacheKey = self.ReddotName
-  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(self.ReddotName)
   self.New:SetEnable(Count > 0)
 end
 
 function Menu_EditItem_C:Destruct()
-  if self.IsHeadFrame then
-    self:RemoveReddotListener(self.ReddotName, self.OnReddotChange)
-  end
+  self:CleanupListItem()
   self.Super.Destruct(self)
 end
 

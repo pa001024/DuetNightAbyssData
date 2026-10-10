@@ -16,7 +16,7 @@ function M:InitContent(Params, PopupData, Owner)
     if Params.ExchangeTitle then
       DynamicText = GText(Params.ExchangeTitle)
     else
-      DynamicText = self:_BuildExchangeText(LeftItem)
+      DynamicText = self:_BuildExchangeText(LeftItem, RightItem)
     end
     if DynamicText and "" ~= DynamicText then
       TextExchange:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
@@ -27,21 +27,33 @@ function M:InitContent(Params, PopupData, Owner)
   end
 end
 
-function M:_BuildExchangeText(LeftItem)
-  if not LeftItem then
+function M:_BuildExchangeText(LeftItem, RightItem)
+  if not LeftItem or not RightItem then
     return nil
   end
-  local ItemType = LeftItem.ItemType or CommonConst.ItemType.Resource
-  local ItemData = DataMgr[ItemType] and DataMgr[ItemType][LeftItem.ItemId]
-  if not ItemData then
-    return nil
+  
+  local function GetResourceName(Item)
+    local ItemType = Item.ItemType or CommonConst.ItemType.Resource
+    local ItemData = DataMgr[ItemType] and DataMgr[ItemType][Item.ItemId]
+    if not ItemData then
+      return nil
+    end
+    return GText(ItemData.ResourceName or ItemData.Name or "")
   end
-  local ResourceName = GText(ItemData.ResourceName or ItemData.Name or "")
-  if "" == ResourceName then
+  
+  local RightName = GetResourceName(RightItem)
+  local LeftName = GetResourceName(LeftItem)
+  if not (RightName and LeftName) or "" == RightName or "" == LeftName then
     return nil
   end
   local Template = GText("UI_COMMONPOP_TEXT_100136")
-  return string.gsub(Template, "&ResourceName&", ResourceName)
+  local Text = string.gsub(Template, "&ResourceName&", function()
+    return RightName
+  end, 1)
+  Text = string.gsub(Text, "&ResourceName&", function()
+    return LeftName
+  end, 1)
+  return Text
 end
 
 function M:_FillExchangeSide(IconImage, TextWidget, Item)

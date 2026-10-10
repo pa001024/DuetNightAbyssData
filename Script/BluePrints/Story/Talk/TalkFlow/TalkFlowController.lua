@@ -1,9 +1,14 @@
 local M = {}
 
-function M:New(View)
+function M:New(Owner)
   local Obj = setmetatable({}, {__index = M})
-  Obj.FlowView = View
+  Obj.FlowOwner = Owner
+  Obj.bUseFlowAsset = IsValid(Owner.TaskData and Owner.TaskData.FlowAsset)
   return Obj
+end
+
+function M:IsUseFlowAsset()
+  return self.bUseFlowAsset == true
 end
 
 function M:ClearRunner()
@@ -15,27 +20,49 @@ function M:GetRunner()
   return self.TalkFlow or self.FlowGraphComp
 end
 
-function M:RegisterFlowGraph(FlowGraphComp)
-  if self.TalkFlow then
-    self.TalkFlow:End()
+function M:StopCurrentRunner()
+  local FlowGraphComp = self.FlowGraphComp
+  if FlowGraphComp then
+    FlowGraphComp.FlowAsset:FinishFlow(UE4.EFlowFinishPolicy.Keep)
+    self.FlowOwner:TryEndFlowGraph()
+    return
   end
-  self.TalkFlow = nil
+  local Flow = self.TalkFlow
+  if Flow then
+    Flow:Stop()
+  end
+end
+
+function M:RegisterFlowGraph(FlowGraphComp)
+  if not self:IsUseFlowAsset() then
+    DebugPrint("FTalkFlowController:RegisterFlowGraph: FlowAsset不存在")
+    return false
+  end
+  if self:GetRunner() then
+    self:StopCurrentRunner()
+    self:ClearRunner()
+  end
   self.FlowGraphComp = FlowGraphComp
+  return true
 end
 
 function M:RegisterFlow(TalkFlow)
-  local Runner = self:GetRunner()
-  if Runner and Runner.End then
-    Runner:End()
+  if self:IsUseFlowAsset() then
+    DebugPrint("FTalkFlowController:RegisterFlow: FlowAsset存在")
+    return false
   end
-  self.FlowGraphComp = nil
+  if self:GetRunner() then
+    self:StopCurrentRunner()
+    self:ClearRunner()
+  end
   self.TalkFlow = TalkFlow
+  return true
 end
 
 function M:Start()
   local FlowGraphComp = self.FlowGraphComp
   if FlowGraphComp then
-    FlowGraphComp:Execute()
+    FlowGraphComp:NotifyFlowReady()
     return
   end
   local Flow = self.TalkFlow
@@ -84,16 +111,18 @@ function M:Resume()
 end
 
 function M:Stop()
-  local Runner = self:GetRunner()
-  if not Runner then
+  local FlowGraphComp = self.FlowGraphComp
+  if FlowGraphComp then
+    self:StopCurrentRunner()
+    self:ClearRunner()
+    return
+  end
+  local Flow = self.TalkFlow
+  if not Flow then
     DebugPrint("FTalkFlowController:Stop: Runner不存在")
     return
   end
-  if Runner.Stop then
-    Runner:Stop()
-  elseif Runner.End then
-    Runner:End()
-  end
+  Flow:Stop()
   self:ClearRunner()
 end
 

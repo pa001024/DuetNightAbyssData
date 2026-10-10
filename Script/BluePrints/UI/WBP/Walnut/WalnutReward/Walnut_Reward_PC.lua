@@ -252,10 +252,6 @@ function M:InitCommonItem(Index)
     Callback = self.ItemMenuAnchorChanged
   }, Parent.Item_Reward:CreateWidgetNew("ComItemUniversalL")
   Parent.Item_Reward:Init(Content)
-  if Content.ItemType == "Mod" then
-    Parent.Item_Reward.ItemName:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    Parent.Item_Reward.Count:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-  end
   Parent.Text_Hold:SetText(GText("UI_Bag_Sellconfirm_Hold"))
   local Img
   if 1 == CurRewardInfo.WalnutRewardRarity then

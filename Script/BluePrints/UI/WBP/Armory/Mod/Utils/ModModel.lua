@@ -20,6 +20,7 @@ function M:Init()
   self:InitSortFunc()
   self.TargetType = nil
   self.CurModTarget = nil
+  self.ModRankRawData = nil
   self.TargetMods = {}
   self:ResetUIData()
   self.SuitInfoCopyed = nil
@@ -29,6 +30,7 @@ end
 function M:Destory()
   self.CurModTarget = nil
   self.TargetType = nil
+  self.ModRankRawData = nil
   self.SuitInfoCopyed = nil
   self.TargetMods = {}
   self:ResetUIData()
@@ -891,13 +893,36 @@ function M:StartAutoEquip(CoroutineObj, ModSuitCopyInfo)
       end
     end
   else
-    for SlotId, SlotData in ipairs(ModSuitCopyInfo.ModsInfo) do
+    local ModIdNeedCount = {}
+    local ModIdOrder = {}
+    for _, SlotData in ipairs(ModSuitCopyInfo.ModsInfo) do
       local ModId = SlotData[2]
+      if ModId and 0 ~= ModId then
+        if not ModIdNeedCount[ModId] then
+          ModIdNeedCount[ModId] = 0
+          table.insert(ModIdOrder, ModId)
+        end
+        ModIdNeedCount[ModId] = ModIdNeedCount[ModId] + 1
+      end
+    end
+    for _, ModId in ipairs(ModIdOrder) do
+      local NeedCount = ModIdNeedCount[ModId]
       local Mods = self:GetAvatar():GetModsByModId(ModId)
+      local MatchedMods = {}
       for _, Mod in ipairs(Mods) do
         if self:IsModMatchApplicationType(Mod) then
-          table.insert(self.ModListForAutoEquip, Mod.Uuid)
+          table.insert(MatchedMods, Mod)
         end
+      end
+      table.sort(MatchedMods, function(ModA, ModB)
+        if ModA.Level ~= ModB.Level then
+          return ModA.Level > ModB.Level
+        end
+        return tostring(ModA.Uuid) < tostring(ModB.Uuid)
+      end)
+      local TakeCount = math.min(NeedCount, #MatchedMods)
+      for Index = 1, TakeCount do
+        table.insert(self.ModListForAutoEquip, MatchedMods[Index].Uuid)
       end
     end
   end
@@ -950,7 +975,14 @@ function M:PickSuitableModForSlot(SlotUIData, bAllSlotPolarized)
   end
   local TempSortType = self.SortType
   self.SortType = 2
-  table.sort(ModPendingList, self.ModSortFunc[2])
+  table.sort(ModPendingList, function(Mod1, Mod2)
+    if self.ModRankRawData then
+      local Rank1 = self.ModRankRawData[Mod1.ModId] or 0
+      local Rank2 = self.ModRankRawData[Mod2.ModId] or 0
+      return Rank1 > Rank2
+    end
+    return self.ModSortFunc[2](Mod1, Mod2)
+  end)
   self.SortType = TempSortType
   local Mod = self:_PickSuitableModInPendingList(ModPendingList, SlotUIData)
   if Mod then
@@ -1397,6 +1429,14 @@ function M:HasTargetEquipedMod(TargetUuid, ModId)
     end
   end
   return false
+end
+
+function M:MarkPendingOpenModEnhance(bVal)
+  self.bPendingOpenModEnhance = bVal
+end
+
+function M:CacheModRankRawData(Data)
+  self.ModRankRawData = Data
 end
 
 AssembleComponents(M)

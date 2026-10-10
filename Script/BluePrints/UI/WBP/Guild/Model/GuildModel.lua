@@ -42,7 +42,9 @@ function M:SetCurrGuild(CurrGuild)
   if nil == CurrGuild then
     self:ClearAllReddot()
   end
-  self:InvokeGuildBossRewardReddotUpdate()
+  if CurrGuild then
+    self:InitGuildEditSignReddot()
+  end
 end
 
 function M:ParseGuildLogo(ServerLogoInfo)
@@ -92,6 +94,50 @@ function M:GetCurrMember(Uid)
     return nil
   end
   return CurrGuild:GetMemberByUid(Uid)
+end
+
+function M:GetSyncedGuildInfo()
+  local Avatar = self:GetAvatar()
+  if not Avatar then
+    return nil
+  end
+  local GuildId = tonumber(Avatar.GuildId) or 0
+  if GuildId <= 0 then
+    return nil
+  end
+  local GuildInfo = Avatar.GuildInfo
+  if type(GuildInfo) ~= "table" then
+    return nil
+  end
+  if (tonumber(GuildInfo.GuildId) or 0) ~= GuildId then
+    return nil
+  end
+  return GuildInfo
+end
+
+function M:GetSyncedMemberTitle(Uid)
+  Uid = tonumber(Uid) or 0
+  if Uid <= 0 then
+    return nil
+  end
+  local GuildInfo = self:GetSyncedGuildInfo()
+  local Members = GuildInfo and GuildInfo.Members
+  if not Members then
+    return nil
+  end
+  local Member
+  if type(Members.Get) == "function" then
+    Member = Members:Get(Uid)
+  end
+  Member = Member or Members[Uid] or Members[tostring(Uid)]
+  if type(Member) ~= "table" then
+    return nil
+  end
+  local Title = tonumber(Member.Title)
+  if not Title or Title <= 0 then
+    return nil
+  end
+  return Title
 end
 
 function M:QueryGuildMemberInfo(Callback, Uids, bCallbackOnly)
@@ -159,94 +205,6 @@ function M:GetGuildActivityRewardRecord()
   return self:GetAvatar().GuildActivityLevelRewardRecord or {}
 end
 
-function M:GetAvatarGuildBossData()
-  local Avatar = self:GetAvatar()
-  if not Avatar then
-    return nil
-  end
-  return GuildDatas.AvatarGuildBossInfo.New(Avatar.GuildBossData)
-end
-
-function M:GetGuildBossData()
-  local Avatar = self:GetAvatar()
-  if not Avatar or not Avatar.GuildInfo then
-    return nil
-  end
-  return GuildDatas.GuildBossInfo.New(Avatar.GuildInfo.GuildBossData)
-end
-
-function M:ResolveGuildBossDisplayGuildId(ExplicitGuildId)
-  local Avatar = self:GetAvatar()
-  if not Avatar then
-    return 0
-  end
-  local Explicit = tonumber(ExplicitGuildId)
-  if Explicit and Explicit > 0 then
-    return Explicit
-  end
-  local RegionGuildId = self:GetCurrentGuildRegionTargetGuildId()
-  if RegionGuildId and RegionGuildId > 0 then
-    return RegionGuildId
-  end
-  return tonumber(Avatar.GuildId) or 0
-end
-
-function M:GetGuildBossDataByGuildId(GuildId, Callback)
-  local Avatar = self:GetAvatar()
-  if not Avatar then
-    if Callback then
-      Callback(nil)
-    end
-    return
-  end
-  GuildId = tonumber(GuildId) or 0
-  if GuildId <= 0 then
-    GuildId = self:ResolveGuildBossDisplayGuildId(0)
-  end
-  local SelfGuildId = tonumber(Avatar.GuildId) or 0
-  if GuildId <= 0 then
-    if Callback then
-      Callback(nil)
-    end
-    return
-  end
-  if GuildId == SelfGuildId then
-    if Callback then
-      Callback(self:GetGuildBossData(), Avatar.GuildInfo)
-    end
-    return
-  end
-  if not Avatar.QueryGuildAttrs then
-    if Callback then
-      Callback(nil)
-    end
-    return
-  end
-  Avatar:QueryGuildAttrs(function(ErrCode, Attrs)
-    local GuildBossData, GuildInfo
-    if ErrCode == ErrorCode.RET_SUCCESS and type(Attrs) == "table" then
-      local Ok, TypedGuildInfo, FailedPropName, InitErr = GuildTypes.GuildAttr.InitFromData(Attrs)
-      if Ok then
-        GuildInfo = TypedGuildInfo
-        GuildBossData = GuildDatas.GuildBossInfo.New(TypedGuildInfo.GuildBossData)
-      else
-        DebugPrint("GetGuildBossDataByGuildId InitFromData failed", FailedPropName, InitErr)
-      end
-    end
-    if Callback then
-      Callback(GuildBossData, GuildInfo)
-    end
-  end, GuildId, {
-    "GuildBossData",
-    "ActivityLevelLastDay",
-    "ActivityLevels",
-    "CreateTime",
-    "GuildId",
-    "Name",
-    "Logo"
-  })
-end
-
 function M:GetCurrentGuildRegionTargetGuildId()
   local Avatar = self:GetAvatar()
   if not Avatar or not Avatar.IsInRegionOnline then
@@ -267,25 +225,6 @@ function M:GetCurrentGuildRegionTargetGuildId()
     return nil
   end
   return tonumber(string.sub(OnlineTypeText, string.len(Prefix) + 1))
-end
-
-function M:IsGuildBossAssistPlayer(TargetGuildId)
-  local Avatar = self:GetAvatar()
-  if not Avatar then
-    return false, nil
-  end
-  local SelfGuildId = tonumber(Avatar.GuildId) or 0
-  if SelfGuildId < 0 then
-    return false, nil
-  end
-  local Target = tonumber(TargetGuildId)
-  if not Target or Target <= 0 then
-    Target = self:ResolveGuildBossDisplayGuildId(nil)
-  end
-  if not Target or Target <= 0 then
-    return false, nil
-  end
-  return Target ~= SelfGuildId, Target
 end
 
 function M:CanQuestReceive(QuestId)

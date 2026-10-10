@@ -98,7 +98,7 @@ function M:OnListItemClicked(Content)
 end
 
 function M:Close()
-  self:PlayAnimation(self.Close)
+  self:PlayAnimation(self.Out)
   self.Owner:OnExtraPanelClose()
 end
 

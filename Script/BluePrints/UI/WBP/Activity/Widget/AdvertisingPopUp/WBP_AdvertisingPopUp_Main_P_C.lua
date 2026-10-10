@@ -152,7 +152,7 @@ function M:InitTabs()
   self.Tabs = {}
   local MaxTabNum = self.MaxTabNum
   self.IsOnlyOneTab = 1 == MaxTabNum
-  for i = 1, 3 do
+  for i = 1, 6 do
     local TabItem = self["WBP_Activity_TryOut_CharacterItem_" .. i]
     local Visibility = UE4.ESlateVisibility.Collapsed
     if i <= MaxTabNum then
@@ -280,6 +280,9 @@ function M:RefreshText(PopInfo)
       TitleWidget.Text_Subtitle:SetText(GText(PopInfo.PopSubTitle))
     end
     self.Title:AddChildToOverlay(TitleWidget)
+    local ContentOverlaySlot = UE4.UWidgetLayoutLibrary.SlotAsOverlaySlot(TitleWidget)
+    ContentOverlaySlot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+    ContentOverlaySlot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
     self.CacheTitles[PopId] = TitleWidget
   end
   self:HideAllCachedTitles()

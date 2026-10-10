@@ -75,6 +75,28 @@ return ReadOnly("ReddotNode", {
     NodeModuleName = "Activity.AccessoryDrop",
     Type = 1
   },
+  Acti_AccessoryDrop05 = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_AccessoryDrop05",
+    NodeModuleName = "Activity.AccessoryDrop",
+    Type = 1
+  },
+  Acti_AnniversaryEntrance = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_AnniversaryEntrance",
+    NodeModuleName = "Activity.ConditionReward",
+    Type = 0,
+    bInvokeEveryTime = true
+  },
+  Acti_AnniversaryEntranceTab = {
+    Childs = {
+      "Acti_AnniversaryEntrance"
+    },
+    Name = "Acti_AnniversaryEntranceTab",
+    bInvokeEveryTime = true
+  },
   Acti_AprilFoolDay = {
     CacheType = 1,
     IsLeaf = true,
@@ -260,6 +282,20 @@ return ReadOnly("ReddotNode", {
     NodeModuleName = "Activity.ActivityBase",
     Type = 0
   },
+  Acti_DoubleMod170 = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_DoubleMod170",
+    NodeModuleName = "Activity.ActivityBase",
+    Type = 0
+  },
+  Acti_DoubleMod175 = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_DoubleMod175",
+    NodeModuleName = "Activity.ActivityBase",
+    Type = 0
+  },
   Acti_FeinaEvent = {
     CacheType = 1,
     IsLeaf = true,
@@ -324,6 +360,53 @@ return ReadOnly("ReddotNode", {
     },
     Name = "Acti_LimitedPrizeTab",
     bInvokeEveryTime = true
+  },
+  Acti_LimitedPrize_103021 = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_LimitedPrize_103021",
+    NodeModuleName = "Activity.LimitedPrize",
+    Type = 1,
+    bInvokeEveryTime = true
+  },
+  Acti_LimitedPrize_10302101 = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_LimitedPrize_10302101",
+    NodeModuleName = "Activity.LimitedPrize",
+    Type = 1,
+    bInvokeEveryTime = true
+  },
+  Acti_LimitedPrize_10302102 = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_LimitedPrize_10302102",
+    NodeModuleName = "Activity.LimitedPrize",
+    Type = 1,
+    bInvokeEveryTime = true
+  },
+  Acti_LimitedPrize_10302103 = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_LimitedPrize_10302103",
+    NodeModuleName = "Activity.LimitedPrize",
+    Type = 1,
+    bInvokeEveryTime = true
+  },
+  Acti_LimitedPrize_10302104 = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_LimitedPrize_10302104",
+    NodeModuleName = "Activity.LimitedPrize",
+    Type = 1,
+    bInvokeEveryTime = true
+  },
+  Acti_LiseQuest = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_LiseQuest",
+    NodeModuleName = "Activity.QuestEvent",
+    Type = 0
   },
   Acti_MidTerm = {
     Childs = {
@@ -471,6 +554,13 @@ return ReadOnly("ReddotNode", {
     CacheType = 1,
     IsLeaf = true,
     Name = "Acti_SignInSaiqi",
+    NodeModuleName = "Activity.DailySignIn",
+    Type = 0
+  },
+  Acti_SignInSplise = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_SignInSplise",
     NodeModuleName = "Activity.DailySignIn",
     Type = 0
   },
@@ -698,6 +788,20 @@ return ReadOnly("ReddotNode", {
     CacheType = 1,
     IsLeaf = true,
     Name = "Acti_TrailSongluSkin01",
+    NodeModuleName = "Activity.TrialChar",
+    Type = 1
+  },
+  Acti_TrailSpLiseSkin01 = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_TrailSpLiseSkin01",
+    NodeModuleName = "Activity.TrialChar",
+    Type = 1
+  },
+  Acti_TrailSpliseChar = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_TrailSpliseChar",
     NodeModuleName = "Activity.TrialChar",
     Type = 1
   },
@@ -1292,10 +1396,12 @@ return ReadOnly("ReddotNode", {
       "Gacha_Special_5",
       "Gacha_Special_6",
       "Gacha_Special_7",
+      "Gacha_Special_8",
       "Gacha_New",
       "Gacha_ReSpecial_1",
       "Gacha_ReSpecial_2",
-      "Gacha_ReSpecial_3"
+      "Gacha_ReSpecial_3",
+      "Gacha_ReSpecial_4"
     },
     Name = "Gacha"
   },
@@ -1331,6 +1437,13 @@ return ReadOnly("ReddotNode", {
     CacheType = 0,
     IsLeaf = true,
     Name = "Gacha_ReSpecial_3",
+    NodeModuleName = "Gacha",
+    Type = 0
+  },
+  Gacha_ReSpecial_4 = {
+    CacheType = 0,
+    IsLeaf = true,
+    Name = "Gacha_ReSpecial_4",
     NodeModuleName = "Gacha",
     Type = 0
   },
@@ -1383,6 +1496,13 @@ return ReadOnly("ReddotNode", {
     NodeModuleName = "Gacha",
     Type = 0
   },
+  Gacha_Special_8 = {
+    CacheType = 0,
+    IsLeaf = true,
+    Name = "Gacha_Special_8",
+    NodeModuleName = "Gacha",
+    Type = 0
+  },
   GuildBossHub = {
     Childs = {
       "GuildBossPersonPointReward",
@@ -1413,11 +1533,19 @@ return ReadOnly("ReddotNode", {
     RuleId = "OpenGuild",
     Type = 0
   },
+  GuildEditSign = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "GuildEditSign",
+    Type = 1,
+    bInvokeEveryTime = true
+  },
   GuildHub = {
     Childs = {
       "GuildTaskHub",
       "GuildNewRequest",
-      "GuildBossHub"
+      "GuildBossHub",
+      "GuildEditSign"
     },
     Name = "GuildHub"
   },

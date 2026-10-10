@@ -304,6 +304,12 @@ function Component:PreInitInfo(Info)
   end
   self.FromOtherWorld = Info.FromOtherWorld or false
   self.FromArmory = Info.FromArmory or false
+  if self.FromOtherWorld and not self.FromArmory and self:IsPlayer() then
+    if IsValid(self.AudioListener) then
+      self.AudioListener:K2_DestroyComponent(self)
+    end
+    self.AudioListener = nil
+  end
   self.IsSettlementOtherRole = Info.IsSettlementOtherRole or false
   self.InfoForInit = Info
   if Info.ChangeRole then

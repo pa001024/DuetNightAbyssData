@@ -17,9 +17,15 @@ function Component:HandleAvatarBattleInfo(Callback, AvatarBattleInfos)
   for AvatarEid, Info in pairs(AvatarBattleInfos) do
     local AvatarEidStr = CommonUtils.ObjId2Str(AvatarEid)
     self.AvatarInfos[AvatarEidStr] = Info
+    local DungeonInfo = DataMgr.Dungeon[GameMode.DungeonId]
+    local PreInitInfo = Info.PlayerInfo and Info.PlayerInfo.PreInitInfo
+    if DungeonInfo and DungeonInfo.DungeonType == CommonConst.DungeonType.SoloRaid and PreInitInfo and PreInitInfo.FloorId then
+      GameMode.PreInitInfo = GameMode.PreInitInfo or {}
+      GameMode.PreInitInfo.FloorId = PreInitInfo.FloorId
+      GameMode:SetGameModeLevel(DataMgr.RaidFloor[PreInitInfo.FloorId].MonsterLevel)
+    end
     self:DungeonObjectAddPlayer(AvatarEid)
     self:AddMoreInfoForDungeonObject(Info)
-    local DungeonInfo = DataMgr.Dungeon[GameMode.DungeonId]
     local TicketLevel = Info.PlayerInfo and Info.PlayerInfo.IronSurvivalGameModeLevel
     if TicketLevel and not GameMode.IronTicketGameModeLevel and DataMgr.IronSurvivalDungeon[GameMode.DungeonId] and DungeonInfo and DungeonInfo.DungeonType == "Defence" then
       GameMode.IronTicketGameModeLevel = TicketLevel

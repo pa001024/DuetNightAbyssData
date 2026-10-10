@@ -112,7 +112,6 @@ local MessageList = {
     ChannelType = nil,
     CDRemainTime = 0,
     MsgCache = "",
-    RemovedMsgs = nil,
     AddMessage = function(self, Message, bCalcUnread)
       if UIUtils.IsAsyncCombatRoomMessage(Message) and not UIUtils.IsAsyncCombatRoomMessageValid(Message) then
         return
@@ -121,7 +120,7 @@ local MessageList = {
       local LastMsgWrap = GetLastNormalChatMsgWrap(self.ViewList) or {
         Message = {Time = 0}
       }
-      local TimeMsgWrap
+      local TimeMsgWrap, EvictedWraps
       if MsgWrap.MsgType == ChatCommon.MsgType.Other or MsgWrap.MsgType == ChatCommon.MsgType.Self then
         local NewMsg = Message
         local LastMsg = LastMsgWrap.Message
@@ -136,9 +135,7 @@ local MessageList = {
               StartIndex = StartIndex + 1
             end
           end
-          for _, RemovedMsg in ipairs(table.slice(self.ViewList, 1, StartIndex - 1)) do
-            table.insert(self.RemovedMsgs, RemovedMsg)
-          end
+          EvictedWraps = table.slice(self.ViewList, 1, StartIndex - 1)
           self.ViewList = table.slice(self.ViewList, StartIndex, #self.ViewList)
         end
         if bCalcUnread then
@@ -156,7 +153,7 @@ local MessageList = {
         end
       end
       table.insert(self.ViewList, MsgWrap)
-      return TimeMsgWrap, MsgWrap
+      return TimeMsgWrap, MsgWrap, EvictedWraps
     end,
     ReadMessage = function(self)
       self.UnreadCount = 0
@@ -185,18 +182,12 @@ local MessageList = {
         end
         self:AddMessage(Message, true)
       end
-    end,
-    GetOnceRemovedMsgs = function(self)
-      local RemovedMsgs = self.RemovedMsgs
-      self.RemovedMsgs = {}
-      return RemovedMsgs
     end
   },
   New = function(Class, TimerKey, ChannelType)
     local NewObj = {}
     setmetatable(NewObj, Class)
     NewObj.ViewList = {}
-    NewObj.RemovedMsgs = {}
     NewObj.TimerKey = TimerKey
     NewObj.ChannelType = ChannelType
     NewObj.MsgCache = ""

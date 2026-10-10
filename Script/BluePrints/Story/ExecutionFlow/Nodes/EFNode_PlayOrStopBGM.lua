@@ -29,7 +29,7 @@ function M:CreateNode(Flow, TalkTask, Params)
   local SoundType = SoundTypeMap[Params.SoundType]
   local PlayType = Params.PlayType
   local TalkTaskData = TalkTask.TalkTaskData
-  local QuestChainId = TalkTaskData.QuestChainId
+  local QuestChainId = TalkTaskData.BGMQuestChainId or TalkTaskData.QuestChainId or 0
   local RelateRegionIdArray = {}
   if type(RelatedRegionId) == "table" then
     for _, Id in pairs(RelatedRegionId) do

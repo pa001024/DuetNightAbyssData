@@ -91,6 +91,34 @@
     "rarity": 4
   },
   {
+    "id": 10135,
+    "name": "Prank-o'-Lantern: Apricot",
+    "desc": "For decoration only. Not edible.",
+    "icon": "T_Fashion_Hat29_03",
+    "rarity": 4
+  },
+  {
+    "id": 10136,
+    "name": "Prank-o'-Lantern: Rust Red",
+    "desc": "For decoration only. Not edible.",
+    "icon": "T_Fashion_Hat29_04",
+    "rarity": 4
+  },
+  {
+    "id": 10137,
+    "name": "Prank-o'-Lantern: Gilt",
+    "desc": "For decoration only. Not edible.",
+    "icon": "T_Fashion_Hat29_02",
+    "rarity": 4
+  },
+  {
+    "id": 10138,
+    "name": "Prank-o'-Lantern: Mint",
+    "desc": "For decoration only. Not edible.",
+    "icon": "T_Fashion_Hat29_01",
+    "rarity": 4
+  },
+  {
     "id": 110292,
     "name": "The Absolver",
     "icon": "T_Fashion_Fuluo_01",
@@ -141,8 +169,8 @@
   },
   {
     "id": 410392,
-    "name": "UI_Skin_Name_410301",
-    "icon": "T_Fashion_Zhiliu_01",
+    "name": "Veil In Shadows",
+    "icon": "T_Fashion_SPLise_01",
     "rarity": 5,
     "charId": 4103
   },

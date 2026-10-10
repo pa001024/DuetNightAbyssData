@@ -1923,21 +1923,33 @@ return {
             type = "HighlightButtonNode",
             name = "HighlightButton显示/隐藏信息",
             pos = {x = 1705.0716704577471, y = -285.1237825884853},
-            propsData = {ShowEnable = true, SkillType = "Skill1"}
+            propsData = {
+              ShowEnable = true,
+              SkillType = "Skill1",
+              DescriptionTextMapId = ""
+            }
           },
           ["17175011977001846830"] = {
             key = "17175011977001846830",
             type = "HighlightButtonNode",
             name = "HighlightButton显示/隐藏信息",
             pos = {x = 3067.261349200058, y = 24.98723358832057},
-            propsData = {ShowEnable = false, SkillType = "Skill1"}
+            propsData = {
+              ShowEnable = false,
+              SkillType = "Skill1",
+              DescriptionTextMapId = ""
+            }
           },
           ["17200930945351666752"] = {
             key = "17200930945351666752",
             type = "HighlightButtonNode",
             name = "HighlightButton显示/隐藏信息",
             pos = {x = 1996.662241752357, y = -44.836938676780036},
-            propsData = {ShowEnable = true, SkillType = "Skill1"}
+            propsData = {
+              ShowEnable = true,
+              SkillType = "Skill1",
+              DescriptionTextMapId = ""
+            }
           },
           ["1744376547245813386"] = {
             key = "1744376547245813386",

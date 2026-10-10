@@ -6,6 +6,7 @@ local StoryPlayableUtils = require("BluePrints.Story.StoryPlayableUtils")
 local GMVariable = require("BluePrints.UI.GMInterface.GMVariable")
 local MiscUtils = require("Utils.MiscUtils")
 local BattleEventName = require("BluePrints/Combat/BattleEvents/BattleEventName")
+local MonsterUtils = require("Utils.MonsterUtils")
 local BP_CharacterBase_C = Class({
   "BluePrints.Combat.Components.CharacterComponent"
 })
@@ -106,7 +107,7 @@ function BP_CharacterBase_C:GetHitMontageRule()
     return self.HitMontageRule
   end
   if self:IsMonster() then
-    local MonsterData = DataMgr.Monster[self.UnitId]
+    local MonsterData = MonsterUtils.GetMonsterDataByOwner(self)
     if MonsterData and MonsterData.HitMontageRule then
       self.HitMontageRule = DataMgr.HitMontageData[MonsterData.HitMontageRule]
     end
@@ -591,8 +592,11 @@ function BP_CharacterBase_C:OnRealEnterDying()
   if not Battle(self) then
     return
   end
-  if not IsDedicatedServer(self) and self:IsMainPlayer() then
-    self:ShowPlayerDeadUI()
+  if not IsDedicatedServer(self) then
+    EventManager:FireEvent(EventID.CharWaitingResurgence, self.Eid)
+    if self:IsMainPlayer() then
+      self:ShowPlayerDeadUI()
+    end
   end
   Battle(self):TriggerBattleEvent(BattleEventName.OnTeammateCanRecovery, self)
   if self.IsHostage then
@@ -854,37 +858,6 @@ function BP_CharacterBase_C:HandleStuck(Hit)
   local ActorLocation = self:K2_GetActorLocation()
   local FixedLocation = ActorLocation + FVector(Hit.Normal.X, Hit.Normal.Y, Hit.Normal.Z) * Hit.PenetrationDepth
   self:K2_SetActorLocation(FixedLocation, false, nil, false)
-end
-
-function BP_CharacterBase_C:GetHeadWidgetComponent()
-  return self.HeadWidgetComponent
-end
-
-function BP_CharacterBase_C:InitHeadWidgetComponent()
-  if self.HeadWidgetComponent then
-    return
-  end
-  local HeadUISubsystem = UNpcHeadUISubsystem.GetHeadUISubsystem(self)
-  if not HeadUISubsystem then
-    return
-  end
-  self.HeadWidgetComponent = HeadUISubsystem:InitHeadWidgetComponent(self)
-end
-
-function BP_CharacterBase_C:EnableHeadWidget(WidgetName, bEnable, ...)
-  if bEnable then
-    self:InitHeadWidgetComponent()
-  end
-  if self.HeadWidgetComponent then
-    if bEnable then
-      if self.HeadWidgetComponent:NeedForceInit() then
-        self.HeadWidgetComponent:AdjustSelfTransform()
-      end
-      self.HeadWidgetComponent:EnableWidget(WidgetName, ...)
-    else
-      self.HeadWidgetComponent:DisableWidget(WidgetName, ...)
-    end
-  end
 end
 
 function BP_CharacterBase_C:SetPlayerMaxMovingSpeed(Rate)
@@ -1545,6 +1518,22 @@ function BP_CharacterBase_C:HasCurrentRegionFlyLicense()
     return false
   end
   return Avatar:HasMountLicenseById(FlyLicense)
+end
+
+function BP_CharacterBase_C:EnableBubbleWidget(bEnable, Content, Style)
+  local Comp = bEnable and self:GetOrCreateHeadWidgetComponent() or self:GetHeadWidgetComponent()
+  if not IsValid(Comp) then
+    return
+  end
+  if bEnable then
+    local Subsystem = UNpcHeadUISubsystem.GetHeadUISubsystem(self)
+    local bShort = Subsystem and Subsystem:ShouldUseShortBubble(self) or false
+    local BubbleType = bShort and "Short_Bubble" or "Long_Bubble"
+    Comp:EnableBubbleTyped(Content, BubbleType, Style or "")
+  else
+    Comp:DisableBubbleTyped("Long_Bubble")
+    Comp:DisableBubbleTyped("Short_Bubble")
+  end
 end
 
 AssembleComponents(BP_CharacterBase_C)

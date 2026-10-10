@@ -1170,6 +1170,392 @@
     ]
   },
   {
+    "id": 10199,
+    "icon": "Sword_Yemei",
+    "名称": "Endless Enigma",
+    "版本": "1.7",
+    "描述": "One of those who received the weapon was a sage, rewarded by the Father for her wisdom. Consumed by a thirst for truth, she spent countless midnights pondering the nature of the world. Again and again she sought an answer without flaw or error, yet the more she learned, the more the unknown grew before her.\nShe steeped her days in darkness and blank pages, but there could be no end to the pursuit of truth. The agony of the unknowable tore her apart. On one long night, she turned her blade upon herself — only to leave behind an unsolved enigma that would drive countless others to madness.",
+    "类型": [
+      "近战",
+      "单手剑"
+    ],
+    "伤害类型": "灾厄",
+    "攻击": 20,
+    "暴击": 0.23,
+    "暴伤": 2.2,
+    "触发": 0.22,
+    "加成": {
+      "技能威力": 0.45,
+      "攻击": 0.9,
+      "属性穿透": 0.35,
+      "昂扬": 0.6
+    },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Damaged Sal Volatile": 6,
+        "Basic Weapon Component: Grip": 2
+      },
+      {
+        "Coin": 6100,
+        "Fuel Reagent": 3,
+        "Basic Weapon Component: Grip": 4,
+        "Basic Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 6900,
+        "Fuel Reagent": 6,
+        "Intermediate Weapon Component: Grip": 3,
+        "Intermediate Weapon Component: Blade": 1
+      },
+      {
+        "Coin": 17000,
+        "Fuel Reagent": 12,
+        "Advanced Weapon Component: Grip": 6,
+        "Advanced Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 49000,
+        "Fuel Reagent": 24,
+        "Advanced Weapon Component: Grip": 10,
+        "Advanced Weapon Component: Blade": 4
+      },
+      {
+        "Coin": 180000,
+        "Fuel Reagent": 48,
+        "Advanced Weapon Component: Grip": 20,
+        "Advanced Weapon Component: Blade": 8
+      }
+    ],
+    "熔炼": [
+      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type."
+    ],
+    "熔炉": [
+      {
+        "lv": 0,
+        "技能": [
+          {
+            "id": 10199001,
+            "名称": "Endless – Ponder",
+            "icon": "",
+            "描述": "Dealing damage with this weapon grants 1.0 Calamity. Calamity is capped at 150.0.\nWhen Calamity reaches its cap, all Calamity is consumed to grant 1 stack of [Inquiry]: Skill Speed +10.0% for 9.0s, up to 6.0 stacks."
+          }
+        ]
+      },
+      {
+        "lv": 1,
+        "解锁": {
+          "Prototype: Endless Enigma": 36,
+          "Weapon Track-Shift Module": 5,
+          "Emblem of Strength": 30,
+          "Emblem of Rebellion": 30
+        },
+        "技能": [
+          {
+            "id": 10199002,
+            "名称": "Endless – Desire",
+            "icon": "",
+            "描述": "When consuming [Disruption], gains 12.0 Calamity for each stack consumed.",
+            "解锁": {
+              "Prototype: Endless Enigma": 30,
+              "Electro Crystal": 90,
+              "Radiant Crystal": 15,
+              "Weapon Track-Shift Module": 2,
+              "Emblem of Strength": 50,
+              "Emblem of Rebellion": 50
+            }
+          },
+          {
+            "id": 10199003,
+            "名称": "Enigma – Obscurity",
+            "icon": "",
+            "描述": "When Skill DMG triggers, gains [2.0 × Skill Speed] Calamity.",
+            "解锁": {
+              "Prototype: Endless Enigma": 30,
+              "Electro Crystal": 90,
+              "Radiant Crystal": 15,
+              "Weapon Track-Shift Module": 2,
+              "Emblem of Strength": 50,
+              "Emblem of Rebellion": 50
+            }
+          }
+        ]
+      },
+      {
+        "lv": 2,
+        "解锁": {
+          "Prototype: Endless Enigma": 42,
+          "Electro Crystal": 20,
+          "Sharpening Potion": 6,
+          "Emblem of Strength": 40,
+          "Emblem of Rebellion": 40
+        },
+        "技能": [
+          {
+            "id": 10199004,
+            "名称": "Endless – Might",
+            "icon": "T_Rouge_Talent_SkillIntensityUP",
+            "加成": {
+              "Skill Intensity": 0.45
+            },
+            "解锁": {
+              "Prototype: Endless Enigma": 30,
+              "Electro Crystal": 90,
+              "Radiant Crystal": 15,
+              "Sharpening Potion": 4,
+              "Emblem of Strength": 50,
+              "Emblem of Rebellion": 50
+            }
+          },
+          {
+            "id": 10199005,
+            "名称": "Enigma – Assault",
+            "icon": "T_Rouge_Talent_ATK",
+            "加成": {
+              "ATK": 0.9
+            },
+            "解锁": {
+              "Prototype: Endless Enigma": 30,
+              "Electro Crystal": 90,
+              "Radiant Crystal": 15,
+              "Sharpening Potion": 4,
+              "Emblem of Strength": 50,
+              "Emblem of Rebellion": 50
+            }
+          }
+        ]
+      },
+      {
+        "lv": 3,
+        "解锁": {
+          "Prototype: Endless Enigma": 48,
+          "Electro Crystal": 30,
+          "Radiant Crystal": 5,
+          "Weapon Track-Shift Module": 6,
+          "Emblem of Strength": 50,
+          "Emblem of Rebellion": 50
+        },
+        "技能": [
+          {
+            "id": 10199006,
+            "名称": "Endless – Answer",
+            "icon": "",
+            "描述": "While under [Inquiry], if Skill Speed exceeds 220.0%, Skill DMG +90.0%.",
+            "解锁": {
+              "Prototype: Endless Enigma": 30,
+              "Electro Crystal": 90,
+              "Radiant Crystal": 15,
+              "Weapon Track-Shift Module": 2,
+              "Emblem of Strength": 50,
+              "Emblem of Rebellion": 50
+            }
+          },
+          {
+            "id": 10199007,
+            "名称": "Enigma – Attest",
+            "icon": "",
+            "描述": "While under [Inquiry], if Skill Speed exceeds 2.2, Skill DMG PEN +30.0%.",
+            "解锁": {
+              "Prototype: Endless Enigma": 30,
+              "Electro Crystal": 90,
+              "Radiant Crystal": 15,
+              "Weapon Track-Shift Module": 2,
+              "Emblem of Strength": 50,
+              "Emblem of Rebellion": 50
+            }
+          }
+        ]
+      },
+      {
+        "lv": 4,
+        "解锁": {
+          "Prototype: Endless Enigma": 54,
+          "Electro Crystal": 50,
+          "Radiant Crystal": 15,
+          "Sharpening Potion": 6,
+          "Emblem of Strength": 60,
+          "Emblem of Rebellion": 60
+        },
+        "技能": [
+          {
+            "id": 10199008,
+            "名称": "Endless – Pierce",
+            "icon": "T_Rouge_Talent_AttrPenetration",
+            "加成": {
+              "PEN Stats": 0.35
+            },
+            "解锁": {
+              "Prototype: Endless Enigma": 30,
+              "Electro Crystal": 90,
+              "Radiant Crystal": 15,
+              "Sharpening Potion": 4,
+              "Emblem of Strength": 50,
+              "Emblem of Rebellion": 50
+            }
+          },
+          {
+            "id": 10199009,
+            "名称": "Enigma – Morale",
+            "icon": "T_Rouge_Talent_Morale",
+            "加成": {
+              "Morale": 0.6
+            },
+            "解锁": {
+              "Prototype: Endless Enigma": 30,
+              "Electro Crystal": 90,
+              "Radiant Crystal": 15,
+              "Sharpening Potion": 4,
+              "Emblem of Strength": 50,
+              "Emblem of Rebellion": 50
+            }
+          }
+        ]
+      },
+      {
+        "lv": 5,
+        "解锁": {
+          "Prototype: Endless Enigma": 100,
+          "Electro Crystal": 90,
+          "Radiant Crystal": 20,
+          "Recasting Mould": 1,
+          "Emblem of Strength": 100,
+          "Emblem of Rebellion": 100
+        },
+        "技能": [
+          {
+            "id": 10199010,
+            "名称": "Endless – Truth",
+            "icon": "",
+            "描述": "Additional Skill DMG of own element +50.0%.\nWhen [Inquiry] reaches max stacks: Dealing Skill DMG also deals 3500.0% Calamity DMG to enemies within 3.0m of the target. This counts as Skill DMG and increases by [Skill Intensity × Skill Speed − 100]%. This effect can trigger at most once every 1.0s.",
+            "加成": {
+              "追加伤害": 0.5
+            }
+          }
+        ]
+      }
+    ],
+    "技能": [
+      {
+        "id": 1010101,
+        "名称": "Normal Attack",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "1-Hit DMG",
+            "值": 1.35,
+            "削韧": 25,
+            "延迟": 0.05,
+            "卡肉": 0.03,
+            "tag": [
+              "近战",
+              "武器",
+              "普攻"
+            ],
+            "取消": 0.2333,
+            "连段": 0.4667
+          },
+          {
+            "名称": "2-Hit DMG",
+            "值": 1.5,
+            "削韧": 30,
+            "延迟": 0.1,
+            "卡肉": 0.03,
+            "tag": [
+              "近战",
+              "武器",
+              "普攻"
+            ],
+            "取消": 0.1667,
+            "连段": 0.3777
+          },
+          {
+            "名称": "3-Hit DMG",
+            "值": 1.2,
+            "格式": "{%}×2",
+            "削韧": 30,
+            "tag": [
+              "近战",
+              "武器",
+              "普攻"
+            ],
+            "取消": 0.4,
+            "连段": 0.612
+          },
+          {
+            "名称": "4-Hit DMG",
+            "值": 2.46,
+            "削韧": 50,
+            "延迟": 0.05,
+            "卡肉": 0.07,
+            "tag": [
+              "近战",
+              "武器",
+              "普攻"
+            ],
+            "取消": 0.6333,
+            "连段": 0.9
+          }
+        ]
+      },
+      {
+        "id": 1010102,
+        "名称": "Charged Attack",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Charged Attack DMG",
+            "值": 3.29,
+            "削韧": 73,
+            "卡肉": 0.03,
+            "tag": [
+              "近战",
+              "武器",
+              "蓄力攻击"
+            ],
+            "取消": 1.2333
+          }
+        ]
+      },
+      {
+        "id": 1010103,
+        "名称": "Plunging Attack",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Plunge DMG",
+            "值": 1.54,
+            "削韧": 33,
+            "tag": [
+              "近战",
+              "武器",
+              "下落攻击"
+            ],
+            "取消": 1.6807
+          }
+        ]
+      },
+      {
+        "id": 1010104,
+        "名称": "Sliding Attack",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Sliding Attack DMG",
+            "值": 1.53,
+            "削韧": 33,
+            "卡肉": 0.1,
+            "tag": [
+              "近战",
+              "武器",
+              "滑行攻击"
+            ],
+            "取消": 0.4333
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": 10201,
     "icon": "Polearm_Sairen",
     "名称": "Siren's Kiss",
@@ -3942,7 +4328,7 @@
     "暴伤": 2,
     "触发": 0.3,
     "加成": {
-      "触发": 0.75
+      "战姿削减": 0.375
     },
     "突破": [
       {
@@ -3982,22 +4368,30 @@
       }
     ],
     "熔炼": [
-      "Trigger Probability +#1. When damage dealt with this weapon triggers a bonus effect, there is a #2 chance to restore 5 rounds of ammo.",
+      "Stance Reduction +#1. Dealing CRIT Damage with this weapon grants +#2 ATK Speed and +#3Charge Speed for 5.0s. This effect is removed when switching weapons.",
       [
-        "75.0%",
-        "90.0%",
-        "105.0%",
-        "120.0%",
-        "135.0%",
-        "150.0%"
+        "37.5%",
+        "45.0%",
+        "52.5%",
+        "60.0%",
+        "67.5%",
+        "75.0%"
       ],
       [
-        "50.0%",
-        "60.0%",
-        "70.0%",
-        "80.0%",
-        "90.0%",
-        "100.0%"
+        "30.0%",
+        "36.0%",
+        "42.0%",
+        "48.0%",
+        "54.0%",
+        "60.0%"
+      ],
+      [
+        "25.0%",
+        "30.0%",
+        "35.0%",
+        "40.0%",
+        "45.0%",
+        "50.0%"
       ]
     ],
     "技能": [
@@ -5147,7 +5541,7 @@
     "暴伤": 2,
     "触发": 0.2,
     "加成": {
-      "攻击范围": 100
+      "暴击": 0.5
     },
     "突破": [
       {
@@ -5187,22 +5581,22 @@
       }
     ],
     "熔炼": [
-      "ATK Range +#1. Charged Attacks with this weapon have a #2 chance not to consume Combo Points.",
+      "CRIT Chance +#1. Performing a Charged Attack with this weapon refunds #2 of consumed Combo Points.",
       [
-        "1.0",
-        "1.2",
-        "1.4",
-        "1.6",
-        "1.8",
-        "2.0"
+        "50.0%",
+        "60.0%",
+        "70.0%",
+        "80.0%",
+        "90.0%",
+        "100.0%"
       ],
       [
-        "6.0%",
-        "7.2%",
-        "8.4%",
-        "9.6%",
-        "10.8%",
-        "12.0%"
+        "20.0%",
+        "24.0%",
+        "28.0%",
+        "32.0%",
+        "36.0%",
+        "40.0%"
       ]
     ],
     "技能": [
@@ -9474,6 +9868,129 @@
     "射击间隔": 0.05
   },
   {
+    "id": 20306,
+    "icon": "Cannon_Huozhe",
+    "名称": "Blessed Burden",
+    "版本": "1.7",
+    "描述": "活下去，是生者需要背负的祝福。",
+    "类型": [
+      "远程",
+      "榴炮"
+    ],
+    "伤害类型": "震荡",
+    "攻击": 8,
+    "暴击": 0.3,
+    "暴伤": 2.5,
+    "触发": 0.1,
+    "弹匣": 8,
+    "最大弹药": 40,
+    "弹药转化率": 0.35,
+    "最大射程": 2800,
+    "加成": {
+      "暴伤": 0.625
+    },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Frame": 4,
+        "Basic Weapon Component: Bolt": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Frame": 3,
+        "Intermediate Weapon Component: Bolt": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Frame": 6,
+        "Advanced Weapon Component: Bolt": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Frame": 10,
+        "Advanced Weapon Component: Bolt": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Frame": 20,
+        "Advanced Weapon Component: Bolt": 8
+      }
+    ],
+    "熔炼": [
+      "CRIT Damage +#1. Shooting by an Electro character grants +#2 Skill Intensity. This effect is removed upon exiting Shooting or charging a Ranged Weapon.",
+      [
+        "62.5%",
+        "75.0%",
+        "87.5%",
+        "100.0%",
+        "112.5%",
+        "125.0%"
+      ],
+      [
+        "75.0%",
+        "90.0%",
+        "105.0%",
+        "120.0%",
+        "135.0%",
+        "150.0%"
+      ]
+    ],
+    "技能": [
+      {
+        "id": 2030601,
+        "名称": "Shoot",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Explosion DMG",
+            "值": 0.95,
+            "削韧": 40,
+            "tag": [
+              "远程",
+              "武器",
+              "爆炸"
+            ],
+            "取消": 0.5667,
+            "连段": 0.6333
+          },
+          {
+            "名称": "Explosion Radius",
+            "值": 3,
+            "格式": "{}m"
+          }
+        ],
+        "实体": [
+          {
+            "id": 2030611,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 5,
+              "BoxLength": 10,
+              "BoxWidth": 5
+            },
+            "时长": 3,
+            "速度": 5000,
+            "标签": [
+              "ExplodeBullet"
+            ]
+          }
+        ]
+      }
+    ],
+    "装填": 0.3352,
+    "射击间隔": 0.8333
+  },
+  {
     "id": 20401,
     "icon": "Shotgun_Chixing",
     "名称": "Screamshot",
@@ -10823,7 +11340,7 @@
       }
     ],
     "熔炼": [
-      "Mag Capacity +#1. After firing 10 rounds, the weapon consumes all remaining rounds in the magazine to fire a special round that deals AoE DMG. For each round consumed, this damage increases by #2, up to #3. Defeating an enemy with this weapon has a #4 chance to restore 1 round.",
+      "Mag Capacity +#1. After firing 10 rounds, the weapon consumes all remaining rounds in the magazine to fire a special round that deals AoE DMG. For each round consumed, this damage increases by #2, up to #3. Hitting an enemy with the special round grants +#4 Ranged Weapon DMG for 12.0s, stacking up to 2.0 times.",
       [
         "30.0%",
         "36.0%",
@@ -10849,12 +11366,12 @@
         "102.0%"
       ],
       [
-        "25.0%",
-        "30.0%",
-        "35.0%",
-        "40.0%",
-        "45.0%",
-        "50.0%"
+        "15.0%",
+        "18.0%",
+        "21.0%",
+        "24.0%",
+        "27.0%",
+        "30.0%"
       ]
     ],
     "技能": [
@@ -11394,7 +11911,7 @@
     "弹药转化率": 1.1,
     "最大射程": 2800,
     "加成": {
-      "装填": 0.3
+      "触发": 0.75
     },
     "突破": [
       {
@@ -11434,22 +11951,22 @@
       }
     ],
     "熔炼": [
-      "Reload Speed +#1. After reloading, ATK Speed increases by #2 for 6.0s. This effect is removed when switching weapons.",
+      "Trigger Probability +#1. Hitting an enemy with this weapon increases the DMG they take from this weapon by #2, stacking up to 15.0 times.",
       [
-        "30.0%",
-        "36.0%",
-        "42.0%",
-        "48.0%",
-        "54.0%",
-        "60.0%"
+        "75.0%",
+        "90.0%",
+        "105.0%",
+        "120.0%",
+        "135.0%",
+        "150.0%"
       ],
       [
-        "50.0%",
-        "60.0%",
-        "70.0%",
-        "80.0%",
-        "90.0%",
-        "100.0%"
+        "3.0%",
+        "3.6%",
+        "4.2%",
+        "4.8%",
+        "5.4%",
+        "6.0%"
       ]
     ],
     "技能": [
@@ -12546,16 +13063,16 @@
       "弓（长弓）"
     ],
     "伤害类型": "贯穿",
-    "攻击": 17,
-    "暴击": 0.19,
-    "暴伤": 2,
-    "触发": 0.2,
+    "攻击": 18,
+    "暴击": 0.2,
+    "暴伤": 2.2,
+    "触发": 0.12,
     "弹匣": 1,
     "最大弹药": 50,
     "弹药转化率": 0.5,
     "最大射程": 4000,
     "加成": {
-      "攻速": 1
+      "攻速": 0.25
     },
     "突破": [
       {
@@ -12595,13 +13112,71 @@
       }
     ],
     "熔炼": [
-      "ATK Speed +100.0%. Arrows fired during Charged Attack Stage 3 deal 71.9% more damage and grant +6.0 Explosion Range for 2.0s."
+      "ATK Speed +#1. Arrows fired during Charged Attack Stage 3 deal 100.0% more damage and grant +#2 Explosion Range for 5.0s.",
+      [
+        "25.0%",
+        "30.0%",
+        "35.0%",
+        "40.0%",
+        "45.0%",
+        "50.0%"
+      ],
+      [
+        "1.2",
+        "1.5",
+        "1.8",
+        "2.0",
+        "2.2",
+        "2.5"
+      ]
     ],
     "技能": [
       {
         "id": 2060501,
         "名称": "Shoot",
         "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Projectile DMG",
+            "值": 0.65,
+            "削韧": 8,
+            "tag": [
+              "远程",
+              "武器"
+            ],
+            "取消": 0.3,
+            "连段": 0.3667
+          },
+          {
+            "名称": "Projectile DMG - Phase 2",
+            "值": 1,
+            "削韧": 25,
+            "tag": [
+              "远程",
+              "武器",
+              "爆炸"
+            ],
+            "取消": 0.3,
+            "连段": 0.3667
+          },
+          {
+            "名称": "Projectile DMG - Phase 3",
+            "值": 2,
+            "削韧": 25,
+            "tag": [
+              "远程",
+              "武器",
+              "爆炸"
+            ],
+            "取消": 0.3,
+            "连段": 0.3667
+          },
+          {
+            "名称": "Explosion Radius",
+            "值": 3,
+            "格式": "{}m"
+          }
+        ],
         "实体": [
           {
             "id": 2060511,

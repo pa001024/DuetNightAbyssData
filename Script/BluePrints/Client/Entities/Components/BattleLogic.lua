@@ -44,6 +44,9 @@ function Component:PrepareToBattleRegion(RegionId, StartIndex, EnterRegionType, 
   self.CurrentRegionId = RegionId
   self.StartIndex = tonumber(StartIndex)
   self.EnterRegionType = EnterRegionType
+  if GWorld.GameInstance then
+    GWorld.GameInstance:NotifyTBHRegionChanged(RegionId)
+  end
   self:ClearCacheByPrepareRegion()
   local SubSystem = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, URegionDataMgrSubsystem:StaticClass())
   if SubSystem then

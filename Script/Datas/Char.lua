@@ -58,11 +58,16 @@ T.RT_9 = {
   [3] = "Lucky"
 }
 T.RT_10 = {
+  [1] = "Benefit",
+  [2] = "Benefit",
+  [3] = "Skilled"
+}
+T.RT_11 = {
   [1] = "Morality",
   [2] = "Lucky",
   [3] = "Lucky"
 }
-T.RT_11 = {
+T.RT_12 = {
   [1] = "Wisdom",
   [2] = "Battle",
   [3] = "Workaholic"
@@ -251,7 +256,7 @@ return ReadOnly("Char", {
     DefaultAccessory = T.RT_5,
     DefaultHairId = 1201,
     DefaultSkinId = 1201,
-    DispatchTag = T.RT_11,
+    DispatchTag = T.RT_12,
     DispatchUnlock = T.RT_3,
     EscIcon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Nvzhu02",
     EscMenuBg = "/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_Nvzhu02",
@@ -323,11 +328,12 @@ return ReadOnly("Char", {
     RoleId = 1501,
     SkinId = {
       [1] = 1501,
-      [2] = 15010010,
-      [3] = 15010011,
-      [4] = 15010121,
-      [5] = 15010122,
-      [6] = 15010131
+      [2] = 150101,
+      [3] = 15010010,
+      [4] = 15010011,
+      [5] = 15010121,
+      [6] = 15010122,
+      [7] = 15010131
     },
     SortPriority = 5010,
     Sound = "SOUND_ITEM_NORMAL",
@@ -464,7 +470,7 @@ return ReadOnly("Char", {
     DefaultAccessory = T.RT_5,
     DefaultHairId = 1504,
     DefaultSkinId = 1504,
-    DispatchTag = T.RT_11,
+    DispatchTag = T.RT_12,
     DispatchUnlock = T.RT_3,
     EscIcon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Suyi",
     EscMenuBg = "/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_Suyi",
@@ -514,7 +520,7 @@ return ReadOnly("Char", {
     DefaultAccessory = T.RT_5,
     DefaultHairId = 1601,
     DefaultSkinId = 1601,
-    DispatchTag = T.RT_11,
+    DispatchTag = T.RT_12,
     DispatchUnlock = T.RT_3,
     EscIcon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Nvzhu",
     EscMenuBg = "/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_Nvzhu",
@@ -673,7 +679,7 @@ return ReadOnly("Char", {
     DefaultAccessory = T.RT_5,
     DefaultHairId = 2102,
     DefaultSkinId = 2102,
-    DispatchTag = T.RT_10,
+    DispatchTag = T.RT_11,
     DispatchUnlock = T.RT_3,
     EscIcon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Eve",
     EscMenuBg = "/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_Eve",
@@ -718,7 +724,7 @@ return ReadOnly("Char", {
     DefaultAccessory = T.RT_5,
     DefaultHairId = 2201,
     DefaultSkinId = 2201,
-    DispatchTag = T.RT_10,
+    DispatchTag = T.RT_11,
     DispatchUnlock = T.RT_3,
     EscIcon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_WeitaF",
     EscMenuBg = "/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_WeitaF",
@@ -1126,11 +1132,7 @@ return ReadOnly("Char", {
     DefaultAccessory = T.RT_5,
     DefaultHairId = 3202,
     DefaultSkinId = 3202,
-    DispatchTag = {
-      [1] = "Benefit",
-      [2] = "Benefit",
-      [3] = "Skilled"
-    },
+    DispatchTag = T.RT_10,
     DispatchUnlock = {
       [1] = 0,
       [2] = 2,
@@ -1163,6 +1165,45 @@ return ReadOnly("Char", {
     SortPriority = 4006,
     Sound = "SOUND_ITEM_NORMAL",
     SpineBp = "WBP_Get_Avatar_WidgetKami"
+  },
+  [3203] = {
+    ArmoryCameraPosition = T.RT_7,
+    ArmoryCameraRotation = T.RT_6,
+    BigIcon = "/Game/UI/Texture/Dynamic/Image/Bust/Avatar/T_Bust_Kajia",
+    Camp = "Tongmeng",
+    CharColorVar = "Pink",
+    CharId = 3203,
+    CharMaxLevel = 80,
+    CharName = "UI_CHAR_NAME_3203",
+    CharPieceId = 1003203,
+    CharRarity = 5,
+    CharSubtitle = "UI_CHAR_SUBTITLE_3203",
+    CharUnlockRequiredPiece = 30,
+    CollectRewardExp = 500,
+    DefaultAccessory = T.RT_5,
+    DefaultHairId = 3203,
+    DefaultSkinId = 3203,
+    DispatchTag = T.RT_10,
+    DispatchUnlock = T.RT_3,
+    EscIcon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Kajia",
+    EscMenuBg = "/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_Kajia",
+    FirstCharItemId = 1013203,
+    FirstCharItemNum = 1,
+    GUIPathVariable = "Kajia",
+    GachaIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Avatar/T_Gacha_AvatarKajia",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Kajia",
+    MeleeWeapon = 10101,
+    ModSlot = T.RT_2,
+    ModSlotUnlock = T.RT_1,
+    OpenVersion = 18,
+    RangedWeapon = 20201,
+    RegainCharItemId = 1003203,
+    RegainCharItemNum = 30,
+    ReleaseVersion = 180,
+    RoleId = 3203,
+    SortPriority = 5006,
+    Sound = "SOUND_ITEM_NORMAL",
+    SpineBp = "WBP_Get_Avatar_WidgetKajia"
   },
   [3301] = {
     ArmoryCameraPosition = T.RT_7,
@@ -1322,8 +1363,8 @@ return ReadOnly("Char", {
     ArmoryCameraPosition = T.RT_7,
     ArmoryCameraRotation = T.RT_6,
     BigIcon = "/Game/UI/Texture/Dynamic/Image/Bust/Avatar/T_Bust_SpLise",
-    Camp = "Diguo",
-    CharColorVar = "Blue",
+    Camp = "None",
+    CharColorVar = "Red",
     CharId = 4103,
     CharMaxLevel = 80,
     CharName = "UI_CHAR_NAME_4103",
@@ -1359,7 +1400,10 @@ return ReadOnly("Char", {
     },
     SortPriority = 4001,
     Sound = "SOUND_ITEM_NORMAL",
-    SpineBp = "WBP_Get_Avatar_WidgetSpLise"
+    SpineBp = "WBP_Get_Avatar_WidgetSpLise",
+    VideoBp = "WidgetBlueprint'/Game/UI/WBP/Get/Widget/Avatar/WBP_Get_Avatar_WidgetSpLise.WBP_Get_Avatar_WidgetSpLise'",
+    VideoInPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/Activity/Video_Splise_SevenDay_BG.Video_Splise_SevenDay_BG'",
+    VideoLoopPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/Activity/Video_Splise_SevenDay_BG.Video_Splise_SevenDay_BG'"
   },
   [4201] = {
     ArmoryCameraPosition = T.RT_7,
@@ -1557,11 +1601,12 @@ return ReadOnly("Char", {
     SkinId = {
       [1] = 5101,
       [2] = 510101,
-      [3] = 51010010,
-      [4] = 51010011,
-      [5] = 51010121,
-      [6] = 51010122,
-      [7] = 51010131
+      [3] = 510102,
+      [4] = 51010010,
+      [5] = 51010011,
+      [6] = 51010121,
+      [7] = 51010122,
+      [8] = 51010131
     },
     SortPriority = 5006,
     Sound = "SOUND_ITEM_NORMAL",
@@ -1733,9 +1778,9 @@ return ReadOnly("Char", {
   [5402] = {
     ArmoryCameraPosition = T.RT_7,
     ArmoryCameraRotation = T.RT_6,
-    BigIcon = "/Game/UI/Texture/Dynamic/Image/Bust/Avatar/T_Bust_Dafu",
-    Camp = "Diguo",
-    CharColorVar = "Green",
+    BigIcon = "/Game/UI/Texture/Dynamic/Image/Bust/Avatar/T_Bust_Lilikou",
+    Camp = "Jiaohui",
+    CharColorVar = "Blue",
     CharId = 5402,
     CharMaxLevel = 80,
     CharName = "UI_CHAR_NAME_5402",
@@ -1749,13 +1794,13 @@ return ReadOnly("Char", {
     DefaultSkinId = 5402,
     DispatchTag = T.RT_4,
     DispatchUnlock = T.RT_3,
-    EscIcon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Dafu",
-    EscMenuBg = "/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_Dafu",
+    EscIcon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Lilikou",
+    EscMenuBg = "/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_Lilikou",
     FirstCharItemId = 1015402,
     FirstCharItemNum = 1,
-    GUIPathVariable = "Dafu",
-    GachaIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Avatar/T_Gacha_AvatarDafu",
-    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Dafu",
+    GUIPathVariable = "Lilikou",
+    GachaIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Avatar/T_Gacha_AvatarLilikou",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Lilikou",
     MeleeWeapon = 10101,
     ModSlot = T.RT_2,
     ModSlotUnlock = T.RT_1,
@@ -1771,7 +1816,7 @@ return ReadOnly("Char", {
     },
     SortPriority = 4002,
     Sound = "SOUND_ITEM_NORMAL",
-    SpineBp = "WBP_Get_Avatar_WidgetDafu"
+    SpineBp = "WBP_Get_Avatar_WidgetLilikou"
   },
   [120101] = {
     ArmoryCameraPosition = T.RT_7,
@@ -1790,7 +1835,7 @@ return ReadOnly("Char", {
     DefaultAccessory = T.RT_5,
     DefaultHairId = 120101,
     DefaultSkinId = 120101,
-    DispatchTag = T.RT_11,
+    DispatchTag = T.RT_12,
     DispatchUnlock = T.RT_3,
     EscIcon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Nanzhu02",
     EscMenuBg = "/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_Nanzhu02",
@@ -1838,7 +1883,7 @@ return ReadOnly("Char", {
     DefaultAccessory = T.RT_5,
     DefaultHairId = 160101,
     DefaultSkinId = 160101,
-    DispatchTag = T.RT_11,
+    DispatchTag = T.RT_12,
     DispatchUnlock = T.RT_3,
     EscIcon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Nanzhu",
     EscMenuBg = "/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_Nanzhu",
@@ -1886,7 +1931,7 @@ return ReadOnly("Char", {
     DefaultAccessory = T.RT_5,
     DefaultHairId = 220101,
     DefaultSkinId = 220101,
-    DispatchTag = T.RT_10,
+    DispatchTag = T.RT_11,
     DispatchUnlock = T.RT_3,
     EscIcon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_WeitaM",
     EscMenuBg = "/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_WeitaM",

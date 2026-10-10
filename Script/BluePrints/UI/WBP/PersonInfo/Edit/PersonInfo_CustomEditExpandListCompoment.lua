@@ -21,6 +21,10 @@ function Component:_InitExpandListConfig()
   self.ActionOrderByDisplayNames = {
     "UI_RARITY_NAME"
   }
+  self.ItemOrderByDisplayNames = {
+    "UI_RARITY_NAME"
+  }
+  self.PetOrderByDisplayNames = self.Arr_OrderBy
   self.CharacterOrderByAttrNames = {
     "Level",
     "Rarity",
@@ -30,6 +34,13 @@ function Component:_InitExpandListConfig()
   self.MeleeOrderByAttrNames = self.CharacterOrderByAttrNames
   self.RangedOrderByAttrNames = self.CharacterOrderByAttrNames
   self.ActionOrderByAttrNames = {"Rarity", "UnitId"}
+  self.ItemOrderByAttrNames = {"Rarity", "ItemId"}
+  self.PetOrderByAttrNames = {
+    "Level",
+    "Rarity",
+    "SortPriority",
+    "UnitId"
+  }
   self.CharacterFilterTags, self.CharacterFilterNames = UIUtils.GetAllElementTypes()
   self.CharacterFilterIcons = {}
   for _, Tag in ipairs(self.CharacterFilterTags) do
@@ -93,8 +104,7 @@ function Component:ExpandList(IsListExpanded)
   self:BindEvents(self, {
     OnListItemClicked = self.OnExpandListItemClicked,
     SortFuncion = self.SortItemContents,
-    FilterFunction = self.FilterItemContents,
-    OnListItemSelectionChanged = self.OnExpandListItemSelectionChanged
+    FilterFunction = self.FilterItemContents
   })
   self:InitEditListView(self, {
     Filters = self.Filters,
@@ -102,15 +112,6 @@ function Component:ExpandList(IsListExpanded)
     SortType = CommonConst.DESC,
     ItemContents = self.CurrentItemContentsArray
   })
-end
-
-function Component:OnExpandListItemSelectionChanged(Content, IsSelected)
-  if not IsSelected then
-    return
-  end
-  if self.IsGamepadInput then
-    self:OnExpandListItemClicked(Content)
-  end
 end
 
 function Component:OnExpandListItemClicked(Content)
@@ -166,6 +167,12 @@ function Component:_ResolveCurrentListType()
   if self.ChooseMode == "Action" then
     return "Action"
   end
+  if self.ChooseMode == "Item" then
+    return "Item"
+  end
+  if self.ChooseMode == "Pet" then
+    return "Pet"
+  end
   return "Character"
 end
 
@@ -206,6 +213,21 @@ function Component:_GetExpandListTypeConfig(ListType)
       OrderByAttrNames = self.ActionOrderByAttrNames
     }
   end
+  if "Item" == ListType then
+    return {
+      OrderByDisplayNames = self.ItemOrderByDisplayNames,
+      OrderByAttrNames = self.ItemOrderByAttrNames
+    }
+  end
+  if "Pet" == ListType then
+    return {
+      FilterTags = nil,
+      FilterNames = nil,
+      FilterIcons = nil,
+      OrderByDisplayNames = self.PetOrderByDisplayNames,
+      OrderByAttrNames = self.PetOrderByAttrNames
+    }
+  end
   error("Invalid custom edit choose list type: " .. tostring(ListType))
 end
 
@@ -213,6 +235,8 @@ function Component:_BuildExpandListItemContents(ListType)
   local ItemContents = self:_BuildCurrentListContents(ListType)
   if "Character" == ListType then
     self:_RefreshCharacterChosenState(ItemContents)
+  elseif "Pet" == ListType then
+    self:_RefreshPetChosenState(ItemContents)
   end
   return ItemContents
 end
@@ -228,6 +252,14 @@ function Component:_DispatchExpandListItemClicked(Content)
   end
   if self.CurrentListType == "Action" then
     self:ActionMain_OnListItemClicked(Content)
+    return
+  end
+  if self.CurrentListType == "Item" then
+    self:ItemMain_OnListItemClicked(Content)
+    return
+  end
+  if self.CurrentListType == "Pet" then
+    self:PetMain_OnListItemClicked(Content)
     return
   end
   error("Invalid custom edit choose list type: " .. tostring(self.CurrentListType))

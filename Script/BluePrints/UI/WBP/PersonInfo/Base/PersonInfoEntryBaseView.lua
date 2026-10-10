@@ -2,6 +2,7 @@ require("UnLua")
 local PersonInfoCommon = require("BluePrints.UI.WBP.PersonInfo.PersonInfoCommon")
 local PersonInfoController = require("BluePrints.UI.WBP.PersonInfo.PersonInfoController")
 local PersonInfoModel = PersonInfoController:GetModel()
+local PreviewLevelHandoffMask = require("BluePrints.UI.Common.Preview.PreviewLevelHandoffMask")
 local M = {}
 M._components = {
   "BluePrints.UI.WBP.Armory.MainComponent.Armory_PointerInputComponent"
@@ -18,8 +19,57 @@ function M:Construct()
   end)
 end
 
+function M:ReceiveExitState(StackAction)
+  if self.Super and self.Super.ReceiveExitState then
+    self.Super.ReceiveExitState(self, StackAction)
+  end
+  if 0 ~= StackAction then
+    return
+  end
+  local Page = self.PersonInfoMainPage
+  if not Page then
+    return
+  end
+  local Manager = UIManager(self)
+  local IncomingName
+  if Manager and Manager.CurrentUIList then
+    local UINameList = Manager.CurrentUIList:ToTable()
+    IncomingName = UINameList[#UINameList]
+  end
+  if "CommonRanking" ~= IncomingName and "AppearanceMain" ~= IncomingName then
+    return
+  end
+  Page.bStackCovered = true
+  PreviewLevelHandoffMask.Show(self)
+  local Controller = Page.ActorController
+  local Service = Controller and Controller.SceneService
+  if Service and Service.UnloadScene then
+    Service:UnloadScene(true)
+  end
+end
+
+function M:ReceiveEnterState(StackAction)
+  if self.Super and self.Super.ReceiveEnterState then
+    self.Super.ReceiveEnterState(self, StackAction)
+  end
+  if 1 ~= StackAction then
+    return
+  end
+  local Page = self.PersonInfoMainPage
+  if not Page or not Page.bStackCovered then
+    return
+  end
+  Page.bStackCovered = nil
+  if Page.ApplyDisplayPreviewDraft then
+    Page:ApplyDisplayPreviewDraft()
+  end
+end
+
 function M:OnLoaded(...)
   self.Super.OnLoaded(self, ...)
+  if self.PersonInfoMainPage then
+    self.PersonInfoMainPage.bStackCovered = nil
+  end
   self.Platform = CommonUtils.GetDeviceTypeByPlatformName(self)
   self:AddTimer(self.StartDelay or 0, function()
     if self.HideBegin then
@@ -90,13 +140,36 @@ end
 
 function M:HideUIInstant()
   PersonInfoController:SetMainPageUIHidden(true)
-  self.Content:SetRenderOpacity(0)
+  local Page = self.PersonInfoMainPage
+  if Page and Page.MainPanel then
+    Page.MainPanel:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  self:SetMainPageBlurVisible(false)
+  if self.MainPageItem then
+    self.MainPageItem:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
   local Tab = self.Com_Tab or self.Com_Tab_M
-  Tab:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  if Tab then
+    Tab:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
   local GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
   if GameInputModeSubsystem then
     GameInputModeSubsystem:SetNavigateWidgetOpacity(0)
   end
+  self:SetFocus()
+end
+
+function M:SetMainPageBlurVisible(bVisible)
+  local Page = self.PersonInfoMainPage
+  local Blur = Page and Page.BackgroundBlurWithMask_Main
+  if not Blur then
+    return
+  end
+  local Visibility = UIConst.VisibilityOp.Collapsed
+  if bVisible then
+    Visibility = UIConst.VisibilityOp.SelfHitTestInvisible
+  end
+  Blur:SetVisibility(Visibility)
 end
 
 function M:PlayAnimation(Animation)

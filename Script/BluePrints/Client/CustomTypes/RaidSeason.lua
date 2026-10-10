@@ -15,6 +15,16 @@ RaidSeason.__Props__ = {
   BanState = prop.prop("Int", "client save", 0),
   MaxSquad = prop.prop("Bytes", "client save"),
   FinalRank = prop.prop("Int", "client save", 0),
+  PreRaidFloor = prop.prop("Int", "client save", 0),
+  PreRaidFloorPassTime = prop.prop("Float", "client save", 0),
+  PreRaidUnlockFloor = prop.prop("Int", "client save", 1),
+  RaidFloor = prop.prop("Int", "client save", 0),
+  RaidFloorPassTime = prop.prop("Float", "client save", 0),
+  RaidUnlockFloor = prop.prop("Int", "client save", 1),
+  PreRaidFloorRewardGot = prop.prop("Int2IntDict", "client save"),
+  RaidFloorRewardGot = prop.prop("Int2IntDict", "client save"),
+  RaidRankRewardGot = prop.prop("Int", "client save", 0),
+  bSquadView = prop.prop("Bool", "client save", true),
   EventId = prop.getter("Data", "EventId"),
   PreRaidRank = prop.getter("Data", "PreRaidRank"),
   PreRaidTime = prop.getter("Data", "PreRaidTime"),
@@ -27,6 +37,11 @@ RaidSeason.__Props__ = {
 
 function RaidSeason:Init(RaidSeasonId)
   self.RaidSeasonId = RaidSeasonId
+  local RaidSeasonData = DataMgr.RaidSeason[RaidSeasonId]
+  if RaidSeasonData then
+    self.PreRaidUnlockFloor = RaidSeasonData.PreRaidFloorUnlock or 1
+    self.RaidUnlockFloor = RaidSeasonData.RaidFloorUnlock or 1
+  end
 end
 
 function RaidSeason:Data()

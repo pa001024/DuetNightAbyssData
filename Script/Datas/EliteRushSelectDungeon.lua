@@ -51,7 +51,8 @@ return ReadOnly("EliteRushSelectDungeon", {
       15004,
       15005,
       15006,
-      15007
+      15007,
+      15008
     },
     Name = "UI_DungeonMod_Tab_50",
     Sequence = 50
@@ -107,7 +108,8 @@ return ReadOnly("EliteRushSelectDungeon", {
       16507,
       16508,
       16509,
-      16510
+      16510,
+      16511
     },
     Name = "UI_DungeonMod_Tab_65",
     Sequence = 80
@@ -120,13 +122,7 @@ return ReadOnly("EliteRushSelectDungeon", {
       17003,
       17004,
       17005,
-      17006,
-      17007,
-      17008,
-      17009,
-      17010,
-      17015,
-      17016
+      17006
     },
     Name = "UI_DungeonMod_Tab_70",
     Sequence = 90
@@ -134,27 +130,18 @@ return ReadOnly("EliteRushSelectDungeon", {
   UI_DungeonMod_Tab_75 = {
     Condition = T.RT_1,
     MonRewardIdList = {
-      18001,
       18002,
       18003,
-      18004,
-      18005,
       18006,
       18007,
-      18008,
-      18009,
       18010,
       18011,
-      18012,
-      18013,
       18014,
-      18015,
       18016,
-      18017,
       18018,
-      18019,
       18020,
-      18021
+      18022,
+      18024
     },
     Name = "UI_DungeonMod_Tab_75",
     Sequence = 100
@@ -162,9 +149,18 @@ return ReadOnly("EliteRushSelectDungeon", {
   UI_DungeonMod_Tab_80 = {
     Condition = T.RT_1,
     MonRewardIdList = {
-      18022,
+      18001,
+      18004,
+      18005,
+      18008,
+      18009,
+      18012,
+      18013,
+      18015,
+      18017,
+      18019,
+      18021,
       18023,
-      18024,
       18025
     },
     Name = "UI_DungeonMod_Tab_80",

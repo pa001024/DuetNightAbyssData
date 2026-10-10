@@ -11,7 +11,10 @@ function M:Init(WildMap, IdicatorLimitSize, TrackTarget, IsGamer)
   self.IdicatorLimitSize = IdicatorLimitSize - size / 2
   self.Btn_Click.OnClicked:Clear()
   self.Btn_Click.OnClicked:Add(self, function()
-    WildMap.CurrentDragOffset = -TrackTarget.RenderTransform.Translation
+    if not IsValid(self.TrackTarget) then
+      return
+    end
+    WildMap.CurrentDragOffset = -self.TrackTarget.RenderTransform.Translation
     if WildMap:IsOverBorder() then
       WildMap:LimitDragOffset()
     end
@@ -36,6 +39,25 @@ function M:Init(WildMap, IdicatorLimitSize, TrackTarget, IsGamer)
   self.Location = FVector2D()
 end
 
+function M:SetTrackTarget(TrackTarget)
+  if self.TrackTarget == TrackTarget then
+    return
+  end
+  if self.Active then
+    self.Panel_Indicator:SetVisibility(ESlateVisibility.Collapsed)
+    self:StopAllAnimations()
+    self.Active = false
+    if IsValid(self.TrackTarget) then
+      if self.TrackTarget.SetPointVisibility then
+        self.TrackTarget:SetPointVisibility("Indicator", true)
+      else
+        self.TrackTarget:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      end
+    end
+  end
+  self.TrackTarget = TrackTarget
+end
+
 function M:OnPointerMove(CurrentDragOffset, GamerLoc)
   if not self.IsInRegion and self.IsGamer then
     return
@@ -47,16 +69,25 @@ function M:OnPointerMove(CurrentDragOffset, GamerLoc)
     BottomY = self.IdicatorLimitSize.Y + self.BgHeight.Y
   end
   if self.Location.X > self.IdicatorLimitSize.X or self.Location.X < -self.IdicatorLimitSize.X or BottomY < self.Location.Y or self.Location.Y < -self.IdicatorLimitSize.Y then
-    local k = self.Location.Y / self.Location.X
-    local screenK = self.IdicatorLimitSize.Y / self.IdicatorLimitSize.X
-    if k > screenK and self.Location.X > 0 or k < -screenK and self.Location.X < 0 then
-      self.Location:Set(BottomY / k, BottomY)
-    elseif k > screenK and self.Location.X < 0 or k < -screenK and self.Location.X > 0 then
-      self.Location:Set(-self.IdicatorLimitSize.Y / k, -self.IdicatorLimitSize.Y)
-    elseif k < screenK and self.Location.X > 0 or k > -screenK and self.Location.X > 0 then
-      self.Location:Set(self.IdicatorLimitSize.X, self.IdicatorLimitSize.X * k)
-    elseif k < screenK and self.Location.X < 0 or k > -screenK and self.Location.X < 0 then
-      self.Location:Set(-self.IdicatorLimitSize.X, -self.IdicatorLimitSize.X * k)
+    if 0 == self.Location.X then
+      if self.Location.Y > 0 then
+        self.Location:Set(0, BottomY)
+      else
+        self.Location:Set(0, -self.IdicatorLimitSize.Y)
+      end
+    else
+      local k = self.Location.Y / self.Location.X
+      local screenK = self.IdicatorLimitSize.Y / self.IdicatorLimitSize.X
+      local bottomK = BottomY / self.IdicatorLimitSize.X
+      if k > bottomK and self.Location.X > 0 or k < -bottomK and self.Location.X < 0 then
+        self.Location:Set(BottomY / k, BottomY)
+      elseif k > screenK and self.Location.X < 0 or k < -screenK and self.Location.X > 0 then
+        self.Location:Set(-self.IdicatorLimitSize.Y / k, -self.IdicatorLimitSize.Y)
+      elseif k < screenK and self.Location.X > 0 or k > -screenK and self.Location.X > 0 then
+        self.Location:Set(self.IdicatorLimitSize.X, self.IdicatorLimitSize.X * k)
+      elseif k < screenK and self.Location.X < 0 or k > -screenK and self.Location.X < 0 then
+        self.Location:Set(-self.IdicatorLimitSize.X, -self.IdicatorLimitSize.X * k)
+      end
     end
     local tan = math.deg(math.atan(self.Location.Y, self.Location.X))
     if not self.Active then
@@ -64,10 +95,12 @@ function M:OnPointerMove(CurrentDragOffset, GamerLoc)
       self:StopAllAnimations()
       self:PlayAnimation(self.Auto_In)
       self.Active = true
-      if self.TrackTarget.SetPointVisibility then
-        self.TrackTarget:SetPointVisibility("Indicator", false, true)
-      else
-        self.TrackTarget:SetVisibility(ESlateVisibility.Collapsed)
+      if IsValid(self.TrackTarget) then
+        if self.TrackTarget.SetPointVisibility then
+          self.TrackTarget:SetPointVisibility("Indicator", false, true)
+        else
+          self.TrackTarget:SetVisibility(ESlateVisibility.Collapsed)
+        end
       end
     end
     self:SetRenderTranslation(self.Location)
@@ -77,10 +110,12 @@ function M:OnPointerMove(CurrentDragOffset, GamerLoc)
     self:StopAllAnimations()
     self:PlayAnimation(self.Auto_Out)
     self.Active = false
-    if self.TrackTarget.SetPointVisibility then
-      self.TrackTarget:SetPointVisibility("Indicator", true)
-    else
-      self.TrackTarget:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    if IsValid(self.TrackTarget) then
+      if self.TrackTarget.SetPointVisibility then
+        self.TrackTarget:SetPointVisibility("Indicator", true)
+      else
+        self.TrackTarget:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      end
     end
   end
 end

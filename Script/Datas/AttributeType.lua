@@ -154,6 +154,10 @@ return ReadOnly("AttributeType", {
       ID = "BonusDamage",
       Type = "Light"
     },
+    Skill = {
+      ID = "BonusDamage",
+      Type = "Skill"
+    },
     Thunder = {
       ID = "BonusDamage",
       Type = "Thunder"

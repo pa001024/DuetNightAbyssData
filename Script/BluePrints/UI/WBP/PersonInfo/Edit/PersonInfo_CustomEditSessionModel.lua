@@ -82,9 +82,11 @@ end
 function M:_ExecuteSaveEditAndClose()
   local bStarted, Reason = self:SaveEdit(function()
     UIManager(self.OwnerWidget):ShowUITip("CommonToastMain", GText("UI_PersonalPage_SaveSuccess"))
-    self.DisplayEditor:AcceptCurrentDraftAsBaseline()
-    self.InitialSavedDraft = DisplayDraft:Clone(self.DisplayEditor:GetDraft())
-    self.UsedSceneId = self:_GetCurrentSceneId()
+    self:_ApplySavedDraftToEditor()
+    local Editor = self:_ResolveDisplayEditor()
+    if Editor then
+      Editor:AcceptCurrentDraftAsBaseline()
+    end
     self:_CloseOwnerEditPage()
   end)
   if not bStarted and "draft_not_dirty" == Reason then
@@ -115,11 +117,21 @@ function M:SaveEdit(OnSaved)
   local bStarted = PersonInfoModel:SaveCustomDisplayDraft(self.DisplayEditor, function(Ret)
     self.IsSaving = false
     DebugPrint(string.format("PersonInfoSaveEdit: callback ret=%s", tostring(Ret)))
-    if ErrorCode and ErrorCode.Check and ErrorCode:Check(Ret) then
-      self.ValidCharacterSlotIndices = self:_CollectOccupiedCharacterSlotIndices(self.DisplayEditor:GetDraft())
+    local bSuccess = ErrorCode and ErrorCode.Check and ErrorCode:Check(Ret)
+    if bSuccess then
+      self.bPendingRestoreAfterSave = false
+      local Editor = self:_ResolveDisplayEditor()
+      if Editor then
+        self.ValidCharacterSlotIndices = self:_CollectOccupiedCharacterSlotIndices(Editor:GetDraft())
+      end
       if OnSaved then
         OnSaved(Ret)
       end
+      return
+    end
+    if self.bPendingRestoreAfterSave then
+      self.bPendingRestoreAfterSave = false
+      self:_ApplySavedDraftToEditor()
     end
   end)
   if not bStarted then
@@ -233,13 +245,121 @@ function M:_FindNextEmptyCharacterSlotIndex(StartSlotIndex)
   return nil
 end
 
-function M:_LoadInitialDraftFromServer()
-  local Draft = self.DisplayEditor and self.DisplayEditor.GetDraft and self.DisplayEditor:GetDraft() or nil
-  if not Draft then
-    Draft = PersonInfoModel:GetCustomDisplayDraft()
-    Draft = Draft or self:_BuildInitialEmptyDraft()
-    self.DisplayEditor:SetDraft(Draft)
+local function RoundCompareNumber(Value)
+  return math.floor((tonumber(Value) or 0) * 100 + 0.5) / 100
+end
+
+local function BuildTransformCompareTable(Transform)
+  if type(Transform) ~= "userdata" then
+    return Transform
   end
+  local Location = Transform.Translation
+  local Scale = Transform.Scale3D
+  local Rotation = Transform.Rotation
+  local Rotator
+  if Rotation and Rotation.ToRotator then
+    Rotator = Rotation:ToRotator()
+  end
+  return {
+    X = RoundCompareNumber(Location and Location.X),
+    Y = RoundCompareNumber(Location and Location.Y),
+    Z = RoundCompareNumber(Location and Location.Z),
+    Pitch = RoundCompareNumber(Rotator and Rotator.Pitch),
+    Yaw = RoundCompareNumber(Rotator and Rotator.Yaw),
+    Roll = RoundCompareNumber(Rotator and Rotator.Roll),
+    ScaleX = RoundCompareNumber(Scale and Scale.X),
+    ScaleY = RoundCompareNumber(Scale and Scale.Y),
+    ScaleZ = RoundCompareNumber(Scale and Scale.Z)
+  }
+end
+
+local function BuildActionCompareTable(Action)
+  if type(Action) ~= "table" then
+    return nil
+  end
+  return {
+    Mode = Action.Mode,
+    PoseId = Action.PoseId,
+    PoseTag = Action.PoseTag,
+    MontagePath = Action.MontagePath,
+    Document = Action.Document,
+    PoseName = Action.PoseName,
+    ReleaseWheel = Action.ReleaseWheel
+  }
+end
+
+local function BuildDefaultWeaponActionIdentity(WeaponData)
+  if not WeaponData then
+    return nil
+  end
+  local PoseTag = "Melee"
+  if WeaponData.HasTag and WeaponData:HasTag("Ranged") then
+    PoseTag = "Ranged"
+  end
+  return BuildActionCompareTable({PoseTag = PoseTag})
+end
+
+local function BuildSlotActorIdentity(Slot, Kind)
+  if type(Slot) ~= "table" then
+    return nil
+  end
+  local Identity = {
+    Transform = BuildTransformCompareTable(Slot.Transform)
+  }
+  if "Char" == Kind then
+    local CharData = Slot.CharData
+    local WeaponData = Slot.WeaponData
+    Identity.CharId = CharData and (CharData.CharId or CharData.Uuid) or nil
+    Identity.WeaponId = WeaponData and WeaponData.WeaponId or nil
+    Identity.Action = BuildActionCompareTable(Slot.Action) or BuildDefaultWeaponActionIdentity(WeaponData)
+  elseif "Pet" == Kind then
+    local PetData = Slot.PetData
+    Identity.PetId = PetData and (PetData.UniqueId or PetData.PetId) or nil
+  else
+    local ItemData = Slot.ItemData
+    Identity.ItemId = ItemData and (ItemData.ItemId or ItemData.Id) or nil
+  end
+  return Identity
+end
+
+local function BuildSlotGroupActorIdentity(SlotGroup, Kind)
+  local Identities = {}
+  if type(SlotGroup) ~= "table" then
+    return Identities
+  end
+  for Index, Slot in ipairs(SlotGroup) do
+    Identities[Index] = BuildSlotActorIdentity(Slot, Kind)
+  end
+  return Identities
+end
+
+local function IsIncomingDraftSameForRender(CurrentDraft, IncomingDraft)
+  local CurrentSceneId = CurrentDraft and CurrentDraft.Scene and CurrentDraft.Scene.SceneId or nil
+  local IncomingSceneId = IncomingDraft and IncomingDraft.Scene and IncomingDraft.Scene.SceneId or nil
+  if CurrentSceneId ~= IncomingSceneId then
+    return false
+  end
+  local CurrentIdentity = {
+    CharacterSlots = BuildSlotGroupActorIdentity(CurrentDraft and CurrentDraft.CharacterSlots, "Char"),
+    PetSlots = BuildSlotGroupActorIdentity(CurrentDraft and CurrentDraft.PetSlots, "Pet"),
+    ItemSlots = BuildSlotGroupActorIdentity(CurrentDraft and CurrentDraft.ItemSlots, "Item")
+  }
+  local IncomingIdentity = {
+    CharacterSlots = BuildSlotGroupActorIdentity(IncomingDraft and IncomingDraft.CharacterSlots, "Char"),
+    PetSlots = BuildSlotGroupActorIdentity(IncomingDraft and IncomingDraft.PetSlots, "Pet"),
+    ItemSlots = BuildSlotGroupActorIdentity(IncomingDraft and IncomingDraft.ItemSlots, "Item")
+  }
+  return DisplayDraft:IsEquivalent(CurrentIdentity, IncomingIdentity) == true
+end
+
+function M:_LoadInitialDraftFromServer()
+  if not self.DisplayEditor then
+    return
+  end
+  local Draft = PersonInfoModel:GetCustomDisplayDraft()
+  Draft = Draft or self:_BuildInitialEmptyDraft()
+  local bSkipRender = IsIncomingDraftSameForRender(self.DisplayEditor:GetDraft(), Draft)
+  self.DisplayEditor:SetDraft(Draft, bSkipRender)
   self.DisplayEditor:AcceptCurrentDraftAsBaseline()
   self.InitialSavedDraft = DisplayDraft:Clone(Draft)
   self.UsedSceneId = Draft and Draft.Scene and Draft.Scene.SceneId or nil
@@ -269,26 +389,63 @@ function M:_CollectOccupiedCharacterSlotIndices(Draft)
   return SlotIndices
 end
 
-function M:_RestoreDraftOnAbandonIfNeeded()
-  if self.DisplayEditor == nil or self.IsSaving == true then
-    return
+function M:_ResolveDisplayEditor()
+  if self.DisplayEditor then
+    return self.DisplayEditor
   end
-  if nil == self.InitialSavedDraft then
-    return
+  if self.DisplayController and self.DisplayController.GetEditor then
+    return self.DisplayController:GetEditor()
   end
-  if not self.DisplayEditor:IsDraftDirty() and not self.DisplayEditor:IsPreviewTransactionActive() then
-    return
+  local RootPage = PersonInfoController.MainPage
+  local MainPage = RootPage and RootPage.PersonInfoMainPage or nil
+  local ActorController = MainPage and MainPage.ActorController or nil
+  if ActorController and ActorController.GetEditor then
+    return ActorController:GetEditor()
+  end
+  return nil
+end
+
+function M:_ApplySavedDraftToEditor()
+  local Editor = self:_ResolveDisplayEditor()
+  if not Editor then
+    return false
   end
   local SavedDraft = PersonInfoModel:GetCustomDisplayDraft()
   SavedDraft = SavedDraft or self:_BuildInitialEmptyDraft()
   self.InitialSavedDraft = DisplayDraft:Clone(SavedDraft)
   self.UsedSceneId = SavedDraft and SavedDraft.Scene and SavedDraft.Scene.SceneId or nil
-  self.DisplayEditor:SetDraft(SavedDraft)
+  local bSkipRender = IsIncomingDraftSameForRender(Editor:GetDraft(), SavedDraft)
+  Editor:SetDraft(SavedDraft, bSkipRender)
+  if true == bSkipRender then
+    local Renderer = Editor.Renderer
+    if Renderer and Renderer.ApplyDraftFilter then
+      Renderer:ApplyDraftFilter(Editor:GetDraft())
+    end
+  end
   self.ValidCharacterSlotIndices = self:_CollectOccupiedCharacterSlotIndices(SavedDraft)
   self.PendingCharacterChoosePreview = nil
   self.StagedCharacterChooseSelections = {}
   self.CharacterChooseBaseDraft = nil
   self.CharacterChoosePreviewSceneSlotIndex = nil
+  return true
+end
+
+function M:_RestoreDraftOnAbandonIfNeeded()
+  local Editor = self:_ResolveDisplayEditor()
+  if nil == Editor then
+    return
+  end
+  if self.IsSaving == true then
+    self.bPendingRestoreAfterSave = true
+    return
+  end
+  if nil == self.InitialSavedDraft then
+    return
+  end
+  if not Editor:IsDraftDirty() and not Editor:IsPreviewTransactionActive() then
+    return
+  end
+  self:_ApplySavedDraftToEditor()
 end
 
 function M:_BuildCharacterChooseSlotDraft()

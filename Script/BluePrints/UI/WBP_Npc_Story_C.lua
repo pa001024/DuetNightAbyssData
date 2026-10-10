@@ -28,7 +28,9 @@ end
 
 function BP_Npc_Story_C:OnLoaded(Title, Context, AnimationName, AgeInfo)
   local PlayerCharacter = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
-  PlayerCharacter:SetCanInteractiveTrigger(false, "WBP_Story_NPC_C")
+  if IsValid(PlayerCharacter) then
+    PlayerCharacter:SetCanInteractiveTrigger(false, "WBP_Story_NPC_C")
+  end
   self:UnbindAllFromAnimationFinished(self.In)
   self:BindToAnimationFinished(self.In, {
     self,
@@ -41,16 +43,29 @@ function BP_Npc_Story_C:OnLoaded(Title, Context, AnimationName, AgeInfo)
 end
 
 function BP_Npc_Story_C:Destruct()
+  self:RestorePlayerState()
   self.ExecOnClose = nil
   BP_Npc_Story_C.Super.Destruct(self)
 end
 
-function BP_Npc_Story_C:BtnBackOnClick()
+function BP_Npc_Story_C:RestorePlayerState()
   self:ChangePlayerInputable(true)
+  local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
+  if not GameInstance and GWorld then
+    GameInstance = GWorld.GameInstance
+  end
+  if not GameInstance then
+    return
+  end
+  local PlayerCharacter = UE4.UGameplayStatics.GetPlayerCharacter(GameInstance, 0)
+  if IsValid(PlayerCharacter) then
+    PlayerCharacter:SetCanInteractiveTrigger(true, "WBP_Story_NPC_C")
+  end
+end
+
+function BP_Npc_Story_C:BtnBackOnClick()
   AudioManager(self):PlayUISound(self, "event:/ui/common/npc_info_panel", "NpcStory", nil)
   self:Close()
-  local PlayerCharacter = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
-  PlayerCharacter:SetCanInteractiveTrigger(true, "WBP_Story_NPC_C")
 end
 
 function BP_Npc_Story_C:Close()

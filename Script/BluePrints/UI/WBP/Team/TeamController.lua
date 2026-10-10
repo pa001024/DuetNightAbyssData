@@ -602,7 +602,8 @@ function M:DoCheckCanEnterDungeon(DungeonId)
       self:SetUpAutoResetHeadStateTimer()
       return false
     end
-    local CostNeed = DataMgr.Dungeon[DungeonId] and DataMgr.Dungeon[DungeonId].DungeonCost[1] or 0
+    local DungeonCost = DataMgr.Dungeon[DungeonId] and DataMgr.Dungeon[DungeonId].DungeonCost
+    local CostNeed = DungeonCost and DungeonCost[1] or 0
     local MemberNames, WhoUids = {}, {}
     for _, TeamMember in pairs(TeamInfo.Members) do
       if (TeamMember.ActionPoint or 0) < (CostNeed or 0) then

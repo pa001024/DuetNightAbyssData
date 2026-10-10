@@ -84,6 +84,7 @@ function BP_EMGameInstance_C:InitReady()
   else
     self:_FontOptimizeSetting()
     self:_ApplyKawaiiPhysicsSetting()
+    self:InitTBHStatusListener()
   end
   if URuntimeCommonFunctionLibrary.IsPlayInEditor(self) then
     DebugPrint("Check Open FX Budget in Editor ", Const.bEditorOpenFXBudget)
@@ -110,6 +111,237 @@ function BP_EMGameInstance_C:OnPostWorldCleanup(World, bSessionEnded, bCleanupRe
   if World:GetName() == self:GetWorld():GetName() and not GWorld:GetAvatar() then
     EventManager:CheckIsLeak()
   end
+end
+
+function BP_EMGameInstance_C:InitTBHStatusListener()
+  if self.bTBHStatusBound then
+    return
+  end
+  EventManager:AddEvent(EventID.OnAvatarStatusUpdate, self, self.OnTBHAvatarStatusUpdate)
+  EventManager:AddEvent(EventID.OnSwitchCurrentChar, self, self.OnTBHSwitchCurrentChar)
+  EventManager:AddEvent(EventID.CharWaitingResurgence, self, self.OnTBHMainDying)
+  EventManager:AddEvent(EventID.CharRecover, self, self.OnTBHMainRecover)
+  self.bTBHStatusBound = true
+  self.LastTBHState = nil
+  self.bTBHMainDead = false
+  self.TBHCharSwitchRetrySerial = 0
+end
+
+function BP_EMGameInstance_C:OnTBHAvatarStatusUpdate(OldStatus, NewStatus)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local State = self:GetTBHSendState(Avatar)
+  if self.LastTBHState == State then
+    return
+  end
+  if "combat" == State then
+    self:SendTBHDungeonStatus("enter")
+  end
+  if self:SendTBHCharacterInfo(State) then
+    self.LastTBHState = State
+  end
+end
+
+function BP_EMGameInstance_C:OnTBHMainDying(Eid)
+  local BattleMgr = Battle(self)
+  local Entity = BattleMgr and BattleMgr:GetEntity(Eid) or nil
+  if not Entity or not Entity:IsMainPlayer() then
+    return
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar or not Avatar:IsInDungeon() then
+    return
+  end
+  self.bTBHMainDead = true
+  if self:SendTBHCharacterInfo("death") then
+    self.LastTBHState = "death"
+  end
+end
+
+function BP_EMGameInstance_C:OnTBHMainRecover(Eid)
+  local BattleMgr = Battle(self)
+  local Entity = BattleMgr and BattleMgr:GetEntity(Eid) or nil
+  if not Entity or not Entity:IsMainPlayer() then
+    return
+  end
+  self.bTBHMainDead = false
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local State = self:GetTBHSendState(Avatar)
+  if self:SendTBHCharacterInfo(State) then
+    self.LastTBHState = State
+  end
+end
+
+function BP_EMGameInstance_C:GetTBHSendState(Avatar)
+  if not Avatar:IsInDungeon() then
+    self.bTBHMainDead = false
+    return "idle"
+  end
+  if self.bTBHMainDead then
+    return "death"
+  end
+  return "combat"
+end
+
+function BP_EMGameInstance_C:OnTBHSwitchCurrentChar(Ret, CharUuid)
+  if not CharUuid or not ErrorCode:Check(Ret) then
+    return
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local State = self:GetTBHSendState(Avatar)
+  self.TBHCharSwitchRetrySerial = (self.TBHCharSwitchRetrySerial or 0) + 1
+  local Serial = self.TBHCharSwitchRetrySerial
+  if self:SendTBHCharacterInfo(State, CharUuid) then
+    return
+  end
+  self:AddTimer(3, function()
+    if self.TBHCharSwitchRetrySerial ~= Serial then
+      return
+    end
+    local CurAvatar = GWorld:GetAvatar()
+    if not CurAvatar or CurAvatar.CurrentChar ~= CharUuid then
+      return
+    end
+    local CurState = self:GetTBHSendState(CurAvatar)
+    self:SendTBHCharacterInfo(CurState, CharUuid)
+  end)
+end
+
+function BP_EMGameInstance_C:SyncTBHCharacterState()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return false
+  end
+  local State = self:GetTBHSendState(Avatar)
+  if self:SendTBHCharacterInfo(State) then
+    self.LastTBHState = State
+    return true
+  end
+  return false
+end
+
+function BP_EMGameInstance_C:GetTBHSceneId(SubRegionId)
+  local SubRegionInfo = SubRegionId and DataMgr.SubRegion[tonumber(SubRegionId)]
+  local RegionInfo = SubRegionInfo and SubRegionInfo.RegionId and DataMgr.Region[SubRegionInfo.RegionId]
+  return RegionInfo and RegionInfo.AFKSupportScene or ""
+end
+
+function BP_EMGameInstance_C:NotifyTBHRegionChanged(SubRegionId)
+  if not SubRegionId then
+    return false
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return false
+  end
+  local State = self:GetTBHSendState(Avatar)
+  if self:SendTBHCharacterInfo(State, nil, SubRegionId) then
+    self.LastTBHState = State
+    return true
+  end
+  return false
+end
+
+function BP_EMGameInstance_C:SendTBHCharacterInfo(State, CharUuid, SubRegionId)
+  if not UE4.UEMTaskbarRewardLibrary then
+    return false
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return false
+  end
+  local CurrentCharUuid = CharUuid or Avatar.CurrentChar
+  local Char = CurrentCharUuid and Avatar.Chars and Avatar.Chars[CurrentCharUuid] or nil
+  if not Char then
+    return false
+  end
+  local CharId = Char.CharId
+  if not CharId then
+    return false
+  end
+  local CharData = DataMgr.Char and DataMgr.Char[CharId] or nil
+  local CharName = CharData and CharData.CharName and GText(CharData.CharName) or tostring(CharId)
+  local SkinId = Char.CurrentSkinId or 0
+  local SceneId = self:GetTBHSceneId(SubRegionId or Avatar.CurrentRegionId)
+  local bOk, Err = pcall(function()
+    UE4.UEMTaskbarRewardLibrary.SendTaskbarCharacter(CharId, SkinId, State, CharName, SceneId)
+  end)
+  if not bOk then
+    ScreenPrint("[TBH] Send character info failed: " .. tostring(Err))
+  end
+  return bOk
+end
+
+function BP_EMGameInstance_C:SendTBHDungeonStatus(Status)
+  if not UE4.UEMTaskbarRewardLibrary then
+    return false
+  end
+  local DungeonId = self:GetCurrentDungeonId()
+  if not DungeonId or 0 == DungeonId then
+    return false
+  end
+  local DungeonName = ""
+  local DungeonInfo = DataMgr.Dungeon[DungeonId]
+  local DungeonNameKey = DungeonInfo and DungeonInfo.DungeonName
+  if DungeonNameKey and DataMgr.TextMap[DungeonNameKey] then
+    DungeonName = GText(DungeonNameKey)
+  end
+  local bOk, Err = pcall(function()
+    UE4.UEMTaskbarRewardLibrary.SendTaskbarDungeonStatus(DungeonId, Status, DungeonName)
+  end)
+  if not bOk then
+    ScreenPrint("[TBH] Send dungeon status failed: " .. tostring(Err))
+  end
+  return bOk
+end
+
+function BP_EMGameInstance_C:ClearTBHDeathState()
+  if not self.bTBHMainDead then
+    return
+  end
+  self.bTBHMainDead = false
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local State = self:GetTBHSendState(Avatar)
+  if self:SendTBHCharacterInfo(State) then
+    self.LastTBHState = State
+  end
+end
+
+function BP_EMGameInstance_C:SendTBHLang()
+  if not UE4.UEMTaskbarRewardLibrary then
+    return false
+  end
+  local TBHLangMap = {
+    CN = "zh",
+    EN = "en",
+    JP = "ja",
+    KR = "ko",
+    TC = "zht",
+    FR = "fr"
+  }
+  local SystemLanguage = EMCache:Get("SystemLanguage")
+  local Lang = SystemLanguage and TBHLangMap[SystemLanguage]
+  if not Lang then
+    return false
+  end
+  local bOk, Err = pcall(function()
+    UE4.UEMTaskbarRewardLibrary.SendTaskbarLanguage(Lang)
+  end)
+  if not bOk then
+    ScreenPrint("[TBH] Send language failed: " .. tostring(Err))
+  end
+  return bOk
 end
 
 function BP_EMGameInstance_C:NowTime()
@@ -464,6 +696,9 @@ function BP_EMGameInstance_C:RecordCombatData()
     end
     if GameState and GameState.GameModeType == "SoloRaid" then
       self.CombatData.MaxScore = GameState.SoloRaidHistoryMaxScore or 0
+      self.CombatData.HistoryMaxFloor = GameState.SoloRaidHistoryMaxFloor or 0
+      self.CombatData.HistoryMaxFloorPassTime = GameState.SoloRaidHistoryMaxFloorPassTime or 0
+      self.CombatData.HistoryMaxUnlockFloor = GameState.SoloRaidHistoryMaxUnlockFloor or 0
     end
     if GameState and GameState.GameModeType == "MonsterRush" then
       self.CombatData.FinishTime = GameMode:TriggerDungeonComponentFun("GetFinishTime") or 0
@@ -830,8 +1065,6 @@ function BP_EMGameInstance_C:TryDungeonSettlement()
         self:LoadGameEventSettlementUI(CurrentDungeonId, CurDungeonType, LogicServerInfo)
       elseif CurDungeonType == CommonConst.DungeonType.AsyncCombat then
         UIManager:LoadUINew("CoopSettlement", LogicServerInfo)
-      elseif CurDungeonType == CommonConst.DungeonType.GuildBoss then
-        UIManager:LoadUINew("GuildBossSettlement", LogicServerInfo)
       elseif "SoloTreasure" == CurDungeonType then
         local IsSoloWin = false
         if LogicServerInfo then
@@ -1199,19 +1432,40 @@ function BP_EMGameInstance_C:LoadGameEventSettlementUI(CurrentDungeonId, CurDung
     
     ActivityUtils.OpenActivitySettlement(DataMgr.PaotaiEventConstant.PaotaiGameEventId.ConstantValue, CurrentDungeonId, Params)
   elseif CurDungeonType and "SoloRaid" == CurDungeonType then
-    local CurScore = 0
-    local MaxScore = 0
-    local RawTimeRemain = 0
-    if ClientRes and ClientRes.ResRaidScore then
-      CurScore = ClientRes.ResRaidScore
-    end
-    if ClientRes and ClientRes.RawTimeRemain then
-      RawTimeRemain = ClientRes.RawTimeRemain
-    end
-    MaxScore = self.CombatData.MaxScore or 0
     local Avatar = GWorld:GetAvatar()
     if not Avatar then
       return nil
+    end
+    local IsFloorMode = GuildWarUtils.IsFloorMode()
+    DebugPrint("ljl1111111   IsFloorMode", IsFloorMode)
+    local CurScore = 0
+    local MaxScore = 0
+    local DisplayTime = 0
+    local FloorId = 0
+    local Floor = 0
+    local IsNewRecord = false
+    if IsFloorMode then
+      if ClientRes and ClientRes.PassTime then
+        DisplayTime = ClientRes.PassTime
+      end
+      if ClientRes and ClientRes.FloorId then
+        FloorId = ClientRes.FloorId
+        Floor = GuildWarUtils.GetRaidFloorById(FloorId)
+      end
+      if Floor > 0 and DisplayTime > 0 then
+        local MaxFloor = self.CombatData.HistoryMaxFloor or 0
+        local MaxFloorPassTime = self.CombatData.HistoryMaxFloorPassTime or 0
+        IsNewRecord = Floor > MaxFloor or Floor == MaxFloor and DisplayTime < MaxFloorPassTime
+      end
+    else
+      if ClientRes and ClientRes.ResRaidScore then
+        CurScore = ClientRes.ResRaidScore
+      end
+      if ClientRes and ClientRes.RawTimeRemain then
+        DisplayTime = ClientRes.RawTimeRemain
+      end
+      MaxScore = self.CombatData.MaxScore or 0
+      IsNewRecord = CurScore > MaxScore
     end
     local CurrentRaidSeasonId = Avatar.CurrentRaidSeasonId
     local RaidSeason = Avatar.RaidSeasons[CurrentRaidSeasonId]
@@ -1253,18 +1507,28 @@ function BP_EMGameInstance_C:LoadGameEventSettlementUI(CurrentDungeonId, CurDung
       MergeRewardTable(MergedRewards, DungeonRewards)
     end
     local ResId, ConsumeTicketCount, CurrentTicketCount = GuildWarUtils.GetDungeonTicketInfo(CurrentDungeonId)
+    if ClientRes and ClientRes.IsWin ~= nil then
+      IsWin = ClientRes.IsWin
+    end
     local Params = {
-      LevelScore = math.floor(CurScore),
       IsWin = IsWin,
       Text_Title = "FeinaEvent_DungeonFinish_Title",
       Text_GetReward = "FeinaEvent_DungeonFinish_Reward",
       ActivityId = EventId,
-      IsNewRecord = CurScore > MaxScore,
+      IsNewRecord = IsNewRecord,
       DungeonId = CurrentDungeonId,
-      TimeRemain = math.floor(RawTimeRemain or 0),
+      RaidSeasonId = CurrentRaidSeasonId,
+      FloorId = FloorId,
+      Floor = Floor,
       RewardsInfo = MergedRewards,
-      IsShowReturnText = IsShowReturnText
+      IsShowReturnText = IsShowReturnText,
+      TimeRemain = math.floor(DisplayTime or 0)
     }
+    if not IsFloorMode then
+      Params.LevelScore = math.floor(CurScore)
+    else
+      Params.PassTime = DisplayTime or 0
+    end
     if ResId > 0 and ConsumeTicketCount > 0 then
       Params.CostParams = {
         ResourceId = ResId,
@@ -1276,7 +1540,7 @@ function BP_EMGameInstance_C:LoadGameEventSettlementUI(CurrentDungeonId, CurDung
     end
     
     function Params.ContinueCallback()
-      return GuildWarUtils.EnterEventDungeon(CurrentDungeonId, EventId)
+      return GuildWarUtils.EnterGuildWarAgain(CurrentDungeonId, EventId, FloorId)
     end
     
     ActivityUtils.OpenActivitySettlement(EventId, CurrentDungeonId, Params)
@@ -1616,6 +1880,14 @@ end
 
 function BP_EMGameInstance_C:GetExitDungeonData()
   return self.ExitDungeonData
+end
+
+function BP_EMGameInstance_C:SetPreHighestUnlockedFloor(FloorNum)
+  self.HighestUnlockedFloor = FloorNum
+end
+
+function BP_EMGameInstance_C:GetPreHighestUnlockedFloor()
+  return self.HighestUnlockedFloor
 end
 
 function BP_EMGameInstance_C:ClearExitDungeonData()
@@ -1975,15 +2247,13 @@ function BP_EMGameInstance_C:InitAutoFashionSwitch()
     self.IsAutoFashionSwitch = false
     return
   end
-  local Value = EMCache:Get(OptionConfig.EMCacheName)
-  if nil == Value then
-    if CommonUtils.GetRuntimePlatform(self) == "Mobile" and OptionConfig.DefaultValueM then
-      Value = OptionConfig.DefaultValueM == "True"
-    else
-      Value = "True" == OptionConfig.DefaultValue
-    end
+  local DefaultValue
+  if CommonUtils.GetRuntimePlatform(self) == "Mobile" and OptionConfig.DefaultValueM then
+    DefaultValue = OptionConfig.DefaultValueM == "True"
+  else
+    DefaultValue = "True" == OptionConfig.DefaultValue
   end
-  self.IsAutoFashionSwitch = Value
+  self.IsAutoFashionSwitch = SettingUtils.GetEMCache(OptionConfig.EMCacheName, OptionConfig.EMCacheKey, DefaultValue)
 end
 
 function BP_EMGameInstance_C:InitGameSystemLanguage()

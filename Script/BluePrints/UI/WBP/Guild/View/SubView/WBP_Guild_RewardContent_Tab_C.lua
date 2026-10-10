@@ -62,8 +62,9 @@ function M:OnCellClicked(NotPlaySound)
     return
   end
   if self.IsForbidden then
-    local ToastText = self.ForbiddenReasonText or GText("GuildBossRewardNotOpen")
-    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, ToastText)
+    if self.ForbiddenReasonText then
+      UIManager(self):ShowUITip(UIConst.Tip_CommonToast, self.ForbiddenReasonText)
+    end
     return
   end
   self.Content.Root:RefreshListRewardInfo(self, NotPlaySound)

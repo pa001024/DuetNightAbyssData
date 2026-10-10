@@ -85,7 +85,9 @@ function M:UpdatePage()
       QuestContent.IsShowTip = NewQuestInfo.IsShowTip
       QuestContent.TipText = NewQuestInfo.TipText
       QuestContent.SideQuestChainId = NewQuestInfo.SideQuestChainId
-      QuestContent.SelfWidget:OnListItemObjectSet(QuestContent)
+      if QuestContent.SelfWidget then
+        QuestContent.SelfWidget:OnListItemObjectSet(QuestContent)
+      end
     end
   end
 end

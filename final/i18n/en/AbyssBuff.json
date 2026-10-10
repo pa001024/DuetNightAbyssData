@@ -174,6 +174,22 @@
     "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
   },
   {
+    "id": 218,
+    "icon": "Mon_Survive02",
+    "n": "Bulwark Cadence: Formidable Foes",
+    "d": "Enemy units take 80% less damage, but each time they take damage, this reduction is lowered by 1%. Summon DMG lowers it by an additional 1%.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 219,
+    "icon": "Mon_Survive02",
+    "n": "Bulwark Cadence: Elemental Invocation",
+    "d": "Enemy units take 80% less damage, but each time they take damage, the damage reduction decreases by 1%. Trigger an elemental bonus effect lowers it by an additional 1%.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
     "id": 301,
     "icon": "Skill",
     "n": "Andante Furioso: Ingenuity's Boon",
@@ -557,6 +573,54 @@
     "n": "Andante Furioso: The Courage to Defy",
     "d": "For every 20 instances of Weapon DMG dealt by any ally, grants 1 stack of +5% Damage Dealt for 10s, up to 10 stacks.",
     "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 17111,
+    "icon": "Melee",
+    "n": "Andante Furioso: The Courage to Defy",
+    "d": "For every 10 Elemental Bonus Effect triggered by any ally, grant them a stack of +5% Damage Dealt for 12s, up to 10 stacks.",
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 17121,
+    "icon": "Skill",
+    "n": "Allegro Agitato: Giant's Hunt",
+    "d": "When an ally's HP is above 80%, their Skill Intensity is increased by 150%, and they become immune to Hitstun.",
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 17131,
+    "icon": "Exchange",
+    "n": "Coordinated Adagio: Gambler's Stake",
+    "d": "Reduces allies' CRIT Chance by 100% and increases Trigger Probability by 150%.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 17211,
+    "icon": "Skill",
+    "n": "Andante Furioso: The Courage to Defy",
+    "d": "For every 10 instances of Skill DMG dealt by any ally, grants 1 stack of +10% Damage Dealt for 10s, up to 5 stacks.",
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 17221,
+    "icon": "Common",
+    "n": "Andante Furioso: Avatar of Redemption",
+    "d": "Allies gain 1 stack of +40% ATK, lasting 15 s and stacking up to 5 times when healed by other allies. ",
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 17231,
+    "icon": "Exchange",
+    "n": "Coordinated Adagio: Soul Insight",
+    "d": "Allies lose 50% Weapon DMG. Skill Damage has a 100% chance to trigger an elemental bonus effect.",
+    "t": 2,
     "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
   }
 ]

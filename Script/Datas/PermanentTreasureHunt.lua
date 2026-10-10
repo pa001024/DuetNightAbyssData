@@ -47,5 +47,19 @@ return ReadOnly("PermanentTreasureHunt", {
     SeasonStartDate = LocalTimeProxy(1788825600),
     SeasonTicket = 6000007,
     SeasonTicketShopId = 10012137
+  },
+  [170] = {
+    Season = 170,
+    SeasonAvailableDate = LocalTimeProxy(1796029200),
+    SeasonBackpackId = T.RT_1,
+    SeasonCurrency = 6000006,
+    SeasonDungeonId = T.RT_2,
+    SeasonEndDate = LocalTimeProxy(1796072400),
+    SeasonEventId = 103038,
+    SeasonLimitTaskId = {1030380, 1030381},
+    SeasonShop = 119,
+    SeasonStartDate = LocalTimeProxy(1792454400),
+    SeasonTicket = 6000007,
+    SeasonTicketShopId = 10012137
   }
 })

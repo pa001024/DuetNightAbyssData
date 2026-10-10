@@ -6544,6 +6544,22 @@
     "desc": "La guilde applique les principes de récompense et de sanction de Maître Qiu : les membres actifs reçoivent des Médailles de guilde, échangeables contre diverses récompenses au sein de la guilde."
   },
   {
+    "id": 4007,
+    "name": "Acte de renommage de guilde",
+    "icon": "T_Resource_Rename_Guild",
+    "rarity": 5,
+    "desc": "Après utilisation, permet de changer immédiatement le nom de la guilde",
+    "desc2": "« La Société archéologique de Gréniche a bien reçu la demande de changement de nom de votre section. Votre réenregistrement sera effectué sous peu. »\n \n— Un employé consciencieux de la Société"
+  },
+  {
+    "id": 4008,
+    "name": "Carte de renommage",
+    "icon": "T_Resource_Rename_Char",
+    "rarity": 5,
+    "desc": "Après utilisation, permet de changer immédiatement le nom du Chasseur de Phoxène",
+    "desc2": "« Quand on est sur les routes, on est qui on veut être. Je t’ai dégotté quelques nouveaux permis de circulation : mineur, pêcheur, garde du corps, même forgeron... Choisis celui qui te plaît, mets ton nom dessus, et le tour est joué. »\n \n— L’Étranger"
+  },
+  {
     "id": 10001,
     "name": "Branche desséchée",
     "icon": "T_BreakRes_Wind02",
@@ -8432,6 +8448,30 @@
     "desc2": "« Le sabre, c’est l’union du corps et de l’esprit.\nQuand l’âme s’y consacre tout entière, le fil d’acier peut trancher la foudre, fendre les flots, et abattre les monstres des mers. »\n\n— Un bretteur anonyme de Huaxu, <I>Par-delà la Lame</>"
   },
   {
+    "id": 12178,
+    "name": "Le poids de vivre : Verrou",
+    "icon": "T_Range_Weapon_Part02",
+    "rarity": 5,
+    "desc": "Assemblé selon les plans de « Le poids de vivre », ce verrou ne laisse aucun retour possible une fois la détente pressée — comme une décision que l’on doit porter jusqu’au bout.",
+    "desc2": "« Le dispositif de mise à feu — pour l’utilisateur, c’est la pièce la plus essentielle de toute arme mécanique. Peu importe la finesse du mécanisme interne : s’il ne fonctionne pas, ce n’est qu’un tas de ferraille.\nMême en tant que concepteur, je dois l’admettre... Ne me demandez pas comment je le sais, mais si ce jour-là le feu ne s’était pas déclenché, je ne serais plus là pour en parler. »\n\n— Un voyageur chevronné demeuré anonyme"
+  },
+  {
+    "id": 12179,
+    "name": "Le poids de vivre : Armature",
+    "icon": "T_Range_Weapon_Part03",
+    "rarity": 5,
+    "desc": "Forgé selon les plans de « Le poids de vivre », ce corps d’acier possède une solidité redoutable. Même à court de munitions, il reste une arme improvisée fiable — assez lourde pour rappeler que survivre aussi a un poids.",
+    "desc2": "« D’accord, la Légion nous autorise à modifier nos armes dans certaines limites, mais repeindre mes armes en rose ? Là, faut pas pousser !\nQue tu sois ma sœur n’y change rien — c’est non.\nEt le petit pendentif ourson ? Lui non plus, il dégage ! »\n\n— Lynn, officière de la Légion Hyperboréenne"
+  },
+  {
+    "id": 12180,
+    "name": "Le poids de vivre : Canon",
+    "icon": "T_Range_Weapon_Part01",
+    "rarity": 5,
+    "desc": "Conçu selon les plans de « Le poids de vivre », ce canon déverse les balles dans une rafale brûlante — et à chaque tir, le métal comme le cœur du combattant supportent le même brasier.",
+    "desc2": "« Je sais bien que vous aimez tous vous prendre pour des artistes, mais soyons honnêtes : vous êtes une belle bande d’idiots. L’alchimie, c’est l’alchimie ; les potions, les potions ; les croquis, les croquis. À quoi bon vous torturer avec le sens de la vie ou les conséquences de vos travaux ?\nRegardez plutôt mon nouveau fusil — pas mal, hein ? »\n\n— Nisaya, Maître d’armes des Éolipyliens"
+  },
+  {
     "id": 15001,
     "name": "Utilisé pour fabriquer et améliorer les Armes de calamité",
     "icon": "T_Range_Weapon_Part03",
@@ -8465,8 +8505,8 @@
   },
   {
     "id": 15005,
-    "name": "Prototype : Nocturne – Épée",
-    "icon": "T_Range_Weapon_Part01",
+    "name": "Prototype : Énigme insoluble",
+    "icon": "T_Weapon_Sword_Zaie",
     "rarity": 5,
     "desc": "L’un des prototypes légendaires à l’origine des Armes de calamité.\nSon destin fut amer comme l’absinthe, acéré comme une épée à double tranchant.\nObtenu par des moyens spéciaux. Peut servir à la fusion des Armes de calamité.",
     "desc2": "Le Père Ask déclara : « Regardez ces êtres que vous avez créés, ceux à qui le cycle des renaissances fut refusé. Ils ne peuvent triompher de la souffrance. Leurs larmes les aveuglent. Ils dérivent sur les eaux salées, chancellent dans les rues comme au cœur des cités.\nJe n’ai fait que les aider à lever la main. Vous ne les avez ni plaints, ni aimés, ni protégés. Alors je l’ai fait à votre place. En quoi ai-je eu tort ? »\n \n— Légende tribale d’Askard"
@@ -13931,24 +13971,45 @@
   },
   {
     "id": 41072,
-    "name": "RESOURCE_NAME_41072",
-    "icon": "T_Resource_Gesture_Eve03",
+    "name": "Attrape-rêves lunaire – Bleu indigo",
+    "icon": "T_Resource_Gesture_SPLise01",
     "rarity": 6,
-    "desc": "RESOURCE_DESC_41072"
+    "desc": "在月亮的肩头，捕获群星的梦境。"
   },
   {
     "id": 41073,
-    "name": "RESOURCE_NAME_41073",
-    "icon": "T_Resource_Gesture_Eve03",
+    "name": "Attrape-rêves lunaire – Rouille",
+    "icon": "T_Resource_Gesture_SPLise02",
     "rarity": 6,
-    "desc": "RESOURCE_DESC_41073"
+    "desc": "在月亮的肩头，捕获群星的梦境。"
   },
   {
     "id": 41074,
-    "name": "RESOURCE_NAME_41074",
-    "icon": "T_Resource_Gesture_Eve03",
+    "name": "Attrape-rêves lunaire – Jade noir",
+    "icon": "T_Resource_Gesture_SPLise03",
     "rarity": 6,
-    "desc": "RESOURCE_DESC_41074"
+    "desc": "在月亮的肩头，捕获群星的梦境。"
+  },
+  {
+    "id": 41075,
+    "name": "RESOURCE_NAME_41075",
+    "icon": "",
+    "rarity": 6,
+    "desc": "RESOURCE_DESC_41075"
+  },
+  {
+    "id": 41076,
+    "name": "RESOURCE_NAME_41076",
+    "icon": "",
+    "rarity": 6,
+    "desc": "RESOURCE_DESC_41076"
+  },
+  {
+    "id": 41077,
+    "name": "RESOURCE_NAME_41077",
+    "icon": "",
+    "rarity": 6,
+    "desc": "RESOURCE_DESC_41077"
   },
   {
     "id": 42001,
@@ -13965,6 +14026,20 @@
     "rarity": 4,
     "desc": "Un dispositif mécanique quadrangulaire d’une conception aussi complexe que raffinée, forgé selon des techniques perdues de la Secte Jishu.\nSon cœur énergétique libère une puissante aspiration capable de dissiper les désastres de la Poussière-corrompue engendrés par le Fléau de Zhuyin.",
     "desc2": "« Taixu naquit aux origines du chaos primordial, sans forme ni couleur, emplissant les six directions de toute chose. Lorsque le Fléau de Zhuyin le souilla, ses impuretés se figèrent et s’abattirent, donnant naissance à la Poussière-corrompue...\nComment ? Tu voudrais que je passe les principes et que j’aille directement au mode d’emploi ? Quelle impatience... vraiment, la jeunesse manque de constance. »\n\n— Maître Gongshang, mécanicien de la Secte Jishu"
+  },
+  {
+    "id": 49983,
+    "name": "RESOURCE_NAME_49983",
+    "icon": "T_Mounts_Gesture_0603",
+    "rarity": 4,
+    "desc": "RESOURCE_DESC_49983"
+  },
+  {
+    "id": 49984,
+    "name": "RESOURCE_NAME_49984",
+    "icon": "T_Mounts_Gesture_0603",
+    "rarity": 4,
+    "desc": "RESOURCE_DESC_49984"
   },
   {
     "id": 49985,
@@ -14546,10 +14621,34 @@
   {
     "id": 110074,
     "name": "Coffret de sélection d’apparence – Gardien",
-    "icon": "T_Pack_Police",
+    "icon": "T_Pack_Police01",
     "rarity": 5,
     "desc": "Permet de choisir une apparence parmi les personnages suivants : Su Yi, Fina, Eve, Fushu, Lynn, Margie, Rhythm, Sibylle ou Daphne.",
     "select": 5010
+  },
+  {
+    "id": 110075,
+    "name": "Cadeau d’adieu des Géniemon",
+    "icon": "T_Pack_PetBox02",
+    "rarity": 5,
+    "desc": "Les Géniemon qui sont partis vous ont laissé un cadeau. Ouvrez-le pour découvrir leur petite attention.",
+    "pack": 230001
+  },
+  {
+    "id": 110076,
+    "name": "Coffret de sélection de cristaux IV",
+    "icon": "T_Pack_ZaieRes03",
+    "rarity": 5,
+    "desc": "Après utilisation, permet de choisir un matériau parmi Cristal Électro, Cristal Pyro, Cristal Lumino, Cristal Hydro et Cristal Umbro.",
+    "select": 4010
+  },
+  {
+    "id": 110077,
+    "name": "Coffret de sélection d’apparence – Gardien II",
+    "icon": "T_Pack_Police02",
+    "rarity": 5,
+    "desc": "使用后可从贝蕾妮卡，芙罗拉，丽蓓卡，希尔妲，法露茜，海尔法，止流，赛琪中自选一套角色形象。",
+    "select": 5011
   },
   {
     "id": 120001,
@@ -14592,6 +14691,20 @@
     "icon": "T_Resource_DiscountTicket_01",
     "rarity": 5,
     "desc": "Réduction de 360 Gemmes de Phoxène pour tout achat d’au moins 480 Gemmes de Phoxène"
+  },
+  {
+    "id": 120007,
+    "name": "Bon d’accessoires – En marche vers l’aube",
+    "icon": "T_Resource_DiscountTicket_01",
+    "rarity": 5,
+    "desc": "Réduction de 360 Gemmes de Phoxène pour tout achat d’au moins 480 Gemmes de Phoxène"
+  },
+  {
+    "id": 120008,
+    "name": "碧霄吟代金券",
+    "icon": "T_Resource_DiscountTicket_01",
+    "rarity": 5,
+    "desc": "商品满1280月石晶胚减300月石晶胚"
   },
   {
     "id": 1001101,
@@ -14762,6 +14875,14 @@
     "desc2": "« Tu portes en toi trois vies.\nLa première est faite de souffle et de battements — c’est avec ta chair et ton sang que tu arpentes la terre et découvres le monde.\nLa deuxième est celle des liens et des attaches — ton âme s’abrite dans la chaleur d’un foyer, dans le baiser d’un être aimé, dans l’étreinte silencieuse d’un ami.\nLa troisième, enfin, est celle de la pensée et du souvenir — lorsqu’un lecteur découvre ton nom sur une page, lorsqu’un voyageur l’entend résonner dans le chant d’un ménestrel, lorsqu’un enfant puise sagesse et courage dans ton histoire... alors ta vie reprend voix dans ce monde.\nTous retournent un jour à la Mer du Silence... mais tous ne connaissent pas la mort véritable. »\n\n— Dame Nifle, Passeuse de la Mer du Silence"
   },
   {
+    "id": 1003203,
+    "name": "Fragment de pensée : Katya",
+    "icon": "T_CharPiece_Kajia",
+    "rarity": 5,
+    "desc": "Fragment de pensée extrait des sables mouvants de la mémoire. Il renferme les souvenirs d’une personne — du passé, ou peut-être de l’avenir.",
+    "desc2": "« Tu portes en toi trois vies.\nLa première est faite de souffle et de battements — c’est avec ta chair et ton sang que tu arpentes la terre et découvres le monde.\nLa deuxième est celle des liens et des attaches — ton âme s’abrite dans la chaleur d’un foyer, dans le baiser d’un être aimé, dans l’étreinte silencieuse d’un ami.\nLa troisième, enfin, est celle de la pensée et du souvenir — lorsqu’un lecteur découvre ton nom sur une page, lorsqu’un voyageur l’entend résonner dans le chant d’un ménestrel, lorsqu’un enfant puise sagesse et courage dans ton histoire... alors ta vie reprend voix dans ce monde.\nTous retournent un jour à la Mer du Silence... mais tous ne connaissent pas la mort véritable. »\n\n— Dame Nifle, Passeuse de la Mer du Silence"
+  },
+  {
     "id": 1003301,
     "name": "Fragment de pensée : Margie",
     "icon": "T_CharPiece_Maer",
@@ -14787,7 +14908,7 @@
   },
   {
     "id": 1004103,
-    "name": "RESOURCE_NAME_1004103",
+    "name": "Fragment de pensée : Rhythm – Née des flammes",
     "icon": "T_CharPiece_SpLise",
     "rarity": 5,
     "desc": "Fragment de pensée extrait des sables mouvants de la mémoire. Il renferme les souvenirs d’une personne — du passé, ou peut-être de l’avenir.",
@@ -14851,8 +14972,8 @@
   },
   {
     "id": 1005402,
-    "name": "RESOURCE_NAME_1005402",
-    "icon": "T_CharPiece_Dafu",
+    "name": "Fragment de pensée : Lirico",
+    "icon": "T_CharPiece_Lilikou",
     "rarity": 5,
     "desc": "Fragment de pensée extrait des sables mouvants de la mémoire. Il renferme les souvenirs d’une personne — du passé, ou peut-être de l’avenir.",
     "desc2": "« Tu portes en toi trois vies.\nLa première est faite de souffle et de battements — c’est avec ta chair et ton sang que tu arpentes la terre et découvres le monde.\nLa deuxième est celle des liens et des attaches — ton âme s’abrite dans la chaleur d’un foyer, dans le baiser d’un être aimé, dans l’étreinte silencieuse d’un ami.\nLa troisième, enfin, est celle de la pensée et du souvenir — lorsqu’un lecteur découvre ton nom sur une page, lorsqu’un voyageur l’entend résonner dans le chant d’un ménestrel, lorsqu’un enfant puise sagesse et courage dans ton histoire... alors ta vie reprend voix dans ce monde.\nTous retournent un jour à la Mer du Silence... mais tous ne connaissent pas la mort véritable. »\n\n— Dame Nifle, Passeuse de la Mer du Silence"
@@ -15026,6 +15147,14 @@
     "desc2": "« Voici notre histoire, vieille de plus de deux millénaires : une épopée faite d’étreintes et de massacres, d’élans de ferveur et d’élans de compassion. L’Histoire, tel le ballet céleste du soleil et de la lune, s’élève et s’abaisse, éternelle et cyclique.\nDans la grande tapisserie du temps relatée dans ces pages, je ne suis qu’une simple observatrice, insignifiante comme un flocon d’Hyperborea, une feuille d’Aethyrie, une goutte des eaux de Luca ou un grain des sables de Khemet.\nEt pourtant, dans cet immense cosmos, j’espère que les flocons se rassembleront en une vaste étendue de neige, que les feuilles formeront des forêts, que les gouttes se joindront pour devenir fleuves, et que les grains s’uniront pour façonner des déserts. Car lorsque toutes les individualités se relient, l’Histoire s’incline en notre faveur. »\n\n— Comnena, conservatrice en chef de la Bibliothèque des Nuages d’Aethyrie, <I>Feuilles et Lune - Chroniques d’Atlasia</>"
   },
   {
+    "id": 1013203,
+    "name": "Emblème : Katya",
+    "icon": "T_Phantom_Kajia",
+    "rarity": 5,
+    "desc": "Emblème utilisé pour invoquer un compagnon. Il représente un soutien indéfectible au combat, un pacte de camaraderie et une promesse silencieuse.\nQuand la prière porte la pensée, l’être désiré apparaîtra à vos côtés.",
+    "desc2": "« Voici notre histoire, vieille de plus de deux millénaires : une épopée faite d’étreintes et de massacres, d’élans de ferveur et d’élans de compassion. L’Histoire, tel le ballet céleste du soleil et de la lune, s’élève et s’abaisse, éternelle et cyclique.\nDans la grande tapisserie du temps relatée dans ces pages, je ne suis qu’une simple observatrice, insignifiante comme un flocon d’Hyperborea, une feuille d’Aethyrie, une goutte des eaux de Luca ou un grain des sables de Khemet.\nEt pourtant, dans cet immense cosmos, j’espère que les flocons se rassembleront en une vaste étendue de neige, que les feuilles formeront des forêts, que les gouttes se joindront pour devenir fleuves, et que les grains s’uniront pour façonner des déserts. Car lorsque toutes les individualités se relient, l’Histoire s’incline en notre faveur. »\n\n— Comnena, conservatrice en chef de la Bibliothèque des Nuages d’Aethyrie, <I>Feuilles et Lune - Chroniques d’Atlasia</>"
+  },
+  {
     "id": 1013301,
     "name": "Emblème : Margie",
     "icon": "T_Phantom_Maer",
@@ -15051,7 +15180,7 @@
   },
   {
     "id": 1014103,
-    "name": "RESOURCE_NAME_1014103",
+    "name": "Emblème : Rhythm – Née des flammes",
     "icon": "T_Phantom_SpLise",
     "rarity": 5,
     "desc": "Emblème utilisé pour invoquer un compagnon. Il représente un soutien indéfectible au combat, un pacte de camaraderie et une promesse silencieuse.\nQuand la prière porte la pensée, l’être désiré apparaîtra à vos côtés.",
@@ -15115,8 +15244,8 @@
   },
   {
     "id": 1015402,
-    "name": "RESOURCE_NAME_1015402",
-    "icon": "T_Phantom_Dafu",
+    "name": "Emblème : Lirico",
+    "icon": "T_Phantom_Lilikou",
     "rarity": 5,
     "desc": "Emblème utilisé pour invoquer un compagnon. Il représente un soutien indéfectible au combat, un pacte de camaraderie et une promesse silencieuse.\nQuand la prière porte la pensée, l’être désiré apparaîtra à vos côtés.",
     "desc2": "« Voici notre histoire, vieille de plus de deux millénaires : une épopée faite d’étreintes et de massacres, d’élans de ferveur et d’élans de compassion. L’Histoire, tel le ballet céleste du soleil et de la lune, s’élève et s’abaisse, éternelle et cyclique.\nDans la grande tapisserie du temps relatée dans ces pages, je ne suis qu’une simple observatrice, insignifiante comme un flocon d’Hyperborea, une feuille d’Aethyrie, une goutte des eaux de Luca ou un grain des sables de Khemet.\nEt pourtant, dans cet immense cosmos, j’espère que les flocons se rassembleront en une vaste étendue de neige, que les feuilles formeront des forêts, que les gouttes se joindront pour devenir fleuves, et que les grains s’uniront pour façonner des déserts. Car lorsque toutes les individualités se relient, l’Histoire s’incline en notre faveur. »\n\n— Comnena, conservatrice en chef de la Bibliothèque des Nuages d’Aethyrie, <I>Feuilles et Lune - Chroniques d’Atlasia</>"
@@ -15157,6 +15286,22 @@
     "id": 1023202,
     "name": "Pensée condensée : Camilla",
     "icon": "T_CharPiece_Kami01",
+    "rarity": 5,
+    "desc": "Pensée intacte extraite des sables mouvants de la mémoire. Elle renferme les souvenirs d’une personne — du passé, ou peut-être de l’avenir.",
+    "desc2": "« Tu portes en toi trois vies.\nLa première est faite de souffle et de battements — c’est avec ta chair et ton sang que tu arpentes la terre et découvres le monde.\nLa deuxième est celle des liens et des attaches — ton âme s’abrite dans la chaleur d’un foyer, dans le baiser d’un être aimé, dans l’étreinte silencieuse d’un ami.\nLa troisième, enfin, est celle de la pensée et du souvenir — lorsqu’un lecteur découvre ton nom sur une page, lorsqu’un voyageur l’entend résonner dans le chant d’un ménestrel, lorsqu’un enfant puise sagesse et courage dans ton histoire... alors ta vie reprend voix dans ce monde.\nTous retournent un jour à la Mer du Silence... mais tous ne connaissent pas la mort véritable. »\n\n— Dame Nifle, Passeuse de la Mer du Silence"
+  },
+  {
+    "id": 1024102,
+    "name": "RESOURCE_NAME_1024102",
+    "icon": "T_CharPiece_Zhiliu01",
+    "rarity": 5,
+    "desc": "Pensée intacte extraite des sables mouvants de la mémoire. Elle renferme les souvenirs d’une personne — du passé, ou peut-être de l’avenir.",
+    "desc2": "« Tu portes en toi trois vies.\nLa première est faite de souffle et de battements — c’est avec ta chair et ton sang que tu arpentes la terre et découvres le monde.\nLa deuxième est celle des liens et des attaches — ton âme s’abrite dans la chaleur d’un foyer, dans le baiser d’un être aimé, dans l’étreinte silencieuse d’un ami.\nLa troisième, enfin, est celle de la pensée et du souvenir — lorsqu’un lecteur découvre ton nom sur une page, lorsqu’un voyageur l’entend résonner dans le chant d’un ménestrel, lorsqu’un enfant puise sagesse et courage dans ton histoire... alors ta vie reprend voix dans ce monde.\nTous retournent un jour à la Mer du Silence... mais tous ne connaissent pas la mort véritable. »\n\n— Dame Nifle, Passeuse de la Mer du Silence"
+  },
+  {
+    "id": 1024201,
+    "name": "RESOURCE_NAME_1024201",
+    "icon": "T_CharPiece_Yuming01",
     "rarity": 5,
     "desc": "Pensée intacte extraite des sables mouvants de la mémoire. Elle renferme les souvenirs d’une personne — du passé, ou peut-être de l’avenir.",
     "desc2": "« Tu portes en toi trois vies.\nLa première est faite de souffle et de battements — c’est avec ta chair et ton sang que tu arpentes la terre et découvres le monde.\nLa deuxième est celle des liens et des attaches — ton âme s’abrite dans la chaleur d’un foyer, dans le baiser d’un être aimé, dans l’étreinte silencieuse d’un ami.\nLa troisième, enfin, est celle de la pensée et du souvenir — lorsqu’un lecteur découvre ton nom sur une page, lorsqu’un voyageur l’entend résonner dans le chant d’un ménestrel, lorsqu’un enfant puise sagesse et courage dans ton histoire... alors ta vie reprend voix dans ce monde.\nTous retournent un jour à la Mer du Silence... mais tous ne connaissent pas la mort véritable. »\n\n— Dame Nifle, Passeuse de la Mer du Silence"

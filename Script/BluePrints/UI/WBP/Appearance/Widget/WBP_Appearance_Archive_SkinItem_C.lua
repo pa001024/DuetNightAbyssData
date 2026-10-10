@@ -171,7 +171,7 @@ function M:OnMouseButtonDown(MyGeometry, MouseEvent)
     return UWidgetBlueprintLibrary.Handled()
   end
   if self.Content.NotInteractive or self:IsInAnimationPlaying() then
-    return UWidgetBlueprintLibrary.UnHandled()
+    return UWidgetBlueprintLibrary.Unhandled()
   end
   self:StopAllAnimations()
   if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then

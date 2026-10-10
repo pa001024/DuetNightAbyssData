@@ -33,20 +33,14 @@ function M:UpdateInBattleWheelPropUseData(UseResourceId, ForceSetUsing)
     self:Init()
   end
   local Avatar = GWorld:GetAvatar()
-  local TargetState
-  if self.SlotState[UseResourceId] == BattlePropSlotState.Using then
-    TargetState = BattlePropSlotState.Default
-  elseif self.SlotState[UseResourceId] == BattlePropSlotState.Default then
-    TargetState = BattlePropSlotState.Using
-  else
-    TargetState = BattlePropSlotState.Default
-  end
+  local CurrentState = self.SlotState[UseResourceId] or BattlePropSlotState.Default
+  local TargetState = CurrentState == BattlePropSlotState.Using and BattlePropSlotState.Default or BattlePropSlotState.Using
   if true == ForceSetUsing then
     TargetState = BattlePropSlotState.Using
   elseif false == ForceSetUsing then
     TargetState = BattlePropSlotState.Default
   end
-  if self.SlotState[UseResourceId] == BattlePropSlotState.Default then
+  if CurrentState == BattlePropSlotState.Default then
     local CurrentResourceType = DataMgr.Resource[UseResourceId].ResourceSType
     if LimitMaxOneUseResourceType[CurrentResourceType] then
       for ResourceId, SlotState in pairs(self.SlotState) do
@@ -60,6 +54,10 @@ function M:UpdateInBattleWheelPropUseData(UseResourceId, ForceSetUsing)
     end
   end
   self.SlotState[UseResourceId] = TargetState
+  local GameUIManager = GWorld.GameInstance and GWorld.GameInstance:GetGameUIManager()
+  if GameUIManager then
+    GameUIManager:RefreshBattleWheelSlotsIfVisible()
+  end
 end
 
 function M:Destory()

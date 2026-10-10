@@ -23,10 +23,12 @@ function CommonChar:Init(CharId)
   end
   self.CharId = CharId
   local CharInfo = DataMgr.Char[CharId] or DataMgr.BattleChar[self.CharId]
+  if not CharInfo then
+    return
+  end
   if CharInfo.DefaultSkinId then
     self.OwnedSkins:GetNewSkin(CharInfo.DefaultSkinId, CommonConst.SkinType.Char)
   end
-  local CharInfo = DataMgr.Char[CharId] or DataMgr.BattleChar[self.CharId]
   if CharInfo.DefaultHairId then
     self.OwnedHairs:GetNewSkin(CharInfo.DefaultHairId, CommonConst.SkinType.Hair)
   end

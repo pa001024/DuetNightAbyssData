@@ -179,6 +179,24 @@ function M:Construct()
   if self.Btn_Shop_Refresh then
     self.Btn_Shop_Refresh:SetVisibility(ESlateVisibility.Collapsed)
   end
+  if self.Btn_ShopCart then
+    self.Btn_ShopCart:BindEventOnClicked(self, self.OnClickShopCart)
+    self.Btn_ShopCart.Text_Button:SetText(GText("UI_Shop_ShoppingCart"))
+    self.Btn_ShopCart:SetGamePadImg("X")
+  end
+  if self.Btn_QuickAdd then
+    self.Btn_QuickAdd:BindEventOnClicked(self, self.OnClickQuickAdd)
+    if self.Controller_QuickAdd then
+      self.Controller_QuickAdd:CreateCommonKey({
+        KeyInfoList = {
+          {Type = "Img", ImgShortPath = "View"}
+        }
+      })
+    end
+  end
+  self:AddDispatcher(EventID.OnShoppingCartChanged, self, self.RefreshShopCartBadge)
+  self:ResetQuickAddState()
+  self:RefreshShopCartBadge()
 end
 
 function M:RefreshShop()
@@ -417,6 +435,7 @@ function M:RefreshSubTabData(SubTabData)
   self.IsJumpShopPage = false
   self.ShowSwitchBanner = false
   self:LoadSubTabInfo(SubTabData)
+  self:UpdateRightCornerBySubTab(SubTabData)
   self:SetIsDealWithVirtualAccept(false)
   self.Group_Recharge:SetVisibility(ESlateVisibility.Collapsed)
   self.Group_PayGift:SetVisibility(ESlateVisibility.Collapsed)
@@ -513,6 +532,115 @@ function M:RefreshSubTabData(SubTabData)
   self.Group_Bottom:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.VB_ItemList:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self:UpdateShopDetail(self.CurSubTabMap)
+end
+
+function M:UpdateRightCornerBySubTab(SubTabData)
+  if not self.WS_RightCorner then
+    return
+  end
+  local bIsQuickAddTab = SubTabData and SubTabData.SubTabId == 1601
+  if bIsQuickAddTab then
+    self:SwitchGamepadXToShopCart()
+    self.WS_RightCorner:SetActiveWidgetIndex(1)
+    self:RefreshQuickAddToggleState()
+  else
+    self:SwitchGamepadXToFilter()
+    self.WS_RightCorner:SetActiveWidgetIndex(0)
+    self:ResetQuickAddState()
+  end
+  self:UpdateQuickAddKeyVisibility()
+end
+
+function M:SwitchGamepadXToShopCart()
+  self:RemoveFocusTarget("X")
+  if self.CheckBox_Own and self.CheckBox_Own.Com_KeyImg then
+    self.CheckBox_Own.Com_KeyImg:SetVisibility(ESlateVisibility.Collapsed)
+  end
+  if self.Btn_ShopCart and self.Btn_ShopCart.Key_GamePad then
+    self.Btn_ShopCart.Key_GamePad:SetVisibility(ESlateVisibility.Visible)
+    self.Btn_ShopCart.Key_GamePad:CreateCommonKey({
+      KeyInfoList = {
+        {Type = "Img", ImgShortPath = "X"}
+      }
+    })
+    self:AddLSFocusTarget(self.Btn_ShopCart.Key_GamePad, self.Btn_ShopCart, "X", true)
+  end
+end
+
+function M:SwitchGamepadXToFilter()
+  self:RemoveFocusTarget("X")
+  if self.Btn_ShopCart and self.Btn_ShopCart.Key_GamePad then
+    self.Btn_ShopCart.Key_GamePad:SetVisibility(ESlateVisibility.Collapsed)
+  end
+  if self.CheckBox_Own and self.CheckBox_Own.Com_KeyImg then
+    self.CheckBox_Own.Com_KeyImg:SetVisibility(ESlateVisibility.Visible)
+    self:AddLSFocusTarget(self.CheckBox_Own.Com_KeyImg, self.CheckBox_Own, "X", true)
+  end
+end
+
+function M:ResetQuickAddState()
+  self.bQuickAddOpen = false
+  self:RefreshQuickAddToggleState()
+  self:RefreshPayGiftQuickAddState()
+end
+
+function M:RefreshQuickAddToggleState()
+  if self.WS_QuickAdd then
+    self.WS_QuickAdd:SetActiveWidgetIndex(self.bQuickAddOpen and 1 or 0)
+  end
+end
+
+function M:OnClickShopCart()
+  if ShopUtils:IsShoppingCartPending() then
+    return
+  end
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_confirm", nil, nil)
+  UIManager(self):LoadUINew("ShopPanelShopCart")
+end
+
+function M:RefreshShopCartBadge()
+  if not self.Btn_ShopCart then
+    return
+  end
+  local Count = ShopUtils:GetShoppingCartTotalCount()
+  local bPending = ShopUtils:IsShoppingCartPending()
+  local bVisible = Count > 0
+  if self.Btn_ShopCart.SetReddotNumber then
+    if bVisible then
+      self.Btn_ShopCart:SetReddotNumber(Count)
+      self.Btn_ShopCart:SetReddotNumberVisibility(ESlateVisibility.SelfHitTestInvisible)
+    else
+      self.Btn_ShopCart:SetReddotNumberVisibility(ESlateVisibility.Collapsed)
+    end
+  end
+  self.Btn_ShopCart:ForbidBtn(bPending)
+end
+
+function M:PlayShoppingCartAddEffect(SourceWidget)
+  self:PlayAnimation(self.AddShopCard)
+end
+
+function M:OnClickQuickAdd()
+  if ShopUtils:IsShoppingCartPending() then
+    return
+  end
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_confirm", nil, nil)
+  self:SetQuickAddMode(not self.bQuickAddOpen)
+end
+
+function M:SetQuickAddMode(bOpen)
+  self.bQuickAddOpen = bOpen
+  self:RefreshQuickAddToggleState()
+  self:RefreshPayGiftQuickAddState()
+  if self.CurSubTabMap then
+    self:UpdateShopDetail(self.CurSubTabMap)
+  end
+end
+
+function M:RefreshPayGiftQuickAddState()
+  if self.PayGiftWidget and self.PayGiftWidget.SetQuickAddMode then
+    self.PayGiftWidget:SetQuickAddMode(self.bQuickAddOpen)
+  end
 end
 
 function M:BP_GetDesiredFocusTarget()
@@ -1247,6 +1375,13 @@ function M:Destruct()
   if self.Btn_Shop_Visible and self.Btn_Shop_Visible.Btn_Click then
     self.Btn_Shop_Visible.Btn_Click.OnClicked:Remove(self, self.HideUIExceptVideoAutoCallBack)
   end
+  if self.Btn_ShopCart then
+    self.Btn_ShopCart:UnBindEventOnClickedByObj(self)
+  end
+  if self.Btn_QuickAdd then
+    self.Btn_QuickAdd:UnBindEventOnClickedByObj(self)
+  end
+  self:RemoveDispatcher(EventID.OnShoppingCartChanged, self)
   if GWorld.GameInstance then
     GWorld.GameInstance:SetHighFrequencyMemoryCheckGCEnabled(false, "ShopMain")
   end
@@ -1324,6 +1459,20 @@ function M:OnGamePadDown(InKeyName)
     IsEventHandled = true
   elseif "Gamepad_RightShoulder" == InKeyName or "Gamepad_LeftShoulder" == InKeyName then
     IsEventHandled = self.ShopTab:Handle_KeyEventOnGamePad(InKeyName)
+  elseif "Gamepad_Special_Left" == InKeyName then
+    if self.WS_RightCorner and 1 == self.WS_RightCorner:GetActiveWidgetIndex() then
+      self:OnClickQuickAdd()
+      IsEventHandled = true
+    else
+      IsEventHandled = self.Common_Tab:Handle_KeyEventOnGamePad(InKeyName)
+    end
+  elseif "Gamepad_FaceButton_Left" == InKeyName then
+    if self.WS_RightCorner and 1 == self.WS_RightCorner:GetActiveWidgetIndex() then
+      self:OnClickShopCart()
+      IsEventHandled = true
+    else
+      IsEventHandled = self.Common_Tab:Handle_KeyEventOnGamePad(InKeyName)
+    end
   else
     IsEventHandled = self.Common_Tab:Handle_KeyEventOnGamePad(InKeyName)
   end
@@ -1373,11 +1522,21 @@ function M:InitGamepadView()
       }
     })
   end
+  self:UpdateQuickAddKeyVisibility()
 end
 
 function M:InitKeyboardView()
   self.CheckBox_Own.Com_KeyImg:SetVisibility(ESlateVisibility.Collapsed)
   self.CheckBox_OwnUnderMax.Com_KeyImg:SetVisibility(ESlateVisibility.Collapsed)
+  self:UpdateQuickAddKeyVisibility()
+end
+
+function M:UpdateQuickAddKeyVisibility()
+  if not self.Panel_Controller_QuickAdd then
+    return
+  end
+  local bVisible = self.WS_RightCorner and 1 == self.WS_RightCorner:GetActiveWidgetIndex() and UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad
+  self.Panel_Controller_QuickAdd:SetVisibility(bVisible and ESlateVisibility.Visible or ESlateVisibility.Collapsed)
 end
 
 function M:OnSpaceBarDown()

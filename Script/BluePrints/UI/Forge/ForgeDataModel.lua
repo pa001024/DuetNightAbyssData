@@ -45,19 +45,30 @@ end
 
 function ForgeDataModel:OnCompleteProduce(DraftIds, Ret)
   for DraftId, CompleteNum in pairs(DraftIds) do
-    local DraftInfo = self:CheckState(DraftId)
-    self:DecreaseReddotByDraftInfo(DraftId)
-    self:_DecreaseReddotNodeInner(DraftId, ForgeConst.ReddotNodeName[ForgeConst.TabType.Producing])
-    self:_DecreaseReddotNodeInner(DraftId, ForgeConst.ReddotNodeName[ForgeConst.TabType.All])
+    self:CheckState(DraftId)
+    self:ForceClearReddotByDraftId(DraftId)
   end
 end
 
-function ForgeDataModel:OnAccerateProduce(DraftId, Ret)
+function ForgeDataModel:OnAccerateProduce(DraftId, Ret, AcceleratedNum)
   self:IncreaseReddotByDraftInfo(DraftId)
+  self:SendTaskbarCraftDraftInfo(DraftId, AcceleratedNum)
 end
 
-function ForgeDataModel:OnBlueComplete(DraftId)
+function ForgeDataModel:OnBlueComplete(DraftId, BlueCompleteNum)
   self:IncreaseReddotByDraftInfo(DraftId)
+  self:SendTaskbarCraftDraftInfo(DraftId, BlueCompleteNum or 1)
+end
+
+function ForgeDataModel:SendTaskbarCraftDraftInfo(DraftId, CompleteNum)
+  local DraftData = DataMgr.Draft[DraftId]
+  if not (DraftData and CompleteNum) or CompleteNum <= 0 then
+    return
+  end
+  local ProductName = GText(self:GetProductNameByTypeAndId(DraftData.ProductType, DraftData.ProductId))
+  local ProductNum = DraftData.ProductNum or 1
+  local TotalProductNum = ProductNum * CompleteNum
+  UE4.UEMTaskbarRewardLibrary.SendTaskbarCraft(ProductName, DraftData.Rarity, TotalProductNum)
 end
 
 function ForgeDataModel:OnGetNewDraft(DraftIdTable)
@@ -401,6 +412,15 @@ function ForgeDataModel:_DecreaseReddotNodeInner(DraftId, NodeName)
   if Detail and Detail[DraftId] then
     Detail[DraftId] = nil
     ReddotManager.DecreaseLeafNodeCount(NodeName)
+  end
+end
+
+function ForgeDataModel:ForceClearReddotByDraftId(DraftId)
+  for _, NodeName in pairs(ForgeConst.ReddotNodeName) do
+    local TreeNode = ReddotManager.GetTreeNode(NodeName)
+    if TreeNode and TreeNode:IsLeaf() then
+      self:_DecreaseReddotNodeInner(DraftId, NodeName)
+    end
   end
 end
 

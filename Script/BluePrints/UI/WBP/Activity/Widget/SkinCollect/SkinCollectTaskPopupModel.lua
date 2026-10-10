@@ -1,5 +1,6 @@
 local M = {}
 local AvatarUtils = require("BluePrints.Client.AvatarUtils")
+M.SKinCollectTaskEventId = 10302402
 local BUTTON_STATE_GET = 0
 local BUTTON_STATE_NOT_DONE = 1
 local BUTTON_STATE_GOT = 2

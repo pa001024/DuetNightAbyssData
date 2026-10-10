@@ -103,7 +103,6 @@ function M:OnBtnClicked()
   end
   if self.OnItemClicked then
     self:SetSelectedState(true)
-    self:PlayAnimation(self.Click)
     self.OnItemClicked(self.OnItemClickedObj, self)
   end
 end
@@ -118,7 +117,7 @@ function M:UpdateDisplayState()
     self.DisplayState = PetItemState.Empty
     return
   end
-  local CurrentRanking = tonumber(self.Ranking or 0)
+  local CurrentRanking = tonumber(self.Ranking) or 0
   if CurrentRanking > 0 and CurrentRanking <= 6 then
     self.DisplayState = PetItemState.Highlight
   else
@@ -131,6 +130,10 @@ function M:RefreshStaticVisual()
     return
   end
   local PlayerInfo = DataMgr.RaceLotteryPlayer[self.PetId]
+  if not PlayerInfo then
+    DebugPrint("RefreshStaticVisual Error: RaceLotteryPlayer Data Is Empty, PetId:", self.PetId)
+    return
+  end
   local IconPath = PlayerInfo.PlayerIcon
   local IconDice = LoadObject(IconPath)
   self.Image_Pet:SetBrushFromTexture(IconDice)

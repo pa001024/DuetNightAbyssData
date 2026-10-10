@@ -5,7 +5,6 @@ local M = Class({
 
 function M:Construct()
   self.Button_Area.OnClicked:Add(self, self.OnBtnClicked)
-  self.Button_Area.OnClicked:Add(self, self.OnBtnClicked)
   self.Button_Area.OnPressed:Add(self, self.OnBtnPressed)
   self.Button_Area.OnReleased:Add(self, self.OnBtnReleased)
   self.Button_Area.OnHovered:Add(self, self.OnBtnHovered)

@@ -540,8 +540,25 @@ function EMLevelLoader:GetConstOnlineMonsterCanCache()
 end
 
 function EMLevelLoader:LoadPreviewLevel(Name, Path, Callback, Position, Rotation, IsHide)
+  local UnloadingLevel = self[Name]
+  local bStillLoaded = UnloadingLevel and UnloadingLevel.GetLoadedLevel and UnloadingLevel:GetLoadedLevel()
+  if self.PreviewLevelUnloading and self.PreviewLevelUnloading[Name] and not bStillLoaded then
+    self.PreviewLevelUnloading[Name] = nil
+  end
+  if self.PreviewLevelUnloading and self.PreviewLevelUnloading[Name] and bStillLoaded then
+    self.PreviewLevelPendingLoad = self.PreviewLevelPendingLoad or {}
+    self.PreviewLevelPendingLoad[Name] = {
+      Path = Path,
+      Callback = Callback,
+      Position = Position,
+      Rotation = Rotation,
+      IsHide = IsHide
+    }
+    return true
+  end
   local Success
-  if not self[Name] then
+  local bCreate = not self[Name]
+  if bCreate then
     Success, self[Name] = UAsyncFunctionLibrary.LoadLevelInstance(self, Path, Position or FVector(0, 0, 0), Rotation or FRotator(0, 0, 0), Success, Name)
     self.PreviewLevelRefCount[Name] = 1
   else
@@ -562,21 +579,75 @@ function EMLevelLoader:LoadPreviewLevel(Name, Path, Callback, Position, Rotation
   return Success
 end
 
-function EMLevelLoader:UnloadPreviewLevel(Name)
+function EMLevelLoader:UnloadPreviewLevel(Name, bKeepWorldLoaded)
   if self[Name] then
+    if self.PreviewLevelRefCount[Name] == nil then
+      if self.PreviewLevelPendingLoad then
+        self.PreviewLevelPendingLoad[Name] = nil
+      end
+      return
+    end
     self.PreviewLevelRefCount[Name] = self.PreviewLevelRefCount[Name] - 1
     if self.PreviewLevelRefCount[Name] <= 0 then
       self.PreviewLevelRefCount[Name] = nil
     end
-    if nil == next(self.PreviewLevelRefCount) then
+    local bUnfreeze = not bKeepWorldLoaded and nil == next(self.PreviewLevelRefCount)
+    if bUnfreeze then
       local WCSubsystem = USubsystemBlueprintLibrary.GetWorldSubsystem(self, UWorldCompositionSubSystem.StaticClass())
       if WCSubsystem then
         WCSubsystem:UnFreezeWorldComposition()
         WCSubsystem:UnFreezeDistanceBasedRegion()
       end
     end
-    coroutine.resume(coroutine.create(self.LatentPrevewLevelAction), self, false, Name)
+    if self.PreviewLevelRefCount[Name] == nil then
+      self:_BeginPreviewLevelUnload(Name)
+    else
+      coroutine.resume(coroutine.create(self.LatentPrevewLevelAction), self, false, Name)
+    end
   end
+end
+
+function EMLevelLoader:_BeginPreviewLevelUnload(Name)
+  self.PreviewLevelUnloading = self.PreviewLevelUnloading or {}
+  self.PreviewLevelUnloading[Name] = true
+  local StreamingLevel = self[Name]
+  
+  local function FinishUnload()
+    if not IsValid(self) then
+      return
+    end
+    if not self.PreviewLevelUnloading or not self.PreviewLevelUnloading[Name] then
+      return
+    end
+    self.PreviewLevelUnloading[Name] = nil
+    local Pending = self.PreviewLevelPendingLoad and self.PreviewLevelPendingLoad[Name] or nil
+    if self.PreviewLevelPendingLoad then
+      self.PreviewLevelPendingLoad[Name] = nil
+    end
+    if not Pending then
+      return
+    end
+    self:LoadPreviewLevel(Name, Pending.Path, Pending.Callback, Pending.Position, Pending.Rotation, Pending.IsHide)
+  end
+  
+  if StreamingLevel and StreamingLevel:GetLoadedLevel() then
+    local Callback
+    
+    function Callback()
+      if not IsValid(self) then
+        return
+      end
+      if IsValid(StreamingLevel) then
+        StreamingLevel.OnLevelUnloaded:Remove(self, Callback)
+      end
+      FinishUnload()
+    end
+    
+    StreamingLevel.OnLevelUnloaded:Add(self, Callback)
+    coroutine.resume(coroutine.create(self.LatentPrevewLevelAction), self, false, Name)
+    return
+  end
+  FinishUnload()
 end
 
 function EMLevelLoader:LatentPrevewLevelAction(IsLoad, LevelName, IsHide)

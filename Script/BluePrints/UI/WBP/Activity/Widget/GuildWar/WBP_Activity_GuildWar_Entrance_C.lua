@@ -121,7 +121,7 @@ end
 function M:TryOpenRankTopN()
   if self.RankInfo and self.TopNInfo and self.OpenRankTag then
     self.OpenRankTag = nil
-    UIManager():LoadUINew("GuildWarRank", self.RankInfo, self.TopNInfo)
+    UIManager():LoadUINew("CommonRanking", GuildWarUtils.BuildCommonRankParams(self.RankInfo, self.TopNInfo))
   end
 end
 
@@ -148,19 +148,19 @@ function M:OnRankBtnClicked()
     return
   end
   self.OpenRankTag = true
-  self.RootWidget:BlockAllUIInput(true, "RaidSeasonGetRaidRankInfo")
-  self.Avatar:RaidSeasonGetRaidRankInfo(function(ErrCode)
-    self.RootWidget:BlockAllUIInput(false, "RaidSeasonGetRaidRankInfo")
-    if not ErrorCode:Check(ErrCode) and self then
-      self.RankInfo = {}
-      self:TryOpenRankTopN()
-    end
-  end)
   self.RootWidget:BlockAllUIInput(true, "RaidSeasonGetRaidRankTopN")
   self.Avatar:RaidSeasonGetRaidRankTopN(function(ErrCode)
     self.RootWidget:BlockAllUIInput(false, "RaidSeasonGetRaidRankTopN")
     if not ErrorCode:Check(ErrCode) and self then
       self.TopNInfo = {}
+      self:TryOpenRankTopN()
+    end
+  end)
+  self.RootWidget:BlockAllUIInput(true, "RaidSeasonGetRaidRankInfo")
+  self.Avatar:RaidSeasonGetRaidRankInfo(function(ErrCode)
+    self.RootWidget:BlockAllUIInput(false, "RaidSeasonGetRaidRankInfo")
+    if not ErrorCode:Check(ErrCode) and self then
+      self.RankInfo = {}
       self:TryOpenRankTopN()
     end
   end)

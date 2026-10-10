@@ -2,14 +2,11 @@ require("UnLua")
 require("DataMgr")
 local WikiController = require("BluePrints.UI.WBP.Wiki.WikiController")
 local WBP_SimpleTalk_Portrait = Class("BluePrints.Story.Talk.UI.BP_TalkBaseUINew_C")
-WBP_SimpleTalk_Portrait._components = {
-  "BluePrints.Story.Talk.UI.Component.ImpressionComponent",
-  "BluePrints.Story.Talk.UI.Component.PortraitComponent"
-}
 local EImpressionButtonState = require("BluePrints.UI.UI_PC.Impression.ImpressionConst").EImpressionButtonState
 local ETalkOptionType = require("BluePrints.Story.Talk.Model.TalkOptionData").ETalkOptionType
 local ImpressionModel = require("BluePrints.Story.Talk.Model.ImpressionModel")
 local TalkUtils = require("BluePrints.Story.Talk.View.TalkUtils")
+local FNpcDataManager = require("BluePrints.Managers.NpcDataManager")
 local TalkOptionComponent = require("BluePrints.Story.Talk.UI.Component.TalkOptionComponent")
 local ImpressionItemHideUITag = require("BluePrints.UI.UI_PC.Impression.ImpressionConst").ImpressionItemHideUITag
 
@@ -37,38 +34,17 @@ function WBP_SimpleTalk_Portrait:InitImpressionUI()
   self:ShowConfirmButton(false)
   self:ShowAutoPlayButton(false)
   self:SwitchBindAnimationEvents(true)
-  self:InitEvent_ImpressionComp()
+  self.OptionComp:Event_InitUI(self:BuildOptionCompInitParams())
+  self.DimensionComp:Event_InitUI(self)
 end
 
 function WBP_SimpleTalk_Portrait:SwitchBindAnimationEvents(bBind)
   self:SwitchBindOptionAnimationEvents(bBind)
-  self:SwitchBindExitAnimationEvents(bBind)
 end
 
 function WBP_SimpleTalk_Portrait:GetImpressionItemUIPath()
   DebugPrint("Error: 未实现的函数WBP_SimpleTalk_Portrait:GetImpressionItemUIPath")
   return nil
-end
-
-function WBP_SimpleTalk_Portrait:BuildExitSelectableConfig()
-  return {
-    Widget = self.Button_Area,
-    IsEnabled = function()
-      return self:IsExitButtonHidden()
-    end,
-    OnSelect = function()
-      self:OnExitButtonSelected(true)
-    end,
-    OnUnselect = function()
-      self:OnExitButtonSelected(false)
-    end,
-    OnPressed = function()
-      self:OnExitButtonPressed()
-    end,
-    OnReleased = function()
-      self:OnExitButtonClicked()
-    end
-  }
 end
 
 function WBP_SimpleTalk_Portrait:OnOptionListSelectionChanged(CurrentIndex)
@@ -81,15 +57,28 @@ end
 
 function WBP_SimpleTalk_Portrait:BuildOptionCompInitParams()
   return {
-    Img_Mouse = self.Img_Mouse,
-    ScrollBox = self.ScrollBox_Items,
     ItemUIPathName = self.ImpressionItemUIPathName,
-    ExtraSelectable = self:BuildExitSelectableConfig(),
+    OnExitClicked = function()
+      self.DimensionComp:Event_FocusLost()
+    end,
+    OnExitClickAnimationFinished = function()
+      function self.OnOptionOutAnimationFinishedCallback()
+        self:StopStoryLine()
+      end
+      
+      self:PlayAnimation(self.Option_Out)
+    end,
+    OnItemClicked = function(Item)
+      self:OnOptionItemClicked(Item)
+    end,
     OnSelectionChanged = function(CurrentIndex)
       self:OnOptionListSelectionChanged(CurrentIndex)
     end,
     OnItemHovered = function(Index)
-      self:OnImpressionItemHovered(Index + 1)
+      self:OnOptionItemHovered(Index + 1)
+    end,
+    OnItemUnhovered = function(Index)
+      self:OnOptionItemUnhovered(Index + 1)
     end
   }
 end
@@ -98,15 +87,17 @@ function WBP_SimpleTalk_Portrait:InitData_Lua()
   DebugPrint("WBP_SimpleTalk_Portrait:InitData_Lua")
   self.SelectImpressionItemIndex = nil
   self.OptionMaxNum = -1
-  self.bIsTextBorderHidden = true
+  self.bIsTextBorderHidden = nil
   self.ImpressionItemUIPathName = self:GetImpressionItemUIPath()
-  self:InitData_ImpressionComp()
   self:InitComps()
+  self.DimensionComp:Event_InitData()
 end
 
 function WBP_SimpleTalk_Portrait:InitComps()
-  self.OptionComp = TalkOptionComponent:New()
-  self.OptionComp:Init(self, self:BuildOptionCompInitParams())
+  self.PortraitComp = self.Avatar
+  self.OptionComp = self.DialogueOption
+  self.DimensionComp = self.Dimension
+  self.DimensionComp:BindOnImpressionMapVisibilityChanged(self, self.SwitchDimensionBg)
 end
 
 function WBP_SimpleTalk_Portrait:InitTypingText()
@@ -116,28 +107,27 @@ end
 
 function WBP_SimpleTalk_Portrait:InitGText()
   DebugPrint("WBP_SimpleTalk_Portrait:InitGText")
-  self.Text_TipsTitle:SetText(GText("Impression_Repeat_Dice"))
-  self.Text_Button:SetText(GText("Impression_UI_Back"))
+  self.OptionComp:Event_InitGText()
 end
 
 function WBP_SimpleTalk_Portrait:InitVisibility()
   DebugPrint("WBP_SimpleTalk_Portrait:InitVisibility")
-  self:InitVisibility_ImpressionComp()
+  self.OptionComp:Event_InitVisibility()
+  self.DimensionComp:Event_InitVisibility()
   self.NpcNameText:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.Icon_Arrow:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  self:SetTextBorderHidden(true)
+  self:SetTextBorderHidden(true, true)
   self:ShowAutoPlayButton(false)
   self:ShowConfirmButton(false)
   self:ShowReviewButton(false)
   self:ShowSkipButton(false)
   self:ShowWikiButton(false)
-  self:SwitchShowOptionUI(false)
 end
 
-function WBP_SimpleTalk_Portrait:BuildImpressionOptionItemDatas(OptionData, TalkTriggerId, ImpressionAreaId)
+function WBP_SimpleTalk_Portrait:BuildOptionItemDatas(OptionData, TalkTriggerId, ImpressionAreaId)
   local OptionState = self:GetOptionState(OptionData, ImpressionAreaId)
   local ImpressionDone = false
-  DebugPrint("WBP_SimpleTalk_Portrait:BuildImpressionOptionItemDatas", OptionState)
+  DebugPrint("WBP_SimpleTalk_Portrait:BuildOptionItemDatas", OptionState)
   local OptionItemDatas = {}
   local SavedOptions = OptionData.SavedOptions
   local OptionId2Idx = OptionData.OptionId2Idx
@@ -172,18 +162,6 @@ function WBP_SimpleTalk_Portrait:BuildImpressionOptionItemDatas(OptionData, Talk
         OnInterruptedExitDelegate = {
           self,
           self.StopStoryLine
-        },
-        OnHoveredDelegate = {
-          self,
-          self.OnImpressionItemHovered
-        },
-        OnUnhoveredDelegate = {
-          self,
-          self.OnImpressionItemUnhovered
-        },
-        OnClickedDelegate = {
-          self,
-          self.OnImpressionItemClicked
         }
       }
     end
@@ -217,18 +195,6 @@ function WBP_SimpleTalk_Portrait:BuildImpressionOptionItemDatas(OptionData, Talk
           OnInterruptedExitDelegate = {
             self,
             self.StopStoryLine
-          },
-          OnHoveredDelegate = {
-            self,
-            self.OnImpressionItemHovered
-          },
-          OnUnhoveredDelegate = {
-            self,
-            self.OnImpressionItemUnhovered
-          },
-          OnClickedDelegate = {
-            self,
-            self.OnImpressionItemClicked
           }
         }
       end
@@ -238,10 +204,9 @@ function WBP_SimpleTalk_Portrait:BuildImpressionOptionItemDatas(OptionData, Talk
   return OptionItemDatas
 end
 
-function WBP_SimpleTalk_Portrait:InitOptions(OptionData, TalkTriggerId, ImpressionAreaId, OnOptionItemClicked)
-  self.OptionComp:ClearListItems()
-  local OptionItemDatas = self:BuildImpressionOptionItemDatas(OptionData, TalkTriggerId, ImpressionAreaId)
-  self.OptionComp:AddItems(OptionItemDatas)
+function WBP_SimpleTalk_Portrait:InitOptions(OptionData, TalkTriggerId, ImpressionAreaId)
+  local OptionItemDatas = self:BuildOptionItemDatas(OptionData, TalkTriggerId, ImpressionAreaId)
+  self.OptionComp:Event_InitItems(OptionItemDatas)
 end
 
 function WBP_SimpleTalk_Portrait:InitPlayKey()
@@ -250,37 +215,6 @@ end
 
 function WBP_SimpleTalk_Portrait:InitAutoPlay()
   DebugPrint("Error: 未实现的函数WBP_SimpleTalk_Portrait:InitAutoPlay")
-end
-
-function WBP_SimpleTalk_Portrait:SwitchBindExitButtonEvents(bBind)
-  DebugPrint("WBP_SimpleTalk_Portrait:SwitchBindExitButtonEvents", bBind)
-  if bBind then
-    self.Button_Area.OnClicked:Add(self, self.OnExitButtonClicked)
-    self.Button_Area.OnHovered:Add(self, self.OnExitButtonHovered)
-    self.Button_Area.OnUnhovered:Add(self, self.OnExitButtonUnhovered)
-    self.Button_Area.OnPressed:Add(self, self.OnExitButtonPressed)
-    self.Button_Area.OnReleased:Add(self, self.OnExitButtonReleased)
-  else
-    self.Button_Area.OnClicked:Remove(self, self.OnExitButtonClicked)
-    self.Button_Area.OnHovered:Remove(self, self.OnExitButtonHovered)
-    self.Button_Area.OnUnhovered:Remove(self, self.OnExitButtonUnhovered)
-    self.Button_Area.OnPressed:Remove(self, self.OnExitButtonPressed)
-    self.Button_Area.OnReleased:Remove(self, self.OnExitButtonReleased)
-  end
-end
-
-function WBP_SimpleTalk_Portrait:SwitchBindExitAnimationEvents(bBind)
-  if bBind then
-    self:BindToAnimationFinished(self.BtnQuit_Click, {
-      self,
-      self.OnExitButtonClickAnimFinished
-    })
-  else
-    self:UnbindFromAnimationFinished(self.BtnQuit_Click, {
-      self,
-      self.OnExitButtonClickAnimFinished
-    })
-  end
 end
 
 function WBP_SimpleTalk_Portrait:SwitchBindTypingTextOnFinishEvent(bBind, Obj, Func)
@@ -329,33 +263,6 @@ function WBP_SimpleTalk_Portrait:SwitchBindOptionAnimationEvents(bBind)
   end
 end
 
-function WBP_SimpleTalk_Portrait:SwitchEnableImpressionItemClick(bBind)
-  DebugPrint("WBP_SimpleTalk_Portrait:SwitchBindImpressionItemButtonEvents", bBind)
-  local ChildMaxIndex = self.ScrollBox_Items:GetChildrenCount() - 1
-  for i = 0, ChildMaxIndex do
-    local ImpressionItem = self.ScrollBox_Items:GetChildAt(i)
-    if ImpressionItem then
-      ImpressionItem:SwitchEnableClickEvents(bBind)
-    end
-  end
-end
-
-function WBP_SimpleTalk_Portrait:SwitchEnableItemEvents(Enable)
-  self.OptionComp:SwitchEnableConfirmEvents(Enable)
-end
-
-function WBP_SimpleTalk_Portrait:SwitchEnableMouseWheelEvents(Enable)
-  DebugPrint("WBP_SimpleTalk_Portrait:SetMouseWheelEventEnable", Enable)
-  self.OptionComp:SwitchEnableUpDownEvents(Enable)
-end
-
-function WBP_SimpleTalk_Portrait:SwitchEnableOptionClick(bIsEnable)
-  DebugPrint("WBP_SimpleTalk_Portrait:SetOptionClickEnable", bIsEnable)
-  self:SwitchBindExitButtonEvents(bIsEnable)
-  self:SwitchEnableImpressionItemClick(bIsEnable)
-  self:SwitchEnableItemEvents(bIsEnable)
-end
-
 function WBP_SimpleTalk_Portrait:PreEnterTalkTask(TalkTask, TaskData, OnPreEnterTalkTaskFinished)
   DebugPrint("WBP_SimpleTalk_Portrait:PreEnterTalkTask")
   WBP_SimpleTalk_Portrait.Super.PreEnterTalkTask(self, TalkTask, TaskData, OnPreEnterTalkTaskFinished)
@@ -371,7 +278,6 @@ function WBP_SimpleTalk_Portrait:PostEnterTalkTask(TalkTask, TaskData, OnPostEnt
   self:SwitchEnableAutoPlayButton(self.bDefaultShowAutoPlayButton)
   self:InitPlayKey()
   self:InitAutoPlay()
-  self:PlayAnimation(self.Dialog_In)
   WBP_SimpleTalk_Portrait.Super.PostEnterTalkTask(self, TalkTask, TaskData, OnPostEnterTalkTaskFinished)
 end
 
@@ -389,13 +295,12 @@ function WBP_SimpleTalk_Portrait:PreExitTalkTask(TalkTask, TalkData, OnPreExitTa
   self:StopTypingAudio()
   self:SwitchEnableWikiButton(false)
   self:SwitchBindAnimationEvents(false)
-  self:OnPreExit_ImpressionComp()
+  self.DimensionComp:Event_PreExit()
   self:SwitchEnableSkipButton(false)
   self:SwitchEnableReviewButton(false)
   self:SwitchEnableAutoPlayButton(false)
   self:ClearOptions()
   self:StopAllAnimations()
-  self:PlayAnimation(self.Dialog_Out)
   WBP_SimpleTalk_Portrait.Super.PreExitTalkTask(self, TalkTask, TalkData, OnPreExitTalkTaskFinished, OutType, OutTime)
 end
 
@@ -403,8 +308,15 @@ function WBP_SimpleTalk_Portrait:PlayDialogue(TalkTask, DialogueData, TaskData, 
   DebugPrint("WBP_SimpleTalk_Portrait:PlayDialogue", TalkTask, DialogueData, TaskData)
   self:StopTypingAudio()
   self:InitDialogueData(DialogueData)
-  self:OnDialogueStarted_PortraitComp(DialogueData)
+  local DialogueRow = DataMgr.Dialogue[DialogueData.DialogueId]
+  local bSpeakerExists = nil ~= DialogueRow and (nil ~= DialogueRow.SpeakNpcId or not string.isempty(DialogueRow.SpeakNpcName))
+  local PortraitFacialRow
+  if 0 ~= DialogueData.TalkActorId then
+    PortraitFacialRow = FNpcDataManager:GetPortraitFacialRow(DialogueData.TalkActorId, DialogueData.PortraitFacialType)
+  end
+  self.PortraitComp:SetFacial(bSpeakerExists, PortraitFacialRow)
   self:SetTalkActorName(DialogueData)
+  self:SetTypingTextAlignment(DialogueData)
   self.TypingText:Typing(DialogueData.Content)
   self:TryPlayDialogueTypingAudio(DialogueData)
   self:SwitchHideDialoguePanel(false)
@@ -465,17 +377,21 @@ function WBP_SimpleTalk_Portrait:PlayDialogue(TalkTask, DialogueData, TaskData, 
 end
 
 function WBP_SimpleTalk_Portrait:OnTalkAudioStateChanged(AudioState)
-  self:OnTalkAudioStateChanged_PortraitComp(AudioState)
+  if "Play" == AudioState then
+    self.PortraitComp:SetMouthState(self.PortraitComp.EMouthState.Speak)
+  else
+    self.PortraitComp:SetMouthState(self.PortraitComp.EMouthState.Idle)
+  end
 end
 
 function WBP_SimpleTalk_Portrait:OnOptionItemEnd(ItemIdx, SpecifyFinishType)
   DebugPrint("WBP_SimpleTalk_Portrait:OnOptionItemEnd")
   
   function self.OnOptionOutAnimationFinishedCallback()
-    if self.OnOptionItemClicked then
-      self.OnOptionItemClicked(ItemIdx, SpecifyFinishType)
+    if self.OptionChosenCallback then
+      self.OptionChosenCallback(ItemIdx, SpecifyFinishType)
     end
-    self.OnOptionItemClicked = nil
+    self.OptionChosenCallback = nil
   end
   
   self:ResetNormalButton()
@@ -512,11 +428,7 @@ function WBP_SimpleTalk_Portrait:OnDownSelectItem()
 end
 
 function WBP_SimpleTalk_Portrait:SwithShowExitButton(bShow)
-  if bShow then
-    self.Group_Button:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  else
-    self.Group_Button:SetVisibility(ESlateVisibility.Collapsed)
-  end
+  self.OptionComp:ShowExitButton(bShow)
 end
 
 function WBP_SimpleTalk_Portrait:ChangeExitButtonVisibilityFromOptionType(OptionData)
@@ -595,30 +507,18 @@ function WBP_SimpleTalk_Portrait:GetCurrentSelectIndex()
   return self.SelectImpressionItemIndex
 end
 
-function WBP_SimpleTalk_Portrait:IsExitButtonHidden()
-  return self.Group_Button:GetVisibility() ~= ESlateVisibility.Collapsed
-end
-
-function WBP_SimpleTalk_Portrait:SwitchShowOptionUI(bShow)
-  if bShow then
-    self.VB_GroupItem:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  else
-    self.VB_GroupItem:SetVisibility(ESlateVisibility.Collapsed)
-  end
-end
-
-function WBP_SimpleTalk_Portrait:InitOptionData(TalkTask, OptionData, OnOptionItemClicked)
+function WBP_SimpleTalk_Portrait:InitOptionData(TalkTask, OptionData, OptionChosenCallback)
   self.TalkTask = TalkTask
   self.OptionData = OptionData
   self.OptionMaxNum = #OptionData.Options
-  self.OnOptionItemClicked = OnOptionItemClicked
+  self.OptionChosenCallback = OptionChosenCallback
 end
 
-function WBP_SimpleTalk_Portrait:ShowOptions(TalkTask, OptionData, OnOptionItemClicked)
-  DebugPrint("WBP_SimpleTalk_Portrait:ShowOptions", TalkTask, OptionData, OnOptionItemClicked)
+function WBP_SimpleTalk_Portrait:ShowOptions(TalkTask, OptionData, OptionChosenCallback)
+  DebugPrint("WBP_SimpleTalk_Portrait:ShowOptions", TalkTask, OptionData, OptionChosenCallback)
   self:TryHideLastDialoguePic()
   self:StopTypingAudio()
-  self:InitOptionData(TalkTask, OptionData, OnOptionItemClicked)
+  self:InitOptionData(TalkTask, OptionData, OptionChosenCallback)
   self:PlayAnimation(self.Option_In)
   local OptionType = OptionData.OptionType
   if OptionType == ETalkOptionType.Plus or OptionType == ETalkOptionType.Check then
@@ -632,11 +532,7 @@ function WBP_SimpleTalk_Portrait:ClearOptions()
   self.SelectImpressionItemIndex = nil
 end
 
-function WBP_SimpleTalk_Portrait:SetExitButtonNormal()
-  self:PlayAnimation(self.BtnQuit_Normal)
-end
-
-function WBP_SimpleTalk_Portrait:SetTalkActorName(DialogueData)
+function WBP_SimpleTalk_Portrait:GetTalkActorName(DialogueData)
   local Name = DialogueData.TalkActorName
   if not Name then
     local TalkActorData = DialogueData.TalkActorData
@@ -646,15 +542,33 @@ function WBP_SimpleTalk_Portrait:SetTalkActorName(DialogueData)
       Name = TalkUtils:GetTalkActorName("Npc", DialogueData.TalkActorId)
     end
   end
-  local Name = GText(Name)
-  self.NpcNameText:SetText(Name)
+  return GText(Name)
 end
 
-function WBP_SimpleTalk_Portrait:SetTextBorderHidden(bHidden)
-  if bHidden then
-    self.Group_Dialog:SetVisibility(ESlateVisibility.Collapsed)
+function WBP_SimpleTalk_Portrait:SetTalkActorName(DialogueData)
+  self.NpcNameText:SetText(self:GetTalkActorName(DialogueData))
+end
+
+function WBP_SimpleTalk_Portrait:SetTypingTextAlignment(DialogueData)
+  local Alignment = EHorizontalAlignment.HAlign_Center
+  if not string.isempty(self:GetTalkActorName(DialogueData)) then
+    Alignment = EHorizontalAlignment.HAlign_Left
+  end
+  self.TypingText:SetHorizontalAlignment(Alignment)
+end
+
+function WBP_SimpleTalk_Portrait:SetTextBorderHidden(bHidden, bImmediate)
+  if self.bIsTextBorderHidden == bHidden then
+    return
+  end
+  self.bIsTextBorderHidden = bHidden
+  if bImmediate then
+    local PlayMode = bHidden and EUMGSequencePlayMode.Reverse or EUMGSequencePlayMode.Forward
+    self:PlayAnimation(self.Dialog_In, self.Dialog_In:GetEndTime(), 1, PlayMode)
+  elseif bHidden then
+    self:PlayAnimationReverse(self.Dialog_In)
   else
-    self.Group_Dialog:SetVisibility(ESlateVisibility.HitTestInvisible)
+    self:PlayAnimationForward(self.Dialog_In)
   end
 end
 
@@ -668,17 +582,6 @@ end
 
 function WBP_SimpleTalk_Portrait:HasWholeDialogueTypingFinished()
   return self.TypingText:IsFinished()
-end
-
-function WBP_SimpleTalk_Portrait:OnExitButtonSelected(bIsSelect)
-  DebugPrint("WBP_SimpleTalk_Portrait:OnExitButtonSelected", bIsSelect)
-  self.bExitButtonSelect = bIsSelect
-  if bIsSelect then
-    self:PlayExitButtonHoveredPerformance()
-  else
-    self:PlayExitButtonUnhoveredPerformance()
-  end
-  self:OnExitButtonSelectedPlatform(bIsSelect)
 end
 
 function WBP_SimpleTalk_Portrait:TryPlayDialogueTypingAudio(DialogueData)
@@ -735,72 +638,22 @@ function WBP_SimpleTalk_Portrait:SwitchDimensionBg(bShow)
   end
 end
 
-function WBP_SimpleTalk_Portrait:OnExitButtonClicked()
-  DebugPrint("WBP_SimpleTalk_Portrait:OnExitButtonClicked")
-  self:SwitchEnableOptionClick(false)
-  self:PlayAnimation(self.BtnQuit_Click)
-  self:OnFocusLost_ImpressionComp()
-  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_return", "", nil)
-end
-
-function WBP_SimpleTalk_Portrait:OnExitButtonHovered()
-  DebugPrint("WBP_SimpleTalk_Portrait:OnExitButtonHovered")
-  self.OptionComp:OnExtraHovered()
-end
-
-function WBP_SimpleTalk_Portrait:OnExitButtonUnhovered()
-  DebugPrint("WBP_SimpleTalk_Portrait:OnExitButtonUnhovered")
-end
-
-function WBP_SimpleTalk_Portrait:PlayExitButtonHoveredPerformance()
-  DebugPrint("WBP_SimpleTalk_Portrait:PlayExitButtonHoveredPerformance")
-  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_add", "", nil)
-  self:PlayExitButtonHoveredPerformanceByPlatform()
-end
-
-function WBP_SimpleTalk_Portrait:PlayExitButtonUnhoveredPerformance()
-  DebugPrint("WBP_SimpleTalk_Portrait:PlayExitButtonUnhoveredPerformance")
-  self:PlayExitButtonUnhoveredPerformanceByPlatform()
-end
-
-function WBP_SimpleTalk_Portrait:OnExitButtonPressed()
-  DebugPrint("WBP_SimpleTalk_Portrait:OnExitButtonPressed")
-  self:PlayAnimation(self.BtnQuit_Press)
-end
-
-function WBP_SimpleTalk_Portrait:OnExitButtonReleased()
-  DebugPrint("WBP_SimpleTalk_Portrait:OnExitButtonReleased")
-  self:OnExitButtonReleasedByPlatform()
-end
-
-function WBP_SimpleTalk_Portrait:OnExitButtonClickAnimFinished()
-  DebugPrint("WBP_SimpleTalk_Portrait:OnExitButtonClickAnimFinished")
-  self:StopAllAnimations()
-  
-  function self.OnOptionOutAnimationFinishedCallback()
-    self:StopStoryLine()
-  end
-  
-  self:PlayAnimation(self.Option_Out)
-end
-
 function WBP_SimpleTalk_Portrait:StopStoryLine()
   DebugPrint("WBP_SimpleTalk_Portrait:StopStoryLine")
   self.StopStoryline_Delegate:Fire()
 end
 
-function WBP_SimpleTalk_Portrait:OnImpressionItemHovered(ItemIndex)
+function WBP_SimpleTalk_Portrait:OnOptionItemHovered(ItemIndex)
 end
 
-function WBP_SimpleTalk_Portrait:OnImpressionItemUnhovered(ItemIndex)
+function WBP_SimpleTalk_Portrait:OnOptionItemUnhovered(ItemIndex)
 end
 
-function WBP_SimpleTalk_Portrait:OnImpressionItemClicked(Item)
+function WBP_SimpleTalk_Portrait:OnOptionItemClicked(Item)
   DebugPrint("WBP_SimpleTalk_Portrait:OnClickedItem", Item.State)
   self:StopAllAnimations()
   if Item.State == EImpressionButtonState.Enabled then
-    self:SwitchEnableOptionClick(false)
-    self:OnFocusLost_ImpressionComp()
+    self.DimensionComp:Event_FocusLost()
     if self.OptionData.OptionType == ETalkOptionType.Check then
       local Options = {}
       for i, Option in ipairs(self.OptionData.Options) do
@@ -820,15 +673,11 @@ function WBP_SimpleTalk_Portrait:OnImpressionItemClicked(Item)
   end
 end
 
-function WBP_SimpleTalk_Portrait:GetCurrentImpressionItem()
+function WBP_SimpleTalk_Portrait:GetCurrentOptionItem()
   if not self.SelectImpressionItemIndex then
     return nil
   end
-  if self.SelectImpressionItemIndex > self.OptionMaxNum then
-    return self.Button_Area
-  else
-    return self.OptionComp:GetItemByIndex(self.SelectImpressionItemIndex - 1)
-  end
+  return self.OptionComp:GetItemByDisplayIndex(self.SelectImpressionItemIndex, self.OptionMaxNum)
 end
 
 function WBP_SimpleTalk_Portrait:OnOptionInAnimationStarted()
@@ -844,27 +693,22 @@ function WBP_SimpleTalk_Portrait:OnOptionInAnimationStarted()
   self:SwitchEnableTalkClick(false)
   self:SwitchEnableAutoPlayButton(false)
   self:SwitchEnableSkipButton(false)
-  self.OptionComp:SetDefaultItem()
-  self:SetExitButtonNormal()
-  self:SwitchShowOptionUI(true)
   self:SetTipImageHidden(true)
   self:ChangeExitButtonVisibilityFromOptionType(self.OptionData)
   self:ChangeImgMouseVisibility(self.OptionData)
-  self:OnDisplayStarted_ImpressionComp()
+  self.OptionComp:Event_DisplayStarted(self.OptionData.OptionType, ImpressionAreaId, self:IsRetryCheck(self.OptionData))
+  self.DimensionComp:Event_DisplayStarted()
 end
 
 function WBP_SimpleTalk_Portrait:OnOptionInAnimationFinished()
   DebugPrint("WBP_SimpleTalk_Portrait:OnOptionInAnimationFinished")
-  self:SwitchEnableOptionClick(true)
-  self:SwitchEnableMouseWheelEvents(true)
+  self.OptionComp:Event_DisplayStartFinished()
 end
 
 function WBP_SimpleTalk_Portrait:OnOptionOutAnimationStarted()
   DebugPrint("WBP_SimpleTalk_Portrait:OnOptionOutAnimationStarted", self.OnOptionOutAnimationFinishedCallback)
-  self:SwitchEnableOptionClick(false)
-  self:SwitchEnableMouseWheelEvents(false)
-  self:SwitchShowOptionUI(false)
-  self:OnDisplayEnded_ImpressionComp()
+  self.OptionComp:Event_DisplayEnded()
+  self.DimensionComp:Event_DisplayEnded()
   if self.OnOptionOutAnimationFinishedCallback then
     self.OnOptionOutAnimationFinishedCallback()
     self.OnOptionOutAnimationFinishedCallback = nil
@@ -889,32 +733,16 @@ function WBP_SimpleTalk_Portrait:SwitchHideDialoguePanel(bHide)
   self:SetTextBorderHidden(bHide)
 end
 
+function WBP_SimpleTalk_Portrait:ChangeImgMouseVisibility(OptionData)
+  self.OptionComp:Event_ChangeImgMouseVisibility(OptionData, self.OptionMaxNum)
+end
+
 function WBP_SimpleTalk_Portrait:AdaptPlatform()
   DebugPrint("Error: 未实现的函数WBP_SimpleTalk_Portrait:AdaptPlatform")
 end
 
-function WBP_SimpleTalk_Portrait:OnExitButtonSelectedPlatform(bIsSelect)
-  DebugPrint("Error: 未实现的函数WBP_SimpleTalk_Portrait:OnExitButtonSelectedPlatform", bIsSelect)
-end
-
-function WBP_SimpleTalk_Portrait:OnExitButtonReleasedByPlatform()
-  DebugPrint("Error: 未实现的函数WBP_SimpleTalk_Portrait:OnExitButtonReleasedByPlatform")
-end
-
-function WBP_SimpleTalk_Portrait:PlayExitButtonHoveredPerformanceByPlatform()
-  DebugPrint("Error: 未实现的函数WBP_SimpleTalk_Portrait:PlayExitButtonHoveredPerformanceByPlatform")
-end
-
-function WBP_SimpleTalk_Portrait:PlayExitButtonUnhoveredPerformanceByPlatform()
-  DebugPrint("Error: 未实现的函数WBP_SimpleTalk_Portrait:PlayExitButtonUnhoveredPerformanceByPlatform")
-end
-
-function WBP_SimpleTalk_Portrait:ChangeImgMouseVisibility(OptionData)
-  DebugPrint("Error: 未实现的函数WBP_SimpleTalk_Portrait:ChangeImgMouseVisibility")
-end
-
 function WBP_SimpleTalk_Portrait:Destruct()
-  self:OnDestruct_ImpressionComp()
+  self.DimensionComp:Event_Destruct()
   self.OptionComp = nil
   WBP_SimpleTalk_Portrait.Super.Destruct(self)
 end

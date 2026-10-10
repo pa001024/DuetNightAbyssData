@@ -13,6 +13,9 @@ T.RT_1 = {
   "/Game/Maps/Levels/Chapter01/Chapter01_Main/Navmesh_Data/Chapter01_Icelake_NavMesh_00027",
   "/Game/Maps/Levels/Chapter01/Chapter01_Main/Navmesh_Data/Chapter01_Icelake_NavMesh_00028"
 }
+T.RT_2 = {
+  [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Boss/Task_Data/Haiboliya_Thc_Boss04_02_Task.Haiboliya_Thc_Boss04_02_Task"
+}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -652,9 +655,7 @@ return ReadOnly("ArtLevelControl", {
   [62] = {
     Id = 62,
     InTime = 0,
-    LoadLevel = {
-      [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Thc_Boss/Task_Data/Haiboliya_Thc_Boss04_02_Task.Haiboliya_Thc_Boss04_02_Task"
-    },
+    LoadLevel = T.RT_2,
     OutTime = 0,
     RegionId = 1076,
     VarName = "EX02_Boss04_02"
@@ -748,5 +749,23 @@ return ReadOnly("ArtLevelControl", {
     OutTime = 0,
     RegionId = 1072,
     VarName = "IQ11020201"
+  },
+  [72] = {
+    Id = 72,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Chapter01/Chapter01_Sew_Main/Task_Data/Chapter01_Sew_IQ120404_Task.Chapter01_Sew_IQ120404_Task"
+    },
+    OutTime = 0,
+    RegionId = 1017,
+    VarName = "IQ120704"
+  },
+  [73] = {
+    Id = 73,
+    InTime = 0,
+    LoadLevel = T.RT_2,
+    OutTime = 0,
+    RegionId = 1076,
+    VarName = "IQ110232"
   }
 })

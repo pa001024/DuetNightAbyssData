@@ -41,10 +41,10 @@
   },
   {
     "tabId": 5,
-    "name": "活動限定",
+    "name": "限時復刻",
     "icon": "T_Gacha_PoolBanner_Suyi01",
-    "reddotNode": "Gacha_Special_4",
-    "sequence": 1,
+    "reddotNode": "Gacha_ReSpecial_4",
+    "sequence": 2,
     "gachaIds": [
       9005
     ]
@@ -77,6 +77,16 @@
     "sequence": 1,
     "gachaIds": [
       9008
+    ]
+  },
+  {
+    "tabId": 9,
+    "name": "活動限定",
+    "icon": "T_Gacha_PoolBanner_SpLise01",
+    "reddotNode": "Gacha_Special_8",
+    "sequence": 1,
+    "gachaIds": [
+      9009
     ]
   }
 ]

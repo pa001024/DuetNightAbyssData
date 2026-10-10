@@ -6,6 +6,7 @@ local FormatProperties = require("NetworkEngine.Common.Assemble").FormatProperti
 local CommonConst = require("CommonConst")
 local LimitedResource = Class("LimitedResource", CustomTypes.CustomAttr)
 LimitedResource.__Props__ = {
+  Type = prop.prop("Str", "client save"),
   LimitedResourceId = prop.prop("Int", "client save"),
   LimitedTimeId = prop.prop("Int", "client save"),
   CreateTime = prop.prop("Int", "client save"),
@@ -18,7 +19,8 @@ LimitedResource.__Props__ = {
   TransCount = prop.getter("LimitedResourceData", "TransCount")
 }
 
-function LimitedResource:Init(LimitedResourceId, LimitedTimeId)
+function LimitedResource:Init(Type, LimitedResourceId, LimitedTimeId)
+  self.Type = Type
   self.LimitedResourceId = LimitedResourceId
   self.LimitedTimeId = LimitedTimeId
   self.CreateTime = TimeUtils.NowTime()
@@ -41,7 +43,7 @@ function LimitedResource:SetSendTwoMail()
 end
 
 function LimitedResource:Data()
-  return DataMgr.LimitedTimeResource[self.LimitedResourceId]
+  return DataMgr.LimitedTimeResource[self.Type][self.LimitedResourceId]
 end
 
 function LimitedResource:LimitedResourceData()
@@ -54,9 +56,9 @@ local LimitedResourceDict = Class("LimitedResourceDict", CustomTypes.CustomDict)
 LimitedResourceDict.KeyType = BaseTypes.Int
 LimitedResourceDict.ValueType = LimitedResource
 
-function LimitedResourceDict:GetNewLimitedResource(LimitedResourceId, EndTimeIndex)
+function LimitedResourceDict:GetNewLimitedResource(Type, LimitedResourceId, EndTimeIndex)
   if not self[LimitedResourceId] then
-    self[LimitedResourceId] = self:NewLimitedResource(LimitedResourceId, EndTimeIndex)
+    self[LimitedResourceId] = self:NewLimitedResource(Type, LimitedResourceId, EndTimeIndex)
   end
   return self[LimitedResourceId]
 end
@@ -65,8 +67,69 @@ function LimitedResourceDict:GetLimitedResource(LimitedResourceId)
   return self[LimitedResourceId]
 end
 
-function LimitedResourceDict:NewLimitedResource(LimitedResourceId, EndTimeIndex)
-  return LimitedResource(LimitedResourceId, EndTimeIndex)
+function LimitedResourceDict:NewLimitedResource(Type, LimitedResourceId, EndTimeIndex)
+  return LimitedResource(Type, LimitedResourceId, EndTimeIndex)
 end
 
-return {LimitedResource = LimitedResource, LimitedResourceDict = LimitedResourceDict}
+local LimitedItemDict = Class("LimitedItemDict", CustomTypes.CustomDict)
+LimitedItemDict.KeyType = BaseTypes.Str
+LimitedItemDict.ValueType = LimitedResourceDict
+
+function LimitedItemDict:_SetCollectionValueOwnerInfo(Type, TypeItems)
+  CustomTypes.CustomDict.SetOwnerInfo(TypeItems, self, Type)
+end
+
+function LimitedItemDict:_OnPropChange()
+  self:_OnCollectionChange()
+end
+
+function LimitedItemDict:_OnPropSet()
+  self:_OnCollectionChange()
+end
+
+function LimitedItemDict:_OnPropDictChange()
+  self:_OnCollectionChange()
+end
+
+function LimitedItemDict:_OnAttrPropChange()
+  self:_OnCollectionChange()
+end
+
+function LimitedItemDict:NewLimitedResourceDict()
+  return LimitedResourceDict()
+end
+
+function LimitedItemDict:GetNewLimitedItem(Type, LimitedResourceId, EndTimeIndex)
+  local TypeItems = self[Type]
+  TypeItems = TypeItems or self:NewLimitedResourceDict()
+  local LimitedItem = TypeItems:GetNewLimitedResource(Type, LimitedResourceId, EndTimeIndex)
+  self:AddValue(Type, TypeItems)
+  return LimitedItem
+end
+
+function LimitedItemDict:GetLimitedItem(Type, LimitedResourceId)
+  local TypeItems = self[Type]
+  if not TypeItems then
+    return
+  end
+  return TypeItems:GetLimitedResource(LimitedResourceId)
+end
+
+function LimitedItemDict:RemoveLimitedItem(Type, LimitedResourceId)
+  local TypeItems = self[Type]
+  if not TypeItems then
+    return
+  end
+  TypeItems:RemoveValue(LimitedResourceId)
+  if TypeItems:IsEmpty() then
+    self:RemoveValue(Type)
+  else
+    self:AddValue(Type, TypeItems)
+  end
+end
+
+return {
+  LimitedResource = LimitedResource,
+  LimitedResourceDict = LimitedResourceDict,
+  LimitedItemDict = LimitedItemDict
+}

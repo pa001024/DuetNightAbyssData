@@ -46,6 +46,7 @@ function M:Init(ConfigData)
   self.LeaveFocusWidget = ConfigData.LeaveFocusWidget or ConfigData.OwnerPanel
   self.OwnerPanel = ConfigData.OwnerPanel
   self.bForbidPressAccelerate = ConfigData.bForbidPressAccelerate or false
+  self.bDisableLongPress = ConfigData.bDisableLongPress or false
   self.ViewGamePad = ConfigData.ViewGamePad or "SpecialLeft"
   self.SpecificNumAddGamePad = ConfigData.SpecificNumAddGamePad or "RightShoulder"
   self.SpecificNumMinusGamePad = ConfigData.SpecificNumMinusGamePad or "LeftShoulder"
@@ -244,6 +245,10 @@ function M:GetChangeCount()
 end
 
 function M:OnMinusKeyDown()
+  if self.bDisableLongPress then
+    self:OnClickToMinus()
+    return
+  end
   self:AddTimer(LongPressInterval, self.OnClickToMinus, true, 0, "PreMinusLoop", true)
   local AddTimerKey = self:_GetTimerInfo("PreAddLoop")
   if AddTimerKey then
@@ -261,6 +266,10 @@ function M:OnMinusKeyUp()
 end
 
 function M:OnAddKeyDown()
+  if self.bDisableLongPress then
+    self:OnClickToAdd()
+    return
+  end
   self:AddTimer(LongPressInterval, self.OnClickToAdd, true, 0, "PreAddLoop", true)
   local AddTimerKey = self:_GetTimerInfo("PreMinusLoop")
   if AddTimerKey then

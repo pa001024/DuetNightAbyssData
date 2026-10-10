@@ -33,6 +33,7 @@ function M:UpdateCameraTransitionUI(Camera, Section, Input)
     self.CaptureComp:K2_DestroyComponent(self.CaptureComp)
     self.CaptureComp = nil
   end
+  self.SourceCameraComp = Camera.CameraComponent
   self.CaptureComp = self:CaptureCameraScene(Camera, Section.IsDynamic)
   local TalkSequenceObject = UTrackInstanceFunctionLibrary.GetTalkSequenceObject(self, Input)
   if not TalkSequenceObject or not TalkSequenceObject:IsInSkip() then
@@ -114,10 +115,10 @@ function M:GetMobileRenderTargetSize(Width, Height)
 end
 
 function M:RefreshCaptureComp(CaptureComp)
-  if not IsValid(CaptureComp) or not IsValid(self.CamTransWidget) then
+  if not (IsValid(CaptureComp) and IsValid(self.CamTransWidget)) or not IsValid(self.SourceCameraComp) then
     return
   end
-  local ConstrainedViewRect = self:SyncMainViewProjection(CaptureComp)
+  local ConstrainedViewRect = self:SyncCameraProjection(CaptureComp, self.SourceCameraComp)
   local MinX, MinY, Width, Height = ConstrainedViewRect.X, ConstrainedViewRect.Y, ConstrainedViewRect.Z, ConstrainedViewRect.W
   if Width <= 0 or Height <= 0 then
     self:SetCamTransUIOffset(0, 0, 0, 0)
@@ -225,6 +226,7 @@ function M:OnDestroyedEvent()
     URuntimeCommonFunctionLibrary.K2_ClearAndInvalidateTimerHandle(self, self.RefreshTimerHandle)
   end
   self.RefreshTimerHandle = nil
+  self.SourceCameraComp = nil
   self.RefreshRequestDelegate = nil
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
   if IsValid(GameMode) then

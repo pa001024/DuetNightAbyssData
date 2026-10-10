@@ -331,6 +331,8 @@ function Component:CreateTrackIndicator(RegionMap, TrackTarget)
     RegionMap.TrackIndicator = RegionMap:NewIndicator()
     RegionMap.TrackIndicator:Init(RegionMap, RegionMap.ScreenSize - RegionMap.BgHeight, TrackTarget, false)
     RegionMap.TrackIndicator.Slot:SetZOrder(2)
+  else
+    RegionMap.TrackIndicator:SetTrackTarget(TrackTarget)
   end
   RegionMap.TrackTarget = TrackTarget
   RegionMap.TrackIndicator:SetIcon(TrackTarget.Img_Point.Brush.ResourceObject)

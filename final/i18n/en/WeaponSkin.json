@@ -82,7 +82,7 @@
   {
     "id": 3010111,
     "name": "Emberfrost – Greatsword",
-    "desc": "UI_WeaponSkin_Des_3010111",
+    "desc": "Only the silent snow remembers that long night, when all else burned to ash.",
     "icon": "T_Head_Claymore_Yejin",
     "rarity": 5,
     "unlock": "Available at Shop"
@@ -157,6 +157,14 @@
     "desc": "Graaahhhhh!",
     "icon": "T_Head_Sword_Nahan",
     "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010210,
+    "name": "Cosmic Invitation – Sword",
+    "desc": "Heed the eternal summons of the stars.",
+    "icon": "T_Head_Sword_Huanyu",
+    "rarity": 5,
     "unlock": "Available at Shop"
   },
   {
@@ -552,6 +560,14 @@
     "unlock": "Available at Shop"
   },
   {
+    "id": 3010905,
+    "name": "Bones in Blossom",
+    "desc": "Life endures, even from lifeless bones.",
+    "icon": "T_Head_Cannon_Kugu",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
     "id": 3011001,
     "name": "Guitabby No. 2",
     "desc": "Meeow♪ meow-meow-meow♪ meow-meow♪♪",
@@ -586,8 +602,8 @@
   {
     "id": 3011005,
     "name": "UI_WeaponSkin_Name_3011005",
-    "desc": "UI_WeaponSkin_Des_3010111",
-    "icon": "",
+    "desc": "Only the silent snow remembers that long night, when all else burned to ash.",
+    "icon": "T_Head_Shotgun_Nahan",
     "rarity": 5,
     "unlock": "Available at Shop"
   },

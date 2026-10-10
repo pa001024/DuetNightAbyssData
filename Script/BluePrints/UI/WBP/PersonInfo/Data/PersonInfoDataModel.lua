@@ -109,7 +109,7 @@ function M:GetCreateTime()
 end
 
 function M:GetRougeLikeProgress()
-  return self.RougeLikeProgress
+  return self.Rouge_Difficulty
 end
 
 function M:GetUniqueDatailedDatas()

@@ -9,6 +9,9 @@ function Component:InitGamePad()
   if IsValid(self.GameInputModeSubsystem) then
     self.GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.RefreshOpInfoByInputDevice)
     self:AddTimer(0.1, function()
+      if not IsValid(self) or not IsValid(self.GameInputModeSubsystem) then
+        return
+      end
       self:RefreshOpInfoByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
     end)
   end
@@ -34,13 +37,29 @@ function Component:InitGamePad()
     }
   })
   self.Btn_Auto:SetDefaultGamePadImg("Y")
-  self.Btn_Discharge:SetDefaultGamePadImg("X")
-  self.Btn_Discharge:TryOverrideLongPressClickFunc(function()
-    if self.IsOpenModDetailPanel then
-      return
-    end
-    self:FocusListSelectMod()
-  end)
+  if IsValid(self.Controller_RemoveAll) then
+    self.Controller_RemoveAll:CreateCommonKey({
+      KeyInfoList = {
+        {
+          Type = "Img",
+          ImgShortPath = UIConst.GamePadImgKey.FaceButtonLeft
+        }
+      },
+      bLongPress = true,
+      bButton = true
+    })
+  end
+  if IsValid(self.Btn_RemoveAll) then
+    self.Btn_RemoveAll:TryOverrideLongPressClickFunc(function()
+      if not IsValid(self) then
+        return
+      end
+      if self.IsOpenModDetailPanel then
+        return
+      end
+      self:FocusListSelectMod()
+    end)
+  end
   self.Common_PolarityList_PC.Key_LT:CreateCommonKey({
     KeyInfoList = {
       {Type = "Img", ImgShortPath = "LT"}
@@ -174,11 +193,17 @@ function Component:Handle_OnGamePadDown(InKeyName)
       self:Close()
       return true
     elseif "Gamepad_FaceButton_Left" == InKeyName then
+      if not IsValid(self.Btn_RemoveAll) then
+        return true
+      end
       if not self.IsGamePadXIsPressing then
         self.IsGamePadXIsPressing = true
-        self.Btn_Discharge:OnBtnPressed()
+        self.Btn_RemoveAll:OnBtnPressed()
+        if IsValid(self.Controller_RemoveAll) and not self.Btn_RemoveAll:IsBtnForbidden() then
+          self.Controller_RemoveAll:OnButtonPressed(false, true, 0, self.Btn_RemoveAll.LongPressDuration)
+        end
       end
-      if self.Btn_Discharge:IsBtnForbidden() then
+      if self.Btn_RemoveAll:IsBtnForbidden() then
         self:FocusListSelectMod()
       end
       return true
@@ -224,6 +249,20 @@ function Component:Handle_OnGamePadDown(InKeyName)
   return false
 end
 
+function Component:StopRemoveAllGamepadLongPress()
+  if not self.IsGamePadXIsPressing then
+    return
+  end
+  self.IsGamePadXIsPressing = false
+  if IsValid(self.Btn_RemoveAll) then
+    self.Btn_RemoveAll:OnBtnReleased()
+  end
+  if IsValid(self.Controller_RemoveAll) then
+    self.Controller_RemoveAll:OnButtonReleased()
+    self.Controller_RemoveAll:StopAllAnimations()
+  end
+end
+
 function Component:Handle_OnGamePadUp(InKeyName)
   DebugPrint("thy    Handle_OnGamePadDown", InKeyName)
   if "Gamepad_FaceButton_Top" == InKeyName then
@@ -232,10 +271,14 @@ function Component:Handle_OnGamePadUp(InKeyName)
       return true
     end
   elseif "Gamepad_FaceButton_Left" == InKeyName then
-    self.IsGamePadXIsPressing = false
-    self.Btn_Discharge:OnBtnReleased()
-    if not self.Btn_Discharge.IsForbidden then
-      self.Btn_Discharge:OnBtnClicked()
+    if self.IsGamePadXIsPressing then
+      self:StopRemoveAllGamepadLongPress()
+      if IsValid(self.Controller_RemoveAll) then
+        self.Controller_RemoveAll:PlayAnimation(self.Controller_RemoveAll.Normal)
+      end
+      if not self.IsOpenModDetailPanel and IsValid(self.Btn_RemoveAll) and not self.Btn_RemoveAll.IsForbidden then
+        self.Btn_RemoveAll:OnBtnClicked()
+      end
     end
     return true
   elseif "Gamepad_Special_Right" == InKeyName then
@@ -286,13 +329,17 @@ function Component:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
 end
 
 function Component:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
+  if not IsValid(self) then
+    return
+  end
   if not ModController:IsGamepad() then
-    self.Btn_Discharge:SetButtonIsLongPress(false)
+    if IsValid(self.Btn_RemoveAll) then
+      self.Btn_RemoveAll:SetButtonIsLongPress(false)
+    end
     self:SetKeySelectModGamePad(nil)
     self.IsFocusInSpecialItem = false
-  else
-    self.Btn_Discharge:SetButtonIsLongPress(true)
-    self.Btn_Discharge:SetDefaultGamePadImg("X")
+  elseif IsValid(self.Btn_RemoveAll) then
+    self.Btn_RemoveAll:SetButtonIsLongPress(true)
   end
   if UIManager(self):GetLastestAndFocusableUIWidgetObj() ~= self then
     return
@@ -338,6 +385,7 @@ function Component:SwitchMainUIToPCOrMoble()
   self.List_Role:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self.CheckBox_Mod:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self.Key_Search:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self:RefreshRemoveAllControllerVisibility()
   ModModel:SetGamePadSelectedStuff(nil, nil)
   self.IsFocusOnResourceBar = false
 end
@@ -353,6 +401,7 @@ function Component:SetCanRectGamepadVisible(Visible)
       end
       self.Key_Search:SetVisibility(UIConst.VisibilityOp.Visible)
       self.Btn_EditPolarity:SetGamePadVisibility(UIConst.VisibilityOp.Visible)
+      self:RefreshRemoveAllControllerVisibility()
     end
   else
     self.Mod_Plan.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -364,6 +413,7 @@ function Component:SetCanRectGamepadVisible(Visible)
     if self.Key_Search then
       self.Key_Search:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end
+    self:RefreshRemoveAllControllerVisibility(true)
     self.Btn_EditPolarity:SetGamePadVisibility(UIConst.VisibilityOp.Collapsed)
   end
 end
@@ -429,6 +479,7 @@ function Component:SwitchMainUIToGamePad()
   self.List_Role.BP_OnItemSelectionChanged:Add(self, self.OnRoleListItemSelectionChanged)
   self.List_Select_Mod.BP_OnItemSelectionChanged:Add(self, self.OnModListItemChange)
   self.Key_Search:SetVisibility(UIConst.VisibilityOp.Visible)
+  self:RefreshRemoveAllControllerVisibility()
   self:SetGamepadNavigationRule()
   self:SetDefaultGamepadFocus()
   self.Btn_Share:BindEventOnAddedToFocusPath(self, self.OnBtnCopyLinkAddedToFocusPath)

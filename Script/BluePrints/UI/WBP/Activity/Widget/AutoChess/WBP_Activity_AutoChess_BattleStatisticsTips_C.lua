@@ -1,4 +1,5 @@
 require("UnLua")
+local MonsterUtils = require("Utils.MonsterUtils")
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C",
   "BluePrints.Common.TimerMgr"
@@ -162,7 +163,7 @@ function M:OnDamageValueUpdate(SourceEid, DamageValeAdd)
     return
   end
   Source = Source:GetRootSource()
-  if not Source.UnitId or not DataMgr.Monster[Source.UnitId] then
+  if not MonsterUtils.GetMonsterDataByOwner(Source) then
     return
   end
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)

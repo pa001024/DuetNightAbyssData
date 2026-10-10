@@ -23,8 +23,8 @@ function WBP_SimpleTalk_PC:GetImpressionItemUIPath()
   return ImpressionItemUIPath
 end
 
-function WBP_SimpleTalk_PC:InitOptions(OptionData, TalkTriggerId, ImpressionAreaId, OnOptionItemClicked)
-  WBP_SimpleTalk_PC.Super.InitOptions(self, OptionData, TalkTriggerId, ImpressionAreaId, OnOptionItemClicked)
+function WBP_SimpleTalk_PC:InitOptions(OptionData, TalkTriggerId, ImpressionAreaId)
+  WBP_SimpleTalk_PC.Super.InitOptions(self, OptionData, TalkTriggerId, ImpressionAreaId)
   self:RefreshBaseInfo()
 end
 

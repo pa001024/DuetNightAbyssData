@@ -2,6 +2,7 @@ local DisplayDraft = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_D
 local DisplayConfig = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_DisplayConfig")
 local DisplayRules = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_DisplayRules")
 local DisplayTypes = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_DisplayTypes")
+local PersonInfoCommon = require("BluePrints.UI.WBP.PersonInfo.PersonInfoCommon")
 local M = {}
 
 local function ExportVectorToArray(VectorValue)
@@ -127,6 +128,73 @@ local function ExportCharacterParamGroup(Draft)
   return CharParamGroup
 end
 
+local function ExportItemParamGroup(Draft)
+  local ItemParamGroup = {}
+  for SlotIndex, Slot in ipairs(Draft and Draft.ItemSlots or {}) do
+    if DisplayDraft:IsItemSlotOccupied(Slot) and Slot.ItemData then
+      local TransformInfo = ExportTransform(Slot.Transform, Slot.TransformRotation)
+      local ItemId = tonumber(Slot.ItemData.ItemId)
+      if ItemId then
+        ItemParamGroup[ItemId] = {
+          Id = ItemId,
+          SlotIndex = Slot.SlotIndex or SlotIndex,
+          Position = TransformInfo.Position,
+          Rotation = TransformInfo.Rotation
+        }
+      end
+    end
+  end
+  return ItemParamGroup
+end
+
+local function BuildSceneInitialLightParam(SceneId)
+  local CustomDisplayDefaults = PersonInfoCommon.CustomDisplayDefaults
+  local DefaultLightDirection = CustomDisplayDefaults.LightDirection or {}
+  local InitialLightData = DisplayConfig:GetSceneLightInitialParams(SceneId)
+  if InitialLightData then
+    return {
+      Intensity = InitialLightData.LightIntensity or CustomDisplayDefaults.LightIntensity,
+      Direction = {
+        InitialLightData.Roll or 0,
+        InitialLightData.Pitch or 0,
+        InitialLightData.Yaw or 0
+      }
+    }
+  end
+  return {
+    Intensity = CustomDisplayDefaults.LightIntensity,
+    Direction = {
+      DefaultLightDirection[1] or 0,
+      DefaultLightDirection[2] or 0,
+      DefaultLightDirection[3] or 0
+    }
+  }
+end
+
+local function ExportLightParam(Draft)
+  local CustomDisplayDefaults = PersonInfoCommon.CustomDisplayDefaults
+  local LightParam = Draft and Draft.Scene and Draft.Scene.LightParam or nil
+  if type(LightParam) ~= "table" then
+    return BuildSceneInitialLightParam(Draft and Draft.Scene and Draft.Scene.SceneId or nil)
+  end
+  local Direction = LightParam.Direction
+  if type(Direction) ~= "table" then
+    Direction = {
+      LightParam.Roll or 0,
+      LightParam.Pitch or 0,
+      LightParam.Yaw or 0
+    }
+  end
+  return {
+    Intensity = LightParam.Intensity or LightParam.LightIntensity or CustomDisplayDefaults.LightIntensity,
+    Direction = {
+      Direction[1] or 0,
+      Direction[2] or 0,
+      Direction[3] or 0
+    }
+  }
+end
+
 local function ExportCameraParam(Draft)
   local CameraData = Draft and Draft.Camera or nil
   local LocalPosition = CameraData and CameraData.LocalPosition or nil
@@ -148,6 +216,62 @@ local function ExportCameraParam(Draft)
   }
 end
 
+local function ExportPetParamGroup(Draft)
+  local PetParamGroup = {}
+  local PackedIndex = 0
+  for _, Slot in ipairs(Draft and Draft.PetSlots or {}) do
+    local PetData = Slot and Slot.PetData or nil
+    if DisplayDraft:IsPetSlotOccupied(Slot) and PetData then
+      PackedIndex = PackedIndex + 1
+      local TransformInfo = ExportTransform(Slot.Transform, Slot.TransformRotation)
+      PetParamGroup[PackedIndex] = {
+        PetId = PetData.PetId,
+        UniqueId = PetData.UniqueId,
+        Position = TransformInfo.Position,
+        Rotation = TransformInfo.Rotation
+      }
+    end
+  end
+  return PetParamGroup
+end
+
+local function ExportStickerParam(Draft)
+  local Sticker = Draft and Draft.Other and Draft.Other.Sticker or nil
+  if type(Sticker) ~= "table" then
+    return {}
+  end
+  local StickerId = tonumber(Sticker.StickerId or Sticker.Id)
+  if not StickerId then
+    return {}
+  end
+  return {
+    StickerId = StickerId,
+    Position2D = {
+      tonumber(Sticker.PosX) or 0,
+      tonumber(Sticker.PosY) or 0
+    },
+    Scale = tonumber(Sticker.Scale) or 1
+  }
+end
+
+local function ExportFilterParam(Draft)
+  local Filter = Draft and Draft.Other and Draft.Other.Filter or nil
+  if type(Filter) ~= "table" then
+    return nil
+  end
+  local FilterId = tonumber(Filter.FilterId)
+  if not FilterId or FilterId <= 0 then
+    FilterId = tonumber(Filter.Id)
+  end
+  if not FilterId or FilterId <= 0 then
+    return nil
+  end
+  return {
+    Id = FilterId,
+    Intensity = Filter.Intensity or 0
+  }
+end
+
 function M:BuildInitialDraft(Params)
   Params = Params or {}
   local Draft = DisplayDraft:CreateEmpty(Params.SceneId)
@@ -158,6 +282,29 @@ function M:BuildInitialDraft(Params)
   return Draft
 end
 
+function M:BuildSceneInitialLightParam(SceneId)
+  return BuildSceneInitialLightParam(SceneId)
+end
+
+function M:ReadSceneLightData(Draft, SceneId)
+  local LightParam = Draft and Draft.Scene and Draft.Scene.LightParam or nil
+  if type(LightParam) ~= "table" then
+    return nil
+  end
+  local Direction = LightParam.Direction or {}
+  return {
+    Roll = Direction[1] or LightParam.Roll or 0,
+    Pitch = Direction[2] or LightParam.Pitch or 0,
+    Yaw = Direction[3] or LightParam.Yaw or 0,
+    LightIntensity = LightParam.Intensity or LightParam.LightIntensity or 0,
+    HasUserLight = true
+  }
+end
+
+function M:BuildSceneLightSaveData(Draft)
+  return ExportLightParam(Draft)
+end
+
 function M:BuildDraftFromSceneSpec(SceneSpec)
   local SceneData = SceneSpec and SceneSpec.Scene or nil
   local Draft = DisplayDraft:CreateEmpty(SceneData and SceneData.SceneId or nil)
@@ -166,6 +313,7 @@ function M:BuildDraftFromSceneSpec(SceneSpec)
   end
   local CharacterSlotIndex = 1
   local PetSlotIndex = 1
+  local ItemSlotIndex = 1
   for _, Entity in ipairs(SceneSpec.Entities or {}) do
     if Entity.Type == DisplayTypes.EntityType.Char then
       local Slot = DisplayDraft:GetCharacterSlot(Draft, CharacterSlotIndex)
@@ -185,6 +333,11 @@ function M:BuildDraftFromSceneSpec(SceneSpec)
       Slot.OwnerEntityId = Entity.OwnerEntityId
       Slot.Transform = Entity.Transform
       PetSlotIndex = PetSlotIndex + 1
+    elseif Entity.Type == DisplayTypes.EntityType.Item then
+      local Slot = DisplayDraft:GetItemSlot(Draft, ItemSlotIndex)
+      Slot.ItemData = Entity.Source and Entity.Source.ItemData or nil
+      Slot.Transform = Entity.Transform
+      ItemSlotIndex = ItemSlotIndex + 1
     end
   end
   DisplayRules:NormalizeCharacterSlots(Draft)
@@ -201,7 +354,12 @@ function M:ExportSaveData(Draft)
   return {
     SceneId = Draft.Scene and Draft.Scene.SceneId or nil,
     CharParamGroup = ExportCharacterParamGroup(Draft),
-    CameraParam = ExportCameraParam(Draft)
+    ItemParamGroup = ExportItemParamGroup(Draft),
+    LightParam = ExportLightParam(Draft),
+    CameraParam = ExportCameraParam(Draft),
+    PetParamGroup = ExportPetParamGroup(Draft),
+    StickerParam = ExportStickerParam(Draft),
+    Filter = ExportFilterParam(Draft)
   }
 end
 

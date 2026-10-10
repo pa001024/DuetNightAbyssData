@@ -646,6 +646,41 @@
     ]
   },
   {
+    "id": 4010,
+    "child": [
+      {
+        "id": 15034,
+        "t": "Resource",
+        "c": 1,
+        "n": "Cristal Électro"
+      },
+      {
+        "id": 15032,
+        "t": "Resource",
+        "c": 1,
+        "n": "Cristal Pyro"
+      },
+      {
+        "id": 15035,
+        "t": "Resource",
+        "c": 1,
+        "n": "Cristal Lumino"
+      },
+      {
+        "id": 15031,
+        "t": "Resource",
+        "c": 1,
+        "n": "Cristal Hydro"
+      },
+      {
+        "id": 15036,
+        "t": "Resource",
+        "c": 1,
+        "n": "Cristal Umbro"
+      }
+    ]
+  },
+  {
     "id": 5001,
     "child": [
       {
@@ -1517,6 +1552,59 @@
       },
       {
         "id": 54010161,
+        "t": "Skin",
+        "c": 1,
+        "n": "Code urbain"
+      }
+    ]
+  },
+  {
+    "id": 5011,
+    "child": [
+      {
+        "id": 11010161,
+        "t": "Skin",
+        "c": 1,
+        "n": "Code urbain"
+      },
+      {
+        "id": 11020161,
+        "t": "Skin",
+        "c": 1,
+        "n": "Code urbain"
+      },
+      {
+        "id": 21010161,
+        "t": "Skin",
+        "c": 1,
+        "n": "Code urbain"
+      },
+      {
+        "id": 31020161,
+        "t": "Skin",
+        "c": 1,
+        "n": "Code urbain"
+      },
+      {
+        "id": 31040161,
+        "t": "Skin",
+        "c": 1,
+        "n": "Code urbain"
+      },
+      {
+        "id": 32010161,
+        "t": "Skin",
+        "c": 1,
+        "n": "Code urbain"
+      },
+      {
+        "id": 41020161,
+        "t": "Skin",
+        "c": 1,
+        "n": "Code urbain"
+      },
+      {
+        "id": 53010161,
         "t": "Skin",
         "c": 1,
         "n": "Code urbain"

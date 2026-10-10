@@ -9,10 +9,12 @@ end
 function Component:OnPayFinished(Result, GoodsId, OrderId, ShopItems)
   print(_G.LogTag, "OnPayFinished", Result, GoodsId, OrderId, ShopItems)
   self:NotifyPayFinish(OrderId, Result, GoodsId, ShopItems)
+  local bShoppingCartOrder = GoodsId == CommonConst.ShoppingCartPayGoodsId
+  local PayGoodsInfo = DataMgr.PayGoods[GoodsId]
   if Result == ErrorCode.RET_SUCCESS then
-    if ShopItems and DataMgr.PayGoods[GoodsId].ItemId then
-      local ShopItemData = DataMgr.ShopItem[DataMgr.PayGoods[GoodsId].ItemId]
-      assert(ShopItemData, "购买成功后读表ShopItemData为空", DataMgr.PayGoods[GoodsId].ItemId)
+    if ShopItems and not bShoppingCartOrder and PayGoodsInfo and PayGoodsInfo.ItemId then
+      local ShopItemData = DataMgr.ShopItem[PayGoodsInfo.ItemId]
+      assert(ShopItemData, "购买成功后读表ShopItemData为空", PayGoodsInfo.ItemId)
       if ShopItemData.ItemType == "DailyPack" then
         UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, ShopItems, ShopItemData.IsSpPopup, function()
           UIManager(GWorld.GameInstance):ShowUITip(UIConst.Tip_CommonToast, GText("UI_DailyPack_PurchaseDone"))
@@ -25,22 +27,29 @@ function Component:OnPayFinished(Result, GoodsId, OrderId, ShopItems)
     UIManager(GWorld.GameInstance):ShowError(Result, 1.0, "CommonToastMain")
   end
   EventManager:FireEvent(EventID.OnRechargeFinished, Result, GoodsId, ShopItems, OrderId)
+  if bShoppingCartOrder then
+    return
+  end
+  if not PayGoodsInfo then
+    self.logger.error("OnPayFinished PayGoodsInfo not exist", GoodsId, OrderId)
+    return
+  end
   local EMHeroUSDKSubsystem = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UEMHeroUSDKSubsystem:StaticClass())
   local Parameters = TMap("", "")
   local FBParameters = TMap("", "")
   local GameRoleInfo = HeroUSDKUtils.GenHeroHDCGameRoleInfo()
-  Parameters:Add("content_id", tostring(DataMgr.PayGoods[GoodsId].ItemId))
+  Parameters:Add("content_id", tostring(PayGoodsInfo.ItemId))
   Parameters:Add("currency", "USD")
-  Parameters:Add("revenue", tostring(DataMgr.PayGoods[GoodsId].PriceUSD))
+  Parameters:Add("revenue", tostring(PayGoodsInfo.PriceUSD))
   Parameters:Add("user_id", tostring(GameRoleInfo.roleId))
   Parameters:Add("order_id", tostring(OrderId))
   Parameters:Add("item_id", tostring(GoodsId))
   Parameters:Add("server_id", tostring(GameRoleInfo.serverId))
-  FBParameters:Add("fb_content_id", tostring(DataMgr.PayGoods[GoodsId].ItemId))
+  FBParameters:Add("fb_content_id", tostring(PayGoodsInfo.ItemId))
   FBParameters:Add("fb_currency", "USD")
-  FBParameters:Add("_valueToSum", tostring(DataMgr.PayGoods[GoodsId].PriceUSD))
+  FBParameters:Add("_valueToSum", tostring(PayGoodsInfo.PriceUSD))
   FBParameters:Add("fb_order_id", tostring(OrderId))
-  EMHeroUSDKSubsystem:MSDKSendPurchaseWithOrderIdWithChannel(OrderId, DataMgr.PayGoods[GoodsId].PriceUSD, "USD", Parameters, FBParameters)
+  EMHeroUSDKSubsystem:MSDKSendPurchaseWithOrderIdWithChannel(OrderId, PayGoodsInfo.PriceUSD, "USD", Parameters, FBParameters)
 end
 
 function Component:ListenPayFinish(OrderId, EventFunc)

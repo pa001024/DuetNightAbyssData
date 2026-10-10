@@ -877,7 +877,7 @@ Reaching maximum stacks consumes all stacks to deal 1 instance of Overflow Damag
   },
   ATTR_DESC_ATK_Thunder = {
     ContentEN = [[
-Triggering Bonus Effect: Electro applies 1 stack to the target for 6s, dealing periodic Electro Damage. Stacks up to 6 times.
+When triggering Bonus Effect: Electro, inflicts a stack that deals periodic Electro DMG to the target for 6s, up to 6 stacks.
 Reaching maximum stacks consumes all stacks to deal 1 instance of Overflow Damage based on their total remaining periodic damage and apply 1 stack of Electro Disruption. This effect can trigger once every 0.4s.]],
     ContentFR = "Lorsqu’un Effet supplémentaire est déclenché, applique à la cible un effet de Dégâts Électro sur la durée pendant 6 s, cumulable jusqu’à 6 fois.\nUne fois le nombre maximal de cumuls atteint, tous les cumuls sont supprimés. La cible subit 1 instance de Dégâts de Surabondance en fonction des dégâts sur la durée restants et reçoit 1 cumul de Désordre Électro. Cet effet peut se déclencher au maximum une fois toutes les 0,4 s.",
     ContentJP = "追加効果発動時、対象に6秒間持続する雷属性の持続ダメージを付与する。最大6スタック。\n 最大までスタックすると、すべてのスタック数をリセットし、持続ダメージの残りダメージ量に基づいてチャージダメージを1回与え、雷属性の乱調を1スタック付与する。0.4秒ごとに最大1回発動可能。",
@@ -2478,6 +2478,15 @@ Reaching maximum stacks consumes all stacks to deal 1 instance of Overflow Damag
     TextMapContent = "连击持续时间",
     TextMapId = "Attr_ComboHoldTime_Name"
   },
+  Attr_CutTNRate_Name = {
+    ContentEN = "Stance Reduction",
+    ContentFR = "Réduction de posture",
+    ContentJP = "体勢崩れ",
+    ContentKR = "전투 태세 약화",
+    ContentTC = "戰姿削減",
+    TextMapContent = "战姿削减",
+    TextMapId = "Attr_CutTNRate_Name"
+  },
   Attr_DEF_Name = {
     ContentEN = "DEF",
     ContentFR = "DÉF",
@@ -3638,6 +3647,41 @@ Reaching maximum stacks consumes all stacks to deal 1 instance of Overflow Damag
     ContentTC = "經驗收益提高",
     TextMapContent = "经验收益提高 ",
     TextMapId = "BUFF_ENERGYSUPPLY_5000016"
+  },
+  BackGround_Des_Normal = {
+    ContentTC = "可變更個性編輯中的場景",
+    TextMapContent = "可变更个性编辑中的场景",
+    TextMapId = "BackGround_Des_Normal"
+  },
+  BackGround_Name_101 = {
+    ContentTC = "潮水·鉛灰",
+    TextMapContent = "潮水·铅灰",
+    TextMapId = "BackGround_Name_101"
+  },
+  BackGround_Name_102 = {
+    ContentTC = "潮水·幽綠",
+    TextMapContent = "潮水·幽绿",
+    TextMapId = "BackGround_Name_102"
+  },
+  BackGround_Name_103 = {
+    ContentTC = "空靈·墨玉",
+    TextMapContent = "空灵·墨玉",
+    TextMapId = "BackGround_Name_103"
+  },
+  BackGround_Name_104 = {
+    ContentTC = "空靈·白櫻",
+    TextMapContent = "空灵·白樱",
+    TextMapId = "BackGround_Name_104"
+  },
+  BackGround_Name_105 = {
+    ContentTC = "空靈·晴藍",
+    TextMapContent = "空灵·晴蓝",
+    TextMapId = "BackGround_Name_105"
+  },
+  BackGround_Name_106 = {
+    ContentTC = "空靈·鉛灰",
+    TextMapContent = "空灵·铅灰",
+    TextMapId = "BackGround_Name_106"
   },
   BackSlash = {
     ContentEN = "|",
@@ -5412,6 +5456,42 @@ Reaching maximum stacks consumes all stacks to deal 1 instance of Overflow Damag
     TextMapContent = "友方单位每造成#1次武器伤害，获得造成的伤害提高#2效果，持续#3秒，最多叠加#4层。",
     TextMapId = "Buff_Content_16221"
   },
+  Buff_Content_17111 = {
+    ContentEN = "For every #1 Elemental Bonus Effect triggered by any ally, grant them a stack of +#2 Damage Dealt for #3s, up to #4 stacks.",
+    ContentFR = "Tous les #1 déclenchements d’Effet supplémentaire élémentaire par un allié lui confèrent 1 cumul augmentant les dégâts infligés de #2 pendant #3 s, cumulable jusqu’à #4 fois.",
+    ContentJP = "味方ユニットが#1回属性追加効果を発動するたびに、与えるダメージが#2上昇する効果を獲得する。#3秒間持続し、最大#4スタックまで重ねかけができる。",
+    ContentKR = "아군 유닛이 속성 추가 효과를 #1회 발동할 때마다 입히는 대미지 #2 상승 효과를 획득한다. 지속 시간 #3초, 최대 #4단계 중첩.",
+    ContentTC = "友方單位每觸發#1次屬性額外效果，獲得造成的傷害提高#2效果，持續#3秒，最多疊加#4層。",
+    TextMapContent = "友方单位每触发#1次属性额外效果，获得造成的伤害提高#2效果，持续#3秒，最多叠加#4层。",
+    TextMapId = "Buff_Content_17111"
+  },
+  Buff_Content_17131 = {
+    ContentEN = "Reduces allies' CRIT Chance by #1 and increases Trigger Probability by #2.",
+    ContentFR = "Le Taux CRIT des alliés est réduit de #1, mais leur Chance de déclenchement augmente de #2.",
+    ContentJP = "味方ユニットのクリティカル率が#1ダウンし、発動確率が#2アップする。",
+    ContentKR = "아군 유닛의 크리티컬 확률이 #1 감소하고, 발동 확률이 #2 상승한다.",
+    ContentTC = "友方單位暴擊率降低#1，觸發概率提高#2。",
+    TextMapContent = "友方单位暴击率降低#1，触发概率提高#2。",
+    TextMapId = "Buff_Content_17131"
+  },
+  Buff_Content_17221 = {
+    ContentEN = "Allies gain 1 stack of +#1 ATK, lasting #2 s and stacking up to #3 times when healed by other allies. ",
+    ContentFR = "Lorsqu’un allié reçoit des soins d’un autre allié, il gagne 1 cumul augmentant l’ATQ de #1 pendant #2 s, cumulable jusqu’à #3 fois.",
+    ContentJP = "味方ユニットが他の味方ユニットから回復を受けた時、攻撃力が#1上昇する効果を1スタック獲得する。#2秒間持続し、最大#3スタックまで重ねかけができる。",
+    ContentKR = "아군 유닛이 다른 아군에게 치료를 받을 때 공격력 #1 상승 효과 1단계를 획득한다. 지속 시간 #2초, 최대 #3단계 중첩.",
+    ContentTC = "友方單位受到來自其他友方的治療時，獲得1層攻擊提高#1效果，持續#2秒，最多疊加#3層。",
+    TextMapContent = "友方单位受到来自其他友方的治疗时，获得1层攻击提高#1效果，持续#2秒，最多叠加#3层。",
+    TextMapId = "Buff_Content_17221"
+  },
+  Buff_Content_17231 = {
+    ContentEN = "Allies lose #1 Weapon DMG. Skill Damage has a #2 chance to trigger an elemental bonus effect.",
+    ContentFR = "Les DGT d’arme infligés par les alliés diminuent de #1. Lorsqu’ils infligent des Dégâts de compétence, ils ont #2 de chances de déclencher un Effet supplémentaire élémentaire.",
+    ContentJP = "味方ユニットが与える武器ダメージが#1減少する。スキルダメージを与えた時、#2の確率で属性追加効果を発動する。",
+    ContentKR = "아군 유닛이 입히는 무기 대미지가 #1 감소하고 스킬 대미지를 입힐 때 #2 확률로 속성 추가 효과를 발동한다.",
+    ContentTC = "友方單位造成的武器傷害降低#1，造成技能傷害時有#2概率觸發屬性額外效果。",
+    TextMapContent = "友方单位造成的武器伤害降低#1，造成技能伤害时有#2概率触发属性额外效果。",
+    TextMapId = "Buff_Content_17231"
+  },
   Buff_Content_201 = {
     ContentEN = "Enemy units take #1 less damage, but each time they take damage, the damage reduction decreases by #2.",
     ContentFR = "Les ennemis subissent #1 de dégâts en moins, mais cette réduction diminue de #2 à chaque fois qu’ils reçoivent des dégâts.",
@@ -5546,6 +5626,15 @@ Reaching maximum stacks consumes all stacks to deal 1 instance of Overflow Damag
     ContentTC = "敵方單位受到的傷害降低#1，每次受到傷害時，傷害降低幅度降低#2，受到召喚物傷害時額外降低#3。",
     TextMapContent = "敌方单位受到的伤害降低#1，每次受到伤害时，伤害降低幅度降低#2，受到召唤物伤害时额外降低#3。",
     TextMapId = "Buff_Content_218"
+  },
+  Buff_Content_219 = {
+    ContentEN = "Enemy units take #1 less damage, but each time they take damage, the damage reduction decreases by #2. Trigger an elemental bonus effect lowers it by an additional #3.",
+    ContentFR = "Les dégâts subis par les ennemis sont réduits de #1. Chaque fois qu’ils subissent des dégâts, cette réduction diminue de #2 ; lorsqu’un Effet supplémentaire élémentaire est déclenché, elle diminue de #3 supplémentaires.",
+    ContentJP = "敵ユニットの被ダメージが#1ダウンする。敵ユニットがダメージを受けた時に、この効果によるダメージ軽減が#2ダウンする、属性追加効果が発動した場合はさらに#3ダウンする。",
+    ContentKR = "적 유닛이 받는 대미지가 #1 감소하고, 대미지를 받을 때마다 대미지 감소 효과가 #2 감소한다. 속성 추가 효과 발동 시 추가로 #3 감소한다.",
+    ContentTC = "敵方單位受到的傷害降低#1，每次受到傷害時，傷害降低幅度降低#2，觸發屬性額外效果時額外降低#3。",
+    TextMapContent = "敌方单位受到的伤害降低#1，每次受到伤害时，伤害降低幅度降低#2，触发属性额外效果时额外降低#3。",
+    TextMapId = "Buff_Content_219"
   },
   Buff_Content_30 = {
     ContentEN = "Every #1 instances of damage dealt by any ally grant 1 stack of +#2 ATK, lasting #3 s and stacking up to #4 times.",
@@ -5694,7 +5783,7 @@ Reaching maximum stacks consumes all stacks to deal 1 instance of Overflow Damag
   Buff_Title_100 = {
     ContentEN = "Invincible Cadence: Bastion of Loyalty",
     ContentFR = "Résonance invincible : Bastion de loyauté",
-    ContentJP = "無敵の変奏‐忠実な鉄壁",
+    ContentJP = "無敵のヴァリエーション‐忠実な鉄壁",
     ContentKR = "무적의 변주: 충성의 철벽",
     ContentTC = "無敵變奏：忠誠鐵壁",
     TextMapContent = "无敌变奏：忠诚铁壁",
@@ -5970,10 +6059,19 @@ Reaching maximum stacks consumes all stacks to deal 1 instance of Overflow Damag
     TextMapContent = "活跃急板：神明的硬币",
     TextMapId = "Buff_Title_16211"
   },
+  Buff_Title_17131 = {
+    ContentEN = "Coordinated Adagio: Gambler's Stake",
+    ContentFR = "Adagio coordonné : Jeton du parieur",
+    ContentJP = "協調のアダージョ‐ギャンブラーのチップ",
+    ContentKR = "조화의 아다지오: 도박꾼의 판돈",
+    ContentTC = "協調柔板：賭徒的籌碼",
+    TextMapContent = "协调柔板：赌徒的筹码",
+    TextMapId = "Buff_Title_17131"
+  },
   Buff_Title_201 = {
     ContentEN = "Bulwark Cadence: Trembling Paladin",
     ContentFR = "Résonance défensive : Paladin tremblant",
-    ContentJP = "防御の変奏‐臆病な重騎士",
+    ContentJP = "防御のヴァリエーション‐臆病な重騎士",
     ContentKR = "방어의 변주: 소심한 중기사",
     ContentTC = "防禦變奏：膽小重騎士",
     TextMapContent = "防御变奏：胆小重骑士",
@@ -5982,7 +6080,7 @@ Reaching maximum stacks consumes all stacks to deal 1 instance of Overflow Damag
   Buff_Title_202 = {
     ContentEN = "Bulwark Cadence: Hero's Heel",
     ContentFR = "Résonance défensive : Talon du héros",
-    ContentJP = "防御の変奏‐英雄の踵",
+    ContentJP = "防御のヴァリエーション‐英雄の踵",
     ContentKR = "방어의 변주: 영웅의 발목",
     ContentTC = "防禦變奏：英雄之踵",
     TextMapContent = "防御变奏：英雄之踵",
@@ -6033,10 +6131,28 @@ Reaching maximum stacks consumes all stacks to deal 1 instance of Overflow Damag
     TextMapContent = "防御变奏：精神淬炼",
     TextMapId = "Buff_Title_207"
   },
+  Buff_Title_208 = {
+    ContentEN = "Bulwark Cadence: Formidable Foes",
+    ContentFR = "Résonance défensive : Menaces de toutes parts",
+    ContentJP = "防御のヴァリエーション‐強敵包囲",
+    ContentKR = "방어의 변주: 들끓는 강적",
+    ContentTC = "防禦變奏：強敵環伺",
+    TextMapContent = "防御变奏：强敌环伺",
+    TextMapId = "Buff_Title_208"
+  },
+  Buff_Title_209 = {
+    ContentEN = "Bulwark Cadence: Elemental Invocation",
+    ContentFR = "Résonance défensive : Invocation élémentaire",
+    ContentJP = "防御のヴァリエーション‐元素祈願",
+    ContentKR = "방어의 변주: 원소의 기도",
+    ContentTC = "防禦變奏：元素祈喚",
+    TextMapContent = "防御变奏：元素祈唤",
+    TextMapId = "Buff_Title_209"
+  },
   Buff_Title_211 = {
     ContentEN = "Aegis Cadence: Gloom of the Undying",
     ContentFR = "Résonance de bouclier : Ombre de l’immortel",
-    ContentJP = "シールドの変奏：色褪せた不死者",
+    ContentJP = "シールドのヴァリエーション：色褪せた不死者",
     ContentKR = "실드의 변주: 어둠의 불멸자",
     ContentTC = "護盾變奏：黯淡的不死者",
     TextMapContent = "护盾变奏：黯淡的不死者",
@@ -6090,7 +6206,7 @@ Reaching maximum stacks consumes all stacks to deal 1 instance of Overflow Damag
   Buff_Title_401 = {
     ContentEN = "Fanfare Cadence: Banner's Covenant",
     ContentFR = "Résonance de fanfare : Pacte de la bannière",
-    ContentJP = "号令の変奏‐団結の旗のもとに",
+    ContentJP = "号令のヴァリエーション‐団結の旗のもとに",
     ContentKR = "지휘의 변주: 깃발 아래의 단결",
     ContentTC = "號令變奏：團結在旗幟下",
     TextMapContent = "号令变奏：团结在旗帜下",
@@ -6099,7 +6215,7 @@ Reaching maximum stacks consumes all stacks to deal 1 instance of Overflow Damag
   Buff_Title_402 = {
     ContentEN = "Bulwark Cadence: Uncrowned Arena",
     ContentFR = "Résonance défensive : Arène sans couronne",
-    ContentJP = "防御の変奏：無冠の闘技場",
+    ContentJP = "防御のヴァリエーション：無冠の闘技場",
     ContentKR = "방어의 변주: 왕관 없는 링",
     ContentTC = "防禦變奏：無冕擂台",
     TextMapContent = "防御变奏：无冕擂台",
@@ -6162,7 +6278,7 @@ Reaching maximum stacks consumes all stacks to deal 1 instance of Overflow Damag
   Buff_Title_935 = {
     ContentEN = "Verdict Cadence: Ballad of Fire & Wind",
     ContentFR = "Résonance du Jugement : Chant du feu et du vent",
-    ContentJP = "決断の変奏‐火と風の歌",
+    ContentJP = "決断のヴァリエーション‐火と風の歌",
     ContentKR = "선택의 변주: 불과 바람의 노래",
     ContentTC = "抉擇變奏：火與風之歌",
     TextMapContent = "抉择变奏：火与风之歌",
@@ -6180,7 +6296,7 @@ Reaching maximum stacks consumes all stacks to deal 1 instance of Overflow Damag
   Buff_Title_951 = {
     ContentEN = "Verdict Cadence: Ballad of Wind & Shadow",
     ContentFR = "Résonance du Jugement : Chant du vent et des ombres",
-    ContentJP = "決断の変奏‐風と闇の歌",
+    ContentJP = "決断のヴァリエーション‐風と闇の歌",
     ContentKR = "선택의 변주: 바람과 어둠의 노래",
     ContentTC = "抉擇變奏：風與暗之歌",
     TextMapContent = "抉择变奏：风与暗之歌",
@@ -7284,6 +7400,15 @@ Reaching maximum stacks consumes all stacks to deal 1 instance of Overflow Damag
     TextMapContent = "无阵营",
     TextMapId = "Camp_Name_None"
   },
+  Camp_Name_Tongmeng = {
+    ContentEN = "The Forsakens",
+    ContentFR = "Les Déchus",
+    ContentJP = "フォーセイクン同盟",
+    ContentKR = "포세이큰 동맹",
+    ContentTC = "神棄者同盟",
+    TextMapContent = "神弃者同盟",
+    TextMapId = "Camp_Name_Tongmeng"
+  },
   Camp_Name_Yehang = {
     ContentEN = "The Noctoyagers",
     ContentFR = "Les Vagabonds de la Nuit",
@@ -7520,6 +7645,19 @@ Before those spotless hands are stained with blood, she swears a vow of life and
     ContentTC = "噠噠噠噠—— 滿載食物的巨大野獸出現！ 不要驚慌，她不會吃了你，你也不可以打她的主意。 因為鬆露會平等地給予所有人食物。 收下這塊塗滿果醬的麵包，小小糧秣官今天也與世上所有的饑餓為敵。",
     TextMapContent = "哒哒哒哒—— 满载食物的巨大野兽出现！ 不要惊慌，她不会吃了你，你也不可以打她的主意。 因为松露会平等地给予所有人食物。 收下这块涂满果酱的面包，小小粮秣官今天也与世上所有的饥饿为敌。",
     TextMapId = "CharTrialEvent_Des_Songlu"
+  },
+  CharTrialEvent_Des_Splise = {
+    ContentEN = [[
+Once, she measured her life by military discipline, until lies swallowed someone she held dear.
+Once, she filled her days and nights with toil, until grief fell silent beneath exhaustion.
+She knocked on door after door, and amid others' grief, rediscovered the purpose she had lost.
+Now she no longer looks back. Bearing the weight of the dead, she walks on, toward first light.]],
+    ContentFR = "Elle avait autrefois réglé sa vie sur la discipline militaire, jusqu’à ce que les mensonges engloutissent le nom de son dernier être cher.\nElle avait autrefois comblé ses jours et ses nuits de labeur, jusqu’à réduire son chagrin au silence de l’épuisement.\nElle a frappé à des portes oubliées, l’une après l’autre, et dans le deuil d’inconnus, elle a retrouvé la volonté qu’elle avait perdue.\nÀ présent, elle ne se retourne plus. Elle porte seulement le poids des morts et avance, pas après pas, vers la lumière de l’aube.",
+    ContentJP = "彼女はかつて、軍紀によって命を律していた。\nそれは、嘘が最愛の者の名さえも呑み込むまで。\n彼女は労働で昼夜を満たし、疲労の中へ悲しみの声を沈めた。\n彼女は失われた扉を一つ、また一つと叩き、見知らぬ者たちの嘆きの中から、失くした初心を探し求めた。\n今、彼女はもう振り返らない。\nただ亡き者たちの重みを背負い、一歩ずつ、暁光へと歩み続ける。",
+    ContentKR = "그녀는 한때 군단의 규율을 삶의 기준으로 삼아 자신을 다스려 왔지만, 거짓은 끝내 가장 소중한 이의 이름마저 집어삼켰다.\n밤낮없이 일에 매달려 쌓여 가는 피로 속에 슬픔마저 차츰 목소리를 잃어 갔다.\n그러나 그녀는 상실에 잠긴 사람들의 문을 하나씩 두드려 열며, 낯선 이들의 비탄 속에서 초심을 되찾았다.\n이제 그녀는 더는 뒤돌아보지 않고, 떠나간 이들의 무게를 짊어진 채 여명을 향해 한 걸음씩 나아간다.",
+    ContentTC = "她曾以軍紀校準生命，直至謊言吞噬了至親的姓名。\n她曾用勞作填滿晝夜，讓悲傷在疲乏之中失聲沉默。\n她叩開一扇扇失落的門扉，在陌生人的哀慟中尋回遺落的初心。\n如今她不再回望，只背負著亡者的重量，一步步，向晨光跋涉。",
+    TextMapContent = "她曾以军纪校准生命，直至谎言吞噬了至亲的姓名。\n她曾用劳作填满昼夜，让悲伤在疲乏之中失声沉默。\n她叩开一扇扇失落的门扉，在陌生人的哀恸中寻回遗落的初心。\n如今她不再回望，只背负着亡者的重量，一步步，向晨光跋涉。",
+    TextMapId = "CharTrialEvent_Des_Splise"
   },
   CharTrialEvent_Des_Suyi = {
     ContentEN = [[
@@ -14811,6 +14949,151 @@ Sensing the intrusion, Taihao and Zhuyin, already on the brink of madness, turn 
     TextMapContent = "在静渊的帮助下，你们得知了止流的完整计划，也找到了破局的方法。\n现在还来得及阻止她。在一切成为定局之前，赶紧前往执律阁吧。",
     TextMapId = "Content_120206_9"
   },
+  Content_120701_1 = {
+    ContentTC = "前往水仙平原，開啟任務。",
+    TextMapContent = "前往水仙平原，开启任务。",
+    TextMapId = "Content_120701_1"
+  },
+  Content_120701_2 = {
+    ContentTC = "卡蜜拉建議你聽聽自己內心的聲音，這讓你想起了那個許久未曾踏足的地方。也許是時候面對那些回憶了，去「秘密基地」看看吧。",
+    TextMapContent = "卡米拉建议你听听自己内心的声音，这让你想起了那个许久未曾踏足的地方。也许是时候面对那些回忆了，去“秘密基地”看看吧。",
+    TextMapId = "Content_120701_2"
+  },
+  Content_120701_3 = {
+    ContentTC = "打掃得差不多了，最後把桌上的書整理一下。",
+    TextMapContent = "打扫得差不多了，最后把桌上的书整理一下。",
+    TextMapId = "Content_120701_3"
+  },
+  Content_120701_4 = {
+    ContentTC = "意外發現的名單讓你產生了一個新的想法，或許你可以為這些人做點什麼。先離開秘密基地吧。",
+    TextMapContent = "意外发现的名单让你产生了一个新的想法，或许你可以为这些人做点什么。先离开秘密基地吧。",
+    TextMapId = "Content_120701_4"
+  },
+  Content_120702_1 = {
+    ContentTC = "按照名單的指引，去霧區拜訪受害者的家。",
+    TextMapContent = "按照名单的指引，去雾区拜访受害者的家。",
+    TextMapId = "Content_120702_1"
+  },
+  Content_120702_1_2 = {
+    ContentTC = "根據路人提供的情報，去冰湖城廣場尋找瑪麗安的奶奶。",
+    TextMapContent = "根据路人提供的情报，去冰湖城广场寻找玛丽安的奶奶。",
+    TextMapId = "Content_120702_1_2"
+  },
+  Content_120702_2 = {
+    ContentTC = "羅德斯奶奶建議你去拜訪沃倫家的小兒子，去他工作的百花車站找找看。",
+    TextMapContent = "罗德斯奶奶建议你去拜访沃伦家的小儿子，去他工作的百花车站找找看。",
+    TextMapId = "Content_120702_2"
+  },
+  Content_120702_2_2 = {
+    ContentTC = "你在百花車站打聽了一番，並沒有得到有用的資訊，但你不能就這樣放棄，繼續在周圍找一找吧。",
+    TextMapContent = "你在百花车站打听了一番，并没有得到有用的信息，但你不能就这样放弃，继续在周围找一找吧。",
+    TextMapId = "Content_120702_2_2"
+  },
+  Content_120702_3 = {
+    ContentTC = "向馬蒂斯打聽得知沃倫在地下的鍛鐵廠工作，去那裡找他吧。",
+    TextMapContent = "向马蒂斯打听得知沃伦在地下的锻铁厂工作，去那里找他吧。",
+    TextMapId = "Content_120702_3"
+  },
+  Content_120702_3_2 = {
+    ContentTC = "催債人沒有理會你的勸告，選擇訴諸暴力，既然如此，你只好出於正當防衛將他制服。",
+    TextMapContent = "催债人没有理会你的劝告，选择诉诸暴力，既然如此，你只好出于正当防卫将他制服。",
+    TextMapId = "Content_120702_3_2"
+  },
+  Content_120702_3_3 = {
+    ContentTC = "你成功解決了道吉的債務問題，現在去找他聊聊。",
+    TextMapContent = "你成功解决了道吉的债务问题，现在去找他聊聊。",
+    TextMapId = "Content_120702_3_3"
+  },
+  Content_120702_4 = {
+    ContentTC = "一樁事情解決，現在回到冰湖城，繼續拜訪名單上剩下的家庭吧。",
+    TextMapContent = "一桩事情解决，现在回到冰湖城，继续拜访名单上剩下的家庭吧。",
+    TextMapId = "Content_120702_4"
+  },
+  Content_120703_1 = {
+    ContentTC = "羅德斯奶奶的一番話讓你感慨良多，你決定去水仙平原休息一會兒。",
+    TextMapContent = "罗德斯奶奶的一番话让你感慨良多，你决定去水仙平原休息一会儿。",
+    TextMapId = "Content_120703_1"
+  },
+  Content_120703_2 = {
+    ContentTC = "接下了名叫蕾伊的少女的委託，幫她尋找約翰森中校。休息完後就出發吧，先去街上打聽一下訊息。",
+    TextMapContent = "接下了名叫蕾伊的少女的委托，帮她寻找约翰森中校。休息完后就出发吧，先去街上打听一下消息。",
+    TextMapId = "Content_120703_2"
+  },
+  Content_120703_3 = {
+    ContentTC = "卡森准尉遭遇了穢獸襲擊，去幫助他擊退穢獸吧。",
+    TextMapContent = "卡森准尉遭遇了秽兽袭击，去帮助他击退秽兽吧。",
+    TextMapId = "Content_120703_3"
+  },
+  Content_120703_4 = {
+    ContentTC = "打聽到了約翰森中校的情報，回水仙平原告知蕾伊。",
+    TextMapContent = "打听到了约翰森中校的情报，回水仙平原告知蕾伊。",
+    TextMapId = "Content_120703_4"
+  },
+  Content_120703_5 = {
+    ContentTC = "和蕾伊一起前往百花車站，尋找約翰森中校。",
+    TextMapContent = "和蕾伊一起前往百花车站，寻找约翰森中校。",
+    TextMapId = "Content_120703_5"
+  },
+  Content_120703_6 = {
+    ContentTC = "約翰森中校的作風似乎和蕾伊的描述大不相同，繼續跟上去看看情況。",
+    TextMapContent = "约翰森中校的作风似乎和蕾伊的描述大不相同，继续跟上去看看情况。",
+    TextMapId = "Content_120703_6"
+  },
+  Content_120704_1 = {
+    ContentTC = "蕾伊的行為讓你感到隱約的不對勁，去水仙平原向卡蜜拉詢問一下有關蕾伊的事吧。",
+    TextMapContent = "蕾伊的行为让你感到隐约的不对劲，去水仙平原向卡米拉询问一下有关蕾伊的事吧。",
+    TextMapId = "Content_120704_1"
+  },
+  Content_120704_2 = {
+    ContentTC = "在水仙平原得到的情報讓你感到不安，你決定前往蕾伊家中拜訪，將事情弄清楚。",
+    TextMapContent = "在水仙平原得到的情报让你感到不安，你决定前往蕾伊家中拜访，将事情弄清楚。",
+    TextMapId = "Content_120704_2"
+  },
+  Content_120704_3 = {
+    ContentTC = "霧區的小朋友告訴你蕾伊很可能在下水道，進去一探究竟吧。",
+    TextMapContent = "雾区的小朋友告诉你蕾伊很可能在下水道，进去一探究竟吧。",
+    TextMapId = "Content_120704_3"
+  },
+  Content_120704_3_2 = {
+    ContentTC = "你在下水道中發現了爆炸物痕跡，循著這些痕跡尋找蕾伊的藏身處吧。",
+    TextMapContent = "你在下水道中发现了爆炸物痕迹，循着这些痕迹寻找蕾伊的藏身处吧。",
+    TextMapId = "Content_120704_3_2"
+  },
+  Content_120704_4 = {
+    ContentTC = "你找到了蕾伊的「秘密基地」，調查一下周圍的物品，尋找線索。",
+    TextMapContent = "你找到了蕾伊的“秘密基地”，调查一下周围的物品，寻找线索。",
+    TextMapId = "Content_120704_4"
+  },
+  Content_120704_5 = {
+    ContentTC = "根據調查得到的線索，推測蕾伊的真實目的。",
+    TextMapContent = "根据调查得到的线索，推测蕾伊的真实目的。",
+    TextMapId = "Content_120704_5"
+  },
+  Content_120705_1 = {
+    ContentTC = "根據你的推測，蕾伊極有可能打算在劇院對約翰森中校動手，你決定前往劇院阻止她。",
+    TextMapContent = "根据你的推测，蕾伊极有可能打算在剧院对约翰森中校动手，你决定前往剧院阻止她。",
+    TextMapId = "Content_120705_1"
+  },
+  Content_120705_2 = {
+    ContentTC = "你暫時說服了蕾伊不要動手，現在，和她一起前往下水道小舞台，告訴她關於第六軍團的真相。",
+    TextMapContent = "你暂时说服了蕾伊不要动手，现在，和她一起前往下水道小舞台，告诉她关于第六军团的真相。",
+    TextMapId = "Content_120705_2"
+  },
+  Content_120705_3 = {
+    ContentTC = "在你的勸說下，蕾伊終於同意放棄復仇。送她回家休息吧。",
+    TextMapContent = "在你的劝说下，蕾伊终于同意放弃复仇。送她回家休息吧。",
+    TextMapId = "Content_120705_3"
+  },
+  Content_120706_1 = {
+    ContentTC = "名單上的下一個名字「帕西法爾」曾是《雪國的孩子》的主演，你猜測他有可能是布魯斯回憶中的那位朋友。去劇院打聽訊息確認一下。",
+    TextMapContent = "名单上的下一个名字“帕西法尔”曾是《雪国的孩子》的主演，你猜测他有可能是布鲁斯回忆中的那位朋友。去剧院打听消息确认一下。",
+    TextMapId = "Content_120706_1"
+  },
+  Content_120706_2 = {
+    ContentTC = "你回想起了曾經與布魯斯在城牆上暢談未來的時光。再一次登上城牆，向過去正式告別。",
+    TextMapContent = "你回想起了曾经与布鲁斯在城墙上畅谈未来的时光。再一次登上城墙，向过去正式告别。",
+    TextMapId = "Content_120706_2"
+  },
   Content_200101_1 = {
     ContentEN = "There's a familiar figure reminiscent of Snow outside Sanctuary.",
     ContentFR = "Une silhouette familière vous attend devant le Sanctuaire, elle ressemble étrangement à Snow.",
@@ -20401,6 +20684,41 @@ Looking back on all that has happened, you have seen the changes in Huaxu with y
     TextMapContent = "当前",
     TextMapId = "Current"
   },
+  CustomItem_Des_Normal = {
+    ContentTC = "可變更個性編輯中的物件",
+    TextMapContent = "可变更个性编辑中的物件",
+    TextMapId = "CustomItem_Des_Normal"
+  },
+  CustomItem_Name_1001 = {
+    ContentTC = "木桶",
+    TextMapContent = "木桶",
+    TextMapId = "CustomItem_Name_1001"
+  },
+  CustomItem_Name_1002 = {
+    ContentTC = "沙發",
+    TextMapContent = "沙发",
+    TextMapId = "CustomItem_Name_1002"
+  },
+  CustomItem_Name_1003 = {
+    ContentTC = "銀燭立牌·晴藍",
+    TextMapContent = "银烛立牌·晴蓝",
+    TextMapId = "CustomItem_Name_1003"
+  },
+  CustomItem_Name_1004 = {
+    ContentTC = "銀燭立牌·薄荷",
+    TextMapContent = "银烛立牌·薄荷",
+    TextMapId = "CustomItem_Name_1004"
+  },
+  CustomItem_Name_1005 = {
+    ContentTC = "節日氣球",
+    TextMapContent = "节日气球",
+    TextMapId = "CustomItem_Name_1005"
+  },
+  CustomItem_Name_1006 = {
+    ContentTC = "告示欄",
+    TextMapContent = "告示栏",
+    TextMapId = "CustomItem_Name_1006"
+  },
   DROP_DES_1001 = {
     ContentEN = "Restores HP",
     ContentFR = "Restaure les PV",
@@ -24844,6 +25162,69 @@ Looking back on all that has happened, you have seen the changes in Huaxu with y
     ContentTC = "完成<Highlight>1</>次「爭衡」委託",
     TextMapContent = "完成<Highlight>1</>次“争衡”委托",
     TextMapId = "DailyTaskDes_10000122"
+  },
+  DailyTaskDes_10000126 = {
+    ContentEN = "Obtain <Highlight>10</> Demon Wedges",
+    ContentFR = "Obtenir <Highlight>10</> Sceaux démoniaques",
+    ContentJP = "<Highlight>10</>個の魔の楔を獲得する",
+    ContentKR = "악마의 쐐기 <Highlight>10</>개 획득",
+    ContentTC = "獲得<Highlight>10</>枚魔之楔",
+    TextMapContent = "获得<Highlight>10</>枚魔之楔",
+    TextMapId = "DailyTaskDes_10000126"
+  },
+  DailyTaskDes_10000128 = {
+    ContentEN = "Complete any <Highlight>3</> Commissions",
+    ContentFR = "Terminer <Highlight>3</> missions au choix",
+    ContentJP = "任意の依頼を<Highlight>3</>回達成する",
+    ContentKR = "임의의 의뢰 <Highlight>3</>회 완료",
+    ContentTC = "完成<Highlight>3</>次任意委託",
+    TextMapContent = "完成<Highlight>3</>次任意委托",
+    TextMapId = "DailyTaskDes_10000128"
+  },
+  DailyTaskDes_10000129 = {
+    ContentEN = "Defeat <Highlight>100</> enemies",
+    ContentFR = "Vaincre <Highlight>100</> ennemis",
+    ContentJP = "敵を<Highlight>100</>体倒す",
+    ContentKR = "적 <Highlight>100</>명 처치",
+    ContentTC = "擊敗<Highlight>100</>名敵人",
+    TextMapContent = "击败<Highlight>100</>名敌人",
+    TextMapId = "DailyTaskDes_10000129"
+  },
+  DailyTaskDes_10000130 = {
+    ContentEN = "Catch <Highlight>3</> fishes",
+    ContentFR = "Obtenir <Highlight>3</> poissons",
+    ContentJP = "魚を<Highlight>3</>匹獲得する",
+    ContentKR = "물고기 <Highlight>3</>마리 획득",
+    ContentTC = "獲得<Highlight>3</>條魚",
+    TextMapContent = "获得<Highlight>3</>条鱼",
+    TextMapId = "DailyTaskDes_10000130"
+  },
+  DailyTaskDes_10000131 = {
+    ContentEN = "Forge <Highlight>3</> times",
+    ContentFR = "Forger <Highlight>3</> objets",
+    ContentJP = "製造を<Highlight>3</>回行う",
+    ContentKR = "주조 <Highlight>3</>회 진행",
+    ContentTC = "進行<Highlight>3</>次鑄造",
+    TextMapContent = "进行<Highlight>3</>次铸造",
+    TextMapId = "DailyTaskDes_10000131"
+  },
+  DailyTaskDes_10000134 = {
+    ContentEN = "Complete <Highlight>3</> Covert Commissions",
+    ContentFR = "Accomplir <Highlight>3</> Mandats scellés",
+    ContentJP = "依頼密書を<Highlight>3</>回達成する",
+    ContentKR = "의뢰 편지 <Highlight>3</>회 완료",
+    ContentTC = "完成<Highlight>3</>次委託密函",
+    TextMapContent = "完成<Highlight>3</>次委托密函",
+    TextMapId = "DailyTaskDes_10000134"
+  },
+  DailyTaskDes_10000135 = {
+    ContentEN = "Ascend any weapon <Highlight>3</> times",
+    ContentFR = "Effectuer une ascension d’arme <Highlight>3</> fois",
+    ContentJP = "武器を<Highlight>3</>回突破する",
+    ContentKR = "무기 <Highlight>3</>회 돌파",
+    ContentTC = "突破<Highlight>3</>次武器",
+    TextMapContent = "突破<Highlight>3</>次武器",
+    TextMapId = "DailyTaskDes_10000135"
   },
   Decimal = {
     ContentEN = "Num .",
@@ -31304,6 +31685,151 @@ Find Xiaoyao
     ContentTC = "離開華胥",
     TextMapContent = "离开华胥",
     TextMapId = "Description_120308_1"
+  },
+  Description_120701_1 = {
+    ContentTC = "前往水仙平原",
+    TextMapContent = "前往水仙平原",
+    TextMapId = "Description_120701_1"
+  },
+  Description_120701_2 = {
+    ContentTC = "前往秘密基地",
+    TextMapContent = "前往秘密基地",
+    TextMapId = "Description_120701_2"
+  },
+  Description_120701_3 = {
+    ContentTC = "整理書籍",
+    TextMapContent = "整理书籍",
+    TextMapId = "Description_120701_3"
+  },
+  Description_120701_4 = {
+    ContentTC = "離開秘密基地",
+    TextMapContent = "离开秘密基地",
+    TextMapId = "Description_120701_4"
+  },
+  Description_120702_1 = {
+    ContentTC = "前去拜訪名單上的家庭",
+    TextMapContent = "前去拜访名单上的家庭",
+    TextMapId = "Description_120702_1"
+  },
+  Description_120702_1_2 = {
+    ContentTC = "尋找瑪麗安的奶奶",
+    TextMapContent = "寻找玛丽安的奶奶",
+    TextMapId = "Description_120702_1_2"
+  },
+  Description_120702_2 = {
+    ContentTC = "尋找沃倫家的小兒子",
+    TextMapContent = "寻找沃伦家的小儿子",
+    TextMapId = "Description_120702_2"
+  },
+  Description_120702_2_2 = {
+    ContentTC = "繼續尋找沃倫家的小兒子",
+    TextMapContent = "继续寻找沃伦家的小儿子",
+    TextMapId = "Description_120702_2_2"
+  },
+  Description_120702_3 = {
+    ContentTC = "前往鍛鐵廠尋人",
+    TextMapContent = "前往锻铁厂寻人",
+    TextMapId = "Description_120702_3"
+  },
+  Description_120702_3_2 = {
+    ContentTC = "教訓催債人",
+    TextMapContent = "教训催债人",
+    TextMapId = "Description_120702_3_2"
+  },
+  Description_120702_3_3 = {
+    ContentTC = "與道吉對話",
+    TextMapContent = "与道吉对话",
+    TextMapId = "Description_120702_3_3"
+  },
+  Description_120702_4 = {
+    ContentTC = "返回冰湖城",
+    TextMapContent = "返回冰湖城",
+    TextMapId = "Description_120702_4"
+  },
+  Description_120703_1 = {
+    ContentTC = "去水仙平原休息",
+    TextMapContent = "去水仙平原休息",
+    TextMapId = "Description_120703_1"
+  },
+  Description_120703_2 = {
+    ContentTC = "打聽約翰森中校的行程",
+    TextMapContent = "打听约翰森中校的行程",
+    TextMapId = "Description_120703_2"
+  },
+  Description_120703_3 = {
+    ContentTC = "幫助卡森准尉擊退穢獸",
+    TextMapContent = "帮助卡森准尉击退秽兽",
+    TextMapId = "Description_120703_3"
+  },
+  Description_120703_4 = {
+    ContentTC = "回水仙平原找蕾伊",
+    TextMapContent = "回水仙平原找蕾伊",
+    TextMapId = "Description_120703_4"
+  },
+  Description_120703_5 = {
+    ContentTC = "前往百花車站",
+    TextMapContent = "前往百花车站",
+    TextMapId = "Description_120703_5"
+  },
+  Description_120703_6 = {
+    ContentTC = "追上約翰森中校",
+    TextMapContent = "追上约翰森中校",
+    TextMapId = "Description_120703_6"
+  },
+  Description_120704_1 = {
+    ContentTC = "前往水仙平原",
+    TextMapContent = "前往水仙平原",
+    TextMapId = "Description_120704_1"
+  },
+  Description_120704_2 = {
+    ContentTC = "前往蕾伊家拜訪",
+    TextMapContent = "前往蕾伊家拜访",
+    TextMapId = "Description_120704_2"
+  },
+  Description_120704_3 = {
+    ContentTC = "進入下水道",
+    TextMapContent = "进入下水道",
+    TextMapId = "Description_120704_3"
+  },
+  Description_120704_3_2 = {
+    ContentTC = "跟隨痕跡指引尋找蕾伊",
+    TextMapContent = "跟随痕迹指引寻找蕾伊",
+    TextMapId = "Description_120704_3_2"
+  },
+  Description_120704_4 = {
+    ContentTC = "調查蕾伊的「秘密基地」",
+    TextMapContent = "调查蕾伊的“秘密基地”",
+    TextMapId = "Description_120704_4"
+  },
+  Description_120704_5 = {
+    ContentTC = "推測蕾伊的真實目的",
+    TextMapContent = "推测蕾伊的真实目的",
+    TextMapId = "Description_120704_5"
+  },
+  Description_120705_1 = {
+    ContentTC = "前往劇院",
+    TextMapContent = "前往剧院",
+    TextMapId = "Description_120705_1"
+  },
+  Description_120705_2 = {
+    ContentTC = "前往下水道小舞台",
+    TextMapContent = "前往下水道小舞台",
+    TextMapId = "Description_120705_2"
+  },
+  Description_120705_3 = {
+    ContentTC = "送蕾伊回家",
+    TextMapContent = "送蕾伊回家",
+    TextMapId = "Description_120705_3"
+  },
+  Description_120706_1 = {
+    ContentTC = "前往劇院",
+    TextMapContent = "前往剧院",
+    TextMapId = "Description_120706_1"
+  },
+  Description_120706_2 = {
+    ContentTC = "登上城牆",
+    TextMapContent = "登上城墙",
+    TextMapId = "Description_120706_2"
   },
   Description_200101_1 = {
     ContentEN = "There's a familiar figure outside Sanctuary...",
@@ -39753,6 +40279,15 @@ Complete any Phoxhunter Commission
     TextMapContent = "“兔妈妈”",
     TextMapId = "EntryTitle_201036"
   },
+  EntryTitle_201037 = {
+    ContentEN = "Rae",
+    ContentFR = "Rae",
+    ContentJP = "レイ",
+    ContentKR = "레이",
+    ContentTC = "蕾伊",
+    TextMapContent = "蕾伊",
+    TextMapId = "EntryTitle_201037"
+  },
   EntryTitle_203001 = {
     ContentEN = "Zhiliu",
     ContentFR = "Zhiliu",
@@ -42173,6 +42708,15 @@ Complete any Phoxhunter Commission
     TextMapContent = "由来巷",
     TextMapId = "Episode_Region_YLX"
   },
+  Episode_SPLise = {
+    ContentEN = "Towards the Dawn",
+    ContentFR = "En marche vers l’aube",
+    ContentJP = "暁を歩む",
+    ContentKR = "여명 속으로",
+    ContentTC = "行於破曉",
+    TextMapContent = "行于破晓",
+    TextMapId = "Episode_SPLise"
+  },
   Equals = {
     ContentEN = "=",
     ContentFR = "=",
@@ -42362,6 +42906,15 @@ Complete any Phoxhunter Commission
     TextMapContent = "第22只乐园的白兔",
     TextMapId = "EventVersionName_160"
   },
+  EventVersionName_170 = {
+    ContentEN = "Towards the Dawn",
+    ContentFR = "En marche vers l’aube",
+    ContentJP = "暁を歩む",
+    ContentKR = "여명 속으로",
+    ContentTC = "行於破曉",
+    TextMapContent = "行于破晓",
+    TextMapId = "EventVersionName_170"
+  },
   Event_102001_Quest01_Tips = {
     ContentEN = "Progress through the main story to complete this chapter's quests",
     ContentFR = "Progressez dans l’histoire principale pour accomplir les quêtes de ce chapitre",
@@ -42460,6 +43013,15 @@ Complete any Phoxhunter Commission
     ContentTC = "樂園漫步",
     TextMapContent = "乐园漫步",
     TextMapId = "Event_102004_QuestName2"
+  },
+  Event_102005_QuestName1 = {
+    ContentEN = "Towards the Dawn",
+    ContentFR = "En marche vers l’aube",
+    ContentJP = "暁を歩む",
+    ContentKR = "여명 속으로",
+    ContentTC = "行於破曉",
+    TextMapContent = "行于破晓",
+    TextMapId = "Event_102005_QuestName1"
   },
   Event_10301801_Title01 = {
     ContentEN = "Unlock <H>10</> transformations",
@@ -42698,6 +43260,24 @@ Log in on 5 different days during the event to claim rewards.]],
     TextMapContent = "冷冽的风中，她再度点燃心中的余火，向未来致礼。\n活动期间签到5日可领取赠礼。",
     TextMapId = "Event_Des_101019"
   },
+  Event_Des_101020 = {
+    ContentEN = "Log in for 7 days to claim rewards",
+    ContentFR = "Connectez-vous pendant 7 jours pour recevoir des récompenses",
+    ContentJP = "イベント期間中、7日間ログインしてプレゼントを受け取る",
+    ContentKR = "이벤트 기간 중 7일 출석 시 선물 지급",
+    ContentTC = "活動期間簽到7日領取贈禮",
+    TextMapContent = "活动期间签到7日领取赠礼",
+    TextMapId = "Event_Des_101020"
+  },
+  Event_Des_101021 = {
+    ContentEN = "Log in for 5 days to claim rewards",
+    ContentFR = "Connectez-vous pendant 5 jours durant l’événement pour obtenir les récompenses",
+    ContentJP = "イベント期間中、5日間ログインしてプレゼントを受け取る",
+    ContentKR = "이벤트 기간 5일 출석 시 선물 수령",
+    ContentTC = "活動期間簽到5日領取贈禮",
+    TextMapContent = "活动期间签到5日领取赠礼",
+    TextMapId = "Event_Des_101021"
+  },
   Event_Des_102001 = {
     ContentEN = "Huaxu — a tranquil land wreathed in incense.\nYou arrive by invitation, awaiting the vision Zhiliu has promised to paint: a scene both timeless and unseen.",
     ContentFR = "Huaxu, terre paisible où flotte un parfum d’encens.\nVous y êtes {性别:convié|conviée}, attendant que Zhiliu vous dévoile un paysage éthéré, à la fois immémorial et jamais vu.",
@@ -42740,6 +43320,17 @@ Friendly hands find yours and pull you into a dreamlike paradise.]],
     ContentTC = "翻過深山與密林，出現在你眼前的是一座完全陌生的城鎮。\n人們親切地拉起你的手，共同踏入童話般的樂園。",
     TextMapContent = "翻过深山与密林，出现在你眼前的是一座完全陌生的城镇。\n人们亲切地拉起你的手，共同踏入童话般的乐园。",
     TextMapId = "Event_Des_102004"
+  },
+  Event_Des_102005 = {
+    ContentEN = [[
+Beneath the darkened lighthouse, the wind of Icelake remains bitterly cold. 
+She knocks on doors, bringing warmth to those within.]],
+    ContentFR = "Sous le phare éteint, le vent de Givrelac reste aussi familier que glacial.\nLa jeune fille frappe à une porte après l’autre, apportant aux autres un peu de chaleur.",
+    ContentJP = "灯の消えた灯台の下、\nアイスレイク城の風は今なお、あの日と変わらず冷たく吹き抜ける。\n少女は一つ、また一つと扉を叩き、凍える人々のもとへ、ぬくもりを届けてゆく。",
+    ContentKR = "꺼진 등대 아래, 그 낯익고도 매서운 아이스레이크 시티의 바람은 여전히 휭휭 불고 있다.\n소녀는 하나하나 문을 두드리며 사람들에게 온기를 건넨다.",
+    ContentTC = "熄滅的燈塔下，冰湖城的風依舊熟悉而冷冽。\n少女扣響一扇扇門扉，為人們帶來暖意。",
+    TextMapContent = "熄灭的灯塔下，冰湖城的风依旧熟悉而冷冽。\n少女扣响一扇扇门扉，为人们带来暖意。",
+    TextMapId = "Event_Des_102005"
   },
   Event_Des_103001 = {
     ContentEN = "Allow me to lead you onto the endless pathways of time.",
@@ -43015,6 +43606,11 @@ Grand Master]],
     TextMapContent = "活动期间可获取[发条旋舞]系列角色形象及其他外观",
     TextMapId = "Event_Des_10302103"
   },
+  Event_Des_10302104 = {
+    ContentTC = "活動期間可獲取[糖霜滿屋]系列角色形象及其他外觀",
+    TextMapContent = "活动期间可获取[糖霜满屋]系列角色形象及其他外观",
+    TextMapId = "Event_Des_10302104"
+  },
   Event_Des_103022 = {
     ContentEN = "Complete event tasks to claim gifts",
     ContentFR = "Terminez les activités pour récupérer des récompenses.",
@@ -43068,6 +43664,15 @@ Grand Master]],
     ContentTC = "以光影銘刻往事，記錄我們的旅途。",
     TextMapContent = "以光影铭刻往事，记录我们的旅途。",
     TextMapId = "Event_Des_103030"
+  },
+  Event_Des_103036 = {
+    ContentEN = "Conquer the nightmare that never ends — grow, evolve, and emerge anew.\nConfront formidable foes during the event to claim rewards.",
+    ContentFR = "Triomphez d’un cauchemar sans fin — grandissez, puis métamorphosez-vous.\nPendant l’événement, défiez des ennemis d’élite pour recevoir des récompenses.",
+    ContentJP = "終わりなき悪夢を乗り越えて――成長し、そして新たな自分へ。\n期間中、強敵に挑戦することで報酬を獲得できます。",
+    ContentKR = "끝없이 이어지는 악몽을 이겨 내고, 성장하여 새롭게 거듭나세요.\n이벤트 기간 동안 강적에 도전하고 보상을 수령하세요.",
+    ContentTC = "戰勝永無止境的夢魘——成長、而後蛻變。\n活動期間挑戰強敵領取贈禮\n*高難挑戰中，首領強度將大幅提升，且每名首領都會獲得專屬的<H>強力增益</>。戰前可先查看增益詳情，據此調整陣容、強化養成後再行挑戰。",
+    TextMapContent = "战胜永无止境的梦魇——成长、而后蜕变。\n活动期间挑战强敌领取赠礼\n*高难挑战中，首领强度将大幅提升，且每名首领都会获得专属的<H>强力增益</>。战前可先查看增益详情，据此调整阵容、强化养成后再行挑战。",
+    TextMapId = "Event_Des_103036"
   },
   Event_Des_105102011 = {
     ContentEN = "Midsummer night, beneath a sky of stars, a forest where violets and butterfly wings waltzed in delicate steps. A sight she had never seen.",
@@ -43149,6 +43754,15 @@ Grand Master]],
     ContentTC = "區域聯機將於夜航篇第一章主線任務「二次誕生」推進至進入冰湖城階段後開啟。前往冰湖城廣場參與聯機，獲贈好禮。",
     TextMapContent = "区域联机将于夜航篇第一章主线任务“二次诞生”推进至进入冰湖城阶段后开启。前往冰湖城广场参与联机，获赠好礼。",
     TextMapId = "Event_Des_107003"
+  },
+  Event_Des_107004 = {
+    ContentEN = "Claim rewards during event",
+    ContentFR = "Récupérez des cadeaux pendant l’événement",
+    ContentJP = "イベント期間中プレゼント受け取る",
+    ContentKR = "이벤트 기간 중 선물 지급",
+    ContentTC = "活動期間領取贈禮",
+    TextMapContent = "活动期间领取赠礼",
+    TextMapId = "Event_Des_107004"
   },
   Event_Des_108001 = {
     ContentEN = "An Oneiric Avian Spirit brings you a new twig — and new trials.\nComplete the limited-time Avian Spirit Trials to earn event rewards.",
@@ -43465,46 +44079,64 @@ Grand Master]],
     TextMapContent = "竞争，是刻在人类骨子里的天性，它推动着我们的族群发展壮大，延续至今。约束过的竞争并不是弱肉强食、优胜劣汰的自然法则，而是为团队泵入活力的滚滚热血。",
     TextMapId = "Event_Raid_Des"
   },
+  Event_Raid_Floor_Rule = {
+    ContentEN = [[
+Event Rules:
+1. The Phoxhunter Summit is divided into two phases: the Group Stage (Preliminaries) and Apex Rankings (Finals). The event begins with the Group Stage.
+2. In the Group Stage, your Phoxhunter Team's stage reached and remaining time are recorded based on battle performance. Your best result determines your group placement. Rewards are distributed based on group placement when the stage ends, so be sure to claim them on the event page. The Apex Rankings phase begins immediately afterwards.
+3. In the Apex Rankings phase, your team's stage reached and remaining time are recorded based on battle performance. Your best result determines your placement within the group.
+Each challenge awards a certain number of Phoxcoins based on the stage reached.
+4. Phoxcoins can be exchanged for items in the Apex Shop. Certain items unlock based on your highest stage cleared during the Apex Rankings phase.
+5. Teams that skip the Group Stage will not be placed in a group or appear in group rankings during the Apex Rankings. However, they may still challenge Apex Rankings stages to earn Phoxcoins and exchange them in the Apex Shop, including for items unlocked by achieving the highest stage in the Apex Rankings phase.
+ 
+Stage Rules:
+1. In Group Stage and Apex Rankings challenges, the stage reached and remaining time will be recorded.
+2. Meet the time-limit requirements to unlock higher stages faster.]],
+    ContentFR = "Règles du tournoi :\n1) Le Sommet du Chasseur de Phoxène se déroule en deux phases : la Phase de groupes et le Classement suprême. À l’ouverture de l’événement, la Phase de groupes débute immédiatement.\n \n2) Durant la Phase de groupes, lorsque les escouades de Chasseurs de Phoxène terminent un défi de Phase de groupes, l’étage atteint et le temps restant sont enregistrés selon leurs performances en combat. Leur meilleur résultat durant la Phase de groupes détermine leur répartition en groupes. À la fin de la phase, les récompenses sont attribuées selon le groupe auquel elles appartiennent — pensez à les récupérer depuis la page de l’événement. Une fois la Phase de groupes terminée, le Classement suprême débute immédiatement.\n \n3) Durant la phase de Classement suprême, lorsque les escouades de Chasseurs de Phoxène terminent un défi de Classement suprême, l’étage atteint et le temps restant sont enregistrés selon leurs performances en combat. Leur meilleur résultat durant le Classement suprême détermine le classement au sein du groupe. Chaque défi du Classement suprême permet d’obtenir un certain nombre de Jetons de Phoxène en fonction de l’étage atteint.\n \n4) Les Jetons de Phoxène peuvent être échangés contre des objets dans la boutique de classement. Certains articles se débloquent selon l’étage le plus élevé terminé durant la phase de Classement suprême.\n \n5) Les escouades n’ayant pas participé aux défis de la Phase de groupes ne seront ni réparties en groupes ni classées durant le Classement suprême. Elles peuvent toutefois relever les défis du Classement suprême pour obtenir des Jetons de Phoxène et effectuer des échanges dans la boutique de classement, y compris pour les objets débloqués selon l’étage le plus élevé terminé durant la phase de Classement suprême.\n \nRègles des défis :\n1) Lorsque vous terminez un défi de la Phase de groupes ou du Classement suprême, l’étage atteint et le temps restant sont enregistrés.\n \n2) Remplir les conditions du défi chronométré d’un étage permet de débloquer plus rapidement des étages supérieurs.",
+    ContentJP = "ルール説明：\n1.『月狩り人の段階』イベントは、「グループ戦」と「頂上ランキング」の2つのフェーズに分かれています。イベント開始と同時に「グループ戦」フェーズが開放されます。\n2.「グループ戦」フェーズ中、月狩り人チームが「グループ戦」のステージチャレンジをクリアすると、戦闘結果に応じて到達階層と残り時間が記録されます。また、「グループ戦」フェーズ中の過去最高記録に基づいてグループ分けが行われます。\n「グループ戦」期間終了時には、所属グループに応じて報酬が集計されます。イベントページから報酬を受け取ることをお忘れなく。\n「グループ戦」期間終了後、すぐに「頂上ランキング」フェーズが開始されます。\n3.「頂上ランキング」フェーズ中、月狩り人チームが「頂上ランキング」のステージチャレンジをクリアすると、戦闘結果に応じて到達階層と残り時間が記録されます。また、「頂上ランキング」のステージに挑戦するたびに、挑戦した階層に応じて「月狩記念コイン」を獲得できます。\n「頂上ランキング」のステージでは、挑戦した階層に応じて「月狩記念コイン」を獲得できます。\n4.月狩記念コインは、ランキングショップでアイテムと交換できます。一部のアイテムは、「頂上ランキング」フェーズの過去最高到達階層に応じて解放されます。\n5.「グループ戦」フェーズのステージに一度も挑戦していない月狩り人チームはグループ分けされず、「頂上ランキング」フェーズのグループ内ランキングにも参加しません。ただし、「頂上ランキング」ステージへの挑戦で月狩記念コインを獲得することはでき、ランキングショップでの交換（過去最高到達階層に応じて解放される商品を含む）も可能です。\n\nステージ挑戦説明：\n1.「グループ戦」「頂上ランキング」のステージをクリアすると、到達階層と残り時間が記録されます。\n2.ステージの制限時間内にクリア条件を達成すると、より高い階層のステージを早く解放できます。",
+    ContentKR = "기본 메커니즘 설명\n1. 정상을 향해 리그는 [그룹 예선전]과 [정상 랭킹]으로 나뉩니다. 정상을 향해 이벤트 오픈 후, 즉시 [그룹 예선전] 단계에 진입합니다.\n2. [그룹 예선전] 단계에서, 월석 사냥꾼 파티가 [그룹 예선전] 스테이지 도전을 완료하면, 전투 퍼포먼스에 따라 도달 층수와 남은 시간이 기록되며, [그룹 예선전] 단계의 최고 기록을 기준으로 그룹이 배정됩니다. [그룹 예선전] 단계 종료 시 소속 그룹에 따라 보상이 결산되니 제때 이벤트 페이지에서 보상을 수령해 주세요. [그룹 예선전] 단계 종료 후, 즉시 [정상 랭킹] 단계가 오픈됩니다.\n3. [정상 랭킹] 단계 기간, 월석 사냥꾼 파티가 [정상 랭킹] 스테이지 도전을 완료하면, 전투 퍼포먼스에 따라 도달 층수와 남은 시간이 기록되며, [정상 랭킹] 단계의 최고 기록을 기준으로 그룹 내 랭킹이 결정됩니다. [정상 랭킹] 스테이지 도전에서는 매 도전마다 도달한 층수에 따라 일정 수량의 월석 사냥 기념 코인을 획득합니다.\n4. 월석 사냥 기념 코인은 랭킹 상점에서 아이템 교환에 사용되며, 일부 아이템은 [정상 랭킹] 단계의 최고 클리어 층수에 따라 해제됩니다.\n5. [그룹 예선전] 단계 스테이지 도전에 참여하지 않은 월석 사냥꾼 파티는 그룹이 배정되지 않으며, [정상 랭킹] 단계의 그룹 내 랭킹도 결산되지 않습니다. 단, [정상 랭킹] 단계 스테이지 도전을 통해 월석 사냥 기념 코인을 획득하고 랭킹 상점에서 아이템을 교환할 수 있습니다([정상 랭킹] 단계의 최고 클리어 층수에 따라 해제되는 아이템 포함).\n \n스테이지 도전 설명\n1.  [그룹 예선전]과 [정상 랭킹] 단계의 스테이지 도전 완료 시 최고 클리어 층수와 남은 시간이 기록됩니다. \n2. 각 스테이지의 조건을 제한 시간 내에 달성하면 더 높은 층의 도전을 빠르게 해제할 수 있습니다.",
+    ContentTC = "賽制說明：\n1.狩月人之階的賽制分為「分組賽」和「巔峰排名」兩個階段。狩月人之階活動開啟後，會立刻開啟「分組賽」階段。\n2.「分組賽」階段中，狩月人小隊完成「分組賽」關卡挑戰後會依據戰鬥表現記錄層數和剩餘時間，並且依據「分組賽」階段的歷史最好成績進行分組。「分組賽」階段結束時會依據所在的分組進行獎勵結算，請記得前往活動頁面領取。「分組賽」階段結束後，會立刻開啟「巔峰排名」階段。\n3.「巔峰排名」階段中，狩月人小隊完成「巔峰排名」關卡挑戰後會依據戰鬥表現記錄層數和剩餘時間，並且依據「巔峰排名」階段的歷史最好成績進行組內排名。「巔峰排名」關卡挑戰會依據每次挑戰的層數獲得一定數目的狩月紀念幣。\n4.狩月紀念幣可用於在排名商店中兌換商品，部分商品會隨著「巔峰排名」階段的歷史最高通關層數解鎖。\n5.未參與「分組賽」階段關卡挑戰的狩月人小隊不會進行分組，同樣也不會參與「巔峰排名」階段的組內排名。但依舊可以參與「巔峰排名」階段關卡挑戰獲得狩月紀念幣，也依舊可以前往排名商店進行商品兌換（包括依據「巔峰排名」階段的歷史最高通關層數解鎖的商品）。\n\n關卡挑戰說明：\n1.完成「分組賽」和「巔峰排名」關卡挑戰時，會記錄通關層數和剩餘時間。\n2.達成關卡挑戰的限時挑戰要求時，能更快的解鎖更高層數的關卡。",
+    TextMapContent = "赛制说明：\n1.狩月人之阶的赛制分为「分组赛」和「巅峰排名」两个阶段。狩月人之阶活动开启后，会立刻开启「分组赛」阶段。\n2.「分组赛」阶段中，狩月人小队完成「分组赛」关卡挑战后会依据战斗表现记录层数和剩余时间，并且依据「分组赛」阶段的历史最好成绩进行分组。「分组赛」阶段结束时会依据所在的分组进行奖励结算，请记得前往活动页面领取。「分组赛」阶段结束后，会立刻开启「巅峰排名」阶段。\n3.「巅峰排名」阶段中，狩月人小队完成「巅峰排名」关卡挑战后会依据战斗表现记录层数和剩余时间，并且依据「巅峰排名」阶段的历史最好成绩进行组内排名。「巅峰排名」关卡挑战会依据每次挑战的层数获得一定数目的狩月纪念币。\n4.狩月纪念币可用于在排名商店中兑换商品，部分商品会随着「巅峰排名」阶段的历史最高通关层数解锁。\n5.未参与「分组赛」阶段关卡挑战的狩月人小队不会进行分组，同样也不会参与「巅峰排名」阶段的组内排名。但依旧可以参与「巅峰排名」阶段关卡挑战获得狩月纪念币，也依旧可以前往排名商店进行商品兑换（包括依据「巅峰排名」阶段的历史最高通关层数解锁的商品）。\n\n关卡挑战说明：\n1.完成「分组赛」和「巅峰排名」关卡挑战时，会记录通关层数和剩余时间。\n2.达成关卡挑战的限时挑战要求时，能更快的解锁更高层数的关卡。",
+    TextMapId = "Event_Raid_Floor_Rule"
+  },
   Event_Raid_Rule = {
     ContentEN = [[
 Event Rules:
 1. The Phoxhunter Summit is divided into two phases: the Group Stage (Preliminaries) and Apex Rankings (Finals). The event begins with the Group Stage.
-2. In the Group Stage, your Phoxhunter Team earns points based on battle performance. Your highest score determines your group placement. Rewards are distributed based on group placement when the stage ends, so be sure to claim them on the event page. The Apex Rankings phase begins immediately afterwards.
-3. In the Apex Rankings phase, your team earns Ranking Points based on performance in each stage. Your highest Ranking Point total determines your placement within the group. Each Apex Rankings attempt consumes a Team Pass and awards a set amount of Phoxcoins according to the Ranking Points gained.
-4. Phoxcoins can be exchanged for items in the Apex Shop. Certain items unlock based on your highest Ranking Point total in the Apex Rankings phase.
-5. Teams that skip the Group Stage will not be placed in a group or appear in group rankings during the Apex Rankings. However, they may still challenge Apex Rankings stages to earn Phoxcoins and exchange them in the Apex Shop, including for items unlocked by reaching higher Ranking Point milestones.
+2. In the Group Stage, your Phoxhunter Team's stage reached and remaining time are recorded based on battle performance. Your best result determines your group placement. Rewards are distributed based on group placement when the stage ends, so be sure to claim them on the event page. The Apex Rankings phase begins immediately afterwards.
+3. In the Apex Rankings phase, your team's stage reached and remaining time are recorded based on battle performance. Your best result determines your placement within the group.
+Each challenge awards a certain number of Phoxcoins based on the stage reached.
+4. Phoxcoins can be exchanged for items in the Apex Shop. Certain items unlock based on your highest stage cleared during the Apex Rankings phase.
+5. Teams that skip the Group Stage will not be placed in a group or appear in group rankings during the Apex Rankings. However, they may still challenge Apex Rankings stages to earn Phoxcoins and exchange them in the Apex Shop, including for items unlocked by achieving the highest stage in the Apex Rankings phase.
  
 Stage Rules:
-1. In Group Stage challenges, defeat the required number of enemies within the time limit to clear the stage.
-2. In Apex Rankings challenges, defeating standard enemies also deals bonus damage to the extreme-threat enemy. Clear the stage by defeating the extreme-threat enemy within the time limit.
-3. You'll earn bonus points based on remaining time in both Group Stage and Apex Rankings challenges.
-4. If you fail to clear the stage, you will still earn points based on your progress when the time runs out.]],
-    ContentFR = "Règles du tournoi :\n1) Le Sommet du Chasseur de Phoxène se déroule en deux phases : la Phase de groupes et le Classement suprême. À l’ouverture de l’événement, la Phase de groupes débute immédiatement.\n\n2) Durant la Phase de groupes, les escouades de Chasseurs de Phoxène obtiennent des points selon leurs performances en combat. Le meilleur score détermine leur répartition en groupes. À la fin de la phase, les récompenses sont attribuées selon le groupe atteint — pensez à les récupérer depuis la page de l’événement. Une fois la Phase de groupes terminée, le Classement suprême débute immédiatement.\n\n3) Durant la phase de Classement suprême, les escouades obtiennent des points de classement selon leurs performances à chaque défi. Le meilleur score détermine le classement au sein du groupe. Les défis du Classement suprême nécessitent un Laissez-passer d’escouade, et chaque tentative permet d’obtenir un certain nombre de Jetons de Phoxène en fonction des points gagnés.\n\n4) Les Jetons de Phoxène peuvent être échangés contre des objets dans la boutique de classement. Certains articles se débloquent selon le meilleur score atteint durant la phase de Classement suprême.\n\n5) Les escouades n’ayant pas participé à la Phase de groupes ne seront ni réparties en groupes ni classées durant le Classement suprême. Elles peuvent toutefois relever les défis du Classement suprême pour obtenir des Jetons de Phoxène et effectuer des échanges dans la boutique de classement, y compris pour les objets débloqués par les paliers de score.\n\nRègles des défis :\n1) Durant les défis de la Phase de groupes, vaincre le nombre d’ennemis requis dans le temps imparti permet de réussir le défi.\n\n2) Durant les défis du Classement suprême, vaincre des ennemis de type Menace mineure inflige des dégâts supplémentaires aux ennemis de type Menace majeure. Éliminer les ennemis de type Menace majeure dans le temps imparti permet de réussir le défi.\n\n3) Lors des défis de la Phase de groupes et du Classement suprême, des points bonus sont accordés en fonction du temps restant.\n\n4) En cas d’échec, des points sont attribués à la fin du temps imparti selon un pourcentage du score estimé.",
-    ContentJP = "ルール説明：\n 1.『  月狩り人の階段』イベントは、「グループ戦」と「頂上ランキング」の2つのフェーズに分かれています。イベント開始と同時に「グループ戦」フェーズが開放されます。\n 2.「グループ戦」フェーズでは、月狩り人チームが「グループ戦」ステージに挑戦し、戦闘結果に応じてスコアが算出されます。フェーズ中の過去最高スコアに基づいてグループ分けが行われます。「グループ戦」フェーズ終了時には所属グループに応じて報酬が配布されますので、イベント画面から受け取ってください。「グループ戦」フェーズ終了後、直ちに「頂上ランキング」フェーズが開始されます。\n 3.「頂上ランキング」フェーズでは、月狩り人チームが「頂上ランキング」ステージに挑戦し、戦闘結果に応じてランキングスコアが算出されます。フェーズ中の過去最高ランキングスコアに基づき、グループ内ランキングが決定されます。「頂上ランキング」ステージへの挑戦にはチーム招待状を消費し、各挑戦で得たランキングスコアに応じて一定数の月狩記念コインも獲得できます。\n 4.月狩記念コインは、ランキングショップでアイテムと交換できます。一部のアイテムは、「頂上ランキング」フェーズ中の過去最高ランキングスコアに応じて解放されます。\n 5.「グループ戦」フェーズのステージに一度も挑戦していない月狩り人チームはグループ分けされず、「頂上ランキング」フェーズのグループ内ランキングにも参加しません。ただし、「頂上ランキング」ステージへの挑戦で月狩記念コインを獲得することはでき、ランキングショップでの交換（過去最高ランキングスコアで解放される商品を含む）も可能です。\n \n ステージ挑戦説明：\n 1.「グループ戦」フェーズのステージでは、制限時間内に指定数の敵を撃破するとクリアとなります。\n 2.「頂上ランキング」フェーズのステージでは、通常敵を撃破すると超凶悪な敵にも追加ダメージが入り、制限時間内に超凶悪な敵を撃破するとクリアとなります。\n 3.「グループ戦」と「頂上ランキング」ステージをクリアした際、残り時間に応じて追加スコアを獲得できます。\n 4.クリアできなかった場合でも、制限時間終了時の目標達成度に応じて一定のスコアを獲得できます。",
-    ContentKR = "기본 메커니즘 설명\n1. 정상을 향해 리그는 [그룹 예선전]과 [정상 랭킹]으로 나뉩니다. 정상을 향해 이벤트 오픈 후, 즉시 [그룹 예선전] 단계에 진입합니다.\n2. [그룹 예선전] 단계에서, 월석 사냥꾼 파티가 [그룹 예선전] 스테이지 도전을 완료하면, 전투 퍼포먼스에 따라 포인트가 결산되며, [그룹 예선전] 단계의 최고 포인트를 기준으로 그룹이 배정됩니다. [그룹 예선전] 단계 종료 시 소속 그룹에 따라 보상이 결산되니 제때 이벤트 페이지에서 보상을 수령해 주세요. [그룹 예선전] 단계 종료 후, 즉시 [정상 랭킹] 단계가 오픈됩니다.\n3. [정상 랭킹] 단계 기간, 월석 사냥꾼 파티가 [정상 랭킹] 스테이지 도전을 완료하면, 전투 퍼포먼스에 따라 포인트가 결산되며, [정상 랭킹] 단계의 최고 포인트를 기준으로 그룹 내 랭킹이 결정됩니다. 파티원 초대장을 소모해 [정상 랭킹] 스테이지 도전을 진행할 수 있으며, 매회 도전 결산 시의 포인트에 따라 일정 수량의 월석 사냥 기념 코인을 획득합니다.\n4. 월석 사냥 기념 코인은 랭킹 상점에서 아이템 교환에 사용되며, 일부 아이템은 [정상 랭킹] 단계의 최고 포인트에 따라 해제됩니다.\n5. [그룹 예선전] 단계 스테이지 도전에 참여하지 않은 월석 사냥꾼 파티는 그룹이 배정되지 않으며, [정상 랭킹] 단계의 그룹 내 랭킹도 결산되지 않습니다. 단, [정상 랭킹] 단계 스테이지 도전을 통해 월석 사냥 기념 코인을 획득하고 랭킹 상점에서 아이템을 교환할 수 있습니다([정상 랭킹] 단계의 최고 포인트에 따라 해제되는 아이템 포함).\n \n스테이지 도전 설명\n1. [그룹 예선전] 단계 스테이지 도전에서 제한 시간 내에 지정된 수량의 적을 처치하면 도전을 클리어하게 됩니다.\n2. [정상 랭킹] 단계 스테이지 도전에서 비고위험 적을 처치하면 고위험 적에게 추가로 대미지를 입힐 수 있으며, 제한 시간 내에 고위험 적을 처치하면 도전을 클리어합니다.\n3. [그룹 예선전]과 [정상 랭킹] 스테이지 도전 완료 시 남은 시간에 따라 추가 포인트를 획득합니다.\n4. 클리어에 실패할 경우, 제한 시간이 종료될 때 목표 달성도에 따라 일정 포인트를 획득합니다.",
-    ContentTC = "賽制說明：\n1.狩月人之階的賽制分為「分組賽」和「巔峰排名」兩個階段。狩月人之階活動開啟後，會立刻開啟「分組賽」階段。\n2.「分組賽」階段中，狩月人小隊完成「分組賽」關卡挑戰後會依據戰鬥表現結算積分，並且依據「分組賽」階段的歷史最高積分進行分組。「分組賽」階段結束時會依據所在的分組進行獎勵結算，請記得前往活動頁面領取。「分組賽」階段結束後，會立刻開啟「巔峰排名」階段。\n3.「巔峰排名」階段中，狩月人小隊完成「巔峰排名」關卡挑戰後會依據戰鬥表現結算排名積分，並且依據「巔峰排名」階段的歷史最高排名積分進行組內排名。「巔峰排名」關卡挑戰需要消耗小隊邀請函才能進行，同時也會依據每次挑戰結算的排名積分獲得一定數目的狩月紀念幣。\n4.狩月紀念幣可用於在排名商店中兌換商品，部分商品會隨著「巔峰排名」階段的歷史最高排名積分解鎖。\n5.未參與「分組賽」階段關卡挑戰的狩月人小隊不會進行分組，同樣也不會參與「巔峰排名」階段的組內排名。但依舊可以參與「巔峰排名」階段關卡挑戰獲得狩月紀念幣，也依舊可以前往排名商店進行商品兌換（包括隨著「巔峰排名」階段的歷史最高排名積分解鎖的商品）。\n\n關卡挑戰說明：\n1.在「分組賽」階段關卡挑戰中，在時限內擊敗指定數量敵人即可通關。\n2.在「巔峰排名」階段關卡挑戰中，擊敗非高危敵人時，會額外對高危敵人造成傷害，時限內擊敗高危敵人即可通關。\n3.完成「分組賽」和「巔峰排名」關卡挑戰時，會根據剩餘時間獲得額外積分。\n4.如果未成功通關，會在時限結束時，根據目標達成度獲得一定積分。",
-    TextMapContent = "赛制说明：\n1.狩月人之阶的赛制分为「分组赛」和「巅峰排名」两个阶段。狩月人之阶活动开启后，会立刻开启「分组赛」阶段。\n2.「分组赛」阶段中，狩月人小队完成「分组赛」关卡挑战后会依据战斗表现结算积分，并且依据「分组赛」阶段的历史最高积分进行分组。「分组赛」阶段结束时会依据所在的分组进行奖励结算，请记得前往活动页面领取。「分组赛」阶段结束后，会立刻开启「巅峰排名」阶段。\n3.「巅峰排名」阶段中，狩月人小队完成「巅峰排名」关卡挑战后会依据战斗表现结算积分，并且依据「巅峰排名」阶段的历史最高积分进行组内排名。「巅峰排名」关卡挑战需要消耗小队邀请函才能进行，同时也会依据每次挑战结算的积分获得一定数目的狩月纪念币。\n4.狩月纪念币可用于在排名商店中兑换商品，部分商品会随着「巅峰排名」阶段的历史最高积分解锁。\n5.未参与「分组赛」阶段关卡挑战的狩月人小队不会进行分组，同样也不会参与「巅峰排名」阶段的组内排名。但依旧可以参与「巅峰排名」阶段关卡挑战获得狩月纪念币，也依旧可以前往排名商店进行商品兑换（包括随着「巅峰排名」阶段的历史最高积分解锁的商品）。\n\n关卡挑战说明：\n1.在「分组赛」阶段关卡挑战中，在时限内击败指定数量敌人即可通关。\n2.在「巅峰排名」阶段关卡挑战中，击败非高危敌人时，会额外对高危敌人造成伤害，时限内击败高危敌人即可通关。\n3.完成「分组赛」和「巅峰排名」关卡挑战时，会根据剩余时间获得额外积分。\n4.如果未成功通关，会在时限结束时，根据目标达成度获得一定积分。",
+1. In Group Stage and Apex Rankings challenges, the stage reached and remaining time will be recorded.
+2. Meet the time-limit requirements to unlock higher stages faster.]],
+    ContentFR = "Règles du tournoi :\n1) Le Sommet du Chasseur de Phoxène se déroule en deux phases : la Phase de groupes et le Classement suprême. À l’ouverture de l’événement, la Phase de groupes débute immédiatement.\n \n2) Durant la Phase de groupes, lorsque les escouades de Chasseurs de Phoxène terminent un défi de Phase de groupes, l’étage atteint et le temps restant sont enregistrés selon leurs performances en combat. Leur meilleur résultat durant la Phase de groupes détermine leur répartition en groupes. À la fin de la phase, les récompenses sont attribuées selon le groupe auquel elles appartiennent — pensez à les récupérer depuis la page de l’événement. Une fois la Phase de groupes terminée, le Classement suprême débute immédiatement.\n \n3) Durant la phase de Classement suprême, lorsque les escouades de Chasseurs de Phoxène terminent un défi de Classement suprême, l’étage atteint et le temps restant sont enregistrés selon leurs performances en combat. Leur meilleur résultat durant le Classement suprême détermine le classement au sein du groupe. Chaque défi du Classement suprême permet d’obtenir un certain nombre de Jetons de Phoxène en fonction de l’étage atteint.\n \n4) Les Jetons de Phoxène peuvent être échangés contre des objets dans la boutique de classement. Certains articles se débloquent selon l’étage le plus élevé terminé durant la phase de Classement suprême.\n \n5) Les escouades n’ayant pas participé aux défis de la Phase de groupes ne seront ni réparties en groupes ni classées durant le Classement suprême. Elles peuvent toutefois relever les défis du Classement suprême pour obtenir des Jetons de Phoxène et effectuer des échanges dans la boutique de classement, y compris pour les objets débloqués selon l’étage le plus élevé terminé durant la phase de Classement suprême.\n \nRègles des défis :\n1) Lorsque vous terminez un défi de la Phase de groupes ou du Classement suprême, l’étage atteint et le temps restant sont enregistrés.\n \n2) Remplir les conditions du défi chronométré d’un étage permet de débloquer plus rapidement des étages supérieurs.",
+    ContentJP = "ルール説明：\n1.『月狩り人の段階』イベントは、「グループ戦」と「頂上ランキング」の2つのフェーズに分かれています。イベント開始と同時に「グループ戦」フェーズが開放されます。\n2.「グループ戦」フェーズ中、月狩り人チームが「グループ戦」のステージチャレンジをクリアすると、戦闘結果に応じて到達階層と残り時間が記録されます。また、「グループ戦」フェーズ中の過去最高記録に基づいてグループ分けが行われます。\n「グループ戦」フェーズ終了時には、所属グループに応じて報酬が集計されます。イベントページから報酬を受け取ることをお忘れなく。\n「グループ戦」フェーズ終了後、すぐに「頂上ランキング」フェーズが開始されます。\n3.「頂上ランキング」フェーズ中、月狩り人チームが「頂上ランキング」のステージチャレンジをクリアすると、戦闘結果に応じて到達階層と残り時間が記録されます。また、「頂上ランキング」フェーズ中の過去最高記録に基づいて、グループ内で順位が決定されます。\n「頂上ランキング」のステージチャレンジをクリアすると、挑戦した階層に応じて「月狩記念コイン」を獲得できます。\n4.月狩記念コインは、ランキングショップでアイテムと交換できます。一部のアイテムは、「頂上ランキング」フェーズ中の過去最高到達階層に応じて解放されます。\n5.「グループ戦」フェーズのステージに一度も挑戦していない月狩り人チームはグループ分けされず、「頂上ランキング」フェーズのグループ内ランキングにも参加しません。ただし、「頂上ランキング」ステージへの挑戦で月狩記念コインを獲得することはでき、ランキングショップでの交換（過去最高クリア階層で解放される商品を含む）も可能です。\n\nステージ挑戦説明：\n1.「グループ戦」「頂上ランキング」のステージをクリアすると、到達階層と残り時間が記録されます。\n2.ステージの制限時間内にクリア条件を達成すると、より上の階層を早く解放できます。",
+    ContentKR = "기본 메커니즘 설명\n1. 정상을 향해 리그는 [그룹 예선전]과 [정상 랭킹]으로 나뉩니다. 정상을 향해 이벤트 오픈 후, 즉시 [그룹 예선전] 단계에 진입합니다.\n2. [그룹 예선전] 단계에서, 월석 사냥꾼 파티가 [그룹 예선전] 스테이지 도전을 완료하면, 전투 퍼포먼스에 따라 도달 층수와 남은 시간이 기록되며, [그룹 예선전] 단계의 최고 기록을 기준으로 그룹이 배정됩니다. [그룹 예선전] 단계 종료 시 소속 그룹에 따라 보상이 결산되니 제때 이벤트 페이지에서 보상을 수령해 주세요. [그룹 예선전] 단계 종료 후, 즉시 [정상 랭킹] 단계가 오픈됩니다.\n3. [정상 랭킹] 단계 기간, 월석 사냥꾼 파티가 [정상 랭킹] 스테이지 도전을 완료하면, 전투 퍼포먼스에 따라 도달 층수와 남은 시간이 기록되며, [정상 랭킹] 단계의 최고 기록을 기준으로 그룹 내 랭킹이 결정됩니다. [정상 랭킹] 스테이지 도전에서는 매 도전마다 도달한 층수에 따라 일정 수량의 월석 사냥 기념 코인을 획득합니다.\n4. 월석 사냥 기념 코인은 랭킹 상점에서 아이템 교환에 사용되며, 일부 아이템은 [정상 랭킹] 단계의 최고 클리어 층수에 따라 해제됩니다.\n5. [그룹 예선전] 단계 스테이지 도전에 참여하지 않은 월석 사냥꾼 파티는 그룹이 배정되지 않으며, [정상 랭킹] 단계의 그룹 내 랭킹도 결산되지 않습니다. 단, [정상 랭킹] 단계 스테이지 도전을 통해 월석 사냥 기념 코인을 획득하고 랭킹 상점에서 아이템을 교환할 수 있습니다([정상 랭킹] 단계의 최고 클리어 층수에 따라 해제되는 아이템 포함).\n \n스테이지 도전 설명\n1.  [그룹 예선전]과 [정상 랭킹] 단계의 스테이지 도전 완료 시 최고 클리어 층수와 남은 시간이 기록됩니다. \n2. 각 스테이지의 조건을 제한 시간 내에 달성하면 더 높은 층의 도전을 빠르게 해제할 수 있습니다.",
+    ContentTC = "賽制說明：\n1.狩月人之階的賽制分為「分組賽」和「巔峰排名」兩個階段。狩月人之階活動開啟後，會立刻開啟「分組賽」階段。\n2.「分組賽」階段中，狩月人小隊完成「分組賽」關卡挑戰後會依據戰鬥表現記錄層數和剩餘時間，並且依據「分組賽」階段的歷史最好成績進行分組。「分組賽」階段結束時會依據所在的分組進行獎勵結算，請記得前往活動頁面領取。「分組賽」階段結束後，會立刻開啟「巔峰排名」階段。\n3.「巔峰排名」階段中，狩月人小隊完成「巔峰排名」關卡挑戰後會依據戰鬥表現記錄層數和剩餘時間，並且依據「巔峰排名」階段的歷史最好成績進行組內排名。「巔峰排名」關卡挑戰會依據每次挑戰的層數獲得一定數目的狩月紀念幣。\n4.狩月紀念幣可用於在排名商店中兌換商品，部分商品會隨著「巔峰排名」階段的歷史最高通關層數解鎖。\n5.未參與「分組賽」階段關卡挑戰的狩月人小隊不會進行分組，同樣也不會參與「巔峰排名」階段的組內排名。但依舊可以參與「巔峰排名」階段關卡挑戰獲得狩月紀念幣，也依舊可以前往排名商店進行商品兌換（包括依據「巔峰排名」階段的歷史最高通關層數解鎖的商品）。\n\n關卡挑戰說明：\n1.完成「分組賽」和「巔峰排名」關卡挑戰時，會記錄通關層數和剩餘時間。\n2.達成關卡挑戰的限時挑戰要求時，能更快的解鎖更高層數的關卡。",
+    TextMapContent = "赛制说明：\n1.狩月人之阶的赛制分为「分组赛」和「巅峰排名」两个阶段。狩月人之阶活动开启后，会立刻开启「分组赛」阶段。\n2.「分组赛」阶段中，狩月人小队完成「分组赛」关卡挑战后会依据战斗表现记录层数和剩余时间，并且依据「分组赛」阶段的历史最好成绩进行分组。「分组赛」阶段结束时会依据所在的分组进行奖励结算，请记得前往活动页面领取。「分组赛」阶段结束后，会立刻开启「巅峰排名」阶段。\n3.「巅峰排名」阶段中，狩月人小队完成「巅峰排名」关卡挑战后会依据战斗表现记录层数和剩余时间，并且依据「巅峰排名」阶段的历史最好成绩进行组内排名。「巅峰排名」关卡挑战会依据每次挑战的层数获得一定数目的狩月纪念币。\n4.狩月纪念币可用于在排名商店中兑换商品，部分商品会随着「巅峰排名」阶段的历史最高通关层数解锁。\n5.未参与「分组赛」阶段关卡挑战的狩月人小队不会进行分组，同样也不会参与「巅峰排名」阶段的组内排名。但依旧可以参与「巅峰排名」阶段关卡挑战获得狩月纪念币，也依旧可以前往排名商店进行商品兑换（包括依据「巅峰排名」阶段的历史最高通关层数解锁的商品）。\n\n关卡挑战说明：\n1.完成「分组赛」和「巅峰排名」关卡挑战时，会记录通关层数和剩余时间。\n2.达成关卡挑战的限时挑战要求时，能更快的解锁更高层数的关卡。",
     TextMapId = "Event_Raid_Rule"
   },
   Event_Raid_Rule_Dungeon = {
     ContentEN = [[
 Stage Rules:
-1. In Group Stage challenges, defeat the required number of enemies within the time limit to clear the stage.
-2. In Apex Rankings challenges, defeating standard enemies also deals bonus damage to the extreme-threat enemy. Clear the stage by defeating the extreme-threat enemy within the time limit.
-3. You'll earn bonus points based on remaining time in both Group Stage and Apex Rankings challenges.
-4. If you fail to clear the stage, you will still earn points based on a certain proportion of your estimated score when the time runs out.
- 
+1. In Group Stage and Apex Rankings challenges, the stage reached and remaining time will be recorded.
+2. Meet the time-limit requirements to unlock higher stages faster.
+
 Event Rules:
 1. The Phoxhunter Summit is divided into two phases: the Group Stage (Preliminaries) and Apex Rankings (Finals). The event begins with the Group Stage.
-2. In the Group Stage, your Phoxhunter Team earns points based on battle performance. Your highest score determines your group placement. Rewards are distributed based on group placement when the stage ends, so be sure to claim them on the event page. The Apex Rankings phase begins immediately afterwards.
-3. In the Apex Rankings phase, your team earns Ranking Points based on performance in each stage. Your highest Ranking Point total determines your placement within the group. Each Apex Rankings attempt consumes a Team Pass and awards a set amount of Phoxcoins according to the Ranking Points gained.
-4. Phoxcoins can be exchanged for items in the Apex Shop. Certain items unlock based on your highest Ranking Point total in the Apex Rankings phase.
-5. Teams that skip the Group Stage will not be placed in a group or appear in group rankings during the Apex Rankings. However, they may still challenge Apex Rankings stages to earn Phoxcoins and exchange them in the Apex Shop, including for items unlocked by reaching higher Ranking Point milestones.]],
-    ContentFR = "Règles des défis :\n1) Durant les défis de la Phase de groupes, vaincre le nombre d’ennemis requis dans le temps imparti permet de réussir le défi.\n\n2) Durant les défis du Classement suprême, vaincre des ennemis standards inflige des dégâts supplémentaires à la menace majeure. Éliminez cet ennemi dans le temps imparti pour réussir le défi.\n\n3) Lors des défis de la Phase de groupes et du Classement suprême, des points bonus sont accordés en fonction du temps restant.\n\n4) En cas d’échec, des points sont attribués à la fin du temps imparti selon un pourcentage du score estimé.\n\nRègles du tournoi :\n1) Le Sommet du Chasseur de Phoxène se déroule en deux phases : la Phase de groupes et le Classement suprême. À l’ouverture de l’événement, la Phase de groupes débute immédiatement.\n\n2) Durant la Phase de groupes, les escouades de Chasseurs de Phoxène obtiennent des points selon leurs performances en combat. Le meilleur score détermine leur répartition en groupes. À la fin de la phase, les récompenses sont attribuées selon le groupe atteint — pensez à les récupérer depuis la page de l’événement. Une fois la Phase de groupes terminée, le Classement suprême débute immédiatement.\n\n3) Durant la phase de Classement suprême, les escouades obtiennent des points de classement selon leurs performances à chaque défi. Le meilleur score détermine le classement au sein du groupe. Les défis du Classement suprême nécessitent un Laissez-passer d’escouade, et chaque tentative permet d’obtenir un certain nombre de Jetons de Phoxène en fonction des points gagnés.\n\n4) Les Jetons de Phoxène peuvent être échangés contre des objets dans la boutique de classement. Certains articles se débloquent selon le meilleur score atteint durant la phase de Classement suprême.\n\n5) Les escouades n’ayant pas participé à la Phase de groupes ne seront ni réparties en groupes ni classées durant le Classement suprême. Elles peuvent toutefois relever les défis du Classement suprême pour obtenir des Jetons de Phoxène et effectuer des échanges dans la boutique de classement, y compris pour les objets débloqués par les paliers de score.",
-    ContentJP = "ステージ挑戦説明：\n 1.「グループ戦」フェーズのステージでは、制限時間内に指定数の敵を撃破するとクリアとなります。\n 2.「頂上ランキング」フェーズのステージでは、通常敵を撃破すると超凶悪な敵にも追加ダメージが入り、制限時間内に超凶悪な敵を撃破するとクリアとなります。\n 3.「グループ戦」と「頂上ランキング」ステージをクリアした際、残り時間に応じて追加スコアを獲得できます。\n 4.クリアできなかった場合でも、制限時間終了時の予想ポイントの一定割合でスコアを獲得できます。\n \n ルール説明：\n 1.『  月狩り人の階段』イベントは、「グループ戦」と「頂上ランキング」の2つのフェーズに分かれています。イベント開始と同時に「グループ戦」フェーズが開放されます。\n 2.「グループ戦」フェーズでは、月狩り人チームが「グループ戦」ステージに挑戦し、戦闘結果に応じてスコアが算出されます。フェーズ中の過去最高スコアに基づいてグループ分けが行われます。「グループ戦」フェーズ終了時には所属グループに応じて報酬が配布されますので、イベント画面から受け取ってください。「グループ戦」フェーズ終了後、直ちに「頂上ランキング」フェーズが開始されます。\n 3.「頂上ランキング」フェーズでは、月狩り人チームが「頂上ランキング」ステージに挑戦し、戦闘結果に応じてランキングスコアが算出されます。フェーズ中の過去最高ランキングスコアに基づき、グループ内ランキングが決定されます。「頂上ランキング」ステージへの挑戦にはチーム招待状を消費し、各挑戦で得たランキングスコアに応じて一定数の月狩記念コインも獲得できます。\n 4.月狩記念コインは、ランキングショップでアイテムと交換できます。一部のアイテムは、「頂上ランキング」フェーズ中の過去最高ランキングスコアに応じて解放されます。\n 5.「グループ戦」フェーズのステージに一度も挑戦していない月狩り人チームはグループ分けされず、「頂上ランキング」フェーズのグループ内ランキングにも参加しません。ただし、「頂上ランキング」ステージへの挑戦で月狩記念コインを獲得することはでき、ランキングショップでの交換（過去最高ランキングスコアで解放される商品を含む）も可能です。",
-    ContentKR = "스테이지 도전 설명\n1. [그룹 예선전] 단계 스테이지 도전에서 제한 시간 내에 지정된 수량의 적을 처치하면 도전을 클리어하게 됩니다.\n2. [정상 랭킹] 단계 스테이지 도전에서 비고위험 적을 처치하면 고위험 적에게 추가로 대미지를 입힐 수 있으며, 제한 시간 내에 고위험 적을 처치하면 도전을 클리어합니다.\n3. [그룹 예선전]과 [정상 랭킹] 스테이지 도전 완료 시 남은 시간에 따라 추가 포인트를 획득합니다.\n4. 클리어에 실패할 경우, 제한 시간이 종료될 때 예상 포인트의 일정 비율로 결산됩니다.\n \n기본 메커니즘 설명\n1. 정상을 향해 리그는 [그룹 예선전]과 [정상 랭킹] 단계로 나뉩니다. 정상을 향해 이벤트 오픈 후, 즉시 [그룹 예선전] 단계에 진입합니다.\n2. [그룹 예선전] 단계 기간, 월석 사냥꾼 파티가 [그룹 예선전] 스테이지 도전을 완료하면, 전투 퍼포먼스에 따라 포인트가 결산되며, [그룹 예선전] 단계의 최고 포인트를 기준으로 그룹이 배정됩니다. [그룹 예선전] 단계 종료 시 소속 그룹에 따라 보상이 결산되므로 제때 이벤트 페이지에서 보상을 수령해 주세요. [그룹 예선전] 단계 종료 후, 즉시 [정상 랭킹] 단계가 오픈됩니다.\n3. [정상 랭킹] 단계 기간, 월석 사냥꾼 파티가 [정상 랭킹] 스테이지 도전을 완료하면, 전투 퍼포먼스에 따라 랭킹 포인트가 결산되며, [정상 랭킹] 단계의 최고 랭킹 포인트를 기준으로 그룹 내 랭킹이 결정됩니다. 파티원 초대장을 소모해 [정상 랭킹] 스테이지 도전을 진행할 수 있으며, 매회 도전 결산 시의 랭킹 포인트에 따라 일정 수량의 월석 사냥 기념 코인을 획득합니다.\n4. 월석 사냥 기념 코인은 랭킹 상점에서 아이템 교환에 사용되며, 일부 아이템은 [정상 랭킹] 단계의 최고 랭킹 포인트에 따라 해제됩니다.\n5. [그룹 예선전] 단계 스테이지 도전에 참여하지 않은 월석 사냥꾼 파티는 그룹이 배정되지 않으며, [정상 랭킹] 단계의 그룹 내 랭킹도 결산되지 않습니다. 단, [정상 랭킹] 단계 스테이지 도전을 통해 월석 사냥 기념 코인을 획득하고 랭킹 상점에서 아이템을 교환할 수 있습니다([정상 랭킹] 단계의 최고 랭킹 포인트에 따라 해제되는 아이템 포함).",
-    ContentTC = "關卡挑戰說明：\n1.在「分組賽」階段關卡挑戰中，在時限內擊敗指定數量敵人即可通關。\n2.在「巔峰排名」階段關卡挑戰中，擊敗非高危敵人時，會額外對高危敵人造成傷害，時限內擊敗高危敵人即可通關。\n3.完成「分組賽」和「巔峰排名」關卡挑戰時，會根據剩餘時間獲得額外積分。\n4.如果未成功通關，會在時限結束時，根據預估積分的一定比例進行結算。\n\n賽制說明：\n1.狩月人之階的賽制分為「分組賽」和「巔峰排名」兩個階段。狩月人之階活動開啟後，會立刻開啟「分組賽」階段。\n2.「分組賽」階段中，狩月人小隊完成「分組賽」關卡挑戰後會依據戰鬥表現結算積分，並且依據「分組賽」階段的歷史最高積分進行分組。「分組賽」階段結束時會依據所在的分組進行獎勵結算，請記得前往活動頁面領取。「分組賽」階段結束後，會立刻開啟「巔峰排名」階段。\n3.「巔峰排名」階段中，狩月人小隊完成「巔峰排名」關卡挑戰後會依據戰鬥表現結算排名積分，並且依據「巔峰排名」階段的歷史最高排名積分進行組內排名。「巔峰排名」關卡挑戰需要消耗小隊邀請函才能進行，同時也會依據每次挑戰結算的排名積分獲得一定數目的狩月紀念幣。\n4.狩月紀念幣可用於在排名商店中兌換商品，部分商品會隨著「巔峰排名」階段的歷史最高排名積分解鎖。\n5.未參與「分組賽」階段關卡挑戰的狩月人小隊不會進行分組，同樣也不會參與「巔峰排名」階段的組內排名。但依舊可以參與「巔峰排名」階段關卡挑戰獲得狩月紀念幣，也依舊可以前往排名商店進行商品兌換（包括隨著「巔峰排名」階段的歷史最高排名積分解鎖的商品）。",
-    TextMapContent = "关卡挑战说明：\n1.在「分组赛」阶段关卡挑战中，在时限内击败指定数量敌人即可通关。\n2.在「巅峰排名」阶段关卡挑战中，击败非高危敌人时，会额外对高危敌人造成伤害，时限内击败高危敌人即可通关。\n3.完成「分组赛」和「巅峰排名」关卡挑战时，会根据剩余时间获得额外积分。\n4.如果未成功通关，会在时限结束时，根据预估积分的一定比例进行结算。\n\n赛制说明：\n1.狩月人之阶的赛制分为「分组赛」和「巅峰排名」两个阶段。狩月人之阶活动开启后，会立刻开启「分组赛」阶段。\n2.「分组赛」阶段中，狩月人小队完成「分组赛」关卡挑战后会依据战斗表现结算积分，并且依据「分组赛」阶段的历史最高积分进行分组。「分组赛」阶段结束时会依据所在的分组进行奖励结算，请记得前往活动页面领取。「分组赛」阶段结束后，会立刻开启「巅峰排名」阶段。\n3.「巅峰排名」阶段中，狩月人小队完成「巅峰排名」关卡挑战后会依据战斗表现结算积分，并且依据「巅峰排名」阶段的历史最高积分进行组内排名。「巅峰排名」关卡挑战需要消耗小队邀请函才能进行，同时也会依据每次挑战结算的积分获得一定数目的狩月纪念币。\n4.狩月纪念币可用于在排名商店中兑换商品，部分商品会随着「巅峰排名」阶段的历史最高积分解锁。\n5.未参与「分组赛」阶段关卡挑战的狩月人小队不会进行分组，同样也不会参与「巅峰排名」阶段的组内排名。但依旧可以参与「巅峰排名」阶段关卡挑战获得狩月纪念币，也依旧可以前往排名商店进行商品兑换（包括随着「巅峰排名」阶段的历史最高积分解锁的商品）。",
+2. In the Group Stage, your Phoxhunter Team's stage reached and remaining time are recorded based on battle performance. Your best result determines your group placement. Rewards are distributed based on group placement when the stage ends, so be sure to claim them on the event page. The Apex Rankings phase begins immediately afterwards.
+3. In the Apex Rankings phase, your team's stage reached and remaining time are recorded based on battle performance. Your best result determines your placement within the group.
+Each challenge awards a certain number of Phoxcoins based on the stage reached.
+4. Phoxcoins can be exchanged for items in the Apex Shop. Certain items unlock based on your highest stage cleared during the Apex Rankings phase.
+5. Teams that skip the Group Stage will not be placed in a group or appear in group rankings during the Apex Rankings. However, they may still challenge Apex Rankings stages to earn Phoxcoins and exchange them in the Apex Shop, including for items unlocked by achieving the highest stage in the Apex Rankings phase.]],
+    ContentFR = "Règles des défis :\n1) Lorsque vous terminez un défi de la Phase de groupes ou du Classement suprême, l’étage atteint et le temps restant sont enregistrés.\n \n2) Remplir les conditions du défi chronométré d’un étage permet de débloquer plus rapidement des étages supérieurs.\n \nRègles du tournoi :\n1) Le Sommet du Chasseur de Phoxène se déroule en deux phases : la Phase de groupes et le Classement suprême. À l’ouverture de l’événement, la Phase de groupes débute immédiatement.\n \n2) Durant la Phase de groupes, lorsque les escouades de Chasseurs de Phoxène terminent un défi de Phase de groupes, l’étage atteint et le temps restant sont enregistrés selon leurs performances en combat. Leur meilleur résultat durant la Phase de groupes détermine leur répartition en groupes. À la fin de la phase, les récompenses sont attribuées selon le groupe auquel elles appartiennent — pensez à les récupérer depuis la page de l’événement. Une fois la Phase de groupes terminée, le Classement suprême débute immédiatement.\n \n3) Durant la phase de Classement suprême, lorsque les escouades de Chasseurs de Phoxène terminent un défi de Classement suprême, l’étage atteint et le temps restant sont enregistrés selon leurs performances en combat. Leur meilleur résultat durant le Classement suprême détermine le classement au sein du groupe. Chaque défi du Classement suprême permet d’obtenir un certain nombre de Jetons de Phoxène en fonction de l’étage atteint.\n \n4) Les Jetons de Phoxène peuvent être échangés contre des objets dans la boutique de classement. Certains articles se débloquent selon l’étage le plus élevé terminé durant la phase de Classement suprême.\n \n5) Les escouades n’ayant pas participé aux défis de la Phase de groupes ne seront ni réparties en groupes ni classées durant le Classement suprême. Elles peuvent toutefois relever les défis du Classement suprême pour obtenir des Jetons de Phoxène et effectuer des échanges dans la boutique de classement, y compris pour les objets débloqués selon l’étage le plus élevé terminé durant la phase de Classement suprême.",
+    ContentJP = " ステージ挑戦説明：\n1.「グループ戦」と「頂上ランキング」のステージチャレンジをクリアすると、到達階層と残り時間が記録されます。\n2.ステージチャレンジの制限時間内にクリア条件を達成すると、より高い階層のステージを早く解放できます。\n\nルール説明：\n 1.『 月狩り人の階段』イベントは、「グループ戦」と「頂上ランキング」の2つのフェーズに分かれています。イベント開始と同時に「グループ戦」フェーズが開放されます。\n 2.「グループ戦」フェーズでは、月狩り人チームが「グループ戦」ステージに挑戦し、戦闘結果に応じて到達階層と残り時間が記録されます。フェーズ中の過去最高記録に基づいてグループ分けが行われます。「グループ戦」フェーズ終了時には所属グループに応じて報酬が配布されますので、イベント画面から受け取ってください。「グループ戦」フェーズ終了後、直ちに「頂上ランキング」フェーズが開始されます。\n 3.「頂上ランキング」フェーズでは、月狩り人チームが「頂上ランキング」ステージに挑戦し、戦闘結果に応じて到達階層と残り時間が記録されます。フェーズ中の過去最高記録に基づき、グループ内ランキングが決定されます。「頂上ランキング」ステージでは、挑戦した階層に応じて「月狩記念コイン」を獲得できます。\n 4.月狩記念コインは、ランキングショップでアイテムと交換できます。一部のアイテムは、「頂上ランキング」フェーズの過去最高到達階層に応じて解放されます。\n 5.「グループ戦」フェーズのステージに一度も挑戦していない月狩り人チームはグループ分けされず、「頂上ランキング」フェーズのグループ内ランキングにも参加しません。ただし、「頂上ランキング」ステージへの挑戦で月狩記念コインを獲得することはでき、ランキングショップでの交換（過去最高到達階層で解放される商品を含む）も可能です。\n ",
+    ContentKR = "스테이지 도전 설명\n1.  [그룹 예선전]과 [정상 랭킹] 단계의 도전 완료 시 최고 클리어 층수와 남은 시간이 기록됩니다. \n2. 각 스테이지의 조건을 제한 시간 내에 달성하면 더 높은 층의 도전을 빠르게 해제할 수 있습니다.\n\n기본 메커니즘 설명\n1. 정상을 향해 리그는 [그룹 예선전]과 [정상 랭킹]으로 나뉩니다. 정상을 향해 이벤트 오픈 후, 즉시 [그룹 예선전] 단계에 진입합니다.\n2. [그룹 예선전] 단계에서, 월석 사냥꾼 파티가 [그룹 예선전] 스테이지 도전을 완료하면, 전투 퍼포먼스에 따라 도달 층수와 남은 시간이 기록되며, [그룹 예선전] 단계의 최고 기록을 기준으로 그룹이 배정됩니다. [그룹 예선전] 단계 종료 시 소속 그룹에 따라 보상이 결산되니 제때 이벤트 페이지에서 보상을 수령해 주세요. [그룹 예선전] 단계 종료 후, 즉시 [정상 랭킹] 단계가 오픈됩니다.\n3. [정상 랭킹] 단계 기간, 월석 사냥꾼 파티가 [정상 랭킹] 스테이지 도전을 완료하면, 전투 퍼포먼스에 따라 도달 층수와 남은 시간이 기록되며, [정상 랭킹] 단계의 최고 기록을 기준으로 그룹 내 랭킹이 결정됩니다. [정상 랭킹] 스테이지 도전에서는 매 도전마다 도달한 층수에 따라 일정 수량의 월석 사냥 기념 코인을 획득합니다.\n4. 월석 사냥 기념 코인은 랭킹 상점에서 아이템 교환에 사용되며, 일부 아이템은 [정상 랭킹] 단계의 최고 클리어 층수에 따라 해제됩니다.\n5. [그룹 예선전] 단계 스테이지 도전에 참여하지 않은 월석 사냥꾼 파티는 그룹이 배정되지 않으며, [정상 랭킹] 단계의 그룹 내 랭킹도 결산되지 않습니다. 단, [정상 랭킹] 단계 스테이지 도전을 통해 월석 사냥 기념 코인을 획득하고 랭킹 상점에서 아이템을 교환할 수 있습니다([정상 랭킹] 단계의 최고 클리어 층수에 따라 해제되는 아이템 포함).",
+    ContentTC = "關卡挑戰說明：\n1.完成「分組賽」和「巔峰排名」關卡挑戰時，會記錄通關層數和剩餘時間。\n2.達成關卡挑戰的限時挑戰要求時，能更快的解鎖更高層數的關卡。\n\n賽制說明：\n1.狩月人之階的賽制分為「分組賽」和「巔峰排名」兩個階段。狩月人之階活動開啟後，會立刻開啟「分組賽」階段。\n2.「分組賽」階段中，狩月人小隊完成「分組賽」關卡挑戰後會依據戰鬥表現記錄層數和剩餘時間，並且依據「分組賽」階段的歷史最好成績進行分組。「分組賽」階段結束時會依據所在的分組進行獎勵結算，請記得前往活動頁面領取。「分組賽」階段結束後，會立刻開啟「巔峰排名」階段。\n3.「巔峰排名」階段中，狩月人小隊完成「巔峰排名」關卡挑戰後會依據戰鬥表現記錄層數和剩餘時間，並且依據「巔峰排名」階段的歷史最好成績進行組內排名。「巔峰排名」關卡挑戰會依據每次挑戰的層數獲得一定數目的狩月紀念幣。\n4.狩月紀念幣可用於在排名商店中兌換商品，部分商品會隨著「巔峰排名」階段的歷史最高通關層數解鎖。\n5.未參與「分組賽」階段關卡挑戰的狩月人小隊不會進行分組，同樣也不會參與「巔峰排名」階段的組內排名。但依舊可以參與「巔峰排名」階段關卡挑戰獲得狩月紀念幣，也依舊可以前往排名商店進行商品兌換（包括依據「巔峰排名」階段的歷史最高通關層數解鎖的商品）。",
+    TextMapContent = "关卡挑战说明：\n1.完成「分组赛」和「巅峰排名」关卡挑战时，会记录通关层数和剩余时间。\n2.达成关卡挑战的限时挑战要求时，能更快的解锁更高层数的关卡。\n\n赛制说明：\n1.狩月人之阶的赛制分为「分组赛」和「巅峰排名」两个阶段。狩月人之阶活动开启后，会立刻开启「分组赛」阶段。\n2.「分组赛」阶段中，狩月人小队完成「分组赛」关卡挑战后会依据战斗表现记录层数和剩余时间，并且依据「分组赛」阶段的历史最好成绩进行分组。「分组赛」阶段结束时会依据所在的分组进行奖励结算，请记得前往活动页面领取。「分组赛」阶段结束后，会立刻开启「巅峰排名」阶段。\n3.「巅峰排名」阶段中，狩月人小队完成「巅峰排名」关卡挑战后会依据战斗表现记录层数和剩余时间，并且依据「巅峰排名」阶段的历史最好成绩进行组内排名。「巅峰排名」关卡挑战会依据每次挑战的层数获得一定数目的狩月纪念币。\n4.狩月纪念币可用于在排名商店中兑换商品，部分商品会随着「巅峰排名」阶段的历史最高通关层数解锁。\n5.未参与「分组赛」阶段关卡挑战的狩月人小队不会进行分组，同样也不会参与「巅峰排名」阶段的组内排名。但依旧可以参与「巅峰排名」阶段关卡挑战获得狩月纪念币，也依旧可以前往排名商店进行商品兑换（包括依据「巅峰排名」阶段的历史最高通关层数解锁的商品）。",
     TextMapId = "Event_Raid_Rule_Dungeon"
   },
   Event_Raid_Title = {
@@ -43614,8 +44246,8 @@ Event Rules:
     ContentFR = "1) Cet événement comprend 2 manches, chacune comportant 8 récompenses. L’une d’elles est une apparence souhaitée. Une fois cette apparence obtenue dans une manche, vous recevez immédiatement toutes les récompenses restantes de cette manche.\n2) Avant le premier tissage d’une manche, vous pouvez librement modifier l’apparence souhaitée et les récompenses sélectionnées. Après un premier tissage, ces choix ne peuvent plus être modifiés pour la manche en cours.\n3) Les récompenses d’une même manche ne peuvent être obtenues qu’une seule fois. À mesure que le nombre de récompenses restantes diminue, leur probabilité d’obtention augmente proportionnellement. Une fois la manche terminée, les probabilités sont réinitialisées.\n\n4) Probabilités initiales d’obtention :\nApparence de personnage : 0,08 %\nEffet de Bond Cyclonique : 0,92 %\nAccessoire dorsal – Haut : 1 %\nAccessoire de tête : 2 %\nCadre d’avatar : 13 %\nAvatar : 13 %\nTeinture iridescente ×3 : 35 %\nCarnet de mission — Tome III ×6 : 35 %\n\n5) Le nombre de Fils stellaires requis augmente avec le nombre de tissages effectués. Une fois la manche terminée, le coût est réinitialisé.\n\nNombre de Fils stellaires requis par tissage :\n1er tissage : Fil stellaire ×1\n2e tissage : Fil stellaire ×3\n3e tissage : Fil stellaire ×6\n4e tissage : Fil stellaire ×10\n5e tissage : Fil stellaire ×15\n6e tissage : Fil stellaire ×20\n7e tissage : Fil stellaire ×25\n8e tissage : Fil stellaire ×30",
     ContentJP = "1、今回のイベント報酬は全2ラウンドあり、各ラウンドには8個の報酬が含まれています。そのうち1つはお気に入りのスキンで、各ラウンドでお気に入りのスキンを獲得すると、そのラウンドの全報酬を直接獲得します\n2、各ラウンドで最初の編み込みを行う前であれば、そのラウンドのお気に入りのスキンと選択報酬は自由に調整できます。そのラウンドで1回編み込みを行うと、そのラウンドのお気に入りのスキンと選択報酬は変更できなくなります\n3、同一ラウンド内の報酬は重複して獲得されず、残り報酬数が減るにつれて、残り報酬の獲得確率は同じ比率で上昇します。そのラウンドの編み込みを完了すると、報酬の獲得確率は初期状態に戻ります\n4、各報酬の初期獲得確率は以下の通りです\n キャラクタースキン：0.08%\n スピンジャンプエフェクト：0.92%\n バック装飾・上：1%\n ヘッド装飾：2%\n アイコンフレーム：13%\n アイコン：13%\n 虹色の染料×3：35%\n 依頼手帳Ⅲ×6：35%\n5、編み込みに必要な星の糸の消費数は、編み込み回数が増えるほど多くなります。そのラウンドの編み込みを完了すると、星の糸の消費数は初期状態に戻ります\n各回の編み込みに必要な星の糸の数は以下の通りです\n 1回目の編み込み：星の糸×1\n 2回目の編み込み：星の糸×3\n 3回目の編み込み：星の糸×6\n 4回目の編み込み：星の糸×10\n 5回目の編み込み：星の糸×15\n 6回目の編み込み：星の糸×20\n 7回目の編み込み：星の糸×25\n 8回目の編み込み：星の糸×30",
     ContentKR = "1. 본 이벤트는 2회의 보상 라운드로 구성됩니다. 라운드당 8개의 보상이 있으며, 그중 1개의 보상을 소망 외형으로 설정할 수 있습니다. 각 라운드의 소망 외형을 획득하면, 해당 라운드의 모든 보상을 바로 획득합니다.\n2. 각 라운드의 첫 번째 직조를 시작하기 전까지는 해당 라운드의 소망 외형과 커스텀 보상을 자유롭게 조정할 수 있습니다. 직조를 진행한 후에는 소망 외형과 커스텀 보상을 변경할 수 없습니다.\n3. 동일 라운드의 보상은 중복 획득되지 않습니다. 라운드의 남은 보상 개수가 감소함에 따라 남은 보상의 획득 확률은 같은 비율로 상승합니다. 해당 라운드의 직조가 종료되면 보상 획득 확률은 초기 확률로 돌아갑니다.\n4. 각 보상의 초기 획득 확률:\n캐릭터 코스튬: 0.08%\n스파이럴 점프 이펙트: 0.92%\n등 장식·위: 1%\n머리 장식: 2%\n프로필 프레임: 13%\n프로필: 13%\n레인보우 염료x3: 35%\n의뢰 수첩 Ⅲx6: 35%\n5. 직조 횟수가 증가함에 따라 직조에 소모되는 별빛의 실은 함께 증가합니다. 해당 라운드의 직조가 종료된 후, 별빛의 실 소모 수량은 초기 상태로 돌아갑니다.\n직조에 필요한 별빛의 실 개수\n1회차: 별빛의 실x1\n2회자:별빛의 실x3\n3회차: 별빛의 실x6\n4회차: 별빛의 실x10\n5회차: 별빛의 실x15\n6회차: 별빛의 실x20\n7회차: 별빛의 실x25\n8회차: 별빛의 실x30",
-    ContentTC = "1、本次活動共有2輪獎勵，每輪各包含8個獎勵，其中1個獎勵為心意外觀，每輪獲得心意外觀後，將直接獲取本輪次的所有獎勵\n2、在開始一個輪次的首次編織前，可自由調整該輪的心意外觀和自選獎勵。在該輪次進行1次編織後，將無法修改本輪的心意外觀和自選獎勵\n3、同一輪次中的獎勵不會重複獲取，剩餘獎勵的獲取概率將隨著本輪獎勵數量的減少而等比例提高。完成本輪編織後，獎勵獲取概率將恢復至初始狀態\n4、各獎勵的初始獲取概率如下\n角色形象：0.08%\n螺旋飛躍特效：0.92%\n背部裝飾·上：1%\n頭部裝飾：2%\n頭像框：13%\n頭像：13%\n虹彩染劑*3：35%\n委託手冊·三*6：35%\n5、編織所消耗的星輝絲線會隨著編織次數增加而增多，完成本輪編織後，星輝絲線的消耗數量將恢復至初始狀態\n每次編織所需的星輝絲線數量如下\n第1次編織：星輝絲線*1\n第2次編織：星輝絲線*3\n第3次編織：星輝絲線*6\n第4次編織：星輝絲線*10\n第5次編織：星輝絲線*15\n第6次編織：星輝絲線*20\n第7次編織：星輝絲線*25\n第8次編織：星輝絲線*30",
-    TextMapContent = "1、本次活动共有2轮奖励，每轮各包含8个奖励，其中1个奖励为心意外观，每轮获得心意外观后，将直接获取本轮次的所有奖励\n2、在开始一个轮次的首次编织前，可自由调整该轮的心意外观和自选奖励。在该轮次进行1次编织后，将无法修改本轮的心意外观和自选奖励\n3、同一轮次中的奖励不会重复获取，剩余奖励的获取概率将随着本轮奖励数量的减少而等比例提高。完成本轮编织后，奖励获取概率将恢复至初始状态\n4、各奖励的初始获取概率如下\n角色形象：0.08%\n螺旋飞跃特效：0.92%\n背部装饰·上：1%\n头部装饰：2%\n头像框：13%\n头像：13%\n虹彩染剂*3：35%\n委托手册·三*6：35%\n5、编织所消耗的星辉丝线会随着编织次数增加而增多，完成本轮编织后，星辉丝线的消耗数量将恢复至初始状态\n每次编织所需的星辉丝线数量如下\n第1次编织：星辉丝线*1\n第2次编织：星辉丝线*3\n第3次编织：星辉丝线*6\n第4次编织：星辉丝线*10\n第5次编织：星辉丝线*15\n第6次编织：星辉丝线*20\n第7次编织：星辉丝线*25\n第8次编织：星辉丝线*30\n",
+    ContentTC = "1、本次活動共有2輪獎勵，每輪各包含8個獎勵，其中1個獎勵為心意外觀，每輪獲得心意外觀後，將直接獲取本輪次的所有獎勵\n2、達成[收集詳情]中的收集目標後，可以自動獲得額外收集獎勵\n3、在開始一個輪次的首次編織前，可自由調整該輪的心意外觀和自選獎勵。在該輪次進行1次編織後，將無法修改本輪的心意外觀和自選獎勵\n4、同一輪次中的獎勵不會重複獲取，剩餘獎勵的獲取概率將隨著本輪獎勵數量的減少而等比例提高。完成本輪編織後，獎勵獲取概率將恢復至初始狀態\n5、各獎勵的初始獲取概率如下\n角色形象：0.08%\n螺旋飛躍特效：0.92%\n背部裝飾·上：1%\n頭部裝飾：2%\n頭像框：13%\n頭像：13%\n虹彩染劑*3：35%\n委託手冊·三*6：35%\n6、編織所消耗的星輝絲線會隨著編織次數增加而增多，完成本輪編織後，星輝絲線的消耗數量將恢復至初始狀態\n每次編織所需的星輝絲線數量如下\n第1次編織：星輝絲線*1\n第2次編織：星輝絲線*3\n第3次編織：星輝絲線*6\n第4次編織：星輝絲線*10\n第5次編織：星輝絲線*15\n第6次編織：星輝絲線*20\n第7次編織：星輝絲線*25\n第8次編織：星輝絲線*30",
+    TextMapContent = "1、本次活动共有2轮奖励，每轮各包含8个奖励，其中1个奖励为心意外观，每轮获得心意外观后，将直接获取本轮次的所有奖励\n2、达成[收集详情]中的收集目标后，可以自动获得额外收集奖励\n3、在开始一个轮次的首次编织前，可自由调整该轮的心意外观和自选奖励。在该轮次进行1次编织后，将无法修改本轮的心意外观和自选奖励\n4、同一轮次中的奖励不会重复获取，剩余奖励的获取概率将随着本轮奖励数量的减少而等比例提高。完成本轮编织后，奖励获取概率将恢复至初始状态\n5、各奖励的初始获取概率如下\n角色形象：0.08%\n螺旋飞跃特效：0.92%\n背部装饰·上：1%\n头部装饰：2%\n头像框：13%\n头像：13%\n虹彩染剂*3：35%\n委托手册·三*6：35%\n6、编织所消耗的星辉丝线会随着编织次数增加而增多，完成本轮编织后，星辉丝线的消耗数量将恢复至初始状态\n每次编织所需的星辉丝线数量如下\n第1次编织：星辉丝线*1\n第2次编织：星辉丝线*3\n第3次编织：星辉丝线*6\n第4次编织：星辉丝线*10\n第5次编织：星辉丝线*15\n第6次编织：星辉丝线*20\n第7次编织：星辉丝线*25\n第8次编织：星辉丝线*30\n",
     TextMapId = "Event_Rule_103021"
   },
   Event_Rule_10302101 = {
@@ -43644,6 +44276,11 @@ Event Rules:
     ContentTC = "1、本次活動共有2輪獎勵，每輪各包含8個獎勵，其中1個獎勵為心意外觀，每輪獲得心意外觀後，將直接獲取本輪次的所有獎勵\n2、達成[收集詳情]中的收集目標後，可以自動獲得額外收集獎勵；集齊本次活動的2個角色形象後，可於信件中領取背景獎勵\n3、在開始一個輪次的首次編織前，可自由調整該輪的心意外觀和自選獎勵。在該輪次進行1次編織後，將無法修改本輪的心意外觀和自選獎勵\n4、同一輪次中的獎勵不會重複獲取，剩餘獎勵的獲取概率將隨著本輪獎勵數量的減少而等比例提高。完成本輪編織後，獎勵獲取概率將恢復至初始狀態\n5、各獎勵的初始獲取概率如下\n角色形象：0.08%\n光暈：0.92%\n背部裝飾·上：1%\n頭部裝飾：2%\n頭像框：13%\n頭像：13%\n虹彩染劑*3：35%\n委託手冊·三*6：35%\n6、編織所消耗的星輝絲線會隨著編織次數增加而增多，完成本輪編織後，星輝絲線的消耗數量將恢復至初始狀態\n每次編織所需的星輝絲線數量如下\n第1次編織：星輝絲線*1\n第2次編織：星輝絲線*3\n第3次編織：星輝絲線*6\n第4次編織：星輝絲線*10\n第5次編織：星輝絲線*15\n第6次編織：星輝絲線*20\n第7次編織：星輝絲線*25\n第8次編織：星輝絲線*30",
     TextMapContent = "1、本次活动共有2轮奖励，每轮各包含8个奖励，其中1个奖励为心意外观，每轮获得心意外观后，将直接获取本轮次的所有奖励\n2、达成[收集详情]中的收集目标后，可以自动获得额外收集奖励；集齐本次活动的2个角色形象后，可于邮件中领取背景奖励\n3、在开始一个轮次的首次编织前，可自由调整该轮的心意外观和自选奖励。在该轮次进行1次编织后，将无法修改本轮的心意外观和自选奖励\n4、同一轮次中的奖励不会重复获取，剩余奖励的获取概率将随着本轮奖励数量的减少而等比例提高。完成本轮编织后，奖励获取概率将恢复至初始状态\n5、各奖励的初始获取概率如下\n角色形象：0.08%\n光晕：0.92%\n背部装饰·上：1%\n头部装饰：2%\n头像框：13%\n头像：13%\n虹彩染剂*3：35%\n委托手册·三*6：35%\n6、编织所消耗的星辉丝线会随着编织次数增加而增多，完成本轮编织后，星辉丝线的消耗数量将恢复至初始状态\n每次编织所需的星辉丝线数量如下\n第1次编织：星辉丝线*1\n第2次编织：星辉丝线*3\n第3次编织：星辉丝线*6\n第4次编织：星辉丝线*10\n第5次编织：星辉丝线*15\n第6次编织：星辉丝线*20\n第7次编织：星辉丝线*25\n第8次编织：星辉丝线*30",
     TextMapId = "Event_Rule_10302103"
+  },
+  Event_Rule_10302104 = {
+    ContentTC = "1、本次活動共有2輪獎勵，每輪各包含8個獎勵，其中1個獎勵為心意外觀，每輪獲得心意外觀後，將直接獲取本輪次的所有獎勵\n2、達成[收集詳情]中的收集目標後，可以自動獲得額外收集獎勵\n3、在開始一個輪次的首次編織前，可自由調整該輪的心意外觀和自選獎勵。在該輪次進行1次編織後，將無法修改本輪的心意外觀和自選獎勵\n4、同一輪次中的獎勵不會重複獲取，剩餘獎勵的獲取概率將隨著本輪獎勵數量的減少而等比例提高。完成本輪編織後，獎勵獲取概率將恢復至初始狀態\n5、各獎勵的初始獲取概率如下\n角色形象：0.08%\n螺旋飛躍特效：0.92%\n背部裝飾·上：1%\n臉部裝飾：2%\n頭像框：13%\n頭像：13%\n虹彩染劑*3：35%\n委託手冊·三*6：35%\n6、編織所消耗的星輝絲線會隨著編織次數增加而增多，完成本輪編織後，星輝絲線的消耗數量將恢復至初始狀態\n每次編織所需的星輝絲線數量如下\n第1次編織：星輝絲線*1\n第2次編織：星輝絲線*3\n第3次編織：星輝絲線*6\n第4次編織：星輝絲線*10\n第5次編織：星輝絲線*15\n第6次編織：星輝絲線*20\n第7次編織：星輝絲線*25\n第8次編織：星輝絲線*30",
+    TextMapContent = "1、本次活动共有2轮奖励，每轮各包含8个奖励，其中1个奖励为心意外观，每轮获得心意外观后，将直接获取本轮次的所有奖励\n2、达成[收集详情]中的收集目标后，可以自动获得额外收集奖励\n3、在开始一个轮次的首次编织前，可自由调整该轮的心意外观和自选奖励。在该轮次进行1次编织后，将无法修改本轮的心意外观和自选奖励\n4、同一轮次中的奖励不会重复获取，剩余奖励的获取概率将随着本轮奖励数量的减少而等比例提高。完成本轮编织后，奖励获取概率将恢复至初始状态\n5、各奖励的初始获取概率如下\n角色形象：0.08%\n螺旋飞跃特效：0.92%\n背部装饰·上：1%\n脸部装饰：2%\n头像框：13%\n头像：13%\n虹彩染剂*3：35%\n委托手册·三*6：35%\n6、编织所消耗的星辉丝线会随着编织次数增加而增多，完成本轮编织后，星辉丝线的消耗数量将恢复至初始状态\n每次编织所需的星辉丝线数量如下\n第1次编织：星辉丝线*1\n第2次编织：星辉丝线*3\n第3次编织：星辉丝线*6\n第4次编织：星辉丝线*10\n第5次编织：星辉丝线*15\n第6次编织：星辉丝线*20\n第7次编织：星辉丝线*25\n第8次编织：星辉丝线*30",
+    TextMapId = "Event_Rule_10302104"
   },
   Event_Rule_103024 = {
     ContentEN = "During the event, complete collection tasks in the Cosmetics Collection list to earn cosmetic points. Spend Phoxene to unlock and claim bountiful rewards.",
@@ -43694,6 +44331,19 @@ Event Rules:
     ContentTC = "1.活動期間，玩家每天可免費領取一次一定數量的月石，領取後可購買【單次翻5倍】將當天月石數量翻5倍；也可購買【全部翻5倍】將當天及剩餘天數的月石翻5倍。\n2.翻5倍：玩家購買後，當天總共可獲得今日免費數量的5倍數量月石。\n3.首次購買【單次翻5倍】後，將無法購買【全部翻5倍】。",
     TextMapContent = "1.活动期间，玩家每天可免费领取一次一定数量的月石，领取后可购买【单次翻5倍】将当天月石数量翻5倍；也可购买【全部翻5倍】将当天及剩余天数的月石翻5倍。\n2.翻5倍：玩家购买后，当天总共可获得今日免费数量的5倍数量月石。\n3.首次购买【单次翻5倍】后，将无法购买【全部翻5倍】。",
     TextMapId = "Event_Rule_103029"
+  },
+  Event_Rule_103036 = {
+    ContentEN = [[
+<H>Nocturnal Evermore Event Rules</>
+1. During the event, several Extreme-Threat Enemies are available to challenge in Nocturnal Evermore. Each enemy has two modes: <H>Evermore</> and <H>Extreme Challenge</>.
+2. In <H>Evermore</> mode, guaranteed drops are subject to a <H>Weekly Rewards</> limit shared across all enemies. Once you have used up your weekly reward attempts, you can still challenge enemies in Evermore mode, but you will no longer receive guaranteed drops. Weekly reward attempts reset every Monday at 05:00 (server time). <H>First-clear rewards</> do not count toward this limit.
+3. In <H>Extreme Challenge</>mode, guaranteed drops are not subject to the <H>Weekly Rewards</> limit. Clearing a challenge for the first time grants additional rewards.]],
+    ContentFR = "<H>Règles de l’événement Cauchemar éternel</>\n1) Pendant l’événement, plusieurs menaces majeures sont disponibles dans Cauchemar éternel. Chaque ennemi propose deux modes : <H>Éternel</> et <H>Extrême</>.\n \n2) En mode <H>Éternel</>, les récompenses fixes obtenues à chaque défi sont limitées par le nombre de <H>récompenses hebdomadaires</>. Ce nombre est partagé entre les modes Éternel des différents ennemis. Une fois toutes les récompenses hebdomadaires utilisées, vous pouvez toujours relever les défis du mode Éternel, mais vous ne recevrez plus de récompenses fixes. Le nombre de récompenses est réinitialisé chaque lundi à 5 h 00 (heure du serveur). Les <H>récompenses de première réussite</> ne sont pas affectées par cette limite.\n \n3) En mode <H>Extrême</>, les récompenses fixes obtenues à chaque défi ne sont pas limitées par le nombre de <H>récompenses hebdomadaires</>. La première réussite permet d’obtenir des récompenses supplémentaires.",
+    ContentJP = " <H>終わらぬ悪夢 イベント説明 </>\n1. イベント開催期間中、終わらぬ悪夢では複数の高危険度の敵に挑戦できます。各敵には、 <H>恒久</> と <H>高難度挑戦</> の2つのモードがあります。\n2.   <H>恒久</>モードでは、各挑戦で獲得できる固定ドロップ報酬に <H>今週の報酬回数</>の制限があります。異なる敵の <H>恒久</>モードでは、報酬回数が共通でカウントされます。\n報酬回数を使い切った後も <H>恒久</>モードには挑戦できますが、固定ドロップ報酬は獲得できません。報酬回数は毎週月曜日5:00（サーバー時間）にリセットされます。 <H>初回クリア報酬 </>は報酬回数にカウントされません。\n3.  <H>高難度挑戦</>モードでは、各挑戦で獲得できる固定ドロップ報酬は <H>今週の報酬回数</>の制限を受けません。初回クリア時には追加報酬を獲得できます。",
+    ContentKR = "<H>영원한 악몽 이벤트 안내</>\n1. 이벤트 기간 중 영원한 악몽에는 여러 명의 고위험 적이 등장하며, 각 적은 <H>영원</>과<H>고난도 도전</> 두 가지 모드로 도전할 수 있습니다.\n2. <H>영원</> 모드에서는 도전할 때마다 획득하는 고정 드롭 보상에는 <H>이번 주 보상 횟수</> 제한이 적용됩니다. 서로 다른 적의 영원 모드는 동일한 보상 횟수를 공유합니다. 보상 횟수를 모두 소진한 후에도 영원 모드에 계속 도전할 수 있지만, 더 이상 고정 드롭 보상은 획득할 수 없습니다. 보상 횟수는 매주 월요일 06:00(KST)에 초기화됩니다.<H>첫 클리어 보상</>은 보상 횟수의 영향을 받지 않습니다.\n3. <H>고난도 도전</> 모드에서는 도전할 때마다 획득하는 고정 드롭 보상에 <H>이번 주 보상 횟수</> 제한이 적용되지 않으며, 첫 클리어 시 추가 보상을 획득할 수 있습니다.",
+    ContentTC = "<H>永恆夢魘活動說明</>\n1.活動開啟期間，永恆夢魘有複數高危敵人可供挑戰，每名敵人各有<H>永恆</>與<H>高難挑戰</>兩種模式。\n2.<H>永恆</>模式下，每次挑戰獲得的固定掉落獎勵受<H>本週獎勵次數</>限制，不同敵人的永恆模式共享獎勵次數。獎勵次數耗盡後，依然可以挑戰永恆模式，但無法再獲得固定掉落獎勵。獎勵次數會於每週一5：00（伺服器時間）重置。<H>首次通關獎勵</>不受獎勵次數影響。\n3.<H>高難挑戰</>模式下，每次挑戰獲得的固定掉落獎勵不受<H>本週獎勵次數</>限制，首次通關可以獲得額外獎勵。\n4.<H>高難挑戰中</>，首領強度將大幅提升，且每名首領都會獲得專屬的<H>強力增益</>。戰前可先查看增益詳情，據此調整陣容、強化養成後再行挑戰。",
+    TextMapContent = "<H>永恒梦魇活动说明</>\n1.活动开启期间，永恒梦魇有复数高危敌人可供挑战，每名敌人各有<H>永恒</>与<H>高难挑战</>两种模式。\n2.<H>永恒</>模式下，每次挑战获得的固定掉落奖励受<H>本周奖励次数</>限制，不同敌人的永恒模式共享奖励次数。奖励次数耗尽后，依然可以挑战永恒模式，但无法再获得固定掉落奖励。奖励次数会于每周一5：00（服务器时间）重置。<H>首次通关奖励</>不受奖励次数影响。\n3.<H>高难挑战</>模式下，每次挑战获得的固定掉落奖励不受<H>本周奖励次数</>限制，首次通关可以获得额外奖励。\n4.<H>高难挑战中</>，首领强度将大幅提升，且每名首领都会获得专属的<H>强力增益</>。战前可先查看增益详情，据此调整阵容、强化养成后再行挑战。\n",
+    TextMapId = "Event_Rule_103036"
   },
   Event_SERIES_100002 = {
     ContentEN = "What Night is Tonight?",
@@ -44082,6 +44732,15 @@ Event Rules:
     TextMapContent = "且试锋芒",
     TextMapId = "Event_Tab_103026"
   },
+  Event_Tab_103036 = {
+    ContentEN = "Nocturnal Evermore",
+    ContentFR = "Cauchemar éternel",
+    ContentJP = "終わらぬ悪夢",
+    ContentKR = "영원한 악몽",
+    ContentTC = "永恆夢魘",
+    TextMapContent = "永恒梦魇",
+    TextMapId = "Event_Tab_103036"
+  },
   Event_Tab_105001 = {
     ContentEN = "Top-Up Refund",
     ContentFR = "Remboursement de recharge",
@@ -44333,6 +44992,60 @@ Event Rules:
     ContentTC = "完成上述5個支線任務",
     TextMapContent = "完成上述5个支线任务",
     TextMapId = "Event_TargetDes_10200306"
+  },
+  Event_TargetDes_10200501 = {
+    ContentEN = "Complete Phase I of the event quest [Towards the Dawn]",
+    ContentFR = "Terminer la phase 1 de la quête d’événement « En marche vers l’aube »",
+    ContentJP = "イベントクエスト「暁を歩む」第一段階をクリアする",
+    ContentKR = "이벤트 퀘스트 '여명 속으로' 1단계 완료",
+    ContentTC = "完成活動任務「行於破曉」階段一",
+    TextMapContent = "完成活动任务“行于破晓”阶段一",
+    TextMapId = "Event_TargetDes_10200501"
+  },
+  Event_TargetDes_10200502 = {
+    ContentEN = "Complete Phase Ⅱ of the event quest [Towards the Dawn]",
+    ContentFR = "Terminer la phase 2 de la quête d’événement « En marche vers l’aube »",
+    ContentJP = "イベントクエスト「暁を歩む」第二段階をクリアする",
+    ContentKR = "이벤트 퀘스트 '여명 속으로' 2단계 완료",
+    ContentTC = "完成活動任務「行於破曉」階段二",
+    TextMapContent = "完成活动任务“行于破晓”阶段二",
+    TextMapId = "Event_TargetDes_10200502"
+  },
+  Event_TargetDes_10200503 = {
+    ContentEN = "Complete Phase Ⅲ of the event quest [Towards the Dawn]",
+    ContentFR = "Terminer la phase 3 de la quête d’événement « En marche vers l’aube »",
+    ContentJP = "イベントクエスト「暁を歩む」第三段階をクリアする",
+    ContentKR = "이벤트 퀘스트 '여명 속으로' 3단계 완료",
+    ContentTC = "完成活動任務「行於破曉」階段三",
+    TextMapContent = "完成活动任务“行于破晓”阶段三",
+    TextMapId = "Event_TargetDes_10200503"
+  },
+  Event_TargetDes_10200504 = {
+    ContentEN = "Complete Phase Ⅳ of the event quest [Towards the Dawn]",
+    ContentFR = "Terminer la phase 4 de la quête d’événement « En marche vers l’aube »",
+    ContentJP = "イベントクエスト「暁を歩む」第四段階をクリアする",
+    ContentKR = "이벤트 퀘스트 '여명 속으로' 4단계 완료",
+    ContentTC = "完成活動任務「行於破曉」階段四",
+    TextMapContent = "完成活动任务“行于破晓”阶段四",
+    TextMapId = "Event_TargetDes_10200504"
+  },
+  Event_TargetDes_10200505 = {
+    ContentEN = "Complete Phase Ⅴ of the event quest [Towards the Dawn]",
+    ContentFR = "Terminer la phase 5 de la quête d’événement « En marche vers l’aube »",
+    ContentJP = "イベントクエスト「暁を歩む」第五段階をクリアする",
+    ContentKR = "이벤트 퀘스트 '여명 속으로' 5단계 완료",
+    ContentTC = "完成活動任務「行於破曉」階段五",
+    TextMapContent = "完成活动任务“行于破晓”阶段五",
+    TextMapId = "Event_TargetDes_10200505"
+  },
+  Event_TargetDes_10200506 = {
+    ContentEN = "Complete Phase Ⅵ of the event quest [Towards the Dawn]",
+    ContentFR = "Terminer la phase 6 de la quête d’événement « En marche vers l’aube »",
+    ContentJP = "イベントクエスト「暁を歩む」第六段階をクリアする",
+    ContentKR = "이벤트 퀘스트 '여명 속으로' 6단계 완료",
+    ContentTC = "完成活動任務「行於破曉」階段六",
+    TextMapContent = "完成活动任务“行于破晓”阶段六",
+    TextMapId = "Event_TargetDes_10200506"
   },
   Event_TargetDes_10301401 = {
     ContentEN = "Complete Quest: After the Storm",
@@ -45090,6 +45803,24 @@ Event Rules:
     TextMapContent = "重燃的灯火",
     TextMapId = "Event_Title_101019"
   },
+  Event_Title_101020 = {
+    ContentEN = "As Tomorrow Nears",
+    ContentFR = "Demain approche",
+    ContentJP = "明日、来たる",
+    ContentKR = "다가올 내일",
+    ContentTC = "明日將至",
+    TextMapContent = "明日将至",
+    TextMapId = "Event_Title_101020"
+  },
+  Event_Title_101021 = {
+    ContentEN = "Where the Whistle Calls",
+    ContentFR = "Pour qui retentit le sifflet ?",
+    ContentJP = "汽笛は誰のために鳴る",
+    ContentKR = "누구를 위하여 기적은 울리나",
+    ContentTC = "汽笛為誰而鳴",
+    TextMapContent = "汽笛为谁而鸣",
+    TextMapId = "Event_Title_101021"
+  },
   Event_Title_102001 = {
     ContentEN = "Huaxu — Incense and Marvels",
     ContentFR = "Huaxu — Parfums et Merveilles",
@@ -45134,6 +45865,15 @@ Event Rules:
     ContentTC = "慶典漫遊指南",
     TextMapContent = "庆典漫游指南",
     TextMapId = "Event_Title_102004"
+  },
+  Event_Title_102005 = {
+    ContentEN = "The Flame She'll Be",
+    ContentFR = "Elle deviendra une lumière",
+    ContentJP = "彼女は灯火となる",
+    ContentKR = "등불이 될 그녀",
+    ContentTC = "她將成為燈火",
+    TextMapContent = "她将成为灯火",
+    TextMapId = "Event_Title_102005"
   },
   Event_Title_103001 = {
     ContentEN = "Mystic Maze",
@@ -45360,6 +46100,11 @@ Event Rules:
     TextMapContent = "奇想乐章",
     TextMapId = "Event_Title_10302103"
   },
+  Event_Title_10302104 = {
+    ContentTC = "糖果夢工廠",
+    TextMapContent = "糖果梦工厂",
+    TextMapId = "Event_Title_10302104"
+  },
   Event_Title_103022 = {
     ContentEN = "Journey Guide",
     ContentFR = "Guide de départ",
@@ -45405,6 +46150,15 @@ Event Rules:
     TextMapContent = "以德服皎",
     TextMapId = "Event_Title_103029"
   },
+  Event_Title_103036 = {
+    ContentEN = "Nocturnal Evermore",
+    ContentFR = "Cauchemar éternel",
+    ContentJP = "終わらぬ悪夢",
+    ContentKR = "영원한 악몽",
+    ContentTC = "永恆夢魘",
+    TextMapContent = "永恒梦魇",
+    TextMapId = "Event_Title_103036"
+  },
   Event_Title_106001 = {
     ContentEN = "Bon Voyage",
     ContentFR = "Pèlerinage du long voyage",
@@ -45440,6 +46194,15 @@ Event Rules:
     ContentTC = "交匯的足跡",
     TextMapContent = "交汇的足迹",
     TextMapId = "Event_Title_107003"
+  },
+  Event_Title_107004 = {
+    ContentEN = "Anniversary Splendor",
+    ContentFR = "Cadeaux de célébration",
+    ContentJP = "祝典ギフト",
+    ContentKR = "축제 기념 선물",
+    ContentTC = "盛典禮贈",
+    TextMapContent = "盛典礼赠",
+    TextMapId = "Event_Title_107004"
   },
   Event_Title_107101 = {
     ContentEN = "Curated Sealed Missive: Elpides Abound",
@@ -48363,6 +49126,60 @@ The transferred [Electric Charge] retains its remaining duration, allowing the e
     TextMapContent = "自身处于[雷风齐四方]领域范围内时，全属性穿透提高#5，并持续获得[天地明]的技能伤害提高效果。",
     TextMapId = "GRADEUP_4102_06"
   },
+  GRADEUP_4103_01 = {
+    ContentEN = "[Arcshot] shots have no recoil. Firing an [Electrified Sniper Bullet] with [Arcshot] additionally triggers [Surge Strike] once. This trigger consumes no Sanity and does not end [Deadeye Domain].",
+    ContentFR = "Les tirs du [Fusil de précision] n’ont plus de recul. Lorsque le [Fusil de précision] tire une [Balle de précision renforcée], vous libérez 1 [Tir fulgurant] supplémentaire. Cette utilisation ne consomme pas de Lucidité et ne vous fait pas quitter le [Mode sniper].",
+    ContentJP = "[狙撃銃]の射撃時に反動が発生しなくなる。[狙撃銃]で[強化狙撃弾]を発射すると、[バースト射撃]を追加で1回発動する。この発動ではSPを消費せず、[狙撃モード]も解除されない。",
+    ContentKR = "[저격총] 사격 시 더 이상 반동이 발생하지 않는다. [강화 저격탄] 발사 시 [전광 일격]을 1회 추가로 시전한다. 이때 정신력은 소모되지 않고 [저격 모드]도 종료되지 않는다.",
+    ContentTC = "[狙擊槍]射擊時不再有後坐力，[狙擊槍]射出[強化狙擊子彈]時，額外釋放1次[迸發射擊]，此次釋放不消耗神智且不會退出[狙擊模式]。",
+    TextMapContent = "[狙击枪]射击时不再有后坐力，[狙击枪]射出[强化狙击子弹]时，额外释放1次[迸发射击]，此次释放不消耗神智且不会退出[狙击模式]。",
+    TextMapId = "GRADEUP_4103_01"
+  },
+  GRADEUP_4103_02 = {
+    ContentEN = "While in [Deadeye Domain], gain Invisibility if other allies are detectable by enemies. When Skill Speed exceeds #1, Skill DMG dealt in [Deadeye Domain] gains an independent damage multiplier equal to [Skill Speed × #5].",
+    ContentFR = "Pendant le [Mode sniper], si d’autres alliés peuvent être détectés par les ennemis, vous ne pouvez pas être détecté. En [Mode sniper], si votre Vitesse de compétence dépasse #1, les Dégâts de compétence infligés bénéficient d’un bonus indépendant selon le multiplicateur [Vitesse de compétence × #5].",
+    ContentJP = "[狙撃モード]中、敵に発見可能な他の味方がいる場合、自身は敵に発見されなくなる。[狙撃モード]中、自身のスキル速度が#1を上回っている場合、与えるスキルダメージが増加する（独立）。増加倍率は[スキル速度属性値×#5]。",
+    ContentKR = "[저격 모드] 중 적에게 노출될 수 있는 다른 팀원이 있으면 자신은 적에게 발각되지 않는다. [저격 모드]에서 자신의 스킬 속도가 #1을 초과하면 입히는 스킬 대미지가 상승하며(독립), 상승 배율은 [스킬 속도 속성치×#5]이다.",
+    ContentTC = "[狙擊模式]期間，若有其他可被敵人發現的隊友，自身無法被敵人發現；[狙擊模式]下，若自身技能速度高於#1，造成的技能傷害提高（獨立），提高倍率為[技能速度屬性值×#5]。",
+    TextMapContent = "[狙击模式]期间，若有其他可被敌人发现的队友，自身无法被敌人发现；[狙击模式]下，若自身技能速度高于#1，造成的技能伤害提高(独立)，提高倍率为[技能速度属性值×#5]。",
+    TextMapId = "GRADEUP_4103_02"
+  },
+  GRADEUP_4103_03 = {
+    ContentEN = "[Surge Strike] Level +2; [Vortex Shot] Level +1.",
+    ContentFR = "[Tir fulgurant] niveau +2 ; [Tir vortex] niveau +1.",
+    ContentJP = "[バースト射撃]のLv.+2、[渦流狙撃]のLv.+1。",
+    ContentKR = "[전광 일격] 레벨+2, [와전류 저격] 레벨+1.",
+    ContentTC = "[迸發射擊]等級+2，[渦流狙擊]等級+1。",
+    TextMapContent = "[迸发射击]等级+2，[涡流狙击]等级+1。",
+    TextMapId = "GRADEUP_4103_03"
+  },
+  GRADEUP_4103_04 = {
+    ContentEN = "While in [Deadeye Domain], gain a additional stack of [Steady Aim] every #2s. Each stack of [Steady Aim] additionally grants +#3 Morale.",
+    ContentFR = "Pendant le [Mode sniper], vous obtenez 1 cumul supplémentaire de [Concentration] toutes les #2 s. Chaque cumul de [Concentration] augmente également la Vigueur de #3.",
+    ContentJP = "[狙撃モード]中、#2秒ごとに[集中]を追加で1スタック獲得し、[集中]1スタックごとに高揚がさらに#3アップする。",
+    ContentKR = "[저격 모드] 중 #2초마다 [집중] 1단계를 추가로 획득한다. [집중] 1단계마다 격양이 #3 추가로 상승한다.",
+    ContentTC = "[狙擊模式]期間，每#2秒額外獲得1層[專注]，每層[專注]額外提供昂揚提高#3。",
+    TextMapContent = "[狙击模式]期间，每#2秒额外获得1层[专注]，每层[专注]额外提供昂扬提高#3。",
+    TextMapId = "GRADEUP_4103_04"
+  },
+  GRADEUP_4103_05 = {
+    ContentEN = "[Electro Coordination] Level +2; [Vortex Shot] Level +1.",
+    ContentFR = "[Synergie électrique] niveau +2 ; [Tir vortex] niveau +1.",
+    ContentJP = "[電能連携]のLv.+2、[渦流狙撃]のLv.+1。",
+    ContentKR = "[에너지 시너지] 레벨+2, [와전류 저격] 레벨+1.",
+    ContentTC = "[電能協同]等級+2，[渦流狙擊]等級+1。",
+    TextMapContent = "[电能协同]等级+2，[涡流狙击]等级+1。",
+    TextMapId = "GRADEUP_4103_05"
+  },
+  GRADEUP_4103_06 = {
+    ContentEN = "Enemies within a radius of {int}#6 can be seen through terrain, and [Surge Strike] can deal damage through terrain. While in [Deadeye Domain], increase Rhythm's PEN stats by #4.",
+    ContentFR = "Les ennemis dans un rayon de {int}#6 peuvent être vus à travers le décor, et [Tir fulgurant] peut infliger des dégâts à travers le décor. Pendant le [Mode sniper], votre Pénétration de tous les attributs augmente de #4.",
+    ContentJP = "半径{int}#6以内の敵を障害物越しに透視できるようになり、[バースト射撃]も障害物を貫通してダメージを与えられるようになる。[狙撃モード]中、自身の全属性貫通が#4アップする。",
+    ContentKR = "반경 {int}#6 이내의 적을 지형 너머로 투시할 수 있으며, [전광 일격]은 지형을 관통해 대미지를 입힐 수 있다. [저격 모드] 유지 중, 자신의 모든 속성 관통이 #4 상승한다.",
+    ContentTC = "半徑{int}#6以內的敵人可被穿過場景透視，且[迸發射擊]可以穿過場景造成傷害；[狙擊模式]期間，自身獲得全屬性穿透提高#4。",
+    TextMapContent = "半径{int}#6以内的敌人可被穿过场景透视，且[迸发射击]可以穿过场景造成伤害；[狙击模式]期间，自身获得全属性穿透提高#4。",
+    TextMapId = "GRADEUP_4103_06"
+  },
   GRADEUP_4201_01 = {
     ContentEN = "While in [Xuanjiao Manifest], each [Precipitous Thunderfall] grants 1 extra [Reverse Scale]. Using [Starstorm Descent] also increases Weapon Attack Range by #1 and Skill Range by #2 for self and allies, lasting #3s.",
     ContentFR = "Pendant l’état [Éveil de Xuanjiao], chaque [Chute foudroyante] octroie une [Écaille inversée] supplémentaire.\nL’utilisation de [Fracas astral] augmente la Portée d’attaque d’arme de #1 et la Portée de compétence de #2 pour vous et vos alliés, pendant #3 s.",
@@ -48745,6 +49562,50 @@ When in [Flamboyance] state, Psyche gains [Eclosion].
     ContentTC = "帶有「淨化配方」的目標對帶有「腐朽配方」的目標造成傷害時，獲得1層傷害提高#4，持續#5秒，最多疊加#6層。該效果每秒最多觸發1次。",
     TextMapContent = "带有[净化配方]的目标对带有[腐朽配方]的目标造成伤害时，获得1层伤害提高#4，持续#5秒，最多叠加#6层。该效果每秒最多触发1次。",
     TextMapId = "GRADEUP_5401_06"
+  },
+  GRADEUP_5402_01 = {
+    ContentEN = "Inflicting [Anemo Disruption] deals #2 Anemo Skill DMG as Overflow DMG to enemies within #1m, up to #3 times. Triggering [Verse Retold] resets the count.",
+    ContentFR = "Lorsque vous appliquez un [Désordre Anémo], inflige #2 Dégâts de compétence Anémo aux ennemis dans un rayon de #1 m. Ces dégâts sont considérés comme des Dégâts de Surabondance. Peut se déclencher jusqu’à #3 fois ; le nombre de déclenchements est réinitialisé lorsque [Poème transmis] se déclenche.",
+    ContentJP = "風属性乱調を付与すると、半径#1m以内の敵に#2風属性スキルダメージを与える。チャージダメージとして扱い、最大#3回発動する。「伝承の詩」を発動すると発動回数がリセットされる。",
+    ContentKR = "바람 속성 혼돈 부여 시 반경 #1m 이내의 적에게 바람 속성 스킬 대미지를 #2 입힌다. 해당 대미지는 오버차지 대미지로 적용되며, 최대 #3회 발동한다. [칭송의 시] 발동 시 횟수가 초기화된다.",
+    ContentTC = "附加風屬性紊亂時，對半徑#1米內的敵人造成#2風屬性技能傷害，視為充盈傷害，最多觸發#3次；觸發[傳頌之詩]時重置次數。",
+    TextMapContent = "附加风属性紊乱时，对半径#1米内的敌人造成#2风属性技能伤害，视为充盈伤害，最多触发#3次；触发[传颂之诗]时重置次数。",
+    TextMapId = "GRADEUP_5402_01"
+  },
+  GRADEUP_5402_02 = {
+    ContentEN = "While [Canticle] is active, Lirico and allies gain +#4 PEN stats, with an additional +#5 PEN stats when dealing Overflow DMG.",
+    ContentFR = "Pendant l’état [Hymne], la Pénétration de tous les attributs de Lirico et de ses alliés augmente de #4. Lorsqu’ils infligent des Dégâts de Surabondance, leur Pénétration de tous les attributs augmente en plus de #5.",
+    ContentJP = "「讃歌」状態中、自身と味方の全属性貫通＋#4。チャージダメージを与える際、全属性貫通がさらに＋#5。",
+    ContentKR = "[찬가] 지속 기간 동안 자신 및 팀원의 모든 속성 관통이 #4 상승하고, 오버차지 대미지를 입힐 때는 모든 속성 관통이 추가로 #5 상승한다.",
+    ContentTC = "[頌歌]狀態持續期間，自身和隊友全屬性穿透提高#4，造成充盈傷害時的全屬性穿透額外提高#5。",
+    TextMapContent = "[颂歌]状态持续期间，自身和队友全属性穿透提高#4，造成充盈伤害时的全属性穿透额外提高#5。",
+    TextMapId = "GRADEUP_5402_02"
+  },
+  GRADEUP_5402_03 = {
+    TextMapContent = "[风起之颂(待包装)]等级+2，[流传(待包装)]等级+1。",
+    TextMapId = "GRADEUP_5402_03"
+  },
+  GRADEUP_5402_04 = {
+    ContentEN = "While [Echoes in Wind] is active, Overflow DMG dealt by Lirico and allies is #6 of its original value.",
+    ContentFR = "Tant que [Écho du vent] est présent, les Dégâts de Surabondance infligés par Lirico et ses alliés sont égaux à #6 des dégâts d’origine.",
+    ContentJP = "「風の響き」が存在する間、自身と味方が与えるチャージダメージが元のダメージの#6になる。",
+    ContentKR = "[바람의 메아리] 활성화 상태에서는 자신과 팀원의 오버차지 대미지가 기존 대미지의 #6가 된다.",
+    ContentTC = "[風之迴響]存在期間，自身和隊友造成的充盈傷害為原傷害的#6。",
+    TextMapContent = "[风之回响]存在期间，自身和队友造成的充盈伤害为原伤害的#6。",
+    TextMapId = "GRADEUP_5402_04"
+  },
+  GRADEUP_5402_05 = {
+    TextMapContent = "[风声共鸣(待包装)]等级+2，[流传(待包装)]等级+1。",
+    TextMapId = "GRADEUP_5402_05"
+  },
+  GRADEUP_5402_06 = {
+    ContentEN = "Triggering [Verse Retold] grants +#7 PEN stats for #8s. While this effect is active, CRIT Damage dealt by Lirico or allies additionally triggers [Intron Lv. 1]'s AoE DMG once. The same damage source can trigger this effect once every #9s.",
+    ContentFR = "Lorsque [Poème transmis] se déclenche, Lirico obtient un effet augmentant sa Pénétration de tous les attributs de #7 pendant #8 s. Pendant la durée de cet effet, lorsque Lirico ou ses alliés infligent un coup critique, 1 instance supplémentaire de dégâts de zone de [Intron I] se déclenche. Une même source de dégâts ne peut déclencher cet effet qu’une fois toutes les #9 s.",
+    ContentJP = "「伝承の詩」を発動すると、自身の全属性貫通＋#7効果を獲得する。#8秒間持続する。効果中、自身と味方が与えるダメージがクリティカルになると、追加で「1stルート」の範囲ダメージを1回発動する。同じダメージ源では#9秒ごとに最大1回発動する。",
+    ContentKR = "[칭송의 시] 발동 시 #8초 동안 자신의 모든 속성 관통이 #7 상승한다. 효과 지속 기간 동안 자신과 팀원이 입히는 대미지가 크리티컬 발동 시 [제1근원]의 범위 대미지가 1회 추가 발동한다. 동일한 대미지 출처로는 #9초마다 최대 1회만 발동한다.",
+    ContentTC = "觸發[傳頌之詩]時，自身獲得全屬性穿透提高#7效果，持續#8秒；效果持續期間自身和隊友造成的傷害暴擊時，額外觸發1次[第一根源]的範圍傷害，相同傷害來源每#9秒最多觸發1次。",
+    TextMapContent = "触发[传颂之诗]时，自身获得全属性穿透提高#7效果，持续#8秒；效果持续期间自身和队友造成的伤害暴击时，额外触发1次[第一根源]的范围伤害，相同伤害来源每#9秒最多触发1次。",
+    TextMapId = "GRADEUP_5402_06"
   },
   GoodsName_101 = {
     ContentEN = "Phoxene Plumule ×60",
@@ -50440,6 +51301,24 @@ Current Guild Level Cap: Lv. 10]],
     ContentTC = "功能已在其他槽位外顯",
     TextMapContent = "功能已在其他槽位外显",
     TextMapId = "HUD_BtnCollapse_Toast01"
+  },
+  HardBossEvent_Buff_1 = {
+    ContentEN = "Each time an Extreme-Threat Enemy's Stance is broken, they take #1 additional damage while in the Weakness state, but gain +#2 Max Stance and +#3 Damage Dealt.",
+    ContentFR = "Chaque fois que la posture d’une menace majeure est brisée, les dégâts qu’elle subit en état de faiblesse augmentent de #1. Cependant, sa posture maximale augmente de #2 et les dégâts qu’elle inflige augmentent de #3.",
+    ContentJP = "超凶悪な敵は、体勢が破壊されるたびに、弱点状態で受けるダメージが#1増加するが、体勢の上限が#2上昇し、与えるダメージが#3増加する。",
+    ContentKR = "고위험 적의 전투 태세가 파괴될 때마다 약점 상태에서 받는 대미지가 #1 상승하지만, 전투 태세 최대치가 #2 상승하고, 입히는 대미지가 #3 상승한다.",
+    ContentTC = "高危敵人每次戰姿被擊破後，弱點狀態下受到的傷害提高#1，但戰姿上限提高#2，造成傷害提高#3。",
+    TextMapContent = "高危敌人每次战姿被击破后，弱点状态下受到的伤害提高#1，但战姿上限提高#2，造成伤害提高#3。",
+    TextMapId = "HardBossEvent_Buff_1"
+  },
+  HardBossEvent_Buff_2 = {
+    ContentEN = "Extreme-Threat Enemies take #1 additional Skill DMG. Each time they take damage, they gain 1 stack that increases DEF by #2, up to #3 stacks. Each time they hit an ally, they gain 1 stack that increases Damage Dealt by #4, up to #5 stacks.",
+    ContentFR = "Les Dégâts de compétence subis par une menace majeure augmentent de #1. Cependant, après avoir subi des dégâts, sa Défense augmente de #2, cumulable jusqu’à #3 fois. Après avoir touché un personnage de votre équipe, les dégâts qu’elle inflige augmentent de #4, cumulable jusqu’à #5 fois.",
+    ContentJP = "超凶悪な敵が受けるスキルダメージが#1%アップする。ただし、ダメージを受けると防御力が#2%アップし、この効果は最大#3回まで重複する。また、味方に攻撃を命中させると与えるダメージが#4%アップし、この効果は最大#5回まで重複する。",
+    ContentKR = "고위험 적이 받는 스킬 대미지가 #1 상승하지만, 대미지를 받으면 방어력이 #2 상승하며, 해당 효과는 최대 #3회 중첩된다. 아군을 적중되면 대미지가 #4 상승하며, 해당 효과는 최대 #5회 중첩된다.",
+    ContentTC = "高危敵人受到的技能傷害提高#1，但受到傷害後防禦力提高#2，該效果可疊加#3次，命中我方後傷害提高#4，該效果可疊加#5次。",
+    TextMapContent = "高危敌人受到的技能伤害提高#1，但受到伤害后防御力提高#2，该效果可叠加#3次，命中我方后伤害提高#4，该效果可叠加#5次。",
+    TextMapId = "HardBossEvent_Buff_2"
   },
   Have_no_designprint = {
     ContentEN = "You don't have the blueprint for this item",
@@ -55074,6 +55953,24 @@ Current Guild Level Cap: Lv. 10]],
     TextMapContent = "突发事件",
     TextMapId = "MAINUIGUIDE_TITLE_DYNSTORY"
   },
+  MAINUIGUIDE_TITLE_DamageChongying_1 = {
+    ContentEN = "Overflow Damage",
+    ContentFR = "Dégâts de Surabondance",
+    ContentJP = "チャージダメージ",
+    ContentKR = "오버차지 대미지",
+    ContentTC = "充盈傷害",
+    TextMapContent = "充盈伤害",
+    TextMapId = "MAINUIGUIDE_TITLE_DamageChongying_1"
+  },
+  MAINUIGUIDE_TITLE_DamageChongying_2 = {
+    ContentEN = "Overflow Intensity",
+    ContentFR = "Puissance de Surabondance",
+    ContentJP = "チャージ威力",
+    ContentKR = "오버차지 위력",
+    ContentTC = "充盈威力",
+    TextMapContent = "充盈威力",
+    TextMapId = "MAINUIGUIDE_TITLE_DamageChongying_2"
+  },
   MAINUIGUIDE_TITLE_Defence = {
     ContentEN = "Commission: Defence ∞",
     ContentFR = "Mission : [Défense ∞]",
@@ -57011,6 +57908,15 @@ Current Guild Level Cap: Lv. 10]],
   MAIN_UI_SWITCHMASTER = {
     TextMapContent = "【待包装】切换主角",
     TextMapId = "MAIN_UI_SWITCHMASTER"
+  },
+  MAIN_UI_TBSupport = {
+    ContentEN = "Pocket Phoxhunter",
+    ContentFR = "Mini Chasseur de Phoxène",
+    ContentJP = "小さな月狩り人",
+    ContentKR = "꼬마 월석 사냥꾼",
+    ContentTC = "小小狩月人",
+    TextMapContent = "小小狩月人",
+    TextMapId = "MAIN_UI_TBSupport"
   },
   MAIN_UI_TEAMHALL = {
     ContentEN = "Co-op Lobby",
@@ -60809,6 +61715,11 @@ Smash: Further weakens target's Stance.]],
     TextMapContent = "改变重剑的普通攻击招式和威力。使用齿轮连续攻击。对比默认招式，综合威力提高100%。",
     TextMapId = "MOD_DESC_103003"
   },
+  MOD_DESC_103004 = {
+    ContentTC = "改變重劍的蓄力攻擊招式和威力。蓄力攻擊可造成大幅度戰姿削減。",
+    TextMapContent = "改变重剑的蓄力攻击招式和威力。蓄力攻击可造成大幅度战姿削减。",
+    TextMapId = "MOD_DESC_103004"
+  },
   MOD_DESC_104001 = {
     ContentEN = "Upgrades the Dual Blades Sliding Attack into a lethal dash, slashing through all enemies in your path for double the damage of the standard attack.",
     ContentFR = "Modifie l’Attaque de glissade des Doubles lames : vous foncez en avant, infligeant des dégâts à tous les ennemis sur votre trajectoire. Les dégâts sont augmentés de 100 % par rapport à l’attaque de base.",
@@ -60954,12 +61865,12 @@ Smash: Further weakens target's Stance.]],
     TextMapId = "MOD_DESC_1410"
   },
   MOD_DESC_1420 = {
-    ContentEN = "Skill DMG -#1. When attacking with a weapon, deals #2 additional damage of the same element type.",
-    ContentFR = "Réduit les Dégâts de compétence de #1 et, lors des attaques avec une arme, inflige #2 de Dégâts supplémentaires du même attribut.",
+    ContentEN = "When attacking with a weapon, deals #1 additional damage of the same element type.",
+    ContentFR = "Lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
     ContentJP = "スキルダメージが#1ダウン、武器を使用して攻撃すると#2の同属性追加ダメージを与える。",
-    ContentKR = "스킬 대미지가 #1 감소하지만, 무기로 공격할 시 #2의 동일 속성 추가 대미지를 입힌다.",
-    ContentTC = "技能傷害降低#1，使用武器進行攻擊時造成#2同屬性追加傷害。",
-    TextMapContent = "技能伤害降低#1，使用武器进行攻击时造成#2同属性追加伤害。",
+    ContentKR = "무기로 공격할 시 #1의 동일 속성 추가 대미지를 입힌다.",
+    ContentTC = "使用武器進行攻擊時造成#1同屬性追加傷害。",
+    TextMapContent = "使用武器进行攻击时造成#1同属性追加伤害。",
     TextMapId = "MOD_DESC_1420"
   },
   MOD_DESC_1430 = {
@@ -61340,6 +62251,15 @@ Smash: Further weakens target's Stance.]],
     TextMapContent = "雷属性角色释放技能时，获得1层技能伤害提高#2，持续#1秒，最多叠加#3层。",
     TextMapId = "MOD_DESC_1941"
   },
+  MOD_DESC_1942 = {
+    ContentEN = "After remaining stationary for 1s, Electro characters gain 1 stack of #1 Skill Intensity every 0.5s. Lasts indefinitely and stacks up to #2 times. All stacks are removed upon moving.",
+    ContentFR = "Après être resté immobile pendant au moins 1 s, un personnage Électro gagne 1 cumul augmentant la Puissance de compétence de #1 toutes les 0,5 s. Durée illimitée, cumulable jusqu’à #2 fois. L’effet est annulé en cas de déplacement.",
+    ContentJP = "雷属性のキャラクターが1秒以上その場に留まると、0.5秒ごとにスキル威力が#1アップする永続効果を1スタック獲得する。最大#2スタックまで重複可能。移動すると解除される。",
+    ContentKR = "번개 속성 캐릭터가 1초 이상 움직이지 않으면 0.5초마다 영구적인 스킬 위력 #1 상승 효과를 1단계 획득한다. 최대 #2단계 중첩되며, 이동 시 제거된다.",
+    ContentTC = "雷屬性角色保持不動1秒以上時，每0.5秒獲得1層永續的技能威力提高#1，最多疊加#2層，移動後移除。",
+    TextMapContent = "雷属性角色保持不动1秒以上时，每0.5秒获得1层永续的技能威力提高#1，最多叠加#2层，移动后移除。",
+    TextMapId = "MOD_DESC_1942"
+  },
   MOD_DESC_1951 = {
     ContentEN = "When an Anemo character uses Combat Skills, it gains a #2 Skill Intensity Increase for #1s.",
     ContentFR = "Lorsque qu’un personnage Anémo utilise une compétence de combat, il obtient un bonus de Puissance de compétence de #2 pendant #1 s.",
@@ -61360,7 +62280,7 @@ Smash: Further weakens target's Stance.]],
   },
   MOD_DESC_1961 = {
     ContentEN = "When enemies near a Lumino character take Weapon DMG, CRIT Chance increases by #1. Gains an additional +#2 against targets with debuffs.",
-    ContentFR = "Lorsque des ennemis proches d’un personnage Lumino subissent des DGT d’arme, leur Taux CRIT augmente de #1.\nLe bonus est accru de +#2 contre les cibles affectées par un malus.",
+    ContentFR = "Lorsque des ennemis proches d’un personnage Lumino subissent des DGT d’arme, le Taux CRIT contre eux augmente de #1.\nLe bonus augmente de #2 contre les cibles affectées par un malus.",
     ContentJP = "光属性キャラの周囲の敵が武器ダメージを受けると、クリティカル率が#1アップ。さらに追加効果のデバフを持つ敵に対しては追加で#2アップ。",
     ContentKR = "빛 속성 캐릭터 주변의 적이 무기 대미지를 입을 때, 받는 크리티컬 확률이 #1 상승한다. 대상이 원소 속성의 추가 디버프 효과를 보유할 경우, 추가로 #2 상승한다.",
     ContentTC = "光屬性角色周圍的敵人受到武器傷害時，暴擊率提高#1，對帶有額外效果負面狀態的目標額外提高#2。",
@@ -61529,6 +62449,15 @@ Smash: Further weakens target's Stance.]],
     TextMapContent = "对神弃者同盟成员造成的伤害提高#1。",
     TextMapId = "MOD_DESC_2504"
   },
+  MOD_DESC_2505 = {
+    ContentEN = "Damage Dealt to members of Huaxu +#1.",
+    ContentFR = "Augmente les dégâts infligés aux membres de la faction Huaxu de #1.",
+    ContentJP = "華胥勢力のメンバーに対する与ダメージが#1アップする。",
+    ContentKR = "화서 진영의 구성원에게 입히는 대미지가 #1 상승한다.",
+    ContentTC = "對華胥陣營成員造成的傷害提高#1。",
+    TextMapContent = "对华胥阵营成员造成的伤害提高#1。",
+    TextMapId = "MOD_DESC_2505"
+  },
   MOD_DESC_2701 = {
     ContentEN = "Defeating an enemy at or below your character's level grants ammo equal to your ranged weapon's Max Ammo and loads it immediately.",
     ContentFR = "Après avoir vaincu un ennemi de niveau égal ou inférieur au vôtre, votre arme à distance est immédiatement rechargée jusqu’à sa capacité maximale.",
@@ -61555,6 +62484,15 @@ Smash: Further weakens target's Stance.]],
     ContentTC = "對等級不高於自身的敵人造成傷害時，傷害必定暴擊且觸發額外效果。",
     TextMapContent = "对等级不高于自身的敌人造成伤害时，伤害必定暴击且触发额外效果。",
     TextMapId = "MOD_DESC_2703"
+  },
+  MOD_DESC_2705 = {
+    ContentEN = "Damage Dealt to enemies of a higher level +#1.",
+    ContentFR = "Augmente les dégâts infligés aux ennemis d’un niveau supérieur au vôtre de #1.",
+    ContentJP = "自身よりLv.が高い敵に対する与ダメージが#1アップする",
+    ContentKR = "자신보다 레벨이 높은 적에게 입히는 대미지가 #1 상승한다.",
+    ContentTC = "對等級高於自身的敵人造成傷害提高#1",
+    TextMapContent = "对等级高于自身的敌人造成伤害提高#1",
+    TextMapId = "MOD_DESC_2705"
   },
   MOD_DESC_3301 = {
     ContentEN = "After reloading, increases ATK Speed by #1 for #2s.",
@@ -62095,6 +63033,11 @@ Smash: Further weakens target's Stance.]],
     ContentTC = "咆哮切割",
     TextMapContent = "咆哮切割",
     TextMapId = "MOD_NAME_103003"
+  },
+  MOD_NAME_103004 = {
+    ContentTC = "蓄勢重壓",
+    TextMapContent = "蓄势重压",
+    TextMapId = "MOD_NAME_103004"
   },
   MOD_NAME_104001 = {
     ContentEN = "In Full Bloom",
@@ -62681,6 +63624,15 @@ Smash: Further weakens target's Stance.]],
     TextMapContent = "昂扬·决断",
     TextMapId = "MOD_NAME_1717"
   },
+  MOD_NAME_1718 = {
+    ContentEN = "Blaze – Volition",
+    ContentFR = "Ardeur · Décision",
+    ContentJP = "灼熱・断決",
+    ContentKR = "작열·결단",
+    ContentTC = "熾灼·決斷",
+    TextMapContent = "炽灼·决断",
+    TextMapId = "MOD_NAME_1718"
+  },
   MOD_NAME_1721 = {
     ContentEN = "Blaze·Nirvana",
     ContentFR = "Ardeur · Nirvana",
@@ -62887,6 +63839,15 @@ Smash: Further weakens target's Stance.]],
     ContentTC = "昂揚·精煉",
     TextMapContent = "昂扬·精炼",
     TextMapId = "MOD_NAME_1747"
+  },
+  MOD_NAME_1748 = {
+    ContentEN = "Blaze – Refinement",
+    ContentFR = "Ardeur · Raffinement",
+    ContentJP = "灼熱・精錬",
+    ContentKR = "작열·정련",
+    ContentTC = "熾灼·精煉",
+    TextMapContent = "炽灼·精炼",
+    TextMapId = "MOD_NAME_1748"
   },
   MOD_NAME_1751 = {
     ContentEN = "Blaze·Standfast",
@@ -63194,6 +64155,15 @@ Smash: Further weakens target's Stance.]],
     TextMapContent = "雷云摧朽",
     TextMapId = "MOD_NAME_1941"
   },
+  MOD_NAME_1942 = {
+    ContentEN = "Still Thunder",
+    ContentFR = "Force inébranlable",
+    ContentJP = "不動の万鈞",
+    ContentKR = "부동의 저력",
+    ContentTC = "不動萬鈞",
+    TextMapContent = "不动万钧",
+    TextMapId = "MOD_NAME_1942"
+  },
   MOD_NAME_1951 = {
     ContentEN = "Whispering Zephyr",
     ContentFR = "Souffle du zéphir",
@@ -63346,6 +64316,15 @@ Smash: Further weakens target's Stance.]],
     ContentTC = "攻勢·墜擊",
     TextMapContent = "攻势·坠击",
     TextMapId = "MOD_NAME_2012"
+  },
+  MOD_NAME_2013 = {
+    ContentEN = "Focus – Impact",
+    ContentFR = "Concentration · Frappe brutale",
+    ContentJP = "集中・強撃",
+    ContentKR = "집중·강공",
+    ContentTC = "專注·強擊",
+    TextMapContent = "专注·强击",
+    TextMapId = "MOD_NAME_2013"
   },
   MOD_NAME_202001 = {
     ContentEN = "Puncture Cascade",
@@ -63626,6 +64605,15 @@ Smash: Further weakens target's Stance.]],
     TextMapContent = "狩猎神弃者",
     TextMapId = "MOD_NAME_2504"
   },
+  MOD_NAME_2505 = {
+    ContentEN = "Huaxu Hunt",
+    ContentFR = "Chasse à Huaxu",
+    ContentJP = "華胥狩り",
+    ContentKR = "화서 사냥",
+    ContentTC = "狩獵華胥",
+    TextMapContent = "狩猎华胥",
+    TextMapId = "MOD_NAME_2505"
+  },
   MOD_NAME_2511 = {
     ContentEN = "Pierce",
     ContentFR = "Perforation",
@@ -63671,14 +64659,14 @@ Smash: Further weakens target's Stance.]],
     TextMapContent = "压制",
     TextMapId = "MOD_NAME_2703"
   },
-  MOD_NAME_2704 = {
-    ContentEN = "Dissolution",
-    ContentFR = "Désagrégation",
-    ContentJP = "崩壊",
-    ContentKR = "와해",
-    ContentTC = "瓦解",
-    TextMapContent = "瓦解",
-    TextMapId = "MOD_NAME_2704"
+  MOD_NAME_2705 = {
+    ContentEN = "Mighty Hunt",
+    ContentFR = "Chasse aux plus forts",
+    ContentJP = "強者狩り",
+    ContentKR = "강자 사냥",
+    ContentTC = "狩獵強者",
+    TextMapContent = "狩猎强者",
+    TextMapId = "MOD_NAME_2705"
   },
   MOD_NAME_2801 = {
     ContentEN = "Trammel – Surplus",
@@ -63688,6 +64676,15 @@ Smash: Further weakens target's Stance.]],
     ContentTC = "纏縛·滿溢",
     TextMapContent = "缠缚·满溢",
     TextMapId = "MOD_NAME_2801"
+  },
+  MOD_NAME_2802 = {
+    ContentEN = "Dissolution",
+    ContentFR = "Désagrégation",
+    ContentJP = "崩壊",
+    ContentKR = "와해",
+    ContentTC = "瓦解",
+    TextMapContent = "瓦解",
+    TextMapId = "MOD_NAME_2802"
   },
   MOD_NAME_3001 = {
     ContentEN = "Impetus",
@@ -64138,6 +65135,15 @@ Smash: Further weakens target's Stance.]],
     ContentTC = "狩獵神棄者",
     TextMapContent = "狩猎神弃者",
     TextMapId = "MOD_NAME_3504"
+  },
+  MOD_NAME_3505 = {
+    ContentEN = "Huaxu Hunt",
+    ContentFR = "Chasse à Huaxu",
+    ContentJP = "華胥狩り",
+    ContentKR = "화서 사냥",
+    ContentTC = "狩獵華胥",
+    TextMapContent = "狩猎华胥",
+    TextMapId = "MOD_NAME_3505"
   },
   MOD_NAME_3511 = {
     ContentEN = "Pierce",
@@ -64879,7 +65885,7 @@ Smash: Further weakens target's Stance.]],
   },
   MOD_Type_Name_Siren01 = {
     ContentEN = "Siren's ",
-    ContentFR = "de la Sirène",
+    ContentFR = "de Sirène",
     ContentJP = "セイレーンの",
     ContentKR = "세이렌의 ",
     ContentTC = "海妖之",
@@ -64887,7 +65893,7 @@ Smash: Further weakens target's Stance.]],
     TextMapId = "MOD_Type_Name_Siren01"
   },
   MOD_Type_Name_Songlu01 = {
-    ContentEN = "Filbert",
+    ContentEN = "Filbert{空格}",
     ContentFR = "Filbert",
     ContentJP = "ヘーゼルナッツ",
     ContentKR = "헤이즐넛",
@@ -65031,8 +66037,9 @@ Your unclaimed event rewards have been sent to your inbox. Best of luck on your 
   Mail_Content_10009 = {
     ContentEN = [[
 Dear Phoxhunter,
- Your <highlight>Prismatic Hourglass (Limited-Time)</> are about to expire. Please use them soon.
- Once expired, they'll automatically convert into an equivalent amount of <highlight>Pristine Hourglasses</>.]],
+
+Your <highlight>Prismatic Hourglass (Limited-Time)</> are about to expire. Please use them soon.
+Once expired, they'll automatically convert into an equivalent amount of <highlight>Pristine Hourglasses</>.]],
     ContentFR = "Chasseur de Phoxène,\n\nVos <highlight>Sabliers prismatiques (temporaire)</> arrivent bientôt à expiration. Veuillez les utiliser sans tarder depuis la Myriade (Évocation).\nUne fois expirés, ils seront automatiquement convertis en une quantité équivalente de <highlight>Sabliers immaculés</>.",
     ContentJP = "親愛なる月狩り人へ：\n <highlight>彩りの砂時計・期間限定</>の期限が迫っています。至急、万華にてご利用ください。\n 本アイテムの期限が切れると、等量の<highlight>純白の砂時計</>に変換されます。",
     ContentKR = "월석 사냥꾼님께,\n<highlight>영롱한 모래시계·한정</>의 기간이 곧 만료되므로 기간 내에 추억을 진행하시기 바랍니다.\n해당 아이템은 기간 만료 후 동일한 수량의 <highlight>순백의 모래시계</>로 전환됩니다.",
@@ -65081,7 +66088,8 @@ Your verification code: {Code}]],
   Mail_Content_10014 = {
     ContentEN = [[
 Dear Phoxhunter, 
- You've successfully checked in at Lunoloft. Please claim your reward.]],
+
+You've successfully checked in at Lunoloft. Please claim your reward.]],
     ContentFR = "Chasseur de Phoxène,\n\nVous avez validé votre connexion à <H>Lunoloft</>.\nVeuillez récupérer votre récompense.",
     ContentJP = "親愛なる月狩り人様：\n Lunoloftでのサインインが完了しました。報酬を受け取ってください。",
     ContentKR = "월석 사냥꾼님께,\nLunoloft에서 출석을 완료했습니다. 보상을 수령해 주세요.",
@@ -65092,7 +66100,8 @@ Dear Phoxhunter,
   Mail_Content_10016 = {
     ContentEN = [[
 Dear Phoxhunter,
- Please find the Thought of Rebecca's memory attached.]],
+
+Please find the Thought of Rebecca's memory attached.]],
     ContentFR = "Chasseur de Phoxène,\n\nVeuillez trouver en pièce jointe le Fragment de pensée renfermant les souvenirs de Rebecca.",
     ContentJP = "親愛なる月狩り人様：\n以下はレベッカの記憶を宿した想いの欠片です。添付よりお受け取りください。",
     ContentKR = "월석 사냥꾼님께,\n첨부 아이템에서 레베카의 기억이 담긴 아이디어 조각을 수령해 주세요.",
@@ -65190,6 +66199,7 @@ The [{EventName}] event will conclude at <H>{Time}</> (server time). Please clai
   Mail_Content_10037 = {
     ContentEN = [[
 Dear Phoxhunter,
+
 Your Interwoven Thoughts daily rewards are attached to this mail. Please claim it in time.]],
     ContentFR = "Chasseur de Phoxène,\n\nLes récompenses quotidiennes de Pensées entrelacées ont été envoyées avec ce courrier. Veuillez les récupérer.",
     ContentJP = "親愛なる月狩り人へ：\n 「交わる想い」のデイリー報酬を本メールにて配布しました。ご確認ください。",
@@ -65444,6 +66454,7 @@ Your Coupon is about to expire. Don't forget to use it in the shop while it's st
   Mail_Content_10078 = {
     ContentEN = [[
 Dear Phoxhunter,
+
 The Demon Wedge Codex has been updated. Any set rewards you had not previously received have been granted automatically.]],
     ContentFR = "Chasseur de Phoxène,\n \nLe Codex des Sceaux démoniaques a été mis à jour. Les récompenses des séries non obtenues ont été attribuées automatiquement. Veuillez les récupérer dans votre messagerie.",
     ContentJP = "親愛なる月狩り人様\n 魔の楔図鑑機能の更新が完了しました。未取得だったシリーズ報酬は自動で獲得済みです、忘れずにご確認ください。",
@@ -65512,6 +66523,7 @@ Your unclaimed Ensemble Act rewards have been sent to your inbox. Best of luck o
   Mail_Content_10086 = {
     ContentEN = [[
 Dear Phoxhunter,
+
 You've collected skins from the [Mainspring Rondo] series. Please find your Background reward attached.]],
     ContentFR = "Chasseur de Phoxène,\n \nVous avez réuni toutes les apparences de personnage de la série [Valse mécanique]. Veuillez récupérer l’arrière-plan obtenu en récompense dans la pièce jointe.",
     ContentJP = "親愛なる月狩り人へ：\n [ゼンマイロンド]シリーズのキャラクター外見をすべて集めました。添付より背景報酬をお受け取りください。",
@@ -65519,6 +66531,18 @@ You've collected skins from the [Mainspring Rondo] series. Please find your Back
     ContentTC = "親愛的狩月人：\n已集齊[發條旋舞]系列角色形象，請於附件中領取背景獎勵。",
     TextMapContent = "亲爱的狩月人：\n已集齐[发条旋舞]系列角色形象，请于附件中领取背景奖励。",
     TextMapId = "Mail_Content_10086"
+  },
+  Mail_Content_10090 = {
+    ContentEN = [[
+Dear Phoxhunter, 
+ 
+Your unclaimed rewards from the [Phoxhunter Summit] event have been sent to your mailbox. Don't forget to claim them!]],
+    ContentFR = "Chasseur de Phoxène,\n \nVous aviez des récompenses de classement non récupérées dans l’événement « Sommet du Chasseur de Phoxène ».\nElles vous ont été envoyées par ce courrier. Veuillez les récupérer.",
+    ContentJP = " 親愛なる月狩り人様、\n【月狩り人の階段】の未受領の報酬が全てメールで配布されました。ご確認ください。 ",
+    ContentKR = "월석 사냥꾼님께,\n'정상을 향해' 이벤트에서 미수령한 랭킹 보상이 있습니다. 우편을 통해 지급되었으니, 확인해 주세요.",
+    ContentTC = "親愛的狩月人：\n 您在「狩月人之階」活動中有未領取的排行榜獎勵內容，現已透過本信件發放，請注意查收。",
+    TextMapContent = "亲爱的狩月人：\n  您在「狩月人之阶」活动中有未领取的排行榜奖励内容，现已通过本邮件发放，请注意查收。",
+    TextMapId = "Mail_Content_10090"
   },
   Mail_Content_101001 = {
     ContentEN = [[
@@ -65536,7 +66560,7 @@ Your unclaimed rewards from the [{EventName}] event have been sent to your mailb
     ContentEN = [[
 Dear Phoxhunter, 
   
-  Your unclaimed rewards from the [Beginner's Guide for Phoxhunters] event have been sent to your mailbox. Don't forget to claim them!]],
+Your unclaimed rewards from the [Beginner's Guide for Phoxhunters] event have been sent to your mailbox. Don't forget to claim them!]],
     ContentFR = "Chasseur de Phoxène,\n \nVous aviez des récompenses non réclamées dans l’événement Guide du Chasseur de Phoxène.\nElles vous ont été envoyées par courrier. Veuillez les récupérer sans tarder.",
     ContentJP = "親愛なる月狩り人様、\n  「月狩り人の初心者ガイド」の未受領の報酬が全てメールで配布されました。ご確認ください。",
     ContentKR = "월석 사냥꾼님께,\n'월석 사냥꾼 입문 가이드' 이벤트에서 미수령한 보상이 있습니다. 우편을 통해 지급되었으니, 확인해 주세요.",
@@ -65554,6 +66578,18 @@ I've got everything ready for our Phoxhunter squad. Here, take this advance, and
     ContentTC = "「小僕從——你可算來了，本魔王大人等你等得白頭髮都要長出來了！\n狩月人小隊的一切我都準備好了，喏，收下這份預支的賞金，開始我們在阿特拉西亞大陸的冒險吧！」",
     TextMapContent = "\"小仆从——你可算来了，本魔王大人等你等得白头发都要长出来了！\n狩月人小队的一切我都准备好了，喏，收下这份预支的赏金，开始我们在阿特拉西亚大陆的冒险吧！\"",
     TextMapId = "Mail_Content_19101"
+  },
+  Mail_Content_19119 = {
+    ContentEN = [[
+Dear Phoxhunter, 
+ 
+Your unclaimed prediction rewards from the yesterday's [Golden Journey: Geniemon Derby] event have been sent to your mailbox. Don't forget to claim them!]],
+    ContentFR = "Chasseur de Phoxène,\n \nVous aviez des récompenses de pari d’hier non récupérées dans l’événement « Périple doré – Course de Géniemon ».\nElles vous ont été envoyées par ce courrier. Veuillez les récupérer.",
+    ContentJP = "親愛なる月狩り人様、\n「黄金の旅・ジェネモン疾走」の未受取の報酬をメールで配布しました。ご確認ください。",
+    ContentKR = "월석 사냥꾼님께,\n'황금 여정·마령 레이스' 이벤트에서 어제 수령하지 않은 예측 선물이 있습니다. 우편을 통해 지급되었으니, 확인해 주세요.",
+    ContentTC = "親愛的狩月人：\n 您在「黃金旅途·魔靈競速」活動中有昨日未領取的競猜回饋，現已透過本信件發放，請注意查收。",
+    TextMapContent = "亲爱的狩月人：\n  您在「黄金旅途·魔灵竞速」活动中有昨日未领取的竞猜回馈，现已通过本邮件发放，请注意查收。",
+    TextMapId = "Mail_Content_19119"
   },
   Mail_Sender_100005 = {
     ContentEN = "Snow",
@@ -66093,6 +67129,15 @@ I've got everything ready for our Phoxhunter squad. Here, take this advance, and
     TextMapContent = "奇想乐章活动奖励",
     TextMapId = "Mail_Title_10086"
   },
+  Mail_Title_10090 = {
+    ContentEN = "Unclaimed [Phoxhunter Summit] Rewards",
+    ContentFR = "Sommet du Chasseur de Phoxène : récompenses de classement",
+    ContentJP = "「月狩り人の階段」ランキング報酬の再配布",
+    ContentKR = "'정상을 향해' 랭킹 보상 재지급",
+    ContentTC = "「狩月人之階」排行榜獎勵補發",
+    TextMapContent = "「狩月人之阶」排行榜奖励补发",
+    TextMapId = "Mail_Title_10090"
+  },
   Mail_Title_101001 = {
     ContentEN = "Unclaimed [{EventName}] Rewards",
     ContentFR = "Réattribution des récompenses de « {EventName} »",
@@ -66119,6 +67164,15 @@ I've got everything ready for our Phoxhunter squad. Here, take this advance, and
     ContentTC = "啟程！魔王大人的組隊邀請！",
     TextMapContent = "启程！魔王大人的组队邀请！",
     TextMapId = "Mail_Title_19101"
+  },
+  Mail_Title_19119 = {
+    ContentEN = "Unclaimed [Golden Journey: Geniemon Derby] Prediction Rewards",
+    ContentFR = "Périple doré – Course de Géniemon : récompenses de pari",
+    ContentJP = "「黄金の旅・ジェネモン疾走」予想報酬報酬の再配布",
+    ContentKR = "'황금 여정·마령 레이스' 승부 예측 선물 재지급",
+    ContentTC = "「黃金旅途·魔靈競速」競猜回饋補發",
+    TextMapContent = "「黄金旅途·魔灵竞速」竞猜回馈补发",
+    TextMapId = "Mail_Title_19119"
   },
   MainTask = {
     ContentEN = "Main Story Quests",
@@ -66634,7 +67688,7 @@ I've got everything ready for our Phoxhunter squad. Here, take this advance, and
     TextMapId = "Message_Guide_AutoChess_13"
   },
   Message_Guide_AutoChess_14 = {
-    ContentEN = "Here you can view the opponent’s Mechapuppet, the current Board Potential and corresponding rewards.",
+    ContentEN = "Here you can view the opponent's Mechapuppet, the current Board Potential and corresponding rewards.",
     ContentFR = "Consulter les méchapoupées adverses, l’avantage du plateau et les récompenses",
     ContentJP = "ここでは相手のからくり人形、先手の配置、そして対応する報酬を確認できます",
     ContentKR = "여기에서 상대 기계 꼭두각시 정보와 대국 버프, 보상을 확인할 수 있습니다.",
@@ -73699,6 +74753,24 @@ They can leave Landmines behind to disrupt enemies while escaping hunt.]],
     TextMapContent = "艾利西安传颂会标准神甫，擅长远距离辅助战斗。他们口中不断念诵的字句经过特制面具的处理时刻笼罩于战场之上，鼓舞着艾利西安的信徒们。据说就算是哑巴，只要信仰足够虔诚，戴上面具后也能发出对神明嘹亮的赞颂。",
     TextMapId = "Mon_DesDetail_8003001"
   },
+  Mon_DesDetail_8004001 = {
+    ContentEN = "A dreamborn creature from the depths of lingering nightmares, taking the form of an ancient candelabrum. Their flickering light once illuminated lyrics handwritten on parchment within the bell tower, witnessed the cold trials proclaimed by priests, and lit the way for the sick along the long isle. Beneath their light have passed countless journeys, lonely and adrift.",
+    ContentFR = "Cauchemar venu du plus profond de la mémoire de quelqu’un, dont la forme évoque un candélabre. La lueur vacillante de ses bougies éclaira jadis des paroles manuscrites sur du parchemin, dans une chambre de la tour de l’horloge ; les froids chefs d’accusation tenus par un prêtre, dans le tribunal d’un monastère ; et le visage d’un malade aux portes de la mort, dans une masure perdue sur une île isolée. Il fut le témoin d’un voyage d’errance et d’incertitude.",
+    ContentJP = "誰かの記憶の奥底に潜む悪夢。その姿は、まるで燭台のようだ。\n揺らめく蝋燭の灯は、かつて時計塔の一室で羊皮紙に綴られた手書きの歌詞を照らし、修道院の審問の場では司祭の手に握られた冷たい罪状を照らし、孤島のあばら家では、病に蝕まれ死を間近にした者の顔を照らした。\nそれは、彷徨い続けた旅路を見届けてきた。",
+    ContentKR = "누군가의 기억 깊은 곳에서 비롯된, 촛대 형상의 악몽. 흔들리는 촛불은 종탑의 방에 놓인 양피지에 손으로 적힌 노랫말을 비추었고, 수도원의 심판장에서는 사제가 손에 든 냉혹한 죄목을, 외딴섬의 허름한 집에서는 죽음을 앞둔 환자의 얼굴을 밝혔다. 그 불빛은 그렇게 방랑과 유랑으로 이어진 여정을 줄곧 지켜보았다.",
+    ContentTC = "來自某人記憶深處的夢魘，外形仿若燭台。那搖曳的燭光曾在鐘塔的房間裡照亮過羊皮紙上手寫的歌詞，在修道院的審判場中照亮過司祭手裡冰冷的罪狀，在孤島的破屋裡照亮過病患行將就木的臉龐。它見證了一場彷徨漂泊的旅途。",
+    TextMapContent = "来自某人记忆深处的梦魇，外形仿若烛台。那摇曳的烛光曾在钟塔的房间里照亮过羊皮纸上手写的歌词，在修道院的审判场中照亮过司祭手里冰冷的罪状，在孤岛的破屋里照亮过病患行将就木的脸庞。它见证了一场彷徨漂泊的旅途。",
+    TextMapId = "Mon_DesDetail_8004001"
+  },
+  Mon_DesDetail_8005001 = {
+    ContentEN = "A dreamborn creature from the depths of lingering nightmares, taking the form of an ancient anthology. In Elysium, verses depicting the catastrophe were forbidden, doomed to be reduced to ashes. Yet in dreams, they grew thorns and claws, fighting for the freedom to raise their voices.",
+    ContentFR = "Cauchemar venu du plus profond de la mémoire de quelqu’un, dont la forme évoque un recueil de poèmes. En Élysium, les vers décrivant ce désastre n’avaient pas le droit d’exister : dès l’instant où ils étaient écrits, ils étaient condamnés à finir un jour dans les flammes. Mais dans le rêve, ils se sont couverts d’épines et de griffes, arrachant par eux-mêmes la liberté de faire entendre leur voix.",
+    ContentJP = "誰かの記憶の奥底に潜む悪夢。その姿は、まるで詩集のようだ。\nエリシアンでは、あの災厄を描いた詩篇の存在は許されなかった。書き記されたその瞬間から、いつの日か炎に焼かれ、灰となる運命にあった。\nだが夢の中では、それらは棘と鉤爪を生やし、思うままに声を上げる自由を、自らの手で勝ち取った。",
+    ContentKR = "누군가의 기억 깊은 곳에서 비롯된, 시집 형상의 악몽. 엘리시안에서는 그 재앙을 묘사한 시가 존재하는 것조차 허락되지 않았고, 글로 남겨지는 순간부터 언젠가 불길에 타 사라질 운명이었지만, 꿈속에서만큼은 달랐다. 가시와 날카로운 발톱이 돋아난 시들은 스스로 마음껏 목소리를 낼 자유를 쟁취했다.",
+    ContentTC = "來自某人記憶深處的夢魘，外形仿若詩集。在艾利西安，描繪那場災難的詩篇不被允許存在，在寫下的瞬間便註定有朝一日要毀於烈火；但在夢中，它們長出了尖刺和利爪，為自己爭得了放聲表達的自由。",
+    TextMapContent = "来自某人记忆深处的梦魇，外形仿若诗集。在艾利西安，描绘那场灾难的诗篇不被允许存在，在写下的瞬间便注定有朝一日要毁于烈火；但在梦中，它们长出了尖刺和利爪，为自己争得了放声表达的自由。",
+    TextMapId = "Mon_DesDetail_8005001"
+  },
   Mon_DesDetail_8500001 = {
     ContentEN = "The Chief of the Empire's 13th Legion. A formidable force with unknown motives and a relentless determination to reclaim Berenica. ",
     ContentFR = "Commandante de la XIIIᵉ Légion de l’Empire Hyperboréen. Guerrière d’une puissance redoutable aux objectifs obscurs, elle semble vouer à Berenica une obsession profonde.",
@@ -73878,6 +74950,14 @@ Working in tandem with the train's other onboard weapons, it can destroy any ene
   Mon_DesDetail_8524001 = {
     TextMapContent = "远期待包装",
     TextMapId = "Mon_DesDetail_8524001"
+  },
+  Mon_DesDetail_8525001 = {
+    TextMapContent = "远期待包装",
+    TextMapId = "Mon_DesDetail_8525001"
+  },
+  Mon_DesDetail_8527001 = {
+    TextMapContent = "远期待包装",
+    TextMapId = "Mon_DesDetail_8527001"
   },
   Mon_DesDetail_9001001 = {
     ContentEN = "A member of The Forsakens, the \"Wildswarm\" tier. They excel at close-quarters combat. Common Charon-folk turned warriors, their combat techniques lack refinement, yet their fury—forged in the blood of kin—shall become the blade that shatters chains and breaks the enemy's Hammerblow.",
@@ -79599,6 +80679,24 @@ In <Highlight>"Commission: Mediation"</>, once a Deceiver is defeated, elite ene
     TextMapContent = "浴血·凛霜 蒙恩的神甫",
     TextMapId = "Mon_Name_8003704"
   },
+  Mon_Name_8004001 = {
+    ContentEN = "Remnant Light",
+    ContentFR = "Candélabre du songe rémanent",
+    ContentJP = "夢徊の燭台",
+    ContentKR = "꿈속을 떠도는 촛대",
+    ContentTC = "夢徊燭台",
+    TextMapContent = "梦徊烛台",
+    TextMapId = "Mon_Name_8004001"
+  },
+  Mon_Name_8005001 = {
+    ContentEN = "Remnant Verse",
+    ContentFR = "Recueil du songe rémanent",
+    ContentJP = "夢徊の詩集",
+    ContentKR = "꿈속을 떠도는 시집",
+    ContentTC = "夢徊詩集",
+    TextMapContent = "梦徊诗集",
+    TextMapId = "Mon_Name_8005001"
+  },
   Mon_Name_8500001 = {
     ContentEN = "Sibylle",
     ContentFR = "Sibylle",
@@ -79761,6 +80859,15 @@ In <Highlight>"Commission: Mediation"</>, once a Deceiver is defeated, elite ene
     TextMapContent = "转雷·爆破·霜狱 历战者",
     TextMapId = "Mon_Name_8501301"
   },
+  Mon_Name_8501701 = {
+    ContentEN = "Battle Maven – Frostbite",
+    ContentFR = "Maître de guerre — Morsure de givre",
+    ContentJP = "フロスト 古強者",
+    ContentKR = "베테랑·서리",
+    ContentTC = "凜霜 歷戰者",
+    TextMapContent = "凛霜 历战者",
+    TextMapId = "Mon_Name_8501701"
+  },
   Mon_Name_8502001 = {
     ContentEN = "The Eclosioner",
     ContentFR = "L’Éclose",
@@ -79814,6 +80921,15 @@ In <Highlight>"Commission: Mediation"</>, once a Deceiver is defeated, elite ene
     ContentTC = "？？？",
     TextMapContent = "？？？",
     TextMapId = "Mon_Name_8509001"
+  },
+  Mon_Name_8509801 = {
+    ContentEN = "Cryptid",
+    ContentFR = "Monstre mystérieux",
+    ContentJP = "謎の怪物",
+    ContentKR = "신비한 괴물",
+    ContentTC = "神秘怪物",
+    TextMapContent = "神秘怪物",
+    TextMapId = "Mon_Name_8509801"
   },
   Mon_Name_8510001 = {
     ContentEN = "Zhuyin",
@@ -80301,6 +81417,15 @@ In <Highlight>"Commission: Mediation"</>, once a Deceiver is defeated, elite ene
     TextMapContent = "巨阙",
     TextMapId = "Mon_Name_8518001"
   },
+  Mon_Name_8518701 = {
+    ContentEN = "Terracolossus – Thunderbolt",
+    ContentFR = "Terracolosse — Éclair foudroyant",
+    ContentJP = "エレキ 巨闕",
+    ContentKR = "거궐·벼락",
+    ContentTC = "霹靂 巨闕",
+    TextMapContent = "霹雳 巨阙",
+    TextMapId = "Mon_Name_8518701"
+  },
   Mon_Name_8519001 = {
     ContentEN = "Aurora Express Main Cannon",
     ContentFR = "Canon de l’Express Aurora",
@@ -80407,6 +81532,10 @@ In <Highlight>"Commission: Mediation"</>, once a Deceiver is defeated, elite ene
   Mon_Name_8525001 = {
     TextMapContent = "伊黛【远期待包装】",
     TextMapId = "Mon_Name_8525001"
+  },
+  Mon_Name_8527001 = {
+    TextMapContent = "深渊之心【远期待包装】",
+    TextMapId = "Mon_Name_8527001"
   },
   Mon_Name_9001001 = {
     ContentEN = "Wildswarm's Sword",
@@ -83222,6 +84351,72 @@ What wish, you wonder, keeps them tethered to this world?]],
     TextMapContent = "烟津话别",
     TextMapId = "Name_120308"
   },
+  Name_120701 = {
+    ContentEN = "Towards the Dawn",
+    ContentFR = "En marche vers l’aube",
+    ContentJP = "暁を歩む",
+    ContentKR = "여명 속으로",
+    ContentTC = "行於破曉",
+    TextMapContent = "行于破晓",
+    TextMapId = "Name_120701"
+  },
+  Name_120702 = {
+    ContentEN = "Towards the Dawn",
+    ContentFR = "En marche vers l’aube",
+    ContentJP = "暁を歩む",
+    ContentKR = "여명 속으로",
+    ContentTC = "行於破曉",
+    TextMapContent = "行于破晓",
+    TextMapId = "Name_120702"
+  },
+  Name_120703 = {
+    ContentEN = "Towards the Dawn",
+    ContentFR = "En marche vers l’aube",
+    ContentJP = "暁を歩む",
+    ContentKR = "여명 속으로",
+    ContentTC = "行於破曉",
+    TextMapContent = "行于破晓",
+    TextMapId = "Name_120703"
+  },
+  Name_120704 = {
+    ContentEN = "Towards the Dawn",
+    ContentFR = "En marche vers l’aube",
+    ContentJP = "暁を歩む",
+    ContentKR = "여명 속으로",
+    ContentTC = "行於破曉",
+    TextMapContent = "行于破晓",
+    TextMapId = "Name_120704"
+  },
+  Name_120705 = {
+    ContentEN = "Towards the Dawn",
+    ContentFR = "En marche vers l’aube",
+    ContentJP = "暁を歩む",
+    ContentKR = "여명 속으로",
+    ContentTC = "行於破曉",
+    TextMapContent = "行于破晓",
+    TextMapId = "Name_120705"
+  },
+  Name_120706 = {
+    ContentEN = "Towards the Dawn",
+    ContentFR = "En marche vers l’aube",
+    ContentJP = "暁を歩む",
+    ContentKR = "여명 속으로",
+    ContentTC = "行於破曉",
+    TextMapContent = "行于破晓",
+    TextMapId = "Name_120706"
+  },
+  Name_1301 = {
+    TextMapContent = "深渊第一部【待包装】",
+    TextMapId = "Name_1301"
+  },
+  Name_130101 = {
+    TextMapContent = "莉莉蔻主线上半【待包装】",
+    TextMapId = "Name_130101"
+  },
+  Name_130102 = {
+    TextMapContent = "莉莉蔻主线下半【待包装】",
+    TextMapId = "Name_130102"
+  },
   Name_200101 = {
     ContentEN = "The Wandering Luno",
     ContentFR = "La Luno errante",
@@ -85974,12 +87169,12 @@ Defeat 120 enemies: Damage dealt by summons +500%.]],
     TextMapId = "Pack_Des_Mod_Water"
   },
   Pack_Des_Mod_Wind = {
-    ContentEN = "Automatically used when claimed. Grants 1 of each of the following Purple Anemo Demon Wedges: Typhon's Prime – Resolve +5, Griffin's Squall – Wildfire +5, Hastur's Whispering Zephyr +5, Covenanter's Blaze – Resolve +5, Covenanter's Blaze – Volition +5, Covenanter's Wings – Eternity +5, Covenanter's Blaze – Standfast +5.",
-    ContentFR = "S’ouvre automatiquement à l’obtention et confère 1 exemplaire de chacun des Sceaux démoniaques Anémo épiques suivants : Apogée du Typhon · Ténacité +5, Rafale du Griffon · Conflagration +5, Souffle du zéphir d’Hastur +5, Ardeur du Pactisant · Ténacité +5, Ardeur du Pactisant · Décision +5, Ailes du Pactisant · Éternité +5, Ardeur du Pactisant · Dévotion +5",
-    ContentJP = "受取時に自動で使用され、以下のレジェンドの風属性魔の楔を各1個獲得：ヒュドラの全盛・背水+5、グリフォンの烈風・焦土+5、ハスターの薫風の息吹+5、カヴェナンターの灼熱・背水+5、カヴェナンターの灼熱・断決+5、カヴェナンターの羽翼・恒久+5、カヴェナンターの灼熱・堅守+5",
-    ContentKR = "수령 시 자동으로 사용되며, 다음 보라색 바람 속성 악마의 쐐기를 각각 1개씩 획득한다. 티폰의 전성·필사+5, 그리핀의 바람·요원+5, 하스터의 향기로운 기운+5, 메피스토의 작열·필사+5, 메피스토의 작열·결단+5, 메피스토의 날개·영원+5, 메피스토의 작열·수호+5",
-    ContentTC = "領取時自動使用，獲得以下所有紫色風屬性魔之楔各1枚：百首之全盛·背水+5，獅鷲之凜風·燎原+5，黃衣之薰風吐息+5，契約者之熾灼·背水+5，契約者之熾灼·決斷+5，契約者之羽翼·永恆+5，契約者之熾灼·堅守+5",
-    TextMapContent = "领取时自动使用，获得以下所有紫色风属性魔之楔各1枚：百首之全盛·背水+5，狮鹫之凛风·燎原+5，黄衣之薰风吐息+5，契约者之炽灼·背水+5，契约者之炽灼·决断+5，契约者之羽翼·永恒+5，契约者之炽灼·坚守+5",
+    ContentEN = "Automatically used when claimed. Grants 1 of each of the following Purple Anemo Demon Wedges: Typhon's Prime – Resolve +5, Griffin's Squall – Wildfire +5, Hastur's Turbulent Cyclone +5, Covenanter's Blaze – Resolve +5, Covenanter's Blaze – Volition +5, Covenanter's Wings – Eternity +5, Covenanter's Blaze – Standfast +5.",
+    ContentFR = "S’ouvre automatiquement à l’obtention et confère 1 exemplaire de chacun des Sceaux démoniaques Anémo épiques suivants : Apogée du Typhon · Ténacité +5, Rafale du Griffon · Conflagration +5, Cyclone déchaîné d’Hastur +5, Ardeur du Pactisant · Ténacité +5, Ardeur du Pactisant · Décision +5, Ailes du Pactisant · Éternité +5, Ardeur du Pactisant · Dévotion +5",
+    ContentJP = "受取時に自動で使用され、以下のレジェンドの風属性魔の楔を各1個獲得：ヒュドラの全盛・背水+5、グリフォンの烈風・焦土+5、ハスターの乱気流+5、カヴェナンターの灼熱・背水+5、カヴェナンターの灼熱・断決+5、カヴェナンターの羽翼・恒久+5、カヴェナンターの灼熱・堅守+5",
+    ContentKR = "수령 시 자동으로 사용되며, 다음 보라색 바람 속성 악마의 쐐기를 각각 1개씩 획득한다. 티폰의 전성·필사+5, 그리핀의 바람·요원+5, 하스터의 혼돈의 소용돌이+5, 메피스토의 작열·필사+5, 메피스토의 작열·결단+5, 메피스토의 날개·영원+5, 메피스토의 작열·수호+5",
+    ContentTC = "領取時自動使用，獲得以下所有紫色風屬性魔之楔各1枚：百首之全盛·背水+5，獅鷲之凜風·燎原+5，黃衣之紊亂氣旋+5，契約者之熾灼·背水+5，契約者之熾灼·決斷+5，契約者之羽翼·永恆+5，契約者之熾灼·堅守+5",
+    TextMapContent = "领取时自动使用，获得以下所有紫色风属性魔之楔各1枚：百首之全盛·背水+5，狮鹫之凛风·燎原+5，黄衣之紊乱气旋+5，契约者之炽灼·背水+5，契约者之炽灼·决断+5，契约者之羽翼·永恒+5，契约者之炽灼·坚守+5",
     TextMapId = "Pack_Des_Mod_Wind"
   },
   Pack_Des_Name_HuiZeng = {
@@ -86016,6 +87211,15 @@ Those you've helped haven't forgotten your kindness and have sent you a small gi
     ContentTC = "承你惠贈的人們將這份恩情銘記於心，並在力所能及之內為你準備了一份禮物。\n\n「你所給予的，終將歸於你。」",
     TextMapContent = "承你惠赠的人们将这份恩情铭记于心，并在力所能及之内为你准备了一份礼物。\n\n“你所给予的，终将归于你。”",
     TextMapId = "Pack_Des_Name_HuiZengxizhi"
+  },
+  Pack_Des_PetDecompose = {
+    ContentEN = "Departing Geniemons left you a little something. Open it to see what they left for you.",
+    ContentFR = "Les Géniemon qui sont partis vous ont laissé un cadeau. Ouvrez-le pour découvrir leur petite attention.",
+    ContentJP = "去っていったジェネモンたちが残した贈り物。開けて、ささやかな気持ちを受け取ろう。",
+    ContentKR = "떠나간 마령들이 남긴 선물. 꼬마들의 작은 정성이 담겨 있다.",
+    ContentTC = "離去的魔靈們留下的禮物，打開來看看它們的小小心意吧。",
+    TextMapContent = "离去的魔灵们留下的礼物，打开来看看它们的小小心意吧。",
+    TextMapId = "Pack_Des_PetDecompose"
   },
   Pack_Des_Resource_Fuma = {
     ContentEN = "Gives 1 blueprint for a random Track-Shift Module",
@@ -86263,6 +87467,30 @@ Those you've helped haven't forgotten your kindness and have sent you a small gi
     ContentTC = "已在【長路何所向】尋覓180次",
     TextMapContent = "已在【长路何所向】寻觅180次",
     TextMapId = "Pack_Desc_PopupPack6"
+  },
+  Pack_Desc_PopupPack7 = {
+    ContentTC = "已在【牽絲織故夢】尋覓60次",
+    TextMapContent = "已在【牵丝织故梦】寻觅60次",
+    TextMapId = "Pack_Desc_PopupPack7"
+  },
+  Pack_Desc_PopupPack8 = {
+    ContentTC = "已在【牽絲織故夢】尋覓120次",
+    TextMapContent = "已在【牵丝织故梦】寻觅120次",
+    TextMapId = "Pack_Desc_PopupPack8"
+  },
+  Pack_Desc_PopupPack9 = {
+    ContentTC = "已在【牽絲織故夢】尋覓180次",
+    TextMapContent = "已在【牵丝织故梦】寻觅180次",
+    TextMapId = "Pack_Desc_PopupPack9"
+  },
+  Pack_Function_PetDecompose = {
+    ContentEN = "Obtain random rewards",
+    ContentFR = "Permet d’obtenir une récompense aléatoire",
+    ContentJP = "ランダムな報酬を獲得できる",
+    ContentKR = "랜덤 보상 획득 가능",
+    ContentTC = "可獲得隨機獎勵",
+    TextMapContent = "可获得随机奖励",
+    TextMapId = "Pack_Function_PetDecompose"
   },
   Pack_Name_11_Gacha01 = {
     ContentEN = "Tidesong Myriad Chest Ⅰ",
@@ -87001,6 +88229,132 @@ Those you've helped haven't forgotten your kindness and have sent you a small gi
     ContentTC = "白兔萬華週禮箱",
     TextMapContent = "白兔万华周礼箱",
     TextMapId = "Pack_Name_16_Gacha9"
+  },
+  Pack_Name_17_CharPiece_01 = {
+    ContentEN = "Thought Chest: Rhythm: Flamewrought",
+    ContentFR = "Coffret de pensées : Rhythm – Née des flammes",
+    ContentJP = "想いの欠片ボックス・リズム・焔を纏う者",
+    ContentKR = "아이디어 패키지·리듬·되살아난 불꽃",
+    ContentTC = "思緒禮箱·黎瑟·浴火",
+    TextMapContent = "思绪礼箱·黎瑟·浴火",
+    TextMapId = "Pack_Name_17_CharPiece_01"
+  },
+  Pack_Name_17_Cosmetic_01 = {
+    ContentEN = "Character Skin Selection – Aegis Ⅱ",
+    ContentFR = "Coffret de sélection d’apparence – Gardien II",
+    ContentJP = "スキン選択ボックス・守護・Ⅱ",
+    ContentKR = "선택 코스튬 패키지·수호 Ⅱ",
+    ContentTC = "自選形象禮箱·守護·二",
+    TextMapContent = "自选形象礼箱·守护·二",
+    TextMapId = "Pack_Name_17_Cosmetic_01"
+  },
+  Pack_Name_17_Pack_01 = {
+    ContentEN = "Luminous Myriad Dye Chest Ⅰ",
+    ContentFR = "Coffret de teintures de Myriade – Lumière I",
+    ContentJP = "灯火の万華・染料ギフトボックス・Ⅰ",
+    ContentKR = "등불 광채 염료 패키지 Ⅰ",
+    ContentTC = "燈火萬華染劑禮箱·一",
+    TextMapContent = "灯火万华染剂礼箱·一",
+    TextMapId = "Pack_Name_17_Pack_01"
+  },
+  Pack_Name_17_Pack_02 = {
+    ContentEN = "Luminous Myriad Dye Chest Ⅱ",
+    ContentFR = "Coffret de teintures de Myriade – Lumière II",
+    ContentJP = "灯火の万華・染料ギフトボックス・Ⅱ",
+    ContentKR = "등불 광채 염료 패키지 Ⅱ",
+    ContentTC = "燈火萬華染劑禮箱·二",
+    TextMapContent = "灯火万华染剂礼箱·二",
+    TextMapId = "Pack_Name_17_Pack_02"
+  },
+  Pack_Name_17_Pack_03 = {
+    ContentEN = "Luminous Myriad Supply Chest Ⅰ",
+    ContentFR = "Coffret de ravitaillement de Myriade – Lumière I",
+    ContentJP = "灯火の万華・万華補給ボックス・Ⅰ",
+    ContentKR = "등불 광채 보급 패키지 Ⅰ",
+    ContentTC = "燈火萬華補給禮箱·一",
+    TextMapContent = "灯火万华补给礼箱·一",
+    TextMapId = "Pack_Name_17_Pack_03"
+  },
+  Pack_Name_17_Pack_04 = {
+    ContentEN = "Luminous Myriad Supply Chest Ⅱ",
+    ContentFR = "Coffret de ravitaillement de Myriade – Lumière II",
+    ContentJP = "灯火の万華・万華補給ボックス・Ⅱ",
+    ContentKR = "등불 광채 보급 패키지 Ⅱ",
+    ContentTC = "燈火萬華補給禮箱·二",
+    TextMapContent = "灯火万华补给礼箱·二",
+    TextMapId = "Pack_Name_17_Pack_04"
+  },
+  Pack_Name_17_Pack_05 = {
+    ContentEN = "Luminous Myriad Supply Chest Ⅲ",
+    ContentFR = "Coffret de ravitaillement de Myriade – Lumière III",
+    ContentJP = "灯火の万華・万華補給ボックス・Ⅲ",
+    ContentKR = "등불 광채 보급 패키지 Ⅲ",
+    ContentTC = "燈火萬華補給禮箱·三",
+    TextMapContent = "灯火万华补给礼箱·三",
+    TextMapId = "Pack_Name_17_Pack_05"
+  },
+  Pack_Name_17_Pack_06 = {
+    ContentEN = "Luminous Myriad Chest Ⅰ",
+    ContentFR = "Coffret de Myriade – Lumière I",
+    ContentJP = "灯火の万華ボックス・Ⅰ",
+    ContentKR = "등불 광채 패키지 Ⅰ",
+    ContentTC = "燈火萬華禮箱·一",
+    TextMapContent = "灯火万华礼箱·一",
+    TextMapId = "Pack_Name_17_Pack_06"
+  },
+  Pack_Name_17_Pack_07 = {
+    ContentEN = "Luminous Myriad Chest Ⅱ",
+    ContentFR = "Coffret de Myriade – Lumière II",
+    ContentJP = "灯火の万華ボックス・Ⅱ",
+    ContentKR = "등불 광채 패키지 Ⅱ",
+    ContentTC = "燈火萬華禮箱·二",
+    TextMapContent = "灯火万华礼箱·二",
+    TextMapId = "Pack_Name_17_Pack_07"
+  },
+  Pack_Name_17_Pack_08 = {
+    ContentEN = "Luminous Myriad Chest Ⅲ",
+    ContentFR = "Coffret de Myriade – Lumière III",
+    ContentJP = "灯火の万華ボックス・Ⅲ",
+    ContentKR = "등불 광채 패키지 Ⅲ",
+    ContentTC = "燈火萬華禮箱·三",
+    TextMapContent = "灯火万华礼箱·三",
+    TextMapId = "Pack_Name_17_Pack_08"
+  },
+  Pack_Name_17_WeaponSupply_01 = {
+    ContentEN = "Calamity Weapon Supply Chest Ⅰ",
+    ContentFR = "Coffret de ravitaillement – Armes de calamité I",
+    ContentJP = "カラミティアームズ補給ボックス・Ⅰ",
+    ContentKR = "재앙 무기 보급 패키지 Ⅰ",
+    ContentTC = "災厄武器補給禮箱·一",
+    TextMapContent = "灾厄武器补给礼箱·一",
+    TextMapId = "Pack_Name_17_WeaponSupply_01"
+  },
+  Pack_Name_17_WeaponSupply_02 = {
+    ContentEN = "Calamity Weapon Supply Chest Ⅱ",
+    ContentFR = "Coffret de ravitaillement – Armes de calamité II",
+    ContentJP = "カラミティアームズ補給ボックス・Ⅱ",
+    ContentKR = "재앙 무기 보급 패키지 Ⅱ",
+    ContentTC = "災厄武器補給禮箱·二",
+    TextMapContent = "灾厄武器补给礼箱·二",
+    TextMapId = "Pack_Name_17_WeaponSupply_02"
+  },
+  Pack_Name_17_WeaponSupply_03 = {
+    ContentEN = "Calamity Weapon Supply Chest Ⅲ",
+    ContentFR = "Coffret de ravitaillement – Armes de calamité III",
+    ContentJP = "カラミティアームズ補給ボックス・Ⅲ",
+    ContentKR = "재앙 무기 보급 패키지 Ⅲ",
+    ContentTC = "災厄武器補給禮箱·三",
+    TextMapContent = "灾厄武器补给礼箱·三",
+    TextMapId = "Pack_Name_17_WeaponSupply_03"
+  },
+  Pack_Name_17_Weekly_01 = {
+    ContentEN = "Luminous Myriad Weekly Chest",
+    ContentFR = "Coffret hebdomadaire de Myriade – Lumière",
+    ContentJP = "灯火の万華・週間ギフトボックス",
+    ContentKR = "등불 광채 주간 패키지",
+    ContentTC = "燈火萬華週禮箱",
+    TextMapContent = "灯火万华周礼箱",
+    TextMapId = "Pack_Name_17_Weekly_01"
   },
   Pack_Name_Battle_Dispatch_1 = {
     ContentEN = "Battle Reward Pack Lv. 1",
@@ -88143,6 +89497,15 @@ The pack may contain:
     ContentTC = "熔煉補給禮箱",
     TextMapContent = "熔炼补给礼箱",
     TextMapId = "Pack_Name_Month7"
+  },
+  Pack_Name_PetDecompose = {
+    ContentEN = "Geniemon Farewell Gift",
+    ContentFR = "Cadeau d’adieu des Géniemon",
+    ContentJP = "ジェネモンのお別れギフト",
+    ContentKR = "마령의 작별 선물",
+    ContentTC = "魔靈告別禮",
+    TextMapContent = "魔灵告别礼",
+    TextMapId = "Pack_Name_PetDecompose"
   },
   Pack_Name_PopupPack = {
     TextMapContent = "弹窗礼包（待包装）",
@@ -89750,6 +91113,33 @@ The pack may contain:
     TextMapContent = "饮下一杯温热的解药，妄想告别悔恨的昨天。",
     TextMapId = "PartyReward_Description_320203"
   },
+  PartyReward_Description_320301 = {
+    ContentEN = "The most unexpected tools often bring things to a boil the fastest.",
+    ContentFR = "Les appareils les plus inattendus sont parfois ceux qui portent le plus vite à ébullition.",
+    ContentJP = "最も意外な器具こそ、最も早く湯を沸かしてくれるものだ。",
+    ContentKR = "가장 뜻밖의 기계가 오히려 가장 빠른 끓음을 만들어 낸다.",
+    ContentTC = "最出乎意料的器械，往往能帶來最快速的沸騰。",
+    TextMapContent = "最出乎意料的器械，往往能带来最快速的沸腾。",
+    TextMapId = "PartyReward_Description_320301"
+  },
+  PartyReward_Description_320302 = {
+    ContentEN = "Colorless and tasteless, yet indispensable — a priceless treasure found in every corner.",
+    ContentFR = "Un liquide sans couleur ni goût, source indispensable à toute vie, un trésor inestimable pourtant à portée de main.",
+    ContentJP = "無色無味の液体。なくてはならない源であり、誰もが手にできるこの世の無上の宝。",
+    ContentKR = "무색무취의 액체이자 없어서는 안 될 생명의 원천. 세상 어디서든 손쉽게 얻을 수 있으면서도 값을 매길 수 없는 보물이다.",
+    ContentTC = "無色無味的液體，無可缺少的源泉，世間隨手可及的無價之寶。",
+    TextMapContent = "无色无味的液体，无可缺少的源泉，世间随手可及的无价之宝。",
+    TextMapId = "PartyReward_Description_320302"
+  },
+  PartyReward_Description_320303 = {
+    ContentEN = "Even the finest brew turns harsh and hard to swallow after being battered by wind and sand.",
+    ContentFR = "Même le meilleur des crus, battu par le vent et le sable, finit par devenir âpre et difficile à avaler.",
+    ContentJP = "世界で最も美しい酒も、風砂にさらされれば、喉を刺すほど鋭くなる。",
+    ContentKR = "세상에서 가장 아름다운 명주도 바람과 모래에 닳고 나면 날카로워져 목 넘기기 힘든 술이 된다.",
+    ContentTC = "世上最美好的佳釀，被風沙吹打後也變得鋒利難以入喉。",
+    TextMapContent = "世上最美好的佳酿，被风沙吹打后也变得锋利难以入喉。",
+    TextMapId = "PartyReward_Description_320303"
+  },
   PartyReward_Description_330101 = {
     ContentEN = "After a long day's work scavenging Kossak's mansion, you and Margie have gathered a trove of treasures. Hopefully, they're worth the sore arms.",
     ContentFR = "Après une journée entière à vider le manoir de Kossak avec Margie, vous repartez les bras chargés.\nEspérons que la douleur dans vos épaules en valait la peine.",
@@ -90640,6 +92030,33 @@ The pack may contain:
     ContentTC = "「告別昨日」",
     TextMapContent = "“告别昨日”",
     TextMapId = "PartyReward_Name_320203"
+  },
+  PartyReward_Name_320301 = {
+    ContentEN = "Drink: Boiling Point",
+    ContentFR = "Boisson : Réchauffement express",
+    ContentJP = "飲み物・急速加熱",
+    ContentKR = "음료·극속 가열",
+    ContentTC = "飲品·急速升溫",
+    TextMapContent = "饮品·急速升温",
+    TextMapId = "PartyReward_Name_320301"
+  },
+  PartyReward_Name_320302 = {
+    ContentEN = "Drink: Priceless Treasure",
+    ContentFR = "Boisson : Trésor inestimable",
+    ContentJP = "飲み物・至宝",
+    ContentKR = "음료·무가의 보물",
+    ContentTC = "飲品·無價之寶",
+    TextMapContent = "饮品·无价之宝",
+    TextMapId = "PartyReward_Name_320302"
+  },
+  PartyReward_Name_320303 = {
+    ContentEN = "Drink: Spirited Delight",
+    ContentFR = "Boisson : Délice corsé",
+    ContentJP = "飲み物・烈酒の美味",
+    ContentKR = "음료·독한 한잔",
+    ContentTC = "飲品·烈性珍饈",
+    TextMapContent = "饮品·烈性珍馐",
+    TextMapId = "PartyReward_Name_320303"
   },
   PartyReward_Name_330101 = {
     ContentEN = "Scavenging Spoils",
@@ -91532,6 +92949,33 @@ The pack may contain:
     TextMapContent = "水仙平原和它的老板没有变，昔日的客人已经改头换面。",
     TextMapId = "PartyTopic_Description_320203"
   },
+  PartyTopic_Description_320301 = {
+    ContentEN = "To burn or to warm — sometimes, the difference lies in a single thought.",
+    ContentFR = "Entre brûlure et chaleur, il suffit parfois d’un rien pour que tout bascule.",
+    ContentJP = "焼けつく熱も、心地よい温もりも、ときにその差はほんの一瞬の判断にある。",
+    ContentKR = "상처를 남길지 온기를 전할지는 때로 한순간에 달려 있다.",
+    ContentTC = "灼傷或是溫暖，有時只在一念之差。",
+    TextMapContent = "灼伤或是温暖，有时只在一念之差。",
+    TextMapId = "PartyTopic_Description_320301"
+  },
+  PartyTopic_Description_320302 = {
+    ContentEN = "Virtue often flows in silence. The kind never proclaim their goodness aloud.",
+    ContentFR = "Les plus belles qualités s’expriment souvent en silence. Les gens de bien n’éprouvent jamais le besoin de les clamer haut et fort.",
+    ContentJP = "美徳は、いつも静かに流れている。善き人は、それを声高に語ることはない。",
+    ContentKR = "아름다운 덕목은 대개 소리 없이 드러나고, 착한 사람은 결코 자신의 선의를 떠벌리지 않는다.",
+    ContentTC = "美好的品德通常只會無聲地流淌，善良的人從不高聲宣揚。",
+    TextMapContent = "美好的品德通常只会无声地流淌，善良的人从不高声宣扬。",
+    TextMapId = "PartyTopic_Description_320302"
+  },
+  PartyTopic_Description_320303 = {
+    ContentEN = "A new world is made not with flowers, but with explosions.",
+    ContentFR = "Ce ne sont pas des fleurs qu’il faut pour créer un monde nouveau, mais des explosions.",
+    ContentJP = "新しい世界を創るのに必要なのはお花ではない。爆発だ。",
+    ContentKR = "새로운 세계를 피워내는 것은 꽃이 아니라, 폭발이다.",
+    ContentTC = "創造新世界需要的不是鮮花，而是爆炸。",
+    TextMapContent = "创造新世界需要的不是鲜花，而是爆炸。",
+    TextMapId = "PartyTopic_Description_320303"
+  },
   PartyTopic_Description_330101 = {
     ContentEN = "A good mood can work wonders on your efficiency, and the key to staying cheerful is knowing when to take care of yourself.",
     ContentFR = "Un bon moral décuple l’efficacité.\nEt garder le moral, c’est aussi savoir quand prendre soin de soi.",
@@ -92422,6 +93866,33 @@ The pack may contain:
     ContentTC = "無心的投資",
     TextMapContent = "无心的投资",
     TextMapId = "PartyTopic_Name_320203"
+  },
+  PartyTopic_Name_320301 = {
+    ContentEN = "A Welcome Gift",
+    ContentFR = "Cadeau de visite",
+    ContentJP = "おみやげ",
+    ContentKR = "만남의 선물",
+    ContentTC = "見面禮",
+    TextMapContent = "见面礼",
+    TextMapId = "PartyTopic_Name_320301"
+  },
+  PartyTopic_Name_320302 = {
+    ContentEN = "Kind Souls",
+    ContentFR = "Les gens de bien",
+    ContentJP = "善き人",
+    ContentKR = "착한 사람",
+    ContentTC = "善良人",
+    TextMapContent = "善良人",
+    TextMapId = "PartyTopic_Name_320302"
+  },
+  PartyTopic_Name_320303 = {
+    ContentEN = "Blooms and Bombs",
+    ContentFR = "Fleurs et bombes",
+    ContentJP = "お花と爆弾",
+    ContentKR = "꽃과 폭탄",
+    ContentTC = "花與炸彈",
+    TextMapContent = "花与炸弹",
+    TextMapId = "PartyTopic_Name_320303"
   },
   PartyTopic_Name_330101 = {
     ContentEN = "The Scavenger's Work",
@@ -100282,6 +101753,10 @@ Allez voir ce qui se passe.]],
     TextMapContent = "按下快门",
     TextMapId = "QuestName_SaiqiPicSucc"
   },
+  Quest_1301_Backtoquest01 = {
+    TextMapContent = "莉莉蔻主线上半【待包装】",
+    TextMapId = "Quest_1301_Backtoquest01"
+  },
   Quest_Chapter01_HeitaoLeave_Tips = {
     ContentEN = "Materials Returned",
     ContentFR = "Matériaux restitués",
@@ -101740,6 +103215,14 @@ It was originally set up so the Drifters could spar and hone their craft, but ov
     ContentTC = "書籍",
     TextMapContent = "书籍",
     TextMapId = "READ_FUNCTION_READ"
+  },
+  READ_NAME_12070401 = {
+    TextMapContent = "【待包装】蕾伊的笔记",
+    TextMapId = "READ_NAME_12070401"
+  },
+  READ_NAME_12070402 = {
+    TextMapContent = "【待包装】蕾伊的实验记录",
+    TextMapId = "READ_NAME_12070402"
   },
   READ_NAME_2000001 = {
     ContentEN = "Statue Inscription",
@@ -103351,6 +104834,37 @@ It was originally set up so the Drifters could spar and hone their craft, but ov
     ContentTC = "診籍三",
     TextMapContent = "诊籍三",
     TextMapId = "READ_NAME_fushuyian03"
+  },
+  READ_TEXT_12070401 = {
+    ContentEN = [[
+Darcy... I miss you so much.
+Why don't you come to me in my dreams anymore?
+What were those horrible creatures you saw?
+
+Darcy... where are you? Are you still alive?
+Please... just let me see you one more time.
+
+(Several crude sketches have been drawn at the bottom of the page. The creatures bear a vague resemblance to Blues after his augmentation.)]],
+    ContentFR = "Ma sœur... Tu me manques tellement.\nPourquoi est-ce que je ne rêve plus jamais de toi ?\nQu’étaient donc ces monstres terrifiants que tu as vus ?\n \nMa sœur... Où es-tu... ? Es-tu encore en vie ?\nJe t’en supplie, laisse-moi te revoir, rien qu’une fois...\n \n(Au bas de la feuille figurent plusieurs dessins de monstres ressemblant à Blues après sa transformation.)",
+    ContentJP = "お姉さん……会いたい。\nどうして、もう夢に出てきてくれない？\nお姉ちゃんが見た、あの怖い怪物は何だった？\n\nお姉ちゃん……どこにいるの……まだ生きてる？\nお願い。もう一度だけ、姿を見せて……\n\n（紙の下部には、怪物の落書きがいくつも描かれている。改造されたブルースと、どこか似ている。）",
+    ContentKR = "언니... 너무 보고 싶어.\n왜 이젠 꿈에 나오지 않는 거야?\n언니가 본 그 끔찍한 괴물들은 대체 뭐였어?\n\n언니... 어디 있는 거야... 아직 살아 있어?\n제발, 한 번만이라도 다시 얼굴을 보게 해 줘...\n\n(종이 아래쪽에는 괴물 몇 마리를 그린 낙서가 있다. 개조당한 블루스와 어딘가 닮았다는 생각이 든다.)",
+    ContentTC = "姐姐……我好想你。\n為什麼我再也夢不到你了？\n你看到的那些可怕的怪物到底是什麼？\n\n姐姐……你在哪裡……你還活著嗎？\n求求你，讓我再看一看你好嗎……\n\n（紙張底部畫著幾個怪物的塗鴉，和被改造後的布魯斯有些相似。）",
+    TextMapContent = "姐姐……我好想你。\n为什么我再也梦不到你了？\n你看到的那些可怕的怪物到底是什么？\n\n姐姐……你在哪里……你还活着吗？\n求求你，让我再看一看你好吗……\n\n（纸张底部画着几个怪物的涂鸦，和被改造后的布鲁斯有些相似。）",
+    TextMapId = "READ_TEXT_12070401"
+  },
+  READ_TEXT_12070402 = {
+    ContentEN = [[
+The gunpowder I can get hold of isn't powerful enough. It might not even kill a rat.
+
+The poison works on rats, but I don't know how much it would take to kill a man.
+
+...I'll keep it simple.]],
+    ContentFR = "La poudre à canon que je parviens à me procurer n’est pas assez puissante. Même contre des rats, je ne peux pas être certaine de tous les tuer.\n \nLe poison fonctionne bien sur eux, mais il est difficile de déterminer la dose nécessaire pour un être humain.\n \n... Mieux vaut employer la méthode la plus simple.",
+    ContentJP = "手に入る火薬じゃ威力が足りない。ネズミでさえ、確実に仕留められない。\n\n毒はネズミには効く。でも、人間に使う量は分からない。\n\n……一番単純な方法にしよう。",
+    ContentKR = "내가 구할 수 있는 화약은 위력이 약해서, 쥐조차 확실히 죽일 수 있을지 장담하기 어렵다.\n\n독약은 쥐에게 잘 듣지만 사람에게는 얼마나 써야 할지 잘 모르겠다.\n\n...그냥 가장 단순한 방법을 쓰자.",
+    ContentTC = "我能弄到的這些火藥威力不夠，連炸老鼠都很難保證完全炸死。\n\n毒藥對老鼠倒是很有用，但換成人的劑量就說不準了。\n\n……還是用最簡單的辦法吧。",
+    TextMapContent = "我能弄到的这些火药威力不够，连炸老鼠都很难保证完全炸死。\n\n毒药对老鼠倒是很有用，但换成人的剂量就说不准了。\n\n……还是用最简单的办法吧。",
+    TextMapId = "READ_TEXT_12070402"
   },
   READ_TEXT_2000001 = {
     ContentEN = "Fusa, the Goddess of Fate —\n... of the Stellar Path, and the architect of the Threads of Destiny. \nAs the dome and ... bear witness, we offer you our devout hymns. \n\nThe radiance we see among the sprays of water was ... bestowed by you... \nYour believers gather at the hidden reefs, travelling to the edges of this remote island. \nPeople of ... bear witness to the revelation,\nswearing to manifest their faith with the divine instruments. \nAnd so, the frozen melodies begi... to play. \n\nThe first melody arises from the ... caves,\nwhere the daylight spills out in rich waves.\nThe ... stone forms an elegant visage,\nand destiny softly breathes within the encircling columns. \n\nThe second ... is in a cavern with cascading waterfalls,\nwhere the years have smoothed the cliffs ...\nand the waters descending from the Nine Heavens have transformed into stained glass.\nIt is a place of scattered hymns, ... this sanctuary. \n\nThe third melody sings of an ascending corridor,\nextending to ... constellations, and the sun and moon.\nCatching glimpses of stars beyond the constellations,\nweaving a curtain that envelops all of Atlasia. \n\nFusa, the stargazing Goddess—\nHere we pay homage to you.\nMay you protect your faithful believers,\nand grant us impeccable ... luck and happiness!",
@@ -105269,7 +106783,9 @@ Above the water, beneath the dead tree.]],
     TextMapId = "READ_TEXT_20653"
   },
   READ_TEXT_20654 = {
-    ContentEN = "Tch, you’re always just squatting by the tracks watching trains. Your hair smells like coal dust now, you know that?\nGot some good news for you: I’ve hidden some of my pocket money under the trees nearby. Enough to buy two months' worth of your favourite serial. How about that? Reckon you’ll finally get off your backside and take a walk now? Use the chance to stretch those stiff legs. Trust me, you might actually find there’s more to life than locomotives. Nature’s not bad once you give it a go!",
+    ContentEN = [[
+Tch, you're always just squatting by the tracks watching trains. Your hair smells like coal dust now, you know that?
+Got some good news for you: I've hidden some of my pocket money under the trees nearby. Enough to buy two months' worth of your favourite serial. How about that? Reckon you'll finally get off your backside and take a walk now? Use the chance to stretch those stiff legs. Trust me, you might actually find there's more to life than locomotives. Nature's not bad once you give it a go!]],
     ContentFR = "Hmpf, toi, tu passes tes journées accroupi près des rails à regarder les trains. Tes cheveux sentent déjà la suie à force !\nJ’ai une bonne nouvelle pour toi : j’ai caché un peu d’argent de poche <H>près du bosquet</>. Il y en a assez pour acheter deux mois de ton feuilleton favori. Alors, cette fois, tu vas bien accepter de bouger un peu, non ? Profites-en pour dégourdir ce corps tout raide. Crois-moi, tu découvriras les joies de la nature !",
     ContentJP = "ふん、君ってやつは毎日線路脇にしゃがみこんで列車ばかり眺めているから、髪の毛まで石炭灰に漬け込まれたみたいな匂いになってるよ！\n いい知らせを教えてあげる。近くの<H>木の下</>にお小遣いを隠しておいたんだ。二か月分の連載を買えるくらいの額だよ。どう？これなら少しは立ち上がって歩く気になるでしょ？この機会に、その固まった体を動かしてみて。信じて、きっとその途中で自然の楽しさを感じられるはずだから！",
     ContentKR = "흥, 너 맨날 그렇게 선로 옆에 쪼그리고 앉아서 기차나 쳐다보고 있으면, 머리카락이 석탄재에 절여지겠어!\n좋은 소식을 알려줄게. 근처 <H>숲 아래</>에 용돈을 숨겨뒀어. 두 달 치 연재물을 살 수 있는 금액이야. 어때, 이제 일어나서 좀 걸어볼 생각 있어? 이 기회에 굳어버린 몸을 좀 움직여 봐. 날 믿으라고. 그러다보면 대자연의 아름다움을 느낄 수 있을 테니까!",
@@ -105763,6 +107279,24 @@ Heartfelt prayers shall be answered, and the desired one shall appear by your si
     TextMapContent = "用于召唤同伴的印记，是并肩作战的指仗，是携手同行的信赖，是沉默无言的承诺。\n当祈祷将思念传递，那人会如你所想，降临于你的身边。",
     TextMapId = "RESOURCE_DESC_1011101"
   },
+  RESOURCE_DESC_1015 = {
+    ContentEN = "I heard cries of loyalty, and saw the stars set ablaze.",
+    ContentFR = "J’ai entendu les appels de la loyauté et vu les étoiles se consumer.",
+    ContentJP = "忠誠の叫びを聞き、星々が燃えるのを見た。",
+    ContentKR = "나는 들었다, 그 충성의 외침을. 나는 보았다, 그 불타는 별들을!",
+    ContentTC = "我聽到了忠誠的呼喊，看到了群星的燃燒。",
+    TextMapContent = "我听到了忠诚的呼喊，看到了群星的燃烧。",
+    TextMapId = "RESOURCE_DESC_1015"
+  },
+  RESOURCE_DESC_1016 = {
+    ContentEN = "I heard cries of loyalty, and saw the stars set ablaze.",
+    ContentFR = "J’ai entendu les appels de la loyauté et vu les étoiles se consumer.",
+    ContentJP = "忠誠の叫びを聞き、星々が燃えるのを見た。",
+    ContentKR = "나는 들었다, 그 충성의 외침을. 나는 보았다, 그 불타는 별들을!",
+    ContentTC = "我聽到了忠誠的呼喊，看到了群星的燃燒。",
+    TextMapContent = "我听到了忠诚的呼喊，看到了群星的燃烧。",
+    TextMapId = "RESOURCE_DESC_1016"
+  },
   RESOURCE_DESC_102 = {
     ContentEN = "Condensed liquid globules designed to empower Demon Wedges. If Daimons are the demons roaming the mortal realm, then this material surely serves as a feast of power dedicated to them.\nDeveloped by the Hyperborean Spathatoi Alchademy, these globules were inspired by ancient tablets unearthed by the Archaeological Association — the cryptic inscriptions on these tablets are believed to conceal mysterious powers.",
     ContentFR = "Liquide condensé en globule, utilisé pour renforcer les Sceaux démoniaques. Si les Daimons sont les démons errants du monde mortel, cette substance est l’essence même de leur puissance.\nConçu par les Spathatoi de l’Empire Hyperboréen, ce globule puise son inspiration dans d’antiques tablettes découvertes par l’Association Archéologique, dont les inscriptions mystérieuses recèlent des secrets oubliés.",
@@ -106104,6 +107638,15 @@ Heartfelt prayers shall be answered, and the desired one shall appear by your si
     ContentTC = "使用後可從閃亮你好箱、閃亮珍珠兔、閃亮好夢先生中自選一隻活力魔靈。",
     TextMapContent = "使用后可从闪亮你好箱、闪亮珍珠兔、闪亮好梦先生中自选一只活力魔灵。",
     TextMapId = "RESOURCE_DESC_110072"
+  },
+  RESOURCE_DESC_110076 = {
+    ContentEN = "Grants 1 of the following: Electro Crystal, Pyro Crystal, Lumino Crystal, Hydro Crystal, or Umbro Crystal.",
+    ContentFR = "Après utilisation, permet de choisir un matériau parmi Cristal Électro, Cristal Pyro, Cristal Lumino, Cristal Hydro et Cristal Umbro.",
+    ContentJP = "使用すると雷の晶塊、火の晶塊、光の晶塊、水の晶塊、闇の晶塊の中から素材を1種類選択できます。",
+    ContentKR = "사용 후 번개의 결정, 불의 결정, 빛의 결정, 물의 결정, 어둠의 결정 중 하나의 재료를 선택해 획득할 수 있습니다.",
+    ContentTC = "使用後可從雷之晶塊，火之晶塊，光之晶塊，水之晶塊，暗之晶塊中自選一種材料。",
+    TextMapContent = "使用后可从雷之晶块，火之晶块，光之晶块，水之晶块，暗之晶块中自选一种材料。",
+    TextMapId = "RESOURCE_DESC_110076"
   },
   RESOURCE_DESC_11008 = {
     ContentEN = "Crafted with precision from the blueprint of an intermediate weapon component. It embodies the wielder's will — only the strong are entitled to showcase their unique individuality on the battlefield.",
@@ -107445,7 +108988,7 @@ There is no turning back once the trigger is pulled, much like the commitment th
     ContentJP = "設計図に基づき製造された「舞雀雲屏」のパーツ。引き金を引けばもう後戻りはできない。――決意を下す瞬間のように。",
     ContentKR = "도면대로 정확히 제작한 공작의 춤 부품. 일단 방아쇠를 당기면, 마치 결심을 내린 그 순간처럼 탄환은 절대 뒤를 돌아보지 않는다.",
     ContentTC = "嚴格按照圖紙打造的雀舞雲屏部件。一旦扣下扳機，子彈就不會回頭——就如同人下定決心的那一瞬。",
-    TextMapContent = "严格按照图纸打造的雀舞银屏部件。一旦扣下扳机，子弹就不会回头——就如同人下定决心的那一瞬。",
+    TextMapContent = "严格按照图纸打造的雀舞云屏部件。一旦扣下扳机，子弹就不会回头——就如同人下定决心的那一瞬。",
     TextMapId = "RESOURCE_DESC_12135"
   },
   RESOURCE_DESC_12136 = {
@@ -107454,7 +108997,7 @@ There is no turning back once the trigger is pulled, much like the commitment th
     ContentJP = "設計図に基づき製造された「舞雀雲屏」のパーツ。鋼鉄製で非常に硬い。弾丸が空になっても鈍器や投げ道具として使用できる。",
     ContentKR = "도면대로 정확히 제작한 공작의 춤 부품. 강철로 만들어 매우 단단하기 때문에 탄환이 부족할 때 둔기 또는 투척물로 사용할 수 있다.",
     ContentTC = "嚴格按照圖紙打造的雀舞雲屏部件。由鋼鐵打造，足夠堅硬。當子彈打空，也是一件趁手的鈍器或投擲物。",
-    TextMapContent = "严格按照图纸打造的雀舞银屏部件。由钢铁打造，足够坚硬。当子弹打空，也是一件趁手的钝器或投掷物。",
+    TextMapContent = "严格按照图纸打造的雀舞云屏部件。由钢铁打造，足够坚硬。当子弹打空，也是一件趁手的钝器或投掷物。",
     TextMapId = "RESOURCE_DESC_12136"
   },
   RESOURCE_DESC_12137 = {
@@ -107463,7 +109006,7 @@ There is no turning back once the trigger is pulled, much like the commitment th
     ContentJP = "設計図に基づき製造された「舞雀雲屏」のパーツ。弾丸が飛び出すとき、射撃手の心は銃身と同じくらい熱くなる。",
     ContentKR = "도면대로 정확히 제작한 공작의 춤 부품. 탄환이 쏘아져 나갈 때면, 전사의 심장은 그 총열처럼 뜨거워진다.",
     ContentTC = "嚴格按照圖紙打造的雀舞雲屏部件。子彈從這裡傾泄而出，每到此時，槍管與戰士的心同樣滾燙。",
-    TextMapContent = "严格按照图纸打造的雀舞银屏部件。子弹从这里倾泄而出，每到此时，枪管与战士的心同样滚烫。",
+    TextMapContent = "严格按照图纸打造的雀舞云屏部件。子弹从这里倾泄而出，每到此时，枪管与战士的心同样滚烫。",
     TextMapId = "RESOURCE_DESC_12137"
   },
   RESOURCE_DESC_12138 = {
@@ -107825,6 +109368,33 @@ There is no turning back once the trigger is pulled, much like the commitment th
     ContentTC = "嚴格按照圖紙打造的聖血·鞭刃部件。無論刀刃是曲是直，是輕是重，它的鋒芒都只為戰鬥而生。",
     TextMapContent = "严格按照图纸打造的圣血·鞭刃部件。无论刀刃是曲是直，是轻是重，它的锋芒都只为战斗而生。",
     TextMapId = "RESOURCE_DESC_12177"
+  },
+  RESOURCE_DESC_12178 = {
+    ContentEN = "Crafted with precision from the blueprint of Blessed Burden. There is no turning back once the trigger is pulled, much like the commitment that seals a decisive moment.",
+    ContentFR = "Assemblé selon les plans de « Le poids de vivre », ce verrou ne laisse aucun retour possible une fois la détente pressée — comme une décision que l’on doit porter jusqu’au bout.",
+    ContentJP = "設計図に基づき製造された「生きる重さ」のパーツ。引き金を引けばもう後戻りはできない。――決意を下す瞬間のように。",
+    ContentKR = "도면대로 정확히 제작한 살아간다는 무게 부품. 일단 방아쇠를 당기면, 마치 결심을 내린 그 순간처럼 탄환은 절대 뒤를 돌아보지 않는다.",
+    ContentTC = "嚴格按照圖紙打造的活著的重量部件。一旦扣下扳機，子彈就不會回頭——就如同人下定決心的那一瞬。",
+    TextMapContent = "严格按照图纸打造的活着的重量部件。一旦扣下扳机，子弹就不会回头——就如同人下定决心的那一瞬。",
+    TextMapId = "RESOURCE_DESC_12178"
+  },
+  RESOURCE_DESC_12179 = {
+    ContentEN = "Crafted with precision from the blueprint of Blessed Burden. Sturdy and robust, it doubles effectively as a blunt instrument or a throwable weapon when out of bullets.",
+    ContentFR = "Forgé selon les plans de « Le poids de vivre », ce corps d’acier possède une solidité redoutable. Même à court de munitions, il reste une arme improvisée fiable — assez lourde pour rappeler que survivre aussi a un poids.",
+    ContentJP = "設計図に基づき製造された「生きる重さ」のパーツ。鋼鉄製で非常に硬い。弾丸が空になっても鈍器や投げ道具として使用できる。",
+    ContentKR = "도면대로 정확히 제작한 살아간다는 무게 부품. 강철로 만들어 매우 단단하기 때문에 탄환이 부족할 때 둔기 또는 투척물로 사용할 수 있다.",
+    ContentTC = "嚴格按照圖紙打造的活著的重量部件。由鋼鐵打造，足夠堅硬。當子彈打空，也是一件趁手的鈍器或投擲物。",
+    TextMapContent = "严格按照图纸打造的活着的重量部件。由钢铁打造，足够坚硬。当子弹打空，也是一件趁手的钝器或投掷物。",
+    TextMapId = "RESOURCE_DESC_12179"
+  },
+  RESOURCE_DESC_12180 = {
+    ContentEN = "Crafted with precision from the blueprint of Blessed Burden. Bullets burst forth from here, as both the barrel and the warrior's heart blaze with unrelenting fervour.",
+    ContentFR = "Conçu selon les plans de « Le poids de vivre », ce canon déverse les balles dans une rafale brûlante — et à chaque tir, le métal comme le cœur du combattant supportent le même brasier.",
+    ContentJP = "設計図に基づき製造された「生きる重さ」のパーツ。弾丸が飛び出すとき、射撃手の心は銃身と同じくらい熱くなる。",
+    ContentKR = "도면대로 정확히 제작한 살아간다는 무게 부품. 탄환이 쏘아져 나갈 때면, 전사의 심장은 그 총열처럼 뜨거워진다.",
+    ContentTC = "嚴格按照圖紙打造的活著的重量部件。子彈從這裡傾泄而出，每到此時，槍管與戰士的心同樣滾燙。",
+    TextMapContent = "严格按照图纸打造的活着的重量部件。子弹从这里倾泄而出，每到此时，枪管与战士的心同样滚烫。",
+    TextMapId = "RESOURCE_DESC_12180"
   },
   RESOURCE_DESC_122 = {
     ContentEN = "A recurring Phoxene delivery arranged through Lunotress. Grants a daily supply for the duration of the subscription.",
@@ -109415,6 +110985,24 @@ So tasty, it's literally transformative.]],
     TextMapContent = "协会贯彻了虬先生的奖惩理念，凡是活跃的成员均可获得对应的表彰，用以在协会内部兑换多种奖励",
     TextMapId = "RESOURCE_DESC_4006"
   },
+  RESOURCE_DESC_4007 = {
+    ContentEN = "Use to immediately rename your Guild",
+    ContentFR = "Après utilisation, permet de changer immédiatement le nom de la guilde",
+    ContentJP = "使用すると、協会名をすぐに変更できる",
+    ContentKR = "사용 시 즉시 길드명을 변경할 수 있다.",
+    ContentTC = "使用後可立即變更協會的名稱",
+    TextMapContent = "使用后可立即变更协会的名称",
+    TextMapId = "RESOURCE_DESC_4007"
+  },
+  RESOURCE_DESC_4008 = {
+    ContentEN = "Use to immediately rename your Phoxhunter",
+    ContentFR = "Après utilisation, permet de changer immédiatement le nom du Chasseur de Phoxène",
+    ContentJP = "使用すると、月狩り人の名前をすぐに変更できる",
+    ContentKR = "사용 시 즉시 월석 사냥꾼의 이름을 변경할 수 있다.",
+    ContentTC = "使用後可立即變更狩月人的名字",
+    TextMapContent = "使用后可立即变更狩月人的名字",
+    TextMapId = "RESOURCE_DESC_4008"
+  },
   RESOURCE_DESC_4010001 = {
     ContentEN = "A subspecies of butterfly in Atlasia, its verdant hue heralds the arrival of spring.",
     ContentFR = "Une sous-espèce de papillon, dont le vert éclatant annonce le retour du printemps.",
@@ -110358,6 +111946,21 @@ Fireworks are a salute to the heavens.]],
     ContentTC = "守望煉獄，震懾死亡。",
     TextMapContent = "守望炼狱，震慑死亡。",
     TextMapId = "RESOURCE_DESC_41071"
+  },
+  RESOURCE_DESC_41072 = {
+    ContentTC = "在月亮的肩頭，捕獲群星的夢境。",
+    TextMapContent = "在月亮的肩头，捕获群星的梦境。",
+    TextMapId = "RESOURCE_DESC_41072"
+  },
+  RESOURCE_DESC_41073 = {
+    ContentTC = "在月亮的肩頭，捕獲群星的夢境。",
+    TextMapContent = "在月亮的肩头，捕获群星的梦境。",
+    TextMapId = "RESOURCE_DESC_41073"
+  },
+  RESOURCE_DESC_41074 = {
+    ContentTC = "在月亮的肩頭，捕獲群星的夢境。",
+    TextMapContent = "在月亮的肩头，捕获群星的梦境。",
+    TextMapId = "RESOURCE_DESC_41074"
   },
   RESOURCE_DESC_42001 = {
     ContentEN = "Found within the Labyrinth of Yanyin, this finely crafted square construct was made using techniques long lost to the Jishu Sect. Its energy core emits a beam of light capable of activating other Jishu constructs.",
@@ -111531,6 +113134,11 @@ The companionship might be fleeting, yet the friendship endures. Perhaps the nex
     TextMapContent = "使用后可从苏乙，菲娜，伊薇，扶疏，琳恩，玛尔洁，黎瑟，西比尔，达芙涅中自选一套角色形象。",
     TextMapId = "RESOURCE_DESC_GENERALSKIN_8"
   },
+  RESOURCE_DESC_GENERALSKIN_9 = {
+    ContentTC = "使用後可從貝蕾妮卡，芙羅拉，麗蓓卡，希爾妲，法露茜，海爾法，止流，賽琪中自選一套角色形象。",
+    TextMapContent = "使用后可从贝蕾妮卡，芙罗拉，丽蓓卡，希尔妲，法露茜，海尔法，止流，赛琪中自选一套角色形象。",
+    TextMapId = "RESOURCE_DESC_GENERALSKIN_9"
+  },
   RESOURCE_DESC_HYPERWEAPONPROTOTYPE = {
     ContentEN = [[
 One of the legendary prototypes said to have given rise to the Calamity Weapons.
@@ -111749,6 +113357,11 @@ Can be used to enter Abyssal Commissions.]],
     ContentTC = "商品滿480月石晶胚減360月石晶胚",
     TextMapContent = "商品满480月石晶胚减360月石晶胚",
     TextMapId = "RESOURCE_DESC_VOUCHER_5"
+  },
+  RESOURCE_DESC_VOUCHER_6 = {
+    ContentTC = "商品滿1280月石晶胚減300月石晶胚",
+    TextMapContent = "商品满1280月石晶胚减300月石晶胚",
+    TextMapId = "RESOURCE_DESC_VOUCHER_6"
   },
   RESOURCE_DESC_WEAPONPIECE = {
     ContentEN = [[
@@ -112724,6 +114337,24 @@ Acquired through special means. Can be used as smelting material for Calamity We
     TextMapContent = "普通货币",
     TextMapId = "RESOURCE_FUNCTION_GUILD_6"
   },
+  RESOURCE_FUNCTION_GUILD_7 = {
+    ContentEN = "Rename your Guild",
+    ContentFR = "Permet de changer le nom de la guilde",
+    ContentJP = "協会名を変更できる",
+    ContentKR = "길드명 변경 가능",
+    ContentTC = "可變更協會名稱",
+    TextMapContent = "可变更协会名称",
+    TextMapId = "RESOURCE_FUNCTION_GUILD_7"
+  },
+  RESOURCE_FUNCTION_GUILD_8 = {
+    ContentEN = "Rename your Phoxhunter",
+    ContentFR = "Permet de changer le nom du Chasseur de Phoxène",
+    ContentJP = "月狩り人の名前を変更できる",
+    ContentKR = "월석 사냥꾼 이름 변경 가능",
+    ContentTC = "可變更狩月人名字",
+    TextMapContent = "可变更狩月人名字",
+    TextMapId = "RESOURCE_FUNCTION_GUILD_8"
+  },
   RESOURCE_FUNCTION_HYPERWEAPON = {
     ContentEN = "Used to craft and upgrade Calamity Weapons",
     ContentFR = "Utilisé pour fabriquer et améliorer les Armes de calamité",
@@ -113056,6 +114687,20 @@ Acquired through special means. Can be used as smelting material for Calamity We
     ContentTC = "持有此券，即可以優惠的價格，購買「第22隻樂園的白兔」及過往版本的頭部裝飾與軀體裝飾。",
     TextMapContent = "持有此券，即可以优惠的价格，购买“第22只乐园的白兔”及过往版本的头部装饰与躯体装饰。",
     TextMapId = "RESOURCE_FUNCTION_VOUCHER_6"
+  },
+  RESOURCE_FUNCTION_VOUCHER_7 = {
+    ContentEN = "Offers a discounted price on Headpiece and Bodypiece from \"Towards the Dawn\" and past versions.",
+    ContentFR = "Permet d’acheter à prix réduit des accessoires de tête et de corps issus d’« En marche vers l’aube » ainsi que des versions précédentes.",
+    ContentJP = "このクーポンを所持していると、お得な価格で「暁を歩む」および過去バージョンのヘッド・アクセサリーとボディ・アクセサリーを購入できる。",
+    ContentKR = "쿠폰 보유 시 할인된 가격으로 '여명 속으로' 및 이전 버전의 머리 장식과 몸 장식을 구매할 수 있다.",
+    ContentTC = "持有此券，即可以優惠的價格，購買「行於破曉」及過往版本的頭部裝飾與軀體裝飾。",
+    TextMapContent = "持有此券，即可以优惠的价格，购买“行于破晓”及过往版本的头部装饰与躯体装饰。",
+    TextMapId = "RESOURCE_FUNCTION_VOUCHER_7"
+  },
+  RESOURCE_FUNCTION_VOUCHER_8 = {
+    ContentTC = "持有此券，即可以優惠的價格，購買碧霄吟系列的武器形象。",
+    TextMapContent = "持有此券，即可以优惠的价格，购买碧霄吟系列的武器形象。",
+    TextMapId = "RESOURCE_FUNCTION_VOUCHER_8"
   },
   RESOURCE_FUNCTION_WEAPONCARDLEVELUP = {
     ContentEN = "Used to raise a weapon's smelting level",
@@ -113570,6 +115215,15 @@ Acquired through special means. Can be used as smelting material for Calamity We
     TextMapContent = "思绪片段·卡米拉",
     TextMapId = "RESOURCE_NAME_1003202"
   },
+  RESOURCE_NAME_1003203 = {
+    ContentEN = "Thought: Katya",
+    ContentFR = "Fragment de pensée : Katya",
+    ContentJP = "想いの欠片・カーチャ",
+    ContentKR = "아이디어 조각·카지아",
+    ContentTC = "思緒片段·卡嘉",
+    TextMapContent = "思绪片段·卡嘉",
+    TextMapId = "RESOURCE_NAME_1003203"
+  },
   RESOURCE_NAME_1003301 = {
     ContentEN = "Thought: Margie",
     ContentFR = "Fragment de pensée : Margie",
@@ -113605,6 +115259,15 @@ Acquired through special means. Can be used as smelting material for Calamity We
     ContentTC = "思緒片段·止流",
     TextMapContent = "思绪片段·止流",
     TextMapId = "RESOURCE_NAME_1004102"
+  },
+  RESOURCE_NAME_1004103 = {
+    ContentEN = "Thought: Rhythm: Flamewrought",
+    ContentFR = "Fragment de pensée : Rhythm – Née des flammes",
+    ContentJP = "想いの欠片・リズム・焔を纏う者",
+    ContentKR = "아이디어 조각·리듬·되살아난 불꽃",
+    ContentTC = "思緒片段·黎瑟·浴火",
+    TextMapContent = "思绪片段·黎瑟·浴火",
+    TextMapId = "RESOURCE_NAME_1004103"
   },
   RESOURCE_NAME_1004201 = {
     ContentEN = "Thought: Yuming",
@@ -113677,6 +115340,15 @@ Acquired through special means. Can be used as smelting material for Calamity We
     ContentTC = "思緒片段·達芙涅",
     TextMapContent = "思绪片段·达芙涅",
     TextMapId = "RESOURCE_NAME_1005401"
+  },
+  RESOURCE_NAME_1005402 = {
+    ContentEN = "Thought: Lirico",
+    ContentFR = "Fragment de pensée : Lirico",
+    ContentJP = "想いの欠片・リリコ",
+    ContentKR = "아이디어 조각·리리코",
+    ContentTC = "思緒片段·莉莉蔻",
+    TextMapContent = "思绪片段·莉莉蔻",
+    TextMapId = "RESOURCE_NAME_1005402"
   },
   RESOURCE_NAME_1006 = {
     ContentEN = "Recasting Mould",
@@ -114002,6 +115674,15 @@ Acquired through special means. Can be used as smelting material for Calamity We
     TextMapContent = "印记·卡米拉",
     TextMapId = "RESOURCE_NAME_1013202"
   },
+  RESOURCE_NAME_1013203 = {
+    ContentEN = "Sigil: Katya",
+    ContentFR = "Emblème : Katya",
+    ContentJP = "シジル・カーチャ",
+    ContentKR = "인장·카지아",
+    ContentTC = "印記·卡嘉",
+    TextMapContent = "印记·卡嘉",
+    TextMapId = "RESOURCE_NAME_1013203"
+  },
   RESOURCE_NAME_1013301 = {
     ContentEN = "Sigil: Margie",
     ContentFR = "Emblème : Margie",
@@ -114029,6 +115710,15 @@ Acquired through special means. Can be used as smelting material for Calamity We
     TextMapContent = "印记·止流",
     TextMapId = "RESOURCE_NAME_1014102"
   },
+  RESOURCE_NAME_1014103 = {
+    ContentEN = "Sigil: Rhythm: Flamewrought",
+    ContentFR = "Emblème : Rhythm – Née des flammes",
+    ContentJP = "シジル·リズム・焔を纏う者",
+    ContentKR = "인장·리듬·되살아난 불꽃",
+    ContentTC = "印記·黎瑟·浴火",
+    TextMapContent = "印记·黎瑟·浴火",
+    TextMapId = "RESOURCE_NAME_1014103"
+  },
   RESOURCE_NAME_1014201 = {
     ContentEN = "Sigil: Yuming",
     ContentFR = "Emblème : Yuming",
@@ -114055,6 +115745,15 @@ Acquired through special means. Can be used as smelting material for Calamity We
     ContentTC = "印記·西比爾",
     TextMapContent = "印记·西比尔",
     TextMapId = "RESOURCE_NAME_1014301"
+  },
+  RESOURCE_NAME_1015 = {
+    ContentEN = "Throne of Contemplation: Opaque White",
+    ContentFR = "Trône de contemplation – Blanc ivoire",
+    ContentJP = "考える人の座·アイボリー",
+    ContentKR = "사색의 왕좌·아이보리",
+    ContentTC = "沉思王座·涅白",
+    TextMapContent = "沉思王座·涅白",
+    TextMapId = "RESOURCE_NAME_1015"
   },
   RESOURCE_NAME_1015101 = {
     ContentEN = "Sigil: Truffle and Filbert",
@@ -114091,6 +115790,24 @@ Acquired through special means. Can be used as smelting material for Calamity We
     ContentTC = "印記·達芙涅",
     TextMapContent = "印记·达芙涅",
     TextMapId = "RESOURCE_NAME_1015401"
+  },
+  RESOURCE_NAME_1015402 = {
+    ContentEN = "Sigil: Lirico",
+    ContentFR = "Emblème : Lirico",
+    ContentJP = "シジル・リリコ",
+    ContentKR = "인장·리리코",
+    ContentTC = "印記·莉莉蔻",
+    TextMapContent = "印记·莉莉蔻",
+    TextMapId = "RESOURCE_NAME_1015402"
+  },
+  RESOURCE_NAME_1016 = {
+    ContentEN = "Throne of Contemplation: Leaden Grey",
+    ContentFR = "Trône de contemplation – Gris plomb",
+    ContentJP = "考える人の座·鉛灰",
+    ContentKR = "사색의 왕좌·그레이",
+    ContentTC = "沉思王座·鉛灰",
+    TextMapContent = "沉思王座·铅灰",
+    TextMapId = "RESOURCE_NAME_1016"
   },
   RESOURCE_NAME_102 = {
     ContentEN = "Carmine Globule",
@@ -114866,6 +116583,24 @@ Acquired through special means. Can be used as smelting material for Calamity We
     TextMapContent = "自选形象礼箱·守护",
     TextMapId = "RESOURCE_NAME_110074"
   },
+  RESOURCE_NAME_110076 = {
+    ContentEN = "Crystal Selection Chest Ⅳ",
+    ContentFR = "Coffret de sélection de cristaux IV",
+    ContentJP = "晶塊選択ボックス・Ⅳ",
+    ContentKR = "결정 선택 상자 Ⅳ",
+    ContentTC = "晶塊自選禮箱·其四",
+    TextMapContent = "晶块自选礼箱·其四",
+    TextMapId = "RESOURCE_NAME_110076"
+  },
+  RESOURCE_NAME_110077 = {
+    ContentEN = "Character Skin Selection – Aegis Ⅱ",
+    ContentFR = "Coffret de sélection d’apparence – Gardien II",
+    ContentJP = "スキン選択ボックス・守護・Ⅱ",
+    ContentKR = "선택 코스튬 패키지·수호 Ⅱ",
+    ContentTC = "自選形象禮箱·守護·二",
+    TextMapContent = "自选形象礼箱·守护·二",
+    TextMapId = "RESOURCE_NAME_110077"
+  },
   RESOURCE_NAME_11008 = {
     ContentEN = "Intermediate Weapon Component: Decoration",
     ContentFR = "Composant d’arme intermédiaire : Ornement",
@@ -115045,6 +116780,20 @@ Acquired through special means. Can be used as smelting material for Calamity We
     ContentTC = "第22隻樂園的白兔裝飾代金券",
     TextMapContent = "第22只乐园的白兔装饰代金券",
     TextMapId = "RESOURCE_NAME_120006"
+  },
+  RESOURCE_NAME_120007 = {
+    ContentEN = "Towards the Dawn Coupon",
+    ContentFR = "Bon d’accessoires – En marche vers l’aube",
+    ContentJP = "「暁を歩む」クーポン",
+    ContentKR = "여명 속으로 쿠폰",
+    ContentTC = "行於破曉代金券",
+    TextMapContent = "行于破晓代金券",
+    TextMapId = "RESOURCE_NAME_120007"
+  },
+  RESOURCE_NAME_120008 = {
+    ContentTC = "碧霄吟代金券",
+    TextMapContent = "碧霄吟代金券",
+    TextMapId = "RESOURCE_NAME_120008"
   },
   RESOURCE_NAME_12001 = {
     ContentEN = "Ingenious Tactics: Grip",
@@ -116267,7 +118016,7 @@ Acquired through special means. Can be used as smelting material for Calamity We
     ContentJP = "舞雀雲屏の銃把",
     ContentKR = "공작의 춤 방아쇠",
     ContentTC = "雀舞雲屏的槍機",
-    TextMapContent = "雀舞银屏的枪机",
+    TextMapContent = "雀舞云屏的枪机",
     TextMapId = "RESOURCE_NAME_12135"
   },
   RESOURCE_NAME_12136 = {
@@ -116276,7 +118025,7 @@ Acquired through special means. Can be used as smelting material for Calamity We
     ContentJP = "舞雀雲屏の銃底",
     ContentKR = "공작의 춤 총신",
     ContentTC = "雀舞雲屏的槍身",
-    TextMapContent = "雀舞银屏的枪身",
+    TextMapContent = "雀舞云屏的枪身",
     TextMapId = "RESOURCE_NAME_12136"
   },
   RESOURCE_NAME_12137 = {
@@ -116285,7 +118034,7 @@ Acquired through special means. Can be used as smelting material for Calamity We
     ContentJP = "舞雀雲屏の銃身",
     ContentKR = "공작의 춤 총열",
     ContentTC = "雀舞雲屏的槍管",
-    TextMapContent = "雀舞银屏的枪管",
+    TextMapContent = "雀舞云屏的枪管",
     TextMapId = "RESOURCE_NAME_12137"
   },
   RESOURCE_NAME_12138 = {
@@ -116648,6 +118397,33 @@ Acquired through special means. Can be used as smelting material for Calamity We
     TextMapContent = "圣血·鞭刃的刀刃",
     TextMapId = "RESOURCE_NAME_12177"
   },
+  RESOURCE_NAME_12178 = {
+    ContentEN = "Blessed Burden: Bolt",
+    ContentFR = "Le poids de vivre : Verrou",
+    ContentJP = "生きる重さの銃把",
+    ContentKR = "살아간다는 무게 방아쇠",
+    ContentTC = "活著的重量的槍機",
+    TextMapContent = "活着的重量的枪机",
+    TextMapId = "RESOURCE_NAME_12178"
+  },
+  RESOURCE_NAME_12179 = {
+    ContentEN = "Blessed Burden: Frame",
+    ContentFR = "Le poids de vivre : Armature",
+    ContentJP = "生きる重さの銃底",
+    ContentKR = "살아간다는 무게 총신",
+    ContentTC = "活著的重量的槍身",
+    TextMapContent = "活着的重量的枪身",
+    TextMapId = "RESOURCE_NAME_12179"
+  },
+  RESOURCE_NAME_12180 = {
+    ContentEN = "Blessed Burden: Barrel",
+    ContentFR = "Le poids de vivre : Canon",
+    ContentJP = "生きる重さの銃身",
+    ContentKR = "살아간다는 무게 총열",
+    ContentTC = "活著的重量的槍管",
+    TextMapContent = "活着的重量的枪管",
+    TextMapId = "RESOURCE_NAME_12180"
+  },
   RESOURCE_NAME_122 = {
     ContentEN = "Lunotress's Monthly Pass #2",
     ContentFR = "Pass mensuel de Luno, la servante n° 2",
@@ -116712,12 +118488,12 @@ Acquired through special means. Can be used as smelting material for Calamity We
     TextMapId = "RESOURCE_NAME_15004"
   },
   RESOURCE_NAME_15005 = {
-    ContentEN = "Prototype: Nocturne – Sword",
-    ContentFR = "Prototype : Nocturne – Épée",
+    ContentEN = "Prototype: Endless Enigma",
+    ContentFR = "Prototype : Énigme insoluble",
     ContentJP = "夜想・片手剣の原型",
-    ContentKR = "밤의 적막·한손검의 원형",
-    ContentTC = "夜寐·單手劍的原型",
-    TextMapContent = "夜寐·单手剑的原型【待包装】",
+    ContentKR = "답 없는 수수께끼의 원형",
+    ContentTC = "無解謎題的原型",
+    TextMapContent = "无解谜题的原型",
     TextMapId = "RESOURCE_NAME_15005"
   },
   RESOURCE_NAME_15006 = {
@@ -119645,6 +121421,24 @@ Acquired through special means. Can be used as smelting material for Calamity We
     TextMapContent = "协会奖章",
     TextMapId = "RESOURCE_NAME_4006"
   },
+  RESOURCE_NAME_4007 = {
+    ContentEN = "Guild Renaming Agreement",
+    ContentFR = "Acte de renommage de guilde",
+    ContentJP = "協会名称変更同意書",
+    ContentKR = "길드명 변경 협약서",
+    ContentTC = "協會更名協議",
+    TextMapContent = "协会更名协议",
+    TextMapId = "RESOURCE_NAME_4007"
+  },
+  RESOURCE_NAME_4008 = {
+    ContentEN = "Rename Card",
+    ContentFR = "Carte de renommage",
+    ContentJP = "名前変更カード",
+    ContentKR = "이름 변경 카드",
+    ContentTC = "更名卡",
+    TextMapContent = "更名卡",
+    TextMapId = "RESOURCE_NAME_4008"
+  },
   RESOURCE_NAME_4010001 = {
     ContentEN = "Virifly",
     ContentFR = "Vertigalis",
@@ -119981,7 +121775,7 @@ Acquired through special means. Can be used as smelting material for Calamity We
   RESOURCE_NAME_41005 = {
     ContentEN = "Cat in a Box: Leaden Grey",
     ContentFR = "Chat dans la boîte – Gris plomb",
-    ContentJP = "箱の中の猫-チタニウムホワイト",
+    ContentJP = "箱の中の猫-鉛灰",
     ContentKR = "상자 속 고양이·그레이",
     ContentTC = "箱中之貓·鉛灰",
     TextMapContent = "箱中之猫·铅灰",
@@ -120296,7 +122090,7 @@ Acquired through special means. Can be used as smelting material for Calamity We
   RESOURCE_NAME_41040 = {
     ContentEN = "Throne Above All: Leaden Grey",
     ContentFR = "Dominer monts et fleuves – Gris plomb",
-    ContentJP = "支配者の玉座・チタニウムホワイト",
+    ContentJP = "支配者の玉座・鉛灰",
     ContentKR = "천하를 굽어보기·그레이",
     ContentTC = "睥睨山河·鉛灰",
     TextMapContent = "睥睨山河·铅灰",
@@ -120572,6 +122366,33 @@ Acquired through special means. Can be used as smelting material for Calamity We
     TextMapContent = "地狱咆哮·鎏金",
     TextMapId = "RESOURCE_NAME_41071"
   },
+  RESOURCE_NAME_41072 = {
+    ContentEN = "Crescent Wishes: Azure",
+    ContentFR = "Attrape-rêves lunaire – Bleu indigo",
+    ContentJP = "月枝夢狩·インディゴ",
+    ContentKR = "달빛과 드림캐처 사이·다크 블루",
+    ContentTC = "月梢捕夢·黛藍",
+    TextMapContent = "月梢捕梦·黛蓝",
+    TextMapId = "RESOURCE_NAME_41072"
+  },
+  RESOURCE_NAME_41073 = {
+    ContentEN = "Crescent Wishes: Rust Red",
+    ContentFR = "Attrape-rêves lunaire – Rouille",
+    ContentJP = "月枝夢狩·ペルシアンレッド",
+    ContentKR = "달빛과 드림캐처 사이·러스트 레드",
+    ContentTC = "月梢捕夢·銹紅",
+    TextMapContent = "月梢捕梦·锈红",
+    TextMapId = "RESOURCE_NAME_41073"
+  },
+  RESOURCE_NAME_41074 = {
+    ContentEN = "Crescent Wishes: Dark Jade",
+    ContentFR = "Attrape-rêves lunaire – Jade noir",
+    ContentJP = "月枝夢狩·ジェットブラック",
+    ContentKR = "달빛과 드림캐처 사이·제트 블랙",
+    ContentTC = "月梢捕夢·墨玉",
+    TextMapContent = "月梢捕梦·墨玉",
+    TextMapId = "RESOURCE_NAME_41074"
+  },
   RESOURCE_NAME_42001 = {
     ContentEN = "Mechanical Nexus: The Bane",
     ContentFR = "Nexus mécanique : Fléau des Souillures",
@@ -120683,7 +122504,7 @@ Acquired through special means. Can be used as smelting material for Calamity We
   RESOURCE_NAME_49995 = {
     ContentEN = "Taixu Rover: Leaden Grey",
     ContentFR = "Pérégrin de Taixu – Gris plomb",
-    ContentJP = "太虚の飛剣・チタニウムホワイト",
+    ContentJP = "太虚の飛剣・鉛灰",
     ContentKR = "태허를 노니는 검·그레이",
     ContentTC = "太虛遊·鉛灰",
     TextMapContent = "太虚游·铅灰",
@@ -124164,6 +125985,24 @@ Explore Mount Arcano. Listen, look around, and watch the summer fireworks bloom.
     ContentTC = "「格林威治考古協會作為遍布大陸各處的大型協會，除了明面上的學術研究之外，背地自然會有一些戰鬥自保與獲取情報的路子。這些資源，便是我為你提供的另一份投資。」\n\n——虬先生",
     TextMapContent = "“格林威治考古协会作为遍布大陆各处的大型协会，除了明面上的学术研究之外，背地自然会有一些战斗自保与获取情报的路子。这些资源，便是我为你提供的另一份投资。”\n\n——虬先生",
     TextMapId = "RESOURCE_TEXT_4003"
+  },
+  RESOURCE_TEXT_4007 = {
+    ContentEN = "\"Greenwich Archaeological Society has received your request for a name change. We will update your registration shortly.\"\n\n— A Diligent Society Staff Member",
+    ContentFR = "« La Société archéologique de Gréniche a bien reçu la demande de changement de nom de votre section. Votre réenregistrement sera effectué sous peu. »\n \n— Un employé consciencieux de la Société",
+    ContentJP = "「グリニッジ考古協会は、ご所属の支部の名称変更申請を受理いたしました。まもなく再登録が完了いたします。」\n——勤勉な協会スタッフ",
+    ContentKR = "\"그리니치 고고학 협회에서 소속 지부의 명칭 변경 신청을 접수하였으며, 곧 재등록을 완료해 드리겠습니다.\"\n—— 성실한 협회 직원",
+    ContentTC = "「格林威治考古協會已收到您所屬分會的更名申請，很快為您完成重新登記。」\n——勤勤懇懇的協會工作人員",
+    TextMapContent = "“格林威治考古协会已收到您所属分会的更名申请，很快为您完成重新登记。”\n——勤勤恳恳的协会工作人员",
+    TextMapId = "RESOURCE_TEXT_4007"
+  },
+  RESOURCE_TEXT_4008 = {
+    ContentEN = "\"Out in the world, you are whoever you say you are. So I got you a few new papers. Miner, fisherman, bodyguard, even blacksmith — take your pick. Just put your name on whichever one you like.\"\n\n— Outsider",
+    ContentFR = "« Quand on est sur les routes, on est qui on veut être. Je t’ai dégotté quelques nouveaux permis de circulation : mineur, pêcheur, garde du corps, même forgeron... Choisis celui qui te plaît, mets ton nom dessus, et le tour est joué. »\n \n— L’Étranger",
+    ContentJP = "「外で名乗る身分なんて、自分で決めればいいのさ。ほら、新しい通行許可証を何枚か用意してやったぞ。職業は鉱山労働者、漁師、用心棒、鍛冶師まで、何でもある。好きなのを選んで、自分の名前を書き込めばいい。」\n——アウトサイダー",
+    ContentKR = "\"밖에선 어떤 신분으로 지낼지는 자기가 정하는 거야. 그래서 통행증을 몇 장 새로 마련해 왔지. 광부, 어부, 경호원... 심지어 대장장이까지, 웬만한 직업은 다 있어. 마음에 드는 걸 하나 골라 네 이름만 적어 넣으면 돼.\"\n—— 아웃사이더",
+    ContentTC = "「出門在外身份都是自己給的，這是我給你新搞的幾張通行證。職業從礦工、漁夫、保鏢甚至是鐵匠全都有，你挑個喜歡的，把你名字填上去就好。」\n——奧特賽德",
+    TextMapContent = "“出门在外身份都是自己给的，这是我给你新搞的几张通行证。职业从矿工、渔夫、保镖甚至是铁匠全都有，你挑个喜欢的，把你名字填上去就好。”\n——奥特赛德",
+    TextMapId = "RESOURCE_TEXT_4008"
   },
   RESOURCE_TEXT_4010001 = {
     ContentEN = "\"If only spring at Icelake lasted longer. For most of the year, all we see is endless snow. On days when viriflies aren't around, evergreen plants are the closest thing we have to spring.\"\n\n— Psyche, an Icelake resident",
@@ -134725,6 +136564,226 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     TextMapContent = "角色充盈威力大于100%时，每超过#1，造成技能或充盈伤害时无视目标#2防御，最多无视#3防御。\n角色消耗紊乱时，获得触发概率提高#4效果，持续#5秒，最多叠加#6层。",
     TextMapId = "Raid_Buff_16"
   },
+  Raid_Buff_17 = {
+    ContentEN = [[
+When a character's Skill Speed exceeds #1, gain #3 PEN stats for every #2 over the threshold, up to #4.
+When the character consumes Disruption, their Skill Damage ignores #5 of the target's defensive effects for #6s.]],
+    ContentFR = "Lorsque la Vitesse de compétence d’un personnage dépasse #1, chaque tranche de #2 au-delà de ce seuil augmente la Pénétration de tous les attributs de #3, jusqu’à #4. Lorsque le personnage consomme du Désordre, il obtient un effet permettant aux Dégâts de compétence qu’il inflige d’ignorer #5 des effets défensifs de la cible pendant #6 s.",
+    ContentJP = "「キャラクターのスキル速度が#1を上回っている場合、#2上回るごとに全属性貫通が#3上昇する。最大で#4まで上昇する。\nキャラクターが乱調を消費した時、スキルダメージを与える際に対象の#5防御効果を無視する効果を獲得する。#6秒間持続する。」",
+    ContentKR = "캐릭터의 스킬 속도가 #1을 초과하면, 초과한 #2마다 모든 속성 관통이 #3 상승한다. 최대 #4 상승.\n캐릭터가 혼돈을 소모하면 스킬 대미지를 입힐 때 대상의 방어를 #5 무시하는 효과를 획득한다. 지속 시간 #6초.",
+    ContentTC = "角色技能速度大於#1時，每超過#2，全屬性穿透提高#3，最多提高#4。\n角色消耗紊亂時，獲得造成技能傷害時無視目標#5防禦效果，持續#6秒。",
+    TextMapContent = "角色技能速度大于#1时，每超过#2，全属性穿透提高#3，最多提高#4。\n角色消耗紊乱时，获得造成技能伤害时无视目标#5防御效果，持续#6秒。",
+    TextMapId = "Raid_Buff_17"
+  },
+  Raid_Season_Floor_Enter = {
+    ContentEN = "Go",
+    ContentFR = "Aller",
+    ContentJP = "移動",
+    ContentKR = "이동",
+    ContentTC = "前往",
+    TextMapContent = "前往",
+    TextMapId = "Raid_Season_Floor_Enter"
+  },
+  Raid_Season_Floor_Finish_Floor = {
+    ContentEN = "Stage %d cleared. Remaining time:{空格}",
+    ContentFR = "Étage %d terminé. Temps restant :{空格}",
+    ContentJP = "%d層クリア成功、残り時間",
+    ContentKR = "%d층 클리어 성공, 남은 시간:{空格}",
+    ContentTC = "成功通關 %d 層，剩餘時間",
+    TextMapContent = "成功通关 %d 层，剩余时间",
+    TextMapId = "Raid_Season_Floor_Finish_Floor"
+  },
+  Raid_Season_Floor_History = {
+    ContentEN = "Best Stage:{空格}",
+    ContentFR = "Record :{空格}",
+    ContentJP = "ハイスコア：",
+    ContentKR = "역대 최고:{空格}",
+    ContentTC = "歷史最高：",
+    TextMapContent = "历史最高：",
+    TextMapId = "Raid_Season_Floor_History"
+  },
+  Raid_Season_Floor_JumpReward = {
+    ContentEN = "Uncleared stages before Stage %s have been automatically cleared. You have obtained the following first-clear rewards:",
+    ContentFR = "Les étages non terminés précédant l’étage %s ont été automatiquement considérés comme terminés. Vous obtenez les récompenses de première réussite suivantes :",
+    ContentJP = "%s層までの未クリア階層を自動的にクリアしました。\n以下の初回クリア報酬を獲得しました：",
+    ContentKR = "%s 층 이전의 미클리어 층을 자동으로 클리어했습니다. 다음 첫 클리어 보상을 획득하세요:",
+    ContentTC = "已自動通關第 %s 層之前的未完成層數，獲得如下首通獎勵：",
+    TextMapContent = "已自动通关第 %s 层之前的未完成层数，获得如下首通奖励：",
+    TextMapId = "Raid_Season_Floor_JumpReward"
+  },
+  Raid_Season_Floor_JumpTips = {
+    ContentEN = "You can start directly from this stage.",
+    ContentFR = "Vous pouvez commencer le défi directement depuis cet étage",
+    ContentJP = "この層から直接挑戦できます",
+    ContentKR = "이 층부터 바로 도전 가능",
+    ContentTC = "可直接從此層開始挑戰",
+    TextMapContent = "可直接从此层开始挑战",
+    TextMapId = "Raid_Season_Floor_JumpTips"
+  },
+  Raid_Season_Floor_Lost_Tips1 = {
+    ContentEN = "Level up characters and weapons.",
+    ContentFR = "Améliorez le niveau de vos personnages et de vos armes",
+    ContentJP = "キャラクターの武器レベルを上げる",
+    ContentKR = "캐릭터 무기 레벨업",
+    ContentTC = "提升角色武器等級",
+    TextMapContent = "提升角色武器等级",
+    TextMapId = "Raid_Season_Floor_Lost_Tips1"
+  },
+  Raid_Season_Floor_Lost_Tips2 = {
+    ContentEN = "Optimize your Demon Wedge Set.",
+    ContentFR = "Optimisez votre combinaison de Sceaux démoniaques",
+    ContentJP = "魔の楔の組み合わせを見直す",
+    ContentKR = "악마의 쐐기 조합 최적화",
+    ContentTC = "最佳化魔之楔搭配",
+    TextMapContent = "优化魔之楔搭配",
+    TextMapId = "Raid_Season_Floor_Lost_Tips2"
+  },
+  Raid_Season_Floor_Lost_Tips3 = {
+    ContentEN = "Choose characters suited to the stage effects.",
+    ContentFR = "Choisissez des personnages adaptés aux effets de l’étage",
+    ContentJP = "ステージ効果に適したキャラクターを選ぶ",
+    ContentKR = "스테이지 효과에 적합한 캐릭터 선택하세요.",
+    ContentTC = "選擇適合關卡效果的角色",
+    TextMapContent = "选择适合关卡效果的角色",
+    TextMapId = "Raid_Season_Floor_Lost_Tips3"
+  },
+  Raid_Season_Floor_More = {
+    ContentEN = "Unlock More",
+    ContentFR = "Débloquer plus",
+    ContentJP = "さらに解放",
+    ContentKR = "계속 해제하기",
+    ContentTC = "解鎖更多",
+    TextMapContent = "解锁更多",
+    TextMapId = "Raid_Season_Floor_More"
+  },
+  Raid_Season_Floor_Only_View = {
+    ContentEN = "Private",
+    ContentFR = "Privé",
+    ContentJP = "自分のみ閲覧可能",
+    ContentKR = "비공개",
+    ContentTC = "僅自己可見",
+    TextMapContent = "仅自己可见",
+    TextMapId = "Raid_Season_Floor_Only_View"
+  },
+  Raid_Season_Floor_Open_Team = {
+    ContentEN = "Public",
+    ContentFR = "Composition publique",
+    ContentJP = "編成を公開",
+    ContentKR = "라인업 공개",
+    ContentTC = "公開陣容",
+    TextMapContent = "公开阵容",
+    TextMapId = "Raid_Season_Floor_Open_Team"
+  },
+  Raid_Season_Floor_Order_Reward = {
+    ContentEN = "Ranking Rewards",
+    ContentFR = "Récompenses de classement",
+    ContentJP = "ランキング報酬",
+    ContentKR = "랭킹 보상",
+    ContentTC = "排名獎勵",
+    TextMapContent = "排名奖励",
+    TextMapId = "Raid_Season_Floor_Order_Reward"
+  },
+  Raid_Season_Floor_Order_Reward_button = {
+    ContentEN = "Total Rewards",
+    ContentFR = "Récompenses",
+    ContentJP = "報酬一覧",
+    ContentKR = "보상 내역",
+    ContentTC = "獎勵匯總",
+    TextMapContent = "奖励汇总",
+    TextMapId = "Raid_Season_Floor_Order_Reward_button"
+  },
+  Raid_Season_Floor_Pre = {
+    ContentEN = "Group Stage",
+    ContentFR = "Phase de groupes",
+    ContentJP = "グループ戦",
+    ContentKR = "그룹 예선전",
+    ContentTC = "分組賽",
+    TextMapContent = "分组赛",
+    TextMapId = "Raid_Season_Floor_Pre"
+  },
+  Raid_Season_Floor_Rank_Reward = {
+    ContentEN = "Group Rewards",
+    ContentFR = "Récompenses de groupe",
+    ContentJP = "グループ報酬",
+    ContentKR = "그룹 보상",
+    ContentTC = "分組獎勵",
+    TextMapContent = "分组奖励",
+    TextMapId = "Raid_Season_Floor_Rank_Reward"
+  },
+  Raid_Season_Floor_Record_Floor = {
+    ContentEN = "Stage: %d",
+    ContentFR = "Étage : %d",
+    ContentJP = "階層：%d",
+    ContentKR = "층수: %d",
+    ContentTC = "層數：%d",
+    TextMapContent = "层数：%d",
+    TextMapId = "Raid_Season_Floor_Record_Floor"
+  },
+  Raid_Season_Floor_Speed_Enter = {
+    ContentEN = "Go Now",
+    ContentFR = "Accès rapide",
+    ContentJP = "すぐに移動",
+    ContentKR = "빠른 이동",
+    ContentTC = "快速前往",
+    TextMapContent = "快速前往",
+    TextMapId = "Raid_Season_Floor_Speed_Enter"
+  },
+  Raid_Season_Floor_Standard = {
+    ContentEN = "Promotion Requirement:{空格}",
+    ContentFR = "Requis pour la promotion :{空格}",
+    ContentJP = "進出 まで：",
+    ContentKR = "승급 조건:{空格}",
+    ContentTC = "晉級所需：",
+    TextMapContent = "晋级所需：",
+    TextMapId = "Raid_Season_Floor_Standard"
+  },
+  Raid_Season_Floor_Target = {
+    ContentEN = "Limited-Time Challenge",
+    ContentFR = "Défi chronométré",
+    ContentJP = "タイムトライアル",
+    ContentKR = "제한 시간 도전",
+    ContentTC = "限時挑戰",
+    TextMapContent = "限时挑战",
+    TextMapId = "Raid_Season_Floor_Target"
+  },
+  Raid_Season_Floor_Tips1 = {
+    ContentEN = "Stage Unlock Rules",
+    ContentFR = "Déblocage des étages",
+    ContentJP = "階層解放について",
+    ContentKR = "층수 해제 설명",
+    ContentTC = "層數解鎖說明",
+    TextMapContent = "层数解锁说明",
+    TextMapId = "Raid_Season_Floor_Tips1"
+  },
+  Raid_Season_Floor_Tips1_Desc = {
+    ContentEN = [[
+1. Only unlocked stages are shown in the list. Continue challenging stages to unlock higher ones.
+2. Clearing a stage within the time limit unlocks additional stages, allowing you to unlock higher stages faster.]],
+    ContentFR = "1) La liste n’affiche que les étages débloqués. Continuez à relever les défis pour débloquer des étages supérieurs.\n2) Terminer un défi chronométré permet de débloquer davantage d’étages. Profitez de cette règle pour accéder plus rapidement aux défis des étages supérieurs.",
+    ContentJP = "1.現在のリストには、解放済みの階層のみ表示されます。さらに挑戦して、より高い階層を解放しましょう。\n2.タイムトライアルをクリアすると、さらに多くの階層が解放されます。ルールを上手く活用して、より高い階層を効率よく解放しましょう。",
+    ContentKR = "1. 현재 목록에는 해제된 층만 표시됩니다. 계속 도전하여 더 높은 층을 해제하세요.\n2. 제한 시간 도전에 성공하면 더 많은 층이 해제됩니다. 규칙을 최대한 활용하여 빠르게 더 높은 층의 도전을 해제하세요!",
+    ContentTC = "1.當前列表只會顯示已解鎖層數，繼續挑戰來解鎖更高層數\n2.達成限時挑戰後，會解鎖更多層數，充分利用規則能更快解鎖高層挑戰",
+    TextMapContent = "1.当前列表只会显示已解锁层数，继续挑战来解锁更高层数\n2.达成限时挑战后，会解锁更多层数，充分利用规则能更快解锁高层挑战",
+    TextMapId = "Raid_Season_Floor_Tips1_Desc"
+  },
+  Raid_Season_Floor_UI_Floor = {
+    ContentEN = "Stage %d",
+    ContentFR = "Étage %d",
+    ContentJP = "%d層",
+    ContentKR = "%d 층",
+    ContentTC = "第 %d 層",
+    TextMapContent = "第 %d 层",
+    TextMapId = "Raid_Season_Floor_UI_Floor"
+  },
+  Raid_Season_Floor_Unlock_Floor = {
+    ContentEN = "Next %d Stages Unlocked",
+    ContentFR = "Défis des %d prochains étages débloqués",
+    ContentJP = "以降の %d 階の挑戦が解放されました",
+    ContentKR = "이후 %d 층 도전 해제",
+    ContentTC = "已解鎖後續 %d 層挑戰",
+    TextMapContent = "已解锁后续 %d 层挑战",
+    TextMapId = "Raid_Season_Floor_Unlock_Floor"
+  },
   Ranged = {
     ContentEN = "Ranged",
     ContentFR = "À distance",
@@ -135733,6 +137792,33 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     TextMapContent = "累积与<highlight>%s</>只魔灵成为伙伴",
     TextMapId = "RegionReputation_RecurringTask_17"
   },
+  RegionReputation_RecurringTask_18 = {
+    ContentEN = "Complete any commission within 1 hour",
+    ContentFR = "En 1 heure, accomplir des Missions :",
+    ContentJP = "1時間以内に任意の依頼を累計完了",
+    ContentKR = "1시간 내에 임의의 의뢰 누적 완료",
+    ContentTC = "1小時內累計完成任意委託",
+    TextMapContent = "1小时内累计完成任意委托",
+    TextMapId = "RegionReputation_RecurringTask_18"
+  },
+  RegionReputation_RecurringTask_19 = {
+    ContentEN = "10 times",
+    ContentFR = "10 fois",
+    ContentJP = "10回",
+    ContentKR = "10회",
+    ContentTC = "10次",
+    TextMapContent = "10次",
+    TextMapId = "RegionReputation_RecurringTask_19"
+  },
+  RegionReputation_RecurringTask_20 = {
+    ContentEN = "20 times",
+    ContentFR = "20 fois",
+    ContentJP = "20回",
+    ContentKR = "20회",
+    ContentTC = "20次",
+    TextMapContent = "20次",
+    TextMapId = "RegionReputation_RecurringTask_20"
+  },
   RegionReputation_RecurringTask_21 = {
     ContentEN = "30 times",
     ContentFR = "30 fois",
@@ -135818,9 +137904,9 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentEN = "Fish <highlight>%s</> times in Hyperborea",
     ContentFR = "Pêcher <highlight>%s</> fois aux points de pêche d’Hyperborea",
     ContentJP = "ヒュペリアの釣り場で累計<highlight>%s</>回釣りをする",
-    ContentKR = "휘페르보레아 낚시 포인트에서 누적 <highlight>%s</>회 낚시",
-    ContentTC = "累計在海伯利亞的釣魚點位<highlight>%s</>次",
-    TextMapContent = "累计在海伯利亚的钓鱼点位<highlight>%s</>次",
+    ContentKR = "휘페르보레아 낚시 포인트에서 낚시 누적 <highlight>%s</>회 완료",
+    ContentTC = "累計在海伯利亞的釣魚點位完成<highlight>%s</>次釣魚",
+    TextMapContent = "累计在海伯利亚的钓鱼点位完成<highlight>%s</>次钓鱼",
     TextMapId = "RegionReputation_RecurringTask_30"
   },
   RegionReputation_RecurringTask_31 = {
@@ -135854,9 +137940,9 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentEN = "Fish <highlight>%s</> times in Huaxu",
     ContentFR = "Pêcher <highlight>%s</> fois aux points de pêche de Huaxu",
     ContentJP = "華胥の釣り場で累計<highlight>%s</>回釣りをする",
-    ContentKR = "화서 낚시 포인트에서 누적 <highlight>%s</>회 낚시",
-    ContentTC = "累計在華胥的釣魚點位<highlight>%s</>次",
-    TextMapContent = "累计在华胥的钓鱼点位<highlight>%s</>次",
+    ContentKR = "화서 낚시 포인트에서 낚시 누적 <highlight>%s</>회 완료",
+    ContentTC = "累計在華胥的釣魚點位完成<highlight>%s</>次釣魚",
+    TextMapContent = "累计在华胥的钓鱼点位完成<highlight>%s</>次钓鱼",
     TextMapId = "RegionReputation_RecurringTask_34"
   },
   RegionReputation_RecurringTask_35 = {
@@ -136126,7 +138212,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "メインストーリー「<H>くらい路地裏を行く</>」をクリア",
     ContentKR = "메인 퀘스트 <H>어두운 뒷골목</> 완료",
     ContentTC = "歷經主線任務<H>暗巷行路</>",
-    TextMapContent = "历经主线任务<H>暗巷行路</>",
     TextMapId = "Repu_Name_100401"
   },
   Repu_Name_100402 = {
@@ -136135,7 +138220,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "メインストーリー「<H>鉄道路線上の陰謀</>」をクリア",
     ContentKR = "메인 퀘스트 <H>철도 위의 음모</> 완료",
     ContentTC = "歷經主線任務<H>鐵道線上的陰謀</>",
-    TextMapContent = "历经主线任务<H>铁道线上的阴谋</>",
     TextMapId = "Repu_Name_100402"
   },
   Repu_Name_100403 = {
@@ -136144,7 +138228,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "メインストーリー「<H>爆破事件の研究</>」をクリア",
     ContentKR = "메인 퀘스트 <H>폭발 사건 연구</> 완료",
     ContentTC = "歷經主線任務<H>爆炸案研究</>",
-    TextMapContent = "历经主线任务<H>爆炸案研究</>",
     TextMapId = "Repu_Name_100403"
   },
   Repu_Name_100404 = {
@@ -136153,7 +138236,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "メインストーリー「<H>オーロラ号の秘密</>」をクリア",
     ContentKR = "메인 퀘스트 <H>오로라호의 비밀</> 완료",
     ContentTC = "歷經主線任務<H>極光快車上的秘密</>",
-    TextMapContent = "历经主线任务<H>极光快车上的秘密</>",
     TextMapId = "Repu_Name_100404"
   },
   Repu_Name_100405 = {
@@ -136162,7 +138244,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "メインストーリー「<H>容疑者の出現</>」をクリア",
     ContentKR = "메인 퀘스트 <H>용의자의 등장</> 완료",
     ContentTC = "歷經主線任務<H>嫌疑人的現身</>",
-    TextMapContent = "历经主线任务<H>嫌疑人的现身</>",
     TextMapId = "Repu_Name_100405"
   },
   Repu_Name_110101 = {
@@ -136405,7 +138486,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "メインストーリー「<H>初めての華胥訪問</>」をクリア",
     ContentKR = "메인 퀘스트 <H>화서 초입</> 완료",
     ContentTC = "歷經主線任務<H>初謁華胥</>",
-    TextMapContent = "历经主线任务<H>初谒华胥</>",
     TextMapId = "Repu_Name_120101"
   },
   Repu_Name_120102 = {
@@ -136414,7 +138494,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "メインストーリー「<H>潮は天に巡り逢う</>」をクリア",
     ContentKR = "메인 퀘스트 <H>하늘에 닿은 파도</> 완료",
     ContentTC = "歷經主線任務<H>潮逢應天</>",
-    TextMapContent = "历经主线任务<H>潮逢应天</>",
     TextMapId = "Repu_Name_120102"
   },
   Repu_Name_120103 = {
@@ -136423,7 +138502,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "メインストーリー「<H>群れなす玄獣の咆哮</>」をクリア",
     ContentKR = "메인 퀘스트 <H>수많은 포효</> 완료",
     ContentTC = "歷經主線任務<H>群玄嘯鳴</>",
-    TextMapContent = "历经主线任务<H>群玄啸鸣</>",
     TextMapId = "Repu_Name_120103"
   },
   Repu_Name_120104 = {
@@ -136432,7 +138510,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "メインストーリー「<H>三途川に揺らめく影</>」をクリア",
     ContentKR = "메인 퀘스트 <H>망각의 강 그림자</> 완료",
     ContentTC = "歷經主線任務<H>忘川照影</>",
-    TextMapContent = "历经主线任务<H>忘川照影</>",
     TextMapId = "Repu_Name_120104"
   },
   Repu_Name_120105 = {
@@ -136441,7 +138518,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "メインストーリー「<H>怪しき原野に驚く鴉</>」をクリア",
     ContentKR = "메인 퀘스트 <H>기묘한 평원의 까마귀</> 완료",
     ContentTC = "歷經主線任務<H>詭原驚鴉</>",
-    TextMapContent = "历经主线任务<H>诡原惊鸦</>",
     TextMapId = "Repu_Name_120105"
   },
   Repu_Name_120106 = {
@@ -136450,7 +138526,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "メインストーリー「<H>神を瀆して天は傾く</>」をクリア",
     ContentKR = "메인 퀘스트 <H>신성 모독</> 완료",
     ContentTC = "歷經主線任務<H>神瀆天傾</>",
-    TextMapContent = "历经主线任务<H>神渎天倾</>",
     TextMapId = "Repu_Name_120106"
   },
   Repu_Name_120111 = {
@@ -136621,7 +138696,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>花が散るときまで</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>오지 않은 봄</> 완료",
     ContentTC = "歷經支線任務<H>花期未至</>",
-    TextMapContent = "历经支线任务<H>花期未至</>",
     TextMapId = "Repu_Name_200102"
   },
   Repu_Name_200213 = {
@@ -136630,7 +138704,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>ハロー！アイスレイク</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>안녕, 아이스레이크 시티</> 완료",
     ContentTC = "歷經支線任務<H>你好，冰湖城</>",
-    TextMapContent = "历经支线任务<H>你好，冰湖城</>",
     TextMapId = "Repu_Name_200213"
   },
   Repu_Name_200216 = {
@@ -136639,7 +138712,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>帝国三兄弟</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>제국 삼 형제</> 완료",
     ContentTC = "歷經支線任務<H>帝國三兄弟</>",
-    TextMapContent = "历经支线任务<H>帝国三兄弟</>",
     TextMapId = "Repu_Name_200216"
   },
   Repu_Name_200218 = {
@@ -136648,7 +138720,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>ニヴルヘイムの呼び声</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>안개의 바다의 부름</> 완료",
     ContentTC = "歷經支線任務<H>霧海的呼喚</>",
-    TextMapContent = "历经支线任务<H>雾海的呼唤</>",
     TextMapId = "Repu_Name_200218"
   },
   Repu_Name_200221 = {
@@ -136657,7 +138728,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>欲望と考古のはざまで</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>욕망과 고고학</> 완료",
     ContentTC = "歷經支線任務<H>欲望與考古</>",
-    TextMapContent = "历经支线任务<H>欲望与考古</>",
     TextMapId = "Repu_Name_200221"
   },
   Repu_Name_200227 = {
@@ -136666,7 +138736,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>新たな劇</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>새로운 연극</> 완료",
     ContentTC = "歷經支線任務<H>全新戲劇</>",
-    TextMapContent = "历经支线任务<H>全新戏剧</>",
     TextMapId = "Repu_Name_200227"
   },
   Repu_Name_200228 = {
@@ -136675,7 +138744,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>再び幕を開ける</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>다시 목격한 시작</> 완료",
     ContentTC = "歷經支線任務<H>再次見證的伊始</>",
-    TextMapContent = "历经支线任务<H>再次见证的伊始</>",
     TextMapId = "Repu_Name_200228"
   },
   Repu_Name_200229 = {
@@ -136684,7 +138752,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>アトラシア美学の巨匠</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>아트라시아 미학 대가</> 완료",
     ContentTC = "歷經支線任務<H>阿特拉西亞美學大師</>",
-    TextMapContent = "历经支线任务<H>阿特拉西亚美学大师</>",
     TextMapId = "Repu_Name_200229"
   },
   Repu_Name_200230 = {
@@ -136693,7 +138760,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>千面歌手の悩み</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>'천의 얼굴'의 우울</> 완료",
     ContentTC = "歷經支線任務<H>千面歌者的憂鬱</>",
-    TextMapContent = "历经支线任务<H>千面歌者的忧郁</>",
     TextMapId = "Repu_Name_200230"
   },
   Repu_Name_200231 = {
@@ -136702,7 +138768,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>癒えぬ傷痕</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>아물지 않는 옛 상처</> 완료",
     ContentTC = "歷經支線任務<H>舊痕難彌</>",
-    TextMapContent = "历经支线任务<H>旧痕难弥</>",
     TextMapId = "Repu_Name_200231"
   },
   Repu_Name_200232 = {
@@ -136711,7 +138776,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>箱の少女の悩み</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>상자 아가씨의 고민</> 완료",
     ContentTC = "歷經支線任務<H>箱子小姐的煩惱</>",
-    TextMapContent = "历经支线任务<H>箱子小姐的烦恼</>",
     TextMapId = "Repu_Name_200232"
   },
   Repu_Name_200233 = {
@@ -136720,7 +138784,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>眠らぬ夜に帆を上げて</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>잠 못 이루는 밤의 항해</> 완료",
     ContentTC = "歷經支線任務<H>於無眠之夜遠航</>",
-    TextMapContent = "历经支线任务<H>于无眠之夜远航</>",
     TextMapId = "Repu_Name_200233"
   },
   Repu_Name_200234 = {
@@ -136729,7 +138792,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>猫の恩返し</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>은혜 갚는 고양이</> 완료",
     ContentTC = "歷經支線任務<H>貓的報恩</>",
-    TextMapContent = "历经支线任务<H>猫的报恩</>",
     TextMapId = "Repu_Name_200234"
   },
   Repu_Name_200301 = {
@@ -136738,7 +138800,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>神の恩寵</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>신께서 굽어살피시니</> 완료",
     ContentTC = "歷經支線任務<H>神的垂青</>",
-    TextMapContent = "历经支线任务<H>神的垂青</>",
     TextMapId = "Repu_Name_200301"
   },
   Repu_Name_200302 = {
@@ -136747,7 +138808,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>諸星の輝く時</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>별무리가 빛나는 시간</> 완료",
     ContentTC = "歷經支線任務<H>諸星耀時</>",
-    TextMapContent = "历经支线任务<H>诸星耀时</>",
     TextMapId = "Repu_Name_200302"
   },
   Repu_Name_200303 = {
@@ -136756,7 +138816,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>風の狭間</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>대풍구장의 틈새</> 완료",
     ContentTC = "歷經支線任務<H>大風之隙</>",
-    TextMapContent = "历经支线任务<H>大风之隙</>",
     TextMapId = "Repu_Name_200303"
   },
   Repu_Name_200304 = {
@@ -136765,7 +138824,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>金木犀には還れぬ道</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>계화는 돌아갈 곳 없고</> 완료",
     ContentTC = "歷經支線任務<H>不似木樨歸處</>",
-    TextMapContent = "历经支线任务<H>不似木樨归处</>",
     TextMapId = "Repu_Name_200304"
   },
   Repu_Name_200305 = {
@@ -136774,7 +138832,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>すれ違いの果てに</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>엇갈린 시간 속 재회</> 완료",
     ContentTC = "歷經支線任務<H>錯時重逢</>",
-    TextMapContent = "历经支线任务<H>错时重逢</>",
     TextMapId = "Repu_Name_200305"
   },
   Repu_Name_200306 = {
@@ -136783,7 +138840,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>時のからくり</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>오묘한 기추의 세계</> 완료",
     ContentTC = "歷經支線任務<H>機樞探妙</>",
-    TextMapContent = "历经支线任务<H>机枢探妙</>",
     TextMapId = "Repu_Name_200306"
   },
   Repu_Name_200307 = {
@@ -136792,7 +138848,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>輝かしき瞬間</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>빛나는 순간</> 완료",
     ContentTC = "歷經支線任務<H>高光時刻</>",
-    TextMapContent = "历经支线任务<H>高光时刻</>",
     TextMapId = "Repu_Name_200307"
   },
   Repu_Name_200308 = {
@@ -136801,7 +138856,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>幽霊騒ぎ</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>우당탕탕 귀신 소동</> 완료",
     ContentTC = "歷經支線任務<H>鬧鬼妙妙香</>",
-    TextMapContent = "历经支线任务<H>闹鬼妙妙香</>",
     TextMapId = "Repu_Name_200308"
   },
   Repu_Name_200309 = {
@@ -136810,7 +138864,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>一蓮托生</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>우직한 미련</> 완료",
     ContentTC = "歷經支線任務<H>尾生抱柱</>",
-    TextMapContent = "历经支线任务<H>尾生抱柱</>",
     TextMapId = "Repu_Name_200309"
   },
   Repu_Name_200310 = {
@@ -136819,7 +138872,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>香塵に帰す</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>재가 된 향불</> 완료",
     ContentTC = "歷經支線任務<H>香火歸塵</>",
-    TextMapContent = "历经支线任务<H>香火归尘</>",
     TextMapId = "Repu_Name_200310"
   },
   Repu_Name_200311 = {
@@ -136828,7 +138880,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>梨と贈り物</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>의좋은 사이</> 완료",
     ContentTC = "歷經支線任務<H>梨與禮</>",
-    TextMapContent = "历经支线任务<H>梨与礼</>",
     TextMapId = "Repu_Name_200311"
   },
   Repu_Name_200312 = {
@@ -136837,7 +138888,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>柳の色は昔のまま</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>버드나무 여전하고</> 완료",
     ContentTC = "歷經支線任務<H>柳色如故</>",
-    TextMapContent = "历经支线任务<H>柳色如故</>",
     TextMapId = "Repu_Name_200312"
   },
   Repu_Name_200313 = {
@@ -136846,7 +138896,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>花茶の味</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>꽃차의 맛</> 완료",
     ContentTC = "歷經支線任務<H>花茶的味道</>",
-    TextMapContent = "历经支线任务<H>花茶的味道</>",
     TextMapId = "Repu_Name_200313"
   },
   Repu_Name_200314 = {
@@ -136855,7 +138904,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>キョウンの投資</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>규선생의 투자</> 완료",
     ContentTC = "歷經支線任務<H>虬先生的投資</>",
-    TextMapContent = "历经支线任务<H>虬先生的投资</>",
     TextMapId = "Repu_Name_200314"
   },
   Repu_Name_200315 = {
@@ -136864,7 +138912,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>煙津渡最大の危機！</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>연진 나루터 최대의 위기!</> 완료",
     ContentTC = "歷經支線任務<H>煙津渡最大危機！</>",
-    TextMapContent = "历经支线任务<H>烟津渡最大危机！</>",
     TextMapId = "Repu_Name_200315"
   },
   Repu_Name_200317 = {
@@ -136873,7 +138920,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>もし琴の上に琴の音ありと言うなら</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>고요히 울리는 칠현금 소리</> 완료",
     ContentTC = "歷經支線任務<H>若言琴上有琴聲</>",
-    TextMapContent = "历经支线任务<H>若言琴上有琴声</>",
     TextMapId = "Repu_Name_200317"
   },
   Repu_Name_200318 = {
@@ -136882,7 +138928,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>三途川のこだま</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>망각의 강의 메아리</> 완료",
     ContentTC = "歷經支線任務<H>忘川迴響</>",
-    TextMapContent = "历经支线任务<H>忘川回响</>",
     TextMapId = "Repu_Name_200318"
   },
   Repu_Name_200401 = {
@@ -136891,7 +138936,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>黒いパンとバター</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>검은 빵과 버터</> 완료",
     ContentTC = "歷經支線任務<H>黑麵包與黃油</>",
-    TextMapContent = "历经支线任务<H>黑面包与黄油</>",
     TextMapId = "Repu_Name_200401"
   },
   Repu_Name_200402 = {
@@ -136900,7 +138944,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>汽笛が泣くころに</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>기적이 울리면</> 완료",
     ContentTC = "歷經支線任務<H>汽笛鳴泣之時</>",
-    TextMapContent = "历经支线任务<H>汽笛鸣泣之时</>",
     TextMapId = "Repu_Name_200402"
   },
   Repu_Name_200403 = {
@@ -136909,7 +138952,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>戦慄のサプライズ</>」をクリア",
     ContentKR = "사이드 퀘스트 <H>공포의 선물</> 완료",
     ContentTC = "歷經支線任務<H>驚悚驚喜</>",
-    TextMapContent = "历经支线任务<H>惊悚惊喜</>",
     TextMapId = "Repu_Name_200403"
   },
   Repu_Name_200404 = {
@@ -136918,7 +138960,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>何のために生きるのか</>」を完了",
     ContentKR = "사이드 퀘스트 <H>무엇을 위해 사는가</> 완료",
     ContentTC = "歷經支線任務<H>你為什麼而活</>",
-    TextMapContent = "历经支线任务<H>你为什么而活</>",
     TextMapId = "Repu_Name_200404"
   },
   Repu_Name_200405 = {
@@ -136927,7 +138968,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>禅と列車整備の芸術</>」を完了",
     ContentKR = "사이드 퀘스트 <H>참선으로 깨닫는 수리의 예술</> 완료",
     ContentTC = "歷經支線任務<H>禪與火車維修藝術</>",
-    TextMapContent = "历经支线任务<H>禅与火车维修艺术</>",
     TextMapId = "Repu_Name_200405"
   },
   Repu_Name_200406 = {
@@ -136936,7 +138976,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>帳の裏に潜むもの</>」を完了",
     ContentKR = "사이드 퀘스트 <H>장막 아래</> 완료",
     ContentTC = "歷經支線任務<H>隱於帷幕之下</>",
-    TextMapContent = "历经支线任务<H>隐于帷幕之下</>",
     TextMapId = "Repu_Name_200406"
   },
   Repu_Name_200407 = {
@@ -136945,7 +138984,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>四角い証拠</>」を完了",
     ContentKR = "사이드 퀘스트 <H>네모난 죄의 증거</> 완료",
     ContentTC = "歷經支線任務<H>方形罪證</>",
-    TextMapContent = "历经支线任务<H>方形罪证</>",
     TextMapId = "Repu_Name_200407"
   },
   Repu_Name_200408 = {
@@ -136954,7 +138992,6 @@ When the character consumes Disruption, grants +#4 Trigger Probability for #5s, 
     ContentJP = "サブストーリー「<H>ファエトンの墜落</>」を完了",
     ContentKR = "사이드 퀘스트 <H>파에톤의 추락</> 완료",
     ContentTC = "歷經支線任務<H>法厄同的墜落</>",
-    TextMapContent = "历经支线任务<H>法厄同的坠落</>",
     TextMapId = "Repu_Name_200408"
   },
   ReputationEntrust_Required = {
@@ -137165,6 +139202,24 @@ Civil & Martial Tokens were issued to contestants as a way to record their score
     ContentTC = "演練邀請函",
     TextMapContent = "演练邀请函",
     TextMapId = "ResourceName_TreasureHuntTicket"
+  },
+  RewardUnlockTips_10700401 = {
+    ContentEN = "Log in to the game",
+    ContentFR = "Se connecter au jeu",
+    ContentJP = "ゲームにログイン",
+    ContentKR = "게임 로그인",
+    ContentTC = "登入遊戲",
+    TextMapContent = "登录游戏",
+    TextMapId = "RewardUnlockTips_10700401"
+  },
+  RewardUnlockTips_10700402 = {
+    ContentEN = "Claimable after <H>October 28, 10:00 (server time)</>",
+    ContentFR = "Disponible après le <H>28 octobre à 10 h 00</> (heure du serveur)",
+    ContentJP = "<H>10月28日11:00</>以降に受け取れます",
+    ContentKR = "<H>10월 28일 11:00 (KST)</> 이후 수령 가능",
+    ContentTC = "<H>10月28日10:00（伺服器時間）</>後可領",
+    TextMapContent = "<H>10月28日10:00</>后可领",
+    TextMapId = "RewardUnlockTips_10700402"
   },
   Right = {
     ContentEN = "Right",
@@ -138189,6 +140244,7 @@ Civil & Martial Tokens were issued to contestants as a way to record their score
     ContentJP = "{空格}",
     ContentKR = "{空格}",
     ContentTC = "{空格}",
+    TextMapContent = " ",
     TextMapId = "SCEREAD_NAME_1000001"
   },
   SCEREAD_NAME_1000002 = {
@@ -138197,6 +140253,7 @@ Civil & Martial Tokens were issued to contestants as a way to record their score
     ContentJP = "{空格}",
     ContentKR = "{空格}",
     ContentTC = "{空格}",
+    TextMapContent = " ",
     TextMapId = "SCEREAD_NAME_1000002"
   },
   SCEREAD_TEXT_1000001 = {
@@ -138390,6 +140447,152 @@ Increases Skill DMG for the user and allies.]],
     ContentTC = "昂揚+<H>#1</>。暗屬性角色造成傷害時，每有1點連擊點數，造成的傷害提高<H>{float4}#2</>。消耗連擊點數後，昂揚提高[<H>{float4}#3</>×消耗量]，持續<H>#4</>秒。",
     TextMapContent = "昂扬+<H>#1</>。暗属性角色造成伤害时，每有1点连击点数，造成的伤害提高<H>{float4}#2</>。消耗连击点数后，昂扬提高[<H>{float4}#3</>×消耗量]，持续<H>#4</>秒。",
     TextMapId = "SKILL_10107_DESC"
+  },
+  SKILL_10199_01_DESC = {
+    ContentEN = [[
+Dealing damage with this weapon grants <H>#1</> Calamity. Calamity is capped at <H>#2</>.
+When Calamity reaches its cap, all Calamity is consumed to grant 1 stack of [Inquiry]: Skill Speed +<H>#3</> for <H>#4</>s, up to <H>#5</> stacks.]],
+    ContentFR = "Lorsque cette arme inflige des dégâts, elle confère <H>#1</> points de calamité. Le maximum de calamité est de <H>#2</> points.\nLorsque le maximum est atteint, tous les points de calamité sont consommés et vous obtenez 1 cumul de [Recherche] : la Vitesse de compétence augmente de <H>#3</> pendant <H>#4</> s, jusqu’à <H>#5</> cumuls.",
+    ContentJP = "この武器でダメージを与えると、 <H>#1</>ポイントの災厄値を獲得する。災厄値の上限は<H>#2</>ポイント。\n災厄値が上限に達すると、災厄値をすべて消費し、自身に[探求]を1スタック付与する：[探求]1スタックにつきスキル速度が<H>#3</> アップする。 <H>#4</>秒間持続し、最大 <H>#5</> スタック。",
+    ContentKR = "해당 무기로 대미지를 입힐 시 재앙도를 <H>#1</> 획득한다(최대치 <H>#2</>).\n재앙도가 최대치에 도달하면 모든 재앙도를 소모해 자신이 [탐구] 1단계를 획득한다. 스킬 속도가 <H>#3</> 상승한다. 지속 시간 <H>#4</>초, 최대 <H>#5</>단계 중첩.",
+    ContentTC = "使用此武器造成傷害時，獲得<H>#1</>點災厄值，災厄值上限為<H>#2</>點。\n災厄值達到上限時，消耗全部災厄值，自身獲得1層[求索]：技能速度提高<H>#3</>，持續<H>#4</>秒，最多疊加<H>#5</>層。",
+    TextMapContent = "使用此武器造成伤害时，获得<H>#1</>点灾厄值，灾厄值上限为<H>#2</>点。\n灾厄值达到上限时，消耗全部灾厄值，自身获得1层[求索]：技能速度提高<H>#3</>，持续<H>#4</>秒，最多叠加<H>#5</>层。",
+    TextMapId = "SKILL_10199_01_DESC"
+  },
+  SKILL_10199_01_Name = {
+    ContentEN = "Endless – Ponder",
+    ContentFR = "Insoluble – Méditation",
+    ContentJP = "解なき問い・思索",
+    ContentKR = "불가해·사색",
+    ContentTC = "無解·沉思",
+    TextMapContent = "无解·沉思",
+    TextMapId = "SKILL_10199_01_Name"
+  },
+  SKILL_10199_02_DESC = {
+    ContentEN = "When consuming [Disruption], gains <H>#1</> Calamity for each stack consumed.",
+    ContentFR = "Lorsque vous consommez du [Désordre], vous obtenez <H>[#1 × nombre de cumuls consommés]</> points de calamité.",
+    ContentJP = "[乱調]を消費すると、災厄値を [#1×消費した重複数] 獲得する。",
+    ContentKR = "[혼돈]을 소모할 때 재앙도를 <H>[#1×소모 중첩 단계 수]</> 획득한다.",
+    ContentTC = "消耗[紊亂]時，獲得<H>[#1×消耗層數×技能速度]</>點災厄值。",
+    TextMapContent = "消耗[紊乱]时，获得<H>[#1×消耗层数×技能速度]</>点灾厄值。",
+    TextMapId = "SKILL_10199_02_DESC"
+  },
+  SKILL_10199_02_Name = {
+    ContentEN = "Endless – Desire",
+    ContentFR = "Insoluble – Aspiration",
+    ContentJP = "解なき問い・渇望",
+    ContentKR = "불가해·갈구",
+    ContentTC = "無解·渴求",
+    TextMapContent = "无解·渴求",
+    TextMapId = "SKILL_10199_02_Name"
+  },
+  SKILL_10199_03_DESC = {
+    ContentEN = "When Skill DMG triggers, gains <H>[#1 × Skill Speed]</> Calamity.",
+    ContentFR = "Lorsque des Dégâts de compétence se déclenchent, vous obtenez <H>[#1 × Vitesse de compétence]</> points de calamité.",
+    ContentJP = "スキルダメージが発生すると、災厄値を [#1×スキル速度] 獲得する。",
+    ContentKR = "스킬 대미지 발동 시 재앙도를 <H>[#1×스킬 속도]</> 획득한다.",
+    ContentTC = "技能傷害觸發時，獲得<H>[#1×技能速度]</>點災厄值。",
+    TextMapContent = "技能伤害触发时，获得<H>[#1×技能速度]</>点灾厄值。",
+    TextMapId = "SKILL_10199_03_DESC"
+  },
+  SKILL_10199_03_Name = {
+    ContentEN = "Enigma – Obscurity",
+    ContentFR = "Énigme – Inconnu",
+    ContentJP = "謎・未知",
+    ContentKR = "난제·미지",
+    ContentTC = "謎題·未知",
+    TextMapContent = "谜题·未知",
+    TextMapId = "SKILL_10199_03_Name"
+  },
+  SKILL_10199_04_Name = {
+    ContentEN = "Endless – Might",
+    ContentFR = "Insoluble – Puissance",
+    ContentJP = "解なき問い・フォース",
+    ContentKR = "불가해·위력",
+    ContentTC = "無解·威力",
+    TextMapContent = "无解·威力",
+    TextMapId = "SKILL_10199_04_Name"
+  },
+  SKILL_10199_05_Name = {
+    ContentEN = "Enigma – Assault",
+    ContentFR = "Énigme – Assaut",
+    ContentJP = "謎・ストライク",
+    ContentKR = "난제·공격",
+    ContentTC = "謎題·攻擊",
+    TextMapContent = "谜题·攻击",
+    TextMapId = "SKILL_10199_05_Name"
+  },
+  SKILL_10199_06_DESC = {
+    ContentEN = "While under [Inquiry], if Skill Speed exceeds <H>#1</>, Skill DMG +<H>#2</>.",
+    ContentFR = "Sous l’effet de [Recherche], si votre Vitesse de compétence dépasse <H>#1</>, les Dégâts de compétence augmentent de <H>#2</>.",
+    ContentJP = "[探求]の効果中、スキル速度が #1 を超えている場合、スキルダメージが #2 アップする。",
+    ContentKR = "[탐구] 상태 시, 스킬 속도가 <H>#1</>를 초과하면 스킬 대미지가 <H>#2</> 상승한다.",
+    ContentTC = "處於[求索]效果時，若技能速度大於<H>#1</>，技能傷害提高<H>#2</>。",
+    TextMapContent = "处于[求索]效果时，若技能速度大于<H>#1</>，技能伤害提高<H>#2</>。",
+    TextMapId = "SKILL_10199_06_DESC"
+  },
+  SKILL_10199_06_Name = {
+    ContentEN = "Endless – Answer",
+    ContentFR = "Insoluble – Réponse",
+    ContentJP = "解なき問い・応答",
+    ContentKR = "불가해·응답",
+    ContentTC = "無解·答覆",
+    TextMapContent = "无解·答复",
+    TextMapId = "SKILL_10199_06_Name"
+  },
+  SKILL_10199_07_DESC = {
+    ContentEN = "While under [Inquiry], if Skill Speed exceeds <H>#1</>, Skill DMG PEN +<H>#2</>.",
+    ContentFR = "Sous l’effet de [Recherche], si votre Vitesse de compétence dépasse <H>#1</>, la Pénétration de compétence augmente de <H>#2</>.",
+    ContentJP = "[探求]の効果中、スキル速度が #1 を超えている場合、スキル貫通が #2 アップする。",
+    ContentKR = "[탐구] 상태 시, 스킬 속도가 <H>#1</>를 초과하면 스킬 관통이 <H>#2</> 상승한다.",
+    ContentTC = "處於[求索]效果時，若技能速度大於<H>#1</>，造成技能傷害時無視目標<H>#2</>防禦",
+    TextMapContent = "处于[求索]效果时，若技能速度大于<H>#1</>，造成技能伤害时无视目标<H>#2</>防御",
+    TextMapId = "SKILL_10199_07_DESC"
+  },
+  SKILL_10199_07_Name = {
+    ContentEN = "Enigma – Attest",
+    ContentFR = "Énigme – Preuve",
+    ContentJP = "謎・証明",
+    ContentKR = "난제·증명",
+    ContentTC = "謎題·證明",
+    TextMapContent = "谜题·证明",
+    TextMapId = "SKILL_10199_07_Name"
+  },
+  SKILL_10199_08_Name = {
+    ContentEN = "Endless – Pierce",
+    ContentFR = "Insoluble – Perforation",
+    ContentJP = "解なき問い・ペネトレーション",
+    ContentKR = "불가해·관통",
+    ContentTC = "無解·穿透",
+    TextMapContent = "无解·穿透",
+    TextMapId = "SKILL_10199_08_Name"
+  },
+  SKILL_10199_09_Name = {
+    ContentEN = "Enigma – Morale",
+    ContentFR = "Énigme – Vigueur",
+    ContentJP = "謎・ハイスピリット",
+    ContentKR = "난제·격양",
+    ContentTC = "謎題·昂揚",
+    TextMapContent = "谜题·昂扬",
+    TextMapId = "SKILL_10199_09_Name"
+  },
+  SKILL_10199_10_DESC = {
+    ContentEN = "Additional Skill DMG of own element +<H>#1</>.\nWhen [Inquiry] reaches max stacks: Dealing Skill DMG also deals <H>#3</> Calamity DMG to enemies within <H>#2</>m of the target. This counts as Skill DMG and increases by [Skill Intensity × Skill Speed − 100]%. This effect can trigger at most once every <H>#4</>s.",
+    ContentFR = "Dégâts de compétence supplémentaires de votre attribut +<H>#1</>.\nLorsque [Recherche] atteint le nombre maximal de cumuls, vous obtenez également l’effet suivant : lorsque vous infligez des Dégâts de compétence, <H>#3</> dégâts de calamité sont infligés aux ennemis dans un rayon de <H>#2</> m autour de la cible. Ces dégâts sont considérés comme des Dégâts de compétence et augmentent en fonction de la Puissance de compétence et de la Vitesse de compétence du personnage, selon le multiplicateur [Puissance de compétence × Vitesse de compétence - 100 %]. Cet effet peut se déclencher au maximum une fois toutes les <H>#4</> s.",
+    ContentJP = "自身と同じ属性のスキル追加ダメージ+ <H>#1</> 。\n[探求]が最大スタックに達すると追加効果を獲得：スキルダメージ発生時、対象の半径 <H>#2</> m以内の敵に <H>#3</> の災厄ダメージを与える。スキルダメージとして扱われ、このダメージはキャラクターのスキル威力とスキル速度に応じて増加する。増加倍率は[スキル威力属性値×スキル速度属性値-100%]。<H>#4</> 秒ごとに最大1回発動する。",
+    ContentKR = "자체 속성 스킬 추가 대미지+<H>#1</>.\n[탐구] 최대 중첩 단계 도달 시 추가 효과를 획득한다. 스킬 대미지 발동 시 대상 반경 <H>#2</>m 내의 적에게 재앙 대미지를 <H>#3</> 입힌다. 해당 대미지는 스킬 대미지로 간주되며, 캐릭터의 스킬 위력과 스킬 속도에 따라 상승한다. 상승 배율은 [스킬 위력 속성치×스킬 속도-100]%이며, <H>#4</>초마다 최대 1회 발동한다.",
+    ContentTC = "自屬性技能追加傷害+<H>#1</>。\n[求索]滿層時額外獲得效果：技能傷害觸發時，對目標半徑<H>#2</>米內的敵人造成<H>#3</>災厄傷害，視為技能傷害，該傷害基於角色技能速度提高，提高倍率為[技能速度屬性值-100%]，每<H>#4</>秒最多觸發1次。",
+    TextMapContent = "自属性技能追加伤害+<H>#1</>。\n[求索]满层时额外获得效果：技能伤害触发时，对目标半径<H>#2</>米内的敌人造成<H>#3</>灾厄伤害，视为技能伤害，该伤害基于角色技能速度提高，提高倍率为[技能速度属性值-100%]，每<H>#4</>秒最多触发1次。",
+    TextMapId = "SKILL_10199_10_DESC"
+  },
+  SKILL_10199_10_Name = {
+    ContentEN = "Endless – Truth",
+    ContentFR = "Insoluble – Vérité",
+    ContentJP = "解なき問い・真相",
+    ContentKR = "불가해·진실",
+    ContentTC = "無解·真相",
+    TextMapContent = "无解·真相",
+    TextMapId = "SKILL_10199_10_Name"
   },
   SKILL_10201_DESC = {
     ContentEN = "Skill Range +<H>#1</>. Each hit of Normal Attack with this weapon grants a <H>#2</> ATK Speed Increase for <H>#3</>s (up to <H>#4</> stacks). Effect is removed when switching weapons.",
@@ -138648,12 +140851,12 @@ At <H>#4</> stacks of [Invocation], additionally gain [Awakening]: Weapon Trigge
     TextMapId = "SKILL_10304_DESC"
   },
   SKILL_10305_DESC = {
-    ContentEN = "Trigger Probability +<H>#1</>. When damage dealt with this weapon triggers a bonus effect, there is a <H>#2</> chance to restore <H>5</> rounds of ammo.",
-    ContentFR = "Chance de déclenchement +<H>#1</>. Lorsque cette arme déclenche un effet supplémentaire, elle a <H>#2</> de chances de récupérer <H>5</> projectiles.",
+    ContentEN = "Stance Reduction +<H>#1</>. Dealing CRIT Damage with this weapon grants +<H>#2</> ATK Speed and +<H>#3</>Charge Speed for <H>#4</>s. This effect is removed when switching weapons.",
+    ContentFR = "Réduction de posture +<H>#1</>. Lorsque cette arme inflige un coup critique, la Vitesse d’attaque augmente de <H>#2</> et la Vitesse d’attaque chargée augmente de <H>#3</> pendant <H>#4</> s. L’effet est annulé lors du changement d’arme.",
     ContentJP = "発動確率+<H>#1</>。この武器によるダメージで追加効果が発動した時、<H>#2</>の確率で<H>5</>発の弾薬を回復する。",
-    ContentKR = "발동 확률+<H>#1</>. 해당 무기로 대미지를 입혀 추가 효과 발동 시, <H>#2</> 확률로 탄약을 <H>5</>발 회복한다.",
-    ContentTC = "觸發概率+<H>#1</>。使用此武器造成的傷害觸發額外效果時，有<H>#2</>概率回復<H>5</>枚彈藥。",
-    TextMapContent = "触发概率+<H>#1</>。使用此武器造成的伤害触发额外效果时，有<H>#2</>概率回复<H>5</>枚弹药。",
+    ContentKR = "전투 태세 약화 능력+<H>#1</>. 해당 무기로 입힌 대미지가 크리티컬 발동 시, 공격 속도가 <H>#2</>, 차지 공격 속도가 <H>#3</> 상승한다. 지속 시간 <H>#4</>초. 다른 무기로 전환 시 효과가 사라진다.",
+    ContentTC = "戰姿削減能力+<H>#1</>。使用此武器造成的傷害暴擊時，攻擊速度提升<H>#2</>、蓄力速度提升<H>#3</>，持續<H>#4</>秒。切換至其他武器時，失去效果。",
+    TextMapContent = "战姿削减能力+<H>#1</>。使用此武器造成的伤害暴击时，攻击速度提升<H>#2</>、蓄力速度提升<H>#3</>，持续<H>#4</>秒。切换至其他武器时，失去效果。",
     TextMapId = "SKILL_10305_DESC"
   },
   SKILL_10399_01_DESC = {
@@ -138857,12 +141060,12 @@ When Calamity reaches its cap, all Calamity is consumed to trigger [Flame-Wreath
     TextMapId = "SKILL_10403_DESC"
   },
   SKILL_10404_DESC = {
-    ContentEN = "ATK Range +<H>#1</>. Charged Attacks with this weapon have a <H>#2</> chance not to consume Combo Points.",
-    ContentFR = "Portée d’attaque +<H>#1</>. Lors d’une Attaque chargée avec cette arme, <H>#2</> de chances de ne pas consommer de points de Combo.",
+    ContentEN = "CRIT Chance +<H>#1</>. Performing a Charged Attack with this weapon refunds <H>#2</> of consumed Combo Points.",
+    ContentFR = "Taux CRIT +<H>#1</>. Lors d’une Attaque chargée avec cette arme, restitue <H>#2</> des points de Combo consommés.",
     ContentJP = "攻撃範囲+<H>#1</>。この武器で溜め攻撃を行う時、<H>#2</>の確率でコンボポイントを消費しない。",
-    ContentKR = "공격 범위+<H>#1</>.\n무기로 차지 공격을 시전할 시, <H>#2</> 확률로 콤보 포인트를 소모하지 않는다.",
-    ContentTC = "攻擊範圍+<H>#1</>。使用此武器進行蓄力攻擊時，有<H>#2</>概率不消耗連擊點數。",
-    TextMapContent = "攻击范围+<H>#1</>。使用此武器进行蓄力攻击时，有<H>#2</>概率不消耗连击点数。",
+    ContentKR = "크리티컬 확률+<H>#1</>. 해당 무기로 차지 공격 시, 소모한 콤보 포인트를 <H>#2</> 돌려받는다.",
+    ContentTC = "暴擊率+<H>#1</>。使用此武器進行蓄力攻擊時，返還<H>#2</>消耗的連擊點數。",
+    TextMapContent = "暴击率+<H>#1</>。使用此武器进行蓄力攻击时，返还<H>#2</>消耗的连击点数。",
     TextMapId = "SKILL_10404_DESC"
   },
   SKILL_10405_DESC = {
@@ -140043,7 +142246,7 @@ Consuming Element Disruption matching the character's element causes <H>#2</> ex
   },
   SKILL_20299_08_Name = {
     ContentEN = "Bloodstain: Piercing",
-    ContentFR = "Sanguine – Pénétration",
+    ContentFR = "Sanguine – Perforation",
     ContentJP = "ブラッディ・ペネトレーション",
     ContentKR = "핏빛·관통",
     ContentTC = "血染·穿透",
@@ -140114,6 +142317,15 @@ This effect is removed when switching to another weapon.]],
     ContentTC = "攻擊速度+<H>#1</>。使用此武器攻擊觸發額外效果時，獲得1層攻擊速度提高<H>#2</>，持續<H>#3</>秒，最多疊加<H>#4</>層。切換至其他武器時，失去效果。",
     TextMapContent = "攻击速度+<H>#1</>。使用此武器攻击触发额外效果时，获得1层攻击速度提高<H>#2</>，持续<H>#3</>秒，最多叠加<H>#4</>层。切换至其他武器时，失去效果。",
     TextMapId = "SKILL_20305_DESC"
+  },
+  SKILL_20306_DESC = {
+    ContentEN = "CRIT Damage +<H>#1</>. Shooting by an Electro character grants +<H>#2</> Skill Intensity. This effect is removed upon exiting Shooting or charging a Ranged Weapon.",
+    ContentFR = "DGT CRIT +<H>#1</>. Lorsqu’un personnage Électro tire, il obtient un effet augmentant la Puissance de compétence de <H>#2</>. Cet effet est retiré lorsqu’il cesse de tirer ou prépare une attaque chargée avec une arme à distance.",
+    ContentJP = "クリティカルダメージ+ #1 。雷属性のキャラクターが射撃すると、自身のスキル威力が #2 アップする。射撃を終了するか、遠隔武器のチャージを行うと解除される。",
+    ContentKR = "크리티컬 대미지+<H>#1</>. 번개 속성 캐릭터가 사격 시 스킬 위력 <H>#2</> 상승 효과를 획득한다. 사격을 종료하거나 원거리 무기를 차지하면 효과가 해제된다.",
+    ContentTC = "暴擊傷害+<H>#1</>。雷屬性角色射擊時，自身獲得技能威力提高<H>#2</>，退出射擊或遠端武器蓄力時清除。",
+    TextMapContent = "暴击伤害+<H>#1</>。雷属性角色射击时，自身获得技能威力提高<H>#2</>，退出射击或远程武器蓄力时清除。",
+    TextMapId = "SKILL_20306_DESC"
   },
   SKILL_20401_DESC = {
     ContentEN = "Skill Duration +<H>#1</>.",
@@ -140206,12 +142418,12 @@ This effect is removed when switching to another weapon.]],
     TextMapId = "SKILL_20504_DESC"
   },
   SKILL_20505_DESC = {
-    ContentEN = "Mag Capacity +<H>#1</>. After firing 10 rounds, the weapon consumes all remaining rounds in the magazine to fire a special round that deals AoE DMG. For each round consumed, this damage increases by <H>#2</>, up to <H>#3</>. Defeating an enemy with this weapon has a <H>#4</> chance to restore 1 round.",
-    ContentFR = "Capacité du chargeur +<H>#1</>. Après avoir consommé 10 munitions en tirant avec cette arme, toutes les munitions restantes du chargeur sont consommées pour tirer 1 projectile spécial infligeant des Dégâts de zone. Chaque munition consommée augmente les dégâts de ce tir de <H>#2</>, jusqu’à un maximum de <H>#3</>. Vaincre un ennemi avec cette arme a <H>#4</> de chances d’obtenir 1 munition.",
+    ContentEN = "Mag Capacity +<H>#1</>. After firing 10 rounds, the weapon consumes all remaining rounds in the magazine to fire a special round that deals AoE DMG. For each round consumed, this damage increases by <H>#2</>, up to <H>#3</>. Hitting an enemy with the special round grants +<H>#4</> Ranged Weapon DMG for <H>#6</>s, stacking up to <H>#5</> times.",
+    ContentFR = "Capacité du chargeur +<H>#1</>. Après avoir consommé 10 munitions en tirant avec cette arme, toutes les munitions restantes du chargeur sont consommées pour tirer 1 projectile spécial infligeant des dégâts de zone. Chaque munition consommée augmente les dégâts de ce tir de <H>#2</>, jusqu’à un maximum de <H>#3</>. Lorsque le projectile spécial touche, vous obtenez un effet augmentant les DGT d’arme à distance de <H>#4</> pendant <H>#6</> s, cumulable jusqu’à <H>#5</> fois.",
     ContentJP = "弾倉容量+<H>#1</>。この武器で射撃して弾薬を10発消費すると、弾倉内の残弾をすべて消費して特殊弾を1発発射し、範囲ダメージを与える。消費した弾薬1発ごとに今回のダメージが<H>#2</>上昇し、最大<H>#3</>まで上昇。さらに、この武器で敵を撃破すると、<H>#4</>の確率で弾薬を1発獲得する。",
-    ContentKR = "탄창 용량+<H>#1</>. 해당 무기로 사격하여 탄환 10발 소모 후, 탄창의 남은 탄환을 전부 소모해 특수 탄환 1개를 발사하여 범위 대미지를 입힌다. 탄환을 1개 소모할 때마다 이번 대미지가 <H>#2</> 상승한다. 최대 <H>#3</> 상승. 해당 무기를 사용하여 적 처치 시, <H>#4</> 확률로 탄환을 1개 획득한다.",
-    ContentTC = "彈匣容量+<H>#1</>。使用此武器射擊消耗10枚彈藥後，消耗彈夾內的所有剩餘彈藥，發射1枚特殊子彈造成範圍傷害，每消耗1枚彈藥令此次傷害提高<H>#2</>，最大提高<H>#3</>。使用此武器擊敗敵人時，有<H>#4</>概率獲得1枚子彈。",
-    TextMapContent = "弹匣容量+<H>#1</>。使用此武器射击消耗10枚弹药后，消耗弹夹内的所有剩余弹药，发射1枚特殊子弹造成范围伤害，每消耗1枚弹药令此次伤害提高<H>#2</>，最大提高<H>#3</>。使用此武器击败敌人时，有<H>#4</>概率获得1枚子弹。",
+    ContentKR = "탄창 용량+<H>#1</>. 해당 무기로 사격하여 탄환 10발 소모 후, 탄창의 남은 탄환을 전부 소모해 특수 탄환 1개를 발사하여 범위 대미지를 입힌다. 탄환을 1개 소모할 때마다 이번 대미지가 <H>#2</> 상승한다. 최대 <H>#3</> 상승. 특수 탄환 적중 시 원거리 무기 대미지 <H>#4</> 상승 효과를 1단계 획득한다. 지속 시간 <H>#6</>초, 최대 <H>#5</>단계 중첩.",
+    ContentTC = "彈匣容量+<H>#1</>。使用此武器射擊消耗10枚彈藥後，消耗彈夾內的所有剩餘彈藥，發射1枚特殊子彈造成範圍傷害，每消耗1枚彈藥令此次傷害提高<H>#2</>，最大提高<H>#3</>。特殊子彈命中時，自身獲得遠端武器傷害提升<H>#4</>，最多可疊加<H>#5</>層，持續<H>#6</>秒。",
+    TextMapContent = "弹匣容量+<H>#1</>。使用此武器射击消耗10枚弹药后，消耗弹夹内的所有剩余弹药，发射1枚特殊子弹造成范围伤害，每消耗1枚弹药令此次伤害提高<H>#2</>，最大提高<H>#3</>。特殊子弹命中时，自身获得远程武器伤害提升<H>#4</>，最多可叠加<H>#5</>层，持续<H>#6</>秒。",
     TextMapId = "SKILL_20505_DESC"
   },
   SKILL_20506_DESC = {
@@ -140251,12 +142463,12 @@ This effect is removed when switching to another weapon.]],
     TextMapId = "SKILL_20510_DESC"
   },
   SKILL_20511_DESC = {
-    ContentEN = "Reload Speed +<H>#1</>. After reloading, ATK Speed increases by <H>#2</> for <H>#3</>s. This effect is removed when switching weapons.",
-    ContentFR = "Vitesse de rechargement +<H>#1</>. Après avoir rechargé, la Vitesse d’attaque augmente de <H>#2</> pendant <H>#3</> s. L’effet est annulé lors du changement d’arme.",
+    ContentEN = "Trigger Probability +<H>#1</>. Hitting an enemy with this weapon increases the DMG they take from this weapon by <H>#2</>, stacking up to <H>#3</> times.",
+    ContentFR = "Chance de déclenchement +<H>#1</>. Après avoir touché une cible, les dégâts que cette arme lui inflige augmentent de <H>#2</>, cumulable jusqu’à <H>#3</> fois.",
     ContentJP = "弾丸装填速度+<H>#1</>。弾を装填すると、<H>#3</>秒間攻撃速度が<H>#2</>アップする。他の武器に切り替えると効果は失われる。",
-    ContentKR = "탄환 장전 속도+<H>#1</>. 탄환 장전 후 공격 속도가 <H>#2</> 상승한다. 지속 시간 <H>#3</>초. 다른 무기로 전환 시 효과가 사라진다.",
-    ContentTC = "子彈裝填速度+<H>#1</>。裝填子彈後，攻擊速度提高<H>#2</>，持續<H>#3</>秒。切換至其他武器時，失去效果。",
-    TextMapContent = "子弹装填速度+<H>#1</>。装填子弹后，攻击速度提高<H>#2</>，持续<H>#3</>秒。切换至其他武器时，失去效果。",
+    ContentKR = "발동 확률+<H>#1</>. 대상 명중 후, 해당 대상이 이 무기로 받는 대미지가 <H>#2</> 상승한다. 최대 <H>#3</>단계 중첩.",
+    ContentTC = "觸發概率+<H>#1</>。命中目標後，使其受到此武器傷害提升<H>#2</>，最多疊加<H>#3</>層。",
+    TextMapContent = "触发概率+<H>#1</>。命中目标后，使其受到此武器伤害提升<H>#2</>，最多叠加<H>#3</>层。",
     TextMapId = "SKILL_20511_DESC"
   },
   SKILL_20512_DESC = {
@@ -141722,6 +143934,89 @@ When consuming [Talisman] after using [Thunder's Oracle Peal], [Myriad Things Th
     TextMapContent = "相生",
     TextMapId = "SKILL_410204_NAME"
   },
+  SKILL_410205_DESC = {
+    ContentEN = "Consecutively using the same Combat Skill or Ultimate Skill grants 1 stack of [Hexagram]. Each stack grants +#1 Skill Speed and causes Skill DMG to ignore #2 of the target's DEF for #6s, stacking up to #3 times.\nAt max [Hexagram] stacks, the duration of [Four Realms Align] is paused. [Zhen-Xun Convergence] consumes #4 stacks of [Electro Disruption] from the target when dealing damage to increase its DMG multiplier by [#5 × Overflow Intensity].",
+    ContentFR = "Lorsque vous utilisez plusieurs fois de suite la même Compétence de combat ou Compétence ultime, vous obtenez 1 cumul d’[Hexagramme]. Chaque cumul augmente votre Vitesse de compétence de #1 et permet aux Dégâts de compétence d’ignorer #2 de la DÉF de la cible pendant #6 s, jusqu’à #3 cumuls.\nLorsque [Hexagramme] atteint le nombre maximal de cumuls, la durée du champ d’[Harmonie des Quatre Royaumes] est suspendue. Lorsque [Convergence Zhen-Xun] inflige des dégâts, elle consomme #4 cumuls de [Désordre Électro] de la cible pour augmenter son multiplicateur de dégâts de [#5 × Puissance de Surabondance].",
+    ContentJP = "同じバトルスキルまたは必殺技を連続して発動すると、「卦象」を1スタック獲得する。1スタックにつき自身のスキル速度＋#1、スキルダメージを与える際に対象の#2防御を無視する。#6秒間持続し、最大#3スタック。\n「卦象」が最大スタックに達すると、「雷鳴招来」領域の持続時間が停止する。「雷風相和」がダメージを与える際、対象の「雷属性乱調」を#4スタック消費することで、ダメージ倍率が「#5×チャージ威力」増加する。",
+    ContentKR = "동일한 전투 스킬 또는 종결 스킬을 연속으로 시전할 때마다 [괘의 상] 1단계를 획득한다. [괘의 상] 1단계마다 스킬 속도가 #1 상승하고, 스킬 대미지를 입힐 시 대상의 #2 방어를 무시한다. 지속 시간 #6초, 최대 #3단계 중첩.\n[괘의 상]이 최대 중첩 단계에 도달하면 [사방으로 부는 번개 바람] 영역의 지속 시간이 중단된다. [번개 바람의 만남]이 대미지를 입힐 때 대상의 [번개 속성 혼돈] #4단계를 소모하면 대미지 배율이 [#5×오버차지 위력]만큼 증가한다.",
+    ContentTC = "連續釋放相同的戰技或終結技時，獲得1層[卦象]，每層使自身技能速度提高#1，造成技能傷害時無視目標#2防禦，持續#6秒，最多疊加#3層。\n[卦象]滿層時，[雷風齊四方]領域持續時間暫停，[雷風相與]造成傷害時，消耗目標#4層[雷屬性紊亂]使傷害倍率增加[#5×充盈威力]。",
+    TextMapContent = "连续释放相同的战技或终结技时，获得1层[卦象]，每层使自身技能速度提高#1，造成技能伤害时无视目标#2防御，持续#6秒，最多叠加#3层。\n[卦象]满层时，[雷风齐四方]领域持续时间暂停，[雷风相与]造成伤害时，消耗目标#4层[雷属性紊乱]使伤害倍率增加[#5×充盈威力]。",
+    TextMapId = "SKILL_410205_DESC"
+  },
+  SKILL_410301_DESC = {
+    ContentEN = "Uses [Arcshot] to deal Electro Damage to enemies in front and gains [Tactical Reload].",
+    ContentFR = "Utilise le [Fusil de précision] pour infliger des dégâts Électro aux ennemis dans la zone devant vous et obtient [Rechargement tactique].",
+    ContentJP = "[狙撃銃]で前方範囲内の敵に雷属性ダメージを与え、[戦術装填]を獲得する。",
+    ContentKR = "[저격총]으로 전방 범위 내의 적에게 번개 속성 대미지를 입히고 [전술 장전]을 획득한다.",
+    ContentTC = "使用[狙擊槍]對面前範圍內的敵人造成雷屬性傷害，並獲得[戰術裝填]。",
+    TextMapContent = "使用[狙击枪]对面前范围内的敌人造成雷属性伤害，并获得[战术装填]。",
+    TextMapId = "SKILL_410301_DESC"
+  },
+  SKILL_410301_NAME = {
+    ContentEN = "Surge Strike",
+    ContentFR = "Tir fulgurant",
+    ContentJP = "バースト射撃",
+    ContentKR = "전광 일격",
+    ContentTC = "迸發射擊",
+    TextMapContent = "迸发射击",
+    TextMapId = "SKILL_410301_NAME"
+  },
+  SKILL_410302_DESC = {
+    ContentEN = [[
+Summons 2 [Volt Rifles], switches the Ranged Weapon to [Arcshot], and enters [Deadeye Domain], during which shooting consumes Sanity. [Deadeye Domain] ends when this skill is used again or a Ranged Attack is used.
+[Deadeye Domain] grants 1 stack of [Steady Aim] every #1s.]],
+    ContentFR = "Invoque 2 [Fusils électriques], remplace l’arme à distance par le [Fusil de précision] et entre en [Mode sniper], durant lequel les tirs consomment de la Lucidité. Quitte le [Mode sniper] lorsque cette compétence est utilisée à nouveau ou lorsqu’une attaque à distance est utilisée.\nPendant le [Mode sniper], obtient 1 cumul de [Concentration] toutes les #1 s.",
+    ContentJP = "[電流ライフル]を2挺召喚し、遠隔武器を[狙撃銃]に切り替えて[狙撃モード]に入る。SPを消費して射撃でき、このスキルを再度使用するか、遠隔攻撃を行うと[狙撃モード]が解除される。\n[狙撃モード]中は#1秒ごとに[集中]を1スタック獲得する。",
+    ContentKR = "2개의 [전류 소총]을 소환해 원거리 무기를 [저격총]으로 전환하고 [저격 모드]에 진입한다. [저격 모드] 중에는 정신력을 소모해 사격할 수 있으며, 해당 스킬을 다시 사용하거나 원거리 공격을 사용하면 [저격 모드]가 종료된다.\n[저격 모드] 중에는 #1초마다 [집중] 1단계를 획득한다.",
+    ContentTC = "召喚2把[電流步槍]，將遠端武器切換為[狙擊槍]並進入[狙擊模式]，可消耗神智進行射擊，再次使用此技能、使用遠程攻擊時退出[狙擊模式]。\n[狙擊模式]期間每#1秒獲得1層[專注]。",
+    TextMapContent = "召唤2把[电流步枪]，将远程武器切换为[狙击枪]并进入[狙击模式]，可消耗神智进行射击，再次使用此技能、使用远程攻击时退出[狙击模式]。\n[狙击模式]期间每#1秒获得1层[专注]。",
+    TextMapId = "SKILL_410302_DESC"
+  },
+  SKILL_410302_NAME = {
+    ContentEN = "Vortex Shot",
+    ContentFR = "Tir vortex",
+    ContentJP = "渦流狙撃",
+    ContentKR = "와전류 저격",
+    ContentTC = "渦流狙擊",
+    TextMapContent = "涡流狙击",
+    TextMapId = "SKILL_410302_NAME"
+  },
+  SKILL_410303_DESC = {
+    ContentEN = "DMG dealt with [Electrified Sniper Bullet] consumes 1 stack of [Electro Disruption] and grants 1 stack of [Arc Mastery], up to {int}#1 stacks.",
+    ContentFR = "Lorsque [Balle de précision renforcée] inflige des dégâts, consomme 1 cumul de [Désordre Électro] et obtient 1 cumul de [Maîtrise du courant], jusqu’à {int}#1 cumuls.",
+    ContentJP = "[強化狙撃弾]でダメージを与えると、[雷属性乱調]を1スタック消費し、[電流掌握]を1スタック獲得する。最大{int}#1スタック。",
+    ContentKR = "[강화 저격탄]으로 대미지를 입힐 시 [번개 속성 혼돈] 1단계를 소모하고 [전류 숙달] 1단계를 획득한다. 최대 {int}#1단계 중첩.",
+    ContentTC = "使用[強化狙擊子彈]造成傷害時，消耗1層[雷屬性紊亂]並獲得1層[電流掌握]，最多疊加{int}#1層。",
+    TextMapContent = "使用[强化狙击子弹]造成伤害时，消耗1层[雷属性紊乱]并获得1层[电流掌握]，最多叠加{int}#1层。",
+    TextMapId = "SKILL_410303_DESC"
+  },
+  SKILL_410303_NAME = {
+    ContentEN = "Electro Coordination",
+    ContentFR = "Synergie électrique",
+    ContentJP = "電能連携",
+    ContentKR = "에너지 시너지",
+    ContentTC = "電能協同",
+    TextMapContent = "电能协同",
+    TextMapId = "SKILL_410303_NAME"
+  },
+  SKILL_410304_DESC = {
+    ContentEN = "DMG dealt by [Arcshot] and [Volt Rifle] increases by [Ranged Weapon CRIT Chance × (Ranged Weapon CRIT Damage - 1)]%, with a minimum of 0.",
+    ContentFR = "Les dégâts du [Fusil de précision] et du [Fusil électrique] augmentent selon le multiplicateur [Taux CRIT de l’arme à distance × (DGT CRIT de l’arme à distance - 1)], avec un minimum de 0.",
+    ContentJP = "[狙撃銃]および[電流ライフル]の与えるダメージが増加する。増加倍率は[遠隔武器クリティカル率×（遠隔武器クリティカルダメージ-1）]で、最低0。",
+    ContentKR = "[저격총]와 [전류 소총]이 입히는 대미지가 상승하며, 상승 배율은 [원거리 무기 크리티컬 확률×(원거리 무기 크리티컬 대미지-1)]로 적용되고, 최저치는 0이다.",
+    ContentTC = "[狙擊槍]和[電流步槍]造成的傷害提高，提高倍率為[遠端武器暴擊率×（遠端武器暴擊傷害-1）]，最低為0。",
+    TextMapContent = "[狙击枪]和[电流步枪]造成的伤害提高，提高倍率为[远程武器暴击率×（远程武器暴击伤害-1）]，最低为0。",
+    TextMapId = "SKILL_410304_DESC"
+  },
+  SKILL_410304_NAME = {
+    ContentEN = "Honed Technique",
+    ContentFR = "Perfectionnement technique",
+    ContentJP = "技術鍛錬",
+    ContentKR = "기술 연마",
+    ContentTC = "技術磨鍊",
+    TextMapContent = "技术磨炼",
+    TextMapId = "SKILL_410304_NAME"
+  },
   SKILL_420101_DESC = {
     ContentEN = [[
 Yuming leaps into the air, and the next Plunging Attack is replaced with [Starlight Descent]. Using this skill in [Xuanjiao Manifest] state grants Yuming 1 [Reverse Scale].
@@ -141797,6 +144092,19 @@ While active, applies [Thunderous Onslaught] to nearby enemies.]],
     ContentTC = "聽驚雷",
     TextMapContent = "听惊雷",
     TextMapId = "SKILL_420104_NAME"
+  },
+  SKILL_420105_DESC = {
+    ContentEN = [[
+Using [Starstorm Descent] grants Yuming and allies stacks of [Xuanjiao's Blessing] equal to the number of Electro characters in the team, lasting #1s, up to #2 stacks. Each application resets the stack count.
+Each stack of [Xuanjiao's Blessing] grants +#3 Morale and +#4 Electro DMG Dealt.
+At 2 or more stacks, grants +#5 PEN stats.
+At 3 stacks, Xuanjiao absorbs HP damage taken by allied characters other than [Yuming].]],
+    ContentFR = "Lors de l’utilisation de [Fracas astral], applique à Yuming et à ses alliés un nombre de cumuls de [Protection de Xuanjiao] égal au <H>nombre de personnages Électro dans l’équipe</>, pendant #1 s, jusqu’à #2 cumuls. Chaque application réinitialise le nombre de cumuls.\nChaque cumul de [Protection de Xuanjiao] augmente la Vigueur de #3 et les Dégâts Électro infligés de #4.\nÀ 2 cumuls ou plus, la Pénétration de tous les attributs augmente de #5.\nÀ 3 cumuls, lorsque des alliés autres que [Yuming] subissent des dégâts affectant leurs PV, Xuanjiao peut absorber ces dégâts.",
+    ContentJP = "「星川凋零」を発動すると、<H>チーム内の雷属性キャラクター数</>に応じて、自身と味方に同じスタック数の「ミズチの加護」を付与する。#1秒間持続し、最大#2スタック。付与するたびにスタック数をリセットする。\n1スタックの「ミズチの加護」につき高揚＋#3、雷属性ダメージ＋#4。\n2スタック以上になると、全属性貫通＋#5。\n3スタックになると、「ユーミン」を除く味方キャラクターがHPダメージを受けた際、ミズチがそのダメージを吸収する。",
+    ContentKR = "[적막한 은하수] 시전 시 <H>파티 내 번개 속성 캐릭터 수</>만큼 자신과 팀원에게 [현교의 가호]를 중첩한다. 지속 시간 #1초, 최대 #2단계 중첩. 다시 부여할 때마다 중첩 단계가 초기화된다.\n[현교의 가호] 1단계마다 격양이 #3 상승하고, 입히는 번개 속성 대미지가 #4 상승한다.\n2단계 이상이면 모든 속성 관통이 #5 상승한다.\n3단계일 때 [욱명]을 제외한 아군 캐릭터가 HP 대미지를 받으면 현교가 해당 대미지를 흡수한다.",
+    ContentTC = "釋放[星河寥落]時基於<H>隊內雷屬性角色數量</>，為自身和隊友附加相等層數的[玄蛟庇佑]，持續#1秒，最多疊加#2層，每次附加時重置層數。\n每層[玄蛟庇佑]使昂揚提高#3，造成雷屬性傷害提高#4；\n2層或以上時，全屬性穿透提高#5；\n3層時，[煜明]以外的友方角色受到的生命值傷害時，玄蛟能吸收該次傷害。",
+    TextMapContent = "释放[星河寥落]时基于<H>队内雷属性角色数量</>，为自身和队友附加相等层数的[玄蛟庇佑]，持续#1秒，最多叠加#2层，每次附加时重置层数。\n每层[玄蛟庇佑]使昂扬提高#3，造成雷属性伤害提高#4；\n2层或以上时，全属性穿透提高#5；\n3层时，[煜明]以外的友方角色受到的生命值伤害时，玄蛟能吸收该次伤害。",
+    TextMapId = "SKILL_420105_DESC"
   },
   SKILL_420191_DESC = {
     ContentEN = [[
@@ -142343,6 +144651,43 @@ Daphne can hold up to 30 [Azoth Projectiles], and each ranged weapon attack cons
     ContentTC = "銀淚銷蝕",
     TextMapContent = "银泪销蚀",
     TextMapId = "SKILL_540104_NAME"
+  },
+  SKILL_540201_DESC = {
+    TextMapContent = "(待包装)\n进入[颂歌]状态，获得飞行能力。[颂歌]状态中持续消耗神智，自身和队友造成的伤害提高，近战攻击与远程攻击被替换为[弹奏]，神智下降为0或再次使用此技能时退出[颂歌]状态。",
+    TextMapId = "SKILL_540201_DESC"
+  },
+  SKILL_540201_NAME = {
+    TextMapContent = "风起之颂(待包装)",
+    TextMapId = "SKILL_540201_NAME"
+  },
+  SKILL_540202_DESC = {
+    TextMapContent = "(待包装)\n生成持续跟随自身一定时间的[风之回响]，进入[齐颂之诗]及[颂歌]状态。[风之回响]存在期间，长按释放此技能时会重新生成[风之回响]。",
+    TextMapId = "SKILL_540202_DESC"
+  },
+  SKILL_540202_NAME = {
+    TextMapContent = "风声共鸣(待包装)",
+    TextMapId = "SKILL_540202_NAME"
+  },
+  SKILL_540203_DESC = {
+    TextMapContent = "(待包装)\n根据持有的[传颂值]提高自身充盈威力，[传颂值]最高{int}#1点。每累计增加{int}#2点[传颂值]，下次[弹奏]消耗累计值触发1次[传颂之诗]，造成风属性范围充盈伤害，对自身和队友提供治疗。\n造成技能伤害时可以基于远程武器触发概率触发风属性额外效果。",
+    TextMapId = "SKILL_540203_DESC"
+  },
+  SKILL_540203_NAME = {
+    TextMapContent = "流传(待包装)",
+    TextMapId = "SKILL_540203_NAME"
+  },
+  SKILL_540204_DESC = {
+    ContentEN = "Healing an ally additionally grants +Overflow Intensity for {int}#1s equal to #2 of [Lirico]'s Overflow Intensity, up to #3.",
+    ContentFR = "Lorsque Lirico soigne une cible alliée, elle applique en plus un effet augmentant la Puissance de Surabondance pendant {int}#1 s. Sa valeur correspond à #2 de la Puissance de Surabondance de [Lirico], sans dépasser #3.",
+    ContentJP = "味方に回復効果を付与すると、追加でチャージ威力アップ効果を付与する。{int}#1秒間持続する。アップ量は「リリコ」のチャージ威力の#2で、最大#3を超えない。",
+    ContentKR = "아군 대상을 치료할 시 {int}#1초 동안 오버차지 위력 증가 효과를 추가로 부여한다. 상승 수치는 [리리코] 오버차지 위력의 #2이며, 최대 #3까지 적용된다.",
+    ContentTC = "對友方目標造成治療時，額外附加充盈威力提高效果，持續{int}#1秒；數值為[莉莉蔻]充盈威力的#2，最高不超過#3。",
+    TextMapContent = "对友方目标造成治疗时，额外附加充盈威力提高效果，持续{int}#1秒；数值为[莉莉蔻]充盈威力的#2，最高不超过#3。",
+    TextMapId = "SKILL_540204_DESC"
+  },
+  SKILL_540204_NAME = {
+    TextMapContent = "奋起(待包装)",
+    TextMapId = "SKILL_540204_NAME"
   },
   SKILL_DESC_1101WaveDamage1 = {
     ContentEN = "1-Hit Swordwave DMG",
@@ -144334,6 +146679,69 @@ per stack of [Poison of Love]]=],
     TextMapContent = "[天地明]持续时间",
     TextMapId = "SKILL_DESC_4102Skill02_Sustain03"
   },
+  SKILL_DESC_4103Passive01_Buff01 = {
+    ContentEN = "Sanity Restored by [Arc Mastery]",
+    ContentFR = "Lucidité restaurée par [Maîtrise du courant]",
+    ContentJP = "[電流掌握]SP回復",
+    ContentKR = "[전류 숙달] 정신력 회복",
+    ContentTC = "[電流掌握]回復神智",
+    TextMapContent = "[电流掌握]回复神智",
+    TextMapId = "SKILL_DESC_4103Passive01_Buff01"
+  },
+  SKILL_DESC_4103Passive01_Buff02 = {
+    ContentEN = "[Arc Mastery] Skill DMG Boost",
+    ContentFR = "Bonus de Dégâts de compétence de [Maîtrise du courant]",
+    ContentJP = "[電流掌握]スキルダメージアップ",
+    ContentKR = "[전류 숙달] 스킬 대미지 상승",
+    ContentTC = "[電流掌握]技能傷害提高",
+    TextMapContent = "[电流掌握]技能伤害提高",
+    TextMapId = "SKILL_DESC_4103Passive01_Buff02"
+  },
+  SKILL_DESC_4103Skill02_Buff01 = {
+    ContentEN = "Skill SPD Bonus per [Steady Aim] Stack",
+    ContentFR = "Bonus de Vitesse de compétence par cumul de [Concentration]",
+    ContentJP = "[集中]1スタックごとのスキル速度アップ",
+    ContentKR = "[집중] 중첩 단계당 스킬 속도 상승",
+    ContentTC = "每層[專注]技能速度提高",
+    TextMapContent = "每层[专注]技能速度提高",
+    TextMapId = "SKILL_DESC_4103Skill02_Buff01"
+  },
+  SKILL_DESC_4103Skill02_Buff02 = {
+    ContentEN = "[Arcshot] Sanity Cost per Shot Reduced per [Steady Aim] Stack",
+    ContentFR = "Réduction du coût en Lucidité des tirs du [Fusil de précision] par cumul de [Concentration]",
+    ContentJP = "[集中]1スタックごとの[狙撃銃]射撃時のSP消費ダウン",
+    ContentKR = "[집중] 중첩 단계당 [저격총]으로 사격 시 정신력 소모 감소",
+    ContentTC = "每層[專注][狙擊槍]射擊神智消耗降低",
+    TextMapContent = "每层[专注][狙击枪]射击神智消耗降低",
+    TextMapId = "SKILL_DESC_4103Skill02_Buff02"
+  },
+  SKILL_DESC_4103Skill02_CostSp = {
+    ContentEN = "[Arcshot] Sanity Cost per Shot",
+    ContentFR = "Coût en Lucidité des tirs du [Fusil de précision]",
+    ContentJP = "[狙撃銃]射撃時のSP消費",
+    ContentKR = "[저격총] 사격 정신력 소모",
+    ContentTC = "[狙擊槍]射擊神智消耗",
+    TextMapContent = "[狙击枪]射击神智消耗",
+    TextMapId = "SKILL_DESC_4103Skill02_CostSp"
+  },
+  SKILL_DESC_4103Skill02_Damage01 = {
+    ContentEN = "[Sniper Bullet] DMG",
+    ContentFR = "Dégâts de [Balle de précision]",
+    ContentJP = "[狙撃弾]ダメージ",
+    ContentKR = "[저격탄] 대미지",
+    ContentTC = "[狙擊子彈]傷害",
+    TextMapContent = "[狙击子弹]伤害",
+    TextMapId = "SKILL_DESC_4103Skill02_Damage01"
+  },
+  SKILL_DESC_4103Skill02_Damage02 = {
+    ContentEN = "[Electrified Sniper Bullet] DMG",
+    ContentFR = "Dégâts de [Balle de précision renforcée]",
+    ContentJP = "[強化狙撃弾]ダメージ",
+    ContentKR = "[강화 저격탄] 대미지",
+    ContentTC = "[強化狙擊子彈]傷害",
+    TextMapContent = "[强化狙击子弹]伤害",
+    TextMapId = "SKILL_DESC_4103Skill02_Damage02"
+  },
   SKILL_DESC_4201DebuffRadius = {
     ContentEN = "[Thunderous Onslaught] Effect Radius",
     ContentFR = "Rayon d’effet de [Fureur foudroyante]",
@@ -144828,6 +147236,87 @@ per stack of [Poison of Love]]=],
     ContentTC = "「腐朽配方」持續時間",
     TextMapContent = "[腐朽配方]持续时间",
     TextMapId = "SKILL_DESC_5401DebuffSustain"
+  },
+  SKILL_DESC_5402_Passive_Buff01 = {
+    ContentEN = "Overflow Intensity Increase (first 100 points)",
+    ContentFR = "Bonus de Puissance de Surabondance (100 premiers points)",
+    ContentJP = "チャージ威力アップ（最初の100ポイント）",
+    ContentKR = "오버차지 위력 상승(100포인트 미만)",
+    ContentTC = "充盈威力提高（前100點）",
+    TextMapContent = "充盈威力提高（前100点）",
+    TextMapId = "SKILL_DESC_5402_Passive_Buff01"
+  },
+  SKILL_DESC_5402_Passive_Buff02 = {
+    ContentEN = "Overflow Intensity Increase (above 100 points)",
+    ContentFR = "Bonus de Puissance de Surabondance (au-delà de 100 points)",
+    ContentJP = "チャージ威力アップ（100ポイント以上）",
+    ContentKR = "오버차지 위력 상승(100포인트 이상)",
+    ContentTC = "充盈威力提高（100點以上）",
+    TextMapContent = "充盈威力提高（100点以上）",
+    TextMapId = "SKILL_DESC_5402_Passive_Buff02"
+  },
+  SKILL_DESC_5402_Passive_Dmg = {
+    ContentEN = "[Verse Retold] DMG",
+    ContentFR = "Dégâts de [Poème transmis]",
+    ContentJP = "「伝承の詩」ダメージ",
+    ContentKR = "[칭송의 시] 대미지",
+    ContentTC = "[傳頌之詩]傷害",
+    TextMapContent = "[传颂之诗]伤害",
+    TextMapId = "SKILL_DESC_5402_Passive_Dmg"
+  },
+  SKILL_DESC_5402_Passive_Radius = {
+    ContentEN = "[Verse Retold] Damage Radius",
+    ContentFR = "Rayon des dégâts de [Poème transmis]",
+    ContentJP = "「伝承の詩」範囲",
+    ContentKR = "[칭송의 시] 대미지 반경",
+    ContentTC = "[傳頌之詩]傷害半徑",
+    TextMapContent = "[传颂之诗]伤害半径",
+    TextMapId = "SKILL_DESC_5402_Passive_Radius"
+  },
+  SKILL_DESC_5402_Skill01_Dmg = {
+    ContentEN = "Homing Projectile DMG",
+    ContentFR = "Dégâts du projectile guidé",
+    ContentJP = "追尾弾ダメージ",
+    ContentKR = "추적탄 대미지",
+    ContentTC = "追蹤彈傷害",
+    TextMapContent = "追踪弹伤害",
+    TextMapId = "SKILL_DESC_5402_Skill01_Dmg"
+  },
+  SKILL_DESC_5402_Skill02_01 = {
+    ContentEN = "Verse in Chorus",
+    ContentFR = "Poème à l’unisson",
+    ContentJP = "斉唱の詩",
+    ContentKR = "합창의 시",
+    ContentTC = "齊頌之詩",
+    TextMapContent = "齐颂之诗",
+    TextMapId = "SKILL_DESC_5402_Skill02_01"
+  },
+  SKILL_DESC_5402_Skill02_02 = {
+    ContentEN = "Verse Interwoven",
+    ContentFR = "Poème entrelacé",
+    ContentJP = "交織の詩",
+    ContentKR = "조화의 시",
+    ContentTC = "交織之詩",
+    TextMapContent = "交织之诗",
+    TextMapId = "SKILL_DESC_5402_Skill02_02"
+  },
+  SKILL_DESC_5402_Skill02_AddTime = {
+    ContentEN = "Extends [Echoes in Wind] Duration",
+    ContentFR = "Prolongation de la durée de [Écho du vent]",
+    ContentJP = "「風の響き」の持続時間を延長する",
+    ContentKR = "[바람의 메아리] 지속 시간 연장",
+    ContentTC = "延長[風之迴響]持續時間",
+    TextMapContent = "延长[风之回响]持续时间",
+    TextMapId = "SKILL_DESC_5402_Skill02_AddTime"
+  },
+  SKILL_DESC_5402_Stage = {
+    ContentEN = "Echoes in Wind",
+    ContentFR = "Écho du vent",
+    ContentJP = "風の響き",
+    ContentKR = "바람의 메아리",
+    ContentTC = "風之迴響",
+    TextMapContent = "风之回响",
+    TextMapId = "SKILL_DESC_5402_Stage"
   },
   SKILL_DESC_ATK = {
     ContentEN = "ATK",
@@ -145396,6 +147885,15 @@ per stack of [Poison of Love]]=],
     TextMapContent = "每层下落攻击伤害提高",
     TextMapId = "SKILL_DESC_FallAttackRateLayer"
   },
+  SKILL_DESC_FlySpeedDown = {
+    ContentEN = "Fly Speed Decrease",
+    ContentFR = "Vitesse de vol réduite",
+    ContentJP = "飛行速度ダウン",
+    ContentKR = "비행 속도 감소",
+    ContentTC = "飛行速度降低",
+    TextMapContent = "飞行速度降低",
+    TextMapId = "SKILL_DESC_FlySpeedDown"
+  },
   SKILL_DESC_GoalDamage = {
     ContentEN = "Endpoint DMG",
     ContentFR = "Dégâts finaux",
@@ -145467,6 +147965,15 @@ per stack of [Poison of Love]]=],
     ContentTC = "每秒持續回復生命值",
     TextMapContent = "每秒持续回复生命值",
     TextMapId = "SKILL_DESC_Hot"
+  },
+  SKILL_DESC_KillEnemy = {
+    ContentEN = "Defeat the enemies",
+    ContentFR = "Ennemi vaincu",
+    ContentJP = "敵をノックダウンする",
+    ContentKR = "적 처치",
+    ContentTC = "擊倒敵人",
+    TextMapContent = "击倒敌人",
+    TextMapId = "SKILL_DESC_KillEnemy"
   },
   SKILL_DESC_MaxEs = {
     ContentEN = "Max Shield",
@@ -146863,6 +149370,15 @@ per stack of [Poison of Love]]=],
     TextMapContent = "长路何所向",
     TextMapId = "SkinGacha_Name_Special_7"
   },
+  SkinGacha_Name_Special_8 = {
+    ContentEN = "Threads Between Reverie",
+    ContentFR = "Au fil des rêves d’antan",
+    ContentJP = "糸紡ぐ故夢",
+    ContentKR = "실에 깃든 옛 꿈",
+    ContentTC = "牽絲織故夢",
+    TextMapContent = "牵丝织故梦",
+    TextMapId = "SkinGacha_Name_Special_8"
+  },
   SkinGacha_Warning_Normal = {
     ContentEN = "<Title>Guaranteed Golden-tier Item</>\nCurrent Weaves: <highlight>%d</>/90\n \n<Title>Standard Myriad Drop Rates</>\n The base drop rate per Weave for a Golden-tier item is <highlight>0.3%%</>. The overall rate, including guarantee, is <highlight>1.42%%</>. A Golden-tier item is guaranteed within <highlight>90</> Weaves. \nThe drop rates for each item are as follows:\nTideborn Rhapsody: <highlight>0.427%%</>\nSunrise Scherzo: <highlight>0.427%%</>\nVeils and Whispers: <highlight>0.285%%</>\nSunlit Gristmill: <highlight>0.285%%</>\n \nThe base drop rate per Weave for a Purple-tier item is <highlight>5.1%%</>. The overall rate, including guarantee, is <highlight>12.46%%</>. A Purple-tier item is guaranteed within <highlight>10</> Weaves;\nWhen the guarantee triggers, the chance of receiving a Purple-tier item is <highlight>99.7%%</>, and a Golden-tier item is <highlight>0.3%%</>.\nIn cases involving rate-ups or guarantees, please refer to the specific banner rules.\n \n<Title>About Duplicates</>\n \nOn obtaining a skin you already own, it converts into Lucent Prism:\nEach duplicate Golden-tier character skin converts to Lucent Prism ×<highlight>60</>.\nEach duplicate Golden-tier weapon skin converts to Lucent Prism ×<highlight>40</>.\nEach duplicate Purple-tier skin converts to Lucent Prism ×<highlight>4</>.\nEach duplicate Blue-tier skin converts to Lucent Prism ×<highlight>1</>.\n \n<Title>About Weave Progress</>\nThe counts of Weaves for the <highlight> Starlight Rondo</> are tallied separately and do not carry over to other Myriad banners.",
     ContentFR = "<Title>Objet légendaire garanti</>\nNombres d’évocations en cours : <highlight>%d</>/90\n\n<Title>Probabilités de la Myriade permanente</>\nTaux de base d’obtention d’un objet légendaire par évocation : <highlight>0,3 %%</>. \nTaux global (incluant la garantie) : <highlight>1,42 %%</>.\nUn objet légendaire est garanti dans un maximum de <highlight>90</> évocations.\n\nTaux individuels :\n— Rhapsodie des vagues : <highlight>0,427 %%</>\n— Scherzo de l’aurore : <highlight>0,427 %%</>\n— Voiles et murmures : <highlight>0,285 %%</>\n— Moulin d’or : <highlight>0,285 %%</>\n\nTaux de base d’obtention d’un objet épique : <highlight>5,1 %%</>. \nTaux global (incluant la garantie) : <highlight>12,46 %%</>.\nUn objet épique est garanti dans un maximum de <highlight>10</> évocations.\nLorsque la garantie s’active, la probabilité d’obtenir un objet épique est de <highlight>99,7 %%</>, et un objet légendaire de <highlight>0,3 %%</>.\nEn cas de bonus de taux ou d’ajustement de garantie, veuillez vous référer aux règles spécifiques de la bannière.\n\n<Title>À propos des doublons</>\nLes apparences (tenues, armes et accessoires) déjà obtenues sont automatiquement converties en Prismes azurés :\n— Apparence de personnage légendaire → ×<highlight>60</> \n— Apparence d’arme légendaire → ×<highlight>40</> \n— Apparence épique → ×<highlight>4</> \n— Apparence rare → ×<highlight>1</> \n\n<Title>Transfert de progression entre Myriades</>\nLes évocations de <highlight>Rhapsodie stellaire</> sont comptabilisés séparément et ne sont pas partagés avec les autres bannières de la Myriade.",
@@ -146935,6 +149451,15 @@ per stack of [Poison of Love]]=],
     TextMapContent = "<Title>必定获取金色品质道具</>\n正在进行的寻觅 <highlight>%d</>/90\n\n<Title>活动限定万华概率说明</>\n经由寻觅获取金色品质道具的基础概率为<highlight>0.3%%</>，综合概率（含保底）为<highlight>1.42%%</>，至多<highlight>90</>次寻觅必定获取金色品质道具，其中各道具概率如下：\n缄默猎手：<highlight>0.641%%</>\n虹色棱镜*25：<highlight>0.641%%</>\n虹色棱镜*50：<highlight>0.142%%</>\n经由寻觅获取紫色品质道具的基础概率为<highlight>5.1%%</>，综合概率（含保底）为<highlight>12.46%%</>，至多<highlight>10</>次寻觅必定获取紫色品质道具；\n通过保底获取紫色品质道具的概率为<highlight>99.7%%</>，获取金色品质道具的概率为<highlight>0.3%%</>。\n当触发概率提升、保底等情况时的概率，请以具体规则为准。\n\n<Title>重复获取说明</>\n如果重复获取金色品质形象缄默猎手，将转化为虹色棱镜*<highlight>25</>。\n如果重复获取其余已拥有的外观，将转化为水色棱镜；重复紫色品质外观将转化为水色棱镜*<highlight>4</>，重复蓝色品质外观将转化为水色棱镜*<highlight>1</>。\n\n<Title>万华继承说明</>\n在<highlight>长路何所向</>中的寻觅次数将独立计算，不与其他活动万华合并计算。",
     TextMapId = "SkinGacha_Warning_Special_7"
   },
+  SkinGacha_Warning_Special_8 = {
+    ContentEN = "<Title>Guaranteed Golden-tier Item</>\nCurrent Weaves: <highlight>%d</>/90\n\n<Title>Event-Exclusive Myriad Drop Rates</>\nThe base drop rate per Weave for a Golden-tier item is <highlight>0.3%%</>. The overall drop rate, including guarantees, is <highlight>1.42%%</>. A Golden-tier item is guaranteed within <highlight>90</> Weaves. Individual drop rates:\nVeil In Shadows: <highlight>0.641%%</>\nIridescent Prism ×25: <highlight>0.641%%</>\nIridescent Prism ×50: <highlight>0.142%%</>\nThe base drop rate per Weave for a Purple-tier item is <highlight>5.1%%</>. The overall drop rate, including guarantees, is <highlight>12.46%%</>. A Purple-tier item is guaranteed within <highlight>10</> Weaves. When the guarantee triggers, the chance of receiving a Purple-tier item is <highlight>99.7%%</>, and of receiving a Golden-tier item is <highlight>0.3%%</>.\nIn cases involving rate-ups or guarantees, please refer to the specific banner rules.\n\n<Title>About Duplicates</>\nEach duplicate Veil In Shadows (Golden-tier skin) converts into Iridescent Prism ×<highlight>25</>.\nOn obtaining a Purple- or Blue-tier skin you already own, it converts into Lucent Prism:\nEach duplicate Purple-tier skin converts into Lucent Prism ×<highlight>4</>.\nEach duplicate Blue-tier skin converts into Lucent Prism ×<highlight>1</>.\n\n<Title>About Weave Progress</>\nWeave counts for the <highlight>Threads Between Reverie</> banner are tallied separately and do not carry over to other Myriad banners.",
+    ContentFR = "<Title>Objet légendaire garanti</>\nNombre d’évocations en cours : <highlight>%d</>/90\n \n<Title>Probabilités de la Myriade limitée</>\nTaux de base d’obtention d’un objet légendaire par évocation : <highlight>0,3 %%</>.\nTaux global (incluant la garantie) : <highlight>1,42 %%</>.\nUn objet légendaire est garanti dans un maximum de <highlight>90</> évocations.\n \nTaux individuels :\n— Dentelles de minuit : <highlight>0,641 %%</>\n— Prisme iridescent ×25 : <highlight>0,641 %%</>\n— Prisme iridescent ×50 : <highlight>0,142 %%</>\n \nTaux de base d’obtention d’un objet épique : <highlight>5,1 %%</>.\nTaux global (incluant la garantie) : <highlight>12,46 %%</>.\nUn objet épique est garanti dans un maximum de <highlight>10</> évocations.\n \nLorsque la garantie s’active, la probabilité d’obtenir un objet épique est de <highlight>99,7 %%</>, et celle d’obtenir un objet légendaire de <highlight>0,3 %%</>.\nEn cas de bonus de taux ou d’ajustement de garantie, veuillez vous référer aux règles spécifiques de la bannière.\n \n<Title>À propos des doublons</>\nSi vous obtenez à nouveau l’apparence légendaire « Dentelles de minuit », elle sera convertie en Prismes iridescents ×<highlight>25</>.\n \nLes autres apparences (tenues, armes et accessoires) déjà obtenues seront automatiquement converties en Prismes azurés :\n— Apparence épique → ×<highlight>4</>\n— Apparence rare → ×<highlight>1</>\n \n<Title>Transfert de progression entre Myriades</>\nLes évocations de <highlight>Au fil des rêves d’antan</> sont comptabilisées séparément et ne sont pas partagées avec les autres bannières de la Myriade.",
+    ContentJP = "<Title>必ずエピックアイテムを獲得</>\n 進行中の探求 <highlight>%d</>/90\n \n <Title>イベント限定万華の確率説明</>\n 探求でエピックアイテムを獲得する基礎確率は<highlight>0.3%%</>、総合確率（保証を含む）は<highlight>1.42%%</>で、最大<highlight>90</>回の探求で必ずエピックアイテムを獲得できます。各アイテムの出現率は以下の通りです：\n 糸を結び、夜を行く：<highlight>0.641%%</>\n 虹色のプリズム*25：<highlight>0.641%%</>\n 虹色のプリズム*50：<highlight>0.142%%</>\n 探求でレジェンドアイテムを獲得する基礎確率は<highlight>5.1%%</>、総合確率（保証を含む）は<highlight>12.46%%</>で、最大<highlight>10</>回の探求で必ずレジェンドアイテムを獲得できます。\n 保証によってレジェンドアイテムを獲得する確率は<highlight>99.7%%</>、エピックアイテムを獲得する確率は<highlight>0.3%%</>です。\n 確率アップや保証などが発動した場合の確率については、具体的な規則に従ってください。\n \n <Title>重複獲得に関する説明</>\n エピックスキン「糸を結び、夜を行く」を重複して獲得した場合、虹色のプリズム*<highlight>25</>に変換されます。\n その他すでに所持しているスキンを重複して獲得した場合は水色のプリズムに変換され、レジェンドスキンは水色のプリズム*<highlight>4</>、レアスキンは水色のプリズム*<highlight>1</>となります。\n \n <Title>万華カウント継承について</>\n <highlight>糸紡ぐ故夢</>での探求回数は独立してカウントされ、他のイベント万華とは合算されません。",
+    ContentKR = "<Title>금색 등급 아이템 확정 획득</>\n현재 진행 중인 탐색 <highlight>%d</>/90\n\n<Title>이벤트 한정 광채 확률 설명</>\n금색 등급 아이템의 기본 탐색 확률은 <highlight>0.3%%</>이며, 종합 확률(확정 획득 포함)은 <highlight>1.42%%</>입니다. 최대 <highlight>90</>회 탐색 시 금색 등급 아이템을 확정적으로 획득합니다. 각 아이템의 획득 확률은 다음과 같습니다.\n밤에 스며드는 실: <highlight>0.641%%</> \n무지개빛 프리즘x25: <highlight>0.641%%</>\n무지개빛 프리즘x50: <highlight>0.142%%</>\n보라색 등급 아이템의 기본 탐색 확률은 <highlight>5.1%%</>이며, 종합 확률(확정 획득 포함)은 <highlight>12.46%%</>입니다. 최대 <highlight>10</>회 탐색 시 보라색 등급 아이템을 확정적으로 획득합니다.\n보라색 등급 아이템의 확정 확률은 <highlight>99.7%%</>이며, 금색 등급 아이템의 확정 확률은 <highlight>0.3%%</>입니다.\n확률 증가, 확정 획득 등이 적용될 경우, 해당 확률은 상세 규칙을 참고해 주시기 바랍니다.\n\n<Title>중복 획득 설명</>\n금색 등급 외형 '밤에 스며드는 실'를 중복 획득할 경우, 무지개빛 프리즘x<highlight>25</>개로 전환됩니다.\n이미 보유한 외형을 중복 획득할 경우, 물빛 프리즘으로 전환됩니다. 중복 획득한 보라색 등급 코스튬은 물빛 프리즘x<highlight>4</>개, 중복 획득한 파란색 등급 외형은 물빛 프리즘x<highlight>1</>개로 전환됩니다.\n\n<Title>광채 계승 설명</>\n<highlight>실에 깃든 옛 꿈</>의 탐색 횟수는 독립적으로 계산되며, 다른 광채 이벤트와 합산되지 않습니다.",
+    ContentTC = "<Title>必定獲取金色品質道具</>\n正在進行的尋覓 <highlight>%d</>/90\n\n<Title>活動限定萬華概率說明</>\n經由尋覓獲取金色品質道具的基礎概率為<highlight>0.3%%</>，綜合概率（含保底）為<highlight>1.42%%</>，至多<highlight>90</>次尋覓必定獲取金色品質道具，其中各道具概率如下：\n結絲夜行：<highlight>0.641%%</>\n虹色稜鏡*25：<highlight>0.641%%</>\n虹色稜鏡*50：<highlight>0.142%%</>\n經由尋覓獲取紫色品質道具的基礎概率為<highlight>5.1%%</>，綜合概率（含保底）為<highlight>12.46%%</>，至多<highlight>10</>次尋覓必定獲取紫色品質道具；\n透過保底獲取紫色品質道具的概率為<highlight>99.7%%</>，獲取金色品質道具的概率為<highlight>0.3%%</>。\n當觸發概率提升、保底等情況時的概率，請以具體規則為準。\n\n<Title>重複獲取說明</>\n如果重複獲取金色品質形象結絲夜行，將轉化為虹色稜鏡*<highlight>25</>。\n如果重複獲取其餘已擁有的外觀，將轉化為水色稜鏡；重複紫色品質外觀將轉化為水色稜鏡*<highlight>4</>，重複藍色品質外觀將轉化為水色稜鏡*<highlight>1</>。\n\n<Title>萬華繼承說明</>\n在<highlight>牽絲織故夢</>中的尋覓次數將獨立計算，不與其他活動萬華合併計算。",
+    TextMapContent = "<Title>必定获取金色品质道具</>\n正在进行的寻觅 <highlight>%d</>/90\n\n<Title>活动限定万华概率说明</>\n经由寻觅获取金色品质道具的基础概率为<highlight>0.3%%</>，综合概率（含保底）为<highlight>1.42%%</>，至多<highlight>90</>次寻觅必定获取金色品质道具，其中各道具概率如下：\n结丝夜行：<highlight>0.641%%</>\n虹色棱镜*25：<highlight>0.641%%</>\n虹色棱镜*50：<highlight>0.142%%</>\n经由寻觅获取紫色品质道具的基础概率为<highlight>5.1%%</>，综合概率（含保底）为<highlight>12.46%%</>，至多<highlight>10</>次寻觅必定获取紫色品质道具；\n通过保底获取紫色品质道具的概率为<highlight>99.7%%</>，获取金色品质道具的概率为<highlight>0.3%%</>。\n当触发概率提升、保底等情况时的概率，请以具体规则为准。\n\n<Title>重复获取说明</>\n如果重复获取金色品质形象结丝夜行，将转化为虹色棱镜*<highlight>25</>。\n如果重复获取其余已拥有的外观，将转化为水色棱镜；重复紫色品质外观将转化为水色棱镜*<highlight>4</>，重复蓝色品质外观将转化为水色棱镜*<highlight>1</>。\n\n<Title>万华继承说明</>\n在<highlight>牵丝织故梦</>中的寻觅次数将独立计算，不与其他活动万华合并计算。",
+    TextMapId = "SkinGacha_Warning_Special_8"
+  },
   SkinTrialEvent_Des_210101 = {
     ContentEN = "Hand in hand, we dance — and seal this moment into eternity.",
     ContentFR = "Main dans la main, dansons, et que cet instant se fige dans l’éternité.",
@@ -146970,6 +149495,15 @@ per stack of [Poison of Love]]=],
     ContentTC = "涉過荊棘遍布的苦海，去往光的彼岸。",
     TextMapContent = "涉过荆棘遍布的苦海，去往光的彼岸。",
     TextMapId = "SkinTrialEvent_Des_Fuluo"
+  },
+  SkinTrialEvent_Des_SpLise = {
+    ContentEN = "As songs echo through the night, the huntress begins her hunt.",
+    ContentFR = "Au son d’une ballade qui résonne toute la nuit, la chasseuse entame sa traque.",
+    ContentJP = "一晩中響く歌声の中、狩人は狩りを始めた。",
+    ContentKR = "밤새 울려 퍼지는 노랫소리 속에서, 사냥꾼은 그녀의 사냥을 시작했다.",
+    ContentTC = "徹夜的歌謠聲中，獵手開始了她的狩獵。",
+    TextMapContent = "彻夜的歌谣声中，猎手开始了她的狩猎。",
+    TextMapId = "SkinTrialEvent_Des_SpLise"
   },
   SkinTrialEvent_Des_Suyi = {
     ContentEN = "Full charge — take flight!",
@@ -147060,6 +149594,15 @@ per stack of [Poison of Love]]=],
     ContentTC = "綺夢入夜",
     TextMapContent = "绮梦入夜",
     TextMapId = "SkinTrialEvent_Title_Songlu"
+  },
+  SkinTrialEvent_Title_SpLise = {
+    ContentEN = "Silken Serenade",
+    ContentFR = "Chant des fils",
+    ContentJP = "糸掛けの歌",
+    ContentKR = "실의 노래",
+    ContentTC = "懸絲之歌",
+    TextMapContent = "悬丝之歌",
+    TextMapId = "SkinTrialEvent_Title_SpLise"
   },
   SkinTrialEvent_Title_Suyi = {
     ContentEN = "Azure Reverie",
@@ -150132,6 +152675,51 @@ When Zhiliu has 2 [Talismans: Xun], [Heaven-Earth Divination] is replaced with [
     TextMapContent = "自身拥有2枚[泉符·巽]时，[天地演绎]被替换为此技能。\n移除所有[泉符]。对周围范围内的敌人造成雷属性伤害，自身获得技能伤害提高效果。",
     TextMapId = "TERMEXP_4102_Skill02_03"
   },
+  TERMEXP_4103_Passive01_01 = {
+    ContentEN = "Restores Sanity and increases Skill DMG. While this effect is active, [Arcshot] shots and [Surge Strike] have a chance to trigger 1 additional time. The chance is [Ranged Weapon Multishot × 30]%. The remaining time of the effect is refreshed with each new stack gained.",
+    ContentFR = "Restaure de la Lucidité et augmente les Dégâts de compétence infligés. Tant que cet effet est actif, les tirs du [Fusil de précision] et [Tir fulgurant] ont une chance de se déclencher 1 fois supplémentaire. Cette probabilité est de [Tir multiple de l’arme à distance × 30] %. À chaque nouveau cumul, la durée de tous les cumuls est réinitialisée.",
+    ContentJP = "SPを回復し、与えるスキルダメージがアップする。効果を保持している間、［狙撃銃］の射撃および［バースト射撃］が一定確率で追加で1回発動する。発動確率は［遠隔武器の多重射撃値×30］%。重ねがけ時に残り時間が更新される。",
+    ContentKR = "정신력을 회복하고, 입히는 스킬 대미지가 상승한다. 보유 중에는 [저격총]의 사격과 [전광 일격]이 확률적으로 1회 추가 발동하며, 발동 확률은 [원거리 무기 다중 사격 속성치×30]%이고, 중첩 시 남은 시간이 리셋된다.",
+    ContentTC = "回復神智，造成的技能傷害提高，持有期間，[狙擊槍]的射擊與[迸發射擊]有概率額外釋放1次，概率為[遠端武器多重射擊屬性值*30]%，疊加時刷新剩餘時間。",
+    TextMapContent = "回复神智，造成的技能伤害提高，持有期间，[狙击枪]的射击与[迸发射击]有概率额外释放1次，概率为[远程武器多重射击属性值×30]%，叠加时刷新剩余时间。",
+    TextMapId = "TERMEXP_4103_Passive01_01"
+  },
+  TERMEXP_4103_Skill01_01 = {
+    ContentEN = "Immediately reloads [Arcshot] once. While [Arcshot] is held, it automatically reloads after each shot. Dealing Skill DMG is guaranteed to trigger an additional Electro Bonus Effect.",
+    ContentFR = "Effectue immédiatement 1 rechargement du [Fusil de précision]. Tant que cet effet est actif, le [Fusil de précision] se recharge automatiquement après chaque tir. Lorsque vous infligez des Dégâts de compétence, un Effet supplémentaire Électro se déclenche à coup sûr.",
+    ContentJP = "即座に[狙撃銃]を1回装填する。効果を保持している間、[狙撃銃]の射撃終了後に自動で装填し、自身がスキルダメージを与えると必ず雷属性の追加効果が発動する。",
+    ContentKR = "[저격총]을 즉시 1회 장전하고, 보유 중에는 [저격총] 사격이 끝나면 자동으로 재장전된다. 스킬 대미지를 입힐 때마다 번개 속성 추가 효과가 반드시 발동한다.",
+    ContentTC = "立刻對[狙擊槍]進行1次裝填，持有期間，[狙擊槍]射擊完畢後自動裝填，自身造成技能傷害時必定觸發雷屬性額外效果。",
+    TextMapContent = "立刻对[狙击枪]进行1次装填，持有期间，[狙击枪]射击完毕后自动装填，自身造成技能伤害时必定触发雷属性额外效果。",
+    TextMapId = "TERMEXP_4103_Skill01_01"
+  },
+  TERMEXP_4103_Skill02_01 = {
+    ContentEN = "Continuously calibrates Accuracy. Shooting with [Arcshot] resets Accuracy and launches a [Sniper Bullet], dealing Electro DMG to all enemies in its path. At 100% Accuracy, shoots an [Electrified Sniper Bullet] instead and becomes immune to Hitstun when taking damage.",
+    ContentFR = "Calibre en continu la précision. Lorsque le [Fusil de précision] tire, la précision est réinitialisée et une [Balle de précision] est tirée, infligeant des Dégâts Électro à tous les ennemis sur sa trajectoire. Si la progression du calibrage de précision atteint 100 % au moment du tir, tire à la place une [Balle de précision renforcée]. Pendant ce temps, les dégâts subis n’interrompent pas vos actions.",
+    ContentJP = "精度を継続的に調整する。[狙撃銃]で射撃すると精度がリセットされ、[狙撃弾]を発射して経路上の敵全員に雷属性ダメージを与える。射撃時の精度調整率が100%の場合、代わりに[強化狙撃弾]を発射する。この間、自身がダメージを受けてものけ反らなくなる。",
+    ContentKR = "정확도를 지속적으로 보정한다. [저격총]으로 사격하면 정확도가 초기화되고 [저격탄]을 발사해 경로상의 모든 적에게 번개 속성 대미지를 입힌다. 사격 시 정확도 보정 진행도가 100%라면 [강화 저격탄]을 대신 발사하며, 지속 시간 동안 자신이 대미지를 받아도 경직되지 않는다.",
+    ContentTC = "持續校準精度，[狙擊槍]射擊時重置精度並射出[狙擊子彈]，對路徑上所有敵人造成雷屬性傷害，若射擊時精度校準進度為100%，改為射出[強化狙擊子彈]，期間自身受到傷害時不會產生僵直。",
+    TextMapContent = "持续校准精度，[狙击枪]射击时重置精度并射出[狙击子弹]，对路径上所有敌人造成雷属性伤害，若射击时精度校准进度为100%，改为射出[强化狙击子弹]，期间自身受到伤害时不会产生僵直。",
+    TextMapId = "TERMEXP_4103_Skill02_01"
+  },
+  TERMEXP_4103_Skill02_02 = {
+    ContentEN = "Increases Skill Speed and reduces Sanity Cost when shooting with [Arcshot]. Lasts indefinitely and stacks up to 30 times. All stacks are removed upon exiting [Deadeye Domain].",
+    ContentFR = "Augmente la Vitesse de compétence et réduit le coût en Lucidité des tirs du [Fusil de précision]. Durée permanente, jusqu’à 30 cumuls. Retiré en quittant le [Mode sniper].",
+    ContentJP = "スキル速度がアップし、[狙撃銃]射撃時のSP消費がダウンする。永続効果で、最大30スタックまで重複可能。[狙撃モード]が解除されると効果が消える。",
+    ContentKR = "스킬 속도가 상승하고 [저격총] 사격 시 정신력 소모가 감소한다. 지속 시간은 무제한이며, 최대 30단계까지 중첩된다. [저격 모드] 종료 시 제거된다.",
+    ContentTC = "技能速度提高，[狙擊槍]射擊神智消耗降低，永續，最高30層，退出[狙擊模式]時移除。",
+    TextMapContent = "技能速度提高，[狙击枪]射击神智消耗降低，永续，最高30层，退出[狙击模式]时移除。",
+    TextMapId = "TERMEXP_4103_Skill02_02"
+  },
+  TERMEXP_4103_Skill02_03 = {
+    ContentEN = "Repeats [Arcshot] shot and [Surge Strike].",
+    ContentFR = "Répète les tirs du [Fusil de précision] et [Tir fulgurant].",
+    ContentJP = "［狙撃銃］の射撃と［バースト射撃］を繰り返し行う。",
+    ContentKR = "[저격총]의 사격과 [전광 일격]을 반복해서 발동한다.",
+    ContentTC = "重複執行[狙擊槍]的射擊與[迸發射擊]。",
+    TextMapContent = "重复执行[狙击枪]的射击与[迸发射击]。",
+    TextMapId = "TERMEXP_4103_Skill02_03"
+  },
   TERMEXP_4201_BonusAttack = {
     ContentEN = "Spawns [Raging Thunders] at targets struck by [Starlight Descent] or [Starstorm Descent], dealing Electro AoE Damage. A maximum of 5 targets can be selected.",
     ContentFR = "Fait apparaître des [Tonnerres impétueux] sur les cibles touchées par [Fracas étoilé] ou [Fracas astral], infligeant des DGT Électro de zone.\nMaximum : 5 cibles affectées.",
@@ -150338,6 +152926,22 @@ When a new [Phantasm] is created, the existing [Phantasm] immediately deals Anem
     TextMapContent = "攻击降低，每2秒受到风属性持续伤害。",
     TextMapId = "TERMEXP_5401_Debuff"
   },
+  TERMEXP_5402_Beat = {
+    TextMapContent = "(待包装)\n按一定节奏释放时，会根据判定触发[良好][精彩][神技]其中一种效果，依据效果发射不同数量的追踪弹锁定随机敌人并获得等量[传颂值]，命中造成风属性范围伤害，视为远程武器伤害。\n[良好]：3发\n[精彩]：5发\n[神技]：6发",
+    TextMapId = "TERMEXP_5402_Beat"
+  },
+  TERMEXP_5402_Merged = {
+    TextMapContent = "(待包装)\n状态持续期间，自身造成的伤害提高，受到的伤害降低，飞行速度降低；点按释放此技能或退出[颂歌]状态时会切换至[交织之诗]，[风之回响]会停止跟随。",
+    TextMapId = "TERMEXP_5402_Merged"
+  },
+  TERMEXP_5402_Skill2 = {
+    TextMapContent = "(待包装)\n存在期间，[莉莉蔻]受到伤害时不会产生僵直；触发[弹奏]时，[风之回响]基于[莉莉蔻]<H>远程武器多重射击属性值</>额外发射追踪弹，命中造成风属性伤害，视为远程武器伤害；触发[传颂之诗]时，[风之回响]持续时间延长，并触发1次独立倍率但无治疗效果的[传颂之诗]。",
+    TextMapId = "TERMEXP_5402_Skill2"
+  },
+  TERMEXP_5402_Split = {
+    TextMapContent = "(待包装)\n状态持续期间，自身和队友持续回复生命；[风之回响]在一定范围内时，点按释放此技能时会传送至[风之回响]所在的位置并切换至[齐颂之诗]，[风之回响]会重新跟随。",
+    TextMapId = "TERMEXP_5402_Split"
+  },
   TERMEXP_Common_AdditionalDmg = {
     ContentEN = "Upon dealing weapon damage, inflicts additional damage 1 time of specific element. This additional hit can trigger bonus effects based on the weapon's trigger probability.",
     ContentFR = "Lorsque l’arme inflige des dégâts, inflige en plus une instance de dégâts d’un attribut déterminé, proportionnelle aux dégâts initiaux, et déclenche l’Effet supplémentaire en fonction de la Chance de déclenchement de l’arme.",
@@ -150346,6 +152950,15 @@ When a new [Phantasm] is created, the existing [Phantasm] immediately deals Anem
     ContentTC = "使用武器造成傷害時，基於該次傷害量，額外造成1次指定屬性的傷害，並按照武器的觸發概率結算額外效果的觸發。",
     TextMapContent = "使用武器造成伤害时，基于该次伤害量，额外造成1次指定属性的伤害，并按照武器的触发概率结算额外效果的触发。",
     TextMapId = "TERMEXP_Common_AdditionalDmg"
+  },
+  TERMEXP_Common_AdditionalDmg_Skill = {
+    ContentEN = "Upon dealing Skill DMG, inflicts additional damage 1 time of specific element. This additional hit can trigger bonus effects based on the skill's trigger probability.",
+    ContentFR = "Lorsqu’une compétence inflige des dégâts, elle inflige en plus 1 instance de dégâts d’un attribut spécifique, calculée en fonction des dégâts initiaux. Ces dégâts supplémentaires peuvent déclencher un Effet supplémentaire selon la Chance de déclenchement de la compétence.",
+    ContentJP = "スキルでダメージを与えた際、そのダメージ量に基づき、指定属性のダメージを追加で1回与える。また、スキルの発動確率に応じて追加効果の発動判定を行う。",
+    ContentKR = "스킬로 대미지를 입힐 시, 해당 대미지에 기반하여 지정 속성의 대미지를 1회 추가로 입힌다. 추가 대미지는 스킬의 발동 확률에 따라 추가 효과를 발동한다.",
+    ContentTC = "使用技能造成傷害時，基於該次傷害量，額外造成1次指定屬性的傷害，並按照技能的觸發概率結算額外效果的觸發。",
+    TextMapContent = "使用技能造成伤害时，基于该次伤害量，额外造成1次指定属性的伤害，并按照技能的触发概率结算额外效果的触发。",
+    TextMapId = "TERMEXP_Common_AdditionalDmg_Skill"
   },
   TERMEXP_Common_OverES = {
     ContentEN = "An additional shield that stacks independently. The Ultra Shield has a cap of 425+75×Character Level.",
@@ -151058,6 +153671,51 @@ When a new [Phantasm] is created, the existing [Phantasm] immediately deals Anem
     TextMapContent = "天地明",
     TextMapId = "TERM_4102_Skill02_03"
   },
+  TERM_4103_Passive01_01 = {
+    ContentEN = "Arc Mastery",
+    ContentFR = "Maîtrise du courant",
+    ContentJP = "電流掌握",
+    ContentKR = "전류 숙달",
+    ContentTC = "電流掌握",
+    TextMapContent = "电流掌握",
+    TextMapId = "TERM_4103_Passive01_01"
+  },
+  TERM_4103_Skill01_01 = {
+    ContentEN = "Tactical Reload",
+    ContentFR = "Rechargement tactique",
+    ContentJP = "戦術装填",
+    ContentKR = "전술 장전",
+    ContentTC = "戰術裝填",
+    TextMapContent = "战术装填",
+    TextMapId = "TERM_4103_Skill01_01"
+  },
+  TERM_4103_Skill02_01 = {
+    ContentEN = "Deadeye Domain",
+    ContentFR = "Mode sniper",
+    ContentJP = "狙撃モード",
+    ContentKR = "저격 모드",
+    ContentTC = "狙擊模式",
+    TextMapContent = "狙击模式",
+    TextMapId = "TERM_4103_Skill02_01"
+  },
+  TERM_4103_Skill02_02 = {
+    ContentEN = "Steady Aim",
+    ContentFR = "Concentration",
+    ContentJP = "集中",
+    ContentKR = "집중",
+    ContentTC = "專注",
+    TextMapContent = "专注",
+    TextMapId = "TERM_4103_Skill02_02"
+  },
+  TERM_4103_Skill02_03 = {
+    ContentEN = "Volt Rifle",
+    ContentFR = "Fusil électrique",
+    ContentJP = "電流ライフル",
+    ContentKR = "전류 소총",
+    ContentTC = "電流步槍",
+    TextMapContent = "电流步枪",
+    TextMapId = "TERM_4103_Skill02_03"
+  },
   TERM_4201_BonusAttack = {
     ContentEN = "Wyrmcall Clouds",
     ContentFR = "Nuées du dragon",
@@ -151247,6 +153905,22 @@ When a new [Phantasm] is created, the existing [Phantasm] immediately deals Anem
     TextMapContent = "腐朽配方",
     TextMapId = "TERM_5401_Debuff"
   },
+  TERM_5402_Beat = {
+    TextMapContent = "弹奏(待包装)",
+    TextMapId = "TERM_5402_Beat"
+  },
+  TERM_5402_Merged = {
+    TextMapContent = "齐颂之诗(待包装)",
+    TextMapId = "TERM_5402_Merged"
+  },
+  TERM_5402_Skill2 = {
+    TextMapContent = "风之回响(待包装)",
+    TextMapId = "TERM_5402_Skill2"
+  },
+  TERM_5402_Split = {
+    TextMapContent = "交织之诗(待包装)",
+    TextMapId = "TERM_5402_Split"
+  },
   TERM_Common_AdditionalDmg = {
     ContentEN = "Additional DMG",
     ContentFR = "Dégâts supplémentaires",
@@ -151255,6 +153929,15 @@ When a new [Phantasm] is created, the existing [Phantasm] immediately deals Anem
     ContentTC = "追加傷害",
     TextMapContent = "追加伤害",
     TextMapId = "TERM_Common_AdditionalDmg"
+  },
+  TERM_Common_AdditionalDmg_Skill = {
+    ContentEN = "Additional Skill DMG",
+    ContentFR = "Dégâts de compétence supplémentaires",
+    ContentJP = "スキル追加ダメージ",
+    ContentKR = "스킬 추가 대미지",
+    ContentTC = "技能追加傷害",
+    TextMapContent = "技能追加伤害",
+    TextMapId = "TERM_Common_AdditionalDmg_Skill"
   },
   TERM_Common_OverES = {
     ContentEN = "Ultra Shield",
@@ -152309,6 +154992,51 @@ When a new [Phantasm] is created, the existing [Phantasm] immediately deals Anem
     TextMapContent = "用舞台道具装饰自己的藏身处，袭击他人时哼唱着歌剧的旋律——这似乎证明了凶手是一位歌剧爱好者。那么从歌剧旋律入手，也许能找到与凶手有关的线索……",
     TextMapId = "TextMap_AnswerDetail_100503"
   },
+  TextMap_AnswerDetail_120701 = {
+    ContentTC = "在蕾伊的秘密基地中發現了一個人偶，人偶面部貼著酷似約翰森中校的肖像畫。",
+    TextMapContent = "在蕾伊的秘密基地中发现了一个人偶，人偶面部贴着酷似约翰森中校的肖像画。",
+    TextMapId = "TextMap_AnswerDetail_120701"
+  },
+  TextMap_AnswerDetail_120702 = {
+    ContentTC = "在人偶身上發現了大量砍刺痕跡，從中能夠感覺到強烈的恨意。",
+    TextMapContent = "在人偶身上发现了大量砍刺痕迹，从中能够感觉到强烈的恨意。",
+    TextMapId = "TextMap_AnswerDetail_120702"
+  },
+  TextMap_AnswerDetail_120703 = {
+    ContentTC = "蕾伊在老鼠身上測試了火藥和毒藥的威力，而她真正的目標是某個人。",
+    TextMapContent = "蕾伊在老鼠身上测试了火药和毒药的威力，而她真正的目标是某个人。",
+    TextMapId = "TextMap_AnswerDetail_120703"
+  },
+  TextMap_AnswerDetail_120704 = {
+    ContentTC = "從日記內容看，蕾伊似乎已經知道姐姐遭遇了不測。",
+    TextMapContent = "从日记内容看，蕾伊似乎已经知道姐姐遭遇了不测。",
+    TextMapId = "TextMap_AnswerDetail_120704"
+  },
+  TextMap_AnswerDetail_120705 = {
+    ContentTC = "日記中的怪物塗鴉與被改造後的布魯斯形象相似，表明蕾伊可能掌握關於改造實驗的資訊。",
+    TextMapContent = "日记中的怪物涂鸦与被改造后的布鲁斯形象相似，表明蕾伊可能掌握关于改造实验的信息。",
+    TextMapId = "TextMap_AnswerDetail_120705"
+  },
+  TextMap_AnswerDetail_120706 = {
+    ContentTC = "蕾伊在秘密基地中測試了火藥和毒藥，並練習了近身攻擊，目的是為了暗殺某人。",
+    TextMapContent = "蕾伊在秘密基地中测试了火药和毒药，并练习了近身攻击，目的是为了暗杀某人。",
+    TextMapId = "TextMap_AnswerDetail_120706"
+  },
+  TextMap_AnswerDetail_120707 = {
+    ContentTC = "蕾伊已經發覺姐姐在加入第六軍團後遭遇不測，並且似乎知道這和改造實驗有關。",
+    TextMapContent = "蕾伊已经发觉姐姐在加入第六军团后遭遇不测，并且似乎知道这和改造实验有关。",
+    TextMapId = "TextMap_AnswerDetail_120707"
+  },
+  TextMap_AnswerDetail_120708 = {
+    ContentTC = "蕾伊制定暗殺計劃是為了給姐姐報仇。",
+    TextMapContent = "蕾伊制定暗杀计划是为了给姐姐报仇。",
+    TextMapId = "TextMap_AnswerDetail_120708"
+  },
+  TextMap_AnswerDetail_120709 = {
+    ContentTC = "蕾伊的復仇對象是約翰森中校。",
+    TextMapContent = "蕾伊的复仇对象是约翰森中校。",
+    TextMapId = "TextMap_AnswerDetail_120709"
+  },
   TextMap_AnswerDetail_200101 = {
     ContentEN = "Mr Buck only drinks juice and milk at The Asphodel. He has no tolerance for alcohol — just one sip is enough to knock him straight out.",
     ContentFR = "Monsieur Buck ne boit que du jus et du lait aux Asphodèles. Il ne supporte absolument pas l’alcool : une seule gorgée suffit à l’assommer.",
@@ -152887,6 +155615,51 @@ While she fits the profile of a child, it's clear the popcorn beneath Buck's win
     TextMapContent = "凶手哼唱的是一段歌剧唱段的旋律",
     TextMapId = "TextMap_AnswerName_100503"
   },
+  TextMap_AnswerName_120701 = {
+    ContentTC = "人偶臉上貼著酷似約翰森中校的肖像畫",
+    TextMapContent = "人偶脸上贴着酷似约翰森中校的肖像画",
+    TextMapId = "TextMap_AnswerName_120701"
+  },
+  TextMap_AnswerName_120702 = {
+    ContentTC = "人偶的身上有大量砍刺痕跡",
+    TextMapContent = "人偶的身上有大量砍刺痕迹",
+    TextMapId = "TextMap_AnswerName_120702"
+  },
+  TextMap_AnswerName_120703 = {
+    ContentTC = "蕾伊在測試火藥和毒藥的威力",
+    TextMapContent = "蕾伊在测试火药和毒药的威力",
+    TextMapId = "TextMap_AnswerName_120703"
+  },
+  TextMap_AnswerName_120704 = {
+    ContentTC = "蕾伊知道姐姐已遭遇不測",
+    TextMapContent = "蕾伊知道姐姐已遭遇不测",
+    TextMapId = "TextMap_AnswerName_120704"
+  },
+  TextMap_AnswerName_120705 = {
+    ContentTC = "蕾伊似乎掌握一些有關改造實驗的資訊",
+    TextMapContent = "蕾伊似乎掌握一些有关改造实验的信息",
+    TextMapId = "TextMap_AnswerName_120705"
+  },
+  TextMap_AnswerName_120706 = {
+    ContentTC = "蕾伊正在計劃暗殺某人",
+    TextMapContent = "蕾伊正在计划暗杀某人",
+    TextMapId = "TextMap_AnswerName_120706"
+  },
+  TextMap_AnswerName_120707 = {
+    ContentTC = "蕾伊知道姐姐因改造實驗而死",
+    TextMapContent = "蕾伊知道姐姐因改造实验而死",
+    TextMapId = "TextMap_AnswerName_120707"
+  },
+  TextMap_AnswerName_120708 = {
+    ContentTC = "蕾伊的暗殺計劃與姐姐的不幸遭遇有關",
+    TextMapContent = "蕾伊的暗杀计划与姐姐的不幸遭遇有关",
+    TextMapId = "TextMap_AnswerName_120708"
+  },
+  TextMap_AnswerName_120709 = {
+    ContentTC = "蕾伊尋找約翰森中校的真實目的是報仇",
+    TextMapContent = "蕾伊寻找约翰森中校的真实目的是报仇",
+    TextMapId = "TextMap_AnswerName_120709"
+  },
   TextMap_AnswerName_200101 = {
     ContentEN = "Mr Buck passes out after even a single sip of alcohol",
     ContentFR = "Monsieur Buck sombre après la moindre goutte d’alcool",
@@ -153364,6 +156137,11 @@ While she fits the profile of a child, it's clear the popcorn beneath Buck's win
     TextMapContent = "还有什么可以锁定凶手身份的线索？",
     TextMapId = "TextMap_Inference_1005"
   },
+  TextMap_Inference_1207 = {
+    ContentTC = "推測蕾伊的真實目的",
+    TextMapContent = "推测蕾伊的真实目的",
+    TextMapId = "TextMap_Inference_1207"
+  },
   TextMap_Inference_2001 = {
     ContentEN = "Figure out who the Inspiration Stealer is",
     ContentFR = "Identifier le Voleur d’inspiration",
@@ -153462,6 +156240,11 @@ While she fits the profile of a child, it's clear the popcorn beneath Buck's win
     ContentTC = "凶手哼唱的是一段歌劇唱段的旋律",
     TextMapContent = "凶手哼唱的是一段歌剧唱段的旋律",
     TextMapId = "TextMap_ResultTips_10050101"
+  },
+  TextMap_ResultTips_12070101 = {
+    ContentTC = "蕾伊委託狩月人尋找約翰森中校的真實目的是暗殺他，為姐姐的不幸遭遇復仇。",
+    TextMapContent = "蕾伊委托狩月人寻找约翰森中校的真实目的是暗杀他，为姐姐的不幸遭遇复仇。",
+    TextMapId = "TextMap_ResultTips_12070101"
   },
   TextMap_ResultTips_20010101 = {
     ContentEN = "It turns out the Inspiration Stealer is the Charon boy named Arnaud",
@@ -154503,9 +157286,54 @@ You can earn Trial EXP by:
     TextMapContent = "B级狩月人·6",
     TextMapId = "TitleFrame_10053"
   },
+  TitleFrame_10055 = {
+    ContentEN = "SSS-Rank Phoxhunter Ⅶ",
+    ContentFR = "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} SSS – VII",
+    ContentJP = "SSS級月狩り人・7",
+    ContentKR = "SSS급 월석 사냥꾼 Ⅶ",
+    ContentTC = "SSS級狩月人·7",
+    TextMapContent = "SSS级狩月人·7",
+    TextMapId = "TitleFrame_10055"
+  },
+  TitleFrame_10056 = {
+    ContentEN = "SS-Rank Phoxhunter Ⅶ",
+    ContentFR = "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} SS – VII",
+    ContentJP = "SS級月狩り人・7",
+    ContentKR = "SS급 월석 사냥꾼 Ⅶ",
+    ContentTC = "SS級狩月人·7",
+    TextMapContent = "SS级狩月人·7",
+    TextMapId = "TitleFrame_10056"
+  },
+  TitleFrame_10057 = {
+    ContentEN = "S-Rank Phoxhunter Ⅶ",
+    ContentFR = "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} S – VII",
+    ContentJP = "S級月狩り人・7",
+    ContentKR = "S급 월석 사냥꾼 Ⅶ",
+    ContentTC = "S級狩月人·7",
+    TextMapContent = "S级狩月人·7",
+    TextMapId = "TitleFrame_10057"
+  },
+  TitleFrame_10058 = {
+    ContentEN = "A-Rank Phoxhunter Ⅶ",
+    ContentFR = "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} A – VII",
+    ContentJP = "A級月狩り人・7",
+    ContentKR = "A급 월석 사냥꾼 Ⅶ",
+    ContentTC = "A級狩月人·7",
+    TextMapContent = "A级狩月人·7",
+    TextMapId = "TitleFrame_10058"
+  },
+  TitleFrame_10059 = {
+    ContentEN = "B-Rank Phoxhunter Ⅶ",
+    ContentFR = "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} B – VII",
+    ContentJP = "B級月狩り人・7",
+    ContentKR = "B급 월석 사냥꾼 Ⅶ",
+    ContentTC = "B級狩月人·7",
+    TextMapContent = "B级狩月人·7",
+    TextMapId = "TitleFrame_10059"
+  },
   TitleFrame_Des = {
     ContentEN = "Equip this in [Title] - [Frame]",
-    ContentFR = "Peut être équipé dans les [Cadres] des titres.",
+    ContentFR = "Peut être équipé dans les [Cadres] des titres",
     ContentJP = "称号スタイルで装備できます",
     ContentKR = "칭호 스타일에서 장착 가능",
     ContentTC = "可在稱號樣式中佩戴",
@@ -155592,6 +158420,69 @@ You can earn Trial EXP by:
     TextMapContent = "失忆的",
     TextMapId = "Title_10120"
   },
+  Title_10121 = {
+    ContentEN = "Miraculous",
+    ContentFR = "créateur de miracles",
+    ContentJP = "奇跡を紡ぐ ",
+    ContentKR = "기적을 일으키는{空格}",
+    ContentTC = "創造奇蹟的",
+    TextMapContent = "创造奇迹的",
+    TextMapId = "Title_10121"
+  },
+  Title_10122 = {
+    ContentEN = "Resplendent",
+    ContentFR = "éblouissant",
+    ContentJP = "煌めく",
+    ContentKR = "눈부시게 빛나는{空格}",
+    ContentTC = "璀璨奪目的",
+    TextMapContent = "璀璨夺目的",
+    TextMapId = "Title_10122"
+  },
+  Title_10123 = {
+    ContentEN = "Illustrious",
+    ContentFR = "illustre",
+    ContentJP = "名高き",
+    ContentKR = "명성이 자자한{空格}",
+    ContentTC = "赫赫威名的",
+    TextMapContent = "赫赫威名的",
+    TextMapId = "Title_10123"
+  },
+  Title_10124 = {
+    ContentEN = "Year One",
+    ContentFR = "du 1er anniversaire",
+    ContentJP = "一周年の",
+    ContentKR = "1주년을 맞은{空格}",
+    ContentTC = "一週年的",
+    TextMapContent = "一周年的",
+    TextMapId = "Title_10124"
+  },
+  Title_10125 = {
+    ContentEN = "Waveriding",
+    ContentFR = "bravant vents et flots",
+    ContentJP = "風を切り、波を越える",
+    ContentKR = "파도를 헤치는",
+    ContentTC = "乘風破浪的",
+    TextMapContent = "乘风破浪的",
+    TextMapId = "Title_10125"
+  },
+  Title_10126 = {
+    ContentEN = "13th Legion",
+    ContentFR = "de la XIIIᵉ Légion",
+    ContentJP = "第十三軍団の",
+    ContentKR = "제13군단의",
+    ContentTC = "第十三軍團的",
+    TextMapContent = "第十三军团的",
+    TextMapId = "Title_10126"
+  },
+  Title_10127 = {
+    ContentEN = "Fireborn",
+    ContentFR = "de la fournaise",
+    ContentJP = "煉火の",
+    ContentKR = "지옥불의",
+    ContentTC = "煉火的",
+    TextMapContent = "炼火的",
+    TextMapId = "Title_10127"
+  },
   Title_10302207 = {
     ContentEN = "Trial Rank Reward",
     ContentFR = "Récompense de Niveau d’Aventure",
@@ -156546,14 +159437,68 @@ You can earn Trial EXP by:
     TextMapContent = "乐园",
     TextMapId = "Title_20103"
   },
+  Title_20104 = {
+    ContentEN = " Anniversary Phoxhunter",
+    ContentFR = "1er anniversaire",
+    ContentJP = "一周年",
+    ContentKR = "1주년",
+    ContentTC = "一週年",
+    TextMapContent = "一周年",
+    TextMapId = "Title_20104"
+  },
+  Title_20105 = {
+    ContentEN = " Dreamwalker",
+    ContentFR = "Voyageur des songes",
+    ContentJP = "夢を見る者",
+    ContentKR = "꿈속에 든 자",
+    ContentTC = "入夢之人",
+    TextMapContent = "入梦之人",
+    TextMapId = "Title_20105"
+  },
+  Title_20106 = {
+    ContentEN = " Tempest",
+    ContentFR = "Tempête",
+    ContentJP = "嵐",
+    ContentKR = "폭풍",
+    ContentTC = "風暴",
+    TextMapContent = "风暴",
+    TextMapId = "Title_20106"
+  },
+  Title_20107 = {
+    ContentEN = " Monster",
+    ContentFR = "Monstre",
+    ContentJP = "怪物",
+    ContentKR = "괴물",
+    ContentTC = "怪物",
+    TextMapContent = "怪物",
+    TextMapId = "Title_20107"
+  },
+  Title_20108 = {
+    ContentEN = " Replica",
+    ContentFR = "Copie",
+    ContentJP = "レプリカ",
+    ContentKR = "복제품",
+    ContentTC = "複製品",
+    TextMapContent = "复制品",
+    TextMapId = "Title_20108"
+  },
   Title_Des = {
     ContentEN = "Equip this in [Title]",
-    ContentFR = "Peut être équipé dans les [Titres].",
+    ContentFR = "Peut être équipé dans les [Titres]",
     ContentJP = "称号で装備できます",
     ContentKR = "칭호에서 장착 가능",
     ContentTC = "可在稱號中佩戴",
     TextMapContent = "可在称号中佩戴",
     TextMapId = "Title_Des"
+  },
+  Title_Des_Limited = {
+    ContentEN = "Equip this in [Title] (Expires: December 30, 2026, 05:00, server time)",
+    ContentFR = "Peut être équipé dans les [Titres] (expire le 30 décembre 2026 à 5 h 00)",
+    ContentJP = "称号で装備できます（2026-12-30 05:00:00 （サーバー時間）まで）",
+    ContentKR = "칭호에서 장착 가능 [2026-12-30 05:00:00(서버 시간) 기간 만료]",
+    ContentTC = "可在稱號中佩戴（2026-12-30 05:00:00 到期）",
+    TextMapContent = "可在称号中佩戴（2026-12-30 05:00:00 到期）",
+    TextMapId = "Title_Des_Limited"
   },
   Toast_Access_HardBossUnlock = {
     ContentEN = "Nocturnal Echoes for this difficulty are not unlocked",
@@ -157315,6 +160260,24 @@ The additional damage may trigger the corresponding Bonus Effect based on the <H
     ContentTC = "長按鍵盤上的&ShowCursor&可以激活滑鼠指針，以便點擊界面上的功能按鈕。",
     TextMapContent = "长按键盘上的&ShowCursor&可以激活鼠标指针，以便点击界面上的功能按钮。",
     TextMapId = "UIGuide_CursorActivation"
+  },
+  UIGuide_DamageChongying_1 = {
+    ContentEN = "When periodic DMG dealt by Elemental Bonus Effect reaches maximum stacks, consumes all stacks to deal 1 instance of <H>Overflow Damage</> based on the total remaining periodic damage and apply 1 stack of <H>Elemental Disruption</>. This effect can trigger once every <H>0.4</>s .",
+    ContentFR = "Lorsque les dégâts sur la durée appliqués par un Effet supplémentaire élémentaire atteignent le nombre maximal de cumuls, tous les cumuls sont supprimés. La cible subit 1 instance de <H>Dégâts de Surabondance</> en fonction des dégâts sur la durée restants et reçoit 1 cumul de <H>Désordre élémentaire</>. Cet effet peut se déclencher au maximum une fois toutes les <H>0,4 s</>.",
+    ContentJP = "属性追加効果による継続ダメージが最大まで累積すると、すべての累積を解除し、残りの継続ダメージ量に応じて1回の<H>チャージダメージ</>を与え、<H>属性乱調</>を1層付与する。この効果は<H>0.4秒</>に1回まで発動する。",
+    ContentKR = "속성 추가 효과가 부여된 지속 대미지가 최대 중첩 단계 도달 시 모든 중첩을 제거하고, 남은 지속 대미지량에 따라 <H>오버차지 대미지</>를 1회 입히며, <H>속성 혼돈</>을 1단계 부여한다. 0.4초마다 최대 1회 발동.",
+    ContentTC = "屬性額外效果附加的持續傷害滿層時，清空所有層數，基於剩餘持續傷害量造成1次<H>充盈傷害</>，附加1層<H>屬性紊亂</>，每<H>0.4秒</>最多觸發1次。",
+    TextMapContent = "属性额外效果附加的持续伤害满层时，清空所有层数，基于剩余持续伤害量造成1次<H>充盈伤害</>，附加1层<H>属性紊乱</>，每<H>0.4秒</>最多触发1次。",
+    TextMapId = "UIGuide_DamageChongying_1"
+  },
+  UIGuide_DamageChongying_2 = {
+    ContentEN = "<H>Overflow Damage</> increases with the character's <H>Overflow Intensity</>.",
+    ContentFR = "Les <H>Dégâts de Surabondance</> bénéficient de la <H>Puissance de Surabondance</> du personnage.",
+    ContentJP = "<H>チャージダメージ</>は、キャラクターの<H>チャージ威力</>の数値によって増加する。",
+    ContentKR = "<H>오버차지 대미지</>는 캐릭터의 <H>오버차지 위력</>수치에 따라 증가한다.",
+    ContentTC = "<H>充盈傷害</>可以受角色的<H>充盈威力</>數值加成。",
+    TextMapContent = "<H>充盈伤害</>可以受角色的<H>充盈威力</>数值加成。",
+    TextMapId = "UIGuide_DamageChongying_2"
   },
   UIGuide_DamageMechanism_1 = {
     ContentEN = "Auto-defence mechanisms target <H>all units</> within range.",
@@ -159418,7 +162381,7 @@ Some objects can only be destroyed by <H>specific Bonus Effects</> or <H>Combat 
   UIGuide_StringBoard_1 = {
     ContentEN = "Open the Investigation Log via quest log to review your collected clues and memories.",
     ContentFR = "Vous pouvez ouvrir le Carnet d’enquête depuis le journal de quêtes. Il contient les différents indices et souvenirs que vous avez recueillis.",
-    ContentJP = "クェストパネルから調査手帳を開くことができ、そこには様々な手がかりや記憶が記録されています。",
+    ContentJP = "クエストパネルから調査手帳を開くことができ、そこには様々な手がかりや記憶が記録されています。",
     ContentKR = "퀘스트 패널에서 조사 수첩을 열어 보세요. 안에는 여러 가지 단서와 기억이 기록되어 있습니다.",
     ContentTC = "可在任務面板中打開調查手冊，其中記錄著各種線索與回憶。",
     TextMapContent = "可在任务面板中打开调查手册，其中记录着各种线索与回忆。",
@@ -162079,6 +165042,15 @@ Once it is removed, you can damage them. Destroy both Justiciar Basalt Sentinels
     TextMapContent = "熊熊燃烧，直至一切化为灰烬。",
     TextMapId = "UI_Accessory_Desc_11009"
   },
+  UI_Accessory_Desc_11010 = {
+    ContentEN = "From the remains, life bursts into bloom.",
+    ContentFR = "Éclot parmi les ossements.",
+    ContentJP = "亡骸の中に咲き誇る。",
+    ContentKR = "백골이 잠든 땅에서 다시 만개한다.",
+    ContentTC = "於亡骸中綻放。",
+    TextMapContent = "于亡骸中绽放。",
+    TextMapId = "UI_Accessory_Desc_11010"
+  },
   UI_Accessory_Desc_12001 = {
     ContentEN = "A glazed cup, brimful of half a life's bitters and sweets — yet a whole landscape rests in your hands.",
     ContentFR = "Dans ce bol aux reflets d’indigo repose la moitié d’une vie de tempêtes ; et, pourtant, c’est tout un paysage que vous portez entre vos mains.",
@@ -162303,6 +165275,42 @@ Once it is removed, you can damage them. Destroy both Justiciar Basalt Sentinels
     ContentTC = "別噎著。",
     TextMapContent = "别噎着。",
     TextMapId = "UI_Accessory_Desc_12131"
+  },
+  UI_Accessory_Desc_12135 = {
+    ContentEN = "For decoration only. Not edible.",
+    ContentFR = "Pour la décoration uniquement. Ne pas manger.",
+    ContentJP = "ただの飾りで食べてはいけません。",
+    ContentKR = "장식용으로만 사용하며, 식용 불가.",
+    ContentTC = "僅用裝飾，不可食用。",
+    TextMapContent = "仅用装饰，不可食用。",
+    TextMapId = "UI_Accessory_Desc_12135"
+  },
+  UI_Accessory_Desc_12136 = {
+    ContentEN = "For decoration only. Not edible.",
+    ContentFR = "Pour la décoration uniquement. Ne pas manger.",
+    ContentJP = "ただの飾りで食べてはいけません。",
+    ContentKR = "장식용으로만 사용하며, 식용 불가.",
+    ContentTC = "僅用裝飾，不可食用。",
+    TextMapContent = "仅用装饰，不可食用。",
+    TextMapId = "UI_Accessory_Desc_12136"
+  },
+  UI_Accessory_Desc_12137 = {
+    ContentEN = "For decoration only. Not edible.",
+    ContentFR = "Pour la décoration uniquement. Ne pas manger.",
+    ContentJP = "ただの飾りで食べてはいけません。",
+    ContentKR = "장식용으로만 사용하며, 식용 불가.",
+    ContentTC = "僅用裝飾，不可食用。",
+    TextMapContent = "仅用装饰，不可食用。",
+    TextMapId = "UI_Accessory_Desc_12137"
+  },
+  UI_Accessory_Desc_12138 = {
+    ContentEN = "For decoration only. Not edible.",
+    ContentFR = "Pour la décoration uniquement. Ne pas manger.",
+    ContentJP = "ただの飾りで食べてはいけません。",
+    ContentKR = "장식용으로만 사용하며, 식용 불가.",
+    ContentTC = "僅用裝飾，不可食用。",
+    TextMapContent = "仅用装饰，不可食用。",
+    TextMapId = "UI_Accessory_Desc_12138"
   },
   UI_Accessory_Desc_13005 = {
     ContentEN = "Woven from the night's shadow, it gathers the world's rain and haze, folding them into a hush.",
@@ -162628,6 +165636,24 @@ Once it is removed, you can damage them. Destroy both Justiciar Basalt Sentinels
     TextMapContent = "迎接沉默的告别。",
     TextMapId = "UI_Accessory_Desc_20102"
   },
+  UI_Accessory_Desc_20106 = {
+    ContentEN = "Life finds its way.",
+    ContentFR = "La vie renaît sans fin.",
+    ContentJP = "絶え間なく続く。",
+    ContentKR = "끊임없이 순환하는 삶과 죽음.",
+    ContentTC = "生生不息。",
+    TextMapContent = "生生不息。",
+    TextMapId = "UI_Accessory_Desc_20106"
+  },
+  UI_Accessory_Desc_20110 = {
+    ContentEN = "Through an age of death, they wander.",
+    ContentFR = "Il chemine à travers une ère de mort.",
+    ContentJP = "死の時代を歩む。",
+    ContentKR = "죽음의 시대를 거니는 발걸음.",
+    ContentTC = "穿行於死亡的時代。",
+    TextMapContent = "穿行于死亡的时代。",
+    TextMapId = "UI_Accessory_Desc_20110"
+  },
   UI_Accessory_Desc_21001 = {
     TextMapId = "UI_Accessory_Desc_21001"
   },
@@ -162711,6 +165737,51 @@ Once it is removed, you can damage them. Destroy both Justiciar Basalt Sentinels
     ContentTC = "扭曲的熱浪，如同烈火在空中劃出的漣漪。",
     TextMapContent = "扭曲的热浪，如同烈火在空中划出的涟漪。",
     TextMapId = "UI_Accessory_Desc_21012"
+  },
+  UI_Accessory_Desc_21016 = {
+    ContentEN = "A spooky little white kitty, wandering through Atlasia.",
+    ContentFR = "Un Chatôme blanc erre à travers Atlasia.",
+    ContentJP = "アトラシアをさまよう、真っ白な猫の幽霊。",
+    ContentKR = "하얀 냥이 유령 하나가, 아트라시아를 떠돌고 있다.",
+    ContentTC = "一隻白色的貓貓幽靈，遊蕩在阿特拉西亞。",
+    TextMapContent = "一只白色的猫猫幽灵，游荡在阿特拉西亚。",
+    TextMapId = "UI_Accessory_Desc_21016"
+  },
+  UI_Accessory_Desc_21017 = {
+    ContentEN = "A spooky golden pumpkin, wandering through Atlasia.",
+    ContentFR = "Une Fantrouille dorée erre à travers Atlasia.",
+    ContentJP = "アトラシアをさまよう、金色のカボチャ幽霊。",
+    ContentKR = "금빛 호박 유령 하나가, 아트라시아를 떠돌고 있다.",
+    ContentTC = "一個金色的南瓜幽靈，遊蕩在阿特拉西亞。",
+    TextMapContent = "一个金色的南瓜幽灵，游荡在阿特拉西亚。",
+    TextMapId = "UI_Accessory_Desc_21017"
+  },
+  UI_Accessory_Desc_21018 = {
+    ContentEN = "Kitties, pumpkins, and bats... Spooks everywhere!!!",
+    ContentFR = "Chats, citrouilles, chauves-souris... Des fantômes partout !",
+    ContentJP = "ネコにカボチャ、コウモリ、あちこちに幽霊がいっぱい！",
+    ContentKR = "냥이, 호박, 박쥐, 여기저기 다 유령이야!",
+    ContentTC = "貓貓、南瓜、蝙蝠，到處都是幽靈！",
+    TextMapContent = "猫猫、南瓜、蝙蝠，到处都是幽灵！",
+    TextMapId = "UI_Accessory_Desc_21018"
+  },
+  UI_Accessory_Desc_21019 = {
+    ContentEN = "With but a thought, the talisman stirs, and eldritch power answers.",
+    ContentFR = "Le talisman s’anime à la pensée, et les voies occultes lui répondent.",
+    ContentJP = "符は念に従って動き、鬼道はそれに随う。",
+    ContentKR = "뜻하는 대로 부적을 부리니, 기이한 도술이 펼쳐지네.",
+    ContentTC = "符隨念動，詭道相隨。",
+    TextMapContent = "符随念动，诡道相随。",
+    TextMapId = "UI_Accessory_Desc_21019"
+  },
+  UI_Accessory_Desc_21020 = {
+    ContentEN = "Silken threads dance in the air, tracing the silhouette of a hunter.",
+    ContentFR = "Des fils d’araignée ondulent dans les airs, dessinant la silhouette de la chasseuse.",
+    ContentJP = "空中で揺らめく蜘蛛の糸が、狩人の輪郭を描き出す。",
+    ContentKR = "허공에 일렁이는 거미줄이 사냥꾼의 윤곽을 드러낸다.",
+    ContentTC = "蛛絲在空中搖曳，勾勒出獵手的輪廓。",
+    TextMapContent = "蛛丝在空中摇曳，勾勒出猎手的轮廓。",
+    TextMapId = "UI_Accessory_Desc_21020"
   },
   UI_Accessory_Desc_30001 = {
     ContentEN = "A beacon of light to keep by your side. A constant source of comfort on your journey.",
@@ -162882,6 +165953,15 @@ Once it is removed, you can damage them. Destroy both Justiciar Basalt Sentinels
     ContentTC = "可變更勝利動作。",
     TextMapContent = "可变更胜利动作。",
     TextMapId = "UI_Accessory_Desc_31001"
+  },
+  UI_Accessory_Desc_31008 = {
+    ContentEN = "Victory: Crescent Wishes",
+    ContentFR = "Victoire : Attrape-rêves lunaire",
+    ContentJP = "考える人の座·月枝夢狩",
+    ContentKR = "클리어·달빛과 드림캐처 사이",
+    ContentTC = "勝利·月梢捕夢",
+    TextMapContent = "胜利·月梢捕梦",
+    TextMapId = "UI_Accessory_Desc_31008"
   },
   UI_Accessory_Desc_40001 = {
     ContentEN = "The most subtle changes in humidity can not escape the perception of a phoxfox tail. Sophisticated travelers often observe whether a phoxfox in a rainy night would solo dance or not, thus to determine when the clouds will be dispersed, and when the moonlight will return.",
@@ -163153,12 +166233,31 @@ Once it is removed, you can damage them. Destroy both Justiciar Basalt Sentinels
     TextMapContent = "羽翼舒展，敛尽白昼的锋芒与午夜的深邃。",
     TextMapId = "UI_Accessory_Desc_40089"
   },
+  UI_Accessory_Desc_40090 = {
+    ContentEN = "Silken threads ensnare the falling stars.",
+    ContentFR = "De fins fils d’araignée ont capturé les étoiles tombées du ciel.",
+    ContentJP = "細き蜘蛛の糸が、墜ちゆく星を絡め取る。",
+    ContentKR = "떨어지는 별을 사로잡은 가느다란 거미줄.",
+    ContentTC = "纖細的蛛絲，捕獲了墜落的星辰。",
+    TextMapContent = "纤细的蛛丝，捕获了坠落的星辰。",
+    TextMapId = "UI_Accessory_Desc_40090"
+  },
+  UI_Accessory_Desc_40094 = {
+    ContentEN = "Don't look back... Something's right behind you!",
+    ContentFR = "Ne te retourne pas. Il est juste derrière toi.",
+    ContentJP = "振り返るな。すぐ後ろにいる。",
+    ContentKR = "뒤돌아보지 마. 바로 네 뒤야.",
+    ContentTC = "不要回頭，就在你身後。",
+    TextMapContent = "不要回头，就在你身后。",
+    TextMapId = "UI_Accessory_Desc_40094"
+  },
   UI_Accessory_Desc_50004 = {
     ContentEN = "{空格}",
     ContentFR = "{空格}",
     ContentJP = "{空格}",
     ContentKR = "{空格}",
     ContentTC = "{空格}",
+    TextMapContent = " ",
     TextMapId = "UI_Accessory_Desc_50004"
   },
   UI_Accessory_Desc_60001 = {
@@ -163167,6 +166266,7 @@ Once it is removed, you can damage them. Destroy both Justiciar Basalt Sentinels
     ContentJP = "{空格}",
     ContentKR = "{空格}",
     ContentTC = "{空格}",
+    TextMapContent = " ",
     TextMapId = "UI_Accessory_Desc_60001"
   },
   UI_Accessory_Desc_60002 = {
@@ -163268,6 +166368,51 @@ Once it is removed, you can damage them. Destroy both Justiciar Basalt Sentinels
     TextMapContent = "愤怒如同火焰，将一切烧成灰烬之前永远也不会停歇。",
     TextMapId = "UI_Accessory_Desc_70008"
   },
+  UI_Accessory_Desc_70009 = {
+    ContentEN = "Flowers from silken threads guide lost souls through the night.",
+    ContentFR = "Des fleurs tissées de fils conduisent les âmes errantes perdues dans la nuit.",
+    ContentJP = "糸で紡がれた花が、夜に迷える亡者を彼岸へと導く。",
+    ContentKR = "어둠 속을 헤매는 망령을 인도하는 실로 엮어낸 꽃.",
+    ContentTC = "絲線編織的花朵，引渡著迷失在夜色中的亡靈。",
+    TextMapContent = "丝线编织的花朵，引渡着迷失在夜色中的亡灵。",
+    TextMapId = "UI_Accessory_Desc_70009"
+  },
+  UI_Accessory_Desc_70084 = {
+    ContentEN = "Flowers from silken threads guide lost souls through the night.",
+    ContentFR = "Des fleurs tissées de fils conduisent les âmes errantes perdues dans la nuit.",
+    ContentJP = "糸で紡がれた花が、夜に迷える亡者を彼岸へと導く。",
+    ContentKR = "어둠 속을 헤매는 망령을 인도하는 실로 엮어낸 꽃.",
+    ContentTC = "絲線編織的花朵，引渡著迷失在夜色中的亡靈。",
+    TextMapContent = "丝线编织的花朵，引渡着迷失在夜色中的亡灵。",
+    TextMapId = "UI_Accessory_Desc_70084"
+  },
+  UI_Accessory_Desc_70085 = {
+    ContentEN = "Flowers from silken threads guide lost souls through the night.",
+    ContentFR = "Des fleurs tissées de fils conduisent les âmes errantes perdues dans la nuit.",
+    ContentJP = "糸で紡がれた花が、夜に迷える亡者を彼岸へと導く。",
+    ContentKR = "어둠 속을 헤매는 망령을 인도하는 실로 엮어낸 꽃.",
+    ContentTC = "絲線編織的花朵，引渡著迷失在夜色中的亡靈。",
+    TextMapContent = "丝线编织的花朵，引渡着迷失在夜色中的亡灵。",
+    TextMapId = "UI_Accessory_Desc_70085"
+  },
+  UI_Accessory_Desc_70086 = {
+    ContentEN = "Flowers from silken threads guide lost souls through the night.",
+    ContentFR = "Des fleurs tissées de fils conduisent les âmes errantes perdues dans la nuit.",
+    ContentJP = "糸で紡がれた花が、夜に迷える亡者を彼岸へと導く。",
+    ContentKR = "어둠 속을 헤매는 망령을 인도하는 실로 엮어낸 꽃.",
+    ContentTC = "絲線編織的花朵，引渡著迷失在夜色中的亡靈。",
+    TextMapContent = "丝线编织的花朵，引渡着迷失在夜色中的亡灵。",
+    TextMapId = "UI_Accessory_Desc_70086"
+  },
+  UI_Accessory_Desc_70087 = {
+    ContentEN = "Flowers from silken threads guide lost souls through the night.",
+    ContentFR = "Des fleurs tissées de fils conduisent les âmes errantes perdues dans la nuit.",
+    ContentJP = "糸で紡がれた花が、夜に迷える亡者を彼岸へと導く。",
+    ContentKR = "어둠 속을 헤매는 망령을 인도하는 실로 엮어낸 꽃.",
+    ContentTC = "絲線編織的花朵，引渡著迷失在夜色中的亡靈。",
+    TextMapContent = "丝线编织的花朵，引渡着迷失在夜色中的亡灵。",
+    TextMapId = "UI_Accessory_Desc_70087"
+  },
   UI_Accessory_Desc_80001 = {
     ContentEN = "Bearing pansies, butterflies await the star's arrival to begin the ball's grand overture.",
     ContentFR = "Des papillons, chargés de pensées, attendent l’arrivée du protagoniste pour ouvrir le bal.",
@@ -163357,6 +166502,15 @@ Once it is removed, you can damage them. Destroy both Justiciar Basalt Sentinels
     ContentTC = "指尖流動的綺麗魔術。",
     TextMapContent = "指尖流动的绮丽魔术。",
     TextMapId = "UI_Accessory_Desc_80065"
+  },
+  UI_Accessory_Desc_80070 = {
+    ContentEN = "Though only bones remain, never forget how to fly.",
+    ContentFR = "Même lorsque seuls les os demeurent, n’oublie jamais de voler.",
+    ContentJP = "たとえ白骨となっても、飛ぶことを忘れないで。",
+    ContentKR = "설령 육신이 다하더라도, 날갯짓만은 잊지 않기를.",
+    ContentTC = "即使化為白骨，也請不要忘記飛翔。",
+    TextMapContent = "即使化为白骨，也请不要忘记飞翔。",
+    TextMapId = "UI_Accessory_Desc_80070"
   },
   UI_Accessory_Desc_90001 = {
     ContentEN = "Berenica's favorite cloak. When the sea breeze blows, it rattles like a seabird spreading its feathers in silence.",
@@ -163659,7 +166813,7 @@ Lynn's Headpiece
   UI_Accessory_Name_00156 = {
     ContentEN = "Silent Thorns: Leaden Grey",
     ContentFR = "Silence mordant – Gris plomb",
-    ContentJP = "沈黙の荊冠・チタニウムホワイト",
+    ContentJP = "沈黙の荊冠・鉛灰",
     ContentKR = "묵언의 한기·그레이",
     ContentTC = "緘默刺骨·鉛灰",
     TextMapContent = "缄默刺骨·铅灰",
@@ -164274,7 +167428,7 @@ Lynn's Headpiece
   UI_Accessory_Name_10070 = {
     ContentEN = "Cosmic Lunacy: Leaden Grey",
     ContentFR = "Lunaison cosmique – Gris plomb",
-    ContentJP = "諸天月相・チタニウムホワイト",
+    ContentJP = "諸天月相・鉛灰",
     ContentKR = "창공의 달 변천·그레이",
     ContentTC = "諸天月相·鉛灰",
     TextMapContent = "诸天月相·铅灰",
@@ -164373,7 +167527,7 @@ Lynn's Headpiece
   UI_Accessory_Name_10081 = {
     ContentEN = "Frostar Crown: Leaden Grey",
     ContentFR = "Couronne Givre-Étoilé – Gris plomb",
-    ContentJP = "煌星の王冠・チタニウムホワイト",
+    ContentJP = "煌星の王冠・鉛灰",
     ContentKR = "서리 왕관·그레이",
     ContentTC = "星霜王冠·鉛灰",
     TextMapContent = "星霜王冠·铅灰",
@@ -164452,12 +167606,12 @@ Lynn's Headpiece
     TextMapId = "UI_Accessory_Name_10089"
   },
   UI_Accessory_Name_10090 = {
-    ContentEN = "Eclipta Grass Headpiece",
-    ContentFR = "Ornement de Lotus d’hiver",
+    ContentEN = "Hushed Shade: Violet",
+    ContentFR = "Esprit du mutisme – Pourpre profond",
     ContentJP = "蓮草の髪飾り",
-    ContentKR = "로터스 머리 장식",
-    ContentTC = "蓮草髮飾",
-    TextMapContent = "莲草发饰",
+    ContentKR = "금언의 사령·보라",
+    ContentTC = "噤言詭靈·絳紫",
+    TextMapContent = "噤言诡灵·绛紫",
     TextMapId = "UI_Accessory_Name_10090"
   },
   UI_Accessory_Name_10091 = {
@@ -164544,7 +167698,7 @@ Lynn's Headpiece
   UI_Accessory_Name_10100 = {
     ContentEN = "Ritual Censer: Leaden Grey",
     ContentFR = "Brûle-encens rituel – Gris plomb",
-    ContentJP = "祀煙香炉・チタニウムホワイト",
+    ContentJP = "祀煙香炉・鉛灰",
     ContentKR = "제례 향로·그레이",
     ContentTC = "祀煙香爐·鉛灰",
     TextMapContent = "祀烟香炉·铅灰",
@@ -164589,7 +167743,7 @@ Lynn's Headpiece
   UI_Accessory_Name_10105 = {
     ContentEN = "Puppy Headpiece: Leaden Grey",
     ContentFR = "Ornement canin – Gris plomb",
-    ContentJP = "犬の髪飾り・チタニウムホワイト",
+    ContentJP = "犬の髪飾り・鉛灰",
     ContentKR = "멍멍 머리 장식·그레이",
     ContentTC = "汪汪髮飾·鉛灰",
     TextMapContent = "汪汪发饰·铅灰",
@@ -164805,7 +167959,7 @@ Lynn's Headpiece
   UI_Accessory_Name_10129 = {
     ContentEN = "Roadblock: Leaden Grey",
     ContentFR = "Cône de signalisation – Gris plomb",
-    ContentJP = "バリケード・チタニウムホワイト",
+    ContentJP = "バリケード・鉛灰",
     ContentKR = "바리케이드·그레이",
     ContentTC = "路障·鉛灰",
     TextMapContent = "路障·铅灰",
@@ -164935,7 +168089,7 @@ Lynn's Headpiece
   UI_Accessory_Name_10144 = {
     ContentEN = "Wolfy Headpiece: Leaden Grey",
     ContentFR = "Oreilles de loup – Gris plomb",
-    ContentJP = "ワイルドな髪飾り・チタニウムホワイト",
+    ContentJP = "ワイルドな髪飾り・鉛灰",
     ContentKR = "아우우 머리 장식·그레이",
     ContentTC = "野性髮飾·鉛灰",
     TextMapContent = "野性发饰·铅灰",
@@ -165025,7 +168179,7 @@ Lynn's Headpiece
   UI_Accessory_Name_10154 = {
     ContentEN = "Fold-Ear Kitty Headpiece: Leaden Grey",
     ContentFR = "Ornement de chat aux oreilles tombantes – Gris plomb",
-    ContentJP = "折れ耳猫の髪飾り・チタニウムホワイト",
+    ContentJP = "折れ耳猫の髪飾り・鉛灰",
     ContentKR = "스코티시폴드 머리 장식·그레이",
     ContentTC = "折耳喵喵髮飾·鉛灰",
     TextMapContent = "折耳喵喵发饰·铅灰",
@@ -165088,7 +168242,7 @@ Lynn's Headpiece
   UI_Accessory_Name_10161 = {
     ContentEN = "Marionette Cross: Leaden Grey",
     ContentFR = "Marionnette à fils – Gris plomb",
-    ContentJP = "操り人形・チタニウムホワイト",
+    ContentJP = "操り人形・鉛灰",
     ContentKR = "마리오네트·그레이",
     ContentTC = "提線人偶·鉛灰",
     TextMapContent = "提线人偶·铅灰",
@@ -165159,6 +168313,15 @@ Lynn's Headpiece
     ContentTC = "獄火狂燃",
     TextMapContent = "狱火狂燃",
     TextMapId = "UI_Accessory_Name_11009"
+  },
+  UI_Accessory_Name_11010 = {
+    ContentEN = "Ivoryburst: Azure",
+    ContentFR = "Déflagration d’ossuaire – Bleu indigo",
+    ContentJP = "骨塚爆破・インディゴ",
+    ContentKR = "뼈무덤의 피어남·다크 블루",
+    ContentTC = "骨冢爆破·黛藍",
+    TextMapContent = "骨冢爆破·黛蓝",
+    TextMapId = "UI_Accessory_Name_11010"
   },
   UI_Accessory_Name_12001 = {
     ContentEN = "Glazed Whisper",
@@ -165289,7 +168452,7 @@ Lynn's Headpiece
   UI_Accessory_Name_12015 = {
     ContentEN = "Hushed Iris: Leaden Grey",
     ContentFR = "Iris silencieux – Gris plomb",
-    ContentJP = "沈黙のアイリス・チタニウムホワイト",
+    ContentJP = "沈黙のアイリス・鉛灰",
     ContentKR = "침묵의 아이리스·그레이",
     ContentTC = "沉默鳶尾·鉛灰",
     TextMapContent = "沉默鸢尾·铅灰",
@@ -165424,7 +168587,7 @@ Lynn's Headpiece
   UI_Accessory_Name_12030 = {
     ContentEN = "Guardian's Crown: Leaden Grey",
     ContentFR = "Couronne protectrice – Gris plomb",
-    ContentJP = "ガーディアンの冠・チタニウムホワイト",
+    ContentJP = "ガーディアンの冠・鉛灰",
     ContentKR = "수호의 모자·그레이",
     ContentTC = "守護之冕·鉛灰",
     TextMapContent = "守护之冕·铅灰",
@@ -165565,6 +168728,42 @@ Lynn's Headpiece
     TextMapContent = "饼住呼吸·碧绿",
     TextMapId = "UI_Accessory_Name_12134"
   },
+  UI_Accessory_Name_12135 = {
+    ContentEN = "Prank-o'-Lantern: Apricot",
+    ContentFR = "Citrouille espiègle – Jaune abricot",
+    ContentJP = "いたずらのカボチャ·アンズ",
+    ContentKR = "장난꾸러기 호박·오렌지",
+    ContentTC = "搗蛋南瓜·杏黃",
+    TextMapContent = "捣蛋南瓜·杏黄",
+    TextMapId = "UI_Accessory_Name_12135"
+  },
+  UI_Accessory_Name_12136 = {
+    ContentEN = "Prank-o'-Lantern: Rust Red",
+    ContentFR = "Citrouille espiègle – Rouille",
+    ContentJP = "いたずらのカボチャ·ペルシアンレッド",
+    ContentKR = "장난꾸러기 호박·러스트 레드",
+    ContentTC = "搗蛋南瓜·銹紅",
+    TextMapContent = "捣蛋南瓜·锈红",
+    TextMapId = "UI_Accessory_Name_12136"
+  },
+  UI_Accessory_Name_12137 = {
+    ContentEN = "Prank-o'-Lantern: Gilt",
+    ContentFR = "Citrouille espiègle – Doré",
+    ContentJP = "いたずらのカボチャ·マリーゴールド",
+    ContentKR = "장난꾸러기 호박·골드",
+    ContentTC = "搗蛋南瓜·鎏金",
+    TextMapContent = "捣蛋南瓜·鎏金",
+    TextMapId = "UI_Accessory_Name_12137"
+  },
+  UI_Accessory_Name_12138 = {
+    ContentEN = "Prank-o'-Lantern: Mint",
+    ContentFR = "Citrouille espiègle – Menthe",
+    ContentJP = "いたずらのカボチャ·ミント",
+    ContentKR = "장난꾸러기 호박·민트",
+    ContentTC = "搗蛋南瓜·薄荷",
+    TextMapContent = "捣蛋南瓜·薄荷",
+    TextMapId = "UI_Accessory_Name_12138"
+  },
   UI_Accessory_Name_13001 = {
     ContentEN = "Windstrider Waistpiece: Opaque White",
     ContentFR = "Accessoire de taille du Marchevent – Blanc ivoire",
@@ -165667,7 +168866,7 @@ Lynn's Headpiece
   UI_Accessory_Name_13012 = {
     ContentEN = "Snap Kitty Waistpiece: Leaden Grey",
     ContentFR = "Queue miaou courte – Gris plomb",
-    ContentJP = "猫の尻尾（ショート）・チタニウムホワイト",
+    ContentJP = "猫の尻尾（ショート）・鉛灰",
     ContentKR = "짧은 묘묘 허리 장식·그레이",
     ContentTC = "短喵喵腰飾·鉛灰",
     TextMapContent = "短喵喵腰饰·铅灰",
@@ -165703,7 +168902,7 @@ Lynn's Headpiece
   UI_Accessory_Name_13016 = {
     ContentEN = "Swing Kitty Waistpiece: Leaden Grey",
     ContentFR = "Queue miaou longue – Gris plomb",
-    ContentJP = "猫の尻尾（ロング）・チタニウムホワイト",
+    ContentJP = "猫の尻尾（ロング）・鉛灰",
     ContentKR = "긴 묘묘 허리 장식·그레이",
     ContentTC = "長喵喵腰飾·鉛灰",
     TextMapContent = "长喵喵腰饰·铅灰",
@@ -165811,7 +169010,7 @@ Lynn's Headpiece
   UI_Accessory_Name_13028 = {
     ContentEN = "Puppy Tail: Leaden Grey",
     ContentFR = "Queue de chien – Gris plomb",
-    ContentJP = "犬のしっぽ・チタニウムホワイト",
+    ContentJP = "犬のしっぽ・鉛灰",
     ContentKR = "멍멍 꼬리·그레이",
     ContentTC = "汪汪尾巴·鉛灰",
     TextMapContent = "汪汪尾巴·铅灰",
@@ -165945,7 +169144,7 @@ Lynn's Headpiece
   UI_Accessory_Name_13044 = {
     ContentEN = "Wolfy Tail: Leaden Grey",
     ContentFR = "Queue de loup – Gris plomb",
-    ContentJP = "ワイルドなしっぽ・チタニウムホワイト",
+    ContentJP = "ワイルドなしっぽ・鉛灰",
     ContentKR = "아우우 꼬리·그레이",
     ContentTC = "野性尾巴·鉛灰",
     TextMapContent = "野性尾巴·铅灰",
@@ -165999,7 +169198,7 @@ Lynn's Headpiece
   UI_Accessory_Name_13055 = {
     ContentEN = "Fold-Ear Kitty Tail: Leaden Grey",
     ContentFR = "Queue de chat aux oreilles tombantes – Gris plomb",
-    ContentJP = "折れ耳猫のしっぽ・チタニウムホワイト",
+    ContentJP = "折れ耳猫のしっぽ・鉛灰",
     ContentKR = "스코티시폴드 꼬리·그레이",
     ContentTC = "折耳喵喵尾巴·鉛灰",
     TextMapContent = "折耳喵喵尾巴·铅灰",
@@ -166035,7 +169234,7 @@ Lynn's Headpiece
   UI_Accessory_Name_13059 = {
     ContentEN = "Mystic Clockwork: Leaden Grey",
     ContentFR = "Remontoir magique – Gris plomb",
-    ContentJP = "マジックゼンマイ・チタニウムホワイト",
+    ContentJP = "マジックゼンマイ・鉛灰",
     ContentKR = "마법 태엽·그레이",
     ContentTC = "魔法發條·鉛灰",
     TextMapContent = "魔法发条·铅灰",
@@ -166645,7 +169844,7 @@ Lynn's Headpiece
   UI_Accessory_Name_20072 = {
     ContentEN = "Cool Shades: Leaden Grey",
     ContentFR = "Lunettes audacieuses – Gris plomb",
-    ContentJP = "クール系サングラス・チタニウムホワイト",
+    ContentJP = "クール系サングラス・鉛灰",
     ContentKR = "멋쟁이 선글라스·그레이",
     ContentTC = "炫酷墨鏡·鉛灰",
     TextMapContent = "炫酷墨镜·铅灰",
@@ -166911,6 +170110,69 @@ Lynn's Headpiece
     TextMapContent = "缄默覆面·涅白",
     TextMapId = "UI_Accessory_Name_20105"
   },
+  UI_Accessory_Name_20106 = {
+    ContentEN = "Ivorybloom: Opaque White",
+    ContentFR = "Fleur d’ossuaire – Blanc ivoire",
+    ContentJP = "骨塚の花・アイボリー",
+    ContentKR = "뼈무덤의 꽃·아이보리",
+    ContentTC = "骨冢花·涅白",
+    TextMapContent = "骨冢花·涅白",
+    TextMapId = "UI_Accessory_Name_20106"
+  },
+  UI_Accessory_Name_20107 = {
+    ContentEN = "Ivorybloom: Violet",
+    ContentFR = "Fleur d’ossuaire – Pourpre profond",
+    ContentJP = "骨塚の花・レッドパープル",
+    ContentKR = "뼈무덤의 꽃·보라",
+    ContentTC = "骨冢花·絳紫",
+    TextMapContent = "骨冢花·绛紫",
+    TextMapId = "UI_Accessory_Name_20107"
+  },
+  UI_Accessory_Name_20108 = {
+    ContentEN = "Ivorybloom: Gilt",
+    ContentFR = "Fleur d’ossuaire – Doré",
+    ContentJP = "骨塚の花・マリーゴールド",
+    ContentKR = "뼈무덤의 꽃·골드",
+    ContentTC = "骨冢花·鎏金",
+    TextMapContent = "骨冢花·鎏金",
+    TextMapId = "UI_Accessory_Name_20108"
+  },
+  UI_Accessory_Name_20109 = {
+    ContentEN = "Ivorybloom: Rust Red",
+    ContentFR = "Fleur d’ossuaire – Rouille",
+    ContentJP = "骨塚の花・ペルシアンレッド",
+    ContentKR = "뼈무덤의 꽃·러스트 레드",
+    ContentTC = "骨冢花·銹紅",
+    TextMapContent = "骨冢花·锈红",
+    TextMapId = "UI_Accessory_Name_20109"
+  },
+  UI_Accessory_Name_20110 = {
+    ContentEN = "Pestilence Physician: Leaden Grey",
+    ContentFR = "Marcheur de peste – Gris plomb",
+    ContentJP = "疫病の行者・鉛灰",
+    ContentKR = "역병의 방랑자·그레이",
+    ContentTC = "瘟疫行者·鉛灰",
+    TextMapContent = "瘟疫行者·铅灰",
+    TextMapId = "UI_Accessory_Name_20110"
+  },
+  UI_Accessory_Name_20111 = {
+    ContentEN = "Pestilence Physician: Dark Jade",
+    ContentFR = "Marcheur de peste – Jade noir",
+    ContentJP = "疫病の行者・ジェットブラック",
+    ContentKR = "역병의 방랑자·제트 블랙",
+    ContentTC = "瘟疫行者·墨玉",
+    TextMapContent = "瘟疫行者·墨玉",
+    TextMapId = "UI_Accessory_Name_20111"
+  },
+  UI_Accessory_Name_20112 = {
+    ContentEN = "Pestilence Physician: Opaque White",
+    ContentFR = "Marcheur de peste – Blanc ivoire",
+    ContentJP = "疫病の行者・アイボリー",
+    ContentKR = "역병의 방랑자·아이보리",
+    ContentTC = "瘟疫行者·涅白",
+    TextMapContent = "瘟疫行者·涅白",
+    TextMapId = "UI_Accessory_Name_20112"
+  },
   UI_Accessory_Name_21001 = {
     TextMapId = "UI_Accessory_Name_21001"
   },
@@ -166989,7 +170251,7 @@ Lynn's Headpiece
   UI_Accessory_Name_21010 = {
     ContentEN = "Sacred Wake: Leaden Grey",
     ContentFR = "Sillage sacré – Gris plomb",
-    ContentJP = "聖潔の軌跡・チタニウムホワイト",
+    ContentJP = "聖潔の軌跡・鉛灰",
     ContentKR = "성결한 궤적·그레이",
     ContentTC = "聖潔軌跡·鉛灰",
     TextMapContent = "圣洁轨迹·铅灰",
@@ -167012,6 +170274,51 @@ Lynn's Headpiece
     ContentTC = "幽燃熱浪",
     TextMapContent = "幽燃热浪",
     TextMapId = "UI_Accessory_Name_21013"
+  },
+  UI_Accessory_Name_21016 = {
+    ContentEN = "Spooky Kitty: Opaque White",
+    ContentFR = "Chatôme – Blanc ivoire",
+    ContentJP = "にゃんこの幽霊·アイボリー",
+    ContentKR = "냥이 유령·아이보리",
+    ContentTC = "貓貓幽靈·涅白",
+    TextMapContent = "猫猫幽灵·涅白",
+    TextMapId = "UI_Accessory_Name_21016"
+  },
+  UI_Accessory_Name_21017 = {
+    ContentEN = "Spooky Pumpkin: Gilt",
+    ContentFR = "Fantrouille – Doré",
+    ContentJP = "カボチャの幽霊·マリーゴールド",
+    ContentKR = "호박 유령·골드",
+    ContentTC = "南瓜幽靈·鎏金",
+    TextMapContent = "南瓜幽灵·鎏金",
+    TextMapId = "UI_Accessory_Name_21017"
+  },
+  UI_Accessory_Name_21018 = {
+    ContentEN = "Spooky Tricks: Gilt",
+    ContentFR = "Fantôme espiègle – Doré",
+    ContentJP = "いたずらの幽霊·マリーゴールド",
+    ContentKR = "장난꾸러기 유령·골드",
+    ContentTC = "搗蛋幽靈·鎏金",
+    TextMapContent = "捣蛋幽灵·鎏金",
+    TextMapId = "UI_Accessory_Name_21018"
+  },
+  UI_Accessory_Name_21019 = {
+    ContentEN = "Eldritch Talisman: Violet",
+    ContentFR = "Talisman ésotérique – Pourpre profond",
+    ContentJP = "鬼道呪符・レッドパープル",
+    ContentKR = "삿된 부적·보라",
+    ContentTC = "詭道符籙·絳紫",
+    TextMapContent = "诡道符箓·绛紫",
+    TextMapId = "UI_Accessory_Name_21019"
+  },
+  UI_Accessory_Name_21020 = {
+    ContentEN = "Trailing Silks: Azure",
+    ContentFR = "Fils d’ombre – Bleu indigo",
+    ContentJP = "影を曳く糸・インディゴ",
+    ContentKR = "허공을 누비는 실·다크 블루",
+    ContentTC = "懸絲曳影·黛藍",
+    TextMapContent = "悬丝曳影·黛蓝",
+    TextMapId = "UI_Accessory_Name_21020"
   },
   UI_Accessory_Name_30001 = {
     ContentEN = "Lantern",
@@ -167948,7 +171255,12 @@ Lynn's Headpiece
     TextMapId = "UI_Accessory_Name_40036"
   },
   UI_Accessory_Name_40037 = {
-    TextMapContent = "僵尸主题背饰4【远期待包装】",
+    ContentEN = "Array of Designs: Violet",
+    ContentFR = "Déploiement perfide – Pourpre profond",
+    ContentJP = "鬼道伏兵・レッドパープル",
+    ContentKR = "간악한 하수인·보라",
+    ContentTC = "詭道陳兵·絳紫",
+    TextMapContent = "诡道陈兵·绛紫",
     TextMapId = "UI_Accessory_Name_40037"
   },
   UI_Accessory_Name_40038 = {
@@ -168197,7 +171509,7 @@ Lynn's Headpiece
   UI_Accessory_Name_40065 = {
     ContentEN = "Ethereal Wings: Leaden Grey",
     ContentFR = "Ailes célestes – Gris plomb",
-    ContentJP = "天使の翼・チタニウムホワイト",
+    ContentJP = "天使の翼・鉛灰",
     ContentKR = "천공의 날개·그레이",
     ContentTC = "天之翼·鉛灰",
     TextMapContent = "天之翼·铅灰",
@@ -168287,7 +171599,7 @@ Lynn's Headpiece
   UI_Accessory_Name_40075 = {
     ContentEN = "Darktide: Leaden Grey",
     ContentFR = "Sombre vague – Gris plomb",
-    ContentJP = "ダークタイド・チタニウムホワイト",
+    ContentJP = "ダークタイド・鉛灰",
     ContentKR = "암류·그레이",
     ContentTC = "暗潮·鉛灰",
     TextMapContent = "暗潮·铅灰",
@@ -168418,6 +171730,69 @@ Lynn's Headpiece
     ContentTC = "光影耀斑",
     TextMapContent = "光影耀斑",
     TextMapId = "UI_Accessory_Name_40089"
+  },
+  UI_Accessory_Name_40090 = {
+    ContentEN = "Starfall Silks: Violet",
+    ContentFR = "Fils d’étoiles tombées – Pourpre profond",
+    ContentJP = "星降る糸・レッドパープル",
+    ContentKR = "유성에 드리운 실·보라",
+    ContentTC = "星落懸絲·絳紫",
+    TextMapContent = "星落悬丝·绛紫",
+    TextMapId = "UI_Accessory_Name_40090"
+  },
+  UI_Accessory_Name_40091 = {
+    ContentEN = "Starfall Silks: Opaque White",
+    ContentFR = "Fils d’étoiles tombées – Blanc ivoire",
+    ContentJP = "星降る糸・アイボリー",
+    ContentKR = "유성에 드리운 실·아이보리",
+    ContentTC = "星落懸絲·涅白",
+    TextMapContent = "星落悬丝·涅白",
+    TextMapId = "UI_Accessory_Name_40091"
+  },
+  UI_Accessory_Name_40092 = {
+    ContentEN = "Starfall Silks: Gilt",
+    ContentFR = "Fils d’étoiles tombées – Doré",
+    ContentJP = "星降る糸・マリーゴールド",
+    ContentKR = "유성에 드리운 실·골드",
+    ContentTC = "星落懸絲·鎏金",
+    TextMapContent = "星落悬丝·鎏金",
+    TextMapId = "UI_Accessory_Name_40092"
+  },
+  UI_Accessory_Name_40093 = {
+    ContentEN = "Starfall Silks: Rust Red",
+    ContentFR = "Fils d’étoiles tombées – Rouille",
+    ContentJP = "星降る糸・ペルシアンレッド",
+    ContentKR = "유성에 드리운 실·러스트 레드",
+    ContentTC = "星落懸絲·銹紅",
+    TextMapContent = "星落悬丝·锈红",
+    TextMapId = "UI_Accessory_Name_40093"
+  },
+  UI_Accessory_Name_40094 = {
+    ContentEN = "Mischief Grin: Gilt",
+    ContentFR = "Diablotin espiègle – Doré",
+    ContentJP = "ニヤリデビル・マリーゴールド",
+    ContentKR = "장난꾸러기 웃음·골드",
+    ContentTC = "搗蛋笑魘·鎏金",
+    TextMapContent = "捣蛋笑魇·鎏金",
+    TextMapId = "UI_Accessory_Name_40094"
+  },
+  UI_Accessory_Name_40095 = {
+    ContentEN = "Mischief Grin: Rust Red",
+    ContentFR = "Diablotin espiègle – Rouille",
+    ContentJP = "ニヤリデビル・ペルシアンレッド",
+    ContentKR = "장난꾸러기 웃음·러스트 레드",
+    ContentTC = "搗蛋笑魘·銹紅",
+    TextMapContent = "捣蛋笑魇·锈红",
+    TextMapId = "UI_Accessory_Name_40095"
+  },
+  UI_Accessory_Name_40096 = {
+    ContentEN = "Mischief Grin: Opaque White",
+    ContentFR = "Diablotin espiègle – Blanc ivoire",
+    ContentJP = "ニヤリデビル・アイボリー",
+    ContentKR = "장난꾸러기 웃음·아이보리",
+    ContentTC = "搗蛋笑魘·涅白",
+    TextMapContent = "捣蛋笑魇·涅白",
+    TextMapId = "UI_Accessory_Name_40096"
   },
   UI_Accessory_Name_50003 = {
     ContentEN = "Silvercandle Doll",
@@ -168761,6 +172136,42 @@ Lynn's Headpiece
     TextMapContent = "幽燃余烬·绛紫",
     TextMapId = "UI_Accessory_Name_70083"
   },
+  UI_Accessory_Name_70084 = {
+    ContentEN = "Florafall Silks: Violet",
+    ContentFR = "Fils d’ombres fleuries – Pourpre profond",
+    ContentJP = "花影の糸・レッドパープル",
+    ContentKR = "꽃에 드리운 실·보라",
+    ContentTC = "花影懸絲·絳紫",
+    TextMapContent = "花影悬丝·绛紫",
+    TextMapId = "UI_Accessory_Name_70084"
+  },
+  UI_Accessory_Name_70085 = {
+    ContentEN = "Florafall Silks: Opaque White",
+    ContentFR = "Fils d’ombres fleuries – Blanc ivoire",
+    ContentJP = "花影の糸・アイボリー",
+    ContentKR = "꽃에 드리운 실·아이보리",
+    ContentTC = "花影懸絲·涅白",
+    TextMapContent = "花影悬丝·涅白",
+    TextMapId = "UI_Accessory_Name_70085"
+  },
+  UI_Accessory_Name_70086 = {
+    ContentEN = "Florafall Silks: Gilt",
+    ContentFR = "Fils d’ombres fleuries – Doré",
+    ContentJP = "花影の糸・マリーゴールド",
+    ContentKR = "꽃에 드리운 실·골드",
+    ContentTC = "花影懸絲·鎏金",
+    TextMapContent = "花影悬丝·鎏金",
+    TextMapId = "UI_Accessory_Name_70086"
+  },
+  UI_Accessory_Name_70087 = {
+    ContentEN = "Florafall Silks: Rust Red",
+    ContentFR = "Fils d’ombres fleuries – Rouille",
+    ContentJP = "花影の糸・ペルシアンレッド",
+    ContentKR = "꽃에 드리운 실·러스트 레드",
+    ContentTC = "花影懸絲·銹紅",
+    TextMapContent = "花影悬丝·锈红",
+    TextMapId = "UI_Accessory_Name_70087"
+  },
   UI_Accessory_Name_80001 = {
     ContentEN = "Midsummer Rendezvous",
     ContentFR = "Invitation d’une nuit d’été",
@@ -169048,6 +172459,42 @@ Lynn's Headpiece
     ContentTC = "魔術卡牌",
     TextMapContent = "魔术卡牌",
     TextMapId = "UI_Accessory_Name_80065"
+  },
+  UI_Accessory_Name_80070 = {
+    ContentEN = "Ivorywing: Opaque White",
+    ContentFR = "Papillon d’ossuaire – Blanc ivoire",
+    ContentJP = "骨塚の蝶・アイボリー",
+    ContentKR = "뼈무덤의 나비·아이보리",
+    ContentTC = "骨冢蝶·涅白",
+    TextMapContent = "骨冢蝶·涅白",
+    TextMapId = "UI_Accessory_Name_80070"
+  },
+  UI_Accessory_Name_80071 = {
+    ContentEN = "Ivorywing: Violet",
+    ContentFR = "Papillon d’ossuaire – Pourpre profond",
+    ContentJP = "骨塚の蝶・レッドパープル",
+    ContentKR = "뼈무덤의 나비·보라",
+    ContentTC = "骨冢蝶·絳紫",
+    TextMapContent = "骨冢蝶·绛紫",
+    TextMapId = "UI_Accessory_Name_80071"
+  },
+  UI_Accessory_Name_80072 = {
+    ContentEN = "Ivorywing: Gilt",
+    ContentFR = "Papillon d’ossuaire – Doré",
+    ContentJP = "骨塚の蝶・マリーゴールド",
+    ContentKR = "뼈무덤의 나비·골드",
+    ContentTC = "骨冢蝶·鎏金",
+    TextMapContent = "骨冢蝶·鎏金",
+    TextMapId = "UI_Accessory_Name_80072"
+  },
+  UI_Accessory_Name_80073 = {
+    ContentEN = "Ivorywing: Rust Red",
+    ContentFR = "Papillon d’ossuaire – Rouille",
+    ContentJP = "骨塚の蝶・ペルシアンレッド",
+    ContentKR = "뼈무덤의 나비·러스트 레드",
+    ContentTC = "骨冢蝶·銹紅",
+    TextMapContent = "骨冢蝶·锈红",
+    TextMapId = "UI_Accessory_Name_80073"
   },
   UI_Accessory_Name_90001 = {
     ContentEN = "The Wings of Darkness",
@@ -180279,6 +183726,150 @@ Lynn's Headpiece
     TextMapContent = "当前所需心迹不足，是否消耗心迹·纷繁*<H>%s</>补全缺失的心迹？",
     TextMapId = "UI_Advanced_Emotions_Popup"
   },
+  UI_AimPlan_Apply = {
+    ContentEN = "Apply",
+    ContentFR = "Appliquer",
+    ContentJP = "このボタン配置を適用",
+    ContentKR = "버튼 플랜 적용",
+    ContentTC = "應用此按鍵方案",
+    TextMapContent = "应用此按键方案",
+    TextMapId = "UI_AimPlan_Apply"
+  },
+  UI_AimPlan_FocusFirePlan_Title = {
+    ContentEN = "Shooting-Focused",
+    ContentFR = "Configuration de tir concentré",
+    ContentJP = "射撃特化設定",
+    ContentKR = "집중 사격 플랜",
+    ContentTC = "專注射擊方案",
+    TextMapContent = "专注射击方案",
+    TextMapId = "UI_AimPlan_FocusFirePlan_Title"
+  },
+  UI_AimPlan_KeyAim = {
+    ContentEN = "Aim",
+    ContentFR = "Visée",
+    ContentJP = "照準",
+    ContentKR = "조준",
+    ContentTC = "瞄準",
+    TextMapContent = "瞄准",
+    TextMapId = "UI_AimPlan_KeyAim"
+  },
+  UI_AimPlan_KeyCombatSkill = {
+    ContentEN = "Combat Skill",
+    ContentFR = "Compétence de combat réassignée",
+    ContentJP = "バトルスキル調整",
+    ContentKR = "전투 스킬",
+    ContentTC = "戰技調整",
+    TextMapContent = "战技调整",
+    TextMapId = "UI_AimPlan_KeyCombatSkill"
+  },
+  UI_AimPlan_KeyFire = {
+    ContentEN = "Shoot",
+    ContentFR = "Tir",
+    ContentJP = "射撃",
+    ContentKR = "사격",
+    ContentTC = "射擊",
+    TextMapContent = "射击",
+    TextMapId = "UI_AimPlan_KeyFire"
+  },
+  UI_AimPlan_KeyFireChanged = {
+    ContentEN = "Shoot",
+    ContentFR = "Tir réassigné",
+    ContentJP = "射撃調整",
+    ContentKR = "사격",
+    ContentTC = "射擊調整",
+    TextMapContent = "射击调整",
+    TextMapId = "UI_AimPlan_KeyFireChanged"
+  },
+  UI_AimPlan_KeyMelee = {
+    ContentEN = "Melee",
+    ContentFR = "Mêlée",
+    ContentJP = "近接",
+    ContentKR = "근접",
+    ContentTC = "近戰",
+    TextMapContent = "近战",
+    TextMapId = "UI_AimPlan_KeyMelee"
+  },
+  UI_AimPlan_KeyMeleeChanged = {
+    ContentEN = "Melee",
+    ContentFR = "Mêlée réassignée",
+    ContentJP = "近接調整",
+    ContentKR = "근접",
+    ContentTC = "近戰調整",
+    TextMapContent = "近战调整",
+    TextMapId = "UI_AimPlan_KeyMeleeChanged"
+  },
+  UI_AimPlan_KeyUltimateSkill = {
+    ContentEN = "Ultimate Skill",
+    ContentFR = "Compétence ultime réassignée",
+    ContentJP = "必殺技調整",
+    ContentKR = "종결 스킬",
+    ContentTC = "終結技調整",
+    TextMapContent = "终结技调整",
+    TextMapId = "UI_AimPlan_KeyUltimateSkill"
+  },
+  UI_AimPlan_NormalPlan_Desc1 = {
+    ContentEN = "Adds [Aim] while keeping your current controls unchanged.",
+    ContentFR = "Ajoute uniquement la visée et conserve vos habitudes de commandes actuelles",
+    ContentJP = "照準のみ追加し、現在の操作・ボタン配置を維持します",
+    ContentKR = "기존 조작 습관을 유지한 채 조준 버튼만 새로 추가합니다.",
+    ContentTC = "僅新增瞄準，保留現有操作按鍵習慣",
+    TextMapContent = "仅新增瞄准，保留现有操作按键习惯",
+    TextMapId = "UI_AimPlan_NormalPlan_Desc1"
+  },
+  UI_AimPlan_NormalPlan_Desc2 = {
+    ContentEN = "Adds [Aim] and adjusts existing controls for a better shooting experience.",
+    ContentFR = "Ajoute la visée et ajuste les commandes actuelles afin d’améliorer l’expérience de tir",
+    ContentJP = "照準を追加し、射撃操作を調整して射撃体験を向上させます",
+    ContentKR = "조준 버튼을 추가하고 사격 경험을 향상시키기 위해 기존 조작을 조정합니다.",
+    ContentTC = "新增瞄準，並調整現有操作以提升射擊體驗",
+    TextMapContent = "新增瞄准，并调整现有操作以提升射击体验",
+    TextMapId = "UI_AimPlan_NormalPlan_Desc2"
+  },
+  UI_AimPlan_NormalPlan_Title = {
+    ContentEN = "Standard",
+    ContentFR = "Configuration standard",
+    ContentJP = "通常設定",
+    ContentKR = "일반 플랜",
+    ContentTC = "常規方案",
+    TextMapContent = "常规方案",
+    TextMapId = "UI_AimPlan_NormalPlan_Title"
+  },
+  UI_AimPlan_SettingsTip = {
+    ContentEN = "You can adjust this later in Settings.",
+    ContentFR = "Cette configuration pourra être modifiée plus tard dans les paramètres",
+    ContentJP = "後から設定で変更できます",
+    ContentKR = "해당 플랜은 추후 설정에서 변경할 수 있습니다.",
+    ContentTC = "後續可在設置系統中調整方案",
+    TextMapContent = "后续可在设置系统中调整方案",
+    TextMapId = "UI_AimPlan_SettingsTip"
+  },
+  UI_AimPlan_TagChanged = {
+    ContentEN = "Changed",
+    ContentFR = "Modifié",
+    ContentJP = "変更",
+    ContentKR = "변경",
+    ContentTC = "改動",
+    TextMapContent = "改动",
+    TextMapId = "UI_AimPlan_TagChanged"
+  },
+  UI_AimPlan_TagNew = {
+    ContentEN = "New",
+    ContentFR = "Nouveau",
+    ContentJP = "追加",
+    ContentKR = "신규",
+    ContentTC = "新增",
+    TextMapContent = "新增",
+    TextMapId = "UI_AimPlan_TagNew"
+  },
+  UI_AimPlan_Title = {
+    ContentEN = "New Control: [Aim]",
+    ContentFR = "Nouvelle action : [Visée]",
+    ContentJP = "「照準」操作を追加",
+    ContentKR = "[조준] 기능 추가",
+    ContentTC = "新增[瞄準]操作",
+    TextMapContent = "新增[瞄准]操作",
+    TextMapId = "UI_AimPlan_Title"
+  },
   UI_Alch_CountDown_1 = {
     ContentEN = "Escape now",
     ContentFR = "Fuir au plus vite",
@@ -180468,6 +184059,14 @@ Lynn's Headpiece
     TextMapContent = "是否确认消耗<highlight>月石*900</>解锁奖励？",
     TextMapId = "UI_AppearanceCollect_ConfirmUnlock"
   },
+  UI_AppearanceCollect_CurrentProgress = {
+    TextMapContent = "本期进度：%d/%d（待包装）",
+    TextMapId = "UI_AppearanceCollect_CurrentProgress"
+  },
+  UI_AppearanceCollect_CurrentProgressDetail = {
+    TextMapContent = "解锁道具可获得外观积分（待包装）",
+    TextMapId = "UI_AppearanceCollect_CurrentProgressDetail"
+  },
   UI_AppearanceCollect_CurrentScore = {
     ContentEN = "Points",
     ContentFR = "Points d’apparence",
@@ -180529,6 +184128,14 @@ Lynn's Headpiece
     ContentTC = "待收集",
     TextMapContent = "待收集",
     TextMapId = "UI_AppearanceCollect_StatusPending"
+  },
+  UI_AppearanceCollect_Switch = {
+    TextMapContent = "外观详情显示积分（待包装）",
+    TextMapId = "UI_AppearanceCollect_Switch"
+  },
+  UI_AppearanceCollect_SwitchDetail = {
+    TextMapContent = "外观详情界面可以显示外观收集积分进度（待包装）",
+    TextMapId = "UI_AppearanceCollect_SwitchDetail"
   },
   UI_AppearanceCollect_UnlockReward = {
     ContentEN = "Unlock Rewards",
@@ -181395,12 +185002,12 @@ Lynn's Headpiece
     TextMapId = "UI_Armory_CharWalnutDes"
   },
   UI_Armory_Char_Empty = {
-    ContentEN = "No character assigned",
+    ContentEN = "No Character",
     ContentFR = "Aucun personnage",
     ContentJP = "キャラクターなし",
-    ContentKR = "미할당 캐릭터",
-    ContentTC = "暫未配置角色",
-    TextMapContent = "暂未配置角色",
+    ContentKR = "캐릭터 없음",
+    ContentTC = "暫無角色",
+    TextMapContent = "暂无角色",
     TextMapId = "UI_Armory_Char_Empty"
   },
   UI_Armory_ClickEmpty = {
@@ -182304,12 +185911,12 @@ Lynn's Headpiece
     TextMapId = "UI_Armory_Weapon_Dispose"
   },
   UI_Armory_Weapon_Empty = {
-    ContentEN = "No weapon equipped",
-    ContentFR = "Aucun personnage configuré",
+    ContentEN = "No Weapon",
+    ContentFR = "Aucune arme",
     ContentJP = "武器なし",
-    ContentKR = "미할당 무기",
-    ContentTC = "暫未配置武器",
-    TextMapContent = "暂未配置武器",
+    ContentKR = "무기 없음",
+    ContentTC = "暫無武器",
+    TextMapContent = "暂无武器",
     TextMapId = "UI_Armory_Weapon_Empty"
   },
   UI_Armory_Weapon_Equipe = {
@@ -185831,7 +189438,7 @@ Lynn's Headpiece
     ContentFR = "Enchaînement automatique actif (%d/%d). La manche suivante débutera à la fin du décompte.",
     ContentJP = "自動周回中（%d/%d）、カウントダウン終了後に自動で続行します",
     ContentKR = "자동 라운드(%d/%d) 중, 카운트다운 종료 시 자동으로 계속 진행됩니다.",
-    ContentTC = "自動輪次中（%d/%d)，倒計時結束後將自動繼續",
+    ContentTC = "自動輪次中（%d/%d），倒計時結束後將自動繼續",
     TextMapContent = "自动轮次中（%d/%d),倒计时结束后将自动继续",
     TextMapId = "UI_Auto_Round_DungeonTips_1"
   },
@@ -186213,6 +189820,15 @@ Lynn's Headpiece
     TextMapContent = "吟游诗集：雪幕夜曲",
     TextMapId = "UI_BPTitle_100012"
   },
+  UI_BPTitle_100013 = {
+    ContentEN = "Bard's Tome: Stellar Sonata",
+    ContentFR = "Ballade du Ménestrel : Sonate stellaire",
+    ContentJP = "詩歌集：星空の旋律",
+    ContentKR = "음유 시집·별빛 선율",
+    ContentTC = "吟遊詩集：深空旋律",
+    TextMapContent = "吟游诗集：深空旋律",
+    TextMapId = "UI_BPTitle_100013"
+  },
   UI_BTN_AGREE = {
     ContentEN = "Accept",
     ContentFR = "Accepter",
@@ -186356,6 +189972,16 @@ Lynn's Headpiece
     ContentTC = "奇想樂章",
     TextMapContent = "奇想乐章",
     TextMapId = "UI_Background_Name_4"
+  },
+  UI_Background_Name_5 = {
+    ContentTC = "糖果夢工廠",
+    TextMapContent = "糖果梦工厂",
+    TextMapId = "UI_Background_Name_5"
+  },
+  UI_Background_Name_6 = {
+    ContentTC = "忘川夜話",
+    TextMapContent = "忘川夜话",
+    TextMapId = "UI_Background_Name_6"
   },
   UI_Background_Owned = {
     ContentEN = "Owned",
@@ -187038,6 +190664,16 @@ Please go to the [Cosmetics] screen to purchase the Skin Selection Chest.]],
     TextMapContent = "奇想乐章活动获取",
     TextMapId = "UI_Banner_Get_16"
   },
+  UI_Banner_Get_17_1 = {
+    ContentTC = "糖果夢工廠活動獲取",
+    TextMapContent = "糖果梦工厂活动获取",
+    TextMapId = "UI_Banner_Get_17_1"
+  },
+  UI_Banner_Get_17_2 = {
+    ContentTC = "忘川夜話活動獲取",
+    TextMapContent = "忘川夜话活动获取",
+    TextMapId = "UI_Banner_Get_17_2"
+  },
   UI_Banner_MonthlyCard = {
     ContentEN = "Monthly Order",
     ContentFR = "Pass mensuel",
@@ -187139,7 +190775,7 @@ Please go to the [Cosmetics] screen to purchase the Skin Selection Chest.]],
   },
   UI_Banner_SubBow02 = {
     ContentEN = "Longbow Skin",
-    ContentFR = "Apparence d’arme — Arc",
+    ContentFR = "Apparence d’arme – Arc",
     ContentJP = "長弓武器スキン",
     ContentKR = "장궁 코스튬",
     ContentTC = "長弓武器形象",
@@ -187148,7 +190784,7 @@ Please go to the [Cosmetics] screen to purchase the Skin Selection Chest.]],
   },
   UI_Banner_SubClaymore = {
     ContentEN = "Greatsword Skin",
-    ContentFR = "Apparence d’arme — Espadon",
+    ContentFR = "Apparence d’arme – Espadon",
     ContentJP = "大剣武器スキン",
     ContentKR = "대검 코스튬",
     ContentTC = "重劍武器形象",
@@ -187172,6 +190808,15 @@ Please go to the [Cosmetics] screen to purchase the Skin Selection Chest.]],
     ContentTC = "突擊槍武器形象",
     TextMapContent = "突击枪武器形象",
     TextMapId = "UI_Banner_SubMachinegun"
+  },
+  UI_Banner_SubSword = {
+    ContentEN = "Sword Skin",
+    ContentFR = "Apparence d’arme – Épée",
+    ContentJP = "片手剣武器スキン",
+    ContentKR = "한손검 무기 코스튬",
+    ContentTC = "單手劍武器形象",
+    TextMapContent = "单手剑武器形象",
+    TextMapId = "UI_Banner_SubSword"
   },
   UI_Banner_SubSwordwhip = {
     ContentEN = "Whipblade Skin",
@@ -188459,6 +192104,15 @@ Please go to the [Cosmetics] screen to purchase the Skin Selection Chest.]],
     TextMapContent = "华胥",
     TextMapId = "UI_CHAR_BIRTH_4102"
   },
+  UI_CHAR_BIRTH_4103 = {
+    ContentEN = "Hyperborean Empire",
+    ContentFR = "Empire Hyperboréen",
+    ContentJP = "ヒュペリア帝国",
+    ContentKR = "휘페르보레아 제국",
+    ContentTC = "海伯利亞帝國",
+    TextMapContent = "海伯利亚帝国",
+    TextMapId = "UI_CHAR_BIRTH_4103"
+  },
   UI_CHAR_BIRTH_4201 = {
     ContentEN = "Huaxu",
     ContentFR = "Huaxu",
@@ -189287,7 +192941,7 @@ Now and then, when she opens that drawer, Flora catches sight of the key. It lie
     ContentFR = "Lisbell fit un jour trembler tout Élysium d’une nouvelle retentissante : à douze ans, elle avait tiré Samaël, l’épée sacrée restée si longtemps sans maître. Comme une huître livrant sa perle, comme du sable révélant l’or, Lisbell cessa d’être une simple demoiselle noble : elle obtenait le droit d’accéder aux Sept Vertus. Elle tiendrait l’autorité entre ses mains, et se dresserait au sommet de cet antique royaume divin.\n\nPour les adultes qui l’entouraient, pourtant, rien là de si surprenant. La couronne de Résilience circulait depuis des générations au sein de la maison ancienne et prestigieuse des Evangelinos ; tôt ou tard, elle reviendrait à Lisbell, unique héritière. Mais Lisbell, trop jeune, ne comprenait pas encore. Le lendemain du jour où elle tira l’épée, elle s’assit comme d’habitude à table, les yeux lourds de sommeil, tapotant le rebord de son bol avec sa cuillère. Elle avait les caprices ordinaires d’une enfant : elle n’aimait ni le quinoa, ni les tourtes à la viande, ni l’esturgeon, ni le brochet. Pourtant, pour sa santé, le vieux majordome persistait à déposer ces plats dans son assiette.\n\nElle ne pouvait pas se fâcher contre lui ; alors, par ce petit geste contraire à l’étiquette — la porcelaine heurtée d’un tintement boudeur — elle faisait entendre son mécontentement. Décidément, ce matin n’était pas heureux... Elle força tout de même son petit-déjeuner, puis, selon les consignes de ses parents, vint l’inévitable temps de lecture. Sur la pointe des pieds, elle tira d’une bibliothèque haute comme quatre fois elle un paquet de journaux : <I>La Cloche Matinale de la Tour Sacrée</> — une nouveauté venue du nord, et, au moins, une lecture moins somnifère que les ouvrages habituels. Lisbell, se frottant les yeux, déplia le journal : si petite sur sa chaise que ses pieds pendaient dans le vide, elle ouvrait une feuille presque aussi large que l’envergure de ses bras.\n\nElle s’échina à étendre ce papier jauni et ennuyeux. <I>Frouf</>... et soudain, elle tomba nez à nez avec elle-même.\n\n« Hein — ?! » Un cri énorme, confus, indigne d’une jeune demoiselle, jaillit de sa gorge. Il lui fallut un instant pour accepter la nouvelle ; puis bientôt, sa voix résonna dans tout le manoir : « Monsieur le majordome ! Monsieur le majordome ! Pourquoi je suis dans le journal ?! » Elle courut à travers la maison, tirant maladroitement un coin de la feuille froissée. Elle ne comprenait pas encore ce qui se passait... mais le vieil homme à la barbe toute-puissante, lui, saurait forcément.\n\nOr le majordome, lui, n’avait presque pas dormi.\n\nServiteur fidèle de la maison Evangelinos, fils d’Élysium, il le savait : cette enfant favorisée par les dieux n’était autre que Résilience, dont le siège restait vacant depuis si longtemps. Il pria les Neuf Dieux pour que le temps recule, pour qu’il puisse retenir sa jeune maîtresse lancée comme un cheval sans bride — au moins... au moins quelques années de plus, ce n’était pas trop demander. Si les dieux, si le maître de maison, voulaient qu’elle devienne une Vertu, pourquoi ne pas se montrer plus indulgents, plus patients ? Pourquoi ne pas attendre qu’elle ait vécu toute son enfance... qu’elle apprenne peu à peu le sens des choses... qu’elle sache ranger sa perplexité, étouffer son insatisfaction... qu’elle oublie cette compassion trop vaste, cette pitié sans refuge... et qu’elle apprenne enfin à accepter, à endurer le destin que les Neuf assignent à chacun.\n\nLes pas et les appels de Lisbell se rapprochaient. Le vieux majordome le savait : la porte du salon s’ouvrirait d’un instant à l’autre.\n\nIl venait à peine de raccompagner l’émissaire du Patriarche. Entre ses mains reposaient désormais la couronne de fleurs d’or offerte par l’Église et l’édit ordonnant à Lisbell de se présenter en audience. Si légers qu’ils fussent, ces objets pesaient pour lui comme du plomb ; il n’osait imaginer déposer un fardeau si lourd sur des épaules si frêles.\n\nAh... les pas de la petite demoiselle restaient, comme toujours, légers — privilège de ceux qui ne portent encore rien. Il écouta, jusqu’à ce que Lisbell pousse la porte, le journal tout froissé à la main, et lui demande avec des yeux ronds : « Monsieur le majordome... c’est quoi, ce que vous tenez ? »\n\nEt à cet instant, il sut : la légèreté de sa jeune maîtresse venait de s’achever.",
     ContentJP = "リズベルにはエリュシオン中を騒がせた出来事がある。十二歳の細い腕で、主なき聖剣サマエルを引き抜いてしまったのだ。——貝の奥から珠がこぼれ、砂利の中から金が見つかるように、彼女はもはや「ただの令嬢」ではない。「セブンヴァーチェス」たりうる資格を得て、この古い神の国の頂に立つことになる。\n \n とはいえ周りの大人たちは、さほど驚かなかった。「ペイシェンス（忍耐）」の冠は、古く栄えあるエヴァンジェリノス家に長く受け継がれてきたもの。遅かれ早かれ、唯一の継承者であるリズベルに戻ってくるはず——そう信じていたからだ。だが幼いリズベルには、そんな筋書きはまだ分からない。剣を抜いた翌朝も、彼女はいつも通り食卓に座り、眠たげな目でスプーンを器の縁にコツコツ当てていた。彼女にも食べ物に少しばかり好き嫌いがあり、キヌアもミートパイも、チョウザメもカマスも苦手だ。けれど老執事は健康のためと、いつも頑固に皿へ盛りつける。\n \n リズベルは怒ることもできず、礼に外れた仕草でしか不満を示せない。あいにく今日は、朝から機嫌のいい日ではなかった。どうにか朝食を詰め込み、両親の決め事どおり、食後はお決まりの読書の時間。背伸びをして、自分の背丈の四倍はある書棚から新聞の束を引き抜く。『聖塔の朝鐘』——北の国から入ってきた近ごろの新風で、ほかの本よりは眠気を誘わないため、彼女は気に入っている。リズベルは目をこすりながら新聞を広げた。小柄な身体では椅子に座っても足が宙に浮き、広げた新聞は両腕いっぱいの大きさだ。\n \n パサリ、と開いた次の瞬間——紙面の向こうから、彼女自身が彼女を見返していた。\n \n 「え——!?」思わず令嬢らしからぬ大声が出る。状況をのみ込むのに少し時間がかかったが、やがてリズベルは屋敷中に響き渡る声で叫ぶ。「おじい！ おじい！ わたし、新聞に載ってるの!?」しわくちゃになった紙面の端を握りしめ、屋敷の廊下を駆けだす。何が起きているのか詳しくは分からない。けれど、万能の老執事なら答えをくれる——彼女はそう確信する。\n \n そのころ老執事は、ほとんど眠っていなかった。\n \n エリュシオンの民であり、エヴァンジェリノス家に尽くす忠実な使用人として、新聞に載った「神に愛された子」こそ、久しく空いていたペイシェンスの位に相違ないと悟っていたからだ。老執事は九柱の神に祈った。どうか時よ戻れ、と。どうか、あのとき駆け出すお嬢さまを引きとめられていたなら——せめて、あと数年だけ猶予を、と。神様でもご主人様でもよい。お嬢さまを「セブンヴァーチェス」に望むというのなら、なぜもっと待ってはくれないのか。子供時代を子供らしく過ごし、物事の理を少しずつ知り、理不尽への戸惑いや、過剰的な同情と慈悲の心を捨てて、九柱の神が人々に授ける運命を受け入れるまで——。\n \n やがて近づいてくる軽やかな足音に、執事は耳を澄ませた。\n \n つい先ほど、彼は総主教の使者を見送り、礼賛会から賜った黄金の花冠と、リズベルを謁見へ召す勅命書を手にしていた。薄いはずのそれらが、今の彼にとって何千キロのように重い。小さなリズベルに、この重みを渡さねばならぬのか——そう思うと、彼の胸が痛んだ。\n \n あの歩みは、いつものように軽い——まだ何も背負ってないからだ。扉が開き、しわだらけの新聞をつまんだお嬢さまが顔を出す。「おじい、その手に持っているものは——なに？」\n \n その瞬間、執事は知った。いまここで、お嬢さまの「軽さ」に幕が降りることを。",
     ContentKR = "리사벨은 엘리시안 전체를 떠들썩하게 한 사건을 일으켰다. 고작 열두 살의 나이로 주인 없는 성검 사마엘을 뽑아낸 것이다. 조개가 진주를 토해내고 모래에서 황금이 나오듯, 리사벨은 평범한 귀족 영애의 신분을 넘어, '세븐 버튜스'가 될 자격을 얻었다. 이제 곧 권력을 손에 쥐고 이 오래된 나라의 꼭대기에 서게 될 것이었다.\n \n리사벨 주변 사람들에게 이는 놀랄 일도 아니었다. '인내'의 관은 유구한 영광의 에반젤리노스 가문에 오랫동안 전해져 내려왔고, 곧 유일한 후계자인 리사벨의 차지가 될 터였다. 그러나 어린 리사벨은 이를 전혀 알지 못했다. 성검을 뽑아 올린 다음 날, 그녀는 평소처럼 식탁에 앉아 졸린 눈으로 그릇에 숟가락을 톡톡 두드리고 있었다. 여느 아이들이들처럼 그녀는 편식이 심해서, 퀴노아, 캐비어, 꼬치고기를 싫어했다. 그러나 늙은 집사는 그녀의 건강을 생각해 기어코 이 모든 걸 접시에 담았다.\n \n리사벨은 집사에게 화를 낼 수 없어, 예의범절에 어긋난 행동으로나마 자신의 불쾌함을 표시했다. 오늘은 확실히 즐거운 아침은 아니었다... 그녀는 아침 식사를 억지로 뱃속에 구겨 넣었다. 부모님의 엄격한 분부에 따라, 식사 후에는 읽기 시간이 기다리고 있었다. 그녀는 발끝을 세워 자기 키의 네 배는 될 듯한 책장에서 신문 한 부를 빼냈다. 〈성탑의 새벽종〉, 바로 최근 북쪽 나라에서 온 신문으로, 리사벨에겐 그나마 덜 졸린 읽을거리였다. 그녀는 눈을 비비며 신문을 펼쳤다. 작은 체구 때문에 바닥에 닿지 않는 발이, 의자 위에서 흔들거렸다. 펼쳐진 신문은 거의 그녀의 양팔만큼 길었다.\n \n그녀는 누렇게 바랜 재미 없는 종이를 가까스로 펼쳤다. 차르륵 소리와 함께, 눈앞에 자신의 얼굴이 나타났다.\n \n\"어어——?!\" 그녀는 놀라, 자신도 모르게 영애답지 않은 큰 소리를 냈다. 이 상황을 이해하는 데 약간의 시간이 필요했다. 곧, 온 저택이 들썩일 만큼 커다란 고함이 이어졌다. \"집사 할아버지! 집사 할아버지! 제가 왜 신문에 나와요?!\" 그녀는 정말로 깜짝 놀라서, 신문 한쪽을 질질 끌며 저택 안을 달렸다. 무슨 일이 일어난 건지는 알 수 없지만, 뭐든 척척 해결하는 수염 할배라면 분명히 답을 줄 터였다.\n \n한편 집사는 지난밤을 거의 뜬눈으로 지새웠다.\n \n엘리시안의 백성이자 에반젤리노스 가문의 충직한 하인으로서, 그는 신의 선택을 받은 이 소녀가 분명히 오랫동안 비어 있던 '인내' 나리가 될 것임을 굳게 믿었다. 다만 아홉 신께 시간을 되돌려 달라고 빌고 싶었다. 몇 년, 단 몇 년만이라도 좋으니, 자신이 이 고삐 풀린 망아지 같은 아가씨를 붙잡을 수 있도록 말이다. 신이든, 가주든, 만약 이 어린 아가씨가 꼭 '세븐 버튜스'가 되어야 한다면, 조금만 너그럽게 기다려줄 수도 있지 않은가. 적어도 아가씨가 온전한 어린 시절을 보내며 조금씩 철이 들고, 세상에 대한 당황과 불만을 억누르는 법과, 갈 데 없는 동정과 자비를 잊는 법을 배울 때까지, 그리하여 아홉 신이 모두에게 내린 운명을 받아들이고 인내하는 법을 배울 때까지 말이다.\n \n리사벨의 고함과 발소리가 점점 가까워지자, 늙은 집사는 곧 어린 주인이 응접실 문을 열고 들어올 것을 직감했다.\n \n막 총대주교의 사자를 배웅한 그의 손에는 교회에서 하사한 황금 화관과 리사벨의 소환 칙령이 들려 있었다. 종잇장의 무게는 천근처럼 무거웠다. 이 무거운 짐을 어린 리사벨에게 넘겨줘야 한다는 것이, 그는 상상조차 되지 않았다.\n \n아, 어린 아가씨의 발걸음은 여전히 가벼웠다. 그건 짐을 지지 않은 자의 특권이었다. 그는 가만히 발소리에 귀를 기울였다. 리사벨이 마침내 문을 열고, 구깃구깃한 신문을 쥔 채 물었다.\n \n\"집사 할아버지, 손에 들고 계신 게 뭐예요?\"\n \n그랬다. 바로 이 순간, 아가씨의 가벼운 발걸음은 끝난 것이다.",
-    ContentTC = "莉茲貝爾鬧出過一項轟動整個艾利西安的大新聞 —— 她年僅十二歲便拔出了無主聖劍薩麥爾。就像蚌殼吐出珍珠，砂石中淘出黃金，莉茲貝爾不再是一位普通的貴族小姐，她擁有了成為「七美德」的資格。她將執起權柄，站在這個古老的神之國度的巔峰。\n\n在莉茲貝爾身邊的大人们看來，這並不是值得稀奇的事。「堅忍」的冠冕早已在埃萬傑利諾斯這一古老而榮耀的家族手中流傳多年，或早或遲，它都將歸於莉茲貝爾這個唯一的繼承人。但年幼的莉茲貝爾尚不理解這一切。在她拔出聖劍的第二天，她照常坐在餐桌前，睡眼惺忪地用勺子瞧著碗沿。她有一些小孩子常見的挑食，她不喜歡吃藜麥，不喜歡吃肉餡餅，不喜歡鱘魚和梭子魚。但是老管家為了她的身體健康，還是會固執地將這些放進她的碗盤。\n\n她沒辦法對他發火，只能用這樣違反禮儀的舉動表示自己的不開心。今天實在不是一個愉快的早晨…… 她硬是塞完了一頓早餐，根據父母的囑托，飯後是雷打不動的閱讀時間。她踮起腳尖，從四個她那麼高的書櫃中抽出一疊報紙，《聖塔的晨鐘》—— 這是近些年來自北方國度的新鮮物件，也是相對不那麼令她昏昏欲睡的讀物。莉茲貝爾揉著眼睛打開報紙 —— 她身材嬌小，坐在椅子上雙腳不著地地搖晃，打開的報紙幾乎和她的臂展一樣長。\n\n小女孩費勁兒地展開這些發黃無趣的紙張，「嘩」的一聲 —— 她和自己打了個照面。\n\n「啊 ——？！」她發出了大聲的，困惑的，非常不符合大小姐身份的巨大聲音，她花了一點時間接受這個消息，很快，整個宅邸幾乎都能聽到她的喊聲：「管家爺爺！管家爺爺！我怎麼上報紙了？！」她結結實實大吃一驚，拖著報紙的一角在宅邸裡奔跑，她還不太理解具體發生了什麼，但萬能的鬍子老頭一定會給她答案。\n\n而管家幾乎徹夜未眠。\n\n作為艾利西安的子民，埃萬傑利諾斯家族忠誠的僕人，他相信，報紙上這被神明所青睞的少女必是空懸已久的「堅忍」大人無疑。他向著九神祈禱，希望時光倒流，希望他能拉住脫缰而出的小小姐，至少…… 至少再晚幾年也不遲呀？神明也好，家主也好，如果他們希望小小姐必將成為「七美德」，為何不能更加寬容，更加耐心，至少等到她度過完整的童年，等到她漸漸明白事理，等到她學會收斂對世道的困惑與不滿，等到她忘記那無處安放的同情與慈悲…… 學會接受與忍耐九神賜予每個人的命運。\n\n莉茲貝爾的喊叫與腳步聲越來越近，老管家心知肚明，小主人很快就會推開會客室的大門。\n\n他剛剛送走牧首的使者，此刻正捧著傳頌會所賜予的黃金花冠與召喚莉茲貝爾前往覲見的敕令。簡薄的重量對他來說重逾千斤，他難以想象自己要將這些重擔交給小小的莉茲貝爾。\n\n啊，小小姐的步伐一如既往地輕快，那是身無負累者的特權，他側耳聆聽著，直到莉茲貝爾推開大門，捏著皺皺巴巴的報紙問他：「管家爺爺，你拿的是什麼呀？」\n\n他知道，從現在起，屬於小小姐的輕快結束了。",
+    ContentTC = "莉茲貝爾鬧出過一項轟動整個艾利西安的大新聞 —— 她年僅十二歲便拔出了無主聖劍薩麥爾。就像蚌殼吐出珍珠，砂石中淘出黃金，莉茲貝爾不再是一位普通的貴族小姐，她擁有了成為「七美德」的資格。她將執起權柄，站在這個古老的神之國度的巔峰。\n\n在莉茲貝爾身邊的大人们看來，這並不是值得稀奇的事。「堅忍」的冠冕早已在埃萬傑利諾斯這一古老而榮耀的家族手中流傳多年，或早或遲，它都將歸於莉茲貝爾這個唯一的繼承人。但年幼的莉茲貝爾尚不理解這一切。在她拔出聖劍的第二天，她照常坐在餐桌前，睡眼惺忪地用勺子敲著碗沿。她有一些小孩子常見的挑食，她不喜歡吃藜麥，不喜歡吃肉餡餅，不喜歡鱘魚和梭子魚。但是老管家為了她的身體健康，還是會固執地將這些放進她的碗盤。\n\n她沒辦法對他發火，只能用這樣違反禮儀的舉動表示自己的不開心。今天實在不是一個愉快的早晨…… 她硬是塞完了一頓早餐，根據父母的囑托，飯後是雷打不動的閱讀時間。她踮起腳尖，從四個她那麼高的書櫃中抽出一疊報紙，《聖塔的晨鐘》—— 這是近些年來自北方國度的新鮮物件，也是相對不那麼令她昏昏欲睡的讀物。莉茲貝爾揉著眼睛打開報紙 —— 她身材嬌小，坐在椅子上雙腳不著地地搖晃，打開的報紙幾乎和她的臂展一樣長。\n\n小女孩費勁兒地展開這些發黃無趣的紙張，「嘩」的一聲 —— 她和自己打了個照面。\n\n「啊 ——？！」她發出了大聲的，困惑的，非常不符合大小姐身份的巨大聲音，她花了一點時間接受這個消息，很快，整個宅邸幾乎都能聽到她的喊聲：「管家爺爺！管家爺爺！我怎麼上報紙了？！」她結結實實大吃一驚，拖著報紙的一角在宅邸裡奔跑，她還不太理解具體發生了什麼，但萬能的鬍子老頭一定會給她答案。\n\n而管家幾乎徹夜未眠。\n\n作為艾利西安的子民，埃萬傑利諾斯家族忠誠的僕人，他相信，報紙上這被神明所青睞的少女必是空懸已久的「堅忍」大人無疑。他向著九神祈禱，希望時光倒流，希望他能拉住脫缰而出的小小姐，至少…… 至少再晚幾年也不遲呀？神明也好，家主也好，如果他們希望小小姐必將成為「七美德」，為何不能更加寬容，更加耐心，至少等到她度過完整的童年，等到她漸漸明白事理，等到她學會收斂對世道的困惑與不滿，等到她忘記那無處安放的同情與慈悲…… 學會接受與忍耐九神賜予每個人的命運。\n\n莉茲貝爾的喊叫與腳步聲越來越近，老管家心知肚明，小主人很快就會推開會客室的大門。\n\n他剛剛送走牧首的使者，此刻正捧著傳頌會所賜予的黃金花冠與召喚莉茲貝爾前往覲見的敕令。簡薄的重量對他來說重逾千斤，他難以想象自己要將這些重擔交給小小的莉茲貝爾。\n\n啊，小小姐的步伐一如既往地輕快，那是身無負累者的特權，他側耳聆聽著，直到莉茲貝爾推開大門，捏著皺皺巴巴的報紙問他：「管家爺爺，你拿的是什麼呀？」\n\n他知道，從現在起，屬於小小姐的輕快結束了。",
     TextMapContent = "莉兹贝尔闹出过一项轰动整个艾利西安的大新闻——她年仅十二岁便拔出了无主圣剑萨麦尔。就像蚌壳吐出珍珠，砂石中淘出黄金，莉兹贝尔不再是一位普通的贵族小姐，她拥有了成为“七美德”的资格。她将执起权柄，站在这个古老的神之国度的顶峰。\n\n在莉兹贝尔身边的大人们看来，这并不是值得稀奇的事。“坚忍”的冠冕早已在埃万杰利诺斯这一古老而荣耀的家族手中流传多年，或早或迟，它都将归于莉兹贝尔这个唯一的继承人。但年幼的莉兹贝尔尚不理解这一切。在她拔出圣剑的第二天，她照常坐在餐桌前，睡眼惺忪地用勺子瞧着碗沿。她有一些小孩子常见的挑食，她不喜欢吃藜麦，不喜欢吃肉馅饼，不喜欢鲟鱼和梭子鱼。但是老管家为了她的身体健康，还是会固执地将这些放进她的碗盘。\n\n她没办法对他发火，只能用这样违反礼仪的举动表示自己的不开心。今天实在不是一个愉快的早晨……她硬是塞完了一顿早餐，根据父母的嘱托，饭后是雷打不动的阅读时间。她踮起脚尖，从四个她那么高的的书柜中抽出一叠报纸，《圣塔的晨钟》——这是近些年来自北方国度的新鲜物件，也是相对不那么令她昏昏欲睡的读物。莉兹贝尔揉着眼睛打开报纸——她身材娇小，坐在椅子上双脚不着地地摇晃，打开的报纸几乎和她的臂展一样长。\n\n小女孩费劲儿地展开这些发黄无趣的纸张，“哗”的一声——她和自己打了个照面。\n\n“啊——？！”她发出了大声的，困惑的，非常不符合大小姐身份的巨大声音，她花了一点时间接受这个消息，很快，整个宅邸几乎都能听到她的喊声：“管家爷爷！管家爷爷！我怎么上报纸了？！”她结结实实大吃一惊，拖着报纸的一角在宅邸里奔跑，她还不太理解具体发生了什么，但万能的胡子老头一定会给她答案。\n\n而管家几乎彻夜未眠。\n\n作为艾利西安的子民，埃万杰利诺斯家族忠诚的仆人，他相信，报纸上这被神明所青睐的少女必是空悬已久的“坚忍”大人无疑。他向着九神祈祷，希望时光倒流，希望他能拉住脱缰而出的小小姐，至少……至少再晚几年也不迟呀？神明也好，家主也好，如果他们希望小小姐必将成为“七美德”，为何不能更加宽容，更加耐心，至少等到她度过完整的童年，等到她渐渐明白事理，等到她学会收敛对世道的困惑与不满，等到她忘记那无处安放的同情与慈悲……学会接受与忍耐九神赐予每个人的命运。\n\n莉兹贝尔的喊叫与脚步声越来越近，老管家心知肚明，小主人很快就会推开会客室的大门。\n\n他刚刚送走牧首的使者，此刻正捧着传颂会所赐予的黄金花冠与召唤莉兹贝尔前往觐见的敕令。简薄的重量对他来说重逾千斤，他难以想象自己要将这些重担交给小小的莉兹贝尔。\n\n啊，小小姐的步伐一如既往地轻快，那是身无负累者的特权，他侧耳聆听着，直到莉兹贝尔推开大门，捏着皱皱巴巴的报纸问他：“管家爷爷，你拿的是什么呀？”\n\n他知道，从现在起，属于小小姐的轻快结束了。",
     TextMapId = "UI_CHAR_DATA_TEXT_15010401"
   },
@@ -190072,7 +193726,7 @@ The truth, however, remained shrouded in mystery. All that was known was that wi
     TextMapId = "UI_CHAR_DATA_TEXT_18010404"
   },
   UI_CHAR_DATA_TEXT_18010405 = {
-    ContentEN = "Fina and Outsider together buried her stepfather and his golden cane beneath a pine tree by Lamenting Lake.\nShe closed her eyes. Once, she had been consumed by deep hatred and fear for the man who had brought so much misfortune into her life. But now, memories of him had melted away like snowflakes caught in her hair, dissolving into distant oblivion.\nHer hair had grown longer, and Outsider had helped to dye her silver locks a beautiful shade of azure, like the waters of Lamenting Lake or the colour of her eyes. This new appearance allowed her to walk among the crowd without being recognised. The name \"Serafina Glenville\" had been carried away by the winds over Icelake, leaving behind only Fina, Outsider's sister. A new chapter of her story was ready to unfold.\n\nOn a clear afternoon, Fina opened a blank notebook, picked up a quill, and carefully wrote down the title of her new story: The Song of the Niveous Nightingale.\nSuddenly, a clattering noise interrupted her thoughts. She set down the pen, intending to ask her brother to be a bit quieter, only to see him approaching with a cardboard box in his hands. \"You might want to go over these,\" Outsider said as he placed the box on the table. \"I forgot to mention — I found this bundle near you in the sewer. Thought it might belong to you.\"\n\"This is...\" Fina gasped as she lifted a small box from the carton. Though caked in mud and dust, the intricate craftsmanship was evident. \"The family heirloom Mommy left to me.\"\n\"Wow, that sounds awesome! Let's see what's inside — maybe it'll turn us into rich folks, so we can buy a bigger house.\" Outsider joked as he wiped away the grime. \"Huh, there's a combination lock on it...\"\n\"Wait!\" Fina suddenly remembered her mother's warning. \"Don't open it! Mommy said it could explode if the wrong password is entered!\"\nShe jumped up, trying to grab the box, but before she could, there was a soft click.\n\"It didn't explode,\" Outsider said, puzzled. \"I just tried a random number and it opened. But there's nothing much inside, just a piece of paper.\" Realising the potential significance of this thing, he immediately handed the box to Fina. \"Maybe you should read it yourself.\"\n\n—What could it be?\n\"Could it be... a treasure map?\" Fina wondered, tilting her head as she unfolded the paper. Suddenly, she choked up, and her hands began to tremble. Outsider leaned over, only to find a thin letter, with just one line of elegant handwriting:\n<H>My dearest child, may you find your own happiness.</>\n\nFina's thoughts drifted back to a night many years ago, when she had been jolted awake by a nightmare. Frantically, she had run downstairs in search of her mother, only to pause outside the bedroom, overhearing a conversation between her mother and stepfather.\n\"Morris, I promised I would give you the treasure in the box someday. But it’s not today — it'll be the day when Serafina comes of age,\" her mother said, her voice calm and resolute. \"In exchange, I'll need your assurance — you must ensure Serafina grows up safe and well.\"",
+    ContentEN = "Fina and Outsider together buried her stepfather and his golden cane beneath a pine tree by Lamenting Lake.\nShe closed her eyes. Once, she had been consumed by deep hatred and fear for the man who had brought so much misfortune into her life. But now, memories of him had melted away like snowflakes caught in her hair, dissolving into distant oblivion.\nHer hair had grown longer, and Outsider had helped to dye her silver locks a beautiful shade of azure, like the waters of Lamenting Lake or the colour of her eyes. This new appearance allowed her to walk among the crowd without being recognised. The name \"Serafina Glenville\" had been carried away by the winds over Icelake, leaving behind only Fina, Outsider's sister. A new chapter of her story was ready to unfold.\n\nOn a clear afternoon, Fina opened a blank notebook, picked up a quill, and carefully wrote down the title of her new story: The Song of the Niveous Nightingale.\nSuddenly, a clattering noise interrupted her thoughts. She set down the pen, intending to ask her brother to be a bit quieter, only to see him approaching with a cardboard box in his hands. \"You might want to go over these,\" Outsider said as he placed the box on the table. \"I forgot to mention — I found this bundle near you in the sewer. Thought it might belong to you.\"\n\"This is...\" Fina gasped as she lifted a small box from the carton. Though caked in mud and dust, the intricate craftsmanship was evident. \"The family heirloom Mommy left to me.\"\n\"Wow, that sounds awesome! Let's see what's inside — maybe it'll turn us into rich folks, so we can buy a bigger house.\" Outsider joked as he wiped away the grime. \"Huh, there's a combination lock on it...\"\n\"Wait!\" Fina suddenly remembered her mother's warning. \"Don't open it! Mommy said it could explode if the wrong password is entered!\"\nShe jumped up, trying to grab the box, but before she could, there was a soft click.\n\"It didn't explode,\" Outsider said, puzzled. \"I just tried a random number and it opened. But there's nothing much inside, just a piece of paper.\" Realising the potential significance of this thing, he immediately handed the box to Fina. \"Maybe you should read it yourself.\"\n\n—What could it be?\n\"Could it be... a treasure map?\" Fina wondered, tilting her head as she unfolded the paper. Suddenly, she choked up, and her hands began to tremble. Outsider leaned over, only to find a thin letter, with just one line of elegant handwriting:\n<H>My dearest child, may you find your own happiness.</>\n\nFina's thoughts drifted back to a night many years ago, when she had been jolted awake by a nightmare. Frantically, she had run downstairs in search of her mother, only to pause outside the bedroom, overhearing a conversation between her mother and stepfather.\n\"Morris, I promised I would give you the treasure in the box someday. But it's not today — it'll be the day when Serafina comes of age,\" her mother said, her voice calm and resolute. \"In exchange, I'll need your assurance — you must ensure Serafina grows up safe and well.\"",
     ContentFR = "Fina et l’Étranger enterrèrent ensemble son beau-père, avec sa canne dorée, au pied d’un pin, près de la Rive du Lac du Deuil.\nElle ferma les yeux. Autrefois, elle avait haï et redouté cet homme qui n’avait été que source de malheur. Mais à présent, ses souvenirs de lui n’étaient plus que neige fondue dans ses cheveux, fondus, effacés, devenus transparents... jusqu’à ne plus laisser qu’un blanc lointain.\nSes cheveux avaient poussé. L’Étranger l’avait aidée à les teindre : du blanc d’argent au bleu limpide, comme l’eau du lac, comme ses yeux. Désormais, elle pouvait sortir sans être reconnue. Le nom de Serafina Glenville s’était peu à peu dissous dans les vents de Givrelac. Elle était Fina, la sœur de l’Étranger.\nEt un nouveau chapitre de son histoire venait de s’ouvrir.\n\nPar un après-midi clair, Fina ouvrit un carnet vierge. Elle prit une plume, et écrivit soigneusement le titre de son nouveau récit : Le Chant du Rossignol Blanc. \nUne série de bruits métalliques la tira de ses pensées. Elle posa la plume, prête à demander à son frère de faire moins de bruit, quand elle le vit arriver, un carton dans les bras.\n« Regarde si y’a quelque chose d’utile là-dedans, dit l’Étranger en posant la boîte. J’ai oublié de te le dire, j’ai trouvé ça à côté de toi dans les égouts. C’était dans un paquet, je me suis dit que ça t’appartenait. »\n« C’est... » Fina souleva un petit coffret couvert de boue et de poussière.\nMalgré son état, il restait délicatement ouvragé.\n« ... Le trésor hérité de Maman. »\n« Trop bien ! Allez, voyons si c’est un vrai trésor. Avec un peu de chance, on devient riches et on s’achète une vraie maison, plus grande. »\nL’Étranger essuya la surface.\n« Tiens, y’a un cadenas à code... »\n« Attends ! » s’écria Fina, le souvenir revenant d’un coup.\n« Ne touche pas à ce coffret ! Maman disait que si on entre un mauvais code... ça explose ! »\nElle bondit, tendant la main pour lui arracher l’objet. Mais trop tard, un clic sec résonna.\n« Ben, ça a pas explosé », dit l’Étranger, déconcerté.\n« J’ai mis un chiffre au pif, et hop, ça s’est ouvert. Mais y’a rien d’intéressant... juste une feuille de papier. »\nIl marqua une pause, puis lui tendit le coffret avec sérieux :\n« Tu ferais mieux de la lire toi-même. »\n\n« Oh, ce serait... une carte au trésor ? »\nFina pencha la tête, curieuse, et déplia le papier. Elle se figea. Ses mains se mirent à trembler. L’Étranger se pencha à son tour. C’était une simple lettre, fine comme un souffle, où ne figurait qu’une seule ligne, tracée d’une écriture douce et soignée :\n<H>« Ma chère enfant... Puisses-tu trouver ton propre bonheur. »</>\n\nLes pensées de Fina la ramenèrent à une nuit lointaine. Réveillée en sursaut par un cauchemar, elle était descendue chercher sa mère. Mais avant d’entrer dans la chambre, elle avait entendu la voix de sa mère, et celle de son beau-père, à travers la porte :\n« Morris, j’ai promis de vous remettre le trésor. Mais pas aujourd’hui. Ce sera pour le jour où Serafina atteindra sa majorité. » Sa mère parlait avec calme, d’une voix sûre :\n« En échange, je veux votre promesse : celle de veiller à ce qu’elle grandisse en sécurité. »",
     ContentJP = "フィーナとアウトサイダーは継父をダクリ湖のほとりにある松の木の下に埋葬した。彼が持っていた黄金の杖も合わせて。\n彼女は目を閉じた。この不幸をもたらす男に恐れも憎しみも深く抱いていたフィーナであるが、今となると髪に降り落ちた雪かのように、彼についての記憶は溶けて透明になって、最終的に遠い空白と化している。\nアウトサイダーはフィーナの銀髪を彼女の瞳の色にそっくりな——まるでダクリ湖の水面みたいな美しい青に染めてあげたようだ。これで外出して人々に見られようが、簡単にフィーナの過去を勘ぐるには至れないだろう。「セラフィーナ・グレンビル」という名前もアイスレイク城の風に吹かれて次第に消えていった。今の彼女はただのフィーナ、アウトサイダーの妹のフィーナだ。物語は新しい章を迎えたのだ。\n\nある晴れた日の午後、フィーナは羽ペンを取り、白紙のノートに自分の新しい物語のタイトルを書き記した。題して「まっしろナイチンゲールのうた」である。\nそんな折に突然チリンと、彼女の思考を遮る音が鳴った。ペンを置いて兄に少し静かにするよう頼もうとしたところ、彼のダンボール箱を持って歩いてくる姿が目に入る。「こいつを見てくれ。まだ何か使えるもんはないか？」と言いながら、アウトサイダーはダンボール箱を机の上に乗せる。「下水道でお前を拾った時、傍で落ちていたもんなんだが……言い忘れていたな？もしかしてお前のか？」\n「これ……」フィーナは驚きながら中にあったひとつの箱を持ち上げた。それは泥とホコリに塗れていたが、見れば精巧な造りであることが分かる。「お母さんの家族が代々受け継いできた……宝物よ」\n「へぇ！そりゃすげえ、どんな宝物か見てみようぜ！結構なブツなら大金持ちになれるかもな！そしたらもっとデカい家だって買えるぞ！」アウトサイダーは箱を受け取って汚れを払う。するとあることに瞬間で気がついた。「うん？暗号錠なんてもんがついてやがるな……」\n「あ、待って！」彼の台詞にフィーナは何かを思い出したようだ。「その箱は壊さないで！正しく開けないと爆発するように作られているってお母さんが言っていたの！」\n彼女は即座に立ち上がり、焦りながら箱を奪い返そうとするが、すぐに澄んだ音が聞こえてきた。\n「爆発……しないぜ？」アウトサイダーは困惑の表情を浮かべる。「適当な数字を試しただけだってのに、なんか開いちまったぞ？しかも目ぼしいもんは何も入っちゃいない。紙切れが1枚だけ」アウトサイダーは何かを閃いたかのように、急いで箱をフィーナに手渡した。「こいつは恐らく、フィーナ自身で確認するべきだろうな」\n\n——いったいなんだろう？\n「もしかして……宝の地図かしら？」フィーナは首を傾げながら紙を開いてみる。かと思えば突然、両手を震わせながら、むせび泣き始めてしまった。その様子を見たアウトサイダーは急いで紙に目をやる。紙の正体は薄い便箋だ。\n<H>「私の愛しい娘、どうかあなたが幸せを、見つけられますように」</>と一行だけ。美しい文字で書かれていた。\n\nフィーナは頭の中の時間を数年前のある深夜まで巻き戻す。悪夢で目覚めてしまったフィーナは、慌てて階段を駆け下りてお母さんを探していたところ、寝室の前でお母さんと継父の話し声を聞いた。\n「モーリス、確かに約束はしたわ。箱の中の秘宝をあなたに渡すと。でもそれは今じゃないわ。セラフィーナが成人してからと告げたはずよ」そうお母さんは話していた。穏やかな声ではあるが、確固たる意志を貫いて。「交換条件として保証して——セラフィーナを何事もなく無事に育て上げると」",
     ContentKR = "피나는 아웃사이더와 함께, 계부와 그의 황금 지팡이를 눈물의 호수 근처 소나무 아래에 묻었다.\n피나는 눈을 감았다. 자신에게 불행을 가져온 이 남자를 한때는 깊이 증오하고 두려워했었다. 하지만 이제 그에 대한 기억은 머리카락 사이의 눈처럼 천천히 녹아서 투명해졌고, 마침내 텅 빈 공간만을 남긴 채 아득하게 사라졌다.\n피나의 머리카락은 더 길어졌다. 아웃사이더는 피나의 은빛 머리칼을 눈물의 호수와 피나의 눈동자를 닮은 아름다운 푸른색으로 물들여 주었다. 이제 밖에 나가도 사람들은 쉽게 그녀를 알아보지 못할 것이다. '세라피나 글렌빌'이라는 이름도 아이스레이크 시티의 바람결에 흩어졌다. 이제 그녀는 아웃사이더의 동생, 피나이다. 이제 새로운 이야기가 시작될 것이다.\n어느 맑은 오후, 피나는 새 노트를 펼치고 깃펜을 들어, '하얀 나이팅게일의 노래'라고 적었다. 자신의 새로운 이야기의 제목이었다.\n갑자기 무언가 부딪치는 소리에, 피나의 집중력이 흩어졌다. 펜을 내려놓고 좀 조심성 있게 다니라고 말하려는데, 아웃사이더가 종이 박스를 안고 다가오는 게 보였다. \"이 중에 쓸만한 게 있나 한번 볼래?\" 아웃사이더가 박스를 책상 위에 올려놓았다. \"말하는 걸 깜빡했는데, 하수도에서 널 발견했을 때 옆의 가방 안에 있던 것들이야. 어쩌면 네 물건일 수도 있으니까.\"\n\"이건...\" 피나가 놀란 얼굴로 작은 상자 하나를 집어 들었다. 상자는 진흙과 먼지투성이였지만, 정교한 구조는 알아볼 수 있었다. \"엄마 가문에 대대로 내려오는... 보물이야.\"\n\"와, 대단하네! 어떤 보물인지 한번 볼까? 우리가 이걸로 부자가 되면, 더 큰 집을 살 수 있을 거야.\" 아웃사이더가 상자를 받아 들고 먼지를 털어냈다. \"어라? 암호가 걸려 있네...\"\n\"잠깐만!\" 피나는 갑자기 뭔가 생각나서 외쳤다. \"열지 마! 엄마가 암호를 잘못 입력하면 폭발한다고 하셨어!\"\n피나가 다급하게 일어나 상자를 빼앗으려 했지만, 상자는 경쾌한 소리를 내며 열렸다.\n\"무슨 폭발?\" 아웃사이더가 어리둥절한 표정으로 말한다. \"그냥 아무 숫자나 눌렀는데 열리잖아. 근데 안에 별거 없어. 그냥 종이 한 장뿐이야.\" 그는 갑자기 뭔가 깨달은 듯, 서둘러 상자를 피나에게 건넸다. \"이 종이는 네가 직접 보는 게 좋을 것 같아.\"\n\n무슨 내용이길래...?\n\"설마... 보물 지도인가?\" 피나는 고개를 갸우뚱하며 종이를 펼쳤다. 그러다 갑자기 목이 메어, 손이 파르르 떨렸다. 아웃사이더가 황급히 다가갔다. 얇은 편지지 위에, 우아한 글씨체로 딱 한 줄이 쓰여 있었다.\n<H>\"사랑하는 아가, 너만의 행복을 찾기를 기도할게.\" </>\n\n피나의 머릿속은 수년 전 어느 깊은 밤으로 되돌아갔다. 그녀는 악몽에서 깨어나 허둥지둥 아래층으로 내려가 엄마를 찾다가, 침실 앞에서 엄마와 계부의 대화를 듣게 되었다.\n\"모리스, 상자 안의 보물을 당신에게 주겠다고 약속했죠. 하지만 그건 지금이 아니라, 세라피나가 성인이 되는 날에 줄 거예요.\" 엄마가 침착하고 단호한 목소리로 말했다. \"그 대가로 나한테 약속해요. 세라피나가 안전하게 자랄 수 있도록 해주겠다고요.\"",
@@ -192594,6 +196248,194 @@ In the end, she decided to stop searching for a moral defense. She would simply 
     TextMapContent = "陶俑在我面前片片碎裂，狴犴如潮水般涌来。大风九章发觉其最深入的腹地受到威胁，正在不计代价地反抗，整个太虚陵都因惊怒和畏惧的情绪而隐隐震动。好在这一切都是有办法应付的，无论代价是时间或是精力。\n不知过了多久，终于周遭的一切灵物都不再动弹，这至高的肃穆之所重归其应有的寂静。\n我冷静地评估着自己的伤势，迈步离开这满地疮痍，走向生命最后的终点——我弑神的毕生筹划便在此一举。\n随着魔力逐渐从我体内抽离出去，我的生命也在逐渐消亡，那个影影绰绰的耳语在我脑中变得分外鲜明。它在问：人的一生应该为何而活……对于死亡的恐惧并未消亡，也从未远离我。\n纵使我身故后，华胥将被颠覆，一切错误的将被纠正，但我此时依然无法遏止从骨髓深处传来的战栗。\n雾气氤氲，正当死亡那冰冷的触息逐渐将我攫住时，我看见了{性别：他|她}的身影。\n{性别：他|她}来告诉我：活下去，见证这一切。\n七年前我迎来了发生于我身上的第一次拯救。七年之后，我迎来了第二次。\n经历了童年那场遭遇，我无法将我的人生称为“幸运”。\n但我也绝无声称自己不幸的理由，因我曾与{nickname}相遇。",
     TextMapId = "UI_CHAR_DATA_TEXT_41020404"
   },
+  UI_CHAR_DATA_TEXT_41030101 = {
+    ContentEN = [[
+Rhythm began taking commissions of her own, charging far below the going rate at The Asphodel. Anyone in trouble could hire her, however small the job. At first, the people of Icelake did not know what to make of it. They watched her warily, working their way through friends, relatives, and friends of friends, cross-checking the story as it passed from one person to the next. Eventually, they had an answer they could trust: Rhythm Fischer was no longer an officer of the Icelake Escort.
+Rhythm herself seemed little changed, only quieter. The only visible difference was that she no longer wore her uniform. The blue military cap was gone, but the old habit remained. From time to time, her hand would still rise to adjust the brim, only to find nothing there. It would drop to her side, then drift up again a moment later, reaching for a brim that was no longer there...]],
+    ContentFR = "Rhythm Fischer s’était mise à accepter des missions. Et à des tarifs abordables, bien inférieurs à ceux pratiqués aux Asphodèles. Désormais, quiconque rencontrait des difficultés pouvait faire appel à elle, quelle que soit l’importance de la tâche.\n \nAu début, les habitants de Givrelac ne savaient pas vraiment quoi en penser. Ils observèrent prudemment la situation pendant quelque temps, interrogèrent amis et proches et, de connaissance en connaissance, finirent par obtenir une information fiable au terme de cet incroyable réseau de relations : Rhythm Fischer n’était plus agente du Bureau de la Sécurité.\n \nRhythm, elle, n’avait guère changé. Elle était simplement devenue encore plus silencieuse qu’auparavant. La différence la plus évidente était sa tenue. Rhythm Fischer avait retiré sa casquette militaire bleue. Elle ne portait désormais plus rien sur la tête, mais ses anciennes habitudes demeuraient. Régulièrement, sa main se levait... cherchait machinalement à ajuster une visière qui n’était plus là... retombait... puis se levait de nouveau pour refaire le même geste...",
+    ContentJP = "治安官を辞めたリズムが、今度は個人で依頼を受け始めた。\n しかも報酬は、アスフォデロスの相場よりずっと安い。「困ったことがあれば、何でも」そう言われても、アイスレイク城の人々はすぐには飲み込めなかった。あのリズムが、保安署を通さずに？半信半疑の噂が町をひと回りして、やがて一つだけ確かなことが残った。リズム・フィッシャーは、もう治安官ではない。本人は、驚くほど変わっていなかった。以前より少し口数が減ったくらいで、頼まれれば相変わらず真面目に動く。目につく違いといえば、服装と――あの青い軍帽がなくなったことくらいだ。ただ、長年の癖までは脱げなかったらしい。ふとした拍子に手が額へ上がる。ない帽子のつばを押さえようとして止まり、何事もなかったように下ろす。そして少しすると、また同じことを繰り返す。",
+    ContentKR = "치안관 리듬이 의뢰를 받기 시작했다. 아스포델의 통상적인 의뢰비보다 훨씬 저렴해, 곤란한 일을 겪고 있다면 어떤 일이든 관계없이 누구든 부담 없이 의뢰를 맡길 수 있다고 했다. 처음에는 아이스레이크 시티의 주민들은 당황했지만, 조심스레 상황을 지켜보며 주변인들에게 알음알음 수소문한 끝에, 신뢰할 만한 소식을 입수했다. 리듬 페실이 더는 아이스레이크 시티의 치안관이 아니라는 사실이었다.\n말수가 더 줄었다는 점만 빼면 리듬은 전과 별반 다르지 않았지만, 가장 눈에 띄는 변화는 옷차림이었다. 리듬 페실은 푸른색 군모를 벗었다. 그렇지만 모자를 쓰지 않아도 버릇은 어쩔 수 없는지, 자꾸만 손을 들어 모자챙을 누르려다가, 모자가 없다는 걸 깨닫고 손을 내리고, 그러다 또다시 손을 들어 같은 동작을 반복하기 일쑤였다...",
+    ContentTC = "治安官黎瑟開始接委託，並且價格實惠，遠低於水仙平原的委託金額，任何有困難的人，都可以向她下達委託，無論事情大小。起先，冰湖城的居民還有些不知所措。他們謹慎地觀察了一段時間，輾轉多方親友，透過這錯綜複雜的人情網絡，終於打探到了可靠的訊息：黎瑟·費西爾，不再是冰湖城的治安官了。\n黎瑟和以前沒什麼區別，只是變得更加沉默寡言了。最明顯的不同就是，她換了一身衣服。黎瑟·費西爾摘下了那頂藍色的軍帽。她不再戴帽子了，但還有著過去的習慣，總是抬起手——試圖壓帽檐——發現沒有帽子，放下——抬起手——試圖壓低帽檐……",
+    TextMapContent = "治安官黎瑟开始接委托，并且价格实惠，远低于水仙平原的委托金额，任何有困难的人，都可以向她下达委托，无论事情大小。起先，冰湖城的居民还有些不知所措。他们谨慎地观察了一段时间，辗转多方亲友，通过这错综复杂的人情网络，终于打探到了可靠的消息：黎瑟·费西尔，不再是冰湖城的治安官了。\n黎瑟和以前没什么区别，只是变得更加沉默寡言了。最明显的不同就是，她换了一身衣服。黎瑟·费西尔摘下了那顶蓝色的军帽。她不再戴帽子了，但还有着过去的习惯，总是抬起手——试图压帽檐——发现没有帽子，放下——抬起手——试图压低帽檐……",
+    TextMapId = "UI_CHAR_DATA_TEXT_41030101"
+  },
+  UI_CHAR_DATA_TEXT_41030102 = {
+    ContentEN = "As an Escort officer, Rhythm had devoted herself entirely to the job. She fulfilled every duty assigned to her, then went a step further whenever there was something more she could do. She seemed to want almost nothing for herself. Even the few hours that belonged to her went to errands the other officers considered too trivial to matter. So when she announced that she was leaving the Escort, her colleagues discovered that even Rhythm Fischer — the same composed, diligent Rhythm they had always known — could make what looked to them like a rash decision. Some laughed it off. Others made no attempt to hide their disapproval. Either way, they were certain she would regret it soon enough. But as the days passed, that certainty began to look increasingly misplaced. What they had dismissed as an impulse was nothing of the sort. Rhythm had no regrets.",
+    ContentFR = "Lorsqu’elle travaillait au Bureau de la Sécurité, Rhythm se consacrait entièrement à son devoir. En dehors de son travail officiel... et de toutes ces tâches qui n’en faisaient techniquement pas partie, elle ne faisait rien d’autre. Elle n’avait aucun passe-temps, aucune préférence personnelle. Même le peu de temps libre dont elle disposait était consacré à ces petits problèmes insignifiants que ses collègues n’auraient jamais considérés comme relevant de leurs fonctions.\n \nCe ne fut que le jour où elle prit la décision de quitter le Bureau de la Sécurité et la VIᵉ Légion que ses collègues découvrirent que même une personne aussi calme et désintéressée que Rhythm Fischer pouvait agir sur un coup de tête. Certains considérèrent son départ avec désapprobation, d’autres avec une certaine envie de la voir échouer. Tous attendaient avec une forme de pitié le moment où elle finirait par regretter sa décision.\n \nMais à mesure que le temps passa, ils durent peu à peu se rendre à l’évidence : cette prétendue impulsivité dont ils parlaient... n’était rien d’autre qu’un préjugé qu’ils avaient eux-mêmes projeté sur elle.\n \nRhythm, de toute évidence, ne regrettait rien.",
+    ContentJP = "治安官だった頃のリズムには、私生活らしい私生活がなかった。勤務中は仕事。勤務が終わっても、誰かが困っていれば仕事。ほかの治安官なら「そこまでやる必要はない」と流すような細かな用事まで、自分の時間を使って片づけていた。だからこそ、彼女が保安署を去り、第六軍団まで辞めると決めた時、同僚たちは耳を疑った。あのリズム・フィッシャーが、感情に任せて進路を変えた――そう見えたのだ。「そのうち後悔して戻ってくる」面白半分にそう言う者もいれば、呆れたように見送る者もいた。ところが、時間が経ってもリズムは戻らない。そこでようやく、彼らも気づいた。衝動的だったのではない。彼女は考えた末に、もう戻らないと決めていたのだ。",
+    ContentKR = "치안관으로서 리듬은 유난히 철저했다. 본연의 업무든 업무라 하기 애매한 잡무든 가리지 않고 일에만 매달렸고, 개인적인 취향이랄 것도 없이 얼마 안 되는 사적인 시간마저 고스란히 내어 주며, 다른 치안관들 눈에는 하찮아 보일 법한 일들까지 도맡아 처리했다. 늘 냉정하고 사심 없는 리듬이라면 감정에 휩쓸려 행동할 일은 없으리라고 생각해 온 동료들은, 리듬이 치안서와 제6군단을 떠나기로 결심한 날이 되어서야, 자신들이 알던 모습과 달리 리듬에게도 충동적인 면이 있다는 걸 알고 놀랐다. 그들은 리듬의 선택을 비웃거나 못마땅해하며 지켜보았고, 가엾다는 듯 그녀가 후회할 날을 기다렸다. 하지만 시간이 흐르자, 동료들은 충동적이란 게... 결국 자기들만의 편견에 지나지 않았음을 서서히 깨달았다. 리듬은 후회하지 않을 게 분명했으니까.",
+    ContentTC = "作為一名治安官，黎瑟做到了絕對的專注。除了治安官的工作、治安官非工作的工作外，她什麼都不做，沒有半點個人偏好，僅有的私人時間也全部拱手相讓，去做一些在其他治安官看來雞毛蒜皮的小事。直到她下定決心離開治安署、離開第六軍團的那天，她的同僚們才發現，冷靜無私如黎瑟·費西爾，竟然也有意氣用事的時候。他們抱著看笑話、或是不認可的心態，看待她的離去，憐憫地等待著她的悔意。但隨著時間的推移，那些同僚逐漸地意識到了，他們口中的衝動……只是他們一廂情願的偏見而已。黎瑟顯然不會後悔。",
+    TextMapContent = "作为一名治安官，黎瑟做到了绝对的专注。除了治安官的工作、治安官非工作的工作外，她什么都不做，没有半点个人偏好，仅有的私人时间也全部拱手相让，去做一些在其他治安官看来鸡毛蒜皮的小事。直到她下定决心离开治安署、离开第六军团的那天，她的同僚们才发现，冷静无私如黎瑟·费西尔，竟然也有意气用事的时候。他们抱着看笑话、或是不认可的心态，看待她的离去，怜悯地等待着她的悔意。但随着时间的推移，那些同僚逐渐地意识到了，他们口中的冲动……只是他们一厢情愿的偏见而已。黎瑟显然不会后悔。",
+    TextMapId = "UI_CHAR_DATA_TEXT_41030102"
+  },
+  UI_CHAR_DATA_TEXT_41030103 = {
+    ContentEN = [[
+The first time Rhythm walked into The Asphodel, every Phoxhunter in the room went tense. What was an Escort officer doing here? They watched her closely, waiting for her next move. Camilla alone appeared to have expected her. With a smile, she beckoned Rhythm to the bar.
+"What can I get you? Wine or juice?"
+The ramrod-straight officer took a seat on the high stool and instinctively straightened her back. But with her feet off the floor and nowhere natural to put her legs, the effort only made her look more awkward. For once, Rhythm seemed entirely at a loss. After a moment, she began running her fingertips back and forth along the edge of the counter.
+"...A glass of water, please. Warm, if possible. Ms Camilla, are there any commissions I could take on today?"
+Commissions. Now that was a word every Phoxhunter in the room understood. Only then did they realise that Rhythm had come looking for work.]],
+    ContentFR = "Lorsque Rhythm se rendit aux Asphodèles pour la première fois, les Chasseurs de Phoxène furent tous pris de court. Que venait faire une agente du Bureau de la Sécurité ici ?\nTous les regards se tournèrent vers elle, dans l’attente de son prochain geste. Camilla, en revanche, semblait s’y être préparée depuis longtemps. Elle lui fit signe d’approcher du comptoir.\n \n« Qu’est-ce que je vous sers ? De l’alcool ? Un jus de fruits ? » demanda-t-elle avec un sourire.\nL’agente, droite comme un piquet, prit place devant le comptoir. Elle ne semblait guère habituée à ce genre de siège. Ses jambes ne savaient manifestement pas où se mettre et, incapable de conserver sa posture habituellement impeccable, Rhythm parut soudain quelque peu désemparée.\nAprès un instant d’hésitation, elle passa les doigts sur le bord du comptoir.\n \n« S’il vous plaît... un verre d’eau. Tiède, si possible. Madame Camilla, auriez-vous une mission qui pourrait me convenir aujourd’hui ? »\n \nAu milieu de ces paroles prononcées avec son sérieux habituel venait d’apparaître un mot que tous connaissaient parfaitement.\nUne mission.\n \nCe ne fut qu’à cet instant que les Chasseurs de Phoxène comprirent, stupéfaits, que Rhythm... était tout simplement venue chercher du travail.",
+    ContentJP = "リズムが初めてアスフォデロスに姿を見せた時、店内の空気が一瞬で変わった。\n ――治安官が、何をしに来た？\n 月狩り人たちの視線が集まる中、カミラだけはいつも通りだった。\n 「何にする？お酒？それともジュース？」\n そう笑って、カウンターの席を勧める。リズムは背筋を伸ばしたまま腰を下ろした。だが、どうやら高いスツールには慣れていないらしい。足の置き場が決まらず、いつもの端正な姿勢も崩れて、少しだけ困った顔になる。しばらく迷った末、彼女はカウンターの縁に指を添えた。\n 「……水を一杯、お願いします。」\n そして、いつもの調子で続ける。\n 「私でも受けられる依頼はありますか？」\n その一言で、店中の空気がもう一度固まった。依頼。どうやら彼女は取り締まりに来たのではない。\n ――仕事を探しに来たらしい。",
+    ContentKR = "리듬이 처음 아스포델에 왔을 때, 그 자리에 있던 월석 사냥꾼들은 너나 할 것 없이 화들짝 놀랐다. 치안관이 여긴 왜 온 거지? 다들 리듬을 바라보며 다음 행동을 기다렸지만, 카밀라만은 진작 준비했었다는 듯 리듬에게 바 앞으로 오라며 손짓했다. \n\"뭐 마실래요? 술? 아니면 주스?\"\n카밀라는 미소를 지으며 물었다. 치안관은 몸을 꼿꼿이 세우고 자리에 앉았지만, 바 의자에 익숙하지 않은 듯 다리를 편히 두지 못했고, 평소처럼 반듯한 자세를 유지하기 어려워서인지, 약간 당혹한 듯 어쩔 줄 몰라 했다. 치안관은 잠시 망설이며 바 가장자리를 매만졌다.\n\"저... 물 한 잔 주세요. 미지근한 물이면 돼요. 카밀라 씨, 오늘 적당한 의뢰가 있나요?\"\n진지한 말투 속에서 의뢰라는 익숙한 단어가 흘러나오자, 월석 사냥꾼들은 이 치안관이... 의뢰를 받으러 왔다는 뜻밖의 사실을 깨달았다.",
+    ContentTC = "黎瑟第一次來到水仙平原的時候，狩月人們都嚇了一跳。治安官來這裡做什麼？人們看著黎瑟，等待著她的下一步動作。卡蜜拉卻是一副早有準備的樣子，招手邀請對方來到吧檯前。喝點什麼，酒，還是果汁？卡蜜拉含著笑意說道。那名身姿筆挺的治安官坐了下來，似乎不是很熟悉這種台座，她的腿無處安放，坐姿自然也無法維持嚴謹的端正，這讓她有些無所適從，整個人也散發著少許的迷茫。治安官猶豫了一會兒，摩挲著桌台的邊緣，請……給我一杯水吧，溫水就好。卡蜜拉女士，今天有合適的委託嗎？那氣質嚴肅的話語中，提及了一個熟悉的關鍵詞，委託。狩月人們這才驚訝地發現，她……居然是來接委託的。",
+    TextMapContent = "黎瑟第一次来到水仙平原的时候，狩月人们都吓了一跳。治安官来这里做什么？人们看着黎瑟，等待着她的下一步动作。卡米拉却是一副早有准备的样子，招手邀请对方来到吧台前。喝点什么，酒，还是果汁？卡米拉含着笑意说道。那名身姿笔挺的治安官坐了下来，似乎不是很熟悉这种台座，她的腿无处安放，坐姿自然也无法维持严谨的端正，这让她有些无所适从，整个人也散发着少许的迷茫。治安官犹豫了一会儿，摩挲着桌台的边缘，请……给我一杯水吧，温水就好。卡米拉女士，今天有合适的委托吗？那气质严肃的话语中，提及了一个熟悉的关键词，委托。狩月人们这才惊讶地发现，她……居然是来接委托的。",
+    TextMapId = "UI_CHAR_DATA_TEXT_41030103"
+  },
+  UI_CHAR_DATA_TEXT_41030104 = {
+    ContentEN = [[
+The Asphodel had already closed for the night. Camilla was sliding the bolt into place when someone knocked from outside. She raised an eyebrow, then let Rhythm in. For once, Rhythm had The Asphodel entirely to herself. The tavern, usually full of noise, was so still that even their breathing seemed loud. The silence seemed to make Rhythm uneasy. With a soft clink, Camilla set a polished glass before her. The clear liquor caught the lamplight and gleamed softly in the glass.
+"Drink."
+Rhythm did not refuse. She gripped the glass and threw it back in one graceless swallow. It was her first taste of alcohol. Camilla had made it especially mild and sweet for her, but even that was enough to send Rhythm into a fit of coughing. Camilla kept her company without asking questions. Each time Rhythm emptied her glass, Camilla refilled it halfway. Half a glass at a time, the hours slipped by. Resting her chin on one hand, Camilla finally asked, "What happened?"
+Rhythm buried her face in the crook of her arm. Her answer came muffled from beneath it. Her usual precision was gone; the words came soft and unsteady, perilously close to tears.
+"The client tricked me."
+The alcohol had softened the rigid composure that usually defined her. In its place was a quiet, almost childlike hurt. Camilla did not press her. She simply listened, refilling the glass halfway whenever Rhythm emptied it, and stayed with her as the night wore on. Dawn was near when Rhythm finally fell asleep from sheer exhaustion. The deep shadows beneath her eyes told Camilla that she had not rested properly in far too long. She stroked Rhythm's hair and murmured, "Get some rest. It'll be easier in the morning. I won't let another client pull something like this on you again."]],
+    ContentFR = "Les Asphodèles avaient déjà fermé leurs portes. Camilla venait de terminer de ranger et s’apprêtait à fermer pour la nuit lorsque quelqu’un frappa soudain à la porte.\nRhythm.\nCamilla haussa légèrement un sourcil avant de la laisser entrer. Ce soir-là, à cet instant précis, Rhythm était l’unique cliente des lieux. L’établissement d’ordinaire si animé baignait dans un silence inhabituel où seuls leurs souffles semblaient encore circuler. Rhythm n’avait visiblement pas l’habitude d’une telle atmosphère.\nUn léger tintement retentit.\nUn verre parfaitement propre, presque neuf, venait d’être posé devant elle. Camilla en orienta l’ouverture vers Rhythm avant d’y verser un alcool cristallin. Les lumières se reflétaient à sa surface et semblaient elles-mêmes avoir coulé dans le verre, lui donnant un éclat singulier.\n \n« Bois », dit-elle simplement.\nRhythm ne refusa pas. Elle saisit le verre et l’avala d’un trait, avec une brutalité qui ne convenait absolument pas à ce qu’il contenait.\nC’était la première fois qu’elle buvait de l’alcool.\n \nCamilla avait spécialement préparé quelque chose de facile à boire, doux en bouche et légèrement sucré. Pourtant, même ce verre si délicat suffit à faire tousser Rhythm à plusieurs reprises. Camilla resta patiemment auprès de cette visiteuse inattendue. Chaque fois que Rhythm terminait son verre, Camilla lui en resservait une moitié. À force de remplir et de vider le verre, plusieurs heures passèrent sans qu’elles s’en rendent compte.\nLe menton posé dans sa main, Camilla finit par demander doucement :\n \n« Qu’est-ce qui s’est passé ? »\n \nLa voix de Rhythm était étouffée. Elle avait perdu cette rigidité et cette maîtrise impeccables qui la caractérisaient d’ordinaire. À l’entendre, elle semblait presque sur le point de pleurer. La jeune femme enfouit son visage dans le creux de ses bras. Sa voix engourdie s’éleva depuis l’ombre.\n \n« La personne qui m’avait confié une mission... m’a trompée. »\n \nCamilla comprit qu’elle était légèrement ivre. Sous l’effet de l’alcool, toute la dureté et l’efficacité habituelles de Rhythm s’étaient effacées, ne laissant derrière elles qu’une vulnérabilité presque enfantine. Alors Camilla attendit simplement qu’elle parle, tout en continuant consciencieusement à lui servir à boire.\nCette nuit-là fut particulièrement longue.\nCe ne fut qu’à l’aube que Rhythm, complètement épuisée, finit par s’endormir. En voyant les cernes sombres sous ses yeux, Camilla comprit que cette enfant obstinée ne s’était pas véritablement reposée depuis bien longtemps.\n \nElle lui caressa doucement la tête.\n« Dors. Quand tu te réveilleras, tout ira mieux. Plus personne ne viendra te compliquer la vie avec ses missions. »",
+    ContentJP = "カミラが最後の戸締まりを終えようとしたところで、扉を叩く音がした。立っていたのはリズムだった。カミラは少しだけ眉を上げ、それ以上は何も聞かずに中へ通した。\n \n 普段なら声と笑いで満ちている店も、今夜ばかりはリズムの貸し切りだった。あまりの静けさに、互いの息遣いさえ大きく聞こえる。リズムはどこか居心地が悪そうにしていた。\n やがて、小さな音を立てて磨いたばかりのグラスが目の前に置かれる。柔らかな灯りを映した酒が、ゆっくり揺れた。\n 「飲んで」\n リズムは素直にグラスを取り――そのまま一気に飲み干した。次の瞬間、盛大にむせる。初めて酒を飲む彼女のために、カミラがわざわざ甘くて軽い一杯を作ったのだが、それでも十分だったらしい。空になれば、半分だけ注ぐ。また空になれば、もう半分。そんなやり取りを繰り返すうち、いつの間にか何時間も経っていた。カミラが頬杖をつく。\n 「それで。何があったの？」\n 返事はすぐには来なかった。やがてリズムは腕に顔を伏せ、いつもの張りつめた声とは似ても似つかない、くぐもった声で言った。\n 「……依頼人に、騙されました」\n 少し酔っている。そのせいか、普段なら飲み込んでしまうはずの悔しさが、今夜は隠しきれていなかった。カミラは急かさなかった。ただ話を聞き、必要な時だけグラスを満たした。夜が明ける頃、リズムはとうとう力尽きて眠ってしまった。目の下には濃い隈がある。ずいぶん長いこと、まともに休んでいなかったのだろう。カミラはその頭をそっと撫でた。\n 「おやすみ。目が覚めたら、少しは楽になってるよ」\n 「……もう誰にも、依頼を盾にあなたを振り回させないから」",
+    ContentKR = "아스포델이 영업을 마치고 카밀라가 막 문을 닫으려던 참에, 리듬이 느닷없이 문을 두드렸다. 카밀라는 눈썹을 치켜올리고 리듬을 술집 안으로 맞아들였다. 오늘, 지금, 바로 이 순간 아스포델의 손님은 리듬 한 사람뿐이었다. 늘 시끌벅적하던 곳이 고요해져 서로의 숨소리만 조용히 이어지자, 리듬은 이런 분위기가 조금 낯설게 느껴졌다.\n짤랑, 가벼운 소리와 함께 카밀라가 깨끗한 새 유리잔을 리듬 앞에 놓고 잔을 리듬 쪽으로 내밀었다. 투명한 술이 잔 안에서 찰랑였고, 그 위로 불빛이 잔 안으로 함께 따라진 듯 반짝였다.\n\"마셔요.\" 카밀라가 말했다.\n리듬은 거절하지 않고 잔을 움켜쥔 채 거칠게 단숨에 들이켰다. 리듬은 이날 처음으로 술을 마셨다. 카밀라가 일부러 마시기 편하도록 부드럽고 달콤하게 타 준 술이었지만, 그 순한 술에도 리듬은 연신 사레가 들려 기침을 해 댔다. 카밀라는 불쑥 찾아온 손님 곁을 참을성 있게 지키며 리듬이 잔을 비울 때마다 반 잔씩 더 채워 주었고, 그러는 사이에 어느새 몇 시간이 흘렀다. 카밀라는 턱을 괴고 살며시 물었다.\n\"무슨 일 있었어요?\"\n리듬은 팔에 얼굴을 묻고, 평소처럼 반듯하고 절제된 말투가 아니라, 금방이라도 울음을 터뜨릴 듯한 먹먹한 목소리로 느릿하게 말했다.\n\"의뢰인한테 속았어요.\"\n카밀라는 리듬이 조금 취했다는 걸 알아차렸다. 술기운에 날카롭고 빈틈없는 모습 대신 애처로움이 느껴졌다. 카밀라는 리듬이 말을 이어 가기를 기다리며 묵묵히 술을 따라 주었다. 그날 밤은 유난히 길었다. 카밀라는 새벽녘이 되어서야 기진맥진해 잠든 리듬의 눈 밑에 짙게 내려앉은 그늘을 보고, 이 고집스러운 아이가 오랫동안 쉬지 못했음을 알아차렸다. 카밀라는 리듬의 머리를 쓰다듬으며 낮은 목소리로 말했다.\n\"한숨 푹 자요. 자고 일어나면 다 괜찮아질 거예요. 앞으로는 의뢰 때문에 서러울 일도 없을 거고요.\"",
+    ContentTC = "水仙平原已經打烊了，卡蜜拉合上門，準備打烊了。黎瑟就在這種情況下，突兀地敲響了水仙平原的門。卡蜜拉挑了挑眉，將她迎入了酒館。今天，現在，此時此刻，黎瑟是這裡唯一的客人，一貫吵鬧的地方變得安靜了，只有彼此的呼吸在脈脈流淌。這讓黎瑟有些不太適應。伴隨著叮的一聲輕響，乾淨、簇新的玻璃杯被放在了黎瑟面前，卡蜜拉將空白的杯口朝向她，晶瑩的酒液在杯中搖晃，倒影落下，燈火仿佛也被倒入了杯中，才顯得這杯酒格外閃耀。喝吧，她說。黎瑟沒有拒絕，抓起酒杯，粗魯地一飲而盡。這是黎瑟第一次喝酒，卡蜜拉專程為她調製了易於入口的酒，口感柔和，味道甘甜，這樣一杯溫柔的酒，卻還是把黎瑟嗆得咳嗽連連。調酒師耐心地陪伴著這位不速之客，黎瑟喝光了酒，卡蜜拉就為她添上半杯，在這一倒一飲之間，不知不覺過去了幾個小時。卡蜜拉托著下巴，輕輕發問，發生什麼事情了？黎瑟的聲音悶悶的，不在一板一眼端正自持，聽著像是要哭了。少女將臉頰埋進臂彎，遲鈍的聲音從陰影下傳來：我被委託人騙了。卡蜜拉知道她是有點醉了，酒精讓她的凌厲和幹練變成了柔軟的委屈。她等待著她的訴說，盡職盡責地為她酌酒，這一夜格外漫長。直到黎明時分，黎瑟才精疲力盡地睡了過去，卡蜜拉看著她眼下的青黑，看出這個固執的孩子已經很久沒有休息了。她摸了摸黎瑟的腦袋，低聲說道：「睡吧。睡一覺起來，一切都會變好了，不會再有人拿委託刁難你了。」",
+    TextMapContent = "水仙平原已经打烊了，卡米拉合上门，准备打烊了。黎瑟就在这种情况下，突兀地敲响了水仙平原的门。卡米拉挑了挑眉，将她迎入了酒馆。今天，现在，此时此刻，黎瑟是这里唯一的客人，一贯吵闹的地方变得安静了，只有彼此的呼吸在脉脉流淌。这让黎瑟有些不太适应。伴随着叮的一声轻响，干净、簇新的玻璃杯被放在了黎瑟面前，卡米拉将空白的杯口朝向她，晶莹的酒液在杯中摇晃，倒影落下，灯火仿佛也被倒入了杯中，才显得这杯酒格外闪耀。喝吧，她说。黎瑟没有拒绝，抓起酒杯，粗鲁地一饮而尽。这是黎瑟第一次喝酒，卡米拉专程为她调制了易于入口的酒，口感柔和，味道甘甜，这样一杯温柔的酒，却还是把黎瑟呛得咳嗽连连。调酒师耐心地陪伴着这位不速之客，黎瑟喝光了酒，卡米拉就为她添上半杯，在这一倒一饮之间，不知不觉过去了几个小时。卡米拉托着下巴，轻轻发问，发生什么事情了？黎瑟的声音闷闷的，不在一板一眼端正自持，听着像是要哭了。少女将脸颊埋进臂弯，迟钝的声音从阴影下传来：我被委托人骗了。卡米拉知道她是有点醉了，酒精让她的凌厉和干练变成了柔软的委屈。她等待着她的诉说，尽职尽责地为她酌酒，这一夜格外漫长。直到黎明时分，黎瑟才精疲力尽地睡了过去，卡米拉看着她眼下的青黑，看出这个固执的孩子已经很久没有休息了。她摸了摸黎瑟的脑袋，低声说道：“睡吧。睡一觉起来，一切都会变好了，不会再有人拿委托刁难你了。”",
+    TextMapId = "UI_CHAR_DATA_TEXT_41030104"
+  },
+  UI_CHAR_DATA_TEXT_41030201 = {
+    ContentEN = "Notice of Personnel Change\nAs a growing number of citizens have recently visited the Security Bureau in search of Rhythm Fischer, the Icelake Security Bureau hereby issues the following notice: Rhythm Fischer has resigned from her post as warrant officer and left military service. Please do not bring matters outside the Security Bureau's remit to its headquarters, including, but not limited to, requests to locate missing persons, requests for directions, electrical repairs, or wall repairs. The Security Bureau is not responsible for such matters.\n\n— Icelake Security Bureau",
+    ContentFR = "Avis de changement de personnel\n \nEn raison du nombre important de citoyens venus récemment au Bureau de la Sécurité afin de demander Rhythm Fischer, nous tenons à vous informer officiellement que Rhythm Fischer a été relevée de son grade d’adjudante ainsi que de son statut de soldat.\n \nNous vous prions de ne pas solliciter abusivement le Bureau de la Sécurité pour des services tels que la recherche d’une personne, les demandes d’itinéraire, les réparations électriques, la réfection de murs...\n \nCes tâches ne relèvent pas des attributions du Bureau de la Sécurité.\n \n— Bureau de la Sécurité de Givrelac",
+    ContentJP = "人事異動のお知らせ\n 最近、リズム・フィッシャーを訪ねて保安署へ来られる市民の方が後を絶たないため、改めてお知らせします。\n リズム・フィッシャーは、すでに准尉の階級を解かれ、軍籍を離れています。つきましては、道案内、迷子捜し、配線修理、壁の補修などを目的に本署へお越しになるのはお控えください。\n 上記はいずれも保安署の職務ではありません。\n ――アイスレイク城保安署",
+    ContentKR = "인사 변동 공고\n최근 리듬 페실을 찾으러 치안서를 방문하는 시민이 지나치게 많아 다음과 같이 공고합니다. 리듬 페실의 준위 계급 및 군인 신분이 해제되었음을 알려드립니다. 사람 찾기, 길 묻기, 전기 설비 긴급 수리, 벽체 보수 등 치안서 소관이 아닌 업무에 대해서는 도움 요청을 자제하시기 바랍니다.\n—— 아이스레이크 시티 치안서",
+    ContentTC = "人事變動告示\n因近期來治安署尋找黎瑟·費西爾的市民過多，特此公告。黎瑟·費西爾已被解除其准尉軍銜與士兵身份，特此告知。請勿於治安署尋求過度幫助，如尋人問路、電路搶修、牆體修補……該工作不在治安署職責範圍內。\n——冰湖城治安署",
+    TextMapContent = "人事变动告示\n因近期来治安署寻找黎瑟·费西尔的市民过多，特此公告。黎瑟·费西尔已被解除其准尉军衔与士兵身份，特此告知。请勿于治安署寻求过度帮助，如寻人问路、电路抢修、墙体修补……该工作不在治安署职责范围内。\n——冰湖城治安署",
+    TextMapId = "UI_CHAR_DATA_TEXT_41030201"
+  },
+  UI_CHAR_DATA_TEXT_41030202 = {
+    ContentEN = "When word spread that Warrant Officer Rhythm was leaving the Escort, most soldiers dismissed it as a rumour. Who would willingly walk away from a position they had fought so hard to earn? To civilians, the uniform alone conferred a certain status, and even the smallest measure of authority could open doors that stayed shut to everyone else. Rhythm might have been an unusual soldier, forever helping Icelake residents with errands her colleagues thought weren't worth the trouble, but she was an Imperial soldier all the same. As far as they were concerned, a soldier stopped being a soldier only in death. Few could understand why anyone would willingly give up that standing and return to civilian life — least of all a Laurelled Charon like Rhythm, with a promising career ahead of her.\nIt had to be a rumour, they told one another.",
+    ContentFR = "Lorsque la rumeur commença à circuler que l’adjudante Rhythm allait quitter la Légion, de nombreux soldats refusèrent tout simplement d’y croire.\nAprès avoir enfin réussi à devenir soldat de l’Empire, qui abandonnerait volontairement un honneur si difficilement acquis ?\nAux yeux des civils, les soldats occupaient naturellement une position supérieure. Ils disposaient d’un certain pouvoir et, aussi insignifiant fût-il, celui-ci suffisait à rendre bien des aspects de la vie quotidienne plus faciles.\n \nCertes, Rhythm était une militaire atypique. Elle passait son temps à aider les habitants du quartier dans toutes sortes de petites tâches insignifiantes. Mais elle restait malgré tout au service de l’Empire.\nHormis la mort, rien ne pouvait pousser un soldat à renoncer à son identité. Abandonner une classe privilégiée pour redevenir quelqu’un d’ordinaire était une perspective terrifiante. Et Rhythm était déjà devenue une Charon Couronnée promise à un avenir brillant.\nCela ne pouvait être qu’une rumeur !\n \nDu moins, c’était ce que tout le monde affirmait avec certitude.",
+    ContentJP = "「リズム准尉が軍を辞めるらしい」その噂を聞いても、兵士たちの大半は信じなかった。せっかく帝国軍人になったのに、自分からその肩書きを捨てる者がいるだろうか。街へ出れば、軍服ひとつで扱いが変わる。大した権力ではなくても、軍人であることは日々の暮らしを確実に楽にしてくれる。リズムは少し変わった兵士だった。休みの日まで近所の雑用を引き受け、軍人らしい特権を利用することにも興味がない。それでも、彼女は帝国軍人だった。軍を離れるのは、死ぬ時くらいだ。ましてやリズムは、将来を期待された桂冠カロン族でもある。「そんなわけがない。どうせ作り話だ」兵士たちは、むしろ自信たっぷりにそう言った。",
+    ContentKR = "리듬 준위가 곧 군단을 떠난다는 소문이 돌았지만, 병사들은 대부분 이를 헛소문으로 여겼다. 어렵게 제국 군인이 되고서 그토록 힘들게 얻은 명예를 제 발로 내려놓을 사람이 어디 있겠는가? 병사들은 군인 신분만으로도 민간인보다 나은 대우를 받을 수 있고, 그에 따라 주어지는 얼마 안 되는 권한만으로도 생활이 여러모로 편해진다고 여겼다. 리듬이 동네 사람들의 이런저런 일을 자주 거들어 주는 별난 군인이라 해도, 결국은 제국의 군인이었으며, 병사들에게는 죽음 이외에는 군인 신분을 포기하게 만들 만한 일이 도무지 떠오르지 않았다. 특권을 내려놓고 다시 평범한 사람으로 돌아간다는 건 생각만 해도 끔찍한 일이었다. 하물며 리듬은 앞날이 창창한 계관카론이었다. 그러니 군단을 떠난다는 이야기는 분명 헛소문이라고 병사들은 굳게 믿었다.",
+    ContentTC = "傳聞准尉黎瑟即將離開軍團，許多士兵都覺得這是謠言。好不容易成為了帝國士兵，有誰能放下這來之不易的榮譽？在平民的地界裡，士兵天然高人一等，擁有著小小的權力，即便是這再小不過的權力，也能為一個人的生活提供許多便利。雖然黎瑟是個奇怪的士兵，時常去幫街坊鄰居做一些瑣碎小事，那她也是帝國的士兵。除了死亡，沒有什麼能讓士兵放棄自己的身份，從特權階級回歸平凡是一件可怕的事，更何況她已經是一位前途無量的桂冠卡戎了。那一定是謠傳！人們篤信地說道。",
+    TextMapContent = "传闻准尉黎瑟即将离开军团，许多士兵都觉得这是谣言。好不容易成为了帝国士兵，有谁能放下这来之不易的荣誉？在平民的地界里，士兵天然高人一等，拥有着小小的权力，即便是这再小不过的权力，也能为一个人的生活提供许多便利。虽然黎瑟是个奇怪的士兵，时常去帮街坊邻居做一些琐碎小事，那她也是帝国的士兵。除了死亡，没有什么能让士兵放弃自己的身份，从特权阶级回归平凡是一件可怕的事，更何况她已经是一位前途无量的桂冠卡戎了。那一定是谣传！人们笃信地说道。",
+    TextMapId = "UI_CHAR_DATA_TEXT_41030202"
+  },
+  UI_CHAR_DATA_TEXT_41030203 = {
+    ContentEN = "Lately, the Phoxhunters at The Asphodel had been preoccupied with one question: was Rhythm, the former Escort officer, about to become one of them? She had gone from enforcing order in uniform to taking private commissions on her own terms. Of course, people took notice. Some were intrigued, some wary, and others had no shortage of ridiculous theories. Whatever their reaction, everyone was watching her, and before long Rhythm had become the main topic of conversation at The Asphodel.\n\nIn time, the talk died down. Rhythm Fischer did not become a Phoxhunter. Once the others realised she was not there to take work away from them, everyone quietly relaxed. That should have settled the matter. And at first, it did. But then another question began to nag at them: why didn't she want to be one of them?\nPerhaps it was her cool reserve, or the complete lack of interest she showed in being won over. Whatever the reason, the same Phoxhunters who had once kept their distance now found themselves strangely determined to change her mind. Some promptly took it upon themselves to show her exactly what made their calling worthwhile. Rhythm went on with her quiet life, barely noticing how often the Phoxhunters had begun to involve her in theirs. Little by little, they came to treat her as one of their own. They taught her the things no military training could cover — the tricks learned on commissions, and the lessons learned simply by living. The Phoxhunters could hardly have been more different from one another, yet many of them recognised something familiar in Rhythm: a younger self, lost and hurting, still trying to find a way forward.\n\nWhat did it really mean to be a Phoxhunter? No one had ever agreed on an answer. A Phoxhunter could be just or unjust, kind or cruel. That depended on the person. The profession itself promised nothing. Only Camilla's judgement and the people she chose to welcome into The Asphodel held together the tavern's unlikely peace and its rough sense of fairness. Perhaps that was why the Phoxhunters who made it their refuge had grown so close. Perhaps, in their own way, they were something like a family.\nWhatever a Phoxhunter was, Rhythm had come to them. She might never have formally become one, but she was here. Like so many struggling, displaced souls before her, she was here — and they made room for her. Perhaps it was like mixing wine with juice: each kept something of its own character, yet together they made a flavour neither could have produced alone.",
+    ContentFR = "Ces derniers temps, un sujet revenait régulièrement dans les conversations des Chasseurs de Phoxène des Asphodèles : l’ancienne agente du Bureau de la Sécurité, Rhythm, allait-elle devenir elle aussi une Chasseuse de Phoxène ?\n \nElle avait quitté son rôle de représentante de l’ordre pour se tourner vers la vie bien plus chaotique d’une chasseuse de primes, acceptant librement des missions de toutes sortes. Inévitablement, cela attira l’attention. Certains attendaient de voir ce qu’elle ferait. D’autres demeuraient sur leurs gardes. D’autres encore se perdaient en suppositions extravagantes... Quoi qu’il en soit, entre curiosité et méfiance, Rhythm devint bel et bien le centre de toutes les conversations aux Asphodèles.\nPuis le temps passa et, progressivement, les discussions à son sujet se firent plus rares.\n \nRhythm Fischer ne devint pas Chasseuse de Phoxène.\n \nLorsqu’ils comprirent qu’elle n’était finalement pas venue leur faire concurrence, tous poussèrent intérieurement un soupir de soulagement.\n \nOui. Heureusement que Rhythm n’était pas devenue Chasseuse de Phoxène. Mais...\n \nPourquoi ne voulait-elle pas en devenir une ?\n \nRhythm se montrait probablement trop indifférente. Elle ne semblait éprouver aucune curiosité particulière pour cette profession entourée de tant de rumeurs. Et ceux qui s’étaient jusque-là méfiés d’elle commencèrent, étrangement, à ressentir une certaine déception. Certains Chasseurs de Phoxène se mirent même en tête de lui démontrer tous les avantages de leur métier.\nSans que Rhythm ne s’en aperçoive vraiment, au fil de cette existence tranquille et de cette étrange rivalité à sens unique, leur attitude envers elle commença à changer. Ils finirent par l’accepter parmi eux et lui enseignèrent spontanément certains instincts et certaines techniques propres aux chasseurs. Des choses qu’aucune formation militaire ne lui aurait jamais apprises.\n \nDes choses concernant les missions. Mais aussi la vie.\n \nLes Chasseurs de Phoxène avaient tous des personnalités différentes. Pourtant, lorsqu’il était question de Rhythm, beaucoup partageaient silencieusement le même sentiment. Beaucoup reconnaissaient en elle la personne qu’ils avaient autrefois été : une jeune femme perdue, engourdie, qui se débattait encore dans la souffrance.\nAlors, au fond, qu’était réellement un Chasseur de Phoxène ? Et que formaient-ils lorsqu’ils étaient réunis ?\nPersonne n’avait jamais su en donner une définition précise.\n \nJustice, chaos, bonté, cruauté... Tout cela relevait des choix de chacun. Ils formaient un groupe bien trop disparate pour qu’une véritable règle puisse les définir. Seuls les choix et la vigilance de Camilla, la patronne des Asphodèles, permettaient à cet endroit de préserver une paix inhabituelle et un semblant de justice.\nC’était peut-être justement pour cette raison que les Chasseurs de Phoxène gravitant autour des Asphodèles entretenaient d’aussi bonnes relations.\n \nPeut-être étaient-ils... Comme une famille ?\nQuoi qu’il en soit, Rhythm était arrivée jusqu’ici. Elle n’était jamais officiellement devenue Chasseuse de Phoxène. Mais elle était là. Comme tous ces êtres qui avaient lutté, souffert et erré avant de finir par échouer aux Asphodèles...\n \nElle était là. Et ils l’avaient acceptée.\n \nComme un verre d’alcool pouvait accueillir un verre de jus de fruits : leurs saveurs et leurs effets n’avaient rien de semblable et, pourtant, une fois mélangés, ils pouvaient donner naissance à quelque chose d’unique.",
+    ContentJP = "しばらくの間、アスフォデロスではリズムの話でもちきりだった。元治安官が依頼を受け始めた。秩序を取り締まる側から、今度は自由な依頼を引き受ける側へ。となれば、次は月狩り人になるのではないか――歓迎する者もいれば、警戒する者もいる。好き勝手な憶測を飛ばす者まで現れ、本人の知らないところで、リズムはすっかり話題の中心になっていた。\n けれど、やがて噂も下火になった。リズム・フィッシャーは月狩り人にならなかったからだ。自分たちの仕事を奪いに来たわけではないと分かると、月狩り人たちはひそかに胸を撫で下ろした。\n \n 本来なら、それで話は終わるはずだった。実際、しばらくはそうだった。\n ところが今度は、別の疑問が頭をもたげ始めた。\n ――じゃあ、どうしてならない？\n リズムがあまりに素っ気なく、こちらに靡く気配すら見せないものだからだろうか。最初は距離を置いていた月狩り人たちのほうが、いつしか妙に意地になっていた。自分たちの仕事のどこがいいのか、わざわざ彼女に教えてやろうとする者まで現れた。\n 当のリズムは相変わらず静かに暮らしていて、自分がどれほど彼らの日常に巻き込まれ始めているのか、ほとんど気づいていなかった。けれど月狩り人たちの側では、少しずつ彼女を仲間の一人のように扱うようになっていた。\n 軍では教えてくれないことも、彼らは教えた。依頼をこなすうちに身につけたちょっとしたコツ。長く生きていれば否応なく覚える、暮らしの知恵。\n 月狩り人たちは驚くほどばらばらな人間の集まりだった。それでも多くの者が、リズムの中にどこか懐かしいものを見ていた。行き場を失い、傷を抱え、それでも前へ進む道を探していた――かつての自分自身を。\n そもそも、月狩り人とは何なのか。\n そんな問いに、誰もが納得する答えなど最初からなかった。正義を貫く者もいれば、不正に手を染める者もいる。優しい者もいれば、冷酷な者もいる。それは結局、その人間次第だ。月狩り人という肩書きそのものが、何かを保証してくれるわけではない。\n それでもこの酒場がどうにか平穏を保ち、それなりの公平さを失わずにいられるのは、カミラの人を見る目と、彼女がここへ迎え入れる者を選んできたからだった。\n だからこそ、この場所を居場所に選んだ月狩り人たちは、いつしかこれほど近しい間柄になったのかもしれない。ある意味では、家族のようなものだったのだろう。\n 月狩り人が何者であれ、リズムは彼らのもとへやって来た。\n 正式にその一員になることは、この先もないのかもしれない。それでも彼女は、ここにいる。\n 行き場をなくし、どうにか生きようとしてここへ流れ着いた大勢の者たちと同じように、リズムもここへ来た。そして彼らは、彼女のために場所を空けた。\n それはたぶん、酒とジュースを混ぜるようなものなのだろう。どちらも自分らしい味を少しずつ残したまま、混ざり合えば、それぞれ一つでは生まれなかった味になる。\n リズムも彼らも、何か別のものになったわけではない。ただ一緒にいることで、それまでとは少し違うものになったのだ。",
+    ContentKR = "최근 아스포델의 월석 사냥꾼들 사이에서는 전직 치안관 리듬이 곧 월석 사냥꾼이 되는 것 아니냐는 이야기가 끊임없이 오갔다. 질서를 대표하던 치안관이 이제는 그와 정반대인 현상금 사냥꾼처럼 곳곳에서 자유롭게 의뢰를 받고 다니는 모습은 사람들의 관심을 끌 수밖에 없었다. 누군가는 기대했고, 누군가는 경계했으며, 누군가는 함부로 떠들어 댔다... 어쨌든 수많은 월석 사냥꾼의 관심과 배척의 대상이 된 리듬은, 그야말로 아스포델의 최대 화젯거리로 떠올랐다.\n\n시간이 흐르면서 리듬을 향한 관심도 차츰 식어갔다. 리듬 페실은 월석 사냥꾼이 되지 않았고, 그녀가 자신들의 밥그릇을 빼앗으러 온 게 아니라는 걸 알게 된 월석 사냥꾼들은 내심 안도했다. 그래, 리듬이 월석 사냥꾼이 되지 않아 다행이었다. 그런데... 왜 월석 사냥꾼이 되려 하지 않는 거지? 아마도 리듬의 태도가 지나치게 무덤덤하고, 소문으로 알려진 이 직업에 호기심조차 보이지 않았기 때문인지, 원래 리듬을 경계하던 월석 사냥꾼들은 오히려 허탈감을 느꼈다. 몇몇은 잔뜩 벼르며 리듬에게 월석 사냥꾼의 장점을 보여 주려 했다. 리듬이 아무것도 모른 채 평범한 일상을 보내는 동안, 눈에 보이지 않는 힘겨루기가 이어지며 사냥꾼들의 태도도 변하기 시작했다. 그들은 리듬을 받아들이기 시작했고, 군단에서는 배울 수 없는 의뢰와 삶에 관한 사냥꾼 특유의 감각과 기술을 선뜻 가르쳐 주었다. 월석 사냥꾼들은 저마다 성격이 달랐지만 리듬을 대하는 데에는 비슷한 공감대가 있었는데, 그들 모두 리듬에게서 방황하며 고통받던 자신들의 옛 모습을 겹쳐 보았기 때문이었다.\n\n그렇다면 월석 사냥꾼이란 무엇일까? 월석 사냥꾼이라는 집단은 또 무엇일까? 누구도 이들을 정확히 규정한 적이 없었고, 정의와 혼돈, 선함과 악함 모두 개인의 선택일 뿐이었다. 워낙 느슨한 집단이다 보니, 아스포델이 보기 드문 평화와 기본적인 정의를 유지할 수 있는 것은 전적으로 사장인 카밀라가 사람들을 이어 주고 가려 받아 온 덕분이었다. 그리고 바로 그 덕분에 아스포델을 중심으로 모인 월석 사냥꾼들끼리도 사이가 좋았다. 어쩌면... 가족 같은 관계라고 부를 수 있을지도 몰랐다. 어찌 되었든 리듬은 이곳까지 왔다. 정식 월석 사냥꾼은 아니었지만, 정처 없이 떠돌며 발버둥 치는 수많은 사람들과 마찬가지로, 리듬도 이제는 아스포델의 식구였고, 맛과 목 넘김이 제각각인 술과 주스가 어우러지면 특별한 풍미를 만들어내듯, 사람들도 그렇게 리듬을 자연스럽게 받아들였다.",
+    ContentTC = "水仙平原的狩月人們，最近在討論著一個話題，前治安官黎瑟，是不是就要成為狩月人了？她從代表秩序的執勤者，變成了從屬於混亂的賞金獵人，接受各方的自由委託，這不免引起了許多人的注意。有人期待，有人警惕，有人狂言妄議……不論如何，承載著眾多狩月人的目光和排斥，她實打實地成為了水仙平原的話題中心。\n\n隨著時間的推移，漸漸地，討論黎瑟的人變少了。黎瑟·費西爾並沒有成為狩月人。當得知黎瑟沒有來和他們搶飯碗時，所有人都隱隱鬆了一口氣。是的，幸好黎瑟沒有成為狩月人。但是……她為什麼不願意成為狩月人？大抵是黎瑟的態度過於冷淡，對這傳聞中的職業也缺乏好奇心，原本防備著黎瑟的狩月人們，反而感到了落差。有些狩月人們卯足了勁，想要向她展示狩月人的好處。在黎瑟無知無覺的平淡生活中、在這種無形的角力之間，他們的態度開始改變了。他們開始接納黎瑟，主動教導她一些獵人之間獨有的嗅覺和技藝，那是軍團的課程不會教給她的東西，有關於委託、也有關於生活。狩月人們各自有著不同的性格，在對待黎瑟的態度上，卻又有著相似的共識：許多人在黎瑟身上看見了曾經的自己——一個迷茫的、麻木的、掙扎著痛苦著的年輕人。\n\n所以狩月人是什麼？狩月人集體又是什麼？沒有人給出過準確的定義，公義、混亂、仁善、奸惡，那些都是個人的選擇，這是個太鬆散的集體了，全靠著水仙平原老闆娘卡蜜拉的維繫和篩選，才能讓水仙平原維繫著罕見的和平與基本的正義，也正因如此，傍依著水仙平原的狩月人們的關係都不錯，也許……就像是家人一樣？不論如何，黎瑟來到了這裡，儘管她並沒有正式成為狩月人，但她已經在這裡了。和這裡的許許多多掙扎著的、流離失所的人們一樣，她已經在這裡了。人們接納她，就像是一杯酒接納一杯果汁，口味和效果不盡相同，但卻也能糅合出特別的味道。",
+    TextMapContent = "水仙平原的狩月人们，最近在讨论着一个话题，前治安官黎瑟，是不是就要成为狩月人了？她从代表秩序的执勤者，变成了从属于混乱的赏金猎人，接受各方的自由委托，这不免引起了许多人的注意。有人期待，有人警惕，有人狂言妄议……不论如何，承载着众多狩月人的目光和排斥，她实打实地成为了水仙平原的话题中心。\n\n随着时间的推移，渐渐地，讨论黎瑟的人变少了。黎瑟·费西尔并没有成为狩月人。当得知黎瑟没有来和他们抢饭碗时，所有人都隐隐松了一口气。是的，幸好黎瑟没有成为狩月人。但是……她为什么不愿意成为狩月人？大抵是黎瑟的态度过于冷淡，对这传闻中的职业也缺乏好奇心，原本防备着黎瑟的狩月人们，反而感到了落差。有些狩月人们铆足了劲，想要向她展示狩月人的好处。在黎瑟无知无觉的平淡生活中、在这种无形的角力之间，他们的态度开始改变了。他们开始接纳黎瑟，主动教导她一些猎人之间独有的嗅觉和技艺，那是军团的课程不会教给她的东西，有关于委托、也有关于生活。狩月人们各自有着不同的性格，在对待黎瑟的态度上，却又有着相似的共识：许多人在黎瑟身上看见了曾经的自己——一个迷茫的、麻木的、挣扎着痛苦着的年轻人。\n\n所以狩月人是什么？狩月人集体又是什么？没有人给出过准确的定义，公义、混乱、仁善、奸恶，那些都是个人的选择，这是个太松散的集体了，全靠着水仙平原老板娘卡米拉的维系和筛选，才能让水仙平原维系着罕见的和平与基本的正义，也正因如此，傍依着水仙平原的狩月人们的关系都不错，也许……就像是家人一样？不论如何，黎瑟来到了这里，尽管她并没有正式成为狩月人，但她已经在这里了。和这里的许许多多挣扎着的、流离失所的人们一样，她已经在这里了。人们接纳她，就像是一杯酒接纳一杯果汁，口味和效果不尽相同，但却也能糅合出特别的味道。",
+    TextMapId = "UI_CHAR_DATA_TEXT_41030203"
+  },
+  UI_CHAR_DATA_TEXT_41030204 = {
+    ContentEN = "To many clients, Rhythm was an obvious first choice. Compared with the more unpredictable mercenaries and Phoxhunters, her background as a military officer gave her instant credibility. She was disciplined, dependable, and unfailingly punctual. Discipline seemed built into her bones.\nYet that same discipline could become a shackle. Rhythm refused any commission she considered unjust, no matter how high the fee. Many people could not understand her principles. She had left the Legion — why was she still acting like some model officer?",
+    ContentFR = "Pour de nombreux commanditaires, Rhythm représentait le choix idéal. Comparée aux mercenaires et aux Chasseurs de Phoxène, souvent bien trop enclins à n’en faire qu’à leur tête, son passé d’officière lui conférait naturellement une certaine crédibilité. Elle n’avait aucun vice, se montrait calme et efficace, était d’une ponctualité irréprochable et faisait preuve d’un profond respect de l’ordre.\n \nMais cet attachement à l’ordre pouvait parfois devenir une entrave. Rhythm refusait systématiquement les missions qu’elle jugeait injustes, même lorsqu’on lui proposait des sommes exorbitantes. Beaucoup ne comprenaient pas ses principes.\n \nElle avait quitté la Légion, alors à quoi bon continuer à jouer les irréprochables ?",
+    ContentJP = "依頼人から見れば、リズムはかなりの当たりだった。元軍人で信用がある。冷静で話が早く、時間はきっちり守る。酒や賭け事に溺れることもなく、仕事の進め方には隙がない。気分ひとつで動く傭兵や月狩り人に比べれば、安心して任せられる――そう考える者が多いのも当然だった。ただし、一つだけ面倒な点がある。リズムは、筋の通らない依頼を受けない。どれだけ高い報酬を積まれても、そこだけは譲らなかった。「もう軍人でもないのに、何を今さら正義ぶっているんだ」そう呆れる依頼人もいた。",
+    ContentKR = "의뢰를 맡기는 많은 사람에게 리듬은 최고의 선택지였다. 자기 기분대로 움직이는 용병이나 월석 사냥꾼과 달리, 전직 장교라는 이력은 그 자체로 신뢰를 주었고, 나쁜 습관도 없이 침착하고 결단력 있는 데다 시간 약속에도 철저했으며 강한 질서 의식까지 몸에 배어 있었다. 하지만 그 질서 의식은 때로 족쇄가 되기도 했다. 리듬은 상대가 아무리 천문학적인 금액을 제시해도 부당한 의뢰는 거절했다. 많은 사람은 '이젠 군단 소속도 아닌데, 뭘 그렇게 고상한 척하는 거지?'라고 생각하며, 리듬의 이런 원칙을 이해하지 못했다.",
+    ContentTC = "對於許多委託方來說，黎瑟是最佳的委託人選。比起過於隨心所欲的僱傭兵和狩月人，黎瑟前軍官的身份對她帶來了天然的誠信度，她沒有不良嗜好，冷靜乾脆，還非常守時，身上帶著極強的秩序性。但這種秩序性，在某些時候也是一種枷鎖，黎瑟拒絕執行不正義的委託，即便對方開出了天價的金額。許多人都不理解她的原則，都離開軍團了，還裝模作樣什麼？",
+    TextMapContent = "对于许多委托方来说，黎瑟是最佳的委托人选。比起过于随心所欲的雇佣兵和狩月人，黎瑟前军官的身份对她带来了天然的诚信度，她没有不良嗜好，冷静干脆，还非常守时，身上带着极强的秩序性。但这种秩序性，在某些时候也是一种枷锁，黎瑟拒绝执行不正义的委托，即便对方开出了天价的金额。许多人都不理解她的原则，都离开军团了，还装模作样什么？",
+    TextMapId = "UI_CHAR_DATA_TEXT_41030204"
+  },
+  UI_CHAR_DATA_TEXT_41030205 = {
+    ContentEN = "Rhythm had begun turning down every new commission. Word was that she had accepted a rare long-term assignment and would soon be leaving Icelake, with no date set for her return. No one knew which train carried the blue-haired traveller out of Icelake and into the wind and snow. After that, Icelake heard nothing more of her. To the city at large, her departure seemed hardly worth noticing. One person had gone; Icelake went on. Its factories belched smoke and fed on blood and sweat as ever; winter cold worked new cracks into its walls; commissions of every kind continued to pass from hand to hand... Yet something was missing — something no one could name at first. By the time people understood what it was, the familiar blue-haired figure that had once hurried through Icelake's streets and alleys was already gone.",
+    ContentFR = "Rhythm refusa toutes les missions. Elle semblait avoir accepté une mission de longue durée d’une nature particulière et s’apprêtait à quitter Givrelac, sans savoir quand elle reviendrait.\nQuelque part dans la tempête de neige, un train arriva à l’heure prévue et emporta avec lui une voyageuse aux cheveux bleus. Après cela, plus personne à Givrelac n’entendit parler d’elle.\n \nÀ l’échelle de la ville entière, son départ semblait n’être que la disparition d’une personne sans grande importance. Givrelac continuait de fonctionner. Les usines engloutissaient et recrachaient vapeur, sueur et sang. Les murs se fissuraient silencieusement sous les assauts du vent et de la neige. Les missions, sous toutes leurs formes, continuaient de passer entre les mains de ceux qui les acceptaient...\n \nEt pourtant, quelque chose manquait. Il manquait forcément quelque chose.\n \nLorsqu’ils finirent par s’en rendre compte, cette silhouette qu’ils avaient toujours vue s’affairer dans les rues et les ruelles de la ville... avait déjà disparu.",
+    ContentJP = "ある日を境に、リズムはすべての依頼を断るようになった。どうやら、少し変わった形の長期依頼を一つ引き受けたらしい。アイスレイク城を離れ、いつ戻るかも決めていないという。やがて吹雪の中を、一本の列車が時刻どおりに入ってきた。そして青い髪の旅人を一人乗せ、また白い景色の向こうへ消えていった。それきり、街でリズムを見た者はいない。たった一人いなくなったところで、アイスレイク城は止まらない。工場は今日も煙と汗を吐き出し、壁には風雪で新しい亀裂が入り、依頼は別の誰かの手へ渡っていく。何も変わっていない。\n ――はずだった。\n それでも、ふとした瞬間に誰かが思う。何かが足りない。そう気づいた頃には、いつも路地のどこかで忙しそうにしていた青い髪の姿は、もうどこにもなかった。",
+    ContentKR = "리듬은 모든 의뢰를 거절했다. 돌아올 기약도 없는 특수 임무를 맡아 곧 아이스레이크 시티를 떠날 예정인 모양이었다. 어느 열차였는지는 알 수 없지만, 눈보라 속에서도 제시간에 도착한 한 열차가 푸른 머리의 여행자 한 명을 태우고 떠났고, 그 뒤로 아이스레이크 시티에는 더 이상 리듬의 소식이 들려오지 않았다. 도시 전체로 놓고 보면, 리듬의 부재는 있으나 마나 한 인물 하나가 사라진 것에 불과했다. 아이스레이크 시티의 일상은 여전히 이어졌으니까. 공장은 구름과 안개, 피와 땀을 삼키고 토해 냈고, 벽은 눈보라 속에서 소리 없이 갈라졌으며, 의뢰는 온갖 형태로 각기 다른 사람들의 손을 거쳐 흘러갔다. 하지만 어딘가 허전했다. 분명 무언가가 사라져 있었다. 사람들이 그 사실을 알아챘을 때는, 늘 거리와 골목을 누비며 바삐 움직이던 누군가의 모습은 이미 자취를 감춘 뒤였다.",
+    ContentTC = "黎瑟拒絕了所有委託。她似乎是接受了一份形式特殊的長期任務，即將離開冰湖城，歸期不定。不知是哪一班列車在風雪中如期而至，帶走了一位藍髮的旅人，此後冰湖城內再無她的訊息。她的離去，從整個冰湖城來看，似乎只是少了一個無關痛癢的小人物而已，冰湖城仍然在運轉，工廠吞吐著雲霧和血汗，牆體在風雪中悄然開裂，委託以各種形式，流轉到不同的承接人手中……似乎少了些什麼。一定少了些什麼。人們意識到的時候，那個總是總是在街頭巷尾忙碌的身影，已經不見了。",
+    TextMapContent = "黎瑟拒绝了所有委托。她似乎是接受了一份形式特殊的长期任务，即将离开冰湖城，归期不定。不知是哪一班列车在风雪中如期而至，带走了一位蓝发的旅人，此后冰湖城内再无她的消息。她的离去，从整个冰湖城来看，似乎只是少了一个无关痛痒的小人物而已，冰湖城仍然在运转，工厂吞吐着云雾和血汗，墙体在风雪中悄然开裂，委托以各种形式，流转到不同的承接人手中……似乎少了些什么。一定少了些什么。人们意识到的时候，那个总是总是在街头巷尾忙碌的身影，已经不见了。",
+    TextMapId = "UI_CHAR_DATA_TEXT_41030205"
+  },
+  UI_CHAR_DATA_TEXT_41030301 = {
+    ContentEN = "Rhythm's new clothes were a gift from a young couple who ran a small tailor's shop. They always greeted her with shy, slightly nervous smiles. They explained that Rhythm had helped them back when she was still an Escort officer. At the time, they had been afraid to show their gratitude: even an innocent gift could have been mistaken for a bribe and caused trouble for her. Now that Rhythm was no longer an Escort officer, they could finally thank her properly.\nThey led Rhythm to the worktable and showed her the outfit they had made for her. The outfit had been immaculately pressed, every seam and detail arranged in perfect symmetry — exactly to Rhythm's taste. Her gaze lingered despite herself.\nEven so, she refused. She had only done her duty, she said, and expected no reward. Seeing how much she liked it, the couple insisted. In the end, Rhythm accepted the clothes — and secretly tucked several silver coins beneath a pile of old fabric in the corner of the shop.",
+    ContentFR = "La nouvelle tenue de Rhythm était un cadeau de la jeune couturière d’une petite boutique. Celle-ci était encore jeune et affichait un sourire timide. Avec son compagnon, elle tenait une modeste échoppe dont les affaires étaient loin d’être florissantes.\n \nLa couturière expliqua que Rhythm les avait aidés autrefois. À l’époque, son statut d’agente du Bureau de la Sécurité les intimidait trop pour qu’ils osent lui témoigner leur reconnaissance. Ils craignaient qu’un cadeau offert de bonne foi ne lui attire des ennuis en étant considéré comme un pot-de-vin.\nMais désormais, cela n’avait plus d’importance.\nLa jeune couturière conduisit Rhythm jusqu’à son établi et lui montra le vêtement. Le tissu avait été soigneusement repassé, et la coupe parfaitement symétrique sur le devant correspondait exactement aux goûts de Rhythm.\n \nDès qu’elle l’aperçut, Rhythm eut bien du mal à en détacher les yeux. Elle ne put s’empêcher de l’observer quelques instants de plus. Pourtant, elle refusa malgré tout. Si elle les avait aidés, expliqua-t-elle, c’était uniquement parce qu’il s’agissait de son devoir. Elle n’attendait rien en retour.\nVoyant parfaitement à quel point le vêtement lui plaisait, le couple insista pour qu’elle l’accepte. Rhythm finit par céder.\n \nMais avant de partir, elle déposa discrètement quelques pièces d’argent sous une pile de vieux tissus entassés dans un coin de la boutique, prenant soin de les dissimuler là où personne ne les remarquerait immédiatement.",
+    ContentJP = "リズムが今着ている服は、町の小さな仕立屋から贈られたものだ。店を切り盛りしているのは、まだ若い仕立職人とその伴侶。商売は決して繁盛しているとは言えないが、二人で大切に守っている店だった。以前、リズムに助けてもらったことがあるという。\n 「治安官さんだった頃は、お礼なんて渡したら賄賂みたいでしょう？」\n 「だから、ずっと何もできなくて。今ならやっと、お礼ができます」\n 作業台の上には、きれいに仕上げられた一着が置かれていた。\n 布はぴんと整えられ、正面の意匠は気持ちいいほど左右対称。\n リズムの視線が、ほんの少し長くそこに留まる。気に入ったのは明らかだった。それでも彼女は首を横に振った。\n 「以前のことは職務の範囲です。お礼をいただく理由はありません」\n だが、仕立屋の二人も引かなかった。結局、リズムは服を受け取ることになる。その日の閉店後。古い布地の山を片づけていた仕立職人は、その下から小さな銀貨の包みを見つけた。誰が置いたのかは、考えるまでもなかった。",
+    ContentKR = "리듬의 새 옷은 어느 옷가게의 젊은 재단사에게서 받은 선물이었다. 수줍은 미소를 띤 그는 배우자와 둘이 옷가게를 꾸려 가고 있었는데, 장사는 썩 잘되는 편이 아니었다. 그는 예전에 리듬에게 도움을 받았지만, 당시에는 리듬이 치안관이었던 터라, 선물을 건넸다가 자칫 뇌물 수수 문제라도 일으킬까 걱정돼 선뜻 호의를 베풀지 못했으며, 이제는 마침내 그런 걱정 없이 마음을 전할 수 있게 됐다고 말했다. 젊은 재단사는 리듬을 작업대 앞으로 데려가 아름다운 옷 한 벌을 가리켰다. 구김 하나 없이 반듯하게 다려진 옷감에 정갈한 좌우 대칭까지, 리듬의 취향에 딱 맞는 옷이었다. 그러나 그녀는 눈앞의 옷에 마음을 빼앗겨 몇 번이고 눈길을 주면서도, 그저 해야 할 일을 했을 뿐이라며 한사코 사양했다. 리듬이 옷을 마음에 들어 한다는 걸 알아챈 재단사 부부는, 선물이라고 생각하고 받아 달라며 고집을 부렸고, 결국 리듬은 눈에 잘 띄지 않는 방 한구석에 쌓인 낡은 천 아래에 실버 몇 닢을 밀어 넣어 두었다.",
+    ContentTC = "黎瑟的新裝扮是裁縫店的小裁縫送的。小裁縫年紀不大，笑容也很是靦腆，和伴侶兩個人守著一家生意平平的裁縫店。小裁縫說，黎瑟之前幫過他們，過去他們畏懼於黎瑟治安官的身份，不敢對黎瑟示好，他們擔心自己善意的饋贈，會給黎瑟帶來收取賄賂的麻煩，但現在終於沒關係了。小裁縫把黎瑟領到手作台前，指著那件漂亮的衣裳，布料熨燙得很是平整，正面的設計看起來左右對稱，很是符合黎瑟的審美。這件衣服出現在視野中，對黎瑟產生了一種莫大的吸引力，她忍不住多看了幾眼。但黎瑟仍然拒絕了，表示自己的幫助只是出於責任，不需要任何回報。看出黎瑟的喜歡，裁縫夫妻堅持要把衣服送給黎瑟。黎瑟只好偷偷地留下了一些銀幣，壓進屋角堆疊的舊布料下，放在了隱秘的角落裡。",
+    TextMapContent = "黎瑟的新装扮是裁缝店的小裁缝送的。小裁缝年纪不大，笑容也很是腼腆，和伴侣两个人守着一家生意平平的裁缝店。小裁缝说，黎瑟之前帮过他们，过去他们畏惧于黎瑟治安官的身份，不敢对黎瑟示好，他们担心自己善意的馈赠，会给黎瑟带来收取贿赂的麻烦，但现在终于没关系了。小裁缝把黎瑟领到手作台前，指着那件漂亮的衣裳，布料熨烫得很是平整，正面的设计看起来左右对称，很是符合黎瑟的审美。这件衣服出现在视野中，对黎瑟产生了一种莫大的吸引力，她忍不住多看了几眼。但黎瑟仍然拒绝了，表示自己的帮助只是出于责任，不需要任何回报。看出黎瑟的喜欢，裁缝夫妻坚持要把衣服送给黎瑟。黎瑟只好偷偷地留下了一些银币，压进屋角堆叠的旧布料下，放在了隐秘的角落里。",
+    TextMapId = "UI_CHAR_DATA_TEXT_41030301"
+  },
+  UI_CHAR_DATA_TEXT_41030302 = {
+    ContentEN = "Rhythm told no one the real reason she had left the Legion. The truth behind those inhumane experiments became a secret she kept entirely to herself. The Laurelled Charon medal had once been her sun. Now she saw it for what it was: a black hole masquerading as one, drawing Charons towards it. From afar, it seemed warm and bright enough that they raised their faces to it with hope, never realising where that light might lead them. Behind all that promise lay only darkness. The lies. The experiments. Her brother, turned into a monster. And herself, sending him off to the Legion full of hope, never once guessing what she was sending him into...\nRhythm had no desire to make anyone else carry that pain with her. Instead, she bore it alone and made a punishment of remembering. Some memories hurt more each time she returned to them, but she refused to spare herself. Again and again, she tore the wound open rather than let it heal. She would not allow herself the mercy of forgetting.\nShe knew she could not stay.\n\"Leave the 6th Legion,\" she told herself. \"Stop doing what you know is wrong simply because it is called duty. Every day you stay is another betrayal of him — of every Charon swallowed by that same darkness.\"\nWhile packing, Rhythm came across the medal again. Her Laurelled Charon decoration was still pristine. Once stripped of all the meaning she had given it, however, it was only a piece of metal — cold and hard, its edge sharp enough to cut. It no longer looked like an honour. So perhaps there had never been a silver sun at all. No shining reward the Empire could place in a Charon's hands and call hope.\nOr perhaps, decades ago, before rot took hold of the Empire's roots, honours like this really had meant something. Perhaps they had once given Charons something real to strive for. But the Empire had changed long ago. Its roots were rotten now, and nothing growing from them could remain unspoiled.\nRhythm held the medal by its edge between two fingers and raised it overhead. She tipped her head back and studied it for a long time.\nHow dim it was.\nThen she understood. The medal had never been the source of the light. Nor, by itself, had it drawn Charons towards their deaths. Whatever brilliance she had once seen in it had come from the Charons themselves — from their hope, their desperation, their longing for a better life.\nRhythm threw the medal away.",
+    ContentFR = "Rhythm ne révéla jamais aux autres la véritable raison pour laquelle elle avait quitté la Légion. Cette expérience d’une cruauté inhumaine devint un secret qu’elle enfouit au plus profond d’elle-même.\nAutrefois, elle avait cru que la médaille des Charons Couronnés était son soleil. À présent, elle comprenait qu’elle n’avait jamais été un soleil. Ce n’était qu’un trou noir prêt à dévorer quiconque s’en approchait.\nSon apparence était pourtant si pure, si chaleureuse... Chaque Charon qui levait les yeux vers elle le faisait avec désir et espoir, avant de pénétrer de son plein gré dans le piège.\n \nTout cela ressemblait à un dessin grossièrement tracé sur une feuille de papier. Une illusion si fragile qu’il suffisait de la toucher pour la déchirer et révéler derrière elle le vide véritable : une obscurité absolue où il n’y avait rien.\n \nLa tromperie. Les mensonges. Les expériences. Blues transformé en monstre.\nEt elle, qui l’avait envoyé rejoindre la Légion avec tant d’espoir sans jamais comprendre ce qui l’attendait...\nRhythm n’avait aucune intention de partager sa douleur avec qui que ce soit. Elle supportait en silence ce châtiment qu’elle s’infligeait elle-même et qui semblait ne jamais devoir prendre fin. Certains souvenirs devenaient plus douloureux chaque fois qu’on les revisitait. Pourtant, Rhythm refusait obstinément de s’accorder le moindre répit. Elle préférait rouvrir ses blessures encore et encore, quitte à revivre chaque fois la même souffrance à vif.\n \nElle le savait désormais : elle ne pouvait plus rester ici.\n \nQuitte la VIᵉ Légion, se dit Rhythm. Ne continue pas à accomplir des devoirs et des tâches qui ne sont pas « justes ». Sinon, cela finira par devenir une interminable trahison envers lui... envers tous ceux qui ont subi la même chose.\n \nEn rassemblant ses affaires, Rhythm retrouva cette médaille encore flambant neuve.\nLa médaille des Charons Couronnés.\nElle constata alors que, privée de la lumière qui se reflétait sur elle, ce n’était finalement qu’un vulgaire morceau de métal. Froid. Anguleux. Assez tranchant pour blesser.\nRien de bien précieux.\nIl n’y avait donc jamais eu de soleil argenté. Jamais eu de « fruit » étincelant que les Charons auraient pu cueillir et tenir au creux de leurs mains.\n \nNon... Peut-être que, plusieurs décennies auparavant, ses racines n’étaient pas encore pourries. Peut-être était-ce pour cela qu’elles avaient autrefois été capables de porter un tel « fruit ». Mais cet Empire avait changé depuis bien longtemps. Il était pourri jusqu’à la moelle.\nRhythm pinça la médaille entre ses doigts et la leva au-dessus d’elle. Elle releva la tête et la contempla longuement. Comme elle était terne.\n \nAinsi, ce qui avait toujours brillé, ce qui avait toujours rayonné... ce n’était pas cette médaille.\nCe n’était pas elle non plus qui attirait les Charons vers leur mort.\nCe n’était que le reflet de tout ce qui débordait de leur cœur.\nLeur désespoir. Et leur espoir.\nRhythm jeta la médaille.",
+    ContentJP = "軍を辞めた本当の理由を、リズムは誰にも話さなかった。第六軍団が行っていた実験のこと。ブルースがどうなったのか。そして、何も知らずに弟を軍へ送り出した自分のこと。口にすれば、誰かと痛みを分けられたのかもしれない。けれどリズムはそうしなかった。むしろ何度も同じ記憶を掘り返し、自分で自分を責め続けた。\n だから、もうここには残れない。「職務だから」と同じ仕事を続けることは、ブルースにも、ほかの犠牲者にも背を向けることになる。リズムには、そう思えてならなかった。\n かつて彼女にとって、桂冠カロンの勲章は目指すべき「銀色の太陽」だった。努力を重ねれば、いつか手が届く。カロンにとっての誇りであり、希望の証だと信じていた。今は違う。あれは光ではなかった。光に見えるよう作られた入口だった。皆が自分から近づき、期待を抱いたまま踏み込んでいく、底のない穴だった。荷物をまとめていた時、リズムは新品同然の勲章を見つけた。手に取ってみる。光のない場所では、ただの金属だった。冷たく、角は硬く、握り方を間違えれば指を傷つける。それだけのものだ。昔は、本当に別の意味を持っていたのかもしれない。けれど今の帝国は、もう根から腐っている。リズムは勲章を指先でつまみ、灯りにかざした。しばらく見つめてから、ようやく理解した。最初から、これが輝いていたわけではない。ここに光を見ていたのは、選ばれたいと願ったカロンたち自身だった。絶望の中でも未来を信じようとした、その希望が映り込んでいただけだ。リズムは手を下ろした。\n そして、その勲章を捨てた。",
+    ContentKR = "리듬은 자신이 군단을 떠난 이유를 누구에게도 말하지 않았고, 그 비인도적인 실험은 마음 깊이 묻어 둔 비밀이 되었다. 한때 리듬은 계관카론 훈장을 자신의 태양이라 믿었지만, 이제 와 돌아보면 그것은 태양이 아니라 선택된 사람을 집어삼키는 블랙홀에 불과했다. 무해하고 따스해 보이는 겉모습으로 카론들을 홀려, 갈망과 기대를 품은 채 제 발로 함정에 걸어 들어가게 만들지만, 종이에 대충 그린 조악한 그림처럼 툭 치면 터져 버릴 허울 뒤에는, 아무것도 없는 칠흑 같은 공허만이 도사리고 있었다. 기만과 거짓, 실험, 괴물이 되어 버린 동생, 희망에 부푼 채 아무것도 모르고 동생을 군단에 보냈던 자신... 리듬은 이 모든 고통을 누구와도 나눌 생각이 없었고, 끝없이 스스로를 채찍질하며 묵묵히 감당했다. 어떤 기억은 되짚을수록 더 고통스러웠지만, 리듬은 자신을 놓아주려 하지 않았고, 차라리 상처를 몇 번이고 다시 찢어 가며 피가 흐르는 듯한 아픔을 고스란히 느끼기를 택했다.\n리듬은 자신이 더는 군단에 몸담아서는 안 된다는 사실을 깨달았다. 제6군단을 떠나자. 리듬은 스스로에게 말했다. 더는 '그릇된' 책무와 일을 이어 가지 말자. 그렇지 않으면 자신의 남동생과 기만당한 카론 모두를 향한 기나긴 배신이 될 테니까.\n짐을 정리하던 리듬은 새 계관카론 훈장을 발견했다. 그리고 빛을 받지 못하는 훈장은, 차갑고 모서리가 날카로워 손을 베이기 십상인, 아무런 가치도 없는 금속 조각에 불과하다는 사실을 깨달았다. 은빛 태양 따위는 애초부터 없었고, 카론들이 손바닥에 올려 무게를 가늠할 수 있는 반짝이는 '결실' 따위도 없었다. 아니, 어쩌면 수십 년 전, 아직 뿌리와 줄기가 썩지 않았을 때는 이런 '결실'을 맺을 수 있었을지도 모르지만... 이 제국은 오래전에 변해 버렸다. 뿌리부터 썩어 버렸다. 리듬은 훈장을 손끝으로 집어 높이 들어 올리고는, 고개를 든 채 한참을 뚫어지게 바라보며 빛깔이 참 무겁다고 생각했다. 밝게 빛나던 존재는 애초부터 훈장이 아니었고, 카론들을 죽음으로 몰아넣은 원흉 또한 훈장이 아니었다. 카론들에게서 흘러넘친 절망과 희망이 그 위로 투영되었을 뿐이었다.\n리듬은 그 훈장을 버렸다.",
+    ContentTC = "黎瑟沒有告訴其他人自己離開軍團的原因。那場慘無人道的實驗，成了她壓在心底的秘密。她曾經以為，桂冠卡戎的勳章，就是她的太陽，可如今看來，那並不是什麼太陽，只是個擇人而噬的黑洞而已。它的外表是如此的純真、如此的溫暖，令每一個仰望著它的卡戎，懷揣著渴望與期盼，心甘情願地步入了陷阱。它就像是畫在紙上、拙劣的簡筆畫，一戳就會破掉，露出背後黑漆漆的、真實的虛空，那裡空無一物。欺騙、謊言、實驗，變成怪物的弟弟，滿懷希望將他送進軍團還渾然不察的自己……黎瑟無意和他人分擔自己的痛苦，默默地承受著沒有盡頭的自我鞭笞。某些事情，越是回憶越是痛苦，可是黎瑟偏偏不願意放過自己，寧願一遍一遍撕開傷疤，在煎熬中感受著那份鮮血淋漓。\n她知道，自己不能再在這裡待下去了。離開第六軍團吧，黎瑟對自己說，不要再繼續做這些並非「正確」的職責與工作，否則，那將變成一場曠日持久的、對他、對他們的背叛。\n在收拾東西的時候，黎瑟找到了那枚簇新的勳章——桂冠卡戎的勳章。她發現，沒有光的照映，這也只不過是一枚普通的金屬飾品，它冰涼，稜角尖銳，容易傷人，不是什麼好東西。所以，從來沒有什麼銀色的太陽，也從來沒有閃光的「果實」可以被卡戎們握進手心稱量。不，也許幾十年前，它的根莖還沒有腐朽，所以才能結出這樣的「果實」……只是這個帝國早就變了，從根骨裡就爛掉了。黎瑟將它捏在指尖，向高處托舉起來，仰起頭定定地看了半晌。多麼暗淡啊，黎瑟想著。所以明亮的、散發光芒的，從來都不是它，吸引卡戎們奔赴死亡的，也不是它，只是卡戎們滿溢而出的、絕望與希望的投影罷了。\n她丟掉了那枚勳章。",
+    TextMapContent = "黎瑟没有告诉其他人自己离开军团的原因。那场惨无人道的实验，成了她压在心底的秘密。她曾经以为，桂冠卡戎的勋章，就是她的太阳，可如今看来，那并不是什么太阳，只是个择人而噬的黑洞而已。它的外表是如此的纯真、如此的温暖，令每一个仰望着它的卡戎，怀揣着渴望与期盼，心甘情愿地步入了陷阱。它就像是画在纸上、拙劣的简笔画，一戳就会破掉，露出背后黑漆漆的、真实的虚空，那里空无一物。欺骗、谎言、实验，变成怪物的弟弟，满怀希望将他送进军团还浑然不察的自己……黎瑟无意和他人分担自己的痛苦，默默地承受着没有尽头的自我鞭笞。某些事情，越是回忆越是痛苦，可是黎瑟偏偏不愿意放过自己，宁愿一遍一遍撕开伤疤，在煎熬中感受着那份鲜血淋漓。\n她知道，自己不能再在这里待下去了。离开第六军团吧，黎瑟对自己说，不要再继续做这些并非“正确”的职责与工作，否则，那将变成一场旷日持久的、对他、对他们的背叛。\n在收拾东西的时候，黎瑟找到了那枚簇新的勋章——桂冠卡戎的勋章。她发现，没有光的照映，这也只不过是一枚普通的金属饰品，它冰凉，棱角尖锐，容易伤人，不是什么好东西。所以，从来没有什么银色的太阳，也从来没有闪光的“果实”可以被卡戎们握进手心称量。不，也许几十年前，它的根茎还没有腐朽，所以才能结出这样的“果实”……只是这个帝国早就变了，从根骨里就烂掉了。黎瑟将它捏在指尖，向高处托举起来，仰起头定定地看了半晌。多么暗淡啊，黎瑟想着。所以明亮的、散发光芒的，从来都不是它，吸引卡戎们奔赴死亡的，也不是它，只是卡戎们满溢而出的、绝望与希望的投影罢了。\n她丢掉了那枚勋章。",
+    TextMapId = "UI_CHAR_DATA_TEXT_41030302"
+  },
+  UI_CHAR_DATA_TEXT_41030303 = {
+    ContentEN = "As Rhythm became a familiar face at The Asphodel, people began asking her more directly: would she ever consider becoming a Phoxhunter herself?\nShe politely declined. When she thought of what a Phoxhunter ought to be, she thought of {nickname}. To Rhythm, a Phoxhunter should be honest and brave — someone who faced trouble head-on, knew right from wrong, and looked past appearances to see the truth. Rhythm looked down at her hands. Could she honestly say she was any of those things? For a long time now, she hadn't known what she was living for. All she could do was numb herself with endless work.\nWhy was I the one who survived? Why wasn't I the one the Legion chose? If I'd been a better big sister, would Blues have felt he had to carry so much on his own? Would he ever have joined the Legion at all?\nThe questions never stopped. Again and again, she put herself on trial — and always found herself guilty.\nRhythm had never put much stock in fate. She believed in choice, in effort, in making one's own way. Yet lately, she had begun to wonder whether one of them had always been doomed to lose the other.\nWas fate really this cruel?\nRhythm did not believe she deserved to be alive, much less that she could ever measure up to her own idea of what a Phoxhunter should be.\nThe Legion. The Alchemy Academy. The Empire. There were those who had known all along, those who had carried out the experiments, and those who had allowed it all to continue. There was no shortage of people Rhythm could have hated.\nYet she hated no one more than herself.",
+    ContentFR = "À force de fréquenter les Asphodèles, Rhythm finit par recevoir plusieurs questions, et même quelques invitations franches.\n« Est-ce que tu voudrais devenir une véritable Chasseuse de Phoxène ? »\nÀ l’époque, Rhythm avait poliment décliné. La silhouette de {nickname} apparut dans son esprit.\nLes Chasseurs de Phoxène étaient droits et courageux. Face aux difficultés, ils ne reculaient pas. Ils savaient distinguer le bien du mal et découvrir la vérité...\nRhythm baissa les yeux vers la paume de sa main.\n \nEt moi...\n \nPendant longtemps, elle n’avait même pas su pourquoi elle continuait à vivre. Elle ne pouvait qu’enchaîner les tâches sans jamais s’arrêter, utilisant cette activité incessante pour s’anesthésier.\nPourquoi est-ce moi qui ai survécu ? Pourquoi la Légion ne m’a-t-elle pas choisie, moi, à l’époque ?\nSi je n’avais pas été aussi incapable... si Blues n’avait pas dû supporter davantage de pression et d’attentes à cause de moi... aurait-il quand même rejoint la Légion ?\n \nLes accusations ne s’arrêtaient jamais. C’était un procès interminable. Rhythm était à la fois sa propre juge... et sa propre prisonnière.\n \nElle n’avait jamais cru à une chose aussi abstraite que le destin. Rhythm avait toujours été quelqu’un de pragmatique, une femme qui préférait agir plutôt que se perdre en spéculations. Et pourtant, depuis quelque temps, une pensée revenait sans cesse la hanter.\nFallait-il nécessairement que, parmi des frères et sœurs, l’un d’eux disparaisse ?\n \nÉtait-ce cela... la cruauté du destin ?\n \nRhythm ne pensait pas mériter d’être celle qui avait survécu. Encore moins mériter de devenir quelqu’un comme eux.\nLa Légion. L’Académie d’Alchimie. L’Empire. Ceux qui savaient. Ceux qui avaient commis ces atrocités. Ceux qui étaient à l’origine de tout ce mal...\nParmi tous ceux qu’elle pouvait haïr, la personne que Rhythm détestait le plus...\n \nC’était elle-même.",
+    ContentJP = "アスフォデロスに馴染んでくると、リズムは何度か正面から誘われた。\n 「本当に、月狩り人になる気はないのか？」\n そのたびに、彼女はやんわりと断った。リズムの脳裏に浮かぶのは、{nickname}の姿だった。危険から逃げず、正しいと思ったことのために動き、目の前の真実から目をそらさない。彼女にとって、月狩り人とはそういう存在だった。では、自分はどうだろう。長い間、リズムは生きる理由さえ見失っていた。考え始めれば耐えられないから、仕事で一日を埋めた。なぜ、生き残ったのが私だったのか。なぜ、軍に選ばれたのがブルースで、私ではなかったのか。私がもっと頼れる姉だったなら、あの子はあれほど自分を追い込まずに済んだのではないか。問いは終わらない。裁く側も、裁かれる側も、自分自身だった。運命など信じる性格ではない。何事も自分の手で確かめ、動いて解決してきた。そんなリズムでさえ、時には考えてしまう。きょうだいのどちらか一人は、必ず失われることになっていたのではないか。もしそうなら、どうして自分のほうではなかったのか。\n 軍団、錬金院、帝国、内情を知る者、加害者、黒幕、憎むべき相手はいくらでもいた。それでもリズムが、いちばん赦せなかった相手は――自分自身だった。",
+    ContentKR = "아스포델에 머무는 동안, 리듬은 정식 월석 사냥꾼이 되어 보지 않겠느냐는 질문과 초대를 몇 차례 받았지만, 당시에는 완곡하게 거절했다... 리듬의 눈앞에 {nickname}의 모습이 떠올랐다. 리듬에게 월석 사냥꾼이란 올곧고 용감하며, 문제가 닥치면 정면으로 맞서고 시시비비를 가려 진실을 꿰뚫어 보는 자들이었지만, 자신은... 리듬은 가만히 자신의 손바닥을 내려다보았다.\n아주 오랫동안 리듬은 왜 살아야 하는지도 모른 채 끝없이 일에 매달리며 스스로를 무감각하게 만들었다. 왜 내가 살아남은 걸까? 왜 내가 그때 군단에 뽑히지 않았을까? 내가 무능하지 않았더라면 블루스가 더 큰 부담과 기대를 짊어지지 않았을 텐데, 그랬다면 군단에 들어가지 않았을지도 몰라. 자신을 향한 추궁은 멈출 줄을 몰랐다. 길고 긴 그 재판에서 리듬은 스스로를 심판하는 재판관인 동시에 불안에 떠는 죄수였다. 리듬은 원래 허황된 운명 따위는 믿지 않았고, 늘 현실적으로 생각하고 행동으로 옮기는 사람이었다. 그런데 한동안은 자꾸 이런 생각을 떨칠 수 없었다. 형제자매 중 누군가는 꼭 세상을 떠나야만 하는 걸까? 그게 운명의 악의인 걸까? 리듬은 자신에게 살아남을 자격이 없으며, 월석 사냥꾼 같은 존재가 될 자격은 더더욱 없다고 생각했다.\n제6군단, 연금원, 제국, 사정을 알고 있던 자들, 가해자들, 죄악의 원흉. 그 모든 증오의 대상 가운데 리듬이 가장 미워한 사람은 자기 자신이었다.",
+    ContentTC = "在水仙平原待得久了，黎瑟也收到了一些疑問和正面邀請，他們詢問黎瑟，你是否有意願成為一名真正的狩月人？黎瑟當時婉拒了……黎瑟的眼前浮現出{nickname}的身影。狩月人正直、勇敢，遇到問題迎難而上，明辨是非，洞悉真相……黎瑟看著自己的掌心，而我……很長一段時間，她都不知道為什麼要活著，只能用無休止的忙碌來麻痹自己。為什麼活下來的人是我？為什麼當時被軍團選中的人不是我？若非我的無能，讓布魯斯承擔了更多的壓力和期望，他是否就不會進入軍團？質問從未停止。那是一場漫長的審判，她是自己的審判官，同時也是惴惴不安的囚犯。黎瑟從來不相信什麼虛無的命運，她一直是踏實的實幹派，但在這段時間裡，她總是忍不住地去想，是否兄弟姊妹總要有一人離去，這就是命運的惡意？黎瑟不認為自己有資格活下來，更不認為自己有資格成為狩月人那樣的存在。\n軍團、煉金院、帝國，知情者、施暴者、罪惡的元兇，在所有的仇恨目標之中，黎瑟最恨的人，是她自己。",
+    TextMapContent = "在水仙平原待得久了，黎瑟也收到了一些疑问和正面邀请，他们询问黎瑟，你是否有意愿成为一名真正的狩月人？黎瑟当时婉拒了……黎瑟的眼前浮现出{nickname}的身影。狩月人正直、勇敢，遇到问题迎难而上，明辨是非，洞悉真相……黎瑟看着自己的掌心，而我……很长一段时间，她都不知道为什么要活着，只能用无休止的忙碌来麻痹自己。为什么活下来的人是我？为什么当时被军团选中的人不是我？若非我的无能，让布鲁斯承担了更多的压力和期望，他是否就不会进入军团？质问从未停止。那是一场漫长的审判，她是自己的审判官，同时也是惴惴不安的囚犯。黎瑟从来不相信什么虚无的命运，她一直是踏实的实干派，但在这段时间里，她总是忍不住地去想，是否兄弟姊妹总要有一人离去，这就是命运的恶意？黎瑟不认为自己有资格活下来，更不认为自己有资格成为狩月人那样的存在。\n军团、炼金院、帝国，知情者、施暴者、罪恶的元凶，在所有的仇恨目标之中，黎瑟最恨的人，是她自己。",
+    TextMapId = "UI_CHAR_DATA_TEXT_41030303"
+  },
+  UI_CHAR_DATA_TEXT_41030304 = {
+    ContentEN = [[
+Rhythm discovered that her harmonica was broken. At some point, it must have taken a hard enough knock to dent the casing; she had no idea what else might have been damaged inside. She stared at the ruined instrument, then mechanically raised it to her lips and blew. Her breath passed through it with only a faint hiss. The harmonica was too badly damaged to play. Not a single note emerged. Rhythm clenched it tighter. Somehow, the silence made her feel even more helpless.
+What can I do? What should I do? One commission after another... and nothing changes. I'm just filling my days with work. I...
+Her grip went slack. The harmonica slipped from her hands and struck the floor with a clang. Rhythm looked down at it beside her boot and found she did not even have the strength to bend down and pick it up.
+She was exhausted. There was no denying it now.]],
+    ContentFR = "Rhythm découvrit un jour que son harmonica était cassé. Elle avait dû le cogner quelque part sans s’en rendre compte. Lorsqu’elle le ressortit, le corps de l’instrument était déjà légèrement enfoncé. Impossible de savoir dans quel état se trouvait l’intérieur.\nRhythm contempla l’harmonica endommagé, puis le porta malgré tout à ses lèvres, comme si elle refusait simplement de voir qu’il était cassé.\n \nElle essaya de jouer. Son souffle traversa les fines ouvertures de l’instrument et s’engouffra à l’intérieur, emportant avec lui ses soupirs et son désarroi...\nMais l’harmonica était bel et bien hors d’usage. Aucun son n’en sortit.\nRhythm le serra entre ses doigts. Un sentiment d’impuissance plus accablant encore que d’ordinaire l’envahit.\n \nQu’est-ce que je peux faire ? Qu’est-ce que je suis censée faire ?\n \nJ’accomplis toutes ces missions, jour après jour... mais aucune d’elles ne change quoi que ce soit à ma haine. Je ne fais que m’agiter sans but.\n \nJe...\n \nLa main de Rhythm retomba. L’harmonica lui échappa et heurta le sol dans un tintement métallique. Elle baissa les yeux vers l’instrument à ses pieds. Elle n’avait même plus la force de se pencher pour le ramasser. Rhythm dut finalement se rendre à l’évidence.\n \nElle était vraiment... épuisée.",
+    ContentJP = "ハーモニカが壊れていた。どこかでぶつけたのだろう。本体は少しへこみ、中がどうなっているのかもわからない。それでもリズムは、いつものように口元へ運んだ。息を吹き込む。空気だけが抜けていく。もう一度やっても、やはり音は出なかった。その瞬間、張りつめていたものが急に重くのしかかった。\n ――私は、何をしているんだろう。\n 依頼を一つ終えて、また次を受ける。忙しくしていれば考えなくて済む。けれど、それでブルースが戻るわけではない。憎しみが消えるわけでもない。結局、依頼で時間を埋めているだけで、何一つ前へ進めていない。指に力が入る。それから、ふっと抜けた。小さな音を立てて、ハーモニカが床へ落ちる。リズムはそれを見下ろした。拾わなければと思う。けれど、しゃがむことさえできなかった。その時になってようやく、認めるしかなかった。\n ――疲れた。\n ずっと前から、もう限界だったのだ。",
+    ContentKR = "리듬은 자신의 하모니카가 망가졌음을 깨달았다. 어디선가 실수로 부딪혀 고장 난 것인지, 다시 꺼내 보았을 때는 이미 몸체가 조금 찌그러져 있어 내부 상태가 어떤지조차 알 수 없었다. 리듬은 망가진 하모니카를 빤히 바라보면서도, 고장 난 사실을 외면하듯 입술에 가져가 계속 불어 보려 했다. 내쉰 바람은 리듬의 한숨과 막막함을 싣고 격자 모양의 덮개를 지나 공기실로 밀려들었지만... 완전히 망가진 하모니카에서는 아무 소리도 나지 않았다. 리듬은 하모니카를 꽉 쥐었다. 무력감이 배로 밀려왔다. 내가 뭘 할 수 있지? 뭘 해야 하지? 날마다 이런 의뢰를 해 봐야 내가 품은 증오에는 아무 의미도 없어. 나는 그저 헛되이 바쁘기만 할 뿐이야. 나는... 리듬이 맥없이 손을 떨구자 하모니카가 바닥에 떨어졌다. 땡그랑. 고개를 숙여 발치의 하모니카를 바라봤지만, 허리를 굽혀 주울 힘조차 없었다. 리듬은 자신이 정말... 지쳤다고 인정할 수밖에 없었다.",
+    ContentTC = "黎瑟發現自己的口琴壞掉了。也許是不小心在哪裡磕碰到，就摔壞了。再拿出來的時候，琴身已經有些凹陷，不知道裡面的情況怎麼樣。她盯著壞掉的口琴，熟視無睹地將它舉到唇邊，試圖繼續吹奏。氣流穿過網格狀的柵欄，鼓入風箱，帶著她的嘆息和迷茫……但它著實壞的徹底，發不出半點聲音了。黎瑟捏緊口琴，感到一種成倍的無力。我能做什麼，我該做什麼，我日復一日地做這些委託，對我的仇恨沒有半分意義，我只是在無所事事地忙碌著，我……黎瑟垂下手，口琴掉在地上，鐺。她低下頭，看著腳邊的口琴，竟然連彎下腰去撿拾的力氣都沒有。她不得不承認，自己確實……很累了。",
+    TextMapContent = "黎瑟发现自己的口琴坏掉了。也许是不小心在哪里磕碰到，就摔坏了。再拿出来的时候，琴身已经有些凹陷，不知道里面的情况怎么样。她盯着坏掉的口琴，熟视无睹地将它举到唇边，试图继续吹奏。气流穿过网格状的栅栏，鼓入风箱，带着她的叹息和迷茫……但它着实坏的彻底，发不出半点声音了。黎瑟捏紧口琴，感到一种成倍的无力。我能做什么，我该做什么，我日复一日地做这些委托，对我的仇恨没有半分意义，我只是在无所事事地忙碌着，我……黎瑟垂下手，口琴掉在地上，铛。她低下头，看着脚边的口琴，竟然连弯下腰去捡拾的力气都没有。她不得不承认，自己确实……很累了。",
+    TextMapId = "UI_CHAR_DATA_TEXT_41030304"
+  },
+  UI_CHAR_DATA_TEXT_41030305 = {
+    ContentEN = "Rhythm was not the only one. Many other families had seen their loved ones enter the 6th Legion under false promises. The names on those lists were only a fraction of the victims. Rhythm resolved to put an end to the Legion's atrocities. Charons were citizens of the Empire, not test subjects to be used and discarded. This time, there was no client. Rhythm had given herself the commission. Whatever it cost her — whatever she had to leave behind, however far she had to go — she would see it through.",
+    ContentFR = "Bien d’autres familles avaient été trompées par la VIᵉ Légion. Les personnes dont les noms figuraient sur cette liste n’en représentaient qu’une infime partie.\n \nRhythm avait pris sa décision. Elle mettrait un terme aux atrocités commises par la Légion.\nLes Charons étaient eux aussi des citoyens de l’Empire. Ils n’avaient pas à servir de cobayes à l’Empire.\n \nArrêter la Légion. Voilà la mission que Rhythm s’était confiée à elle-même. Rien ne pouvait être plus important. Même si, pour cela, elle devait tout abandonner et partir au loin.",
+    ContentJP = "第六軍団に騙された家族は、ほかにも大勢いる。手元の名簿に載っているのは、そのほんの一部にすぎない。もう、同じことを繰り返させない。カロンも帝国の民だ。帝国の都合で、実験材料にされていいはずがない。これは誰かに頼まれた仕事ではなかった。リズムが、自分自身に出した依頼だ。軍団の悪行を止める。今の彼女にとって、それ以上に優先すべきことはない。そのためなら、今あるものを投げうってでも、どこへでも行くつもりだった。",
+    ContentKR = "제6군단에 속은 가족은 그 밖에도 많았으며, 명단에 오른 사람들은 그중 극히 일부에 불과했다. 리듬은 군단의 이런 악행을 막기로 결심했다. 카론도 제국의 국민인 이상, 실험 대상이 되어서는 안 됐다. 제6군단을 막는 일은 리듬이 스스로에게 내린 의뢰였다. 설령 이를 위해 모든 것을 버리고 먼 길을 떠나더라도, 리듬에게 이보다 중요한 일은 없었다.",
+    ContentTC = "被第六軍團欺騙的家庭還有很多，那些名單上的人們，只是其中的一小部分。她下定決心，要阻止軍團這樣的惡行。卡戎也是帝國的公民，不該成為帝國的試驗品。阻止他們是黎瑟為自己下達的委託。沒有什麼比這件事更重要，哪怕為此她將拋下一切、奔赴遠行。",
+    TextMapContent = "被第六军团欺骗的家庭还有很多，那些名单上的人们，只是其中的一小部分。她下定决心，要阻止军团这样的恶行。卡戎也是帝国的公民，不该成为帝国的试验品。阻止他们是黎瑟为自己下达的委托。没有什么比这件事更重要，哪怕为此她将抛下一切、奔赴远行。",
+    TextMapId = "UI_CHAR_DATA_TEXT_41030305"
+  },
+  UI_CHAR_DATA_TEXT_41030401 = {
+    ContentEN = "Rhythm and Blues were still children when they lost their parents, and Blues was so young he could barely remember them. The neighbours around them in Icelake became the adults they knew best. In one way or another, the whole neighbourhood helped raise them.\nIcelake lay on the Empire's frozen northern frontier, a city where snow seemed to swallow every sound. Most people were born there, lived there and died there. The white fields beyond the walls were cradle and shroud alike. In the older neighbourhoods, people knew one another's lives almost as well as their own. They knew every corner of their streets, and nearly everything that happened behind every door: which household had welcomed a new baby, whose husband had died in some back alley, which penniless young man had run off with the daughter of a wealthy family. Around warm stoves, nothing in Icelake was safe from discussion. One moment it was the latest notice from the Security Bureau, the next some scandal from the theatre. When it came to local news, housewives and children could have put the finest intelligence officers to shame. They saw everything, heard everything and talked about everything.\nThat closeness had once kept two orphaned children fed and clothed. Years later, that same closeness carried word of Officer Rhythm Fischer's resignation from doorstep to doorstep, until seemingly every household had heard.\n\n\"Why would that girl leave the Security Bureau...? Didn't she say just the other day she'd bring Blues by next time he was home on leave?\"\n\"Blues hasn't come home either. Do you think something's happened?\"\n\nRhythm Fischer had lost her parents, but she had never lacked people willing to worry over her like family. After she left the Legion, the neighbours who had watched her grow found all manner of ways to check on her, some direct and some discreet. A few came to her door, took her firmly by the hand and sat her down for a long talk. Others arrived with food and drink, worried by how poorly she seemed to be looking after herself. Rhythm found it difficult to refuse people she had known all her life. In the end, she accepted a few plain, inexpensive things: bread, honey and warm milk. Nothing extravagant. Nothing she could not finish before it spoiled. Rhythm pressed her lips together at the sight of such ordinary things, brought over with so much care. She was no longer a child, but to the older neighbours who had watched her grow up, she was still the thin, sallow little girl who had once needed looking after.\nShe opened the paper bag. The smell of fresh bread rose from inside. The wholemeal loaf was plain and dense, but as she chewed, its warm, nutty flavour slowly came through. For years, Rhythm had eaten as quickly as possible. Meals were necessities to be fitted between duties, and she had never seen any reason to let them take longer than required. Now she found herself chewing slowly. It was not that she had suddenly learned to savour her food. She simply no longer knew what to do with the hours, and even the smallest things seemed to stretch into the empty spaces of the day. With a soft pop, she pulled the stopper from the milk bottle. Her gaze dropped to the familiar glass bottle in her hand...\nAnd she remembered the milk round that had been her first job.\n\nRhythm had been eight when the sudden death of their parents left her responsible for the only family she had left: Blues. She needed an income if she was going to keep her little brother fed.\nTheir parents had been ordinary working people. Almost everything they earned had gone towards daily expenses, and they had left very little behind. Rhythm took what savings remained and went from door to door. At each house, she stood as straight as an eight-year-old could, her small face set in solemn determination, and announced that she had come to pay compensation. Her family had taken in the Charon whose Deterioration later led to the tragedy. As far as Rhythm was concerned, that meant the Fischers were responsible for the harm that followed. Her parents had raised her well. Perhaps too well. Each payment was accepted with the same heavy sigh. House by house, her coin pouch grew lighter. By the time she reached the last door, almost nothing remained. However carefully she rationed what was left, it was soon gone.\nShe was too young for most work. The few jobs children could do — newspaper rounds, delivering letters and parcels, running errands — already belonged to someone else. Rhythm and Blues went hungry for three days. On the third day, while looking for work, Rhythm collapsed in the street. She woke to a familiar face leaning anxiously over her. Auntie Ledo, who ran the sweet shop, pressed a hand to her forehead.\n\"You've worn yourself out, Rhythm. I heard you've been looking for work?\"\n\"Yes,\" Rhythm said dully. \"I can do anything. But no one needs me.\"\n\"Then why don't you deliver milk for me?\"\nAnd just like that, Rhythm had a milk round.\nThe pay was modest, but it kept two children fed. Rhythm treasured the job. She handled every bottle so carefully that she never spilt a drop. Each morning, she knocked on her neighbours' doors and handed them their milk. Each afternoon, she returned punctually with her little cart to collect the empty bottles. Rain, snow or bitter cold, she was never late. Not once in three years. By then, Rhythm was old enough and strong enough for factory work, so she passed the milk round on to Blues. In time, Blues moved on as well, and another younger child took his place. Then another. The job passed quietly from one child to the next.\nYears later, it was a young Charon boy who brought milk and bread to Rhythm's door. His cheeks were faintly smudged, though the gloves on his hands were spotless. He gave a quick knock, then held up the milk bottle in both hands the moment the door opened. His eyes shone with bright, uncomplicated hope. For a moment, Rhythm saw Blues at the same age. She looked down at the familiar bottle in her hand and let out a long breath. Only then did she understand just how much she had been worrying her neighbours.\n\nRhythm accepted the bread and milk, now fully aware of the care behind them.",
+    ContentFR = "Les parents de Rhythm et de Blues étaient morts très tôt. Si tôt que Blues, encore plus jeune à l’époque, n’avait pratiquement aucun souvenir d’eux. Bien davantage que ce couple depuis longtemps enfermé dans les profondeurs de leur mémoire, tous deux connaissaient les habitants de leur quartier à Givrelac.\nRhythm et Blues avaient grandi grâce à la générosité de tout le voisinage. D’une certaine manière, chacun de leurs voisins avait été pour eux un peu comme un parent.\n \nGivrelac se dressait sur la ligne des neiges, aux confins septentrionaux de l’Empire. Là-bas, la neige et la glace engloutissaient tous les sons. La plupart des habitants y naissaient et y mouraient. L’étendue d’un blanc immaculé était à la fois le lange qui les enveloppait à leur naissance et le linceul qui les recouvrait après leur mort.\nTout le monde se connaissait. Les habitants connaissaient chaque canalisation de la ville, chaque morceau de tuile brisée. Ils savaient chez qui venait de naître un enfant, dans quelle rue le mari d’une voisine avait trouvé la mort, ou encore quel garçon sans le sou avait réussi à s’enfuir avec la fille d’une famille fortunée...\n \nRéunis autour de la chaleur des poêles, les gens commentaient tout ce qui se passait en ville. Des dernières annonces du Bureau de la Sécurité de Givrelac jusqu’aux ragots concernant les comédiens, rien ne leur échappait. Les femmes au foyer et les enfants étaient les meilleurs agents de renseignement qui soient. Ils savaient tout, entendaient tout... et parlaient de tout.\nC’était ainsi qu’après la mort de leurs parents, Rhythm et Blues avaient reçu nourriture et vêtements de la part de voisins au grand cœur. Et ce fut exactement de la même manière que la nouvelle de la démission de Rhythm Fischer se propagea : de bouche à oreille, d’une maison à l’autre, jusqu’à alimenter toutes les conversations.\n \n« Cette petite... Pourquoi a-t-elle quitté le Bureau de la Sécurité ? Elle ne disait pas encore récemment qu’elle nous amènerait Blues pendant sa prochaine permission ? »\n« Et Blues n’est toujours pas revenu non plus. Il leur est arrivé quelque chose ? »\n \nRhythm Fischer n’avait plus de parents. Mais d’une certaine manière, elle en avait beaucoup.\nCes « parents » sans aucun lien de sang, ces voisins bienveillants qui vivaient tout autour d’elle, commencèrent à lui témoigner leur inquiétude, ouvertement ou plus discrètement, lorsqu’elle quitta la Légion. Certains vinrent directement chez elle, lui prirent les mains et discutèrent longuement avec elle. D’autres lui apportèrent toutes sortes de choses à boire et à manger, craignant qu’elle ne se laisse dépérir...\n \nRhythm avait bien du mal à refuser la gentillesse de personnes qu’elle connaissait depuis toujours. Finalement, elle accepta quelques présents simples et peu coûteux : du pain, du miel, du lait encore chaud. Elle pourrait les consommer rapidement. Rien ne serait gaspillé.\nEn contemplant toute cette nourriture chargée de petites attentions, Rhythm pinça les lèvres. Elle n’était pourtant plus une enfant depuis bien longtemps. Mais aux yeux de ces oncles et de ces tantes qui l’avaient vue grandir, elle semblait être restée cette petite fille maigre au teint maladif.\nRhythm ouvrit le sac en papier. Une douce odeur de blé accompagnée d’une bouffée de chaleur vint aussitôt lui caresser le visage.\nDu pain complet.\nIl n’était peut-être pas particulièrement moelleux entre ses doigts, mais dès la première bouchée, toute la saveur du blé emplissait la bouche. Autrefois, Rhythm terminait toujours ses repas aussi vite que possible. Manger ne devait jamais nuire à son efficacité au travail.\nAujourd’hui, elle avait enfin le temps de mâcher lentement, bouchée après bouchée.\n \nCe n’était pourtant pas qu’elle avait soudain appris à apprécier les plaisirs de la table ou à savourer les aliments. La véritable raison était bien moins paisible que cela.\nElle ne savait simplement plus quoi faire.\nAlors les rares gestes qui continuaient de rythmer ses journées étaient devenus plus lents.\n \nAvec un léger pop, Rhythm retira le bouchon de bois de la bouteille de lait. Elle baissa les yeux vers la bouteille de lait qu’elle tenait entre ses mains... Et se souvint de son tout premier travail.\nLe premier emploi de Rhythm avait été de livrer du lait aux habitants de Givrelac.\nLa mort soudaine de ses parents avait fait d’elle, à seulement huit ans, le pilier de sa famille. Elle devait protéger son petit frère. L’élever. Et pour cela, elle avait besoin d’argent.\nLes parents de Rhythm n’avaient été que des gens ordinaires. Toutes ces années à vendre leur force et leur sueur ne leur avaient rapporté que suffisamment de pièces d’argent pour couvrir leurs dépenses quotidiennes. Leurs économies étaient maigres.\nRhythm en prit une partie et alla frapper à la porte de chacun de leurs voisins. Le visage de la petite fille se fit sévère tandis qu’elle leur annonçait qu’elle venait les dédommager.\n \nC’était sa famille qui avait décidé d’accueillir ce Charon. Lorsqu’il avait soudainement succombé à la Dégradation et provoqué tous ces dégâts, il était donc naturel que la famille Fischer en assume les conséquences.\nLes parents de Rhythm l’avaient bien élevée. Peut-être même trop bien.\n \nSous les soupirs impuissants des voisins, les portes s’ouvrirent puis se refermèrent les unes après les autres. Le grincement des gonds semblait broyer ses pièces d’argent comme une meule, les réduisant en poussière avant de les laisser s’échapper entre ses doigts. À chaque maison, sa bourse devenait plus légère et ses pas plus rapides.\nLorsqu’elle eut terminé sa tournée, il ne lui restait presque plus rien. Et malgré toutes les économies possibles, les dernières pièces disparurent rapidement.\n \nElle était trop jeune pour trouver du travail. Les tâches simples, comme distribuer les journaux ou le courrier, étaient déjà prises par d’autres enfants.\nRhythm et Blues passèrent trois jours sans manger.\nLe troisième jour, alors qu’elle cherchait encore du travail, Rhythm s’effondra dans la rue.\nLorsqu’elle reprit connaissance, un visage inquiet se penchait sur elle. C’était tante Ledo, qui tenait la confiserie. Elle posa une main sur son front.\n \n« Tu t’es épuisée ces derniers temps, Rhythm. J’ai entendu dire que tu cherchais du travail ? »\n« Oui », répondit Rhythm d’une petite voix. « Je peux tout faire... mais personne n’a besoin de moi. »\n« Alors pourquoi ne viendrais-tu pas livrer le lait pour moi ? »\n \nC’est ainsi que Rhythm obtint son premier travail. En réalité, ce travail n’existait pas.\nGivrelac n’était pas une très grande ville. Il suffisait généralement de marcher quelques rues pour aller acheter soi-même son lait. Tante Ledo avait créé ce travail spécialement pour Rhythm.\nSes propres vaches ne produisaient pas suffisamment de lait pour lui permettre de l’employer durablement. Alors, pour que Rhythm puisse conserver ce travail, elle contacta plusieurs familles qui possédaient elles aussi des vaches et organisa la collecte de leur lait dans sa boutique.\n \nÀ l’époque, Rhythm avait simplement pensé qu’elle avait eu de la chance.\nCe ne fut que bien des années plus tard, une fois devenue plus grande, qu’elle comprit toute la bienveillance qui s’était cachée derrière ces gestes dont personne n’avait jamais parlé.\nLa livraison du lait ne rapportait pas beaucoup. Mais cela suffisait à remplir son ventre et celui de son frère. Cela suffisait pour que Rhythm et Blues puissent survivre.\nRhythm chérissait ce travail si difficilement obtenu et s’y consacrait avec le plus grand sérieux. Pas une seule goutte du lait qu’elle transportait n’était jamais renversée.\nChaque matin, elle frappait aux portes du voisinage et remettait les bouteilles directement aux clients. Chaque après-midi, elle revenait à l’heure exacte en poussant son petit chariot pour récupérer les bouteilles en verre.\nQu’il vente, qu’il pleuve ou qu’il neige, rien ne l’empêchait d’effectuer ses tournées. En trois ans, elle ne fut jamais une seule fois en retard.\n \nTrois années passèrent. Rhythm grandit et acquit un peu plus de force que les enfants plus jeunes. Elle choisit alors d’aller travailler à l’usine et confia les livraisons de lait à Blues. Plus tard, Blues abandonna à son tour ce travail et de nouveaux enfants, encore plus jeunes, prirent sa place... Et ainsi, ce petit travail continua de se transmettre.\n \nCe jour-là, celui qui avait apporté du lait et du pain à Rhythm était justement un jeune garçon Charon. Ses yeux brillaient. Ses joues étaient légèrement couvertes de poussière, mais il portait des gants propres. Lorsqu’elle ouvrit la porte, il leva joyeusement la bouteille de lait et la lui tendit.\nCe regard débordant d’espoir. Cette énergie... Il lui rappelait tant le Blues d’autrefois.\nRhythm contempla la bouteille de verre si familière entre ses mains et laissa échapper un long soupir.\n \nElle comprenait. Elle avait inquiété tout le monde. Rhythm accepta ce cadeau.\nEt avec lui, toute la bienveillance et l’affection des habitants de Givrelac.",
+    ContentJP = "リズムとブルースは、まだ幼いうちに両親を亡くした。とりわけ弟のブルースは幼く、父と母のことをほとんど覚えていない。代わりに、二人にとって最も身近な大人だったのは、アイスレイク城の近所の人々だった。誰かが食事を持ってきて、誰かが服を繕い、誰かが叱った。形は違えど、町内中が二人を育ててくれたようなものだった。\n アイスレイク城は、帝国北端の凍てつく辺境にある街だった。雪があらゆる音を呑み込んでしまうような場所だ。ここで生まれ、ここで暮らし、ここで一生を終える者も多い。城壁の外に広がる白い雪原は、彼らにとって揺り籠であり、同時に死装束でもあった。\n 古い地区では、住民同士が互いの暮らしを自分のことのようによく知っていた。どの道のどこに何があるかはもちろん、どこの家に子どもが生まれた、誰の亭主が裏路地で死んだ、どこの貧乏青年が貴族令嬢を連れて逃げた――そんなことまで、たいてい誰かが知っている。\n 暖炉を囲めば、話題にならないものなどなかった。今しがた保安署の最新通達について話していたと思えば、次の瞬間には劇場の醜聞だ。地元の噂話にかけては、主婦と子どもたちのほうが一流の情報官よりよほど優秀だった。何でも見て、何でも聞いて、そして何でも喋った。\n \n だから「リズム・フィッシャーが治安官を辞めた」という話も、あっという間に町を回った。\n 「どうしたんだい、あの子。この前まで、ブルースが休暇を取れたら連れて帰るって言ってたのに」\n 「そのブルースも戻ってないだろう？何かあったんじゃないか」\n \n リズムには、もう実の両親はいない。けれど、親のように彼女を見てきた人なら大勢いた。軍まで辞めたと聞くや、近所の大人たちは放っておかなかった。家まで来て長々と話を聞こうとする人。パンや飲み物を持ってくる人。用もないのに顔だけ見に来る人。ひとりで何かを抱え込んでいるのではないか。みんな、それが心配だった。顔なじみから向けられる好意は、リズムにも断りにくい。結局、パンと蜂蜜、それに温かい牛乳のような、すぐ食べきれる物だけ受け取った。包みを前にして、リズムは少しだけ唇を結ぶ。もう子どもではない。それでも彼女を育ててきた人たちの目には、今も昔の、痩せっぽちの小さな女の子に見えるらしい。\n 紙袋を開けると、焼いた麦の甘い香りが立った。全粒粉のパンは少し固い。噛めば、じわりと味が出る。昔なら、食事はできるだけ早く済ませていた。仕事の時間を削らないためだ。今は、一口ずつゆっくり噛んでいる。味わう余裕ができたからではない。何をすればいいのかわからず、何をするにも時間がかかるようになっただけだった。牛乳瓶の栓を抜く。\n 見慣れたガラス瓶を眺めているうちに、ずっと昔のことを思い出した。\n \n リズムが初めて働いたのも、牛乳配達だった。両親が突然亡くなった時、彼女は八歳。幼い弟を食べさせていくには、収入が必要だった。\n 両親が残した蓄えは多くない。それでもリズムは、その一部を持って近所の家を一軒ずつ回った。家で引き取っていたカロンが穢蝕を起こし、周囲に被害を出した。\n フィッシャー家で受け入れた以上、償いをするのは当然だ――幼いリズムはそう言って、銀貨を差し出した。近所の人々は困った顔をした。けれど、両親から「自分の責任は果たしなさい」と教えられて育った彼女は、引かなかった。家を回り終える頃には、財布はほとんど空になっていた。残った分も、暮らしていればすぐに尽きる。\n 働こうにも、八歳の子どもを雇ってくれる場所はない。新聞配達や郵便のような仕事は、すでにほかの子どもたちで埋まっていた。姉弟は三日、まともに食べられなかった。三日目。仕事を探して歩いていたリズムは、とうとう道端で倒れた。目を覚ますと、菓子屋のレダおばさんが心配そうに顔をのぞき込んでいた。\n \n 「最近ずっと仕事を探してるんだって？」\n 「……はい。何でもします。でも、どこも雇ってくれません」\n 「じゃあ、うちの牛乳を配ってくれないかい？」\n \n そうして、リズムは初めての仕事を手に入れた。本当は、牛乳配達など必要のない街だった。アイスレイク城は広くない。少し歩けば、自分で店まで買いに行ける。つまり、それはレダおばさんがリズムのために作った仕事だった。自分の家の牛だけでは、毎日配るほどの量が出ない。そこで近所の酪農家に声をかけ、牛乳をまとめて店で扱うようにした。そうすれば、リズムに毎日頼める仕事になる。当時のリズムは、ただ「運がよかった」と思っていた。あの仕事が、何人もの大人の善意で用意されていたと知ったのは、ずっと後になってからだ。\n 給金は多くなかった。それでも、リズムとブルースが生きていくには十分だった。だからリズムは、誰より真面目に働いた。配る牛乳は一滴もこぼさない。朝は時間どおりに家々へ届け、午後になれば小さな荷車を押して空き瓶を回収する。雨でも雪でも休まず、三年間、一度も遅れなかった。やがて体が少し大きくなると、リズムはもっと稼げる工場へ移った。牛乳配達はブルースが引き継いだ。そのブルースが別の仕事へ移った後は、さらに年下の子どもへ。誰か一人のために作られた仕事は、いつしか町の子どもたちへ受け継がれていった。\n そして今日。リズムの家へパンと牛乳を届けに来たのも、小さなカロンの男の子だった。明るい目。少し汚れた頬。牛乳を扱うからだろう、手にはきれいな手袋をしている。扉が開くなり、少年は元気よく瓶を掲げた。その姿が、昔のブルースと重なった。リズムは手の中の牛乳瓶を見つめ、ゆっくり息を吐く。……ずいぶん、みんなに心配をかけてしまったらしい。\n \n その日、リズムは贈り物を受け取った。食べ物だけではない。\n アイスレイク城の人々がずっと差し出してくれていた気持ちも、今度はきちんと受け取った。",
+    ContentKR = "리듬과 블루스는 부모를 아주 일찍 여의었다. 동생인 블루스는 부모에 대한 기억조차 거의 없을 정도였고, 기억 속에만 남은 부모보다 남매에게 더 익숙한 사람들은 아이스레이크 시티의 이웃들이었다. 온 동네가 먹여 키웠다고 해도 될 만큼, 이웃 한 사람 한 사람이 남매에게는 반쯤 부모나 마찬가지였다.\n제국 북부 변경, 만년설이 시작되는 곳에 자리한 아이스레이크 시티는 얼음과 눈이 모든 소리를 삼키는 곳이었다. 사람들은 대부분 이곳에서 태어나 이곳에서 죽었고, 새하얀 눈밭은 그들의 포대기인 동시에 죽은 뒤 몸을 감싸는 솜옷이었다. 서로의 사정을 훤히 알고 지내는 것은 물론, 도시의 배관 하나와 잔해 한 조각까지도 모르는 게 없었다. 어느 집에 아이가 태어났는지, 어느 집 남자가 어느 거리에서 죽었는지, 어느 가난한 청년이 부잣집 아가씨와 눈이 맞아 함께 달아났는지... 사람들은 난로의 온기에 둘러앉아 도시의 온갖 일을 이야기했다. 아이스레이크 시티 치안서의 최신 공고부터 연극배우의 소문까지, 주부와 아이들은 최고의 정보원이었다. 모르는 일도, 못 들은 소식도 없었고, 무슨 일이든 화제로 삼았다.\n부모를 잃은 리듬과 블루스도 바로 그런 이웃들의 도움으로 먹고 입으며 자랐다. 치안관 리듬 페실이 사직했다는 소식도 같은 방식으로 빠르게 퍼져, 어느새 온 동네의 화젯거리가 되었다.\n\n\"리듬이... 왜 치안관을 그만둔 거지? 얼마 전까지만 해도 블루스가 휴가를 나오면 우리한테 데려와 보여 주겠다고 했잖아?\"\n\"블루스도 안 돌아왔는데, 무슨 일이라도 생긴 건가?\"\n\n리듬 페실은 부모를 일찍 여의었지만, 부모나 다름없이 자신을 챙겨 온 이웃들은 많았다. 그들은 리듬이 군단을 떠난 뒤 저마다 여러 방식으로 걱정하는 마음을 전했다. 직접 집 앞까지 찾아와 손을 꼭 잡고 눈을 맞추며 한참 이야기를 나눠 주는 사람도 있었고, 먹을 것과 마실 것을 잔뜩 챙겨 오면서 혹여 리듬이 혼자 끙끙 앓지는 않을까 걱정하는 사람도 있었다... 리듬도 오랜 이웃들의 호의를 거절하기 어려웠다. 결국 리듬은 빵과 꿀, 따뜻한 우유처럼 비싸지 않아 부담되지 않는 먹거리만 조금 받아 두었다. 금방 먹을 수 있어 버릴 염려도 없는 음식들이었다. 이웃들의 세심한 배려가 담긴 음식들을 바라보며, 리듬은 입술을 꾹 다물었다. 이미 어른이 된 지 오래였지만, 자신이 자라는 모습을 지켜봐 온 아저씨와 아주머니들의 눈에는 아직도 잘 먹지 못해 삐쩍 마른 어린 여자아이로 보이는 모양이었다.\n종이봉투를 열자 달콤한 밀 향과 온기가 한꺼번에 밀려왔다. 통밀빵은 그리 부드러운 편은 아니었지만, 한입 베어 물면 진한 밀 향이 입안에 퍼졌다. 예전에는 일에 영향을 주지 않도록 언제나 최대한 식사를 빨리 끝냈지만, 이제는 한입 한입 천천히 씹을 시간까지 생겼다. 그렇다고 먹는 즐거움이나 재료의 맛을 음미할 만큼 여유로워진 건 아니었다. 그저 무엇을 해야 할지 몰랐고, 그래서 몇 안 되는 행동마저 하나하나 느려졌을 뿐이었다. 뽁. 리듬은 우유병의 나무 마개를 뽑고 고개를 숙여 손에 든 우유병을 바라보다가...\n자신의 첫 일자리를 떠올렸다.\n\n리듬의 첫 일자리는 아이스레이크 시티 사람들에게 우유를 배달하는 일이었다. 부모가 갑자기 세상을 떠나면서 불과 여덟 살이던 리듬이 집안을 책임져야 했고, 동생을 지키고 키우려면 돈이 필요했다.\n리듬의 부모는 평범한 사람들이었다. 그동안 피땀 흘려 번 실버는 일상적인 생활비를 대는 데 거의 다 쓰였고, 모아 둔 돈도 많지 않았다. 리듬은 그중 일부를 꺼내 집집마다 이웃의 문을 두드렸다. 그러고는 앳된 얼굴로 제법 어른스러운 표정을 지어 보이며 피해를 보상하러 왔다고 말했다. 그 카론을 받아들인 건 엄연히 자기 가족이었으니, 그 카론의 침식 때문에 생긴 피해 역시 페실 가문에서 책임지는 게 마땅하다는 논리였다. 리듬의 부모는 아이를 바르게 키웠지만, 그 가르침이 너무 올곧았던 탓인지도 모른다. 리듬이 집집마다 문을 두드리고 다니는 동안, 이웃들은 난처한 한숨과 함께 문을 열어 주었고, 그렇게 이웃집 문이 하나씩 열리고 닫힐 때마다, 삐걱거리는 경첩은 마치 맷돌이라도 되는 양 돈을 갈아댔고, 실버는 손가락 사이로 빠져나가는 가루처럼 사라졌다. 돈주머니가 점점 가벼워지는 만큼 리듬의 발걸음은 빨라졌고, 마지막 집까지 돌고 나자 남은 돈은 거의 없었다. 최대한 아껴 썼지만, 남은 돈은 금세 바닥이 났다.\n리듬은 나이가 너무 어려 일자리를 구할 수 없었다. 신문 배달이나 우편 배달처럼 비교적 간단한 일도 이미 다른 아이들이 모두 차지한 뒤였다. 리듬과 블루스는 사흘을 굶었고, 사흘째 되던 날 일을 구하러 다니던 리듬은 길에서 쓰러졌다. 눈을 뜨자 사탕 가게를 하는 레토 아주머니가 걱정 어린 표정으로 리듬의 이마를 짚으며 물었다.\n\"요즘 너무 무리했구나, 리듬. 일자리를 찾고 있다면서?\"\n\"네.\" 리듬은 풀이 죽어 대답했다.\n\"무슨 일이든 할 수 있는데, 어디를 가도 저한테는 일을 안 줘요.\"\n\"그럼 우유 배달을 좀 도와줄래?\"\n그렇게 리듬은 우유 배달 일을 시작했다. 아이스레이크 시티는 몇 걸음만 가면 직접 우유를 살 수 있을 만큼 작은 도시라, 애초에 우유 배달이라는 일자리가 따로 없었다. 레토 아주머니는 그런 일을 리듬을 위해 새로 마련해 주었고, 자기 집 젖소만으로는 우유가 많이 나오지 않자 리듬이 오랫동안 일을 계속할 수 있도록 젖소를 키우는 여러 집에 연락해 우유를 자기 가게로 한데 모았다. 그때는 그저 자신이 운이 좋았다고만 생각했던 리듬이, 그 모든 일이 레토 아주머니의 말없는 배려였음을 깨달은 것은 훨씬 더 자란 뒤였다.\n우유 배달로 받는 품삯은 많지 않았지만, 리듬과 블루스가 굶지 않고 살아가기에는 충분했다. 리듬은 어렵게 얻은 우유 배달 일자리를 무척 소중히 여겼다. 우유는 한 방울도 흘리지 않았고, 아침이면 동네 집집마다 문을 두드려 우유를 건넨 뒤 오후에는 어김없이 수레를 밀고 와 빈 유리병을 수거했다. 비가 오나 눈이 오나 일을 거르지 않았으며, 삼 년 동안 단 한 번도 늦지 않았다. 삼 년 뒤, 조금 더 자라 어린아이들보다는 힘든 일도 할 수 있었던 리듬은 공장 일을 택했고, 자신이 하던 우유 배달은 블루스에게 넘겨주었다. 이후 블루스도 우유 배달을 그만두면서 더 어린 아이들이 차례로 그 일을 맡았고... 그렇게 우유 배달 일자리는 어린아이들 사이에서 계속 이어졌다.\n오늘 리듬에게 우유와 빵을 가져온 어린 카론 소년은 눈이 맑게 빛났고, 뺨에는 먼지가 조금 묻어 있었으며, 손에는 깨끗한 장갑을 끼고 있었다. 문이 열리자 소년은 반갑게 우유병을 들어 리듬에게 건넸다. 희망으로 반짝이는 눈과 생기 넘치는 모습을 보고 있자 리듬은 어린 시절의 블루스를 떠올렸다... 리듬은 손에 든 익숙한 유리병을 바라보다 길게 숨을 내쉬며, 자신이 이웃들을 걱정시켰다는 걸 깨달았다.\n\n리듬은 그 선물과 함께 아이스레이크 시티 이웃들의 호의와 걱정도 받아들였다.",
+    ContentTC = "黎瑟和布魯斯的父母去世得很早，早到更年幼一點的布魯斯，對父母幾乎沒什麼印象。比起那對早已在記憶中封存的夫妻，他們更熟悉冰湖城的街坊鄰居。黎瑟和布魯斯是吃著冰湖城的「百家飯」長大，可以說每個街坊鄰居都是他們的半個父母。\n冰湖城佇立在帝國北境的雪線上，冰雪吞沒了所有的聲音。大部分人在這裡出生，又在這裡死去，純白的雪地既是他們的襁褓，也是他們死去後裹身的棉衣。人們彼此之間都很熟悉。他們了解這座城市的每一根管道、每一片瓦礫。誰家有了新生兒、誰家的男人死在了哪個街頭、又是誰家的窮小子高攀上了私奔的大小姐……人們圍著爐灶的熱氣，討論起城裡的各種事情。上到冰湖城治安署的最新通知，下到戲劇演員的花邊新聞，主婦和孩子是最好的情報官。他們無所不知、無所不曉，也無所不談。\n失去了父母的黎瑟和布魯斯，就是在這種情況下，被熱心的街坊鄰居們接濟了衣食，治安官黎瑟·費西爾辭職的訊息，也是這樣一傳十、十傳百，遍歷了每一個閒談的唇舌。\n\n「那孩子……怎麼不做治安官了？前些日子不是還說，等布魯斯休假，要帶來給咱們看看嗎？」\n「布魯斯也沒回來，是發生什麼事情了？」\n\n黎瑟·費西爾沒有父母，但她也有很多「父母」。這些熱心腸的、住在隔壁沒有血緣關係的「父母」們，在黎瑟選擇離開軍團後，明裡暗裡地對她表示了關心。有的人主動來到她家門口，拉著她的手與她促膝長談，有的給她送來好些東西，吃的喝的都有，生怕她跟自己過不去……熟人的善意令黎瑟難以拒絕。最終，黎瑟收下了一些價值不高、比較常見的東西，例如麵包、蜂蜜，還有溫熱的牛奶。這些東西她可以迅速吃掉，不會浪費。望著這些承載著細緻關愛的食物，黎瑟抿起了嘴巴。明明她早已經不是孩子，可在這些看著她長大的叔叔阿姨眼中，她似乎還是那個面黃肌瘦的小女孩。\n黎瑟打開紙袋，甜甜的麥香與熱氣登時撲面而來。全麥麵包，拿進手裡或許不夠柔軟，但咬下一口，麥香飽滿。在過去，她總是用最快的速度把飯吃完，不讓進食拖累工作的效率。如今，她終於有時間一口一口地慢慢咀嚼了。要說品鑑進食的樂趣或食材的味道，似乎也沒有那麼悠閒的原因。她只是不知道自己該做什麼，因此，每個有限的行為都變得遲緩了。啵的一聲，黎瑟拔掉了牛奶的木塞，她低下頭，看著手中的牛奶瓶……\n她想起了自己的第一份工作。\n\n黎瑟的第一份工作，是在冰湖城為大家送牛奶。父母突然的亡故，讓年僅八歲的黎瑟成為了家的支柱，她要保護好弟弟，拉扯他長大，為此需要一份收入。\n黎瑟的父母都只是普通人，這些年出賣血汗和力氣換來的銀幣，僅僅只夠日常開銷，存下的積蓄並不豐厚。黎瑟拿出了其中的一部分銀幣，挨家挨戶地敲過鄰居的門，板起一張小臉，表示自己是來提供賠償的，是她家做主收留了那位卡戎，他突發穢蝕、造成的破壞，也理應由費西爾家做出賠償。黎瑟的父母把她教導得很好，也許正是因為太好了，在鄰居無奈地嘆息中，那些門扉開啟又閉合，門軸咯吱咯吱地轉成磨盤，銀幣變成了指縫中流走的齏粉，黎瑟手裡的錢袋子越來越輕，腳步也越來越快，挨家挨戶地走完，這些錢就所剩無幾。剩下的銀幣，即便如何省吃儉用，也很快就花完了。\n她年紀太小了，找不到工作。像是送報、郵差這類的簡單工作，早就被其他的孩子搶光了。黎瑟和布魯斯餓了三天肚子，第三天找工作的時候，她在街頭暈倒了。醒來時，看見了一張關切的臉，那是開糖果鋪的蕾朵阿姨。蕾朵阿姨摸著她的額頭，對她說，你最近累壞了，黎瑟，我聽說你是在找活計？是的，黎瑟悶悶地回答，我什麼都能做，但是他們都不需要我。不如你來幫我送牛奶吧，蕾朵阿姨說。就這樣，黎瑟得到了一份送牛奶的工作。原本是沒有這份工作的，畢竟冰湖城也不大，走幾步路，自己就可以去買到牛奶，這是蕾朵阿姨為黎瑟專門準備的工作。自家養的奶牛，產量並不大，為了能讓黎瑟長期將這份工作做下去，她聯繫了許多養著奶牛的人家，將牛奶統一收集到自己的鋪子裡。當時的黎瑟只覺得自己是幸運的，許久之後，她長大了許多，才明白這其中不曾言明的善意。\n送牛奶的薪酬不多，但足以填滿她和弟弟的胃，讓她和布魯斯能夠活下去。黎瑟非常珍惜這份來之不易的工作，她做事十分認真，送的牛奶一滴都不會灑。清晨，黎瑟敲響街坊鄰居的們，將牛奶遞到買主的手中；下午，黎瑟準時推著小車到來，回收玻璃瓶，風雨無阻，三年來從未遲到。三年後，黎瑟長大了一點，相較於其它更年幼的孩子，黎瑟有了一些力氣，於是她選擇了進入工廠勞作，送牛奶的工作就移交給了布魯斯；再之後，布魯斯也辭去了送牛奶的工作，牛奶郵差換成了一些更小的孩子……這份工作就是這樣傳遞了下去。\n今天來給黎瑟送牛奶和麵包的，也是一個小小的卡戎男孩。他眼睛明亮，臉頰有些灰撲撲的，帶著乾淨的手套，敲開門時熱情地將牛奶舉起來，遞給黎瑟，那滿眼閃爍著希望、充滿活力的樣子，就像是當年的布魯斯……黎瑟看著手裡熟悉的玻璃瓶，長長地舒了一口氣，知道是自己讓大家擔心了。\n\n黎瑟收下了這份禮物，也收下了冰湖城街坊鄰居們的善意關心。",
+    TextMapContent = "黎瑟和布鲁斯的父母去世得很早，早到更年幼一点的布鲁斯，对父母几乎没什么印象。比起那对早已在记忆中封存的夫妻，他们更熟悉冰湖城的街坊邻居。黎瑟和布鲁斯是吃着冰湖城的“百家饭”长大，可以说每个街坊邻居都是他们的半个父母。\n冰湖城伫立在帝国北境的雪线上，冰雪吞没了所有的声音。大部分人在这里出生，又在这里死去，纯白的雪地既是他们的襁褓，也是他们死去后裹身的棉衣。人们彼此之间都很熟悉。他们了解这座城市的每一根管道、每一片瓦砾。谁家有了新生儿、谁家的男人死在了哪个街头、又是谁家的穷小子高攀上了私奔的大小姐……人们围着炉灶的热气，讨论起城里的各种事情。上到冰湖城治安署的最新通知，下到戏剧演员的花边新闻，主妇和孩子是最好的情报官。他们无所不知、无所不晓，也无所不谈。\n失去了父母的黎瑟和布鲁斯，就是在这种情况下，被热心的街坊邻居们接济了衣食，治安官黎瑟·费西尔辞职的消息，也是这样一传十、十传百，遍历了每一个闲谈的唇舌。\n\n“那孩子……怎么不做治安官了？前些日子不是还说，等布鲁斯休假，要带来给咱们看看吗？”\n“布鲁斯也没回来，是发生什么事情了？”\n\n黎瑟·费西尔没有父母，但她也有很多“父母”。这些热心肠的、住在隔壁没有血缘关系的“父母”们，在黎瑟选择离开军团后，明里暗里地对她表示了关心。有的人主动来到她家门口，拉着她的手与她促膝长谈，有的给她送来好些东西，吃的喝的都有，生怕她跟自己过不去……熟人的善意令黎瑟难以拒绝。最终，黎瑟收下了一些价值不高、比较常见的东西，例如面包、蜂蜜，还有温热的牛奶。这些东西她可以迅速吃掉，不会浪费。望着这些承载着细致关爱的食物，黎瑟抿起了嘴巴。明明她早已经不是孩子，可在这些看着她长大的叔叔阿姨眼中，她似乎还是那个面黄肌瘦的小女孩。\n黎瑟打开纸袋，甜甜的麦香与热气登时扑面而来。全麦面包，拿进手里或许不够柔软，但咬下一口，麦香饱满。在过去，她总是用最快的速度把饭吃完，不让进食拖累工作的效率。如今，她终于有时间一口一口地慢慢咀嚼了。要说品鉴进食的乐趣或食材的味道，似乎也没有那么悠闲的原因。她只是不知道自己该做什么，因此，每个有限的行为都变得迟缓了。啵的一声，黎瑟拔掉了牛奶的木塞，她低下头，看着手中的牛奶瓶……\n她想起了自己的第一份工作。\n\n黎瑟的第一份工作，是在冰湖城为大家送牛奶。父母突然的亡故，让年仅八岁的黎瑟成为了家的支柱，她要保护好弟弟，拉扯他长大，为此需要一份收入。\n黎瑟的父母都只是普通人，这些年出卖血汗和力气换来的银币，仅仅只够日常开销，存下的积蓄并不丰厚。黎瑟拿出了其中的一部分银币，挨家挨户地敲过邻居的门，板起一张小脸，表示自己是来提供赔偿的，是她家做主收留了那位卡戎，他突发秽蚀、造成的破坏，也理应由费西尔家做出赔偿。黎瑟的父母把她教导得很好，也许正是因为太好了，在邻居无奈地叹息中，那些门扉开启又闭合，门轴咯吱咯吱地转成磨盘，银币变成了指缝中流走的齑粉，黎瑟手里的钱袋子越来越轻，脚步也越来越快，挨家挨户地走完，这些钱就所剩无几。剩下的银币，即便如何省吃俭用，也很快就花完了。\n她年纪太小了，找不到工作。像是送报、邮差这类的简单工作，早就被其他的孩子抢光了。黎瑟和布鲁斯饿了三天肚子，第三天找工作的时候，她在街头晕倒了。醒来时，看见了一张关切的脸，那是开糖果铺的蕾朵阿姨。蕾朵阿姨摸着她的额头，对她说，你最近累坏了，黎瑟，我听说你是在找活计？是的，黎瑟闷闷地回答，我什么都能做，但是他们都不需要我。不如你来帮我送牛奶吧，蕾朵阿姨说。就这样，黎瑟得到了一份送牛奶的工作。原本是没有这份工作的，毕竟冰湖城也不大，走几步路，自己就可以去买到牛奶，这是蕾朵阿姨为黎瑟专门准备的工作。自家养的奶牛，产量并不大，为了能让黎瑟长期将这份工作做下去，她联系了许多养着奶牛的人家，将牛奶统一收集到自己的铺子里。当时的黎瑟只觉得自己是幸运的，许久之后，她长大了许多，才明白这其中不曾言明的善意。\n送牛奶的薪酬不多，但足以填满她和弟弟的胃，让她和布鲁斯能够活下去。黎瑟非常珍惜这份来之不易的工作，她做事十分认真，送的牛奶一滴都不会洒。清晨，黎瑟敲响街坊邻居的们，将牛奶递到买主的手中；下午，黎瑟准时推着小车到来，回收玻璃瓶，风雨无阻，三年来从未迟到。三年后，黎瑟长大了一点，相较于其它更年幼的孩子，黎瑟有了一些力气，于是她选择了进入工厂劳作，送牛奶的工作就移交给了布鲁斯；再之后，布鲁斯也辞去了送牛奶的工作，牛奶邮差换成了一些更小的孩子……这份工作就是这样传递了下去。\n今天来给黎瑟送牛奶和面包的，也是一个小小的卡戎男孩。他眼睛明亮，脸颊有些灰扑扑的，带着干净的手套，敲开门时热情地将牛奶举起来，递给黎瑟，那满眼闪烁着希望、充满活力的样子，就像是当年的布鲁斯……黎瑟看着手里熟悉的玻璃瓶，长长地舒了一口气，知道是自己让大家担心了。\n\n黎瑟收下了这份礼物，也收下了冰湖城街坊邻居们的善意关心。",
+    TextMapId = "UI_CHAR_DATA_TEXT_41030401"
+  },
+  UI_CHAR_DATA_TEXT_41030402 = {
+    ContentEN = "Rhythm was preparing to leave the Legion. While clearing out her quarters, she came across a letter she had written not long before.\n\nDear Blues,\nI've completed several more assignments recently. My commanding officer says that if I keep it up, I may be promoted again soon. Perhaps then I will be allowed into the inner city.\nI wonder what it is like there. I hear it is nothing like Mist Aken. They say all the buildings are heated, and you can even get hot water straight from the tap.\nIt must be a wonderful place.\nMy uniform was damaged, and my request for a replacement has not yet been approved. The damage has left it asymmetrical. I still have not got used to it.\nMy colleagues at the Security Bureau say another blizzard is coming. Please be careful, and take it easy with your training when the weather turns bad. There is no need to rush to become a Laurelled Charon. You are still young. I know you will succeed in time, so please do not push yourself too hard.\nI have packed some winter clothes in the parcel with this letter. Charons may not feel the cold as keenly, but you should still wrap up well during a blizzard and rest by the fire. Make yourself some warm water with honey too, like we used to when we were little. You can afford to put more honey in it now. Auntie Ledo asked me to send you a jar of honey as well. Everyone in Mist Aken misses you.\nRemember to tell me if you run into any difficulties. Everything is well with me.\nThe bookshop has a new title this month, The Golden Ring. I thought you might like it, so I put a copy in the parcel as well.\n\nRhythm\n\n...\nRhythm tightened her grip on the letter. The thin paper crumpled beneath her fingers, its neat symmetry giving way to the same disorder that had taken hold of her thoughts.\nShe had written to Blues many times after the Legion selected him and took him into the inner city. Most of her letters had gone unanswered. This one had been the last, never sent. Blues had never been the kind to ignore her. He had to be busy. That was what she told herself each time another letter went unanswered. She had trusted the Legion. She had believed in the future it promised him. If there had been some problem delivering her letters, they would have been returned. None had. So Blues had to be all right. He was busy, that was all. When he had time, he would write.\nNow she understood.\nThe Legion had never needed to stop the families from writing. It could simply take the letters, keep them from their intended recipients, and make sure no reply ever came back. One careless word in a reply, one detail that did not fit, one crack in the story could have raised questions. Silence was safer. As long as the letters were accepted and never returned, the families could keep hoping. Writing gave them somewhere to put their worry, so the Legion let them write. Hope kept them waiting — quietly, patiently, indefinitely. And what had become of all those letters, filled with small domestic details and quiet hopes for the day their loved ones would come home? She could not help imagining the worst. Perhaps the people who knew the truth had passed them around for a laugh, reading aloud the private concerns of families they had never met. Knowing the truth put them in the position of someone looking down on ants, watching them labour towards a future that had already been taken away. Parcel by parcel, letter by letter, Rhythm had gone on building a future in which Blues would come home. Perhaps someone had held up another envelope and laughed. \"Another one from her. Still writing to a dead man. Persistent, isn't she?\"\n...\nThe thought alone filled Rhythm with a cold, bone-deep hatred. Yet even in her anger, she could not lay all the blame at their feet. They had neither designed the experiments nor suffered through them. They had only helped keep the truth buried. To them, it was like watching a tragedy from the safety of the stalls. Even if an actor truly died onstage, they might still applaud the performance and marvel at how real it looked. The suffering was distant enough to remain a spectacle, something they could discuss with lively interest once the curtain fell.\nAnd, as always, Rhythm's anger found its way back to herself. What if she had not buried herself in patrols and duty? What if she had insisted on getting into the inner city and seeing Blues for herself? If the rules had stood in her way, she could have broken them. Over a wall, through the sewers — there would have been a way if she had wanted badly enough to find it. If she had set everything else aside and gone looking for her brother... could she have saved him? And if she had been more careful, more perceptive — if she had looked closely enough at the Deteriorator and recognised her brother in those clear eyes, even in that monstrous body... would anything have been different?\nThis is my fault.\nThe paper crackled once, then again, as her fingers closed around it. At the same time, something tightened around her chest and stole the breath from her lungs, as though the same hand had closed around her heart.\nFor a moment, she was back on the night she had written it.\nRhythm Fischer sat at her desk, a book open before her, carefully weighing every word.\nShe seemed to be standing in the corner of the room, watching her younger self write to Blues, still completely unaware of what had already happened to him.\nThe crumpled page felt like a scrap torn from the life she had once believed in. Rhythm crushed it into a tight ball and hurled it into the wastebasket, as though she could cast off the person she had been along with the page.",
+    ContentFR = "Rhythm s’apprêtait à quitter la Légion. Alors qu’elle rangeait ses affaires dans son dortoir, elle retrouva une lettre qu’elle avait écrite quelque temps auparavant.\n \nÀ Blues,\nCes derniers temps, j’ai encore accompli plusieurs missions. Mon supérieur m’a dit que, si je continue à progresser à ce rythme, je devrais bientôt obtenir une nouvelle promotion. Peut-être pourrai-je alors entrer dans la cité intérieure.\n \nÀ quoi ressemble la cité intérieure ? J’ai entendu dire que, contrairement à Brumelac, des feux chaleureux y brûlent partout et que même l’eau qui coule des robinets est chaude au toucher.\nCe doit être un endroit merveilleux.\nMon uniforme est un peu abîmé. Le nouveau n’a pas encore été approuvé, alors celui que je porte est devenu asymétrique. Je n’y suis pas vraiment habituée.\n \nMes collègues du Bureau de la Sécurité disent qu’une nouvelle tempête de neige approche. Fais attention à toi et essaie de moins t’entraîner lorsqu’il neige trop fort. Tu n’as pas besoin de devenir Charon Couronné immédiatement. Tu es encore jeune. Je sais que tu y arriveras, alors ne te mets pas trop de pression.\nJe t’ai préparé quelques vêtements bien épais et je te les envoie avec cette lettre. Même si les Charons ne craignent pas beaucoup le froid, lorsqu’une tempête fait rage, il vaut quand même mieux s’emmitoufler dans des vêtements chauds et bien se reposer près du feu.\n \nTu devrais aussi te préparer une tasse d’eau au miel, comme lorsque nous étions petits. Maintenant, tu peux même mettre un peu plus de miel dedans.\nLe pot que je joins à cette lettre vient de tante Ledo. Elle m’a demandé de te l’envoyer. Tout le monde à Brumelac pense beaucoup à toi.\n \nSi tu rencontres la moindre difficulté, n’oublie pas de m’en parler. De mon côté, tout va bien.\nJe t’envoie également un nouveau livre que la librairie vient de recevoir ce mois-ci. Il s’appelle <I>L’Anneau d’or</>. Je pense qu’il devrait te plaire.\n \nRhythm\n \nRhythm serra brutalement la lettre entre ses doigts. Le papier fragile se froissa sous la pression. Les plis désordonnés qui le parcouraient ressemblaient à son esprit, désormais tout aussi chaotique.\nDepuis que Blues avait été sélectionné pour entrer dans la cité intérieure, elle lui avait écrit de nombreuses lettres. La plupart étaient restées sans réponse.\nCelle-ci était la dernière. Elle n’avait simplement pas encore eu le temps de l’envoyer.\nBlues était un bon garçon. Il ne pouvait pas décider de ne pas lui répondre. Il devait simplement être trop occupé.\n \nRhythm avait une confiance absolue dans la Légion et croyait encore à l’avenir merveilleux qui les attendait. Jamais elle n’avait eu la moindre raison de douter de l’armée impériale. Si personne ne pouvait réceptionner ses lettres, elles auraient dû lui être retournées immédiatement.\n \nBlues allait donc forcément bien. Il devait simplement être très occupé. Lorsqu’il aurait enfin un peu de temps libre, il lui répondrait certainement.\nVoilà ce qu’elle s’était dit.\nÀ présent, elle comprenait ce qui avait probablement eu lieu.\n \nPar « prudence » et « bienveillance » envers leurs sujets d’expérience, les responsables avaient sans doute délibérément intercepté ces lettres afin d’éviter toute erreur susceptible d’éveiller les soupçons. Ils permettaient aux proches des sujets d’expérience de continuer à leur écrire et à exprimer combien ils leur manquaient, afin d’apaiser l’agitation de leurs sujets. Dans le même temps, ils laissaient aux victimes qui ignoraient tout une infime lueur d’espoir, afin qu’elles continuent docilement à attendre.\n \nPendant longtemps. Toutes ces lettres qu’elle avait envoyées. Toute cette affection, toute cette impatience joyeuse qui débordaient de chaque page...\nPeut-être étaient-elles depuis longtemps devenues une source de divertissement pour ceux qui connaissaient la vérité.\nComme de petites feuilles de ragots que l’on se serait passées de main en main.\n \nDans ces casernes où les distractions étaient rares, peut-être les avaient-ils lues avec délectation. Les affaires privées d’une famille devenues un simple sujet de conversation. Ils pouvaient ainsi savourer cette supériorité que leur donnait le fait de tout savoir, puis rire de ces pauvres fourmis qui, elles, ignoraient tout.\nUne fourmi ignorante continuait de transporter son miel, persuadée que l’autre finirait un jour par rentrer à la maison.\nPeut-être avaient-ils dit quelque chose comme :\n« Regardez ! Elle lui a encore envoyé une lettre. Elle en a écrit tellement à un mort... Il faut reconnaître qu’elle est tenace. »\nPuis ils avaient probablement éclaté de rire devant l’absurdité de la situation.\n \n...\n \nIl suffisait à Rhythm d’imaginer cette scène pour sentir une haine glaciale l’envahir jusqu’aux os. Pourtant, elle ne pouvait pas entièrement les rendre responsables.\nAprès tout, songea-t-elle, ils n’étaient ni les victimes ni ceux qui avaient commis ces atrocités. Ils avaient couvert cette tromperie, certes, mais ils n’en étaient pas les véritables instigateurs.\nIls ressemblaient aux spectateurs assis devant une scène de théâtre.\nSi un comédien mourait réellement sur scène, les spectateurs applaudiraient simplement le réalisme de sa performance. Ils ne partageraient jamais ce qu’il avait ressenti.\n \nPour eux, tout cela n’était qu’une histoire lointaine. Voilà pourquoi il leur était si facile d’en parler. Mais au fond... elle aussi était coupable.\nRhythm y pensa avec douleur.\n \nElle se mit à réécrire mentalement son propre passé. Et si elle ne s’était pas consacrée corps et âme à ses patrouilles et à son travail au Bureau de la Sécurité ?\nEt si elle avait obstinément cherché un moyen de pénétrer elle-même dans la cité intérieure pour voir Blues de ses propres yeux ?\nEntrer clandestinement. Escalader les murs. Passer par les conduits souterrains... Les moyens d’enfreindre les règles ne manquaient pas. Tout dépendait simplement de sa volonté de le faire.\nSi elle avait abandonné toutes ses responsabilités et insisté pour retrouver son petit frère...\n \nAlors... Blues aurait-il pu être sauvé ?\n \nSi elle avait été un peu plus prudente. Un peu plus perspicace.\nSi elle avait observé plus attentivement ce Dégradé, cherché au milieu de ce corps déformé les yeux clairs de Blues...\nEst-ce que tout aurait pu être différent ?\nC’est ma faute.\n \nLe papier crissa entre ses doigts tandis que Rhythm écrasait la lettre dans son poing. Au même instant, une douleur étouffante lui comprima la poitrine. Comme si son cœur lui-même se trouvait entre ses doigts. Comme si elle était revenue à cette nuit où elle avait écrit cette lettre.\nRhythm Fischer était assise devant son bureau. Elle lisait tout en cherchant laborieusement les mots qu’elle voulait coucher sur le papier. Et dans un coin de la pièce, par-delà toutes ces années désormais disparues, la Rhythm d’aujourd’hui observait celle qu’elle avait été.\n \nCette Rhythm Fischer qui ne savait rien.\nCette Rhythm Fischer qui écrivait avec bonheur une lettre à son petit frère.\nCette boule de papier pâle semblait contenir une partie de sa vie. Un fragment arraché à son passé.\nRhythm Fischer la froissa de toutes ses forces puis, dans un geste chargé de colère, la jeta à la poubelle. Comme pour renier celle qu’elle avait été autrefois.",
+    ContentJP = "軍を離れる直前。宿舎を片づけていたリズムは、まだ出していない手紙を見つけた。\n \n ブルースへ\n 元気にしてる？こっちは、このところ任務続きだったけど、ひとまず全部片づいたよ。上官には「この調子なら、次の昇進もそう遠くない」って言われた。階級が上がれば、内城区に入れる機会もあるかもしれない。\n 内城区って、どんなところなんだろうね。霧の街と違って、夜でもあちこちに明かりが灯っていて、水道をひねれば温かい水まで出るんだって。\n そうそう、この前、制服を少し破ってしまったの。替えはまだ支給されてないから、そのまま着てる。左右が揃ってないのを見るたび気になって仕方ない。私らしいでしょ。\n そっちは、もうすぐまた吹雪が来るらしいね。保安署の人から聞いた。天気が荒れてる日は、訓練なんてしなくていいからね。桂冠カロン族になるのだって、そんなに急ぐことじゃない。ブルースはまだ若いんだから。焦らなくても、いつかちゃんとなれるよ。私はそう思ってる。だから、無茶だけはしないこと。\n 厚手の服を何着か入れておいた。カロンは寒さに強いけれど、吹雪の日くらいはちゃんと着込んで、炉のそばで大人しくしてなさい。それから、はちみつ湯も飲むこと。もう子どもじゃないんだし、はちみつは少しくらい多めに入れてもいいよ。一緒に入れた瓶は、レダおばさんから。霧の街のみんなも、ブルースの話ばかりしてる。みんな、会いたがってるよ。\n 何か困ったことがあったら、遠慮しないで書いて。こっちのことは心配しなくていい。私はちゃんとやってるから。\n あ、それと。今月、書店に入った『黄金の指輪』も入れておいた。たぶん、ブルースなら気に入ってくれると思ってね。\n じゃあ、また書くね。\n リズムより\n \n 便箋が、手の中でかすかに鳴った。気づけば指に力が入り、紙の端がくしゃりと潰れている。几帳面に並んでいた文字の上へ、無数の折り目が走っていた。\n ブルースが内城区へ移ってから、リズムは何度も手紙を送った。返事は、ほとんどなかった。それでも、不思議には思わなかった。ブルースが自分の手紙を無視するはずがない。きっと忙しいのだろう。軍に入ったのだから、自由に手紙を書く時間もないのかもしれない。そう思っていた。もしブルースがそこにいないのなら、宛先不明で戻ってくるはずだ。一通も返ってこないということは、ちゃんと届いている。だから大丈夫だと。落ち着いたら、いつか返事が来る。そう信じて待っていた。\n ――違った。\n 今なら、わかる。軍は手紙を受け取っていた。家族から届くものを、何食わぬ顔で。ただし、それをブルースに渡すことはなかった。返しもしなかった。返してしまえば、家族は気づく。だから受け取り続けたのだ。届いていると思わせておけばいい。生きていると信じさせておけばいい。そうすれば家族は何も知らないまま、次の手紙を書く。返事が来る日を待ちながら。リズムの指が、さらに強く便箋へ食い込んだ。ひょっとすると――自分の書いた手紙を、事情を知っている誰かが読んでいたのかもしれない。笑っていたのかもしれない。\n ――また来たぞ。\n ――まだ書いてるのか。とっくに死んでる弟に。\n 誰に言われたわけでもない。そんな声が、勝手に頭の中で響いた。腹の底が、怒りですっと冷えた。だが、その怒りを誰かにぶつける寸前で、リズムはまた自分を止める。手紙を仕分けていた兵士が、ブルースを殺したわけじゃない。真実を隠す側にいたとしても、そいつ一人を憎んだところで何も変わらない。舞台の上で本当に血が流れていても、客席からは名演技に見えることがある。自分から遠い痛みなんて、そんなものだ。知らなければ、笑える。知らないままなら、いくらでも他人事でいられる。\n そして、そこまで考えると――結局いつも、同じところへ戻ってくる。私だ。私にも、責任がある。仕事なんて放り出せばよかった。内城区まで、会いに行けばよかった。正門を通してもらえないなら、壁を越えればいい。壁が駄目なら地下を探せばいい。規則を破るくらい、どうとでもできたはずだ。なのに。どうして私は、何もしなかった。どうして、もっと疑わなかった。どうして、もっと早く確かめに行かなかった。あの穢蝕者を見たときだって。もっとちゃんと見ていれば――あの変わり果てた姿のどこかに、ブルースの面影を見つけられたかもしれない。あの目に、気づけたかもしれない。そうしていれば、何かひとつくらいは、変えられたんじゃないか。\n ――私のせいだ。\n くしゃり。今度は、はっきり音がした。息がうまく吸えない。握り締めているのは、ただの紙のはずなのに。まるで自分の心臓まで、一緒に握り潰しているようだった。\n 目を閉じる。すると、あの頃の自分がいる。\n 机に向かって、本を脇に置き、弟に何を書こうかと真剣に悩んでいるリズム・フィッシャー。何も知らない顔で。ブルースに手紙を書けることが、ただ嬉しくて。\n そんな自分の背中を、今のリズムはひどく遠いところから眺めていた。手の中の便箋には、あの日の自分がまだ残っている。何も知らずに笑っていた自分が。リズムは、便箋を最後まで握り潰した。そして、そのままゴミ箱へ放り込む。\n まるで――あの頃の自分まで、捨ててしまうように。",
+    ContentKR = "군단을 떠날 준비로 숙소를 정리하던 리듬은 얼마 전에 자신이 써 둔 편지를 발견했다.\n\n블루스에게,\n최근에 임무를 몇 건 더 해결했어. 상관 말로는 지금처럼 계속하면 곧 계급이 한 단계 더 오를 거래. 그러면 어쩌면 내성에도 들어갈 수 있을지 몰라.\n내성은 어떤 곳일까? 안개 지구랑은 다르게 여기저기 따뜻하게 불을 피워 두고, 수도꼭지에서 나오는 물도 손을 대면 따뜻하대.\n분명 좋은 곳이겠지.\n제복이 좀 해졌는데 새 제복은 아직 지급 승인이 안 났어. 그래서 지금은 좌우가 안 맞아서 영 어색해.\n치안서 동료들이 얼마 안 있다가 또 눈보라가 온다더라. 눈보라 치는 날에는 훈련도 좀 줄이고 몸조심해. 빨리 계관카론이 되려고 서두를 필요 없어. 넌 아직 젊고, 누나는 네가 분명 해낼 수 있다고 믿으니까 너무 부담 갖지 마.\n두꺼운 옷도 몇 벌 챙겨서 같이 보낼게. 카론은 추위를 많이 타지 않는다지만, 눈보라가 심한 날에는 그래도 두꺼운 옷 챙겨 입고 난롯가에서 푹 쉬어. 어릴 때처럼 꿀물도 한 잔 타 마시고. 이젠 어렸을 때보다 꿀을 조금 더 많이 넣어도 돼. 같이 보내는 꿀은 레토 아주머니가 너한테 전해 달라며 맡기신 거야. 안개 지구 사람들도 다들 널 많이 보고 싶어 해.\n누나는 여기서 잘 지내고 있으니까, 너도 어려운 일이 생기면 꼭 나한테 말해 줘.\n이번 달에 서점에 새로 나온 〈황금 반지〉라는 책이야. 네가 좋아할 것 같아서 이것도 같이 보낼게.\n리듬 누나가\n\n리듬은 편지지를 세게 움켜쥐었다. 얇은 종이는 손안에서 금세 구겨졌고, 어지럽게 남은 자국은 지금 리듬의 뒤엉킨 마음과 꼭 닮아 있었다.\n블루스가 선발되어 내성에 들어간 뒤부터 리듬은 여러 통의 편지를 보냈지만, 답장은 거의 받지 못했다. 미처 부치지 못한 이 편지가 그 마지막이었다. 하지만 당시의 리듬은 답장이 없는 것을 이상하게 여기지 않았다. 블루스는 누나의 편지를 받고도 답장을 안 할 아이가 아니었고, 무엇보다 받는 사람이 없다면 편지가 곧장 돌아왔을 텐데 한 통도 반송되지 않았기 때문이다. 군단을 믿고 앞으로의 일도 잘 풀릴 거라 기대했던 리듬에게 그것은 블루스가 무사하다는 충분한 근거였다. 지금은 그저 너무 바쁜 것뿐이고, 시간이 나면 반드시 답장을 보내 줄 거라고 믿었다. 지금 돌이켜보면, 아마 군단은 실험체를 대하는 자신들의 '신중함'과 '관대함'을 내세워 편지를 일부러 가로챘던 게 아닐까. 편지를 돌려보내 의심을 사는 일은 피하되 가족들이 불안을 달래도록 편지에 그리움을 쏟아내게 내버려 두고, 아무것도 모르는 피해자들이 한 가닥 희망을 남긴 채 오래도록 얌전히 기다리게 만들려 했던 걸지도 모른다. 어쩌면 그렇게 보내진 편지와 그 안에 가득 담긴 그리움과 설렘은 사정을 아는 자들의 웃음거리가 되어, 우스운 이야깃거리라도 되는 양 이 손 저 손을 거쳐 비웃음을 샀을 수도 있으리라. 별다른 오락거리도 없는 병영에서라면, 재미 삼아 남의 집안 이야기를 읽으며, 자신들은 모든 것을 알고 있다는 듯 우쭐해져서는, 다른 한 마리가 언젠가는 집으로 돌아오리라 믿으며, 아무것도 모른 채 여전히 꿀을 나르고 있는 개미들을 비웃었을 법도 하니까. 어쩌면 이런 말도 했겠지. \"봐! 또 편지를 보냈어. 죽은 사람한테 편지를 이렇게 많이 쓰다니, 끈기 한번 엄청난걸.\" 그러고는 그게 우습기라도 하다는 듯 크게 웃었을지도 모른다.\n\n그런 장면을 상상하는 것만으로도 리듬은 뼛속까지 사무치는 증오를 느꼈지만, 그렇다고 모든 잘못을 그들에게 돌릴 수는 없었다. 그들은 피해자도 직접적인 가해자도 아니었고, 이 기만을 덮어 주기는 했어도 원흉이라 할 수는 없었다. 굳이 비유하자면 무대 아래의 관객에 가까웠다. 배우가 무대 위에서 죽는다 해도 공연이 실감 난다며 박수를 보낼 뿐, 정작 그 죽음에 마음이 움직이지 않는 사람들. 그만큼 자신들과 동떨어진 일이었기에, 거리낌 없이 안줏거리로 삼을 수 있는 거겠지.\n따지고 보면 자신에게도 잘못이 있었다. 리듬은 고통스럽게 과거를 되짚었다. 그때 치안관으로서 맡은 일에만 매달리지 않고, 어떻게든 직접 내성까지 가서 블루스를 한 번이라도 만났더라면 어땠을까. 몰래 숨어들든, 담을 넘든, 하수로를 타든, 마음만 먹었다면 내성에 들어갈 길은 얼마든지 있었다. 맡은 일을 모두 제쳐 두고 끝까지 동생을 찾아갔다면... 블루스를 구할 수 있지 않았을까? 조금만 더 신중하고 기민하게 침식자의 모습을 살폈다면, 변이한 몸에서도 블루스의 그 맑은 눈을 찾아냈다면... 모든 것이 달라지지 않았을까?\n내 잘못이야.\n바스락, 바스락. 리듬은 편지지를 구기면서, 심장이 손안에 꽉 붙들린 듯한 답답함과 숨 막힘을 느꼈다.\n편지를 쓰던 그날 밤으로 다시 돌아간 것만 같았다.\n리듬 페실이 책상 앞에 앉아 책을 읽으면서, 편지에 쓸 말을 고르느라 머리를 싸매고 있다.\n\n현재의 리듬은 방 한구석에 서서 겹겹이 쌓인 지난 시간 너머로 과거의 자신을 바라보았다. 아무것도 모르는 리듬 페실은 즐겁게 동생에게 보낼 편지를 쓰고 있었다.\n그 창백한 종이 뭉치에는 리듬의 지나간 시간이 고스란히 남아 있었다. 리듬 페실은 과거의 자신을 부정하기 위해, 감정을 쏟아내듯 종이 뭉치를 힘껏 구겨 쓰레기통에 던졌다.",
+    ContentTC = "黎瑟即將離開軍團。在整理宿舍的時候，她發現了不久前自己寫的信。\n\n致布魯斯：\n最近，我又解決了幾個任務。長官說，如果按照現在的進度發展下去，我很快就能再升一階軍銜，到時候，說不定能進去內城。\n內城是什麼樣子的呢？聽說那裡不像霧區，到處都燒著溫暖的火，水龍頭流出來的水，摸上去都是熱的。\n那一定是個很好的地方吧。\n我的制服有些破損了，新的制服暫時還沒有批下來，現在看起來很不對稱，有些不習慣。\n治安署的同僚說，最近又有暴風雪要來了，希望你注意安全，在風雪天時減少訓練。成為桂冠卡戎的事，不急於一時，你還很年輕。我相信你一定可以做到，不要給自己太大的壓力。\n我準備了一些厚重的衣服，隨信寄給了你。儘管卡戎不是那麼怕冷，但果然風雪大作的日子裡，還是要裹著厚厚的衣服，圍著爐火好好休息才行。最好再沖一杯蜂蜜水，就像我們小時候那樣。現在，你可以多放一些蜂蜜。隨信寄給你的這一罐，是蕾朵阿姨托我帶給你的，霧區的大家都很想念你。\n有任何困難記得和我說，我這裡一切都好。\n這是這個月書店上新的書，叫《黃金指環》，感覺你會喜歡，一併寄給你。\n黎瑟\n\n黎瑟用力捏住了信紙。脆弱的紙張隨之坍塌凹陷，那無序排布的摺痕，正如她此刻混亂的心緒。\n自從布魯斯被選中進入內城後，她給布魯斯寫了很多信，大多數杳無音信。這是最後一封，還沒來得及寄出去。布魯斯是個好孩子，不會不給自己回信的，只可能是他太忙了，出於對軍團的信任和對美好未來的展望，黎瑟從未懷疑過帝國軍團。那些信件如果無人接收，就會在第一時間退回寄信人手裡，所以他應該一切都好。黎瑟想著，應該是布魯斯太忙了，等他有了空閒的時間，一定會給自己回信的。現在想來，大概是軍團出於對實驗體的「謹慎」和「寬容」，他們主動扣留了那些書信，避免露出破綻，遭受懷疑。他們允許實驗體的親人訴說思念，以此安撫他們躁動的情緒，讓那些不知情的受害者們抱有一線期冀，此後長久地、安分地等待下去。那些寄出去的信、那些滿溢的思念和雀躍，說不定早就成為了知情者們的笑料，像是一封小道快報，傳閱在他們手裡。在那缺乏娛樂活動的軍營中，他們也許會看得津津有味，把別人的家事當做談資，展現一種全知般的高傲，從而嘲笑那些無知的螞蟻。無知的螞蟻還在搬運著蜂蜜，以為另一隻螞蟻還會回到家裡。他們也許這樣說吧：看！那傢伙又寄信來了，給死人寫了這麼多信，真虧她有毅力。最後，倍感荒唐地大笑起來。\n……\n只是假設一下那些場景，黎瑟就生出徹骨的恨意。但那也不能全然歸咎於他們，黎瑟想——畢竟，受害者不是他們，加害者也不是他們，他們包庇了這場欺騙，卻算不上罪魁禍首。就像是看台下的觀眾，倘若戲劇演員死在舞台上，觀眾們也只會為演出的逼真喝彩，而不會為他們的動容。對他們來說，這些都是遙遠的故事，所以能夠談論得唇齒生風。\n說到底，她自己也有錯。黎瑟痛苦地想著。她對自己的過去做出假設：如果她沒有忙於執勤，忙於治安官的工作，而是執著地想辦法親自去內城，親眼看一看布魯斯，偷渡、翻牆、走下水的通道，不合規矩的手段有太多了，只看她想不想。如果她放下一切職責，堅持要去找自己的弟弟，那麼……會不會，布魯斯就能得救？如果她再謹慎一點，再機靈一點，仔細地端詳那穢蝕者的樣子，在那異化的軀體中，找到布魯斯那雙清澈的眼睛……會不會，一切都不一樣了？\n這是我的錯。\n嚓、嚓，黎瑟揉皺了這封信紙，與此同時，她感到一種心臟被攥緊的苦悶、窒息，仿佛她的心就被捏在手裡。\n她仿佛又回到了寫信的那個夜晚。\n黎瑟·費西爾坐在書桌前，一邊看書，一邊絞盡腦汁地組織措辭。\n站在房間的角落裡，穿過層層早已逝去的時光，現在的黎瑟看見了曾經的自己，那個一無所知的黎瑟·費西爾，快樂地寫著給弟弟的信。\n這蒼白的紙團附著了她的生命，裁剪了她的過去，黎瑟·費西爾把它用力揉皺，發洩般地扔進垃圾桶——以此否定那個曾經的自己。",
+    TextMapContent = "黎瑟即将离开军团。在整理宿舍的时候，她发现了不久前自己写的信。\n\n致布鲁斯：\n最近，我又解决了几个任务。长官说，如果按照现在的进度发展下去，我很快就能再升一阶军衔，到时候，说不定能进去内城。\n内城是什么样子的呢？听说那里不像雾区，到处都烧着温暖的火，水龙头流出来的水，摸上去都是热的。\n那一定是个很好的地方吧。\n我的制服有些破损了，新的制服暂时还没有批下来，现在看起来很不对称，有些不习惯。\n治安署的同僚说，最近又有暴风雪要来了，希望你注意安全，在风雪天时减少训练。成为桂冠卡戎的事，不急于一时，你还很年轻。我相信你一定可以做到，不要给自己太大的压力。\n我准备了一些厚重的衣服，随信寄给了你。尽管卡戎不是那么怕冷，但果然风雪大作的日子里，还是要裹着厚厚的衣服，围着炉火好好休息才行。最好再冲一杯蜂蜜水，就像我们小时候那样。现在，你可以多放一些蜂蜜。随信寄给你的这一罐，是蕾朵阿姨托我带给你的，雾区的大家都很想念你。\n有任何困难记得和我说，我这里一切都好。\n这是这个月书店上新的书，叫《黄金指环》，感觉你会喜欢，一并寄给你。\n黎瑟\n\n黎瑟用力捏住了信纸。脆弱的纸张随之坍塌凹陷，那无序排布的折痕，正如她此刻混乱的心绪。\n自从布鲁斯被选中进入内城后，她给布鲁斯写了很多信，大多数杳无音信。这是最后一封，还没来得及寄出去。布鲁斯是个好孩子，不会不给自己回信的，只可能是他太忙了，出于对军团的信任和对美好未来的展望，黎瑟从未怀疑过帝国军团。那些信件如果无人接收，就会在第一时间退回寄信人手里，所以他应该一切都好。黎瑟想着，应该是布鲁斯太忙了，等他有了空闲的时间，一定会给自己回信的。现在想来，大概是军团出于对实验体的“谨慎”和“宽容”，他们主动扣留了那些书信，避免露出破绽，遭受怀疑。他们允许实验体的亲人诉说思念，以此安抚他们躁动的情绪，让那些不知情的受害者们抱有一线期冀，此后长久地、安分地等待下去。那些寄出去的信、那些满溢的思念和雀跃，说不定早就成为了知情者们的笑料，像是一封小道快报，传阅在他们手里。在那缺乏娱乐活动的军营中，他们也许会看得津津有味，把别人的家事当做谈资，展现一种全知般的高傲，从而嘲笑那些无知的蚂蚁。无知的蚂蚁还在搬运着蜂蜜，以为另一只蚂蚁还会回到家里。他们也许这样说吧：看！那家伙又寄信来了，给死人写了这么多信，真亏她有毅力。最后，倍感荒唐地大笑起来。\n……\n只是假设一下那些场景，黎瑟就生出彻骨的恨意。但那也不能全然归咎于他们，黎瑟想——毕竟，受害者不是他们，加害者也不是他们，他们包庇了这场欺骗，却算不上罪魁祸首。就像是看台下的观众，倘若戏剧演员死在舞台上，观众们也只会为演出的逼真喝彩，而不会为他们的动容。对他们来说，这些都是遥远的故事，所以能够谈论得唇齿生风。\n说到底，她自己也有错。黎瑟痛苦地想着。她对自己的过去做出假设：如果她没有忙于执勤，忙于治安官的工作，而是执着地想办法亲自去内城，亲眼看一看布鲁斯，偷渡、翻墙、走下水的通道，不合规矩的手段有太多了，只看她想不想。如果她放下一切职责，坚持要去找自己的弟弟，那么……会不会，布鲁斯就能得救？如果她再谨慎一点，再机灵一点，仔细地端详那秽蚀者的样子，在那异化的躯体中，找到布鲁斯那双清澈的眼睛……会不会，一切都不一样了？\n这是我的错。\n嚓、嚓，黎瑟揉皱了这封信纸，与此同时，她感到一种心脏被攥紧的苦闷、窒息，仿佛她的心就被捏在手里。\n她仿佛又回到了写信的那个夜晚。\n黎瑟·费西尔坐在书桌前，一边看书，一边绞尽脑汁地组织措辞。\n站在房间的角落里，穿过层层早已逝去的时光，现在的黎瑟看见了曾经的自己，那个一无所知的黎瑟·费西尔，快乐地写着给弟弟的信。\n这苍白的纸团附着了她的生命，裁剪了她的过去，黎瑟·费西尔把它用力揉皱，发泄般地扔进垃圾桶——以此否定那个曾经的自己。",
+    TextMapId = "UI_CHAR_DATA_TEXT_41030402"
+  },
+  UI_CHAR_DATA_TEXT_41030403 = {
+    ContentEN = "Rhythm learnt a great deal at The Asphodel. Even the gun she now favoured had been rebuilt and fine-tuned piece by piece with advice from the Phoxhunters.\nPhoxhunters came from every imaginable background, and The Asphodel gave them somewhere to meet. They were an unruly, free-spirited lot, all eccentric in their own ways, but here they could lower their guard, share a drink or two, and talk about whatever took their fancy. One idea led to another, and before long even the wildest conversations could produce something useful. Rhythm was a patient listener, absorbing whatever she could from these conversations. She often came with a notebook, ready to ask questions.\nOne day, an unusual visitor appeared at The Asphodel: a wandering bard. She had travelled widely, spoke with an easy, lyrical cadence, and knew how to make a story come alive. If Blues were here, Rhythm thought, the two of them would get along. He had always been like that with stories. Once he began telling one, the world around him seemed to disappear.\nThe thought carried her back.\n\nLong ago, in the bare little room where she and Blues lived, they had allowed themselves the rare luxury of keeping a candle burning after dark. Candles cost money, and neither of them could bear to waste one. But that night was different. Rhythm had given Blues a new book of fairy tales. In the wavering light, they barely dared to breathe for fear of blowing out the flame. They lay together on their worn bed, the book propped against a pillow, speaking in whispers until they caught each other's eye and couldn't help smiling at how ridiculous they were being. Rhythm rested her chin in her hands and listened while Blues read aloud. Reading had always come more easily to him. Rhythm still stumbled over words that Blues seemed to know without trying.\nI'm supposed to be the one looking after him, and I still need my little brother to read to me... I'm not much of a big sister. But Blues is so clever. That's what matters.\nHe was getting better all the time. Not long ago he had still paused over unfamiliar words; now he made his way steadily through the tiny black letters that seemed to crawl across the page like ants. Rhythm absorbed almost none of the story itself. What held her attention was Blues: the excitement in his voice, the way his face lit up at each new turn in the tale. Seeing him happy, seeing him grow — that mattered more to her than anything in the book.\nShe turned the page and found a brightly coloured picture of a rabbit and a fox. That's nice, she thought.\nFairy tales were strange things. No one in them seemed to worry about rent, food or whether there would be enough coal for the stove. It was too pretty, too childish, too far removed from the world she knew. Her thoughts always found their way back to practical matters: how much a loaf of bread cost, where milk was cheapest, what could be repaired rather than replaced. Life in Mist Aken had left little room for that kind of imagination. Stories would probably never excite her the way they excited Blues. Still, Blues loved them. So Rhythm tried to understand.\nShe concentrated on his eager chatter and did her best to follow the pictures as though she, too, could step inside the story.\n\"Look, the rabbit and the fox live together...\" Blues said.\nHm. A rabbit and a fox. Either one would fetch a decent price at market... No. That's not the point.\n\"The rabbit is baking the fox a cake...\"\nWait. Why isn't she wearing gloves? Won't she shed fur into the batter? ...No. That's not the point either.\nRhythm's attention wandered again.\n\n\"Rhythm? Rhythm!\"\nBlues's voice brought her back.\n\"Your hand... what happened?\" He took her gently by the wrist, his face tightening with worry as he studied the bruise.\n\"...I only just started at the factory. I'm still getting used to the work.\" Rhythm smiled and eased her hand from his grasp.\nShe did not tell him what she had seen that day: another worker's hand caught in a machine, the rest of his arm dragged in after it, and the factory paying him just fifteen silver coins in compensation.\nFifteen silver. That was what a man got when his life was ruined.\nThe sight of so much blood had stunned her. She had reacted too slowly, and a moving part of the machinery had struck her wrist. The production line stopped for a few moments. The factory owner shouted at her for holding up the work and docked most of her wages. What remained had been just enough to buy the book. But if the book made Blues happy, then it was worth it. Factory work was brutal, but it paid better than anything else available to her. For now, she could not afford to leave.\n\n\"What book do you want tomorrow?\" Rhythm asked, changing the subject.\nBlues studied her for a moment. He seemed to understand that she was not going to tell him anything more.\n\"I don't want a book.\"\n\"What do you want?\"\n\"A jar of healing salve and a roll of bandages.\"\n\"...\"\n\"All right.\"\nAfter a moment, Rhythm reached over and stroked his soft hair.\n\"Let's keep reading.\"\nBlues nodded eagerly and picked up the thin little book again.\nThe night seemed long and warm. The fairy tale itself was short, but they read it over and over until the candle finally guttered out. Only then did they close the book and settle down to sleep.\n\n\"Hey. What's on your mind?\"\nThe bard's curious voice pulled Rhythm back to the tavern.\n\"Tell me, if you don't mind. I have a weakness for stories. What about you?\" she asked lightly.\nRhythm almost said no. She was no storyteller. Blues had always been the one who told stories to her, and this was not a past she had ever intended to share. Then she met the bard's eyes. There was nothing prying in her gaze, only open, earnest curiosity, and the refusal caught in Rhythm's throat.\n\"I'm only a traveller,\" the bard said. \"I can take your story with me when I go. Perhaps some of the sorrow will go with it. You look as though you've kept both to yourself for far too long.\" She winked.\n\"Oh, that's right. This is where Phoxhunters take commissions, isn't it? I ought to respect the local custom.\"\nShe touched a finger to her lips and tilted her head. Even her most casual remarks carried the cadence of verse.\nA true bard, Rhythm thought.\n\"Will you tell me your story, my one-horned lady? Consider it a commission.\"\nThe bard produced a small pouch of silver and slid it across the table. A generous client.\nPerhaps it was because they were strangers. Perhaps it was the money — enough to give almost anyone pause. Perhaps it was simply the bard herself, so open and guileless in her curiosity. She seemed to want nothing from Rhythm except a story.\nRhythm never quite understood why she agreed. She only knew that something she had kept tightly shut for years had opened, just a crack. This time, remembering did not feel like tearing the same wound open again. One memory after another began to fall into place: joy and sorrow, warmth and pain, all taking the shape of a story she could finally tell.\nRhythm warned the bard that it was not a very interesting story.\nAnd this time, Rhythm was the one who told it.",
+    ContentFR = "Rhythm avait beaucoup appris aux Asphodèles. Le temps qu’elle y avait passé lui avait énormément apporté. Même l’arme dont elle se servait le plus souvent ces derniers temps avait été progressivement modifiée grâce aux conseils des Chasseurs de Phoxène qu’elle y avait rencontrés.\n \nToutes sortes de personnes composaient la communauté des Chasseurs de Phoxène, et les Asphodèles leur offraient un lieu où se retrouver. Ces Chasseurs de Phoxène, libres, indisciplinés et habitués à vivre à leur manière, pouvaient s’y réunir, relâcher la pression autour d’un verre et discuter de tout et de rien. Dans un tel environnement, les idées et les inspirations se croisaient et s’entrechoquaient sans cesse, faisant jaillir d’innombrables étincelles. Rhythm, qui savait particulièrement bien écouter, en tirait énormément de choses. Il n’était d’ailleurs pas rare de la voir un carnet à la main, venir leur poser spontanément toutes sortes de questions.\n \nUn jour, une visiteuse peu ordinaire se présenta aux Asphodèles. C’était une ménestrel. Elle avait beaucoup voyagé, connaissait quantité de choses et parlait presque comme si elle récitait des vers. Surtout, elle possédait un véritable talent pour raconter des histoires.\n \nRhythm songea que, si Blues avait été là, il se serait certainement très bien entendu avec elle. Lorsqu’ils racontaient une histoire, tous deux affichaient la même concentration, comme s’ils plongeaient entièrement dans le monde qu’ils décrivaient.\n \nSes pensées commencèrent à dériver.\n \nBien des années auparavant, par une certaine nuit, dans une chambre rudimentaire éclairée par la flamme d’une précieuse bougie...\nIl était rare qu’elle et son petit frère se permettent d’en allumer une le soir. Mais cette fois, Blues avait quelque chose à célébrer : sa grande sœur venait de lui offrir un cadeau, un nouveau livre de contes.\nSous la lumière vacillante de la bougie, tous deux osaient à peine respirer. Ils craignaient que le moindre souffle ne fasse trembler la flamme, voire ne l’éteigne accidentellement, gaspillant ainsi cette lumière si difficilement obtenue. Allongés sur leur vieux lit, le livre posé sur l’oreiller, ils parlaient aussi doucement que possible... avant de finir par échanger un sourire.\n \nC’était vraiment ridicule.\n \nLe menton posé dans ses mains, Rhythm écoutait Blues lui raconter l’histoire du livre. Elle n’était pas aussi douée que lui pour la lecture et ne savait pas encore lire autant de mots. Aussi étrange que cela puisse paraître, c’était donc son petit frère qui faisait la lecture à sa grande sœur.\nJe dois vraiment être une mauvaise grande sœur, songea Rhythm. Mais mon petit frère est très doué. Alors, finalement... c’est très bien comme ça.\n \nBlues savait lire de plus en plus de mots. Peu de temps auparavant, il devait encore s’interrompre de temps en temps lorsqu’il lisait. Désormais, il parvenait à parcourir avec aisance toutes ces minuscules lettres qui ressemblaient à des vers de terre.\nLes histoires pleines de fantaisie qu’il lui racontait ne retenaient pourtant pas vraiment l’attention de Rhythm. À son grand regret, elle n’arrivait tout simplement pas à s’y intéresser. Mais il lui suffisait de voir l’enthousiasme de Blues pour que son regard s’adoucisse. Voir son petit frère heureux. Le voir grandir.\n \nPour elle, rien ne pouvait être plus précieux. Et cela lui suffisait.\n \nLorsqu’elle ouvrait le livre de contes, de petits lapins et renards aux couleurs éclatantes apparaissaient devant ses yeux. Quelle chance, ne pouvait-elle s’empêcher de penser. Dans les contes, personne n’avait besoin de travailler. Personne n’avait à se demander comment payer sa nourriture, ses vêtements ou son logement.\nRhythm, elle, était incapable de se perdre dans ces merveilleux mondes imaginaires. Pas même un instant. Tout cela lui paraissait beaucoup trop enfantin, beaucoup trop éloigné de la réalité. Elle préférait réfléchir au prix du pain ou se demander chez qui le lait coûtait un peu moins cher...\n \nVoilà. Elle était comme ça. Une personne sans imagination et terriblement ennuyeuse, incapable de penser à autre chose.\n \nComme tant d’habitants de Brumelac, elle était déjà trop occupée à lutter chaque jour pour survivre. Celle qui aimait les histoires, ce n’était pas elle. Cela ne l’avait jamais été et ne le serait probablement jamais. Mais puisque Blues les aimait, alors elle ferait l’effort de s’y intéresser un peu.\nRhythm tenta donc consciencieusement de se plonger dans l’histoire tout en écoutant son petit frère parler sans s’arrêter.\n \nVoyons... Le lapin et le renard vivent ensemble... Hmm. Ça doit valoir assez cher. Si on les chassait... Non. Ce n’est pas ça.\nLe lapin prépare un gâteau pour le renard. Euh... Sur cette illustration... Pourquoi ne porte-t-elle pas de gants ? Elle ne risque pas de mettre des poils dans le gâteau ? Non. Toujours pas.\nRhythm avait complètement décroché.\n \n« Grande sœur ! Grande sœur ! »\nLa voix de Blues la ramena brusquement à la réalité.\n« Ta main... Qu’est-ce qui t’est arrivé ? »\nBlues lui saisit le poignet et contempla avec inquiétude la large ecchymose qui le marquait.\n« ... Je viens seulement de commencer à travailler à l’usine. Je n’ai pas encore l’habitude. »\nRhythm esquissa un sourire et retira doucement sa main de celle de son frère.\n \nElle ne lui dit pas qu’elle avait vu, de ses propres yeux, la main d’un autre ouvrier happée par une machine de l’usine. Il avait perdu tout son bras. Et le prix d’un avenir ainsi détruit n’avait été que de quinze pièces d’argent.\nEncore bouleversée par ce qu’elle venait de voir, Rhythm avait réagi un peu trop lentement. Un axe de la machine avait heurté son poignet, provoquant un bref arrêt de la chaîne de production. Le propriétaire de l’usine l’avait alors sévèrement réprimandée. La majeure partie de son salaire de la journée avait été retenue et ce qu’il lui restait avait tout juste suffi à acheter ce livre.\n \nTant que Blues était heureux, cela suffisait.\n \nLe travail à l’usine était éprouvant, mais c’était aussi celui qui payait le mieux parmi tous ceux auxquels elle pouvait prétendre. Rhythm n’avait donc aucune intention de le quitter pour le moment.\n \n« Quel livre est-ce que tu voudrais demain ? » demanda-t-elle soudain, préférant changer de sujet.\nFace au regard obstiné de sa grande sœur, Blues comprit qu’il était inutile d’insister.\n« Grande sœur, demain, je ne veux pas de livre. »\n« Alors, qu’est-ce que tu veux ? »\n« Je voudrais un remède pour les blessures... et des bandages. »\n« ... »\n« D’accord. »\nUn bref silence embarrassé s’installa.\nRhythm finit par céder et passa une main sur les cheveux ébouriffés de son petit frère.\n« Bon. Continuons notre livre. »\nBlues hocha vigoureusement la tête avant de reprendre entre ses mains le mince ouvrage.\nCette nuit-là fut longue. Et chaleureuse.\nLe livre de contes était court, mais ils en tournèrent les pages encore et encore pendant très longtemps. Ils ne s’endormirent que lorsque la lumière finit par s’éteindre.\n \n« Hé, à quoi tu penses ? »\nLes yeux de la ménestrel brillaient de curiosité. Sa question arracha Rhythm à ce bref voyage dans ses souvenirs.\n« Si ça ne te dérange pas, raconte-moi. J’aime les histoires. Et toi ? » demanda-t-elle avec élégance.\nRhythm voulut lui répondre qu’elle n’était pas une bonne conteuse. Qu’elle n’avait jamais su raconter d’histoires. Autrefois, c’était toujours Blues qui les lui racontait. Et puis, ces souvenirs-là... elle n’avait aucune raison de les partager avec une inconnue.\nMais avant même qu’elle puisse ouvrir la bouche, la ménestrel au regard sincère l’interrompit.\n \n« Je ne suis qu’une voyageuse. J’emporterai ton histoire avec moi... et ta tristesse aussi. Et à te voir, j’ai l’impression que tu ne vas pas très bien. »\nLa ménestrel lui adressa un clin d’œil.\n« Ah, maintenant que j’y pense... C’est ici que les Chasseurs de Phoxène viennent chercher leurs missions, non ? Je devrais respecter les coutumes locales, tu ne crois pas ? »\nElle leva un doigt et le posa contre ses lèvres. La tête légèrement inclinée, elle avait l’air à la fois curieuse et innocente. Même ses paroles possédaient cette spontanéité légère, comme des vers qui n’auraient jamais été retravaillés.\nUne vraie ménestrel, songea Rhythm.\n \n« Accepterais-tu de me raconter ton histoire, mademoiselle à la corne solitaire ? Considère cela comme une mission. »\nLa ménestrel sortit une petite bourse remplie de pièces d’argent et la poussa devant Rhythm. C’était une commanditaire généreuse.\n \nPeut-être était-ce parce qu’elles étaient de parfaites inconnues. Peut-être était-ce à cause de cette récompense suffisamment généreuse pour faire hésiter n’importe qui. Peut-être encore était-ce cette innocence, cette apparente méconnaissance du monde qu’affichait la ménestrel. Après tout, comme elle venait de le dire, elle voulait simplement entendre une histoire...\nRhythm elle-même ne savait pas vraiment ce qui l’avait décidée.\nToujours était-il que son cœur, fermé depuis si longtemps, finit par entrouvrir une minuscule brèche. Sa tristesse et sa joie, sa douleur et son bonheur... Tous ces souvenirs se transformèrent peu à peu en un mince livre d’histoires.\nRhythm regarda la ménestrel.\n \n« C’est une histoire... qui n’est pas très intéressante. »\nCette fois-ci, ce fut Rhythm qui se mit à raconter.",
+    ContentJP = "アスフォデロスにいると、軍の教本には載っていないことばかり覚える。最近よく使う銃もそうだ。機械に詳しい月狩り人たちに教わりながら、少しずつ自分用に手を入れていった。\n ここに集まる月狩り人は、本当にばらばらだ。出身も、性格も、得意なことも違う。放っておけば好き勝手な方向へ行ってしまう者たちが、アスフォデロスでは同じ卓を囲み、酒を飲み、くだらない話をする。だからこそ、思いもよらない知恵が飛び出す。人の話を聞くのが得意なリズムは、そういう場から多くを学んだ。時にはノートを持って、自分から教えを請いに行くほどだった。\n ある日、店に吟遊詩人がやってきた。旅慣れた人で、知っている話が多い。何を語っても言葉に節があり、ひとつの出来事を、まるで目の前で起きているように聞かせるのが上手だった。\n ――ブルースがいたら、きっと話が合っただろうな。\n そう思いながら、リズムの意識は遠い夜へ戻っていった。\n \n まだ二人で、粗末な部屋に暮らしていた頃。その夜は特別に蝋燭を一本灯していた。ブルースが、姉から新しい童話をもらった日だったからだ。火を消してしまわないよう、二人とも妙に小さく息をしていた。古いベッドに腹ばいになり、枕の上へ本を広げる。声までひそめているうちに、自分たちが馬鹿らしくなって、顔を見合わせて笑う。リズムは頬杖をついて、ブルースが本を読むのを聞いていた。文字は、弟のほうがずっと得意だった。少し前までつかえながら読んでいた小さな文字を、もうすらすら追えるようになっている。姉なのに、弟に読んでもらっている。私は、あまり立派な姉じゃないのかもしれない。そう思う一方で、ブルースが賢く育っていることが、ただ嬉しかった。\n 物語の内容は――正直、ほとんど頭に入ってこない。色鮮やかな挿絵には、ウサギとキツネがいる。童話の世界では働かなくてもよくて、パンの値段も、家賃も、明日の食事も心配しなくていい。リズムには、その世界が遠すぎた。パンはいくらか。どこの牛乳なら少し安いか。どうすれば今月を乗り切れるか。考えるのは、そんなことばかりだ。物語を好きだったのは、昔からブルースのほうだった。それでも弟が好きなら、自分も少しくらいわかりたい。リズムはもう一度、挿絵へ目を戻す。ウサギとキツネが一緒に暮らしている。……毛皮は、どちらも高く売れそうだ。違う。そういう話ではない。次のページでは、ウサギがキツネのためにケーキを作っている。……どうして手袋をしていないんだろう。毛が入るのでは。これも違う。\n \n 「姉さん、姉さん！」\n ブルースに呼ばれて、ようやく我に返った。\n 「その手……どうしたの？」\n 弟がリズムの手首をつかむ。そこには大きな青あざができていた。\n 「……工場に入ったばかりだから。まだ慣れてないだけ」\n 笑って、そっと手を引く。\n 本当のことは言わなかった。その日、同じ工場で働く人が機械に手を巻き込まれ、片腕を失った。その人のこれからに対して支払われた金は、銀貨十五枚だった。\n 目の前の光景に一瞬反応が遅れ、リズム自身も機械の軸を手首にぶつけた。そのせいで作業が止まり、工場主に怒鳴られ、日当の大半を引かれた。残った金で買えたのが、この一冊だった。ブルースが喜ぶなら、それでいい。工場の仕事はきつい。それでも、今の自分にできる仕事の中では一番稼げる。辞めるつもりはなかった。\n \n 「明日は、何の本がいい？」\n リズムが話を変える。ブルースは姉の顔を見て、追及するのをやめた。\n 「姉さん。明日は本、いらない」\n 「じゃあ、何が欲しい？」\n 「傷薬を一本と、包帯を一巻き」\n 「……」\n 「……わかった」\n 短い沈黙のあと、リズムは観念して弟のモフモフした頭を撫でた。\n 「ほら。続きを読んで」\n 「うん」\n ブルースは力強く頷くと、再び薄い本を両手で大事そうに持ち、読み始めた。\n その夜は、長くて暖かかった。薄い童話はすぐに読み終わったのに、二人は何度も最初から読み直した。蝋燭の火が消えるまで。\n \n 「ねえ。さっきから、何を考えてるの？」\n 声をかけられ、リズムの意識はアスフォデロスへと戻る。吟遊詩人が、興味深そうにこちらを見ている。\n 「よかったら、聞かせてくれない？私はお話が好きなの。あなたは？」\n リズムは答えに詰まった。物語を話すのは得意ではない。昔だって、話してくれたのはいつもブルースだった。それに、こんなことを他人へ話すつもりも――\n 「私は旅人よ」\n そう言って、詩人はいたずらっぽく片目をつぶった。\n 「聞いた話は持っていける。悲しいことも一緒にね。……あなた、あまり元気そうじゃないもの」\n そして何かを思いついたように、指を一本立てる。天真爛漫そうな顔で首をひねる。\n 「そうだ。ここは依頼を受ける店なんでしょう？」\n 「だったら、私もここの流儀に合わせなくちゃ」\n 小さな銀貨袋が、リズムの前へ置かれた。\n 「あなたの話を聞かせて。一本角のお嬢さん。――これは依頼ということで」\n ずいぶん気前のいい依頼人だった。初対面だから話せたのかもしれない。報酬が十分だったからかもしれない。あるいは、目の前の人が本当に何も知らず、ただ一つの物語として聞こうとしてくれたからかもしれない。リズム自身にも、理由はわからなかった。ただ、ずっと閉じていた場所に、ほんの少しだけ隙間ができた。悲しかったこと。嬉しかったこと。痛かったこと。幸せだったこと。ばらばらだった記憶が、ようやく言葉の形を取り始める。リズムは小さく息を吸った。\n 「……あまり、面白い話ではありませんよ」\n 今度は、リズムが語る番だった。",
+    ContentKR = "리듬은 아스포델에 머무는 동안 많은 것을 배우고 익혔다. 요즘 자주 쓰는 총도 이곳 월석 사냥꾼들의 조언을 받아 조금씩 손본 끝에 지금의 형태를 갖췄다.\n월석 사냥꾼은 각양각색이었다. 평소에는 자유롭고 느슨하게 저마다 제멋대로 살아가던 이들도 아스포델에서는 한자리에 모여 긴장을 풀고, 술 한잔하며 편하게 이야기를 나눌 수 있었다. 그런 자리에서는 서로 다른 생각이 끊임없이 오가며 서로에게 자극을 주었고, 그 속에서 새로운 영감이 별처럼 곳곳에서 번뜩였다. 다른 사람의 이야기에 귀 기울이는 리듬도 그 속에서 많은 것을 배웠고, 수첩을 들고 먼저 찾아가 궁금한 점을 묻는 일도 잦았다.\n어느 날 아스포델에 특별한 손님이 찾아왔다. 음유시인이었다. 아는 것도 많았고, 말을 할 때면 시를 읊는 듯했으며 이야기를 들려주는 솜씨도 뛰어났다. 이야기를 들려줄 때면 이야기 속 세상에 푹 빠진 듯 집중하는 모습이 블루스와 닮아 있었다. 리듬은 블루스가 이곳에 있었다면 음유시인과 무척 잘 통했을 거라고 생각했다.\n그러는 사이 리듬은 어느새 오래전 일을 떠올리고 있었다.\n\n아주 오래전 어느 밤, 허름한 방에 귀한 촛불 하나가 켜져 있었다. 평소에는 밤에 좀처럼 촛불을 켜지 않았지만, 그날은 리듬이 블루스에게 새 동화책을 선물한 날이었다. 블루스가 그날을 기념하고 싶어 해 두 사람은 모처럼 밤에 불을 밝혔다. 혹시 숨을 잘못 내쉬어 촛불을 꺼뜨리기라도 할까 봐 숨조차 크게 쉬지 못한 채, 낡은 침대에 엎드려 베개 위에 책을 놓고 목소리까지 한껏 낮췄다. 그러면서도 서로 눈이 마주치면 웃음을 참지 못했다. 이렇게까지 조심하는 모습이 둘 다 너무 바보 같았다. 리듬은 턱을 괴고 블루스가 들려주는 이야기를 들었다. 블루스만큼 영리하지도, 아는 글자가 많지도 않은 리듬은 누나인데도 동생에게 이야기를 듣는 쪽이었다. 나는 영 누나 노릇을 못 하나 봐. 그래도 내 동생은 참 대단해. 정말 다행이야. 리듬은 그렇게 생각했다.\n얼마 전까지만 해도 책을 읽다 가끔 멈추던 블루스는 이제 아는 글자가 늘어, 지렁이처럼 꼬불거리는 작은 글씨도 막힘없이 끝까지 읽었다. 반면 리듬은 이야기 자체에는 별 관심이 없어서, 아무리 재미난 내용이어도 제대로 귀담아듣지 못했다. 그래도 들뜬 블루스를 바라보고 있으면 리듬의 눈빛은 한결 부드러워졌다. 이야기 자체에는 별 관심이 없어도, 동생이 즐거워하고 조금씩 성장하는 모습을 보는 일만큼은 무엇보다 좋았다. 리듬에게는 그걸로 충분했다. 동화책을 펼치자 알록달록한 토끼와 여우가 눈에 들어왔다. 좋겠다. 동화 속 세상에서는 일하지 않아도 되고, 먹고사는 걱정도 하지 않아도 된다. 하지만 리듬은 그런 아름다운 환상의 세계에 단 한순간도 빠져들지 못했다. 너무 유치하고 비현실적이었다. 차라리 빵값이 얼마인지, 어느 집 우유가 조금 더 싼지 따져 보는 편이 나았다... 역시 자신은 동화 같은 이야기에 빠져드는 데는 영 소질이 없고, 재미도 없는 사람이었다. 떠올리는 거라곤 늘 이런 현실적인 일뿐이었다. 안개 지구의 수많은 사람들처럼 리듬도 하루하루 먹고살기 바빴다. 이야기를 좋아하는 사람은 애초부터 자신이 아니었다. 예전에도 아니었고 앞으로도 마찬가지였다. 그래도 블루스가 좋아하니 조금이라도 관심을 가져 보려 했다.\n리듬은 어떻게든 이야기에 빠져 보려고 동생의 재잘거림에 귀를 기울였다. 토끼와 여우가 같이 산다... 음, 제법 값이 나가겠는데. 사냥한다면... 아니, 그게 아니지. 토끼가 여우에게 케이크를 만들어 주고 있다. 어, 이 그림은... 왜 장갑을 안 꼈지? 털이 케이크에 들어가지 않을까? 아니, 또 엉뚱한 생각을 했네.\n리듬은 결국 딴생각에 빠졌다.\n\n\"누나, 누나!\" 그제야 리듬은 딴생각에서 빠져나왔다.\n\"손이... 왜 그래?\" 블루스는 리듬의 손목을 붙잡고 시퍼렇게 든 멍을 걱정스럽게 바라보았다.\n\"... 공장 일 시작한 지 얼마 안 됐어. 아직 익숙하지 않아서 그래.\" 리듬은 웃으며 동생의 손에서 손목을 빼냈다.\n리듬은 블루스에게 진짜 사정을 말하지 않았다. 얼마 전 다른 노동자의 손이 공장 기계에 말려 들어가 팔 하나를 통째로 잃는 모습을 두 눈으로 봤고, 한 사람의 앞날이 망가진 대가는 고작 실버 열다섯 닢이었다.\n눈앞에서 벌어진 사고에 충격을 받아 잠시 움직임이 늦어진 사이 리듬은 설비의 회전축에 손목을 세게 찧었고, 그 바람에 생산 라인이 멈춰 공장주에게 호되게 야단을 맞은 데다 일당도 거의 다 깎였다. 남은 돈은 지금 둘이 보고 있는 이 책 한 권 값이 전부였다. 블루스가 좋아한다면 충분했다. 공장 일은 고됐지만 리듬이 구할 수 있는 일자리 가운데 벌이가 가장 좋았기에 당분간 그만둘 생각은 없었다.\n\n\"내일은 무슨 책 읽고 싶어?\" 리듬이 서둘러 화제를 돌렸다.\n누나의 고집스러운 눈빛을 마주한 블루스는 더 캐묻지 않았다. \"누나, 내일은 책 말고 다른 거 사 줘.\"\n\"뭘 사고 싶은데?\"\n\"상처에 바르는 약 한 병이랑 붕대 한 묶음.\"\n\"...\"\n\"알았어.\"\n잠시 어색한 침묵 끝에 리듬이 먼저 한발 물러서며 동생의 머리를 쓰다듬었다.\n\"자, 어서 마저 읽자.\"\n블루스는 힘껏 고개를 끄덕이고 다시 얇은 책을 펼쳐 들었다.\n동화책은 금세 다 읽을 만큼 짧았지만, 두 사람은 다 읽고도 다시 처음으로 돌아가 몇 번이나 책을 읽었다. 그렇게 오래 책을 보다 불이 꺼지고 나서야 잠이 들었다.\n\n\"저기, 무슨 생각 해요?\"\n음유시인이 호기심 어린 눈으로 물었다. 잠시 옛일을 떠올리던 리듬은 그 목소리에 정신을 차렸다.\n\"괜찮다면 저한테 들려주실래요? 저는 이야기를 좋아하거든요. 그쪽은요?\" 음유시인이 우아하게 말했다.\n리듬은 자기가 남에게 이야기를 들려줄 만한 사람도 아니고, 이야기를 풀어내는 데도 서툴다고 말하려 했다. 예전에는 늘 블루스가 이야기를 들려주고 자신은 듣는 쪽이었으며, 지난 일을 남에게 꺼내는 일도 내키지 않았다. 하지만 리듬이 입을 떼기도 전에 진솔한 눈빛의 음유시인이 먼저 말을 이었다.\n\"저는 그냥 지나가는 여행자예요. 당신의 이야기도 슬픔도 제가 가지고 떠날게요. 지금은 영 괜찮아 보이지 않네요.\" 음유시인은 리듬에게 눈을 찡긋했다.\n\"아, 그러고 보니 여긴 월석 사냥꾼들이 의뢰를 받는 곳이잖아요. 저도 이곳 방식에 따라야겠죠?\"\n검지를 입술에 대고 고개를 살짝 기울이는 음유시인은 호기심 많고 천진해 보였고, 말 한마디 한마디도 다듬지 않은 시처럼 꾸밈없고 낭만적이었다. 역시 음유시인이구나, 리듬은 생각했다.\n\"당신 이야기를 들려주시겠어요, 외뿔 아가씨? 이것도 의뢰라고 생각해 주세요.\" 음유시인은 실버가 든 작은 주머니를 꺼내 리듬 앞으로 밀었다. 꽤 후한 의뢰인이었다.\n서로 초면이라서였을까. 누구라도 마음이 흔들릴 만큼 후한 의뢰비 때문이었을까. 아니면 아무것도 모르고 세상 물정에도 어두워 보이는 상대가, 정말 말 그대로 이야기를 듣고 싶어 할 뿐인 사람처럼 느껴져서였을까... 리듬도 자신이 왜 마음을 열었는지 알 수 없었다. 어쨌든 오랫동안 닫아 둔 마음이 마침내 조금 열렸고, 슬픔과 기쁨, 고통과 행복이 뒤섞인 온갖 기억은 얇은 이야기책 한 권으로 변했다.\n리듬은 음유시인에게 말했다. \"재미있는 이야기는... 아닐 거예요.\"\n이번에는 리듬이 이야기를 들려주는 사람이 되었다.",
+    ContentTC = "黎瑟在水仙平原學到了很多東西。在水仙平原的這段時間，她受益匪淺。甚至連她最近慣用的這把槍，都是在水仙平原狩月人們的指導下，一點點改裝出來的。\n各種各樣的人們，組成了狩月人團體，而水仙平原給了他們一個聚集的地方，讓這些自由、散漫、野蠻生長的月石獵人，能夠一齊出現，放鬆下來，喝杯酒，隨意地聊聊天。在這樣的環境中，各種靈感和思緒劇烈地交匯、碰撞，漫天靈光如星子般散落下來，擅長聆聽的黎瑟受益匪淺，也時常抱著筆記本，主動向他們請教一些問題。\n某天，水仙平原來了一位不同尋常的客人，那是一個吟遊詩人。她見識廣博，說話也像是唱詩一樣，極其擅長講故事。黎瑟想，如果布魯斯在這裡，那一定很和對方聊得來吧，因為他們講起故事的時候，都是那麼專注，仿佛沉浸在故事的世界裡了。\n她的思緒越飄越遠。\n\n在許久之前的某個夜晚，在那個簡陋的房間裡，點著一枚珍貴的蠟燭，她和弟弟難得在夜間點上它。這是布魯斯為了慶祝：慶祝今天從姐姐那裡收到了一份禮物，一本新的童話書。在搖曳的燭光下，他們大氣都不敢出，生怕呼吸擾亂了燭火，不小心將它吹滅，浪費了來之不易的光亮。他們趴在破舊的床上，書本放在枕頭上，說話時儘可能地壓低氣息，又忍不住相視一笑，這樣實在是太傻氣了。黎瑟托著臉，聽布魯斯對自己講起書中的故事，她不像布魯斯那麼聰明，不認識那麼多的文字，反而是作為弟弟的布魯斯，把故事講給作為姐姐的黎瑟來聽。我一定是個失職的姐姐吧，黎瑟想著，不過我的弟弟很厲害，這真是太好了。\n布魯斯認識的字更多了，前段時間念書的時候還會偶爾停頓，現在已經能很流利地讀完這些蚯蚓似的小字。那些妙趣橫生的故事，其實並沒有引起她的注意力，很遺憾，她沒能聽進去。只是看著布魯斯雀躍的樣子，黎瑟的眼神就會柔和了下來，看見弟弟的快樂和成長，對她來說，才是最好的事。這已經足夠了。翻開童話書，色彩鮮艷的小兔子和小狐狸映入眼中。真好，黎瑟忍不住想著，童話世界不用工作，也不必為衣食住行發愁。黎瑟無法沉浸在那些幻想的美好世界裡，一刻也不行，對她來說，那些東西實在是太過稚氣、不現實，她寧願更多地考慮麵包的價格，想著誰家的牛奶更便宜一點……看吧，她就是這樣既沒有天賦、又很無趣的傢伙，只會想到這樣的事情。她和霧區的許多人一樣，已是疲於奔命了。喜歡故事的那個人從來都不是她，過去不是，以後也不會是。但只要布魯斯喜歡，她就會試著去多關注一點。\n黎瑟努力把自己沉浸到故事裡，聽著弟弟絮絮叨叨的話，看吧，兔子和狐狸住在一起……嗯，聽起來挺值錢的，去打獵的話……不對，不是這個。兔子正在給狐狸準備蛋糕，呃，這幅插圖……她為什麼不帶手套？這樣不會把絨毛掉進蛋糕裡嗎？不，也不對。\n黎瑟走神了。\n\n「姐姐，姐姐！」布魯斯喊道。黎瑟這才回過神來。\n「你的手……是怎麼回事？」布魯斯握住黎瑟的手腕，擔憂地看向那片淤青。\n……最近才剛剛進廠，不是很習慣，黎瑟笑了笑，從弟弟手中抽回了手。\n她沒有對布魯斯說，那是因為她親眼目睹了另一名工人的手掌，被工廠的機器捲入，失去了整條手臂，而一個人的未來被毀掉的代價，僅僅只是十五個銀幣。\n目睹血腥衝擊，黎瑟的動作慢了一點，設備的輪軸砸到了手腕，引起了流水線的短暫停工，也因此被廠主罵了一頓。一日的工錢大多被扣下，剩下的就只夠換回這一本書。只要布魯斯喜歡就足夠了，黎瑟想著。工廠的工作雖然繁重，但確是她能找到的、薪水最高的工作，她暫時不打算辭職。\n\n「明天想看什麼書？」黎瑟主動轉移了話題，對布魯斯說。\n對上姐姐倔強的眼睛，布魯斯沒有堅持追問下去，轉而說到。「姐姐，明天我不想要書。」\n「那你要什麼？」\n「我想要一瓶療傷的藥水，和一卷紗布。」\n「……」\n「好。」\n氣氛短暫的僵硬了一會兒。黎瑟敗下陣來，用手摸了摸弟弟毛茸茸的腦袋。\n「好了，我們繼續看書吧。」\n布魯斯用力點了點頭，再次捧起了那本單薄的書。\n那一夜很漫長，也很溫暖，童話書很短，但是他們翻來覆去看了很久，直到燈油燃盡才睡下。\n\n「喂，你在想什麼呢？」\n吟遊詩人睜著好奇的眼睛，發問的聲音讓黎瑟從短暫的回憶中抽離。\n「如果不介意的話，就來對我講講吧。我喜歡故事，你呢？」詩人優雅地說。\n黎瑟想說，我不是個合格的講述者，我也不擅長講故事，以前都是布魯斯講給我的，這些過去，也不該對他人提起的。可是她還沒有說話，那眼神真誠的詩人，就截斷了她的話。\n「我只是個旅客，我會帶走你的故事，也會帶走你的悲傷，你看起來可不太好呢。」詩人對她眨了眨眼。\n「啊，說起來，這裡是狩月人接委託的地方，我應該入鄉隨俗，對吧？」\n詩人豎起一根手指，抵住了自己的嘴唇。她歪著頭，看起來好奇而又天真。說出來的話，也都是些爛漫的樣子，像是一些未經修編的詩歌。真不愧是吟遊詩人，黎瑟想。\n「你願意給我講述你的故事嗎，一隻角的小姐？就當做這是一份委託。」詩人摸出了一小袋銀幣，推到了黎瑟面前，這是個慷慨的雇主。\n也許是因為她與對方素不相識，也許因為是那筆足以打動每一個人的豐厚委託金，也許是因為對方表現出的無知和不諳世事，就像是她說的那樣，她只是想聽故事……黎瑟也不知道自己是怎麼想的。總之，她封閉已久的心，終於打開了一個小小的閘門，悲傷與喜悅、痛苦與幸福，各式各樣的記憶變作一頁薄薄的故事書。\n她對吟遊詩人說，那是一個……不太有趣的故事。\n這一次，黎瑟成為了講述者。",
+    TextMapContent = "黎瑟在水仙平原学到了很多东西。在水仙平原的这段时间，她受益匪浅。甚至连她最近惯用的这把枪，都是在水仙平原狩月人们的指导下，一点点改装出来的。\n各种各样的人们，组成了狩月人团体，而水仙平原给了他们一个聚集的地方，让这些自由、散漫、野蛮生长的月石猎人，能够一齐出现，放松下来，喝杯酒，随意地聊聊天。在这样的环境中，各种灵感和思绪剧烈地交汇、碰撞，漫天灵光如星子般散落下来，擅长聆听的黎瑟受益匪浅，也时常抱着笔记本，主动向他们请教一些问题。\n某天，水仙平原来了一位不同寻常的客人，那是一个吟游诗人。她见识广博，说话也像是唱诗一样，极其擅长讲故事。黎瑟想，如果布鲁斯在这里，那一定很和对方聊得来吧，因为他们讲起故事的时候，都是那么专注，仿佛沉浸在故事的世界里了。\n她的思绪越飘越远。\n\n在许久之前的某个夜晚，在那个简陋的房间里，点着一枚珍贵的蜡烛，她和弟弟难得在夜间点上它。这是布鲁斯为了庆祝：庆祝今天从姐姐那里收到了一份礼物，一本新的童话书。在摇曳的烛光下，他们大气都不敢出，生怕呼吸扰乱了烛火，不小心将它吹灭，浪费了来之不易的光亮。他们趴在破旧的床上，书本放在枕头上，说话时尽可能地压低气息，又忍不住相视一笑，这样实在是太傻气了。黎瑟托着脸，听布鲁斯对自己讲起书中的故事，她不像布鲁斯那么聪明，不认识那么多的文字，反而是作为弟弟的布鲁斯，把故事讲给作为姐姐的黎瑟来听。我一定是个失职的姐姐吧，黎瑟想着，不过我的弟弟很厉害，这真是太好了。\n布鲁斯认识的字更多了，前段时间念书的时候还会偶尔停顿，现在已经能很流利地读完这些蚯蚓似的小字。那些妙趣横生的故事，其实并没有引起她的注意力，很遗憾，她没能听进去。只是看着布鲁斯雀跃的样子，黎瑟的眼神就会柔和了下来，看见弟弟的快乐和成长，对她来说，才是最好的事。这已经足够了。翻开童话书，色彩鲜艳的小兔子和小狐狸映入眼中。真好，黎瑟忍不住想着，童话世界不用工作，也不必为衣食住行发愁。黎瑟无法沉浸在那些幻想的美好世界里，一刻也不行，对她来说，那些东西实在是太过稚气、不现实，她宁愿更多地考虑面包的价格，想着谁家的牛奶更便宜一点……看吧，她就是这样既没有天赋、又很无趣的家伙，只会想到这样的事情。她和雾区的许多人一样，已是疲于奔命了。喜欢故事的那个人从来都不是她，过去不是，以后也不会是。但只要布鲁斯喜欢，她就会试着去多关注一点。\n黎瑟努力把自己沉浸到故事里，听着弟弟絮絮叨叨的话，看吧，兔子和狐狸住在一起……嗯，听起来挺值钱的，去打猎的话……不对，不是这个。兔子正在给狐狸准备蛋糕，呃，这幅插图……她为什么不带手套？这样不会把绒毛掉进蛋糕里吗？不，也不对。\n黎瑟走神了。\n\n“姐姐，姐姐！”布鲁斯喊道。黎瑟这才回过神来。\n“你的手……是怎么回事？”布鲁斯握住黎瑟的手腕，担忧地看向那片淤青。\n……最近才刚刚进厂，不是很习惯，黎瑟笑了笑，从弟弟手中抽回了手。\n她没有对布鲁斯说，那是因为她亲眼目睹了另一名工人的手掌，被工厂的机器卷入，失去了整条手臂，而一个人的未来被毁掉的代价，仅仅只是十五个银币。\n目睹血腥冲击，黎瑟的动作慢了一点，设备的轮轴砸到了手腕，引起了流水线的短暂停工，也因此被厂主骂了一顿。一日的工钱大多被扣下，剩下的就只够换回这一本书。只要布鲁斯喜欢就足够了，黎瑟想着。工厂的工作虽然繁重，但确是她能找到的、薪水最高的工作，她暂时不打算辞职。\n\n“明天想看什么书？”黎瑟主动转移了话题，对布鲁斯说。\n对上姐姐倔强的眼睛，布鲁斯没有坚持追问下去，转而说到。“姐姐，明天我不想要书。”\n“那你要什么？”\n“我想要一瓶疗伤的药水，和一卷纱布。”\n“……”\n“好。”\n气氛短暂的僵硬了一会儿。黎瑟败下阵来，用手摸了摸弟弟毛茸茸的脑袋。\n“好了，我们继续看书吧。”\n布鲁斯用力点了点头，再次捧起了那本单薄的书。\n那一夜很漫长，也很温暖，童话书很短，但是他们翻来覆去看了很久，直到灯油燃尽才睡下。\n\n“喂，你在想什么呢？”\n吟游诗人睁着好奇的眼睛，发问的声音让黎瑟从短暂的回忆中抽离。\n“如果不介意的话，就来对我讲讲吧。我喜欢故事，你呢？”诗人优雅地说。\n黎瑟想说，我不是个合格的讲述者，我也不擅长讲故事，以前都是布鲁斯讲给我的，这些过去，也不该对他人提起的。可是她还没有说话，那眼神真诚的诗人，就截断了她的话。\n“我只是个旅客，我会带走你的故事，也会带走你的悲伤，你看起来可不太好呢。”诗人对她眨了眨眼。\n“啊，说起来，这里是狩月人接委托的地方，我应该入乡随俗，对吧？”\n诗人竖起一根手指，抵住了自己的嘴唇。她歪着头，看起来好奇而又天真。说出来的话，也都是些烂漫的样子，像是一些未经修编的诗歌。真不愧是吟游诗人，黎瑟想。\n“你愿意给我讲述你的故事吗，一只角的小姐？就当做这是一份委托。”诗人摸出了一小袋银币，推到了黎瑟面前，这是个慷慨的雇主。\n也许是因为她与对方素不相识，也许因为是那笔足以打动每一个人的丰厚委托金，也许是因为对方表现出的无知和不谙世事，就像是她说的那样，她只是想听故事……黎瑟也不知道自己是怎么想的。总之，她封闭已久的心，终于打开了一个小小的闸门，悲伤与喜悦、痛苦与幸福，各式各样的记忆变作一页薄薄的故事书。\n她对吟游诗人说，那是一个……不太有趣的故事。\n这一次，黎瑟成为了讲述者。",
+    TextMapId = "UI_CHAR_DATA_TEXT_41030403"
+  },
+  UI_CHAR_DATA_TEXT_41030404 = {
+    ContentEN = "Rhythm had been little more than a baby herself when Blues was born, far too young to understand what any of it meant. Sometimes she would lean over his cradle and give it a tentative little push, watching the fair-skinned little baby bundled in soft blankets blink sleepily up at her. Whenever he noticed her nearby, his arms would flail and strange little sounds would tumble from his mouth, like the babble of some tiny Geniemon. However quietly Rhythm crept up, he always seemed to know she was there. Their mother said siblings had a way of sensing each other because they shared the same blood. Rhythm did not really understand what it meant to be siblings, or why sharing the same blood was supposed to matter. To her, the little creature everyone called her brother was much like the teddy bear beside her pillow: small, soft, interesting enough to look at for a while, and not much more.\n\nThen, one day, the little creature looked up at her and said, \"Sis.\"\nBlues wobbled to his feet and closed one tiny hand around Rhythm's finger. She knew that warmth. It reminded her of her mother's hand holding hers, only smaller and softer. He tipped his face up to her, all pale-blue hair, light-violet eyes and one tiny horn.\nHe looks like me.\n\nSomething changed in that moment. Blues was no longer simply something small and curious, like the teddy bear beside her pillow. He was a person, just like her.\nLater, he became someone she needed to look after. Her little brother, Blues. The family she loved more than herself.\nThrough the ordinary years they spent together — and all the days and nights after their parents died — Rhythm changed too. The little girl who had once dragged a teddy bear behind her grew into the kind of big sister Blues could depend on. Little by little, she learnt what love meant, what it meant to share blood, and what it meant to call someone family.\nAnd then, in the end, Blues — her little brother, her family — was reduced to a few words on a stone.\nThe child who had once lain in a tiny cradle now lay in a tiny grave. Above him stood a headstone like a thick book set upright. Yet there was almost nothing to read: his name, a handful of dates, a life reduced to a few short lines. A book thick in stone, impossibly thin in story — its beginning and end taken in at a single glance.\n...\nRhythm gently brushed the snow from the carving. Her fingertip rested first on Blues's birth date, then traced the short measure of his life down to another date near the middle — the day their parents had died.\nShe remembered what her parents used to tell her before leaving for work, back when Blues was still small.\n\"Look after Blues for us, all right? We're counting on you.\"\nRhythm would puff out her little chest. \"I will! I'll look after him properly.\"\n\n...\n\"I'm counting on you.\"\n\nRhythm had heard those words often since she began taking commissions.\n\n\"Leave it to me.\"\nSomeone placed their trust in her. Rhythm gave her word that she would see the job done.\n\nShe had never failed a commission she accepted.\n...\nHadn't she?\n\nShe remembered herself standing before her parents, little chest puffed out with pride, promising that she would look after Blues.\nAnd all at once, Rhythm realised.\nThe first commission of her life had not come from The Asphodel. It had been given to her long before she even knew what a commission was.\n\nAnd she had failed that first commission the day Blues joined the Legion.",
+    ContentFR = "Lorsque son petit frère Blues était né, Rhythm n’avait elle-même qu’un ou deux ans. À cet âge-là, elle ne comprenait encore presque rien au monde.\nIl lui arrivait de s’allonger près du berceau et de pousser avec curiosité cette petite barque échouée sur la terre ferme. Emmitouflé dans une couverture aussi douce qu’un nuage, le bébé au visage pâle et délicat entrouvrait alors ses yeux encore ensommeillés. Dès qu’il remarquait la présence de Rhythm, il agitait les bras en poussant des petits cris incompréhensibles qui ressemblaient à ceux d’un Géniemon.\nRhythm avait beau essayer d’approcher aussi silencieusement que possible, il finissait toujours par la remarquer.\nSa mère lui avait expliqué que seuls les frères et sœurs possédaient ce genre de lien, parce que le même sang coulait dans leurs veines. Rhythm ne comprenait pas vraiment ce que signifiait être frère et sœur. Elle ne comprenait pas davantage ce que voulait dire être liés par le sang.\nPour la Rhythm de cette époque, cet être que l’on appelait « petit frère » ressemblait surtout à l’ours en peluche posé près de son lit. Quelque chose de nouveau qu’elle regardait parfois avec curiosité.\nRien de plus.\n \n« Grande sœur. »\n \nPuis, un jour, cet être que l’on appelait « petit frère » se mit à parler.\nLe petit garçon se dressa maladroitement sur ses jambes et referma sa main autour d’un doigt de Rhythm. Cette chaleur ne lui était pas inconnue. C’était un peu comme lorsque sa mère lui tenait la main, sauf que celle-ci était beaucoup plus petite. Beaucoup plus douce.\nL’être que l’on appelait « petit frère » leva le visage vers elle. Des cheveux bleu clair. Des yeux d’un violet pâle. Et une corne d’un seul côté de la tête.\n \nIl me ressemble.\n \nÀ partir de ce jour, cet être que l’on appelait « petit frère » cessa d’être une sorte de « chose », semblable à un ours en peluche. Il devint à ses yeux un être vivant. Quelqu’un qui lui ressemblait. Puis, avec le temps, il devint « l’enfant dont je dois m’occuper ». « Mon petit frère Blues ». « La personne qui compte plus que moi-même ».\n \nRhythm avait donné bien des noms au lien qui l’unissait à Blues. Au fil des jours passés à ses côtés, de toutes ces années durant lesquelles elle avait veillé sur lui, de toutes ces nuits qui avaient suivi la mort de leurs parents... la petite fille qui autrefois jouait avec son ours en peluche était devenue une véritable grande sœur.\nQuelqu’un sur qui Blues pouvait compter. Elle avait fini par comprendre ce qu’étaient l’amour, les liens du sang et la famille. Et puis, bien plus tard...\n \nBlues était redevenu cet être que l’on appelait « petit frère ».\n \nL’être que l’on appelait « petit frère » avait quitté son petit berceau pour une petite tombe, désormais recouverte d’une lourde pierre tombale dressée à la verticale comme un livre. Un livre si épais... qui ne contenait pourtant que son nom et deux courtes lignes résumant sa vie.\nUn livre à la fois si épais et si mince. Si imposant en apparence, et pourtant si vide qu’un seul regard suffisait pour en atteindre la dernière page.\n \n...\n \nDu bout des doigts, Rhythm essuya doucement la neige qui recouvrait les dates de naissance et de décès gravées dans la pierre. Son doigt s’arrêta sur la première date. Le jour où Blues était né. Puis il glissa lentement vers l’autre extrémité, avant de s’arrêter quelque part au milieu. La moitié de la vie de Blues. C’était à peu près là que leurs parents étaient morts. Rhythm se souvenait que, lorsque Blues était encore tout petit, leurs parents lui répétaient toujours la même chose avant de partir travailler.\n \n« On compte sur toi pour Blues. »\nÀ l’époque, elle se frappait fièrement la poitrine avant de répondre :\n« Comptez sur moi ! Je vous le promets, je protégerai toujours mon petit frère ! »\n \n...\n \n« Je compte sur vous. »\nDepuis que Rhythm avait commencé à accepter des missions, elle entendait souvent ce genre de formule de la part de ses commanditaires.\n« Aucun problème. »\nC’était ainsi que se déroulaient leurs échanges. Rhythm avait tenu toutes ses promesses. Elle avait mené à bien toutes les missions qu’on lui avait confiées...\n \n...\n \n... Vraiment toutes ?\nElle repensa à ce qu’elle avait dit à sa mère ce jour-là. À cette promesse faite avec tant d’assurance, en se frappant fièrement la poitrine. Et Rhythm comprit soudain.\n \nLa toute première mission de sa vie... elle l’avait déjà ratée le jour où Blues avait rejoint la Légion.",
+    ContentJP = "ブルースが生まれた時、リズム自身も一、二歳だった。「弟」というものが何なのか、わかるはずもない。たまに揺りかごの横へ行っては、興味本位でそっと揺らす。雲みたいな布団の中で、白くて小さな赤ん坊が目を開ける。どれだけ静かに近づいても、なぜかすぐ見つかった。ブルースは手をばたつかせ、ジェネモンみたいな、まだ言葉にもならない声を上げる。母は言った。\n 「きょうだいだからわかるのよ。血がつながっているもの」\n きょうだい。血の繋がり。幼いリズムには、どちらもよくわからなかった。当時の彼女にとってブルースは、枕元のぬいぐるみと大差ない。珍しいから、つい眺めてしまう。そのくらいの存在だった。\n \n 「おねえちゃん」\n やがて、その「弟」が言葉を話した。小さな身体でよろよろ立ち上がり、リズムの指をぎゅっと握る。温かな手だった。母に手を握られた時と似ている。ただ、もっと小さくて、もっと柔らかい。顔を上げたブルースには、淡い青の髪と薄紫の瞳、それに片側だけの角があった。\n ――私に似てる。\n \n その日から、ブルースは「家にいるだけの存在」ではなくなった。自分と似ていて、笑って、泣いて、手を伸ばしてくる、一人の人になった。\n やがて呼び方も変わっていく。面倒を見なければならない子。私の弟、ブルース。そして、自分より大切な家族。両親を亡くしてからの長い時間の中で、リズムも変わった。守る。食べさせる。手を引く。叱る。心配する。ぬいぐるみを引きずっていた小さな女の子は、いつの間にか本当の「姉」になっていた。ブルースが頼っていい人になっていた。愛とは何か。血のつながりとは何か。家族とは何か。リズムは、ブルースと生きるうちに覚えた。\n それから、ずっと後になって、ブルースはまた、「弟」という言葉だけの存在になった。\n 小さな産着に包まれていた子は、小さな墓の下へ移った。その上に立つ石碑は、分厚い本を縦に置いたように見える。こんなに厚いのに、そこへ書けるのは名前と、ほんのわずかな生涯だけ。ページを開くまでもなく、最初から最後まで読めてしまう。\n ……\n リズムは墓碑の雪を指で払った。最初の数字。ブルースが生まれた日。そこからゆっくり指を滑らせる。短い生涯の、真ん中あたり。両親が亡くなったのは、その頃だった。\n まだブルースが小さかった頃。仕事へ出る前、父と母はいつも同じことを言った。\n 「ブルースをお願いね」\n 幼いリズムは、そのたび胸を張った。\n 「任せて！絶対に弟を守るから！」\n ……\n 「お願いね」\n \n 依頼を受けるようになってから、何度も聞いた言葉だ。\n \n 「わかりました」\n そう答えて、リズムは仕事を引き受ける。\n \n 受けた依頼は、きちんと最後までやる。それが彼女のやり方だった。\n \n ――全部、やり遂げてきた。\n ……\n 本当に？\n \n 墓碑を見つめたまま、リズムは昔の約束を思い出す。母から受けた、人生で最初の頼み事。\n 「ブルースをお願いね」\n \n ブルースが軍団へ向かったあの日から、この約束は永遠に果たされないものとなってしまった。",
+    ContentKR = "남동생 블루스가 태어났을 때 리듬도 한두 살밖에 되지 않아 아직 아는 게 많지 않았다. 리듬은 가끔 요람 가장자리에 기대어 뭍에 오른 작은 배 같은 요람을 호기심에 밀어 보곤 했다. 그러면 구름 같은 솜이불 속에 웅크린 뽀얗고 여린 아기가 졸음 어린 눈을 떴다. 리듬이 다가오면 아기는 팔을 휘저으며 작은 마령처럼 뜻 모를 소리를 옹알거렸다. 아무리 발소리를 죽여도 블루스는 리듬이 온 걸 알아챘다. 어머니는 남매끼리는 혈육이기 때문에 서로 통하는 게 있다고 말했다. 하지만 리듬은 남매가 무슨 뜻인지도, 혈육이라는 말이 무슨 뜻인지도 잘 몰랐다. 그때 리듬에게 남동생이라는 존재는 침대맡의 곰 인형과 비슷했다. 신기해서 몇 번 더 바라보는 정도, 딱 그뿐이었다.\n\n\"누나.\" 남동생이라는 존재도 어느새 말을 하기 시작했다.\n자그마한 아이는 비틀거리며 일어나 리듬의 손가락을 붙잡았다. 손끝에 전해지는 온기는 낯설지 않았다. 어머니가 리듬의 손을 잡아 줄 때와 비슷했지만, 훨씬 작고 부드러웠다. 남동생이라는 존재가 고개를 들자 옅은 파란색 머리카락과 연보라색 눈, 한쪽에 난 뿔이 한꺼번에 눈에 들어왔다.\n나랑 닮았어.\n\n그날부터 남동생이라는 존재는 더 이상 곰 인형 같은 '물건'이 아니라, 자신과 닮은 살아 있는 존재로 보이기 시작했다.\n그 뒤로는 '돌봐야 할 아이', '내 남동생 블루스', '나보다 더 소중한 가족'...\n리듬은 블루스와 자신의 관계에 수많은 이름을 붙였다. 날마다 블루스의 곁을 지키며 살아가고, 부모가 세상을 떠난 뒤에도 수많은 낮과 밤을 함께 보내는 동안 곰 인형을 끌고 다니던 어린 리듬은 진짜 누나가 되어 갔다. 블루스가 기댈 수 있는 사람이 되었고, 사랑이 무엇인지, 혈육이라는 말이 무엇인지, 가족이 무엇인지도 알게 되었다.\n좀 더 시간이 지난 후, 블루스는 다시 '남동생이라는 존재'로 돌아가 버렸다.\n'남동생이라는 존재'는 작은 포대기를 떠나 작은 무덤 속으로 자리를 옮겼다. 그 위로는 마치 세워 둔 책처럼 두꺼운 비석이 덮였다. 이름, 그리고 단 두 줄로 마무리되는 생애만을 기록한 게 전부인, 눈길 한 번에 결말까지 눈에 들어올 만큼 두꺼우면서도 한없이 얇으며 겉만 그럴듯한 그런 책.\n......\n리듬은 태어난 날과 세상을 떠난 날이 새겨진 자리에 쌓인 눈을 손가락으로 가볍게 닦아 냈다. 가장 앞에 새겨진 숫자에 손가락을 짚었다. 블루스가 태어난 날이었다. 쓱 훑어 올라가던 손가락이 이내 중간쯤에서 멈춰 섰다. 블루스의 짧은 삶이 절반쯤 지났을 무렵, 바로 부모님이 돌아가신 때였다.\n블루스가 어렸을 때, 부모님이 일하러 나가기 전이면 늘 리듬에게 남기던 말이 있었다.\n\"블루스를 부탁할게.\"\n그럴 때면 리듬은 자신만만하게 \"저만 믿으세요! 제가 꼭 동생을 지켜 줄게요. 약속해요!\"라고 대답하곤 했다.\n\n......\n\"잘 부탁드려요.\"\n\n리듬이 의뢰를 받기 시작한 뒤로 자주 듣게 된 의례적인 말이었다.\n\n\"문제없어요.\"\n이것이 리듬과 의뢰인 사이에 오가는 대화였다.\n\n리듬은 약속한 의뢰는 모두 완수해 냈다.\n......\n...정말 빠짐없이 모두 완수한 게 맞았나?\n\n그때 자신이 어머니에게 자신만만하게 했던 약속이 떠올랐다.\n리듬은 깨달았다. 자기 인생의 첫 번째 의뢰는...\n\n블루스가 군단에 발을 들인 그 순간, 이미 실패해 버렸다는 사실을.",
+    ContentTC = "弟弟布魯斯出生的時候，黎瑟也只有一兩歲的年紀，很多事情懵懵懂懂。她偶爾會趴在搖籃邊上，好奇地推著這艘岸上的小船，看白淨稚嫩的嬰兒蜷縮在雲朵似的棉被裡，睜開朦朧的睡眼。他發現黎瑟的到來，會揮舞著手臂，咿咿呀呀地，發出魔靈似的、不成體系的叫聲。黎瑟發現，自己把腳步藏得再好，也會被他發現。母親說，這是兄弟姊妹間才有的感應，因為他們血脈相連。黎瑟不太懂兄弟姊妹是什麼，也不太懂何為血脈相連。對於那時候的黎瑟來說，名為弟弟的存在就像是她床頭的玩具熊，她會出於新鮮感多看幾眼，也就僅此而已了。\n\n「姐姐。」名為弟弟的存在開始說話了。\n那個小小的男孩，搖搖晃晃地站來起來，握住了黎瑟的手指，這種溫熱的觸感黎瑟並不陌生，就像是母親握著她的手，只是這雙手要更小，更柔軟。名為弟弟的存在仰起了臉，淡藍色的頭髮、淺紫色的眼睛、與單邊的角一齊映入眼帘。\n他好像我。\n\n從那一天起，名為弟弟的存在，從一個玩具熊般的「東西」，變成了一個與自己相似的、有生命的個體。\n再之後，「需要照顧的孩子」、「我的弟弟布魯斯」、「比我自己更重要的家人」……\n她曾以無數種頭銜，定義自己和布魯斯的關係，在那日復一日的陪伴與堅守中，在那父母死去後的無數個日夜裡，她也從一個拉扯著玩具熊的小女孩，變成了一個真正的姐姐，成為了讓布魯斯可以依靠的存在。她明白了什麼是愛、是血脈、是家人。\n再後來，布魯斯又變回了那個名為弟弟的存在。\n名為弟弟的存在從小小的襁褓裡，搬進小小的墳塋中，蓋著厚厚的石碑，就像是一本豎起來的書。這麼厚的一本書，卻只寫得下他的姓名、兩行簡短的生平。這本書，那麼厚又那麼薄，那麼徒有其表，叫人看一眼就讀到了頭。\n……\n黎瑟用手指輕輕揩去生卒年刻印上的雪，她的手指按在最前端的數字上，這一天，是布魯斯出生的那天。旋即，又向後滑去，滑到中間的位置，布魯斯的人生走過一半，這裡，是父母死去的時間。\n她記得在布魯斯還小的時候，父母去上班前，總是會對她說一句。\n「布魯斯就拜託你了。」\n她那時候總是拍著胸口回答：「請交給我！我保證，一定會保護好弟弟的。」\n\n……\n「拜託你了。」\n\n自從黎瑟開始承接委託後，經常能聽見這樣的客套話。\n\n「沒問題。」\n這是她和委託人之間的對話。\n\n她做到了所有承諾的委託——\n……\n……真的是所有嗎？\n\n回想起那時她對母親說過話、拍著胸脯做出的保證。\n黎瑟猛地意識到，她人生中的第一個委託……\n\n在布魯斯走向軍團的那一刻，就已經失敗了。",
+    TextMapContent = "弟弟布鲁斯出生的时候，黎瑟也只有一两岁的年纪，很多事情懵懵懂懂。她偶尔会趴在摇篮边上，好奇地推着这艘岸上的小船，看白净稚嫩的婴儿蜷缩在云朵似的棉被里，睁开朦胧的睡眼。他发现黎瑟的到来，会挥舞着手臂，咿咿呀呀地，发出魔灵似的、不成体系的叫声。黎瑟发现，自己把脚步藏得再好，也会被他发现。母亲说，这是兄弟姊妹间才有的感应，因为他们血脉相连。黎瑟不太懂兄弟姊妹是什么，也不太懂何为血脉相连。对于那时候的黎瑟来说，名为弟弟的存在就像是她床头的玩具熊，她会出于新鲜感多看几眼，也就仅此而已了。\n\n“姐姐。”名为弟弟的存在开始说话了。\n那个小小的男孩，摇摇晃晃地站来起来，握住了黎瑟的手指，这种温热的触感黎瑟并不陌生，就像是母亲握着她的手，只是这双手要更小，更柔软。名为弟弟的存在仰起了脸，淡蓝色的头发、浅紫色的眼睛、与单边的角一齐映入眼帘。\n他好像我。\n\n从那一天起，名为弟弟的存在，从一个玩具熊般的“东西”，变成了一个与自己相似的、有生命的个体。\n再之后，“需要照顾的孩子”、“我的弟弟布鲁斯”、“比我自己更重要的家人”……\n她曾以无数种头衔，定义自己和布鲁斯的关系，在那日复一日的陪伴与坚守中，在那父母死去后的无数个日夜里，她也从一个拉扯着玩具熊的小女孩，变成了一个真正的姐姐，成为了让布鲁斯可以依靠的存在。她明白了什么是爱、是血脉、是家人。\n再后来，布鲁斯又变回了那个名为弟弟的存在。\n名为弟弟的存在从小小的襁褓里，搬进小小的坟茔中，盖着厚厚的石碑，就像是一本竖起来的书。这么厚的一本书，却只写得下他的姓名、两行简短的生平。这本书，那么厚又那么薄，那么徒有其表，叫人看一眼就读到了头。\n……\n黎瑟用手指轻轻揩去生卒年刻印上的雪，她的手指按在最前端的数字上，这一天，是布鲁斯出生的那天。旋即，又向后滑去，滑到中间的位置，布鲁斯的人生走过一半，这里，是父母死去的时间。\n她记得在布鲁斯还小的时候，父母去上班前，总是会对她说一句。\n“布鲁斯就拜托你了。”\n她那时候总是拍着胸口回答：“请交给我！我保证，一定会保护好弟弟的。”\n\n……\n“拜托你了。”\n\n自从黎瑟开始承接委托后，经常能听见这样的客套话。\n\n“没问题。”\n这是她和委托人之间的对话。\n\n她做到了所有承诺的委托——\n……\n……真的是所有吗？\n\n回想起那时她对母亲说过话、拍着胸脯做出的保证。\n黎瑟猛地意识到，她人生中的第一个委托……\n\n在布鲁斯走向军团的那一刻，就已经失败了。",
+    TextMapId = "UI_CHAR_DATA_TEXT_41030404"
+  },
+  UI_CHAR_DATA_TEXT_41030405 = {
+    ContentEN = "On her last visit to Blues's grave before leaving Icelake, Rhythm brought two bouquets.\nOne was for Blues. The other was for a friend of his she had never met: Parsifal, whose name she had discovered while investigating the 6th Legion's recruitment lists. She left the second bouquet beside Blues's grave and asked him to pass it on to Parsifal when they met.\nMaybe the two of them will cross the Misty Sea together.\nThis time, she noticed two slender green shoots beside the grave. Surprised, Rhythm crouched down for a closer look. The shoots had pushed through the frozen earth and pierced the snow, impossibly alive against all that white. Even here, some plants refused to yield to the cold.\nWhat sort of flowers would they bear?\nRhythm's gaze softened before she realised it. Looking at the two shoots side by side, she found herself thinking of two friends who had seen each other through the worst of it.\n\"Icelake really is too cold.\" She carefully cleared the snow from around them. \"If you'd grown in the south, you probably wouldn't have had to struggle so hard just to take root. Still... Icelake has its good points too. For example...\"\nSnow began to fall.\nRhythm held out her hand and caught a flake.\n\"For example, even snow can feel warm sometimes. Can't it?\"\n\n\"I'm leaving. I probably won't be able to visit again for a while,\" she told the headstone.\n\"By the time I come back, I hope you'll both have crossed the Misty Sea... and begun new lives.\"\nBefore she left, she placed a diary beside the grave.\n\n3 Dec\nResigned from the Security Bureau. It was not the right place for me. Next: take commissions for a living.\n\n4 Dec\nBlues, what should I do?\n...I do not think I deserve to live. When this commission is complete, I will go to you. I will not leave you to cross the Misty Sea alone.\n\n20 Dec\nSpent today tidying the home Blues and I used to share. Housework helps me relax. It also leaves everything neat and orderly.\nBlues once told me I should find a hobby. I said I liked housework. He said that did not count.\nThen what does count as a hobby?\n\n22 Dec\nDropped my harmonica a few days ago and broke it. Bought a new one today.\n\n24 Dec\nTried to make mushroom soup. Boiled the pot dry by mistake. Fortunately, nothing caught fire.\n\n30 Dec\nOne of the Phoxhunters at The Asphodel offered me wine. I declined, so she bought me juice instead.\nI did not know taverns served juice... No wonder this one is so popular.\n\n1 Jan\nReceived a large commission fee. Happy.\n\n2 Jan\nAsked a few Phoxhunters at The Asphodel with experience in machinery to help with my new gun. They are remarkable... I am not even a Phoxhunter, yet they were willing to share everything they knew with me.\nI will not forget their kindness.\nThe Phoxhunters who have helped me recently are listed below.\nAlia Wood — Weapon modification (Taught me the basics. After the adjustments, I can channel my electrical current through the gun.)\nEthan Harris — Cooking (Since learning from him, I have not made a single pot explode.)\nSophia Klein — Social skills (Taught me how to make friends. Unfortunately, she is busy and rarely comes to the tavern.)\nCharlotte Ross — Hand-to-hand combat (Taught me several techniques. She appears to be a former soldier.)\n...\nCamilla Scarlet — Life advice... perhaps? (I am not sure whether this counts. Talking to Ms Camilla always puts me at ease. She has helped me in too many ways to list here...)\n\n8 Jan\nSaw a play with Rae.\nI still did not understand much of it, but I will keep trying. Rae said I should not work so hard at something I was supposed to be doing for fun. I disagree. If something is worth doing, it is worth doing properly.\nTook notes on the play. I think I understand it a little better now.\n\n12 Jan\nI have made my decision.\nI am going to take care of some things. I will also look for a friend and for {性别：his|her} sister.\nI know what I have to do now, Blues.\nThe Legion's crimes extend far beyond Icelake. I will do everything in my power to prevent more people from suffering the same fate.\nPerhaps this is what I should live for.\n\nRhythm lowered her head and carefully wiped the dirt and snow from the headstone with her handkerchief. She cleaned every carved letter and date until no trace of grime remained.\nWhen she was finished, she sat down beside the grave and drew her knees to her chest. For a while, she simply stared ahead. Perhaps she thought of many things. Perhaps she thought of nothing at all. Thoughts and memories came and went without ever quite settling. Eventually, Rhythm stood. Her legs had gone numb, so she stamped her feet until the feeling returned.\nThe headstone came up to her waist, about the height of a small child. Whenever she spoke to them, she had to bend down.\nRhythm rested a hand on the stone. It was cool beneath her palm, yet somehow not as cold as she expected. Perhaps it still held a little of the day's pale sunlight. The snow had only just begun to fall, and Icelake had enjoyed one of its rare bright days. She ran her hand gently over the top of the stone, almost as though smoothing a child's hair.\n\"Blues, and... Parsifal.\"\n\"May your journey together across the Misty Sea be peaceful.\"\n\"Goodbye, Blues. Goodbye, Parsifal.\"",
+    ContentFR = "La dernière fois que Rhythm vint se recueillir sur la tombe de Blues, elle apporta deux bouquets de fleurs.\nLe premier était pour Blues. Quant au second, elle le confia à son petit frère, en lui demandant de le remettre à cet ami qu’elle n’avait jamais rencontré : Parsifal. C’était en enquêtant sur les listes de recrutement de la VIᵉ Légion qu’elle avait découvert son nom. Sur le chemin du retour à travers la Mer du Silence... est-ce qu’ils marcheront ensemble ?\nCette pensée traversa l’esprit de Rhythm.\n \nCe jour-là, lorsqu’elle arriva devant la tombe, elle remarqua deux petites pousses qui sortaient de terre. Rhythm eut un léger mouvement de surprise. Elle s’accroupit avec précaution, se penchant pour observer de plus près ces rares touches de verdure. Leurs tiges frêles avaient traversé le sol gelé et percé la couche de neige. Elles dégageaient une vitalité qui semblait presque étrangère à Givrelac. Même sur cette terre glaciale, certaines plantes refusaient donc de céder. Rhythm se demanda quelles fleurs elles finiraient par donner. Son regard s’adoucit inconsciemment.\nEn contemplant ces deux jeunes pousses, elle avait presque l’impression de voir ces deux amis qui s’étaient soutenus l’un l’autre.\n \nAh... Givrelac est vraiment trop froide.\n \nAvec précaution, elle écarta la neige accumulée autour des plantes et la repoussa un peu plus loin.\nSi vous aviez poussé dans le Sud, vous auriez certainement eu la vie plus facile, non ?\nMais Givrelac a aussi ses bons côtés. Par exemple...\nIl se mit à neiger. Rhythm tendit la main et recueillit un flocon dans sa paume.\nPar exemple... parfois, même la neige peut être chaleureuse. Pas vrai ?\n \n« Je vais partir. Je ne pourrai probablement pas revenir vous voir avant quelque temps », dit-elle aux pierres tombales.\n« La prochaine fois que je reviendrai, vous aurez sûrement... déjà traversé la Mer du Silence et commencé une nouvelle vie. »\n \nAvant son départ, elle laissa derrière elle un journal.\n \n3 décembre\nJ’ai quitté mon travail au Bureau de la Sécurité. Cet endroit ne me convient plus. À partir de maintenant, je vais accepter quelques missions pour gagner de quoi vivre.\n \n4 décembre\nBlues, qu’est-ce que je dois faire ?\n...\nJ’ai l’impression de ne pas mériter d’être en vie. Quand j’aurai terminé cette mission, j’irai te rejoindre. Je ne te laisserai pas traverser seul la Mer du Silence.\n \n20 décembre\nAujourd’hui, j’ai rangé un peu notre maison, à Blues et moi. Je me suis rendu compte que faire le ménage m’aide à me détendre. Et en plus, la maison devient parfaitement bien rangée.\nBlues me disait autrefois que je devrais essayer de me trouver davantage de loisirs. Je lui avais répondu que j’aimais faire le ménage, mais il m’avait dit que ça ne comptait pas.\nAlors, qu’est-ce qui compte comme loisir ?\n \n22 décembre\nIl y a quelques jours, mon harmonica s’est cassé en tombant. Aujourd’hui, j’en ai acheté un nouveau.\n \n24 décembre\nJ’ai essayé d’apprendre à préparer une soupe aux champignons. J’ai accidentellement laissé la casserole chauffer jusqu’à ce qu’il ne reste plus rien dedans. Heureusement, je n’ai pas déclenché d’incendie.\n \n30 décembre\nUne Chasseuse de Phoxène des Asphodèles a voulu m’offrir un verre d’alcool. J’ai refusé, alors elle m’a offert un jus de fruits à la place. Je ne pensais pas qu’une taverne pouvait aussi servir des jus de fruits...\nJe comprends mieux pourquoi cet endroit est aussi populaire.\n \n1er janvier\nJ’ai reçu une grosse récompense pour une mission. Je suis contente.\n \n2 janvier\nPour ma nouvelle arme, j’ai demandé conseil aux Chasseurs de Phoxène des Asphodèles qui s’y connaissent en mécanique. Ces vétérans sont vraiment impressionnants...\nJe ne suis même pas une Chasseuse de Phoxène, et pourtant ils ont accepté de m’enseigner tout ce qu’ils savaient. Je n’oublierai pas ce qu’ils ont fait pour moi.\n \nVoici la liste des Chasseurs de Phoxène qui m’ont aidée pendant cette période :\nAlia Wood — Modification mécanique\n(Mon enseignante pour la modification d’armes. Grâce aux changements apportés, mes courants électriques sont désormais compatibles avec mon arme à feu.)\n \nEthan Harris — Cuisine\n(Mon professeur de cuisine. Depuis que j’apprends avec lui, je ne fais plus exploser mes casseroles.)\n \nSophia Klein — Relations sociales\n(Mon enseignante pour apprendre à me faire des amis. Le seul problème, c’est qu’elle est très occupée et vient rarement aux Asphodèles.)\n \nCharlotte Ross — Combat rapproché\n(Mon enseignante pour le combat au corps à corps. Apparemment, c’est une ancienne militaire.)\n \n...\n \nCamilla Scarlet — Vie quotidienne ?\n(Je ne sais pas si je dois vraiment la mettre dans cette catégorie. Discuter avec Madame Camilla m’aide toujours à me détendre. Elle m’a apporté beaucoup de choses qu’il est difficile de résumer simplement...)\n \n8 janvier\nJe suis allée voir une pièce de théâtre avec Rae. Je n’ai toujours pas vraiment compris, mais je vais faire des efforts.\nRae m’a dit que je n’avais pas besoin de faire autant d’efforts pour ce genre de choses. Je ne suis pas d’accord. Peu importe ce qu’on fait, il faut toujours donner le meilleur de soi-même. J’ai pris quelques notes sur le théâtre.\nJe crois que je commence un peu à comprendre.\n \n12 janvier\nJ’ai pris ma décision. Je vais partir m’occuper de certaines choses. J’en profiterai pour rechercher {性别:un ami|une amie}... ainsi que sa sœur.\nJe sais maintenant ce que je dois faire, Blues. Les atrocités commises par la Légion ne se limitent pas à Givrelac. Je ferai tout ce qui est en mon pouvoir pour empêcher d’autres tragédies de se produire.\nPeut-être... Peut-être est-ce là le sens de ma vie.\n \nRhythm baissa la tête et, à l’aide d’un mouchoir, nettoya méticuleusement la poussière et la neige qui recouvraient les pierres tombales. Elle passa soigneusement sur chaque rainure où avaient été gravés leurs noms et les quelques lignes racontant leur vie, jusqu’à ce qu’il n’y reste plus la moindre trace de saleté. Lorsqu’elle eut terminé, elle s’accroupit devant les tombes et ramena ses genoux contre elle.\nElle resta ainsi un moment, le regard perdu.\nPeut-être pensait-elle à énormément de choses.\nPeut-être ne pensait-elle à rien.\n \nLes pensées affluaient puis se retiraient. Les souvenirs tombaient comme des flocons de neige avant de fondre sur le rebord d’une fenêtre. Rhythm ignorait depuis combien de temps elle était restée ainsi lorsqu’elle finit enfin par se relever. Ses jambes s’étaient légèrement engourdies. Elle tapa quelques fois du pied contre le sol jusqu’à retrouver leur légèreté.\nLes pierres tombales arrivaient à peu près à la hauteur de sa taille, comme de jeunes enfants. Chaque fois qu’elle leur parlait, elle devait se pencher.\nRhythm posa une main sur la pierre.\nMalgré sa froideur, elle lui parut étrangement tiède. Peut-être parce qu’il n’avait neigé qu’un court instant. Aujourd’hui était l’une de ces rares journées ensoleillées à Givrelac.\nElle caressa doucement le sommet des pierres, comme si elle passait la main sur leurs têtes.\nL’expression de Rhythm s’adoucit encore.\n \n« Blues. Et... Parsifal. »\n« Je vous souhaite un voyage paisible à travers la Mer du Silence. »\n« Au revoir, Blues. Au revoir, Parsifal. »",
+    ContentJP = "ブルースの墓を訪れるのも、しばらくはこれが最後になる。リズムは花束を二つ持ってきた。\n 一つはブルースへ。もう一つは、会ったことのない友人――パシファルへ。第六軍団の徴集名簿を調べる中で、その名前を知った。\n ニヴルヘイムへ向かう道で、二人は一緒に歩いているだろうか。そんなことを考える。\n 墓のそばには、小さな芽が二つ出ていた。リズムは足を止め、しゃがみ込む。細い茎が凍った土を割り、雪を押しのけている。こんな寒い場所でも、芽を出すものがある。どんな花が咲くのだろう。二枚の若葉を見ていると、不思議とブルースとパシファルを思い出した。\n 「……アイスレイク城は、やっぱり寒いですね」\n 芽の周りの雪を、傷つけないようそっと払う。\n 南なら、もっと簡単に育ったのかもしれない。けれど、この街にだって悪いことばかりではない。たとえば――\n 雪が降り始めた。\n リズムは手のひらを上へ向け、一片を受け止める。\n 「雪だって、たまには暖かいでしょう？」\n それから墓碑へ向き直った。\n \n 「もう行きます。しばらくは、会いに来られません」\n 「次に戻る頃には……二人とも、ニヴルヘイムを渡りきっているといいですね」\n \n 旅立つ前、リズムは一冊の日記を残した。\n \n 12月3日\n 治安官を辞めた。この仕事は、もう私には続けられない。しばらくは依頼を受けて、生活費を稼ぐことにする。\n \n 12月4日\n ブルース。私は、どうしたらいいんだろう。\n ……生きていていいのか、わからない。今受けている依頼を終えたら、あなたのところへ行こうと思う。ニヴルヘイムまで、一人では歩かせない。\n \n 12月20日\n 今日は、ブルースと暮らしていた家を片づけた。家事をしていると、少し落ち着く。部屋もきれいになる。\n 前にブルースから「もっと趣味を見つけた方がいい」と言われた。家事が好きだと答えたら、それは趣味ではないらしい。\n では、何なら趣味なんだろう。\n \n 12月22日\n 少し前にハーモニカを壊した。今日、新しいものを買った。\n \n 12月24日\n きのこスープを作った。気づいたら鍋の水分が全部なくなっていた。火事にならなくてよかった。\n \n 12月30日\n アスフォデロスの月狩り人に酒を勧められたので断った。代わりにジュースを出してくれた。酒場にジュースまであるとは知らなかった。人気がある理由が少しわかった。\n \n 1月1日\n 依頼料をたくさんもらった。うれしい。\n \n 1月2日\n 新しい銃のことで、アスフォデロスの機械に詳しい月狩り人たちに教えてもらった。私は月狩り人でもないのに、皆さん惜しまず教えてくれる。\n ありがたい。この恩は忘れない。\n 以下、最近お世話になった月狩り人の一覧。\n ・アリア・ウッド――機械改造\n 武器改造の先生。教わったおかげで、私の電流を銃器にも合わせられるようになった。\n ・イーサン・ハリス――料理\n 料理の先生。教わってから、鍋を爆発させていない。\n ・ソフィア・クライン――社交\n 友達の作り方を教えてくれた先生。忙しいらしく、あまりアスフォデロスに来ないのが残念。\n ・シャーロット・ロス――体術\n 近接格闘の先生。退役軍人だったらしい。\n ……\n ・カミラ・スカーレット――生活……？\n これを一項目にしていいのかは、よくわからない。けれど話していると気持ちが楽になる。カミラさんに助けてもらったことは、短くまとめるのが難しい。\n \n 1月8日\n レイと芝居を観に行った。\n やっぱり、まだよくわからなかった。もう少し勉強しようと思う。レイには「そういうものは頑張って理解しなくてもいい」と言われた。それは違うと思う。何事も、やるならきちんと取り組むべきだ。\n 芝居についてメモを取った。少しはわかってきた気がする。\n \n 1月12日\n 決めた。\n これから、やるべきことをやる。それと、友人の行方と、{性别：彼|彼女}の姉を探す。\n どうすればいいのか、やっとわかったよ。ブルース。\n 帝国軍の悪事は、アイスレイク城だけで起きているわけではない。できる限り、同じ悲劇を止める。たぶん、それが今の私が生きる理由なんだと思う。\n \n 日記を置いたあと、リズムは墓碑についた雪と埃を、ハンカチで丁寧に拭った。名前も、生没年も、刻まれた溝を一つずつなぞるようにきれいにしていく。\n 終わると、その場にしゃがんで膝を抱えた。しばらく何もせずにいる。いろいろ考えていたような気もするし、何も考えていなかったような気もした。浮かんだ記憶は、雪みたいに来て、すぐ消える。どれくらい経ったのか。ようやく立ち上がると、足が少し痺れていた。何度かその場で足踏みをする。\n 墓碑は子どもの背丈ほどしかない。話しかけようとすると、自然に少し身をかがめることになる。リズムは石の上に手を置いた。雪がすぐにやんで、久しぶりに空が晴れたせいだろうか。冷たいはずなのに、今日はどこか温かく感じられた。そのまま、二人の頭を撫でるように墓碑の上をそっとなでる。\n 「ブルース。それから……パシファル」\n リズムは優しい表情で言った。\n 「二人の旅が、どうか穏やかなものでありますように」\n 「さようなら、ブルース。さようなら、パシファル」",
+    ContentKR = "블루스의 묘를 마지막으로 찾은 날, 리듬은 꽃 두 다발을 가져갔다.\n한 다발은 블루스에게 주고, 다른 한 다발은 한 번도 만나지 못한 친구 파르지팔에게 대신 전해 달라며 블루스에게 맡겼다. 파르지팔은 제6군단의 징집 명단을 조사하다가 알게 된 이름이었다.\n둘이 함께 안개의 바다로 향하고 있을까?\n그날 다시 묘를 찾았을 때, 그 앞에 새싹 두 포기가 고개를 내밀고 있었다. 리듬은 조금 놀라 발뒤꿈치를 들고 쪼그려 앉아 허리를 숙인 뒤, 어렵게 돋아난 새싹을 찬찬히 살폈다. 가느다란 줄기가 얼어붙은 땅과 쌓인 눈을 뚫고 올라와, 아이스레이크 시티에서는 좀처럼 볼 수 없는 생기를 띠고 있었다. 이렇게 추운 곳에서도 꿋꿋이 자라는 식물이 있구나. 어떤 꽃이 피려나? 새싹을 바라보던 리듬의 눈빛도 한결 부드러워졌다. 갓 돋은 잎 두 장을 보니 서로 의지하던 두 친구가 떠올랐다. 아, 역시 아이스레이크 시티는 너무 추워. 리듬은 새싹 주변에 쌓인 눈을 조심스레 걷어 멀찍이 치웠다. 너희가 남쪽에서 자랐다면 이렇게 힘들지는 않았겠지? 그래도 아이스레이크 시티에도 좋은 점은 있어. 예를 들면...\n눈이 내렸다.\n리듬은 손을 내밀어 눈송이 하나를 받았다.\n예를 들면, 눈도 가끔은 따뜻하잖아. 그렇지?\n\n\"나 이제 떠나. 당분간은 너희 보러 오기 힘들 것 같아.\"\n\"다음에 돌아왔을 때쯤이면 너희는 분명... 안개의 바다를 건너 새 삶을 맞이했겠지.\"\n떠나기 전, 리듬은 일기장 한 권을 남겼다.\n\n12월 3일\n치안관 일을 그만뒀다. 치안서는 나와 맞지 않는다. 앞으로는 의뢰를 받아 받은 돈으로 생활할 생각이다.\n\n12월 4일\n블루스, 나는 어떻게 해야 할까?\n...나는 살아 있을 자격이 없는 것 같아. 이번 의뢰만 끝내고 네 곁으로 갈게. 너 혼자 안개의 바다에 가게 두진 않을 거야.\n\n12월 20일\n오늘은 우리 남매의 집을 정리했다. 집안일을 하고 있으면 마음이 편해지는 데다 집도 말끔해져서 좋다.\n예전에 블루스가 좋아하는 일을 좀 찾아보라고 했는데, 집안일을 좋아한다고 대답했더니 그건 취미가 아니라고 했다.\n그럼 뭐가 취미일까?\n\n12월 22일\n며칠 전에 하모니카를 떨어뜨려 망가뜨렸다. 오늘 새로 하나 샀다.\n\n12월 24일\n버섯 수프를 끓여 봤다가 실수로 국물이 다 졸아 버렸다. 그래도 불이 나지는 않아서 다행이다.\n\n12월 30일\n아스포델의 월석 사냥꾼 한 명이 술을 사 주겠다고 해서 거절했더니, 이번에는 주스를 사 줬다.\n술집에 주스까지 있을 줄은 몰랐다... 그래서 아스포델이 인기가 많은가 보다.\n\n1월 1일\n의뢰 하나를 마치고 큰돈을 받았다. 기쁘다.\n\n1월 2일\n지금 쓰는 총을 개조할 때 아스포델에서 기계를 잘 다루는 월석 사냥꾼들에게 조언을 구했다. 선배들은 정말 대단하다... 나는 월석 사냥꾼도 아닌데 아는 걸 아낌없이 가르쳐 줬다.\n이 은혜는 잊지 말아야지.\n그동안 나를 도와준 월석 사냥꾼들의 명단을 적어 둔다.\n아리아 우드: 기계 개조 지도(무기 개조 선생님. 덕분에 이제 총에도 내 전류를 활용할 수 있다.)\n에단 해리스: 요리 지도(요리 선생님. 덕분에 요리하다 냄비를 망가뜨리는 일은 없어졌다.)\n소피아 클라인: 사교 지도(친구 사귀기 선생님. 아쉬운 점이라면 너무 바빠서 아스포델에 자주 오지 않는다는 정도다.)\n샬롯 로스: 체술 지도(근접 격투 선생님. 전역한 군인인 것 같다.)\n......\n카밀라 스칼렛: 생활 지도?(생활 지도라고 해야 할지 모르겠다. 카밀라 씨와 이야기하면 늘 마음이 편해진다. 딱 하나만 꼽기 어려울 만큼 여러모로 많은 도움을 받았다...)\n\n1월 8일\n레이 씨와 함께 연극을 보러 갔다.\n아직 연극은 잘 모르겠지만 계속 노력해 볼 생각이다. 레이 씨는 이런 일까지 그렇게 애쓸 필요는 없다고 했지만, 나는 아니라고 생각한다. 무슨 일이든 최선을 다해야 한다.\n연극을 보면서 몇 가지 메모를 해 보니 조금은 알 것 같다.\n\n1월 12일\n결심했다.\n앞으로 해야 할 일을 정했다. 친구 한 명의 행방도 알아보고, {性别:그 친구의 누나|그 친구의 언니}도 찾아볼 생각이다.\n이제 어떻게 해야 할지 알겠어, 블루스.\n군단의 악행은 아이스레이크 시티에서만 벌어지는 일이 아니다. 더는 같은 비극이 생기지 않도록 내가 할 수 있는 모든 일을 다하겠다.\n어쩌면 비극을 막으며 살아가는 일이 내 삶의 의미인지도 모른다.\n\n리듬은 고개를 숙이고 손수건으로 묘비에 쌓인 먼지와 눈을 꼼꼼하게 닦았다. 이름과 생애가 새겨진 홈 사이까지 하나하나 훔쳐 내고 나서야 손을 멈췄다.\n묘비를 다 닦은 리듬은 그 앞에 쪼그려 앉아 무릎을 끌어안고 한동안 멍하니 시간을 보냈다. 머릿속에는 온갖 생각이 밀려왔다가 사라지기를 반복하다가, 어느 순간 텅 비어 버렸다. 기억도 창턱에 내려앉은 눈처럼 하나둘 녹아 사라졌다. 얼마나 시간이 흘렀을까. 몸을 일으켜 저린 다리를 가볍게 움직이자, 감각이 돌아오며 기분이 한결 가뿐해졌다.\n묘비는 어린아이 키만 해서 리듬의 허리쯤에 닿았다. 그래서 블루스와 파르지팔에게 말을 걸 때면 자연스럽게 허리를 숙이게 됐다. 리듬은 몸을 숙인 채 묘비에 손을 얹었다. 눈이 잠깐 내렸을 뿐, 오늘은 보기 드물게 맑은 날이라서인지, 차가운 돌인데도 뜻밖에 손끝에서 온기가 느껴졌다. 리듬은 두 사람의 머리를 쓰다듬는 것처럼, 한결 부드러운 표정으로 묘비 맨 위를 어루만졌다.\n\"블루스, 그리고... 파르지팔.\"\n\"안개의 바다로 가는 길이 편안하길 바랄게. 그럼 안녕, 블루스. 잘 가, 파르지팔.\"",
+    ContentTC = "最後一次為布魯斯掃墓的時候，黎瑟帶了兩束花。\n一束給布魯斯，另一束委託給布魯斯，希望他代為轉交給那素未謀面的朋友，帕西法爾——在對第六軍團徵召名單的調查中，她得知了那位朋友的名字。\n在霧海的歸途中，他們會一起走嗎？黎瑟這樣想著。\n這一天，她再來墓前的時候，發現那裡冒出了兩簇尖芽，黎瑟有點驚訝，她踮起腳尖蹲下身，彎下腰仔細地打量著那來之不易的綠色。細弱的根莖鑽出凍土、衝破了雪面，散發著一點不屬於冰湖城的欣欣向榮。在這寒冷的地界，也會生長出不願意屈服的植物，不知道會開出怎樣的花朵呢？黎瑟想著，眼神不自覺地柔和了許多，看見這兩枚新生的草葉，就仿佛看見了那對互相扶持的朋友。啊，冰湖城還是太冷了。她小心地剝開了植物旁邊的雪，拂到了遠處。如果你們生長在南方，一定就不會這麼艱辛了吧？但冰湖城也有冰湖城的好處，比如說……\n下雪了。\n黎瑟伸出手，接住了一片雪花。\n比如說，雪偶爾也是溫暖的，對嗎？\n\n「我要走了，短時間內可能沒法再來看你們了。」她對著墓碑說道。\n「下次回來，你們一定……已經遠渡過霧海，迎來新生了吧。」\n臨行之前，她留下了一本日記。\n\n12月3日\n辭去了治安官的工作，這裡不適合我。接下來，準備去接一些委託，換取一些僱傭金來生活。\n\n12月4日\n布魯斯，我該怎麼做？\n……我似乎沒資格活著。等我完成這單委託，我就去陪你了。我不會讓你一個人走完霧海的路。\n\n12月20日\n今天我整理了一下我和布魯斯的家。我發現在做家務的時候，能讓我放鬆下來，還能讓家裡變得整整齊齊。\n布魯斯曾經說，我要多找找自己愛好，我跟他說我喜歡做家務，他說這不算是愛好。\n那什麼才是愛好？\n\n12月22日\n前些日子，口琴摔壞了。今天又買了一個新的。\n\n12月24日\n學著煮了一份蘑菇湯，不小心把鍋烤乾了。還好沒有引起火災。\n\n12月30日\n水仙平原的狩月人要請我喝酒，我拒絕了，她又請我喝了果汁。\n真沒想到酒館連果汁都有……怪不得這裡這麼受歡迎。\n\n1月1日\n收穫了一大筆委託金，開心。\n\n1月2日\n我的新槍，請教了水仙平原擅長機械的狩月人。這些前輩真的好厲害……我明明不是狩月人，他們也願意對我傾囊相授。\n我不會忘記這份恩情的。\n以下是這段時間，為我提供了幫助的狩月人名單。\n艾莉亞·伍德-機械改造指導（教我改造武器的老師，改造之後我的電流可以適配槍械了）\n伊森·哈里斯-烹飪指導（教我做飯的老師，跟他學習之後我再也不會炸鍋了）\n索菲亞·克萊恩-社交指導（教我如何交朋友的老師，唯一的遺憾就是她很忙，不怎麼來水仙平原）\n夏洛特·羅斯-體術指導（教我近身格鬥的老師，好像是一位退伍的軍人前輩）\n……\n卡蜜拉·斯卡雷特-生活指導？（我不知道該不該算，和她聊天總是很放鬆，卡蜜拉女士對我提供了很多難以簡單概括的幫助……）\n\n1月8日\n去看戲劇，是和蕾伊一起。\n雖然我還是沒太看懂，但我會努力的。蕾伊說，這種事情就不用那麼努力了，我覺得不對，任何事情都要全力以赴。\n做了一些戲劇相關的筆記，好像有點明白了。\n\n1月12日\n我想好了。\n我準備去做一些事情。順便去找一個朋友的下落，還有{性别：他|她}的姐姐。\n我知道該怎麼做了，布魯斯。\n軍團的惡行不止發生在冰湖城，我會盡我所能地阻止悲劇發生。\n也許，這就是我生命的意義。\n\n黎瑟低下頭，用手帕仔仔細細地擦去了墓碑上的灰和雪，那刻錄著姓名與生平的每一條溝壑，都擦拭得乾乾淨淨。\n這些事做完之後，她蹲坐在墓碑前，抱緊了膝蓋。她發了一會兒呆，好像想了很多事情，又好像什麼都沒在想。紛亂的思緒湧出、又褪去，記憶如同雪花一般落下，又在窗沿邊消融。不知過去了多久，黎瑟終於站了起來，她感覺腿有些發麻了，跺了跺腳，找回了那份輕快。\n墓碑的高度就像是一個小孩，大約到腰身處。和「他們」說話的時候，總是要彎下腰來。黎瑟把手按在墓碑上，冰冷的石頭竟然有著溫熱的觸感，也許是因為雪只下了一小會兒，今天是個難得的晴天。她撫摸著石碑的頂端，就像是摸著他們的腦袋。黎瑟的表情變得更溫柔了。\n「布魯斯，還有……帕西法爾。」\n「願你們在霧海的旅程一帆風順。再見，布魯斯，再見，帕西法爾。」",
+    TextMapContent = "最后一次为布鲁斯扫墓的时候，黎瑟带了两束花。\n一束给布鲁斯，另一束委托给布鲁斯，希望他代为转交给那素未谋面的朋友，帕西法尔——在对第六军团征召名单的调查中，她得知了那位朋友的名字。\n在雾海的归途中，他们会一起走吗？黎瑟这样想着。\n这一天，她再来墓前的时候，发现那里冒出了两簇尖芽，黎瑟有点惊讶，她踮起脚尖蹲下身，弯下腰仔细地打量着那来之不易的绿色。细弱的根茎钻出冻土、冲破了雪面，散发着一点不属于冰湖城的欣欣向荣。在这寒冷的地界，也会生长出不愿意屈服的植物，不知道会开出怎样的花朵呢？黎瑟想着，眼神不自觉地柔和了许多，看见这两枚新生的草叶，就仿佛看见了那对互相扶持的朋友。啊，冰湖城还是太冷了。她小心地剥开了植物旁边的雪，拂到了远处。如果你们生长在南方，一定就不会这么艰辛了吧？但冰湖城也有冰湖城的好处，比如说……\n下雪了。\n黎瑟伸出手，接住了一片雪花。\n比如说，雪偶尔也是温暖的，对吗？\n\n“我要走了，短时间内可能没法再来看你们了。”她对着墓碑说道。\n“下次回来，你们一定……已经远渡过雾海，迎来新生了吧。”\n临行之前，她留下了一本日记。\n\n12月3日\n辞去了治安官的工作，这里不适合我。接下来，准备去接一些委托，换取一些雇佣金来生活。\n\n12月4日\n布鲁斯，我该怎么做？\n……我似乎没资格活着。等我完成这单委托，我就去陪你了。我不会让你一个人走完雾海的路。\n\n12月20日\n今天我整理了一下我和布鲁斯的家。我发现在做家务的时候，能让我放松下来，还能让家里变得整整齐齐。\n布鲁斯曾经说，我要多找找自己爱好，我跟他说我喜欢做家务，他说这不算是爱好。\n那什么才是爱好？\n\n12月22日\n前些日子，口琴摔坏了。今天又买了一个新的。\n\n12月24日\n学着煮了一份蘑菇汤，不小心把锅烤干了。还好没有引起火灾。\n\n12月30日\n水仙平原的狩月人要请我喝酒，我拒绝了，她又请我喝了果汁。\n真没想到酒馆连果汁都有……怪不得这里这么受欢迎。\n\n1月1日\n收获了一大笔委托金，开心。\n\n1月2日\n我的新枪，请教了水仙平原擅长机械的狩月人。这些前辈真的好厉害……我明明不是狩月人，他们也愿意对我倾囊相授。\n我不会忘记这份恩情的。\n以下是这段时间，为我提供了帮助的狩月人名单。\n艾莉亚·伍德-机械改造指导（教我改造武器的老师，改造之后我的电流可以适配枪械了）\n伊森·哈里斯-烹饪指导（教我做饭的老师，跟他学习之后我再也不会炸锅了）\n索菲亚·克莱恩-社交指导（教我如何交朋友的老师，唯一的遗憾就是她很忙，不怎么来水仙平原）\n夏洛特·罗斯-体术指导（教我近身格斗的老师，好像是一位退伍的军人前辈）\n……\n卡米拉·斯卡雷特-生活指导？（我不知道该不该算，和她聊天总是很放松，卡米拉女士对我提供了很多难以简单概括的帮助……）\n\n1月8日\n去看戏剧，是和蕾伊一起。\n虽然我还是没太看懂，但我会努力的。蕾伊说，这种事情就不用那么努力了，我觉得不对，任何事情都要全力以赴。\n做了一些戏剧相关的笔记，好像有点明白了。\n\n1月12日\n我想好了。\n我准备去做一些事情。顺便去找一个朋友的下落，还有{性别：他|她}的姐姐。\n我知道该怎么做了，布鲁斯。\n军团的恶行不止发生在冰湖城，我会尽我所能地阻止悲剧发生。\n也许，这就是我生命的意义。\n\n黎瑟低下头，用手帕仔仔细细地擦去了墓碑上的灰和雪，那刻录着姓名与生平的每一条沟壑，都擦拭得干干净净。\n这些事做完之后，她蹲坐在墓碑前，抱紧了膝盖。她发了一会儿呆，好像想了很多事情，又好像什么都没在想。纷乱的思绪涌出、又褪去，记忆如同雪花一般落下，又在窗沿边消融。不知过去了多久，黎瑟终于站了起来，她感觉腿有些发麻了，跺了跺脚，找回了那份轻快。\n墓碑的高度就像是一个小孩，大约到腰身处。和“他们”说话的时候，总是要弯下腰来。黎瑟把手按在墓碑上，冰冷的石头竟然有着温热的触感，也许是因为雪只下了一小会儿，今天是个难得的晴天。她抚摸着石碑的顶端，就像是摸着他们的脑袋。黎瑟的表情变得更温柔了。\n“布鲁斯，还有……帕西法尔。”\n“愿你们在雾海的旅程一帆风顺。再见，布鲁斯，再见，帕西法尔。”",
+    TextMapId = "UI_CHAR_DATA_TEXT_41030405"
+  },
   UI_CHAR_DATA_TEXT_42010101 = {
     ContentEN = "Once, you happened to catch a glimpse of the scars criss-crossing Yuming's skin.\n\nThe Nine Chapters of Dafeng can mend its enforcers' injuries — but only the ones that would hinder them in battle. The rest remain, etched into the skin for good. Over time, the marks layer over one another until they stop looking like wounds at all, but a permanent part of him.\n\nIn Icelake's taverns, some of the more boisterous Phoxhunters wear their scars like badges of honour, flashing them whenever the ale starts flowing. Yuming is clearly not that sort. Yet there are so many that it's hard to believe they're all chance.\n\nYou've heard that, in the far south where the Elysian Church holds sway, some ascetics flog themselves — offering pain as a testament to their faith. Yet you see none of that steadfast devotion in Yuming. Quite the opposite: gloom and doubt always gather in his eyes. The way he throws himself into danger makes you suspect those scars come from something darker than duty — self-loathing and self-reproach, perhaps — as if he's trying to atone for something that won't forgive him.",
     ContentFR = "Il vous est peut-être déjà arrivé d’apercevoir les innombrables cicatrices qui marquent le corps de Yuming.\n\nLes Neuf Chapitres de Dafeng peuvent restaurer les blessures de leurs contractants — mais uniquement celles qui entravent leurs capacités de combat. Les autres, jugées secondaires, demeurent à jamais gravées dans la chair. Avec le temps, elles se superposent, se fondent les unes dans les autres, jusqu’à devenir une part indissociable du corps.\nDans les tavernes de Givrelac, certains Chasseurs de Phoxène au tempérament exubérant exhibent fièrement leurs cicatrices, les arborant comme des médailles de bravoure à chaque ivresse partagée. Yuming n’est manifestement pas de ceux-là. Pourtant, à en juger par leur nombre, vous en venez parfois à douter qu’elles soient toutes le fruit du hasard.\nVous avez entendu dire qu’à l’extrême sud du continent, parmi les fidèles de l’Église Élyséenne, certains ascètes se flagellent volontairement, offrant la douleur de leur chair comme preuve de leur foi pure envers les dieux. Mais chez Yuming, vous ne percevez aucune ferveur de cet ordre.\nAu contraire, une ombre persistante — faite de mélancolie, de doute et d’hésitation — plane souvent dans son regard. Son comportement, fréquemment empreint d’un abandon total de soi, vous laisse penser que ses blessures procèdent d’un mépris intérieur, d’un refus de s’accorder le pardon, comme s’il utilisait la souffrance pour s’infliger une peine qui n’a jamais été prononcée.",
@@ -194166,6 +198008,15 @@ Complete Quest: Requiem for the Nameless]],
     TextMapContent = "百年春",
     TextMapId = "UI_CHAR_FORCE_4102"
   },
+  UI_CHAR_FORCE_4103 = {
+    ContentEN = "Unaffiliated",
+    ContentFR = "Aucune affiliation",
+    ContentJP = "なし",
+    ContentKR = "무소속",
+    ContentTC = "無",
+    TextMapContent = "无",
+    TextMapId = "UI_CHAR_FORCE_4103"
+  },
   UI_CHAR_FORCE_4201 = {
     ContentEN = "Magistrates of Yingtian",
     ContentFR = "Magistrat de Yingtian",
@@ -194841,6 +198692,24 @@ Complete Quest: Requiem for the Nameless]],
     TextMapContent = "卡米拉",
     TextMapId = "UI_CHAR_NAME_3202"
   },
+  UI_CHAR_NAME_3203 = {
+    ContentEN = "Katya",
+    ContentFR = "Katya",
+    ContentJP = "カーチャ",
+    ContentKR = "카지아",
+    ContentTC = "卡嘉",
+    TextMapContent = "卡嘉",
+    TextMapId = "UI_CHAR_NAME_3203"
+  },
+  UI_CHAR_NAME_3203_01 = {
+    ContentEN = "Katya",
+    ContentFR = "Katya",
+    ContentJP = "カーチャ",
+    ContentKR = "카지아",
+    ContentTC = "卡嘉",
+    TextMapContent = "卡嘉",
+    TextMapId = "UI_CHAR_NAME_3203_01"
+  },
   UI_CHAR_NAME_3301 = {
     ContentEN = "Margie",
     ContentFR = "Margie",
@@ -194867,6 +198736,15 @@ Complete Quest: Requiem for the Nameless]],
     ContentTC = "止流",
     TextMapContent = "止流",
     TextMapId = "UI_CHAR_NAME_4102"
+  },
+  UI_CHAR_NAME_4103 = {
+    ContentEN = "Rhythm: Flamewrought",
+    ContentFR = "Rhythm – Née des flammes",
+    ContentJP = "リズム・焔を纏う者",
+    ContentKR = "리듬·되살아난 불꽃",
+    ContentTC = "黎瑟·浴火",
+    TextMapContent = "黎瑟·浴火",
+    TextMapId = "UI_CHAR_NAME_4103"
   },
   UI_CHAR_NAME_4201 = {
     ContentEN = "Yuming",
@@ -194930,6 +198808,15 @@ Complete Quest: Requiem for the Nameless]],
     ContentTC = "達芙涅",
     TextMapContent = "达芙涅",
     TextMapId = "UI_CHAR_NAME_5401"
+  },
+  UI_CHAR_NAME_5402 = {
+    ContentEN = "Lirico",
+    ContentFR = "Lirico",
+    ContentJP = "リリコ",
+    ContentKR = "리리코",
+    ContentTC = "莉莉蔻",
+    TextMapContent = "莉莉蔻",
+    TextMapId = "UI_CHAR_NAME_5402"
   },
   UI_CHAR_NAME_9999 = {
     ContentEN = "Operations Team",
@@ -195137,6 +199024,10 @@ Complete Quest: Requiem for the Nameless]],
     TextMapContent = "赤影佳酿",
     TextMapId = "UI_CHAR_SUBTITLE_3202"
   },
+  UI_CHAR_SUBTITLE_3203 = {
+    TextMapContent = "（待包装）",
+    TextMapId = "UI_CHAR_SUBTITLE_3203"
+  },
   UI_CHAR_SUBTITLE_3301 = {
     ContentEN = "Cityscape Roamer",
     ContentFR = "Exploratrice Citadine",
@@ -195163,6 +199054,15 @@ Complete Quest: Requiem for the Nameless]],
     ContentTC = "利涉春江",
     TextMapContent = "利涉春江",
     TextMapId = "UI_CHAR_SUBTITLE_4102"
+  },
+  UI_CHAR_SUBTITLE_4103 = {
+    ContentEN = "First-Light Farer",
+    ContentFR = "Vers la lumière de l’aube",
+    ContentJP = "暁光へ歩む",
+    ContentKR = "여명을 향하는 자",
+    ContentTC = "向晨光跋涉",
+    TextMapContent = "向晨光跋涉",
+    TextMapId = "UI_CHAR_SUBTITLE_4103"
   },
   UI_CHAR_SUBTITLE_4201 = {
     ContentEN = "Sinless Cagedman",
@@ -200762,6 +204662,10 @@ Do you want to start a <H>%s Check</> attempt to acquire this item?
     TextMapContent = "拉开帷幕",
     TextMapId = "UI_CONTINUOUSINTERACTIVE_101"
   },
+  UI_CONTINUOUSINTERACTIVE_93010 = {
+    TextMapContent = "放置障碍物（待包装）",
+    TextMapId = "UI_CONTINUOUSINTERACTIVE_93010"
+  },
   UI_COST_NAME = {
     ContentEN = "Tolerance",
     ContentFR = "Tolérance",
@@ -202106,7 +206010,7 @@ Do you want to start a <H>%s Check</> attempt to acquire this item?
   UI_CameraSystem_LensParam_Filter_11 = {
     ContentEN = "Lead Grey",
     ContentFR = "Gris plomb",
-    ContentJP = "チタニウムホワイト",
+    ContentJP = "鉛灰",
     ContentKR = "그레이",
     ContentTC = "鉛灰",
     TextMapContent = "铅灰",
@@ -203052,6 +206956,15 @@ Do you want to start a <H>%s Check</> attempt to acquire this item?
     TextMapContent = "尚未解锁该角色",
     TextMapId = "UI_Char_Locked"
   },
+  UI_Char_RenameCardNoResetCd = {
+    ContentEN = "Does not reset the regular rename cooldown",
+    ContentFR = "Son utilisation ne réinitialise pas le délai d’attente du changement de nom standard",
+    ContentJP = "使用しても、通常の名前変更のクールタイムはリセットされません",
+    ContentKR = "사용해도 일반 길드명 변경 쿨타임은 그대로 유지됩니다.",
+    ContentTC = "使用後不會重置常規改名方式的冷卻時間",
+    TextMapContent = "使用后不会重置常规改名方式的冷却时间",
+    TextMapId = "UI_Char_RenameCardNoResetCd"
+  },
   UI_Char_Skin = {
     ContentEN = "Character Skins",
     ContentFR = "Apparences de personnage",
@@ -203628,7 +207541,7 @@ Do you want to start a <H>%s Check</> attempt to acquire this item?
     TextMapId = "UI_Chat_Imagine115"
   },
   UI_Chat_Imagine116 = {
-    ContentEN = "That’s Me",
+    ContentEN = "That's Me",
     ContentFR = "Oui ! C’est moi",
     ContentJP = "えっへん！",
     ContentKR = "응, 나야",
@@ -211253,13 +215166,14 @@ Proceed with the purchase?]],
     TextMapId = "UI_DailyPack_RuleDes_1"
   },
   UI_DailyPack_RuleDes_10 = {
-    ContentEN = "Upon purchase, you will immediately receive Phoxene Plumule ×<highlight>150</> and Toy Hammer ×<highlight>5</>.\nStarting on the day of purchase, log in daily to claim Falsi's Thought ×<highlight>1</> and Toy Hammer ×<highlight>1</> via Mail, for a total of 5 days.\nInterwoven Thoughts can be purchased up to 6 times. Additional purchases will extend the reward period accordingly.\nThe reward period will not be affected if the item is removed from the shop.",
-    ContentFR = "Après l’achat, vous recevrez immédiatement Gemme de Phoxène ×<highlight>150</> et Marteau-jouet ×<highlight>5</>.\nÀ partir du jour de l’achat, connectez-vous chaque jour pour recevoir par courrier Fragment de pensée de Falsi ×<highlight>1</> et Marteau-jouet ×<highlight>1</>, pendant 5 jours.\nPensées entrelacées est limité à 6 achats ; chaque achat supplémentaire prolonge la durée de réception.\nLe retrait de l’article n’affecte pas la durée de réception en cours.",
-    ContentJP = "購入後、すぐに月ノ核×<highlight>150</>、ピコピコハンマー×<highlight>5</>を獲得できます。\n 購入日より5日間、毎日ログインするとメールでフォルスの想いの欠片×<highlight>1</>、ピコピコハンマー×<highlight>1</>を受け取れます。\n 「交わる想い」はお一人様6回まで購入可能で、重複購入した場合は受取期間が加算されます。（販売終了しても継続します）",
-    ContentKR = "구매 후 즉시 월석의 싹x<highlight>150</>과 장난감 망치x<highlight>5</>를 획득합니다.\n구매 당일부터 5일간, 매일 로그인 시, 우편으로 펄시 아이디어 조각x<highlight>1</>, 장난감 망치x<highlight>1</>이 제공됩니다.\n뒤얽힌 마음은 최대 6회까지 구매할 수 있으며, 중복 구매 시 혜택 적용 기간이 연장됩니다.\n상품 판매 종료 후에도 지속 시간은 유지됩니다.",
     ContentTC = "購買後可立即獲得月石晶胚*<highlight>150</>、玩具氣錘*<highlight>5</>；\n購買當日起，每日登入可在信件中領取法露茜的思緒片段*<highlight>1</>、玩具氣錘*<highlight>1</>，持續5天；\n交織的思緒限購6次，重複購買將累加領取時間；\n商品下架不影響持續時間",
     TextMapContent = "购买后可立即获得月石晶胚*<highlight>150</>、玩具气锤*<highlight>5</>；\n购买当日起，每日登录可在邮件中领取法露茜的思绪片段*<highlight>1</>、玩具气锤*<highlight>1</>，持续5天；\n交织的思绪限购6次，重复购买将累加领取时间；\n商品下架不影响持续时间",
     TextMapId = "UI_DailyPack_RuleDes_10"
+  },
+  UI_DailyPack_RuleDes_11 = {
+    ContentTC = "購買後可立即獲得月石晶胚*<highlight>150</>、玩具氣錘*<highlight>5</>；\n購買當日起，每日登入可在信件中領取黎瑟·浴火的思緒片段*<highlight>1</>、玩具氣錘*<highlight>1</>，持續5天；\n交織的思緒限購6次，重複購買將累加領取時間；\n商品下架不影響持續時間",
+    TextMapContent = "购买后可立即获得月石晶胚*<highlight>150</>、玩具气锤*<highlight>5</>；\n购买当日起，每日登录可在邮件中领取黎瑟·浴火的思绪片段*<highlight>1</>、玩具气锤*<highlight>1</>，持续5天；\n交织的思绪限购6次，重复购买将累加领取时间；\n商品下架不影响持续时间",
+    TextMapId = "UI_DailyPack_RuleDes_11"
   },
   UI_DailyPack_RuleDes_2 = {
     ContentEN = "Upon purchase, you will immediately receive Phoxene Plumule ×<highlight>100</> and Toy Hammer ×<highlight>5</>.\nFrom the day of purchase onward, log in each day to claim Fushu's Thought ×<highlight>1</> and Toy Hammer ×<highlight>1</> via Mail, for a total of 5 days.\nInterwoven Thoughts may be purchased up to 6 times. Repeated purchases will extend the reward period accordingly.",
@@ -212924,6 +216838,84 @@ Proceed with the purchase?]],
     TextMapContent = "腰部",
     TextMapId = "UI_Dress_Waist"
   },
+  UI_Drop_120701 = {
+    ContentTC = "與布魯斯的合照",
+    TextMapContent = "与布鲁斯的合照",
+    TextMapId = "UI_Drop_120701"
+  },
+  UI_Drop_120702 = {
+    ContentTC = "昔日刻下的誓言",
+    TextMapContent = "昔日刻下的誓言",
+    TextMapId = "UI_Drop_120702"
+  },
+  UI_Drop_120703 = {
+    ContentTC = "未能送出的禮盒",
+    TextMapContent = "未能送出的礼盒",
+    TextMapId = "UI_Drop_120703"
+  },
+  UI_Drop_120704 = {
+    ContentTC = "整理書籍",
+    TextMapContent = "整理书籍",
+    TextMapId = "UI_Drop_120704"
+  },
+  UI_Drop_120705 = {
+    ContentTC = "掉落在地的名單",
+    TextMapContent = "掉落在地的名单",
+    TextMapId = "UI_Drop_120705"
+  },
+  UI_Drop_120706 = {
+    ContentTC = "敲門",
+    TextMapContent = "敲门",
+    TextMapId = "UI_Drop_120706"
+  },
+  UI_Drop_120707 = {
+    ContentTC = "坐下交談",
+    TextMapContent = "坐下交谈",
+    TextMapId = "UI_Drop_120707"
+  },
+  UI_Drop_120708 = {
+    ContentTC = "可疑的痕跡",
+    TextMapContent = "可疑的痕迹",
+    TextMapId = "UI_Drop_120708"
+  },
+  UI_Drop_120709 = {
+    ContentTC = "奇怪的人偶",
+    TextMapContent = "奇怪的人偶",
+    TextMapId = "UI_Drop_120709"
+  },
+  UI_Drop_120710 = {
+    ContentTC = "某人的日記",
+    TextMapContent = "某人的日记",
+    TextMapId = "UI_Drop_120710"
+  },
+  UI_Drop_120711 = {
+    ContentTC = "散落的藥瓶",
+    TextMapContent = "散落的药瓶",
+    TextMapId = "UI_Drop_120711"
+  },
+  UI_Drop_120712 = {
+    ContentTC = "前往下水道",
+    TextMapContent = "前往下水道",
+    TextMapId = "UI_Drop_120712"
+  },
+  UI_Drop_120713 = {
+    ContentEN = "Unlock the event quest [Towards the Dawn]",
+    ContentFR = "Débloquer la quête d’événement « En marche vers l’aube »",
+    ContentJP = "イベントクエスト「暁を歩む」を解放する",
+    ContentKR = "이벤트 퀘스트 「여명 속으로」 오픈",
+    ContentTC = "開啟活動任務《行於破曉》",
+    TextMapContent = "开启活动任务《行于破晓》",
+    TextMapId = "UI_Drop_120713"
+  },
+  UI_Drop_120714 = {
+    ContentEN = "Pick up the list",
+    ContentFR = "Ramasser la liste",
+    ContentJP = "リストを拾う",
+    ContentKR = "명단 줍기",
+    ContentTC = "拾起名單",
+    TextMapContent = "拾起名单",
+    TextMapId = "UI_Drop_120714"
+  },
   UI_Drop_BuyPear = {
     ContentEN = "Buy pears",
     ContentFR = "Acheter des poires",
@@ -214118,6 +218110,15 @@ Proceed with the purchase?]],
     ContentTC = "編輯協會名稱",
     TextMapContent = "编辑协会名称",
     TextMapId = "UI_EditGuildName"
+  },
+  UI_EditGuildName_2 = {
+    ContentEN = "Edit Guild Name / Insignia",
+    ContentFR = "Modifier le nom/l’insigne de guilde",
+    ContentJP = "協会名/徽章を編集",
+    ContentKR = "길드명/길드 상징 편집",
+    ContentTC = "編輯協會名稱/徽記",
+    TextMapContent = "编辑协会名称/徽记",
+    TextMapId = "UI_EditGuildName_2"
   },
   UI_EditSuccess = {
     ContentEN = "Saved",
@@ -219991,11 +223992,11 @@ The list below shows how many points each item awards:]],
   },
   UI_GuildBoss_NewRecord = {
     ContentEN = "New Record",
-    ContentFR = "Nouveau record",
-    ContentJP = "新記録",
-    ContentKR = "신기록",
-    ContentTC = "新紀錄",
-    TextMapContent = "新纪录",
+    ContentFR = "Nouveau record !",
+    ContentJP = "新記録！",
+    ContentKR = "신기록!",
+    ContentTC = "新紀錄！",
+    TextMapContent = "新纪录！",
     TextMapId = "UI_GuildBoss_NewRecord"
   },
   UI_GuildBoss_NoAssisters = {
@@ -220351,6 +224352,60 @@ The list below shows how many points each item awards:]],
     ContentTC = "已解散協會",
     TextMapContent = "已解散协会",
     TextMapId = "UI_GuildDissolvedSuccessfully"
+  },
+  UI_GuildEmblem_Edit = {
+    ContentEN = "Edit Guild Insignia",
+    ContentFR = "Modifier l’insigne",
+    ContentJP = "協会徽章を編集",
+    ContentKR = "길드 상징 편집",
+    ContentTC = "編輯協會徽記",
+    TextMapContent = "编辑协会徽记",
+    TextMapId = "UI_GuildEmblem_Edit"
+  },
+  UI_GuildEmblem_EditSuccess = {
+    ContentEN = "Saved",
+    ContentFR = "Modifications enregistrées",
+    ContentJP = "編集に成功しました",
+    ContentKR = "편집 성공",
+    ContentTC = "編輯成功",
+    TextMapContent = "编辑成功",
+    TextMapId = "UI_GuildEmblem_EditSuccess"
+  },
+  UI_GuildEmblem_EditTitle = {
+    ContentEN = "Edit Guild Insignia",
+    ContentFR = "Modifier l’insigne",
+    ContentJP = "協会徽章を編集",
+    ContentKR = "길드 상징 편집",
+    ContentTC = "編輯協會徽記",
+    TextMapContent = "编辑协会徽记",
+    TextMapId = "UI_GuildEmblem_EditTitle"
+  },
+  UI_GuildEmblem_Exclusive = {
+    ContentEN = "Guild Insignia",
+    ContentFR = "Insigne de guilde",
+    ContentJP = "協会徽章",
+    ContentKR = "길드 상징",
+    ContentTC = "協會徽記",
+    TextMapContent = "协会徽记",
+    TextMapId = "UI_GuildEmblem_Exclusive"
+  },
+  UI_GuildEmblem_NoModification = {
+    ContentEN = "No changes made",
+    ContentFR = "Aucune modification effectuée",
+    ContentJP = "まだ何も変更していません",
+    ContentKR = "변경된 사항이 없습니다.",
+    ContentTC = "尚未進行任何修改",
+    TextMapContent = "尚未进行任何修改",
+    TextMapId = "UI_GuildEmblem_NoModification"
+  },
+  UI_GuildEmblem_SelectCharacter = {
+    ContentEN = "Select a character from the Guild name as an exclusive insignia for Guild members. Its color matches the Guild Emblem.",
+    ContentFR = "Permet de sélectionner un caractère du nom de la guilde à afficher comme insigne réservé aux membres ; la couleur de l’insigne correspond à celle de l’emblème de la guilde",
+    ContentJP = "協会名に含まれる文字を1文字選択し、協会メンバー専用の徽章として表示できます。徽章の色は協会徽章と同じ色になります。",
+    ContentKR = "길드명에서 한 글자를 선택해 길드원 전용 상징으로 표시할 수 있습니다. 상징의 색상은 길드 엠블럼의 색상과 동일합니다.",
+    ContentTC = "可選擇協會名稱中的一個字符作為協會成員的專屬徽記進行顯示；徽記顏色與協會徽章顏色一致",
+    TextMapContent = "可选择协会名称中的一个字符作为协会成员的专属徽记进行显示；徽记颜色与协会徽章颜色一致",
+    TextMapId = "UI_GuildEmblem_SelectCharacter"
   },
   UI_GuildExperience = {
     ContentEN = "Guild Prestige",
@@ -220733,6 +224788,15 @@ The list below shows how many points each item awards:]],
     TextMapContent = "上线时间",
     TextMapId = "UI_Guild_OnlineTime"
   },
+  UI_Guild_RenameCardNoResetCd = {
+    ContentEN = "Does not reset the regular rename cooldown",
+    ContentFR = "Son utilisation ne réinitialise pas le délai d’attente du changement de nom standard",
+    ContentJP = "使用しても、通常の名前変更のクールタイムはリセットされません",
+    ContentKR = "사용해도 일반 길드명 변경 쿨타임은 그대로 유지됩니다.",
+    ContentTC = "使用後不會重置常規改名方式的冷卻時間",
+    TextMapContent = "使用后不会重置常规改名方式的冷却时间",
+    TextMapId = "UI_Guild_RenameCardNoResetCd"
+  },
   UI_Guild_RoleActivity = {
     ContentEN = "Personal Activity",
     ContentFR = "Activité personnelle",
@@ -220931,6 +224995,87 @@ The list below shows how many points each item awards:]],
     TextMapContent = "进入玩法超时，本次梦魇残声挑战已失败",
     TextMapId = "UI_HardBossDg_LoadingTimeOut"
   },
+  UI_HardBossEvent_Aida = {
+    ContentEN = "Nocturnal Evermore: \"Judgement\" Mother Bunny",
+    ContentFR = "Cauchemar éternel : « Le Jugement » Maman Lapin",
+    ContentJP = "終わらぬ悪夢・「審判」ウサギママ",
+    ContentKR = "영원한 악몽·「심판」 엄마 토끼",
+    ContentTC = "永恆夢魘·「審判」兔媽媽",
+    TextMapContent = "永恒梦魇·「审判」兔妈妈",
+    TextMapId = "UI_HardBossEvent_Aida"
+  },
+  UI_HardBossEvent_BattleStart = {
+    ContentEN = "Nocturnal Evermore",
+    ContentFR = "Cauchemar éternel",
+    ContentJP = "終わらぬ悪夢",
+    ContentKR = "영원한 악몽",
+    ContentTC = "永恆夢魘",
+    TextMapContent = "永恒梦魇",
+    TextMapId = "UI_HardBossEvent_BattleStart"
+  },
+  UI_HardBossEvent_ChallengeType = {
+    ContentEN = "Extreme Challenge",
+    ContentFR = "Extrême",
+    ContentJP = "高難度挑戦",
+    ContentKR = "고난도 도전",
+    ContentTC = "高難挑戰",
+    TextMapContent = "高难挑战",
+    TextMapId = "UI_HardBossEvent_ChallengeType"
+  },
+  UI_HardBossEvent_Environment_Title = {
+    ContentEN = "Nightmare",
+    ContentFR = "Cauchemar",
+    ContentJP = "悪夢 ",
+    ContentKR = "악몽",
+    ContentTC = "夢魘",
+    TextMapContent = "梦魇",
+    TextMapId = "UI_HardBossEvent_Environment_Title"
+  },
+  UI_HardBossEvent_Haier = {
+    ContentEN = "Nocturnal Evermore: The Warden of the Inferno",
+    ContentFR = "Cauchemar éternel : Geôlière de la fournaise",
+    ContentJP = "終わらぬ悪夢・煉火の典獄",
+    ContentKR = "영원한 악몽·지옥불의 교도소장",
+    ContentTC = "永恆夢魘·煉火的典獄長",
+    TextMapContent = "永恒梦魇·炼火的典狱长",
+    TextMapId = "UI_HardBossEvent_Haier"
+  },
+  UI_HardBossEvent_RewardType = {
+    ContentEN = "Evermore",
+    ContentFR = "Éternel",
+    ContentJP = "恒久",
+    ContentKR = "영원",
+    ContentTC = "永恆",
+    TextMapContent = "永恒",
+    TextMapId = "UI_HardBossEvent_RewardType"
+  },
+  UI_HardBossEvent_Saiqi = {
+    ContentEN = "Nocturnal Evermore: The Eclosioner",
+    ContentFR = "Cauchemar éternel : L’Éclose",
+    ContentJP = "終わらぬ悪夢・羽化せし者",
+    ContentKR = "영원한 악몽·우화를 이룬 자",
+    ContentTC = "永恆夢魘·羽化者",
+    TextMapContent = "永恒梦魇·羽化者",
+    TextMapId = "UI_HardBossEvent_Saiqi"
+  },
+  UI_HardBossEvent_Tuosi = {
+    ContentEN = "Nocturnal Evermore: Cryptid",
+    ContentFR = "Cauchemar éternel : Monstre mystérieux",
+    ContentJP = "終わらぬ悪夢・謎の怪物",
+    ContentKR = "영원한 악몽·신비한 괴물",
+    ContentTC = "永恆夢魘·神秘怪物",
+    TextMapContent = "永恒梦魇·神秘怪物",
+    TextMapId = "UI_HardBossEvent_Tuosi"
+  },
+  UI_HardBossEvent_Xibi = {
+    ContentEN = "Nocturnal Evermore: Sibylle",
+    ContentFR = "Cauchemar éternel : Sibylle",
+    ContentJP = "終わらぬ悪夢・シビル",
+    ContentKR = "영원한 악몽·시빌라",
+    ContentTC = "永恆夢魘·西比爾",
+    TextMapContent = "永恒梦魇·西比尔",
+    TextMapId = "UI_HardBossEvent_Xibi"
+  },
   UI_HardBoss_Abandon_Text = {
     ContentEN = "Are you sure you want to give up the challenge?",
     ContentFR = "Abandonner le défi ?",
@@ -221034,6 +225179,31 @@ Working in tandem with the train's other onboard weapons, it can destroy any ene
     ContentTC = "樂園真正的主人，樂園噩夢的締造者。",
     TextMapContent = "乐园真正的主人，乐园噩梦的缔造者。",
     TextMapId = "UI_HardBoss_Des_8"
+  },
+  UI_HardBoss_Des_AidaHard = {
+    ContentTC = "樂園真正的主人，樂園噩夢的締造者。\n推薦選用具備<H>無視防禦能力</>的角色出戰。",
+    TextMapContent = "乐园真正的主人，乐园噩梦的缔造者。\n推荐选用具备<H>无视防御能力</>的角色出战。",
+    TextMapId = "UI_HardBoss_Des_AidaHard"
+  },
+  UI_HardBoss_Des_HaierHard = {
+    ContentTC = "帝國皇家軍監獄典獄長，她的鎖鏈將會懲戒罪惡，她的火焰將會堅守正義。\n推薦選用<H>戰姿削減</>能力突出的角色或武器出戰。",
+    TextMapContent = "帝国皇家军监狱典狱长，她的锁链将会惩戒罪恶，她的火焰将会坚守正义。\n推荐选用<H>战姿削减</>能力突出的角色或武器出战。",
+    TextMapId = "UI_HardBoss_Des_HaierHard"
+  },
+  UI_HardBoss_Des_SaiqiHard = {
+    ContentTC = "凍土中的種子，錯過了溫和地走入夜幕的契機。\n推薦選用具備<H>無視防禦能力</>的角色出戰。",
+    TextMapContent = "冻土中的种子，错过了温和地走入夜幕的契机。\n推荐选用具备<H>无视防御能力</>的角色出战。",
+    TextMapId = "UI_HardBoss_Des_SaiqiHard"
+  },
+  UI_HardBoss_Des_TuosiHard = {
+    ContentTC = "鮮紅的帷幕之下，寒風奏響了雪國的哀歌。\n推薦選用具備<H>無視防禦能力</>的角色出戰。",
+    TextMapContent = "鲜红的帷幕之下，寒风奏响了雪国的哀歌。\n推荐选用具备<H>无视防御能力</>的角色出战。",
+    TextMapId = "UI_HardBoss_Des_TuosiHard"
+  },
+  UI_HardBoss_Des_XibiHard = {
+    ContentTC = "海伯利亞帝國第十三軍團軍團長。那一日在淨界島，她的出現，讓我們的命運永遠地偏離了曾經的軌道。\n推薦選用<H>戰姿削減</>能力突出的角色或武器出戰。",
+    TextMapContent = "海伯利亚帝国第十三军团军团长。那一日在净界岛，她的出现，让我们的命运永远地偏离了曾经的轨道。\n推荐选用<H>战姿削减</>能力突出的角色或武器出战。",
+    TextMapId = "UI_HardBoss_Des_XibiHard"
   },
   UI_HardBoss_Detail = {
     ContentEN = "About Nocturnal Echoes",
@@ -222213,7 +226383,7 @@ Working in tandem with the train's other onboard weapons, it can destroy any ene
   UI_HeadFrame_Name_10025 = {
     ContentEN = "Inscribed Tip: Leaden Grey",
     ContentFR = "Gravé au pinceau – Gris plomb",
-    ContentJP = "筆先で刻む・チタニウムホワイト",
+    ContentJP = "筆先で刻む・鉛灰",
     ContentKR = "붓에 새겨진 기억·그레이",
     ContentTC = "以筆尖銘記·鉛灰",
     TextMapContent = "以笔尖铭记·铅灰",
@@ -222434,6 +226604,21 @@ Working in tandem with the train's other onboard weapons, it can destroy any ene
     ContentTC = "來自幽冥",
     TextMapContent = "来自幽冥",
     TextMapId = "UI_HeadFrame_Name_10050"
+  },
+  UI_HeadFrame_Name_10051 = {
+    ContentTC = "冰湖燈火",
+    TextMapContent = "冰湖灯火",
+    TextMapId = "UI_HeadFrame_Name_10051"
+  },
+  UI_HeadFrame_Name_10052 = {
+    ContentTC = "糖霜滿屋·鎏金",
+    TextMapContent = "糖霜满屋·鎏金",
+    TextMapId = "UI_HeadFrame_Name_10052"
+  },
+  UI_HeadFrame_Name_10053 = {
+    ContentTC = "糖霜滿屋·墨玉",
+    TextMapContent = "糖霜满屋·墨玉",
+    TextMapId = "UI_HeadFrame_Name_10053"
   },
   UI_HeadFrame_None = {
     ContentEN = "No avatar frames available",
@@ -223417,21 +227602,21 @@ Working in tandem with the train's other onboard weapons, it can destroy any ene
     TextMapId = "UI_Investigation_Tab_Ex02_Character_1202"
   },
   UI_Investigation_Tab_Ex02_Character_1203 = {
-    ContentEN = "Arcano Residents (Ⅱ)",
-    ContentFR = "Habitants d’Arcano (II)",
+    ContentEN = "Arcano Residents (Ⅰ)",
+    ContentFR = "Habitants d’Arcano (I)",
     ContentJP = "アルカノの町の住民・その2",
-    ContentKR = "아르카노 마을의 주민 Ⅱ",
-    ContentTC = "阿爾卡諾鎮的鎮民·其二",
-    TextMapContent = "阿尔卡诺镇的镇民·其二",
+    ContentKR = "아르카노 마을의 주민 Ⅰ",
+    ContentTC = "阿爾卡諾鎮的鎮民·其一",
+    TextMapContent = "阿尔卡诺镇的镇民·其一",
     TextMapId = "UI_Investigation_Tab_Ex02_Character_1203"
   },
   UI_Investigation_Tab_Ex02_Character_1204 = {
-    ContentEN = "Arcano Residents (Ⅲ)",
-    ContentFR = "Habitants d’Arcano (III)",
+    ContentEN = "Arcano Residents (Ⅰ)",
+    ContentFR = "Habitants d’Arcano (I)",
     ContentJP = "アルカノの町の住民・その3",
-    ContentKR = "아르카노 마을의 주민 Ⅲ",
-    ContentTC = "阿爾卡諾鎮的鎮民·其三",
-    TextMapContent = "阿尔卡诺镇的镇民·其三",
+    ContentKR = "아르카노 마을의 주민 Ⅰ",
+    ContentTC = "阿爾卡諾鎮的鎮民·其一",
+    TextMapContent = "阿尔卡诺镇的镇民·其一",
     TextMapId = "UI_Investigation_Tab_Ex02_Character_1204"
   },
   UI_Investigation_Tab_Ex02_MainStory_1001 = {
@@ -223800,6 +227985,78 @@ Leads, Participants, and the Star Performer:
     TextMapContent = "查看详情",
     TextMapId = "UI_JumpMount"
   },
+  UI_Keyboard_BattleWheel_1 = {
+    ContentEN = "Tactical Backpack 1",
+    ContentFR = "Sac tactique 1",
+    ContentJP = "タクティカルバッグのショートカットキー1",
+    ContentKR = "전술 가방 단축키 1",
+    ContentTC = "戰術背包快捷鍵1",
+    TextMapContent = "战术背包快捷键1",
+    TextMapId = "UI_Keyboard_BattleWheel_1"
+  },
+  UI_Keyboard_BattleWheel_2 = {
+    ContentEN = "Tactical Backpack 2",
+    ContentFR = "Sac tactique 2",
+    ContentJP = "タクティカルバッグのショートカットキー2",
+    ContentKR = "전술 가방 단축키 2",
+    ContentTC = "戰術背包快捷鍵2",
+    TextMapContent = "战术背包快捷键2",
+    TextMapId = "UI_Keyboard_BattleWheel_2"
+  },
+  UI_Keyboard_BattleWheel_3 = {
+    ContentEN = "Tactical Backpack 3",
+    ContentFR = "Sac tactique 3",
+    ContentJP = "タクティカルバッグのショートカットキー3",
+    ContentKR = "전술 가방 단축키 3",
+    ContentTC = "戰術背包快捷鍵3",
+    TextMapContent = "战术背包快捷键3",
+    TextMapId = "UI_Keyboard_BattleWheel_3"
+  },
+  UI_Keyboard_BattleWheel_4 = {
+    ContentEN = "Tactical Backpack 4",
+    ContentFR = "Sac tactique 4",
+    ContentJP = "タクティカルバッグのショートカットキー4",
+    ContentKR = "전술 가방 단축키 4",
+    ContentTC = "戰術背包快捷鍵4",
+    TextMapContent = "战术背包快捷键4",
+    TextMapId = "UI_Keyboard_BattleWheel_4"
+  },
+  UI_Keyboard_BattleWheel_5 = {
+    ContentEN = "Tactical Backpack 5",
+    ContentFR = "Sac tactique 5",
+    ContentJP = "タクティカルバッグのショートカットキー5",
+    ContentKR = "전술 가방 단축키 5",
+    ContentTC = "戰術背包快捷鍵5",
+    TextMapContent = "战术背包快捷键5",
+    TextMapId = "UI_Keyboard_BattleWheel_5"
+  },
+  UI_Keyboard_BattleWheel_6 = {
+    ContentEN = "Tactical Backpack 6",
+    ContentFR = "Sac tactique 6",
+    ContentJP = "タクティカルバッグのショートカットキー6",
+    ContentKR = "전술 가방 단축키 6",
+    ContentTC = "戰術背包快捷鍵6",
+    TextMapContent = "战术背包快捷键6",
+    TextMapId = "UI_Keyboard_BattleWheel_6"
+  },
+  UI_Keyboard_BattleWheel_7 = {
+    ContentEN = "Tactical Backpack 7",
+    ContentFR = "Sac tactique 7",
+    ContentJP = "タクティカルバッグのショートカットキー7",
+    ContentKR = "전술 가방 단축키 7",
+    ContentTC = "戰術背包快捷鍵7",
+    TextMapContent = "战术背包快捷键7",
+    TextMapId = "UI_Keyboard_BattleWheel_7"
+  },
+  UI_Keyboard_BattleWheel_8 = {
+    ContentEN = "Tactical Backpack 8",
+    ContentFR = "Sac tactique 8",
+    ContentJP = "タクティカルバッグのショートカットキー8",
+    ContentKR = "전술 가방 단축키 8",
+    ContentTC = "戰術背包快捷鍵8",
+    TextMapContent = "战术背包快捷键8",
+    TextMapId = "UI_Keyboard_BattleWheel_8"
+  },
   UI_Keyboard_DownSelect = {
     ContentEN = "Next Item",
     ContentFR = "Sélection suivante",
@@ -223997,6 +228254,15 @@ Leads, Participants, and the Star Performer:
     ContentTC = "任務",
     TextMapContent = "任务",
     TextMapId = "UI_Keyboard_Map_OpenTask"
+  },
+  UI_Keyboard_Map_PreAim = {
+    ContentEN = "Aim",
+    ContentFR = "Visée",
+    ContentJP = "照準",
+    ContentKR = "조준",
+    ContentTC = "瞄準",
+    TextMapContent = "瞄准",
+    TextMapId = "UI_Keyboard_Map_PreAim"
   },
   UI_Keyboard_Map_QuitChallenge = {
     ContentEN = "Quit Challenge",
@@ -224748,6 +229014,16 @@ Leads, Participants, and the Star Performer:
     TextMapContent = "奇想乐章活动获取",
     TextMapId = "UI_LimitedPrizePool_Background16"
   },
+  UI_LimitedPrizePool_Background17_1 = {
+    ContentTC = "糖果夢工廠活動獲取",
+    TextMapContent = "糖果梦工厂活动获取",
+    TextMapId = "UI_LimitedPrizePool_Background17_1"
+  },
+  UI_LimitedPrizePool_Background17_2 = {
+    ContentTC = "忘川夜話活動獲取",
+    TextMapContent = "忘川夜话活动获取",
+    TextMapId = "UI_LimitedPrizePool_Background17_2"
+  },
   UI_LimitedPrizePool_BeginCheck = {
     ContentEN = "Once this round of weaving begins, you will no longer be able to change your selected reward. Proceed?",
     ContentFR = "Une fois la sélection lancée, les récompenses ne pourront plus être modifiées. Confirmer ?",
@@ -225407,12 +229683,12 @@ If you or your family have a history of epilepsy or have experienced similar sym
     TextMapId = "UI_Locked_Des_4030021"
   },
   UI_Locked_Des_4030022 = {
-    ContentEN = "Obtain all [The Scream] series ranged weapon skins",
-    ContentFR = "Obtenir toutes les apparences d’arme à distance « Le Cri »",
+    ContentEN = "Obtain all [The Scream] series weapon skins",
+    ContentFR = "Obtenir toutes les apparences d’armes « Le Cri »",
     ContentJP = "すべての「グワグワッ！」遠隔武器スキンを獲得",
-    ContentKR = "원거리 절규 무기 코스튬 전부 획득",
-    ContentTC = "獲得所有遠程吶喊武器形象",
-    TextMapContent = "获得所有远程呐喊武器形象",
+    ContentKR = "절규 무기 코스튬 전부 획득",
+    ContentTC = "獲得所有吶喊武器形象",
+    TextMapContent = "获得所有呐喊武器形象",
     TextMapId = "UI_Locked_Des_4030022"
   },
   UI_Locked_Des_4030031 = {
@@ -225531,6 +229807,42 @@ If you or your family have a history of epilepsy or have experienced similar sym
     ContentTC = "獲得所有近戰吶喊武器形象",
     TextMapContent = "获得所有近战呐喊武器形象",
     TextMapId = "UI_Locked_Des_4030044"
+  },
+  UI_Locked_Des_4030051 = {
+    ContentEN = "Obtain Crescent Wishes: Azure",
+    ContentFR = "Débloqué avec Attrape-rêves lunaire – Bleu indigo",
+    ContentJP = "月枝夢狩·インディゴを獲得",
+    ContentKR = "달빛과 드림캐처 사이·다크 블루 획득",
+    ContentTC = "獲得月梢捕夢·黛藍",
+    TextMapContent = "获得月梢捕梦·黛蓝",
+    TextMapId = "UI_Locked_Des_4030051"
+  },
+  UI_Locked_Des_4030052 = {
+    ContentEN = "Obtain Crescent Wishes: Rust Red",
+    ContentFR = "Débloqué avec Attrape-rêves lunaire – Rouille",
+    ContentJP = "月枝夢狩·ペルシアンレッドを獲得",
+    ContentKR = "달빛과 드림캐처 사이·러스트 레드 획득",
+    ContentTC = "獲得月梢捕夢·銹紅",
+    TextMapContent = "获得月梢捕梦·锈红",
+    TextMapId = "UI_Locked_Des_4030052"
+  },
+  UI_Locked_Des_4030053 = {
+    ContentEN = "Obtain Crescent Wishes: Dark Jade",
+    ContentFR = "Débloqué avec Attrape-rêves lunaire – Jade noir",
+    ContentJP = "月枝夢狩·ジェットブラックを獲得",
+    ContentKR = "달빛과 드림캐처 사이·제트 블랙 획득",
+    ContentTC = "獲得月梢捕夢·墨玉",
+    TextMapContent = "获得月梢捕梦·墨玉",
+    TextMapId = "UI_Locked_Des_4030053"
+  },
+  UI_Locked_Des_4030054 = {
+    ContentEN = "Obtain any Crescent Wishes Posture",
+    ContentFR = "Débloqué avec une posture Attrape-rêves lunaire",
+    ContentJP = "月枝夢狩のジェスチャーをいずれか1つ獲得",
+    ContentKR = "임의의 달빛과 드림캐처 사이 전시 동작 획득",
+    ContentTC = "獲得任意月梢捕夢展示動作",
+    TextMapContent = "获得任意月梢捕梦展示动作",
+    TextMapId = "UI_Locked_Des_4030054"
   },
   UI_Locked_Des_451001 = {
     ContentEN = "Join Guild",
@@ -226548,6 +230860,11 @@ If you or your family have a history of epilepsy or have experienced similar sym
     ContentTC = "百寶囊內<SoloTreasure_Gold>珍品</>等階寶物大於等於4個時，當局文籌數*3",
     TextMapContent = "百宝囊内<SoloTreasure_Gold>珍品</>等阶宝物大于等于4个时，当局文筹数*3",
     TextMapId = "UI_LotteryDescription_3042"
+  },
+  UI_MAIN_UI_TBSupport_Des = {
+    ContentTC = "PC端啟動小小狩月人，可接收委託/鑄造/聊天通知",
+    TextMapContent = "PC端启动小小狩月人，可接收委托/铸造/聊天通知",
+    TextMapId = "UI_MAIN_UI_TBSupport_Des"
   },
   UI_MECHANISM_100 = {
     ContentEN = "Open",
@@ -227968,6 +232285,46 @@ If you or your family have a history of epilepsy or have experienced similar sym
     ContentTC = "癱瘓",
     TextMapContent = "瘫痪",
     TextMapId = "UI_MECHANISM_928"
+  },
+  UI_MECHANISM_93001 = {
+    TextMapContent = "拾取面包（待包装）",
+    TextMapId = "UI_MECHANISM_93001"
+  },
+  UI_MECHANISM_93002 = {
+    TextMapContent = "修复管风琴设备（待包装）",
+    TextMapId = "UI_MECHANISM_93002"
+  },
+  UI_MECHANISM_93003 = {
+    TextMapContent = "开启大门（待包装）",
+    TextMapId = "UI_MECHANISM_93003"
+  },
+  UI_MECHANISM_93004 = {
+    TextMapContent = "查看雕像（待包装）",
+    TextMapId = "UI_MECHANISM_93004"
+  },
+  UI_MECHANISM_93005 = {
+    TextMapContent = "拾取火柴（待包装）",
+    TextMapId = "UI_MECHANISM_93005"
+  },
+  UI_MECHANISM_93006 = {
+    TextMapContent = "切换世界（待包装）",
+    TextMapId = "UI_MECHANISM_93006"
+  },
+  UI_MECHANISM_93007 = {
+    TextMapContent = "打开大门（待包装）",
+    TextMapId = "UI_MECHANISM_93007"
+  },
+  UI_MECHANISM_93008 = {
+    TextMapContent = "移动书架（待包装）",
+    TextMapId = "UI_MECHANISM_93008"
+  },
+  UI_MECHANISM_93009 = {
+    TextMapContent = "书架路径被阻挡，无法移动（待包装）",
+    TextMapId = "UI_MECHANISM_93009"
+  },
+  UI_MECHANISM_93011 = {
+    TextMapContent = "激活光源（待包装）",
+    TextMapId = "UI_MECHANISM_93011"
   },
   UI_MECHANISM_98 = {
     ContentEN = "Grappling Hook",
@@ -233683,6 +238040,159 @@ If you or your family have a history of epilepsy or have experienced similar sym
     TextMapContent = "雨",
     TextMapId = "UI_Name_Memory_1101_1101019"
   },
+  UI_Name_Memory_1102_1102001 = {
+    ContentEN = "The Girl in the Woods",
+    ContentFR = "La jeune fille de la forêt",
+    ContentJP = "森の少女",
+    ContentKR = "숲속의 소녀",
+    ContentTC = "林中少女",
+    TextMapContent = "林中少女",
+    TextMapId = "UI_Name_Memory_1102_1102001"
+  },
+  UI_Name_Memory_1102_1102003 = {
+    ContentEN = "An Unexpected Reunion",
+    ContentFR = "Des retrouvailles inattendues",
+    ContentJP = "思いがけない再会",
+    ContentKR = "뜻밖의 재회",
+    ContentTC = "意外的重逢",
+    TextMapContent = "意外的重逢",
+    TextMapId = "UI_Name_Memory_1102_1102003"
+  },
+  UI_Name_Memory_1102_1102005 = {
+    ContentEN = "A Narrow Escape",
+    ContentFR = "Échapper à la mort",
+    ContentJP = "九死に一生",
+    ContentKR = "구사일생",
+    ContentTC = "逃出生天",
+    TextMapContent = "逃出生天",
+    TextMapId = "UI_Name_Memory_1102_1102005"
+  },
+  UI_Name_Memory_1102_1102006 = {
+    ContentEN = "Choices, Choices",
+    ContentFR = "Choisir, encore et encore",
+    ContentJP = "迫られる選択",
+    ContentKR = "되풀이되는 선택",
+    ContentTC = "抉擇抉擇",
+    TextMapContent = "抉择抉择",
+    TextMapId = "UI_Name_Memory_1102_1102006"
+  },
+  UI_Name_Memory_1102_1102007 = {
+    ContentEN = "The Parade",
+    ContentFR = "La Parade du Paradis",
+    ContentJP = "楽園巡遊",
+    ContentKR = "낙원 퍼레이드",
+    ContentTC = "樂園巡遊",
+    TextMapContent = "乐园巡游",
+    TextMapId = "UI_Name_Memory_1102_1102007"
+  },
+  UI_Name_Memory_1102_1102008 = {
+    ContentEN = "Fool's Venture",
+    ContentFR = "Le voyage du Fou",
+    ContentJP = "愚者の旅",
+    ContentKR = "광대의 여정",
+    ContentTC = "愚者之行",
+    TextMapContent = "愚者之行",
+    TextMapId = "UI_Name_Memory_1102_1102008"
+  },
+  UI_Name_Memory_1102_1102009 = {
+    ContentEN = "White Bunny's Resolve",
+    ContentFR = "La résolution du Lapin blanc",
+    ContentJP = "白ウサギの決意",
+    ContentKR = "하얀 토끼의 다짐",
+    ContentTC = "白兔的決意",
+    TextMapContent = "白兔的决意",
+    TextMapId = "UI_Name_Memory_1102_1102009"
+  },
+  UI_Name_Memory_1102_1102010 = {
+    ContentEN = "Paradise Lost",
+    ContentFR = "Paradis perdu",
+    ContentJP = "失楽園",
+    ContentKR = "실낙원",
+    ContentTC = "失樂園",
+    TextMapContent = "失乐园",
+    TextMapId = "UI_Name_Memory_1102_1102010"
+  },
+  UI_Name_Memory_1102_1102011 = {
+    ContentEN = "Paradise No More",
+    ContentFR = "Le Paradis n’est plus",
+    ContentJP = "楽園の終焉",
+    ContentKR = "사라진 낙원",
+    ContentTC = "樂園不再",
+    TextMapContent = "乐园不再",
+    TextMapId = "UI_Name_Memory_1102_1102011"
+  },
+  UI_Name_Memory_1102_1102012 = {
+    ContentEN = "Toward Atonement",
+    ContentFR = "Le premier pas vers la rédemption",
+    ContentJP = "贖罪の始まり",
+    ContentKR = "속죄의 첫걸음",
+    ContentTC = "贖罪的第一步",
+    TextMapContent = "赎罪的第一步",
+    TextMapId = "UI_Name_Memory_1102_1102012"
+  },
+  UI_Name_Memory_1102_1102013 = {
+    ContentEN = "Where Fear Ends",
+    ContentFR = "La fin de la peur",
+    ContentJP = "恐怖の終焉",
+    ContentKR = "공포의 종언",
+    ContentTC = "恐懼終焉",
+    TextMapContent = "恐惧终焉",
+    TextMapId = "UI_Name_Memory_1102_1102013"
+  },
+  UI_Name_Memory_1102_1102016 = {
+    ContentEN = "The Retaliator",
+    ContentFR = "La vengeresse",
+    ContentJP = "復讐者",
+    ContentKR = "복수자",
+    ContentTC = "復仇者",
+    TextMapContent = "复仇者",
+    TextMapId = "UI_Name_Memory_1102_1102016"
+  },
+  UI_Name_Memory_1102_1102017 = {
+    ContentEN = "Judgment Never Comes",
+    ContentFR = "Un jugement qui ne viendra jamais",
+    ContentJP = "永遠の審判なし",
+    ContentKR = "결코 오지 않을 심판",
+    ContentTC = "永無審判",
+    TextMapContent = "永无审判",
+    TextMapId = "UI_Name_Memory_1102_1102017"
+  },
+  UI_Name_Memory_1102_1102018 = {
+    ContentEN = "Until We Meet Again",
+    ContentFR = "Retrouvailles dans le futur",
+    ContentJP = "未来での再会",
+    ContentKR = "재회를 기약하며",
+    ContentTC = "於未來再會",
+    TextMapContent = "于未来再会",
+    TextMapId = "UI_Name_Memory_1102_1102018"
+  },
+  UI_Name_Memory_1102_1102019 = {
+    ContentEN = "White Bunny's Farewell",
+    ContentFR = "Les adieux du Lapin blanc",
+    ContentJP = "白ウサギの別れ",
+    ContentKR = "하얀 토끼의 작별",
+    ContentTC = "白兔的告別",
+    TextMapContent = "白兔的告别",
+    TextMapId = "UI_Name_Memory_1102_1102019"
+  },
+  UI_Name_Memory_1102_1102020 = {
+    ContentEN = "A New World",
+    ContentFR = "Un nouveau monde",
+    ContentJP = "新世界",
+    ContentKR = "새로운 세계",
+    ContentTC = "新世界",
+    TextMapContent = "新世界",
+    TextMapId = "UI_Name_Memory_1102_1102020"
+  },
+  UI_Name_Memory_1102_1102033 = {
+    ContentEN = "Rules of Paradise",
+    ContentFR = "Les règles du Paradis",
+    ContentJP = "楽園のルール",
+    ContentKR = "낙원의 규칙",
+    ContentTC = "樂園的規則",
+    TextMapContent = "乐园的规则",
+    TextMapId = "UI_Name_Memory_1102_1102033"
+  },
   UI_Name_Memory_11201_11201001 = {
     ContentEN = "Surprise Attack on the Bad Sorcerers!",
     ContentFR = "À l’assaut des mauvais sorciers !",
@@ -234358,13 +238868,22 @@ If you or your family have a history of epilepsy or have experienced similar sym
     TextMapContent = "密函：法露茜",
     TextMapId = "UI_Name_Walnut_1027"
   },
+  UI_Name_Walnut_1028 = {
+    ContentEN = "Secret Letter: Rhythm: Flamewrought",
+    ContentFR = "Mandat scellé : Rhythm – Née des flammes",
+    ContentJP = "密書：リズム・焔を纏う者",
+    ContentKR = "편지·리듬·되살아난 불꽃",
+    ContentTC = "密函：黎瑟·浴火",
+    TextMapContent = "密函：黎瑟·浴火",
+    TextMapId = "UI_Name_Walnut_1028"
+  },
   UI_Name_Walnut_151317 = {
-    ContentEN = "Secret Letter: Overflow – Finesse",
-    ContentFR = "Mandat scellé : Surabondance · Adresse",
-    ContentJP = "密書：盈満・巧妙",
-    ContentKR = "편지·오버차지·묘수",
-    ContentTC = "密函：充盈·巧力",
-    TextMapContent = "密函：充盈·巧力",
+    ContentEN = "Secret Letter: Sphinx's Overflow – Finesse",
+    ContentFR = "Mandat scellé : Surabondance du Sphinx · Adresse",
+    ContentJP = "密書：スフィンクスのチャージ・巧妙",
+    ContentKR = "편지·스핑크스의 오버차지·묘수",
+    ContentTC = "密函：人面獅之充盈·巧力",
+    TextMapContent = "密函：人面狮之充盈·巧力",
     TextMapId = "UI_Name_Walnut_151317"
   },
   UI_Name_Walnut_151321 = {
@@ -234808,6 +239327,15 @@ If you or your family have a history of epilepsy or have experienced similar sym
     TextMapContent = "密函：契约者之昂扬·决断",
     TextMapId = "UI_Name_Walnut_151717"
   },
+  UI_Name_Walnut_151718 = {
+    ContentEN = "Secret Letter: Covenanter's Blaze – Volition",
+    ContentFR = "Mandat scellé : Ardeur du Pactisant · Décision",
+    ContentJP = "密書：カヴェナンターの灼熱・断決",
+    ContentKR = "편지·메피스토의 작열·결단",
+    ContentTC = "密函：契約者之熾灼·決斷",
+    TextMapContent = "密函：契约者之炽灼·决断",
+    TextMapId = "UI_Name_Walnut_151718"
+  },
   UI_Name_Walnut_151721 = {
     ContentEN = "Secret Letter: Covenanter's Blaze – Nirvana",
     ContentFR = "Mandat scellé : Ardeur du Pactisant · Nirvana",
@@ -235015,6 +239543,15 @@ If you or your family have a history of epilepsy or have experienced similar sym
     TextMapContent = "密函：契约者之昂扬·精炼",
     TextMapId = "UI_Name_Walnut_151747"
   },
+  UI_Name_Walnut_151748 = {
+    ContentEN = "Secret Letter: Covenanter's Blaze – Refinement",
+    ContentFR = "Mandat scellé : Ardeur du Pactisant · Raffinement",
+    ContentJP = "密書：カヴェナンターの灼熱・精錬",
+    ContentKR = "편지·메피스토의 작열·정련",
+    ContentTC = "密函：契約者之熾灼·精煉",
+    TextMapContent = "密函：契约者之炽灼·精炼",
+    TextMapId = "UI_Name_Walnut_151748"
+  },
   UI_Name_Walnut_151751 = {
     ContentEN = "Secret Letter: Covenanter's Blaze – Standfast",
     ContentFR = "Mandat scellé : Ardeur du Pactisant · Dévotion",
@@ -235213,6 +239750,15 @@ If you or your family have a history of epilepsy or have experienced similar sym
     TextMapContent = "密函：夜使之雷云摧朽",
     TextMapId = "UI_Name_Walnut_151941"
   },
+  UI_Name_Walnut_151942 = {
+    ContentEN = "Secret Letter: Summanus's Still Thunder",
+    ContentFR = "Mandat scellé : Force inébranlable de Summanus",
+    ContentJP = "密書：スムマーヌスの不動の万鈞",
+    ContentKR = "편지·숨마누스의 부동의 저력",
+    ContentTC = "密函：夜使之不動萬鈞",
+    TextMapContent = "密函：夜使之不动万钧",
+    TextMapId = "UI_Name_Walnut_151942"
+  },
   UI_Name_Walnut_151951 = {
     ContentEN = "Secret Letter: Hastur's Whispering Zephyr",
     ContentFR = "Mandat scellé : Souffle du zéphir d’Hastur",
@@ -235249,31 +239795,40 @@ If you or your family have a history of epilepsy or have experienced similar sym
     TextMapContent = "密函：金乌之流光交辉",
     TextMapId = "UI_Name_Walnut_151962"
   },
+  UI_Name_Walnut_152013 = {
+    ContentEN = "Secret Letter: Cerberus's Focus – Impact",
+    ContentFR = "Mandat scellé : Concentration du Cerbère · Frappe brutale",
+    ContentJP = "密書：ケルベロスの集中・強撃",
+    ContentKR = "편지·케르베로스의 집중·강공",
+    ContentTC = "密函：冥犬之專注·強擊",
+    TextMapContent = "密函：冥犬之专注·强击",
+    TextMapId = "UI_Name_Walnut_152013"
+  },
   UI_Name_Walnut_152111 = {
-    ContentEN = "Secret Letter: Edge – Trammel",
-    ContentFR = "Mandat scellé : Tranchant · Entrave",
-    ContentJP = "密書：鋭利・束縛",
-    ContentKR = "편지·예리·속박",
-    ContentTC = "密函：鋒銳·纏縛",
-    TextMapContent = "密函：锋锐·缠缚",
+    ContentEN = "Secret Letter: Cerberus's Edge – Trammel",
+    ContentFR = "Mandat scellé : Tranchant du Cerbère · Entrave",
+    ContentJP = "密書：ケルベロスの鋭利・束縛",
+    ContentKR = "편지·케르베로스의 예리·속박",
+    ContentTC = "密函：冥犬之鋒銳·纏縛",
+    TextMapContent = "密函：冥犬之锋锐·缠缚",
     TextMapId = "UI_Name_Walnut_152111"
   },
   UI_Name_Walnut_152112 = {
-    ContentEN = "Secret Letter: Penetration – Trammel",
-    ContentFR = "Mandat scellé : Pénétration · Entrave",
-    ContentJP = "密書：痛打・束縛",
-    ContentKR = "편지·투과·속박",
-    ContentTC = "密函：透析·纏縛",
-    TextMapContent = "密函：透析·缠缚",
+    ContentEN = "Secret Letter: Cerberus's Penetration – Trammel",
+    ContentFR = "Mandat scellé : Pénétration du Cerbère · Entrave",
+    ContentJP = "密書：ケルベロスの痛打・束縛",
+    ContentKR = "편지·케르베로스의 투과·속박",
+    ContentTC = "密函：冥犬之透析·纏縛",
+    TextMapContent = "密函：冥犬之透析·缠缚",
     TextMapId = "UI_Name_Walnut_152112"
   },
   UI_Name_Walnut_152113 = {
-    ContentEN = "Secret Letter: Crusher – Trammel",
-    ContentFR = "Mandat scellé : Écrasement · Entrave",
-    ContentJP = "密書：重撃・束縛",
-    ContentKR = "편지·중압·속박",
-    ContentTC = "密函：重壓·纏縛",
-    TextMapContent = "密函：重压·缠缚",
+    ContentEN = "Secret Letter: Cerberus's Crusher – Trammel",
+    ContentFR = "Mandat scellé : Écrasement du Cerbère · Entrave",
+    ContentJP = "密書：ケルベロスの重撃・束縛",
+    ContentKR = "편지·케르베로스의 중압·속박",
+    ContentTC = "密函：冥犬之重壓·纏縛",
+    TextMapContent = "密函：冥犬之重压·缠缚",
     TextMapId = "UI_Name_Walnut_152113"
   },
   UI_Name_Walnut_152203 = {
@@ -235295,13 +239850,22 @@ If you or your family have a history of epilepsy or have experienced similar sym
     TextMapId = "UI_Name_Walnut_152204"
   },
   UI_Name_Walnut_152801 = {
-    ContentEN = "Secret Letter: Trammel – Surplus",
-    ContentFR = "Mandat scellé : Entrave · Débordement",
-    ContentJP = "密書：束縛・満溢",
-    ContentKR = "편지·속박·풍성",
-    ContentTC = "密函：纏縛·滿溢",
-    TextMapContent = "密函：缠缚·满溢",
+    ContentEN = "Secret Letter: Fenrir's Trammel – Surplus",
+    ContentFR = "Mandat scellé : Entrave de Fenrir · Débordement",
+    ContentJP = "密書：フェンリルの束縛・満溢",
+    ContentKR = "편지·펜리르의 속박·풍성",
+    ContentTC = "密函：囚狼之纏縛·滿溢",
+    TextMapContent = "密函：囚狼之缠缚·满溢",
     TextMapId = "UI_Name_Walnut_152801"
+  },
+  UI_Name_Walnut_152802 = {
+    ContentEN = "Secret Letter: Fenrir's Trammel – Dissolution",
+    ContentFR = "Mandat scellé : Entrave de Fenrir · Désagrégation",
+    ContentJP = "密書：フェンリルの束縛・崩壊",
+    ContentKR = "편지·펜리르의 속박·와해",
+    ContentTC = "密函：囚狼之纏縛·瓦解",
+    TextMapContent = "密函：囚狼之缠缚·瓦解",
+    TextMapId = "UI_Name_Walnut_152802"
   },
   UI_Name_Walnut_153011 = {
     ContentEN = "Secret Letter: Lilith's Foldover· Dexterity",
@@ -235322,39 +239886,39 @@ If you or your family have a history of epilepsy or have experienced similar sym
     TextMapId = "UI_Name_Walnut_153013"
   },
   UI_Name_Walnut_153111 = {
-    ContentEN = "Secret Letter: Edge – Trammel",
-    ContentFR = "Mandat scellé : Tranchant · Entrave",
-    ContentJP = "密書：鋭利・束縛",
-    ContentKR = "편지·예리·속박",
-    ContentTC = "密函：鋒銳·纏縛",
-    TextMapContent = "密函：锋锐·缠缚",
+    ContentEN = "Secret Letter: Lilith's Edge – Trammel",
+    ContentFR = "Mandat scellé : Tranchant de Lilith · Entrave",
+    ContentJP = "密書：リリスの鋭利・束縛",
+    ContentKR = "편지·릴리스의 예리·속박",
+    ContentTC = "密函：夜魔之鋒銳·纏縛",
+    TextMapContent = "密函：夜魔之锋锐·缠缚",
     TextMapId = "UI_Name_Walnut_153111"
   },
   UI_Name_Walnut_153112 = {
-    ContentEN = "Secret Letter: Penetration – Trammel",
-    ContentFR = "Mandat scellé : Pénétration · Entrave",
-    ContentJP = "密書：痛打・束縛",
-    ContentKR = "편지·투과·속박",
-    ContentTC = "密函：透析·纏縛",
-    TextMapContent = "密函：透析·缠缚",
+    ContentEN = "Secret Letter: Lilith's Penetration – Trammel",
+    ContentFR = "Mandat scellé : Pénétration de Lilith · Entrave",
+    ContentJP = "密書：リリスの痛打・束縛",
+    ContentKR = "편지·릴리스의 투과·속박",
+    ContentTC = "密函：夜魔之透析·纏縛",
+    TextMapContent = "密函：夜魔之透析·缠缚",
     TextMapId = "UI_Name_Walnut_153112"
   },
   UI_Name_Walnut_153113 = {
-    ContentEN = "Secret Letter: Crusher – Trammel",
-    ContentFR = "Mandat scellé : Écrasement · Entrave",
-    ContentJP = "密書：重撃・束縛",
-    ContentKR = "편지·중압·속박",
-    ContentTC = "密函：重壓·纏縛",
-    TextMapContent = "密函：重压·缠缚",
+    ContentEN = "Secret Letter: Lilith's Crusher – Trammel",
+    ContentFR = "Mandat scellé : Écrasement de Lilith · Entrave",
+    ContentJP = "密書：リリスの重撃・束縛",
+    ContentKR = "편지·릴리스의 중압·속박",
+    ContentTC = "密函：夜魔之重壓·纏縛",
+    TextMapContent = "密函：夜魔之重压·缠缚",
     TextMapId = "UI_Name_Walnut_153113"
   },
   UI_Name_Walnut_153801 = {
-    ContentEN = "Secret Letter: Trammel – Surplus",
-    ContentFR = "Mandat scellé : Entrave · Débordement",
-    ContentJP = "密書：束縛・満溢",
-    ContentKR = "편지·속박·풍성",
-    ContentTC = "密函：纏縛·滿溢",
-    TextMapContent = "密函：缠缚·满溢",
+    ContentEN = "Secret Letter: Fafnir's Trammel – Surplus",
+    ContentFR = "Mandat scellé : Entrave de Fáfnir · Débordement",
+    ContentJP = "密書：ファフニールの束縛・満溢",
+    ContentKR = "편지·파브니르의 속박·풍성",
+    ContentTC = "密函：邪龍之纏縛·滿溢",
+    TextMapContent = "密函：邪龙之缠缚·满溢",
     TextMapId = "UI_Name_Walnut_153801"
   },
   UI_Name_Walnut_156111 = {
@@ -235403,12 +239967,12 @@ If you or your family have a history of epilepsy or have experienced similar sym
     TextMapId = "UI_Name_Walnut_156121"
   },
   UI_Name_Walnut_156122 = {
-    ContentEN = "Secret Letter: Wings – Inspo – Awakening",
-    ContentFR = "Mandat scellé : Ailes · Inspiration · Éveil",
-    ContentJP = "密書：羽翼・鼓舞・覚醒",
-    ContentKR = "편지·날개·고무·환기",
-    ContentTC = "密函：羽翼·鼓舞·喚醒",
-    TextMapContent = "密函：羽翼·鼓舞·唤醒",
+    ContentEN = "Secret Letter: Siren's Wings – Inspo – Awakening",
+    ContentFR = "Mandat scellé : Ailes de Sirène · Inspiration · Éveil",
+    ContentJP = "密書：セイレーンの羽翼・鼓舞・覚醒",
+    ContentKR = "편지·세이렌의 날개·고무·환기",
+    ContentTC = "密函：海妖之羽翼·鼓舞·喚醒",
+    TextMapContent = "密函：海妖之羽翼·鼓舞·唤醒",
     TextMapId = "UI_Name_Walnut_156122"
   },
   UI_Name_Walnut_156123 = {
@@ -235421,12 +239985,12 @@ If you or your family have a history of epilepsy or have experienced similar sym
     TextMapId = "UI_Name_Walnut_156123"
   },
   UI_Name_Walnut_156124 = {
-    ContentEN = "Secret Letter: Wings – Inspo – Morale",
-    ContentFR = "Mandat scellé : Ailes · Inspiration · Vigueur",
-    ContentJP = "密書：羽翼・鼓舞・高揚",
-    ContentKR = "편지·날개·고무·격양",
-    ContentTC = "密函：羽翼·鼓舞·昂揚",
-    TextMapContent = "密函：羽翼·鼓舞·昂扬",
+    ContentEN = "Secret Letter: Siren's Wings – Inspo – Morale",
+    ContentFR = "Mandat scellé : Ailes de Sirène · Inspiration · Vigueur",
+    ContentJP = "密書：セイレーンの羽翼・鼓舞・ハイスピリット",
+    ContentKR = "편지·세이렌의 날개·고무·격양",
+    ContentTC = "密函：海妖之羽翼·鼓舞·昂揚",
+    TextMapContent = "密函：海妖之羽翼·鼓舞·昂扬",
     TextMapId = "UI_Name_Walnut_156124"
   },
   UI_Name_Walnut_156131 = {
@@ -235439,12 +240003,12 @@ If you or your family have a history of epilepsy or have experienced similar sym
     TextMapId = "UI_Name_Walnut_156131"
   },
   UI_Name_Walnut_156132 = {
-    ContentEN = "Secret Letter: Wings – Inspo – Volition",
-    ContentFR = "Mandat scellé : Ailes · Inspiration · Décision",
-    ContentJP = "密書：羽翼・鼓舞・断決",
-    ContentKR = "편지·날개·고무·결단",
-    ContentTC = "密函：羽翼·鼓舞·決斷",
-    TextMapContent = "密函：羽翼·鼓舞·决断",
+    ContentEN = "Secret Letter: Siren's Wings – Inspo – Volition",
+    ContentFR = "Mandat scellé : Ailes de Sirène · Inspiration · Décision",
+    ContentJP = "密書：セイレーンの羽翼・鼓舞・断決",
+    ContentKR = "편지·세이렌의 날개·고무·결단",
+    ContentTC = "密函：海妖之羽翼·鼓舞·決斷",
+    TextMapContent = "密函：海妖之羽翼·鼓舞·决断",
     TextMapId = "UI_Name_Walnut_156132"
   },
   UI_Name_Walnut_156133 = {
@@ -235457,12 +240021,12 @@ If you or your family have a history of epilepsy or have experienced similar sym
     TextMapId = "UI_Name_Walnut_156133"
   },
   UI_Name_Walnut_156134 = {
-    ContentEN = "Secret Letter: Wings – Inspo – Morale",
-    ContentFR = "Mandat scellé : Ailes · Inspiration · Vigueur",
-    ContentJP = "密書：羽翼・鼓舞・高揚",
-    ContentKR = "편지·날개·고무·격양",
-    ContentTC = "密函：羽翼·鼓舞·昂揚",
-    TextMapContent = "密函：羽翼·鼓舞·昂扬",
+    ContentEN = "Secret Letter: Siren's Wings – Inspo – Morale",
+    ContentFR = "Mandat scellé : Ailes de Sirène · Inspiration · Vigueur",
+    ContentJP = "密書：セイレーンの羽翼・鼓舞・ハイスピリット",
+    ContentKR = "편지·세이렌의 날개·고무·격양",
+    ContentTC = "密函：海妖之羽翼·鼓舞·昂揚",
+    TextMapContent = "密函：海妖之羽翼·鼓舞·昂扬",
     TextMapId = "UI_Name_Walnut_156134"
   },
   UI_Name_Walnut_156141 = {
@@ -236175,6 +240739,15 @@ If you or your family have a history of epilepsy or have experienced similar sym
     ContentTC = "密函：聖血·鞭刃",
     TextMapContent = "密函：圣血·鞭刃",
     TextMapId = "UI_Name_Walnut_2067"
+  },
+  UI_Name_Walnut_2068 = {
+    ContentEN = "Secret Letter: Blessed Burden",
+    ContentFR = "Mandat scellé : Le poids de vivre",
+    ContentJP = "密書：生きる重さ",
+    ContentKR = "편지·살아간다는 무게",
+    ContentTC = "密函：活著的重量",
+    TextMapContent = "密函：活着的重量",
+    TextMapId = "UI_Name_Walnut_2068"
   },
   UI_NeedApproval = {
     ContentEN = "Approval Required",
@@ -238273,6 +242846,132 @@ If you or your family have a history of epilepsy or have experienced similar sym
     TextMapContent = "布鲁斯",
     TextMapId = "UI_Npc_Name_260029"
   },
+  UI_Npc_Name_270001 = {
+    ContentEN = "Katya",
+    ContentFR = "Katya",
+    ContentJP = "カーチャ",
+    ContentKR = "카지아",
+    ContentTC = "卡嘉",
+    TextMapContent = "卡嘉",
+    TextMapId = "UI_Npc_Name_270001"
+  },
+  UI_Npc_Name_270002 = {
+    ContentEN = "Halogi",
+    ContentFR = "Halogi",
+    ContentJP = "ハロギ",
+    ContentKR = "하로기",
+    ContentTC = "哈洛吉",
+    TextMapContent = "哈洛吉",
+    TextMapId = "UI_Npc_Name_270002"
+  },
+  UI_Npc_Name_270003 = {
+    ContentEN = "Carnot",
+    ContentFR = "Carnot",
+    ContentJP = "カルノー",
+    ContentKR = "카르노",
+    ContentTC = "卡諾",
+    TextMapContent = "卡诺",
+    TextMapId = "UI_Npc_Name_270003"
+  },
+  UI_Npc_Name_270004 = {
+    ContentEN = "Stéphane",
+    ContentFR = "Stéphane",
+    ContentJP = "ステファン",
+    ContentKR = "스테판",
+    ContentTC = "史蒂芬",
+    TextMapContent = "史蒂芬",
+    TextMapId = "UI_Npc_Name_270004"
+  },
+  UI_Npc_Name_270005 = {
+    ContentEN = "Arrogant Officer",
+    ContentFR = "Fonctionnaire arrogant",
+    ContentJP = "傲慢な役人",
+    ContentKR = "오만한 관료",
+    ContentTC = "傲慢的官員",
+    TextMapContent = "傲慢的官员",
+    TextMapId = "UI_Npc_Name_270005"
+  },
+  UI_Npc_Name_270006 = {
+    ContentEN = "Clara",
+    ContentFR = "Clara",
+    ContentJP = "クララ",
+    ContentKR = "클라라",
+    ContentTC = "克拉拉",
+    TextMapContent = "克拉拉",
+    TextMapId = "UI_Npc_Name_270006"
+  },
+  UI_Npc_Name_270007 = {
+    ContentEN = "Winking Clerk",
+    ContentFR = "Commis aux regards complices",
+    ContentJP = "ウインクする店員",
+    ContentKR = "눈짓하는 점원",
+    ContentTC = "擠眉弄眼的店員",
+    TextMapContent = "挤眉弄眼的店员",
+    TextMapId = "UI_Npc_Name_270007"
+  },
+  UI_Npc_Name_270008 = {
+    ContentEN = "Servant",
+    ContentFR = "Serviteur",
+    ContentJP = "使用人",
+    ContentKR = "하인",
+    ContentTC = "僕人",
+    TextMapContent = "仆人",
+    TextMapId = "UI_Npc_Name_270008"
+  },
+  UI_Npc_Name_270009 = {
+    ContentEN = "Jeering Gambler",
+    ContentFR = "Parieur tapageur",
+    ContentJP = "騒ぎ立てる賭博客",
+    ContentKR = "떠들썩한 도박꾼",
+    ContentTC = "起鬨的賭客",
+    TextMapContent = "起哄的赌客",
+    TextMapId = "UI_Npc_Name_270009"
+  },
+  UI_Npc_Name_270010 = {
+    ContentEN = "Frenzied Gambler",
+    ContentFR = "Parieur exalté",
+    ContentJP = "熱狂的な賭博客",
+    ContentKR = "열광하는 도박꾼",
+    ContentTC = "狂熱的賭客",
+    TextMapContent = "狂热的赌客",
+    TextMapId = "UI_Npc_Name_270010"
+  },
+  UI_Npc_Name_270011 = {
+    ContentEN = "Polite Guard",
+    ContentFR = "Garde poli",
+    ContentJP = "礼儀正しい衛兵",
+    ContentKR = "예의 바른 경비병",
+    ContentTC = "禮貌的衛兵",
+    TextMapContent = "礼貌的卫兵",
+    TextMapId = "UI_Npc_Name_270011"
+  },
+  UI_Npc_Name_270012 = {
+    ContentEN = "Dutiful Guard",
+    ContentFR = "Garde consciencieux",
+    ContentJP = "真面目な衛兵",
+    ContentKR = "진지한 경비병",
+    ContentTC = "認真的衛兵",
+    TextMapContent = "认真的卫兵",
+    TextMapId = "UI_Npc_Name_270012"
+  },
+  UI_Npc_Name_270013 = {
+    ContentEN = "Distant Soldier",
+    ContentFR = "Soldat au loin",
+    ContentJP = "遠くにいる兵士",
+    ContentKR = "먼 곳에 있는 병사",
+    ContentTC = "遠處的士兵",
+    TextMapContent = "远处的士兵",
+    TextMapId = "UI_Npc_Name_270013"
+  },
+  UI_Npc_Name_270014 = {
+    ContentEN = "Silent Man",
+    ContentFR = "Homme silencieux",
+    ContentJP = "無言の男",
+    ContentKR = "말없는 남자",
+    ContentTC = "沉默的男人",
+    TextMapContent = "沉默的男人",
+    TextMapId = "UI_Npc_Name_270014"
+  },
   UI_Npc_Name_790072 = {
     ContentEN = "Yuming",
     ContentFR = "Yuming",
@@ -239051,6 +243750,15 @@ If you or your family have a history of epilepsy or have experienced similar sym
     TextMapContent = "艾米莉",
     TextMapId = "UI_Npc_Name_Emily"
   },
+  UI_Npc_Name_Engineer = {
+    ContentEN = "Engineer",
+    ContentFR = "Ingénieur",
+    ContentJP = "エンジニア",
+    ContentKR = "기술자",
+    ContentTC = "工程師",
+    TextMapContent = "工程师",
+    TextMapId = "UI_Npc_Name_Engineer"
+  },
   UI_Npc_Name_EnigmaticGuard = {
     ContentEN = "Mysterious Guard",
     ContentFR = "Garde énigmatique",
@@ -239446,6 +244154,15 @@ If you or your family have a history of epilepsy or have experienced similar sym
     ContentTC = "扶疏",
     TextMapContent = "扶疏",
     TextMapId = "UI_Npc_Name_FushuFD"
+  },
+  UI_Npc_Name_Gambler = {
+    ContentEN = "Onlooking Gamblers",
+    ContentFR = "Parieurs attroupés",
+    ContentJP = "見物する賭博客たち",
+    ContentKR = "구경하는 도박꾼들",
+    ContentTC = "圍觀的賭客們",
+    TextMapContent = "围观的赌客们",
+    TextMapId = "UI_Npc_Name_Gambler"
   },
   UI_Npc_Name_GangkouDati = {
     ContentEN = "Warm-Hearted Passer-by",
@@ -240788,6 +245505,15 @@ If you or your family have a history of epilepsy or have experienced similar sym
     TextMapContent = "帝国士兵的声音",
     TextMapId = "UI_Npc_Name_Soldier"
   },
+  UI_Npc_Name_Soldier_2 = {
+    ContentEN = "Imperial Soldier",
+    ContentFR = "Soldat impérial",
+    ContentJP = "帝国兵",
+    ContentKR = "제국 병사",
+    ContentTC = "帝國士兵",
+    TextMapContent = "帝国士兵",
+    TextMapId = "UI_Npc_Name_Soldier_2"
+  },
   UI_Npc_Name_Songlu = {
     ContentEN = "Truffle",
     ContentFR = "Truffle",
@@ -241012,6 +245738,15 @@ If you or your family have a history of epilepsy or have experienced similar sym
     ContentTC = "打開可疑的箱子",
     TextMapContent = "打开可疑的箱子",
     TextMapId = "UI_Npc_Name_UnlockChest"
+  },
+  UI_Npc_Name_VagueSound = {
+    ContentEN = "A Faint Voice",
+    ContentFR = "Voix indistincte",
+    ContentJP = "（かすかな声）",
+    ContentKR = "희미한 목소리",
+    ContentTC = "隱約的聲音",
+    TextMapContent = "隐约的声音",
+    TextMapId = "UI_Npc_Name_VagueSound"
   },
   UI_Npc_Name_Waidishangren = {
     ContentEN = "Foreign Merchant",
@@ -243488,6 +248223,15 @@ If you or your family have a history of epilepsy or have experienced similar sym
     TextMapContent = "显示友方状态图标",
     TextMapId = "UI_OPTION_ShowBuffFriend"
   },
+  UI_OPTION_ShowGuildBadge = {
+    ContentEN = "Show Guild Insignia",
+    ContentFR = "Afficher l’insigne de guilde",
+    ContentJP = "協会徽章を表示",
+    ContentKR = "길드 상징 표시",
+    ContentTC = "顯示協會徽記",
+    TextMapContent = "显示协会徽记",
+    TextMapId = "UI_OPTION_ShowGuildBadge"
+  },
   UI_OPTION_ShowMonsterName = {
     ContentEN = "Always show enemy names",
     ContentFR = "Toujours afficher le nom des ennemis",
@@ -243802,6 +248546,15 @@ If you or your family have a history of epilepsy or have experienced similar sym
     ContentTC = "XeSS",
     TextMapContent = "XeSS",
     TextMapId = "UI_OPTION_XeSS"
+  },
+  UI_OPTION_bEnableStrafeCircle = {
+    ContentEN = "Dynamic Camera Centering",
+    ContentFR = "Recentrage dynamique de la caméra",
+    ContentJP = "カメラの動的な正面復帰",
+    ContentKR = "동적 카메라 복원",
+    ContentTC = "動態鏡頭回正",
+    TextMapContent = "动态镜头回正",
+    TextMapId = "UI_OPTION_bEnableStrafeCircle"
   },
   UI_Observation_Finsh = {
     ContentEN = "Stop Observing",
@@ -245271,6 +250024,24 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
     TextMapContent = "性能消耗(待包装）",
     TextMapId = "UI_PerformanceCost_2"
   },
+  UI_PersonInfo_AddItem = {
+    ContentEN = "Place Items",
+    ContentFR = "Ajoutez un objet",
+    ContentJP = "タップしてアイテムを追加",
+    ContentKR = "오브젝트 추가",
+    ContentTC = "點擊添加物件",
+    TextMapContent = "点击添加物件",
+    TextMapId = "UI_PersonInfo_AddItem"
+  },
+  UI_PersonInfo_CustomItem = {
+    ContentEN = "Item",
+    ContentFR = "Objet",
+    ContentJP = "アイテム",
+    ContentKR = "오브젝트",
+    ContentTC = "物件",
+    TextMapContent = "物件",
+    TextMapId = "UI_PersonInfo_CustomItem"
+  },
   UI_PersonInfo_Detail_Char = {
     ContentEN = "Character Info",
     ContentFR = "Détails du personnage",
@@ -245487,6 +250258,11 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
     TextMapContent = "复制",
     TextMapId = "UI_PersonalPage_Copy"
   },
+  UI_PersonalPage_CustomSceneDesc = {
+    ContentTC = "場景",
+    TextMapContent = "场景",
+    TextMapId = "UI_PersonalPage_CustomSceneDesc"
+  },
   UI_PersonalPage_Customize = {
     ContentEN = "Customise",
     ContentFR = "Personnalisation",
@@ -245541,6 +250317,15 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
     TextMapContent = "滤镜",
     TextMapId = "UI_PersonalPage_Filter"
   },
+  UI_PersonalPage_FilterIntensity = {
+    ContentEN = "Filter Intensity",
+    ContentFR = "Intensité du filtre",
+    ContentJP = "フィルター強度",
+    ContentKR = "필터 강도",
+    ContentTC = "濾鏡強度",
+    TextMapContent = "滤镜强度",
+    TextMapId = "UI_PersonalPage_FilterIntensity"
+  },
   UI_PersonalPage_FreeLight = {
     ContentEN = "Freeform Light",
     ContentFR = "Source lumineuse personnalisée",
@@ -245559,6 +250344,11 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
     TextMapContent = "仅好友可见",
     TextMapId = "UI_PersonalPage_Friend"
   },
+  UI_PersonalPage_ItemTips = {
+    ContentTC = "物件",
+    TextMapContent = "物件",
+    TextMapId = "UI_PersonalPage_ItemTips"
+  },
   UI_PersonalPage_Light = {
     ContentEN = "Light %d",
     ContentFR = "Source lumineuse %d",
@@ -245567,6 +250357,15 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
     ContentTC = "光源%d",
     TextMapContent = "光源%d",
     TextMapId = "UI_PersonalPage_Light"
+  },
+  UI_PersonalPage_LightDirection = {
+    ContentEN = "Light Direction",
+    ContentFR = "Direction de l’éclairage",
+    ContentJP = "光の方向",
+    ContentKR = "광원 방향",
+    ContentTC = "光照方向",
+    TextMapContent = "光照方向",
+    TextMapId = "UI_PersonalPage_LightDirection"
   },
   UI_PersonalPage_LightIntensity = {
     ContentEN = "Light Intensity",
@@ -245594,6 +250393,11 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
     ContentTC = "當前無內容修改",
     TextMapContent = "当前无内容修改",
     TextMapId = "UI_PersonalPage_NoChanges"
+  },
+  UI_PersonalPage_NoLightAdjust = {
+    ContentTC = "尚未進行任何光照參數調整",
+    TextMapContent = "尚未进行任何光照参数调整",
+    TextMapId = "UI_PersonalPage_NoLightAdjust"
   },
   UI_PersonalPage_NoWeapon = {
     ContentEN = "No Weapon",
@@ -245700,7 +250504,7 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
     ContentJP = "デフォルトに戻す",
     ContentKR = "초기화",
     ContentTC = "恢復默認",
-    TextMapContent = "回复默认",
+    TextMapContent = "恢复默认",
     TextMapId = "UI_PersonalPage_ResetDefault"
   },
   UI_PersonalPage_RestoredDefault = {
@@ -245819,6 +250623,230 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
     ContentTC = "貼紙",
     TextMapContent = "贴纸",
     TextMapId = "UI_PersonalPage_Sticker"
+  },
+  UI_PersonalPage_Sticker_01 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_01"
+  },
+  UI_PersonalPage_Sticker_02 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_02"
+  },
+  UI_PersonalPage_Sticker_03 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_03"
+  },
+  UI_PersonalPage_Sticker_04 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_04"
+  },
+  UI_PersonalPage_Sticker_05 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_05"
+  },
+  UI_PersonalPage_Sticker_06 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_06"
+  },
+  UI_PersonalPage_Sticker_07 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_07"
+  },
+  UI_PersonalPage_Sticker_08 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_08"
+  },
+  UI_PersonalPage_Sticker_09 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_09"
+  },
+  UI_PersonalPage_Sticker_10 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_10"
+  },
+  UI_PersonalPage_Sticker_11 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_11"
+  },
+  UI_PersonalPage_Sticker_12 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_12"
+  },
+  UI_PersonalPage_Sticker_13 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_13"
+  },
+  UI_PersonalPage_Sticker_14 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_14"
+  },
+  UI_PersonalPage_Sticker_15 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_15"
+  },
+  UI_PersonalPage_Sticker_16 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_16"
+  },
+  UI_PersonalPage_Sticker_17 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_17"
+  },
+  UI_PersonalPage_Sticker_18 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_18"
+  },
+  UI_PersonalPage_Sticker_19 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_19"
+  },
+  UI_PersonalPage_Sticker_20 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_20"
+  },
+  UI_PersonalPage_Sticker_21 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_21"
+  },
+  UI_PersonalPage_Sticker_22 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_22"
+  },
+  UI_PersonalPage_Sticker_23 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_23"
+  },
+  UI_PersonalPage_Sticker_24 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_24"
+  },
+  UI_PersonalPage_Sticker_25 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_25"
+  },
+  UI_PersonalPage_Sticker_26 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_26"
+  },
+  UI_PersonalPage_Sticker_27 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_27"
+  },
+  UI_PersonalPage_Sticker_28 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_28"
+  },
+  UI_PersonalPage_Sticker_29 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_29"
+  },
+  UI_PersonalPage_Sticker_30 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_30"
+  },
+  UI_PersonalPage_Sticker_31 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_31"
+  },
+  UI_PersonalPage_Sticker_32 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_32"
+  },
+  UI_PersonalPage_Sticker_33 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_33"
+  },
+  UI_PersonalPage_Sticker_34 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_34"
+  },
+  UI_PersonalPage_Sticker_35 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_35"
+  },
+  UI_PersonalPage_Sticker_36 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_36"
+  },
+  UI_PersonalPage_Sticker_37 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_37"
+  },
+  UI_PersonalPage_Sticker_38 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_38"
+  },
+  UI_PersonalPage_Sticker_39 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_39"
+  },
+  UI_PersonalPage_Sticker_40 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_40"
+  },
+  UI_PersonalPage_Sticker_41 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_41"
+  },
+  UI_PersonalPage_Sticker_42 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_42"
+  },
+  UI_PersonalPage_Sticker_43 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_43"
+  },
+  UI_PersonalPage_Sticker_44 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_44"
+  },
+  UI_PersonalPage_Sticker_45 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_45"
+  },
+  UI_PersonalPage_Sticker_46 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_46"
+  },
+  UI_PersonalPage_Sticker_47 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_47"
+  },
+  UI_PersonalPage_Sticker_48 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_48"
+  },
+  UI_PersonalPage_Sticker_49 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_49"
+  },
+  UI_PersonalPage_Sticker_50 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_50"
+  },
+  UI_PersonalPage_Sticker_51 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_51"
+  },
+  UI_PersonalPage_Sticker_52 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_52"
+  },
+  UI_PersonalPage_Sticker_53 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_53"
+  },
+  UI_PersonalPage_Sticker_54 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_54"
+  },
+  UI_PersonalPage_Sticker_55 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_55"
+  },
+  UI_PersonalPage_Sticker_56 = {
+    TextMapContent = "占位",
+    TextMapId = "UI_PersonalPage_Sticker_56"
   },
   UI_PersonalPage_Title_Change = {
     ContentEN = "Edit Title",
@@ -246279,6 +251307,114 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
     TextMapContent = "选择罐罐",
     TextMapId = "UI_Pet_ChooseSnacks"
   },
+  UI_Pet_DecomposeBtn = {
+    ContentEN = "Release",
+    ContentFR = "Libérer",
+    ContentJP = "解放",
+    ContentKR = "방생",
+    ContentTC = "放生",
+    TextMapContent = "放生",
+    TextMapId = "UI_Pet_DecomposeBtn"
+  },
+  UI_Pet_DecomposeResultResource = {
+    ContentEN = "Release Rewards",
+    ContentFR = "Obtenir en libérant",
+    ContentJP = "解放で獲得",
+    ContentKR = "방생 시 획득",
+    ContentTC = "放生獲得",
+    TextMapContent = "放生获得",
+    TextMapId = "UI_Pet_DecomposeResultResource"
+  },
+  UI_Pet_Decompose_CultivatedConfirm = {
+    ContentEN = "Your selection includes <H>ascended</> Geniemons. Ascension materials will not be refunded upon release. Continue?",
+    ContentFR = "Votre sélection contient des Géniemon <H>améliorés</>. Les matériaux d’amélioration ne seront pas restitués après libération. Continuer ?",
+    ContentJP = "選択したジェネモンに<H>育成済み</>のジェネモンが含まれています。解放しても育成素材は返還されません。続行しますか？",
+    ContentKR = "선택한 마령에 <H>이미 육성된</> 마령이 포함되어 있습니다. 방생 시 육성 재료는 반환되지 않습니다. 계속하시겠습니까?",
+    ContentTC = "選擇魔靈中包含<H>已養成</>魔靈，放生後不會返還養成素材，是否繼續？",
+    TextMapContent = "选择魔灵中包含<H>已养成</>魔灵，放生后不会返还养成素材，是否继续？",
+    TextMapId = "UI_Pet_Decompose_CultivatedConfirm"
+  },
+  UI_Pet_Decompose_Equipped = {
+    ContentEN = "Cannot release deployed Geniemons.",
+    ContentFR = "Un Géniemon déployé ne peut pas être libéré",
+    ContentJP = "出撃中のジェネモンは解放できません",
+    ContentKR = "출전 중인 마령은 방생할 수 없습니다.",
+    ContentTC = "出戰魔靈無法放生",
+    TextMapContent = "出战魔灵无法放生",
+    TextMapId = "UI_Pet_Decompose_Equipped"
+  },
+  UI_Pet_Decompose_Locked = {
+    ContentEN = "Cannot release locked Geniemons.",
+    ContentFR = "Un Géniemon verrouillé ne peut pas être libéré",
+    ContentJP = "ロック中のジェネモンは解放できません",
+    ContentKR = "잠금 상태인 마령은 방생할 수 없습니다.",
+    ContentTC = "鎖定的魔靈無法放生",
+    TextMapContent = "锁定的魔灵无法放生",
+    TextMapId = "UI_Pet_Decompose_Locked"
+  },
+  UI_Pet_Decompose_NotChoose = {
+    ContentEN = "No Geniemons selected",
+    ContentFR = "Aucun Géniemon sélectionné",
+    ContentJP = "ジェネモンが選択されていません",
+    ContentKR = "마령을 선택하지 않았습니다.",
+    ContentTC = "未選擇任何魔靈",
+    TextMapContent = "未选择任何魔灵",
+    TextMapId = "UI_Pet_Decompose_NotChoose"
+  },
+  UI_Pet_Decompose_NotExist = {
+    ContentEN = "This Geniemon is unavailable. Please select another.",
+    ContentFR = "Géniemon introuvable. Veuillez refaire votre sélection",
+    ContentJP = "該当するジェネモンが見つかりません。もう一度選択してください",
+    ContentKR = "해당 마령이 존재하지 않습니다. 다시 선택해 주세요.",
+    ContentTC = "該魔靈不存在，請重新選擇",
+    TextMapContent = "该魔灵不存在，请重新选择",
+    TextMapId = "UI_Pet_Decompose_NotExist"
+  },
+  UI_Pet_Decompose_NotToday = {
+    ContentEN = "Don't show again today",
+    ContentFR = "Ne plus afficher aujourd’hui",
+    ContentJP = "本日は再通知しない",
+    ContentKR = "오늘 더 이상 알리지 않음",
+    ContentTC = "今日不再提醒",
+    TextMapContent = "今日不再提醒",
+    TextMapId = "UI_Pet_Decompose_NotToday"
+  },
+  UI_Pet_Decompose_ResultUnavailable = {
+    ContentEN = "Release rewards not found.",
+    ContentFR = "Aucune récompense de libération disponible",
+    ContentJP = "解放報酬が見つかりません",
+    ContentKR = "방생 보상이 없습니다.",
+    ContentTC = "放生獎勵不存在",
+    TextMapContent = "放生奖励不存在",
+    TextMapId = "UI_Pet_Decompose_ResultUnavailable"
+  },
+  UI_Pet_Decompose_Tip_1 = {
+    ContentEN = "Releasing Geniemons cannot be undone. Confirm release?",
+    ContentFR = "La libération est irréversible. Confirmer ?",
+    ContentJP = "解放後は取り消しできません。解放してよろしいですか？",
+    ContentKR = "마령을 방생하면 취소할 수 없습니다. 방생하시겠습니까?",
+    ContentTC = "魔靈放生後無法撤銷，是否確認放生？",
+    TextMapContent = "魔灵放生后无法撤销，是否确认放生？",
+    TextMapId = "UI_Pet_Decompose_Tip_1"
+  },
+  UI_Pet_Decompose_Title = {
+    ContentEN = "Geniemon Release",
+    ContentFR = "Libération de Géniemon",
+    ContentJP = "ジェネモン解放",
+    ContentKR = "마령 방생",
+    ContentTC = "魔靈放生",
+    TextMapContent = "魔灵放生",
+    TextMapId = "UI_Pet_Decompose_Title"
+  },
+  UI_Pet_Decompose_Unavailable = {
+    ContentEN = "Unable to Release",
+    ContentFR = "Impossible à libérer",
+    ContentJP = "解放できません",
+    ContentKR = "방생할 수 없습니다.",
+    ContentTC = "無法放生",
+    TextMapContent = "无法放生",
+    TextMapId = "UI_Pet_Decompose_Unavailable"
+  },
   UI_Pet_FoodLV0 = {
     ContentEN = "A favourite treat of Geniemons. Used to feed them.",
     ContentFR = "Une friandise appréciée des Géniemon. À utiliser pour les nourrir.",
@@ -246377,6 +251513,15 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
     ContentTC = "投喂魔靈",
     TextMapContent = "投喂魔灵",
     TextMapId = "UI_Pet_Title"
+  },
+  UI_Pet_ToDecompose = {
+    ContentEN = "To Release",
+    ContentFR = "Géniemon à libérer",
+    ContentJP = "解放待ち",
+    ContentKR = "방생 대기",
+    ContentTC = "待放生",
+    TextMapContent = "待放生",
+    TextMapId = "UI_Pet_ToDecompose"
   },
   UI_Pet_Toast_LowSuccRate = {
     ContentEN = "Success Rate too low. Try using a finer treat.",
@@ -248408,7 +253553,7 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
   UI_PlayerHead_Name_30111 = {
     ContentEN = "Throne Above All: Leaden Grey",
     ContentFR = "Dominer monts et fleuves – Gris plomb",
-    ContentJP = "支配者の玉座・チタニウムホワイト",
+    ContentJP = "支配者の玉座・鉛灰",
     ContentKR = "천하를 굽어보기·그레이",
     ContentTC = "睥睨山河·鉛灰",
     TextMapContent = "睥睨山河·铅灰",
@@ -248969,7 +254114,7 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
     ContentJP = "狩猟・ペルシアンレッド",
     ContentKR = "쟁취·러스트 레드",
     ContentTC = "追獵·銹紅",
-    TextMapContent = "追猎·绣红",
+    TextMapContent = "追猎·锈红",
     TextMapId = "UI_PlayerHead_Name_30174"
   },
   UI_PlayerHead_Name_30175 = {
@@ -249016,6 +254161,66 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
     ContentTC = "白兔的餐刀",
     TextMapContent = "白兔的餐刀",
     TextMapId = "UI_PlayerHead_Name_30179"
+  },
+  UI_PlayerHead_Name_30180 = {
+    ContentTC = "盛典·1",
+    TextMapContent = "盛典·1",
+    TextMapId = "UI_PlayerHead_Name_30180"
+  },
+  UI_PlayerHead_Name_30181 = {
+    ContentTC = "骨冢花·絳紫",
+    TextMapContent = "骨冢花·绛紫",
+    TextMapId = "UI_PlayerHead_Name_30181"
+  },
+  UI_PlayerHead_Name_30182 = {
+    ContentTC = "骨冢花·鎏金",
+    TextMapContent = "骨冢花·鎏金",
+    TextMapId = "UI_PlayerHead_Name_30182"
+  },
+  UI_PlayerHead_Name_30183 = {
+    ContentTC = "骨冢花·涅白",
+    TextMapContent = "骨冢花·涅白",
+    TextMapId = "UI_PlayerHead_Name_30183"
+  },
+  UI_PlayerHead_Name_30184 = {
+    ContentTC = "糧秣專員的肖像·糖霜",
+    TextMapContent = "粮秣专员的肖像·糖霜",
+    TextMapId = "UI_PlayerHead_Name_30184"
+  },
+  UI_PlayerHead_Name_30185 = {
+    ContentTC = "七美德的肖像·堅忍·糖霜",
+    TextMapContent = "七美德的肖像·坚忍·糖霜",
+    TextMapId = "UI_PlayerHead_Name_30185"
+  },
+  UI_PlayerHead_Name_30186 = {
+    ContentTC = "百花公主的肖像·眺望",
+    TextMapContent = "\n\n百花公主的肖像·眺望\n\n",
+    TextMapId = "UI_PlayerHead_Name_30186"
+  },
+  UI_PlayerHead_Name_30187 = {
+    ContentTC = "煉金術師的肖像·守候",
+    TextMapContent = "\n\n炼金术师的肖像·守候\n\n",
+    TextMapId = "UI_PlayerHead_Name_30187"
+  },
+  UI_PlayerHead_Name_30188 = {
+    ContentTC = "回憶中的肖像·淺笑",
+    TextMapContent = "\n\n回忆中的肖像·浅笑\n\n",
+    TextMapId = "UI_PlayerHead_Name_30188"
+  },
+  UI_PlayerHead_Name_30189 = {
+    ContentTC = "搗蛋笑魘",
+    TextMapContent = "捣蛋笑魇",
+    TextMapId = "UI_PlayerHead_Name_30189"
+  },
+  UI_PlayerHead_Name_30190 = {
+    ContentTC = "汗流浹背",
+    TextMapContent = "汗流浃背",
+    TextMapId = "UI_PlayerHead_Name_30190"
+  },
+  UI_PlayerHead_Name_30191 = {
+    ContentTC = "逐燈者的肖像·夜行",
+    TextMapContent = "逐灯者的肖像·夜行",
+    TextMapId = "UI_PlayerHead_Name_30191"
   },
   UI_PlayerHead_Name_40001 = {
     ContentEN = "Uncanny Glow: Glimmer",
@@ -249658,6 +254863,54 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
     ContentTC = "已完成",
     TextMapContent = "已完成",
     TextMapId = "UI_QUEST_UNLOCKFINISH"
+  },
+  UI_QuestEnd_1301_01 = {
+    TextMapContent = "点击返回【待包装】",
+    TextMapId = "UI_QuestEnd_1301_01"
+  },
+  UI_QuestEnd_1301_02 = {
+    TextMapContent = "退出【待包装】",
+    TextMapId = "UI_QuestEnd_1301_02"
+  },
+  UI_QuestEnd_1301_03 = {
+    TextMapContent = "回溯【待包装】",
+    TextMapId = "UI_QuestEnd_1301_03"
+  },
+  UI_QuestReview_01 = {
+    TextMapContent = "？？？【待包装】",
+    TextMapId = "UI_QuestReview_01"
+  },
+  UI_QuestReview_02 = {
+    TextMapContent = "敬请期待【待包装】",
+    TextMapId = "UI_QuestReview_02"
+  },
+  UI_QuestReview_03 = {
+    TextMapContent = "结局未解锁【待包装】",
+    TextMapId = "UI_QuestReview_03"
+  },
+  UI_QuestReview_04 = {
+    TextMapContent = "终止回溯【待包装】",
+    TextMapId = "UI_QuestReview_04"
+  },
+  UI_QuestReview_05 = {
+    TextMapContent = "是否确认从 %s 回溯，确认后将中断 %s ？【待包装】",
+    TextMapId = "UI_QuestReview_05"
+  },
+  UI_QuestReview_06 = {
+    TextMapContent = "回溯【待包装】",
+    TextMapId = "UI_QuestReview_06"
+  },
+  UI_QuestReview_07 = {
+    TextMapContent = "终止回溯将失去已完成进度，是否确认终止回溯 %s 【待包装】",
+    TextMapId = "UI_QuestReview_07"
+  },
+  UI_QuestReview_08 = {
+    TextMapContent = "完成前置任务解锁【待包装】",
+    TextMapId = "UI_QuestReview_08"
+  },
+  UI_QuestReview_09 = {
+    TextMapContent = "剧情回溯【待包装】",
+    TextMapId = "UI_QuestReview_09"
   },
   UI_Quest_AbandonQuest_Text = {
     ContentEN = "Are you sure you want to give up this quest?",
@@ -250919,6 +256172,24 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
     TextMapContent = "远程武器总收集",
     TextMapId = "UI_RangedArchive_MainProgress"
   },
+  UI_Ranking_ShowSquad = {
+    ContentEN = "Show Lineup",
+    ContentFR = "Afficher la composition",
+    ContentJP = "編成を表示",
+    ContentKR = "라인업 표시",
+    ContentTC = "顯示陣容",
+    TextMapContent = "显示阵容",
+    TextMapId = "UI_Ranking_ShowSquad"
+  },
+  UI_Ranking_SquadHidden = {
+    ContentEN = "Lineup Unavailable",
+    ContentFR = "Composition non visible",
+    ContentJP = "編成非公開",
+    ContentKR = "라인업 비공개",
+    ContentTC = "陣容不可見",
+    TextMapContent = "阵容不可见",
+    TextMapId = "UI_Ranking_SquadHidden"
+  },
   UI_Read_Click = {
     ContentEN = "Read Now",
     ContentFR = "Lire maintenant",
@@ -251901,10 +257172,10 @@ After we defeated Mother Bunny, rescued Eve, and helped the other villagers esca
 Fulvis had been pretending to have lost his memory all along. Posing as Joy, he secretly helped me in the hope that Mother Bunny and I would wear each other down in a desperate struggle. He could then overpower Mother Bunny and claim the Catalyst for himself.
 But Vergilius and I had already put a plan in place.]],
     ContentFR = "Fulvis avait toujours prétendu avoir perdu la mémoire. Il avait profité de la situation pour se faire passer pour Joy et m’aider secrètement. Son véritable objectif était de provoquer un affrontement entre Maman Lapin et moi afin que nous nous affaiblissions mutuellement, lui permettant ensuite de prendre facilement le contrôle de Maman Lapin et d’obtenir le véritable Catalyseur.\nCependant, j’avais déjà établi un plan avec Vergilius avant cela.",
-    ContentJP = "フルヴィスはずっと記憶喪失を装っていた。策に乗じてジョイになりすまし、密かに私を助けたのも、私とウサギママを共倒れにさせ、楽にウサギママを支配して本物の触媒を手に入れるためだった。だがその前から、私はヴァージルと対策を決めていた。",
+    ContentJP = "フルヴィスはずっと記憶喪失を装っていた。策を逆手に取ってジョイになりすまし、密かに私を助けていたのは、私とウサギママを共倒れにさせ、たやすくウサギママを支配して本物の触媒を手に入れるためだった。\nでも、それより前に、私はすでにヴァージルと対策を決めていた。",
     ContentKR = "풀비스는 줄곧 기억을 잃은 척 연기하고 있었다. 그는 계략을 역이용해 조이로 위장하여 은밀히 나를 도왔으며, 실제로는 나와 엄마 토끼가 서로 싸우다 쓰러지길 바랐던 것이다. 그래야 엄마 토끼를 손쉽게 제어하여 진짜 촉매제를 손에 넣을 수 있기 때문이었다.\n하지만 그 전에 나는 이미 베르길리우스와 대응책을 논의해 두었다.",
-    ContentTC = "富爾維斯一直在假裝失憶。他將計就計偽裝成喬伊，暗中幫助我，七畝地正是希望我與兔媽媽拼得兩敗俱傷，好讓他能輕鬆控制兔媽媽，得到真正的觸媒。\n但是在此之前，我便已經和維吉爾商定好了對策。",
-    TextMapContent = "富尔维斯一直在假装失忆。他将计就计伪装成乔伊，暗中帮助我，七亩地正是希望我与兔妈妈拼得两败俱伤，好让他能轻松控制兔妈妈，得到真正的触媒。\n但是在此之前，我便已经和维吉尔商定好了对策。",
+    ContentTC = "富爾維斯一直在假裝失憶。他將計就計偽裝成喬伊，暗中幫助我，其目的正是希望我與兔媽媽拼得兩敗俱傷，好讓他能輕鬆控制兔媽媽，得到真正的觸媒。\n但是在此之前，我便已經和維吉爾商定好了對策。",
+    TextMapContent = "富尔维斯一直在假装失忆。他将计就计伪装成乔伊，暗中帮助我，其目的正是希望我与兔妈妈拼得两败俱伤，好让他能轻松控制兔妈妈，得到真正的触媒。\n但是在此之前，我便已经和维吉尔商定好了对策。",
     TextMapId = "UI_ReviewContent_1022"
   },
   UI_ReviewContent_1023 = {
@@ -253578,6 +258849,15 @@ But Vergilius and I had already put a plan in place.]],
     ContentTC = "限時",
     TextMapContent = "限时",
     TextMapId = "UI_SHOP_SHOPITEMLIMIT_TIME"
+  },
+  UI_SHOP_SHOPPINGCART_ADD = {
+    ContentEN = "Add",
+    ContentFR = "Ajouter",
+    ContentJP = "追加",
+    ContentKR = "장바구니 담기",
+    ContentTC = "添加",
+    TextMapContent = "添加",
+    TextMapId = "UI_SHOP_SHOPPINGCART_ADD"
   },
   UI_SHOP_SOLDOUT = {
     ContentEN = "Sold Out",
@@ -256572,6 +261852,98 @@ Too many incorrect attempts. Access has been locked.
     TextMapContent = "限购x",
     TextMapId = "UI_Shop_Remain"
   },
+  UI_Shop_ShoppingCart = {
+    ContentEN = "Shopping Cart",
+    ContentFR = "Panier",
+    ContentJP = "ショッピングカート",
+    ContentKR = "장바구니",
+    ContentTC = "購物車",
+    TextMapContent = "购物车",
+    TextMapId = "UI_Shop_ShoppingCart"
+  },
+  UI_Shop_ShoppingCart_Clear = {
+    ContentEN = "Clear",
+    ContentFR = "Vider",
+    ContentJP = "クリア",
+    ContentKR = "비우기",
+    ContentTC = "清空",
+    TextMapContent = "清空",
+    TextMapId = "UI_Shop_ShoppingCart_Clear"
+  },
+  UI_Shop_ShoppingCart_ClearToast1 = {
+    ContentEN = "Remove %s?",
+    ContentFR = "Retirer %s du panier ?",
+    ContentJP = "%sを外しますか？",
+    ContentKR = "%s을(를) 삭제하시겠습니까?",
+    ContentTC = "是否移除%s？",
+    TextMapContent = "是否移除%s？",
+    TextMapId = "UI_Shop_ShoppingCart_ClearToast1"
+  },
+  UI_Shop_ShoppingCart_ClearToast2 = {
+    ContentEN = "Clear your shopping cart?",
+    ContentFR = "Vider le panier ?",
+    ContentJP = "ショッピングカートを空にしますか？",
+    ContentKR = "장바구니를 비우시겠습니까?",
+    ContentTC = "是否清空購物車？",
+    TextMapContent = "是否清空购物车？",
+    TextMapId = "UI_Shop_ShoppingCart_ClearToast2"
+  },
+  UI_Shop_ShoppingCart_Empty = {
+    ContentEN = "Your cart is empty.",
+    ContentFR = "Votre panier est vide",
+    ContentJP = "ショッピングカートは空です",
+    ContentKR = "장바구니에 담은 상품이 없습니다.",
+    ContentTC = "購物車空空如也",
+    TextMapContent = "购物车空空如也",
+    TextMapId = "UI_Shop_ShoppingCart_Empty"
+  },
+  UI_Shop_ShoppingCart_Front = {
+    ContentEN = [[
+Add First: 
+%s]],
+    ContentFR = "Ajoutez d’abord\n%s",
+    ContentJP = "%sを先に追加してください",
+    ContentKR = "먼저 %s을(를) 장바구니에 담으세요.",
+    ContentTC = "需要先添加\n%s",
+    TextMapContent = "需要先添加\n%s",
+    TextMapId = "UI_Shop_ShoppingCart_Front"
+  },
+  UI_Shop_ShoppingCart_Purchase = {
+    ContentEN = "Purchase",
+    ContentFR = "Acheter",
+    ContentJP = "購入",
+    ContentKR = "구매하기",
+    ContentTC = "購買",
+    TextMapContent = "购买",
+    TextMapId = "UI_Shop_ShoppingCart_Purchase"
+  },
+  UI_Shop_ShoppingCart_SelectAll = {
+    ContentEN = "Select All",
+    ContentFR = "Tout sélectionner",
+    ContentJP = "すべて選択",
+    ContentKR = "전체 선택",
+    ContentTC = "全選",
+    TextMapContent = "全选",
+    TextMapId = "UI_Shop_ShoppingCart_SelectAll"
+  },
+  UI_Shop_ShoppingCart_Title = {
+    ContentEN = "Shopping Cart",
+    ContentFR = "Panier",
+    ContentJP = "ショッピングカート",
+    ContentKR = "장바구니",
+    ContentTC = "購物車",
+    TextMapContent = "购物车",
+    TextMapId = "UI_Shop_ShoppingCart_Title"
+  },
+  UI_Shop_ShoppingCart_TotalPrice = {
+    ContentEN = "Total",
+    ContentFR = "Total à payer",
+    ContentJP = "支払いが必要",
+    ContentKR = "총 구매 금액",
+    ContentTC = "需要支付",
+    TextMapContent = "需要支付",
+    TextMapId = "UI_Shop_ShoppingCart_TotalPrice"
+  },
   UI_Shop_TW_Confirm = {
     ContentEN = "Purchases require you to be 18 or older. Do you confirm you meet this requirement?",
     ContentFR = "Les achats nécessitent d’avoir 18 ans ou plus. Confirmez-vous remplir cette condition ?",
@@ -257395,6 +262767,15 @@ Too many incorrect attempts. Access has been locked.
     TextMapContent = "传颂会的铭文不仅是镶嵌在服装，更是铭刻在灵魂中的印记。它见证着少女从愤怒一次次蜕变成真正的坚忍。",
     TextMapId = "UI_Skin_Des_1501"
   },
+  UI_Skin_Des_150101 = {
+    ContentEN = "Cauldrons, potions, broomsticks... and a black cat!? Forget all that! We want candy, candy, and more candy!",
+    ContentFR = "Un chaudron, des potions, un balai... et même un chat noir ?! Pas besoin de tout ça ! Nous, on ne veut que des bonbons, des bonbons !",
+    ContentJP = "るつぼ、魔法薬、ほうき……それに黒猫まで？！そんなものは全部いらないよ！必要なのはキャンディ、キャンディだけ！",
+    ContentKR = "가마솥, 마법 물약, 빗자루... 거기다 검은 고양이까지?! 아니! 이런 건 다 필요 없어! 우리한테 필요한 건 오직 사탕, 사탕뿐이야!",
+    ContentTC = "坩堝、魔藥、掃把……還有一隻黑貓？！這些全都不需要啦，我們要的只有糖果、糖果！",
+    TextMapContent = "坩埚、魔药、扫把……还有一只黑猫？！这些全都不需要啦，我们要的只有糖果、糖果！",
+    TextMapId = "UI_Skin_Des_150101"
+  },
   UI_Skin_Des_1502 = {
     ContentEN = "Gauzy veils, spun of dusk and aurora, guide each soul across the tear-brimmed river — to the Misty Sea, where all are reborn.",
     ContentFR = "Un voile tissé de crépuscule et d’aurore guide les âmes à travers le fleuve de larmes — vers la Mer du Silence, où toute vie renaît.",
@@ -257674,6 +263055,20 @@ Too many incorrect attempts. Access has been locked.
     TextMapContent = "觥筹交错的夜宴，流淌着一场又一场无声的杀伐。",
     TextMapId = "UI_Skin_Des_410201"
   },
+  UI_Skin_Des_4103 = {
+    ContentTC = "她披著一身幹練的紅色衣裝，如暖陽、如火焰、如燈火般閃耀在寒冷的大地上。",
+    TextMapContent = "她披着一身干练的红色衣装，如暖阳、如火焰、如灯火般闪耀在寒冷的大地上。",
+    TextMapId = "UI_Skin_Des_4103"
+  },
+  UI_Skin_Des_410301 = {
+    ContentEN = "Lights weave the city into a shimmering web at night, and she is the finest hunter.",
+    ContentFR = "Les lumières tissent dans la nuit une toile scintillante à travers la ville, et elle y est la meilleure chasseuse.",
+    ContentJP = "灯火が夜の街をきらめく網へと織り上げる。そして彼女は最高の狩人。",
+    ContentKR = "불빛이 어둠 속 도시를 반짝이는 그물로 엮어 놓으면, 그녀는 그곳을 누비는 최고의 사냥꾼이다.",
+    ContentTC = "燈火將黑夜中的城市織成閃爍的網，而她是最優秀的獵手。",
+    TextMapContent = "灯火将黑夜中的城市织成闪烁的网，而她是最优秀的猎手。",
+    TextMapId = "UI_Skin_Des_410301"
+  },
   UI_Skin_Des_4201 = {
     ContentEN = "Heaven's thunder courses through his form. Upholding Dafeng's mandate, sin finds no refuge — nor does he.",
     ContentFR = "Le tonnerre divin circule en lui. En portant le jugement de Dafeng, le péché n’a nulle part où fuir... et lui non plus.",
@@ -257718,6 +263113,15 @@ Too many incorrect attempts. Access has been locked.
     ContentTC = "暖暖陽光，細細研磨，滿滿揮灑！",
     TextMapContent = "暖暖阳光，细细研磨，满满挥洒！",
     TextMapId = "UI_Skin_Des_510101"
+  },
+  UI_Skin_Des_510102 = {
+    ContentEN = "Cauldrons, potions, broomsticks... and a black cat!? Forget all that! We want candy, candy, and more candy!",
+    ContentFR = "Un chaudron, des potions, un balai... et même un chat noir ?! Pas besoin de tout ça ! Nous, on ne veut que des bonbons, des bonbons !",
+    ContentJP = "るつぼ、魔法薬、ほうき……それに黒猫まで？！そんなものは全部いらないよ！必要なのはキャンディ、キャンディだけ！",
+    ContentKR = "가마솥, 마법 물약, 빗자루... 거기다 검은 고양이까지?! 아니! 이런 건 다 필요 없어! 우리한테 필요한 건 오직 사탕, 사탕뿐이야!",
+    ContentTC = "坩堝、魔藥、掃把……還有一隻黑貓？！這些全都不需要啦，我們要的只有糖果、糖果！",
+    TextMapContent = "坩埚、魔药、扫把……还有一只黑猫？！这些全都不需要啦，我们要的只有糖果、糖果！",
+    TextMapId = "UI_Skin_Des_510102"
   },
   UI_Skin_Des_5102 = {
     ContentEN = "Simple garb won't silence the crimson wails of dark alleys — but it shelters a sliver of starlight from the world's brutality.",
@@ -257947,6 +263351,15 @@ Too many incorrect attempts. Access has been locked.
     ContentTC = "莉茲貝爾的衣飾",
     TextMapContent = "莉兹贝尔的衣饰",
     TextMapId = "UI_Skin_Name_1501"
+  },
+  UI_Skin_Name_150101 = {
+    ContentEN = "Treats Galore: Lisbell",
+    ContentFR = "Sucreries à foison : Lisbell",
+    ContentJP = "お菓子の家・リズベル",
+    ContentKR = "캔디 풀하우스·리사벨",
+    ContentTC = "糖霜滿屋·莉茲貝爾",
+    TextMapContent = "糖霜满屋·莉兹贝尔",
+    TextMapId = "UI_Skin_Name_150101"
   },
   UI_Skin_Name_1502 = {
     ContentEN = "Lady Nifle's Accessory",
@@ -258236,6 +263649,20 @@ Too many incorrect attempts. Access has been locked.
     TextMapContent = "携金宴夜",
     TextMapId = "UI_Skin_Name_410201"
   },
+  UI_Skin_Name_4103 = {
+    ContentTC = "黎瑟·浴火的衣飾",
+    TextMapContent = "黎瑟・浴火的衣饰",
+    TextMapId = "UI_Skin_Name_4103"
+  },
+  UI_Skin_Name_410301 = {
+    ContentEN = "Veil In Shadows",
+    ContentFR = "Dentelles de minuit",
+    ContentJP = "糸を結び、夜を行く",
+    ContentKR = "밤에 스며드는 실",
+    ContentTC = "結絲夜行",
+    TextMapContent = "结丝夜行",
+    TextMapId = "UI_Skin_Name_410301"
+  },
   UI_Skin_Name_4201 = {
     ContentEN = "Yuming's Accessory",
     ContentFR = "Tenue de Yuming",
@@ -258280,6 +263707,15 @@ Too many incorrect attempts. Access has been locked.
     ContentTC = "陽光磨坊",
     TextMapContent = "阳光磨坊",
     TextMapId = "UI_Skin_Name_510101"
+  },
+  UI_Skin_Name_510102 = {
+    ContentEN = "Treats Galore: Truffle and Filbert",
+    ContentFR = "Sucreries à foison : Truffle et Filbert",
+    ContentJP = "お菓子の家・トリュフ&ヘーゼルナッツ",
+    ContentKR = "캔디 풀하우스·트러플과 헤이즐넛",
+    ContentTC = "糖霜滿屋·松露與榛子",
+    TextMapContent = "糖霜满屋·松露与榛子",
+    TextMapId = "UI_Skin_Name_510102"
   },
   UI_Skin_Name_5102 = {
     ContentEN = "Outsider's Accessory",
@@ -264332,6 +269768,15 @@ Don't let up until she reaches the finish!]],
     TextMapContent = "角色定位",
     TextMapId = "UI_Title_CharPositioning"
   },
+  UI_Title_LimitTime_Tips = {
+    ContentEN = "The title <H>%s</> has expired.",
+    ContentFR = "Le titre <H>%s</> a expiré",
+    ContentJP = "称号<H>%s</>は有効期限が切れました",
+    ContentKR = "칭호 <H>%s</>의 사용 기간이 만료되었습니다.",
+    ContentTC = "稱號 <H>%s</> 已過期",
+    TextMapContent = "称号 <H>%s</> 已过期",
+    TextMapId = "UI_Title_LimitTime_Tips"
+  },
   UI_Title_Popup_RecordVedio = {
     ContentEN = "Screen Recording",
     ContentFR = "Enregistrement vidéo",
@@ -264421,6 +269866,15 @@ Don't let up until she reaches the finish!]],
     ContentTC = "已置頂目標",
     TextMapContent = "已置顶目标",
     TextMapId = "UI_Toast_Armory_HasStared"
+  },
+  UI_Toast_DailyGoal_RewardClaimReminder = {
+    ContentEN = "Unclaimed [Memo] Rewards Collected",
+    ContentFR = "Les récompenses non réclamées du Carnet de bord ont été récupérées automatiquement",
+    ContentJP = "未受け取りのメモ帳報酬を受け取りました",
+    ContentKR = "미수령한 메모 노트 보상을 자동 수령했습니다.",
+    ContentTC = "未領取的備忘手記獎勵已補領",
+    TextMapContent = "未领取的备忘手记奖励已补领",
+    TextMapId = "UI_Toast_DailyGoal_RewardClaimReminder"
   },
   UI_Toast_Dungeon_Detail = {
     ContentEN = [[
@@ -265256,6 +270710,11 @@ About Zones
     TextMapContent = "背包暂未解锁",
     TextMapId = "UI_Unlock_Des_Bag"
   },
+  UI_Unlock_Des_HardbossEvent = {
+    ContentTC = "完成前置難度後解鎖",
+    TextMapContent = "完成前置难度后解锁",
+    TextMapId = "UI_Unlock_Des_HardbossEvent"
+  },
   UI_Unlock_Reward = {
     ContentEN = "Rewards",
     ContentFR = "Récompenses",
@@ -265657,12 +271116,12 @@ About Zones
     TextMapId = "UI_WEAPON_DESC_10198"
   },
   UI_WEAPON_DESC_10199 = {
-    ContentEN = "An ordinary sword. It's made from the cheapest metal, so there's no shame if it breaks.",
-    ContentFR = "Une épée ordinaire, forgée dans un métal bon marché. Même si elle venait à se briser, nul n’en éprouverait le moindre regret.",
+    ContentEN = "One of those who received the weapon was a sage, rewarded by the Father for her wisdom. Consumed by a thirst for truth, she spent countless midnights pondering the nature of the world. Again and again she sought an answer without flaw or error, yet the more she learned, the more the unknown grew before her.\nShe steeped her days in darkness and blank pages, but there could be no end to the pursuit of truth. The agony of the unknowable tore her apart. On one long night, she turned her blade upon herself — only to leave behind an unsolved enigma that would drive countless others to madness.",
+    ContentFR = "L’une des porteuses de cette arme était une sage. Père Ask récompensa son esprit. Obsédée par sa quête de vérité, elle passait nuit après nuit, seule au cœur des ténèbres, à méditer sur la véritable nature du monde, encore et encore. Elle aspirait à une conclusion parfaite, exempte de toute faille et de toute erreur. Pourtant, plus elle en apprenait, plus l’inconnu s’étendait devant elle.\n \nElle noya ses heures dans la nuit et les pages blanches, mais comment la quête de vérité pourrait-elle jamais connaître une fin ? La souffrance de l’inconnaissable finit par la déchirer. Au terme d’une longue nuit, elle mit fin à ses jours avec une lame. Quant à l’énigme insoluble qu’elle laissa derrière elle, elle en plongea bien d’autres dans la folie.",
     ContentJP = "ありふれた片手剣。安価な金属で作られているので、壊れても惜しくない。",
-    ContentKR = "흔히 볼 수 있는 한손검. 가장 저렴한 금속으로 제작되어, 망가져도 전혀 아깝지 않다.",
-    ContentTC = "尋常的單手劍。用最廉價的金屬製作而成，即使用壞也不心疼。",
-    TextMapContent = "寻常的单手剑。用最廉价的金属制作而成，即使用坏也不心疼。",
+    ContentKR = "무기를 손에 넣은 이들 중 한 명은 현자였다. 아버지 신은 그녀의 사색을 치하했다. 진리를 향한 갈망에 사로잡힌 그녀는 사람들의 발길이 끊긴 깊은 밤마다 홀로 세계의 진실을 되짚고 또 되짚었다. 한 치의 허점도 오류도 없는 결론을 바라며 파고들었지만, 알아 갈수록 미지 또한 늘어날 뿐이었다.\n그녀는 백지 앞에서 수많은 밤을 지새웠지만, 탐구의 길에 끝이 있을 리 없었다. 끝내 알 수 없다는 고통에 무너진 그녀는 어느 긴 밤 칼날로 목숨을 끊었고, 그녀가 남긴 답 없는 수수께끼는 더 많은 이들을 광기로 몰아넣었다.",
+    ContentTC = "獲得武器的其中一人是名智者，父神嘉獎她的思考。她深陷對真理的渴求，在夜半無人的深夜思索著世界的真相，一遍又一遍。她力求絕無疏漏與錯差的終果，可她知道的越多，未知的便越多。\n她將時間浸泡於黑夜與白紙，可求索的道路怎會有盡頭？不可知的痛苦將她撕裂，她以利刃自絕於一個漫長的夜，而她留下的無解謎題則令更多人陷入瘋狂。",
+    TextMapContent = "获得武器的其中一人是名智者，父神嘉奖她的思考。她深陷对真理的渴求，在夜半无人的深夜思索着世界的真相，一遍又一遍。她力求绝无疏漏与错差的终果，可她知道的越多，未知的便越多。\n她将时间浸泡于黑夜与白纸，可求索的道路怎会有尽头？不可知的痛苦将她撕裂，她以利刃自绝于一个漫长的夜，而她留下的无解谜题则令更多人陷入疯狂。",
     TextMapId = "UI_WEAPON_DESC_10199"
   },
   UI_WEAPON_DESC_10201 = {
@@ -265759,7 +271218,7 @@ About Zones
     ContentEN = "One who bore this weapon was a warrior, granted it by Father Ask in honour of his valour. He sought ever mightier foes, sending challenge after challenge to distant lands. His name became a byword for strength, until at last he could no longer live without battle.\nWar granted him no release. He fell within it — an arena without victor or end. The bodies of friend and foe alike became his salvation, and his own blood his final elegy.",
     ContentFR = "L’un des porteurs de cette arme était un guerrier, récompensé par le Père Ask pour sa bravoure. Il ne cessait de défier des adversaires toujours plus puissants, portant ses défis jusqu’aux terres lointaines. Son nom devint synonyme de puissance, mais peu à peu, il ne put plus supporter une vie sans combat.\nLa guerre ne connaît pas de répit. Il y trouva la mort — dans cette arène sans vainqueur. Les corps des alliés comme des ennemis furent sa rédemption, et son propre sang, son chant funèbre.",
     ContentJP = "武器を手にした者のひとりは戦士だった。父なる神はその勇猛を称えた。彼はより強き者へ、さらに強き者へと挑み続け、幾通もの果たし状が遠方へ送り届けられた。彼の名は強さの代名詞となったが、やがて彼は戦いのない日々に馴染めなくなっていった。\n 戦いは終わることなく続く。勝者なき闘技場たる戦場で、彼は倒れた。敵味方の屍は彼にとっての救いであり、自らの鮮血は彼自身への挽歌となった。",
-    ContentKR = "무기를 손에 넣은 자 중 하나는 전사였다. 아버지 신에게서 용맹하다는 찬사를 받은 그는 머나먼 땅에 끊임없이 도전장을 보내며, 쉼 없이 강자를 찾아 도전했고, 그의 이름은 강함의 대명사가 되었다. 그러나, 그는 점차 싸우지 않는 삶을 견딜 수 없게 되었다.\n끝없는 투쟁을 벌이던 그 전사는, 널브러진 시체를 구원 삼고, 자신이 흘린 피를 장송곡 삼아, 끝내 승자 없는 투기장 같은 전쟁터에서 쓰러지고 말았다.",
+    ContentKR = "무기를 손에 넣은 이들 중 한 명은 전사였다. 아버지 신에게서 용맹하다는 찬사를 받은 그는 머나먼 땅에 끊임없이 도전장을 보내며, 쉼 없이 강자를 찾아 도전했고, 그의 이름은 강함의 대명사가 되었다. 그러나, 그는 점차 싸우지 않는 삶을 견딜 수 없게 되었다.\n끝없는 투쟁을 벌이던 그 전사는, 널브러진 시체를 구원 삼고, 자신이 흘린 피를 장송곡 삼아, 끝내 승자 없는 투기장 같은 전쟁터에서 쓰러지고 말았다.",
     ContentTC = "獲得武器的其中一人是名戰士，父神嘉獎他的驍勇。他不斷向著更強者、再更強者挑戰，一封封戰書不斷送至遠方。他的名字成為強大的代名詞，但他漸漸無法習慣沒有戰鬥的生活。\n戰鬥永無止息。他倒在戰爭——這場沒有贏家的角斗場裡。敵友的屍骸是他的救贖，自己的鮮血是他的輓歌。",
     TextMapContent = "获得武器的其中一人是名战士，父神嘉奖他的骁勇。他不断向着更强者、再更强者挑战，一封封战书不断送至远方。他的名字成为强大的代名词，但他渐渐无法习惯没有战斗的生活。\n战斗永无止息。他倒在战争——这场没有赢家的角斗场里。敌友的尸骸是他的救赎，自己的鲜血是他的挽歌。",
     TextMapId = "UI_WEAPON_DESC_10299"
@@ -265822,9 +271281,9 @@ About Zones
     ContentEN = [[
 One who bore this weapon was a sovereign, granted it by Father Ask in honour of his ambition. His people stood behind him, cheering his name and singing of his conquests.
 Yet he did not stop, certain that ever more followers would gather beneath his banner. Instead, his enemies only multiplied. In the end, they closed in around his throne. There, he lit a great fire, reducing himself and all his glory to ash.]],
-    ContentFR = "L’un des porteurs de cette arme était un roi. Le Dieu-Père récompensa son ambition. Le peuple se tenait derrière lui, acclamant son nom et célébrant ses conquêtes.\nIl ne cessa jamais d’avancer sur la voie de la conquête, convaincu que toujours plus de gens se rallieraient à lui. Mais ses ennemis, eux, ne firent que se multiplier. Il finit encerclé sur son trône, embrasa un grand feu et se réduisit en cendres avec sa gloire.",
+    ContentFR = "L’un des porteurs de cette arme était un roi. Père Ask récompensa son ambition. Le peuple se tenait derrière lui, acclamant son nom et célébrant ses conquêtes.\nIl ne cessa jamais d’avancer sur la voie de la conquête, convaincu que toujours plus de gens se rallieraient à lui. Mais ses ennemis, eux, ne firent que se multiplier. Il finit encerclé sur son trône, embrasa un grand feu et se réduisit en cendres avec sa gloire.",
     ContentJP = "武器を手にした者の一人は、君王であった。父なる神はその野心を称えた。人々は彼の背後に立ち、その威名に歓呼し、その征服を讃えた。\n王は征服の歩みを止めず、さらに多くの者が自分に付き従うと固く信じていた。だが、彼の敵はますます増えていった。最後には玉座の上で包囲され、烈火を燃やし、自らと栄光を灰へと焼き尽くした。",
-    ContentKR = "이 무기를 손에 넣은 자 중 한 명은 왕이었고, 아버지 신은 그의 야망을 치하했다. 사람들은 그의 뒤에 서서 그의 위명을 환호하고, 그의 정복을 찬양했다.\n그는 정복의 발걸음을 멈추지 않았고, 더 많은 추종자를 얻을 것이라 굳게 믿었지만, 적은 점점 더 늘어만 갔다. 결국 그는 왕좌 위에서 포위당했고, 타오르는 불길 속에서 자신과 영광을 함께 재로 태워버렸다.",
+    ContentKR = "무기를 손에 넣은 이들 중 한 명은 왕이었고, 아버지 신은 그의 야망을 치하했다. 사람들은 그의 뒤에 서서 그의 위명을 환호하고, 그의 정복을 찬양했다.\n그는 정복의 발걸음을 멈추지 않았고, 더 많은 추종자를 얻을 것이라 굳게 믿었지만, 적은 점점 더 늘어만 갔다. 결국 그는 왕좌 위에서 포위당했고, 타오르는 불길 속에서 자신과 영광을 함께 재로 태워버렸다.",
     ContentTC = "獲得武器的其中一人是名君王，父神嘉獎他的野心。人們站在他的身後，歡呼他的威名，歌頌他的征服。\n他沒有停下征服的腳步，他堅信自己會擁有更多的簇擁，但他的敵人卻越來越多。最終他被包圍在王座之上，燃起烈火，將自己和榮耀一起焚成灰燼。",
     TextMapContent = "获得武器的其中一人是名君王，父神嘉奖他的野心。人们站在他的身后，欢呼他的威名，歌颂他的征服。\n他没有停下征服的脚步，他坚信自己会拥有更多的簇拥，但他的敌人却越来越多。最终他被包围在王座之上，燃起烈火，将自己和荣耀一起焚成灰烬。",
     TextMapId = "UI_WEAPON_DESC_10399"
@@ -266180,6 +271639,10 @@ Yet he did not stop, certain that ever more followers would gather beneath his b
     TextMapContent = "业火乘着数以千计的银白弹壳抛向地面，将神明的敕令刻进所有异端者的胸膛。",
     TextMapId = "UI_WEAPON_DESC_20305"
   },
+  UI_WEAPON_DESC_20306 = {
+    TextMapContent = "活下去，是生者需要背负的祝福。",
+    TextMapId = "UI_WEAPON_DESC_20306"
+  },
   UI_WEAPON_DESC_20398 = {
     ContentEN = "A grenade launcher refined with the latest surface-treatment techniques — favoured by fearless siegebreakers.",
     ContentFR = "Arme traitée selon les standards les plus modernes, maniée par les assaillants intrépides qui réduisent les murailles au silence.",
@@ -266385,7 +271848,7 @@ Yet suffering still overran the world, knotting it like briars. And so she disti
 In the end, those fragile strings could bear no more, and snapped. She was made to drink the poison she herself had brewed, and sank into a long night in which she could neither sleep nor wake.]],
     ContentFR = "L’une des porteuses de cette arme était une guérisseuse, récompensée par le Père Ask pour sa compassion. Elle faisait vibrer les cordes des émotions humaines, apaisant les cœurs troublés par les harmonies de son instrument.\nMais le monde restait envahi par d’innombrables souffrances, se propageant comme des ronces. Alors elle distilla un poison, décidée à éradiquer jusqu’aux corps mêmes qui engendraient ces tourments.\nFinalement, les cordes fragiles ne purent en supporter davantage et se brisèrent. Elle fut contrainte d’ingérer le poison qu’elle avait elle-même préparé, sombrant dans une longue nuit où ni le sommeil ni l’éveil ne lui étaient plus accessibles.",
     ContentJP = "武器を手にした者のひとりは名医だった。父なる神はその慈悲を称えた。彼女は人々の心に張られた感情の弦と共鳴し、琴線の律動でざわめく心を鎮めた。\n だがこの世には、棘のように蔓延る苦しみがあまりにも多かった。ゆえに彼女は毒を精製し、その苦しみを生み出す肉体ごと取り除こうとした。\n やがて脆い琴弦はそれ以上に耐えきれず断ち切れ、彼女は自ら調合した毒を飲まされ、眠ることも醒めることもできない長い夜へと堕ちていった。",
-    ContentKR = "무기를 손에 넣은 자 중 하나는 뛰어난 의사였다. 아버지 신에게서 자비롭다는 찬사를 받은 그녀는 사람들의 감정과 공명하며, 그 떨림이 만들어내는 위로의 선율로 마음을 어루만졌다.\n그러나 현실의 고통은 가시덤불처럼 뻗어 나갔고, 그녀는 고통을 낳는 육신을 지워버리고자 맹독을 추출했다.\n감정을 지탱하던 가느다란 현은 끝내 버티지 못하고 끊어졌고, 그녀는 자신이 빚어낸 맹독을 삼킨 채 영원히 잠들지도 깨어나지도 못하는 기나긴 밤의 심연으로 추락해 버리고 말았다.",
+    ContentKR = "무기를 손에 넣은 이들 중 한 명은 뛰어난 의사였다. 아버지 신에게서 자비롭다는 찬사를 받은 그녀는 사람들의 감정과 공명하며, 그 떨림이 만들어내는 위로의 선율로 마음을 어루만졌다.\n그러나 현실의 고통은 가시덤불처럼 뻗어 나갔고, 그녀는 고통을 낳는 육신을 지워버리고자 맹독을 추출했다.\n감정을 지탱하던 가느다란 현은 끝내 버티지 못하고 끊어졌고, 그녀는 자신이 빚어낸 맹독을 삼킨 채 영원히 잠들지도 깨어나지도 못하는 기나긴 밤의 심연으로 추락해 버리고 말았다.",
     ContentTC = "獲得武器的其中一人是名良醫，父神嘉獎她的慈悲。她與人們心中的情感之弦共鳴，用琴弦波動的韻律撫慰躁動的心。\n可世間依舊有著如此多如棘刺般蔓生的痛苦，於是她萃出毒劑，將製造那些痛苦的身軀也一併清除。\n最終，脆弱的琴弦因無法承受更多而繃斷，她被灌下自己親手煉製的毒藥，墜入無法睡去也無法清醒的長夜。",
     TextMapContent = "获得武器的其中一人是名良医，父神嘉奖她的慈悲。她与人们心中的情感之弦共鸣，用琴弦波动的韵律抚慰躁动的心。\n可世间依旧有着如此多如棘刺般蔓生的痛苦，于是她萃出毒剂，将制造那些痛苦的身躯也一并清除。\n最终，脆弱的琴弦因无法承受更多而绷断，她被灌下自己亲手炼制的毒药，坠入无法睡去也无法清醒的长夜。",
     TextMapId = "UI_WEAPON_DESC_20599"
@@ -266535,12 +271998,12 @@ In the end, those fragile strings could bear no more, and snapped. She was made 
     TextMapId = "UI_WEAPON_NAME_10198"
   },
   UI_WEAPON_NAME_10199 = {
-    ContentEN = "Metal Blade",
-    ContentFR = "Lame en acier",
+    ContentEN = "Endless Enigma",
+    ContentFR = "Énigme insoluble",
     ContentJP = "メタルブレード",
-    ContentKR = "금속도",
-    ContentTC = "金屬刀",
-    TextMapContent = "金属单手剑",
+    ContentKR = "답 없는 수수께끼",
+    ContentTC = "無解謎題",
+    TextMapContent = "无解谜题",
     TextMapId = "UI_WEAPON_NAME_10199"
   },
   UI_WEAPON_NAME_10201 = {
@@ -267055,6 +272518,15 @@ In the end, those fragile strings could bear no more, and snapped. She was made 
     ContentTC = "銀白敕令",
     TextMapContent = "银白敕令",
     TextMapId = "UI_WEAPON_NAME_20305"
+  },
+  UI_WEAPON_NAME_20306 = {
+    ContentEN = "Blessed Burden",
+    ContentFR = "Le poids de vivre",
+    ContentJP = "生きる重さ",
+    ContentKR = "살아간다는 무게",
+    ContentTC = "活著的重量",
+    TextMapContent = "活着的重量",
+    TextMapId = "UI_WEAPON_NAME_20306"
   },
   UI_WEAPON_NAME_20398 = {
     ContentEN = "Helepolis Grenade Launcher",
@@ -268481,6 +273953,10 @@ Gaming services will only be available to minors for 1 hour between 20:00 and 21
     TextMapContent = "适用于招式魔之楔游影破空。",
     TextMapId = "UI_WeaponAccessory_Desc_20004"
   },
+  UI_WeaponAccessory_Desc_20005 = {
+    TextMapContent = "手里剑描述（待包装）",
+    TextMapId = "UI_WeaponAccessory_Desc_20005"
+  },
   UI_WeaponAccessory_Name_10001 = {
     ContentEN = "Music Note: Dark Jade",
     ContentFR = "Note de musique – Jade noir",
@@ -269066,6 +274542,10 @@ Gaming services will only be available to minors for 1 hour between 20:00 and 21
     TextMapContent = "荆棘螺旋",
     TextMapId = "UI_WeaponAccessory_Name_20004"
   },
+  UI_WeaponAccessory_Name_20005 = {
+    TextMapContent = "手里剑（待包装）",
+    TextMapId = "UI_WeaponAccessory_Name_20005"
+  },
   UI_WeaponAccessory_NoAttackToast = {
     ContentEN = "This weapon has no Move-Variant",
     ContentFR = "L’arme actuelle ne dispose d’aucun effet visuel de compétence",
@@ -269228,6 +274708,15 @@ Gaming services will only be available to minors for 1 hour between 20:00 and 21
     TextMapContent = "只有寂静的白雪记得，被焚成灰烬的那个长夜。",
     TextMapId = "UI_WeaponSkin_Des_3010109"
   },
+  UI_WeaponSkin_Des_3010111 = {
+    ContentEN = "Only the silent snow remembers that long night, when all else burned to ash.",
+    ContentFR = "Seule la neige silencieuse se souvient de cette longue nuit réduite en cendres.",
+    ContentJP = "静かな白雪だけが、灰燼と化したあの長い夜を覚えている。",
+    ContentKR = "고요한 흰 눈만이 기억하리라, 재로 스러져 버린 그 기나긴 밤을.",
+    ContentTC = "只有寂靜的白雪記得，被焚成灰燼的那個長夜。",
+    TextMapContent = "只有寂静的白雪记得，被焚成灰烬的那个长夜。",
+    TextMapId = "UI_WeaponSkin_Des_3010111"
+  },
   UI_WeaponSkin_Des_3010201 = {
     ContentEN = "Frozen Frostline Trout — firm, flavour-rich, and shelf-stable. Outlasts canned meat, cling wrap, and maybe even your survival instincts.",
     ContentFR = "La Truite des glaces congelée : ferme, savoureuse... et impérissable. Même les conserves et le film alimentaire finiront avant elle — peut-être même avant votre bon sens.",
@@ -269263,6 +274752,15 @@ Gaming services will only be available to minors for 1 hour between 20:00 and 21
     ContentTC = "以拂曉明光，寫就寬恕的裁決。",
     TextMapContent = "以拂晓明光，写就宽恕的裁决。",
     TextMapId = "UI_WeaponSkin_Des_3010207"
+  },
+  UI_WeaponSkin_Des_3010210 = {
+    ContentEN = "Heed the eternal summons of the stars.",
+    ContentFR = "Écoutez l’appel éternel venu des étoiles.",
+    ContentJP = "星々より届く悠久の招待に耳を澄ませ。",
+    ContentKR = "별들로부터 전해져 오는 태고의 부름에 귀를 기울여라.",
+    ContentTC = "聆聽自群星傳來的亙古邀約。",
+    TextMapContent = "聆听自群星传来的亘古邀约。",
+    TextMapId = "UI_WeaponSkin_Des_3010210"
   },
   UI_WeaponSkin_Des_3010301 = {
     ContentEN = "Where is the sun? Look — it's dancing in the palm of my hand.",
@@ -269471,6 +274969,15 @@ Gaming services will only be available to minors for 1 hour between 20:00 and 21
     TextMapContent = "只有寂静的白雪记得，被焚成灰烬的那个长夜。",
     TextMapId = "UI_WeaponSkin_Des_3010904"
   },
+  UI_WeaponSkin_Des_3010905 = {
+    ContentEN = "Life endures, even from lifeless bones.",
+    ContentFR = "Même les ossements porteurs de mort peuvent faire éclore une vie tenace.",
+    ContentJP = "死を宿す枯骨にさえ、強き命は花開く。",
+    ContentKR = "죽음을 머금은 마른 뼈에서도 강인한 생명이 피어난다.",
+    ContentTC = "承載死亡的枯骨，亦能綻放出堅強的生命。",
+    TextMapContent = "承载死亡的枯骨，亦能绽放出坚强的生命。",
+    TextMapId = "UI_WeaponSkin_Des_3010905"
+  },
   UI_WeaponSkin_Des_3011001 = {
     ContentEN = "Meeow♪ meow-meow-meow♪ meow-meow♪♪",
     ContentFR = "Miaouuu ♪ miaou-miaou-miaou ♪ miaou-miaou ♪♪",
@@ -269524,6 +275031,15 @@ Gaming services will only be available to minors for 1 hour between 20:00 and 21
     ContentTC = "你好，交個朋友。",
     TextMapContent = "你好，交个朋友。",
     TextMapId = "UI_WeaponSkin_Des_3011209"
+  },
+  UI_WeaponSkin_Desc_3010905 = {
+    ContentEN = "Life endures, even from lifeless bones.",
+    ContentFR = "Même les ossements porteurs de mort peuvent faire éclore une vie tenace.",
+    ContentJP = "死を宿す枯骨にさえ、強き命は花開く。",
+    ContentKR = "죽음을 머금은 마른 뼈에서도 강인한 생명이 피어난다.",
+    ContentTC = "承載死亡的枯骨，亦能綻放出堅強的生命。",
+    TextMapContent = "承载死亡的枯骨，亦能绽放出坚强的生命。",
+    TextMapId = "UI_WeaponSkin_Desc_3010905"
   },
   UI_WeaponSkin_Name_3010101 = {
     ContentEN = "Victory by Receipt",
@@ -269695,6 +275211,15 @@ Gaming services will only be available to minors for 1 hour between 20:00 and 21
     ContentTC = "吶喊·單手劍",
     TextMapContent = "呐喊·单手剑",
     TextMapId = "UI_WeaponSkin_Name_3010209"
+  },
+  UI_WeaponSkin_Name_3010210 = {
+    ContentEN = "Cosmic Invitation – Sword",
+    ContentFR = "Invitation cosmique – Épée",
+    ContentJP = "コスミック・インビテーション・片手剣",
+    ContentKR = "온 세상의 부름·한손검",
+    ContentTC = "寰宇邀約·單手劍",
+    TextMapContent = "寰宇邀约·单手剑",
+    TextMapId = "UI_WeaponSkin_Name_3010210"
   },
   UI_WeaponSkin_Name_3010301 = {
     ContentEN = "Sunrise Scherzo",
@@ -270118,6 +275643,15 @@ Gaming services will only be available to minors for 1 hour between 20:00 and 21
     ContentTC = "夜燼雪舞·榴炮",
     TextMapContent = "夜烬雪舞·榴炮",
     TextMapId = "UI_WeaponSkin_Name_3010904"
+  },
+  UI_WeaponSkin_Name_3010905 = {
+    ContentEN = "Bones in Blossom",
+    ContentFR = "Floraison d’ossements",
+    ContentJP = "枯骨に花咲く",
+    ContentKR = "마른 뼈에 피어난 꽃",
+    ContentTC = "枯骨生花",
+    TextMapContent = "枯骨生花",
+    TextMapId = "UI_WeaponSkin_Name_3010905"
   },
   UI_WeaponSkin_Name_3011001 = {
     ContentEN = "Guitabby No. 2",
@@ -273423,6 +278957,42 @@ Gaming services will only be available to minors for 1 hour between 20:00 and 21
     TextMapContent = "关于恐惧",
     TextMapId = "VoiceDes175"
   },
+  VoiceDes176 = {
+    ContentEN = "About Change",
+    ContentFR = "À propos du changement",
+    ContentJP = "変化について",
+    ContentKR = "변화에 관하여",
+    ContentTC = "關於改變",
+    TextMapContent = "关于改变",
+    TextMapId = "VoiceDes176"
+  },
+  VoiceDes177 = {
+    ContentEN = "About Jobs",
+    ContentFR = "À propos des petits boulots",
+    ContentJP = "アルバイトについて",
+    ContentKR = "일에 대하여",
+    ContentTC = "關於打工",
+    TextMapContent = "关于打工",
+    TextMapId = "VoiceDes177"
+  },
+  VoiceDes178 = {
+    ContentEN = "About the Legion",
+    ContentFR = "À propos de la Légion",
+    ContentJP = "帝国軍について",
+    ContentKR = "군단에 관하여",
+    ContentTC = "關於軍團",
+    TextMapContent = "关于军团",
+    TextMapId = "VoiceDes178"
+  },
+  VoiceDes179 = {
+    ContentEN = "About Revenge",
+    ContentFR = "À propos de la vengeance",
+    ContentJP = "復讐について",
+    ContentKR = "복수에 관하여",
+    ContentTC = "關於復仇",
+    TextMapContent = "关于复仇",
+    TextMapId = "VoiceDes179"
+  },
   VoiceDesTest1 = {
     TextMapContent = "黑桃1",
     TextMapId = "VoiceDesTest1"
@@ -274336,6 +279906,15 @@ Her love for fairy tales has granted her the power to summon storybook friends, 
     TextMapContent = "因在卡戎狩猎一案中的出色表现被授予“桂冠卡戎”奖章，却因失去了重要的亲人和奋斗的目标而陷入迷茫，辞去了卫戍部队的职务。",
     TextMapId = "WikiText_20101106"
   },
+  WikiText_20101107 = {
+    ContentEN = "Rhythm travelled to Dismania to help {nickname} search for their missing family. However, the information she uncovered inadvertently led {nickname} into a train hijacking, after which they disappeared. When news of their disappearance reached Rhythm, she had no choice but to return to Icelake.\nWhile going through Blues's belongings at their hideout, Rhythm found an old list of recruits accepted into the 6th Legion. The names on it led her to seek out the families of those who had fallen victim to the Legion's experiments. Along the way, she met people from many different walks of life — and eventually Rae, a young woman who, like Rhythm, had lost someone she loved to the Legion. Rhythm stopped Rae before she could carry out a desperate act of revenge. In Rae, she saw a reflection of her own grief and self-destructive guilt. The encounter made Rhythm realise that continuing to punish herself would change nothing. She chose instead to move forward with her life and find a new purpose.",
+    ContentFR = "Rhythm se rendit à Dismania afin d’aider {nickname} à retrouver la trace de sa famille. Cependant, à la suite d’un concours de circonstances provoqué par les informations qu’elle avait obtenues, {nickname} se retrouva mêlé à l’attaque d’un train avant de disparaître sans laisser de trace. Après avoir appris la nouvelle, Rhythm n’eut d’autre choix que de retourner à Givrelac.\n \nAlors qu’elle triait les affaires laissées par Blues dans la base secrète, Rhythm découvrit par hasard une ancienne liste de recrutement de la VIᵉ Légion. Cette découverte la poussa à partir à la rencontre des familles des victimes, un voyage au cours duquel elle fit la connaissance de toutes sortes de personnes. C’est ainsi qu’elle rencontra Rae, une jeune fille dont la situation ressemblait beaucoup à la sienne, et l’empêcha de céder à une vengeance impulsive. Cette rencontre poussa également Rhythm à affronter ses propres blessures du passé. Elle décida de ne plus fuir, mais de continuer à vivre et de chercher activement une nouvelle voie.",
+    ContentJP = "{nickname}の家族の手がかりを追い、ディズマニアへ向かったリズム。ところが、彼女が掴んだ情報が思わぬ形で裏目に出て、{nickname}は列車強盗事件に巻き込まれたまま行方不明になってしまう。知らせを受けたリズムは、やむなくアイスレイク城へ戻った。\n その後、秘密基地でブルースの遺品を整理していた際、かつての第六軍団の入隊者名簿を偶然発見する。リズムは名簿を手がかりに、実験の被害者とその家族を訪ねる旅へ出た。旅の途中で出会ったのが、自分とよく似た境遇を持つ少女レイだった。姉を奪われた怒りから、衝動的な復讐へ走ろうとするレイを止めるうち、リズム自身もまた、自分がずっと過去の痛みから逃げ続けていたことに気づく。もう逃げない。失ったものだけを見つめるのではなく、これから自分がどう生きるかを探す。レイとの出会いをきっかけに、リズムは新しい生き方を探し始めた。",
+    ContentKR = "리듬은 {nickname}의 가족을 찾는 일을 돕기 위해 디즈마니아로 향했지만, 공교롭게도 자신이 입수한 정보로 인해 {nickname}이(가) 열차 강도 사건에 휘말려 행방불명되었다는 소식을 듣고 어쩔 수 없이 아이스레이크 시티로 돌아온다.\n비밀 아지트에서 블루스의 유품을 정리하던 리듬은 우연히 과거 제6군단의 선발 명단을 발견했다. 이후 피해자 가족들을 찾아다니며 여러 사람을 만났고, 그 과정에서 자신과 처지가 비슷한 소녀 레이를 만나 충동적인 복수를 막았다. 이를 계기로 과거의 상처와 마주한 리듬은 더는 도망치지 않고 살아가며 새로운 삶의 방향을 찾기로 결심한다.",
+    ContentTC = "為幫助{nickname}尋找家人的下落前往迪斯瑪尼亞，然而她獲取的情報陰差陽錯導致{nickname}捲入火車劫案，下落不明。在得知訊息後，黎瑟無奈只得返回冰湖城。\n在秘密基地整理布魯斯遺物時，黎瑟意外發現昔日第六軍團的錄取名單，由此踏上了探訪受害者家屬的旅途，見識了形形色色的人們。在這個過程中，她遇到了與自己境遇相似的少女蕾伊，阻止了後者衝動之下的復仇行為。以此為契機，黎瑟自己也直面了過去的傷痛，決心不再逃避，而是積極生活，去尋找新的人生方向。",
+    TextMapContent = "为帮助{nickname}寻找家人的下落前往迪斯玛尼亚，然而她获取的情报阴差阳错导致{nickname}卷入火车劫案，下落不明。在得知消息后，黎瑟无奈只得返回冰湖城。\n在秘密基地整理布鲁斯遗物时，黎瑟意外发现昔日第六军团的录取名单，由此踏上了探访受害者家属的旅途，见识了形形色色的人们。在这个过程中，她遇到了与自己境遇相似的少女蕾伊，阻止了后者冲动之下的复仇行为。以此为契机，黎瑟自己也直面了过去的伤痛，决心不再逃避，而是积极生活，去寻找新的人生方向。",
+    TextMapId = "WikiText_20101107"
+  },
   WikiText_20101201 = {
     ContentEN = "Daphne Theodore, a field medic of the 13th Legion, quiet and mild-mannered in disposition. Exceptionally bright and diligent, she once studied under the chief alchemist at the Alchemy Academy of Hyperborea and was widely considered a rising star in the field. Motivated by personal conviction, she eventually left the Academy to serve as a medic in the Legion, where she became a trusted comrade of {nickname2}.",
     ContentFR = "Daphne Theodore, infirmière militaire au sein de la XIIIᵉ Légion, douce et posée.\nD’une intelligence remarquable et d’un travail acharné, elle étudia jadis sous la direction de la Première Alchimiste de l’Académie d’Alchimie, où elle était promise à une brillante carrière.\nGuidée par ses convictions personnelles, elle quitta pourtant l’Académie pour rejoindre la Légion comme infirmière de terrain, devenant ainsi la camarade de {nickname2}.",
@@ -274527,8 +280106,8 @@ A scion of an old Hyperborean noble house, Fulvis rose to his position in the mi
     ContentFR = "Falsi était une camarade de {nickname2} à l’École Militaire Impériale. Tous deux ont brièvement combattu côte à côte.",
     ContentJP = "フォルスは{nickname2}と同じく皇立士官学校の出身で、短期間ながら{nickname2}と共に戦ったこともある。",
     ContentKR = "펄시는 {nickname2}의 황립 사관학교 동기로, {性别2:그|그녀}와 잠시 함께 싸운 적이 있다.",
-    ContentTC = "法露茜是{nickname2}在皇家軍事學院的同學，曾與{nickname}短暫地並肩作戰過。",
-    TextMapContent = "法露茜是{nickname2}在皇家军事学院的同学，曾与{nickname}短暂地并肩作战过。",
+    ContentTC = "法露茜是{nickname2}在皇家軍事學院的同學，曾與{nickname2}短暫地並肩作戰過。",
+    TextMapContent = "法露茜是{nickname2}在皇家军事学院的同学，曾与{nickname2}短暂地并肩作战过。",
     TextMapId = "WikiText_20101604"
   },
   WikiText_20101605 = {
@@ -274888,6 +280467,17 @@ After escaping the Imperial Capital with Hilda's help under the alias "Flora", s
     ContentTC = "艾達用最後的力量幫助{nickname2}等人逃離了正在化為火海的阿爾卡諾鎮廢墟，隨後和鎮長一起走入火焰，消失在眾人的視線之中。",
     TextMapContent = "艾达用最后的力量帮助{nickname2}等人逃离了正在化为火海的阿尔卡诺镇废墟，随后和镇长一起走入火焰，消失在众人的视线之中。",
     TextMapId = "WikiText_20103604"
+  },
+  WikiText_20103701 = {
+    ContentEN = [[
+Rae Sloan is the younger sister of Darcy Sloan, one of the victims of the 6th Legion's clandestine experiments. Rae possesses a rare magical ability that allows her to glimpse fragments of her sister's memories in dreams. Through those dreams, she uncovered part of the truth surrounding Darcy's death. Consumed by grief and rage, Rae sought revenge against the Legion, setting her sights on Lieutenant Colonel Johnson, who had been responsible for maintaining order at the recruitment site. She began plotting to assassinate him.
+Rhythm uncovered the plot by chance and intervened before Rae could carry it out. With Rhythm's help, Rae eventually gave up her plans for revenge and chose instead to move forward with her life, carrying the memories of her sister with her.]],
+    ContentFR = "Rae Sloan est la sœur cadette de Darcy, l’une des victimes des expériences secrètes menées par la VIᵉ Légion.\n \nRae possède une capacité magique particulière qui lui permet d’entrevoir, dans ses rêves, certains souvenirs de sa sœur. C’est ainsi qu’elle découvrit une partie de la vérité sur ce qui lui était arrivé. Submergée par la douleur et la colère, elle chercha à se venger de la Légion et prit pour cible le lieutenant-colonel Johnson, qui avait été chargé de maintenir l’ordre sur le lieu d’enrôlement, préparant secrètement son assassinat.\n \nRhythm finit cependant par découvrir son projet et parvint à l’en empêcher. Grâce aux paroles de Rhythm, Rae renonça finalement à cette vengeance irréfléchie et décida de continuer à vivre en chérissant les précieux souvenirs qu’elle partageait avec sa sœur.",
+    ContentJP = "レイ・スローン。姉のダーシーは、第六軍団が秘密裏に行っていた実験の犠牲者の一人である。レイには、夢の中で姉の記憶を垣間見る特殊な魔法の力がある。その力を通してダーシーが命を奪われた経緯の一端を知った彼女は、姉の記憶に現れた軍人――ジョンソン中佐を犯人だと思い込み、密かに暗殺を企てる。しかし計画は偶然リズムに知られ、実行直前で阻止された。リズムとの対話を経て、レイは衝動のまま復讐する道を捨てる。姉と過ごした大切な記憶を抱えながら、今度は自分自身の人生を生きていくことを選んだ。",
+    ContentKR = "레이 슬론의 언니 다르시는 제6군단 비밀 실험의 희생자 중 한 명이다. 레이는 꿈속에서 언니의 기억을 엿볼 수 있는 특별한 마법 능력을 통해 언니의 죽음에 얽힌 실마리를 찾아냈으며, 슬픔과 분노에 휩싸인 채 군단에 복수하기 위해, 과거 징병 현장에서 질서 유지를 담당했던 존슨 중령을 표적으로 삼아 남몰래 암살을 계획했다.\n하지만 우연히 그 계획을 눈치챈 리듬이 레이를 막아섰고, 리듬의 진심 어린 설득 끝에, 레이는 결국 무모한 복수를 포기하고, 언니와 함께했던 소중한 추억을 가슴에 품고 살아가기로 마음을 다잡았다.",
+    ContentTC = "蕾伊·斯洛安，其姐姐達西是第六軍團秘密實驗的受害者之一。蕾伊擁有能夠在夢中窺見姐姐記憶的特殊魔法能力，因此發現了姐姐被害的部分真相。悲憤交加的她為了向軍團報仇，將曾在徵兵現場負責維持秩序的約翰森中校視作目標，在暗中謀劃刺殺行動。\n機緣巧合之下，她的計劃被黎瑟發現並阻止。最終在黎瑟的開導下，她放棄了莽撞的復仇，決定帶著和姐姐之間珍貴的回憶好好活下去。",
+    TextMapContent = "蕾伊·斯洛安，其姐姐达西是第六军团秘密实验的受害者之一。蕾伊拥有能够在梦中窥见姐姐记忆的特殊魔法能力，因此发现了姐姐被害的部分真相。悲愤交加的她为了向军团报仇，将曾在征兵现场负责维持秩序的约翰森中校视作目标，在暗中谋划刺杀行动。\n机缘巧合之下，她的计划被黎瑟发现并阻止。最终在黎瑟的开导下，她放弃了莽撞的复仇，决定带着和姐姐之间珍贵的回忆好好活下去。",
+    TextMapId = "WikiText_20103701"
   },
   WikiText_20300101 = {
     ContentEN = "A mysterious merchant from Huaxu who holds a high position despite being a Charon. She first met {nickname} after intervening to help at Galea Theatre.",
@@ -285593,6 +291183,440 @@ After all, even if I gave you a thousand chances, I would still escape from your
     ContentTC = "太陽熱氣騰騰，雲朵鬆軟蓬蓬，早起的鳥兒吃個飽飽。你的肚子有沒有像鳥兒一樣咕咕叫呢？",
     TextMapContent = "太阳热气腾腾，云朵松软蓬蓬，早起的鸟儿吃个饱饱。你的肚子有没有像鸟儿一样咕咕叫呢？",
     TextMapId = "voice_ch_char_Songlu_vo_welcome"
+  },
+  voice_ch_char_SpLise01_vo_appear = {
+    ContentEN = "The cuffs conceal a pistol nicely, but I'll need some time to adjust to this hem.",
+    ContentFR = "Les manches de cette tenue sont idéales pour dissimuler une arme de poing. En revanche... cette jupe est un peu trop longue. Je ne m’y suis pas encore habituée.",
+    ContentJP = "この服は袖口に拳銃を隠しやすくていい。でも裾が少し長くて……なんか変な感じ。",
+    ContentKR = "이 옷은 소매에 총을 숨기기 좋아요. 긴 치마가 좀 어색하긴 하지만...",
+    ContentTC = "這身衣服的袖口很適合藏匿手槍，就是裙襬有點太長，我還不太適應……",
+    TextMapContent = "这身衣服的袖口很适合藏匿手枪，就是裙摆有点太长，我还不太适应……",
+    TextMapId = "voice_ch_char_SpLise01_vo_appear"
+  },
+  voice_ch_char_SpLise01_vo_battlestart = {
+    ContentEN = "I can hear it — the tension beneath Icelake's cheer.",
+    ContentFR = "Derrière les rires de Givrelac, j’entends déjà les remous qui s’agitent dans l’ombre.",
+    ContentJP = "聞こえる。アイスレイク城の賑わいの裏で、何かが蠢いていることを。",
+    ContentKR = "들려요, 아이스레이크 시티의 웃음소리 뒤에 숨은 검은 목소리가.",
+    ContentTC = "我已經能聽見冰湖城的歡笑聲後，暗流湧動的聲響。",
+    TextMapContent = "我已经能听见冰湖城的欢笑声后，暗流涌动的声响。",
+    TextMapId = "voice_ch_char_SpLise01_vo_battlestart"
+  },
+  voice_ch_char_SpLise01_vo_gain = {
+    ContentEN = "A night of revelry... and perfect cover for danger. I won't let my guard down.",
+    ContentFR = "Une nuit de festivités... C’est précisément lors de ce genre de célébrations que les dangers aiment se dissimuler. Je dois rester vigilante.",
+    ContentJP = "カーニバルナイトですか……こういう祭りの時こそ警戒が必要です。危険が紛れ込みやすいから。",
+    ContentKR = "축제의 밤인가요... 이런 날일수록 위험이 숨어있기 쉽죠. 계속 경계를 유지해야 해요.",
+    ContentTC = "狂歡夜嗎……越是這樣的慶典越容易潛伏著危機，得時刻保持警惕。",
+    TextMapContent = "狂欢夜吗……越是这样的庆典越容易潜伏着危机，得时刻保持警惕。",
+    TextMapId = "voice_ch_char_SpLise01_vo_gain"
+  },
+  voice_ch_char_SpLise01_vo_skill02_r01 = {
+    ContentEN = "Lightning reveals the guilty.",
+    ContentFR = "L’éclair révélera vos crimes.",
+    ContentJP = "雷光よ、罪を照らせ。",
+    ContentKR = "전기의 빛이 죄악을 낱낱이 드러낼 거다.",
+    ContentTC = "電光會照亮罪惡。",
+    TextMapContent = "电光会照亮罪恶。",
+    TextMapId = "voice_ch_char_SpLise01_vo_skill02_r01"
+  },
+  voice_ch_char_SpLise01_vo_skill02_r02 = {
+    ContentEN = "Your brutal revelry ends here.",
+    ContentFR = "Je mettrai un terme à vos réjouissances cruelles.",
+    ContentJP = "この残虐な楽しみを終わらせてみせる。",
+    ContentKR = "너희들의 잔혹한 쾌락은 여기서 끝이다.",
+    ContentTC = "我將結束你們殘暴的歡愉。",
+    TextMapContent = "我将结束你们残暴的欢愉。",
+    TextMapId = "voice_ch_char_SpLise01_vo_skill02_r02"
+  },
+  voice_ch_char_SpLise01_vo_skill02_r03 = {
+    ContentEN = "Surrender now!",
+    ContentFR = "Rendez-vous sans résistance !",
+    ContentJP = "無駄な抵抗はやめなさいっ！",
+    ContentKR = "움직이지 마!",
+    ContentTC = "束手就擒！",
+    TextMapContent = "束手就擒！",
+    TextMapId = "voice_ch_char_SpLise01_vo_skill02_r03"
+  },
+  voice_ch_char_SpLise_vo_appear = {
+    ContentEN = "Ready. We can move out whenever.",
+    ContentFR = "Préparatifs terminés. Prête à partir à tout moment.",
+    ContentJP = "準備完了。いつでも出発できます。",
+    ContentKR = "준비 완료. 언제든 출발할 수 있어요.",
+    ContentTC = "準備完成，隨時可以出發。",
+    TextMapContent = "准备完成，随时可以出发。",
+    TextMapId = "voice_ch_char_SpLise_vo_appear"
+  },
+  voice_ch_char_SpLise_vo_battleidle = {
+    ContentEN = "So you pace yourself and rest when needed — is that your strategy?",
+    ContentFR = "Alterner effort et repos... C’est ton plan de bataille ?",
+    ContentJP = "攻めと守りの間合いを見極め、戦いながら体勢を整える……なるほど、これがあなたの用意した戦術ですか。",
+    ContentKR = "공격과 휴식의 완급을 잘 조절하는 게, 당신이 의도한 전술인가요?",
+    ContentTC = "張弛有度，且戰且休，這是你的戰術安排嗎？",
+    TextMapContent = "张弛有度，且战且休，这是你的战术安排吗？",
+    TextMapId = "voice_ch_char_SpLise_vo_battleidle"
+  },
+  voice_ch_char_SpLise_vo_battlestart = {
+    ContentEN = "Let's give it everything.",
+    ContentFR = "Donnons tout.",
+    ContentJP = "全力で行きましょう。",
+    ContentKR = "최선을 다해 보죠.",
+    ContentTC = "全力以赴吧。",
+    TextMapContent = "全力以赴吧。",
+    TextMapId = "voice_ch_char_SpLise_vo_battlestart"
+  },
+  voice_ch_char_SpLise_vo_be_hit_heavy_r01 = {
+    ContentEN = "Uh!",
+    ContentFR = "Urh !",
+    ContentJP = "ぐっ……",
+    ContentKR = "윽!",
+    ContentTC = "呃！",
+    TextMapContent = "呃！",
+    TextMapId = "voice_ch_char_SpLise_vo_be_hit_heavy_r01"
+  },
+  voice_ch_char_SpLise_vo_be_hit_heavy_r02 = {
+    ContentEN = "I'm fine.",
+    ContentFR = "Ça va.",
+    ContentJP = "まだ大丈夫。",
+    ContentKR = "괜찮아요.",
+    ContentTC = "沒事。",
+    TextMapContent = "没事。",
+    TextMapId = "voice_ch_char_SpLise_vo_be_hit_heavy_r02"
+  },
+  voice_ch_char_SpLise_vo_birthday = {
+    ContentEN = [[
+When I was young, my family always celebrated my birthday together. But after the last of them left me, birthdays just became red circles on the calendar. It's been a long time since I've prepared a birthday gift for anyone. I bought a snow globe, though I'm not sure if you'll like it.
+See, there are two little figures inside, with snow falling over their heads. They look like two children with silver hair... This is for you. I hope you reach the end of your wandering soon, and find your way back to your family.]],
+    ContentFR = "Quand j’étais enfant, toute ma famille se réunissait pour fêter mon anniversaire. Mais depuis que le dernier membre de ma famille est parti... cette date n’est plus, pour moi, qu’un simple cercle rouge sur un calendrier. En y repensant... cela fait aussi très longtemps que je n’ai offert de cadeau à quelqu’un.\nJ’ai acheté une boule à neige. J’ignore si elle te plaira.\nRegarde... Il y a deux petits personnages à l’intérieur. La neige tombe doucement sur leurs têtes. On dirait deux enfants aux cheveux d’argent...\nTiens. C’est pour toi.\nJ’espère qu’un jour, ton long voyage prendra fin... et que tu pourras retrouver ta famille.",
+    ContentJP = "幼い頃、家族がいつも一緒に誕生日を祝ってくれたのです。でも、最後の家族まで私のもとを去ってから……誕生日はただカレンダーに赤い丸がついているだけの日になってしまいました。誰かのために誕生日プレゼントを用意するのは、本当に久しぶりだったのです。あなたのためにスノードームを買いました、気に入ってもらえるかは分からないけれど。\n見て。中に小さな人形が二つ入っています。頭上には雪が降っていて、まるで銀色の髪をした子どもが二人並んでいるみたい。……これは、あなたに。あなたが早くこの流離の旅の終点にたどり着き、家族と再会できますように。",
+    ContentKR = "어릴 때는 생일이 되면 온 가족이 모여 저를 축하해 주곤 했어요. 하지만 마지막 남은 가족마저 제 곁을 떠난 뒤론, 생일은 달력에 빨갛게 동그라미를 쳐 둔 날에 불과하네요. 그러고 보니, 정말 오랜만에 누군가를 위해 생일 선물을 준비한 것 같아요. 스노 글로브를 하나 샀는데, 마음에 들지 모르겠어요.\n 안을 보시면, 꼬마 두 명이 있어요. 은발의 아이들처럼, 머리 위에 하얀 눈이 소복이 내려앉아 있죠... 선물이에요. 하루빨리 여정의 끝에 닿아, 가족과 다시 만날 수 있기를 바랄게요.",
+    ContentTC = "小時候，每當生日這天，家人都會一起為我慶祝。但自從最後一個家人也離開我之後，生日對我來說就只是一個圈在日曆上的紅色圓圈。想想，我也已經很久沒有為別人準備過生日禮物了。我買了一枚水晶球，不知道你會不會喜歡。\n你看，這裡面有兩個小人，白雪飄落，蓋在它們的頭頂上，它們就像是一對銀髮的孩子一樣……送給你，祝你早日行至漂泊的終點，得以和家人團聚。",
+    TextMapContent = "小时候，每当生日这天，家人都会一起为我庆祝。但自从最后一个家人也离开我之后，生日对我来说就只是一个圈在日历上的红色圆圈。想想，我也已经很久没有为别人准备过生日礼物了。我买了一枚水晶球，不知道你会不会喜欢。\n你看，这里面有两个小人，白雪飘落，盖在它们的头顶上，它们就像是一对银发的孩子一样……送给你，祝你早日行至漂泊的终点，得以和家人团聚。",
+    TextMapId = "voice_ch_char_SpLise_vo_birthday"
+  },
+  voice_ch_char_SpLise_vo_companio_01 = {
+    ContentEN = "To the friend I've never met... thank you. For being there for Blues when I couldn't be.",
+    ContentFR = "Cet ami que je n’ai jamais eu l’occasion de rencontrer... Merci d’avoir accompagné Blues pendant les moments sombres où je n’étais pas là.",
+    ContentJP = "あなたが、あの友人……ですか？私が不在だった間、あのつらい時期にずっとブルースのそばにいてくださったこと、心から感謝いたします。",
+    ContentKR = "만나뵙지 못한 그 친구분이군요...? 제가 없는 동안, 블루스와 함께 힘든 시간들을 견뎌 줘서, 정말 고마워요.",
+    ContentTC = "素未謀面的那位朋友……？謝謝你，在我缺席的時間裡，陪伴布魯斯度過了那些灰暗的時刻。",
+    TextMapContent = "素未谋面的那位朋友……？谢谢你，在我缺席的时间里，陪伴布鲁斯度过了那些灰暗的时刻。",
+    TextMapId = "voice_ch_char_SpLise_vo_companio_01"
+  },
+  voice_ch_char_SpLise_vo_companio_02 = {
+    ContentEN = "Your wine is good, but I'm still not used to the taste. Could you make me something milder? I'll drink it properly and write a five-hundred-word recommendation for you.",
+    ContentFR = "Ton cocktail est excellent. Je ne suis simplement pas encore habituée au goût de l’alcool. Si possible, pourrais-tu m’en préparer un adapté aux débutants ? Je le dégusterai avec attention... puis je rédigerai un rapport de dégustation de cinq cents mots.",
+    ContentJP = "いいお酒ね。でもお酒の匂いはまだ慣れてないから、よろしければ初心者向けのものを一杯作ってくれませんか？ちゃんと味わって、あとで五百字くらいの試飲報告書を出します。",
+    ContentKR = "훌륭한 칵테일이지만, 아직 술에 익숙하지 않아서요. 실례가 안 된다면, 입문자용으로 한 잔 부탁드려도 될까요? 진지하게 시음해 보고, 500자 분량의 보고서를 작성해서 제출할게요.",
+    ContentTC = "你的酒很好，只是我還是不太習慣酒精的味道。如果可以的話，能拜託你為我調一杯適合新手入門的酒嗎，我會用心品嘗，並且提交一份五百字的試飲報告。",
+    TextMapContent = "你的酒很好，只是我还是不太习惯酒精的味道。如果可以的话，能拜托你为我调一杯适合新手入门的酒吗，我会用心品尝，并且提交一份五百字的试饮报告。",
+    TextMapId = "voice_ch_char_SpLise_vo_companio_02"
+  },
+  voice_ch_char_SpLise_vo_companio_03 = {
+    ContentEN = "So the girl in the intel wasn't Berenica... I'm sorry you got dragged into the Forsakens's schemes. I'll do everything I can to help you find {nickname}.",
+    ContentFR = "Alors, la jeune fille mentionnée dans les renseignements n’était pas Berenica... Désolée d’avoir entraîné {nickname} dans les machinations des Déchus. Je ferai tout mon possible pour vous aider à retrouver sa trace.",
+    ContentJP = "結局、情報にあった女性はベレニカさんではなかったのですね……申し訳ありません。私のせいで、{nickname}までフォーセイクン同盟の陰謀に巻き込んでしまいました。彼女の行方については、私もできる限り捜索に協力します。",
+    ContentKR = "그 정보의 아가씨는 베레니카 씨가 아니었던 건가요... {nickname} 씨가 포세이큰 동맹의 음모에 휘말리게 해서 미안해요. 제가 그분의 행방을 찾을 수 있게 최선을 다해 도울게요.",
+    ContentTC = "原來情報裡的女孩不是貝蕾妮卡小姐嗎……抱歉，害{nickname}捲入了神棄者同盟的陰謀。我會全力協助你們尋找{性别：他|她}的下落。",
+    TextMapContent = "原来情报里的女孩不是贝蕾妮卡小姐吗……抱歉，害{nickname}卷入了神弃者同盟的阴谋。我会全力协助你们寻找{性别：他|她}的下落。",
+    TextMapId = "voice_ch_char_SpLise_vo_companio_03"
+  },
+  voice_ch_char_SpLise_vo_die_r01 = {
+    ContentEN = "No... I promised...",
+    ContentFR = "Non... Je l’avais promis...",
+    ContentJP = "わたしは……約束したのに。",
+    ContentKR = "안 돼, 아직 지켜야 할 약속이...",
+    ContentTC = "不，我答應過的……",
+    TextMapContent = "不，我答应过的……",
+    TextMapId = "voice_ch_char_SpLise_vo_die_r01"
+  },
+  voice_ch_char_SpLise_vo_die_r02 = {
+    ContentEN = "I can't fall here…",
+    ContentFR = "Je... ne peux pas mourir...",
+    ContentJP = "ここで……死ぬわけには……",
+    ContentKR = "이대로... 죽을 순 없어...",
+    ContentTC = "我……不能死……",
+    TextMapContent = "我……不能死……",
+    TextMapId = "voice_ch_char_SpLise_vo_die_r02"
+  },
+  voice_ch_char_SpLise_vo_fail = {
+    ContentEN = "Still a chance. Again.",
+    ContentFR = "Il nous reste une chance. Recommençons.",
+    ContentJP = "まだチャンスはある、次こそ決めます。",
+    ContentKR = "아직 기회는 있어요. 다시 해 보죠.",
+    ContentTC = "還有機會，再來。",
+    TextMapContent = "还有机会，再来。",
+    TextMapId = "voice_ch_char_SpLise_vo_fail"
+  },
+  voice_ch_char_SpLise_vo_gain = {
+    ContentEN = "I'll live on, {nickname}. Not just to honour Blues' last words, but because I've found a reason to keep going.",
+    ContentFR = "Je continuerai à vivre, {nickname}. Pas seulement pour ne pas trahir les dernières volontés de Blues... mais aussi parce que j’ai enfin trouvé une raison d’avancer.",
+    ContentJP = "{nickname}、私は胸を張って生きるわ。ブルースの遺言に背きたくないからだけじゃない。生きる理由を、見つけたから。",
+    ContentKR = "전 앞으로도 꿋꿋이 살아갈 거예요, {nickname}. 블루스의 유언도 있지만, 이제는 제 스스로 살아갈 이유를 찾았으니까요.",
+    ContentTC = "我會好好活下去的，{nickname}。並不單單只是為了不違背布魯斯的遺言，也是因為，我已經找到了活下去的理由。",
+    TextMapContent = "我会好好活下去的，{nickname}。并不单单只是为了不违背布鲁斯的遗言，也是因为，我已经找到了活下去的理由。",
+    TextMapId = "voice_ch_char_SpLise_vo_gain"
+  },
+  voice_ch_char_SpLise_vo_idle = {
+    ContentEN = "The weekend's clear... a rare day off.",
+    ContentFR = "Mon week-end est enfin libre... Hum. Un vrai jour de repos, pour une fois.",
+    ContentJP = "今週末の予定は空いてきました……ええ、せっかくの休日です。",
+    ContentKR = "이번 주말은 일정이 비게 됐네요... 음, 모처럼 쉬는 날이에요.",
+    ContentTC = "這周末的行程空出來了……嗯，難得的休息日。",
+    TextMapContent = "这周末的行程空出来了……嗯，难得的休息日。",
+    TextMapId = "voice_ch_char_SpLise_vo_idle"
+  },
+  voice_ch_char_SpLise_vo_lvup = {
+    ContentEN = "This power... it'll help me train better. Thank you.",
+    ContentFR = "Cette puissance... me permettra de poursuivre mon entraînement dans de meilleures conditions. Merci.",
+    ContentJP = "この力は……これからの訓練の支えになります。ありがとうございます。",
+    ContentKR = "이 힘 덕분에... 훈련을 더 잘 소화할 수 있겠어요. 고마워요.",
+    ContentTC = "這份力量……能夠支撐我更好地完成訓練。謝謝。",
+    TextMapContent = "这份力量……能够支撑我更好地完成训练。谢谢。",
+    TextMapId = "voice_ch_char_SpLise_vo_lvup"
+  },
+  voice_ch_char_SpLise_vo_revive = {
+    ContentEN = "I won't break my word.",
+    ContentFR = "Je ne manquerai pas à ma parole.",
+    ContentJP = "私には守りたい約束があるの。",
+    ContentKR = "전 약속은 반드시 지켜요.",
+    ContentTC = "我不會失約的。",
+    TextMapContent = "我不会失约的。",
+    TextMapId = "voice_ch_char_SpLise_vo_revive"
+  },
+  voice_ch_char_SpLise_vo_skill01_r01 = {
+    ContentEN = "Target spotted.",
+    ContentFR = "Cible repérée.",
+    ContentJP = "目標を発見。",
+    ContentKR = "목표 발견.",
+    ContentTC = "發現目標。",
+    TextMapContent = "发现目标。",
+    TextMapId = "voice_ch_char_SpLise_vo_skill01_r01"
+  },
+  voice_ch_char_SpLise_vo_skill01_r02 = {
+    ContentEN = "Target locked.",
+    ContentFR = "Cible verrouillée.",
+    ContentJP = "目標を捕捉。",
+    ContentKR = "타깃 록온.",
+    ContentTC = "目標鎖定。",
+    TextMapContent = "目标锁定。",
+    TextMapId = "voice_ch_char_SpLise_vo_skill01_r02"
+  },
+  voice_ch_char_SpLise_vo_skill02_r01 = {
+    ContentEN = "This ends now.",
+    ContentFR = "Il est temps d’en finir.",
+    ContentJP = "ここまでです。",
+    ContentKR = "이제 끝내도록 하죠.",
+    ContentTC = "該結束了。",
+    TextMapContent = "该结束了。",
+    TextMapId = "voice_ch_char_SpLise_vo_skill02_r01"
+  },
+  voice_ch_char_SpLise_vo_skill02_r02 = {
+    ContentEN = "You have nowhere left to run.",
+    ContentFR = "Tu n’as plus aucune issue.",
+    ContentJP = "あなたにもう、逃げ場などありません。",
+    ContentKR = "더는 도망칠 수 없어요.",
+    ContentTC = "你已無處可逃。",
+    TextMapContent = "你已无处可逃。",
+    TextMapId = "voice_ch_char_SpLise_vo_skill02_r02"
+  },
+  voice_ch_char_SpLise_vo_skill02_r03 = {
+    ContentEN = "Reload complete.",
+    ContentFR = "Rechargement terminé.",
+    ContentJP = "装填完了。",
+    ContentKR = "탄약 장전 완료.",
+    ContentTC = "彈藥裝填完成。",
+    TextMapContent = "弹药装填完成。",
+    TextMapId = "voice_ch_char_SpLise_vo_skill02_r03"
+  },
+  voice_ch_char_SpLise_vo_skill02_r04 = {
+    ContentEN = "Operation concluded.",
+    ContentFR = "Mission accomplie.",
+    ContentJP = "任務完了。",
+    ContentKR = "임무 완료.",
+    ContentTC = "任務完成。",
+    TextMapContent = "任务完成。",
+    TextMapId = "voice_ch_char_SpLise_vo_skill02_r04"
+  },
+  voice_ch_char_SpLise_vo_skill02_r05 = {
+    ContentEN = "Could've been cleaner.",
+    ContentFR = "Il faut attendre le bon moment.",
+    ContentJP = "タイミングを見計らないと。",
+    ContentKR = "재정비가 필요해요.",
+    ContentTC = "需要調整時機。",
+    TextMapContent = "需要调整时机。",
+    TextMapId = "voice_ch_char_SpLise_vo_skill02_r05"
+  },
+  voice_ch_char_SpLise_vo_topic_01_1 = {
+    ContentEN = "Yeah, even the neighbours didn't recognise me at first. I wore that uniform year in, year out. Barely owned anything else.",
+    ContentFR = "Oui. Beaucoup de voisins ne m’ont même pas reconnue au premier regard. Il faut dire que je portais mon uniforme toute l’année. Je n’achetais presque jamais de vêtements.",
+    ContentJP = "ええ。近所の人たちも、最初は私だと気づかなかったのです。いつも制服ばかり着ていたから、服を買うことなんてほとんどなかったので。",
+    ContentKR = "네. 이웃들이 처음엔 절 못 알아보기도 했어요. 그동안은 사시사철 늘 제복 차림이라, 옷을 살 일이 거의 없었죠.",
+    ContentTC = "是啊，好多街坊鄰居第一眼都沒認出我。畢竟之前我一年到頭都是穿制服，幾乎沒買過衣服。",
+    TextMapContent = "是啊，好多街坊邻居第一眼都没认出我。毕竟之前我一年到头都是穿制服，几乎没买过衣服。",
+    TextMapId = "voice_ch_char_SpLise_vo_topic_01_1"
+  },
+  voice_ch_char_SpLise_vo_topic_01_2 = {
+    ContentEN = "Since you're here, what do you think? Does this suit me?",
+    ContentFR = "Tu tombes bien. Dis-moi... cette tenue me va ?",
+    ContentJP = "ちょうどよかったです。この服、私に似合いますか？",
+    ContentKR = "마침 잘 됐네요. 이 옷 어떤가요? 저한테 잘 어울리나요?",
+    ContentTC = "剛好你在，幫我看看，這件還算合適嗎？",
+    TextMapContent = "刚好你在，帮我看看，这件还算合适吗？",
+    TextMapId = "voice_ch_char_SpLise_vo_topic_01_2"
+  },
+  voice_ch_char_SpLise_vo_topic_01_3 = {
+    ContentEN = "Thank you. I needed something to remind myself that I'm not who I used to be.",
+    ContentFR = "Merci. J’avais aussi besoin de ce changement. Il me rappelle que je ne suis plus celle que j’étais.",
+    ContentJP = "感謝します。個人的には、こうして少しイメージを変えて、自分に言い聞かせているんです。「私はもう過去の私ではない」と。",
+    ContentKR = "음, 고마워요. 이제 더는 과거의 제가 아니란 걸 스스로에게 일깨워 주기 위해서라도, 약간의 변화들이 필요했거든요.",
+    ContentTC = "嗯，謝謝你。對我個人而言，我也需要一些變化來提醒自己，我已經不再是過去的我了。",
+    TextMapContent = "嗯，谢谢你。对我个人而言，我也需要一些变化来提醒自己，我已经不再是过去的我了。",
+    TextMapId = "voice_ch_char_SpLise_vo_topic_01_3"
+  },
+  voice_ch_char_SpLise_vo_topic_01_4 = {
+    ContentEN = "...I am. Even though I've told them countless times that I've resigned, people in Icelake still call me \"Officer Fischer.\"",
+    ContentFR = "... C’est vrai. J’ai beau avoir répété plusieurs fois que j’avais quitté mon poste, beaucoup de gens à Givrelac continuent de m’appeler « Officier Fischer » par habitude.",
+    ContentJP = "……そうなのです、前にも言った通り、軍団を辞めた今でも、アイスレイク城のみんなは、今でも私を『リズム長官』と呼んでくれます。",
+    ContentKR = "...네. 저는 이제 민간인이라고 여러 번 설명했는데도, 아이스레이크 시티 사람들은 절 '장교님'이라고 부르는 게 익숙한가 봐요.",
+    ContentTC = "……的確。儘管我說過很多次我已經辭職了，但冰湖城的許多人，仍然會習慣性地稱呼我為「黎瑟長官」。",
+    TextMapContent = "……的确。尽管我说过很多次我已经辞职了，但冰湖城的许多人，仍然会习惯性地称呼我为“黎瑟长官”。",
+    TextMapId = "voice_ch_char_SpLise_vo_topic_01_4"
+  },
+  voice_ch_char_SpLise_vo_topic_01_5 = {
+    ContentEN = "You're right. One day, they'll see me as I am now.",
+    ContentFR = "Tu as raison. Un jour, tout le monde s’habituera à cette nouvelle identité.",
+    ContentJP = "そうね。いつかきっと。みんなも今の私に慣れてくれるわ。",
+    ContentKR = "그러네요. 언젠가는 다들 장교가 아닌 제 모습에도 익숙해질 거예요.",
+    ContentTC = "你說得對，總有一天，大家都會習慣這個新身份的。",
+    TextMapContent = "你说得对，总有一天，大家都会习惯这个新身份的。",
+    TextMapId = "voice_ch_char_SpLise_vo_topic_01_5"
+  },
+  voice_ch_char_SpLise_vo_topic_02_1 = {
+    ContentEN = "New commissions. Mediating disputes in Mist Aken, covering up malicious graffiti.",
+    ContentFR = "Je travaille. Mes dernières missions consistent à empêcher les rixes et les conflits à Brumelac, et à effacer les graffitis qui propagent la haine.",
+    ContentJP = "仕事よ。最近受けた依頼は、霧の街の喧嘩やもめごとの仲裁。それから、悪質な落書きを消すことかな。",
+    ContentKR = "계속 일했어요. 최근에 새로운 의뢰를 받아서, 안개 구역에서 일어나는 크고 작은 분쟁을 제지하거나, 악의적인 낙서를 지우고 있죠.",
+    ContentTC = "在工作。最近接下的新委託，制止霧區的私鬥和糾紛，還有塗掉那些宣傳惡意的塗鴉。",
+    TextMapContent = "在工作。最近接下的新委托，制止雾区的私斗和纠纷，还有涂掉那些宣传恶意的涂鸦。",
+    TextMapId = "voice_ch_char_SpLise_vo_topic_02_1"
+  },
+  voice_ch_char_SpLise_vo_topic_02_2 = {
+    ContentEN = "Someone has to do the small stuff. And if it makes people's lives better, it's not really small, is it?",
+    ContentFR = "Il faut bien que quelqu’un s’occupe aussi de ces petites choses. Et puis, rendre la vie des gens meilleure... ce n’est pas une petite chose.",
+    ContentJP = "こういう小さな仕事も、誰かがやらなきゃいけない。それに、みんなの暮らしが少しでもよくなるなら、十分大事なことだと思う。",
+    ContentKR = "누군가는 해야 할 일인걸요. 더군다나 모두의 삶을 더 좋게 만드는데, 그게 어떻게 사소한 일이겠어요.",
+    ContentTC = "這些小事也總得有人去做，更何況讓大家的生活變得更好的事，也不算小事。",
+    TextMapContent = "这些小事也总得有人去做，更何况让大家的生活变得更好的事，也不算小事。",
+    TextMapId = "voice_ch_char_SpLise_vo_topic_02_2"
+  },
+  voice_ch_char_SpLise_vo_topic_02_3 = {
+    ContentEN = "Like Blues and his operas? ...No, I don't think so. I've spent so long filling my days with work that I've probably missed my chance.",
+    ContentFR = "Un passe-temps... comme l’opéra pour Blues ? Hum... Je crois que non. Avant, mes journées étaient remplies par le travail. J’ai peut-être laissé passer l’occasion d’en avoir un.",
+    ContentJP = "ブルースにとってのオペラみたいなものですか……？うーん……特にないですね。ずっと仕事ばかりしてきたから、趣味を持つ機会なんて、もうとっくに逃してしまったのかもしれません。",
+    ContentKR = "블루스가 오페라를 좋아했던 것처럼 말인가요... 음, 딱히 없네요. 예전에는 하도 일에만 치여 살아서 그런지, 취미라는 걸 가져 볼 기회를 놓친 것 같아요.",
+    ContentTC = "是類似布魯斯喜歡歌劇那樣的愛好嗎……唔，好像確實沒有。過去我習慣了被工作填滿的日子，想來已經錯過擁有愛好的機會了吧。",
+    TextMapContent = "是类似布鲁斯喜欢歌剧那样的爱好吗……唔，好像确实没有。过去我习惯了被工作填满的日子，想来已经错过拥有爱好的机会了吧。",
+    TextMapId = "voice_ch_char_SpLise_vo_topic_02_3"
+  },
+  voice_ch_char_SpLise_vo_topic_02_4 = {
+    ContentEN = "Let me think... I like order and symmetry. Maybe I could take up cleaning and organising? ...No, that still sounds like work.",
+    ContentFR = "Ce que j’aime... voyons... Les choses bien ordonnées. La symétrie. Peut-être pourrais-je prendre goût au ménage et au rangement. Non... ça ressemble encore à du travail.",
+    ContentJP = "好きなもの……そうね。整っているものとか、対称的なものは好きよ。もしかすると、掃除や片付けが趣味なのかも………いえ、なんだが違う感じがします。これは単純に『仕事』なのでわ……？",
+    ContentKR = "좋아하는 거라... 생각 좀 해 볼게요. 음, 저는 가지런하고 대칭이 딱 맞는 걸 좋아하니까, 취미로 청소나 정리는 어떨까요? ...아니지, 그러면 '일'이나 마찬가지네요...",
+    ContentTC = "喜歡的東西……我想想，唔，我喜歡整齊劃一和對稱的東西。也許我可以愛好打掃和整理？——不對，這好像還是「工作」……",
+    TextMapContent = "喜欢的东西……我想想，唔，我喜欢整齐划一和对称的东西。也许我可以爱好打扫和整理？——不对，这好像还是“工作”……",
+    TextMapId = "voice_ch_char_SpLise_vo_topic_02_4"
+  },
+  voice_ch_char_SpLise_vo_topic_03_1 = {
+    ContentEN = "A few come from The Asphodel, but most come from my old contacts in the Security Bureau. They pass me the cases they can't handle officially, mediating armed disputes, that sort of thing.",
+    ContentFR = "Quelques-unes viennent des Asphodèles, mais la plupart me sont confiées par d’anciens collègues du Bureau de la Sécurité. Pour certaines affaires délicates, comme la médiation lors de rixes armées, ils pensent souvent à moi.",
+    ContentJP = "一部はアスフォデロスから。でもほとんどは、昔の保安署の同僚たちからです。彼らの立場では動きにくい治安関係の仕事を、たとえば、喧嘩の仲裁とか……そういうものは、優先的に私へ回ってくるんです。",
+    ContentKR = "아스포델을 통해서 받기도 하지만, 대부분은 제가 몸담았던 치안서의 동료들이 연락을 줘요. 세력 다툼을 중재하는 일처럼 공권력이 나서기 까다로운 치안 문제들을 주로 맡기죠.",
+    ContentTC = "少數委託是水仙平原接的，大多數則是來自我過去在治安署的幾個同僚。有一些不方便出手的治安工作，比如調停械鬥之類的，他們會優先考慮交給我。",
+    TextMapContent = "少数委托是水仙平原接的，大多数则是来自我过去在治安署的几个同僚。有一些不方便出手的治安工作，比如调停械斗之类的，他们会优先考虑交给我。",
+    TextMapId = "voice_ch_char_SpLise_vo_topic_03_1"
+  },
+  voice_ch_char_SpLise_vo_topic_03_2 = {
+    ContentEN = "Yes. Many of the lower-ranked soldiers are just ordinary people like me. Some of them have their own sense of justice... the ones who helped us with the investigation, for example.",
+    ContentFR = "Oui. Beaucoup de simples soldats ne sont que des gens ordinaires, comme moi. Certains ont aussi leur propre sens de la justice... comme ceux qui ont pris des risques pour nous aider à enquêter.",
+    ContentJP = "そうね。帝国軍の下級兵の多くは、私と同じ一般人よ。彼らの中にも、それぞれなりの素朴な正義感を持っている人もいる……たとえば、あの時、危険を承知で調査に協力してくれた仲間たちみたいに。",
+    ContentKR = "네. 말단 병사들 대부분은 저처럼 평범한 사람들이니까요. 나름대로 투박하지만 올곧은 신념을 지닌 사람들도 있어요... 위험을 무릅쓰고 우리 조사를 도왔던 동료들처럼요.",
+    ContentTC = "是的，很多最下層的士兵也只是像我一樣的普通人。他們中的一些人也會有屬於自己的樸素正義……比如當時冒著風險，協助我們一起查案的那幾位同伴。",
+    TextMapContent = "是的，很多最下层的士兵也只是像我一样的普通人。他们中的一些人也会有属于自己的朴素正义……比如当时冒着风险，协助我们一起查案的那几位同伴。",
+    TextMapId = "voice_ch_char_SpLise_vo_topic_03_2"
+  },
+  voice_ch_char_SpLise_vo_topic_03_3 = {
+    ContentEN = "I despise the Legion. But I don't hate these people.",
+    ContentFR = "Je hais la Légion. Mais je ne les hais pas, eux.",
+    ContentJP = "確かに、私は軍団を憎んでいる。でも、彼らまで恨んではいないわ。",
+    ContentKR = "제가 증오하는 건 군단이지, 병사들을 원망하지는 않아요.",
+    ContentTC = "我憎惡軍團，但我並不恨他們。",
+    TextMapContent = "我憎恶军团，但我并不恨他们。",
+    TextMapId = "voice_ch_char_SpLise_vo_topic_03_3"
+  },
+  voice_ch_char_SpLise_vo_topic_04_1 = {
+    ContentEN = "Ah, yes. Hit the bullseye from a few hundred metres away. Not bad, right?",
+    ContentFR = "Ah, oui. Toucher le centre d’une cible à plusieurs centaines de mètres... ce n’est déjà pas mal, non ?",
+    ContentJP = "ええ。数百メートル先からでも、図星を撃ち抜けるようになったわ。悪くはないでしょう？",
+    ContentKR = "아, 맞아요. 몇백 미터 떨어져 있는 과녁의 한가운데를 맞힐 수 있으니까, 실력이 나쁘진 않죠?",
+    ContentTC = "啊，是的。幾百米外就能正中靶心，還不錯吧。",
+    TextMapContent = "啊，是的。几百米外就能正中靶心，还不错吧。",
+    TextMapId = "voice_ch_char_SpLise_vo_topic_04_1"
+  },
+  voice_ch_char_SpLise_vo_topic_04_2 = {
+    ContentEN = "When I've mastered it, I'll pay a few old friends a visit.",
+    ContentFR = "Quand je ne manquerai plus jamais ma cible, je pourrai régler quelques comptes avec de vieilles connaissances.",
+    ContentJP = "百発百中になったら、「腐れ縁」に借りを返すつもりよ……きっちりとね。",
+    ContentKR = "어떤 표적이든 빗맞히지 않게 되면, 그때는 '옛 동료들'에게 신세를 갚으러 갈 생각이에요.",
+    ContentTC = "等我練到百發百中的時候，就可以找一些「老夥計」算算舊帳了。",
+    TextMapContent = "等我练到百发百中的时候，就可以找一些“老伙计”算算旧账了。",
+    TextMapId = "voice_ch_char_SpLise_vo_topic_04_2"
+  },
+  voice_ch_char_SpLise_vo_topic_04_3 = {
+    ContentEN = "Yes. But don't worry, I won't let vengeance cloud my judgement or consume my life.",
+    ContentFR = "Oui. Mais ne t’inquiète pas. Je ne laisserai pas la haine me rendre imprudente. Et je ne la laisserai pas devenir le seul sens de ma vie.",
+    ContentJP = "ええ、でも安心して、憎しみに呑まれて、無謀な真似をするつもりはないわ。私の人生を、憎しみに人生を明け渡す気もない。",
+    ContentKR = "네. 그래도 걱정하지 마세요. 복수심에 눈이 멀어 무모한 짓을 할 생각은 없어요. 복수에 얽매여 살지도 않을 거고요.",
+    ContentTC = "對。但你不用擔心，我不會被仇恨沖昏頭腦去以卵擊石，也不會讓仇恨成為生活的全部。",
+    TextMapContent = "对。但你不用担心，我不会被仇恨冲昏头脑去以卵击石，也不会让仇恨成为生活的全部。",
+    TextMapId = "voice_ch_char_SpLise_vo_topic_04_3"
+  },
+  voice_ch_char_SpLise_vo_topic_04_4 = {
+    ContentEN = "I'll live well, sharpen my skills, wait for the right moment — and walk away clean.",
+    ContentFR = "Je continuerai à vivre. Je m’entraînerai. J’attendrai le bon moment... puis je repartirai en vie.",
+    ContentJP = "私はちゃんと生きていく、好機が訪れるまで、腕を磨いて、やるべきことをやり。そして、必ず無事に戻ってきます。",
+    ContentKR = "저는 꿋꿋이 살아서, 실력을 갈고닦으며 확실한 때를 기다렸다가, 털끝 하나 다치지 않고 빠져나올 거예요.",
+    ContentTC = "我會好好活下去，磨礪身手，等待一個確定的時機，而後全身而退。",
+    TextMapContent = "我会好好活下去，磨砺身手，等待一个确定的时机，而后全身而退。",
+    TextMapId = "voice_ch_char_SpLise_vo_topic_04_4"
+  },
+  voice_ch_char_SpLise_vo_topic_04_5 = {
+    ContentEN = "I won't forget Blues' final request. And besides, I have you now. Friends who stood by me when things were hardest. I'll treasure all of it.",
+    ContentFR = "Bien sûr. Je n’oublierai jamais les dernières volontés de Blues. Et maintenant... j’ai aussi des amis qui m’ont soutenue dans les moments les plus difficiles. Je tiens à tout ce que j’ai aujourd’hui.",
+    ContentJP = "当然よ。ブルースの最期の願い、私は決して忘れないから。それに今の私の周りには、一番つらい時に支えてくれた人たちがいる……今あるものを、大切にしないとね。",
+    ContentKR = "그럼요. 전 블루스의 마지막 부탁을 절대 잊지 않을 거니까요. 게다가, 지금 제 곁엔 가장 힘들 때 곁에서 힘이 되어 준 여러분이 있는걸요... 전 지금 제 삶을 이루는 모든 걸 소중히 여길 거예요.",
+    ContentTC = "當然，因為布魯斯最後的囑託，我也絕不會忘記。更何況，我現在有了你們這些在最困難的時候和我彼此扶持的友人……我會珍惜現在的一切。",
+    TextMapContent = "当然，因为布鲁斯最后的嘱托，我也绝不会忘记。更何况，我现在有了你们这些在最困难的时候和我彼此扶持的友人……我会珍惜现在的一切。",
+    TextMapId = "voice_ch_char_SpLise_vo_topic_04_5"
+  },
+  voice_ch_char_SpLise_vo_victory = {
+    ContentEN = "Good. One step closer to where I need to be.",
+    ContentFR = "Bien. Encore un pas de plus vers mon objectif.",
+    ContentJP = "よかった、これで目標に一歩近づけた。",
+    ContentKR = "좋네요. 제 목표에 한 걸음 더 가까워졌어요.",
+    ContentTC = "好，距離我的目標更近了一步。",
+    TextMapContent = "好，距离我的目标更近了一步。",
+    TextMapId = "voice_ch_char_SpLise_vo_victory"
+  },
+  voice_ch_char_SpLise_vo_welcome = {
+    ContentEN = "Patrol complete. Just a habit — I like to keep an eye on things.",
+    ContentFR = "Patrouille de la base terminée pour aujourd’hui... Oh, ce n’est qu’une habitude personnelle. On n’est jamais trop prudent.",
+    ContentJP = "ベースのパトロール完了……これのこと？これはただの慣れよ。警戒を怠らないに越したことはないから。",
+    ContentKR = "거점 순찰, 이상 무... 아, 그냥 버릇이에요. 안전에 주의를 기울여서 나쁠 건 없으니까요.",
+    ContentTC = "今日據點巡邏結束……噢，這只是我的個人習慣，多留心一下安全總是好的。",
+    TextMapContent = "今日据点巡逻结束……噢，这只是我的个人习惯，多留心一下安全总是好的。",
+    TextMapId = "voice_ch_char_SpLise_vo_welcome"
   },
   voice_ch_char_Suyi01_vo_appear = {
     ContentEN = "Skypatroller Sapta, ready and raring.",

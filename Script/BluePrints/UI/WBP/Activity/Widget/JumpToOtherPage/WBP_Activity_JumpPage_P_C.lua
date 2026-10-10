@@ -231,8 +231,6 @@ function M:Handle_KeyDownOnGamePad(InKeyName)
       self:GoToTaskClick()
     elseif not PageConfigData.EventShop then
       IsEventHandled = false
-    elseif ActivityUtils.IsAccessoryDropActivity(self.CurActivityId) then
-      IsEventHandled = false
     else
       IsEventHandled = true
       if self.RewardWidget and self.RewardWidget.GoToShopClick then

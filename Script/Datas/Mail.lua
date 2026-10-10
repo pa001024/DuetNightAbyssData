@@ -601,6 +601,12 @@ return ReadOnly("Mail", {
     MailTimeLimit = -1,
     MailTitle = "Mail_Title_10086"
   },
+  [10090] = {
+    MailContent = "Mail_Content_10090",
+    MailId = 10090,
+    MailTimeLimit = 30,
+    MailTitle = "Mail_Title_10090"
+  },
   [19101] = {
     MailContent = "Mail_Content_19101",
     MailId = 19101,
@@ -735,6 +741,12 @@ return ReadOnly("Mail", {
     MailContent = "Mail_Content_19101",
     MailId = 19118,
     MailTitle = "Mail_Title_19101"
+  },
+  [19119] = {
+    MailContent = "Mail_Content_19119",
+    MailId = 19119,
+    MailTimeLimit = 1,
+    MailTitle = "Mail_Title_19119"
   },
   [100301] = {
     MailContent = "Mail_Content_100301",

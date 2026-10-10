@@ -75,6 +75,7 @@ T.RT_37 = {
 T.RT_38 = {Skill = 310003}
 T.RT_39 = {Skill = 310001}
 T.RT_40 = {Skill = 410003}
+T.RT_41 = {Skill = 510191}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -478,6 +479,24 @@ return ReadOnly("SkillTree", {
       [3] = T.RT_40
     }
   },
+  [4103] = {
+    CharID = 4103,
+    Skill1 = {
+      [1] = {Skill = 410301},
+      [2] = {Attr = 410301},
+      [3] = {Attr = 410302}
+    },
+    Skill2 = {
+      [1] = {Skill = 410302},
+      [2] = {Attr = 410303},
+      [3] = {Attr = 410304}
+    },
+    Skill3 = {
+      [1] = {Skill = 410303},
+      [2] = {Skill = 410304},
+      [3] = T.RT_40
+    }
+  },
   [4201] = {
     CharID = 4201,
     Skill1 = {
@@ -547,7 +566,7 @@ return ReadOnly("SkillTree", {
     Skill3 = {
       [1] = {Skill = 510103},
       [2] = {Skill = 510106},
-      [3] = {Skill = 510191}
+      [3] = T.RT_41
     }
   },
   [5102] = {
@@ -602,6 +621,24 @@ return ReadOnly("SkillTree", {
       [1] = {Skill = 540103},
       [2] = {Skill = 540104},
       [3] = {Skill = 100009}
+    }
+  },
+  [5402] = {
+    CharID = 5402,
+    Skill1 = {
+      [1] = {Skill = 540201},
+      [2] = {Attr = 540201},
+      [3] = {Attr = 540202}
+    },
+    Skill2 = {
+      [1] = {Skill = 540202},
+      [2] = {Attr = 540203},
+      [3] = {Attr = 540204}
+    },
+    Skill3 = {
+      [1] = {Skill = 540203},
+      [2] = {Skill = 540204},
+      [3] = T.RT_41
     }
   },
   [120101] = {

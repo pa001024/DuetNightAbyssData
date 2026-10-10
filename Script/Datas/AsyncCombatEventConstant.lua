@@ -39,7 +39,7 @@ return ReadOnly("AsyncCombatEventConstant", {
   },
   AsyncCombat_EventId = {
     ConstantName = "AsyncCombat_EventId",
-    ConstantValue = 121003
+    ConstantValue = 121004
   },
   AsyncCombat_HomeownerLimit = {
     ConstantName = "AsyncCombat_HomeownerLimit",

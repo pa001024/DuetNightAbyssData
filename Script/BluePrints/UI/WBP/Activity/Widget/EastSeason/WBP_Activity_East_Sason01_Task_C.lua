@@ -97,6 +97,7 @@ function M:InitUI()
     LeftKey = "Q",
     RightKey = "E",
     Tabs = self.AllTabInfo,
+    ForceHideTabs = #self.AllTabInfo <= 1,
     BottomKeyInfo = {
       {
         KeyInfoList = {

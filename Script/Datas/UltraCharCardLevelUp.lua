@@ -84,5 +84,15 @@ return ReadOnly("UltraCharCardLevelUp", {
     ResourceNum4 = 5,
     ResourceNum5 = 20,
     UnlockDes = "CardLevel7thUnlockDEs"
+  },
+  [4102] = {
+    CharId = 4102,
+    CollectRewardExp = 250,
+    UnlockDes = "CardLevel7thUnlockDEs"
+  },
+  [4201] = {
+    CharId = 4201,
+    CollectRewardExp = 250,
+    UnlockDes = "CardLevel7thUnlockDEs"
   }
 })

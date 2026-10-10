@@ -295,7 +295,7 @@ function Component:CanAutoShoot()
   if self.CheckCanShoot and not self:CheckCanShoot(true) then
     return false
   end
-  if self:CharacterInTag("Idle") or self:CharacterInTag("Falling") then
+  if self:CharacterInTag("Idle") or self:CharacterInTag("Falling") or self.IsInPreAim and self:CharacterInTag("Shooting") then
     return true
   end
   if not self:CharacterInTag("Skill") then

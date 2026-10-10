@@ -690,15 +690,21 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17865447907101308",
-            startPort = "Out",
-            endQuest = "17816851202587346930",
-            endPort = "In"
-          },
-          {
             startQuest = "17816847675225244151",
             startPort = "PassiveFail",
             endQuest = "17865447907101308",
+            endPort = "In"
+          },
+          {
+            startQuest = "17865447907101308",
+            startPort = "Out",
+            endQuest = "17889396113697443837",
+            endPort = "In"
+          },
+          {
+            startQuest = "17889396113697443837",
+            startPort = "Out",
+            endQuest = "17816851202587346930",
             endPort = "In"
           }
         },
@@ -741,7 +747,7 @@ return {
             key = "17816851202587346930",
             type = "SkipRegionNode",
             name = "跨区域传送设置玩家位置",
-            pos = {x = 2051.673254236147, y = 370.1799754677733},
+            pos = {x = 2168.073254236147, y = 390.5799754677733},
             propsData = {
               ModeType = 1,
               Id = 107201,
@@ -759,6 +765,18 @@ return {
               bForbid = false,
               ForbidTag = "ForbidDefault",
               bHidewhenForbid = true
+            }
+          },
+          ["17889396113697443837"] = {
+            key = "17889396113697443837",
+            type = "ShowOrHideUINode",
+            name = "显示或隐藏UI",
+            pos = {x = 2000.5881578947365, y = 257.3513157894736},
+            propsData = {
+              Function = "HideUIInScreen",
+              UIParam = "AimIndicator",
+              ActionParam = "SpiralLeap",
+              ShowOrHide = false
             }
           }
         },

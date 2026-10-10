@@ -27,6 +27,18 @@ function M:Destruct()
   EventManager:RemoveEvent(EventID.ConditionComplete, self)
 end
 
+function M:SetPointIconAsync(Path)
+  self.PendingIconPath = Path
+  UE4.UResourceLibrary.LoadObjectAsync(self, Path, {
+    self,
+    function(_, Obj)
+      if Obj and IsValid(self) and self.PendingIconPath == Path then
+        self.Img_Point:SetBrushFromTexture(Obj, true)
+      end
+    end
+  })
+end
+
 function M:OnFadeIn()
   if not self.PlayForward then
     self:SetVisibility(ESlateVisibility.Collapsed)
@@ -80,10 +92,7 @@ function M:Init(Parent, Data, IsUnlock, ClickFunction, HoverFunction, UnoverFunc
   self.Data = Data
   local ImagePath = Data.TeleportPointIcon
   if ImagePath then
-    local image = LoadObject(ImagePath)
-    if image then
-      self.Img_Point:SetBrushFromTexture(image, true)
-    end
+    self:SetPointIconAsync(ImagePath)
   elseif IsUnlock or Const.UnlockRegionTeleport then
     local complete = true
     if Data.Temples ~= nil or nil ~= Data.Parties then
@@ -114,18 +123,12 @@ function M:Init(Parent, Data, IsUnlock, ClickFunction, HoverFunction, UnoverFunc
       complete = false
     end
     local path = complete and self.TeleportCompletePath or self.TeleportNotCompletePath
-    local image = LoadObject(path)
-    if image then
-      self.Img_Point:SetBrushFromTexture(image, true)
-    end
+    self:SetPointIconAsync(path)
     if not complete then
       self:PlayAnimation(self.SelfLoop, 0, 0)
     end
   else
-    local image = LoadObject(self.TeleportLockPath)
-    if image then
-      self.Img_Point:SetBrushFromTexture(image, true)
-    end
+    self:SetPointIconAsync(self.TeleportLockPath)
   end
   self.ClickFunction = ClickFunction
   self.HoverFunction = HoverFunction
@@ -155,6 +158,7 @@ function M:ClearPointData()
   EventManager:RemoveEvent(EventID.ConditionComplete, self)
   self:StopAllAnimations()
   self.Data = nil
+  self.PendingIconPath = nil
   self.Parent = nil
   self.ClickFunction = nil
   self.HoverFunction = nil
@@ -182,10 +186,7 @@ function M:OnDeliveryMeshanismOpen(CreatorId)
   if self.Data.StaticId == CreatorId then
     self:StopAllAnimations()
     self:PlayAnimation(self.SelfLoop, 0, 0)
-    local image = LoadObject(self.TeleportNotCompletePath)
-    if image then
-      self.Img_Point:SetBrushFromTexture(image, true)
-    end
+    self:SetPointIconAsync(self.TeleportNotCompletePath)
     self.Parent:OnCommonTrack(CommonConst.RegionMapTrackingType.TeleportPoint, self.Data.Id, false)
     self.Parent:UpdateSingleMapFogByTeleport(self.Data.Block, true, self.Data.Id)
     if not GWorld.GameInstance.ShowFogAnimId then
@@ -228,10 +229,7 @@ function M:InitAsMark(Parent, Data, ClickFunction, HoverFunction, UnoverFunction
   self.Parent = Parent
   self.Data = Data
   if Data.ImagePath then
-    local image = LoadObject(Data.ImagePath)
-    if image then
-      self.Img_Point:SetBrushFromTexture(image, true)
-    end
+    self:SetPointIconAsync(Data.ImagePath)
   end
   self:StopAllAnimations()
   self:PlayAnimation(self.Normal)
@@ -247,10 +245,7 @@ function M:InitAsRegionPoint(Parent, Data, ClickFunction, HoverFunction, UnoverF
   self.Parent = Parent
   self.Data = Data
   if Data.Icon then
-    local image = LoadObject(Data.Icon)
-    if image then
-      self.Img_Point:SetBrushFromTexture(image, true)
-    end
+    self:SetPointIconAsync(Data.Icon)
   end
   self.ClickFunction = ClickFunction
   self.HoverFunction = HoverFunction
@@ -320,8 +315,7 @@ function M:InitDoor(Parent, Data, State, Scale)
     self.IsOpen = false
     self:SetVisibility(ESlateVisibility.HitTestInvisible)
   end
-  local Image = LoadObject(ImagePath)
-  self.Img_Point:SetBrushFromTexture(Image, true)
+  self:SetPointIconAsync(ImagePath)
   if Scale then
     self.Img_Point:SetRenderScale(FVector2D(Scale, Scale))
   end
@@ -343,8 +337,7 @@ function M:UpdateDoor(DoorType)
     self.IsOpen = false
     self:SetVisibility(ESlateVisibility.HitTestInvisible)
   end
-  local NewIcon = LoadObject(Path)
-  self.Img_Point:SetBrushFromTexture(NewIcon, true)
+  self:SetPointIconAsync(Path)
 end
 
 function M:PlayLoopUISound()

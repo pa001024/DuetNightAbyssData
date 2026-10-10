@@ -47,7 +47,7 @@ return ReadOnly("Mount", {
     MountRarity = 4,
     ResourceIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mounts/T_Icon_Mounts_0002.T_Icon_Mounts_0002",
     ResourceId = 49999,
-    SortPriority = 97
+    SortPriority = 96
   },
   [1001] = {
     AccessKey = T.RT_2,
@@ -101,7 +101,7 @@ return ReadOnly("Mount", {
     MountRarity = 4,
     ResourceIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mounts/T_Icon_Mounts_0004.T_Icon_Mounts_0004",
     ResourceId = 49996,
-    SortPriority = 98
+    SortPriority = 97
   },
   [1004] = {
     AccessKey = T.RT_3,
@@ -245,7 +245,7 @@ return ReadOnly("Mount", {
     MountRarity = 4,
     ResourceIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mounts/T_Icon_Mounts_0012.T_Icon_Mounts_0012",
     ResourceId = 49988,
-    SortPriority = 97
+    SortPriority = 96
   },
   [1012] = {
     AccessKey = T.RT_3,
@@ -279,7 +279,7 @@ return ReadOnly("Mount", {
     MountRarity = 4,
     ResourceIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mounts/T_Icon_Mounts_0017.T_Icon_Mounts_0017",
     ResourceId = 49986,
-    SortPriority = 98
+    SortPriority = 97
   },
   [1014] = {
     AccessKey = T.RT_3,
@@ -300,5 +300,39 @@ return ReadOnly("Mount", {
     ResourceIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mounts/T_Icon_Mounts_0014.T_Icon_Mounts_0014",
     ResourceId = 49985,
     SortPriority = 104
+  },
+  [1015] = {
+    AccessKey = T.RT_3,
+    AnimPath = "/Game/Asset/Char/Mount/Mnt007_Chensi/Animation/Montage/Interactive/Mnt007_Chensi_System_Idle_Montage.Mnt007_Chensi_System_Idle_Montage",
+    BattleMountId = 1015,
+    CameraName = "Char_Mount_Chensi",
+    FlyLicense = 1,
+    MountDes = "RESOURCE_DESC_1015",
+    MountDisplayScale = 0.6,
+    MountIcon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_0015.T_Mounts_0015",
+    MountId = 1015,
+    MountLocOffset = T.RT_4,
+    MountName = "RESOURCE_NAME_1015",
+    MountRarity = 4,
+    ResourceIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mounts/T_Icon_Mounts_0015.T_Icon_Mounts_0015",
+    ResourceId = 49984,
+    SortPriority = 98
+  },
+  [1016] = {
+    AccessKey = T.RT_3,
+    AnimPath = "/Game/Asset/Char/Mount/Mnt007_Chensi/Animation/Montage/Interactive/Mnt007_Chensi_System_Idle_Montage.Mnt007_Chensi_System_Idle_Montage",
+    BattleMountId = 1016,
+    CameraName = "Char_Mount_Chensi",
+    FlyLicense = 1,
+    MountDes = "RESOURCE_DESC_1016",
+    MountDisplayScale = 0.6,
+    MountIcon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_0016.T_Mounts_0016",
+    MountId = 1016,
+    MountLocOffset = T.RT_4,
+    MountName = "RESOURCE_NAME_1016",
+    MountRarity = 4,
+    ResourceIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mounts/T_Icon_Mounts_0016.T_Icon_Mounts_0016",
+    ResourceId = 49983,
+    SortPriority = 98
   }
 })

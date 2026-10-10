@@ -26,7 +26,7 @@ GuildPermissionUtils.PERMISSION_ROWS = {
   },
   {
     Key = "ModifyNameEmblem",
-    LocKey = "UI_EditGuildName"
+    LocKey = "UI_EditGuildName_2"
   }
 }
 

@@ -1,5 +1,14 @@
 local T = {}
 T.RT_1 = {
+  [110075] = 1
+}
+T.RT_2 = {
+  [110075] = 3
+}
+T.RT_3 = {
+  [110075] = 9
+}
+T.RT_4 = {
   4931,
   4932,
   4933
@@ -20,7 +29,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title01",
     PetEntryUPCount = 3,
     PetEntryUPID = 10012,
-    Rarity = 3
+    Rarity = 3,
+    ReturnRewardID = T.RT_1
   },
   [10012] = {
     BattlePetID = 1001,
@@ -31,7 +41,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title01",
     PetEntryUPCount = 3,
     PetEntryUPID = 10013,
-    Rarity = 4
+    Rarity = 4,
+    ReturnRewardID = T.RT_2
   },
   [10013] = {
     BattlePetID = 1001,
@@ -40,7 +51,8 @@ return ReadOnly("PetEntry", {
     IconS = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Pet_Attr_World_S.T_Armory_Pet_Attr_World_S",
     PetEntryID = 10013,
     PetEntryName = "UI_PetEntry_Title01",
-    Rarity = 5
+    Rarity = 5,
+    ReturnRewardID = T.RT_3
   },
   [10021] = {
     BattlePetID = 1002,
@@ -51,7 +63,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title02",
     PetEntryUPCount = 3,
     PetEntryUPID = 10022,
-    Rarity = 3
+    Rarity = 3,
+    ReturnRewardID = T.RT_1
   },
   [10022] = {
     BattlePetID = 1002,
@@ -62,7 +75,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title02",
     PetEntryUPCount = 3,
     PetEntryUPID = 10023,
-    Rarity = 4
+    Rarity = 4,
+    ReturnRewardID = T.RT_2
   },
   [10023] = {
     BattlePetID = 1002,
@@ -71,7 +85,8 @@ return ReadOnly("PetEntry", {
     IconS = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Pet_Attr_World_S.T_Armory_Pet_Attr_World_S",
     PetEntryID = 10023,
     PetEntryName = "UI_PetEntry_Title02",
-    Rarity = 5
+    Rarity = 5,
+    ReturnRewardID = T.RT_3
   },
   [10031] = {
     BattlePetID = 1003,
@@ -82,7 +97,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title03",
     PetEntryUPCount = 3,
     PetEntryUPID = 10032,
-    Rarity = 3
+    Rarity = 3,
+    ReturnRewardID = T.RT_1
   },
   [10032] = {
     BattlePetID = 1003,
@@ -93,7 +109,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title03",
     PetEntryUPCount = 3,
     PetEntryUPID = 10033,
-    Rarity = 4
+    Rarity = 4,
+    ReturnRewardID = T.RT_2
   },
   [10033] = {
     BattlePetID = 1003,
@@ -102,7 +119,8 @@ return ReadOnly("PetEntry", {
     IconS = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Pet_Attr_Battle_S.T_Armory_Pet_Attr_Battle_S",
     PetEntryID = 10033,
     PetEntryName = "UI_PetEntry_Title03",
-    Rarity = 5
+    Rarity = 5,
+    ReturnRewardID = T.RT_3
   },
   [10041] = {
     BattlePetID = 1004,
@@ -111,7 +129,8 @@ return ReadOnly("PetEntry", {
     IconS = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Pet_Attr_Battle_S.T_Armory_Pet_Attr_Battle_S",
     PetEntryID = 10041,
     PetEntryName = "UI_PetEntry_Title04",
-    Rarity = 5
+    Rarity = 5,
+    ReturnRewardID = T.RT_3
   },
   [10061] = {
     BattlePetID = 1006,
@@ -122,7 +141,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title06",
     PetEntryUPCount = 3,
     PetEntryUPID = 10062,
-    Rarity = 3
+    Rarity = 3,
+    ReturnRewardID = T.RT_1
   },
   [10062] = {
     BattlePetID = 1006,
@@ -133,7 +153,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title06",
     PetEntryUPCount = 3,
     PetEntryUPID = 10063,
-    Rarity = 4
+    Rarity = 4,
+    ReturnRewardID = T.RT_2
   },
   [10063] = {
     BattlePetID = 1006,
@@ -142,7 +163,8 @@ return ReadOnly("PetEntry", {
     IconS = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Pet_Attr_Speed_S.T_Armory_Pet_Attr_Speed_S",
     PetEntryID = 10063,
     PetEntryName = "UI_PetEntry_Title06",
-    Rarity = 5
+    Rarity = 5,
+    ReturnRewardID = T.RT_3
   },
   [10071] = {
     BattlePetID = 1007,
@@ -153,7 +175,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title07",
     PetEntryUPCount = 3,
     PetEntryUPID = 10072,
-    Rarity = 3
+    Rarity = 3,
+    ReturnRewardID = T.RT_1
   },
   [10072] = {
     BattlePetID = 1007,
@@ -164,7 +187,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title07",
     PetEntryUPCount = 3,
     PetEntryUPID = 10073,
-    Rarity = 4
+    Rarity = 4,
+    ReturnRewardID = T.RT_2
   },
   [10073] = {
     BattlePetID = 1007,
@@ -173,7 +197,8 @@ return ReadOnly("PetEntry", {
     IconS = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Pet_Attr_Speed_S.T_Armory_Pet_Attr_Speed_S",
     PetEntryID = 10073,
     PetEntryName = "UI_PetEntry_Title07",
-    Rarity = 5
+    Rarity = 5,
+    ReturnRewardID = T.RT_3
   },
   [10081] = {
     BattlePetID = 1008,
@@ -184,7 +209,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title08",
     PetEntryUPCount = 3,
     PetEntryUPID = 10082,
-    Rarity = 3
+    Rarity = 3,
+    ReturnRewardID = T.RT_1
   },
   [10082] = {
     BattlePetID = 1008,
@@ -195,7 +221,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title08",
     PetEntryUPCount = 3,
     PetEntryUPID = 10083,
-    Rarity = 4
+    Rarity = 4,
+    ReturnRewardID = T.RT_2
   },
   [10083] = {
     BattlePetID = 1008,
@@ -204,7 +231,8 @@ return ReadOnly("PetEntry", {
     IconS = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Pet_Attr_Speed_S.T_Armory_Pet_Attr_Speed_S",
     PetEntryID = 10083,
     PetEntryName = "UI_PetEntry_Title08",
-    Rarity = 5
+    Rarity = 5,
+    ReturnRewardID = T.RT_3
   },
   [10091] = {
     BattlePetID = 1009,
@@ -215,7 +243,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title09",
     PetEntryUPCount = 3,
     PetEntryUPID = 10092,
-    Rarity = 3
+    Rarity = 3,
+    ReturnRewardID = T.RT_1
   },
   [10092] = {
     BattlePetID = 1009,
@@ -226,7 +255,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title09",
     PetEntryUPCount = 3,
     PetEntryUPID = 10093,
-    Rarity = 4
+    Rarity = 4,
+    ReturnRewardID = T.RT_2
   },
   [10093] = {
     BattlePetID = 1009,
@@ -235,7 +265,8 @@ return ReadOnly("PetEntry", {
     IconS = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Pet_Attr_Speed_S.T_Armory_Pet_Attr_Speed_S",
     PetEntryID = 10093,
     PetEntryName = "UI_PetEntry_Title09",
-    Rarity = 5
+    Rarity = 5,
+    ReturnRewardID = T.RT_3
   },
   [10101] = {
     BattlePetID = 1010,
@@ -246,7 +277,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title10",
     PetEntryUPCount = 3,
     PetEntryUPID = 10102,
-    Rarity = 3
+    Rarity = 3,
+    ReturnRewardID = T.RT_1
   },
   [10102] = {
     BattlePetID = 1010,
@@ -257,7 +289,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title10",
     PetEntryUPCount = 3,
     PetEntryUPID = 10103,
-    Rarity = 4
+    Rarity = 4,
+    ReturnRewardID = T.RT_2
   },
   [10103] = {
     BattlePetID = 1010,
@@ -266,7 +299,8 @@ return ReadOnly("PetEntry", {
     IconS = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Pet_Attr_Base_S.T_Armory_Pet_Attr_Base_S",
     PetEntryID = 10103,
     PetEntryName = "UI_PetEntry_Title10",
-    Rarity = 5
+    Rarity = 5,
+    ReturnRewardID = T.RT_3
   },
   [10111] = {
     BattlePetID = 1011,
@@ -277,7 +311,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title11",
     PetEntryUPCount = 3,
     PetEntryUPID = 10112,
-    Rarity = 3
+    Rarity = 3,
+    ReturnRewardID = T.RT_1
   },
   [10112] = {
     BattlePetID = 1011,
@@ -288,7 +323,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title11",
     PetEntryUPCount = 3,
     PetEntryUPID = 10113,
-    Rarity = 4
+    Rarity = 4,
+    ReturnRewardID = T.RT_2
   },
   [10113] = {
     BattlePetID = 1011,
@@ -297,7 +333,8 @@ return ReadOnly("PetEntry", {
     IconS = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Pet_Attr_Base_S.T_Armory_Pet_Attr_Base_S",
     PetEntryID = 10113,
     PetEntryName = "UI_PetEntry_Title11",
-    Rarity = 5
+    Rarity = 5,
+    ReturnRewardID = T.RT_3
   },
   [10121] = {
     BattlePetID = 1012,
@@ -308,7 +345,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title12",
     PetEntryUPCount = 3,
     PetEntryUPID = 10122,
-    Rarity = 3
+    Rarity = 3,
+    ReturnRewardID = T.RT_1
   },
   [10122] = {
     BattlePetID = 1012,
@@ -319,7 +357,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title12",
     PetEntryUPCount = 3,
     PetEntryUPID = 10123,
-    Rarity = 4
+    Rarity = 4,
+    ReturnRewardID = T.RT_2
   },
   [10123] = {
     BattlePetID = 1012,
@@ -328,7 +367,8 @@ return ReadOnly("PetEntry", {
     IconS = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Pet_Attr_Base_S.T_Armory_Pet_Attr_Base_S",
     PetEntryID = 10123,
     PetEntryName = "UI_PetEntry_Title12",
-    Rarity = 5
+    Rarity = 5,
+    ReturnRewardID = T.RT_3
   },
   [10131] = {
     BattlePetID = 1013,
@@ -339,7 +379,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title13",
     PetEntryUPCount = 3,
     PetEntryUPID = 10132,
-    Rarity = 3
+    Rarity = 3,
+    ReturnRewardID = T.RT_1
   },
   [10132] = {
     BattlePetID = 1013,
@@ -350,7 +391,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title13",
     PetEntryUPCount = 3,
     PetEntryUPID = 10133,
-    Rarity = 4
+    Rarity = 4,
+    ReturnRewardID = T.RT_2
   },
   [10133] = {
     BattlePetID = 1013,
@@ -359,7 +401,8 @@ return ReadOnly("PetEntry", {
     IconS = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Pet_Attr_Base_S.T_Armory_Pet_Attr_Base_S",
     PetEntryID = 10133,
     PetEntryName = "UI_PetEntry_Title13",
-    Rarity = 5
+    Rarity = 5,
+    ReturnRewardID = T.RT_3
   },
   [10141] = {
     BattlePetID = 1014,
@@ -370,7 +413,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title14",
     PetEntryUPCount = 3,
     PetEntryUPID = 10142,
-    Rarity = 3
+    Rarity = 3,
+    ReturnRewardID = T.RT_1
   },
   [10142] = {
     BattlePetID = 1014,
@@ -381,7 +425,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title14",
     PetEntryUPCount = 3,
     PetEntryUPID = 10143,
-    Rarity = 4
+    Rarity = 4,
+    ReturnRewardID = T.RT_2
   },
   [10143] = {
     BattlePetID = 1014,
@@ -390,7 +435,8 @@ return ReadOnly("PetEntry", {
     IconS = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Pet_Attr_Battle_S.T_Armory_Pet_Attr_Battle_S",
     PetEntryID = 10143,
     PetEntryName = "UI_PetEntry_Title14",
-    Rarity = 5
+    Rarity = 5,
+    ReturnRewardID = T.RT_3
   },
   [10151] = {
     BattlePetID = 1015,
@@ -402,7 +448,8 @@ return ReadOnly("PetEntry", {
     PetEntryUPCount = 3,
     PetEntryUPID = 10152,
     Rarity = 3,
-    SpecificPetIds = T.RT_1
+    ReturnRewardID = T.RT_1,
+    SpecificPetIds = T.RT_4
   },
   [10152] = {
     BattlePetID = 1015,
@@ -414,7 +461,8 @@ return ReadOnly("PetEntry", {
     PetEntryUPCount = 3,
     PetEntryUPID = 10153,
     Rarity = 4,
-    SpecificPetIds = T.RT_1
+    ReturnRewardID = T.RT_2,
+    SpecificPetIds = T.RT_4
   },
   [10153] = {
     BattlePetID = 1015,
@@ -424,7 +472,8 @@ return ReadOnly("PetEntry", {
     PetEntryID = 10153,
     PetEntryName = "UI_PetEntry_Title15",
     Rarity = 5,
-    SpecificPetIds = T.RT_1
+    ReturnRewardID = T.RT_3,
+    SpecificPetIds = T.RT_4
   },
   [10161] = {
     BattlePetID = 1016,
@@ -433,7 +482,8 @@ return ReadOnly("PetEntry", {
     IconS = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Pet_Attr_World_S.T_Armory_Pet_Attr_World_S",
     PetEntryID = 10161,
     PetEntryName = "UI_PetEntry_Title16",
-    Rarity = 5
+    Rarity = 5,
+    ReturnRewardID = T.RT_3
   },
   [10171] = {
     BattlePetID = 1017,
@@ -442,7 +492,8 @@ return ReadOnly("PetEntry", {
     IconS = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Pet_Attr_World_S.T_Armory_Pet_Attr_World_S",
     PetEntryID = 10171,
     PetEntryName = "UI_PetEntry_Title17",
-    Rarity = 5
+    Rarity = 5,
+    ReturnRewardID = T.RT_3
   },
   [10181] = {
     BattlePetID = 1018,
@@ -451,7 +502,8 @@ return ReadOnly("PetEntry", {
     IconS = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Pet_Attr_Battle_S.T_Armory_Pet_Attr_Battle_S",
     PetEntryID = 10181,
     PetEntryName = "UI_PetEntry_Title18",
-    Rarity = 5
+    Rarity = 5,
+    ReturnRewardID = T.RT_3
   },
   [10191] = {
     BattlePetID = 1019,
@@ -462,7 +514,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title19",
     PetEntryUPCount = 3,
     PetEntryUPID = 10192,
-    Rarity = 3
+    Rarity = 3,
+    ReturnRewardID = T.RT_1
   },
   [10192] = {
     BattlePetID = 1019,
@@ -473,7 +526,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title19",
     PetEntryUPCount = 3,
     PetEntryUPID = 10193,
-    Rarity = 4
+    Rarity = 4,
+    ReturnRewardID = T.RT_2
   },
   [10193] = {
     BattlePetID = 1019,
@@ -482,7 +536,8 @@ return ReadOnly("PetEntry", {
     IconS = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Pet_Attr_Battle_S.T_Armory_Pet_Attr_Battle_S",
     PetEntryID = 10193,
     PetEntryName = "UI_PetEntry_Title19",
-    Rarity = 5
+    Rarity = 5,
+    ReturnRewardID = T.RT_3
   },
   [10201] = {
     BattlePetID = 1020,
@@ -493,7 +548,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title20",
     PetEntryUPCount = 3,
     PetEntryUPID = 10202,
-    Rarity = 3
+    Rarity = 3,
+    ReturnRewardID = T.RT_1
   },
   [10202] = {
     BattlePetID = 1020,
@@ -504,7 +560,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title20",
     PetEntryUPCount = 3,
     PetEntryUPID = 10203,
-    Rarity = 4
+    Rarity = 4,
+    ReturnRewardID = T.RT_2
   },
   [10203] = {
     BattlePetID = 1020,
@@ -513,7 +570,8 @@ return ReadOnly("PetEntry", {
     IconS = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Pet_Attr_Battle_S.T_Armory_Pet_Attr_Battle_S",
     PetEntryID = 10203,
     PetEntryName = "UI_PetEntry_Title20",
-    Rarity = 5
+    Rarity = 5,
+    ReturnRewardID = T.RT_3
   },
   [10211] = {
     BattlePetID = 1021,
@@ -524,7 +582,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title21",
     PetEntryUPCount = 3,
     PetEntryUPID = 10212,
-    Rarity = 3
+    Rarity = 3,
+    ReturnRewardID = T.RT_1
   },
   [10212] = {
     BattlePetID = 1021,
@@ -535,7 +594,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title21",
     PetEntryUPCount = 3,
     PetEntryUPID = 10213,
-    Rarity = 4
+    Rarity = 4,
+    ReturnRewardID = T.RT_2
   },
   [10213] = {
     BattlePetID = 1021,
@@ -544,7 +604,8 @@ return ReadOnly("PetEntry", {
     IconS = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Pet_Attr_Battle_S.T_Armory_Pet_Attr_Battle_S",
     PetEntryID = 10213,
     PetEntryName = "UI_PetEntry_Title21",
-    Rarity = 5
+    Rarity = 5,
+    ReturnRewardID = T.RT_3
   },
   [10221] = {
     BattlePetID = 1022,
@@ -555,7 +616,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title22",
     PetEntryUPCount = 3,
     PetEntryUPID = 10222,
-    Rarity = 3
+    Rarity = 3,
+    ReturnRewardID = T.RT_1
   },
   [10222] = {
     BattlePetID = 1022,
@@ -566,7 +628,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title22",
     PetEntryUPCount = 3,
     PetEntryUPID = 10223,
-    Rarity = 4
+    Rarity = 4,
+    ReturnRewardID = T.RT_2
   },
   [10223] = {
     BattlePetID = 1022,
@@ -575,7 +638,8 @@ return ReadOnly("PetEntry", {
     IconS = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Pet_Attr_Battle_S.T_Armory_Pet_Attr_Battle_S",
     PetEntryID = 10223,
     PetEntryName = "UI_PetEntry_Title22",
-    Rarity = 5
+    Rarity = 5,
+    ReturnRewardID = T.RT_3
   },
   [10231] = {
     BattlePetID = 1023,
@@ -586,7 +650,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title23",
     PetEntryUPCount = 3,
     PetEntryUPID = 10232,
-    Rarity = 3
+    Rarity = 3,
+    ReturnRewardID = T.RT_1
   },
   [10232] = {
     BattlePetID = 1023,
@@ -597,7 +662,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title23",
     PetEntryUPCount = 3,
     PetEntryUPID = 10233,
-    Rarity = 4
+    Rarity = 4,
+    ReturnRewardID = T.RT_2
   },
   [10233] = {
     BattlePetID = 1023,
@@ -606,7 +672,8 @@ return ReadOnly("PetEntry", {
     IconS = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Pet_Attr_Battle_S.T_Armory_Pet_Attr_Battle_S",
     PetEntryID = 10233,
     PetEntryName = "UI_PetEntry_Title23",
-    Rarity = 5
+    Rarity = 5,
+    ReturnRewardID = T.RT_3
   },
   [10241] = {
     BattlePetID = 1024,
@@ -617,7 +684,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title24",
     PetEntryUPCount = 3,
     PetEntryUPID = 10242,
-    Rarity = 3
+    Rarity = 3,
+    ReturnRewardID = T.RT_1
   },
   [10242] = {
     BattlePetID = 1024,
@@ -628,7 +696,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title24",
     PetEntryUPCount = 3,
     PetEntryUPID = 10243,
-    Rarity = 4
+    Rarity = 4,
+    ReturnRewardID = T.RT_2
   },
   [10243] = {
     BattlePetID = 1024,
@@ -637,7 +706,8 @@ return ReadOnly("PetEntry", {
     IconS = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Pet_Attr_Battle_S.T_Armory_Pet_Attr_Battle_S",
     PetEntryID = 10243,
     PetEntryName = "UI_PetEntry_Title24",
-    Rarity = 5
+    Rarity = 5,
+    ReturnRewardID = T.RT_3
   },
   [10251] = {
     BattlePetID = 1025,
@@ -648,7 +718,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title25",
     PetEntryUPCount = 3,
     PetEntryUPID = 10252,
-    Rarity = 3
+    Rarity = 3,
+    ReturnRewardID = T.RT_1
   },
   [10252] = {
     BattlePetID = 1025,
@@ -659,7 +730,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title25",
     PetEntryUPCount = 3,
     PetEntryUPID = 10253,
-    Rarity = 4
+    Rarity = 4,
+    ReturnRewardID = T.RT_2
   },
   [10253] = {
     BattlePetID = 1025,
@@ -668,7 +740,8 @@ return ReadOnly("PetEntry", {
     IconS = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Pet_Attr_Battle_S.T_Armory_Pet_Attr_Battle_S",
     PetEntryID = 10253,
     PetEntryName = "UI_PetEntry_Title25",
-    Rarity = 5
+    Rarity = 5,
+    ReturnRewardID = T.RT_3
   },
   [10261] = {
     BattlePetID = 1026,
@@ -679,7 +752,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title26",
     PetEntryUPCount = 3,
     PetEntryUPID = 10262,
-    Rarity = 3
+    Rarity = 3,
+    ReturnRewardID = T.RT_1
   },
   [10262] = {
     BattlePetID = 1026,
@@ -690,7 +764,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title26",
     PetEntryUPCount = 3,
     PetEntryUPID = 10263,
-    Rarity = 4
+    Rarity = 4,
+    ReturnRewardID = T.RT_2
   },
   [10263] = {
     BattlePetID = 1026,
@@ -699,7 +774,8 @@ return ReadOnly("PetEntry", {
     IconS = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Pet_Attr_Battle_S.T_Armory_Pet_Attr_Battle_S",
     PetEntryID = 10263,
     PetEntryName = "UI_PetEntry_Title26",
-    Rarity = 5
+    Rarity = 5,
+    ReturnRewardID = T.RT_3
   },
   [10271] = {
     BattlePetID = 1027,
@@ -710,7 +786,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title27",
     PetEntryUPCount = 3,
     PetEntryUPID = 10272,
-    Rarity = 3
+    Rarity = 3,
+    ReturnRewardID = T.RT_1
   },
   [10272] = {
     BattlePetID = 1027,
@@ -721,7 +798,8 @@ return ReadOnly("PetEntry", {
     PetEntryName = "UI_PetEntry_Title27",
     PetEntryUPCount = 3,
     PetEntryUPID = 10273,
-    Rarity = 4
+    Rarity = 4,
+    ReturnRewardID = T.RT_2
   },
   [10273] = {
     BattlePetID = 1027,
@@ -730,7 +808,8 @@ return ReadOnly("PetEntry", {
     IconS = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Pet_Attr_Battle_S.T_Armory_Pet_Attr_Battle_S",
     PetEntryID = 10273,
     PetEntryName = "UI_PetEntry_Title27",
-    Rarity = 5
+    Rarity = 5,
+    ReturnRewardID = T.RT_3
   },
   [10281] = {
     BattlePetID = 1028,
@@ -739,7 +818,8 @@ return ReadOnly("PetEntry", {
     IconS = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Pet_Attr_Battle_S.T_Armory_Pet_Attr_Battle_S",
     PetEntryID = 10281,
     PetEntryName = "UI_PetEntry_Title28",
-    Rarity = 5
+    Rarity = 5,
+    ReturnRewardID = T.RT_3
   },
   [10291] = {
     BattlePetID = 1029,
@@ -748,7 +828,8 @@ return ReadOnly("PetEntry", {
     IconS = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Pet_Attr_Battle_S.T_Armory_Pet_Attr_Battle_S",
     PetEntryID = 10291,
     PetEntryName = "UI_PetEntry_Title29",
-    Rarity = 5
+    Rarity = 5,
+    ReturnRewardID = T.RT_3
   },
   [10301] = {
     BattlePetID = 1030,
@@ -757,6 +838,7 @@ return ReadOnly("PetEntry", {
     IconS = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Pet_Attr_Battle_S.T_Armory_Pet_Attr_Battle_S",
     PetEntryID = 10301,
     PetEntryName = "UI_PetEntry_Title30",
-    Rarity = 5
+    Rarity = 5,
+    ReturnRewardID = T.RT_3
   }
 })

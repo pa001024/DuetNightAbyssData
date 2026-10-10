@@ -26,7 +26,6 @@ function FOptionNode:CreateNodeData(DialogueId)
         UStoryLogUtils.PrintToFeiShu(self, UE.EStoryLogType.Talk, Title, Message)
       end
     else
-      OptionId2Index[OptionId] = Index
       if not self.IsImpression and (OptionDialogue.ImprPlusId or OptionDialogue.ImprCheckId) then
         self.IsImpression = true
         if OptionDialogue.ImprPlusId then
@@ -39,6 +38,7 @@ function FOptionNode:CreateNodeData(DialogueId)
         table.insert(LastSelectedId, OptionId)
       end
       table.insert(Options, OptionId)
+      OptionId2Index[OptionId] = #Options
       NextDialogueMap[OptionId] = OptionDialogue.NextDialogue
       FailDialogueMap[OptionId] = OptionDialogue.FailDialogue
     end
@@ -112,11 +112,15 @@ function FOptionNode:Execute(bSkip)
   if bSkip then
     return
   end
+  self.ShownOptions = nil
   local Options = self:GetOptions()
   self.TalkTask:ShowDialogueOptions(Options)
 end
 
 function FOptionNode:GetOptions()
+  if self.ShownOptions then
+    return self.ShownOptions
+  end
   local ValidOptions = {}
   for _, OptionId in pairs(self.Options) do
     if self.IterGraph.TalkTriggerComponent:CheckDialogueCondition(OptionId) then
@@ -152,6 +156,7 @@ function FOptionNode:GetOptions()
     end
     ValidOptions = FinalOptions
   end
+  self.ShownOptions = ValidOptions
   return ValidOptions
 end
 
@@ -266,7 +271,7 @@ end
 
 function FOptionNode:Record(OptionId)
   FOptionNode.Super.Record(self, OptionId)
-  OptionId = self.Options[OptionId] or OptionId
+  OptionId = self.Options[self.OptionId2Index[OptionId] or OptionId] or OptionId
   if self.VisitedOptions[OptionId] then
     return
   end

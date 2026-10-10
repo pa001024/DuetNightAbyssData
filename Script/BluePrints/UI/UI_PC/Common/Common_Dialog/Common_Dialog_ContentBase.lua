@@ -117,6 +117,9 @@ function Common_Dialog_ContentBase:ShowGamepadCloseBtn(bShow)
 end
 
 function Common_Dialog_ContentBase:ChangeCloseShortKeyText(Text)
+  if not self.Owner then
+    return
+  end
   local Key = self.Owner:GetGamepadShortcutByIndex(self.Owner.GamepadCloseBtnIndex)
   if Key then
     Key:SetDescription(Text)

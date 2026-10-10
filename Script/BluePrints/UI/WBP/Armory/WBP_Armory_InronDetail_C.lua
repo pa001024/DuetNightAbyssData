@@ -152,16 +152,17 @@ end
 
 function M:OnBackgroundClicked()
   if not (not self.IsInOutAnim and self.InFinished) or self.UnlockPlaying then
-    return
+    return UIUtils.Handled
   end
   if self.Parent then
     for i = 1, self.TotalMaxGradeLevel do
       if self.Parent["InronItem_" .. i] and self.Parent["InronItem_" .. i]:IsAnimationPlaying(self.Parent["InronItem_" .. i].UnLock) then
-        return
+        return UIUtils.Handled
       end
     end
   end
   self:OnCloseBtnClicked()
+  return UIUtils.Handled
 end
 
 function M:OnCloseBtnClicked()

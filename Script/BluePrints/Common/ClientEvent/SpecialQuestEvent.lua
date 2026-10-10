@@ -790,11 +790,9 @@ function SpecialQuestEvent:SetUniversalConfig()
       EventManager:FireEvent(EventID.SpecialQuestCloseRegionOnline, false, true, "SpecialQuest")
     end
     if self.UniversalConfig.IfStartStoryMode then
-      self.LastStoryMode = false
       local PlayerController = UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
       if PlayerController then
-        self.LastStoryMode = PlayerController:GetStoryModeState()
-        PlayerController:SetStoryModeState(true)
+        PlayerController:SetStoryModeState(true, "SpecialQuest")
       end
     end
     if self.UniversalConfig.IfChangeESC then
@@ -933,7 +931,7 @@ function SpecialQuestEvent:RecoverUniversalConfig()
       end
     end
     if self.UniversalConfig.IfStartStoryMode and PlayerController then
-      PlayerController:SetStoryModeState(self.LastStoryMode)
+      PlayerController:SetStoryModeState(false, "SpecialQuest")
     end
     if self.UniversalConfig.IfChangeESC then
       local BattleMainUI = UIManager():GetUIObj("BattleMain")

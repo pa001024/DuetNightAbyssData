@@ -336,10 +336,7 @@ function M:OnOpened(Duration)
   end
   
   self:ViewTarget()
-  local FXMgr = UE4.USubsystemBlueprintLibrary.GetWorldSubsystem(self.ViewUI, UE4.UFXPriorityManager)
-  if FXMgr then
-    FXMgr.SetFXTickEvenPaused(self.ViewUI, self.UIName, true)
-  end
+  UE4.UEMNiagaraFunctionLibrary.SetFXTickEvenPaused(self.ViewUI, self.UIName, true)
   GWorld.GameInstance:SetDynamicResolution(self.UIName, true)
 end
 
@@ -697,6 +694,9 @@ function M:SetArmoryMontageTag(Tag, bShowOrHideWeapon)
       if PlayerCharacter.EMAnimInstance.CharacterTag ~= PlayerCharacter:GetCharacterTag() then
         PlayerCharacter.EMAnimInstance.CharacterTag = PlayerCharacter:GetCharacterTag()
       end
+      if PlayerCharacter.PlayerAnimInstance then
+        PlayerCharacter.PlayerAnimInstance:SetKawiiLayerState(EKawaiiLayerState.EKLS_Armory)
+      end
     end
     
     SetArmoryTag(Player)
@@ -1053,9 +1053,8 @@ function M:OnDestruct()
   if self.LTweenHandle_PlayDisappearFX and IsValid(self.LTweenHandle_PlayDisappearFX) and IsValid(self.ViewUI) then
     ULTweenBPLibrary.KillIfIsTweening(self.ViewUI, self.LTweenHandle_PlayDisappearFX, false)
   end
-  local FXMgr = UE4.USubsystemBlueprintLibrary.GetWorldSubsystem(self.ViewUI, UE4.UFXPriorityManager)
-  if FXMgr then
-    FXMgr.SetFXTickEvenPaused(self.ViewUI, self.UIName, false)
+  if IsValid(self.ViewUI) then
+    UE4.UEMNiagaraFunctionLibrary.SetFXTickEvenPaused(self.ViewUI, self.UIName, false)
   end
 end
 
@@ -1134,7 +1133,7 @@ function M:UpdateAudioListener()
   if self.bDestructed then
     return
   end
-  if self.ArmoryPlayer then
+  if self.ArmoryPlayer and IsValid(self.ArmoryPlayer.AudioListener) then
     self:SetAudioListener(self.ArmoryPlayer.AudioListener)
   else
     self:SetAudioListener(self.ArmoryHelper.Camera)

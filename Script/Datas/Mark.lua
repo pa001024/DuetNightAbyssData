@@ -13,6 +13,14 @@ return ReadOnly("Mark", {
     MarkId = 150499,
     VisualEffects = {150434}
   },
+  [410301] = {
+    MarkId = 410301,
+    VisualEffects = {410341}
+  },
+  [410302] = {
+    MarkId = 410302,
+    VisualEffects = {410342}
+  },
   [2060301] = {
     MarkId = 2060301,
     VisualEffects = {2060301}

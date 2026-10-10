@@ -7,8 +7,8 @@ function NpcHeadUISubsystem:OnInitialize()
   if ChatController then
     ChatController:RegisterEvent(self, function(self, EventId, ...)
       if EventId == ChatCommon.EventID.RecvStickerInPubChannels then
-        local Uid, EmojiPath = ...
-        self:OnShowPlayerEmoji(Uid, EmojiPath)
+        local Uid, EmojiData = ...
+        self:OnShowPlayerEmoji(Uid, EmojiData)
       end
     end)
   end
@@ -23,7 +23,7 @@ function NpcHeadUISubsystem:OnDeinitialize()
   end
 end
 
-function NpcHeadUISubsystem:OnShowPlayerEmoji(Uid, EmojiPath)
+function NpcHeadUISubsystem:OnShowPlayerEmoji(Uid, EmojiData)
   local EMGameState = UE4.UGameplayStatics.GetGameState(self)
   local IsInDungeon = EMGameState and EMGameState:IsInDungeon()
   local Avatar = GWorld:GetAvatar()
@@ -51,8 +51,13 @@ function NpcHeadUISubsystem:OnShowPlayerEmoji(Uid, EmojiPath)
   if Timer then
     self:RemoveTimer(Timer)
   end
+  self.EmojiTimer[Eid] = nil
   Player:StopEmoji()
-  Player:PlayEmoji(EmojiPath)
+  local IconPath = type(EmojiData) == "table" and EmojiData.Icon or EmojiData
+  if not IconPath or "" == IconPath then
+    return
+  end
+  Player:PlayEmoji(IconPath)
   Timer = self:AddTimer(self.EmojiDuration, function()
     self.EmojiTimer[Eid] = nil
     Player:StopEmoji()

@@ -6,7 +6,7 @@ local M = Class({
 
 function M:InitUI()
   local ActivityConfigData = self:GetPageConfigData()
-  local RewardId = ActivityConfigData.EventReward
+  local RewardId = self.RewardId
   local RewardData = DataMgr.Reward[RewardId]
   local ItemId = RewardData.Id[1]
   local Count = RewardUtils:GetCount(RewardData.Count[1])
@@ -51,7 +51,7 @@ function M:InitUI()
     self.Btn_Reward:ForbidBtn(true)
     self.Btn_Reward:SetText(GText("UI_GameEvent_ToBeFinished"))
   end
-  if self.IsComplete or self.IsGetReward then
+  if self.IsGetReward then
     self.Ws_Btn:SetActiveWidgetIndex(1)
     self.Text_Got:SetText(GText("UI_GameEvent_HasClaimed"))
   end
@@ -130,10 +130,13 @@ function M:Handle_KeyDownOnGamePad(InKeyName)
       ActivityMain:UpdateActivityKeyTips("SelectView", self.Com_Item)
     end
     self.IsSelectItem = true
-  elseif "Gamepad_FaceButton_Left" == InKeyName then
+    IsEventHandled = true
+  elseif InKeyName == UIConst.GamePadKey.FaceButtonLeft then
     self:OnBtnClick()
-  elseif "Gamepad_Special_Left" == InKeyName then
+    IsEventHandled = true
+  elseif InKeyName == UIConst.GamePadKey.SpecialLeft then
     self:ViewWeaponDetailFunction()
+    IsEventHandled = true
   end
   return IsEventHandled
 end

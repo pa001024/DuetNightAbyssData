@@ -41,7 +41,6 @@ function M:RemoveOtherOptions()
     ULTweenBPLibrary.KillIfIsTweening(self, self.ShowListHandle)
     self.ShowListHandle = nil
   end
-  self.List_1:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.CloseListHandle = ULTweenBPLibrary.FloatTo(self, {
     self,
     function(_, Value)

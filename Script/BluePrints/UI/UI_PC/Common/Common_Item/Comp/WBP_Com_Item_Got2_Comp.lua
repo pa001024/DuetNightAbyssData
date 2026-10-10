@@ -6,7 +6,8 @@ function Component:SetIsGot2(IsGot)
       return
     end
     self.IsGot2UI = UE.FWeakObjectPtr(IsGot2UI)
-    self:AddWidgetToNode(nil, self.IsGot2UI)
+    local Config = UIConst.ComItemLayerManagement
+    self:AddWidgetToNode(nil, self.IsGot2UI, Config.Layer.State, Config.Order.IsGot2)
   end
   
   if IsGot then

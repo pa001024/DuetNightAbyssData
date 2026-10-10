@@ -43,6 +43,85 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("HyperWeaponCardLevel", {
+  [10199] = {
+    [1] = {
+      CollectRewardExp = 200,
+      ResourceId = {
+        [1] = 15005,
+        [2] = 202,
+        [3] = 15026,
+        [4] = 15030
+      },
+      ResourceNum = T.RT_1,
+      UnlockCondition = 443001,
+      UnlockConditionDes = "UI_HyperWeapon_ForgeLevel1",
+      WeaponCardLevel = 1,
+      WeaponId = 10199
+    },
+    [2] = {
+      CollectRewardExp = 200,
+      ResourceId = {
+        [1] = 15005,
+        [2] = 15034,
+        [3] = 20027,
+        [4] = 15026,
+        [5] = 15030
+      },
+      ResourceNum = T.RT_2,
+      UnlockCondition = 443002,
+      UnlockConditionDes = "UI_HyperWeapon_ForgeLevel2",
+      WeaponCardLevel = 2,
+      WeaponId = 10199
+    },
+    [3] = {
+      CollectRewardExp = 200,
+      ResourceId = {
+        [1] = 15005,
+        [2] = 15034,
+        [3] = 15037,
+        [4] = 202,
+        [5] = 15026,
+        [6] = 15030
+      },
+      ResourceNum = T.RT_3,
+      UnlockCondition = 443003,
+      UnlockConditionDes = "UI_HyperWeapon_ForgeLevel3",
+      WeaponCardLevel = 3,
+      WeaponId = 10199
+    },
+    [4] = {
+      CollectRewardExp = 200,
+      ResourceId = {
+        [1] = 15005,
+        [2] = 15034,
+        [3] = 15037,
+        [4] = 20027,
+        [5] = 15026,
+        [6] = 15030
+      },
+      ResourceNum = T.RT_4,
+      UnlockCondition = 443004,
+      UnlockConditionDes = "UI_HyperWeapon_ForgeLevel4",
+      WeaponCardLevel = 4,
+      WeaponId = 10199
+    },
+    [5] = {
+      CollectRewardExp = 200,
+      ResourceId = {
+        [1] = 15005,
+        [2] = 15034,
+        [3] = 15037,
+        [4] = 1006,
+        [5] = 15026,
+        [6] = 15030
+      },
+      ResourceNum = T.RT_5,
+      UnlockCondition = 443005,
+      UnlockConditionDes = "UI_HyperWeapon_ForgeLevel5",
+      WeaponCardLevel = 5,
+      WeaponId = 10199
+    }
+  },
   [10299] = {
     [1] = {
       CollectRewardExp = 200,

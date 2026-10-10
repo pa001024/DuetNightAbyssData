@@ -1,5 +1,9 @@
 local M = {}
-M.EntityType = {Char = "Char", Pet = "Pet"}
+M.EntityType = {
+  Char = "Char",
+  Pet = "Pet",
+  Item = "Item"
+}
 M.AnimMode = {
   Idle = "Idle",
   Pose = "Pose",

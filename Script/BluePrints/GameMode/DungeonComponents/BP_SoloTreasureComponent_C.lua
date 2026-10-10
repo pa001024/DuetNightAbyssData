@@ -265,13 +265,15 @@ function M:IsAllDefenceContainersDead()
 end
 
 function M:RegisterGuideOrder(StaticId)
+  local ContainerCount = 0
   for ContainerStaticId, value in pairs(self.DefenceContainerInfos) do
+    ContainerCount = ContainerCount + 1
     if StaticId == ContainerStaticId then
       return value.GuideOrderId
     end
   end
   DebugPrint("BP_SoloTreasureComponent_C: RegisterGuideOrder StaticId Failed, StaticId = ", StaticId)
-  return #self.DefenceContainerInfos
+  return ContainerCount
 end
 
 function M:DefenceGameEnd(IsWin)

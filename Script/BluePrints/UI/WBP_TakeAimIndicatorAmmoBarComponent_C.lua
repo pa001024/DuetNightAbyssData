@@ -27,6 +27,7 @@ end
 function Component:RefreshAmmoBar()
   if self.AmmoBarPanel and self.AmmoBarPanel.Refresh then
     self.AmmoBarPanel:Refresh()
+    self:UpdateAmmoBarProgress(false)
   end
 end
 

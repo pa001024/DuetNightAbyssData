@@ -118,6 +118,28 @@ function M:GetCustomEditCharacterItems()
   return ItemContents
 end
 
+function M:GetCustomEditPetItems()
+  local Avatar = self._Avatar or GWorld:GetAvatar()
+  local ItemContents = {}
+  local ItemContentsMap = {}
+  for UniqueId, Pet in pairs(Avatar.Pets or {}) do
+    local Content = ArmoryUtils:NewPetItemContent(Pet, true)
+    Content.IsNew = false
+    Content.EditChooseMode = "Pet"
+    ItemContents[#ItemContents + 1] = Content
+    ItemContentsMap[UniqueId] = Content
+  end
+  ArmoryUtils:SortItemContents(ItemContents, {
+    "Rarity",
+    "Level",
+    "SortPriority",
+    "UnitId"
+  }, CommonConst.DESC)
+  self.CustomEditPetItemContents = ItemContents
+  self.CustomEditPetItemContentsMap = ItemContentsMap
+  return ItemContents
+end
+
 function M:GetCustomEditWeaponItems(WeaponTag)
   local Avatar = self._Avatar or GWorld:GetAvatar()
   local ItemContents = {}
@@ -170,6 +192,48 @@ function M:GetCustomEditActionItems()
     return ARarity > BRarity
   end)
   self.CustomEditActionItemContents = ItemContents
+  return ItemContents
+end
+
+function M:GetCustomEditItemItems()
+  local Avatar = self._Avatar or GWorld:GetAvatar()
+  local ItemContents = {}
+  local ItemContentsMap = {}
+  local OwnedItemIdSet = {}
+  for _, ItemId in ipairs(Avatar and Avatar.PersonalInfoItemList or {}) do
+    local NumberItemId = tonumber(ItemId)
+    if NumberItemId then
+      OwnedItemIdSet[NumberItemId] = true
+    end
+  end
+  for ItemKey, ItemData in pairs(DataMgr.CustomItem or {}) do
+    if type(ItemData) == "table" then
+      local ItemId = tonumber(ItemData.ItemId) or tonumber(ItemKey)
+      if ItemId then
+        local Content = NewObject(UIUtils.GetCommonItemContentClass())
+        Content.ItemId = ItemId
+        Content.UnitId = Content.ItemId
+        Content.ItemData = ItemData
+        Content.EditChooseMode = "Item"
+        Content.UnitName = ItemData.Name and GText(ItemData.Name) or tostring(Content.ItemId)
+        Content.Description = ItemData.FunctionDes and GText(ItemData.FunctionDes) or ""
+        Content.Icon = ItemData.Icon or ItemData.IconPath or nil
+        Content.Rarity = tonumber(ItemData.Rarity) or 0
+        Content.IsOwned = true == OwnedItemIdSet[ItemId]
+        Content.CanInteract = true
+        ItemContents[#ItemContents + 1] = Content
+        ItemContentsMap[Content.ItemId] = Content
+      end
+    end
+  end
+  table.sort(ItemContents, function(A, B)
+    if (A.Rarity or 0) == (B.Rarity or 0) then
+      return (A.ItemId or 0) < (B.ItemId or 0)
+    end
+    return (A.Rarity or 0) > (B.Rarity or 0)
+  end)
+  self.CustomEditItemItemContents = ItemContents
+  self.CustomEditItemItemContentsMap = ItemContentsMap
   return ItemContents
 end
 

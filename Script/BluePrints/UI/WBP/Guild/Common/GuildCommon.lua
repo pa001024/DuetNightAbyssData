@@ -7,6 +7,7 @@ local GuildCommon = {
   GuildComfirmDialog = 100360,
   GuildRole = 100370,
   GuildJobLevelChange = 100371,
+  GuildEditSignDialog = 100439,
   GuildGetListCDInterval = 0.1,
   GuildInviteTotalTime = 10,
   GuildIdListRefreshSec = 20,
@@ -42,6 +43,7 @@ GuildCommon.EventID = {
   OnGuildEditName = "OnGuildEditName",
   OnGuildEditDeclaration = "OnGuildEditDeclaration",
   OnGuildEditLogo = "OnGuildEditLogo",
+  OnGuildEditBadgeText = "OnGuildEditBadgeText",
   OnGuildJoinNotify = "OnGuildJoinNotify",
   OnNotifyInvitedJoinGuild = "OnNotifyInvitedJoinGuild",
   OnGuildKickNotify = "OnGuildKickNotify",
@@ -66,7 +68,37 @@ GuildCommon.EventID = {
   OnNotifyGuildRemoveJoinRequests = "OnNotifyGuildRemoveJoinRequests",
   OnGetOtherPlayerPersonalInfo = "OnGetOtherPlayerPersonalInfo",
   OnGuildMessageMarkDirty = "OnGuildMessageMarkDirty",
-  OnGuildHomeDataUpdate = "OnGuildHomeDataUpdate"
+  OnGuildHomeDataUpdate = "OnGuildHomeDataUpdate",
+  OnGuildRenameByCard = "OnGuildRenameByCard"
 }
+
+function GuildCommon.IsPureNumberOrSymbolName(Name)
+  local TrimName = string.gsub(Name or "", "^%s*(.-)%s*$", "%1")
+  if "" == TrimName then
+    return false
+  end
+  if string.find(TrimName, "%a") then
+    return false
+  end
+  for Index = 1, #TrimName do
+    local Byte = string.byte(TrimName, Index)
+    if Byte and Byte >= 128 then
+      return false
+    end
+  end
+  return true
+end
+
+function GuildCommon.NormalizeGuildBadgeText(Name, BadgeText)
+  if type(Name) == "string" and type(BadgeText) == "string" and 1 == utf8.len(BadgeText) and string.find(Name, BadgeText, 1, true) then
+    return BadgeText
+  end
+  if type(Name) ~= "string" or (utf8.len(Name) or 0) <= 0 then
+    return ""
+  end
+  local NextIndex = utf8.offset(Name, 2)
+  return NextIndex and string.sub(Name, 1, NextIndex - 1) or Name
+end
+
 _G.GuildCommon = GuildCommon
 return GuildCommon

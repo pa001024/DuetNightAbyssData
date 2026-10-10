@@ -9,8 +9,8 @@ T.RT_7 = {
   "LightHitRanged"
 }
 T.RT_8 = {"HitLight"}
-T.RT_9 = {"HeavyHit1", "HeavyHit2"}
-T.RT_10 = {"LightHit1"}
+T.RT_9 = {"LightHit1"}
+T.RT_10 = {"HeavyHit1", "HeavyHit2"}
 T.RT_11 = {KillSelf = 0}
 T.RT_12 = {"HeavyHit4"}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
@@ -208,6 +208,14 @@ return ReadOnly("HitMontageData", {
     HitMontageId = "BossXibiHard",
     LightHitMontage = T.RT_8
   },
+  BossYidai = {
+    DeadDissolveTime = 1,
+    DeadMontage = T.RT_2,
+    HitAddtiveDirection = 1,
+    HitAddtiveDuration = 0.3,
+    HitMontageId = "BossYidai",
+    LightHitMontage = T.RT_9
+  },
   GRPiaofu = {
     DeadDissolveTime = 2,
     DeadHitFlyMontage = T.RT_1,
@@ -222,6 +230,20 @@ return ReadOnly("HitMontageData", {
     LightHitRangedMontage = T.RT_7,
     RagdollHitFlyBeginTime = 0.25,
     RagdollHitFlyBoneName = "pelvis"
+  },
+  Mon1Hit = {
+    DeadDissolveTime = 1,
+    DeadHitFlyMontage = T.RT_1,
+    DeadMontage = T.RT_2,
+    DisarmHitMontage = T.RT_3,
+    EnableRagdollHitFly = true,
+    HitAddtiveDuration = 0.46,
+    HitFlyMontage = T.RT_5,
+    HitMontageId = "Mon1Hit",
+    LightHitMontage = T.RT_9,
+    RagdollHitFlyBeginTime = 0.25,
+    RagdollHitFlyBoneName = "pelvis",
+    RagdollHitFlyGetUpTime = 0.5
   },
   MonDefault = {
     DeadDissolveTime = 2,
@@ -262,9 +284,9 @@ return ReadOnly("HitMontageData", {
     DeadHitFlyMontage = T.RT_1,
     DeadMontage = T.RT_2,
     DisarmHitMontage = T.RT_3,
-    HeavyHitMontage = T.RT_9,
+    HeavyHitMontage = T.RT_10,
     HitAddtiveDuration = 0.46,
-    HitFlyMontage = T.RT_9,
+    HitFlyMontage = T.RT_10,
     HitMontageId = "MonHongjiaolu",
     LightHitMontage = T.RT_6,
     LightHitRangedMontage = T.RT_7
@@ -274,7 +296,7 @@ return ReadOnly("HitMontageData", {
     DeadMontage = T.RT_2,
     HitAddtiveDuration = 0.46,
     HitMontageId = "MonJTBlastRobot",
-    LightHitMontage = T.RT_10,
+    LightHitMontage = T.RT_9,
     SPDeadDissolveTime = T.RT_11
   },
   MonJTHealRobot = {
@@ -366,7 +388,7 @@ return ReadOnly("HitMontageData", {
   NEWuyou = {
     HitAddtiveDuration = 0.3,
     HitMontageId = "NEWuyou",
-    LightHitMontage = T.RT_10
+    LightHitMontage = T.RT_9
   },
   NoHitOrDie = {HitMontageId = "NoHitOrDie", NoHit = true},
   OnlyDieNoDissolve = {
@@ -390,7 +412,7 @@ return ReadOnly("HitMontageData", {
     EnableRagdollHitFly = true,
     HitFlyMontage = T.RT_5,
     HitMontageId = "TestSimpleMon",
-    LightHitMontage = T.RT_10,
+    LightHitMontage = T.RT_9,
     RagdollHitFlyBeginTime = 0.25,
     RagdollHitFlyBoneName = "pelvis",
     RagdollHitFlyGetUpTime = 0.5

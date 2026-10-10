@@ -33,6 +33,7 @@ return ReadOnly("AppearanceCollectReward", {
     EventId = 103024,
     HighlightReward = T.RT_1,
     ListBP = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/SkinCollect/PopupItem/WBP_Activity_SkinCollect_Task_PopupItemList.WBP_Activity_SkinCollect_Task_PopupItemList'",
+    MaxRewardPoint = 4000,
     PointsReward = {
       [1] = 360001,
       [2] = 360002,
@@ -55,6 +56,7 @@ return ReadOnly("AppearanceCollectReward", {
     EventId = 10302402,
     HighlightReward = T.RT_1,
     ListBP = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/SkinCollect/PopupItem/WBP_Activity_SkinCollect_Task_PopupItemList1_6.WBP_Activity_SkinCollect_Task_PopupItemList1_6'",
+    MaxRewardPoint = 4000,
     PointsReward = {
       [1] = 360010,
       [2] = 360002,
@@ -70,6 +72,43 @@ return ReadOnly("AppearanceCollectReward", {
     TitleBP = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/SkinCollect/PopupItem/WBP_Activity_SkinCollect_Task_PopupTitle1_6.WBP_Activity_SkinCollect_Task_PopupTitle1_6'",
     TokenIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Coin_SkinCollect_1_6_01.T_Coin_SkinCollect_1_6_01'",
     UnlockItemCount = 900,
+    UnlockItemType = 100
+  },
+  [10302403] = {
+    BGPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/SkinCollect/BG/WBP_Activity_SkinCollect_PopBG1_6.WBP_Activity_SkinCollect_PopBG1_6'",
+    EventId = 10302403,
+    HighlightReward = {
+      [1] = false,
+      [2] = false,
+      [3] = false,
+      [4] = false,
+      [5] = true,
+      [6] = true,
+      [7] = true
+    },
+    ListBP = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/SkinCollect/PopupItem/WBP_Activity_SkinCollect_Task_PopupItemList1_6.WBP_Activity_SkinCollect_Task_PopupItemList1_6'",
+    MaxRewardPoint = 4000,
+    PointsReward = {
+      [1] = 360012,
+      [2] = 360002,
+      [3] = 360003,
+      [4] = 360011,
+      [5] = 360005,
+      [6] = 360013,
+      [7] = 360014
+    },
+    PointsTarget = {
+      [1] = 10,
+      [2] = 100,
+      [3] = 300,
+      [4] = 600,
+      [5] = 1000,
+      [6] = 1500,
+      [7] = 2200
+    },
+    TitleBP = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/SkinCollect/PopupItem/WBP_Activity_SkinCollect_Task_PopupTitle1_6.WBP_Activity_SkinCollect_Task_PopupTitle1_6'",
+    TokenIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Coin_SkinCollect_1_6_01.T_Coin_SkinCollect_1_6_01'",
+    UnlockItemCount = 600,
     UnlockItemType = 100
   }
 })

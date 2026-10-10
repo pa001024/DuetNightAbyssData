@@ -55,6 +55,7 @@ function WBP_Task_Main:OnLoaded(...)
   self:InitDetailInfo()
   self:InitTrackingButton()
   self:InitTabInfo()
+  self:InitQuestReviewEntrance()
   self:UpdateListViewScrollMultiplier(self.RootWidget.List_Task, 10)
   if 0 ~= self.RootWidget.List_Task.ListItems:Num() then
     self.RootWidget.List_Task:SetScrollbarVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
@@ -166,6 +167,18 @@ function WBP_Task_Main:InitTabInfo()
   end
   self:InitStringBoardEntrance()
   self:InitReasoningEntrance()
+end
+
+function WBP_Task_Main:InitQuestReviewEntrance()
+  if not (self.Entrance_QuestReview and self.Entrance_QuestReview.Btn_Click) or not self.Entrance_QuestReview.Text_Name then
+    return
+  end
+  self.Entrance_QuestReview.Text_Name:SetText(GText("UI_QuestReview_09"))
+  self.Entrance_QuestReview.Btn_Click.OnClicked:Add(self, self.OnClickQuestReviewEntrance)
+end
+
+function WBP_Task_Main:OnClickQuestReviewEntrance()
+  UIManager(self):LoadUINew("QuestReviewRoot")
 end
 
 function WBP_Task_Main:GetTabEntranceNode()
@@ -508,6 +521,9 @@ function WBP_Task_Main:InitDetailInfo()
 end
 
 function WBP_Task_Main:ShowQuestDetailInfo(QuestWidget)
+  if self.RootWidget.Group_Review then
+    self.RootWidget.Group_Review:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
   if not QuestWidget then
     return
   end
@@ -584,6 +600,10 @@ function WBP_Task_Main:ShowQuestDetailInfo(QuestWidget)
   end
   if not Info then
     return
+  end
+  if self.RootWidget.Group_Review then
+    local ReviewVisibility = Info.IsBacktrack and UE4.ESlateVisibility.SelfHitTestInvisible or UE4.ESlateVisibility.Collapsed
+    self.RootWidget.Group_Review:SetVisibility(ReviewVisibility)
   end
   if QuestWidget.State == QuestRealStateEnum.Lock and UnlockTitle and UnlockContent then
     self.RootWidget.Text_TaskTitle:SetText(GText(UnlockTitle))
@@ -1171,6 +1191,83 @@ function WBP_Task_Main:DoDeliverTo()
   end
 end
 
+function WBP_Task_Main:JumpToQuestBackUpPanel(InQuestChainId, InQuestId)
+end
+
+function WBP_Task_Main:ShowBackupPopupUI(InQuestChainId, InQuestId)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local UIManager = GWorld.GameInstance:GetGameUIManager()
+  if not DataMgr.QuestChain[InQuestChainId] then
+    return
+  end
+  local TaskName = DataMgr.QuestChain[InQuestChainId].QuestChainName
+  local Params = {
+    ShortText = string.format("", GText(TaskName)),
+    LeftCallbackObj = self,
+    LeftCallbackFunction = self.CanceBackupPopupTo,
+    RightCallbackObj = self,
+    RightCallbackFunction = self.DoGiveUpQuestBacktrack,
+    CloseBtnCallbackObj = self,
+    CloseBtnCallbackFunction = self.CanceBackupPopupTo
+  }
+  UIManager:ShowCommonPopupUI(100160, Params)
+end
+
+function WBP_Task_Main:DoGiveUpQuestBacktrack()
+  local Avatar = GWorld:GetAvatar()
+  local QuestChainId = self.CurSelectQuest and self.CurSelectQuest.QuestChainId
+  if not (Avatar and QuestChainId) or QuestChainId <= 0 then
+    return
+  end
+  Avatar:GiveUpQuestBacktrack(QuestChainId)
+end
+
+function WBP_Task_Main:ShowFakeEndRedoPopupUI(InQuestChainId, InQuestId)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local UIManager = GWorld.GameInstance:GetGameUIManager()
+  if not DataMgr.QuestChain[InQuestChainId] then
+    return
+  end
+  local TaskName = DataMgr.QuestChain[InQuestChainId].QuestChainName
+  local Params = {
+    ShortText = string.format("", GText(TaskName)),
+    LeftCallbackObj = self,
+    LeftCallbackFunction = self.CanceDoFakeEndRedo,
+    RightCallbackObj = self,
+    RightCallbackFunction = self.DoFakeEndRedo,
+    CloseBtnCallbackObj = self,
+    CloseBtnCallbackFunction = self.CanceDoFakeEndRedo
+  }
+  UIManager:ShowCommonPopupUI(100160, Params)
+end
+
+function WBP_Task_Main:DoFakeEndRedo()
+  local Avatar = GWorld:GetAvatar()
+  local QuestChainId = self.CurSelectQuest and self.CurSelectQuest.QuestChainId
+  if not (Avatar and QuestChainId) or QuestChainId <= 0 then
+    return
+  end
+  local QuestData = TaskUtils:GetQuestDetail(QuestChainId, self.CurSelectQuest.QuestID)
+  if not QuestData or not QuestData.EndingId then
+    return
+  end
+  local QuestEndData = DataMgr.QuestEnd[QuestData.EndingId]
+  local RedoQuestId = QuestEndData and QuestEndData.RedoQuestId
+  if not RedoQuestId or RedoQuestId <= 0 then
+    return
+  end
+  Avatar:RedoQuestBacktrack(RedoQuestId)
+end
+
+function WBP_Task_Main:CanceDoFakeEndRedo()
+end
+
 function WBP_Task_Main:CheckAvatarIsInQuestSubRegion()
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
@@ -1246,6 +1343,9 @@ end
 function WBP_Task_Main:ReSwitchTaskBarTrackingQuest(InNewTrackingQuestChainId)
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
+    return
+  end
+  if Avatar.InSpecialQuest then
     return
   end
   if Avatar.QuestChains[InNewTrackingQuestChainId] then

@@ -11,8 +11,8 @@ function M:Execute(bSkip)
   if bSkip then
     return
   end
-  if self.OnDialogueEnd then
-    self.OnDialogueEnd()
+  if self.OnFlowComplete then
+    self.OnFlowComplete()
   end
 end
 

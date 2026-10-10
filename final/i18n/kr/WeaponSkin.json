@@ -82,7 +82,7 @@
   {
     "id": 3010111,
     "name": "기나긴 밤의 종막·대검",
-    "desc": "UI_WeaponSkin_Des_3010111",
+    "desc": "고요한 흰 눈만이 기억하리라, 재로 스러져 버린 그 기나긴 밤을.",
     "icon": "T_Head_Claymore_Yejin",
     "rarity": 5,
     "unlock": "상점을 통해 획득"
@@ -157,6 +157,14 @@
     "desc": "꾸아악——————!",
     "icon": "T_Head_Sword_Nahan",
     "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010210,
+    "name": "온 세상의 부름·한손검",
+    "desc": "별들로부터 전해져 오는 태고의 부름에 귀를 기울여라.",
+    "icon": "T_Head_Sword_Huanyu",
+    "rarity": 5,
     "unlock": "상점을 통해 획득"
   },
   {
@@ -552,6 +560,14 @@
     "unlock": "상점을 통해 획득"
   },
   {
+    "id": 3010905,
+    "name": "마른 뼈에 피어난 꽃",
+    "desc": "죽음을 머금은 마른 뼈에서도 강인한 생명이 피어난다.",
+    "icon": "T_Head_Cannon_Kugu",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
     "id": 3011001,
     "name": "일렉 치즈 No.2",
     "desc": "냐오옹♪ 냐오오옹♪ 냐오옹♪♪",
@@ -586,8 +602,8 @@
   {
     "id": 3011005,
     "name": "UI_WeaponSkin_Name_3011005",
-    "desc": "UI_WeaponSkin_Des_3010111",
-    "icon": "",
+    "desc": "고요한 흰 눈만이 기억하리라, 재로 스러져 버린 그 기나긴 밤을.",
+    "icon": "T_Head_Shotgun_Nahan",
     "rarity": 5,
     "unlock": "상점을 통해 획득"
   },

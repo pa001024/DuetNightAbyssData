@@ -14,7 +14,7 @@ local function GetObjectNameSafe(Object)
 end
 
 local function AppendUniqueComponent(Result, AddedMap, Component)
-  if not Component then
+  if not IsValid(Component) then
     return
   end
   local Key = tostring(Component)
@@ -105,7 +105,7 @@ function M:_SetEntityHighlighted(EntityId, bHighlighted)
 end
 
 function M:_SetActorHighlighted(Actor, bHighlighted)
-  if not Actor then
+  if not IsValid(Actor) then
     return
   end
   local MeshComponents = self:_CollectActorMeshComponents(Actor)

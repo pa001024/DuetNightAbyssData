@@ -2,6 +2,7 @@ require("UnLua")
 local TimeUtils = require("Utils.TimeUtils")
 local UpgradeUtils = require("Utils.UpgradeUtils")
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
+local UpdateRecordListViewTimerKey = "UpdateRecordListView"
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
@@ -37,32 +38,22 @@ function M:Init(Params)
   self:UpdateTargetInfo(self.Target)
   self:UpdateRecordListView(self.Target)
   self:UpdateDispatchList(self.Target)
+  self.Btn_ShowPic:SetVisibility(UIConst.VisibilityOp.Collapsed)
   if self.IsPreviewMode then
-    local bOwnedChar = false
-    local Avatar = GWorld:GetAvatar()
-    for _, Char in pairs(Avatar.Chars) do
-      if Char.CharId == self.Target.CharId then
-        bOwnedChar = true
-        break
-      end
-    end
+    local bOwnedChar = not Params.IsTargetUnowned
     if bOwnedChar then
       self.WidgetSwitcher_State:SetActiveWidgetIndex(0)
       if Params.bNeedStandBtn then
         self.Btn_ShowPic:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-      else
-        self.Btn_ShowPic:SetVisibility(UIConst.VisibilityOp.Collapsed)
       end
     else
       self.WidgetSwitcher_State:SetActiveWidgetIndex(1)
       self.Hint.WidgetSwitcher_State:SetActiveWidgetIndex(2)
       self.Hint.Text_Hint_Locked:SetText(GText("UI_Char_Locked"))
-      self.Btn_ShowPic:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end
   else
     self:UpdataReddotInfo(self.Target.CharId)
     self.WidgetSwitcher_State:SetActiveWidgetIndex(0)
-    self.Btn_ShowPic:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
   self:InitNavigationRules()
 end
@@ -82,12 +73,10 @@ function M:UpdataReddotInfo(CharId)
     ReddotManager.RemoveListener(self.ListenReddotName, self)
   end
   self.ListenReddotName = NodeName
-  if ReddotManager.GetTreeNode(NodeName) then
-    ReddotManager.AddListener(NodeName, self, Callback)
-  else
+  if not ReddotManager.GetTreeNode(NodeName) then
     ArmoryUtils:InitCharRecoedReddotNode(CharId)
-    ReddotManager.AddListener(NodeName, self, Callback)
   end
+  ReddotManager.AddListener(NodeName, self, Callback)
 end
 
 function M:UpdateTargetInfo(Target)
@@ -141,7 +130,7 @@ function M:UpdateRecordListView(Target)
   self:AddTimer(0.01, function()
     self.List_Record:RegenerateAllEntries()
     self:PlayAttrListFramingIn(self.List_Record)
-  end)
+  end, false, 0, UpdateRecordListViewTimerKey)
 end
 
 function M:UpdateDispatchList(Target)

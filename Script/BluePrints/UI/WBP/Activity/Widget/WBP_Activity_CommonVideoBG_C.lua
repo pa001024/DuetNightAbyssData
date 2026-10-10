@@ -60,6 +60,7 @@ function M:PauseBGVideo()
 end
 
 function M:Destruct()
+  self:RemoveTimer("ExchangeToLoopMode")
   if self.VideoPlayer and type(self.VideoPlayer.Stop) == "function" then
     self.VideoPlayer:Stop()
   end

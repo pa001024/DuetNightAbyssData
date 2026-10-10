@@ -3,7 +3,20 @@ local ChatMessage = require("BluePrints.UI.WBP.Chat.ChatMessage")
 local MessageList = ChatMessage.MessageList
 local TimeUtils = require("Utils.TimeUtils")
 local EMCache = require("EMCache.EMCache")
+local TaskbarChatChannels = {
+  [CommonConst.ChatChannel.InTeam] = true,
+  [CommonConst.ChatChannel.InGuild] = true,
+  [CommonConst.ChatChannel.Friend] = true
+}
 local M = Class("BluePrints.Common.MVC.Model")
+
+function M:SendTaskbarChatCount(InTeamUnread, InGuildUnread, FriendUnread)
+  local Library = UE4 and UE4.UEMTaskbarRewardLibrary
+  if not Library or not Library.SendTaskbarChatCount then
+    return
+  end
+  Library.SendTaskbarChatCount(InTeamUnread, InGuildUnread, FriendUnread)
+end
 
 function M:GetPrivateChatParentName(SubTabType)
   return ChatCommon.ReddotNamePre .. SubTabType .. ChatCommon.PrivateReddotPost
@@ -11,6 +24,7 @@ end
 
 function M:Init()
   M.Super.Init(self)
+  self.TaskbarChatCountSyncTimerKey = "TaskbarChatCountSync"
   self._CurrentChannel = ChatCommon.ChannelDef.Public
   self._CachedMainUISize = nil
   self._CachedMainUIPos = nil
@@ -28,6 +42,8 @@ function M:Init()
   self._CurrentChannelIndex = {}
   self._AllChannelList = nil
   self._HistoryChannelList = nil
+  self:InitTaskbarChannelUnreadCount()
+  self:InitTaskbarFriendUnreadCount()
   self:InitReddotCount()
   self.SimpleChatOutAnimCurve = LoadObject("CurveFloat'/Game/UI/WBP/Common/VX/UIVX/Curve/Curve_InteractiveItem_PC.Curve_InteractiveItem_PC'")
   AddToRoot(self.SimpleChatOutAnimCurve)
@@ -41,6 +57,12 @@ function M:IsChannelExclude(ChannelType)
 end
 
 function M:Destory()
+  local GameInstance = GWorld and GWorld.GameInstance
+  if IsValid(GameInstance) and GameInstance:IsExistTimer(self.TaskbarChatCountSyncTimerKey) then
+    GameInstance:RemoveTimer(self.TaskbarChatCountSyncTimerKey)
+  end
+  self.TaskbarChatCountSyncTimerKey = nil
+  self:SendTaskbarChatCount(0, 0, 0)
   for ChannelName, ChannelType in pairs(ChatCommon.ChannelDef) do
     self._MessageDict[ChannelType]:ClearMessage()
   end
@@ -48,6 +70,8 @@ function M:Destory()
   self._CurrentFriendUid = nil
   self._GuildUidOrder = {}
   self._GuildPrivateLocalSystemTips = {}
+  self._TaskbarChannelUnreadCount = nil
+  self._TaskbarFriendUnreadCount = nil
   self._CachedMainUISize = nil
   self._CachedMainUIPos = nil
   self._OriginMainUISize = nil
@@ -288,6 +312,134 @@ function M:HasMainUIChanged()
   return self._CachedMainUISize.X ~= self._OriginMainUISize.X or self._CachedMainUISize.Y ~= self._OriginMainUISize.Y or self._CachedMainUIPos.X ~= self._OriginMainUIPos.X or self._CachedMainUIPos.Y ~= self._OriginMainUIPos.Y
 end
 
+function M:InitTaskbarChannelUnreadCount()
+  self._TaskbarChannelUnreadCount = {
+    [CommonConst.ChatChannel.InTeam] = 0,
+    [CommonConst.ChatChannel.InGuild] = 0
+  }
+end
+
+function M:ResetTaskbarFriendUnreadCount()
+  self._TaskbarFriendUnreadCount = {
+    [ChatCommon.SubTabType.Friend] = {},
+    [ChatCommon.SubTabType.Guild] = {}
+  }
+end
+
+function M:InitTaskbarFriendUnreadCount()
+  self:ResetTaskbarFriendUnreadCount()
+  if self:IsTaskbarChatChannelMuted(CommonConst.ChatChannel.Friend) then
+    return
+  end
+  
+  local function InitUnreadCount(ChatDatas, SubTabType)
+    local UnreadCountMap = self._TaskbarFriendUnreadCount[SubTabType]
+    for Uid, Chat in pairs(ChatDatas or {}) do
+      local UnreadCount = Chat and Chat.GetUnreadCount and Chat:GetUnreadCount() or 0
+      if UnreadCount > 0 then
+        UnreadCountMap[tonumber(Uid) or Uid] = math.min(UnreadCount, ChatCommon.ReddotMaxCount)
+      end
+    end
+  end
+  
+  InitUnreadCount(self:GetFriendChatDatas(), ChatCommon.SubTabType.Friend)
+  InitUnreadCount(self:GetGuildChatDatas(), ChatCommon.SubTabType.Guild)
+end
+
+function M:IsTaskbarChatChannelMuted(ChannelType)
+  local Avatar = self:GetAvatar()
+  return Avatar and Avatar.ChatChannelMute and 1 == Avatar.ChatChannelMute[ChannelType]
+end
+
+function M:ShouldAddTaskbarChatUnread(Message, bCalcUnread)
+  local ChannelType = Message and Message.ChannelType
+  return bCalcUnread and true == TaskbarChatChannels[ChannelType] and Message.Type ~= CommonConst.MESSAGE_TYPE_SELF and not self:IsTaskbarChatChannelMuted(ChannelType)
+end
+
+function M:AddTaskbarChannelUnreadCount(ChannelType)
+  self._TaskbarChannelUnreadCount = self._TaskbarChannelUnreadCount or {}
+  local UnreadCount = self._TaskbarChannelUnreadCount[ChannelType] or 0
+  self._TaskbarChannelUnreadCount[ChannelType] = math.min(UnreadCount + 1, ChatCommon.ReddotMaxCount)
+end
+
+function M:GetTaskbarChannelUnreadCount(ChannelType)
+  return self._TaskbarChannelUnreadCount and self._TaskbarChannelUnreadCount[ChannelType] or 0
+end
+
+function M:GetTaskbarFriendUnreadCountMap(SubTabType)
+  self._TaskbarFriendUnreadCount = self._TaskbarFriendUnreadCount or {}
+  SubTabType = SubTabType or ChatCommon.SubTabType.Friend
+  self._TaskbarFriendUnreadCount[SubTabType] = self._TaskbarFriendUnreadCount[SubTabType] or {}
+  return self._TaskbarFriendUnreadCount[SubTabType]
+end
+
+function M:AddTaskbarFriendUnreadCount(Uid, SubTabType)
+  if not Uid then
+    return
+  end
+  Uid = tonumber(Uid) or Uid
+  local UnreadCountMap = self:GetTaskbarFriendUnreadCountMap(SubTabType)
+  local UnreadCount = UnreadCountMap[Uid] or 0
+  UnreadCountMap[Uid] = math.min(UnreadCount + 1, ChatCommon.ReddotMaxCount)
+end
+
+function M:ClearTaskbarFriendUnreadCount(Uid, SubTabType)
+  if not Uid or not self._TaskbarFriendUnreadCount then
+    return
+  end
+  local UnreadCountMap = self:GetTaskbarFriendUnreadCountMap(SubTabType)
+  UnreadCountMap[tonumber(Uid) or Uid] = nil
+end
+
+function M:GetTaskbarFriendUnreadCount()
+  local TotalUnreadCount = 0
+  for _, UnreadCountMap in pairs(self._TaskbarFriendUnreadCount or {}) do
+    for _, UnreadCount in pairs(UnreadCountMap) do
+      TotalUnreadCount = TotalUnreadCount + UnreadCount
+    end
+  end
+  return TotalUnreadCount
+end
+
+function M:ClearTaskbarChatUnreadCount(ChannelType, Uid, SubTabType)
+  if not TaskbarChatChannels[ChannelType] then
+    return
+  end
+  if ChannelType == CommonConst.ChatChannel.Friend then
+    if Uid then
+      self:ClearTaskbarFriendUnreadCount(Uid, SubTabType)
+    else
+      self:ResetTaskbarFriendUnreadCount()
+    end
+  else
+    self._TaskbarChannelUnreadCount = self._TaskbarChannelUnreadCount or {}
+    self._TaskbarChannelUnreadCount[ChannelType] = 0
+  end
+  self:SyncTaskbarChatCount()
+end
+
+function M:SendCurrentTaskbarChatCount()
+  local MaxCount = ChatCommon.ReddotMaxCount
+  local InTeamUnread = self:IsTaskbarChatChannelMuted(CommonConst.ChatChannel.InTeam) and 0 or math.max(0, math.min(self:GetTaskbarChannelUnreadCount(CommonConst.ChatChannel.InTeam), MaxCount))
+  local InGuildUnread = self:IsTaskbarChatChannelMuted(CommonConst.ChatChannel.InGuild) and 0 or math.max(0, math.min(self:GetTaskbarChannelUnreadCount(CommonConst.ChatChannel.InGuild), MaxCount))
+  local FriendUnread = self:IsTaskbarChatChannelMuted(CommonConst.ChatChannel.Friend) and 0 or math.max(0, math.min(self:GetTaskbarFriendUnreadCount(), MaxCount))
+  self:SendTaskbarChatCount(InTeamUnread, InGuildUnread, FriendUnread)
+end
+
+function M:SyncTaskbarChatCount()
+  local GameInstance = GWorld and GWorld.GameInstance
+  if not IsValid(GameInstance) then
+    return
+  end
+  if GameInstance:IsExistTimer(self.TaskbarChatCountSyncTimerKey) then
+    return
+  end
+  local Model = self
+  GameInstance:AddTimer(ChatCommon.TaskbarChatCountSyncInterval, function()
+    Model:SendCurrentTaskbarChatCount()
+  end, false, 0, self.TaskbarChatCountSyncTimerKey, true)
+end
+
 function M:AddReddotCount(ChannelType, FriendUid, Message)
   if 1 == self:GetAvatar().ChatChannelMute[ChannelType] then
     return
@@ -434,6 +586,7 @@ function M:InitReddotCount()
   if next(ChildNodes) ~= nil then
     ReddotManager.AddNodeEx(ChatCommon.ReddotName, ChildNodes)
   end
+  self:SyncTaskbarChatCount()
 end
 
 function M:RegisterGuildUid(Uid, AvatarInfo, bSkipCurrentUnread)
@@ -592,9 +745,15 @@ end
 function M:AddMessage(Message, bCalcUnread)
   DebugPrint("ChatModel::AddMessage", self._CurrentChannel, self._CurrentFriendUid)
   local ChannelType = Message.ChannelType
+  local bAddTaskbarUnread = self:ShouldAddTaskbarChatUnread(Message, bCalcUnread)
   DebugPrint("ChatModel::AddMessage", bCalcUnread)
   if bCalcUnread then
     self:AddReddotCount(ChannelType, Message.Sender.Uid, Message)
+  end
+  if bAddTaskbarUnread and ChannelType == CommonConst.ChatChannel.Friend then
+    local SubTabType = self:IsMessageGuildPrivate(Message) and ChatCommon.SubTabType.Guild or ChatCommon.SubTabType.Friend
+    self:AddTaskbarFriendUnreadCount(Message.Sender.Uid, SubTabType)
+    self:SyncTaskbarChatCount()
   end
   if self._CurrentFriendUid and ChannelType == ChatCommon.ChannelDef.Friend and (Message.Type == CommonConst.MESSAGE_TYPE_PRIVATE or Message.Type == CommonConst.MESSAGE_TYPE_SELF) then
     local bSelf = Message.Sender and Message.Sender.Uid == GWorld:GetAvatar().Uid
@@ -615,7 +774,12 @@ function M:AddMessage(Message, bCalcUnread)
     end
   end
   DebugPrint("ChatMessage::AddMessage bUnread, " .. tostring(bCalcUnread))
-  return self._MessageDict[ChannelType]:AddMessage(Message, bCalcUnread)
+  local TimeWrap, MsgWrap, EvictedWraps = self._MessageDict[ChannelType]:AddMessage(Message, bCalcUnread)
+  if MsgWrap and bAddTaskbarUnread and ChannelType ~= CommonConst.ChatChannel.Friend then
+    self:AddTaskbarChannelUnreadCount(ChannelType)
+    self:SyncTaskbarChatCount()
+  end
+  return TimeWrap, MsgWrap, EvictedWraps
 end
 
 function M:LoadHistoryMessages(ChannelType, Messages)
@@ -705,13 +869,6 @@ function M:GetChannelCDReaminTime(ChannelType)
   return self._MessageDict[ChannelType].CDRemainTime
 end
 
-function M:GetChannelRemovedMsgs(ChannelType)
-  if nil == ChannelType then
-    ChannelType = self._CurrentChannel
-  end
-  return self._MessageDict[ChannelType]:GetOnceRemovedMsgs()
-end
-
 function M:SetChannelCDRemainTime(RemainTime, ChannelType)
   if nil == ChannelType then
     ChannelType = self._CurrentChannel
@@ -769,13 +926,22 @@ function M:ReadChannelMessage(ChannelType, Uid, SubTabType)
   end
   self._MessageDict[ChannelType]:ReadMessage()
   self:ClearReddotCount(ChannelType, Uid, SubTabType)
+  self:CheckAndClearTaskbarInfo(ChannelType, Uid, SubTabType)
 end
 
 function M:ClearMessage(ChannelType)
   if nil == ChannelType then
     ChannelType = self._CurrentChannel
   end
-  return self._MessageDict[ChannelType]:ClearMessage()
+  local Result = self._MessageDict[ChannelType]:ClearMessage()
+  self:CheckAndClearTaskbarInfo(ChannelType)
+  return Result
+end
+
+function M:CheckAndClearTaskbarInfo(ChannelType, Uid, SubTabType)
+  if TaskbarChatChannels[ChannelType] then
+    self:ClearTaskbarChatUnreadCount(ChannelType, Uid, SubTabType)
+  end
 end
 
 function M:GetTeamForChat()

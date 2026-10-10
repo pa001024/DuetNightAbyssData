@@ -6,7 +6,7 @@
     "icon": "Mounts_0002",
     "resourceIcon": "Icon_Mounts_0002",
     "rarity": 4,
-    "sort": 97,
+    "sort": 96,
     "resourceId": 49999,
     "fly": 1,
     "access": [
@@ -47,7 +47,7 @@
     "icon": "Mounts_0004",
     "resourceIcon": "Icon_Mounts_0004",
     "rarity": 4,
-    "sort": 98,
+    "sort": 97,
     "resourceId": 49996,
     "fly": 1,
     "access": [
@@ -157,7 +157,7 @@
     "icon": "Mounts_0012",
     "resourceIcon": "Icon_Mounts_0012",
     "rarity": 4,
-    "sort": 97,
+    "sort": 96,
     "resourceId": 49988,
     "fly": 1,
     "access": [
@@ -185,7 +185,7 @@
     "icon": "Mounts_0017",
     "resourceIcon": "Icon_Mounts_0017",
     "rarity": 4,
-    "sort": 98,
+    "sort": 97,
     "resourceId": 49986,
     "fly": 1,
     "access": [
@@ -201,6 +201,34 @@
     "rarity": 6,
     "sort": 104,
     "resourceId": 49985,
+    "access": [
+      "商店"
+    ]
+  },
+  {
+    "id": 1015,
+    "name": "沉思王座·涅白",
+    "des": "我聽到了忠誠的呼喊，看到了群星的燃燒。",
+    "icon": "Mounts_0015",
+    "resourceIcon": "Icon_Mounts_0015",
+    "rarity": 4,
+    "sort": 98,
+    "resourceId": 49984,
+    "fly": 1,
+    "access": [
+      "商店"
+    ]
+  },
+  {
+    "id": 1016,
+    "name": "沉思王座·鉛灰",
+    "des": "我聽到了忠誠的呼喊，看到了群星的燃燒。",
+    "icon": "Mounts_0016",
+    "resourceIcon": "Icon_Mounts_0016",
+    "rarity": 4,
+    "sort": 98,
+    "resourceId": 49983,
+    "fly": 1,
     "access": [
       "商店"
     ]

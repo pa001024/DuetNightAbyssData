@@ -152,4 +152,51 @@ function ShopItemDict:GetShopItem(ItemId)
   return self[ItemId]
 end
 
-return {ShopItem = ShopItem, ShopItemDict = ShopItemDict}
+local ShoppingCartItem = Class("ShoppingCartItem", CustomTypes.CustomAttr)
+ShoppingCartItem.__Props__ = {
+  ShopItemId = prop.prop("Int", "client save"),
+  Count = prop.prop("Int", "client save", 0),
+  Selected = prop.prop("Bool", "client save", false),
+  AddSequence = prop.prop("Int", "client save", 0)
+}
+
+function ShoppingCartItem:Init(ShopItemId, Count, AddSequence)
+  self.ShopItemId = ShopItemId
+  self.Count = Count
+  self.Selected = true
+  self.AddSequence = AddSequence
+end
+
+FormatProperties(ShoppingCartItem)
+local ShoppingCartItemDict = Class("ShoppingCartItemDict", CustomTypes.CustomDict)
+ShoppingCartItemDict.KeyType = BaseTypes.Int
+ShoppingCartItemDict.ValueType = ShoppingCartItem
+
+function ShoppingCartItemDict:NewShoppingCartItem(ShopItemId, Count, AddSequence)
+  return ShoppingCartItem(ShopItemId, Count, AddSequence)
+end
+
+local ShoppingCart = Class("ShoppingCart", CustomTypes.CustomAttr)
+ShoppingCart.__Props__ = {
+  Items = prop.prop("ShoppingCartItemDict", "client save"),
+  Revision = prop.prop("Int", "client save", 0),
+  NextAddSequence = prop.prop("Int", "client save", 0),
+  CreatingRequestTokens = prop.prop("StrList", "save"),
+  OrderCreating = prop.prop("Bool", "save", false),
+  PendingRequestToken = prop.prop("Str", "save", ""),
+  PendingOrderId = prop.prop("Str", "save", ""),
+  PendingItemCounts = prop.prop("Int2IntDict", "save"),
+  PendingDeliveredItemCounts = prop.prop("Int2IntDict", "save"),
+  PendingPaymentRecorded = prop.prop("Bool", "save", false),
+  PendingOrderDelivered = prop.prop("Bool", "save", false),
+  PendingOrderDetached = prop.prop("Bool", "save", false),
+  DeferredPaidOrderIds = prop.prop("StrList", "save")
+}
+FormatProperties(ShoppingCart)
+return {
+  ShopItem = ShopItem,
+  ShopItemDict = ShopItemDict,
+  ShoppingCartItem = ShoppingCartItem,
+  ShoppingCartItemDict = ShoppingCartItemDict,
+  ShoppingCart = ShoppingCart
+}

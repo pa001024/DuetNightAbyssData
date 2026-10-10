@@ -38,5 +38,15 @@
     "type": "GACHA_SKIN_TYPE_SPECIAL_7",
     "name": "이벤트 한정",
     "subTabId": 1401
+  },
+  {
+    "type": "GACHA_SKIN_TYPE_SPECIAL_8",
+    "name": "이벤트 한정",
+    "subTabId": 1401
+  },
+  {
+    "type": "GACHA_SKIN_TYPE_SPECIAL_9",
+    "name": "기간 한정 복각",
+    "subTabId": 1401
   }
 ]

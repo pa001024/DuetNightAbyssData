@@ -9,6 +9,31 @@ return {
       CreatorId = 2900003,
       UnitType = "Mechanism",
       UnitId = 190007
+    },
+    ["292900011"] = {
+      CreatorId = 292900011,
+      UnitType = "Mechanism",
+      UnitId = 90100
+    },
+    ["292900012"] = {
+      CreatorId = 292900012,
+      UnitType = "Mechanism",
+      UnitId = 90100
+    },
+    ["292900013"] = {
+      CreatorId = 292900013,
+      UnitType = "Mechanism",
+      UnitId = 90100
+    },
+    ["292900014"] = {
+      CreatorId = 292900014,
+      UnitType = "Mechanism",
+      UnitId = 90100
+    },
+    ["292900015"] = {
+      CreatorId = 292900015,
+      UnitType = "Mechanism",
+      UnitId = 90100
     }
   },
   ManualItem = {},
@@ -23,22 +48,6 @@ return {
     BP_MissionGroup_Jydx02_MirrorPuzzle2_2 = {
       QuestID = 0,
       StaticCreator = {},
-      ManualItem = {}
-    },
-    BP_MissionGroup_Jydx01_MirrorPuzzle_2 = {
-      QuestID = 13010111,
-      StaticCreator = {
-        ["2900010"] = {
-          CreatorId = 2900010,
-          UnitType = "Mechanism",
-          UnitId = 190043
-        },
-        ["2900008"] = {
-          CreatorId = 2900008,
-          UnitType = "Mechanism",
-          UnitId = 190040
-        }
-      },
       ManualItem = {}
     }
   }

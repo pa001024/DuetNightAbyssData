@@ -5,12 +5,12 @@ local InBattleWheelMenuModel = require("BluePrints.UI.WBP.Battle.Widget.Battle_M
 local Component = {}
 local WHEEL_STATE_SELECTING = 0
 local WHEEL_STATE_NO_SELECTING = 2
-local TOAST_DURATION = 3
 local MOBILE_RADIUS = 38
 local PC_RADIUS = 130
 local WHEEL_DISPLAY_COUNT = 3
 local WHEEL_BAG_CAPACITY = 8
 local SUM_BAG_CAPACITY = 24
+local BATTLE_WHEEL_SHORTCUT_ACTION_PREFIX = "UseBattleWheelSlot"
 local GAMEPAD_SELECT_ICON_PATH = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Key/XBOX/T_Key_R.T_Key_R'"
 local MOUSE_SELECT_ICON_PATH = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Key/PC/T_Key_Mouse.T_Key_Mouse'"
 local Prop_Icon_Path = "/Game/UI/WBP/Battle/Widget/Battle_Menu/WBP_BattleMenu_Prop.WBP_BattleMenu_Prop"
@@ -18,7 +18,7 @@ local Prop_Icon_Path = "/Game/UI/WBP/Battle/Widget/Battle_Menu/WBP_BattleMenu_Pr
 function Component:InitContent()
   self:ResetPanel()
   self:InitPanelInfo()
-  self:InitSlots()
+  self:RefreshAllBattleWheelSlots()
   self:SetEnterInputState()
   self:EnablePointerDetection(true)
   self.bPointerAllwaysEntered = true
@@ -46,7 +46,7 @@ function Component:OnLoaded()
     WHEEL_DISPLAY_COUNT = 3
   end
   self:InitContent()
-  self:AddDispatcher(EventID.OnResource, self, self.OnMatchStateChanged)
+  self:AddDispatcher(EventID.OnChangeKeyBoardSet, self, self.RefreshBattleWheelShortcutKeys)
 end
 
 function Component:InitPanelInfo()
@@ -69,7 +69,7 @@ function Component:InitPanelInfo()
   self.WS_Num:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
-function Component:InitSlots()
+function Component:RefreshAllBattleWheelSlots()
   local Avatar = GWorld:GetAvatar()
   if nil == Avatar then
     return
@@ -134,6 +134,39 @@ function Component:InitSlots()
       self:UpdateBattlePropSlotIcon(Index, InBattleWheelMenuModel.SlotState[Resource.ResourceId])
     end
   end
+  self:RefreshBattleWheelShortcutKeys()
+end
+
+function Component:InitSlots()
+  self:RefreshAllBattleWheelSlots()
+end
+
+function Component:RefreshBattleWheelShortcutKeys()
+  local CurInputType = self.GameInputModeSubsystem and self.GameInputModeSubsystem:GetCurrentInputType()
+  local bShouldShow = not self.bIsMobile and CurInputType == ECommonInputType.MouseAndKeyboard and 1 == self.DisplayIndex
+  local Avatar = GWorld:GetAvatar()
+  for ShortcutIndex = 1, WHEEL_BAG_CAPACITY do
+    local SlotIndex = Avatar and Avatar:GetBattleWheelShortcutSlotIndex(ShortcutIndex)
+    local KeyWidget = SlotIndex and self["Key_" .. SlotIndex]
+    if KeyWidget then
+      rawset(KeyWidget, "SkipRefreshInputType", true)
+      local KeyName = bShouldShow and CommonUtils:GetActionMappingKeyName(BATTLE_WHEEL_SHORTCUT_ACTION_PREFIX .. ShortcutIndex, false)
+      if KeyName and "" ~= KeyName then
+        local CurrentKeyInfo = KeyWidget.CreateInfo
+        local CurrentKey = CurrentKeyInfo and CurrentKeyInfo.KeyInfoList and CurrentKeyInfo.KeyInfoList[1]
+        if not CurrentKey or CurrentKey.Text ~= KeyName then
+          KeyWidget:CreateCommonKey({
+            KeyInfoList = {
+              {Type = "Text", Text = KeyName}
+            }
+          })
+        end
+        KeyWidget:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      else
+        KeyWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      end
+    end
+  end
 end
 
 function Component:SelectAndCloseMenu(ForceSelectSlot)
@@ -160,52 +193,19 @@ end
 
 function Component:TryUseSelectItem(ForceSelectSlot)
   DebugPrint("gmy@TryUseSelectItem", self.CurrentHoveredSlot, ForceSelectSlot)
-  local MyPlayerController = UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
-  if not MyPlayerController.bEnableBattleWheel then
+  local NowSelectingSlotIndex = ForceSelectSlot or self.CurrentHoveredSlot
+  if not NowSelectingSlotIndex then
     return
   end
-  local NowSelectingSlotIndex = self.CurrentHoveredSlot
-  if ForceSelectSlot then
-    NowSelectingSlotIndex = ForceSelectSlot
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
+  if not IsValid(Player) then
+    return
   end
-  if NowSelectingSlotIndex then
-    local Avatar = GWorld:GetAvatar()
-    if nil == Avatar then
-      return
-    end
-    local Slot = self:DisplaySlotIndex2WheelSlot(NowSelectingSlotIndex)
-    if Slot then
-      local ResourceId = Slot.ResourceId
-      if ResourceId then
-        local Resource = Avatar.Resources[ResourceId]
-        if Resource then
-          if Slot.ResourceCount > 0 or Resource:Data().Type == "InfiniteBattleItem" then
-            local ConditionRes, ToastTextId = self:CheckResourceCanUse(ResourceId)
-            if ConditionRes then
-              local function UseWheelItemInBattleCallBack(bUseSuccess)
-                if not bUseSuccess then
-                  return
-                end
-                if NowSelectingSlotIndex and InBattleWheelMenuModel.SlotState[Resource.ResourceId] then
-                  self:UpdateBattlePropSlotIcon(NowSelectingSlotIndex, InBattleWheelMenuModel.SlotState[Resource.ResourceId])
-                end
-              end
-              
-              Avatar:UseWheelItemInBattle(ResourceId, UseWheelItemInBattleCallBack)
-            elseif ToastTextId then
-              local ToastText = GText(ToastTextId)
-              UIManager(self):ShowUITip("CommonToastMain", ToastText)
-            else
-              DebugPrint("gmy@Component:TryUseSelectItem ResourceId, ToastTextId", ResourceId, ToastTextId)
-            end
-          else
-            local ToastText = string.format(GText("BATTLE_MENU_ITEM_LACK"), GText(Resource.ResourceName))
-            UIManager(self):ShowUITip("CommonToastMain", ToastText, TOAST_DURATION)
-          end
-        end
-      end
-    end
+  local Slot = self:DisplaySlotIndex2WheelSlot(NowSelectingSlotIndex)
+  if not (Slot and Slot.ResourceId) or 0 == Slot.ResourceId then
+    return
   end
+  Player:TryUseBattleWheelItem(Slot.ResourceId, Slot.ResourceCount)
 end
 
 function Component:UpdateBattlePropSlotIcon(NowSelectingSlotIndex, TargetState)
@@ -341,24 +341,7 @@ function Component:CheckResourceCanUse(ResourceId)
   if not IsValid(Player) then
     return false
   end
-  local Resolved = BattleUtils.ResolveCharacterAttributeSwitchPhantomData(DataMgr.Resource[ResourceId])
-  local CombatConditionIDs = Resolved.CombatConditionID or {}
-  local CombatConditionParams = Resolved.CombatConditionParams or {}
-  local ToastIds = Resolved.CombatConditionToast or {}
-  for Index, CombatConditionID in ipairs(CombatConditionIDs) do
-    DebugPrint("gmy@InBattleWheelMenuComponent Component:CheckResourceCanUse", CombatConditionID)
-    if CombatConditionID then
-      local ConditionConfig = DataMgr.CombatCondition[CombatConditionID]
-      if ConditionConfig then
-        local ExtraVars = CombatConditionParams and CombatConditionParams[Index]
-        local ConditionRes = Battle(self):CheckCondition_Lua(CombatConditionID, Player, nil, ExtraVars)
-        if not ConditionRes then
-          return false, ToastIds and ToastIds[Index]
-        end
-      end
-    end
-  end
-  return true
+  return Player:CheckBattleWheelResourceCanUse(ResourceId)
 end
 
 function Component:OnClose()
@@ -418,7 +401,7 @@ function Component:RealChangeDisplayWheel()
     self.RealChangeDisplayWheel
   })
   self:RefreshCenterTitle(self.CurrentHoveredSlot)
-  self:InitSlots()
+  self:RefreshAllBattleWheelSlots()
   self:RefreshPageTurner()
   self:AddTimer(0.01, function()
     self:PlayAnimation(self.Switch_In)
@@ -558,7 +541,7 @@ end
 function Component:InitQuestBattleWheel(QuestBattleWheelID)
   if self.QuestBattleWheelID ~= QuestBattleWheelID then
     self.QuestBattleWheelID = QuestBattleWheelID
-    self:InitSlots()
+    self:RefreshAllBattleWheelSlots()
   end
 end
 

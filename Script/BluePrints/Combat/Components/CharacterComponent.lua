@@ -1,4 +1,5 @@
 require("UnLua")
+local MonsterUtils = require("Utils.MonsterUtils")
 local Component = Class({
   "BluePrints.Combat.Components.CharacterInitLogic",
   "BluePrints.Combat.Components.EffectSourceInterface",
@@ -56,7 +57,7 @@ function Component:BuildInheritedWeaponInfo(Source, WeaponId)
 end
 
 function Component:CreateUnitServerSetRoleMod(RoleId, Source, OnlySummonInherit)
-  local MonsterData = DataMgr.Monster[self.UnitId]
+  local MonsterData = MonsterUtils.GetMonsterDataByOwner(self)
   if not OnlySummonInherit and MonsterData and MonsterData.InheritMod then
     self:ServerInheritModAttr(Source.InfoForInit and Source.InfoForInit.ModData or {})
     self:ServerSetRoleMod(RoleId, Source.ModPassives, false)

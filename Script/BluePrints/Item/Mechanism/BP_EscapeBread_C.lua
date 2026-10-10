@@ -24,17 +24,112 @@ function BP_EscapeBread_C:CommonInitInfo(Info)
   if P.PathLoopType then
     self.bLoopPath = P.PathLoopType == "Loop"
   end
+  self.StartNodeIndex = P.StartNodeIndex or 0
   self.ObstacleTag = P.ObstacleTag or "BreadObstacle"
   self.ObstacleTraceHeight = P.ObstacleTraceHeight or 50
   self.ObstacleProbeDist = P.ObstacleProbeDist or 120
   if IsValid(self.TrackMove) then
-    self.TrackMove.bClosedLoop = self.bLoopPath
     self.TrackMove.MoveSpeed = self.BreadMoveSpeed
-    self.TrackMove:ApplyPathTypeToSpline()
   end
   if IsValid(self.AlertSphere) then
     self.AlertSphere:SetSphereRadius(self.AlertRadius or 600)
   end
+  self:ApplyLoopToBoundSpline()
+  self:ApplyStartNodeToBoundSpline()
+end
+
+function BP_EscapeBread_C:PathLogTag(SplineComponent)
+  local groupName = "?"
+  if IsValid(SplineComponent) then
+    local Owner = SplineComponent:GetOwner()
+    if IsValid(Owner) then
+      groupName = Owner:GetName()
+    end
+  elseif IsValid(self.BoundSpline) then
+    local Owner = self.BoundSpline:GetOwner()
+    if IsValid(Owner) then
+      groupName = Owner:GetName()
+    end
+  end
+  return string.format("[EscapeBread] Group=%s CreatorId=%s UnitId=%s", groupName, tostring(self.CreatorId), tostring(self.UnitId))
+end
+
+function BP_EscapeBread_C:ApplyLoopToBoundSpline()
+  local TM = self.TrackMove
+  if not IsValid(TM) or not IsValid(TM.PathSpline) then
+    return
+  end
+  TM.bClosedLoop = self.bLoopPath == true
+  TM:ApplyPathTypeToSpline()
+  DebugPrint(self:PathLogTag(TM.PathSpline) .. string.format(" ApplyLoop bLoopPath=%s IsClosedLoop=%s", tostring(self.bLoopPath == true), tostring(TM.PathSpline:IsClosedLoop())))
+end
+
+function BP_EscapeBread_C:ApplyStartNodeToBoundSpline()
+  local TM = self.TrackMove
+  if not IsValid(TM) or not IsValid(TM.PathSpline) then
+    return
+  end
+  local num = TM:GetNodeCount()
+  if num <= 0 then
+    return
+  end
+  local startIdx = math.floor(tonumber(self.StartNodeIndex) or 0)
+  if startIdx < 0 or startIdx > num - 1 then
+    print(_G.LogTag, self:PathLogTag(TM.PathSpline) .. string.format(" StartNodeIndex=%d 越界(节点数%d)，已钳制", startIdx, num))
+    startIdx = math.clamp(startIdx, 0, num - 1)
+  end
+  TM:InitAtIndex(startIdx)
+  DebugPrint(self:PathLogTag(TM.PathSpline) .. string.format(" ApplyStartNode Index=%d Nodes=%d", startIdx, num))
+end
+
+function BP_EscapeBread_C:SetExploreSpline(SplineComponent)
+  local tag = self:PathLogTag(SplineComponent)
+  if not IsValid(SplineComponent) then
+    print(_G.LogTag, tag .. " 绑定失败：路径组件为空")
+    return
+  end
+  if SplineComponent:GetNumberOfSplinePoints() < 2 then
+    print(_G.LogTag, tag .. " 绑定失败：路径节点少于2个(" .. SplineComponent:GetNumberOfSplinePoints() .. ")")
+    return
+  end
+  if self.BoundSpline and IsValid(self.BoundSpline) and self.BoundSpline ~= SplineComponent then
+    print(_G.LogTag, tag .. " 绑定失败：本面包已绑定路径 " .. self.BoundSpline:GetName() .. "，重复匹配")
+    return
+  end
+  local bExploreSpline = UExploreSplineComponent and SplineComponent:IsA(UExploreSplineComponent)
+  if bExploreSpline then
+    local Occupant = SplineComponent.MoveActor
+    if IsValid(Occupant) and Occupant ~= self then
+      print(_G.LogTag, tag .. " 绑定失败：路径已被 " .. Occupant:GetName() .. " 占用，重复匹配")
+      return
+    end
+    SplineComponent.MoveActor = self
+  end
+  self.BoundSpline = SplineComponent
+  local TM = self.TrackMove
+  TM.PathSpline = SplineComponent
+  self:ApplyLoopToBoundSpline()
+  self:ApplyStartNodeToBoundSpline()
+  DebugPrint(tag .. string.format(" 绑定路径 %s 成功：节点数=%d", SplineComponent:GetName(), TM:GetNodeCount()))
+  self:RemoveTimer("BreadWaitPathCheck")
+  if self.StateId == BreadState.Idle then
+    self:SetAlertEnabled(true)
+    if (IsAuthority(self) or IsStandAlone(self)) and self:IsPlayerInAlertRange() then
+      self:ScheduleChangeState(BreadState.Escaping)
+    end
+  end
+end
+
+function BP_EscapeBread_C:HasValidPath()
+  return IsValid(self.BoundSpline) and self.BoundSpline:GetNumberOfSplinePoints() >= 2
+end
+
+function BP_EscapeBread_C:WarnNoPathOnce(Where)
+  if self.bWarnedNoPath then
+    return
+  end
+  self.bWarnedNoPath = true
+  print(_G.LogTag, self:PathLogTag(nil) .. " " .. Where .. "：未绑定有效路径，面包不会移动。请检查探索组/任务组是否调用 BindBreadSpline")
 end
 
 function BP_EscapeBread_C:OnActorReady(Info)
@@ -64,6 +159,7 @@ function BP_EscapeBread_C:OnLeaveState(NowStateId, NextStateId)
   self.Overridden.OnLeaveState(self, NowStateId, NextStateId)
   if NowStateId == BreadState.Escaping then
     self:RemoveTimer("BreadObstacleWatch")
+    self:RemoveTimer("BreadStepEscape")
   end
 end
 
@@ -73,6 +169,16 @@ function BP_EscapeBread_C:EnterInactive()
 end
 
 function BP_EscapeBread_C:EnterIdle()
+  if not self:HasValidPath() then
+    self:SetAlertEnabled(false)
+    self:PlayBreadAnim("Idle")
+    self:AddTimer(1.0, function()
+      if IsValid(self) and self.StateId == BreadState.Idle and not self:HasValidPath() then
+        self:WarnNoPathOnce("EnterIdle")
+      end
+    end, false, 0, "BreadWaitPathCheck")
+    return
+  end
   self:SetAlertEnabled(true)
   self:PlayBreadAnim("Idle")
   if (IsAuthority(self) or IsStandAlone(self)) and self:IsPlayerInAlertRange() then
@@ -84,7 +190,7 @@ function BP_EscapeBread_C:EnterEscaping()
   self:SetAlertEnabled(false)
   self:PlayBreadAnim("Move")
   if IsAuthority(self) or IsStandAlone(self) then
-    self:StepEscape()
+    self:ScheduleStepEscape()
   end
 end
 
@@ -102,9 +208,10 @@ function BP_EscapeBread_C:EnterClaimed()
 end
 
 function BP_EscapeBread_C:DecideEscape()
-  if not IsValid(self.TrackMove) or not IsValid(self.PathSpline) then
+  if not IsValid(self.TrackMove) or not self:HasValidPath() then
     return nil
   end
+  local Spline = self.BoundSpline
   local idx = self.TrackMove.CurrentIndex
   local num = self.TrackMove:GetNodeCount()
   local loop = self.TrackMove.bClosedLoop
@@ -115,13 +222,13 @@ function BP_EscapeBread_C:DecideEscape()
   if not IsValid(Player) then
     return nil
   end
-  local BreadLoc = self.PathSpline:GetLocationAtSplinePoint(idx, ESplineCoordinateSpace.World)
+  local BreadLoc = Spline:GetLocationAtSplinePoint(idx, ESplineCoordinateSpace.World)
   local PlayerLoc = Player:K2_GetActorLocation()
   local A0 = self:HorizontalDir(PlayerLoc - BreadLoc)
   if nil == A0 then
     return nil
   end
-  local Tangent = self:HorizontalDir(self.PathSpline:GetTangentAtSplinePoint(idx, ESplineCoordinateSpace.World))
+  local Tangent = self:HorizontalDir(Spline:GetTangentAtSplinePoint(idx, ESplineCoordinateSpace.World))
   if nil == Tangent then
     return nil
   end
@@ -149,11 +256,17 @@ function BP_EscapeBread_C:DecideEscape()
     return nil
   end
   self.CurMoveDirWorld = dir > 0 and Tangent or Tangent and Tangent * -1
+  DebugPrint("yly BP_EscapeBread_C: DecideEscape: dir: " .. dir)
   return dir
 end
 
 function BP_EscapeBread_C:StepEscape()
   if not IsAuthority(self) and not IsStandAlone(self) then
+    return
+  end
+  if not self:HasValidPath() then
+    self:WarnNoPathOnce("StepEscape")
+    self:ScheduleChangeState(BreadState.Idle)
     return
   end
   local dir = self:DecideEscape()
@@ -175,15 +288,16 @@ function BP_EscapeBread_C:OnMoveEnd(ArrivedIndex)
   end
   self:RemoveTimer("BreadObstacleWatch")
   self:OnReachWaypoint(ArrivedIndex)
-  if self.StateId ~= BreadState.Escaping then
-    return
-  end
   if not IsAuthority(self) and not IsStandAlone(self) then
     return
   end
+  if self.StateId == BreadState.CurledUp or self.StateId == BreadState.Claimed or self.StateId == BreadState.Inactive then
+    DebugPrint("yly BP_EscapeBread_C: OnMoveEnd: terminal state, skip continue")
+    return
+  end
   if self:IsPlayerInAlertRange() then
-    self:StepEscape()
-  else
+    self:ScheduleStepEscape()
+  elseif self.StateId == BreadState.Escaping then
     self:ScheduleChangeState(BreadState.Idle)
   end
 end
@@ -243,10 +357,23 @@ function BP_EscapeBread_C:OnAlertBeginOverlap(Component, OtherActor, OtherComp, 
   if self.StateId ~= BreadState.Idle then
     return
   end
+  if not self:HasValidPath() then
+    return
+  end
   if not self:IsTargetPlayer(OtherActor) then
     return
   end
   self:ChangeState("Manual", 0, BreadState.Escaping)
+end
+
+function BP_EscapeBread_C:ReceiveEndPlay(EndPlayReason)
+  if self.Overridden and self.Overridden.ReceiveEndPlay then
+    self.Overridden.ReceiveEndPlay(self, EndPlayReason)
+  end
+  if self.BoundSpline and IsValid(self.BoundSpline) and UExploreSplineComponent and self.BoundSpline:IsA(UExploreSplineComponent) and self.BoundSpline.MoveActor == self then
+    self.BoundSpline.MoveActor = nil
+  end
+  self.BoundSpline = nil
 end
 
 function BP_EscapeBread_C:GetCanOpen(PlayerEid)
@@ -332,6 +459,24 @@ function BP_EscapeBread_C:ScheduleChangeState(TargetState)
       self:ChangeState("Manual", 0, TargetState)
     end
   end, false, 0, "BreadChangeState")
+end
+
+function BP_EscapeBread_C:ScheduleStepEscape()
+  if not IsAuthority(self) and not IsStandAlone(self) then
+    return
+  end
+  self:AddTimer(0.01, function()
+    if not IsValid(self) then
+      return
+    end
+    if self.StateId ~= BreadState.Escaping then
+      return
+    end
+    if IsValid(self.TrackMove) and self.TrackMove.bMoving then
+      return
+    end
+    self:StepEscape()
+  end, false, 0, "BreadStepEscape")
 end
 
 return BP_EscapeBread_C

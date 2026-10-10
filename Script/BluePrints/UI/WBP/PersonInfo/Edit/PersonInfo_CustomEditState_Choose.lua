@@ -42,16 +42,26 @@ end
 function M:BuildUIModel()
   local Root = self.OwnerRoot
   local ChooseKind = Root and Root.ActiveChooseMode or "Character"
-  local WSMode = "Character" == ChooseKind and "Confirm" or "Info"
+  local bIsPetChoose = "Pet" == ChooseKind
+  local bIsItemChoose = "Item" == ChooseKind
+  local WSMode = ("Character" == ChooseKind or bIsPetChoose or bIsItemChoose) and "Confirm" or "Info"
+  local FocusSlotIndex
+  if bIsItemChoose then
+    FocusSlotIndex = Root and Root.GetSelectedItemSlotIndex and Root:GetSelectedItemSlotIndex() or nil
+  elseif bIsPetChoose then
+    FocusSlotIndex = Root and Root.GetSelectedPetSlotIndex and Root:GetSelectedPetSlotIndex() or nil
+  else
+    FocusSlotIndex = Root and Root.GetSelectedCharacterSlotIndex and Root:GetSelectedCharacterSlotIndex() or nil
+  end
   return {
     StateName = "Choose",
     ChooseKind = ChooseKind,
     TopBarMode = "ChooseTitle",
     SidePanelMode = "Inventory",
-    SlotPanelMode = "CharacterSlot",
+    SlotPanelMode = bIsItemChoose and "ItemSlot" or bIsPetChoose and "PetSlot" or "CharacterSlot",
     WSMode = WSMode,
     CanPreviewCameraRoam = false,
-    FocusSlotIndex = Root and Root.GetSelectedCharacterSlotIndex and Root:GetSelectedCharacterSlotIndex() or nil
+    FocusSlotIndex = FocusSlotIndex
   }
 end
 

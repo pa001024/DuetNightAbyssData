@@ -14,11 +14,11 @@ return ReadOnly("CustomDisplayGroup", {
   [102] = {
     DisplayGroupId = 102,
     EntityType = "Pet",
-    MaxCount = 1
+    MaxCount = 4
   },
   [103] = {
     DisplayGroupId = 103,
     EntityType = "Item",
-    MaxCount = 0
+    MaxCount = 5
   }
 })

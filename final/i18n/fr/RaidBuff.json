@@ -82,5 +82,37 @@
       "12",
       "3"
     ]
+  },
+  {
+    "RaidBuffID": 17,
+    "RaidBuffDes": "Lorsque la Vitesse de compétence d’un personnage dépasse 1, chaque tranche de 0.3 au-delà de ce seuil augmente la Pénétration de tous les attributs de 10%, jusqu’à 50%. Lorsque le personnage consomme du Désordre, il obtient un effet permettant aux Dégâts de compétence qu’il inflige d’ignorer 40% des effets défensifs de la cible pendant 3 s.",
+    "RaidBuffParameter": [
+      "1",
+      "0.3",
+      "10%",
+      "50%",
+      "40%",
+      "3"
+    ]
+  },
+  {
+    "RaidBuffID": 1001,
+    "RaidBuffDes": "Chaque fois que la posture d’une menace majeure est brisée, les dégâts qu’elle subit en état de faiblesse augmentent de 75%. Cependant, sa posture maximale augmente de 30% et les dégâts qu’elle inflige augmentent de 50%.",
+    "RaidBuffParameter": [
+      "75%",
+      "30%",
+      "50%"
+    ]
+  },
+  {
+    "RaidBuffID": 1002,
+    "RaidBuffDes": "Les Dégâts de compétence subis par une menace majeure augmentent de 60%. Cependant, après avoir subi des dégâts, sa Défense augmente de 1%, cumulable jusqu’à 300 fois. Après avoir touché un personnage de votre équipe, les dégâts qu’elle inflige augmentent de 5%, cumulable jusqu’à 20 fois.",
+    "RaidBuffParameter": [
+      "60%",
+      "1%",
+      "300",
+      "5%",
+      "20"
+    ]
   }
 ]

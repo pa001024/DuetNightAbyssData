@@ -241,6 +241,11 @@ return ReadOnly("AttrConfig", {
     SortIndex3 = 25,
     SortIndex4 = 25
   },
+  CutTNRate = {
+    Id = "CutTNRate",
+    IsPercent = true,
+    Name = "Attr_CutTNRate_Name"
+  },
   DEF = {
     Id = "DEF",
     Name = "Attr_DEF_Name",
@@ -510,6 +515,18 @@ return ReadOnly("AttrConfig", {
     SortIndex2 = 15,
     SortIndex3 = 15,
     SortIndex4 = 15
+  },
+  SkillSpeed = {
+    AttrDesc = "ATTR_DESC_SkillSpeed",
+    AttrLimit = "MaxSkillSpeed",
+    Id = "SkillSpeed",
+    IsPercent = true,
+    Name = "Attr_SkillSpeed_Name",
+    ShowInInspector = true,
+    SortIndex1 = 15.2,
+    SortIndex2 = 15.2,
+    SortIndex3 = 15.2,
+    SortIndex4 = 15.2
   },
   SkillSustain = {
     AttrDesc = "ATTR_DESC_SkillSustain",

@@ -982,15 +982,23 @@ function BP_SinglePlayerController_C:GetCombatStatistics()
   return Ret
 end
 
-function BP_SinglePlayerController_C:SetStoryModeState(IsOpenStoryMode)
+function BP_SinglePlayerController_C:SetStoryModeState(IsOpenStoryMode, Tag)
   local GameState = UE4.UGameplayStatics.GetGameState(self)
   if nil == GameState then
     DebugPrint("Error: GameState is nil")
     return
   end
-  self.IsInStoryMode = IsOpenStoryMode
-  local IsInStoryModeString = "F"
+  if not self.InStoryModeTags then
+    self.InStoryModeTags = {}
+  end
   if IsOpenStoryMode then
+    self.InStoryModeTags[Tag] = 1
+  else
+    self.InStoryModeTags[Tag] = nil
+  end
+  local IsInStoryMode = self:GetStoryModeState()
+  local IsInStoryModeString = "F"
+  if IsInStoryMode then
     IsInStoryModeString = "T"
   end
   GameState:TriggerCondition("InStoryMode", IsInStoryModeString)
@@ -1006,7 +1014,13 @@ function BP_SinglePlayerController_C:SetStoryModeState(IsOpenStoryMode)
 end
 
 function BP_SinglePlayerController_C:GetStoryModeState()
-  return self.IsInStoryMode
+  local IsInStoryMode = false
+  if not self.InStoryModeTags or IsEmptyTable(self.InStoryModeTags) then
+    IsInStoryMode = false
+  else
+    IsInStoryMode = true
+  end
+  return IsInStoryMode
 end
 
 function BP_SinglePlayerController_C:SetForceFeedbackFromCache()

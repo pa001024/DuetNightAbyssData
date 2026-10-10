@@ -1,4 +1,5 @@
 local FEFNode_PlayAudio = require("BluePrints.Story.Talk.TalkFlow.Nodes.DelegateNodes.EFNode_PlayAudio")
+local FEFNode_PlayGuideUI = require("BluePrints.Story.Talk.TalkFlow.Nodes.DelegateNodes.EFNode_PlayGuideUI")
 local FEFNode_WaitForSeconds = require("BluePrints.Story.Talk.TalkFlow.Nodes.DelegateNodes.EFNode_WaitForSeconds")
 local FEFNode_TypingText = require("BluePrints.Story.Talk.TalkFlow.Nodes.DelegateNodes.EFNode_TypingText")
 local FEFNode_ConditionalDelay = require("BluePrints.Story.Talk.TalkFlow.Nodes.DelegateNodes.EFNode_ConditionalDelay")
@@ -154,7 +155,8 @@ end
 function M:ResolvePathValue(RootValue, Path)
   local Result = RootValue
   for Key in string.gmatch(Path or "", "[^%.]+") do
-    if nil == Result then
+    local ResultType = type(Result)
+    if "table" ~= ResultType and "userdata" ~= ResultType then
       return nil
     end
     Result = Result[Key]
@@ -330,6 +332,14 @@ end
 
 function M:PlayAudio(Flow, Context, Params)
   local Node = FEFNode_PlayAudio:CreateNode(Flow, Context.FlowOwner, Params)
+  if not Node then
+    return
+  end
+  return Node.StartPin, Node.FinishPin
+end
+
+function M:PlayGuideUI(Flow, Context, Params)
+  local Node = FEFNode_PlayGuideUI:CreateNode(Flow, Context.FlowOwner, Params)
   if not Node then
     return
   end

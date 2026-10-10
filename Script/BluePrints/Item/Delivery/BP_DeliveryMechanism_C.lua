@@ -72,10 +72,11 @@ function BP_DeliveryMechanism_C:ClientInitInfo(Info)
     end
     local ComponentClass = LoadClass("/Game/BluePrints/Item/BP_DeliveryMechanism_WidgetComponent.BP_DeliveryMechanism_WidgetComponent")
     self.BubbleWidgetComponent = self:AddComponentByClass(ComponentClass, false, FTransform(), false)
-    if self.BubbleWidgetComponent then
-      local UIManager = GWorld.GameInstance:GetGameUIManager()
-      UIManager:AddWidgetComponentToList(self.Eid, "DeliverMechanism", self.BubbleWidgetComponent)
+    if self.BubbleWidgetComponent == nil then
+      return
     end
+    local UIManager = GWorld.GameInstance:GetGameUIManager()
+    UIManager:AddWidgetComponentToList(self.Eid, "DeliverMechanism", self.BubbleWidgetComponent)
     if self.BubbleWidgetComponent:GetWidget() then
       self.BubbleWidgetComponent:GetWidget().IconDisplayDistance = self.IconDisplayDistance
       self.BubbleWidgetComponent:GetWidget().MechanismLoc = self:K2_GetActorLocation()
@@ -99,15 +100,15 @@ function BP_DeliveryMechanism_C:SetBubbleWidgetShowOrHide(InIsShow)
     if self.BubbleWidgetComponent then
       local UIManager = GWorld.GameInstance:GetGameUIManager()
       UIManager:AddWidgetComponentToList(self.Eid, "DeliverMechanism", self.BubbleWidgetComponent)
-    end
-    if self.BubbleWidgetComponent:GetWidget() then
-      self.BubbleWidgetComponent:GetWidget().IconDisplayDistance = self.IconDisplayDistance
-      self.BubbleWidgetComponent:GetWidget().MechanismLoc = self:K2_GetActorLocation()
-      self.BubbleWidgetComponent:GetWidget().Img_Entrance:SetBrushResourceObject(self.BubbleIconTexture)
-      self.BubbleWidgetComponent:GetWidget().MechanismEid = self.Eid
+      if self.BubbleWidgetComponent:GetWidget() then
+        self.BubbleWidgetComponent:GetWidget().IconDisplayDistance = self.IconDisplayDistance
+        self.BubbleWidgetComponent:GetWidget().MechanismLoc = self:K2_GetActorLocation()
+        self.BubbleWidgetComponent:GetWidget().Img_Entrance:SetBrushResourceObject(self.BubbleIconTexture)
+        self.BubbleWidgetComponent:GetWidget().MechanismEid = self.Eid
+      end
     end
   end
-  if self.BubbleWidgetComponent ~= nil then
+  if self.BubbleWidgetComponent ~= nil and self.BubbleWidgetComponent:GetWidget() then
     if IsShow then
       self.BubbleWidgetComponent:GetWidget().Main:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     else

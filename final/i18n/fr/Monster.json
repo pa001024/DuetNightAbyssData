@@ -184,8 +184,8 @@
     "n": "Souillé fulgurant",
     "f": 1,
     "atk": 10,
-    "def": 130,
-    "hp": 88,
+    "def": 300,
+    "hp": 500,
     "tn": 150,
     "icon": "Gr_Jichong_C01",
     "tags": [
@@ -201,7 +201,7 @@
     "f": 1,
     "atk": 32,
     "def": 300,
-    "hp": 2040,
+    "hp": 5000,
     "tn": 600,
     "icon": "Gr_Jichong_C01",
     "tags": [
@@ -363,8 +363,8 @@
     "n": "Souillé errant",
     "f": 1,
     "atk": 5.56,
-    "def": 130,
-    "hp": 88,
+    "def": 300,
+    "hp": 500,
     "tn": 150,
     "icon": "Gr_Youji_C01",
     "tags": [
@@ -380,7 +380,7 @@
     "f": 1,
     "atk": 20,
     "def": 300,
-    "hp": 2040,
+    "hp": 5000,
     "tn": 600,
     "icon": "Gr_Youji_C01",
     "tags": [
@@ -433,8 +433,8 @@
     "n": "Souillé flottant",
     "f": 1,
     "atk": 5.56,
-    "def": 130,
-    "hp": 88,
+    "def": 300,
+    "hp": 500,
     "tn": 150,
     "icon": "Gr_Piaofu_C01",
     "tags": [
@@ -472,6 +472,24 @@
       "Mon.Gr",
       "Mon.Melee",
       "Mon.Reward.D"
+    ]
+  },
+  {
+    "id": 6004011,
+    "n": "Souillé déchaîné — Morsure de givre",
+    "t": "Elite_Monster",
+    "f": 1,
+    "atk": 20,
+    "def": 300,
+    "hp": 510,
+    "tn": 600,
+    "icon": "Gr_Baotu_C01",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Frozen"
     ]
   },
   {
@@ -613,8 +631,8 @@
     "n": "Souillé déchaîné",
     "f": 1,
     "atk": 18.75,
-    "def": 200,
-    "hp": 306,
+    "def": 300,
+    "hp": 2000,
     "tn": 300,
     "icon": "Gr_Baotu_C01",
     "tags": [
@@ -782,8 +800,8 @@
     "n": "Souillé brûle-âme",
     "f": 1,
     "atk": 5.56,
-    "def": 130,
-    "hp": 88,
+    "def": 300,
+    "hp": 500,
     "tn": 150,
     "icon": "GR_Zhuoxin",
     "tags": [
@@ -834,8 +852,8 @@
     "n": "Souillé fulgurant II",
     "f": 1,
     "atk": 10,
-    "def": 130,
-    "hp": 88,
+    "def": 300,
+    "hp": 500,
     "tn": 150,
     "icon": "Gr_Jichong_C01",
     "tags": [
@@ -887,8 +905,8 @@
     "n": "Souillé errant II",
     "f": 1,
     "atk": 5.56,
-    "def": 130,
-    "hp": 88,
+    "def": 300,
+    "hp": 500,
     "tn": 150,
     "icon": "Gr_Youji_C01",
     "tags": [
@@ -1002,8 +1020,8 @@
     "n": "Souillé flottant II",
     "f": 1,
     "atk": 5.56,
-    "def": 130,
-    "hp": 88,
+    "def": 300,
+    "hp": 500,
     "tn": 150,
     "icon": "Gr_Piaofu_C01",
     "tags": [
@@ -1056,8 +1074,8 @@
     "n": "Souillé déchaîné II",
     "f": 1,
     "atk": 18.75,
-    "def": 200,
-    "hp": 306,
+    "def": 300,
+    "hp": 2000,
     "tn": 300,
     "icon": "Gr_Baotu_C01",
     "tags": [
@@ -1824,9 +1842,9 @@
     "n": "Soldat sniper",
     "f": 2,
     "atk": 5.56,
-    "def": 130,
-    "es": 43,
-    "hp": 58,
+    "def": 300,
+    "es": 500,
+    "hp": 250,
     "tn": 150,
     "icon": "Jt_Juji_C01",
     "tags": [
@@ -2027,9 +2045,9 @@
     "n": "Soldat brise-lames",
     "f": 2,
     "atk": 10,
-    "def": 130,
-    "es": 43,
-    "hp": 58,
+    "def": 300,
+    "es": 500,
+    "hp": 250,
     "tn": 150,
     "icon": "Jt_Pizhuo_C01",
     "tags": [
@@ -2214,9 +2232,9 @@
     "n": "Soldat expéditionnaire",
     "f": 2,
     "atk": 5.56,
-    "def": 130,
-    "es": 43,
-    "hp": 58,
+    "def": 300,
+    "es": 500,
+    "hp": 250,
     "tn": 150,
     "icon": "Jt_Ranger_C01",
     "tags": [
@@ -2284,9 +2302,9 @@
     "n": "Soldat d’assaut",
     "f": 2,
     "atk": 18.75,
-    "def": 200,
-    "es": 170,
-    "hp": 204,
+    "def": 300,
+    "es": 2000,
+    "hp": 1000,
     "tn": 300,
     "icon": "Jt_Tuji_C01",
     "tags": [
@@ -2544,9 +2562,9 @@
     "n": "Tyran miséricordieux",
     "f": 2,
     "atk": 18.75,
-    "def": 200,
-    "es": 170,
-    "hp": 204,
+    "def": 300,
+    "es": 2000,
+    "hp": 1000,
     "tn": 300,
     "icon": "Jt_Zhiren",
     "tags": [
@@ -2595,9 +2613,9 @@
     "n": "Alchimiste Spathatoi",
     "f": 2,
     "atk": 5.56,
-    "def": 130,
-    "es": 43,
-    "hp": 58,
+    "def": 300,
+    "es": 500,
+    "hp": 250,
     "tn": 150,
     "icon": "Jt_Zhijian",
     "tags": [
@@ -2650,9 +2668,9 @@
     "n": "Soldat sniper II",
     "f": 2,
     "atk": 5.56,
-    "def": 130,
-    "es": 43,
-    "hp": 58,
+    "def": 300,
+    "es": 500,
+    "hp": 250,
     "tn": 150,
     "icon": "Jt_Juji_C01",
     "tags": [
@@ -2723,9 +2741,9 @@
     "n": "Soldat brise-lames II",
     "f": 2,
     "atk": 10,
-    "def": 130,
-    "es": 43,
-    "hp": 58,
+    "def": 300,
+    "es": 500,
+    "hp": 250,
     "tn": 150,
     "icon": "Jt_Pizhuo_C01",
     "tags": [
@@ -2779,9 +2797,9 @@
     "n": "Soldat expéditionnaire II",
     "f": 2,
     "atk": 5.56,
-    "def": 130,
-    "es": 43,
-    "hp": 58,
+    "def": 300,
+    "es": 500,
+    "hp": 250,
     "tn": 150,
     "icon": "Jt_Ranger_C01",
     "tags": [
@@ -2813,9 +2831,9 @@
     "n": "Soldat d’assaut II",
     "f": 2,
     "atk": 18.75,
-    "def": 200,
-    "es": 170,
-    "hp": 204,
+    "def": 300,
+    "es": 2000,
+    "hp": 1000,
     "tn": 300,
     "icon": "Jt_Tuji_C01",
     "tags": [
@@ -2887,9 +2905,9 @@
     "n": "Drone de patrouille",
     "f": 2,
     "atk": 5.56,
-    "def": 130,
-    "es": 43,
-    "hp": 58,
+    "def": 300,
+    "es": 500,
+    "hp": 250,
     "tn": 150,
     "icon": "JT_Jingjie",
     "tags": [
@@ -2997,8 +3015,8 @@
     "f": 2,
     "atk": 32,
     "def": 300,
-    "es": 340,
-    "hp": 340,
+    "es": 5000,
+    "hp": 2500,
     "tn": 150,
     "icon": "JT_Tiequan",
     "tags": [
@@ -3073,8 +3091,8 @@
     "f": 2,
     "atk": 32,
     "def": 300,
-    "es": 340,
-    "hp": 340,
+    "es": 5000,
+    "hp": 2500,
     "tn": 150,
     "icon": "JT_Hongshan",
     "tags": [
@@ -3187,9 +3205,9 @@
     "n": "Diacre béni",
     "f": 4,
     "atk": 5.56,
-    "def": 130,
-    "es": 103,
-    "hp": 18,
+    "def": 300,
+    "es": 950,
+    "hp": 25,
     "tn": 150,
     "icon": "Jh_Zhishi",
     "tags": [
@@ -3336,9 +3354,9 @@
     "n": "Sentinelle bénie",
     "f": 4,
     "atk": 10,
-    "def": 130,
-    "es": 103,
-    "hp": 18,
+    "def": 300,
+    "es": 950,
+    "hp": 25,
     "tn": 150,
     "icon": "Jh_Xianfeng",
     "tags": [
@@ -3354,8 +3372,8 @@
     "f": 4,
     "atk": 32,
     "def": 300,
-    "es": 3268,
-    "hp": 408,
+    "es": 9500,
+    "hp": 250,
     "tn": 150,
     "icon": "Jh_Xianfeng",
     "tags": [
@@ -3524,9 +3542,9 @@
     "n": "Prêtre béni",
     "f": 4,
     "atk": 5.56,
-    "def": 130,
-    "es": 103,
-    "hp": 18,
+    "def": 300,
+    "es": 950,
+    "hp": 25,
     "tn": 150,
     "icon": "Jh_Shenfu",
     "tags": [
@@ -3542,8 +3560,8 @@
     "f": 4,
     "atk": 20,
     "def": 300,
-    "es": 3268,
-    "hp": 408,
+    "es": 9500,
+    "hp": 250,
     "tn": 150,
     "icon": "Jh_Shenfu",
     "tags": [
@@ -3613,6 +3631,38 @@
       "Mon.Strong.Vampire.Double",
       "Mon.Elite",
       "Mon.Strong.Double"
+    ]
+  },
+  {
+    "id": 8004001,
+    "n": "Candélabre du songe rémanent",
+    "f": 4,
+    "atk": 5.56,
+    "def": 130,
+    "es": 82,
+    "hp": 14,
+    "tn": 150,
+    "icon": "Empty",
+    "tags": [
+      "Mon.Jh",
+      "Mon.Ranged",
+      "Mon.Reward.E"
+    ]
+  },
+  {
+    "id": 8005001,
+    "n": "Recueil du songe rémanent",
+    "f": 4,
+    "atk": 5.56,
+    "def": 130,
+    "es": 82,
+    "hp": 14,
+    "tn": 150,
+    "icon": "Empty",
+    "tags": [
+      "Mon.Jh",
+      "Mon.Melee",
+      "Mon.Reward.E"
     ]
   },
   {
@@ -3728,6 +3778,20 @@
     ]
   },
   {
+    "id": 8500801,
+    "n": "Sibylle",
+    "t": "Boss",
+    "atk": 15,
+    "def": 300,
+    "hp": 240000,
+    "tn": 2000,
+    "icon": "Boss_00_Xibi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
     "id": 8501001,
     "n": "Maître de guerre",
     "t": "Boss",
@@ -3826,6 +3890,21 @@
     ]
   },
   {
+    "id": 8501701,
+    "n": "Maître de guerre — Morsure de givre",
+    "t": "Boss",
+    "atk": 60,
+    "def": 1200,
+    "hp": 43200,
+    "tn": 6000,
+    "icon": "Boss_04_Lizhan",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A",
+      "Mon.Strong.Frozen"
+    ]
+  },
+  {
     "id": 8502001,
     "n": "L’Éclose",
     "t": "Boss",
@@ -3889,6 +3968,20 @@
     "def": 1500,
     "hp": 6000,
     "tn": 2000,
+    "icon": "Boss_01_Saiqi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8502801,
+    "n": "L’Éclose",
+    "t": "Boss",
+    "atk": 24,
+    "def": 300,
+    "hp": 60000,
+    "tn": 6000,
     "icon": "Boss_01_Saiqi",
     "tags": [
       "Mon.Boss",
@@ -4053,6 +4146,20 @@
     ]
   },
   {
+    "id": 8505801,
+    "n": "Geôlière de la fournaise",
+    "t": "Boss",
+    "atk": 24,
+    "def": 300,
+    "hp": 240000,
+    "tn": 2000,
+    "icon": "Boss_05_Lianhuo",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
     "id": 8509001,
     "n": "???",
     "t": "Boss",
@@ -4144,6 +4251,20 @@
     "def": 300,
     "hp": 180000,
     "tn": 3000,
+    "icon": "Boss_Tuosi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8509801,
+    "n": "Monstre mystérieux",
+    "t": "Boss",
+    "atk": 15,
+    "def": 300,
+    "hp": 60000,
+    "tn": 6000,
     "icon": "Boss_Tuosi",
     "tags": [
       "Mon.Boss",
@@ -4421,8 +4542,8 @@
     "n": "Ascète béni — Tempête électrique",
     "t": "Boss",
     "atk": 60,
-    "def": 300,
-    "hp": 225000,
+    "def": 1200,
+    "hp": 43200,
     "tn": 2000,
     "icon": "Boss_Kuxiu",
     "tags": [
@@ -4549,8 +4670,8 @@
     "n": "Juge béni — Éclair foudroyant",
     "t": "Boss",
     "atk": 60,
-    "def": 300,
-    "hp": 225000,
+    "def": 1200,
+    "hp": 43200,
     "tn": 4500,
     "icon": "Boss_Shenpan",
     "tags": [
@@ -4693,9 +4814,9 @@
     "id": 8516701,
     "n": "Tyran rugissant — Tempête électrique",
     "t": "Boss",
-    "atk": 75,
-    "def": 1000,
-    "hp": 112500,
+    "atk": 60,
+    "def": 1200,
+    "hp": 43200,
     "tn": 1000,
     "icon": "Boss16_Fuer",
     "tags": [
@@ -4748,11 +4869,11 @@
   },
   {
     "id": 8518701,
-    "n": "Terracolosse",
+    "n": "Terracolosse — Éclair foudroyant",
     "t": "Boss",
     "atk": 60,
-    "def": 300,
-    "hp": 225000,
+    "def": 1200,
+    "hp": 43200,
     "tn": 3000,
     "icon": "Boss_Juque",
     "tags": [
@@ -4808,6 +4929,34 @@
     "atk": 25,
     "def": 300,
     "hp": 6000,
+    "tn": 6000,
+    "icon": "Boss20_Aida",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8520501,
+    "n": "« Le Jugement » Maman Lapin",
+    "t": "Boss",
+    "atk": 25,
+    "def": 300,
+    "hp": 6000,
+    "tn": 8400,
+    "icon": "Boss20_Aida",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8520801,
+    "n": "« Le Jugement » Maman Lapin",
+    "t": "Boss",
+    "atk": 25,
+    "def": 300,
+    "hp": 60000,
     "tn": 6000,
     "icon": "Boss20_Aida",
     "tags": [
@@ -5047,9 +5196,9 @@
     "id": 8523701,
     "n": "Paladin béni — Flétrissure",
     "t": "Boss",
-    "atk": 100,
-    "def": 300,
-    "hp": 56250,
+    "atk": 60,
+    "def": 1200,
+    "hp": 43200,
     "tn": 2000,
     "icon": "Boss23_Jishi",
     "tags": [
@@ -5067,6 +5216,34 @@
     "def": 0,
     "hp": 7000,
     "tn": 4500,
+    "icon": "Empty",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8525001,
+    "n": "伊黛【远期待包装】",
+    "t": "Boss",
+    "atk": 200,
+    "def": 300,
+    "hp": 4500,
+    "tn": 6000,
+    "icon": "Boss_Linen",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8527001,
+    "n": "深渊之心【远期待包装】",
+    "t": "Boss",
+    "atk": 25,
+    "def": 300,
+    "hp": 6000,
+    "tn": 6000,
     "icon": "Empty",
     "tags": [
       "Mon.Boss",
@@ -5250,9 +5427,9 @@
     "n": "Lame de l’Essaim",
     "f": 3,
     "atk": 10,
-    "def": 130,
-    "es": 103,
-    "hp": 18,
+    "def": 300,
+    "es": 950,
+    "hp": 25,
     "tn": 150,
     "icon": "SQ_Yinxie",
     "tags": [
@@ -5268,8 +5445,8 @@
     "f": 3,
     "atk": 32,
     "def": 300,
-    "es": 3268,
-    "hp": 408,
+    "es": 9500,
+    "hp": 250,
     "tn": 600,
     "icon": "SQ_Yinxie",
     "tags": [
@@ -5354,6 +5531,25 @@
       "Mon.Ranged",
       "Mon.Reward.B",
       "Mon.Strong.Shield",
+      "Mon.Elite"
+    ]
+  },
+  {
+    "id": 9002018,
+    "n": "Flèche de l’Essaim — Représailles",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 11,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 600,
+    "icon": "SQ_Dufeng",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Revenge",
       "Mon.Elite"
     ]
   },
@@ -5479,9 +5675,9 @@
     "n": "Flèche de l’Essaim",
     "f": 3,
     "atk": 5.56,
-    "def": 130,
-    "es": 103,
-    "hp": 18,
+    "def": 300,
+    "es": 950,
+    "hp": 25,
     "tn": 150,
     "icon": "SQ_Dufeng",
     "tags": [
@@ -5497,8 +5693,8 @@
     "f": 3,
     "atk": 20,
     "def": 300,
-    "es": 3268,
-    "hp": 408,
+    "es": 9500,
+    "hp": 250,
     "tn": 600,
     "icon": "SQ_Dufeng",
     "tags": [
@@ -5963,9 +6159,9 @@
     "n": "Espion de l’Essaim",
     "f": 3,
     "atk": 5.56,
-    "def": 130,
-    "es": 103,
-    "hp": 18,
+    "def": 300,
+    "es": 950,
+    "hp": 25,
     "tn": 150,
     "icon": "SQ_Niaopao",
     "tags": [

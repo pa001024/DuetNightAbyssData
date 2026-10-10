@@ -597,6 +597,18 @@ return ReadOnly("ExtermPro", {
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
+  [91125] = {
+    DungeonId = 91125,
+    EliteRange = T.RT_1,
+    EliteSpawnOnlyRelation = false,
+    EliteSpawnRule = 91125,
+    NormalRange = T.RT_1,
+    NormalSpawnOnlyRelation = false,
+    NormalSpawnRule = 108141,
+    OnInitSpawnRule = {108141, 91125},
+    PetSpawnRange = T.RT_5,
+    TargetNum = 100
+  },
   [91126] = {
     DungeonId = 91126,
     EliteRange = T.RT_1,

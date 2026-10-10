@@ -1146,6 +1146,36 @@ return ReadOnly("Convert", {
     },
     SortPriority = 925
   },
+  [1077] = {
+    ConvertCost = T.RT_2,
+    ConvertNum = 3,
+    CovertId = 1077,
+    ProductId = 12173,
+    ProductNum = 1,
+    ProductTipsType = "wpcomponent",
+    ProductType = "Resource",
+    ReleaseVersion = 100,
+    Resource = {
+      [1] = 12174,
+      [2] = 12175
+    },
+    SortPriority = 924
+  },
+  [1078] = {
+    ConvertCost = T.RT_2,
+    ConvertNum = 3,
+    CovertId = 1078,
+    ProductId = 12178,
+    ProductNum = 1,
+    ProductTipsType = "wpcomponent",
+    ProductType = "Resource",
+    ReleaseVersion = 100,
+    Resource = {
+      [1] = 12179,
+      [2] = 12180
+    },
+    SortPriority = 923
+  },
   [9998] = {
     ConvertCost = {
       [101] = 2000

@@ -132,16 +132,6 @@ return ReadOnly("GuideBookConditionTwo", {
         RewardId = 7000
       }
     },
-    [55] = {
-      [1] = {
-        CompleteUIGuideId = 55,
-        FinishQuest = 10020103,
-        GuideId = 55,
-        GuideNoteId = 75,
-        GuideNoteTab = 4,
-        RewardId = 7000
-      }
-    },
     [56] = {
       [1] = {
         CompleteUIGuideId = 56,
@@ -165,6 +155,7 @@ return ReadOnly("GuideBookConditionTwo", {
     [69] = {
       [1] = {
         CompleteUIGuideId = 69,
+        FinishQuest = 10020105,
         GuideId = 69,
         GuideNoteId = 86,
         GuideNoteTab = 5,
@@ -787,6 +778,16 @@ return ReadOnly("GuideBookConditionTwo", {
         GuideId = 163,
         GuideNoteId = 174,
         GuideNoteTab = 3,
+        RewardId = 7000
+      }
+    },
+    [164] = {
+      [1] = {
+        CompleteUIGuideId = 164,
+        FinishQuest = 10020108,
+        GuideId = 164,
+        GuideNoteId = 175,
+        GuideNoteTab = 4,
         RewardId = 7000
       }
     },

@@ -367,7 +367,13 @@ function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
     end
     return UE4.UWidgetBlueprintLibrary.UnHandled()
   end
-  if (InKeyName == UIConst.GamePadKey.RightThumb or "Gamepad_RightThumbstick" == InKeyName) and self.ParentWidget and self.ParentWidget.OnGamepadHeaderQaPressed and self.ParentWidget:OnGamepadHeaderQaPressed() then
+  if (InKeyName == UIConst.GamePadKey.RightThumb or "Gamepad_RightThumbstick" == InKeyName) and self.ParentWidget and self.ParentWidget.OnGamepadRightThumbPressed and self.ParentWidget:OnGamepadRightThumbPressed() then
+    return UE4.UWidgetBlueprintLibrary.Handled()
+  end
+  if (InKeyName == UIConst.GamePadKey.DPadRight or "Gamepad_DPad_Right" == InKeyName) and self.ParentWidget and self.ParentWidget.OnGamepadHeaderQaPressed and self.ParentWidget:OnGamepadHeaderQaPressed() then
+    return UE4.UWidgetBlueprintLibrary.Handled()
+  end
+  if (InKeyName == UIConst.GamePadKey.DPadLeft or "Gamepad_DPad_Left" == InKeyName) and self.ParentWidget and self.ParentWidget.OnGamepadHeaderQaSwitchLeft and self.ParentWidget:OnGamepadHeaderQaSwitchLeft() then
     return UE4.UWidgetBlueprintLibrary.Handled()
   end
   if InKeyName == UIConst.GamePadKey.FaceButtonBottom and self:OpenHeadMenu() then

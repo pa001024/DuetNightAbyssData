@@ -1,5 +1,15 @@
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
 local Component = {}
+local BATTLE_WHEEL_SHORTCUT_TO_SLOT_INDEX = {
+  [1] = 2,
+  [2] = 1,
+  [3] = 8,
+  [4] = 7,
+  [5] = 6,
+  [6] = 5,
+  [7] = 4,
+  [8] = 3
+}
 
 function Component:EnterWorld()
   ArmoryUtils:CreateReddotInfos(CommonConst.DataType.Resource)
@@ -9,6 +19,10 @@ function Component:_OnPropChangeResources(Keys)
   local ResourceId = Keys and Keys[1]
   if ResourceId then
     EventManager:FireEvent(EventID.OnResourcesChanged, ResourceId)
+    local GameUIManager = GWorld.GameInstance and GWorld.GameInstance:GetGameUIManager()
+    if GameUIManager then
+      GameUIManager:RefreshBattleWheelSlotsIfVisible()
+    end
   end
 end
 
@@ -154,6 +168,44 @@ function Component:TakeOffAssisterWeapon(AssisterId, WeaponUuid)
   self:CallServer("TakeOffAssisterWeapon", Callback, AssisterId, WeaponUuid)
 end
 
+function Component:GetBattleWheelShortcutSlotIndex(ShortcutIndex)
+  return BATTLE_WHEEL_SHORTCUT_TO_SLOT_INDEX[ShortcutIndex]
+end
+
+function Component:ResolveBattleWheelShortcutItem(WheelIndex, ShortcutIndex, QuestBattleWheelID)
+  local SlotIndex = self:GetBattleWheelShortcutSlotIndex(ShortcutIndex)
+  if not (WheelIndex and SlotIndex) or SlotIndex < 1 or SlotIndex > 8 then
+    return
+  end
+  local ResourceId, ResourceCount
+  if QuestBattleWheelID then
+    local QuestBattleWheelData = DataMgr.QuestBattleWheel and DataMgr.QuestBattleWheel[QuestBattleWheelID]
+    if not QuestBattleWheelData then
+      return
+    end
+    ResourceId = QuestBattleWheelData["ResourceId" .. SlotIndex]
+    local Resource = ResourceId and self.Resources and self.Resources[ResourceId]
+    local ResourceData = ResourceId and DataMgr.Resource[ResourceId]
+    if not Resource or not ResourceData then
+      return
+    end
+    ResourceCount = 0
+    local BattleItemLimit = ResourceData.BattleItemLimit
+    if BattleItemLimit and BattleItemLimit > 0 then
+      ResourceCount = math.min(Resource.Count, BattleItemLimit)
+    end
+  else
+    local CurrentWheel = self.Wheels and self.Wheels[WheelIndex]
+    local Slot = CurrentWheel and CurrentWheel[SlotIndex]
+    ResourceId = Slot and Slot.ResourceId
+    ResourceCount = Slot and Slot.ResourceCount
+  end
+  if not (ResourceId and 0 ~= ResourceId and self.Resources) or not self.Resources[ResourceId] then
+    return
+  end
+  return ResourceId, ResourceCount
+end
+
 function Component:UseWheelItemInBattle(ResourceId, UseWheelItemInBattleCallBack)
   ResourceId = tonumber(ResourceId)
   local InBattleWheelMenuModel = require("BluePrints.UI.WBP.Battle.Widget.Battle_Menu.InBattleWheelMenuModel")
@@ -172,20 +224,24 @@ function Component:UseWheelItemInBattle(ResourceId, UseWheelItemInBattleCallBack
   self:CallServer("UseItemInBattle", callback, ResourceId)
 end
 
+local function SyncBagConsumeReddotCache(ResourceId)
+  local BagConsumeNode = ReddotManager.GetTreeNode("Bag_Consume")
+  local Avatar = GWorld:GetAvatar()
+  local Detail = BagConsumeNode and BagConsumeNode.Cache and BagConsumeNode.Cache.Detail
+  if not (Avatar and Detail) or not Detail[ResourceId] then
+    return
+  end
+  local Count = Avatar:GetResourceNum(ResourceId)
+  Detail[ResourceId].ClickedCount = Count
+  Detail[ResourceId].StuffCount = Count
+end
+
 function Component:UseResourceInBag(ResourceId, Count, InCallBack)
   local function callback(ErrCode, ...)
     self.logger.info("UseResourceInBag", ErrorCode:Name(ErrCode))
     
     if ErrorCode:Check(ErrCode) then
-      local BagConsumeNode = ReddotManager.GetTreeNode("Bag_Consume")
-      if BagConsumeNode and BagConsumeNode.Cache and BagConsumeNode.Cache.Detail then
-        local BagConsumeNodeDetails = BagConsumeNode.Cache.Detail
-        local Avatar = GWorld:GetAvatar()
-        if BagConsumeNode and BagConsumeNode.Cache.Detail[ResourceId] then
-          BagConsumeNodeDetails[ResourceId].ClickedCount = Avatar:GetResourceNum(ResourceId)
-          BagConsumeNodeDetails[ResourceId].StuffCount = Avatar:GetResourceNum(ResourceId)
-        end
-      end
+      SyncBagConsumeReddotCache(ResourceId)
     end
     if InCallBack then
       InCallBack(...)
@@ -201,15 +257,7 @@ function Component:UseOptResourceInBag(ResourceId, OptIdxList, InCallBack)
   local function callback(ErrCode)
     self.logger.info("UseOptResourceInBag", ErrorCode:Name(ErrCode))
     if ErrorCode:Check(ErrCode) then
-      local BagConsumeNode = ReddotManager.GetTreeNode("Bag_Consume")
-      if BagConsumeNode and BagConsumeNode.Cache and BagConsumeNode.Cache.Detail then
-        local BagConsumeNodeDetails = BagConsumeNode.Cache.Detail
-        local Avatar = GWorld:GetAvatar()
-        if BagConsumeNodeDetails[ResourceId] then
-          BagConsumeNodeDetails[ResourceId].ClickedCount = Avatar:GetResourceNum(ResourceId)
-          BagConsumeNodeDetails[ResourceId].StuffCount = Avatar:GetResourceNum(ResourceId)
-        end
-      end
+      SyncBagConsumeReddotCache(ResourceId)
     end
     if InCallBack then
       InCallBack(ErrCode)
@@ -217,6 +265,37 @@ function Component:UseOptResourceInBag(ResourceId, OptIdxList, InCallBack)
   end
   
   self:CallServer("UseOptResourceInBag", callback, tonumber(ResourceId), OptIdxList)
+end
+
+function Component:UseChangeNameResourceInBag(ResourceId, Name, InCallBack)
+  local function Callback(ErrCode)
+    self.logger.info("UseChangeNameResourceInBag", ErrorCode:Name(ErrCode))
+    
+    if ErrCode == ErrorCode.RET_SUCCESS then
+      SyncBagConsumeReddotCache(ResourceId)
+      EventManager:FireEvent(EventID.OnChangeNickName, Name)
+    end
+    if InCallBack then
+      InCallBack(ErrCode)
+    end
+  end
+  
+  self:CallServer("UseChangeNameResourceInBag", Callback, tonumber(ResourceId), Name)
+end
+
+function Component:UseChangeGuildNameResourceInBag(ResourceId, Name, InCallBack)
+  local function Callback(ErrCode)
+    self.logger.info("UseChangeGuildNameResourceInBag", ErrorCode:Name(ErrCode))
+    
+    if ErrCode == ErrorCode.RET_SUCCESS then
+      SyncBagConsumeReddotCache(ResourceId)
+    end
+    if InCallBack then
+      InCallBack(ErrCode)
+    end
+  end
+  
+  self:CallServer("UseChangeGuildNameResourceInBag", Callback, tonumber(ResourceId), Name)
 end
 
 function Component:ChangeWheelName(NewName, WheelIndex)

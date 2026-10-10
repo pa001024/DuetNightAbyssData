@@ -280,7 +280,12 @@ function BP_EMGameState_C:GetNpcInfoAsync(InNpcId, CallBack)
   if not InNpcId and CallBack then
     CallBack(nil)
   end
-  local NewInNpcId = URuntimeCommonFunctionLibrary.GetNPCIdByGender(self, InNpcId)
+  local NewInNpcId
+  if Const.bUseFinalMappingId then
+    NewInNpcId = URuntimeCommonFunctionLibrary.GetFinalNPCIdByMapping(self, InNpcId)
+  else
+    NewInNpcId = URuntimeCommonFunctionLibrary.GetNPCIdByGender(self, InNpcId)
+  end
   if NewInNpcId ~= InNpcId then
     DebugPrint("ChangeNpcId", NewInNpcId, " : ", InNpcId)
     InNpcId = NewInNpcId
@@ -300,12 +305,24 @@ function BP_EMGameState_C:GetNpcInfoAsync(InNpcId, CallBack)
   end
 end
 
-function BP_EMGameState_C:GetCharacterAttributeCharId()
+function BP_EMGameState_C:GetCharacterAttributeCharId(InCharType)
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return -1
   end
-  return AvatarUtils:GetMainPlayerCharacterAttributeCharId(Avatar)
+  if "EXPlayer" == InCharType then
+    return AvatarUtils:GetMainEXPlayerCharacterAttributeCharId(Avatar)
+  else
+    return AvatarUtils:GetMainPlayerCharacterAttributeCharId(Avatar)
+  end
+end
+
+function BP_EMGameState_C:GetCharacterAttribute(InCharType)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return ""
+  end
+  return AvatarUtils:GetCharacterAttributeBySexOrWaitSex(Avatar, InCharType) or ""
 end
 
 function BP_EMGameState_C:CanUnloadNavMeshLevel()

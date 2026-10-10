@@ -19,7 +19,11 @@ function BP_ElevatorInteractiveComponent_C:IsCanInteractive(PlayerActor)
   local ElevatorInCharacter = Owner:Cast(UE4.AElevatorCharacter)
   if ElevatorInCharacter then
     Eid = ElevatorInCharacter.Eid
-    local ElevatorMechanism = Battle(self):GetEntity(Owner.Eid):Cast(UE4.AElevatorMechanism)
+    local Entity = Battle(self):GetEntity(Owner.Eid)
+    if not Entity then
+      return false
+    end
+    local ElevatorMechanism = Entity:Cast(UE4.AElevatorMechanism)
     if ElevatorMechanism.CurrentElevatorState == ElevatorMechanismState.ElevatorIn then
       return false
     elseif not ElevatorMechanism:CheckChildrenStateOpen() then
@@ -54,7 +58,7 @@ function BP_ElevatorInteractiveComponent_C:InteractiveStateCheck()
   local Owner = self:GetOwner()
   local ElevatorMechanism = Battle(Owner):GetEntity(Owner.Eid)
   if nil == ElevatorMechanism then
-    return false
+    return true
   end
   if ElevatorMechanism.IsCircle then
     return false
@@ -68,16 +72,6 @@ function BP_ElevatorInteractiveComponent_C:InteractiveStateCheck()
     TypeCheck = false
   end
   return ElevatorMechanism.CurrentElevatorState == ElevatorMechanismState.ElevatorIn or TypeCheck
-end
-
-function BP_ElevatorInteractiveComponent_C:GetElevatorInnerState()
-  local SelfActor = self:GetOwner()
-  local SelfParentActor = Battle(self):GetEntity(SelfActor.Eid)
-  local InnerElevator = SelfParentActor.ElevatorInCharacter
-  if IsValid(InnerElevator) then
-    return InnerElevator.ChildActor.SelfElevatorState
-  end
-  return nil
 end
 
 function BP_ElevatorInteractiveComponent_C:OpenDoor()

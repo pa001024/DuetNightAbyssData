@@ -29,6 +29,10 @@ function M:BP_OnEntryReleased()
   if self.HostPage then
     self.HostPage:UnregisterCharacterSlotEntry(self, self.Content)
   end
+  if self.AvatarIconMaterial then
+    self.AvatarIconMaterial:SetTextureParameterValue("IconMap", nil)
+  end
+  self.Image_Icon:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Content = nil
   self.HostPage = nil
   self.bSlotSelectedVisualState = nil
@@ -78,21 +82,49 @@ function M:RefreshEntry()
   if not Content then
     return
   end
+  local bHasSlotContent = Content.HasCharacter == true or true == Content.HasItem
   self.Add:SetVisibility(Content.ShowAddIcon and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
   self.Lock:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  self.Image_Icon:SetVisibility(Content.HasCharacter and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
-  if Content.HasCharacter and Content.Icon then
-    local Texture = LoadObject(Content.Icon)
-    if Texture then
-      if not self.AvatarIconMaterial then
-        self.AvatarIconMaterial = UE4.UKismetMaterialLibrary.CreateDynamicMaterialInstance(self, LoadObject(AvatarIconMaterialPath), "None")
-        self.Image_Icon:SetBrushFromMaterial(self.AvatarIconMaterial)
+  local Texture
+  if bHasSlotContent and Content.Icon then
+    local IconPath = Content.Icon
+    if not string.find(IconPath, "/Game/") then
+      IconPath = "/Game/" .. IconPath
+    end
+    Texture = LoadObject(IconPath)
+  end
+  if Texture then
+    if not self.AvatarIconMaterial then
+      self.AvatarIconMaterial = UE4.UKismetMaterialLibrary.CreateDynamicMaterialInstance(self, LoadObject(AvatarIconMaterialPath), "None")
+      self.Image_Icon:SetBrushFromMaterial(self.AvatarIconMaterial)
+    end
+    self.AvatarIconMaterial:SetTextureParameterValue("IconMap", Texture)
+  elseif self.AvatarIconMaterial then
+    self.AvatarIconMaterial:SetTextureParameterValue("IconMap", nil)
+  end
+  if self.AvatarIconMaterial then
+    if true == Content.HasItem then
+      local Rarity = tonumber(Content.Rarity) or 0
+      self.AvatarIconMaterial:SetScalarParameterValue("Index", Rarity)
+      if 6 == Rarity then
+        self.AvatarIconMaterial:SetScalarParameterValue("ColorfulSwitch", 1)
+        self.AvatarIconMaterial:SetScalarParameterValue("AddOpacity", 1)
+        self.AvatarIconMaterial:SetScalarParameterValue("IconAddOpacity", 1)
+      else
+        self.AvatarIconMaterial:SetScalarParameterValue("ColorfulSwitch", 0)
+        self.AvatarIconMaterial:SetScalarParameterValue("AddOpacity", 0)
+        self.AvatarIconMaterial:SetScalarParameterValue("IconAddOpacity", 0)
       end
-      self.AvatarIconMaterial:SetTextureParameterValue("IconMap", Texture)
+    else
+      self.AvatarIconMaterial:SetScalarParameterValue("Index", 0)
+      self.AvatarIconMaterial:SetScalarParameterValue("ColorfulSwitch", 0)
+      self.AvatarIconMaterial:SetScalarParameterValue("AddOpacity", 0)
+      self.AvatarIconMaterial:SetScalarParameterValue("IconAddOpacity", 0)
     end
   end
-  self.Btn_Area:SetIsEnabled(Content.CanInteract == true)
-  self:SetIsEnabled(Content.CanInteract == true)
+  self.Image_Icon:SetVisibility(Texture and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
+  self.Btn_Area:SetIsEnabled(true == Content.CanInteract)
+  self:SetIsEnabled(true == Content.CanInteract)
   self:_PlaySlotStateAnimation()
 end
 
@@ -103,13 +135,10 @@ function M:_PlaySlotStateAnimation()
   end
   local bSelected = Content.IsSelected == true
   if self.bSlotSelectedVisualState == bSelected then
-    if false == bSelected then
-      self:PlayAnimation(self.Normal)
-    end
     return
   end
   self.bSlotSelectedVisualState = bSelected
-  self:SetVisibility(bSelected and UIConst.VisibilityOp.HitTestInvisible or UIConst.VisibilityOp.Collapsed)
+  self:SetVisibility(UIConst.VisibilityOp.Visible)
   self:StopAllAnimations()
   if bSelected then
     self:PlayAnimation(self.Click)

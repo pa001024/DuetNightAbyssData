@@ -234,9 +234,22 @@ function Component:OnInit_Lua()
   self:CheckPreloadRecordData_Lua()
   if self.GameModeType == "SoloRaid" then
     self.SoloRaidHistoryMaxScore = 0
+    self.SoloRaidHistoryMaxFloor = 0
+    self.SoloRaidHistoryMaxFloorPassTime = 0
+    self.SoloRaidHistoryMaxUnlockFloor = 0
     local Avatar = GWorld:GetAvatar()
     if Avatar and Avatar.RaidSeasons and Avatar.CurrentRaidSeasonId and Avatar.RaidSeasons[Avatar.CurrentRaidSeasonId] then
-      self.SoloRaidHistoryMaxScore = Avatar.RaidSeasons[Avatar.CurrentRaidSeasonId]:GetMaxRaidScore()
+      local SeasonData = Avatar.RaidSeasons[Avatar.CurrentRaidSeasonId]
+      self.SoloRaidHistoryMaxScore = SeasonData:GetMaxRaidScore()
+      if SeasonData:IsPreRaidTime() then
+        self.SoloRaidHistoryMaxFloor = SeasonData.PreRaidFloor
+        self.SoloRaidHistoryMaxFloorPassTime = SeasonData.PreRaidFloorPassTime
+        self.SoloRaidHistoryMaxUnlockFloor = SeasonData.PreRaidUnlockFloor
+      else
+        self.SoloRaidHistoryMaxFloor = SeasonData.RaidFloor
+        self.SoloRaidHistoryMaxFloorPassTime = SeasonData.RaidFloorPassTime
+        self.SoloRaidHistoryMaxUnlockFloor = SeasonData.RaidUnlockFloor
+      end
     end
   end
 end
@@ -774,6 +787,12 @@ function Component:LoadDungeonUIEMWdiget(GameModeType)
 end
 
 function Component:RealLoadDungeonUIEMWdiget(WidgetUIName)
+  if "SoloRaidScore" == WidgetUIName then
+    local GuildWarUtils = require("BluePrints.UI.WBP.Activity.Widget.GuildWar.GuildWarUtils")
+    if GuildWarUtils and GuildWarUtils.IsFloorMode() then
+      return
+    end
+  end
   local EMDungeonWidget = UIManager(self):_CreateWidgetNew(WidgetUIName)
   if not EMDungeonWidget then
     ScreenPrint("LoadDungoenUI加载对应副本WidgetUI失败，创建Widget失败！WidgetUIName " .. WidgetUIName)
@@ -966,6 +985,285 @@ function Component:HideCountDownUI_Lua(TextMap)
   if CountDownUI and CountDownUI.KeyToHideSelf == TextMap then
     UIManager:UnLoadUINew("DungeonCaptureFloat")
   end
+end
+
+local AIR_ALERT_POOL_PREWARM = 4
+local AIR_ALERT_POOL_MAX = 8
+local AIR_ALERT_TICK_KEY = "AirAlertTick"
+local AIR_ALERT_OUT_WATCHDOG_SLACK = 0.1
+
+local function AirAlertOutTimerKey(SpawnId, ClusterIndex)
+  return string.format("AirAlertOut_%d_%d", SpawnId, ClusterIndex)
+end
+
+local function GetAirAlertEntry(Root, SpawnId, ClusterIndex)
+  local Sub = Root and Root[SpawnId]
+  return Sub and Sub[ClusterIndex]
+end
+
+local function SetAirAlertEntry(Root, SpawnId, ClusterIndex, Widget)
+  if nil == Root then
+    return
+  end
+  local Sub = Root[SpawnId]
+  if nil == Widget then
+    if nil == Sub then
+      return
+    end
+    Sub[ClusterIndex] = nil
+    if nil == next(Sub) then
+      Root[SpawnId] = nil
+    end
+    return
+  end
+  if nil == Sub then
+    Sub = {}
+    Root[SpawnId] = Sub
+  end
+  Sub[ClusterIndex] = Widget
+end
+
+local function HasAnyAirAlertWidget(Root)
+  if nil == Root then
+    return false
+  end
+  for _, Sub in pairs(Root) do
+    for _, Widget in pairs(Sub) do
+      if IsValid(Widget) then
+        return true
+      end
+    end
+  end
+  return false
+end
+
+local function PlayAirAlertIn(Widget)
+  if Widget.PlayAirAlertInAnim then
+    Widget:PlayAirAlertInAnim()
+    return
+  end
+  Widget:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+  if Widget.StopAllAnimations then
+    Widget:StopAllAnimations()
+  end
+  if Widget.In then
+    Widget:PlayAnimation(Widget.In)
+  end
+end
+
+function Component:EnsureAirAlertTables()
+  self.AirAlertPool = self.AirAlertPool or {}
+  self.AirAlertActive = self.AirAlertActive or {}
+  self.AirAlertRecycling = self.AirAlertRecycling or {}
+end
+
+function Component:EnsureAirAlertPool()
+  self:EnsureAirAlertTables()
+  if self.AirAlertPoolInited then
+    return
+  end
+  self.AirAlertPoolInited = true
+  self.AirAlertClass = LoadClass(UIConst.AIRALERT)
+  for _ = 1, AIR_ALERT_POOL_PREWARM do
+    local Widget = self:CreateAirAlertWidget()
+    if Widget then
+      table.insert(self.AirAlertPool, Widget)
+    end
+  end
+end
+
+function Component:CreateAirAlertWidget()
+  local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
+  local UIManager = GameInstance and GameInstance:GetGameUIManager()
+  if nil == UIManager then
+    return nil
+  end
+  local ClassOrPath = self.AirAlertClass or UIConst.AIRALERT
+  local Widget = UIManager:CreateWidget(ClassOrPath, true, UIConst.ZORDER_FOR_INDICATORS)
+  if not IsValid(Widget) then
+    return nil
+  end
+  if Widget.ResetAirAlertHidden then
+    Widget:ResetAirAlertHidden()
+  else
+    Widget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  return Widget
+end
+
+function Component:AcquireAirAlertWidget()
+  self.AirAlertPool = self.AirAlertPool or {}
+  while #self.AirAlertPool > 0 do
+    local Widget = table.remove(self.AirAlertPool)
+    if IsValid(Widget) then
+      return Widget
+    end
+  end
+  return self:CreateAirAlertWidget()
+end
+
+function Component:EnsureAirAlertTick()
+  if self.AirAlertTickStarted then
+    return
+  end
+  self.AirAlertTickStarted = true
+  self:AddTimer(0.03, self.TickAirAlerts, true, 0, AIR_ALERT_TICK_KEY)
+end
+
+function Component:StopAirAlertTickIfIdle()
+  if HasAnyAirAlertWidget(self.AirAlertActive) or HasAnyAirAlertWidget(self.AirAlertRecycling) then
+    return
+  end
+  self.AirAlertTickStarted = false
+  self:RemoveTimer(AIR_ALERT_TICK_KEY)
+end
+
+local function TickAirAlertRoot(Root)
+  if nil == Root then
+    return false
+  end
+  local Any = false
+  for _, Sub in pairs(Root) do
+    for _, Widget in pairs(Sub) do
+      if IsValid(Widget) then
+        Any = true
+        Widget:UpdateAirAlertProjection()
+      end
+    end
+  end
+  return Any
+end
+
+function Component:TickAirAlerts()
+  local Any = TickAirAlertRoot(self.AirAlertActive)
+  if TickAirAlertRoot(self.AirAlertRecycling) then
+    Any = true
+  end
+  if not Any then
+    self:StopAirAlertTickIfIdle()
+  end
+end
+
+function Component:ReclaimRecyclingAirAlert(SpawnId, ClusterIndex)
+  local Widget = GetAirAlertEntry(self.AirAlertRecycling, SpawnId, ClusterIndex)
+  if nil == Widget then
+    return nil
+  end
+  self:RemoveTimer(AirAlertOutTimerKey(SpawnId, ClusterIndex))
+  SetAirAlertEntry(self.AirAlertRecycling, SpawnId, ClusterIndex, nil)
+  if not IsValid(Widget) then
+    return nil
+  end
+  SetAirAlertEntry(self.AirAlertActive, SpawnId, ClusterIndex, Widget)
+  PlayAirAlertIn(Widget)
+  return Widget
+end
+
+function Component:ShowAirAlert_Lua(SpawnId, ClusterIndex, Location, AlertType)
+  if IsDedicatedServer(self) then
+    return
+  end
+  self:EnsureAirAlertPool()
+  local Widget = GetAirAlertEntry(self.AirAlertActive, SpawnId, ClusterIndex)
+  if not IsValid(Widget) then
+    Widget = self:ReclaimRecyclingAirAlert(SpawnId, ClusterIndex)
+  end
+  if not IsValid(Widget) then
+    Widget = self:AcquireAirAlertWidget()
+    if not IsValid(Widget) then
+      return
+    end
+    SetAirAlertEntry(self.AirAlertActive, SpawnId, ClusterIndex, Widget)
+    PlayAirAlertIn(Widget)
+  end
+  Widget:SetAirAlertTarget(Location)
+  self:EnsureAirAlertTick()
+end
+
+function Component:HideAirAlert_Lua(SpawnId, ClusterIndex)
+  if IsDedicatedServer(self) then
+    return
+  end
+  self:EnsureAirAlertTables()
+  if nil ~= ClusterIndex and ClusterIndex < 0 then
+    local Sub = self.AirAlertActive[SpawnId]
+    if nil == Sub then
+      self:StopAirAlertTickIfIdle()
+      return
+    end
+    local ToHide = {}
+    for Index, _ in pairs(Sub) do
+      table.insert(ToHide, Index)
+    end
+    for _, Index in ipairs(ToHide) do
+      self:RecycleAirAlertWidget(SpawnId, Index)
+    end
+    return
+  end
+  self:RecycleAirAlertWidget(SpawnId, ClusterIndex)
+end
+
+function Component:RecycleAirAlertWidget(SpawnId, ClusterIndex)
+  if nil == SpawnId or nil == ClusterIndex then
+    return
+  end
+  self:EnsureAirAlertTables()
+  local Widget = GetAirAlertEntry(self.AirAlertActive, SpawnId, ClusterIndex)
+  if nil == Widget then
+    self:StopAirAlertTickIfIdle()
+    return
+  end
+  SetAirAlertEntry(self.AirAlertActive, SpawnId, ClusterIndex, nil)
+  local OutKey = AirAlertOutTimerKey(SpawnId, ClusterIndex)
+  self:RemoveTimer(OutKey)
+  
+  local function ReturnToPool()
+    self:RemoveTimer(OutKey)
+    local Current = GetAirAlertEntry(self.AirAlertRecycling, SpawnId, ClusterIndex)
+    if Current ~= Widget then
+      self:StopAirAlertTickIfIdle()
+      return
+    end
+    SetAirAlertEntry(self.AirAlertRecycling, SpawnId, ClusterIndex, nil)
+    if not IsValid(Widget) then
+      self:StopAirAlertTickIfIdle()
+      return
+    end
+    if Widget.ResetAirAlertHidden then
+      Widget:ResetAirAlertHidden()
+    else
+      Widget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+    if #self.AirAlertPool < AIR_ALERT_POOL_MAX then
+      table.insert(self.AirAlertPool, Widget)
+    else
+      Widget:RemoveFromParent()
+    end
+    self:StopAirAlertTickIfIdle()
+  end
+  
+  if not IsValid(Widget) then
+    ReturnToPool()
+    return
+  end
+  SetAirAlertEntry(self.AirAlertRecycling, SpawnId, ClusterIndex, Widget)
+  if Widget.PlayAirAlertOutAnim then
+    Widget:PlayAirAlertOutAnim(ReturnToPool)
+  else
+    ReturnToPool()
+    return
+  end
+  if GetAirAlertEntry(self.AirAlertRecycling, SpawnId, ClusterIndex) ~= Widget then
+    return
+  end
+  local Duration = 0
+  if Widget.Out and Widget.Out.GetEndTime then
+    Duration = Widget.Out:GetEndTime() or 0
+  end
+  if Duration < 0 then
+    Duration = 0
+  end
+  self:AddTimer(Duration + AIR_ALERT_OUT_WATCHDOG_SLACK, ReturnToPool, false, 0, OutKey)
 end
 
 function Component:ShowRankStarUI_Lua(TextMapTitle, TextMapStar3, TextMapStar2, TextMapStar1, TimerHandle, TimerStar3, TimeStar2, TimeStar1)

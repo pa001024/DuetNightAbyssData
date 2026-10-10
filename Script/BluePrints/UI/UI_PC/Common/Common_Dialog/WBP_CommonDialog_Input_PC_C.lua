@@ -88,13 +88,24 @@ function Component:OnNameNotSensitive(Name)
   if not Avatar then
     return
   end
+  RealName = PlayerNameUtils.DeleteHeadAndTailSpace(RealName)
+  if self.IsChangeName and self.WaitChangeNameServerResult and self.ChangeNameSubmitCallbackFunction then
+    self.ChangeNameSubmitCallbackFunction(self, RealName)
+    if self.OnNotSensitiveCallbackFunction then
+      self.OnNotSensitiveCallbackFunction(self, RealName)
+    end
+    return
+  end
   UIManager(self):ShowUITip("CommonToastMain", GText("UI_Change_Success"))
   local MenuWorld = UIManager(self):GetUIObj(UIConst.MenuWorld)
-  RealName = PlayerNameUtils.DeleteHeadAndTailSpace(RealName)
   if self.IsChangeName then
-    Avatar:SetAvatarNickname(RealName, function()
-      MenuWorld:SetPlayerInfo()
-    end)
+    if self.ChangeNameSubmitCallbackFunction then
+      self.ChangeNameSubmitCallbackFunction(self, RealName)
+    else
+      Avatar:SetAvatarNickname(RealName, function()
+        MenuWorld:SetPlayerInfo()
+      end)
+    end
   else
     Avatar:SetAvatarSignature(RealName, function()
       MenuWorld:SetPlayerInfo()
@@ -172,7 +183,7 @@ function Component:InitContent(Params, PopupData, Owner)
     return
   end
   self.IsChangeName = Params.ChangeName
-  if self.IsChangeName then
+  if self.IsChangeName and not Params.HideChangeNameCdTip then
     self:SetResidentTips(string.format(GText("UI_COMMONPOP_TEXT_100054_2"), DataMgr.GlobalConstant.PlayerNicknameCD.ConstantValue))
   end
   self.IsExchangeCode = Params.IsExchangeCode
@@ -218,6 +229,8 @@ function Component:InitContent(Params, PopupData, Owner)
   self.Owner.DontCloseWhenRightBtnClicked = true
   self.Text_Input.ClearKeyboardFocusOnCommit = true
   self.OnNotSensitiveCallbackFunction = Params.OnNotSensitiveCallbackFunction
+  self.ChangeNameSubmitCallbackFunction = Params.ChangeNameSubmitCallbackFunction
+  self.WaitChangeNameServerResult = true == Params.WaitChangeNameServerResult
 end
 
 return Component

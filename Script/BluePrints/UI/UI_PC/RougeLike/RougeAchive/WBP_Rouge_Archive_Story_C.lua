@@ -394,15 +394,16 @@ function M:ReturnToArchive()
 end
 
 function M:OnReturnKeyDown()
+  if self:IsAnyAnimationPlaying() then
+    return
+  end
   self.Btn_Click.Btn_Click.OnClicked:Remove(self, self.OpenItem)
   self:RemoveAllDispatcher()
   AudioManager(self):SetEventSoundParam(self, "SwitchArchiveStory", {ToEnd = 1})
-  if not self:IsAnyAnimationPlaying() then
-    local WidgetUI = self.Root:OpenSubUI("RougeArchiveMain")
-    self.Root.IsOpenSelectLevel = false
-    WidgetUI:InitTable()
-    WidgetUI.Archive_StoryItem:SetFocus()
-  end
+  local WidgetUI = self.Root:OpenSubUI("RougeArchiveMain")
+  self.Root.IsOpenSelectLevel = false
+  WidgetUI:InitTable()
+  WidgetUI.Archive_StoryItem:SetFocus()
 end
 
 function M:OpenReward()
@@ -431,7 +432,7 @@ function M:GetAllRewards(ReceiveAllParm)
           Item.ConfigData.CanReceive = CanReceive
           Item.ConfigData.RewardsGot = IsGot
           if Item.SelfWidget then
-            Item.SelfWidget:RefreshBtn(IsGot)
+            Item.SelfWidget:RefreshBtn(IsGot, CanReceive)
           end
         end
       end
@@ -466,7 +467,7 @@ function M:GetReward(Content)
           Item.ConfigData.CanReceive = CanReceive
           Item.ConfigData.RewardsGot = IsGot
           if Item.SelfWidget then
-            Item.SelfWidget:RefreshBtn(IsGot)
+            Item.SelfWidget:RefreshBtn(IsGot, CanReceive)
           end
         end
       end

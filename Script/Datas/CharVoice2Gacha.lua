@@ -295,6 +295,17 @@ return ReadOnly("CharVoice2Gacha", {
       }
     }
   },
+  [4103] = {
+    [1] = {
+      [1] = {
+        VoiceId = 11153,
+        VoiceRes = T.RT_1,
+        VoiceText = {
+          [1] = "voice_ch_char_SpLise_vo_gain"
+        }
+      }
+    }
+  },
   [4201] = {
     [1] = {
       [1] = {

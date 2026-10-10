@@ -263,6 +263,52 @@ return ReadOnly("GlobalPassiveData", {
       LastTime = 10
     }
   },
+  [17111] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HitCountBuff.BP_AbyssGP_HitCountBuff",
+    Camp = "Player",
+    ID = 17111,
+    Vars = {
+      Buff = 2017111,
+      HitCount = 10,
+      IsTrig = true,
+      LastTime = 12
+    }
+  },
+  [17121] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HpAboveBuff.BP_AbyssGP_HpAboveBuff",
+    Camp = "Player",
+    ID = 17121,
+    Vars = {Buff = 2017121, HpRate = 0.8}
+  },
+  [17131] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_AddBuff.BP_AbyssGP_AddBuff",
+    Camp = "Player",
+    ID = 17131,
+    Vars = {Buff = 2017131}
+  },
+  [17211] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HitCountBuff.BP_AbyssGP_HitCountBuff",
+    Camp = "Player",
+    ID = 17211,
+    Vars = {
+      Buff = 2017211,
+      DamageTag = "Skill",
+      HitCount = 10,
+      LastTime = 10
+    }
+  },
+  [17221] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HealAddBuff.BP_AbyssGP_HealAddBuff",
+    Camp = "Player",
+    ID = 17221,
+    Vars = {Buff = 2017221, LastTime = 15}
+  },
+  [17231] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_SkillTrigger.BP_AbyssGP_SkillTrigger",
+    Camp = "Player",
+    ID = 17231,
+    Vars = {Buff = 2017231, TriggerProb = 1}
+  },
   [20002] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HitRemoveBuffNew.BP_AbyssGP_HitRemoveBuffNew",
     Camp = "Monster",
@@ -318,6 +364,18 @@ return ReadOnly("GlobalPassiveData", {
       DamageTag = "Skill",
       ExtraLayer = 4
     }
+  },
+  [20008] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HitRemoveBuffNew.BP_AbyssGP_HitRemoveBuffNew",
+    Camp = "Monster",
+    ID = 20008,
+    Vars = {Condition = "Summon", ExtraLayer = 1}
+  },
+  [20009] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HitRemoveBuffNew.BP_AbyssGP_HitRemoveBuffNew",
+    Camp = "Monster",
+    ID = 20009,
+    Vars = {Condition = "Trigger", ExtraLayer = 1}
   },
   [20011] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_AddBuff.BP_AbyssGP_AddBuff",
@@ -631,7 +689,7 @@ return ReadOnly("GlobalPassiveData", {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Raid/BP_RaidGP_Common.BP_RaidGP_Common",
     Camp = "Monster",
     ID = 30100,
-    Vars = {EliteRate = 0.27, NormalRate = 0.033}
+    Vars = {EliteRate = 0.0347, NormalRate = 0.00347}
   },
   [30101] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Raid/BP_RaidGP_010.BP_RaidGP_010",
@@ -697,6 +755,18 @@ return ReadOnly("GlobalPassiveData", {
       LastTime = 12,
       MaxHyper = 11,
       Penetration = 0.04
+    }
+  },
+  [30107] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Raid/BP_RaidGP_017.BP_RaidGP_017",
+    Camp = "Player",
+    ID = 30107,
+    Vars = {
+      BaseValue = 1,
+      Divider = 0.3,
+      LastTime = 3,
+      MaxRate = 0.5,
+      Penetration = 0.1
     }
   },
   [30101001] = {

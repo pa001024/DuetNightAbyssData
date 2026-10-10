@@ -632,11 +632,6 @@ T.RT_146 = {
   Type = "Cylinder"
 }
 T.RT_147 = {
-  CylinderHeight = 500,
-  Radius = 5000,
-  Type = "Cylinder"
-}
-T.RT_148 = {
   CrossHeight = 400,
   CrossLength = 750,
   CrossWidth = 200,
@@ -4992,19 +4987,39 @@ return ReadOnly("TargetFilter", {
     LuaFilter = "MySummoned"
   },
   Source = {ID = "Source", LuaFilter = "Source"},
+  SpLise_Grade2 = {
+    BPFilter = "Splise_Grade2_FriendCheck",
+    ID = "SpLise_Grade2",
+    LuaFilter = "AllOtherFriends"
+  },
+  SpLise_Grade2_02 = {
+    ID = "SpLise_Grade2_02",
+    LineTraceFilter = true,
+    LuaFilter = "AllEnemy"
+  },
+  SpLise_Grade2_03 = {
+    ID = "SpLise_Grade2_03",
+    LuaFilter = "AllEnemy"
+  },
+  SpLise_Grade6 = {
+    CampFilter = "Enemy",
+    ID = "SpLise_Grade6",
+    LuaFilter = "CheckRangeHit",
+    LuaFilterParaments = T.RT_135
+  },
   SpLise_Skill01_01 = {
     CampFilter = "Enemy",
     ID = "SpLise_Skill01_01",
     LineTraceFilter = true,
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_147,
+    LuaFilterParaments = T.RT_135,
     RangeAngle = 120
   },
   SpLise_Skill01_02 = {
     CampFilter = "Enemy",
     ID = "SpLise_Skill01_02",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_147,
+    LuaFilterParaments = T.RT_135,
     RangeAngle = 120
   },
   Support_RandomRailgun = {
@@ -5080,13 +5095,13 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "Yeer_Skill01_Enemy",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_148
+    LuaFilterParaments = T.RT_147
   },
   Yeer_Skill01_Friend = {
     CampFilter = "Friend",
     ID = "Yeer_Skill01_Friend",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_148
+    LuaFilterParaments = T.RT_147
   },
   Yuming_SummonNum = {
     BPFilter = "Common_RoleIdFilter",

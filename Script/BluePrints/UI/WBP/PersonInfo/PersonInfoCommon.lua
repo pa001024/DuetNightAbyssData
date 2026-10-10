@@ -1,7 +1,15 @@
 local PersonInfoCommon = {}
+local PersonalInfoCustomTypes = require("BluePrints.Client.CustomTypes.PersonalInfo")
 PersonInfoCommon.UIName = "PersonInfoPageMain"
 PersonInfoCommon.EnablePreviewReflection = false
 PersonInfoCommon.EnableSelectionDebugDraw = false
+PersonInfoCommon.CustomDisplayServerSupport = {
+  Item = true,
+  Pet = true,
+  Sticker = true,
+  Filter = true
+}
+PersonInfoCommon.CustomDisplayDefaults = PersonalInfoCustomTypes.CustomDisplayDefaults
 PersonInfoCommon.CameraInputConfig = {
   CameraDragYawSpeed = 0.5,
   CameraDragPitchSpeed = 0.5,

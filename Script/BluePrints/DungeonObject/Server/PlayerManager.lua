@@ -12,15 +12,6 @@ function PlayerManager:AddPlayer(AvatarEid)
 end
 
 function PlayerManager:GetAvatarCrossAttr(AvatarEid)
-  if not IsSkynetServer() then
-    local AvatarEidStr = CommonUtils.ObjId2Str(AvatarEid)
-    if self.DSEntity and self.DSEntity.AvatarInfos then
-      local Info = self.DSEntity.AvatarInfos[AvatarEidStr]
-      return Info and Info.PlayerInfo
-    end
-  else
-    return DungeonInstance.OwnerAvatar:GetCrossAttrs()
-  end
 end
 
 function PlayerManager:RemovePlayer(AvatarEid)

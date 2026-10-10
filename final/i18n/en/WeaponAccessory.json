@@ -504,6 +504,14 @@
     "unlock": "Available through Prism Exchange"
   },
   {
+    "id": 20005,
+    "name": "手里剑（待包装）",
+    "desc": "手里剑描述（待包装）",
+    "icon": "T_Fashion_Fx55",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
     "id": 30001,
     "name": "Soaring Loong",
     "desc": "Used for Move-Variant Demon Wedge: Piercing Ascent",

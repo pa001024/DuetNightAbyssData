@@ -95,7 +95,12 @@ function M:GetGuideFacialId(DialogueData)
   if not DialogueData.TalkActorId then
     return nil
   end
-  local NpcId = URuntimeCommonFunctionLibrary.GetNPCIdByGender(self, DialogueData.TalkActorId)
+  local NpcId
+  if Const.bUseFinalMappingId then
+    NpcId = URuntimeCommonFunctionLibrary.GetFinalNPCIdByMapping(self, DialogueData.TalkActorId)
+  else
+    NpcId = URuntimeCommonFunctionLibrary.GetNPCIdByGender(self, DialogueData.TalkActorId)
+  end
   return self:GetNpcHeadId(DialogueData.DialogueId, NpcId)
 end
 

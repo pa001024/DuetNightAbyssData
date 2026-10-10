@@ -199,6 +199,9 @@ function M:InitItemDetails(ItemType, ItemId, Uuid)
     else
       self.Img_Aura:SetVisibility(ESlateVisibility.Collapsed)
     end
+  elseif "CustomItem" == ItemType or "CustomScene" == ItemType then
+    self.Panel_Extra:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    ItemInfoWidget = self:CreateWidgetNew("ResourceItemDetails")
   elseif "Tips" == ItemType or "Resource" == ItemType or "IronTicket" == ItemType or "CharAccessory" == ItemType or "WeaponAccessory" == ItemType or "CharPartMesh" == ItemType or "RougeLikeBlessing" == ItemType or "RougeLikeTreasure" == ItemType or "HeadSculpture" == ItemType or "HeadFrame" == ItemType or "Skin" == ItemType or "WeaponSkin" == ItemType or "Title" == ItemType or "TitleFrame" == ItemType or "Mount" == ItemType or "Background" == ItemType then
     if Avatar.Resources[ItemId] and Avatar.Resources[ItemId]:IsInfiniteBattleItem() and self:IsHasChar(ItemId) then
       self.Switch_Show:SetActiveWidgetIndex(1)
@@ -245,7 +248,7 @@ function M:InitItemDetails(ItemType, ItemId, Uuid)
     self.Parent:Close()
     return
   end
-  if (not ("Resource" ~= ItemType and "IronTicket" ~= ItemType and ("Mod" ~= ItemType or self.Content.IsArmoryMod)) or "CharPartMesh" == ItemType or "Draft" == ItemType) and not self.Content.bNotShowAccess then
+  if (not ("Resource" ~= ItemType and "CustomItem" ~= ItemType and "CustomScene" ~= ItemType and "IronTicket" ~= ItemType and ("Mod" ~= ItemType or self.Content.IsArmoryMod)) or "CharPartMesh" == ItemType or "Draft" == ItemType) and not self.Content.bNotShowAccess then
     self:SetAccessItem(ItemType, ItemId)
   else
     self.Panel_Method:SetVisibility(UIConst.VisibilityOp.Collapsed)

@@ -148,7 +148,7 @@ function M:InitCollectItems(CategoryContent)
 end
 
 function M:InitRewardItem(CategoryContent)
-  local RewardContent = self:CreateCommonItemContent(CategoryContent.ItemType, CategoryContent.RewardId, CategoryContent.RewardCount)
+  local RewardContent = self:CreateCommonItemContent(CategoryContent.RewardType, CategoryContent.RewardId, CategoryContent.RewardCount)
   RewardContent.HandleMouseDown = true
   RewardContent.OnMouseButtonUpEvents = {
     Obj = self,

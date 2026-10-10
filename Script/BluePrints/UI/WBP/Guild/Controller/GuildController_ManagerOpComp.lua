@@ -1,6 +1,11 @@
 local GuildLogoInfo = require("BluePrints.UI.WBP.Guild.Common.GuildLogoInfo")
 local GuildDatas = require("BluePrints.UI.WBP.Guild.Common.GuildDatas")
+local GuildPermissionUtils = require("BluePrints.UI.WBP.Guild.Common.GuildPermissionUtils")
+local HeroUSDKUtils = require("Utils.HeroUSDKUtils")
 local GuildRequestInfo = GuildDatas.GuildRequestInfo
+local GuildRenameCardDialogId = 100362
+local GuildRenameCardPermission = "ModifyNameEmblem"
+local GuildRenameCardInputName = "Dialog_Input_new"
 local Component = {}
 
 function Component:OnInit()
@@ -163,6 +168,7 @@ function Component:RecvGuildEditName(SrcParams, Ret)
   local Name = table.unpack(SrcParams)
   self:UpdateCurrGuildProp(Ret, "Name", Name)
   self:UpdateCurrGuildProp(Ret, "LastNameEditTime", TimeUtils.NowTime())
+  self:ApplyRenamedGuildBadgeText(Name, Ret)
   self:RecvCommon(Ret, GuildCommon.EventID.OnGuildEditName)
 end
 
@@ -176,7 +182,10 @@ function Component:RecvGuildEditDeclaration(SrcParams, Ret)
   self:RecvCommon(Ret, GuildCommon.EventID.OnGuildEditDeclaration)
 end
 
-function Component:SendRpcGuildCheckName(Name)
+function Component:SendRpcGuildCheckName(Name, Callback)
+  if Callback then
+    self.PendingGuildCheckNameCallback = Callback
+  end
   self:GetAvatar():RpcGuildCheckName(nil, Name)
 end
 
@@ -184,6 +193,12 @@ function Component:RecvRpcGuildCheckName(SrcParams, Ret)
   local SameName = false
   if Ret ~= ErrorCode.RET_SUCCESS then
     SameName = true
+  end
+  local PendingCallback = self.PendingGuildCheckNameCallback
+  self.PendingGuildCheckNameCallback = nil
+  if PendingCallback then
+    PendingCallback(SameName)
+    return
   end
   self:RecvCommon(nil, GuildCommon.EventID.OnRpcGuildCheckName, SameName)
 end
@@ -209,6 +224,16 @@ function Component:RecvGuildEditLogo(SrcParams, Ret)
     end
   end
   self:RecvCommon(Ret, GuildCommon.EventID.OnGuildEditLogo)
+end
+
+function Component:SendGuildEditBadgeText(BadgeText)
+  self:GetAvatar():GuildEditBadgeText(nil, BadgeText or "")
+end
+
+function Component:RecvGuildEditBadgeText(SrcParams, Ret)
+  local BadgeText = table.unpack(SrcParams)
+  self:UpdateCurrGuildProp(Ret, "BadgeText", BadgeText)
+  self:RecvCommon(Ret, GuildCommon.EventID.OnGuildEditBadgeText)
 end
 
 function Component:RecvBecomeGuildOwerMail(SrcParams, Uid)
@@ -269,6 +294,191 @@ function Component:_JoinRequestRemovedCommon(Ret, RemoveUids)
     end
     return JoinRequestUids
   end)
+end
+
+function Component:TryOpenGuildRenameCardDialog(ResourceId, ParentWidget)
+  local Avatar = self:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local Model = self:GetModel()
+  if not Model:IsInGuild() then
+    self:GetUIMgr():ShowUITip(UIConst.Tip_CommonToast, GText("UI_NoInGuild"))
+    return
+  end
+  local GuildInfo = Model:GetSyncedGuildInfo()
+  if not GuildInfo then
+    self:GetUIMgr():ShowUITip(UIConst.Tip_CommonToast, GText("UI_AsyncCombat_OperationCoolDown"))
+    return
+  end
+  local Title = Model:GetSyncedMemberTitle(Avatar.Uid)
+  local IsPermitted = nil ~= Title and GuildPermissionUtils.GetEffectivePermission(GuildInfo.ClosedPermission, Title, GuildRenameCardPermission)
+  if not IsPermitted then
+    self:GetUIMgr():ShowUITip(UIConst.Tip_CommonToast, GText("UI_NoEditPermission"))
+    return
+  end
+  if Avatar:GetResourceNum(ResourceId) <= 0 then
+    self:CheckError(ErrorCode.RET_ITEM_NOT_ENOUGH)
+    return
+  end
+  self:OpenGuildRenameCardDialog(ResourceId, ParentWidget)
+end
+
+function Component:OpenGuildRenameCardDialog(ResourceId, ParentWidget)
+  local SubmitState = {
+    IsSubmitting = false,
+    IsClosed = false,
+    NeedCheckName = true,
+    IsCheckingName = false,
+    GuildHasSameName = false,
+    CheckingName = ""
+  }
+  if not IsValid(ParentWidget) then
+    ParentWidget = nil
+  end
+  local DialogHolder = {Dialog = nil}
+  
+  function SubmitState.OnCheckNameCallback(SameName)
+    SubmitState.IsCheckingName = false
+    SubmitState.GuildHasSameName = SameName
+    if SubmitState.IsClosed then
+      return
+    end
+    local Dialog = DialogHolder.Dialog
+    if not IsValid(Dialog) then
+      return
+    end
+    local InputWidget = Dialog:GetContentWidgetByName(GuildRenameCardInputName)
+    if not IsValid(InputWidget) then
+      return
+    end
+    local CurrentName = string.trim(InputWidget:GetText() or "")
+    if CurrentName ~= SubmitState.CheckingName then
+      SubmitState.NeedCheckName = true
+      return
+    end
+    self:OnGuildRenameCardSubmit(Dialog, ResourceId, SubmitState)
+  end
+  
+  local Dialog = self:GetUIMgr():ShowCommonPopupUI(GuildRenameCardDialogId, {
+    EditTextConfig = {
+      Text = "",
+      IsMultiLine = false,
+      TextLimit = GuildCommon.GuildNameMaxLen,
+      bLimitSpaces = true,
+      ResidentTipText = GText("UI_Guild_RenameCardNoResetCd"),
+      Events = {
+        OnTextChanged = function(_, Text)
+          SubmitState.NeedCheckName = true
+          local TargetDialog = DialogHolder.Dialog
+          if not IsValid(TargetDialog) then
+            return
+          end
+          local ButtonBar = TargetDialog:GetButtonBar()
+          if not (ButtonBar and ButtonBar.Btn_Yes) or not ButtonBar.Btn_Yes.ForbidBtn then
+            return
+          end
+          ButtonBar.Btn_Yes:ForbidBtn(string.trim(Text or "") == "")
+        end
+      }
+    },
+    DontCloseWhenRightBtnClicked = true,
+    RightCallbackFunction = function(_, _, ClickedDialog)
+      self:OnGuildRenameCardSubmit(ClickedDialog, ResourceId, SubmitState)
+    end,
+    OnCloseCallbackFunction = function()
+      SubmitState.IsClosed = true
+    end
+  }, ParentWidget)
+  DialogHolder.Dialog = Dialog
+  return Dialog
+end
+
+function Component:OnGuildRenameCardSubmit(Dialog, ResourceId, SubmitState)
+  if not IsValid(Dialog) or SubmitState.IsClosed or SubmitState.IsSubmitting then
+    return
+  end
+  local InputWidget = Dialog:GetContentWidgetByName(GuildRenameCardInputName)
+  if not IsValid(InputWidget) then
+    return
+  end
+  local Name = string.trim(InputWidget:GetText() or "")
+  if "" == Name then
+    InputWidget:ShowTips(GText("UI_REGISTER_EMPTY"), 2)
+    return
+  end
+  if GuildCommon.IsPureNumberOrSymbolName(Name) then
+    InputWidget:ShowTips(GText("GuildNameNoPureNumber"), 1)
+    return
+  end
+  if SubmitState.IsCheckingName then
+    return
+  end
+  if SubmitState.NeedCheckName then
+    SubmitState.NeedCheckName = false
+    SubmitState.GuildHasSameName = false
+    SubmitState.IsCheckingName = true
+    SubmitState.CheckingName = Name
+    self:SendRpcGuildCheckName(Name, SubmitState.OnCheckNameCallback)
+    return
+  end
+  if SubmitState.GuildHasSameName then
+    InputWidget:ShowTips(GText("UI_GuildNameDuplicate"), 1)
+    SubmitState.NeedCheckName = true
+    return
+  end
+  SubmitState.IsSubmitting = true
+  HeroUSDKUtils.CheckStringSensitive(InputWidget, Name, function()
+    SubmitState.IsSubmitting = false
+    if not SubmitState.IsClosed and IsValid(InputWidget) then
+      InputWidget:ShowTips(GText("UI_REGISTER_BANNEDINPUT"), 1)
+    end
+  end, function()
+    if not IsValid(self) then
+      SubmitState.IsSubmitting = false
+      return
+    end
+    self:SendUseChangeGuildNameResourceInBag(ResourceId, Name, function(Ret)
+      SubmitState.IsSubmitting = false
+      if Ret == ErrorCode.RET_SUCCESS and not SubmitState.IsClosed and IsValid(Dialog) then
+        Dialog:OnClose()
+      end
+    end)
+  end, false)
+end
+
+function Component:SendUseChangeGuildNameResourceInBag(ResourceId, Name, Callback)
+  local Avatar = self:GetAvatar()
+  if not Avatar then
+    return
+  end
+  Avatar:UseChangeGuildNameResourceInBag(ResourceId, Name, function(Ret)
+    if IsValid(self) then
+      self:RecvUseChangeGuildNameResourceInBag(Ret, Name)
+    end
+    if Callback then
+      Callback(Ret)
+    end
+  end)
+end
+
+function Component:RecvUseChangeGuildNameResourceInBag(Ret, Name)
+  self:UpdateCurrGuildProp(Ret, "Name", Name)
+  self:ApplyRenamedGuildBadgeText(Name, Ret)
+  if Ret == ErrorCode.RET_SUCCESS then
+    self:GetUIMgr():ShowUITip(UIConst.Tip_CommonToast, GText("UI_EditSuccessful"))
+  end
+  self:RecvCommon(Ret, GuildCommon.EventID.OnGuildRenameByCard)
+end
+
+function Component:ApplyRenamedGuildBadgeText(Name, Ret)
+  if Ret ~= ErrorCode.RET_SUCCESS then
+    return
+  end
+  local CurrGuild = self:GetModel():GetCurrGuild()
+  local OldBadgeText = CurrGuild and CurrGuild.BadgeText or ""
+  local BadgeText = GuildCommon.NormalizeGuildBadgeText(Name, OldBadgeText)
+  self:UpdateCurrGuildProp(Ret, "BadgeText", BadgeText)
 end
 
 return Component

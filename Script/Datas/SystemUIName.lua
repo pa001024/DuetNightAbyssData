@@ -29,6 +29,12 @@ return ReadOnly("SystemUIName", {
     Title = "Event_Title_102004",
     UIName = "ActivityChezhanTask16"
   },
+  [102005] = {
+    EventId = 102005,
+    TabChangeAudioPath = "event:/ui/activity/explor_sub_page_in",
+    Title = "Event_Title_102005",
+    UIName = "ActivityLiseTask"
+  },
   [1020012] = {
     EventId = 1020012,
     TabChangeAudioPath = "event:/ui/activity/huaxu_sub_page_in",

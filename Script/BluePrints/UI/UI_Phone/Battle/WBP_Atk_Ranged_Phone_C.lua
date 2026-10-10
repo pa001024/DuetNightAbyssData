@@ -29,13 +29,15 @@ end
 
 function M.ButtonFireDown(Battle_Button_Phone, Index, StartPos)
   local FireBtn = Battle_Button_Phone.AtkRanged
-  if FireBtn.CurButtonState == "Ban" then
+  if FireBtn.CurButtonState == "Ban" or FireBtn.AutoCombatBan then
+    FireBtn.AutoCombatBlockedTouch = true
     UIManager(FireBtn):ShowUITip_BattleCommonTop(UIConst.Tip_CommonTop, GText("UI_RANGED_FORBIDDEN"))
     return
   end
+  FireBtn.AutoCombatBlockedTouch = false
   if not FireBtn.OwnerPanel.FireOccupied then
     FireBtn.OwnerPanel.FireOccupied = FireBtn.OccupiedTag
-    FireBtn.OwnerPanel:TryToPlayTargetCommand("Fire", true)
+    FireBtn.OwnerPanel:TryToPlayTargetCommand("Fire", not FireBtn.OwnerPanel.IsUltimateActionSwap)
     FireBtn.LockShooting = EMCache:Get("LongPressLockShooting")
     if FireBtn.LockShooting and not FireBtn.HasHeavyShooting then
       FireBtn.StartTime = UE4.UGameplayStatics.GetRealTimeSeconds(FireBtn)
@@ -85,6 +87,14 @@ end
 
 function M.ButtonFireUp(Battle_Button_Phone, Index, WidgetLocalPos, LastWidgetTouchPos, EndTouchPos, TotalDeltaDis)
   local FireBtn = Battle_Button_Phone.AtkRanged
+  if FireBtn.AutoCombatBlockedTouch then
+    FireBtn.AutoCombatBlockedTouch = false
+    FireBtn.AutoYawRotate = false
+    FireBtn.IsFireDown = false
+    FireBtn.Joystick:SetRenderOpacity(0)
+    FireBtn.Joystick_Border:SetVisibility(UIConst.VisibilityOp.Hidden)
+    return
+  end
   if FireBtn.CurButtonState == "Ban" then
     return
   end
@@ -99,7 +109,7 @@ function M.ButtonFireUp(Battle_Button_Phone, Index, WidgetLocalPos, LastWidgetTo
         return
       end
     end
-    FireBtn.OwnerPanel:TryToStopTargetCommand("Fire", true)
+    FireBtn.OwnerPanel:TryToStopTargetCommand("Fire", not FireBtn.OwnerPanel.IsUltimateActionSwap)
   end
   FireBtn.AutoYawRotate = false
   FireBtn.IsFireDown = false
@@ -208,6 +218,9 @@ function M:OnPropIconLoadFinish(Object, ResourceID)
   self:OrganIcon(Object)
   self.ImageMat = self.Image_Main:GetDynamicMaterial()
   self.OwnerPanel.AtkRangedLeft:OnPropIconLoadFinish(Object)
+  if self.CurButtonState == "Ban" or self.AutoCombatBan then
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Ban)
+  end
 end
 
 function M:OnPropEffectReplaceFire(PropEffectId)

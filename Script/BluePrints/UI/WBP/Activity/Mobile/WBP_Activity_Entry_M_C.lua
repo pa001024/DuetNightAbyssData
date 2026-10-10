@@ -77,6 +77,7 @@ function M:Destruct()
   self.List_Tab.OnCreateEmptyContent:Unbind()
   EventManager:RemoveEvent(EventID.OnReturnToActivityEntry, self)
   EventManager:RemoveEvent(EventID.OnLeaveActivityEntry, self)
+  EventManager:RemoveEvent(EventID.OnActivityEntryShowVisible, self)
   EventManager:RemoveEvent(EventID.OnActivityComplete, self)
   EventManager:RemoveEvent(ActivityCommon.EventId.RefreshActivityEntryVideo, self)
   self.NeedShowVersionView = nil

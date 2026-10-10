@@ -1,224 +1,86 @@
 require("UnLua")
-local PersonalTitleUtils = require("Utils.PersonalTitleUtils")
+local Processors = require("BluePrints.UI.UI_PC.NPC.HeadUIProcessors")
 local M = Class({
   "Blueprints.UI.BP_UIState_C"
 })
 
 function M:Initialize(Initializer)
   self.Super.Initialize(self, Initializer)
-  self.AttachedWidgetComponent = nil
-  self.bHasInitialized = true
-  self.bHasConstruct = false
-  self.ExternWidget = {}
 end
 
 function M:Construct(...)
   M.Super.Construct(self, ...)
-  self.bHasConstruct = true
-  if self.EnableParamsPreConstruct then
-    self:ConstructRefreshEnable(self.EnableParamsPreConstruct)
-    self.EnableParamsPreConstruct = nil
-  end
+  self:InitSubWidgets()
 end
 
 function M:InitSubWidgets()
-  self.NPC_Bubble_Long:Init(self)
-  self.NPC_Bubble_Short:Init(self)
-  self.NPC_Impression:Init(self)
-  self.NPC_ImpressionShop:Init(self)
-  self.Npc_Name_PC:Init(self)
-  self.Com_GuidePoint:InitNpcSideQuestBubble(self)
-  self.ActiveCount = 0
-  self.EnabledWidgets = {}
-  self.EnabledWidgets.Name = false
-  self.EnabledWidgets.Bubble = false
-  self.EnabledWidgets.Impression = false
-  self.EnabledWidgets.HeadIcon = false
-  self.EnabledWidgets.NpcSideIndicator = false
-  self:InitSpecialWidget()
-  self.TitleClassPath = nil
-  for WidgetName, Widget in pairs(self.ExternWidget) do
-    Widget:Init(self)
-    self.EnabledWidgets[WidgetName] = false
-  end
-end
-
-function M:TryInsertNewWidget(WidgetName)
-  self.Pos_Bubble:SetVisibility(UE.ESlateVisibility.SelfHitTestInvisible)
-  if self.ExternWidget[WidgetName] then
-    return self.ExternWidget[WidgetName]
-  end
-  local WidgetClass = self:GetExternWidgetClass(WidgetName)
-  if not WidgetClass then
+  if self.Processors then
     return
   end
-  local Item = UIManager(self):CreateWidget(WidgetClass)
-  self.ExternWidget[WidgetName] = Item
-  if "Bubble_Reward" == WidgetName then
-    self.Pos_Bubble:ClearChildren()
-    self.Pos_Bubble:AddChildToOverlay(Item)
-  elseif "Bubble_Emoji" == WidgetName then
-    self.Pos_Bubble:ClearChildren()
-    self.Pos_Bubble:AddChildToOverlay(Item)
-  else
-    self.VB:AddChildToVerticalBox(Item)
-  end
-  Item:Init(self)
-  return self.ExternWidget[WidgetName]
+  local Bubble = Processors.BubbleProcessor.new(self)
+  self.Processors = {
+    Name = Processors.NameProcessor.new(self),
+    Long_Bubble = Bubble,
+    Short_Bubble = Bubble,
+    Impression = Processors.ImpressionProcessor.new(self),
+    HeadIcon = Processors.HeadIconProcessor.new(self),
+    NpcSideIndicator = Processors.GuidePointProcessor.new(self),
+    Title = Processors.TitleProcessor.new(self),
+    Bubble_Reward = Processors.RewardProcessor.new(self),
+    Bubble_Emoji = Processors.EmojiProcessor.new(self)
+  }
+  self.ActiveCount = 0
+  DebugPrint("[HeadUI] InitSubWidgets: processors registered", self)
 end
 
 function M:EnableWidget(WidgetName, ...)
-  if not self:CheckCanWork() then
+  local P = self.Processors[WidgetName]
+  if not P then
+    DebugPrint("[HeadUI] EnableWidget: no processor for", WidgetName)
     return
   end
-  self:TryEnableWidget(WidgetName, true, ...)
+  local Was = P.bActive
+  P:Enable(WidgetName, ...)
+  if P.bActive ~= Was then
+    self.ActiveCount = self.ActiveCount + (P.bActive and 1 or -1)
+    self:NotifyActiveCountChanged(self.ActiveCount)
+  end
+  DebugPrint("[HeadUI] EnableWidget:", WidgetName, "bActive:", Was, "->", P.bActive, "ActiveCount:", self.ActiveCount)
 end
 
-function M:DisableWidget(WidgetName, ...)
-  if not self:CheckCanWork() then
+function M:DisableWidget(WidgetName)
+  local P = self.Processors[WidgetName]
+  if not P then
     return
   end
-  self:TryEnableWidget(WidgetName, false, ...)
+  local Was = P.bActive
+  P:Disable()
+  if P.bActive ~= Was then
+    self.ActiveCount = self.ActiveCount + (P.bActive and 1 or -1)
+    self:NotifyActiveCountChanged(self.ActiveCount)
+  end
+  DebugPrint("[HeadUI] DisableWidget:", WidgetName, "bActive:", Was, "->", P.bActive, "ActiveCount:", self.ActiveCount)
 end
 
-function M:TryEnableWidget(WidgetName, bEnable, ...)
-  if not self:CheckCanWork() then
-    return
-  end
-  local WidgetNameOrign = WidgetName
-  if "Long_Bubble" == WidgetName or "Short_Bubble" == WidgetName then
-    WidgetName = "Bubble"
-  end
-  if not not self.EnabledWidgets[WidgetName] == bEnable then
-    return
-  end
-  self.EnabledWidgets[WidgetName] = bEnable
-  if not self.bHasConstruct then
-    local EnableParams = self.EnableParamsPreConstruct or {}
-    self.EnableParamsPreConstruct = EnableParams
-    EnableParams[WidgetNameOrign] = table.pack(...)
-    return
-  end
-  self:EnableWidgetInternal(WidgetNameOrign, bEnable, ...)
-end
-
-function M:ConstructRefreshEnable(EnableParams)
-  local EnabledWidgets = self.EnabledWidgets
-  for WidgetName, Param in pairs(EnableParams) do
-    local WidgetNameOrign = WidgetName
-    if "Long_Bubble" == WidgetName or "Short_Bubble" == WidgetName then
-      WidgetName = "Bubble"
-    end
-    self:EnableWidgetInternal(WidgetNameOrign, EnabledWidgets[WidgetName], table.unpack(Param))
+function M:OnSubWidgetHideTagChanged(WidgetName, bHidden)
+  DebugPrint("[HeadUI] OnSubWidgetHideTagChanged:", WidgetName, "bHidden:", bHidden)
+  local P = self.Processors[WidgetName]
+  if P then
+    P:SetHidden(bHidden)
   end
 end
 
-function M:EnableWidgetInternal(WidgetName, bEnable, ...)
-  if bEnable then
-    self.ActiveCount = self.ActiveCount + 1
-  else
-    self.ActiveCount = self.ActiveCount - 1
-  end
-  local SpecialWidget = self:TryGetSpecailWidget(WidgetName)
-  local Widget
-  if IsValid(SpecialWidget) then
-    self:EnableSpecialWidget(WidgetName, SpecialWidget, bEnable, ...)
-  else
-    Widget = self:TryGetWidget(WidgetName)
-    if IsValid(Widget) then
-      if bEnable then
-        Widget:OnEnabled(...)
-      else
-        Widget:OnDisabled(...)
-      end
+function M:ResetForPool()
+  DebugPrint("[HeadUI] ResetForPool: reset processors + ActiveCount", self)
+  local seen = {}
+  for _, P in pairs(self.Processors or {}) do
+    if not seen[P] then
+      seen[P] = true
+      P:Reset()
     end
   end
-  if self.AttachedWidgetComponent then
-    self.AttachedWidgetComponent:OnChangeActiveWidgets(self.ActiveCount)
-  end
-end
-
-function M:CheckCanWork()
-  return self.bHasInitialized
-end
-
-function M:TryGetWidget(WidgetName)
-  if "Name" == WidgetName then
-    return self.NPC_Name_PC
-  elseif "Bubble" == WidgetName then
-    return self:SelectBubbleWidget()
-  elseif "Short_Bubble" == WidgetName then
-    return self:SetBubbleWidget(1)
-  elseif "Long_Bubble" == WidgetName then
-    return self:SetBubbleWidget(0)
-  elseif "Impression" == WidgetName then
-    return self.NPC_Impression
-  elseif "HeadIcon" == WidgetName then
-    return self.NPC_ImpressionShop
-  elseif "NpcSideIndicator" == WidgetName then
-    return self.Com_GuidePoint
-  else
-    return self:TryInsertNewWidget(WidgetName)
-  end
-end
-
-function M:SelectBubbleWidget()
-  local HeadUISubsystem = UNpcHeadUISubsystem.GetHeadUISubsystem(self)
-  local Owner = self.AttachedWidgetComponent:GetOwner()
-  local bUseShortBubble = false
-  if HeadUISubsystem and Owner then
-    bUseShortBubble = HeadUISubsystem:ShouldUseShortBubble(Owner)
-  end
-  local ActiveBubbleIdx = bUseShortBubble and 1 or 0
-  return self:SetBubbleWidget(ActiveBubbleIdx)
-end
-
-function M:SetBubbleWidget(Index)
-  local OldIndex = self.NPC_Bubble_Switcher:GetActiveWidgetIndex()
-  if OldIndex ~= Index then
-    local OldWidget = self.NPC_Bubble_Switcher:GetActiveWidget()
-    if IsValid(OldWidget) then
-      OldWidget:OnDisabled()
-    end
-  end
-  self.NPC_Bubble_Switcher:SetActiveWidgetIndex(Index)
-  return self.NPC_Bubble_Switcher:GetActiveWidget()
-end
-
-function M:SetWidgetInitBubble()
-  self.Com_GuidePoint:InitBubble(self)
-end
-
-function M:EnableSpecialWidget(WidgetName, Widget, bEnable, ...)
-  if "Title" == WidgetName then
-    if bEnable then
-      self:EnableTitleWidget(Widget, ...)
-    else
-      self:DisableTitleWidget(Widget)
-    end
-  end
-end
-
-function M:EnableTitleWidget(Widget, TitlePrefix, TitleSuffix, TitleFrameId)
-  UIUtils.SetTitle(self.Title, {
-    TitleBefore = TitlePrefix,
-    TitleAfter = TitleSuffix,
-    TitleFrame = TitleFrameId
-  }, true)
-end
-
-function M:DisableTitleWidget(Widget)
-  self.Title:SetVisibility(UE.ESlateVisibility.Collapsed)
-end
-
-function M:InitSpecialWidget()
-  self.Title:SetVisibility(UE.ESlateVisibility.Collapsed)
-end
-
-function M:TryGetSpecailWidget(WidgetName)
-  if "Title" == WidgetName then
-    return self.Title
-  end
+  self.ActiveCount = 0
+  self.Overridden.ResetForPool(self)
 end
 
 return M

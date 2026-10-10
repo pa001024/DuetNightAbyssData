@@ -205,7 +205,7 @@ function AvatarUtils:CheckChangeModRepeat(Avatar, Tag, Uuid, ModSuitIndex, Targe
   for ModSlotId, ModSlotEid in pairs(ModSuit) do
     local Mod = Avatar.Mods[ModSlotEid]
     if Mod and self:IsHaveModRepeatGroup(Mod.RepeatGroup, TargetMod.RepeatGroup) then
-      if TargetModSlotId ~= ModSlotId and Mod.IsOriginal and TargetMod.IsOriginal then
+      if TargetModSlotId ~= ModSlotId and Mod.IsOriginal and TargetMod.IsOriginal and TargetMod.RepeatModLevel == nil then
         if skynet then
           return false
         else
@@ -218,7 +218,7 @@ function AvatarUtils:CheckChangeModRepeat(Avatar, Tag, Uuid, ModSuitIndex, Targe
   for ModSlotId, Mod in pairs(SuitModIds) do
     if ModSlotId ~= TargetModSlotId then
       if Mod.ModId == TargetMod.ModId or Mod.ModId ~= TargetMod.ModId and self:IsHaveModRepeatGroup(Mod.RepeatGroup, TargetMod.RepeatGroup) then
-        if TargetMod.RepeatModLevel == nil or TargetMod.RepeatModLevel <= 0 then
+        if TargetMod.RepeatModLevel == nil then
           if skynet then
             return false
           else
@@ -1344,14 +1344,23 @@ function AvatarUtils:GetRaidSeasonsRecord(Avatar, FromDb)
     local RaidSeasonConf = DataMgr.RaidSeason[RaidSeasonId]
     if RaidSeasonConf then
       local RaidSeasonEventConf = DataMgr.EventId2RaidSeason[RaidSeasonConf.EventId]
-      if RaidSeasonEventConf and not (NowTime <= TimeUtils.EastEightToLocalTimestamp(RaidSeasonEventConf.EventEndTime)) and (not v.BanState or not (v.BanState > 0)) and v.PreRaidGroupId and v.RaidGroupId and not (v.PreRaidGroupId <= 0) and not (v.RaidGroupId <= 0) and v.MaxRaidScore and not (v.MaxRaidScore <= 0) then
-        table.insert(Ret, {
-          RaidSeasonId = RaidSeasonId,
-          PreRaidGroupId = v.PreRaidGroupId,
-          RaidGroupId = v.RaidGroupId
-        })
+      if RaidSeasonEventConf and not (NowTime <= TimeUtils.EastEightToLocalTimestamp(RaidSeasonEventConf.EventEndTime)) and (not v.BanState or not (v.BanState > 0)) and v.PreRaidGroupId and v.RaidGroupId and not (v.PreRaidGroupId <= 0) and not (v.RaidGroupId <= 0) then
+        if RaidSeasonConf.RaidSeasonType == CommonConst.RaidSeasonType.Floor then
+          if not (v.RaidFloor and not (v.RaidFloor <= 0) and v.RaidFloorPassTime) or v.RaidFloorPassTime <= 0 then
+            goto lbl_100
+          end
+        else
+        end
+        if v.MaxRaidScore and not (v.MaxRaidScore <= 0) then
+          table.insert(Ret, {
+            RaidSeasonId = RaidSeasonId,
+            PreRaidGroupId = v.PreRaidGroupId,
+            RaidGroupId = v.RaidGroupId
+          })
+        end
       end
     end
+    ::lbl_100::
   end
   return Ret
 end
@@ -1375,6 +1384,38 @@ end
 
 function AvatarUtils:GetMainPlayerCharacterAttributeCharId(Avatar)
   local Sex = Avatar.Sex
+  local CharacterAttributeSwitch = Avatar.CharacterAttributeSwitch
+  if Sex and CharacterAttributeSwitch then
+    return CharacterAttributeSwitch[Sex]
+  end
+  return -1
+end
+
+function AvatarUtils:GetCharacterAttributeBySexOrWaitSex(Avatar, PlayerTag)
+  local CharGroupId = -1
+  if "Player" == PlayerTag then
+    CharGroupId = Avatar.Sex
+  else
+    if 0 == Avatar.WeitaSex then
+      CharGroupId = 10
+    end
+    if 1 == Avatar.WeitaSex then
+      CharGroupId = 11
+    end
+  end
+  local CharId = Avatar.CharacterAttributeSwitch[CharGroupId]
+  if nil == CharId then
+    return nil
+  end
+  local tabCharacterAttributeSwitch = DataMgr.CharacterAttributeSwitch[CharId]
+  if nil == tabCharacterAttributeSwitch then
+    return nil
+  end
+  return tabCharacterAttributeSwitch.CharAttribute
+end
+
+function AvatarUtils:GetMainEXPlayerCharacterAttributeCharId(Avatar)
+  local Sex = Avatar.WeitaSex
   local CharacterAttributeSwitch = Avatar.CharacterAttributeSwitch
   if Sex and CharacterAttributeSwitch then
     return CharacterAttributeSwitch[Sex]
@@ -1453,12 +1494,12 @@ function AvatarUtils:GetFirstTwoCharOrWeapon(Avatar, Info, Tag, CheckEqual)
   return First, Second
 end
 
-function AvatarUtils:GetPlayerRankCharAccessory(Avatar, FromDb)
+function AvatarUtils:GetPlayerRankCharAccessory(Avatar, FromDb, UseCurrentChar)
   if not Avatar then
     return {}
   end
   local DisplayInfo
-  if Avatar.PersonalInfo and Avatar.PersonalInfo.CharDisplay then
+  if not UseCurrentChar and Avatar.PersonalInfo and Avatar.PersonalInfo.CharDisplay then
     if Avatar.PersonalInfo.CharDisplay.Get then
       DisplayInfo = Avatar.PersonalInfo.CharDisplay:Get(1)
     else
@@ -1618,9 +1659,9 @@ function AvatarUtils:GetPlayerRankWeaponAccessory(Avatar, FromDb)
   }
 end
 
-function AvatarUtils:GetPlayerDisplayAppearanceInfo(Avatar)
+function AvatarUtils:GetPlayerDisplayAppearanceInfo(Avatar, UseCurrentChar)
   local AppearanceInfo = {
-    Char = AvatarUtils:GetPlayerRankCharAccessory(Avatar),
+    Char = AvatarUtils:GetPlayerRankCharAccessory(Avatar, nil, UseCurrentChar),
     Weapon = AvatarUtils:GetPlayerRankWeaponAccessory(Avatar)
   }
   return AppearanceInfo
@@ -1635,7 +1676,7 @@ function AvatarUtils:GetPersonalInfoBgIds(Avatar, FromDB)
   return Ret
 end
 
-function AvatarUtils:GetPersonalInfoCustomDisplay(Avatar)
+function AvatarUtils:GetPersonalInfoCustomDisplay(Avatar, IncludeWeaponSkin)
   local PersonalInfo = Avatar.PersonalInfo or {}
   local CustomDisplay = PersonalInfo.CustomDisplay or {}
   local Ret = CommonUtils.BinaryDump(CustomDisplay) or {}
@@ -1655,6 +1696,18 @@ function AvatarUtils:GetPersonalInfoCustomDisplay(Avatar)
       if RetCharParam then
         RetCharParam.AppearancePlan = AppearancePlan
         RetCharParam.Appearance = self:GetPlayerPersonalInfoCharAppearance(Avatar, Char, AppearancePlan)
+        if IncludeWeaponSkin then
+          local WeaponId = tonumber(CharParam.WeaponId)
+          if WeaponId and WeaponId > 0 then
+            for _, Weapon in pairs(Avatar.Weapons or {}) do
+              if tonumber(Weapon.WeaponId) == WeaponId then
+                local AppearanceSuit = Weapon.AppearanceSuits and Weapon.AppearanceSuits[Weapon.CurrentAppearanceIndex or 1]
+                RetCharParam.WeaponSkinId = tonumber(AppearanceSuit and AppearanceSuit.SkinId) or WeaponId
+                break
+              end
+            end
+          end
+        end
       end
     end
   end

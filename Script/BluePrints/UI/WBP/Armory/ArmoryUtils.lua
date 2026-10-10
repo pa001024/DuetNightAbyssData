@@ -134,7 +134,7 @@ function M:CopyCharOrWeaponItemContent(Content)
   return Obj
 end
 
-function M:NewPetItemContent(Target)
+function M:NewPetItemContent(Target, bNotReddot)
   local Obj = NewObject(UIUtils.GetCommonItemContentClass())
   rawset(Obj, "UniqueId", Target.UniqueId)
   rawset(Obj, "Uuid", Target.UniqueId)
@@ -162,10 +162,12 @@ function M:NewPetItemContent(Target)
     rawset(Obj, "Level", Target.Level)
   end
   rawset(Obj, "IsPremium", Target:IsPremium())
-  local IsNew, _ = M.TryAddNewPetReddot(M, Target)
-  rawset(Obj, "IsNew", IsNew)
-  if Obj.IsNew then
-    rawset(Obj, "RedDotType", UIConst.RedDotType.NewRedDot)
+  if not bNotReddot then
+    local IsNew, _ = M.TryAddNewPetReddot(M, Target)
+    rawset(Obj, "IsNew", IsNew)
+    if Obj.IsNew then
+      rawset(Obj, "RedDotType", UIConst.RedDotType.NewRedDot)
+    end
   end
   return Obj
 end
@@ -201,6 +203,7 @@ function M:NewModItemContent(Target, Type)
   local Obj = NewObject(UIUtils.GetCommonItemContentClass())
   rawset(Obj, "Uuid", Target.Uuid)
   rawset(Obj, "Type", Type)
+  rawset(Obj, "ItemType", Type)
   rawset(Obj, "UnitId", Target[Type .. "Id"])
   rawset(Obj, "UnitName", DataMgr[Obj.Type][Obj.UnitId].Name)
   rawset(Obj, "ItemName", Obj.UnitName)

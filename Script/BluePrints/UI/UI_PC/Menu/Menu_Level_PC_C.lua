@@ -9,14 +9,6 @@ Menu_Level_PC_C._components = {
   "BluePrints.UI.UI_PC.Menu.MenuLevelAbyssComponent"
 }
 
-local function IsInGuildBossDungeon()
-  local TravelSubsystem = WorldTravelSubsystem()
-  if not TravelSubsystem or not TravelSubsystem:IsDungeonWorld() then
-    return false
-  end
-  return TravelSubsystem:GetCurrentDungeonType() == CommonConst.DungeonType.GuildBoss
-end
-
 function Menu_Level_PC_C:Initialize(Initializer)
   self.Super.Initialize(self)
   self.BtnName = {
@@ -103,7 +95,6 @@ function Menu_Level_PC_C:InitByType()
   local Avatar = GWorld:GetAvatar()
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
   self.InHardBoss = false
-  self.InGuildBoss = false
   self.InTemple = false
   self.InTraining = false
   self.InRougeLike = false
@@ -116,11 +107,6 @@ function Menu_Level_PC_C:InitByType()
   end
   if Avatar and Avatar:IsInHardBoss() then
     self.InHardBoss = true
-    self:InitHardBoss()
-    return
-  end
-  if IsInGuildBossDungeon() then
-    self.InGuildBoss = true
     self:InitHardBoss()
     return
   end
@@ -1235,10 +1221,6 @@ function Menu_Level_PC_C:OnClickExitGame()
     Params.RightCallbackFunction = self.ExitHardBossBattle
     PopupId = 100028
   end
-  if self.InGuildBoss then
-    Params.RightCallbackFunction = self.ExitGuildBossBattle
-    PopupId = 100028
-  end
   if self.InSpecialQuest then
     Params.RightCallbackFunction = self.ExitHardBattle
     PopupId = 100120
@@ -1380,30 +1362,6 @@ function Menu_Level_PC_C:ExitHardBossBattle()
   end
   self.HasRequestedExit = true
   self:CloseSelf()
-  local Avatar = GWorld:GetAvatar()
-  if Avatar then
-    Avatar:ExitBattle(false, true)
-  end
-end
-
-function Menu_Level_PC_C:ExitGuildBossBattle()
-  local CommonDialog = UIManager(self):GetUIObj("CommonDialog")
-  if CommonDialog then
-    CommonDialog:Close()
-  end
-  if self.HasRequestedExit then
-    return
-  end
-  self.HasRequestedExit = true
-  self:CloseSelf()
-  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
-  if GameMode then
-    local DungeonComponent = GameMode:GetDungeonComponent()
-    if DungeonComponent and DungeonComponent.TriggerGuildBossOnEnd then
-      GameMode:TriggerDungeonComponentFun("TriggerGuildBossOnEnd")
-      return
-    end
-  end
   local Avatar = GWorld:GetAvatar()
   if Avatar then
     Avatar:ExitBattle(false, true)

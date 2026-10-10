@@ -5,6 +5,7 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("StoryVariable", {
+  ["1.7_Lise01"] = {IsGlobal = true, VarName = "1.7_Lise01"},
   ["12020320KID"] = {
     IsGlobal = true,
     VarName = "12020320KID"
@@ -588,6 +589,7 @@ return ReadOnly("StoryVariable", {
   IQ11022101 = {IsGlobal = true, VarName = "IQ11022101"},
   IQ11023101 = {IsGlobal = true, VarName = "IQ11023101"},
   IQ11023103 = {IsGlobal = true, VarName = "IQ11023103"},
+  IQ110232 = {IsGlobal = true, VarName = "IQ110232"},
   IQ11023201 = {IsGlobal = true, VarName = "IQ11023201"},
   IQ11023206 = {IsGlobal = true, VarName = "IQ11023206"},
   IQ110233 = {IsGlobal = true, VarName = "IQ110233"},
@@ -607,6 +609,7 @@ return ReadOnly("StoryVariable", {
     VarName = "IQ12030706_jlc"
   },
   IQ120315 = {IsGlobal = true, VarName = "IQ120315"},
+  IQ120704 = {IsGlobal = true, VarName = "IQ120704"},
   IQ13010101 = {IsGlobal = true, VarName = "IQ13010101"},
   IQ200404 = {IsGlobal = true, VarName = "IQ200404"},
   IQ200405 = {IsGlobal = true, VarName = "IQ200405"},

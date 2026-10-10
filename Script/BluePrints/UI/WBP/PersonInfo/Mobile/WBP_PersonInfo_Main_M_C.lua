@@ -21,6 +21,9 @@ end
 
 function M:ModelViewIni()
   self:FreshHideButton()
+  if self.RefreshMainPageStickerPreview then
+    self:RefreshMainPageStickerPreview()
+  end
 end
 
 function M:FreshHideButton()

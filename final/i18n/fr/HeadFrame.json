@@ -329,5 +329,26 @@
     "desc": "Permet de modifier votre cadre d’avatar.",
     "icon": "T_Head_Frame44",
     "access": "Disponible via le Pass mensuel"
+  },
+  {
+    "id": 10051,
+    "name": "冰湖灯火",
+    "desc": "Permet de modifier votre cadre d’avatar.",
+    "icon": "T_Head_Frame47",
+    "access": "Disponible via le Pass mensuel"
+  },
+  {
+    "id": 10052,
+    "name": "糖霜满屋·鎏金",
+    "desc": "Permet de modifier votre cadre d’avatar.",
+    "icon": "T_Head_Frame48",
+    "access": "Disponible via les événements"
+  },
+  {
+    "id": 10053,
+    "name": "糖霜满屋·墨玉",
+    "desc": "Permet de modifier votre cadre d’avatar.",
+    "icon": "T_Head_Frame49",
+    "access": "Disponible via les événements"
   }
 ]

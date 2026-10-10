@@ -312,6 +312,31 @@ function M:GetShopItemCanShow(ShopItemId)
   return true
 end
 
+function M:GetShopItemCanShowQuickAdd(ShopItemId)
+  assert(DataMgr.ShopItem[ShopItemId], "商品不存在：" .. ShopItemId)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return false
+  end
+  local ShopItemData = DataMgr.ShopItem[ShopItemId]
+  if not Avatar:CheckIsEffective(ShopItemId) then
+    return false
+  end
+  if 0 == self:GetShopItemPurchaseLimit(ShopItemId) and not ShopItemData.RefreshTime and not ShopItemData.SoldOutDisplay then
+    return false
+  end
+  if Avatar:CheckShopItemHasRexclusionGroup(ShopItemId) then
+    return false
+  end
+  if Avatar:CheckShopItemUnique(ShopItemId) and not ShopItemData.SoldOutDisplay then
+    return false
+  end
+  if ShopItemData.ItemCondition and ShopItemData.HideIfConditionNotMet == true and self:CheckShopItemCondition(ShopItemData) then
+    return false
+  end
+  return true
+end
+
 function M:GetRefreshTime(ItemId)
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
@@ -1333,6 +1358,193 @@ function M:OpenLockConditionPopup(ShopItemData)
   local Params = {}
   Params.ItemConditions = ShopItemData.ItemCondition
   UIManager(self):ShowCommonPopupUI(100292, Params)
+end
+
+function M:IsShoppingCartSupported(ShopItemId)
+  if not ShopItemId then
+    return false
+  end
+  local GoodsId = DataMgr.ShopItem2PayGoods[ShopItemId]
+  if not GoodsId then
+    return false
+  end
+  local PayGoodsInfo = DataMgr.PayGoods[GoodsId]
+  if not PayGoodsInfo or PayGoodsInfo.ItemId ~= ShopItemId then
+    return false
+  end
+  local ShopItemData = DataMgr.ShopItem[ShopItemId]
+  if not ShopItemData then
+    return false
+  end
+  local SubTabData = DataMgr.ShopTabSub[ShopItemData.SubTabId]
+  if not SubTabData then
+    return false
+  end
+  local ShopSystemData = DataMgr.Shop[CommonConst.ShoppingCartSystemName]
+  if not ShopSystemData or not ShopSystemData.MainTabId then
+    return false
+  end
+  for _, MainTabId in ipairs(ShopSystemData.MainTabId) do
+    if MainTabId == SubTabData.MainTabId then
+      return true
+    end
+  end
+  return false
+end
+
+function M:GetShoppingCartItemList()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return {}
+  end
+  local Items = Avatar.ShoppingCart and Avatar.ShoppingCart.Items
+  if not Items then
+    return {}
+  end
+  local List = {}
+  for _, Item in pairs(Items) do
+    table.insert(List, Item)
+  end
+  table.sort(List, function(A, B)
+    return A.AddSequence < B.AddSequence
+  end)
+  return List
+end
+
+function M:GetShoppingCartSelectedTotalPrice()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return 0
+  end
+  local Items = Avatar.ShoppingCart and Avatar.ShoppingCart.Items
+  if not Items then
+    return 0
+  end
+  local Total = 0
+  for _, Item in pairs(Items) do
+    if Item.Selected then
+      local Price = self:GetShopItemPrice(Item.ShopItemId)
+      Total = Total + Price * Item.Count
+    end
+  end
+  return Total
+end
+
+function M:GetShoppingCartTotalCount()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return 0
+  end
+  local Items = Avatar.ShoppingCart and Avatar.ShoppingCart.Items
+  if not Items then
+    return 0
+  end
+  local Count = 0
+  for _, Item in pairs(Items) do
+    Count = Count + Item.Count
+  end
+  return Count
+end
+
+function M:GetShoppingCartSelectedCount()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return 0
+  end
+  local Items = Avatar.ShoppingCart and Avatar.ShoppingCart.Items
+  if not Items then
+    return 0
+  end
+  local Count = 0
+  for _, Item in pairs(Items) do
+    if Item.Selected then
+      Count = Count + Item.Count
+    end
+  end
+  return Count
+end
+
+function M:IsShoppingCartPending()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return false
+  end
+  local ShoppingCart = Avatar.ShoppingCart
+  if not ShoppingCart then
+    return false
+  end
+  return ShoppingCart.OrderCreating == true or ShoppingCart.PendingOrderId ~= ""
+end
+
+function M:IsShoppingCartItemRequireWarning(ShopItemId)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return false
+  end
+  local ShopItemData = DataMgr.ShopItem[ShopItemId]
+  if not ShopItemData or not ShopItemData.Require then
+    return false
+  end
+  if not Avatar:CheckShopItemHasRequire(ShopItemId) then
+    return false
+  end
+  local ShoppingCart = Avatar.ShoppingCart
+  if not ShoppingCart or not ShoppingCart.Items then
+    return false
+  end
+  local RequireItem = ShoppingCart.Items[ShopItemData.Require]
+  if not RequireItem then
+    return true
+  end
+  return RequireItem.Selected ~= true
+end
+
+function M:IsShoppingCartRequireSatisfied(ShopItemId)
+  local Avatar = GWorld:GetAvatar()
+  if not (Avatar and Avatar.ShoppingCart) or not Avatar.ShoppingCart.Items then
+    return false
+  end
+  local ShopItemData = DataMgr.ShopItem[ShopItemId]
+  if not ShopItemData or not ShopItemData.Require then
+    return false
+  end
+  local RequireItem = Avatar.ShoppingCart.Items[ShopItemData.Require]
+  if not RequireItem or RequireItem.Count <= 0 then
+    return false
+  end
+  local Remain = self:GetShopItemPurchaseLimit(ShopItemData.Require)
+  if -1 == Remain then
+    return true
+  end
+  return Remain <= RequireItem.Count
+end
+
+function M:HasUnsatisfiedRequire(ShopItemId)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return false
+  end
+  local Visited = {}
+  
+  local function IsChainSatisfied(Id)
+    if not Avatar:CheckShopItemHasRequire(Id) then
+      return true
+    end
+    if Visited[Id] then
+      return true
+    end
+    Visited[Id] = true
+    if not self:IsShoppingCartRequireSatisfied(Id) then
+      return false
+    end
+    local ParentId = DataMgr.ShopItem[Id] and DataMgr.ShopItem[Id].Require
+    if ParentId then
+      return IsChainSatisfied(ParentId)
+    end
+    return true
+  end
+  
+  return not IsChainSatisfied(ShopItemId)
 end
 
 function M:GetValidVouchers(ShopItemData)

@@ -302,8 +302,7 @@ function M:InitButtons()
   self.Btn_Auto:BindForbidStateExecuteEvent(self, function()
     ModController:ShowToast(GText("UI_COMMONPOP_TEXT_100067"))
   end)
-  self.Btn_Discharge:SetText(GText("UI_Armory_Mod_RemoveAll"))
-  self.Btn_Discharge:BindEventOnClicked(self, function()
+  self.Btn_RemoveAll:BindEventOnClicked(self, function()
     local Params = {
       RightCallbackFunction = function()
         ModController:TakeOffSuitMod()
@@ -313,12 +312,15 @@ function M:InitButtons()
     Params.AutoFocus = true
     
     function Params.OnCloseCallbackFunction()
+      if not IsValid(self) then
+        return
+      end
       self:SetDefaultGamepadFocus()
     end
     
     UIManager():ShowCommonPopupUI(ModCommon.TakeOffSuitModDialog, Params, self)
   end)
-  self.Btn_Discharge:BindForbidStateExecuteEvent(self, function()
+  self.Btn_RemoveAll:BindForbidStateExecuteEvent(self, function()
     ModController:ShowToast(GText("UI_ModToast_EmptyCanNotRemoveAll"))
   end)
   self.CheckBox_Mod:InitCommonCheckBox()
@@ -516,6 +518,10 @@ end
 
 function M:ReceiveEnterState(StackAction)
   M.Super.ReceiveEnterState(self, StackAction)
+  if ModController:TryJumpToModEnhance() then
+    self:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    return
+  end
   if self.CurTargetTabContent then
     self:SyncTarget(self.CurTargetTabContent)
     ModController:SetUICamera(FVector(0, 0, 0))
@@ -569,7 +575,7 @@ function M:InitVisibilityWithCase()
     self.Btn_Share:SetVisibility(UIConst.VisibilityOp.Visible)
     self:CheckEnableBtnWhenAnyEquip()
     self.Panel_Btn:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    self.Btn_Discharge:SetVisibility(UIConst.VisibilityOp.Visible)
+    self:SetRemoveAllBtnVisibility(UIConst.VisibilityOp.Visible)
     self.Btn_Auto:SetVisibility(UIConst.VisibilityOp.Visible)
     self.Btn_Import:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self:ShowQuickEquipBtn(true)
@@ -629,6 +635,7 @@ function M:OnModLockChanged(OpAction, ErrCode, Uuid)
 end
 
 function M:Close()
+  self:StopRemoveAllGamepadLongPress()
   if ModModel:IsInPolarityEditMode() then
     if self.PolarityEditWidget then
       self.PolarityEditWidget:Close()
@@ -651,11 +658,14 @@ function M:Close()
 end
 
 function M:Destruct()
+  self:StopRemoveAllGamepadLongPress()
   self:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self:UnRegisterListAttrBtn()
   self.Btn_EditPolarity:UnBindEventOnClickedByObj(self)
   self.Btn_Auto:UnBindEventOnClickedByObj(self)
-  self.Btn_Discharge:UnBindEventOnClickedByObj(self)
+  if IsValid(self.Btn_RemoveAll) then
+    self.Btn_RemoveAll:UnBindEventOnClickedByObj(self)
+  end
   self.Btn_Share:UnBindEventOnClickedByObj(self)
   self.CheckBox_Mod:UnBindEventOnClicked(self.CheckBox_Mod_Delegate)
   self.CheckBox_Mod:UnInitCommonCheckBox()
@@ -1255,7 +1265,7 @@ function M:NotifyOnStartPolarityMode()
       self.Btn_EditPolarity:SetVisibility(UIConst.VisibilityOp.Collapsed)
       self.List_Role:SetVisibility(UIConst.VisibilityOp.Collapsed)
       self.Btn_Auto:SetVisibility(UIConst.VisibilityOp.Collapsed)
-      self.Btn_Discharge:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self:SetRemoveAllBtnVisibility(UIConst.VisibilityOp.Collapsed)
       self.Panel__Attr:SetVisibility(UIConst.VisibilityOp.Collapsed)
       self.Panel_FilterSort:SetVisibility(UIConst.VisibilityOp.Collapsed)
       self:UnbindAllFromAnimationFinished(self.LoadingPolarity_In)
@@ -1301,7 +1311,7 @@ function M:NotifyOnStopPolarityMode()
   self.List_Role:SetVisibility(UIConst.VisibilityOp.Visible)
   self.Btn_Auto:SetVisibility(UIConst.VisibilityOp.Visible)
   self.Panel__Attr:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-  self.Btn_Discharge:SetVisibility(UIConst.VisibilityOp.Visible)
+  self:SetRemoveAllBtnVisibility(UIConst.VisibilityOp.Visible)
   self.Panel_FilterSort:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   local Delegate
   Delegate = {
@@ -1332,12 +1342,31 @@ function M:NotifyOnPolarityEditDone(TargetUuid)
   self:UpdateAttrListImpl()
 end
 
+function M:SetRemoveAllBtnVisibility(Op)
+  if IsValid(self.Btn_RemoveAll) then
+    self.Btn_RemoveAll:SetVisibility(Op)
+  end
+  self:RefreshRemoveAllControllerVisibility()
+end
+
+function M:RefreshRemoveAllControllerVisibility(bForceHide)
+  if not IsValid(self.Panel_Controller_RemoveAll) then
+    return
+  end
+  local bBtnVisible = IsValid(self.Btn_RemoveAll) and self.Btn_RemoveAll:GetVisibility() ~= UIConst.VisibilityOp.Collapsed
+  local bShow = not bForceHide and ModController:IsGamepad() and bBtnVisible
+  self.Panel_Controller_RemoveAll:SetVisibility(bShow and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
+end
+
 function M:CheckEnableBtnWhenAnyEquip()
+  if not IsValid(self.Btn_RemoveAll) then
+    return
+  end
   if not ModModel:IsAnyModEquiped() then
-    self.Btn_Discharge:ForbidBtn(true)
+    self.Btn_RemoveAll:ForbidBtn(true)
     self.ModShare:ForbidCopy(true)
   else
-    self.Btn_Discharge:ForbidBtn(false)
+    self.Btn_RemoveAll:ForbidBtn(false)
     self.ModShare:ForbidCopy(false)
   end
 end
@@ -1702,7 +1731,7 @@ function M:CloseModDetailPanel()
   self:_SetPanelAttrVisibility(true)
   self.ItemDetailsWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
   if ModModel:IsModUINormal() then
-    self.Btn_Discharge:SetVisibility(UIConst.VisibilityOp.Visible)
+    self:SetRemoveAllBtnVisibility(UIConst.VisibilityOp.Visible)
     self.Btn_Auto:SetVisibility(UIConst.VisibilityOp.Visible)
   end
   if self.CurInputDeviceType == ECommonInputType.Gamepad then
@@ -1753,9 +1782,8 @@ function M:ShowModDetailPanel(Mod, SlotId)
   if ModController:IsMobile() then
     self.ItemDetailsWidget:OverrideSizeX(self.PhoneItemTipsWidth)
   end
-  AudioManager(self):PlayUISound(self, "event:/ui/armory/tip_show", nil, nil)
   self.ItemDetailsWidget:PlayAnimation(self.ItemDetailsWidget.In)
-  self.Btn_Discharge:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self:SetRemoveAllBtnVisibility(UIConst.VisibilityOp.Collapsed)
   self.Btn_Auto:SetVisibility(UIConst.VisibilityOp.Collapsed)
   if self.CurInputDeviceType == ECommonInputType.Gamepad then
     self.Key_FocusList_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -1832,8 +1860,10 @@ function M:OnClickBtnAutoEquip()
   local function Callback()
     self.Btn_Auto:ForbidBtn(true)
     
-    self:BlockAllUIInput(true)
-    ModController:LaunchAutoEquipMod()
+    self:GetRecommendRankData(function(self, Data, UserCount)
+      ModModel:CacheModRankRawData(Data)
+      ModController:LaunchAutoEquipMod()
+    end)
   end
   
   if ModModel:IsAnyModEquiped() then
@@ -2153,7 +2183,8 @@ function M:ClearRecommendFliter()
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
 end
 
-function M:GetRecommendRankData()
+function M:GetRecommendRankData(Callback)
+  Callback = Callback or self.ShowRecommendView
   local Target = ModModel:GetTarget()
   local TargetType = Target:GetTypeName()
   local TargetId
@@ -2164,10 +2195,7 @@ function M:GetRecommendRankData()
   end
   self:BlockAllUIInput(true, "SP_DisplayOnly")
   local Avatar = GWorld:GetAvatar()
-  Avatar:GetModRankData(TargetType, TargetId, {
-    Func = self.ShowRecommendView,
-    Obj = self
-  })
+  Avatar:GetModRankData(TargetType, TargetId, {Func = Callback, Obj = self})
 end
 
 function M:ShowRecommendView(Data, UserCount)
@@ -2197,14 +2225,10 @@ function M:ShowRecommendView(Data, UserCount)
     local RootWidget = UIUtils.GetRootUWidget(self)
     RootWidget:AddChild(RecommendView)
     self.RecommendView = RecommendView
-    self.RecommendView:SetData(Params)
-    self.RecommendView:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    self.RecommendView:SetRecommendFocus()
-  else
-    self.RecommendView:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    self.RecommendView:SetData(Params)
-    self.RecommendView:SetRecommendFocus()
   end
+  self.RecommendView:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.RecommendView:SetData(Params)
+  self.RecommendView:SetRecommendFocus()
   self:CloseModDetailPanel()
   ModModel:SetRecommendView(true)
   self:SetCanRectGamepadVisible(false)

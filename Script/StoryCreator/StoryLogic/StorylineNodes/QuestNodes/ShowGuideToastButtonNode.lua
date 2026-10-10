@@ -37,7 +37,7 @@ end
 function ShowGuideToastButtonNode:ShowMessage(Context)
   DebugPrint("------------ ShowGuideToastButtonNode ------------------")
   local GameInstance = GWorld.GameInstance
-  local GameMode = UE4.UGameplayStatics.GetGameMode(GameInstance)
+  local GameState = UE4.UGameplayStatics.GetGameState(GameInstance)
   if self.ShowEnable then
     local UICompSizeOffsetVector = FVector2D(self.UICompSizeOffset.X, self.UICompSizeOffset.Y)
     local UICompLocOffsetVector = FVector2D(self.UICompLocOffset.X, self.UICompLocOffset.Y)
@@ -46,7 +46,7 @@ function ShowGuideToastButtonNode:ShowMessage(Context)
     self.UIStateAsyncActionBase.OnGuideEnd:Add(GameInstance, function()
       self:FinishAction()
     end)
-  elseif GameMode.GameState then
+  elseif GameState then
     if CommonUtils.GetDeviceTypeByPlatformName(GameInstance) == "Mobile" then
       self.Guide_Touch = UIManager(GameInstance):GetUIObj(UIManager().CurGuideTouchName)
       if not self.Guide_Touch then
