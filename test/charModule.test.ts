@@ -55,6 +55,38 @@ describe("char 模块", () => {
         expect(field?.影响).toBe("多重")
     })
 
+    test("540202 传颂之诗伤害的影响映射为技能威力与充盈威力", async () => {
+        const graph = new Graph()
+        graph.defineModule({ name: "Skill", deps: [], outputs: false, build: ctx => skillModule(ctx) })
+        graph.defineModule({ name: "Char", deps: ["Skill"], outputs: true, build: ctx => charModule(ctx) })
+
+        const artifacts = await graph.build({}, undefined, ["Char"])
+        const chars = (artifacts.get("Char") as { Char: Array<Record<string, any>> }).Char
+        const field = chars
+            .find(item => item.id === 5402)
+            ?.技能?.find((item: Record<string, any>) => item.id === 540202)
+            ?.字段?.find((item: Record<string, any>) => item.名称?.key === "SKILL_DESC_5402_Passive_Dmg")
+
+        expect(field?.影响).toBe("技能威力,充盈威力")
+    })
+
+    test("增益行为中的技能速度不再泄漏 Attr key", async () => {
+        const graph = new Graph()
+        graph.defineModule({ name: "Skill", deps: [], outputs: false, build: ctx => skillModule(ctx) })
+        graph.defineModule({ name: "Char", deps: ["Skill"], outputs: true, build: ctx => charModule(ctx) })
+
+        const artifacts = await graph.build({}, undefined, ["Char"])
+        const chars = (artifacts.get("Char") as { Char: Array<Record<string, any>> }).Char
+        // 3202（叠加层数路径：每层+#1…）、1103（直接加成路径：…+30%）的增益均含 SkillSpeed 属性
+        const behaviors = [1103, 3202]
+            .flatMap(id => (chars.find(item => item.id === id)?.技能 as Array<Record<string, any>> | undefined) ?? [])
+            .map(skill => String(renderTree(skill.行为, "cn", textmap)))
+            .join("\n")
+
+        expect(behaviors).toContain("技能速度")
+        expect(behaviors).not.toContain("Attr_SkillSpeed_Name")
+    })
+
     test("特质按派遣标签槽位聚合，同名标签叠加等级并保留各自突破阶段", async () => {
         const graph = new Graph()
         graph.defineModule({ name: "Skill", deps: [], outputs: false, build: ctx => skillModule(ctx) })
